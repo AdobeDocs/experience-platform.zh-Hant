@@ -1,10 +1,10 @@
 ---
-title: 《資料衛生API指南》
-description: 瞭解如何以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料。
+title: 資料衛生API指南
+description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '345'
 ht-degree: 1%
 
 ---
@@ -13,40 +13,44 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
 
-資料衛生API允許您以寫程式方式更正或刪除客戶在Adobe Experience Platform儲存的個人資料，並為資料集安排過期日期。 本指南介紹使用API的先決條件步驟，並提供指向更多特定於端點的文檔的連結。
+資料衛生API可讓您以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料，並排程資料集的到期日。 本指南涵蓋使用API的先決條件步驟，並提供指向更多端點特定檔案的連結。
 
 ## 快速入門
 
-您可以通過以下根路徑訪問資料衛生API: `https://platform.adobe.io/data/core/hygiene/`
+您可以透過下列根路徑存取資料衛生API: `https://platform.adobe.io/data/core/hygiene/`
 
-以下各節概述了在嘗試調用API之前需要瞭解的核心概念。
+以下各節概述在嘗試呼叫API前，您需要了解的核心概念。
 
-### 收集所需標題的值
+### 收集必要標題的值
 
-要調用資料衛生API，必須先收集身份驗證憑據。 關注 [API驗證指南](../../landing/api-authentication.md) 為資料衛生API的每個必需標頭生成值，如下所示：
+若要呼叫資料衛生API，您必須先收集驗證憑證。 關注 [API驗證指南](../../landing/api-authentication.md) 為資料衛生API的每個必要標題產生值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-包含負載(POST、PUT、PATCH)的所有請求都需要附加的標頭：
+所有包含裝載(POST、PUT、PATCH)的請求都需要額外的標題：
 
 * `Content-Type: application/json`
 
-### 讀取示例API調用
+### 讀取範例API呼叫
 
-本文檔提供了一個示例API調用，以演示如何格式化請求。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../landing/api-guide.md#sample-api) 的FTP伺服器連接設定。
+本檔案提供範例API呼叫，以示範如何設定請求格式。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/api-guide.md#sample-api) (位於Experience PlatformAPI快速入門手冊中)。
 
 <!-- ## Work orders
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## 資料集過期
+## 資料集有效期
 
-資料集過期是延遲的「刪除資料集」操作。 通過建立資料集過期，您將指定將來刪除該資料集的時間。 查看 [資料集到期終結點指南](./dataset-expiration.md) 有關在API中計畫資料集過期的詳細資訊。
+資料集過期是因時間延遲而「刪除資料集」的動作。 透過建立資料集的有效期，您可以指定日後刪除該資料集的時間。 請參閱 [資料集過期端點指南](./dataset-expiration.md) 如需API中排程資料集有效期的詳細資訊。
+
+## 配額
+
+貴組織受限於每類資料衛生操作的預定每月工作配額，這可能因許可而異。 請參閱 [quota endpoint wide（配額終結點指南）](./quota.md) 有關查看資料衛生流程的當前配額狀態的詳細資訊。
 
 ## 後續步驟
 
-本指南介紹了如何使用API調用管理資料衛生請求。 有關如何在平台UI中執行這些操作的資訊，請參見 [資料衛生UI指南](../ui/overview.md)。
+本指南說明如何使用API呼叫管理資料衛生請求。 如需如何在Platform UI中執行這些動作的詳細資訊，請參閱 [資料衛生UI指南](../ui/overview.md).
