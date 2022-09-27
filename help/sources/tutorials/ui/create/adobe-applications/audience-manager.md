@@ -1,64 +1,68 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Audience Manager源連接器；Audience Manager;Audience Manager連接器
-solution: Experience Platform
+keywords: Experience Platform；首頁；熱門主題；Audience Manager來源連接器；Audience Manager;Audience Manager連接器
 title: 在UI中建立Adobe Audience Manager來源連線
-topic-legacy: overview
-type: Tutorial
-description: 本教學課程會逐步帶您建立來源連接器，供Adobe Audience Manager使用，以使用使用者介面將消費者體驗事件資料匯入平台。
+description: 本教學課程會逐步帶您了解為Adobe Audience Manager建立來源連線的步驟，以使用使用者介面將消費者體驗事件資料匯入Platform。
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
 
 # 在UI中建立Adobe Audience Manager來源連線
 
-本教學課程會逐步帶您建立來源連接器，供Adobe Audience Manager使用，以使用使用者介面將消費者體驗事件資料匯入平台。
+本教學課程會逐步帶您了解為Adobe Audience Manager建立來源連接器的步驟，以便使用使用者介面將消費者體驗事件資料匯入Platform。
 
-## 建立與Adobe Audience Manager的來源連線
+## 使用Adobe Audience Manager建立來源連線
 
-登入[Adobe Experience Platform](https://platform.adobe.com)，然後從左側導覽列選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區。 [!UICONTROL Catalog]畫面會顯示各種來源，您可以用來建立帳戶。
+在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以用來建立帳戶的各種來源。
 
-在[!UICONTROL Adobe applications]類別下，選擇&#x200B;**[!UICONTROL Adobe Audience Manager]**，然後選擇&#x200B;**[!UICONTROL Configure]**。
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列找到您要使用的特定來源。
+
+在 [!UICONTROL Adobe應用程式]，選取 **[!UICONTROL Adobe Audience Manager]** 然後選取 **[!UICONTROL 設定]**.
 
 ![目錄](../../../../images/tutorials/create/aam/catalog.png)
 
-出現[!UICONTROL Select traits and segments]步驟，提供您互動式介面來探索並選取您的特徵、區段和資料。
+### 選取特徵和區段
 
-* 介面的左側面板包含[!UICONTROL Select traits and segments]選項，以及可供您使用的所有區段的階層式目錄。
-* 介面的右半部分可讓您與選取的區段互動，並挑選您要使用的特定資料。
+>[!NOTE]
+>
+>您無法從Audience Manager來源內嵌Experience Platform資料。 如果您有需要地區資料的Analytics使用案例，請使用 [Analytics來源連接器](../adobe-applications/analytics.md).
 
-![添加資料](../../../../images/tutorials/create/aam/add-data.png)
+此 [!UICONTROL 選取特徵和區段] 步驟，提供您互動式介面來探索及選取您的特徵、區段和資料。
 
-若要導覽可用區段，請從[!UICONTROL All Segments]面板選取您要存取的資料夾。 選取資料夾可讓您遍歷資料夾的階層，並提供要篩選的區段清單。
+* 介面的左側面板包含 [!UICONTROL 選取特徵和區段] 選項，以及可供您使用之所有區段的階層目錄。
+* 介面的右半部可讓您與選取的區段互動，並挑選您要使用的特定資料。
 
-![segment-folder](../../../../images/tutorials/create/aam/segment-folder.png)
+![新增資料](../../../../images/tutorials/create/aam/add-data.png)
 
-在您識別並選取要使用的區段後，右側會出現新面板，顯示您選取的項目清單。 您可以繼續存取不同的資料夾，並為連線選取不同的區段。 選取更多區段會更新右側的面板。
+若要導覽可用區段，請從 [!UICONTROL 所有區段] 中。 選取資料夾可讓您周遊資料夾的階層，並提供要篩選的區段清單。
+
+![區段資料夾](../../../../images/tutorials/create/aam/segment-folder.png)
+
+識別並選取您要使用的區段後，右側會出現新面板，顯示您選取的項目清單。 您可以繼續存取不同的資料夾，並為連線選取不同的區段。 選取更多區段會更新右側的面板。
 
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
-或者，您也可以選擇&#x200B;**[!UICONTROL Select all segments]**&#x200B;和&#x200B;**[!UICONTROL Select all traits]**&#x200B;框。 選取所有區段會將Audience Manager區段帶入「平台」，而選取所有特徵會啟用Audience Manager的所有第一方特徵。
+或者，您也可以選取 **[!UICONTROL 選取所有區段]** 和 **[!UICONTROL 選取所有特徵]** 框。 選取所有區段會將Audience Manager區段帶入Platform，同時選取所有特徵會從Audience Manager啟用所有第一方特徵。
 
-完成後，選擇&#x200B;**[!UICONTROL Next]**
+完成後，請選取 **[!UICONTROL 下一個]**
 
 ![所有區段](../../../../images/tutorials/create/aam/all-segments.png)
 
-出現[!UICONTROL Review]步驟，讓您在選取的特性和區段連線至平台之前先加以檢閱。 詳細資訊會分組在下列類別中：
+此 [!UICONTROL 檢閱] 步驟顯示，可讓您在選取的特徵和區段連線至Platform之前加以檢閱。 詳細資料會分組為下列類別：
 
-* **[!UICONTROL Connection]**:顯示源平台和連接狀態。
-* **[!UICONTROL Selected data]**:顯示選取的區段和啟用的特徵數。
+* **[!UICONTROL 連線]**:顯示源平台和連接狀態。
+* **[!UICONTROL 所選資料]**:顯示選取的區段數和已啟用的特徵數。
 
 ![審查](../../../../images/tutorials/create/aam/review.png)
 
-複查資料流後，請選擇&#x200B;**[!UICONTROL Finish]**&#x200B;並為建立資料流留出一些時間。
+審核資料流後，請選擇 **[!UICONTROL 完成]** 並允許建立資料流的時間。
 
 ## 後續步驟
 
-當Audience Manager資料流處於活動狀態時，傳入的資料會自動被吸收到即時客戶配置檔案中。 您現在可以利用此傳入資料，並使用「平台區隔服務」來建立觀眾區隔。 如需詳細資訊，請參閱下列檔案：
+當Audience Manager資料流處於活動狀態時，傳入的資料會自動內嵌到即時客戶設定檔中。 您現在可以使用這個傳入資料，並使用Platform Segmentation Service建立受眾區段。 如需詳細資訊，請參閱下列檔案：
 
-* [即時客戶個人檔案總覽](../../../../../profile/home.md)
+* [即時客戶個人檔案概觀](../../../../../profile/home.md)
 * [區段服務概觀](../../../../../segmentation/home.md)
