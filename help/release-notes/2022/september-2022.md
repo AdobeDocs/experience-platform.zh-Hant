@@ -1,13 +1,12 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 1890bd9dbce6a217951c28fc2fb3fec2634e714d
+source-git-commit: 5335c77b4636d10064e8786525c9f8f893371b9b
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '927'
 ht-degree: 7%
 
 ---
-
 
 # Adobe Experience Platform 發行說明
 
@@ -15,8 +14,54 @@ ht-degree: 7%
 
 Adobe Experience Platform 現有功能更新：
 
+- [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
 - [來源](#sources)
+
+## Experience Data Model(XDM) {#xdm}
+
+XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料提供通用結構和定義（結構）。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 列舉和建議值的UI支援 | 除了啟用資料驗證的列舉外，您現在還可以 [新增或移除建議值](../../xdm/ui/fields/enum.md) 標準或自訂字串欄位，讓Platform使用者在建立區段時，有好記的值清單可供選取。 |
+
+**新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位群組 | [[!UICONTROL AJO分類欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 與之互動的特定元素的屬性，會觸發主張事件。 |
+| 欄位群組 | [[!UICONTROL MediaAnalytics互動詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 追蹤一段時間內的媒體互動。 |
+| 欄位群組 | [[!UICONTROL 媒體詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | 跟蹤介質詳細資訊。 |
+| 欄位群組 | [[!UICONTROL AdobeCJM ExperienceEvent — 曲面]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | 說明Adobe Journey Optimizer中體驗事件的曲面。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**更新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 行為 | [[!UICONTROL 時間序列]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>新增 `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>移除 `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| 欄位群組 | （多個） | [更新數個欄位說明](https://github.com/adobe/xdm/pull/1628/files) 跨Journey Orchestration元件。 |
+| 欄位群組 | （多個） | [更新數個Adobe Workfront元件的標題](https://github.com/adobe/xdm/pull/1634/files) 一致性。 |
+| 欄位群組 | [[!UICONTROL AJO分類欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 將數個欄位的命名空間更新為 `xdm`. |
+| 欄位群組 | [[!UICONTROL Journey Orchestration步驟事件常見欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 新增欄位， `isReadSegmentTriggerStartEvent`. |
+| 欄位群組 | [[!UICONTROL 預測天氣]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | 變更 `xdm:uvIndex` 欄位新增為整數類型， `xdm` 命名空間至缺少的多個欄位。 |
+| 欄位群組 | [[!UICONTROL 媒體詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` 和 `xdm:implementationDetails` 已從欄位組中刪除。 |
+| 資料類型 | （多個） | [已更新多個媒體屬性名稱](https://github.com/adobe/xdm/pull/1626/files) 以保持一致性。 |
+| 資料類型 | [[!UICONTROL 實作詳細資料]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | 已新增已知的顫動名稱。 |
+| 資料類型 | [[!UICONTROL 興趣點詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | 資料類型現在可以接受與地標相關聯的中繼資料索引鍵/值組清單。 |
+| 資料類型 | [[!UICONTROL 主張行動]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] 已重新命名為 [!UICONTROL 主張行動]. |
+| 資料類型 | [[!UICONTROL 主張事件類型]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] 已重新命名為 [!UICONTROL 主張行動]. |
+| （多個） | （多個） | 實驗性質 [穩定於所有B2B元件](https://github.com/adobe/xdm/pull/1617/files). |
+| （多個） | （多個） | Adobe Journey Optimizer實體 [穩定](https://github.com/adobe/xdm/pull/1625/files). |
+| （多個） | （多個） | 幾個實驗元件中特定欄位的命名空間已 [已更新一致性](https://github.com/adobe/xdm/pull/1626/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
 
 ## 身份識別服務 {#identity-service}
 
