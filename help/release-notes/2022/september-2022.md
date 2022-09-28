@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: a3f12b9524d393441923cd11e09ed3e406814691
+source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
 workflow-type: tm+mt
-source-wordcount: '1377'
-ht-degree: 7%
+source-wordcount: '1827'
+ht-degree: 6%
 
 ---
 
@@ -12,12 +12,95 @@ ht-degree: 7%
 
 **發行日期：2022 年 9 月 28 日**
 
+Adobe Experience Platform的新功能：
+
+- [資料衛生](#data-hygiene)
+- [[!UICONTROL 隱私權主控台]](#privacy-console)
+
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [稽核記錄](#audit-logs)
+- [資料收集](#data-collection)
 - [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
-- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [來源](#sources)
+
+## 資料衛生 {#data-hygiene}
+
+Adobe Experience Platform提供一組完善的工具，可管理大型、複雜的資料操作，以便協調消費者體驗。 隨著資料隨著時間傳入系統中，管理資料儲存變得越來越重要，這樣資料就能如預期般使用、在需要更正錯誤資料時更新，並在組織原則認為有必要時刪除。
+
+Adobe Experience Platform的資料衛生功能可讓您排程自動資料集過期時間，並以程式設計方式依身分刪除消費者資料，以清除資料。
+
+>[!NOTE]
+>
+>消費者刪除功能僅適用於已購買Adobe醫療保健盾或隱私保護盾的組織。
+
+請參閱下列檔案以開始使用資料衛生：
+
+- [資料衛生概觀](../../hygiene/home.md):了解Platform資料衛生功能的基本知識。
+- [[!UICONTROL 資料衛生] UI指南](../../hygiene/ui/overview.md):了解如何在Platform使用者介面中排程資料集到期日和消費者刪除請求。
+- [資料衛生API指南](../../hygiene/api/overview.md):您在UI中可執行的所有資料衛生活動，也可以以程式設計方式執行
+
+## [!UICONTROL 隱私權主控台] {#privacy-console}
+
+此 [!UICONTROL 隱私權主控台] Experience PlatformUI中的索引標籤，提供隱私權相關功能(例如 [來自Privacy Service的資料主體請求], [資料衛生工作單]，和 [稽核記錄]. 主控台也提供數種產品內使用案例指南，協助您完成常見的隱私權工作流程。
+
+請參閱 [隱私權主控台概述](../../landing/governance-privacy-security/privacy-console.md) 以取得功能的詳細資訊。
+
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
+
+AI/ML服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司的需求設定特定的模型，而不需要資料科學的專業知識。
+
+### Attribution AI
+
+Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+
+| 功能 | 說明 |
+| --- | --- |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Attribution AI使用指南](../../intelligent-services/attribution-ai/user-guide.md) 了解更多。 |
+| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
+
+如需Attribution AI的詳細資訊，請 [Attribution AI概述](../../intelligent-services/attribution-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
+
+### Customer AI
+
+Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換。
+
+| 功能 | 說明 |
+| --- | --- |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Customer AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md) 了解更多。 |
+| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
+
+如需Customer AI的詳細資訊，請參閱 [Customer AI概觀](../../intelligent-services/customer-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
+
+## 稽核記錄 {#audit-logs}
+
+Experience Platform可讓您稽核各種服務和功能的使用者活動。 稽核記錄會提供關於執行動作的人員以及執行時間的資訊。
+
+**更新功能**
+
+| 功能 | 名稱 | 說明 |
+| --- | --- | --- |
+| 新增資源 | <ul><li>Attribution AI例項</li><li>Customer AI例項</li><li>資料流</li></ul> | 稽核記錄資源會在活動發生時自動記錄。 如果已啟用功能，則無需手動啟用日誌收集。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Platform中稽核記錄所追蹤之不同資源專屬事件類型的詳細資訊，請參閱 [稽核記錄概述](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## 資料收集
+
+Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體驗資料，並傳送至Adobe Experience Platform Edge Network，以便在中加以擴充、轉換及分發至Adobe或非Adobe目的地。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| Platform UI中的左側導覽整合 | 先前專屬於資料收集UI的所有功能（包括標籤、事件轉送和資料流），現在也可透過Experience Platform類別下的左側導覽取得 **[!UICONTROL 資料收集]**. 如此一來，使用Platform中的資料收集功能時，就不需要在UI之間切換。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Platform中資料收集的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
 
 ## Experience Data Model(XDM) {#xdm}
 
@@ -77,32 +160,6 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | 支援刪除資料集 | Identity Service現在支援透過 [目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI或資料衛生。 閱讀指南 [在UI中刪除資料集](../../catalog/datasets/user-guide.md#delete-a-dataset) 以取得更多資訊。 |
 
 若要進一步了解Identity Service，請閱讀 [Identity服務概述](../../identity-service/home.md).
-
-## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
-
-AI/ML服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司的需求設定特定的模型，而不需要資料科學的專業知識。
-
-### Attribution AI
-
-Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
-
-| 功能 | 說明 |
-| --- | --- |
-| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Attribution AI使用指南](../../intelligent-services/attribution-ai/user-guide.md) 了解更多。 |
-| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
-
-如需Attribution AI的詳細資訊，請 [Attribution AI概述](../../intelligent-services/attribution-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
-
-### Customer AI
-
-Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換。
-
-| 功能 | 說明 |
-| --- | --- |
-| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Customer AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md) 了解更多。 |
-| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
-
-如需Customer AI的詳細資訊，請參閱 [Customer AI概觀](../../intelligent-services/customer-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
 
 ## 來源 {#sources}
 
