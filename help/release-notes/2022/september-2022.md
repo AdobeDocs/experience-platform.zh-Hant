@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2539'
 ht-degree: 5%
 
 ---
@@ -22,9 +22,11 @@ Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [稽核記錄](#audit-logs)
+- [[!DNL Dashboards]](#dashboards)
 - [資料收集](#data-collection)
 - [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
+- [查詢服務](#query-service)
 - [來源](#sources)
 
 ## 以屬性為基礎的存取控制 {#abac}
@@ -106,7 +108,17 @@ Experience Platform可讓您稽核各種服務和功能的使用者活動。 稽
 
 如需Platform中稽核記錄所追蹤之不同資源專屬事件類型的詳細資訊，請參閱 [稽核記錄概述](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## 資料收集
+## [!DNL Dashboards] {#dashboards}
+
+Adobe Experience Platform提供多個控制面板，讓您透過這些控制面板檢視組織資料的重要深入分析（在每日快照中擷取）。
+
+| 功能 | 說明 |
+| --- | --- |
+| 使用中標籤 | 在介面工具集資料庫中檢視時，使用中標籤可輕鬆識別控制面板中是否存在現有介面工具集。 這可讓您輕鬆避免重複，不過您仍可以多次新增相同的Widget。 |
+
+如需 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md).
+
+## 資料收集 {#data-collection}
 
 Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體驗資料，並傳送至Adobe Experience Platform Edge Network，以便在中加以擴充、轉換及分發至Adobe或非Adobe目的地。
 
@@ -178,6 +190,19 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | 支援刪除資料集 | Identity Service現在支援透過 [目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI或資料衛生。 閱讀指南 [在UI中刪除資料集](../../catalog/datasets/user-guide.md#delete-a-dataset) 以取得更多資訊。 |
 
 若要進一步了解Identity Service，請閱讀 [Identity服務概述](../../identity-service/home.md).
+
+## 查詢服務 {#query-service}
+
+查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以從 [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或擷取至「即時客戶個人檔案」。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 警報訂閱API | Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的警報。 您可以在Platform UI內透過電子郵件、或兩者，接收警報。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| 資料集範例 | 查詢服務資料集範例可讓您對大資料執行探索式查詢，大幅縮短處理時間，並降低查詢準確度。 |
+
+如需 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md).
 
 ## 來源 {#sources}
 
