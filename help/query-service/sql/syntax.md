@@ -5,9 +5,9 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 33c45c53e2ff591e7b94be1b4b17c25d2fe9d497
+source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
 workflow-type: tm+mt
-source-wordcount: '3033'
+source-wordcount: '3160'
 ht-degree: 2%
 
 ---
@@ -488,6 +488,30 @@ SET property_key = property_value
 ## PostgreSQL命令
 
 以下各節介紹Query Service支援的PostgreSQL命令。
+
+### 分析表
+
+此 `ANALYZE TABLE` 命令計算加速儲存上的表的統計資訊。 統計資訊是根據對加速儲存的給定表執行的CTAS或ITAS查詢計算的。
+
+**範例**
+
+```sql
+ANALYZE TABLE <original_table_name>
+```
+
+以下是使用 `ANALYZE TABLE` 命令：-
+
+| 計算值 | 說明 |
+|---|---|
+| `field` | 表中列的名稱。 |
+| `data-type` | 每欄可接受的資料類型。 |
+| `count` | 包含此欄位非空值的行數。 |
+| `distinct-count` | 此欄位的唯一或不重複值數。 |
+| `missing` | 此欄位具有空值的行數。 |
+| `max` | 來自分析表的最大值。 |
+| `min` | 來自分析表的最小值。 |
+| `mean` | 分析表的平均值。 |
+| `stdev` | 分析表的標準差。 |
 
 ### 開始
 
