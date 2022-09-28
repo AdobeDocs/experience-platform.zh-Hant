@@ -2,10 +2,10 @@
 title: 資料衛生API指南
 description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 724852c63886ea8761b177c4351cca8a6fe748c3
+source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 1%
+source-wordcount: '415'
+ht-degree: 0%
 
 ---
 
@@ -39,13 +39,17 @@ ht-degree: 1%
 
 本檔案提供範例API呼叫，以示範如何設定請求格式。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/api-guide.md#sample-api) (位於Experience PlatformAPI快速入門手冊中)。
 
-<!-- ## Work orders
-
-A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
-
 ## 資料集有效期
 
 資料集過期是因時間延遲而「刪除資料集」的動作。 透過建立資料集的有效期，您可以指定日後刪除該資料集的時間。 請參閱 [資料集過期端點指南](./dataset-expiration.md) 如需API中排程資料集有效期的詳細資訊。
+
+## 消費者刪除
+
+>[!NOTE]
+>
+>消費者刪除僅適用於已購買AdobeHealthcare Shield或隱私保護面板的組織。
+
+資料衛生API可讓您刪除一或所有資料集中與消費者身分識別相關聯的所有記錄。 刪除消費者身分的所有資料衛生工作都由稱為工作單的結構所取代。 請參閱 [工作單端點指南](./workorder.md) 有關在API中使用消費者刪除的詳細資訊。
 
 ## 配額
 
