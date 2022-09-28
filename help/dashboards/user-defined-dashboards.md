@@ -2,18 +2,14 @@
 title: 使用者定義的控制面板
 description: 了解如何建立和管理自訂控制面板，以便建立、新增和編輯自訂小工具，以視覺化關鍵量度。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: bb94f7438efe1e24056d6689ffc10b928fc633c2
+source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
 
-# 使用者定義的控制面板（測試版）
-
->[!IMPORTANT]
->
->使用者定義的控制面板功能正在測試中。 其功能和檔案可能會有所變更。
+# 使用者定義的控制面板
 
 Adobe Experience Platform控制面板可協助您透過使用者定義的控制面板功能，加速深入分析和自訂視覺效果。 此功能可讓您建立和管理自訂控制面板，在其中建立、新增及編輯定制小工具，以視覺化與貴組織相關的關鍵量度。
 

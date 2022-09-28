@@ -1,185 +1,227 @@
 ---
-title: Adobe Experience Platform 發行說明
-description: Adobe Experience Platform的最新發行說明。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5baf7457d02461c87d82d0ad877ee5192d48ea23
+title: Adobe Experience Platform發行說明2022年9月
+description: 2022年9月Adobe Experience Platform發行說明。
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2136'
-ht-degree: 7%
+source-wordcount: '2796'
+ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 24 月 8 日**
+**發行日期：2022 年 9 月 28 日**
+
+Adobe Experience Platform的新功能：
+
+- [以屬性為基礎的存取控制](#abac)
+- [資料衛生](#data-hygiene)
+- [[!UICONTROL 隱私權主控台]](#privacy-console)
 
 Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
+- [稽核記錄](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [體驗資料模型(XDM)](#xdm)
-- [即時客戶個人檔案](#profile)
-- [分段服務](#segmentation)
+- [資料收集](#data-collection)
+- [Experience Data Model(XDM)](#xdm)
+- [身份識別服務](#identity-service)
+- [查詢服務](#query-service)
 - [來源](#sources)
+
+## 以屬性為基礎的存取控制 {#abac}
+
+>[!IMPORTANT]
+>
+>從2022年10月起，將啟用基於屬性的存取控制。 若您想成為早期收養者，請聯絡您的Adobe代表。
+
+基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓具備隱私權意識的品牌在管理使用者存取方面擁有更大的彈性。 可將個別物件（例如結構欄位和區段）指派給使用者角色。 此功能可讓您授予或撤銷組織中特定Platform使用者對個別物件的存取權。
+
+透過基於屬性的存取控制，貴組織的管理員可控制使用者對所有平台工作流程和資源的存取、敏感個人資料(SPD)、個人識別資訊(PII)和其他自訂資料類型。 管理員可以定義只有特定欄位和與這些欄位對應的資料存取權的使用者角色。
+
+| 功能 | 說明 |
+| --- | --- |
+| 以屬性為基礎的存取控制 | 以屬性為基礎的存取控制可讓您為Experience Data Model(XDM)結構欄位和區段加上標籤，以定義組織或資料使用範圍。 同時，管理員可使用使用者和角色管理介面來定義涵蓋XDM架構欄位和區段的存取原則，以更妥善地管理提供給使用者或使用者群組（內部、外部或第三方使用者）的存取權。 如需詳細資訊，請參閱 [基於屬性的訪問控制概述](../../access-control/abac/overview.md). |
+| 權限 | 權限是管理員可在其中定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限的Experience Cloud區域。 透過權限，您可以建立和管理角色、指派這些角色所需的資源權限，以及建立原則以運用標籤，並定義哪些使用者角色可存取特定平台資源。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。 如需詳細資訊，請參閱 [權限UI指南](../../access-control/abac/ui/browse.md). |
+
+有關基於屬性的訪問控制的詳細資訊，請參見 [基於屬性的訪問控制概述](../../access-control/abac/overview.md). 有關基於屬性的訪問控制工作流的完整指南，請閱讀 [基於屬性的訪問控制端到端指南](../../access-control/abac/end-to-end-guide.md).
+
+## 資料衛生 {#data-hygiene}
+
+Adobe Experience Platform提供一組完善的工具，可管理大型、複雜的資料操作，以便協調消費者體驗。 隨著資料隨著時間傳入系統中，管理資料儲存變得越來越重要，這樣資料就能如預期般使用、在需要更正錯誤資料時更新，並在組織原則認為有必要時刪除。
+
+Adobe Experience Platform的資料衛生功能可讓您排程自動資料集過期時間，並以程式設計方式依身分刪除消費者資料，以清除資料。
+
+>[!IMPORTANT]
+>
+>僅購買了AdobeHealthcare Shield或Privacy Shield的組織才能使用資料衛生功能。
+
+請參閱下列檔案以開始使用資料衛生：
+
+- [資料衛生概觀](../../hygiene/home.md):了解Platform資料衛生功能的基本知識。
+- [[!UICONTROL 資料衛生] UI指南](../../hygiene/ui/overview.md):了解如何在Platform使用者介面中排程資料集到期日和消費者刪除請求。
+- [資料衛生API指南](../../hygiene/api/overview.md):您在UI中可執行的所有資料衛生活動，也可以以程式設計方式執行
+
+## [!UICONTROL 隱私權主控台] {#privacy-console}
+
+此 [!UICONTROL 隱私權主控台] Experience PlatformUI中的索引標籤，提供隱私權相關功能(例如 [來自Privacy Service的資料主體請求](../../privacy-service/home.md), [資料衛生工作單](../../hygiene/home.md)，和 [稽核記錄](../../landing/governance-privacy-security/audit-logs/overview.md). 主控台也提供數種產品內使用案例指南，協助您完成常見的隱私權工作流程。
+
+請參閱 [隱私權主控台概述](../../landing/governance-privacy-security/privacy-console.md) 以取得功能的詳細資訊。
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
-AI/ML服務使營銷分析員和從業人員能夠利用人工智慧和機器學習在客戶體驗使用案例中的力量。 這使市場營銷分析員能夠使用業務級配置來設定特定於公司需要的模型，而無需資料科學專業知識。
+AI/ML服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司的需求設定特定的模型，而不需要資料科學的專業知識。
 
 ### Attribution AI
 
 Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
 
-**已更新功能**
+| 功能 | 說明 |
+| --- | --- |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Attribution AI使用指南](../../intelligent-services/attribution-ai/user-guide.md) 了解更多。 |
+| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
+
+如需Attribution AI的詳細資訊，請 [Attribution AI概述](../../intelligent-services/attribution-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
+
+### Customer AI
+
+Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換。
 
 | 功能 | 說明 |
-| ------- | ----------- |
-| 隱私支援 | <ul><li> Attribution AI現在支援定義用戶角色和訪問策略來管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。 </li><li>在活動發生時自動記錄審核日誌資源。</li><li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據某些屬性控制對特定對象和/或權能的訪問，這些屬性可以添加到對象（如標籤）中的元資料。管理員還可以定義只有權訪問與這些欄位對應的特定欄位和資料的用戶角色。</li><li>Attribution AI利用平台資料集。 為支援品牌可能收到的消費者權利請求，品牌應使用平台Privacy Service提交消費者訪問請求並刪除，以跨資料庫、身份服務和即時客戶配置檔案刪除其資料。  </li><li>所有用於模型輸入/輸出的資料集都將遵循平台准則。 平台資料加密適用於靜態和在途資料。 請參閱文檔以瞭解有關 [資料加密](../../../help/landing/governance-privacy-security/encryption.md)。</li></ul> |
+| --- | --- |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Customer AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md) 了解更多。 |
+| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
+
+如需Customer AI的詳細資訊，請參閱 [Customer AI概觀](../../intelligent-services/customer-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
+
+## 稽核記錄 {#audit-logs}
+
+Experience Platform可讓您稽核各種服務和功能的使用者活動。 稽核記錄會提供關於執行動作的人員以及執行時間的資訊。
+
+**更新功能**
+
+| 功能 | 名稱 | 說明 |
+| --- | --- | --- |
+| 新增資源 | <ul><li>Attribution AI例項</li><li>Customer AI例項</li><li>資料流</li></ul> | 稽核記錄資源會在活動發生時自動記錄。 如果已啟用功能，則無需手動啟用日誌收集。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-**注釋**:Attribution AI在另行通知之前，不會向現有的Healthcare Shield或Privacy Shield客戶提供。
-
-有關Attribution AI的詳細資訊，請參閱 [Attribution AI](../../intelligent-services/attribution-ai/overview.md) 概述。
-
-### 客戶AI
-
-在Real-time Customer Data Platform提供的客戶AI用於生成定制傾向得分，如按比例對單個配置檔案進行流失和轉換。
-
-**已更新功能**
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 隱私支援 | <ul><li> 客戶AI現在支援定義用戶角色和訪問策略以管理 [權限](../../../help/access-control/abac/ui/permissions.md) 用於產品應用程式中的功能和對象。 </li><li>在活動發生時自動記錄審核日誌資源。</li><li> 通過 [基於屬性的訪問控制](../../access-control/abac/overview.md)，管理員可以根據特定屬性控制對特定對象和/或權能的訪問。 這些屬性可以是添加到對象（如標籤）的元資料。 管理員還可以定義用戶角色，這些用戶角色只能訪問與這些欄位對應的特定欄位和資料。</li><li>客戶AI利用平台資料集。 為支援品牌可能收到的消費者權利請求，品牌應使用平台Privacy Service提交消費者訪問請求並刪除，以跨資料庫、身份服務和即時客戶配置檔案刪除其資料。 </li><li>所有用於模型輸入/輸出的資料集都將遵循平台准則。 平台資料加密適用於靜態和在途資料。 請參閱文檔以瞭解有關 [資料加密](../../../help/landing/governance-privacy-security/encryption.md)。</li></ul> |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-**注釋**:在另行通知之前，客戶AI將不可用於現有的Healthcare Shield或Privacy Shield客戶。
-
-有關客戶AI的詳細資訊，請參閱 [客戶AI](../../intelligent-services/customer-ai/overview.md) 概述。
+如需Platform中稽核記錄所追蹤之不同資源專屬事件類型的詳細資訊，請參閱 [稽核記錄概述](../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform提供 [!DNL dashboards] 通過這些資訊，您可以查看有關組織資料的重要見解，如在每日快照中捕獲的。
-
-**已更新功能**
+Adobe Experience Platform提供多個控制面板，讓您透過這些控制面板檢視組織資料的重要深入分析（在每日快照中擷取）。
 
 | 功能 | 說明 |
 | --- | --- |
-| 計畫激活小部件 | 的 [!UICONTROL 計畫激活] 小部件提供了最近激活的目標的表格化視圖。 對於每個段，它包括名稱、目標平台和激活開始和結束日期。 通過此小部件，您可以快速發現激活受眾的位置和時間，並使重複或不必要的激活更加透明。 這些累積的資訊還突出顯示了任何激活被排除的地方。 |
+| 使用中標籤 | 在介面工具集資料庫中檢視時，使用中標籤可輕鬆識別控制面板中是否存在現有介面工具集。 這可讓您輕鬆避免重複，不過您仍可以多次新增相同的Widget。 |
+| 使用者定義的控制面板 | 使用者定義的控制面板可讓您建立和管理自訂控制面板，協助您加速深入分析和自訂視覺效果。 透過使用者定義的控制面板，您可以建立、新增及編輯定制小工具，以視覺化與貴組織相關的關鍵量度。 閱讀 [功能指南](../../dashboards/user-defined-dashboards.md) 了解更多。 |
+| Customer Data Platform Insights資料模型 | Customer Data Platform(CDP)Insights Data Model功能可公開資料模型和SQL，為各種設定檔、目的地和細分小工具提供深入分析。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標使用案例建立CDP報表。 然後，這些前瞻分析便可作為使用者定義控制面板的自訂小工具。 閱讀 [CDP Insights Data Model功能指南](../../dashboards/cdp-insights-data-model.md) 了解更多。 |
+| 對象重疊報表介面工具集 | 此介面工具集適用於兩者 [!UICONTROL 設定檔] 和 [!UICONTROL 區段] 控制面板。 報表提供依所選區段最高或最低重疊百分比排名的受眾順序清單。 從 [!UICONTROL 設定檔] 您可以透過合併政策，從所有可用區段中篩選及檢視對象重疊。 此 [!UICONTROL 區段] 控制面板可讓您依據特定區段來篩選對象重疊。<br>使用此分析來建立新的高效能區段，並避免將相同的對象傳送至不同的目的地。 此報表也有助於識別隱藏的深入分析，以改善細分或找出要追蹤的不重複設定檔。 |
 
-有關 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md)。
+如需 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md).
 
-## [!DNL Data Prep] {#data-prep}
+## 資料收集 {#data-collection}
 
-[!DNL Data Prep] 允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
+Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體驗資料，並傳送至Adobe Experience Platform Edge Network，以便在中加以擴充、轉換及分發至Adobe或非Adobe目的地。
 
-**已更新功能**
+**更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 支援插入帶警告的記錄 | Data Prep現在將警告（非嚴重錯誤）本地化到欄位，並允許接收行的其餘部分。 現在，所有映射器轉換錯誤都會報告為警告，部分攝取的行被視為成功，並帶有警告。  對包含警告和診斷詳細資訊的記錄也支援監視。 當前，只有流資料才能部分接收帶有警告的記錄。 查看文檔 [正在接收帶警告的記錄](../../sources/tutorials/ui/monitor-streaming.md) 的子菜單。 |
+| Platform UI中的左側導覽整合 | 先前專屬於資料收集UI的所有功能（包括標籤、事件轉送和資料流），現在也可透過Experience Platform類別下的左側導覽取得 **[!UICONTROL 資料收集]**. 如此一來，使用Platform中的資料收集功能時，就不需要在UI之間切換。 |
+| 標籤和事件轉送中的使用者歸因 | 清單可用時 [!UICONTROL 屬性] 在「標籤」和「事件轉送」中，每個列出的屬性現在都會顯示其上次更新的時間，以及哪個使用者進行了更新。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-瞭解有關 [!DNL Data Prep]，請參見 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
+如需Platform中資料收集的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
 
-## [!DNL Destinations] {#destinations}
+## Experience Data Model(XDM) {#xdm}
 
-[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
-
-**新增或更新的功能**
-
-| 功能 | 說明 |
-| ----------- | ----------- |
-| (Beta)基於屬性的個性化對個性化目標的支援 | 通過基於屬性的個性化測試版，您將在 [目標目錄](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe TargetV2]**:此連接器當前處於測試版中，並且僅適用於選定數量的客戶。 除了Adobe TargetV1卡提供的功能外，目標V2連接器還 [映射步驟](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 激活工作流，它允許您將配置檔案屬性映射到Adobe Target，從而啟用基於屬性的同頁和下一頁個性化。</li><li>**[!UICONTROL 具有屬性的自定義個性化]**:此連接器當前處於測試版中，並且僅適用於選定數量的客戶。 除了 **[!UICONTROL 自定義個性化]**，也請參見Wiki頁。 **[!UICONTROL 具有屬性的自定義個性化]** 連接器添加可選 [映射步驟](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) 激活工作流，它允許您將配置檔案屬性映射到自定義個性化目標，從而啟用基於屬性的同頁和下一頁個性化。</li></ul> <br> 配置檔案屬性可能包含敏感資料。 為保護此資料， **[!UICONTROL 具有屬性的自定義個性化]** 目標要求您使用 [邊緣網路伺服器API](../../server-api/overview.md) 的下界。 此外，所有伺服器API調用必須在 [已驗證上下文](../../server-api/authentication.md)。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-**新目標**
-
-| 目的地 | 說明 |
-| ----------- | ----------- |
-| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) 是一個銷售執行平台，擁有世界上最多的B2B買方 — 賣方交互資料，並對專有AI技術進行大量投資，以將銷售資料轉換為智慧。 [!DNL Outreach] 幫助企業實現銷售參與的自動化，並採取收入智慧措施，以提高效率、可預測性和增長。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
-
-## 體驗資料模型(XDM) {#xdm}
-
-XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供通用結構和定義（架構）。 通過遵守XDM標準，所有客戶體驗資料都可以納入到共同的表示形式中，以更快、更整合的方式提供見解。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
-
-**新的XDM元件**
-
-| 元件類型 | 名稱 | 說明 |
-| --- | --- | --- |
-| 全局架構 | [[!UICONTROL AJO實體架構]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | 描述Adobe Journey Optimizer的非正常實體。 |
-| 類 | [[!UICONTROL AJO執行實體]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-execution-entity.schema.json) | 描述用於分段的Adobe Journey Optimizer執行實體。 |
-| 欄位群組 | [[!UICONTROL Workfront工作對象]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | 引用Adobe Workfront的所有低級對象特定欄位組的包裝欄位組。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-**更新的XDM元件**
-
-| 元件類型 | 名稱 | 說明 |
-| --- | --- | --- |
-| 欄位群組 | [[!UICONTROL Journey Orchestration步驟事件公用欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 添加了兩個新屬性： `origTimeStamp` 和 `experienceID`。 |
-| 欄位群組 | [[!UICONTROL 段成員身份詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | 除 [!UICONTROL XDM個人配置檔案]，此欄位組現在也可以用於基於XDM業務帳戶類的架構中。 |
-| 欄位群組 | （多個） | 一些與MarketoB2B活動有關的外地小組已更新為穩定狀態。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1593/files) 的雙曲餘切值。 |
-| 欄位群組 | （多個） | 已更新幾個與天氣有關的現場組，以修復為 `uvIndex` 和 `sunsetTime`。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1602/files) 的雙曲餘切值。 |
-| 資料類型 | [[!UICONTROL 產品清單項]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 新屬性 `productImageUrl` 已添加。 |
-| 資料類型 | [[!UICONTROL Qoe資料詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 新屬性 `framesPerSecond` 已添加。 |
-| 資料類型 | [[!UICONTROL 會話詳細資訊資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` 已重新命名為 `appVersion`。`meta:enum` 和 `description` 欄位也已更新。 |
-| 資料類型和欄位組 | （多個） | 多個媒體資料類型和欄位組具有新欄位和更新的說明。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1582/files) 的雙曲餘切值。 |
-| (全部) | （多個） | 包含 `enum` 欄位現在還包含相應的 `meta:enum` 欄位，以表示每個約束的顯示值。 請參閱以下內容 [拉式請求](https://github.com/adobe/xdm/pull/1601/files) 的雙曲餘切值。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-有關平台中XDM的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md)。
-
-## 即時客戶個人檔案 {#profile}
-
-Adobe Experience Platform使您能夠為您的客戶提供協調、一致和相關的體驗，無論客戶在何處或何時與您的品牌進行交互。 通過即時客戶概要資訊，您可以看到每個客戶的整體視圖，該視圖將來自多個渠道的資料組合在一起，包括線上、離線、CRM和第三方資料。 配置檔案允許您將客戶資料整合到一個統一視圖中，為每次客戶交互提供一個可操作且時間戳記的帳戶。
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 合併策略硬限制 | 平台現在將強制執行 **五** 合併每個沙盒的策略。 如果您的沙盒當前有五個以上的合併策略，您將 **不** 能夠建立新的合併策略，直到沙盒的合併策略少於五個。 |
-| 孤立配置檔案邊緣屬性清理 | 對於所有組織，配置檔案服務現在每天刪除用戶活動區域的剩餘邊緣屬性，以便更準確地表示您在系統中的配置檔案。 在刪除給定配置檔案的所有配置檔案片段後進行此清理，並且應影響從其中合併的資料集中合併的配置檔案 `com_adobe_aep_profile_region_dataset` 標籤為 `true`。 這可能顯示許可證使用儀表板中「可定址受眾」度量的下落，也可能顯示配置檔案儀表板中「配置檔案計數」度量的下落，因為這些度量包括此版本之前剩餘的邊緣屬性片段。 |
-
-{style=&quot;table-layout:auto&quot;&quot;
-
-要瞭解有關即時客戶概要資訊的更多資訊，包括有關使用概要資訊資料的教程和最佳做法，請首先閱讀 [即時客戶概要資訊概述](../../profile/home.md)。
-
-## 分段服務 {#segmentation}
-
-[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
+XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料提供通用結構和定義（結構）。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
 
 **新功能**
 
 | 功能 | 說明 |
-| ------- | ----------- |
-| 支援4000個段 | 所有使用平台的組織現在可支援多達4000個段定義。 有關此更改如何影響段作業API的詳細資訊，請閱讀 [段作業終結點指南](../../segmentation/api/segment-jobs.md) |
+| --- | --- |
+| 列舉和建議值的UI支援 | 除了啟用資料驗證的列舉外，您現在還可以 [新增或移除建議值](../../xdm/ui/fields/enum.md) 標準或自訂字串欄位，讓Platform使用者在建立區段時，有好記的值清單可供選取。 |
 
-有關 [!DNL Segmentation Service]，請參閱 [分段概述](../../segmentation/home.md)。
+**新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位群組 | [[!UICONTROL AJO分類欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | 與之互動的特定元素的屬性，會觸發主張事件。 |
+| 欄位群組 | [[!UICONTROL MediaAnalytics互動詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-analytics.schema.json) | 追蹤一段時間內的媒體互動。 |
+| 欄位群組 | [[!UICONTROL 媒體詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | 跟蹤介質詳細資訊。 |
+| 欄位群組 | [[!UICONTROL AdobeCJM ExperienceEvent — 曲面]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/surfaces.schema.json) | 說明Adobe Journey Optimizer中體驗事件的曲面。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**更新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 行為 | [[!UICONTROL 時間序列]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | <ul><li>新增 `eventType`:<ul><li>`decisioning.propositionSend`</li><li>`decisioning.propositionDismiss`</li><li>`decisioning.propositionTrigger`</li><li>`media.downloaded`</li><li>`location.entry`</li><li>`location.exit`</li></ul></li><li>移除 `eventType`:<ul><li>`decisioning.propositionDeliver`</li><li>`media.stateStart`</li><li>`media.stateEnd`</li></ul></li></ul> |
+| 欄位群組 | （多個） | [更新數個欄位說明](https://github.com/adobe/xdm/pull/1628/files) 跨Journey Orchestration元件。 |
+| 欄位群組 | （多個） | [更新數個Adobe Workfront元件的標題](https://github.com/adobe/xdm/pull/1634/files) 一致性。 |
+| 欄位群組 | [[!UICONTROL AJO分類欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | 將數個欄位的命名空間更新為 `xdm`. |
+| 欄位群組 | [[!UICONTROL Journey Orchestration步驟事件常見欄位]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | 新增欄位， `isReadSegmentTriggerStartEvent`. |
+| 欄位群組 | [[!UICONTROL 預測天氣]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | 變更 `xdm:uvIndex` 欄位新增為整數類型， `xdm` 命名空間至缺少的多個欄位。 |
+| 欄位群組 | [[!UICONTROL 媒體詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/mediadetails.schema.json) | `xdm:endUserIDs` 和 `xdm:implementationDetails` 已從欄位組中刪除。 |
+| 資料類型 | （多個） | [已更新多個媒體屬性名稱](https://github.com/adobe/xdm/pull/1626/files) 以保持一致性。 |
+| 資料類型 | [[!UICONTROL 實作詳細資料]](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json) | 已新增已知的顫動名稱。 |
+| 資料類型 | [[!UICONTROL 興趣點詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json) | 資料類型現在可以接受與地標相關聯的中繼資料索引鍵/值組清單。 |
+| 資料類型 | [[!UICONTROL 主張行動]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-action.schema.json) | [!DNL AJO Classification Fields] 已重新命名為 [!UICONTROL 主張行動]. |
+| 資料類型 | [[!UICONTROL 主張事件類型]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-event-type.schema.json) | [!DNL AJO Classification Fields] 已重新命名為 [!UICONTROL 主張行動]. |
+| （多個） | （多個） | 實驗性質 [穩定於所有B2B元件](https://github.com/adobe/xdm/pull/1617/files). |
+| （多個） | （多個） | Adobe Journey Optimizer實體 [穩定](https://github.com/adobe/xdm/pull/1625/files). |
+| （多個） | （多個） | 幾個實驗元件中特定欄位的命名空間已 [已更新一致性](https://github.com/adobe/xdm/pull/1626/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
+
+## 身份識別服務 {#identity-service}
+
+要提供相關的數位體驗，必須全面了解客戶。 當您的客戶資料分散到不同的系統中，導致每個客戶看起來都有多個「身分」時，就會更難做到這一點。
+
+Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您即時提供具影響力的個人數位體驗，進而協助您更清楚掌握客戶及其行為。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 支援刪除資料集 | Identity Service現在支援透過 [目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI或資料衛生。 閱讀指南 [在UI中刪除資料集](../../catalog/datasets/user-guide.md#delete-a-dataset) 以取得更多資訊。 |
+
+若要進一步了解Identity Service，請閱讀 [Identity服務概述](../../identity-service/home.md).
+
+## 查詢服務 {#query-service}
+
+查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以從 [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或擷取至「即時客戶個人檔案」。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 警報訂閱API | Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的警報。 您可以在Platform UI內透過電子郵件、或兩者，接收警報。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
+| 資料集範例 | 查詢服務資料集範例可讓您對大資料執行探索式查詢，大幅縮短處理時間，並降低查詢準確度。 |
+
+如需 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md).
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定獲取運行時間以及管理資料獲取吞吐量。
 
-**新功能**
+**更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 自助源的一般可用性（批SDK） | 開發、test和整合基於REST API的資料源，以便使用易於配置的源規範將批資料Experience Platform。 使用Sources SDK，您可以： <ul><li>為Experience Platform目錄配置新源。</li><li>定義源的規範，包括與支援的驗證類型、計畫以及獲取資源資料的方式有關的資訊。</li><li>為新源建立面向用戶的文檔。</li></ul> 有關詳細資訊，請閱讀 [自助源（批處理SDK）](../../sources/sources-sdk/overview.md)。 |
-| 2004年12月 [!DNL Google BigQuery] 源 | 使用 [!DNL Google BigQuery] 從您的 [!DNL Google BigQuery] 資料倉庫到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Google BigQuery] 源](../../sources/connectors/databases/bigquery.md)。 |
-| [!DNL Teradata Vantage] 源(Beta) | 使用 [!DNL Teradata Vantage] 將資料從混合多雲環境中接收到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Teradata Vantage] 源](../../sources/connectors/databases/teradata-vantage.md)。 |
-| 跨區域支助Adobe Analytics來源 | 您現在可以從任何區域擷取報告套裝 (美國、英國或新加坡)。報表套件必須映射到與正在其中建立源連接的Experience Platform沙盒實例相同的組織。 有關詳細資訊，請閱讀上的指南 [在UI中建立Adobe Analytics源連接](../../sources/tutorials/ui/create/adobe-applications/analytics.md)。 |
+| Audience Manager區段母體對即時客戶設定檔的影響 | 首次使用Audience Manager來源將Audience Manager區段傳送至Platform時，擷取大量Audience Manager區段母體會直接影響您的設定檔總數。 這表示選取所有區段可能會導致設定檔計數超過您的授權使用權限。 如需詳細資訊，請閱讀 [Audience Manager來源概觀](../../sources/connectors/adobe-applications/audience-manager.md). 如需您使用授權的詳細資訊，請參閱 [使用授權使用控制面板](../../dashboards/guides/license-usage.md). |
+| 支援Adobe Campaign管理Cloud Service | 使用Adobe Campaign受管Cloud Service來源將Adobe Campaign v8.4的傳送和追蹤記錄檔資料Experience Platform。 閱讀指南 [在UI中建立Adobe Campaign托管Cloud Service來源連線](../../sources/tutorials/ui/create/adobe-applications/campaign.md) 以取得更多資訊。 |
+| 批次來源的隨需內嵌API支援 | 使用按需獲取功能為具有的指定資料流建立臨時流運行 [!DNL Flow Service] API。 已建立的流量執行必須設為一次性擷取。 如需詳細資訊，請參閱 [使用API建立流程以執行隨選擷取](../../sources/tutorials/api/on-demand-ingestion.md) 以取得更多資訊。 |
+| 為批源重試失敗的資料流運行提供API支援 | 使用 `re-trigger` 操作，通過API重試失敗的資料流。 閱讀指南 [使用API重試失敗的資料流運行](../../sources/tutorials/api/retry-flows.md) 以取得更多資訊。 |
+| API支援篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源 | 使用邏輯和比較運算子來篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源。 閱讀指南 [使用API篩選來源的資料](../../sources/tutorials/api/filter.md) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
-
-要瞭解有關源的詳細資訊，請參閱 [源概述](../../sources/home.md)。
+若要進一步了解來源，請閱讀 [來源概觀](../../sources/home.md).

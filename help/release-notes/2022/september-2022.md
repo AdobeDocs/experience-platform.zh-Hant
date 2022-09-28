@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
+source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
 workflow-type: tm+mt
-source-wordcount: '2754'
+source-wordcount: '2979'
 ht-degree: 5%
 
 ---
@@ -116,6 +116,9 @@ Adobe Experience Platform提供多個控制面板，讓您透過這些控制面�
 | 功能 | 說明 |
 | --- | --- |
 | 使用中標籤 | 在介面工具集資料庫中檢視時，使用中標籤可輕鬆識別控制面板中是否存在現有介面工具集。 這可讓您輕鬆避免重複，不過您仍可以多次新增相同的Widget。 |
+| 使用者定義的控制面板 | 使用者定義的控制面板可讓您建立和管理自訂控制面板，協助您加速深入分析和自訂視覺效果。 透過使用者定義的控制面板，您可以建立、新增及編輯定制小工具，以視覺化與貴組織相關的關鍵量度。 閱讀 [功能指南](../../dashboards/user-defined-dashboards.md) 了解更多。 |
+| Customer Data Platform Insights資料模型 | Customer Data Platform(CDP)Insights Data Model功能可公開資料模型和SQL，為各種設定檔、目的地和細分小工具提供深入分析。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標使用案例建立CDP報表。 然後，這些前瞻分析便可作為使用者定義控制面板的自訂小工具。 閱讀 [CDP Insights Data Model功能指南](../../dashboards/cdp-insights-data-model.md) 了解更多。 |
+| 對象重疊報表介面工具集 | 此介面工具集適用於兩者 [!UICONTROL 設定檔] 和 [!UICONTROL 區段] 控制面板。 報表提供依所選區段最高或最低重疊百分比排名的受眾順序清單。 從 [!UICONTROL 設定檔] 您可以透過合併政策，從所有可用區段中篩選及檢視對象重疊。 此 [!UICONTROL 區段] 控制面板可讓您依據特定區段來篩選對象重疊。<br>使用此分析來建立新的高效能區段，並避免將相同的對象傳送至不同的目的地。 此報表也有助於識別隱藏的深入分析，以改善細分或找出要追蹤的不重複設定檔。 |
 
 如需 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md).
 
