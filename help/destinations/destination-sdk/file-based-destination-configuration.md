@@ -1,29 +1,27 @@
 ---
-description: 此配置允許您指明基本資訊，如目標名稱、類別、說明、徽標等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
-title: （測試版）基於檔案的目標配置選項，用於Destination SDK
+description: 此設定可讓您指出檔案型目的地的基本資訊，例如目的地名稱、類別、說明等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
+title: 基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2664'
 ht-degree: 5%
 
 ---
 
-# （測試版）基於檔案的目標配置 {#destination-configuration}
+# 基於檔案的目標配置 {#destination-configuration}
 
 ## 總覽 {#overview}
 
->[!IMPORTANT]
->
->Adobe Experience Platform Destination SDK中基於檔案的目標支援當前處於測試版中。 文檔和功能可能會更改。
+此設定可讓您指出檔案型目的地的基本資訊，例如目的地名稱、類別、說明等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。 您也可以使用此配置來顯示與導出檔案的檔案類型、檔案格式或壓縮設定相關的選項。
 
-此配置允許您指示基於檔案的目標的基本資訊，如目標名稱、類別、說明等。 此配置中的設定還確定Experience Platform用戶如何驗證到目標、Experience Platform用戶介面中的顯示方式以及可以導出到目標的身份。
+此設定也會將目的地運作所需的其他設定（目的地伺服器和對象中繼資料）連線至此設定。 請參閱 [下文](./file-based-destination-configuration.md#connecting-all-configurations).
 
-此配置還將目標工作所需的其他配置（目標伺服器和受眾元資料）連接到此配置。 閱讀如何在 [下](./destination-configuration.md#connecting-all-configurations)。
+您可以使用 `/authoring/destinations` API端點。 閱讀 [目的地API端點作業](./destination-configuration-api.md) 可在端點上執行的操作的完整清單。
 
-您可以使用 `/authoring/destinations` API終結點。 閱讀 [目標API終結點操作](./destination-configuration-api.md) 可在端點上執行的操作的完整清單。
+## Amazon S3目的地設定範例 {#batch-example-configuration}
 
-## AmazonS3目標配置示例 {#batch-example-configuration}
+以下是透過建立的私人自訂Amazon S3目的地的範例， `/destinations` 設定端點。
 
 ```json
 {
@@ -318,17 +316,17 @@ ht-degree: 5%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `name` | 字串 | 指示Experience Platform目錄中目標的標題。 |
-| `description` | 字串 | 在Experience Platform目標目錄中提供目標卡的說明。 目標不超過4-5句。 |
-| `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 在首次配置目標時。 |
-| `maxProfileAttributes` | 字串 | 指示客戶可導出到目標的配置檔案屬性的最大數量。 預設值為 `2000`。 |
-| `maxIdentityAttributes` | 字串 | 指示客戶可導出到目標的標識命名空間的最大數量。 預設值為 `10`。 |
+| `name` | 字串 | 指出Experience Platform目錄中的目的地標題。 |
+| `description` | 字串 | 在Experience Platform目的地目錄中提供目的地卡片的說明。 目標不超過4-5句。 |
+| `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 設定目的地時。 |
+| `maxProfileAttributes` | 字串 | 指出客戶可匯出至目的地的設定檔屬性數目上限。 預設值為 `2000`。 |
+| `maxIdentityAttributes` | 字串 | 指出客戶可匯出至目的地的身分識別命名空間數目上限。 預設值為 `10`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 客戶驗證配置 {#customer-authentication-configurations}
+## 客戶驗證設定 {#customer-authentication-configurations}
 
-目標配置中的此部分將生成 [配置新目標](/help/destinations/ui/connect-destination.md) Experience Platform用戶介面中的「Experience Platform」頁，其中用戶將連接到他們與目標的帳戶。
+目的地設定中的此區段會產生 [配置新目標](/help/destinations/ui/connect-destination.md) 頁面，使用者可在此將Experience Platform連線至其與您目的地的帳戶。
 
 ```json
 "customerAuthenticationConfigurations": [
@@ -338,39 +336,39 @@ ht-degree: 5%
     ],
 ```
 
-取決於 [驗證選項](authentication-configuration.md##supported-authentication-types) 在 `authType` 欄位中，將為用戶生成Experience Platform頁，如下所示：
+視 [驗證選項](authentication-configuration.md##supported-authentication-types) 在 `authType` 欄位中，系統會為使用者產生「Experience Platform」頁面，如下所示：
 
-### AmazonS3驗證 {#s3}
+### Amazon S3驗證 {#s3}
 
-配置AmazonS3身份驗證類型時，用戶需要輸入S3憑據。
+設定Amazon S3驗證類型時，使用者必須輸入S3憑證。
 
-![使用S3身份驗證的UI呈現](assets/s3-authentication-ui.png)
+![UI以S3驗證呈現](assets/s3-authentication-ui.png)
 
-### Azure Blob身份驗證  {#blob}
+### Azure Blob驗證  {#blob}
 
 配置Azure Blob身份驗證類型時，用戶需要輸入連接字串。
 
-![UI呈現與Blob身份驗證](assets/blob-authentication-ui.png)
+![使用Blob驗證呈現UI](assets/blob-authentication-ui.png)
 
 ### 具有密碼驗證的SFTP
 
-使用密碼驗證類型配置SFTP時，用戶需要輸入SFTP用戶名和密碼以及SFTP域和埠（預設埠為22）。
+使用密碼驗證類型設定SFTP時，使用者必須輸入SFTP使用者名稱和密碼，以及SFTP網域和連接埠（預設連接埠為22）。
 
-![UI呈現，SFTP帶密碼驗證](assets/sftp-password-authentication-ui.png)
+![使用SFTP呈現UI並進行密碼驗證](assets/sftp-password-authentication-ui.png)
 
-### SFTP與SSH密鑰驗證
+### SSH金鑰驗證的SFTP
 
-使用SSH密鑰驗證類型配置SFTP時，用戶需要輸入SFTP用戶名和SSH密鑰，以及SFTP域和埠（預設埠為22）。
+使用SSH金鑰驗證類型設定SFTP時，使用者必須輸入SFTP使用者名稱和SSH金鑰，以及SFTP網域和連接埠（預設連接埠為22）。
 
-![UI呈現，SFTP帶SSH密鑰驗證](assets/sftp-key-authentication-ui.png)
+![UI透過SSH金鑰驗證透過SFTP轉譯](assets/sftp-key-authentication-ui.png)
 
 ## 客戶資料欄位 {#customer-data-fields}
 
-使用此部分可在連接到Experience PlatformUI中的目標時要求用戶填寫特定於目標的自定義欄位。
+使用本區段，可在連線至Experience PlatformUI中的目的地時，要求使用者填寫您目的地專屬的自訂欄位。
 
-在下面的示例中， `customerDataFields` 要求用戶輸入其目標的名稱，並提供 [!DNL Amazon S3] 儲存段名稱和資料夾路徑，以及壓縮類型、檔案格式和多個其他檔案導出選項。
+在以下範例中， `customerDataFields` 需要使用者輸入其目的地的名稱，並提供 [!DNL Amazon S3] 貯體名稱和資料夾路徑，以及壓縮類型、檔案格式和其他數個檔案格式選項。
 
-您可以訪問和使用模板中客戶資料欄位中的客戶輸入。 使用宏 `{{customerData.name}}`。 例如，如果要求用戶輸入名稱為「AmazonS3儲存桶」的欄位 `bucket`，可使用宏在模板中訪問 `{{customerData.bucket}}`。 查看在中使用客戶資料欄位的示例 [目標伺服器配置](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example)。
+您可以存取並使用範本中客戶資料欄位的客戶輸入。 使用巨集 `{{customerData.exampleName}}`. 例如，若您要求使用者輸入名稱為的Amazon S3貯體欄位 `bucket`，則可使用巨集在範本中存取 `{{customerData.bucket}}`. 檢視中如何使用客戶資料欄位的範例， [目標伺服器配置](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[
@@ -558,27 +556,31 @@ ht-degree: 5%
       }
 ```
 
+>[!TIP]
+>
+>上述範例中列出的所有檔案格式設定，都會以 [檔案格式設定](/help/destinations/destination-sdk/server-and-file-configuration.md#file-configuration) 區段。
+
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `name` | 字串 | 提供要引入的自定義欄位的名稱。 |
-| `title` | 字串 | 指示欄位的名稱，如客戶在Experience Platform用戶介面中看到的。 |
-| `description` | 字串 | 提供自定義欄位的說明。 |
-| `type` | 字串 | 指示您要引入的自定義欄位類型。 接受的值為 `string`。 `object`。 `integer`。 |
+| `name` | 字串 | 提供您要引入的自訂欄位名稱。 |
+| `title` | 字串 | 指出欄位的名稱，如Experience Platform使用者介面中的客戶所見。 |
+| `description` | 字串 | 提供自訂欄位的說明。 |
+| `type` | 字串 | 指出您要引入的自訂欄位類型。 接受的值為 `string`, `object`, `integer`. |
 | `isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
-| `pattern` | 字串 | 如果需要，為自定義欄位強制實施模式。 使用規則運算式來強制模式。 例如，如果客戶ID不包括數字或下划線，請輸入 `^[A-Za-z]+$` 的子菜單。 |
-| `enum` | 字串 | 將自定義欄位呈現為下拉菜單並列出用戶可用的選項。 |
-| `default` | 字串 | 從 `enum` 清單框。 |
+| `pattern` | 字串 | 視需要為自訂欄位強制使用模式。 使用規則運算式來強制模式。 例如，若您的客戶ID未包含數字或底線，請輸入 `^[A-Za-z]+$` 在此欄位中。 |
+| `enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
+| `default` | 字串 | 從 `enum` 清單。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
 ## UI屬性 {#ui-attributes}
 
-本節指上述配置中的UI元素，該Adobe應用於Adobe Experience Platform用戶介面中的目標。
+本節說明上述設定中，Adobe應用於Adobe Experience Platform使用者介面中目的地的UI元素。
 
 ```json
 "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/YOURDESTINATION-en",
-      "category":"S3",
+      "category":"cloudStorage",
       "iconUrl":"https://dc5tqsrhldvnl.cloudfront.net/2/90048/da276e30c730ce6cd666c8ca78360df21.png",
       "connectionType":"S3",
       "flowRunsSupported":true,
@@ -589,17 +591,21 @@ ht-degree: 5%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `documentationLink` | 字串 | 引用中的文檔頁面 [目標目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`，也請參見Wiki頁。 `YOURDESTINATION` 是目標的名稱。 對於名為Moviestar的目標，您將使用 `http://www.adobe.com/go/destinations-moviestar-en`。 請注意，此連結僅在Adobe設定目標即時並發佈文檔後才起作用。 |
-| `category` | 字串 | 指分配給您在Adobe Experience Platform的目標的類別。 有關詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html)。 使用以下值之一： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 |
-| `iconUrl` | 字串 | 承載要顯示在目標目錄卡中的表徵圖的URL。 |
-| `connectionType` | 字串 | 連接類型（取決於目標）。 支援的值： <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
-| `flowRunsSupported` | 布林值 | 指示目標連接是否包含在 [流運行UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)。 將此設定為 `true`: <ul><li>的 **[!UICONTROL 上次資料流運行日期]** 和 **[!UICONTROL 上次資料流運行狀態]** 顯示在目標瀏覽頁中。</li><li>的 **[!UICONTROL 資料流運行]** 和 **[!UICONTROL 激活資料]** 頁籤顯示在目標視圖頁中。</li></ul> |
-| `monitoringSupported` | 布林值 | 指示目標連接是否包含在 [監視UI](../ui/destinations-workspace.md#browse)。 將此設定為 `true`，也請參見Wiki頁。 **[!UICONTROL 在監視中查看]** 選項。 |
-| `frequency` | 字串 | 引用目標支援的資料導出類型。 設定為 `Batch` 用於基於檔案的目標。 |
+| `documentationLink` | 字串 | 指 [目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `http://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中 `YOURDESTINATION` 是您目的地的名稱。 對於名為Moviestar的目的地，您將使用 `http://www.adobe.com/go/destinations-moviestar-en`. 請注意，此連結只有在Adobe將您的目的地設為現時且檔案已發佈後才有效。 |
+| `category` | 字串 | 是指指派給Adobe Experience Platform中目的地的類別。 如需詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `iconUrl` | 字串 | 托管圖示以顯示在目的地目錄卡片中的URL。 針對私人自訂整合，此為非必要項目。 對於已產品化的配置，您需要與Adobe團隊共用圖示 [提交目的地以供審核](/help/destinations/destination-sdk/submit-destination.md#logo). |
+| `connectionType` | 字串 | 連線類型（視目的地而定）。 支援的值： <ul><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li></ul> |
+| `flowRunsSupported` | 布林值 | 指出目標連線是否包含在 [流運行UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard). 將此設定為 `true`: <ul><li>此 **[!UICONTROL 上次資料流運行日期]** 和 **[!UICONTROL 上次資料流運行狀態]** 顯示在目標瀏覽頁中。</li><li>此 **[!UICONTROL 資料流運行]** 和 **[!UICONTROL 啟動資料]** 標籤會顯示在目標檢視頁面中。</li></ul> |
+| `monitoringSupported` | 布林值 | 指出目標連線是否包含在 [監視UI](../ui/destinations-workspace.md#browse). 將此設定為 `true`, **[!UICONTROL 在監視中查看]** 選項。 |
+| `frequency` | 字串 | 是指目的地支援的資料匯出類型。 設為 `Batch` 適用於檔案型目的地。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-## 目標傳遞 {#destination-delivery}
+## 目的地傳送 {#destination-delivery}
+
+目的地傳送區段會指出匯出的資料確切進入的位置，以及在資料著陸的位置中使用哪個驗證規則。 您必須指定一或多個 `destinationServerId`傳送資料的位置，以及驗證規則。 在大多數情況下，您應使用的驗證規則為 `CUSTOMER_AUTHENTICATION`.
+
+此 `deliveryMatchers` 區段為選用項目，且若您指定多個 `destinationServerId`s.如果是這樣， `deliveryMatchers` 區段會指出匯出的資料應如何分割到各種目的地伺服器。
 
 ```json
  "destinationDelivery":[
@@ -620,16 +626,16 @@ ht-degree: 5%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `authenticationRule` | 字串 | 指示如何 [!DNL Platform] 客戶連接到您的目標。 接受的值為 `CUSTOMER_AUTHENTICATION`。 `PLATFORM_AUTHENTICATION`。 `NONE`。 <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果平台客戶通過以下任何方法登錄到您的系統： <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目標之間有全局身份驗證系統， [!DNL Platform] 客戶不需要提供任何身份驗證憑據來連接到目標。 在這種情況下，必須使用 [憑據](./credentials-configuration-api.md) 配置。 </li><li>使用 `NONE` 如果向目標平台發送資料不需要身份驗證。 </li></ul> |
-| `destinationServerId` | 字串 | 的 `instanceId` 的 [目標伺服器配置](./destination-server-api.md) 用於此目標。 |
+| `authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶可連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過下列任何方法登入您的系統： <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 [憑證](./credentials-configuration-api.md) 設定。 </li><li>使用 `NONE` 若無需驗證即可將資料傳送至目的地平台。 </li></ul> |
+| `destinationServerId` | 字串 | 此 `instanceId` 的 [目標伺服器配置](./server-and-file-configuration.md) 你 [已建立](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) 為此目的地。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-## 段映射配置 {#segment-mapping}
+## 區段對應設定 {#segment-mapping}
 
-目標配置的這一部分涉及段元資料（如段名稱或ID）在Experience Platform與目標之間應如何共用。
+目的地設定的此區段與區段中繼資料（例如區段名稱或ID）在Experience Platform與目的地之間共用的方式相關。
 
-通過 `audienceTemplateId`，本節還將此配置與 [觀眾元資料配置](./audience-metadata-management.md)。
+透過 `audienceTemplateId`，本節也會將此設定與 [對象中繼資料設定](./audience-metadata-management.md).
 
 ```json
    "segmentMappingConfig":{
@@ -642,14 +648,22 @@ ht-degree: 5%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | 布林值 | 控制目標激活工作流中的段映射id是否是Experience Platform段名稱。 |
-| `mapExperiencePlatformSegmentId` | 布林值 | 控制目標激活工作流中的段映射ID是否是Experience Platform段ID。 |
-| `mapUserInput` | 布林值 | 控制用戶是否輸入目標激活工作流中的段映射ID。 |
-| `audienceTemplateId` | 布林值 | 的 `instanceId` 的 [受眾元資料模板](./audience-metadata-management.md) 用於此目標。 要設定受眾元資料模板，請閱讀 [受眾元資料API參考](./audience-metadata-api.md)。 |
+| `mapExperiencePlatformSegmentName` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段名稱。 |
+| `mapExperiencePlatformSegmentId` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段ID。 |
+| `mapUserInput` | 布林值 | 控制使用者是否輸入目標啟動工作流程中的區段對應ID。 |
+| `audienceTemplateId` | 布林值 | 此 `instanceId` 的 [對象中繼資料範本](./audience-metadata-management.md) 用於此目的地。 若要設定對象中繼資料範本，請閱讀 [對象中繼資料API參考](./audience-metadata-api.md). |
 
-## 映射步驟中的架構配置 {#schema-configuration}
+## 對應步驟中的架構配置 {#schema-configuration}
 
-使用中的參數 `schemaConfig` 啟用目標激活工作流的映射步驟。 通過使用下面描述的參數，您可以確定Experience Platform用戶是否可以將配置檔案屬性和/或標識映射到基於檔案的目標。
+Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 合作夥伴定義的結構可讓使用者將設定檔屬性和身分對應至目的地合作夥伴定義的自訂結構，類似於 [串流目的地](destination-configuration.md#schema-configuration) 工作流程。
+
+在中使用參數 `schemaConfig` 啟用目標啟動工作流程的對應步驟。 使用下述參數，您可以判斷Experience Platform使用者是否可將設定檔屬性和/或身分對應至您的檔案式目的地。
+
+您可以建立靜態、硬式編碼架構欄位，或指定Experience Platform應連線的動態架構，以動態擷取並填入對應工作流程目標架構中的欄位。 目標架構顯示在下方的螢幕擷取中。
+
+![螢幕擷取畫面，強調啟動工作流程對應步驟中的目標架構欄位。](/help/destinations/destination-sdk/assets/target-schema-fields.png)
+
+### 靜態硬式編碼架構欄位設定
 
 ```json
 "schemaConfig":{
@@ -672,25 +686,23 @@ ht-degree: 5%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `profileFields` | 陣列 | 添加預定義項時 `profileFields`,Experience Platform用戶可以選擇將平台屬性映射到目標中的預定義屬性。 |
-| `profileRequired` | 布林值 | 使用 `true` 如果用戶應能將配置檔案屬性從Experience Platform映射到目標側的自定義屬性，如上面的示例配置所示。 |
-| `segmentRequired` | 布林值 | 始終使用 `segmentRequired:true`。 |
-| `identityRequired` | 布林值 | 使用 `true` 如果用戶應能將標識命名空間從Experience Platform映射到所需的架構。 |
+| `profileFields` | 陣列 | 新增預先定義的 `profileFields`,Experience Platform使用者可以選擇將Platform屬性對應至您目的地中預先定義的屬性。 |
+| `profileRequired` | 布林值 | 使用 `true` 如果使用者應能將設定檔屬性從Experience Platform對應至目的地端的自訂屬性，如上方的範例設定所示。 |
+| `segmentRequired` | 布林值 | 一律使用 `segmentRequired:true`. |
+| `identityRequired` | 布林值 | 使用 `true` 如果使用者應能將身分識別命名空間從Experience Platform對應至您所需的架構。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-### 映射步驟中的動態架構配置 {#dynamic-schema-configuration}
+### 對應步驟中的動態架構設定 {#dynamic-schema-configuration}
 
-Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作夥伴定義的架構允許用戶將配置檔案屬性和標識映射到由目標合作夥伴定義的自定義架構，類似於 [流目標](destination-configuration.md#schema-configuration) 工作流。
-
-使用中的參數  `dynamicSchemaConfig` 定義平台配置檔案屬性和/或標識可以映射到的您自己的架構。
+在中使用參數  `dynamicSchemaConfig` 以動態擷取Platform設定檔屬性和/或身分可對應的您自己的結構。
 
 ```json
 "schemaConfig":{
    "dynamicSchemaConfig":{
       "dynamicEnum": {
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"{{destinationServerId}}",
+         "destinationServerId":"2aa8a809-c4ae-4f66-bb02-12df2e0a2279",
          "value": "Schema Name",
          "responseFormat": "SCHEMA"
       }
@@ -703,24 +715,24 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `profileRequired` | 布林值 | 使用 `true` 如果用戶應能將配置檔案屬性從Experience Platform映射到目標側的自定義屬性，如上面的示例配置所示。 |
-| `segmentRequired` | 布林值 | 始終使用 `segmentRequired:true`。 |
-| `identityRequired` | 布林值 | 使用 `true` 如果用戶應能將標識命名空間從Experience Platform映射到所需的架構。 |
-| `destinationServerId` | 字串 | 的 `instanceId` 的 [目標伺服器配置](./destination-server-api.md) 用於此目標。 |
-| `authenticationRule` | 字串 | 指示如何 [!DNL Platform] 客戶連接到您的目標。 接受的值為 `CUSTOMER_AUTHENTICATION`。 `PLATFORM_AUTHENTICATION`。 `NONE`。 <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果平台客戶通過以下任何方法登錄到您的系統： <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目標之間有全局身份驗證系統， [!DNL Platform] 客戶不需要提供任何身份驗證憑據來連接到目標。 在這種情況下，必須使用 [憑據](./credentials-configuration-api.md) 配置。 </li><li>使用 `NONE` 如果向目標平台發送資料不需要身份驗證。 </li></ul> |
-| `value` | 字串 | 要在Experience Platform用戶介面中顯示的映射步驟中的架構的名稱。 |
-| `responseFormat` | 字串 | 始終設定為 `SCHEMA` 定義自定義架構時。 |
+| `profileRequired` | 布林值 | 使用 `true` 如果使用者應能將設定檔屬性從Experience Platform對應至目的地端的自訂屬性，如上方的範例設定所示。 |
+| `segmentRequired` | 布林值 | 一律使用 `segmentRequired:true`. |
+| `identityRequired` | 布林值 | 使用 `true` 如果使用者應能將身分識別命名空間從Experience Platform對應至您所需的架構。 |
+| `destinationServerId` | 字串 | 此 `instanceId` 的 [目標伺服器配置](./destination-server-api.md) 您為動態結構建立的項目。 此目標伺服器包含HTTP端點，Experience Platform將呼叫該端點來擷取用來填入目標欄位的動態架構。 |
+| `authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶可連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過下列任何方法登入您的系統： <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 [憑證](./credentials-configuration-api.md) 設定。 </li><li>使用 `NONE` 若無需驗證即可將資料傳送至目的地平台。 </li></ul> |
+| `value` | 字串 | 要在映射步驟的Experience Platform用戶介面中顯示的架構名稱。 |
+| `responseFormat` | 字串 | 一律設為 `SCHEMA` 定義自訂結構時。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-## 標識和屬性 {#identities-and-attributes}
+## 身分和屬性 {#identities-and-attributes}
 
-本節中的參數確定目標接受的標識。 此配置還填充中的目標標識和屬性 [映射步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) Experience Platform用戶介面中，用戶將標識和屬性從其XDM架構映射到目標中的架構。
+本節中的參數決定您的目的地接受的身分。 此設定也會填入 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) Experience Platform使用者介面的，使用者可將身分和屬性從其XDM結構對應至目的地的結構。
 
 
 ```json
 "identityNamespaces": {
-        "adobe_id": {
+        "crm_id": {
             "acceptsAttributes": true,
             "acceptsCustomNamespaces": true
         },
@@ -731,14 +743,14 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
     },
 ```
 
-必須指明 [!DNL Platform] 標識客戶能夠導出到您的目標。 一些示例 [!DNL Experience Cloud ID]，散列電子郵件，設備ID([!DNL IDFA]。 [!DNL GAID])。 這些值 [!DNL Platform] 客戶可以從目標映射到標識命名空間的標識命名空間。 您還可以指示客戶是否可以將自定義命名空間映射到目標支援的標識。
+您必須指出 [!DNL Platform] 身分識別客戶可匯出至您的目的地。 例如 [!DNL Experience Cloud ID]，雜湊電子郵件，裝置ID([!DNL IDFA], [!DNL GAID])。 這些值包括 [!DNL Platform] 客戶可從您的目的地對應至身分識別命名空間的身分識別命名空間。 您也可以指出客戶是否可將自訂命名空間對應至您目的地支援的身分識別。
 
-標識命名空間不需要在 [!DNL Platform] 和你的目的地。
-例如，客戶可以 [!DNL Platform] [!DNL IDFA] 命名空間到 [!DNL IDFA] 命名空間，或者它們可以映射 [!DNL Platform] [!DNL IDFA] 命名空間到 [!DNL Customer ID] 目標中的命名空間。
+身分識別命名空間不需要 [!DNL Platform] 和你的目的地。
+例如，客戶可以對應 [!DNL Platform] [!DNL IDFA] 命名空間 [!DNL IDFA] 來自您目的地的命名空間，或者可以對應相同的 [!DNL Platform] [!DNL IDFA] 命名空間 [!DNL Customer ID] 命名空間。
 
-## 批配置 {#batch-configuration}
+## 批配置 — 檔案命名和導出計畫 {#batch-configuration}
 
-本節指上述配置中的檔案導出設定，該Adobe應用於Adobe Experience Platform用戶介面中的目標。
+本節說明將在Adobe Experience Platform使用者介面中針對您的目的地顯示的檔案命名和匯出排程設定。 您在這裡設定的值會在 [排程區段匯出](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 檔案式目的地啟動工作流程的步驟。
 
 ```json
 "batchConfig":{
@@ -779,43 +791,46 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `allowMandatoryFieldSelection` | 布林值 | 設定為 `true` 允許客戶指定哪些配置檔案屬性是必需的。 預設值為 `false`。請參閱 [必需屬性](../ui/activate-batch-profile-destinations.md#mandatory-attributes) 的子菜單。 |
-| `allowDedupeKeyFieldSelection` | 布林值 | 設定為 `true` 允許客戶指定重複資料消除密鑰。 預設值為 `false`。請參閱 [重複資料消除密鑰](../ui/activate-batch-profile-destinations.md#deduplication-keys) 的子菜單。 |
-| `defaultExportMode` | 枚舉 | 定義預設檔案導出模式。 支援的值：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> 預設值為 `DAILY_FULL_EXPORT`。查看 [批量激活文檔](../ui/activate-batch-profile-destinations.md#scheduling) 的子菜單。 |
-| `allowedExportModes` | 清單 | 定義客戶可用的檔案導出模式。 支援的值：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
-| `allowedScheduleFrequency` | 清單 | 定義客戶可用的檔案導出頻率。 支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
-| `defaultFrequency` | 枚舉 | 定義預設檔案導出頻率。支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 預設值為 `DAILY`。 |
+| `allowMandatoryFieldSelection` | 布林值 | 設為 `true` 允許客戶指定哪些設定檔屬性為強制屬性。 預設值為 `false`。請參閱 [強制屬性](../ui/activate-batch-profile-destinations.md#mandatory-attributes) 以取得更多資訊。 |
+| `allowDedupeKeyFieldSelection` | 布林值 | 設為 `true` 允許客戶指定重複資料刪除金鑰。 預設值為 `false`。請參閱 [重複資料刪除密鑰](../ui/activate-batch-profile-destinations.md#deduplication-keys) 以取得更多資訊。 |
+| `defaultExportMode` | 列舉 | 定義預設的檔案導出模式。 支援的值：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> 預設值為 `DAILY_FULL_EXPORT`。請參閱 [批次啟動檔案](../ui/activate-batch-profile-destinations.md#scheduling) 以取得檔案匯出排程的詳細資訊。 |
+| `allowedExportModes` | 清單 | 定義客戶可用的檔案匯出模式。 支援的值：<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
+| `allowedScheduleFrequency` | 清單 | 定義客戶可用的檔案匯出頻率。 支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
+| `defaultFrequency` | 列舉 | 定義預設檔案導出頻率。支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 預設值為 `DAILY`。 |
 | `defaultStartTime` | 字串 | 定義檔案導出的預設開始時間。 使用24小時檔案格式。 預設值為「00:00」。 |
-| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必填*. 可供用戶選擇的可用檔案名宏清單。 這確定將哪些項附加到導出的檔案名（段ID、組織名稱、導出日期和時間等）。 設定時 `defaultFilename`，確保避免複製宏。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論宏的定義順序如何，Experience PlatformUI始終按此處顯示的順序顯示宏。 <br><br> 如果 `defaultFilename` 是空的， `allowedFilenameAppendOptions` 清單必須至少包含一個宏。 |
-| `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必填*. 用戶可以取消選中的預選預設檔案名宏。<br><br> 此清單中的宏是中定義的宏的子集 `allowedFilenameAppendOptions`。 |
-| `filenameConfig.defaultFilename` | 字串 | *可選*. 定義導出檔案的預設檔案名宏。 用戶無法覆蓋這些內容。 <br><br>由定義的任何宏 `allowedFilenameAppendOptions` 將在 `defaultFilename` 宏。 <br><br>如果 `defaultFilename` 為空，您必須在 `allowedFilenameAppendOptions`。 |
+| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必填*. 可供用戶選擇的可用檔案名宏清單。 這會決定要將哪些項目附加至匯出的檔案名稱（區段ID、組織名稱、匯出的日期和時間，以及其他）。 設定時 `defaultFilename`，請務必避免重複執行巨集。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論您定義巨集的順序為何，Experience PlatformUI都會依此處顯示的順序顯示巨集。 <br><br> 若 `defaultFilename` 空白， `allowedFilenameAppendOptions` 清單必須至少包含一個宏。 |
+| `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必填*. 預選的預設檔案名宏，用戶可以取消選中這些宏。<br><br> 此清單中的巨集是 `allowedFilenameAppendOptions`. |
+| `filenameConfig.defaultFilename` | 字串 | *可選*. 定義導出檔案的預設檔案名宏。 使用者無法覆寫這些項目。 <br><br>定義的任何宏 `allowedFilenameAppendOptions` 會附加在 `defaultFilename` 巨集。 <br><br>若 `defaultFilename` 空白，您必須在中定義至少一個巨集 `allowedFilenameAppendOptions`. |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
 ### 檔案名配置 {#file-name-configuration}
 
-使用檔案名配置宏定義導出的檔案名應包括的內容。 下表中的宏描述了在UI中找到的元素 [檔案名配置](../ui/activate-batch-profile-destinations.md#file-names) 的上界。
+使用檔案名配置宏定義導出的檔案名應包括哪些內容。 下表中的巨集說明在 [檔案名配置](../ui/activate-batch-profile-destinations.md#file-names) 螢幕。
 
-作為最佳做法，您應始終包括 `SEGMENT_ID` 宏。 段ID是唯一的，因此將它們包括在檔案名中是確保檔案名也唯一的最佳方法。
 
-| 宏 | UI標籤 | 說明 | 範例 |
+>[!TIP]
+> 
+>作為最佳實務，您應一律包含 `SEGMENT_ID` 宏。 區段ID是唯一的，因此將它們納入檔案名稱是確保檔案名稱也唯一的最佳方式。
+
+| 巨集 | UI標籤 | 說明 | 範例 |
 |---|---|---|---|
-| `DESTINATION` | [!UICONTROL 目標] | UI中的目標名稱。 | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL 段ID] | 唯一、平台生成的段ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL 段名稱] | 用戶定義的段名稱 | VIP訂戶 |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL 目標ID] | 目標實例的唯一、平台生成的ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
-| `DESTINATION_INSTANCE_NAME` | [!UICONTROL 目標名稱] | 目標實例的用戶定義的名稱。 | 我2022年的廣告目的地 |
-| `ORGANIZATION_NAME` | [!UICONTROL 組織名稱] | 客戶組織在Adobe Experience Platform的名稱。 | 我的組織名稱 |
-| `SANDBOX_NAME` | [!UICONTROL 沙盒名稱] | 客戶使用的沙盒的名稱。 | 收縮 |
-| `DATETIME` / `TIMESTAMP` | [!UICONTROL 日期和時間] | `DATETIME` 和 `TIMESTAMP` 兩者都定義生成檔案的時間，但格式不同。 <br><br><ul><li>`DATETIME` 使用以下格式：YYYYMMDD_HHMMSS。</li><li>`TIMESTAMP` 使用10位Unix格式。 </li></ul> `DATETIME` 和 `TIMESTAMP` 互斥，不能同時使用。 | <ul><li>`DATETIME`:20220509_210543</li><li>`TIMESTAMP`:1652131584</li></ul> |
-| `CUSTOM_TEXT` | [!UICONTROL 自定義文本] | 要包含在檔案名中的用戶定義的自定義文本。 不能用於 `defaultFilename`。 | My_Custom_Text |
-| `TIMESTAMP` | [!UICONTROL 日期和時間] | 以Unix格式生成檔案的時間的10位時間戳。 | 1652131584 |
+| `DESTINATION` | [!UICONTROL 目標] | UI中的目的地名稱。 | Amazon S3 |
+| `SEGMENT_ID` | [!UICONTROL 區段ID] | 不重複、平台產生的區段ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL 區段名稱] | 使用者定義的區段名稱 | VIP訂閱者 |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL 目的地ID] | 目的地例項的不重複、平台產生的ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `DESTINATION_INSTANCE_NAME` | [!UICONTROL 目的地名稱] | 目標實例的用戶定義名稱。 | 我的2022年廣告目的地 |
+| `ORGANIZATION_NAME` | [!UICONTROL 組織名稱] | Adobe Experience Platform中的客戶組織名稱。 | 我的組織名稱 |
+| `SANDBOX_NAME` | [!UICONTROL 沙箱名稱] | 客戶使用的沙箱名稱。 | prod |
+| `DATETIME` / `TIMESTAMP` | [!UICONTROL 日期和時間] | `DATETIME` 和 `TIMESTAMP` 兩者都會定義檔案的產生時間，但格式不同。 <br><br><ul><li>`DATETIME` 使用下列格式：YYYYMMDD_HHMMSS。</li><li>`TIMESTAMP` 使用10位Unix格式。 </li></ul> `DATETIME` 和 `TIMESTAMP` 互斥，且無法同時使用。 | <ul><li>`DATETIME`:20220509_210543</li><li>`TIMESTAMP`:1652131584</li></ul> |
+| `CUSTOM_TEXT` | [!UICONTROL 自訂文字] | 要包含在檔案名稱中的用戶定義自定義文本。 無法用於 `defaultFilename`. | My_Custom_Text |
+| `TIMESTAMP` | [!UICONTROL 日期和時間] | 10位數的檔案產生時間時間戳記，採用Unix格式。 | 1652131584 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-![顯示帶有預選宏的檔案名配置螢幕的UI影像](assets/file-name-configuration.png)
+![顯示檔案名配置螢幕的UI影像以及預先選擇的宏](assets/file-name-configuration.png)
 
-上圖所示的示例使用以下檔案名宏配置：
+上圖所示的範例使用下列檔案名稱巨集設定：
 
 ```json
 "filenameConfig":{
@@ -833,9 +848,9 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
 ```
 
 
-## 歷史配置檔案資格 {#profile-backfill}
+## 歷史設定檔資格 {#profile-backfill}
 
-您可以使用 `backfillHistoricalProfileData` 目標配置中的參數，以確定是否應將歷史配置檔案資格導出到目標。
+您可以使用 `backfillHistoricalProfileData` 設定中的參數，以判斷是否應將歷史設定檔資格匯出至您的目的地。
 
 ```json
    "backfillHistoricalProfileData":true
@@ -843,13 +858,13 @@ Adobe Experience Platform Destination SDK支援夥伴定義的架構。 合作�
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
+| `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。 <br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-## 此配置如何連接目標的所有必要資訊 {#connecting-all-configurations}
+## 此設定如何連接目的地的所有必要資訊 {#connecting-all-configurations}
 
-您的某些目標設定必須通過 [目標伺服器](./server-and-file-configuration.md) 或 [觀眾元資料配置](./audience-metadata-management.md)。 此處描述的目標配置通過引用以下兩個其他配置來連接所有這些設定：
+您的部分目的地設定必須透過 [目的地伺服器](./server-and-file-configuration.md) 或 [對象中繼資料設定](./audience-metadata-management.md) 端點。 此處描述的目的地設定會參照下列其他兩種設定，以連接所有這些設定：
 
-* 使用 `destinationServerId` 引用為目標設定的目標伺服器和模板配置。
-* 使用 `audienceMetadataId` 引用為目標設定的受眾元資料配置。
+* 使用 `destinationServerId` 以參考為目的地設定的目的地伺服器和檔案範本設定。
+* 使用 `audienceMetadataId` 以參考為目的地設定的對象中繼資料設定。

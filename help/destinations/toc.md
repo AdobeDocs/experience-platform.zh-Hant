@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件宣傳、鎖定特定目標的行銷活動和其他諸多使用案例，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 9336545ce77406ca8b1a04d9b9c0ce7752aa9ce5
+source-git-commit: 3a46eee98797da7b113f45624682377cc7ad05a3
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '945'
 ht-degree: 7%
 
 ---
@@ -173,9 +173,9 @@ ht-degree: 7%
    * Destination SDK功能 {#functionality}
       * [設定選項](./destination-sdk/configuration-options.md)
       * [串流目的地設定](./destination-sdk/destination-configuration.md)
-      * [（測試版）檔案式目的地設定](./destination-sdk/file-based-destination-configuration.md)
+      * [基於檔案的目標配置](./destination-sdk/file-based-destination-configuration.md)
       * [串流目的地伺服器和範本規格](./destination-sdk/server-and-template-configuration.md)
-      * [（測試版）檔案型目的地伺服器和檔案規格](./destination-sdk/server-and-file-configuration.md)
+      * [基於檔案的目的地伺服器和檔案規格](./destination-sdk/server-and-file-configuration.md)
       * [訊息格式](./destination-sdk/message-format.md)
       * [對象中繼資料管理](./destination-sdk/audience-metadata-management.md)
       * 驗證 {#authentication}
@@ -205,15 +205,16 @@ ht-degree: 7%
             * [驗證範本化客戶欄位](./destination-sdk/file-based-render-template-api.md)
    * 指南 {#guides}
       * [使用Destination SDK來設定串流目的地](./destination-sdk/configure-destination-instructions.md)
-      * [（測試版）使用Destination SDK來設定檔案式目的地](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [使用Destination SDK配置基於檔案的目標](./destination-sdk/configure-file-based-destination-instructions.md)
       * [提交以審核在Destination SDK中創作的目標](./destination-sdk/submit-destination.md)
       * 設定檔案式目的地 {#configure-file-based-destinations}
-         * [（測試版）使用預先定義的檔案格式選項和自訂檔案名稱設定來設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [（測試版）使用自訂檔案名稱和格式選項設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
-         * [（測試版）使用自訂檔案格式設定選項和自訂檔案名稱設定來設定Azure Blob儲存目的地](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
-         * [（測試版）使用自訂檔案格式選項和自訂檔案名稱設定來設定Azure Data Lake儲存目標](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
-         * [（測試版）使用自定義檔案格式選項和自定義檔案名配置配置資料登錄區(DLZ)目標](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
-         * [（測試版）使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [配置檔案格式選項](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
+         * [使用預先定義的檔案格式選項和自訂檔案名稱設定來設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
+         * [使用自訂檔案名稱和格式選項設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [使用自訂檔案格式選項和自訂檔案名配置配置配置Azure Blob儲存目標](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
+         * [使用自訂檔案格式選項和自訂檔案名配置配置Azure Data Lake儲存目標](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
+         * [使用自定義檔案格式選項和自定義檔案名配置配置配置資料登錄區域(DLZ)目標](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
+         * [使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * 參考 {#reference}
       * [流目的地的速率限制和重試策略](./destination-sdk/rate-limiting-retry-policy.md)
       * [支援的轉換函式](./destination-sdk/supported-functions.md)
