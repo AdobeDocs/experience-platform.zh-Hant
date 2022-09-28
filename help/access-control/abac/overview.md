@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制概述
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 981d604770fbc2e979346146845ad7bc80805356
+source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1684'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 有關訪問控制的詳細資訊，請參見 [存取控制概觀](../home.md).
 
-### 目的地
+### 目的地 {#destinations}
 
 [!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從平台啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
@@ -72,6 +72,15 @@ ht-degree: 1%
    * 在啟動程式中，使用者可能需要選取要啟動至目的地的區段。 身為管理員，您可以布建組織中的使用者，使其只看到標示為的區段（使用者可存取的標籤），以及不含任何標籤的區段。
 * 根據角色、權限和標籤，設定使用者存取權，以檢視啟動程式中的特定欄位；
    * 在啟動程式中，使用者可能需要選取要啟動至目的地的欄位。 身為管理員，您可以布建組織中的使用者，使其只看到標有使用者可存取之標籤的欄位，以及不含任何標籤的欄位。
+
+>[!IMPORTANT]
+>
+>總之，使用目標和基於屬性的訪問控制時，請記住以下意義：
+>
+>* 您只能啟用您有權存取和檢視的區段， [區段瀏覽檢視](/help/segmentation/ui/overview.md#browse) 和 [選取區段步驟](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) 啟動工作流程。
+>* 在 [啟動工作流程的對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)，您只能檢視並選取您有權存取的欄位以啟用。
+>* 如果您想要將其他區段啟用至現有目的地，而您無法存取已對應以匯出的所有欄位，則啟用工作流程將會遭到封鎖。
+
 
 如需 [!DNL Destinations]，請參閱 [[!DNL Destinations] 概述](../../destinations/home.md).
 
