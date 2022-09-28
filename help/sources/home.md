@@ -5,9 +5,9 @@ title: 來源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: b732fa1f4afb71e7b8c3276335b371d0f8ef888d
+source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1094'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,15 @@ Experience Platform支援從協力廠商通訊協定系統擷取資料。 有關
 | **[!UICONTROL 管理來源]** 開啟 | 除了 **[!UICONTROL 查看源]**，授予存取權 **[!UICONTROL 連接源]** 選項 **[!UICONTROL 目錄]** 和 **[!UICONTROL 選擇資料]** 選項 **[!UICONTROL 瀏覽]**. **[!UICONTROL 管理來源]** 也可讓您啟用或停用 **[!UICONTROL 資料流]** 並編輯其排程。 |
 | **[!UICONTROL 查看源]** 關閉和 **[!UICONTROL 管理來源]** 關閉 | 撤消對源的所有訪問。 |
 
-如需透過Admin Console授予的可用權限（包括這四個來源）的詳細資訊，請參閱 [存取控制概觀](../access-control/home.md).
+如需透過「Adobe權限」授予的可用權限詳細資訊，請參閱 [存取控制概觀](../access-control/home.md).
+
+### 基於屬性的源訪問控制
+
+Adobe Experience Platform中以屬性為基礎的存取控制可讓管理員根據屬性來控制特定物件和/或功能的存取。
+
+使用基於屬性的訪問控制，您可以將映射配置應用到您有權限的欄位。 此外，如果您無法存取資料集中的所有欄位，便無法將資料內嵌至資料集。
+
+有關基於屬性的訪問控制的詳細資訊，請閱讀 [基於屬性的訪問控制概述](../access-control/abac/overview.md).
 
 ## 條款與條件 {#terms-and-conditions}
 
