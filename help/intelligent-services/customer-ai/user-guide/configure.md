@@ -1,295 +1,307 @@
 ---
-keywords: Experience Platform；使用手冊；客戶；熱門主題；配置實例；建立實例；
+keywords: Experience Platform；使用手冊；customer ai；熱門主題；設定例項；建立例項；
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
-title: 配置客戶AI實例
+title: 設定Customer AI例項
 topic-legacy: Instance creation
-description: AI/ML服務將客戶AI作為一種易於使用的Adobe Sensei服務提供，可針對不同的使用情形進行配置。 以下各節提供了配置客戶AI實例的步驟。
+description: AI/ML服務提供Customer AI，作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定Customer AI例項的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 4f74be4ed8d84a58779b9e7d9f1de6d9bf19cc5e
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '3088'
+source-wordcount: '3342'
 ht-degree: 0%
 
 ---
 
 
-# 配置客戶AI實例
+# 設定Customer AI例項
 
-客戶AI作為AI/ML服務的一部分，使您能夠生成自定義傾向分數，而不必擔心機器學習。
+Customer AI（屬於AI/ML服務的一部分）可讓您產生自訂傾向分數，而無須擔心機器學習。
 
-AI/ML服務將客戶AI作為一種易於使用的Adobe Sensei服務提供，可針對不同的使用情形進行配置。 以下各節提供了配置客戶AI實例的步驟。
+AI/ML服務提供Customer AI，作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定Customer AI例項的步驟。
 
-## 建立實例 {#set-up-your-instance}
+## 建立例項 {#set-up-your-instance}
 
-在平台UI中，選擇 **[!UICONTROL 服務]** 的子菜單。 的 **[!UICONTROL 服務]** 瀏覽器顯示並顯示您可以使用的所有可用服務。 在客戶AI的容器中，選擇 **[!UICONTROL 開啟]**。
+在平台UI中，選取 **[!UICONTROL 服務]** 的下一頁。 此 **[!UICONTROL 服務]** 瀏覽器隨即顯示，並顯示您自己擁有的所有可用服務。 在Customer AI的容器中，選取 **[!UICONTROL 開啟]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-的 **客戶AI** UI顯示並顯示您的所有服務實例。
+此 **Customer AI** UI隨即顯示，並顯示您的所有服務執行個體。
 
-- 您可以找到 **[!UICONTROL 已分配配置檔案總數]** 位於 **[!UICONTROL 建立實例]** 容器。 此度量跟蹤客戶AI在當前日曆年（包括所有沙盒環境和任何已刪除的服務實例）評分的配置檔案總數。
+- 您可以找到 **[!UICONTROL 計分的設定檔總數]** 位於 **[!UICONTROL 建立例項]** 容器。 此量度會追蹤Customer AI在目前日曆年度中得分的設定檔總數，包括所有沙箱環境和任何已刪除的服務例項。
 
 ![](../images/user-guide/total-profiles.png)
 
-可以使用UI右側的控制項編輯、克隆和刪除服務實例。 要顯示這些控制項，請從現有控制項中選擇一個實例 **[!UICONTROL 服務實例]**。 控制項包含以下內容：
+使用UI右側的控制項，即可編輯、複製及刪除服務例項。 若要顯示這些控制項，請從現有的 **[!UICONTROL 服務實例]**. 控制項包含下列項目：
 
-- **[!UICONTROL 編輯]**:選擇 **[!UICONTROL 編輯]** 允許您修改現有服務實例。 您可以編輯實例的名稱、說明和記分頻率。
-- **[!UICONTROL 克隆]**:選擇 **[!UICONTROL 克隆]** 複製當前選定的服務實例安裝程式。 然後，您可以修改工作流以進行小微調整，並將其更名為新實例。
-- **[!UICONTROL 刪除]**:您可以刪除包含任何歷史運行的服務實例。
-- **[!UICONTROL 資料源]**:此實例使用的資料集的連結。 如果正在使用多個資料集，則選擇超連結文本將開啟資料集預覽跨距。
-- **[!UICONTROL 上次運行詳細資訊]**:僅當運行失敗時才顯示此資訊。 此處顯示運行失敗原因的資訊，如錯誤代碼。
-- **[!UICONTROL 分數定義]**:您為此實例配置的目標的快速概述。
+- **[!UICONTROL 編輯]**:選取 **[!UICONTROL 編輯]** 可讓您修改現有的服務執行個體。 您可以編輯例項的名稱、說明和計分頻率。
+- **[!UICONTROL 原地複製]**:選取 **[!UICONTROL 原地複製]** 複製當前選擇的服務實例設定。 接著，您可以修改工作流程進行微幅調整，並重新命名為新例項。
+- **[!UICONTROL 刪除]**:您可以刪除服務例項，包括任何歷史執行。 將從Platform中刪除對應的輸出資料集。 不過，同步至「即時客戶設定檔」的分數不會刪除。
+- **[!UICONTROL 資料來源]**:此例項所使用資料集的連結。 如果使用多個資料集，選取超連結文字會開啟資料集預覽彈出視窗。
+- **[!UICONTROL 上次運行詳細資訊]**:唯有執行失敗時，才會顯示此選項。 此處顯示了執行失敗的原因，例如錯誤代碼。
+- **[!UICONTROL 分數定義]**:快速概述您為此執行個體設定的目標。
 
 ![](../images/user-guide/service-instance-panel.png)
 
-要建立新實例，請選擇 **[!UICONTROL 建立實例]**。
+若要建立新例項，請選取 **[!UICONTROL 建立例項]**.
 
 ![](../images/user-guide/dashboard.png)
 
 ## 設定
 
-將顯示實例建立工作流，從 **[!UICONTROL 設定]** 的子菜單。
+執行個體建立工作流程隨即顯示，從 **[!UICONTROL 設定]** 步驟。
 
-以下是有關必須向實例提供的值的重要資訊：
+以下是您必須為執行個體提供之值的重要資訊：
 
-- **[!UICONTROL 名稱]:** 在顯示客戶AI分數的所有位置都使用實例的名稱。 因此，名稱應描述預測分值代表什麼。 例如，「取消雜誌訂閱的可能性」。
+- **[!UICONTROL 名稱]:** 在顯示Customer AI分數的所有位置中，都會使用例項的名稱。 因此，名稱應該描述預測分數的代表。 例如「取消雜誌訂閱的可能性」。
 
-- **[!UICONTROL 說明]:** 說明您嘗試預測的內容。
+- **[!UICONTROL 說明]:** 說明您要預測的內容。
 
-- **[!UICONTROL 傾向類型]:** 傾向類型確定分數的意圖和度量極性。 您可以選擇 **[!UICONTROL 衝]** 或 **[!UICONTROL 轉換]**。 請參閱下面的注釋 [評分摘要](./discover-insights.md#scoring-summary) 的子常式。
+- **[!UICONTROL 傾向類型]:** 傾向類型決定分數和量度極性的目的。 您可以選擇 **[!UICONTROL 流失率]** 或 **[!UICONTROL 轉換]**. 請參閱 [計分摘要](./discover-insights.md#scoring-summary) 深入了解傾向類型對您執行個體有何影響的詳細資訊。
 
-![設定螢幕](../images/user-guide/create-instance.png)
+![設定畫面](../images/user-guide/create-instance.png)
 
-提供所需值，然後選擇 **[!UICONTROL 下一個]** 繼續。
+提供所需值，然後選取 **[!UICONTROL 下一個]** 繼續。
 
 ## 選擇資料 {#select-data}
 
-按照設計，客戶AI使用Adobe Analytics、Adobe Audience Manager、總體體驗事件和消費者體驗事件資料來計算傾向得分。 選擇資料集時，只列出與客戶AI相容的資料集。 要選擇資料集，請選擇&#x200B;**+**)資料集名稱旁邊的符號，或選中複選框以一次添加多個資料集。 使用搜索選項可快速查找您感興趣的資料集。
+根據設計，Customer AI一般會使用Adobe Analytics、Adobe Audience Manager、體驗事件和消費者體驗事件資料來計算傾向分數。 選取資料集時，僅會列出與Customer AI相容的資料集。 若要選取資料集，請選取&#x200B;**+**)資料集名稱旁的符號，或選取核取方塊以一次新增多個資料集。 使用搜尋選項快速找到您感興趣的資料集。
 
-![選擇並搜索資料集](../images/user-guide/configure-dataset-page.png)
+![選取和搜尋資料集](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
-選擇要使用的資料集後，選擇 **[!UICONTROL 添加]** 按鈕，將資料集添加到資料集預覽窗格。
+選取您要使用的資料集後，請選取 **[!UICONTROL 新增]** 按鈕，將資料集新增至資料集預覽窗格。
 
-![選擇資料集](../images/user-guide/select-datasets.png)
+![選取資料集](../images/user-guide/select-datasets.png)
 
-選擇資訊表徵圖 ![資訊表徵圖](../images/user-guide/info-icon.png) 資料集旁邊開啟資料集預覽跨距。
+選取資訊圖示 ![資訊圖示](../images/user-guide/info-icon.png) 資料集旁邊會開啟資料集預覽視窗。
 
-![選擇並搜索資料集](../images/user-guide/dataset-info.png)
+![選取和搜尋資料集](../images/user-guide/dataset-info.png)
 
-資料集預覽包含資料，如上次更新時間、源架構和前十列的預覽。
+資料集預覽包含上次更新時間、來源結構，以及前10欄的預覽等資料。
+
+選擇 **[!UICONTROL 儲存]** 在工作流程中移動時儲存草稿。 您也可以儲存草稿模型設定，並移至工作流程的下一個步驟。 使用 **[!UICONTROL 保存並繼續]** 在模型配置期間建立和保存草稿。 此功能可讓您建立和儲存模型配置的草稿，當您必須在配置工作流程中定義許多欄位時，此功能特別有用。
+
+![「儲存並儲存並繼續」(Save and Save and Continue)反白顯示「建立Data Science Services Customer AI」(Create workflow of the Data Science Services Customer AI)頁簽。](../images/user-guide/cai-save-and-exit.png)
 
 ### 資料集完整性 {#dataset-completeness}
 
-資料集預覽中存在資料集完整性百分比值。 此值提供了資料集中有多少列為空/空的快速快照。 如果資料集包含大量缺失值，並且這些值在其他位置被捕獲，強烈建議您包括包含缺失值的資料集。 在此示例中，人員ID為空，但是，在可以包括的單獨資料集中捕獲人員ID。
+資料集預覽中有資料集完整性百分比值。 此值提供資料集中有多少欄為空/空的快速快照。 如果資料集包含許多遺失值，而這些值被擷取到其他位置，強烈建議您加入包含遺失值的資料集。 在此範例中，人員ID為空，但人員ID會擷取至可包含的個別資料集中。
 
 >[!NOTE]
 >
->使用客戶AI的最大培訓窗口（一年）計算資料集完整性。 這意味著在顯示資料集完整性值時，不會考慮超過一年的資料。
+>使用Customer AI（一年）的最大培訓期間，即可計算資料集完整性。 這表示顯示資料集完整性值時，不會考慮超過一年的資料。
 
 ![資料集完整性](../images/user-guide/dataset-info-2.png)
 
-### 選擇標識 {#identity}
+### 選取身分 {#identity}
 
-現在，您可以基於標識映射（欄位）將多個資料集聯接到彼此。 必須選擇標識類型（也稱為「標識命名空間」）和該命名空間中的標識值。 如果在同一命名空間下將多個欄位指定為架構中的標識，則所有分配的標識值都會出現在由命名空間優先的標識下拉清單中，如 `EMAIL (personalEmail.address)` 或 `EMAIL (workEmail.address)`。
+您現在可以根據身分對應（欄位），將多個資料集連結在一起。 您必須選取身分類型（也稱為「身分命名空間」），以及該命名空間中的身分值。 如果您已在相同命名空間下將多個欄位指派為架構中的身分，所有指派的身分值都會出現在以命名空間為前置的身分下拉式清單中，例如 `EMAIL (personalEmail.address)` 或 `EMAIL (workEmail.address)`.
 
-[選擇相同命名空間](../images/user-guide/cai-identity-map.png)
+[選擇相同的命名空間](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
->必須對您選擇的每個資料集使用相同的標識類型（命名空間）。 標識列中標識類型旁邊出現綠色複選標籤，表示資料集相容。 例如，當使用Phone命名空間和 `mobilePhone.number` 作為標識符，其餘資料集的所有標識符必須包含並使用Phone命名空間。
+>您選取的每個資料集都必須使用相同的身分類型（命名空間）。 身分欄中的身分類型旁會出現綠色勾號，指出資料集相容。 例如，使用Phone命名空間時，以及 `mobilePhone.number` 做為識別碼，其餘資料集的所有識別碼都必須包含並使用Phone命名空間。
 
-要選擇標識，請選擇標識列中帶下划線的值。 將出現選擇標識跨距。
+要選擇標識，請選擇位於標識列中的帶下划線的值。 此時會顯示「選取身分彈出視窗」。
 
 <!-- ![select same namespace](../images/user-guide/identity-type.png) -->
-[選擇相同命名空間](../images/user-guide/cai-identity-namespace.png)
+[選擇相同的命名空間](../images/user-guide/cai-identity-namespace.png)
 
-如果命名空間中有多個標識可用，請確保為使用案例選擇正確的標識欄位。 例如，電子郵件命名空間中有兩個電子郵件標識，一個是工作電子郵件，另一個是個人電子郵件。 根據使用案例，個人電子郵件更可能被填入，在個人預測中也更有用。 這意味著 `EMAIL (personalEmail.address)` 將被選作身份。
+如果命名空間中有多個身分可用，請務必為您的使用案例選取正確的身分欄位。 例如，電子郵件命名空間中提供兩個電子郵件身分識別：一個工作電子郵件，另一個是個人電子郵件。 根據使用案例，個人電子郵件更可能填入，且在個別預測中更有用。 這表示 `EMAIL (personalEmail.address)` 會被選為身分。
 
 ![未選擇資料集密鑰](../images/user-guide/select-identity.png)
 
 >[!NOTE]
 >
-> 如果資料集不存在有效的標識類型（命名空間），則必須設定主標識並使用 [架構編輯器](../../../xdm/schema/composition.md#identity)。 要瞭解有關命名空間和標識的詳細資訊，請訪問 [標識服務命名空間](../../../identity-service/namespaces.md) 文檔。
+> 如果資料集沒有有效的身分類型（命名空間），您必須設定主要身分識別，並使用 [結構編輯器](../../../xdm/schema/composition.md#identity). 若要進一步了解命名空間和身分識別，請造訪 [身分識別服務命名空間](../../../identity-service/namespaces.md) 檔案。
 
 ## 定義目標 {#define-a-goal}
 
 <!-- https://www.adobe.com/go/cai-define-a-goal -->
 
-的 **[!UICONTROL 定義目標]** 步驟顯示，它提供了互動式環境，供您直觀地定義預測目標。 目標由一個或多個事件組成，其中每個事件的發生基於它所保持的條件。 客戶AI實例的目標是確定在給定時間範圍內實現其目標的可能性。
+此 **[!UICONTROL 定義目標]** 步驟隨即顯示，提供互動式環境，供您以視覺化方式定義預測目標。 目標由一或多個事件組成，其中每個事件的發生取決於其保留的條件。 Customer AI例項的目標是決定在指定時間範圍內達成其目標的可能性。
 
-要建立目標，請選擇 **[!UICONTROL 輸入欄位名稱]** 後跟下拉清單中的欄位。 選擇第二個輸入，即事件條件的子句，然後根據需要提供目標值以完成事件。 可以通過選擇 **[!UICONTROL 添加事件]**。 最後，通過應用預測時間框（天數）來完成目標，然後選擇 **[!UICONTROL 下一個]**。
+若要建立目標，請選取 **[!UICONTROL 輸入欄位名稱]** 後接下拉式清單中的欄位。 選取第二個輸入、事件條件的子句，然後選擇性地提供目標值以完成事件。 您可以選取 **[!UICONTROL 新增事件]**. 最後，應用預測時間範圍以天數完成目標，然後選擇 **[!UICONTROL 下一個]**.
 
 <!-- ![](../images/user-guide/define-a-goal.png) -->
 ![](../images/user-guide/cai-define-a-goal.png)
 
 ### 將發生且不會發生
 
-在定義目標時，您可以選擇 **[!UICONTROL 將發生]** 或 **[!UICONTROL 不會發生]**。 選擇 **[!UICONTROL 將發生]** 表示需要滿足您定義的事件條件，才能將客戶的事件資料包含在洞察UI中。
+定義目標時，您有選取的選項 **[!UICONTROL 將會發生]** 或 **[!UICONTROL 不會發生]**. 選取 **[!UICONTROL 將會發生]** 表示您定義的事件條件必須符合，才能將客戶的事件資料納入前瞻分析UI中。
 
-例如，如果您想設定應用以預測客戶是否會購買產品，則可以選擇 **[!UICONTROL 將發生]** 後跟 **[!UICONTROL 全部]** 然後輸入 **commerce.purches.id** （或類似欄位） **[!UICONTROL 存在]** 作為運算子。
+例如，如果您想要設定應用程式以預測客戶是否要進行購買，您可以選取 **[!UICONTROL 將會發生]** 後跟 **[!UICONTROL 全部]** 然後輸入 **commerce.purchases.id** （或類似欄位）和 **[!UICONTROL 存在]** 作為運算子。
 
 <!-- ![will occur](../images/user-guide/occur.png) -->
-![會發生](../images/user-guide/cai-will-occur.png)
+![將發生](../images/user-guide/cai-will-occur.png)
 
-但是，有時您對預測某個事件是否在特定時間範圍內不會發生感興趣。 要使用此選項配置目標，請選擇 **[!UICONTROL 不會發生]** 從頂級下拉清單中。
+不過，在某些情況下，您可能會想要預測某個事件是否會在特定時間範圍內發生。 若要使用此選項設定目標，請選取 **[!UICONTROL 不會發生]** 從頂層下拉式清單中。
 
-例如，如果您有興趣預測哪些客戶變得不那麼敬業，則不要在下個月訪問您的帳戶登錄頁。 選擇 **[!UICONTROL 不會發生]** 後跟 **[!UICONTROL 全部]** 然後輸入 **web.webInteraction.URL** （或類似欄位） **[!UICONTROL 等於]** 作為 **帳戶登錄** 值。
+例如，如果您想要預測哪些客戶的參與度會降低，則不要在下個月造訪您的帳戶登入頁面。 選擇 **[!UICONTROL 不會發生]** 後跟 **[!UICONTROL 全部]** 然後輸入 **web.webInteraction.URL** （或類似欄位）和 **[!UICONTROL 等於]** 作為運算元，搭配 **account-login** 作為值。
 
 ![不會發生](../images/user-guide/not-occur.png)
 
-### 所有和任何
+### 所有及任何
 
-在某些情況下，您可能希望預測事件組合是否會發生，而在其它情況下，您可能希望預測預定義集中任何事件的發生。 為了預測客戶是否具有事件組合，請選擇 **[!UICONTROL 全部]** 選項 **[!UICONTROL 定義目標]** 的子菜單。
+在某些情況下，您可能想要預測事件的組合是否會發生，而在其他情況下，您可能想要預測來自預先定義之集的任何事件的發生。 若要預測客戶是否會有事件組合，請選取 **[!UICONTROL 全部]** 選項(位於 **[!UICONTROL 定義目標]** 頁面。
 
-例如，您可能希望預測客戶是否購買了特定產品。 該預測目標由兩個條件定義：a `commerce.order.purchaseID` **存在** 和 `productListItems.SKU` **等於** 一些特定的價值。
+例如，您可能想要預測客戶是否購買特定產品。 此預測目標由兩個條件定義：a `commerce.order.purchaseID` **存在** 和 `productListItems.SKU` **等於** 某些特定值。
 
-![所有示例](../images/user-guide/all-of.png)
+![所有範例](../images/user-guide/all-of.png)
 
-為了預測客戶是否會從給定集中發生任何事件，您可以使用 **[!UICONTROL 任意]** 的雙曲餘切值。
+為了預測客戶是否會有來自指定集的任何事件，您可以使用 **[!UICONTROL 任何]** 選項。
 
-例如，您可能希望預測客戶是訪問特定URL還是訪問具有特定名稱的網頁。 該預測目標由兩個條件定義： `web.webPageDetails.URL` **開頭** 特定值 `web.webPageDetails.name` **開頭** 一個特定值。
+例如，您可能想要預測客戶是否造訪特定URL或具有特定名稱的網頁。 此預測目標由兩個條件定義： `web.webPageDetails.URL` **開頭為** 特定值與 `web.webPageDetails.name` **開頭為** 特定值。
 
-![任何示例](../images/user-guide/any-of.png)
+![任何範例](../images/user-guide/any-of.png)
 
 ### 合格人口 *（可選）*
 
-預設情況下，將為所有配置檔案生成傾向分數，除非指定合格人口。 您可以通過定義條件來基於事件包括或排除配置檔案來指定合格人口。
+依預設，除非指定合格母體，否則會為所有設定檔產生傾向分數。 您可以定義條件，根據事件包含或排除設定檔，以指定符合條件的母體。
 
 ![合格人口](../images/user-guide/eligible-population.png)
 
-### 自定義事件(*可選*) {#custom-events}
+### 自訂事件(*可選*) {#custom-events}
 
-如果除了 [標準事件欄位](../input-output.md#standard-events) 由客戶AI用於生成傾向得分，提供自定義事件選項。 使用此選項可以添加您認為具有影響力的其他事件，這些事件可能會提高模型的質量並有助於提供更準確的結果。 如果您選擇的資料集包含在架構中定義的自定義事件，則可以將它們添加到實例中。
-
->[!NOTE]
->
-> 有關自定義事件如何影響客戶AI評分結果的深入說明，請訪問 [自定義事件示例](#custom-event) 的子菜單。
-
-![事件特徵](../images/user-guide/event-feature.png)
-
-要添加自定義事件，請選擇 **[!UICONTROL 添加自定義事件]**。 接下來，輸入自定義事件名稱，然後將其映射到架構中的事件欄位。 在查看影響因素和其他見解時，將顯示自定義事件名稱以代替欄位值。 這意味著將使用自定義事件名稱，而不是事件的ID/值。 有關如何顯示自定義事件的詳細資訊，請參閱 [自定義事件示例部分](#custom-event)。 客戶AI使用這些附加的自定義事件來改進模型質量並提供更準確的結果。
-
-![自定義事件欄位](../images/user-guide/custom-event.png)
-
-接下來，從可用運算子下拉清單中選擇要使用的運算子。 只列出與事件相容的運算子。
-
-![自定義事件運算子](../images/user-guide/custom-operator.png)
-
-最後，如果所選運算子需要一個欄位值，請輸入欄位值。 在此示例中，我們只需要查看是否存在酒店或餐廳預訂。 但是，如果我們想更精確，可以使用equals運算子並在value提示符中輸入一個精確值。
-
-![自定義事件欄位值](../images/user-guide/custom-value.png)
-
-完成後，選擇 **[!UICONTROL 下一個]** 在右上角繼續。
-
-### 自定義配置檔案屬性(*可選*)
-
-除了 [標準事件欄位](../input-output.md#standard-events) 由客戶AI生成傾向得分。 使用此選項可以添加您認為具有影響力的附加配置檔案屬性，這些屬性可能會提高模型的質量並提供更準確的結果。 此外，添加自定義配置檔案屬性使客戶AI能夠更好地展示特定配置檔案如何最終出現在傾向桶中。
+如果您除了 [標準事件欄位](../input-output.md#standard-events) 由Customer AI用來產生傾向分數，會提供自訂事件選項。 使用此選項可讓您新增您認為有影響力的其他事件，這可能會改善模型品質，並有助於提供更精確的結果。 如果您選取的資料集包含結構中定義的自訂事件，您可以將其新增至執行個體。
 
 >[!NOTE]
 >
->添加自定義配置檔案屬性與添加自定義事件遵循的工作流相同。 與自定義事件類似，自定義配置檔案屬性也以同樣方式影響模型評分。 有關詳細解釋，請訪問 [自定義事件示例](#custom-event) 的子菜單。
+> 如需自訂事件對Customer AI評分結果有何影響的深入說明，請造訪 [自訂事件範例](#custom-event) 區段。
 
-![添加自定義配置檔案屬性](../images/user-guide/profile-attributes.png)
+![事件功能](../images/user-guide/event-feature.png)
+
+若要新增自訂事件，請選取 **[!UICONTROL 新增自訂事件]**. 接下來，輸入自訂事件名稱，然後將其對應至您結構中的事件欄位。 查看影響因素和其他深入分析時，會顯示自訂事件名稱，取代欄位值。 這表示將會使用自訂事件名稱，而非事件的ID/值。 如需自訂事件顯示方式的詳細資訊，請參閱 [自訂事件範例區段](#custom-event). Customer AI會使用這些額外的自訂事件來改善模型品質，並提供更精確的結果。
+
+![自訂事件欄位](../images/user-guide/custom-event.png)
+
+接下來，從「可用運算子」下拉式清單中選取您要使用的運算子。 僅列出與事件相容的運算子。
+
+![自訂事件運算子](../images/user-guide/custom-operator.png)
+
+最後，如果選取的運算子需要一個，請輸入欄位值。 在此範例中，我們只需要查看酒店或餐廳是否存在預訂。 不過，如果想要更精確，可以使用等於運算子，並在值提示中輸入確切的值。
+
+![自訂事件欄位值](../images/user-guide/custom-value.png)
+
+完成後，選取 **[!UICONTROL 下一個]** 在右上角繼續。
+
+### 自訂設定檔屬性(*可選*)
+
+除了 [標準事件欄位](../input-output.md#standard-events) 供客戶AI用來產生傾向分數。 使用此選項可讓您新增您認為有影響的其他設定檔屬性，這可能會改善模型品質，並提供更精確的結果。 此外，新增自訂設定檔屬性可讓客戶AI更妥善地展示特定設定檔在傾向貯體中的結果。
+
+>[!NOTE]
+>
+>新增自訂設定檔屬性的工作流程與新增自訂事件相同。 與自訂事件類似，自訂設定檔屬性也會以相同方式影響模型計分。 如需深入說明，請造訪 [自訂事件範例](#custom-event) 區段。
+
+![新增自訂設定檔屬性](../images/user-guide/profile-attributes.png)
 
 #### 從配置檔案快照導出中選擇配置檔案屬性
 
-您也可以選擇在每日配置檔案快照導出中包括配置檔案屬性。 這些屬性將同步到配置檔案快照導出並顯示最近可用的值。
+您也可以選擇從每日配置檔案快照導出中包含配置檔案屬性。 這些屬性會同步至設定檔快照匯出，並顯示最近可用的值。
 
 >[!WARNING]
 >
-> 請小心不要選擇作為預測目標的結果更新或與預測目標高度相關的配置檔案屬性。 這導致模型資料洩漏和過擬合。 此類屬性的示例是 `total_purchases_in_the_last_3_months` 預測採購轉換。
+> 請留意勿選取因預測目標而更新或與預測目標高度相關的設定檔屬性。 這會導致資料洩漏和模型過擬合。 此類屬性的範例為 `total_purchases_in_the_last_3_months` 可預測購買轉換。
 
 >[!NOTE]
 >
->在UI中，UPS快照導出支援使用配置檔案屬性，請求。
+>UI中可根據請求提供使用UPS快照導出的配置檔案屬性的支援。
 
-### 添加自定義事件示例 {#custom-event}
+### 新增自訂事件範例 {#custom-event}
 
-在以下示例中，將自定義事件和配置檔案屬性添加到客戶AI實例。 客戶AI實例的目標是預測客戶在未來60天內購買另一個Luma產品的可能性。 通常，產品資料連結到產品SKU。 在這種情況下，SKU `prd1013`。 在客戶AI模型經過培訓/打分後，此SKU可以連結到事件，並作為傾向時段的一個影響因素顯示。
+在下列範例中，自訂事件和設定檔屬性會新增至Customer AI例項。 Customer AI例項的目標是預測客戶在未來60天內購買其他Luma產品的可能性。 通常，產品資料會連結至產品SKU。 在此情況下，SKU為 `prd1013`. 在Customer AI模型接受訓練/評分後，此SKU可以連結至事件，並顯示為傾向貯體的影響因素。
 
-客戶AI自動將功能生成（如「天數自」或「計數」）應用於自定義事件，如 **手錶購買**。 如果將此事件視為客戶傾向高、中或低的一個影響因素，則客戶AI將其顯示為 `Days since prd1013 purchase` 或 `Count of prd1013 purchase`。 通過將其建立為「自定義」事件，可以為該事件指定一個新名稱，使結果更容易讀取。 例如 `Days since Watch purchase`。此外，即使該事件不是標準事件，客戶AI也會在其培訓和評分中使用此事件。 這意味著您可以添加您認為可能有影響的多個事件，並通過包括保留、訪問者日誌等資料來進一步定制模型。 添加這些資料點會進一步提高客戶AI模型的準確性和精度。
+Customer AI會自動對自訂事件(例如 **手錶購買**. 若將此事件視為客戶高、中或低傾向的重要因素，則Customer AI會將其顯示為 `Days since prd1013 purchase` 或 `Count of prd1013 purchase`. 將其建立為「自訂」事件，可為事件指定新名稱，讓結果更容易閱讀。 例如 `Days since Watch purchase`。此外，即使該事件不是標準事件，Customer AI也會在其訓練和分數中使用此事件。 這表示您可以新增多個您認為可能具影響力的事件，並透過包含保留、訪客記錄和其他事件等資料來進一步自訂模型。 新增這些資料點，可進一步提高Customer AI模型的準確度和精準度。
 
-![自定義事件示例](../images/user-guide/custom-event-name.png)
+![自訂事件範例](../images/user-guide/custom-event-name.png)
 
 ## 設定選項
 
-設定選項步驟允許您配置計畫以自動執行預測運行、定義預測排除以過濾某些事件，以及切換 **[!UICONTROL 配置檔案]** 開/關。
+「設定選項」步驟可讓您設定排程以自動執行預測、定義預測排除以篩選特定事件，以及切換 **[!UICONTROL 設定檔]** 開/關。
 
-### 配置計畫 *（可選）* {#configure-a-schedule}
+### 設定排程 *（可選）* {#configure-a-schedule}
 
-要設定計分計畫，請首先配置 **[!UICONTROL 評分頻率]**。 自動預測運行可以計畫每週或每月運行。
+若要設定計分排程，請從設定 **[!UICONTROL 計分頻率]**. 可排程每週或每月執行自動預測執行。
 
 ![](../images/user-guide/schedule.png)
 
 ### 預測排除 *（可選）*
 
-如果資料集包含作為test資料添加的任何列，則可以通過選擇將該列或事件添加到排除清單中 **[!UICONTROL 添加排除]** 然後輸入要排除的欄位。 這防止在生成分數時評估滿足特定條件的事件。 此功能可用於過濾無關資料輸入或促銷。
+如果您的資料集包含任何新增為測試資料的欄，您可以選取 **[!UICONTROL 新增排除項目]** 接著輸入您要排除的欄位。 這可防止在產生分數時評估符合特定條件的事件。 此功能可用來篩選掉無關的資料輸入或促銷活動。
 
-要排除事件，請選擇 **[!UICONTROL 添加排除]** 定義事件。 要刪除排除，請選取橢圓(**[!UICONTROL ...]**)，然後選擇 **[!UICONTROL 刪除容器]**。
+若要排除事件，請選取 **[!UICONTROL 新增排除項目]** 和定義事件。 若要移除排除項目，請選取點(**[!UICONTROL ...]**)，然後選取「 」 **[!UICONTROL 移除容器]**.
 
 ![](../images/user-guide/exclusion.png)
 
-### 配置檔案切換
+### 設定檔切換
 
-配置檔案切換允許客戶AI將評分結果導出到即時客戶配置檔案。 禁用此切換可防止將模型評分結果添加到「配置檔案」中。 禁用此功能後，客戶AI評分結果仍然可用。
+「設定檔」切換可讓Customer AI將計分結果匯出至「即時客戶設定檔」。 禁用此切換可防止將模型評分結果添加到「配置檔案」中。 停用此功能後，仍可使用Customer AI評分結果。
 
-首次使用「客戶AI」時，可以關閉此特徵，直到您對模型輸出結果滿意為止。 這樣，您就無法在微調模型時將多個評分資料集上載到客戶配置檔案。 校準模型後，可以使用 [克隆選項](#set-up-your-instance) 從 **服務實例** 的子菜單。 這允許您建立模型副本並開啟配置檔案。
+第一次使用Customer AI時，您可以關閉此功能，直到您對模型輸出結果滿意為止。 這可防止您上傳多個計分資料集至客戶設定檔，同時微調您的模型。 標定完模型後，可使用 [原地選項](#set-up-your-instance) 從 **服務實例** 頁面。 這可讓您建立模型副本並開啟設定檔。
 
-![配置檔案切換](../images/user-guide/advanced-workflow.png)
+![設定檔切換](../images/user-guide/advanced-workflow-save.png)
 
-一旦設定了評分計畫、包括了預測排除，並且配置檔案切換到您希望的位置，請選擇 **[!UICONTROL 完成]** 在右上角建立您的客戶AI實例。
+設定計分排程、納入預測排除後，以及切換您想要其所在位置的設定檔，請選取 **[!UICONTROL 完成]** ，以建立您的Customer AI例項。
 
-如果實例建立成功，則會立即觸發預測運行，然後根據您定義的計畫執行後續運行。
+如果成功建立例項，則會立即觸發預測執行，並根據您定義的排程執行後續執行。
 
 >[!NOTE]
 >
->根據輸入資料的大小，預測運行可能需要24小時才能完成。
+>根據輸入資料的大小，預測執行最多可能需要24小時才能完成。
 
-按照本節所述，您配置了客戶AI的實例並執行了預測運行。 在運行成功完成後，如果啟用了配置檔案切換，則得分的洞察會自動用預測得分填充配置檔案。 請等待最多24小時，然後繼續本教程的下一部分。
+依照本節所述，您已設定Customer AI的例項並執行預測執行。 當執行成功完成時，如果設定檔切換已啟用，則分數的深入分析會自動填入預測的分數。 請等候最多24小時，再繼續進行本教學課程的下一節。
+
+## 治理政策
+
+完成工作流程以建立例項並提交模型的設定後， [政策執行](/help/data-governance/enforcement/auto-enforcement.md) 檢查是否有違規。 如果發生策略違規，將顯示一個彈出窗口，指示已違反一個或多個策略。 這是為了確保您的資料操作和Platform中的行銷動作符合資料使用原則。
+
+![顯示違反原則的彈出視窗](../images/user-guide/policy-violation-popover-cai.png)
+
+彈出式視窗會提供違規的特定資訊。 您可以通過策略設定和與配置工作流不直接相關的其他措施來解決這些違規。 例如，您可以變更標籤，讓某些欄位可用於資料科學用途。 或者，您也可以修改模型配置本身，使其不使用帶有標籤的任何內容。 請參閱本檔案，以進一步了解如何設定 [原則](/help/data-governance/policies/overview.md).
 
 ## 以屬性為基礎的存取控制
 
 >[!IMPORTANT]
 >
->基於屬性的訪問控制目前僅在有限版本中可用。
+>基於屬性的訪問控制當前僅在有限版本中可用。
 
-[基於屬性的訪問控制](../../../access-control/abac/overview.md) 是Adobe Experience Platform的一種功能，使管理員能夠根據屬性控制對特定對象和/或權能的訪問。 屬性可以是添加到對象的元資料，如添加到架構欄位或段的標籤。 管理員定義包括屬性的訪問策略以管理用戶訪問權限。
+[基於屬性的訪問控制](../../../access-control/abac/overview.md) 是Adobe Experience Platform的功能，可讓管理員根據屬性控制對特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至架構欄位或區段的標籤。 管理員定義了包括屬性的訪問策略以管理用戶訪問權限。
 
-此功能允許您用定義組織或資料使用範圍的標籤來標籤體驗資料模型(XDM)架構欄位。 同時，管理員可以使用用戶和角色管理介面來定義圍繞XDM架構欄位的訪問策略，並更好地管理授予用戶或用戶組（內部、外部或第三方用戶）的訪問。 此外，基於屬性的訪問控制允許管理員管理對特定段的訪問。
+此功能可讓您以標籤來標示Experience Data Model(XDM)結構欄位，並定義組織或資料使用範圍。 同時，管理員可使用使用者和角色管理介面來定義XDM架構欄位的存取原則，並更妥善地管理指派給使用者或使用者群組（內部、外部或第三方使用者）的存取權。 此外，基於屬性的訪問控制允許管理員管理對特定段的訪問。
 
-通過基於屬性的訪問控制，您組織的管理員可以控制用戶對所有平台工作流和資源中敏感個人資料(SPD)和個人識別資訊(PII)的訪問。 管理員可以定義只能訪問特定欄位和與這些欄位對應的資料的用戶角色。
+透過基於屬性的存取控制，貴組織的管理員可以控制使用者對所有平台工作流程和資源的敏感個人資料(SPD)和個人識別資訊(PII)的存取權。 管理員可以定義只有特定欄位和與這些欄位對應的資料存取權的使用者角色。
 
-由於基於屬性的訪問控制，某些欄位和功能將受到限制，並且對某些客戶AI服務實例不可用。 示例包括「Identity」、「Score Definition」和「Clone」。
+由於基於屬性的存取控制，某些欄位和功能將會受限，且無法用於某些客戶AI服務例項。 例如「身分」、「分數定義」和「原地複製」。
 
-![突出顯示服務實例結果的受限欄位的客戶AI工作區。](../images/user-guide/unavailable-functionalities.png)
+![Customer AI工作區，其中反白顯示服務執行個體結果的限制欄位。](../images/user-guide/unavailable-functionalities.png)
 
-在客戶AI工作區頂部 **insights頁**，請注意邊欄、分數定義、標識和配置檔案屬性中的詳細資訊都顯示「訪問受限」。
+在Customer AI工作區頂端 **前瞻分析頁面**，請注意側邊欄、分數定義、身分和設定檔屬性中的詳細資料都顯示為「存取受限」。
 
-![突出顯示了模式的受限欄位的Customer AI工作區。](../images/user-guide/access-restricted.png)
+![Customer AI工作區，會醒目顯示結構的限制欄位。](../images/user-guide/access-restricted.png)
 
 <!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
 
 ![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
 
-在上預覽具有受限架構的資料集時 **[!UICONTROL 建立實例工作流]** 頁，警告會告訴您 [!UICONTROL 由於訪問限制，某些資訊不會顯示在資料集預覽中。]
+在 **[!UICONTROL 建立執行個體工作流程]** 頁面，警告會通知您 [!UICONTROL 由於存取限制，資料集預覽中不會顯示某些資訊。]
 
-![突出顯示了預覽資料集的受限欄位的客戶AI工作區，其中包含受限架構結果。](../images/user-guide/restricted-dataset-preview.png)
+![Customer AI工作區，預覽資料集的限制欄位會反白顯示限制結構結果。](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
 
-在建立具有受限資訊的實例後，繼續執行 **[!UICONTROL 定義目標]** 步驟，頂部將顯示警告： [!UICONTROL 由於訪問限制，配置中不顯示某些資訊。]
+在您建立具有限制資訊的例項後，請繼續前往 **[!UICONTROL 定義目標]** 步驟中，頂端會顯示警告： [!UICONTROL 由於存取限制，設定中未顯示特定資訊。]
 
-![突出顯示服務實例結果的受限欄位的客戶AI工作區。](../images/user-guide/information-not-displayed.png)
+![Customer AI工作區，其中反白顯示服務執行個體結果的限制欄位。](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## 後續步驟 {#next-steps}
 
-通過本教程，您已成功配置了客戶AI實例並生成了傾向得分。 現在，您可以選擇使用段生成器 [建立預測分數的客戶段](./create-segment.md) 或 [瞭解客戶AI的見解](./discover-insights.md)。
+依照本教學課程，您已成功設定Customer AI例項並產生傾向分數。 您現在可以選擇使用區段產生器，以 [建立預測分數的客戶區段](./create-segment.md) 或 [透過Customer AI探索見解](./discover-insights.md).
 
 ## 其他資源
 
-以下視頻旨在支援您對客戶AI的配置工作流的理解。 此外，還提供了最佳做法和使用案例示例。
+以下影片旨在協助您了解Customer AI的設定工作流程。 此外，也提供最佳實務和使用案例範例。
 
 >[!IMPORTANT]
 >
-> 以下視頻已過期。 有關最新資訊，請參閱文檔。
+> 以下視訊已過期。 如需最新資訊，請參閱本檔案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)

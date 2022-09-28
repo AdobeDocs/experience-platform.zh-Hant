@@ -5,9 +5,9 @@ title: Attribution AIUI指南
 topic-legacy: User guide
 description: 本檔案可做為與Intelligent Services使用者介面中的Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 8071ddc945e89dd54173b34d44c6f622570801a3
+source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2960'
 ht-degree: 1%
 
 ---
@@ -70,6 +70,10 @@ Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服
 
 資料集預覽包含上次更新時間、來源結構，以及前10欄的預覽等資料。
 
+選擇 **[!UICONTROL 儲存]** 在工作流程中移動時儲存草稿。 您也可以儲存草稿模型設定，並移至工作流程的下一個步驟。 使用 **[!UICONTROL 保存並繼續]** 在模型配置期間建立和保存草稿。 此功能可讓您建立和儲存模型配置的草稿，當您必須在配置工作流程中定義許多欄位時，此功能特別有用。
+
+![「保存並保存」(Save and Save)和「繼續」(Continue)突出顯示「建立Data Science Services」Attribution AI頁簽的工作流。](./images/user-guide/aai-save-save-&-exit.png)
+
 ### 資料集完整性 {#dataset-completeness}
 
 <!-- https://www.adobe.com/go/aai-dataset-completeness -->
@@ -92,7 +96,7 @@ Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服
 
 要選擇標識，請選擇位於標識列中的帶下划線的值。 此時會顯示「選取身分彈出視窗」。
 
-![選擇相同的命名空間](./images/user-guide/aai-identity-map.png)
+![選擇相同的命名空間](./images/user-guide/aai-identity-map-save-and-exit.png)
 
 如果命名空間中有多個身分可用，請務必為您的使用案例選取正確的身分欄位。 例如，電子郵件命名空間中提供兩個電子郵件身分識別：一個工作電子郵件，另一個是個人電子郵件。 根據使用案例，個人電子郵件更可能填入，且在個別預測中更有用。 這表示您會選取 `EMAIL (personalEmail.address)` 作為您的身份。
 
@@ -108,7 +112,7 @@ Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服
 
 選取並新增資料集後， **地圖** 設定步驟隨即顯示。 Attribution AI需要您對應上一步驟中選取之每個資料集的「媒體頻道」欄位。 這是因為若沒有資料集之間的媒體管道對應，衍生自Attribution AI的深入分析可能無法正確顯示，導致分析頁面難以解譯。 雖然只需要媒體管道，但強烈建議您對應一些選用欄位，例如媒體動作、促銷活動名稱、促銷活動群組和促銷活動標籤。 如此可讓Attribution AI提供更清楚的分析和最佳結果。
 
-![映射](./images/user-guide/mapping.png)
+![映射](./images/user-guide/mapping-save-&-exit.png)
 
 ## 定義事件 {#define-events}
 
@@ -198,13 +202,13 @@ Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服
 
 定義完所有必要的接觸點後，向上捲動並選取 **下一個** ，以繼續執行最後一個步驟。
 
-![完成定義](./images/user-guide/define_event_next.png)
+![完成定義](./images/user-guide/define_event_save_and_exit.png)
 
 ## 高級培訓和評分設定
 
 Attribution AI中的最後一頁是 **[!UICONTROL 進階]** 用於設定訓練和分數的頁面。
 
-![進階新頁面](./images/user-guide/advanced_settings.png)
+![新的頁面集選項](./images/user-guide/advanced_settings_set_options.png)
 
 ### 計畫培訓
 
@@ -298,7 +302,7 @@ Attribution AI中的最後一頁是 **[!UICONTROL 進階]** 用於設定訓練�
 
 在您建立具有限制資訊的例項後，請繼續前往 **[!UICONTROL 定義目標]** 步驟中，頂端會顯示警告： [!UICONTROL 由於存取限制，設定中未顯示特定資訊。]
 
-![Attribution AI工作區，其中反白顯示實例結果的限制欄位。](./images/user-guide/information-not-displayed.png)
+![Attribution AI工作區，其中反白顯示實例結果的限制欄位。](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## 後續步驟
 
