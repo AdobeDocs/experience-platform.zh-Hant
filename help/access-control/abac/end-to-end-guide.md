@@ -2,20 +2,19 @@
 keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬性的存取控制；
 title: 基於屬性的訪問控制端到端指南
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制的端對端指南
-hide: true
-hidefromtoc: true
-source-git-commit: 230bcfdb92c3fbacf2e24e7210d61e2dbe0beb86
+source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
 workflow-type: tm+mt
-source-wordcount: '2315'
+source-wordcount: '2382'
 ht-degree: 0%
 
 ---
 
 # 基於屬性的訪問控制端到端指南
 
-基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓注重隱私的品牌有更大的彈性來管理使用者存取。 可將個別物件（例如結構欄位和區段）指派給使用者角色。 此功能可讓您授予或撤銷組織中特定Platform使用者對個別物件的存取權。
+基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓多品牌和注重隱私的客戶擁有更大的彈性來管理使用者存取。 可以根據對象的屬性和角色使用策略來授予/拒絕對單個對象（如方案欄位和段）的訪問權。 此功能可讓您授予或撤銷組織中特定Platform使用者對個別物件的存取權。
 
-此功能可讓您使用定義組織或資料使用範圍的標籤，對結構欄位、區段等進行分類。 在Adobe Journey Optimizer中，您可以將這些相同的標籤套用至歷程和選件。 同時，管理員可以定義XDM結構欄位的存取原則，並更妥善地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
+此功能可讓您使用定義組織或資料使用範圍的標籤，對結構欄位、區段等進行分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義XDM結構欄位的存取原則，並更妥善地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
+
 
 ## 快速入門
 
@@ -28,9 +27,9 @@ ht-degree: 0%
 
 ### 使用案例概觀
 
-本指南使用限制存取敏感資料的範例使用案例來示範工作流程。 您將執行一個基於屬性的訪問控制工作流示例，在該工作流中，您將建立並分配角色、標籤和策略，以配置您的用戶是否可以訪問組織中的某些資源。 此使用案例概述如下：
+您將執行一個基於屬性的訪問控制工作流示例，在該工作流中，您將建立並分配角色、標籤和策略，以配置您的用戶是否可以訪問組織中的特定資源。 本指南使用限制存取敏感資料的範例來示範工作流程。 此使用案例概述如下：
 
-您是醫療保健提供商，並且想要配置對組織中資源的訪問。
+您是醫療保健提供商，希望配置對組織中資源的訪問。
 
 * 您的內部行銷團隊應能存取 **[!UICONTROL PHI/受管制的健康資料]** 資料。
 * 您的外部機構應無法訪問 **[!UICONTROL PHI/受管制的健康資料]** 資料。
@@ -41,17 +40,17 @@ ht-degree: 0%
 
 * [為您的使用者標籤角色](#label-roles):以其行銷組與外部代理合作的醫療保健提供商（ACME業務組）為例。
 * [標示資源（結構欄位和區段）](#label-resources):指派 **[!UICONTROL PHI/受管制的健康資料]** 標籤至架構資源和區段。
-* [建立將它們連結在一起的策略](#policy):建立原則，將資源上的標籤連結至您角色中的標籤，拒絕存取架構欄位和區段。 對於沒有相符標籤的使用者，這會拒絕其存取所有沙箱中的結構欄位和區段。
+* [建立將它們連結在一起的策略](#policy):建立原則以將資源上的標籤連結至您角色中的標籤，拒絕存取結構欄位和區段。 對於沒有相符標籤的使用者，這會拒絕其存取所有沙箱中的結構欄位和區段。
 
 ## 權限
 
-[!UICONTROL 權限] 是Experience Cloud的區域，管理員可在此定義用戶角色和訪問策略，以管理產品應用程式內功能和對象的訪問權限。
+[!UICONTROL 權限] 是Experience Cloud的區域，管理員可在其中定義用戶角色和策略，以管理產品應用程式內的功能和對象的權限。
 
 通過 [!UICONTROL 權限]，您可以建立和管理角色，並為這些角色指派所需的資源權限。 [!UICONTROL 權限] 也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
 
 如果您沒有管理員權限，請連絡您的系統管理員以取得存取權。
 
-取得管理員權限後，請前往 [Adobe Experience Cloud](https://experience.adobe.com/) 並使用您的Adobe憑證登入。 登入後， **[!UICONTROL 概述]** 會針對您擁有管理員權限的組織顯示頁面。 此頁面顯示貴組織訂閱的產品，以及可新增使用者和管理員至整個組織的其他控制項。 選擇 **[!UICONTROL 權限]** 以開啟您的平台整合工作區。
+取得管理員權限後，請前往 [Adobe Experience Cloud](https://experience.adobe.com/) 並使用您的Adobe憑證登入。 登入後， **[!UICONTROL 概述]** 會針對您擁有管理員權限的組織顯示頁面。 此頁面顯示您組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選擇 **[!UICONTROL 權限]** 以開啟您的平台整合工作區。
 
 ![顯示在Adobe Experience Cloud中選取之權限產品的影像](../images/flac-ui/flac-select-product.png)
 
@@ -80,7 +79,7 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="建立新角色"
->abstract="您可以建立新角色，以便對存取您的Platform例項的使用者進行更妥善的分類。 例如，您可以為內部營銷團隊建立角色，並將RHD標籤應用到該角色，這將允許您的內部營銷團隊訪問受保護的健康資訊(PHI)。 或者，您也可以為外部代理建立角色，並不將RHD標籤應用到該角色，從而拒絕該角色對PHI資料的訪問。"
+>abstract="您可以建立新角色，以便對存取您的Platform例項的使用者進行更妥善的分類。 例如，您可以為內部營銷團隊建立角色，並將RHD標籤應用到該角色，從而允許您的內部營銷團隊訪問受保護的健康資訊(PHI)。 或者，您也可以為外部代理建立角色，並不將RHD標籤應用到該角色，從而拒絕該角色對PHI資料的訪問。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="建立新角色"
 
 >[!CONTEXTUALHELP]
@@ -88,7 +87,7 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 >title="角色概觀"
 >abstract="角色概述對話方塊會顯示指定角色有權存取的資源和沙箱。"
 
-角色是將與您的Platform例項互動的使用者類型分類，並且是存取控制原則的基礎要素。 角色具有一組指定的權限，而您組織的成員可依其需要的存取範圍，指派給一或多個角色。
+角色是將與您的Platform例項互動的使用者類型分類的方法，也是存取控制原則的基礎要素。 角色具有一組指定的權限，而您組織的成員可依其需要的存取範圍，指派給一或多個角色。
 
 若要開始，請選取 **[!UICONTROL ACME Business Group]** 從 **[!UICONTROL 角色]** 頁面。
 
@@ -102,6 +101,10 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 
 ![顯示正在選擇和保存的RHD標籤的影像](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
+>[!NOTE]
+>
+>將組織群組新增至角色時，該群組中的所有使用者都會新增至角色。 對組織群組所做的任何變更（移除或新增的使用者）都會在角色內自動更新。
+
 ## 將標籤應用於架構欄位 {#label-resources}
 
 現在您已使用 [!UICONTROL RHD] 標籤，下一步是將相同標籤新增至您要控制該角色的資源。
@@ -110,9 +113,9 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 
 ![顯示從「結構」頁簽中選擇的ACME醫療保健結構的影像](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-下一步，選擇 **[!UICONTROL 標籤]** 以查看顯示與架構關聯欄位的清單。 從這裡，您可以一次將標籤指派給一或多個欄位。 選取 **[!UICONTROL 血糖]** 和 **[!UICONTROL 胰島素水準]** 欄位，然後選取 **[!UICONTROL 編輯控管標籤]**.
+下一步，選擇 **[!UICONTROL 標籤]** 以查看顯示與架構關聯欄位的清單。 從這裡，您可以一次將標籤指派給一或多個欄位。 選取 **[!UICONTROL 血糖]** 和 **[!UICONTROL 胰島素水準]** 欄位，然後選取 **[!UICONTROL 套用存取權和資料控管標籤]**.
 
-![顯示正在選擇的血糖和胰島素水準的影像，並編輯正在選擇的治理標籤](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![該影像顯示正在選擇的血糖和胰島素水準，並應用正在選擇的訪問和資料控管標籤](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
 此 **[!UICONTROL 編輯標籤]** 對話框，可讓您選擇要應用到架構欄位的標籤。 針對此使用案例，選取 **[!UICONTROL PHI/受管制的健康資料]** 標籤，然後選取 **[!UICONTROL 儲存]**.
 
@@ -150,7 +153,7 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
 >title="什麼是政策？"
->abstract="政策是將屬性集合在一起，以制定允許和不允許的行動的聲明。 每個組織都會提供您必須啟用的預設原則，以便定義區段和結構欄位等資源的規則。 不能編輯或刪除預設策略。 但是，可以激活或停用預設策略。"
+>abstract="政策是將屬性集合在一起，以制定允許和不允許的行動的聲明。 每個組織都會提供預設原則，您必須啟用此原則，才能定義區段和結構欄位等資源的規則。 不能編輯或刪除預設策略。 但是，可以激活或停用預設策略。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="管理原則"
 
 >[!CONTEXTUALHELP]
@@ -162,20 +165,24 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="為策略配置允許和不允許的操作"
->abstract="A <b>拒絕訪問</b> 當符合條件時，原則會拒絕使用者存取。 結合時 <b>以下為false</b>  — 除非所有用戶都符合匹配標準集，否則他們將被拒絕訪問。 此類型的策略允許您保護敏感資源，並僅允許訪問具有匹配標籤的用戶。 <br>A <b>允許訪問</b> 當符合條件時，原則將允許使用者存取。 結合時 <b>以下為true</b>  — 如果使用者符合相符的條件集，即可取得存取權。 這不會明確拒絕使用者的存取權，但會新增允許存取權。 此類型的策略允許您提供對資源的額外訪問，以及那些可能已經通過角色權限擁有訪問權限的用戶。」</br>
+>abstract="A <b>拒絕訪問</b> 當符合條件時，原則會拒絕使用者存取。 結合 <b>以下為false</b>  — 除非所有用戶都符合匹配標準集，否則他們將被拒絕訪問。 此類型的策略允許您保護敏感資源，並僅允許訪問具有匹配標籤的用戶。 <br>A <b>允許訪問</b> 當符合條件時，原則將允許使用者存取。 結合時 <b>以下為true</b>  — 如果使用者符合相符的條件集，即可取得存取權。 這不會明確拒絕使用者的存取權，但會新增允許存取權。 此類型的策略允許您提供對資源的額外訪問，以及那些可能已經通過角色權限擁有訪問權限的用戶。」</br>
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="編輯策略"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
 >title="配置資源的權限"
->abstract="資源是使用者可以或無法存取的資產或物件。 資源可以是區段或結構。 您可以為區段和結構欄位設定寫入、讀取或刪除權限。"
+>abstract="資源是使用者可以或無法存取的資產或物件。 資源可以是區段或結構欄位。 您可以為區段和結構欄位設定寫入、讀取或刪除權限。"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
 >title="編輯條件"
->abstract="將條件陳述式套用至您的原則，以設定使用者對特定資源的存取權。 選擇「全部匹配」以要求用戶具有與資源具有相同標籤的角色，以便獲得允許的訪問權。 選擇「匹配任何」 ，僅要求用戶具有一個與資源匹配的僅一個標籤的角色。 標籤可定義為核心或自訂標籤，核心標籤代表Adobe建立和提供的標籤，自訂標籤代表您為組織建立的標籤。"
+>abstract="將條件陳述式套用至您的原則，以設定使用者對特定資源的存取權。 選擇「全部匹配」以要求用戶具有與資源具有相同標籤的角色以允許訪問。 選擇「匹配」以要求用戶具有一個角色，該角色只有一個標籤與資源上的標籤匹配。 標籤可定義為核心或自訂標籤，核心標籤代表Adobe建立和提供的標籤，自訂標籤代表您為組織建立的標籤。"
 
-存取控制原則會利用標籤來定義哪些使用者角色可存取特定平台資源。 策略可以是本地策略或全局策略，也可以覆蓋其他策略。 在此範例中，對於架構欄位中沒有對應標籤的使用者，在所有沙箱中都會拒絕存取架構欄位和區段。
+存取控制原則會利用標籤來定義哪些使用者角色可存取特定平台資源。 策略可以是本地策略，也可以是全局策略，並可以覆蓋其他策略。 在此範例中，對於架構欄位中沒有對應標籤的使用者，在所有沙箱中都會拒絕存取架構欄位和區段。
+
+>[!NOTE]
+>
+>系統會建立「拒絕原則」來授與敏感資源的存取權，因為角色會授予主體的權限。 本示例中的書面策略 **否認** 如果缺少必要標籤，則可以訪問。
 
 要建立訪問控制策略，請選擇 **[!UICONTROL 權限]** 從左側導覽列中，然後選取 **[!UICONTROL 原則]**. 下一步，選擇 **[!UICONTROL 建立原則]**.
 
