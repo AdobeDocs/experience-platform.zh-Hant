@@ -5,10 +5,10 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 356d76d61293b9ff0887afbf30852159af8d72ad
+source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
 workflow-type: tm+mt
-source-wordcount: '1775'
-ht-degree: 0%
+source-wordcount: '2375'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 此外，還必須了解本檔案中使用的兩個重要術語，並了解它們之間的差異：
 - **區段定義**:用於描述目標受眾的關鍵特徵或行為的規則集。
-- **對象**:符合區段定義條件的產生設定檔集。
+- **對象**:符合區段定義條件的產生設定檔集。 這可透過Adobe Experience Platform（平台產生的對象）或外部來源（外部產生的對象）建立。
 
 ## 總覽
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 >title="新增所有區段至排程"
 >abstract="啟用，將所有批次評估段納入每日計畫更新（UTC下午3:30）。 停用以從排程更新中移除所有區段。"
 
-選取 **[!UICONTROL 瀏覽]** 標籤，查看IMS組織的所有區段定義清單。
+選取 **[!UICONTROL 瀏覽]** 標籤，查看組織的所有區段定義清單。
 
 ![](../images/ui/overview/segment-browse-all.png)
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-右側邊欄包含IMS組織內所有區段的相關資訊，列出區段總數、上次評估日期、下次評估日期，以及依評估方法劃分的區段。
+右側邊欄包含組織內所有區段的相關資訊，列出區段總數、上次評估日期、下次評估日期，以及按評估方法劃分的區段。
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 
 ![](../images/ui/overview/segment-details-summary.png)
 
-### 區段摘要
+### 區段摘要 {#segment-summary}
 
 此 **[!UICONTROL 區段摘要]** 一節提供ID、名稱、說明和屬性詳細資訊。
 
@@ -191,6 +191,80 @@ ht-degree: 0%
 目前只能使用API建立排程。 如需使用API建立、編輯及使用排程的詳細步驟，請依照教學課程來評估和存取區段結果，尤其是 [使用API進行排程評估](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
+
+## 對象 {#audiences}
+
+>[!IMPORTANT]
+>
+>對象功能目前為有限的測試版，並非所有使用者都能使用。 文件和功能可能會有所變更。
+
+選取 **[!UICONTROL 對象]** 索引標籤，查看貴組織的所有對象清單。
+
+![貴組織的對象清單。](../images/ui/overview/list-audiences.png)
+
+依預設，此檢視會列出對象的相關資訊，包括名稱、設定檔計數、來源、建立日期和上次修改日期。
+
+您可以選取 ![自訂表格](../images/ui/overview/customize-table.png) 圖示來變更要顯示的欄位。
+
+![會反白顯示「自訂表格」按鈕。 選取此按鈕可讓您自訂對象瀏覽頁面上顯示的欄位。](../images/ui/overview/select-customize-table.png)
+
+隨即出現彈出視窗，列出表格中可顯示的所有欄位。
+
+![可針對瀏覽對象區段顯示的屬性。](../images/ui/overview/customize-table-attributes.png)
+
+| 欄位 | 說明 |
+| ----- | ----------- | 
+| [!UICONTROL 名稱] | 對象名稱。 |
+| [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
+| [!UICONTROL Origin] | 對象的來源。 如果此對象是由平台產生，則會有劃分服務的來源。 |
+| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位的可能值包括 `Draft`, `Published`，和 `Archived`. |
+| [!UICONTROL 更新頻率] | 指出受眾資料更新頻率的值。 此欄位的可能值包括 `On Demand`, `Scheduled`，和 `Continuous`. |
+| [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
+| [!UICONTROL 已建立] | 建立對象的時間和日期。 |
+| [!UICONTROL 上次更新時間] | 上次建立對象的時間和日期。 |
+| [!UICONTROL 存取標籤] | 對象的存取標籤。 存取標籤可讓您根據套用至該資料的使用原則，對資料集和欄位進行分類。 這些標籤可隨時套用，提供您選擇控管資料的彈性。 欲知訪問標籤的更多資訊，請閱讀 [管理標籤](../../access-control/abac/ui/labels.md). |
+
+您可以選取 **[!UICONTROL 建立對象]** 來建立對象。
+
+![系統會反白顯示「建立對象」按鈕，顯示要選取建立對象的位置。](../images/ui/overview/create-audience.png)
+
+此時會出現彈出視窗，讓您在合成對象或建立規則之間進行選擇。
+
+![彈出式視窗會顯示您可以建立的兩種對象。](../images/ui/overview/create-audience-type.png)
+
+選取 **[!UICONTROL 撰寫對象]** 帶您前往Audience Builder。 若要進一步了解建立對象，請參閱 [Audience Builder指南](./audience-builder.md).
+
+選取 **[!UICONTROL 建置規則]** 帶您前往「區段產生器」。 若要進一步了解建立區段，請參閱 [區段產生器指南](./segment-builder.md)
+
+## 對象詳細資訊 {#audience-details}
+
+若要查看特定對象的詳細資訊，請在 [!UICONTROL 對象] 標籤。
+
+對象詳細資訊頁面隨即顯示。 此頁面的詳細資料會因對象是使用Adobe Experience Platform產生，還是來自外部來源（例如Audience Orchestration）而有所不同。
+
+### 平台產生的受眾
+
+如需Platform產生對象的詳細資訊，請參閱 [區段摘要區段](#segment-summary).
+
+### 外部產生的受眾
+
+對象詳細資訊頁面頂端會顯示對象摘要，以及對象儲存所在之資料集的詳細資訊。
+
+![提供給外部產生的受眾的詳細資訊。](../images/ui/overview/externally-generated-audience.png)
+
+此 **[!UICONTROL 對象摘要]** 一節提供ID、名稱、說明和屬性詳細資訊。
+
+此 **[!UICONTROL 資料集詳細資料]** 一節提供了名稱、說明、表名、源和架構等資訊。 您可以選取 **[!UICONTROL 檢視資料集]** 以查看資料集的詳細資訊。
+
+| 欄位 | 說明 |
+| ----- | ----------- |
+| [!UICONTROL 名稱] | 資料集的名稱。 |
+| [!UICONTROL 說明] | 資料集的說明。 |
+| [!UICONTROL 表名] | 資料集的表格名稱。 |
+| [!UICONTROL 來源] | 資料集的來源。 對於外部產生的對象，此值將 **結構**. |
+| [!UICONTROL 方案] | 資料集對應的XDM結構類型。 |
+
+若要進一步了解資料集，請參閱 [資料集概述](../../catalog/datasets/overview.md).
 
 ## 串流細分 {#streaming-segmentation}
 
