@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；流量服務；
 title: （測試版）使用流程服務API建立隨需擷取的流程執行
 description: 本教學課程涵蓋使用流程服務API建立隨需擷取的流程執行步驟
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 659f99a47b533bba2a6084bc8e235df2a29a6386
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1157'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 流運行表示流執行的實例。 例如，如果排程在上午9:00、上午10:00和上午11:00每小時執行流量，則會有三個流量執行例項。 流量執行是特定組織專屬的。
 
-按需獲取功能允許您建立針對給定資料流運行的流。 這可讓您的使用者根據指定參數建立流程執行，並建立擷取週期，而不需使用服務Token。
+按需獲取功能允許您建立針對給定資料流運行的流。 這可讓您的使用者根據指定參數建立流程執行，並建立擷取週期，而不需使用服務Token。 僅批源支援按需獲取。
 
 本教學課程涵蓋如何使用隨需擷取，以及使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 3d7a04c0ec6cf6a9bed90c9c22db2e8b56bfa01f
+source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 6%
+source-wordcount: '2326'
+ht-degree: 5%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 6%
 
 Adobe Experience Platform的新功能：
 
+- [以屬性為基礎的存取控制](#abac)
 - [資料衛生](#data-hygiene)
 - [[!UICONTROL 隱私權主控台]](#privacy-console)
 
@@ -25,6 +26,23 @@ Adobe Experience Platform 現有功能更新：
 - [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
 - [來源](#sources)
+
+## 以屬性為基礎的存取控制 {#abac}
+
+>[!IMPORTANT]
+>
+>從2022年10月起，將啟用基於屬性的存取控制。 若您想成為早期收養者，請聯絡您的Adobe代表。
+
+基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓具備隱私權意識的品牌在管理使用者存取方面擁有更大的彈性。 可將個別物件（例如結構欄位和區段）指派給使用者角色。 此功能可讓您授予或撤銷組織中特定Platform使用者對個別物件的存取權。
+
+透過基於屬性的存取控制，貴組織的管理員可控制使用者對所有平台工作流程和資源的存取、敏感個人資料(SPD)、個人識別資訊(PII)和其他自訂資料類型。 管理員可以定義只有特定欄位和與這些欄位對應的資料存取權的使用者角色。
+
+| 功能 | 說明 |
+| --- | --- |
+| 以屬性為基礎的存取控制 | 以屬性為基礎的存取控制可讓您為Experience Data Model(XDM)結構欄位和區段加上標籤，以定義組織或資料使用範圍。 同時，管理員可使用使用者和角色管理介面來定義涵蓋XDM架構欄位和區段的存取原則，以更妥善地管理提供給使用者或使用者群組（內部、外部或第三方使用者）的存取權。 如需詳細資訊，請參閱 [基於屬性的訪問控制概述](../../access-control/abac/overview.md). |
+| 權限 | 權限是管理員可在其中定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限的Experience Cloud區域。 透過權限，您可以建立和管理角色、指派這些角色所需的資源權限，以及建立原則以運用標籤，並定義哪些使用者角色可存取特定平台資源。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。 如需詳細資訊，請參閱 [權限UI指南](../../access-control/abac/ui/browse.md). |
+
+有關基於屬性的訪問控制的詳細資訊，請參見 [基於屬性的訪問控制概述](../../access-control/abac/overview.md). 有關基於屬性的訪問控制工作流的完整指南，請閱讀 [基於屬性的訪問控制端到端指南](../../access-control/abac/end-to-end-guide.md).
 
 ## 資料衛生 {#data-hygiene}
 
@@ -172,5 +190,9 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 | 功能 | 說明 |
 | --- | --- |
 | Audience Manager區段母體對即時客戶設定檔的影響 | 首次使用Audience Manager來源將Audience Manager區段傳送至Platform時，擷取大量Audience Manager區段母體會直接影響您的設定檔總數。 這表示選取所有區段可能會導致設定檔計數超過您的授權使用權限。 如需詳細資訊，請閱讀 [Audience Manager來源概觀](../../sources/connectors/adobe-applications/audience-manager.md). 如需您使用授權的詳細資訊，請參閱 [使用授權使用控制面板](../../dashboards/guides/license-usage.md). |
+| 支援Adobe Campaign管理Cloud Service | 使用Adobe Campaign受管Cloud Service來源將Adobe Campaign v8.4的傳送和追蹤記錄檔資料Experience Platform。 閱讀指南 [在UI中建立Adobe Campaign托管Cloud Service來源連線](../../sources/tutorials/ui/create/adobe-applications/campaign.md) 以取得更多資訊。 |
+| 批次來源的隨需內嵌API支援 | 使用按需獲取功能為具有的指定資料流建立臨時流運行 [!DNL Flow Service] API。 已建立的流量執行必須設為一次性擷取。 如需詳細資訊，請參閱 [使用API建立流程以執行隨選擷取](../../sources/tutorials/api/on-demand-ingestion.md) 以取得更多資訊。 |
+| 為批源重試失敗的資料流運行提供API支援 | 使用 `re-trigger` 操作，通過API重試失敗的資料流。 閱讀指南 [使用API重試失敗的資料流運行](../../sources/tutorials/api/retry-flows.md) 以取得更多資訊。 |
+| API支援篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源 | 使用邏輯和比較運算子來篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源。 如需詳細資訊，請參閱使用API篩選來源資料的指南。 |
 
 若要進一步了解來源，請閱讀 [來源概觀](../../sources/home.md).
