@@ -1,37 +1,37 @@
 ---
-description: 此頁列出並說明使用Destination SDK配置基於檔案的目標的步驟。
-title: （測試版）使用Destination SDK配置基於檔案的目標
+description: 本頁面列出並說明使用Destination SDK來設定檔案式目的地的步驟。
+title: 使用Destination SDK配置基於檔案的目標
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
+source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
-# （測試版）使用Destination SDK配置基於檔案的目標
+# 使用Destination SDK配置基於檔案的目標
 
 ## 總覽 {#overview}
 
 >[!IMPORTANT]
 >
->使用Adobe Experience Platform Destination SDK配置和提交基於檔案的目標的功能當前位於測試版中。 文檔和功能可能會更改。
+>使用Adobe Experience Platform Destination SDK設定及提交檔案式目的地的功能目前仍在測試中。 檔案和功能可能會有所變更。
 
-本頁介紹如何使用中的資訊 [目標SDK中的配置選項](./configuration-options.md) 和其他Destination SDK功能和API參考文檔中 [基於檔案的目標](../../destinations/destination-types.md#file-based)。 這些步驟按如下順序排列。
+本頁面說明如何使用 [目的地SDK中的設定選項](./configuration-options.md) 和其他Destination SDK功能及API參考檔案中，以設定 [檔案型目的地](../../destinations/destination-types.md#file-based). 步驟依序排列如下。
 
 ## 先決條件 {#prerequisites}
 
-在前進到下面所示的步驟之前，請閱讀 [Destination SDK入門](./getting-started.md) 頁，以獲取使用Adobe I/OAPI的必要Destination SDK身份驗證憑據和其他先決條件。
+在前進到下面所示的步驟之前，請閱讀 [Destination SDK快速入門](./getting-started.md) 頁面，以取得使用Adobe I/OAPI所需的Destination SDK驗證憑證和其他必要條件的相關資訊。
 
-## 使用Destination SDK中的配置選項設定目標的步驟 {#steps}
+## 使用Destination SDK中設定選項來設定目的地的步驟 {#steps}
 
 ![使用Destination SDK端點的說明步驟](./assets/destination-sdk-steps-batch.png)
 
 ## 步驟1:建立伺服器和檔案配置 {#create-server-file-configuration}
 
-首先使用 `/destinations-server` 端點（讀取） [API引用](./destination-server-api.md))。
+首先，使用 `/destinations-server` 端點（讀取） [API參考](./destination-server-api.md))。
 
-下面顯示的是 [!DNL Amazon S3] 目標。 要配置其他類型的基於檔案的目標，請參見其相應的 [伺服器配置](server-and-file-configuration.md)。
+以下是 [!DNL Amazon S3] 目的地。 若要設定其他類型的檔案型目的地，請參閱其對應的 [伺服器配置](server-and-file-configuration.md).
 
 **API格式**
 
@@ -118,9 +118,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## 步驟2:建立目標配置 {#create-destination-configuration}
 
-下面是目標配置的示例，使用 `/destinations` API終結點。 有關此配置的詳細資訊，請參閱 [目標配置](./file-based-destination-configuration.md)。
+以下是目標設定的範例，建立方法為使用 `/destinations` API端點。 有關此配置的詳細資訊，請參閱 [目標配置](./file-based-destination-configuration.md).
 
-要將步驟1中的伺服器和檔案配置連接到此目標配置，請將伺服器和模板配置的實例ID添加為 `destinationServerId` 給。
+要將步驟1中的伺服器和檔案配置連接到此目標配置，請將伺服器和模板配置的實例ID添加為 `destinationServerId` 這裡。
 
 **API格式**
 
@@ -243,26 +243,26 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 }
 ```
 
-## 第3步：建立受眾元資料配置 {#create-audience-metadata-configuration}
+## 步驟3:建立對象中繼資料設定 {#create-audience-metadata-configuration}
 
-對於某些目標，Destination SDK要求您配置訪問群體元資料配置，以寫程式方式在目標中建立、更新或刪除訪問群體。 請參閱 [受眾元資料管理](./audience-metadata-management.md) 有關您何時需要設定此配置以及如何進行配置的資訊。
+對於某些目的地，Destination SDK需要您設定對象中繼資料設定，以程式設計方式建立、更新或刪除目標中的對象。 請參閱 [對象中繼資料管理](./audience-metadata-management.md) 以了解您何時需要設定此設定及如何設定。
 
-如果使用訪問群體元資料配置，則必須將其連接到您在步驟2中建立的目標配置。 將受眾元資料配置的實例ID添加到目標配置中，作為 `audienceTemplateId`。
+如果您使用對象中繼資料設定，則必須將其連線至您在步驟2建立的目的地設定。 將對象中繼資料設定的例項ID新增至目的地設定，作為 `audienceTemplateId`.
 
-## 第4步：設定身份驗證 {#set-up-authentication}
+## 步驟4:設定驗證 {#set-up-authentication}
 
-取決於是否指定 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 或 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 在上面的目標配置中，您可以使用 `/destination` 或 `/credentials` 端點。
+視您是否指定 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 或 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 在上述的目的地設定中，您可以使用 `/destination` 或 `/credentials` 端點。
 
-* 如果已選擇 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 在目標配置中，有關基於檔案的目標的Destination SDK支援的驗證類型，請參見以下各節：
+* 如果您選取 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 在目標設定中，請參閱下列章節，了解Destination SDK支援的檔案式目的地驗證類型：
 
-   * [AmazonS3驗證](authentication-configuration.md#s3)
+   * [Amazon S3驗證](authentication-configuration.md#s3)
    * [Azure Blob](authentication-configuration.md#blob)
    * [Azure資料湖儲存](authentication-configuration.md#adls)
-   * [Google雲儲存](authentication-configuration.md#gcs)
-   * [使用SSH密鑰進行SFTP驗證](authentication-configuration.md#sftp-ssh)
+   * [Google雲端儲存空間](authentication-configuration.md#gcs)
+   * [使用SSH金鑰進行SFTP驗證](authentication-configuration.md#sftp-ssh)
    * [使用密碼進行SFTP驗證](authentication-configuration.md#sftp-password)
 
-* 如果已選擇 `"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱 [驗證配置](./authentication-configuration.md#when-to-use)。
+* 如果您選取 `"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱 [驗證配置](./authentication-configuration.md#when-to-use).
 
 
 <!-- ## Step 5: Test your destination {#test-destination}
@@ -274,18 +274,18 @@ As part of the process to test your destination, you must use the Experience Pla
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
 
-## 第5步：發佈目標 {#publish-destination}
+## 步驟5:發佈您的目的地 {#publish-destination}
 
 >[!NOTE]
 >
->如果您要建立專用目標供自己使用，並且不想將其發佈到目標目錄中以供其他客戶使用，則無需執行此步驟。
+>如果您要建立私人目的地以供自己使用，且不想將其發佈至目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
-配置和測試目標後，使用 [目標發佈API](./destination-publish-api.md) 將您的配置提交給Adobe以供審閱。
+設定並測試您的目的地後，請使用 [目的地發佈API](./destination-publish-api.md) 將配置提交到Adobe以供審核。
 
-## 步驟6:記錄目標 {#document-destination}
+## 步驟6:記錄您的目的地 {#document-destination}
 
 >[!NOTE]
 >
->如果您要建立專用目標供自己使用，並且不想將其發佈到目標目錄中以供其他客戶使用，則無需執行此步驟。
+>如果您要建立私人目的地以供自己使用，且不想將其發佈至目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
-如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則 [產品化整合](./overview.md#productized-custom-integrations)，使用 [自助文檔處理](./docs-framework/documentation-instructions.md) 為目標建立產品文檔頁面 [Experience Platform目標目錄](/help/destinations/catalog/overview.md)。
+如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則建立 [產品化整合](./overview.md#productized-custom-integrations)，請使用 [自助服務檔案程式](./docs-framework/documentation-instructions.md) 若要為您的目的地建立產品檔案頁面，請在 [Experience Platform目的地目錄](/help/destinations/catalog/overview.md).

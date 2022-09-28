@@ -1,10 +1,10 @@
 ---
-description: Adobe Experience Platform Destination SDK是一組設定API，可讓您根據所選的資料和驗證格式，設定目標整合模式，讓Experience Platform將對象和設定檔資料傳送至端點。 設定會儲存在Experience Platform中，並可透過API擷取以取得其他更新。
+description: Adobe Experience Platform Destination SDK是一組設定API，可讓您設定目的地整合模式，讓Experience Platform根據您選擇的資料和驗證格式，將對象和設定檔資料傳送至端點或儲存位置。 設定會儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: af8718f7d5351993c5e4aa00822ed7d2b290b9f0
+source-git-commit: 95a7029864de84819cacc57c02a3e6f30def0b25
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 3%
 
 ## 總覽 {#destinations-sdk}
 
-Adobe Experience Platform Destination SDK是一組設定API，可讓您根據所選的資料和驗證格式，設定目標整合模式，讓Experience Platform將對象和設定檔資料傳送至端點。 設定會儲存在Experience Platform中，並可透過API擷取以取得其他更新。
+Adobe Experience Platform Destination SDK是一組設定API，可讓您設定目的地整合模式，讓Experience Platform根據您選擇的資料和驗證格式，將受眾和設定檔資料傳送至端點或儲存位置。 設定會儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 
-Destination SDK檔案提供相關指示，供您使用Adobe Experience Platform Destination SDK來設定、測試及發行與Adobe Experience Platform的已產品化目的地整合，並讓您的目的地成為不斷增長的目的地目錄的一部分。
+Destination SDK檔案提供相關指示，供您使用Adobe Experience Platform Destination SDK來設定、測試及發行與Adobe Experience Platform的已產品化目的地整合，並讓您的目的地成為不斷增長的目的地目錄的一部分。 透過使用Destination SDK，您也可以建立自己的自訂私人目的地，以匯出量身打造的資料。
 
 ![目的地目錄概觀](./assets/destinations-catalog-overview.png)
 
@@ -26,7 +26,7 @@ Destination SDK檔案提供相關指示，供您使用Adobe Experience Platform 
 2. 在Experience Platform目的地目錄中引入品牌目的地卡，以簡化客戶設定和了解。
 3. 以產品化目的地整合Adobe Experience Platform與Real-time Customer Data Platform為特色。
 
-身為Experience Platform客戶，您可以撰寫自己的私人自訂目的地，最符合您的啟動需求。
+身為Experience Platform客戶，您也可以製作自己的私人自訂目的地，最符合您的啟動需求。
 
 ![Destination SDK視覺圖](./assets/destination-sdk-visual.png)
 
@@ -51,6 +51,10 @@ This documentation set provides you with all the necessary information to add yo
 * 可配置驗證
 * 一套測試與驗證API，供您測試和反覆驗證您的目的地設定
 
+透過Destination SDK，您也可以設定整合，以定期將檔案匯出至您所選擇的儲存位置。 與Experience Platform的即時整合支援下列功能：
+* 以數種支援格式匯出檔案(CSV、Parquet、JSON)
+* 可配置的檔案格式選項，它允許您根據下游要求構建導出檔案的格式。
+
 請參閱以下主題中目的地端的技術需求： [整合必要條件](./integration-prerequisites.md) 文章。
 
 ## 存取Destination SDK {#get-access}
@@ -72,8 +76,8 @@ Destination SDK存取權會因您身為Real-Time CDPExperience Platform或合作
 
 1. 如果您是ISV或SI，請參閱上節中的獲取訪問資訊。 [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) 客戶可以略過此步驟。
 2. [請求布建Experience Platform沙箱](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) 並啟用目標編寫權限。
-3. 建立您的整合。 請依照產品檔案中的指示進行設定 [串流目的地](./configure-destination-instructions.md) 或 [檔案型目的地（測試版）](./configure-file-based-destination-instructions.md).
-4. 測試您的整合。 請依照產品檔案中的指示進行測試 [串流目的地](./test-destination.md) 或 [檔案型目的地（測試版）](./file-based-destination-testing-overview.md).
+3. 建立您的整合。 請依照產品檔案中的指示進行設定 [串流目的地](./configure-destination-instructions.md) 或 [檔案型目的地](./configure-file-based-destination-instructions.md).
+4. 測試您的整合。 請依照產品檔案中的指示進行測試 [串流目的地](./test-destination.md) 或 [檔案型目的地](./file-based-destination-testing-overview.md).
 5. 如果您是ISV或SI建立 [產品化整合](./overview.md#productized-custom-integrations), [提交整合](./submit-destination.md) 供Adobe檢閱（標準回應時間為五個工作天）。
 6. 如果您是ISV或SI建立產品化整合，請使用 [自助服務檔案程式](./docs-framework/documentation-instructions.md) 若要在Experience League上建立目的地的產品檔案頁面。
 7. 針對產品化整合，一旦Adobe核准，您的整合會顯示在 [Experience Platform目錄](/help/destinations/catalog/overview.md).
