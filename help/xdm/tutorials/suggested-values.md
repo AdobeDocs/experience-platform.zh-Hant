@@ -1,19 +1,38 @@
 ---
-title: 將建議的值添加到欄位
-description: 瞭解如何將建議的值添加到架構註冊表API中的字串欄位。
+title: 管理API中的建議值
+description: 了解如何將建議的值新增至Schema Registry API中的字串欄位。
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 0%
+source-wordcount: '883'
+ht-degree: 1%
 
 ---
 
-# 將建議的值添加到欄位
+# 管理API中的建議值
 
-在體驗資料模型(XDM)中，枚舉欄位表示一個字串欄位，該字串欄位被限制為預定義的值子集。 枚舉欄位可提供驗證以確保所攝取的資料符合一組接受的值。 但是，您也可以為字串欄位定義一組建議值，而不強制它們作為約束。
+對於Experience Data Model(XDM)中的任何字串欄位，您可以定義 **列舉** 將欄位可內嵌的值限制為預先定義的集。 如果您嘗試將資料內嵌至列舉欄位，而值不符合其設定中定義的任何欄位，則擷取將會遭到拒絕。
 
-在 [架構註冊表API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)，枚舉欄位的約束值由 `enum` 陣列，而 `meta:enum` object為這些值提供友好的顯示名稱：
+與列舉不同，請新增 **建議值** 字串欄位的值不會限制可擷取的值。 反之，建議的值會影響 [區段UI](../../segmentation/ui/overview.md) 將字串欄位納入為屬性時。
+
+>[!NOTE]
+>
+>欄位的更新建議值會延遲約五分鐘，以反映在分段UI中。
+
+本指南說明如何使用 [結構註冊表API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 如需如何在Adobe Experience Platform使用者介面中執行此動作的步驟，請參閱 [列舉和建議值的UI指南](../ui/fields/enum.md).
+
+## 先決條件
+
+本指南假設您熟悉XDM中架構組成的元素，以及如何使用Schema Registry API來建立和編輯XDM資源。 如需簡介，請參閱下列檔案：
+
+* [結構構成基本概念](../schema/composition.md)
+* [Schema Registry API指南](../api/overview.md)
+
+強烈建議您檢閱 [列舉和建議值的演化規則](../ui/fields/enum.md#evolution) 如果要更新現有欄位。 如果您要管理參與聯合的結構的建議值，請參閱 [合併列舉和建議值的規則](../ui/fields/enum.md#merging).
+
+## 組合物
+
+在API中， **列舉** 欄位由 `enum` 陣列，若 `meta:enum` 物件提供這些值的好記顯示名稱：
 
 ```json
 "exampleStringField": {
@@ -32,9 +51,9 @@ ht-degree: 0%
 }
 ```
 
-對於枚舉欄位，架構註冊表不允許 `meta:enum` 將擴展到下面提供的值之外 `enum`，因為嘗試在這些約束之外輸入字串值將不會通過驗證。
+對於枚舉欄位，架構註冊表不允許 `meta:enum` 將擴展到 `enum`，因為嘗試擷取這些限制以外的字串值時，無法通過驗證。
 
-或者，可以定義不包含 `enum` 僅使用 `meta:enum` 對象表示建議的值：
+或者，您可以定義不包含 `enum` 陣列，且僅使用 `meta:enum` 物體表示 **建議值**:
 
 ```json
 "exampleStringField": {
@@ -48,24 +67,21 @@ ht-degree: 0%
 }
 ```
 
-因為字串沒有 `enum` 陣列定義約束， `meta:enum` 可以擴展屬性以包含新值。 本教程介紹如何將建議值添加到架構註冊表API中的標準字串和自定義字串欄位。
+因為字串沒有 `enum` 陣列來定義約束，其 `meta:enum` 屬性可延伸以包含新值。
 
-## 先決條件
+## 管理標準欄位的建議值
 
-本指南假定您熟悉XDM中模式組合的元素以及如何使用模式註冊表API建立和編輯XDM資源。 如需介紹，請參閱以下文檔：
+對於現有的標準欄位，您可以 [新增建議值](#add-suggested-standard) 或 [移除建議值](#remove-suggested-standard).
 
-* [架構組合的基礎](../schema/composition.md)
-* [架構註冊API指南](../api/overview.md)
+### 新增建議的值 {#add-suggested-standard}
 
-## 將建議的值添加到標準欄位
-
-擴展 `meta:enum` 在標準字串欄位中，可以建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 的子菜單。
+若要擴充 `meta:enum` ，您可以建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 針對特定結構中的相關欄位。
 
 >[!NOTE]
 >
->只能在架構級別添加字串欄位的建議值。 換句話說， `meta:enum` 模式中的標準欄位不會影響使用相同標準欄位的其他模式。
+>字串欄位的建議值只能在架構層級新增。 換句話說，將 `meta:enum` 標準欄位的其他結構不會影響採用相同標準欄位的其他結構。
 
-以下請求將建議的值添加到標準 `eventType` 欄位(由 [XDM ExperienceEvent類](../classes/experienceevent.md))，用於在 `sourceSchema`:
+下列請求會將建議的值新增至標準 `eventType` 欄位(由 [XDM ExperienceEvent類別](../classes/experienceevent.md))，適用於 `sourceSchema`:
 
 ```curl
 curl -X POST \
@@ -96,7 +112,7 @@ curl -X POST \
       }'
 ```
 
-應用描述符後，在檢索架構時，架構註冊表會以下方式作出響應（因空間而截斷的響應）:
+應用描述符後，當檢索架構時，架構註冊表使用以下內容進行響應（響應因空間而截斷）:
 
 ```json
 {
@@ -118,7 +134,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->如果標準欄位已包含以下值 `meta:enum`，描述符中的新值不會覆蓋現有欄位，而是添加到：
+>如果標準欄位已包含 `meta:enum`，則描述符的新值不會覆寫現有欄位，而會改為在上新增：
 >
 >
 ```json
@@ -135,20 +151,82 @@ curl -X POST \
 >}
 >```
 
-## 將建議的值添加到自定義欄位
+### 移除建議的值 {#remove-suggested-standard}
 
-擴展 `meta:enum` 在自定義欄位中，您可以通過PATCH請求更新欄位的父類、欄位組或資料類型。
+如果標準字串欄位有預先定義的建議值，您可以移除您不想在分段中看到的任何值。 這可透過建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 針對包含 `xdm:excludeMetaEnum` 屬性。
+
+**API格式**
+
+```http
+POST /tenant/descriptors
+```
+
+**要求**
+
+下列請求會移除建議的值「[!DNL Web Form Filled Out]&quot;和&quot;[!DNL Media ping]」 `eventType` 在以 [XDM ExperienceEvent類別](../classes/experienceevent.md).
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "@type": "xdm:alternateDisplayInfo",
+        "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+        "xdm:sourceVersion": 1,
+        "xdm:sourceProperty": "/xdm:eventType",
+        "xdm:excludeMetaEnum": {
+          "web.formFilledOut": "Web Form Filled Out",
+          "media.ping": "Media ping"
+        }
+      }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `@type` | 要定義的描述符的類型。 對於好記的名稱描述符，此值必須設定為 `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | 此 `$id` 定義描述符的架構的URI。 |
+| `xdm:sourceVersion` | 源架構的主要版本。 |
+| `xdm:sourceProperty` | 您要管理其建議值的特定屬性的路徑。 路徑應以斜線開頭(`/`)，而且不以一結尾。 不包括 `properties` 在路徑中(例如，使用 `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
+| `meta:excludeMetaEnum` | 說明應針對分段中的欄位排除之建議值的物件。 每個項目的鍵值和值必須與原始條目中包含的鍵值和值匹配 `meta:enum` ，以便排除項目。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**回應**
+
+成功的響應返回HTTP狀態201（已建立）以及新建立描述符的詳細資訊。 下列項目中包含的建議值 `xdm:excludeMetaEnum` 現在會從區段UI中隱藏。
+
+```json
+{
+  "@type": "xdm:alternateDisplayInfo",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
+  "xdm:excludeMetaEnum": {
+    "web.formFilledOut": "Web Form Filled Out"
+  },
+  "meta:containerId": "tenant",
+  "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
+}
+```
+
+## 管理自訂欄位的建議值 {#suggested-custom}
+
+若要管理 `meta:enum` 在自訂欄位中，您可以透過PATCH請求更新欄位的上層類別、欄位群組或資料類型。
 
 >[!WARNING]
 >
->與標準欄位不同，更新 `meta:enum` 自定義欄位會影響使用該欄位的所有其他架構。 如果不希望更改在方案間傳播，請考慮改為建立新的自定義資源：
+>與標準欄位相反，請更新 `meta:enum` 自訂欄位的其他結構會影響使用該欄位的所有結構。 如果您不想讓變更傳播至不同結構，請考慮改為建立新的自訂資源：
 >
->* [建立自定義類](../api/classes.md#create)
->* [建立自定義欄位組](../api/field-groups.md#create)
->* [建立自定義資料類型](../api/data-types.md#create)
+>* [建立自訂類別](../api/classes.md#create)
+>* [建立自訂欄位群組](../api/field-groups.md#create)
+>* [建立自訂資料類型](../api/data-types.md#create)
 
 
-以下請求更新 `meta:enum` 自定義資料類型提供的「忠誠度級別」欄位：
+下列請求會更新 `meta:enum` 自訂資料類型提供的「忠誠度等級」欄位中：
 
 ```curl
 curl -X PATCH \
@@ -173,7 +251,7 @@ curl -X PATCH \
       ]'
 ```
 
-應用更改後，在檢索架構時，架構註冊表會以下方式作出響應（因空間而截斷的響應）:
+應用更改後，當檢索架構時，架構註冊表將使用以下內容進行響應（響應因空間而截斷）:
 
 ```json
 {
@@ -198,4 +276,4 @@ curl -X PATCH \
 
 ## 後續步驟
 
-本指南介紹如何將建議的值添加到架構註冊表API中的字串欄位。 請參閱上的指南 [定義API中的自定義欄位](./custom-fields-api.md) 的子菜單。
+本指南說明如何管理Schema Registry API中字串欄位的建議值。 請參閱 [定義API中的自訂欄位](./custom-fields-api.md) ，以了解如何建立不同欄位類型的詳細資訊。

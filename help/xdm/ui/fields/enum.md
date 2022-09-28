@@ -1,44 +1,117 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；API; API; XDM; XDM系統；體驗資料模型；資料模型；ui；工作區；列舉；欄位；
 solution: Experience Platform
-title: 在UI中定義列舉欄位
-description: 了解如何在Experience Platform使用者介面中定義列舉欄位。
+title: 在UI中定義列舉欄位和建議的值
+description: 了解如何為Experience Platform使用者介面中的字串欄位定義列舉和建議值。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 878d99d9eb45f40ff76e5e90116abf032be1c93f
+source-git-commit: e515e32588991e468429c9256533732d04a4339f
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 2%
+source-wordcount: '1295'
+ht-degree: 0%
 
 ---
 
-# 在UI中定義列舉欄位 {#enum}
+# 在UI中定義列舉和建議的值 {#enums-and-suggested-values}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
 >title="列舉和建議值"
->abstract="列舉會限制字串欄位，以僅允許擷取符合一組預先定義值的資料。 或者，您可以為欄位定義一組建議的值，這些值不限制擷取，而是定義您可在細分中選擇的屬性。 如需詳細資訊，請參閱文件。"
+>abstract="安 **列舉** 限制字串欄位，以僅允許內嵌符合一組預先定義值的資料。 可為每個約束分配 **顯示名稱** 填入「區段」UI中的屬性下拉式清單。 **建議的值** 的欄位不會限制擷取，而只會決定「細分」中顯示的顯示名稱。 如果您有多個架構共用屬於公用類或欄位組的欄位，並且在每個架構之間為該欄位定義不同的列號或建議值，則這些值會合併並附加至聯合架構中。"
 
-在Experience Data Model(XDM)中，列舉欄位代表欄位，此欄位受限於預先定義的可接受值清單。
+在Experience Data Model(XDM)中，可為字串欄位指定一組預先定義的接受或建議值，以更妥善地控制要擷取到該欄位的值，或其在細分中的行為。
 
-當 [定義新欄位](./overview.md#define) 在Adobe Experience Platform使用者介面中，您可以選取 **[!UICONTROL 列舉]** 核取方塊。
+安 **列舉** 將字串欄位可擷取的值限制為預先定義的集。 如果您嘗試將資料內嵌至列舉欄位，而值不符合其設定中定義的任何欄位，則擷取將會遭到拒絕。
 
-![](../../images/ui/fields/special/enum.png)
+與列舉不同，請新增 **建議值** 字串欄位的值不會限制可擷取的值。 反之，建議的值會影響 [區段UI](../../../segmentation/ui/overview.md) 將字串欄位納入為屬性時。
 
-選取核取方塊後會顯示其他控制項，讓您指定列舉的值限制。 在 **[!UICONTROL 值]** 欄，您必須提供要將欄位限制為的確切值。 此值必須符合 [!UICONTROL 類型] 您已為枚舉欄位選擇。 您可以選擇提供人性化 **[!UICONTROL 標籤]** 也是限制。
+當 [定義新欄位](./overview.md#define) 在Adobe Experience Platform使用者介面中，並將類型設為 [!UICONTROL 字串]，您會獲得定義 [列舉](#enum) 或 [建議值](#suggested-values) 那塊地。
 
-若要將其他限制新增至列舉，請選取 **[!UICONTROL 新增列]**.
+![在UI中為字串欄位啟用「列舉與建議值」選項的影像](../../images/ui/fields/enum/enum-options-selected.png)
 
-![](../../images/ui/fields/special/enum-add-row.png)
+## 定義列舉 {#enum}
 
-繼續將所需的限制和選用標籤新增至列舉。 完成後，請選取 **[!UICONTROL 套用]** 將更改應用到架構。
+選擇 **[!UICONTROL 列舉和建議值]**，然後選取 **[!UICONTROL 列舉]**. 會出現其他控制項，可讓您指定列舉的值限制。 要添加約束，請選擇 **[!UICONTROL 新增列]**.
 
-![](../../images/ui/fields/special/enum-configured.png)
+![顯示UI中選取之列數選項的影像](../../images/ui/fields/enum/enum-add-row.png)
+
+在 **[!UICONTROL 值]** 欄，您必須提供要將欄位限制為的確切值。 您可以選擇提供人性化 **[!UICONTROL 顯示名稱]** 限制，這會影響值在分段中的表示方式。
+
+繼續使用 **[!UICONTROL 新增列]** 若要將所需的限制和選用標籤新增至列舉，或選取刪除圖示(![刪除圖示的影像](../../images/ui/fields/enum/remove-icon.png))，以將其移除。 完成後，請選取 **[!UICONTROL 套用]** 將更改應用到架構。
+
+![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/enum-confirm.png)
 
 畫布會更新以反映變更。 日後探索此架構時，您可以在右側邊欄中檢視及編輯列舉欄位的限制。
 
-![](../../images/ui/fields/special/enum-applied.png)
+## 定義建議的值 {#suggested-values}
+
+選擇 **[!UICONTROL 列舉和建議值]**，然後選取 **[!UICONTROL 建議的值]** 以顯示其他控制項。 從此處，選擇 **[!UICONTROL 新增列]** 開始添加建議值。
+
+![顯示UI中選取之「建議值」選項的影像](../../images/ui/fields/enum/suggested-add-row.png)
+
+在 **[!UICONTROL 顯示名稱]** 欄，提供您要值顯示在「細分」UI中的好記名稱。 若要新增更多建議值，請選取 **[!UICONTROL 新增列]** 再次，並視需要重複此程式。 若要移除先前新增的列，請選取刪除圖示(![刪除圖示的影像](../../images/ui/fields/enum/remove-icon.png))。
+
+完成後，請選取 **[!UICONTROL 套用]** 將更改應用到架構。
+
+![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-confirm.png)
+
+>[!NOTE]
+>
+>欄位的更新建議值會延遲約五分鐘，以反映在分段UI中。
+
+### 管理標準欄位的建議值
+
+標準XDM元件中的某些欄位會包含自己的建議值，例如 `eventType` 從 [[!UICONTROL XDM ExperienceEvent] 類](../../classes/experienceevent.md). 在您的結構中使用這些欄位時，您可以使用可用的切換來控制要使用哪些現有建議值。
+
+![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-standard.png)
+
+與自訂欄位類似，請選取 **[!UICONTROL 新增列]** 為標準欄位新增您自己的建議值。
+
+![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-standard.png)
+
+### 移除標準欄位的建議值
+
+只能從標準欄位中移除您定義的建議值。 現有的建議值可以停用，使其不再顯示於分段下拉式清單中，但無法直接移除。
+
+例如，請考慮設定檔結構，其中標準的建議值 `person.gender` 欄位已停用：
+
+![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/standard-enum-disabled.png)
+
+在此示例中，顯示名稱「[!UICONTROL 非特定]「 」現在無法顯示在分段下拉式清單中。 但值 `non_specific` 仍是列舉欄位清單的一部分，因此仍允許擷取。 換言之，您無法停用標準欄位的實際列舉值，因為它會違反僅允許讓欄位限制較少的變更的原則。
+
+請參閱 [下文](#evolution) 以取得更新現有架構欄位的列舉和建議值之規則的詳細資訊。
+
+## 列舉和建議值的演化規則 {#evolution}
+
+使用具有列舉欄位的架構將資料內嵌至Platform後，對架構定義所做的任何進一步變更都必須符合系統中已有的資料。 一般而言，對現有欄位所做的變更只能建立該欄位 **less** 限制性。 欄位的限制性不能比現在更強。
+
+關於列舉和建議的值，下列規則會套用擷取後：
+
+* 您 **可** 為標準和自訂欄位新增建議值，並加入現有建議值。
+* 您 **可** 使用現有的建議值，從自訂欄位中移除建議值。
+* 您 **可** 為現有的自訂列舉欄位新增列舉值。
+* 您 **可** 僅將自訂欄位的列舉值切換為建議值，或將其轉換為沒有列舉或建議值的字串。 **此開關一經套用便無法復原。**
+* 您 **無法** 從標準欄位中移除列號或建議的值。
+* 您 **無法** 將列舉值新增至沒有現有列舉的欄位。
+* 您 **無法** 移除自訂欄位的現有列舉值以下。
+* 您 **無法** 從建議值切換為列舉。
+
+## 合併列舉和建議值的規則 {#merging}
+
+如果多個結構使用具有不同設定的相同列舉欄位，且這些結構包含在聯合中，則當有關列舉差異的調解方式，會套用某些規則。 確切的規則取決於參考相同標準欄位的結構(例如 `eventType`)，或是他們參考不同欄位群組中相同的自訂欄位路徑。
+
+如果參考相同的標準欄位：
+
+* 任何其他建議的值 **已附加** 在工會里。
+* 對相同列舉索引鍵的建議值進行更新為 **已更新** 在工會里。
+
+如果在不同的欄位群組中參考相同的自訂欄位路徑：
+
+* 任何其他建議的值 **已附加** 在工會里。
+* 如果在多個架構中定義了相同的其他建議值，則這些值為 **已合併** 在工會里。 換句話說，合併後相同的建議值不會顯示兩次。
 
 ## 後續步驟
 
-本指南說明如何在UI中定義列舉欄位。 請參閱 [定義UI中的欄位](./overview.md#special) 若要了解如何定義 [!DNL Schema Editor].
+本指南說明如何在UI中定義字串欄位的列舉和建議值。 有關如何使用Schema Registry API管理列舉和建議值的資訊，請參閱以下內容 [教學課程](../../tutorials/suggested-values.md).
+
+若要了解如何在 [!DNL Schema Editor]，請參閱 [定義UI中的欄位](./overview.md#special).
