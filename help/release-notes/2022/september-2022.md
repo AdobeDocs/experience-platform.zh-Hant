@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 5f79b10306f74db75b25654ca51969ea69e38299
+source-git-commit: 8813e423cd62de7932052c1e157f86cc3c4165dd
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2754'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,7 @@ Adobe Experience Platform 現有功能更新：
 - [稽核記錄](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [資料收集](#data-collection)
+- [目的地](#destinations)
 - [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
 - [查詢服務](#query-service)
@@ -52,9 +53,9 @@ Adobe Experience Platform提供一組完善的工具，可管理大型、複雜�
 
 Adobe Experience Platform的資料衛生功能可讓您排程自動資料集過期時間，並以程式設計方式依身分刪除消費者資料，以清除資料。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->消費者刪除功能僅適用於已購買Adobe醫療保健盾或隱私保護盾的組織。
+>僅購買了AdobeHealthcare Shield或Privacy Shield的組織才能使用資料衛生功能。
 
 請參閱下列檔案以開始使用資料衛生：
 
@@ -64,7 +65,7 @@ Adobe Experience Platform的資料衛生功能可讓您排程自動資料集過�
 
 ## [!UICONTROL 隱私權主控台] {#privacy-console}
 
-此 [!UICONTROL 隱私權主控台] Experience PlatformUI中的索引標籤，提供隱私權相關功能(例如 [來自Privacy Service的資料主體請求], [資料衛生工作單]，和 [稽核記錄]. 主控台也提供數種產品內使用案例指南，協助您完成常見的隱私權工作流程。
+此 [!UICONTROL 隱私權主控台] Experience PlatformUI中的索引標籤，提供隱私權相關功能(例如 [來自Privacy Service的資料主體請求](../../privacy-service/home.md), [資料衛生工作單](../../hygiene/home.md)，和 [稽核記錄](../../landing/governance-privacy-security/audit-logs/overview.md). 主控台也提供數種產品內使用案例指南，協助您完成常見的隱私權工作流程。
 
 請參閱 [隱私權主控台概述](../../landing/governance-privacy-security/privacy-console.md) 以取得功能的詳細資訊。
 
@@ -127,10 +128,39 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 功能 | 說明 |
 | --- | --- |
 | Platform UI中的左側導覽整合 | 先前專屬於資料收集UI的所有功能（包括標籤、事件轉送和資料流），現在也可透過Experience Platform類別下的左側導覽取得 **[!UICONTROL 資料收集]**. 如此一來，使用Platform中的資料收集功能時，就不需要在UI之間切換。 |
+| 標籤和事件轉送中的使用者歸因 | 清單可用時 [!UICONTROL 屬性] 在「標籤」和「事件轉送」中，每個列出的屬性現在都會顯示其上次更新的時間，以及哪個使用者進行了更新。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 如需Platform中資料收集的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| 目標 SDK | Destination SDK現在可為合作夥伴和客戶提供完整支援，協助他們建立批次（或檔案型）產品化或私人目的地。 如需詳細資訊，請參閱下列檔案頁面： <ul><li>[Destination SDK概述](/help/destinations/destination-sdk/overview.md)</li><li>[配置基於檔案的目標](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[為檔案型目的地配置檔案格式選項](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[測試您的檔案型目的地](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新目的地或更新目的地**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | 此 [!DNL Salesforce CRM] 目標已更新，以支援聯絡人和潛在客戶更新，並改善效能以加快更新。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新檔案或更新檔案**
+
+| 文件 | 說明 |
+| ----------- | ----------- |
+| 目的地流量服務API檔案 | 此 [目的地API參考檔案](https://developer.adobe.com/experience-platform-apis/references/destinations/) 已更新，包含如何對檔案式目的地執行作業的指引。 稍後將新增串流目的地的作業。 |
+
+如需目的地的詳細一般資訊，請參閱 [目的地概述](../../destinations/home.md).
 
 ## Experience Data Model(XDM) {#xdm}
 
@@ -218,6 +248,6 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 | 支援Adobe Campaign管理Cloud Service | 使用Adobe Campaign受管Cloud Service來源將Adobe Campaign v8.4的傳送和追蹤記錄檔資料Experience Platform。 閱讀指南 [在UI中建立Adobe Campaign托管Cloud Service來源連線](../../sources/tutorials/ui/create/adobe-applications/campaign.md) 以取得更多資訊。 |
 | 批次來源的隨需內嵌API支援 | 使用按需獲取功能為具有的指定資料流建立臨時流運行 [!DNL Flow Service] API。 已建立的流量執行必須設為一次性擷取。 如需詳細資訊，請參閱 [使用API建立流程以執行隨選擷取](../../sources/tutorials/api/on-demand-ingestion.md) 以取得更多資訊。 |
 | 為批源重試失敗的資料流運行提供API支援 | 使用 `re-trigger` 操作，通過API重試失敗的資料流。 閱讀指南 [使用API重試失敗的資料流運行](../../sources/tutorials/api/retry-flows.md) 以取得更多資訊。 |
-| API支援篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源 | 使用邏輯和比較運算子來篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源。 如需詳細資訊，請參閱使用API篩選來源資料的指南。 |
+| API支援篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源 | 使用邏輯和比較運算子來篩選 [!DNL Google BigQuery] 和 [!DNL Snowflake] 來源。 閱讀指南 [使用API篩選來源的資料](../../sources/tutorials/api/filter.md) 以取得更多資訊。 |
 
 若要進一步了解來源，請閱讀 [來源概觀](../../sources/home.md).
