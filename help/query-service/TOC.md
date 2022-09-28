@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 平台 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 490a24df5ef127ba4ff6727d0d1cd5e0b381f447
+source-git-commit: f1f7bef6bcac5abfaa01f10849f41a55fef797e5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '208'
 ht-degree: 17%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 17%
    - [Spark SQL函式](sql/spark-sql-functions.md)
    - [元資料命令](sql/metadata.md)
    - [準備的陳述](sql/prepared-statements.md)
+   - [資料集範例](sql/dataset-samples.md)
 - 將客戶端連接到查詢服務 {#clients}
    - [用戶端連線概觀](clients/overview.md)
    - [SSL模式](./clients/ssl-modes.md)
