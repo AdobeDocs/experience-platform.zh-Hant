@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1934'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Alloy是Adobe Experience Platform Web SDK的程式碼名稱。 這會在SDK的�
 
 ## 客戶是否需要購買Adobe Experience Platform才能使用 [!DNL Web SDK]?
 
-不可以。 任何Adobe數位體驗客戶都可免費使用Adobe Experience Platform Web SDK。 希望使用 [!DNL Web SDK] 需要設定在Adobe Experience Platform資料收集UI中建立結構、資料集、身分命名空間及資料流的適當權限。
+不可以。 任何Adobe數位體驗客戶都可免費使用Adobe Experience Platform Web SDK。 希望使用 [!DNL Web SDK] 需要設定在資料收集UI或Experience PlatformUI中建立結構、資料集、身分命名空間及資料流的適當權限。
 
 如需設定這些權限的詳細資訊，請參閱 [資料收集權限管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
 
@@ -135,7 +135,7 @@ Web SDK正在快速發展。 正在處理更多使用案例。 您可以找到 [
 
 不過：
 
-* Adobe Experience Platform Web SDK需要資料流ID，這樣邊緣網路就能識別資料流，並決定該如何處理資料。 此ID是在Experience Platform內建立。 這並不表示您必須使用資料收集UI來建立屬性或部署JavaScript程式碼，但您確實需要使用標籤來建立設定ID。
+* Adobe Experience Platform Web SDK需要資料流ID，這樣邊緣網路就能識別資料流，並決定該如何處理資料。 此ID是在Experience Platform內建立。 這並不表示您必須使用UI來建立屬性或部署JavaScript程式碼，但您確實需要使用標籤來建立設定ID。
 
 * 標籤不僅是最佳的可用標籤和SDK管理員，還可讓您輕鬆部署 `alloy.js` 並將資料對應至XDM結構。 如果您決定不使用標籤，則必須管理部署 `alloy.js`、執行事件，以及在傳送資料前將資料對應至XDM。 這是 _mod_ 比使用標籤更難的程式。
 

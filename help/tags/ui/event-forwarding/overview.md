@@ -3,9 +3,9 @@ title: 事件轉送概述
 description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '959'
 ht-degree: 8%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform中的事件轉送功能可讓您將收集的事件資�
 
 ### 屬性 {#properties}
 
-事件轉送會維護自己的屬性存放區，區別於標籤，您可以透過選取 **[!UICONTROL 事件轉送]** 的下一頁。
+Experience Platform轉送會維護自己的屬性存放區，區別於標籤，您可以透過選取 **[!UICONTROL 事件轉送]** 的下一頁。
 
 ![資料收集UI中的事件轉送屬性](../../images/ui/event-forwarding/overview/properties.png)
 

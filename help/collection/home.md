@@ -5,9 +5,9 @@ title: 資料彙集概觀
 topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '469'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platform提供一套技術，可讓您從用戶端來源收集�
 
 ## 標籤、Web SDK和行動SDK
 
-Platform Web SDK和Platform Mobile SDK會分別將所有Adobe產品程式庫折疊並壓縮為適用於Web和行動平台的單一開發套件。 這些可使用原始程式碼來實作，或使用 [標籤](../tags/home.md) 透過資料收集UI。
+Platform Web SDK和Platform Mobile SDK會分別將所有Adobe產品程式庫折疊並壓縮為適用於Web和行動平台的單一開發套件。 這些可使用原始程式碼來實作，或使用 [標籤](../tags/home.md) 透過資料收集UI或Adobe Experience Platform UI。
 
 壓縮這些庫可加快資料收集速度，並將操作整合到從客戶端設備到Platform Edge Network的單個流中。
 

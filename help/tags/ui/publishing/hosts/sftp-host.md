@@ -2,9 +2,9 @@
 title: SFTP 主機
 description: 了解如何在Adobe Experience Platform中設定標籤，將程式庫組建傳送至安全、自行托管的SFTP伺服器。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 19%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 19%
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-Adobe Experience Platform可讓您將標籤程式庫組建傳送至托管的安全SFTP伺服器，進一步掌控組建的儲存和管理方式。 本指南說明如何在資料收集UI中為標籤屬性設定SFTP主機。
+Adobe Experience Platform可讓您將標籤程式庫組建傳送至托管的安全SFTP伺服器，進一步掌控組建的儲存和管理方式。 本指南說明如何在Experience PlatformUI或資料收集UI中為標籤屬性設定SFTP主機。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ Platform 使用加密的金鑰連線至您的 SFTP 網站。正確設定此項�
 
 ## 建立 SFTP 主機 {#create}
 
-在資料收集UI中，選取 **[!UICONTROL 主機]** 在左側導覽器中，隨後 **[!UICONTROL 添加主機]**.
+選擇 **[!UICONTROL 主機]** 在左側導覽器中，隨後 **[!UICONTROL 添加主機]**.
 
 ![在UI中顯示「新增主機」按鈕的影像](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 

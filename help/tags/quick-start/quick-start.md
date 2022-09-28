@@ -2,10 +2,10 @@
 title: 快速入門手冊
 description: 了解如何在Adobe Experience Platform中快速上手並執行標籤。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 42%
+source-wordcount: '1527'
+ht-degree: 43%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 42%
 
 標籤已與您的Adobe ID完全整合。 使用者權限是透過Admin Console，以其他Adobe產品和解決方案(來自 [!DNL Creative Cloud], [!DNL Document Cloud]和Experience Cloud。
 
-標籤具有基於權限的用戶管理系統。 這表示必須明確授予個人權利。 這些權限會指派給群組，然後使用者加入適當的群組以取得存取權限。即使您的組織可存取資料收集UI，除非組織管理員明確授予個別使用者特定權限，否則他們無法執行任何動作。
+標籤具有基於權限的用戶管理系統。 這表示必須明確授予個人權利。 這些權限會指派給群組，然後使用者加入適當的群組以取得存取權限。即使您的組織有資料收集的存取權，除非管理員明確授予個別使用者特定權限，否則他們無法執行任何動作。
 
-如需如何建立群組和新增標籤使用者的詳細指示，請參閱 [使用者權限](../ui/administration/user-permissions.md) 檔案。
+如需如何建立群組和新增標籤使用者的詳細指示，請參閱 [資料收集權限指南](../../collection/permissions.md).
 
 ## 2. 登入
 
-將標籤權限新增至Adobe ID後，您必須登入資料收集UI。 您可以直接導覽至 [Experience Cloud登入畫面](https://experiencecloud.adobe.com)，然後從「快速存取」標籤中選取「資料收集UI」 。
+將標籤權限新增至Adobe ID後，您必須登入Experience PlatformUI或資料收集UI。 您可以直接導覽至 [Experience Cloud登入畫面](https://experience.adobe.com/)，請選取 **[!UICONTROL 資料收集]** 或 **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ ht-degree: 42%
 
 ## 3. 建立屬性
 
-登入資料收集UI後，首先要建立屬性。 屬性基本上是個容器，當您將標籤部署至網站時，在其中裝入擴充功能、規則、資料元素和程式庫。許多人會針對要部署相同標籤集的每個網站 (或具有密切關聯的網站群組) 建立屬性。
+登入UI後，首先要做的就是建立屬性。 屬性基本上是個容器，當您將標籤部署至網站時，在其中裝入擴充功能、規則、資料元素和程式庫。許多人會針對要部署相同標籤集的每個網站 (或具有密切關聯的網站群組) 建立屬性。
 
 如需有關建立屬性的詳細資訊，請參閱[建立屬性](../ui/administration/companies-and-properties.md)。
 
@@ -67,7 +67,7 @@ ht-degree: 42%
 * 工作階段與本機儲存
 * 幾乎其他所有資訊
 
-定義資料元素後，您就可以在任何擴充功能的資料收集UI中，隨處使用元素。 請參閱 [資料元素](../ui/managing-resources/data-elements.md) 以取得詳細資訊。
+定義資料元素後，您就可以在UI中的任何位置對任何擴充功能使用元素。 請參閱 [資料元素](../ui/managing-resources/data-elements.md) 以取得詳細資訊。
 
 **規則**&#x200B;位於實作的邏輯核心，並控制網站上所有標籤的內容、出現時間與位置以及運作方式。定義事件、設定條件和例外，然後定義動作和順序。最後，發佈變更以查看結果。如需詳細資訊，請參閱[規則](../ui/managing-resources/rules.md)。
 

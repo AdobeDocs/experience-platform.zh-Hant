@@ -5,9 +5,9 @@ title: Adobe隱私權JavaScript程式庫概觀
 topic-legacy: overview
 description: Adobe隱私權JavaScript程式庫可讓您擷取資料主體身分識別，以用於Privacy Service。
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1007'
 ht-degree: 6%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 6%
 * 執行下列命令，使用npm進行安裝： `npm install @adobe/adobe-privacy`
 * 從 [Experience CloudGitHub存放庫](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-您也可以透過資料收集UI中的標籤擴充功能來安裝程式庫。 請參閱 [Adobe隱私權標籤擴充功能](../tags/extensions/web/privacy/overview.md) 以取得更多資訊。
+您也可以透過標籤擴充功能來安裝程式庫。 請參閱 [Adobe隱私權標籤擴充功能](../tags/extensions/web/privacy/overview.md) 以取得更多資訊。
 
 ## 實例化 [!DNL Privacy JS Library]
 

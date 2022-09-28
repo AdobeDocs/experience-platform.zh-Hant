@@ -2,9 +2,9 @@
 title: Google資料層擴充功能
 description: 了解Adobe Experience Platform中的Google用戶端資料層標籤擴充功能。
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Helper Library提供與Adobe用戶端資料播出時(ACDL)類似的事件導向�
 
 ## 安裝
 
-若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，然後選取 **Google資料層**.
+若要安裝擴充功能，請導覽至Experience PlatformUI或資料收集UI中的擴充功能目錄，然後選取 **Google資料層**.
 
 安裝後，擴充功能會在每次標籤程式庫載入您的網站時建立或存取資料層。
 

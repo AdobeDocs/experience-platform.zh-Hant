@@ -3,9 +3,9 @@ keywords: Advertising Cloud;advertising cloud擴充功能；advertising cloud目
 title: Adobe Advertising Cloud擴充功能
 description: Adobe Advertising Cloud擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '442'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Adobe Advertising Cloud是Adobe Experience Platform中的廣告擴充功能。
 
 所有已購買Platform的客戶，皆可在「目標」目錄中取得此擴充功能。
 
-若要使用此擴充功能，您需要存取Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以存取資料收集UI，並要求他們授予您 **[!UICONTROL manage_properties]** 權限，讓您可以安裝擴充功能。
+若要使用此擴充功能，您需要存取Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員，以存取UI中的資料收集功能，並要求他們授予您 **[!UICONTROL manage_properties]** 權限，讓您可以安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 

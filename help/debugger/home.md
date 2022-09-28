@@ -6,9 +6,9 @@ seo-title: Adobe Experience Platform Debugger Chrome and Firefox Extension
 title: Adobe Experience Platform Debugger 擴充功能
 uuid: 42e2c8a2-548a-4a3f-b57d-532535a0e7b9
 exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '260'
 ht-degree: 21%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 21%
 
 您可以將Platform Debugger與其他Adobe啟用解決方案搭配使用，以執行下列作業：
 
-1. 使用 [標籤](../tags/home.md) 在資料收集UI中，插入啟用的程式碼 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=zh-Hant) 產品。
+1. 使用 [標籤](../tags/home.md) 插入啟用 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=zh-Hant) 產品。
 1. 使用 [**[!UICONTROL Auditor ]**標籤](./auditor/overview.md) 在Platform Debugger中測試您的實作。
 1. 使用Platform Debugger中以事件為基礎且針對解決方案而設的工具，對Auditor發現的問題進行除錯，或檢查實作的其他相關資訊。
 

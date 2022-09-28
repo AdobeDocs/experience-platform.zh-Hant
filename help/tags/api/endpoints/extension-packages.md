@@ -2,9 +2,9 @@
 title: 擴充功能套件端點
 description: 了解如何在Reactor API中呼叫/extension_packages端點。
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '956'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 擴充功能套件代表 [擴充功能](./extensions.md) 由擴充功能開發人員撰寫。 擴充功能套件定義了可供標籤使用者使用的其他功能。 這些功能大多以 [規則元件](./rule-components.md) （事件、條件和動作）和 [資料元素](./data-elements.md)，但也可以包括主要模組和共用模組。
 
-擴充功能套件會顯示在資料收集UI內的擴充功能目錄中，供使用者安裝。 將擴充功能套件新增至屬性，是透過建立包含擴充功能套件連結的擴充功能來完成。
+擴充功能套件會顯示在資料收集UI和Adobe Experience Platform UI內的擴充功能目錄中，供使用者安裝。 將擴充功能套件新增至屬性，是透過建立包含擴充功能套件連結的擴充功能來完成。
 
 擴充功能套件屬於 [公司](./companies.md) 開發者的。
 

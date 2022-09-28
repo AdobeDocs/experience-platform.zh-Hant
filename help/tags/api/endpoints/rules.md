@@ -2,9 +2,9 @@
 title: 規則端點
 description: 了解如何在Reactor API中呼叫/rules端點。
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '931'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->本檔案說明如何在Reactor API中管理規則。 如需如何與資料收集UI中的規則互動的資訊，請參閱 [UI指南](../../ui/managing-resources/rules.md).
+>本檔案說明如何在Reactor API中管理規則。 如需如何與UI中的規則互動的資訊，請參閱 [UI指南](../../ui/managing-resources/rules.md).
 
 規則只屬於一個 [屬性](./properties.md). 屬性可以有許多規則。
 

@@ -3,10 +3,10 @@ title: 事件轉送快速入門
 description: 請依照此逐步教學課程，開始使用Adobe Experience Platform中的事件轉送。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 30%
+source-wordcount: '872'
+ht-degree: 26%
 
 ---
 
@@ -54,13 +54,13 @@ ht-degree: 30%
 
 ## 建立事件轉送屬性
 
-在資料收集UI中，建立「Edge」類型的屬性。
+在 **[!UICONTROL 標籤]** 工作區，建立類型的屬性 **[!UICONTROL Edge]**.
 
 1. 選擇 **[!UICONTROL 新屬性]**.
 
 1. 為屬性命名。
 
-1. 選擇「邊緣」平台類型。
+1. 選擇「Edge」平台類型。
 
 1. 選取「**[!UICONTROL 儲存]**」。
 
@@ -70,21 +70,17 @@ ht-degree: 30%
 
 若要在Adobe Experience Platform中建立資料流，請使用建立事件轉送屬性時產生的環境ID。
 
-1. 使用資料收集UI左側邊欄中的連結，開啟資料流介面。
-
-1. 選擇 **[!UICONTROL 資料流]**.
+1. 選擇 **[!UICONTROL 資料流]** 的下一頁。
 
 1. 為組態命名並選擇是否填寫相關說明。說明可協助您在組態清單中識別各個組態。
 
 1. 選取「**[!UICONTROL 儲存]**」。
 
-
-
 ## 啟用事件轉送
 
 接下來，設定邊緣網路，將資料傳送至事件轉送和其他Adobe產品。
 
-1. 在資料流UI中，選取您建立的屬性。
+1. 在 **[!UICONTROL 資料流]** 工作區中，選取您建立的屬性。
 
 1. 選取「開發」、「生產」或「預備」環境。
 
@@ -100,17 +96,9 @@ ht-degree: 30%
 
 ## 設定Platform Web SDK擴充功能，將資料傳送至先前建立的資料流
 
-在資料收集UI中建立屬性，然後使用Adobe Experience Platform Web SDK擴充功能進行設定。
+在 **[!UICONTROL 標籤]** 工作區，然後導覽至 **[!UICONTROL 擴充功能]** 並從目錄中選取「Experience PlatformWeb SDK」擴充功能，以進行設定及安裝。
 
-1. 為屬性命名。
-
-   您可以有多個 Alloy 例項，例如可能會有付費前和付費後的追蹤屬性。
-
-1. 選取組織 ID。
-
-1. 選取邊緣網域。
-
-如需更多組態選項，請參閱 [Web SDK 擴充功能文件](../../extensions/web/sdk/overview.md)。
+請參閱 [Web SDK擴充功能檔案](../../extensions/web/sdk/overview.md) 以取得設定選項的詳細資訊。
 
 ## 建立標籤規則以將資料傳送至Platform Web SDK
 

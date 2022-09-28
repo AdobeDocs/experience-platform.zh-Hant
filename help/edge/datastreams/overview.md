@@ -3,9 +3,9 @@ title: 資料流概述
 description: 連接您的客戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
 keywords: 設定；資料流；datastreamId;edge；資料流ID；環境設定；edgeConfigId；身分；ID同步；啟用ID同步容器ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性Token；目標環境ID;Cookie目的地；URL目標；Analytics設定區塊報表套裝ID；資料收集的資料準備；資料準備；映射器；XDM；邊緣上的DM
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1725'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 資料流代表實作Adobe Experience Platform Web和Mobile SDK時的伺服器端設定。 若 [configure命令](../fundamentals/configuring-the-sdk.md) 在SDK中會控制必須在用戶端上處理的項目(例如 `edgeDomain`)，資料流會處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時， `edgeConfigId` 用於參考資料流。 這可讓您更新伺服器端設定，而無須在網站上變更程式碼。
 
-本檔案說明在資料收集UI中設定資料流的步驟。
+本檔案說明在UI中設定資料流的步驟。
 
 ## 存取 [!UICONTROL 資料流] 工作區
 
-您可以透過選取 **[!UICONTROL 資料流]** 的下一頁。
+您可以在資料收集UI或Experience PlatformUI中，透過選取 **[!UICONTROL 資料流]** 的下一頁。
 
-![資料收集UI中的「資料流」索引標籤](../images/datastreams/overview/datastreams-tab.png)
+![UI中的「資料流」索引標籤](../images/datastreams/overview/datastreams-tab.png)
 
 此 [!UICONTROL 資料流] 索引標籤會顯示現有資料流的清單，包括其易記名稱、ID和上次修改日期。 選取資料流的名稱 [查看其詳細資訊並配置服務](#view-details).
 
@@ -106,7 +106,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->為Platform啟用資料流時，請記下您目前使用的Platform沙箱，如資料收集UI頂端功能區所示。
+>為Platform啟用資料流時，請記下您目前使用的Platform沙箱，如UI頂端功能區所示。
 >
 >![所選沙箱](../images/datastreams/overview/platform-sandbox.png)
 >
@@ -175,4 +175,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-本指南說明如何在資料收集UI中管理資料流。 如需設定資料流後如何安裝和設定Web SDK的詳細資訊，請參閱 [資料收集E2E指南](../../collection/e2e.md#install).
+本指南說明如何在UI中管理資料流。 如需設定資料流後如何安裝和設定Web SDK的詳細資訊，請參閱 [資料收集E2E指南](../../collection/e2e.md#install).

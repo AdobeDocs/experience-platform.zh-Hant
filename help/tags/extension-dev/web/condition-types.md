@@ -2,9 +2,9 @@
 title: 網頁擴充功能的條件類型
 description: 了解如何為Web屬性中的標籤擴充功能定義條件類型程式庫模組。
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '502'
 ht-degree: 65%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 65%
 
 條件類型通常包含下列項目：
 
-1. A [檢視](./views.md) 顯示於資料收集UI中，供使用者修改條件的設定。
+1. A [檢視](./views.md) 顯示於「Experience PlatformUI」和「資料收集UI」中，供使用者修改條件的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及評估條件。
 
 條件類型程式庫模組有一個目標：評估某項是否正確。 其評估標的由您決定。

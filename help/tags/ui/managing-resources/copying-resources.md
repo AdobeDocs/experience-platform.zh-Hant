@@ -2,10 +2,10 @@
 title: 複製資源
 description: 了解如何使用Adobe Experience Platform中現有標籤資源的設定來建立新標籤資源。
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 78%
+source-wordcount: '780'
+ht-degree: 79%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->在資料收集UI中，如果有一個屬性設定為擴充開發，而另一個屬性並未設定，則無法將資源複製到另一個屬性。
+>如果一個屬性設定為擴充開發，而另一個屬性未設定，則無法將資源複製到另一個屬性。
 
 設定您想要的行為後，請選取 **[!UICONTROL 複製]**.
 

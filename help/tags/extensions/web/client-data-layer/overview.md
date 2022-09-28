@@ -2,9 +2,9 @@
 title: Adobe用戶端資料層擴充功能
 description: 了解Adobe Experience Platform中的Adobe用戶端資料層標籤擴充功能。
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ If you would like to have more details on development consideration, [please rea
 
 ## 安裝
 
-若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，然後選取Adobe用戶端資料層。
+若要安裝擴充功能，請導覽至Experience PlatformUI或資料收集UI中的擴充功能目錄，然後選取Adobe用戶端資料層。
 
 ![目錄中的ACDL擴充功能檢視](./images/catalog.png)
 

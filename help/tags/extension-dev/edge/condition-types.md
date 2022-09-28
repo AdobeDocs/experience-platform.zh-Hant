@@ -2,10 +2,10 @@
 title: 邊緣擴充功能的條件類型
 description: 了解如何為Adobe Experience Platform中的邊緣擴充功能定義條件類型程式庫模組。
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 51%
+source-wordcount: '412'
+ht-degree: 50%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 51%
 
 條件類型通常包含下列項目：
 
-1. 資料收集UI中顯示的檢視，可讓使用者修改條件的設定。
+1. 顯示於Experience PlatformUI和資料收集UI中的檢視，可讓使用者修改條件的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及評估條件。
 
 例如，如果您想評估使用者是否在主機上 `example.com`，您的模組可能如下所示。

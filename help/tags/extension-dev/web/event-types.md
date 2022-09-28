@@ -2,9 +2,9 @@
 title: 網頁擴充功能的事件類型
 description: 了解如何為Adobe Experience Platform中的網頁擴充功能定義事件類型程式庫模組。
 exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1052'
 ht-degree: 30%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 30%
 
 事件類型由擴充功能定義，通常包含下列項目：
 
-1. A [檢視](./views.md) 顯示於資料收集UI中，供使用者修改事件的設定。
+1. A [檢視](./views.md) 顯示於Experience PlatformUI和資料收集UI中，供使用者修改事件的設定。
 2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定並監視要發生的特定活動。
 
 `module.exports` 接受兩者 `settings` 和 `trigger` 參數。 如此可自訂事件類型。

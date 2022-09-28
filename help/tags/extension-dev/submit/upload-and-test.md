@@ -2,9 +2,9 @@
 title: 上傳並實作擴充功能的端對端測試
 description: 了解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 0c2ee3bbb4d85bd755b4847a509fc7bd50ba67bc
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2394'
 ht-degree: 34%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 34%
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-若要在Adobe Experience Platform中測試標籤擴充功能，請使用標籤API和/或命令列工具來上傳您的擴充功能套件。 接下來，使用資料收集UI將您的擴充功能套件安裝至屬性，並在標籤程式庫和組建中執行其功能。
+若要在Adobe Experience Platform中測試標籤擴充功能，請使用標籤API和/或命令列工具來上傳您的擴充功能套件。 接下來，使用Platform UI或資料收集UI，將您的擴充功能套件安裝至屬性，並在標籤程式庫和組建中執行其功能。
 
 本檔案說明如何針對擴充功能實作端對端測試。
 
@@ -74,7 +74,7 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 >
->上傳或修補時，系統以非同步的方式擷取及部署擴充功能套件期間，該套件會進入擱置狀態。在此程式進行時，您可以輪詢 `extension_package` 使用API和資料收集UI內其狀態的ID。 您會在目錄中看到標示為「擱置中」的擴充功能卡片。
+>上傳或修補時，系統以非同步的方式擷取及部署擴充功能套件期間，該套件會進入擱置狀態。在此程式進行時，您可以輪詢 `extension_package` 使用API和UI內其狀態的ID。 您會在目錄中看到標示為「擱置中」的擴充功能卡片。
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ npx @adobe/reactor-uploader
 
 ## 建立開發屬性 {#property}
 
-登入資料收集UI後，屬性畫面會隨即顯示。 屬性是一個容器，內含您要部署的標記，可用於一或多個網站。
+登入UI並選取 **[!UICONTROL 標籤]** 在左側導覽中， [!UICONTROL 屬性] 畫面。 屬性是一個容器，內含您要部署的標記，可用於一或多個網站。
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -142,7 +142,7 @@ npx @adobe/reactor-uploader
 
 當使用者從 **擴充功能** 下拉式清單， **資料元素類型** 下拉式清單會填入您的擴充功能提供的任何資料元素類型。 使用者可將每個資料元素對應至其來源值。然後，在「資料元素變更事件」或「自訂程式碼事件」中建立規則時，可使用資料元素來觸發要執行的規則。資料元素也可用於資料元素條件或規則中的其他條件、例外或動作。
 
-建立資料元素 (設定對應) 後，使用者只需參考資料元素即可參考來源資料。如果值的來源有所變更 (網站重新設計等)，使用者只需在資料收集UI中更新一次對應，所有資料元素就會自動接收新的來源值。
+建立資料元素 (設定對應) 後，使用者只需參考資料元素即可參考來源資料。如果值的來源有所變更 (網站重新設計等)，使用者只需在UI中更新一次對應，所有資料元素就會自動收到新的來源值。
 
 ### 規則
 
@@ -226,6 +226,6 @@ npx @adobe/reactor-uploader
    >
    >可以在命令行上傳遞參數，以避免重複輸入憑據以節省時間。 如需詳細資訊，請參閱 [reactor檔案](https://www.npmjs.com/package/@adobe/reactor-uploader).
 1. 更新現有包時，可以跳過安裝步驟。
-1. 修改資源 — 如果任何擴充功能元件的設定已變更，您需要在資料收集UI中更新這些資源。
+1. 修改資源 — 如果任何擴充功能元件的設定已變更，您需要在UI中更新這些資源。
 1. 將您的最新變更新增至程式庫，然後重新建置.
 1. 完成另一輪測試。
