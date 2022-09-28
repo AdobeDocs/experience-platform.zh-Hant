@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+source-git-commit: 47a9ce5211d3dabe427ad1e545dc12181a84b644
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 12%
       - [Analytics分類來源](connectors/adobe-applications/classifications.md)
       - [Analytics來源](connectors/adobe-applications/analytics.md)
       - [Audience Manager來源](connectors/adobe-applications/audience-manager.md)
+      - [Adobe Campaign Managed Cloud Services來源](connectors/adobe-applications/campaign.md)
       - [客戶屬性來源](connectors/adobe-applications/customer-attributes.md)
       - [資料收集來源](connectors/adobe-applications/data-collection.md)
       - 欄位對應 {#mapping}
@@ -202,7 +203,7 @@ ht-degree: 12%
          - [Adobe Analytics（報表套裝資料）](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics（分類資料）](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
-         - [Adobe CampaignManaged Services](tutorials/ui/create/adobe-applications/campaign.md)
+         - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 廣告 {#advertising}

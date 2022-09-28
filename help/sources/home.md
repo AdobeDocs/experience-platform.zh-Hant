@@ -5,9 +5,9 @@ title: 來源連接器概述
 topic-legacy: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 552d8412067503847a6c9e4ffcf1aa18710dfbdd
+source-git-commit: 9eb7cdd08069a74a8f0680a8a2af7e7e950e83b7
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -30,10 +30,12 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 - [Adobe Audience Manager來源概述](connectors/adobe-applications/audience-manager.md)
 - [在UI中建立Adobe Audience Manager來源連線](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics分類資料來源連線概觀](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics分類資料來源概觀](connectors/adobe-applications/classifications.md)
 - [在UI中建立Adobe Analytics分類資料來源連線](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics報表套裝資料來源連線概觀](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics報表套裝資料來源概觀](connectors/adobe-applications/analytics.md)
 - [在UI中建立Adobe Analytics來源連線](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Adobe Campaign Managed Cloud Services來源概述](connectors/adobe-applications/campaign.md)
+- [在UI中建立Adobe Campaign Managed Cloud Services來源連線](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Adobe資料收集來源概觀](connectors/adobe-applications/data-collection.md)
 - [在UI中建立客戶屬性來源連線](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] 來源概觀](connectors/adobe-applications/marketo/marketo.md)
