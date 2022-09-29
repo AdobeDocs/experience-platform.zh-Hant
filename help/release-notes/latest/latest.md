@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 64c376b52aa7f7827c19194d677d8a1648c04195
+source-git-commit: c9abf2d0ef2b8a9a9727224fdbb4c784dd041158
 workflow-type: tm+mt
-source-wordcount: '2776'
+source-wordcount: '2959'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,7 @@ Adobe Experience Platform 現有功能更新：
 - [稽核記錄](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [資料收集](#data-collection)
+- [目的地](#destinations)
 - [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
 - [查詢服務](#query-service)
@@ -135,6 +136,34 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 {style=&quot;table-layout:auto&quot;}
 
 如需Platform中資料收集的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| 目標 SDK | Destination SDK現在可為合作夥伴和客戶提供完整支援，協助他們建立批次（或檔案型）產品化或私人目的地。 如需詳細資訊，請參閱下列檔案頁面： <ul><li>[Destination SDK概述](/help/destinations/destination-sdk/overview.md)</li><li>[配置基於檔案的目標](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[為檔案型目的地配置檔案格式選項](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[測試您的檔案型目的地](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新目的地或更新目的地**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [[!DNL Salesforce CRM]](../..//destinations/catalog/crm/salesforce.md) | 此 [!DNL Salesforce CRM] 目標已更新，以支援聯絡人和潛在客戶更新，並改善效能以加快更新。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新檔案或更新檔案**
+
+| 文件 | 說明 |
+| ----------- | ----------- |
+| 目的地流量服務API檔案 | 此 [目的地API參考檔案](https://developer.adobe.com/experience-platform-apis/references/destinations/) 已更新，包含如何對檔案式目的地執行作業的指引。 稍後將新增串流目的地的作業。 |
+
+如需目的地的詳細一般資訊，請參閱 [目的地概述](../../destinations/home.md).
 
 ## Experience Data Model(XDM) {#xdm}
 
