@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: dd17e0903f69a6d639582d83bcd22b269aedb5d0
+source-git-commit: ea4d17459dcd7abd981260fe6733320b08af15e8
 workflow-type: tm+mt
-source-wordcount: '3107'
+source-wordcount: '3125'
 ht-degree: 4%
 
 ---
@@ -158,7 +158,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services提供設計跨管道客戶體驗的平台，以及視覺化行銷活動策劃、即時互動管理和跨管道執行的環境。 [開始使用Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services提供設計跨管道客戶體驗的平台，以及視覺化行銷活動策劃、即時互動管理和跨管道執行的環境。 [開始使用Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). 請注意，此整合適用於Adobe Campaign 8.4版或更新版本。 8.4版預計於2022年9月30日發行。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | 此 [!DNL Salesforce CRM] 目標已更新，以支援聯絡人和潛在客戶更新，並改善效能以加快更新。 |
 
 {style=&quot;table-layout:auto&quot;}
