@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: ec2e57d99da7ae34f2b210fcaff00097707edb2b
+source-git-commit: 5c6bb56b4b3fa63c285aa62b0a7b68ed269654b2
 workflow-type: tm+mt
-source-wordcount: '2959'
+source-wordcount: '3042'
 ht-degree: 5%
 
 ---
@@ -126,14 +126,19 @@ Adobe Experience Platform提供多個控制面板，讓您透過這些控制面�
 
 Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體驗資料，並傳送至Adobe Experience Platform Edge Network，以便在中加以擴充、轉換及分發至Adobe或非Adobe目的地。
 
-**更新功能**
+**新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
 | Platform UI中的左側導覽整合 | 先前專屬於資料收集UI的所有功能（包括標籤、事件轉送和資料流），現在也可透過Experience Platform類別下的左側導覽取得 **[!UICONTROL 資料收集]**. 如此一來，使用Platform中的資料收集功能時，就不需要在UI之間切換。 |
 | 標籤和事件轉送中的使用者歸因 | 清單可用時 [!UICONTROL 屬性] 在「標籤」和「事件轉送」中，每個列出的屬性現在都會顯示其上次更新的時間，以及哪個使用者進行了更新。 |
+| [[!DNL User-Agent Client Hints] 在Web SDK中](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK現在支援 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 客戶端提示允許網站所有者訪問 [!DNL User-Agent] 串，但更能保護隱私。 |
+| [網頁SDK逐頁移轉](../../edge/home.md#migrating-to-web-sdk) | 您現在可以從其他Experience Cloud程式庫(例如 [!DNL at.js]，至Web SDK，一次一頁。 這可以分階段移轉Web SDK，而不需一次移轉所有頁面。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
+-->
 
 如需Platform中資料收集的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
 
