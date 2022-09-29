@@ -2,10 +2,10 @@
 title: 管理API中的建議值
 description: 了解如何將建議的值新增至Schema Registry API中的字串欄位。
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 19bd5d9c307ac6e1b852e25438ff42bf52a1231e
+source-git-commit: 2f916ea4b05ca67c2b9e603512d732a2a3f7a3b2
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 1%
+source-wordcount: '658'
+ht-degree: 0%
 
 ---
 
@@ -69,11 +69,11 @@ ht-degree: 1%
 
 因為字串沒有 `enum` 陣列來定義約束，其 `meta:enum` 屬性可延伸以包含新值。
 
-## 管理標準欄位的建議值
+<!-- ## Manage suggested values for standard fields
 
-對於現有的標準欄位，您可以 [新增建議值](#add-suggested-standard) 或 [移除建議值](#remove-suggested-standard).
+For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
 
-### 新增建議的值 {#add-suggested-standard}
+## 將建議的值新增至標準欄位 {#add-suggested-standard}
 
 若要擴充 `meta:enum` ，您可以建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 針對特定結構中的相關欄位。
 
@@ -151,19 +151,19 @@ curl -X POST \
 >}
 >```
 
-### 移除建議的值 {#remove-suggested-standard}
+<!-- ### Remove suggested values {#remove-suggested-standard}
 
-如果標準字串欄位有預先定義的建議值，您可以移除您不想在分段中看到的任何值。 這可透過建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 針對包含 `xdm:excludeMetaEnum` 屬性。
+If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
 
-**API格式**
+**API format**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**要求**
+**Request**
 
-下列請求會移除建議的值「[!DNL Web Form Filled Out]&quot;和&quot;[!DNL Media ping]」 `eventType` 在以 [XDM ExperienceEvent類別](../classes/experienceevent.md).
+The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -185,19 +185,19 @@ curl -X POST \
       }'
 ```
 
-| 屬性 | 說明 |
+| Property | Description |
 | --- | --- |
-| `@type` | 要定義的描述符的類型。 對於好記的名稱描述符，此值必須設定為 `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | 此 `$id` 定義描述符的架構的URI。 |
-| `xdm:sourceVersion` | 源架構的主要版本。 |
-| `xdm:sourceProperty` | 您要管理其建議值的特定屬性的路徑。 路徑應以斜線開頭(`/`)，而且不以一結尾。 不包括 `properties` 在路徑中(例如，使用 `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
-| `meta:excludeMetaEnum` | 說明應針對分段中的欄位排除之建議值的物件。 每個項目的鍵值和值必須與原始條目中包含的鍵值和值匹配 `meta:enum` ，以便排除項目。 |
+| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
+| `xdm:sourceVersion` | The major version of the source schema. |
+| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
+| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-**回應**
+**Response**
 
-成功的響應返回HTTP狀態201（已建立）以及新建立描述符的詳細資訊。 下列項目中包含的建議值 `xdm:excludeMetaEnum` 現在會從區段UI中隱藏。
+A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
 
 ```json
 {
@@ -211,7 +211,7 @@ curl -X POST \
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-```
+``` -->
 
 ## 管理自訂欄位的建議值 {#suggested-custom}
 

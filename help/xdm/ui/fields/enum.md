@@ -5,9 +5,9 @@ title: 在UI中定義列舉欄位和建議的值
 description: 了解如何為Experience Platform使用者介面中的字串欄位定義列舉和建議值。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: e515e32588991e468429c9256533732d04a4339f
+source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ![顯示UI中選取之「建議值」選項的影像](../../images/ui/fields/enum/suggested-add-row.png)
 
-在 **[!UICONTROL 顯示名稱]** 欄，提供您要值顯示在「細分」UI中的好記名稱。 若要新增更多建議值，請選取 **[!UICONTROL 新增列]** 再次，並視需要重複此程式。 若要移除先前新增的列，請選取刪除圖示(![刪除圖示的影像](../../images/ui/fields/enum/remove-icon.png))。
+在 **[!UICONTROL 顯示名稱]** 欄，提供您要值顯示在「細分」UI中的好記名稱。 若要新增更多建議值，請選取 **[!UICONTROL 新增列]** 再次，並視需要重複此程式。 若要移除先前新增的列，請選取 ![「刪除」圖示](../../images/ui/fields/enum/remove-icon.png) 旁邊。
 
 完成後，請選取 **[!UICONTROL 套用]** 將更改應用到架構。
 
@@ -61,25 +61,25 @@ ht-degree: 0%
 
 ### 管理標準欄位的建議值
 
-標準XDM元件中的某些欄位會包含自己的建議值，例如 `eventType` 從 [[!UICONTROL XDM ExperienceEvent] 類](../../classes/experienceevent.md). 在您的結構中使用這些欄位時，您可以使用可用的切換來控制要使用哪些現有建議值。
+標準XDM元件中的某些欄位會包含自己的建議值，例如 `eventType` 從 [[!UICONTROL XDM ExperienceEvent] 類](../../classes/experienceevent.md). 雖然您可以為標準欄位建立其他建議值，但您無法修改或移除組織未定義的任何建議值。 在UI中檢視標準欄位時，其建議的值會顯示，但是是唯讀的。
 
 ![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-standard.png)
 
-與自訂欄位類似，請選取 **[!UICONTROL 新增列]** 為標準欄位新增您自己的建議值。
+若要為標準欄位新增建議的值，請選取 **[!UICONTROL 新增列]**. 若要移除組織先前新增的建議值，請選取 ![「刪除」圖示](../../images/ui/fields/enum/remove-icon.png) 旁邊。
 
-![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-standard.png)
+![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-standard-add.png)
 
-### 移除標準欄位的建議值
+<!-- ### Removing suggested values for standard fields
 
-只能從標準欄位中移除您定義的建議值。 現有的建議值可以停用，使其不再顯示於分段下拉式清單中，但無法直接移除。
+Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
 
-例如，請考慮設定檔結構，其中標準的建議值 `person.gender` 欄位已停用：
+For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
 
-![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/standard-enum-disabled.png)
+![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
 
-在此示例中，顯示名稱「[!UICONTROL 非特定]「 」現在無法顯示在分段下拉式清單中。 但值 `non_specific` 仍是列舉欄位清單的一部分，因此仍允許擷取。 換言之，您無法停用標準欄位的實際列舉值，因為它會違反僅允許讓欄位限制較少的變更的原則。
+In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
 
-請參閱 [下文](#evolution) 以取得更新現有架構欄位的列舉和建議值之規則的詳細資訊。
+See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
 
 ## 列舉和建議值的演化規則 {#evolution}
 
@@ -109,6 +109,13 @@ ht-degree: 0%
 
 * 任何其他建議的值 **已附加** 在工會里。
 * 如果在多個架構中定義了相同的其他建議值，則這些值為 **已合併** 在工會里。 換句話說，合併後相同的建議值不會顯示兩次。
+
+## 驗證限制
+
+由於目前的系統限制，在擷取期間，有兩種情況下系統未驗證列舉：
+
+1. 列舉是在 [陣列欄位](./array.md).
+1. 枚舉在架構層次結構中定義了多個深層。
 
 ## 後續步驟
 
