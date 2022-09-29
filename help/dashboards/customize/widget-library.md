@@ -3,9 +3,9 @@ keywords: Experience Platform；使用者介面；UI；控制面板；控制面�
 title: 控制面板Widget程式庫概述
 description: 本指南提供存取Adobe Experience Platform中Widget資料庫的逐步指示。
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,12 @@ ht-degree: 0%
 從 [!UICONTROL 介面工具集程式庫]，請從可用標準或自訂介面工具集清單中選取任何介面工具集。 介面工具集角落處的勾號表示您的選取項目。
 
 ![包含選定介面工具集的介面工具集庫，並突出顯示複選標籤。](../images/customization/confirm-selected-widget-to-add.png)
+
+### 使用中標籤 {#in-use-label}
+
+已添加到控制面板的介面工具集 [!UICONTROL 使用中] 在介面工具集資料庫中檢視時附加的標籤。 此標籤會反白標示已新增至控制面板的Widget，以避免重複。 不過，您仍可以多次新增相同的Widget（視需要而定）。
+
+![醒目提示使用中標籤的介面工具集程式庫。](../images/customization/in-use-label.png)
 
 選取所有必要小工具後，請選取 **[!UICONTROL 新增介面工具集]** 確認您的選擇，並將介面工具集新增至控制面板。
 
