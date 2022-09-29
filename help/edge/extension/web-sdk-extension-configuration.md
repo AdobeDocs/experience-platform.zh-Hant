@@ -2,7 +2,7 @@
 title: 設定Adobe Experience Platform Web SDK擴充功能
 description: 如何在UI中設定Adobe Experience Platform Web SDK標籤擴充功能。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '1041'
 ht-degree: 6%
@@ -19,15 +19,15 @@ Adobe Experience Platform Web SDK標籤擴充功能會透過Adobe Experience Pla
 
 如果已為屬性安裝Platform Web SDK擴充功能，請開啟UI中的屬性，然後選取 **[!UICONTROL 擴充功能]** 標籤。 在「平台Web SDK」下方，選取 **[!UICONTROL 設定]**.
 
-![](../images/extension/overview/configure.png)
+![](../assets/extension/overview/configure.png)
 
 如果您尚未安裝擴充功能，請選取 **[!UICONTROL 目錄]** 標籤。 從可用擴充功能的清單中，尋找Platform Web SDK擴充功能，然後選取 **[!UICONTROL 安裝]**.
 
-![](../images/extension/overview/install.png)
+![](../assets/extension/overview/install.png)
 
 在這兩種情況下，您都會到達Platform Web SDK的設定頁面。 以下各節說明擴充功能的設定選項。
 
-![](../images/extension/overview/config-screen.png)
+![](../assets/extension/overview/config-screen.png)
 
 ## 一般配置選項
 
@@ -56,7 +56,7 @@ Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個�
 
 ## [!UICONTROL 隱私]
 
-![](../images/extension/overview/privacy.png)
+![](../assets/extension/overview/privacy.png)
 
 此 [!UICONTROL 隱私權] 區段可讓您設定SDK如何處理來自您網站的使用者同意訊號。 具體來說，它可讓您在未提供其他明確同意偏好設定時，選取使用者所假設的預設同意等級。 預設同意層級不會儲存至使用者的設定檔。 下表列出每個選項的要求：
 
@@ -71,7 +71,7 @@ Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個�
 
 ## [!UICONTROL 身分]
 
-![](../images/extension/overview/identity.png)
+![](../assets/extension/overview/identity.png)
 
 ### [!UICONTROL 從VisitorAPI移轉ECID]
 
@@ -83,13 +83,13 @@ Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個�
 
 ## [!UICONTROL 個人化]
 
-![](../images/extension/overview/personalization.png)
+![](../assets/extension/overview/personalization.png)
 
 如果您想要在載入個人化內容時隱藏特定部分，則可以在預先隱藏樣式編輯器中指定要隱藏的元素。 接著，您可以複製提供給您的預設預先隱藏程式碼片段，並貼到 `<head>`元素。
 
 ## [!UICONTROL 資料收集]
 
-![](../images/extension/overview/data-collection.png)
+![](../assets/extension/overview/data-collection.png)
 
 ### [!UICONTROL 回呼函式]
 
@@ -105,7 +105,7 @@ SDK可自動為您收集連結點按資訊。 此功能預設為啟用，但可�
 
 ## [!UICONTROL 進階設定]
 
-![](../images/extension/overview/advanced-settings.png)
+![](../assets/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL 邊基路徑]
 

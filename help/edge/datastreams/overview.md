@@ -3,10 +3,10 @@ title: 資料流概述
 description: 連接您的客戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
 keywords: 設定；資料流；datastreamId;edge；資料流ID；環境設定；edgeConfigId；身分；ID同步；啟用ID同步容器ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性Token；目標環境ID;Cookie目的地；URL目標；Analytics設定區塊報表套裝ID；資料收集的資料準備；資料準備；映射器；XDM；邊緣上的DM
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 81b20d40d3511592125cba123fa070fc27aace5a
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 2%
+source-wordcount: '1789'
+ht-degree: 3%
 
 ---
 
@@ -20,29 +20,29 @@ ht-degree: 2%
 
 您可以在資料收集UI或Experience PlatformUI中，透過選取 **[!UICONTROL 資料流]** 的下一頁。
 
-![UI中的「資料流」索引標籤](../images/datastreams/overview/datastreams-tab.png)
+![UI中的「資料流」索引標籤](../assets/datastreams/overview/datastreams-tab.png)
 
 此 [!UICONTROL 資料流] 索引標籤會顯示現有資料流的清單，包括其易記名稱、ID和上次修改日期。 選取資料流的名稱 [查看其詳細資訊並配置服務](#view-details).
 
 選取「更多」圖示(**...**)以顯示更多選項。 選擇 **[!UICONTROL 編輯]** 更新 [基本配置](#configure) ，或選取 **[!UICONTROL 刪除]** 移除資料流。
 
-![可編輯或刪除和現有資料流的選項](../images/datastreams/overview/edit-datastream.png)
+![可編輯或刪除和現有資料流的選項](../assets/datastreams/overview/edit-datastream.png)
 
 ## 建立新資料流 {#create}
 
 若要建立資料流，請從選取 **[!UICONTROL 新資料流]**.
 
-![選擇新資料流](../images/datastreams/overview/new-datastream-button.png)
+![選擇新資料流](../assets/datastreams/overview/new-datastream-button.png)
 
 從設定步驟開始，資料流建立工作流程隨即顯示。 您必須在此提供資料流的名稱和可選說明。
 
 如果您要設定此資料流以用於Experience Platform，且使用Platform Web SDK，您也必須選取 [事件型Experience Data Model(XDM)結構](../../xdm/classes/experienceevent.md) 來表示您計畫擷取的資料。
 
-![資料流的基本配置](../images/datastreams/overview/configure.png)
+![資料流的基本配置](../assets/datastreams/overview/configure.png)
 
 選擇 **[!UICONTROL 進階選項]** 以顯示設定資料流的其他控制項。
 
-![進階設定選項](../images/datastreams/overview/advanced-options.png)
+![進階設定選項](../assets/datastreams/overview/advanced-options.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -57,7 +57,7 @@ ht-degree: 2%
 
 設定新資料流或選取要檢視的現有資料流後，該資料流的詳細資訊頁面隨即顯示。 您可在這裡找到資料流的詳細資訊，包括其ID。
 
-![已建立資料流的詳細資訊頁面](../images/datastreams/overview/view-details.png)
+![已建立資料流的詳細資訊頁面](../assets/datastreams/overview/view-details.png)
 
 從資料流詳細資訊螢幕，您可以 [新增服務](#add-services) 若要從您可存取的Adobe Experience Cloud產品啟用功能。 您也可以編輯資料流的 [基本配置](#create)，更新 [對應規則](./data-prep.md), [複製資料流](#copy)，或將其完全刪除。
 
@@ -65,15 +65,15 @@ ht-degree: 2%
 
 在資料流的詳細資訊頁面上，選取 **[!UICONTROL 添加服務]** 開始為該資料流添加可用服務。
 
-![選擇添加服務以繼續](../images/datastreams/overview/add-service.png)
+![選擇添加服務以繼續](../assets/datastreams/overview/add-service.png)
 
 在下一個畫面中，使用下拉式選單來選取要針對此資料流設定的服務。 只有您有權存取的服務才會顯示在此清單中。
 
-![從清單中選擇服務](../images/datastreams/overview/service-selection.png)
+![從清單中選擇服務](../assets/datastreams/overview/service-selection.png)
 
 選取所需的服務，填入顯示的設定選項，然後選取 **[!UICONTROL 儲存]** 將服務新增至資料流。 所有新增的服務都會顯示在資料流的詳細資訊檢視中。
 
-![新增至資料流的服務](../images/datastreams/overview/services-added.png)
+![新增至資料流的服務](../assets/datastreams/overview/services-added.png)
 
 以下子節說明每個服務的設定選項。
 
@@ -85,7 +85,7 @@ ht-degree: 2%
 
 此服務會控制資料是否以及如何傳送至Adobe Analytics。 如需其他詳細資訊，請參閱 [傳送資料至Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics設定區塊](../images/datastreams/overview/analytics-config.png)
+![Adobe Analytics設定區塊](../assets/datastreams/overview/analytics-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -95,7 +95,7 @@ ht-degree: 2%
 
 此服務會控制資料是否以及如何傳送至Adobe Audience Manager。 將資料傳送至Audience Manager所需的全部是啟用此區段。 其他設定為選用，但建議使用。
 
-![Adobe對象管理設定區塊](../images/datastreams/overview/audience-manager-config.png)
+![Adobe對象管理設定區塊](../assets/datastreams/overview/audience-manager-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -108,27 +108,28 @@ ht-degree: 2%
 >
 >為Platform啟用資料流時，請記下您目前使用的Platform沙箱，如UI頂端功能區所示。
 >
->![所選沙箱](../images/datastreams/overview/platform-sandbox.png)
+>![所選沙箱](../assets/datastreams/overview/platform-sandbox.png)
 >
 >沙箱是Adobe Experience Platform中的虛擬分區，可讓您將資料和實施與組織中的其他項目隔離開來。 建立資料流後，其沙箱便無法變更。 如需沙箱在Experience Platform中角色的詳細資訊，請參閱 [沙箱檔案](../../sandboxes/home.md).
 
 此服務會控制資料是否以及如何傳送至Adobe Experience Platform。
 
-![Adobe Experience Platform設定區塊](../images/datastreams/overview/platform-config.png)
+![Adobe Experience Platform設定區塊](../assets/datastreams/overview/platform-config.png)
 
 | 設定 | 說明 |
 |---| --- |
 | [!UICONTROL 事件資料集] | **（必要）** 選取客戶事件資料要串流至的Platform資料集。 此架構必須使用 [XDM ExperienceEvent類別](../../xdm/classes/experienceevent.md). |
 | [!UICONTROL 設定檔資料集] | 選取客戶屬性資料要傳送至的Platform資料集。 此架構必須使用 [XDM個別設定檔類別](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | 選取此核取方塊以啟用Platform Web SDK實作的Offer decisioning。 請參閱 [搭配Platform Web SDK使用Offer decisioning](../personalization/offer-decisioning/offer-decisioning-overview.md) 以取得更多實作詳細資訊。 如需Offer decisioning功能的詳細資訊，請參閱 [Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=zh-Hant). |
-| [!UICONTROL 邊緣分割] | 選中此複選框以啟用 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 資料流。 當SDK透過啟用邊緣分段的資料流傳送資料時，回應中會傳回相關設定檔的任何更新區段成員資格。<br><br>此選項可與 [!UICONTROL 個人化目的地] for [下一頁個人化使用案例](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL 個人化目的地] | 若在啟用 [!UICONTROL 邊緣分割] 核取方塊，此選項可讓資料流連線至個人化目的地，例如 [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md). 如需的特定步驟，請參閱目的地檔案 [設定個人化目的地](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Offer Decisioning] | 選取此核取方塊以啟用Platform Web SDK實作的Offer decisioning。 請參閱 [搭配Platform Web SDK使用Offer decisioning](../personalization/offer-decisioning/offer-decisioning-overview.md) 以取得更多實作詳細資訊。 <br><br> 如需Offer decisioning功能的詳細資訊，請參閱 [Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=zh-Hant). |
+| [!UICONTROL 邊緣分割] | 選中此複選框以啟用 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 資料流。 當SDK透過啟用邊緣分段的資料流傳送資料時，回應中會傳回相關設定檔的任何更新區段成員資格。<br><br>此選項可與 [!UICONTROL 個人化目的地] for [下一頁個人化使用案例](../../destinations/ui/configure-personalization-destinations.md)，或結合 [!UICONTROL Adobe Journey Optimizer]. |
+| [!UICONTROL 個人化目的地] | 若在啟用 [!UICONTROL 邊緣分割] 核取方塊，此選項可讓資料流連線至個人化目的地，例如 [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md). <br><br>如需的特定步驟，請參閱目的地檔案 [設定個人化目的地](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL Adobe Journey Optimizer] | 選中此複選框以啟用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant) 資料流。 <br><br> 啟用此選項可讓資料流從以下的網頁和應用程式為基礎的傳入促銷活動，傳回個人化內容： [!DNL Adobe Journey Optimizer]. 此選項需要 [!UICONTROL 邊緣分割] 活動。 若 [!UICONTROL 邊緣分割] 未勾選，此選項會反灰。 |
 
 ### Adobe Target設定 {#target}
 
 此服務會控制資料是否以及如何傳送至Adobe Target。
 
-![Adobe Target設定區塊](../images/datastreams/overview/target-config.png)
+![Adobe Target設定區塊](../assets/datastreams/overview/target-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -140,7 +141,7 @@ ht-degree: 2%
 
 此服務會控制資料是否及如何傳送至 [事件轉送](../../tags/ui/event-forwarding/overview.md).
 
-![設定UI的「事件轉送」區段](../images/datastreams/overview/event-forwarding-config.png)
+![設定UI的「事件轉送」區段](../assets/datastreams/overview/event-forwarding-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -161,15 +162,15 @@ ht-degree: 2%
 
 從 [!UICONTROL 資料流] 工作區，選取省略號(**....**)，然後選取 **[!UICONTROL 複製]**.
 
-![顯示 [!UICONTROL 複製] 從資料流清單視圖中選擇的選項](../images/datastreams/overview/copy-datastream-list.png)
+![顯示 [!UICONTROL 複製] 從資料流清單視圖中選擇的選項](../assets/datastreams/overview/copy-datastream-list.png)
 
 或者，您也可以選取 **[!UICONTROL 複製資料流]** 從指定資料流的詳細資訊檢視。
 
-![顯示 [!UICONTROL 複製] 從資料流詳細資訊檢視中選取的選項](../images/datastreams/overview/copy-datastream-details.png)
+![顯示 [!UICONTROL 複製] 從資料流詳細資訊檢視中選取的選項](../assets/datastreams/overview/copy-datastream-details.png)
 
 此時會出現確認對話方塊，提示您為要建立的新資料流提供唯一名稱，以及將複製的配置選項的詳細資訊。 準備就緒時，請選取 **[!UICONTROL 複製]**.
 
-![用於複製資料流的確認對話框的影像](../images/datastreams/overview/copy-datastream-confirm.png)
+![用於複製資料流的確認對話框的影像](../assets/datastreams/overview/copy-datastream-confirm.png)
 
 的主要頁面 [!UICONTROL 資料流] 工作區會重新顯示，並列出新的資料流。
 

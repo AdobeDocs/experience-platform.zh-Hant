@@ -2,7 +2,7 @@
 title: 資料收集的資料準備
 description: 了解如何為Adobe Experience Platform Web和Mobile SDK設定資料流時，將資料對應至Experience Data Model(XDM)事件結構。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 1%
@@ -132,7 +132,7 @@ ht-degree: 1%
 
 您可以選取以檔案形式上傳物件的選項，或將原始物件貼到提供的文字方塊中。 如果JSON有效，右側面板中會顯示預覽結構。 選擇 **[!UICONTROL 下一個]** 繼續。
 
-![預期傳入資料的JSON範例](../images/datastreams/data-prep/select-data.png)
+![預期傳入資料的JSON範例](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL 對應]
 
@@ -145,25 +145,25 @@ ht-degree: 1%
 
 若要開始，請選取 **[!UICONTROL 新增對應]** 建立新映射行。
 
-![新增對應](../images/datastreams/data-prep/add-new-mapping.png)
+![新增對應](../assets/datastreams/data-prep/add-new-mapping.png)
 
-選擇源表徵圖(![源表徵圖](../images/datastreams/data-prep/source-icon.png))，並在出現的對話方塊中，選取您要在提供的畫布中對應的來源欄位。 選取欄位後，請使用 **[!UICONTROL 選擇]** 按鈕繼續。
+選擇源表徵圖(![源表徵圖](../assets/datastreams/data-prep/source-icon.png))，並在出現的對話方塊中，選取您要在提供的畫布中對應的來源欄位。 選取欄位後，請使用 **[!UICONTROL 選擇]** 按鈕繼續。
 
-![選擇要在源架構中映射的欄位](../images/datastreams/data-prep/source-mapping.png)
+![選擇要在源架構中映射的欄位](../assets/datastreams/data-prep/source-mapping.png)
 
-接下來，選取結構圖示(![結構圖示](../images/datastreams/data-prep/schema-icon.png))，以開啟target事件架構的類似對話方塊。 在確認前，選擇您要將資料對應至的欄位 **[!UICONTROL 選擇]**.
+接下來，選取結構圖示(![結構圖示](../assets/datastreams/data-prep/schema-icon.png))，以開啟target事件架構的類似對話方塊。 在確認前，選擇您要將資料對應至的欄位 **[!UICONTROL 選擇]**.
 
-![選取要在目標架構中對應的欄位](../images/datastreams/data-prep/target-mapping.png)
+![選取要在目標架構中對應的欄位](../assets/datastreams/data-prep/target-mapping.png)
 
 重新顯示映射頁，並顯示已完成的欄位映射。 此 **[!UICONTROL 映射進度]** 區段更新，以反映已成功映射的欄位總數。
 
-![欄位已成功映射並反映進度](../images/datastreams/data-prep/field-mapped.png)
+![欄位已成功映射並反映進度](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >如果要將對象陣列（在源欄位中）映射到不同對象的陣列（在目標欄位中），請添加 `[*]` 位於來源和目的地欄位路徑中的陣列名稱后面，如下所示。
 >
->![陣列物件對應](../images/datastreams/data-prep/array-object-mapping.png)
+>![陣列物件對應](../assets/datastreams/data-prep/array-object-mapping.png)
 
 ### 導入現有映射規則 {#import-mapping}
 
@@ -175,11 +175,11 @@ ht-degree: 1%
 
 若要開始，請選取 **[!UICONTROL 導入映射]**.
 
-![顯示 [!UICONTROL 導入映射] 按鈕](../images/datastreams/data-prep/import-mapping-button.png)
+![顯示 [!UICONTROL 導入映射] 按鈕](../assets/datastreams/data-prep/import-mapping-button.png)
 
 在顯示的對話方塊中，選取您要匯入其對應規則的資料流。 選擇資料流後，選擇 **[!UICONTROL 預覽]**.
 
-![顯示所選現有資料流的影像](../images/datastreams/data-prep/select-mapping-rules.png)
+![顯示所選現有資料流的影像](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -187,7 +187,7 @@ ht-degree: 1%
 
 下一個畫面會顯示所選資料流儲存的對應規則預覽。 請確定顯示的對應符合您的期望，然後選取 **[!UICONTROL 匯入]** 確認對應並新增至新資料流。
 
-![顯示要匯入之對應規則的影像](../images/datastreams/data-prep/import-mapping-rules.png)
+![顯示要匯入之對應規則的影像](../assets/datastreams/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ ht-degree: 1%
 
 當必填欄位計數達到零且您對對應感到滿意時，請選取 **[!UICONTROL 儲存]** 完成變更。
 
-![映射完成](../images/datastreams/data-prep/mapping-complete.png)
+![映射完成](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## 後續步驟
 

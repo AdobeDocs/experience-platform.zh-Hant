@@ -2,7 +2,7 @@
 title: 使用標籤與Platform Web SDK擴充功能整合IAB TCF 2.0支援
 description: 了解如何使用標籤和Adobe Experience Platform Web SDK擴充功能設定IAB TCF 2.0同意。
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
 source-wordcount: '838'
 ht-degree: 0%
@@ -13,23 +13,23 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK支援互動式廣告局透明與同意架構2.0版(IAB TCF 2.0)。 本指南會說明如何使用Adobe Experience Platform Web SDK標籤擴充功能，設定將IAB TCF 2.0同意資訊傳送至Adobe的標籤屬性。
 
-若您不想使用標籤，請參閱[上使用不含標籤](./without-launch.md)之IAB TCF 2.0的指南。
+如果您不想使用標籤，請參閱 [使用IAB TCF 2.0（不含標籤）](./without-launch.md).
 
 ## 快速入門
 
 若要搭配標籤和Platform Web SDK擴充功能使用IAB TCF 2.0，您需要有可用的XDM結構和資料集。
 
-此外，本指南也要求您妥善了解Adobe Experience Platform Web SDK。 如需快速重新整理，請參閱[Adobe Experience Platform Web SDK概述](../../home.md)和[常見問題](../../web-sdk-faq.md)檔案。
+此外，本指南也要求您妥善了解Adobe Experience Platform Web SDK。 如需快速複習，請閱讀 [Adobe Experience Platform Web SDK概述](../../home.md) 和 [常見問題](../../web-sdk-faq.md) 檔案。
 
 ## 設定預設同意
 
-擴充功能設定中有預設同意的設定。 這會控制沒有同意Cookie的客戶的行為。 如果您想要將體驗事件加入佇列，讓沒有同意Cookie的客戶使用，請將此項目設為`pending`。 如果您想要捨棄沒有同意Cookie的客戶的體驗事件，請將此項目設為`out`。 您也可以使用資料元素來動態設定預設同意值。
+擴充功能設定中有預設同意的設定。 這會控制沒有同意Cookie的客戶的行為。 如果您想要將體驗事件排入沒有同意Cookie的客戶的佇列，請將此設為 `pending`. 如果您想要捨棄沒有同意Cookie之客戶的體驗事件，請將此設為 `out`. 您也可以使用資料元素來動態設定預設同意值。
 
-如需如何設定預設同意的詳細資訊，請參閱SDK設定指南中的[預設同意區段](../../fundamentals/configuring-the-sdk.md#default-consent)。
+如需如何設定預設同意的詳細資訊，請參閱 [預設同意區段](../../fundamentals/configuring-the-sdk.md#default-consent) （位於SDK設定指南中）。
 
 ## 使用同意資訊更新設定檔 {#consent-code-1}
 
-若要在客戶同意偏好設定變更時呼叫`setConsent`動作，您需要建立新的標籤規則。 首先，新增事件並選擇核心擴充功能的「自訂程式碼」事件類型。
+若要呼叫 `setConsent` 當客戶同意偏好設定變更時，您需要建立新的標籤規則。 首先，新增事件並選擇核心擴充功能的「自訂程式碼」事件類型。
 
 對新事件使用下列程式碼範例：
 
@@ -55,7 +55,7 @@ addEventListener();
 
 此自訂程式碼有兩項功能：
 
-* 設定兩個資料元素，一個具有同意字串，另一個具有`gdprApplies`標幟。 稍後填寫「設定同意」動作時，這個功能會很實用。
+* 設定兩個資料元素，一個具有同意字串，另一個具有 `gdprApplies` 標籤。 稍後填寫「設定同意」動作時，這個功能會很實用。
 
 * 在同意偏好設定變更時觸發規則。 每當同意偏好設定變更時，應使用「設定同意」動作。 在擴充功能中新增「設定同意」動作，並填寫表單如下：
 
@@ -64,7 +64,7 @@ addEventListener();
 * 值：&quot;%IAB TCF同意字串%&quot;
 * GDPR適用：&quot;%IAB TCF同意GDPR%&quot;
 
-![IAB設定同意動作](../../images/consent/iab-tcf/with-launch/iab-action.png)
+![IAB設定同意動作](../../assets/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -72,13 +72,13 @@ addEventListener();
 
 ## 為Experience Events建立XDM資料元素
 
-XDM體驗事件中應包含同意字串。 若要這麼做，請使用XDM物件資料元素。 首先，請建立新的XDM物件資料元素，或使用您已建立的元素來傳送事件。 如果您已將「體驗事件隱私權」結構欄位群組新增至結構，XDM物件中應該會有`consentStrings`索引鍵。
+XDM體驗事件中應包含同意字串。 若要這麼做，請使用XDM物件資料元素。 首先，請建立新的XDM物件資料元素，或使用您已建立的元素來傳送事件。 如果您已將體驗事件隱私權結構欄位群組新增至結構，您應該有 `consentStrings` 鍵。
 
-1. 選取&#x200B;**[!UICONTROL consentStrings]**。
+1. 選擇 **[!UICONTROL consentStrings]**.
 
-1. 選擇&#x200B;**[!UICONTROL 提供個別項目]**&#x200B;並選擇&#x200B;**[!UICONTROL 添加項目]**。
+1. 選擇 **[!UICONTROL 提供個別項目]** 選取 **[!UICONTROL 新增項目]**.
 
-1. 展開&#x200B;**[!UICONTROL consentString]**&#x200B;標題，然後展開第一個項目，然後填入下列值：
+1. 展開 **[!UICONTROL consentString]** 標題，然後展開第一個項目，然後填入下列值：
 
 * `consentStandard`:IAB TCF
 * `consentStandardVersion`:2.0
@@ -113,7 +113,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-此程式碼與先前的自訂程式碼相同，只是同時處理`useractioncomplete`和`tcloaded`事件。 [先前的自訂程式碼](#consent-code-1)只會在客戶首次選擇偏好設定時觸發。 當客戶已選擇偏好設定時，也會觸發此程式碼。 例如，在第二個頁面載入上。
+此程式碼與先前的自訂程式碼相同，但兩者皆相同 `useractioncomplete` 和 `tcloaded` 會處理事件。 此 [上一個自訂程式碼](#consent-code-1) 只有在客戶首次選擇偏好設定時才會觸發。 當客戶已選擇偏好設定時，也會觸發此程式碼。 例如，在第二個頁面載入上。
 
 從Platform Web SDK擴充功能新增「傳送事件」動作。 在「XDM」欄位中，選擇您在上一節中建立的XDM資料元素。
 
@@ -123,4 +123,4 @@ addEventListener();
 
 ## 後續步驟
 
-現在您已了解如何搭配Platform Web SDK擴充功能使用IAB TCF 2.0，您也可以選擇與其他Adobe解決方案整合，例如Adobe Analytics或即時客戶資料平台。 如需詳細資訊，請參閱[IAB透明與同意架構2.0概觀](./overview.md) 。
+現在您已了解如何搭配Platform Web SDK擴充功能使用IAB TCF 2.0，您也可以選擇與其他Adobe解決方案整合，例如Adobe Analytics或即時客戶資料平台。 請參閱 [IAB透明與同意架構2.0概觀](./overview.md) 以取得更多資訊。
