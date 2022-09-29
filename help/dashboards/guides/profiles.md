@@ -4,9 +4,9 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 9a4257ef6f9e32feeb2bb90bc7dd46b0d533cb35
+source-git-commit: 18288130b98e13d824273426a860d97722c434de
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4154'
 ht-degree: 1%
 
 ---
@@ -123,6 +123,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 對應至目的地狀態的對象]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 對象大小]](#audiences-size)
 * [[!UICONTROL 受眾重疊（依合併原則）]](#audience-overlap-by-merge-policy)
+* [[!UICONTROL 對象重疊報表]](#audience-overlap-report)
 
 ### [!UICONTROL 設定檔計數] {#profile-count}
 
@@ -302,12 +303,33 @@ The visualization allows you to monitor the overall health of audiences within A
 
 <!-- ![The Audiences change trend widget.]() -->
 
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+### [!UICONTROL 對象重疊報表] {#audience-overlap-report}
 
-<!-- View an ordered list of audiences by highest or lowest overlap percentages by selected merge policy. -->
-<!-- ![The Audiences overlap report widget.]() -->
-<!-- https://jira.corp.adobe.com/browse/PLAT-126851 -->
+此Widget會列出合併原則篩選之所有可用區段中的對象重疊資料。 針對從螢幕頂端的下拉式功能表中選擇的合併原則，提供從最高到最低重疊百分比排名的五個對象清單。 兩個分析區段列於 [!UICONTROL 區段名稱] 和 [!UICONTROL 區段B名稱] 欄。 第三欄中提供的重疊百分比精確至十二位小數。
+
+對象重疊報表可協助您建立新的高效能區段。 觀察高百分比重疊可讓您隱藏對象，並防止將相同的對象傳送至不同的目的地。 它們也可協助您識別隱藏的深入分析，以協助您改善細分。 低百分比重疊有助於找到要追蹤的唯一設定檔。
+
+選擇 **[!UICONTROL 查看更多]** 開啟包含更多對象重疊資料的全螢幕對話方塊。
+
+![對象重疊報表介面工具集，以更醒目顯示檢視。](../images/profiles/profiles-audience-overlap-report.png)
+
+此 [!UICONTROL 對象重疊報表] 對話框。 此對話方塊最多可包含50列受眾重疊分析，分為六欄。 選取設定圖示(![設定圖示。](../images/profiles/settings-icon.png))，移除或新增表格中的欄。
+
+![對象重疊報表對話方塊。](../images/profiles/profiles-audience-overlap-report-dialog.png)
+
+>[!NOTE]
+>
+>選取 **[!UICONTROL 重疊]** 欄標題，將結果的排名從最高到最低或從最低到最高。
+
+若要以PDF格式下載整個報表，請選取選項功能表(**`...`**)後面跟著 **[!UICONTROL 下載]**.
+
+![「對象重疊報表」對話方塊中會強調顯示點與「下載」選項。](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+
+從報表中選取一列，以開啟重疊分析的文氏圖表。 將滑鼠指標暫留在Venn圖表的某個區段上，即可在對話方塊中查看設定檔計數。
+
+![對象重疊報表對話方塊中會顯示文氏圖表和醒目提示的列。](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+
+選擇 **[!UICONTROL 關閉]** 返回 [!UICONTROL 設定檔] 控制面板。
 
 ### [!UICONTROL 對應至目的地狀態的對象] {#audiences-mapped-to-destination-status}
 
