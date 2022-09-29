@@ -2,9 +2,9 @@
 title: 瀏覽資料衛生工作單
 description: 了解如何在Adobe Experience Platform使用者介面中檢視及管理現有的資料衛生工作單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 425298ec28517bba4eca1bf0966fd3b205fce764
+source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '863'
 ht-degree: 1%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 1%
 >title="工作單ID"
 >abstract="當資料衛生請求被發送到系統時，建立工作單以執行所請求的任務。 換言之，工作單代表特定的資料衛生過程，包括其當前狀態和其他相關細節。 每個工作單在建立時都會自動分配其唯一ID。"
 >text="See the data hygiene UI guide to learn more."
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買AdobeHealthcare Shield或Privacy Shield的組織。
 
 當資料衛生請求被發送到系統時，建立工作單以執行所請求的任務。 工作單代表特定資料衛生程式，例如排程的資料集有效期，包括其目前狀態和其他相關詳細資訊。
 
@@ -30,10 +34,6 @@ ht-degree: 1%
 清單一次只顯示一個類別的工作單。 選擇 **[!UICONTROL 消費者]** 要查看消費者刪除任務的清單，以及 **[!UICONTROL 資料集]** 檢視排程資料集過期時間清單。
 
 ![顯示 [!UICONTROL 資料集] 標籤](../images/ui/browse/dataset-tab.png)
-
->[!IMPORTANT]
->
->消費者刪除僅適用於已購買AdobeHealthcare Shield或Privacy Shield的組織。
 
 選取漏斗圖示(![漏斗圖示的影像](../images/ui/browse/funnel-icon.png))，查看所顯示工作單的篩選器清單。
 
