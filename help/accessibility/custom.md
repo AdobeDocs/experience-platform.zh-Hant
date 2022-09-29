@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: 進一步了解Adobe Experience Platform使用者介面中的自訂協助工具解決方案。
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: e30e04453bd814de103cceb14e3580992436923d
+source-git-commit: 7f4202c9c4a132ed9d74c495f6608357eac8003f
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -132,6 +132,10 @@ Experience Platform用戶介面中的所有表均可鍵盤訪問。 您可以透
 * 您可透過鍵盤導覽存取區段產生器UI。
 * 螢幕助讀程式應可辨識標題的標籤標籤，並可隨其層級宣佈標題。
 * 其他輔助技術可使用適當編碼的標題來顯示大綱或替代視圖，來變更頁面的視覺顯示。
+
+您現在可以折疊或展開區段產生器畫布的左右側邊欄，以獲得更多螢幕空間。 此功能特別實用，因為它提供200%縮放的完整功能。
+
+![區段產生器畫布中，會反白顯示左側和右側邊欄洩漏小工具。](images/left-right-rail-expandables.png)
 
 ## 查詢服務編輯器
 
