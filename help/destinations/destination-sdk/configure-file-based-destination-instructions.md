@@ -2,9 +2,9 @@
 description: 本頁面列出並說明使用Destination SDK來設定檔案式目的地的步驟。
 title: 使用Destination SDK配置基於檔案的目標
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # 使用Destination SDK配置基於檔案的目標
 
 ## 總覽 {#overview}
-
->[!IMPORTANT]
->
->使用Adobe Experience Platform Destination SDK設定及提交檔案式目的地的功能目前仍在測試中。 檔案和功能可能會有所變更。
 
 本頁面說明如何使用 [目的地SDK中的設定選項](./configuration-options.md) 和其他Destination SDK功能及API參考檔案中，以設定 [檔案型目的地](../../destinations/destination-types.md#file-based). 步驟依序排列如下。
 

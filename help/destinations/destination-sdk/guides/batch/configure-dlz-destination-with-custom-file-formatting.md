@@ -2,9 +2,9 @@
 description: 了解如何使用Destination SDK配置資料登錄區(DLZ)目標，該目標具有自定義檔案格式選項和自定義檔案名配置。
 title: 使用自定義檔案格式選項和自定義檔案名配置配置資料登錄區(DLZ)目標。
 exl-id: 3a5c1188-c2b5-4e81-ae41-9fff797f08a6
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # 設定 [!DNL Data Landing Zone (DLZ)] 具有自定義檔案格式選項和自定義檔案名配置的目標
 
 ## 總覽 {#overview}
-
->[!IMPORTANT]
->
->使用Adobe Experience Platform Destination SDK設定檔案式目的地的功能目前仍在測試中。 檔案和功能可能會有所變更。
 
 本頁說明如何使用Destination SDK來設定 [!DNL Data Landing Zone] 自訂目的地 [檔案格式選項](../../server-and-file-configuration.md#file-configuration) 和自訂 [檔案名配置](../../file-based-destination-configuration.md#file-name-configuration).
 

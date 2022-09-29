@@ -2,9 +2,9 @@
 description: 檔案型目的地的伺服器和檔案配置規範可通過/destination-servers端點在Adobe Experience Platform Destination SDK中配置。
 title: 基於檔案的目標伺服器規格配置選項
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 5506a938253083d3dfd657a787eae20a05b1c0a9
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1248'
 ht-degree: 9%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 9%
 # 基於檔案的目標伺服器規格的伺服器和檔案配置
 
 ## 總覽 {#overview}
-
->[!IMPORTANT]
->
->使用Adobe Experience Platform Destination SDK設定及提交檔案式目的地的功能目前仍在測試中。 檔案和功能可能會有所變更。
 
 本頁詳細說明基於檔案的目標伺服器的所有伺服器配置選項，並說明如何為從Experience Platform導出到目標的用戶設定各種檔案配置選項。
 

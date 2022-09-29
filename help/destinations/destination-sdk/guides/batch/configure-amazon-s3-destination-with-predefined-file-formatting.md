@@ -2,9 +2,9 @@
 description: 了解如何使用Destination SDK，使用預先定義的檔案格式選項和自訂檔案名稱設定來設定Amazon S3目的地。
 title: 使用預先定義的檔案格式選項和自訂檔案名稱設定，設定Amazon S3目的地。
 exl-id: 0ecd3575-dcda-4e5c-af5c-247d4ea13fa1
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # 設定 [!DNL Amazon S3] 具有預定義的檔案格式選項和自定義檔案名配置的目標
 
 ## 總覽 {#overview}
-
->[!IMPORTANT]
->
->使用Adobe Experience Platform Destination SDK設定檔案式目的地的功能目前仍在測試中。 檔案和功能可能會有所變更。
 
 本頁說明如何使用Destination SDK，以預先定義的預設值來設定Amazon S3目的地 [檔案格式選項](../../server-and-file-configuration.md#file-configuration) 和自訂 [檔案名配置](../../file-based-destination-configuration.md#file-name-configuration).
 

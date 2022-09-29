@@ -2,9 +2,9 @@
 description: 了解如何使用Destination SDK，使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地。
 title: 使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地。
 exl-id: 6e0fe019-7fbb-48e4-9469-6cc7fc3cb6e4
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: bdeebca9608e7c1ff3ae0cb1aeb444dccb78028f
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # 使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地
 
 ## 總覽 {#overview}
-
->[!IMPORTANT]
->
->使用Adobe Experience Platform Destination SDK設定檔案式目的地的功能目前仍在測試中。 檔案和功能可能會有所變更。
 
 本頁說明如何使用Destination SDK，以預先定義的預設值來設定SFTP目的地 [檔案格式選項](../../server-and-file-configuration.md#file-configuration) 和自訂 [檔案名配置](../../file-based-destination-configuration.md#file-name-configuration).
 
