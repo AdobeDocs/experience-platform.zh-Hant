@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 65743c1741210a87b1cc64406412dd7e58218321
+source-git-commit: ec2e57d99da7ae34f2b210fcaff00097707edb2b
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2959'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人�
 
 | 功能 | 說明 |
 | --- | --- |
-| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Attribution AI使用指南](../../intelligent-services/attribution-ai/user-guide.md) 了解更多。 |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員將模型設定儲存為草稿例項，並繼續編輯，直到完成為止，再進行訓練和計分。 此功能有幫助的案例包括：使用者在工作流程中有多個要定義的欄位，但由於時間限制而無法完成。 另一個案例是正在處理一或多個資料集統計資料，但尚未提供。 閱讀 [Attribution AI使用指南](../../intelligent-services/attribution-ai/user-guide.md#governance-policies) 了解更多。 |
 | 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
 
 如需Attribution AI的詳細資訊，請 [Attribution AI概述](../../intelligent-services/attribution-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
@@ -90,7 +90,7 @@ Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數�
 
 | 功能 | 說明 |
 | --- | --- |
-| 儲存草稿例項 | 這項新功能可讓行銷分析人員在設定期間將模型設定儲存為草稿例項，並繼續編輯草稿，直到訓練及計分完成為止。 當使用者在設定工作流程中有多個要定義的欄位，且一次無法完成，或一或多個資料集統計資料（例如欄完整性）使用時，此功能有所幫助的案例包括但不限於需要處理時間才能使用。 閱讀 [Customer AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md) 了解更多。 |
+| 儲存草稿例項 | 這項新功能可讓行銷分析人員將模型設定儲存為草稿例項，並繼續編輯，直到完成為止，再進行訓練和計分。 此功能有幫助的案例包括：使用者在工作流程中有多個要定義的欄位，但由於時間限制而無法完成。 另一個案例是正在處理一或多個資料集統計資料，但尚未提供。 閱讀 [Customer AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) 了解更多。 |
 | 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
 
 如需Customer AI的詳細資訊，請參閱 [Customer AI概觀](../../intelligent-services/customer-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
