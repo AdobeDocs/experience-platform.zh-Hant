@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: bbc9df59f91b6de12e902a71f7b9d054735cad7b
+source-git-commit: ac60e664d7708d9ac6772c61d13b7c1c44e92321
 workflow-type: tm+mt
-source-wordcount: '3079'
+source-wordcount: '3106'
 ht-degree: 5%
 
 ---
@@ -118,7 +118,7 @@ Adobe Experience Platform提供多個控制面板，讓您透過這些控制面�
 | 使用中標籤 | 在介面工具集資料庫中檢視時，使用中標籤可輕鬆識別控制面板中是否存在現有介面工具集。 這可讓您輕鬆避免重複，不過您仍可以多次新增相同的Widget。 |
 | 使用者定義的控制面板 | 使用者定義的控制面板可讓您建立和管理自訂控制面板，協助您加速深入分析和自訂視覺效果。 透過使用者定義的控制面板，您可以建立、新增及編輯定制小工具，以視覺化與貴組織相關的關鍵量度。 閱讀 [功能指南](../../dashboards/user-defined-dashboards.md) 了解更多。 |
 | Customer Data Platform Insights資料模型 | Customer Data Platform(CDP)Insights Data Model功能可公開資料模型和SQL，為各種設定檔、目的地和細分小工具提供深入分析。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標使用案例建立CDP報表。 然後，這些前瞻分析便可作為使用者定義控制面板的自訂小工具。 閱讀 [CDP Insights Data Model功能指南](../../dashboards/cdp-insights-data-model.md) 了解更多。 |
-| 對象重疊報表介面工具集 | 此介面工具集適用於兩者 [!UICONTROL 設定檔] 和 [!UICONTROL 區段] 控制面板。 報表提供依所選區段最高或最低重疊百分比排名的受眾順序清單。 從 [!UICONTROL 設定檔] 您可以透過合併政策，從所有可用區段中篩選及檢視對象重疊。 此 [!UICONTROL 區段] 控制面板可讓您依據特定區段來篩選對象重疊。<br>使用此分析來建立新的高效能區段，並避免將相同的對象傳送至不同的目的地。 此報表也有助於識別隱藏的深入分析，以改善細分或找出要追蹤的不重複設定檔。 |
+| 對象重疊報表介面工具集 | 此介面工具集適用於兩者 [!UICONTROL 設定檔] 和 [!UICONTROL 區段] 控制面板。 報表提供依所選區段最高或最低重疊百分比排名的受眾順序清單。 從 [!UICONTROL 設定檔] 您可以透過合併政策，從所有可用區段中篩選及檢視對象重疊。 此 [!UICONTROL 區段] 控制面板可讓您依據特定區段來篩選對象重疊。<br>使用此分析來建立新的高效能區段，並避免將相同的對象傳送至不同的目的地。 此報表也有助於識別隱藏的深入分析，以改善細分或找出要追蹤的不重複設定檔。 閱讀 [設定檔](../../dashboards/guides/profiles.md#audience-overlap-report) 和 [區段](../../dashboards/guides/segments.md#audience-overlap-report) 介面工具集指南以深入了解。 |
 
 如需 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md).
 
@@ -238,8 +238,8 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 | 功能 | 說明 |
 | --- | --- |
-| 警報訂閱API | Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的警報。 您可以在Platform UI內透過電子郵件、或兩者，接收警報。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| 資料集範例 | 查詢服務資料集範例可讓您對大資料執行探索式查詢，大幅縮短處理時間，並降低查詢準確度。 |
+| 警報訂閱API | Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的警報。 您可以在Platform UI內透過電子郵件、或兩者，接收警報。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 請參閱 [查詢警報檔案](../../query-service/api/alert-subscriptions.md) 了解更多。 |
+| 資料集範例 | 查詢服務資料集範例可讓您對大資料執行探索式查詢，大幅縮短處理時間，並降低查詢準確度。 請參閱 [資料集範例指南](../../query-service/sql/dataset-samples.md) 了解更多。 |
 
 如需 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md).
 
