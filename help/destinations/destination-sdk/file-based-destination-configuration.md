@@ -2,10 +2,10 @@
 description: 此設定可讓您指出檔案型目的地的基本資訊，例如目的地名稱、類別、說明等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 1d6318e33be639237c2c8e6f1bf67e1702949c20
+source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 5%
+source-wordcount: '3021'
+ht-degree: 4%
 
 ---
 
@@ -722,6 +722,54 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 | `authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶可連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過下列任何方法登入您的系統： <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 [憑證](./credentials-configuration-api.md) 設定。 </li><li>使用 `NONE` 若無需驗證即可將資料傳送至目的地平台。 </li></ul> |
 | `value` | 字串 | 要在映射步驟的Experience Platform用戶介面中顯示的架構名稱。 |
 | `responseFormat` | 字串 | 一律設為 `SCHEMA` 定義自訂結構時。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+### 必要對應 {#required-mappings}
+
+在架構設定中，您可以選擇新增必要（或預先定義）對應。 這些是使用者在設定與您目的地的連線時可檢視但無法修改的對應。 例如，您可以強制執行電子郵件地址欄位，以一律傳送至匯出檔案中的目的地。 請參閱以下具有必要對應的架構設定範例，以及在 [將資料啟用至批次目的地工作流程](/help/destinations/ui/activate-batch-profile-destinations.md).
+
+```json
+    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
+        "mandatoryRequired": true,
+        "primaryKeyRequired": true
+      },
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      },
+      {
+        "sourceType": "text/x.aep-xl",
+        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
+        "destination": "delete"
+      }
+    ] 
+```
+
+![UI啟動流程中所需對應的影像。](/help/destinations/destination-sdk/assets/required-mappings.png)
+
+>[!NOTE]
+>
+>目前支援的必要對應組合包括：
+>* 您可以設定必要的來源欄位和必要的目的地欄位。 在這種情況下，用戶無法編輯或選擇這兩個欄位中的任何一個，並且只能查看選擇。
+>* 您只能設定必要的目的地欄位。 在這種情況下，將允許用戶選擇源欄位以映射到目標。
+>
+> 當前僅配置必需源欄位 *not* 支援。
+
+如果您想要在目標的啟動工作流程中新增所需對應，請使用下表中所述的參數。
+
+| 參數 | 類型 | 說明 |
+|---------|----------|------|
+| `requiredMappingsOnly` | 布林值 | 指出使用者是否能對應啟動流程中的其他屬性和身分， *apart* 您定義的必要對應。 |
+| `requiredMappings.mandatoryRequired` | 布林值 | 如果此欄位必須是必填屬性，且應一律存在於匯出至您目的地的檔案中，則設為true。 深入了解 [必填屬性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
+| `requiredMappings.primaryKeyRequired` | 布林值 | 如果此欄位必須在匯出至目的地的檔案中作為重複資料刪除索引鍵，則設為true。 深入了解 [去重複化金鑰](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
+| `requiredMappings.sourceType` | 字串 | 視需要設定來源欄位時使用。 指示源欄位的欄位類型。 可選擇下列選項： <ul><li>`"text/x.schema-path"` 當來源欄位是預先定義的XDM屬性時</li><li>`"text/x.aep-xl"` 當源欄位是函式時，例如，如果需要在源欄位側滿足條件。 如需支援函式的詳細資訊，請參閱 [資料準備](/help/data-prep/api/functions.md) 檔案。</li></ul> |
+| `requiredMappings.source` | 字串 | 指示所需的源欄位。 |
+| `requiredMappings.destination` | 字串 | 指出必要的目的地欄位。 |
 
 {style=&quot;table-layout:auto&quot;}
 
