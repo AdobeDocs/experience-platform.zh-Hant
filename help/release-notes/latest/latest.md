@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 20902b6a0dce4c189f43343d9fd0a87913a0fdbf
+source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '2894'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,6 @@ Adobe Experience Platform 現有功能更新：
 - [稽核記錄](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
 - [資料收集](#data-collection)
-- [資料衛生](#data-hygiene)
 - [目的地](#destinations)
 - [Experience Data Model(XDM)](#xdm)
 - [身份識別服務](#identity-service)
@@ -118,27 +117,6 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 -->
 
 如需Platform中資料收集的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
-
-## 資料衛生 {#data-hygiene}
-
-Adobe Experience Platform提供一組完善的工具，可管理大型、複雜的資料操作，以便協調消費者體驗。 隨著資料隨著時間傳入系統中，管理資料儲存變得越來越重要，這樣資料就能如預期般使用、在需要更正錯誤資料時更新，並在組織原則認為有必要時刪除。
-
-Adobe Experience Platform的資料衛生功能可讓您排程自動資料集過期時間，並以程式設計方式依身分刪除消費者資料，以清除資料。
-
->[!IMPORTANT]
->
->資料衛生功能僅適用於已購買AdobeHealthcare Shield的組織。
-
-**新功能或更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 更新UI工作流程 | 的工作流程 [排程資料集過期](../../hygiene/ui/dataset-expiration.md) 和 [刪除使用者資料](../../hygiene/ui/delete-consumer.md) 已在UI中簡化。 |
-| 配額API端點 | 您現在可以呼叫 [`/quota` 端點](../../hygiene/api/quota.md). |
-
-{style=&quot;table-layout:auto&quot;}
-
-如需Platform資料衛生功能的詳細資訊，請參閱 [資料衛生概覽](../../hygiene/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
