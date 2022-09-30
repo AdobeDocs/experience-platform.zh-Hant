@@ -1,24 +1,20 @@
 ---
-keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬性的訪問控制；ABAC
+keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬性的存取控制；ABAC
 title: 基於屬性的訪問控制瀏覽
-description: 本文檔提供有關在Adobe Experience Cloud使用「權限」介面的資訊
+description: 本檔案提供在Adobe Experience Cloud中使用權限介面的相關資訊
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 3%
+source-wordcount: '346'
+ht-degree: 4%
 
 ---
 
 # 權限指南
 
->[!IMPORTANT]
->
->基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+權限是Adobe Experience Cloud的區域，管理員可在此定義使用者角色和存取原則，以管理產品應用程式內功能和物件的存取權限。
 
-權限是Adobe Experience Cloud的區域，管理員可以在該區域定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限。
-
-使用權限，您可以配置：
+透過權限，您可以設定：
 
 * [標記](./labels.md)
 * [權限](./permissions.md)
@@ -27,24 +23,24 @@ ht-degree: 3%
 * [沙箱](./sandboxes.md)
 * [使用者](./users.md)
 
-為了訪問基於屬性的訪問控制權限 [!DNL Experience Cloud]，您必須是您的組織的管理員，該組織具有對 [!DNL Experience Cloud]。 雖然Adobe支援組織的靈活管理員層次結構，但您必須是Adobe Experience Platform的產品管理員才能配置權限。 參見Adobe Help Center上的 [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) 的子菜單。
+為了訪問基於屬性的訪問控制權限， [!DNL Experience Cloud]，您必須是您組織的管理員，且該組織已訂閱 [!DNL Experience Cloud]. 雖然Adobe可為您的組織支援彈性的管理員階層，但您必須是Adobe Experience Platform的產品管理員才能設定權限。 請參閱Adobe Help Center上的文章： [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) 以取得更多資訊。
 
-如果您沒有管理員權限，請與系統管理員聯繫以獲得訪問權限。
+如果您沒有管理員權限，請連絡您的系統管理員以取得存取權。
 
-一旦您具有管理員權限，請轉到 [Adobe Experience Cloud](https://experience.adobe.com/) 並使用您的Adobe憑據登錄。 登錄後， **[!UICONTROL 概述]** 頁面。 此頁顯示您的組織訂閱的產品以及將用戶和管理員添加到整個組織的其他控制項。 選擇 **[!UICONTROL 權限]** 開啟基於屬性的訪問控制工作區，以用於平台整合。
+取得管理員權限後，請前往 [Adobe Experience Cloud](https://experience.adobe.com/) 並使用您的Adobe憑證登入。 登入後， **[!UICONTROL 概述]** 會針對您擁有管理員權限的組織顯示頁面。 此頁面顯示貴組織訂閱的產品，以及可新增使用者和管理員至整個組織的其他控制項。 選擇 **[!UICONTROL 權限]** 為Platform整合開啟以屬性為基礎的存取控制工作區。
 
-![flac-select產品](../../images/flac-ui/flac-select-product.png)
+![flac-select-product](../../images/flac-ui/flac-select-product.png)
 
-此時將顯示Adobe Experience Cloud的基於屬性的訪問控制工作區，開啟 **[!UICONTROL 角色]** 的子菜單。 此頁允許您查看所有角色並管理本文檔中概述的各種設定。
+Adobe Experience Cloud的屬性型存取控制工作區隨即顯示，在 **[!UICONTROL 角色]** 頁面。 此頁允許您按本文檔所述查看所有角色並管理各種設定。
 
 >[!IMPORTANT]
 >
->在您的組織啟用基於屬性的訪問控制後，您可以開始在Adobe Experience Cloud使用權限，而不是在Adobe Admin Console使用產品配置檔案，以管理組織中用戶、功能、標籤和其他資源的權限。
+>在您的組織啟用屬性型存取控制後，您就可以開始使用Adobe Experience Cloud的權限(而非Adobe Admin Console中的產品設定檔)，來管理組織中使用者、功能、標籤和其他資源的權限。
 
-![flac選擇角色](../../images/flac-ui/flac-select-roles.png)
+![flac-select-roles](../../images/flac-ui/flac-select-roles.png)
 
-本使用手冊重點介紹如何使用 [!DNL Experience Cloud] 為平台分配訪問權限。 有關如何導航的更一般資訊 [!DNL Admin Console]，請參見 [Admin Console使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)。
+本使用手冊著重於如何使用 [!DNL Experience Cloud] 為Platform指派存取權限。 如需如何導覽的一般資訊 [!DNL Admin Console]，請參閱 [Admin Console使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html).
 
 ## 後續步驟
 
-在導航了權限工作區後，繼續下一步到 [建立新角色](roles.md)。
+導覽完權限工作區後，請繼續進行下一個步驟，前往 [建立新角色](roles.md).

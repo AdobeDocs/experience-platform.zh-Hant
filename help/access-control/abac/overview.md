@@ -3,18 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制概述
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b095461b0c2510e84ca9a3a368f4907f8b3d5370
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '1684'
+source-wordcount: '1653'
 ht-degree: 1%
 
 ---
 
 # 基於屬性的訪問控制概述
-
->[!IMPORTANT]
->
->基於屬性的訪問控制目前在有限版本中為美國醫療保健客戶提供。 完整發行後，所有Real-time Customer Data Platform客戶都能使用此功能。
 
 基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制對特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至架構欄位或區段的標籤。 管理員定義了包括屬性的訪問策略以管理用戶訪問權限。
 

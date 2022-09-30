@@ -1,35 +1,31 @@
 ---
-keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬性的訪問控制；ABAC
+keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬性的存取控制；ABAC
 title: 基於屬性的訪問控制管理用戶
-description: 本文檔提供有關通過Adobe Experience Cloud的「權限」介面管理用戶和用戶組的資訊
+description: 本檔案提供有關透過Adobe Experience Cloud的「權限」介面管理使用者和使用者群組的資訊
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '160'
 ht-degree: 2%
 
 ---
 
 # 管理使用者
 
->[!IMPORTANT]
->
->基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
+如果您想要檢視使用者詳細資訊和指派給他們的角色，請選取 **[!UICONTROL 使用者]** 標籤。
 
-如果要查看用戶詳細資訊和分配給用戶的角色，請選擇 **[!UICONTROL 用戶]** 頁籤。
+![flac-users-tab](../../images/flac-ui/flac-users-tab.png)
 
-![flac用戶頁籤](../../images/flac-ui/flac-users-tab.png)
+將顯示用戶清單。 從清單中選取您要檢視的使用者。 或者，使用搜索欄通過輸入用戶的姓名或電子郵件地址來搜索用戶。
 
-將顯示用戶清單。 從清單中選擇要查看的用戶。 或者，使用搜索欄通過輸入用戶姓名或電子郵件地址來搜索用戶。
+詳細資訊索引標籤會提供使用者的概觀。 概述會顯示使用者名稱、帳戶類型、電子郵件、驗證ID、聯絡資訊和位置詳細資訊。
 
-「詳細資訊」(Details)頁籤提供用戶的概述。 概覽顯示用戶名、帳戶類型、電子郵件、驗證ID、聯繫資訊和位置詳細資訊。
+![flac-users-details](../../images/flac-ui/flac-users-details.png)
 
-![flac用戶詳細資訊](../../images/flac-ui/flac-users-details.png)
+選取 **[!UICONTROL 角色]** 頁簽，查看用戶被分配的角色。
 
-選擇 **[!UICONTROL 角色]** 頁籤，查看用戶指派給的角色。
-
-![flac用戶角色](../../images/flac-ui/flac-users-roles.png)
+![flac-users-roles](../../images/flac-ui/flac-users-roles.png)
 
 ## 後續步驟
 
-您現在已學習了如何查看用戶詳細資訊以及當前添加到的角色。 要瞭解有關基於屬性的訪問控制的詳細資訊，請參閱 [基於屬性的訪問控制概述](../overview.md)。
+您現在已學習如何檢視使用者詳細資訊，以及目前新增的使用者角色。 若要進一步了解基於屬性的訪問控制，請參閱 [基於屬性的訪問控制概述](../overview.md).

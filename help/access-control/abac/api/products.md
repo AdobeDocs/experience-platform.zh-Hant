@@ -1,31 +1,27 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；api；基於屬性的訪問控制；基於屬性的訪問控制
+keywords: Experience Platform；首頁；熱門主題；API；屬性型存取控制；屬性型存取控制
 solution: Experience Platform
-title: 產品API終結點
-description: 基於屬性的訪問控制API中的/products端點允許您以寫程式方式管理Adobe Experience Platform的產品。
+title: 產品API端點
+description: 屬性型存取控制API中的/products端點可讓您以程式設計方式管理Adobe Experience Platform中的產品。
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '492'
 ht-degree: 3%
 
 ---
 
-# 產品終結點
+# 產品端點
 
->[!IMPORTANT]
->
->基於屬性的訪問控制目前在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Real-time Customer Data Platform客戶使用。
-
-的 `/products` 通過基於屬性的訪問控制API中的端點，您可以以寫程式方式管理產品以及與組織中的產品相關聯的權限類別和權限集。
+此 `/products` 屬性型存取控制API中的端點可讓您以程式設計方式管理產品，以及與貴組織產品相關聯的權限類別和權限集。
 
 ## 快速入門
 
-本指南中使用的API終結點是基於屬性的訪問控制API的一部分。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+本指南中使用的API端點是屬性型存取控制API的一部分。 繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
 
-## 檢索已授權產品的清單 {#list}
+## 擷取已授權產品的清單 {#list}
 
-您可以通過向以下站點發出GET請求來檢索已授權產品的清單 `/products` 端點。
+您可以向 `/products` 端點。
 
 **API格式**
 
@@ -35,7 +31,7 @@ GET /products/
 
 **要求**
 
-以下請求將檢索屬於您組織的有權產品清單。
+下列請求會擷取屬於您組織的已授權產品清單。
 
 ```shell
 curl -X GET \
@@ -47,7 +43,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回屬於您組織的有權產品清單。
+成功的回應會傳回屬於您組織的已授權產品清單。
 
 ```json
 {
@@ -63,13 +59,13 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 查詢產品的相應ID。 |
+| `id` | 查詢產品的對應ID。 |
 | `name` | 查詢的產品的名稱。 |
-| `serviceCode` | 查詢產品的相應服務代碼。 |
+| `serviceCode` | 查詢產品的對應服務代碼。 |
 
-## 按產品ID查找權限類別
+## 依產品ID查詢權限類別
 
-您可以通過向以下對象發出GET請求來查找給定產品的權限類別 `/products/{PRODUCT_ID}/categories` 指定產品ID時的終結點。
+您可以向 `/products/{PRODUCT_ID}/categories` 端點，同時指定您的產品ID。
 
 **API格式**
 
@@ -79,11 +75,11 @@ GET /products/{PRODUCT_ID}/categories
 
 | 參數 | 說明 |
 | --- | --- |
-| {PRODUCT_ID} | 與要查找的權限類別關聯的產品的ID。 |
+| {PRODUCT_ID} | 與您要查詢的權限類別相關聯的產品ID。 |
 
 **要求**
 
-以下請求檢索與關聯的權限類別 `{PRODUCT_ID}`。
+下列請求會擷取與 `{PRODUCT_ID}`.
 
 ```shell
 curl -X GET \
@@ -95,7 +91,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回與您查詢的產品ID關聯的權限類別。
+成功的回應會傳回與您查詢的產品ID相關聯的權限類別。
 
 ```json
 {
@@ -142,9 +138,9 @@ curl -X GET \
 | `category` | 查詢的產品ID中可用的權限類別。 |
 | `name` | 權限類別的名稱。 |
 
-## 按產品ID查找權限集
+## 依產品ID查詢權限集
 
-您可以通過向Web站點發出GET請求來查找給定產品的權限集 `/products/{PRODUCT_ID}/permission-sets` 指定產品ID時的終結點。
+您可以向 `/products/{PRODUCT_ID}/permission-sets` 端點，同時指定您的產品ID。
 
 **API格式**
 
@@ -154,11 +150,11 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 | 參數 | 說明 |
 | --- | --- |
-| {PRODUCT_ID} | 與要查找的權限集關聯的產品的ID。 |
+| {PRODUCT_ID} | 與您要查詢的權限集相關聯的產品ID。 |
 
 **要求**
 
-以下請求檢索與關聯的權限集 `{PRODUCT_ID}`。
+下列請求會擷取與 `{PRODUCT_ID}`.
 
 ```shell
 curl -X GET \
@@ -170,7 +166,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回與您查詢的產品ID關聯的權限集。
+成功的回應會傳回與您查詢的產品ID相關聯的權限集。
 
 ```json
 {
@@ -235,10 +231,10 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `permission-sets` | 權限集表示管理員可以應用於角色的一組權限。 管理員可以將權限集分配給角色，而不是分配單個權限。 這允許您從包含一組權限的預定義角色建立自定義角色。 |
-| `id` | 查詢的權限集的相應ID。 |
+| `permission-sets` | 權限集表示管理員可以應用到角色的一組權限。 管理員可以將權限集指派給角色，而不是指派個別權限。 這可讓您從包含一組權限的預先定義角色中建立自訂角色。 |
+| `id` | 查詢的權限集的對應ID。 |
 | `name` | 查詢的權限集的對應名稱。 |
 | `category` | 可用權限類別。 |
-| `permissions` | 權限包括查看和/或使用平台功能（如建立沙箱、定義架構和管理資料集）的能力。 |
-| `permissions.resource` | 主題可以訪問或無法訪問的資產或對象。 資源可以是檔案、應用程式、伺服器，甚至是API。 |
-| `permissions.actions` | 允許主體對查詢的資源執行的操作。 可能的值包括： `view`。 `read`。 `create`。 `edit`, `delete` |
+| `permissions` | 權限包括檢視和/或使用Platform功能的功能，例如建立沙箱、定義結構描述及管理資料集。 |
+| `permissions.resource` | 主體可以或無法存取的資產或物件。 資源可以是檔案、應用程式、伺服器或甚至API。 |
+| `permissions.actions` | 允許主體對查詢的資源執行的操作。 可能的值包括： `view`, `read`, `create`, `edit`，和 `delete` |
