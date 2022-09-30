@@ -2,10 +2,10 @@
 title: 資料衛生API指南
 description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 0%
+source-wordcount: '400'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買AdobeHealthcare Shield或Privacy Shield的組織。
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Analytics Healthcare Shield的組織。
 
 資料衛生API可讓您以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料，並排程資料集的到期日。 本指南涵蓋使用API的先決條件步驟，並提供指向更多端點特定檔案的連結。
 

@@ -2,9 +2,9 @@
 title: 刪除消費者記錄
 description: 了解如何在Adobe Experience Platform UI中刪除消費者記錄。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: e4cc78591d0d3b4abd660956b1263092697d63d5
+source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買AdobeHealthcare Shield或Privacy Shield的組織。
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Analytics Healthcare Shield的組織。
 
 此 [[!UICONTROL 資料衛生] 工作區](./overview.md) 在Adobe Experience Platform UI中，您可以刪除參與Identity Service和即時客戶設定檔的消費者記錄。
 

@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 81c17a6ea07efbbea91e0d918d52ec96e0335152
+source-git-commit: 45281721c6fb26c303bb820fa39f5c6ed71b55f9
 workflow-type: tm+mt
-source-wordcount: '3128'
-ht-degree: 4%
+source-wordcount: '3059'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,6 @@ Adobe Experience Platform的新功能：
 
 - [以屬性為基礎的存取控制](#abac)
 - [資料衛生](#data-hygiene)
-- [[!UICONTROL 隱私權主控台]](#privacy-console)
 
 Adobe Experience Platform 現有功能更新：
 
@@ -55,19 +54,13 @@ Adobe Experience Platform的資料衛生功能可讓您排程自動資料集過�
 
 >[!IMPORTANT]
 >
->僅購買了AdobeHealthcare Shield或Privacy Shield的組織才能使用資料衛生功能。
+>資料衛生功能僅適用於已購買AdobeHealthcare Shield的組織。
 
 請參閱下列檔案以開始使用資料衛生：
 
 - [資料衛生概觀](../../hygiene/home.md):了解Platform資料衛生功能的基本知識。
 - [[!UICONTROL 資料衛生] UI指南](../../hygiene/ui/overview.md):了解如何在Platform使用者介面中排程資料集到期日和消費者刪除請求。
 - [資料衛生API指南](../../hygiene/api/overview.md):您在UI中可執行的所有資料衛生活動，也可以以程式設計方式執行
-
-## [!UICONTROL 隱私權主控台] {#privacy-console}
-
-此 [!UICONTROL 隱私權主控台] Experience PlatformUI中的索引標籤，提供隱私權相關功能(例如 [來自Privacy Service的資料主體請求](../../privacy-service/home.md), [資料衛生工作單](../../hygiene/home.md)，和 [稽核記錄](../../landing/governance-privacy-security/audit-logs/overview.md). 主控台也提供數種產品內使用案例指南，協助您完成常見的隱私權工作流程。
-
-請參閱 [隱私權主控台概述](../../landing/governance-privacy-security/privacy-console.md) 以取得功能的詳細資訊。
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
