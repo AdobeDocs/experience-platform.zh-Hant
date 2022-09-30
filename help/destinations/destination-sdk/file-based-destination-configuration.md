@@ -2,9 +2,9 @@
 description: 此設定可讓您指出檔案型目的地的基本資訊，例如目的地名稱、類別、說明等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: b32450311469ecf2af2ca45b3fa1feaf25147ea2
+source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
 workflow-type: tm+mt
-source-wordcount: '3021'
+source-wordcount: '2989'
 ht-degree: 4%
 
 ---
@@ -727,30 +727,33 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 
 ### 必要對應 {#required-mappings}
 
-在架構設定中，您可以選擇新增必要（或預先定義）對應。 這些是使用者在設定與您目的地的連線時可檢視但無法修改的對應。 例如，您可以強制執行電子郵件地址欄位，以一律傳送至匯出檔案中的目的地。 請參閱以下具有必要對應的架構設定範例，以及在 [將資料啟用至批次目的地工作流程](/help/destinations/ui/activate-batch-profile-destinations.md).
+在架構設定中，您可以選擇新增必要（或預先定義）對應。 這些是使用者在設定與您目的地的連線時可檢視但無法修改的對應。 例如，您可以強制執行電子郵件地址欄位，以一律傳送至匯出檔案中的目的地。 請參閱以下兩個具有必要對應的架構設定範例，以及這些範例在的對應步驟中的外觀 [將資料啟用至批次目的地工作流程](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ```json
-    "requiredMappingsOnly": true, // this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
     "requiredMappings": [
       {
         "destination": "identityMap.ExamplePartner_ID", //if only the destination field is specified, then the user is able to select a source field to map to the destination.
         "mandatoryRequired": true,
         "primaryKeyRequired": true
-      },
-      {
-        "sourceType": "text/x.schema-path",
-        "source": "personalEmail.address",
-        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
-      },
-      {
-        "sourceType": "text/x.aep-xl",
-        "source": "iif(${segmentMembership.ups.seg_id.status}==\"exited\", \"1\",\"0\")",
-        "destination": "delete"
       }
     ] 
 ```
 
-![UI啟動流程中所需對應的影像。](/help/destinations/destination-sdk/assets/required-mappings.png)
+![UI啟動流程中所需對應的影像。](/help/destinations/destination-sdk/assets/required-mappings-1.png)
+
+```json
+    "requiredMappingsOnly": true, // when this is selected true , users cannot map other attributes and identities in the activation flow, apart from the required mappings that you define.
+    "requiredMappings": [
+      {
+        "sourceType": "text/x.schema-path",
+        "source": "personalEmail.address",
+        "destination": "personalEmail.address" //when both source and destination fields are specified as required mappings, then the user can not select or edit any of the two fields and can only view the selection.
+      }
+    ] 
+```
+
+![UI啟動流程中所需對應的影像。](/help/destinations/destination-sdk/assets/required-mappings-2.png)
 
 >[!NOTE]
 >
@@ -767,7 +770,7 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 | `requiredMappingsOnly` | 布林值 | 指出使用者是否能對應啟動流程中的其他屬性和身分， *apart* 您定義的必要對應。 |
 | `requiredMappings.mandatoryRequired` | 布林值 | 如果此欄位必須是必填屬性，且應一律存在於匯出至您目的地的檔案中，則設為true。 深入了解 [必填屬性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `requiredMappings.primaryKeyRequired` | 布林值 | 如果此欄位必須在匯出至目的地的檔案中作為重複資料刪除索引鍵，則設為true。 深入了解 [去重複化金鑰](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys). |
-| `requiredMappings.sourceType` | 字串 | 視需要設定來源欄位時使用。 指示源欄位的欄位類型。 可選擇下列選項： <ul><li>`"text/x.schema-path"` 當來源欄位是預先定義的XDM屬性時</li><li>`"text/x.aep-xl"` 當源欄位是函式時，例如，如果需要在源欄位側滿足條件。 如需支援函式的詳細資訊，請參閱 [資料準備](/help/data-prep/api/functions.md) 檔案。</li></ul> |
+| `requiredMappings.sourceType` | 字串 | 視需要設定來源欄位時使用。 使用 `"text/x.schema-path"`，表示來源欄位是預先定義的XDM屬性 |
 | `requiredMappings.source` | 字串 | 指示所需的源欄位。 |
 | `requiredMappings.destination` | 字串 | 指出必要的目的地欄位。 |
 
