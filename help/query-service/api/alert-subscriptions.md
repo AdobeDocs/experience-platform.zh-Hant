@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；警報；
 title: 警報訂閱API端點
 description: 本指南提供您可使用Query Service API對警報訂閱端點進行之各種API呼叫的範例HTTP要求和回應。
-source-git-commit: bd841244fcb7d63af9c3383335307647b93499ce
+source-git-commit: cab7fcfda1bd8f6462af6e631f1fcee1f354d26b
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
@@ -301,7 +301,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **回應**
 
-成功的回應會傳回200的HTML狀態，以及訂閱的所有警報。 這包括警報ID、警報類型、訂閱者的Adobe註冊電子郵件ID，及其偏好的通知通道。
+成功的回應會傳回200的HTTP狀態，以及所有訂閱的警報。 這包括警報ID、警報類型、訂閱者的Adobe註冊電子郵件ID，及其偏好的通知通道。
 
 ```json
 {
