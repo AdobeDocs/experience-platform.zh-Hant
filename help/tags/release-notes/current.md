@@ -1,15 +1,20 @@
 ---
 title: 標籤和事件轉送的發行說明
-description: Adobe Experience Platform中標籤和事件轉送的最新發行說明。
+description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: af424089c0afdaae76b312137afc5cbd28e82856
+source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 1%
+source-wordcount: '224'
+ht-degree: 7%
 
 ---
 
 # 標籤和事件轉送的發行說明
+
+## 2022 年 9 月 28 日
+
+* **Adobe Experience Platform left nav整合**:先前專屬於資料收集UI的所有功能（包括標籤和事件轉送），現在也可透過Experience PlatformUI類別下方的左側導覽使用 **[!UICONTROL 資料收集]**. 如此一來，使用Platform中的資料收集功能時，就不需要在UI之間切換。
+* **標籤和事件轉送中的使用者歸因**:現在，將可用屬性列入標籤和事件轉送時，每個列出的屬性都會顯示其上次更新的時間以及更新對象。
 
 ## 2022 年 7 月 27 日
 
