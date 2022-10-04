@@ -3,14 +3,14 @@ keywords: Experience Platform；查詢；查詢服務；疑難排解；護欄；
 title: 查詢服務的護欄
 description: 本文檔提供有關查詢服務資料使用限制的資訊，以幫助您優化查詢使用。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: d874fed681449c6f5114196cface157c8c406d69
+source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '764'
 ht-degree: 3%
 
 ---
 
-# 查詢服務資料的護欄
+# 查詢服務的護欄
 
 護欄是提供資料和系統使用、效能最佳化以及避免錯誤或意外結果在Adobe Experience Platform中的指引的閾值。
 
@@ -23,10 +23,6 @@ ht-degree: 3%
 * **臨機查詢**:用於執行 `SELECT` 查詢，以探索、實驗和驗證查詢結果所在的資料 **未儲存** 資料湖。
 
 * **批次查詢**:用於執行 `INSERT TABLE AS SELECT` 和 `CREATE TABLE AS SELECT` 清除、塑造、操控和擴充資料的查詢。 這些查詢的結果 **儲存** 資料湖。 用於測量此功能耗用量的量度是計算小時數。
-
->[!IMPORTANT]
->
->為確保Real-time Customer Data Platform深入分析控制面板的每個查詢都有足夠的資源來有效執行，API會為每個查詢指派併發槽來追蹤資源使用情形。 該系統最多可處理四個併發查詢，因此，在任何給定時間都有四個併發查詢槽可用。 根據併發槽將查詢放入隊列，然後在隊列中等待，直到有足夠的併發槽可用。
 
 下圖概括了Query Service功能當前的打包和許可方式：
 
@@ -71,6 +67,8 @@ ht-degree: 3%
 | 透過 | 資料集 | 不適用 | 這會定義如何讓使用者取得結果。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+為確保Real-time Customer Data Platform深入分析控制面板的每個查詢都有足夠的資源來有效執行，API會為每個查詢指派併發槽來追蹤資源使用情形。 該系統最多可處理四個併發查詢，因此，在任何給定時間都有四個併發查詢槽可用。 根據併發槽將查詢放入隊列，然後在隊列中等待，直到有足夠的併發槽可用。
 
 ## 後續步驟
 

@@ -2,7 +2,7 @@
 title: 使用者定義的控制面板
 description: 了解如何建立和管理自訂控制面板，以便建立、新增和編輯自訂小工具，以視覺化關鍵量度。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: d874fed681449c6f5114196cface157c8c406d69
+source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 0%
@@ -12,11 +12,6 @@ ht-degree: 0%
 # 使用者定義的控制面板
 
 Adobe Experience Platform控制面板可協助您透過使用者定義的控制面板功能，加速深入分析和自訂視覺效果。 此功能可讓您建立和管理自訂控制面板，在其中建立、新增及編輯定制小工具，以視覺化與貴組織相關的關鍵量度。
-
->[!IMPORTANT]
->
->為確保Real-time Customer Data Platform深入分析控制面板的每個查詢都有足夠的資源來有效執行，API會為每個查詢指派併發槽來追蹤資源使用情形。 該系統最多可處理四個併發查詢，因此，在任何給定時間都有四個併發查詢槽可用。 根據併發槽將查詢放入隊列，然後在隊列中等待，直到有足夠的併發槽可用。
-
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -120,6 +115,8 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 在此工作區中，可以重新排列小部件並調整其大小。 選擇 **[!UICONTROL 儲存]** 以保留控制面板名稱和設定的配置。
 
 ![使用自訂介面工具集的使用者定義控制面板，並反白顯示「儲存」按鈕。](./images/user-defined-dashboards/user-defined-dashboard.png)
+
+為確保Real-time Customer Data Platform深入分析控制面板的每個查詢都有足夠的資源來有效執行，API會為每個查詢指派併發槽來追蹤資源使用情形。 該系統最多可處理四個併發查詢，因此，在任何給定時間都有四個併發查詢槽可用。 根據併發槽將查詢放入隊列，然後在隊列中等待，直到有足夠的併發槽可用。
 
 ## 後續步驟
 
