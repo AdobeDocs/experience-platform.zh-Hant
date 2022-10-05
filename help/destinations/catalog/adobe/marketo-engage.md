@@ -1,10 +1,10 @@
 ---
 title: Marketo Engage目標
-description: Marketo Engage是用於營銷、廣告、分析和商業的唯一端到端客戶體驗管理(CXM)解決方案。 它使您能夠自動化和管理從CRM主管管理和客戶參與到基於客戶的市場營銷和收入分配中的活動。
+description: Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理、客戶參與，到以帳戶為基礎的行銷和收入歸因。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 6dc4a93b46d6111637e0024da574d605e0d2b986
+source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '870'
 ht-degree: 2%
 
 ---
@@ -15,69 +15,75 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->隨著 [增強型MarketoV2目的連接器](/help/release-notes/2022/july-2022.md#destinations)您現在在目的地目錄中看到兩張Marketo卡。
->* 如果已將資料激活到 **[!UICONTROL MarketoV1]** 目標：請為 **[!UICONTROL MarketoV2]** 目標並刪除現有資料流 **[!UICONTROL MarketoV1]** 到2023年2月。 截至該日， **[!UICONTROL MarketoV1]** 將刪除目標卡。
->* 如果尚未為 **[!UICONTROL MarketoV1]** 目標，請使用新 **[!UICONTROL MarketoV2]** 卡，用於連接資料並將資料導出到Marketo。
+>隨著 [增強的Marketo V2目的地連接器](/help/release-notes/2022/july-2022.md#destinations)，您現在會在目的地目錄中看到兩個Marketo卡。
+>* 如果您已在 **[!UICONTROL Marketo V1]** 目的地：請建立新資料流到 **[!UICONTROL Marketo V2]** 目標資料流並將其刪除 **[!UICONTROL Marketo V1]** 目的地。 截至該日， **[!UICONTROL Marketo V1]** 目的地卡將會移除。
+>* 如果您尚未建立任何資料流至 **[!UICONTROL Marketo V1]** 目的地，請使用新 **[!UICONTROL Marketo V2]** 卡片，以連線並匯出資料至Marketo。
 
 
-![兩張Marketo目的卡並排顯示的影像。](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+![以並排檢視顯示的兩個Marketo目的地卡片影像。](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
 
-MarketoV2目的地的改進包括：
+Marketo V2目的地的改良功能包括：
 
-* 在 **[!UICONTROL 計畫段]** 激活工作流的步驟，在MarketoV1中，您需要手動添加 **映射ID** 成功將資料導出到Marketo。 MarketoV2不再需要此手動步驟。
-* 在 **[!UICONTROL 映射]** 激活工作流的步驟，在MarketoV1中，您只能將XDM欄位映射到Marketo的三個目標欄位： `firstName`。 `lastName`, `companyName`。 通過MarketoV2版本，您現在可以將XDM欄位映射到Marketo的更多欄位。 有關詳細資訊，請閱讀 [受支援的屬性](#supported-attributes) 的下一頁。
+* 在 **[!UICONTROL 排程區段]** 在Marketo V1中，您需要手動新增 **對應ID** 成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
+* 在 **[!UICONTROL 對應]** 啟動工作流程的步驟中，在Marketo V1中，您可以將XDM欄位對應至Marketo中的僅三個目標欄位： `firstName`, `lastName`，和 `companyName`. 透過Marketo V2版本，您現在可以將XDM欄位對應至Marketo中的更多欄位。 如需詳細資訊，請閱讀 [支援的屬性](#supported-attributes) 下文一節。
 
 ## 總覽 {#overview}
 
-[!DNL Marketo Engage] 是用於營銷、廣告、分析和商業的唯一端到端客戶體驗管理(CXM)解決方案。 它使您能夠自動化和管理從CRM主管管理和客戶參與到基於客戶的市場營銷和收入分配中的活動。
+[!DNL Marketo Engage] 是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理、客戶參與，到以帳戶為基礎的行銷和收入歸因。
 
-目標使營銷商能夠將在Adobe Experience Platform建立的段推送到Marketo，在那裡它們將顯示為靜態清單。
+目的地可讓行銷人員將在Adobe Experience Platform中建立的區段推送至Marketo，這些區段會顯示為靜態清單。
 
-## 支援的身份和屬性 {#supported-identities-attributes}
+## 支援的身分和屬性 {#supported-identities-attributes}
 
 >[!NOTE]
 >
->在 [映射步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 在激活目標工作流中 *強制* 映射標識和 *可選* 按鈕。 從「標識名稱空間」頁籤映射電子郵件和/或ECID是確保在Marketo匹配該人員的最重要工作。 映射電子郵件可確保最高的匹配率。
+>在 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 啟動目標工作流程， *強制* 來對應身分和 *可選* 映射屬性。 從「身分命名空間」標籤對應電子郵件和/或ECID是確保人員在Marketo中符合的最重要動作。 對應電子郵件可確保最高的匹配率。
 
-### 支援的身份 {#supported-identities}
+### 支援的身分 {#supported-identities}
 
-| 目標標識 | 說明 |
+| Target身分 | 說明 |
 |---|---|
-| ECID | 表示ECID的命名空間。 以下別名也可以引用此命名空間：&quot;Adobe Marketing CloudID&quot;,&quot;Adobe Experience CloudID&quot;,&quot;Adobe Experience PlatformID&quot; 請參閱以下文檔 [ECID](/help/identity-service/ecid.md) 的子菜單。 |
-| 電子郵件 | 表示電子郵件地址的命名空間。 此類型的命名空間通常與單個人關聯，因此可用於跨不同渠道標識該人。 |
+| ECID | 代表ECID的命名空間。 此命名空間也可由下列別名引用：&quot;Adobe Marketing Cloud ID&quot;、&quot;Adobe Experience Cloud ID&quot;、&quot;Adobe Experience Platform ID&quot;。 請參閱下列檔案，內容如下 [ECID](/help/identity-service/ecid.md) 以取得更多資訊。 |
+| 電子郵件 | 代表電子郵件地址的命名空間。 此類型的命名空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### 支援的屬性 {#supported-attributes}
 
-您可以將屬性從Experience Platform映射到您的組織在Marketo有權訪問的任何屬性。 在Marketo，你可以 [描述API請求](https://developers.marketo.com/rest-api/lead-database/leads/#describe) 以檢索您的組織有權訪問的屬性欄位。
+您可以將屬性從Experience Platform對應至貴組織在Marketo中可存取的任何屬性。 在Marketo中，您可以使用 [說明API請求](https://developers.marketo.com/rest-api/lead-database/leads/#describe) 以擷取您的組織可存取的屬性欄位。
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出類型和頻率 {#export-type-frequency}
 
 有關目標導出類型和頻率的資訊，請參閱下表。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在導出段（受眾）的所有成員，其中使用的標識符（電子郵件、ECID） [!DNL Marketo Engage] 目標。 |
-| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL 區段匯出]** | 您會使用 [!DNL Marketo Engage] 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
-## 設定目標並激活段 {#set-up}
+## 設定目的地和啟用區段 {#set-up}
 
 >[!IMPORTANT]
 > 
->* 要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。
->* 要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>* 若要連線至目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制權限](/help/access-control/home.md#permissions).
+>* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
 
-有關如何設定目標和激活段的詳細說明，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) 在Marketo檔案里。
+如需如何設定目的地和啟用區段的詳細指示，請參閱 [推送Adobe Experience Platform區段至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) 在Marketo檔案中。
 
-下面的視頻還演示了配置Marketo目標和激活段的步驟。
+以下影片也示範設定Marketo目的地和啟用區段的步驟。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱上面連結的指南。
+>視訊未完全反映目前的功能。 如需最新資訊，請參閱上述連結的指南。 視訊的下列部分已過時：
+> 
+>* 您應在Experience PlatformUI中使用的目的地卡片是 **[!UICONTROL Marketo V2]**.
+>* 影片未顯示新 **[!UICONTROL 人員建立]** 「連線至目標」工作流程中的「選取器」欄位。
+>* 影片中傳出的兩個限制不再適用。 除了錄制影片時支援的區段成員資格資訊之外，您現在還可以映射許多其他設定檔屬性欄位。 您也可以將區段成員匯出至尚未存在於Marketo靜態清單中的Marketo，這些區段成員會新增至清單中。
+>* 在 **[!UICONTROL 排程區段步驟]** 在Marketo V1中，您需要手動新增 **[!UICONTROL 對應ID]** 成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -89,9 +95,9 @@ To connect to this destination, follow the steps described in the [destination c
 
 -->
 
-## 資料使用和治理 {#data-usage-governance}
+## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)。
+全部 [!DNL Adobe Experience Platform] 處理資料時，目的地符合資料使用原則。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料控管，請參閱 [資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant).
 
 <!--
 
