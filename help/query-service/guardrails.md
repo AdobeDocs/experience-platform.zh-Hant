@@ -3,10 +3,10 @@ keywords: Experience Platform；查詢；查詢服務；疑難排解；護欄；
 title: 查詢服務的護欄
 description: 本文檔提供有關查詢服務資料使用限制的資訊，以幫助您優化查詢使用。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 8e5df8b3e38197520c6e15f7c6639c62527c086e
+source-git-commit: f8913fd8f5d6f4acf70a43c0a047bcd034dfd402
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 3%
+source-wordcount: '769'
+ht-degree: 2%
 
 ---
 
@@ -67,6 +67,8 @@ ht-degree: 3%
 | 透過 | 資料集 | 不適用 | 這會定義如何讓使用者取得結果。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## 透過查詢產生的控制面板分析 {#dashboard-insights}
 
 為確保Real-time Customer Data Platform深入分析控制面板的每個查詢都有足夠的資源來有效執行，API會為每個查詢指派併發槽來追蹤資源使用情形。 該系統最多可處理四個併發查詢，因此，在任何給定時間都有四個併發查詢槽可用。 根據併發槽將查詢放入隊列，然後在隊列中等待，直到有足夠的併發槽可用。
 
