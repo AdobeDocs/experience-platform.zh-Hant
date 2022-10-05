@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，以及使用來源連接器和API將資料匯入Platform的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 1f492fd48de304c70fdd8beb477b8a22369b853a
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1692'
 ht-degree: 1%
 
 ---
@@ -62,33 +62,33 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud Storage source connection",
-        "description: "Source connection for a cloud storage source",
-        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "columnDelimiter": "{COLUMN_DELIMITER}",
-                "encoding": "{ENCODING}"
-                "compressionType": "{COMPRESSION_TYPE}"
-            }
-        },
-        "params": {
-            "path": "/acme/summerCampaign/account.csv",
-            "type": "file"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited",
+          "properties": {
+              "columnDelimiter": "{COLUMN_DELIMITER}",
+              "encoding": "{ENCODING}",
+              "compressionType": "{COMPRESSION_TYPE}"
+          }
+      },
+      "params": {
+          "path": "/acme/summerCampaign/account.csv",
+          "type": "file"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 屬性 | 說明 |
@@ -112,6 +112,46 @@ curl -X POST \
     "id": "26b53912-1005-49f0-b539-12100559f0e2",
     "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
+```
+
+### 使用規則運算式來選取要擷取的特定檔案集 {#regex}
+
+建立來源連線時，您可以使用規則運算式，將特定一組檔案從來源內嵌至Platform。
+
+**API格式**
+
+```http
+POST /sourceConnections
+```
+
+**要求**
+
+在下列範例中，檔案路徑中會使用規則運算式，以指定擷取所有具有 `premium` 以他們的名字。
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Cloud Storage source connection",
+      "description: "Source connection for a cloud storage source",
+      "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
+      "data": {
+          "format": "delimited"
+      },
+      "params": {
+          "path": "/acme/summerCampaign/*premium*.csv",
+          "type": "folder"
+      },
+      "connectionSpec": {
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+          "version": "1.0"
+      }
+  }'
 ```
 
 ## 建立目標XDM結構 {#target-schema}
