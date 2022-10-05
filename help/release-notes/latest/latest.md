@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '2894'
+source-wordcount: '2933'
 ht-degree: 5%
 
 ---
@@ -108,6 +108,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | --- | --- |
 | Platform UI中的左側導覽整合 | 先前專屬於資料收集UI的所有功能（包括標籤、事件轉送和資料流），現在也可透過Experience Platform類別下的左側導覽取得 **[!UICONTROL 資料收集]**. 如此一來，使用Platform中的資料收集功能時，就不需要在UI之間切換。 |
 | 標籤和事件轉送中的使用者歸因 | 清單可用時 [!UICONTROL 屬性] 在「標籤」和「事件轉送」中，每個列出的屬性現在都會顯示其上次更新的時間，以及哪個使用者進行了更新。 |
+| [[!DNL Snap Conversions API] 擴充功能](https://exchange.adobe.com/apps/ec/108550) 用於事件轉送 | 您現在可以將資料傳送至 [!DNL Snapchat Conversions API] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 如需如何驗證和使用API的詳細資訊，請參閱 [[!DNL Snapchat Marketing API] 檔案](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] 在Web SDK中](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK現在支援 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 客戶端提示允許網站所有者訪問 [!DNL User-Agent] 串，但更能保護隱私。 |
 | [網頁SDK逐頁移轉](../../edge/home.md#migrating-to-web-sdk) | 您現在可以從其他Experience Cloud程式庫(例如 [!DNL at.js]，至Web SDK，一次一頁。 這可以分階段移轉Web SDK，而不需一次移轉所有頁面。 |
 

@@ -2,10 +2,10 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 2a5c31f8991c1c6aff294eabf4cc0e35c96ecaf7
+source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 7%
+source-wordcount: '263'
+ht-degree: 6%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 7%
 
 * **Adobe Experience Platform left nav整合**:先前專屬於資料收集UI的所有功能（包括標籤和事件轉送），現在也可透過Experience PlatformUI類別下方的左側導覽使用 **[!UICONTROL 資料收集]**. 如此一來，使用Platform中的資料收集功能時，就不需要在UI之間切換。
 * **標籤和事件轉送中的使用者歸因**:現在，將可用屬性列入標籤和事件轉送時，每個列出的屬性都會顯示其上次更新的時間以及更新對象。
+* **[[!DNL Snap Conversions API] 擴充功能](https://exchange.adobe.com/apps/ec/108550) 用於事件轉送**:您現在可以將資料傳送至 [!DNL Snapchat Conversions API] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 如需如何驗證和使用API的詳細資訊，請參閱 [[!DNL Snapchat Marketing API] 檔案](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 2022 年 7 月 27 日
 
