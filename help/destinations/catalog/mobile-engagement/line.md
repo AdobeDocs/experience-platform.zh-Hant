@@ -2,9 +2,9 @@
 keywords: 行動裝置；行動參與目的地；LINE;LINE行動參與目的地
 title: 線路連接
 description: LINE目的地可讓您將設定檔新增至您的平台區段，並為連線的使用者提供個人化體驗。
-source-git-commit: 10c04bdee8536194baea00d3466c758f848c46c5
+source-git-commit: b15ad6339cb342d754e3a78e0d68b232a94a835e
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,10 @@ ht-degree: 1%
 
 #### 你需要 [!DNL LINE] 帳戶 {#prerequisites-account}
 
-前往 [!DNL LINE] [註冊](https://account.line.biz/signup) 頁面來註冊和建立帳戶（如果尚未建立帳戶）。
+您需要註冊並建立 [!DNL LINE] 帳戶，如果尚未建立帳戶。 若要建立帳戶：
+
+1. 導覽至 [!DNL LINE] [帳戶登入](https://account.line.biz/login?redirectUri=https%3A%2F%2Fmanager.line.biz%2F) 頁面
+2. 選擇 **[!UICONTROL 建立帳戶]**.
 
 #### 收集 [!DNL LINE channel access token (long-lived)] 從 [!DNL LINE] 開發人員控制台 {#gather-credentials}
 
