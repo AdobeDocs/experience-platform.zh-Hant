@@ -5,7 +5,7 @@ title: 在UI中定義列舉欄位和建議的值
 description: 了解如何為Experience Platform使用者介面中的字串欄位定義列舉和建議值。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: ea27486a198f5248eeb5348ce20865bc41c2339a
+source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 0%
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"
->title="列舉和建議值"
->abstract="安 **列舉** 限制字串欄位，以僅允許內嵌符合一組預先定義值的資料。 可為每個約束分配 **顯示名稱** 填入「區段」UI中的屬性下拉式清單。 **建議的值** 的欄位不會限制擷取，而只會決定「細分」中顯示的顯示名稱。 如果您有多個架構共用屬於公用類或欄位組的欄位，並且在每個架構之間為該欄位定義不同的列號或建議值，則這些值會合併並附加至聯合架構中。"
+>title="列舉與建議值"
+>abstract="安 **列舉** 限制字串欄位，以僅允許內嵌符合一組預先定義值的資料。 可為每個枚舉約束分配 **顯示名稱** 填入「區段」UI中的屬性下拉式清單。 **建議的值** 的欄位不會限制擷取，而只會決定「細分」中顯示的顯示名稱。 如果您有多個架構共用屬於公用類或欄位組的欄位，並且在每個架構之間為該欄位定義不同的列號或建議值，則這些值會合併並附加至聯合架構中。"
 
 在Experience Data Model(XDM)中，可為字串欄位指定一組預先定義的接受或建議值，以更妥善地控制要擷取到該欄位的值，或其在細分中的行為。
 
