@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 從多種來源或結構擷取資料、加標籤，以及增強已擷取的資料。
 feature: Sources
-source-git-commit: ae6ec330ce62024a0eccec0dbc5c29e9a4645de2
+source-git-commit: eb78984d233c5d0dea04f235ee9e75eefff71752
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '830'
 ht-degree: 11%
 
 ---
@@ -287,7 +287,6 @@ ht-degree: 11%
       - [行銷自動化連線資料流](tutorials/ui/dataflow/marketing-automation.md)
       - [付款連接資料流](tutorials/ui/dataflow/payments.md)
       - [協定連接資料流](tutorials/ui/dataflow/protocols.md)
-   - [啟用傳入資料以填入客戶設定檔](tutorials/ui/profile.md)
    - [監視批處理資料流](tutorials/ui/monitor.md)
    - [監視流資料流](tutorials/ui/monitor-streaming.md)
    - [更新帳戶](tutorials/ui/update.md)
