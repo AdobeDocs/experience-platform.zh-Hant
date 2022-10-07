@@ -5,9 +5,9 @@ title: 查詢服務API指南
 topic-legacy: query templates
 description: 查詢服務API可讓開發人員使用標準SQL查詢其Adobe Experience Platform資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 62463e1542d4306c5c769e5690b566a3c30c59cd
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '395'
 ht-degree: 5%
 
 ---
@@ -55,7 +55,8 @@ ht-degree: 5%
 - [排程查詢](scheduled-queries.md)
 - [針對排程查詢執行](runs-scheduled-queries.md)
 - [查詢範本](query-templates.md)
-- [警報訂閱](./alert-subscriptions.md)
+
+<!-- - [Alert subscriptions](./alert-subscriptions.md) -->
 
 ## 後續步驟
 

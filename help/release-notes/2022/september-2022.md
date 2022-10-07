@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 87789668da0cfdf86d3c47be6e4dc49282932180
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2926'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform 現有功能更新：
 | 功能 | 說明 |
 | --- | --- |
 | 以屬性為基礎的存取控制 | 以屬性為基礎的存取控制可讓您為Experience Data Model(XDM)結構欄位和區段加上標籤，以定義組織或資料使用範圍。 同時，管理員可使用使用者和角色管理介面來定義涵蓋XDM架構欄位和區段的存取原則，以更妥善地管理提供給使用者或使用者群組（內部、外部或第三方使用者）的存取權。 如需詳細資訊，請參閱 [基於屬性的訪問控制概述](../../access-control/abac/overview.md). |
-| 權限 | 權限是管理員可在其中定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限的Experience Cloud區域。 透過權限，您可以建立和管理角色、指派這些角色所需的資源權限，以及建立原則以運用標籤，並定義哪些使用者角色可存取特定平台資源。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。 如需詳細資訊，請參閱 [權限UI指南](../../access-control/abac/ui/browse.md). |
+| 權限 | 權限是管理員可在其中定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限的Experience Cloud區域。 透過權限，您可以建立和管理角色、指派這些角色所需的資源權限，以及建立原則以運用標籤，並定義哪些使用者角色可存取特定平台資源。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。如需詳細資訊，請參閱 [權限UI指南](../../access-control/abac/ui/browse.md). |
 
 有關基於屬性的訪問控制的詳細資訊，請參見 [基於屬性的訪問控制概述](../../access-control/abac/overview.md). 有關基於屬性的訪問控制工作流的完整指南，請閱讀 [基於屬性的訪問控制端到端指南](../../access-control/abac/end-to-end-guide.md).
 
@@ -215,10 +215,12 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 | 功能 | 說明 |
 | --- | --- |
-| 警報訂閱API | Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的警報。 您可以在Platform UI內透過電子郵件、或兩者，接收警報。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/). 請參閱 [查詢警報檔案](../../query-service/api/alert-subscriptions.md) 了解更多。 |
+| 警報訂閱API | Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的警報。 您可以在Platform UI內透過電子郵件、或兩者，接收警報。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
 | 資料集範例 | 查詢服務資料集範例可讓您對大資料執行探索式查詢，大幅縮短處理時間，並降低查詢準確度。 請參閱 [資料集範例指南](../../query-service/sql/dataset-samples.md) 了解更多。 |
 
 如需 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md).
+
+<!-- See the [query alerts documentation](../../query-service/api/alert-subscriptions.md) to learn more. -->
 
 ## 來源 {#sources}
 
