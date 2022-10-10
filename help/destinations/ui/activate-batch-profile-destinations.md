@@ -4,9 +4,9 @@ title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 48e87f6089f6fe0be6cb49f5138422c631a485c3
+source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2626'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,12 @@ ht-degree: 0%
 >[!NOTE]
 >
 > Adobe Experience Platform會從您的架構中，使用四個建議且常用的屬性來填入您的選取項目： `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+
+>[!IMPORTANT]
+>
+>由於已知限制，您目前無法使用 **[!UICONTROL 選擇欄位]** 窗口 `segmentMembership.status` 檔案匯出。 而是需要手動貼上值 `xdm: segmentMembership.status` 填入架構欄位，如下所示。
+>
+>![螢幕記錄顯示啟動工作流程對應步驟中的區段成員資格因應措施。](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 檔案匯出會依下列方式而異，具體取決於 `segmentMembership.status` 已選取：
 * 若 `segmentMembership.status` 欄位，導出的檔案包括 **[!UICONTROL 作用中]** 初始完整快照和 **[!UICONTROL 作用中]** 和 **[!UICONTROL 過期]** 成員。
