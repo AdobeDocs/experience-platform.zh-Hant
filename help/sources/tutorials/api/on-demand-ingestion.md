@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；流量服務；
 title: （測試版）使用流程服務API建立隨需擷取的流程執行
 description: 本教學課程涵蓋使用流程服務API建立隨需擷取的流程執行步驟
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 61b3799a4d8c8b6682babd85b6f50a7e69778553
+source-git-commit: 795b1af6421c713f580829588f954856e0a88277
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '856'
 ht-degree: 1%
 
 ---
@@ -70,6 +70,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567",
           "deltaColumn": {
@@ -82,9 +83,10 @@ curl -X POST \
 | 參數 | 說明 |
 | --- | --- |
 | `flowId` | 將針對其建立流運行的流的ID。 |
+| `params.startTime` | 定義執行開始時間的整數。 值以unix紀元時間表示。 |
 | `params.windowStartTime` | 一個整數，定義要提取資料的窗口的開始時間。 值以unix時間表示。 |
 | `params.windowEndTime` | 一個整數，定義要提取資料的窗口的結束時間。 值以unix時間表示。 |
-| `params.deltaColumn` | 需要差值欄來分割資料，並將新擷取的資料與歷史資料分開。 |
+| `params.deltaColumn` | 需要差值欄來分割資料，並將新擷取的資料與歷史資料分開。 **附註**:此 `deltaColumn` 只有在建立第一個流運行時才需要。 |
 | `params.deltaColumn.name` | 增量列的名稱。 |
 
 **回應**
@@ -93,53 +95,36 @@ curl -X POST \
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567",
-        "deltaColumn": {
-            "name": "DOB"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
-        }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
 | `id` | 新建立的流運行的ID。 請參閱 [檢索流規範](../api/collect/database-nosql.md#specs) 以了解有關基於表的運行規範的詳細資訊。 |
-| `createdAt` | 建立流運行時指定的unix時間戳。 |
-| `updatedAt` | 上次更新流運行時指定的unix時間戳。 |
-| `createdBy` | 建立流程運行的用戶的組織ID。 |
-| `updatedBy` | 上次更新流程執行的使用者的組織ID。 |
-| `createdClient` | 建立流運行的應用程式客戶端。 |
-| `updatedClient` | 上次更新流運行的應用程式客戶端。 |
-| `sandboxId` | 包含流程執行的沙箱ID。 |
-| `sandboxName` | 包含流程執行的沙箱名稱。 |
-| `imsOrgId` | 組織ID。 |
-| `flowId` | 為其建立流運行的流的ID。 |
-| `params.windowStartTime` | 一個整數，定義要提取資料的窗口的開始時間。 值以unix時間表示。 |
-| `params.windowEndTime` | 一個整數，定義要提取資料的窗口的結束時間。 值以unix時間表示。 |
-| `params.deltaColumn` | 需要差值欄來分割資料，並將新擷取的資料與歷史資料分開。 **附註**:此 `deltaColumn` 只有在建立第一個流運行時才需要。 |
-| `params.deltaColumn.name` | 增量列的名稱。 |
 | `etag` | 流運行的資源版本。 |
-| `metrics` | 此屬性顯示流運行的狀態摘要。 |
+<!-- 
+| `createdAt` | The unix timestamp that designates when the flow run was created. |
+| `updatedAt` | The unix timestamp that designates when the flow run was last updated. |
+| `createdBy` | The organization ID of the user who created the flow run. |
+| `updatedBy` | The organization ID of the user who last updated the flow run. |
+| `createdClient` | The application client that created the flow run. |
+| `updatedClient` | The application client that last updated the flow run. |
+| `sandboxId` | The ID of the sandbox that contains the flow run. |
+| `sandboxName` | The name of the sandbox that contains the flow run. |
+| `imsOrgId` | The organization ID. |
+| `flowId` | The ID of the flow in which the flow run is created against. |
+| `params.windowStartTime` | An integer that defines the start time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.windowEndTime` | An integer that defines the end time of the window during which data is to be pulled. The value is represented in unix time. |
+| `params.deltaColumn` | The delta column is required to partition the data and separate newly ingested data from historic data. **Note**: The `deltaColumn` is only needed when creating your firs flow run. |
+| `params.deltaColumn.name` | The name of the delta column. |
+| `etag` | The resource version of the flow run. |
+| `metrics` | This property displays a status summary for the flow run. | -->
 
 ## 為基於檔案的源建立流運行
 
@@ -170,6 +155,7 @@ curl -X POST \
   -d '{
       "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
       "params": {
+          "startTime": "1663735590",
           "windowStartTime": "1651584991",
           "windowEndTime": "16515859567"
       }
@@ -179,6 +165,7 @@ curl -X POST \
 | 參數 | 說明 |
 | --- | --- |
 | `flowId` | 將針對其建立流運行的流的ID。 |
+| `params.startTime` | 定義執行開始時間的整數。 值以unix紀元時間表示。 |
 | `params.windowStartTime` | 一個整數，定義要提取資料的窗口的開始時間。 值以unix時間表示。 |
 | `params.windowEndTime` | 一個整數，定義要提取資料的窗口的結束時間。 值以unix時間表示。 |
 
@@ -189,49 +176,19 @@ curl -X POST \
 
 ```json
 {
-    "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
-    "createdAt": 1651587212543,
-    "updatedAt": 1651587223839,
-    "createdBy": "{CREATED_BY}",
-    "updatedBy": "{UPDATED_BY}",
-    "createdClient": "{CREATED_CLIENT}",
-    "updatedClient": "{UPDATED_CLIENT}",
-    "sandboxId": "{SANDBOX_ID}",
-    "sandboxName": "prod",
-    "imsOrgId": "{ORGANIZATION_ID}",
-    "flowId": "3abea21c-7e36-4be1-bec1-d3bad0e3e0de",
-    "params": {
-        "windowStartTime": "1651584991",
-        "windowEndTime": "16515859567"
-    },
-    "etag": "\"1100c53e-0000-0200-0000-627138980000\"",
-    "metrics": {
-        "statusSummary": {
-            "status": "scheduled"
+    "items": [
+        {
+            "id": "3fb0418e-1804-45d6-8d56-dd51f05c0baf",
+            "etag": "\"1100c53e-0000-0200-0000-627138980000\""
         }
-    },
-    "activities": []
+    ]
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 新建立的流運行的ID。 請參閱 [檢索流規範](../api/collect/cloud-storage.md#specs) ，以了解基於檔案的運行規範的詳細資訊。 |
-| `createdAt` | 建立流運行時指定的unix時間戳。 |
-| `updatedAt` | 上次更新流運行時指定的unix時間戳。 |
-| `createdBy` | 建立流程運行的用戶的組織ID。 |
-| `updatedBy` | 上次更新流程執行的使用者的組織ID。 |
-| `createdClient` | 建立流運行的應用程式客戶端。 |
-| `updatedClient` | 上次更新流運行的應用程式客戶端。 |
-| `sandboxId` | 包含流程執行的沙箱ID。 |
-| `sandboxName` | 包含流程執行的沙箱名稱。 |
-| `imsOrgId` | 組織ID。 |
-| `flowId` | 為其建立流運行的流的ID。 |
-| `params.windowStartTime` | 一個整數，定義要提取資料的窗口的開始時間。 值以unix時間表示。 |
-| `params.windowEndTime` | 一個整數，定義要提取資料的窗口的結束時間。 值以unix時間表示。 |
+| `id` | 新建立的流運行的ID。 請參閱 [檢索流規範](../api/collect/database-nosql.md#specs) 以了解有關基於表的運行規範的詳細資訊。 |
 | `etag` | 流運行的資源版本。 |
-| `metrics` | 此屬性顯示流運行的狀態摘要。 |
-
 
 ## 監視流運行
 
