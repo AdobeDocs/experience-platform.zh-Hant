@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7ad0015dbea0b74673ed0ed2c8c2159065f47ba7
+source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
 workflow-type: tm+mt
-source-wordcount: '2243'
+source-wordcount: '2302'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,12 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 * [資料準備映射函式](../../../../../data-prep/functions.md)
 * [新增計算欄位](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### 篩選 [!DNL Profile Service] （測試版）
+### 篩選 [!DNL Profile Service] （測試版） {#filtering-for-profile}
+
+>[!CONTEXTUALHELP]
+>id="platform_data_prep_analytics_filtering"
+>title="建立篩選規則"
+>abstract="在傳送資料至即時客戶設定檔時，定義列和欄層級的篩選規則。 使用行級篩選來套用條件，並指定要套用的資料 **包含以進行設定檔擷取**. 使用欄層級篩選來選取您想要的資料欄 **設定檔擷取的排除**. 篩選規則不適用於傳送至資料湖的資料。"
 
 >[!IMPORTANT]
 >
@@ -283,10 +288,10 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 
 建立連線後，會自動建立資料流以包含傳入的資料，並將您選取的架構填入資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始擷取完成時， [!DNL Analytics] 供下游Platform服務(例如 [!DNL Real-time Customer Profile] 和分段服務。 如需詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-time Customer Profile]概述](../../../../../profile/home.md)
-* [[!DNL Segmentation Service]概述](../../../../../segmentation/home.md)
-* [[!DNL Data Science Workspace]概述](../../../../../data-science-workspace/home.md)
-* [[!DNL Query Service]概述](../../../../../query-service/home.md)
+* [[!DNL Real-time Customer Profile] 概覽](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] 概覽](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace] 概覽](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service] 概覽](../../../../../query-service/home.md)
 
 以下影片旨在協助您了解如何使用Adobe Analytics來源連接器擷取資料：
 
