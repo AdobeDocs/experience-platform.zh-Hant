@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Edge Network 伺服器 API 文件
 breadcrumb-title: Edge Network 伺服器 API 文件
-user-guide-description: Adobe Experience Platform Edge Network Server API 為客戶提供與任何 Adobe Experience Cloud 或 Adobe Experience Platform Edge 服務的最佳化互動方式。了解如何使用各種資料彙集、個人化、廣告和行銷使用案例的伺服器 API。
+user-guide-description: 使用邊緣網路伺服器API來收集資料、個人化、廣告和行銷使用案例，以及Experience Cloud或Experience Platform邊緣服務。
 feature: Data Collection
-source-git-commit: f36892103b0b202550c07a70538c97b1cc673840
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '85'
+ht-degree: 23%
 
 ---
 
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 
 * [邊緣網路伺服器API概述](overview.md)
-* [邊緣網路伺服器API的效能保護器](guardrails.md)
+* [邊緣網路伺服器API的效能護欄](guardrails.md)
 * [驗證](authentication.md)
 * 資料彙集 {#data-collection}
-   * [單事件資料收集](interactive-data-collection.md)
-   * [批處理事件資料收集](non-interactive-data-collection.md)
-* 與其他Adobe解決方案交互 {#interacting-other-adobe-solutions}
+   * [單一事件資料收集](interactive-data-collection.md)
+   * [批次事件資料收集](non-interactive-data-collection.md)
+* 與其他Adobe解決方案互動 {#interacting-other-adobe-solutions}
    * [與Adobe Analytics互動](interacting-adobe-analytics.md)
 * 個人化 {#personalization}
-   * [個性化概述](personalization-overview.md)
-   * [通過Adobe Target個性化](personalization-target.md)
-   * [通過Offer decisioning個性化](personalization-offer-decisioning.md)
+   * [個人化概覽](personalization-overview.md)
+   * [透過Adobe Target個人化](personalization-target.md)
+   * [透過Offer decisioning個人化](personalization-offer-decisioning.md)
 * [位置提示](location-hints.md)
 * [錯誤處理](error-handling.md)
 * [疑難排解](troubleshooting.md)

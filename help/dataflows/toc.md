@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: 資料流指南
-user-guide-description: 資料流能呈現資料處理作業在平台上移動資料的情形。
+user-guide-description: 了解資料流以及如何在不同服務間配置資料流。
 feature: Dataflows
-source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
+source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 23%
+source-wordcount: '62'
+ht-degree: 4%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 23%
 - [資料流概述](./home.md)
 - API指南 {#api}
    - [監視資料流](./api/monitor.md)
-   - [排序和篩選API響應](./api/sort-and-filter.md)
-- UI參考線 {#ui}
+   - [排序和篩選API回應](./api/sort-and-filter.md)
+- UI指南 {#ui}
    - [監視源中的資料流](./ui/monitor-sources.md)
-   - [監視標識中的資料流](./ui/monitor-identities.md)
+   - [監視身份中的資料流](./ui/monitor-identities.md)
    - [監視配置檔案中的資料流](./ui/monitor-profiles.md)
    - [監視段中的資料流](./ui/monitor-segments.md)
    - [監視目標中的資料流](./ui/monitor-destinations.md)
    - B2B監控 {#b2b}
-      - [監視配置檔案富集作業](./ui/b2b/monitor-profile-enrichment.md)
-- [流服務API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
+      - [監控設定檔擴充作業](./ui/b2b/monitor-profile-enrichment.md)
+- [流量服務API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
