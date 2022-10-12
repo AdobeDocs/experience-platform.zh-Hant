@@ -5,10 +5,10 @@ breadcrumb-title: 標籤
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 67%
+source-wordcount: '408'
+ht-degree: 66%
 
 ---
 
@@ -112,6 +112,9 @@ ht-degree: 67%
       * 常見Analytics外掛程式 {#plugins}
          * [總覽](./extensions/web/plugins/overview.md)
          * [發行說明](./extensions/web/plugins/release-notes.md)
+      * 常見Web SDK外掛程式 {#web-sdk-plugins}
+         * [總覽](./extensions/web/web-sdk-plugins/overview.md)
+         * [發行說明](./extensions/web/web-sdk-plugins/release-notes.md)
       * 核心 {#core}
          * [總覽](./extensions/web/core/overview.md)
          * [事件轉送](./extensions/web/core/event-forwarding.md)
