@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 777a1749670f36abc09e4bacd190b1be17a9a237
+source-git-commit: becff2390aca3a1195cc157c075b1c9a087989c8
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 **新功能**
 
-* 新增「依頁面完整移轉頁面」的支援。 訪客在at.js和Web SDK頁面之間移動時，現在會保留Adobe Target設定檔。
+* 新增 [逐頁完整遷移](home.md#migrating-to-web-sdk). 訪客在at.js和Web SDK頁面之間移動時，現在會保留Adobe Target設定檔。
 * 新增可設定的支援 [高熵用戶代理客戶端提示](fundamentals/user-agent-client-hints.md#high-entropy).
 * 新增對 `applyResponse` 命令。 這可透過 [邊緣網路伺服器API](../server-api/overview.md).
 * QA模式連結現在可以跨多個頁面運作。
