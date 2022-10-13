@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
 workflow-type: tm+mt
-source-wordcount: '1934'
-ht-degree: 1%
+source-wordcount: '2101'
+ht-degree: 2%
 
 ---
 
@@ -151,13 +151,17 @@ Web SDK正在快速發展。 正在處理更多使用案例。 您可以找到 [
 
 ## Adobe Experience Platform Web SDK是否使用Cookie? 如果是，它會使用哪些Cookie?
 
-是的，目前Web SDK使用的Cookie介於1到4個之間，端視您的實作而定。 以下為Web SDK中可能看到的4個Cookie清單及其使用方式：
+是的，根據您的實作，目前Web SDK使用的Cookie介於1到7個之間。 以下是您在Web SDK中可能看到的Cookie清單及其使用方式：
 
-**kndct_orgid_identity:** 身分識別Cookie可用來儲存ECID，以及其他與ECID相關的資訊。
-
-**kndctr_orgid_consent:** 此Cookie會儲存使用者對網站的同意偏好設定。
-
-**kndctr_orgid_cluster:** 此Cookie會儲存為目前使用者請求提供服務的Experience Edge區域。 該區域會用於URL路徑中，以便Experience Edge將請求路由至正確的區域。 此Cookie的存留期為30分鐘，因此如果使用者連線不同的IP位址，請求可路由至最接近的地區。
+| **名稱** | **maxAge** | **友善年齡** | **說明** |
+|---|---|---|---|
+| **kndct_orgid_identity** | 34128000 | 395 天 | 身分Cookie會儲存ECID，以及與ECID相關的其他資訊。 |
+| **kndctr_orgid_consent_check** | 7200 | 2 小時 | 此Cookie會儲存使用者對網站的同意偏好設定。 |
+| **kndctr_orgid_consent** | 15552000 | 180 天 | 此工作階段型Cookie會指示伺服器尋找同意偏好設定伺服器端。 |
+| **kndctr_orgid_cluster** | 1800 | 30 分鐘 | 此Cookie會儲存為目前使用者請求提供服務的Experience Edge區域。 該區域會用於URL路徑中，以便Experience Edge將請求路由至正確的區域。 此Cookie的存留期為30分鐘，因此如果使用者連線不同的IP位址，請求可路由至最接近的地區。 |
+| **mbox** | 63072000 | 2 年 | 當Target移轉設定設為true時，就會顯示此Cookie。 這將允許Target [mbox cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) 設定。 |
+| **mboxEdgeCluster** | 1800 | 30 分鐘 | 當Target移轉設定設為true時，就會顯示此Cookie。 此Cookie可讓Web SDK將正確的邊緣叢集通訊給at.js，讓使用者在跨網站導覽時，Target設定檔可保持同步。 |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 天 | 只有在啟用Adobe Experience Platform Web SDK上的ID移轉時，才會顯示此Cookie。 當網站的某些部分仍在使用visitor.js時，此Cookie在轉換至Web SDK時會有所幫助。 請參閱 [idMigrationEnabled檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) 以深入了解此設定。 |
 
 使用Web SDK時，邊緣網路會設定上述一或多個Cookie。 邊緣網路會以 `secure` 和 `sameSite="none"` 屬性。
 
