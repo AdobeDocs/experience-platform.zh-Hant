@@ -1,19 +1,19 @@
 ---
 audience: user
 user-guide-title: 標記說明
-breadcrumb-title: 標籤
+breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: f6c22d260e1583dc035d1508ca3bce0d7f9de8bd
+source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '409'
 ht-degree: 66%
 
 ---
 
 
-# 標籤 {#tags}
+# 標記 {#tags}
 
 * [標記總覽](./home.md)
 * 快速入門 {#get-started}
@@ -127,6 +127,8 @@ ht-degree: 66%
       * Google資料層 {#google-data-layer}
          * [總覽](./extensions/web/google-data-layer/overview.md)
          * [發行說明](./extensions/web/google-data-layer/release-notes.md)
+      * [!DNL Splunk] {#splunk}
+         * [總覽](./extensions/web/splunk/overview.md)
       * [!DNL YouTube] 視訊追蹤擴充功能 {#youtube}
          * [總覽](./extensions/web/youtube/overview.md)
          * [發行說明](./extensions/web/youtube/release-notes.md)
