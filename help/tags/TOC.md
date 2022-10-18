@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 48151842ffcba4082988d008f9370714da51ee05
+source-git-commit: d5e8e49e50d0c5792828140626b933a4f232dd00
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '413'
 ht-degree: 66%
 
 ---
@@ -132,6 +132,8 @@ ht-degree: 66%
       * [!DNL YouTube] 視訊追蹤擴充功能 {#youtube}
          * [總覽](./extensions/web/youtube/overview.md)
          * [發行說明](./extensions/web/youtube/release-notes.md)
+      * [!DNL Zendesk] Events API擴充功能 {#zendesk}
+         * [總覽](./extensions/web/zendesk/overview.md)
    * [協力廠商擴充功能](./extensions/3rd-party-extensions.md)
 * 擴充功能開發 {#extension-dev}
    * [總覽](./extension-dev/overview.md)
