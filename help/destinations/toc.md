@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: 目的地指南
-user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標廣告等，啟用已知和未知的資料。
+user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: 9bab22684005609111538037e95bad1f806ff7c4
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 5%
+source-wordcount: '948'
+ht-degree: 6%
 
 ---
 
@@ -106,6 +106,7 @@ ht-degree: 5%
       * [雲端儲存目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 客戶關係管理(CRM)目的地 {#crm}
       * [Salesforce CRM連線](./catalog/crm/salesforce.md)
+      * [Microsoft Dynamics 365連線](./catalog/crm/microsoft-dynamics-365.md)
       * [外聯聯繫](catalog/crm/outreach.md)
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
