@@ -5,10 +5,10 @@ title: 資料彙集概觀
 topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 4%
+source-wordcount: '513'
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform提供一套技術，可讓您從用戶端來源收集�
 資料收集著重於所擷取資料集的可探索性和可存取性，其中包括：
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [標籤](../tags/home.md)
+* [標記](../tags/home.md)
 * [資料串流](../edge/datastreams/overview.md)
 * [事件轉送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
@@ -47,6 +47,8 @@ Platform Web SDK和Platform Mobile SDK會分別將所有Adobe產品程式庫折�
 ## 平台邊緣網路和資料流 {#edge}
 
 Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路，能夠以大規模接收和處理資料。 使用標籤時，您可以設定 [資料流](../edge/datastreams/overview.md) 針對Adobe Target、Adobe Audience Manager和Adobe Analytics等產品，這可讓您在伺服器端啟用這些產品，而不需變更用戶端代碼。
+
+此外，資料流與多個平台功能整合，這些功能有助於確保您傳送的任何敏感資料在組織政策和法律法規方面得到適當處理。 請參閱 [處理敏感資料](../edge/datastreams/overview.md#sensitive) 如需詳細資訊，請參閱datastreams檔案。
 
 ![資料流和Adobe解決方案](./images/home/adobe-solutions.png)
 
