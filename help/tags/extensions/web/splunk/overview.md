@@ -1,7 +1,7 @@
 ---
 title: Splunk擴充功能概觀
 description: 了解Adobe Experience Platform中用於事件轉送的Splunk擴充功能。
-source-git-commit: e6f0bdcdb11630730834e353064abb960d3d0ea1
+source-git-commit: cad6d78868ac89be325faa58f567b89869bfff02
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 1%
@@ -79,7 +79,7 @@ Splunk使用承載權杖作為驗證機制，以與Splunk事件收集器API通�
 | [!UICONTROL 來源] | 要指派給事件資料的來源值。 例如，如果您要從正在開發的應用程式傳送資料，請將此索引鍵設為應用程式的名稱。 |
 | [!UICONTROL 索引] | 事件資料的索引的名稱。 如果令牌已設定索引參數，則此處指定的索引必須位於允許的索引清單內。 |
 | [!UICONTROL 時間] | 事件時間。 預設時間格式為UNIX時間(格式為 `<sec>.<ms>`)，並取決於您的當地時區。 例如， `1433188255.500` 表示大紀元後的1433188255秒和500毫秒，或2015年6月1日星期一的7:50:55 PM GMT。 |
-| [!UICONTROL 欄位] | 指定原始JSON物件或一組索引鍵值配對，其中包含要在索引時定義的明確自訂欄位。  此 `fields` 金鑰不適用於原始資料。<br><br>包含 `fields` 屬性必須傳送至 `/collector/event` 端點，否則不會為它們編列索引。 如需詳細資訊，請參閱 [索引欄位擷取](http://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL 欄位] | 指定原始JSON物件或一組索引鍵值配對，其中包含要在索引時定義的明確自訂欄位。  此 `fields` 金鑰不適用於原始資料。<br><br>包含 `fields` 屬性必須傳送至 `/collector/event` 端點，否則不會為它們編列索引。 如需詳細資訊，請參閱 [索引欄位擷取](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### 驗證Splunk中的資料 {#validate}
 
