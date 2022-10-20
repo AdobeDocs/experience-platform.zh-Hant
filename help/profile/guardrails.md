@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: b834e278f085adc5a4a90876727b6a0787b181e1
+source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1902'
 ht-degree: 5%
 
 ---
@@ -144,6 +144,4 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 
 ### Adobe Analytics Platform中的報表套裝資料集 {#aa-datasets}
 
-設定檔最多應啟用一(1)個Adobe Analytics報表套裝資料集。 這是軟式限制，表示您可以為「設定檔」啟用多個Analytics資料集，但不建議使用，因為這可能會對您的資料造成非預期的後果。 這是因為Experience Data Model(XDM)結構之間的差異，這些結構提供Experience Platform中資料的語義結構，且能夠進行資料解譯的一致性，以及Adobe Analytics中eVar和轉換變數的可自訂性質。
-
-例如，在Adobe Analytics中，單一組織可能有多個報表套裝。 如果報表套裝A將eVar4指定為「內部搜尋詞」，而報表套裝B將eVar4指定為「反向連結網域」，這些值都會擷取到設定檔中的相同欄位中，造成混淆並降低資料品質。
+只要解決所有資料衝突，就可以為設定檔啟用多個報表套裝。 您可以使用資料準備功能來解決eVar、清單和Prop之間的資料衝突。 若要進一步了解如何使用資料準備功能，請閱讀 [Adobe Analytics connector UI指南](../sources/tutorials/ui/create/adobe-applications/analytics.md).
