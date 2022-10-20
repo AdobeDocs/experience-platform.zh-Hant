@@ -5,9 +5,9 @@ title: 在UI中定義列舉欄位和建議的值
 description: 了解如何為Experience Platform使用者介面中的字串欄位定義列舉和建議值。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 3b71f6b07345d7b1e08fa5a8b93abc3519606015
+source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 在Experience Data Model(XDM)中，可為字串欄位指定一組預先定義的接受或建議值，以更妥善地控制要擷取到該欄位的值，或其在細分中的行為。
 
-安 **列舉** 將字串欄位可擷取的值限制為預先定義的集。 如果您嘗試將資料內嵌至列舉欄位，而值不符合其設定中定義的任何欄位，則擷取將會遭到拒絕。
+**[!UICONTROL 列舉]** 將字串欄位可擷取的值限制為預先定義的集。 如果您嘗試將資料內嵌至列舉欄位，而值不符合其設定中定義的任何欄位，則擷取將會遭到拒絕。
 
-與列舉不同，請新增 **建議值** 字串欄位的值不會限制可擷取的值。 反之，建議的值會影響 [區段UI](../../../segmentation/ui/overview.md) 將字串欄位納入為屬性時。
+與列舉不同， **[!UICONTROL 建議的值]** option可為字串欄位指出一組建議的值，而不會限制其可內嵌的值。 反之，建議的值會影響 [區段UI](../../../segmentation/ui/overview.md) 將字串欄位納入為屬性時。
 
 當 [定義新欄位](./overview.md#define) 在Adobe Experience Platform使用者介面中，並將類型設為 [!UICONTROL 字串]，您會獲得定義 [列舉](#enum) 或 [建議值](#suggested-values) 那塊地。
 
