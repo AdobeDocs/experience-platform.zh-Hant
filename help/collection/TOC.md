@@ -16,9 +16,9 @@ ht-degree: 60%
 # 資料收集 {#collection}
 
 - [資料彙集概觀](home.md)
-- [端到端概述](e2e.md)
+- [端對端概述](e2e.md)
 - [權限管理](permissions.md)
 - [客戶端狀態管理](client-state.md)
 - 訪客身分識別 {#visitor-identification}
    - [總覽](visitor-identification.md)
-   - [基於FPID的訪客身份識別](visitor-identification-fpid.md)
+   - [透過FPID識別訪客](visitor-identification-fpid.md)

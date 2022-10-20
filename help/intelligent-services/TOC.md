@@ -3,11 +3,11 @@ solution: Experience Platform
 audience: user
 user-guide-title: Intelligent Services 說明
 breadcrumb-title: Intelligent Services 指南
-user-guide-description: 使用智慧型AI服務，從行銷事件資料產生分數、探索見解並建立區段。
+user-guide-description: 使用智慧型人工智慧服務，從行銷事件資料產生分數、探索見解並建立區段。
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 10%
+ht-degree: 24%
 
 ---
 

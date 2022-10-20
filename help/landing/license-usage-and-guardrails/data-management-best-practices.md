@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；資料管理；授權；授權；最佳作法
 title: 資料管理許可證權限最佳做法
-description: 了解您可使用的最佳實務和工具，以透過Adobe Experience Platform更妥善地管理授權情形。
+description: 了解可將 Adobe Experience Platform 授權權益管理得更好的最佳做法以及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
 workflow-type: tm+mt
 source-wordcount: '2528'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

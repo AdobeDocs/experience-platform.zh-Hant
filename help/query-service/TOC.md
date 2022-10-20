@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
-user-guide-description: 使用標準SQL在Experience Platform中查詢資料湖內的資料。
+user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
 source-wordcount: '217'
-ht-degree: 12%
+ht-degree: 18%
 
 ---
 

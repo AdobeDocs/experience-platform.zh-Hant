@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform 儀表板說明
 breadcrumb-title: 儀表板指南
-user-guide-description: 了解如何透過可自訂的控制面板，將Experience Platform中的資料視覺化。
+user-guide-description: 了解如何透過可自訂的儀表板在 Experience Platform 視覺化資料。
 feature: Dashboards
 source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 20%
+ht-degree: 33%
 
 ---
 

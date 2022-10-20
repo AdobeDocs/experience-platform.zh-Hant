@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: 資料衛生說明
-breadcrumb-title: 資料衛生指南
-user-guide-description: 管理消費者資料請求，以符合GDPR和CCPA等法律隱私權法規。
+user-guide-title: 資料保健說明
+breadcrumb-title: 資料保健指南
+user-guide-description: 管理消費者資料要求，以符合 GDPR 和 CCPA 等法律隱私權法規。
 feature: Data Hygiene
 source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
 workflow-type: tm+mt
 source-wordcount: '48'
-ht-degree: 4%
+ht-degree: 45%
 
 ---
 

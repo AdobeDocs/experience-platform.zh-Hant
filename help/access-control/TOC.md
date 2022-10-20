@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform 中的存取控制說明
 breadcrumb-title: Access Control 指南
-user-guide-description: 使用Adobe Admin Console中的產品設定檔來管理使用者權限。 了解如何將使用者指派至產品和沙箱。
+user-guide-description: 使用 Adobe Admin Console 中的產品設定檔管理使用者權限。了解如何將使用者指派到產品和沙箱。
 feature: Access Control
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 30%
+ht-degree: 46%
 
 ---
 

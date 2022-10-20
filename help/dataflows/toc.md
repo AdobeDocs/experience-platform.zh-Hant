@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: 資料流指南
-user-guide-description: 了解資料流以及如何在不同服務間配置資料流。
+user-guide-description: 了解資料流以及如何跨不同服務設定資料流。
 feature: Dataflows
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 4%
+ht-degree: 22%
 
 ---
 
