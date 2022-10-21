@@ -1,29 +1,29 @@
 ---
-title: Customer Data Platform(CDP)Insights資料模型
-description: 了解如何使用CDP Insights資料模型的SQL查詢，針對您的行銷和KPI使用案例自訂您自己的CDP報表。
+title: Real-time Customer Data Platform Insights資料模型
+description: 了解如何透過Real-time Customer Data Platform Insights資料模型使用SQL查詢，針對您的行銷和KPI使用案例自訂您自己的Real-Time CDP報表。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 2c96bfd2c1b541d30a72fcf2bac414ee06607456
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---
 
-# Customer Data Platform(CDP)Insights資料模型
+# Real-time Customer Data Platform Insights資料模型
 
-Customer Data Platform(CDP)Insights Data Model功能可公開資料模型和SQL，為各種設定檔、目的地和細分小工具提供深入分析。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立CDP報表。 然後，這些前瞻分析便可作為使用者定義控制面板的自訂小工具。
+Real-time Customer Data Platform深入分析資料模型功能可公開資料模型和SQL，為各種設定檔、目的地和分段Widget提供深入分析。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 然後，這些前瞻分析便可作為使用者定義控制面板的自訂小工具。 請參閱查詢加速儲存報告深入分析檔案以了解 [如何透過Query Service建立報表前瞻分析資料模型，以與加速儲存資料和使用者定義的控制面板搭配使用](../query-service/query-accelerated-store/reporting-insights-data-model.md).
 
 ## 先決條件
 
 本指南需要妥善了解 [使用者定義的控制面板功能](./user-defined-dashboards.md). 繼續閱讀本指南之前，請先閱讀本檔案。
 
-## CDP分析報告和使用案例
+## Real-Time CDP Insight報表與使用案例
 
-CDP報告可深入分析您的設定檔資料及其與區段和目的地的關係。 開發各種星型架構模型以回應各種常見的行銷使用案例，而每個資料模型可支援數個使用案例。
+Real-Time CDP報表可提供設定檔資料及其與區段和目的地之關係的深入分析。 開發各種星型架構模型以回應各種常見的行銷使用案例，而每個資料模型可支援數個使用案例。
 
 >[!IMPORTANT]
 >
->用於CDP報告的資料對於選定的合併策略和最近的每日快照是準確的。
+>用於Real-Time CDP報表的資料對於選擇的合併策略和最近的每日快照來說都是準確的。
 
 ### 輪廓模型 {#profile-model}
 

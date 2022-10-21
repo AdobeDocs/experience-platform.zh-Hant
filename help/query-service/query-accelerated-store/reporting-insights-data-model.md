@@ -1,9 +1,9 @@
 ---
 title: Query Accelerated Store Reporting Insights
 description: 了解如何透過Query Service建立報表前瞻分析資料模型，以便與加速儲存資料和使用者定義的控制面板搭配使用。
-source-git-commit: 9c18432bbd9322aee1924c34cb10aadac440e726
+source-git-commit: 16ae8a16d8c4f7ec68a054e8d15a518f453a05c7
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
@@ -12,7 +12,9 @@ ht-degree: 0%
 
 查詢加速儲存可讓您縮短從資料中獲取重要見解所需的時間和處理能力。 通常會以定期的間隔（例如，每小時或每日）處理資料，以建立匯總檢視並據以報告。 這些從匯總資料產生的報表分析衍生出旨在改善業務績效的深入分析。 查詢加速儲存提供快取服務、並行、互動式體驗和無狀態API。 但是，它假設資料已經過預處理並針對聚合查詢進行了優化，而不是原始資料查詢。
 
-查詢加速存放區可讓您建立自訂資料模型及/或在現有的Real-time Customer Data Platform資料模型上擴充。 然後，您就可以參與報表分析，或將其嵌入您所選擇的報表/視覺效果架構中。 Adobe Experience Platform的Real-time CDP資料模型提供設定檔、區段和目的地的深入分析，並啟用Real-time CDP insight控制面板。 本檔案會引導您完成建立報告深入分析資料模型的程式，以及如何視需要擴充即時CDP資料模型。
+查詢加速存放區可讓您建立自訂資料模型及/或在現有的Real-time Customer Data Platform資料模型上擴充。 然後，您就可以參與報表分析，或將其嵌入您所選擇的報表/視覺效果架構中。 請參閱Real-time Customer Data Platform Insights資料模型檔案，了解如何 [自訂SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../dashboards/cdp-insights-data-model.md).
+
+Adobe Experience Platform的Real-Time CDP資料模型可提供設定檔、區段和目的地的深入分析，並啟用Real-Time CDP深入分析控制面板。 本檔案會引導您完成建立報表前瞻分析資料模型的程式，並說明如何視需要擴充Real-Time CDP資料模型。
 
 ## 先決條件
 
@@ -20,7 +22,7 @@ ht-degree: 0%
 
 ## 快速入門
 
-必須有Data Distiller SKU，才能建立自訂資料模型，以便提供報告分析資料，並擴充內含豐富Platform資料的即時CDP資料模型。 請參閱 [包裝](../packages.md), [護欄](../guardrails.md#query-accelerated-store)，和 [授權](../data-distiller/licence-usage.md) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
+您必須建立自訂資料模型，以便進行報表分析，並擴充包含豐富Platform資料的Real-Time CDP資料模型，才能使用Data Distiller SKU。 請參閱 [包裝](../packages.md), [護欄](../guardrails.md#query-accelerated-store)，和 [授權](../data-distiller/licence-usage.md) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
 
 ## 建立報表前瞻分析資料模型
 
@@ -124,15 +126,15 @@ ext_custom_audience_id | approximate_count_upper_bound
 (10 rows)
 ```
 
-## 使用Real-time CDP insights資料模型擴展您的資料模型
+## 使用Real-Time CDP前瞻分析資料模型擴充您的資料模型
 
 您可以使用其他詳細資料擴充您的對象模型，以建立更豐富的維度表格。 例如，您可以將區段名稱和目的地名稱對應至外部對象識別碼。 若要這麼做，請使用Query Service建立或重新整理新資料集，並將其新增至對象模型，將區段和目的地與外部身分結合。 下圖說明此資料模型擴充功能的概念。
 
-![連結Real-time CDP分析資料模型和Query Accelerated Store模型的ERD圖表。](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
+![連結Real-Time CDP分析資料模型和查詢加速儲存模型的ERD圖表。](../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
 ## 建立維度表格以擴充您的報表前瞻分析模型
 
-使用Query Service將擴充的即時CDP維度資料集中的關鍵描述性屬性新增至 `audienceinsight` 資料模型，並建立數值表與新維度表之間的關係。 以下的SQL示範如何將現有的維度表整合到您的報表深入分析資料模型中。
+使用Query Service將擴充的Real-Time CDP維度資料集中的關鍵描述性屬性新增至 `audienceinsight` 資料模型，並建立數值表與新維度表之間的關係。 以下的SQL示範如何將現有的維度表整合到您的報表深入分析資料模型中。
 
 ```sql
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
