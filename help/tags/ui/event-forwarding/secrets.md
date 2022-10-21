@@ -2,9 +2,9 @@
 title: 在事件轉送中設定機密
 description: 了解如何在UI中設定機密，以驗證事件轉送屬性中使用的端點。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,12 @@ ht-degree: 0%
 ![Google授權彈出視窗](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
 此時會出現對話方塊，讓您輸入Google帳戶的認證。 按照提示授予在所選作用域下對資料的事件轉發訪問權限。 授權程式完成後，即會建立機密。
+
+>[!IMPORTANT]
+>
+>如果貴組織已為Google雲端應用程式設定重新驗證原則，則在驗證過期後（根據原則設定，介於1到24小時之間），系統將不會成功重新整理已建立的機密。
+>
+>若要解決此問題，請登入Google Admin Console並導覽至 **[!DNL App access control]** 頁面，將事件轉送應用程式(Adobe Real-Time CDP事件轉送)標示為 [!DNL Trusted]. 請參閱Google檔案，位於 [設定Google雲端服務的工作階段長度](https://support.google.com/a/answer/9368756) 以取得更多資訊。
 
 ## 編輯機密
 
