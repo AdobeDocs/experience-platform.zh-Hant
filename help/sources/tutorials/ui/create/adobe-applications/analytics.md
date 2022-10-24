@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2345'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ ht-degree: 2%
 ![目錄](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### 選擇資料
+
+>[!IMPORTANT]
+>
+>畫面上列出的報表套裝可能來自不同地區。 您有責任了解資料的限制和義務，以及如何在Adobe Experience Platform跨地區使用這些資料。 請確定這是貴公司允許的。
 
 此 **[!UICONTROL Analytics來源新增資料]** 步驟會提供 [!DNL Analytics] 報表套裝資料，以建立來源連線。
 
