@@ -2,11 +2,11 @@
 keywords: RTCDP; CDP;B2B Edition;Real-time Customer Data Platform；即時客戶資料平台；即時cdp;b2b; CDP
 solution: Experience Platform
 title: Real-time Customer Data Platform B2B版快速入門
-description: 設定Real-time Customer Data Platform B2B Edition實作時，請使用此範例案例作為範例。
+description: 設定Adobe Real-time Customer Data Platform B2B Edition實作時，請使用此範例案例作為範例。
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: eb71896ec049253266685fdc831f941e14f3268a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Adobe Experience Platform可讓您自動產生B2B資料來源所需的結構和�
 
 ## 將資料內嵌至Experience Platform
 
-接下來，Bodea行銷人員會使用 [Marketo Engage連接器](../sources/connectors/adobe-applications/marketo/marketo.md) 將資料內嵌至Platform以用於下游服務。 您也可以使用即時CDP B2B Edition的其中一個核准來源來內嵌資料。
+接下來，Bodea行銷人員會使用 [Marketo Engage連接器](../sources/connectors/adobe-applications/marketo/marketo.md) 將資料內嵌至Platform以用於下游服務。 您也可以使用Real-Time CDP B2B版的其中一個核准來源來內嵌資料。
 
 >[!NOTE]
 > 
@@ -84,7 +84,7 @@ Bodea行銷人員會檢查所有欄位群組是否已適當對應，並透過初
 
 >[!NOTE]
 > 
->如需如何建立區段以評估資料的指示，請參閱 [區段產生器UI指南](../segmentation/ui/segment-builder.md). 如需更具體的B2B區段使用案例，請參閱 [即時CDP B2B Edition的區段概觀](./segmentation/b2b.md).
+>如需如何建立區段以評估資料的指示，請參閱 [區段產生器UI指南](../segmentation/ui/segment-builder.md). 如需更具體的B2B區段使用案例，請參閱 [Real-Time CDP B2B版的區段概觀](./segmentation/b2b.md).
 
 區段產生器可讓您從即時客戶設定檔資料建立有價對象，並根據您定義的屬性、事件和現有對象的組合，檢視潛在對象的估計值。
 
@@ -104,4 +104,4 @@ Bodea行銷人員會啟動區段至Marketo目的地，以便以靜態清單的�
 
 ## 後續步驟
 
-依照本教學課程，您已成功運用Real-time CDP B2B Edition所使用的各種Adobe Experience Platform服務。 因此，您已學會內嵌、劃分、評估和匯出B2B資料，以便成為可操作的對象，並可跨不同管道參與。
+依照本教學課程，您已成功運用Real-Time CDP B2B Edition使用的各種Adobe Experience Platform服務。 因此，您已學會內嵌、劃分、評估和匯出B2B資料，以便成為可操作的對象，並可跨不同管道參與。

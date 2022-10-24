@@ -2,9 +2,9 @@
 title: 帳戶設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 19d6d3c03e6b3b0f9f82ceeee30816fa054261a3
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可以透過
 
 ## 快速入門
 
-您必須有權 [Real-time Customer Data Platform B2B版](../../rtcdp/b2b-overview.md) 以存取B2B [!UICONTROL 帳戶設定檔] 控制面板。
+您必須有權 [Adobe Real-time Customer Data Platform B2B版](../../rtcdp/b2b-overview.md) 以存取B2B [!UICONTROL 帳戶設定檔] 控制面板。
 
 ## 帳戶設定檔資料
 
@@ -45,7 +45,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可以透過
 
 ![顯示結果的「帳戶配置檔案」瀏覽頁簽，突出顯示配置檔案ID。](../images/account-profiles/account-profiles-browse-tab.png)
 
-顯示在 [!UICONTROL 詳細資料] 索引標籤已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 請參閱 [瀏覽Real-time Customer Data Platform的帳戶設定檔](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 若要進一步了解Platform UI中的帳戶設定檔檢視功能。
+顯示在 [!UICONTROL 詳細資料] 索引標籤已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 請參閱 [瀏覽Adobe Real-time Customer Data Platform的帳戶設定檔](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 若要進一步了解Platform UI中的帳戶設定檔檢視功能。
 
 ## 此 [!UICONTROL 帳戶設定檔] [!UICONTROL 概述] {#overview}
 

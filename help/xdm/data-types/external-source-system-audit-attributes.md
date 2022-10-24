@@ -1,20 +1,21 @@
 ---
 title: 外部源系統審核屬性資料類型
 description: 本檔案概述外部來源系統稽核屬性Experience Data Model(XDM)資料類型。
-source-git-commit: 8bf0c63f33ae9cbfb01d4db9e5220c6762575c5b
+exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '217'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL 外部源系統審核屬] 性資料類型
+# [!UICONTROL 外部源系統審核屬性] 資料類型
 
 >[!NOTE]
 >
->此資料類型僅適用於可存取B2B版即時客戶資料平台的組織。
+>此資料類型僅適用於可存取Adobe Real-time Customer Data Platform B2B版本的組織。
 
-[!UICONTROL 外部來源系統稽] 核屬性是標準的Experience Data Model(XDM)資料類型，可擷取關於外部來源系統的稽核詳細資料。
+[!UICONTROL 外部源系統審核屬性] 是標準的Experience Data Model(XDM)資料類型，可擷取外部來源系統的稽核詳細資料。
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 

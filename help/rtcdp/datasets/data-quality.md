@@ -1,19 +1,19 @@
 ---
-keywords: 資料質量；rtcdp資料質量
-title: Real-time Customer Data Platform資料質量
-description: 關於Real-time Customer Data Platform資料質量的檔案
+keywords: 資料品質；rtcdp資料品質
+title: Real-time Customer Data Platform中的資料品質
+description: 關於Adobe Real-time Customer Data Platform資料品質的檔案
 exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform資料質量
+# Real-time Customer Data Platform中的資料品質
 
-Real-time Customer Data Platform（即時CDP）允許您將來自多個源的資料連接在一起，為客戶提供一致且協調的體驗。 因此，確保資料完整、準確和簡潔至關重要。
+Adobe Real-time Customer Data Platform(Real-Time CDP)可讓您匯集來自多個來源的資料，並將其橋接在一起，為客戶提供一致且協調的體驗。 因此，確保資料完整、準確、精簡至關重要。
 
-即時CDP是在Adobe Experience Platform之上構建的，它利用了許多Experience Platform服務和功能。 因此，您可以確信在接收資料時會檢查和驗證資料。
+Real-Time CDP以Adobe Experience Platform為基礎，運用許多Experience Platform服務和功能。 因此，您可以確信資料會在擷取時受到檢查和驗證。
 
-有關資料質量的詳細資訊，請閱讀 [資料質量文檔Adobe I/O](../../ingestion/quality/overview.md)。
+如需資料品質的詳細資訊，請參閱 [資料品質檔案Adobe I/O](../../ingestion/quality/overview.md).

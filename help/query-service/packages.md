@@ -1,9 +1,9 @@
 ---
 title: 查詢服務包
 description: 以下檔案概述可用於Query Service的功能和產品套件，並強調臨機和批次查詢之間的差異。
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform查詢服務可根據可執行的查詢模式，分為�
 
 查詢服務功能包含下列產品和附加元件：
 
-- **基於平台的應用程式** (Real-time Customer Data Platform、Customer Journey Analytics和Adobe Journey Optimizer):從一開始就提供執行臨機查詢的查詢服務存取權，其中包含平台式應用程式的每個變異和層級。
+- **基於平台的應用程式** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics和Adobe Journey Optimizer):從一開始就提供執行臨機查詢的查詢服務存取權，其中包含平台式應用程式的每個變異和層級。
 - **[!DNL Data Distiller]** (可與Adobe Real-Time CDP、Customer Journey Analytics和Adobe Journey Optimizer一起購買的附加套件):提供用於執行批處理查詢的查詢服務訪問 [!DNL Data Distiller].
 
 下表根據查詢服務的封裝方式概述了關鍵的查詢服務權限：
@@ -29,8 +29,8 @@ Adobe Experience Platform查詢服務可根據可執行的查詢模式，分為�
 | 支援的查詢模式 | 僅臨機查詢 | 批次查詢 |
 | 支援的使用案例 | <ul><li>探&#x200B;索</li><li>資料探&#x200B;索</li><li>資料驗證</li><li>實驗</li></ul> | <ul><li>清潔</li><li>整形</li><li>操控</li><li>豐富</li></ul> |
 | 支援語義 | <ul><li>選擇查詢</li></ul> | <ul><li>CTAS和ITAS查詢</li></ul> |
-| 最大執行時間 | 10 分鐘 | 24 小時 |
-| 授權量度 | **查詢用戶併發**: <ul><li>1名同時使用者(Real-time CDP, Adobe Journey Optimizer&#x200B;)</li><li>5個同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢併發**: <ul><li>1個併發運行查詢（所有應用程式）&#x200B;</li></ul> **其他臨機查詢使用者套件附加元件** 可購買，以增加客戶的授權臨機查詢權限。 <ul><li>每包多5個併發用戶</li><li>每個包附加1個併發運行查詢</li></ul> | **計算小時數**: <ul><li>變數（根據客戶的應用程式權限限定範圍）</li></ul> **計算小時數** 是查詢服務引擎在執行批次查詢時讀取、處理和將資料寫回資料湖所花費的時間量。 |
+| 最大執行時間 | 10 分鐘 | 24小時 |
+| 授權量度 | **查詢用戶併發**: <ul><li>1名同時使用者(Real-Time CDP、Adobe Journey Optimizer &#x200B;)</li><li>5個同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢併發**: <ul><li>1個併發運行查詢（所有應用程式）&#x200B;</li></ul> **其他臨機查詢使用者套件附加元件** 可購買，以增加客戶的授權臨機查詢權限。 <ul><li>每包多5個併發用戶</li><li>每個包附加1個併發運行查詢</li></ul> | **計算小時數**: <ul><li>變數（根據客戶的應用程式權限限定範圍）</li></ul> **計算小時數** 是查詢服務引擎在執行批次查詢時讀取、處理和將資料寫回資料湖所花費的時間量。 |
 | 查詢執行介面 | <ul><li>查詢服務UI</li><li>第三方用戶端UI</li><li>[!DNL PostgresSQL] 用戶端UI</li></ul> | <ul><li>查詢UI </li><li>第三方用戶端UI</li><li>[!DNL PostgresSQL] 用戶端UI</li><li>REST API</li></ul> |
 | 透過傳回的查詢結果 | 用戶端UI | 資料湖中儲存的衍生資料集 |
 | 結果限制 | <ul><li>查詢UI - 100列</li><li>第三方客戶端 — 50,000</li><li>[!DNL PostgresSQL] 客戶端 — 50,000</li></ul> | <ul><li>查詢UI（沒有列上限）</li><li>第三方用戶端（無列上限）</li><li>[!DNL PostgresSQL] 用戶端（沒有列上限）</li><li>REST API（無列上限）</li></ul> |

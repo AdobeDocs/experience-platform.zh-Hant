@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；資料管理；授權；授權；最佳作法
 title: 資料管理許可證權限最佳做法
-description: 了解可將 Adobe Experience Platform 授權權益管理得更好的最佳做法以及工具。
+description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5da2a6cfc9e9da6bbe6c6560577d22eed32c858c
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2529'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Experience Platform主要由兩個資料存放庫組成：the [!DNL Data Lake] �
 
 此 [!DNL Profile Richness] 量度會根據您購買的授權而有所不同。 有兩種計算方式 [!DNL Profile Richness] 可用：
 
-* Real-time Customer Data Platform中儲存的所有生產資料（即Profile Service和Identity Service）在任何時間點的總和，除以 [!DNL Addressable Audience];
+* Adobe Real-time Customer Data Platform中儲存的所有生產資料（即Profile Service和Identity Service）在任何時間點的總和，除以 [!DNL Addressable Audience];
 * Platform中儲存的所有資料的總和(包括但不限於 [!DNL Data Lake]、設定檔服務和Identity Service)，以及過去12個月中透過（而非儲存在）Platform串流的任何資料，除以 [!DNL Addressable Audience].
 
 這些量度的可用性和每個量度的特定定義會因貴組織已購買的授權而異。

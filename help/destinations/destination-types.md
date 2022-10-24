@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地類型
 title: 目的地類型和類別
 description: 了解Adobe Experience Platform中不同的目的地類型和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->企業目的地或串流設定檔匯出目的地皆適用於 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 僅限客戶。
+>企業目的地或串流設定檔匯出目的地皆適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 僅限客戶。
 
-使用企業目標Data Connectors將Real-time Customer Data Platform設定檔近乎即時傳送至內部系統或其他協力廠商系統，以進行資料同步、分析，並進一步擴充設定檔使用案例。
+使用企業目標Data Connectors將Adobe Real-time Customer Data Platform設定檔近乎即時傳送至內部系統或其他協力廠商系統，以進行資料同步、分析，並進一步擴充設定檔使用案例。
 
 這些目的地會以Experience Platform資料流的形式接收區段和設定檔資料。
 

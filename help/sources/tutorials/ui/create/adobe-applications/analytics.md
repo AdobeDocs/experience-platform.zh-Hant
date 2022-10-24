@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 04a8ca33e712c00d687432ddf9ad82f5d1644db2
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2301'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->只有在沒有資料衝突(例如兩個具有不同意義的自訂屬性（eVar、清單和Prop）)時，才能為「即時客戶資料設定檔」啟用來自多個報表套裝的資料。
+>只有在沒有資料衝突(例如兩個具有不同意義的自訂屬性（eVar、清單和Prop）)時，才能為「即時客戶設定檔」啟用來自多個報表套裝的資料。
 
 若要建立 [!DNL Analytics] 來源連線，選取報表套裝，然後選取 **[!UICONTROL 下一個]** 繼續。
 

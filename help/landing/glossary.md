@@ -5,9 +5,9 @@ title: Adobe Experience Platform字彙表
 topic-legacy: getting started
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '7428'
+source-wordcount: '7436'
 ht-degree: 0%
 
 ---
@@ -298,7 +298,7 @@ ht-degree: 0%
 
 **輸入功能**:輸入特徵在特徵映射中指定，並由機器學習模型用於進行預測。
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] 例如 [!DNL Attribution AI] 和 [!DNL Customer AI] 是機器學習、基於人工智慧的模型，需要Experience Platform(或以Platform為基礎構建的應用程式，如Real-time Customer Data Platform)來執行和操作。
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] 例如 [!DNL Attribution AI] 和 [!DNL Customer AI] 是機器學習、基於人工智慧的模型，需要Experience Platform(或以Platform為基礎構建的應用程式，如Adobe Real-time Customer Data Platform)來執行和操作。
 
 **興趣型鎖定目標或個人化**:如果符合下列三個條件，就會進行興趣型鎖定目標（也稱為個人化）:
 
@@ -414,7 +414,7 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] 將已知和未知的客戶資料匯整在一起，透過簡化的整合、智慧劃分，以及在數位客戶歷程中即時啟用，建立受信任的客戶設定檔。
+**Real-time Customer Data Platform**:Adobe Real-time Customer Data Platform(Real-Time CDP)將已知和未知的客戶資料匯整在一起，透過簡化的整合、智慧型細分，以及在數位客戶歷程中即時啟用，建立受信任的客戶設定檔。
 
 **即時客戶個人檔案**:即時客戶設定檔（有時稱為「設定檔」）結合來自多個管道的資料，包括線上、離線、CRM和協力廠商，提供每個客戶的全方位檢視。 設定檔可讓您將客戶資料併入個別設定檔中，提供每次客戶互動的可操作、時間戳記帳戶。
 

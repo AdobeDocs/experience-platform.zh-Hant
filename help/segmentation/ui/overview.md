@@ -5,7 +5,7 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '2375'
 ht-degree: 1%
@@ -136,7 +136,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 目的地是 [!DNL Real-time Customer Data Platform]，以及可讓您將資料匯出至外部平台。 如需目的地的詳細資訊，請參閱 [目的地概述](../../destinations/home.md). 若要了解如何啟用目的地的區段，請參閱 [啟用概述](../../destinations/ui/activation-overview.md).
+> 目的地是 [!DNL Adobe Real-Time Customer Data Platform]，以及可讓您將資料匯出至外部平台。 如需目的地的詳細資訊，請參閱 [目的地概述](../../destinations/home.md). 若要了解如何啟用目的地的區段，請參閱 [啟用概述](../../destinations/ui/activation-overview.md).
 
 ### 設定檔範例
 

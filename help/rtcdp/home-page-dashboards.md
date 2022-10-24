@@ -3,22 +3,22 @@ keywords: 量度概觀；rtcdp量度概觀
 title: Real-time Customer Data Platform首頁和控制面板
 description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '620'
 ht-degree: 2%
 
 ---
 
-# [!DNL Real-time Customer Data Platform] 首頁和儀表板
+# [!DNL Real-Time Customer Data Platform] 首頁和儀表板
 
-Real-time Customer Data Platform(Real-time CDP)首頁包含量度控制面板，會在您登入Real-time CDP時顯示。
+Adobe Real-time Customer Data Platform(Real-Time CDP)首頁包含量度控制面板，會在您登入Real-Time CDP時顯示。
 
-首頁只是顯示量度卡的其中一個位置。 Real-time CDP提供您整個體驗中的量度卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
+首頁只是顯示量度卡的其中一個位置。 Real-Time CDP會在您的整個體驗中提供量度卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
 
 ![image](assets/home.png)
 
-如果您登入Real-time CDP時系統中沒有資料，則首頁上的控制面板不會顯示。 在這種情況下，首頁會提供第一次使用者體驗的學習資料。 當收集資料時，換句話說， <!--sources-->資料集、設定檔、區段和目的地會建立，資料會流入系統，控制面板會自動更新，以顯示該資料的相關資訊<!-- in metric cards-->.
+如果您登入Real-Time CDP時系統中沒有資料，首頁的控制面板就不會顯示。 在這種情況下，首頁會提供第一次使用者體驗的學習資料。 當收集資料時，換句話說， <!--sources-->資料集、設定檔、區段和目的地會建立，資料會流入系統，控制面板會自動更新，以顯示該資料的相關資訊<!-- in metric cards-->.
 
 ## 首頁儀表板視圖
 
@@ -53,7 +53,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 每24小時更新一次設定檔數目。
 
-如需設定檔的詳細資訊，請參閱 [Real-time CDP中客戶的統一視圖](profile/profile-overview.md).
+如需設定檔的詳細資訊，請參閱 [Real-Time CDP中客戶的統一檢視](profile/profile-overview.md).
 
 ### 區段
 
@@ -77,7 +77,7 @@ There is also a metric card that shows the percentage of successful records. Sel
 
 The number of successful profile records is updated hourly. 
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 ### Total profile records
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
-For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
+For more information about profiles, see [A unified view of your customer in Real-Time CDP](profile/profile-overview.md).
 
 For more information about viewing a specific profile, see [Profile viewer](profile/profile-viewer.md).
 

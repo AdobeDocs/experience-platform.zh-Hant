@@ -1,85 +1,85 @@
 ---
-keywords: Experience Platform；主題；熱門主題；Marketo Engage；市場推廣；marketo engage;marketo
+keywords: Experience Platform；首頁；熱門主題；Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Marketo Engage連接器
 topic-legacy: overview
-description: 本文檔概述了Marketo Engage源連接器，包括有關其驗證、映射和資料延遲的資訊。
+description: 本檔案概述Marketo Engage來源連接器，包括驗證、對應和資料延遲的相關資訊。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: efa6891024cacd383f4cd958162a7a4f8ead0624
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
 
 # [!DNL Marketo Engage] 連接器
 
-Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) (以下簡稱：[!DNL Marketo]&quot;)是銷售線索管理和B2B營銷商的一個完整解決方案，希望通過參與複雜購買過程的每個階段來轉變客戶體驗。
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) (下稱「[!DNL Marketo]「)是銷售機會管理的完整解決方案，適合B2B行銷人員使用，而透過該解決方案，他們可參與複雜購買歷程的每個階段，從中轉變客戶體驗。
 
-使用 [!DNL Marketo] 源連接器，您可以從 [!DNL Marketo] 使用與平台連接的應用程式保持此資料的最新。
+使用 [!DNL Marketo] 來源連接器，您可以將B2B資料 [!DNL Marketo] 使用與平台連線的應用程式，讓此資料保持最新。
 
 >[!IMPORTANT]
 >
->您必須有權訪問 [Real-time Customer Data PlatformB2B版](../../../../rtcdp/b2b-overview.md) 使用所有Marketo資料集進行分割 [即時客戶概要資訊](../../../../profile/home.md)。 沒有即時CDP B2B版，您仍然可以使用Marketo源將資料從人員和活動資料集帶到即時客戶概要檔案以進行細分。
+>您必須擁有 [Adobe Real-time Customer Data Platform B2B版](../../../../rtcdp/b2b-overview.md) 若要使用所有Marketo資料集來劃分 [即時客戶個人檔案](../../../../profile/home.md). 若沒有Real-Time CDP B2B Edition，您仍可以使用Marketo來源，將人員和活動資料集的資料匯入即時客戶設定檔，以便進行細分。
 
-此文檔概述 [!DNL Marketo] 源連接器，包括有關如何驗證連接器、如何映射的資訊 [!DNL Marketo] 以體驗資料模型(XDM)和連接器的資料延遲。
+本檔案概述 [!DNL Marketo] 源連接器，包括如何驗證連接器、如何映射 [!DNL Marketo] 欄位至Experience Data Model(XDM)，以及連接器的資料延遲。
 
 ## 驗證您的 [!DNL Marketo] 連接器
 
-為了連接 [!DNL Marketo] 到平台，必須首先檢索 `munchkinId`。 `clientId`, `clientSecret`。
+為了連接 [!DNL Marketo] 若為Platform，您必須先擷取 `munchkinId`, `clientId`，和 `clientSecret`.
 
-請參閱 [驗證您的Marketo源連接器](./marketo-auth.md) 文檔以檢索您的憑據。
+請參閱 [驗證您的Marketo來源連接器](./marketo-auth.md) 文檔以檢索您的憑據。
 
-## 設定Adobe組織映射
+## 設定Adobe組織對應
 
-在為 [!DNL Marketo]，必須首先設定Adobe組織映射。 有關如何完成此操作的詳細步驟，請參見上的指南 [設定Adobe組織映射 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html)。
+建立映射集之前 [!DNL Marketo]，您必須先設定Adobe組織對應。 如需如何完成此作業的詳細步驟，請參閱 [設定Adobe組織映射 [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
-## 設定B2B命名空間和模式自動生成實用程式
+## 設定B2B命名空間和架構自動產生公用程式
 
-接下來，使用B2B命名空間和模式自動生成實用程式來設定平台開發人員控制台和Postman環境。 這允許您自動填充B2B命名空間和架構。 有關詳細說明，請參閱上的指南 [設定B2B命名空間和模式自動生成實用程式](./marketo-namespaces.md)
+接下來，使用B2B命名空間和結構自動產生公用程式來設定您的平台開發人員主控台和Postman環境。 這可讓您自動填入B2B命名空間和結構。 如需詳細指示，請參閱 [設定B2B命名空間和架構自動產生公用程式](./marketo-namespaces.md)
 
-## 體驗資料模型(XDM)
+## Experience Data Model(XDM)
 
-XDM是一個公開記錄的規範，它提供了通用的結構和定義，允許您從第三方源中接收資料以用於下游平台服務。
+XDM是公開記錄的規格，提供通用結構和定義，可讓您內嵌來自協力廠商來源的資料，以用於下游Platform服務。
 
-遵守XDM標準允許將資料統一地納入平台生態系統，使資料傳輸和資訊收集更加容易。
+遵循XDM標準，即可將資料統一整合至Platform生態系統，更輕鬆傳送資料和收集資訊。
 
-要瞭解有關XDM及其在平台中的角色的詳細資訊，請參閱 [XDM系統概述](../../../../xdm/home.md)。
+若要進一步了解XDM及其在Platform中的角色，請參閱 [XDM系統概觀](../../../../xdm/home.md).
 
-## 欄位映射自 [!DNL Marketo] 到XDM
+## 欄位對應來源 [!DNL Marketo] 到XDM
 
-建立源連接 [!DNL Marketo] 而平台，在將Marketo源資料欄位納入平台之前，必須將其映射到相應的目標XDM欄位。
+在 [!DNL Marketo] 和Platform,Marketo來源資料欄位必須先對應至其適當的目標XDM欄位，才能匯入Platform。
 
-有關在以下位置之間的欄位映射規則的詳細資訊，請參閱以下 [!DNL Marketo] 資料集和平台：
+請參閱下列內容，以取得關於 [!DNL Marketo] 資料集和Platform:
 
 * [活動](../mapping/marketo.md#activities)
 * [計劃](../mapping/marketo.md#programs)
-* [程式成員資格](../mapping/marketo.md#program-memberships)
+* [方案成員資格](../mapping/marketo.md#program-memberships)
 * [公司](../mapping/marketo.md#companies)
 * [靜態清單](../mapping/marketo.md#static-lists)
 * [靜態清單成員資格](../mapping/marketo.md#static-list-memberships)
-* [命名帳戶](../mapping/marketo.md#named-accounts)
+* [已命名帳戶](../mapping/marketo.md#named-accounts)
 * [機會](../mapping/marketo.md#opportunities)
 * [機會聯繫人角色](../mapping/marketo.md#opportunity-contact-roles)
-* [人](../mapping/marketo.md#persons)
+* [人員](../mapping/marketo.md#persons)
 
-## 預期延遲 [!DNL Marketo] 平台上的資料
+## 預期延遲 [!DNL Marketo] Platform上的資料
 
-下表概述了預期的延遲 [!DNL Marketo] 根據接收的性質和期望的目標將資料導入平台：
+下表概述將 [!DNL Marketo] 根據擷取的性質和所需目的地，將資料匯入Platform:
 
 | 目的地 | 預期延遲 |
 | ----------- | ---------------- |
-| [!DNL Real-time Customer Profile] | &lt;1分鐘 |
-| 達塔湖 | &lt; 60 分鐘 |
+| [!DNL Real-time Customer Profile] | &lt; 1分鐘 |
+| 資料湖 | &lt; 60 分鐘 |
 
 ## 後續步驟和其他資源
 
-以下文檔提供了有關建立 [!DNL Marketo] 源連接：
+下列檔案提供建立 [!DNL Marketo] 源連接：
 
-* 有關如何連接的資訊 [!DNL Marketo] 資料到平台，請參閱上的教程 [在UI中建立Marketo源連接器](../../../tutorials/ui/create/adobe-applications/marketo.md)。
-* 有關B2B命名空間和使用的架構的基礎設定的資訊 [!DNL Marketo]，請參閱 [B2B命名空間和架構](./marketo-namespaces.md)。
-* 有關查找 [!DNL Marketo] munchkin ID和生成憑據，請參閱 [[!DNL Marketo] 認證指南](./marketo-auth.md)。
-* 有關適用於的特定映射規則的資訊 [!DNL Marketo] 資料集，請參閱 [[!DNL Marketo] 欄位映射](../mapping/marketo.md)。
-* 有關 [!DNL Real-time Customer Data Platform B2B Edition] 及其功能，請參閱 [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md)。
+* 有關如何連接您的 [!DNL Marketo] 若要將資料傳送至Platform，請參閱 [在UI中建立Marketo來源連接器](../../../tutorials/ui/create/adobe-applications/marketo.md).
+* 如需B2B命名空間和結構的基礎設定相關資訊，請參閱 [!DNL Marketo]，請參閱 [B2B命名空間和結構](./marketo-namespaces.md).
+* 如需尋找 [!DNL Marketo] munchkin ID和產生憑證，請參閱 [[!DNL Marketo] 驗證指南](./marketo-auth.md).
+* 有關適用於的特定映射規則的資訊 [!DNL Marketo] 資料集，請參閱 [[!DNL Marketo] 欄位對應](../mapping/marketo.md).
+* 有關 [!DNL Real-Time Customer Data Platform B2B Edition] 及其功能，請參閱 [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

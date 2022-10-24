@@ -1,11 +1,11 @@
 ---
 keywords: rtcdp設定檔；設定檔rtcdp;rtcdp身分；rtcdp合併原則；即時客戶設定檔
 title: 帳戶設定檔UI指南
-description: 透過使用帳戶設定檔，Real-time Customer Data Platform B2B Edition可讓您統一來自多個來源的帳戶資訊。 本指南提供與Adobe Experience Platform使用者介面中帳戶設定檔互動的詳細資訊。
+description: 透過使用帳戶設定檔，Adobe Real-time Customer Data Platform B2B Edition可讓您統一來自多個來源的帳戶資訊。 本指南提供與Adobe Experience Platform使用者介面中帳戶設定檔互動的詳細資訊。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 85d3e5f265fdbfd51f184d36205127f005e2b9df
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->帳戶設定檔僅供Real-time Customer Data Platform B2B Edition客戶使用。 若要進一步了解即時CDP，包括每種許可證類型可用的功能，請從閱讀 [Real-time CDP概述](../overview.md).
+>帳戶設定檔僅供Real-time Customer Data Platform B2B Edition客戶使用。 若要進一步了解Real-Time CDP，包括每種授權類型可用的功能，請先閱讀 [Real-Time CDP概述](../overview.md).
 
-帳戶設定檔可讓您統一來自多個來源的帳戶資訊。 帳戶的統一檢視會匯集來自許多行銷管道的資料，以及貴組織目前用來儲存客戶帳戶資訊的不同系統。 本檔案提供使用Adobe Experience Platform使用者介面(UI)中提供的即時CDP B2B Edition功能，與帳戶設定檔互動的指南。
+帳戶設定檔可讓您統一來自多個來源的帳戶資訊。 帳戶的統一檢視會匯集來自許多行銷管道的資料，以及貴組織目前用來儲存客戶帳戶資訊的不同系統。 本檔案提供使用Real-Time CDP使用者介面(UI)中提供的B2B版功能與帳戶設定檔互動的指南。
 
 若要進一步了解如何在B2B工作流程中建立帳戶設定檔，請參閱 [端對端教學課程](../b2b-tutorial.md).
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 ![配置帳戶設定](images/b2b-configuring-account-settings.png)
 
-若要進一步了解銷售機會與帳戶比對，請參閱 [在Real-time CDP B2B概述中提供帳戶匹配](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+若要進一步了解銷售機會與帳戶比對，請參閱 [在Real-Time CDP B2B中導致帳戶相符概述](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## 瀏覽帳戶設定檔 {#browse-account-profiles}
 
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 ### 瀏覽依據 [!UICONTROL 其他] {#browse-by-others}
 
-Real-time CDP, B2B Edition支援通過輸入 **[!UICONTROL 源名稱]**, **[!UICONTROL 源實例]**，和 **[!UICONTROL 帳戶ID]** 的帳戶。 通過直接輸入源名稱和實例，您可以提供Experience Platform搜索和顯示正確帳戶配置檔案資料所需的上下文。
+Real-Time CDP B2B版可讓您輸入 **[!UICONTROL 源名稱]**, **[!UICONTROL 源實例]**，和 **[!UICONTROL 帳戶ID]** 的帳戶。 通過直接輸入源名稱和實例，您可以提供Experience Platform搜索和顯示正確帳戶配置檔案資料所需的上下文。
 
 在無法直接連線至資料的來源情況下，執行直接查閱的功能相當實用。 例如，如果貴組織已制定資料控管原則，防止直接連線至CRM，您可以將該資料匯出至雲端儲存系統，然後內嵌至Experience Platform。
 
@@ -120,19 +120,19 @@ Real-time CDP, B2B Edition支援通過輸入 **[!UICONTROL 源名稱]**, **[!UIC
 
 ## 人員標籤 {#people-tab}
 
-此 **[!UICONTROL 人員]** 索引標籤提供與帳戶相關聯的個別人員清單。 這些人員可能是來自您組織內不同團隊管理的不同企業系統的聯絡人和銷售線索，但在即時CDP B2B Edition中，他們會以單一清單的形式一起呈現，讓您更全面地了解客戶聯絡人。
+此 **[!UICONTROL 人員]** 索引標籤提供與帳戶相關聯的個別人員清單。 這些人可能是來自您組織內不同團隊管理的不同企業系統的聯絡人和銷售線索，但在Real-Time CDPB2B版中，他們會以單一清單呈現，讓您更全面地了解客戶聯絡人。
 
 >[!NOTE]
 >
 >此 [!UICONTROL 人員] 索引標籤會顯示與帳戶相關聯的最多25人清單。 對於擁有25個以上關聯人員的帳戶，系統會顯示25個記錄的隨機抽樣。
 
-除了顯示聯繫人的資訊快照外，列出的每個人還包括 **[!UICONTROL 設定檔ID]**，此可點按連結可讓您探索該個人的即時客戶設定檔。 若要進一步了解如何檢視與您帳戶相關的個別客戶設定檔，請參閱指南 [在Real-time CDP, B2B Edition中瀏覽配置檔案](../profile/profile-browse.md).
+除了顯示聯繫人的資訊快照外，列出的每個人還包括 **[!UICONTROL 設定檔ID]**，此可點按連結可讓您探索該個人的即時客戶設定檔。 若要進一步了解如何檢視與您帳戶相關的個別客戶設定檔，請參閱指南 [瀏覽Real-Time CDP B2B版中的設定檔](../profile/profile-browse.md).
 
 ![人員標籤](images/b2b-account-people.png)
 
 ## 「機會」頁簽 {#opportunities-tab}
 
-此 **[!UICONTROL 機會]** 頁簽提供與帳戶相關的未結和已結業務機會的資訊。 這些機會可能會從多個來源Experience Platform，但即時CDP B2B Edition可讓行銷人員輕鬆在一個地方一起查看所有這些機會。
+此 **[!UICONTROL 機會]** 頁簽提供與帳戶相關的未結和已結業務機會的資訊。 這些機會可能會從多個來源擷取到Experience Platform中，但Real-Time CDP B2B版可讓行銷人員輕鬆在單一位置一併看到所有這些機會。
 
 >[!NOTE]
 >

@@ -1,11 +1,11 @@
 ---
 keywords: 檢視設定檔rtcdp;rtcdp設定檔檢視；rtcdp設定檔
 title: 在Real-time Customer Data Platform中瀏覽設定檔
-description: Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面來瀏覽即時客戶個人檔案資料。
+description: Adobe Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面來瀏覽即時客戶個人檔案資料。
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 在Adobe Experience Platform使用者介面中，您可以檢視這些唯讀設定檔，並查看有關每個個別客戶的重要資訊，包括其偏好設定、過去事件、互動，以及個人所屬的區段。
 
-Real-time Customer Data Platform建置在Adobe Experience Platform上，因此可以使用Experience PlatformUI中的設定檔檢視功能。 如需在Platform使用者介面中檢視客戶設定檔的詳細指南，請參閱 [即時客戶個人檔案使用手冊](../../profile/ui/user-guide.md).
+Adobe Real-time Customer Data Platform建置在Adobe Experience Platform上，因此可以使用Experience PlatformUI中的設定檔檢視功能。 如需在Platform使用者介面中檢視客戶設定檔的詳細指南，請參閱 [即時客戶個人檔案使用手冊](../../profile/ui/user-guide.md).
 
-## Real-time CDP B2B Edition的配置檔案增強功能
+## Real-Time CDP B2B版的設定檔增強功能
 
-除了Adobe Experience Platform支援的設定檔瀏覽功能外， Real-time CDP B2B Edition使用者還可以在 [!UICONTROL 屬性] 和 [!UICONTROL 事件] 頁簽。 B2B資料也可用來執行分段，這些區段會顯示在客戶的 [!UICONTROL 區段成員資格] 標籤並搭配非B2B區段。
+除了Adobe Experience Platform、Real-Time CDP支援的設定檔瀏覽功能外，B2B Edition使用者還可以在 [!UICONTROL 屬性] 和 [!UICONTROL 事件] 頁簽。 B2B資料也可用來執行分段，這些區段會顯示在客戶的 [!UICONTROL 區段成員資格] 標籤並搭配非B2B區段。
 
-Real-time CDP, B2B Edition還允許您瀏覽 [!UICONTROL 帳戶], [!UICONTROL 機會]，和 [!UICONTROL 源記錄] 從與個別客戶關聯的企業來源取得。
+Real-Time CDP B2B Edition還允許您瀏覽 [!UICONTROL 帳戶], [!UICONTROL 機會]，和 [!UICONTROL 源記錄] 從與個別客戶關聯的企業來源取得。
 
 若要探索這些增強功能，請先依照 [即時客戶個人檔案使用手冊](../../profile/ui/user-guide.md) 要通過合併策略或標識命名空間來瀏覽配置檔案。
 
@@ -43,7 +43,7 @@ Real-time CDP, B2B Edition還允許您瀏覽 [!UICONTROL 帳戶], [!UICONTROL �
 
 ### 「機會」頁簽
 
-此 **[!UICONTROL 機會]** 索引標籤提供與帳戶相關的未結和已結業務機會的詳細資訊。 這些機會可能會從多個來源Experience Platform，但即時CDP B2B Edition可讓行銷人員輕鬆在一個地方一起查看所有這些機會。
+此 **[!UICONTROL 機會]** 索引標籤提供與帳戶相關的未結和已結業務機會的詳細資訊。 這些機會可能會從多個來源擷取到Experience Platform中，但Real-Time CDP B2B版可讓行銷人員輕鬆在單一位置一併看到所有這些機會。
 
 每個機會都包括以下資訊：機會的名稱、其金額、階段，以及該機會是開啟、關閉、成功還是丟失。
 

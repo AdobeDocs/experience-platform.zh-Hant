@@ -5,7 +5,7 @@ title: Adobe Experience Platform 概觀
 topic-legacy: getting started
 description: Adobe Experience Platform可讓組織集中和標準化客戶資料，再運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 10%
@@ -28,15 +28,15 @@ Adobe Experience Platform是市面上功能最強大、最靈活、最開放的�
 
 Adobe已在Experience Platform之上構建了多個應用程式服務。 您可以在自己的指南中找到這些服務的檔案，連結如下：
 
-* [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
-* [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
+* [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 
 ## [!DNL Experience Platform] 教學課程
 
-您可以開始使用 [!DNL Platform] 您可以依照逐步教學課程快速輕鬆地操作，其中涵蓋從準備資料以擷取到進階機器學習演算法等所有內容。 這些教學課程旨在補充 [!DNL Experience Platform] 說明檔案，因此為了獲得最佳結果，請在完成教學課程的同時，保持說明檔案的現有狀態。
+您可以開始使用 [!DNL Platform] 您可以依照逐步教學課程快速輕鬆地操作，涵蓋從準備資料以擷取到進階機器學習演算法等所有內容。 這些教學課程旨在補充 [!DNL Experience Platform] 說明檔案，因此為了獲得最佳結果，請在完成教學課程的同時，保持說明檔案的現有狀態。
 
 造訪 [Experience Platform教學課程](https://www.adobe.com/go/platform-tutorials-home-en) 開始使用的登陸頁面。
 

@@ -2,9 +2,9 @@
 title: XDM企業人員元件結構欄位組
 description: 本檔案概述「XDM企業人員元件」結構欄位群組。
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 83329002a1fe51e49818a203191c7082f9589037
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '552'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 [!UICONTROL XDM企業人員元件] 是的標準架構欄位組 [[!DNL XDM Individual Profile] 類](../../classes/individual-profile.md) 會擷取人員的多個來源記錄，以及人員分段所需的其他屬性。
 
-為人員建立設定檔時透過 [即時客戶個人檔案](../../../profile/home.md) 在B2B版的即時CDP中，用於建立該配置檔案的資訊可能來自許多源記錄。 例如，如果某人為兩家不同的公司工作，則許多CRM系統會建立該人刻意重複的副本，使其中一份連結至公司A，而另一份連結至公司B。將該資料帶入Adobe Experience Platform時，此欄位群組可用來將這些不同的來源記錄合併為單一表示。
+為人員建立設定檔時透過 [即時客戶個人檔案](../../../profile/home.md) 在Real-Time CDP的B2B版本中，用於建立該設定檔的資訊可能來自許多來源記錄。 例如，如果某人為兩家不同的公司工作，則許多CRM系統會建立該人刻意重複的副本，使其中一份連結至公司A，而另一份連結至公司B。將該資料帶入Adobe Experience Platform時，此欄位群組可用來將這些不同的來源記錄合併為單一表示。
 
 欄位群組提供根層級 `personComponents` 欄位，此欄位是物件的陣列。 陣列中的每個對象表示不同的源記錄。
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 >您必須依照擷取模式，如 [來源檔案](../../../rtcdp/sources/b2b.md). 其他欄位對應方法無法保證運作。
 >
 >例如， `personComponents` 在標準擷取模式期間會個別提交陣列，然後由Platform新增至陣列。 手動將物件陣列新增至業務人員元件時，會傳回錯誤。
->建立B2B資料的結構時，應使用自動產生公用程式。 如需如何使用的指示，請參閱本檔案 [B2B命名空間和架構自動產生公用程式](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). 如果您未使用自動生成實用程式，並且要手動映射資料模型，請務必閱讀上的文檔 [Real-time Customer Data Platform B2B版Experience Data Model(XDM)類別](../../../rtcdp/schemas/b2b.md) 之後才能對應資料。
+>建立B2B資料的結構時，應使用自動產生公用程式。 如需如何使用的指示，請參閱本檔案 [B2B命名空間和架構自動產生公用程式](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). 如果您未使用自動產生公用程式，且想手動對應資料模型，請務必閱讀 [Adobe Real-time Customer Data Platform B2B版XDM類別](../../../rtcdp/schemas/b2b.md) 之後才能對應資料。
 >
 >請參閱 [端對端教學課程](../../../rtcdp/b2b-tutorial.md) 如需B2B資料建議工作流程的資訊。
 

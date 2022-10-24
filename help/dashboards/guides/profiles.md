@@ -4,9 +4,9 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 1755f5030f5730ca06ea718635ede9deb1188d21
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '3387'
+source-wordcount: '3388'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 此 [!UICONTROL 瀏覽] 索引標籤可讓您搜尋及檢視內嵌至您組織的唯讀設定檔。 從這裡，您可以看到屬於設定檔的有關其偏好設定、過去事件、互動和區段的重要資訊
 
-若要進一步了解Platform UI中提供的設定檔檢視功能，請參閱 [瀏覽Real-time Customer Data Platform中的設定檔](../../rtcdp/profile/profile-browse.md).
+若要進一步了解Platform UI中提供的設定檔檢視功能，請參閱 [瀏覽Adobe Real-time Customer Data Platform中的設定檔](../../rtcdp/profile/profile-browse.md).
 
 ## 合併策略 {#merge-policies}
 

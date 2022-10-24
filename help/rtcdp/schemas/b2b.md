@@ -1,23 +1,23 @@
 ---
 title: Real-time Customer Data Platform B2B版中的結構描述
-description: 概略說明Real-time Customer Data Platform B2B版本中Experience Data Model(XDM)結構之角色。
+description: 概略說明Adobe Real-time Customer Data Platform B2B版本中Experience Data Model(XDM)結構之角色。
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platform B2B版中的結構描述
 
-Real-time Customer Data Platform B2B版提供數種標準 [Experience Data Model(XDM)類別](../../xdm/schema/composition.md#class) 擷取關於基本B2B資料實體的詳細資訊，例如帳戶、機會、促銷活動等。 此外，即時CDP B2B Edition還允許您定義這些結構之間的多對一關係，以便它們能夠參與高級細分使用案例。
+Adobe Real-time Customer Data Platform B2B版提供數種標準 [Experience Data Model(XDM)類別](../../xdm/schema/composition.md#class) 擷取關於基本B2B資料實體的詳細資訊，例如帳戶、機會、促銷活動等。 此外，Real-Time CDP B2B版還可讓您定義這些結構之間的多對一關係，以便參與進階細分使用案例。
 
 >[!IMPORTANT]
 >
->您必須有即時CDP B2B Edition的存取權，B2B結構才能參與 [即時客戶個人檔案](../../profile/home.md).
+>您必須擁有Real-Time CDP B2B版本的存取權，B2B結構才能參與 [即時客戶個人檔案](../../profile/home.md).
 
-Real-time CDP B2B Edition提供了以下標準類：
+Real-Time CDP B2B版提供下列標準類別：
 
 * [XDM商業帳戶](../../xdm/classes/b2b/business-account.md)
 * [XDM企業帳戶人員關係](../../xdm/classes/b2b/business-account-person-relation.md)

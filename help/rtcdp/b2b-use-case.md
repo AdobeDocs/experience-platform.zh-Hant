@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP; CDP;Real-time Customer Data Platform；即時客戶資料平台；real time cdp;cdp;rtcdp
 title: Real-time Customer Data Platform B2B版的範例使用案例
-description: 此範例案例提供您實施 Real-time Customer Data Platform B2B Edition 的設定範例。
+description: 此範例案例提供您實作Adobe Real-time Customer Data Platform B2B Edition的設定範例。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 2%
+source-wordcount: '1135'
+ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platform B2B版的範例使用案例
 
-Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe Experience Platform產品，以支援B2B資料和工作流程。 本檔案提供範例使用案例，示範B2B版本提供的其他優點。 包括:
+Real-time Customer Data Platform B2B版擴充了現有的Real-Time CDP和Adobe Experience Platform產品，以支援B2B資料和工作流程。 本檔案提供範例使用案例，示範B2B版本提供的其他優點。 包括:
 
 - 結合來自不同獨立資料來源的人員和帳戶資料，以產生全面的檢視，讓您更清楚了解客戶，並更精確地劃分區段。 請參閱 [建立XDM架構關係](./schemas/b2b.md) 以用於各種B2B來源，以取得詳細資訊。
 - 根據相關實體的屬性劃分受眾。 這包括帳戶、機會、行銷活動和行銷清單。 區段不再僅限於人員屬性和體驗事件。 請參閱 [B2B區段檔案](./segmentation/b2b.md) 如需建立B2B特定對象的詳細範例。
@@ -52,11 +52,11 @@ Real-time Customer Data Platform B2B Edition擴充了現有的即時CDP和Adobe 
 
 由於Townsend的支出分散於不同的銷售系統，且個別總計不超過100萬，因此該區段找不到任何符合Marketo 1或Marketo 2資格的人。
 
-### Real-time CDP B2B Edition如何解決此問題
+### Real-Time CDP B2B版如何解決此問題
 
-透過即時CDP B2B Edition,Bodea的行銷團隊可以：
+有了Real-Time CDP B2B版，Bodea的行銷團隊可以：
 
-- 將來自所有不同來源(多個Marketo和CRM執行個體，以及主資料管理)的資料結合到即時CDP B2B Edition中。
+- 將來自所有不同來源(多個Marketo和CRM執行個體，以及主資料管理)的資料合併到Real-Time CDP B2B Edition。
 
 透過RT-CDP B2B Edition,Bodea可使用Marketo Engage來源連接器，將Marketo 1和Marketo 2的B2B資料匯入Experience Platform，並透過與Platform連線的應用程式，讓此資料保持最新。 請參閱 [Marketo來源連接器](../sources/connectors/adobe-applications/marketo/marketo.md) 檔案以取得詳細資訊。
 
@@ -87,7 +87,7 @@ CRM1的B2B資料（人員、帳戶、機會和活動）會同步至Marketo 1。 
 
 ## 後續步驟
 
-閱讀本檔案後，您現在已了解可使用即時CDP B2B Edition解決的目標和問題類型。
+閱讀本檔案後，您現在已了解可使用Real-Time CDP B2B版解決的目標與問題類型。
 
 建議您參考下列檔案，以進一步了解B2B特定功能：
 

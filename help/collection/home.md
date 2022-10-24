@@ -5,9 +5,9 @@ title: 資料彙集概觀
 topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 96ee731ce8de708b1671c40f1bbef9902495f3b4
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 6%
 
 ---
@@ -64,7 +64,7 @@ Platform Edge Network是一個全球分佈、快速、可靠的伺服器網路�
 
 >[!NOTE]
 >
->事件轉送是付費功能，僅包含在Real-time Customer Data Platform連線產品中。
+>事件轉送是付費功能，僅包含在Adobe Real-time Customer Data Platform連線產品中。
 
 ## 後續步驟
 

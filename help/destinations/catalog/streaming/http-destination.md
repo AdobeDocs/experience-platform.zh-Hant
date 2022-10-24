@@ -1,67 +1,67 @@
 ---
-title: HTTP API連接
+title: HTTP API連線
 keywords: 流；
-description: 使用Adobe Experience Platform的HTTP API目標將配置檔案資料發送到第三方HTTP終結點以運行您自己的分析或對導出出Experience Platform的配置檔案資料執行可能需要的任何其他操作。
+description: 使用Adobe Experience Platform中的HTTP API目的地，將設定檔資料傳送至協力廠商HTTP端點，以執行您自己的分析，或對匯出出Experience Platform的設定檔資料執行任何其他可能需要的作業。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2376'
 ht-degree: 0%
 
 ---
 
-# HTTP API連接
+# HTTP API連線
 
 ## 總覽 {#overview}
 
 >[!IMPORTANT]
 >
-> 此目標僅可用於 [Real-time Customer Data Platform旗艦](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+> 此目的地僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 
-HTTP API目標是 [!DNL Adobe Experience Platform] 流目標，幫助您將配置檔案資料發送到第三方HTTP終結點。
+HTTP API目的地為 [!DNL Adobe Experience Platform] 可協助您將設定檔資料傳送至協力廠商HTTP端點的串流目的地。
 
-要向HTTP終結點發送配置檔案資料，必須首先 [連接到目標](#connect-destination) 在 [!DNL Adobe Experience Platform]。
+若要將設定檔資料傳送至HTTP端點，您必須先 [連接到目標](#connect-destination) in [!DNL Adobe Experience Platform].
 
 ## 使用案例 {#use-cases}
 
-HTTP API目標允許您將XDM配置檔案資料和訪問群體段導出到通用HTTP終結點。 在此，您可以運行自己的分析，或對導出出Experience Platform的配置檔案資料執行可能需要的任何其他操作。
+HTTP API目的地可讓您將XDM設定檔資料和對象區段匯出至一般HTTP端點。 在此，您可以執行自己的分析，或對匯出為Experience Platform外的設定檔資料執行任何其他可能需要的操作。
 
-HTTP端點可以是客戶自己的系統或第三方解決方案。
+HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出類型和頻率 {#export-type-frequency}
 
 有關目標導出類型和頻率的資訊，請參閱下表。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，如在 [目標激活工作流](../../ui/activate-segment-streaming-destinations.md#mapping)。 |
-| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出類型 | **[!UICONTROL 設定檔]** | 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，如 [目的地啟動工作流程](../../ui/activate-segment-streaming-destinations.md#mapping). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 先決條件 {#prerequisites}
 
-要使用HTTP API目標導出Experience Platform外的資料，必須滿足以下先決條件：
+若要使用HTTP API目的地將資料匯出Experience Platform，您必須符合下列必要條件：
 
-* 必須具有支援REST API的HTTP終結點。
-* 您的HTTP終結點必須支援Experience Platform配置檔案架構。 HTTP API目標中不支援對第三方負載架構的轉換。 請參閱 [導出的資料](#exported-data) 的子節。
-* HTTP終結點必須支援標頭。
+* 您必須有支援REST API的HTTP端點。
+* 您的HTTP端點必須支援Experience Platform設定檔架構。 HTTP API目的地不支援轉換為第三方裝載結構。 請參閱 [匯出的資料](#exported-data) 區段，以取得Experience Platform輸出結構的範例。
+* 您的HTTP端點必須支援標頭。
 
 >[!TIP]
 >
-> 您還可以使用 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 設定整合併將Experience Platform配置檔案資料發送到HTTP終結點。
+> 您也可以使用 [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) 設定整合，並將Experience Platform設定檔資料傳送至HTTP端點。
 
-## IP地址允許清單 {#ip-address-allowlist}
+## IP位址允許清單 {#ip-address-allowlist}
 
-為滿足客戶的安全性和合規性要求，Experience Platform提供了一個靜態IP清單，您可以允許列出該HTTP API目標。 請參閱 [流目標的IP地址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md) 清單。
+為符合客戶的安全性和法規遵循需求，Experience Platform提供靜態IP清單，您可以將這些IP放入HTTP API目的地允許清單中。 請參閱 [串流目的地的IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md) 以取得允許清單的完整IP清單。
 
-## 支援的身份驗證類型 {#supported-authentication-types}
+## 支援的驗證類型 {#supported-authentication-types}
 
-HTTP API目標支援對HTTP終結點的多種身份驗證類型：
+HTTP API目的地支援數種驗證類型至HTTP端點：
 
-* 無驗證的HTTP終結點；
-* 持有者令牌認證；
-* [OAuth 2.0客戶端憑據](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 驗證主體形式，使用 [!DNL client ID]。 [!DNL client secret] 和 [!DNL grant type] 在HTTP請求的正文中，如下例所示。
+* 沒有驗證的HTTP端點；
+* 承載令牌驗證；
+* [OAuth 2.0用戶端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 使用body表單進行驗證，使用 [!DNL client ID], [!DNL client secret] 和 [!DNL grant type] ，如下列範例所示。
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -71,7 +71,7 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-* [OAuth 2.0客戶端憑據](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 具有基本授權，具有包含URL編碼的授權標頭 [!DNL client ID] 和 [!DNL client secret]。
+* [OAuth 2.0用戶端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 具有基本授權，具有包含URL編碼的授權標題 [!DNL client ID] 和 [!DNL client secret].
 
 ```shell
 curl --location --request POST 'https://some-api.com/token' \
@@ -80,158 +80,158 @@ curl --location --request POST 'https://some-api.com/token' \
 --data-urlencode 'grant_type=client_credentials'
 ```
 
-* [OAuth 2.0密碼授予](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/)。
+* [OAuth 2.0密碼授予](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
 ## 連接到目標 {#connect-destination}
 
 >[!IMPORTANT]
 > 
->要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要連線至目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 連接到此目標時，必須提供以下資訊：
+若要連線至此目的地，請依照 [目的地設定教學課程](../../ui/connect-destination.md). 連接到此目的地時，必須提供以下資訊：
 
 ### 驗證資訊 {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
 >title="客戶端憑據類型"
->abstract="選擇 **體形編碼** 將客戶端ID和客戶端機密包含在請求正文中，或 **基本授權** 將客戶端ID和客戶端機密包含在授權標頭中。 查看文檔中的示例。"
+>abstract="選擇 **體型編碼** 在要求內文或 **基本授權** 將用戶端ID和用戶端密碼包含在授權標題中。 在檔案中檢視範例。"
 
-#### 持有者令牌驗證 {#bearer-token-authentication}
+#### 承載令牌驗證 {#bearer-token-authentication}
 
-如果選擇 **[!UICONTROL 持有者令牌]** 連接到HTTP終結點的驗證類型，輸入下面的欄位並選擇 **[!UICONTROL 連接到目標]**:
+如果您選取 **[!UICONTROL 承載令牌]** 要連接到HTTP端點的驗證類型，請輸入以下欄位，然後選取 **[!UICONTROL 連接到目標]**:
 
-![UI螢幕的影像，您可以在其中使用承載令牌驗證連接到HTTP API目標](../../assets/catalog/http/http-api-authentication-bearer.png)
+![UI畫面的影像，您可在此使用承載權杖驗證連線至HTTP API目的地](../../assets/catalog/http/http-api-authentication-bearer.png)
 
-* **[!UICONTROL 持有者令牌]**:插入承載令牌以驗證到HTTP位置。
+* **[!UICONTROL 承載令牌]**:插入承載令牌以驗證到您的HTTP位置。
 
-#### 無身份驗證 {#no-authentication}
+#### 無驗證 {#no-authentication}
 
-如果選擇 **[!UICONTROL 無]** 連接到HTTP終結點的身份驗證類型：
+如果您選取 **[!UICONTROL 無]** 連接到HTTP端點的身份驗證類型：
 
-![UI螢幕的映像，您可以在此連接到HTTP API目標，但不使用身份驗證](../../assets/catalog/http/http-api-authentication-none.png)
+![UI畫面的影像，您可以在此連線至HTTP API目的地，不需驗證](../../assets/catalog/http/http-api-authentication-none.png)
 
-當您選擇開啟此身份驗證時，您只需選擇 **[!UICONTROL 連接到目標]** 並且已建立與終結點的連接。
+當您選取此驗證開啟時，您只需要選取 **[!UICONTROL 連接到目標]** 並建立與端點的連線。
 
 #### OAuth 2密碼驗證 {#oauth-2-password-authentication}
 
-如果選擇 **[!UICONTROL OAuth 2密碼]** 連接到HTTP終結點的驗證類型，輸入下面的欄位並選擇 **[!UICONTROL 連接到目標]**:
+如果您選取 **[!UICONTROL OAuth 2密碼]** 要連接到HTTP端點的驗證類型，請輸入以下欄位，然後選取 **[!UICONTROL 連接到目標]**:
 
-![UI螢幕的影像，您可以在其中使用OAuth 2和密碼驗證連接到HTTP API目標](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![使用OAuth 2搭配密碼驗證連線至HTTP API目的地的UI畫面影像](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
-* **[!UICONTROL 訪問令牌URL]**:發出訪問令牌（可選）和刷新令牌的URL。
-* **[!UICONTROL 客戶端ID]**:的 [!DNL client ID] 你的系統給Adobe Experience Platform的。
-* **[!UICONTROL 客戶端密碼]**:的 [!DNL client secret] 你的系統給Adobe Experience Platform的。
-* **[!UICONTROL 用戶名]**:訪問HTTP終結點的用戶名。
-* **[!UICONTROL 密碼]**:訪問HTTP終結點的密碼。
+* **[!UICONTROL 存取權杖URL]**:您發出存取權杖的URL，並選擇性地重新整理權杖。
+* **[!UICONTROL 用戶端ID]**:此 [!DNL client ID] 由系統指派給Adobe Experience Platform。
+* **[!UICONTROL 用戶端密碼]**:此 [!DNL client secret] 由系統指派給Adobe Experience Platform。
+* **[!UICONTROL 使用者名稱]**:用於訪問HTTP端點的用戶名。
+* **[!UICONTROL 密碼]**:訪問HTTP端點的密碼。
 
-#### OAuth 2客戶端憑據身份驗證 {#oauth-2-client-credentials-authentication}
+#### OAuth 2用戶端認證驗證 {#oauth-2-client-credentials-authentication}
 
-如果選擇 **[!UICONTROL OAuth 2客戶端憑據]** 連接到HTTP終結點的驗證類型，輸入下面的欄位並選擇 **[!UICONTROL 連接到目標]**:
+如果您選取 **[!UICONTROL OAuth 2用戶端認證]** 要連接到HTTP端點的驗證類型，請輸入以下欄位，然後選取 **[!UICONTROL 連接到目標]**:
 
-![UI螢幕的影像，您可以在其中使用OAuth 2和客戶端憑據身份驗證連接到HTTP API目標](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![使用OAuth 2搭配用戶端憑證驗證的UI畫面影像，您可在此連線至HTTP API目的地](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
-* **[!UICONTROL 訪問令牌URL]**:發出訪問令牌（可選）和刷新令牌的URL。
-* **[!UICONTROL 客戶端ID]**:的 [!DNL client ID] 你的系統給Adobe Experience Platform的。
-* **[!UICONTROL 客戶端密碼]**:的 [!DNL client secret] 你的系統給Adobe Experience Platform的。
-* **[!UICONTROL 客戶端憑據類型]**:選擇終結點支援的OAuth2客戶端憑據授予的類型：
-   * **[!UICONTROL 體形編碼]**:在這個例子中， [!DNL client ID] 和 [!DNL client secret] 包括 *在請求正文中* 送到你的目的地。 有關示例，請參見 [支援的身份驗證類型](#supported-authentication-types) 的子菜單。
-   * **[!UICONTROL 基本授權]**:在這個例子中， [!DNL client ID] 和 [!DNL client secret] 包括 *在 `Authorization` 標題* 將base64編碼併發送到目標。 有關示例，請參見 [支援的身份驗證類型](#supported-authentication-types) 的子菜單。
+* **[!UICONTROL 存取權杖URL]**:您發出存取權杖的URL，並選擇性地重新整理權杖。
+* **[!UICONTROL 用戶端ID]**:此 [!DNL client ID] 由系統指派給Adobe Experience Platform。
+* **[!UICONTROL 用戶端密碼]**:此 [!DNL client secret] 由系統指派給Adobe Experience Platform。
+* **[!UICONTROL 客戶端憑據類型]**:選取端點支援的OAuth2用戶端憑證授予類型：
+   * **[!UICONTROL 體型編碼]**:在此情況下， [!DNL client ID] 和 [!DNL client secret] 包括 *在請求正文中* 傳送至您的目的地。 如需範例，請參閱 [支援的驗證類型](#supported-authentication-types) 區段。
+   * **[!UICONTROL 基本授權]**:在此情況下， [!DNL client ID] 和 [!DNL client secret] 包括 *在 `Authorization` 標題* 編碼並傳送至目的地後。 如需範例，請參閱 [支援的驗證類型](#supported-authentication-types) 區段。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目的地詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="標頭"
->abstract="按照以下格式輸入要包括在目標調用中的任何自定義標頭： `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="依照以下格式，輸入您要納入目的地呼叫的任何自訂標題： `header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
->title="HTTP終結點"
->abstract="要將配置檔案資料發送到的HTTP終結點的URL。"
+>title="HTTP端點"
+>abstract="您要將設定檔資料傳送至的HTTP端點URL。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
->title="包括段名稱"
->abstract="如果希望資料導出包含要導出的段的名稱，則切換。 查看資料導出示例的文檔，並選中此選項。"
+>title="包含區段名稱"
+>abstract="如果要讓資料匯出包含要匯出的區段名稱，請切換。 檢視已選取此選項之資料匯出範例的檔案。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
->title="包括段時間戳"
->abstract="如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 查看資料導出示例的文檔，並選中此選項。"
+>title="包含區段時間戳記"
+>abstract="如果您希望資料匯出包含建立和更新區段時的UNIX時間戳記，以及將區段對應至要啟用的目的地時的UNIX時間戳記，則切換。 檢視已選取此選項之資料匯出範例的檔案。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
 >title="查詢參數"
->abstract="也可以將查詢參數添加到HTTP終結點URL。 設定您使用的查詢參數的格式如下： `parameter1=value&parameter2=value`。"
+>abstract="您可以選擇將查詢參數新增至HTTP端點URL。 使用的查詢參數格式如下： `parameter1=value&parameter2=value`."
 
-要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 
-![顯示HTTP目標詳細資訊的已完成欄位的UI螢幕影像](../../assets/catalog/http/http-api-destination-details.png)
+![UI畫面的影像，顯示HTTP目的地詳細資訊的已完成欄位](../../assets/catalog/http/http-api-destination-details.png)
 
-* **[!UICONTROL 名稱]**:輸入將來用於識別此目標的名稱。
-* **[!UICONTROL 說明]**:輸入將幫助您在將來確定此目標的說明。
-* **[!UICONTROL 標題]**:按照以下格式輸入要包括在目標調用中的任何自定義標頭： `header1:value1,header2:value2,...headerN:valueN`。
-* **[!UICONTROL HTTP終結點]**:要將配置檔案資料發送到的HTTP終結點的URL。
-* **[!UICONTROL 查詢參數]**:也可以將查詢參數添加到HTTP終結點URL。 設定您使用的查詢參數的格式如下： `parameter1=value&parameter2=value`。
-* **[!UICONTROL 包括段名稱]**:如果希望資料導出包含要導出的段的名稱，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
-* **[!UICONTROL 包括段時間戳]**:如果希望資料導出包括建立和更新段時的UNIX時間戳，以及將段映射到要激活的目標時的UNIX時間戳，則切換。 有關選擇此選項的資料導出示例，請參閱 [導出的資料](#exported-data) 的下一頁。
+* **[!UICONTROL 名稱]**:輸入一個名稱，您將用該名稱來識別此目標。
+* **[!UICONTROL 說明]**:輸入說明，以便您在未來識別此目的地。
+* **[!UICONTROL 標題]**:依照以下格式，輸入您要納入目的地呼叫的任何自訂標題： `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL HTTP端點]**:您要將設定檔資料傳送至的HTTP端點URL。
+* **[!UICONTROL 查詢參數]**:您可以選擇將查詢參數新增至HTTP端點URL。 使用的查詢參數格式如下： `parameter1=value&parameter2=value`.
+* **[!UICONTROL 包含區段名稱]**:如果要讓資料匯出包含要匯出的區段名稱，請切換。 如需選取此選項的資料匯出範例，請參閱 [匯出的資料](#exported-data) 下文一節。
+* **[!UICONTROL 包含區段時間戳記]**:如果您希望資料匯出包含建立和更新區段時的UNIX時間戳記，以及將區段對應至要啟用的目的地時的UNIX時間戳記，則切換。 如需選取此選項的資料匯出範例，請參閱 [匯出的資料](#exported-data) 下文一節。
 
 ### 啟用警報 {#enable-alerts}
 
-您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+您可以啟用警報，接收有關資料流到目標狀態的通知。 從清單中選擇要訂閱的警報，以接收有關資料流狀態的通知。 如需警報的詳細資訊，請參閱 [使用UI訂閱目的地警報](../../ui/alerts.md).
 
-完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+完成提供目標連接的詳細資訊後，請選擇 **[!UICONTROL 下一個]**.
 
-## 將段激活到此目標 {#activate}
+## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 > 
->要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
-請參閱 [激活受眾資料以流式處理配置檔案導出目標](../../ui/activate-streaming-profile-destinations.md) 有關激活此目標受眾段的說明。
+請參閱 [對串流設定檔匯出目的地啟用受眾資料](../../ui/activate-streaming-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
 
 ### 目標屬性 {#attributes}
 
-在 [[!UICONTROL 選擇屬性]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 步驟，Adobe建議您從 [聯合架構](../../../profile/home.md#profile-fragments-and-union-schemas)。 選擇要導出到目標的唯一標識符和任何其他XDM欄位。
+在 [[!UICONTROL 選擇屬性]](../../ui/activate-streaming-profile-destinations.md#select-attributes) 步驟，Adobe建議您從 [聯合方案](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼，以及您要匯出至目的地的任何其他XDM欄位。
 
-## 配置檔案導出行為 {#profile-export-behavior}
+## 設定檔匯出行為 {#profile-export-behavior}
 
-Experience Platform可優化配置檔案導出行為到HTTP API目標，以便在經過段限定或其他重要事件之後對配置檔案進行相關更新時，才將資料導出到API終結點。 配置式在以下情況下導出到目標：
+Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API目的地，以僅在符合區段資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至API端點。 設定檔會在下列情況下匯出至您的目的地：
 
-* 配置檔案更新由映射到目的地的至少一個段的段成員資格的改變確定。 例如，配置檔案已限定映射到目標的段之一或已退出映射到目標的段之一。
-* 配置檔案更新由 [身份映射](/help/xdm/field-groups/profile/identitymap.md)。 例如，已為映射到目標的段之一限定的配置檔案已在標識映射屬性中添加了新標識。
-* 配置檔案更新由映射到目的地的至少一個屬性的屬性的改變確定。 例如，映射步驟中映射到目標的屬性之一被添加到配置檔案。
+* 設定檔更新是由對應至目的地的至少一個區段的區段成員資格變更所決定。 例如，設定檔已符合對應至目的地的其中一個區段資格，或已退出對應至目的地的其中一個區段。
+* 設定檔更新是由 [身分圖](/help/xdm/field-groups/profile/identitymap.md). 例如，已符合其中一個對應至目的地區段資格的設定檔，已在「身分對應」屬性中新增身分識別。
+* 配置檔案更新由至少一個映射到目標的屬性的屬性的屬性變化確定。 例如，對應步驟中對應至目的地的其中一個屬性會新增至設定檔。
 
-在上述所有情況下，只將發生相關更新的配置檔案導出到目標。 例如，如果映射到目標流的段有100個成員，並且有5個新配置檔案符合該段的條件，則向目標的導出是增量的，並且只包括5個新配置檔案。
+在上述所有情況中，只有發生相關更新的設定檔會匯出至您的目的地。 例如，如果對應至目的地流程的區段有100個成員，且有5個新設定檔符合該區段的資格，則匯出至目的地的作業會是增量的，且僅包含5個新設定檔。
 
-請注意，無論更改位於何處，都會為配置檔案導出所有映射的屬性。 因此，在上面的示例中，即使屬性本身沒有更改，也會導出這五個新配置檔案的所有映射屬性。
+請注意，無論變更在何處，所有對應屬性都會針對設定檔匯出。 因此，在上述範例中，即使屬性本身未變更，這五個新設定檔的所有對應屬性也會匯出。
 
-### 什麼決定資料導出以及導出中包含的內容 {#what-determines-export-what-is-included}
+### 決定資料匯出的項目，以及匯出中包含的項目 {#what-determines-export-what-is-included}
 
-對於為給定配置檔案導出的資料，瞭解以下兩個不同概念非常重要 *決定資料導出到HTTP API目標的內容* 和 *資料包含在導出中*。
+對於針對指定設定檔匯出的資料，請務必了解 *決定要匯出至HTTP API目的地的資料的因素* 和 *匯出中包含的資料*.
 
-| 決定目標導出的因素 | 目標導出中包含的內容 |
+| 決定目標匯出的因素 | 目的地匯出包含的項目 |
 |---------|----------|
-| <ul><li>映射的屬性和段用作目標導出的提示。 這意味著，如果任何映射段更改狀態（從null更改為已實現或從已實現/現有更新為退出）或任何映射屬性被更新，則將啟動目標導出。</li><li>由於標識當前無法映射到HTTP API目標，因此給定配置檔案上任何標識的更改也會決定目標導出。</li><li>屬性的更改定義為屬性上的任何更新，無論其值是否相同。 這意味著，即使值本身未更改，屬性上的覆蓋也被視為更改。</li></ul> | <ul><li>所有段（具有最新成員身份狀態）都包含在 `segmentMembership` 的雙曲餘切值。</li><li>中的所有標識 `identityMap` 對象也包括在內(Experience Platform當前不支援HTTP API目標中的標識映射)。</li><li>目標導出中只包含映射的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至HTTP API目的地，因此指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>所有段（具有最新的成員資格狀態），無論它們是否映射到資料流中，都會包含在 `segmentMembership` 物件。</li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;
+{style=&quot;table-layout:fixed&quot;}
 
-例如，將此資料流視為HTTP目標，其中在資料流中選擇了三個段，並將四個屬性映射到目標。
+例如，將此資料流視為HTTP目標，其中資料流中選擇了三個段，四個屬性映射到目標。
 
 ![HTTP API目標資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-導出到目標的配置檔案可由符合或退出其中一個配置檔案來確定 *三個映射段*。 但是，在資料導出中，在 `segmentMembership` 對象（請參見） [導出的資料](#exported-data) )中，如果特定配置檔案是其成員，則可能會顯示其他未映射的段。 如果配置檔案符合DeLorean Cars分部客戶的資格，但也是受觀看的「回到未來」電影和科幻片迷分部的成員，則另外兩個分部也將出現在 `segmentMembership` 資料導出的對象，即使這些對象未映射到資料流中。
+匯出至目的地的設定檔可由符合以下條件之一或退出該條件的設定檔來決定 *三個已對應區段*. 不過，在資料匯出中， `segmentMembership` 物件(請參閱 [匯出的資料](#exported-data) )，則如果該特定設定檔是其成員，則可能會顯示其他未映射的區段。 如果設定檔符合「使用德羅林汽車」區段的客戶資格，但同時也是「已觀看的回到未來」電影和科幻影迷區段的成員，則另外兩個區段也會出現在 `segmentMembership` 對象，即使這些對象未映射到資料流中。
 
-從配置檔案屬性的視點來看，對上述四個屬性的任何更改都將確定目標導出，並且配置檔案上存在的四個映射屬性中的任何一個都將出現在資料導出中。
+從設定檔屬性的觀點來看，對上述四個屬性所做的任何變更將決定目的地匯出，而設定檔上呈現的四個對應屬性中的任何一個將出現在資料匯出中。
 
 ## 歷史資料回填 {#historical-data-backfill}
 
-當您將新段添加到現有目標或建立新目標並將段映射到該目標時，Experience Platform會將歷史段限定資料導出到目標。 限定段的配置檔案 *先* 已添加到目標的段在大約一小時內導出到目標。
+將新區段新增至現有目的地，或建立新目的地並將區段對應至該目的地時，Experience Platform會將歷史區段資格資料匯出至目的地。 符合區段資格的設定檔 *befor* 區段已新增至目的地後，大約一小時內就會匯出至目的地。
 
-## 導出的資料 {#exported-data}
+## 匯出的資料 {#exported-data}
 
-已導出 [!DNL Experience Platform] 資料到達 [!DNL HTTP] JSON格式的目標。 例如，下面的導出包含符合特定段條件的配置檔案，是另兩個段的成員，並退出另一個段。 導出還包括配置檔案屬性的名字、姓氏、出生日期和個人電子郵件地址。 此配置檔案的標識為ECID和電子郵件。
+已導出 [!DNL Experience Platform] 資料登陸 [!DNL HTTP] 目的地。 例如，以下匯出包含符合特定區段資格的設定檔、是其他兩個區段的成員，並退出另一個區段。 匯出內容也包含設定檔屬性名、姓氏、出生日期和個人電子郵件地址。 此設定檔的身分為ECID和電子郵件。
 
 ```json
 {
@@ -286,9 +286,9 @@ Experience Platform可優化配置檔案導出行為到HTTP API目標，以便�
 }
 ```
 
-下面是導出資料的進一步示例，具體取決於您在連接目標流中為 **[!UICONTROL 包括段名稱]** 和 **[!UICONTROL 包括段時間戳]** 選項：
+以下是匯出資料的進一步範例，具體取決於您在連線目的地流程中為 **[!UICONTROL 包含區段名稱]** 和 **[!UICONTROL 包含區段時間戳記]** 選項：
 
-+++ 以下資料導出示例包括 `segmentMembership` 節
++++ 以下資料匯出範例包含 `segmentMembership` 節
 
 ```json
 "segmentMembership": {
@@ -308,7 +308,7 @@ Experience Platform可優化配置檔案導出行為到HTTP API目標，以便�
 
 +++
 
-+++ 以下資料導出示例包括 `segmentMembership` 節
++++ 以下資料匯出範例包含 `segmentMembership` 節
 
 ```json
 "segmentMembership": {
@@ -329,6 +329,6 @@ Experience Platform可優化配置檔案導出行為到HTTP API目標，以便�
 
 ## 限制和重試策略 {#limits-retry-policy}
 
-在95%的時間內，Experience Platform會嘗試為成功發送的消息提供少於10分鐘的吞吐量延遲，每個資料流的請求速率低於每秒10,000次，到HTTP目標。
+在95%的時間內，Experience Platform會嘗試為成功發送的消息提供少於10分鐘的吞吐量延遲，每個資料流每秒的請求速率小於10,000個，以到達HTTP目的地。
 
-如果向HTTP API目標發出失敗請求，Experience Platform將儲存失敗的請求並重試兩次，以將請求發送到終結點。
+如果對您的HTTP API目的地提出失敗請求，Experience Platform會儲存失敗的請求並重試兩次，以將請求傳送至端點。

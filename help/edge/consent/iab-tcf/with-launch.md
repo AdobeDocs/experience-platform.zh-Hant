@@ -2,9 +2,9 @@
 title: 使用標籤與Platform Web SDK擴充功能整合IAB TCF 2.0支援
 description: 了解如何使用標籤和Adobe Experience Platform Web SDK擴充功能設定IAB TCF 2.0同意。
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ addEventListener();
 
 ## 後續步驟
 
-現在您已了解如何搭配Platform Web SDK擴充功能使用IAB TCF 2.0，您也可以選擇與其他Adobe解決方案整合，例如Adobe Analytics或即時客戶資料平台。 請參閱 [IAB透明與同意架構2.0概觀](./overview.md) 以取得更多資訊。
+現在您已了解如何搭配Platform Web SDK擴充功能使用IAB TCF 2.0，您也可以選擇與Adobe Analytics或Adobe Real-time Customer Data Platform等其他Adobe解決方案整合。 請參閱 [IAB透明與同意架構2.0概觀](./overview.md) 以取得更多資訊。

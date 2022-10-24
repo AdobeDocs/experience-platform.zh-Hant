@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK是一組設定API，可讓您設定目的地整合模式，讓Experience Platform根據您選擇的資料和驗證格式，將對象和設定檔資料傳送至端點或儲存位置。 設定會儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 94d46ceeef6eef507115c60aaa6820d4560e4d44
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 2%
 
 ---
@@ -23,16 +23,16 @@ Destination SDK檔案提供相關指示，供您使用Adobe Experience Platform 
 
 >[!IMPORTANT]
 >
-> 建立私人自訂目的地的功能僅適用於 [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+> 建立私人自訂目的地的功能僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 
 身為Destination SDK合作夥伴，您可以將已分類的目的地新增至 [Experience Platform目錄](/help/destinations/catalog/overview.md):
 1. 使用預先設定的參數標準化客戶的整合設定，並簡化客戶的設定體驗。
 2. 在Experience Platform目的地目錄中引入品牌目的地卡，以簡化客戶設定和了解。
-3. 以產品化目的地整合Adobe Experience Platform與Real-time Customer Data Platform為特色。
+3. 以產品化目的地整合Adobe Experience Platform與Adobe Real-time Customer Data Platform為特色。
 
 身為Experience Platform客戶，您也可以製作自己的私人自訂目的地，最符合您的啟動需求。
 
-![概述圖表，顯示目標開發人員如何與Destination SDK互動，以及即時CDP客戶如何從產品化和私人目的地中獲益。](./assets/destination-sdk-visual.png)
+![概述圖表，顯示目的地開發人員如何與Destination SDK互動，以及Real-Time CDP客戶如何從產品化和私人目的地中獲益。](./assets/destination-sdk-visual.png)
 
 ## 支援的整合類型 {#supported-integration-types}
 

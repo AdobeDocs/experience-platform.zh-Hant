@@ -1,11 +1,11 @@
 ---
-title: XDM業務機會類
-description: 本文檔概述了「體驗資料模型」(XDM)中的XDM Business Opportunity類。
+title: XDM業務機會類別
+description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportunity類別。
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
+source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 3%
+source-wordcount: '322'
+ht-degree: 4%
 
 ---
 
@@ -13,26 +13,26 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->此類旨在供有權訪問 [Real-time Customer Data PlatformB2B版](../../../rtcdp/b2b-overview.md)。 您必須具有訪問即時CDP B2B版的權限，才能讓此類參與 [即時客戶概要資訊](../../../profile/home.md)。
+>此類別旨在供具有以下權限的組織使用： [Adobe Real-time Customer Data Platform B2B版](../../../rtcdp/b2b-overview.md). 您必須擁有Real-Time CDP B2B版的存取權，才能讓此類別參與 [即時客戶個人檔案](../../../profile/home.md).
 
-[!UICONTROL XDM業務機會] 是一個標準的體驗資料模型(XDM)類，它捕獲業務機會的最低要求屬性。
+[!UICONTROL XDM業務機會] 是標準的Experience Data Model(XDM)類別，可擷取業務機會的最低必要屬性。
 
-![XDM Business Opportunity類的結構，如在UI中顯示的那樣](../../images/classes/b2b/business-opportunity.png)
+![XDM Business Opportunity類別的結構，如UI中所示](../../images/classes/b2b/business-opportunity.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `accountKey` | [[!UICONTROL B2B源]](../../data-types/b2b-source.md) | 與此機會關聯的帳戶的組合標識符。 |
-| `extSourceSystemAudit` | [[!UICONTROL 外部源系統審核屬性]](../../data-types/external-source-system-audit-attributes.md) | 如果商機來自外部源系統，則此對象將捕獲該系統的審核屬性。 |
-| `opportunityKey` | [[!UICONTROL B2B源]](../../data-types/b2b-source.md) | 機會實體的複合標識符。 |
-| `_id` | 字串 | 記錄的唯一標識符。 這是系統生成的值，它與 `opportunityID`。 |
-| `accountID` | 字串 | 此業務機會所關聯的帳戶的唯一ID。 |
-| `isDeleted` | 布爾型 | 指示此市場營銷清單實體是否已在Marketo Engage中刪除。<br><br>使用 [Marketo源連接器](../../../sources/connectors/adobe-applications/marketo/marketo.md)，在Marketo刪除的任何記錄將自動反映在即時客戶配置檔案中。 但是，與這些檔案有關的記錄可能仍會在Data Lake中保留。 通過設定 `isDeleted` 至 `true`，可以使用該欄位在查詢資料湖時過濾已從源中刪除的記錄。 |
+| `accountKey` | [[!UICONTROL B2B源]](../../data-types/b2b-source.md) | 此機會關聯的帳戶的複合標識符。 |
+| `extSourceSystemAudit` | [[!UICONTROL 外部源系統審核屬性]](../../data-types/external-source-system-audit-attributes.md) | 如果此機會來自外部源系統，則此對象將捕獲該系統的審核屬性。 |
+| `opportunityKey` | [[!UICONTROL B2B源]](../../data-types/b2b-source.md) | 商機實體的複合標識符。 |
+| `_id` | 字串 | 記錄的唯一標識符。 這是系統產生的值，與 `opportunityID`. |
+| `accountID` | 字串 | 此機會關聯的帳戶的唯一ID。 |
+| `isDeleted` | 布林值 | 指出此行銷清單實體是否已在Marketo Engage中刪除。<br><br>使用 [Marketo來源連接器](../../../sources/connectors/adobe-applications/marketo/marketo.md),Marketo中刪除的任何記錄都會自動反映在即時客戶個人檔案中。 不過，與這些設定檔相關的記錄仍可能會保留在Data Lake。 設定 `isDeleted` to `true`，您可以使用欄位來篩選已在查詢資料湖時從來源刪除的記錄。 |
 | `opportunityDescription` | 字串 | 商機的說明。 |
-| `opportunityID` | 字串 | 機會實體的唯一ID。 |
+| `opportunityID` | 字串 | 商機實體的唯一ID。 |
 | `opportunityName` | 字串 | 商機的名稱。 |
-| `opportunityStage` | 字串 | 商機的銷售階段。 |
-| `opportunityType` | 字串 | 機會類型。 |
+| `opportunityStage` | 字串 | 銷售階段。 |
+| `opportunityType` | 字串 | 機會的類型。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-請參閱上的指南 [即時CDP B2B版中的模式關係](../../tutorials/relationship-b2b.md) 瞭解此類在概念上如何與其他B2B類相關，以及如何在Adobe Experience PlatformUI中建立這些關係。
+請參閱 [Real-Time CDP B2B版中的結構關係](../../tutorials/relationship-b2b.md) 了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

@@ -2,9 +2,9 @@
 product: adobe experience platform
 solution: Real-time Customer Data Platform
 audience: user
-user-guide-title: Real-time Customer Data Platform 指南
+user-guide-title: Real-time Customer Data Platform指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
+source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 27%
@@ -14,16 +14,16 @@ ht-degree: 27%
 
 # Real-time Customer Data Platform說明 {#rtcdp}
 
-* [Real-time CDP概述](overview.md)
-* [Real-time CDP B2B Edition概述](b2b-overview.md)
+* [Real-Time CDP概述](overview.md)
+* [Real-Time CDP B2B版概述](b2b-overview.md)
 * 快速入門 {#intro}
-   * Real-time CDP {#rtcdp-intro}
-      * [開始使用Real-time CDP](get-started.md)
+   * Real-Time CDP {#rtcdp-intro}
+      * [開始使用Real-Time CDP](get-started.md)
       * [量度概觀](home-page-dashboards.md)
-   * Real-time CDP B2B Edition {#rtcdpb2b-intro}
+   * Real-Time CDP B2B 版本 {#rtcdpb2b-intro}
       * [範例使用案例](./b2b-use-case.md)
       * [端對端教學課程](./b2b-tutorial.md)
-      * [Real-time CDP B2B Edition護欄](b2b-guardrails.md)
+      * [Real-Time CDP B2B版護欄](b2b-guardrails.md)
 * 帳戶設定檔 {#account}
    * [帳戶設定檔概觀](accounts/account-profile-overview.md)
    * [帳戶設定檔UI指南](accounts/account-profile-ui-guide.md)
@@ -34,7 +34,7 @@ ht-degree: 27%
    * [Platform上的資料品質](datasets/data-quality.md)
 * 目的地 {#destinations}
    * [目的地概觀](destinations/overview.md)
-   * [Real-time CDP B2B Edition中的目標](destinations/b2b.md)
+   * [Real-Time CDP B2B版目的地](destinations/b2b.md)
 * 身分 {#identity}
    * [身分與身分識別命名空間](profile/identities-overview.md)
 * 合併策略 {#merge-policies}
@@ -45,7 +45,7 @@ ht-degree: 27%
 * 設定檔 {#profile}
    * [設定檔概觀](profile/profile-overview.md)
    * [設定檔瀏覽](profile/profile-browse.md)
-* Real-time CDP B2B Edition AI/ML服務 {#b2b-cdp-ai-ml}
+* Real-Time CDP B2B版AI/ML服務 {#b2b-cdp-ai-ml}
    * [相關帳戶](b2b-ai-ml-services/related-accounts.md)
    * [導致帳戶匹配](b2b-ai-ml-services/lead-to-account-matching.md)
    * 預測性銷售機會和帳戶計分 {#predictive-lead-and-account-scoring-intro}
@@ -53,14 +53,14 @@ ht-degree: 27%
       * [管理預測性銷售機會和帳戶計分](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * 結構描述 {#schemas}
    * [結構概觀](schemas/overview.md)
-   * [Real-time CDP B2B Edition中的結構描述](schemas/b2b.md)
+   * [Real-Time CDP B2B版中的結構描述](schemas/b2b.md)
 * 區段 {#segmentation}
    * [區段概觀](segmentation/segmentation-overview.md)
    * [區段產生器指南](segmentation/segment-builder-guide.md)
-   * [即時CDP B2B版中的分段](segmentation/b2b.md)
+   * [Real-Time CDP B2B版中的分段](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * 來源 {#sources}
    * [來源概觀](sources/sources-overview.md)
-   * [即時CDP B2B版中的源](sources/b2b.md)
+   * [Real-Time CDP B2B版中的來源](sources/b2b.md)
 * [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary-en)
