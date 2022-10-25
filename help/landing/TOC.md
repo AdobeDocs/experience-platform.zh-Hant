@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 了解 Experience Platform 如何即時將個人化體驗傳遞給您的客戶。
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 24efebb89ba36f5047558acd368638f456356a9e
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '248'
 ht-degree: 25%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 25%
    * 稽核記錄 {#audit-logs}
       * [總覽](./governance-privacy-security/audit-logs/overview.md)
    * [資料加密](./governance-privacy-security/encryption.md)
+   * [客戶管理金鑰](./governance-privacy-security/customer-managed-keys.md)
 * 許可證使用和護欄 {#license}
    * [資料管理許可證權限最佳實踐](./license-usage-and-guardrails/data-management-best-practices.md)
    * [授權使用控制面板](./license-usage-and-guardrails/license-usage-dashboard.md)
