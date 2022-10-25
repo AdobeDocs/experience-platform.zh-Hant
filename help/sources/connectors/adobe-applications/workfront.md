@@ -1,15 +1,19 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；
-title: Adobe Workfront來源
+title: （測試版）Adobe Workfront來源
 description: Adobe Workfront是行銷工作管理應用程式，可協助您在一個位置管理整個工作生命週期。 Workfront包含報告和分析工具，可供您進一步了解及最佳化組織的工作流程。
-source-git-commit: 99741a3be4d50d1a812e945483c9ed1577a0a999
+source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '281'
 ht-degree: 1%
 
 ---
 
-# Adobe Workfront來源
+# （測試版）Adobe Workfront來源
+
+>[!NOTE]
+>
+>Adobe Workfront來源為測試版。 請參閱 [來源概觀](../../home.md#terms-and-conditions) 有關使用測試版標籤連接器的詳細資訊。
 
 Adobe Workfront是行銷工作管理應用程式，可協助您在一個位置管理整個工作生命週期。 Workfront包含報告和分析工具，可供您進一步了解及最佳化組織的工作流程。
 

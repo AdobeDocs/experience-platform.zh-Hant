@@ -1,15 +1,19 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；
-title: 在UI中建立Adobe Workfront來源連線
+title: （測試版）在UI中建立Adobe Workfront來源連線
 description: 本教學課程提供建立Adobe Workfront來源連線的步驟，以便使用使用者介面將Workfront資料匯入Adobe Experience Platform。
-source-git-commit: 99741a3be4d50d1a812e945483c9ed1577a0a999
+source-git-commit: 1af0863766e29c599e02f2a553d237bc62f455d2
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
-# 在UI中建立Adobe Workfront來源連線
+# （測試版）在UI中建立Adobe Workfront來源連線
+
+>[!NOTE]
+>
+>Adobe Workfront來源為測試版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得使用測試版標籤來源的詳細資訊。
 
 本教學課程提供建立Adobe Workfront來源連線的步驟，以便使用使用者介面將Workfront資料匯入Adobe Experience Platform。
 
