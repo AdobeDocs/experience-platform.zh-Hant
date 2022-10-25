@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2022年10月
 description: 2022年10月Adobe Experience Platform發行說明。
-source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
+source-git-commit: 0ea2718247792e997b7a90ab9027946e800c8157
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '764'
 ht-degree: 5%
 
 ---
@@ -12,14 +12,13 @@ ht-degree: 5%
 
 **發行日期：2022 年 10 月 26 日**
 
-Adobe Experience Platform的新功能：
-
 - [客戶管理金鑰](#cmk)
 
 Adobe Experience Platform 現有功能更新：
 
 - [資料收集](#data-collection)
 - [Experience Data Model(XDM)](#xdm)
+- [查詢服務](#query-service)
 - [來源](#sources)
 
 ## 客戶管理金鑰 {#cmk}
@@ -57,6 +56,21 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 {style=&quot;table-layout:auto&quot;}
 
 如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
+
+## 查詢服務 {#query-service}
+
+查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以從 [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或擷取至「即時客戶個人檔案」。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 查詢加速報告前瞻分析資料模型 | 作為Data Distiller SKU的一部分，查詢加速儲存可讓您減少從資料中獲取重要見解所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改善您的報表分析及其視覺效果。 請參閱 [查詢加速儲存報告深入分析檔案](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) 以深入了解此功能。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+有關Query Services的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).
+Adobe Experience Platform的新功能：
 
 ## 來源 {#sources}
 
