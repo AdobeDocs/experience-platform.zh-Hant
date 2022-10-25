@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: fe8d5f3a73c7db311cd0d82c2a7f3ac63fb1edac
+source-git-commit: 3518131261f2a2a811284f77bbb8784666e8df96
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '844'
 ht-degree: 12%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 12%
       - [Adobe Campaign Managed Cloud Services來源](connectors/adobe-applications/campaign.md)
       - [客戶屬性來源](connectors/adobe-applications/customer-attributes.md)
       - [資料收集來源](connectors/adobe-applications/data-collection.md)
+      - [Workfront來源](connectors/adobe-applications/workfront.md)
       - 欄位對應 {#mapping}
          - [Analytics欄位對應](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager欄位對應](connectors/adobe-applications/mapping/audience-manager.md)
@@ -207,6 +208,7 @@ ht-degree: 12%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - 廣告 {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
