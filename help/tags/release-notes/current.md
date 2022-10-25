@@ -2,14 +2,20 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 319c30facb7e8093318a01a3155bdb2fee0f548b
+source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 6%
+source-wordcount: '350'
+ht-degree: 4%
 
 ---
 
 # 標籤和事件轉送的發行說明
+
+## 2022 年 10 月 26 日
+
+* **資料流的敏感資料處理**:Datastreams現在利用多種Platform技術適當處理受醫療保險可移植性和責任法案(HIPAA)等法規強制實施的敏感資料。 請參閱 [處理資料流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得更多資訊。
+* **[!DNL Splunk]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Splunk] 擴充功能概觀](../extensions/web/splunk/overview.md) 以取得更多資訊。
+* **[!DNL Zendesk]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../extensions/web/zendesk/overview.md) 以取得更多資訊。
 
 ## 2022 年 9 月 28 日
 

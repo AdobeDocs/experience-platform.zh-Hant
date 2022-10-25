@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2022年10月
 description: 2022年10月Adobe Experience Platform發行說明。
-source-git-commit: e9a7c0561277be21aab1c699a1bc07b793684525
+source-git-commit: 098b4b7a0dcd3ddfcd13f7dd473c4fa6832d23df
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 8%
+source-wordcount: '609'
+ht-degree: 5%
 
 ---
 
@@ -12,9 +12,51 @@ ht-degree: 8%
 
 **發行日期：2022 年 10 月 26 日**
 
+Adobe Experience Platform的新功能：
+
+- [客戶管理金鑰](#cmk)
+
 Adobe Experience Platform 現有功能更新：
 
+- [資料收集](#data-collection)
+- [Experience Data Model(XDM)](#xdm)
 - [來源](#sources)
+
+## 客戶管理金鑰 {#cmk}
+
+儲存在Adobe Experience Platform上的所有資料都會使用系統層級的金鑰進行靜態加密。 如果您使用的是以Platform為建置基礎的應用程式，您現在可以選擇使用您自己的加密密鑰，讓您能夠更好地控制資料安全性。
+
+請參閱 [客戶管理金鑰](../../landing/governance-privacy-security/customer-managed-keys.md) 以取得功能的詳細資訊。
+
+## 資料收集 {#data-collection}
+
+Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體驗資料，並傳送至Adobe Experience Platform Edge Network，以便在中加以擴充、轉換及分發至Adobe或非Adobe目的地。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 資料流的敏感資料處理 | Datastreams現在利用多種Platform技術適當處理受醫療保險可移植性和責任法案(HIPAA)等法規強制實施的敏感資料。 請參閱 [處理資料流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得更多資訊。 |
+| [!DNL Splunk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Splunk] 擴充功能概觀](../../tags/extensions/web/splunk/overview.md) 以取得更多資訊。 |
+| [!DNL Zendesk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../../tags/extensions/web/zendesk/overview.md) 以取得更多資訊。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Experience Data Model(XDM) {#xdm}
+
+XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料提供通用結構和定義（結構）。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
+
+**更新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 資料類型 | [[!UICONTROL 工作階段詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 更新 `authorized` 欄位（從布林類型）轉換為字串。 `season` 和 `episode` 已從整數變更為字串。 |
+| 資料類型 | [[!UICONTROL 廣告詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 已重新命名為 `friendlyName`，和 `ID` 已重新命名為 `name`. |
+| 資料類型 | [[!UICONTROL 錯誤詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 已重新命名為 `name`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
 
 ## 來源 {#sources}
 
