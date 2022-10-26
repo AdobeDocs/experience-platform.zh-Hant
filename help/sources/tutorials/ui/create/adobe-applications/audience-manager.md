@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；Audience Manager來源�
 title: 在UI中建立Adobe Audience Manager來源連線
 description: 本教學課程會逐步帶您了解為Adobe Audience Manager建立來源連線的步驟，以使用使用者介面將消費者體驗事件資料匯入Platform。
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 90a917ea2b623079f26c67b776dd46b62531c7da
+source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ ht-degree: 0%
 ![select-data](../../../../images/tutorials/create/aam/select-data.png)
 
 或者，您也可以選取 **[!UICONTROL 選取所有區段]** 和 **[!UICONTROL 選取所有特徵]** 框。 選取所有區段會將Audience Manager區段帶入Platform，同時選取所有特徵會從Audience Manager啟用所有第一方特徵。
+
+>[!WARNING]
+>
+>首次使用Audience Manager來源將Audience Manager區段傳送至Platform時，擷取大量Audience Manager區段母體會直接影響您的設定檔總數。 這表示選取所有區段可能會導致設定檔計數超過您的授權使用權限。 請檢閱 [許可證使用許可](../../../../../dashboards/guides/license-usage.md) 開始之前。
 
 完成後，請選取 **[!UICONTROL 下一個]**
 
