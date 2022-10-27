@@ -5,9 +5,9 @@ title: 查詢服務憑證指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: f3052745105df603e547535a12285b6c1d771fa6
+source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1204'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 3. [設定 **沙箱** 和 **管理查詢服務整合** 權限](../../access-control/ui/permissions.md) 針對產品設定檔。
 4. [將新使用者新增至產品設定檔](../../access-control/ui/users.md) 因此，系統會授予這些使用者已設定的權限。
 5. [將使用者新增為產品設定檔管理員](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) 允許為任何作用中的產品設定檔建立帳戶。
-6. [將使用者新增為產品設定檔開發人員](https://helpx.adobe.com/tw/enterprise/using/manage-developers.html) 以建立整合。
+6. [將使用者新增為產品設定檔開發人員](https://helpx.adobe.com/enterprise/using/manage-developers.html) 以建立整合。
 
 若要進一步了解如何指派權限，請參閱 [存取控制](../../access-control/home.md).
 
@@ -82,9 +82,9 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 儲存產生的憑證後，請選取 **[!UICONTROL 關閉]**. 您現在可以看到所有未到期憑證的清單。
 
-![展開「查詢儀表板憑據」頁簽，其中「未到期憑據」部分。](../images/ui/credentials/list-credentials.png)
+![突出顯示了「查詢儀表板憑據」頁簽的「非到期憑據」部分。](../images/ui/credentials/list-credentials.png)
 
-您可以編輯或刪除未到期的憑證。 要編輯未到期的憑據，請選擇鉛筆表徵圖(![](../images/ui/credentials/edit-icon.png))。 要刪除未到期的憑據，請選擇刪除表徵圖(![](../images/ui/credentials/delete-icon.png))。
+您可以編輯或刪除未到期的憑證。 要編輯未到期的憑據，請選擇鉛筆表徵圖(![鉛筆圖示。](../images/ui/credentials/edit-icon.png))。要刪除未到期的憑據，請選擇刪除表徵圖(![垃圾桶圖示。](../images/ui/credentials/delete-icon.png))。
 
 編輯未到期的憑證時，會出現強制回應視窗。 您可以提供下列詳細資料以進行更新：
 
@@ -102,7 +102,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 影像會指出UI中找到之每個參數的位置，但非即將到期憑證的密碼除外。 雖然其JSON設定檔案提供了非到期憑證，但您可以在 **憑證** 標籤。
 
-![](../images/ui/credentials/expiring-credentials.png)
+![「查詢工作區憑據」頁簽，其中「即將到期的憑據」部分突出顯示。](../images/ui/credentials/expiring-credentials.png)
 
 下表概述了連接到外部客戶端通常所需的參數。
 

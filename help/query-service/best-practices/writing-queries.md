@@ -6,9 +6,9 @@ topic-legacy: queries
 type: Tutorial
 description: 本檔案概述在Adobe Experience Platform Query Service中撰寫查詢時須知的重要詳細資訊。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1047'
 ht-degree: 3%
 
 ---
@@ -117,7 +117,7 @@ LIMIT 1
 
 ## 引號
 
-單引號、雙引號和反引號在查詢服務查詢中有不同的用法。
+單引號、雙引號和後引號在查詢服務查詢中有不同的用法。
 
 ### 單引號
 
@@ -206,7 +206,7 @@ LIMIT 10
 
 ### 標準表格檢視
 
-此 `\d` 命令顯示清單表的標準PostgreSQL視圖。 以下是此命令輸出的示例：
+此 `\d` 命令顯示標準 [!DNL PostgreSQL] 查看清單表。 以下是此命令輸出的示例：
 
 ```sql
              List of relations

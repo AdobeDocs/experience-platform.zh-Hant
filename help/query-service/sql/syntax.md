@@ -5,9 +5,9 @@ title: 查詢服務中的SQL語法
 topic-legacy: syntax
 description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5ec37ee797ec297b2e5c275dc0e6091e4ee8ecae
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -449,7 +449,7 @@ END $$;
 
 此第二個範例進一步示範 `inline` 函式。 下圖說明了該示例的資料模型。
 
-![productListItems的架構圖](../images/sql/productListItems.png)
+![productListItems的架構圖。](../images/sql/productListItems.png)
 
 **範例**
 
@@ -485,9 +485,9 @@ SET property_key = property_value
 
 若要傳回任何設定的值，請使用 `SET [property key]` 沒有 `property_value`.
 
-## PostgreSQL命令
+## [!DNL PostgreSQL] 命令
 
-以下各節介紹Query Service支援的PostgreSQL命令。
+以下各小節涵蓋 [!DNL PostgreSQL] 查詢服務支援的命令。
 
 ### 分析表
 
@@ -677,7 +677,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 | 參數 | 說明 |
 | ------ | ------ |
 | `TEMPORARY` 或 `TEMP` | 選用參數。 如果指定，則建立的表將是臨時表。 |
-| `UNLOGGED` | 選用參數。 如果指定，則建立為的表將是未記錄的表。 如需未記錄表格的詳細資訊，請參閱 [PostgreSQL文檔](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `UNLOGGED` | 選用參數。 如果指定，則建立為的表將是未記錄的表。 如需未記錄表格的詳細資訊，請參閱 [[!DNL PostgreSQL] 檔案](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | 要建立的表的名稱。 |
 
 **範例**

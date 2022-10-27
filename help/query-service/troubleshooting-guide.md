@@ -5,9 +5,9 @@ title: 查詢服務疑難排解指南
 topic-legacy: troubleshooting
 description: 本檔案包含與Query Service相關的常見問題和解答。 主題包括：匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 722d7144639d7280ef85c9bfc285e616e7d7fcce
+source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
 workflow-type: tm+mt
-source-wordcount: '3755'
+source-wordcount: '3781'
 ht-degree: 1%
 
 ---
@@ -86,15 +86,15 @@ SELECT * FROM customers LIMIT 0;
 - 登入Experience Platform後，請選取 **[!UICONTROL 資料集]** 在UI的左側導覽器中，導覽至 [!UICONTROL 資料集] 控制面板。
 - 資料集 [!UICONTROL 瀏覽] 標籤。 您可以使用搜尋列來調整可用選項。 從顯示的清單中選取資料集。
 
-![Platform UI中強調顯示的資料集。](./images/troubleshooting/dataset-selection.png)
+![Platform UI中的資料集控制面板，並反白顯示搜尋列和資料集。](./images/troubleshooting/dataset-selection.png)
 
-- 此 [!UICONTROL 資料集活動] 畫面。 選擇 [!UICONTROL 預覽資料集] 開啟XDM結構對話方塊，以及所選資料集中平面化資料的表格檢視。 如需詳細資訊，請參閱 [預覽資料集檔案](../catalog/datasets/user-guide.md#preview-a-dataset)
+- 此 [!UICONTROL 資料集活動] 畫面。 選擇 **[!UICONTROL 預覽資料集]** 開啟XDM結構對話方塊，以及所選資料集中平面化資料的表格檢視。 如需詳細資訊，請參閱 [預覽資料集檔案](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![平面化資料的XDM結構和表格檢視。](./images/troubleshooting/dataset-preview.png)
+![「資料集」控制面板的「資料集活動」索引標籤會反白顯示「預覽資料集」 。](./images/troubleshooting/dataset-preview.png)
 
 - 從架構中選取任何欄位，以在平面化欄中顯示其內容。 欄的名稱會顯示在頁面右側的其內容上方。 您應複製此名稱以用於查詢此資料集。
 
-![在UI中醒目提示的巢狀資料集欄名稱。](./images/troubleshooting/column-name.png)
+![平面化資料的XDM結構和表格檢視。 巢狀資料集的欄名稱在UI中會強調顯示。](./images/troubleshooting/column-name.png)
 
 如需的完整指引，請參閱本檔案 [如何使用巢狀資料結構](./best-practices/nested-data-structures.md) 使用查詢編輯器或協力廠商用戶端。
 +++
@@ -119,12 +119,12 @@ SELECT * FROM customers LIMIT 0;
 - 導覽至 [https://www.adobe.com/](https://www.adobe.com/) 在網頁瀏覽器中。
 - 在頂端導覽列的右側，選取 **[!UICONTROL 登入]**.
 
-![強調顯示登入的Adobe網站。](./images/troubleshooting/adobe-sign-in.png)
+![強調顯示「登入」的Adobe網站。](./images/troubleshooting/adobe-sign-in.png)
 
 - 使用您在Adobe授權中註冊的Adobe ID和密碼。
 - 選擇 **[!UICONTROL 說明與支援]** 的上界。
 
-![上方導覽列的下拉式功能表會強調顯示說明和支援。](./images/troubleshooting/help-and-support.png)
+![頂端導覽列下拉式功能表中顯示「說明與支援」、「企業支援」和「聯絡我們」。](./images/troubleshooting/help-and-support.png)
 
 下拉式橫幅會顯示包含 [!UICONTROL 說明與支援] 區段。 選擇 **[!UICONTROL 聯繫我們]** 要開啟「Adobe客戶服務虛擬助理」，請選擇 **[!UICONTROL 企業支援]** 為大型組織提供專屬協助。
 +++
@@ -448,7 +448,7 @@ WHERE T2.ID IS NULL
 
 +++
 
-### 我可以使用CTAS查詢建立資料集，其雙底線名稱可像UI中顯示的名稱一樣？ 例如: `test_table_001`。
+### 我可以使用CTAS查詢建立資料集，其雙底線名稱可像UI中顯示的名稱一樣？ 例如: `test_table_001`.
 
 +++答案否，這是套用至所有Adobe服務（包括查詢服務）的跨Experience Platform故意限制。 架構名稱和資料集名稱可以使用兩個底線的名稱，但資料集的表格名稱只能包含單一底線。
 +++

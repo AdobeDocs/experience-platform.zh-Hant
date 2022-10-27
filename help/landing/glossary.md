@@ -5,9 +5,9 @@ title: Adobe Experience Platform字彙表
 topic-legacy: getting started
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b9b33a6c1df0810db32f3253205221fed8957dd5
 workflow-type: tm+mt
-source-wordcount: '7436'
+source-wordcount: '7435'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 **類別**:在Experience Data Model(XDM)中，類別會定義用來建立結構的最小欄位集，並定義結構所代表之商業物件的基本行為。
 
-**用戶端**:客戶端是連接到的外部工具或應用程式 [!DNL Query Service] 通過PostgreSQL協定或HTTP API。
+**用戶端**:客戶端是連接到的外部工具或應用程式 [!DNL Query Service] via [!DNL PostgreSQL] 通訊協定或HTTP API。
 
 **集合**:在 [!DNL Offer Decisioning]，集合是根據行銷人員定義之預先定義條件（例如優惠方案的類別）之選件的子集。
 

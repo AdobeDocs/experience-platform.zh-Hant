@@ -1,7 +1,7 @@
 ---
 title: 監視批查詢許可證使用情況
 description: Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢視貴組織Data Distiller授權使用情形的重要資訊。
-source-git-commit: 74175e5e2ce31427ef6ea8d93055d6ca3a8406f4
+source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -34,4 +34,4 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過該
 >
 >此 [!UICONTROL 計算小時數] widget僅適用於擁有批次查詢資料Distiller授權的客戶。
 
-![「計算小時數」小工具集醒目提示的授權使用控制面板。](../images/data-distiller/compute-hours.png)
+![使用許可證儀表板，突出顯示計算時數小工具。](../images/data-distiller/compute-hours.png)

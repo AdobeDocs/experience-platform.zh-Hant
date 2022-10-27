@@ -5,9 +5,9 @@ title: Experience PlatformUI概述
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 769e8e6e5d159254d34ad1d3e5e468c3b0bca10b
+source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -154,7 +154,7 @@ Platform UI的頂端導覽列會顯示您目前登入的IMS組織，並提供數
 
 此 **[!UICONTROL 資料集]** 區段可讓您建立和管理資料集。 如需資料集的詳細資訊，請參閱 [資料集使用指南](../catalog/datasets/user-guide.md).
 
-此 **[!UICONTROL 查詢]** 區段可讓您建立和管理查詢、記錄Adobe Experience Platform查詢服務所提出的SQL查詢，以及檢視您的PostgreSQL憑證。 有關查詢的詳細資訊，請參閱 [查詢服務使用手冊](../query-service/ui/overview.md).
+此 **[!UICONTROL 查詢]** 區段可讓您建立和管理查詢、記錄Adobe Experience Platform Query Service提出的SQL查詢，以及檢視您的 [!DNL PostgreSQL] 憑證。 有關查詢的詳細資訊，請參閱 [查詢服務使用手冊](../query-service/ui/overview.md).
 
 此 **[!UICONTROL 監控]** 區段可讓您監控批次和串流內嵌。 有關監視的詳細資訊，請參閱 [監控資料匯入使用手冊](../ingestion/quality/monitor-data-ingestion.md).
 

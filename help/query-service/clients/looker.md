@@ -1,54 +1,54 @@
 ---
-keywords: Experience Platform；主題；熱門主題；查詢服務；查詢服務；瀏覽器；瀏覽器；連接到查詢服務；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查找者；查找者；連接到查詢服務；
 solution: Experience Platform
-title: 將查找程式連接到查詢服務
+title: 將登錄程式連接到查詢服務
 topic-legacy: connect
-description: 本文檔介紹了將Looker與Adobe Experience Platform查詢服務連接的步驟。
+description: 本檔案會逐步說明連接Looker與Adobe Experience Platform Query Service的步驟。
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
+source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
-# 連接 [!DNL Looker] 查詢服務
+# Connect [!DNL Looker] 查詢服務
 
-本文檔介紹了連接 [!DNL Looker] 與Adobe Experience Platform [!DNL Query Service]。
+本檔案涵蓋連接 [!DNL Looker] 搭配Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> 本指南假定您已具有訪問 [!DNL Looker] 並熟悉如何導航其介面。 有關 [!DNL Looker] 在 [官 [!DNL Looker] 文檔](https://docs.looker.com/)。
+> 本指南假設您已擁有 [!DNL Looker] 並熟悉如何導覽其介面。 有關 [!DNL Looker] 可在 [官方 [!DNL Looker] 檔案](https://docs.looker.com/).
 
-登錄後 [!DNL Looker]選中 **[!DNL Admin]**，後跟 **[!DNL Connections]**。
+登入後 [!DNL Looker]，選取 **[!DNL Admin]**，後跟 **[!DNL Connections]**.
 
-![](../images/clients/looker/click-admin-connections.png)
+![此 [!DNL Looker] 從「管理」下拉式功能表中強調顯示「連線」的控制面板。](../images/clients/looker/click-admin-connections.png)
 
-在此頁上，選擇 **[!DNL New Connection]**。
+在此頁面上，選取 **[!DNL New Connection]**.
 
-![](../images/clients/looker/click-new-connection.png)
+![「具有新連接的連接」工作區突出顯示。](../images/clients/looker/click-new-connection.png)
 
-在此處，您可以填寫連接設定的詳細資訊。
+從這裡，您可以填寫連線設定的詳細資訊。
 
-![](../images/clients/looker/new-connection.png)
+![新連接的「連接設定」頁。](../images/clients/looker/new-connection.png)
 
-- **[!DNL Name]:** 連接的名稱。
-- **[!DNL Dialect]:** 用於SQL資料庫的方言。 [!DNL Query Service] 使用 **[!DNL PostgreSQL]**。
-- **[!DNL Host and Port]:** 用於的主機終結點及其埠 [!DNL Query Service]。
+- **[!DNL Name]:** 連線的名稱。
+- **[!DNL Dialect]:** 用於SQL資料庫的方言。 [!DNL Query Service] uses **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** 的主機端點及其埠 [!DNL Query Service].
 - **[!DNL Database]:** 將使用的資料庫。
-- **[!DNL Username and Password]:** 將使用的登錄憑據。 用戶名將以 `ORG_ID@AdobeOrg`。
+- **[!DNL Username and Password]:** 將使用的登入憑證。 使用者名稱將以 `ORG_ID@AdobeOrg`.
 - **SSL**:啟用SSL以確保跨網路的安全連接。
 
 >[!IMPORTANT]
 >
->查看 [[!DNL Query Service] SSL文檔](./ssl-modes.md) 瞭解對與Adobe Experience Platform查詢服務的第三方連接的SSL支援，以及如何使用 `verify-full` SSL模式。
+>請參閱 [[!DNL Query Service] SSL檔案](./ssl-modes.md) 了解協力廠商連線至Adobe Experience Platform Query Service的SSL支援，以及如何使用 `verify-full` SSL模式。
 
-有關查找主機和埠、資料庫名稱和登錄憑據的詳細資訊，請閱讀 [憑據指南](../ui/credentials.md)。 要查找憑據，請登錄到 [!DNL Platform]，然後選擇 **[!UICONTROL 查詢]**，後跟 **[!UICONTROL 憑據]**。
+有關查找主機和埠、資料庫名和登錄憑據的詳細資訊，請閱讀 [認證指南](../ui/credentials.md). 若要尋找憑證，請登入 [!DNL Platform]，然後選取 **[!UICONTROL 查詢]**，後跟 **[!UICONTROL 憑證]**.
 
-輸入連接詳細資訊後，選擇 **[!DNL Test These Settings]** 以確保您的憑據正常工作。 如果他們這樣做，則下面將顯示一條消息，指示您可以連接。 如果連接確實成功，請選擇 **[!DNL Add Connection]** 建立連接。
+輸入連線詳細資訊後，請選取 **[!DNL Test These Settings]** 以確保憑證正常運作。 如果有，下方會顯示訊息，指出您可以連線。 如果您的連線確實成功，請選取 **[!DNL Add Connection]** 來建立連線。
 
-![](../images/clients/looker/click-test-connection.png)
+![「New Connection with Test these settings（通過測試新連接）」的「Connections（連接）」設定頁突出顯示。](../images/clients/looker/click-test-connection.png)
 
 ## 後續步驟
 
-既然你已經和 [!DNL Query Service]，您可以使用 [!DNL Looker] 來編寫查詢。 有關如何編寫和運行查詢的詳細資訊，請閱讀 [運行查詢指南](../best-practices/writing-queries.md)。
+既然你已經和 [!DNL Query Service]，您可以使用 [!DNL Looker] 來寫入查詢。 有關如何編寫和運行查詢的詳細資訊，請閱讀 [運行查詢指南](../best-practices/writing-queries.md).

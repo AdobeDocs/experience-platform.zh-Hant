@@ -1,9 +1,9 @@
 ---
 title: 將Jupyter筆記本連接到查詢服務
 description: 了解如何使用Adobe Experience Platform Query Service連線Jupyter筆記型電腦。
-source-git-commit: f910deca43ac49d3a3452b8dbafda20ffdf3bf48
+source-git-commit: af37fe3be6b9645965b7477b9b85c5e11fe6fbae
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 在您開啟新 [!DNL Jupyter Notebook] web應用程式，請選擇 **[!DNL New]** 下拉式清單後面接著 **[!DNL Python 3]** 建立新筆記本。 此 [!DNL Notebook] 編輯器隨即出現。
 
-![此 [!DNL Jupiter Notebook] 檔案索引標籤 [!DNL New dropdown] 和 [!DNL Python] 3突出顯示。](../images/clients/jupyter-notebook/new-notebook.png)
+![此 [!DNL Jupiter Notebook] 檔案索引標籤 [!DNL New] 下拉式清單和 [!DNL Python] 3突出顯示。](../images/clients/jupyter-notebook/new-notebook.png)
 
 在 [!DNL Notebook] 編輯器，輸入下列值： `pip install psycopg2-binary` 選取 **[!DNL Run]** 中。 輸入行下方會顯示成功訊息。
 
