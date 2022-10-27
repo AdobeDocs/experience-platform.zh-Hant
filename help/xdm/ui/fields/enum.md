@@ -5,9 +5,9 @@ title: 在UI中定義列舉欄位和建議的值
 description: 了解如何為Experience Platform使用者介面中的字串欄位定義列舉和建議值。
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 1c1797a01a0a4e2cd355399d3f913cb81adf9006
+source-git-commit: 89ada47cb6e0b204d8f2f19e7e9b6f31bf347964
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ ht-degree: 0%
 當 [定義新欄位](./overview.md#define) 在Adobe Experience Platform使用者介面中，並將類型設為 [!UICONTROL 字串]，您會獲得定義 [列舉](#enum) 或 [建議值](#suggested-values) 那塊地。
 
 ![在UI中為字串欄位啟用「列舉與建議值」選項的影像](../../images/ui/fields/enum/enum-options-selected.png)
+
+本檔案說明如何定義 [!UICONTROL 結構] UI工作區。 如需列舉和建議值的快速概覽，包括如何在UI中設定列舉及其下游效果，請觀看下列影片：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
 
 ## 定義列舉 {#enum}
 
