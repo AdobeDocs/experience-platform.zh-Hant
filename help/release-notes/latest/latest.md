@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: 021a0833941f250475786bb8629542c50229b238
+source-git-commit: d6858ab1389a0b5cfadc9f79b20b80c1c36a114e
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 6%
+source-wordcount: '988'
+ht-degree: 5%
 
 ---
 
@@ -54,6 +54,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | ----------- | ----------- |
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line是一個熱門的通訊平台，將人員、服務和資訊連接起來，並從聊天應用程式發展為娛樂、社交和日常活動的中心。 |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365是一個基於雲的業務應用平台，它將企業資源規劃(ERP)和客戶關係管理(CRM)與生產應用程式和AI工具結合在一起，從而實現端到端更流暢、更受控的操作、更好的增長潛力和降低成本。 |
+| [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | 此 [!DNL (Beta) Adobe Commerce] 目的地連接器可讓您選取一或多個要啟用的Real-Time CDP區段 [!DNL Adobe Commerce] 帳戶，為購物者提供動態的個人化體驗。 內 [!DNL Adobe Commerce]，您就可以選取這些Real-Time CDP區段，以個人化購物車中的獨特選件，例如「購買2即可免費獲得1」。 您也可以顯示主圖橫幅廣告，並透過促銷優惠方案修改產品定價，所有優惠方案皆自訂為Adobe Real-Time CDP區段。 |
 
 {style=&quot;table-layout:auto&quot;}
 
