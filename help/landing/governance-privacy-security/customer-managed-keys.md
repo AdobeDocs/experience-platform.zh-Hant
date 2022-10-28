@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform中的客戶管理金鑰
 description: 了解如何為儲存在Adobe Experience Platform中的資料設定您自己的加密金鑰。
-source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
+source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,14 @@ CMK包含在Healthcare Shield和Privacy and Security Shield產品中，不會Ado
 
 該過程如下：
 
-1. [建立 [!DNL Microsoft Azure] 密鑰保管庫](#create-key-vault)，然後 [生成加密密鑰](#generate-a-key) （根據貴組織的原則），最終將與Adobe共用。
-1. 將API呼叫用於 [註冊CMK應用](#register-app) 與 [!DNL Azure] 租用戶。
-1. [為CMK應用程式分配服務主體](#assign-to-role) 為密鑰保管庫設定適當角色。
-1. 將API呼叫用於 [將您的加密密鑰ID發送到Adobe](#send-to-adobe).
+1. [設定 [!DNL Microsoft Azure] 密鑰保管庫](#create-key-vault) 根據貴組織的政策， [生成加密密鑰](#generate-a-key) 最終與Adobe共用。
+1. 將API呼叫用於 [設定CMK應用](#register-app) 與 [!DNL Azure] 租用戶。
+1. 將API呼叫用於 [將您的加密密鑰ID發送到Adobe](#send-to-adobe) 並啟動功能的啟用程式。
+1. [檢查配置的狀態](#check-status) 來驗證CMK是否已啟用。
 
-完成設定程式後，所有沙箱上架的所有資料都會使用 [!DNL Azure] 金鑰設定，專屬於您 [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) 和 [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 資源。 要使用CMK，您將利用 [!DNL Microsoft Azure] 可能屬於其一部分的功能 [公共預覽程式](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+完成設定程式後，所有沙箱上架的所有資料都會使用 [!DNL Azure] 鍵設定。 要使用CMK，您將利用 [!DNL Microsoft Azure] 可能屬於其一部分的功能 [公共預覽程式](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
-## 建立 [!DNL Azure] 密鑰保管庫 {#create-key-vault}
+## 設定 [!DNL Azure] 密鑰保管庫 {#create-key-vault}
 
 CMK僅支援來自 [!DNL Microsoft Azure] 密鑰庫。 若要開始，您必須使用 [!DNL Azure] 要建立新企業帳戶，或使用現有企業帳戶，並按照以下步驟建立密鑰保管庫。
 
@@ -65,7 +65,7 @@ CMK僅支援來自 [!DNL Microsoft Azure] 密鑰庫。 若要開始，您必須�
 
 ![密鑰保管庫的基本配置](../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
 
-## 配置網路選項
+### 配置網路選項
 
 如果您的密鑰保管庫配置為限制對某些虛擬網路的公共訪問或完全禁用公共訪問，則必須授予Microsoft防火牆例外。
 
@@ -73,7 +73,7 @@ CMK僅支援來自 [!DNL Microsoft Azure] 密鑰庫。 若要開始，您必須�
 
 ![密鑰保管庫的基本配置](../images/governance-privacy-security/customer-managed-keys/networking.png)
 
-## 產生金鑰 {#generate-a-key}
+### 產生金鑰 {#generate-a-key}
 
 建立密鑰保管庫後，即可生成新密鑰。 導覽至 **[!DNL Keys]** 索引標籤和選取 **[!DNL Generate/Import]**.
 
@@ -93,7 +93,7 @@ CMK僅支援來自 [!DNL Microsoft Azure] 密鑰庫。 若要開始，您必須�
 
 ![新增金鑰](../images/governance-privacy-security/customer-managed-keys/key-added.png)
 
-## 註冊CMK應用 {#register-app}
+## 設定CMK應用 {#register-app}
 
 配置密鑰保管庫後，下一步是註冊將連結到您的 [!DNL Azure] 租用戶。
 
@@ -135,7 +135,7 @@ curl -X GET \
 
 ![接受權限請求](../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
-## 將CMK應用指派給角色 {#assign-to-role}
+### 將CMK應用指派給角色 {#assign-to-role}
 
 完成驗證程式後，請導覽回您的 [!DNL Azure] 密鑰保管庫並選擇 **[!DNL Access control]** 的下一頁。 從此處，選擇 **[!DNL Add]** 後跟 **[!DNL Add role assignment]**.
 
@@ -151,7 +151,7 @@ curl -X GET \
 >
 >如果您在清單中找不到您的應用程式，則您的服務主體尚未被接受到您的租戶中。 請與您的 [!DNL Azure] 管理員或代表，確保您擁有正確的權限。
 
-## 將密鑰URI發送到Adobe {#send-to-adobe}
+## 在Experience Platform時啟用加密密鑰配置 {#send-to-adobe}
 
 在上安裝CMK應用程式後 [!DNL Azure]，您可以將您的加密密鑰標識符發送到Adobe。 選擇 **[!DNL Keys]** 在左側導覽中，隨後是您要傳送的索引鍵名稱。
 
@@ -221,7 +221,7 @@ curl -X POST \
 
 工作應該會在幾分鐘內完成處理。
 
-### 檢查配置的狀態 {#check-status}
+## 驗證配置的狀態 {#check-status}
 
 若要檢查設定請求的狀態，您可以提出GET請求。
 
