@@ -1,33 +1,33 @@
 ---
 title: 客戶端狀態管理
-description: 瞭解Adobe Experience Platform邊緣網路如何管理客戶端狀態
+description: 了解Adobe Experience Platform Edge Network如何管理用戶端狀態
 seo-description: Learn how the Adobe Experience Platform Edge Network  manages client state
-keywords: 客戶端；狀態；管理；邊緣；網路；網關；api;client;state;management;edge;network;gateway;api
+keywords: 用戶端；狀態；管理；邊緣；網路；閘道；API
 exl-id: 798ecc52-1af1-4480-a2a3-3198a83538f8
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '850'
 ht-degree: 2%
 
 ---
 
 # 客戶端狀態管理
 
-邊緣網路本身是無狀態的（它不維護自己的會話）。 但是，有些使用情形需要客戶端狀態持久性，例如：
+邊緣網路本身無狀態（不會維護自己的工作階段）。 不過，某些使用案例需要用戶端狀態持續性，例如：
 
-* 一致的設備標識(請參見 [訪客身份](visitor-identification.md))
-* 收集並強制用戶同意
-* 保留個性化會話ID
+* 一致的設備標識(請參閱 [訪客身分識別](visitor-identification.md))
+* 收集並強制使用者同意
+* 保留個人化工作階段ID
 
-邊緣網路使用狀態管理協定，將儲存方面委託給其客戶端/SDK，並在其響應中包括狀態條目。 對於瀏覽器，這些條目以Cookie的形式儲存。
+邊緣網路使用狀態管理通訊協定，將儲存方面委派給其用戶端/SDK，並在其回應中包含狀態項目。 若為瀏覽器，項目會儲存為Cookie。
 
-客戶的責任是將它們儲存並包含在所有後續請求中。 客戶端還必須按照網關的指示，對條目進行適當的過期處理。 當這些條目以Cookie儲存時，瀏覽器會自動執行所有這些操作。
+用戶端的責任是儲存這些請求，並將其納入後續的所有請求中。 客戶端還必須按照網關的指示處理條目的正確過期。 當登入項目儲存為Cookie時，瀏覽器會自動執行這一切。
 
-雖然州條目總是有一個 `String` 值（對調用方/SDK可見），您不應以任何方式使用或篡改這些值。 值結構/格式甚至名稱本身可能隨時更改，這可能導致內部使用狀態的客戶端出現意外行為。 該狀態旨在始終由網關本身或其他邊緣服務使用。
+儘管州級入口總是很清楚 `String` 值（可見於呼叫者/SDK），您不應以任何方式使用或篡改值。 值結構/格式甚至名稱本身可能隨時都會變更，這可能導致內部使用狀態之用戶端發生非預期行為。 狀態旨在始終由網關本身或其他邊緣服務使用。
 
-## 將客戶端狀態作為元資料保留
+## 以中繼資料的形式保留用戶端狀態
 
-由 [!DNL Edge Network] 在響應體中 `Handle` 類型對象 `state:store`。
+由 [!DNL Edge Network] 在回應內文中為 `Handle` 具有類型的對象 `state:store`.
 
 ```json
 {
@@ -68,20 +68,20 @@ ht-degree: 2%
 
 | 屬性 | 類型 | 說明 |
 | --- | --- | --- |
-| `key` | 字串 | **必填**. 條目名稱。 |
+| `key` | 字串 | **必填**. 項目名稱。 |
 | `value` | 字串 | *可選*. 輸入值。 |
-| `maxAge` | 整數 | *可選* 入門生存時間(TTL)（秒）。 缺少時，應僅儲存當前會話的條目。 |
-| `attrs` | `Map<String, String>` | *可選*. 條目屬性的可選清單。 對於具有安全引用器HTTP標頭的所有安全連接， `SameSite` 屬性設定為 `None`。 |
+| `maxAge` | 整數 | *可選* 項目過期的時間（以秒為單位）。 遺失時，應僅儲存目前工作階段的項目。 |
+| `attrs` | `Map<String, String>` | *可選*. 登入屬性的選用清單。 對於具有安全引用者HTTP標頭的所有安全連接， `SameSite` 屬性設為 `None`. |
 
 
-為支援多標籤（即同一屬性中的多個SDK實例，這些實例可能引用不同的組織），所有狀態項都會自動以前置詞 `kndctr_` 和URL安全組織ID。
+為了支援多標籤（亦即在相同屬性中有多個SDK例項，可能會參照不同的組織），所有狀態項目都會自動加上前置詞 `kndctr_` 和URL安全的組織ID。
 
-當客戶端SDK收到 `state:store` 在響應中，它必須執行以下操作：
+用戶端SDK收到 `state:store` 在回應中處理，它必須執行下列動作：
 
-* 在客戶端儲存條目，並遵守網關提供的過期時間。
-* 從客戶端儲存載入它們，並在後續請求中包括所有未過期的項。
+* 在客戶端儲存條目，並遵守網關提供的到期時間。
+* 從用戶端存放區載入，並在後續請求中納入所有未過期的項目。
 
-以下是以客戶端儲存狀態傳遞的請求示例：
+以下是在用戶端儲存狀態中傳遞的請求範例：
 
 ```json
 {
@@ -102,17 +102,17 @@ ht-degree: 2%
 }
 ```
 
-## 在瀏覽器Cookie中保留客戶端狀態
+## 瀏覽器Cookie中持續存在用戶端狀態
 
-使用瀏覽器客戶端時，邊緣網路可以自動將條目保留為瀏覽器cookie。 這允許透明狀態儲存支援，因為瀏覽器預設遵守狀態管理協定。
+使用瀏覽器用戶端時，邊緣網路會自動將項目保留為瀏覽器Cookie。 這可支援透明狀態儲存，因為瀏覽器預設會遵守狀態管理通訊協定。
 
-幾乎所有條目在啟用和支援時都作為第一方Cookie進行實例化（請參閱下面的注釋），但當第三方 `adobedc.demdex.net` 已使用域。
+幾乎所有的項目在啟用和支援時都會實化為第一方Cookie（請參閱下方注意事項），但當第三方時，閘道也可以儲存某些第三方Cookie `adobedc.demdex.net` 已使用網域。
 
-由於條目始終按其定義綁定到特定範圍（設備/應用程式），因此邊緣網路將只寫入與當前請求上下文相容的子集。 不寫入的條目在 `state:store` 框。
+由於條目的定義始終綁定到特定範圍（設備/應用程式），因此只有與當前請求上下文相容的子集才由邊緣網路寫入。 未寫入的項在 `state:store` 手柄。
 
-通常，應用程式範圍的條目總是作為第一方Cookie寫入，而設備範圍的條目作為第三方Cookie寫入。 該決定對呼叫者完全透明，網關根據呼叫上下文決定哪些條目可以被寫入。
+一般來說，應用程式範圍的項目一律會寫入為第一方Cookie，而裝置範圍的項目則會寫入為第三方Cookie。 該決定對呼叫者完全透明，網關根據呼叫上下文決定可以寫入哪些條目。
 
-調用方必須通過 `meta.state.cookiesEnabled` 標誌：
+呼叫者必須透過 `meta.state.cookiesEnabled` 標幟：
 
 ```json
 {
@@ -127,23 +127,23 @@ ht-degree: 2%
 
 | 屬性 | 類型 | 說明 |
 | --- | --- | --- |
-| `cookiesEnabled` | 布林值 | 設定後，啟用對Cookie的支援。 預設值為 `false`。 |
-| `domain` | 字串 | 在 `cookiesEnabled: true`。 應在其上寫入Cookie的頂級域。 邊緣網路將使用此值來確定是否可以將狀態保留為cookie。 |
+| `cookiesEnabled` | 布林值 | 設定後，即可啟用對Cookie的支援。 預設值為 `false`。 |
+| `domain` | 字串 | 必要時機 `cookiesEnabled: true`. 應寫入Cookie的頂層網域。 邊緣網路會使用此值來決定狀態是否可持續保存為Cookie。 |
 
-即使通過 `cookiesEnabled` 標誌，只有當請求頂級域與 `domain` 由調用方指定。 當不匹配時，在 `state:store` 框。
+即使透過 `cookiesEnabled` 標幟時，Adobe Experience Platform邊緣網路只會在請求頂層網域符合 `domain` 由調用方指定。 當出現不相符時，會在 `state:store` 手柄。
 
-在以下情況下，無法寫入第一方Cookie（即使已啟用支援）:
+在下列情況下，無法寫入第一方Cookie（即使已啟用支援亦然）:
 
-* 請求是在第三方 `adobedc.demdex.net` 。
-* 這個請求是第一方 `CNAME` 域，與調用方在 `meta.state.domain`。
+* 請求來自第三方 `adobedc.demdex.net` 網域。
+* 要求是第一方 `CNAME` 域，不同於 `meta.state.domain`.
 
-## Cookie安全
+## Cookie安全性
 
-所有Cookie都 [安全標誌](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies) 在可能時啟用。
+所有Cookie皆具有 [安全標幟](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#restrict_access_to_cookies) 盡可能啟用。
 
-所有安全Cookie都 [SameSite屬性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 設定為 `None`，表示在所有上下文（第1方和跨原點）中發送cookie。
+所有安全Cookie皆具有 [SameSite屬性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 設為 `None`，表示會在所有內容（第一方和跨原始）中傳送cookie。
 
-* 對於第一方cookie(`kndcrt_*`) `Secure` 僅當請求上下文安全(HTTPS)和引用者([引用HTTP標頭](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer))也是HTTPS。 如果引用者不安全(HTTP), `Secure` 將省略標誌以允許Web SDK讀取它們。 無法從不安全上下文讀取安全cookie。
-* 對於第三方cookie(demdex), `Secure` 始終設定標誌，因為所有請求都是HTTPS，因此請求上下文是安全的，並且此cookie永遠不會從JavaScript讀取。
+* 針對第一方Cookie(`kndcrt_*`), `Secure` 只有在要求內容安全(HTTPS)且反向連結([參考HTTP標題](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer))也是HTTPS。 如果反向連結不安全(HTTP)，則 `Secure` 標幟皆會省略，以允許Web SDK讀取這些標幟。 無法從不安全的內容讀取安全Cookie。
+* 若為第三方Cookie(demdex)，則 `Secure` 標幟一律會設定，因為所有要求都是HTTPS，因此要求內容安全，且絕不會從JavaScript讀取此Cookie。
 
-的 `Secure` 標誌不在 [Cookie的元資料表示](#state-as-metadata)。 僅 `SameSite` 屬性。 在這種情況下，客戶有責任正確設定 `Secure` 在 `SameSite` 屬性存在。 Cookie `SameSite=None` 還必須指定 `Secure` 屬性，因為它們需要安全上下文(HTTPS)。
+此 `Secure` 標幟不存在於 [cookie的中繼資料表示](#state-as-metadata). 僅 `SameSite` 屬性。 在此情況下，客戶有責任正確設定 `Secure` 標幟，只要 `SameSite` 屬性存在。 Cookie與 `SameSite=None` 也必須指定 `Secure` 屬性，因為它們需要安全內容(HTTPS)。

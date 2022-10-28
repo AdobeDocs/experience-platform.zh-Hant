@@ -2,7 +2,7 @@
 title: 衛星對象參考
 description: 了解用戶端_satellite物件，以及您可以在標籤中使用物件執行的各種功能。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1290'
 ht-degree: 42%
@@ -156,7 +156,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->舊 [`setCookie`](#setCookie) 設定cookie的方法中，此函式呼叫的第三個（選用）引數是整數，以指出cookie的存留時間(TTL)（以天為單位）。 在這個新方法中，「屬性」物件會改為接受為第三個引數。 若要使用新方法來設定Cookie的TTL，您必須提供 `expires` 屬性，並將其設為所需值。 這在以下範例中說明。
+>舊 [`setCookie`](#setCookie) 設定cookie的方法，此函式呼叫的第三個（選用）引數為整數，以指出cookie的到期時間（以天為單位）。 在這個新方法中，「屬性」物件會改為接受為第三個引數。 若要使用新方法來設定Cookie的有效期，您必須提供 `expires` 屬性，並將其設為所需值。 這在以下範例中說明。
 
 **範例**
 

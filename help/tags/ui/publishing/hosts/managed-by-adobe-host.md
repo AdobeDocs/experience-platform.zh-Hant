@@ -2,10 +2,10 @@
 title: Adobe管理主機概述
 description: 了解在Adobe Experience Platform中部署標籤程式庫組建時的預設托管選項。
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '1173'
-ht-degree: 64%
+ht-degree: 60%
 
 ---
 
@@ -54,7 +54,7 @@ CDN的主要用途是以智慧化方式將內容傳送至地理位置上較接�
 >
 >使用 Adobe 管理主機時，程式庫首次發佈至任何新環境最多需要 5 分鐘，才能傳播至全域 CDN。
 
-邊緣節點收到特定檔案（例如您的程式庫組建）的請求時，會先檢查檔案的存留時間(TTL)值。 如果 TTL 尚未過期，邊緣節點就會提供快取版本。如果 TTL 已過期，邊緣節點會向最近的來源提出新副本請求，接著向使用者提供最新的副本，並使用新的 TTL 快取最新副本。
+邊緣節點收到特定檔案（例如您的程式庫組建）的請求時，會先檢查檔案的到期時間。 如果時間尚未過期，邊緣節點會提供快取版本。 如果時間已過，邊緣節點會從最近的來源請求新副本、提供該重新整理的副本，然後以新的過期時間快取重新整理的副本。
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ CDN的主要用途是以智慧化方式將內容傳送至地理位置上較接�
 
 使用 `cache-control` HTTP 標頭也可便於在瀏覽器上快取程式庫組建。使用 Adobe 管理主機時，您無法控制 API 回應中傳回的標頭，因此系統會使用 Adobe 的快取預設值。換言之，您無法針對 Adobe 管理主機使用自訂標頭。如果需要自訂 `cache-control` 標頭，建議您改為[自行託管](self-hosting-libraries.md)。
 
-瀏覽器快取型程式庫組建的存留時間(TTL)由 `cache-control` 標題)會依您使用的標籤環境而有所不同：
+瀏覽器快取程式庫組建的到期時間(由 `cache-control` 標題)會依您使用的標籤環境而有所不同：
 
 | 環境 | `cache-control` 值 |
 | --- | --- |

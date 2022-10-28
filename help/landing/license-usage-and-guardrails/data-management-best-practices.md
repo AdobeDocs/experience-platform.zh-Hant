@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料管理；授權；
 title: 資料管理許可證權限最佳做法
 description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2134'
 ht-degree: 2%
 
 ---
@@ -88,12 +88,12 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 
 ### 要保留哪些資料？
 
-您可以同時套用資料擷取篩選器和到期規則（也稱為存留時間「TTL」），以移除已因您的使用案例而過時的資料。 通常，行為資料（例如Analytics資料）的儲存空間會比記錄資料（例如CRM資料）大很多。 例如，與記錄資料相比，許多Platform使用者單獨以行為資料填入的設定檔高達90%。 因此，管理您的行為資料對於確保許可權限內的合規性至關重要。
+您可以同時套用資料擷取篩選器和到期規則，移除已因您的使用案例而過時的資料。 通常，行為資料（例如Analytics資料）的儲存空間會比記錄資料（例如CRM資料）大很多。 例如，與記錄資料相比，許多Platform使用者單獨以行為資料填入的設定檔高達90%。 因此，管理您的行為資料對於確保許可權限內的合規性至關重要。
 
 您可以利用許多工具來保留在授權使用權限內：
 
 * [擷取篩選器](#ingestion-filters)
-* [設定檔服務TTL](#profile-service)
+* [設定檔存放區](#profile-service)
 
 ### 擷取篩選器 {#ingestion-filters}
 
@@ -109,9 +109,7 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 
 {style=&quot;table-layout:auto&quot;}
 
-### 設定檔服務 {#profile-service}
-
-「設定檔服務TTL」（存留時間）功能可讓您對設定檔存放區中的資料套用TTL。 這樣可讓系統自動移除隨著時間而價值降低的資料。
+### 設定檔存放區 {#profile-service}
 
 設定檔存放區由下列元件組成：
 
@@ -124,53 +122,20 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 
 {style=&quot;table-layout:auto&quot;}
 
+
+
 #### 設定檔存放區組成報表
 
-有許多報表可協助您了解設定檔存放區的組成。 這些報表可協助您決定設定檔TTL的設定方式與位置，以更妥善地最佳化您的授權使用情形：
+有許多報表可協助您了解設定檔存放區的組成。 這些報表可協助您針對如何及何處設定體驗事件有效期做出明智的決策，以更妥善地最佳化您的授權使用情形：
 
-* **資料集重疊報表API**:顯示對可定址對象貢獻最多的資料集。 您可以使用此報告來識別 [!DNL ExperienceEvent] 為設定TTL的資料集。 請參閱 [產生資料集重疊報表](../../profile/tutorials/dataset-overlap-report.md) 以取得更多資訊。
+* **資料集重疊報表API**:顯示對可定址對象貢獻最多的資料集。 您可以使用此報告來識別 [!DNL ExperienceEvent] 資料集來設定的有效期。 請參閱 [產生資料集重疊報表](../../profile/tutorials/dataset-overlap-report.md) 以取得更多資訊。
 * **身分重疊報表API**:公開對可定址對象貢獻最大的身分命名空間。 請參閱 [產生身分重疊報表](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 以取得更多資訊。
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous TTL for different time thresholds. You can use this report to identify which pseudonymous TTL threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### [!DNL ExperienceEvent] 資料集TTL {#dataset-ttl}
+#### 體驗事件過期 {#event-expirations}
 
-您可以將TTL套用至已啟用設定檔的資料集，以移除「設定檔存放區」中不再對您使用案例有價值的行為資料。 TTL套用至啟用設定檔的資料集後，Platform就會透過兩步驟程式自動移除不再需要的資料：
-
-* 所有後續新資料擷取時都會套用TTL有效期值；
-* 所有現有資料都會在一次性回填系統作業中套用TTL過期值。
-
-您可以預期每個事件的TTL值都來自事件時間戳記。 系統工作執行時，所有超過TTL有效期值的事件都會立即被捨棄。 當其他所有事件接近事件時間戳記中指定的TTL到期值時，就會將其捨棄。
-
-請參閱下列範例，協助您了解 [!DNL ExperienceEvent] 資料集TTL。
-
-如果您在5月15日套用30天的TTL值，則：
-
-* 所有新事件傳入時，其TTL都會套用30天；
-* 時間戳記早於4月15日的所有現有事件都會立即被系統作業刪除。;
-* 在4月15日之後具有時間戳記的事件，其事件時間戳記+ TTL天數會到期。 因此，4月18日時間戳記的事件，將在5月15日後三天下降。
-
->[!IMPORTANT]
->
->套用TTL後，任何超過所選TTL天數的資料都會 **永久** 已刪除，無法還原。
-
-套用TTL之前，您必須確保在TTL界限內保留任何區段的回顧期間。 否則，套用TTL後，區段結果可能會不正確。 例如，如果您對Adobe Analytics資料套用TTL 30天，對於店內交易資料套用TTL 365天，則下列區段會產生不正確的結果：
-
-* 在過去60天內檢視「產品頁面」後，即進行店內購買；
-* 新增至購物車，接著在過去60天內沒有購買。
-
-反之，下列項目仍會產生正確的結果：
-
-* 在過去14天內檢視過「產品頁面」，之後又進行店內購買；
-* 過去30天內線上檢視了特定說明頁面；
-* 過去120天內離線購買產品；
-* 新增至購物車，接著在過去14天內購買。
-
->[!TIP]
->
->為方便起見，您可以保留所有資料集的相同TTL，如此您就不必擔心分段邏輯中資料集的TTL影響。
-
-如需將TTL套用至設定檔資料的詳細資訊，請參閱 [設定檔服務TTL](../../profile/apply-ttl.md).
+此功能可讓您從啟用設定檔的資料集中自動移除行為資料，這些資料對您的使用案例已無價值。 請參閱 [體驗事件過期](../../profile/event-expirations.md) 如需為資料集啟用此程式後，其運作方式的詳細資訊。
 
 ## 符合許可證使用規範的最佳做法摘要 {#best-practices}
 
@@ -179,7 +144,7 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 * 使用 [授權使用控制面板](../../dashboards/guides/license-usage.md) 追蹤及監控客戶使用趨勢。 這可讓您搶在任何可能發生的超額之前處理。
 * 設定 [內嵌篩選器](#ingestion-filters) 識別您的細分和個人化使用案例所需的事件。 這可讓您只傳送使用案例所需的重要事件。
 * 請確定您只有 [啟用設定檔資料集](#ingestion-filters) 區段和個人化使用案例所需的項目。
-* 設定 [[!DNL ExperienceEvent] 資料集TTL](#dataset-ttl) 適用於高頻率資料，例如網頁資料。
+* 設定 [體驗事件過期](#event-expirations) 適用於高頻率資料，例如網頁資料。
 * 定期檢查 [設定檔組成報表](#profile-store-composition-reports) 來了解您的設定檔存放區構成。 這可讓您了解對授權使用量貢獻最大的資料來源。
 
 ## 功能摘要和可用性 {#feature-summary}
@@ -191,7 +156,7 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 | 功能 | 說明 |
 | --- | --- |
 | [啟用/停用設定檔的資料集](../../catalog/datasets/user-guide.md) | 啟用或停用將資料集內嵌至設定檔服務 |
-| [!DNL ExperienceEvent] 資料集TTL | 對設定檔存放區中的行為資料集套用TTL過期。 請連絡您的Adobe支援代表。 |
+| [體驗事件過期](../../profile/event-expirations.md) | 對擷取至啟用設定檔資料集的所有事件套用到期時間。 請連絡您的Adobe支援代表以啟用此功能。 |
 | [Adobe Analytics資料準備篩選器](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 套用 [!DNL Kafka] 從擷取中排除不必要資料的篩選器 |
 | [Adobe Audience Manager來源連接器篩選器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | 套用Audience Manager來源連線篩選器，以排除不必要的資料不擷取 |
 | [Alloy SDK資料篩選器](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 套用合金篩選器以排除不必要的資料不擷取 |

@@ -5,7 +5,7 @@ title: 資料登錄區源
 topic-legacy: overview
 description: 了解如何將資料登陸區連接至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存介面，可授予您存取安全、雲端型檔案儲存功能，將檔案匯入Platform。 您可以存取 [!DNL Data Landing Zone] 每個沙箱的容器，且所有容器的資料量總計僅限於您的Platform產品與服務授權隨附的資料總計。 Platform及其應用程式服務的所有客戶，例如 [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]，和 [!DNL Adobe Real-Time Customer Data Platform] 已布建一個 [!DNL Data Landing Zone] 每個沙箱的容器。 您可以透過 [!DNL Azure Storage Explorer] 或命令列介面。
 
-[!DNL Data Landing Zone] 支援基於SAS的身份驗證，其資料受標準保護 [!DNL Azure Blob] 儲存安全機制處於閒置狀態和在途。 基於SAS的身份驗證允許您安全地訪問 [!DNL Data Landing Zone] 容器。 訪問您的 [!DNL Data Landing Zone] 容器，這表示您不需要為網路設定任何允許清單或跨地區設定。 平台會對上傳至 [!DNL Data Landing Zone] 容器。 所有檔案會在七天後刪除。
+[!DNL Data Landing Zone] 支援基於SAS的身份驗證，其資料受標準保護 [!DNL Azure Blob] 儲存安全機制處於閒置狀態和在途。 基於SAS的身份驗證允許您安全地訪問 [!DNL Data Landing Zone] 容器。 訪問您的 [!DNL Data Landing Zone] 容器，這表示您不需要為網路設定任何允許清單或跨地區設定。 Platform會對上傳至 [!DNL Data Landing Zone] 容器。 所有檔案會在七天後刪除。
 
 ## 檔案和目錄的命名限制
 

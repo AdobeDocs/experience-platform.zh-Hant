@@ -5,10 +5,10 @@ title: 資料模型的最佳實務
 topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於Adobe Experience Platform的結構的建置組塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: c5ab8c12c4c5bd14d3504d60c654105ad36effe6
+source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '2698'
-ht-degree: 1%
+source-wordcount: '2699'
+ht-degree: 2%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 | --- | --- |
 | 設定檔實體 | 設定檔實體代表與個別人員（通常為客戶）相關的屬性。 屬於此類別的實體應由結構來表示，其基礎為 **[!DNL XDM Individual Profile]類**. |
 | 查閱實體 | 查詢實體代表可與個別人員相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由結構來表示，其基礎為 **自定義類**. |
-| 事件實體 | 事件實體代表與客戶可採取的動作、系統事件或您想要追蹤隨時間變更的任何其他概念相關的概念。 屬於此類別的實體應由結構來表示，其基礎為 **[!DNL XDM ExperienceEvent]類**. |
+| 事件實體 | 事件實體代表與客戶可採取的動作、系統事件或您想追蹤隨時間變更的任何其他概念相關的概念。 屬於此類別的實體應由結構來表示，其基礎為 **[!DNL XDM ExperienceEvent]類**. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -122,7 +122,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->由於沒有通用方法來適合所有使用案例，因此根據基數分類實體時，請務必考慮每種情況的優點和缺點。 請參閱 [下一節](#pros-and-cons) 以取得更多資訊。
+>由於沒有通用方法來適合所有使用案例，因此根據基數分類實體時，請務必考慮每種情況的優缺點。 請參閱 [下一節](#pros-and-cons) 以取得更多資訊。
 
 下表列出了一些通用實體關係以及可從它們派生的類別：
 
@@ -175,7 +175,7 @@ ht-degree: 1%
 **缺點**
 
 * 原始預定使用案例的細分變得更為複雜（識別客戶最近訂閱的狀態）。 區段現在需要其他邏輯來標籤客戶的最後一個訂閱事件，以檢查其狀態。
-* 事件有較高的風險，會自動到期並從設定檔存放區清除。 請參閱 [設定檔TTL](../../profile/apply-ttl.md) 以取得更多資訊。
+* 事件有較高的風險，會自動到期並從設定檔存放區清除。 請參閱 [體驗事件過期](../../profile/event-expirations.md) 以取得更多資訊。
 
 ## 根據分類的實體建立結構
 
@@ -211,7 +211,7 @@ ht-degree: 1%
 
 ### Adobe應用程式架構欄位組
 
-Experience Platform提供數個現成的XDM架構欄位群組，可擷取與下列Adobe應用程式相關的資料：
+Experience Platform提供數個現成可用的XDM架構欄位群組，用於擷取與下列Adobe應用程式相關的資料：
 
 * Adobe Analytics
 * Adobe Audience Manager
