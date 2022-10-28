@@ -1,26 +1,26 @@
 ---
 title: Adobe Experience Platform中的客戶管理金鑰
 description: 了解如何為儲存在Adobe Experience Platform中的資料設定您自己的加密金鑰。
-source-git-commit: 6fe0d72bcb3dbf1e1167f80724577ba3e0f741f4
+source-git-commit: b778d5c81512e538f08989952f8727d1d694f66c
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1501'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform中的客戶管理金鑰
 
-儲存在Adobe Experience Platform上的所有資料都會使用系統層級的金鑰進行靜態加密。 如果您使用的應用程式是以Platform為建置基礎，您可以選擇使用您自己的加密密鑰，從而更好地控制資料安全性。
+儲存在Adobe Experience Platform上的資料會使用系統層級的金鑰進行靜態加密。 如果您使用的應用程式是以Platform為建置基礎，您可以選擇使用您自己的加密密鑰，從而更好地控制資料安全性。
 
 本檔案說明在Platform中啟用客戶管理金鑰(CMK)功能的程式。
 
 ## 流程摘要
 
-CMK包含在Healthcare Shield和Privacy and Security Shield產品中，不會Adobe。 您的組織購買其中一項產品後，您就可以開始設定功能的一次性程式。
+CMK包含在Healthcare Shield和Privacy and Security Shield產品中，不會Adobe。 您的組織購買其中一項產品的授權後，您就可以開始設定功能的一次性程式。
 
 >[!WARNING]
 >
->設定CMK後，無法恢復到由系統管理的密鑰。 您負責安全地管理密鑰和密鑰庫 [!DNL Azure] 以防止遺失資料的存取權。
+>設定CMK後，無法恢復到由系統管理的密鑰。 您負責安全地管理密鑰，並在內提供對密鑰保管庫、密鑰和CMK應用程式的訪問 [!DNL Azure] 以防止遺失資料的存取權。
 
 該過程如下：
 
@@ -29,7 +29,7 @@ CMK包含在Healthcare Shield和Privacy and Security Shield產品中，不會Ado
 1. [為CMK應用程式分配服務主體](#assign-to-role) 為密鑰保管庫設定適當角色。
 1. 將API呼叫用於 [將您的加密密鑰ID發送到Adobe](#send-to-adobe).
 
-完成設定程式後，所有沙箱上架的所有資料都會使用 [!DNL Azure] 金鑰設定，專屬於您 [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) 和 [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 資源。 CMK利用 [!DNL Azure]&#39;s [公共預覽程式](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/) 讓這成為可能。
+完成設定程式後，所有沙箱上架的所有資料都會使用 [!DNL Azure] 金鑰設定，專屬於您 [[!DNL Cosmos DB]](https://docs.microsoft.com/en-us/azure/cosmos-db/) 和 [[!DNL Data Lake Storage]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) 資源。 要使用CMK，您將利用 [!DNL Microsoft Azure] 可能屬於其一部分的功能 [公共預覽程式](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ## 建立 [!DNL Azure] 密鑰保管庫 {#create-key-vault}
 
@@ -165,6 +165,10 @@ curl -X GET \
 
 獲得密鑰保管庫URI後，可以使用POST請求將其發送到CMK配置終結點。
 
+>[!NOTE]
+>
+>只有密鑰保管庫和密鑰名稱與Adobe一起儲存，而不是密鑰版本。
+
 **要求**
 
 ```shell
@@ -265,6 +269,10 @@ curl -X GET \
 
 ## 後續步驟
 
-完成上述步驟後，貴組織便成功啟用CMK。 擷取至Platform的所有資料，現在都會使用 [!DNL Azure] 密鑰庫。 如果要撤銷對您資料的Platform訪問權，可以從內的密鑰保管庫中刪除與應用程式關聯的用戶角色 [!DNL Azure].
+完成上述步驟後，貴組織便成功啟用CMK。 擷取至Platform的資料現在會使用 [!DNL Azure] 密鑰庫。 如果要撤銷對您資料的Platform訪問權，可以從內的密鑰保管庫中刪除與應用程式關聯的用戶角色 [!DNL Azure].
 
-停用應用程式的存取權後，若要在2到24小時之間存取資料，便無法在Platform中存取。 重新啟用應用程式的存取權時，相同的時間範圍會套用至資料，以便再次可供使用。
+停用應用程式的存取權後，可能需要幾分鐘到24小時的時間，資料才會在Platform中無法再存取。 重新啟用應用程式的存取權時，資料會再次可用的時間延遲。
+
+>[!WARNING]
+>
+>一旦Key Vault、Key或CMK應用程式停用，且Platform中的資料不再可存取，則與該資料相關的任何下游操作將不再可行。 在對設定進行任何變更之前，請務必了解撤銷Platform對您資料的存取權對下游的影響。
