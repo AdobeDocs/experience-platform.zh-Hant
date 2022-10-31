@@ -4,9 +4,9 @@ title: 警報概述
 description: 了解 Adobe Experience Platform 中的警告，包括定義警告規則的結構。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '760'
 ht-degree: 5%
 
 ---
@@ -82,6 +82,10 @@ Adobe Experience Platform可讓您訂閱Adobe Experience Platform活動的事件
 透過「檢視警報」權限，您可以選取警鈴圖示(![鐘錶徵圖](../images/alerts/overview/icon.png))。
 
 ![](../images/alerts/overview/ui.png)
+
+>[!NOTE]
+>
+> 選取警報以導覽至相關控制面板，以取得觸發警報的原因的詳細資訊。
 
 此外， [!UICONTROL 警報] 「 」標籤可讓個別使用者訂閱特定警報類型，並讓管理員完全啟用或停用警報規則。 請參閱 [UI指南](./ui.md) 以了解有關管理警報的詳細資訊。
 
