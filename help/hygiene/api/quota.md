@@ -1,9 +1,9 @@
 ---
 title: 配額API端點
 description: 資料衛生API中的/quota端點可讓您根據組織對每種作業類型的每月配額限制來監控資料衛生使用量。
-source-git-commit: 364ada0c354ddba8a855945f4f806f5600f21416
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '352'
 ht-degree: 3%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Healthcare Shield的組織。
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
 此 `/quota` 資料衛生API中的端點可讓您根據組織對每個作業類型的配額限制來監控資料衛生使用情況。
 

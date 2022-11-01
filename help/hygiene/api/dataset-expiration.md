@@ -2,9 +2,9 @@
 title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式排程Adobe Experience Platform中的資料集到期日。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1456'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Analytics Healthcare Shield的組織。
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
 此 `/ttl` 資料衛生API中的端點可讓您排程Adobe Experience Platform中資料集的到期日。
 

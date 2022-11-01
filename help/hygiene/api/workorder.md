@@ -2,9 +2,9 @@
 title: 工作單API端點
 description: 資料衛生API中的/workorder端點可讓您以程式設計方式管理消費者身分識別的刪除工作。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 83149c4e6e8ea483133da4766c37886b8ebd7316
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '991'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Analytics Healthcare Shield的組織。
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
 此 `/workorder` 資料衛生API中的端點可讓您以程式設計方式管理Adobe Experience Platform中的消費者刪除請求。
 

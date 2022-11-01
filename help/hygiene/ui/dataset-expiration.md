@@ -2,9 +2,9 @@
 title: 管理資料集有效期
 description: 了解如何在Adobe Experience Platform UI中排程資料集的有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: d93036c26e9f1b86a82f4da4cce6f9e8152e3542
+source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '535'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買Analytics Healthcare Shield的組織。
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
 此 [[!UICONTROL 資料衛生] 工作區](./overview.md) 在Adobe Experience Platform UI中，可讓您排程資料集的到期日。 當資料集到期日時，資料湖、身分服務和即時客戶設定檔會開始個別的程式，從各自的服務中移除資料集的內容。 從這三項服務中刪除資料後，過期時間就會標示為完成。
 
