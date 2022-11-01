@@ -1,7 +1,7 @@
 ---
 title: 監視查詢
 description: 了解如何透過Query Service UI監控查詢。
-source-git-commit: 62863fc5b59a8185ea01f19dd3c50bf22fdd1e55
+source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 1%
