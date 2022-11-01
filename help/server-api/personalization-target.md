@@ -2,9 +2,9 @@
 title: 透過Adobe Target個人化
 description: 了解如何使用伺服器API來提供及呈現在Adobe Target中建立的個人化體驗。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: d6573f8f4d779fb7ed11b44561a0ad9667748b27
+source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '744'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Edge Network Server API可在以下協助下提供及呈現在Adobe Target中建
 
 >[!IMPORTANT]
 >
->透過 [Target可視化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 伺服器API並未完全支援。 伺服器API可 **擷取** 由VEC建立的活動，但伺服器API無法 **轉譯** 由VEC建立的活動。 如果您想呈現VEC建立的活動，請使用 [Web SDK](../edge/home.md).
+>透過 [Target可視化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 伺服器API並未完全支援。 伺服器API可 **擷取** 由VEC建立的活動，但伺服器API無法 **轉譯** 由VEC建立的活動。 如果您想呈現VEC建立的活動，請實作 [混合個人化](../edge/personalization/hybrid-personalization.md) 使用Web SDK和邊緣網路伺服器API。
 
 ## 設定您的資料流 {#configure-your-datastream}
 
