@@ -5,7 +5,7 @@ title: Adobe Experience Platform中的同意處理
 topic-legacy: getting started
 description: 了解如何使用Adobe2.0標準，在Adobe Experience Platform中處理客戶同意訊號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 
 您可以使用批次內嵌，從CSV檔案內嵌符合XDM的同意資料。 如果您先前收集的同意資料積壓，尚未整合至客戶設定檔中，這個功能會很實用。
 
-請依照 [將CSV檔案對應至XDM](../../../../ingestion/tutorials/map-a-csv-file.md) 了解如何將資料欄位轉換為XDM，並將其內嵌至Platform。 選取 [!UICONTROL 目的地] 對應時，請確定您選取 **[!UICONTROL 使用現有資料集]** 選項，然後選擇 [!DNL Profile] — 啟用您先前建立的同意資料集。
+請依照 [將CSV檔案對應至XDM](../../../../ingestion/tutorials/map-csv/overview.md) 了解如何將資料欄位轉換為XDM，並將其內嵌至Platform。 選取 [!UICONTROL 目的地] 對應時，請確定您選取 **[!UICONTROL 使用現有資料集]** 選項，然後選擇 [!DNL Profile] — 啟用您先前建立的同意資料集。
 
 ## 測試您的實作 {#test-implementation}
 

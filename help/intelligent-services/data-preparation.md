@@ -5,7 +5,7 @@ title: 準備資料以用於Intelligent Services
 topic-legacy: Intelligent Services
 description: 為了讓Intelligent Services從您的行銷事件資料中探索深入分析，資料必須在語義上加以擴充並維護為標準結構。 Intelligent Services會使用Experience Data Model(XDM)結構來達成此目標。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 0%
@@ -356,7 +356,7 @@ CEE欄位組中有幾個關鍵欄位，應按順序使用 [!DNL Intelligent Serv
 
 #### 對應及內嵌資料 {#ingest}
 
-建立CEE架構和資料集後，您可以開始將資料表對應至架構，並將該資料內嵌至Platform。 請參閱 [將CSV檔案對應至XDM結構](../ingestion/tutorials/map-a-csv-file.md) 以取得在UI中執行此動作的步驟。 您可以使用下列項目 [範例JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 以在使用您自己的資料之前測試擷取程式。
+建立CEE架構和資料集後，您可以開始將資料表對應至架構，並將該資料內嵌至Platform。 請參閱 [將CSV檔案對應至XDM結構](../ingestion/tutorials/map-csv/overview.md) 以取得在UI中執行此動作的步驟。 您可以使用下列項目 [範例JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 以在使用您自己的資料之前測試擷取程式。
 
 填入資料集後，即可使用相同的資料集內嵌其他資料檔案。
 

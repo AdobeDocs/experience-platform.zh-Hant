@@ -1,33 +1,32 @@
 ---
 solution: Experience Platform
-title: 在UI中為XDM架構生成示例資料
-description: 瞭解如何根據Adobe Experience Platform使用者介面中現有的架構產生範例JSON資料。
+title: 在UI中產生XDM結構的範例資料
+description: 了解如何根據Adobe Experience Platform使用者介面中的現有結構，產生範例JSON資料。
 topic-legacy: user guide
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
 
-# 在UI中為XDM架構產生範例資料
+# 在UI中產生XDM結構的範例資料
 
-為了將資料收錄至Adobe Experience Platform，資料的格式和結構必須符合現有的體驗資料模型(XDM)架構。 根據特定資料集的架構複雜性，很難判斷資料集在擷取時所需的確切資料形狀。
+若要將資料內嵌至Adobe Experience Platform，資料的格式和結構必須符合現有的Experience Data Model(XDM)結構。 根據特定資料集的結構複雜度，很難判斷資料集擷取時所需資料的確切形狀。
 
-對於您在Experience PlatformUI中定義的任何結構，您可以產生符合結構的範例JSON物件。 此物件可當成任何資料的範本，這些資料會收錄在採用相關架構的資料集中。
+對於您在Experience PlatformUI中定義的任何結構，您可以產生符合結構的範例JSON物件。 此物件可做為範本，內嵌至採用相關結構的資料集中的任何資料。
 
-在平台UI中，選擇左側導覽中的&#x200B;**[!UICONTROL Schemas]**。 在&#x200B;**[!UICONTROL Browse]**&#x200B;標籤下，找到要為其生成示例資料的方案。 從清單中選取它，然後右側邊欄會更新，以顯示架構的詳細資訊。 從此處選擇&#x200B;**[!UICONTROL Download sample file]**。
+在平台UI中，選取 **[!UICONTROL 結構]** 的下一頁。 在 **[!UICONTROL 瀏覽]** 頁簽，找到要為其生成示例資料的架構。 從清單中選取，右側邊欄會更新，顯示架構的詳細資訊。 從此處，選擇 **[!UICONTROL 下載範例檔案]**.
 
 ![](../images/ui/sample/sample-data.png)
 
-瀏覽器會下載範例JSON檔案。 現在，您可以使用此檔案作為參考，瞭解在將資料收錄至採用此架構的資料集時，如何建構資料。
+瀏覽器會下載範例JSON檔案。 現在，您可以使用此檔案作為參考，以了解在採用此結構的資料集中擷取資料時，如何建構資料。
 
 ## 後續步驟
 
-本指南說明如何從平台UI中的XDM架構產生範例JSON檔案。 要瞭解如何使用方案註冊表API生成示例資料，請參閱[示例資料端點指南](../api/sample-data.md)。
+本指南說明如何從Platform UI的XDM結構產生範例JSON檔案。 若要了解如何使用Schema Registry API產生範例資料，請參閱 [範例data端點指南](../api/sample-data.md).
 
-當您準備開始接收資料後，請參閱[將CSV檔案對應至XDM](../../ingestion/tutorials/map-a-csv-file.md)的教學課程，以瞭解如何將平面資料檔案（例如CSV）對應至XDM架構，並將它內嵌至平台。 或者，您可以建立[源連接](../../sources/home.md)，以便從外部源導入資料並將其映射到XDM。
+準備好開始擷取資料後，請參閱 [將CSV檔案對應至XDM](../../ingestion/tutorials/map-csv/overview.md) 了解如何將一般資料檔案（例如CSV）對應至XDM結構，並內嵌至Platform。 或者，您可以建立 [源連接](../../sources/home.md) 將資料從外部來源匯入，並對應至XDM。
 
-有關UI中[!UICONTROL Schemas]工作區功能的詳細資訊，請參閱[[!UICONTROL Schemas]工作區概述](./overview.md)。
+如需功能的詳細資訊，請參閱 [!UICONTROL 結構] 工作區，請參閱 [[!UICONTROL 結構] 工作區概述](./overview.md).

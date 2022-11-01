@@ -1,40 +1,39 @@
 ---
-keywords: Experience Platform; home；熱門主題；Adobe Experience Platform；使用手冊；ui指南；工作流ui指南；工作流；工作流使用手冊；
+keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platform；使用手冊；ui指南；工作流程ui指南；工作流程；工作流程使用手冊；
 solution: Experience Platform
 title: 工作流程UI指南
 topic-legacy: ui guide
-description: 瞭解如何遵循多步驟工作流程，在Adobe Experience Platform使用者介面中執行常用作業。
+description: 了解如何遵循多步驟工作流程，在Adobe Experience Platform使用者介面中執行常見操作。
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Workflows] UI指南
+# [!UICONTROL 工作流程] UI指南
 
-Adobe Experience Platform用戶介面中的&#x200B;**[!UICONTROL Workflows]**&#x200B;部分顯示用於在平台中執行操作的多步驟工作流的清單。 這些工作流程涵蓋資料擷取和資料科學等領域。
+此 **[!UICONTROL 工作流程]** Adobe Experience Platform使用者介面中的區段會顯示用於執行Platform內作業的多步驟工作流程清單。 這些工作流程涵蓋資料擷取和資料科學等領域。
 
 ![工作流程](./images/workflows/workflows.png)
 
-## [!UICONTROL Data ingestion]
+## [!UICONTROL 資料擷取]
 
-**[!UICONTROL Map CSV to XDM schema]**&#x200B;工作流程可讓您上傳CSV檔案並將它轉換為體驗資料模型(XDM)架構。 有關此工作流的詳細資訊，請參閱[將CSV檔案映射到XDM架構](../ingestion/tutorials/map-a-csv-file.md)的教程。
+此 **[!UICONTROL 將CSV對應至XDM結構]** 工作流程可讓您上傳CSV檔案並轉換為體驗資料模型(XDM)結構。 如需此工作流程的詳細資訊，請參閱 [將CSV檔案對應至XDM結構](../ingestion/tutorials/map-csv/overview.md).
 
-**[!UICONTROL Create dataset from schema]**&#x200B;工作流程可讓您從現有的XDM架構建立新資料集。 有關此工作流的詳細資訊，請參閱[資料集使用手冊](../catalog/datasets/user-guide.md#schema)。
+此 **[!UICONTROL 從結構建立資料集]** 工作流程可讓您從現有的XDM架構建立新資料集。 如需此工作流程的詳細資訊，請參閱 [資料集使用指南](../catalog/datasets/user-guide.md#schema).
 
-**[!UICONTROL Create dataset from CSV]**&#x200B;工作流程可讓您上傳CSV檔案以建立新資料集。 有關此工作流的詳細資訊，請參閱[資料集使用手冊](../catalog/datasets/user-guide.md#csv)。
+此 **[!UICONTROL 從CSV建立資料集]** 工作流程可讓您上傳CSV檔案來建立新資料集。 如需此工作流程的詳細資訊，請參閱 [資料集使用指南](../catalog/datasets/user-guide.md#csv).
 
-## [!UICONTROL Models]
+## [!UICONTROL 模型]
 
-**[!UICONTROL Import recipe]**&#x200B;工作流程可讓您匯入和設定方式。 有關此工作流程的更多資訊，請參閱[匯入封裝方式](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md)的教學課程。
+此 **[!UICONTROL 導入方式]** 工作流程可讓您匯入和設定方式。 如需此工作流程的詳細資訊，請參閱 [導入打包的配方](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md).
 
-**[!UICONTROL Create model]**&#x200B;工作流程可讓您建立機器學習模型。 有關此工作流程的更多資訊，請參閱[模型培訓和評估教程](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)。
+此 **[!UICONTROL 建立模型]** 工作流程可讓您建立機器學習模型。 如需此工作流程的詳細資訊，請參閱 [模型訓練與評估教學課程](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-**[!UICONTROL Publish a model as a service]**&#x200B;工作流程可讓您將建立的模型發佈為可計分的服務。 有關此工作流程的詳細資訊，請參閱[將模型作為服務發佈的教程](../data-science-workspace/models-recipes/publish-model-service-ui.md)。
+此 **[!UICONTROL 將模型發佈為服務]** 工作流程可讓您發佈已建立的模型，作為可計分的服務。 如需此工作流程的詳細資訊，請參閱 [將模型發佈為服務](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ## 後續步驟
 
-閱讀本指南後，您便瞭解了Experience Platform用戶介面中的[!UICONTROL Workflows]。 有關平台UI功能和功能的更多資訊，請閱讀[Adobe Experience PlatformUI指南](ui-guide.md)。
+閱讀本指南，您已了解 [!UICONTROL 工作流程] 可在Experience Platform使用者介面中使用。 如需Platform UI特色與功能的詳細資訊，請參閱 [Adobe Experience Platform UI指南](ui-guide.md).

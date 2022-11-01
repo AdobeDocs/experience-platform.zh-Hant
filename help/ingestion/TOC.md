@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 資料擷取說明
 breadcrumb-title: Data Ingestion 指南
 user-guide-description: 透過批次或串流擷取，將您的資料匯入 Experience Platform。
 feature: Data Ingestion
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 27%
+source-wordcount: '145'
+ht-degree: 25%
 
 ---
 
@@ -26,7 +26,10 @@ ht-degree: 27%
    - [部分批次內嵌](batch-ingestion/partial.md)
    - [疑難排解](batch-ingestion/troubleshooting.md)
 - 教學課程 {#tutorials}
-   - [將CSV檔案對應至XDM](tutorials/map-a-csv-file.md)
+   - 將CSV檔案對應至XDM {#map-csv}
+      - [總覽](./tutorials/map-csv/overview.md)
+      - [將CSV檔案對應至現有結構](./tutorials/map-csv/existing-schema.md)
+      - [使用AI產生的建議對應CSV檔案](./tutorials/map-csv/recommendations.md)
    - [使用UI內嵌批次資料](tutorials/ingest-batch-data.md)
    - [建立已驗證的串流連線](tutorials/create-authenticated-streaming-connection.md)
    - [建立串流連線(API)](tutorials/create-streaming-connection.md)
