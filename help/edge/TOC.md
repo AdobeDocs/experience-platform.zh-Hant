@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
+source-git-commit: 15a1fd71bc5f00efdd475abd3385dc6bf4737a17
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '193'
 ht-degree: 32%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 32%
       * [傳送資料至Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * 個人化 {#personalization}
    * [轉譯個人化內容](personalization/rendering-personalization-content.md)
+   * [透過混合實作進行個人化](personalization/hybrid-personalization.md)
    * [管理忽隱忽現](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [總覽](personalization/adobe-target/target-overview.md)
