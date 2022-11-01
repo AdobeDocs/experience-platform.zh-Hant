@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform Query Service可從UI建立資料集。 建立資料集後，您就可以像「資料湖」中的其他資料集一樣存取該資料集，並用於各種使用案例。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 228ed51ea056d3593a59bc0eee8d9b767aa74489
+source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -19,13 +19,11 @@ ht-degree: 0%
 
 ## 從Adobe Experience Platform使用者介面產生資料集
 
-<!-- Screenshot for #3 will need to be updated if schedule queries is moved. -->
-
 若要從Adobe Experience Platform使用者介面(UI)建立資料集，請遵循下列步驟：
 
 1. 使用連接的客戶端建立查詢並驗證輸出。 了解如何使用 [!DNL Query Editor]，請閱讀 [!DNL Query Editor] UI指南 [寫入查詢](./user-guide.md#writing-queries).
 
-2. 在Platform UI中，導覽至 **[!UICONTROL 查詢]** 後面 **[!UICONTROL 瀏覽]** 頁簽，然後選擇已建立的查詢。 如需如何在Platform UI中檢視針對貴組織建立和儲存的查詢的詳細資訊，請參閱 [[!DNL Query Service] 概述](./overview.md#browse).
+2. 在Platform UI中，導覽至 **[!UICONTROL 查詢]** 後面 **[!UICONTROL 範本]** 頁簽，然後選擇已建立的查詢。 如需如何在Platform UI中檢視針對貴組織建立和儲存的查詢的詳細資訊，請參閱 [[!DNL Query Service] 概述](./overview.md#browse).
 
 3. 在「查詢詳細資訊」面板中，選擇 **[!UICONTROL 輸出資料集]**.
 

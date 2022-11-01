@@ -5,9 +5,9 @@ title: 查詢編輯器UI指南
 topic-legacy: query editor
 description: 查詢編輯器是Adobe Experience Platform Query Service提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和探索資料，並可讓您執行互動式查詢以供開發之用，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9c7068b4209a7c85c444b1cc83415747b93bacb2
+source-git-commit: 6cb28f8afa528849662fb416d81d155384a3de6c
 workflow-type: tm+mt
-source-wordcount: '1993'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 從 [!UICONTROL 範本] 頁簽，在「查詢編輯器」中查看它。 「查詢詳細資訊」面板提供了管理所選查詢的更多資訊和工具。
 
-![突出顯示查詢詳細資訊面板的查詢編輯器。](../images/ui/query-editor/query-details.png)
+![查詢編輯器中突出顯示了查詢詳細資訊面板。](../images/ui/query-editor/query-details.png)
 
 此面板可讓您直接從UI產生輸出資料集、刪除或命名顯示的查詢，以及將排程新增至查詢。
 
@@ -116,13 +116,19 @@ ht-degree: 0%
 >
 >以下是使用查詢編輯器時排程查詢的限制清單。 它們不適用於 [!DNL Query Service] API:<br/>您只能將排程新增至已建立、儲存及執行的查詢。<br/>您 **不能** 將計畫添加到參數化查詢。<br/>排程查詢 **不能** 包含匿名塊。
 
-若要將排程新增至查詢，請選取 **[!UICONTROL 新增排程]**.
+排程是從查詢編輯器中設定。 不過，只能排程已儲存為範本的查詢。 若要將排程新增至查詢，請從 [!UICONTROL 範本] 標籤或 [!UICONTROL 排程查詢] 頁簽，導覽至查詢編輯器。
 
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
+若要了解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
 
-![反白顯示「添加計畫」的查詢編輯器。](../images/ui/query-editor/add-schedule.png)
+從查詢編輯器存取儲存的查詢時， [!UICONTROL 排程] 索引標籤會顯示在查詢名稱下方。 選擇 **[!UICONTROL 排程]**.
 
-此 **[!UICONTROL 排程詳細資料]** 頁。 在此頁上，您可以選擇排程查詢的頻率、排程查詢的執行日期，以及要匯出查詢的資料集。
+![突出顯示「調度」頁簽的查詢編輯器。](../images/ui/query-editor/schedules-tab.png)
+
+排程工作區隨即出現。 選擇 **[!UICONTROL 新增排程]** 來建立排程。
+
+![查詢編輯器排程工作區中，已反白顯示新增排程。](../images/ui/query-editor/add-schedule.png)
+
+此時將顯示「計畫詳細資訊」頁。 在此頁面上，您可以選擇已排程查詢的頻率、開始和結束日期、已排程查詢將執行的一週中的某天，以及要匯出查詢的資料集。
 
 ![「計畫詳細資訊」面板突出顯示。](../images/ui/query-editor/schedule-details.png)
 
@@ -140,39 +146,35 @@ ht-degree: 0%
 >
 > 由於您使用現有資料集或建立新資料集， **not** 需要包括 `INSERT INTO` 或 `CREATE TABLE AS SELECT` 做為查詢的一部分，因為資料集已設定。 包括 `INSERT INTO` 或 `CREATE TABLE AS SELECT` 作為排程查詢的一部分，將會導致錯誤。
 
-確認所有這些詳細資訊後，請選取 **[!UICONTROL 儲存]** 來建立排程。
+確認所有這些詳細資訊後，請選取 **[!UICONTROL 儲存]** 來建立排程。 系統會將您返回到計畫工作區，該工作區顯示新建立的計畫的詳細資訊，包括計畫ID、計畫本身和計畫的輸出資料集。 您可以使用排程ID來查詢有關排程查詢本身執行的詳細資訊。 若要進一步了解，請閱讀 [排程查詢執行端點指南](../api/runs-scheduled-queries.md).
 
-查詢詳細資訊頁面會重新顯示，現在會顯示新建立排程的詳細資訊，包括排程ID、排程本身和排程的輸出資料集。 您可以使用排程ID來查詢有關排程查詢本身執行的詳細資訊。 若要進一步了解，請閱讀 [排程查詢執行端點指南](../api/runs-scheduled-queries.md).
+![重新建立的排程會反白顯示排程工作區。](../images/ui/query-editor/schedules-workspace.png)
 
->[!NOTE]
->
-> 您只能排程 **one** 使用UI查詢範本。 如果您想要將其他排程新增至查詢範本，則需使用API。 如果已使用API新增排程，您將 **not** 可使用UI新增其他排程。 如果已將多個計畫附加到查詢模板，則只會顯示最舊的計畫。 若要了解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
->
-> 此外，如果您想要確定您檢視的排程擁有最新狀態，則應重新整理頁面。
+#### 刪除或禁用計畫 {#delete-schedule}
 
-#### 刪除排程 {#delete-schedule}
+您可以從排程工作區中刪除或停用排程。 您必須從 [!UICONTROL 範本] 標籤或 [!UICONTROL 排程查詢] 頁簽，導航到查詢編輯器並選擇 **[!UICONTROL 排程]** 來存取排程工作區。
 
-您可以透過選取 **[!UICONTROL 刪除排程]**.
-
-<!-- Cannot update this image below yet. Believe schedules tab is being added to the Query Editor -->
-
-![突出顯示了「禁用計畫」和「刪除計畫」的查詢編輯器。](../images/ui/query-editor/delete-schedule.png)
+從可用排程的列中選取排程。 您可以使用切換來停用或啟用排程查詢。
 
 >[!IMPORTANT]
 >
-> 如果要刪除查詢的排程，必須先停用該排程。
+>您必須先停用排程，才能刪除查詢的排程。
+
+選擇 **[!UICONTROL 刪除排程]** 刪除禁用的計畫。
+
+![會反白顯示「停用排程」和「刪除排程」的排程工作區。](../images/ui/query-editor/delete-schedule.png)
 
 ### 保存查詢 {#saving-queries}
 
-[!DNL Query Editor] 提供儲存函式，可讓您儲存查詢並稍後處理。 要保存查詢，請選擇 **[!UICONTROL 儲存]** 在的右上角 [!DNL Query Editor]. 在可以保存查詢之前，必須為查詢提供名稱，使用 **[!UICONTROL 查詢詳細資料]** 中。
+此 [!DNL Query Editor] 提供儲存函式，可讓您儲存查詢並稍後處理。 要保存查詢，請選擇 **[!UICONTROL 儲存]** 在的右上角 [!DNL Query Editor]. 在可以保存查詢之前，必須為查詢提供名稱，使用 **[!UICONTROL 查詢詳細資料]** 中。
 
 >[!NOTE]
 >
->使用「查詢編輯器」在中命名和保存的查詢在「查詢」儀表板中可作為模板使用 [!UICONTROL 瀏覽] 標籤。 請參閱 [範本檔案](./query-templates.md) 以取得更多資訊。
+>使用「查詢編輯器」在中命名和保存的查詢在「查詢」儀表板中可作為模板使用 [!UICONTROL 範本] 標籤。 請參閱 [範本檔案](./query-templates.md) 以取得更多資訊。
 
 ### 如何查找以前的查詢 {#previous-queries}
 
-從執行的所有查詢 [!DNL Query Editor] 會在記錄表中擷取。 您可以在 **[!UICONTROL 記錄檔]** 頁簽，查找查詢執行。 儲存的查詢會列在 **[!UICONTROL 瀏覽]** 標籤。
+從執行的所有查詢 [!DNL Query Editor] 會在記錄表中擷取。 您可以在 **[!UICONTROL 記錄檔]** 頁簽，查找查詢執行。 儲存的查詢會列在 **[!UICONTROL 範本]** 標籤。
 
 請參閱 [查詢服務UI概述](./overview.md) 以取得更多資訊。
 
@@ -182,7 +184,7 @@ ht-degree: 0%
 
 ## 使用查詢編輯器執行查詢 {#executing-queries}
 
-在中運行查詢 [!DNL Query Editor]，您可以在編輯器中輸入SQL，或從 **[!UICONTROL 記錄檔]** 或 **[!UICONTROL 瀏覽]** ，然後選取 **播放**. 查詢執行的狀態顯示在 **[!UICONTROL 主控台]** 頁簽，並且輸出資料顯示在 **[!UICONTROL 結果]** 標籤。
+在中運行查詢 [!DNL Query Editor]，您可以在編輯器中輸入SQL，或從 **[!UICONTROL 記錄檔]** 或 **[!UICONTROL 範本]** ，然後選取 **播放**. 查詢執行的狀態顯示在 **[!UICONTROL 主控台]** 頁簽，並且輸出資料顯示在 **[!UICONTROL 結果]** 標籤。
 
 ### 主控台 {#console}
 

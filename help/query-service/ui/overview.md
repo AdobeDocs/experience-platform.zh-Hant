@@ -5,7 +5,7 @@ title: Query Service UI指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 0a44d15f9dfaf5100fa44e2e6442b1be23ee0ab0
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Query Service] 提供可用來寫入及執行查
 
 ## [!DNL Query Editor]
 
-此 [!DNL Query Editor] 使您能夠編寫和執行查詢，而無需使用外部客戶端。 選擇 **[!UICONTROL 建立查詢]** 開啟 [!DNL Query Editor] 和建立新查詢。 您也可以存取 [!DNL Query Editor] 從 **[!UICONTROL 記錄檔]** 或 **[!UICONTROL 瀏覽]** 標籤。 選取先前執行或儲存的查詢，將會開啟 [!DNL Query Editor] 和顯示所選查詢的SQL。
+此 [!DNL Query Editor] 使您能夠編寫和執行查詢，而無需使用外部客戶端。 選擇 **[!UICONTROL 建立查詢]** 開啟 [!DNL Query Editor] 和建立新查詢。 您也可以存取 [!DNL Query Editor] 從 **[!UICONTROL 記錄檔]** 或 **[!UICONTROL 範本]** 標籤。 選取先前執行或儲存的查詢，將會開啟 [!DNL Query Editor] 和顯示所選查詢的SQL。
 
 ![突出顯示了「建立查詢」的「查詢」儀表板。](../images/ui/overview/overview.png)
 

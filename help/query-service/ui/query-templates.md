@@ -2,7 +2,7 @@
 title: 查詢範本
 description: 查詢模板是可重複使用的保存的SQL查詢，可由其他用戶重複使用，以節省時間和精力。 可使用查詢編輯器或查詢服務API來建立這些資料集，並可用於所有Experience Platform資料集。
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 1%
@@ -25,11 +25,9 @@ Adobe Experience Platform Query Service可讓您以查詢範本的形式儲存�
 
 ### 使用查詢編輯器來編寫查詢並將其另存為模板
 
-如需如何使用查詢編輯器以 [寫入](./user-guide.md#query-authoring) 和 [保存查詢](./user-guide.md#saving-queries). 在您命名並保存查詢後，該查詢即可在 [!UICONTROL 瀏覽] 標籤。
+如需如何使用查詢編輯器以 [寫入](./user-guide.md#query-authoring) 和 [保存查詢](./user-guide.md#saving-queries). 在您命名並保存查詢後，該查詢即可在 [!UICONTROL 範本] 標籤。
 
 從Platform UI的「查詢」工作區中，選取 **[!UICONTROL 範本]** 顯示可用的已保存查詢的清單。
-
-<!-- This may need updating idf the Schedule are added to a separate Tab -->
 
 ![查詢工作區，「模板」(Templates)頁簽突出顯示。](../images/ui/query-templates/query-templates.png)
 
@@ -43,7 +41,7 @@ Adobe Experience Platform Query Service可讓您以查詢範本的形式儲存�
 
 >[!NOTE]
 >
->使用API建立的範本也會顯示在Platform UI的「查詢服務瀏覽」標籤中。
+>使用API建立的範本也會顯示在「平台UI查詢服務範本」標籤中。
 
 ## 後續步驟
 
