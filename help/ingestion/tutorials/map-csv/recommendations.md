@@ -1,9 +1,9 @@
 ---
 title: 使用AI產生的Recommendations(Beta)將CSV檔案對應至XDM結構
 description: 本教學課程說明如何使用AI產生的建議，將CSV檔案對應至XDM架構。
-source-git-commit: a8a7523c5b7f696ecc0ae89cb4e0474b44a222e7
+source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1043'
 ht-degree: 0%
 
 ---
@@ -35,13 +35,13 @@ ht-degree: 0%
 
 此 **[!UICONTROL 對應CSV XDM結構]** 工作流程隨即顯示，從 **[!UICONTROL 資料流詳細資訊]** 步驟。
 
-選擇 **[!UICONTROL 使用ML建議建立新結構]**，會顯示新控制項。 選擇要映射的CSV資料的適當類([!UICONTROL 設定檔] 或 [!UICONTROL ExperienceEvent])，並使用下拉式功能表，選取貴公司的相關產業。 如果貴組織在 [企業對企業(B2B)](../../../xdm/tutorials/relationship-b2b.md) 模型，選取 **[!UICONTROL B2B資料]** 核取方塊。
+選擇 **[!UICONTROL 使用ML建議建立新結構]**，會顯示新控制項。 為您要對應的CSV資料選擇適當的類別([!UICONTROL 設定檔] 或 [!UICONTROL ExperienceEvent])。 您可以選擇使用下拉式功能表來選取您企業的相關產業，或如果提供的類別不適用於您，則保留空白。 如果貴組織在 [企業對企業(B2B)](../../../xdm/tutorials/relationship-b2b.md) 模型，選取 **[!UICONTROL B2B資料]** 核取方塊。
 
 ![此 [!UICONTROL 資料流詳細資訊] 步驟，並選取ML建議選項。 [!UICONTROL 設定檔] 已為類和選擇 [!UICONTROL 電信] 為行業選擇](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
 從此處，提供將從CSV資料建立之結構的名稱，以及包含在該架構下擷取之資料的輸出資料集名稱。
 
-您可以選擇為資料流配置以下附加功能：
+在繼續操作之前，您可以選擇為資料流配置以下附加功能：
 
 | 輸入名稱 | 說明 |
 | --- | --- |
@@ -50,6 +50,8 @@ ht-degree: 0%
 | [!UICONTROL 部分擷取] | 啟用後，新批次資料的有效記錄將在指定的錯誤臨界值內擷取。 此臨界值可讓您在整個批次失敗前設定可接受錯誤的百分比。 |
 | [!UICONTROL 資料流詳細資訊] | 為將CSV資料匯入Platform的資料流提供名稱和可選說明。 啟動此工作流時，系統會自動為資料流分配預設名稱。 可選擇變更名稱。 |
 | [!UICONTROL 警示] | 從 [產品內警報](../../../observability/alerts/overview.md) 在資料流啟動後，您要接收有關資料流狀態的資訊。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 完成資料流配置後，請選擇 **[!UICONTROL 下一個]**.
 
@@ -81,7 +83,7 @@ ht-degree: 0%
 
 ### 編輯欄位群組 {#edit-field-groups}
 
-CSV欄位會使用ML模型自動對應至現有欄位群組。 如果要變更任何特定CSV欄位的欄位群組，請選取 **[!UICONTROL 編輯]** 在架構樹旁邊。
+CSV欄位會使用ML模型自動對應至現有的XDM欄位群組。 如果要變更任何特定CSV欄位的欄位群組，請選取 **[!UICONTROL 編輯]** 在架構樹旁邊。
 
 ![此 [!UICONTROL 編輯] 在架構樹旁邊選擇的按鈕](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
