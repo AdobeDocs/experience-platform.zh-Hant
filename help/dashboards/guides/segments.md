@@ -4,9 +4,9 @@ title: 區段控制面板指南
 description: Adobe Experience Platform提供控制面板，供您檢視貴組織已建立區段的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 18288130b98e13d824273426a860d97722c434de
+source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2092'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 此 **[!UICONTROL 對象大小]** 介面工具集會顯示拍攝快照時，所選區段內合併的設定檔總數。 此數字是將區段合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為區段中的每個個人形成單一設定檔。
 
-如需片段和已合併設定檔的詳細資訊，請先閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
+如需片段和已合併設定檔的詳細資訊，請參閱 [即時客戶個人檔案概觀](../../profile/home.md).
 
 ![區段控制面板概述，並反白顯示對象大小介面工具集。](../images/segments/audience-size.png)
 

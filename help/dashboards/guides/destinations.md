@@ -4,9 +4,9 @@ title: 目的地控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視組織作用中目的地的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7f226a37996ab5e1fef432c6007d7d488f84ded6
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，可讓您檢視
 
 ## [!UICONTROL 目的地] 控制面板資料 {#destinations-dashboard-data}
 
-此 [!UICONTROL 目的地] 控制面板顯示貴組織在Experience Platform內啟用的目的地快照。 快照中的資料與建立快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或樣本，目標控制面板不會即時更新。
+「目標」控制面板會顯示貴組織已在Experience Platform中啟用的目標的快照。 快照中的資料與建立快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或樣本，目標控制面板不會即時更新。
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，可讓您檢視
 
 >[!NOTE]
 >
->如果您的組織剛開始Experience Platform，且尚未有作用中的目的地，則 [!UICONTROL 目的地] 控制面板和 [!UICONTROL 概述] 標籤未顯示。 而是選取 [!UICONTROL 目的地] 從左側導覽顯示 [!UICONTROL 目錄] 標籤。 若要進一步了解 [!UICONTROL 目錄] 標籤，請參閱 [[!UICONTROL 目的地] 工作區指南](../../destinations/ui/destinations-workspace.md).
+>如果您的組織剛開始Experience Platform，且尚未有作用中的目的地，則「目的地」控制面板和 [!UICONTROL 概述] 標籤未顯示。 而是選取 [!UICONTROL 目的地] 從左側導覽顯示 [!UICONTROL 目錄] 標籤。 若要進一步了解 [!UICONTROL 目錄] 標籤，請參閱 [[!UICONTROL 目的地] 工作區指南](../../destinations/ui/destinations-workspace.md).
 
 ![最新的快照突出顯示了Platform UI目標概述。](../images/destinations/snapshot-timestamp.png)
 
@@ -120,7 +120,7 @@ Adobe提供多個標準Widget，可用來視覺化與目的地相關的不同量
 
 從介面工具集上顯示的清單中選取區段名稱，會帶您前往區段詳細資訊。 您也可以選取 **[!UICONTROL 查看全部]** 若要導覽至「區段瀏覽」標籤，然後選取區段名稱以檢視其詳細資料。
 
-如需在Experience Platform中使用區段的詳細資訊，請先閱讀 [區段服務概觀](../../segmentation/home.md).
+如需在Experience Platform中使用區段的詳細資訊，請參閱 [區段服務概觀](../../segmentation/home.md).
 
 ![「目的地」控制面板的「概述」標籤會反白顯示「最近啟用的區段」介面工具集。](../images/destinations/recently-activated-segments.png)
 

@@ -4,22 +4,22 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
 workflow-type: tm+mt
-source-wordcount: '3388'
+source-wordcount: '3385'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL 設定檔] 儀表板
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有關您 [!DNL Real-time Customer Profile] 資料，如在每日快照期間捕獲。 本指南概述如何存取及使用 [!UICONTROL 設定檔] 控制面板，並提供控制面板中所顯示度量的相關資訊。
+Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有關您 [!DNL Real-time Customer Profile] 資料，如在每日快照期間捕獲。 本指南概述如何存取和使用UI中的「設定檔」控制面板，並提供控制面板中所顯示量度的相關資訊。
 
-如需Experience Platform使用者介面中所有設定檔功能的概觀，請造訪 [即時客戶個人檔案UI指南](../../profile/ui/user-guide.md).
+如需Experience Platform使用者介面中所有設定檔功能的概觀，請參閱 [即時客戶個人檔案UI指南](../../profile/ui/user-guide.md).
 
 ## 設定檔控制面板資料
 
-此 [!UICONTROL 設定檔] 控制面板顯示您的組織在「設定檔存放區」內Experience Platform的屬性（記錄）資料快照。 快照不包含任何事件（時間系列）資料。
+「設定檔」控制面板會顯示您的組織在「設定檔存放區」內Experience Platform的屬性（記錄）資料快照。 快照不包含任何事件（時間系列）資料。
 
 快照中的屬性資料與建立快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或樣本，而且「配置檔案」儀表板不會即時更新。
 
@@ -27,19 +27,19 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有
 >
 >自拍攝快照以來對資料所做的任何更改或更新都不會反映在儀表板中，直到拍攝下一個快照。
 
-## 探索 [!UICONTROL 設定檔] 儀表板
+## 探索設定檔控制面板
 
-導覽至 [!UICONTROL 設定檔] 平台UI中的控制面板，請選取 **[!UICONTROL 設定檔]** 在左側邊欄中，選取 **[!UICONTROL 概述]** 標籤來顯示控制面板。
+若要導覽至Platform UI中的「設定檔」控制面板，請選取 **[!UICONTROL 設定檔]** 在左側邊欄中，選取 **[!UICONTROL 概述]** 標籤來顯示控制面板。
 
 >[!NOTE]
 >
->如果您的組織剛接觸Platform，且尚未建立作用中的設定檔資料集或合併原則，請 [!UICONTROL 設定檔] 控制面板未顯示。 反之， [!UICONTROL 概述] 索引標籤會顯示連結和檔案，協助您開始使用即時客戶設定檔。
+>如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示設定檔控制面板。 反之， [!UICONTROL 概述] 索引標籤會顯示連結和檔案，協助您開始使用即時客戶設定檔。
 
 ![](../images/profiles/dashboard-overview.png)
 
-### 修改 [!UICONTROL 設定檔] 儀表板
+### 修改設定檔控制面板
 
-您可以修改 [!UICONTROL 設定檔] 控制面板，選取 **[!UICONTROL 修改控制面板]**. 這可讓您從控制面板移動、新增和移除小工具，以及存取 **[!UICONTROL 介面工具集程式庫]** 探索可用的介面工具集，並為貴組織建立自訂介面工具集。
+通過選擇 **[!UICONTROL 修改控制面板]**. 這可讓您從控制面板移動、新增和移除小工具，以及存取 **[!UICONTROL 介面工具集程式庫]** 探索可用介面工具集，並為貴組織建立自訂介面工具集。
 
 請參閱 [修改控制面板](../customize/modify.md) 和 [介面工具集程式庫概觀](../customize/widget-library.md) 檔案以深入了解。
 
@@ -73,9 +73,9 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## 合併策略 {#merge-policies}
 
-顯示於 [!UICONTROL 設定檔] 控制面板是根據套用至您即時客戶設定檔資料的合併原則而設定。 從多個來源匯整資料以建立客戶設定檔時，資料可能會包含衝突的值。 例如，某個資料集可能會將客戶列為「單一」，而另一個資料集可能將客戶列為「已婚」。 合併原則的工作是決定要優先排列哪些資料，並在設定檔中顯示這些資料。
+「設定檔」控制面板中顯示的量度是以套用至您即時客戶設定檔資料的合併原則為基礎。 從多個來源匯整資料以建立客戶設定檔時，資料可能會包含衝突的值。 例如，某個資料集可能會將客戶列為「單一」，而另一個資料集可能將客戶列為「已婚」。 合併原則的工作是決定要優先排列哪些資料，並在設定檔中顯示這些資料。
 
-有關合併策略的詳細資訊，包括如何為貴組織建立、編輯和聲明預設合併策略，請從閱讀 [合併策略概述](../../profile/merge-policies/overview.md).
+有關合併策略的詳細資訊，包括如何建立、編輯和聲明組織的預設合併策略，請參閱 [合併策略概述](../../profile/merge-policies/overview.md).
 
 控制面板將自動選擇要使用的合併策略。 可以使用合併策略名稱旁邊的下拉菜單更改應用的合併策略。
 
@@ -140,7 +140,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >
 >此 [!UICONTROL 設定檔計數] 介面工具集可能會顯示與上顯示的設定檔計數不同的數字 [!UICONTROL 瀏覽] 標籤 [!UICONTROL 設定檔] 區段，原因有多。 最常見的原因是 [!UICONTROL 瀏覽] 索引標籤會根據您組織的預設合併原則來參照合併設定檔的總數，而 [!UICONTROL 設定檔計數] 介面工具集會根據您選取要在控制面板中檢視的合併原則，參考合併設定檔的總數。
 >
->另一個常見原因是，拍攝控制面板快照的時間與為 [!UICONTROL 瀏覽] 標籤。 您可以查看 [!UICONTROL 設定檔計數] 上次更新介面工具集的方式是查看介面工具集上的時間戳記，以及進一步了解如何在介面工具集上觸發範例工作 [!UICONTROL 瀏覽] 頁簽，請參閱 [即時客戶個人檔案UI指南中的設定檔計數區段](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>另一個常見原因是，拍攝控制面板快照的時間與為 [!UICONTROL 瀏覽] 標籤。 您可以查看 [!UICONTROL 設定檔計數] 上次更新介面工具集的方式是查看介面工具集的時間戳記。 若要進一步了解如何在 [!UICONTROL 瀏覽] 頁簽，請參閱 [即時客戶個人檔案UI指南中的設定檔計數區段](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
@@ -226,7 +226,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 使用介面工具集下拉式功能表，選取您要比較的身分。 社交圈會顯示包含每個身分的設定檔相對總計。 包含兩個身分的設定檔數目會以圓圈之間重疊的大小表示。 如果客戶在多個管道上與您的品牌互動，則多個身分會與該個別客戶相關聯，因此您的組織可能會有多個設定檔，其中包含來自多個身分的片段。
 
-如需設定檔片段的詳細資訊，請先閱讀 [設定檔片段與合併的設定檔](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) （在即時客戶個人檔案概觀中）。
+如需設定檔片段的詳細資訊，請參閱 [設定檔片段與合併的設定檔](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) （在即時客戶個人檔案概觀中）。
 
 若要進一步了解身分，請造訪 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md).
 
@@ -430,4 +430,4 @@ The three levels of completeness are:
 
 ## 後續步驟
 
-依照本檔案操作，您現在應該能夠找到「設定檔」控制面板，並了解可用介面工具集中顯示的量度。 若要進一步了解如何使用 [!DNL Profile] Experience PlatformUI中的資料，請參閱 [即時客戶個人檔案UI指南](../../profile/ui/user-guide.md).
+依照本檔案操作，您現在應該能夠找到設定檔控制面板，並了解可用介面工具集中顯示的量度。 若要進一步了解如何使用 [!DNL Profile] Experience PlatformUI中的資料，請參閱 [即時客戶個人檔案UI指南](../../profile/ui/user-guide.md).
