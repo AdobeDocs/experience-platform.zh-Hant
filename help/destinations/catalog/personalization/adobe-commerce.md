@@ -1,9 +1,9 @@
 ---
 title: (Beta)Adobe Commerce Destination Connector
 description: 了解Adobe Commerce和Real-Time CDP商家如何透過提供高度相關的網站內容和促銷活動(根據Real-Time CDP中建立和管理的客戶區段加以自訂)來個人化購物體驗。
-source-git-commit: 566f26ec0f13bfaceb0ee59f3e4c72e767bc8cc9
+source-git-commit: 0a6100f2aa98f5c40f2492dcfab79a991eded94b
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '691'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ To help you better understand how and when you should use the *YourDestination* 
 
 現在您已設定 [!DNL Commerce] Experience Platform內的目的地，您必須設定 [!DNL Commerce Admin] 匯入您建立的Real-Time CDP區段。 請參閱 [[!DNL Commerce] 檔案](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) 了解更多。
 
-## 驗證資料匯出 {#exported-data}
+## 驗證Commerce中的受眾啟動 {#exported-data}
 
 在您將Real-Time CDP區段啟用至 [!DNL Adobe Commerce] 帳戶，您會在 [!DNL Admin] 建立購物車價格規則時：
 
