@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: d6858ab1389a0b5cfadc9f79b20b80c1c36a114e
+source-git-commit: cf8f630360c2cdbba1082913b179e719156183f4
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1060'
 ht-degree: 5%
 
 ---
@@ -90,7 +90,8 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 | 功能 | 說明 |
 | --- | --- |
-| 查詢加速報告前瞻分析資料模型 | 作為Data Distiller SKU的一部分，查詢加速儲存可讓您減少從資料中獲取重要見解所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改善您的報表分析及其視覺效果。 請參閱 [查詢加速儲存報告深入分析檔案](https://experienceleague.adobe.com/docs/experience-platform/query/query-accelerated-store/reporting-insights-data-model.html) 以深入了解此功能。 |
+| 透過Platform UI監控查詢 | 查詢服務 [!UICONTROL 排程查詢] 索引標籤可改善透過UI查詢作業狀態的可見性。 您現在可以找到查詢執行狀態的重要資訊，包括錯誤訊息和失敗的程式碼，從 [!UICONTROL 排程查詢] 標籤。 您也可以根據其狀態，透過UI訂閱這些查詢中任何一個的警報。 請參閱 [監視查詢文檔](../../query-service/monitor-queries.md) 以深入了解此功能。 |
+| 查詢加速報告前瞻分析資料模型 | 作為Data Distiller SKU的一部分，查詢加速儲存可讓您減少從資料中獲取重要見解所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改善您的報表分析及其視覺效果。 請參閱 [查詢加速儲存報告深入分析檔案](../../query-service/query-accelerated-store/reporting-insights-data-model.md) 以深入了解此功能。 |
 
 {style=&quot;table-layout:auto&quot;}
 

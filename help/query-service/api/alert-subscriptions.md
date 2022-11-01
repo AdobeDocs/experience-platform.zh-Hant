@@ -2,9 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；警報；
 title: 警報訂閱API端點
 description: 本指南提供您可使用Query Service API對警報訂閱端點進行之各種API呼叫的範例HTTP要求和回應。
-hide: true
-hidefromtoc: true
-source-git-commit: df894d8b52aff3708aa06e73d4c5ba3e1e501f10
+source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 2%
