@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: d6100f58b8ffd6251c3a58576a41dbfb75c3bb0c
+source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
 workflow-type: tm+mt
-source-wordcount: '1902'
+source-wordcount: '1905'
 ht-degree: 5%
 
 ---
@@ -136,7 +136,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 
 ### 設定檔片段
 
-在本檔案中，有數個護欄指的是「設定檔片段」。 在Experience Platform中，多個設定檔片段會合併在一起，以形成即時客戶設定檔。 每個片段代表指定資料集內該ID的唯一主要身分以及對應的記錄或事件資料。 若要進一步了解設定檔片段，請參閱 [設定檔概觀](home.md#profile-fragments-vs-merged-profiles).
+在本檔案中，有數個護欄指的是「設定檔片段」。 在Experience Platform中，多個設定檔片段會合併在一起，以形成即時客戶設定檔。 每個片段代表一個唯一的主要身分，以及指定資料集內該ID的對應記錄或完整事件資料集。 若要進一步了解設定檔片段，請參閱 [設定檔概觀](home.md#profile-fragments-vs-merged-profiles).
 
 ### 合併策略 {#merge-policies}
 
