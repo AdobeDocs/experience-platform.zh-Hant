@@ -3,18 +3,36 @@ keywords: Amazon S3;S3目的地；s3;Amazon s3
 title: Amazon S3連線
 description: 建立與Amazon Web Services(AWS)S3儲存的即時傳出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
 
 # [!DNL Amazon S3] 連接 {#s3-connection}
 
+## 目標更改日誌 {#changelog}
+
+>[!IMPORTANT]
+>
+>匯出資料集功能測試版和檔案匯出功能改善後，您現在可能會看到兩個 [!DNL Amazon S3] 目的地目錄中的卡。
+>* 如果您已將檔案匯出至 **[!UICONTROL Amazon S3]** 目的地：請建立新資料流到新的 **[!UICONTROL Amazon S3測試版]** 目的地。
+>* 如果您尚未建立任何資料流至 **[!UICONTROL Amazon S3]** 目的地，請使用新 **[!UICONTROL Amazon S3測試版]** 將檔案導出到的卡 **[!UICONTROL Amazon S3]**.
+
+
+![以並排檢視顯示的兩個Amazon S3目的地卡影像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+
+新 [!DNL Amazon S3] 目的地卡包括：
+
+* [資料集匯出支援](/help/destinations/ui/export-datasets.md).
+* 其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* 可透過 [改良的映射步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [可自訂匯出CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
 ## 總覽 {#overview}
 
-建立與 [!DNL Amazon Web Services] (AWS)S3儲存，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
+建立與 [!DNL Amazon S3] 儲存，以定期將資料檔案從Adobe Experience Platform匯出至您自己的S3貯體。
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -110,6 +128,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 請參閱 [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
 
+## （測試版）匯出資料集 {#export-datasets}
+
+此目的地支援資料集匯出。 如需設定資料集匯出的完整資訊，請閱讀 [匯出資料集教學課程](/help/destinations/ui/export-datasets.md).
+
 ## 匯出的資料 {#exported-data}
 
-針對 [!DNL Amazon S3] 目的地， [!DNL Platform] 會建立 `.csv` 檔案。 如需檔案的詳細資訊，請參閱 [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 在區段啟用教學課程中。
+針對 [!DNL Amazon S3] 目的地， [!DNL Platform] 在您提供的儲存位置中建立資料檔案。 如需檔案的詳細資訊，請參閱 [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 在區段啟用教學課程中。

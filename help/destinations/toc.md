@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 5c938f8158cfd16b8904ee1e7f67b6ce66b2e45c
+source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '985'
 ht-degree: 6%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 6%
       * [對設定檔要求目的地啟用受眾資料](./ui/activate-profile-request-destinations.md)
       * [為同一頁面和下一頁個人化設定個人化目的地](./ui/configure-personalization-destinations.md)
       * [（測試版）使用Experience PlatformUI，隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
+      * [（測試版）使用Experience PlatformUI匯出資料集](./ui/export-datasets.md)
    * [查看目標詳細資訊](./ui/destination-details-page.md)
    * [更新目標帳戶](./ui/update-accounts.md)
    * [刪除目標帳戶](./ui/delete-destination-account.md)
@@ -103,7 +104,10 @@ ht-degree: 6%
       * [Amazon Kinesis連線](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3連線](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob連接](./catalog/cloud-storage/azure-blob.md)
+      * [(Beta)Azure資料湖儲存Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure事件集線器連接](./catalog/cloud-storage/azure-event-hubs.md)
+      * [（測試版）資料登陸區](./catalog/cloud-storage/data-landing-zone.md)
+      * [（測試版）Google雲端儲存空間](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP連線](./catalog/cloud-storage/sftp.md)
       * [雲端儲存目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 客戶關係管理(CRM)目的地 {#crm}

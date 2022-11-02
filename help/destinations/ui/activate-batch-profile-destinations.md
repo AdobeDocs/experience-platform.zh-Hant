@@ -4,9 +4,9 @@ title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c096720d9b7a645475d3a3f63f900e81c212d121
+source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '3468'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
+>
+>參與改善檔案匯出功能測試版的部分客戶看到新的 **[!UICONTROL 對應]** 作為其啟動工作流程的一部分 [全新測試版雲端儲存目的地](/help/release-notes/2022/october-2022.md#destinations). 另請注意 [已知限制](#known-limitations) 做為版本的一部分。
 
 ## 總覽 {#overview}
 
@@ -162,13 +164,13 @@ ht-degree: 0%
 >title="配置檔案名"
 >abstract="針對以檔案為基礎的目的地，每個區段會產生唯一的檔案名稱。 使用檔案名編輯器建立和編輯唯一的檔案名或保留預設名稱。"
 
-預設檔案名稱包含目的地名稱、區段ID以及日期和時間指標。 例如，您可以編輯匯出的檔案名稱以區分不同的促銷活動，或將資料匯出時間附加至檔案。
+對於大多數目的地，預設檔案名稱包含目的地名稱、區段ID以及日期和時間指標。 例如，您可以編輯匯出的檔案名稱以區分不同的促銷活動，或將資料匯出時間附加至檔案。 請注意，某些目的地開發人員可能會選取為其目的地顯示不同的預設檔案名稱附加選項。
 
 選取鉛筆圖示以開啟強制回應視窗並編輯檔案名稱。 檔案名限制為255個字元。
 
 >[!NOTE]
 >
->下圖顯示如何編輯Amazon S3目的地的檔案名稱，但所有批次目的地（例如SFTP或Azure Blob儲存）的程式相同。
+>下圖顯示如何為 [!DNL Amazon S3] 但所有批次目的地的程式都相同(例如SFTP、 [!DNL Azure Blob Storage]，或 [!DNL Google Cloud Storage])。
 
 ![用於配置檔案名的鉛筆表徵圖突出顯示影像。](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
@@ -178,9 +180,17 @@ ht-degree: 0%
 
 無法從檔案名稱中移除目的地名稱和區段ID。 除了這些外，您還可以新增下列項目：
 
-* **[!UICONTROL 區段名稱]**:您可以將區段名稱附加至檔案名稱。
-* **[!UICONTROL 日期和時間]**:在新增 `MMDDYYYY_HHMMSS` 格式或Unix 10位數的檔案生成時間時間戳。 如果希望檔案在每次增量導出時都生成動態檔案名，請選擇以下選項之一。
-* **[!UICONTROL 自訂文字]**:將自訂文字新增至檔案名稱。
+| 檔案名選項 | 說明 |
+|---------|----------|
+| **[!UICONTROL 區段名稱]** | 匯出的區段名稱。 |
+| **[!UICONTROL 日期和時間]** | 在新增 `MMDDYYYY_HHMMSS` 格式或Unix 10位數的檔案生成時間時間戳。 如果希望檔案在每次增量導出時都生成動態檔案名，請選擇以下選項之一。 |
+| **[!UICONTROL 自訂文字]** | 要添加到檔案名的任何自定義文本。 |
+| **[!UICONTROL 目的地ID]** | 用於導出段的目標資料流的ID。 <br> **附註**:此檔案名稱附加選項僅適用於參與改善的檔案匯出功能測試版程式的測試版客戶。 如果您想要存取測試版計畫，請連絡您的Adobe代表或客戶服務。 |
+| **[!UICONTROL 目的地名稱]** | 用於導出段的目標資料流的名稱。 <br> **附註**:此檔案名稱附加選項僅適用於參與改善的檔案匯出功能測試版程式的測試版客戶。 如果您想要存取測試版計畫，請連絡您的Adobe代表或客戶服務。 |
+| **[!UICONTROL 組織名稱]** | 您的組織名稱Experience Platform。 <br> **附註**:此檔案名稱附加選項僅適用於參與改善的檔案匯出功能測試版程式的測試版客戶。 如果您想要存取測試版計畫，請連絡您的Adobe代表或客戶服務。 |
+| **[!UICONTROL 沙箱名稱]** | 您用來匯出區段的沙箱ID。 <br> **附註**:此檔案名稱附加選項僅適用於參與改善的檔案匯出功能測試版程式的測試版客戶。 如果您想要存取測試版計畫，請連絡您的Adobe代表或客戶服務。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 選擇 **[!UICONTROL 套用變更]** 以確認您的選取。
 
@@ -193,7 +203,6 @@ ht-degree: 0%
 ## 選取設定檔屬性 {#select-attributes}
 
 針對以設定檔為基礎的目的地，您必須選取要傳送至目標目的地的設定檔屬性。
-
 
 1. 在 **[!UICONTROL 選擇屬性]** 頁面，選取 **[!UICONTROL 新增欄位]**.
 
@@ -386,6 +395,75 @@ Adobe建議您選取身分命名空間，例如 [!DNL CRM ID] 或電子郵件地
 >
 > 例如，如果欄位 `person.name.firstName` 具有與目的地的行銷動作相衝突的特定資料使用標籤，則您會在審核步驟中顯示資料使用政策違規。 如需詳細資訊，請參閱 [Adobe Experience Platform中的資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
+## （測試版）對應 {#mapping}
+
+>[!IMPORTANT]
+> 
+>精選測試版客戶可檢視 **[!UICONTROL 對應]** 取代 [選取設定檔屬性](#select-attributes) 上述步驟。 這個新 **[!UICONTROL 對應]** 步驟可讓您將匯出檔案的標題編輯為任何您想要的自訂名稱。
+> 
+> 功能和檔案可能會有所變更。 如果您想要存取此測試版計畫，請連絡您的Adobe代表或客戶服務。
+
+在此步驟中，您必須選取要新增至匯出至目標目的地之檔案的設定檔屬性。 若要選取要匯出的設定檔屬性和身分：
+
+1. 在 **[!UICONTROL 對應]** 頁面，選取 **[!UICONTROL 新增欄位]**.
+
+   ![在對應工作流程中反白顯示新增欄位控制項。](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
+
+1. 選取 **[!UICONTROL 源欄位]** 的下界。
+
+   ![選擇映射工作流中突出顯示的源欄位控制項。](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
+
+1. 在 **[!UICONTROL 選擇源欄位]** 頁，選擇要包含在導出到目標的檔案中的配置檔案屬性和標識，然後選擇 **[!UICONTROL 選擇]**.
+
+   >[!TIP]
+   > 
+   >您可以使用搜尋欄位來縮小選取範圍，如下圖所示。
+
+   ![強制回應視窗，顯示可匯出至目的地的設定檔屬性。](../assets/ui/activate-batch-profile-destinations/select-source-field-modal.png)
+
+
+1. 您選取要匯出的欄位現在會顯示在對應檢視中。 如果您願意，可以編輯導出檔案中的標題名稱。 要執行此操作，請在目標欄位上選取圖示。
+
+   ![強制回應視窗，顯示可匯出至目的地的設定檔屬性。](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
+
+1. 在 **[!UICONTROL 選擇目標欄位]** 頁，在導出的檔案中鍵入所需的標題名稱，然後選擇 **[!UICONTROL 選擇]**.
+
+   ![強制回應視窗中顯示標題的輸入好記名稱。](../assets/ui/activate-batch-profile-destinations/select-target-field-mapping.png)
+
+1. 您選取要匯出的欄位現在會顯示在對應檢視中，並在匯出的檔案中顯示已編輯的標題。
+
+   ![強制回應視窗，顯示可匯出至目的地的設定檔屬性。](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. （選用）您可以選取匯出的欄位為 [必填金鑰](#mandatory-keys) 或 [去重複化金鑰](#deduplication-keys).
+
+   ![強制回應視窗，顯示可匯出至目的地的設定檔屬性。](../assets/ui/activate-batch-profile-destinations/select-mandatory-deduplication-key.png)
+
+1. 若要新增更多要匯出的欄位，請重複上述步驟。
+
+### 已知限制 {#known-limitations}
+
+新 **[!UICONTROL 對應]** 頁面有下列已知限制：
+
+#### 無法通過映射工作流選擇段成員資格屬性
+
+由於已知限制，您目前無法使用 **[!UICONTROL 選擇欄位]** 窗口 `segmentMembership.status` 檔案匯出。 而是需要手動貼上值 `xdm: segmentMembership.status` 填入架構欄位，如下所示。
+
+![螢幕記錄顯示啟動工作流程對應步驟中的區段成員資格因應措施。](/help/destinations/assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
+
+檔案匯出會依下列方式而異，具體取決於 `segmentMembership.status` 已選取：
+* 若 `segmentMembership.status` 欄位，導出的檔案包括 **[!UICONTROL 作用中]** 初始完整快照和 **[!UICONTROL 作用中]** 和 **[!UICONTROL 過期]** 成員。
+* 若 `segmentMembership.status` 欄位未選中，導出的檔案僅包括 **[!UICONTROL 作用中]** 初始完整快照和後續增量導出中的成員。
+
+#### 目前無法為匯出選取身分命名空間
+
+目前不支援選取要匯出的身分命名空間，如下圖所示。 選取要匯出的任何身分命名空間，將會導致 **[!UICONTROL 檢閱]** 步驟。
+
+![不支援的映射顯示身份導出](/help/destinations/assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+
+如果您在測試期間需要將身分識別命名空間新增至匯出的檔案，可做為暫時因應措施，您可以：
+* 對於要在匯出內容中包含身分命名空間的資料流，請使用舊版雲端儲存目標
+* 將身分上傳至Experience Platform中，然後將其匯出至雲端儲存空間目的地。
+
 ## 檢閱 {#review}
 
 在 **[!UICONTROL 檢閱]** 頁面，您可以看到您所選內容的摘要。 選擇 **[!UICONTROL 取消]** 來分解流， **[!UICONTROL 返回]** 修改設定，或 **[!UICONTROL 完成]** 確認您的選擇並開始將資料傳送至目的地。
@@ -402,11 +480,10 @@ Adobe建議您選取身分命名空間，例如 [!DNL CRM ID] 或電子郵件地
 
 ## 驗證區段啟用 {#verify}
 
-
-對於電子郵件行銷目的地和雲端儲存空間目的地，Adobe Experience Platform會建立 `.csv` 檔案。 預期每天會在儲存位置中建立新檔案。 預設檔案格式為：
+對於電子郵件行銷目的地和雲端儲存空間目的地，Adobe Experience Platform會建立 `.csv` 檔案。 預期會根據您在工作流程中設定的排程，在儲存位置中建立新檔案。 預設檔案格式為：
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-您連續三天收到的檔案可能如下所示：
+例如，如果您選取每日匯出頻率，您會連續三天收到的檔案可能如下所示：
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv

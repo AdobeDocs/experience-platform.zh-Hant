@@ -3,14 +3,32 @@ keywords: SFTP;sftp
 title: SFTP連線
 description: 建立與SFTP伺服器的即時傳出連線，以定期從Adobe Experience Platform匯出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 1dd87ce19c3d9f4eb07c49968754ab979b4dee5c
+source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 1%
+source-wordcount: '835'
+ht-degree: 0%
 
 ---
 
 # SFTP連線
+
+## 目標更改日誌 {#changelog}
+
+>[!IMPORTANT]
+>
+>匯出資料集功能測試版和檔案匯出功能改善後，您現在可能會看到兩個 [!DNL SFTP] 目的地目錄中的卡。
+>* 如果您已將檔案匯出至 **[!UICONTROL SFTP]** 目的地：請建立新資料流到新的 **[!UICONTROL SFTP測試版]** 目的地。
+>* 如果您尚未建立任何資料流至 **[!UICONTROL SFTP]** 目的地，請使用新 **[!UICONTROL SFTP測試版]** 將檔案導出到的卡 **[!UICONTROL SFTP]**.
+
+
+![並排檢視中兩個SFTP目的地卡的影像。](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+
+新 [!DNL SFTP] 目的地卡包括：
+
+* [資料集匯出支援](/help/destinations/ui/export-datasets.md).
+* 其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
+* 可透過 [改良的映射步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* [可自訂匯出CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## 總覽 {#overview}
 
@@ -18,7 +36,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> 雖然Experience Platform支援將資料匯出至SFTP伺服器，但建議的雲端儲存空間位置會匯出資料 [!DNL Amazon S3] 和 [!DNL Azure Blob].
+> 雖然Experience Platform支援將資料匯出至SFTP伺服器，但建議的雲端儲存空間位置會匯出資料 [!DNL Amazon S3] 和 [!DNL SFTP].
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -95,6 +113,10 @@ ht-degree: 1%
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
 請參閱 [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
+
+## （測試版）匯出資料集 {#export-datasets}
+
+此目的地支援資料集匯出。 如需設定資料集匯出的完整資訊，請閱讀 [匯出資料集教學課程](/help/destinations/ui/export-datasets.md).
 
 ## 匯出的資料 {#exported-data}
 
