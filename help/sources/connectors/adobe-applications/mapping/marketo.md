@@ -5,10 +5,10 @@ title: 映射Marketo Engage源的欄位
 topic-legacy: overview
 description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的對應。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: a0ca9cff43b6f8276268467fecf944c664992950
+source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 6%
+source-wordcount: '952'
+ht-degree: 4%
 
 ---
 
@@ -28,6 +28,8 @@ ht-degree: 6%
 ## 活動 {#activities}
 
 此 [!DNL Marketo] 來源現在支援其他標準活動。 若要使用標準活動，您必須使用 [方案自動生成實用程式](../marketo/marketo-namespaces.md) 因為如果您 `activities` 資料流未更新架構，則映射模板將失敗，因為新目標欄位將不存在於您的架構中。 如果您選擇不更新您的架構，您仍然可以建立新的資料流並消除任何錯誤。 不過，任何新欄位或更新的欄位將不會擷取至Platform。
+
+請參閱 [XDM體驗事件類別](../../../../xdm/classes/experienceevent.md) 以取得XDM類別和XDM欄位群組的詳細資訊。
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -136,6 +138,8 @@ ht-degree: 6%
 
 ## 計劃 {#programs}
 
+閱讀 [XDM Business Campaign概觀](../../../../xdm/classes/b2b/business-campaign.md) 以取得XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請參閱 [業務促銷活動詳細資訊結構欄位組](../../../../xdm/field-groups/b2b-campaign/details.md) 指南。
+
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
@@ -164,6 +168,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 方案成員資格 {#program-memberships}
+
+閱讀 [XDM Business Campaign成員概觀](../../../../xdm/classes/b2b/business-campaign-members.md) 以取得XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請參閱 [XDM Business Campaign成員詳細資訊結構欄位組](../../../../xdm/field-groups/b2b-campaign-members/details.md) 指南。
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -196,6 +202,8 @@ ht-degree: 6%
 
 ## 公司 {#companies}
 
+閱讀 [XDM商業帳戶概觀](../../../../xdm/classes/b2b/business-account.md) 以取得XDM類別的詳細資訊。
+
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
@@ -226,6 +234,8 @@ ht-degree: 6%
 
 ## 靜態清單 {#static-lists}
 
+閱讀 [XDM商業行銷清單概觀](../../../../xdm/classes/b2b/business-marketing-list.md) 以取得XDM類別的詳細資訊。
+
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
@@ -241,6 +251,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 靜態清單成員資格 {#static-list-memberships}
+
+閱讀 [XDM Business Marketing清單成員概觀](../../../../xdm/classes/b2b/business-marketing-list-members.md) 以取得XDM類別的詳細資訊。
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -260,6 +272,8 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 >只有Marketo的帳戶型行銷(ABM)功能才需要指定帳戶資料集。 如果您未使用ABM，則無需為指定帳戶設定映射。
+
+閱讀 [XDM商業帳戶概觀](../../../../xdm/classes/b2b/business-account.md) 以取得XDM類別的詳細資訊。
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -286,6 +300,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 機會 {#opportunities}
+
+閱讀 [XDM業務機會概觀](../../../../xdm/classes/b2b/business-opportunity.md) 以取得XDM類別的詳細資訊。
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
@@ -322,6 +338,8 @@ ht-degree: 6%
 
 ## 機會聯繫人角色 {#opportunity-contact-roles}
 
+閱讀 [XDM業務機會人員關係概觀](../../../../xdm/classes/b2b/business-account-person-relation.md) 以取得XDM類別的詳細資訊。
+
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
@@ -340,6 +358,8 @@ ht-degree: 6%
 {style=&quot;table-layout:auto&quot;}
 
 ## 人員 {#persons}
+
+閱讀 [XDM個別設定檔概觀](../../../../xdm/classes/individual-profile.md) 以取得XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請參閱 [XDM業務人員詳細資訊結構欄位組](../../../../xdm/field-groups/profile/business-person-details.md) 指南和 [XDM企業人員元件結構欄位群組](../../../../xdm/field-groups/profile/business-person-components.md) 指南。
 
 | 來源資料集 | XDM目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
