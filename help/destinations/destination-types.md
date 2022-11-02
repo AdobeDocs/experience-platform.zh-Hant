@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地類型
 title: 目的地類型和類別
 description: 了解Adobe Experience Platform中不同的目的地類型和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,12 @@ Experience Platform中的邊緣個人化目的地包括 [Adobe Target](/help/des
 以下影片會逐一說明兩種目的地的特殊性：
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## （測試版）資料集匯出目的地 {#dataset-export-destinations}
+
+目的地目錄中的某些雲端儲存目標支援資料集匯出。 使用這些目的地將原始資料集匯出至雲端儲存空間位置。
+
+深入了解如何 [匯出資料集](/help/destinations/ui/export-datasets.md).
 
 ## 擴充功能 {#extensions}
 

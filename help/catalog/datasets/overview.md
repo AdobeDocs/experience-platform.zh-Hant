@@ -5,9 +5,9 @@ title: 資料集概述
 topic-legacy: datasets
 description: 本文件提供 Experience Platform 資料集的高層級總覽。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '736'
 ht-degree: 7%
 
 ---
@@ -61,6 +61,7 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，以確保符�
 * [Adobe Experience Platform區段服務](../../segmentation/home.md):可讓您建立區段，並從 [!DNL Real-time Customer Profile] 資料。 然後，這些對象可匯出至 [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md):使用機器學習和人工智慧發掘大型資料集的深入分析。
 * [Adobe Experience Platform查詢服務](../../query-service/home.md):允許使用標準SQL在中查詢資料 [!DNL Experience Platform]，在中加入任何資料集 [!DNL Data Lake] 將查詢結果擷取為新資料集以用於報表， [!DNL Data Science Workspace]，或 [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform目的地服務](../../destinations/home.md):可讓您 [匯出資料集](/help/destinations/ui/export-datasets.md) 至您所需的雲端儲存空間或電子郵件行銷目的地，以利進行報表或資料科學活動。
 
 ## 後續步驟
 
