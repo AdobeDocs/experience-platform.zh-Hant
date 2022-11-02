@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
-source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
+source-git-commit: 38eadb3a03577fde9651842e3aecc0291b14f0a0
 workflow-type: tm+mt
 source-wordcount: '1394'
 ht-degree: 4%
@@ -53,7 +53,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 功能 | 說明 |
 | --- | --- |
 | （測試版）資料集匯出 | 此 [資料集匯出測試版功能](/help/destinations/ui/export-datasets.md) 可讓您匯出第一代資料(如 [Real-time Customer Data Platform產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html))透過目的地使用者介面從Adobe Experience Platform輸出至您自己的外部客戶系統。 這可讓您透過無代碼/低代碼工作流程，將資料從Experience Platform中傳出至6個雲端儲存目標（如下表所列），以利分析和法規遵循使用案例。 |
-| （測試版）增強的檔案匯出功能 | 現在，當將檔案匯出Experience Platform時，您可以受益於增強的自訂功能： <br><ul><li>其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>可透過 [改良的映射步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[可自訂匯出CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> 下表列出的6個全新測試版雲端儲存卡支援此功能。 |
+| （測試版）增強的檔案匯出功能 | 現在，當將檔案匯出Experience Platform時，您可以受益於增強的自訂功能： <br><ul><li>其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>可透過 [改良的映射步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[可自訂匯出CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> 下表列出的6個全新測試版雲端儲存卡支援此功能。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -65,7 +65,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365是一個基於雲的業務應用平台，它將企業資源規劃(ERP)和客戶關係管理(CRM)與生產應用程式和AI工具結合在一起，從而實現端到端更流暢、更受控的操作、更好的增長潛力和降低成本。 |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | 此 [!DNL (Beta) Adobe Commerce] 目的地連接器可讓您選取一或多個要啟用的Real-Time CDP區段 [!DNL Adobe Commerce] 帳戶，為購物者提供動態的個人化體驗。 內 [!DNL Adobe Commerce]，您就可以選取這些Real-Time CDP區段，以個人化購物車中的獨特選件，例如「購買2即可免費獲得1」。 您也可以顯示主圖橫幅廣告，並透過促銷優惠方案修改產品定價，所有優惠方案皆自訂為Adobe Real-Time CDP區段。 |
 | [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | 建立即時出站連線至 [!DNL Azure Data Lake Storage Gen2] 定期將資料檔案從Adobe Experience Platform匯出至您自己的儲存位置。 這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
-| [[!DNL (Beta) Azure Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存介面，可授予您從Platform匯出檔案的安全、雲端檔案儲存功能存取權。 這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
+| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存介面，可授予您從Platform匯出檔案的安全、雲端檔案儲存功能存取權。 這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
 | [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | 建立即時出站連線至 [!DNL Google Cloud Storage] 定期將資料檔案從Adobe Experience Platform匯出至您自己的貯體。 這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
 | [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | 測試版參與者現在看到兩個 [!DNL Amazon S3] 目的地卡片在目的地目錄中並排。 新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | 測試版參與者現在看到兩個 [!DNL Azure Blob] 目的地卡片在目的地目錄中並排。 新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |

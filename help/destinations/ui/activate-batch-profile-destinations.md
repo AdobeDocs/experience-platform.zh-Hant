@@ -4,9 +4,9 @@ title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 04ccf5c44e24f281171e5dd753a8431c24e0e0cf
+source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
 workflow-type: tm+mt
-source-wordcount: '3468'
+source-wordcount: '3411'
 ht-degree: 0%
 
 ---
@@ -124,11 +124,6 @@ ht-degree: 0%
 1. 選擇 **[!UICONTROL 建立]** 以儲存排程。
 
 ### 導出增量檔案 {#export-incremental-files}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_datasets_exportoptions"
->title="資料集的檔案匯出選項"
->abstract="選擇 **導出增量檔案** 僅匯出自上次匯出以來新增至資料集的資料。 <br> 第一個增量檔案匯出包含資料集中的所有資料，可作為回填。 未來的增量檔案僅包含自首次匯出以來新增至資料集的資料。"
 
 選擇 **[!UICONTROL 導出增量檔案]** 觸發導出，其中第一個檔案是選定段的所有配置檔案資格的完整快照，而後續檔案是自上次導出以來的增量配置檔案資格。
 

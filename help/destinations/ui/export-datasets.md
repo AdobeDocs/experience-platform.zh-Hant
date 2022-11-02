@@ -2,9 +2,9 @@
 title: （測試版）將資料集匯出至雲端儲存目的地
 type: Tutorial
 description: 了解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存空間位置。
-source-git-commit: 92e2d575d92b9d412f473610fc149663e815f5c3
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1309'
 ht-degree: 1%
 
 ---
@@ -68,6 +68,11 @@ Experience Platform目錄中有些以檔案為基礎的目的地支援區段啟�
 ![資料集匯出工作流程，顯示「選取資料集」步驟，您可在此選取要匯出的資料集。](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## 排程資料集匯出 {#scheduling}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_datasets_exportoptions"
+>title="資料集的檔案匯出選項"
+>abstract="選擇 **導出增量檔案** 僅匯出自上次匯出以來新增至資料集的資料。 <br> 第一個增量檔案匯出包含資料集中的所有資料，可作為回填。 未來的增量檔案僅包含自首次匯出以來新增至資料集的資料。"
 
 在 **[!UICONTROL 排程]** 步驟中，您可以為資料集匯出設定開始日期和匯出順序。
 

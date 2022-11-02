@@ -1,7 +1,7 @@
 ---
 title: （測試版）Google雲端儲存連線
 description: 了解如何連線至Google雲端儲存空間及啟用區段或匯出資料集。
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
@@ -58,7 +58,7 @@ ht-degree: 0%
 若要驗證目的地，請填寫必填欄位並選取 **[!UICONTROL 連接到目標]**.
 
 * **[!UICONTROL 訪問密鑰ID]**:61個字元的英數字串，用於驗證您的 [!DNL Google Cloud Storage] 帳戶至Platform。 如需如何取得此值的詳細資訊，請閱讀 [必要條件](#prerequisites) 一節。
-* **[!UICONTROL 秘密訪問密鑰]**:40個字元的base-64編碼字串，用於驗證您的 [!DNL Google Cloud Storage] 帳戶至Platform。 如需如何取得此值的詳細資訊，請閱讀 [必要條件](#prerequisites) 一節。
+* **[!UICONTROL 秘密訪問密鑰]**:用於驗證您的 [!DNL Google Cloud Storage] 帳戶至Platform。 如需如何取得此值的詳細資訊，請閱讀 [必要條件](#prerequisites) 一節。
 * **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在以下說明檔案連結中檢視格式正確且以base64編碼的鍵的範例。 中間部縮短為簡潔。
 
    ![此影像顯示UI中格式正確且以base64加密的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
