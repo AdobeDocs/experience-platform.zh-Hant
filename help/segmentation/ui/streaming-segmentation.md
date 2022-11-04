@@ -5,9 +5,9 @@ title: 串流劃分UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時執行細分，同時專注於資料的豐富性。 透過串流細分，區段資格現在會在資料進入Platform時進行，以緩解排程及執行區段工作的需求。 透過此功能，現在大部分的區段規則都可在資料傳入Platform時評估，這表示區段成員資格會保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: e6b5ea1878631fa88f907fd4aec64cf040e76e95
+source-git-commit: 39e3b4df3e44200fd800b501ea7b7e06bf828054
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -116,3 +116,7 @@ ht-degree: 0%
 「最近X天」下的數字 **僅限** 包括符合串流細分資格的對象，以及 **僅限** 如果您已將資料串流至系統，且計入該串流定義，則會增加。 此值為 **僅限** 顯示於串流區段。 因此，此值 **5月** 對於批次區段，顯示為0。
 
 因此，如果您看到「最近X天」底下的數字為零，而折線圖也報告為零，則您有 **not** 將符合該區段資格的任何設定檔串流至系統。
+
+### 區段可用需要多久時間？
+
+最多需要1小時的時間，區段才可供使用。

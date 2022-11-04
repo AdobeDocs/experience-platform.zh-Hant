@@ -5,9 +5,9 @@ title: 透過串流細分即時評估事件
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用串流區段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 5a4a8a8b77d06890f212a457e599b66aa46d8b7e
+source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -439,3 +439,7 @@ curl -X POST \
 「最近X天」下的數字 **僅限** 包括符合串流細分資格的對象，以及 **僅限** 如果您已將資料串流至系統，且計入該串流定義，則會增加。 此值為 **僅限** 顯示於串流區段。 因此，此值 **5月** 對於批次區段，顯示為0。
 
 因此，如果您看到「最近X天」底下的數字為零，而折線圖也報告為零，則您有 **not** 將符合該區段資格的任何設定檔串流至系統。
+
+### 區段可用需要多久時間？
+
+最多需要1小時的時間，區段才可供使用。
