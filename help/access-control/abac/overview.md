@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制概述
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 1%
+source-wordcount: '1777'
+ht-degree: 3%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 權限是管理員可在其中定義用戶角色和訪問策略，以管理產品應用程式中功能和對象的訪問權限的Experience Cloud區域。
 
-您可以透過權限建立和管理角色，並為這些角色指派所需的資源權限。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。 如需詳細資訊，請參閱 [權限指南](ui/browse.md).
+透過 權限，您可以建立和管理角色，並為這些角色指派所需的資源權限。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。如需詳細資訊，請參閱 [權限指南](ui/browse.md).
 
 ## 基於屬性的訪問控制API
 
@@ -55,6 +55,18 @@ ht-degree: 1%
 ### 存取控制
 
 平台利用 [Adobe Admin Console](https://adminconsole.adobe.com) 產品設定檔，將使用者與權限和沙箱連結。 權限可控制對各種Platform功能的存取，包括資料模型、設定檔管理和沙箱管理。 在您的組織啟用屬性型存取控制後，您就可以開始使用Adobe Experience Cloud的權限(而非Adobe Admin Console中的產品設定檔)，來管理組織中使用者、功能、標籤和其他資源的權限。
+
+購買醫療保健和/或隱私保護的客戶對基於屬性的訪問控制的可用性有限。 此功能的特色包括：
+
+* 權限介面：提供一個介面，供您定義基於屬性的訪問控制的用戶角色、權限和策略。
+
+* 標籤：添加、編輯、刪除標籤到用戶角色、架構欄位、段和其他受支援對象，以便利用訪問控制策略。
+
+從Experience Platform到新權限介面的所有Admin Console支援應用程式的管理工作流程都在交換中。
+
+>[!IMPORTANT]
+>
+>您的產品設定檔會在您的組織啟用時自動移轉至權限介面。 Admin Console中的產品設定檔目前會維持不變。 請 **不** 在組織啟用後修改您的產品設定檔。
 
 有關訪問控制的詳細資訊，請參見 [存取控制概觀](../home.md).
 
