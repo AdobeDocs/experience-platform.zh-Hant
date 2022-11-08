@@ -1,7 +1,8 @@
 ---
 title: Zendesk事件轉送擴充功能
 description: Adobe Experience Platform的Zendesk事件轉送擴充功能。
-source-git-commit: ae585660bbf057f25e6f0dfc2520e6bb0af9d8d0
+exl-id: 22e94699-5b84-4a73-b007-557221d3e223
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 6%
@@ -53,7 +54,7 @@ ht-degree: 6%
 
 ## 設定事件轉送規則
 
-開始建立新的事件轉送規則 [規則](../../../ui/managing-resources/rules.md) 並視需要設定其條件。 選取規則的動作時，請選取 [!UICONTROL Splunk] 擴充功能，然後選取 [!UICONTROL 建立事件] 動作類型。
+開始建立新的事件轉送規則 [規則](../../../ui/managing-resources/rules.md) 並視需要設定其條件。 選取規則的動作時，請選取 [!UICONTROL 曾代克] 擴充功能，然後選取 [!UICONTROL 建立事件] 動作類型。
 
 ![定義規則](../../../images/extensions/zendesk/rule.png)
 

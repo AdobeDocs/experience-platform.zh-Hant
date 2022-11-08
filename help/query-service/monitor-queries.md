@@ -1,18 +1,15 @@
 ---
 title: 監視查詢
 description: 了解如何透過Query Service UI監控查詢。
-source-git-commit: 283c6ba323a327b0c525343a96a45a2412baa67b
+exl-id: 4640afdd-b012-4768-8586-32f1b8232879
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1033'
 ht-degree: 1%
 
 ---
 
-# 監視查詢（有限版本）
-
->[!IMPORTANT]
->
->此功能目前為有限版本，僅適用於少數客戶。
+# 監視查詢
 
 Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 從 [!UICONTROL 排程查詢] 索引標籤您現在可以找到有關查詢執行的重要資訊，包括狀態、排程詳細資訊，以及失敗時的錯誤訊息/程式碼。 您也可以透過UI，針對任何這些查詢，根據查詢的狀態來訂閱警報 [!UICONTROL 排程查詢] 標籤。
 
@@ -30,7 +27,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 >
 >無標題欄中的每一列都包含警報訂閱圖示。 請參閱 [警報訂閱](#alert-subscription) 一節以取得詳細資訊。
 
-| 欄目 | 說明 |
+| 欄 | 說明 |
 |---|---|
 | 名稱 | 名稱欄位是模板名稱或SQL查詢的前幾個字元。 任何透過UI使用查詢編輯器建立的查詢，都會在開始時命名。 如果查詢是透過API建立，則查詢的名稱是用於建立查詢的初始SQL的片段。 |
 | 範本 | 查詢的模板名稱。 選取範本名稱以導覽至「查詢編輯器」。 為方便起見，查詢模板將顯示在查詢編輯器中。 如果沒有範本名稱，則會以連字型大小標示列，且無法重新導向至查詢編輯器以檢視查詢。 |
@@ -126,4 +123,3 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 選擇 **[!UICONTROL 查詢]** 返回「計畫詳細資訊」螢幕，或 **[!UICONTROL 排程查詢]** 返回 [!UICONTROL 排程查詢] 標籤。
 
 ![「Query（查詢）」突出顯示的運行詳細資訊螢幕。](./images/monitor-queries/return-navigation.png)
-
