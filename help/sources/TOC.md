@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: cf9390076e027ba746c3bc83df8a18e3751b84a8
+source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '860'
 ht-degree: 11%
 
 ---
@@ -94,6 +94,7 @@ ht-degree: 11%
       - [HubSpot連接器](connectors/marketing-automation/hubspot.md)
       - [Mailchimp連接器](connectors/marketing-automation/mailchimp.md)
       - [OracleEloqua連接器](connectors/marketing-automation/oracle-eloqua.md)
+      - [OracleResponsys連接器](connectors/marketing-automation/oracle-responsys.md)
       - [SalesforceMarketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 付款 {#payments}
       - [PayPal連接器](connectors/payments/paypal.md)
@@ -162,6 +163,7 @@ ht-degree: 11%
          - [MailChimp行銷活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp成員](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [Oracle雄辯](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+         - [OracleResponsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -271,6 +273,7 @@ ht-degree: 11%
          - [Mailchimp行銷活動](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp成員](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Oracle雄辯](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [OracleResponsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
