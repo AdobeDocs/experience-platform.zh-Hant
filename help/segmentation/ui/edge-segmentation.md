@@ -5,7 +5,7 @@ title: Edge Segmentation UI指南
 topic-legacy: ui guide
 description: 邊緣分段是即時在邊緣上評估Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 0%
@@ -42,11 +42,11 @@ ht-degree: 0%
 | ---------- | ------- | ------- | ----------- |
 | 單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | 已將項目新增至購物車的使用者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
 | 單一設定檔 | 任何參考單一僅限設定檔屬性的區段定義 | 住在美國的人。 | `homeAddress.countryCode = "US"` |
-| 參照設定檔的單一事件 | 任何區段定義，是指一或多個設定檔屬性以及沒有時間限制的單一傳入事件。 | 訪問首頁的美國居民。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
+| 參照設定檔的單一事件 | 任何區段定義，是指一或多個設定檔屬性以及沒有時間限制的單一傳入事件。 | 訪問首頁的美國居民。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")])` |
 | 使用設定檔屬性否定單一事件 | 任何區段定義，是指否定的單一傳入事件和一或多個設定檔屬性 | 住在美國並擁有 **not** 造訪首頁。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| 一個時間範圍內的單一事件 | 任何區段定義，是指在指定的時間內單一傳入事件。 | 過去24小時內造訪首頁的人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 時間視窗內具有設定檔屬性的單一事件 | 任何區段定義，指的是一或多個設定檔屬性，以及設定時間內的單一傳入事件。 | 過去24小時內造訪首頁的美國人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| 在時間窗口內用配置檔案屬性否定單個事件 | 任何區段定義，指的是一或多個設定檔屬性以及一段時間內否定的單一傳入事件。 | 住在美國並擁有 **not** 在過去24小時內瀏覽了首頁。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
+| 一個時間範圍內的單一事件 | 任何區段定義，是指在指定的時間內單一傳入事件。 | 過去24小時內造訪首頁的人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
+| 時間視窗內具有設定檔屬性的單一事件 | 任何區段定義，指的是一或多個設定檔屬性，以及設定時間內的單一傳入事件。 | 過去24小時內造訪首頁的美國人。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
+| 在時間窗口內用配置檔案屬性否定單個事件 | 任何區段定義，指的是一或多個設定檔屬性以及一段時間內否定的單一傳入事件。 | 住在美國並擁有 **not** 在過去24小時內瀏覽了首頁。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)]))` |
 | 24小時時段內的頻率事件 | 任何區段定義，是指在24小時的時間範圍內發生特定次數的事件。 | 造訪首頁的人員 **至少** 24小時內五次。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | 在24小時時段內具有設定檔屬性的頻率事件 | 任何區段定義，指的是一或多個設定檔屬性，以及在24小時的時間範圍內發生特定次數的事件。 | 訪問首頁的美國人 **至少** 24小時內五次。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | 在24小時時段內使用設定檔否定頻率事件 | 任何區段定義，指的是一或多個設定檔屬性，以及在24小時的時間範圍內發生特定次數的否定事件。 | 未訪問首頁的人 **更多** 在過去的24小時里不過5次。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
