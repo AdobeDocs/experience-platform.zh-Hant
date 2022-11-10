@@ -2,9 +2,9 @@
 title: 在事件轉送中設定機密
 description: 了解如何在UI中設定機密，以驗證事件轉送屬性中使用的端點。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 9f38925645ec4311f4a809a913fe51792e889105
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ ht-degree: 0%
 您也應該已妥善了解標籤和事件轉送的發佈流程，包括如何將資源新增至程式庫，以及將組建安裝至您的網站以進行測試。 請參閱 [發佈概述](../publishing/overview.md) 以取得更多詳細資訊。
 
 ## 建立機密 {#create}
+
+>[!CONTEXTUALHELP]
+>id="platform_eventforwarding_secrets_environments"
+>title="機密環境"
+>abstract="為了讓事件轉送可使用機密，必須將其指派給現有環境。 如果您尚未為事件轉送屬性建立任何環境，則必須先進行設定，才能繼續。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="環境概覽"
 
 若要建立密碼，請選取 **[!UICONTROL 事件轉送]** 在左側導覽中，開啟您要新增機密的事件轉送屬性。 下一步，選擇 **[!UICONTROL 秘密]** 在左側導覽器中，隨後 **[!UICONTROL 建立新密碼]**.
 

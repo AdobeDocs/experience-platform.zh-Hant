@@ -5,9 +5,9 @@ title: 沙箱疑難排解指南
 topic-legacy: troubleshooting guide
 description: 本檔案提供Adobe Experience Platform中沙箱常見問題的解答。
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,13 @@ ht-degree: 0%
 
 沙箱是單一Experience Platform例項中的虛擬分區。 每個沙箱會維護各自獨立的Platform資源程式庫（包括結構描述、資料集、設定檔等）。 在沙箱內採取的所有內容和動作都只會限於該沙箱，不會影響任何其他沙箱。 請參閱 [沙箱概述](home.md) 以取得更多資訊。
 
-## 可用的沙箱類型為何，其差異為何？
+## 可用的沙箱類型為何，其差異為何？ {#sandbox-types}
+
+>[!CONTEXTUALHELP]
+>id="platform_sandboxes_sandboxtypes"
+>title="沙箱類型"
+>abstract="沙箱類型會指出這是生產沙箱還是開發沙箱。 生產沙箱包含即時資料，而開發沙箱則用於測試和開發。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="在UI中建立沙箱"
 
 Experience Platform中提供兩種沙箱類型：
 

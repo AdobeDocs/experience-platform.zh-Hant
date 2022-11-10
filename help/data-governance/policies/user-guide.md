@@ -5,9 +5,9 @@ title: 在UI中管理資料使用原則
 topic-legacy: policies
 description: Adobe Experience Platform資料控管提供的使用者介面可讓您建立和管理資料使用原則。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,12 @@ Adobe Experience Platform資料控管提供的使用者介面可讓您建立和�
 * **[!UICONTROL 若]**:將觸發策略檢查的條件。 這可以根據要執行的特定行銷動作、是否有特定資料使用標籤，或兩者的組合。
 * **[!UICONTROL 然後]**:必須存在的同意屬性，才會將設定檔納入觸發原則的動作中。
 
-#### 設定條件
+#### 設定條件 {#consent-conditions}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentif"
+>title="If條件"
+>abstract="首先，定義將觸發策略檢查的條件。 條件包括要採取的特定行銷動作、要呈現的特定資料控管標籤，或兩者的組合。"
 
 在 **[!UICONTROL 若]** 區段中，選取應觸發此原則的行銷動作和/或資料使用標籤。 選擇 **[!UICONTROL 查看全部]** 和 **[!UICONTROL 選擇標籤]** 檢視可用行銷動作和標籤的完整清單。
 
@@ -108,7 +113,12 @@ Adobe Experience Platform資料控管提供的使用者介面可讓您建立和�
 
 ![](../images/policies/and-or-selection.png)
 
-#### 選取同意屬性
+#### 選取同意屬性 {#consent-attributes}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_consentthen"
+>title="Then條件"
+>abstract="定義「If」條件後，請使用「Then」區段，從聯合架構中選取至少一個同意屬性。 這是必須存在的屬性，配置檔案才能包含在此策略所管轄的操作中。"
 
 在 **[!UICONTROL 然後]** 節，從聯合架構中至少選擇一個同意屬性。 這是必須存在的屬性，配置檔案才能包含在此策略所管轄的操作中。 您可以從清單中選擇一個提供的選項，或選擇 **[!UICONTROL 查看全部]** 從聯合架構中直接選擇屬性。
 
