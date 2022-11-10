@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制建立策略
 description: 本檔案提供有關透過Adobe Experience Cloud中的權限介面管理原則的資訊
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '678'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 ![flac-policy-matches-down](../../images/flac-ui/flac-policy-matches-dropdown.png)
 
-接下來，使用下拉式清單，選取 **使用者**.
+接下來，使用下拉式清單，選取標籤類型(**[!UICONTROL 核心標籤]** 或 **[!UICONTROL 自訂標籤]**)以符合指派給角色中使用者的標籤。
 
 ![flac-policy-user-dolforming](../../images/flac-ui/flac-policy-user-dropdown.png)
 
