@@ -2,9 +2,9 @@
 title: 資料衛生概述
 description: Adobe Experience Platform資料衛生功能可讓您更新或清除過時或不準確的記錄，以管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 850ab3c98fb27d1dcf98b02dfbef0c8ae3b2ad62
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '834'
 ht-degree: 2%
 
 ---
@@ -54,6 +54,10 @@ Platform的資料衛生功能可讓您透過下列方式管理儲存的消費者
 {style=&quot;table-layout:auto&quot;}
 
 ### 消費者刪除 {#consumer-delete-transparency}
+
+>[!IMPORTANT]
+>
+>消費者刪除僅適用於已購買AdobeHealthcare Shield的組織。
 
 若 [消費者刪除請求](./ui/delete-consumer.md) 已建立：
 

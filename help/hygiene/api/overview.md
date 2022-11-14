@@ -2,9 +2,9 @@
 title: 資料衛生API指南
 description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,10 @@ ht-degree: 0%
 資料集過期是因時間延遲而「刪除資料集」的動作。 透過建立資料集的有效期，您可以指定日後刪除該資料集的時間。 請參閱 [資料集過期端點指南](./dataset-expiration.md) 如需API中排程資料集有效期的詳細資訊。
 
 ## 消費者刪除
+
+>[!IMPORTANT]
+>
+>消費者刪除請求僅適用於已購買AdobeHealthcare Shield的組織。
 
 資料衛生API可讓您刪除一或所有資料集中與消費者身分識別相關聯的所有記錄。 刪除消費者身分的所有資料衛生工作都由稱為工作單的結構所取代。 請參閱 [工作單端點指南](./workorder.md) 有關在API中使用消費者刪除的詳細資訊。
 
