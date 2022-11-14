@@ -2,9 +2,9 @@
 title: 瀏覽資料衛生工作單
 description: 了解如何在Adobe Experience Platform使用者介面中檢視及管理現有的資料衛生工作單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '868'
 ht-degree: 1%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="身分數"
->abstract="請求在此工作單中刪除的身份數。 計數中包含的身分不一定存在於受影響的資料集中。 要了解更多資訊，請參閱資料衛生UI指南。"
+>abstract="請求在此工作單中更新或刪除其記錄的身份數。 計數中包含的身分不一定存在於受影響的資料集中。 要了解更多資訊，請參閱資料衛生UI指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
