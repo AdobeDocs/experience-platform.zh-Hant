@@ -5,10 +5,10 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 1879c8372e3ac1b813f53e445a139daa78ac8858
+source-git-commit: 67f3d27ebb17e1b1dc77dcd32246f407753c20df
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '416'
+ht-degree: 66%
 
 ---
 
@@ -124,6 +124,8 @@ ht-degree: 0%
       * [!DNL Marketo Munchkin] {#marketo}
          * [概述](./extensions/web/marketo/overview.md)
          * [發行說明](./extensions/web/marketo/release-notes.md)
+      * Google Ads增強轉換 {#google-ads-enhanced-conversions}
+         * [總覽](./extensions/web/google-ads-enhanced-conversions/overview.md)
       * Google資料層 {#google-data-layer}
          * [總覽](./extensions/web/google-data-layer/overview.md)
          * [發行說明](./extensions/web/google-data-layer/release-notes.md)
