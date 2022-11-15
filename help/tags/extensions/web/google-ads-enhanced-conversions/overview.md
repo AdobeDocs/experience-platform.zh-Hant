@@ -1,9 +1,10 @@
 ---
 title: Google Ads Enhanced Conversions擴充功能
 description: 了解Adobe Experience Platform中用於事件轉送的Google Ads Enhanced Conversions擴充功能。
-source-git-commit: a279c44ef9df3aa9bfc7763b153b87bde0015d57
+exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
+source-git-commit: 670e59a6111b7e4b7febca197d7e462ce5c14596
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ ht-degree: 1%
 >若要將用戶端轉換事件與從事件轉送傳送的第一方資料建立關聯，請 `transaction_ID` 在兩個呼叫中必須相同。 如需每個服務必須提供此值的詳細資訊，請參閱 [標籤](#conversion-action-tags) 和 [事件轉送](#conversion-action-event-forwarding)，分別為。
 
 由於傳送轉換事件同時涉及用戶端和伺服器端實作，本檔案涵蓋設定用戶端的先決條件步驟 [[!DNL Google Global Site Tag] (gtag)擴充功能](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) 除了 [!DNL Enhanced Conversions] 事件轉送的擴充功能。
+
+以下影片介紹 [!DNL Enhanced Conversions] 擴充功能並逐步說明高階的實作步驟：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3411365?quality=12&learn=on)
 
 ## 使用標籤傳送轉換
 
