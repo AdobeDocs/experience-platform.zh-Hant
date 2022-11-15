@@ -2,20 +2,23 @@
 title: 刪除消費者記錄
 description: 了解如何在Adobe Experience Platform UI中刪除消費者記錄。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1180'
 ht-degree: 0%
 
 ---
 
 # 刪除消費者記錄
 
+此 [[!UICONTROL 資料衛生] 工作區](./overview.md) 在Adobe Experience Platform UI中，您可以刪除參與Identity Service和即時客戶設定檔的消費者記錄。
+
 >[!IMPORTANT]
 >
 >消費者刪除請求僅適用於已購買的組織 **Adobe醫療保健盾**.
-
-此 [[!UICONTROL 資料衛生] 工作區](./overview.md) 在Adobe Experience Platform UI中，您可以刪除參與Identity Service和即時客戶設定檔的消費者記錄。
+>
+>
+>消費者刪除應用於資料清除、移除匿名資料或將資料最小化。 是 **not** 用於與一般資料保護規範(GDPR)等隱私權法規相關的資料主體權利要求（法規遵循）。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 。
 
 ## 先決條件
 

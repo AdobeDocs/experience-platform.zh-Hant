@@ -2,10 +2,10 @@
 title: 資料衛生概述
 description: Adobe Experience Platform資料衛生功能可讓您更新或清除過時或不準確的記錄，以管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: b76e1bc6d5b346c32ea09612e24b68c6636f7deb
+source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 2%
+source-wordcount: '886'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,11 @@ Adobe Experience Platform提供一組完善的工具，可管理大型、複雜�
 Platform的資料衛生功能可讓您透過下列方式管理儲存的消費者資料：
 
 * 排程自動資料集有效期
-* 根據擷取的身分刪除消費者資料
+* 從記錄中刪除個別消費者資料
+
+>[!IMPORTANT]
+>
+>消費者刪除應用於資料清除、移除匿名資料或將資料最小化。 是 **not** 用於與一般資料保護規範(GDPR)等隱私權法規相關的資料主體權利要求（法規遵循）。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../privacy-service/home.md) 。
 
 這些活動可使用 [[!UICONTROL 資料衛生] UI工作區](#ui) 或 [資料衛生API](#api). 當執行資料衛生作業時，系統在處理的每個步驟提供透明度更新。 請參閱 [時間表和透明度](#timelines-and-transparency) 有關在系統中如何表示每個作業類型的詳細資訊。
 
