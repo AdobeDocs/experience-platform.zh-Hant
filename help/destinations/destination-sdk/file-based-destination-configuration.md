@@ -2,9 +2,9 @@
 description: 此設定可讓您指出檔案型目的地的基本資訊，例如目的地名稱、類別、說明等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 3f336f530873c863727bb50855baf6eb6a3549e0
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '2989'
+source-wordcount: '3012'
 ht-degree: 4%
 
 ---
@@ -794,10 +794,13 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
     },
 ```
 
-您必須指出 [!DNL Platform] 身分識別客戶可匯出至您的目的地。 例如 [!DNL Experience Cloud ID]，雜湊電子郵件，裝置ID([!DNL IDFA], [!DNL GAID])。 這些值包括 [!DNL Platform] 客戶可從您的目的地對應至身分識別命名空間的身分識別命名空間。 您也可以指出客戶是否可將自訂命名空間對應至您目的地支援的身分識別。
+您必須指出 [!DNL Platform] 身分識別客戶可匯出至您的目的地。 例如 [!DNL Experience Cloud ID]，雜湊電子郵件，裝置ID([!DNL IDFA], [!DNL GAID])。 這些值包括 [!DNL Platform] 客戶可從您的目的地對應至身分識別命名空間的身分識別命名空間。 您也可以指出客戶是否可將自訂命名空間對應至您目的地支援的身分識別(`acceptsCustomNamespaces: true`)，以及如果客戶可以將標準XDM屬性對應至您目的地支援的身分識別(`acceptsAttributes: true`)。
 
 身分識別命名空間不需要 [!DNL Platform] 和你的目的地。
 例如，客戶可以對應 [!DNL Platform] [!DNL IDFA] 命名空間 [!DNL IDFA] 來自您目的地的命名空間，或者可以對應相同的 [!DNL Platform] [!DNL IDFA] 命名空間 [!DNL Customer ID] 命名空間。
+
+請前往 [身分命名空間概觀](/help/identity-service/namespaces.md).
+
 
 ## 批配置 — 檔案命名和導出計畫 {#batch-configuration}
 

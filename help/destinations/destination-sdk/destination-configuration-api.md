@@ -1,29 +1,29 @@
 ---
-description: 此頁列出並說明了可以使用「/authoring/destinations」 API終結點執行的所有API操作。
-title: 目標API終結點操作
+description: 本頁列出並說明您可使用「/authoring/destinations」 API端點執行的所有API操作。
+title: 目的地API端點作業
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
+source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
 workflow-type: tm+mt
-source-wordcount: '2572'
+source-wordcount: '2545'
 ht-degree: 4%
 
 ---
 
-# 目標終結點API操作 {#destination-configuration}
+# 目的地端點API作業 {#destination-configuration}
 
 >[!IMPORTANT]
 >
->**API終結點**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**API端點**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
-此頁列出並說明了可以使用 `/authoring/destinations` API終結點。 有關此終結點支援的功能的說明，請閱讀 [目標配置](./destination-configuration.md)。
+此頁面列出並說明您可使用 `/authoring/destinations` API端點。 有關此端點支援的功能的說明，請閱讀 [目的地配置](./destination-configuration.md).
 
-## 目標API操作入門 {#get-started}
+## 目的地API作業快速入門 {#get-started}
 
-在繼續之前，請查看 [入門指南](./getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
 
-## 建立流目標的配置 {#create}
+## 建立串流目的地的設定 {#create}
 
-您可以通過向POST請求建立新的目標配置 `/authoring/destinations` 端點。
+您可以向 `/authoring/destinations` 端點。
 
 **API格式**
 
@@ -33,7 +33,7 @@ POST /authoring/destinations
 
 **要求**
 
-以下請求將建立新的流式傳輸目標配置，該配置由負載中提供的參數配置。 下面的負載包括所有參數，用於流目標，由 `/authoring/destinations` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+下列請求會建立新的串流目的地設定，由裝載中提供的參數所設定。 以下裝載包含所接受串流目的地的所有參數 `/authoring/destinations` 端點。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -136,59 +136,59 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `name` | 字串 | 指示Experience Platform目錄中目標的標題 |
-| `description` | 字串 | 提供Adobe將用於目標卡的Experience Platform目標目錄的說明。 目標不超過4-5句。 |
-| `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 在首次配置目標時。 |
-| `customerAuthenticationConfigurations` | 字串 | 指示用於將Experience Platform客戶驗證到伺服器的配置。 請參閱 `authType` 下面是接受的值。 |
-| `customerAuthenticationConfigurations.authType` | 字串 | 流目標支援的值為： <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> 基於檔案的目標支援的值為： <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
-| `customerDataFields.name` | 字串 | 提供要引入的自定義欄位的名稱。 |
-| `customerDataFields.type` | 字串 | 指示您要引入的自定義欄位類型。 接受的值為 `string`。 `object`。 `integer` |
-| `customerDataFields.title` | 字串 | 指示欄位的名稱，如客戶在Experience Platform用戶介面中看到的 |
-| `customerDataFields.description` | 字串 | 提供自定義欄位的說明。 |
+| `name` | 字串 | 指出Experience Platform目錄中的目的地標題 |
+| `description` | 字串 | 提供說明，供Adobe用於目的地卡的Experience Platform目的地目錄。 目標不超過4-5句。 |
+| `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 設定目的地時。 |
+| `customerAuthenticationConfigurations` | 字串 | 指示用於驗證Experience Platform客戶到伺服器的配置。 請參閱 `authType` 以取得接受的值。 |
+| `customerAuthenticationConfigurations.authType` | 字串 | 串流目的地的支援值為： <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> 檔案型目的地的支援值為： <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
+| `customerDataFields.name` | 字串 | 提供您要引入的自訂欄位名稱。 |
+| `customerDataFields.type` | 字串 | 指出您要引入的自訂欄位類型。 接受的值為 `string`, `object`, `integer` |
+| `customerDataFields.title` | 字串 | 指出欄位的名稱，如Experience Platform使用者介面中的客戶所見 |
+| `customerDataFields.description` | 字串 | 提供自訂欄位的說明。 |
 | `customerDataFields.isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
-| `customerDataFields.enum` | 字串 | 將自定義欄位呈現為下拉菜單並列出用戶可用的選項。 |
-| `customerDataFields.pattern` | 字串 | 如果需要，為自定義欄位強制實施模式。 使用規則運算式來強制模式。 例如，如果客戶ID不包括數字或下划線，請輸入 `^[A-Za-z]+$` 的子菜單。 |
-| `uiAttributes.documentationLink` | 字串 | 引用中的文檔頁面 [目標目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，也請參見Wiki頁。 `YOURDESTINATION` 是目標的名稱。 對於名為Moviestar的目標，您將使用 `https://www.adobe.com/go/destinations-moviestar-en`。 請注意，此連結僅在Adobe設定目標即時並發佈文檔後才起作用。 |
-| `uiAttributes.category` | 字串 | 指分配給您在Adobe Experience Platform的目標的類別。 有關詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories)。 使用以下值之一： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。 |
-| `uiAttributes.connectionType` | 字串 | `Server-to-server` 是當前唯一可用的選項。 |
-| `uiAttributes.frequency` | 字串 | `Streaming` 是當前唯一可用的選項。 |
-| `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中加以強調。 |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指示客戶是否可以在目標中設定自定義命名空間。 |
-| `identityNamespaces.externalId.transformation` | 字串 | _未在示例配置中顯示_。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 您將在此處提供需要應用的轉換（例如，將電子郵件轉換為小寫，然後進行散列）。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 用於平台接受 [標準標識命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例如，IDFA），因此您可以限制平台用戶只選擇這些標識命名空間。 <br> 使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 到小寫和散列電子郵件地址或電話號碼。 |
-| `destinationDelivery.authenticationRule` | 字串 | 指示如何 [!DNL Platform] 客戶連接到您的目標。 接受的值為 `CUSTOMER_AUTHENTICATION`。 `PLATFORM_AUTHENTICATION`。 `NONE`。 <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果平台客戶通過用戶名和密碼、持有者令牌或其他身份驗證方法登錄到您的系統。 例如，如果同時選擇了 `authType: OAUTH2` 或 `authType:BEARER` 在 `customerAuthenticationConfigurations`。 </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目標之間有全局身份驗證系統， [!DNL Platform] 客戶不需要提供任何身份驗證憑據來連接到目標。 在這種情況下，必須使用 [憑據](./credentials-configuration-api.md) 配置。 </li><li>使用 `NONE` 如果向目標平台發送資料不需要身份驗證。 </li></ul> |
-| `destinationDelivery.destinationServerId` | 字串 | 的 `instanceId` 的 [目標伺服器模板](./destination-server-api.md) 用於此目標。 |
-| `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
-| `segmentMappingConfig.mapUserInput` | 布林值 | 控制用戶是否輸入目標激活工作流中的段映射ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目標激活工作流中的段映射ID是否是Experience Platform段ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標激活工作流中的段映射id是否是Experience Platform段名稱。 |
-| `segmentMappingConfig.audienceTemplateId` | 布林值 | 的 `instanceId` 的 [受眾元資料模板](./audience-metadata-api.md) 用於此目標。 |
-| `schemaConfig.profileFields` | 陣列 | 添加預定義項時 `profileFields` 如上面的配置所示，用戶可以選擇將Experience Platform屬性映射到目標側的預定義屬性。 |
-| `schemaConfig.profileRequired` | 布林值 | 使用 `true` 如果用戶應能將配置檔案屬性從Experience Platform映射到目標側的自定義屬性，如上面的示例配置所示。 |
-| `schemaConfig.segmentRequired` | 布林值 | 始終使用 `segmentRequired:true`。 |
-| `schemaConfig.identityRequired` | 布林值 | 使用 `true` 如果用戶應能夠將標識命名空間從Experience Platform映射到所需的架構。 |
-| `aggregation.aggregationType` | - | 選取「`BEST_EFFORT`」或「`CONFIGURABLE_AGGREGATION`」。上面的示例配置包括 `BEST_EFFORT` 聚合。 例如 `CONFIGURABLE_AGGREGATION`，請參閱 [目標配置](./destination-configuration.md#example-configuration) 的子菜單。 下表介紹了與可配置聚合相關的參數。 |
-| `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單個HTTP調用中聚合多個導出的配置檔案。 指定終結點在單個HTTP調用中應接收的最大配置檔案數。 請注意，這是一種盡力的聚合。 例如，如果指定值100，平台可能會在呼叫時發送小於100的任意數量的配置檔案。 <br> 如果伺服器不接受每個請求的多個用戶，請將此值設定為1。 |
-| `aggregation.bestEffortAggregation.splitUserById` | 布林值 | 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
-| `aggregation.configurableAggregation.splitUserById` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器對給定命名空間每次只接受一個標識。 |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整數 | <ul><li>*最小值：1800*</li><li>*最大值：3600*</li><li>請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 配置最小值和最大可接受值之間的值。 與 `maxNumEventsInBatch`，此參數確定Experience Platform應等待多長時間，直到將API調用發送到您的終結點。 <br> 例如，如果對這兩個參數都使用最大值，Experience Platform將等待3600秒或直到有10000個限定配置檔案才進行API調用（以先發生的情況為準）。 </li></ul> |
-| `aggregation.configurableAggregation.maxNumEventsInBatch` | 整數 | <ul><li>*最小值：1000*</li><li>*最大值：10000*</li><li>請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 配置最小值和最大可接受值之間的值。 有關此參數的說明，請參見 `maxBatchAgeInSecs` 就在上面。</li></ul> |
-| `aggregation.configurableAggregation.aggregationKey` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 允許您根據以下參數聚合映射到目標的導出配置檔案： <br> <ul><li>段ID</li><li> 段狀態 </li><li> 標識命名空間 </li></ul> |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 將此設定為 `true` 按段ID對導出到目標的配置檔案進行分組。 |
-| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 必須同時設定 `includeSegmentId:true` 和 `includeSegmentStatus:true` 按段ID和段狀態對導出到目標的配置檔案進行分組。 |
-| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 將此設定為 `true` 按標識名稱空間將導出到目標的配置檔案分組。 |
-| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 使用此參數可指定是否希望導出的配置檔案聚合為單個標識的組（GAID、IDFA、電話號碼、電子郵件等）。 |
-| `aggregation.configurableAggregation.aggregationKey.groups` | 字串 | 請參見示例配置中的參數 [這裡](./destination-configuration.md#example-configuration)。 如果要按標識命名空間的組將導出到目標的配置檔案分組，請建立標識組清單。 例如，您可以使用示例中的配置將包含IDFA和GAID移動標識符的配置檔案合併為一個到目標的呼叫和電子郵件，再將另一個組合為電子郵件。 |
+| `customerDataFields.enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
+| `customerDataFields.pattern` | 字串 | 視需要為自訂欄位強制使用模式。 使用規則運算式來強制模式。 例如，若您的客戶ID未包含數字或底線，請輸入 `^[A-Za-z]+$` 在此欄位中。 |
+| `uiAttributes.documentationLink` | 字串 | 指 [目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中 `YOURDESTINATION` 是您目的地的名稱。 對於名為Moviestar的目的地，您將使用 `https://www.adobe.com/go/destinations-moviestar-en`. 請注意，此連結只有在Adobe將您的目的地設為現時且檔案已發佈後才有效。 |
+| `uiAttributes.category` | 字串 | 是指指派給Adobe Experience Platform中目的地的類別。 如需詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `uiAttributes.connectionType` | 字串 | `Server-to-server` 是目前唯一可用的選項。 |
+| `uiAttributes.frequency` | 字串 | `Streaming` 是目前唯一可用的選項。 |
+| `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出客戶是否可將標準設定檔屬性對應至您正在設定的身分。 |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指出客戶是否可對應屬於 [自訂命名空間](/help/identity-service/namespaces.md#manage-namespaces) 至您所設定的身分。 |
+| `identityNamespaces.externalId.transformation` | 字串 | _範例設定中未顯示_. 例如，當 [!DNL Platform] 客戶有純電子郵件地址作為屬性，而您的平台僅接受雜湊電子郵件。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 指出 [標準身分命名空間](/help/identity-service/namespaces.md#standard) （例如IDFA）客戶可對應至您所設定的身分。 <br> 使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 小寫和雜湊電子郵件地址或電話號碼。 |
+| `destinationDelivery.authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶可連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統。 例如，如果您也選取了 `authType: OAUTH2` 或 `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 [憑證](./credentials-configuration-api.md) 設定。 </li><li>使用 `NONE` 若無需驗證即可將資料傳送至目的地平台。 </li></ul> |
+| `destinationDelivery.destinationServerId` | 字串 | 此 `instanceId` 的 [目的地伺服器範本](./destination-server-api.md) 用於此目的地。 |
+| `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。 <br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
+| `segmentMappingConfig.mapUserInput` | 布林值 | 控制使用者是否輸入目標啟動工作流程中的區段對應ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段名稱。 |
+| `segmentMappingConfig.audienceTemplateId` | 布林值 | 此 `instanceId` 的 [對象中繼資料範本](./audience-metadata-api.md) 用於此目的地。 |
+| `schemaConfig.profileFields` | 陣列 | 新增預先定義的 `profileFields` 如上方的設定所示，使用者將可以選擇將Experience Platform屬性對應至目的地端的預先定義屬性。 |
+| `schemaConfig.profileRequired` | 布林值 | 使用 `true` 如果使用者應能將設定檔屬性從Experience Platform對應至目的地端的自訂屬性，如上方的範例設定所示。 |
+| `schemaConfig.segmentRequired` | 布林值 | 一律使用 `segmentRequired:true`. |
+| `schemaConfig.identityRequired` | 布林值 | 使用 `true` 如果您的使用者應能將身分識別命名空間從Experience Platform對應至您想要的架構。 |
+| `aggregation.aggregationType` | - | 選取「`BEST_EFFORT`」或「`CONFIGURABLE_AGGREGATION`」。上述範例設定包含 `BEST_EFFORT` 匯總。 例如 `CONFIGURABLE_AGGREGATION`，請參閱 [目的地配置](./destination-configuration.md#example-configuration) 檔案。 下表介紹了與可配置聚合相關的參數。 |
+| `aggregation.bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單一HTTP呼叫中匯總多個匯出的設定檔。 指定端點在單一HTTP呼叫中應接收的設定檔數上限。 請注意，這是最佳的匯總方式。 例如，如果您指定值100,Platform可能會在呼叫中傳送小於100的任何設定檔數量。 <br> 如果您的伺服器不接受每個請求有多個使用者，請將此值設為1。 |
+| `aggregation.bestEffortAggregation.splitUserById` | 布林值 | 如果目標的呼叫應依身分分割，請使用此標幟。 將此標幟設為 `true` 如果您的伺服器在每次呼叫中僅接受一個身分，則會接受指定命名空間的。 |
+| `aggregation.configurableAggregation.splitUserById` | 布林值 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 如果目標的呼叫應依身分分割，請使用此標幟。 將此標幟設為 `true` 如果您的伺服器在每次呼叫中僅接受一個身分，則會接受指定命名空間的。 |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | 整數 | <ul><li>*最小值：1800*</li><li>*最大值：3600*</li><li>請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 在最小值和最大接受值之間配置一個值。 與 `maxNumEventsInBatch`，此參數會決定Experience Platform應等待多久，直到傳送API呼叫至您的端點。 <br> 例如，如果您對這兩個參數使用最大值，Experience Platform會先等候3600秒或直到有10,000個合格設定檔，再進行API呼叫（以先發生者為準）。 </li></ul> |
+| `aggregation.configurableAggregation.maxNumEventsInBatch` | 整數 | <ul><li>*最小值：1000*</li><li>*最大值：10000*</li><li>請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 在最小值和最大接受值之間配置一個值。 如需此參數的說明，請參閱 `maxBatchAgeInSecs` 就在上面。</li></ul> |
+| `aggregation.configurableAggregation.aggregationKey` | 布林值 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 可讓您根據下列參數，匯總對應至目的地的匯出設定檔： <br> <ul><li>區段ID</li><li> 區段狀態 </li><li> 身分命名空間 </li></ul> |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 將此設定為 `true` 如果您想要依區段ID將匯出至目的地的設定檔分組。 |
+| `aggregation.configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 您必須同時設定 `includeSegmentId:true` 和 `includeSegmentStatus:true` 如果您想要依區段ID和區段狀態，將匯出至目的地的設定檔分組。 |
+| `aggregation.configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 將此設定為 `true` 如果您想要依身分命名空間將匯出至目的地的設定檔分組。 |
+| `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 使用此參數可指定是否要將匯出的設定檔匯總為單一身分的群組（GAID、IDFA、電話號碼、電子郵件等）。 |
+| `aggregation.configurableAggregation.aggregationKey.groups` | 字串 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 如果您想要依身分命名空間的群組，將匯出至目的地的設定檔分組，請建立身分群組清單。 例如，您可以使用範例中的設定，將包含IDFA和GAID行動識別碼的設定檔，合併至對您目的地的呼叫和電子郵件中。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含您新建立的目標配置的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含您新建立之目的地組態的詳細資訊。
 
-## 為基於檔案的目標建立配置 {#create-file-based}
+## 建立檔案型目的地的設定 {#create-file-based}
 
-您可以通過向POST請求建立新的目標配置 `/authoring/destinations` 端點。
+您可以向 `/authoring/destinations` 端點。
 
 **API格式**
 
@@ -198,7 +198,7 @@ POST /authoring/destinations
 
 **要求**
 
-以下請求將建立新 [!DNL Amazon S3] 基於檔案的目標配置，由負載中提供的參數配置。 以下負載包括接受的基於檔案的目標的所有參數 `/authoring/destinations` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+下列請求會建立新 [!DNL Amazon S3] 檔案式目的地設定，由裝載中提供的參數設定。 以下裝載包含接受之檔案式目的地的所有參數 `/authoring/destinations` 端點。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -435,15 +435,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
     }
 ```
 
-有關上述所有參數的詳細說明，請參見 [基於檔案的目標配置](file-based-destination-configuration.md)。
+如需上述所有參數的詳細說明，請參閱 [基於檔案的目標配置](file-based-destination-configuration.md).
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含您新建立的目標配置的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含您新建立之目的地組態的詳細資訊。
 
 ## 列出目標配置 {#retrieve-list}
 
-通過向IMS組織發出GET請求，您可以檢索IMS組織的所有目標配置清單 `/authoring/destinations` 端點。
+您可以向提出GET要求，以擷取IMS組織的所有目的地設定清單 `/authoring/destinations` 端點。
 
 **API格式**
 
@@ -454,7 +454,7 @@ GET /authoring/destinations
 
 **要求**
 
-以下請求將根據IMS組織和沙盒配置檢索您有權訪問的目標配置清單。
+下列請求會根據IMS組織和沙箱設定，擷取您有權存取的目的地設定清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -466,7 +466,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-以下響應會根據您使用的IMS組織ID和沙盒名稱返回HTTP狀態200，其中包含您有權訪問的目標配置清單。 一 `instanceId` 對應於一個目標的模板。 響應被截斷以便簡化。
+下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您可存取的目標設定。 一 `instanceId` 對應至一個目的地的範本。 回應會為簡潔而截斷。
 
 ```json
 {
@@ -575,40 +575,40 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `name` | 字串 | 指示Experience Platform目錄中目標的標題。 |
-| `description` | 字串 | 提供Adobe將用於目標卡的Experience Platform目標目錄的說明。 目標不超過4-5句。 |
-| `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 在首次配置目標時。 |
-| `customerAuthenticationConfigurations` | 字串 | 指示用於將Experience Platform客戶驗證到伺服器的配置。 請參閱 `authType` 下面是接受的值。 |
-| `customerAuthenticationConfigurations.authType` | 字串 | 接受的值為 `OAUTH2, BEARER`。 |
-| `customerDataFields.name` | 字串 | 提供要引入的自定義欄位的名稱。 |
-| `customerDataFields.type` | 字串 | 指示您要引入的自定義欄位類型。 接受的值為 `string`。 `object`。 `integer` |
-| `customerDataFields.title` | 字串 | 指示欄位的名稱，如客戶在Experience Platform用戶介面中看到的 |
-| `customerDataFields.description` | 字串 | 提供自定義欄位的說明。 |
+| `name` | 字串 | 指出Experience Platform目錄中的目的地標題。 |
+| `description` | 字串 | 提供說明，供Adobe用於目的地卡的Experience Platform目的地目錄。 目標不超過4-5句。 |
+| `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 設定目的地時。 |
+| `customerAuthenticationConfigurations` | 字串 | 指示用於驗證Experience Platform客戶到伺服器的配置。 請參閱 `authType` 以取得接受的值。 |
+| `customerAuthenticationConfigurations.authType` | 字串 | 接受的值為 `OAUTH2, BEARER`. |
+| `customerDataFields.name` | 字串 | 提供您要引入的自訂欄位名稱。 |
+| `customerDataFields.type` | 字串 | 指出您要引入的自訂欄位類型。 接受的值為 `string`, `object`, `integer` |
+| `customerDataFields.title` | 字串 | 指出欄位的名稱，如Experience Platform使用者介面中的客戶所見 |
+| `customerDataFields.description` | 字串 | 提供自訂欄位的說明。 |
 | `customerDataFields.isRequired` | 布林值 | 指示目標設定工作流中是否需要此欄位。 |
-| `customerDataFields.enum` | 字串 | 將自定義欄位呈現為下拉菜單並列出用戶可用的選項。 |
-| `customerDataFields.pattern` | 字串 | 如果需要，為自定義欄位強制實施模式。 使用規則運算式來強制模式。 例如，如果客戶ID不包括數字或下划線，請輸入 `^[A-Za-z]+$` 的子菜單。 |
-| `uiAttributes.documentationLink` | 字串 | 引用中的文檔頁面 [目標目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，也請參見Wiki頁。 `YOURDESTINATION` 是目標的名稱。 對於名為Moviestar的目標，您將使用 `https://www.adobe.com/go/destinations-moviestar-en`。 請注意，此連結僅在Adobe設定目標即時並發佈文檔後才起作用。 |
-| `uiAttributes.category` | 字串 | 指分配給您在Adobe Experience Platform的目標的類別。 有關詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories)。 使用以下值之一： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
-| `uiAttributes.connectionType` | 字串 | `Server-to-server` 是當前唯一可用的選項。 |
-| `uiAttributes.frequency` | 字串 | `Streaming` 是當前唯一可用的選項。 |
-| `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指示目標是否接受標準配置檔案屬性。 通常，這些屬性會在合作夥伴的文檔中加以強調。 |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指示客戶是否可以在目標中設定自定義命名空間。 閱讀有關 [自定義命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#manage-namespaces) 在Adobe Experience Platform。 |
-| `identityNamespaces.externalId.transformation` | 字串 | _未在示例配置中顯示_。 例如，在 [!DNL Platform] 客戶將純電子郵件地址作為屬性，而您的平台只接受經過散列的電子郵件。 您將在此處提供需要應用的轉換（例如，將電子郵件轉換為小寫，然後進行散列）。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 用於平台接受 [標準標識命名空間](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) （例如，IDFA），因此您可以限制平台用戶只選擇這些標識命名空間。 |
-| `destinationDelivery.authenticationRule` | 字串 | 指示如何 [!DNL Platform] 客戶連接到您的目標。 接受的值為 `CUSTOMER_AUTHENTICATION`。 `PLATFORM_AUTHENTICATION`。 `NONE`。 <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果平台客戶通過用戶名和密碼、持有者令牌或其他身份驗證方法登錄到您的系統。 例如，如果同時選擇了 `authType: OAUTH2` 或 `authType:BEARER` 在 `customerAuthenticationConfigurations`。 </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目標之間有全局身份驗證系統， [!DNL Platform] 客戶不需要提供任何身份驗證憑據來連接到目標。 在這種情況下，必須使用 [憑據](./authentication-configuration.md) 配置。 </li><li>使用 `NONE` 如果向目標平台發送資料不需要身份驗證。 </li></ul> |
-| `destinationDelivery.destinationServerId` | 字串 | 的 `instanceId` 的 [目標伺服器模板](./destination-server-api.md) 用於此目標。 |
-| `destConfigId` | 字串 | 此欄位是自動生成的，不需要輸入。 |
-| `backfillHistoricalProfileData` | 布林值 | 控制在將段激活到目標時是否導出歷史配置檔案資料。 <br> <ul><li> `true`: [!DNL Platform] 發送在激活段之前符合段的歷史用戶配置檔案。 </li><li> `false`: [!DNL Platform] 僅包括激活段後符合段條件的用戶配置檔案。 </li></ul> |
-| `segmentMappingConfig.mapUserInput` | 布林值 | 控制用戶是否輸入目標激活工作流中的段映射ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目標激活工作流中的段映射ID是否是Experience Platform段ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標激活工作流中的段映射id是否是Experience Platform段名稱。 |
-| `segmentMappingConfig.audienceTemplateId` | 布林值 | 的 `instanceId` 的 [受眾元資料模板](./audience-metadata-management.md) 用於此目標。 要設定受眾元資料模板，請閱讀 [受眾元資料API參考](./audience-metadata-api.md)。 |
+| `customerDataFields.enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
+| `customerDataFields.pattern` | 字串 | 視需要為自訂欄位強制使用模式。 使用規則運算式來強制模式。 例如，若您的客戶ID未包含數字或底線，請輸入 `^[A-Za-z]+$` 在此欄位中。 |
+| `uiAttributes.documentationLink` | 字串 | 指 [目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 你的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中 `YOURDESTINATION` 是您目的地的名稱。 對於名為Moviestar的目的地，您將使用 `https://www.adobe.com/go/destinations-moviestar-en`. 請注意，此連結只有在Adobe將您的目的地設為現時且檔案已發佈後才有效。 |
+| `uiAttributes.category` | 字串 | 是指指派給Adobe Experience Platform中目的地的類別。 如需詳細資訊，請閱讀 [目標類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
+| `uiAttributes.connectionType` | 字串 | `Server-to-server` 是目前唯一可用的選項。 |
+| `uiAttributes.frequency` | 字串 | `Streaming` 是目前唯一可用的選項。 |
+| `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出客戶是否可將標準設定檔屬性對應至您正在設定的身分。 |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 指出客戶是否可對應屬於 [自訂命名空間](/help/identity-service/namespaces.md#manage-namespaces) 至您所設定的身分。 |
+| `identityNamespaces.externalId.transformation` | 字串 | _範例設定中未顯示_. 例如，當 [!DNL Platform] 客戶有純電子郵件地址作為屬性，而您的平台僅接受雜湊電子郵件。 您可在此提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 指出 [標準身分命名空間](/help/identity-service/namespaces.md#standard) （例如IDFA）客戶可對應至您所設定的身分。 <br> 使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 小寫和雜湊電子郵件地址或電話號碼。 |
+| `destinationDelivery.authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶可連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統。 例如，如果您也選取了 `authType: OAUTH2` 或 `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 [憑證](./authentication-configuration.md) 設定。 </li><li>使用 `NONE` 若無需驗證即可將資料傳送至目的地平台。 </li></ul> |
+| `destinationDelivery.destinationServerId` | 字串 | 此 `instanceId` 的 [目的地伺服器範本](./destination-server-api.md) 用於此目的地。 |
+| `destConfigId` | 字串 | 此欄位會自動產生，不需要您輸入。 |
+| `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。 <br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
+| `segmentMappingConfig.mapUserInput` | 布林值 | 控制使用者是否輸入目標啟動工作流程中的區段對應ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段名稱。 |
+| `segmentMappingConfig.audienceTemplateId` | 布林值 | 此 `instanceId` 的 [對象中繼資料範本](./audience-metadata-management.md) 用於此目的地。 若要設定對象中繼資料範本，請閱讀 [對象中繼資料API參考](./audience-metadata-api.md). |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style=&quot;table-layout:auto&quot;}
 
 ## 更新現有目標配置 {#update}
 
-您可以通過向PUT請求更新現有目標配置 `/authoring/destinations` 終結點並提供要更新的目標配置的實例ID。 在呼叫正文中，提供更新的目標配置。
+您可以向 `/authoring/destinations` 端點，並提供您要更新之目的地設定的例項ID。 在呼叫內文中，提供更新的目的地設定。
 
 **API格式**
 
@@ -619,11 +619,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 要更新的目標配置的ID。 |
+| `{INSTANCE_ID}` | 要更新的目標配置ID。 |
 
 **要求**
 
-以下請求更新現有目標配置，該配置由負載中提供的參數配置。 在下面的示例調用中，我們正在更新配置 [建立早](./destination-configuration-api.md#create) 現在接受GAID、IDFA和散列電子郵件標識符作為標識命名空間。
+下列要求會更新現有的目的地設定，由裝載中提供的參數所設定。 在以下範例呼叫中，我們會更新設定 [已建立較早](./destination-configuration-api.md#create) 現在接受GAID、IDFA和雜湊電子郵件識別碼做為身分識別命名空間。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
@@ -761,9 +761,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 }
 ```
 
-## 檢索特定目標配置 {#get}
+## 擷取特定目的地設定 {#get}
 
-通過向Web站點發出GET請求，可以檢索有關特定目標配置的詳細資訊 `/authoring/destinations` 終結點並提供要檢索的目標配置的實例ID。
+您可以向提出GET要求，以擷取特定目標設定的詳細資訊 `/authoring/destinations` 端點，並提供您要擷取之目的地設定的例項ID。
 
 **API格式**
 
@@ -774,7 +774,7 @@ GET /authoring/destinations/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 要檢索的目標配置的ID。 |
+| `{INSTANCE_ID}` | 您要擷取的目的地設定ID。 |
 
 **要求**
 
@@ -788,7 +788,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關指定目標配置的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含指定目的地設定的詳細資訊。
 
 ```json
 {
@@ -923,7 +923,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## 刪除特定目標配置 {#delete}
 
-您可以通過向DELETE請求刪除指定的目標配置 `/authoring/destinations` 終結點，並提供您希望在請求路徑中刪除的目標配置的ID。
+您可以向發出DELETE要求，以刪除指定的目的地設定 `/authoring/destinations` 端點，並提供您要在請求路徑中刪除之目標設定的ID。
 
 **API格式**
 
@@ -933,7 +933,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 的 `id` 目標配置。 |
+| `{INSTANCE_ID}` | 此 `id` 刪除的目標配置。 |
 
 **要求**
 
@@ -947,12 +947,12 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 **回應**
 
-成功的響應返回HTTP狀態200以及空的HTTP響應。
+成功的回應會傳回HTTP狀態200，並傳回空的HTTP回應。
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道如何使用 `/authoring/destinations` API終結點。 閱讀 [如何使用Destination SDK配置目標](./configure-destination-instructions.md) 瞭解此步驟在配置目標過程中的適用範圍。
+閱讀本檔案後，您現在知道如何使用 `/authoring/destinations` API端點。 閱讀 [如何使用Destination SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。
