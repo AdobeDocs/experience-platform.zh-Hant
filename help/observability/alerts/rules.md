@@ -4,9 +4,9 @@ title: 標準警報規則
 description: 本檔案涵蓋由Experience Platform提供的預先定義警報規則。
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: f707a6338ad72578328b363792010fa50ea9ce88
+source-git-commit: 44e337778bbfe901687383418981dbae83b356a7
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '922'
 ht-degree: 3%
 
 ---
@@ -99,8 +99,6 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 
 | I/O事件訂閱 | 警報規則 | 說明 |
 | --- | --- | --- |
-| 查詢服務臨機資訊 | 查詢服務臨機成功 | 當臨機架構作業成功完成時，就會觸發此警報。 |
-| 查詢服務臨機延遲、失敗和錯誤 | 查詢服務臨機失敗 | 當臨機結構工作失敗時，就會觸發此警報。 |
 | 查詢服務計畫查詢資訊 | 查詢服務計畫查詢開始 | 排程查詢開始執行時，就會觸發此警報。 |
 | 查詢服務計畫查詢資訊 | 查詢服務計畫查詢成功 | 排程查詢作業成功完成時，就會觸發此警報。 |
 | 查詢服務計畫的查詢延遲、失敗和錯誤 | 查詢服務計畫查詢失敗 | 排程查詢作業失敗時，就會觸發此警報。 |
