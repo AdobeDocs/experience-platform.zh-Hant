@@ -1,18 +1,19 @@
 ---
 title: 資料集範例
 description: Query Service範例資料集可讓您對大資料執行探索性查詢，大幅縮短處理時間，並降低查詢準確度。 本指南提供如何管理範例以進行近似查詢處理的資訊
-source-git-commit: 3d2802ff5cdb359b28da23a05d1d6831cc273a52
+exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
+source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '538'
 ht-degree: 0%
 
 ---
 
-# （測試版）資料集範例
+# （有限版本）資料集範例
 
 >[!IMPORTANT]
 >
->資料集範例功能為測試版。 其功能和檔案可能會有所變更。
+>資料集範例功能目前僅有限版本，並非所有客戶都能使用。
 
 Adobe Experience Platform Query Service提供範例資料集，作為其近似查詢處理功能的一部分。 範例資料集是以現有的統一隨機範例建立 [!DNL Azure Data Lake Storage] (ADLS)資料集僅使用原始記錄的百分比。 此百分比稱為取樣率。 調整採樣率以控制精確度和處理時間的平衡，允許您對大資料進行探索性查詢，並大大減少處理時間，同時犧牲查詢準確性。
 
