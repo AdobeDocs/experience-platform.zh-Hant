@@ -1,9 +1,10 @@
 ---
 title: （測試版）Google雲端儲存連線
 description: 了解如何連線至Google雲端儲存空間及啟用區段或匯出資料集。
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: ab274270-ae8c-4264-ba64-700b118e6435
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
@@ -59,9 +60,9 @@ ht-degree: 0%
 
 * **[!UICONTROL 訪問密鑰ID]**:61個字元的英數字串，用於驗證您的 [!DNL Google Cloud Storage] 帳戶至Platform。 如需如何取得此值的詳細資訊，請閱讀 [必要條件](#prerequisites) 一節。
 * **[!UICONTROL 秘密訪問密鑰]**:用於驗證您的 [!DNL Google Cloud Storage] 帳戶至Platform。 如需如何取得此值的詳細資訊，請閱讀 [必要條件](#prerequisites) 一節。
-* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在以下說明檔案連結中檢視格式正確且以base64編碼的鍵的範例。 中間部縮短為簡潔。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下圖中查看格式正確的加密密鑰示例。
 
-   ![此影像顯示UI中格式正確且以base64加密的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![顯示UI中格式正確之PGP金鑰的範例影像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 如需這些值的詳細資訊，請參閱 [Google雲端儲存HMAC金鑰](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 指南。 有關如何生成您自己的訪問密鑰ID和秘密訪問密鑰的步驟，請參閱 [[!DNL Google Cloud Storage] 來源概觀](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 

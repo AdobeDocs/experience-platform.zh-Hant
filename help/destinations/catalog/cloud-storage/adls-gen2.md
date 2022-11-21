@@ -1,9 +1,10 @@
 ---
 title: （測試版）Azure資料湖儲存Gen2連接
 description: 了解如何連線至Azure Data Lake Storage Gen2以啟用區段和匯出資料集。
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -47,9 +48,9 @@ ht-degree: 1%
 * **[!UICONTROL 租用戶]**:包含您應用程式的租用戶資訊。
 * **[!UICONTROL 服務主體ID]**:應用程式的用戶端ID。
 * **[!UICONTROL 服務主體密鑰]**:應用程式的密鑰。
-* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在以下說明檔案連結中檢視格式正確且以base64編碼的鍵的範例。 中間部縮短為簡潔。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下圖中查看格式正確的加密密鑰示例。
 
-   ![此影像顯示UI中格式正確且以base64加密的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![顯示UI中格式正確之PGP金鑰的範例影像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 填寫目的地詳細資訊 {#destination-details}
 

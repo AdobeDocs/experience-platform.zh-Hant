@@ -3,9 +3,9 @@ keywords: Amazon S3;S3目的地；s3;Amazon s3
 title: Amazon S3連線
 description: 建立與Amazon Web Services(AWS)S3儲存的即時傳出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -60,14 +60,14 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA公鑰"
->abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在下面的文檔連結中查看格式正確的鍵的示例。"
+>abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下面的文檔連結中查看格式正確的鍵的示例。"
 
 若要驗證目的地，請填寫必填欄位並選取 **[!UICONTROL 連接到目標]**.
 
 * **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]密鑰**:在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對，以授與 [!DNL Amazon S3] 帳戶。 了解更多 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在以下說明檔案連結中檢視格式正確且以base64編碼的鍵的範例。 中間部縮短為簡潔。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下圖中查看格式正確的加密密鑰示例。
 
-![此影像顯示UI中格式正確且以base64加密的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![顯示UI中格式正確之PGP金鑰的範例影像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 填寫目的地詳細資訊 {#destination-details}
 

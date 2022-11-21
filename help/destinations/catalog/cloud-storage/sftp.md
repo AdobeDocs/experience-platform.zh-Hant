@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP連線
 description: 建立與SFTP伺服器的即時傳出連線，以定期從Adobe Experience Platform匯出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
 >title="RSA公鑰"
->abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入為Base64編碼字串。"
+>abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下面的文檔連結中查看格式正確的鍵的示例。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
@@ -78,9 +78,9 @@ ht-degree: 0%
 * **[!UICONTROL 主機]**:SFTP儲存位置的位址；
 * **[!UICONTROL 使用者名稱]**:要登入您SFTP儲存位置的使用者名稱；
 * **[!UICONTROL 密碼]**:登入您SFTP儲存位置的密碼。
-* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在以下說明檔案連結中檢視格式正確且以base64編碼的鍵的範例。 中間部縮短為簡潔。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下圖中查看格式正確的加密密鑰示例。
 
-![此影像顯示UI中格式正確且以base64加密的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![顯示UI中格式正確之PGP金鑰的範例影像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 如果您選取 **[!UICONTROL 具有SSH金鑰的SFTP]** 要連線至您SFTP位置的驗證類型：
@@ -91,10 +91,9 @@ ht-degree: 0%
 * **[!UICONTROL 埠]**:您的SFTP儲存位置所使用的連接埠；
 * **[!UICONTROL 使用者名稱]**:要登入您SFTP儲存位置的使用者名稱；
 * **[!UICONTROL SSH金鑰]**:用來登入您SFTP儲存位置的私密SSH金鑰。 私密金鑰必須格式化為Base64編碼字串，且不得受密碼保護。
-* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64] 編碼字串。
-   * 範例: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. 請參閱以下格式正確的PGP金鑰範例，其中中間部分縮短，以求簡潔。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下圖中查看格式正確的加密密鑰示例。
 
-      ![PGP金鑰](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![顯示UI中格式正確之PGP金鑰的範例影像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 目的地詳細資訊 {#destination-details}
 

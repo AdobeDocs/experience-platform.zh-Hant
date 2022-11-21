@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob目的地；s3;Azure Blob目的地
 title: Azure Blob連接
 description: 建立與Azure Blob儲存的即時傳出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
@@ -75,15 +75,15 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_blob_rsa"
 >title="RSA公鑰"
->abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在下面的文檔連結中查看格式正確的鍵的示例。"
+>abstract="或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下面的文檔連結中查看格式正確的鍵的示例。"
 
 若要驗證目的地，請填寫必填欄位並選取 **[!UICONTROL 連接到目標]**.
 
 * **[!UICONTROL 連線字串]**:存取Blob儲存中的資料時需要連線字串。 此 [!DNL Blob] 連線字串模式的開頭為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
    * 如需有關設定 [!DNL Blob] 連接字串，請參閱 [為Azure儲存帳戶配置連接字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) 在Microsoft檔案中。
-* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 您的公開金鑰必須寫入 [!DNL Base64-encoded] 字串。 在以下說明檔案連結中檢視格式正確且以base64編碼的鍵的範例。 中間部縮短為簡潔。
+* **[!UICONTROL 加密密鑰]**:或者，您可以附加RSA格式的公鑰，以將加密添加到導出的檔案中。 在下圖中查看格式正確的加密密鑰示例。
 
-![此影像顯示UI中格式正確且以base64加密的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+   ![顯示UI中格式正確之PGP金鑰的範例影像](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 填寫目的地詳細資訊 {#destination-details}
 
