@@ -2,7 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；oracle;
 title: （測試版）使用流量服務API建立OracleResponsys Base連線
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至OracleResponsys。
-source-git-commit: aa4573325f2859c258e66d4b6df411118a5d1942
+hide: true
+hidefromtoc: true
+exl-id: 76659f5a-c923-488c-88f6-1919bc6a7bb5
+source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 1%
