@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform中的客戶管理金鑰
 description: 了解如何為儲存在Adobe Experience Platform中的資料設定您自己的加密金鑰。
-source-git-commit: 02898f5143a7f4f48c64b22fb3c59a072f1e957d
+exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
+source-git-commit: 82a29cedfd12e0bc3edddeb26abaf36b0edea6df
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1613'
 ht-degree: 0%
 
 ---
@@ -13,6 +14,14 @@ ht-degree: 0%
 儲存在Adobe Experience Platform上的資料會使用系統層級的金鑰進行靜態加密。 如果您使用的應用程式是以Platform為建置基礎，您可以選擇使用您自己的加密密鑰，從而更好地控制資料安全性。
 
 本檔案說明在Platform中啟用客戶管理金鑰(CMK)功能的程式。
+
+## 先決條件
+
+若要啟用CMK，您必須擁有 **all** 的下列功能 [!DNL Microsoft Azure]:
+
+* [基於角色的訪問控制策略](https://learn.microsoft.com/en-us/azure/role-based-access-control/) (不要與Experience Platform中的相同功能混淆)
+* [密鑰保管庫軟刪除](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [清除保護](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 
 ## 流程摘要
 
@@ -24,7 +33,7 @@ CMK包含在Healthcare Shield和Privacy and Security Shield產品中，不會Ado
 
 該過程如下：
 
-1. [設定 [!DNL Microsoft Azure] 密鑰保管庫](#create-key-vault) 根據貴組織的政策， [生成加密密鑰](#generate-a-key) 最終與Adobe共用。
+1. [設定 [!DNL Azure] 密鑰保管庫](#create-key-vault) 根據貴組織的政策， [生成加密密鑰](#generate-a-key) 最終與Adobe共用。
 1. 將API呼叫用於 [設定CMK應用](#register-app) 與 [!DNL Azure] 租用戶。
 1. 將API呼叫用於 [將您的加密密鑰ID發送到Adobe](#send-to-adobe) 並啟動功能的啟用程式。
 1. [檢查配置的狀態](#check-status) 來驗證CMK是否已啟用。
@@ -97,11 +106,13 @@ CMK僅支援來自 [!DNL Microsoft Azure] 密鑰庫。 若要開始，您必須�
 
 配置密鑰保管庫後，下一步是註冊將連結到您的 [!DNL Azure] 租用戶。
 
->[!NOTE]
->
->註冊CMK應用程式需要您呼叫平台API。 如需如何收集進行這些呼叫所需的驗證標題的詳細資訊，請參閱 [Platform API驗證指南](../../landing/api-authentication.md).
->
->而驗證指南則提供如何為所需項目產生您自己的唯一值的指示 `x-api-key` 要求標題，本指南中的所有API操作都使用靜態值 `acp_provisioning` 。 您仍必須為 `{ACCESS_TOKEN}` 和 `{ORG_ID}`，不過。
+### 快速入門
+
+註冊CMK應用程式需要您呼叫平台API。 如需如何收集進行這些呼叫所需的驗證標題的詳細資訊，請參閱 [Platform API驗證指南](../../landing/api-authentication.md).
+
+而驗證指南則提供如何為所需項目產生您自己的唯一值的指示 `x-api-key` 要求標題，本指南中的所有API操作都使用靜態值 `acp_provisioning` 。 您仍必須為 `{ACCESS_TOKEN}` 和 `{ORG_ID}`，不過。
+
+在本指南中顯示的所有API呼叫中， `platform.adobe.io` 會作為根路徑，其預設值為VA7區域。 如果貴組織使用不同地區， `platform` 後面必須加上破折號，以及指派給貴組織的地區代碼： `nld2` NLD2或 `aus5` (例如： `platform-aus5.adobe.io`)。 如果您不知道貴組織的地區，請與系統管理員聯繫。
 
 ### 擷取驗證URL
 
@@ -183,7 +194,7 @@ curl -X POST \
         "imsOrgId": "{ORG_ID}",
         "configData": {
           "providerType": "AZURE_KEYVAULT",
-          "keyVaultIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
+          "keyVaultKeyIdentifier": "https://adobecmkexample.vault.azure.net/keys/adobeCMK-key/7c1d50lo28234cc895534c00d7eb4eb4"
         }
       }'
 ```
@@ -193,7 +204,7 @@ curl -X POST \
 | `name` | 設定的名稱。 請務必記住此值，因為您需要檢查設定的狀態，位於 [稍後步驟](#check-status). 值區分大小寫。 |
 | `type` | 配置類型。 必須設為 `BYOK_CONFIG`. |
 | `imsOrgId` | 您的IMS組織ID。 此值必須與 `x-gw-ims-org-id` 頁首。 |
-| `configData` | 包含有關設定的下列詳細資料：<ul><li>`providerType`:必須設為 `AZURE_KEYVAULT`.</li><li>`keyVaultIdentifier`:您複製的密鑰保管庫URI [較早](#send-to-adobe).</li></ul> |
+| `configData` | 包含有關設定的下列詳細資料：<ul><li>`providerType`:必須設為 `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`:您複製的密鑰保管庫URI [較早](#send-to-adobe).</li></ul> |
 
 **回應**
 
