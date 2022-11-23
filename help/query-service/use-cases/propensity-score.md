@@ -1,16 +1,19 @@
 ---
 title: 使用機器學習產生的預測模型來判斷傾向分數
 description: 了解如何使用Query Service將您的預測模型套用至Platform資料。 本檔案示範如何使用Platform資料來預測客戶每次造訪的購買傾向。
-source-git-commit: af1c8f94d1758b3a4e7ea00c46b0f9a71a01c6be
+exl-id: 29587541-50dd-405c-bc18-17947b8a5942
+source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # 使用機器學習產生的預測模型來判斷傾向分數
 
-使用「查詢服務」，您可以在機器學習平台中運用Experience Platform資料，產生預測模型，例如傾向分數。 本指南說明如何使用Query Service將資料傳送至機器學習平台，以便在計算筆記型電腦中訓練模型。 訓練好的模型可以套用至使用SQL的資料，以預測客戶每次造訪的購買傾向。
+使用「查詢服務」，您可以運用在機器學習平台上建置的預測模型（例如傾向分數）來分析Experience Platform資料。
+
+本指南說明如何使用Query Service將資料傳送至機器學習平台，以便在計算筆記型電腦中訓練模型。 訓練好的模型可以套用至使用SQL的資料，以預測客戶每次造訪的購買傾向。
 
 ## 快速入門
 
@@ -322,5 +325,3 @@ bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ![顯示傾向分數的信賴區間的列印命令。](../images/use-cases/confidence-interval.png)
 
 上圖指出，如果您只需要1000列來訓練模型，則精確度會降低約84%到88%之間。 您可以調整 `LIMIT` 子句，根據您的需求來查詢以確保模型的效能。
-
-
