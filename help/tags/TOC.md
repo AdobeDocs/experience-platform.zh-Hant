@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: a03ab5086f8f3935425da147f721dec42ced9d00
+source-git-commit: de09106f4446981176ca001f607d540b490de8d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '420'
 ht-degree: 65%
 
 ---
@@ -106,6 +106,8 @@ ht-degree: 65%
       * Adobe Target v2 {#target-v2}
          * [總覽](./extensions/web/target-v2/overview.md)
          * [發行說明](./extensions/web/target-v2/release-notes.md)
+      * [!DNL AWS] {#aws}
+         * [總覽](./extensions/web/aws/overview.md)
       * [!DNL BrightCove] 視訊追蹤 {#brightcove}
          * [總覽](./extensions/web/brightcove/overview.md)
          * [發行說明](./extensions/web/brightcove/release-notes.md)
