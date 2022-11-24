@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform發行說明2022年11月
 description: 2022年11月Adobe Experience Platform發行說明。
-source-git-commit: 3c78fc1cbfcd00f0fd5facfdf07bbc2757f492fa
+source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 5%
@@ -40,7 +40,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 | 功能 | 說明 |
 | --- | --- |
-| 將欄位直接添加到架構時，將欄位分配給自定義類 | 當 [將個別欄位直接新增至架構](../../xdm/ui/resources/schemas.md#add-individual-fields)，之前您只能將欄位指派給欄位群組作為其父資源。 現在，除了欄位群組，您可以 [將欄位指派給自訂類別](../../xdm/ui/resources/schemas.md.md#add-to-class) 作為其父資源。 |
+| 將欄位直接添加到架構時，將欄位分配給自定義類 | 當 [將個別欄位直接新增至架構](../../xdm/ui/resources/schemas.md#add-individual-fields)，之前您只能將欄位指派給欄位群組作為其父資源。 現在，除了欄位群組，您可以 [將欄位指派給自訂類別](../../xdm/ui/resources/schemas.md#add-to-class) 作為其父資源。 |
 
 {style=&quot;table-layout:auto&quot;}
 
