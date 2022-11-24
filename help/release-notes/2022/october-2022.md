@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年10月
 description: 2022年10月Adobe Experience Platform發行說明。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 184ead059533d2706a5d3fca96dc082248955afe
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%
@@ -38,8 +38,8 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 功能 | 說明 |
 | --- | --- |
 | 資料流的敏感資料處理 | Datastreams現在利用多種Platform技術適當處理受醫療保險可移植性和責任法案(HIPAA)等法規強制實施的敏感資料。 請參閱 [處理資料流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得更多資訊。 |
-| [!DNL Splunk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Splunk] 擴充功能概觀](../../tags/extensions/web/splunk/overview.md) 以取得更多資訊。 |
-| [!DNL Zendesk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../../tags/extensions/web/zendesk/overview.md) 以取得更多資訊。 |
+| [!DNL Splunk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Splunk] 擴充功能概觀](../../tags/extensions/server/splunk/overview.md) 以取得更多資訊。 |
+| [!DNL Zendesk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../../tags/extensions/server/zendesk/overview.md) 以取得更多資訊。 |
 
 {style=&quot;table-layout:auto&quot;}
 

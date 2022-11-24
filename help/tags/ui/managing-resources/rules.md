@@ -2,7 +2,7 @@
 title: 規則
 description: 了解標籤擴充功能在Adobe Experience Platform中的運作方式。
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 66%
@@ -41,7 +41,7 @@ Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找
 
 * **條件**:設定事件必須為true的任何條件來縮小事件，以觸發規則。 例外是以 NOT 條件的形式定義。您可使用 AND 聯結多個條件。
 
-可用的事件取決於安裝的擴充功能。如需核心擴充功能中事件的詳細資訊，請參閱[核心擴充功能事件類型](../../extensions/web/core/overview.md#core-extension-event-types)。
+可用的事件取決於安裝的擴充功能。如需核心擴充功能中事件的詳細資訊，請參閱[核心擴充功能事件類型](../../extensions/client/core/overview.md#core-extension-event-types)。
 
 ### 動作 (then)
 

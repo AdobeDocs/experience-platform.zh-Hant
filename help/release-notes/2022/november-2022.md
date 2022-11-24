@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform發行說明2022年11月
 description: 2022年11月Adobe Experience Platform發行說明。
-source-git-commit: 9100597c94c21beb9d967f67061e18a9421c6674
+exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 5%
@@ -26,9 +27,9 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!DNL AWS] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Amazon Web Services] ([!DNL AWS])使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL AWS] 擴充功能概觀](../../tags/extensions/web/aws/overview.md) 以取得更多資訊。 |
-| [!DNL Google Ads Enhanced Conversions] 事件轉送擴充功能 | 您現在可以將轉換資料傳送至 [!DNL Google Ads] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Google Ads Enhanced Conversions] 擴充功能概觀](../../tags/extensions/web/google-ads-enhanced-conversions/overview.md) 以取得更多資訊。 |
-| [!DNL Microsoft Azure] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Microsoft Azure] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Microsoft Azure] 擴充功能概觀](../../tags/extensions/web/azure/overview.md) 以取得更多資訊。 |
+| [!DNL AWS] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Amazon Web Services] ([!DNL AWS])使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL AWS] 擴充功能概觀](../../tags/extensions/server/aws/overview.md) 以取得更多資訊。 |
+| [!DNL Google Ads Enhanced Conversions] 事件轉送擴充功能 | 您現在可以將轉換資料傳送至 [!DNL Google Ads] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Google Ads Enhanced Conversions] 擴充功能概觀](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 以取得更多資訊。 |
+| [!DNL Microsoft Azure] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Microsoft Azure] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Microsoft Azure] 擴充功能概觀](../../tags/extensions/server/azure/overview.md) 以取得更多資訊。 |
 
 如需Platform資料收集功能的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
 

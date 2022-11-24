@@ -2,7 +2,7 @@
 title: 快速入門手冊
 description: 了解如何在Adobe Experience Platform中快速上手並執行標籤。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 43%
@@ -53,7 +53,7 @@ ht-degree: 43%
 
 擴充功能是由Adobe或Adobe合作夥伴建立的整合功能，為您可部署至網站的標籤新增全新及無數的選項。 如果您將標籤視為作業系統，擴充功能就是您安裝的應用程式，用來執行您需要的特定操作。
 
-所有全新屬性都會隨[核心擴充功能](../extensions/web/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能是由Adobe建立，可為您資料層的資料元素類型和規則的事件類型，提供強大的預設集合。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
+所有全新屬性都會隨[核心擴充功能](../extensions/client/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能是由Adobe建立，可為您資料層的資料元素類型和規則的事件類型，提供強大的預設集合。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
 
 讓Platform中的標籤真正獨一無二的，是任何人都能建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理使用者的隱私權和同意，以協助您 [!DNL GDPR]? 請深入了解 Evidon 和 Trust Arc。是否希望對網站上個別使用者的行為有詳細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱 [新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 

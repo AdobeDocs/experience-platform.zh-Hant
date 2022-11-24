@@ -2,7 +2,7 @@
 title: Reactor API中的機密
 description: 了解如何在Reactor API中設定機密，以用於事件轉送的基本知識。
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
-source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 2%
@@ -131,7 +131,7 @@ ht-degree: 2%
 
 ## 引用機密 {#referencing-secrets}
 
-若要參考機密，您必須建立「」類型的資料元素[!UICONTROL 機密]」(由 [[!UICONTROL 核心] 擴充功能](../../extensions/web/core/overview.md))。 設定此資料元素時，系統會提示您指出每個環境要使用的機密。 接著，您就可以建立參考機密資料元素的規則，例如在HTTP呼叫的標題內。
+若要參考機密，您必須建立「」類型的資料元素[!UICONTROL 機密]」(由 [[!UICONTROL 核心] 擴充功能](../../extensions/client/core/overview.md))。 設定此資料元素時，系統會提示您指出每個環境要使用的機密。 接著，您就可以建立參考機密資料元素的規則，例如在HTTP呼叫的標題內。
 
 ![機密資料元素](../../images/api/guides/secrets/data-element.png)
 

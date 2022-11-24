@@ -2,7 +2,7 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 12648469a1e06e316597fa46fb877f947c8ddb92
+source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 4%
@@ -14,8 +14,8 @@ ht-degree: 4%
 ## 2022 年 10 月 26 日
 
 * **資料流的敏感資料處理**:Datastreams現在利用多種Platform技術適當處理受醫療保險可移植性和責任法案(HIPAA)等法規強制實施的敏感資料。 請參閱 [處理資料流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得更多資訊。
-* **[!DNL Splunk]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Splunk] 擴充功能概觀](../extensions/web/splunk/overview.md) 以取得更多資訊。
-* **[!DNL Zendesk]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../extensions/web/zendesk/overview.md) 以取得更多資訊。
+* **[!DNL Splunk]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Splunk] 擴充功能概觀](../extensions/server/splunk/overview.md) 以取得更多資訊。
+* **[!DNL Zendesk]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../extensions/server/zendesk/overview.md) 以取得更多資訊。
 
 ## 2022 年 9 月 28 日
 
@@ -32,6 +32,6 @@ ht-degree: 4%
 
 新擴充功能已發行：
 
-* [Google資料層標籤擴充功能](../extensions/web/google-data-layer/overview.md):可讓您在標籤實施中使用Google資料層。
+* [Google資料層標籤擴充功能](../extensions/client/google-data-layer/overview.md):可讓您在標籤實施中使用Google資料層。
 * [Google Ads增強轉換事件轉送擴充功能](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html):可讓您即時增強Google廣告轉換。
-* [Mailchimp事件轉送擴充功能](../extensions/web/mailchimp/overview.md):傳送事件至Mailchimp行銷API，這可以針對Mailchimp行銷活動、歷程或交易觸發電子郵件。
+* [Mailchimp事件轉送擴充功能](../extensions/server/mailchimp/overview.md):傳送事件至Mailchimp行銷API，這可以針對Mailchimp行銷活動、歷程或交易觸發電子郵件。

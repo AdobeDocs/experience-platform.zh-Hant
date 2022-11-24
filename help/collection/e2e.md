@@ -2,7 +2,7 @@
 title: 資料收集端對端概述
 description: 概略說明如何使用Adobe Experience Platform的資料收集功能，將事件資料傳送至Adobe Experience Cloud解決方案。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2619'
 ht-degree: 0%
@@ -212,7 +212,7 @@ XDM對象類型的配置對話框隨即出現。 對話方塊會自動選取您�
 
 >[!NOTE]
 >
->如需Adobe網頁擴充功能所提供不同事件類型的詳細資訊，包括如何設定這些類型，請參閱 [Adobe擴充功能參考](../tags/extensions/web/overview.md) 在標籤檔案中。
+>如需Adobe網頁擴充功能所提供不同事件類型的詳細資訊，包括如何設定這些類型，請參閱 [Adobe擴充功能參考](../tags/extensions/client/overview.md) 在標籤檔案中。
 
 表單提交事件可讓您使用 [CSS選取器](https://www.w3schools.com/css/css_selectors.asp) 以參考要引發規則的特定元素。 在以下範例中，ID `add-to-cart-form` 使用時，此規則只會針對「新增至購物車」表單觸發。 選擇 **[!UICONTROL 保留變更]** 將事件新增至規則。
 

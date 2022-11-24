@@ -2,10 +2,10 @@
 title: 非同步部署
 description: 了解如何在網站上非同步部署Adobe Experience Platform標籤程式庫。
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1079'
+ht-degree: 55%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 接著，標籤程式庫可在 [`DOMContentLoaded`](https://developer.mozilla.org/zh-TW/docs/Web/Events/DOMContentLoaded) 瀏覽器事件（DOM就緒）已發生。
 
-因為這兩點，值得說明的是 [程式庫已載入](../../extensions/web/core/overview.md#library-loaded-page-top), [頁面底部](../../extensions/web/core/overview.md#page-bottom), [DOM已就緒](../../extensions/web/core/overview.md#page-bottom)，和 [視窗已載入](../../extensions/web/core/overview.md#window-loaded) 非同步載入標籤程式庫時，從核心擴充功能中輸入事件類型。
+因為這兩點，值得說明的是 [程式庫已載入](../../extensions/client/core/overview.md#library-loaded-page-top), [頁面底部](../../extensions/client/core/overview.md#page-bottom), [DOM已就緒](../../extensions/client/core/overview.md#page-bottom)，和 [視窗已載入](../../extensions/client/core/overview.md#window-loaded) 非同步載入標籤程式庫時，從核心擴充功能中輸入事件類型。
 
 如果您的標籤屬性包含下列四個規則：
 

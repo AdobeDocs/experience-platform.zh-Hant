@@ -5,10 +5,10 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: de09106f4446981176ca001f607d540b490de8d1
+source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 65%
+source-wordcount: '954'
+ht-degree: 30%
 
 ---
 
@@ -64,83 +64,164 @@ ht-degree: 65%
    * [使用者權限](./ui/administration/user-permissions.md)
 * 擴充功能 {#extensions}
    * [總覽](./extensions/overview.md)
-   * Adobe 擴充功能 {#adobe}
-      * [總覽](./extensions/web/overview.md)
+   * 標籤擴充功能（用戶端） {#client}
+      * [總覽](./extensions/client/overview.md)
+      * [可存取的網站速度量度](https://exchange.adobe.com/apps/ec/103053)
+      * [Activity Map定制器](https://exchange.adobe.com/apps/ec/101531)
+      * [動作頁面重新整理](https://exchange.adobe.com/apps/ec/102848)
+      * [Adform網站追蹤](https://exchange.adobe.com/apps/ec/103195)
+      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
-         * [總覽](./extensions/web/analytics/overview.md)
-         * [共用模組](./extensions/web/analytics/shared-modules.md)
-         * [發行說明](./extensions/web/analytics/release-notes.md)
+         * [總覽](./extensions/client/analytics/overview.md)
+         * [共用模組](./extensions/client/analytics/shared-modules.md)
+         * [發行說明](./extensions/client/analytics/release-notes.md)
+      * [Adobe Analytics與Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
+      * [Adobe Analytics和Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
+      * [Adobe Analytics與Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Adobe Analytics Product String {#product-string}
-         * [總覽](./extensions/web/product-string/overview.md)
-         * [發行說明](./extensions/web/product-string/release-notes.md)
+         * [總覽](./extensions/client/product-string/overview.md)
+         * [發行說明](./extensions/client/product-string/release-notes.md)
+      * [Adobe Analytics Product String Builder](https://exchange.adobe.com/apps/ec/101461)
       * Adobe Audience Manager {#audience-manager}
-         * [總覽](./extensions/web/audience-manager/overview.md)
+         * [總覽](./extensions/client/audience-manager/overview.md)
       * Adobe用戶端資料層 {#client-data-layer}
-         * [總覽](./extensions/web/client-data-layer/overview.md)
-         * [發行說明](./extensions/web/client-data-layer/release-notes.md)
+         * [總覽](./extensions/client/client-data-layer/overview.md)
+         * [發行說明](./extensions/client/client-data-layer/release-notes.md)
       * AdobeContextHub {#contexthub}
-         * [總覽](./extensions/web/contexthub/overview.md)
+         * [總覽](./extensions/client/contexthub/overview.md)
+      * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)
       * Adobe Experience Cloud ID 服務 {#id-service}
-         * [總覽](./extensions/web/id-service/overview.md)
-         * [發行說明](./extensions/web/id-service/release-notes.md)
+         * [總覽](./extensions/client/id-service/overview.md)
+         * [發行說明](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform示範 {#platform-demo}
-         * [總覽](./extensions/web/platform-demo/overview.md)
+         * [總覽](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#sdk}
-         * [總覽](./extensions/web/sdk/overview.md)
-      * Adobe Experience Platform Cloud Connector {#cloud-connector}
-         * [總覽](./extensions/web/cloud-connector/overview.md)
+         * [總覽](./extensions/client/sdk/overview.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
-         * [總覽](./extensions/web/asset-insights/overview.md)
-         * [發行說明](./extensions/web/asset-insights/release-notes.md)
+         * [總覽](./extensions/client/asset-insights/overview.md)
+         * [發行說明](./extensions/client/asset-insights/release-notes.md)
+      * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)
       * Adobe MediumAnalytics for Audio and Video {#media-analytics}
-         * [總覽](./extensions/web/media-analytics/overview.md)
-         * [發行說明](./extensions/web/media-analytics/release-notes.md)
+         * [總覽](./extensions/client/media-analytics/overview.md)
+         * [發行說明](./extensions/client/media-analytics/release-notes.md)
       * Adobe MediumAnalytics(3.x SDK) {#media-analytics-3x}
-         * [總覽](./extensions/web/media-analytics-3x/overview.md)
-         * [發行說明](./extensions/web/media-analytics-3x/release-notes.md)
+         * [總覽](./extensions/client/media-analytics-3x/overview.md)
+         * [發行說明](./extensions/client/media-analytics-3x/release-notes.md)
       * Adobe隱私 {#privacy}
-         * [總覽](./extensions/web/privacy/overview.md)
+         * [總覽](./extensions/client/privacy/overview.md)
+      * [Adobe報表套裝選取器](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
-         * [總覽](./extensions/web/target/overview.md)
-         * [發行說明](./extensions/web/target/release-notes.md)
+         * [總覽](./extensions/client/target/overview.md)
+         * [發行說明](./extensions/client/target/release-notes.md)
       * Adobe Target v2 {#target-v2}
-         * [總覽](./extensions/web/target-v2/overview.md)
-         * [發行說明](./extensions/web/target-v2/release-notes.md)
-      * [!DNL AWS] {#aws}
-         * [總覽](./extensions/web/aws/overview.md)
+         * [總覽](./extensions/client/target-v2/overview.md)
+         * [發行說明](./extensions/client/target-v2/release-notes.md)
+      * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)
+      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
+      * [Airbrake JS通告程式](https://exchange.adobe.com/apps/ec/103342)
+      * [振幅](https://exchange.adobe.com/apps/ec/108010)
+      * [阿波羅QAX](https://exchange.adobe.com/apps/ec/105068)
+      * [Awin廣告商MasterTag](https://exchange.adobe.com/apps/ec/103176)
+      * [Awin轉換標籤](https://exchange.adobe.com/apps/ec/103240)
+      * [Beemray人的語境](https://exchange.adobe.com/apps/ec/101063)
+      * [Bing Ads通用事件追蹤](https://exchange.adobe.com/apps/ec/100154)
+      * [Branch](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] 視訊追蹤 {#brightcove}
-         * [總覽](./extensions/web/brightcove/overview.md)
-         * [發行說明](./extensions/web/brightcove/release-notes.md)
+         * [總覽](./extensions/client/brightcove/overview.md)
+         * [發行說明](./extensions/client/brightcove/release-notes.md)
+      * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
+      * [管道來源識別碼](https://exchange.adobe.com/apps/ec/101412)
+      * [獵豹體驗](https://exchange.adobe.com/apps/ec/102759)
+      * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * 常見Analytics外掛程式 {#plugins}
-         * [總覽](./extensions/web/plugins/overview.md)
-         * [發行說明](./extensions/web/plugins/release-notes.md)
+         * [總覽](./extensions/client/plugins/overview.md)
+         * [發行說明](./extensions/client/plugins/release-notes.md)
       * 常見Web SDK外掛程式 {#web-sdk-plugins}
-         * [總覽](./extensions/web/web-sdk-plugins/overview.md)
-         * [發行說明](./extensions/web/web-sdk-plugins/release-notes.md)
+         * [總覽](./extensions/client/web-sdk-plugins/overview.md)
+         * [發行說明](./extensions/client/web-sdk-plugins/release-notes.md)
+      * [Concat](https://exchange.adobe.com/apps/ec/104690)
+      * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
+      * [使用者中心CMP v2管理Cookie同意](https://exchange.adobe.com/apps/ec/107037)
       * 核心 {#core}
-         * [總覽](./extensions/web/core/overview.md)
-         * [事件轉送](./extensions/web/core/event-forwarding.md)
-         * [發行說明](./extensions/web/core/release-notes.md)
-      * Google Ads增強轉換 {#google-ads-enhanced-conversions}
-         * [總覽](./extensions/web/google-ads-enhanced-conversions/overview.md)
+         * [總覽](./extensions/client/core/overview.md)
+         * [發行說明](./extensions/client/core/release-notes.md)
+      * [自訂除錯記錄器](https://exchange.adobe.com/apps/ec/104698)
+      * [客戶認可](https://exchange.adobe.com/apps/ec/100688)
+      * [資料元素助理(DEA)](https://exchange.adobe.com/apps/ec/101413)
+      * [資料層管理員](https://exchange.adobe.com/apps/ec/101462)
+      * [德貝爾](https://exchange.adobe.com/apps/ec/100913)
+      * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
+      * [差別隱私](https://exchange.adobe.com/apps/ec/104535)
+      * [Dynamic Media 檢視器](https://exchange.adobe.com/apps/ec/103048)
+      * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
+      * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
+      * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
+      * [Genesys預測性參與](https://exchange.adobe.com/apps/ec/106148)
       * Google資料層 {#google-data-layer}
-         * [總覽](./extensions/web/google-data-layer/overview.md)
-         * [發行說明](./extensions/web/google-data-layer/release-notes.md)
-      * [!DNL Mailchimp] Edge {#mailchimp-edge}
-         * [概述](./extensions/web/mailchimp/overview.md)
+         * [總覽](./extensions/client/google-data-layer/overview.md)
+         * [發行說明](./extensions/client/google-data-layer/release-notes.md)
+      * [Google全域網站標籤(gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
+      * [InMoment](https://exchange.adobe.com/apps/ec/100847)
+      * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
+      * [JW播放器分析](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523))
+      * [KickFire](https://exchange.adobe.com/apps/ec/101621)
+      * [映射表](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
-         * [概述](./extensions/web/marketo/overview.md)
-         * [發行說明](./extensions/web/marketo/release-notes.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
-         * [概述](./extensions/web/azure/overview.md)
-      * [!DNL Splunk] {#splunk}
-         * [概述](./extensions/web/splunk/overview.md)
+         * [總覽](./extensions/client/marketo/overview.md)
+         * [發行說明](./extensions/client/marketo/release-notes.md)
+      * [主屬性管理器](https://exchange.adobe.com/apps/ec/102992)
+      * [監視](https://exchange.adobe.com/apps/ec/106544)
+      * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)
+      * [Cookie的OneTrust同意管理](https://exchange.adobe.com/apps/ec/100340)
+      * [椒醬](https://exchange.adobe.com/apps/ec/103587)
+      * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)
+      * [Pinterest轉換追蹤](https://exchange.adobe.com/apps/ec/100523)
+      * [像素載入器](https://exchange.adobe.com/apps/ec/100152)
+      * [Qualtrics網站意見](https://exchange.adobe.com/apps/ec/101569)
+      * [量子量度](https://exchange.adobe.com/apps/ec/101535)
+      * [解決動量](https://exchange.adobe.com/apps/ec/108352)
+      * [Rokt](https://exchange.adobe.com/apps/ec/107591)
+      * [SDI調查](https://exchange.adobe.com/apps/ec/102991)
+      * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
+      * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
+      * [SPA檢視變更事件](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+      * [儲存扳手](https://exchange.adobe.com/apps/ec/102990)
+      * [按循環水準線標籤](https://exchange.adobe.com/apps/ec/106092)
+      * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
+      * [Tealium資料擴充](https://exchange.adobe.com/apps/ec/104217)
+      * [TMMData Foundation平台](https://exchange.adobe.com/apps/ec/100148)
+      * [TrustArc Cookie同意管理員](https://exchange.adobe.com/apps/ec/107037)
+      * [Vimeo播放](https://exchange.adobe.com/apps/ec/108937)
+      * [網路生命體](https://exchange.adobe.com/apps/ec/106769)
+      * [XDM撰寫器](https://exchange.adobe.com/apps/ec/106062)
+      * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)
+      * [文字轉換追蹤](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube] 播放](https://exchange.adobe.com/apps/ec/103174)
       * [!DNL YouTube] 視訊追蹤 {#youtube}
-         * [總覽](./extensions/web/youtube/overview.md)
-         * [發行說明](./extensions/web/youtube/release-notes.md)
+         * [總覽](./extensions/client/youtube/overview.md)
+         * [發行說明](./extensions/client/youtube/release-notes.md)
+   * 事件轉送擴充功能（伺服器端） {#server}
+      * [總覽](./extensions/server/overview.md)
+      * Adobe Experience Platform Cloud Connector {#cloud-connector}
+         * [概述](./extensions/server/cloud-connector/overview.md)
+      * [!DNL AWS] {#aws}
+         * [概述](./extensions/server/aws/overview.md)
+      * 核心 {#core}
+         * [總覽](./extensions/server/core/overview.md)
+      * Google Ads增強轉換 {#google-ads-enhanced-conversions}
+         * [總覽](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * [!DNL Mailchimp] Edge {#mailchimp}
+         * [總覽](./extensions/server/mailchimp/overview.md)
+      * [!UICONTROL Microsoft Azure] {#azure}
+         * [總覽](./extensions/server/azure/overview.md)
+      * [Pega客戶決策中心](https://exchange.adobe.com/apps/ec/107597)
+      * [快照轉換API](https://exchange.adobe.com/apps/ec/108550)
+      * [!DNL Splunk] {#splunk}
+         * [總覽](./extensions/server/splunk/overview.md)
       * [!DNL Zendesk] 事件API {#zendesk}
-         * [總覽](./extensions/web/zendesk/overview.md)
-   * [協力廠商擴充功能](./extensions/3rd-party-extensions.md)
+         * [總覽](./extensions/server/zendesk/overview.md)
 * 擴充功能開發 {#extension-dev}
    * [總覽](./extension-dev/overview.md)
    * [快速入門](./extension-dev/getting-started.md)
