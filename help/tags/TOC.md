@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: ccfc46714069e8c29f1777dea5ba73e318c0a4a6
+source-git-commit: 32662a5586e0b0b0af7ef14ce27022216a76fac5
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '967'
 ht-degree: 30%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 30%
       * [差別隱私](https://exchange.adobe.com/apps/ec/104535)
       * [Dynamic Media 檢視器](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL Helper](https://exchange.adobe.com/apps/ec/107691)
+      * [Facebook Pixel](https://exchange.adobe.com/apps/ec/102804)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
       * [Gainsight PX](https://exchange.adobe.com/apps/ec/103343)
@@ -210,6 +211,7 @@ ht-degree: 30%
          * [概述](./extensions/server/aws/overview.md)
       * 核心 {#core}
          * [總覽](./extensions/server/core/overview.md)
+      * [Facebook轉換API](https://exchange.adobe.com/apps/ec/105509)
       * Google Ads增強轉換 {#google-ads-enhanced-conversions}
          * [總覽](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
