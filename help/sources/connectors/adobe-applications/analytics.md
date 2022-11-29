@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；Analytics來源連接器
 title: Adobe Analytics報表套裝資料的來源連接器
 description: 本檔案概述Analytics並說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: fd114a418668436efa17edb00f2849a10f2c8cd6
+source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 6%
+source-wordcount: '1014'
+ht-degree: 7%
 
 ---
 
@@ -49,7 +49,9 @@ XDM是公開記錄的規範，為應用程式提供通用結構和定義，以�
 | 新資料 [!DNL Real-time Customer Profile] (A4T) **not** 已啟用) | &lt; 2 分鐘 |
 | 新資料 [!DNL Real-time Customer Profile] (A4T) **is** 已啟用) | &lt; 15 分鐘 |
 | 資料湖的新資料 | &lt; 90 分鐘 |
-| 回填資料（13個月的資料或100億個事件，以較低者為準） | &lt; 4 週 |
+| 回填少於100億個事件 | &lt; 4 週 |
+
+Analytics會回填預設為13個月。 上表所述100億次事件的上限嚴格取決於預期的延遲。
 
 >[!NOTE]
 >
