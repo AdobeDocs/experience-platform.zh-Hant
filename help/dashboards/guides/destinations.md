@@ -4,9 +4,9 @@ title: 目的地控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視組織作用中目的地的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
 workflow-type: tm+mt
-source-wordcount: '2828'
+source-wordcount: '3031'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,16 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，可讓您檢視
 ## 標準介面工具集 {#standard-widgets}
 
 Adobe提供多個標準Widget，可用來視覺化與目的地相關的不同量度，並評估資料分析可用區段的完整性。 您也可以使用 [!UICONTROL 介面工具集程式庫]. 若要進一步了解建立自訂Widget，請先閱讀 [介面工具集程式庫概觀](../customize/widget-library.md).
+
+### 先決條件 {#prerequisites}
+
+繼續說明標準小工具之前，請務必熟悉本檔案中使用的下列主要字詞的定義：
+
+* **區段：** 區段是 **規則集** 包括屬性和事件資料，這些資料會限定許多設定檔為受眾。
+* **對象**:對象是 **設定檔集** 符合區段定義的條件。
+* **已映射/映射**:資料映射是將源資料欄位映射到目標中相關目標欄位的過程。
+* **身分**:身分識別碼可唯一代表個別客戶，例如Cookie ID、裝置ID或電子郵件ID。
+* **啟動**:「啟用」是使用者為將區段或設定檔對應至目的地(例如Analytics Eloqua、Google或SalesforceOracle)而採取的動作。
 
 若要進一步了解每個可用的標準介面工具集，請從下列清單中選取介面工具集的名稱：
 
@@ -139,6 +149,8 @@ Adobe提供多個標準Widget，可用來視覺化與目的地相關的不同量
 
 ![依目的地介面工具集的「最近啟用」區段。](../images/destinations/recently-activated-segments-by-destination.png)
 
+請參閱 [使用的詞語定義](#prerequisites) 中。
+
 ### [!UICONTROL 對象大小趨勢] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
@@ -172,6 +184,8 @@ Adobe提供多個標準Widget，可用來視覺化與目的地相關的不同量
 身分欄會計算區段內可對應至介面工具集ID下拉式清單中所選ID的來源ID數量。
 
 ![依身分介面工具集的未對應區段。](../images/destinations/unmapped-segments-by-identity.png)
+
+請參閱 [使用的詞語定義](#prerequisites) 中。
 
 ### [!UICONTROL 依身分對應區段] {#mapped-segments-by-identity}
 
@@ -259,11 +273,13 @@ Adobe提供多個標準Widget，可用來視覺化與目的地相關的不同量
 
 ### [!UICONTROL 所有目的地的啟用對象] {#activated-audiences-across-all-destinations}
 
-此 [!UICONTROL 所有目的地的啟用對象] 介面工具集可提供在單一量度中啟用所有目的地的受眾總數。 此數字對於最近的快照是準確的。
+此 [!UICONTROL 所有目的地的啟用對象] 介面工具集可提供在單一量度中啟用所有目的地的受眾總數。 此介面工具集會顯示對象計數，而非區段計數。 此數字對於最近的快照是準確的。
 
 ![所有目的地介面工具集的「已啟用」對象。](../images/destinations/activated-audiences-across-all-destinations.png)
 
-選擇 **[!UICONTROL 對象]** 導覽至目的地 [!UICONTROL 瀏覽] 標籤。 此頁面提供所有已啟用的目的地和各種相關量度的清單。 請參閱 [有關 [!UICONTROL 瀏覽] 標籤](../../destinations/ui/destinations-workspace.md#browse).
+選擇 **[!UICONTROL 對象]** 導覽至目的地 [!UICONTROL 瀏覽] 標籤。 此頁面提供所有已啟用的目的地和各種相關量度的清單。 如需 [[!UICONTROL 瀏覽] 標籤](../../destinations/ui/destinations-workspace.md#browse).
+
+請參閱 [使用的詞語定義](#prerequisites) 中。
 
 ### [!UICONTROL 已啟用的對象] {#activated-audiences}
 
@@ -275,7 +291,9 @@ Adobe提供多個標準Widget，可用來視覺化與目的地相關的不同量
 
 ![「啟動資料」索引標籤醒目顯示「目標控制面板詳細資料」頁面。](../images/destinations/activation-data-tab.png)
 
-此介面工具集可協助您根據一覽啟動的對象數量，了解目的地的價值。 它還提供了對更詳細資訊的方便訪問，以供進一步分析。
+此介面工具集可協助您根據一覽啟動的對象數量，了解目的地的價值。 它還提供了更詳細資訊的輕鬆訪問，以供進一步分析。
+
+請參閱 [使用的詞語定義](#prerequisites) 中。
 
 ## 後續步驟
 
