@@ -5,9 +5,9 @@ title: 查詢服務憑證指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: e4526b515dc6f480136615f3aa78f38f3e43a60f
+source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,12 @@ ht-degree: 1%
 
 Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可以使用到期憑證或非到期憑證來連線至這些外部用戶端。
 
-## 即將到期的憑據
+## 即將到期的憑據 {#expiring-credentials}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryservice_credentials_expiringcredentials"
+>title="用戶端的SSL模式"
+>abstract="必須在連接至查詢服務的用戶端中啟用SSL。 確認SSL模式設為「必要」。"
 
 您可以使用到期憑證來快速設定與外部用戶端的連線。
 
@@ -96,7 +101,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 提供所有必要的詳細資訊後，請選取 **[!UICONTROL 更新帳戶]** 完成憑據的更新。
 
-## 使用憑據連接到外部客戶端
+## 使用憑據連接到外部客戶端 {#use-credential-to-connect}
 
 您可以使用即將到期或未到期的憑據來連接外部客戶端，如Aqua Data Studio、Looker或Power BI。 這些憑證的輸入方法會因外部用戶端而異。 請參閱外部客戶端的文檔，以了解有關使用這些憑據的具體說明。
 
