@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；GooglePubSub;google pubsub
+keywords: Experience Platform；首頁；熱門主題；Google PubSub;google pubsub
 solution: Experience Platform
-title: GooglePubSub源連接器概述
+title: Google PubSub Source Connector概述
 topic-legacy: overview
-description: 瞭解如何使用API或用戶介面將GooglePubSub連接到Adobe Experience Platform。
+description: 了解如何使用API或使用者介面將Google PubSub連線至Adobe Experience Platform。
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
+source-git-commit: 28c07150958c6ac22bf2a23537d5792b8990b2d3
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # [!DNL Google PubSub] 連接器
 
-Adobe Experience Platform提供本地連接，如 [!DNL AWS]。 [!DNL Google Cloud Platform], [!DNL Azure]，允許您將這些系統中的資料帶到平台中，以用於下游服務和目標。
+Adobe Experience Platform提供雲端提供者的原生連線，例如 [!DNL AWS], [!DNL Google Cloud Platform]，和 [!DNL Azure]，可讓您將這些系統的資料匯入Platform，以用於下游服務和目的地。
 
-雲儲存源可以將資料帶入平台，而無需下載、格式化或上載。 所攝取的資料可以格式化為XDM JSON、XDM Parke或分隔。 流程的每個步驟都整合到源工作流中。 平台允許您從 [!DNL Azure Event Hubs] 即時。
+雲端儲存來源可將您的資料匯入Platform，而無須下載、格式化或上傳。 擷取的資料可格式化為XDM JSON、XDM Parquet或分隔字元。 流程的每個步驟都整合至來源工作流程中。 Platform可讓您將資料 [!DNL Google PubSub] 即時。
 
-## 連接 [!DNL Google PubSub] 到平台
+## Connect [!DNL Google PubSub] 到平台
 
-以下文檔提供了有關如何連接的資訊 [!DNL Google PubSub] 到使用API或用戶介面的平台：
+以下檔案提供如何連線的資訊 [!DNL Google PubSub] 若要使用API或使用者介面來建立平台：
 
 ### 使用API
 
-- [使用流服務API建立GooglePubSub源連接](../../tutorials/api/create/cloud-storage/google-pubsub.md)
-- [使用流服務API收集流資料](../../tutorials/api/collect/streaming.md)
+- [使用流量服務API建立Google PubSub來源連線](../../tutorials/api/create/cloud-storage/google-pubsub.md)
+- [使用流量服務API收集串流資料](../../tutorials/api/collect/streaming.md)
 
 ### 使用UI
 
-- [在UI中建立GooglePubSub源連接](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
+- [在UI中建立Google PubSub來源連線](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
 - [在UI中為雲儲存連接配置資料流](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
