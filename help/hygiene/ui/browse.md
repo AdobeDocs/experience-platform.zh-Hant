@@ -2,7 +2,7 @@
 title: 瀏覽資料衛生工作單
 description: 了解如何在Adobe Experience Platform使用者介面中檢視及管理現有的資料衛生工作單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 4a6532bbd7a378e44e7c6139330420c0363a54af
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '868'
 ht-degree: 1%
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 ![顯示 [!UICONTROL 資料衛生] 平台UI中的工作區](../images/ui/browse/work-order-list.png)
 
-清單一次只顯示一個類別的工作單。 選擇 **[!UICONTROL 消費者]** 要查看消費者刪除任務的清單，以及 **[!UICONTROL 資料集]** 檢視排程資料集過期時間清單。
+清單一次只顯示一個類別的工作單。 選擇 **[!UICONTROL 消費者]** 查看記錄刪除任務清單，以及 **[!UICONTROL 資料集]** 檢視排程資料集過期時間清單。
 
 ![顯示 [!UICONTROL 資料集] 標籤](../images/ui/browse/dataset-tab.png)
 
@@ -41,9 +41,9 @@ ht-degree: 1%
 
 根據您正在查看的工作單類型，可以使用不同的篩選選項。
 
-### 消費者刪除的篩選
+### 記錄刪除的篩選器
 
-下列篩選條件適用於消費者刪除請求：
+下列篩選條件適用於記錄刪除請求：
 
 | 篩選 | 說明 |
 | --- | --- |
@@ -78,8 +78,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="消費者刪除回應"
->abstract="消費者刪除程式從系統收到回應時，這些訊息會顯示在 **[!UICONTROL 結果]** 區段。 如果在處理工作單時發生問題，本區段會顯示任何相關錯誤訊息，以協助您疑難排解問題。 若要進一步了解，請參閱資料衛生UI指南。"
+>title="記錄刪除響應"
+>abstract="記錄刪除程式從系統收到回應時，這些訊息會顯示在 **[!UICONTROL 結果]** 區段。 如果在處理工作單時發生問題，本區段會顯示任何相關錯誤訊息，以協助您疑難排解問題。 若要進一步了解，請參閱資料衛生UI指南。"
 
 選擇列出的工作單的ID以查看其詳細資訊。
 
@@ -87,11 +87,11 @@ ht-degree: 1%
 
 根據所選工作單的類型，提供不同的資訊和控制。 以下各節將介紹這些內容。
 
-### 消費者刪除詳細資訊 {#consumer-delete}
+### 記錄刪除詳細資訊 {#record-delete}
 
-消費者刪除請求的詳細資訊包括其目前狀態和自請求提出以來經過的時間。 每個請求也包含 **[!UICONTROL 按服務列出的狀態]** 一節，提供刪除中涉及的每個下游服務的個別狀態詳細資訊。 在右側邊欄中，您可以使用控制項來更新工作單的名稱和說明。
+記錄刪除請求的詳細資訊包括其當前狀態和自請求發出以來經過的時間。 每個請求也包含 **[!UICONTROL 按服務列出的狀態]** 一節，提供刪除中涉及的每個下游服務的個別狀態詳細資訊。 在右側邊欄中，您可以使用控制項來更新工作單的名稱和說明。
 
-![顯示消費者刪除工作單詳細資訊頁面的影像](../images/ui/browse/consumer-delete-details.png)
+![顯示記錄刪除工作單詳細資訊頁面的影像](../images/ui/browse/record-delete-details.png)
 
 ### 資料集過期詳細資訊 {#dataset-expiration}
 
@@ -104,4 +104,4 @@ ht-degree: 1%
 本指南說明如何在Platform UI中檢視及管理現有的資料衛生工作單。 有關建立自己的工作單的資訊，請參閱以下文檔：
 
 * [管理資料集過期時間](./dataset-expiration.md)
-* [管理消費者刪除](./delete-consumer.md)
+* [管理記錄刪除](./record-delete.md)

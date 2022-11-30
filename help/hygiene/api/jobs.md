@@ -1,21 +1,21 @@
 ---
-title: 使用資料衛生API刪除消費者記錄
+title: 使用資料衛生API刪除記錄
 description: 了解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: c2ff0d5806e57f230b937e8754d40031fb4b2305
+source-git-commit: da8b5d9fffdf8a176a4d70be5df5b3021cf0df7b
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
 
-# 使用資料衛生API刪除消費者記錄
+# 使用資料衛生API刪除記錄
 
 >[!IMPORTANT]
 >
->此端點代表消費者刪除的測試版功能。 如需最新功能，請使用 [`/workorder` 端點](./workorder.md) 。
+>此端點表示記錄刪除的測試版功能。 如需最新功能，請使用 [`/workorder` 端點](./workorder.md) 。
 
 資料衛生API可讓您以程式設計方式修正或刪除客戶儲存在Adobe Experience Platform中的個人資料。
 

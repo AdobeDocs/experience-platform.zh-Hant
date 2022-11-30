@@ -2,7 +2,7 @@
 title: 資料衛生概述
 description: Adobe Experience Platform資料衛生功能可讓您更新或清除過時或不準確的記錄，以管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 7679de9d30c00873b279c5315aa652870d8c34fd
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 1%
@@ -17,14 +17,14 @@ ht-degree: 1%
 
 Adobe Experience Platform提供一組完善的工具，可管理大型、複雜的資料操作，以便協調消費者體驗。 隨著資料隨著時間傳入系統中，管理資料儲存變得越來越重要，這樣資料就能如預期般使用、在需要更正錯誤資料時更新，並在組織原則認為有必要時刪除。
 
-Platform的資料衛生功能可讓您透過下列方式管理儲存的消費者資料：
+Platform的資料衛生功能可讓您透過下列方式管理儲存的資料：
 
 * 排程自動資料集有效期
-* 從記錄中刪除個別消費者資料
+* 從一或所有資料集中刪除個別記錄
 
 >[!IMPORTANT]
 >
->消費者刪除應用於資料清除、移除匿名資料或將資料最小化。 是 **not** 用於與一般資料保護規範(GDPR)等隱私權法規相關的資料主體權利要求（法規遵循）。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../privacy-service/home.md) 。
+>記錄刪除旨在用於資料清除、刪除匿名資料或將資料最小化。 是 **not** 用於與一般資料保護規範(GDPR)等隱私權法規相關的資料主體權利要求（法規遵循）。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../privacy-service/home.md) 。
 
 這些活動可使用 [[!UICONTROL 資料衛生] UI工作區](#ui) 或 [資料衛生API](#api). 當執行資料衛生作業時，系統在處理的每個步驟提供透明度更新。 請參閱 [時間表和透明度](#timelines-and-transparency) 有關在系統中如何表示每個作業類型的詳細資訊。
 
@@ -40,7 +40,7 @@ Platform的資料衛生功能可讓您透過下列方式管理儲存的消費者
 
 ## 時間表和透明度
 
-消費者刪除和資料集過期請求各有其各自的處理時間表，並在其各自工作流程的關鍵點提供透明度更新。 有關每種作業類型的詳細資訊，請參閱以下各節。
+記錄刪除和資料集過期請求各自有各自的處理時間軸，並在各自工作流程的關鍵點提供透明度更新。 有關每種作業類型的詳細資訊，請參閱以下各節。
 
 ### 資料集有效期 {#dataset-expiration-transparency}
 
@@ -57,17 +57,17 @@ Platform的資料衛生功能可讓您透過下列方式管理儲存的消費者
 
 {style=&quot;table-layout:auto&quot;}
 
-### 消費者刪除 {#consumer-delete-transparency}
+### 記錄刪除 {#record-delete-transparency}
 
 >[!IMPORTANT]
 >
->消費者刪除僅適用於已購買AdobeHealthcare Shield的組織。
+>記錄刪除僅適用於已購買AdobeHealthcare Shield的組織。
 
-若 [消費者刪除請求](./ui/delete-consumer.md) 已建立：
+若 [記錄刪除請求](./ui/record-delete.md) 已建立：
 
 | 測試 | 提交請求後時間 | 說明 |
 | --- | --- | --- |
-| 請求已提交 | 0小時 | 資料管理員或隱私權分析員會提交消費者刪除請求。 請求會顯示在 [!UICONTROL 資料衛生UI] 在提交後。 |
+| 請求已提交 | 0小時 | 資料管理員或隱私權分析員會提交記錄刪除請求。 請求會顯示在 [!UICONTROL 資料衛生UI] 在提交後。 |
 | 已更新設定檔查閱 | 3 小時 | 刪除的身分造成的設定檔計數變更反映在 [控制面板小工具](../dashboards/guides/profiles.md#profile-count-trend) 和其他報告。 |
 | 已更新區段 | 24小時 | 移除設定檔後，所有相關 [區段](../segmentation/home.md) 會更新以反映其新大小。 |
 | 已更新歷程和目的地 | 26小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)，和 [目的地](../destinations/home.md) 會根據相關區段的變更而更新。 |

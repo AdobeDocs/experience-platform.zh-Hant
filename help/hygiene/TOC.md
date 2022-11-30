@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: 資料保健說明
 breadcrumb-title: 資料保健指南
-user-guide-description: 管理消費者資料要求，以符合 GDPR 和 CCPA 等法律隱私權法規。
+user-guide-description: 刪除個別記錄，並排程資料集到期日，以Experience Platform進行資料清理、移除匿名資料，以及將資料最小化。
 feature: Data Hygiene
-source-git-commit: 16eecb22a1bec89c7dbac2fcee566a2226cf897f
+source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 45%
+source-wordcount: '52'
+ht-degree: 15%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 45%
    * [總覽](./ui/overview.md)
    * [瀏覽現有工作單](./ui/browse.md)
    * [管理資料集過期時間](./ui/dataset-expiration.md)
-   * [刪除消費者記錄](./ui/delete-consumer.md)
+   * [刪除記錄](./ui/record-delete.md)
 * 資料衛生API {#api}
    * [總覽](./api/overview.md)
    * [資料集有效期](./api/dataset-expiration.md)
-   * [消費者刪除](./api/workorder.md)
+   * [記錄刪除](./api/workorder.md)
    * [配額](./api/quota.md)
