@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；串流連線；建立串流連線；api指南；教學課程；建立串流連線；串流內嵌；擷取；
-title: 使用API建立HTTP API串流連線
-description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
+title: 使用流程服務API建立HTTP API串流連線
+description: 本教學課程提供如何使用Flow Service API為原始和XDM資料使用HTTP API來源建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: d4889a302edbcdbe3f4a969a616c2fbc52f6c556
+source-git-commit: 26c967418e983322cc39aa799a681d258638d769
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1424'
 ht-degree: 3%
 
 ---
@@ -259,10 +259,10 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
       "createdBy": "acme@AdobeID",
       "updatedBy": "acme@AdobeID",
       "createdClient": "{CREATED_CLIENT}",
-      "updatedClient": "{UPDATEDD_CLIENT}",
+      "updatedClient": "{UPDATED_CLIENT}",
       "sandboxId": "{SANDBOX_ID}",
       "sandboxName": "{SANDBOX_NAME}",
-      "imsOrgId": "{ORG_ID}}",
+      "imsOrgId": "{ORG_ID}",
       "name": "ACME Streaming Connection XDM Data",
       "description": "ACME streaming connection for customer data",
       "connectionSpec": {
