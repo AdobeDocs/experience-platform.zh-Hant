@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流程服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API為原始和XDM資料使用HTTP API來源建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 26c967418e983322cc39aa799a681d258638d769
+source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
 workflow-type: tm+mt
-source-wordcount: '1424'
-ht-degree: 3%
+source-wordcount: '1472'
+ht-degree: 2%
 
 ---
 
@@ -132,7 +132,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 當您需要區分來自受信任和不受信任來源的記錄時，應使用已驗證的連線。 想要透過個人識別資訊(PII)傳送資訊的使用者，應在將資訊串流至Platform時建立已驗證的連線。
 
-若要建立已驗證的基本連線，您必須指定您的來源ID，以及向 `/connections` 端點。
+若要建立已驗證的基本連線，您必須包含 `authenticationRequired` 參數，並將其值指定為 `true`. 在此步驟中，您也可以提供已驗證基本連線的來源ID。 此參數為選用值，且會使用與 `name` 屬性（若未提供）。
 
 
 **API格式**
@@ -166,9 +166,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "{SOURCE_ID}",
+             "sourceId": "Authenticated XDM streaming connection",
              "dataType": "xdm",
-             "name": "Sample connection",
+             "name": "Authenticated XDM streaming connection",
              "authenticationRequired": true
          }
      }
@@ -194,9 +194,9 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
      "auth": {
          "specName": "Streaming Connection",
          "params": {
-             "sourceId": "Sample connection",
+             "sourceId": "Authenticated raw streaming connection",
              "dataType": "raw",
-             "name": "Sample connection",
+             "name": "Authenticated raw streaming connection",
              "authenticationRequired": true
          }
      }
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.sourceId` | 您要建立的串流連線ID。 |
+| `auth.params.sourceId` | 建立已驗證的基礎連線時可使用的額外識別碼。 此參數為選用值，且會使用與 `name` 屬性（若未提供）。 |
 | `auth.params.authenticationRequired` | 指定已建立串流連接的參數 |
 
 **回應**
