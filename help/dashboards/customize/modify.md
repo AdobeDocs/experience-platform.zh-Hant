@@ -3,9 +3,9 @@ keywords: Experience Platform；使用者介面；UI；控制面板；控制面�
 title: 修改UI中的Platform控制面板
 description: 本指南提供逐步指示，自訂組織的Adobe Experience Platform資料在控制面板中的顯示方式。
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: d5acc317a48aef94dd4d6e3ccea89d0d674c8b34
+source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,13 @@ ht-degree: 0%
 
 從任何控制面板(例如 [!UICONTROL 設定檔] 控制面板)，您可以選取 **[!UICONTROL 修改控制面板]** 以調整現有小工具的大小並重新排序。
 
-![](../images/customization/modify-dashboard.png)
+![突出顯示帶有「修改」(Modify)控制面板的「配置檔案」(Profiles)控制面板。](../images/customization/modify-dashboard.png)
 
 ## 重新排序小部件
 
 選擇修改控制面板後，您可以通過選擇介面工具集標題，並將介面工具集拖放到所需順序來重新排序介面工具集。 在此範例中， **[!UICONTROL 設定檔計數趨勢]** 介面工具集會移至頂端列，而 **[!UICONTROL 設定檔計數]** 介面工具集現在會顯示在第二列。
 
-![](../images/customization/move-widget.png)
+![「設定檔」控制面板中突出顯示了兩個重新排序的小部件。](../images/customization/move-widget.png)
 
 ## 調整小工具的大小
 
@@ -40,13 +40,13 @@ ht-degree: 0%
 >
 >隨著小工具的大小調整，周圍小工具會動態重新定位。 這可能會導致某些小工具被移動到其他行，需要您滾動才能查看所有小工具。
 
-![](../images/customization/resize-widget.png)
+![「配置檔案」控制面板，其中突出顯示了調整大小的Widget。](../images/customization/resize-widget.png)
 
 ## 儲存控制面板更新
 
 完成移動和調整小部件大小後，請選擇 **[!UICONTROL 儲存並退出]** 以儲存變更並返回主控制面板檢視。 如果您不想保留變更，請選取 **[!UICONTROL 取消]** 重設控制面板並返回主控制面板檢視。
 
-![](../images/customization/save-changes.png)
+![會反白顯示「取消」和「儲存並退出」的「設定檔」控制面板。](../images/customization/save-changes.png)
 
 ## 介面工具集程式庫
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 如需存取和使用的逐步指示 [!UICONTROL 介面工具集程式庫]，請參閱 [widget程式庫指南](widget-library.md).
 
-![](../images/customization/widget-library.png)
+![反白顯示「標準」和「自訂」的Widget程式庫工作區。](../images/customization/widget-library.png)
 
 ## 後續步驟
 

@@ -4,9 +4,9 @@ title: 授權使用控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織的授權使用情況重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 >
 >預設不會啟用授權使用控制面板。 必須授予使用者「檢視授權使用量控制面板」權限，才能檢視控制面板。 有關授予訪問權限以查看許可證使用控制面板的步驟，請參閱 [控制面板權限指南](../permissions.md).
 
-![](../images/license-usage/dashboard-overview.png)
+![「許可證使用情況」儀表板概述頁簽。](../images/license-usage/dashboard-overview.png)
 
 ### 選取沙箱
 
@@ -41,7 +41,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 相同類型的所有沙箱的耗用量報表都是累計的。 換句話說，選取 [!UICONTROL 生產] 或 [!UICONTROL 開發] 分別為所有生產或開發沙箱提供耗用量報表。
 
-![](../images/license-usage/select-sandbox.png)
+![反白顯示沙箱選取器時，「授權使用情況」控制面板「概述」標籤。](../images/license-usage/select-sandbox.png)
 
 >[!WARNING]
 >
@@ -56,11 +56,11 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 選取沙箱後，您可以使用日期範圍下拉式清單，選取要在控制面板中顯示的時段。 有多個可用選項，包括過去30天的預設值。
 
-![](../images/license-usage/select-date-range.png)
+![「授權使用情況」控制面板「概述」標籤，並反白顯示日期範圍下拉式清單。](../images/license-usage/select-date-range.png)
 
 您也可以選取 **[!UICONTROL 自訂日期]** 來選擇顯示的時段。
 
-![](../images/license-usage/select-custom-date.png)
+![「授權使用控制面板概述」標籤，並反白顯示自訂日期範圍選項。](../images/license-usage/select-custom-date.png)
 
 ## 介面工具集
 
@@ -68,7 +68,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 每個Widget都會顯示一個折線圖，比較貴組織的實際數量與貴組織授權時可用的總數，並提供總使用量的百分比。
 
-![](../images/license-usage/widgets.png)
+![「許可證使用情況」儀表板「概述」頁簽，其中突出顯示「示例許可證使用情況」度量Widget的線形圖。](../images/license-usage/widgets.png)
 
 ## 可用量度
 

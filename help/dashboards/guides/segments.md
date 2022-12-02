@@ -4,9 +4,9 @@ title: 區段控制面板指南
 description: Adobe Experience Platform提供控制面板，供您檢視貴組織已建立區段的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 23df35d7d90b6674b089a842818dba83283a1646
+source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
 workflow-type: tm+mt
-source-wordcount: '2092'
+source-wordcount: '2105'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，讓您透過控
 >
 >如果您的組織剛接觸Platform，且尚未建立作用中的設定檔資料集或合併原則，請 [!UICONTROL 區段] 控制面板未顯示。 反之， [!UICONTROL 概述] 索引標籤會顯示可協助您開始使用區段的連結和檔案。
 
-![區段控制面板概述標籤。](../images/segments/dashboard-overview.png)
+![區段控制面板概述標籤會反白顯示區段和概述。](../images/segments/dashboard-overview.png)
 
 ### 修改 [!UICONTROL 區段] 儀表板 {#modify}
 
@@ -204,7 +204,7 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 選擇 **[!UICONTROL 字幕]** 開啟自動字幕對話框。
 
-![「按身份顯示的配置檔案」標題對話框。](../images/segments/profiles-by-identity.png)
+![「區段」控制面板概觀，並反白顯示「依身分識別Widget設定檔」和「註解」選項。](../images/segments/profiles-by-identity.png)
 
 機器學習模型會透過分析資料的整體分佈和關鍵維度，自動產生資料洞察。
 

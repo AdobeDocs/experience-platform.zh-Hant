@@ -4,9 +4,9 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: fdfc2a2b0f1f5be0508741de0e70ad72fe07d79f
+source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
 workflow-type: tm+mt
-source-wordcount: '3385'
+source-wordcount: '3416'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有
 >
 >如果您的組織是初次使用Platform，且尚未建立作用中的設定檔資料集或合併原則，則不會顯示設定檔控制面板。 反之， [!UICONTROL 概述] 索引標籤會顯示連結和檔案，協助您開始使用即時客戶設定檔。
 
-![](../images/profiles/dashboard-overview.png)
+![「Experience Platform設定檔」控制面板會強調顯示「設定檔與概觀」。](../images/profiles/dashboard-overview.png)
 
 ### 修改設定檔控制面板
 
@@ -142,7 +142,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >
 >另一個常見原因是，拍攝控制面板快照的時間與為 [!UICONTROL 瀏覽] 標籤。 您可以查看 [!UICONTROL 設定檔計數] 上次更新介面工具集的方式是查看介面工具集的時間戳記。 若要進一步了解如何在 [!UICONTROL 瀏覽] 頁簽，請參閱 [即時客戶個人檔案UI指南中的設定檔計數區段](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
-![](../images/profiles/profile-count.png)
+![「Experience Platform描述檔」控制面板，會強調顯示描述檔計數介面工具集。](../images/profiles/profile-count.png)
 
 ### [!UICONTROL 設定檔計數趨勢] {#profile-count-trend}
 
@@ -230,7 +230,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 若要進一步了解身分，請造訪 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md).
 
-![](../images/profiles/identity-overlap.png)
+![「設定檔」控制面板概述，並反白顯示「身分重疊」Widget。](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL 單一身分設定檔] {#single-identity-profiles}
 

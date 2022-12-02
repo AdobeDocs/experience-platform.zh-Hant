@@ -2,9 +2,9 @@
 title: 使用者定義的控制面板
 description: 了解如何建立和管理自訂控制面板，以便建立、新增和編輯自訂小工具，以視覺化關鍵量度。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,12 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 為確保Adobe Real-time Customer Data Platform深入分析控制面板的每個查詢都有足夠的資源來有效執行，API會為每個查詢指派並行槽來追蹤資源使用情形。 該系統最多可處理四個併發查詢，因此，在任何給定時間都有四個併發查詢槽可用。 根據併發槽將查詢放入隊列，然後在隊列中等待，直到有足夠的併發槽可用。
 
-## 後續步驟
+## 後續步驟和其他資源
 
 閱讀本檔案後，您就更能了解如何建立自訂控制面板，以及如何為該控制面板建立、編輯和更新自訂小工具。
 
 若要探索 [設定檔](./guides/profiles.md#standard-widgets), [區段](./guides/segments.md#standard-widgets)，和 [目的地](./guides/destinations.md#standard-widgets) 控制面板，請參閱其個別檔案中的標準Widget清單。
+
+若要加深您對Experience Platform中使用者定義控制面板的了解，請觀看下列影片：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
