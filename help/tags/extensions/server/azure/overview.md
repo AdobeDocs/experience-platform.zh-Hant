@@ -2,9 +2,9 @@
 title: Microsoft Azure擴充功能概述
 description: 了解Adobe Experience Platform中用於事件轉送的Microsoft Azure擴充功能。
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: 8b972841c8412d510fce4c970a09d9c1eecd401e
+source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 4%
 
 ## 設定事件轉送規則 {#rule}
 
-開始建立新的事件轉送規則，並視需要設定其條件。 選取規則的動作時，請選取 **[!UICONTROL Microsoft Azure]** 對於擴充功能，請選取 **[!UICONTROL 將資料發送到事件中心]** （針對動作類型）。
+開始建立新的事件轉送規則，並視需要設定其條件。 選取規則的動作時，請選取 **[!UICONTROL Microsoft Azure]** 對於擴充功能，請選取 **[!UICONTROL 將資料發送到事件中心]** （適用於動作類型）。
 
 ![此 [!UICONTROL 將資料發送到事件中心] 在資料收集UI中為規則選取的動作類型。](../../../images/extensions/server/azure/select-action-type.png)
 
