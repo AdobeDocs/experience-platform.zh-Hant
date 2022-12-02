@@ -4,7 +4,7 @@ title: 目的地控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視組織作用中目的地的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 66e8d3c594280d4b40cb2b6170544d4411220a6a
+source-git-commit: d9e10271db52f61cdc3e4adc546fe05adadb5a46
 workflow-type: tm+mt
 source-wordcount: '3031'
 ht-degree: 0%
@@ -273,7 +273,13 @@ Adobe提供多個標準Widget，可用來視覺化與目的地相關的不同量
 
 ### [!UICONTROL 所有目的地的啟用對象] {#activated-audiences-across-all-destinations}
 
-此 [!UICONTROL 所有目的地的啟用對象] 介面工具集可提供在單一量度中啟用所有目的地的受眾總數。 此介面工具集會顯示對象計數，而非區段計數。 此數字對於最近的快照是準確的。
+此 [!UICONTROL 所有目的地的啟用對象] 介面工具集可提供在單一量度中啟用所有目的地的受眾總數。
+
+>[!NOTE]
+>
+>此介面工具集會顯示對象計數，而非區段計數。
+
+此數字對於最近的快照是準確的。
 
 ![所有目的地介面工具集的「已啟用」對象。](../images/destinations/activated-audiences-across-all-destinations.png)
 
