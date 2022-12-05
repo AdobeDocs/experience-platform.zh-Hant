@@ -5,7 +5,7 @@ title: 自動策略實施
 topic-legacy: guide
 description: 本檔案說明在Experience Platform中將區段啟用至目的地時，如何自動強制執行資料使用原則。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
 workflow-type: tm+mt
 source-wordcount: '1700'
 ht-degree: 0%
@@ -13,6 +13,10 @@ ht-degree: 0%
 ---
 
 # 自動策略實施
+
+>[!IMPORTANT]
+>
+>自動策略實施僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
 在對資料進行標籤並定義使用策略後，您就可以使用策略強制資料使用符合性。 將對象區段啟用至目的地時，Adobe Experience Platform會在發生任何違規時自動強制使用原則。
 
@@ -107,10 +111,6 @@ ht-degree: 0%
 ![](../images/enforcement/list-view.png)
 
 ### 同意政策評估 {#consent-policy-evaluation}
-
->[!IMPORTANT]
->
->同意政策目前僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
 若您有 [建立同意政策](../policies/user-guide.md#consent-policy) 和要將區段啟用至目的地時，您可以了解您的同意政策如何影響啟用中包含之設定檔的百分比。
 

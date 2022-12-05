@@ -5,9 +5,9 @@ title: 在UI中管理資料使用原則
 topic-legacy: policies
 description: Adobe Experience Platform資料控管提供的使用者介面可讓您建立和管理資料使用原則。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1407'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Adobe Experience Platform資料控管提供的使用者介面可讓您建立和�
 
 >[!IMPORTANT]
 >
->同意政策目前僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
+>同意政策僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
 如果選擇建立同意策略，則會出現一個新螢幕，允許您配置新策略。
 
