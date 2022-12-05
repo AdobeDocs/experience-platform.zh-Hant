@@ -2,9 +2,9 @@
 title: 資料衛生UI指南
 description: 了解如何在Adobe Experience Platform使用者介面中管理資料衛生工作。
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: d4073f18844de65b9181667d0332c0315ee1cc09
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="資料衛生輪"
->abstract="此介面工具集顯示所選時間範圍內資料衛生記錄刪除作業的狀態。 有關資料衛生流程的詳細資訊，請選擇 **資料衛生** 的下一頁。"
+>title="資料衛生請求狀態"
+>abstract="此小部件顯示已建立、失敗和已完成的資料衛生記錄刪除作業的總數。 有關資料衛生流程的詳細資訊，請選擇 **資料衛生** 的下一頁。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
