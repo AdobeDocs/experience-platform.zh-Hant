@@ -6,10 +6,10 @@ description: 本文說明透過臨機啟動API來啟動對象區段的端對端�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 8d67d89db6a8c179935b4fe709f91279860d464e
+source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 2%
+source-wordcount: '1563'
+ht-degree: 1%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 2%
 
 臨機啟動API可讓行銷人員針對需要立即啟動的情況，以快速且有效的方式，以程式設計方式將對象區段啟用至目的地。
 
+使用Ad-Hoc Activation API將完整檔案匯出至您想要的檔案接收系統。 僅支援隨選對象啟動 [批次檔案型目的地](../destination-types.md#file-based).
+
 下圖說明透過臨機啟動API來啟用區段的端對端工作流程，包括每24小時在Platform中發生的區段工作。
 
 ![臨機啟動](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
->[!NOTE]
->
->僅支援隨選對象啟動 [批次檔案型目的地](../destination-types.md#file-based).
+
 
 ## 使用案例 {#use-cases}
 
@@ -129,7 +129,7 @@ Adobe Experience Platform每24小時執行一次已排程的分段工作。 臨�
 >
 >請注意下列一次性限制：在執行臨機啟動工作之前，請確定自根據您在 [步驟3 — 在Platform UI中建立啟動流程](#activation-flow).
 
-在執行臨機啟動工作之前，請確定您區段的已排程區段匯出工作已完成。 請參閱 [目標資料流監視](../../dataflows/ui/monitor-destinations.md) 以了解如何監控啟動流程的狀態。 例如，如果激活資料流顯示 **[!UICONTROL 處理]** 狀態，請等待它完成，再執行臨機啟動工作。
+在執行臨機啟動工作之前，請確定您區段的已排程區段匯出工作已完成。 請參閱 [目標資料流監視](../../dataflows/ui/monitor-destinations.md) 以了解如何監控啟動流程的狀態。 例如，如果激活資料流顯示 **[!UICONTROL 處理]** 狀態，請等待它完成，再執行臨機啟動工作以匯出完整檔案。
 
 區段匯出工作完成後，您即可觸發啟動。
 
@@ -250,3 +250,4 @@ Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 
 ## 相關資訊 {#related-information}
 
 * [使用流量服務API連線至批次目的地並啟動資料](/help/destinations/api/connect-activate-batch-destinations.md)
+* [（測試版）使用Experience PlatformUI，隨選將檔案匯出至批次目的地](/help/destinations/ui/export-file-now.md)
