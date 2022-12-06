@@ -5,9 +5,9 @@ title: 資料準備映射函式
 topic-legacy: overview
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: b7800dd67c2d16747815f2cb3311ca9b6d6fa342
+source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4367'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,11 @@ ht-degree: 3%
 
 欄位名稱可以是任何法律識別碼 — Unicode字母和數字的無限長序列，以字母開頭，貨幣符號(`$`)或底線字元(`_`)。 變數名稱也區分大小寫。
 
-如果欄位名稱未遵循此慣例，則欄位名稱必須以包住 `${}`. 因此，例如，如果欄位名稱為「名字」或「名字」，則名稱必須包裝如下 `${First Name}` 或 `${First.Name}` 分別為5個。
+如果欄位名稱未遵循此慣例，則欄位名稱必須以包住 `${}`. 因此，例如，如果欄位名稱為「名字」或「名字」，則名稱必須包裝如下 `${First Name}` 或 `${First\.Name}` 分別為5個。
+
+>[!TIP]
+>
+>與階層互動時，如果子屬性具有句點(`.`)，您必須使用反斜線(`\`)以逸出特殊字元。 如需詳細資訊，請參閱 [逸出特殊字元](home.md#escape-special-characters).
 
 此外，如果欄位名稱為 **any** 在下列保留的關鍵字中，必須將其包住 `${}`:
 
