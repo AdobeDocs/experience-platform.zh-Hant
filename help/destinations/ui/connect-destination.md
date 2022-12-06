@@ -4,9 +4,9 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 了解如何連線至Adobe Experience Platform中的目的地、啟用警報，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 434b9ed4f64320b5fd73b752716cb34a8e48aec9
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ![顯示連接到交易台目標時所需和可選輸入參數的影像。](../assets/ui/connect-destinations/connect-destination-trade-desk-example.png)
 
-### 設定導出檔案的檔案格式選項 {#file-formatting-and-compression-options}
+### （測試版）設定匯出檔案的檔案格式選項 {#file-formatting-and-compression-options}
 
 對於基於檔案的目的地，您可以配置與導出檔案的格式化和壓縮方式相關的各種設定。 如需所有可用格式和壓縮選項的詳細資訊，請閱讀 [為檔案式目的地教學課程設定檔案格式選項](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 

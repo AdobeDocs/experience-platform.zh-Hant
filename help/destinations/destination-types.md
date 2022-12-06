@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地類型
 title: 目的地類型和類別
 description: 了解Adobe Experience Platform中不同的目的地類型和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c140e68467065d17f143850bfb8eefb3ac46443a
+source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '680'
 ht-degree: 0%
 
 ---
@@ -97,4 +97,4 @@ Experience Platform中的邊緣個人化目的地包括 [Adobe Target](/help/des
 
 中的連線和擴充功能 [目的地目錄](https://platform.adobe.com/destination/catalog) 按目標類別分組(**廣告**, **雲端儲存空間**, **調查平台**, **電子郵件行銷**&#x200B;等)，取決於協助您達成的行銷動作。 如需各個類別的詳細資訊，以及每個類別中包含的目的地，請參閱 [目的地目錄檔案](./catalog/overview.md).
 
-![目標類別](./assets/destination-types/destination-categories-menu.png)
+![目錄頁面中反白顯示的目的地類別。](./assets/destination-types/destination-categories-menu.png)
