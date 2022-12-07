@@ -5,10 +5,10 @@ title: 將DbVisualizer連接到查詢服務
 topic-legacy: connect
 description: 本檔案會逐步說明將DbVisualizer與Adobe Experience Platform Query Service連線的步驟。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 640a89231abf96a966f55dce2e3a7242c739538f
+source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 0%
+source-wordcount: '950'
+ht-degree: 1%
 
 ---
 
@@ -36,38 +36,44 @@ ht-degree: 0%
 
 ![驅動程式名稱下拉菜單，包含 [!DNL PostgreSQL] 突出顯示。](../images/clients/dbvisualizer/driver-name.png)
 
+### 設定連線的屬性 {#properties}
+
 從「資料庫連接」工作區中，選擇 **[!DNL Properties]** 標籤，後面 **[!DNL Driver Properties]** 欄。
 
 ![突出顯示了「Properties（屬性）」和「Driver Properties（驅動程式屬性）」的「Database Connection（資料庫連接）」工作區。](../images/clients/dbvisualizer/driver-properties.png)
 
-建議使用下表中顯示的驅動程式屬性，以啟用SSL與DBVisualizer。
-
-| 屬性 | 說明 |
-| ------ | ------ |
-| `PGHOST` | 的主機名稱 [!DNL PostgreSQL] 伺服器。 此值是您的Experience Platform [!UICONTROL 主機] 憑據。 |
-| `ssl` | 定義SSL值 `1` 啟用SSL。 |
-| `sslmode` | 這會控制SSL保護的層級。 建議您使用 `require` 將協力廠商用戶端連線至Adobe Experience Platform時為SSL模式。 此 `require` mode確保所有通信都需要加密，並且網路被信任連接到正確的伺服器。 不需要伺服器SSL憑證驗證。 如需詳細資訊，請參閱 [用於連接第三方客戶端的SSL選項](./ssl-modes.md) to [!DNL Query Service]. |
-| `user` | 連接到資料庫的用戶名是您的組織ID。 它是結尾為的英數字串 `@adobe.org` |
+接下來，輸入下表中描述的驅動程式屬性。
 
 >[!IMPORTANT]
 >
->請參閱 [[!DNL Query Service] SSL檔案](./ssl-modes.md) 了解協力廠商連線至Adobe Experience Platform Query Service的SSL支援，以及如何使用 `verify-full` SSL模式。
+>要使用Adobe Experience Platform連接DBVisualizer，必須啟用SSL的使用。 請參閱 [SSL模式檔案](./ssl-modes.md) 了解協力廠商連線至Adobe Experience Platform Query Service的SSL支援，以及如何使用 `verify-full` SSL模式。
 
-### [!DNL Query Service] 憑據
-
-此 `PGHOST` 和 `user` 值會取自您的Adobe Experience Platform憑證。 若要尋找憑證，請登入Platform UI並選取 **[!UICONTROL 查詢]** 從左側導覽，後跟 **[!UICONTROL 憑證]**. 有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請閱讀 [認證指南](../ui/credentials.md).
-
-![「Experience Platform查詢」工作區的「憑據」頁面會反白顯示「憑據」和「即將到期的憑據」。](../images/clients/dbvisualizer/query-service-credentials-page.png)
-
-[!DNL Query Service] 也提供非到期憑證，以允許與協力廠商用戶端進行一次性設定。 請參閱 [有關如何生成和使用未到期憑據的完整說明](../ui/credentials.md#non-expiring-credentials).
+| 屬性 | 說明 |
+| ------ | ------ |
+| `PGHOST` | 的主機名稱 [!DNL PostgreSQL] 伺服器。 此值是您的Experience Platform **[!UICONTROL 主機] 憑據**. |
+| `ssl` | 定義SSL值 `1` 啟用SSL。 |
+| `sslmode` | 這會控制SSL保護的層級。 建議您使用 `require` 將協力廠商用戶端連線至Adobe Experience Platform時使用SSL模式。 此 `require` mode確保所有通信都需要加密，並且網路被信任連接到正確的伺服器。 不需要伺服器SSL憑證驗證。 |
+| `user` | 連接到資料庫的用戶名是您的組織ID。 它是結尾為的英數字串 `@Adobe.Org`. 此值是您的Experience Platform **[!UICONTROL 使用者名稱] 憑據**. |
 
 使用搜尋列來尋找每個屬性，然後為參數的值選取對應的儲存格。 儲存格會以藍色反白顯示。 在值欄位中輸入您的平台憑證，然後選取 **[!DNL Apply]** 添加驅動程式屬性。
+
+![輸入了值，並突出顯示了「應用」，此時會顯示「DBVisulaizer驅動程式屬性」頁簽。](../images/clients/dbvisualizer/apply-parameter-value.png)
 
 >[!NOTE]
 >
 >要添加秒數 `user` 設定檔，選取 `user` 從「參數」欄中，選取藍色+（加號）圖示，以新增每位使用者的認證。 選擇 **[!DNL Apply]** 添加驅動程式屬性。
 
 此 [!DNL Edited] 欄會顯示勾選記號，表示參數值已更新。
+
+### 輸入[!DNL Query Service] 憑據
+
+要查找將BBVisualizer與Query Service連接所需的憑據，請登錄到Platform UI並選擇 **[!UICONTROL 查詢]** 從左側導覽，後跟 **[!UICONTROL 憑證]**. 如需尋找您 **主機**, **埠**, **資料庫**, **用戶名**，和 **密碼** 憑證，請閱讀 [認證指南](../ui/credentials.md).
+
+![「Experience Platform查詢」工作區的「憑據」頁面會反白顯示「憑據」和「即將到期的憑據」。](../images/clients/dbvisualizer/query-service-credentials-page.png)
+
+>[!IMPORTANT]
+>
+>[!DNL Query Service] 也提供非到期憑證，以允許與協力廠商用戶端進行一次性設定。 請參閱 [有關如何生成和使用未到期憑據的完整說明](../ui/credentials.md#non-expiring-credentials). 如果要將BDVisualizer作為一次性設定連接，則必須完成此過程。 此 `credential` 和 `technicalAccountId` 獲取的值包括DBVisualizer的值 `password` 參數。
 
 ## 驗證
 
@@ -79,14 +85,20 @@ ht-degree: 0%
 
 ## 連線至平台
 
-若要建立連線，請選取 **[!DNL Connection]** 頁簽，然後為以下設定輸入Experience Platform憑據。
+您可以使用到期或未到期的憑證建立連線。 若要建立連線，請選取 **[!DNL Connection]** 頁簽，然後為以下設定輸入Experience Platform憑據。
 
-- **名稱**:建議您提供好記的名稱以識別連線。
-- **資料庫伺服器**:這是您的Experience Platform [!UICONTROL 主機] 憑據。
-- **資料庫埠**:的埠 [!DNL Query Service]. 必須使用埠80連接 [!DNL Query Service].
-- **資料庫**:使用憑據 `dbname` value `prod:all`.
-- **資料庫用戶ID**:這是您的平台組織Id。 Userid將採用 `ORG_ID@AdobeOrg`.
-- **資料庫密碼**:這是在 [!DNL Query Service] 憑證控制面板。
+>[!NOTE]
+>
+>下表中BDVisualizer要求的所有憑據對於即將到期和非即將到期的憑據都相同，除非參數說明中有所述。
+
+| 連線參數 | 說明 |
+|---|---|
+| **[!UICONTROL 名稱]** | 為連線建立名稱。 建議您提供易記名稱以識別連線。 |
+| **[!UICONTROL 資料庫伺服器]** | 這是您的Experience Platform **[!UICONTROL 主機]** 憑據。 |
+| **[!UICONTROL 資料庫埠]** | 的埠 [!DNL Query Service]. 必須使用埠 **80** 連線 [!DNL Query Service]. |
+| **[!UICONTROL 資料庫]** | 使用您的Experience Platform **[!UICONTROL 資料庫]** 憑據值： `prod:all`. |
+| **[!UICONTROL 資料庫用戶ID]** | 這是您的平台組織ID。 使用您的Experience Platform **[!UICONTROL 使用者名稱]** 憑據值。 ID將採用 `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL 資料庫密碼]** | 此英數字串是您的Experience Platform **[!UICONTROL 密碼]** 憑據。如果要使用非到期憑據，則此值是 `technicalAccountID` 和 `credential` 下載到設定JSON檔案中。 密碼值採用以下形式：{technicalAccountId}:{credential}。 非到期憑證的設定JSON檔案是初始化期間的一次性下載，Adobe不會保留副本。 |
 
 輸入所有相關憑據後，請選擇 **[!DNL Connect]**.
 
