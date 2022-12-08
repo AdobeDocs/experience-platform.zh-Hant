@@ -1,9 +1,10 @@
 ---
 title: 資料登陸區目的地
 description: 了解如何連線至資料登陸區，以啟用區段和匯出資料集。
-source-git-commit: 56fd7a5ab58186367c729cb4ca8c3b4213c44900
+exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -87,6 +88,8 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 * **[!UICONTROL 說明]**:選填。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 資料夾路徑]**:輸入要承載導出檔案的目標資料夾的路徑。
+* **[!UICONTROL 檔案類型]**:選取匯出的檔案應使用的格式Experience Platform。 選取 [!UICONTROL CSV] 選項，您也可以 [配置檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**:選擇Experience Platform應用於導出檔案的壓縮類型。
 
 ### 啟用警報 {#enable-alerts}
 

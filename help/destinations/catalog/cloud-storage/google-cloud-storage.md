@@ -2,9 +2,9 @@
 title: （測試版）Google雲端儲存連線
 description: 了解如何連線至Google雲端儲存空間及啟用區段或匯出資料集。
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -34,15 +34,15 @@ ht-degree: 0%
 
 將Platform連線至 [!DNL Google Cloud Storage]，您必須先啟用 [!DNL Google Cloud Storage] 帳戶。 要訪問互操作性設定，請開啟 [!DNL Google Cloud Platform] 選取 **[!UICONTROL 設定]** 從 **[!UICONTROL 雲端儲存空間]** 選項。
 
-![Google雲端平台控制面板，並反白顯示雲端儲存空間和設定。](/help/sources/images/tutorials/create/google-cloud-storage/nav.png)
+![Google雲端平台控制面板，並反白顯示雲端儲存空間和設定。](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
 此 **[!UICONTROL 設定]** 頁。 從這裡，您可以看到 [!DNL Google] 專案ID和您 [!DNL Google Cloud Storage] 帳戶。 要訪問互操作性設定，請選擇 **[!UICONTROL 互操作性]** 從頂端標題。
 
-![Google Cloud Platform控制面板中強調顯示的「互操作性」標籤。](/help/sources/images/tutorials/create/google-cloud-storage/project-access.png)
+![Google Cloud Platform控制面板中強調顯示的「互操作性」標籤。](../../../sources/images/tutorials/create/google-cloud-storage/project-access.png)
 
 此 **[!UICONTROL 互操作性]** 頁面包含與服務帳戶相關聯的驗證、存取金鑰和預設專案的相關資訊。 要為服務帳戶生成新的訪問密鑰ID和秘密訪問密鑰，請選擇 **[!UICONTROL 建立服務帳戶的金鑰]**.
 
-![為Google雲端平台控制面板中醒目顯示的服務帳戶控制項建立金鑰。](/help/sources/images/tutorials/create/google-cloud-storage/interoperability.png)
+![為Google雲端平台控制面板中醒目顯示的服務帳戶控制項建立金鑰。](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
 您可以使用新產生的存取金鑰ID和秘密存取金鑰來連接您的 [!DNL Google Cloud Storage] 帳戶至Platform。
 
@@ -74,6 +74,8 @@ ht-degree: 0%
 * **[!UICONTROL 說明]**:選填。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 貯體名稱]**:輸入 [!DNL Google Cloud Storage] 此目的地所使用的貯體。
 * **[!UICONTROL 資料夾路徑]**:輸入要承載導出檔案的目標資料夾的路徑。
+* **[!UICONTROL 檔案類型]**:選取匯出的檔案應使用的格式Experience Platform。 選取 [!UICONTROL CSV] 選項，您也可以 [配置檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**:選擇Experience Platform應用於導出檔案的壓縮類型。
 
 ### 啟用警報 {#enable-alerts}
 

@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 0%
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 * **[!UICONTROL 名稱]**:提供連線的名稱 [!DNL Amazon Kinesis]
 * **[!UICONTROL 說明]**:提供與 [!DNL Amazon Kinesis].
-* **[!UICONTROL 流]**:提供您 [!DNL Amazon Kinesis] 帳戶。 Platform會將資料匯出至此資料流。
+* **[!UICONTROL 資料流]**:提供您 [!DNL Amazon Kinesis] 帳戶。 Platform會將資料匯出至此資料流。
 * **[!UICONTROL 包含區段名稱]**:如果要讓資料匯出包含要匯出的區段名稱，請切換。 如需選取此選項的資料匯出範例，請參閱 [匯出的資料](#exported-data) 下文一節。
 * **[!UICONTROL 包含區段時間戳記]**:如果您希望資料匯出包含建立和更新區段時的UNIX時間戳記，以及將區段對應至要啟用的目的地時的UNIX時間戳記，則切換。 如需選取此選項的資料匯出範例，請參閱 [匯出的資料](#exported-data) 下文一節。
 
@@ -175,7 +175,7 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Amazon Kinesis]
 
 例如，將此資料流視為 [!DNL Amazon Kinesis] 目標中，在資料流中選擇了三個段，四個屬性映射到目標。
 
-![Amazon Kinesis目的地資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Amazon Kinesis目的地資料流](../../assets/catalog/http/profile-export-example-dataflow.png)
 
 匯出至目的地的設定檔可由符合以下條件之一或退出該條件的設定檔來決定 *三個已對應區段*. 不過，在資料匯出中， `segmentMembership` 物件(請參閱 [匯出的資料](#exported-data) )，則如果該特定設定檔是其成員，則可能會顯示其他未映射的區段。 如果設定檔符合「使用德羅林汽車」區段的客戶資格，但同時也是「已觀看的回到未來」電影和科幻影迷區段的成員，則另外兩個區段也會出現在 `segmentMembership` 對象，即使這些對象未映射到資料流中。
 

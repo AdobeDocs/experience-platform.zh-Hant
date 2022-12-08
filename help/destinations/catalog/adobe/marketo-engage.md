@@ -2,7 +2,7 @@
 title: Marketo Engage目標
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理、客戶參與，到以帳戶為基礎的行銷和收入歸因。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9f305ee7824bd8790dec57ccbd2d9462ccfa8b49
+source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 >* 如果您尚未建立任何資料流至 **[!UICONTROL Marketo V1]** 目的地，請使用新 **[!UICONTROL Marketo V2]** 卡片，以連線並匯出資料至Marketo。
 
 
-![以並排檢視顯示的兩個Marketo目的地卡片影像。](/help/destinations/assets/catalog/adobe/marketo-side-by-side-view.png)
+![以並排檢視顯示的兩個Marketo目的地卡片影像。](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Marketo V2目的地的改良功能包括：
 

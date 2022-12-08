@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob目的地；s3;Azure Blob目的地
 title: Azure Blob連接
 description: 建立與Azure Blob儲存的即時傳出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '923'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 >* 如果您尚未建立任何資料流至 **[!UICONTROL Azure Blob]** 目的地，請使用新 **[!UICONTROL Azure Blob測試版]** 將檔案導出到的卡 **[!UICONTROL Azure Blob]**.
 
 
-![並排檢視中兩個Azure Blob目的地卡的影像。](/help/destinations/assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
+![並排檢視中兩個Azure Blob目的地卡的影像。](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 新 [!DNL Azure Blob] 目的地卡包括：
 
@@ -93,6 +93,8 @@ ht-degree: 1%
 * **[!UICONTROL 說明]**:輸入此目標的說明。
 * **[!UICONTROL 資料夾路徑]**:輸入要承載導出檔案的目標資料夾的路徑。
 * **[!UICONTROL 容器]**:輸入 [!DNL Azure Blob Storage] 供此目的地使用的容器。
+* **[!UICONTROL 檔案類型]**:選取匯出的檔案應使用的格式Experience Platform。 此選項僅適用於 **[!UICONTROL Azure Blob測試版]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [配置檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**:選擇Experience Platform應用於導出檔案的壓縮類型。 此選項僅適用於 **[!UICONTROL Azure Blob測試版]** 目的地。
 
 ### 啟用警報 {#enable-alerts}
 

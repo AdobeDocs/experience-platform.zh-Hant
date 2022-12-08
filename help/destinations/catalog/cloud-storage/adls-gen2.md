@@ -2,9 +2,9 @@
 title: （測試版）Azure資料湖儲存Gen2連接
 description: 了解如何連線至Azure Data Lake Storage Gen2以啟用區段和匯出資料集。
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '683'
 ht-degree: 1%
 
 ---
@@ -59,6 +59,8 @@ ht-degree: 1%
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 * **[!UICONTROL 說明]**:選填。 例如，您可以提及您使用此目的地的促銷活動。
 * **[!UICONTROL 資料夾路徑]**:輸入要承載導出檔案的目標資料夾的路徑。
+* **[!UICONTROL 檔案類型]**:選取匯出的檔案應使用的格式Experience Platform。 選取 [!UICONTROL CSV] 選項，您也可以 [配置檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**:選擇Experience Platform應用於導出檔案的壓縮類型。
 
 ### 啟用警報 {#enable-alerts}
 

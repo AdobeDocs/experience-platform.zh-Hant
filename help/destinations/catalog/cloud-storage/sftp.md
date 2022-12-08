@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP連線
 description: 建立與SFTP伺服器的即時傳出連線，以定期從Adobe Experience Platform匯出分隔的資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 >* 如果您尚未建立任何資料流至 **[!UICONTROL SFTP]** 目的地，請使用新 **[!UICONTROL SFTP測試版]** 將檔案導出到的卡 **[!UICONTROL SFTP]**.
 
 
-![並排檢視中兩個SFTP目的地卡的影像。](/help/destinations/assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
+![並排檢視中兩個SFTP目的地卡的影像。](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 新 [!DNL SFTP] 目的地卡包括：
 
@@ -104,6 +104,8 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:在「Experience Platform」用戶介面中輸入有助於標識此目標的名稱；
 * **[!UICONTROL 說明]**:輸入此目的地的說明；
 * **[!UICONTROL 資料夾路徑]**:在要匯出檔案的SFTP位置中，輸入資料夾的路徑。
+* **[!UICONTROL 檔案類型]**:選取匯出的檔案應使用的格式Experience Platform。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [配置檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**:選擇Experience Platform應用於導出檔案的壓縮類型。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。
 
 ## 啟用此目的地的區段 {#activate}
 

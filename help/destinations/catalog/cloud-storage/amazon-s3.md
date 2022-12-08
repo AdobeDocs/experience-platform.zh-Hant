@@ -3,9 +3,9 @@ keywords: Amazon S3;S3目的地；s3;Amazon s3
 title: Amazon S3連線
 description: 建立與Amazon Web Services(AWS)S3儲存的即時傳出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f841b27a2d2700b0b68a386b89d1a5c62d3910ff
+source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '953'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >匯出資料集功能測試版和檔案匯出功能改善後，您現在可能會看到兩個 [!DNL Amazon S3] 目的地目錄中的卡。
->* 如果您已將檔案匯出至 **[!UICONTROL Amazon S3]** 目的地：請建立新資料流到新的 **[!UICONTROL Amazon S3測試版]** 目的地。
+>* 如果您已將檔案匯出至 **[!UICONTROL Amazon S3]** 目標，請建立新資料流到新資料流 **[!UICONTROL Amazon S3測試版]** 目的地。
 >* 如果您尚未建立任何資料流至 **[!UICONTROL Amazon S3]** 目的地，請使用新 **[!UICONTROL Amazon S3測試版]** 將檔案導出到的卡 **[!UICONTROL Amazon S3]**.
 
 
-![以並排檢視顯示的兩個Amazon S3目的地卡影像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
+![以並排檢視顯示的兩個Amazon S3目的地卡影像。](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 新 [!DNL Amazon S3] 目的地卡包括：
 
@@ -88,6 +88,9 @@ ht-degree: 0%
 * **[!UICONTROL 說明]**:輸入此目標的說明。
 * **[!UICONTROL 貯體名稱]**:輸入 [!DNL Amazon S3] 此目的地所使用的貯體。
 * **[!UICONTROL 資料夾路徑]**:輸入要承載導出檔案的目標資料夾的路徑。
+* **[!UICONTROL 檔案類型]**:選取匯出的檔案應使用的格式Experience Platform。 此選項僅適用於 **[!UICONTROL Amazon S3測試版]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [配置檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**:選擇Experience Platform應用於導出檔案的壓縮類型。 此選項僅適用於 **[!UICONTROL Amazon S3測試版]** 目的地。
+
 
 >[!TIP]
 >
