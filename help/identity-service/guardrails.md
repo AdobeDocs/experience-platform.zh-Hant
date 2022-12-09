@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用和比率限制資訊，協助您最佳化身分圖表的使用。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: e6d0f0d0bc3de2f6da4e4269811d254db4fa3303
+source-git-commit: 672d98135492350ab6e12eec51649e6e5a7e4923
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '490'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 | 瓜德拉伊 | 限制 | 附註 |
 | --- | --- | --- |
-| 圖表中的身分數 | 150 | 此限制會套用至沙箱層級。 一旦達到限制，就不會更新身分圖表。 |
+| 圖表中的身分數 | 150 | 此限制會套用至沙箱層級。 一旦達到限制，就不會更新身分圖表。 **附註**:身分圖中的身分數上限 **個別合併的設定檔** 是50。 根據身分圖表（具有超過50個身分）合併的設定檔，會從即時客戶設定檔中排除。 如需詳細資訊，請參閱 [設定檔資料的護欄](../profile/guardrails.md). |
 | XDM記錄中的身分數 | 20 | 所需的XDM記錄最少為2個。 |
 | 自訂命名空間數量 | None | 您可以建立的自訂命名空間數目沒有限制。 |
 | 圖數 | 無 | 您可以建立的身分圖數沒有限制。 |
