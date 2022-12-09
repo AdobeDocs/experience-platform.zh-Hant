@@ -5,9 +5,9 @@ title: 查詢服務憑證指南
 topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 344602a0e828d140ea386daf30a25b8f595f8d04
+source-git-commit: f52e1d49fd090c398d34a3d9c2b5d1746c319eb4
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1317'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,15 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 - **[!UICONTROL 使用者名稱]**:用於連接到查詢服務的用戶名。
 - **[!UICONTROL 密碼]**:用於連接到Query Service的密碼。
 - **[!UICONTROL PSQL命令]**:一個命令，它自動插入了所有相關資訊，以便您使用命令行上的PSQL連接到查詢服務。
-- **[!UICONTROL 過期]**:即將到期的憑證的到期日。 憑證產生後24小時過期。
+- **[!UICONTROL 過期]**:即將到期的憑據的到期日期和時間。 代號的預設有效期間為24小時，但可在Admin Console的進階設定中變更。
+
+>[!TIP]
+>
+>若要將到期憑證連線的工作階段期間變更為Query Service，請導覽至 [Admin Console](https://adminconsole.adobe.com/) 並在畫面選項上選取下列項目： **設定** > **隱私權與安全性** > **驗證設定** > **進階設定** > **最大會話期**.
+>
+>![「Admin Console設定」標籤中，「隱私與安全」、「驗證設定」和「工作階段最長」壽命已反白顯示。](../images/ui/credentials/max-session-life.png)
+>
+>如需以下項目的詳細資訊，請參閱Adobe說明檔案： [進階設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) 由Admin Console提供。
 
 ## 未到期的憑據 {#non-expiring-credentials}
 
@@ -119,7 +127,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 | 參數 | 說明 |
 |---|---|
 | **伺服器/主機** | 要連接的伺服器/主機的名稱。 <ul><li>此值用於即將到期的憑據和未到期的憑據，其形式為 `server.adobe.io`. 值位於 **[!UICONTROL 主機]** 在 [!UICONTROL 即將到期的憑據] 區段。</ul></li> |
-| **埠** | 要連接的伺服器/主機的埠。 <ul><li>此值用於即將到期的憑據和非即將到期的憑據，可在以下找到 **[!UICONTROL 埠]** 在 [!UICONTROL 即將到期的憑據] 區段。 埠的範例值為 `80`.</ul></li> |
+| **連接埠** | 要連接的伺服器/主機的埠。 <ul><li>此值用於即將到期的憑據和非即將到期的憑據，可在以下找到 **[!UICONTROL 埠]** 在 [!UICONTROL 即將到期的憑據] 區段。 埠的範例值為 `80`.</ul></li> |
 | **資料庫** | 您要連接的資料庫。 <ul><li>此值用於即將到期的憑證和非即將到期的憑證，可在 **[!UICONTROL 資料庫]** 在 [!UICONTROL 即將到期的憑據] 區段。 資料庫的範例值為 `prod:all`.</ul></li> |
 | **使用者名稱** | 連接到外部客戶端的用戶的用戶名。 <ul><li>此值用於即將到期的憑據和非即將到期的憑據。 其格式為字母數字字串 `@AdobeOrg`. 此值位於 **[!UICONTROL 使用者名稱]**.</li></ul> |
 | **密碼** | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您使用即將到期的憑證，可在 **[!UICONTROL 密碼]** 在 [!UICONTROL 即將到期的憑據] 區段。</li><li>如果您使用的是未到期的憑證，此值是來自technicalAccountID的串連引數，以及來自設定JSON檔案的憑證。 密碼值採用以下形式： `{technicalAccountId}:{credential}`.</li></ul> |
