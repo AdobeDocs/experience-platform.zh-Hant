@@ -2,14 +2,20 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '418'
 ht-degree: 4%
 
 ---
 
 # 標籤和事件轉送的發行說明
+
+## 2022 年 11 月 23 日
+
+* **[!DNL AWS]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Amazon Web Services] ([!DNL AWS])使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL AWS] 擴充功能概觀](../../tags/extensions/server/aws/overview.md) 以取得更多資訊。
+* **[!DNL Google Ads Enhanced Conversions]事件轉送擴充功能**:您現在可以將轉換資料傳送至 [!DNL Google Ads] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Google Ads Enhanced Conversions] 擴充功能概觀](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 以取得更多資訊。
+* **[!DNL Microsoft Azure]事件轉送擴充功能**:您現在可以將資料傳送至 [!DNL Microsoft Azure] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Microsoft Azure] 擴充功能概觀](../../tags/extensions/server/azure/overview.md) 以取得更多資訊。
 
 ## 2022 年 10 月 26 日
 
