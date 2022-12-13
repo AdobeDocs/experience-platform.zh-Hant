@@ -5,7 +5,7 @@ title: XDM欄位類型限制
 topic-legacy: overview
 description: Experience Data Model(XDM)中欄位類型限制的參考，包括可對應的其他序列化格式，以及如何在API中定義您自己的欄位類型。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: a3b4dd65b22bb04bcba52c44a09030f51454a9c8
+source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 6%
@@ -130,7 +130,7 @@ XDM是以JSON結構描述為基礎而建置，因此XDM欄位在定義其類型�
 >
 >在下表所列的標準XDM類型中， [!UICONTROL 地圖] 也包含類型。 當資料以對應至特定值的索引鍵來表示，或當索引鍵無法合理納入靜態架構且必須視為資料值時，標準架構中會使用地圖。
 >
->許多標準XDM元件都使用對應類型，您也可以 [定義自訂地圖欄位](../tutorials/custom-fields-api.md#maps) 如果需要。 如果現有資料目前是以下列任何格式儲存，下表中包含的對應類型可協助您判斷如何將現有資料對應至XDM。
+>許多標準XDM元件都使用對應類型，您也可以 [定義自訂地圖欄位](../tutorials/custom-fields-api.md#custom-maps) 如果需要。 如果現有資料目前是以下列任何格式儲存，下表中包含的對應類型可協助您判斷如何將現有資料對應至XDM。
 
 ### Parquet、Spark SQL和Java {#parquet}
 
