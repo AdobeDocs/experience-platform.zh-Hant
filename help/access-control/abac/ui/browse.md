@@ -3,22 +3,22 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制瀏覽
 description: 本檔案提供在Adobe Experience Cloud中使用權限介面的相關資訊
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '347'
 ht-degree: 4%
 
 ---
 
 # 權限指南
 
-權限是Adobe Experience Cloud的區域，管理員可在此定義使用者角色和存取原則，以管理產品應用程式內功能和物件的存取權限。
+[!UICONTROL 權限] 是Adobe Experience Cloud的區域，管理員可在此定義使用者角色和存取原則，以管理產品應用程式內功能和物件的存取權限。
 
-透過權限，您可以設定：
+使用 [!UICONTROL 權限]，您可以設定：
 
+* [訪問策略](./policies.md)
 * [標記](./labels.md)
 * [權限](./permissions.md)
-* [原則](./permissions.md)
 * [角色](./roles.md)
 * [沙箱](./sandboxes.md)
 * [使用者](./users.md)

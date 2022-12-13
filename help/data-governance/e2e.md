@@ -1,9 +1,10 @@
 ---
 title: 資料控管端對端指南
 description: 請依照完整程式，針對Adobe Experience Platform中的欄位和資料集強制執行資料使用限制。
-source-git-commit: c8b2dba9b1e305f826830b8341bf1a6dde4e2da2
+exl-id: f18ae032-027a-4c97-868b-e04753237c81
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 1. [設定並啟用資料控管原則](#policy) 來判斷哪些類型的標籤資料可用於特定行銷動作。
 1. [將行銷動作套用至您的目的地](#destinations) 指出哪些原則適用於傳送至這些目的地的資料。
 
-完成標籤、原則和行銷動作的設定後，您就可以 [測試策略執行](#test) 以確保它正常運作。
+完成標籤、控管原則和行銷動作的設定後，您就可以 [測試策略執行](#test) 以確保它正常運作。
 
 本指南會逐步說明在Platform UI中設定及實作資料控管原則的完整程式。 如需本指南所用功能的詳細資訊，請參閱以下主題的概觀檔案：
 
@@ -24,6 +25,10 @@ ht-degree: 0%
 * [資料使用量標籤](./labels/overview.md)
 * [資料使用原則](./policies/overview.md)
 * [政策執行](./enforcement/overview.md)
+
+>[!NOTE]
+>
+>本指南著重說明如何設定和強制原則，以便在Experience Platform中使用或啟用資料。 如果你試圖限制 **存取** 若要了解貴組織內特定Platform使用者的資料本身，請參閱 [基於屬性的訪問控制](../access-control/abac/end-to-end-guide.md) 。 基於屬性的訪問控制還使用標籤和策略，但針對的使用案例與資料控管不同。
 
 ## 套用標籤 {#labels}
 

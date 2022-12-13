@@ -3,12 +3,12 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 策略服務API指南
 topic-legacy: developer guide
-description: 策略服務API允許開發人員管理Experience Platform中的資料使用標籤和策略。 請依照本指南，了解如何使用API執行重要作業。
+description: 策略服務API允許開發人員管理Experience Platform中的資料使用標籤和策略。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 0%
+source-wordcount: '545'
+ht-degree: 3%
 
 ---
 
@@ -30,7 +30,13 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，並確保符�
 
 ## 原則
 
-資料使用原則是描述您可對內的資料執行或限制的行銷動作類型的規則 [!DNL Experience Platform]. 策略由以下項定義：
+資料控管原則是一種規則，可說明您可對內的資料執行或限制的行銷動作類型 [!DNL Experience Platform].
+
+>[!NOTE]
+>
+>資料控管原則與存取控制原則不容混淆，存取控制原則會決定貴組織中特定Platform使用者可存取的特定資料屬性。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 以取得更多資訊。
+
+資料控管原則的定義如下：
 
 1. 特定行銷動作
 1. 限制針對執行動作的資料使用量標籤

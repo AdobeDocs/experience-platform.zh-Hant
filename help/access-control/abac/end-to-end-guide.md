@@ -2,10 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬性的存取控制；
 title: 基於屬性的訪問控制端到端指南
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制的端對端指南
-source-git-commit: 0035f4611f2c269bb36f045c3c57e6e7bad7c013
+exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 0%
+source-wordcount: '2427'
+ht-degree: 1%
 
 ---
 
@@ -13,8 +14,11 @@ ht-degree: 0%
 
 基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓多品牌和注重隱私的客戶擁有更大的彈性來管理使用者存取。 可以根據對象的屬性和角色使用策略來授予/拒絕對單個對象（如方案欄位和段）的訪問權。 此功能可讓您授予或撤銷組織中特定Platform使用者對個別物件的存取權。
 
-此功能可讓您使用定義組織或資料使用範圍的標籤，對結構欄位、區段等進行分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義XDM結構欄位的存取原則，並更妥善地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
+此功能可讓您使用定義組織或資料使用範圍的標籤，對結構欄位、區段等進行分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義Experience Data Model(XDM)結構欄位的存取原則，並更妥善地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
 
+>[!NOTE]
+>
+>本文檔重點介紹訪問控制策略的使用案例。 如果您正嘗試設定策略以管理 **use** 請參閱上的端對端指南， [資料控管](../../data-governance/e2e.md) 。
 
 ## 快速入門
 
@@ -46,7 +50,7 @@ ht-degree: 0%
 
 [!UICONTROL 權限] 是Experience Cloud的區域，管理員可在其中定義用戶角色和策略，以管理產品應用程式內的功能和對象的權限。
 
-通過 [!UICONTROL 權限]，您可以建立和管理角色，並為這些角色指派所需的資源權限。 [!UICONTROL 權限] 也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
+通過 [!UICONTROL 權限]，您可以建立和管理角色，並為這些角色指派所需的資源權限。 [!UICONTROL 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。]
 
 如果您沒有管理員權限，請連絡您的系統管理員以取得存取權。
 

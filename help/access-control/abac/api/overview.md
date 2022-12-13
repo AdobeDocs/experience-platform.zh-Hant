@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；api；基於屬性的存取控制；基於屬性的存取控制
 solution: Experience Platform
 title: 屬性型存取控制API指南
-description: 屬性型存取控制API可讓您以程式設計方式管理Adobe Experience Platform中的角色和原則。 請遵循本指南以了解如何使用 API 執行關鍵作業。
+description: 屬性型存取控制API可讓您以程式設計方式管理Adobe Experience Platform中的角色和存取原則。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '450'
 ht-degree: 4%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 4%
 基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制對特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至架構欄位或區段的標籤。 管理員定義了包括屬性的訪問策略以管理用戶訪問權限。
 
 屬性型存取控制API可用來存取Adobe Experience Platform中的角色、產品、權限類別和權限集，提供使用者介面和RESTful API，所有可用的程式庫資源都可從中存取。
+
+>[!IMPORTANT]
+>
+>不要將基於屬性的訪問控制與Experience Platform的資料控管功能混淆，該功能允許您使用標籤和策略來控制資料在Platform中的使用方式，而不是您組織中的哪些用戶有權訪問它。 請參閱 [策略服務API指南](../../../data-governance/api/overview.md) 以取得以程式設計方式運用這些功能的步驟。
 
 這些端點概述如下。 如需詳細資訊，請參閱個別端點指南，並參閱 [快速入門手冊](./getting-started.md) 如需必要標題、讀取範例API呼叫等的重要資訊。
 

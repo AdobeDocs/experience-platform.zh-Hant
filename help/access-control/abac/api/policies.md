@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 存取控制原則API端點
 description: 屬性型存取控制API中的/policys端點可讓您以程式設計方式管理Adobe Experience Platform中的原則。
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '1412'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->此端點不應與 `/policies` 端點 [資料控管API](../../../data-governance/api/policies.md)，用於管理資料使用原則。
+>此端點不應與 `/policies` 端點 [策略服務API](../../../data-governance/api/policies.md)，用於管理資料使用原則。
 
 ## 快速入門
 

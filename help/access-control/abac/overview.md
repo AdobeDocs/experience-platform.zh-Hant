@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制概述
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1826'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 3%
 基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制對特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至架構欄位或區段的標籤。 管理員定義了包括屬性的訪問策略以管理用戶訪問權限。
 
 此功能可讓您以標籤來標示Experience Data Model(XDM)結構欄位，並定義組織或資料使用範圍。 同時，管理員可使用使用者和角色管理介面來定義XDM架構欄位的存取原則，並更妥善地管理指派給使用者或使用者群組（內部、外部或第三方使用者）的存取權。 此外，基於屬性的訪問控制允許管理員管理對特定段的訪問。
+
+>[!IMPORTANT]
+>
+>不要將基於屬性的訪問控制與Experience Platform的資料控管功能混淆，該功能允許您使用標籤和策略來控制資料在Platform中的使用方式，而不是您組織中的哪些用戶有權訪問它。 請參閱 [資料控管概觀](../../data-governance/home.md) 以取得更多資訊。
 
 透過基於屬性的存取控制，貴組織的管理員可控制使用者對敏感個人資料(SPD)、個人識別資訊(PII)的存取，以及所有平台工作流程和資源中自訂資料類型的存取。 管理員可以定義只有特定欄位和與這些欄位對應的資料存取權的使用者角色。
 

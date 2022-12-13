@@ -5,9 +5,9 @@ title: 資料使用量標籤字彙表
 topic-legacy: labels
 description: 本檔案概述Adobe Experience Platform目前支援的所有資料使用量標籤。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c29b6c7dc061ea910ebedcae1fa4beaa6def10b1
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2108'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 >abstract="資料使用量標籤有數個類別。 Adobe定義的標籤包括合約標籤、身分標籤和敏感標籤。 貴組織定義的標籤會分類為自訂標籤。"
 >text="See the data usage labels glossary for more information on these label types."
 
-資料使用量標籤可讓您根據套用至該資料的使用量原則，對資料集和欄位進行分類。 Adobe Experience Platform資料控管提供數個現成可用的核心資料使用標籤，供您用來開始分類資料。
+資料使用量標籤可讓您根據 [治理政策](../policies/overview.md) 和 [訪問控制策略](../../access-control/abac/overview.md) 適用於該資料。 Adobe Experience Platform提供數個現成可用的核心資料使用量標籤，供您用來開始分類資料。
 
-本檔案概述目前由 [!DNL Experience Platform]. 如需資料控管的詳細資訊，請參閱 [資料控管概觀](../home.md).
+本檔案概述目前由Experience Platform提供的核心資料使用量標籤。
 
 ## 合約標籤
 
@@ -135,7 +135,7 @@ IAB:4. 內容選擇、傳遞、報告：資訊的收集，以及與先前收集�
 
 #### C10 {#c10}
 
-有些資料使用原則會限制使用連結的身分資料來進行個人化。 如果區段的合併政策使用「專用圖表」選項，則C10標籤會自動套用至區段。
+有些資料控管原則會限制使用連結的身分資料來進行個人化。 如果區段的合併政策使用「專用圖表」選項，則C10標籤會自動套用至區段。
 
 #### C11 {#c11}
 

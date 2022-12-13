@@ -5,16 +5,20 @@ title: 在UI中管理資料使用原則
 topic-legacy: policies
 description: Adobe Experience Platform資料控管提供的使用者介面可讓您建立和管理資料使用原則。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5776c691b7f3ec4cb544de59cf6beef162285399
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1411'
 ht-degree: 0%
 
 ---
 
 # 在UI中管理資料使用原則
 
-Adobe Experience Platform資料控管提供的使用者介面可讓您建立和管理資料使用原則。 本檔案概述您可在 **原則** 工作區中 [!DNL Experience Platform] 使用者介面。
+本檔案說明如何使用 **[!UICONTROL 原則]** 工作區，以建立和管理資料使用原則。
+
+>[!NOTE]
+>
+>有關如何在UI中管理存取控制原則的資訊，請參閱 [基於屬性的訪問控制UI指南](../../access-control/abac/ui/policies.md) 。
 
 >[!IMPORTANT]
 >
@@ -24,7 +28,7 @@ Adobe Experience Platform資料控管提供的使用者介面可讓您建立和�
 
 本指南需要妥善了解下列項目 [!DNL Experience Platform] 概念：
 
-* [資料治理](../home.md)
+* [資料控管](../home.md)
 * [資料使用原則](./overview.md)
 
 ## 查看現有策略 {#view-policies}

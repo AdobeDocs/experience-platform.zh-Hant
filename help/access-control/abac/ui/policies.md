@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬性的存取控制；ABAC
-title: 基於屬性的訪問控制建立策略
-description: 本檔案提供有關透過Adobe Experience Cloud中的權限介面管理原則的資訊
+title: 管理訪問控制策略
+description: 本檔案提供有關透過Adobe Experience Cloud中的權限介面管理存取控制原則的資訊。
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: 1a755fa5480e036bde50617f01440cfabbaf64c2
+source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# 管理原則
+# 管理訪問控制策略
 
-政策是將屬性集合在一起，以制定允許和不允許的行動的聲明。 策略可以是本地策略或全局策略，也可以覆蓋其他策略。
+訪問控制策略是將屬性集合在一起以建立允許和不允許的操作的語句。 訪問策略可以是本地策略或全局策略，也可以覆蓋其他策略。
+
+>[!IMPORTANT]
+>
+>存取原則不應與資料使用原則混淆，因為資料使用原則可控制資料在Adobe Experience Platform中的使用方式，而非貴組織中哪些使用者有權存取資料。 請參閱建立 [資料使用原則](../../../data-governance/policies/create.md) 以取得更多資訊。
 
 ## 建立新策略
 

@@ -5,16 +5,16 @@ title: 資料集概述
 topic-legacy: datasets
 description: 本文件提供 Experience Platform 資料集的高層級總覽。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 02002c9530074b8b05664ff9eab5bc2fe4b7d5d4
+source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 7%
+source-wordcount: '784'
+ht-degree: 8%
 
 ---
 
 # 資料集概觀
 
-成功擷取至Adobe Experience Platform的所有資料都會保存在 [!DNL Data Lake] 做為資料集。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。
+成功擷取至Adobe Experience Platform的所有資料都會保存在 [!DNL Data Lake] 做為資料集。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。 
 
 本檔案概略介紹 [!DNL Experience Platform].
 
@@ -41,6 +41,10 @@ Adobe Experience Platform資料擷取代表 [!DNL Platform] 從各種來源擷�
 ## 將使用量標籤套用至資料集
 
 Adobe Experience Platform資料控管可讓您管理客戶資料，以確保符合適用於資料使用的法規、限制和政策。 資料控管架構可讓您套用使用標籤，以根據套用至該資料的使用原則來分類資料。
+
+>[!IMPORTANT]
+>
+>只有資料控管使用案例才支援在資料集層級套用標籤。 如果您嘗試為資料建立訪問策略，則必須 [將標籤應用於方案](../../xdm/tutorials/labels.md) 資料集所依據之資料集。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 以取得更多資訊。
 
 資料使用量標籤可套用至整個資料集或個別資料集欄位。 在資料集層級新增的標籤，會由該資料集內的所有欄位繼承。
 
