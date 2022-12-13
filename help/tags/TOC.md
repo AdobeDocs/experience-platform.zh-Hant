@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: bf5346214fad66b3f470c74620b608d71639b85a
+source-git-commit: f2106d1e5bc0442df4d0ba84323821f6f2d9b1c7
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '965'
 ht-degree: 30%
 
 ---
@@ -213,11 +213,12 @@ ht-degree: 30%
       * [適用於Google Analytics的Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
       * 核心 {#core}
          * [總覽](./extensions/server/core/overview.md)
-      * [Facebook轉換API](https://exchange.adobe.com/apps/ec/105509)
       * Google Ads增強轉換 {#google-ads-enhanced-conversions}
          * [總覽](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
-         * [總覽](./extensions/server/mailchimp/overview.md)
+         * [概述](./extensions/server/mailchimp/overview.md)
+      * [!DNL Meta Conversions API] {#meta}
+         * [概述](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
          * [總覽](./extensions/server/azure/overview.md)
       * [Pega客戶決策中心](https://exchange.adobe.com/apps/ec/107597)

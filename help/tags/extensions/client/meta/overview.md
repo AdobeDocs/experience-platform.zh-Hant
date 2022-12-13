@@ -1,9 +1,9 @@
 ---
 title: 中繼像素擴充功能概觀
 description: 了解Adobe Experience Platform中的Meta Pixel標籤擴充功能。
-source-git-commit: 87376172f89858bfa883084461544a2c50ba5009
+source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '760'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,9 @@ ht-degree: 0%
 
 此 [!DNL Meta Pixel] 標籤擴充功能可讓您運用 [!DNL Pixel] 功能。 本檔案說明如何安裝擴充功能，並在 [規則](../../../ui/managing-resources/rules.md).
 
-<!-- (To include when Conversions API extension doc is published)
 >[!NOTE]
 >
->If you are trying to send server-side events to [!DNL Meta] rather than from the client side, use the [[!DNL Meta Conversions API] extension](../../server/meta/overview.md) instead.
--->
+>如果您嘗試將伺服器端事件傳送至 [!DNL Meta] 而非從用戶端，請使用 [[!DNL Meta Conversions API] 擴充功能](../../server/meta/overview.md) 。
 
 ## 先決條件
 
