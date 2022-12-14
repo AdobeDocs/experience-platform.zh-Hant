@@ -4,9 +4,9 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c4457d82c66be382ebb8619ce248f282fb45ed3a
+source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3381'
 ht-degree: 0%
 
 ---
@@ -275,14 +275,19 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 ### [!UICONTROL 依身分取消細分的設定檔] {#unsegmented-profiles-by-identity}
 
+>!![NOTE]
+自2022年10月起，「依身分Widget劃分的未細分設定檔」已淘汰，不再提供使用。
+
+<!-- 
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
->title="依身分取消細分的設定檔"
->abstract="此介面工具集會依其唯一識別碼來分類未分段的設定檔總數。"
+>title="Unsegmented profiles by identity"
+>abstract="This widget categorizes the total number of unsegmented profiles by their unique identifier."
 
-此 [!UICONTROL 依身分分段的設定檔] 介面工具集會依其唯一識別碼來分類未分段的設定檔總數。 資料以長條圖視覺化，方便比較。
+The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total number of unsegmented profiles by their unique identifier. The data is visualized in a bar chart for ease of comparison. 
 
-![依身分介面工具集的未分段設定檔。](../images/profiles/unsegmented-profiles-by-identity.png)
+![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
 ### [!UICONTROL 受眾] {#audiences}
 
@@ -318,8 +323,7 @@ The visualization allows you to monitor the overall health of audiences within A
 ![對象重疊報表對話方塊。](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
->
->選取 **[!UICONTROL 重疊]** 欄標題，將結果的排名從最高到最低或從最低到最高。
+選取 **[!UICONTROL 重疊]** 欄標題，將結果的排名從最高到最低或從最低到最高。
 
 若要以PDF格式下載整個報表，請選取選項功能表(**`...`**)後面跟著 **[!UICONTROL 下載]**.
 
