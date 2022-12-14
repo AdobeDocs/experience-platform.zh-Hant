@@ -5,9 +5,9 @@ title: 透過串流細分即時評估事件
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用串流區段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 30a12fee487609b4c85ba342963bb915e8152195
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1971'
 ht-degree: 1%
 
 ---
@@ -87,6 +87,8 @@ ht-degree: 1%
 
 - 區段定義包含Adobe Audience Manager(AAM)區段或特徵。
 - 區段定義包括多個實體（多實體查詢）。
+- 區段定義包含單一事件和 `inSegment` 事件。
+   - 不過，若 `inSegment` 事件僅限設定檔，區段定義 **will** 啟用串流細分功能。
 
 請注意，執行串流細分時，會套用下列准則：
 

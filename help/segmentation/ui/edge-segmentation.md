@@ -5,9 +5,9 @@ title: Edge Segmentation UI指南
 topic-legacy: ui guide
 description: 邊緣分段是即時在邊緣上評估Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 95ffd09b81b49c8c7d65695a2fbc0fcd97b12c9e
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,9 @@ ht-degree: 0%
 >
 > 此外，邊緣分段引擎只會執行邊緣上有的請求 **one** 主要標示身分，與非邊緣型主要身分一致。
 
-## 邊緣分段查詢類型
+## 邊緣分段查詢類型 {#query-types}
 
 目前，只有選取的查詢類型才能透過邊緣分段來評估。 以下各節提供可透過邊緣分段評估的查詢類型清單，以及目前不支援的查詢類型。
-
-### 支援的查詢類型 {#query-types}
 
 如果查詢符合下表中列出的任何條件，則可使用邊緣分段來評估查詢。
 
@@ -54,6 +52,11 @@ ht-degree: 0%
 | 在24小時時段內使用設定檔執行多個事件 | 任何區段定義，是指在24小時的時間範圍內發生的一或多個設定檔屬性和多個事件。 | 訪問首頁的美國人 **和** 在過去24小時內瀏覽了結帳頁面。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
 | 區段 | 包含一或多個批次或串流區段的任何區段定義。 | 居住在美國且位於「現有區段」區段的人。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | 引用映射的查詢 | 任何參考屬性地圖的區段定義。 | 根據外部區段資料新增至購物車的使用者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+
+區段定義將 **not** 在下列情況下啟用邊緣分段功能：
+
+- 區段定義包含單一事件和 `inSegment` 事件。
+   - 不過，若 `inSegment` 事件僅限設定檔，區段定義 **will** 啟用邊緣分割功能。
 
 ## 後續步驟
 

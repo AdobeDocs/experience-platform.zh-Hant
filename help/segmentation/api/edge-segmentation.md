@@ -5,9 +5,9 @@ title: 使用API進行邊緣劃分
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: d2196d4d9cae4bdec160ce0c028d354a0db21cb5
+source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,11 @@ ht-degree: 0%
 | 引用映射的查詢 | 任何參考屬性地圖的區段定義。 | 根據外部區段資料新增至購物車的使用者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
 此外，區段 **必須** 系結至邊緣上作用中的合併原則。 有關合併策略的詳細資訊，請閱讀 [合併策略指南](../../profile/api/merge-policies.md).
+
+區段定義將 **not** 在下列情況下啟用邊緣分段功能：
+
+- 區段定義包含單一事件和 `inSegment` 事件。
+   - 不過，若 `inSegment` 事件僅限設定檔，區段定義 **will** 啟用邊緣分割功能。
 
 ## 擷取為邊緣細分啟用的所有區段
 
