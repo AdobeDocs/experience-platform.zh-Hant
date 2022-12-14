@@ -5,9 +5,9 @@ title: 查詢服務疑難排解指南
 topic-legacy: troubleshooting
 description: 本檔案包含與Query Service相關的常見問題和解答。 主題包括：匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 08272f72c71f775bcd0cd7fffcd2e4da90af9ccb
+source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '4362'
 ht-degree: 1%
 
 ---
@@ -38,14 +38,19 @@ ht-degree: 1%
 +++答案一個潛在原因是自動完成功能。 此功能會處理某些中繼資料命令，有時候會在查詢編輯期間拖慢編輯器的速度。
 +++
 
-### 我可以將Postman用於查詢服務API嗎？
+### 我可以使用 [!DNL Postman] 查詢服務API?
 
-+++回答是，您可以使用Postman（免費的協力廠商應用程式），以視覺化方式呈現所有AdobeAPI服務，並與之互動。 觀看 [Postman設定指南](https://video.tv.adobe.com/v/28832) 如需在Adobe Developer Console中設定專案及取得與Postman搭配使用之所有必要憑證的逐步指示。 請參閱 [啟動、執行和共用Postman集合的指引](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
++++回答是，您可以使用視覺化方式，與所有AdobeAPI服務互動， [!DNL Postman] （免費的第三方應用程式）。 觀看 [[!DNL Postman] 安裝指南](https://video.tv.adobe.com/v/28832) 以取得在Adobe Developer Console中設定專案和取得所有必要認證以搭配使用的逐步指示 [!DNL Postman]. 請參閱 [啟動、執行和共用的指南 [!DNL Postman] 集合](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### 查詢透過UI傳回的列數上限是否有限制？
 
 +++答案是，除非在外部指定明確限制，否則Query Service在內部應用50,000行的限制。 請參閱 [互動式查詢執行](./best-practices/writing-queries.md#interactive-query-execution) 以取得更多詳細資訊。
++++
+
+### 我可以使用查詢來更新行嗎？
+
++++回答批次查詢中不支援更新資料集內的列。
 +++
 
 ### 查詢產生的輸出是否有資料大小限制？
@@ -77,6 +82,11 @@ SELECT * FROM customers LIMIT 0;
 ### 如果同時運行多個查詢，是否會對查詢服務效能有任何問題或影響？
 
 +++回答否。 查詢服務具有自動擴展功能，可確保併發查詢不會對服務的效能產生任何明顯的影響。
++++
+
+### 我可以將保留的關鍵字用作列名嗎？
+
++++答案某些保留的關鍵字無法用作列名，例如 `ORDER`, `GROUP BY`, `WHERE`, `DISTINCT`. 如果您想使用這些關鍵字，則必須逸出這些欄。
 +++
 
 ### 如何從階層式資料集尋找欄名稱？
@@ -451,6 +461,76 @@ WHERE T2.ID IS NULL
 ### 我可以使用CTAS查詢建立資料集，其雙底線名稱可像UI中顯示的名稱一樣？ 例如: `test_table_001`.
 
 +++答案否，這是套用至所有Adobe服務（包括查詢服務）的跨Experience Platform故意限制。 架構名稱和資料集名稱可以使用兩個底線的名稱，但資料集的表格名稱只能包含單一底線。
++++
+
+### 您一次可以執行多少個並行查詢？
+
++++答案由於批處理查詢作為後端作業運行，因此沒有查詢併發限制。 但是，有設為24小時的查詢逾時限制。
++++
+
+### 是否有活動控制面板可讓您查看查詢活動和狀態？
+
++++答案有監控和警報功能可檢查查詢活動和狀態。 請參閱 [查詢服務審核日誌整合](./data-governance/audit-log-guide.md) 和 [查詢記錄](./ui/overview.md#log) 檔案以取得詳細資訊。
++++
+
+### 是否有任何方法可以回滾更新？ 例如，如果發生錯誤，或某些計算在將資料寫回Platform時需要重新設定，應如何處理該案例？
+
++++回答目前，我們不支援以此方式回傳或更新。
++++
+
+### 如何在Adobe Experience Platform中最佳化查詢？
+
++++答案系統沒有索引，因為它不是資料庫，但它沒有與資料儲存關聯的其他優化。 以下選項可用於調整查詢：
+
+- 時間序列資料的基於時間的篩選器。
+- 針對結構資料類型優化向下推。
+- 針對陣列和映射資料類型優化成本和記憶體下拉。
+- 使用快照進行增量處理。
+- 持續的資料格式。
++++
+
+### 登入是否可限制在Query Service的某些方面，或是「全部或全部」解決方案？
+
++++回答查詢服務是「全部或全部無」解決方案。 無法提供部分訪問。
++++
+
+### 我可以限制Query Service可以使用的資料嗎？還是只能存取整個Adobe Experience Platform資料湖？
+
++++答案是，您可以將查詢限制為具有唯讀存取權的資料集。
++++
+
+### 有哪些其他選項可用來限制查詢服務可存取的資料？
+
++++答案限制訪問有三種方法。 具體如下：
+
+- 使用SELECTonly語句，並為資料集提供只讀訪問權限。 同時，指派管理查詢權限。
+- 使用SELECT/INSERT/CREATE陳述式並授予資料集寫入權限。 同時，指派查詢管理權限。
+- 使用整合帳戶與上述先前的建議，並指派查詢整合權限。
+
++++
+
+### Query Service傳回資料後，是否有任何可由Platform執行的檢查，以確保其未傳回任何受保護的資料？
+
+- 查詢服務支援基於屬性的訪問控制。 您可以限制對列/葉級和/或結構級資料的訪問。 請參閱本檔案，深入了解以屬性為基礎的存取控制。
+
+### 是否可以指定連線至協力廠商用戶端的SSL模式？ 例如，我可以對Power BI使用「verify-full」嗎？
+
++++回答是，支援SSL模式。 請參閱 [SSL模式檔案](./clients/ssl-modes.md) 以劃分不同的可用SSL模式及其提供的保護級別。
++++
+
+### 從Power BI用戶端到查詢服務的所有連線是否都使用TLS 1.2?
+
++++回答是。 傳輸中資料一律符合HTTPS規範。 目前支援的版本為TLS1.2。
++++
+
+### 在埠80上建立的連接是否仍使用https?
+
++++回答是，在埠80上建立的連接仍使用SSL。 您也可以使用埠5432。
++++
+
+### 我可以控制特定連線的特定資料集和欄的存取權嗎？ 如何設定？
+
++++答是是，如果配置了，將強制執行基於屬性的訪問控制。 請參閱 [基於屬性的訪問控制概述](../access-control/abac/overview.md) 以取得更多資訊。
 +++
 
 ## 匯出資料 {#exporting-data}
