@@ -3,9 +3,9 @@ title: 事件轉送概述
 description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: d48b746b477ffa6977ce04b72fe77e8ddb95d691
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '996'
 ht-degree: 8%
 
 ---
@@ -89,7 +89,7 @@ Experience Platform轉送會維護自己的屬性存放區，區別於標籤，�
 
 #### 規則動作順序 {#action-sequencing}
 
-此 [!UICONTROL 動作] 事件轉送規則的區段一律會依序執行。 儲存規則時，請確認動作順序正確。此執行序列無法像使用標籤一樣非同步執行。
+此 [!UICONTROL 動作] 事件轉送規則的區段一律會依序執行。 例如，如果規則有兩個動作，則第二個動作要等到上一個動作完成時才會開始執行（而如果預期會從端點傳回回應，該端點已回應）。 儲存規則時，請確認動作順序正確。此執行序列無法像使用標籤規則一樣非同步執行。
 
 ## 秘密 {#secrets}
 
