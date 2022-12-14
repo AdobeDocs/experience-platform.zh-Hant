@@ -2,9 +2,9 @@
 title: 在結構註冊表API中定義XDM欄位
 description: 了解如何在Schema Registry API中建立自訂Experience Data Model(XDM)資源時定義不同欄位。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 0947eb38bdb18cb3783723cb11be79d3d32a3b76
+source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 0%
 }
 ```
 
-您可以在 `meta:enum` 屬性，每個標籤都輸入到對應的 `enum` 值。
+您可以選擇為 `meta:enum` 屬性，每個標籤都鍵入到 `enum`.
 
 ```json
 "sampleField": {
