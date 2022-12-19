@@ -5,7 +5,7 @@ title: 資料集UI指南
 topic-legacy: datasets
 description: 了解在Adobe Experience Platform使用者介面中使用資料集時，如何執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 3e25bd111d7a5cb482fa8e872452b352676b29ad
+source-git-commit: 28b6944a14c07f14d8177e3f8ae1c1a83c4c9c86
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 0%
@@ -149,7 +149,7 @@ ht-degree: 0%
 
 ## 監視資料內嵌
 
-在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 監控]** 的下一頁。 此 **[!UICONTROL 監控]** 控制面板可讓您檢視批次或串流內嵌傳入資料的狀態。 要查看單個批的狀態，請選擇以下任一項 **[!UICONTROL 批次端對端]** 或 **[!UICONTROL 端對端串流]**. 控制面板會列出所有批次或串流內嵌執行，包括成功、失敗或仍在執行的內嵌執行。 每份清單都提供批次的詳細資訊，包括批次ID、目標資料集的名稱，以及擷取的記錄數。 如果目標資料集已啟用 [!DNL Profile]，也會顯示擷取的身分和設定檔記錄數。
+在 [!DNL Experience Platform] UI, select **[!UICONTROL 監控]** 的下一頁。 此 **[!UICONTROL 監控]** 控制面板可讓您檢視批次或串流內嵌傳入資料的狀態。 要查看單個批的狀態，請選擇以下任一項 **[!UICONTROL 批次端對端]** 或 **[!UICONTROL 端對端串流]**. 控制面板會列出所有批次或串流內嵌執行，包括成功、失敗或仍在執行的內嵌執行。 每份清單都提供批次的詳細資訊，包括批次ID、目標資料集的名稱，以及擷取的記錄數。 如果目標資料集已啟用 [!DNL Profile]，也會顯示擷取的身分和設定檔記錄數。
 
 ![](../images/datasets/user-guide/batch-listing.png)
 

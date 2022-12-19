@@ -5,9 +5,9 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2397'
 ht-degree: 1%
 
 ---
@@ -66,11 +66,11 @@ ht-degree: 1%
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-此檢視會列出區段定義的相關資訊，包括劃分、流失、設定檔計數、評估方法、建立日期和上次修改日期。
+此檢視會列出區段定義的相關資訊，包括設定檔計數、建立日期和上次修改日期。
 
-劃分會顯示橫條圖，概述屬於下列各種狀態的設定檔百分比： [!UICONTROL 已實現], [!UICONTROL 現有]，和 [!UICONTROL 退出]. 此外， [!UICONTROL 瀏覽] 標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概述] 頁簽，您應使用 [!UICONTROL 瀏覽] 標籤作為正確的資訊源，因為 [!UICONTROL 概述] 標籤號每天只更新一次。
+您可以選取「影像」，將其他欄位新增至此顯示。 這些額外欄位包括劃分、流失率、評估方法和工作ID。
 
-![](../images/ui/overview/segment-browse-breakdown.png)
+如果選取劃分，顯示的橫條圖會概述屬於下列各種狀態的設定檔百分比： [!UICONTROL 已實現], [!UICONTROL 現有]，和 [!UICONTROL 退出]. 此外， [!UICONTROL 瀏覽] 標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概述] 頁簽，您應使用 [!UICONTROL 瀏覽] 標籤作為正確的資訊源，因為 [!UICONTROL 概述] 標籤號每天只更新一次。
 
 | 狀態 | 說明 |
 | ------ | ----------- |
