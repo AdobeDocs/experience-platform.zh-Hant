@@ -5,9 +5,9 @@ title: 區段產生器UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform UI中的「區段產生器」提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1d70aee1bd225268b8f2a2d1dc24d446bb4ce633
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3101'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 依預設，只會顯示資料存放區中填入的結構欄位。 這包括「[!UICONTROL 事件類型]」。 若[!UICONTROL 事件類型]&quot;清單不可見，或者您只能選擇&quot;[!UICONTROL 任何]&quot;作為&quot;[!UICONTROL 事件類型]」，選擇 **齒輪表徵圖** 下一頁 **[!UICONTROL 欄位]**，然後選取 **[!UICONTROL 顯示完整的XDM架構]** 在 **[!UICONTROL 可用欄位]**. 選取 **齒輪表徵圖** 返回 **[!UICONTROL 欄位]** 頁簽，您現在應該可以檢視多個「[!UICONTROL 事件類型]「 」和綱要欄位，無論其是否包含資料。
 
-![](../images/ui/segment-builder/show-populated.png)
+![會反白顯示選項按鈕，讓您選擇只顯示含有資料的欄位或顯示所有XDM欄位。](../images/ui/segment-builder/show-populated.png)
 
 #### Adobe Analytics報表套裝資料集
 

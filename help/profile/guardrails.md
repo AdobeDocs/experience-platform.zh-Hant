@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 67ed3e5a71231d9c243ca31693d2db70492bdb43
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1929'
 ht-degree: 5%
 
 ---
@@ -128,11 +128,11 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 
    與時間無關的屬性（也稱為「記錄資料」）是使用 [!DNL XDM Individual Profile]，而時間序列資料（也稱為「事件資料」）則使用 [!DNL XDM ExperienceEvent]. 在Adobe Experience Platform中擷取記錄和時間序列資料時，就會觸發 [!DNL Real-time Customer Profile] 開始擷取已啟用供其使用的資料。 擷取的互動和詳細資訊越多，個別設定檔就越健全。
 
-   ![](images/guardrails/profile-entity.png)
+   ![說明記錄資料和時間序列資料之間差異的資訊圖。](images/guardrails/profile-entity.png)
 
 * **Dimension實體：** 雖然設定檔資料存放區維護設定檔資料不是關係存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立區段。 此整合稱為 [多實體分割](../segmentation/multi-entity-segmentation.md). 貴組織也可以定義XDM類別，以說明個人以外的項目，例如商店、產品或屬性。 這些非[!DNL XDM Individual Profile] 結構稱為「維度實體」，不包含時間序列資料。 Dimension實體提供查閱資料，這有助於並簡化多實體區段定義，且必須足夠小，以便區段引擎能將整個資料集載入記憶體，以獲得最佳處理（快速點查閱）。
 
-   ![](images/guardrails/profile-and-dimension-entities.png)
+   ![顯示配置檔案實體由維實體組成的資訊圖。](images/guardrails/profile-and-dimension-entities.png)
 
 ### 設定檔片段
 

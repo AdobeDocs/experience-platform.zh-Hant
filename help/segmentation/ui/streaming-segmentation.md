@@ -5,9 +5,9 @@ title: 串流劃分UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform上的串流細分可讓您近乎即時執行細分，同時專注於資料的豐富性。 透過串流細分，區段資格現在會在資料進入Platform時進行，以緩解排程及執行區段工作的需求。 透過此功能，現在大部分的區段規則都可在資料傳入Platform時評估，這表示區段成員資格會保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '1371'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ ht-degree: 0%
 
 | 查詢類型 | 詳細資訊 | 範例 |
 | ---------- | ------- | ------- |
-| 單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| 相對時間範圍內的單一事件 | 任何指單一傳入事件的區段定義。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| 具有時間窗口的單個事件 | 任何區段定義，指的是具有時間視窗的單一傳入事件。 | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
+| 單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件。 | ![顯示單一事件的範例。](../images/ui/streaming-segmentation/incoming-hit.png) |
+| 相對時間範圍內的單一事件 | 任何指單一傳入事件的區段定義。 | ![顯示相對時間視窗內單一事件的範例。](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 具有時間窗口的單個事件 | 任何區段定義，指的是具有時間視窗的單一傳入事件。 | ![此處顯示帶有時間窗口的單個事件的示例。](../images/ui/streaming-segmentation/historic-time-window.png) |
 | 僅限設定檔 | 只參考設定檔屬性的任何區段定義。 |  |
-| 具有設定檔屬性的單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件，以及一或多個設定檔屬性。 **注意：** 事件發生時會立即評估查詢。 但是，若是設定檔事件，則必須等待24小時才能納入。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| 相對時間窗口內具有配置檔案屬性的單個事件 | 任何區段定義，指的是單一傳入事件和一或多個設定檔屬性。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| 區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：** 如果使用區段，將會發生設定檔取消資格 **每24小時**. | ![](../images/ui/streaming-segmentation/two-batches.png) |
-| 具有設定檔屬性的多個事件 | 任何參照多個事件的區段定義 **過去24小時內** 和（可選）有一或多個設定檔屬性。 | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| 具有設定檔屬性的單一事件 | 任何區段定義，是指沒有時間限制的單一傳入事件，以及一或多個設定檔屬性。 **注意：** 事件發生時會立即評估查詢。 但是，若是設定檔事件，則必須等待24小時才能納入。 | ![顯示了具有設定檔屬性的單一事件範例。](../images/ui/streaming-segmentation/profile-hit.png) |
+| 相對時間窗口內具有配置檔案屬性的單個事件 | 任何區段定義，指的是單一傳入事件和一或多個設定檔屬性。 | ![此處顯示了在相對時間窗口內具有配置檔案屬性的單個事件的示例。](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| 區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：** 如果使用區段，將會發生設定檔取消資格 **每24小時**. | ![顯示區段的範例。](../images/ui/streaming-segmentation/two-batches.png) |
+| 具有設定檔屬性的多個事件 | 任何參照多個事件的區段定義 **過去24小時內** 和（可選）有一或多個設定檔屬性。 | ![此處顯示了具有設定檔屬性的多個事件的範例。](../images/ui/streaming-segmentation/event-history-success.png) |
 
 區段定義將 **not** 可在下列情況下啟用串流分段：
 
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 建立啟用串流的區段後，您可以檢視該區段的詳細資訊。
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
+![此時會顯示區段詳細資料頁面。](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
 具體而言， **[!UICONTROL 合格總計]** 此時會顯示量度，根據此區段的批次和串流評估，顯示合格對象的總數。
 
@@ -79,11 +79,11 @@ ht-degree: 0%
 >
 >有關這些狀態的詳細資訊，請參閱 [細分概述](./overview.md#browse).
 
-![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
+![會強調顯示「隨時間變化的描述檔」卡，顯示一段時間內描述檔的折線圖。](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
 選取旁邊的資訊泡泡，即可找到有關上次區段評估的其他資訊 **[!UICONTROL 合格總計]**.
 
-![](../images/ui/streaming-segmentation/info-bubble.png)
+![已選取「總合格設定檔」的資訊泡泡。 這會顯示上次區段評估時間的相關資訊。](../images/ui/streaming-segmentation/info-bubble.png)
 
 如需區段定義的詳細資訊，請參閱 [區段定義詳細資料](#segment-details).
 

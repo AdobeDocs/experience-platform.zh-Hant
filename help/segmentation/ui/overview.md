@@ -5,9 +5,9 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d2790ddab74f989ebb5ca522ce44323033c53911
+source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2647'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 若要進一步了解，請造訪 [區段控制面板指南](../../dashboards/guides/segments.md).
 
-![](../../dashboards/images/segments/dashboard-overview.png)
+![區段控制面板隨即顯示。 它會顯示各種小工具，包括對象大小、依身分設定檔、身分覆蓋，以及對象大小變更趨勢。](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 瀏覽 {#browse}
 
@@ -60,15 +60,15 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
 >title="新增所有區段至排程"
->abstract="啟用，將所有批次評估段納入每日計畫更新（UTC下午3:30）。 停用以從排程更新中移除所有區段。"
+>abstract="啟用，將所有批評估段納入每日計畫更新。 停用以從排程更新中移除所有區段。"
 
 選取 **[!UICONTROL 瀏覽]** 標籤，查看組織的所有區段定義清單。
 
-![](../images/ui/overview/segment-browse-all.png)
+![此時會顯示區段瀏覽畫面。 隨即顯示屬於組織的所有區段清單。](../images/ui/overview/segment-browse-all.png)
 
 此檢視會列出區段定義的相關資訊，包括設定檔計數、建立日期和上次修改日期。
 
-您可以選取「影像」，將其他欄位新增至此顯示。 這些額外欄位包括劃分、流失率、評估方法和工作ID。
+您可以選取 ![篩選屬性圖示](../images/ui/overview/filter-attribute.png). 這些額外欄位包括劃分、流失率、評估方法和工作ID。
 
 如果選取劃分，顯示的橫條圖會概述屬於下列各種狀態的設定檔百分比： [!UICONTROL 已實現], [!UICONTROL 現有]，和 [!UICONTROL 退出]. 此外， [!UICONTROL 瀏覽] 標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概述] 頁簽，您應使用 [!UICONTROL 瀏覽] 標籤作為正確的資訊源，因為 [!UICONTROL 概述] 標籤號每天只更新一次。
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 
 評估方法可以是串流、批次或邊。 資料進入系統時，會持續評估串流區段。 系統會根據設定的排程來評估批次區段。 會即時評估邊緣區段，以利使用相同的頁面和下一頁個人化使用案例。
 
-![](../images/ui/overview/segment-browse-segments.png)
+![區段瀏覽頁面中的區段會反白顯示。](../images/ui/overview/segment-browse-segments.png)
 
 頁面頂端有選項可新增所有區段至排程和建立新區段。
 
@@ -90,11 +90,11 @@ ht-degree: 1%
 
 選取 **[!UICONTROL 建立區段]** 會帶您前往「區段產生器」。 若要進一步了解建立區段，請參閱 [在使用手冊中建立區段](#create-segment).
 
-![](../images/ui/overview/segment-browse-top.png)
+![區段瀏覽頁面上的頂端導覽列會強調顯示。 此列包含將所有區段新增至排程的切換按鈕，以及建立區段的按鈕。](../images/ui/overview/segment-browse-top.png)
 
 右側邊欄包含組織內所有區段的相關資訊，列出區段總數、上次評估日期、下次評估日期，以及按評估方法劃分的區段。
 
-![](../images/ui/overview/segment-browse-segment-info.png)
+![區段瀏覽頁面的右側邊欄會反白顯示。 會顯示組織中區段的相關資訊。 這包括區段總數、上次評估時間、下次評估時間，以及不同區段類型的劃分等資訊。](../images/ui/overview/segment-browse-segment-info.png)
 
 選取區段定義的列可提供區段定義的摘要，包括可編輯或刪除區段、啟動區段至目的地、區段的合格對象、總對象大小的選項，以及區段的名稱、說明、評估方法、建立日期和上次修改日期。
 
@@ -102,7 +102,7 @@ ht-degree: 1%
 >
 > 您會 **not** 能夠刪除目的地啟用中使用的區段。
 
-![](../images/ui/overview/segment-browse-details.png)
+![畫面上會顯示所選區段的詳細資訊。 這包括合格設定檔數目的詳細資訊、合格與總設定檔的百分比劃分、上次評估日期。](../images/ui/overview/segment-browse-details.png)
 
 ## 區段定義詳細資料 {#segment-details}
 
@@ -110,7 +110,7 @@ ht-degree: 1%
 
 區段詳細資料頁面隨即顯示。 頂端是區段定義的摘要、合格對象大小的相關資訊，以及區段已啟動的目的地。
 
-![](../images/ui/overview/segment-details-summary.png)
+![此時會顯示區段定義詳細資料頁面。 區段摘要、區段中的總受眾和已啟動的目的地卡片會強調顯示。](../images/ui/overview/segment-details-summary.png)
 
 ### 區段摘要 {#segment-summary}
 
@@ -118,7 +118,7 @@ ht-degree: 1%
 
 此外，您也可以選擇啟用目的地區段或編輯區段。 選取 **[!UICONTROL 啟動至目的地]** 可讓您啟用目的地的區段。 如需將區段啟用至目的地的詳細資訊，請參閱 [啟用概述](../../destinations/ui/activation-overview.md).
 
-![](../images/ui/overview/segment-details-activate.png)
+![系統會強調顯示「啟動至目的地」按鈕。](../images/ui/overview/segment-details-activate.png)
 
 選取 **[!UICONTROL 編輯區段]** 會帶你去 [!DNL Segment Builder]. 如需使用的詳細資訊， [!DNL Segment Builder] 工作區，請閱讀 [[!DNL Segment Builder] 使用手冊](./segment-builder.md).
 
@@ -158,13 +158,13 @@ ht-degree: 1%
 
 更詳細的資訊 [!DNL Profile] 可透過選取 [!DNL Profile] ID. 若要進一步了解設定檔的詳細資訊，請參閱 [[!DNL Real-time Customer Profile] 使用手冊](../../profile/ui/user-guide.md#profile-detail).
 
-![](../images/ui/overview/segment-details-profiles.png)
+![區段定義的範例設定檔會反白顯示。 範例設定檔資訊包括設定檔ID、名字、姓氏以及人員的電子郵件。](../images/ui/overview/segment-details-profiles.png)
 
 ## 建立區段 {#create-segment}
 
 選取 **[!UICONTROL 建立區段]** 在右上角開啟 [!DNL Segment Builder] 工作區，您可以開始建立區段定義。
 
-![](../images/ui/overview/segment-browse-create.png)
+![在「區段」瀏覽頁面上，會反白顯示「建立區段」按鈕。](../images/ui/overview/segment-browse-create.png)
 
 ### [!DNL Segment Builder] 工作區
 
@@ -172,7 +172,7 @@ ht-degree: 1%
 
 如需使用的詳細資訊， [!DNL Segment Builder] 工作區，請閱讀 [[!DNL Segment Builder] 使用手冊](./segment-builder.md).
 
-![](../images/ui/overview/segment-builder.png)
+![隨即顯示「區段產生器」工作區。](../images/ui/overview/segment-builder.png)
 
 ## 排程分段 {#scheduled-segmentation}
 
@@ -190,7 +190,7 @@ ht-degree: 1%
 
 目前只能使用API建立排程。 如需使用API建立、編輯及使用排程的詳細步驟，請依照教學課程來評估和存取區段結果，尤其是 [使用API進行排程評估](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![](../images/ui/overview/segment-browse-scheduled.png)
+![將所有區段新增至排程的切換，會在「區段瀏覽」頁面上反白顯示。](../images/ui/overview/segment-browse-scheduled.png)
 
 ## 對象 {#audiences}
 
@@ -290,7 +290,7 @@ ht-degree: 1%
 
 建立完區段後，Adobe Experience Platform資料控管會分析區段，以確保區段內沒有違反政策的情況。 請參閱 [資料控管概觀](../../data-governance/home.md) 以取得更多資訊。
 
-![](../images/ui/overview/segment-dule-policy-violations.png)
+![此時將顯示該段的策略違規。](../images/ui/overview/segment-dule-policy-violations.png)
 
 ## 後續步驟和其他資源 {#next-steps}
 
