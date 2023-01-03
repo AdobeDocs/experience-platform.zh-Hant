@@ -5,10 +5,10 @@ title: 在Privacy ServiceUI中管理隱私權作業
 topic-legacy: UI guide
 description: 了解如何使用Privacy Service使用者介面協調及監控各種Experience Cloud應用程式的隱私權要求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 0%
+source-wordcount: '1151'
+ht-degree: 1%
 
 ---
 
@@ -24,13 +24,25 @@ ht-degree: 0%
 
 ### 規範類型
 
-[!DNL Privacy Service] 支援數項隱私權法規的工作要求：
+[!DNL Privacy Service] 支援數個隱私權法規的工作要求。 下表列出UI中顯示的支援的法規及其對應標籤：
 
-* 此 [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* 歐盟 [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
-* 泰國 [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
-* 巴西 [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* 紐西蘭 [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
+| UI標籤 | 規範 |
+| --- | --- |
+| [!UICONTROL CCPA] | 此 [!DNL California Consumer Privacy Act] |
+| [!UICONTROL GDPR] | 歐盟 [!DNL General Data Protection Regulation] |
+| [!UICONTROL PDPA_THA] | 泰國 [!DNL Personal Data Protection Act] |
+| [!UICONTROL LGPD_BRA] | 巴西 [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL NZPA_NZL] | 紐西蘭 [!DNL Privacy Act] |
+| [!UICONTROL VCDPA_USA] | 此 [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL CPRA_USA] | 此 [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL APA_AUS] | 此 [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL HIPAA_AUS] | 此 [!DNL Health Insurance Portability and Accountability Act] |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>請參閱 [支援的隱私權法規](../regulations/overview.md) ，以了解有關各條例的法律背景的更多資訊。
 
 每個規則類型的作業將單獨跟蹤。 若要在規則類型之間切換，請選取 **[!UICONTROL 規範類型]** 下拉式選單中，然後從清單中選取所需的規則。
 

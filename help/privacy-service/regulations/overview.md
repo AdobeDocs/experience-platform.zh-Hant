@@ -5,10 +5,10 @@ title: 隱私權法規概觀
 topic-legacy: troubleshooting
 description: 本檔案概述Adobe Experience Cloud支援的不同隱私權法規。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 74624291b77e586c6adeb3e08b12a1dae92d419a
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 0%
+source-wordcount: '724'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 本檔案概述Adobe Experience Cloud支援的不同隱私權法規。
 
-透過使用Adobe Experience Platform Privacy Service,Experience Cloud可根據下列法規支援存取和刪除請求：
+透過使用 [Adobe Experience Platform Privacy Service](../home.md),Experience Cloud可根據下列法規支援存取和刪除請求：
 
 | 規範 | 說明 |
 | --- | --- |
@@ -29,6 +29,8 @@ ht-degree: 0%
 | 紐西蘭 [!DNL Privacy Act] | 此 [紐西蘭 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) 控制各機構如何收集、使用、披露、儲存和獲取紐西蘭公民和組織的個人資訊。 2020年，該法案的最新版本對這些隱私法進行了重大更新，包括新的犯罪、增加罰款、強制通知資料違規，以及增加隱私權專員的權力。 |
 | PDPA（泰國） | 此 [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 旨在保護泰國資料擁有者，使其免受非法收集、使用或洩露其個人資料的侵害。 受歐盟GDPR的啟發，該規定授予泰國公民請求存取或刪除其儲存的個人資料的權利。 |
 | VCDPA（維吉尼亞州） | 此 [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) 為維吉尼亞州居民（「消費者」）提供新的資料隱私權，包括存取、刪除和修正個人資料的權利。 消費者也有權選擇退出個人資料銷售、選擇退出以個人資料為基礎的個人資料設定檔，以及處理個人廣告用途。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 後續步驟
 

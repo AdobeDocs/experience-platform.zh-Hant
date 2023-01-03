@@ -5,9 +5,9 @@ title: Adobe Experience Platform字彙表
 topic-legacy: getting started
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '7433'
+source-wordcount: '7919'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,8 @@ ht-degree: 0%
 **Amazon S3貯體**: [!DNL Amazon S3] 貯體是儲存在 [!DNL Amazon] 生態系統。 貯體包含物件，系統會使用開發人員指派的唯一金鑰來儲存及擷取每個物件。
 
 **Amazon S3連接器**:此 [!DNL Amazon] S3連接器可讓Experience Platform的客戶安全地連線及存取其 [!DNL Amazon] S3資料。
+
+**APA**:此 [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) 促進和保護個人的隱私，並規範澳大利亞政府機構和組織處理個人資訊的方式。 此 [!DNL Privacy Act] 包括適用於私營部門組織的原則。 例如，個人有權了解個人資訊被收集的原因及其使用方式、訪問、擦除其資料和糾正個人資訊的能力。
 
 **附加儲存策略**:「附加」儲存策略是指定第三方資料以透過連線內嵌，以及在資料集結尾附加任何新資料或列時使用的選項。 先前擷取的列不會受到影響，且只會擷取自上次排程執行後建立的列至Experience Platform。 源系統中更改的任何行在Experience Platform時保持不變。
 
@@ -90,6 +92,8 @@ ht-degree: 0%
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (有時稱為 [!DNL Catalog])是Adobe Experience Platform內用於資料位置和歷程的記錄系統。 雖然所有擷取到Experience Platform中的資料都會以檔案和目錄的形式儲存在資料湖中， [!DNL Catalog] 保存這些檔案和目錄的元資料和說明，以用於查閱、監控和資料控管。
 
+**CCPA**:此 [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) 增強美國加州居民的隱私權和消費者保護。 CCPA為加州居民提供新的資料隱私權，包括存取和刪除其個人資料、得知其個人資料是否遭到販售或揭露（以及對象是誰）的權利，以及選擇退出將其資料銷售給第三方的權利。
+
 **類別**:在Experience Data Model(XDM)中，類別會定義用來建立結構的最小欄位集，並定義結構所代表之商業物件的基本行為。
 
 **用戶端**:客戶端是連接到的外部工具或應用程式 [!DNL Query Service] via [!DNL PostgreSQL] 通訊協定或HTTP API。
@@ -107,6 +111,8 @@ ht-degree: 0%
 **主控台**:在 [!DNL Query Service]，控制台會提供查詢狀態和操作的相關資訊。 主控台會顯示的連線狀態 [!DNL Query Service]、正在執行的查詢操作，以及由這些查詢產生的任何錯誤訊息。
 
 **合同(&quot;C&quot;)標籤**:合約(「C」)資料使用標籤可用來分類有合約義務或與貴組織資料控管政策相關的資料。
+
+**CPRA**:此 [[!DNL California Consumer Privacy Rights Act (CPRA)]](https://cppa.ca.gov/regulations/consumer_privacy_act.html) 擴展和修改 [!DNL California Consumer Privacy Act (CCPA)]. 此 [!DNL CPRA] 為加州的消費者資料隱私確立了新的基準，增加了消費者權利，並透過更廣泛的敏感個人資訊定義擴展了涵蓋的資料類型。 此外， [!DNL CPRA] 成立了加州隱私保護局(California Privacy Protection Agency)，這是一家新機構，專門負責實作及執行資料隱私權規則。
 
 **C1合同標籤**:A `C1` 合約資料使用標籤指定資料只能以匯總形式從Adobe Experience Cloud匯出，不含個別或裝置識別碼。 例如，源自社交網路的資料。
 
@@ -262,6 +268,8 @@ ht-degree: 0%
 
 ## H
 
+**HIPAA**:此 [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) 是一項美國聯邦法律，旨在提高醫療效率、提高醫療保險的可移植性，以及保護患者和醫療計畫成員的隱私。 根據HIPAA，個人有權訪問和修改其資訊，並獲得其醫療記錄或健康資訊的副本。 受覆蓋實體和受覆蓋實體的業務聯繫人必須遵守HIPAA法規。
+
 **主機**:在標籤內容中，主機會指定系統傳送組建所需的位置、網域和使用者憑證。
 
 **每小時**:在排程檔案匯出的內容中，每3、6、8或12小時排程增量檔案匯出。
@@ -316,6 +324,8 @@ ht-degree: 0%
 
 ## L
 
+**LGPD**:此 [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) 旨在規範對巴西所有個人或自然人個人資料的處理。 LGPD賦予巴西公民存取和刪除其個人資料、知道其個人資料是否被出售或被披露（以及向誰）的權利，以及選擇退出將其資料出售給第三方的權利。
+
 **程式庫**:在標籤內容中，程式庫是一組商業邏輯，包含標籤程式庫在用戶端裝置上應如何運作的指示。
 
 **查閱實體**:在資料模型的內容中，查詢實體代表可與個別人員相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由根據自訂Experience Data Model(XDM)類別的結構表示。
@@ -342,6 +352,8 @@ ht-degree: 0%
 
 ## N
 
+**[!DNL New Zealand Privacy Act]**:此 [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) 控制各機構如何收集、使用、披露、儲存和獲取紐西蘭公民和組織的個人資訊。 2020年，該法案的最新版本對這些隱私法進行了重大更新，包括新的犯罪、增加罰款、強制通知資料違規，以及增加隱私權專員的權力。
+
 **非生產沙箱**:非生產沙箱是沙箱，通常用於開發實驗、測試或試驗。 與生產沙箱不同，非生產沙箱可重設及刪除。
 
 **[!DNL Notebooks]**: [!DNL Notebooks] 使用 [!DNL Jupyter Notebook] 可執行，以執行資料分析。
@@ -367,6 +379,8 @@ ht-degree: 0%
 **部分擷取**:部分內嵌功能允許在指定的錯誤閾值內內嵌批次資料的有效記錄。 可以下載或訪問失敗記錄的錯誤診斷 [!UICONTROL 監控] 或 [!UICONTROL 來源] 資料流運行概述。
 
 **鑲木檔案**:Parquet檔案是具有複雜嵌套資料結構的欄位式儲存檔案格式。 新增資料以填入結構資料集時需要鑲木檔案。
+
+**PDPA**:此 [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 旨在保護泰國資料擁有者，使其免受非法收集、使用或洩露其個人資料的侵害。 受歐盟GDPR的啟發，該規定授予泰國公民請求存取或刪除其儲存的個人資料的權利。
 
 **個人化優惠方案**:個人化優惠方案是根據適用性規則和限制而自訂的行銷訊息。
 
@@ -529,6 +543,8 @@ ht-degree: 0%
 **聯合架構**:聯合架構是共用相同類別且已啟用的架構的整合 [!DNL Real-time Customer Profile]. 組織可以有多個聯合結構，但每個類只能有一個聯合結構。
 
 ## V
+
+**VCDPA**:此 [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) 為維吉尼亞州居民（「消費者」）提供新的資料隱私權，包括存取、刪除和修正個人資料的權利。 消費者也有權選擇退出個人資料銷售、選擇退出以個人資料為基礎的個人資料設定檔，以及處理個人廣告用途。
 
 ## W
 
