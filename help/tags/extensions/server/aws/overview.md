@@ -2,9 +2,9 @@
 title: AWS擴充功能概述
 description: 了解Adobe Experience Platform中用於事件轉送的AWS擴充功能。
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '847'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) 是雲計算平台，提供多種服務，例如分佈式計算、資料庫儲存、內容傳遞和客戶關係管理(CRM)。
+[[!DNL Amazon Web Services] ([!DNL AWS])](https://aws.amazon.com/) 是雲計算平台，為客戶關係管理(CRM)和企業資源規劃(ERP)提供多種服務，如分佈式計算、資料庫儲存、內容交付和軟體即服務(SaaS)整合服務。
 
 此 [!DNL AWS] [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能可運用 [[!DNL Amazon Kinesis Data Streams]](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) 從Adobe Experience Platform邊緣網路將事件傳送至 [!DNL AWS] 供進一步處理。 本指南說明如何安裝擴充功能，並在事件轉送規則中運用其功能。
 
