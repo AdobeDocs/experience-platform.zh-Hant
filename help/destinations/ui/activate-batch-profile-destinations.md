@@ -4,9 +4,9 @@ title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 79fc200f4e56699013b1ba3f91f5e383cea77e2a
+source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
 workflow-type: tm+mt
-source-wordcount: '3411'
+source-wordcount: '3414'
 ht-degree: 0%
 
 ---
@@ -207,7 +207,7 @@ ht-degree: 0%
 
    ![影像突出顯示如何選擇源欄位。](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
-1. 在 **[!UICONTROL 選擇欄位]** 頁，選擇要發送到目標的XDM屬性，然後選擇 **[!UICONTROL 選擇]**.
+1. 在 **[!UICONTROL 選擇欄位]** 頁面，選取您要傳送至目的地的XDM屬性或身分命名空間，然後選擇 **[!UICONTROL 選擇]**.
 
    ![此影像顯示了作為源欄位可用的各種欄位。](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
