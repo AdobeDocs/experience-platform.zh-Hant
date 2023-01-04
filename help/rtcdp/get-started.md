@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP; CDP;Real-time Customer Data Platform；即時客戶資料平台；real time cdp;cdp;rtcdp
 title: 開始使用Real-time Customer Data Platform
-description: 設定Adobe Real-time Customer Data Platform實作時，請使用此範例案例作為範例。
+description: 在設定您的 Adobe Real-Time Customer Data Platform 實作時，可使用此範例情境當作範例。
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2333'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 1%
 
 例如，未確認的訪客導覽至Luma網站的「男性」區段，並檢視幾個執行運動衫的訪客。
 
-![影像](assets/luma-sweatshirts.png)
+![image](assets/luma-sweatshirts.png)
 
 當客戶導覽以深入了解這些產品時，這些產品檢視會在Adobe Analytics中收集並傳送至 [!DNL Experience Platform].
 
@@ -87,7 +87,7 @@ Luma可將訪客的行為對應至Adobe Experience Platform上的使用者設定
 
 當客戶登入時，她自稱莎拉·羅絲。
 
-![影像](assets/luma-login.png)
+![image](assets/luma-login.png)
 
 會合併兩個身分：
 
@@ -96,7 +96,7 @@ Luma可將訪客的行為對應至Adobe Experience Platform上的使用者設定
 
 兩個身分會結合為單一設定檔，位於 [!DNL Experience Platform]. Luma現在對這個消費者有統一的看法。
 
-根據網站「男性」區段中匿名訪客的瀏覽行為，可能已假設客戶為男性。 現在她登錄了，Luma認出莎拉·羅絲。 Luma使用 [!DNL Real-time Customer Profile] 調整跨管道傳送給她的訊息。
+根據網站「男性」區段中匿名訪客的瀏覽行為，可能已假設客戶為男性。 現在她登錄了，Luma認出莎拉·羅絲。 Luma使用 [!DNL Real-Time Customer Profile] 調整跨管道傳送給她的訊息。
 
 ## 個人化使用者體驗
 
@@ -104,9 +104,9 @@ Luma可將訪客的行為對應至Adobe Experience Platform上的使用者設定
 
 她瀏覽到首頁，瀏覽更多內容。
 
-![影像](assets/luma-personal.png)
+![image](assets/luma-personal.png)
 
-Sarah會獲得個人化的首頁體驗，這些體驗會根據她動態傳送 [!DNL Real-time Customer Profile] 在Adobe Experience Platform。
+Sarah會獲得個人化的首頁體驗，這些體驗會根據她動態傳送 [!DNL Real-Time Customer Profile] 在Adobe Experience Platform。
 
 由於Adobe Target的Adobe Sensei支援個人化，她看到了相關內容，這要考慮到她過去的購買行為，以及對跑步服和齒輪的親和力。 Luma還根據她最近的瀏覽，為男性定製了跑步器材。
 
@@ -128,7 +128,7 @@ Real-time Customer Data Platform採用Adobe Experience Platform技術，專為�
 
 Luma團隊在單一位置提供其所有行為和客戶資料。
 
-![影像](assets/luma-dash.png)
+![image](assets/luma-dash.png)
 
 他們可以內嵌來自下列所有來源的資料：
 
@@ -143,13 +143,13 @@ Luma團隊在單一位置提供其所有行為和客戶資料。
 
 使用 [!DNL Real-Time Customer Data Platform] 將新資料來源帶入Platform。 Real-Time CDP包含資料來源目錄，可快速且輕鬆地新增至設定檔。
 
-![影像](assets/luma-source-cat.png)
+![image](assets/luma-source-cat.png)
 
 例如，若要內嵌Luma的CRM資料，請依 *CRM*，以及所有現成可用的連接器，包含 *CRM* 清單中。 若要新增 [!DNL Microsoft Dynamics CRM] 資料：
 
 1. 授權連線。
 
-   ![影像](assets/luma-source-auth.png)
+   ![image](assets/luma-source-auth.png)
 
 1. 從建議的XDM預先對應表格清單中，選擇要匯入的項目。
 
@@ -168,7 +168,7 @@ Luma團隊在單一位置提供其所有行為和客戶資料。
 
 1. 設定排程。
 
-   ![影像](assets/luma-source-sched.png)
+   ![image](assets/luma-source-sched.png)
 
 已經完成了。 您剛補充 [!DNL Microsoft CRM] 作為資料來源， [!DNL Experience Platform].
 
@@ -195,11 +195,11 @@ Luma擁有的關於Sarah的所有設定檔資訊都會顯示。 這包括她的�
 
 Real-Time CDP設定檔將Luma行銷團隊的工作流程從數週縮短為數分鐘，並根據這個360度的客戶檢視來解鎖個人化的可能性。 此設定檔會合併她在登入前瀏覽網站時的行為資料，與現有的客戶設定檔，進而全面了解Sarah。
 
-行銷團隊可使用這項增強功能， [!DNL Real-time Customer Profile] 更妥善地個人化莎拉的體驗，並提升她對Luma的品牌忠誠度。
+行銷團隊可使用這項增強功能， [!DNL Real-Time Customer Profile] 更妥善地個人化莎拉的體驗，並提升她對Luma的品牌忠誠度。
 
 ## 區段
 
-強大的Adobe Experience Platform細分功能可讓行銷人員根據 [!DNL Real-time Customer Profile].
+強大的Adobe Experience Platform細分功能可讓行銷人員根據 [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -237,7 +237,7 @@ Loyalty member
 在Real-Time CDP中，Luma可順暢地對其對象區段執行動作，以提供個人化體驗。\
 在此，我們會看到Luma可將此目的地(包括Adobe和非Adobe解決方案)傳送至的所有目的地：
 
-![影像](assets/luma-dest.png)
+![image](assets/luma-dest.png)
 
 ### 選取目的地
 
@@ -276,7 +276,7 @@ Adobe Experience Platform包含隱私權和安全性控制項，可判斷區段�
 
 儲存時，視覺資料流畫布會顯示從統一設定檔對應至您選取的三個目的地的區段。
 
-![影像](assets/luma-flow.png)
+![image](assets/luma-flow.png)
 
 ## 跨裝置身分識別匯整
 

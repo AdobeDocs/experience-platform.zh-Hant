@@ -5,7 +5,7 @@ title: 使用API進行邊緣劃分
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 0%
@@ -32,8 +32,8 @@ ht-degree: 0%
 
 本開發人員指南需要妥善了解 [!DNL Adobe Experience Platform] 與邊緣細分相關的服務。 開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
-- [[!DNL Segmentation]](../home.md):提供從 [!DNL Real-time Customer Profile] 資料。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
+- [[!DNL Segmentation]](../home.md):提供從 [!DNL Real-Time Customer Profile] 資料。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 
 若要成功呼叫任何Experience PlatformAPI端點，請參閱 [Platform API快速入門](../../landing/api-guide.md) 以了解必要標題及如何讀取範例API呼叫。

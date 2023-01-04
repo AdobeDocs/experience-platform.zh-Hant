@@ -5,7 +5,8 @@ solution: Experience Platform
 product: experience platform
 type: Documentation
 description: 進一步了解資料啟用的預設使用量和比率限制。
-source-git-commit: 69496d2e00ce866413786160d4524cabd03ae350
+exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1198'
 ht-degree: 3%
@@ -121,5 +122,5 @@ ht-degree: 3%
 
 * 的護欄 [資料擷取](/help/ingestion/guardrails.md)
 * 的護欄 [[!DNL Identity Service] 資料](/help/identity-service/guardrails.md)
-* 的護欄 [[!DNL Real-time Customer Profile] 資料](/help/profile/guardrails.md)
+* 的護欄 [[!DNL Real-Time Customer Profile] 資料](/help/profile/guardrails.md)
 * 的護欄 [[!DNL Query Service] 資料](/help/query-service/guardrails.md)

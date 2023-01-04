@@ -3,7 +3,7 @@ keywords: rtcdp設定檔；設定檔rtcdp;rtcdp身分；rtcdp合併原則；即�
 title: 了解Real-Time CDP中的即時客戶個人檔案
 description: 了解Adobe Real-time Customer Data Platform如何讓您使用即時客戶個人檔案，為客戶提供協調一致的相關體驗。
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 即時客戶個人檔案概觀
 
-「即時客戶個人檔案」可讓您結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，以全面了解每個客戶。 每個個別客戶設定檔都可讓您將不同的客戶資料併入統一檢視中，為每個客戶互動提供可操作的時間戳記帳戶。
+「即時客戶個人檔案」可讓您結合來自多個管道的資料，包括線上、離線、CRM和第三方資料，以全面了解每個客戶。 每個個別客戶設定檔都可讓您將不同的客戶資料併入統一檢視中，為每個客戶互動提供可操作的時間戳記帳戶。
 
 ## 中的設定檔 [!DNL Real-Time Customer Data Platform]
 

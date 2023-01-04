@@ -3,7 +3,7 @@ keywords: 量度概觀；rtcdp量度概觀
 title: Real-time Customer Data Platform首頁和控制面板
 description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 2%
@@ -28,14 +28,14 @@ Adobe Real-time Customer Data Platform(Real-Time CDP)首頁包含量度控制面
 
 * **排行榜** 在控制面板的頂端。 排行榜會顯示系統中的資料集、設定檔、區段和目的地數量。
 
-   ![影像](assets/leaderboard.png)
+   ![image](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **最近的項目** 列出系統中新增的5個最近資料集、來源、區段和目的地。
 
-   ![影像](assets/recent.png)
+   ![image](assets/recent.png)
 
 其他量度（例如設定檔和區段）可在Real-time Customer Data Platform的其他部分使用。
 
@@ -47,7 +47,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### 設定檔
 
-此 **[!UICONTROL 設定檔]** count會顯示在 [!DNL Real-time Customer Profile]. 其中不包含設定檔片段。 這是可定址的受眾總數。
+此 **[!UICONTROL 設定檔]** count會顯示在 [!DNL Real-Time Customer Profile]. 其中不包含設定檔片段。 這是可定址的受眾總數。
 
 此計數使用預設值 [合併策略](profile/merge-policies.md) 在統一配置檔案的合併策略配置中設定。
 

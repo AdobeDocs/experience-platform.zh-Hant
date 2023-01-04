@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓您輕鬆以Parquet檔案或符合已知Experience Data Model(XDM)結構的資料形式，將資料匯入為批次檔案。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e7fc8a168a48cc6fadda62efda9ee9eb3025ab51
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -75,23 +75,23 @@ Adobe Experience Platform可讓您輕鬆將資料匯入 [!DNL Platform] 作為�
 
 在資料集工作區的右側，您會看到 **[!UICONTROL 資訊]** 索引標籤，內含與新資料集相關的資訊，例如資料集ID、名稱、說明、表格名稱、結構、串流和來源。 「資訊」索引標籤也包含資料集建立時間和上次修改日期的相關資訊。
 
-在「資訊」標籤中，  **[!UICONTROL 設定檔]** 切換該選項，以啟用資料集，以便與 [!DNL Real-time Customer Profile]. 使用此切換開關，以及 [!DNL Real-time Customer Profile]，將在以下章節中詳細說明。
+在「資訊」標籤中，  **[!UICONTROL 設定檔]** 切換該選項，以啟用資料集，以便與 [!DNL Real-Time Customer Profile]. 使用此切換開關，以及 [!DNL Real-Time Customer Profile]，將在以下章節中詳細說明。
 
 ![資料集活動](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## 為啟用資料集 [!DNL Real-time Customer Profile]
+## 為啟用資料集 [!DNL Real-Time Customer Profile]
 
 資料集可用來將資料擷取至 [!DNL Experience Platform]，而且這些資料最終可用來識別個人，並匯整來自多個來源的資訊。 連結在一起的資訊稱為 [!DNL Real-Time Customer Profile]. 為了 [!DNL Platform] 了解哪些資訊應包含在 [!DNL Real-Time Profile]，可使用 **[!UICONTROL 設定檔]** 切換。
 
 依預設，此切換開關會關閉。 如果您選擇開啟 [!DNL Profile]，擷取至資料集的所有資料都將用來協助識別個人身分，並匯整個人資料 [!DNL Real-Time Profile].
 
-若要深入了解 [!DNL Real-time Customer Profile] 並處理身份，請檢閱 [Identity服務](../../identity-service/home.md) 檔案。
+若要深入了解 [!DNL Real-Time Customer Profile] 並處理身份，請檢閱 [Identity服務](../../identity-service/home.md) 檔案。
 
-為啟用資料集 [!DNL Real-time Customer Profile]，按一下 **[!UICONTROL 設定檔]** 在 **[!UICONTROL 資訊]** 標籤。
+為啟用資料集 [!DNL Real-Time Customer Profile]，按一下 **[!UICONTROL 設定檔]** 在 **[!UICONTROL 資訊]** 標籤。
 
 ![設定檔切換](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-畫面會顯示對話方塊，詢問您是否要為 [!DNL Real-time Customer Profile].
+畫面會顯示對話方塊，詢問您是否要為 [!DNL Real-Time Customer Profile].
 
 ![啟用配置檔案對話框](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 

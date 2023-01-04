@@ -5,7 +5,7 @@ title: 區段服務UI指南
 topic-legacy: ui guide
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 使用區段定義需要了解 [!DNL Experience Platform] 與區段相關的服務。 閱讀本使用手冊之前，請查閱以下服務的文檔：
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 可讓您將儲存在 [!DNL Experience Platform] 與個人（例如客戶、潛在客戶、使用者或組織）相關而組成的較小群組。
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):借由橋接從擷取至的不同資料來源的身分識別，來建立客戶設定檔 [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。 為了最能善用區段，請確定您的資料已根據 [資料模型最佳實務](../../xdm/schema/best-practices.md).
 
@@ -156,7 +156,7 @@ ht-degree: 1%
 | 1000至2000萬 | 100萬 |
 | 2000多萬 | 總共5% |
 
-更詳細的資訊 [!DNL Profile] 可透過選取 [!DNL Profile] ID. 若要進一步了解設定檔的詳細資訊，請參閱 [[!DNL Real-time Customer Profile] 使用手冊](../../profile/ui/user-guide.md#profile-detail).
+更詳細的資訊 [!DNL Profile] 可透過選取 [!DNL Profile] ID. 若要進一步了解設定檔的詳細資訊，請參閱 [[!DNL Real-Time Customer Profile] 使用手冊](../../profile/ui/user-guide.md#profile-detail).
 
 ![區段定義的範例設定檔會反白顯示。 範例設定檔資訊包括設定檔ID、名字、姓氏以及人員的電子郵件。](../images/ui/overview/segment-details-profiles.png)
 
@@ -176,7 +176,7 @@ ht-degree: 1%
 
 ## 排程分段 {#scheduled-segmentation}
 
-建立區段定義後，您就可以依需求或排程（持續）評估來評估它們。 評估手段 [!DNL Real-time Customer Profile] 資料，以產生對應的受眾。 建立後，會儲存對象，以便透過 [!DNL Experience Platform] API。
+建立區段定義後，您就可以依需求或排程（持續）評估來評估它們。 評估手段 [!DNL Real-Time Customer Profile] 資料，以產生對應的受眾。 建立後，會儲存對象，以便透過 [!DNL Experience Platform] API。
 
 隨需評估包括視需要使用API來執行評估並建立受眾，而排程評估（也稱為「已排程區段」）可讓您建立週期性排程，以在特定時間（最多每天一次）評估區段定義。
 
@@ -294,6 +294,6 @@ ht-degree: 1%
 
 ## 後續步驟和其他資源 {#next-steps}
 
-此 [!DNL Segmentation Service] UI提供豐富的工作流程，可讓您將有價對象與 [!DNL Real-time Customer Profile] 資料。
+此 [!DNL Segmentation Service] UI提供豐富的工作流程，可讓您將有價對象與 [!DNL Real-Time Customer Profile] 資料。
 
 若要深入了解 [!DNL Segmentation Service]，請繼續閱讀本檔案。 了解如何使用 [!DNL Segmentation Service] API，請閱讀 [[!DNL Segmentation Service] 開發人員指南](../api/overview.md).

@@ -5,7 +5,7 @@ title: 結構構成基本概念
 topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於Adobe Experience Platform的結構的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%
@@ -58,7 +58,7 @@ XDM結構非常適合以獨立格式儲存大量複雜資料。 請參閱 [嵌�
 
 結構用於將資料擷取至 [!DNL Experience Platform]. 此資料可跨多項服務使用，以建立個別實體的單一統一檢視。 因此，思考結構時請務必考量客戶身分，以及可使用哪些欄位來識別主題（無論資料來自何處）。
 
-若要協助進行此程式，您結構中的關鍵欄位可標示為身分。 擷取資料時，這些欄位中的資料會插入「[!UICONTROL 身分圖]」 然後，圖表資料便可透過 [[!DNL Real-time Customer Profile]](../../profile/home.md) 其他 [!DNL Experience Platform] 提供每個個別客戶匯整檢視的服務。
+若要協助進行此程式，您結構中的關鍵欄位可標示為身分。 擷取資料時，這些欄位中的資料會插入「[!UICONTROL 身分圖]」 然後，圖表資料便可透過 [[!DNL Real-Time Customer Profile]](../../profile/home.md) 其他 [!DNL Experience Platform] 提供每個個別客戶匯整檢視的服務。
 
 通常標籤為「[!UICONTROL 身分]「包括：電子郵件地址，電話號碼， [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID或其他唯一ID欄位。 您也應考量貴組織專屬的任何唯一識別碼，因為這些識別碼可能是好的「[!UICONTROL 身分]」欄位。
 
@@ -114,7 +114,7 @@ XDM結構非常適合以獨立格式儲存大量複雜資料。 請參閱 [嵌�
 
 >[!NOTE]
 >
->用於該值是否為主標識的布爾值(`primary`)也可針對每個身分值提供。 僅需針對要用於的結構設定主要身分 [!DNL Real-time Customer Profile]. 請參閱 [聯合結構](#union) 以取得更多資訊。
+>用於該值是否為主標識的布爾值(`primary`)也可針對每個身分值提供。 僅需針對要用於的結構設定主要身分 [!DNL Real-Time Customer Profile]. 請參閱 [聯合結構](#union) 以取得更多資訊。
 
 ### 綱要演化原則 {#evolution}
 
@@ -136,7 +136,7 @@ XDM結構非常適合以獨立格式儲存大量複雜資料。 請參閱 [嵌�
 
 ### 必填欄位
 
-個別結構欄位可以是 [標示為必要](../ui/fields/required.md)，這表示任何擷取的記錄都必須包含這些欄位中的資料，才能通過驗證。 例如，視需要設定結構的主要身分欄位，有助於確保所有擷取的記錄都參與即時客戶設定檔，而視需要設定時間戳記欄位，可確保所有時間序列事件按時間順序保留。
+個別結構欄位可以是 [標示為必要](../ui/fields/required.md)，這表示任何擷取的記錄都必須包含這些欄位中的資料，才能通過驗證。 例如，視需要設定結構的主要身分欄位，有助於確保所有擷取的記錄都參與即時客戶設定檔，同時視需要設定時間戳記欄位，以確保所有時間序列事件都能按時間順序保留。
 
 >[!IMPORTANT]
 >
@@ -273,7 +273,7 @@ Adobe提供數個標準（「核心」）XDM類別。 其中兩門課， [!DNL X
 
 ![](../images/schema-composition/union.png)
 
-啟用結構以用於 [!DNL Real-time Customer Profile]，則會包含在該類型的聯合中。 [!DNL Profile] 提供強大且集中的客戶屬性設定檔，以及客戶在與 [!DNL Platform]. [!DNL Profile] 使用聯合檢視來呈現此資料，並提供每個個別客戶的整體檢視。
+啟用結構以用於 [!DNL Real-Time Customer Profile]，則會包含在該類型的聯合中。 [!DNL Profile] 提供強大且集中的客戶屬性設定檔，以及客戶在與 [!DNL Platform]. [!DNL Profile] 使用聯合檢視來呈現此資料，並提供每個個別客戶的整體檢視。
 
 如需使用的詳細資訊 [!DNL Profile]，請參閱 [即時客戶個人檔案概觀](../../profile/home.md).
 
@@ -317,7 +317,7 @@ XDM結構通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 現代數位系統會產生大量的行為訊號（交易資料、網頁記錄、物聯網、顯示等）。 這項大資料提供絕佳的體驗機會，但由於資料的規模和多樣性，使用起來充滿挑戰。 為了從資料中獲得價值，其結構、格式和定義必須標準化，以便能夠一致且有效地處理它。
 
-結構允許從多個源整合資料、通過通用結構和定義進行標準化，並跨解決方案共用資料，從而解決了此問題。 這允許後續的流程和服務回答任何類型的資料問題，從傳統的資料建模方法轉向資料建模方法，即預先知道將要詢問資料的所有問題，並且資料建模以符合這些期望。
+結構允許從多個源整合資料、通過通用結構和定義進行標準化，並跨解決方案共用，從而解決了此問題。 這允許後續的流程和服務回答任何類型的資料問題，從傳統的資料建模方法轉向資料建模方法，即預先知道將要詢問資料的所有問題，並且資料建模以符合這些期望。
 
 ### 對象與自由格式欄位 {#objects-v-freeform}
 

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;home；熱門主題；資料提取；資料位置；資料管理；資料管理；世系；世系；批處理；提取的資料
+keywords: Experience Platform；首頁；熱門主題；資料擷取；資料位置；資料位置；資料管理；資料管理；世系；世系；批次；批次；內嵌資料
 solution: Experience Platform
-title: 資料擷取概觀
+title: 資料擷取概述
 topic-legacy: overview
-description: 本檔案介紹將資料收錄至Platform的三種主要方式，以及各自概述檔案的連結，以取得更詳細的資訊。
+description: 本檔案介紹將資料擷取至Platform的三種主要方式，以及各自概述檔案的連結，以取得詳細資訊。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 14%
@@ -15,38 +14,38 @@ ht-degree: 14%
 
 # 資料擷取概觀
 
-Adobe Experience Platform 將來自多個來源的資料彙集在一起，以協助行銷人員進一步瞭解客戶的行為。Adobe Experience Platform資料擷取代表[!DNL Platform]從這些來源擷取資料的多種方法，以及該資料如何保存在資料湖中，以供下游[!DNL Platform]服務使用。
+Adobe Experience Platform 將來自多個來源的資料彙集在一起，以協助行銷人員進一步瞭解客戶的行為。Adobe Experience Platform資料擷取代表 [!DNL Platform] 從這些來源擷取資料，以及該資料如何保存在資料湖中以供下游使用 [!DNL Platform] 服務。
 
-本檔案介紹將資料收錄至[!DNL Platform]的三種主要方式，以及各自概述檔案的連結，以取得更詳細的資訊。
+本檔案介紹將資料擷取至的三種主要方式 [!DNL Platform]，其中包含其各自概述檔案的連結，以取得詳細資訊。
 
 ## 批次擷取
 
-批次擷取可讓您將資料以批次檔案的形式內嵌至[!DNL Experience Platform]。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。內嵌後，批次會提供中繼資料，說明成功內嵌的記錄數，以及任何失敗的記錄和相關的錯誤訊息。
+批次內嵌可讓您將資料內嵌至 [!DNL Experience Platform] 作為批處理檔案。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。內嵌後，批次會提供中繼資料，說明成功內嵌的記錄數，以及任何失敗的記錄和相關的錯誤訊息。
 
-必須使用此方法來擷取手動上傳的資料檔案，例如平面CSV檔案（映射至XDM結構）和Parce資料列。
+必須使用此方法來內嵌手動上傳的資料檔案，例如一般CSV檔案（對應至XDM結構）和Parquet dataframe。
 
-如需詳細資訊，請參閱[批次擷取概觀](./batch-ingestion/overview.md)。
+請參閱 [批次匯入概觀](./batch-ingestion/overview.md) 以取得更多資訊。
 
 ## 串流擷取
 
-串流擷取可讓您從用戶端和伺服器端裝置即時傳送資料至[!DNL Experience Platform]。 [!DNL Platform] 支援使用資料入口來串流傳入的體驗資料，這些資料會保存在資料湖中啟用串流的資料集中。資料引入器可配置為自動驗證它們收集的資料，確保資料來自可信源。
+串流內嵌可讓您將用戶端和伺服器端裝置的資料傳送至 [!DNL Experience Platform] 即時。 [!DNL Platform] 支援使用資料入口來串流傳入的體驗資料，這些資料會保存在Data Lake中啟用串流的資料集中。 資料入口可以配置成自動驗證它們收集的資料，以確保資料來自可信的源。
 
-如需詳細資訊，請參閱[串流擷取概觀](./streaming-ingestion/overview.md)。
+請參閱 [串流獲取概觀](./streaming-ingestion/overview.md) 以取得更多資訊。
 
 ## 來源
 
-[!DNL Experience Platform] 可讓您設定與各種資料提供者的來源連線。這些連線可讓您向外部資料來源驗證、設定擷取執行的時間，以及管理擷取總處理能力。
+[!DNL Experience Platform] 可讓您設定與各種資料提供者的來源連線。 這些連線可讓您對外部資料來源進行驗證、設定擷取執行的時間，以及管理擷取總處理能力。
 
-源連接可配置為從其他Adobe應用程式(如Adobe Analytics和Adobe Audience Manager)、第三方雲儲存源（如[!DNL Azure Blob]、[!DNL Amazon] S3、FTP伺服器和SFTP伺服器）和第三方CRM系統（如[!DNL Microsoft Dynamics]和[!DNL Salesforce]）收集資料。
+來源連線可設定為從其他Adobe應用程式(例如Adobe Analytics和Adobe Audience Manager)、第三方雲端儲存來源(例如 [!DNL Azure Blob], [!DNL Amazon] S3、FTP伺服器和SFTP伺服器)以及協力廠商CRM系統(例如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])。
 
-如需詳細資訊，請參閱[來源概觀](../sources/home.md)。
+請參閱 [來源概觀](../sources/home.md) 以取得更多資訊。
 
 ## 後續步驟和其他資源
 
-本檔案簡要介紹了[!DNL Experience Platform]中[!DNL Data Ingestion]的不同方面。 請繼續閱讀每種擷取方法的概述檔案，以熟悉其不同的功能、使用案例和最佳實務。 您也可以觀看下方的擷取概觀影片，以補充您的學習成果。 有關[!DNL Experience Platform]如何追蹤收錄記錄的中繼資料的資訊，請參閱[目錄服務概觀](../catalog/home.md)。
+本檔案簡要介紹 [!DNL Data Ingestion] in [!DNL Experience Platform]. 請繼續閱讀每種擷取方法的概觀檔案，以熟悉其不同功能、使用案例和最佳實務。 您也可以觀看下方的擷取概述影片，以補充學習內容。 有關如何 [!DNL Experience Platform] 追蹤擷取記錄的中繼資料，請參閱 [目錄服務概述](../catalog/home.md).
 
 >[!WARNING]
 >
->下列視訊中使用的術語「統一描述檔」已過期。 術語[!DNL "Profile"]或[!DNL "Real-time Customer Profile"]是[!DNL Experience Platform]檔案中使用的正確術語。 如需最新功能，請參閱檔案。
+>下列影片中使用的「統一設定檔」一詞已過期。 詞語 [!DNL "Profile"] 或 [!DNL "Real-Time Customer Profile"] 是 [!DNL Experience Platform] 檔案。 如需最新功能，請參閱本檔案。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)

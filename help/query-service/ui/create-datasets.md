@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform Query Service可從UI建立資料集。 建立資料集後，您就可以像「資料湖」中的其他資料集一樣存取該資料集，並用於各種使用案例。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 5ea5d48119eb3d7c1e66233f3b2629c1049d0784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%

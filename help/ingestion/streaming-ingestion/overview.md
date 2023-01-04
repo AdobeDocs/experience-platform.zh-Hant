@@ -5,7 +5,7 @@ title: 串流擷取概述
 topic-legacy: overview
 description: Adobe Experience Platform的串流內嵌功能可讓使用者透過用戶端和伺服器端裝置，即時傳送資料至Experience Platform。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 2%
@@ -18,7 +18,7 @@ Adobe Experience Platform的串流內嵌功能可讓使用者以方法將資料�
 
 ## 您可以透過串流獲取做什麼？
 
-Adobe Experience Platform可讓您透過產生 [!DNL Real-time Customer Profile] 針對每個客戶。 串流內嵌功能可讓您提供內容，在建立這些設定檔時發揮關鍵作用 [!DNL Profile] 資料 [!DNL Data Lake] 盡可能縮短延遲時間。
+Adobe Experience Platform可讓您透過產生 [!DNL Real-Time Customer Profile] 針對每個客戶。 串流內嵌功能可讓您提供內容，在建立這些設定檔時發揮關鍵作用 [!DNL Profile] 資料 [!DNL Data Lake] 盡可能縮短延遲時間。
 
 以下影片旨在協助您了解串流擷取，並概述上述概念。
 
@@ -32,7 +32,7 @@ Adobe Experience Platform可讓您透過產生 [!DNL Real-time Customer Profile]
 
 ### 串流至資料集
 
-確信資料乾淨後，即可為 [!DNL Real-time Customer Profile] 和 [!DNL Identity Service].
+確信資料乾淨後，即可為 [!DNL Real-Time Customer Profile] 和 [!DNL Identity Service].
 
 如需啟用資料集的詳細資訊，請參閱 [!DNL Profile] 和 [!DNL Identity Service]，請閱讀 [設定資料集指南](../../profile/tutorials/dataset-configuration.md).
 

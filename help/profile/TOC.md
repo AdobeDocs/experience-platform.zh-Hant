@@ -1,17 +1,17 @@
 ---
 audience: user
-user-guide-title: 即時客戶設定檔指南
+user-guide-title: 即時客戶個人檔案指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 22%
+ht-degree: 20%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] {#profile}
+# [!DNL Real-Time Customer Profile] {#profile}
 
 * [[!DNL Profile] 概覽](home.md)
 * [設定檔概述（影片）](video/profile-overview.md)
@@ -46,7 +46,7 @@ ht-degree: 22%
    * [新增資料至即時客戶個人檔案](tutorials/add-profile-data.md)
    * [設定設定檔的資料集](tutorials/dataset-configuration.md)
    * [產生資料集重疊報表](tutorials/dataset-overlap-report.md)
-   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant)
+   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [隱私權要求處理](privacy.md)
 * [[!DNL Profile] 疑難排解指南](troubleshooting.md)
 * [設定檔API參考](https://www.adobe.com/go/profile-apis-en)

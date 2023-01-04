@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2022年3月
 description: 2022年3月Adobe Experience Platform發行說明。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1194'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -34,7 +34,7 @@ Experience Platform可讓您稽核各種服務和功能的使用者活動。 稽
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料集、結構、類別、欄位群組、資料類型、沙箱、目的地、區段、合併原則、計算屬性、產品設定檔和帳戶(Adobe)的稽核記錄 | 這些是由稽核記錄所記錄的資源。 如果啟用功能，稽核記錄會在活動發生時自動收集。 您不需要手動啟用記錄檔收集。 |
+| 資料集、結構、類別、欄位群組、資料類型、沙箱、目的地、區段、合併原則、計算屬性、產品設定檔和帳戶(Adobe)的稽核記錄 | 這些是由稽核記錄所記錄的資源。 如果啟用功能，稽核記錄會在活動發生時自動收集。 您無需手動啟用記錄收集。 |
 | 導出審核日誌 | 稽核記錄可下載為 `CSV` 或 `JSON` 檔案。 產生的檔案會直接儲存至您的電腦。 |
 
 {style=&quot;table-layout:auto&quot;}

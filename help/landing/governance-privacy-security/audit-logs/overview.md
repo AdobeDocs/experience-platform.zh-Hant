@@ -2,10 +2,10 @@
 title: 稽核記錄概述
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: fdc61c920ee9ae2c66344e781334844d38b44806
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '944'
-ht-degree: 12%
+ht-degree: 25%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 12%
 
 為了提高系統中執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些日誌形成了審核跟蹤，可以幫助Platform上的問題進行故障排除，並幫助您的企業有效遵守公司資料管理策略和法規要求。
 
-從基本意義上講，審核日誌會告訴 **誰** 執行 **what** 動作，和 **when**. 記錄在記錄檔中的每個動作都包含中繼資料，指出動作類型、日期和時間、執行動作之使用者的電子郵件ID，以及與動作類型相關的其他屬性。
+就基本概念而言，稽核記錄說明了&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**何時**&#x200B;執行。稽核記錄中所記錄的每個動作都包含中繼資料，其指出動作類型、日期和時間、執行動作之使用者的電子郵件 ID，以及與動作類型相關的其他屬性。
 
 本檔案涵蓋Platform中的稽核記錄，包括如何在UI或API中檢視及管理這些記錄。
 
@@ -59,9 +59,9 @@ ht-degree: 12%
 | [源資料流](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟用</li><li>資料集移除</li><li>設定檔啟用</li><li>設定檔移除</li></ul> |
 | [工作順序](../../../hygiene/home.md) | <ul><li>建立</li></ul> |
 
-## 對審核日誌的訪問
+## 存取稽核記錄
 
-為您的組織啟用功能時，稽核記錄會隨著活動發生而自動收集。 您不需要手動啟用記錄檔收集。
+為您的組織啟用此功能後，活動發生時系統自動收集稽核記錄。您無需手動啟用記錄收集。
 
 若要檢視及匯出稽核記錄檔，您必須具備 **[!UICONTROL 查看用戶活動日誌]** 授予的存取控制權限(可在 [!UICONTROL 資料控管] 類別)。 若要了解如何管理Platform功能的個別權限，請參閱 [存取控制檔案](../../../access-control/home.md).
 
@@ -88,7 +88,7 @@ ht-degree: 12%
 
 ![篩選器](../../images/audit-logs/filters.png)
 
-下列篩選器適用於UI中的稽核事件：
+以下篩選器可用於 UI 中的稽核事件：
 
 | 篩選 | 說明 |
 | --- | --- |
@@ -114,7 +114,7 @@ ht-degree: 12%
 
 ## 管理API中的稽核記錄
 
-您在UI中可執行的所有動作也可以透過API呼叫完成。 請參閱 [API參考檔案](https://www.adobe.io/experience-platform-apis/references/audit-query/) 以取得更多資訊。
+所有可以在 UI 中執行的動作，也可以使用 API 呼叫來完成。如需詳細資訊，請參閱 [ API 參考文件](https://www.adobe.io/experience-platform-apis/references/audit-query/)。
 
 ## 管理Adobe Admin Console的稽核記錄
 

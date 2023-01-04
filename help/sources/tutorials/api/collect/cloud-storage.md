@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，以及使用來源連接器和API將資料匯入Platform的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: e4853c61848bec20eb8a6902365b97c3a9d0b3b3
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 1%
@@ -681,7 +681,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立來源連接器，可依排程從雲端儲存空間收集資料。 下游Platform服務(例如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已建立來源連接器，可依排程從雲端儲存空間收集資料。 下游Platform服務(例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案概觀](../../../../profile/home.md)
 - [Data Science Workspace概觀](../../../../data-science-workspace/home.md)

@@ -4,7 +4,7 @@ title: 合併策略UI指南
 type: Documentation
 description: 在Experience Platform中將多個來源的資料匯整在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。 本指南提供使用Adobe Experience Platform使用者介面處理合併原則的逐步指示。
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: e94756254a24ecadd7359589cd14cfb0745c789c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 0%

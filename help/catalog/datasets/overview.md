@@ -5,7 +5,7 @@ title: 資料集概述
 topic-legacy: datasets
 description: 本文件提供 Experience Platform 資料集的高層級總覽。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 8%
@@ -61,10 +61,10 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，以確保符�
 
 * [[!DNL Data Access API]](../../data-access/home.md):可讓您存取和下載資料集中儲存的檔案內容。
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md):橋接跨裝置和系統的身分，根據資料集所遵循的XDM結構所定義的身分欄位，將資料集連結在一起。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):利用 [!DNL Identity Service] 即時從資料集建立詳細的客戶設定檔。 [!DNL Real-time Customer Profile] 從 [!DNL Data Lake] 並將客戶設定檔保存在其自己的個別資料存放區中。
-* [Adobe Experience Platform區段服務](../../segmentation/home.md):可讓您建立區段，並從 [!DNL Real-time Customer Profile] 資料。 然後，這些對象可匯出至 [!DNL Data Lake].
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md):利用 [!DNL Identity Service] 即時從資料集建立詳細的客戶設定檔。 [!DNL Real-Time Customer Profile] 從 [!DNL Data Lake] 並將客戶設定檔保存在其自己的個別資料存放區中。
+* [Adobe Experience Platform區段服務](../../segmentation/home.md):可讓您建立區段，並從 [!DNL Real-Time Customer Profile] 資料。 然後，這些對象可匯出至 [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md):使用機器學習和人工智慧發掘大型資料集的深入分析。
-* [Adobe Experience Platform查詢服務](../../query-service/home.md):允許使用標準SQL在中查詢資料 [!DNL Experience Platform]，在中加入任何資料集 [!DNL Data Lake] 將查詢結果擷取為新資料集以用於報表， [!DNL Data Science Workspace]，或 [!DNL Real-time Customer Profile].
+* [Adobe Experience Platform查詢服務](../../query-service/home.md):允許使用標準SQL在中查詢資料 [!DNL Experience Platform]，在中加入任何資料集 [!DNL Data Lake] 將查詢結果擷取為新資料集以用於報表， [!DNL Data Science Workspace]，或 [!DNL Real-Time Customer Profile].
 * [Adobe Experience Platform目的地服務](../../destinations/home.md):可讓您 [匯出資料集](/help/destinations/ui/export-datasets.md) 至您所需的雲端儲存空間或電子郵件行銷目的地，以利進行報表或資料科學活動。
 
 ## 後續步驟

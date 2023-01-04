@@ -3,14 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；Analytics來源連接器
 title: Adobe Analytics報表套裝資料的來源連接器
 description: 本檔案概述Analytics並說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: d94bbbd34b116f10098624d565c1ae285fc0461e
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 7%
 
 ---
 
-# Adobe Analytics報表套裝資料的來源連接器
+# 用於報告套裝資料的 Adobe Analytics 來源連接器
 
 Adobe Experience Platform可讓您透過Analytics來源連接器內嵌Adobe Analytics資料。 此 [!DNL Analytics] 源連接器流收集的資料 [!DNL Analytics] 即時轉換SCDS格式 [!DNL Analytics] 資料 [!DNL Experience Data Model] (XDM)欄位，供Platform使用。
 
@@ -18,11 +18,11 @@ Adobe Experience Platform可讓您透過Analytics來源連接器內嵌Adobe Anal
 
 ## Adobe Analytics與Analytics資料
 
-[!DNL Analytics] 是一款功能強大的引擎，可協助您進一步了解客戶、客戶如何與您的Web屬性互動、了解您的數位行銷支出有何成效，以及找出需要改善的領域。 [!DNL Analytics] 每年處理數萬億個Web事務， [!DNL Analytics] 來源連接器可讓您輕鬆利用這項豐富的行為資料，並加以擴充 [!DNL Real-time Customer Profile] 幾分鐘內。
+[!DNL Analytics] 是一款功能強大的引擎，可協助您進一步了解客戶、客戶如何與您的Web屬性互動、了解您的數位行銷支出有何成效，以及找出需要改善的領域。 [!DNL Analytics] 每年處理數萬億個Web事務， [!DNL Analytics] 來源連接器可讓您輕鬆利用這項豐富的行為資料，並加以擴充 [!DNL Real-Time Customer Profile] 幾分鐘內。
 
 ![](./images/analytics-data-experience-platform.png)
 
-從高層面講， [!DNL Analytics] 收集來自全球不同數位頻道和多個資料中心的資料。 收集資料後，會套用訪客身分識別、分段和轉換架構(VISTA)規則及處理規則，以塑造傳入資料。 原始資料經過此輕量化處理後，便會視為已可供使用 [!DNL Real-time Customer Profile]. 在與上述程式平行的程式中，相同的處理資料會經過微批次處理並擷取至Platform資料集，以供使用 [!DNL Data Science Workspace], [!DNL Query Service]，以及其他資料發現應用程式。
+從高層面講， [!DNL Analytics] 收集來自全球不同數位頻道和多個資料中心的資料。 收集資料後，會套用訪客身分識別、分段和轉換架構(VISTA)規則及處理規則，以塑造傳入資料。 原始資料經過此輕量化處理後，便會視為已可供使用 [!DNL Real-Time Customer Profile]. 在與上述程式平行的程式中，相同的處理資料會經過微批次處理並擷取至Platform資料集，以供使用 [!DNL Data Science Workspace], [!DNL Query Service]，以及其他資料發現應用程式。
 
 請參閱 [處理規則概觀](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) 以取得處理規則的詳細資訊。
 
@@ -36,7 +36,7 @@ XDM是公開記錄的規範，為應用程式提供通用結構和定義，以�
 
 ## 如何將欄位從Adobe Analytics對應至XDM?
 
-當建立源連接以將 [!DNL Analytics] 使用Platform使用者介面將資料匯入Experience Platform時，資料欄位會自動對應並匯入 [!DNL Real-time Customer Profile] 幾分鐘內。 有關建立源連接的說明 [!DNL Analytics] 使用Platform UI，請參閱 [Analytics來源連接器教學課程](../../tutorials/ui/create/adobe-applications/analytics.md).
+當建立源連接以將 [!DNL Analytics] 使用Platform使用者介面將資料匯入Experience Platform時，資料欄位會自動對應並匯入 [!DNL Real-Time Customer Profile] 幾分鐘內。 有關建立源連接的說明 [!DNL Analytics] 使用Platform UI，請參閱 [Analytics來源連接器教學課程](../../tutorials/ui/create/adobe-applications/analytics.md).
 
 有關在 [!DNL Analytics] 和Experience Platform，請參閱 [Adobe Analytics欄位對應](./mapping/analytics.md) 指南。
 
@@ -46,8 +46,8 @@ XDM是公開記錄的規範，為應用程式提供通用結構和定義，以�
 
 | Analytics 資料 | 預期延遲 |
 | -------------- | ---------------- |
-| 新資料 [!DNL Real-time Customer Profile] (A4T) **not** 已啟用) | &lt; 2 分鐘 |
-| 新資料 [!DNL Real-time Customer Profile] (A4T) **is** 已啟用) | &lt; 15 分鐘 |
+| 新資料 [!DNL Real-Time Customer Profile] (A4T) **not** 已啟用) | &lt; 2 分鐘 |
+| 新資料 [!DNL Real-Time Customer Profile] (A4T) **is** 已啟用) | &lt; 15 分鐘 |
 | 資料湖的新資料 | &lt; 90 分鐘 |
 | 回填少於100億個事件 | &lt; 4 週 |
 

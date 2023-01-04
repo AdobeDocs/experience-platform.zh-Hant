@@ -3,7 +3,7 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 預覽範例狀態（設定檔預覽）API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分送，以及產生顯示資料集重疊、身分重疊和未拼接設定檔的報表。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Adobe Experience Platform可讓您內嵌來自多個來源的客戶資料，以�
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). 繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何呼叫所需的必要標題的重要資訊 [!DNL Experience Platform] API。
+本指南中使用的API端點屬於 [[!DNL Real-Time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). 繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結、閱讀本檔案中範例API呼叫的指南，以及成功呼叫任何呼叫所需的必要標題的重要資訊 [!DNL Experience Platform] API。
 
 ## 設定檔片段與合併的設定檔
 
@@ -36,7 +36,7 @@ Adobe Experience Platform可讓您內嵌來自多個來源的客戶資料，以�
 
 ## 範例工作的觸發方式
 
-因為即時客戶設定檔啟用的資料會擷取至 [!DNL Platform]，則會儲存在設定檔資料存放區中。 當將記錄擷取至設定檔存放區時，總設定檔計數會增加或減少超過5%，就會觸發取樣工作以更新計數。 觸發範例的方式取決於使用的擷取類型：
+當為「即時客戶設定檔」啟用的資料擷取至 [!DNL Platform]，則會儲存在設定檔資料存放區中。 當將記錄擷取至設定檔存放區時，總設定檔計數會增加或減少超過5%，就會觸發取樣工作以更新計數。 觸發範例的方式取決於使用的擷取類型：
 
 * 針對 **串流資料工作流程**，則會每小時進行檢查，以判斷是否符合5%增加或減少臨界值。 若已觸發，則會自動觸發範例工作以更新計數。
 * 針對 **批次內嵌**，在成功將批次擷取至設定檔存放區後15分鐘內，如果符合5%增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例工作，以及依資料集和身分命名空間列出設定檔分送。

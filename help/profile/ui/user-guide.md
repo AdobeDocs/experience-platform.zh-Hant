@@ -2,25 +2,25 @@
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一設定檔；rtcp；啟用設定檔；啟用設定檔；聯合結構；聯合設定檔；聯合設定檔
 title: 即時客戶個人檔案UI指南
 topic-legacy: guide
-description: 「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶設定檔互動的指南。
+description: 「即時客戶設定檔」可建立個別客戶的全方位檢視，結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可做為在Adobe Experience Platform使用者介面中與即時客戶設定檔互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] UI指南
+# [!DNL Real-Time Customer Profile] UI指南
 
-[!DNL Real-time Customer Profile] 結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，建立個別客戶的全方位檢視。 本檔案可做為與 [!DNL Real-time Customer Profile] Adobe Experience Platform使用者介面(UI)中的資料。
+[!DNL Real-Time Customer Profile] 結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，建立個別客戶的全方位檢視。 本檔案可做為與 [!DNL Real-Time Customer Profile] Adobe Experience Platform使用者介面(UI)中的資料。
 
 ## 快速入門
 
-本UI指南需要了解 [!DNL Experience Platform] 與管理有關的服務 [!DNL Real-time Customer Profiles]. 閱讀本指南或使用UI之前，請先檢閱本檔案以了解下列服務：
+本UI指南需要了解 [!DNL Experience Platform] 與管理有關的服務 [!DNL Real-Time Customer Profiles]. 閱讀本指南或使用UI之前，請先檢閱本檔案以了解下列服務：
 
-* [[!DNL Real-time Customer Profile] 概述](../home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
-* [[!DNL Identity Service]](../../identity-service/home.md):啟用 [!DNL Real-time Customer Profile] 將不同資料來源的身分擷取至 [!DNL Platform].
+* [[!DNL Real-Time Customer Profile] 概述](../home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Identity Service]](../../identity-service/home.md):啟用 [!DNL Real-Time Customer Profile] 將不同資料來源的身分擷取至 [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 
 ## [!UICONTROL 概觀]
@@ -171,7 +171,7 @@ ht-degree: 0%
 
 ## 聯合架構 {#union-schema}
 
-從主 **[!UICONTROL 設定檔]** ，選擇 **[!UICONTROL 聯合架構]** 索引標籤，檢視所擷取資料的可用聯合結構。 聯合模式是所有 [!DNL Experience Data Model] (XDM)相同類別下的欄位，其結構已啟用於 [!DNL Real-time Customer Profile].
+從主 **[!UICONTROL 設定檔]** ，選擇 **[!UICONTROL 聯合架構]** 索引標籤，檢視所擷取資料的可用聯合結構。 聯合模式是所有 [!DNL Experience Data Model] (XDM)相同類別下的欄位，其結構已啟用於 [!DNL Real-Time Customer Profile].
 
 如需聯合結構的詳細資訊，請造訪 [union schema UI指南](union-schema.md).
 

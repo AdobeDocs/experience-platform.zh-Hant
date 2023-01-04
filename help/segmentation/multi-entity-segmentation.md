@@ -5,7 +5,7 @@ title: 多實體區段概觀
 topic-legacy: overview
 description: 多實體分段是指根據產品、商店或其他非設定檔類別，以其他資料擴充設定檔資料的功能。 連線後，其他類別的資料就可供使用，就像它們是設定檔架構的原生資料。
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: d036ca8c3a378494f776c2bbb05e9d687bd2e201
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # 多實體區段概觀
 
-多實體分段是Adobe Experience Platform中提供的進階功能 [!DNL Segmentation Service]. 此功能可讓您擴充 [!DNL Real-time Customer Profile] 含有貴組織可定義之其他「非人員」資料（也稱為「維度實體」）的資料，例如與產品或商店相關的資料。 多實體細分可根據與您的獨特業務需求相關的資料來定義受眾區段時，提供彈性，而且無需在查詢資料庫方面具備專業知識即可執行。 透過多實體細分，您可以將關鍵資料新增至區段，而無須對資料流進行成本高昂的變更，或等待後端資料合併。
+多實體分段是Adobe Experience Platform中提供的進階功能 [!DNL Segmentation Service]. 此功能可讓您擴充 [!DNL Real-Time Customer Profile] 含有貴組織可定義之其他「非人員」資料（也稱為「維度實體」）的資料，例如與產品或商店相關的資料。 多實體細分可根據與您的獨特業務需求相關的資料來定義受眾區段時，提供彈性，而且無需在查詢資料庫方面具備專業知識即可執行。 透過多實體細分，您可以將關鍵資料新增至區段，而無須對資料流進行成本高昂的變更，或等待後端資料合併。
 
 ## 快速入門
 
 多實體細分需要各方切實了解細分中涉及的各種Adobe Experience Platform服務。 繼續閱讀本指南之前，請先檢閱下列檔案：
 
-* [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
    * [設定檔護欄](../profile/guardrails.md):建立資料模型的最佳實務，支援 [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):可讓您從 [!DNL Real-time Customer Profile] 資料。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):可讓您從 [!DNL Real-Time Customer Profile] 資料。
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [結構構成基本概念](../xdm/schema/composition.md#union):了解合成結構以用於Experience Platform的最佳實務。 為了最能善用區段，請確定您的資料已根據 [資料模型最佳實務](../xdm/schema/best-practices.md).
 

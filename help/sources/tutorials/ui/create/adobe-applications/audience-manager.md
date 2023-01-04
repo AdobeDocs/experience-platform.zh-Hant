@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；Audience Manager來源�
 title: 在UI中建立Adobe Audience Manager來源連線
 description: 本教學課程會逐步帶您了解為Adobe Audience Manager建立來源連線的步驟，以使用使用者介面將消費者體驗事件資料匯入Platform。
 exl-id: 90c4a719-aaad-4687-afd8-7a1c0c56f744
-source-git-commit: 9cdb8933d166445bf41ed314d7ffc7d5762e1adb
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%

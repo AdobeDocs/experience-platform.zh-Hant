@@ -5,7 +5,7 @@ title: 身分命名空間概述
 topic-legacy: overview
 description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。 例如，他們會將「name@email.com」值區分為電子郵件地址，或將「443522」區分為數值CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 2%
@@ -20,13 +20,13 @@ ht-degree: 2%
 
 使用身分識別命名空間需要先了解所涉及的各種Adobe Experience Platform服務。 開始使用命名空間之前，請先檢閱以下服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的客戶設定檔。
+- [[!DNL Real-Time Customer Profile]](../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的客戶設定檔。
 - [[!DNL Identity Service]](./home.md):跨裝置和系統橋接身分，以更全面了解個別客戶及其行為。
 - [[!DNL Privacy Service]](../privacy-service/home.md):身分命名空間用於法律隱私權法規(例如一般資料保護規範(GDPR))的法規遵循要求中。 每個隱私權要求都會相對於命名空間提出，以識別應該影響哪些消費者的資料。
 
 ## 了解身分識別命名空間
 
-完全限定的身分包括ID值和命名空間。 在設定檔片段間比對記錄資料時，如 [!DNL Real-time Customer Profile] 合併設定檔資料，身分值和命名空間必須相符。
+完全限定的身分包括ID值和命名空間。 在設定檔片段間比對記錄資料時，如 [!DNL Real-Time Customer Profile] 合併設定檔資料，身分值和命名空間必須相符。
 
 例如，兩個設定檔片段可能包含不同的主要ID，但它們對「電子郵件」命名空間共用相同的值，因此 [!DNL Platform] 可以看到這些片段實際上是相同的個人，並將資料匯整在個人的身分圖表中。
 

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 28e7f10529daa8df56534e6ada129a52d3f7604d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2345'
 ht-degree: 2%
@@ -290,9 +290,9 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 
 ## 後續步驟和其他資源
 
-建立連線後，會自動建立資料流以包含傳入的資料，並將您選取的架構填入資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始擷取完成時， [!DNL Analytics] 供下游Platform服務(例如 [!DNL Real-time Customer Profile] 和分段服務。 如需詳細資訊，請參閱下列檔案：
+建立連線後，會自動建立資料流以包含傳入的資料，並將您選取的架構填入資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始擷取完成時， [!DNL Analytics] 供下游Platform服務(例如 [!DNL Real-Time Customer Profile] 和分段服務。 如需詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-time Customer Profile] 概覽](../../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 概覽](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] 概覽](../../../../../segmentation/home.md)
 * [[!DNL Data Science Workspace] 概覽](../../../../../data-science-workspace/home.md)
 * [[!DNL Query Service] 概覽](../../../../../query-service/home.md)

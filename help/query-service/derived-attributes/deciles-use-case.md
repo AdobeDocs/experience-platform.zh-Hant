@@ -1,104 +1,104 @@
 ---
-title: 基於Decile的派生屬性使用案例
-description: 本指南演示了使用查詢服務建立用於配置檔案資料的基於檔案的派生屬性所需的步驟。
+title: 基於分檔的派生屬性使用案例
+description: 本指南示範使用Query Service建立資料型衍生屬性以搭配您的設定檔資料使用所需的步驟。
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
 
 ---
 
-# 基於Decile的派生屬性用例
+# 基於分檔的派生屬性使用案例
 
-派生的屬性便於分析資料湖中的資料的複雜使用案例，這些資料可以與其他下游平台服務一起使用或發佈到即時客戶配置檔案資料中。
+衍生屬性有助於分析資料湖的複雜使用案例，這些資料湖可與其他下游Platform服務搭配使用，或發佈至您的即時客戶設定檔資料。
 
-此示例用例演示了如何建立基於十位數的派生屬性，以便與即時客戶配置檔案資料一起使用。 以航空公司忠誠度方案為例，本指南通知您如何建立使用分類文檔來分段和基於排序屬性建立受眾的資料集。
+此範例使用案例示範如何建立以資料為基礎的衍生屬性，以搭配您的即時客戶設定檔資料使用。 以航空公司忠誠度案例為例，本指南會通知您如何建立使用類別資料集來區隔和根據排名屬性建立對象的資料集。
 
-說明了以下關鍵概念：
+說明下列重要概念：
 
-* 為分檔分段建立架構。
+* 為分段建立結構。
 * 分類標籤建立。
-* 建立複雜派生屬性。
-* 在回望期間計算十位數。
-* 一個示例查詢，用於演示聚合、排名和添加唯一標識，以允許基於這些十位儲存段生成受眾。
+* 建立複雜的派生屬性。
+* 計算回顧期間的十進位檔。
+* 示範匯總、排名和新增唯一身分的查詢範例，以便根據這些資料桶產生對象。
 
 ## 快速入門
 
-本指南要求對 [查詢服務中的查詢執行](../best-practices/writing-queries.md) 及Adobe Experience Platform的下列組成部分：
+本指南需要妥善了解 [查詢服務中的查詢執行](../best-practices/writing-queries.md) 及下列Adobe Experience Platform元件：
 
-* [即時客戶概要資訊概述](../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
-* [架構組合的基礎](../../xdm/schema/composition.md):介紹經驗資料模型(XDM)架構以及構建架構的構成塊、原則和最佳做法。
-* [如何為即時客戶配置檔案啟用方案](../../profile/tutorials/add-profile-data.md):本教程概述了將資料添加到即時客戶概要檔案中所需的步驟。
-* [如何定義自定義資料類型](../../xdm/api/data-types.md):資料類型用作類或架構欄位組中的參考型別欄位，並允許一致使用可包含在架構中任何位置的多欄位結構。
+* [即時客戶個人檔案概觀](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [結構構成基本概念](../../xdm/schema/composition.md):介紹Experience Data Model(XDM)結構，以及構成結構的基礎要素、原則和最佳實務。
+* [如何啟用即時客戶個人檔案的結構](../../profile/tutorials/add-profile-data.md):本教學課程概述將資料新增至即時客戶設定檔的必要步驟。
+* [如何定義自訂資料類型](../../xdm/api/data-types.md):資料類型用作類或架構欄位組中的參考型別欄位，並允許一致地使用可包含在架構中的任何位置的多欄位結構。
 
 ## 目標
 
-本文檔中給出的示例使用dicel構建派生屬性，以從航空公司忠誠度架構中對資料進行排名。 派生屬性允許您通過根據所選類別的前「n」%來標識受眾，從而最大限度地提高資料的效用。
+本檔案中提供的範例使用資料集來建立衍生屬性，以從航空公司忠誠度結構中排名資料。 衍生屬性可讓您根據所選類別的前n%來識別對象，以最大化資料的公用程式。
 
-## 構建基於十位數的派生屬性
+## 建立以資料檔案為基礎的衍生屬性
 
-要根據特定維和相應度量定義十檔案的排名，必須設計一個方案以允許十檔案分段。
+若要根據特定維度和對應量度定義分檔的排名，必須設計結構以允許分檔分段。
 
-本指南使用航空公司忠誠度資料集來演示如何使用查詢服務根據在不同回望期間飛行的里程來構建資料。
+本指南使用航空公司忠誠度資料集，示範如何使用Query Service根據不同回顧期間的飛行里程來建立資料集。
 
-## 使用查詢服務建立檔案
+## 使用Query Service建立檔案
 
-使用查詢服務，可以建立包含分類文檔的資料集，然後對這些資料集進行分段，以基於屬性排名建立訪問群體。 只要定義了類別並且度量可用，以下示例中顯示的概念就可以用於建立其他十位數儲存段資料集。
+您可以使用「查詢服務」來建立包含類別分檔的資料集，然後再依據屬性排名來分段，以建立對象。 只要已定義類別且量度可用，下列範例中顯示的概念即可套用至建立其他資料貯體資料集。
 
-航空公司會員資料示例使用 [XDM ExperienceEvents類](../../xdm/classes/experienceevent.md)。 每個事件都是里程的業務交易記錄記錄，包括貸記或借記，以及「活頁」、「常客」、「銀」或「金」的會員忠誠度狀態。 主標識欄位為 `membershipNumber`。
+航空公司忠誠度資料範例使用 [XDM ExperienceEvents類別](../../xdm/classes/experienceevent.md). 每個事件都是里程的商業交易記錄，記入或借記，以及「傳單」、「常客」、「銀」或「金」的會員忠誠度狀態。 主要身分欄位為 `membershipNumber`.
 
-### 示例資料集
+### 範例資料集
 
-此示例的初始航空公司忠誠度資料集是「航空公司忠誠度資料」，並具有以下架構。 請注意，架構的主標識為 `_profilefoundationreportingstg.membershipNumber`。
+此範例的初始航空公司忠誠度資料集為「航空公司忠誠度資料」，其結構如下。 請注意，架構的主要身分為 `_profilefoundationreportingstg.membershipNumber`.
 
-![航空公司忠誠度資料架構的圖表。](../images/derived-attributes/deciles-use-case/airline-loyalty-data.png)
+![航空公司忠誠度資料結構的圖表。](../images/derived-attributes/deciles-use-case/airline-loyalty-data.png)
 
-**示例資料**
+**範例資料**
 
-下表顯示了包含在 `_profilefoundationreportingstg` 用於此示例的對象。 它為使用decile儲存段建立複雜派生屬性提供了上下文。
+下表顯示 `_profilefoundationreportingstg` 用於此示例的對象。 它提供上下文，供使用資料桶建立複雜的派生屬性。
 
 >[!NOTE]
 >
->簡單說，租戶ID `_profilefoundationreportingstg` 從列標題中的命名空間開始以及整個文檔中的後續提及中省略。
+>為簡單起見，租用戶ID `_profilefoundationreportingstg` 在欄標題中的命名空間開頭以及檔案中後續的提及中，會忽略。
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
-| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | 狀態(_M) | 新成員 | 5000 | 活頁 |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | 獎勵(_M) | 甘迺迪機場 | 7500 | 銀 |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | 狀態(_M) | 甘迺迪機場 | 7500 | 銀 |
-| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | 獎勵(_M) | FRA-JFK | 5000 | 銀 |
-| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | 狀態(_M) | 新信用卡 | 10000 | 活頁 |
+| C435678623 | sfeldmark1vr@studiopress.com | 2022-01-01 | 狀態(_M) | 新成員 | 5000 | 傳單 |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | AWARD_MILES | 甘乃迪 — 弗拉 | 7500 | 銀色 |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-01 | 狀態(_M) | 甘乃迪 — 弗拉 | 7500 | 銀色 |
+| B789279247 | pgalton32n@barnesandnoble.com | 2022-02-10 | AWARD_MILES | FRA-JFK | 5000 | 銀色 |
+| A123487284 | rritson1zn@sciencedaily.com | 2022-01-07 | 狀態(_M) | 新信用卡 | 10000 | 傳單 |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 生成資料集
+## 產生資料集
 
-在上面看到的航空公司忠誠度資料中， `.mileage` 值包含成員為每次單獨飛行所飛行的英里數。 此資料用於為在整個生命週期中經過的回望次數和各種回望週期建立十位數。 為此，建立資料集，該資料集包含映射資料類型中每個回望週期的十檔案，和在下分配的每個回望週期的適當十檔案 `membershipNumber`。
+在上述的航空公司忠誠度資料中， `.mileage` 值包含成員每次乘坐的航班所飛行的里程數。 此資料可用來建立在期限回顧期間飛行的英里數和各種回顧期間的分檔。 為此，系統會建立資料集，其中包含每個回顧期間之對應資料類型的分檔，以及根據 `membershipNumber`.
 
-建立「航空公司忠誠度Decile架構」，以使用查詢服務建立Decile資料集。
+建立「航空公司忠誠度資料集結構」，使用「查詢服務」建立資料集。
 
-![「航空公司忠誠度計畫」的圖表。](../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
+![「航空公司忠誠度決策架構」的圖表。](../images/derived-attributes/deciles-use-case/airline-loyalty-decile-schema.png)
 
-### 啟用即時客戶配置檔案的架構
+### 啟用即時客戶個人檔案的結構
 
-正在將資料引入Experience Platform以供即時客戶配置檔案使用，必須符合 [為配置檔案啟用的體驗資料模型(XDM)架構](../../xdm/ui/resources/schemas.md)。 為了為配置檔案啟用架構，它必須實現XDM Individual Profile或XDM ExperienceEvent類。
+要擷取到Experience Platform中以供即時客戶設定檔使用的資料，必須符合 [為設定檔啟用的Experience Data Model(XDM)結構](../../xdm/ui/resources/schemas.md). 若要為「設定檔」啟用結構，必須實作XDM個別設定檔或XDM ExperienceEvent類別。
 
-[使用方案註冊表API啟用方案以在即時客戶配置檔案中使用](../../xdm/tutorials/create-schema-api.md) 或 [架構編輯器用戶介面](../../xdm/tutorials/create-schema-ui.md)。  有關如何為配置檔案啟用架構的詳細說明，請參見其各自的文檔。
+[使用Schema Registry API啟用您的架構，以便用於Real-Time Customer Profile](../../xdm/tutorials/create-schema-api.md) 或 [結構編輯器使用者介面](../../xdm/tutorials/create-schema-ui.md).  如需如何啟用設定檔結構的詳細指示，請參閱其各自的檔案。
 
-接下來，建立要重用於所有與檔案相關的欄位組的資料類型。 建立decile欄位組是每個沙箱一次性步驟。 它還可重用於所有與檔案相關的架構。
+接下來，建立一個資料類型，以便在所有與檔案相關的欄位組中重複使用。 建立資料欄位群組是每個沙箱的一次性步驟。 它也可重複用於所有與檔案相關的結構。
 
-### 建立標識命名空間並將其標籤為主標識符 {#identity-namespace}
+### 建立身分命名空間並將其標示為主要識別碼 {#identity-namespace}
 
-任何為與檔案一起使用而建立的架構都必須分配了主標識。 你可以 [在Adobe Experience Platform架構UI中定義標識欄位](../../xdm/ui/fields/identity.md#define-an-identity-field)，或通過 [架構註冊表API](../../xdm/api/descriptors.md#create)。
+為與資料檔案搭配使用而建立的任何架構都必須指派主要身分。 您可以 [在Adobe Experience Platform結構UI中定義身分欄位](../../xdm/ui/fields/identity.md#define-an-identity-field)，或透過 [結構註冊表API](../../xdm/api/descriptors.md#create).
 
-查詢服務還允許您直接通過SQL為臨時模式資料集欄位設定標識或主標識。 請參閱 [在臨時架構標識中設定輔助標識和主標識](../data-governance/ad-hoc-schema-identities.md) 的子菜單。
+Query Service還允許您直接通過SQL為Ad Hoc架構資料集欄位設定標識或主標識。 請參閱 [在臨機架構身分設定次要身分和主要身分](../data-governance/ad-hoc-schema-identities.md) 以取得更多資訊。
 
-### 建立查詢，以計算回望期間的資料 {#create-a-query}
+### 建立查詢以計算回顧期間的資料 {#create-a-query}
 
-以下示例演示了用於計算回望時段上的十位數的SQL查詢。
+以下範例示範用於計算回顧期間十進位檔的SQL查詢。
 
-可以使用UI中的查詢編輯器建立模板，或通過 [查詢服務API](../api/query-templates.md#create-a-query-template)。
+範本可使用UI中的查詢編輯器製作，或透過 [查詢服務API](../api/query-templates.md#create-a-query-template).
 
 ```sql
 CREATE TABLE AS airline_loyality_decile 
@@ -183,21 +183,21 @@ CREATE TABLE AS airline_loyality_decile
     }
 ```
 
-### 查詢審閱
+### 查詢審核
 
-下面將更詳細地檢查示例查詢的各個部分。
+下面將更詳細地檢查示例查詢的各節。
 
-#### 回望期
+#### 回顧期間
 
-十位資料類型包含1、3、6、9、12和生命期回望的儲存桶。 查詢使用1、3和6個月的回望期，因此每個節都將包含一些「重複」查詢，以便為每個回望期建立臨時表。
+十檔資料類型包含1、3、6、9、12和期限回顧的貯體。 查詢會使用1、3和6個月的回顧期間，因此每個區段都會包含一些「重複」查詢，以便為每個回顧期間建立臨時表格。
 
 >[!NOTE]
 >
->如果源資料沒有可用於確定回望週期的列，則所有十級類排名都將在 `decileMonthAll`。
+>如果來源資料沒有可用來判斷回顧期間的欄，則所有十檔的類別排名都會在 `decileMonthAll`.
 
 #### 彙總
 
-使用公用表表達式(CTE)在建立十位數時段之前將里程聚合在一起。 這提供了特定回望期的總英里數。 CTE暫時存在，並且僅在較大查詢的範圍內可用。
+在建立資料桶之前，請使用通用表格運算式(CTE)將里程匯總在一起。 這可提供特定回顧期間的總英里數。 CTE暫時存在，僅可在較大查詢的範圍內使用。
 
 ```sql
 summed_miles_1 AS (
@@ -210,13 +210,13 @@ summed_miles_1 AS (
 )
 ```
 
-塊在模板中重複兩次(`summed_miles_3` 和 `summed_miles_6`)，以生成其他回望時段的資料。
+在範本中重複區塊兩次(`summed_miles_3` 和 `summed_miles_6`)，並在日期計算中有所變更，以便產生其他回顧期間的資料。
 
-注意查詢的標識、維和度量列(`membershipNumber`。 `loyaltyStatus` 和 `totalMiles` )。
+請務必記下查詢的身分、維度和量度欄(`membershipNumber`, `loyaltyStatus` 和 `totalMiles` )。
 
 #### 排名
 
-Deciles允許您執行分類分段。 要建立排名編號， `NTILE` 函式與的參數一起使用 `10` 按 `loyaltyStatus` 的子菜單。 這將產生從1到10的排名。 設定 `ORDER BY` 子句 `WINDOW` 至 `DESC` 以確保 `1` 是給 **最大** 維中的度量。
+脫檔檔案可讓您執行類別分組。 若要建立排名數字，請 `NTILE` 函式與 `10` 在按 `loyaltyStatus` 欄位。 排名從1到10。 設定 `ORDER BY` 條款 `WINDOW` to `DESC` 以確保排名值 `1` 是提供給 **最偉大** 量度。
 
 ```sql
 rankings_1 AS (
@@ -230,7 +230,7 @@ rankings_1 AS (
 
 #### 映射聚合
 
-對於多個回望時段，您需要使用 `MAP_FROM_ARRAYS` 和 `COLLECT_LIST` 的子菜單。 在示例代碼段中， `MAP_FROM_ARRAYS` 使用一對鍵建立映射(`loyaltyStatus`)和值(`decileBucket`)陣列。 `COLLECT_LIST` 返回在指定列中包含所有值的陣列。
+若有多個回顧期間，您必須事先使用 `MAP_FROM_ARRAYS` 和 `COLLECT_LIST` 函式。 在范常式式碼片段中， `MAP_FROM_ARRAYS` 使用一對鍵建立地圖(`loyaltyStatus`)和值(`decileBucket`)陣列。 `COLLECT_LIST` 返回一個陣列，在指定列中包含所有值。
 
 ```sql
 map_1 AS (
@@ -243,11 +243,11 @@ map_1 AS (
 
 >[!NOTE]
 >
->如果僅在生存期期間需要分級排序，則不需要映射聚合。
+>如果僅要求存留期期間有資料排名，則不需要地圖匯總。
 
-#### 唯一標識
+#### 不重複身分
 
-唯一標識清單(`membershipNumber`)是建立所有成員身份的唯一清單所必需的。
+唯一身分的清單(`membershipNumber`)，才能建立所有成員的唯一清單。
 
 ```sql
 all_memberships AS (
@@ -257,11 +257,11 @@ all_memberships AS (
 
 >[!NOTE]
 >
->如果僅在生存期期間需要分級排序，則可以省略此步驟並通過 `membershipNumber` 可以在最後一步中完成。
+>如果期限期間僅需要分級排名，則可依 `membershipNumber` 可以在最後的步驟中完成。
 
-#### 將所有臨時資料拼接在一起
+#### 匯整所有臨時資料
 
-最後一步是將所有臨時資料縫合成與場組中十字的結構相同的形式。
+最後一步是將所有臨時資料拼接在一起，形式與欄位組中的檔案結構相同。
 
 ```sql
 SELECT STRUCT(
@@ -278,7 +278,7 @@ FROM all_memberships
     LEFT JOIN map_6 ON  (all_memberships.membershipNumber = map_6.membershipNumber)
 ```
 
-如果只有生存期資料可用，則查詢將顯示如下：
+如果僅存留期資料可用，您的查詢將如下所示：
 
 ```sql
 SELECT STRUCT(
@@ -291,12 +291,12 @@ FROM rankings
 GROUP BY rankings.membershipNumber
 ```
 
-由於使用了十位數，因此在查詢結果中保證了排名數和百分位數之間的相關性。 每個級別等於10%，因此根據前30%的受眾來識別受眾只需將1、2和3級作為目標。
+由於使用了十進位檔，因此在查詢結果中可保證排名數字和百分位數之間的關聯。 每個排名相當於10%，因此根據前30%來識別受眾只需鎖定排名1、2和3即可。
 
 ### 運行查詢模板
 
-運行查詢以填充decile資料集。 您還可以將查詢另存為模板，並將其安排為在節奏下運行。 當另存為模板時，還可更新查詢以使用引用的建立和插入陣列 `table_exists` 的子菜單。 有關如何使用 `table_exists`的 [SQL語法指南](../sql/syntax.md#table-exists)。
+執行查詢以填入資料集。 您也可以將查詢儲存為範本，並排程在執行階段執行。 另存為範本時，也可更新查詢，以使用參照的建立和插入模式 `table_exists` 命令。 有關如何使用 `table_exists`命令 [SQL語法指南](../sql/syntax.md#table-exists).
 
 ## 後續步驟
 
-上面提供的示例用例突出說明了使「即時客戶配置檔案」中的decile屬性可用的步驟。 這允許分段服務通過用戶介面或REST風格的API能夠基於這些分檔儲存段生成受眾。 查看 [分段服務概述](../../segmentation/home.md) 有關如何建立、評估和訪問段的資訊。
+上述提供的範例使用案例著重說明在「即時客戶設定檔」中提供資料屬性的步驟。 這可讓區段服務（透過使用者介面或RESTful API）根據這些資料桶產生對象。 請參閱 [區段服務概觀](../../segmentation/home.md) 以取得如何建立、評估和存取區段的資訊。

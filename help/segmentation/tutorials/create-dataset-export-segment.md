@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程逐步說明建立資料集所需的步驟，這些資料集可用來使用Experience PlatformUI匯出對象區段。
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->選取搜尋列旁的篩選圖示，即可使用篩選功能僅檢視已啟用的資料集 [!DNL Real-time Customer Profile].
+>選取搜尋列旁的篩選圖示，即可使用篩選功能僅檢視已啟用的資料集 [!DNL Real-Time Customer Profile].
 
 ![資料集工作區隨即顯示。](../images/tutorials/segment-export-dataset/browse.png)
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->雖然聯合結構依定義參與即時客戶設定檔，但由於未以與傳統結構相同的方式為設定檔啟用，因此這些設定檔會列為「未啟用」。
+>雖然聯合結構依定義參與即時客戶設定檔，但由於未以與傳統結構相同的方式啟用設定檔，因此這些設定檔會列為「未啟用」。
 
 選取旁邊的選項按鈕 **[!UICONTROL XDM個別設定檔]**，然後選取 **[!UICONTROL 下一個]**.
 

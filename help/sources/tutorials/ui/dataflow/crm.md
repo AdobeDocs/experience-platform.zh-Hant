@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供如何使用Platform UI為CRM來源建立資料流的步驟。
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
@@ -29,7 +29,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [結構構成基本概念](../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器教學課程](../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 * [[!DNL Data Prep]](../../../../data-prep/home.md):可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
 
 ## 新增資料
@@ -143,9 +143,9 @@ Platform會根據您選取的目標結構或資料集，為自動對應欄位提
 
 ## 後續步驟
 
-依照本教學課程，您已成功建立資料流，將資料從CRM來源帶入Platform。 下游現在可以使用傳入的資料 [!DNL Platform] 服務，例如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已成功建立資料流，將資料從CRM來源帶入Platform。 下游現在可以使用傳入的資料 [!DNL Platform] 服務，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-time Customer Profile] 概覽](../../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 概覽](../../../../profile/home.md)
 * [[!DNL Data Science Workspace] 概覽](../../../../data-science-workspace/home.md)
 
 

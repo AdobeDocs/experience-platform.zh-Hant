@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；資料流；資料流
 title: 在UI中配置資料流以從雲儲存源內嵌批資料
 description: 本教學課程提供如何設定新資料流，以在UI中從雲儲存源內嵌批次資料的步驟
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 0910de76d817eea7c7c3cb2b988d81268b3e5812
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 ### 支援的檔案格式
 
@@ -183,10 +183,10 @@ Platform會根據您選取的目標結構或資料集，為自動對應欄位提
 
 ## 後續步驟
 
-依照本教學課程，您已成功建立資料流以從外部雲端儲存空間傳入資料，並深入了解監控資料集。 要了解有關建立資料流的詳細資訊，您可以觀看下面的視頻來補充學習內容。 此外，下游現在可以使用傳入的資料 [!DNL Platform] 服務，例如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已成功建立資料流以從外部雲端儲存空間傳入資料，並深入了解監控資料集。 要了解有關建立資料流的詳細資訊，您可以觀看下面的視頻來補充學習內容。 此外，下游現在可以使用傳入的資料 [!DNL Platform] 服務，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-time Customer Profile]概述](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace]概述](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile] 概覽](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] 概覽](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >

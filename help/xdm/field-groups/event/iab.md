@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform；主題；熱門主題；模式；模式；XDM；經驗事件；欄位；模式；模式；模式設計；欄位組；欄位組；iab;tcf;connection;
+keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM;ExperienceEvent；欄位；結構；結構；結構；結構設計；欄位群組；欄位群組；iab;tcf；同意；
 solution: Experience Platform
-title: IAB TCF 2.0事件架構的同意欄位組
+title: 事件結構的IAB TCF 2.0同意欄位群組
 topic-legacy: overview
-description: 本文檔概述了XDM ExperienceEvent類的IAB TCF 2.0同意架構欄位組。
+description: 本檔案概述XDM ExperienceEvent類別的IAB TCF 2.0同意結構欄位群組。
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL IAB TCF 2.0同意] 事件架構的欄位組
+# [!UICONTROL IAB TCF 2.0同意] 事件結構的欄位群組
 
 >[!IMPORTANT]
 >
->本文檔涵蓋 [!UICONTROL IAB TCF 2.0同意] XDM ExperienceEvent類的架構欄位組。 僅當您打算跟蹤一段時間內的同意更改事件時，才應使用此欄位組。
+>本檔案涵蓋 [!UICONTROL IAB TCF 2.0同意] XDM ExperienceEvent類別的架構欄位群組。 只有在您要追蹤隨時間變化的同意變更事件時，才應使用此欄位群組。
 >
->請注意，在自動強制執行工作流中未遵守在事件資料中記錄的同意值。 為了進行自動強制，必須將同意值納入XDM Individual Profile類中，並啟用「即時客戶配置」。
+>請注意，自動執行工作流程不會遵循記錄在事件資料中的同意值。 若要自動強制執行，同意值必須擷取至XDM個別設定檔類別，並啟用即時客戶設定檔。
 >
->有關用於XDM Individual Profile類的欄位組，請參閱以下內容 [文檔](../profile/iab.md) 的雙曲餘切值。
+>有關用於XDM個別設定檔類別的欄位群組，請參閱下列內容 [檔案](../profile/iab.md) 。
 
-[!UICONTROL IAB TCF 2.0同意] 是標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md) 用於捕獲時間戳序列IAB同意字串，以便跟蹤隨時間變化的同意更改模式。
+[!UICONTROL IAB TCF 2.0同意] 是的標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md) 用於擷取時間戳記系列IAB同意字串，以追蹤隨時間變化的同意變更模式。
 
 ![](../../images/field-groups/iab-event.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `consentStrings` | 陣列 [同意字串](../../data-types/consent-string.md) | 與事件關聯的同意字串值的陣列。 |
+| `consentStrings` | 陣列 [同意字串](../../data-types/consent-string.md) | 與事件相關聯的同意字串值陣列。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-請參閱上的指南 [平台中的IAB TCF 2.0支援](../../../landing/governance-privacy-security/consent/iab/overview.md) 的子菜單。 有關欄位組本身的詳細資訊，請參閱公共XDM儲存庫：
+請參閱 [平台中的IAB TCF 2.0支援](../../../landing/governance-privacy-security/consent/iab/overview.md) 有關此欄位組的使用案例的詳細資訊。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
 
-* [填充示例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
+* [完整結構](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

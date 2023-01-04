@@ -5,7 +5,7 @@ title: 監控資料擷取
 topic-legacy: overview
 description: 本使用手冊提供如何在Adobe Experience Platform使用者介面中監控資料的步驟。 本指南要求您擁有Adobe ID和Adobe Experience Platform的存取權。
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: dce7faa7fc680e37b537bf623c3a33e6c6e37169
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 在 [Experience PlatformUI](https://platform.adobe.com)，選取 **[!UICONTROL 監控]** 在左側導覽功能表上，後面接著 **[!UICONTROL 端對端串流]**.
 
-此 **[!UICONTROL 端對端串流]** 監視頁面。 此工作區提供一個圖表，顯示接收的串流事件的速率 [!DNL Platform]，此圖表顯示成功處理的串流事件的速率 [[!DNL Real-time Customer Profile]](../../profile/home.md)，以及傳入資料的詳細清單。
+此 **[!UICONTROL 端對端串流]** 監視頁面。 此工作區提供一個圖表，顯示接收的串流事件的速率 [!DNL Platform]，此圖表顯示成功處理的串流事件的速率 [[!DNL Real-Time Customer Profile]](../../profile/home.md)，以及傳入資料的詳細清單。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

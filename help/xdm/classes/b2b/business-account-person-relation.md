@@ -2,7 +2,7 @@
 title: XDM業務帳戶人員關係類
 description: 本檔案概述Experience Data Model(XDM)中的XDM商業帳戶人員關係類別。
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 3%

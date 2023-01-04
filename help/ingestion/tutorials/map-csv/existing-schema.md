@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform使用者介面，將CSV檔案對應至現有的XDM架構。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 160a75a1811afa002717e167887550715eee5471
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%
@@ -121,4 +121,4 @@ CSV檔案一旦對應並建立後，您就可以監控透過它擷取的資料�
 
 ## 後續步驟
 
-依照本教學課程，您已成功將一般CSV檔案對應至XDM結構，並將其擷取至 [!DNL Platform]. 此資料現在可供下游使用 [!DNL Platform] 服務，例如 [!DNL Real-time Customer Profile]. 請參閱以下概觀： [[!DNL Real-time Customer Profile]](../../../profile/home.md) 以取得更多資訊。
+依照本教學課程，您已成功將一般CSV檔案對應至XDM結構，並將其擷取至 [!DNL Platform]. 此資料現在可供下游使用 [!DNL Platform] 服務，例如 [!DNL Real-Time Customer Profile]. 請參閱以下概觀： [[!DNL Real-Time Customer Profile]](../../../profile/home.md) 以取得更多資訊。

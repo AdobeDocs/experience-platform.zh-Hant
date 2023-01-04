@@ -5,7 +5,7 @@ title: 隱私權工作API端點
 topic-legacy: developer guide
 description: 了解如何使用Experience CloudAPI管理Privacy Service應用程式的隱私權工作。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 3%

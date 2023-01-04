@@ -4,7 +4,7 @@ title: 設定檔控制面板
 description: Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢視即時客戶設定檔資料的重要資訊。
 type: Documentation
 exl-id: 2c99cbb3-515f-4982-9f2a-84e1ab14542e
-source-git-commit: f7d204442c8bc2355671ba2adffff4c40ce08784
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL 設定檔] 儀表板 {#profile-dashboard}
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有關您 [!DNL Real-time Customer Profile] 資料，如在每日快照期間捕獲。
+Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有關您 [!DNL Real-Time Customer Profile] 資料，如在每日快照期間捕獲。
 
 如需存取及與 [!UICONTROL 設定檔] 控制面板，以及進一步了解控制面板中顯示的可用量度，請造訪 [[!UICONTROL 設定檔] 儀表板指南](../../dashboards/guides/profiles.md).
 

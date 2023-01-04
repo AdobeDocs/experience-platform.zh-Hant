@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: 在Adobe Experience Platform使用者介面(UI)中，您可以輕鬆檢視組織內的任何聯合結構，並預覽特定類別的欄位、身分、關係和貢獻結構。 本指南提供如何使用Platform UI檢視和探索聯合結構的詳細資訊。
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1199'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -20,15 +20,15 @@ ht-degree: 3%
 
 本UI指南需要了解 [!DNL Experience Platform] 與管理即時客戶設定檔資料相關的服務。 閱讀本指南或使用UI之前，請先檢閱本檔案以了解下列服務：
 
-* [[!DNL Real-time Customer Profile]](../home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
-* [[!DNL Identity Service]](../../identity-service/home.md):啟用 [!DNL Real-time Customer Profile] 將不同資料來源的身分擷取至 [!DNL Platform].
+* [[!DNL Real-Time Customer Profile]](../home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Identity Service]](../../identity-service/home.md):啟用 [!DNL Real-Time Customer Profile] 將不同資料來源的身分擷取至 [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 
 ## 了解聯合結構
 
 即時客戶個人檔案可讓您建立強大且集中的設定檔，其中包含客戶屬性和時間戳記事件，每個客戶在與Adobe Experience Platform整合的系統間互動。 此資料的格式和結構由Experience Data Model(XDM)結構提供，每個結構都以XDM類別為基礎，並包含與該類別相容的欄位。
 
-可針對多個使用案例建立結構，參考相同的類別，但包含其使用的特定欄位。 為設定檔啟用結構時，它會成為聯合結構的一部分。 換言之，聯合結構由多個結構組成，這些結構共用相同的類別，並且已為設定檔啟用。 聯合結構描述讓您能夠查看共用相同類別的結構描述中包含的所有欄位的合併。即時客戶設定檔使用聯合結構描述，以建立每個個別客戶的整體檢視。
+可針對多個使用案例建立結構，參考相同的類別，但包含其使用的特定欄位。 為設定檔啟用結構時，它會成為聯合結構的一部分。 換言之，聯合結構由多個結構組成，這些結構共用相同的類別，並且已為設定檔啟用。 聯合結構描述讓您能夠查看共用相同類別的結構描述中包含的所有欄位的合併。「即時客戶設定檔」使用聯合結構來建立每個客戶的整體檢視。
 
 若要使用聯合結構，您必須深入了解XDM結構。 如需詳細資訊，請先閱讀 [綱要構成基本知識](../../xdm/schema/composition.md).
 

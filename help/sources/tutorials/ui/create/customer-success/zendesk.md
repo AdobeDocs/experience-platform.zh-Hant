@@ -3,7 +3,7 @@ keywords: Experience Platform;Zendesk；來源；連接器；來源連接器；�
 title: 在UI中建立Zendesk源連接
 description: 了解如何使用Adobe Experience Platform UI建立Zendesk來源連線。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 795c98fb555f79afd7a7035a23a9989cc734a1e1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 6%
@@ -25,7 +25,7 @@ ht-degree: 6%
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
    * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 ### 收集所需憑據
 

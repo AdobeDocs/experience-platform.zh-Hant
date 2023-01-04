@@ -2,7 +2,7 @@
 title: 管理資料集有效期
 description: 了解如何在Adobe Experience Platform UI中排程資料集的有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 6453ec6c98d90566449edaa0804ada260ae12bf6
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%

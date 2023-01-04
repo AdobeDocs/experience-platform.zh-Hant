@@ -5,7 +5,7 @@ title: IAB TCF 2.0支援Experience Platform
 topic-legacy: privacy events
 description: 了解如何設定資料操作和結構，以在Adobe Experience Platform中的目的地啟用區段時傳達客戶同意選擇。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%
@@ -40,10 +40,10 @@ Adobe Experience Platform是 [IAB TCF 2.0廠商清單](https://iabeurope.eu/vend
 
 * [Experience Data Model(XDM)](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md):通過跨裝置和系統橋接身分，解決客戶體驗資料分散帶來的根本難題。
-* [即時客戶個人檔案](../../../../profile/home.md):利用 [!DNL Identity Service] 即時從資料集建立詳細的客戶設定檔。 [!DNL Real-time Customer Profile] 從資料湖提取資料，並將客戶設定檔保存在其自己的個別資料存放區中。
+* [即時客戶個人檔案](../../../../profile/home.md):利用 [!DNL Identity Service] 即時從資料集建立詳細的客戶設定檔。 [!DNL Real-Time Customer Profile] 從資料湖提取資料，並將客戶設定檔保存在其自己的個別資料存放區中。
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md):用戶端JavaScript程式庫，可讓您將各種平台服務整合至您面向客戶的網站。
    * [SDK同意命令](../../../../edge/consent/supporting-consent.md):本指南中所示同意相關SDK命令的使用案例概述。
-* [Adobe Experience Platform區段服務](../../../../segmentation/home.md):可讓您將 [!DNL Real-time Customer Profile] 將資料分成具有類似特徵且會對行銷策略做出類似回應的個人群組。
+* [Adobe Experience Platform區段服務](../../../../segmentation/home.md):可讓您將 [!DNL Real-Time Customer Profile] 將資料分成具有類似特徵且會對行銷策略做出類似回應的個人群組。
 
 除了上述的Platform服務外，您也應熟悉 [目的地](../../../../data-governance/home.md) 及其在平台生態系統中的角色。
 
@@ -68,7 +68,7 @@ Adobe Audience Manager與Platform共用的任何區段(透過 [!DNL Audience Man
 
 成功擷取TCF同意資料後，下列程式就會在下游Platform服務中進行：
 
-1. [!DNL Real-time Customer Profile] 會更新該客戶設定檔所儲存的同意資料。
+1. [!DNL Real-Time Customer Profile] 會更新該客戶設定檔所儲存的同意資料。
 1. 只有在為叢集中的每個ID提供了平台(565)的廠商權限時，Platform才會處理客戶ID。
 1. 將區段匯出至屬於TCF 2.0廠商清單成員的目的地時，只有在兩個平台的廠商權限皆為時，Platform才會包含設定檔(565) *和* 會針對叢集中的每個ID提供個別目的地。
 
@@ -243,7 +243,7 @@ TCF 2.0也要求資料來源必須先檢查目的地的廠商權限，才能將�
 
 >[!NOTE]
 >
->任何與Adobe Audience Manager共用的區段，都會包含與Platform相同的TCF 2.0同意值。 自 [!DNL Audience Manager] 與Platform(565)共用相同的供應商ID，需要相同的用途和供應商權限。 請參閱 [適用於IAB TCF的Adobe Audience Manager外掛程式](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) 以取得更多資訊。
+>任何與Adobe Audience Manager共用的區段，都會包含與Platform相同的TCF 2.0同意值。 自 [!DNL Audience Manager] 與Platform(565)共用相同的供應商ID，需要相同的用途和供應商權限。 請參閱 [適用於IAB TCF的Adobe Audience Manager外掛程式](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=zh-Hant) 以取得更多資訊。
 
 ## 測試您的實作 {#test-implementation}
 

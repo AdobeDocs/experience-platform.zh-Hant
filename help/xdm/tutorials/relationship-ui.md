@@ -6,7 +6,7 @@ description: 本檔案提供一個教學課程，用於使用Experience Platform
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 0%
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 了解客戶之間的關係，以及客戶在不同管道與品牌互動的能力，是Adobe Experience Platform的重要一環。 在 [!DNL Experience Data Model] (XDM)結構可讓您對客戶資料獲得複雜的深入分析。
 
-而架構關係則可透過使用聯合架構和 [!DNL Real-time Customer Profile]，此欄位僅適用於共用相同類別的結構。 要在屬於不同類的兩個架構之間建立關係，必須將專用的關係欄位添加到源架構中，該源架構引用目標架構的標識。
+而架構關係則可透過使用聯合架構和 [!DNL Real-Time Customer Profile]，此欄位僅適用於共用相同類別的結構。 要在屬於不同類的兩個架構之間建立關係，必須將專用的關係欄位添加到源架構中，該源架構引用目標架構的標識。
 
 本檔案提供教學課程，以使用 [!DNL Experience Platform] 使用者介面。 如需使用API定義結構關係的步驟，請參閱 [使用結構註冊表API定義關係](relationship-api.md).
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->若要建立關係，兩個結構都必須定義主要身分，並啟用 [!DNL Real-time Customer Profile]. 請參閱 [啟用結構以用於配置檔案](./create-schema-ui.md#profile) 如果您需要如何據以設定結構的指引，請參閱結構建立教學課程。
+>若要建立關係，兩個結構都必須定義主要身分，並啟用 [!DNL Real-Time Customer Profile]. 請參閱 [啟用結構以用於配置檔案](./create-schema-ui.md#profile) 如果您需要如何據以設定結構的指引，請參閱結構建立教學課程。
 
 架構關係由 **來源綱要** 是指 **目的地綱要**. 在下列步驟中，「[!DNL Loyalty Members]&quot;將是源架構，而&quot;[!DNL Hotels]「 」將作為目標架構。
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 ### [!DNL Loyalty Members] 綱要
 
-源架構「[!DNL Loyalty Members]」是以 [!DNL XDM Individual Profile] 類，是在 [在UI中建立結構](create-schema-ui.md). 其中包含 `loyalty` 物件 `_tenantId` 命名空間，包含數個忠誠度專屬欄位。 其中一個領域， `loyaltyId`，可做為結構的主要身分，位於 [!UICONTROL 電子郵件] 命名空間。 如下所示 **[!UICONTROL 架構屬性]**，此架構可在 [!DNL Real-time Customer Profile].
+源架構「[!DNL Loyalty Members]」是以 [!DNL XDM Individual Profile] 類，是在 [在UI中建立結構](create-schema-ui.md). 其中包含 `loyalty` 物件 `_tenantId` 命名空間，包含數個忠誠度專屬欄位。 其中一個領域， `loyaltyId`，可做為結構的主要身分，位於 [!UICONTROL 電子郵件] 命名空間。 如下所示 **[!UICONTROL 架構屬性]**，此架構可在 [!DNL Real-Time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -80,7 +80,7 @@ ht-degree: 0%
 >
 >若要了解如何建立自訂身分識別命名空間，請參閱 [Identity服務檔案](../../identity-service/namespaces.md#manage-namespaces).
 
-設定主要身分後，必須為 [!DNL Real-time Customer Profile].
+設定主要身分後，必須為 [!DNL Real-Time Customer Profile].
 
 ![啟用設定檔](../images/tutorials/relationship/hotel-profile.png)
 

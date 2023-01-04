@@ -1,111 +1,111 @@
 ---
-keywords: Experience Platform；熱門主題；XDM;XDM系統；XDM個人概況；XDM體驗事件；XDM體驗事件；體驗事件；XDM體驗事件；XDM體驗事件；體驗資料模型；體驗資料模型；資料模型；模式；故障排除；FAQ;faq;Union schema;UNION PROFILE;union profile;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
+keywords: Experience Platform；熱門主題；XDM;XDM系統；XDM個別設定檔；XDM ExperienceEvent;XDM體驗事件；experienceEvent;XDM體驗事件；XDM ExperienceEvent；體驗資料模型；體驗資料模型；資料模型；結構；疑難排解；FAQ;Union架構；UNION設定檔；聯合設定檔；http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400
 solution: Experience Platform
-title: 《 XDM系統故障排除指南》
-description: 查找有關體驗資料模型(XDM)的常見問題的答案，包括解決常見API錯誤的步驟。
+title: XDM系統疑難排解指南
+description: 尋找Experience Data Model(XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 5ffc93c8715d1184b2a239c1d631b117a531e5c1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%
 
 ---
 
-# XDM系統故障排除指南
+# XDM系統疑難排解指南
 
-本文檔提供有關 [!DNL Experience Data Model] (XDM)和Adobe Experience Platform的XDM系統，包括常見錯誤的故障排除指南。 有關其他平台服務的問題和故障排除，請參閱 [Experience Platform故障排除指南](../landing/troubleshooting.md)。
+本檔案提供關於 [!DNL Experience Data Model] (XDM)和Adobe Experience Platform中的XDM系統，包括常見錯誤的疑難排解指南。 如需其他Platform服務的相關問題和疑難排解，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** 是一種開源規範，它定義了客戶體驗管理的標準化架構。 方法 [!DNL Experience Platform] 是建的， **XDM系統**，操作 [!DNL Experience Data Model] 方案使用者 [!DNL Platform] 服務。 的 **[!DNL Schema Registry]** 提供用戶介面和REST風格的API以訪問 **[!DNL Schema Library]** 內 [!DNL Experience Platform]。 查看 [XDM文檔](home.md) 的子菜單。
+**[!DNL Experience Data Model](XDM)** 是開放原始碼規格，定義客戶體驗管理的標準化結構。 方法 [!DNL Experience Platform] 是建的， **XDM系統**，操作 [!DNL Experience Data Model] 供使用的結構 [!DNL Platform] 服務。 此 **[!DNL Schema Registry]** 提供使用者介面和RESTful API，以存取 **[!DNL Schema Library]** with [!DNL Experience Platform]. 請參閱 [XDM檔案](home.md) 以取得更多資訊。
 
 ## 常見問題集
 
-以下是有關XDM系統和使用的常見問題的答案清單 [!DNL Schema Registry] API。
+以下是XDM系統與使用的常見問題解答清單 [!DNL Schema Registry] API。
 
-### 如何將欄位添加到架構？
+### 如何將欄位新增至結構？
 
-可以使用架構欄位組將欄位添加到架構。 每個欄位組都與一個或多個類相容，允許在實現這些相容類之一的任何架構中使用欄位組。 雖然Adobe Experience Platform提供了多個行業欄位組及其自己的預定義欄位，但您可以通過使用API或用戶介面建立自定義欄位組將自己的欄位添加到架構中。
+您可以使用架構欄位群組，將欄位新增至架構。 每個欄位組都與一個或多個類相容，允許在實現其中一個相容類的任何架構中使用該欄位組。 雖然Adobe Experience Platform提供數個產業欄位群組及其預先定義的欄位，但您可以使用API或使用者介面建立自訂欄位群組，將您自己的欄位新增至結構。
 
-有關在中建立欄位組的詳細資訊 [!DNL Schema Registry] API，請參見 [欄位組終結點指南](api/field-groups.md#create)。 如果使用UI，請參閱 [架構編輯器教程](./tutorials/create-schema-ui.md)。
+如需在 [!DNL Schema Registry] API，請參閱 [欄位群組端點指南](api/field-groups.md#create). 如果您使用UI，請參閱 [結構編輯器教學課程](./tutorials/create-schema-ui.md).
 
-### 欄位組與資料類型的最佳用途是什麼？
+### 欄位群組與資料類型的最佳用途為何？
 
-[欄位組](./schema/composition.md#field-group) 是在架構中定義一個或多個欄位的元件。 欄位組強制實施其欄位在架構層次結構中的顯示方式，因此在每個架構中都顯示了與其包含的相同結構。 欄位組僅與由其標識的特定類相容 `meta:intendedToExtend` 屬性。
+[欄位群組](./schema/composition.md#field-group) 是定義架構中一或多個欄位的元件。 欄位群組強制其欄位在架構階層中的顯示方式，因此在每個架構中呈現的結構都與其所包含的相同。 欄位組僅與特定類相容，由其標識 `meta:intendedToExtend` 屬性。
 
-[資料類型](./schema/composition.md#data-type) 也可以為架構提供一個或多個欄位。 但是，與欄位組不同，資料類型不受特定類的限制。 這使得資料類型成為描述可跨具有潛在不同類的多個架構重複使用的通用資料結構的更靈活選項。
+[資料類型](./schema/composition.md#data-type) 也可以為架構提供一或多個欄位。 不過，與欄位群組不同，資料類型不會限制在特定類別。 這樣，資料類型就可更靈活地描述可跨具有潛在不同類別的多個架構重複使用的通用資料結構。
 
-### 架構的唯一ID是什麼？
+### 結構的唯一ID為何？
 
-全部 [!DNL Schema Registry] 資源（方案、欄位組、資料類型、類）的URI充當唯一ID，用於參考和查找。 在API中查看架構時，可以在頂級 `$id` 和 `meta:altId` 屬性。
+全部 [!DNL Schema Registry] 資源（結構、欄位群組、資料類型、類別）的URI可作為唯一ID，以供參考和查詢之用。 在API中檢視結構時，可在頂層 `$id` 和 `meta:altId` 屬性。
 
-有關詳細資訊，請參見 [資源標識](api/getting-started.md#resource-identification) 的 [!DNL Schema Registry] API指南。
+如需詳細資訊，請參閱 [資源識別](api/getting-started.md#resource-identification) 區段 [!DNL Schema Registry] API指南。
 
-### 架構何時開始阻止中斷更改？
+### 架構何時開始防止中斷變更？
 
-只要在建立資料集時從未使用過或在中啟用過，就可以對架構進行中斷更改 [[!DNL Real-time Customer Profile]](../profile/home.md)。 在資料集建立中使用或啟用模式後 [!DNL Real-time Customer Profile]的 [架構演化](schema/composition.md#evolution) 被制度嚴格執行。
+只要您從未在建立資料集時使用或啟用於，您就可以對結構進行中斷變更 [[!DNL Real-Time Customer Profile]](../profile/home.md). 在建立資料集時使用結構或啟用搭配使用後 [!DNL Real-Time Customer Profile]，規則 [綱要演變](schema/composition.md#evolution) 被制度嚴格執行。
 
 ### 長欄位類型的最大大小是多少？
 
-長欄位類型是一個最大大小為53(+1)位的整數，其勢範圍為–9007199254740992到9007199254740992。 這是由於JSON的JavaScript實現如何表示長整數的限制。
+長欄位類型是一個最大大小為53(+1)位的整數，給它一個介於 — 9007199254740992和9007199254740992之間的位範圍。 這是由於JSON的JavaScript實作如何呈現長整數受到限制。
 
-有關欄位類型的詳細資訊，請參閱上的文檔 [XDM欄位類型約束](./schema/field-constraints.md)。
+有關欄位類型的詳細資訊，請參閱 [XDM欄位類型限制](./schema/field-constraints.md).
 
-### 如何為架構定義標識？
+### 如何定義結構的身分？
 
-在 [!DNL Experience Platform]，身份用於標識對象（通常是個人），而不管所解釋的資料源如何。 通過將關鍵字欄位標籤為「標識」，在架構中定義了這些關鍵字。 常用的標識欄位包括電子郵件地址、電話號碼、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=zh-Hant)、CRM ID和其他唯一ID欄位。
+在 [!DNL Experience Platform]，身分識別可用來識別主體（通常是個別人員），無論解讀的資料來源為何。 在結構中，會將索引鍵欄位標示為「身分」，以定義這些欄位。 身分的常用欄位包括電子郵件地址、電話號碼、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
 
-欄位可以使用API或用戶介面標籤為標識。
+欄位可使用API或使用者介面標示為身分。
 
-#### 在API中定義標識
+#### 在API中定義身分
 
-在API中，通過建立標識描述符來建立標識。 標識描述符表示模式的特定屬性是唯一標識符。
+在API中，身分識別是透過建立身分描述元來建立。 身份描述符發出信號，表示模式的特定屬性是唯一標識符。
 
-標識描述符由POST請求建立到/descriptors終結點。 如果成功，您將收到HTTP狀態201（已建立）和包含新描述符詳細資訊的響應對象。
+身份描述符由POST請求建立到/descriptors端點。 如果成功，您將收到HTTP狀態201（已建立）和包含新描述符詳細資訊的響應對象。
 
-有關在API中建立標識描述符的詳細資訊，請參閱上的文檔 [描述符](api/descriptors.md) 的 [!DNL Schema Registry] 的子菜單。
+如需在API中建立身分描述元的詳細資訊，請參閱 [描述符](api/descriptors.md) 區段 [!DNL Schema Registry] 開發人員指南。
 
-#### 在UI中定義標識
+#### 在UI中定義身分
 
-在架構編輯器中開啟架構時，選擇 **[!UICONTROL 結構]** 的子菜單。 下 **[!UICONTROL 欄位屬性]** 在右側，選擇 **[!UICONTROL 身份]** 複選框。
+在架構編輯器中開啟架構後，選取 **[!UICONTROL 結構]** 標籤為標識的編輯器部分。 在 **[!UICONTROL 欄位屬性]** 在右側，選取 **[!UICONTROL 身分]** 核取方塊。
 
-有關在UI中管理標識的詳細資訊，請參閱 [定義標識欄位](./tutorials/create-schema-ui.md#identity-field) 的子目錄。
+如需在UI中管理身分的詳細資訊，請參閱 [定義身分欄位](./tutorials/create-schema-ui.md#identity-field) 一節。
 
-### 我的架構是否需要主標識？
+### 我的架構是否需要主要身分識別？
 
-主標識是可選的，因為方案可能具有零個或其中一個。 但是，架構必須具有主標識才能在中啟用該架構 [!DNL Real-time Customer Profile]。 查看 [身份](./tutorials/create-schema-ui.md#identity-field) 。
+主要身分為選用，因為結構可能為零或其中一個。 但是，架構必須具有主要身分，才能在中啟用該架構 [!DNL Real-Time Customer Profile]. 請參閱 [身分](./tutorials/create-schema-ui.md#identity-field) 一節，以取得詳細資訊。
 
-### 如何啟用架構以用於 [!DNL Real-time Customer Profile]?
+### 如何啟用結構以用於 [!DNL Real-Time Customer Profile]?
 
-已啟用方案供使用 [[!DNL Real-time Customer Profile]](../profile/home.md) 通過在Conter的 `meta:immutableTags` 架構的屬性。 啟用用於的架構 [!DNL Profile] 可以使用API或用戶介面完成。
+結構可在 [[!DNL Real-Time Customer Profile]](../profile/home.md) 在 `meta:immutableTags` 結構的屬性。 啟用結構以便與 [!DNL Profile] 可使用API或使用者介面完成。
 
-#### 啟用現有架構 [!DNL Profile] 使用API
+#### 為啟用現有架構 [!DNL Profile] 使用API
 
-發出PATCH請求以更新架構並添加 `meta:immutableTags` 屬性作為包含值「union」的陣列。 如果更新成功，響應將顯示現在包含聯合標籤的更新架構。
+發出PATCH請求以更新結構並新增 `meta:immutableTags` 屬性，作為包含「union」值的陣列。 如果更新成功，回應會顯示更新的架構，其現在包含union標籤。
 
-有關使用API啟用模式以供使用的詳細資訊 [!DNL Real-time Customer Profile]，請參見 [工會](./api/unions.md) 的 [!DNL Schema Registry] 的子菜單。
+如需使用API來啟用結構以供使用的詳細資訊，請參閱 [!DNL Real-Time Customer Profile]，請參閱 [工會](./api/unions.md) 檔案 [!DNL Schema Registry] 開發人員指南。
 
-#### 啟用現有架構 [!DNL Profile] 使用UI
+#### 為啟用現有架構 [!DNL Profile] 使用UI
 
-在 [!DNL Experience Platform]選中 **[!UICONTROL 架構]** 在左導航中，然後從架構清單中選擇要啟用的架構的名稱。 然後，在編輯的右側 **[!UICONTROL 架構屬性]**&#x200B;選中 **[!UICONTROL 配置檔案]** 開啟。
+在 [!DNL Experience Platform]，選取 **[!UICONTROL 結構]** 在左側導覽中，從架構清單中選取要啟用的架構名稱。 然後，在編輯的右側， **[!UICONTROL 架構屬性]**，選取 **[!UICONTROL 設定檔]** 開啟。
 
 
-有關詳細資訊，請參閱 [在即時客戶配置檔案中使用](./tutorials/create-schema-ui.md#profile) 的 [!UICONTROL 架構編輯器] 教程。
+如需詳細資訊，請參閱 [在即時客戶個人檔案中使用](./tutorials/create-schema-ui.md#profile) 在 [!UICONTROL 結構編輯器] 教學課程。
 
-### 是否可以直接編輯聯合架構？
+### 我可以直接編輯聯合結構嗎？
 
-聯合架構是只讀的，並由系統自動生成。 不能直接編輯。 將「union」標籤添加到實現該類的架構時，將為特定類建立聯合架構。
+聯合結構是唯讀的，由系統自動產生。 無法直接編輯。 當實作該類的架構中新增「union」標籤時，會為特定類別建立union結構。
 
-有關XDM中工會的詳細資訊，請參見 [工會](./api/unions.md) 的 [!DNL Schema Registry] API指南。
+如需XDM中聯合的詳細資訊，請參閱 [工會](./api/unions.md) 區段 [!DNL Schema Registry] API指南。
 
-### 如何格式化資料檔案以將資料導入到架構中？
+### 如何將資料檔案格式化以將資料內嵌到架構中？
 
-[!DNL Experience Platform] 接受任一資料檔案 [!DNL Parquet] 或JSON格式。 這些檔案的內容必須符合資料集引用的架構。 有關資料檔案接收的最佳做法的詳細資訊，請參見 [批處理接收概述](../ingestion/home.md)。
+[!DNL Experience Platform] 接受其中一個 [!DNL Parquet] 或JSON格式。 這些檔案的內容必須符合資料集參考的結構。 如需資料檔案內嵌最佳實務的詳細資訊，請參閱 [批次匯入概觀](../ingestion/home.md).
 
-## 錯誤和故障排除
+## 錯誤和疑難排解
 
-以下是使用時可能遇到的錯誤消息清單 [!DNL Schema Registry] API。
+以下是使用時可能會遇到的錯誤訊息清單 [!DNL Schema Registry] API。
 
-### 找不到資源
+### 未找到資源
 
 ```json
 {
@@ -122,11 +122,11 @@ ht-degree: 0%
 }
 ```
 
-當系統找不到特定資源時，將顯示此錯誤。 資源可能已被刪除，或API調用中的路徑無效。 請確保在重試之前已輸入API調用的有效路徑。 您可能需要檢查是否已為資源輸入了正確的ID，以及路徑是否與相應的容器（全局或租戶）正確命名。
+當系統找不到特定資源時，將顯示此錯誤。 資源可能已刪除，或API呼叫中的路徑無效。 請確定您已輸入API呼叫的有效路徑，然後再次嘗試。 您可能想要檢查是否已為資源輸入正確的ID，以及路徑是否與適當的容器（全域或租用戶）以適當的命名空間命名。
 
 >[!NOTE]
 >
->根據正在檢索的資源類型，此錯誤可以使用以下任一項 `type` URI:
+>根據要檢索的資源類型，此錯誤可使用下列任一項 `type` URI:
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1010-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1011-404`
@@ -138,7 +138,7 @@ ht-degree: 0%
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 
-有關在API中構建查找路徑的詳細資訊，請參見 [容器](./api/getting-started.md#container) 和 [資源標識](api/getting-started.md#resource-identification) 的 [!DNL Schema Registry] 的子菜單。
+如需在API中建構查詢路徑的詳細資訊，請參閱 [容器](./api/getting-started.md#container) 和 [資源識別](api/getting-started.md#resource-identification) 區段 [!DNL Schema Registry] 開發人員指南。
 
 ### 標題不唯一
 
@@ -157,7 +157,7 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試建立具有已被其他資源使用的標題的資源時，將顯示此錯誤消息。 標題在所有資源類型中必須是唯一的。 例如，如果您嘗試建立一個欄位組，其標題已被架構使用，則將收到此錯誤。
+當您嘗試建立標題已被其他資源使用的資源時，會顯示此錯誤訊息。 所有資源類型的標題必須是唯一的。 例如，如果您嘗試建立標題已由架構使用的欄位群組，則會收到此錯誤。
 
 ### 命名空間驗證錯誤
 
@@ -176,13 +176,13 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試建立具有不正確命名空間欄位的資源或將不正確命名空間欄位添加到現有資源時，將顯示此錯誤消息。
+當您嘗試建立命名空間不正確的欄位的資源，或將命名空間不正確的欄位新增至現有資源時，會顯示此錯誤訊息。
 
-由IMS組織定義的資源必須在您的租戶ID下命名其欄位的名稱空間，以避免與其他行業和供應商資源發生衝突。 使用標準欄位組構建架構時，在這些欄位組結構中添加的任何自定義欄位也必須在租戶ID下命名。
+由您的IMS組織定義的資源必須命名您的租用戶ID下的欄位，以避免與其他產業和廠商資源產生衝突。 使用標準欄位群組建立架構時，您在這些欄位群組結構中新增的任何自訂欄位，也必須以租用戶ID命名。
 
 >[!NOTE]
 >
->根據命名空間錯誤的特定性質，此錯誤可以使用下列任何一項 `type` URI以及不同的消息詳細資訊：
+>根據命名空間錯誤的特定性質，此錯誤可能會使用下列任一項 `type` URI以及不同的消息詳細資訊：
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1020-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1021-400`
@@ -191,11 +191,11 @@ ht-degree: 0%
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 
-有關XDM資源的正確資料結構的詳細示例，請參閱《架構註冊API指南》：
+如需XDM資源適當資料結構的詳細範例，請參閱Schema Registry API指南：
 
-* [建立自定義類](./api/classes.md#create)
-* [建立自定義欄位組](./api/field-groups.md#create)
-* [建立自定義資料類型](./api/data-types.md#create)
+* [建立自訂類別](./api/classes.md#create)
+* [建立自訂欄位群組](./api/field-groups.md#create)
+* [建立自訂資料類型](./api/data-types.md#create)
 
 ### 接受標頭無效
 
@@ -214,13 +214,13 @@ ht-degree: 0%
 }
 ```
 
-GET請求 [!DNL Schema Registry] API需要 `Accept` 頭以便系統確定如何格式化響應。 當需要 `Accept` 標頭無效或缺失。
+GET請求 [!DNL Schema Registry] API需要 `Accept` 標題，以便系統判斷如何格式化回應。 當需要 `Accept` 標題無效或遺失。
 
-根據您使用的端點， `detailed-message` 屬性指示有效 `Accept` 標頭應類似於成功響應。 確保已正確輸入 `Accept` 與您嘗試建立的API請求相容的標頭，然後再重試。
+視您使用的端點而定， `detailed-message` 屬性表示有效 `Accept` 標題看起來應該是成功回應。 請確定您已正確輸入 `Accept` 與您嘗試進行之API請求相容的標題，然後再次嘗試。
 
 >[!NOTE]
 >
->根據所使用的端點，此錯誤可以使用下列任何一項 `type` URI:
+>根據使用的端點，此錯誤可使用下列任一項 `type` URI:
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1006-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
@@ -228,11 +228,11 @@ GET請求 [!DNL Schema Registry] API需要 `Accept` 頭以便系統確定如何�
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 
-有關不同API請求的相容接受標頭的清單，請參閱 [架構註冊表開發人員指南](./api/overview.md)。
+如需不同API請求的相容接受標題清單，請參閱 [Schema Registry開發人員指南](./api/overview.md).
 
-### [!DNL Real-time Customer Profile] 錯誤
+### [!DNL Real-Time Customer Profile] 錯誤
 
-以下錯誤消息與啟用架構時涉及的操作關聯 [!DNL Real-time Customer Profile]。 查看 [工會](./api/unions.md) 的 [!DNL Schema Registry] API指南，瞭解詳細資訊。
+下列錯誤訊息與啟用結構中涉及的操作相關聯 [!DNL Real-Time Customer Profile]. 請參閱 [工會](./api/unions.md) 區段 [!DNL Schema Registry] API指南，以了解詳細資訊。
 
 #### 必須有引用標識描述符
 
@@ -251,7 +251,7 @@ GET請求 [!DNL Schema Registry] API需要 `Accept` 頭以便系統確定如何�
 }
 ```
 
-當您嘗試為 [!DNL Profile] 其屬性之一包含沒有引用標識描述符的關係描述符。 將引用標識描述符添加到有關的架構欄位以解決此錯誤。
+當您嘗試為啟用架構時，會顯示此錯誤訊息 [!DNL Profile] 並且其一個屬性包含沒有引用標識描述符的關係描述符。 將參考標識描述符添加到相關架構欄位以解決此錯誤。
 
 #### 引用標識描述符欄位和目標架構的命名空間必須匹配
 
@@ -270,11 +270,11 @@ GET請求 [!DNL Schema Registry] API需要 `Accept` 頭以便系統確定如何�
 }
 ```
 
-為了啟用包含關係描述符的架構，以便在 [!DNL Profile]，源欄位的命名空間和目標欄位的主命名空間必須相同。 當您嘗試啟用包含引用標識描述符的不匹配命名空間的架構時，將顯示此錯誤消息。 確保 `xdm:namespace` 目標架構的標識欄位的值與 `xdm:identityNamespace` 源欄位的引用標識描述符中的屬性，以解決此問題。
+為了啟用包含關係描述符的架構以用於 [!DNL Profile]，來源欄位的命名空間和目標欄位的主要命名空間必須相同。 當您嘗試啟用包含引用標識描述符的不匹配命名空間的架構時，將顯示此錯誤消息。 確保 `xdm:namespace` 目標架構的identity欄位值與 `xdm:identityNamespace` 屬性（位於源欄位的引用標識描述符中），以解決此問題。
 
-有關標準標識名稱空間代碼的清單，請參見上的部分 [標準命名空間](../identity-service/namespaces.md) 標識名稱空間概述中。
+如需標準身分命名空間代碼的清單，請參閱 [標準命名空間](../identity-service/namespaces.md) 在「身分命名空間」概述中。
 
-#### 架構必須包括identityMap或主標識
+#### 架構必須包含identityMap或主要身分
 
 ```json
 {
@@ -291,7 +291,7 @@ GET請求 [!DNL Schema Registry] API需要 `Accept` 頭以便系統確定如何�
 }
 ```
 
-在為配置檔案啟用架構之前，必須先 [建立主標識描述符](./api/descriptors.md#create) 為架構，或者包括一個標識映射欄位以代替主標識。
+為設定檔啟用結構之前，您必須先 [建立主身份描述符](./api/descriptors.md#create) ，或納入「身分對應」欄位以改用主要身分。
 
 #### 無法合併不相容的資料類型
 
@@ -310,6 +310,6 @@ GET請求 [!DNL Schema Registry] API需要 `Accept` 頭以便系統確定如何�
 }
 ```
 
-屬於同一類的所有啟用配置檔案的架構都必須能夠合併在一起，以便為該類構建聯合架構。 當您嘗試將欄位添加到其路徑由另一個啟用了配置檔案的架構共用且資料類型與原始模式不同的架構時，會出現此錯誤。 由於架構都啟用了Profile並且包含相同的欄位路徑，因此在構建聯合架構時，Profile將嘗試將這兩個欄位合併為一個。 由於不同資料類型不能合併在一起，因此這將被視為合併衝突，不允許。
+屬於相同類的所有啟用配置檔案的結構必須能夠合併在一起，才能構建該類的聯合結構。 當您嘗試將欄位新增至某個架構，而該架構的路徑已由另一個啟用設定檔的架構共用，且該資料類型與原始資料不同時，就會出現此錯誤。 由於結構已啟用設定檔且包含相同的欄位路徑，因此在建構聯合結構時，設定檔會嘗試將這兩個欄位合併為一個欄位。 由於不同的資料類型無法合併在一起，因此這會被視為合併衝突，且不允許。
 
-要解決此問題，請為該欄位選擇其他名稱，或將其嵌套在具有唯一名稱進度的對象下，以避免與具有相似欄位的同一類下的其他啟用了配置檔案的方案合併衝突。
+要解決此問題，請為欄位選擇不同名稱，或在命名空間唯一的對象下嵌套該欄位，以避免與具有相同欄位的同類中啟用配置檔案的其他架構合併衝突。

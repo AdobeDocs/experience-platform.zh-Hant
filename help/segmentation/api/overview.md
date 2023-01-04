@@ -4,7 +4,7 @@ title: 區段服務API指南
 topic-legacy: guide
 description: 區段服務API可讓開發人員以程式設計方式管理Adobe Experience Platform中的區段作業。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 6133c3127aaf10243d5472540c29125155c99d7b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 3%
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 # 區段服務API指南
 
-[!DNL Adobe Experience Platform Segmentation Service] 可讓您在 [!DNL Adobe Experience Platform] 從 [!DNL Real-time Customer Profile] 資料。
+[!DNL Adobe Experience Platform Segmentation Service] 可讓您在 [!DNL Adobe Experience Platform] 從 [!DNL Real-Time Customer Profile] 資料。
 
 此 [!DNL Segmentation Service] API提供多個端點，可讓您以程式設計方式管理 [!DNL Experience Platform]. 本概述檔案提供每個端點的高階簡介，以及相關端點指南的連結，以取得詳細資訊。 閱讀個別端點指南之前，請參閱 [快速入門手冊](./getting-started.md) 如需必要標題、讀取範例API呼叫等的重要資訊。
 

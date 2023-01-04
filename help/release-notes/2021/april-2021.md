@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '888'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -47,7 +47,7 @@ Experience Data Model(XDM)是開放原始碼規格，旨在提升數位體驗的
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
-智慧服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司的需求設定專屬預測，而不需要資料科學的專業知識。
+智慧服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員利用業務層級設定，針對公司需求設定專屬預測，而無需資料科學的專業知識。
 
 ### Customer AI
 
@@ -73,7 +73,7 @@ Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人�
 
 ## 分段服務 {#segmentation}
 
-Adobe Experience Platform劃分服務提供使用者介面和RESTful API，可讓您建立區段，並從 [!DNL Real-time Customer Profile] 資料。 這些區段會在Platform上集中設定和維護，讓任何Adobe應用程式都能輕鬆存取。
+Adobe Experience Platform劃分服務提供使用者介面和RESTful API，可讓您建立區段，並從 [!DNL Real-Time Customer Profile] 資料。 這些區段會在Platform上集中設定和維護，讓任何Adobe應用程式都能輕鬆存取。
 
 [!DNL Segmentation Service] 會透過說明區分客戶群中可行銷人員群組的條件，來定義特定設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與您品牌互動的時間序列事件。
 

@@ -3,7 +3,7 @@ keywords: 細分；細分rtcdp；即時客戶資料平台細分
 title: Real-time Customer Data Platform中的分段服務
 description: Adobe即時客戶資料平台是以Adobe Experience Platform為建置基礎，並運用許多Experience Platform服務和功能。 使用「細分服務」，您可以將客戶劃分為具有類似特徵的較小群組，借此提供量身打造的行銷。
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 4%
@@ -33,7 +33,7 @@ Customer AI隨附於Real-time Customer Data Platform，可讓您在個別層級�
 * 提供高準確度的客戶傾向模型，以便更強大的細分和鎖定目標。
 * 了解特定客戶行為背後的影響因素和可能性。
 * 為您公司獨特的使用案例和資料提供可自訂的選項。
-* 利用客戶傾向分數（例如流失率和轉換）增強「即時客戶個人檔案」。
+* 利用客戶傾向分數（例如流失率和轉換）增強即時客戶個人檔案。
 * 利用傾向分數的影響因素來增強客戶設定檔。
 * 根據影響因素和傾向分數建立客戶區段。
 

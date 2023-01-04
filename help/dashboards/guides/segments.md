@@ -4,7 +4,7 @@ title: 區段控制面板指南
 description: Adobe Experience Platform提供控制面板，供您檢視貴組織已建立區段的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e5a4fddbd7f5b14280e283871d8b66a2e2f2407d
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2105'
 ht-degree: 0%

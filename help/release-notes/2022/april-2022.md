@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年4月
 description: 2022年4月Adobe Experience Platform發行說明。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2916'
 ht-degree: 6%
@@ -173,7 +173,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-AI/ML服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司的需求設定專屬預測，而不需要資料科學的專業知識。
+AI/ML服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用人工智慧和機器學習的強大功能。 這可讓行銷分析人員利用業務層級設定，針對公司需求設定專屬預測，而無需資料科學的專業知識。
 
 ### Attribution AI
 

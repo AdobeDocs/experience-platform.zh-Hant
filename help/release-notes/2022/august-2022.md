@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年8月
 description: 2022年8月Adobe Experience Platform發行說明。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2131'
 ht-degree: 7%
@@ -21,7 +21,7 @@ Adobe Experience Platform 現有功能更新：
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model(XDM)](#xdm)
 - [即時客戶個人檔案](#profile)
-- [分段服務](#segmentation)
+- [細分服務](#segmentation)
 - [來源](#sources)
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}

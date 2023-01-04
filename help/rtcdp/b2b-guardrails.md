@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform B2B版的預設護欄
 type: Documentation
 description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本檔案提供預設的使用和比率限制，協助您使用Adobe Real-time Customer Data Platform B2B版來建模資料，以獲得最佳的系統效能。
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1602'
 ht-degree: 2%
@@ -39,7 +39,7 @@ Real-time Customer Data Platform B2B Edition可讓您以即時客戶設定檔和
 
 ## 資料模型限制
 
-以下護欄為即時客戶設定檔資料建模提供了建議的限制。 要進一步了解主要圖元和維圖元，請參閱 [實體類型](#entity-types) 在附錄中。
+以下護欄在建模即時客戶設定檔資料時提供建議的限制。 要進一步了解主要圖元和維圖元，請參閱 [實體類型](#entity-types) 在附錄中。
 
 ### 主實體護欄
 
@@ -119,9 +119,9 @@ Real-time Customer Data Platform B2B Edition可讓您以即時客戶設定檔和
 
 此 [!DNL Profile] 儲存資料模型包含兩種核心實體類型：
 
-* **主要實體：** 主要實體或設定檔實體會合併資料，為個人形成「單一真相來源」。 此統一資料會使用所謂的「聯合檢視」來表示。 聯合檢視會將實施相同類別之所有結構的欄位匯總至單一聯合結構。 的聯合架構 [!DNL Real-time Customer Profile] 是非正常的混合資料模型，可作為所有設定檔屬性和行為事件的容器。
+* **主要實體：** 主要實體或設定檔實體會合併資料，為個人形成「單一真相來源」。 此統一資料會使用所謂的「聯合檢視」來表示。 聯合檢視會將實施相同類別之所有結構的欄位匯總至單一聯合結構。 的聯合架構 [!DNL Real-Time Customer Profile] 是非正常的混合資料模型，可作為所有設定檔屬性和行為事件的容器。
 
-   與時間無關的屬性（也稱為「記錄資料」）是使用 [!DNL XDM Individual Profile]，而時間序列資料（也稱為「事件資料」）則使用 [!DNL XDM ExperienceEvent]. 在Adobe Experience Platform中擷取記錄和時間序列資料時，就會觸發 [!DNL Real-time Customer Profile] 開始擷取已啟用供其使用的資料。 擷取的互動和詳細資訊越多，個別設定檔就越健全。
+   與時間無關的屬性（也稱為「記錄資料」）是使用 [!DNL XDM Individual Profile]，而時間序列資料（也稱為「事件資料」）則使用 [!DNL XDM ExperienceEvent]. 在Adobe Experience Platform中擷取記錄和時間序列資料時，就會觸發 [!DNL Real-Time Customer Profile] 開始擷取已啟用供其使用的資料。 擷取的互動和詳細資訊越多，個別設定檔就越健全。
 
    ![](../profile/images/guardrails/profile-entity.png)
 

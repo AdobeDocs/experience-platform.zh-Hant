@@ -3,7 +3,7 @@ keywords: Experience Platform；疑難排解；護欄；准則；
 title: 資料擷取的護欄
 description: 本檔案提供Adobe Experience Platform中資料擷取護欄的相關指引
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: fa0ddc4c0053018d013c14c568ebb2fd231f4bd2
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 1%

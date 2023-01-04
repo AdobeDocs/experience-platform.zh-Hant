@@ -5,7 +5,7 @@ title: 區段服務概述
 topic-legacy: overview
 description: 了解Adobe Experience Platform細分服務及其在Platform生態系統中的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Segmentation Service] 概覽
 
-Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您建立區段，並從中產生對象 [!DNL Real-time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，任何Adobe解決方案都可輕鬆存取。
+Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您建立區段，並從中產生對象 [!DNL Real-Time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，任何Adobe解決方案都可輕鬆存取。
 
 本檔案提供 [!DNL Segmentation Service] 以及它在Adobe Experience Platform的作用。
 
@@ -63,7 +63,7 @@ Platform目前支援三種評估區段的方法：串流分段、批次分段和
 
 ### 串流細分 {#streaming}
 
-串流區段是持續進行的資料選取程式，會根據使用者活動更新您的區段。 建立並儲存區段後，會對傳入的資料套用區段定義至 [!DNL Real-time Customer Profile]. 會定期處理區段新增和移除，確保目標受眾仍具相關性。
+串流區段是持續進行的資料選取程式，會根據使用者活動更新您的區段。 建立並儲存區段後，會對傳入的資料套用區段定義至 [!DNL Real-Time Customer Profile]. 會定期處理區段新增和移除，確保目標受眾仍具相關性。
 
 若要進一步了解串流細分，請閱讀 [串流細分檔案](./api/streaming-segmentation.md).
 
@@ -160,7 +160,7 @@ Platform目前支援三種評估區段的方法：串流分段、批次分段和
 
 ## 多實體細分 {#multi-entity}
 
-透過進階的多實體分段功能，您可以擴充 [!DNL Real-time Customer Profile] 以產品、商店或其他非人員為基礎的其他資料（也稱為「維度」實體）的資料。 因此， [!DNL Segmentation Service] 可在區段定義期間存取其他欄位，就像這些欄位是原生欄位 [!DNL Profile] 資料儲存。 多實體細分可根據與您獨特業務需求相關的資料，靈活地識別對象。 如需詳細資訊，包括使用案例和工作流程，請參閱 [多實體分段指南](multi-entity-segmentation.md).
+透過進階的多實體分段功能，您可以擴充 [!DNL Real-Time Customer Profile] 以產品、商店或其他非人員為基礎的其他資料（也稱為「維度」實體）的資料。 因此， [!DNL Segmentation Service] 可在區段定義期間存取其他欄位，就像這些欄位是原生欄位 [!DNL Profile] 資料儲存。 多實體細分可根據與您獨特業務需求相關的資料，靈活地識別對象。 如需詳細資訊，包括使用案例和工作流程，請參閱 [多實體分段指南](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] 資料類型
 
@@ -168,7 +168,7 @@ Platform目前支援三種評估區段的方法：串流分段、批次分段和
 
 ## 後續步驟
 
-[!DNL Segmentation Service] 提供整合的工作流程，以便從 [!DNL Real-time Customer Profile] 資料。 總之：
+[!DNL Segmentation Service] 提供整合的工作流程，以便從 [!DNL Real-Time Customer Profile] 資料。 總之：
 
 - [!DNL Segmentation] 是從您的設定檔存放區定義設定檔子集的程式，可讓您描述所需有價群組的行為或屬性。 [!DNL Segmentation Service] 使這個過程成為可能。
 - 規劃區段時，請記得可從任何其他區段參考區段，並加以結合。

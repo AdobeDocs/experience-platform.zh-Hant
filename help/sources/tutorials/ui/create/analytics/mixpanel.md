@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；來源；連接器；來
 title: （測試版）在UI中建立Mixpanel來源連線
 description: 了解如何使用Adobe Experience Platform UI建立Mixpanel來源連線。
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: bee13becb59e3277921549e6db027ce864bba28b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 2%
@@ -25,7 +25,7 @@ ht-degree: 2%
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
    * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 ### 收集所需憑據
 

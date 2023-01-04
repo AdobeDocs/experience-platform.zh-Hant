@@ -5,7 +5,7 @@ title: Audience Manager來源概觀
 topic-legacy: overview
 description: Adobe Audience Manager來源會將Audience Manager中收集的第一方資料串流至Adobe Experience Platform。
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 37e810ce6faf40f9980841b2c9d6eb29e8b0e82a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 0%

@@ -3,7 +3,7 @@ keywords: Azure Blob;Blob目的地；s3;Azure Blob目的地
 title: Azure Blob連接
 description: 建立與Azure Blob儲存的即時傳出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '923'
 ht-degree: 1%
@@ -41,7 +41,7 @@ ht-degree: 1%
 * [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [結構構成基本概念](../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器教學課程](../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 如果您已有有效 [!DNL Blob] 目的地，您可以略過本檔案的其餘部分，並繼續進行有關 [將區段啟用至您的目的地](../../ui/activate-batch-profile-destinations.md).
 

@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: 以下指南說明建立和發佈機器學習模型所需的步驟。
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: ff8a3612f34d6547577564ba40261052cd78ef01
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 Data Science Workspace UI和API可讓您以模型形式發佈方式。 此外，還可以進一步微調模型的特定方面，如添加、刪除和更改超參數。
 
-### 建立模型
+### 建立一個模式
 
 若要進一步了解如何使用UI建立模型，請前往Data Science Workspace中的訓練並評估模型 [UI教學課程](./train-evaluate-model-ui.md) 或 [API教學課程](./train-evaluate-model-api.md). 本教學課程提供如何建立、訓練和更新超參數以微調模型的範例。
 

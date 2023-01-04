@@ -1,8 +1,8 @@
 ---
 title: Adobe Experience Platform發行說明2022年1月
-description: 2022年1月為Adobe Experience Platform發佈的說明。
+description: 2022年1月Adobe Experience Platform發行說明。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -26,108 +26,108 @@ Adobe Experience Platform 現有功能更新：
 
 ## 警報 {#alerts}
 
-Experience Platform允許您訂閱各種平台活動的基於事件的警報。 您可以通過 [!UICONTROL 警報] 頁籤，並可以選擇在UI本身或通過電子郵件通知接收警報消息。
+Experience Platform可讓您訂閱各種平台活動的事件型警報。 您可以透過 [!UICONTROL 警報] 標籤，並可選擇在UI本身或透過電子郵件通知接收警報訊息。
 
-**已更新功能**
+**更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 新警報規則 | 現在，幾個新的警報規則可用於與資料接收、身份、配置檔案、分段和激活相關的工作流。 請參閱 [警報規則](../../observability/alerts/rules.md) 的子菜單。 |
-| 源資料流的上下文警報 | 您現在可以訂閱接收有關接收工作流期間資料流狀態的警報消息。 有關詳細資訊，請參閱上的指南 [訂閱UI中的源警報](../../sources/tutorials/ui/alerts.md)。 |
+| 新警報規則 | 數個新的警報規則現在可用於資料擷取、身分、設定檔、細分和啟用的相關工作流程。 請參閱 [警報規則](../../observability/alerts/rules.md) 以取得更新的警報類型清單。 |
+| 源資料流的上下文內警報 | 您現在可以訂閱，以接收有關擷取工作流程期間資料流狀態的警報訊息。 如需詳細資訊，請參閱 [在UI中訂閱來源警報](../../sources/tutorials/ui/alerts.md). |
 
-有關平台中警報的詳細資訊，請參閱 [警報概述](../../observability/alerts/overview.md)。
+如需Platform中警報的詳細資訊，請參閱 [警報概觀](../../observability/alerts/overview.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表板查看有關組織資料的重要見解，如在每日快照中捕獲的。
+Adobe Experience Platform提供多個控制面板，讓您透過這些控制面板檢視組織資料的重要深入分析（在每日快照中擷取）。
 
 | 功能 | 說明 |
 | --- | --- |
-| 智慧字幕 | 機器學習算法會自動提供有關您的個人資料和受眾資料的洞見，並在30-90天或12個月期間展示模式和趨勢。 標題包括有關 <ul><li>總體形狀和統計</li><li>趨勢和突變</li><li>季節性模式</li><li>異常</li></ul> 有關 [配置檔案儀表板](../../dashboards/guides/profiles.md#profiles-count-trend) 和 [段儀表板](../../dashboards/guides/segments.md#audience-size-trend) 文檔。 |
-| 儀表板清單 | 在集中位置訪問預配置的配置檔案、資料段和目標儀表板報告，包括任何已安裝的整合（如PowerBI）。 有關詳細資訊，請參見 [[!DNL Dashboards] 庫存文檔](../../dashboards/inventory.md)。 |
-| PowerBI報表模板 | 使用新的PowerBI圖表從配置檔案、段和目標報告資料模型構建、自定義或擴展度量。 自動安裝工作流允許您從PowerBI環境中在整個組織內共用您的營銷見解。 有關詳細資訊，請參見 [PowerBI報表模板文檔](../../dashboards/integrations/power-bi.md)。 |
+| 智慧型字幕 | 機器學習演算法會自動提供您設定檔和受眾資料的深入分析，並說明30至90天或12個月期間的模式和趨勢。 標題包括 <ul><li>整體形狀和統計</li><li>趨勢和突然變化</li><li>季節性模式</li><li>意外異常</li></ul> 如需詳細資訊，請參閱 [設定檔控制面板](../../dashboards/guides/profiles.md#profiles-count-trend) 和 [區段控制面板](../../dashboards/guides/segments.md#audience-size-trend) 檔案。 |
+| 控制面板詳細目錄 | 在集中位置存取預先設定的設定檔、區段和目的地控制面板報表，包括任何已安裝的整合功能（例如PowerBI）。 如需詳細資訊，請參閱 [[!DNL Dashboards] 詳細目錄檔案](../../dashboards/inventory.md). |
+| PowerBI報表範本 | 使用新的PowerBI圖表，從設定檔、區段和目的地報表資料模型建立、自訂或擴充量度。 自動安裝工作流程可讓您在PowerBI環境中，在整個組織間共用行銷分析。 如需詳細資訊，請參閱 [PowerBI報表範本檔案](../../dashboards/integrations/power-bi.md). |
 
-有關 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md)。
+如需 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] 允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
+[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
 
-**已更新功能**
+**更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 整合的映射體驗 | 平台UI中的新映射介面為您提供了一致的映射體驗，讓您能夠利用智慧映射建議案、手動配置映射規則以及調試映射集上發生的任何錯誤。 有關詳細資訊，請參見 [[!DNL Data Prep] UI指南](../../data-prep/ui/mapping.md)。 |
+| 整合的對應體驗 | Platform UI中的新對應介面提供您一致的對應體驗，以利用智慧型對應建議、手動設定對應規則，以及對對應集發生的任何錯誤進行除錯。 如需詳細資訊，請參閱 [[!DNL Data Prep] UI指南](../../data-prep/ui/mapping.md). |
 
-有關 [!DNL Data Prep]，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
+如需 [!DNL Data Prep]，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+[!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
-**新增或更新的功能**
+**新功能或更新功能**
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 同頁和下頁個性化 | 的 [同頁和下一頁個性化功能](../../destinations/ui/configure-personalization-destinations.md) 為體驗邊緣上的應用程式提供用戶的共用、可目標視圖，以實現營銷渠道和客戶渠道之間的一致性。 此個性化功能可通過 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md)。 要配置同一頁或下一頁個性化市場活動，請參閱 [專用教程](../../destinations/ui/configure-personalization-destinations.md)。 |
-| 批目標監視和段級度量 | 目標監視功能現在從流目標擴展為包括激活資料流的批處理目標和段級度量。 有關詳細資訊，請閱讀 [監視目標儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)。 [監視段作業控制面板](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard), [段級視圖](/help/dataflows/ui/monitor-destinations.md#segment-level-view)。 |
-| 計畫在UI中編輯現有批激活資料流 | 此版本引入了將現有激活資料流的計畫編輯到批處理目標的選項。 有關詳細資訊，請閱讀 [將配置檔案資料激活至批配置檔案目標](/help/destinations/ui/activate-batch-profile-destinations.md)。 |
-| Marketo目標增強 | Experience Platform使用Marketo Engage的客戶可以利用將新人記錄從Experience Platform通過 [Marketo目標連接器](/help/destinations/catalog/adobe/marketo-engage.md)。 <br> 在將受眾段從Experience Platform發送到Marketo Engage時，可以自動將段內尚未存在於Marketo Engage資料庫中的人添加到該段。 有關詳細資訊，請閱讀 [將Adobe Experience Platform段推入Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (本教程中的步驟9指明如何將新人記錄推送到Marketo)。 |
+| 同頁和下一頁個人化 | 此 [同頁和下一頁個人化功能](../../destinations/ui/configure-personalization-destinations.md) 提供Experience Edge應用程式的共用、可定位使用者檢視，以保持行銷和客戶管道的一致。 此個人化可透過 [Adobe Target連線](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要設定同頁或下一頁個人化促銷活動，請參閱 [專屬教學課程](../../destinations/ui/configure-personalization-destinations.md). |
+| 批次目的地監控和區段層級量度 | 目的地監控功能現在從串流目的地擴充，同時也包含啟動資料流的批次目的地和區段層級量度。 如需詳細資訊，請閱讀 [監視目標儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [監控區段作業控制面板](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard)，和 [區段層級檢視](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
+| 在UI中排程編輯現有批次啟動資料流 | 此版本引入了可編輯現有激活資料流到批處理目標的調度的選項。 如需詳細資訊，請閱讀 [啟用設定檔資料以批次設定檔目的地](/help/destinations/ui/activate-batch-profile-destinations.md). |
+| Marketo目的地增強功能 | 使用Marketo Engage的Experience Platform客戶可以透過以下新功能，將新人員記錄從Experience Platform推送至Marketo Engage，借此將其Marketo資料庫發揮到最大 [Marketo目的地連接器](/help/destinations/catalog/adobe/marketo-engage.md). <br> 將受眾區段從Experience Platform傳送至Marketo Engage時，區段內尚未存在於Marketo Engage資料庫中的人員可自動新增至區段。 如需詳細資訊，請閱讀 [推送Adobe Experience Platform區段至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (教學課程中的步驟9指出如何將新人員記錄推送至Marketo)。 |
 
-**新目標**
+**新目的地**
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target是一個應用程式，它在跨網站、移動應用等所有入站客戶交互中提供即時、基於人工智慧的個性化和實驗。 Adobe Target是Adobe Experience Platform的個性化連接。 |
-| [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md) | 這種個性化連接提供了一種從Adobe Experience Platform檢索段資訊到外部個性化平台、內容管理系統、廣告伺服器以及在客戶網站上運行的其他應用程式的方法。 |
+| [Adobe Target連線](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target是一種應用程式，可在網站、行動應用程式等所有傳入客戶互動中，提供由AI支援的即時個人化和實驗。 Adobe Target是Adobe Experience Platform中的個人化連線。 |
+| [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md) | 此個人化連線提供從Adobe Experience Platform擷取區段資訊至外部個人化平台、內容管理系統、廣告伺服器，以及在客戶網站上執行的其他應用程式的方法。 |
 
-有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
+如需目的地的詳細一般資訊，請參閱 [目的地概述](../../destinations/home.md).
 
 ## 查詢服務 {#query-service}
 
-[!DNL Query Service] 允許您使用標準SQL查詢Adobe Experience Platform的資料 [!DNL Data Lake]。 您可以加入來自 [!DNL Data Lake] 並將查詢結果捕獲為新資料集，用於報告、Data Science Workspace或用於接收到即時客戶概要檔案。
+[!DNL Query Service] 可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以從 [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或擷取至「即時客戶個人檔案」。
 
-**已更新功能**
+**更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 匿名塊 | 匿名塊SQL構造允許您將查詢服務中的大規模資料準備作業分解為較小的任務，然後按順序重新使用並執行這些任務以進行增量資料載入。 有關詳細資訊，請參見 [匿名塊文檔的示例查詢](../../query-service/best-practices/anonymous-block.md)。 |
-| 資料集組織 | 提供一個連貫的邏輯資料結構，以便隨著沙箱中資料資產的數量增加，組織資料資產以與查詢服務一起使用。 有關詳細資訊，請參見 [組織資料資產文檔](../../query-service/best-practices/organize-data-assets.md)。 |
+| 匿名塊 | 匿名塊SQL結構允許您將查詢服務中的大規模資料準備作業分解為較小的任務，然後對增量資料載入重複使用並依序執行這些任務。 如需詳細資訊，請參閱 [匿名塊文檔的示例查詢](../../query-service/best-practices/anonymous-block.md). |
+| 資料集組織 | 提供一致的邏輯資料結構，可隨著沙箱中資料資產的數量增加，組織您的資料資產以與查詢服務搭配使用。 如需詳細資訊，請參閱 [組織資料資產檔案](../../query-service/best-practices/organize-data-assets.md). |
 
-有關 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md)。
+如需 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md).
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform的建設旨在在全球範圍內豐富數字型驗應用。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署需要，同時確保操作合規性。 為了滿足這一需要，Experience Platform提供了沙箱，可將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+Adobe Experience Platform的建置宗旨是在全球範圍豐富數位體驗應用程式。 公司通常並行運行多個數字型驗應用程式，需要滿足這些應用程式的開發、測試和部署，同時確保操作合規性。 為了滿足這項需求，Experience Platform提供沙箱，可將單一Platform執行個體分割成個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
-**已更新功能**
+**更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| Sandboxes UI增強 | 沙盒指示器現在整合在所有平台UI應用程式的標頭中。 沙盒指示器顯示沙盒名稱、區域和類型，還允許您訪問下拉菜單以在沙盒之間切換。 有關詳細資訊，請參見 [沙盒UI指南](../../sandboxes/ui/user-guide.md)。 |
+| 沙箱UI增強功能 | 沙箱指標現在已整合在所有Platform UI應用程式的標題中。 沙箱指標會顯示沙箱名稱、地區和類型，也可讓您存取下拉式功能表，以在沙箱之間切換。 如需詳細資訊，請參閱 [沙箱UI指南](../../sandboxes/ui/user-guide.md). |
 
-有關沙箱的詳細資訊，請參閱 [箱概述](../../sandboxes/home.md)。
+如需沙箱的詳細資訊，請參閱 [沙箱概述](../../sandboxes/home.md).
 
 ## 分段服務 {#segmentation}
 
-[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
+[!DNL Segmentation Service] 會透過說明區分客戶群中可行銷人員群組的條件，來定義特定設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與您品牌互動的時間序列事件。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 段匹配 | 段匹配是一種資料協作服務，允許兩個或更多平台用戶以安全、受管理和隱私友好的方式基於公共標識符交換資料。 段匹配使用平台隱私標準和個人標識符，如散列電子郵件、散列電話號碼和設備標識符，如IDFA和GAID。 有關詳細資訊，請參見 [段匹配概述](../../segmentation/ui/segment-match/overview.md)。 |
+| 區段符合 | 區段比對是資料協同作業服務，可讓兩位或多位Platform使用者根據共同識別碼，以安全、受管且符合隱私權的方式交換資料。 區段比對使用平台隱私權標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼，以及裝置識別碼，例如IDFA和GAID。 如需詳細資訊，請參閱 [區段符合概觀](../../segmentation/ui/segment-match/overview.md). |
 
-有關 [!DNL Segmentation Service]，請參閱 [分段概述](../../segmentation/home.md)。
+如需 [!DNL Segmentation Service]，請參閱 [區段概觀](../../segmentation/home.md).
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定獲取運行時間以及管理資料獲取吞吐量。
 
 | 功能 | 說明 |
 | --- | --- |
-| Beta源移至GA | 已將以下源從beta升級為GA: <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
-| [!DNL Event Hubs] 源增強 | 的 [!DNL Event Hubs] 源現在支援非根SAS密鑰類型的身份驗證以連接和建立源連接。 有關詳細資訊，請參見 [[!DNL Event Hubs] 概述](../../sources/connectors/cloud-storage/eventhub.md)。 |
-| [!DNL SFTP] 源增強 | 的 [!DNL SFTP] 現在，源允許您建立一組最大併發連接數，資料流可以使用這些連接來連接到SFTP伺服器。 有關詳細資訊，請參見 [[!DNL SFTP] 概述](../../sources/connectors/cloud-storage/sftp.md)。 |
+| 測試版來源轉至GA | 下列來源已從測試版提升為正式發行： <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
+| [!DNL Event Hubs] 來源增強功能 | 此 [!DNL Event Hubs] 源現在支援非根SAS密鑰類型的身份驗證，以連接和建立源連接。 如需詳細資訊，請參閱 [[!DNL Event Hubs] 概述](../../sources/connectors/cloud-storage/eventhub.md). |
+| [!DNL SFTP] 來源增強功能 | 此 [!DNL SFTP] 來源現在可讓您建立資料流可用來連線至SFTP伺服器的一組最大併發連線。 如需詳細資訊，請參閱 [[!DNL SFTP] 概述](../../sources/connectors/cloud-storage/sftp.md). |

@@ -5,14 +5,14 @@ title: 區段符合概述
 topic-legacy: overview
 description: 區段比對是Adobe Experience Platform中的區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式來交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 2329065b938d97f48a23be5250fec535355db770
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match]概述
+# [!DNL Segment Match] 概覽
 
 Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式交換區段資料。 [!DNL Segment Match] 使用平台隱私標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼，以及IDFA和GAID等裝置識別碼。
 
@@ -37,7 +37,7 @@ Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多�
 
 身分識別命名空間是 [Adobe Experience Platform Identity Service](../../../identity-service/home.md). 每個客戶身分識別都包含指出身分識別內容的相關命名空間。 例如，命名空間可以區分「name」的值<span>@email.com」作為電子郵件地址，或「443522」作為數值CRM ID。
 
-完全限定的身分包括ID值和命名空間。 在設定檔片段間比對記錄資料時(例如 [!DNL Real-time Customer Profile] 合併設定檔資料)，身分值和命名空間必須相符。
+完全限定的身分包括ID值和命名空間。 在設定檔片段間比對記錄資料時(例如 [!DNL Real-Time Customer Profile] 合併設定檔資料)，身分值和命名空間必須相符。
 
 在 [!DNL Segment Match]，共用資料時，會在重疊程式中使用命名空間。
 
@@ -204,4 +204,4 @@ A **摘要** 是資料（區段）的分組、資料公開或使用方式的規�
 
 * [[!DNL Segmentation Service]](../../home.md)
 * [[!DNL Identity Service]](../../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile]概述](../../../profile/home.md)
+* [[!DNL Real-Time Customer Profile] 概覽](../../../profile/home.md)

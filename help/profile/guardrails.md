@@ -6,14 +6,14 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1929'
 ht-degree: 5%
 
 ---
 
-# 的預設護欄 [!DNL Real-time Customer Profile] 資料
+# 的預設護欄 [!DNL Real-Time Customer Profile] 資料
 
 Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行為分析和客戶屬性來提供個人化的跨管道體驗。 為了支援這種新的設定檔方法，Experience Platform使用與傳統關係資料模型不同的高度非正常化混合資料模型。
 
@@ -25,9 +25,9 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 
 ## 快速入門
 
-以下Experience Platform服務與建模即時客戶設定檔資料有關：
+下列Experience Platform服務與建模即時客戶設定檔資料有關：
 
-* [[!DNL Real-time Customer Profile]](home.md):使用來自多個來源的資料建立統一的消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](home.md):使用來自多個來源的資料建立統一的消費者設定檔。
 * [身分](../identity-service/home.md):擷取不同資料來源的身分並匯整至Platform中時，將其橋接。
 * [結構](../xdm/home.md):Experience Data Model(XDM)結構是Platform用來組織客戶體驗資料的標準化架構。
 * [區段](../segmentation/home.md):Platform內的區段引擎可用來根據客戶行為和屬性，從您的客戶設定檔建立區段。
@@ -46,7 +46,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 
 ## 資料模型限制
 
-以下護欄為即時客戶設定檔資料建模提供了建議的限制。 要進一步了解主要圖元和維圖元，請參閱 [實體類型](#entity-types) 在附錄中。
+以下護欄在建模即時客戶設定檔資料時提供建議的限制。 要進一步了解主要圖元和維圖元，請參閱 [實體類型](#entity-types) 在附錄中。
 
 ### 主實體護欄
 
@@ -124,9 +124,9 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 
 此 [!DNL Profile] 儲存資料模型包含兩種核心實體類型：
 
-* **主要實體：** 主要實體或設定檔實體會合併資料，為個人形成「單一真相來源」。 此統一資料會使用所謂的「聯合檢視」來表示。 聯合檢視會將實施相同類別之所有結構的欄位匯總至單一聯合結構。 的聯合架構 [!DNL Real-time Customer Profile] 是非正常的混合資料模型，可作為所有設定檔屬性和行為事件的容器。
+* **主要實體：** 主要實體或設定檔實體會合併資料，為個人形成「單一真相來源」。 此統一資料會使用所謂的「聯合檢視」來表示。 聯合檢視會將實施相同類別之所有結構的欄位匯總至單一聯合結構。 的聯合架構 [!DNL Real-Time Customer Profile] 是非正常的混合資料模型，可作為所有設定檔屬性和行為事件的容器。
 
-   與時間無關的屬性（也稱為「記錄資料」）是使用 [!DNL XDM Individual Profile]，而時間序列資料（也稱為「事件資料」）則使用 [!DNL XDM ExperienceEvent]. 在Adobe Experience Platform中擷取記錄和時間序列資料時，就會觸發 [!DNL Real-time Customer Profile] 開始擷取已啟用供其使用的資料。 擷取的互動和詳細資訊越多，個別設定檔就越健全。
+   與時間無關的屬性（也稱為「記錄資料」）是使用 [!DNL XDM Individual Profile]，而時間序列資料（也稱為「事件資料」）則使用 [!DNL XDM ExperienceEvent]. 在Adobe Experience Platform中擷取記錄和時間序列資料時，就會觸發 [!DNL Real-Time Customer Profile] 開始擷取已啟用供其使用的資料。 擷取的互動和詳細資訊越多，個別設定檔就越健全。
 
    ![說明記錄資料和時間序列資料之間差異的資訊圖。](images/guardrails/profile-entity.png)
 

@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 5%
@@ -29,7 +29,7 @@ Adobe Experience Platform的新功能：
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations] 服務](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## Adobe Experience Platform Data Lake移轉 {#migration}
@@ -60,7 +60,7 @@ Adobe Experience Platform的新功能：
 | 功能 | 說明 |
 | ------- | ----------- |
 | 集中優惠方案庫 | 在此介面中，您建立和管理構成選件的不同元素，以及定義其規則和限制。 |
-| 優惠方案決策引擎 | 優惠方案決策引擎採用 [!DNL Platform] 資料和 [!DNL Real-time Customer Profiles]，以及優惠方案庫，以選取要提供優惠方案的適當時間、客戶和管道。 |
+| 優惠方案決策引擎 | 優惠方案決策引擎採用 [!DNL Platform] 資料和 [!DNL Real-Time Customer Profiles]，以及優惠方案庫，以選取要提供優惠方案的適當時間、客戶和管道。 |
 
 如需詳細資訊，請參閱 [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=zh-Hant) 檔案。
 

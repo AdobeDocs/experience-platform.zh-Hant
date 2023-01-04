@@ -3,7 +3,7 @@ keywords: Experience Platform；使用者介面；UI；控制面板；設定檔�
 title: 控制面板自訂概述
 description: 進一步了解您可以如何自訂Adobe Experience Platform控制面板中顯示的資料。
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 27252d547afd30acc7b334d5054f1350dc0031b7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Experience Platform中的介面工具集程式庫可讓您檢視 [標準](#stand
 
 #### 編輯方案 {#edit-schema}
 
-若要建立 [自訂介面工具集](#custom-widgets) 針對您的控制面板，您必須先識別介面工具集所依據的「即時客戶設定檔」屬性。
+若要建立 [自訂介面工具集](#custom-widgets) 針對您的控制面板，您必須先識別介面工具集所依據的即時客戶設定檔屬性。
 
 如需編輯組織結構以建立自訂控制面板小工具的逐步指示，請參閱指南，以取得 [編輯控制面板架構](edit-schema.md).
 

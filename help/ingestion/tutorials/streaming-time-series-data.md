@@ -1,39 +1,39 @@
 ---
-keywords: Experience Platform；主題；熱門主題；流攝入；接收；時間序列；流時間序列；
+keywords: Experience Platform；首頁；熱門主題；串流內嵌；內嵌；時間序列資料；串流時間序列資料；
 solution: Experience Platform
-title: 利用流接收APIs流時間序列資料
+title: 使用串流獲取API串流時間序列資料
 topic-legacy: tutorial
 type: Tutorial
-description: 本教程將幫助您開始使用流接收API，這是Adobe Experience Platform資料接收服務API的一部分。
+description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: cedc53b78ea8eb8f3e93178b60ebe49b90c11650
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 2%
 
 ---
 
-# 使用流接收API流時間序列資料
+# 使用串流獲取API串流時間序列資料
 
-本教程將幫助您開始使用流接收API，這是Adobe Experience Platform的一部分 [!DNL Data Ingestion Service] API。
+本教學課程將協助您開始使用Adobe Experience Platform中的串流獲取API [!DNL Data Ingestion Service] API。
 
 ## 快速入門
 
-本教程需要瞭解Adobe Experience Platform各項服務的工作知識。 在開始本教程之前，請查看以下服務的文檔：
+本教學課程需具備各種Adobe Experience Platform服務的工作知識。 開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織經驗資料。
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個源的聚合資料即時提供統一的消費者配置檔案。
-- [架構註冊表開發人員指南](../../xdm/api/getting-started.md):一個全面的指南，它涵蓋了 [!DNL Schema Registry] API以及如何調用它們。 這包括瞭解 `{TENANT_ID}`，在本教程的調用中顯示，並瞭解如何建立架構，用於建立用於接收的資料集。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織體驗資料。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
+- [Schema Registry開發人員指南](../../xdm/api/getting-started.md):涵蓋以下各個可用端點的完整指南 [!DNL Schema Registry] API及如何對其進行呼叫。 這包括了解您的 `{TENANT_ID}`，且會了解如何建立結構描述（用於建立資料集以擷取），此功能會顯示於本教學課程的呼叫中。
 
-此外，本教程要求您已經建立了流連接。 有關建立流連接的詳細資訊，請閱讀 [建立流連接教程](./create-streaming-connection.md)。
+此外，本教學課程需要您已建立串流連線。 如需建立串流連線的詳細資訊，請參閱 [建立串流連線教學課程](./create-streaming-connection.md).
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../landing/api-guide.md).
 
-## 基於XDM ExperienceEvent類編寫架構
+## 根據XDM ExperienceEvent類別撰寫結構
 
-要建立資料集，您首先需要建立一個新架構來實現 [!DNL XDM ExperienceEvent] 類。 有關如何建立架構的詳細資訊，請閱讀 [架構註冊API開發人員指南](../../xdm/api/getting-started.md)。
+若要建立資料集，您必須先建立實作的新結構 [!DNL XDM ExperienceEvent] 類別。 如需如何建立結構的詳細資訊，請參閱 [Schema Registry API開發人員指南](../../xdm/api/getting-started.md).
 
 **API格式**
 
@@ -76,13 +76,13 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `title` | 要用於架構的名稱。 此名稱必須唯一。 |
-| `description` | 正在建立的架構的有意義說明。 |
-| `meta:immutableTags` | 在此示例中， `union` 標籤用於將資料保留到 [[!DNL Real-time Customer Profile]](../../profile/home.md)。 |
+| `title` | 要用於架構的名稱。 此名稱必須是唯一的。 |
+| `description` | 您正在建立之結構的有意義說明。 |
+| `meta:immutableTags` | 在此範例中， `union` 標籤可用來將資料保留至 [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **回應**
 
-成功的響應返回HTTP狀態201，其中包含新建立架構的詳細資訊。
+成功的回應會傳回HTTP狀態201，並包含新建立結構的詳細資訊。
 
 ```json
 {
@@ -156,17 +156,17 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{TENANT_ID}` | 此ID用於確保您建立的資源與IMS組織中的資源保持正確的命名空間。 有關租戶ID的詳細資訊，請閱讀 [架構註冊表指南](../../xdm/api/getting-started.md#know-your-tenant-id)。 |
+| `{TENANT_ID}` | 此ID可確保您建立的資源與IMS組織中的資源命名正確，且完整無缺。 如需租用戶ID的詳細資訊，請閱讀 [方案註冊表指南](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
-請注意 `$id` 以及 `version` 屬性，因為建立資料集時將使用這兩個屬性。
+請注意 `$id` 以及 `version` 屬性，因為建立資料集時，會同時使用這些屬性。
 
 ## 為架構設定主標識描述符
 
-下一步，添加 [標識符](../../xdm/api/descriptors.md) 使用工作電子郵件地址屬性作為主標識符。 這樣做將導致兩項更改：
+接下來，新增 [標識符](../../xdm/api/descriptors.md) 使用工作電子郵件地址屬性作為主要識別碼，重新命名為上述建立的架構。 執行此動作會產生兩個變更：
 
-1. 工作電子郵件地址將成為必填欄位。 這表示未使用此欄位發送的消息將驗證失敗，不會被接收。
+1. 工作電子郵件地址將成為必填欄位。 這表示未使用此欄位傳送的訊息將無法驗證，且不會擷取。
 
-2. [!DNL Real-time Customer Profile] 將使用工作電子郵件地址作為標識符，幫助拼湊有關該個人的更多資訊。
+2. [!DNL Real-Time Customer Profile] 會使用工作電子郵件地址做為識別碼，協助匯整該個人的詳細資訊。
 
 ### 請求
 
@@ -190,19 +190,19 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | 的 `$id` 構建架構時收到的。 它應該是這樣的： `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | 此 `$id` 構建架構時先前收到的。 看起來應該像這樣： `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
->&#x200B;**標識名稱空間代碼**
+>&#x200B;**身分命名空間代碼**
 >
-> 請確保代碼有效 — 上面的示例使用「email」，它是標準標識命名空間。 在 [Identity Service常見問題](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)。
+> 請確定程式碼有效 — 上述範例使用「電子郵件」（標準身分命名空間）。 您可在 [Identity Service常見問題集](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
-> 如果要建立自定義命名空間，請執行中介紹的步驟 [標識命名空間概述](../../identity-service/home.md)。
+> 如果您想要建立自訂命名空間，請依照 [身分命名空間概述](../../identity-service/home.md).
 
 **回應**
 
-成功的響應返回HTTP狀態201，其中包含有關新建立的架構主標識命名空間的資訊。
+成功的回應會傳回HTTP狀態201，其中包含新建立之架構主要身分命名空間的相關資訊。
 
 ```json
 {
@@ -222,11 +222,11 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 ## 為時間序列資料建立資料集
 
-建立架構後，需要建立資料集以接收記錄資料。
+建立結構後，您需要建立資料集以內嵌記錄資料。
 
 >[!NOTE]
 >
->將為 **[!DNL Real-time Customer Profile]** 和 **[!DNL Identity]** 設定相應的標籤。
+>此資料集將啟用 **[!DNL Real-Time Customer Profile]** 和 **[!DNL Identity]** 來設定適當的標籤。
 
 **API格式**
 
@@ -259,7 +259,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 **回應**
 
-成功的響應返回HTTP狀態201和包含以格式新建立的資料集ID的陣列 `@/dataSets/{DATASET_ID}`。
+成功的回應會傳回HTTP狀態201，而陣列會以格式包含新建立資料集的ID `@/dataSets/{DATASET_ID}`.
 
 ```json
 [
@@ -268,15 +268,15 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ```
 
 
-## 建立流連接
+## 建立串流連線
 
-在建立模式和資料集後，您需要建立流連接以接收資料。
+建立結構和資料集後，您需要建立串流連線才能內嵌資料。
 
-有關建立流連接的詳細資訊，請閱讀 [建立流連接教程](./create-streaming-connection.md)。
+如需建立串流連線的詳細資訊，請參閱 [建立串流連線教學課程](./create-streaming-connection.md).
 
-## 將時間序列資料接收到流連接
+## 將時間序列資料內嵌至串流連線
 
-建立資料集、流連接和資料流後，您可以接收XDM格式的JSON記錄，以接收內的時間序列資料 [!DNL Platform]。
+建立資料集、串流連線和資料流後，您可以內嵌XDM格式的JSON記錄，以內嵌時間序列資料 [!DNL Platform].
 
 **API格式**
 
@@ -286,22 +286,22 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 的 `id` 新建立的流連接的值。 |
-| `syncValidation` | 用於開發目的的可選查詢參數。 如果設定為 `true`，它可用於立即反饋以確定請求是否成功發送。 預設情況下，此值設定為 `false`。 請注意，如果將此查詢參數設定為 `true` 請求的速率將限制為每分鐘60次 `CONNECTION_ID`。 |
+| `{CONNECTION_ID}` | 此 `id` 新建立串流連線的值。 |
+| `syncValidation` | 供開發使用的選用查詢參數。 若設為 `true`，可用於立即回饋，以判斷要求是否成功傳送。 此值預設為 `false`. 請注意，若您將此查詢參數設為 `true` 要求的費率限制為每分鐘60次 `CONNECTION_ID`. |
 
 **要求**
 
-將時間序列資料插入流連接可以使用或不使用源名稱。
+使用或不使用來源名稱，即可將時間序列資料擷取至串流連線。
 
-下面的示例請求將缺少源名稱的時間序列資料接收到平台。 如果資料缺少源名稱，它將從流連接定義中添加源ID。
+以下範例要求將缺少來源名稱的時間序列資料內嵌至Platform。 如果資料缺少來源名稱，則會從串流連線定義新增來源ID。
 
-兩者 `xdmEntity._id` 和 `xdmEntity.timestamp` 是時間系列資料的必填欄位。 的 `xdmEntity._id` 屬性表示記錄本身的唯一標識符， **不** 記錄其的個人或設備的唯一ID。
+兩者 `xdmEntity._id` 和 `xdmEntity.timestamp` 是時間序列資料的必填欄位。 此 `xdmEntity._id` 屬性表示記錄本身的唯一標識符， **not** 記錄所在之人員或裝置的唯一ID。
 
-您需要生成自己的 `xdmEntity._id` 和 `xdmEntity.timestamp` 如果記錄需要重新攝入，則記錄將保持一致。 理想情況下，源系統將包含這些值。 如果ID不可用，請考慮將記錄中其他欄位的值連接起來，以建立一個唯一值，該值可以在重新攝取時從記錄中一致地重新生成。
+您需要自行產生 `xdmEntity._id` 和 `xdmEntity.timestamp` 如果需要重新獲取記錄，記錄將保持一致。 理想情況下，源系統將包含這些值。 如果ID不可用，請考慮串連記錄中其他欄位的值，以建立唯一值，該唯一值可在重新擷取時從記錄一致地重新產生。
 
 >[!NOTE]
 >
->以下API調用 **不** 需要任何身份驗證標頭。
+>下列API呼叫會執行 **not** 需要任何驗證標題。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -392,7 +392,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含新流式傳輸的詳細資訊 [!DNL Profile]。
+成功的回應會傳回HTTP狀態200，並包含新串流的詳細資訊 [!DNL Profile].
 
 ```json
 {
@@ -407,18 +407,18 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | 的 `inletId` 以前建立的流連接。 |
-| `xactionId` | 為您剛發送的記錄生成的唯一標識符伺服器端。 此ID有助於Adobe通過各種系統和調試跟蹤此記錄的生命週期。 |
-| `receivedTimeMs`:顯示接收請求的時間的時間戳（以毫秒為單位）。 |
-| `syncValidation.status` | 自查詢參數 `syncValidation=true` 添加後，此值將出現。 如果驗證成功，則狀態將為 `pass`。 |
+| `{CONNECTION_ID}` | 此 `inletId` 之前建立的串流連線。 |
+| `xactionId` | 在伺服器端為您剛傳送的記錄產生唯一識別碼。 此ID有助於Adobe通過各種系統和調試跟蹤此記錄的生命週期。 |
+| `receivedTimeMs`:顯示接收請求的時間的時間戳記（以毫秒為單位）。 |
+| `syncValidation.status` | 由於查詢參數 `syncValidation=true` 新增後，此值就會出現。 如果驗證成功，狀態將為 `pass`. |
 
-## 檢索新攝取的時間序列資料
+## 擷取新擷取的時間序列資料
 
-要驗證以前攝取的記錄，可以使用 [[!DNL Profile Access API]](../../profile/api/entities.md) 的子菜單。 可以使用GET請求 `/access/entities` 終結點和使用可選查詢參數。 可以使用多個參數，用和符號(&amp;)分隔。&quot;
+若要驗證先前擷取的記錄，您可以使用 [[!DNL Profile Access API]](../../profile/api/entities.md) 來擷取時間序列資料。 您可以使用GET要求來完成 `/access/entities` 端點和使用選用的查詢參數。 可使用多個參數，以&amp;符號分隔。&quot;
 
 >[!NOTE]
 >
->如果未定義合併策略ID, `schema.name` 或 `relatedSchema.name` 是 `_xdm.context.profile`。 [!DNL Profile Access] 將 **全部** 相關身份。
+>如果未定義合併策略ID，則 `schema.name` 或 `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] 將擷取 **all** 相關身分。
 
 **API格式**
 
@@ -430,10 +430,10 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `schema.name` | **必填。** 正在訪問的架構的名稱。 |
-| `relatedSchema.name` | **必填。** 因為您訪問 `_xdm.context.experienceevent`，此值指定與時間系列事件相關的配置檔案實體的架構。 |
-| `relatedEntityId` | 相關實體的ID。 如果提供，則還必須提供實體命名空間。 |
-| `relatedEntityIdNS` | 您嘗試檢索的ID的命名空間。 |
+| `schema.name` | **必填。** 您正在存取的架構的名稱。 |
+| `relatedSchema.name` | **必填。** 由於您要存取 `_xdm.context.experienceevent`，此值會指定與時間序列事件相關的設定檔實體的架構。 |
+| `relatedEntityId` | 相關實體的ID。 若有提供，您也必須提供實體命名空間。 |
+| `relatedEntityIdNS` | 您嘗試擷取之ID的命名空間。 |
 
 **要求**
 
@@ -448,7 +448,7 @@ curl -X GET \
 
 **回應**
 
-成功響應返回HTTP狀態200，並返回所請求實體的詳細資訊。 正如您所看到的，這是以前攝取的相同時間序列資料。
+成功的回應會傳回HTTP狀態200，並包含所請求實體的詳細資訊。 如您所見，這與先前擷取的時間序列資料相同。
 
 ```json
 {
@@ -516,6 +516,6 @@ curl -X GET \
 
 ## 後續步驟
 
-通過閱讀此文檔，您現在瞭解如何將記錄資料 [!DNL Platform] 使用流連接。 您可以嘗試使用不同的值進行更多調用並檢索更新的值。 此外，您還可以通過 [!DNL Platform] UI。 有關詳細資訊，請閱讀 [監控資料接收](../quality/monitor-data-ingestion.md) 的子菜單。
+閱讀本檔案後，您現在就能了解如何將記錄資料內嵌至 [!DNL Platform] 使用串流連線。 您可以嘗試使用不同值進行更多呼叫並擷取更新的值。 此外，您也可以透過 [!DNL Platform] UI。 欲知更多資訊，請閱讀 [監控資料擷取](../quality/monitor-data-ingestion.md) 指南。
 
-有關流式接收的詳細資訊，請閱讀 [流式處理概述](../streaming-ingestion/overview.md)。
+如需串流獲取的詳細資訊，請參閱 [串流獲取概觀](../streaming-ingestion/overview.md).

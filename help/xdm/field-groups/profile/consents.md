@@ -4,7 +4,7 @@ title: 同意和首選項架構欄位組
 topic-legacy: overview
 description: 本文檔概述了「同意」和「首選項」架構欄位組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -182,7 +182,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->如果您想要將同意資料傳送至 [!DNL Real-time Customer Profile]，您必須建立 [!DNL Profile] — 啟用的架構，基於 [!DNL XDM Individual Profile] 包含 [!UICONTROL 同意和偏好設定] 欄位群組。 您根據該結構建立的資料集也必須啟用 [!DNL Profile]. 如需相關的特定步驟，請參閱上述連結的教學課程 [!DNL Real-time Customer Profile] 結構和資料集的需求。
+>如果您想要將同意資料傳送至 [!DNL Real-Time Customer Profile]，您必須建立 [!DNL Profile] — 啟用的架構，基於 [!DNL XDM Individual Profile] 包含 [!UICONTROL 同意和偏好設定] 欄位群組。 您根據該結構建立的資料集也必須啟用 [!DNL Profile]. 如需相關的特定步驟，請參閱上述連結的教學課程 [!DNL Real-Time Customer Profile] 結構和資料集的需求。
 >
 >此外，您也必須確定合併原則的設定順序為包含最新同意和偏好設定資料的資料集優先順序，以便正確更新客戶設定檔。 請參閱 [合併策略](../../../rtcdp/profile/merge-policies.md) 以取得更多資訊。
 

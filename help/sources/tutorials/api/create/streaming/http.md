@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流程服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API為原始和XDM資料使用HTTP API來源建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 2b3f8b7b0a19214a95a2ad76c9fecd70ffd91743
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 本指南需要妥善了解下列Adobe Experience Platform元件：
 
 * [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):標準化框架 [!DNL Platform] 組織體驗資料。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
 
 此外，建立串流連線需要您具備目標XDM結構和資料集。 若要了解如何建立這些範本，請閱讀 [流記錄資料](../../../../../ingestion/tutorials/streaming-record-data.md) 或 [串流時間序列資料](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 

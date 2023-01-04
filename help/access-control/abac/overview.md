@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制概述
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 3%

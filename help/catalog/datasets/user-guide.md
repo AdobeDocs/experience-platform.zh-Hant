@@ -5,7 +5,7 @@ title: 資料集UI指南
 topic-legacy: datasets
 description: 了解在Adobe Experience Platform使用者介面中使用資料集時，如何執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
    * [結構構成基本概念](../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器](../../xdm/tutorials/create-schema-ui.md):了解如何使用 [!DNL Schema Editor] 在 [!DNL Platform] 使用者介面。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):確保符合有關使用客戶資料的法規、限制和政策。
 
 ## 檢視資料集 {#view-datasets}
@@ -106,9 +106,9 @@ ht-degree: 0%
 
 ![隨即顯示「新增資料」畫面。 系統會反白顯示您可上傳資料集CSV檔案的位置。](../images/datasets/user-guide/add-csv-data.png)
 
-## 為「即時客戶個人檔案」啟用資料集 {#enable-profile}
+## 啟用即時客戶個人檔案的資料集 {#enable-profile}
 
-每個資料集都能以擷取的資料豐富客戶設定檔。 若要這麼做，資料集所遵守的結構必須相容，才能用於 [!DNL Real-time Customer Profile]. 相容的架構符合下列需求：
+每個資料集都能以擷取的資料豐富客戶設定檔。 若要這麼做，資料集所遵守的結構必須相容，才能用於 [!DNL Real-Time Customer Profile]. 相容的架構符合下列需求：
 
 * 架構至少有一個屬性被指定為標識屬性。
 * 架構具有定義為主要身分的身分屬性。
@@ -167,4 +167,4 @@ ht-degree: 0%
 
 * [使用API建立資料集](create.md)
 * [使用資料存取API查詢資料集資料](../../data-access/home.md)
-* [使用API為即時客戶個人檔案和身分服務設定資料集](../../profile/tutorials/dataset-configuration.md)
+* [使用API為「即時客戶個人檔案與身分服務」設定資料集](../../profile/tutorials/dataset-configuration.md)

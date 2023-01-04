@@ -4,7 +4,7 @@ title: 使用Query Service探索、驗證及處理控制面板資料集
 type: Documentation
 description: 了解如何使用Query Service探索及處理原始資料集，在Experience Platform中支援設定檔、區段和目的地控制面板。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 4826731682bcaf5a43c7ce047220c1805d97243a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 0%

@@ -4,7 +4,7 @@ title: 使用API啟用資料集以進行設定檔更新
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform API來啟用具有「更新」功能的資料集，以便更新即時客戶設定檔資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 132407af947b97a1925799a1fb5e12caa2b0410c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1050'
 ht-degree: 1%
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 本教學課程需要妥善了解管理啟用設定檔的資料集時涉及的數個Adobe Experience Platform服務。 開始本教學課程之前，請檢閱這些相關檔案 [!DNL Platform] 服務：
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
-- [[!DNL Catalog Service]](../../catalog/home.md):RESTful API可讓您建立資料集，並針對 [!DNL Real-time Customer Profile] 和 [!DNL Identity Service].
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+- [[!DNL Catalog Service]](../../catalog/home.md):RESTful API可讓您建立資料集，並針對 [!DNL Real-Time Customer Profile] 和 [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 - [批次內嵌](../../ingestion/batch-ingestion/overview.md):批次內嵌API可讓您將資料以批次檔案的形式內嵌至Experience Platform。
 
@@ -119,7 +119,7 @@ curl -X POST \
 
 ### 檢查資料集是否已啟用設定檔
 
-使用 [!DNL Catalog] API，您可以檢查現有的資料集，以判斷資料集是否已啟用並用於 [!DNL Real-time Customer Profile]. 下列呼叫會依ID擷取資料集的詳細資訊。
+使用 [!DNL Catalog] API，您可以檢查現有的資料集，以判斷資料集是否已啟用並用於 [!DNL Real-Time Customer Profile]. 下列呼叫會依ID擷取資料集的詳細資訊。
 
 **API格式**
 
@@ -192,7 +192,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-在 `tags` 屬性，您可以看到 `unifiedProfile` 值存在 `enabled:true`. 因此， [!DNL Real-time Customer Profile] 已針對此資料集啟用。
+在 `tags` 屬性，您可以看到 `unifiedProfile` 值存在 `enabled:true`. 因此， [!DNL Real-Time Customer Profile] 已針對此資料集啟用。
 
 ### 停用設定檔的資料集
 

@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform發行說明2021年1月
-description: 2021年1月為Adobe Experience Platform發佈的說明。
+description: 2021年1月Adobe Experience Platform發行說明。
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 5%
@@ -20,66 +20,66 @@ Adobe Experience Platform 現有功能更新：
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] 允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
+[!DNL Data Prep] 可讓資料工程師將資料對應、轉換及驗證至Experience Data Model(XDM)。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 規則運算式函式 | [!DNL Data Prep] 映射器現在支援基於規則運算式匹配和提取輸入欄位的一部分。 |
+| 規則運算式函式 | [!DNL Data Prep] 映射程式現在支援根據規則運算式來比對和擷取輸入欄位的一部分。 |
 
-有關詳細資訊，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md)。
+如需詳細資訊，請參閱 [[!DNL Data Prep] 概述](../../data-prep/home.md).
 
 ## 目的地 {#destinations}
 
-[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+[!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
-**新目標**
+**新目的地**
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] 是Microsoft的雲對象儲存解決方案。 |
+| [!DNL Azure Blob] | [!DNL Azure Blob] 是Microsoft的雲端物件儲存解決方案。 |
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 高級ID匹配 | 增強中的受眾匹配率功能 [!DNL Facebook Custom Audiences] 和 [!DNL Google Customer Match]，通過添加對其他身份匹配的支援，如外部ID、電話號碼和移動設備ID。 有關詳細資訊，請參閱以下文檔： <ul><li>[Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Google客戶匹配目標](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[將受眾資料激活到流段導出目標](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
+| 進階ID比對 | 增強中的對象符合率功能 [!DNL Facebook Custom Audiences] 和 [!DNL Google Customer Match]，方法是新增對其他身分比對的支援，例如外部ID、電話號碼和行動裝置ID。 如需詳細資訊，請參閱下列檔案： <ul><li>[Facebook目的地](../../destinations/catalog/social/facebook.md)</li><li>[Google客戶比對目的地](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[對串流區段匯出目的地啟用受眾資料](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
-要瞭解更多資訊，請訪問 [目標概述](../../destinations/home.md)。
+若要進一步了解，請造訪 [目的地概述](../../destinations/home.md).
 
 ## 即時客戶個人檔案 {#profile}
 
-Adobe Experience Platform使您能夠為您的客戶提供協調、一致和相關的體驗，無論客戶在何處或何時與您的品牌進行交互。 通過即時客戶概要資訊，您可以看到每個客戶的整體視圖，該視圖將來自多個渠道的資料組合在一起，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 允許您將客戶資料整合到一個統一視圖中，為每次客戶交互提供一個可操作且時間戳記的帳戶。
+Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面了解各個客戶，其中結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將客戶資料併入統一檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 從配置檔案儲存中刪除資料集 | 從Experience Platform資料湖中刪除資料集時，也會自動從配置檔案儲存中刪除該資料集。 您不再需要使用配置檔案系統作業API終結點來發出刪除請求以從配置檔案儲存中顯式刪除資料集。 有關詳細資訊，請參見 [配置檔案系統作業API終結點指南](../../profile/api/profile-system-jobs.md)。 |
-| 給定段的估計ID命名空間計數 | 對於估計的配置檔案計數，預覽API現在報告：<ul><li>給定命名空間的段中估計配置檔案的總數。</li><li>給定命名空間的配置檔案聯合架構中估計的配置檔案總數。</li></ul>要瞭解更多資訊，請參閱 [配置檔案預覽API終結點指南](../../profile/api/preview-sample-status.md)。 |
+| 從設定檔存放區刪除資料集 | 當您從「Experience Platform資料湖」刪除資料集時，資料集也會自動從「設定檔」存放區中刪除。 您不再需要使用設定檔系統作業API端點來提出刪除請求，即可從設定檔存放區明確刪除資料集。 如需詳細資訊，請參閱 [設定檔系統作業API端點指南](../../profile/api/profile-system-jobs.md). |
+| 指定區段的預估ID命名空間計數 | 對於預估的設定檔計數，預覽API現在會報告：<ul><li>指定命名空間的區段中預計設定檔的總計數。</li><li>指定命名空間的「設定檔聯合結構」中預計設定檔的總計數。</li></ul>若要進一步了解，請參閱 [設定檔預覽API端點指南](../../profile/api/preview-sample-status.md). |
 
-有關即時客戶概要資訊的詳細資訊，包括有關使用的教程和最佳做法 [!DNL Profile] 資料，請從讀取 [即時客戶概要資訊概述](../../profile/home.md)。
+如需即時客戶設定檔的詳細資訊，包括使用的教學課程和最佳實務 [!DNL Profile] 資料，請先閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、第三方軟體和CRM系統)中接收資料。
+Adobe Experience Platform可內嵌來自外部來源的資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以從多種來源擷取資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定獲取運行時間以及管理資料獲取吞吐量。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| Adobe Audience Manager源連接器增強 | 現在，您可以篩選和選擇從Audience Manager到接收到平台的單個第一方段，並篩選出第一方特徵。 請參閱上的教程 [建立Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 的子菜單。 |
-| [!DNL Google BigQuery] 源連接器增強 | 現在，您可以使用 [!DNL BigQuery] 源連接器。 查看 [[!DNL BigQuery] 源連接器概述](../../sources/connectors/databases/bigquery.md) 的子菜單。 |
-| 支援雲儲存的複雜資料類型 | 使用雲儲存源連接器時，現在可以接收複雜的資料類型，如JSON檔案中的陣列。 請參閱有關建立雲儲存資料流的教程 [在UI中](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 或 [使用 [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) 的子菜單。 |
-| 支援基於服務主體密鑰的身份驗證 [!DNL Microsoft Dynamics] 源 | 您現在可以通過身份驗證 [!DNL Dynamics] 使用服務主體密鑰作為基於密碼的身份驗證的替代方法的帳戶。 查看 [[!DNL Dynamics] 源連接器概述](../../sources/connectors/crm/ms-dynamics.md) 的子菜單。 |
-| 雲儲存源中自定義分隔符的UI支援 | 現在可以設定自定義列分隔符，如逗號(`,`)`\t`)或管道(`|`)，以收集UI中的分隔檔案。 請參閱上的教程 [使用雲儲存源連接器建立資料流](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 的 |
+| Adobe Audience Manager來源連接器增強功能 | 您現在可以從Audience Manager中篩選並選取個別的第一方區段，以便內嵌至Platform中，並篩選掉第一方特徵。 請參閱 [建立Audience Manager源連接器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 以取得更多資訊。 |
+| [!DNL Google BigQuery] 來源連接器增強功能 | 您現在可以使用 [!DNL BigQuery] 源連接器。 請參閱 [[!DNL BigQuery] 來源連接器概觀](../../sources/connectors/databases/bigquery.md) 以取得更多資訊。 |
+| 支援雲儲存的複雜資料類型 | 使用雲端儲存來源連接器時，您現在可以內嵌複雜的資料類型，例如JSON檔案中的陣列。 請參閱建立雲儲存資料流的教學課程 [在UI中](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 或 [使用 [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) 以取得更多資訊。 |
+| 支援基於服務主體密鑰的身份驗證 [!DNL Microsoft Dynamics] 來源 | 您現在可以驗證 [!DNL Dynamics] 帳戶使用服務主體密鑰作為基於密碼的身份驗證的替代。 請參閱 [[!DNL Dynamics] 來源連接器概觀](../../sources/connectors/crm/ms-dynamics.md) 以取得更多資訊。 |
+| 雲端儲存來源中的自訂分隔符號支援UI | 您現在可以設定自訂欄分隔字元，例如逗號(`,`)、頁簽(`\t`)或垂直號(`|`)，以在UI中收集分隔檔案。 請參閱 [使用雲儲存源連接器建立資料流](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 詳細資訊 |
 
-要瞭解有關源的詳細資訊，請參閱 [源概述](../../sources/home.md)。
+若要進一步了解來源，請參閱 [來源概觀](../../sources/home.md).

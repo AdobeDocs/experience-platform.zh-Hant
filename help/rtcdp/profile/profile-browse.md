@@ -1,9 +1,9 @@
 ---
 keywords: 檢視設定檔rtcdp;rtcdp設定檔檢視；rtcdp設定檔
 title: 在Real-time Customer Data Platform中瀏覽設定檔
-description: Adobe Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面來瀏覽即時客戶個人檔案資料。
+description: Adobe Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面來瀏覽即時客戶設定檔資料。
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 在Real-time Customer Data Platform中瀏覽設定檔
 
-「即時客戶設定檔」可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商資料，讓您全面了解每個客戶。 當個別設定檔會根據從各種來源匯入系統的資料進行匯總時，每個設定檔都會成為客戶與您品牌每次互動的可操作時間戳記帳戶。
+「即時客戶設定檔」可建立個別客戶的全方位檢視，結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 當個別設定檔會根據從各種來源匯入系統的資料進行匯總時，每個設定檔都會成為客戶與您品牌每次互動的可操作時間戳記帳戶。
 
 在Adobe Experience Platform使用者介面中，您可以檢視這些唯讀設定檔，並查看有關每個個別客戶的重要資訊，包括其偏好設定、過去事件、互動，以及個人所屬的區段。
 

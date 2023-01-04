@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 6%
@@ -22,7 +22,7 @@ Adobe Experience Platform 現有功能更新：
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Observability Insights]](#observability)
 - [[!DNL Privacy Service]](#privacy)
-- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Real-Time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -76,17 +76,17 @@ Adobe Experience Platform資料控管是一系列策略和技術，用於管理�
 
 ## 即時客戶個人檔案 {#profile}
 
-Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 使用 [!DNL Real-time Customer Profile]，您可以全面了解將多個管道資料結合在一起的每個客戶，包括線上、離線、CRM和協力廠商資料。 [!DNL Profile] 可讓您將不同的客戶資料整合至統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
+Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 使用 [!DNL Real-Time Customer Profile]，您可以全面了解將多個管道資料結合在一起的每個客戶，包括線上、離線、CRM和協力廠商資料。 [!DNL Profile] 可讓您將不同的客戶資料整合至統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 
 | 功能 | 說明 |
 | ------- | ----------- |
 | 設定檔檢視器 | Platform UI中的設定檔檢視器已更新為具有完全自訂的控制面板。 使用者現在可以選擇執行下列工作： <ul><li>更新基本資訊Widget中選取的標準屬性和自訂屬性。</li><li>建立、編輯和刪除自定義小部件</li><li>調整小部件大小和重新排列小部件</li></ul> |
 
-如需 [!DNL Real-time Customer Profile]，包括教學課程和使用的最佳實務 [!DNL Profile] 資料，請閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
+如需 [!DNL Real-Time Customer Profile]，包括教學課程和使用的最佳實務 [!DNL Profile] 資料，請閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
 
 ## 分段服務 {#segmentation}
 
-Adobe Experience Platform劃分服務提供使用者介面和RESTful API，可讓您建立區段，並從 [!DNL Real-time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，讓任何Adobe應用程式都能輕鬆存取。
+Adobe Experience Platform劃分服務提供使用者介面和RESTful API，可讓您建立區段，並從 [!DNL Real-Time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，讓任何Adobe應用程式都能輕鬆存取。
 
 [!DNL Segmentation Service] 會透過說明區分客戶群中可行銷人員群組的條件，來定義特定設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與您品牌互動的時間序列事件。
 

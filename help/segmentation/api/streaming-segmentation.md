@@ -5,7 +5,7 @@ title: 透過串流細分即時評估事件
 topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用串流區段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 1%
@@ -32,8 +32,8 @@ ht-degree: 1%
 
 本開發人員指南需要妥善了解 [!DNL Adobe Experience Platform] 與串流細分相關的服務。 開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
-- [[!DNL Segmentation]](../home.md):提供從 [!DNL Real-time Customer Profile] 資料。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md):根據來自多個來源的匯總資料，即時提供統一的消費者設定檔。
+- [[!DNL Segmentation]](../home.md):提供從 [!DNL Real-Time Customer Profile] 資料。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
 
 以下小節提供您需要知道的其他資訊，以便成功對 [!DNL Platform] API。

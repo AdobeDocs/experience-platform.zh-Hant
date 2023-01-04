@@ -6,7 +6,7 @@ topic-legacy: policies
 type: Tutorial
 description: 了解如何使用Policy Service API建立資料控管原則。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 2%
@@ -423,6 +423,6 @@ curl -X PATCH \
 
 依照本教學課程，您已成功建立行銷動作的資料使用原則。 您現在可以繼續進行 [強制執行資料使用策略](../enforcement/api-enforcement.md) 了解如何檢查是否違反原則，以及在您的體驗應用程式中處理這些規則。
 
-有關 [!DNL Policy Service] API，請參閱 [策略服務開發人員指南](../api/getting-started.md). 有關如何強制執行 [!DNL Real-time Customer Profile] 資料，請參閱 [強制遵循對象區段的資料使用方式](../../segmentation/tutorials/governance.md).
+有關 [!DNL Policy Service] API，請參閱 [策略服務開發人員指南](../api/getting-started.md). 有關如何強制執行 [!DNL Real-Time Customer Profile] 資料，請參閱 [強制遵循對象區段的資料使用方式](../../segmentation/tutorials/governance.md).
 
 若要了解如何在 [!DNL Experience Platform] 使用者介面，請參閱 [原則使用手冊](user-guide.md).

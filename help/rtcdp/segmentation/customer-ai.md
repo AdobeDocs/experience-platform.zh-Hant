@@ -3,7 +3,7 @@ keywords: rtcdp區段；區段產生器rtcdp;rtcdp區段；customer ai rtcdp
 title: Customer AI Real-time Customer Data Platform
 description: Customer AI的概觀，以及它如何協助產生特定結果的分數，例如轉換或流失。
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 6%
@@ -19,7 +19,7 @@ Customer AI是Adobe Real-time Customer Data Platform中的內嵌AI功能，可�
 * 提供高準確度的客戶傾向模型，以便更強大的細分和鎖定目標。
 * 了解特定客戶行為背後的影響因素和可能性。
 * 為您公司獨特的使用案例和資料提供可自訂的選項。
-* 利用客戶傾向分數（例如流失率和轉換）增強「即時客戶個人檔案」。
+* 利用客戶傾向分數（例如流失率和轉換）增強即時客戶個人檔案。
 * 利用傾向分數的影響因素來增強客戶設定檔。
 * 根據影響因素和傾向分數建立客戶區段。
 

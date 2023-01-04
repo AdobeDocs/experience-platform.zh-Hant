@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地類型
 title: 目的地類型和類別
 description: 了解Adobe Experience Platform中不同的目的地類型和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%

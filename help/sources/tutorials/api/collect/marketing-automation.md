@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從行銷自動化系統擷取資料，以及使用來源連接器和API將資料匯入Adobe Experience Platform的步驟。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 1%
@@ -656,7 +656,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立來源連接器，以排程從行銷自動化系統收集資料。 下游Platform服務(例如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
+依照本教學課程，您已建立來源連接器，以排程從行銷自動化系統收集資料。 下游Platform服務(例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案概觀](../../../../profile/home.md)
 * [Data Science Workspace概觀](../../../../data-science-workspace/home.md)

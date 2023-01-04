@@ -5,7 +5,7 @@ title: 策略評估API端點
 topic-legacy: developer guide
 description: 建立了行銷操作並定義了策略後，您可以使用策略服務API來評估某些操作是否違反了任何策略。 傳回的限制會採取一組原則的形式，這些原則會因為嘗試對包含資料使用標籤的指定資料執行行銷動作而遭到違反。
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 1%
@@ -682,6 +682,6 @@ curl -X POST \
 ]
 ```
 
-## 策略評估 [!DNL Real-time Customer Profile]
+## 策略評估 [!DNL Real-Time Customer Profile]
 
-此 [!DNL Policy Service] API也可用來檢查是否有違反使用 [!DNL Real-time Customer Profile] 區段。 請參閱 [強制遵循對象區段的資料使用方式](../../segmentation/tutorials/governance.md) 以取得更多資訊。
+此 [!DNL Policy Service] API也可用來檢查是否有違反使用 [!DNL Real-Time Customer Profile] 區段。 請參閱 [強制遵循對象區段的資料使用方式](../../segmentation/tutorials/governance.md) 以取得更多資訊。

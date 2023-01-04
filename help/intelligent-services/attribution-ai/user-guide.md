@@ -5,7 +5,7 @@ title: Attribution AIUI指南
 topic-legacy: User guide
 description: 本檔案可做為與Intelligent Services使用者介面中的Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: cec2449525eb067fa7915073e929f9693a45575a
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2960'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服
 
 - **[!UICONTROL 編輯]**:選取 **[!UICONTROL 編輯]** 可讓您修改現有的服務執行個體。 您可以編輯例項的名稱、說明、狀態和計分頻率。
 - **[!UICONTROL 原地複製]**:選取 **[!UICONTROL 原地複製]** 複製所選服務實例。 接著，您可以修改工作流程進行微幅調整，並重新命名為新例項。
-- **[!UICONTROL 刪除]**:您可以刪除服務例項，包括任何歷史執行。 將從Platform中刪除對應的輸出資料集。 不過，同步至「即時客戶設定檔」的分數不會刪除。
+- **[!UICONTROL 刪除]**:您可以刪除服務例項，包括任何歷史執行。 將從Platform中刪除對應的輸出資料集。 不過，同步至即時客戶設定檔的分數不會刪除。
 - **[!UICONTROL 資料來源]**:所使用資料集的連結。 如果Attribution AI使用多個資料集，系統會顯示「多個」，後面接著資料集數量。 選取超連結時，資料集預覽彈出視窗隨即顯示。
 - **[!UICONTROL 上次運行詳細資訊]**:唯有執行失敗時，才會顯示此選項。 此處顯示執行失敗原因（例如錯誤代碼）的資訊。
 

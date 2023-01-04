@@ -5,7 +5,7 @@ title: 匯入和使用外部對象
 description: 請依照本教學課程，了解如何搭配Adobe Experience Platform使用外部對象。
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Adobe Experience Platform支援匯入外部受眾的功能，後者可作為新�
 
 ![將選定欄位標籤為主要標識的複選框在架構編輯器中突出顯示。](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-在將 `_id` 欄位作為主要身分，請選取架構的標題，接著是標示為的切換 **[!UICONTROL 設定檔]**. 選擇 **[!UICONTROL 啟用]** 為 [!DNL Real-time Customer Profile].
+在將 `_id` 欄位作為主要身分，請選取架構的標題，接著是標示為的切換 **[!UICONTROL 設定檔]**. 選擇 **[!UICONTROL 啟用]** 為 [!DNL Real-Time Customer Profile].
 
 ![為配置檔案啟用架構的切換在架構編輯器中突出顯示。](../images/tutorials/external-audiences/schema-profile.png)
 

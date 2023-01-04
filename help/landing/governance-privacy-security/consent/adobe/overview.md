@@ -5,7 +5,7 @@ title: Adobe Experience Platform中的同意處理
 topic-legacy: getting started
 description: 了解如何使用Adobe2.0標準，在Adobe Experience Platform中處理客戶同意訊號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d380b4d2a75efb1c34010a30c619649a7b99643c
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Adobe Experience Platform可讓您處理從客戶收集到的同意資料，並�
 
 * [Experience Data Model(XDM)](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
 * [Adobe Experience Platform Identity Service](../../../../identity-service/home.md):通過跨裝置和系統橋接身分，解決客戶體驗資料分散帶來的根本難題。
-* [即時客戶個人檔案](../../../../profile/home.md):使用 [!DNL Identity Service] 功能，即時從資料集建立詳細的客戶設定檔。 即時客戶設定檔會從Data Lake提取資料，並將客戶設定檔保存在其自己的個別資料存放區中。
+* [即時客戶個人檔案](../../../../profile/home.md):使用 [!DNL Identity Service] 功能，即時從資料集建立詳細的客戶設定檔。 即時客戶設定檔會從資料湖提取資料，並將客戶設定檔保存在其自己的個別資料存放區。
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md):用戶端JavaScript程式庫，可讓您將各種平台服務整合至您面向客戶的網站。
    * [SDK同意命令](../../../../edge/consent/supporting-consent.md):本指南中所示同意相關SDK命令的使用案例概述。
 * [Adobe Experience Platform區段服務](../../../../segmentation/home.md):可讓您將即時客戶設定檔資料分割為具有類似特徵且會對行銷策略採取類似回應的個人群組。

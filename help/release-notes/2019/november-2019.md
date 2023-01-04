@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1887'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Adobe Experience Platform的新功能：
 更新現有功能：
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
-* [[!DNL Real-time Customer Profile]](#profile)
+* [[!DNL Real-Time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
@@ -104,7 +104,7 @@ Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許�
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] 通過構建和操作機器學習模型，資料科學家可以跨Adobe應用程式和第三方系統無縫地從資料和內容生成見解。 [!DNL Data Science Workspace] 緊密整合於 [!DNL Platform] 並支援端對端資料科學的生命週期，包括探索和準備XDM資料，接著開發並實施模型以自動豐富 [!DNL Real-time Customer Profile] 以及機器學習深入分析。
+Adobe Experience Platform [!DNL Data Science Workspace] 通過構建和操作機器學習模型，資料科學家可以跨Adobe應用程式和第三方系統無縫地從資料和內容生成見解。 [!DNL Data Science Workspace] 緊密整合於 [!DNL Platform] 並支援端對端資料科學的生命週期，包括探索和準備XDM資料，接著開發並實施模型以自動豐富 [!DNL Real-Time Customer Profile] 以及機器學習深入分析。
 
 **新功能**
 
@@ -128,7 +128,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的強大功能。 它為�
 | 通知結構 | 代表資料擷取程式期間所傳送之通知資料的新結構。 |
 | AdobeAdCloud DSP結構 | 已新增五個新結構，以呈現Adobe Advertising Cloud需求端平台(DSP)中繼資料：版位、行銷活動、套件、廣告商、帳戶。 |
 | ExperienceEvent實作詳細資料結構欄位群組 | 新增標準欄位以儲存用於收集事件之軟體的相關資訊的ExperienceEvent欄位群組。 |
-| [!DNL Profile Privacy] 欄位群組 | 新的設定檔欄位群組，新增欄位以接受 [!DNL Real-time Customer Profile]. |
+| [!DNL Profile Privacy] 欄位群組 | 新的設定檔欄位群組，新增欄位以接受 [!DNL Real-Time Customer Profile]. |
 | 格式限制 `xdm:alternateDisplayInfo` | 的「標題」和「說明」欄位 `xdm:alternateDisplayInfo` 必須兩者皆為字串，才能通過驗證。 |
 | 名稱更改：XDM [!DNL Individual Profile] | XDM的&quot;標題&quot; [!DNL Profile]「 」類別已更新為「 XDM」 [!DNL Individual Profile]」。 正式 `$id` 班級沒有更改。 |
 
@@ -138,9 +138,9 @@ XDM是公開記錄的規格，旨在改善數位體驗的強大功能。 它為�
 
 若要進一步了解如何使用XDM，請使用 [!DNL Schema Registry] API和 [!DNL Schema Editor] 用戶介面，請閱讀 [XDM系統檔案](../../xdm/home.md).
 
-## [!DNL Real-time Customer Profile] {#profile}
+## [!DNL Real-Time Customer Profile] {#profile}
 
-Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 使用 [!DNL Real-time Customer Profile]，您可以全面了解將多個管道資料結合在一起的每個客戶，包括線上、離線、CRM和協力廠商資料。 [!DNL Profile] 可讓您將不同的客戶資料整合至統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
+Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 使用 [!DNL Real-Time Customer Profile]，您可以全面了解將多個管道資料結合在一起的每個客戶，包括線上、離線、CRM和協力廠商資料。 [!DNL Profile] 可讓您將不同的客戶資料整合至統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 
 | 功能 | 說明 |
 | -----------| ---------- |
@@ -156,13 +156,13 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 
 **已知問題**
 
-* 無。
+* None.
 
-如需 [!DNL Real-time Customer Profile]，包括教學課程和使用的最佳實務 [!DNL Profile] 資料，請閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
+如需 [!DNL Real-Time Customer Profile]，包括教學課程和使用的最佳實務 [!DNL Profile] 資料，請閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您建立區段，並從中產生對象 [!DNL Real-time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，讓任何Adobe應用程式都能輕鬆存取。
+Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您建立區段，並從中產生對象 [!DNL Real-Time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，讓任何Adobe應用程式都能輕鬆存取。
 
 [!DNL Segmentation Service] 會透過說明區分客戶群中可行銷人員群組的條件，來定義特定設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與您品牌互動的時間序列事件。
 
@@ -185,6 +185,6 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 **已知問題**
 
-* 無。
+* None.
 
 若要深入了解 [!DNL Segmentation Service]，請閱讀 [區段服務概觀](../../segmentation/home.md).

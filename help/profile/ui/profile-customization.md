@@ -4,16 +4,16 @@ title: UI中的設定檔詳細資料自訂
 description: 本指南提供逐步指示，自訂即時客戶設定檔資料在Adobe Experience Platform UI中的顯示方式。
 topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 681418b4198c2b1303fda937c3ffc60dad21b672
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%
 
 ---
 
-# [!DNL Real-time Customer Profile] 詳細自訂 {#profile-detail-customization}
+# [!DNL Real-Time Customer Profile] 詳細自訂 {#profile-detail-customization}
 
-在Adobe Experience Platform使用者介面中，您可以檢視並與 [!DNL Real-time Customer Profile] 以客戶設定檔形式呈現資料。 UI中顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成每個個別客戶的單一檢視。 這包括基本屬性、連結身分和通道偏好設定等詳細資訊。 設定檔中顯示的預設欄位也可在組織層級變更，以顯示偏好的欄位 [!DNL Profile] 屬性。 本指南提供逐步指示，自訂 [!DNL Profile] 資料會顯示在Platform UI中。
+在Adobe Experience Platform使用者介面中，您可以檢視並與 [!DNL Real-Time Customer Profile] 以客戶設定檔形式呈現資料。 UI中顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成每個個別客戶的單一檢視。 這包括基本屬性、連結身分和通道偏好設定等詳細資訊。 設定檔中顯示的預設欄位也可在組織層級變更，以顯示偏好的欄位 [!DNL Profile] 屬性。 本指南提供逐步指示，自訂 [!DNL Profile] 資料會顯示在Platform UI中。
 
 如需設定檔UI的完整指南，請造訪 [設定檔UI指南](user-guide.md).
 

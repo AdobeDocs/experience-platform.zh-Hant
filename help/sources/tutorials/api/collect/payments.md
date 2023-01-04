@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從支付應用程式擷取資料，以及使用來源連接器和API擷取資料至Platform的步驟。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 2d3fbbb5c743b8e172e3e64bda31ebf3278b4f5b
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 1%
@@ -701,7 +701,7 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您已建立了源連接器，以按計畫從支付應用程式收集資料。 下游Platform服務(例如 [!DNL Real-time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
+按照本教程，您已建立了源連接器，以按計畫從支付應用程式收集資料。 下游Platform服務(例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案概觀](../../../../profile/home.md)
 * [Data Science Workspace概觀](../../../../data-science-workspace/home.md)

@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: 發行說明;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '855'
 ht-degree: 6%
@@ -61,7 +61,7 @@ Adobe Experience Platform提供一組豐富的功能，可擷取任何類型和�
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步了解將資料擷取至Platform，請造訪 [資料擷取檔案](../../ingestion/home.md).
 
@@ -95,7 +95,7 @@ Adobe Experience Platform [!DNL Identity Service] 可協助您跨裝置和系統
 
 **已知問題**
 
-* 無
+* None
 
 如需 [!DNL Identity Service]，請參閱 [Identity服務概述](../../identity-service/home.md).
 
@@ -111,13 +111,13 @@ Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許�
 | ------- | ----------- |
 | 已棄用的Adobe Audience Manager連接器訊號 | 來自Audience Manger的訊號層級資料將不再傳送。 請注意，特徵和區段的區段成員資格仍會包含在內。 此變更後，將不再產生傳入資料集。 |
 | 重新命名的資料集 | Audience Manger連接器產生的資料集會有更新的名稱和說明。 |
-| 啟用 [!DNL Profile] 在Audience Manger中切換 | [!DNL Profile] 可以啟用或停用切換，將資料集提升至 [!DNL Real-time Customer Profile]. 切換預設為啟用。 |
+| 啟用 [!DNL Profile] 在Audience Manger中切換 | [!DNL Profile] 可以啟用或停用切換，將資料集提升至 [!DNL Real-Time Customer Profile]. 切換預設為啟用。 |
 | 雲端儲存系統的UI支援 | 新源連接器 [!DNL Azure Data Lake Storage Gen2] 在UI中。 |
 | CRM系統的UI支援 | 新源連接器 [!DNL HubSpot], [!DNL Salesforce Service Cloud]，和 [!DNL ServiceNow] 在UI中。 |
 | 資料庫系統的UI支援 | 新源連接器 [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server]，和 [!DNL MySQL] 在UI中。 |
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步了解來源，請參閱 [來源概觀](../../sources/home.md).

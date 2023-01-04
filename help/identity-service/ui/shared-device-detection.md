@@ -5,7 +5,7 @@ description: 「共用裝置偵測」可識別相同裝置的不同已驗證使�
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Adobe Experience Platform [!DNL Identity Service] 可協助您跨裝置和系統
 
 安 **驗證體驗事件** 是使用者登入裝置時完成的動作。 若為已驗證的體驗事件，主要身分為 **使用者身分命名空間** （登入ID）。 安 **未驗證的體驗事件** 是未登入裝置的使用者完成的動作。 若為未驗證的體驗事件，主要身分為 **共用身分命名空間** (ECID)。
 
-如需詳細資訊，請參閱  [[!DNL Real-time Customer Profile] 概述](../../profile/home.md).
+如需詳細資訊，請參閱  [[!DNL Real-Time Customer Profile] 概述](../../profile/home.md).
 
 ## 共用裝置UI
 

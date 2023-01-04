@@ -4,7 +4,7 @@ title: 合併策略概述
 type: Documentation
 description: Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起，並加以結合，以便了解個別客戶的完整檢視。 將這些資料整合在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將結合哪些資料來建立統一檢視。
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 965993bece32eeb0db6e7a9eab3131816a9de5cd
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 >[!WARNING]
 >
->具有現有關聯預設合併策略的配置檔案計數和段可能會受到影響。 任何已套用預設合併原則的區段都會更新為新的預設合併原則。
+>具有現有關聯預設合併策略的配置檔案計數和段可能會受到影響。 任何已套用預設合併原則的區段都將更新為新的預設合併原則。
 
 ## 後續步驟
 

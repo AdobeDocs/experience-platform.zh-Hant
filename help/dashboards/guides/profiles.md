@@ -4,7 +4,7 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: af01ac288a8afe59105be5859b2d40de5e346963
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '3381'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # [!UICONTROL 設定檔] 儀表板
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有關您 [!DNL Real-time Customer Profile] 資料，如在每日快照期間捕獲。 本指南概述如何存取和使用UI中的「設定檔」控制面板，並提供控制面板中所顯示量度的相關資訊。
+Adobe Experience Platform使用者介面(UI)提供控制面板，供您檢視有關您 [!DNL Real-Time Customer Profile] 資料，如在每日快照期間捕獲。 本指南概述如何存取和使用UI中的「設定檔」控制面板，並提供控制面板中所顯示量度的相關資訊。
 
 如需Experience Platform使用者介面中所有設定檔功能的概觀，請參閱 [即時客戶個人檔案UI指南](../../profile/ui/user-guide.md).
 
@@ -140,7 +140,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >
 >此 [!UICONTROL 設定檔計數] 介面工具集可能會顯示與上顯示的設定檔計數不同的數字 [!UICONTROL 瀏覽] 標籤 [!UICONTROL 設定檔] 區段，原因有多。 最常見的原因是 [!UICONTROL 瀏覽] 索引標籤會根據您組織的預設合併原則來參照合併設定檔的總數，而 [!UICONTROL 設定檔計數] 介面工具集會根據您選取要在控制面板中檢視的合併原則，參考合併設定檔的總數。
 >
->另一個常見原因是，拍攝控制面板快照的時間與為 [!UICONTROL 瀏覽] 標籤。 您可以查看 [!UICONTROL 設定檔計數] 上次更新介面工具集的方式是查看介面工具集的時間戳記。 若要進一步了解如何在 [!UICONTROL 瀏覽] 頁簽，請參閱 [即時客戶個人檔案UI指南中的設定檔計數區段](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>另一個常見原因是，拍攝控制面板快照的時間與為 [!UICONTROL 瀏覽] 標籤。 您可以查看 [!UICONTROL 設定檔計數] 上次更新介面工具集的方式是查看介面工具集的時間戳記。 若要進一步了解如何在 [!UICONTROL 瀏覽] 頁簽，請參閱 [即時客戶設定檔UI指南中的設定檔計數區段](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![「Experience Platform描述檔」控制面板，會強調顯示描述檔計數介面工具集。](../images/profiles/profile-count.png)
 

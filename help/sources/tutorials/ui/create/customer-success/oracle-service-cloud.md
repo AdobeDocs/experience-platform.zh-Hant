@@ -2,7 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；oracle服務雲端
 title: 在UI中建立Oracle服務雲端來源連線
 description: 了解如何使用Adobe Experience Platform UI建立Oracle服務雲端來源連線。
-source-git-commit: 8e4f2170489d7e4e73bbc726e3253fac97c9f9f3
+exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 1%
@@ -24,7 +25,7 @@ ht-degree: 1%
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
    * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 如果您已有有效的Oracle服務雲源連接，則可以略過本檔案的其餘部分，並繼續進行上的教學課程 [配置資料流](../../dataflow/customer-success.md)
 

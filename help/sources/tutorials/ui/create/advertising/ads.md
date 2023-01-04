@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；Google Ads;Google Ads來
 title: 在UI中建立Google Ads來源連線
 description: 了解如何使用Google UI建立Adobe Experience Platform Ads來源連線。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 56419f41188c9bfdbeda7dde680f269b980a37f0
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
    * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
    * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 
 如果您已有有效的Google Ads連線，可以略過本檔案的其餘部分，並繼續進行以下的教學課程： [配置資料流](../../dataflow/advertising.md)
 

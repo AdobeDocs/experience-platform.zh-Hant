@@ -3,7 +3,7 @@ keywords: 資料控管rtcdp;rtcdp資料控管；即時客戶資料設定檔資�
 title: Real-time Customer Data Platform中的隱私權
 description: Adobe Real-time Customer Data Platform可讓您簡化資料操作遵循隱私權法規的程式。
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 退出功能
 
-[!DNL Real-Time CDP] 可讓客戶選擇退出將其個人資料包含在細分使用案例中。 系統會擷取客戶的選擇退出偏好設定並加以儲存 [!DNL Real-time Customer Profile]，而且可透過區段述詞中使用布林邏輯(「AND NOT」)排除已選擇退出區段的使用者來強制執行。
+[!DNL Real-Time CDP] 可讓客戶選擇退出將其個人資料包含在細分使用案例中。 系統會擷取客戶的選擇退出偏好設定並加以儲存 [!DNL Real-Time Customer Profile]，而且可透過區段述詞中使用布林邏輯(「AND NOT」)排除已選擇退出區段的使用者來強制執行。
 
 請參閱 [接受選擇退出請求](../../segmentation/consents.md) (位於Adobe Experience Platform分段服務檔案中)以取得詳細資訊。
 

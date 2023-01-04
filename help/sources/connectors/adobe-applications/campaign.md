@@ -2,9 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Adobe Campaign Managed Cloud Services；行銷活動；行銷活動托管服務
 title: Adobe Campaign Managed Cloud Services
 description: 了解如何使用使用者介面將Campaign ManagedCloud Services連結至Platform
-source-git-commit: 99f65889aecf8c045dbb72053ebaca9429c3ebe1
+exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -61,7 +62,7 @@ Adobe Campaign Managed Cloud Services來源可讓您將Adobe Campaign v8傳送�
 
 >[!NOTE]
 >
->您的XDM ExperienceEvent結構必須啟用設定檔，才能將Campaign資料內嵌至 [!DNL Real-time Customer Profile].
+>您的XDM ExperienceEvent結構必須啟用設定檔，才能將Campaign資料內嵌至 [!DNL Real-Time Customer Profile].
 
 如需如何建立結構的詳細指示，請參閱 [在UI中建立XDM結構](../../../xdm/tutorials/create-schema-ui.md).
 

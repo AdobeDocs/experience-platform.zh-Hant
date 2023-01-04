@@ -2,7 +2,7 @@
 title: 定義Real-time Customer Data Platform B2B版本中兩個結構之間的關係
 description: 了解如何在Adobe Real-time Customer Data Platform B2B版中定義兩個結構之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Adobe Real-time Customer Data Platform B2B Edition提供數種擷取基本B2B資
 
 源架構「[!DNL Opportunities]」是以 [!UICONTROL XDM業務機會] 類別。 類提供的欄位之一， `opportunityKey`，可作為結構的識別碼。 具體而言， `sourceKey` 欄位 `opportunityKey` 在名為的自訂命名空間下，物件會設為架構的主要身分識別 [!DNL B2B Opportunity].
 
-如下所示 **[!UICONTROL 架構屬性]**，此架構可在 [!DNL Real-time Customer Profile].
+如下所示 **[!UICONTROL 架構屬性]**，此架構可在 [!DNL Real-Time Customer Profile].
 
 ![機會結構](../images/tutorials/relationship-b2b/opportunities.png)
 
