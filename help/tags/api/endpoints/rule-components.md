@@ -2,9 +2,9 @@
 title: 規則元件端點
 description: 了解如何在Reactor API中呼叫/rule_components端點。
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1190'
 ht-degree: 6%
 
 ---
@@ -305,22 +305,22 @@ curl -X GET \
 **API格式**
 
 ```http
-POST /rules/{RULE_ID}/rule_components
+POST /properties/{PROPERTY_ID}/rule_components
 ```
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_ID` | 此 `id` 定義規則元件的規則。 |
+| `PROPERTY_ID` | 此 `id` 屬性（在下定義規則元件）。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-下列請求會為指定的規則建立新的規則元件。 呼叫也會透過將規則元件與現有擴充功能建立關聯 `relationships` 屬性。 請參閱 [關係](../guides/relationships.md) 以取得更多資訊。
+下列請求會建立新的規則元件。 在裝載中， `relationships` 屬性會將元件與特定規則和現有擴充功能建立關聯。 請參閱 [關係](../guides/relationships.md) 以取得更多資訊。
 
 ```shell
 curl -X POST \
-  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1/rule_components \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | 一個整數，表示關聯規則要觸發的優先順序。 |
 | `attributes.settings` | 以字串表示的設定JSON物件。 |
 | `attributes.timeout` | 一個整數，用於指示按順序執行的操作的超時。 |
-| `relationships` | 為規則元件建立必要關係的物件。 必須建立兩種關係： <ol><li>`extension`:定義此規則元件的擴充功能。 這必須是相同的擴充功能，其擴充功能套件會以 `delegate_descriptor_id`.</li><li>`rules`:在下定義此元件的規則。 必須與請求路徑中提供的規則ID相同。</li></ol>有關關係的更一般資訊，請參閱 [關係指南](../guides/relationships.md). |
+| `relationships` | 為規則元件建立必要關係的物件。 必須建立兩種關係： <ol><li>`extension`:定義此規則元件的擴充功能。 這必須是相同的擴充功能，其擴充功能套件會以 `delegate_descriptor_id`.</li><li>`rules`:在下定義此元件的規則。</li></ol>有關關係的更一般資訊，請參閱 [關係指南](../guides/relationships.md). |
 | `type` | 要建立的資源類型。 對於此端點，值必須是 `rule_components`. |
 
 {style=&quot;table-layout:auto&quot;}
