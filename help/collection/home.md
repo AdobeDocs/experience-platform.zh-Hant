@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料收集；啟動；Web sdk
 solution: Experience Platform
 title: 資料彙集概觀
-topic-legacy: overview
 description: 了解在Adobe Experience Platform中收集客戶體驗資料所涉及的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 6%

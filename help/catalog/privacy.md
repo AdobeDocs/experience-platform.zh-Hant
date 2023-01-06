@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料湖隱私權；身分命名空間；隱私權；資料湖
 solution: Experience Platform
 title: 資料湖的隱私權要求處理
-topic-legacy: overview
 description: Adobe Experience Platform Privacy Service會處理客戶要求存取、選擇退出銷售或刪除其個人資料（如法律和組織隱私權法規所規定）。 本檔案涵蓋與處理資料湖中儲存之客戶資料的隱私權要求相關的基本概念。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 1%

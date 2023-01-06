@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；啟用資料集；資料集；資料集
 solution: Experience Platform
 title: 資料集UI指南
-topic-legacy: datasets
 description: 了解在Adobe Experience Platform使用者介面中使用資料集時，如何執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；篩選；篩選；篩選資料；篩選資料；日期範圍
 solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
-topic-legacy: developer guide
 description: 目錄服務API可透過使用要求查詢參數來篩選回應資料。 「目錄」的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減少API的負載，並有助於改善整體效能。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 1%
