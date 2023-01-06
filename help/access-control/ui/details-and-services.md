@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；產品設定檔
 solution: Experience Platform
 title: 產品設定檔的管理詳細資料和其他服務
-topic-legacy: user guide
 description: 本檔案說明在Adobe Admin Console中管理產品設定檔的詳細資訊和其他服務所需的必要步驟。 您可以從「設定檔設定」功能表設定設定檔的詳細資訊，以及存取其他服務。
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%

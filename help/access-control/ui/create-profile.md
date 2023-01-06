@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；產品設定檔
 solution: Experience Platform
 title: 在Adobe Admin Console中建立新產品設定檔
-topic-legacy: user guide
 description: 本檔案說明在Adobe Admin Console中建立新產品設定檔所需的必要步驟。 若要開始建立新設定檔，請導覽至產品設定檔標籤，然後按一下新設定檔。
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 1%

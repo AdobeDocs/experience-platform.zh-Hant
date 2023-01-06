@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；存取控制；adobe admin console
 solution: Experience Platform
-topic-legacy: overview
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: e2d3267715f693a321b2f4ce1bae0650f38c21d7
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；存取控制權限；存取控制資源類型；存取控制api
 solution: Experience Platform
 title: 參考API端點
-topic-legacy: developer guide
 description: 訪問控制API中的引用端點允許您查看可用權限和資源類型的名稱，然後這些權限和資源類型可用於查看當前用戶的有效訪問控制策略。
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 1%

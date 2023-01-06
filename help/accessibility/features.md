@@ -1,16 +1,15 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp;XDM圖表
 title: Platform中的一般協助工具功能
-topic-legacy: guide
 type: Documentation
 description: 進一步了解Adobe Experience Platform支援的一般協助工具功能，包括鍵盤導覽、調色盤和對比，以及輔助技術支援。
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
+source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '484'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # 協助工具功能Experience Platform
 
@@ -36,7 +35,7 @@ Experience Platform致力支援完整的鍵盤協助功能。
 
 ## 調色盤和對比
 
-Experience Platform致力於[WCAG 2.1 AA](https://www.w3.org/TR/WCAG/)的一致性，包括色彩對比的要求。 Experience PlatformUI在應用程式中提供足夠的對比，以確保為視力不足或色彩缺乏的使用者提供可存取的檢視體驗。
+Experience Platform努力 [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) 符合性，包括色彩對比度要求。 Experience PlatformUI在應用程式中提供足夠的對比，以確保為視力不足或色彩缺乏的使用者提供可存取的檢視體驗。
 
 ![Experience PlatformUI首頁上顯示的調色盤和對比。](images/homepage.png)
 
@@ -44,4 +43,4 @@ Experience Platform致力於[WCAG 2.1 AA](https://www.w3.org/TR/WCAG/)的一致�
 
 新增資料、建立結構或定義區段時，必填欄位會以視覺化方式指出，在欄位的文字標籤旁使用星號，並以程式設計方式指出。 在欄位中和儲存時輸入無效資料時，這些欄位會觸發驗證。 如果必填欄位未通過驗證，則會以紅色列出，並顯示錯誤圖示，且還會顯示需要修正之問題的書面說明。
 
-![尚未通過驗證的必填欄位的特寫。欄位以紅色顯示，並且顯示錯誤表徵圖。](images/field-validation.png)
+![尚未通過驗證的必填欄位的特寫。 欄位會以紅色顯示，並顯示錯誤圖示。](images/field-validation.png)
