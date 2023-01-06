@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；映射器；對應集；對應；
 solution: Experience Platform
 title: 對應集概述
-topic-legacy: overview
 description: 了解如何搭配Adobe Experience Platform資料準備使用對應集。
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%

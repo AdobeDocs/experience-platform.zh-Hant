@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔案；將csv檔案對應至xdm；將csv對應至xdm;ui指南；對應程式；對應；對應欄位；對應函式；
 solution: Experience Platform
 title: 資料準備映射函式
-topic-legacy: overview
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 714ce6eb1a77559a7bd1691afeac4a96e0877717
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '4367'
 ht-degree: 3%

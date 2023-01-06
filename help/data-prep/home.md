@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔案；對應csv檔案至xdm；將csv對應至xdm;ui指南；對應程式；資料準備；資料準備；準備資料；
 solution: Experience Platform
 title: 資料準備概述
-topic-legacy: overview
 description: 本檔案介紹Adobe Experience Platform中的資料準備。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 61603d7516dbd859b0cce6c167c75aab42ca7171
+source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 0%
