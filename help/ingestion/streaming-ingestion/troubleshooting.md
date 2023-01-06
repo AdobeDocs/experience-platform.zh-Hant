@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；串流；串流獲取；疑難排解；串流獲取疑難排解；串流獲取常見問題集；faq;
 solution: Experience Platform
 title: 串流擷取疑難排解指南
-topic-legacy: troubleshooting
 description: 本檔案提供Adobe Experience Platform上串流獲取的常見問題解答。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%

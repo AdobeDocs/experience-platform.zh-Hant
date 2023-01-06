@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；對應csv；對應csv檔案；將csv檔案對應至xdm；將csv對應至xdm;ui指南；
 solution: Experience Platform
 title: 將CSV檔案對應至現有的XDM結構
-topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform使用者介面，將CSV檔案對應至現有的XDM架構。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 1%

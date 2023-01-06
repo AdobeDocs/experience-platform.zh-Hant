@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；擷取；擷取批次資料；教學課程；批次擷取；教學課程；ui指南；
 solution: Experience Platform
 title: 將資料內嵌至Experience Platform
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓您輕鬆以Parquet檔案或符合已知Experience Data Model(XDM)結構的資料形式，將資料匯入為批次檔案。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；串流內嵌；內嵌；時間序列資料；串流時間序列資料；
 solution: Experience Platform
 title: 使用串流獲取API串流時間序列資料
-topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '1204'
 ht-degree: 2%
