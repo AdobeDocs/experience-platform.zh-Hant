@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；ip地址；ip地址；ip地址允許清單；允許清單
-description: 在使用源連接器之前，必須將IP地址添加到允許清單。
+keywords: Experience Platform；首頁；熱門主題；IP位址；IP位址；IP位址允許清單；允許清單
+description: 使用來源連接器前，必須將IP位址新增至允許清單。
 solution: Experience Platform
 title: 源連接的IP地址允許清單
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: a93b14c0e8390ba1a6c486851900a5933fb26a6d
+source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
-# IP地址允許清單
+# IP位址允許清單
 
-您可以通過網路防火牆定義網路訪問控制。 通過指定適當的源IP範圍，您可以允許資料傳輸服務的通信。 在使用源連接器之前，必須將以下IP地址添加到允許清單中。 如果無法將特定於區域的IP地址添加到允許清單，則在使用源時可能會導致錯誤或效能不佳。
+您可以通過網路防火牆定義網路訪問控制。 通過指定適當的源IP範圍，您可以允許資料傳輸服務的通信。 使用來源連接器之前，必須將下列IP位址新增至允許清單。 若未將您地區專屬的IP位址新增至允許清單，在使用來源時可能會導致錯誤或效能不佳。
 
 ## VA7:北美
 
@@ -30,6 +30,7 @@ ht-degree: 0%
 - `20.49.102.16/29`
 - `40.70.148.160/28`
 - `52.167.107.224/28`
+- `52.138.119.167`
 
 ## NLD2:歐洲
 
