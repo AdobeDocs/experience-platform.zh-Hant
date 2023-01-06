@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料流；資料流；資料；監視；監視資料流；監視資料流；監視；監視資料流；監視資料流；監視資料流；資料流；流；服務；
 solution: Experience Platform
 title: 資料流概述
-topic-legacy: overview
 description: 本檔案介紹資料流，說明在Adobe Experience Platform中如何使用資料流。
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%

@@ -3,10 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；監視器帳戶；監視
 description: 目的地可讓您從Adobe Experience Platform向無數外部合作夥伴啟用資料。 本教學課程提供如何使用Experience Platform使用者介面監控目的地資料流的指示。
 solution: Experience Platform
 title: 在UI中監視目標的資料流
-topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3211'
 ht-degree: 0%

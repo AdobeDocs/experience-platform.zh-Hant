@@ -3,10 +3,9 @@ keywords: Experience Platform；目的地api；臨機啟動；啟動區段臨機
 solution: Experience Platform
 title: 透過臨機啟動API啟動對象區段以批次目的地
 description: 本文說明透過臨機啟動API來啟動對象區段的端對端工作流程，包括啟動前發生的區段工作。
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: cdf96088be27cba1fb92f1348f002123614285fe
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1563'
 ht-degree: 1%
@@ -242,7 +241,7 @@ Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 
 
 使用臨機啟動API時，您可能會遇到此API端點專屬的錯誤訊息。 請檢閱表格，了解在顯示時如何處理。
 
-| 錯誤訊息 | 解析度 |
+| 錯誤訊息 | 解決方法 |
 |---------|----------|
 | 已針對區段執行 `segment ID` 訂購 `dataflow ID` 使用執行id `flow run ID` | 此錯誤訊息指出某個區段目前正在進行臨機啟動流程。 等待作業完成，然後再次觸發啟動作業。 |
 | 區段 `<segment name>` 不屬於此資料流或超出計畫範圍！ | 此錯誤消息表示您選擇要激活的段未映射到資料流，或者為段設定的激活計畫已過期或尚未啟動。 檢查該段是否確實映射到資料流，並確認段激活時間表與當前日期重疊。 |

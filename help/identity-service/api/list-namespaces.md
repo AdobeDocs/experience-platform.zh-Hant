@@ -1,18 +1,17 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；命名空間清單；list namespace
+keywords: Experience Platform；首頁；熱門主題；命名空間清單；清單命名空間
 solution: Experience Platform
-title: 列出可用標識命名空間
-topic-legacy: API guide
-description: 列出所有可用命名空間。
+title: 列出可用的身分識別命名空間
+description: 列出所有可用的命名空間。
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 4%
 
 ---
 
-# 列出可用標識命名空間
+# 列出可用的身分識別命名空間
 
 **API格式**
 
@@ -33,11 +32,11 @@ curl -X GET \
 
 **回應**
 
-響應包括對象陣列，每個對象表示可用的命名空間。 具有「」的命名空間[!UICONTROL 自定義]&quot;值&quot;[!UICONTROL 假]&#39;&#39;是標準命名空間，而&#39;&#39;[!UICONTROL 自定義]&quot;值&quot;[!UICONTROL 真]&#39;&#39;是您的組織建立的命名空間。
+回應包含一個物件陣列，每個物件代表可用的命名空間。 含有「[!UICONTROL 自訂]&quot;值&quot;[!UICONTROL false]「是標準命名空間，而具有「[!UICONTROL 自訂]&quot;值&quot;[!UICONTROL true]「 」是貴組織已建立的命名空間。
 
 >[!NOTE]
 >
->此響應已被截斷為空間。
+>此回應已因空間而截斷。
 
 ```json
 [
@@ -79,4 +78,4 @@ curl -X GET \
 
 ## 後續步驟
 
-繼續下一教程， [建立自定義命名空間](./create-custom-namespace.md)
+繼續下一個教學課程，前往 [建立自訂命名空間](./create-custom-namespace.md)

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；監視器設定檔；監視資料流；資料流；設定檔；即時客戶設定檔；
 description: 「即時客戶設定檔」可讓您結合來自多個管道的資料，包括線上、離線、CRM和協力廠商，進而全面了解每個客戶。 本教學課程提供有關如何使用Experience Platform用戶介面使用配置式監視資料流的說明。
 title: 監視UI中配置檔案的資料流
-topic-legacy: overview
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 3%

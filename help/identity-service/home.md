@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；身分；身分；XDM圖表；身分服務；身分服務
 solution: Experience Platform
 title: Identity服務概述
-topic-legacy: overview
 description: Adobe Experience Platform Identity Service可協助您跨裝置和系統橋接身分，以便即時提供具影響力的個人數位體驗，進而更全面了解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
 ht-degree: 0%

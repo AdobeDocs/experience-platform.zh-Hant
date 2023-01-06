@@ -3,10 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；監視器帳戶；監視
 description: 本教學課程提供使用匯總監控檢視和跨服務監控來監控資料流的步驟。
 solution: Experience Platform
 title: 監視UI中源的資料流
-topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%

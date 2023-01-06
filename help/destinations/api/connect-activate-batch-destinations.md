@@ -3,10 +3,9 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 使用流量服務API連線至批次目的地並啟動資料
 description: 使用流程服務API，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地並啟用資料的逐步指示
-topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '3420'
 ht-degree: 2%

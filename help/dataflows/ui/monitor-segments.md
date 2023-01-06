@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；監視器區段；監視器資料流；資料流；分段
 description: 區段可讓您透過即時客戶個人檔案資料建立區段和對象。 本教學課程提供如何使用Experience Platform使用者介面在細分期間監控資料流的指示。
 title: 監視UI中區段的資料流
-topic-legacy: overview
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1923'
 ht-degree: 1%
@@ -131,7 +130,7 @@ ht-degree: 1%
 | ------ | ----------- |
 | **[!UICONTROL 名稱]** | 已啟用的區段名稱。 |
 | **[!UICONTROL 已激活身份]** | 根據收到的設定檔成功啟動至目的地的身分總數。 |
-| **[!UICONTROL 已排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭到排除。 |
+| **[!UICONTROL 已排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭排除。 |
 | **[!UICONTROL 上次資料流運行狀態]** | 為該區段執行的上次啟動工作的狀態。 |
 | **[!UICONTROL 上次資料流運行日期]** | 針對該區段執行的上次啟動工作的日期和時間。 |
 
