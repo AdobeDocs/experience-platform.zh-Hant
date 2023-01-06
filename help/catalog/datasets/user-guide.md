@@ -5,7 +5,7 @@ title: 資料集UI指南
 topic-legacy: datasets
 description: 了解在Adobe Experience Platform使用者介面中使用資料集時，如何執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1509d14c0acbf7136d5869d6de2ee2cf9fad450a
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 資料使用量標籤可讓您根據套用至該資料的使用量原則，對資料集和欄位進行分類。 請參閱 [資料控管概觀](../../data-governance/home.md) 若要進一步了解標籤，請參閱 [資料使用標籤使用指南](../../data-governance/labels/overview.md) 如何將標籤套用至資料集的指示。
 
-## 刪除資料集
+## 刪除資料集 {#delete}
 
 您可以先存取資料集，以刪除資料集 **[!UICONTROL 資料集活動]** 螢幕。 然後，選取 **[!UICONTROL 刪除資料集]** 刪除它。
 

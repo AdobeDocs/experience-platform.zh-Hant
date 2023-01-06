@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: 平台 Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分，以提供個人化的數位體驗。
 feature: Identities
-source-git-commit: 75362c67e1a8a31a449cb4c9dd618515325d36f0
+source-git-commit: ed091c95952b731ce1f7567b99a1072a8be2b4a5
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 27%
+source-wordcount: '112'
+ht-degree: 26%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 27%
    - [共用設備檢測](ui/shared-device-detection.md)
    - [在UI中定義身分欄位](ui/label-identities.md)
 - [ECID概觀](ecid.md)
+- [Identity Service中的刪除內容](deletion.md)
 - [隱私權要求處理](privacy.md)
 - [疑難排解指南](troubleshooting-guide.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/identity-service)
