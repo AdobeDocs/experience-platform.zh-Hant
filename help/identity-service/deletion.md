@@ -1,9 +1,9 @@
 ---
 title: Identity Service中的刪除內容
 description: 本檔案概略介紹您可在Experience Platform中刪除身分資料的各種機制，並說明身分圖表可能受到哪些影響。
-source-git-commit: 506d47035622e45f72a8d92aeff6c5ec4e3d0856
+source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1318'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,7 @@ Privacy Service會處理客戶要求存取、選擇退出銷售或刪除其個�
 | 接受的使用案例 | 僅限資料隱私權請求(GDPR、CCPA)。 | 管理儲存在Experience Platform中的資料。 |
 | 預估延遲 | 天至周 | 日 |
 | 受影響的服務 | Privacy Service中的單一身分刪除可讓您選取資料是從Identity Service、即時客戶個人檔案還是資料湖中刪除。 | 資料衛生中的單一身分刪除會刪除Identity Service、即時客戶設定檔和資料湖中選取的資料。 |
-| 刪除模式 | 從Identity Service刪除身分。 | 從Identity Service、所有資料集或單一資料集中，完全刪除身分及其所有對應連結。 |
+| 刪除模式 | 從Identity Service刪除身分。 | 從Identity Service刪除身分。 |
 
 {style=&quot;table-layout:auto&quot;}
 
