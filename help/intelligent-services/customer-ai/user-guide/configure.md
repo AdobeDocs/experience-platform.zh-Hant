@@ -3,10 +3,9 @@ keywords: Experience Platform；使用手冊；customer ai；熱門主題；設�
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 設定Customer AI例項
-topic-legacy: Instance creation
 description: AI/ML服務提供Customer AI，作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定Customer AI例項的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '3342'
 ht-degree: 0%

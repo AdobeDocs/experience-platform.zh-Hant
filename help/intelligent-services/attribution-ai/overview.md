@@ -2,11 +2,10 @@
 keywords: Experience Platform；歸因ai概覽；熱門主題；歸因ai；歸因ai
 feature: Attribution AI
 title: Attribution AI概述
-topic-legacy: Attribution AI
 description: Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。 舉凡廣告曝光、電子郵件傳送、電子郵件開啟和付費搜尋點擊，都是接觸點的範例。
 landing-page-description: Attribution AI 可將點數歸因到促成轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: 6c0e001419dc78d4ff87bebd0604c7add07b635f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 30%

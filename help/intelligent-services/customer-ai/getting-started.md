@@ -3,10 +3,9 @@ keywords: Experience Platform；快速入門；customer ai；熱門主題
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI快速入門
-topic-legacy: Getting started
 description: 本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 1%

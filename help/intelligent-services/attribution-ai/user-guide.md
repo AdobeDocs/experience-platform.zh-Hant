@@ -2,19 +2,18 @@
 keywords: Experience Platform；使用手冊；歸因ai；熱門主題；地區
 feature: Attribution AI
 title: Attribution AIUI指南
-topic-legacy: User guide
 description: 本檔案可做為與Intelligent Services使用者介面中的Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '2960'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # Attribution AIUI指南
 
-Attribution AI是Intelligent Services的一部分，是多管道的演算法歸因服務，可計算客戶互動對指定結果的影響和增量影響。 透過 Attribution AI，行銷人員可經由了解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
+Attribution AI是Intelligent Services的一部分，是多管道的演算法歸因服務，可計算客戶互動對指定結果的影響和增量影響。 透過Attribution AI，行銷人員可透過了解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量及最佳化行銷和廣告支出。
 
 本檔案可做為與Intelligent Services使用者介面中的Attribution AI互動的指南。
 

@@ -2,10 +2,9 @@
 keywords: 前瞻分析；歸因ai；歸因ai深入分析；AAI查詢服務；歸因查詢；歸因分數
 feature: Attribution AI
 title: 使用查詢服務分析歸因分數
-topic-legacy: Attribution AI queries
 description: 了解如何使用Adobe Experience Platform Query Service分析Attribution AI分數。
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -14,9 +13,9 @@ ht-degree: 0%
 
 # 使用Query Service分析歸因分數
 
-資料中的每一列代表轉換，相關接觸點的資訊會儲存為`touchpointsDetail`欄下的結構陣列。
+資料中的每一列代表轉換，相關接觸點的資訊會儲存為 `touchpointsDetail` 欄。
 
-| 接觸點資訊 | 欄目 |
+| 接觸點資訊 | 欄 |
 | ---------------------- | ------ |
 | 接觸點名稱 | `touchpointsDetail. touchpointName` |
 | 接觸點管道 | `touchpointsDetail.touchPoint.mediaChannel` |
@@ -24,7 +23,7 @@ ht-degree: 0%
 
 ## 尋找資料路徑
 
-在Adobe Experience Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料集]** 。 此時會出現&#x200B;**[!UICONTROL 資料集]**&#x200B;頁面。 接下來，選擇&#x200B;**[!UICONTROL Browse]**&#x200B;標籤，並查找Attribution AI分數的輸出資料集。
+在Adobe Experience Platform UI中，選取 **[!UICONTROL 資料集]** 的下一頁。 此 **[!UICONTROL 資料集]** 頁。 下一步，選取 **[!UICONTROL 瀏覽]** 標籤，然後找到Attribution AI分數的輸出資料集。
 
 ![存取您的執行個體](./images/aai-query/datasets_browse.png)
 
@@ -32,7 +31,7 @@ ht-degree: 0%
 
 ![資料集活動頁面](./images/aai-query/select_preview.png)
 
-在資料集活動頁面中，選取右上角的&#x200B;**[!UICONTROL 預覽資料集]**&#x200B;以預覽資料，並確定資料已如預期擷取。
+在資料集活動頁面中，選取 **[!UICONTROL 預覽資料集]** 在右上角，預覽資料並確認資料已如預期擷取。
 
 ![預覽資料集](./images/aai-query/preview_dataset.JPG)
 
@@ -40,29 +39,29 @@ ht-degree: 0%
 
 ![選擇架構](./images/aai-query/select_schema.png)
 
-使用計分結構，您可以選取或搜尋值。 選取後，**[!UICONTROL 欄位屬性]**&#x200B;側欄隨即開啟，允許您複製路徑以用於建立查詢。
+使用計分結構，您可以選取或搜尋值。 選取後， **[!UICONTROL 欄位屬性]** 側邊欄開啟，供您複製路徑以用於建立查詢。
 
 ![複製路徑](./images/aai-query/copy_path.png)
 
 ## 訪問查詢服務
 
-若要從Platform UI記憶體取查詢服務，請從左側導覽中選取&#x200B;**[!UICONTROL 查詢]**&#x200B;開始，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。 會載入先前儲存的查詢清單。
+若要從Platform UI記憶體取查詢服務，請從選取 **[!UICONTROL 查詢]** 在左側導覽器中，選取 **[!UICONTROL 瀏覽]** 標籤。 會載入先前儲存的查詢清單。
 
 ![查詢服務瀏覽](./images/aai-query/query_tab.png)
 
-接下來，選擇右上角的&#x200B;**[!UICONTROL 建立查詢]**。 查詢編輯器會載入。 使用查詢編輯器，您可以開始使用計分資料建立查詢。
+下一步，選擇 **[!UICONTROL 建立查詢]** 在右上角。 查詢編輯器載入。 使用查詢編輯器，您可以開始使用計分資料建立查詢。
 
 ![查詢編輯器](./images/aai-query/query_example.png)
 
-有關查詢編輯器的詳細資訊，請訪問[查詢編輯器使用手冊](../../query-service/ui/user-guide.md)。
+如需查詢編輯器的詳細資訊，請造訪 [查詢編輯器使用手冊](../../query-service/ui/user-guide.md).
 
 ## 歸因分數分析的查詢範本
 
-以下查詢可作為不同分數分析案例的範本。 您需要將`_tenantId`和`your_score_output_dataset`取代為計分輸出架構中的正確值。
+以下查詢可作為不同分數分析案例的範本。 您需要取代 `_tenantId` 和 `your_score_output_dataset` 以及計分輸出架構中找到的正確值。
 
 >[!NOTE]
 >
-> 根據您資料的擷取方式，下方使用的值（例如`timestamp`）可能採用不同格式。
+> 根據您資料的擷取方式，下方使用的值如 `timestamp` 可能是不同的格式。
 
 ### 驗證範例
 
@@ -306,7 +305,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> 在此範例中，除了`_tenantId`和`your_score_output_dataset`外，您還需要取代`{COLUMN_NAME}`。 `COLUMN_NAME`變數可採用在設定Attribution AI例項期間新增的選用傳遞欄名稱（報表欄）的值。 請查看您的計分輸出架構以查找完成此查詢所需的`{COLUMN_NAME}`值。
+> 在此範例中，您需要取代 `{COLUMN_NAME}` 除 `_tenantId` 和 `your_score_output_dataset`. 此 `COLUMN_NAME` 變數可取用在設定Attribution AI例項期間新增的選用傳遞欄名稱（報表欄）值。 請查看您的計分輸出架構以尋找 `{COLUMN_NAME}` 完成此查詢所需的值。
 
 ```sql
 SELECT 

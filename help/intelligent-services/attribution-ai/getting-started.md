@@ -2,10 +2,9 @@
 keywords: Experience Platform；快速入門；歸因ai；熱門主題
 feature: Attribution AI
 title: 開始使用Attribution AI
-topic-legacy: Getting started
 description: 下列指南需要了解使用Attribution AI時涉及的各種Adobe Experience Platform服務。 開始教學課程之前，請檢閱下列檔案。
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-source-git-commit: a14f857f87482e1468211152976530c718d56e38
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 1%

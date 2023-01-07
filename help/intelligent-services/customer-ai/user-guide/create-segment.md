@@ -3,10 +3,9 @@ keywords: Experience Platform；深入分析；customer ai；熱門主題；cust
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: 使用預測分數建立客戶區段
-topic-legacy: Create a segment
 description: 當預測執行完成時，設定檔會自動使用預測的傾向分數。 使用Customer AI分數豐富設定檔，可建立客戶區段，根據其傾向分數尋找對象。 本節提供使用「區段產生器」建立區段的步驟。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%

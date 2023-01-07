@@ -3,11 +3,10 @@ keywords: Experience Platform；概觀；customer ai；熱門主題；customer a
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI 概述
-topic-legacy: Customer AI Overview
 description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: 165e5ccae5ca78b3912fef1ba0b3fd4567e231fb
+source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 26%
