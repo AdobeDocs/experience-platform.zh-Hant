@@ -1,9 +1,8 @@
 ---
 title: Adobe Experience Platform中的資料加密
-topic-legacy: data protection
 description: 了解在傳輸中和在Adobe Experience Platform中儲存資料時如何加密。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: d99a9081edc483831d56af3d838b67d9aba25bea
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 3%

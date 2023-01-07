@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: Adobe Experience Platform中的同意處理
-topic-legacy: getting started
 description: 了解如何使用Adobe2.0標準，在Adobe Experience Platform中處理客戶同意訊號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%

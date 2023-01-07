@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platform;api指南；平台api指南；平台簡介；開發人員指南
 solution: Experience Platform
 title: 開始使用Adobe Experience Platform API
-topic-legacy: api guide
 description: Adobe Experience Platform提供彼此緊密連結的API服務。 本指南包含可用服務、CRUD作業所需標題、錯誤訊息、Postman集合和範例API呼叫的相關資訊。
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%

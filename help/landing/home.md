@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；行銷活動協調；協調；客戶歷程；歷程；歷程協調；功能；地區
 solution: Experience Platform
 title: Adobe Experience Platform 概觀
-topic-legacy: getting started
 description: Adobe Experience Platform可讓組織集中和標準化客戶資料，再運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 10%
@@ -30,13 +29,13 @@ Adobe已在Experience Platform之上構建了多個應用程式服務。 您可�
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=zh-Hant)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 
 ## [!DNL Experience Platform] 教學課程
 
-您可以開始使用 [!DNL Platform] 您可以依照逐步教學課程快速輕鬆地操作，涵蓋從準備資料以擷取到進階機器學習演算法等所有內容。 這些教學課程旨在補充 [!DNL Experience Platform] 說明檔案，因此為了獲得最佳結果，請在完成教學課程的同時，保持說明檔案的現有狀態。
+您可以開始使用 [!DNL Platform] 您可以依照逐步教學課程快速輕鬆地操作，其中涵蓋從準備資料以擷取到進階機器學習演算法等所有內容。 這些教學課程旨在補充 [!DNL Experience Platform] 說明檔案，因此為了獲得最佳結果，請在完成教學課程的同時，保持說明檔案的現有狀態。
 
 造訪 [Experience Platform教學課程](https://www.adobe.com/go/platform-tutorials-home-en) 開始使用的登陸頁面。
 

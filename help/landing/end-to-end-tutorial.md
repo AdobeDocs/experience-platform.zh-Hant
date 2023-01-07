@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；行銷活動協調；協調；客戶歷程；歷程；歷程協調；功能；地區
 title: Adobe Experience Platform端對端範例工作流程
-topic-legacy: getting started
 description: 全面了解Adobe Experience Platform的基本端對端工作流程。
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1836'
 ht-degree: 3%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: 建立資料集以擷取IAB TCF 2.0同意資料
-topic-legacy: privacy events
 description: 本檔案提供設定兩個必要資料集以收集IAB TCF 2.0同意資料的步驟。
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
 source-wordcount: '1655'
 ht-degree: 0%
