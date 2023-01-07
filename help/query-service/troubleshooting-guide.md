@@ -5,9 +5,9 @@ title: 查詢服務疑難排解指南
 topic-legacy: troubleshooting
 description: 本檔案包含與Query Service相關的常見問題和解答。 主題包括：匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: deb9f314d5eaadebe2f3866340629bad5f39c60d
+source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4383'
 ht-degree: 1%
 
 ---
@@ -531,6 +531,11 @@ WHERE T2.ID IS NULL
 ### 我可以控制特定連線的特定資料集和欄的存取權嗎？ 如何設定？
 
 +++答是是，如果配置了，將強制執行基於屬性的訪問控制。 請參閱 [基於屬性的訪問控制概述](../access-control/abac/overview.md) 以取得更多資訊。
++++
+
+### 查詢服務是否支援「插入覆蓋到」命令？
+
++++答案否，查詢服務不支援「插入覆蓋到」命令。
 +++
 
 ## 匯出資料 {#exporting-data}
