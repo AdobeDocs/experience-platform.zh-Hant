@@ -5,9 +5,9 @@ title: 在UI中定義身分欄位
 description: 了解如何在Experience Platform使用者介面中定義身分欄位。
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fe3d9a3fc473e7ca13f0e0c2f222bcc1b1a991c4
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 畫布會更新以反映變更，選取的欄位會獲得指紋符號(![](../../images/ui/fields/special/identity-symbol.png))，將其指定為身分。 在左側邊欄中，身分欄位現在會列在類別或架構欄位群組的名稱下，該群組會為架構提供欄位。
 
-由於所有身分欄位預設為必要欄位，因此欄位現在會列在 **[!UICONTROL 必填欄位]** 在左側邊欄。 如果在架構結構內巢狀內嵌身分欄位，則所有上層欄位也將視需要列出。
+如果欄位也設為主要身分，則也會列在 **[!UICONTROL 必填欄位]** 在左側邊欄。 如果在架構結構內巢狀內嵌身分欄位，則所有上層欄位也將視需要列出。
 
 ![](../../images/ui/fields/special/identity-applied.png)
 

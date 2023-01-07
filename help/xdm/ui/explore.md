@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；UI;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；探索；類別；欄位群組；資料類型；結構；
 solution: Experience Platform
-title: 在UI中探索XDM資源
+title: 在UI中探索結構資源
 description: 了解如何在Experience Platform使用者介面中探索現有結構、類別、結構欄位群組和資料類型。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
 
-# 在UI中探索XDM資源
+# 在UI中探索結構資源
 
-在Adobe Experience Platform中，所有Experience Data Model(XDM)資源都儲存在 [!DNL Schema Library]，包括Adobe提供的標準資源和貴組織定義的自訂資源。 在Experience PlatformUI中，您可以在 [!DNL Schema Library]. 這在規劃和準備資料擷取時特別實用，因為UI會提供這些XDM資源所提供之每個欄位的預期資料類型和使用案例資訊。
+在Adobe Experience Platform中，所有Experience Data Model(XDM)結構資源都儲存在 [!DNL Schema Library]，包括Adobe提供的標準資源和貴組織定義的自訂資源。 在Experience PlatformUI中，您可以在 [!DNL Schema Library]. 這在規劃和準備資料擷取時特別實用，因為UI會提供這些XDM資源所提供之每個欄位的預期資料類型和使用案例資訊。
 
 本教學課程涵蓋在Experience PlatformUI中探索現有結構、類別、欄位群組和資料類型的步驟。
 
-## 尋找XDM資源 {#lookup}
+## 查找架構資源 {#lookup}
 
-在平台UI中，選取 **[!UICONTROL 結構]** 的下一頁。 此 [!UICONTROL 結構] 工作區提供 **[!UICONTROL 瀏覽]** 標籤來探索組織中所有現有的XDM資源，以及其他專用標籤來探索 **[!UICONTROL 類別]**, **[!UICONTROL 欄位群組]**，和 **[!UICONTROL 資料類型]** 具體來說。
+在平台UI中，選取 **[!UICONTROL 結構]** 的下一頁。 此 [!UICONTROL 結構] 工作區提供 **[!UICONTROL 瀏覽]** 索引標籤，以探索組織中的所有結構，以及其他專用索引標籤，以探索 **[!UICONTROL 類別]**, **[!UICONTROL 欄位群組]**，和 **[!UICONTROL 資料類型]** 分別為5個。
 
 ![](../images/ui/explore/tabs.png)
 
-在 [!UICONTROL 瀏覽] 標籤中，您可以使用篩選圖示(![篩選表徵圖影像](../images/ui/explore/icon.png))以顯示左側邊欄中的控制項，以縮小列出的結果。
+篩選圖示(![篩選表徵圖影像](../images/ui/explore/icon.png))會顯示左側邊欄中的控制項，以縮小列出的結果。 顯示的控制項會因列出的資源類型而異。
 
 例如，若要篩選清單以僅顯示Adobe提供的標準資料類型，請選取 **[!UICONTROL 資料類型]** 和 **[!UICONTROL Adobe]** 在 **[!UICONTROL 類型]** 和 **[!UICONTROL 擁有者]** 區段。
 
@@ -33,15 +33,15 @@ ht-degree: 0%
 
 ![](../images/ui/explore/filter.png)
 
-您也可以使用搜尋列進一步縮小結果範圍。 搜尋詞時，排名最前的項目代表其名稱與搜尋查詢相符的資源。 在這些項目下， **[!UICONTROL 標準欄位]**，則會列出包含符合查詢之欄位的任何資源。 這可讓您根據XDM資源所包含的資料類型來搜尋資源，而不需事先知道資源的名稱。
+將資源列於 **[!UICONTROL 類別]**, **[!UICONTROL 欄位群組]**，或 **[!UICONTROL 資料類型]** 索引標籤，您可以選取 **[!UICONTROL Adobe]** 僅顯示標準資源或 **[!UICONTROL 客戶]** 僅顯示貴組織建立的資源。
+
+![](../images/ui/explore/filter-data-type.png)
+
+您也可以使用搜尋列進一步縮小結果範圍。
 
 ![](../images/ui/explore/search.png)
 
 搜索結果中顯示的資源首先按標題匹配排序，然後按說明匹配排序。 反過來，任一類別中符合的字詞越多，清單中出現的資源就越多。
-
->[!NOTE]
->
->對於標準XDM資源，搜尋功能只會傳回包含 `xdm` 命名空間。 只有在自訂資源中包含不同命名空間（例如您的租用戶ID）下的欄位時，才會傳回這些欄位。
 
 找到要探索的資源後，從清單中選取其名稱以在畫布中檢視其結構。
 

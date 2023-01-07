@@ -5,20 +5,20 @@ title: 在UI中建立和編輯類
 description: 了解如何在Experience Platform用戶介面中建立和編輯類。
 topic-legacy: user guide
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 7b642744f12ec33ff45a4b41cdb57bfe37396a56
+source-git-commit: a854a40034666159fabca550227efe9f3a47fb53
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
 
 # 在UI中建立和編輯類
 
-在Experience Data Model(XDM)中，類別會定義結構將包含之資料的行為層面（記錄或時間序列）。 除此之外，類還描述了基於該類的所有結構都需要包含的最小公共屬性數，並為合併多個相容資料集提供了一種方法。
+在Adobe Experience Platform中，結構的類別會定義結構將包含之資料的行為層面（記錄或時間序列）。 除此之外，類還描述了基於該類的所有結構都需要包含的最小公共屬性數，並為合併多個相容資料集提供了一種方法。
 
-Adobe提供數種標準（「核心」）XDM類別，包括 [!DNL XDM Individual Profile] 和 [!DNL XDM ExperienceEvent]. 除了這些核心類別之外，您還可以建立自己的自訂類別，以說明貴組織的更具體使用案例。
+Adobe提供數種標準（「核心」）Experience Data Model(XDM)類別，包括 [!DNL XDM Individual Profile] 和 [!DNL XDM ExperienceEvent]. 除了這些核心類別之外，您還可以建立自己的自訂類別，以說明貴組織的更具體使用案例。
 
-本檔案概略說明如何在Adobe Experience Platform UI中建立、編輯和管理自訂類別。
+本檔案概述如何在Experience PlatformUI中建立、編輯和管理自訂類別。
 
 ## 先決條件
 
@@ -32,7 +32,7 @@ Adobe提供數種標準（「核心」）XDM類別，包括 [!DNL XDM Individual
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-將顯示一個對話框，允許您從可用類清單中進行選擇。 在對話方塊頂端，選取 **[!UICONTROL 建立新類]**. 然後，您可以為新類指定顯示名稱（該類的簡短、描述性、唯一且用戶友好的名稱）、說明以及架構將定義的資料的行為(「[!UICONTROL 記錄]&quot;或&quot;[!UICONTROL 時間序列]「)。
+將顯示一個對話框，允許您從可用類清單中進行選擇。 在對話方塊頂端，選取 **[!UICONTROL 建立新類]**. 然後，您可以為新類指定顯示名稱（該類的簡短、描述性、唯一且用戶友好的名稱）、說明以及架構將定義的資料的行為(**[!UICONTROL 記錄]** 或 **[!UICONTROL 時間序列]**)。
 
 完成後，請選取 **[!UICONTROL 分配類]**.
 
@@ -78,9 +78,11 @@ Adobe提供數種標準（「核心」）XDM類別，包括 [!DNL XDM Individual
 >
 >請記住，您添加到類的任何欄位將用於採用該類的所有架構。 因此，您應謹慎考慮哪些欄位在所有架構使用案例中會很實用。 如果您想要新增欄位，而此欄位可能只會看到此類別下某些結構中的使用，建議您考慮將它新增至這些結構 [建立欄位群組](./field-groups.md#create) 。
 
-A **[!UICONTROL 新欄位]** 會顯示在畫布中，而右側邊欄會更新，顯示設定欄位屬性的控制項。 請參閱 [定義UI中的欄位](../fields/overview.md#define) 以了解如何設定欄位並將欄位新增至類別的特定步驟。
+A **[!UICONTROL 新欄位]** 會顯示在畫布中，而右側邊欄會更新，顯示設定欄位屬性的控制項。 在 **[!UICONTROL 指派給]**，選取 **[!UICONTROL 類別]**.
 
-繼續將所需的欄位新增至類別。 完成後，請選取 **[!UICONTROL 儲存]** 以儲存架構和類別。
+![](../../images/ui/resources/classes/assign-to-class.png)
+
+請參閱 [定義UI中的欄位](../fields/overview.md#define) 以了解如何設定欄位並將欄位新增至類別的特定步驟。 繼續將所需的欄位新增至類別。 完成後，請選取 **[!UICONTROL 儲存]** 以儲存架構和類別。
 
 ![](../../images/ui/resources/classes/save.png)
 

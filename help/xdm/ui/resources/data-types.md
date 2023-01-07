@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: 了解如何在Experience Platform使用者介面中建立和編輯資料類型。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,11 @@ Adobe Experience Platform提供許多標準資料類型，可用來涵蓋多種�
 
 將欄位添加到資料類型後，請選擇 **[!UICONTROL 儲存]** 儲存變更並將資料類型新增至 [!DNL Schema Library].
 
-## 將資料類型添加到類或欄位組
+## 將資料類型新增至結構
 
 建立資料類型後，您就可以開始在結構中使用它。 由於XDM結構由類別和零個或多個欄位群組組成，因此資料類型提供的欄位無法直接新增至結構。 而是必須包含在類別或欄位群組中。
 
-首先，請遵循 [向類添加欄位](./classes.md#add-fields) 或 [將欄位新增至欄位群組](./field-groups.md#add-fields). 當您選擇 **[!UICONTROL 類型]** 對於新欄位，從下拉式選單中選取資料類型的名稱。
+首先，請遵循 [向類添加欄位](./classes.md#add-fields) 或 [將欄位新增至欄位群組](./field-groups.md#add-fields). 或者，您可以開始 [直接將欄位新增至架構](./schemas.md#add-individual-fields) 並從中選擇父類或欄位組。 當您選擇 **[!UICONTROL 類型]** 對於新欄位，從下拉式選單中選取資料類型的名稱。
 
 ## 將多欄位物件轉換為資料類型 {#convert}
 
@@ -102,7 +102,7 @@ Adobe Experience Platform提供許多標準資料類型，可用來涵蓋多種�
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-畫布會從「[!UICONTROL 物件]」新資料類型。 子欄位旁也有小型鎖定圖示，表示它們不再是個別欄位，而是多欄位資料類型的一部分。 現在，通過從 **[!UICONTROL 類型]** 定義新欄位時的下拉式清單。
+畫布會從「[!UICONTROL 物件]」新資料類型。 現在，通過從 **[!UICONTROL 類型]** 定義新欄位時的下拉式清單。
 
 ![](../../images/ui/resources/data-types/converted.png)
 

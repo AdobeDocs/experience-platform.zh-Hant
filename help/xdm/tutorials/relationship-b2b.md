@@ -2,9 +2,9 @@
 title: 定義Real-time Customer Data Platform B2B版本中兩個結構之間的關係
 description: 了解如何在Adobe Real-time Customer Data Platform B2B版中定義兩個結構之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1c2aabaaeadb41631fc75783db739bb34a3f53cc
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1391'
 ht-degree: 0%
 
 ---
@@ -123,4 +123,4 @@ Adobe Real-time Customer Data Platform B2B Edition提供數種擷取基本B2B資
 
 ## 後續步驟
 
-依照本教學課程，您已使用 [!DNL Schema Editor]. 使用以這些結構為基礎的資料集匯入資料，且該資料已在設定檔資料存放區中啟動後，您就可以將這兩個結構的屬性用於多類別劃分使用案例。 如需詳細資訊，請參閱Real-Time CDP B2B版的相關檔案。
+依照本教學課程，您已使用 [!DNL Schema Editor]. 使用以這些結構為基礎的資料集匯入資料，且該資料已在設定檔資料存放區中啟動後，您就可以將這兩個結構的屬性用於 [多類別細分使用案例](../../rtcdp/segmentation/b2b.md).
