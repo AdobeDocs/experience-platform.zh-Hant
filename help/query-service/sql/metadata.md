@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；PSQL;psql；查詢服務；查詢服務；元資料；命令；元資料命令；
 solution: Experience Platform
 title: 查詢服務中的元資料PostgreSQL命令
-topic-legacy: metadata
 description: 目前支援在Adobe Experience Platform查詢服務中查詢元資料的PostgreSQL命令清單。
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%

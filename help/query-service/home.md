@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢
 solution: Experience Platform
 title: 查詢服務總覽
-topic-legacy: overview
 description: 本文檔概述了Query Service在Experience Platform中的角色。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%

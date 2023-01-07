@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；tableau;Tableau；查詢服務；查詢服務；連線至查詢服務；
 solution: Experience Platform
 title: 將 Tableau 連接至查詢服務
-topic-legacy: connect
 description: 本檔案會逐步說明將Tableau與Adobe Experience Platform Query Service連線的步驟。
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 2%

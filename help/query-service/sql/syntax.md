@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；sql語法；sql;ctas;CTAS；建立表作為選擇
 solution: Experience Platform
 title: 查詢服務中的SQL語法
-topic-legacy: syntax
 description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 2%

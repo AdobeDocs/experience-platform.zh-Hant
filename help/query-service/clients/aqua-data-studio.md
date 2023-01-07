@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務； Aqua Data Studio; Aqua Data Studio；連接到查詢服務；
 solution: Experience Platform
 title: 將Aqua Data Studio連接到Query Service
-topic-legacy: connect
 description: 本檔案會逐步說明將Aqua Data Studio與Adobe Experience Platform Query Service連線的步驟。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%

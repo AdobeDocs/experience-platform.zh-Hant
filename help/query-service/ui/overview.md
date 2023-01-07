@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢編輯器；查詢編輯器；查詢編輯器；
 solution: Experience Platform
 title: Query Service UI指南
-topic-legacy: guide
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b6862dd3bb770df4a1549275f911dd81a178002
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%

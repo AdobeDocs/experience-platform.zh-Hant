@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢
 solution: Experience Platform
 title: 查詢服務API指南
-topic-legacy: query templates
 description: 查詢服務API可讓開發人員使用標準SQL查詢其Adobe Experience Platform資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
-source-git-commit: 9f458a327c0b72a5984161f13f02d09b7a2e610e
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 5%

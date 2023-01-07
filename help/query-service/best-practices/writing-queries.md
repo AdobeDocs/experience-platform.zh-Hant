@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢；寫入查詢；寫入查詢；
 solution: Experience Platform
 title: 查詢服務中查詢執行的一般指南
-topic-legacy: queries
 type: Tutorial
 description: 本檔案概述在Adobe Experience Platform Query Service中撰寫查詢時須知的重要詳細資訊。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 9c450f340706040593dfea5292702c4b00dd9852
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 3%

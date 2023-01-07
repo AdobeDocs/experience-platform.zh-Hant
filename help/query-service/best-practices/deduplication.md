@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；重複資料刪除；重複資料刪除；
 solution: Experience Platform
 title: 查詢服務中的重複資料刪除
-topic-legacy: queries
 type: Tutorial
 description: 本檔案概述子選取和完整的查詢範例，以刪除重複的三個常見使用案例：體驗事件、購買和量度。
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 0%

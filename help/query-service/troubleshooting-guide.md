@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；疑難排解指南；faq；疑難排解；
 solution: Experience Platform
 title: 查詢服務疑難排解指南
-topic-legacy: troubleshooting
 description: 本檔案包含與Query Service相關的常見問題和解答。 主題包括：匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 491aadf161bd822cb40a5ef5dd107831bca1d2c4
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；已準備語句；已準備；sql;
 solution: Experience Platform
 title: 查詢服務中已準備的語句
-topic-legacy: prepared statements
 description: 在SQL中，準備語句用於模板類似的查詢或更新。 Adobe Experience Platform Query Service使用參數化查詢支援已準備的陳述式。
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 11%

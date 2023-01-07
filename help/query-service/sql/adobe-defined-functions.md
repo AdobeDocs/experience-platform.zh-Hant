@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；adobe定義的函式；sql;
 solution: Experience Platform
 title: Adobe定義的SQL函式在Query Service中
-topic-legacy: functions
 description: 本檔案提供Adobe Experience Platform Query Service中可用之Adobe定義函式的資訊。
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1486'
 ht-degree: 3%

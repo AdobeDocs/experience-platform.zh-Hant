@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；產生資料集；產生資料集；建立資料集；
 solution: Experience Platform
 title: 從查詢服務中的結果生成資料集
-topic-legacy: queries
 type: Tutorial
 description: Adobe Experience Platform Query Service可從UI建立資料集。 建立資料集後，您就可以像「資料湖」中的其他資料集一樣存取該資料集，並用於各種使用案例。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%

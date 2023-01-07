@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；Power BI;power bi；連線至查詢服務；
 solution: Experience Platform
 title: 將Power BI連接到查詢服務
-topic-legacy: connect
 description: 本檔案會逐步說明將Power BI與Adobe Experience Platform Query Service連線的步驟。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 1%

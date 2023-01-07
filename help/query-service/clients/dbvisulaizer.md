@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；資料庫視覺效果；資料庫視覺效果；資料庫視覺效果；連線至查詢服務；
 solution: Experience Platform
 title: 將DbVisualizer連接到查詢服務
-topic-legacy: connect
 description: 本檔案會逐步說明將DbVisualizer與Adobe Experience Platform Query Service連線的步驟。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 7d38488c204e28c9cfd8ea50c06f1ce781d76c59
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 1%

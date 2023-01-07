@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；RStudio;rstudio；連線至查詢服務；
 solution: Experience Platform
 title: 將RStudio連接到查詢服務
-topic-legacy: connect
 description: 本檔案將逐步說明將R Studio與Adobe Experience Platform Query Service連接的步驟。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查找者；查找者；連接到查詢服務；
 solution: Experience Platform
 title: 將登錄程式連接到查詢服務
-topic-legacy: connect
 description: 本檔案會逐步說明連接Looker與Adobe Experience Platform Query Service的步驟。
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%

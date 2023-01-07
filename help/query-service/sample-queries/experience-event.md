@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；體驗事件查詢；體驗事件查詢；體驗事件查詢；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；體驗事件查詢；體驗事件查詢；體驗事件查詢；體驗事件查詢；
 solution: Experience Platform
-title: 體驗事件的示例查詢
-topic-legacy: queries
+title: 體驗事件的查詢範例
 type: Tutorial
-description: 以下文檔提供了涉及Adobe Experience Platform查詢服務中的體驗事件的查詢示例。
+description: 下列檔案提供與Adobe Experience Platform Query Service中的Experience Events有關的查詢範例。
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-source-git-commit: d79d466602d77f8a3eb1162ee67572973b3e08c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
 
 ---
 
-# 查詢示例 [!DNL Experience Events]
+# 的查詢範例 [!DNL Experience Events]
 
-除標準SQL查詢外，Adobe Experience Platform [!DNL Query Service] 支援編寫查詢使用 [!DNL Experience Events]。 體驗事件由體驗資料模型(XDM)ExperienceEvent類表示，該類在用戶與網站或服務交互時捕獲系統的不可改變和非聚合快照，因此可用於時域分析。
+除了標準SQL查詢外，Adobe Experience Platform [!DNL Query Service] 支援使用 [!DNL Experience Events]. 體驗事件由Experience Data Model(XDM)ExperienceEvent類別表示，該類別會在使用者與網站或服務互動時擷取系統的不可變和非匯總快照，因此可用於時域分析。
 
-有關XDM和 [!DNL Experience Events] 在 [[!DNL XDM System] 概述](../../xdm/home.md)。 通過組合 [!DNL Query Service] 與 [!DNL Experience Events]，您可以有效跟蹤用戶間的行為趨勢。 以下文檔提供了涉及 [!DNL Experience Events]。
+XDM和 [!DNL Experience Events] 可在 [[!DNL XDM System] 概述](../../xdm/home.md). 結合 [!DNL Query Service] with [!DNL Experience Events]，您就可以有效追蹤使用者的行為趨勢。 以下文檔提供了涉及 [!DNL Experience Events].
 
-## 在特定日期範圍內按天建立事件趨勢報告
+## 在特定日期範圍內依日期建立事件趨勢報表
 
-下面的示例建立按日期分組的指定日期範圍內事件的趨勢報告。 具體來說，它將各種分析值匯總為A、B和C，然後總結已查看parkas的次數。
+下列範例會建立指定日期範圍內事件的趨勢報表，並依日期分組。 具體來說，它會加總A、B和C等各種分析值，然後加總檢視parka的次數。
 
-在中找到的時間戳列 [!DNL Experience Event] 資料集位於UTC中。 以下示例使用 `from_utc_timestamp()` 函式將時間戳從UTC轉換為EDT。 然後，它使用 `date_format()` 函式將日期與時間戳的其餘部分隔離。
+在中找到的時間戳記欄 [!DNL Experience Event] 資料集以UTC為單位。 下列範例使用 `from_utc_timestamp()` 函式，將時間戳記從UTC轉換為EDT。 接著會使用 `date_format()` 函式可將日期與其餘的時間戳記隔離。
 
 ```sql
 SELECT 
@@ -81,9 +80,9 @@ ORDER BY Day ASC, pageViews DESC;
  (31 rows)
 ```
 
-## 正在檢索按頁面視圖陣列織的訪問者清單。
+## 擷取依頁面檢視次數排序的訪客清單。
 
-以下示例建立一個報告，其中列出了已查看最多頁面的用戶的ID。
+下列範例會建立報表，列出檢視次數最多頁面之使用者的ID。
 
 ```sql
 SELECT 
@@ -111,9 +110,9 @@ LIMIT 10;
 (10 rows)
 ```
 
-## 重播訪問者會話
+## 重播訪客的工作階段
 
-以下示例列出了指定用戶已查看的最後100頁。
+下列範例列出指定使用者檢視的最近100個頁面。
 
 
 ```sql
@@ -157,9 +156,9 @@ LIMIT 100;
 2019-11-08 20:14:05.0 | typed_bookmark |                                                                    | Seasonal Sale                       |     |     |     |          1.0
 ```
 
-## 查看訪問者的匯總報告
+## 檢視訪客的統計報表
 
-以下示例顯示了指定用戶的各種分析值的聚合報告。
+下列範例顯示指定使用者各種分析值的匯總報表。
 
 ```sql
 SELECT 
@@ -188,4 +187,4 @@ ORDER BY pageViews DESC;
 
 ## 後續步驟
 
-有關使用Adobe定義函式(ADF)的示例查詢的詳細資訊，請閱讀Adobe定義函式指南。 有關查詢執行的一般指導，請閱讀 [查詢服務中查詢執行指南](../best-practices/writing-queries.md)。
+有關使用Adobe定義函式(ADF)的示例查詢的詳細資訊，請參閱Adobe定義函式指南。 有關查詢執行的一般指南，請閱讀 [查詢服務中查詢執行的指南](../best-practices/writing-queries.md).

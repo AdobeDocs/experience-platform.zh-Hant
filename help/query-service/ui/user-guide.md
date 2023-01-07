@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢編輯器；查詢編輯器；查詢服務；查詢服務；
 solution: Experience Platform
 title: 查詢編輯器UI指南
-topic-legacy: query editor
 description: 查詢編輯器是Adobe Experience Platform Query Service提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和探索資料，並可讓您執行互動式查詢以供開發之用，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 9d543b5c7c7f39e809b6a13b8adc46b9a99f51c7
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '2100'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；貼文；貼文；連線至查詢服務；
 solution: Experience Platform
 title: 將Postico連接到Query Service
-topic-legacy: connect
 description: 本檔案包含安裝Adobe Experience Platform Query Service備份用戶端Postico的連結。
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 0%
