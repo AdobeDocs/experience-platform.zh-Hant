@@ -1,9 +1,10 @@
 ---
 title: 中繼像素擴充功能概觀
 description: 了解Adobe Experience Platform中的Meta Pixel標籤擴充功能。
-source-git-commit: a47e35a1b8c7ce2b0fa4ffe30fcdc7d22fc0f4c5
+exl-id: c5127bbc-6fe7-438f-99f1-6efdbe7d092e
+source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,11 @@ ht-degree: 0%
 
 此 [!DNL Meta Pixel] 標籤擴充功能可讓您運用 [!DNL Pixel] 功能。 本檔案說明如何安裝擴充功能，並在 [規則](../../../ui/managing-resources/rules.md).
 
->[!NOTE]
->
->如果您嘗試將伺服器端事件傳送至 [!DNL Meta] 而非從用戶端，請使用 [[!DNL Meta Conversions API] 擴充功能](../../server/meta/overview.md) 。
-
 ## 先決條件
 
 若要使用擴充功能，您必須具備有效 [!DNL Meta] 有權存取的帳戶 [!DNL Ads Manager]. 具體來說，您必須 [建立新 [!DNL Meta Pixel]](https://www.facebook.com/business/help/952192354843755) 複製 [!DNL Pixel ID] 這樣擴充功能就能設定至您的帳戶。 如果您已有 [!DNL Meta Pixel]，您可以改用其ID。
+
+強烈建議使用 [!DNL Meta Pixel] 與 [!DNL Meta Conversions API] 分別從用戶端和伺服器端共用和傳送相同事件，因為這可能有助於復原未擷取的事件 [!DNL Meta Pixel]. 請參閱 [[!DNL Meta Conversions API] 事件轉送擴充功能](../../client/meta/overview.md) 以了解如何將其整合至伺服器端實作的步驟。 請注意，您的組織必須擁有 [事件轉送](../../../ui/event-forwarding/overview.md) 以使用伺服器端擴充功能。
 
 ## 安裝擴充功能
 
@@ -36,7 +35,7 @@ ht-degree: 0%
 >
 >使用資料元素可讓您選擇動態變更 [!DNL Pixel] 視其他因素（例如建置環境）而使用的ID。 請參閱附錄一節 [使用不同 [!DNL Pixel] 不同環境的ID](#id-data-element) 以取得更多資訊。
 
-您也可以選擇提供事件ID以與擴充功能建立關聯。 這可用來去除 [!DNL Meta Pixel] 和 [!DNL Meta Conversions API]. 請參閱 [!DNL Meta] 檔案 [處理重複 [!DNL Pixel] 和 [!DNL Conversions API] 事件](https://developers.facebook.com/docs/marketing-api/conversions-api/deduplicate-pixel-and-server-events/) 以取得詳細資訊。
+您也可以選擇提供事件ID以與擴充功能建立關聯。 這可用來去除 [!DNL Meta Pixel] 和 [!DNL Meta Conversions API]. 如需詳細資訊，請參閱 [事件去重複化](../../server/meta/overview.md#event-deduplication) 在 [!DNL Conversions API] 擴充功能。
 
 完成後，請選取 **[!UICONTROL 儲存]**
 
@@ -64,7 +63,9 @@ ht-degree: 0%
 
 ## 後續步驟
 
-本指南說明如何將資料傳送至 [!DNL Meta] 使用 [!DNL Meta Pixel] 標籤擴充功能。 如需Experience Platform中標籤的詳細資訊，請參閱 [標籤概述](../../../home.md).
+本指南說明如何將資料傳送至 [!DNL Meta] 使用 [!DNL Meta Pixel] 標籤擴充功能。 如果您也打算將伺服器端事件傳送至 [!DNL Meta]，您現在可以繼續安裝及設定 [[!DNL Conversions API] 事件轉送擴充功能](../../server/meta/overview.md).
+
+如需Experience Platform中標籤的詳細資訊，請參閱 [標籤概述](../../../home.md).
 
 ## 附錄：使用不同 [!DNL Pixel] 不同環境的ID {#id-data-element}
 
@@ -77,4 +78,3 @@ ht-degree: 0%
 ```js
 return (turbine.environment.stage === "production" ? 'exampleProductionKey' : 'exampleTestKey');
 ```
-
