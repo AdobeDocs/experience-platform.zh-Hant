@@ -7,12 +7,12 @@ user-guide-description: 使用智慧型人工智慧服務，從行銷事件資�
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 24%
+ht-degree: 26%
 
 ---
 
 
-# AdobeIntelligent Services {#intelligent-services}
+# Adobe Intelligent Services {#intelligent-services}
 
 - [Intelligent Services概觀](home.md)
 - [準備資料以用於Intelligent Services](data-preparation.md)

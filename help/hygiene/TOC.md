@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: 資料保健說明
 breadcrumb-title: 資料保健指南
-user-guide-description: 刪除個別記錄，並排程資料集到期日，以Experience Platform進行資料清理、移除匿名資料，以及將資料最小化。
+user-guide-description: 在 Experience Platform 中刪除個別記錄並排定資料集有效日期，以進行資料清理、匿名資料移除及資料最小化。
 feature: Data Hygiene
 source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
 workflow-type: tm+mt
 source-wordcount: '52'
-ht-degree: 15%
+ht-degree: 51%
 
 ---
 

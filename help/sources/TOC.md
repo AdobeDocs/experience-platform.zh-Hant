@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
 workflow-type: tm+mt
 source-wordcount: '860'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -106,7 +106,7 @@ ht-degree: 11%
       - [HTTP API連接器](connectors/streaming/http.md)
 - API教學課程 {#api-tutorials}
    - 建立基本連接 {#create}
-      - 廣告 {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
@@ -118,7 +118,7 @@ ht-degree: 11%
          - [Azure資料湖儲存Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure事件中心](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure檔案儲存](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [資料登陸區](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -213,7 +213,7 @@ ht-degree: 11%
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
-      - 廣告 {#advertising}
+      - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
@@ -225,7 +225,7 @@ ht-degree: 11%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure事件中心](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure檔案儲存](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [資料登陸區](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
@@ -245,7 +245,7 @@ ht-degree: 11%
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [曾代克](tutorials/ui/create/customer-success/zendesk.md)
       - 資料庫 {#databases}
-         - [Amazon紅移](tutorials/ui/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsights上的Apache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsights上的Apache Spark](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)

@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP; CDP;Real-time Customer Data Platform；即時客戶資料平台；real time cdp;cdp;rtcdp
 title: Real-time Customer Data Platform B2B版的範例使用案例
-description: 此範例案例提供您實作Adobe Real-time Customer Data Platform B2B Edition的設定範例。
+description: 此範例情境提供您實作 Adobe Real-Time Customer Data Platform B2B Edition 設定的範例。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1135'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 

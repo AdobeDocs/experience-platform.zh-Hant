@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: 即時客戶個人檔案指南
+user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 

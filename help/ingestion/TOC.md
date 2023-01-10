@@ -21,7 +21,7 @@ ht-degree: 25%
    - [疑難排解](streaming-ingestion/troubleshooting.md)
 - 批次擷取{#batch}
    - [批次內嵌API快速入門](batch-ingestion/getting-started.md)
-   - [API 總覽](batch-ingestion/overview.md)
+   - [API 概觀](batch-ingestion/overview.md)
    - [API開發人員指南](batch-ingestion/api-overview.md)
    - [部分批次內嵌](batch-ingestion/partial.md)
    - [疑難排解](batch-ingestion/troubleshooting.md)

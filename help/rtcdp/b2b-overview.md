@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP; CDP;B2B Edition;Real-time Customer Data Platform；即時客戶資料平台；即時cdp;b2b; CDP；客戶AI
 title: Real-Time CDP B2B版概述
-description: Real-time Customer Data Platform B2B版帳戶概觀
+description: Real-Time Customer Data Platform B2B Edition 帳戶總覽
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '1084'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

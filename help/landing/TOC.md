@@ -15,7 +15,7 @@ ht-degree: 26%
 
 * [平台概觀](home.md)
 * [平台概述（影片）](video/platform-overview.md)
-* [Platform教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant)
+* [Platform教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [由Platform提供技術支援的客戶體驗（影片）](video/customer-experience.md)
 * [由Platform提供技術支援的客戶體驗的幕後（影片）](video/customer-experience-bts.md)
 * 快速入門 {#getting-started}
@@ -43,7 +43,7 @@ ht-degree: 26%
    * [Adobe Real-time Customer Data Platform（所有版本）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [應用程式與智慧服務（影片）](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=zh-Hant)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [平台與Experience Cloud的整合（影片）](video/experience-cloud-integrations.md)
 * 控管、隱私權和安全性 {#governance-privacy-security}
