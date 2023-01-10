@@ -2,10 +2,10 @@
 title: Adobe MediumAnalytics(3.x SDK)for Audio and Video擴充功能概述
 description: 了解Adobe Experience Platform中的Adobe MediumAnalytics(3.x SDK)for Audio and Video標籤擴充功能。
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 76%
+source-wordcount: '752'
+ht-degree: 74%
 
 ---
 
@@ -24,7 +24,7 @@ Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SD
 
 >[!IMPORTANT]
 >
->此擴充功能會與 Media 3.x SDK 一併部署，且無法向下相容於 Media 2.x SDK。如果您的頁面已使用 Media 2.x SDK，請改用 [Adobe Media Analytics for Audio and Video Extension](../media-analytics/overview.md)，而非此擴充功能。
+>此擴充功能會與 Media 3.x SDK 一併部署，且無法向下相容於 Media 2.x SDK。自2.x已淘汰，請更新至3.x。
 
 在您的標籤啟用專案中納入上述的三個擴充功能後，您可以透過下列兩種方式之一繼續操作：
 
