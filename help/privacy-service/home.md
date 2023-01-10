@@ -2,17 +2,16 @@
 keywords: Experience Platform；首頁；熱門主題；GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Privacy Service概述
-topic-legacy: overview
 description: Privacy Service可讓您在Experience Cloud資料操作中，自動遵循法律隱私權法規。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
-# [!DNL Privacy Service] 概觀
+# [!DNL Privacy Service] 概覽
 
 為了提供更好的客戶體驗，您需要收集和儲存客戶的個人資料。 使用此資料時，請務必了解並尊重客戶的隱私。 新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。
 
@@ -39,7 +38,7 @@ Adobe Experience Platform [!DNL Privacy Service] 是因應企業管理其客戶�
 
 ### 決定貴組織的隱私權要求 {#requirements}
 
-根據您的業務性質及其運營所在的司法管轄區，您的資料操作可能受法律隱私權法規的約束。 這些法規通常會授予您的客戶請求存取您從他們收集的資料的權利，以及請求刪除該儲存資料的權利。 在整個檔案中，這些客戶對其個人資料的請求稱為「隱私權請求」。
+根據您的業務性質及其營運的管轄區，您的資料作業可能受法律隱私權法規的約束。 這些法規通常授予權利給您的客戶，讓他們可請求存取您自他們那裡收集的資料，以及請求您刪除該筆儲存資料。 在整個檔案中，這些客戶對其個人資料的請求稱為「隱私權請求」。
 
 如需詳細了解 [!DNL Privacy Service] 管理的請求，包括主要術語和常見問題的解答，請參閱 [隱私權法規檔案](./regulations/overview.md).
 

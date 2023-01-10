@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；啟用設定檔；啟用設定檔
 title: 新增資料至即時客戶個人檔案
-topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程概述將資料新增至即時客戶設定檔的必要步驟。
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；GDPR;GDPR;CCPA;PDPA;PDPA;LGPD;lgpd；概觀；規範；規範；規範；規範；隱私權；隱私權；
 solution: Experience Platform
 title: 隱私權法規概觀
-topic-legacy: troubleshooting
 description: 本檔案概述Adobe Experience Cloud支援的不同隱私權法規。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%

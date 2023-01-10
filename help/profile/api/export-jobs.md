@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
 title: 配置檔案導出作業API端點
-topic-legacy: guide
 type: Documentation
 description: 即時客戶設定檔可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，以建立Adobe Experience Platform中個別客戶的單一檢視。 接著，可將設定檔資料匯出至資料集以進一步處理。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1519'
 ht-degree: 2%

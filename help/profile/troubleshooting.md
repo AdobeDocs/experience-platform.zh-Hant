@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
 title: 即時客戶個人檔案疑難排解指南
-topic-legacy: guide
 type: Documentation
 description: 本檔案提供關於即時客戶設定檔常見問題的解答，以及使用Adobe Experience Platform處理設定檔資料時常見錯誤的疑難排解指南。
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%

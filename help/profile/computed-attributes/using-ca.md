@@ -1,11 +1,9 @@
 ---
-keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API
-title: 在平台中使用計算屬性
-topic-legacy: guide
+keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
+title: 在Platform中使用計算屬性
 type: Documentation
-description: '計算屬性是將事件級別資料聚合到配置檔案級別屬性的函式。 這些函式會自動計算，以便跨區段、啟動和個人化使用。 '
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+description: 計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 12%
@@ -17,4 +15,4 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->計算屬性功能目前位於alpha值中，並非所有使用者都能使用。 文件和功能可能會有所變更。
+>計算屬性功能當前位於Alpha中，不適用於所有用戶。 文件和功能可能會有所變更。

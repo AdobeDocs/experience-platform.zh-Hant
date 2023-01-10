@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
 title: 實體（設定檔存取）API端點
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您使用RESTful API或使用者介面來存取即時客戶設定檔資料。 本指南概述如何使用設定檔API存取實體（通常稱為「設定檔」）。
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1732'
 ht-degree: 1%

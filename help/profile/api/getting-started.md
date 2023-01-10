@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
 title: 即時客戶設定檔API快速入門
-topic-legacy: guide
 type: Documentation
 description: 設定檔API快速入門手冊概述使用即時客戶設定檔API端點，對設定檔資料執行基本CRUD作業時需知的重要概念和基本功能。
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%

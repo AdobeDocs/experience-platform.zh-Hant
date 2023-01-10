@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
 title: 邊緣投影API端點
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform可讓您透過讓適當的資料隨時可用並持續更新，為跨多個管道的客戶即時提供協調、一致且個人化的體驗。 這是通過使用邊來完成的，邊是一個按地理位置放置的伺服器，它儲存資料，使應用程式可以輕鬆訪問。
 exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1959'
 ht-degree: 2%

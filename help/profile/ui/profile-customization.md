@@ -2,9 +2,8 @@
 keywords: Experience Platform；設定檔；即時客戶設定檔；使用者介面；UI；自訂；設定檔詳細資訊；詳細資訊
 title: UI中的設定檔詳細資料自訂
 description: 本指南提供逐步指示，自訂即時客戶設定檔資料在Adobe Experience Platform UI中的顯示方式。
-topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 0%

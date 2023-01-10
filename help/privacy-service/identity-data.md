@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；ECID;ecid
 solution: Experience Platform
 title: 隱私權要求的身分資料
-topic-legacy: overview
 description: 本檔案提供如何設定資料操作及運用Adobe技術，以有效擷取適當客戶隱私權要求身分資訊的一般指引。
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 2%
