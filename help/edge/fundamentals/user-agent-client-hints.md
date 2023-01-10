@@ -2,13 +2,13 @@
 title: 用戶代理客戶端提示
 description: 了解Web SDK中的使用者代理用戶端提示如何運作
 keywords: 用戶代理；客戶端提示；字串；用戶代理字串；低熵；高熵
-source-git-commit: 6c974d1a646ff1f3a8f7ad9d67a6840391fc739e
+exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
+source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1065'
 ht-degree: 6%
 
 ---
-
 
 # 用戶代理客戶端提示
 
@@ -116,13 +116,7 @@ Web SDK預設會停用高熵用戶端提示。 要啟用它們，您必須手動
 
 ### Adobe Analytics報告依賴於高熵客戶端提示 {#analytics}
 
-禁用高熵客戶端提示時，以下Adobe Analytics報告將無法工作。
-
-* [瀏覽器](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser.html)
-* [瀏覽器類型](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)
-* [作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html)
-* [作業系統類型](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)
-* [行動維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html)
+此 [作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) 維包括作為高熵客戶端提示儲存的作業系統版本。 如果未啟用高熵客戶端提示，從Chromium瀏覽器收集的點擊可能不準確的作業系統版本。
 
 ### Audience Manager特徵依賴於高熵客戶端提示 {#aam}
 
