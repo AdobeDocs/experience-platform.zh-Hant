@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料控管；資料使用量標籤api；原則服務api；支援的資料使用量標籤；合約標籤；身分標籤；敏感標籤
 solution: Experience Platform
 title: 資料使用量標籤字彙表
-topic-legacy: labels
 description: 本檔案概述Adobe Experience Platform目前支援的所有資料使用量標籤。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料控管；資料使用標籤api；原則服務api；資料使用標籤概觀
 solution: Experience Platform
 title: 資料使用量標籤概述
-topic-legacy: labels
 description: 了解如何使用資料使用量標籤來協助在Adobe Experience Platform中強制執行資料控管法規遵循。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%

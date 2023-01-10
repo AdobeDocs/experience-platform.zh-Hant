@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；原則執行；自動執行；API型執行；資料控管
 solution: Experience Platform
 title: 自動策略實施
-topic-legacy: guide
 description: 本檔案說明在Experience Platform中將區段啟用至目的地時，如何自動強制執行資料使用原則。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%

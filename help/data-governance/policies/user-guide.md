@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料控管；資料使用原則使用指南
 solution: Experience Platform
 title: 在UI中管理資料使用原則
-topic-legacy: policies
 description: Adobe Experience Platform資料控管提供的使用者介面可讓您建立和管理資料使用原則。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1411'
 ht-degree: 0%

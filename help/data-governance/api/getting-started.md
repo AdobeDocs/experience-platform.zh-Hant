@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；DULE;DULE
 solution: Experience Platform
 title: 策略服務API快速入門
-topic-legacy: developer guide
 description: Policy Service API允許您建立和管理與Adobe Experience Platform Data Governance相關的各種資源。 本文檔介紹了在嘗試調用策略服務API之前需要知道的核心概念。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%

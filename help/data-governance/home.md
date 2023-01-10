@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；DULE;DULE
 solution: Experience Platform
 title: 資料控管概述
-topic-legacy: overview
 description: Adobe Experience Platform資料控管可讓您管理客戶資料，並確保符合適用於資料使用的法規、限制和政策。 它在Experience Platform的各個層級中都扮演著關鍵角色，包括編目、資料處理、資料使用標籤、資料使用策略，以及控制資料在行銷活動中的使用
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%

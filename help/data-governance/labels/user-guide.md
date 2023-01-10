@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料控管；資料使用標籤；原則服務；資料使用標籤使用指南
 solution: Experience Platform
 title: 在UI中管理資料使用量標籤
-topic-legacy: labels
 description: 本指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用量標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%

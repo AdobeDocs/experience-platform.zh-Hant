@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；原則執行；API型執行；資料控管
 solution: Experience Platform
 title: 資料控管原則API端點
-topic-legacy: developer guide
 description: 資料控管原則是貴組織採用的規則，可說明您可在Experience Platform內對資料執行或受限制的行銷動作類型。 /policys端點用於與檢視、建立、更新或刪除資料控管原則相關的所有API呼叫。
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1865'
 ht-degree: 2%

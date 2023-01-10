@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；原則執行；自動執行；API型執行；資料控管
 solution: Experience Platform
 title: 策略評估API端點
-topic-legacy: developer guide
 description: 建立了行銷操作並定義了策略後，您可以使用策略服務API來評估某些操作是否違反了任何策略。 傳回的限制會採取一組原則的形式，這些原則會因為嘗試對包含資料使用標籤的指定資料執行行銷動作而遭到違反。
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 1%

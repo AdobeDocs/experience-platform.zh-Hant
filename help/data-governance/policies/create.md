@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；資料控管；資料使用原則
 solution: Experience Platform
 title: 在API中建立資料控管原則
-topic-legacy: policies
 type: Tutorial
 description: 了解如何使用Policy Service API建立資料控管原則。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 2%

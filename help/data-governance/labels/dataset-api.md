@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料集api；管理資料使用情況；資料使用api
 solution: Experience Platform
 title: 使用API管理資料集的資料使用量標籤
-topic-legacy: developer guide
 description: 資料集服務API可讓您套用及編輯資料集的使用量標籤。 此API是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的目錄服務API不同。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 7e4c2ef8089276829604c9d8a8dd20a122b18c7a
+source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 1%
