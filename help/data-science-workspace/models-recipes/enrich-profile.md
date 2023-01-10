@@ -2,11 +2,10 @@
 keywords: Experience Platform；機器學習模型；Data Science Workspace；即時客戶設定檔；熱門主題；機器學習深入分析
 solution: Experience Platform
 title: 透過機器學習深入分析，豐富即時客戶設定檔
-topic-legacy: tutorial
 type: Tutorial
 description: 本檔案提供如何透過機器學習深入分析，讓即時客戶設定檔更加豐富的指南。
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%

@@ -1,75 +1,73 @@
 ---
-keywords: Experience Platform；教學課程；功能管線；資料科學工作區；熱門主題
-title: 使用模型編寫SDK建立功能管線
-topic-legacy: tutorial
+keywords: Experience Platform；教學課程；功能管道；Data Science Workspace；熱門主題
+title: 使用模型編寫SDK建立功能管道
 type: Tutorial
-description: Adobe Experience Platform允許您建立和建立自訂功能管道，以透過Sensei機器學習架構執行時期大規模執行功能工程。 本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的「模型編寫SDK」建立自訂功能管道的逐步教學課程。
+description: Adobe Experience Platform可讓您建置和建立自訂功能管道，以透過Sensei機器學習架構執行階段大規模執行功能工程。 本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的「模型編寫SDK」建立自訂功能管道的逐步教學課程。
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 0%
 
 ---
 
-# 使用「模型編寫SDK」建立功能管線
+# 使用模型編寫SDK建立功能管道
 
 >[!IMPORTANT]
 >
-> 功能管道目前僅透過API提供。
+> 功能管道目前僅可透過API使用。
 
-Adobe Experience Platform可讓您建立和建立自訂功能管道，以透過Sensei機器學習架構執行時期（以下稱為「執行時期」）大規模執行功能工程。
+Adobe Experience Platform可讓您建立和建立自訂功能管道，以透過Sensei機器學習架構執行階段（以下稱為「執行階段」）大規模執行功能工程。
 
-本檔案說明在功能管道中找到的各種類別，並提供使用PySpark中的[Model Authoring SDK](./sdk.md)建立自訂功能管道的逐步教學課程。
+本檔案說明在功能管道中找到的各種類別，並提供逐步教學課程，說明如何使用 [模型編寫SDK](./sdk.md) 在PySpark里。
 
-在運行特徵管線時，會發生以下工作流：
+執行功能管道時會發生下列工作流程：
 
-1. 方式會將資料集載入管線。
-2. 在資料集上進行特徵轉換並寫回Adobe Experience Platform。
-3. 所轉換的資料被載入用於訓練。
-4. 特徵流水線以梯度提升回歸器為模型定義各階段。
-5. 該管道用於擬合訓練資料，並建立訓練模型。
-6. 利用計分資料集對模型進行了轉換。
-7. 然後，選擇輸出的有趣列，並將其與相關資料保存回[!DNL Experience Platform]。
+1. 方式會將資料集載入管道。
+2. 功能轉換會在資料集上完成，並寫回Adobe Experience Platform。
+3. 所轉換的資料被載入以進行訓練。
+4. 特徵管線以梯度提升回歸器作為所選模型來定義階段。
+5. 管道用於擬合訓練資料並建立訓練模型。
+6. 模型會與計分資料集一起轉換。
+7. 接著，會選取輸出的有趣欄，並儲存回 [!DNL Experience Platform] 關聯資料。
 
 ## 快速入門
 
-要在任何組織中運行處方，必須執行以下操作：
+要在任何組織中運行處方，需要執行以下操作：
 - 輸入資料集。
-- 資料集的架構。
-- 轉換的模式和基於該模式的空資料集。
-- 輸出模式和基於該模式的空資料集。
+- 資料集的結構。
+- 已轉換的結構和以該結構為基礎的空資料集。
+- 輸出結構和以該結構為基礎的空白資料集。
 
-上述所有資料集都必須上傳至[!DNL Platform] UI。 要設定此設定，請使用Adobe提供的[引導指令碼](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)。
+上述所有資料集都必須上傳至 [!DNL Platform] UI。 若要設定，請使用Adobe提供的 [引導指令碼](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
 ## 特徵管線類
 
-下表說明了為了構建特徵管線而必須擴展的主要抽象類：
+下表介紹了為構建特徵管線而必須擴展的主要抽象類：
 
 | 抽象類 | 說明 |
 | -------------- | ----------- |
-| DataLoader | DataLoader類提供了用於檢索輸入資料的實現。 |
-| DatasetTransformer | DatasetTransformer類提供轉換輸入資料集的實現。 您可以選擇不提供DatasetTransformer類別，並改為在FeaturePipelineFactory類別中實作您的功能工程邏輯。 |
-| FeaturePipelineFactory | FeaturePipelineFactory類別會建立Spark Pipeline，由一系列Spark Pronders組成，以執行功能工程。 您可以選擇不提供FeaturePipelineFactory類別，並改為在DatasetTransformer類別中實作您的功能工程邏輯。 |
-| DataSaver | DataSaver類提供儲存特徵資料集的邏輯。 |
+| DataLoader | DataLoader類提供用於檢索輸入資料的實現。 |
+| DatasetTransformer | DatasetTransformer類別提供實施以轉換輸入資料集。 您可以選擇不提供DatasetTransformer類別，並改為在FeaturePipelineFactory類別中實作您的功能工程邏輯。 |
+| FeaturePipelineFactory | FeaturePipelineFactory類構建由一系列火花變壓器組成的火花管線，以執行特徵工程。 您可以選擇不提供FeaturePipelineFactory類別，並改為在DatasetTransformer類別中實作您的功能工程邏輯。 |
+| DataSaver | DataSaver類提供用於儲存功能資料集的邏輯。 |
 
-啟動「功能管線」工作時，執行階段會先執行DataLoader，將輸入資料載入為DataFrame，然後執行DatasetTransformer、FeaturePipelineFactory或兩者皆執行，以修改DataFrame。 最後，產生的功能資料集會透過DataSaver儲存。
+啟動Feature Pipeline作業時，運行時首先執行DataLoader以DataFrame形式載入輸入資料，然後通過執行DatasetTransformer、FeaturePipelineFactory或兩者來修改DataFrame。 最後，生成的功能資料集通過DataSaver儲存。
 
-以下流程圖顯示Runtime的執行順序：
+以下流程圖顯示運行時的執行順序：
 
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## 實作您的功能管線類{#implement-your-feature-pipeline-classes}
+## 實作您的功能管道類別 {#implement-your-feature-pipeline-classes}
 
-以下幾節提供了有關實施「特徵管線」所需類的詳細資訊和示例。
+以下各節提供有關為特徵管線實施所需類的詳細資訊和示例。
 
-### 在設定JSON檔案{#define-variables-in-the-configuration-json-file}中定義變數
+### 在設定JSON檔案中定義變數 {#define-variables-in-the-configuration-json-file}
 
-設定JSON檔案包含索引鍵值配對，供您指定稍後在執行階段中定義的任何變數。 這些索引鍵值配對可定義屬性，例如輸入資料集位置、輸出資料集ID、租用戶ID、欄標題等。
+設定JSON檔案包含機碼值組，供您指定任何變數，以便稍後在執行階段定義。 這些機碼值組可定義屬性，例如輸入資料集位置、輸出資料集ID、租用戶ID、欄標題等。
 
-下面的示例演示在配置檔案中找到的鍵值對：
+下列範例示範在設定檔案中找到的索引鍵值配對：
 
 **設定JSON範例**
 
@@ -95,7 +93,7 @@ Adobe Experience Platform可讓您建立和建立自訂功能管道，以透過S
 ]
 ```
 
-您可以透過任何將`config_properties`定義為參數的類別方法來存取設定JSON。 例如：
+您可以透過定義 `config_properties` 作為參數。 例如：
 
 **PySpark**
 
@@ -103,15 +101,15 @@ Adobe Experience Platform可讓您建立和建立自訂功能管道，以透過S
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-如需更深入的設定範例，請參閱資料科學工作區提供的[pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json)檔案。
+請參閱 [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) Data Science Workspace提供的檔案，以取得更深入的設定範例。
 
-### 使用DataLoader {#prepare-the-input-data-with-dataloader}準備輸入資料
+### 使用DataLoader準備輸入資料 {#prepare-the-input-data-with-dataloader}
 
-DataLoader負責擷取和篩選輸入資料。 您對DataLoader的實作必須擴充抽象類別`DataLoader`，並覆寫抽象方法`load`。
+DataLoader負責檢索和過濾輸入資料。 DataLoader的實施必須擴展抽象類 `DataLoader` 並替代抽象方法 `load`.
 
-下面的示例按ID檢索[!DNL Platform]資料集，並將其作為DataFrame返回，其中資料集ID(`dataset_id`)是配置檔案中定義的屬性。
+下列範例會擷取 [!DNL Platform] 依ID劃分的資料集，並以DataFrame形式傳回，其中的資料集ID(`dataset_id`)是設定檔案中已定義的屬性。
 
-**PySpark範例**
+**PySpark示例**
 
 ```python
 # PySpark
@@ -158,13 +156,13 @@ class MyDataLoader(DataLoader):
     return pd
 ```
 
-### 使用DatasetTransformer {#transform-a-dataset-with-datasettransformer}轉換資料集
+### 使用DatasetTransformer轉換資料集 {#transform-a-dataset-with-datasettransformer}
 
-DatasetTransformer提供用於轉換輸入DataFrame的邏輯，並返回新的衍生DataFrame。 此類可以實施為與FeaturePipelineFactory協作、作為唯一的特徵工程元件，或者選擇不實施此類。
+DatasetTransformer提供用於轉換輸入DataFrame的邏輯，並返回新的派生DataFrame。 可以實施此類，以便與FeaturePipelineFactory協同工作、作為唯一的特徵工程元件工作，或者您可以選擇不實施此類。
 
-下列範例擴充DatasetTransformer類別：
+下列範例會擴充DatasetTransformer類別：
 
-**PySpark範例**
+**PySpark示例**
 
 ```python
 # PySpark
@@ -218,13 +216,13 @@ class MyDatasetTransformer(DatasetTransformer):
         return pd
 ```
 
-### 使用FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}來工程資料功能
+### 使用FeaturePipelineFactory進行工程資料功能 {#engineer-data-features-with-featurepipelinefactory}
 
-FeaturePipelineFactory可讓您透過Spark Pipeline，定義並連結一系列的Spark Prandfors，來建置您的功能工程邏輯。 此類可以實現，以便與DatasetTransformer協作、作為唯一的特徵工程元件，或者選擇不實現此類。
+FeaturePipelineFactory允許您通過Spark Pipeline定義和連結一系列Spark Transportins，以實現您的功能工程邏輯。 可以實施此類，以與DatasetTransformer協作、作為唯一的特徵工程元件工作，或者可以選擇不實施此類。
 
 以下示例擴展了FeaturePipelineFactory類：
 
-**PySpark範例**
+**PySpark示例**
 
 ```python
 # PySpark
@@ -283,13 +281,13 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
         return None
 ```
 
-### 使用DataSaver {#store-your-feature-dataset-with-datasaver}儲存您的功能資料集
+### 使用DataSaver儲存您的功能資料集 {#store-your-feature-dataset-with-datasaver}
 
-DataSaver負責將生成的功能資料集儲存到儲存位置。 DataSaver的實施必須擴展抽象類`DataSaver`並覆蓋抽象方法`save`。
+DataSaver負責將生成的功能資料集儲存到儲存位置。 DataSaver的實施必須擴展抽象類 `DataSaver` 並替代抽象方法 `save`.
 
-下面的示例將DataSaver類擴展到[!DNL Platform]資料集，該類按ID將資料儲存到資料集，其中資料集ID(`featureDatasetId`)和租用戶ID(`tenantId`)是配置中定義的屬性。
+以下示例擴展了DataSaver類，該類將資料儲存到 [!DNL Platform] 資料集，其中資料集ID(`featureDatasetId`)和租用戶ID(`tenantId`)是在設定中定義的屬性。
 
-**PySpark範例**
+**PySpark示例**
 
 ```python
 # PySpark
@@ -351,13 +349,13 @@ class MyDataSaver(DataSaver):
 ```
 
 
-### 在應用程式檔案{#specify-your-implemented-class-names-in-the-application-file}中指定您實作的類別名稱
+### 在應用程式檔案中指定您實作的類名 {#specify-your-implemented-class-names-in-the-application-file}
 
-現在已定義並實施了特徵管線類，您必須在應用程式YAML檔案中指定類的名稱。
+現在，定義和實施了您的功能管道類，必須在應用程式YAML檔案中指定類的名稱。
 
-以下示例指定實現的類名：
+以下示例指定了實現的類名：
 
-**PySpark範例**
+**PySpark示例**
 
 ```yaml
 #Name of the class which contains implementation to get the input data.
@@ -386,56 +384,56 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## 使用API {#create-feature-pipeline-engine-api}建立您的功能管線引擎
+## 使用API建立功能管道引擎 {#create-feature-pipeline-engine-api}
 
-現在，您已經編寫了功能管線，因此需要建立Docker映像，以在[!DNL Sensei Machine Learning] API中調用功能管線端點。 您需要Docker影像URL，才能呼叫功能管線端點。
+現在您已編寫了功能管道，您需要建立Docker影像，以呼叫 [!DNL Sensei Machine Learning] API。 需要Docker影像URL才能調用功能管道端點。
 
 >[!TIP]
 >
->如果您沒有Docker URL，請造訪[將來源檔案封裝至recipe](../models-recipes/package-source-files-recipe.md)教學課程，以取得建立Docker主機URL的逐步逐步說明。
+>如果您沒有Docker URL，請造訪 [將源檔案打包到配方中](../models-recipes/package-source-files-recipe.md) 有關建立Docker主機URL的逐步說明教學課程。
 
-或者，您也可以使用下列Postman系列來協助完成功能管道API工作流程：
+或者，您也可以使用下列Postman集合來協助完成功能管道API工作流程：
 
 https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
-### 建立特徵管線引擎{#create-engine-api}
+### 建立特徵管線引擎 {#create-engine-api}
 
-在您取得Docker影像位置後，您就可以透過對`/engines`執行POST，使用[!DNL Sensei Machine Learning] API建立功能管線引擎](../api/engines.md#feature-pipeline-docker)。 [成功建立功能管線引擎可提供引擎唯一識別碼(`id`)。 請務必先儲存此值，再繼續。
+一旦您找到Docker影像位置，您就可以 [建立特徵管線引擎](../api/engines.md#feature-pipeline-docker) 使用 [!DNL Sensei Machine Learning] API，方法是執行POST `/engines`. 成功建立功能管道引擎可提供引擎唯一識別碼(`id`)。 請務必儲存此值，再繼續。
 
 ### 建立MLInstance {#create-mlinstance}
 
-使用新建立的`engineID`，您需要通過向`/mlInstance`端點發出POST請求來建立MLIstance](../api/mlinstances.md#create-an-mlinstance)。 [成功的回應會傳回包含新建立之MLInstance之詳細資料的裝載，包括其唯一識別碼(`id`)，用於下次API呼叫。
+使用新建立的 `engineID`，您需要 [建立MLIstance](../api/mlinstances.md#create-an-mlinstance) 透過向 `/mlInstance` 端點。 成功的回應會傳回包含新建立MLInstance之詳細資訊的裝載，包括其唯一識別碼(`id`)用於下一個API呼叫。
 
-### 建立實驗{#create-experiment}
+### 建立實驗 {#create-experiment}
 
-接下來，您需要[建立實驗](../api/experiments.md#create-an-experiment)。 若要建立實驗，您必須擁有您的MLIstance唯一識別碼(`id`)，並向`/experiment`端點提出POST要求。 成功的回應會傳回包含新建立之實驗詳細資料的裝載，包括其唯一識別碼(`id`)，用於下一個API呼叫。
+接下來，你需要 [建立實驗](../api/experiments.md#create-an-experiment). 若要建立實驗，您需要有MLIstance唯一識別碼(`id`)，並向 `/experiment` 端點。 成功的回應會傳回包含新建立實驗之詳細資料的裝載，包括其唯一識別碼(`id`)用於下一個API呼叫。
 
-### 指定「實驗」運行功能管線任務{#specify-feature-pipeline-task}
+### 指定「實驗」運行功能管線任務 {#specify-feature-pipeline-task}
 
-建立實驗後，必須將實驗的模式更改為`featurePipeline`。 若要變更模式，請使用`EXPERIMENT_ID`對[`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring)進行額外POST，並在內文中傳送`{ "mode":"featurePipeline"}`以指定功能管線「實驗」執行。
+建立實驗後，您必須將實驗的模式變更為 `featurePipeline`. 若要變更模式，請進行額外的POST [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) 與 `EXPERIMENT_ID` 在屍體上 `{ "mode":"featurePipeline"}` 指定特徵管線「實驗」(Experience)運行。
 
-完成後，請向`/experiments/{EXPERIMENT_ID}`發出GET請求，以擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。[
+完成後，請向 `/experiments/{EXPERIMENT_ID}` to [擷取實驗狀態](../api/experiments.md#retrieve-specific) 並等待實驗狀態更新完成。
 
-### 指定「實驗」運行培訓任務{#training}
+### 指定「實驗」運行培訓任務 {#training}
 
-接下來，您需要[指定培訓執行任務](../api/experiments.md#experiment-training-scoring)。 將POST設定為`experiments/{EXPERIMENT_ID}/runs`，並在主體中將模式設定為`train`，併發送包含培訓參數的一系列任務。 成功的回應會傳回包含所請求實驗詳細資料的裝載。
+接下來，你需要 [指定培訓運行任務](../api/experiments.md#experiment-training-scoring). POST `experiments/{EXPERIMENT_ID}/runs` 在主體中將模式設定為 `train` 併發送包含培訓參數的一系列任務。 成功的回應會傳回包含所請求實驗詳細資訊的裝載。
 
-完成後，請向`/experiments/{EXPERIMENT_ID}`發出GET請求，以擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。[
+完成後，請向 `/experiments/{EXPERIMENT_ID}` to [擷取實驗狀態](../api/experiments.md#retrieve-specific) 並等待實驗狀態更新完成。
 
-### 指定「實驗」運行計分任務{#scoring}
+### 指定「實驗」運行計分任務 {#scoring}
 
 >[!NOTE]
 >
-> 要完成此步驟，您至少需要有一個成功的訓練執行與您的實驗相關聯。
+> 若要完成此步驟，您至少需要有一個與實驗相關聯的成功訓練執行。
 
-成功的訓練執行後，您需要[指定計分執行任務](../api/experiments.md#experiment-training-scoring)。 將POST設為`experiments/{EXPERIMENT_ID}/runs`，並在正文中將`mode`屬性設為&quot;score&quot;。 這會啟動您的計分實驗執行。
+成功的訓練執行後，您需要 [指定計分運行任務](../api/experiments.md#experiment-training-scoring). POST `experiments/{EXPERIMENT_ID}/runs` 在身體里 `mode` 屬性設為「分數」。 這會開始你的計分實驗。
 
-完成後，請向`/experiments/{EXPERIMENT_ID}`發出GET請求，以擷取實驗狀態](../api/experiments.md#retrieve-specific)，並等待實驗狀態更新完成。[
+完成後，請向 `/experiments/{EXPERIMENT_ID}` to [擷取實驗狀態](../api/experiments.md#retrieve-specific) 並等待實驗狀態更新完成。
 
-一旦計分完成，您的功能管道就應該可以運作。
+計分完成後，您的功能管道即可運作。
 
-## 下一步 {#next-steps}
+## 後續步驟 {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-閱讀本檔案後，您已使用「模型編寫SDK」編寫功能管線、建立Docker影像，並使用Docker影像URL來使用[!DNL Sensei Machine Learning] API建立功能管線模型。 您現在可以繼續使用[[!DNL Sensei Machine Learning API]](../api/getting-started.md)大規模轉換資料集和擷取資料功能。
+閱讀本文檔後，您使用模型創作SDK創作了功能管道、建立了Docker影像，並使用Docker影像URL通過使用 [!DNL Sensei Machine Learning] API。 您現在可以繼續轉換資料集，並使用 [[!DNL Sensei Machine Learning API]](../api/getting-started.md).

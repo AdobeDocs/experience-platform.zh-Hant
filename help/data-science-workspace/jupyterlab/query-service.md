@@ -2,11 +2,10 @@
 keywords: Experience Platform;JupyterLab；筆記型電腦；Data Science Workspace；熱門主題；查詢服務
 solution: Experience Platform
 title: Jupyter筆記本中的查詢服務
-topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform可讓您將Query Service整合至JupyterLab作為標準功能，以便在Data Science Workspace中使用結構化查詢語言(SQL)。 本教學課程示範常見使用案例的SQL查詢範例，以探索、轉換和分析Adobe Analytics資料。
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 1%

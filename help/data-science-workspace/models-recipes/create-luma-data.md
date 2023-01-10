@@ -2,11 +2,10 @@
 keywords: Experience Platform;Luma網站資料；Data Science Workspace；熱門主題；訣竅；示範資料；示範網站資料；Luma資料
 solution: Experience Platform
 title: 建立Luma Web結構和資料集
-topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程提供Luma示範傾向模型所需的必要條件和資產。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: f57ca64c34f569f4402cb998af72e1e9022510ca
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%
@@ -17,7 +16,7 @@ ht-degree: 1%
 
 本教學課程提供所有其他必要條件和資產 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 教學課程。 完成後，您和IMS組織將能使用下列結構和資料集。
 
-**方案:**
+**結構描述:**
 
 - Luma網站資料結構
 - 傾向模型分數結果結構

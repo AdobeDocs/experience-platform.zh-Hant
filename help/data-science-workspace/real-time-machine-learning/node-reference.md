@@ -2,10 +2,9 @@
 keywords: Experience Platform；開發人員指南；Data Science Workspace；熱門主題；即時機器學習；節點參考；
 solution: Experience Platform
 title: 即時機器學習節點參考
-topic-legacy: Nodes reference
 description: 節點是圖形形成的基本單元。 每個節點執行特定任務，它們可以通過連結連結在一起，以形成表示ML管道的圖形。 由節點執行的任務表示對輸入資料的操作，如資料或模式的轉換或機器學習推理。 節點將轉換或推斷的值輸出到下一個節點。
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
@@ -132,7 +131,7 @@ msg6 = model_train.process(msg5)
 
 ### Split
 
-使用以下節點將資料幀拆分到訓練中，並通過傳遞進行測試 `train_size` 或 `test_size`. 這會傳回具有多索引的資料幀。 您可以使用以下示例訪問訓練和測試資料幀， `msg5.data.xs(“train”)`.
+使用以下節點將資料幀拆分到訓練中，並通過傳遞進行測試 `train_size` 或 `test_size`. 這會傳回具有多索引的資料幀。 您可以使用以下示例訪問訓練和測試資料幀， `msg5.data.xs("train")`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})

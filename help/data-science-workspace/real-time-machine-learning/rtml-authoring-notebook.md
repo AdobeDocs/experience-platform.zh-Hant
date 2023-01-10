@@ -2,10 +2,9 @@
 keywords: Experience Platform；開發人員指南；Data Science Workspace；熱門主題；即時機器學習；節點參考；
 solution: Experience Platform
 title: 管理即時機器學習筆記型電腦
-topic-legacy: Training and scoring a ML model
 description: 以下指南概述在Adobe Experience Platform JupyterLab中建置即時機器學習應用程式所需的步驟。
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%

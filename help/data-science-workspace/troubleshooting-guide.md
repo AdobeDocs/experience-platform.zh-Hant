@@ -2,10 +2,9 @@
 keywords: Experience Platform；疑難排解；Data Science Workspace；熱門主題
 solution: Experience Platform
 title: Data Science Workspace疑難排解指南
-topic-legacy: Troubleshooting
 description: 本檔案提供Adobe Experience Platform Data Science Workspace常見問題的解答。
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: ec42d80e695ccf57c10c539ae1b5104c7948c473
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -22,7 +21,7 @@ JupyterLab筆記型電腦可能指示單元處於無限執行狀態，某些處�
 
 ![可用記憶體](./images/jupyterlab/user-guide/allocate-ram.png)
 
-在資料讀取期間，記憶體可能會增長，直到達到您所分配的最大記憶體量。 當達到最大記憶體且內核重新啟動時，記憶體即被釋放。 這意味著，由於內核重新啟動，此情況下使用的記憶體可能顯示為非常低，而在重新啟動之前，記憶體將非常接近最大分配的RAM。
+在資料讀取期間，記憶體可能會增長，直到達到您所分配的最大記憶體量。 當達到最大記憶體且內核重新啟動時，記憶體即被釋放。 這意味著，由於內核重新啟動，此情境中使用的記憶體可能顯示為非常低，而在重新啟動之前，記憶體將非常接近最大分配的RAM。
 
 要解決此問題，請選取JupyterLab右上角的齒輪圖示，然後將滑桿滑至右側，然後選取 **[!UICONTROL 更新設定]** 配置更多RAM。 此外，如果您正在運行多個查詢，並且您的RAM值接近最大分配量，除非您需要先前查詢的結果，否則請重新啟動內核以重置可用的RAM量。 這可確保您擁有當前查詢可用的最大RAM量。
 

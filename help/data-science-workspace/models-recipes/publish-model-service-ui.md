@@ -1,75 +1,73 @@
 ---
-keywords: Experience Platform；發佈模型；資料科學工作區；熱門主題；為服務評分
+keywords: Experience Platform；發佈模型；Data Science Workspace；熱門主題；服務分數
 solution: Experience Platform
-title: 在資料科學工作區UI中以服務形式發佈模型
-topic-legacy: tutorial
+title: 在Data Science Workspace UI中發佈模型作為服務
 type: Tutorial
-description: Adobe Experience Platform資料科學工作區可讓您將經過訓練和評估的模型發佈為服務，讓IMS組織內的使用者可對資料評分，而不需建立自己的模型。
+description: Adobe Experience Platform Data Science Workspace可讓您發佈經過訓練和評估的Model as a Service，讓IMS組織內的使用者對資料評分，而不需建立自己的模型。
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
-# 在Data Science Workspace UI中以服務形式發佈模型
+# 在Data Science Workspace UI中發佈模型作為服務
 
-Adobe Experience Platform資料科學工作區可讓您將經過訓練和評估的模型發佈為服務，讓IMS組織內的使用者可對資料評分，而不需建立自己的模型。
+Adobe Experience Platform Data Science Workspace可讓您發佈經過訓練和評估的Model as a Service，讓IMS組織內的使用者對資料評分，而不需建立自己的模型。
 
 ## 快速入門
 
-要完成本教學課程，您必須具有[!DNL Experience Platform]的存取權。 如果您沒有[!DNL Experience Platform]中IMS組織的存取權，請在繼續之前先與系統管理員聯絡。
+若要完成本教學課程，您必須擁有 [!DNL Experience Platform]. 如果您無權存取 [!DNL Experience Platform]，請在繼續操作之前與系統管理員聯繫。
 
-本教學課程需要具備成功訓練執行的現有模型。 如果您沒有可發佈的模型，請依照UI](./train-evaluate-model-ui.md)教學課程中的[訓練並評估模型，然後再繼續。
+本教學課程需要現有模型並成功執行訓練。 如果您沒有可發佈的模型，請遵循 [在UI中訓練和評估模型](./train-evaluate-model-ui.md) 教學課程，再繼續。
 
-如果您偏好使用Sensei機器學習API來發佈模型，請參閱[API教學課程](./publish-model-service-api.md)。
+如果您偏好使用Sensei機器學習API來發佈模型，請參閱 [API教學課程](./publish-model-service-api.md).
 
-## 發佈型號{#publish-a-model}
+## 發佈模型 {#publish-a-model}
 
-在Adobe Experience Platform，選擇位於左導航列中的&#x200B;**[!UICONTROL Models]** ，然後選擇&#x200B;**[!UICONTROL Browse]**&#x200B;頁籤以列出所有現有的模型。 選擇要作為服務發佈的模型的名稱。
+在Adobe Experience Platform中，選取 **[!UICONTROL 模型]** 位於左側導覽欄，然後選取 **[!UICONTROL 瀏覽]** 頁簽，列出所有現有模型。 選擇要作為服務發佈的模型的名稱。
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-選擇「模型概述」頁右上角的&#x200B;**[!UICONTROL Publish]**&#x200B;以啟動服務建立過程。
+選擇 **[!UICONTROL 發佈]** 在「模型」概觀頁面的右上角附近，開始建立「服務」程式。
 
 ![](../images/models-recipes/publish-model/view_training.png)
 
-輸入所需的服務名稱並選擇性地提供服務說明，完成後選擇&#x200B;**[!UICONTROL Next]**。
+輸入所需的服務名稱並選擇提供服務說明，請選擇 **[!UICONTROL 下一個]** 完成時。
 
 ![](../images/models-recipes/publish-model/configure_training.png)
 
-列出所有成功的「模型」訓練執行。 新服務將繼承所選培訓運行中的培訓和評分配置。
+列出了針對模型的所有成功培訓運行。 新服務將繼承所選培訓運行中的培訓和評分配置。
 
 ![](../images/models-recipes/publish-model/select_training_run.png)
 
-選擇&#x200B;**[!UICONTROL Finish]**&#x200B;以建立服務並重新導向至&#x200B;**[!UICONTROL Service Gallery]**&#x200B;以顯示所有可用服務，包括新建立的服務。
+選擇 **[!UICONTROL 完成]** 建立服務並重新導向至 **[!UICONTROL 服務庫]** 顯示所有可用服務，包括新建立的服務。
 
 ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## 使用服務{#access-a-service}得分
+## 使用服務進行分數 {#access-a-service}
 
-在Adobe Experience Platform，選擇位於左側導航列中的&#x200B;**[!UICONTROL Services]**&#x200B;頁籤以訪問&#x200B;**[!UICONTROL Service Gallery]**。 查找您要使用的服務並選擇&#x200B;**[!UICONTROL Open]**。
+在Adobe Experience Platform中，選取 **[!UICONTROL 服務]** 標籤來存取 **[!UICONTROL 服務庫]**. 查找要使用的服務並選擇 **[!UICONTROL 開啟]**.
 
 ![](../images/models-recipes/publish-model/open_service.png)
 
-在服務概述頁面中，選擇&#x200B;**[!UICONTROL Score]**。
+在服務概述頁面中，選取 **[!UICONTROL 分數]**.
 
 ![](../images/models-recipes/publish-model/score_service.png)
 
-為計分執行選擇適當的輸入資料集，然後選擇&#x200B;**[!UICONTROL Next]**。 系統會要求您對計分資料集執行相同步驟。 選擇輸入和輸出資料集後，可以更新配置。
+為計分運行選擇適當的輸入資料集，然後選擇 **[!UICONTROL 下一個]**. 系統會要求您對計分資料集執行相同步驟。 選取輸入和輸出資料集後，即可更新設定。
 
 ![](../images/models-recipes/publish-model/select_datasets.png)
 
-建立服務時，它會繼承預設計分配置。 您可以檢閱這些設定，並視需要按兩下值以調整這些設定。 對配置滿意後，選擇&#x200B;**[!UICONTROL Finish]**&#x200B;開始計分運行。
+建立服務時，它會繼承預設計分配置。 您可以按兩下值，以檢閱這些設定並視需要調整。 對配置滿意後，選擇 **[!UICONTROL 完成]** 開始計分。
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-在服務的&#x200B;**概述**&#x200B;頁面上，會顯示新計分工作及其進度的詳細資料。 作業完成後，**[!UICONTROL Scoring]**&#x200B;容器內的&#x200B;**[!UICONTROL Most Recent]**&#x200B;標題會更新。
+在服務的 **概述** 頁面，顯示新計分作業的詳細資訊及其進度。 作業完成後， **[!UICONTROL 最近]** 標題 **[!UICONTROL 分數]** 容器已更新。
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 
-## 下一步 {#next-steps}
+## 後續步驟 {#next-steps}
 
-在本教學課程中，您已成功將模型發佈為可存取的服務，並透過[!UICONTROL Service Gallery]使用新服務計分資料。 繼續下一個教學課程，瞭解如何[安排在服務](./schedule-models-ui.md)上執行自動培訓和計分。
+依照本教學課程，您已成功發佈模型作為無障礙服務，並透過 [!UICONTROL 服務庫]. 繼續下一個教學課程，了解如何 [在服務上安排自動培訓和計分](./schedule-models-ui.md).

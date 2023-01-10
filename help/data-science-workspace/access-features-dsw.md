@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；Data Science Workspace；熱門主題；存取控制；沙箱；智慧套件；dsw功能；DSW存取；Adobe Experience Platform Intelligence；智慧；aep智慧套件
 solution: Experience Platform
 title: Data Science Workspace存取與功能
-topic-legacy: Access and features for data science workspace
 description: 以下檔案概述Data Science Workspace權限和功能存取權。
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 2%

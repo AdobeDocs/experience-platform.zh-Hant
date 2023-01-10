@@ -2,10 +2,9 @@
 keywords: Experience Platform；產品建議方式；Data Science Workspace；熱門主題；方式；預先建立方式
 solution: Experience Platform
 title: 產品建議方式
-topic-legacy: overview
 description: 產品Recommendations方式可讓您根據客戶的需求和興趣，提供個人化的產品建議。 透過精確的預測模型，客戶的購買記錄可讓您深入了解他們可能感興趣的產品。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 2%

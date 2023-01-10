@@ -2,10 +2,9 @@
 keywords: Experience Platform；零售銷售方式；Data Science Workspace；熱門主題；方式；預建方式
 solution: Experience Platform
 title: 零售銷售方式
-topic-legacy: overview
 description: 「零售銷售方式」使您能夠預測某個特定時段內系統初始的所有商店的銷售預測。 透過精確的預測模型，零售商將能夠找出需求與定價政策之間的關係，並做出最佳化的定價決策，以最大化銷售與收入。
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 2%

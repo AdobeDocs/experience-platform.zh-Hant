@@ -1,24 +1,23 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；見解；感性機器學習api
+keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；前瞻分析；sensei機器學習api
 solution: Experience Platform
-title: Insights API終結點
-topic-legacy: Developer guide
-description: 洞見包含度量，這些度量用於通過顯示相關評估度量來使資料科學家能夠評估和選擇最佳ML模型。
+title: Insights API端點
+description: 前瞻分析包含的量度可讓資料科學家透過顯示相關評估量度來評估及選擇最佳ML模型。
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
-# Insights終結點
+# Insights端點
 
-洞見包含度量，這些度量用於通過顯示相關評估度量來使資料科學家能夠評估和選擇最佳ML模型。
+前瞻分析包含的量度可讓資料科學家透過顯示相關評估量度來評估及選擇最佳ML模型。
 
-## 檢索Insights清單
+## 擷取深入分析清單
 
-通過對透視終結點執行單個GET請求，可以檢索透視清單。  要幫助篩選結果，可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
+您可以對前瞻分析端點執行單一GET請求，以擷取前瞻分析清單。  若要協助篩選結果，您可以在請求路徑中指定查詢參數。 如需可用查詢的清單，請參閱 [資產檢索查詢參數](./appendix.md#query).
 
 **API格式**
 
@@ -39,7 +38,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回包含洞察力清單的負載，每個洞察力具有唯一標識符( `id` )。 此外，您將 `context` 它包含與Insights事件和度量資料之後的特定Insight關聯的唯一標識符。
+成功的回應會傳回包含深入分析清單的裝載，且每個分析都有唯一識別碼( `id` )。 此外，您會收到 `context` 其中包含與前瞻分析事件和量度資料後之該特定分析相關聯的唯一識別碼。
 
 ```json
 {
@@ -106,9 +105,9 @@ curl -X GET \
 | `experimentRunId` | 有效的實驗運行ID。 |
 | `modelId` | 有效的模型ID。 |
 
-## 檢索特定的Insight
+## 擷取特定分析
 
-要查找特定的洞察，請發出GET請求並提供有效 `{INSIGHT_ID}` 的子菜單。 要幫助篩選結果，可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
+若要查詢特定分析，請提出GET要求並提供有效 `{INSIGHT_ID}` 在請求路徑中。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 如需可用查詢的清單，請參閱 [資產檢索查詢參數](./appendix.md#query).
 
 **API格式**
 
@@ -118,7 +117,7 @@ GET /insights/{INSIGHT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{INSIGHT_ID}` | Sensei洞察力的唯一標識符。 |
+| `{INSIGHT_ID}` | Sensei分析的唯一識別碼。 |
 
 **要求**
 
@@ -133,7 +132,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回包含洞察唯一標識符(`id`)。 另外，您將收到 `context` 它包含與Insights事件和度量資料後面的特定Insight關聯的唯一標識符。
+成功的回應會傳回包含前瞻分析唯一識別碼(`id`)。 此外，您會收到 `context` 其中包含與前瞻分析事件和量度資料後的特定分析相關聯的唯一識別碼。
 
 ```json
 {
@@ -169,9 +168,9 @@ curl -X GET \
 | `experimentRunId` | 有效的實驗運行ID。 |
 | `modelId` | 有效的模型ID。 |
 
-## 添加新的模型洞察力
+## 新增模型分析
 
-通過執行POST請求和為新模型透視提供上下文、事件和度量的負載，可以建立新模型透視。 建立新模型洞察力的上下文欄位不需要附加現有服務，但您可以通過提供一個或多個相應ID來選擇使用現有服務建立新模型洞察力：
+您可以執行POST要求和裝載，為新模型分析提供內容、事件和量度，借此建立新模型分析。 建立新模型分析時，不需要使用上下文欄位來附加現有服務，但您可以透過提供一或多個對應ID，選擇使用現有服務建立新模型分析：
 
 ```json
 "context": {
@@ -229,7 +228,7 @@ curl -X POST \
 
 **回應**
 
-成功響應將返回具有 `{INSIGHT_ID}` 以及您在初始請求中提供的任何參數。
+成功的回應會傳回具有 `{INSIGHT_ID}` 以及您在初始請求中提供的任何參數。
 
 ```json
 {
@@ -260,11 +259,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `insightId` | 在成功發出POST請求時為此特定洞察建立的唯一ID。 |
+| `insightId` | 發出成功的POST請求時，為此特定分析建立的唯一ID。 |
 
-## 檢索算法的預設度量清單
+## 擷取演算法的預設量度清單
 
-通過對度量端點執行單個GET請求，可以檢索所有算法和預設度量的清單。 要查詢特定度量，請發出GET請求並提供有效 `{ALGORITHM}` 的子菜單。
+您可以對量度端點執行單一GET請求，以擷取所有演算法和預設量度的清單。 若要查詢特定量度，請提出GET要求並提供有效 `{ALGORITHM}` 在請求路徑中。
 
 **API格式**
 
@@ -275,11 +274,11 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ALGORITHM}` | 算法類型的標識符。 |
+| `{ALGORITHM}` | 演算法類型的識別碼。 |
 
 **要求**
 
-以下請求包含查詢，並使用算法標識符檢索特定度量 `{ALGORITHM}`
+下列請求包含查詢，並使用演算法識別碼擷取特定量度 `{ALGORITHM}`
 
 ```shell
 curl -X GET \
@@ -292,7 +291,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回包含 `algorithm` 唯一標識符和預設度量的陣列。
+成功的回應會傳回包含 `algorithm` 唯一識別碼和預設量度的陣列。
 
 ```json
 {

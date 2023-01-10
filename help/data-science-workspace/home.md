@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；資料科學工作區；熱門主題；資料科學工作區；資料科學
 solution: Experience Platform
 title: Data Science Workspace概述
-topic-legacy: overview
 description: 本指南概述Adobe Experience Platform中Data Science Workspace的相關重要概念。
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 0%

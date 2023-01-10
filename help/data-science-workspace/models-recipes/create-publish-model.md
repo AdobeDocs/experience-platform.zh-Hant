@@ -2,11 +2,10 @@
 keywords: Experience Platform；機器學習模型；Data Science Workspace；熱門主題；建立和發佈模型
 solution: Experience Platform
 title: 建立和發佈機器學習模型
-topic-legacy: tutorial
 type: Tutorial
 description: 以下指南說明建立和發佈機器學習模型所需的步驟。
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 0%

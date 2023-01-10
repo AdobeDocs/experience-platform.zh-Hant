@@ -1,26 +1,25 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；mlinstances;sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；例項；sensei機器學習api
 solution: Experience Platform
-title: MLInstances API終結點
-topic-legacy: Developer guide
-description: MLInstance是現有引擎與一組適當的配置的配對，這些配置定義了任何培訓參數、評分參數或硬體資源配置。
+title: MLIinstances API端點
+description: MLInstance是現有引擎與一組適當配置的配對，這些配置定義了任何培訓參數、計分參數或硬體資源配置。
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 4%
 
 ---
 
-# MLInstances終結點
+# MLInstances端點
 
-MLInstance是現有 [引擎](./engines.md) 使用一組適當的配置，這些配置定義任何培訓參數、評分參數或硬體資源配置。
+MLInstance是現有 [引擎](./engines.md) 以及定義任何訓練參數、計分參數或硬體資源配置的一組適當配置。
 
 ## 建立MLInstance {#create-an-mlinstance}
 
-您可以通過在提供由有效引擎ID(`{ENGINE_ID}`)和一組適當的預設配置。
+您可以執行POST要求，同時提供由有效引擎ID(`{ENGINE_ID}`)和適當的預設設定集。
 
-如果引擎ID引用PySpark或Spark引擎，則您可以配置計算資源量，如內核數或記憶體量。 如果引用了Python引擎，則可以選擇使用CPU或GPU進行培訓和評分。 請參閱附錄部分。 [PySpark和Spark資源配置](./appendix.md#resource-config) 和 [Python CPU和GPU配置](./appendix.md#cpu-gpu-config) 的子菜單。
+如果引擎ID引用了PySpark或Spark引擎，則您可以配置計算資源量，如內核數或記憶體量。 如果引用了Python引擎，則您可以選擇使用CPU或GPU進行培訓和評分。 請參閱附錄中的 [PySpark和Spark資源配置](./appendix.md#resource-config) 和 [Python CPU和GPU配置](./appendix.md#cpu-gpu-config) 以取得更多資訊。
 
 **API格式**
 
@@ -76,14 +75,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | MLInstance的所需名稱。 與此MLInstance對應的模型將繼承此值，該值將作為模型名稱顯示在UI中。 |
-| `description` | MLInstance的可選說明。 與此MLInstance對應的模型將繼承此值，該值將作為模型的說明顯示在UI中。 此為必要屬性。如果不想提供說明，請將其值設定為空字串。 |
+| `name` | MLInstance的所需名稱。 與此MLInstance對應的模型將繼承此值，該值將作為模型的名稱顯示在UI中。 |
+| `description` | MLInstance的選用說明。 與此MLInstance對應的模型將繼承此值，該值將作為模型的說明顯示在UI中。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
 | `engineId` | 現有引擎的ID。 |
-| `tasks` | 一組用於培訓、評分或特徵管道的配置。 |
+| `tasks` | 訓練、計分或功能管道的一組設定。 |
 
 **回應**
 
-成功的響應返回包含新建立的MLInstance的詳細資訊（包括其唯一標識符）的負載(`id`)。
+成功的回應會傳回包含新建立MLInstance之詳細資訊的裝載，包括其唯一識別碼(`id`)。
 
 ```json
 {
@@ -128,9 +127,9 @@ curl -X POST \
 }
 ```
 
-## 檢索MLInstances清單
+## 檢索MLIinstances清單
 
-通過執行單個GET請求，可以檢索MLInstances清單。 要幫助篩選結果，可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
+您可以執行單一GET請求來擷取MLIinstances清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 如需可用查詢的清單，請參閱 [資產檢索查詢參數](./appendix.md#query).
 
 **API格式**
 
@@ -143,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 | 參數 | 說明 |
 | --- | --- |
 | `{QUERY_PARAMETER}` | 其中 [可用查詢參數](./appendix.md#query) 用於篩選結果。 |
-| `{VALUE}` | 前面查詢參數的值。 |
+| `{VALUE}` | 前一查詢參數的值。 |
 
 **要求**
 
@@ -158,7 +157,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回MLInstances及其詳細資訊的清單。
+成功的回應會傳回MLInstances及其詳細資訊清單。
 
 ```json
 {
@@ -196,9 +195,9 @@ curl -X GET \
 }
 ```
 
-## 檢索特定的MLInstance {#retrieve-specific}
+## 檢索特定MLInstance {#retrieve-specific}
 
-通過執行請求路徑中包含所需MLInstance的ID的GET請求，可以檢索特定MLInstance的詳細資訊。
+您可以執行GET請求，將所需MLInstance的ID包含在請求路徑中，以擷取特定MLInstance的詳細資訊。
 
 **API格式**
 
@@ -223,7 +222,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回MLInstance的詳細資訊。
+成功的回應會傳回MLInstance的詳細資訊。
 
 ```json
 {
@@ -271,13 +270,13 @@ curl -X GET \
 
 ## 更新MLInstance
 
-您可以通過PUT請求覆蓋現有MLInstance的屬性，該請求將目標MLInstance的ID包括在請求路徑中，並提供包含已更新屬性的JSON負載，來更新現有MLInstance。
+您可以透過PUT要求覆寫現有MLInstance的屬性，該請求在請求路徑中包含目標MLInstance的ID，並提供包含已更新屬性的JSON裝載，借此更新現有的MLInstance。
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您首先執行GET請求， [按ID檢索MLInstance](#retrieve-specific)。 然後，修改和更新返回的JSON對象，並應用已修改的JSON對象的整個作為PUT請求的負載。
+>為確保此PUT請求成功，建議您先執行GET請求， [按ID檢索MLInstance](#retrieve-specific). 接著，修改並更新傳回的JSON物件，並套用修改後JSON物件的整體，作為PUT要求的裝載。
 
-以下示例API調用將更新MLInstance的訓練和計分參數，同時初始具有這些屬性：
+下列範例API呼叫將更新MLInstance的訓練和計分參數，同時最初具有這些屬性：
 
 ```json
 {
@@ -366,7 +365,7 @@ curl -X PUT \
 
 **回應**
 
-成功的響應返回包含MLInstance的更新詳細資訊的負載。
+成功的回應會傳回包含MLInstance更新詳細資料的裝載。
 
 ```json
 {
@@ -403,9 +402,9 @@ curl -X PUT \
 }
 ```
 
-## 按引擎ID刪除MLInstances
+## 依引擎ID刪除MLInstances
 
-通過執行包含引擎ID作為查詢參數的DELETE請求，可以刪除共用同一引擎的所有MLInstance。
+您可以執行包含引擎ID作為查詢參數的DELETE請求，以刪除共用相同引擎的所有MLIinstance。
 
 **API格式**
 
@@ -440,7 +439,7 @@ curl -X DELETE \
 
 ## 刪除MLInstance
 
-您可以通過執行DELETE請求來刪除單個MLInstance，該請求在請求路徑中包括目標MLInstance的ID。
+您可以執行DELETE請求來刪除單一MLInstance，該請求在請求路徑中包含目標MLInstance的ID。
 
 **API格式**
 
