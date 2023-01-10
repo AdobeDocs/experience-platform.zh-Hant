@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；方案；方案；枚舉；混合；欄位組；混合；資料類型；資料類型；資料類型；主要身份；主要身份； XDM個人配置檔案； XDM欄位；枚舉資料類型；體驗事件； XDM體驗事件； XDM體驗事件； XDM ExperienceEvent; XDM ExperienceEvent; XDM ExperienceEvent；方案；設計；類別；類別；類別；資料類型；資料類型；地圖；資料類型；IdentityMap架構設計；地圖；地圖；聯合架構；聯合
 solution: Experience Platform
 title: 結構構成基本概念
-topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於Adobe Experience Platform的結構的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '4103'
 ht-degree: 2%
@@ -317,7 +316,7 @@ XDM結構通過嵌入對象的使用，可以直接表示複雜的資料，並�
 
 現代數位系統會產生大量的行為訊號（交易資料、網頁記錄、物聯網、顯示等）。 這項大資料提供絕佳的體驗機會，但由於資料的規模和多樣性，使用起來充滿挑戰。 為了從資料中獲得價值，其結構、格式和定義必須標準化，以便能夠一致且有效地處理它。
 
-結構允許從多個源整合資料、通過通用結構和定義進行標準化，並跨解決方案共用，從而解決了此問題。 這允許後續的流程和服務回答任何類型的資料問題，從傳統的資料建模方法轉向資料建模方法，即預先知道將要詢問資料的所有問題，並且資料建模以符合這些期望。
+結構允許從多個源整合資料、通過通用結構和定義進行標準化，並跨解決方案共用資料，從而解決了此問題。 這允許後續的流程和服務回答任何類型的資料問題，從傳統的資料建模方法轉向資料建模方法，即預先知道將要詢問資料的所有問題，並且資料建模以符合這些期望。
 
 ### 對象與自由格式欄位 {#objects-v-freeform}
 

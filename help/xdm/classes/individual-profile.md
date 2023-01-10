@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；個別設定檔；欄位；結構；結構；身分對應；身分對應；結構設計；對應；聯合結構；聯合
 solution: Experience Platform
 title: XDM個別設定檔類別
-topic-legacy: overview
 description: 本檔案概述XDM個別設定檔類別。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 1%

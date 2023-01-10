@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；OData;odata；一般開放資料通訊協定
 solution: Experience Platform
 title: 在UI中建立一般OData來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立一般開放資料通訊協定來源連線。
 exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%

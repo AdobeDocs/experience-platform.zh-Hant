@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段服務；匯出工作；api;
 solution: Experience Platform
 title: 區段匯出作業API端點
-topic-legacy: developer guide
 description: 匯出工作是非同步程式，可用來將對象區段成員保留至資料集。 您可以在Adobe Experience Platform分段服務API中使用/export/jobs端點，這可讓您以程式設計方式擷取、建立和取消匯出工作。
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1682'
 ht-degree: 2%

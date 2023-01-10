@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；來源連接器；來源連接器；來源；資料來源；資料來源；資料來源；資料來源連線
 solution: Experience Platform
 title: 來源連接器概述
-topic-legacy: overview
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 784ec5f799c591185620e8376a6980b4930d914a
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1123'
 ht-degree: 2%

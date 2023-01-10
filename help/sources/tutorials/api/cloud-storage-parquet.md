@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；資料來源連線
 solution: Experience Platform
 title: 使用Flow Service API從第三方雲儲存系統內嵌鑲木資料
-topic-legacy: overview
 type: Tutorial
 description: 本教學課程使用流量服務API，逐步引導您完成從協力廠商雲端儲存系統內嵌Apache Parquet資料的步驟。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%

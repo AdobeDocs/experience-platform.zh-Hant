@@ -2,19 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；poi；互動；地標；地標；資料類型；資料類型；
 solution: Experience Platform
 title: 興趣點互動資料類型
-topic-legacy: overview
 description: 本檔案概述興趣點互動XDM資料類型。
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL 興趣點互] 動資料類型
+# [!UICONTROL 興趣點互動] 資料類型
 
-[!UICONTROL 興趣點交] 互是標準的XDM資料類型，描述當行動裝置在範圍內時，將身分資訊傳送給行動應用程式的無線裝置。
+[!UICONTROL 興趣點互動] 是標準的XDM資料類型，說明當行動裝置在範圍內時，無線裝置可將身分資訊傳送至行動應用程式。
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 

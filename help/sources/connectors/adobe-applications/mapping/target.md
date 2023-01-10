@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；目標對應；目標對應
 solution: Experience Platform
 title: 將Adobe Target事件資料對應至XDM
-topic-legacy: overview
 description: 了解如何將Adobe Target事件欄位對應至Experience Data Model(XDM)結構，以便在Adobe Experience Platform中使用。
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 1%

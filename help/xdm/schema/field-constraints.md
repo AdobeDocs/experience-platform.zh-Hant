@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；方案；方案；欄位組；欄位組；欄位組；資料類型；資料類型；資料類型；方案設計；資料類型；資料類型；資料類型；資料類型；資料類型；資料類型；方案；方案；方案；方案；方案；方案；方案；方案；方案；映射；
 solution: Experience Platform
 title: XDM欄位類型限制
-topic-legacy: overview
 description: Experience Data Model(XDM)中欄位類型限制的參考，包括可對應的其他序列化格式，以及如何在API中定義您自己的欄位類型。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: bd40388d710f8b135c0d36716b0ec59c8c9b78ee
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 6%

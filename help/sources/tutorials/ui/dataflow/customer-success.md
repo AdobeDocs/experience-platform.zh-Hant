@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；設定資料流；客戶成功連接器
 solution: Experience Platform
 title: 在UI中使用客戶成功源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供如何使用Platform UI為客戶成功來源建立資料流的步驟。
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Azure表儲存；Azure表儲存；ATS;ATS
 solution: Experience Platform
 title: 在UI中建立Azure表儲存源連接
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立Azure表儲存源連接。
 exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 1%

@@ -3,9 +3,8 @@ keywords: Experience Platform；首頁；熱門主題；IP位址；IP位址；IP
 description: 使用來源連接器前，必須將IP位址新增至允許清單。
 solution: Experience Platform
 title: 源連接的IP地址允許清單
-topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 40a6a6888fe075d653c565e5925874d737aa5c59
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

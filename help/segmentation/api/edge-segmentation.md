@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；邊緣分段；邊緣分段；串流邊緣；
 solution: Experience Platform
 title: 使用API進行邊緣劃分
-topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1187'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Azure Blob;Azure Blob;Azure Blob連接器
 solution: Experience Platform
 title: 在UI中建立Azure Blob來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Platform使用者介面建立Azure Blob來源連接器。
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 1%

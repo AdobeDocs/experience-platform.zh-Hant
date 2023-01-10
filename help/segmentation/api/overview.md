@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；分段；分段服務；API; API;
 title: 區段服務API指南
-topic-legacy: guide
 description: 區段服務API可讓開發人員以程式設計方式管理Adobe Experience Platform中的區段作業。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 3%

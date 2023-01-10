@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；資料庫資料庫；第三方資料庫
 solution: Experience Platform
 title: 使用流服務API為資料庫源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從資料庫擷取資料，以及使用來源連接器和API將資料擷取至Platform的步驟。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 1%

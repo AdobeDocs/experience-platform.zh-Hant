@@ -2,19 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；Web交互；資料類型；資料類型；
 solution: Experience Platform
 title: Web交互資料類型
-topic-legacy: overview
 description: 本檔案概略介紹Web互動Experience Data Model(XDM)資料類型。
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Web交] 互資料類型
+# [!UICONTROL 網路互動] 資料類型
 
-[!UICONTROL Web互] 動是標準的Experience Data Model(XDM)資料類型，可說明初次頁面載入完成後，網頁上發生的互動的相關資訊。其用途是記錄不會觸發新頁面載入(例如單頁網頁應用程式(SPA))的豐富網頁應用程式互動。
+[!UICONTROL 網路互動] 是標準的Experience Data Model(XDM)資料類型，可說明初次頁面載入完成後網頁上發生的互動相關資訊。 其用途是記錄不會觸發新頁面載入(例如單頁網頁應用程式(SPA))的豐富網頁應用程式互動。
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 

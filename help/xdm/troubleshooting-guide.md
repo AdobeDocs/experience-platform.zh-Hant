@@ -3,9 +3,8 @@ keywords: Experience Platform；熱門主題；XDM;XDM系統；XDM個別設定�
 solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找Experience Data Model(XDM)常見問題的解答，包括解決常見API錯誤的步驟。
-topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2060'
 ht-degree: 0%

@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: 通用同意欄位資料類型
-topic-legacy: overview
 description: 本檔案概述「一般同意欄位」XDM資料類型。
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '612'
 ht-degree: 2%

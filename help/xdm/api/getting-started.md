@@ -3,9 +3,8 @@ keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；�
 solution: Experience Platform
 title: 架構註冊表API快速入門
 description: 本檔案介紹您在嘗試呼叫結構註冊表API前，需要了解的核心概念。
-topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1356'
 ht-degree: 0%

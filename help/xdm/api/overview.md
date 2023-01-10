@@ -3,9 +3,8 @@ keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；�
 solution: Experience Platform
 title: Schema Registry API指南
 description: Schema Registry API可讓開發人員以程式設計方式管理Adobe Experience Platform中的所有結構描述和相關Experience Data Model(XDM)資源。 請遵循本指南以了解如何使用 API 執行關鍵作業。
-topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 2%

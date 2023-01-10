@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；收集通訊協定資料；通訊協定資料
 solution: Experience Platform
 title: 使用流服務API為協定源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從通訊協定應用程式擷取資料，以及使用來源連接器和API擷取資料至Platform的步驟。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 1%

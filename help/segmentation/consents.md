@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；選擇退出；分段；分段服務；分段服務；榮譽退出；選擇退出；選擇退出；選擇退出；同意；共用；收集；
 solution: Experience Platform
 title: 遵循區段中的同意
-topic-legacy: overview
 description: 了解如何遵循客戶同意偏好設定，以收集個人資料並在區段作業中共用。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 0%

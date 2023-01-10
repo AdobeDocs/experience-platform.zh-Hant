@@ -2,19 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；商務；資料類型；資料類型；
 solution: Experience Platform
 title: 商務資料類型
-topic-legacy: overview
 description: 本檔案概述Commerce Experience Data Model(XDM)資料類型。
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 1%
 
 ---
 
-#  商務資料類型
+# [!UICONTROL 商務] 資料類型
 
- Commerce是標準的Experience Data Model(XDM)資料類型，可說明與購買和銷售活動相關的記錄。
+[!UICONTROL 商務] 是標準的Experience Data Model(XDM)資料類型，可說明與購買和銷售活動相關的記錄。
 
 <img src="../images/data-types/commerce.PNG" width="400" /><br />
 

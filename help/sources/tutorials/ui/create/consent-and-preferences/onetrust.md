@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；onetrust;OneTrust
 solution: Experience Platform
 title: （測試版）在UI中建立OneTrust來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立OneTrust來源連線。
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: cfc6e7cb3877f3b5f716b7f82e7c2d308ef5ed10
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%

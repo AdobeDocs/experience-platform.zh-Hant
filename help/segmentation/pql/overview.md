@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；PQL;PQL；設定檔查詢語言
 solution: Experience Platform
 title: 配置檔案查詢語言(PQL)概述
-topic-legacy: developer guide
 description: 本指南提供PQL的一般概述，包括格式設定指南，並提供PQL運算式的範例。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 2%

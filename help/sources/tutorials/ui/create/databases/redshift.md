@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Amazon Redshift;amazon redshift;Redshift
 solution: Experience Platform
 title: 在UI中建立Amazon Redshift源連接
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立Amazon Redshift源連接。
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%

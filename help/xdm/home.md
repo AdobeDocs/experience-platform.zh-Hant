@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；XDM;XDM系統；XDM個別設定檔；XDM ExperienceEvent;XDM體驗事件；體驗事件；欄位群組；欄位群組；欄位群組；欄位群組；體驗事件；XDM體驗事件；XDM ExperienceEvent；體驗事件；XDM ExperienceEvent；體驗資料模型；體驗資料模型；資料模型；程式庫架構；註冊表；結構；記錄資料；時間序列；時間序列
 solution: Experience Platform
 title: XDM系統概述
-topic-legacy: overview
 description: 標準化和互操作性是Adobe Experience Platform背後的重要概念。 由Adobe推動的Experience Data Model(XDM)，旨在標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 2%

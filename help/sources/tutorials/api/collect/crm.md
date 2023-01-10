@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；crm;CRM
 solution: Experience Platform
 title: 使用流服務API為CRM源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，以及使用來源連接器和API將資料匯入Platform的步驟。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 1%

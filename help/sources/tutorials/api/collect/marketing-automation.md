@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；行銷自動化系統；收集行銷自動化資料
 solution: Experience Platform
 title: 使用流服務API為行銷自動化來源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從行銷自動化系統擷取資料，以及使用來源連接器和API將資料匯入Adobe Experience Platform的步驟。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 1%

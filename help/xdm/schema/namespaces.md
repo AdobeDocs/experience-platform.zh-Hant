@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；xdm；體驗資料模型；命名空間；命名空間；相容性模式；修正；
 solution: Experience Platform
 title: Experience Data Model(XDM)中的命名空間調整
-topic-legacy: overviews
 description: 了解Experience Data Model(XDM)中的名稱調整功能可如何協助您擴充結構，並防止不同結構元件匯整在一起時發生欄位衝突。
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: bcffd3d38cecba38e1e57a44ce0febfd2cf0f8fb
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%

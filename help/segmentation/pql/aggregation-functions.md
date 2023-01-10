@@ -1,25 +1,23 @@
 ---
-keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；聚合函式；聚合；
+keywords: Experience Platform；首頁；熱門主題；細分；細分；細分服務；PQL;PQL；設定檔查詢語言；匯總函式；匯總；
 solution: Experience Platform
 title: PQL聚合函式
-topic-legacy: developer guide
 description: 聚合函式用於將配置檔案查詢語言(PQL)陣列中的多個值組合在一起，以形成單個摘要值。
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 6%
 
 ---
 
-# 聚集函式
+# 聚合函式
 
-聚合函式用於將[!DNL Profile Query Language](PQL)陣列中的多個值組合在一起，以形成單個摘要值。 有關其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] overview](./overview.md)。
+聚合函式用於將內的多個值組合在一起 [!DNL Profile Query Language] (PQL)陣列，形成單個摘要值。 有關其他PQL函式的詳細資訊，請參見 [[!DNL Profile Query Language] 概述](./overview.md).
 
 ## 計數
 
-`count`函式返回給定陣列中的元素數。
+此 `count` 函式會傳回指定陣列中的元素數。
 
 **格式**
 
@@ -37,7 +35,7 @@ orders.count()
 
 ## 總和
 
-`sum`函式返回陣列中所有選定值的總和。
+此 `sum` 函式會傳回陣列內所有選取值的總和。
 
 **格式**
 
@@ -55,7 +53,7 @@ orders.sum(order.price)
 
 ## 平均
 
-`average`函式會傳回陣列中所有選取值的算術平均值。
+此 `average` 函式返回陣列內所有選定值的算術平均值。
 
 **格式**
 
@@ -73,7 +71,7 @@ orders.average(order.price)
 
 ## 最小
 
-`min`函式返回陣列中所有選定值的最小值。
+此 `min` 函式會傳回陣列中所有選取值的最小值。
 
 **格式**
 
@@ -91,7 +89,7 @@ orders.min(order.price)
 
 ## 最大
 
-`max`函式返回陣列中所有選定值中最大的值。
+此 `max` 函式會傳回陣列中所有選取值中最大的值。
 
 **格式**
 
@@ -109,4 +107,4 @@ orders.max(order.price)
 
 ## 後續步驟
 
-現在，您已經瞭解了聚合函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀[配置檔案查詢語言概述](./overview.md)。
+現在您已了解了聚合函式，可以在PQL查詢中使用這些函式。 有關其他PQL功能的詳細資訊，請閱讀 [設定檔查詢語言概觀](./overview.md).

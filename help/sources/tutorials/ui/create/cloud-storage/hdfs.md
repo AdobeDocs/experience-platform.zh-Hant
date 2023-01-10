@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Apache HDFS; HDFS; HDFS
 solution: Experience Platform
 title: 在UI中建立Apache HDFS源連接
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立ApacheHadoop分佈式檔案系統源連接。
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%

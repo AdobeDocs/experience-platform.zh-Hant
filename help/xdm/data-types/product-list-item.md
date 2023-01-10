@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；位址；xdm:address；資料類型；資料類型；
 solution: Experience Platform
 title: 產品清單項目資料類型
-topic-legacy: overview
 description: 本檔案概述產品清單項目XDM資料類型。
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 43157ed2b633561213e67f011835449d70ead4fc
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 4%

@@ -2,19 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；瀏覽器；瀏覽器詳細資訊；資料類型；資料類型；
 solution: Experience Platform
 title: 瀏覽器詳細資訊資料類型
-topic-legacy: overview
 description: 本檔案概述「瀏覽器詳細資料」XDM資料類型。
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL 瀏覽器詳] 細資料類型
+# [!UICONTROL 瀏覽器詳細資訊] 資料類型
 
-[!UICONTROL 瀏覽] 器詳細說明標準XDM資料類型，說明與瀏覽器或應用程式相關的詳細資訊。
+[!UICONTROL 瀏覽器詳細資訊] 是標準的XDM資料類型，可說明瀏覽器或應用程式的相關詳細資訊。
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 

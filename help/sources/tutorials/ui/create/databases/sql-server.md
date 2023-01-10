@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Microsoft SQL Server;SQL Server;sql Server
 solution: Experience Platform
 title: 在UI中建立Microsoft SQL Server源連接
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Microsoft UI建立Adobe Experience Platform SQL Server源連接。
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%

@@ -3,10 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；UI; XDM; XDM系統；體
 solution: Experience Platform
 title: 使用結構編輯器定義兩個結構之間的關係
 description: 本檔案提供一個教學課程，用於使用Experience Platform使用者介面中的結構編輯器定義兩個結構之間的關係。
-topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 3b16c0766c7d54b18ceea4c9f40ccb370b9f9685
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%

@@ -1,25 +1,23 @@
 ---
-keywords: Experience Platform;home；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；對象函式；對象；
+keywords: Experience Platform；首頁；熱門主題；分段；分段服務；PQL;PQL；設定檔查詢語言；物件函式；物件；
 solution: Experience Platform
 title: PQL對象函式
-topic-legacy: developer guide
-description: 描述檔查詢語言(PQL)提供多種功能，讓與物件的互動更簡單。
+description: 配置檔案查詢語言(PQL)提供了一些功能，使與對象的交互更簡單。
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
 # 物件函式
 
-[!DNL Profile Query Language] (PQL)提供的功能可簡化與物件的互動。有關其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] overview](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供的功能使與對象的交互更簡單。 有關其他PQL函式的詳細資訊，請參見 [[!DNL Profile Query Language] 概述](./overview.md).
 
-## 為空
+## 為null
 
-`isNull`函式確定對象引用是否不存在。
+此 `isNull` 函式確定對象引用是否不存在。
 
 **格式**
 
@@ -35,9 +33,9 @@ ht-degree: 4%
 person.homeAddress.isNull()
 ```
 
-## 非空值
+## 非空
 
-`isNotNull`函式確定是否存在對象引用。
+此 `isNotNull` 函式確定對象引用是否存在。
 
 **格式**
 
@@ -55,4 +53,4 @@ person.homeAddress.isNotNull()
 
 ## 後續步驟
 
-現在您已經瞭解了對象函式，可以在PQL查詢中使用它們。 有關其他PQL函式的詳細資訊，請閱讀[配置檔案查詢語言概述](./overview.md)。
+現在您已了解物件函式，可以在PQL查詢中使用這些函式。 有關其他PQL功能的詳細資訊，請閱讀 [設定檔查詢語言概觀](./overview.md).

@@ -3,9 +3,8 @@ keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；�
 solution: Experience Platform
 title: 類API端點
 description: Schema Registry API中的/classes端點可讓您以程式設計方式管理體驗應用程式中的XDM類別。
-topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 3%
@@ -253,7 +252,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->根據定義的自定義類合成架構時，將無法使用標準欄位組。 每個欄位組定義它們在其中相容的類 `meta:intendedToExtend` 屬性。 開始定義與新類相容的欄位組後(使用 `$id` 新課的 `meta:intendedToExtend` 欄位群組)，則每次定義實施您所定義類別的架構時，您都可以重複使用這些欄位群組。 請參閱 [建立欄位群組](./field-groups.md#create) 和 [建立綱要](./schemas.md#create) 以取得詳細資訊。
+>根據定義的自定義類合成架構時，將無法使用標準欄位組。 每個欄位組定義它們在其中相容的類 `meta:intendedToExtend` 屬性。 開始定義與新類相容的欄位組後(使用 `$id` 新課的 `meta:intendedToExtend` 欄位群組)，則每次定義實施您定義之類的架構時，您都可以重複使用這些欄位群組。 請參閱 [建立欄位群組](./field-groups.md#create) 和 [建立綱要](./schemas.md#create) 以取得詳細資訊。
 >
 >如果您打算在即時客戶設定檔中使用以自訂類別為基礎的結構，也請務必留意，聯合結構僅根據共用相同類別的結構而建構。 如果要在聯合中包含其他類(如 [!UICONTROL XDM個別設定檔] 或 [!UICONTROL XDM ExperienceEvent]，您必須與採用該類別的其他架構建立關係。 請參閱 [在API中建立兩個架構的關係](../tutorials/relationship-api.md) 以取得更多資訊。
 

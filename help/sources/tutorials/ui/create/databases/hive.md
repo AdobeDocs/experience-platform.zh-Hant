@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Apache Hive;Azure HDInsights;Azure hdinsights
 solution: Experience Platform
 title: 在UI的Azure HDInsights來源連線上建立Apache配置單元
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI在Azure HDInsights來源連線上建立Apache配置單元。
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%

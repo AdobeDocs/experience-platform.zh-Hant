@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；啟用傳入資料；填入設定檔；填入rtcp；填入的統一設定檔
 solution: Experience Platform
 title: 啟動傳入來源資料，以在UI中填入客戶設定檔
-topic-legacy: overview
 type: Tutorial
 description: 來自來源連接器的傳入資料可用來擴充和填入您的即時客戶設定檔資料。
 exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%

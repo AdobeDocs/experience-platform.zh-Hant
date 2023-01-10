@@ -1,28 +1,27 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；清單沙箱
 solution: Experience Platform
-title: 沙盒類型API終結點
-topic-legacy: developer guide
-description: 通過向/sandboxTypes終結點發出GET請求，可以檢索組織支援的沙盒類型清單。
+title: 沙箱類型API端點
+description: 您可以向/sandboxTypes端點提出GET要求，以擷取組織的支援沙箱類型清單。
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 2%
 
 ---
 
-# 沙盒類型終結點
+# 沙箱類型端點
 
-您可以通過向以下站點發出GET請求來檢索組織支援的沙盒類型清單 `/sandboxTypes` 端點。
+您可以向提出GET請求，以擷取組織的支援沙箱類型清單 `/sandboxTypes` 端點。
 
 ## 快速入門
 
-本指南中使用的API終結點是 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+本指南中使用的API端點屬於 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). 繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
 
-## 檢索支援的沙盒類型清單
+## 擷取支援的沙箱類型清單
 
-您可以通過向以下站點發出GET請求來檢索組織支援的沙盒類型清單 `/sandboxTypes` 端點。
+您可以向提出GET請求，以擷取組織的支援沙箱類型清單 `/sandboxTypes` 端點。
 
 **API格式**
 
@@ -42,7 +41,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回您的組織支援的沙盒類型清單。
+成功的回應會傳回貴組織支援的沙箱類型清單。
 
 ```json
 {

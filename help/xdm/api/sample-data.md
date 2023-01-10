@@ -1,32 +1,31 @@
 ---
-keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；經驗資料模型；經驗資料模型；資料模型；資料模型；示例資料；rpc;
+keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；範例資料；範例資料；rpc;
 solution: Experience Platform
-title: 示例資料API終結點
-description: 通過架構註冊表API中的/sampledata終結點，可以生成映射到任何現有XDM架構結構的示例資料。
-topic-legacy: developer guide
+title: 範例資料API端點
+description: Schema Registry API中的/sampledata端點可讓您產生對應至任何現有XDM架構結構的範例資料。
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 2%
 
 ---
 
-# 示例資料終結點
+# 範例資料端點
 
-為了將資料導入Adobe Experience Platform，資料的格式和結構必須符合現有的經驗資料模型(XDM)架構。 根據特定資料集的模式的複雜性，很難確定資料集在攝取時期望的資料的確切形狀。
+若要將資料內嵌至Adobe Experience Platform，資料的格式和結構必須符合現有的Experience Data Model(XDM)結構。 根據特定資料集的結構複雜度，很難判斷資料集擷取時所需資料的確切形狀。
 
-使用 `/sampledata` 端點 [!DNL Schema Registry] API，可以為任何先前建立的架構生成一個示例接收對象。
+使用 `/sampledata` 端點 [!DNL Schema Registry] API，您可以為任何先前建立的結構產生擷取物件範例。
 
 ## 快速入門
 
-本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+本指南中使用的端點屬於 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
 
-示例資料終結點是遠程過程調用(RPC)的一部分，該調用由 [!DNL Schema Registry]。 不同於 [!DNL Schema Registry] API、RPC終結點不需要像 `Accept` 或 `Content-Type`，並且不使用 `CONTAINER_ID`。 相反，他們必須使用 `/rpc` 命名空間，如下面的API調用所示。
+示例資料端點是遠程過程調用(RPC)的一部分，該調用由 [!DNL Schema Registry]. 不同於 [!DNL Schema Registry] API、RPC端點不需要其他標題，例如 `Accept` 或 `Content-Type`，且不使用 `CONTAINER_ID`. 而是必須使用 `/rpc` 命名空間，如下方API呼叫所示。
 
-## 檢索架構的示例資料
+## 擷取結構的範例資料
 
-通過在指向終結點的GET請求路徑中指定架構的ID，可以檢索架構庫中任何架構的示例資料。
+您可以在向端點GET請求的路徑中指定架構的ID，以擷取架構程式庫內任何架構的範例資料。
 
 **API格式**
 
@@ -36,13 +35,13 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 的 `meta:altId` 或URL編碼 `$id` 要為其生成示例資料的架構。 |
+| `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` ，以產生範例資料。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **要求**
 
-以下請求為會員成員方案生成示例資料。
+以下請求會為忠誠會員結構產生範例資料。
 
 ```shell
 curl -X GET \
@@ -55,7 +54,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定架構的示例資料對象。
+成功的回應會傳回指定架構的範例資料物件。
 
 ```json
 {

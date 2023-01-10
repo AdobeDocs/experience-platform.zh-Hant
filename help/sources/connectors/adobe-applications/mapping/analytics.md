@@ -2,13 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；Analytics對應欄位；Analytics對應
 solution: Experience Platform
 title: Adobe Analytics Source Connector的對應欄位
-topic-legacy: overview
 description: Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe Analytics資料。 透過ADC擷取的某些資料可從Analytics欄位直接對應至Experience Data Model(XDM)欄位，而其他資料則需要轉換和特定函式才能成功對應。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '3431'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -74,18 +73,18 @@ Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe Analytics資�
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._id | 字串 | 視訊章節的名稱 |
 | videoname | media.mediaTimed.primaryAssetReference._dc.title | 字串 | 視訊名稱。 |
 | videoadname | advertising.adAssetReference._dc.title | 字串 | 視訊廣告的名稱。 |
-| videoshow | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Series。_iptc4xmpExt.Name | 字串 | 視訊節目. |
+| videoshow | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Series。_iptc4xmpExt.Name | 字串 | 影片節目. |
 | videoseason | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Season。_iptc4xmpExt.Name | 字串 | 視頻季。 |
-| videoepisode | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Episode。_iptc4xmpExt.Name | 字串 | 視訊集數. |
-| videonetwork | media.mediaTimed.primaryAssetViewDetails.broadcastNetwork | 字串 | 視訊網路. |
-| videoshowtype | media.mediaTimed.primaryAssetReference.showType | 字串 | 視訊節目類型. |
-| videoadload | media.mediaTimed.primaryAssetViewDetails.adLoadType | 字串 | 視訊廣告載入. |
-| videofeedtype | media.mediaTimed.primaryAssetViewDetails.sourceFeed | 字串 | 視訊輸出類型. |
+| videoepisode | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Episode。_iptc4xmpExt.Name | 字串 | 影片集數. |
+| videonetwork | media.mediaTimed.primaryAssetViewDetails.broadcastNetwork | 字串 | 影片網路. |
+| videoshowtype | media.mediaTimed.primaryAssetReference.showType | 字串 | 影片節目類型. |
+| videoadload | media.mediaTimed.primaryAssetViewDetails.adLoadType | 字串 | 影片廣告載入. |
+| videofeedtype | media.mediaTimed.primaryAssetViewDetails.sourceFeed | 字串 | 影片輸出類型. |
 | mobilebeaconmajor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMajor | 數字 | 行動服務主要信標. |
 | mobilebeaconminor | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.beaconMinor | 數字 | 行動服務次要信標. |
 | mobilebeaconuuid | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximityUUID | 字串 | 行動服務信標 UUID. |
 | videosessionid | media.mediaTimed.primaryAssetViewDetails._id | 字串 | 視訊工作階段ID。 |
-| videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | 陣列 | 視訊類型. | {title（對象）, description（對象）, type（對象）, meta:xdmType（對象）, items(string), meta:xdmField（對象）} |
+| videogenre | media.mediaTimed.primaryAssetReference._iptc4xmpExt.Genre | 陣列 | 影片類型. | {title（對象）, description（對象）, type（對象）, meta:xdmType（對象）, items(string), meta:xdmField（對象）} |
 | mobileinstalls | application.firstLaunches | 物件 | 安裝或重新安裝後第一次執行時就會觸發 | {id（字串），值（數字）} |
 | mobileupgrades | application.upgrades | 物件 | 報告應用程式升級的數量。 在升級後或任何時間版本編號變更後首次執行時觸發。 | {id（字串），值（數字）} |
 | mobilelaunches | application.launches | 物件 | 應用程式已啟動的次數。 | {id（字串），值（數字）} |
@@ -107,11 +106,11 @@ Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe Analytics資�
 | videototaltime | media.mediaTimed.totalTimePlayed | 物件 | <!-- MISSING --> | {id（字串），值（數字）} |
 | videoqoetimetostart | media.mediaTimed.primaryAssetViewDetails.qoe.timeToStart | 物件 | 視訊品質開始時間。 | {id（字串），值（數字）} |
 | videoqoedropbeforestart | media.mediaTimed.dropBeforeStarts | 物件 | <!-- MISSING --> | {id（字串），值（數字）} |
-| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | 物件 | 視訊品質緩衝計數 | {id（字串），值（數字）} |
-| videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | 物件 | 視訊品質緩衝時間 | {id（字串），值（數字）} |
-| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | 物件 | 視訊品質變更計數 | {id（字串），值（數字）} |
-| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | 物件 | 視訊品質平均位元速率 | {id（字串），值（數字）} |
-| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | 物件 | 視訊品質錯誤計數 | {id（字串），值（數字）} |
+| videoqoebuffercount | media.mediaTimed.primaryAssetViewDetails.qoe.buffers | 物件 | 影片品質緩衝計數 | {id（字串），值（數字）} |
+| videoqoebuffertime | media.mediaTimed.primaryAssetViewDetails.qoe.bufferTime | 物件 | 影片品質緩衝時間 | {id（字串），值（數字）} |
+| videoqoebitratechangecount | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateChanges | 物件 | 影片品質變更計數 | {id（字串），值（數字）} |
+| videoqoebitrateaverage | media.mediaTimed.primaryAssetViewDetails.qoe.bitrateAverage | 物件 | 影片品質平均位元速率 | {id（字串），值（數字）} |
+| videoqoeerrorcount | media.mediaTimed.primaryAssetViewDetails.qoe.errors | 物件 | 影片品質錯誤計數 | {id（字串），值（數字）} |
 | videoqoedroppedframecount | media.mediaTimed.primaryAssetViewDetails.qoe.droppedFrames | 物件 | <!-- MISSING --> | {id（字串），值（數字）} |
 | videoprogress10 | media.mediaTimed.progress10 | 物件 | <!-- MISSING --> | {id（字串），值（數字）} |
 | videoprogress25 | media.mediaTimed.progress25 | 物件 | <!-- MISSING --> | {id（字串），值（數字）} |

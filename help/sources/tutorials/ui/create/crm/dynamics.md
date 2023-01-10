@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Microsoft Dynamics;microsoft dynamics;Dynamics;Dynamics
 solution: Experience Platform
 title: 在UI中建立Microsoft Dynamics來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Microsoft UI建立Adobe Experience Platform Dynamics來源連線。
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 1%

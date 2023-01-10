@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段；區段服務；區段；區段；多實體；多實體分段；多實體區段；
 solution: Experience Platform
 title: 多實體區段概觀
-topic-legacy: overview
 description: 多實體分段是指根據產品、商店或其他非設定檔類別，以其他資料擴充設定檔資料的功能。 連線後，其他類別的資料就可供使用，就像它們是設定檔架構的原生資料。
 exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%

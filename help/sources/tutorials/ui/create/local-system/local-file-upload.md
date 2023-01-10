@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；本機系統；檔案上傳；對應csv；對應csv檔案；將csv檔案對應至xdm；將csv對應至xdm;ui指南；
 solution: Experience Platform
 title: 在UI中建立本機檔案上傳來源連接器
-topic-legacy: overview
 type: Tutorial
 description: 了解如何為本機系統建立來源連線，將本機檔案帶入Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%

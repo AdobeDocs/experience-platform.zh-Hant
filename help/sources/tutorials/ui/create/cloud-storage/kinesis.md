@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: 在UI中建立Amazon Kinesis來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Amazon UI建立Adobe Experience Platform Kinesis來源連線。
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 1%

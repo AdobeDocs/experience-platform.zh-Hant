@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；分段服務；分段服務；使用手冊；ui指南；對象ui指南；對象產生器；對象；對象ui指南；
 solution: Experience Platform
 title: Audiences UI指南
-topic-legacy: ui guide
 description: Adobe Experience Platform UI中的Audience Builder提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可協助您為組織建立和編輯對象。
 hide: true
 hidefromtoc: true
-source-git-commit: f71d49b576059e687c337cbacd6dd3d525e97834
+exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%

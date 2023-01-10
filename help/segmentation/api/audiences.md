@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；分段；分段服務；對象；對象；API; API;
 title: Audiences API端點
-topic-legacy: developer guide
 description: Adobe Experience Platform細分服務API中的受眾端點可讓您以程式設計方式管理貴組織的受眾。
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: f4ec5b82a14579de5bf228011d14a849898be9f5
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 4%

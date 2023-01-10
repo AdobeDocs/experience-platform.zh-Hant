@@ -3,10 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；UI;UI;XDM;XDM系統；�
 solution: Experience Platform
 title: 在UI中探索結構資源
 description: 了解如何在Experience Platform使用者介面中探索現有結構、類別、結構欄位群組和資料類型。
-topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 744d87c82b7e7e06782c6c1b9db2ec46a5444d28
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Azure synapseAnalytics;Synapse;Synapse;azure synapse分析
 solution: Experience Platform
 title: 在UI中建立Azure synapseAnalytics來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立Azure synapseAnalytics（以下稱為「Synapse」）來源連線。
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 1%

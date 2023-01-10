@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；paypal;Paypal
 solution: Experience Platform
 title: 在UI中建立PayPal來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立PayPal來源連線。
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%

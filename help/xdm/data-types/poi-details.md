@@ -2,19 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；poi;poi詳細資訊；地標；地標詳細資訊；資料類型；資料類型；
 solution: Experience Platform
 title: 興趣點詳細資料資料類型
-topic-legacy: overview
 description: 本檔案概述興趣點詳細資料XDM資料類型。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 5%
 
 ---
 
-# [!UICONTROL 興趣點詳細資] 料類型
+# [!UICONTROL 興趣點詳細資訊] 資料類型
 
-[!UICONTROL 地標會詳] 細說明標準XDM資料類型，說明觀察到事件時與地理相關的資料。
+[!UICONTROL 興趣點詳細資訊] 是標準的XDM資料類型，可說明觀察到事件的地理相關資料。
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 

@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；資料庫連接器
 solution: Experience Platform
 title: 在UI中使用資料庫源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供如何使用Platform UI為資料庫來源建立資料流的步驟。
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 0%

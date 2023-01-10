@@ -1,24 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;
+keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM;ExperienceEvent；欄位；結構；結構；結構設計；欄位群組；欄位群組；
 solution: Experience Platform
 title: 促銷活動行銷詳細資料結構欄位群組
-topic-legacy: overview
 description: 本檔案提供「促銷活動行銷詳細資料」結構欄位群組的概觀。
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 3%
 
 ---
 
-
-# [!UICONTROL 促銷活動行] 銷詳細資料結構欄位群組
+# [!UICONTROL 促銷活動行銷詳細資料] 方案欄位組
 
 >[!NOTE]
 >
->數個架構欄位組的名稱已變更。 See the document on [field group name updates](../name-updates.md) for more information.
+>數個架構欄位組的名稱已變更。 請參閱 [欄位群組名稱更新](../name-updates.md) 以取得更多資訊。
 
-[!UICONTROL Campaign Marketing Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), used to describe marketing campaign information such as campaign group, name, and tracking code.
+[!UICONTROL 促銷活動行銷詳細資料] 是的標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md)，用於說明行銷活動資訊，例如行銷活動群組、名稱和追蹤代碼。
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 

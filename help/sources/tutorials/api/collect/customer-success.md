@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；收集客戶成功；客戶成功
 solution: Experience Platform
 title: 使用流服務API為客戶成功源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋從客戶成功系統擷取資料，以及使用來源連接器和API擷取資料至Platform的步驟。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 1%

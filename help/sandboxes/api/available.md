@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；清單可用沙箱；清單沙箱
 solution: Experience Platform
-title: 可用沙箱API終結點
-topic-legacy: developer guide
-description: 通過向可用沙箱端點發出GET請求，可以列出當前用戶可用的沙箱。
+title: 可用沙箱API端點
+description: 您可以向可用的沙箱端點提出GET要求，以列出目前使用者可用的沙箱。
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 2%
@@ -16,9 +15,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->與沙盒API中提供的其他終結點不同，此終結點可供所有用戶使用，包括那些沒有沙盒管理訪問權限的用戶。
+>與沙箱API中提供的其他端點不同，此端點可供所有使用者使用，包括沒有沙箱管理存取權限的使用者。
 
-通過向可用沙箱端點發出GET請求，可以列出當前用戶可用的沙箱。
+您可以向可用的沙箱端點提出GET要求，以列出目前使用者可用的沙箱。
 
 **API格式**
 
@@ -28,7 +27,7 @@ GET /{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 用於篩選結果的可選查詢參數。 查看 [附錄文檔](./appendix.md#query) 的子菜單。 |
+| `{QUERY_PARAMS}` | 可選的查詢參數，以依據篩選結果。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用參數的清單。 |
 
 **要求**
 
@@ -42,7 +41,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回當前用戶可用的沙盒清單，包括詳細資訊，如 `name`。 `title`。 `state`, `type`。
+成功的回應會傳回目前使用者可用的沙箱清單，包括 `name`, `title`, `state`，和 `type`.
 
 ```json
 {
@@ -102,9 +101,9 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 沙盒的名稱。 用於API調用中的查找目的。 |
-| `title` | 沙盒的顯示名稱。 |
-| `state` | 沙盒的當前處理狀態。 沙盒的狀態可以是下列任何一種： <ul><li>`creating`:沙盒已建立，但系統仍在設定。</li><li>`active`:沙盒已建立並處於活動狀態。</li><li>`failed`:由於錯誤，系統無法設定沙盒並且已禁用。</li><li>`deleted`:已手動禁用沙盒。</li></ul> |
-| `type` | 沙盒類型，即「development」或「production」。 |
-| `isDefault` | 一個布爾屬性，用於指示此沙盒是否是組織的預設生產沙盒。 |
-| `eTag` | 沙盒的特定版本的標識符。 用於版本控制和快取效率，每次更改沙盒時都會更新此值。 |
+| `name` | 沙箱的名稱。 用於API呼叫中的查詢用途。 |
+| `title` | 沙箱的顯示名稱。 |
+| `state` | 沙箱的目前處理狀態。 沙箱的狀態可以是下列任一項： <ul><li>`creating`:沙箱已建立，但系統仍在布建。</li><li>`active`:沙箱已建立且作用中。</li><li>`failed`:由於錯誤，系統無法布建沙箱，且已停用。</li><li>`deleted`:沙箱已手動停用。</li></ul> |
+| `type` | 沙箱類型，「開發」或「生產」。 |
+| `isDefault` | 此布林值屬性可指出此沙箱是否為組織的預設生產沙箱。 |
+| `eTag` | 沙箱特定版本的識別碼。 用於版本控制和快取效率，此值會在每次對沙箱進行變更時更新。 |

@@ -1,12 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；個別設定檔；欄位；結構；結構；身分對應；身分對應；結構設計；對應；聯合結構；聯合
 title: IdentityMap結構欄位組
-topic-legacy: overview
 description: 本檔案概述XDM個別設定檔類別。
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: c59b4bd7ccc61ef4f9dc8a963903e3ec495558ed
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；地理；座標；資料類型；資料類型；
 solution: Experience Platform
 title: 地理座標資料類型
-topic-legacy: overview
 description: 本檔案概述「地理座標」XDM資料類型。
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 5%

@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: 一般行銷偏好設定欄位資料類型
-topic-legacy: overview
 description: 本檔案提供一般行銷偏好欄位XDM資料類型的概觀。
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 2%

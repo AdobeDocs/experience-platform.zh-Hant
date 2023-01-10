@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；Marketo Engage;marketo engage;Marketo；對應
 solution: Experience Platform
 title: 映射Marketo Engage源的欄位
-topic-legacy: overview
 description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的對應。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '952'
 ht-degree: 4%
@@ -136,7 +135,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 計劃 {#programs}
+## 計畫 {#programs}
 
 閱讀 [XDM Business Campaign概觀](../../../../xdm/classes/b2b/business-campaign.md) 以取得XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請參閱 [業務促銷活動詳細資訊結構欄位組](../../../../xdm/field-groups/b2b-campaign/details.md) 指南。
 

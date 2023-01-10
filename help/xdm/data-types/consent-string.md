@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: 同意字串資料類型
-topic-legacy: overview
 description: 本檔案概述同意字串XDM資料類型。
-source-git-commit: 7a0ac3970713e95438c6f0fdbd6175545ea7fdd0
+exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '201'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL 同意字] 串資料類型
+# [!UICONTROL 同意字串] 資料類型
 
-[!UICONTROL 同] 意字串是標準XDM資料類型，可說明代表客戶同意的字串值。其中包含內容資訊，例如同意字串的標準(例如[IAB透明與同意架構(TCF)2.0](../field-groups/profile/iab.md))。
+[!UICONTROL 同意字串] 是標準XDM資料類型，可說明代表客戶同意的字串值。 其中包含內容資訊，例如同意字串的標準(例如 [IAB透明與同意架構(TCF)2.0](../field-groups/profile/iab.md))。
 
 ![](../images/data-types/consent-string.png)
 

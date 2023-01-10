@@ -1,66 +1,64 @@
 ---
-keywords: Experience Platform; home；熱門主題；刪除資料流
-description: 來源工作區可讓您刪除包含錯誤或已過時的現有批處理和流資料流。
+keywords: Experience Platform；首頁；熱門主題；刪除資料流
+description: 源工作區允許您刪除包含錯誤或已過時的現有批處理和流資料流。
 solution: Experience Platform
 title: 刪除UI中的資料流
-topic-legacy: overview
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '368'
 ht-degree: 1%
 
 ---
 
 # 刪除UI中的資料流
 
-[!UICONTROL Sources]工作區允許您刪除包含錯誤或已過時的現有批處理和流資料流。
+此 [!UICONTROL 來源] 工作區可讓您刪除包含錯誤或已淘汰的現有批次和串流資料流。
 
-本教程提供使用[!UICONTROL Sources]工作區刪除資料流的步驟。
+本教學課程提供使用 [!UICONTROL 來源] 工作區。
 
 ## 快速入門
 
-本教學課程需要對Adobe Experience Platform的下列部分有正確的理解：
+本教學課程需要妥善了解下列Adobe Experience Platform元件：
 
-- [來源](../../home.md): [!DNL Experience Platform] 允許從各種來源接收資料，同時提供使用服務構建、標籤和增強傳入資料的 [!DNL Platform] 能力。
-- [沙盒](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙盒，可將單一執行個體分 [!DNL Platform] 割為不同的虛擬環境，以協助開發和發展數位體驗應用程式。
+- [來源](../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
+- [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
 
 ## 刪除資料流
 
-在[Experience PlatformUI](https://platform.adobe.com)中，從左側導覽器選擇&#x200B;**[!UICONTROL Sources]**&#x200B;以存取[!UICONTROL Sources]工作區，然後從上方標題中選擇&#x200B;**[!UICONTROL Dataflows]**。
+在 [Experience PlatformUI](https://platform.adobe.com)，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區，然後選取 **[!UICONTROL 資料流]** 從頂端標題。
 
 ![目錄](../../images/tutorials/delete/catalog.png)
 
-此時將顯示&#x200B;**[!UICONTROL Dataflows]**&#x200B;頁。 本頁列出了可查看的資料流，包括其目標資料集、源、帳戶名和建立日期的相關資訊。
+此 **[!UICONTROL 資料流]** 頁。 此頁面是可查看資料流的清單，包括有關其目標資料集、源、帳戶名和建立日期的資訊。
 
-選取左上角的篩選圖示(![filter-icon](../../images/tutorials/delete/filter.png))，以啟動排序面板。
+選取篩選圖示(![篩選圖示](../../images/tutorials/delete/filter.png))以啟動「排序」面板。
 
 ![資料流](../../images/tutorials/delete/dataflows.png)
 
-排序面板提供所有來源的清單。 您可以從清單中選擇多個源，以訪問與所選特定源關聯的資料流的篩選選擇。
+排序面板提供所有來源的清單。 您可以從清單中選擇多個源以訪問與所選特定源關聯的資料流的篩選選擇。
 
-選擇要使用的源，以查看其現有資料流的清單。 確定要刪除的資料流後，請選擇資料流名稱旁邊的省略號(`...`)。
+選擇要使用的源，以查看其現有資料流的清單。 確定要刪除的資料流後，請選取點(`...`)。
 
-![資料流過濾器](../../images/tutorials/delete/dataflows-filter.png)
+![dataflows-filter](../../images/tutorials/delete/dataflows-filter.png)
 
-此時將顯示一個下拉菜單，為您提供了編輯資料流時間表、禁用資料流或完全刪除資料流的選項。
+此時將顯示一個下拉菜單，為您提供編輯資料流調度、禁用資料流或完全刪除資料流的選項。
 
-選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以刪除資料流。
+選擇 **[!UICONTROL 刪除]** 刪除資料流。
 
 ![刪除](../../images/tutorials/delete/delete.png)
 
-將出現最終確認對話框。 選擇&#x200B;**[!UICONTROL Delete]**&#x200B;以完成該過程。
+最後確認對話框隨即出現。 選擇 **[!UICONTROL 刪除]** 來完成此程式。
 
 ![confirm](../../images/tutorials/delete/confirm.png)
 
-片刻後，畫面底部會顯示確認方塊，以確認刪除成功。
+幾分鐘後，畫面底部會顯示確認方塊，以確認刪除是否成功。
 
 ![確認](../../images/tutorials/delete/confirmed.png)
 
 ## 後續步驟
 
-按照本教程，您已成功使用[!UICONTROL Sources]工作區刪除現有資料流。
+依照本教學課程，您已成功使用 [!UICONTROL 來源] 工作區，刪除現有資料流。
 
-有關如何使用API調用以寫程式方式執行這些操作的步驟，請參見有關使用流服務API](../../tutorials/api/delete-dataflows.md)刪除資料流的教程。[
+請參閱 [使用流服務API刪除資料流](../../tutorials/api/delete-dataflows.md) 以取得如何以程式設計方式使用API呼叫執行這些作業的步驟。

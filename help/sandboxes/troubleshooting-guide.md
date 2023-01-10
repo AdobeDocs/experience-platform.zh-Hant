@@ -2,13 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；沙箱疑難排解
 solution: Experience Platform
 title: 沙箱疑難排解指南
-topic-legacy: troubleshooting guide
 description: 本檔案提供Adobe Experience Platform中沙箱常見問題的解答。
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '857'
+ht-degree: 1%
 
 ---
 

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；身分對應；身分對應；結構設計；對應；事件模型；最佳作法；事件；事件；
 solution: Experience Platform
 title: XDM ExperienceEvent類別
-topic-legacy: overview
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 1%

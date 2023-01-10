@@ -1,38 +1,37 @@
 ---
 solution: Experience Platform
-title: Segment Definition Class
-topic-legacy: overview
-description: This document provides an overview of the Segment definition class in Experience Data Model (XDM).
+title: 區段定義類別
+description: 本檔案概述Experience Data Model(XDM)中的區段定義類別。
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-source-git-commit: c0437b8f9d93c46dbec991a33a893a5b9e0cdf2c
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 1%
 
 ---
 
-# 
+# [!UICONTROL 區段定義] 類
 
-The class includes required fields such as the ID and name of a segment, along with other optional attributes. This class should be used if you are bringing in segment definitions from external systems into Adobe Experience Platform.
+&quot;[!UICONTROL 區段定義]「 」是標準的Experience Data Model(XDM)類別，可擷取區段定義的詳細資訊。 類別包含必填欄位，例如區段的ID、名稱，以及其他選用屬性。 如果您要將外部系統的區段定義匯入Adobe Experience Platform，應使用此類別。
 
 >[!NOTE]
 >
->This class should only be used to capture information about segment definitions themselves. [](../field-groups/profile/segmentation.md)
+>此類別僅應用於擷取區段定義本身的相關資訊。 若要在您的設定檔資料中擷取區段成員資格資訊，您應使用 [區段成員資格詳細資料欄位群組](../field-groups/profile/segmentation.md) 在 [!UICONTROL XDM個別設定檔] 綱要。
 
 ![](../images/classes/segment-definition.png)
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_repo` |  <ul><li>`createDate`</li><li>`modifyDate`</li></ul> |
-| `_id` | A unique, system-generated string identifier for the record. This field is used to track the uniqueness of an individual record, prevent duplication of data, and to look up that record in downstream services.<br><br>However, you can still opt to supply your own unique ID values if you wish.<br><br>****[](../schema/composition.md#identity) |
-| `createdByBatchID` | The ID of the ingested batch that caused the record to be created. |
-| `description` | A description for the segment definition. |
-| `identityMap` | A map field that contains a set of namespaced identities for the individuals the segment applies to. [](../schema/composition.md#identityMap) |
-| `modifiedByBatchID` | The ID of the last ingested batch that caused the record to be updated. |
-| `repositoryCreatedBy` | The ID of the user who created the record. |
-| `repositoryLastModifiedBy` | The ID of the user who last modified the record. |
-| `segmentName` | **** |
-| `segmentStatus` | The status of the segment from the external system. The following values are accepted: <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
-| `version` | The latest version number of the segment definition. |
+| `_repo` | 包含下列項目的物件 [!UICONTROL DateTime] 欄位： <ul><li>`createDate`:在資料存放區中建立資源的日期和時間，例如首次擷取資料的時間。</li><li>`modifyDate`:上次修改資源的日期和時間。</li></ul> |
+| `_id` | 記錄的唯一、系統生成的字串標識符。 此欄位用於追蹤個別記錄的獨特性、防止資料重複，以及在下游服務中尋找該記錄。<br><br>由於此欄位是系統產生的，因此在資料擷取期間不會提供明確值。 不過，您仍可以選擇提供您自己的唯一ID值（如果您想要的話）。<br><br>必須區分此欄位 **不** 代表與個人相關的身分，而非資料本身的記錄。 與個人有關的身份資料應被降級為 [身分欄位](../schema/composition.md#identity) 。 |
+| `createdByBatchID` | 導致建立記錄的所擷取批次ID。 |
+| `description` | 區段定義的說明。 |
+| `identityMap` | 一個地圖欄位，其中包含區段所套用之個人的命名空間身分識別集。 請參閱 [綱要構成基本知識](../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
+| `modifiedByBatchID` | 導致記錄更新的上次擷取批次的ID。 |
+| `repositoryCreatedBy` | 建立記錄的用戶ID。 |
+| `repositoryLastModifiedBy` | 上次修改記錄的用戶ID。 |
+| `segmentName` | **（必要）** 區段定義的名稱。 |
+| `segmentStatus` | 來自外部系統的區段狀態。 接受下列值： <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
+| `version` | 區段定義的最新版本號碼。 |
 
 {style=&quot;table-layout:auto&quot;}

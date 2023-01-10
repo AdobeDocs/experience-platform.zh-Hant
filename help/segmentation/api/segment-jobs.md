@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段服務；分段工作；分段工作；API; API;
 solution: Experience Platform
 title: 區段作業API端點
-topic-legacy: developer guide
 description: Adobe Experience Platform區段服務API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 2%

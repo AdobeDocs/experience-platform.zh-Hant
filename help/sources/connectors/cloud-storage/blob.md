@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；Blob;Blob;Azure Blob;Azure Blob
 solution: Experience Platform
 title: Azure Blob源連接器概述
-topic-legacy: overview
 description: 了解如何使用API或使用者介面將Azure Blob連線至Adobe Experience Platform。
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: 251da91844311d08766ee2407ae0b775d4ac6aba
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%

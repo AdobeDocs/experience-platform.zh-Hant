@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段服務；串流分段；串流分段；持續評估；
 solution: Experience Platform
 title: 透過串流細分即時評估事件
-topic-legacy: developer guide
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用串流區段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 1%

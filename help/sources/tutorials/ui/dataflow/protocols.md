@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；通訊協定連接器
 solution: Experience Platform
 title: 在UI中使用協定源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供如何使用Platform UI為通訊協定來源建立資料流的步驟。
 exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1385'
 ht-degree: 0%

@@ -2,18 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；方案；方案； XDM；欄位；方案；方案；網頁詳細資訊；資料類型；資料類型；網頁
 solution: Experience Platform
 title: Web資訊資料類型
-topic-legacy: overview
 description: 本檔案概述Experience Data Model(XDM)資料類型的網頁資訊。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+exl-id: bfb00835-5908-4baf-af2a-6d845710e340
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Web資] 訊資料類型
+# [!UICONTROL 網路資訊] 資料類型
 
-[!UICONTROL 網] 頁資訊是標準的體驗資料模型(XDM)資料類型，可說明透過特定於全球資訊網管道的體驗事件所記錄的資訊，包括網頁、反向連結及/或與頁面互動相關的連結。
+[!UICONTROL 網路資訊] 是標準的Experience Data Model(XDM)資料類型，可說明透過Experience Event（專屬於全球資訊網管道）所記錄的資訊，包括網頁、反向連結及/或與頁面互動相關的連結。
 
 ![](../images/data-types/web-information.png)
 

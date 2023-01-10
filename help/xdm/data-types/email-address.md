@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；電子郵件地址；xdm:emailAddress；電子郵件；電子郵件地址；資料類型；資料類型；
 solution: Experience Platform
 title: 電子郵件地址資料類型
-topic-legacy: overview
 description: 本檔案概述「電子郵件地址XDM」資料類型。
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: fe6abe468025ab3373f802954aedceeb1af625fe
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 2%

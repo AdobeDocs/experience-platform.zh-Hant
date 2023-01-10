@@ -3,9 +3,8 @@ keywords: Experience Platform；首頁；熱門主題；API;API;XDM;XDM系統；
 solution: Experience Platform
 title: 在UI中建立和編輯結構欄位群組
 description: 了解如何在Experience Platform使用者介面中建立和編輯結構欄位群組。
-topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 57e7386ad631f2ce3d9b28d2532655a2668bdcaa
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 0%

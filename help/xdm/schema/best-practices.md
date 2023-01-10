@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；列舉；主要身分；主要身分； XDM個別設定檔；體驗事件； XDM體驗事件； XDM ExperienceEvent;experienceEvent;experienceevent; XDM Experienceevent；結構設計；最佳作法
 solution: Experience Platform
 title: 資料模型的最佳實務
-topic-legacy: overview
 description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於Adobe Experience Platform的結構的建置組塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '2699'
 ht-degree: 2%

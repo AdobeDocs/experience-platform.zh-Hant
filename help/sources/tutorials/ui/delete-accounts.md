@@ -3,10 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；刪除帳戶
 description: Adobe Experience Platform中的來源連接器可讓您依排程內嵌外部來源資料。 本教學課程提供從來源工作區刪除帳戶的步驟。
 solution: Experience Platform
 title: 刪除UI中的源連接帳戶
-topic-legacy: overview
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%

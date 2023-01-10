@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段服務；PQL;PQL；設定檔查詢語言；字串函式；字串；
 solution: Experience Platform
 title: PQL字串函式
-topic-legacy: developer guide
 description: 設定檔查詢語言(PQL)提供函式，讓與字串的互動更簡單。
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: 1c9ed96cdbd9e670bd1f05467e33e8dab5bc2121
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 6%

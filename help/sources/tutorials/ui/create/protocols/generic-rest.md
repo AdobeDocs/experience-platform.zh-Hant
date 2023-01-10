@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；一般REST API
 title: 在UI中建立一般REST API來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立一般REST API來源連線。
-source-git-commit: 94809a8e98c8de7a9a474fb5543b590fc51cb075
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 1%
@@ -48,7 +47,7 @@ ht-degree: 1%
 
 | 憑據 | 說明 |
 | --- | --- |
-| 主機 | 您向其提出請求的來源的主機URL。 |
+| Host | 您向其提出請求的來源的主機URL。 |
 | 使用者名稱 | 與您的使用者帳戶對應的使用者名稱。 |
 | 密碼 | 與您的使用者帳戶對應的密碼。 |
 

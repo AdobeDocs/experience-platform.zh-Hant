@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Marketo Engage連接器
-topic-legacy: overview
 description: 本檔案概述Marketo Engage來源連接器，包括驗證、對應和資料延遲的相關資訊。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；來源；連接器；來源連接器；來源sdk;sdk; SDK
 solution: Experience Platform
 title: 使用Platform UI建立MailChimp成員源連接
-topic-legacy: tutorial
 description: 了解如何使用Platform UI將Adobe Experience Platform連線至MailChimp成員。
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: 430b544835956ec0b212fb44d48beaae46afdd2e
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%

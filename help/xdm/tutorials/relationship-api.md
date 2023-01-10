@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；結構註冊表；結構註冊表；結構；結構；結構；結構；關係；關係描述元；關係描述元；關係描述元；參考身分；參考身分；
 title: 使用結構註冊表API定義兩個結構之間的關係
 description: 本檔案提供教學課程，說明如何使用Schema Registry API，定義貴組織所定義的兩個結構之間的一對一關係。
-topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 2%

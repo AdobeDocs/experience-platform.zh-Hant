@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；ui;XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；結構註冊表；結構；結構；結構；結構；結構；建立；資料類型；
 solution: Experience Platform
 title: 使用UI建立和編輯資料類型
-topic-legacy: tutorial
 type: Tutorial
 description: 了解如何在Experience Platform使用者介面中建立和編輯資料類型。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 81f700f7c68ba9ff2fc0a99bf62031bf3fe0c95f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1156'
 ht-degree: 0%

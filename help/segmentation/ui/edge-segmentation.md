@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；邊緣分段；分段服務；分段服務；ui指南；串流邊緣；
 solution: Experience Platform
 title: Edge Segmentation UI指南
-topic-legacy: ui guide
 description: 邊緣分段是即時在邊緣上評估Platform中區段的功能，可啟用相同的頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 8c7c1273feb2033bf338f7669a9b30d9459509f7
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 0%

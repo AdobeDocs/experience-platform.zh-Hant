@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；同意和偏好設定；同意；onetrust;OneTrust
 solution: Experience Platform
 title: 使用UI中的「同意」和「首選項」源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供如何使用Platform UI為同意和偏好設定來源建立資料流的步驟。
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%

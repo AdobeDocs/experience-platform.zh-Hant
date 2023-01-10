@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Maria DB;Maria db
 solution: Experience Platform
 title: 在UI中建立MariaDB源連接
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立Maria DB源連接。
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 1%

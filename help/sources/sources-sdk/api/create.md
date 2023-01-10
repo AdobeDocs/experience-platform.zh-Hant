@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
+keywords: Experience Platform；首頁；熱門主題；來源；連接器；來源連接器；來源sdk;sdk; SDK
 solution: Experience Platform
-title: 使用流服務API建立新連接規範
-topic-legacy: tutorial
-description: 以下文檔提供了有關如何使用流服務API建立連接規範並通過自助源整合新源的步驟。
+title: 使用流服務API建立新的連接規範
+description: 以下文檔提供了有關如何使用流服務API建立連接規範以及通過自助源整合新源的步驟。
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 1%
@@ -14,24 +13,24 @@ ht-degree: 1%
 
 # 使用 [!DNL Flow Service] API
 
-連接規範表示源的結構。 它包含有關源的驗證要求的資訊，定義如何瀏覽和檢查源資料，並提供有關給定源的屬性的資訊。 的 `/connectionSpecs` 端點 [!DNL Flow Service] API允許您以寫程式方式管理組織內的連接規範。
+連接規範表示源的結構。 它包含有關源的身份驗證要求的資訊，定義如何探索和檢查源資料，並提供有關給定源的屬性的資訊。 此 `/connectionSpecs` 端點 [!DNL Flow Service] API可讓您以程式設計方式管理組織內的連線規格。
 
-以下文檔提供了有關如何使用 [!DNL Flow Service] API，並通過Self-Serve Sources(Batch SDK)整合新源。
+以下文檔提供了如何使用 [!DNL Flow Service] API並透過自助來源（批次SDK）整合新來源。
 
 ## 快速入門
 
-在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
 
-## 收集對象
+## 收整合品
 
-要使用自助源建立新批處理源，必須首先與Adobe協調，請求專用Git儲存庫，並與Adobe對齊有關源標籤、說明、類別和表徵圖的詳細資訊。
+若要使用自助來源建立新的批次來源，您必須先與Adobe協調、請求私人Git存放庫，並與來源標籤、說明、類別和圖示的詳細資訊Adobe一致。
 
-提供後，您必須按如下方式構建私有Git儲存庫：
+提供後，您必須依此方式建構私人Git存放庫：
 
 * 來源
    * {your_source}
-      * 工件
-         * {your_source.txt}-category.txt
+      * 成品
+         * {your_source}-category.txt
          * {your_source}-description.txt
          * {your_source}-icon.svg
          * {your_source}-label.txt
@@ -39,12 +38,12 @@ ht-degree: 1%
 
 | 對象（檔案名） | 說明 | 範例 |
 | --- | --- | --- |
-| {your_source} | 源的名稱。 此資料夾應包含與您的源相關的所有對象，位於您的專用Git儲存庫中。 | `mailchimp-members` |
-| {your_source.txt}-category.txt | 源所屬的類別，格式為文本檔案。 自助源（批處理SDK）支援的可用源類別清單包括： <ul><li>Advertising</li><li>Analytics</li><li>同意和首選項</li><li>CRM</li><li>客戶成功</li><li>資料庫</li><li>電子商務</li><li>營銷自動化</li><li>付款</li><li>協定</li></ul> **注釋**:如果您認為您的來源不適合上述任何類別，請與Adobe代表聯繫以進行討論。 | `mailchimp-members-category.txt` 在檔案內，請指定源的類別，如： `marketingAutomation`。 |
-| {your_source}-description.txt | 來源的簡要描述。 | [!DNL Mailchimp Members] 是市場營銷自動化的來源 [!DNL Mailchimp Members] 資料到Experience Platform。 |
-| {your_source}-icon.svg | 用於在Experience Platform源目錄中表示源的影像。 此表徵圖必須是SVG檔案。 |
-| {your_source}-label.txt | 源應出現在Experience Platform源目錄中的名稱。 | 郵箱成員 |
-| {your_source}-connectionSpec.json | 包含源的連接規範的JSON檔案。 在完成本指南時，您將填充連接規範，因此最初不需要此檔案。 | `mailchimp-members-connectionSpec.json` |
+| {your_source} | 源的名稱。 此資料夾應會在您的私人Git存放庫中，包含與來源相關的所有成品。 | `mailchimp-members` |
+| {your_source}-category.txt | 源所屬的類別，格式為文本檔案。 自助來源（批次SDK）支援的可用來源類別清單包括： <ul><li>Advertising</li><li>Analytics</li><li>同意和偏好設定</li><li>CRM</li><li>客戶成功</li><li>資料庫</li><li>電子商務</li><li>行銷自動化</li><li>付款</li><li>通訊協定</li></ul> **附註**:如果您認為您的來源不符合上述任何類別，請連絡您的Adobe代表以討論。 | `mailchimp-members-category.txt` 在檔案內，請指定源的類別，如： `marketingAutomation`. |
+| {your_source}-description.txt | 您的來源的簡短說明。 | [!DNL Mailchimp Members] 是行銷自動化來源，您可用來 [!DNL Mailchimp Members] 資料Experience Platform。 |
+| {your_source}-icon.svg | 要在Experience Platform源目錄中表示源的影像。 此表徵圖必須是SVG檔案。 |
+| {your_source}-label.txt | 源應顯示在Experience Platform源目錄中的名稱。 | Mailchimp成員 |
+| {your_source}-connectionSpec.json | 包含源的連接規範的JSON檔案。 此檔案最初不是必需的，因為您將在完成本指南時填充連接規範。 | `mailchimp-members-connectionSpec.json` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -52,13 +51,13 @@ ht-degree: 1%
 >
 >在連接規範的測試期間，您可以使用 `text` 在連接規範中。
 
-在將必要檔案添加到專用Git儲存庫後，必須建立拉入請求(PR)以供Adobe審閱。 在批准和合併您的PR後，將為您提供一個ID，該ID可用於連接規範以參考源的標籤、說明和表徵圖。
+將必要的檔案新增至私人Git存放庫後，您就必須建立提取請求(PR)，供Adobe檢閱。 核准並合併您的PR後，系統會提供ID，供連線規格參考來源的標籤、說明和圖示。
 
-接下來，按照下面介紹的步驟配置連接規範。 有關可添加到源中的不同功能（如高級計畫、自定義架構或不同分頁類型）的其他指導，請參閱上的指南 [配置源規範](../config/sourcespec.md)。
+接下來，請按照以下步驟配置連接規範。 如需您可新增至來源的不同功能（例如進階排程、自訂結構或不同分頁類型）的其他指引，請參閱 [配置源規範](../config/sourcespec.md).
 
 ## 複製連接規範模板
 
-收集所需對象後，將下面的連接規範模板複製並貼上到所選文本編輯器中，然後更新方括弧中的屬性 `{}` 與特定來源相關的資訊。
+收集到所需的成品後，將下面的連接規範模板複製並貼到所選的文本編輯器中，然後以方括弧更新屬性 `{}` 與特定來源相關的資訊。
 
 ```json
 {
@@ -443,17 +442,17 @@ ht-degree: 1%
 
 ## 建立連接規範 {#create}
 
-獲取連接規範模板後，現在可以通過填寫與源對應的相應值開始創作新的連接規範。
+獲得連接規範模板後，您現在可以通過填寫與源對應的適當值來開始創作新的連接規範。
 
 連接規範可分為三個不同部分：驗證規範、源規範和瀏覽規範。
 
-有關如何填充連接規範各部分值的說明，請參閱以下文檔：
+有關如何填入連接規範每個部分的值的說明，請參閱以下文檔：
 
 * [配置身份驗證規範](../config/authspec.md)
 * [配置源規範](../config/sourcespec.md)
 * [配置瀏覽規範](../config/explorespec.md)
 
-在更新規範資訊後，您可以通過向POST `/connectionSpecs` 端點 [!DNL Flow Service] API。
+更新規範資訊後，您可以通過向 `/connectionSpecs` 端點 [!DNL Flow Service] API。
 
 **API格式**
 
@@ -463,7 +462,7 @@ POST /connectionSpecs
 
 **要求**
 
-以下請求是完全創作的連接規範的示例 [!DNL MailChimp] 源：
+以下請求是完整編寫的 [!DNL MailChimp] 來源：
 
 ```shell
 curl -X POST \
@@ -647,7 +646,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回新建立的連接規範，包括其唯一性 `id`。
+成功的響應返回新建立的連接規範，包括其唯一性 `id`.
 
 ```json
 {
@@ -832,6 +831,6 @@ curl -X POST \
 
 ## 後續步驟
 
-現在，您已建立了新的連接規範，必須將其相應的連接規範ID添加到現有的流規範中。 請參閱上的教程 [更新流規範](./update-flow-specs.md) 的子菜單。
+現在，您已建立了新的連接規範，必須將其對應的連接規範ID添加到現有流規範中。 請參閱 [更新流規範](./update-flow-specs.md) 以取得更多資訊。
 
-要修改所建立的連接規範，請參閱上的教程 [更新連接規範](./update-connection-specs.md)。
+若要修改您建立的連線規格，請參閱 [更新連接規範](./update-connection-specs.md).

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: Amazon Kinesis Source Connector概述
-topic-legacy: overview
 description: 了解如何使用API或使用者介面將Amazon Kinesis連線至Adobe Experience Platform。
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 5f4355a9d3ef39ee63581fc70dbf0f6e7d674814
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM;ExperienceEvent；欄位；結構；結構；結構；結構設計；欄位群組；欄位群組；iab;tcf；同意；
 solution: Experience Platform
 title: 事件結構的IAB TCF 2.0同意欄位群組
-topic-legacy: overview
 description: 本檔案概述XDM ExperienceEvent類別的IAB TCF 2.0同意結構欄位群組。
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 1%

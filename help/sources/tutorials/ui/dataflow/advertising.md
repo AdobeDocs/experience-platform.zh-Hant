@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；設定資料流；廣告連接器
 solution: Experience Platform
 title: 使用UI中的Advertising來源建立資料流
-topic-legacy: overview
 type: Tutorial
 description: 資料流是一個排程任務，可從源中檢索資料並將資料內嵌到Platform資料集。 本教學課程提供如何使用Platform UI為廣告來源建立資料流的步驟。
 exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 0%

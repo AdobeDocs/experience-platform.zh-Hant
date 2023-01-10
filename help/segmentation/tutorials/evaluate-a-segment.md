@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；區段評估；區段服務；分段；評估區段；存取區段結果；評估和存取區段；
 solution: Experience Platform
 title: 評估和存取區段結果
-topic-legacy: tutorial
 type: Tutorial
 description: 請依照本教學課程，了解如何使用Adobe Experience Platform區段服務API評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 0%

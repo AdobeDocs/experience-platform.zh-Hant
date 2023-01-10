@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；UI;UI;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；結構編輯器；結構編輯器；結構；結構；結構；結構；結構；建立
 solution: Experience Platform
 title: 使用結構編輯器建立結構
-topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 84a1b9df30da06edee093824c19f3bea338e5970
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '3893'
 ht-degree: 0%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Zoho CRM;zoho crm;Zoho;zoho
 solution: Experience Platform
 title: 在UI中建立Zoho CRM來源連線
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立Zoho CRM來源連線。
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%

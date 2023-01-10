@@ -1,52 +1,50 @@
 ---
-keywords: Experience Platform;home；熱門主題；模式；模式；XDM;ExperienceEvent;fields；模式；模式設計；欄位組；欄位組；enduserids；最終用戶；ids;updates;
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM;ExperienceEvent；欄位；結構；結構；結構；結構設計；欄位群組；欄位群組；使用者ID；一般使用者；ID；更新；
 solution: Experience Platform
-title: 方案欄位組名稱更新
-topic-legacy: overview
-description: 最近XDM模式欄位組名稱更改的清單。
+title: 架構欄位組名稱更新
+description: 最近XDM架構欄位群組名稱變更的清單。
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 0%
+source-wordcount: '287'
+ht-degree: 1%
 
 ---
 
 
-# 方案欄位組名稱更新
+# 架構欄位組名稱更新
 
-數個「體驗資料模型」(XDM)架構欄位群組的名稱已變更。 由於這些欄位組的欄位結構保持不變，因此僅更改名稱不應影響使用這些欄位組的任何現有方案。 但是，為了在Adobe Experience Platform用戶介面中查找和使用這些欄位組，必須使用其新名稱。
+數個Experience Data Model(XDM)架構欄位群組的名稱已變更。 由於這些欄位組的欄位結構保持不變，僅更改名稱不應影響採用這些欄位組的任何現有架構。 但是，為了在Adobe Experience Platform使用者介面中查詢及使用這些欄位群組，必須使用其新名稱。
 
 下表概述已更新的現有欄位組及其對應的新名稱：
 
-| 舊名 | 更新名稱 |
+| 上一個名稱 | 更新名稱 |
 | --- | --- |
-| [!UICONTROL Experience event privacy mixin] | [!UICONTROL Privacy Details] |
-| [!UICONTROL ExperienceEvent application details] | [!UICONTROL Application Details] |
-| [!UICONTROL ExperienceEvent channel details] | [!UICONTROL Channel Details] |
-| [!UICONTROL ExperienceEvent commerce details] | [!UICONTROL Commerce Details] |
-| [!UICONTROL ExperienceEvent details for advertising] | [!UICONTROL Advertising Details] |
-| [!UICONTROL ExperienceEvent details for marketing] | [!UICONTROL Campaign Marketing Details] |
-| [!UICONTROL ExperienceEvent details for media] | [!UICONTROL Media Interaction Details] |
-| [!UICONTROL ExperienceEvent details for search] | [!UICONTROL Search Details] |
-| [!UICONTROL ExperienceEvent direct marketing details] | [!UICONTROL Direct Marketing Details] |
-| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL End User ID Details] |
-| [!UICONTROL ExperienceEvent environment details] | [!UICONTROL Environment Details] |
-| [!UICONTROL ExperienceEvent implementation details] | [!UICONTROL Implementation Details] |
-| [!UICONTROL ExperienceEvent profile stitch details] | [!UICONTROL Profile Stitch] |
-| [!UICONTROL ExperienceEvent Segment Membership Details] | [!UICONTROL Segment Membership Details] |
-| [!UICONTROL ExperienceEvent technical details] | [!UICONTROL Technical Details] |
-| [!UICONTROL ExperienceEvent web details] | [!UICONTROL Web Details] |
-| [!UICONTROL Profile direct marketing] | [!UICONTROL Direct Marketing Contact Details] |
-| [!UICONTROL Profile person details] | [!UICONTROL Demographic Details] |
-| [!UICONTROL Profile personal details] | [!UICONTROL Personal Contact Details] |
-| [!UICONTROL Profile Phones] | [!UICONTROL Phone Number Details] |
-| [!UICONTROL Profile preferences details] | [!UICONTROL Preference Details] |
-| [!UICONTROL Profile privacy] | [!UICONTROL Privacy Details] |
-| [!UICONTROL Profile push details] | [!UICONTROL Push Notification Token Details] |
-| [!UICONTROL Profile segmentation] | [!UICONTROL Segment Membership Details] |
-| [!UICONTROL Profile subscriptions] | [!UICONTROL Subscription Details] |
-| [!UICONTROL Profile work details] | [!UICONTROL Work Contact Details] |
-| [!UICONTROL Push notification details] | [!UICONTROL Push Notification Details] |
-| [!UICONTROL Segment expression] | [!UICONTROL Segment Expression Details] |
+| [!UICONTROL 體驗事件隱私權Mixin] | [!UICONTROL 隱私權詳細資料] |
+| [!UICONTROL ExperienceEvent應用程式詳細資訊] | [!UICONTROL 應用程式詳細資訊] |
+| [!UICONTROL ExperienceEvent管道詳細資料] | [!UICONTROL 管道詳細資料] |
+| [!UICONTROL ExperienceEvent商務詳細資訊] | [!UICONTROL 商務詳細資訊] |
+| [!UICONTROL 廣告的ExperienceEvent詳細資料] | [!UICONTROL 廣告詳細資訊] |
+| [!UICONTROL 行銷的ExperienceEvent詳細資料] | [!UICONTROL 促銷活動行銷詳細資料] |
+| [!UICONTROL 媒體的ExperienceEvent詳細資料] | [!UICONTROL 媒體互動詳細資訊] |
+| [!UICONTROL 搜尋的ExperienceEvent詳細資訊] | [!UICONTROL 搜尋詳細資料] |
+| [!UICONTROL ExperienceEvent直接行銷詳細資料] | [!UICONTROL 直接行銷詳細資料] |
+| [!UICONTROL ExperienceEvent EndUserIDs] | [!UICONTROL 最終用戶ID詳細資訊] |
+| [!UICONTROL ExperienceEvent環境詳細資訊] | [!UICONTROL 環境詳細資訊] |
+| [!UICONTROL ExperienceEvent實作詳細資料] | [!UICONTROL 實作詳細資料] |
+| [!UICONTROL ExperienceEvent設定檔匯整詳細資訊] | [!UICONTROL 設定檔拼接] |
+| [!UICONTROL ExperienceEvent區段成員資格詳細資訊] | [!UICONTROL 區段成員資格詳細資料] |
+| [!UICONTROL ExperienceEvent技術詳細資訊] | [!UICONTROL 技術詳細資訊] |
+| [!UICONTROL ExperienceEvent網頁詳細資訊] | [!UICONTROL Web詳細資訊] |
+| [!UICONTROL 設定檔直接行銷] | [!UICONTROL 直接行銷連絡資訊] |
+| [!UICONTROL 配置檔案人員詳細資訊] | [!UICONTROL 人口統計詳細資料] |
+| [!UICONTROL 個人資料詳細資訊] | [!UICONTROL 個人聯繫人詳細資訊] |
+| [!UICONTROL 配置式電話] | [!UICONTROL 電話號碼詳細資訊] |
+| [!UICONTROL 設定檔偏好設定詳細資訊] | [!UICONTROL 首選項詳細資訊] |
+| [!UICONTROL 設定檔隱私] | [!UICONTROL 隱私權詳細資料] |
+| [!UICONTROL 設定檔推送詳細資料] | [!UICONTROL 推播通知Token詳細資料] |
+| [!UICONTROL 設定檔細分] | [!UICONTROL 區段成員資格詳細資料] |
+| [!UICONTROL 設定檔訂閱] | [!UICONTROL 訂閱詳細資訊] |
+| [!UICONTROL 配置檔案工作詳細資訊] | [!UICONTROL 工作聯繫人詳細資訊] |
+| [!UICONTROL 推播通知詳細資料] | [!UICONTROL 推播通知詳細資料] |
+| [!UICONTROL 區段運算式] | [!UICONTROL 區段運算式詳細資料] |

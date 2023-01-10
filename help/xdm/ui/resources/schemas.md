@@ -3,9 +3,8 @@ keywords: Experience Platform；首頁；熱門主題；API;API;XDM;XDM系統；
 solution: Experience Platform
 title: 在UI中建立和編輯結構
 description: 了解如何在Experience Platform使用者介面中建立和編輯結構的基本知識。
-topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '3156'
 ht-degree: 0%

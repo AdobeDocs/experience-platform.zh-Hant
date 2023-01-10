@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Azure;azure blob;Blob;Blob
+keywords: Experience Platform；首頁；熱門主題；Azure;azure blob;blob;Blob
 solution: Experience Platform
-title: 使用流服務API建立Azure Blob基連接
-topic-legacy: overview
+title: 使用流服務API建立Azure Blob基本連接
 type: Tutorial
-description: 瞭解如何使用流服務API將Adobe Experience Platform連接到Azure Blob。
+description: 了解如何使用流量服務API將Adobe Experience Platform連線至Azure Blob。
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 0d891acd4e33eb7080da44e204672dc3601cf166
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 1%
@@ -15,42 +14,42 @@ ht-degree: 1%
 
 # 建立 [!DNL Azure Blob] 基本連接使用 [!DNL Flow Service] API
 
-基連接表示源和Adobe Experience Platform之間經過驗證的連接。
+基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教程將指導您完成建立基本連接的步驟 [!DNL Azure Blob] (以下簡稱：[!DNL Blob]&quot;)使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
+本教學課程會逐步引導您完成建立基礎連線的步驟 [!DNL Azure Blob] (下稱「[!DNL Blob]&quot;)使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門
 
-本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
+本指南需要妥善了解下列Adobe Experience Platform元件：
 
-* [源](../../../../home.md):Experience Platform允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
-* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供了成功建立 [!DNL Blob] 源連接使用 [!DNL Flow Service] API。
+以下小節提供您需要知道的其他資訊，以便成功建立 [!DNL Blob] 源連接使用 [!DNL Flow Service] API。
 
 ### 收集所需憑據
 
-為了 [!DNL Flow Service] 與 [!DNL Blob] 儲存，必須為以下連接屬性提供值：
+為了 [!DNL Flow Service] 與 [!DNL Blob] 儲存，您必須提供下列連線屬性的值：
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 包含驗證所需的授權資訊的字串 [!DNL Blob] Experience Platform。 的 [!DNL Blob] 連接字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 有關連接字串的詳細資訊，請參閱 [!DNL Blob] 文檔 [配置連接字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。 |
-| `sasUri` | 可用作連接的備用身份驗證類型的共用訪問簽名URI [!DNL Blob] 帳戶。 的 [!DNL Blob] SAS URI模式為： `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 有關詳細資訊，請參閱 [!DNL Blob] 文檔 [共用訪問簽名URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication)。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 連接規範ID [!DNL Blob] 為： `d771e9c1-4f26-40dc-8617-ce58c4b53702`。 |
+| `connectionString` | 包含驗證所需的授權資訊的字串 [!DNL Blob] Experience Platform。 此 [!DNL Blob] 連線字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 如需連線字串的詳細資訊，請參閱 [!DNL Blob] 文檔 [配置連接字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `sasUri` | 共用訪問簽名URI，可用作連接您的 [!DNL Blob] 帳戶。 此 [!DNL Blob] SAS URI模式為： `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` 如需詳細資訊，請參閱 [!DNL Blob] 文檔 [共用訪問簽名URI](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 的連接規範ID [!DNL Blob] 為： `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../../../landing/api-guide.md).
 
 ## 建立基本連接
 
-基本連接將保留源和平台之間的資訊，包括源的驗證憑據、連接的當前狀態和唯一的基本連接ID。 基本連接ID允許您從源中瀏覽和導航檔案，並標識要攝取的特定項目，包括有關其資料類型和格式的資訊。
+基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
 
-要建立基本連接ID，請向 `/connections` 提供端點 [!DNL Blob] 身份驗證憑據作為請求參數的一部分。
+若要建立基本連線ID，請向 `/connections` 端點提供 [!DNL Blob] 驗證憑證作為要求參數的一部分。
 
-### 建立 [!DNL Blob] 使用基於連接字串的身份驗證的基連接
+### 建立 [!DNL Blob] 使用基於連接字串的身份驗證的基本連接
 
-建立 [!DNL Blob] 基連接使用基於連接字串的身份驗證，向POST請求 [!DNL Flow Service] 提供API時 [!DNL Blob] `connectionString`。
+建立 [!DNL Blob] 基本連接使用基於連接字串的身份驗證，向POST請求 [!DNL Flow Service] API，同時提供 [!DNL Blob] `connectionString`.
 
 **API格式**
 
@@ -60,7 +59,7 @@ POST /connections
 
 **要求**
 
-以下請求為 [!DNL Blob] 使用基於連接字串的身份驗證：
+下列請求會為 [!DNL Blob] 使用連接字串式身份驗證：
 
 ```shell
 curl -X POST \
@@ -88,12 +87,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | 訪問Blob儲存中的資料所需的連接字串。 Blob連接字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`。 |
+| `auth.params.connectionString` | 存取Blob儲存中的資料所需的連線字串。 Blob連線字串模式為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | Blob儲存連接規範ID為： `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **回應**
 
-成功的響應返回新建立的基本連接的詳細資訊，包括其唯一標識符(`id`)。 在下一步建立源連接時需要此ID。
+成功的回應會傳回新建立之基本連線的詳細資訊，包括其唯一識別碼(`id`)。 在下一步建立源連接時需要此ID。
 
 ```json
 {
@@ -102,11 +101,11 @@ curl -X POST \
 }
 ```
 
-### 建立 [!DNL Blob] 基連接使用共用訪問簽名URI
+### 建立 [!DNL Blob] 使用共用訪問簽名URI的基本連接
 
-共用訪問簽名(SAS)URI允許對您的 [!DNL Blob] 帳戶。 您可以使用SAS建立不同訪問度的身份驗證憑據，因為基於SAS的身份驗證允許您設定權限、開始日期和到期日期以及對特定資源的設定。
+共用訪問簽名(SAS)URI允許向您的 [!DNL Blob] 帳戶。 您可以使用SAS建立具有不同訪問權限的身份驗證憑據，因為基於SAS的身份驗證允許您設定權限、開始日期和到期日，以及對特定資源的調配。
 
-建立 [!DNL Blob] blob連接使用共用訪問簽名URI，向POST請求 [!DNL Flow Service] API，同時為 [!DNL Blob] `sasUri`。
+建立 [!DNL Blob] 使用共用訪問簽名URI的blob連接，向POST請求 [!DNL Flow Service] API，同時提供 [!DNL Blob] `sasUri`.
 
 **API格式**
 
@@ -116,7 +115,7 @@ POST /connections
 
 **要求**
 
-以下請求為 [!DNL Blob] 使用共用訪問簽名URI:
+下列請求會為 [!DNL Blob] 使用共用訪問簽名URI:
 
 ```shell
 curl -X POST \
@@ -144,12 +143,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | 訪問您的資料所需的SAS URI [!DNL Blob] 儲存。 的 [!DNL Blob] SAS URI模式為： `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`。 |
-| `connectionSpec.id` | 的 [!DNL Blob] 儲存連接規範ID為： `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | 訪問您的 [!DNL Blob] 儲存。 此 [!DNL Blob] SAS URI模式為： `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
+| `connectionSpec.id` | 此 [!DNL Blob] 儲存連接規範ID為： `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **回應**
 
-成功的響應返回新建立的基本連接的詳細資訊，包括其唯一標識符(`id`)。 在下一步建立源連接時需要此ID。
+成功的回應會傳回新建立之基本連線的詳細資訊，包括其唯一識別碼(`id`)。 在下一步建立源連接時需要此ID。
 
 ```json
 {
@@ -160,4 +159,4 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您建立了 [!DNL Blob] 使用API和唯一ID進行連接，作為響應體的一部分。 您可以使用此連接ID [使用流服務API瀏覽雲儲存](../../explore/cloud-storage.md)。
+依照本教學課程，您已建立 [!DNL Blob] 已透過API與唯一ID取得連線，並成為回應內文的一部分。 您可將此連線ID用於 [使用流量服務API探索雲端儲存空間](../../explore/cloud-storage.md).

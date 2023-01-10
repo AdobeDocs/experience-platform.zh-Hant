@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；雲端儲存資料；串流資料；串流
 solution: Experience Platform
 title: 使用流服務API為原始資料建立流資料流
-topic-legacy: overview
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源連接器和API將其匯入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 2%

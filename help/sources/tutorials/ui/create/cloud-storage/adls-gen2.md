@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；Azure Data Lake Storage Gen2;ADLS Gen2;adls gen2;adls連接器
 solution: Experience Platform
 title: 在UI中建立Azure資料湖儲存Gen2源連接
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立Azure Data Lake Storage Gen2源連接。
 exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 1%

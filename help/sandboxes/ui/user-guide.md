@@ -2,13 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；沙箱使用手冊；沙箱指南
 solution: Experience Platform
 title: 沙箱UI指南
-topic-legacy: user guide
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙箱相關之各種作業的步驟。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: df0f543b18f008b656c5e411305c5243efa744ad
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '816'
+ht-degree: 2%
 
 ---
 

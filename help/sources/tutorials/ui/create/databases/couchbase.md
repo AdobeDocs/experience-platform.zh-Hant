@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題； Couchbase; Couchbase
 solution: Experience Platform
 title: 在UI中建立Couchbase源連接
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立Couchbase來源連線。
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 1%

@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；分段；分段服務；api;
 solution: Experience Platform
 title: 區段服務API快速入門
-topic-legacy: developer guide
 description: 下列檔案提供您需要了解的其他資訊，以便順利使用分段API。
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 1%

@@ -1,10 +1,9 @@
 ---
 solution: Experience Platform
 title: 產業資料模型概觀
-topic-legacy: overview
 description: 了解可使用標準Experience Data Model(XDM)元件來建構的各種垂直產業的標準化資料模型。
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: d3f914cb4bcd18980e433c6fd17a663ad0fb5a84
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 1%

@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；
 solution: Experience Platform
 title: 使用流量服務API將資料登陸區域連線至Adobe Experience Platform
-topic-legacy: overview
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至資料登陸區。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 4%

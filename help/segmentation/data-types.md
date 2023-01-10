@@ -2,13 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；資料類型；資料類型；資料類型；分段資料類型；分段；分段；分段服務；分段服務資料類型；
 solution: Experience Platform
 title: 分段服務中支援的資料類型
-topic-legacy: overview
 description: Adobe分段服務支援所有Experience Data Model(XDM)資料類型。 構成區段定義的規則會透過下列資料類型來情境化。
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -26,20 +25,20 @@ Adobe Experience Platform區段服務支援所有Experience Data Model(XDM)資�
 | -------------- | -------- |
 | 邏輯 | `and`、`or`、`not` |
 | 包容/排他 | `include`, `must` `exist`, `exclude`, `must not exist` |
-| 比較 | `equals`,  `does not equal`,  `contains`,  `starts with` |
+| 比較 | `equals`, `does not equal`, `contains`, `starts with` |
 
 ## 日期資料
 
-日期資料可讓您透過使用特定開始/結束日期，或使用下表所示的日期相關陳述式，將以時間為基礎的內容指派給區段定義。 其中一個實作可能是針對今年&#x200B;*任何時間與您的品牌互動，且過去數天內*&#x200B;亦在&#x200B;*中處於作用中狀態的客戶建立對象。*
+日期資料可讓您透過使用特定開始/結束日期，或使用下表所示的日期相關陳述式，將以時間為基礎的內容指派給區段定義。 一個實作可能是隨時建立與您品牌互動的客戶對象 *今年* 而且也很活躍 *with* 最近幾天。
 
 | 範例欄位 | 與日期相關的報表 | 時間表 |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`,  `yesterday`,  `this month`,  `this year` | 與區段建置日期相關。 |
+| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | 與區段建置日期相關。 |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | 在任何指定周/月內相關。 |
 
 ## 體驗事件
 
-[!DNL XDM ExperienceEvents]作為Adobe Experience Platform架構，記錄與[!DNL Platform]整合應用程式的顯式和隱式客戶交互，包括交互時系統的快照。 [!DNL ExperienceEvents] 是事實記錄。因此，在區段定義期間，您可以使用這些資料來源。
+作為Adobe Experience Platform架構， [!DNL XDM ExperienceEvents] 記錄明確和隱含的客戶互動 [!DNL Platform] — 整合應用程式，包括進行交互時系統的快照。 [!DNL ExperienceEvents] 是事實記錄。 因此，在區段定義期間，您可以使用這些資料來源。
 
 如下表所示，事件資料是使用有助於精簡事件行為並指定事件屬性的關鍵字呈現。
 
@@ -54,11 +53,11 @@ Adobe Experience Platform區段服務支援所有Experience Data Model(XDM)資�
 
 外部受眾也可作為新區段定義的元件，將其屬性規則新增至新區段。
 
-目前僅支援Adobe Audience Manager作為外部受眾，未來將啟用其他來源。 如需如何將Adobe Audience Manager對象與Platform搭配使用的詳細資訊，請參閱Adobe Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)中的[對象共用指南。
+目前僅支援Adobe Audience Manager作為外部受眾，未來將啟用其他來源。 如需如何將Adobe Audience Manager對象與Platform搭配使用的詳細資訊，請參閱 [Adobe Audience Manager檔案中的對象共用指南](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### 區段共用
 
-在其他[Adobe Experience Cloud核心服務](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html)中，可使用在Platform中建立的區段。 若要啟用此功能，您需要聯絡您的解決方案架構師或顧問。
+在Platform中建立的區段，可用於其他 [Adobe Experience Cloud Core Services](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=zh-Hant). 若要啟用此功能，您需要聯絡您的解決方案架構師或顧問。
 
 ## 其他資料類型
 

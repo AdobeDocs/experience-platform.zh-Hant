@@ -2,11 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；分段服務；分段；建立資料集；匯出受眾區段；匯出區段；
 solution: Experience Platform
 title: 建立資料集以匯出受眾區段
-topic-legacy: tutorial
 type: Tutorial
 description: 本教學課程逐步說明建立資料集所需的步驟，這些資料集可用來使用Experience PlatformUI匯出對象區段。
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 0%

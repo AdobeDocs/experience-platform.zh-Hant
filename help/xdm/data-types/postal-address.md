@@ -2,10 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM；欄位；結構；結構；位址；xdm:address；資料類型；資料類型；
 solution: Experience Platform
 title: 郵遞區號資料類型
-topic-legacy: overview
 description: 本檔案概述「郵遞區號」XDM資料類型。
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 1%
