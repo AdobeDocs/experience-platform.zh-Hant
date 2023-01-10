@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 查詢範本API端點
 description: 本指南詳細說明您可使用查詢服務API進行的各種查詢範本API呼叫。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 3%
+source-wordcount: '894'
+ht-degree: 2%
 
 ---
 
@@ -129,15 +129,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
-        "sql": "SELECT * FROM accounts;",
-        "name": "Sample query template"
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
+        "name": "Sample query template",
+        "queryParameters": {
+            user_id : {USER_ID}
+            }
     }'
 ```
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sql` | 要建立的SQL查詢。 |
+| `sql` | 要建立的SQL查詢。 您可以使用標準SQL或參數替換。 要在SQL中使用參數替換，必須在參數鍵的前面加上 `$`. 例如， `$key`，並提供SQL中使用的參數，做為 `queryParameters` 欄位。 此處傳遞的值將是範本中使用的預設參數。 如果您想要覆寫這些參數，您必須在POST請求中覆寫這些參數。 |
 | `name` | 查詢模板的名稱。 |
+| `queryParameters` | 配對以替換SQL陳述式中任何參數化值的鍵值。 此為必要項目 **if** 在您提供的SQL內使用參數替換。 不會對這些索引鍵值配對執行值類型檢查。 |
 
 **回應**
 
@@ -145,7 +149,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 ```json
 {
-    "sql": "SELECT * FROM accounts;",
+    "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
     "name": "Sample query template",
     "id": "0094d000-9062-4e6a-8fdb-05606805f08f",
     "updated": "2020-01-09T00:20:09.670Z",
@@ -265,8 +269,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sql` | 要更新的SQL查詢。 |
-| `name` | 排程查詢的名稱。 |
+| `sql` | 要建立的SQL查詢。 您可以使用標準SQL或參數替換。 要在SQL中使用參數替換，必須在參數鍵的前面加上 `$`. 例如， `$key`，並提供SQL中使用的參數，做為 `queryParameters` 欄位。 此處傳遞的值將是範本中使用的預設參數。 如果您想要覆寫這些參數，您必須在POST請求中覆寫這些參數。 |
+| `name` | 查詢模板的名稱。 |
+| `queryParameters` | 配對以替換SQL陳述式中任何參數化值的鍵值。 此為必要項目 **if** 在您提供的SQL內使用參數替換。 不會對這些索引鍵值配對執行值類型檢查。 |
 
 **回應**
 

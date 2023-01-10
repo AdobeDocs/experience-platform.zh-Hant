@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢API端點
 description: 以下各節將逐步說明您可以使用查詢服務API中的/querys端點進行的呼叫。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '825'
 ht-degree: 2%
 
 ---
@@ -42,6 +42,7 @@ GET /queries?{QUERY_PARAMETERS}
 | `property` | 根據欄位篩選結果。 篩選 **必須** HTML逸出。 逗號可用來結合多組篩選器。 支援的欄位包括 `created`, `updated`, `state`，和 `id`. 支援的運算子清單包括 `>` （大於）, `<` （小於）, `>=` （大於或等於）, `<=` （小於或等於）, `==` （等於）, `!=` （不等於），和 `~` （包含）。 例如， `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 將以指定ID傳回所有查詢。 |
 | `excludeSoftDeleted` | 指示是否應包括已軟刪除的查詢。 例如， `excludeSoftDeleted=false` will **包括** 軟刪除的查詢。 (*布林值，預設值：true*) |
 | `excludeHidden` | 指示是否應顯示非用戶驅動的查詢。 將此值設為false將 **包括** 非用戶驅動的查詢，如CURSOR定義、FETCH或元資料查詢。 (*布林值，預設值：true*) |
+| `isPrevLink` | 此 `isPrevLink` 查詢參數用於分頁。 API呼叫的結果會使用 `created` 時間戳記和 `orderby` 屬性。 導覽結果頁面時， `isPrevLink` 向後分頁時，設為true。 它反轉查詢的順序。 請參閱「下一步」和「上一步」連結作為範例。 |
 
 **要求**
 
@@ -128,7 +129,7 @@ POST /queries
 
 **要求**
 
-下列要求會建立新查詢，由裝載中提供的值設定：
+以下請求將建立一個新查詢，並在裝載中提供SQL陳述式：
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -139,7 +140,27 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT * FROM accounts;",
+        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "queryParameters": {
+            $user_id : {USER_ID}
+            }
+        "name": "Sample Query",
+        "description": "Sample Description"
+    }  
+```
+
+以下請求示例使用現有查詢模板ID建立新查詢。
+
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/query/queries \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '{
+        "dbName": "prod:all",
+        "templateID": "f7cb5155-29da-4b95-8131-8c5deadfbe7f",
         "name": "Sample Query",
         "description": "Sample Description"
     }  
@@ -151,6 +172,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | 要建立的SQL查詢。 |
 | `name` | SQL查詢的名稱。 |
 | `description` | SQL查詢的說明。 |
+| `queryParameters` | 配對以替換SQL陳述式中任何參數化值的鍵值。 此為必要項目 **if** 在您提供的SQL內使用參數替換。 不會對這些索引鍵值配對執行值類型檢查。 |
+| `templateId` | 預先存在的查詢的唯一標識符。 您可以提供此語句，而不是SQL陳述式。 |
+| `insertIntoParameters` | （可選）如果定義了此屬性，則此查詢將轉換為INSERT INTO查詢。 |
+| `ctasParameters` | （可選）如果已定義此屬性，則此查詢將轉換為CTAS查詢。 |
 
 **回應**
 
