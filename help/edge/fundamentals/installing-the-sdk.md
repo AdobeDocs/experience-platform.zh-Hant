@@ -3,7 +3,7 @@ title: 安裝Adobe Experience Platform Web SDK
 description: 了解如何安裝Experience PlatformWeb SDK。
 keywords: 網頁sdk安裝；安裝網頁sdk;internet explorer;Promise;npm套件
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: c3476d7f9e758678cdf270ab55f8b85c0614b546
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ## 選項1:安裝標籤擴充功能
 
-如需標籤擴充功能的相關檔案，請參閱 [launch檔案](../../tags/extensions/client/sdk/overview.md)
+如需標籤擴充功能的相關檔案，請參閱 [標籤檔案](../../tags/extensions/client/sdk/overview.md)
 
 ## 選項2:安裝預先建置的獨立版本
 
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### 支援Internet Explorer
 
-Adobe Experience Platform SDK使用promise，這是傳達非同步工作完成情況的方法。 此 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 除了SDK本身支援外，所有目標瀏覽器都會原生支援SDK實作 [!DNL Internet Explorer]. 若要在上使用SDK [!DNL Internet Explorer]，您必須 `window.Promise` [填充](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Adobe Experience Platform SDK使用promise，這是傳達非同步工作完成情況的方法。 此 [Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise) 除了SDK本身支援外，所有目標瀏覽器都會原生支援SDK實作 [!DNL Internet Explorer]. 若要在上使用SDK [!DNL Internet Explorer]，您必須 `window.Promise` [填充](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 一個用來polyfill promise的程式庫是promise-polyfill。 請參閱 [promise-polyfill檔案](https://www.npmjs.com/package/promise-polyfill) 以取得如何使用NPM安裝的詳細資訊。
 
