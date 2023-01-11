@@ -5,7 +5,7 @@ title: 使用流量服務API將資料登陸區域連線至Adobe Experience Platf
 type: Tutorial
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至資料登陸區。
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 249f2076dd55a589c638648eb25214036a47c05a
+source-git-commit: b1021f985626157895d7350e941238c3197db0b6
 workflow-type: tm+mt
 source-wordcount: '1224'
 ht-degree: 4%
@@ -36,7 +36,7 @@ ht-degree: 4%
 **API格式**
 
 ```http
-GET /connectors/landingzone?type=user_drop_zone
+GET /data/foundation/connectors/landingzone?type=user_drop_zone
 ```
 
 | 標頭 | 說明 |
