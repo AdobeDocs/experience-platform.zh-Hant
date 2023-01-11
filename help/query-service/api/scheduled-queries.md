@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 排程查詢API端點
 description: 以下小節將逐步說明您可使用Query Service API針對已排程查詢所進行的各種API呼叫。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -311,7 +311,7 @@ PATCH請求支援兩種不同的路徑： `/state` 和 `/schedule/schedule`.
 
 ### 更新計畫查詢狀態
 
-您可以使用 `/state` 要更新選定計畫查詢的狀態 — 「已啟用」或「禁用」。 若要更新狀態，您必須將值設為 `enable` 或 `disable`.
+您可以透過設定 `path` 屬性 `/state` 和 `value` 屬性 `enable` 或 `disable`.
 
 **API格式**
 
@@ -347,6 +347,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
+| `op` | 要在查詢排程上執行的操作。 接受的值為 `replace`. |
 | `path` | 要修補的值的路徑。 在此情況下，由於您要更新排程查詢的狀態，因此必須設定 `path` to `/state`. |
 | `value` | 更新的值 `/state`. 此值可設為 `enable` 或 `disable` 啟用或禁用計畫查詢。 |
 
@@ -363,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 更新排程查詢排程
 
-您可以使用 `/schedule/schedule` 更新已排程查詢的cron排程。 如需cron排程的詳細資訊，請參閱 [cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 檔案。
+您可以透過設定 `path` 屬性 `/schedule/schedule` 在要求內文中。 如需cron排程的詳細資訊，請參閱 [cron運算式格式](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 檔案。
 
 **API格式**
 
@@ -398,6 +399,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | 屬性 | 說明 |
 | -------- | ----------- |
+| `op` | 要在查詢排程上執行的操作。 接受的值為 `replace`. |
 | `path` | 要修補的值的路徑。 在此情況下，由於您要更新排程查詢的排程，因此必須設定 `path` to `/schedule/schedule`. |
 | `value` | 更新的值 `/schedule`. 此值必須以cron排程的形式。 因此，在此範例中，排程的查詢會在45分鐘標籤下每小時執行一次。 |
 

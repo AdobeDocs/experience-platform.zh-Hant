@@ -2,9 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；警報；
 title: 警報訂閱API端點
 description: 本指南提供您可使用Query Service API對警報訂閱端點進行之各種API呼叫的範例HTTP要求和回應。
-source-git-commit: 4f85f38e4870f0c2429a3a2a50bd7f95075c6be4
+exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
+source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2668'
 ht-degree: 2%
 
 ---
@@ -49,7 +50,23 @@ Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的�
 
 ```http
 GET /alert-subscriptions
+GET /alert-subscriptions?{QUERY_PARAMETERS}
 ```
+
+| 屬性 | 說明 |
+| --------- | ----------- |
+| `{QUERY_PARAMETERS}` | （選用）新增至請求路徑的參數，用以設定回應中傳回的結果。 可包含多個參數，以&amp;符號分隔。 可用參數列於下方。 |
+
+**查詢參數**
+
+以下是清單查詢的可用查詢參數清單。 所有這些參數均為選用。 在沒有參數的情況下對此端點進行呼叫將檢索組織可用的所有查詢。
+
+| 參數 | 說明 |
+| --------- | ----------- |
+| `orderby` | 指定結果順序的欄位。 支援的欄位包括 `created` 和 `updated`. 在屬性名稱的開頭加上 `+` 升序和 `-` 按降序。 預設值為 `-created`。請注意，加號(`+`)必須以逸出 `%2B`. 例如 `%2Bcreated` 是遞增建立順序的值。 |
+| `pagesize` | 使用此參數可控制每頁要從API呼叫擷取的記錄數。 預設限制設為每頁最多50筆記錄。 |
+| `page` | 指定您要查看記錄的傳回結果的頁碼。 |
+| `property` | 根據選擇的欄位篩選結果。 篩選 **必須** HTML逸出。 逗號可用來結合多組篩選器。 下列屬性可允許篩選： <ul><li>id</li><li>assetId</li><li>狀態</li><li>alertType</li></ul> 支援的運算子為 `==` （等於）。 例如， `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 會傳回具有相符ID的警報。 |
 
 **要求**
 
@@ -283,7 +300,7 @@ GET /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `ALERT_TYPE` | 每個警報可以有三種不同的警報類型。 它們是： <ul><li>`start`:在查詢執行開始時通知使用者。</li><li>`success`:查詢完成時通知使用者。</li><li>`failure`:查詢失敗時通知使用者。</li></ul> |
+| `ALERT_TYPE` | 此屬性說明觸發警報的查詢執行狀態。 響應將僅包含此類警報的警報訂閱資訊。 每個警報可以有三種不同的警報類型。 它們是： <ul><li>`start`:在查詢執行開始時通知使用者。</li><li>`success`:查詢完成時通知使用者。</li><li>`failure`:查詢失敗時通知使用者。</li></ul> |
 | `QUERY_ID` | 要更新的查詢的唯一標識符。 |
 | `SCHEDULE_ID` | 要更新的計畫查詢的唯一標識符。 |
 
@@ -370,6 +387,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | 參數 | 說明 |
 | -------- | ----------- |
 | `{EMAIL_ID}` | 註冊至Adobe帳戶的電子郵件地址用於識別訂閱警報的使用者。 |
+| `orderby` | 指定結果順序的欄位。 支援的欄位包括 `created` 和 `updated`. 在屬性名稱的開頭加上 `+` 升序和 `-` 按降序。 預設值為 `-created`。請注意，加號(`+`)必須以逸出 `%2B`. 例如 `%2Bcreated` 是遞增建立順序的值。 |
+| `pagesize` | 使用此參數可控制每頁要從API呼叫擷取的記錄數。 預設限制設為每頁最多50筆記錄。 |
+| `page` | 指定您要查看記錄的傳回結果的頁碼。 |
+| `property` | 根據選擇的欄位篩選結果。 篩選 **必須** HTML逸出。 逗號可用來結合多組篩選器。 下列屬性可允許篩選： <ul><li>id</li><li>assetId</li><li>狀態</li><li>alertType</li></ul> 支援的運算子為 `==` （等於）。 例如， `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 會傳回具有相符ID的警報。 |
 
 **要求**
 

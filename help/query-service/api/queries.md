@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢API端點
 description: 以下各節將逐步說明您可以使用查詢服務API中的/querys端點進行的呼叫。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: e0287076cc9f1a843d6e3f107359263cd98651e6
+source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '868'
 ht-degree: 2%
 
 ---
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
         "dbName": "prod:all",
-        "sql": "SELECT account_balance FROM user_data WHERE $user_id;",
+        "sql": "SELECT account_balance FROM user_data WHERE user_id='$user_id';",
         "queryParameters": {
-            $user_id : {USER_ID}
+            user_id : {USER_ID}
             }
         "name": "Sample Query",
         "description": "Sample Description"
@@ -295,7 +295,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 >
 >您可以使用 `_links.cancel` to [取消已建立的查詢](#cancel-a-query).
 
-### 取消查詢
+### 取消或軟刪除查詢
 
 您可以向 `/queries` 端點和提供查詢的 `id` 值。
 
@@ -305,9 +305,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 PATCH /queries/{QUERY_ID}
 ```
 
-| 屬性 | 說明 |
+| 參數 | 說明 |
 | -------- | ----------- |
-| `{QUERY_ID}` | 此 `id` 要取消的查詢的值。 |
+| `{QUERY_ID}` | 此 `id` 要對執行操作的查詢的值。 |
 
 
 **要求**
@@ -328,7 +328,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `op` | 若要取消查詢，您必須使用值設定op參數 `cancel `. |
+| `op` | 要對資源執行的操作類型。 接受的值為 `cancel` 和 `soft_delete`. 若要取消查詢，您必須使用值設定op參數 `cancel `. 請注意，軟刪除操作會阻止在GET請求中返回查詢，但不會將其從系統中刪除。 |
 
 **回應**
 
