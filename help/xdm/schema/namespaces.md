@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Experience Data Model(XDM)中的命名空間調整
 description: 了解Experience Data Model(XDM)中的名稱調整功能可如何協助您擴充結構，並防止不同結構元件匯整在一起時發生欄位衝突。
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Experience Data Model(XDM)結構中的所有欄位都有相關聯的命名空間
 
 標準XDM語法可讓您深入了解命名空間在結構中的表示方式(包括 [如何在Adobe Experience Platform翻譯](#compatibility))。
 
-標準XDM使用 [JSON-LD](https://json-ld.org/) 將命名空間指派給欄位的語法。 此命名空間以URI(如 `https://ns.adobe.com/xdm` 針對 `xdm` 命名空間)，或作為在 `@context` 結構的屬性。
+標準XDM使用 [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) 將命名空間指派給欄位的語法。 此命名空間以URI(如 `https://ns.adobe.com/xdm` 針對 `xdm` 命名空間)，或作為在 `@context` 結構的屬性。
 
 以下是標準XDM語法中產品的範例結構。 除 `@id` （由JSON-LD規格定義的唯一識別碼）, `properties` 以命名空間開頭，並以欄位名稱結尾。 若使用 `@context`，命名空間和欄位名稱會以冒號(`:`)。 如果不使用首碼，則命名空間和欄位名稱會以斜線(`/`)。
 
@@ -75,7 +75,7 @@ Experience Data Model(XDM)結構中的所有欄位都有相關聯的命名空間
 | 屬性 | 說明 |
 | --- | --- |
 | `@context` | 定義可使用的速記前置詞，而不是下面的完整命名空間URI的對象 `properties`. |
-| `@id` | 記錄的唯一標識符，由 [JSON-LD規格](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `@id` | 記錄的唯一標識符，由 [JSON-LD規格](https://www.w3.org/TR/json-ld11/#node-identifiers). |
 | `xdm:sku` | 使用速記首碼表示命名空間的欄位範例。 在這種情況下， `xdm` 是命名空間(`https://ns.adobe.com/xdm`)和 `sku` 是欄位名稱。 |
 | `https://ns.adobe.com/xdm/channels/application` | 使用完整命名空間URI的欄位範例。 在這種情況下， `https://ns.adobe.com/xdm/channels` 是命名空間，和 `application` 是欄位名稱。 |
 | `https://ns.adobe.com/vendorA/product/stockNumber` | 供應商資源提供的欄位使用其獨特的命名空間。 在此範例中， `https://ns.adobe.com/vendorA/product` 是供應商命名空間， `stockNumber` 是欄位名稱。 |

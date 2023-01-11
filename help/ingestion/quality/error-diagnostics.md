@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 檢索資料獲取錯誤診斷
 description: 本文檔提供了有關監控批次內嵌、管理部分批次內嵌錯誤的資訊，以及部分批次內嵌類型的參考。
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **回應**
 
-成功的回應會傳回包含 `path` 詳細說明診斷保存位置的對象。 回應會傳回 `path` 對象 [JSON行](https://jsonlines.org/) 格式。
+成功的回應會傳回包含 `path` 詳細說明診斷保存位置的對象。 回應會傳回 `path` 對象 [JSON行](https://jsonlines.readthedocs.io/en/latest/) 格式。
 
 ```json
 {"path": "F1.json"}
