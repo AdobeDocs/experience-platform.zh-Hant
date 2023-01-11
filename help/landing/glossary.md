@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform字彙表
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '7919'
+source-wordcount: '7929'
 ht-degree: 0%
 
 ---
@@ -327,7 +327,7 @@ ht-degree: 0%
 
 **程式庫**:在標籤內容中，程式庫是一組商業邏輯，包含標籤程式庫在用戶端裝置上應如何運作的指示。
 
-**查閱實體**:在資料模型的內容中，查詢實體代表可與個別人員相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由根據自訂Experience Data Model(XDM)類別的結構表示。
+**查閱實體**:在資料模型的內容中，查詢實體代表可與個別人員相關的概念，但無法直接用於識別個人。 屬於此類別的實體，應由以自訂Experience Data Model(XDM)類別為基礎的結構來表示，並透過 [綱要關係](../xdm/tutorials/relationship-ui.md).
 
 ## M
 
@@ -365,7 +365,7 @@ ht-degree: 0%
 
 **優惠方案庫**:優惠方案程式庫是中央程式庫，用於管理個人化和備援優惠方案、決策規則和活動。
 
-**站上個人化行銷動作**:使用資料進行站上內容個人化的行銷動作。 站上個人化是用來參照使用者興趣的任何資料，也是用來選取根據這些參照提供哪些內容或廣告。
+**站上個人化行銷動作**:使用資料進行站上內容個人化的行銷動作。 站上個人化是用於推論使用者興趣的任何資料，也用來選取根據這些推論提供哪些內容或廣告。
 
 **站上鎖定目標行銷動作**:將資料用於站上廣告的行銷活動，包括在貴組織的網站或應用程式上選擇和投放廣告，或用來評估此類廣告的投放和效果。
 

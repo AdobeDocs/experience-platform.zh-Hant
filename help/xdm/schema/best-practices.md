@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料模型的最佳實務
 description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於Adobe Experience Platform的結構的建置組塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2699'
+source-wordcount: '2722'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 2%
 | 類別 | 說明 |
 | --- | --- |
 | 設定檔實體 | 設定檔實體代表與個別人員（通常為客戶）相關的屬性。 屬於此類別的實體應由結構來表示，其基礎為 **[!DNL XDM Individual Profile]類**. |
-| 查閱實體 | 查詢實體代表可與個別人員相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由結構來表示，其基礎為 **自定義類**. |
+| 查閱實體 | 查詢實體代表可與個別人員相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由結構來表示，其基礎為 **自定義類**，並透過連結至設定檔和事件 [模式關係](../tutorials/relationship-ui.md). |
 | 事件實體 | 事件實體代表與客戶可採取的動作、系統事件或您想追蹤隨時間變更的任何其他概念相關的概念。 屬於此類別的實體應由結構來表示，其基礎為 **[!DNL XDM ExperienceEvent]類**. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -186,7 +186,7 @@ ht-degree: 2%
 
 * 設定檔實體應使用 [!DNL XDM Individual Profile] 類別。
 * 事件實體應使用 [!DNL XDM ExperienceEvent] 類別。
-* 查詢實體應使用貴組織定義的自訂XDM類別。
+* 查詢實體應使用貴組織定義的自訂XDM類別。 然後，設定檔和事件實體便可透過結構關係參考這些查閱實體。
 
 >[!NOTE]
 >
