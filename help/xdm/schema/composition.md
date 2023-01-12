@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 結構構成基本概念
 description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於Adobe Experience Platform的結構的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: b67349baa909cc59f3ff1d7aac22f7926f2b36ff
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '4108'
 ht-degree: 2%
@@ -76,7 +76,7 @@ XDM結構非常適合以獨立格式儲存大量複雜資料。 請參閱 [嵌�
 
 >[!NOTE]
 >
->使用 `identityMap` 可以用作關係中的源架構，但不能用作目標架構。 這是因為所有目標架構必須具有可在源架構的參考欄位中映射的可見標識。 請參閱 [關係](../tutorials/relationship-ui.md) 以取得來源和目的地結構需求的詳細資訊。
+>使用 `identityMap` 可以用作關係中的源架構，但不能用作引用架構。 這是因為所有參考結構必須具有可見標識，該標識可以映射到源結構內的參考欄位中。 請參閱 [關係](../tutorials/relationship-ui.md) 以取得來源和參考結構需求的詳細資訊。
 
 不過，如果您要從將身分儲存在一起的來源匯入資料(例如 [!DNL Airship] 或Adobe Audience Manager)，或結構的身分識別數量有變數時。 此外，如果您使用 [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 

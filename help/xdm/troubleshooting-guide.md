@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找Experience Data Model(XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,13 @@ GET請求 [!DNL Schema Registry] API需要 `Accept` 標題，以便系統判斷�
 }
 ```
 
-為了啟用包含關係描述符的架構以用於 [!DNL Profile]，來源欄位的命名空間和目標欄位的主要命名空間必須相同。 當您嘗試啟用包含引用標識描述符的不匹配命名空間的架構時，將顯示此錯誤消息。 確保 `xdm:namespace` 目標架構的identity欄位值與 `xdm:identityNamespace` 屬性（位於源欄位的引用標識描述符中），以解決此問題。
+>[!NOTE]
+>
+>對於此錯誤，「目標架構」是指關係中的參考架構。
+
+為了啟用包含關係描述符的架構以用於 [!DNL Profile]，來源欄位的命名空間和參考欄位的主要命名空間必須相同。 當您嘗試啟用包含引用標識描述符的不匹配命名空間的架構時，將顯示此錯誤消息。
+
+確保 `xdm:namespace` 引用架構的標識欄位的值與 `xdm:identityNamespace` 屬性（位於源欄位的引用標識描述符中），以解決此問題。
 
 如需標準身分命名空間代碼的清單，請參閱 [標準命名空間](../identity-service/namespaces.md) 在「身分命名空間」概述中。
 

@@ -5,9 +5,9 @@ title: 在UI中探索結構資源
 description: 了解如何在Experience Platform使用者介面中探索現有結構、類別、結構欄位群組和資料類型。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 如果您檢查包含關係欄位的結構，欄位將列在下方的左側邊欄中 **[!UICONTROL 關係]**. 在左側邊欄中選取關係欄位名稱，以顯示畫布中的欄位，而無論其巢狀深度為何。
 
-關係欄位也會在畫布中唯一強調顯示，顯示欄位所參考的目標架構名稱。 如果您選取關係欄位的名稱，您可以在右側邊欄中檢視目的地架構主要身分識別的身分命名空間。
+關係欄位也會在畫布中唯一強調顯示，顯示欄位連結的參考架構名稱。 如果您選取關係欄位的名稱，您可以在右側邊欄中檢視參考架構主要身分識別的身分命名空間。
 
 ![](../images/ui/explore/relationship-field.png)
 

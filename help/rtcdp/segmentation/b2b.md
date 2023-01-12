@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform B2B版的區段使用案例
 description: 概述各種可用的Adobe Real-time Customer Data Platform B2B版使用案例。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1283'
 ht-degree: 0%
@@ -42,7 +42,7 @@ B2B類及其屬性會附加 `B2B` 標籤，以區別於Real-time Customer Data P
 
 由於您的資料模型可能很複雜，因此您可以使用Platform UI來檢視資料模型的更詳細視覺化呈現，以協助您找到使用案例的相關屬性。 若要開始，請前往Platform UI，然後選取左側導覽中的結構描述。
 
-從可用清單中選擇適當的架構，然後從 [!UICONTROL 組合物] 側邊欄。 在以下示例中，選擇「人員」關係將顯示當前架構中引用相關「人員」架構的屬性（如果它是關係中的源架構），或者由「人員」架構引用（如果它是關係中的目標架構）。
+從可用清單中選擇適當的架構，然後從 [!UICONTROL 組合物] 側邊欄。 在以下示例中，選擇「人員」關係將顯示當前架構中引用相關「人員」架構的屬性（如果它是關係中的源架構），或者由「人員」架構引用（如果是關係中的引用架構）。
 
 ![schema workspace中使用人員關係的來源索引鍵範例](../assets/segmentation/source-key-schema-relationship-example.png)
 

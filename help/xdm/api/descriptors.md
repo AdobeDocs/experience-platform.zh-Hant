@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 描述符API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述元。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 3%
@@ -385,15 +385,15 @@ curl -X DELETE \
 | `xdm:sourceSchema` | 此 `$id` 定義描述符的架構的URI。 |
 | `xdm:sourceVersion` | 源架構的主要版本。 |
 | `xdm:sourceProperty` | 定義關係的源架構中欄位的路徑。 應以「/」開頭，而非以「/」結尾。 請勿在路徑中包含「properties」（例如「/personalEmail/address」，而非「/properties/personalEmail/properties/address」）。 |
-| `xdm:destinationSchema` | 此 `$id` 此描述符正在定義與的關係的目標架構的URI。 |
-| `xdm:destinationVersion` | 目標架構的主要版本。 |
-| `xdm:destinationProperty` | 目標架構內目標欄位的可選路徑。 如果省略此屬性，則目標欄位將由包含匹配引用標識描述符的任何欄位推斷（請參見下面）。 |
+| `xdm:destinationSchema` | 此 `$id` 此描述符正在定義與的關係的引用架構的URI。 |
+| `xdm:destinationVersion` | 參考結構的主要版本。 |
+| `xdm:destinationProperty` | 參考架構內目標欄位的選用路徑。 如果省略此屬性，則目標欄位將由包含匹配引用標識描述符的任何欄位推斷（請參見下面）。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### 引用標識描述符
 
-參考身份描述符提供指向架構欄位主要身份的參考上下文，允許其他架構中的欄位引用它。 目標架構必須已定義主標識欄位，然後才能通過此描述符由其他架構引用。
+參考身份描述符提供指向架構欄位主要身份的參考上下文，允許其他架構中的欄位引用它。 引用架構必須已定義主標識欄位，然後才能通過此描述符由其他架構引用它。
 
 ```json
 {
@@ -410,7 +410,7 @@ curl -X DELETE \
 | `@type` | 要定義的描述符的類型。 對於引用標識描述符，此值必須設定為 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 此 `$id` 定義描述符的架構的URI。 |
 | `xdm:sourceVersion` | 源架構的主要版本。 |
-| `xdm:sourceProperty` | 用於引用目標架構的源架構中欄位的路徑。 應以「/」開頭，而非以「/」結尾。 請勿在路徑中加入「屬性」(例如 `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
+| `xdm:sourceProperty` | 用於引用引用架構的源架構中欄位的路徑。 應以「/」開頭，而非以「/」結尾。 請勿在路徑中加入「屬性」(例如 `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
 | `xdm:identityNamespace` | 原始碼屬性的身份命名空間代碼。 |
 
 {style=&quot;table-layout:auto&quot;}

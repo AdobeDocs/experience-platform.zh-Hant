@@ -4,9 +4,9 @@ title: 使用結構註冊表API定義兩個結構之間的關係
 description: 本檔案提供教學課程，說明如何使用Schema Registry API，定義貴組織所定義的兩個結構之間的一對一關係。
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1398'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,11 @@ ht-degree: 2%
 
 了解客戶之間的關係，以及客戶在不同管道與品牌互動的能力，是Adobe Experience Platform的重要一環。 在 [!DNL Experience Data Model] (XDM)結構可讓您對客戶資料獲得複雜的深入分析。
 
-而架構關係則可透過使用聯合架構和 [!DNL Real-Time Customer Profile]，此欄位僅適用於共用相同類別的結構。 要在屬於不同類的兩個架構之間建立關係，必須將專用的關係欄位添加到源架構中，該源架構引用目標架構的標識。
+而架構關係則可透過使用聯合架構和 [!DNL Real-Time Customer Profile]，此欄位僅適用於共用相同類別的結構。 要在屬於不同類的兩個架構之間建立關係，必須將專用的關係欄位添加到 **來源綱要**，指出個別 **參考綱要**.
+
+>[!NOTE]
+>
+>Schema Registry API將參考結構稱為「目的地結構」。 這些不得與 [資料準備映射集](../../data-prep/mapping-set.md) 或結構 [目的地連線](../../destinations/home.md).
 
 本檔案提供一個教學課程，用於定義貴組織所定義的兩個結構之間的一對一關係，使用 [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -30,11 +34,11 @@ ht-degree: 2%
 
 開始本教學課程之前，請檢閱 [開發人員指南](../api/getting-started.md) 以取得您需要知道的重要資訊，以便成功對 [!DNL Schema Registry] API。 這包括 `{TENANT_ID}`、「容器」的概念，以及提出要求所需的標題(請特別注意 [!DNL Accept] 標題及其可能的值)。
 
-## 定義源和目標架構 {#define-schemas}
+## 定義源和引用架構 {#define-schemas}
 
 您應已建立將在關係中定義的兩個結構。 本教學課程會建立組織目前忠誠計畫成員(定義於「[!DNL Loyalty Members]」和其最喜愛的酒店(定義於「[!DNL Hotels]&quot;架構)。
 
-架構關係由 **來源綱要** 在 **目的地綱要**. 在下列步驟中，「[!DNL Loyalty Members]&quot;將是源架構，而&quot;[!DNL Hotels]「 」將作為目標架構。
+架構關係由 **來源綱要** 在 **參考綱要**. 在下列步驟中，「[!DNL Loyalty Members]&quot;將是源架構，而&quot;[!DNL Hotels]「 」將作為參考架構。
 
 >[!IMPORTANT]
 >
@@ -108,13 +112,13 @@ curl -X GET \
 
 ## 為源架構定義引用欄位
 
-在 [!DNL Schema Registry]，關係描述符與關係資料庫表中的外鍵類似：源架構中的欄位用作目標架構的主標識欄位的引用。 如果源架構沒有用於此目的的欄位，則可能需要使用新欄位建立架構欄位組，並將其添加到架構中。 此新欄位必須具有 `type` 值 `string`.
+在 [!DNL Schema Registry]，關係描述符與關係資料庫表中的外鍵類似：源架構中的欄位用作參考架構的主要標識欄位的參考。 如果源架構沒有用於此目的的欄位，則可能需要使用新欄位建立架構欄位組，並將其添加到架構中。 此新欄位必須具有 `type` 值 `string`.
 
 >[!IMPORTANT]
 >
 >源架構不能將其主標識用作引用欄位。
 
-在本教學課程中，目標結構「[!DNL Hotels]&quot;包含 `hotelId` 作為結構主要身分的欄位。 但源架構「[!DNL Loyalty Members]&quot;沒有專用欄位可用作的引用 `hotelId`，因此需要建立自訂欄位群組，才能將新欄位新增至結構： `favoriteHotel`.
+在本教學課程中，參考結構「[!DNL Hotels]&quot;包含 `hotelId` 作為結構主要身分的欄位。 但源架構「[!DNL Loyalty Members]&quot;沒有專用欄位可用作的引用 `hotelId`，因此需要建立自訂欄位群組，才能將新欄位新增至結構： `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -378,8 +382,8 @@ curl -X POST \
 | `@type` | 要定義的描述符的類型。 對於引用描述符，值必須是 `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | 此 `$id` 源架構的URL。 |
 | `xdm:sourceVersion` | 源架構的版本號。 |
-| `sourceProperty` | 源架構中用於引用目標架構主標識的欄位路徑。 |
-| `xdm:identityNamespace` | 參考欄位的身分命名空間。 此命名空間必須與目標架構的主要身分相同。 請參閱 [身分命名空間概述](../../identity-service/home.md) 以取得更多資訊。 |
+| `sourceProperty` | 源架構中用於引用引用架構的主要標識的欄位路徑。 |
+| `xdm:identityNamespace` | 參考欄位的身分命名空間。 這必須與參考架構的主要身分相同的命名空間。 請參閱 [身分命名空間概述](../../identity-service/home.md) 以取得更多資訊。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -401,7 +405,7 @@ curl -X POST \
 
 ## 建立關係描述符 {#create-descriptor}
 
-關係描述符在源模式和目標模式之間建立一對一關係。 在為源架構中的相應欄位定義了引用標識描述符後，您可以通過向POST請求建立新的關係描述符 `/tenant/descriptors` 端點。
+關係描述符建立源模式和參考模式之間的一對一關係。 在為源架構中的相應欄位定義了引用標識描述符後，您可以通過向POST請求建立新的關係描述符 `/tenant/descriptors` 端點。
 
 **API格式**
 
@@ -411,7 +415,7 @@ POST /tenant/descriptors
 
 **要求**
 
-以下請求將建立新的關係描述符，其中「[!DNL Loyalty Members]&quot;作為源架構，而&quot;[!DNL Hotels]」作為目標架構。
+以下請求將建立新的關係描述符，其中「[!DNL Loyalty Members]&quot;作為源架構，而&quot;[!DNL Hotels]」作為參考架構。
 
 ```shell
 curl -X POST \
@@ -438,9 +442,9 @@ curl -X POST \
 | `xdm:sourceSchema` | 此 `$id` 源架構的URL。 |
 | `xdm:sourceVersion` | 源架構的版本號。 |
 | `xdm:sourceProperty` | 源架構中引用欄位的路徑。 |
-| `xdm:destinationSchema` | 此 `$id` 目標架構的URL。 |
-| `xdm:destinationVersion` | 目標架構的版本號。 |
-| `xdm:destinationProperty` | 目標架構中主要身份欄位的路徑。 |
+| `xdm:destinationSchema` | 此 `$id` 參考結構的URL。 |
+| `xdm:destinationVersion` | 參考架構的版本號。 |
+| `xdm:destinationProperty` | 引用架構中主標識欄位的路徑。 |
 
 {style=&quot;table-layout:auto&quot;}
 
