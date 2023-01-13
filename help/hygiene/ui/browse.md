@@ -2,9 +2,9 @@
 title: 瀏覽資料衛生工作單
 description: 了解如何在Adobe Experience Platform使用者介面中檢視及管理現有的資料衛生工作單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 70a2abcc4d6e27a89e77d68e7757e4876eaa4fc0
+source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -104,4 +104,4 @@ ht-degree: 1%
 本指南說明如何在Platform UI中檢視及管理現有的資料衛生工作單。 有關建立自己的工作單的資訊，請參閱以下文檔：
 
 * [管理資料集過期時間](./dataset-expiration.md)
-* [管理記錄刪除](./record-delete.md)
+<!-- * [Manage record deletes](./record-delete.md) -->
