@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google雲端儲存來源連接器概觀
 description: 了解如何使用API或使用者介面將Google雲端儲存空間連線至Adobe Experience Platform。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
@@ -25,15 +25,15 @@ Adobe Experience Platform為AWS等雲端提供者提供原生連線， [!DNL Goo
 
 若要連線至Platform，您必須先為 [!DNL Google Cloud Storage] 帳戶。 要訪問互操作性設定，請開啟 [!DNL Google Cloud Platform] 選取 **[!UICONTROL 設定]** 從 **[!UICONTROL 雲端儲存空間]** 選項。
 
-![](../../images/tutorials/create/google-cloud-storage/nav.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
 此 **[!UICONTROL 設定]** 頁。 從這裡，您可以看到 [!DNL Google] 專案ID和您 [!DNL Google Cloud Storage] 帳戶。 要訪問互操作性設定，請選擇 **[!UICONTROL 互操作性]** 從頂端標題。
 
-![](../../images/tutorials/create/google-cloud-storage/project-access.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
 此 **[!UICONTROL 互操作性]** 頁面包含與服務帳戶相關聯的驗證、存取金鑰和預設專案的相關資訊。 要為服務帳戶生成新的訪問密鑰ID和秘密訪問密鑰，請選擇 **[!UICONTROL 建立服務帳戶的金鑰]**.
 
-![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
+<!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 您可以使用新產生的存取金鑰ID和秘密存取金鑰來連接您的 [!DNL Google Cloud Storage] 帳戶至Platform。
 

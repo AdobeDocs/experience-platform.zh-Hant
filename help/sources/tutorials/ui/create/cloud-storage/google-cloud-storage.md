@@ -5,9 +5,9 @@ title: 在UI中建立Google雲端儲存來源連線
 type: Tutorial
 description: 了解如何使用Google UI建立Adobe Experience Platform雲端儲存空間來源連線。
 exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform中的來源連接器可讓您依排程內嵌外部來�
 
 [!DNL Experience Platform] 支援從外部儲存器擷取的下列檔案格式：
 
-* 分隔字元分隔值(DSV):目前，對DSV格式化資料檔案的支援僅限於逗號分隔值。 DSV格式化檔案中欄位標題的值只能由英數字元和下划線組成。 今後將提供對一般DSV檔案的支援。
+* 分隔字元分隔值(DSV):任何單字元值都可用作DSV格式化資料檔案的分隔符。
 * JavaScript物件標籤法(JSON):JSON格式化資料檔案必須符合XDM標準。
 * 阿帕奇拼花：必須符合XDM規範，才能使用鑲木格式化資料檔案。
 
