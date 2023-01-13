@@ -1,9 +1,9 @@
 ---
 title: Identity Service中的刪除內容
 description: 本檔案概略介紹您可在Experience Platform中刪除身分資料的各種機制，並說明身分圖表可能受到哪些影響。
-source-git-commit: 17e39f6e9d6e62e22f867de91d571593ba945c71
+source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform Identity Service可決定性地連結個人的不同�
 
 ## 單一身份刪除
 
-單一身分刪除請求可讓您刪除圖形中的身分，因此移除與單一使用者身分識別相關聯的連結，此身分識別命名空間與此身分識別相關聯。 您可以使用 [資料衛生](../hygiene/home.md) 針對資料清除、移除匿名資料，或針對您已收集的資料將資料最小化。 若是使用案例，例如客戶要求刪除資料及遵循隱私權法規(如一般資料保護規範(GDPR))，則您可以使用 [Privacy Service](../privacy-service/home.md).
+單一身分刪除請求可讓您刪除圖形中的身分，因此移除與單一使用者身分識別相關聯的連結，此身分識別命名空間與此身分識別相關聯。 Uou可使用 [Privacy Service](../privacy-service/home.md) 若是使用案例，例如客戶要求刪除資料，以及遵循一般資料保護規範(GDPR)等隱私權法規。
 
 以下各節將概述可在Experience Platform中用於單一身分刪除請求的機制。
 
@@ -38,18 +38,14 @@ Adobe Experience Platform Identity Service可決定性地連結個人的不同�
 
 Privacy Service會處理客戶要求存取、選擇退出銷售或刪除其個人資料的請求，如一般資料保護規範(GDPR)和加州消費者隱私法(CCPA)等隱私權法規所規定。 透過Privacy Service，您可以使用API或UI提交工作請求。 當Experience Platform從Privacy Service收到刪除請求時，Platform會傳送確認給Privacy Service，確認已收到請求，且受影響的資料已標示為刪除。 個別身分的刪除是根據提供的命名空間及/或ID值。 此外，會刪除與指定組織相關聯的所有沙箱。 如需詳細資訊，請參閱 [Identity Service中的隱私權要求處理](privacy.md).
 
-### 在 [!UICONTROL 資料衛生] 工作區
+下表提供Privacy Service中單一身分刪除的劃分：
 
-此 [[!UICONTROL 資料衛生] 工作區](../hygiene/ui/overview.md) 在Platform UI中，您可以刪除參與Identity Service和即時客戶設定檔的消費者記錄。 有關使用的完整指南 [!UICONTROL 資料衛生] 工作區，請參閱 [刪除用戶記錄](../hygiene/ui/record-delete.md).
-
-下表列出Privacy Service和資料衛生中單一身分刪除之間的差異：
-
-| 單一身分刪除 | Privacy Service | 資料衛生 |
-| --- | --- | --- |
-| 接受的使用案例 | 僅限資料隱私權請求(GDPR、CCPA)。 | 管理儲存在Experience Platform中的資料。 |
-| 預估延遲 | 天至周 | 日 |
-| 受影響的服務 | Privacy Service中的單一身分刪除可讓您選取資料是從Identity Service、即時客戶個人檔案還是資料湖中刪除。 | 資料衛生中的單一身分刪除會刪除Identity Service、即時客戶設定檔和資料湖中選取的資料。 |
-| 刪除模式 | 從Identity Service刪除身分。 | 從Identity Service刪除身分。 |
+| 單一身分刪除 | Privacy Service |
+| --- | --- |
+| 接受的使用案例 | 僅限資料隱私權請求(GDPR、CCPA)。 |
+| 預估延遲 | 天至周 |
+| 受影響的服務 | Privacy Service中的單一身分刪除可讓您選取資料是從Identity Service、即時客戶個人檔案還是資料湖中刪除。 |
+| 刪除模式 | 從Identity Service刪除身分。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -93,3 +89,22 @@ Privacy Service會處理客戶要求存取、選擇退出銷售或刪除其個�
 ## 後續步驟
 
 本檔案說明您可使用哪些機制來刪除Experience Platform上的身分和資料集。 本檔案也概述身分和資料集刪除對身分圖表的影響。 如需Identity Service的詳細資訊，請參閱 [Identity服務概述](home.md).
+
+<!--
+
+You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anonymous data, or data minimization for the data that you have collected.
+
+### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
+
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+
+The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
+
+| Single identity deletion | Privacy Service | Data hygiene |
+| --- | --- | --- |
+| Accepted use cases | Data privacy requests (GDPR, CCPA) only. | Management of data stored in Experience Platform. |
+| Estimated latency | Days to weeks | Days |
+| Services impacted | Single identity deletion in Privacy Service allows you to select whether data will be deleted from Identity Service, Real-Time Customer Profile, or data lake. | Single identity deletion in Data hygiene deletes the selected data across Identity Service, Real-Time Customer Profile, and data lake. |
+| Deletion patterns | Delete an identity from Identity Service. | Delete an identity from Identity Service. |
+
+-->
