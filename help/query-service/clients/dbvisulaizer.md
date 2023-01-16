@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將DbVisualizer連接到查詢服務
 description: 本檔案會逐步說明將DbVisualizer與Adobe Experience Platform Query Service連線的步驟。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 106a2e4606e94f71d6359cf947e05f193c19c660
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '922'
 ht-degree: 1%
 
 ---
@@ -19,27 +19,17 @@ ht-degree: 1%
 
 本指南要求您已具備 [!DNL DbVisualizer] 案頭應用程式，熟悉如何導覽其介面。 若要下載 [!DNL DbVisualizer] 案頭應用程式或，如需詳細資訊，請參閱 [官方 [!DNL DbVisualizer] 檔案](https://www.dbvis.com/download/).
 
->[!NOTE]
->
->有 [!DNL Windows], [!DNL macOS]，和 [!DNL Linux] 版本 [!DNL DbVisualizer]. 本指南的螢幕擷取畫面是使用 [!DNL macOS] 案頭應用程式。 版本之間的UI可能有微幅差異。
-
 獲取連接所需的憑據 [!DNL  DbVisualizer] 若要Experience Platform，您必須擁有平台UI中查詢工作區的存取權。 如果您目前沒有查詢工作區的存取權，請連絡您的IMS組織管理員。
 
 ## 建立資料庫連接 {#connect-database}
 
-在本機電腦上安裝案頭應用程式後，請啟動應用程式並選取 **[!DNL Create a Database Connection]** 從 [!DNL DbVisualizer] 功能表。 然後選取 **[!DNL Create a Connection]** 在右邊。
+在本地電腦上安裝了案頭應用程式後，請按照官方的BDVisualizer說明執行以下操作： [建立新資料庫連接](https://confluence.dbvis.com/display/UG130/Create+a+New+Database+Connection).
 
-![此 [!DNL DbVisualizer] 主菜單中突出顯示了「建立資料庫連接」。](../images/clients/dbvisualizer/create-db-connection.png)
+選取後 **[!DNL PostgreSQL]** 從 [!DNL Connections] 清單， [!DNL Object View] 頁簽 [!DNL PostgreSQL] 連接出現。
 
-使用搜索欄或選擇 [!DNL PostgreSQL] 從驅動程式名下拉清單中。 出現「Database Connection（資料庫連接）」工作區。
+### 設定連接的驅動程式屬性 {#properties}
 
-![驅動程式名稱下拉菜單，包含 [!DNL PostgreSQL] 突出顯示。](../images/clients/dbvisualizer/driver-name.png)
-
-### 設定連線的屬性 {#properties}
-
-從「資料庫連接」工作區中，選擇 **[!DNL Properties]** 標籤，後面 **[!DNL Driver Properties]** 欄。
-
-![突出顯示了「Properties（屬性）」和「Driver Properties（驅動程式屬性）」的「Database Connection（資料庫連接）」工作區。](../images/clients/dbvisualizer/driver-properties.png)
+從 [!DNL PostgreSQL] 對象視圖頁簽，選擇 **[!DNL Properties]** 標籤，後面 **[!DNL Driver Properties]** 欄。 有關 [驅動程式屬性](https://confluence.dbvis.com/display/UG130/Configuring+Connection+Properties#ConfiguringConnectionProperties-DriverProperties) 可在官方檔案中找到。
 
 接下來，輸入下表中描述的驅動程式屬性。
 
@@ -56,15 +46,13 @@ ht-degree: 1%
 
 使用搜尋列來尋找每個屬性，然後為參數的值選取對應的儲存格。 儲存格會以藍色反白顯示。 在值欄位中輸入您的平台憑證，然後選取 **[!DNL Apply]** 添加驅動程式屬性。
 
-![輸入了值，並突出顯示了「應用」，此時會顯示「DBVisulaizer驅動程式屬性」頁簽。](../images/clients/dbvisualizer/apply-parameter-value.png)
-
 >[!NOTE]
 >
 >要添加秒數 `user` 設定檔，選取 `user` 從「參數」欄中，選取藍色+（加號）圖示，以新增每位使用者的認證。 選擇 **[!DNL Apply]** 添加驅動程式屬性。
 
 此 [!DNL Edited] 欄會顯示勾選記號，表示參數值已更新。
 
-### 輸入[!DNL Query Service] 憑據
+### 輸入查詢服務憑據 {#query-service-credentials}
 
 要查找將BBVisualizer與Query Service連接所需的憑據，請登錄到Platform UI並選擇 **[!UICONTROL 查詢]** 從左側導覽，後跟 **[!UICONTROL 憑證]**. 如需尋找您 **主機**, **埠**, **資料庫**, **用戶名**，和 **密碼** 憑證，請閱讀 [認證指南](../ui/credentials.md).
 
@@ -74,17 +62,15 @@ ht-degree: 1%
 >
 >[!DNL Query Service] 也提供非到期憑證，以允許與協力廠商用戶端進行一次性設定。 請參閱 [有關如何生成和使用未到期憑據的完整說明](../ui/credentials.md#non-expiring-credentials). 如果要將BDVisualizer作為一次性設定連接，則必須完成此過程。 此 `credential` 和 `technicalAccountId` 獲取的值包括DBVisualizer的值 `password` 參數。
 
-## 驗證
+## 驗證 {#authentication}
 
-要在每次建立連接時都要求用戶ID和基於密碼的驗證，請選擇 **[!DNL Authentication]** 從下方的導覽側欄 [!DNL PostgreSQL].
+若要在每次建立連線時要求使用者ID和密碼式驗證，請導覽至 [!DNL Properties] 索引標籤和選取 **[!DNL Authentication]** 從下方的導覽側欄 [!DNL PostgreSQL].
 
-在「連線驗證」面板中，檢查 **[!DNL Require Userid]** 和 **[!DNL Require Password]** 然後選中複選框 **[!DNL Apply]**.
-
-![的驗證面板 [!DNL PostgreSQL] 與Require Userid和Password複選框的資料庫連接突出顯示。](../images/clients/dbvisualizer/connection-authentication.png)
+在「連線驗證」面板中，檢查 **[!DNL Require Userid]** 和 **[!DNL Require Password]** 然後選中複選框 **[!DNL Apply]**. 有關 [設定驗證選項](https://confluence.dbvis.com/display/UG140/Setting+Common+Authentication+Options) 可在官方檔案中找到。
 
 ## 連線至平台
 
-您可以使用到期或未到期的憑證建立連線。 若要建立連線，請選取 **[!DNL Connection]** 頁簽，然後為以下設定輸入Experience Platform憑據。
+您可以使用到期或未到期的憑證建立連線。 若要建立連線，請選取 **[!DNL Connection]** 標籤 [!DNL PostgreSQL] 「對象視圖」頁簽，並為以下設定輸入Experience Platform憑據。 與 [設定手動連接](https://confluence.dbvis.com/display/UG100/Setting+Up+a+Connection+Manually) 在官方的DBVisualizer網站上可用。
 
 >[!NOTE]
 >
@@ -94,20 +80,14 @@ ht-degree: 1%
 |---|---|
 | **[!UICONTROL 名稱]** | 為連線建立名稱。 建議您提供易記名稱以識別連線。 |
 | **[!UICONTROL 資料庫伺服器]** | 這是您的Experience Platform **[!UICONTROL 主機]** 憑據。 |
-| **[!UICONTROL 資料庫埠]** | 的埠 [!DNL Query Service]. 必須使用埠 **80** 連線 [!DNL Query Service]. |
+| **[!UICONTROL 資料庫埠]** | 的埠 [!DNL Query Service]. 必須使用埠 **80** 或 **5432** 連線 [!DNL Query Service]. |
 | **[!UICONTROL 資料庫]** | 使用您的Experience Platform **[!UICONTROL 資料庫]** 憑據值： `prod:all`. |
 | **[!UICONTROL 資料庫用戶ID]** | 這是您的平台組織ID。 使用您的Experience Platform **[!UICONTROL 使用者名稱]** 憑據值。 ID將採用 `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL 資料庫密碼]** | 此英數字串是您的Experience Platform **[!UICONTROL 密碼]** 憑據。如果要使用非到期憑據，則此值是 `technicalAccountID` 和 `credential` 下載到設定JSON檔案中。 密碼值採用以下形式：{technicalAccountId}:{credential}。 非到期憑證的設定JSON檔案是初始化期間的一次性下載，Adobe不會保留副本。 |
+| **[!UICONTROL 資料庫密碼]** | 此英數字串是您的Experience Platform **[!UICONTROL 密碼]** 憑據。 如果您想使用非到期憑證，此值是 `technicalAccountID` 和 `credential` 下載到設定JSON檔案中。 密碼值採用以下形式：{technicalAccountId}:{credential}。 非到期憑證的設定JSON檔案是初始化期間的一次性下載，Adobe不會保留副本。 |
 
 輸入所有相關憑據後，請選擇 **[!DNL Connect]**.
 
-![此 [!DNL PostgreSQL] 「Database Connection workspace（資料庫連接）」頁簽和「Connect（連接）」按鈕突出顯示。](../images/clients/dbvisualizer/connect.png)
-
-此 [!DNL Connect] 對話將在會議的第一次時間舉行。
-
-![連接： [!DNL PostgreSQL] 對話框中，突出顯示了「資料庫用戶id」和「資料庫密碼」文本欄位。](../images/clients/dbvisualizer/connect-dialog.png)
-
-輸入您的用戶ID和密碼並選擇 **[!DNL Connect]**. 記錄檔中會顯示訊息，確認連線是否成功。
+此 [!DNL Connect] 對話將在會議的第一次時間舉行。 輸入您的用戶ID和密碼並選擇 **[!DNL Connect]**. 記錄檔中會顯示訊息，確認連線是否成功。
 
 ## 後續步驟
 

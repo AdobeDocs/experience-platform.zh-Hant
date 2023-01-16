@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將Aqua Data Studio連接到Query Service
 description: 本檔案會逐步說明將Aqua Data Studio與Adobe Experience Platform Query Service連線的步驟。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -27,19 +27,15 @@ ht-degree: 0%
 
 ## 註冊伺服器 {#register-server}
 
-安裝後 [!DNL Aqua Data Studio]，您必須先註冊伺服器。 從主菜單中，選擇 **[!DNL Server]**，後跟 **[!DNL Register Server]**.
+安裝後 [!DNL Aqua Data Studio]，您必須先註冊伺服器。 如需如何執行的指示，請參閱官方的Aqua Data Studio檔案 [啟動 [!DNL Register Server] 對話](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#launching_the_register_server_dialog) 和 [註冊伺服器](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation18/page/81/Registering-a-Database-Server#steps_to_register_a_server_in_aqua_data_studio).
 
-![「Server（伺服器）」下拉菜單，其中「Register Server（註冊伺服器）」突出顯示。](../images/clients/aqua-data-studio/register-server.png)
-
-此 **[!DNL Register Server]** 對話框。 在 **[!DNL General]** 索引標籤，選取 **[!DNL PostgreSQL]** 從左邊的清單里。 在顯示的對話方塊中，提供伺服器設定的下列詳細資訊。
+一旦 **[!DNL Register Server]** 對話框將顯示PostgresSQL伺服器，並提供伺服器設定的以下詳細資訊。
 
 - **[!DNL Name]**:連線的名稱。 建議您提供好記的名稱以識別連線。
 - **[!DNL Login Name]**:登入名稱為您的平台組織ID。 它以 `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**:這是在 [!DNL Query Service] 憑證控制面板。
 - **[!DNL Host and Port]**:的主機端點及其埠 [!DNL Query Service]. 必須使用埠80連接 [!DNL Query Service].
 - **[!DNL Database]:** 將使用的資料庫。 使用Platform UI憑證的值 `dbname`: `prod:all`.
-
-![此 [!DNL Aqua Data Studio] 「常規」頁簽，其中突出顯示了必需的輸入欄位。](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
 ### [!DNL Query Service] 憑據
 
@@ -49,15 +45,13 @@ ht-degree: 0%
 
 ### 設定SSL模式
 
-下一步，選取 **[!DNL Driver]** 標籤。 在 **[!DNL Parameters]**，請將值設為 `?sslmode=require`
+接下來，您必須將SSL模式值設定為 `?sslmode=require`. 這是從 [!DNL Driver] 的 [!DNL Edit Server Properties] 對話框。 如需如何執行的指示，請參閱官方的Aqua Data Studio檔案 [編輯驅動程式屬性](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation13/page/116/PostgreSQL#drivers) 和 [為配置SSL [!DNL PostgreSQL]](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation20/page/SSL-Configuration/SSL-Configuration). 使用搜尋列來尋找 `sslmode` 屬性。
 
 >[!IMPORTANT]
 >
 >請參閱 [[!DNL Query Service] SSL檔案](./ssl-modes.md) 了解協力廠商連線至Adobe Experience Platform Query Service的SSL支援，以及如何使用 `verify-full` SSL模式。
 
-![此 [!DNL Aqua Data Studio] 驅動程式頁簽，並突出顯示「參數」欄位。](../images/clients/aqua-data-studio/register-server-driver-tab.png)
-
-輸入連線詳細資訊後，請選取 **[!DNL Test Connection]** 以確保憑證正常運作。 如果連線測試成功，請選取 **[!DNL Save]** 註冊伺服器。 確認對話方塊隨即顯示，確認連線，且連線會顯示在控制面板上。 您現在可以連線至伺服器並檢視其架構物件。
+輸入連線詳細資訊後，從相同索引標籤選取 **[!DNL Test Connection]** 以確保憑證正常運作。 如果連線測試成功，請選取 **[!DNL Save]** 註冊伺服器。 隨即出現確認對話方塊，確認連線，且控制面板上會顯示連線圖示。 您現在可以連線至伺服器並檢視其架構物件。
 
 ## 後續步驟
 
