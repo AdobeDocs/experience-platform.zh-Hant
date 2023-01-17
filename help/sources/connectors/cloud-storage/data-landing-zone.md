@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 資料登錄區源
 description: 了解如何將資料登陸區連接至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Landing Zone]
+
+>[!IMPORTANT]
+>
+>此頁面專屬於 [!DNL Data Landing Zone] *來源* 連接器Experience Platform。 有關連接到 [!DNL Data Landing Zone] *目的地* 連接器，請參閱 [[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 [!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存介面，可授予您存取安全、雲端型檔案儲存功能，將檔案匯入Platform。 您可以存取 [!DNL Data Landing Zone] 每個沙箱的容器，且所有容器的資料量總計僅限於您的Platform產品與服務授權隨附的資料總計。 Platform及其應用程式服務的所有客戶，例如 [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services]，和 [!DNL Adobe Real-Time Customer Data Platform] 已布建一個 [!DNL Data Landing Zone] 每個沙箱的容器。 您可以透過 [!DNL Azure Storage Explorer] 或命令列介面。
 

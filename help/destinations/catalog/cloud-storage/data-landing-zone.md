@@ -2,10 +2,10 @@
 title: 資料登陸區目的地
 description: 了解如何連線至資料登陸區，以啟用區段和匯出資料集。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 0%
+source-wordcount: '1163'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此目的地目前為測試版，僅適用於有限數量的客戶。 若要要求存取 [!DNL Data Landing Zone] 連線，請連絡您的Adobe代表，並提供 [!DNL Organization ID].
+>* 此目的地目前為測試版，僅適用於有限數量的客戶。 若要要求存取 [!DNL Data Landing Zone] 連線，請連絡您的Adobe代表，並提供 [!DNL Organization ID].
+>* 本檔案頁面說明 [!DNL Data Landing Zone] *目的地*. 此外， [!DNL Data Landing Zone] *來源* 來源目錄中。 如需詳細資訊，請閱讀 [[!DNL Data Landing Zone] 來源](/help/sources/connectors/cloud-storage/data-landing-zone.md) 檔案。
+
 
 
 ## 總覽 {#overview}
@@ -35,9 +37,13 @@ ht-degree: 0%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 管理 [!DNL Data Landing Zone]
+## 先決條件 {#prerequisites}
 
-您可以使用 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 管理 [!DNL Data Landing Zone] 容器。
+請注意下列必要條件，您才能使用 [!DNL Data Landing Zone] 目的地。
+
+### 連接您的 [!DNL Data Landing Zone] 容器 [!DNL Azure Storage Explorer]
+
+您可以使用 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 管理 [!DNL Data Landing Zone] 容器。 若要開始使用 [!DNL Data Landing Zone]，您必須先擷取憑證，並將其輸入 [!DNL Azure Storage Explorer]，並連接 [!DNL Data Landing Zone] 容器 [!DNL Azure Storage Explorer].
 
 在 [!DNL Azure Storage Explorer] UI，請選取左側導覽列中的連線圖示。 此 **選擇資源** 窗口，提供連接到的選項。 選擇 **[!DNL Blob container]** 連接到 [!DNL Data Landing Zone] 儲存。
 
@@ -49,13 +55,54 @@ ht-degree: 0%
 
 選取連線方法後，您必須提供 **顯示名稱** 和 **[!DNL Blob]容器SAS URL** 與 [!DNL Data Landing Zone] 容器。
 
->[!IMPORTANT]
->
->您必須使用Platform API來擷取您的資料登陸區憑證。 如需完整資訊，請參閱 [檢索資料登錄區憑據](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html?lang=en#retrieve-data-landing-zone-credentials).
->
-> 要檢索憑據並訪問導出的檔案，必須替換查詢參數 `type=user_drop_zone` with `type=dlz_destination` 的任何HTTP呼叫。
+>[!BEGINSHADEBOX]
 
-提供您的 [!DNL Data Landing Zone] SAS URL，然後選擇 **下一個**.
+### 擷取您的憑證 [!DNL Data Landing Zone]
+
+您必須使用Platform API來擷取 [!DNL Data Landing Zone] 憑證。 擷取您憑證的API呼叫說明如下。 如需取得標題所需值的相關資訊，請參閱 [開始使用Adobe Experience Platform API](/help/landing/api-guide.md) 指南。
+
+**API格式**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
+```
+
+**要求**
+
+下列要求範例會擷取現有登陸區域的憑證。
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**回應**
+
+以下回應會傳回登錄區的憑證資訊，包括您目前的 `SASToken` 和 `SASUri`，以及 `storageAccountName` 對應至著陸區容器。
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3df123",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2022-09-11&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `containerName` | 登錄區域的名稱。 |
+| `SASToken` | 登錄區域的共用存取簽名令牌。 此字串包含授權請求所需的所有資訊。 |
+| `SASUri` | 登錄區域的共用訪問簽名URI。 此字串是登錄區域的URI及其對應的SAS令牌的組合， |
+
+>[!ENDSHADEBOX]
+
+提供您的顯示名稱(`containerName`)和 [!DNL Data Landing Zone] SAS URL（如上述API呼叫中傳回），然後選取 **下一個**.
 
 ![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -79,7 +126,7 @@ ht-degree: 0%
 
 ### 驗證到目標 {#authenticate}
 
-因為 [!DNL Data Landing Zone] 是Adobe布建的儲存，您不需要執行任何步驟來驗證目標。
+請確定您已連接 [!DNL Data Landing Zone] 容器 [!DNL Azure Storage Explorer] 如 [必要條件](#prerequisites) 區段。 因為 [!DNL Data Landing Zone] 是Adobe布建的儲存，您不需要在Experience PlatformUI中執行任何進一步步驟來驗證目的地。
 
 ### 填寫目的地詳細資訊 {#destination-details}
 
