@@ -3,9 +3,9 @@ keywords: 目標個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target是一款應用程式，可在網站、行動應用程式等所有傳入客戶互動中，提供由AI支援的即時個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2dbc449d6074c5bbfc44f92de59dd8acc3bf275d
+source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1014'
 ht-degree: 1%
 
 ---
@@ -87,7 +87,7 @@ Adobe Experience Platform會自動連線至您公司的Adobe Target執行個體�
 
 * **名稱**:填寫此目的地的首選名稱。
 * **說明**:輸入目的地的說明。 例如，您可以提及您使用此目的地的促銷活動。 此欄位為選填欄位。
-* **資料流ID**:這會決定要納入區段的資料收集資料流。 下拉式功能表只會顯示已啟用Target目的地的資料流。 請參閱 [設定資料流](../../../edge/datastreams/overview.md#target) 以取得如何設定Adobe Target資料流的詳細資訊。
+* **資料流ID**:這會決定要納入區段的資料收集資料流。 下拉式功能表只會顯示已啟用Target和Adobe Experience Platform服務的資料流。 請參閱 [設定資料流](../../../edge/datastreams/configure.md#aep) 以取得如何設定Adobe Experience Platform和Adobe Target資料流的詳細資訊。
    * **[!UICONTROL 無]**:如果您需要設定Adobe Target個人化，但無法實作 [Experience PlatformWeb SDK](../../../edge/home.md). 使用此選項時，從Experience Platform匯出至Target的區段僅支援下次工作階段個人化，且會停用邊緣區段。 如需詳細資訊，請參閱下表。
 
 | 未選擇資料流 | 已選取資料流 |
