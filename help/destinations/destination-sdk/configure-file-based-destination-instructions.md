@@ -2,9 +2,9 @@
 description: 本頁面列出並說明使用Destination SDK來設定檔案式目的地的步驟。
 title: 使用Destination SDK配置基於檔案的目標
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
+source-git-commit: 0d58d949ff24b9059d6afe81de354da0783ec8a4
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -261,16 +261,16 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 * 如果您選取 `"authenticationRule": "PLATFORM_AUTHENTICATION"`，請參閱 [驗證配置](./authentication-configuration.md#when-to-use).
 
 
-<!-- ## Step 5: Test your destination {#test-destination}
+## 步驟5:測試您的目的地 {#test-destination}
 
-After setting up your destination using the configuration endpoints in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
+使用前述步驟中的設定端點設定目的地後，您可以使用 [目的地測試工具](./file-based-destination-testing-overview.md) 來測試Adobe Experience Platform與目的地之間的整合。
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
+在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，以便您對目的地啟用。 如需如何在Experience Platform中建立區段的指示，請參閱以下兩個資源：
 
-* [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
+* [建立區段檔案頁面](/help/segmentation/ui/overview.md#create-segment)
+* [建立區段視訊逐步說明](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-## 步驟5:發佈您的目的地 {#publish-destination}
+## 步驟6:發佈您的目的地 {#publish-destination}
 
 >[!NOTE]
 >
@@ -278,10 +278,18 @@ As part of the process to test your destination, you must use the Experience Pla
 
 設定並測試您的目的地後，請使用 [目的地發佈API](./destination-publish-api.md) 將配置提交到Adobe以供審核。
 
-## 步驟6:記錄您的目的地 {#document-destination}
+## 步驟7:記錄您的目的地 {#document-destination}
 
 >[!NOTE]
 >
 >如果您要建立私人目的地以供自己使用，且不想將其發佈至目的地目錄以供其他客戶使用，則不需要執行此步驟。
 
 如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則建立 [產品化整合](./overview.md#productized-custom-integrations)，請使用 [自助服務檔案程式](./docs-framework/documentation-instructions.md) 若要為您的目的地建立產品檔案頁面，請在 [Experience Platform目的地目錄](/help/destinations/catalog/overview.md).
+
+## 步驟8:提交目標供Adobe審核 {#submit-for-review}
+
+>[!NOTE]
+>
+>如果您要建立私人目的地以供自己使用，且不想將其發佈至目的地目錄以供其他客戶使用，則不需要執行此步驟。
+
+最後，在目標可以發佈到Experience Platform目錄且所有Experience Platform客戶都看得到之前，您需要正式提交目標以供Adobe審核。 尋找有關如何 [提交以審核在Destination SDK中創作的已產品化目標](/help/destinations/destination-sdk/submit-destination.md).
