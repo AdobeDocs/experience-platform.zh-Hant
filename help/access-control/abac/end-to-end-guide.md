@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制端到端指南
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制的端對端指南
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
 workflow-type: tm+mt
-source-wordcount: '2427'
+source-wordcount: '2425'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 * [為您的使用者標籤角色](#label-roles):以其行銷組與外部代理合作的醫療保健提供商（ACME業務組）為例。
 * [標示資源（結構欄位和區段）](#label-resources):指派 **[!UICONTROL PHI/受管制的健康資料]** 標籤至架構資源和區段。
-* [建立將它們連結在一起的策略](#policy):建立原則以將資源上的標籤連結至您角色中的標籤，拒絕存取結構欄位和區段。 對於沒有相符標籤的使用者，這會拒絕其存取所有沙箱中的結構欄位和區段。
+* [建立將它們連結在一起的策略](#policy):建立原則以將資源上的標籤連結至您角色中的標籤，拒絕存取結構欄位和區段。 這會授予具有相符標籤之使用者的所有沙箱中結構欄位和區段的存取權。
 
 ## 權限
 
