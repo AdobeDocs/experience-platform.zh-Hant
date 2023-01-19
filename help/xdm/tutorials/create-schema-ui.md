@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3893'
+source-wordcount: '3924'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experience Data Model] (XDM)互動式視覺畫布中的結構，稱為 [!DNL Schema Editor]. 本教學課程涵蓋如何使用 [!DNL Schema Editor].
 
+為了示範，本教學課程中的步驟涉及建立描述客戶忠誠度計畫成員的範例結構。 雖然您可以使用這些步驟來建立不同的架構以供自己使用，但建議您先依照建立範例架構的操作，以了解 [!DNL Schema Editor].
+
 >[!NOTE]
 >
->為了示範，本教學課程中的步驟涉及建立描述客戶忠誠度計畫成員的範例結構。 雖然您可以使用這些步驟來建立不同的架構以供自己使用，但建議您先依照建立範例架構的操作，以了解 [!DNL Schema Editor].
-
-如果您偏好使用 [!DNL Schema Registry] 請改為從閱讀 [[!DNL Schema Registry] 開發人員指南](../api/getting-started.md) 在嘗試上的教學課程之前 [使用API建立結構](create-schema-api.md).
+>如果您要將CSV資料擷取至Platform，您可以 [將該資料對應至由AI產生的建議所建立的XDM架構](../../ingestion/tutorials/map-csv/recommendations.md) （目前為測試版），不需自行手動建立結構。
+>
+>如果您偏好使用 [!DNL Schema Registry] API，請先閱讀 [[!DNL Schema Registry] 開發人員指南](../api/getting-started.md) 在嘗試上的教學課程之前 [使用API建立結構](create-schema-api.md).
 
 ## 快速入門
 

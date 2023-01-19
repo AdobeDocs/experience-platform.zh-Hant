@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯結構
 description: 了解如何在Experience Platform使用者介面中建立和編輯結構的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '3156'
+source-wordcount: '3203'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 0%
 本指南需要妥善了解XDM系統。 請參閱 [XDM概觀](../../home.md) 了解XDM在Experience Platform生態系統中的角色，以及 [綱要構成基本知識](../../schema/composition.md) 以概略了解結構的建構方式。
 
 ## 建立新結構 {#create}
+
+>[!NOTE]
+>
+>本節說明如何在UI中手動建立新結構。 如果您要將CSV資料擷取至Platform，可以選擇 [將該資料對應至由AI產生的建議所建立的XDM架構](../../../ingestion/tutorials/map-csv/recommendations.md) （目前為測試版），不需自行手動建立結構。
 
 在 [!UICONTROL 結構] 工作區，選取 **[!UICONTROL 建立結構]** 在右上角。 在隨即顯示的下拉式清單中，您可以選擇 **[!UICONTROL XDM個別設定檔]** 和 **[!UICONTROL XDM ExperienceEvent]** 作為架構的基類。 或者，您也可以選取 **[!UICONTROL 瀏覽]** 從可用類的完整清單中選擇，或 [建立新的自定義類](./classes.md#create) 。
 

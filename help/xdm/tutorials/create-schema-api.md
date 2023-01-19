@@ -5,9 +5,9 @@ title: 使用結構註冊表API建立結構
 type: Tutorial
 description: 本教學課程使用Schema Registry API來引導您完成使用標準類別撰寫架構的步驟。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 030874e91b88b18f7de0cc2d12200243b7ed1d31
+source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2588'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 此 [!DNL Schema Registry] 用於存取 [!DNL Schema Library] 在Adobe Experience Platform。 此 [!DNL Schema Library] 包含按Adobe提供給您的資源， [!DNL Experience Platform] 您使用應用程式的合作夥伴和供應商。 註冊表提供使用者介面和RESTful API，所有可用的程式庫資源都可從中存取。
 
 本教學課程使用 [!DNL Schema Registry] API可引導您完成使用標準類別撰寫架構的步驟。 如果您偏好在 [!DNL Experience Platform], [結構編輯器教學課程](create-schema-ui.md) 提供在架構編輯器中執行類似動作的逐步指示。
+
+>[!NOTE]
+>
+>如果您要將CSV資料擷取至Platform，您可以 [將該資料對應至由AI產生的建議所建立的XDM架構](../../ingestion/tutorials/map-csv/recommendations.md) （目前為測試版），不需自行手動建立結構。
 
 ## 快速入門
 
