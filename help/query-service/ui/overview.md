@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service UI指南
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1095'
 ht-degree: 2%
@@ -46,7 +46,7 @@ Adobe Experience Platform [!DNL Query Service] 提供可用來寫入及執行查
 | **[!UICONTROL 上次運行時間戳]** | 查詢執行時的最新時間戳記。 此欄會強調顯示查詢是否已根據其目前排程執行。 |
 | **[!UICONTROL 上次運行狀態]** | 最近的查詢執行的狀態。 三個狀態值為： `successful` `failed` 或 `in progress`. |
 
-如需如何取得的詳細資訊，請參閱本檔案 [通過Query Service UI監視查詢](../monitor-queries.md).
+如需如何取得的詳細資訊，請參閱本檔案 [通過Query Service UI監視查詢](./monitor-queries.md).
 
 ## 範本 {#browse}
 

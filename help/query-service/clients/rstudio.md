@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將RStudio連接到查詢服務
 description: 本檔案將逐步說明將R Studio與Adobe Experience Platform Query Service連接的步驟。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: d40aa52240ab8f15feea62ec5fb8de073dd6a053
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -57,7 +57,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 現在您已連線至 [!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以使用 `dbGetQuery(con, sql)` 執行查詢，其中 `sql` 是要運行的SQL查詢。
 
-下列查詢使用包含 [體驗事件](../sample-queries/experience-event.md) 並根據裝置的螢幕高度，建立網站的頁面檢視色階分佈圖。
+下列查詢使用包含 [體驗事件](../../xdm/classes/experienceevent.md) 並根據裝置的螢幕高度，建立網站的頁面檢視色階分佈圖。
 
 ```sql
 df_pageviews <- dbGetQuery(con,

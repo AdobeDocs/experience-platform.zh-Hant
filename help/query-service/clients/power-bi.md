@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將Power BI連接到查詢服務
 description: 本檔案會逐步說明將Power BI與Adobe Experience Platform Query Service連線的步驟。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 1%
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->第三方BI工具中的巢狀資料結構可以平面化，以改善其可用性，並減少擷取、分析、轉換和報告資料所需的工作量。 請參閱[`FLATTEN` 功能](../best-practices/flatten-nested-data.md) 有關在連接到資料庫時如何激活此設定的說明。
+>第三方BI工具中的巢狀資料結構可以平面化，以改善其可用性，並減少擷取、分析、轉換和報告資料所需的工作量。 請參閱[`FLATTEN` 功能](../essential-concepts/flatten-nested-data.md) 有關在連接到資料庫時如何激活此設定的說明。
 
 ### 資料連接模式 {#data-connectivity-mode}
 

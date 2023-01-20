@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年1月
 description: 2022年1月Adobe Experience Platform發行說明。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -91,7 +91,7 @@ Adobe Experience Platform提供多個控制面板，讓您透過這些控制面�
 
 | 功能 | 說明 |
 | --- | --- |
-| 匿名塊 | 匿名塊SQL結構允許您將查詢服務中的大規模資料準備作業分解為較小的任務，然後對增量資料載入重複使用並依序執行這些任務。 如需詳細資訊，請參閱 [匿名塊文檔的示例查詢](../../query-service/best-practices/anonymous-block.md). |
+| 匿名塊 | 匿名塊SQL結構允許您將查詢服務中的大規模資料準備作業分解為較小的任務，然後對增量資料載入重複使用並依序執行這些任務。 如需詳細資訊，請參閱 [匿名塊文檔的示例查詢](../../query-service/essential-concepts/anonymous-block.md). |
 | 資料集組織 | 提供一致的邏輯資料結構，可隨著沙箱中資料資產的數量增加，組織您的資料資產以與查詢服務搭配使用。 如需詳細資訊，請參閱 [組織資料資產檔案](../../query-service/best-practices/organize-data-assets.md). |
 
 如需 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md).

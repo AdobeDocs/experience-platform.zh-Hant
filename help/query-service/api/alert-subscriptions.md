@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；警報；
-title: 警報訂閱API端點
+title: 警報訂閱端點
 description: 本指南提供您可使用Query Service API對警報訂閱端點進行之各種API呼叫的範例HTTP要求和回應。
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 8673b6ceb9386677171334ce99d39c93e5e8159c
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2668'
+source-wordcount: '2667'
 ht-degree: 2%
 
 ---
 
-# 警報訂閱API端點
+# 警報訂閱端點
 
 Adobe Experience Platform Query Service可讓您訂閱臨機和排程查詢的警報。 您可以在Platform UI內透過電子郵件、或兩者，接收警報。 平台內警報和電子郵件警報的通知內容相同。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 

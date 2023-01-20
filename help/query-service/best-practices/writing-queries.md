@@ -5,9 +5,9 @@ title: 查詢服務中查詢執行的一般指南
 type: Tutorial
 description: 本檔案概述在Adobe Experience Platform Query Service中撰寫查詢時須知的重要詳細資訊。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1072'
 ht-degree: 3%
 
 ---
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## 去重複化
 
-查詢服務支援重複資料刪除，或從資料中移除重複列。 有關重複資料刪除的詳細資訊，請閱讀 [查詢服務重複資料刪除指南](./deduplication.md).
+查詢服務支援重複資料刪除，或從資料中移除重複列。 有關重複資料刪除的詳細資訊，請閱讀 [查詢服務重複資料刪除指南](../essential-concepts/deduplication.md).
 
 ## 查詢服務中的時區計算
 
@@ -325,4 +325,7 @@ LIMIT 50;
 
 - [Analytics分析](../use-cases/analytics-insights.md)
 - [使用Adobe Target進行活動分析](../use-cases/activity-analysis-with-adobe-target.md)
-- [ExperienceEvent範例查詢](../sample-queries/experience-event.md).
+- [建立事件的趨勢報表](../use-cases/trended-report-of-events.md)
+- [檢視訪客的統計報表](../use-cases/roll-up-report-of-a-visitor.md)
+- [列出使用者的頁面檢視](../use-cases/list-visitor-sessions.md)
+- [依訪客的頁面檢視次數列出訪客](../use-cases/visitors-by-number-of-page-views.md)

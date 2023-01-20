@@ -2,7 +2,7 @@
 title: 基於機器學習的查詢服務機器人過濾
 description: 本檔案概述如何使用Query Service和機器學習來判斷機器人活動，並從正版的線上網站訪客流量篩選其動作。
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
-source-git-commit: 8a7c04ebe8fe372dbf686fddc92867e938a93614
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '899'
 ht-degree: 5%
@@ -169,6 +169,6 @@ Model Accuracy: 0.99935
 
 ## 後續步驟
 
-閱讀本檔案，您就能更清楚了解如何使用 [!DNL Query Service] 和機器學習來判斷及篩選機器人活動。
+閱讀本檔案，您便能更清楚了解如何使用 [!DNL Query Service] 和機器學習來判斷及篩選機器人活動。
 
 說明 [!DNL Query Service] 對貴組織的策略性業務洞察 [放棄的瀏覽使用案例](./abandoned-browse.md) 範例。

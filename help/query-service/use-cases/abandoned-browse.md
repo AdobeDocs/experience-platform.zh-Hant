@@ -3,7 +3,7 @@ keywords: Experience Platform；查詢服務；查詢服務；查詢
 title: Adobe Experience Platform查詢服務的範例使用案例
 description: 此端對端範例可示範Adobe Experience Platform Query Service的多功能性和優點。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
@@ -73,7 +73,7 @@ Adobe Experience Platform提供資料存放庫和必要的工具，讓您以有�
 
 ## 後續步驟
 
-閱讀本檔案後，您現在應了解 [!DNL Query Service] 不僅會影響資料的品質和區段的便利性，也會影響資料架構對整個端對端工作流程的重要性。 如需更適用的SQL範例，請使用Adobe Analytics搭配 [!DNL Query Service]，請參閱 [Adobe Analytics範例查詢檔案](../sample-queries/adobe-analytics.md).
+閱讀本檔案後，您現在應了解 [!DNL Query Service] 不僅會影響資料的品質和區段的便利性，也會影響資料架構對整個端對端工作流程的重要性。 如需更適用的SQL範例，請使用Adobe Analytics搭配 [!DNL Query Service]，請參閱 [Adobe Analytics銷售變數使用案例](./merchandising-variables.md).
 
 說明 [!DNL Query Service] 對貴組織的策略性業務洞察 [機器人篩選使用案例](./bot-filtering.md) 範例。
 

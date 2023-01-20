@@ -1,7 +1,8 @@
 ---
 title: 查詢服務包
 description: 以下檔案概述可用於Query Service的功能和產品套件，並強調臨機和批次查詢之間的差異。
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -65,4 +66,4 @@ Experience Platform的存取控制透過 [Adobe Admin Console](https://admincons
 
 ## 後續步驟
 
-閱讀本檔案後，您應更清楚了解Query Service中可用的不同封裝類型和查詢執行功能。 若要進一步了解Query Service，例如業界知名的使用案例，請參閱 [使用案例檔案](./use-cases/abandoned-browse.md). 如需更一般的資訊，請造訪 [查詢服務概述](./home.md).
+閱讀本檔案後，您應能更清楚了解Query Service中提供的不同封裝類型和查詢執行功能。 若要進一步了解Query Service，例如業界知名的使用案例，請參閱 [使用案例檔案](./use-cases/abandoned-browse.md). 如需更一般的資訊，請造訪 [查詢服務概述](./home.md).

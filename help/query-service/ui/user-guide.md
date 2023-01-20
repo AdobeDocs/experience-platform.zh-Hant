@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢編輯器UI指南
 description: 查詢編輯器是Adobe Experience Platform Query Service提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證及執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和探索資料，並可讓您執行互動式查詢以供開發之用，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2100'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -115,57 +115,17 @@ ht-degree: 0%
 
 ### 排程查詢 {#scheduled-queries}
 
->[!IMPORTANT]
->
->以下是使用查詢編輯器時排程查詢的限制清單。 它們不適用於 [!DNL Query Service] API:<br/>您只能將排程新增至已建立、儲存及執行的查詢。<br/>您 **不能** 將計畫添加到參數化查詢。<br/>排程查詢 **不能** 包含匿名塊。
+已另存為範本的查詢可從查詢編輯器排程。 這可讓您自動執行在自訂順序上執行的查詢。 您可以根據頻率、日期和時間排程查詢，也可以視需要為結果選擇輸出資料集。 您也可以透過UI停用或刪除查詢排程。
 
-排程是從查詢編輯器中設定。 不過，只能排程已儲存為範本的查詢。 若要將排程新增至查詢，請從 [!UICONTROL 範本] 標籤或 [!UICONTROL 排程查詢] 頁簽，導覽至查詢編輯器。
+排程是從查詢編輯器中設定。 以下是使用查詢編輯器時排程查詢的限制清單。 它們不適用於 [!DNL Query Service] API:
 
-若要了解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
+- 您只能將排程新增至已建立、儲存及執行的查詢。
+- 您 **不能** 將計畫添加到參數化查詢。
+- 排程查詢 **不能** 包含匿名塊。
 
-從查詢編輯器存取儲存的查詢時， [!UICONTROL 排程] 索引標籤會顯示在查詢名稱下方。 選擇 **[!UICONTROL 排程]**.
+請參閱查詢排程檔案，了解如何 [在UI中建立查詢排程](./query-schedules.md). 或者，若要了解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
 
-![突出顯示「調度」頁簽的查詢編輯器。](../images/ui/query-editor/schedules-tab.png)
-
-排程工作區隨即出現。 選擇 **[!UICONTROL 新增排程]** 來建立排程。
-
-![查詢編輯器排程工作區中，已反白顯示新增排程。](../images/ui/query-editor/add-schedule.png)
-
-此時將顯示「計畫詳細資訊」頁。 在此頁面上，您可以選擇已排程查詢的頻率、開始和結束日期、已排程查詢將執行的一週中的某天，以及要匯出查詢的資料集。
-
-![「計畫詳細資訊」面板突出顯示。](../images/ui/query-editor/schedule-details.png)
-
-您可以選擇下列選項 **[!UICONTROL 頻率]**:
-
-- **[!UICONTROL 每小時]**:在您選取的日期期間，排程查詢將每小時執行一次。
-- **[!UICONTROL 每日]**:排程查詢會在您選取的時間和日期期間，每X天執行一次。 請注意，所選時間在 **UTC**，而非您的當地時區。
-- **[!UICONTROL 每週]**:選定的查詢將在您選擇的一週天數、時間和日期期間運行。 請注意，所選時間在 **UTC**，而非您的當地時區。
-- **[!UICONTROL 每月]**:選定的查詢將在您選擇的日、時和日期期間每月運行。 請注意，所選時間在 **UTC**，而非您的當地時區。
-- **[!UICONTROL 每年]**:選定的查詢將每年在您選擇的日、月、時間和日期期間運行。 請注意，所選時間在 **UTC**，而非您的當地時區。
-
-針對資料集，您可以選擇使用現有資料集或建立新資料集。
-
->[!IMPORTANT]
->
-> 由於您使用現有資料集或建立新資料集， **not** 需要包括 `INSERT INTO` 或 `CREATE TABLE AS SELECT` 做為查詢的一部分，因為資料集已設定。 包括 `INSERT INTO` 或 `CREATE TABLE AS SELECT` 作為排程查詢的一部分，將會導致錯誤。
-
-確認所有這些詳細資訊後，請選取 **[!UICONTROL 儲存]** 來建立排程。 系統會將您返回到計畫工作區，該工作區顯示新建立的計畫的詳細資訊，包括計畫ID、計畫本身和計畫的輸出資料集。 您可以使用排程ID來查詢有關排程查詢本身執行的詳細資訊。 若要進一步了解，請閱讀 [排程查詢執行端點指南](../api/runs-scheduled-queries.md).
-
-![重新建立的排程會反白顯示排程工作區。](../images/ui/query-editor/schedules-workspace.png)
-
-#### 刪除或禁用計畫 {#delete-schedule}
-
-您可以從排程工作區中刪除或停用排程。 您必須從 [!UICONTROL 範本] 標籤或 [!UICONTROL 排程查詢] 頁簽，導航到查詢編輯器並選擇 **[!UICONTROL 排程]** 來存取排程工作區。
-
-從可用排程的列中選取排程。 您可以使用切換來停用或啟用排程查詢。
-
->[!IMPORTANT]
->
->您必須先停用排程，才能刪除查詢的排程。
-
-選擇 **[!UICONTROL 刪除排程]** 刪除禁用的計畫。
-
-![會反白顯示「停用排程」和「刪除排程」的排程工作區。](../images/ui/query-editor/delete-schedule.png)
+任何已排程的查詢都會新增至 [!UICONTROL 排程查詢] 標籤。 從該工作區，您可以透過UI監控所有已排程查詢作業的狀態。 在 [!UICONTROL 排程查詢] 索引標籤，您可以找到有關查詢執行和訂閱警報的重要資訊。 可用資訊包括狀態、排程詳細資訊，以及執行失敗時的錯誤訊息/代碼。 請參閱 [監視計畫查詢文檔](./monitor-queries.md) 以取得更多資訊。
 
 ### 保存查詢 {#saving-queries}
 
@@ -179,7 +139,7 @@ ht-degree: 0%
 
 從執行的所有查詢 [!DNL Query Editor] 會在記錄表中擷取。 您可以在 **[!UICONTROL 記錄檔]** 頁簽，查找查詢執行。 儲存的查詢會列在 **[!UICONTROL 範本]** 標籤。
 
-如果已排程查詢，則 [!UICONTROL 排程查詢] 索引標籤可改善這些查詢作業的UI可見性。 請參閱 [查詢監控檔案](../monitor-queries.md) 以取得更多資訊。
+如果已排程查詢，則 [!UICONTROL 排程查詢] 索引標籤可改善這些查詢作業的UI可見性。 請參閱 [查詢監控檔案](./monitor-queries.md) 以取得更多資訊。
 
 >[!NOTE]
 >

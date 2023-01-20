@@ -2,7 +2,7 @@
 title: Real-time Customer Data Platform Insights資料模型
 description: 了解如何透過Real-time Customer Data Platform Insights資料模型使用SQL查詢，針對您的行銷和KPI使用案例自訂您自己的Real-Time CDP報表。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 9f33ad0146b72f820530233b651370c43fafe713
+source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights資料模型
 
-Real-time Customer Data Platform深入分析資料模型功能可公開資料模型和SQL，為各種設定檔、目的地和分段Widget提供深入分析。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 然後，這些前瞻分析便可作為使用者定義控制面板的自訂小工具。 請參閱查詢加速儲存報告深入分析檔案以了解 [如何透過Query Service建立報表前瞻分析資料模型，以與加速儲存資料和使用者定義的控制面板搭配使用](../query-service/query-accelerated-store/reporting-insights-data-model.md).
+Real-time Customer Data Platform深入分析資料模型功能可公開資料模型和SQL，為各種設定檔、目的地和分段Widget提供深入分析。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 然後，這些前瞻分析便可作為使用者定義控制面板的自訂小工具。 請參閱查詢加速儲存報告深入分析檔案以了解 [如何透過Query Service建立報表前瞻分析資料模型，以與加速儲存資料和使用者定義的控制面板搭配使用](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## 先決條件
 

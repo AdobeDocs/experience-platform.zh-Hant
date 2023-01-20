@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年10月
 description: 2022年10月Adobe Experience Platform發行說明。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 4%
@@ -104,8 +104,8 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 | 功能 | 說明 |
 | --- | --- |
-| 透過Platform UI監控查詢 | 查詢服務 [!UICONTROL 排程查詢] 索引標籤可改善透過UI查詢作業狀態的可見性。 您現在可以找到查詢執行狀態的重要資訊，包括錯誤訊息和失敗的程式碼，從 [!UICONTROL 排程查詢] 標籤。 您也可以根據其狀態，透過UI訂閱這些查詢中任何一個的警報。 請參閱 [監視查詢文檔](../../query-service/monitor-queries.md) 以深入了解此功能。 |
-| 查詢加速報告前瞻分析資料模型 | 作為Data Distiller SKU的一部分，查詢加速儲存可讓您減少從資料中獲取重要見解所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改善您的報表分析及其視覺效果。 請參閱 [查詢加速儲存報告深入分析檔案](../../query-service/query-accelerated-store/reporting-insights-data-model.md) 以深入了解此功能。 |
+| 透過Platform UI監控查詢 | 查詢服務 [!UICONTROL 排程查詢] 索引標籤可改善透過UI查詢作業狀態的可見性。 您現在可以找到查詢執行狀態的重要資訊，包括錯誤訊息和失敗的程式碼，從 [!UICONTROL 排程查詢] 標籤。 您也可以根據其狀態，透過UI訂閱這些查詢中任何一個的警報。 請參閱 [監視查詢文檔](../../query-service/ui/monitor-queries.md) 以深入了解此功能。 |
+| 查詢加速報告前瞻分析資料模型 | 作為Data Distiller SKU的一部分，查詢加速儲存可讓您減少從資料中獲取重要見解所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改善您的報表分析及其視覺效果。 請參閱 [查詢加速儲存報告深入分析檔案](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) 以深入了解此功能。 |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；排程查詢；排程查詢；
 solution: Experience Platform
-title: 排程查詢API端點
+title: 計畫端點
 description: 以下小節將逐步說明您可使用Query Service API針對已排程查詢所進行的各種API呼叫。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 2ad86b0cf3cdc89825501b94bd609df751026420
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1136'
 ht-degree: 2%
 
 ---
 
-# 計畫查詢終結點
+# 計畫端點
 
 ## 範例API呼叫
 

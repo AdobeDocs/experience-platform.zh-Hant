@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: b8c2a9ab44274e2719e7178119a58f14d0442955
+source-git-commit: 3d549b14571be7ec3455da0e23181951cb991a9d
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 17%
+source-wordcount: '264'
+ht-degree: 16%
 
 ---
 
@@ -17,58 +17,30 @@ ht-degree: 17%
 - [查詢服務概述](home.md)
 - [查詢服務包裝](packages.md)
 - [查詢服務護欄](guardrails.md)
-- 資料Distiller {#data-distiller}
-   - [授權使用](data-distiller/licence-usage.md)
 - 開始使用 {#get-started}
    - [先決條件](get-started/prerequisites.md)
+- 資料Distiller {#data-distiller}
+   - [授權使用](data-distiller/licence-usage.md)
+   - 查詢加速儲存 {#query-accelerated-store}
+      - [傳送加速查詢](data-distiller/query-accelerated-store/send-accelerated-queries.md)
+      - [Reporting Insights資料模型指南](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - 衍生屬性 {#derived-attributes}
+      - [總覽](data-distiller/derived-attributes/overview.md)
+      - [建立基於資料的派生屬性](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - 使用案例 {#use-cases}
    - [放棄的瀏覽](use-cases/abandoned-browse.md)
    - [使用Adobe Target進行活動分析](use-cases/activity-analysis-with-adobe-target.md)
    - [歸因分析](use-cases/attribution-analysis.md)
    - [機器人篩選](use-cases/bot-filtering.md)
-   - [網頁和行動分析](use-cases/analytics-insights.md)
+   - [建立事件的趨勢報表](use-cases/trended-report-of-events.md)
+   - [基於分檔的派生屬性](use-cases/deciles-use-case.md)
+   - [列出使用者的頁面檢視](use-cases/list-visitor-sessions.md)
+   - [依其頁面檢視列出訪客](use-cases/visitors-by-number-of-page-views.md)
    - [傾向分數](use-cases/propensity-score.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
-- 查詢服務API {#api}
-   - [快速入門](api/getting-started.md)
-   - [查詢](api/queries.md)
-   - [連線參數](api/connection-parameters.md)
-   - [排程查詢](api/scheduled-queries.md)
-   - [針對排程查詢執行](api/runs-scheduled-queries.md)
-   - [查詢範本](api/query-templates.md)
-   - [加速查詢](api/accelerated-queries.md)
-   - [警報訂閱](api/alert-subscriptions.md)
-- 查詢服務UI {#ui}
-   - [UI概述](ui/overview.md)
-   - [查詢編輯器使用手冊](ui/user-guide.md)
-   - [查詢範本](ui/query-templates.md)
-   - [使用查詢服務憑據](ui/credentials.md)
-   - [從查詢結果產生資料集](ui/create-datasets.md)
-- [監視查詢](monitor-queries.md)
-- 查詢加速儲存{#query-accelerated-store}
-   - [報告深入分析資料模型](query-accelerated-store/reporting-insights-data-model.md)
-- 最佳做法 {#best-practices}
-   - [查詢執行的一般指南](best-practices/writing-queries.md)
-   - [資料資產組織指南](./best-practices/organize-data-assets.md)
-   - [使用巢狀資料結構](best-practices/nested-data-structures.md)
-   - [平面化巢狀資料結構](best-practices/flatten-nested-data.md)
-   - [匿名塊](best-practices/anonymous-block.md)
-   - [增量載入](best-practices/incremental-load.md)
-   - [重複資料刪除](best-practices/deduplication.md)
-- 衍生屬性 {#derived-attributes}
-   - [總覽](derived-attributes/overview.md)
-   - [Deciles使用案例](derived-attributes/deciles-use-case.md)
-- 範例查詢 {#sample-queries}
-   - [體驗事件查詢範例](sample-queries/experience-event.md)
-   - [範例Adobe Analytics查詢](sample-queries/adobe-analytics.md)
-- SQL參考 {#sql}
-   - [SQL概述](sql/overview.md)
-   - [SQL語法](sql/syntax.md)
-   - [Adobe定義的函式](sql/adobe-defined-functions.md)
-   - [Spark SQL函式](sql/spark-sql-functions.md)
-   - [元資料命令](sql/metadata.md)
-   - [準備的陳述](sql/prepared-statements.md)
-   - [資料集範例](sql/dataset-samples.md)
+   - [從分析資料傳回及使用銷售變數](use-cases/merchandising-variables.md)
+   - [檢視訪客的統計報表](use-cases/roll-up-report-of-a-visitor.md)
+   - [網頁和行動分析](use-cases/analytics-insights.md)
 - 將客戶端連接到查詢服務 {#clients}
    - [用戶端連線概觀](clients/overview.md)
    - [SSL模式](./clients/ssl-modes.md)
@@ -81,11 +53,45 @@ ht-degree: 17%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [塔布洛](clients/tableau.md)
+- 查詢服務UI {#ui}
+   - [UI概述](ui/overview.md)
+   - [查詢編輯器使用手冊](ui/user-guide.md)
+   - [查詢範本](ui/query-templates.md)
+   - [查詢排程](ui/query-schedules.md)
+   - [監視計畫查詢](ui/monitor-queries.md)
+   - [認證指南](ui/credentials.md)
+   - [從查詢結果生成輸出資料集](ui/create-datasets.md)
+- 查詢服務API端點 {#api}
+   - [快速入門](api/getting-started.md)
+   - [查詢](api/queries.md)
+   - [連線參數](api/connection-parameters.md)
+   - [排程](api/scheduled-queries.md)
+   - [針對排程查詢執行](api/runs-scheduled-queries.md)
+   - [查詢範本](api/query-templates.md)
+   - [加速查詢](api/accelerated-queries.md)
+   - [警報訂閱](api/alert-subscriptions.md)
 - 資料治理 {#data-governance}
    - [總覽](data-governance/overview.md)
    - [稽核記錄指南](data-governance/audit-log-guide.md)
    - [臨機結構資料集中的身分](data-governance/ad-hoc-schema-identities.md)
    - [臨機結構的基於屬性的訪問控制支援](./data-governance/ad-hoc-schema-labels.md)
-- [疑難排解指南](troubleshooting-guide.md)
+- 最佳做法 {#best-practices}
+   - [查詢執行](best-practices/writing-queries.md)
+   - [資料資產組織](./best-practices/organize-data-assets.md)
+- 基本概念 {#essential-concepts}
+   - [使用巢狀資料結構](essential-concepts/nested-data-structures.md)
+   - [平面化巢狀資料結構](essential-concepts/flatten-nested-data.md)
+   - [匿名塊](essential-concepts/anonymous-block.md)
+   - [增量載入](essential-concepts/incremental-load.md)
+   - [重複資料刪除](essential-concepts/deduplication.md)
+   - [資料集範例](essential-concepts/dataset-samples.md)
+- SQL參考 {#sql}
+   - [SQL概述](sql/overview.md)
+   - [SQL語法](sql/syntax.md)
+   - [Adobe定義的函式](sql/adobe-defined-functions.md)
+   - [Spark SQL函式](sql/spark-sql-functions.md)
+   - [元資料命令](sql/metadata.md)
+   - [準備的陳述](sql/prepared-statements.md)
+- [常見問答](troubleshooting-guide.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)

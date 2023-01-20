@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；疑難排解指南；faq；疑難排解；
 solution: Experience Platform
-title: 查詢服務疑難排解指南
+title: 常見問答
 description: 本檔案包含與Query Service相關的常見問題和解答。 主題包括：匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '4383'
 ht-degree: 1%
 
 ---
 
-# [!DNL Query Service] 疑難排解指南
+# 常見問答
 
 本檔案提供查詢服務常見問題的解答，並提供使用查詢服務時常見錯誤代碼的清單。 如需Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
 
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![平面化資料的XDM結構和表格檢視。 巢狀資料集的欄名稱在UI中會強調顯示。](./images/troubleshooting/column-name.png)
 
-如需的完整指引，請參閱本檔案 [如何使用巢狀資料結構](./best-practices/nested-data-structures.md) 使用查詢編輯器或協力廠商用戶端。
+如需的完整指引，請參閱本檔案 [如何使用巢狀資料結構](./essential-concepts/nested-data-structures.md) 使用查詢編輯器或協力廠商用戶端。
 +++
 
 ### 如何加速對包含陣列的資料集的查詢？
@@ -142,7 +142,7 @@ SELECT * FROM customers LIMIT 0;
 
 +++答案匿名塊功能允許您連結一個或多個按順序執行的SQL陳述式。 它們也允許例外處理選項。
 
-請參閱 [匿名塊文檔](./best-practices/anonymous-block.md) 以取得更多詳細資訊。
+請參閱 [匿名塊文檔](./essential-concepts/anonymous-block.md) 以取得更多詳細資訊。
 +++
 
 ### 如何在Query Service中實作自訂歸因？
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### 如何快速處理每天進入系統的新資料？
 
-+++回答 [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 子句可用於根據快照ID增量讀取表上的資料。 這非常適合搭配 [增量負載](./best-practices/incremental-load.md) 設計模式，僅處理自上次載入執行後建立或修改的資料集中的資訊。 因此，可提高處理效率，並可與串流和批次資料處理搭配使用。
++++回答 [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 子句可用於根據快照ID增量讀取表上的資料。 這非常適合搭配 [增量負載](./essential-concepts/incremental-load.md) 設計模式，僅處理自上次載入執行後建立或修改的資料集中的資訊。 因此，可提高處理效率，並可與串流和批次資料處理搭配使用。
 +++
 
 ### 為何「設定檔UI」中顯示的數字與從設定檔匯出資料集計算的數字有所差異？

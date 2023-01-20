@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；產生資料集；產生資料集；建立資料集；
 solution: Experience Platform
-title: 從查詢服務中的結果生成資料集
+title: 從查詢結果生成輸出資料集
 type: Tutorial
 description: Adobe Experience Platform Query Service可從UI建立資料集。 建立資料集後，您就可以像「資料湖」中的其他資料集一樣存取該資料集，並用於各種使用案例。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
 
 ---
 
-# 從結果產生資料集 [!DNL Query Service]
+# 從查詢結果生成輸出資料集
 
 [!DNL Query Service] 可讓您使用查詢來產生 [!DNL Data Lake]. 然後，這些資料集便可用作更多查詢或其他服務(例如 [!DNL Data Science Workspace]、即時客戶個人檔案，或 [!DNL Analysis Workspace].
 
