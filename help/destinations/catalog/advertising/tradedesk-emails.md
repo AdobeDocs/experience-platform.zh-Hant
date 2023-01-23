@@ -2,10 +2,10 @@
 title: （測試版）交易台 — CRM連接
 description: 將設定檔啟用至您的交易台帳戶，以根據CRM資料鎖定受眾並抑制受眾。
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 271a9ad9848db855372a4ce5346f97cf48400901
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 2%
+source-wordcount: '1084'
+ht-degree: 1%
 
 ---
 
@@ -13,21 +13,23 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> [!DNL The Trade Desk - CRM] Platform中的目的地目前為測試版。 檔案和功能可能會有所變更。
+>[!DNL The Trade Desk - CRM] Platform中的目的地目前為測試版。 檔案和功能可能會有所變更。
+>
+>隨著EUID（歐洲統一ID）的發行，您現在會看到兩個 [!DNL The Trade Desk - CRM] 目的地 [目的地目錄](/help/destinations/catalog/overview.md).
+>* 如果您在歐盟中來源資料，請使用 **[!DNL The Trade Desk - CRM (EU)]** 目的地。
+>* 如果您在APAC或NAMER地區來源資料，請使用 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 目的地。
+>
+>Experience Platform中的兩個目的地目前都是測試版。 本檔案頁面由 *[!DNL Trade Desk]* 團隊。 如有任何查詢或更新請求，請聯繫您的 [!DNL Trade Desk] 代表：說明檔案和功能可能會有所變更。
 
 ## 總覽 {#overview}
 
->[!IMPORTANT]
->
-> 本檔案頁面由 *[!DNL Trade Desk]* 團隊。 如有任何查詢或更新請求，請聯繫您的 [!DNL Trade Desk] 代表。
-
 本檔案旨在協助您為 [!DNL Trade Desk] 帳戶，以根據CRM資料鎖定和隱藏對象。
+
+[!DNL The Trade Desk(TTD)] 不會隨時直接處理電子郵件地址的上傳檔案，也不會 [!DNL The Trade Desk] 儲存原始（未雜湊）電子郵件。
 
 >[!TIP]
 >
->使用 [!DNL The Trade Desk] CRM資料對應的CRM目的地，例如電子郵件或雜湊電子郵件地址。 使用 [其他交易台目的地](/help/destinations/catalog/advertising/tradedesk.md) 在Adobe Experience Platform目錄中，取得cookie和裝置ID對應。
-
-[!DNL The Trade Desk] (TTD)不會隨時直接處理電子郵件地址的上傳檔案，也不會 [!DNL The Trade Desk] 儲存原始（未雜湊）電子郵件。
+>使用 [!DNL The Trade Desk] 用於CRM資料對應的CRM目的地，例如電子郵件或雜湊電子郵件地址。 使用 [其他交易台目的地](/help/destinations/catalog/advertising/tradedesk.md) 在Adobe Experience Platform目錄中，取得cookie和裝置ID對應。
 
 ## 先決條件 {#prerequisites}
 
@@ -35,7 +37,7 @@ ht-degree: 2%
 
 ## ID比對需求 {#id-matching-requirements}
 
-視您擷取至Adobe Experience Platform的ID類型而定，您必須遵守其對應要求。 請閱讀 [身分命名空間概觀](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en) 以取得更多資訊。
+視您擷取至Adobe Experience Platform的ID類型而定，您必須遵守其對應要求。 請閱讀 [身分命名空間概觀](/help/identity-service/namespaces.md) 以取得更多資訊。
 
 ## 支援的身分 {#supported-identities}
 
@@ -45,8 +47,8 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 
 | Target身分 | 說明 | 考量事項 |
 |---|---|---|
-| 電子郵件 | 電子郵件地址（清除文本） | 選取 `Email` 當您的來源身分識別是電子郵件命名空間或屬性時，即可定位身分識別。 |
-| Email_LC_SHA256 | 電子郵件地址必須使用SHA256和小寫進行雜湊處理。 請務必遵循任何 [電子郵件標準化](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 規則為必要。 您以後將無法更改此設定。 | 選取 `Email_LC_SHA256` 當源標識為Email_LC_SHA256命名空間或屬性時，定位標識。 |
+| 電子郵件 | 電子郵件地址（清除文本） | 輸入 `email` 作為目標標識（如果源標識是電子郵件命名空間或屬性）。 |
+| Email_LC_SHA256 | 電子郵件地址必須使用SHA256和小寫進行雜湊處理。 請務必遵循任何 [電子郵件標準化](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 規則為必要。 您以後將無法更改此設定。 | 輸入 `hashed_email` 當源標識為Email_LC_SHA256命名空間或屬性時，作為目標標識。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -54,7 +56,7 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 
 您可以先雜湊電子郵件地址，再將其擷取至Adobe Experience Platform或使用原始電子郵件地址。
 
-若要了解如何在Experience Platform中擷取電子郵件地址，請參閱 [批次匯入概觀](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html?lang=en).
+若要了解如何在Experience Platform中擷取電子郵件地址，請閱讀 [批次匯入概觀](/help/ingestion/batch-ingestion/overview.md).
 
 如果您選取自行雜湊電子郵件地址，請務必符合下列要求：
 
@@ -71,7 +73,7 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，其中包含「交易台」目的地中使用的識別碼（電子郵件或雜湊電子郵件）。 |
-| 匯出頻率 | **[!UICONTROL 每日批]** | 隨著根據區段評估在Experience Platform中更新設定檔，設定檔（身分）每天會在下游至目的地平台時更新一次。 深入了解 [批量上傳](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en#file-based). |
+| 匯出頻率 | **[!UICONTROL 每日批]** | 隨著根據區段評估在Experience Platform中更新設定檔，設定檔（身分）每天會在下游至目的地平台時更新一次。 深入了解 [批次匯出](/help/destinations/destination-types.md#file-based). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -90,19 +92,27 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 * **[!UICONTROL 說明]**:未來可協助您識別此目的地的說明。
 * **[!UICONTROL 廣告商ID]**:您的 [!DNL Trade Desk Advertiser ID]，您的 [!DNL Trade Desk] 客戶經理或 [!DNL Advertiser Preferences] 在 [!DNL Trade Desk] UI。
 
-連接到目標時，設定資料控管策略是完全可選的。 請查看Experience Platform [資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=en) 以取得更多詳細資訊。
+![Platform UI螢幕擷取畫面，顯示如何填入目的地詳細資訊。](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)
+
+連接到目標時，設定資料控管策略是完全可選的。 請查看Experience Platform [資料控管概觀](/help/data-governance/policies/overview.md) 以取得更多詳細資訊。
 
 ## 啟用此目的地的區段 {#activate}
 
-請參閱 [啟用對象資料，以批次匯出設定檔目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en) 關於在目的地啟用受眾區段的指示。
+閱讀 [啟用對象資料，以批次匯出設定檔目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 關於在目的地啟用受眾區段的指示。
 
 在 **[!UICONTROL 排程]** 頁面，您可以為要匯出的每個區段設定排程和檔案名稱。 必須設定排程，但設定檔案名稱為選用。
+
+![Platform UI螢幕擷取畫面，排程區段啟動。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
 >所有已啟動至的區段 [!DNL The Trade Desk] CRM目標會自動設為每日頻率和完整檔案匯出。
 
+![Platform UI螢幕擷取畫面，排程區段啟動。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+
 在 **[!UICONTROL 對應]** 頁，則必須從源列選擇屬性或標識命名空間，並映射到目標列。
+
+![Platform UI螢幕擷取圖可對應區段啟用。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
 以下是將區段啟用至時的正確身分對應範例 [!DNL The Trade Desk] CRM目的地。
 
@@ -117,8 +127,8 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 
 選擇目標欄位：
 
-* 選取 `Email` 當您的來源命名空間或屬性為時，命名空間做為目標身分識別 `Email`.
-* 選取 `Email_LC_SHA256` 當您的來源命名空間或屬性為時，命名空間做為目標身分識別 `Email_LC_SHA256`.
+* 輸入  `email` 作為目標標識（在您的源命名空間或屬性中） `Email`.
+* 輸入  `hashed_email` 作為目標標識（在您的源命名空間或屬性中） `Email_LC_SHA256`.
 
 ## 驗證資料匯出 {#validate}
 
