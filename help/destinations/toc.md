@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: d046c17a7b376f5c2e2f25c38fac0916ed2dba73
+source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '988'
 ht-degree: 6%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 6%
       * [KickFire擴充功能](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization擴充功能](./catalog/personalization/marketo-web-personalization.md)
       * [Pega客戶決策中心連線](./catalog/personalization/pega.md)
+      * [Pega配置檔案連接](./catalog/personalization/pega-profile.md)
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
       * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
