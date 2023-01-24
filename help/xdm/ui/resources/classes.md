@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯類
 description: 了解如何在Experience Platform用戶介面中建立和編輯類。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 3a9b97b25980d88e0fff3d71e43407b641e6454d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,9 @@ Adobe提供數種標準（「核心」）Experience Data Model(XDM)類別，包�
 >
 >請記住，您添加到類的任何欄位將用於採用該類的所有架構。 因此，您應謹慎考慮哪些欄位在所有架構使用案例中會很實用。 如果您想要新增欄位，而此欄位可能只會看到此類別下某些結構中的使用，建議您考慮將它新增至這些結構 [建立欄位群組](./field-groups.md#create) 。
 
-A **[!UICONTROL 新欄位]** 會顯示在畫布中，而右側邊欄會更新，顯示設定欄位屬性的控制項。 在 **[!UICONTROL 指派給]**，選取 **[!UICONTROL 類別]**.
+安 **[!UICONTROL 無標題欄位]** 預留位置會顯示在畫布中，而右側邊欄會更新，顯示設定欄位屬性的控制項。 在 **[!UICONTROL 指派給]**，選取 **[!UICONTROL 類別]**.
+
+![](../../images/ui/resources/classes/assign-to-class.png)
 
 ![](../../images/ui/resources/classes/assign-to-class.png)
 

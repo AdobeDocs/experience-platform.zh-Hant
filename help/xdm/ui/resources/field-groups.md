@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯結構欄位群組
 description: 了解如何在Experience Platform使用者介面中建立和編輯結構欄位群組。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 542ad49f475ac9586da506a8afa5408e83262121
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '839'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,11 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-A **[!UICONTROL 新欄位]** 會顯示在畫布中，而右側邊欄會更新，顯示設定欄位屬性的控制項。 請參閱 [定義UI中的欄位](../fields/overview.md#define) ，以了解如何設定不同欄位類型的特定步驟。
+安 **[!UICONTROL 無標題欄位]** 預留位置會顯示在畫布中，而右側邊欄會更新，顯示設定欄位屬性的控制項。 請參閱 [定義UI中的欄位](../fields/overview.md#define) ，以了解如何設定不同欄位類型的特定步驟。
+
+在 **[!UICONTROL 指派給]**，請選取 **[!UICONTROL 欄位組]** 選項，然後使用下拉式清單從清單中選取所需的欄位群組。 您可以開始在欄位群組的名稱中輸入以縮小結果。
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
 
 在 **[!UICONTROL 指派給]**，請選取 **[!UICONTROL 欄位組]** 選項，然後使用下拉式清單從清單中選取所需的欄位群組。 您可以開始在欄位群組的名稱中輸入以縮小結果。
 
