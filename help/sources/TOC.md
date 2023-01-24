@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 46c9ec0c561f7ed3e38f05ef7b1e3ffec0eaed57
+source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '872'
 ht-degree: 12%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 12%
    - CRM {#crm}
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
       - [Salesforce連接器](connectors/crm/salesforce.md)
+      - [SugarCRM連接器](connectors/crm/sugarcrm.md)
       - [Veva CRM連接器](connectors/crm/veeva.md)
       - [Zoho CRM連接器](connectors/crm/zoho.md)
    - 客戶成功 {#customer-success}
@@ -129,6 +130,8 @@ ht-degree: 12%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [SugarCRM帳戶和聯繫人](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM事件](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - 客戶成功 {#customer-success}
@@ -237,6 +240,8 @@ ht-degree: 12%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [SugarCRM帳戶和聯繫人](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
+         - [SugarCRM事件](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - 客戶成功 {#customer-success}
