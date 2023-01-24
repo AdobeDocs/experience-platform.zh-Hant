@@ -1,7 +1,8 @@
 ---
 title: 加速查詢端點
 description: 了解如何以無狀態方式存取查詢加速儲存，以根據匯總的資料快速傳回結果。 本檔案提供Query Service accelerated-querys端點的範例HTTP要求和回應。
-source-git-commit: 2a9d40fc783feb78a1d5ad7eb615ceb40097eb89
+exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 1%
@@ -16,7 +17,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-必須有Data Distiller SKU才能使用查詢加速存放區。 請參閱 [包裝](../packages.md), [護欄](../guardrails.md#query-accelerated-store)，和 [授權](../data-distiller/licence-usage.md) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
+必須有Data Distiller SKU才能使用查詢加速存放區。 請參閱 [包裝](../packages.md), [護欄](../guardrails.md#query-accelerated-store)，和 [授權](../data-distiller/license-usage.md) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
 
 以下各節詳細說明透過查詢服務API以無狀態方式存取查詢加速儲存所需的API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求，以及範例回應。
 
@@ -210,4 +211,3 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 | `resultsMeta._adhoc.meta:xdmType` | 這是系統為XDM欄位類型產生的值。 如需可用類型的詳細資訊，請參閱 [可用的XDM類型](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
 | `resultsMeta._adhoc.properties` | 這些是查詢資料集的欄名稱。 |
 | `resultsMeta._adhoc.results` | 這些是查詢的資料集的列名稱。 它們會反映每個傳回的欄。 |
-

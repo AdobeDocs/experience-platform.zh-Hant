@@ -4,7 +4,7 @@ title: 授權使用控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織的授權使用情況重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 255de9b9e83c11aeed747a3c0cdb7bd7a7949bd2
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 
 每個Widget都會顯示一個折線圖，比較貴組織的實際數量與貴組織授權時可用的總數，並提供總使用量的百分比。
 
-![「許可證使用情況」儀表板「概述」頁簽，其中突出顯示「示例許可證使用情況」度量Widget的線形圖。](../images/license-usage/widgets.png)
+![「許可證使用情況」儀表板「概述」頁簽，突出顯示「示例許可證使用情況」度量Widget的折線圖。](../images/license-usage/widgets.png)
 
 ## 可用量度
 
@@ -88,7 +88,7 @@ Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過控
 | <ul><li>RT客戶資料平台：OD</li><li>RT客戶資料平台：OD PRFL至10M</li><li>RT客戶資料平台：OD PRFL至50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD啟用</li><li>AEP:OD激活PRFL至10米</li><li>AEP:OD激活PRFL最多50米</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform情報](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>Journey Optimizer SELECT:OD</li><li>Journey Optimizer PRIME:OD</li><li>Journey Optimizer ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >

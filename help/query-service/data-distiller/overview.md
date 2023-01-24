@@ -1,7 +1,7 @@
 ---
 title: 資料Distiller概述
 description: 與您的授權權限相關的查詢服務資料的資料Distiller使用限制摘要。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 Data Distiller是套件，包含Adobe Experience Platform中的一部分功能。 透過Data Distiller，您可以在Query Service中執行批次查詢，針對即時客戶設定檔或分析使用案例，執行擷取後資料準備（例如清理、整形和操作）。 您使用Data Distiller的方式取決於您目前持續取得的下列其中一項授權：Adobe Real-time Customer Data Platform、Customer Journey Analytics和/或Adobe Journey Optimizer。
 
-## 授權使用 {#licence-usage}
+## 授權使用情況 {#license-usage}
 
-請參閱 [資料Distiller授權使用檔案](./licence-usage.md) 查看貴組織的查詢服務許可證使用情況的重要資訊。
+請參閱 [資料Distiller授權使用檔案](./license-usage.md) 查看貴組織的查詢服務許可證使用情況的重要資訊。
 
 ## 範圍參數 {#scoping-parameters}
 

@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 3d549b14571be7ec3455da0e23181951cb991a9d
+source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
 source-wordcount: '264'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 16%
 - 開始使用 {#get-started}
    - [先決條件](get-started/prerequisites.md)
 - 資料Distiller {#data-distiller}
-   - [授權使用](data-distiller/licence-usage.md)
+   - [授權使用情況](data-distiller/license-usage.md)
    - 查詢加速儲存 {#query-accelerated-store}
       - [傳送加速查詢](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [Reporting Insights資料模型指南](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
