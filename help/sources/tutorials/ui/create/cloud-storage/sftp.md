@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；SFTP;sftp
-solution: Experience Platform
 title: 在UI中建立SFTP來源連線
-type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立SFTP來源連線。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -44,12 +41,13 @@ ht-degree: 0%
 | `privateKeyContent` | Base64編碼的SSH私密金鑰內容。 OpenSSH金鑰的類型必須分類為RSA或DSA。 |
 | `passPhrase` | 如果密鑰檔案或密鑰內容受密碼短語保護，則解密私鑰的密碼短語或密碼。 如果PrivateKeyContent受密碼保護，則此參數需要與PrivateKeyContent的密碼短語一起使用，作為值。 |
 | `maxConcurrentConnections` | 此參數可讓您指定平台在連線至您的SFTP伺服器時所建立的同時連線數量上限。 您必須將此值設為小於SFTP設定的限制。 **附註**:為現有SFTP帳戶啟用此設定時，它只會影響未來的資料流，而不會影響現有的資料流。 |
+| 資料夾路徑 | 要提供訪問權限的資料夾的路徑。 [!DNL SFTP] 源，則可提供資料夾路徑，以指定用戶對所選子資料夾的訪問權限。 |
 
 收集完所需憑證後，您可以依照下列步驟建立新憑證 [!DNL SFTP] 帳戶來連線至平台。
 
 ## 連線至您的 [!DNL SFTP] 伺服器
 
-在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示各種來源，您可以用來建立入站帳戶。
+在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可建立帳戶的各種來源。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
@@ -67,31 +65,31 @@ ht-degree: 0%
 
 ### 新帳戶
 
-如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供您新 [!DNL SFTP] 帳戶。
-
-![SFTP的新帳戶畫面](../../../../images/tutorials/create/sftp/new.png)
-
-#### 使用密碼進行驗證
-
-[!DNL SFTP] 支援不同的身份驗證類型進行訪問。 在 **[!UICONTROL 帳戶驗證]** 選取 **[!UICONTROL 密碼]** 然後提供要連接的主機和埠值，以及您的用戶名和密碼。
-
-![使用基本驗證的SFTP來源的新帳戶畫面](../../../../images/tutorials/create/sftp/password.png)
-
-#### 使用SSH公開金鑰進行驗證
-
-若要使用SSH公開金鑰型憑證，請選取 **[!UICONTROL SSH公開金鑰]**  然後提供主機和埠值，以及您的私鑰內容和密碼短語組合。
-
 >[!IMPORTANT]
 >
 >SFTP支援RSA或DSA類型OpenSSH金鑰。 確定您的關鍵檔案內容開頭為 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` 結尾是 `"-----END [RSA/DSA] PRIVATE KEY-----"`. 如果私鑰檔案是PPK格式檔案，請使用PuTTY工具從PPK格式轉換為OpenSSH格式。
 
+如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供您新 [!DNL SFTP] 帳戶。
+
+![SFTP的新帳戶畫面](../../../../images/tutorials/create/sftp/new.png)
+
+此 [!DNL SFTP] 來源支援透過SSH公開金鑰進行基本驗證和驗證。
+
+>[!BEGINTABS]
+
+>[!TAB 基本驗證]
+
+要使用基本身份驗證，請選擇 **[!UICONTROL 密碼]** 然後提供要連接的主機和埠值，以及您的用戶名和密碼。 在此步驟中，您也可以指定要提供存取權的子資料夾的路徑。 完成後，請選取 **[!UICONTROL 連接到源]**.
+
+![使用基本驗證的SFTP來源的新帳戶畫面](../../../../images/tutorials/create/sftp/password.png)
+
+>[!TAB SSH公開金鑰驗證]
+
+若要使用SSH公開金鑰型憑證，請選取 **[!UICONTROL SSH公開金鑰]**  然後提供主機和埠值，以及您的私鑰內容和密碼短語組合。 在此步驟中，您也可以指定要提供存取權的子資料夾的路徑。 完成後，請選取 **[!UICONTROL 連接到源]**.
+
 ![使用SSH公開金鑰的SFTP來源的新帳戶畫面。](../../../../images/tutorials/create/sftp/ssh.png)
 
-| 憑據 | 說明 |
-| ---------- | ----------- |
-| 私密金鑰內容 | Base64編碼的SSH私密金鑰內容。 OpenSSH金鑰的類型必須分類為RSA或DSA。 |
-| 密碼短語 | 如果密鑰檔案或密鑰內容受密碼短語保護，則指定密碼短語或密碼以解密私鑰。 如果PrivateKeyContent受密碼保護，則此參數需要與PrivateKeyContent的密碼短語一起使用，作為其值。 |
-
+>[!ENDTABS]
 
 ## 後續步驟
 
