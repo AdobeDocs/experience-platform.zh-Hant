@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1982'
 ht-degree: 5%
 
 ---
@@ -90,6 +90,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 | 最大配置檔案片段大小 | 50MB | 硬 | **單一設定檔片段的最大大小為50MB。** 任何 [設定檔片段](#profile-fragments) 大於50MB。 |
 | 最大配置檔案儲存大小 | 50MB | 軟 | **儲存的配置檔案的最大大小為50MB。** 新增 [設定檔片段](#profile-fragments) 大於50MB的配置檔案將影響系統效能。 例如，設定檔可包含50MB的單一片段，或包含多個資料集的多個片段，總大小為50MB。 嘗試儲存單個片段大於50MB的配置檔案，或多個片段的總大小超過50MB，將影響系統效能。 |
 | 每日擷取的設定檔或ExperienceEvent批次數 | 90 | 軟 | **每日擷取的Profile或ExperienceEvent批次數上限為90。** 這表示每天擷取的Profile和ExperienceEvent批次總計不得超過90個。 接收其他批次將影響系統效能。 |
+| 每個設定檔記錄的ExperienceEvents數量 | 5000 | 軟 | **每個設定檔記錄的ExperienceEvents最大數量為5000。** 超過5000個ExperienceEvents的設定檔將會 **not** 會納入分段考量。 |
 
 {style=&quot;table-layout:auto&quot;}
 
