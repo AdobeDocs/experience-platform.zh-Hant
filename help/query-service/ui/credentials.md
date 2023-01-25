@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務憑證指南
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -28,11 +28,11 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 此 **[!UICONTROL 即將到期的憑據]** 一節提供下列資訊：
 
-- **[!UICONTROL 主機]**:您要連接的主機的名稱。 若要連線至查詢服務，這會包含您目前使用的IMS組織名稱。
+- **[!UICONTROL 主機]**:將客戶端連接到的主機的名稱。 這會合併Platform UI頂端功能區中顯示的組織名稱。
 - **[!UICONTROL 埠]**:要連接的主機的埠號。
-- **[!UICONTROL 資料庫]**:要連接的資料庫的名稱。
+- **[!UICONTROL 資料庫]**:要連接客戶端的資料庫的名稱。
 - **[!UICONTROL 使用者名稱]**:用於連接到查詢服務的用戶名。
-- **[!UICONTROL 密碼]**:用於連接到Query Service的密碼。
+- **[!UICONTROL 密碼]**:用於連接到查詢服務的密碼。 UI中的密碼已經過雜湊處理，以確保安全性。 選取復製圖示(![復製圖示。](../images/ui/credentials/copy-icon.png))，將完整、未雜湊的憑證複製到剪貼簿。
 - **[!UICONTROL PSQL命令]**:一個命令，它自動插入了所有相關資訊，以便您使用命令行上的PSQL連接到查詢服務。
 - **[!UICONTROL 過期]**:即將到期的憑據的到期日期和時間。 代號的預設有效期間為24小時，但可在Admin Console的進階設定中變更。
 

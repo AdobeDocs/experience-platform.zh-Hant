@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service UI指南
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 8a5f741b8992bc61cb25864a6695e55768e7aac2
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1117'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Query Service] 提供可用來寫入及執行查
 
 ## [!DNL Query Editor]
 
-此 [!DNL Query Editor] 使您能夠編寫和執行查詢，而無需使用外部客戶端。 選擇 **[!UICONTROL 建立查詢]** 開啟 [!DNL Query Editor] 和建立新查詢。 您也可以存取 [!DNL Query Editor] 從 **[!UICONTROL 記錄檔]** 或 **[!UICONTROL 範本]** 標籤。 選取先前執行或儲存的查詢，將會開啟 [!DNL Query Editor] 和顯示所選查詢的SQL。
+此 [!DNL Query Editor] 使您能夠編寫和執行查詢，而無需使用外部客戶端。 選擇 **[!UICONTROL 建立查詢]** 開啟 [!DNL Query Editor] 和建立新查詢。 您也可以存取 [!DNL Query Editor] 從 **[!UICONTROL 記錄檔]** 或 **[!UICONTROL 範本]** 頁簽。 選取先前執行或儲存的查詢，將會開啟 [!DNL Query Editor] 和顯示所選查詢的SQL。
 
 ![突出顯示了「建立查詢」的「查詢」儀表板。](../images/ui/overview/overview.png)
 
@@ -61,6 +61,8 @@ Adobe Experience Platform [!DNL Query Service] 提供可用來寫入及執行查
 | **[!UICONTROL 修改者]** | 修改查詢的最後一個用戶。 貴組織中可存取 [!DNL Query Service] 可以修改查詢。 |
 | **[!UICONTROL 上次修改日期]** | 瀏覽器時區中上次修改查詢的日期和時間。 |
 
+請參閱 [查詢範本](./query-templates.md) 檔案，以取得Platform UI中範本的詳細資訊。
+
 ## 記錄檔
 
 此 **[!UICONTROL 記錄檔]** 索引標籤提供先前已執行的查詢清單。 依預設，記錄會以逆時間表列出查詢。
@@ -69,13 +71,16 @@ Adobe Experience Platform [!DNL Query Service] 提供可用來寫入及執行查
 
 | 欄 | 說明 |
 | --- | --- |
-| **[!UICONTROL 名稱]** | 查詢名稱，由SQL查詢的前幾個字元組成。 選取名稱會開啟 [!DNL Query Editor]，可讓您編輯查詢。 您可以使用搜尋列來搜尋查詢的名稱。 搜尋會區分大小寫。 |
-| **[!UICONTROL 建立者]** | 建立查詢的人員的名稱。 |
-| **[!UICONTROL 用戶端]** | 用於查詢的客戶端。 |
-| **[!UICONTROL 資料集]** | 查詢使用的輸入資料集。 選取要前往輸入資料集詳細資訊畫面的資料集。 |
+| **[!UICONTROL 名稱]** | 查詢名稱，由SQL查詢的前幾個字元組成。 選取範本名稱以開啟 [!UICONTROL 查詢日誌詳細資訊] 檢視。 您可以使用搜尋列來搜尋查詢的名稱。 搜尋會區分大小寫。 |
+| **[!UICONTROL 開始時間]** | 執行查詢的時間。 |
+| **[!UICONTROL 完成時間]** | 查詢運行完成的時間。 |
 | **[!UICONTROL 狀態]** | 查詢的當前狀態。 |
-| **[!UICONTROL 上次執行]** | 上次運行查詢時。 您可以選取此欄上的箭頭，依遞增或遞減順序排序清單。 |
-| **[!UICONTROL 執行時間]** | 運行查詢所花費的時間。 |
+| **[!UICONTROL 資料集]** | 查詢使用的輸入資料集。 選取要前往輸入資料集詳細資訊畫面的資料集。 |
+| **[!UICONTROL 用戶端]** | 用於查詢的客戶端。 |
+| **[!UICONTROL 建立者]** | 建立查詢的人員的名稱。 |
+
+>!![Note]
+選取鉛筆圖示(![鉛筆圖示。](../images/ui/overview/edit-icon.png))，以導覽至 [!DNL Query Editor]. 查詢已預先填入，以方便編輯。
 
 ## 憑證
 

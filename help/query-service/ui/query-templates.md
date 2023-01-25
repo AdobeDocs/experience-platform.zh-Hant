@@ -2,10 +2,10 @@
 title: 查詢範本
 description: 查詢模板是可重複使用的保存的SQL查詢，可由其他用戶重複使用，以節省時間和精力。 可使用查詢編輯器或查詢服務API來建立這些資料集，並可用於所有Experience Platform資料集。
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: a085bac6b4ee825d534710ae91d6690fa076e873
+source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Experience Platform Query Service可讓您以查詢範本的形式儲存�
 
 如需如何使用查詢編輯器以 [寫入](./user-guide.md#query-authoring) 和 [保存查詢](./user-guide.md#saving-queries). 在您命名並保存查詢後，該查詢即可在 [!UICONTROL 範本] 標籤。
 
+## 瀏覽查詢模板 {#browse}
+
 從Platform UI的「查詢」工作區中，選取 **[!UICONTROL 範本]** 顯示可用的已保存查詢的清單。
 
 ![查詢工作區，「模板」(Templates)頁簽突出顯示。](../images/ui/query-templates/query-templates.png)
@@ -34,6 +36,13 @@ Adobe Experience Platform Query Service可讓您以查詢範本的形式儲存�
 要查找相關模板資訊，請從可用清單中選擇任何查詢模板以開啟「詳細資訊」面板。
 
 ![查詢工作區中的「詳細資訊」面板會反白顯示查詢ID。](../images/ui/query-templates/details-panel.png)
+
+從「詳細資訊」面板，您可以執行四個不同的動作：
+
+* 選擇 **[!UICONTROL 輸出資料集]** 編輯所選模板的輸出資料集。
+* 選擇 **[!UICONTROL 檢視排程]** 導覽至 [!UICONTROL 排程] 標籤。 此視圖包含與查詢關聯的任何計畫資訊。
+* 選擇 **[!UICONTROL 刪除查詢]** 刪除範本。
+* 選擇模板名稱以導航到查詢編輯器，在該編輯器中預先填充SQL進行編輯。
 
 ### 使用查詢服務API建立範本
 
