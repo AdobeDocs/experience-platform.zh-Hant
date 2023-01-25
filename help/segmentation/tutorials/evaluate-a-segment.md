@@ -5,9 +5,9 @@ title: 評估和存取區段結果
 type: Tutorial
 description: 請依照本教學課程，了解如何使用Adobe Experience Platform區段服務API評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -130,6 +130,10 @@ ht-degree: 0%
 | -------- | ----------- |
 | `lastQualificationTime` | 建立區段成員資格斷言以及設定檔輸入或退出區段時的時間戳記。 |
 | `status` | 目前請求中區段參與率的狀態。 必須等於下列其中一個已知值： <ul><li>`existing`:實體繼續在分部中。</li><li>`realized`:實體正在輸入區段。</li><li>`exited`:實體正在退出區段。</li></ul> |
+
+>[!NOTE]
+>
+>任何位於 `exited` 狀態超過30天，根據 `lastQualificationTime`，將會遭刪除。
 
 ## 存取區段結果
 

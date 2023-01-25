@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段成員資格詳細資訊結構欄位群組
 description: 本檔案概述「區段成員資訊詳細資料」結構欄位群組。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: fda47171cde3f58f48ee721357923017918a7d4e
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '470'
 ht-degree: 2%
 
 ---
@@ -75,11 +75,15 @@ ht-degree: 2%
 | --- | --- |
 | `xdm:version` | 此設定檔符合資格的區段版本。 |
 | `xdm:lastQualificationTime` | 此設定檔符合區段資格的上次時間時間戳記。 |
-| `xdm:validUntil` | 不應再假設區段成員資格有效的時間戳記。 |
+| `xdm:validUntil` | 不應再假設區段成員資格有效的時間戳記。 若為外部對象，若未設定此欄位，則只會從 `lastQualificationTime`. |
 | `xdm:status` | 字串欄位，指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`existing`:在請求前，設定檔已是區段的一部分，並會繼續保留其成員資格。</li><li>`realized`:設定檔會在目前請求中輸入區段。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
 | `xdm:payload` | 某些區段成員資格包含描述與成員資格直接相關的其他值的裝載。 每個成員只能提供指定類型的一個有效負載。 `xdm:payloadType` 指出裝載的類型(`boolean`, `number`, `propensity`，或 `string`)，而其同層級屬性則提供裝載類型的值。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>任何位於 `exited` 狀態超過30天，根據 `lastQualificationTime`，將會遭刪除。
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

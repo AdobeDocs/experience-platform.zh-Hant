@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 匯入和使用外部對象
 description: 請依照本教學課程，了解如何搭配Adobe Experience Platform使用外部對象。
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -257,3 +257,7 @@ Adobe Experience Platform支援匯入外部受眾的功能，後者可作為新�
 | `xdmEntity._id` | 用來唯一識別資料集內記錄的適當ID。 |
 | `{TENANT_NAME}.identities` | 此區段可用來將自訂身分的欄位群組與您先前匯入的使用者連結。 |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | 這是先前建立之自訂身分命名空間的標籤。 因此，舉例來說，如果您將身分命名空間稱為「externalAudience」，您就會將其作為陣列的索引鍵。 |
+
+>[!NOTE]
+>
+>依預設，外部受眾會籍僅保留30天。 若要保留超過30天，請使用 `validUntil` 欄位，同時擷取您的對象資料。 有關此欄位的詳細資訊，請閱讀 [區段成員資格詳細資料結構欄位群組](../../xdm/field-groups/profile/segmentation.md).
