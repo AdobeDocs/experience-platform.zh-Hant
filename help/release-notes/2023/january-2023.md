@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
+source-git-commit: 68e5baac9012a33d179f8ebff23deda7a8efd26b
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1371'
 ht-degree: 6%
 
 ---
@@ -18,6 +18,7 @@ Adobe Experience Platform 現有功能更新：
 - [資料收集](#data-collection)
 - [Experience Data Model(XDM)](#xdm)
 - [即時客戶個人檔案](#profile)
+- [細分服務](#segmentation)
 - [來源](#sources)
 
 ## 保證 {#assurance}
@@ -93,15 +94,6 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面了解各個客戶，其中結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 設定檔可讓您將客戶資料併入統一檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 
-**新功能或更新功能**
-
-| 功能 | 說明 |
-| ------- | ----------- |
-| 平台產生的區段成員資格有效期 | 任何位於 `Exited` 狀態超過30天，根據 `lastQualificationTime` 欄位可能會遭到刪除。 |
-| 外部受眾成員資格有效期 | 依預設，外部受眾會籍會保留30天。 若要保留更久，請使用 `validUntil` 欄位。 |
-
-{style=&quot;table-layout:auto&quot;}
-
 **即將淘汰** {#deprecation}
 
 為了在區段成員資格生命週期中移除備援， `Existing` 狀態將從 [區段成員資格圖](../../xdm/field-groups/profile/segmentation.md) 於2023年3月底。 後續公告將包含確切的淘汰日期。
@@ -111,6 +103,21 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 如果您使用 [企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure事件中樞、HTTP API)，且已根據 `Existing` 狀態。 如果適合您，請檢閱您的下游整合。 如果您想要識別超過特定時間的新合格設定檔，請考慮使用 `Realized` 狀態和 `lastQualificationTime` 在區段成員資格對應中。 如需詳細資訊，請洽詢您的Adobe代表。
 
 若要進一步了解即時客戶個人檔案，包括使用個人檔案資料的教學課程和最佳實務，請先閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
+
+## 分段服務 {#segmentation}
+
+[!DNL Segmentation Service] 會透過說明區分客戶群中可行銷人員群組的條件，來定義特定設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與您品牌互動的時間序列事件。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 平台產生的區段成員資格有效期 | 任何位於 `Exited` 狀態超過30天，根據 `lastQualificationTime` 欄位可能會遭到刪除。 |
+| 外部受眾成員資格有效期 | 依預設，外部受眾會籍會保留30天。 若要保留更久，請使用 `validUntil` 欄位。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需 [!DNL Segmentation Service]，請參閱 [區段概觀](../../segmentation/home.md).
 
 ## 來源 {#sources}
 
