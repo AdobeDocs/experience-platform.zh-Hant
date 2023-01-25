@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1853'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 | --- | --- |
 | `_id`<br>**(必填)** | 事件的唯一字串識別碼。 此欄位可用來追蹤個別事件的獨特性、防止資料重複，以及在下游服務中尋找該事件。 在某些情況下， `_id` 可以是 [通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122) 或 [全局唯一標識符(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>如果您是從來源連線串流資料，或直接從Parquet檔案內嵌資料，應串連使事件唯一的特定欄位組合（例如主要ID、時間戳記、事件類型等），以產生此值。 串連值必須是 `uri-reference` 格式字串，表示必須移除任何冒號字元。 之後，串連值應該會使用SHA-256或您選擇的其他演算法來雜湊。<br><br>必須區分 **此欄位不代表與個人相關的身分**，而是資料本身的記錄。 與個人有關的身份資料應被降級為 [身分欄位](../schema/composition.md#identity) 由相容的欄位群組提供。 |
 | `eventMergeId` | 若使用 [Adobe Experience Platform Web SDK](../../edge/home.md) 若要內嵌資料，這代表內嵌批次的ID，該批次導致建立記錄。 資料擷取時，系統會自動填入此欄位。 不支援在Web SDK實作內容之外使用此欄位。 |
-| `eventType` | 指出事件類型或類別的字串。 如果您想要區分相同結構和資料集中的不同事件類型，例如區分零售公司的產品檢視事件與購物車附加事件，則可使用此欄位。<br><br>此屬性的標準值提供於 [附錄](#eventType)，包括其預定使用案例的說明。 此欄位是可擴充的列舉，這表示您也可以使用自己的事件類型字串，將您追蹤的事件分類。<br><br>`eventType` 限制您在應用程式上每次點擊只使用單一事件，因此您必須使用計算欄位，讓系統知道最重要的事件。 如需詳細資訊，請參閱 [計算欄位的最佳作法](#calculated). |
+| `eventType` | 指出事件類型或類別的字串。 如果您想要區分相同結構和資料集中的不同事件類型，例如區分零售公司的產品檢視事件與購物車附加事件，則可使用此欄位。<br><br>此屬性的標準值提供於 [附錄](#eventType)，包括其預定使用案例的說明。 此欄位是可擴充的列舉，這表示您也可以使用自己的事件類型字串，將您追蹤的事件分類。 您也可以 [停用任何標準建議值](../ui/fields/enum.md#standard-fields) 欄位（如果這些欄位不符合您的使用案例）。<br><br>`eventType` 限制您在應用程式上每次點擊只使用單一事件，因此您必須使用計算欄位，讓系統知道最重要的事件。 如需詳細資訊，請參閱 [計算欄位的最佳作法](#calculated). |
 | `producedBy` | 描述事件產生者或來源的字串值。 如果需要，此欄位可用來篩選特定事件產生器以用於細分。<br><br>此屬性的一些建議值提供於 [附錄](#producedBy). 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生者。 |
 | `identityMap` | 一個地圖欄位，其中包含事件所套用之個人的命名空間身分識別集。 系統會在擷取身分資料時自動更新此欄位。 為了正確利用此欄位 [即時客戶個人檔案](../../profile/home.md)，請勿嘗試手動更新資料操作中欄位的內容。<br /><br />請參閱 [綱要構成基本知識](../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
 | `timestamp`<br>**(必填)** | 事件發生時的ISO 8601時間戳記，格式如下 [RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6). 此時間戳記必須發生在過去。 請參閱下方的章節，內容如下： [時間戳記](#timestamps) 以了解使用此欄位的最佳實務。 |
@@ -86,7 +86,7 @@ Adobe提供數個標準欄位群組，以搭配 [!DNL XDM ExperienceEvent] 類�
 
 下節包含 [!UICONTROL XDM ExperienceEvent] 類別。
 
-### 的接受值 `eventType` {#eventType}
+### 的建議值 `eventType` {#eventType}
 
 下表概述 `eventType`，及其定義：
 

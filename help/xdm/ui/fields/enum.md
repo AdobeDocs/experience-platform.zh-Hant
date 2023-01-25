@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義列舉欄位和建議的值
 description: 了解如何為Experience Platform使用者介面中的字串欄位定義列舉和建議值。
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f770ba8668c5154b2cf5a57ba61d771ca34ab2d8
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 當 [定義新欄位](./overview.md#define) 在Adobe Experience Platform使用者介面中，並將類型設為 [!UICONTROL 字串]，您會獲得定義 [列舉](#enum) 或 [建議值](#suggested-values) 那塊地。
 
-![在UI中為字串欄位啟用「列舉與建議值」選項的影像](../../images/ui/fields/enum/enum-options-selected.png)
+![為UI中的字串欄位啟用「列舉與建議的值」選項。](../../images/ui/fields/enum/enum-options-selected.png)
 
 本檔案說明如何定義 [!UICONTROL 結構] UI工作區。 如需列舉和建議值的快速概覽，包括如何在UI中設定列舉及其下游效果，請觀看下列影片：
 
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 選擇 **[!UICONTROL 列舉和建議值]**，然後選取 **[!UICONTROL 列舉]**. 會出現其他控制項，可讓您指定列舉的值限制。 要添加約束，請選擇 **[!UICONTROL 新增列]**.
 
-![顯示UI中選取之列數選項的影像](../../images/ui/fields/enum/enum-add-row.png)
+![在UI中選取的列舉選項。](../../images/ui/fields/enum/enum-add-row.png)
 
 在 **[!UICONTROL 值]** 欄，您必須提供要將欄位限制為的確切值。 您可以選擇提供人性化 **[!UICONTROL 顯示名稱]** 限制，這會影響值在分段中的表示方式。
 
 繼續使用 **[!UICONTROL 新增列]** 若要將所需的限制和選用標籤新增至列舉，或選取刪除圖示(![刪除圖示的影像](../../images/ui/fields/enum/remove-icon.png))，以將其移除。 完成後，請選取 **[!UICONTROL 套用]** 將更改應用到架構。
 
-![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/enum-confirm.png)
+![為UI中的字串欄位填入的列舉值和顯示名稱。](../../images/ui/fields/enum/enum-confirm.png)
 
 畫布會更新以反映變更。 日後探索此架構時，您可以在右側邊欄中檢視及編輯列舉欄位的限制。
 
@@ -50,39 +50,35 @@ ht-degree: 0%
 
 選擇 **[!UICONTROL 列舉和建議值]**，然後選取 **[!UICONTROL 建議的值]** 以顯示其他控制項。 從此處，選擇 **[!UICONTROL 新增列]** 開始添加建議值。
 
-![顯示UI中選取之「建議值」選項的影像](../../images/ui/fields/enum/suggested-add-row.png)
+![在UI中選取的「建議值」選項。](../../images/ui/fields/enum/suggested-add-row.png)
 
 在 **[!UICONTROL 顯示名稱]** 欄，提供您要值顯示在「細分」UI中的好記名稱。 若要新增更多建議值，請選取 **[!UICONTROL 新增列]** 再次，並視需要重複此程式。 若要移除先前新增的列，請選取 ![「刪除」圖示](../../images/ui/fields/enum/remove-icon.png) 旁邊。
 
 完成後，請選取 **[!UICONTROL 套用]** 將更改應用到架構。
 
-![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-confirm.png)
+![為UI中的字串欄位填入的列舉值和顯示名稱。](../../images/ui/fields/enum/suggested-confirm.png)
 
 >[!NOTE]
 >
 >欄位的更新建議值會延遲約五分鐘，以反映在分段UI中。
 
-### 管理標準欄位的建議值
+### 管理標準欄位的建議值 {#standard-fields}
 
-標準XDM元件中的某些欄位會包含自己的建議值，例如 `eventType` 從 [[!UICONTROL XDM ExperienceEvent] 類](../../classes/experienceevent.md). 雖然您可以為標準欄位建立其他建議值，但您無法修改或移除組織未定義的任何建議值。 在UI中檢視標準欄位時，其建議的值會顯示，但是是唯讀的。
+標準XDM元件中的某些欄位會包含自己的建議值，例如 `eventType` 從 [[!UICONTROL XDM ExperienceEvent] 類](../../classes/experienceevent.md) 您也可以以自訂欄位相同的方式，為這些標準欄位建立其他建議值。 您也可以停用任何不符合您使用案例的標準建議值，但無法從欄位定義中直接移除這些值。
 
-![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-standard.png)
+>[!IMPORTANT]
+>
+>您只能針對沒有對應列舉限制的標準欄位停用建議的值。 換句話說，如果 **[!UICONTROL 列舉]** 選項，而非啟用 **[!UICONTROL 建議的值]**，則欄位會限制為列舉，且這些限制無法停用。
+>
+>請參閱 [下文](#evolution) 以取得更新現有架構欄位的列舉和建議值之規則的詳細資訊。
+
+若要停用標準建議值，請選取相關值旁的切換按鈕。 您可以停用建議值的任何組合，包括所有值。
+
+![部分標準建議值 [!UICONTROL 事件類型] 欄位在UI中已停用。](../../images/ui/fields/enum/suggested-standard.png)
 
 若要為標準欄位新增建議的值，請選取 **[!UICONTROL 新增列]**. 若要移除組織先前新增的建議值，請選取 ![「刪除」圖示](../../images/ui/fields/enum/remove-icon.png) 旁邊。
 
-![顯示UI中字串欄位所填入的列舉值和顯示名稱的影像](../../images/ui/fields/enum/suggested-standard-add.png)
-
-<!-- ### Removing suggested values for standard fields
-
-Only suggested values that you define can be removed from a standard field. Existing suggested values can be disabled so that they no longer appear in the segmentation dropdown, but they cannot be removed outright.
-
-For example, consider a profile schema where the a suggested value for the standard `person.gender` field is disabled:
-
-![Image showing the enum values and display names filled out for the string field in the UI](../../images/ui/fields/enum/standard-enum-disabled.png)
-
-In this example, the display name "[!UICONTROL Non-specific]" is now disabled from being shown in the segmentation dropdown list. However, the value `non_specific` is still part of the list of enumerated fields and is therefore still allowed on ingestion. In other words, you cannot disable the actual enum value for the standard field as it would go against the principle of only allowing changes that make a field less restrictive.
-
-See the [section below](#evolution) for more information on the rules for updating enums and suggested values for existing schema fields. -->
+![新增至UI中標準字串欄位的自訂建議值。](../../images/ui/fields/enum/suggested-standard-add.png)
 
 ## 列舉和建議值的演化規則 {#evolution}
 
@@ -90,13 +86,15 @@ See the [section below](#evolution) for more information on the rules for updati
 
 關於列舉和建議的值，下列規則會套用擷取後：
 
-* 您 **可** 為標準和自訂欄位新增建議值，並加入現有建議值。
-* 您 **可** 使用現有的建議值，從自訂欄位中移除建議值。
+* 您 **可** 將建議值新增至任何具有現有建議值的欄位。
+* 您 **可** 從具有現有建議值的欄位中移除自訂建議值。
+* 您 **可** 在欄位中停用僅包含建議值且沒有列舉限制的標準建議值。
 * 您 **可** 為現有的自訂列舉欄位新增列舉值。
 * 您 **可** 僅將自訂欄位的列舉值切換為建議值，或將其轉換為沒有列舉或建議值的字串。 **此開關一經套用便無法復原。**
-* 您 **無法** 從標準欄位中移除列號或建議的值。
-* 您 **無法** 將列舉值新增至沒有現有列舉的欄位。
-* 您 **無法** 移除自訂欄位的現有列舉值以下。
+* 您 **無法** 從標準欄位新增或移除列舉限制。
+* 您 **無法** 從標準欄位中移除建議的值（僅限停用）。
+* 您 **無法** 將列舉限制新增至沒有現有列舉的欄位。
+* 您 **無法** 移除自訂欄位的「少於所有現有列舉」限制。
 * 您 **無法** 從建議值切換為列舉。
 
 ## 合併列舉和建議值的規則 {#merging}
@@ -124,4 +122,4 @@ See the [section below](#evolution) for more information on the rules for updati
 
 本指南說明如何在UI中定義字串欄位的列舉和建議值。 有關如何使用Schema Registry API管理列舉和建議值的資訊，請參閱以下內容 [教學課程](../../tutorials/suggested-values.md).
 
-若要了解如何在 [!DNL Schema Editor]，請參閱 [定義UI中的欄位](./overview.md#special).
+若要了解如何在 [!DNL Schema Editor]，請參閱 [定義UI中的欄位。](./overview.md#special).

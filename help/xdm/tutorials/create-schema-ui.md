@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
 workflow-type: tm+mt
-source-wordcount: '3924'
+source-wordcount: '3947'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ An &quot;[!UICONTROL 無標題欄位]「 」預留位置會顯示在畫布中，
 | --- | --- |
 | [!UICONTROL 必填] | 指出資料擷取需要此欄位。 任何根據此結構上傳至資料集但不含此欄位的資料，在擷取時都會失敗。 |
 | [!UICONTROL 陣列] | 指出欄位包含值的陣列，每個值都指定了資料類型。 例如，對資料類型為「」的欄位使用此限制[!UICONTROL 字串]&quot;指定欄位將包含字串的陣列。 |
-| [!UICONTROL 列舉與建議的值] | 枚舉表示此欄位必須包含可能值枚舉清單中的值之一。 或者，您也可以使用此選項，只提供字串欄位的建議值清單，而不將欄位限制為這些值。 |
+| [!UICONTROL 列舉與建議的值] | 枚舉表示此欄位必須包含可能值枚舉清單中的值之一。 或者，您也可以使用此選項，只提供字串欄位的建議值清單，而不將欄位限制為這些值。 請參閱 [定義列舉和建議值](../ui/fields/enum.md) 以取得如何在UI中管理這些欄位的詳細資訊。 |
 | [!UICONTROL 身分] | 指出此欄位是身分欄位。 提供有關身分欄位的更多資訊 [本教學課程的稍後部分](#identity-field). |
 | [!UICONTROL 關係] | 而架構關係則可透過使用聯合架構和 [!DNL Real-Time Customer Profile]，此欄位僅適用於共用相同類別的結構。 此 [!UICONTROL 關係] 約束指明此欄位引用基於不同類的架構的主標識，這表示兩個架構之間的關係。 請參閱 [定義關係](./relationship-ui.md) 以取得更多資訊。 |
 

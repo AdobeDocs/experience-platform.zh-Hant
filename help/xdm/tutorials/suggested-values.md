@@ -2,10 +2,10 @@
 title: 管理API中的建議值
 description: 了解如何將建議的值新增至Schema Registry API中的字串欄位。
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
-source-git-commit: 2f916ea4b05ca67c2b9e603512d732a2a3f7a3b2
+source-git-commit: b1ef2de1e6f9c6168a5ee2a62b55812123783a3a
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 0%
+source-wordcount: '942'
+ht-degree: 1%
 
 ---
 
@@ -69,11 +69,11 @@ ht-degree: 0%
 
 因為字串沒有 `enum` 陣列來定義約束，其 `meta:enum` 屬性可延伸以包含新值。
 
-<!-- ## Manage suggested values for standard fields
+## 管理標準欄位的建議值
 
-For existing standard fields, you can [add suggested values](#add-suggested-standard) or [remove suggested values](#remove-suggested-standard). -->
+對於現有的標準欄位，您可以 [新增建議值](#add-suggested-standard) 或 [禁用建議值](#disable-suggested-standard).
 
-## 將建議的值新增至標準欄位 {#add-suggested-standard}
+### 將建議的值新增至標準欄位 {#add-suggested-standard}
 
 若要擴充 `meta:enum` ，您可以建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 針對特定結構中的相關欄位。
 
@@ -151,19 +151,25 @@ curl -X POST \
 >}
 >```
 
-<!-- ### Remove suggested values {#remove-suggested-standard}
+### 停用標準欄位的建議值 {#disable-suggested-standard}
 
-If a standard string field has predefined suggested values, you can remove any values that you do not wish to see in segmentation. This is done through by creating a [friendly name descriptor](../api/descriptors.md#friendly-name) for the schema that includes an `xdm:excludeMetaEnum` property.
+如果標準字串欄位在 `meta:enum`，您可以停用您不想在區段中看到的任何值。 這可透過建立 [友好名稱描述符](../api/descriptors.md#friendly-name) 針對包含 `xdm:excludeMetaEnum` 屬性。
 
-**API format**
+>[!IMPORTANT]
+>
+>您只能針對沒有對應列舉限制的標準欄位停用建議的值。 換句話說，如果欄位具有 `enum` 陣列，然後 `meta:excludeMetaEnum` 不會有效果。
+>
+>請參閱 [列舉和建議值的演化規則](../ui/fields/enum.md#evolution) 以取得編輯現有欄位的限制的詳細資訊。
+
+**API格式**
 
 ```http
 POST /tenant/descriptors
 ```
 
-**Request**
+**要求**
 
-The following request removes the suggested values "[!DNL Web Form Filled Out]" and "[!DNL Media ping]" for `eventType` in a schema based on the [XDM ExperienceEvent class](../classes/experienceevent.md).
+下列請求會停用建議的值「[!DNL Web Form Filled Out]&quot;和&quot;[!DNL Media ping]」 `eventType` 在以 [XDM ExperienceEvent類別](../classes/experienceevent.md).
 
 ```shell
 curl -X POST \
@@ -185,19 +191,19 @@ curl -X POST \
       }'
 ```
 
-| Property | Description |
+| 屬性 | 說明 |
 | --- | --- |
-| `@type` | The type of descriptor being defined. For a friendly name descriptor, this value must be set to `xdm:alternateDisplayInfo`. |
-| `xdm:sourceSchema` | The `$id` URI of the schema where the descriptor is being defined. |
-| `xdm:sourceVersion` | The major version of the source schema. |
-| `xdm:sourceProperty` | The path to the specific property whose suggested values you want to manage. The path should begin with a slash (`/`) and not end with one. Do not include `properties` in the path (for example, use `/personalEmail/address` instead of `/properties/personalEmail/properties/address`). |
-| `meta:excludeMetaEnum` | An object that describes the suggested values that should be excluded for the field in segmentation. The key and value for each entry must match those included in the original `meta:enum` of the field in order for the entry to be excluded.  |
+| `@type` | 要定義的描述符的類型。 對於好記的名稱描述符，此值必須設定為 `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | 此 `$id` 定義描述符的架構的URI。 |
+| `xdm:sourceVersion` | 源架構的主要版本。 |
+| `xdm:sourceProperty` | 您要管理其建議值的特定屬性的路徑。 路徑應以斜線開頭(`/`)，而且不以一結尾。 不包括 `properties` 在路徑中(例如，使用 `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
+| `meta:excludeMetaEnum` | 說明應針對分段中的欄位排除之建議值的物件。 每個項目的鍵值和值必須與原始條目中包含的鍵值和值匹配 `meta:enum` ，以便排除項目。 |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
-**Response**
+**回應**
 
-A successful response returns HTTP status 201 (Created) and the details of the newly created descriptor. The suggested values included under `xdm:excludeMetaEnum` will now be hidden from the Segmentation UI.
+成功的響應返回HTTP狀態201（已建立）以及新建立描述符的詳細資訊。 下列項目中包含的建議值 `xdm:excludeMetaEnum` 現在會從區段UI中隱藏。
 
 ```json
 {
@@ -211,7 +217,7 @@ A successful response returns HTTP status 201 (Created) and the details of the n
   "meta:containerId": "tenant",
   "@id": "f3a1dfa38a4871cf4442a33074c1f9406a593407"
 }
-``` -->
+```
 
 ## 管理自訂欄位的建議值 {#suggested-custom}
 

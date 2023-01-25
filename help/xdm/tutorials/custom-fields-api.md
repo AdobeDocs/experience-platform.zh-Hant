@@ -2,9 +2,9 @@
 title: 在結構註冊表API中定義XDM欄位
 description: 了解如何在Schema Registry API中建立自訂Experience Data Model(XDM)資源時定義不同欄位。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 6277725cd69bc94325d3584177742df1a7fd4f95
+source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此 `meta:enum` 值 **not** 聲明枚舉或自行驅動任何資料驗證。 在大多數情況下， `meta:enum` 也提供於 `enum` 以確保資料受到限制。 不過，在某些使用案例中， `meta:enum` 提供時沒有對應 `enum` 陣列。 請參閱 [定義建議值](../tutorials/suggested-values.md) 以取得更多資訊。
+>此 `meta:enum` 值 **not** 聲明枚舉或自行驅動任何資料驗證。 在大多數情況下， `meta:enum` 也提供於 `enum` 以確保資料受到限制。 不過，在某些使用案例中， `meta:enum` 提供時沒有對應 `enum` 陣列。 請參閱 [定義API中的建議值](../tutorials/suggested-values.md) 以取得更多資訊。
 
 您可以選擇提供 `default` 用於指示預設值的屬性 `enum` 若未提供任何值，欄位將使用的值。
 
