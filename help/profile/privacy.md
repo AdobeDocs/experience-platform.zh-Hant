@@ -5,9 +5,9 @@ title: 即時客戶個人檔案中的隱私權要求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service會處理客戶存取、選擇退出銷售或刪除其個人資料的請求，這些資料是多項隱私權法規所規定。 本檔案涵蓋與處理即時客戶個人檔案隱私權要求相關的基本概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: d41606e4df297d11b4e0e755363d362e075e862c
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Privacy Service] 處理客戶要求存取、選�
 
 ## 快速入門
 
-建議您對下列事項有切實的了解 [!DNL Experience Platform] 服務，再閱讀本指南：
+本指南需要妥善了解下列項目 [!DNL Platform] 元件：
 
 * [[!DNL Privacy Service]](../privacy-service/home.md):管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的請求。
 * [[!DNL Identity Service]](../identity-service/home.md):通過跨裝置和系統橋接身分，解決客戶體驗資料分散帶來的根本難題。
@@ -48,7 +48,7 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 >
 >Privacy Service只能處理 [!DNL Profile] 使用不執行身分連結的合併原則的資料。 請參閱 [合併策略限制](#merge-policy-limitations) 以取得更多資訊。
 >
->同時請務必注意，無法保證隱私權要求完成所花的時間。 若您的 [!DNL Profile] 資料，而請求仍在處理中，則無法保證是否會處理這些記錄。
+>請注意，隱私權要求完成所花費的時間 **不能** 得到保證。 若您的 [!DNL Profile] 資料，而請求仍在處理中，則無法保證是否會處理這些記錄。
 
 ### 使用 API
 
@@ -65,6 +65,8 @@ Identity Service會維護全域定義（標準）和使用者定義（自訂）�
 >請參閱 [設定檔請求與身分請求](#profile-v-identity) 本檔案稍後會提供使用的效果的詳細資訊 `ProfileService` 和 `identity` 在 `include` 陣列。
 
 下列要求會針對 [!DNL Profile] 儲存。 中為客戶提供兩個身分值，位於 `userIDs` 陣列；使用標準 `Email` 身分命名空間，以及使用自訂 `Customer_ID` 命名空間。 也包含 [!DNL Profile] (`ProfileService`) `include` 陣列：
+
+**要求**
 
 ```shell
 curl -X POST \
@@ -108,6 +110,56 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >Platform可處理所有 [沙箱](../sandboxes/home.md) 屬於您的組織。 因此，任何 `x-sandbox-name` 系統會忽略請求中包含的標題。
+
+**產品回應**
+
+若為設定檔服務，一旦隱私權工作完成，會以JSON格式傳回回應，並附上所要求使用者ID的相關資訊。
+
+```json
+{
+    "privacyResponse": {
+        "jobId": "7467850f-9698-11ed-8635-355435552164",
+        "response": [
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "female"           
+                    },
+                    "personalEmail": {
+                        "address": "ajones@acme.com",
+                    },
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "5b7db37a-bc7a-46a2-a63e-2cfe7e1cc068"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "sandbox": "prod",
+                "mergePolicyId": "none",
+                "result": {
+                    "person": {
+                        "gender": "male"
+                    },
+                    "id": 12345678,
+                    "identityMap": {
+                        "crmid": [
+                            {
+                                "id": "e9d439f2-f5e4-4790-ad67-b13dbd89d52e"
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
+```
 
 ### 使用UI
 
@@ -161,6 +213,6 @@ Privacy Service只能處理 [!DNL Profile] 使用不執行身分連結的合併�
 >
 ## 後續步驟
 
-閱讀本檔案後，您便了解處理隱私權要求的重要概念，如 [!DNL Experience Platform]. 建議您繼續閱讀本指南中提供的檔案，以深入了解如何管理身分資料和建立隱私權工作。
+閱讀本檔案後，您便了解處理隱私權要求的重要概念，如 [!DNL Experience Platform]. 若要加深您對如何管理身分資料和建立隱私權工作的了解，請繼續閱讀本指南中提供的檔案。
 
 如需處理的隱私權要求的相關資訊，請參閱 [!DNL Platform] 未使用的資源 [!DNL Profile]，請參閱 [資料湖中的隱私權要求處理](../catalog/privacy.md).
