@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: 3fd3e96d5db6b1e63df338efe383d209690eb1f6
+source-git-commit: 0f2ddad37db87d8818281067e3a30cc1b2fb6418
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '1316'
 ht-degree: 6%
 
 ---
@@ -14,9 +14,25 @@ ht-degree: 6%
 
 Adobe Experience Platform 現有功能更新：
 
+- [保證](#assurance)
 - [資料收集](#data-collection)
 - [Experience Data Model(XDM)](#xdm)
+- [即時客戶個人檔案](#profile)
 - [來源](#sources)
+
+## 保證 {#assurance}
+
+Adobe保證可讓您檢查、校樣、模擬及驗證您收集資料或提供行動應用程式體驗的方式。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 驗證編輯器 | 已新增驗證編輯器的增強功能。 這些增強功能包括驗證欄、新的程式碼建立工具和改良的檢視。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Assurance的詳細資訊，請閱讀 [保證檔案](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## 資料收集 {#data-collection}
 
@@ -72,6 +88,29 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 {style=&quot;table-layout:auto&quot;}
 
 如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
+
+## 即時客戶個人檔案 {#profile}
+
+Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面了解各個客戶，其中結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 設定檔可讓您將客戶資料併入統一檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 平台產生的區段成員資格有效期 | 任何位於 `Exited` 狀態超過30天，根據 `lastQualificationTime` 欄位可能會遭到刪除。 |
+| 外部受眾成員資格有效期 | 依預設，外部受眾會籍會保留30天。 若要保留更久，請使用 `validUntil` 欄位。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**即將淘汰** {#deprecation}
+
+為了在區段成員資格生命週期中移除備援， `Existing` 狀態將從 [區段成員資格圖](../../xdm/field-groups/profile/segmentation.md) 於2023年3月底。 後續公告將包含確切的淘汰日期。
+
+淘汰後，區段中符合資格的設定檔會顯示為 `Realized` 取消資格的設定檔會繼續顯示為 `Exited`. 這將與以檔案為基礎的目的地取得同等地位，並具備 `Active` 和 `Expired` 區段狀態。
+
+如果您使用 [企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure事件中樞、HTTP API)，且已根據 `Existing` 狀態。 如果適合您，請檢閱您的下游整合。 如果您想要識別超過特定時間的新合格設定檔，請考慮使用 `Realized` 狀態和 `lastQualificationTime` 在區段成員資格對應中。 如需詳細資訊，請洽詢您的Adobe代表。
+
+若要進一步了解即時客戶個人檔案，包括使用個人檔案資料的教學課程和最佳實務，請先閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
 
 ## 來源 {#sources}
 
