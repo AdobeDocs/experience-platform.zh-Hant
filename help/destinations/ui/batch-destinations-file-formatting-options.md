@@ -1,10 +1,11 @@
 ---
 description: 了解如何在將資料啟用至以檔案為基礎的目的地時設定檔案格式選項
 title: （測試版）為檔案式目的地設定檔案格式選項
-source-git-commit: 23a7a1997e05d2bde26de5b73a23ea051bf2b3bb
+exl-id: f59b1952-e317-40ba-81d1-35535e132a72
+source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 0%
+source-wordcount: '601'
+ht-degree: 1%
 
 ---
 
@@ -28,17 +29,25 @@ ht-degree: 0%
 
 ## 檔案格式設定 {#file-configuration}
 
+要顯示檔案格式選項，請啟動 [連接到目的地](/help/destinations/ui/connect-destination.md) 工作流程。 選擇 **資料類型：區段** 和 **檔案類型：CSV** 顯示可用於導出的 `CSV` 檔案。
+
 >[!IMPORTANT]
 >
 >您要連接的目的地可能沒有所有這些選項可用。 目的地開發人員可自行決定要在目的地支援哪些檔案格式選項。 目的地開發人員可決定連線至目的地時可用的選項。 必要選項在Experience PlatformUI中以星號標示。
-
-要顯示檔案格式選項，請啟動 [連接到目的地](/help/destinations/ui/connect-destination.md) 工作流程和選取區段作為 **檔案類型**. 本節說明可用於導出的檔案格式設定 `CSV` 檔案。
+> 
+>新的雲端儲存空間目的地 —  [(Beta)Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（測試版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta)Azure資料湖儲存Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（測試版）資料登陸區](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（測試版）Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（測試版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md)  — 目前僅支援下方強調顯示的六個CSV選項。
 
 ![顯示一些可用檔案格式選項的影像。](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
-### 分隔字元
+### 分隔字元 {#delimiter}
 
-為每個欄位和值設定分隔符號。 例如， `,` （以逗號分隔的值）或 `/t` ，以取代Tab分隔值。
+為每個欄位和值設定分隔符號。 可選擇下列選項：
+
+* 冒號 `(:)`
+* 逗號 `(,)`
+* 直立線符號 `(|)`
+* 分號 `(;)`
+* Tab 鍵 `(\\t)`
 
 ### 引號字元
 
