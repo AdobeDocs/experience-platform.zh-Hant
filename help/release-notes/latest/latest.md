@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的最新發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2808ee4cd952e9739d4d346e08a96fa9d49ccc5
+source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 6%
+source-wordcount: '1993'
+ht-degree: 5%
 
 ---
 
@@ -17,6 +17,7 @@ Adobe Experience Platform 現有功能更新：
 
 - [保證](#assurance)
 - [資料收集](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model(XDM)](#xdm)
 - [即時客戶個人檔案](#profile)
 - [細分服務](#segmentation)
@@ -48,6 +49,53 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 將資料傳送至 [!DNL Google Ads] 使用事件轉送 | 您現在可以使用 [[!DNL Google Ads Enhanced Conversions] API擴充功能](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 用於事件轉送，結合 [Google Oauth 2密碼](../../tags/ui/event-forwarding/secrets.md#google-oauth2)，以安全地將伺服器端資料傳送至 [!DNL Google Ads] 即時。 |
 
 {style=&quot;table-layout:auto&quot;}
+
+## 目的地 {#destinations}
+
+[!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+
+**新目的地**
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [（測試版）Adobe Experience Cloud Audiences連線](../../destinations/catalog/adobe/experience-cloud-audiences.md) | 使用 [!UICONTROL （測試版）Adobe Experience Cloud受眾] 連線，將區段從Experience Platform共用至各種Experience Platform解決方案，例如Audience Manager、Analytics、Advertising Cloud、Adobe Campaign、Target或Marketo。 |
+| [Pega配置檔案連接](../../destinations/catalog/personalization/pega-profile.md) | 使用 [!DNL Pega Profile Connector] 在Adobe Experience Platform中，建立與 [!DNL Amazon] S3儲存，定期將設定檔資料從Adobe Experience Platform匯出至CSV檔案至您自己的S3貯體。 在 [!DNL Pega Customer Decision Hub]，您可以排程資料作業以從S3儲存匯入此設定檔資料，以更新 [!DNL Pega Customer Decision Hub] 設定檔。 |
+| [（測試版）貿易台CRM EU連接](../../destinations/catalog/advertising/tradedesk-emails.md) | 隨著EUID（歐洲統一ID）的發行，您現在會看到兩個 [!DNL The Trade Desk - CRM] 目的地 [目的地目錄](/help/destinations/catalog/overview.md). <ul><li> 如果您在歐盟中來源資料，請使用 **[!DNL The Trade Desk - CRM (EU)]** 目的地。</li><li> 如果您在APAC或NAMER地區來源資料，請使用 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 目的地。 </li></ul> |
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| 測試版雲端儲存目的地連接器的新分隔字元選項 | 三個新的分隔字元選項(冒號 `:`，管道 `|`，分號 `;`)現已可供新的測試版雲端儲存空間目的地使用 —  [(Beta)Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（測試版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta)Azure資料湖儲存Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（測試版）資料登陸區](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（測試版）Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（測試版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> 閱讀支援的 [檔案格式選項](/help/destinations/ui/batch-destinations-file-formatting-options.md) 適用於檔案型目的地。 |
+| 中提供的新選用參數 [客戶資料欄位](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) 配置 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:當您需要建立客戶資料欄位時，使用此欄位的值必須在使用者組織設定的所有目的地資料流中是唯一的。 <br> 例如， **[!UICONTROL 整合別名]** 欄位 [[!UICONTROL 自訂個人化]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 目標必須是唯一的，這表示到此目標的兩個單獨的資料流不能具有此欄位的相同值。 |
+
+**修正和增強功能** {#fixes-and-enhancements}
+
+<!--
+
+| Fix or enhancement | Description |
+| ----------- | ----------- |
+| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
+| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
+
+-->
+
+<table>
+    <tr>
+        <td><b>修正或增強功能</b></td>
+        <td><b>說明</b></td>
+    </tr>
+    <tr>
+        <td>必要對應和重複對應的UI和API驗證(PLAT-123316)</td>
+        <td>現在，當 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">對應欄位</a> 在「啟動目標」工作流程中：<ul><li><b>必要對應</b>:如果目的地開發人員已使用必要對應來設定目的地(例如 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 目的地)，則使用者在將資料啟動至目的地時，需要新增這些必要對應。 </li><li><b>重複映射</b>:在啟動工作流程的對應步驟中，您可以在來源欄位中新增重複值，但不能在目標欄位中新增。 有關允許和禁止的映射組合的示例，請參閱下表。 <br><table><thead><tr><th>允許/禁止</th><th>來源欄位</th><th>目標欄位</th></tr></thead><tbody><tr><td>允許</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>電子郵件別名2</li></ul></td></tr><tr><td>禁止</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>
+    <tr>
+        <td>更新匯出行為至檔案式目的地(PLAT-123316)</td>
+        <td>我們已修正 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">必填屬性</a> 將資料檔案匯出至批次目的地時。 <br> 以前，輸出檔案中的每個記錄都經過驗證以包含這兩項： <ol><li>的非空值 <code>mandatoryField</code> 欄和</li><li>在其它非必填欄位中至少一個上的非空值。</li></ol> 已移除第二個條件。 因此，您可能會在匯出的資料檔案中看到更多輸出列，如下列範例所示：<br> <b> 2023年1月版本之前的範例行為 </b> <br> 必填欄位： <code>emailAddress</code> <br> <b>輸入要激活的資料</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>約翰</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>傑尼弗</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>啟動輸出</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>約翰</td><td>john@acme.com</td></tr><tr><td>傑尼弗</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023年1月發行後的範例行為 </b> <br> <b>啟動輸出</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>約翰</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>傑尼弗</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+    </tr>
+</table>
+
+如需目的地的詳細一般資訊，請參閱 [目的地概述](../../destinations/home.md).
 
 ## Experience Data Model(XDM) {#xdm}
 
