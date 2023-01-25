@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f406ad74da00a7f4bf7ef1b52bee59cd91435d8f
+source-git-commit: 6009592d47cf8f3d0d31e919aff0552e370b2063
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1470'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 3%
 
 本檔案涵蓋Adobe Experience Platform Web SDK的發行說明。
 如需Web SDK標籤擴充功能的最新發行說明，請參閱 [Web SDK標籤擴充功能發行說明](extension/web-sdk-ext-release-notes.md).
+
+## 2.14.0版 — 2023年1月25日
+
+**新功能**
+
+* （測試版）新增對AJO介面和主張的支援。
+
+**修正和改良**
+
+* 修正Adobe Target VEC自訂程式碼動作中，程式碼插入至替代位置(而非 [!DNL at.js].
+* 修正在某些邊緣案例中，向邊緣網路傳送的請求未正確設定「referer」標題的問題。
+* 修正 [用戶代理客戶端提示](fundamentals/user-agent-client-hints.md) 屬性可能設定為錯誤的類型。
+* 修正 `placeContext.localTime` 不符合結構。
 
 ## 2.13.1版 — 2022年10月13日
 
