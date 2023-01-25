@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Google PubSub;google pubsub
-solution: Experience Platform
 title: 在UI中建立Google PubSub Source Connection
-type: Tutorial
 description: 了解如何使用Platform使用者介面建立Google PubSub來源連接器。
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -31,8 +28,9 @@ ht-degree: 1%
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
-| `projectId` | 驗證所需的專案ID [!DNL PubSub]. |
-| `credentials` | 驗證所需的憑據或私鑰ID [!DNL PubSub]. |
+| 專案 ID | 驗證所需的專案ID [!DNL PubSub]. |
+| 憑證 | 驗證所需的憑據或私鑰ID [!DNL PubSub]. |
+| 主題ID | 的ID [!DNL PubSub] 代表訊息摘要的資源。 如果要提供對中特定資料流的存取權，必須指定主題ID [!DNL Google PubSub] 來源。 |
 
 如需這些值的詳細資訊，請參閱下列內容 [PubSub驗證](https://cloud.google.com/pubsub/docs/authentication) 檔案。 如果您使用服務帳戶型驗證，請參閱下列內容 [PubSub指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生憑證的步驟。
 
@@ -44,9 +42,9 @@ ht-degree: 1%
 
 ## 連接您的 [!DNL PubSub] 帳戶
 
-在 [平台UI](https://platform.adobe.com)，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以為其建立帳戶的各種來源。
+在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可建立帳戶的各種來源。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列找到您要使用的特定來源。
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
 
 在 [!UICONTROL 雲端儲存空間] 類別，選擇 **[!UICONTROL Google PubSub]**，然後選取 **[!UICONTROL 新增資料]**.
 
@@ -62,7 +60,13 @@ ht-degree: 1%
 
 ### 新帳戶
 
-如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、選用說明，以及 [!DNL PubSub] 輸入表單上的驗證憑據。 完成後，請選取 **[!UICONTROL 連接到源]** 然後讓新連接建立一段時間。
+如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、選用說明，以及 [!DNL PubSub] 輸入表單上的驗證憑據。 在此步驟中，您可以提供主題ID，以定義您的帳戶可存取的資料。 只能存取與該主題ID相關聯的訂閱。
+
+>[!NOTE]
+>
+>指派給發佈子專案的承擔者（角色）會繼承在 [!DNL PubSub] 專案。 如果要添加主體（角色）以訪問特定主題，則該主體（角色）也必須添加到主題的相應訂閱中。 如需詳細資訊，請閱讀 [[!DNL PubSub] 存取控制檔案](https://cloud.google.com/pubsub/docs/access-control).
+
+完成後，請選取 **[!UICONTROL 連接到源]** 然後讓新連接建立一段時間。
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 

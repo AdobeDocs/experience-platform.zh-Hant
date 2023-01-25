@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google雲端儲存來源連接器概觀
 description: 了解如何使用API或使用者介面將Google雲端儲存空間連線至Adobe Experience Platform。
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: 648dcd04de1f88318e3e771d5f044ac5b5ddaf2d
+source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Adobe Experience Platform為AWS等雲端提供者提供原生連線， [!DNL Goo
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
 您可以使用新產生的存取金鑰ID和秘密存取金鑰來連接您的 [!DNL Google Cloud Storage] 帳戶至Platform。
+
+欲知更多資訊，請閱讀 [建立和管理服務帳戶密鑰](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) 從 [!DNL Google Cloud] 檔案。
 
 ## 檔案和目錄的命名限制
 
