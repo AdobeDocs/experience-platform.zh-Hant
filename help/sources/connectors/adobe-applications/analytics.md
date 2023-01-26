@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Analytics來源連接器；Analytics;AAID;
 title: Adobe Analytics報表套裝資料的來源連接器
 description: 本檔案概述Analytics並說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1040'
 ht-degree: 7%
 
 ---
@@ -20,7 +19,7 @@ Adobe Experience Platform可讓您透過Analytics來源連接器內嵌Adobe Anal
 
 [!DNL Analytics] 是一款功能強大的引擎，可協助您進一步了解客戶、客戶如何與您的Web屬性互動、了解您的數位行銷支出有何成效，以及找出需要改善的領域。 [!DNL Analytics] 每年處理數萬億個Web事務， [!DNL Analytics] 來源連接器可讓您輕鬆利用這項豐富的行為資料，並加以擴充 [!DNL Real-Time Customer Profile] 幾分鐘內。
 
-![](./images/analytics-data-experience-platform.png)
+![說明不同Adobe應用程式(包括Adobe Analytics)資料歷程的圖形。](./images/analytics-data-experience-platform.png)
 
 從高層面講， [!DNL Analytics] 收集來自全球不同數位頻道和多個資料中心的資料。 收集資料後，會套用訪客身分識別、分段和轉換架構(VISTA)規則及處理規則，以塑造傳入資料。 原始資料經過此輕量化處理後，便會視為已可供使用 [!DNL Real-Time Customer Profile]. 在與上述程式平行的程式中，相同的處理資料會經過微批次處理並擷取至Platform資料集，以供使用 [!DNL Data Science Workspace], [!DNL Query Service]，以及其他資料發現應用程式。
 
@@ -35,6 +34,10 @@ XDM是公開記錄的規範，為應用程式提供通用結構和定義，以�
 若要進一步了解XDM，請參閱 [XDM系統概觀](../../../xdm/home.md).
 
 ## 如何將欄位從Adobe Analytics對應至XDM?
+
+>[!IMPORTANT]
+>
+>資料準備轉換可能會增加整體資料流的延遲。 增加的額外延遲會因轉換邏輯的複雜度而異。
 
 當建立源連接以將 [!DNL Analytics] 使用Platform使用者介面將資料匯入Experience Platform時，資料欄位會自動對應並匯入 [!DNL Real-Time Customer Profile] 幾分鐘內。 有關建立源連接的說明 [!DNL Analytics] 使用Platform UI，請參閱 [Analytics來源連接器教學課程](../../tutorials/ui/create/adobe-applications/analytics.md).
 
@@ -79,8 +82,8 @@ Analytics會回填預設為13個月。 上表所述100億次事件的上限嚴�
 
 這些欄位不會標記為身分識別。 相反地，相同的身分會複製到XDM的 `identityMap` 作為機碼值組：
 
-* `{ “key”: “AAID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “ECID”, “value”: [ { “id”: “<identity>”, “primary”: <true or false> } ] }`
-* `{ “key”: “AACUSTOMID”, “value”: [ { “id”: “<identity>”, “primary”: false } ] }`
+* `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
+* `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
 在身分對應中，如果ECID存在，則會標示為事件的主要身分。 在此情況下，AAID可能會以ECID為基礎，因為 [Identity服務寬限期](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 否則，AAID 將標記為事件的主要身分識別。AACUSTOMID 永遠不會標記為事件的主要 ID。不過，如果存在AACUSTOMID，則AAID會根據AACUSTOMID，因為Experience Cloud的操作順序。
