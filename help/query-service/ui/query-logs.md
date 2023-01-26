@@ -1,14 +1,18 @@
 ---
 title: 查詢記錄檔
 description: 每次執行查詢時都會自動產生查詢記錄，並可透過UI使用，以協助進行疑難排解。 本檔案概述如何使用和導覽UI的「查詢服務記錄檔」區段。
-source-git-commit: 22deca5f9bcf6bcf97cca01b97fce9d22800b767
+source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 # 查詢記錄檔
+
+>[!IMPORTANT]
+>
+>某些查詢記錄功能目前處於有限版本中，並非所有客戶都能使用。 若沒有編輯圖示，您的UI可能會呈現稍微不同的外觀。 此外，選取查詢名稱的程式可導覽至「查詢編輯器」，而非 [!UICONTROL 查詢日誌詳細資訊] 檢視。
 
 Adobe Experience Platform會維護透過API和UI發生的所有查詢事件記錄。 此資訊可在查詢服務UI中，從 [!UICONTROL 記錄檔] 標籤。
 
@@ -39,6 +43,10 @@ A [記錄表各列的說明](./overview.md#log) 可在「查詢服務」概覽�
 在日誌詳細資訊面板中，您可以選擇新的輸出資料集，並查看或複製運行中使用的完整SQL查詢。
 
 ![選中一行的「查詢日誌」工作區，並突出顯示輸出資料集和SQL查詢。](../images/ui/query-log/edit-output-dataset.png)
+
+>[!IMPORTANT]
+>
+>某些查詢記錄功能目前處於有限版本中，並非所有客戶都能使用。
 
 您也可以從 [!UICONTROL 名稱] 欄以直接導覽至 [!UICONTROL 查詢日誌詳細資訊] 檢視。
 
