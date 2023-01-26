@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備映射函式
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 4a033d782c2cc4a42edacf0abc146bd128fdb07c
 workflow-type: tm+mt
-source-wordcount: '4367'
+source-wordcount: '4398'
 ht-degree: 3%
 
 ---
@@ -138,10 +138,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | 檢查對象是否為空。 | <ul><li>輸入： **必填** 您要檢查的對象為空。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| arrays_to_object | 建立對象清單。 | <ul><li>輸入： **必填** 密鑰對和陣列對的分組。</li></ul> | arrays_to_object(INPUT) | 需要樣本 | 需要樣本 |
+| is_empty | 檢查對象是否為空。 | <ul><li>輸入： **必填** 您要檢查的對象為空。</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
+| arrays_to_object | 建立對象清單。 | <ul><li>輸入： **必填** 密鑰對和陣列對的分組。</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\|'), 'price', [22.5,14.35])` | [{ &quot;sku&quot;:&quot;id1&quot;、&quot;price&quot;:22.5 }, { &quot;sku&quot;:&quot;id2&quot;、&quot;price&quot;:14.35 }] |
 | to_object | 根據給定的平面索引鍵/值配對建立對象。 | <ul><li>輸入： **必填** 索引鍵/值組的平面清單。</li></ul> | to_object(INPUT) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | 從輸入字串建立物件。 | <ul><li>字串： **必填** 正在解析以建立對象的字串。</li><li>VALUE_DELIMITER: *可選* 將欄位與值分開的分隔字元。 預設分隔字元為 `:`.</li><li>FIELD_DELIMITER: *可選* 分隔欄位值組的分隔字元。 預設分隔字元為 `,`.</li></ul> | str_to_object(&#x200B;字串， VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName=John,lastName=Doe,phone=123 456 7890&quot;, &quot;=&quot;, &quot;,&quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| str_to_object | 從輸入字串建立物件。 | <ul><li>字串： **必填** 正在解析以建立對象的字串。</li><li>VALUE_DELIMITER: *可選* 將欄位與值分開的分隔字元。 預設分隔字元為 `:`.</li><li>FIELD_DELIMITER: *可選* 分隔欄位值組的分隔字元。 預設分隔字元為 `,`.</li></ul> | str_to_object(&#x200B;字串， VALUE_DELIMITER, FIELD_DELIMITER) **附註**:您可以使用 `get()` 函式與 `str_to_object()` 來擷取字串中索引鍵的值。 | <ul><li>範例#1:str_to_object(&quot;firstName - John ;lastName - ;- 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>範例#2:str_to_object(&quot;firstName - John ;lastName - ;phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;)。get(&quot;firstName&quot;)</li></ul> | <ul><li>範例#1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>範例#2:「約翰」</li></ul> |
 | contains_key | 檢查對象是否存在於源資料中。 **注意：** 此函式會取代已棄用的 `is_set()` 函式。 | <ul><li>輸入： **必填** 要檢查的路徑（如果它存在於源資料中）。</li></ul> | contains_key(INPUT) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | 取消 | 將屬性的值設定為 `null`. 當您不想將欄位複製到目標架構時，應使用此欄位。 |  | nullify() | nullify() | `null` |
 | get_keys | 剖析索引鍵/值組並傳回所有索引鍵。 | <ul><li>對象： **必填** 將從中擷取鍵值的物件。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;):《傲慢與偏見》、《書2》：《1984年》) | `["book1", "book2"]` |
