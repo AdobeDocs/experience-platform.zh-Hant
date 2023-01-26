@@ -2,9 +2,9 @@
 title: 檔案自助服務範本//以目的地名稱取代
 description: 使用此範本，在Adobe Experience Platform目錄中為您的目的地建立公開檔案。//將取代為概述區段中的段落
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 46e8f6cf3e135b31dc508274598f9d76df857c8f
+source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1534'
 ht-degree: 1%
 
 ---
@@ -83,6 +83,7 @@ ht-degree: 1%
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，其中包含 *YourDestination* 目的地。 |
 | 匯出類型 | **[!UICONTROL 設定檔]** | 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，如「選取設定檔屬性」畫面中所選 [目的地啟動工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 匯出類型 | **[!UICONTROL 資料集匯出]** | 您要匯出原始資料集，這些資料集未依對象興趣或資格進行分組或結構化。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以3、6、8、12或24小時為增量將檔案匯出至下游平台。 深入了解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
@@ -130,11 +131,13 @@ ht-degree: 1%
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
-*視情況刪除 — 如果您要記錄新的串流目的地，請保留下方的第一段。 如果要記錄新的基於檔案的目標，請保留第二段。*
+*視情況刪除 — 如果您要記錄新的串流目的地，請保留下方的第一段。 如果要記錄新的基於檔案的目標，請保留第二段。 如果您要記錄可匯出資料集的目的地，請保留第三個段落。*
 
 閱讀 [啟動設定檔和區段至串流區段匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用受眾區段至此目的地的指示。
 
 閱讀 [啟用受眾資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
+
+閱讀 [（測試版）匯出資料集](/help/destinations/ui/export-datasets.md) 如需將資料集匯出至此目的地的詳細指示。
 
 ### 對應屬性和身分 {#map}
 
