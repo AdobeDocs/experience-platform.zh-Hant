@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 79773c35cf70bc967b29a8bcca729106bd7dd4f0
+source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '875'
 ht-degree: 12%
 
 ---
@@ -206,6 +206,7 @@ ht-degree: 12%
    - [重試失敗的資料流運行](tutorials/api/retry-flows.md)
    - [刪除帳戶](tutorials/api/delete.md)
    - [刪除資料流](tutorials/api/delete-dataflows.md)
+   - [內嵌加密的資料](tutorials/api/encrypt-data.md)
 - UI教學課程 {#ui-tutorials}
    - 建立源連接 {#create}
       - Adobe應用程式 {#adobe-applications}
