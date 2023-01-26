@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
+source-git-commit: 08ad27303b88826fd7e0fcc0a8b3d498de58c260
 workflow-type: tm+mt
-source-wordcount: '1995'
-ht-degree: 4%
+source-wordcount: '1848'
+ht-degree: 5%
 
 ---
 
@@ -74,10 +74,6 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
     <tr>
         <td><b>修正或增強功能</b></td>
         <td><b>說明</b></td>
-    </tr>
-    <tr>
-        <td>必要對應和重複對應的UI和API驗證(PLAT-123316)</td>
-        <td>現在，當 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">對應欄位</a> 在「啟動目標」工作流程中：<ul><li><b>必要對應</b>:如果目的地開發人員已使用必要對應來設定目的地(例如 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 目的地)，則使用者在將資料啟動至目的地時，需要新增這些必要對應。 </li><li><b>重複映射</b>:在啟動工作流程的對應步驟中，您可以在來源欄位中新增重複值，但不能在目標欄位中新增。 有關允許和禁止的映射組合的示例，請參閱下表。 <br><table><thead><tr><th>允許/禁止</th><th>來源欄位</th><th>目標欄位</th></tr></thead><tbody><tr><td>允許</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>電子郵件別名2</li></ul></td></tr><tr><td>禁止</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>
     <tr>
         <td>更新匯出行為至檔案式目的地(PLAT-123316)</td>
