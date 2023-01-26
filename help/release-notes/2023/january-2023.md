@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: 5657473ad10880b907a5b010fa99e08a5e45e174
+source-git-commit: fbdd3a3270e8aad95cb12281bcd4623a88b13f47
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1995'
 ht-degree: 4%
 
 ---
@@ -65,19 +65,10 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 測試版雲端儲存目的地連接器的新分隔字元選項 | 三個新的分隔字元選項(冒號 `:`，管道 `|`，分號 `;`)現已可供新的測試版雲端儲存空間目的地使用 —  [(Beta)Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（測試版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta)Azure資料湖儲存Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（測試版）資料登陸區](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（測試版）Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（測試版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> 閱讀支援的 [檔案格式選項](/help/destinations/ui/batch-destinations-file-formatting-options.md) 適用於檔案型目的地。 |
-| 中提供的新選用參數 [客戶資料欄位](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) 配置 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:當您需要建立客戶資料欄位時，使用此欄位的值必須在使用者組織設定的所有目的地資料流中是唯一的。 <br> 例如， **[!UICONTROL 整合別名]** 欄位 [[!UICONTROL 自訂個人化]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 目標必須是唯一的，這表示到此目標的兩個單獨的資料流不能具有此欄位的相同值。 |
+| 測試版雲端儲存目的地連接器的新分隔字元選項 | 三個新的分隔字元選項(冒號 `:`，垂直號，分號 `;`)現已可供新的測試版雲端儲存空間目的地使用 —  [(Beta)Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（測試版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta)Azure資料湖儲存Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（測試版）資料登陸區](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（測試版）Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（測試版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> 閱讀支援的 [檔案格式選項](/help/destinations/ui/batch-destinations-file-formatting-options.md) 適用於檔案型目的地。 |
+| 中提供的新選用參數 [客戶資料欄位](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) 配置 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:當您需要建立客戶資料欄位時，使用此參數，該欄位的值必須在用戶組織設定的所有目標資料流中是唯一的。 <br> 例如， **[!UICONTROL 整合別名]** 欄位 [[!UICONTROL 自訂個人化]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 目標必須是唯一的，這表示到此目標的兩個單獨的資料流不能具有此欄位的相同值。 |
 
-**修正和增強功能** {#fixes-and-enhancements}
-
-<!--
-
-| Fix or enhancement | Description |
-| ----------- | ----------- |
-| UI and API validation for required mappings and duplicate mappings (PLAT-123316) | Validation is now enforced as follows in the UI and API when [mapping fields](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) in the activate destinations workflow:<ul><li>**Required mappings**: If the destination has been set up by the destination developer with required mappings (for example, the [Google Ad Manager 360](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#activate) destination), then these required mappings need to be added by the user when activating data to the destination. </li><li>**Duplicate mappings**: expand on allowed and forbidden source-to-target mappings.</li></ul> |
-| Updated profile export behavior to cloud storage destinations (PLAT-123316) | We fixed an issue in the behavior of [mandatory attributes](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) when exporting data files to batch destinations. <br> Previously, every record in the output files was verified to contain both: <ol><li>A non-null value of the `mandatoryField` column and</li><li>also contain a non-null value on at least one of the other non-mandatory fields.</li></ol> The second condition has been removed. As a result, you might be seeing more output rows in your exported data files. |
-
--->
+**修正和增強功能** {#destinations-fixes-and-enhancements}
 
 <table>
     <tr>
