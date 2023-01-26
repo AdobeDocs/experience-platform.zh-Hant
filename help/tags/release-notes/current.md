@@ -2,14 +2,23 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 892d22a88546ff270af4f5b253a013015349898b
+source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '497'
 ht-degree: 4%
 
 ---
 
 # 標籤和事件轉送的發行說明
+
+## 2022 年 1 月 25 日
+
+* **全新主畫面**:資料收集UI的首頁已更新，其中包含實用入門資訊和連結，以簡化生產力。 其中包括:
+   1. 開始使用的檔案和建議工作流程
+   1. 最近的屬性、規則和資料元素
+   1. 熱門擴充功能
+   1. 透過快速安裝功能更新全新擴充功能
+* **將資料傳送至 [!DNL Google Ads] 使用事件轉送**:您現在可以使用 [[!DNL Google Ads Enhanced Conversions] API擴充功能](../extensions/server/google-ads-enhanced-conversions/overview.md) 用於事件轉送，結合 [Google Oauth 2密碼](../ui/event-forwarding/secrets.md#google-oauth2)，以安全地將伺服器端資料傳送至 [!DNL Google Ads] 即時。
 
 ## 2022 年 11 月 23 日
 
