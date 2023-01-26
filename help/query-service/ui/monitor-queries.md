@@ -2,7 +2,7 @@
 title: 監視計畫查詢
 description: 了解如何透過Query Service UI監控查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
+source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 0%
