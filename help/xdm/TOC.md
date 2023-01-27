@@ -4,9 +4,9 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 使用體驗資料模型 (XDM) 類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fda856051af104ca6363274d93ca65807f9881a3
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '508'
 ht-degree: 16%
 
 ---
@@ -190,7 +190,8 @@ ht-degree: 16%
 * 教學課程 {#tutorials}
    * [在UI中建立結構](tutorials/create-schema-ui.md)
    * [在API中建立結構](tutorials/create-schema-api.md)
-   * [定義API中的自訂欄位](./tutorials/custom-fields-api.md)
+   * [將特定欄位新增至結構(API)](./tutorials/specific-fields-api.md)
+   * [定義自訂欄位(API)](./tutorials/custom-fields-api.md)
    * [將建議的值新增至欄位(API)](tutorials/suggested-values.md)
    * [取代XDM欄位](tutorials/field-deprecation.md)
    * [在UI中定義結構關係](tutorials/relationship-ui.md)
