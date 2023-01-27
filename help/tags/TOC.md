@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: c2312a65388e8aec7cdeb8daf20fe9de7d1fa4fc
+source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '961'
 ht-degree: 30%
 
 ---
@@ -165,7 +165,7 @@ ht-degree: 30%
       * [Google全域網站標籤(gtag)](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag)
       * [InMoment](https://exchange.adobe.com/apps/ec/100847)
       * [JSON Helper](https://exchange.adobe.com/apps/ec/106449)
-      * [JW播放器分析](https://exchange.a[](https://exchange.adobe.com/apps/ec/101460/sdi-toolkit)dobe.com/apps/ec/101523))
+      * [JW播放器分析](https://exchange.adobe.com/apps/ec/101523)
       * [KickFire](https://exchange.adobe.com/apps/ec/101621)
       * [映射表](https://exchange.adobe.com/apps/ec/103136)
       * [!DNL Marketo Munchkin] {#marketo}
