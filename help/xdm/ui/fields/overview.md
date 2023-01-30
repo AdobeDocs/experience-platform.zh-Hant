@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義XDM欄位
 description: 了解如何在Experience Platform使用者介面中定義XDM欄位。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1407'
 ht-degree: 4%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 4%
 
 ## 定義欄位的屬性 {#define}
 
-選取 **加號(+)** 表徵圖， **[!UICONTROL 新欄位]** 會顯示在畫布中，位於與您的不重複租用戶ID命名的物件中(如 `_tenantId` 在以下範例中)。 新增至結構的所有自訂欄位都會自動放置在此命名空間中，以防止與Adobe提供的類別和欄位群組中的其他欄位產生衝突。
+選取 **加號(+)** 表徵圖， **[!UICONTROL 無標題欄位]** 預留位置會顯示在畫布中。
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,8 +52,8 @@ ht-degree: 4%
 
 | 欄位屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 欄位名稱] | 欄位的不重複、描述性名稱。 請注意，一旦儲存架構，就無法變更欄位的名稱。<br><br>名稱最好用camelCase寫。 它可能包含英數字元、破折號或底線字元，但它 **不能** 從底線開始。<ul><li>**正確**: `fieldName`</li><li>**可接受：** `field_name2`, `Field-Name`, `field-name_3`</li><li>**錯誤**: `_fieldName`</li></ul> |
-| [!UICONTROL 顯示名稱] | 這個田地的人性化名稱。 |
+| [!UICONTROL 欄位名稱] | 欄位的不重複、描述性名稱。 請注意，一旦儲存架構，就無法變更欄位的名稱。 此值可用來識別並參考程式碼和其他下游應用程式中的欄位<br><br>名稱最好用camelCase寫。 它可能包含英數字元、破折號或底線字元，但它 **不能** 從底線開始。<ul><li>**正確**: `fieldName`</li><li>**可接受：** `field_name2`, `Field-Name`, `field-name_3`</li><li>**錯誤**: `_fieldName`</li></ul> |
+| [!UICONTROL 顯示名稱] | 欄位的顯示名稱。 這是將用來表示「架構編輯器」畫布中欄位的名稱。 |
 | [!UICONTROL 類型] | 欄位將包含的資料類型。 從此下拉式功能表中，您可以選取 [標準標量類型](../../schema/field-constraints.md) 由XDM支援，或多欄位其中一個 [資料類型](../resources/data-types.md) 中 [!DNL Schema Registry].<br><br>您也可以選取 **[!UICONTROL 進階類型搜尋]** 若要搜尋及篩選現有資料類型，並更輕鬆找出所需類型。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -70,7 +70,7 @@ ht-degree: 4%
 
 ![](../../images/ui/fields/overview/field-details.png)
 
-畫布會更新以顯示欄位的名稱和類型，而右側邊欄現在除了列出其他屬性外，還會列出欄位的路徑。
+畫布會更新，以顯示新新增的欄位，位於與您的不重複租用戶ID命名的物件中（如所示） `_tenantId` 在以下範例中)。 新增至結構的所有自訂欄位都會自動放置在此命名空間中，以防止與Adobe提供的類別和欄位群組中的其他欄位產生衝突。 現在，除了欄位的其他屬性外，右側邊欄還會列出欄位的路徑。
 
 ![](../../images/ui/fields/overview/field-added.png)
 
