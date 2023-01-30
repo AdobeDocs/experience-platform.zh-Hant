@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 9f39130c8d470b236764993f7ebca9c1cdc748bb
+source-git-commit: ecf757e98c3da568173d161aa5d4701881ec2337
 workflow-type: tm+mt
-source-wordcount: '3947'
+source-wordcount: '3985'
 ht-degree: 0%
 
 ---
@@ -177,8 +177,10 @@ An &quot;[!UICONTROL 無標題欄位]「 」預留位置會顯示在畫布中，
 
 每個欄位都需要下列資訊：
 
-* **[!UICONTROL 欄位名稱]:** 欄位的名稱，用駝峰寫。 範例：loalytyLevel
-* **[!UICONTROL 顯示名稱]:** 以標題寫入的欄位名稱。 範例：忠誠度等級
+* **[!UICONTROL 欄位名稱]:** 欄位的名稱，最好用camelCase寫。 不允許使用空格字元。 這是用來參考程式碼和其他下游應用程式中欄位的名稱。
+   * 範例：loalytyLevel
+* **[!UICONTROL 顯示名稱]:** 以標題寫入的欄位名稱。 這是檢視或編輯架構時，畫布中將顯示的名稱。
+   * 範例：忠誠度等級
 * **[!UICONTROL 類型]:** 欄位的資料類型。 這包括基本標量類型和 [!DNL Schema Registry]. 範例： [!UICONTROL 字串], [!UICONTROL 整數], [!UICONTROL 布林值], [!UICONTROL 人員], [!UICONTROL 地址], [!UICONTROL 電話號碼]、等
 * **[!UICONTROL 說明]:** 欄位的選用說明最多應包含200個字元。
 
