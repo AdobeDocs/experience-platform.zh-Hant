@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1473'
 ht-degree: 3%
 
 ---
@@ -79,6 +79,12 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 
 | 類別 | 權限 | 說明 |
 | --- | --- | --- |
+| [!DNL Alerts] | [!UICONTROL 查看警報歷史記錄] | 警報歷史記錄的唯讀存取。 |
+| [!DNL Alerts] | [!UICONTROL 解決警報] | 存取讀取、編輯和刪除警報。 |
+| [!DNL Alerts] | [!UICONTROL 檢視警報] | 警報的唯讀存取。 |
+| [!DNL Alerts] | [!UICONTROL 管理警報] | 存取讀取、建立、編輯和刪除警報歷史記錄。 |
+| [!DNL Data Hygiene] | [!UICONTROL 查看資料衛生] | 資料衛生的唯讀存取。 |
+| [!DNL Data Hygiene] | [!UICONTROL 管理資料衛生] | 讀取、建立、編輯和刪除資料衛生的存取權。 |
 | [!DNL Data Modeling] | [!UICONTROL 管理結構描述] | 存取讀取、建立、編輯和刪除結構和相關資源。 |
 | [!DNL Data Modeling] | [!UICONTROL 檢視結構描述] | 對結構和相關資源的唯讀存取。 |
 | [!DNL Data Modeling] | [!UICONTROL 管理關係] | 訪問讀取、建立、編輯和刪除架構關係。 |
@@ -94,9 +100,9 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 | [!DNL Profile Management] | [!UICONTROL 查看合併策略] | 對可用合併策略的只讀訪問。 |
 | [!DNL Profile Management] | [!UICONTROL 匯出區段的受眾] | 能夠將評估的受眾區段匯出至資料集。 |
 | [!DNL Profile Management] | [!UICONTROL 評估受眾的區段] | 可評估區段定義，為對象產生設定檔。 |
-| [!DNL Identities] | [!UICONTROL 管理身分識別命名空間] | 存取讀取、建立、編輯和刪除身分識別命名空間。 |
-| [!DNL Identities] | [!UICONTROL 檢視身分命名空間] | 身分識別命名空間的唯讀存取。 |
-| [!DNL Identities] | [!UICONTROL 檢視身分圖] | 身分圖表的唯讀存取。 |
+| [!DNL Identity Management] | [!UICONTROL 管理身分識別命名空間] | 存取讀取、建立、編輯和刪除身分識別命名空間。 |
+| [!DNL Identity Management] | [!UICONTROL 檢視身分命名空間] | 身分識別命名空間的唯讀存取。 |
+| [!DNL Identity Management] | [!UICONTROL 檢視身分圖] | 身分圖表的唯讀存取。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 管理沙箱] | 存取讀取、建立、編輯和刪除沙箱。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 檢視沙箱] | 屬於您組織的沙箱的唯讀存取權。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 重設沙箱] | 重設沙箱的功能。 |
