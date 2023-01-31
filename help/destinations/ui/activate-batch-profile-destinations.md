@@ -4,9 +4,9 @@ title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: e2318509236fad5054ce82b384f399dd6cbbdc34
+source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
-source-wordcount: '3414'
+source-wordcount: '3537'
 ht-degree: 0%
 
 ---
@@ -459,23 +459,33 @@ Adobe建議您選取身分命名空間，例如 [!DNL CRM ID] 或電子郵件地
 * 對於要在匯出內容中包含身分命名空間的資料流，請使用舊版雲端儲存目標
 * 將身分上傳至Experience Platform中，然後將其匯出至雲端儲存空間目的地。
 
-## 檢閱 {#review}
+## 請檢閱 {#review}
 
 在 **[!UICONTROL 檢閱]** 頁面，您可以看到您所選內容的摘要。 選擇 **[!UICONTROL 取消]** 來分解流， **[!UICONTROL 返回]** 修改設定，或 **[!UICONTROL 完成]** 確認您的選擇並開始將資料傳送至目的地。
 
->[!IMPORTANT]
->
->在此步驟中，Adobe Experience Platform會檢查資料使用政策是否違反。 以下顯示違反原則的範例。 除非您解決違規，否則無法完成區段啟用工作流程。 有關如何解決策略違規的資訊，請參見 [政策執行](../../rtcdp/privacy/data-governance-overview.md#enforcement) （位於資料控管檔案一節）。
+![審核步驟中的選擇摘要。](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
-![顯示資料策略違規示例的影像。](../assets/common/data-policy-violation.png)
+### 同意政策評估 {#consent-policy-evaluation}
 
-如果未檢測到任何違反策略的情況，請選擇 **[!UICONTROL 完成]** 確認您的選擇並開始將資料傳送至目的地。
+如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
 
-![顯示區段啟動工作流程審核畫面的影像。](../assets/ui/activate-batch-profile-destinations/review.png)
+### 資料使用原則檢查 {#data-usage-policy-checks}
+
+在 **[!UICONTROL 檢閱]** 步驟中，Experience Platform也會檢查是否有任何資料使用策略違規。 以下顯示違反原則的範例。 除非您解決違規，否則無法完成區段啟用工作流程。 有關如何解決策略違規的資訊，請參閱 [資料使用策略違規](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （位於資料控管檔案一節）。
+
+![資料策略違規](../assets/common/data-policy-violation.png)
+
+### 篩選區段 {#filter-segments}
+
+此外，在此步驟中，您也可以使用頁面上的可用篩選器，以僅顯示排程或對應已隨此工作流程更新的區段。 您也可以切換要查看的表格欄。
+
+![顯示審核步驟中可用區段篩選的螢幕記錄。](/help/destinations/assets/ui/activate-batch-profile-destinations/filter-segments-batch-review.gif)
+
+如果您對您的選擇感到滿意，並且未檢測到任何違反策略的情況，請選擇 **[!UICONTROL 完成]** 確認您的選擇並開始將資料傳送至目的地。
 
 ## 驗證區段啟用 {#verify}
 
-對於電子郵件行銷目的地和雲端儲存空間目的地，Adobe Experience Platform會建立 `.csv` 檔案。 預期會根據您在工作流程中設定的排程，在儲存位置中建立新檔案。 預設檔案格式為：
+對於電子郵件行銷目的地和雲端儲存空間目的地，Adobe Experience Platform會建立 `.csv` 檔案。 預期會根據您在工作流程中設定的排程，在儲存位置中建立新檔案。 預設檔案格式如下所示，但您可以 [編輯檔案名的元件](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 例如，如果您選取每日匯出頻率，您會連續三天收到的檔案可能如下所示：
