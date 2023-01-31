@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Attribution AIUI指南
 description: 本檔案可做為與Intelligent Services使用者介面中的Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2443'
 ht-degree: 0%
 
 ---
@@ -17,41 +17,41 @@ Attribution AI是Intelligent Services的一部分，是多管道的演算法歸�
 
 本檔案可做為與Intelligent Services使用者介面中的Attribution AI互動的指南。
 
-## 建立例項
+## 建立模型
 
 在 [!DNL Adobe Experience Platform] UI, select **[!UICONTROL 服務]** 的下一頁。 此 **[!UICONTROL 服務]** 瀏覽器隨即顯示，並顯示可用的Adobe智慧服務。 在Attribution AI的容器中，選取 **[!UICONTROL 開啟]**.
 
-![存取您的執行個體](./images/user-guide/open_Attribution_ai.png)
+![存取您的模型](./images/user-guide/open_Attribution_ai.png)
 
-Attribution AI服務頁面隨即顯示。 此頁面會列出Attribution AI的服務例項，並顯示其相關資訊，包括例項名稱、轉換事件、執行例項的頻率，以及上次更新的狀態。
+Attribution AI服務頁面隨即顯示。 此頁面列出Attribution AI的服務模型，並顯示其相關資訊，包括模型名稱、轉換事件、模型執行頻率以及上次更新的狀態。
 
-您可以找到 **[!UICONTROL 計分的轉換事件總數]** 位於 **[!UICONTROL 建立例項]** 容器。 此量度會追蹤目前日曆年度中，依Attribution AI評分的轉換事件總數，包括所有沙箱環境和任何已刪除的服務例項。
+您可以找到 **[!UICONTROL 計分的轉換事件總數]** 位於 **[!UICONTROL 建立模型]** 容器。 此量度會追蹤目前日曆年度中，依Attribution AI評分的轉換事件總數，包括所有沙箱環境和任何已刪除的服務模型。
 
 ![總計轉換](./images/user-guide/total_conversions.png)
 
-使用UI右側的控制項，即可編輯、複製及刪除服務例項。 若要顯示這些控制項，請從現有的 **[!UICONTROL 服務實例]**. 控制項包含下列資訊：
+您可以使用UI右側的控制項，來編輯、複製和刪除服務模型。 要顯示這些控制項，請從現有中選取模型 **[!UICONTROL 服務模式]**. 控制項包含下列資訊：
 
-- **[!UICONTROL 編輯]**:選取 **[!UICONTROL 編輯]** 可讓您修改現有的服務執行個體。 您可以編輯例項的名稱、說明、狀態和計分頻率。
-- **[!UICONTROL 原地複製]**:選取 **[!UICONTROL 原地複製]** 複製所選服務實例。 接著，您可以修改工作流程進行微幅調整，並重新命名為新例項。
-- **[!UICONTROL 刪除]**:您可以刪除服務例項，包括任何歷史執行。 將從Platform中刪除對應的輸出資料集。 不過，同步至即時客戶設定檔的分數不會刪除。
+- **[!UICONTROL 編輯]**:選取 **[!UICONTROL 編輯]** 可讓您修改現有的服務模型。 您可以編輯模型的名稱、說明、狀態、計分頻率，以及其他計分資料集欄。
+- **[!UICONTROL 原地複製]**:選取 **[!UICONTROL 原地複製]** 複製所選服務模型。 然後，您可以修改工作流程進行微幅調整，並將其重新命名為新模型。
+- **[!UICONTROL 刪除]**:您可以刪除服務模型，包括任何歷史執行。 將從Platform中刪除對應的輸出資料集。 不過，同步至即時客戶設定檔的分數不會刪除。
 - **[!UICONTROL 資料來源]**:所使用資料集的連結。 如果Attribution AI使用多個資料集，系統會顯示「多個」，後面接著資料集數量。 選取超連結時，資料集預覽彈出視窗隨即顯示。
 - **[!UICONTROL 上次運行詳細資訊]**:唯有執行失敗時，才會顯示此選項。 此處顯示執行失敗原因（例如錯誤代碼）的資訊。
 
 ![側窗格](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL 轉換事件]**:快速概述針對此執行個體設定的轉換事件。
+- **[!UICONTROL 轉換事件]**:快速概述為此模型設定的轉換事件。
 - **[!UICONTROL 回顧期間]**:您定義的時間範圍，指出包含轉換事件接觸點前的天數。
-- **[!UICONTROL 接觸點]**:建立此例項時定義的所有接觸點的清單。
+- **[!UICONTROL 接觸點]**:建立此模型時定義的所有接觸點的清單。
 
 ![](./images/user-guide/side_panel_2.png)
 
-選擇 **[!UICONTROL 建立例項]** 開始。
+選擇 **[!UICONTROL 建立模型]** 開始。
 
-![建立例項](./images/user-guide/landing_page.png)
+![建立模型](./images/user-guide/landing_page.png)
 
-接下來，將顯示Attribution AI的設定頁面，您可在其中提供服務執行個體的名稱和可選說明。
+接下來，將顯示Attribution AI的設定頁面，您可在其中提供服務模型的名稱和可選說明。
 
-![命名例項](./images/user-guide/naming_instance.png)
+![命名模型](./images/user-guide/naming_instance.png)
 
 ## 選擇資料 {#select-data}
 
@@ -227,7 +227,7 @@ Attribution AI中的最後一頁是 **[!UICONTROL 進階]** 用於設定訓練�
 
 ### 其他分數資料集欄（選用）
 
-依預設，會為標準結構中的每個服務例項建立分數資料集。 您可以根據「轉換事件」和「接觸點」設定，選擇新增其他欄至計分資料集輸出。 首先，您可以從輸入資料集中選取欄，接著將滑鼠左鍵按住漢堡圖示上方，即可拖放欄以變更順序。
+依預設，會為標準結構中的每個服務模型建立分數資料集。 您可以根據「轉換事件」和「接觸點」設定，選擇新增其他欄至計分資料集輸出。 首先，您可以從輸入資料集中選取欄，接著將滑鼠左鍵按住漢堡圖示上方，即可拖放欄以變更順序。
 
 ![分數資料集欄加總](./images/user-guide/Add-score-dataset.png)
 
@@ -264,44 +264,6 @@ Attribution AI中的最後一頁是 **[!UICONTROL 進階]** 用於設定訓練�
 選擇培訓窗口後，選擇 **[!UICONTROL 完成]** 在右上角。 讓資料有時間處理。 完成後，畫面會顯示彈出式對話方塊，確認執行個體設定完成。 選擇 **[!UICONTROL 確定]** 被重定向到 **[!UICONTROL 服務實例]** 頁面，您可在其中看到您的服務例項。
 
 ![安裝完成](./images/user-guide/instance_setup_complete.png)
-
-## 治理政策
-
-完成工作流程以建立例項並提交模型的設定後， [政策執行](/help/data-governance/enforcement/auto-enforcement.md) 檢查是否有違規。 如果發生策略違規，將顯示一個彈出窗口，指示已違反一個或多個策略。 這是為了確保您的資料操作和Platform中的行銷動作符合資料使用原則。
-
-![顯示違反原則的彈出視窗](./images/user-guide/policy-violation-popover-aai.png)
-
-彈出式視窗會提供違規的特定資訊。 您可以通過策略設定和與配置工作流不直接相關的其他措施來解決這些違規。 例如，您可以變更標籤，讓某些欄位可用於資料科學用途。 或者，您也可以修改模型配置本身，使其不使用帶有標籤的任何內容。 請參閱本檔案，以進一步了解如何設定 [原則](/help/data-governance/policies/overview.md).
-
-## 以屬性為基礎的存取控制
-
->[!IMPORTANT]
->
->基於屬性的訪問控制當前僅在有限版本中可用。
-
-[基於屬性的訪問控制](../../../help/access-control/abac/overview.md) 是Adobe Experience Platform的功能，可讓管理員根據屬性控制對特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至架構欄位或區段的標籤。 管理員定義了包括屬性的訪問策略以管理用戶訪問權限。
-
-此功能可讓您以標籤來標示Experience Data Model(XDM)結構欄位，並定義組織或資料使用範圍。 同時，管理員可使用使用者和角色管理介面來定義XDM架構欄位的存取原則，並更妥善地管理指派給使用者或使用者群組（內部、外部或第三方使用者）的存取權。 此外，基於屬性的訪問控制允許管理員管理對特定段的訪問。
-
-透過基於屬性的存取控制，管理員可以控制使用者對所有平台工作流程和資源的敏感個人資料(SPD)和個人識別資訊(PII)的存取權。 管理員可以定義只能存取特定欄位和與這些欄位對應的資料的使用者角色。
-
-由於基於屬性的訪問控制，某些欄位和功能可能具有訪問限制，並且對某些Attribution AI服務實例不可用。 例如「身分」、「分數定義」和「原地複製」。
-
-在Attribution AI工作區頂端 **前瞻分析頁面**，側邊欄中顯示的詳細資料會限制存取。
-
-![Attribution AI工作區，其中會強調顯示限制結構欄位。](./images/user-guide/access-restricted.png)
-
-如果您在 **[!UICONTROL 建立執行個體工作流程]** 頁面上，資料集名稱旁會出現警告符號，並顯示訊息： [!UICONTROL 已排除受限資訊].
-
-![Attribution AI工作區中，已反白顯示限制資料集欄位。](./images/user-guide/restricted-info-excluded.png)
-
-在 **[!UICONTROL 建立執行個體工作流程]** 頁面，警告會通知您 [!UICONTROL 由於存取限制，資料集預覽中不會顯示某些資訊。]
-
-![Attribution AI工作區中，預覽的結構欄位限制會反白顯示結果。](./images/user-guide/restricted-dataset-preview.png)
-
-在您建立具有限制資訊的例項後，請繼續前往 **[!UICONTROL 定義目標]** 步驟中，頂端會顯示警告： [!UICONTROL 由於存取限制，設定中未顯示特定資訊。]
-
-![Attribution AI工作區，其中反白顯示實例結果的限制欄位。](./images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## 後續步驟
 

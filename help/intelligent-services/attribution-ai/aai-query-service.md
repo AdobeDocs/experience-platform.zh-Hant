@@ -4,7 +4,7 @@ feature: Attribution AI
 title: 使用查詢服務分析歸因分數
 description: 了解如何使用Adobe Experience Platform Query Service分析Attribution AI分數。
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 在Adobe Experience Platform UI中，選取 **[!UICONTROL 資料集]** 的下一頁。 此 **[!UICONTROL 資料集]** 頁。 下一步，選取 **[!UICONTROL 瀏覽]** 標籤，然後找到Attribution AI分數的輸出資料集。
 
-![存取您的執行個體](./images/aai-query/datasets_browse.png)
+![存取您的模型](./images/aai-query/datasets_browse.png)
 
 選取您的輸出資料集。 資料集活動頁面隨即顯示。
 
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> 在此範例中，您需要取代 `{COLUMN_NAME}` 除 `_tenantId` 和 `your_score_output_dataset`. 此 `COLUMN_NAME` 變數可取用在設定Attribution AI例項期間新增的選用傳遞欄名稱（報表欄）值。 請查看您的計分輸出架構以尋找 `{COLUMN_NAME}` 完成此查詢所需的值。
+> 在此範例中，您需要取代 `{COLUMN_NAME}` 除 `_tenantId` 和 `your_score_output_dataset`. 此 `COLUMN_NAME` 變數可取用在設定Attribution AI模型期間新增的選用傳遞欄名稱（報表欄）的值。 請查看您的計分輸出架構以尋找 `{COLUMN_NAME}` 完成此查詢所需的值。
 
 ```sql
 SELECT 

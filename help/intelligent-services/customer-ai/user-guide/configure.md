@@ -5,9 +5,9 @@ feature: Customer AI
 title: 設定Customer AI例項
 description: AI/ML服務提供Customer AI，作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下各節提供設定Customer AI例項的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 6aff88c0bc5cd15b8b3ffb32458402e1edc873c8
 workflow-type: tm+mt
-source-wordcount: '3342'
+source-wordcount: '2828'
 ht-degree: 0%
 
 ---
@@ -250,46 +250,6 @@ Customer AI會自動對自訂事件(例如 **手錶購買**. 若將此事件視�
 >根據輸入資料的大小，預測執行最多可能需要24小時才能完成。
 
 依照本節所述，您已設定Customer AI的例項並執行預測執行。 當執行成功完成時，如果設定檔切換已啟用，則分數的深入分析會自動填入預測的分數。 請等候最多24小時，再繼續進行本教學課程的下一節。
-
-## 治理政策
-
-完成工作流程以建立例項並提交模型的設定後， [政策執行](/help/data-governance/enforcement/auto-enforcement.md) 檢查是否有違規。 如果發生策略違規，將顯示一個彈出窗口，指示已違反一個或多個策略。 這是為了確保您的資料操作和Platform中的行銷動作符合資料使用原則。
-
-![顯示違反原則的彈出視窗](../images/user-guide/policy-violation-popover-cai.png)
-
-彈出式視窗會提供違規的特定資訊。 您可以通過策略設定和與配置工作流不直接相關的其他措施來解決這些違規。 例如，您可以變更標籤，讓某些欄位可用於資料科學用途。 或者，您也可以修改模型配置本身，使其不使用帶有標籤的任何內容。 請參閱本檔案，以進一步了解如何設定 [原則](/help/data-governance/policies/overview.md).
-
-## 以屬性為基礎的存取控制
-
->[!IMPORTANT]
->
->基於屬性的訪問控制當前僅在有限版本中可用。
-
-[基於屬性的訪問控制](../../../access-control/abac/overview.md) 是Adobe Experience Platform的功能，可讓管理員根據屬性控制對特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至架構欄位或區段的標籤。 管理員定義了包括屬性的訪問策略以管理用戶訪問權限。
-
-此功能可讓您以標籤來標示Experience Data Model(XDM)結構欄位，並定義組織或資料使用範圍。 同時，管理員可使用使用者和角色管理介面來定義XDM架構欄位的存取原則，並更妥善地管理指派給使用者或使用者群組（內部、外部或第三方使用者）的存取權。 此外，基於屬性的訪問控制允許管理員管理對特定段的訪問。
-
-透過基於屬性的存取控制，貴組織的管理員可以控制使用者對所有平台工作流程和資源的敏感個人資料(SPD)和個人識別資訊(PII)的存取權。 管理員可以定義只有特定欄位和與這些欄位對應的資料存取權的使用者角色。
-
-由於基於屬性的存取控制，某些欄位和功能將會受限，且無法用於某些客戶AI服務例項。 例如「身分」、「分數定義」和「原地複製」。
-
-![Customer AI工作區，其中反白顯示服務執行個體結果的限制欄位。](../images/user-guide/unavailable-functionalities.png)
-
-在Customer AI工作區頂端 **前瞻分析頁面**，請注意側邊欄、分數定義、身分和設定檔屬性中的詳細資料都顯示為「存取受限」。
-
-![Customer AI工作區，會醒目顯示結構的限制欄位。](../images/user-guide/access-restricted.png)
-
-<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
-
-![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
-
-在 **[!UICONTROL 建立執行個體工作流程]** 頁面，警告會通知您 [!UICONTROL 由於存取限制，資料集預覽中不會顯示某些資訊。]
-
-![Customer AI工作區，預覽資料集的限制欄位會反白顯示限制結構結果。](../images/user-guide/restricted-dataset-preview-save-and-exit-cai.png)
-
-在您建立具有限制資訊的例項後，請繼續前往 **[!UICONTROL 定義目標]** 步驟中，頂端會顯示警告： [!UICONTROL 由於存取限制，設定中未顯示特定資訊。]
-
-![Customer AI工作區，其中反白顯示服務執行個體結果的限制欄位。](../images/user-guide/information-not-displayed-save-and-exit.png)
 
 ## 後續步驟 {#next-steps}
 

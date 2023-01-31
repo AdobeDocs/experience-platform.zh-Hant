@@ -5,10 +5,10 @@ feature: Customer AI
 title: Customer AI快速入門
 description: 本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 596921163bf64d11545dcde49039bcdd07c253dd
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 1%
+source-wordcount: '572'
+ht-degree: 0%
 
 ---
 
@@ -46,12 +46,6 @@ Experience Platform中的所有資源都會隔離至特定的虛擬沙箱。 對
 ### 讀取範例API呼叫
 
 本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/troubleshooting.md) Experience Platform疑難排解指南中。
-
-## 存取控制 {#access-control}
-
-使用存取控制時， **檢視Customer AI** 和 **管理Customer AI** 權限可授予Customer AI不同功能的存取權。 此 **管理Customer AI** 權限可讓您 **建立**,**更新**, **刪除**, **啟用**，或 **disable** 例項，而 **檢視Customer AI** 可讓您閱讀或檢視。 此 **建立**, **更新** 和 **刪除** 動作會由稽核記錄檔記錄。
-
-請參閱檔案以了解 [為訪問控制分配權限](../../../help/access-control/home.md) 或方法 [使用審核日誌來監視訪問和活動](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## 後續步驟
 
