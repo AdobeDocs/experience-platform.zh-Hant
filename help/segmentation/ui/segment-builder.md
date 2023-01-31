@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的「區段產生器」提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
-source-wordcount: '3101'
+source-wordcount: '3258'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,22 @@ ht-degree: 1%
 如果從列舉清單中選取值，則會以實體邊框框列出值。 不過，對於使用 `meta:enum` （可變）列號，您也可以選取 **not** 從列清單中。 如果您建立自己的值，則會以虛線邊框列出值，並發出警告，指出此值不在列舉清單中。
 
 ![如果插入的值不是枚舉清單的一部分，則會顯示警告。](../images/ui/segment-builder/enum-warning.png)
+
+如果您要建立多個值，則可使用大量上傳一次新增所有值。 選取 ![加號表徵圖](../images/ui/segment-builder/plus-icon.png) 顯示 **[!UICONTROL 大量新增值]** 彈出式視窗。
+
+![此時會強調顯示加號圖示，顯示您可以選取以存取大量上傳彈出視窗的按鈕。](../images/ui/segment-builder/add-bulk-values.png)
+
+在 **[!UICONTROL 大量新增值]** 彈出式視窗中，您可以上傳CSV或TSV檔案。
+
+![此時會顯示「以大量彈出視窗新增值」。 您可以選取上傳CSV或TSV檔案的對話方塊會反白顯示。](../images/ui/segment-builder/bulk-values-popover.png)
+
+或者，您也可以手動新增逗號分隔值。
+
+![此時會顯示「以大量彈出視窗新增值」。 您可用來插入值的對話方塊和新增的值都會反白顯示。](../images/ui/segment-builder/bulk-values-comma-separated.png)
+
+請注意，最多允許250個值。 如果超過此量，您必須先移除某些值，才能新增更多值。
+
+![系統會顯示警告，指出您已達到值數上限。](../images/ui/segment-builder/maximum-values.png)
 
 ### 新增對象
 

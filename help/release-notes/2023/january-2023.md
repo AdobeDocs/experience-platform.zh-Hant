@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: 855ce02dc371621cd8a4b02348e1e74a573123f3
+source-git-commit: b3b496cb6c7ab82455efcbea2b08089ce8ea3184
 workflow-type: tm+mt
-source-wordcount: '1911'
+source-wordcount: '1949'
 ht-degree: 4%
 
 ---
@@ -148,8 +148,9 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 平台產生的區段成員資格有效期 | 任何位於 `Exited` 狀態超過30天，根據 `lastQualificationTime` 欄位可能會遭到刪除。 |
+| 在區段產生器中匯入大量值 | 區段產生器現在支援透過上傳CSV或TSV檔案，或手動插入逗號分隔值，匯入多個值。 如需詳細資訊，請參閱 [區段產生器指南](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | 外部受眾成員資格有效期 | 依預設，外部受眾會籍會保留30天。 若要保留更久，請使用 `validUntil` 欄位。 |
+| 平台產生的區段成員資格有效期 | 任何位於 `Exited` 狀態超過30天，根據 `lastQualificationTime` 欄位可能會遭到刪除。 |
 
 {style=&quot;table-layout:auto&quot;}
 
