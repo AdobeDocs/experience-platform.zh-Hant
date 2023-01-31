@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: 39d00824a17fd0b72de84425e5753945ad454b20
+source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
 workflow-type: tm+mt
-source-wordcount: '1948'
-ht-degree: 5%
+source-wordcount: '2293'
+ht-degree: 7%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 5%
 
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [保證](#assurance)
 - [資料收集](#data-collection)
 - [[!DNL Destinations]](#destinations)
@@ -21,6 +22,39 @@ Adobe Experience Platform 現有功能更新：
 - [即時客戶個人檔案](#profile)
 - [細分服務](#segmentation)
 - [來源](#sources)
+
+## 人工智慧/機器學習服務 {#ai-ml}
+
+人工智慧和機器學習服務讓行銷分析師和從業人員能夠在客戶體驗使用案例中運用AI/ML的強大功能。 這可讓行銷分析人員設定預測，而不需要資料科學的專業知識，而透過業務層級設定來符合公司的需求。
+
+### Attribution AI
+
+Attribution AI可用來將點數歸因於導致轉換事件的接觸點。 行銷人員可善用此工具，協助量化客戶歷程中各個獨立行銷接觸點對行銷的影響。
+
+**更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| HIPAA 整備程度 | 醫療保健防護客戶現在可以在Attribution AI和某些其他基於Experience Platform的應用程式中接收、使用、維護或傳輸受保護的健康資訊。 Healthcare Shield適用於受保護實體或HIPAA管轄的業務關聯的醫療保健客戶。 如需詳細資訊，請參閱 [HIPAA和Adobe產品和服務](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) |
+| 編輯其他分數資料集欄 | 現在當您編輯現有模型時，可以新增或移除其他分數資料集欄（報表欄）。 這可擴充歸因分數的彈性，讓您在建立模型後，就能深入分析其他維度。 請參閱 [歸因UI指南](../../intelligent-services/attribution-ai/user-guide.md) 了解更多。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+請參閱 [AI/ML服務](../../intelligent-services/attribution-ai/overview.md) 概觀以取得詳細資訊。
+
+### Customer AI
+
+Real-time Customer Data Platform適用的Customer AI可產生自訂傾向分數，例如大規模個別設定檔的流失和轉換。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
+
+**更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| HIPAA 整備程度 | Healthcare Shield客戶現在可以在Customer AI中接收、使用、維護或傳輸受保護的健康資訊(適用於Real-time Customer Data Platform和某些其他基於Experience Platform的應用程式)。 Healthcare Shield適用於受保護實體或HIPAA管轄的業務關聯的醫療保健客戶。 如需詳細資訊，請參閱 [HIPAA和Adobe產品和服務](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) |
+
+{style=&quot;table-layout:auto&quot;}
+
+請參閱 [AI/ML服務](../../intelligent-services/customer-ai/overview.md) 概觀以取得詳細資訊。
 
 ## 保證 {#assurance}
 
