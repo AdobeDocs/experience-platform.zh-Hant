@@ -4,7 +4,7 @@ solution: Experience Platform
 feature: Customer AI
 title: Customer AI的存取控制
 description: 本檔案提供Customer AI基於屬性的存取控制資訊。
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 0%
@@ -42,8 +42,8 @@ ht-degree: 0%
 
 使用存取控制時， **檢視Customer AI** 和 **管理Customer AI** 權限可授予Customer AI不同功能的存取權。 此 **管理Customer AI** 權限可讓您 **建立**,**更新**, **刪除**, **啟用**，或 **disable** 模型 **檢視Customer AI** 可讓您閱讀或檢視。 此 **建立**, **更新** 和 **刪除** 動作會由稽核記錄檔記錄。
 
-請參閱檔案以了解 [為訪問控制分配權限](../../../help/access-control/home.md) 或方法 [使用審核日誌來監視訪問和活動](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+請參閱檔案以了解 [為訪問控制分配權限](../../../access-control/home.md) 或方法 [使用審核日誌來監視訪問和活動](../../../landing/governance-privacy-security/audit-logs/overview.md).
 
 ## 後續步驟
 
-閱讀本指南後，您便了解了 [!DNL Experience Platform]. 您現在可以繼續 [存取控制使用手冊](./ui/overview.md) 以取得如何使用的詳細步驟 [!DNL Admin Console] 若要建立產品設定檔並指派權限 [!DNL Platform].
+閱讀本指南後，您便了解了 [!DNL Experience Platform]. 您現在可以繼續 [存取控制使用手冊](../overview.md) 以取得如何使用的詳細步驟 [!DNL Admin Console] 若要建立產品設定檔並指派權限 [!DNL Platform].

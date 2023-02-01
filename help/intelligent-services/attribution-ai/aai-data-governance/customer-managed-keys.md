@@ -1,9 +1,8 @@
 ---
 keywords: 前瞻分析；歸因ai；歸因ai深入分析；AAI查詢服務；歸因查詢；歸因分數；AAI中的客戶管理金鑰
-feature: Customer-Managed Keys in Attribution AI
 title: 客戶自控金鑰
 description: 了解如何為Attribution AI設定客戶管理金鑰。
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%

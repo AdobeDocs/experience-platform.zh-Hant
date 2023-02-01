@@ -1,12 +1,11 @@
 ---
 keywords: 前瞻分析；customer ai;customer ai深入分析；AAI查詢服務；customer ai查詢；customer ai分數；CAI中的客戶管理密鑰
-feature: Customer-Managed Keys in Customer AI
-title: 客戶自控金鑰
+title: Customer AI中的客戶管理金鑰。
 description: 了解如何設定Customer AI的客戶管理金鑰。
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: f80cdd553c36ee10cfbf07c5cbbb14e9a4ae6757
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 24%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 

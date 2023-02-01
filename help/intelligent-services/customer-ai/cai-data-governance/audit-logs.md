@@ -1,11 +1,10 @@
 ---
 keywords: 前瞻分析；customer ai;customer ai前瞻分析；CAI查詢服務；customer ai查詢；customer ai分數
-feature: Customer AI audit logs
-title: 稽核記錄概述
+title: Customer AI中的稽核記錄概述
 description: 了解如何在Customer AI中檢視及管理稽核記錄。
-source-git-commit: 3b1cc7ca710071df9de06428f7eed2993219ae1a
+source-git-commit: 6f386d859b8553050ead266fad0e473c7cf7095e
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '279'
 ht-degree: 36%
 
 ---
@@ -22,4 +21,4 @@ ht-degree: 36%
 
 為您的組織啟用此功能後，活動發生時系統自動收集稽核記錄。您無需手動啟用記錄收集。
 
-若要檢視和匯出稽核記錄，您必須已被授予 Adobe Console 中的稽核記錄存取權存取控制權限。若要了解如何管理Customer AI功能的個別權限，請參閱 [存取控制檔案](../../customer-ai/user-guide/access-controls.md).
+若要檢視和匯出稽核記錄，您必須已被授予 Adobe Console 中的稽核記錄存取權存取控制權限。若要了解如何管理Customer AI功能的個別權限，請參閱 [存取控制檔案](../cai-data-governance/access-controls.md).
