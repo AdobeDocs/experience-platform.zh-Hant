@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: f7bcd009882d9753638ba2ce692df9fe80287641
+source-git-commit: 667e868f2faba3ac3f241a2e2cd04d6de67f48c7
 workflow-type: tm+mt
-source-wordcount: '2293'
-ht-degree: 7%
+source-wordcount: '2443'
+ht-degree: 6%
 
 ---
 
@@ -83,7 +83,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 
 {style=&quot;table-layout:auto&quot;}
 
-## 目的地 {#destinations}
+## 目的地（2月2日更新） {#destinations}
 
 [!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 
@@ -114,6 +114,10 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
         <td>更新匯出行為至檔案式目的地(PLAT-123316)</td>
         <td>我們已修正 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">必填屬性</a> 將資料檔案匯出至批次目的地時。 <br> 以前，輸出檔案中的每個記錄都經過驗證以包含這兩項： <ol><li>的非空值 <code>mandatoryField</code> 欄和</li><li>在其它非必填欄位中至少一個上的非空值。</li></ol> 已移除第二個條件。 因此，您可能會在匯出的資料檔案中看到更多輸出列，如下列範例所示：<br> <b> 2023年1月版本之前的範例行為 </b> <br> 必填欄位： <code>emailAddress</code> <br> <b>輸入要激活的資料</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>約翰</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>傑尼弗</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> <br> <b>啟動輸出</b> <br><table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>約翰</td><td>john@acme.com</td></tr><tr><td>傑尼弗</td><td>jennifer@acme.com</td></tr></tbody></table> <br> <b> 2023年1月發行後的範例行為 </b> <br> <b>啟動輸出</b> <br> <table><thead><tr><th>firstName</th><th>emailAddress</th></tr></thead><tbody><tr><td>約翰</td><td>john@acme.com</td></tr><tr><td>null</td><td>peter@acme.com</td></tr><tr><td>傑尼弗</td><td>jennifer@acme.com</td></tr><tr><td>null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
+    <tr>
+        <td>必要對應和重複對應的UI和API驗證(PLAT-123316)</td>
+        <td>現在，當 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">對應欄位</a> 在「啟動目標」工作流程中：<ul><li><b>必要對應</b>:如果目的地開發人員已使用必要對應來設定目的地(例如 <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en">Google Ad Manager 360</a> 目的地)，則使用者在將資料啟動至目的地時，需要新增這些必要對應。 </li><li><b>重複映射</b>:在啟動工作流程的對應步驟中，您可以在來源欄位中新增重複值，但不能在目標欄位中新增。 有關允許和禁止的映射組合的示例，請參閱下表。 <br><table><thead><tr><th>允許/禁止</th><th>來源欄位</th><th>目標欄位</th></tr></thead><tbody><tr><td>允許</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>電子郵件別名2</li></ul></td></tr><tr><td>禁止</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+    </tr>    
 </table>
 
 如需目的地的詳細一般資訊，請參閱 [目的地概述](../../destinations/home.md).
