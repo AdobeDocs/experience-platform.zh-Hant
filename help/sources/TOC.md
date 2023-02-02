@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 2d9cd6ed1db7bcbbe9b35c154e09a6b03f9a132d
+source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 12%
+source-wordcount: '928'
+ht-degree: 11%
 
 ---
 
@@ -329,6 +329,15 @@ ht-degree: 12%
       - [在本機環境中使用文字編輯器來建立來源檔案頁面](sources-sdk/documentation/text-editor.md)
       - [檔案自助API範本](sources-sdk/documentation/template.md)
       - [檔案自助服務UI範本](sources-sdk/documentation/ui-template.md)
+   - 串流SDK {#streaming-sdk}
+      - [開始使用自助來源（串流SDK）](sources-sdk/streaming/getting-started.md)
+      - [為流源建立連接規範](sources-sdk/streaming/create.md)
+      - [更新流源的連接規範](sources-sdk/streaming/update-connection-specs.md)
+      - [更新串流流規格](sources-sdk/streaming/update-flow-specs.md)
+      - [測試並提交連接規範以進行驗證](sources-sdk/streaming/submit.md)
+      - [記錄來源（串流SDK）](sources-sdk/streaming/document-streaming.md)
+      - [檔案自助服務API串流範本](sources-sdk/streaming/streaming-template-api.md)
+      - [檔案自助服務UI串流範本](sources-sdk/streaming/streaming-template-ui.md)
 - [流運行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
