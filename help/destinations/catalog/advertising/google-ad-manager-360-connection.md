@@ -2,10 +2,10 @@
 title: （測試版） [!DNL Google Ad Manager 360] 連接
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈商管理其網站上、透過視訊和行動應用程式的廣告顯示。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '914'
-ht-degree: 1%
+source-wordcount: '926'
+ht-degree: 2%
 
 ---
 
@@ -54,19 +54,15 @@ ht-degree: 1%
 
 ### 允許清單 {#allow-listing}
 
+在設定第一個 [!DNL Google Ad Manager 360] 目標。 建立目的地之前，請務必完成下述的允許清單程式。
+
 >[!NOTE]
 >
->設定第一個允許清單之前，此為必填清單 [!DNL Google Ad Manager] 目標。 請確保以下所述的允許清單進程已由 [!DNL Google] 建立目的地之前。
+>此規則的例外是現有 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 客戶。 如果您已Audience Manager建立連線至此Google目的地，則不需要再次執行允許清單程式，您可以繼續執行後續步驟。
 
->[!IMPORTANT]
->
->Google已簡化將外部觀眾管理平台連線至Google Ad Manager 360的程式。 您現在可以自助方式完成連結至Google Ad Manager 360的程式。 閱讀 [來自資料管理平台的區段](https://support.google.com/admanager/answer/3289669?hl=en) 在Google檔案中。 您應將ID列於下方。
+1. 請依照 [Google Ad Manager檔案](https://support.google.com/admanager/answer/3289669?hl=en) 將Adobe新增為連結的資料管理平台(DMP)。
+2. 在 [!DNL Google Ad Manager] 介面，轉到 **[!UICONTROL 管理]** > **[!UICONTROL 全域設定]** > **[!UICONTROL 網路設定]**，並啟用 **[!UICONTROL API存取]** 滑桿。
 
-* **帳戶ID**:Adobe的帳戶ID與Google。 帳戶ID:87933855。
-* **客戶ID**:Adobe的客戶帳戶ID與Google。 客戶ID:89690775。
-* **網路代碼**:這是您的 [!DNL Google Ad Manager] 網路標識符，位於 **[!UICONTROL 「管理員>全域設定」]** 在Google介面以及URL中。
-* **對象連結ID**:這是與 [!DNL Google Ad Manager] 網路(不是 [!DNL Network code])，也位於 **[!UICONTROL 「管理員>全域設定」]** 在Google介面中。
-* 您的帳戶類型。 Google或AdX購買者提供的DFP。
 
 ## 連接到目標 {#connect}
 
@@ -91,12 +87,12 @@ ht-degree: 1%
 
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 * **[!UICONTROL 說明]**:選填。 例如，您可以提及您使用此目的地的促銷活動。
-* **[!UICONTROL 貯體名稱]**:輸入 [!DNL Google Cloud Storage] 此目的地所使用的貯體。
 * **[!UICONTROL 資料夾路徑]**:輸入要承載導出檔案的目標資料夾的路徑。
-* **[!UICONTROL 帳戶ID]**:以填入您的對象連結ID [!DNL Google].
-* **[!UICONTROL 帳戶類型]**:根據您使用Google的帳戶選取選項：
-   * 使用 `DFP by Google` for [!DNL DoubleClick] 適用於發佈者
+* **[!UICONTROL 貯體名稱]**:輸入 [!DNL Google Cloud Storage] 此目的地所使用的貯體。
+* **[!UICONTROL 帳戶ID]**:輸入 [!DNL Audience Link ID] 從 [!DNL Google] 帳戶。 這是與 [!DNL Google Ad Manager] 網路(不是 [!DNL Network code])。 您可以在 **[!UICONTROL 「管理員>全域設定」]** 在 [!DNL Google Ad Manager] 介面。
+* **[!UICONTROL 帳戶類型]**:根據您的 [!DNL Google] 帳戶：
    * 使用 `AdX buyer` for [!DNL Google AdX]
+   * 使用 `DFP by Google` for [!DNL DoubleClick] 適用於發佈者
 
 ### 啟用警報 {#enable-alerts}
 
@@ -127,3 +123,12 @@ ht-degree: 1%
 ## 匯出的資料 {#exported-data}
 
 若要確認資料是否已成功匯出，請檢查 [!DNL Google Cloud Storage] 儲存貯體，並確認匯出的檔案包含預期的設定檔母體。
+
+## 疑難排解 {#troubleshooting}
+
+如果您在使用此目的地時遇到任何錯誤，且需要聯絡Adobe或Google，請保留下列ID。
+
+這些是Adobe的Google帳戶ID:
+
+* **[!UICONTROL 帳戶ID]**:87933855
+* **[!UICONTROL 客戶ID]**:89690775
