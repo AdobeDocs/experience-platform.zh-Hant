@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: e4e87fdb5f6dfbca882f924d38397a904d8b0cff
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1865'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 例如，如果旅行和旅館業中的企業正在為航班預訂事件建模，則類別級別 `timestamp` 欄位代表觀察保留事件的時間。 與事件相關的其他時間戳記，例如旅行預訂的開始日期，應在標準或自訂欄位群組提供的個別欄位中擷取。
 
-![](../images/classes/experienceevent/timestamps.png)
+![以「航班預訂」和「開始日期」為主的體驗事件結構範例。](../images/classes/experienceevent/timestamps.png)
 
 通過將類級時間戳記與事件結構中的其他相關日期時間值分開，您可以實施靈活的分段使用案例，同時保留體驗應用程式中客戶歷程的時間戳記帳戶。
 
