@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 自動策略實施
 description: 本檔案說明在Experience Platform中將區段啟用至目的地時，如何自動強制執行資料使用原則。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c0f077d685c688f96d1778a02b24c0959a5dd822
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,16 @@ ht-degree: 0%
 ### 同意政策評估 {#consent-policy-evaluation}
 
 若您有 [建立同意政策](../policies/user-guide.md#consent-policy) 和要將區段啟用至目的地時，您可以了解您的同意政策如何影響啟用中包含之設定檔的百分比。
+
+#### 付費媒體的同意政策增強 {#consent-policy-enhancement}
+
+已增強在串流目的地（包括付費媒體啟用）強制執行同意政策的功能。 此增強功能適用於隱私和安全防護盾或醫療保健防護盾的客戶，並在同意狀態變更時主動從流目的地刪除配置檔案。 同時也可確保同意變更立即傳播，以便一律鎖定正確的對象。
+
+這些改善讓行銷人員不再需要手動將同意屬性新增至其區段運算式，因此能讓您對行銷策略有更大的信任。 這可確保一旦撤回同意或不再符合同意政策的資格，就不會在不慎將設定檔鎖定為任何行銷體驗。 設定如何管理不同行銷工作流程之同意或偏好資料的行銷同意政策，現在會在下游解決方案的啟用工作流程中自動強制執行。
+
+>[!NOTE]
+>
+>此增強功能不會變更UI。
 
 #### 激活前評估
 
