@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 描述符API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述元。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: f7a6f53c0993348c9a0fc0f935a9d02d54389311
+source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 2%
+source-wordcount: '1900'
+ht-degree: 3%
 
 ---
 
@@ -357,7 +357,7 @@ curl -X DELETE \
 | `xdm:title` | 您要為此欄位顯示的新標題，寫在標題案例中。 |
 | `xdm:description` | 可新增選用說明及標題。 |
 | `meta:enum` | 如果以指示的欄位 `xdm:sourceProperty` 是字串欄位， `meta:enum` 可用來為區段UI中的欄位新增建議值。 請務必注意 `meta:enum` 不會宣告分項或提供XDM欄位的任何資料驗證。<br><br>此欄位僅應用於Adobe定義的核心XDM欄位。 如果來源屬性是貴組織定義的自訂欄位，您應改為編輯欄位的 `meta:enum` 屬性，直接透過欄位的上層資源的PATCH請求。 |
-| `meta:excludeMetaEnum` | 如果以指示的欄位 `xdm:sourceProperty` 是字串欄位，其中包含 `meta:enum` 欄位中，您可以將此物件包含在易記名稱描述元中，以從分段中排除這些值的部分或全部。 每個項目的鍵值和值必須與原始條目中包含的鍵值和值匹配 `meta:enum` ，以便排除項目。<br><br>請務必注意，您只能排除包含之字串欄位的值 **僅建議值**. 如果字串欄位包含實際 `enum` 限制，則無法停用其相關的建議值。 `enum` 貴組織定義之自訂資源的欄位可透過PATCH請求編輯，但 `enum` 無法移除標準Adobe定義資源的欄位。 |
+| `meta:excludeMetaEnum` | 如果以指示的欄位 `xdm:sourceProperty` 是字串欄位，其中包含 `meta:enum` 欄位中，您可以將此物件包含在易記名稱描述元中，以從分段中排除這些值的部分或全部。 每個項目的鍵值和值必須與原始條目中包含的鍵值和值匹配 `meta:enum` ，以便排除項目。 |
 
 {style=&quot;table-layout:auto&quot;}
 
