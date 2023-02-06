@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與Amazon Kinesis儲存體的即時傳出連線，以串流來自Adobe Experience Platform的資料。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
+source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1958'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Amazon Kinesis]
 
 | 決定目標匯出的因素 | 目的地匯出包含的項目 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至 [!DNL Amazon Kinesis] 目的地、指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>所有段（具有最新的成員資格狀態），無論它們是否映射到資料流中，都會包含在 `segmentMembership` 物件。</li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援 [!DNL Amazon Kinesis] 目的地)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至 [!DNL Amazon Kinesis] 目的地、指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援 [!DNL Amazon Kinesis] 目的地)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
 {style=&quot;table-layout:fixed&quot;}
 
@@ -177,7 +177,7 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Amazon Kinesis]
 
 ![Amazon Kinesis目的地資料流](../../assets/catalog/http/profile-export-example-dataflow.png)
 
-匯出至目的地的設定檔可由符合以下條件之一或退出該條件的設定檔來決定 *三個已對應區段*. 不過，在資料匯出中， `segmentMembership` 物件(請參閱 [匯出的資料](#exported-data) )，則如果該特定設定檔是其成員，則可能會顯示其他未映射的區段。 如果設定檔符合「使用德羅林汽車」區段的客戶資格，但同時也是「已觀看的回到未來」電影和科幻影迷區段的成員，則另外兩個區段也會出現在 `segmentMembership` 對象，即使這些對象未映射到資料流中。
+匯出至目的地的設定檔可由符合以下條件之一或退出該條件的設定檔來決定 *三個已對應區段*. 不過，在資料匯出中， `segmentMembership` 物件(請參閱 [匯出的資料](#exported-data) )，則可能會顯示其他未映射的區段，如果該特定設定檔是其成員，且這些區段與觸發匯出的區段共用相同的合併原則。 如果設定檔符合 **DeLorean汽車的客戶** 區段，但亦為 **觀看「回到未來」** 電影和 **科幻迷** 區段，則另外兩個區段也會出現在 `segmentMembership` 資料導出的對象，即使這些對象未映射到資料流中，如果這些對象與共用相同的合併策略 **DeLorean汽車的客戶** 區段。
 
 從設定檔屬性的觀點來看，對上述四個屬性所做的任何變更將決定目的地匯出，而設定檔上呈現的四個對應屬性中的任何一個將出現在資料匯出中。
 

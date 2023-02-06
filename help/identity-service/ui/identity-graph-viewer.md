@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 身分圖表檢視器概述
 description: 身分圖是特定客戶不同身分之間關係的地圖，可以透過視覺化呈現方式呈現客戶如何透過不同管道與品牌互動。
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Platform使用者介面中的身分圖表檢視器可讓您視覺化，並更清
 - **連結（邊緣）:** 連結或邊緣代表身分之間的連線。
 - **圖表（叢集）:** 圖形或叢集是代表人員的身分和連結群組。
 
-## 存取身分圖表檢視器
+## 存取身分圖表檢視器 {#access-identity-graph-viewer}
 
 若要在UI中使用身分圖表檢視器，請選取 **[!UICONTROL 身分]** 在左側導覽器中，然後選取 **[!UICONTROL 身分圖]** 標籤。 從 **[!UICONTROL 身分命名空間]** 螢幕上，按一下 **[!UICONTROL 選取身分命名空間]** 圖示來搜尋您要使用的命名空間。
 

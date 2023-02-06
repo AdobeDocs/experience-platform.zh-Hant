@@ -3,10 +3,10 @@ keywords: 目的地；adobe experience platform；平台；目的地概述；啟
 title: 目的地概觀
 description: 目的地是預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的目的地，針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 944f307ecb4cf174c9f9818ded17546057f445e4
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 1%
+source-wordcount: '755'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +45,7 @@ Platform的其中一項核心功能是擷取您的第一方資料，並根據您
 
 ## 目的地類型和類別 {#types-and-categories}
 
-如需詳細資訊，請參閱 [目的地類型與類別概觀](./destination-types.md).
+透過Experience Platform，您可以針對各種類型的目的地啟用資料，以符合您的啟用使用案例。 目的地範圍包括API型整合、與檔案接收系統的整合、設定檔查詢目的地等。 如需所有可用目的地的詳細資訊，請參閱 [目的地類型與類別概觀](./destination-types.md).
 
 ## 目的地和存取控制 {#access-controls}
 
@@ -69,6 +69,12 @@ Adobe Experience Platform中以屬性為基礎的存取控制可讓管理員根�
 使用基於屬性的訪問控制，您可以將映射配置應用到您有權限的欄位。 此外，如果您沒有資料集中所有欄位的存取權，則無法將資料匯出至目的地。
 
 如需目標如何搭配屬性型存取控制運作的詳細資訊，請參閱 [基於屬性的訪問控制概述](../access-control/abac/overview.md#destinations).
+
+## 目標監視 {#destinations-monitoring}
+
+建立與目的地的連線並完成啟動工作流程後，您可以監控匯出至您接收系統的資料。 閱讀 [在UI中監控資料流到目的地的指南](/help/dataflows/ui/monitor-destinations.md) 以取得更多資訊。
+
+您也可以驗證資料是否成功傳入您的目的地。 目錄中的大部分目的地檔案頁面都有 *驗證資料匯出區段*，指出如何在目標平台中檢查資料是否正從Experience Platform成功傳入。
 
 ## 針對將資料啟用至目的地的資料控管限制 {#data-governance}
 

@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地類型
 title: 目的地類型和類別
 description: 了解Adobe Experience Platform中不同的目的地類型和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,11 @@ ht-degree: 0%
 
 ## 目的地類型 {#destination-types}
 
-在Adobe Experience Platform中，我們區分兩種目的地類型：連線和擴充功能。 連線目的地分為兩種類型：設定檔匯出目的地和區段匯出目的地。
+在Adobe Experience Platform中，我們會區分不同的目的地類型：連線、資料集匯出和擴充功能。 有數種連線目的地，可讓您將資料匯出至以API為基礎的目的地。
 
-![目的地類型](./assets/destination-types/types-of-destinations.png)
+最後，還可以區分目標目錄中所有組織中可用的公共目標與Real-time CDP Ultimate客戶可建立的專用目標，以滿足其特定的導出使用案例。
+
+![目的地圖表的類型。](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## 連線 {#connections}
 
