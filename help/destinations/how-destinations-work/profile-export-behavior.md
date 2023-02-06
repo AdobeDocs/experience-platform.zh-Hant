@@ -1,7 +1,7 @@
 ---
 title: 設定檔匯出行為
 description: 了解設定檔匯出行為如何因Experience Platform目的地支援的不同整合路徑而有所不同。
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
 workflow-type: tm+mt
 source-wordcount: '2926'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Experience Platform會最佳化設定檔匯出行為至您的串流目的地，�
 
 從設定檔屬性的檢視點，對上述三個屬性所進行的任何變更都將決定目的地匯出。
 
->[!BEGINSHADEBOX]
+>[!ENDSHADEBOX]
 
 ## 批次（檔案型）目的地 {#file-based-destinations}
 
