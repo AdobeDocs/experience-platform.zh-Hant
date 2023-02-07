@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 參考API端點
 description: 訪問控制API中的引用端點允許您查看可用權限和資源類型的名稱，然後這些權限和資源類型可用於查看當前用戶的有效訪問控制策略。
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '188'
 ht-degree: 1%
 
 ---
 
 # 參考端點
+
+>[!NOTE]
+>
+>如果傳遞了使用者Token，則Token的使用者必須對請求的組織具有「組織管理員」角色。
 
 您可以向發出GET要求，以列出所有權限和資源類型的名稱 `/acl/reference` 端點。 然後，這些名稱便可用於對 [查看有效的訪問控制策略](./effective-policies.md) 針對目前使用者。
 

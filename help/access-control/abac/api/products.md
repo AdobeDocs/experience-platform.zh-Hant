@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 產品API端點
 description: 屬性型存取控制API中的/products端點可讓您以程式設計方式管理Adobe Experience Platform中的產品。
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '515'
 ht-degree: 3%
 
 ---
 
 # 產品端點
+
+>[!NOTE]
+>
+>如果傳遞了使用者Token，則Token的使用者必須對請求的組織具有「組織管理員」角色。
 
 此 `/products` 屬性型存取控制API中的端點可讓您以程式設計方式管理產品，以及與貴組織產品相關聯的權限類別和權限集。
 

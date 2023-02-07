@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 存取控制原則API端點
 description: 屬性型存取控制API中的/policys端點可讓您以程式設計方式管理Adobe Experience Platform中的原則。
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1435'
 ht-degree: 2%
 
 ---
 
 # 訪問控制策略終結點
+
+>[!NOTE]
+>
+>如果傳遞了使用者Token，則Token的使用者必須對請求的組織具有「組織管理員」角色。
 
 訪問控制策略是將屬性集合在一起以建立允許和不允許的操作的語句。 這些策略可以是本地策略或全局策略，也可以覆蓋其他策略。 此 `/policies` 屬性型存取控制API中的端點可讓您以程式設計方式管理原則，包括規範原則的規則及其各自主旨條件的相關資訊。
 

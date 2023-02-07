@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 有效策略API端點
 description: 了解如何使用Adobe Experience Platform的存取控制API檢視有效的存取原則。
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 2%
+source-wordcount: '318'
+ht-degree: 1%
 
 ---
 
 # 有效策略終點
+
+>[!NOTE]
+>
+>如果傳遞了使用者Token，則Token的使用者必須對請求的組織具有「組織管理員」角色。
 
 要查看當前用戶的有效訪問控制策略，請向以下用戶發出POST請求： `/acl/effective-policies` 端點 [!DNL Access Control] API。 您要擷取的權限和資源類型必須以陣列的形式提供於要求裝載中。 以下範例API呼叫中已示範此問題。
 

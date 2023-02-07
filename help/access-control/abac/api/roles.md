@@ -4,14 +4,18 @@ solution: Experience Platform
 title: 角色API端點
 description: 屬性型存取控制API中的/roles端點可讓您以程式設計方式管理Adobe Experience Platform中的角色。
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1606'
 ht-degree: 3%
 
 ---
 
 # 角色端點
+
+>[!NOTE]
+>
+>如果傳遞了使用者Token，則Token的使用者必須對請求的組織具有「組織管理員」角色。
 
 角色定義管理員、專家或一般使用者對您組織中資源的存取權。 在基於角色的訪問控制環境中，用戶訪問配置是通過共同的責任和需求進行分組的。 角色具有一組指定的權限，而您組織的成員可以根據其所需的檢視或寫入存取範圍，指派給一或多個角色。
 
