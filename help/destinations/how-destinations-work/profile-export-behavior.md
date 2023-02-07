@@ -1,9 +1,9 @@
 ---
 title: 設定檔匯出行為
 description: 了解設定檔匯出行為如何因Experience Platform目的地支援的不同整合路徑而有所不同。
-source-git-commit: 07b92bc06f28bc37673ae71a45ff0e76de9bce9b
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '2926'
+source-wordcount: '2944'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,9 @@ Experience Platform會最佳化設定檔匯出行為至您的企業目的地，�
 
 ## 以API為基礎的串流目的地 {#streaming-api-based-destinations}
 
-串流目的地(例如Facebook、交易台和其他API型整合)的設定檔匯出行為與上述相同。
+串流目的地(例如Facebook、交易台和其他API型整合)的設定檔匯出行為與上述企業目的地的行為非常類似。
 
-目的地範例：廣告、社交等
+串流目的地的範例是屬於 [社交和廣告類別](/help/destinations/destination-types.md#categories) 在目錄中。
 
 Experience Platform會最佳化設定檔匯出行為至您的串流目的地，以便只有在符合區段資格或其他重大事件後，當設定檔發生相關更新時，才能將資料匯出至以API為基礎的串流目的地。 設定檔會在下列情況下匯出至您的目的地：
 

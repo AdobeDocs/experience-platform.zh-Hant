@@ -1,9 +1,9 @@
 ---
 title: 目的地啟動工作流程中的身分處理
 description: 了解在啟動工作流程中如何根據目的地類型處理身分匯出
-source-git-commit: 6ccf26cbdbbe675d0d731f59cee589d63ca6f8ad
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1186'
 ht-degree: 1%
 
 ---
@@ -107,3 +107,5 @@ ht-degree: 1%
 閱讀本檔案後，您現在知道如何找出個別目的地支援或需要的身分。 您現在也知道身分選擇對於每個目的地類型的運作方式。
 
 接下來，你可以讀到 [匯出設定](/help/destinations/how-destinations-work/destinations-configurations.md) 目的地在各種目的地類型中都很常見，開發人員可在個別目的地層級上設定，而使用者可在啟用工作流程中編輯哪些設定。
+
+您也可以查看 [目錄](/help/destinations/catalog/overview.md).

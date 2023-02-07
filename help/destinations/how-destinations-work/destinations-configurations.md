@@ -1,9 +1,9 @@
 ---
 title: 目的地中的可設定和通用匯出設定
 description: 了解目標中的哪些匯出設定可在目標層級設定，哪些已修正且無法編輯。
-source-git-commit: 04322d10a88b27d5641ab9474c8387945aab9982
+source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '845'
 ht-degree: 0%
 
 ---
@@ -63,5 +63,7 @@ ht-degree: 0%
 ## 後續步驟 {#next-steps}
 
 閱讀本檔案後，您現在知道各目的地類型中哪些匯出設定是常見的，可由開發人員在個別目的地層級上設定，以及哪些設定可由使用者在啟動工作流程中編輯。
+
+接下來，您可以閱讀 [每個目標類型的常見導出行為模式](/help/destinations/how-destinations-work/profile-export-behavior.md).
 
 若為目的地開發人員，您可以 [快速入門](/help/destinations/destination-sdk/getting-started.md) Destination SDK。 若是想要啟用資料的使用者，您可以查看 [目錄](/help/destinations/catalog/overview.md).
