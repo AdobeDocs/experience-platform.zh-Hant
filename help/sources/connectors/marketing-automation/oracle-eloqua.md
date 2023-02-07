@@ -1,12 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；oracle;oracle口水；雄辯
-solution: Experience Platform
 title: OracleEloqua Connector概述
 description: 了解如何使用API或使用者介面將EloquaOracle連線至Adobe Experience Platform。
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '227'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
