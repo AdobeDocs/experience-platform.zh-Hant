@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: c60c58e563a324c4f8f90eac04686f2190e8448d
+source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2444'
+source-wordcount: '2432'
 ht-degree: 6%
 
 ---
@@ -130,7 +130,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 | 功能 | 說明 |
 | --- | --- |
-| 停用字串欄位的建議值 | 您現在可以 [停用字串欄位的個別建議值](../../xdm/ui/fields/enum.md) 在 [!UICONTROL 結構] 工作區，包括標準元件的工作區。 此功能僅適用於具有建議值的欄位，且不支援列舉限制。 |
+| 結構樹顯示名稱改善 | 過去，欄位名稱會顯示在UI中，但現在，架構畫布上架構欄位的顯示名稱更容易讀取。 |
 
 **新XDM元件**
 
