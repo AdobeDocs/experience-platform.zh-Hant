@@ -2,9 +2,9 @@
 description: 本頁提供您提交以審核使用Destination SDK製作的已產品化目標所需的所有資訊。
 title: 提交以審閱在Destination SDK中創作的已產品化目標
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 1eab40687c599d37c71b919bc3a4aeae274b0a49
+source-git-commit: 73f1faaffd4a77c9c09eccf00d5a0ff98580b232
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,8 @@ ht-degree: 0%
 
 此頁面列出您在提交或更新使用Adobe Experience Platform Destination SDK製作的目的地時需要提供的所有資訊。 若要在Adobe Experience Platform中成功提交目的地，請傳送電子郵件至 <aepdestsdk@adobe.com> 包括：
 
-* 目的地解決的使用案例說明。 如果要更新現有的目標配置，則不需要此操作。
+* 目的地解決的使用案例說明。 只有在提交新目標配置時，才需要此選項。
+* 目的地提交原因的說明。 只有在更新現有目標配置時，才需要此選項。
 * 使用測試目的地API端點對您的目的地執行HTTP呼叫後的測試結果。 請與Adobe共用對您的目的地端點進行的API呼叫，以及從您的目的地端點收到的API回應。
 * 檔案型目的地的其他需求：
    * 使用測試API後，共用請求和回應範例以 [使用範例設定檔測試您的檔案型目的地](/help/destinations/destination-sdk/file-based-destination-testing-api.md).
@@ -46,6 +47,14 @@ ht-degree: 0%
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md):從您的客戶清單、造訪過您網站的人員或已在Pinterest上與您的內容互動的人員建立對象。
 * [Yahoo資料X](/help/destinations/catalog/advertising/datax.md#use-cases):廣告商若想鎖定在Verizon Media(VMG)中輸入電子郵件地址的特定對象群組，可使用VMG的近乎即時API快速建立新區段，並推送所需的對象群組，即可使用DataX API。
+
+## 更新原因 {#reason-for-update}
+
+>[!NOTE]
+>
+>只有在更新現有配置時，才需要此部分。
+
+提供您提交解決現有目的地問題的簡短說明。 例如，您的提交作業可能會在您從測試版移至正式發行時，更新目的地的名稱、說明和標誌。 或者，您的提交可能會修正在目的地設定中發現的錯誤。
 
 ## 使用測試目的地API後的測試結果 {#testing-api-response}
 
