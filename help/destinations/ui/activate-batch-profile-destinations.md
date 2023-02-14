@@ -4,9 +4,9 @@ title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3537'
+source-wordcount: '3595'
 ht-degree: 0%
 
 ---
@@ -466,6 +466,11 @@ Adobe建議您選取身分命名空間，例如 [!DNL CRM ID] 或電子郵件地
 ![審核步驟中的選擇摘要。](/help/destinations/assets/ui/activate-batch-profile-destinations/review.png)
 
 ### 同意政策評估 {#consent-policy-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="檢視適用的同意政策"
+>abstract="如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 如果您的公司沒有上述SKU的存取權，此控制即會停用。"
 
 如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
 
