@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 體驗事件過期
 description: 本檔案提供設定Adobe Experience Platform資料集內個別Experience Event過期時間的一般指引。
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0fce883528abc62075914abc4a8f81d2bff8f2e6
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 在啟用設定檔的資料集上啟用「體驗事件」過期後，Platform會透過兩步驟程式自動套用每個擷取事件的過期值：
 
 1. 擷取至資料集的所有新資料，都會根據事件時間戳記，在擷取時套用到期日值。
-1. 資料集中的所有現有資料都會以一次性回填系統作業的形式回溯套用到期值。 在資料集上放置過期值後，當系統工作執行時，會立即捨棄過期值以前的事件。 從事件時間戳記到其到期值時，所有其他事件都會立即被捨棄。
+1. 資料集中的所有現有資料都會以一次性回填系統作業的形式回溯套用到期值。 在資料集上放置過期值後，當系統工作執行時，會立即捨棄過期值以前的事件。 從事件時間戳記到其到期值時，所有其他事件都會立即被捨棄。 移除所有體驗事件後，如果設定檔不再有任何設定檔屬性，則設定檔將不再存在。
 
 >[!WARNING]
 >
