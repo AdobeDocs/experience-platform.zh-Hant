@@ -3,10 +3,10 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 查看目標詳細資訊
 description: 個別目的地的詳細資訊頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的區段，以及編輯啟用和啟用資料流的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165d8719cbf5d4b0555d5b9ef84252e3cbd82d42
+source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
 workflow-type: tm+mt
-source-wordcount: '799'
-ht-degree: 2%
+source-wordcount: '802'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ ht-degree: 2%
 >[!NOTE]
 >
 >* Experience Platform中的所有目的地目前都支援目的地監視功能 *expert* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md) 和 [Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 目的地。
->* 若 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)，和 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 目的地、排除的身分目前不會顯示。
+>* 若 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)，和 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 目前未顯示目的地、已排除的身分、已失敗和已啟動。
 
 
 ![資料流運行視圖](../assets/ui/details-page/dataflow-runs.png)

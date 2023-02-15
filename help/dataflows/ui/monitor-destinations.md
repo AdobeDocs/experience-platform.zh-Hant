@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 在UI中監視目標的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
 workflow-type: tm+mt
-source-wordcount: '3211'
+source-wordcount: '3214'
 ht-degree: 0%
 
 ---
@@ -170,7 +170,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >- Experience Platform中的所有目的地目前都支援目的地監視功能 *expert* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md) 目的地。
->- 若 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)，和 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 目的地、排除的身分目前不會顯示。
+>- 若 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)，和 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 目前未顯示目的地、已排除的身分、已失敗和已啟動。
 
 
 >[!CONTEXTUALHELP]
