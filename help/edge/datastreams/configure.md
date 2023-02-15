@@ -1,7 +1,8 @@
 ---
 title: 設定資料流
 description: 連接您的客戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
-source-git-commit: 82703fae72e8637bb7d5e08a6699d9e1466afd8b
+exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
+source-git-commit: aa271fed242d03ecac6025721c2566a3b550b6bb
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 3%
@@ -38,11 +39,11 @@ ht-degree: 3%
 
 選擇 **[!UICONTROL 進階選項]** 以顯示設定資料流的其他控制項。
 
-![進階設定選項](../assets/datastreams/configure/advanced-options.png)
+![進階設定選項](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL 地理位置] | 根據用戶的IP地址確定GPS查找是否發生。 預設設定 **[!UICONTROL 無]** 會停用任何GPS查閱，而 **[!UICONTROL 城市]** 設定可提供兩位小數的GPS座標。 |
+| [!UICONTROL 地理位置] | 根據使用者的IP位址判斷地理查閱是否發生。 預設設定 **[!UICONTROL 無]** 會停用任何地理查閱，而 **[!UICONTROL 城市]** 設定可提供兩位小數的GPS座標。 |
 | [!UICONTROL 第一方ID Cookie] | 啟用後，此設定會在查詢 [第一方裝置ID](../identity/first-party-device-ids.md)，而非在「身分對應」中查詢此值。<br><br>啟用此設定時，您必須提供預期會儲存ID之Cookie的名稱。 |
 | [!UICONTROL 第三方ID同步] | ID同步可分組為容器，以便在不同時間執行不同的ID同步。 啟用後，此設定可讓您指定要為此資料流執行哪個ID同步容器。 |
 | [!UICONTROL 存取類型] | 定義邊緣網路接受的資料流的驗證類型。 <ul><li>**[!UICONTROL 混合驗證]**:選取此選項時，邊緣網路會接受已驗證和未驗證的請求。 當您打算使用Web SDK時，請選取此選項，或 [行動SDK](https://aep-sdks.gitbook.io/docs/)，連同 [伺服器API](../../server-api/overview.md). </li><li>**[!UICONTROL 僅驗證]**:選取此選項時，邊緣網路僅接受已驗證的請求。 當您打算只使用伺服器API，並想要防止邊緣網路處理任何未驗證的請求時，請選取此選項。</li></ul> |
