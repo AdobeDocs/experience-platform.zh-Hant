@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 33%
+source-wordcount: '209'
+ht-degree: 34%
 
 ---
 
@@ -31,6 +31,9 @@ ht-degree: 33%
    * [總覽](./datastreams/overview.md)
    * [設定資料流](./datastreams/configure.md)
    * [資料收集的資料準備](./datastreams/data-prep.md)
+   * 資料擴充 {#data-enrichment}
+      * [各天氣管道的天氣資料](./datastreams/data-enrichment/weather.md)
+      * [氣象資料欄位對應](./datastreams/data-enrichment/weather-reference.md)
 * 身分 {#identity}
    * [總覽](identity/overview.md)
    * [第一方裝置ID](identity/first-party-device-ids.md)
@@ -69,7 +72,7 @@ ht-degree: 33%
       * [與標籤整合](consent/iab-tcf/with-launch.md)
       * [不使用標籤整合](consent/iab-tcf/without-launch.md)
 * Web SDK標籤擴充功能 {#extension}
-   * [Web SDK擴充功能](extension/web-sdk-extension-configuration.md)
+   * [Web SDK 擴充功能](extension/web-sdk-extension-configuration.md)
    * [事件類型](extension/event-types.md)
    * [動作類型](extension/action-types.md)
    * [資料元素類型](extension/data-element-types.md)
