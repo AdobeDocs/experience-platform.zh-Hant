@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 排程API端點
 description: 排程是一種工具，可用來每天自動執行一次批次分段工作。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
 workflow-type: tm+mt
 source-wordcount: '2011'
 ht-degree: 3%
@@ -307,7 +307,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
     {
         "op":"add",
         "path":"/schedule",
-        "value":"0 0 2 * *"
+        "value":"0 0 2 * * ?"
     }
 ]'
 ```
