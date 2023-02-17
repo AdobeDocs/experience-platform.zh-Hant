@@ -3,9 +3,9 @@ title: Real-Time CDP B2B版中的相關帳戶
 type: Documentation
 description: Experience PlatformReal-Time CDP B2B中相關帳戶功能的概述和詳細資訊。
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '433'
 ht-degree: 6%
 
 ---
@@ -31,6 +31,16 @@ B2B企業通常將客戶資訊儲存在多個系統中，每個系統都只包�
 ![顯示Experience PlatformUI中相關帳戶的畫面。](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 使用此功能，在Experience PlatformUI中檢視帳戶設定檔的相關帳戶設定檔，然後在區段定義中納入相關帳戶，以擴大觸及範圍或在區段中套用更寬的條件。
+
+## 啟用相關帳戶服務 {#enable}
+
+若要啟用服務，請選取 **[!UICONTROL 設定檔]** 在側欄中，後跟 **[!UICONTROL 設定]**.
+
+![Experience PlatformUI醒目提示設定檔與設定。](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+
+選取旁邊的切換 [!UICONTROL 啟用相關帳戶] 啟用服務，然後選擇 **[!UICONTROL 儲存]**.
+
+![帳戶設定畫面會醒目顯示切換和儲存。](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## 運作方式 {#how-it-works}
 
