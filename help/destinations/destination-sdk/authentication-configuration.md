@@ -2,9 +2,9 @@
 description: 使用中支援的驗證設定來驗證使用者，並將資料啟用至您的目的地端點。
 title: 驗證配置
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,7 @@ ht-degree: 0%
 Adobe Experience Platform Destination SDK支援數種驗證類型：
 
 * [承載驗證](#bearer)
+* [基本驗證](#basic)
 * [[!DNL Amazon S3] 驗證](#s3)
 * [[!DNL Azure Blob] 儲存空間](#blob)
 * [[!DNL Azure Data Lake Storage]](#adls)
@@ -34,6 +35,22 @@ Adobe Experience Platform Destination SDK支援數種驗證類型：
 
 * [串流目的地的驗證設定](destination-configuration.md#customer-authentication-configurations)
 * [檔案型目的地的驗證設定](file-based-destination-configuration.md#customer-authentication-configurations)
+
+## 基本驗證 {#basic}
+
+Experience Platform中的串流目的地支援基本驗證。
+
+配置基本身份驗證類型時，用戶需要輸入用戶名和密碼以連接到目標。
+
+若要設定目的地的基本驗證，請設定 `customerAuthenticationConfigurations` 區段 `/destinations` 端點，如下所示：
+
+```json
+"customerAuthenticationConfigurations":[
+   {
+      "authType":"BASIC"
+   }
+]
+```
 
 ## 承載驗證 {#bearer}
 

@@ -2,9 +2,9 @@
 description: 此設定可讓您指出基本資訊，例如目的地名稱、類別、說明、標誌等。 此設定中的設定也會決定Experience Platform使用者如何驗證您的目的地、Experience Platform使用者介面中的顯示方式，以及可匯出至您目的地的身分識別。
 title: 串流目的地組態選項，適用於Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: f0f2ed2059cbbb017dbbbdc0d1f215abee17f514
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1907'
 ht-degree: 4%
 
 ---
@@ -152,7 +152,7 @@ ht-degree: 4%
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | 字串 | 指示用於驗證Experience Platform客戶到伺服器的配置。 請參閱 `authType` 以取得接受的值。 |
-| `authType` | 字串 | 串流目的地的接受值為：<ul><li>`BEARER`。如果您的目的地支援承載驗證，請設定 `"authType":"Bearer"` 和  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li><li>`OAUTH2`。如果您的目的地支援OAuth 2驗證，請設定 `"authType":"OAUTH2"` 和新增OAuth 2的必要欄位，如 [Destination SDKOAuth 2驗證頁面](./oauth2-authentication.md). 此外，請設定 `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li> |
+| `authType` | 字串 | 串流目的地的接受值為：<ul><li>`BASIC`。如果您的目的地支援基本驗證，請設定 `"authType":"Basic"` 和  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li><li>`BEARER`。如果您的目的地支援承載驗證，請設定 `"authType":"Bearer"` 和  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li><li>`OAUTH2`。如果您的目的地支援OAuth 2驗證，請設定 `"authType":"OAUTH2"` 和新增OAuth 2的必要欄位，如 [Destination SDKOAuth 2驗證頁面](./oauth2-authentication.md). 此外，請設定 `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 

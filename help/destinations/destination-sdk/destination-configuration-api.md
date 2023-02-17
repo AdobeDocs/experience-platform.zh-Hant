@@ -2,7 +2,7 @@
 description: 本頁列出並說明您可使用「/authoring/destinations」 API端點執行的所有API操作。
 title: 目的地API端點作業
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 21278b39a2dc12771449b9a471ea4182c6b999a3
+source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
 source-wordcount: '2545'
 ht-degree: 4%
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `description` | 字串 | 提供說明，供Adobe用於目的地卡的Experience Platform目的地目錄。 目標不超過4-5句。 |
 | `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 設定目的地時。 |
 | `customerAuthenticationConfigurations` | 字串 | 指示用於驗證Experience Platform客戶到伺服器的配置。 請參閱 `authType` 以取得接受的值。 |
-| `customerAuthenticationConfigurations.authType` | 字串 | 串流目的地的支援值為： <ul><li>`OAUTH2`</li><li>`BEARER`</li></ul> 檔案型目的地的支援值為： <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
+| `customerAuthenticationConfigurations.authType` | 字串 | 串流目的地的支援值為： <ul><li>`BASIC`</li><li>`BEARER`</li><li>`OAUTH2`</li></ul> 檔案型目的地的支援值為： <ul><li>`S3`</li><li>`AZURE_CONNECTION_STRING`</li><li>`AZURE_SERVICE_PRINCIPAL`</li><li>`SFTP_WITH_SSH_KEY`</li><li>`SFTP_WITH_PASSWORD`</li></ul> |
 | `customerDataFields.name` | 字串 | 提供您要引入的自訂欄位名稱。 |
 | `customerDataFields.type` | 字串 | 指出您要引入的自訂欄位類型。 接受的值為 `string`, `object`, `integer` |
 | `customerDataFields.title` | 字串 | 指出欄位的名稱，如Experience Platform使用者介面中的客戶所見 |
