@@ -1,21 +1,28 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；
 description: Adobe Experience Platform提供預先設定的範本，供您加速資料擷取程式。 範本包含自動產生的資產，例如結構、資料集、對應規則、身分、身分識別命名空間，以及資料流，您可在將資料從來源傳入Experience Platform時使用這些資產。
-title: (Alpha)使用UI中的範本建立來源資料流
+title: （測試版）使用UI中的範本建立來源資料流
+badge1: "Beta"
 hide: true
 hidefromtoc: true
-source-git-commit: d6d8281d1be1468b0c2b7474b80be96949dc7d4c
+exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
+source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
-source-wordcount: '1184'
-ht-degree: 1%
+source-wordcount: '1337'
+ht-degree: 0%
 
 ---
 
-# (Alpha)使用UI中的範本建立來源資料流
+# （測試版）使用UI中的範本建立來源資料流
 
 >[!IMPORTANT]
 >
->範本位於Alpha版，目前僅支援 [[!DNL Marketo Engage] 來源](../../connectors/adobe-applications/marketo/marketo.md). 檔案和功能可能會有所變更。
+>範本為測試版，且受下列來源支援：
+>
+>* [[!DNL Marketo Engage]](../../connectors/adobe-applications/marketo/marketo.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>
+>檔案和功能可能會有所變更。
 
 Adobe Experience Platform提供預先設定的範本，供您加速資料擷取程式。 範本包含自動產生的資產，例如結構、資料集、身分、對應規則、身分命名空間，以及在從來源傳入資料時可使用的資料流。
 
@@ -25,7 +32,7 @@ Adobe Experience Platform提供預先設定的範本，供您加速資料擷取�
 * 將手動資料擷取程式期間可能發生的錯誤降至最低。
 * 隨時更新自動產生的資產以符合您的使用案例。
 
-以下教學課程提供如何使用 [[!DNL Marketo Engage] 來源](../../connectors/adobe-applications/marketo/marketo.md).
+以下教學課程提供如何在Platform UI中使用範本的步驟。
 
 ## 快速入門
 
@@ -43,11 +50,11 @@ Adobe Experience Platform提供預先設定的範本，供您加速資料擷取�
 >abstract="為您的使用案例選擇適當的業務類型。 您的存取權限可能會因您的Real-time Customer Data Platform訂閱帳戶而異。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant" text="Real-Time CDP概述"
 
-在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示可用來建立帳戶的各種來源。
+在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區，並查看Experience Platform中可用的來源目錄。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列找到您要使用的特定來源。
+使用 *[!UICONTROL 類別]* 功能表來依類別篩選來源。 或者，在搜索欄中輸入源名稱，從目錄中查找特定源。
 
-在 [!UICONTROL Adobe應用程式] 類別，選擇 **[!UICONTROL Marketo Engage]** 然後選取 **[!UICONTROL 新增資料]**.
+前往 [!UICONTROL Adobe應用程式] 類別，以查看 [!DNL Marketo Engage] 源卡，然後選擇 [!UICONTROL 新增資料] 開始。
 
 ![源工作區的目錄，其中突出顯示Marketo Engage源。](../../images/tutorials/templates/catalog.png)
 
@@ -64,21 +71,25 @@ Adobe Experience Platform提供預先設定的範本，供您加速資料擷取�
 
 此時會出現驗證步驟，提示您建立新帳戶或使用現有帳戶。
 
-#### 現有帳戶
+>[!BEGINTABS]
+
+>[!TAB 使用現有帳戶]
 
 若要使用現有帳戶，請選取 [!UICONTROL 現有帳戶] 然後，從顯示的清單中選取您要使用的帳戶。
 
 ![現有帳戶的選擇頁面，包含您可存取的現有帳戶清單。](../../images/tutorials/templates/existing-account.png)
 
-#### 新帳戶
+>[!TAB 建立新帳戶]
 
 要建立新帳戶，請選擇 **[!UICONTROL 新帳戶]**，然後提供您的來源連線詳細資料和帳戶驗證憑證。 完成後，請選取 **[!UICONTROL 連接到源]** 並讓新連線有時間建立。
 
 ![具有源連接詳細資訊和帳戶身份驗證憑據的新帳戶的身份驗證頁。](../../images/tutorials/templates/new-account.png)
 
+>[!ENDTABS]
+
 ### 選取範本
 
-驗證並選取帳戶後，範本清單就會顯示。 選取範本名稱旁的預覽圖示，以預覽範本中的範例資料。
+視您選取的業務類型而定，範本清單隨即顯示。 選取預覽圖示 ![預覽圖示](../../images/tutorials/templates/preview-icon.png) 範本名稱旁邊，以從範本預覽範例資料。
 
 ![高亮顯示預覽表徵圖的模板清單。](../../images/tutorials/templates/templates.png)
 
@@ -95,6 +106,22 @@ Adobe Experience Platform提供預先設定的範本，供您加速資料擷取�
 >已使用的範本將在選取項目中停用。
 
 ![已選擇Opportunity Contact角色模板的模板清單。](../../images/tutorials/templates/select-template.png)
+
+### 設定排程
+
+此 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce] 源均支援調度資料流。
+
+使用計畫介面為資料流配置獲取計畫。 將擷取頻率設為 **一次** 來建立一次性擷取。
+
+![Dynamics和Salesforce範本的排程介面。](../../images/tutorials/templates/schedule.png)
+
+或者，您也可以將擷取頻率設為 **分鐘**, **小時**, **日**，或 **周**. 如果為多個內嵌計畫資料流，則必須設定時間間隔以建立每個內嵌之間的時間範圍。 例如，擷取頻率設為 **小時** 和間隔設定為 **15** 表示您的資料流計畫將資料 **15小時**.
+
+在此步驟中，您也可以啟用 **回填** 並定義資料增量擷取的欄。 回填可用來內嵌歷史資料，而您為增量內嵌定義的欄則可讓新資料與現有資料有所區別。
+
+完成擷取排程的設定後，請選取 **[!UICONTROL 完成]**.
+
+![已啟用回填的Dynamics和Salesforce範本的排程介面。](../../images/tutorials/templates/backfill.png)
 
 ### 檢閱資產 {#review-assets}
 
