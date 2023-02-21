@@ -2,7 +2,7 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 18599d223733cb151c7517abb77b1745d2e634b7
+source-git-commit: 2b11fb87523c777d5c2d855e97a4af78a8483abe
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 4%
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # 標籤和事件轉送的發行說明
 
-## 2022 年 1 月 25 日
+## 2023 年 1 月 25 日
 
 * **全新主畫面**:資料收集UI的首頁已更新，其中包含實用入門資訊和連結，以簡化生產力。 其中包括:
    1. 開始使用的檔案和建議工作流程
