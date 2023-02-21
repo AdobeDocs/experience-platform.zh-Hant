@@ -2,9 +2,9 @@
 title: 在UI中建立Google PubSub Source Connection
 description: 了解如何使用Platform使用者介面建立Google PubSub來源連接器。
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '658'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 1%
 | 專案 ID | 驗證所需的專案ID [!DNL PubSub]. |
 | 憑證 | 驗證所需的憑據或私鑰ID [!DNL PubSub]. |
 | 主題ID | 的ID [!DNL PubSub] 代表訊息摘要的資源。 如果要提供對中特定資料流的存取權，必須指定主題ID [!DNL Google PubSub] 來源。 |
+| 訂閱ID | 您的 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您訂閱已發佈訊息的主題，借此接收訊息。 |
 
 如需這些值的詳細資訊，請參閱下列內容 [PubSub驗證](https://cloud.google.com/pubsub/docs/authentication) 檔案。 如果您使用服務帳戶型驗證，請參閱下列內容 [PubSub指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生憑證的步驟。
 
@@ -48,7 +49,7 @@ ht-degree: 1%
 
 在 [!UICONTROL 雲端儲存空間] 類別，選擇 **[!UICONTROL Google PubSub]**，然後選取 **[!UICONTROL 新增資料]**.
 
-![目錄](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 此 **[!UICONTROL 連線至Google PubSub]** 頁。 在此頁面上，您可以使用新憑證或現有憑證。
 
@@ -56,7 +57,7 @@ ht-degree: 1%
 
 若要使用現有帳戶，請選取 [!DNL PubSub] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
 
-![現有](../../../../images/tutorials/create/google-pubsub/existing.png)
+![來源工作流程中的現有帳戶選項。](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### 新帳戶
 
@@ -68,7 +69,7 @@ ht-degree: 1%
 
 完成後，請選取 **[!UICONTROL 連接到源]** 然後讓新連接建立一段時間。
 
-![new](../../../../images/tutorials/create/google-pubsub/new.png)
+![來源工作流程中的新帳戶介面。](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## 後續步驟
 

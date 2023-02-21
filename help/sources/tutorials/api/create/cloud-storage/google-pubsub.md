@@ -2,9 +2,9 @@
 title: 使用流程服務API建立Google PubSub Source連線
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至Google PubSub帳戶。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: f56cdc2dc67f2d4820d80d8e5bdec8306d852891
+source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -31,6 +31,7 @@ ht-degree: 1%
 | `projectId` | 驗證所需的專案ID [!DNL PubSub]. |
 | `credentials` | 驗證所需的憑據或密鑰 [!DNL PubSub]. |
 | `topicId` | 的ID [!DNL PubSub] 代表訊息摘要的資源。 如果要提供對中特定資料流的存取權，必須指定主題ID [!DNL Google PubSub] 來源。 |
+| `subscriptionId` | 您的 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您訂閱已發佈訊息的主題，借此接收訊息。 |
 | `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基本和源目標連接相關的驗證規範。 此 [!DNL PubSub] 連接規範ID為： `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 如需這些值的詳細資訊，請參閱 [[!DNL PubSub] 驗證](https://cloud.google.com/pubsub/docs/authentication) 檔案。 若要使用服務帳戶型驗證，請參閱 [[!DNL PubSub] 建立服務帳戶指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生憑證的步驟。
@@ -79,7 +80,8 @@ curl -X POST \
           "params": {
               "projectId": "acme-project",
               "credentials": "{CREDENTIALS}",
-              "topicID": "acmeProjectAPI"
+              "topicId": "acmeProjectAPI",
+              "subscriptionId": "acme-project-api-new"
           }
       },
       "connectionSpec": {
@@ -93,7 +95,8 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.projectId` | 驗證所需的專案ID [!DNL PubSub]. |
 | `auth.params.credentials` | 驗證所需的憑據或密鑰 [!DNL PubSub]. |
-| `auth.params.topicID` | 您的 [!DNL PubSub] 要提供訪問權限的源。 |
+| `auth.params.topicId` | 您的 [!DNL PubSub] 要提供訪問權限的源。 |
+| `auth.params.subscriptionId` | 您 [!DNL PubSub] 主題。 |
 | `connectionSpec.id` | 此 [!DNL PubSub] 連接規格ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 **回應**
