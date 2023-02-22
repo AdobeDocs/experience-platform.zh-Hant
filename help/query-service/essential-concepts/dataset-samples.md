@@ -2,18 +2,14 @@
 title: 資料集範例
 description: Query Service範例資料集可讓您對大資料執行探索性查詢，大幅縮短處理時間，並降低查詢準確度。 本指南提供如何管理範例以進行近似查詢處理的資訊
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: 13779e619345c228ff2a1981efabf5b1917c4fdb
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# （有限版本）資料集範例
-
->[!IMPORTANT]
->
->資料集範例功能目前僅有限版本，並非所有客戶都能使用。
+# 資料集範例
 
 Adobe Experience Platform Query Service提供範例資料集，作為其近似查詢處理功能的一部分。 範例資料集是以現有的統一隨機範例建立 [!DNL Azure Data Lake Storage] (ADLS)資料集僅使用原始記錄的百分比。 此百分比稱為取樣率。 調整採樣率以控制精確度和處理時間的平衡，允許您對大資料進行探索性查詢，並大大減少處理時間，同時犧牲查詢準確性。
 
@@ -22,14 +18,15 @@ Adobe Experience Platform Query Service提供範例資料集，作為其近似�
 為協助您管理範例以進行近似查詢處理，Query Service支援對資料集範例執行下列作業：
 
 - [建立統一的隨機資料集範例。](#create-a-sample)
+- [（可選）指定篩選條件](##optional-filter-criteria)
 - [查看ADLS表的示例清單。](#view-list-of-samples)
 - [直接查詢範例資料集。](#query-sample-datasets)
 - [刪除範例。](#delete-a-sample)
 - 刪除原始ADLS表格時的相關範例。
 
-## 快速入門
+## 快速入門 {#get-started}
 
-若要使用上述的近似查詢處理功能，您必須將工作階段標幟設為 `true`. 從查詢編輯器或PSQL客戶端的命令行中，輸入 `SET aqp=true;` 命令。
+若要使用本檔案中詳述的建立和刪除近似查詢處理功能，您必須將工作階段標幟設為 `true`. 從查詢編輯器或PSQL客戶端的命令行輸入 `SET aqp=true;` 命令。
 
 >[!NOTE]
 >
@@ -39,7 +36,7 @@ Adobe Experience Platform Query Service提供範例資料集，作為其近似�
 
 ## 建立統一的隨機資料集範例 {#create-a-sample}
 
-使用 `ANALYZE TABLE` 命令，以從該資料集建立統一的隨機樣本。
+使用 `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` 命令，以從該資料集建立統一的隨機樣本。
 
 取樣率是從原始資料集取取的記錄百分比。 您可以使用 `TABLESAMPLE SAMPLERATE` 關鍵字。 在此範例中，值5.0相當於50%的取樣率。 值2.5等於25%，以此類推。
 
@@ -50,6 +47,28 @@ Adobe Experience Platform Query Service提供範例資料集，作為其近似�
 ```sql
 ANALYZE TABLE example_dataset_name TABLESAMPLE SAMPLERATE 5.0;
 ```
+
+## （可選）指定篩選條件 {#optional-filter-criteria}
+
+您可以選擇為統一隨機樣本指定篩選條件。 這允許您根據分析表的篩選子集建立示例。
+
+建立範例時，會先套用選用篩選條件，然後從資料集的篩選檢視中建立範例。 套用篩選器的資料集範例會遵循下列查詢格式：
+
+```sql
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND/OR <filter_condition_2>) SAMPLERATE X.Y;
+ANALYZE TABLE <tableToAnalyze> TABLESAMPLE FILTERCONTEXT (<filter_condition_1> AND (<filter_condition_2> OR <filter_condition_3>)) SAMPLERATE X.Y;
+```
+
+這類篩選範例資料集的實用範例如下：
+
+```sql
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9')) SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND product.name = "product1") SAMPLERATE 10;
+Analyze TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
+```
+
+在提供的範例中，表格名稱為 `large_table`，原始表格的篩選條件為 `month(to_timestamp(timestamp)) in ('8', '9')`，而取樣率為（篩選資料的X%），在此例中， `10`.
 
 ## 查看示例清單 {#view-list-of-samples}
 
