@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: (API)SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud（舊稱ExactTarget）目的地可讓您匯出帳戶資料，並在SalesforceMarketing Cloud中根據您的業務需求啟用它。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: d75c272b3c86e25d3f162c630963c10e8206bd9d
+source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
 workflow-type: tm+mt
-source-wordcount: '2434'
+source-wordcount: '2464'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,9 @@ ht-degree: 1%
 
 #### 你需要 [!DNL Salesforce Marketing Cloud] 帳戶 {#prerequisites-account}
 
-聯繫您的 [!DNL Salesforce Account Executive] 訂閱 [!DNL Salesforce Marketing Cloud Account Engagement] 產品（若尚未擁有）。
+A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [Marketing Cloud帳戶參與](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 產品必須繼續。
+
+伸手 [[!DNL Salesforce] 支援](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) 如果您沒有 [!DNL Salesforce Marketing Cloud] 帳戶或帳戶遺失 [!DNL Marketing Cloud Account Engagement] 產品訂閱。
 
 #### 在內建立屬性 [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
