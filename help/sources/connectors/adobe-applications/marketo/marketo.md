@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Marketo Engage連接器
 description: 本檔案概述Marketo Engage來源連接器，包括驗證、對應和資料延遲的相關資訊。
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -77,8 +77,9 @@ XDM是公開記錄的規格，提供通用結構和定義，可讓您內嵌來�
 
 下列檔案提供建立 [!DNL Marketo] 源連接：
 
-* 有關如何連接您的 [!DNL Marketo] 若要將資料傳送至Platform，請參閱 [在UI中建立Marketo來源連接器](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* 如需B2B命名空間和結構的基礎設定相關資訊，請參閱 [!DNL Marketo]，請參閱 [B2B命名空間和結構](./marketo-namespaces.md).
+* 有關如何連接您的 [!DNL Marketo] 資料至Platform，請閱讀以下教學課程： [建立 [!DNL Marketo] UI中的源連接](../../../tutorials/ui/create/adobe-applications/marketo.md).
+   * 如需如何設定結構以及擷取自訂活動資料的詳細資訊，請參閱的教學課程 [建立源連接和資料流 [!DNL Marketo] 自訂活動資料](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+* 如需B2B命名空間和結構的基礎設定相關資訊，請參閱 [!DNL Marketo]，請閱讀 [B2B命名空間和結構](./marketo-namespaces.md).
 * 如需尋找 [!DNL Marketo] munchkin ID和產生憑證，請參閱 [[!DNL Marketo] 驗證指南](./marketo-auth.md).
-* 有關適用於的特定映射規則的資訊 [!DNL Marketo] 資料集，請參閱 [[!DNL Marketo] 欄位對應](../mapping/marketo.md).
+* 有關適用於的特定映射規則的資訊 [!DNL Marketo] 資料集，請閱讀 [[!DNL Marketo] 欄位對應](../mapping/marketo.md).
 * 有關 [!DNL Real-Time Customer Data Platform B2B Edition] 及其功能，請參閱 [[!DNL Real-Time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

@@ -1,22 +1,19 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Marketo來源連接器；Marketo連接器；Marketo來源；Marketo
-solution: Experience Platform
-title: 在UI中建立Marketo Engage來源連接器
-type: Tutorial
-description: 本教學課程提供在UI中建立Marketo Engage來源連接器，將B2B資料匯入Adobe Experience Platform的步驟。
+title: 在UI中建立Marketo Engage源連接和資料流
+description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流，以將B2B資料匯入Adobe Experience Platform的步驟。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
 
-# 建立 [!DNL Marketo Engage] UI中的來源連接器
+# 建立 [!DNL Marketo Engage] 源連接和UI中的資料流
 
 >[!IMPORTANT]
 >
->建立之前 [!DNL Marketo Engage] 源連接和資料流，必須首先確保您 [已對應您的Adobe IMS組織ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. 此外，您也必須確定您已完成 [自動填入 [!DNL Marketo] B2B命名空間和結構](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 建立源連接和資料流之前。
+>建立之前 [!DNL Marketo Engage] 源連接和資料流，必須首先確保您 [已對應您的Adobe組織ID](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. 此外，您也必須確定您已完成 [自動填入 [!DNL Marketo] B2B命名空間和結構](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) 建立源連接和資料流之前。
 
 本教學課程提供建立 [!DNL Marketo Engage] (下稱「[!DNL Marketo]&quot;)UI中的來源連接器，將B2B資料匯入Adobe Experience Platform。
 
@@ -48,7 +45,7 @@ ht-degree: 0%
 
 ## 連接您的 [!DNL Marketo] 帳戶
 
-在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以為其建立帳戶的各種來源。
+在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可建立帳戶的各種來源。
 
 您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列找到您要使用的特定來源。
 
@@ -84,23 +81,27 @@ ht-degree: 0%
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## 提供資料流詳細資訊
+## 提供資料流詳細資訊 {#provide-dataflow-details}
 
 此 [!UICONTROL 資料流詳細資訊] 頁面可讓您選取要使用現有資料集或新資料集。 在此程式中，您也可以為 [!UICONTROL 設定檔資料集], [!UICONTROL 錯誤診斷], [!UICONTROL 部分擷取]，和 [!UICONTROL 警報].
 
 ![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
-### 使用現有資料集
+>[!BEGINTABS]
+
+>[!TAB 使用現有資料集]
 
 若要將資料內嵌至現有資料集，請選取 **[!UICONTROL 現有資料集]**. 您可以使用 [!UICONTROL 進階搜尋] 選項，或透過捲動下拉式選單中的現有資料集清單來執行。 選取資料集後，請提供資料流的名稱和說明。
 
 ![現有資料集](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-### 使用新資料集
+>[!TAB 使用新資料集]
 
 若要內嵌至新資料集，請選取 **[!UICONTROL 新資料集]** 然後提供輸出資料集名稱和選用說明。 接下來，使用 [!UICONTROL 進階搜尋] 選項，或透過捲動下拉式選單中的現有結構清單來執行。 選擇架構後，請為資料流提供名稱和說明。
 
 ![新資料集](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!ENDTABS]
 
 ### 啟用 [!DNL Profile] 診斷錯誤
 
@@ -110,7 +111,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此 [!DNL Marketo] 連接器使用批次內嵌來內嵌所有歷史記錄，並使用串流內嵌來進行即時更新。 這可讓連接器在擷取任何錯誤記錄時繼續串流。 啟用 **[!UICONTROL 部分擷取]** 切換，然後設定 [!UICONTROL 錯誤閾值%] 以防止資料流失敗。
+>此 [!DNL Marketo] 來源會使用批次內嵌來內嵌所有歷史記錄，並使用串流內嵌來進行即時更新。 這可讓來源在擷取任何錯誤記錄時繼續串流。 啟用 **[!UICONTROL 部分擷取]** 切換，然後設定 [!UICONTROL 錯誤閾值%] 以防止資料流失敗。
 
 ![設定檔與錯誤](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
@@ -121,6 +122,14 @@ ht-degree: 0%
 完成向資料流提供詳細資訊後，請選擇 **[!UICONTROL 下一個]**.
 
 ![警報](../../../../images/tutorials/create/marketo/alerts.png)
+
+### 擷取公司資料時略過未申請的帳戶
+
+建立資料流以從公司資料集內嵌資料時，可以配置 [!UICONTROL 排除未申請的帳戶] 從擷取中排除或包含未申請的帳戶。
+
+當個人填寫表格時， [!DNL Marketo] 根據不包含其他資料的公司名稱建立虛擬帳戶記錄。 對於新資料流，預設會啟用排除未申請帳戶的切換按鈕。 對於現有資料流，可以啟用或禁用該功能，更改將應用於新獲取的資料，而不是現有資料。
+
+![未申請帳戶](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## 對應您的 [!DNL Marketo] 以定位XDM欄位的資料集來源欄位
 

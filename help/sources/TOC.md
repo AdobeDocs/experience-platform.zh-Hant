@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 33aeeb58e5bfa2c1553a5c49fee07dc5020f4efb
+source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '931'
 ht-degree: 11%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 11%
          - [Adobe Campaign Managed Cloud Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
+         - [Marketo自訂活動](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
          - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
@@ -342,4 +343,4 @@ ht-degree: 11%
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+- [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)
