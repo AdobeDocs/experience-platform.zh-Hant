@@ -2,9 +2,9 @@
 title: 監視計畫查詢
 description: 了解如何透過Query Service UI監控查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 26765c7f8daadabe325d2d519543c0fcd92c7717
+source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1204'
 ht-degree: 0%
 
 ---
@@ -118,11 +118,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ![「運行詳細資訊」螢幕中突出顯示了SQL複製表徵圖。](../images/ui/monitor-queries/copy-sql.png)
 
-### （有限版本）對具有匿名塊的查詢運行詳細資訊 {#anonymous-block-queries}
-
->[!IMPORTANT]
->
->顯示匿名塊查詢運行詳細資訊的查詢監視功能當前處於有限版本中，不適用於所有客戶。
+### 運行具有匿名塊的查詢的詳細資訊 {#anonymous-block-queries}
 
 使用匿名塊來組成其SQL陳述式的查詢被分離到其各個查詢中。 這可讓您個別檢查每個查詢區塊的執行詳細資料。
 
