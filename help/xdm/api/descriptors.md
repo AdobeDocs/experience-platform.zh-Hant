@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 描述符API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述元。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 3%
@@ -417,7 +417,7 @@ curl -X DELETE \
 
 #### 已棄用的欄位描述符
 
-您可以 [取代自訂XDM資源中的欄位](../tutorials/field-deprecation.md#custom) 新增 `meta:status` 屬性設定為 `deprecated` 到有關的欄位。 但是，如果您想要取代結構中標準XDM資源提供的欄位，您可以將已棄用的欄位描述元指派給相關結構，以達到相同的效果。 使用 [正確 `Accept` 標題](../tutorials/field-deprecation.md#verify-deprecation)，您就可以在API中查詢結構時，檢視哪些標準欄位已遭取代。
+您可以 [取代自訂XDM資源中的欄位](../tutorials/field-deprecation-api.md#custom) 新增 `meta:status` 屬性設定為 `deprecated` 到有關的欄位。 但是，如果您想要取代結構中標準XDM資源提供的欄位，您可以將已棄用的欄位描述元指派給相關結構，以達到相同的效果。 使用 [正確 `Accept` 標題](../tutorials/field-deprecation-api.md#verify-deprecation)，您就可以在API中查詢結構時，檢視哪些標準欄位已遭取代。
 
 ```json
 {

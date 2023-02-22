@@ -4,9 +4,9 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 使用體驗資料模型 (XDM) 類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: fda856051af104ca6363274d93ca65807f9881a3
+source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '518'
 ht-degree: 16%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 16%
 # Experience Data Model(XDM)系統 {#xdm}
 
 * [XDM系統概觀](home.md)
-* 結構描述 {#schema}
+* 綱要 {#schema}
    * [結構構成基本概念](schema/composition.md)
    * [資料模型最佳實務](schema/best-practices.md)
    * [敏感和個人資料](./schema/sensitive-and-personal-data.md)
@@ -154,7 +154,7 @@ ht-degree: 16%
    * [總覽](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源 {#resources}
-      * [結構描述](./ui/resources/schemas.md)
+      * [綱要](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
@@ -172,7 +172,7 @@ ht-degree: 16%
 * 結構註冊表API {#api}
    * [總覽](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [結構描述](api/schemas.md)
+   * [綱要](api/schemas.md)
    * [行為](api/behaviors.md)
    * [類別](api/classes.md)
    * [架構欄位群組](api/field-groups.md)
@@ -193,7 +193,8 @@ ht-degree: 16%
    * [將特定欄位新增至結構(API)](./tutorials/specific-fields-api.md)
    * [定義自訂欄位(API)](./tutorials/custom-fields-api.md)
    * [將建議的值新增至欄位(API)](tutorials/suggested-values.md)
-   * [取代XDM欄位](tutorials/field-deprecation.md)
+   * [取代UI中的XDM欄位](tutorials/field-deprecation-ui.md)
+   * [取代API中的XDM欄位](tutorials/field-deprecation-api.md)
    * [在UI中定義結構關係](tutorials/relationship-ui.md)
    * [在API中定義結構關係](tutorials/relationship-api.md)
    * [在Real-Time CDP B2B版中定義結構關係](tutorials/relationship-b2b.md)
@@ -201,4 +202,4 @@ ht-degree: 16%
    * [建立隨選結構](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)
