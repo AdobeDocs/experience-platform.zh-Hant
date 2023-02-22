@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流程服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API為原始和XDM資料使用HTTP API來源建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1496'
 ht-degree: 2%
 
 ---
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `auth.params.sourceId` | 建立已驗證的基礎連線時可使用的額外識別碼。 此參數為選用值，且會使用與 `name` 屬性（若未提供）。 |
-| `auth.params.authenticationRequired` | 指定已建立串流連接的參數 |
+| `auth.params.authenticationRequired` | 此參數會指定串流連線是否需要驗證。 若 `authenticationRequired` 設為 `true` 則必須為串流連線提供驗證。 若 `authenticationRequired` 設為 `false` 則不需要驗證。 |
 
 **回應**
 

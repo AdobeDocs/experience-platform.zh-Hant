@@ -3,7 +3,7 @@ title: 使用流量服務API為串流SDK建立新的連線規格
 description: 以下文檔提供了有關如何使用流服務API建立連接規範以及通過自助源整合新源的步驟。
 hide: true
 hidefromtoc: true
-source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
+source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 1%
@@ -75,9 +75,8 @@ ht-degree: 1%
       }
     }
   },
-  "authSpec": [
-
-  ],
+  "authSpec": [],
+  "name": "generic-streaming",
   "permissionsInfo": {
     "view": [
       {
@@ -98,8 +97,10 @@ ht-degree: 1%
       }
     ]
   },
+  "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
   "sourceSpec": {
     "attributes": {
+      "authRequired": false,
       "uiAttributes": {
         "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
         "isSource": true,
@@ -108,16 +109,16 @@ ht-degree: 1%
           "key": "streaming"
         },
         "icon": {
-          "key": "Generic-Streaming"
+          "key": "generic"
         },
         "description": {
-          "text": "Generic Streaming Connector"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "label": {
-          "text": "Generic"
+          "text": "Generic Streaming For Authentication Testing 2"
         },
         "frequency": {
-          "text": "streaming"
+          "text": "Generic Streaming"
         }
       }
     }
@@ -253,6 +254,7 @@ curl -X POST \
       "type": "generic-streaming",
       "sourceSpec": {
         "attributes": {
+          "authRequired": false,
           "uiAttributes": {
             "documentationLink": "http://www.adobe.com/go/understanding-data-streaming-ingestion-en",
             "isSource": true,
