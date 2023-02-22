@@ -3,7 +3,7 @@ title: 在新的測試版雲端儲存目的地中，使用上次限定時間XDM�
 description: 了解如何在新的測試版雲端儲存目的地中使用上次資格鑑定時間XDM屬性
 hidefromtoc: y
 hide: y
-source-git-commit: 7dd525d8c71cdfb9fb2393181faa3270ad1dc4cc
+source-git-commit: 03031dcaad82932f92e76177adf3b55447c3c153
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 如何使用上次限定時間XDM屬性 {#how-to-use}
 
-如果您使用6個新雲端儲存測試版連接器之一，可在 [對應步驟](//help/destinations/ui/activate-batch-profile-destinations.md#mapping) 啟用工作流程中建立欄，且最新時間戳記為符合區段的設定檔時。 這可協助您處理特定測量或分析使用案例，也可讓您更清楚了解何時啟用特定對象。
+如果您使用6個新雲端儲存測試版連接器之一，可在 [對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 啟用工作流程中建立欄，且最新時間戳記為符合區段的設定檔時。 這可協助您處理特定測量或分析使用案例，也可讓您更清楚了解何時啟用特定對象。
 
 請注意，若要新增 `lastQualificationTime` 您目前需要手動插入值，才能匯出檔案 `xdm: segmentMembership.ups.seg_id.lastQualificationTime` 填入來源欄位，如下所示。 您也可以將目標欄位編輯為 `lastQualificationTime` 或您想要為此欄命名的任何其他值。 請注意，由於這是測試版功能，因此 `xdm: segmentMembership.ups.seg_id.lastQualificationTime` 值可能會在未來變更。
 

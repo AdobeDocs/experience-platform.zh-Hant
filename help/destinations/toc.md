@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 593179cb919d464084973d154098c6fdffcc3471
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1031'
 ht-degree: 6%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 6%
       * [為同一頁面和下一頁個人化設定個人化目的地](./ui/configure-personalization-destinations.md)
       * [（測試版）使用Experience PlatformUI，隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [（測試版）使用Experience PlatformUI匯出資料集](./ui/export-datasets.md)
+      * [（測試版）在新的測試版雲端儲存目的地中，使用上次限定時間XDM屬性](./ui/activate-last-qualification-time.md)
    * [查看目標詳細資訊](./ui/destination-details-page.md)
    * [更新目標帳戶](./ui/update-accounts.md)
    * [刪除目標帳戶](./ui/delete-destination-account.md)
@@ -240,4 +241,4 @@ ht-degree: 6%
       * [檔案自助服務範本](./destination-sdk/docs-framework/self-service-template.md)
       * [製作最佳實務](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [常見問答](./destinations-faq.md)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)
