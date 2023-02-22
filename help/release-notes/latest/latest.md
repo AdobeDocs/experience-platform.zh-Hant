@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2023年2月Adobe Experience Platform發行說明。
-source-git-commit: 38c9325e2eb5d396472ea55ca082083040d6e590
+source-git-commit: ff276de35ca2aaeec168f4c4386d849f3352ad57
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '987'
 ht-degree: 4%
 
 ---
@@ -14,10 +14,31 @@ ht-degree: 4%
 
 Adobe Experience Platform 現有功能更新：
 
+- [[!DNL Destinations]](#destinations)
 - [Experience Data Model(XDM)](#xdm)
 - [查詢服務](#query-service)
 - [Real-Time CDP B2B版中的相關帳戶](#related-accounts)
 - [來源](#sources)
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] 預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用目的地來針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
+
+**新功能或更新功能** {#destinations-new-updated-features}
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| [同意政策增強](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) 與 [檔案型（批次）目的地](/help/destinations/destination-types.md#file-based) | <p> 當設定檔不再符合同意原則的資格時，Experience Platform現在會主動將其退出政策通訊至檔案式目的地。 這遵循 [於2023年2月發行](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) 流目的地功能相同。 </p> <p> <b>附註</b>:此功能僅適用於 **[!UICONTROL 隱私與安全防護]**，以及 **[!UICONTROL 醫療保健盾]**. </p> |
+
+{style=&quot;table-layout:auto&quot;}
+
+**新檔案或更新檔案** {#destinations-new-updated-documentation}
+
+| 文件 | 說明 |
+| ----------- | ----------- |
+| 目的地如何運作檔案 | <p>我們根據使用者的常見問題，發佈了三篇關於目的地運作方式的新說明文章：</p> <p><ul><li>[目的地中的可設定和通用匯出設定](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[不同目的地類型的設定檔匯出行為](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[目的地啟動工作流程中的身分處理](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
+
+如需目的地的詳細一般資訊，請參閱 [目的地概述](../../destinations/home.md).
 
 ## Experience Data Model(XDM) {#xdm}
 
