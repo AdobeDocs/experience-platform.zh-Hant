@@ -3,10 +3,10 @@ title: 用戶代理客戶端提示
 description: 了解Web SDK中的使用者代理用戶端提示如何運作
 keywords: 用戶代理；客戶端提示；字串；用戶代理字串；低熵；高熵
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 4a2ae40fc64c4340ddb05db881c2176bb2aedc46
+source-git-commit: faeec4288948012fabeb25d0a0ce5a3b45f563ec
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 6%
+source-wordcount: '1132'
+ht-degree: 7%
 
 ---
 
@@ -116,16 +116,13 @@ Web SDK預設會停用高熵用戶端提示。 要啟用它們，您必須手動
 
 ### Adobe Analytics報告依賴於高熵客戶端提示 {#analytics}
 
-此 [作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) 維包括作為高熵客戶端提示儲存的作業系統版本。 如果未啟用高熵客戶端提示，從Chromium瀏覽器收集的點擊可能不準確的作業系統版本。
+此 [作業系統](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=zh-Hant) 維包括作為高熵客戶端提示儲存的作業系統版本。 如果未啟用高熵客戶端提示，從Chromium瀏覽器收集的點擊可能不準確的作業系統版本。
 
 ### Audience Manager特徵依賴於高熵客戶端提示 {#aam}
 
-如果您的Audience Manager特徵使用以下任何屬性，則必須啟用高熵客戶端提示。 否則，特徵將停止運作。
+[!DNL Google] 已更新 [!DNL Chrome] 瀏覽器功能，將透過 `User-Agent` 頁首。 因此，Audience Manager客戶使用 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) 將不再接收根據 [平台層級索引鍵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=zh-Hant).
 
-* 作業系統版本
-* 裝置型號
-* 裝置製造商
-* 設備供應商
+Audience Manager使用平台層級索引鍵進行鎖定的客戶必須切換至 [Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=zh-Hant) 而非 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)，並啟用 [高熵客戶端提示](#enabling-high-entropy-client-hints) 繼續接收可靠的特徵資料。
 
 ## 啟用高熵客戶端提示 {#enabling-high-entropy-client-hints}
 
