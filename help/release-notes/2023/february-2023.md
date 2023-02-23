@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2023年2月
 description: 2023年2月Adobe Experience Platform發行說明。
-source-git-commit: 2084583823acb5d5d16ea5bfdbfff98a7c5ac490
+source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 5%
+source-wordcount: '1138'
+ht-degree: 6%
 
 ---
 
@@ -45,10 +45,31 @@ Adobe Experience Platform 現有功能更新：
 XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料提供通用結構和定義（結構）。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
 
 **更新功能**
-&#x200B; |功能 |說明 | | — | — | |透過UI取代欄位 |您現在可以在資料擷取後取代結構中的欄位。 取代XDM欄位可讓您從UI檢視中移除欄位，同時保留欄位以供使用。 您可以視需要再次顯示已棄用的欄位，而任何參考欄位的區段、查詢或下游解決方案將照常執行。 |
+&#x200B; |功能 |說明 | | — | — | |透過UI取代欄位 |您現在可以 [擷取資料後，會取代結構中的欄位](../../xdm/tutorials/field-deprecation-ui.md). 取代XDM欄位可讓您從UI檢視中移除欄位，同時保留欄位以供使用。 您可以視需要再次顯示已棄用的欄位，而任何參考欄位的區段、查詢或下游解決方案將照常執行。 |
 
-{style=&quot;table-layout:auto&quot;}如&#x200B;需Platform中XDM的詳細資訊，請閱讀 [XDM系統概觀](../../xdm/home.md).&#x200B;
-<!-- Field deprecation: https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation.html -->
+{style=&quot;table-layout:auto&quot;}
+
+**新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 類別 | [[!UICONTROL XDM個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1669/files) | XDM個別潛在客戶設定檔類別會提供合作夥伴提供的ID。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**更新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位群組 | [!UICONTROL 頻率限定限制] | 此 [!UICONTROL 頻率限定限制] 欄位組已 [更新以支援重複和自訂事件](https://github.com/adobe/xdm/pull/1641/files). |
+| 資料類型 | [!UICONTROL 網頁反向連結] | 網頁反向連結屬性已 [更新以包含 `xdm:linkName` 和 `xdm:linkRegion`](https://github.com/adobe/xdm/pull/1666/files). 分別是在上一頁選取的HTML元素的名稱和地區。 |
+| 欄位組 | [!UICONTROL AdobeCJM ExperienceEvent — 訊息互動詳細資訊] | [此 [!UICONTROL 追蹤器URL] 欄位已新增](https://github.com/adobe/xdm/pull/1665/files) 到 [!UICONTROL AdobeCJM ExperienceEvent]. 此追蹤器提供使用者選取的URL。 |
+| 欄位組 | [!UICONTROL AdobeCJM ExperienceEvent — 訊息互動詳細資料] | [空白 `meta:enum` 屬性已移除](https://github.com/adobe/xdm/pull/1668/files) 從URL [!UICONTROL 追蹤類型] 欄位。 |
+| 資料類型 | [!UICONTROL 媒體資訊] | [來自的規則運算式模式 `videoSegment` 屬性 [!UICONTROL 媒體資訊] 資料類型已刪除](https://github.com/adobe/xdm/pull/1667/files). |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md). &#x200B;
 
 ## 查詢服務 {#query-service}
 
