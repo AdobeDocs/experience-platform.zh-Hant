@@ -2,7 +2,7 @@
 title: 在UI中建立動態源連接
 description: 了解如何使用Adobe Experience Platform UI建立Chatlio來源連線。
 badge: "Beta"
-source-git-commit: 4a2ed14a55736a9dde1adbb8c7996a5659216ec8
+source-git-commit: c35daa60db315f1ed04ed6424464f1ae7bfb4243
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 1%
@@ -111,7 +111,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應欄位提
 * **[!UICONTROL 連線]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
 * **[!UICONTROL 指派資料集和對應欄位]**:顯示要擷取來源資料的資料集，包括資料集所遵守的結構。
 
-審核資料流後，按一下 **[!UICONTROL 完成]** 並允許建立資料流的時間。
+審核資料流後，請選擇 **[!UICONTROL 完成]** 並允許建立資料流的時間。
 
 ![來源工作流的審核步驟。](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 
