@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
+source-git-commit: 11fa9ca8d7044843c295126f8416e5a36600d244
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '934'
 ht-degree: 11%
 
 ---
@@ -92,6 +92,7 @@ ht-degree: 11%
    - 本地系統 {#local-system}
       - [本機檔案上傳連接器](connectors/local-system/local-file-upload.md)
    - 行銷自動化 {#marketing-automation}
+      - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot連接器](connectors/marketing-automation/hubspot.md)
       - [Mailchimp連接器](connectors/marketing-automation/mailchimp.md)
       - [OracleEloqua連接器](connectors/marketing-automation/oracle-eloqua.md)
@@ -162,6 +163,7 @@ ht-degree: 11%
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - 行銷自動化 {#marketing-automation}
+         - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp行銷活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp成員](tutorials/api/create/marketing-automation/mailchimp-members.md)
@@ -276,6 +278,7 @@ ht-degree: 11%
       - 本地系統 {#local-system}
          - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
       - 行銷自動化 {#marketing-automation}
+         - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp行銷活動](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp成員](tutorials/ui/create/marketing-automation/mailchimp-members.md)

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 來源連接器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: d8cd69524d984fdb828447287f3f4a4fe5913d61
+source-git-commit: 9d456dcb7f6fa724cbb6c6f7d7f9f91f73699db2
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 2%
@@ -138,10 +138,12 @@ Experience Platform支援從本機系統擷取資料。 有關特定源連接器
 
 Experience Platform支援從協力廠商行銷自動化系統擷取資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
 
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md)
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
+
 <!-- - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md) -->
 
 ### 付款 {#payments}
