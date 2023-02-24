@@ -2,10 +2,10 @@
 title: 透過Adobe Target個人化
 description: 了解如何使用伺服器API來提供及呈現在Adobe Target中建立的個人化體驗。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3730a9a20644291db844ecfad88355daa4a1cba7
+source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 2%
+source-wordcount: '620'
+ht-degree: 1%
 
 ---
 
@@ -28,15 +28,6 @@ Edge Network Server API可在以下協助下提供及呈現在Adobe Target中建
 設定資料流時，您可以（選擇性）提供 [!DNL Property Token], [!DNL Target Environment ID]，和 [!DNL Target Third Party ID Namespace].
 
 ![顯示資料流服務設定畫面的UI影像，並選取Adobe Target](assets/target-datastream.png)
-
-您可以選擇下列項目 [!DNL Analytics Logging] 選項：
-
-* **[!DNL Server Side]**:這是 [[!DNL A4T]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html). 選取此選項時，每次Target傳回個人化內容時，會 [!DNL A4T] 資料會根據來自Target個人化引擎的回應自動傳送至Analytics。
-* **[!DNL Client Side]**:選取此選項時，每次Target傳回個人化內容時，會 [!DNL A4T] 資料會傳回至呼叫應用程式。 如果您打算將此資料記錄在Analytics中，您必須確保在後續呼叫 [!DNL Analytics].
-
-   >[!IMPORTANT]
-   >
-   >除了選取 **[!UICONTROL 用戶端]** 在「目標設定」中，您也必須停用Analytics，邊緣網路才能傳回 [!DNL A4T] 回應的資訊。
 
 
 ## 自訂參數 {#custom-parameters}
@@ -79,7 +70,7 @@ Edge Network Server API可在以下協助下提供及呈現在Adobe Target中建
 
 ## 查詢Target活動 {#querying-target-activities}
 
-### 結構描述 {#schemas}
+### 綱要 {#schemas}
 
 請求的查詢部分決定Target傳回的內容。 在 `personalization` 物件， `schemas` 決定Target要傳回的內容類型。
 
