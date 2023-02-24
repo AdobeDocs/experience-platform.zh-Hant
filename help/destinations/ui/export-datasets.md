@@ -2,9 +2,10 @@
 title: （測試版）將資料集匯出至雲端儲存目的地
 type: Tutorial
 description: 了解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存空間位置。
-source-git-commit: 97a39e12d916e4fbd048c0fb9ddfa9bdfa10d438
+exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
+source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -18,7 +19,9 @@ ht-degree: 1%
 >* 已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 如需詳細資訊，請連絡您的Adobe代表。
 
 
-本文說明匯出所需的工作流程 [資料集](/help/catalog/datasets/overview.md) 從Adobe Experience Platform移至您偏好的雲端儲存空間位置，例如 [!DNL Amazon S3]、SFTP位置，或 [!DNL Google Cloud Storage].
+本文說明匯出所需的工作流程 [資料集](/help/catalog/datasets/overview.md) 從Adobe Experience Platform移至您偏好的雲端儲存空間位置，例如 [!DNL Amazon S3]、SFTP位置，或 [!DNL Google Cloud Storage] 使用Experience PlatformUI。
+
+您也可以使用Experience PlatformAPI來匯出資料集。 閱讀 [匯出資料集API教學課程](/help/destinations/api/export-datasets.md) 以取得更多資訊。
 
 ## 何時啟用區段或匯出資料集 {#when-to-activate-segments-or-activate-datasets}
 
@@ -99,7 +102,7 @@ Experience Platform目錄中有些以檔案為基礎的目的地支援區段啟�
 > 
 >針對資料集匯出，檔案名稱具有無法修改的預設格式。 請參閱 [驗證資料集匯出是否成功](#verify) 以取得詳細資訊和匯出檔案的範例。
 
-## 檢閱 {#review}
+## 請檢閱 {#review}
 
 在 **[!UICONTROL 檢閱]** 頁面，您可以看到您所選內容的摘要。 選擇 **[!UICONTROL 取消]** 來分解流， **[!UICONTROL 返回]** 修改設定，或 **[!UICONTROL 完成]** 確認選取項目並開始將資料集匯出至目的地。
 
