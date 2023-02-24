@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案顯示Adobe Experience Platform Query Service支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c26a60f0d0fc9f5b7253851baf73e1a3edfffe0f
+source-git-commit: 3907efa2e8c20671e283c1e5834fc7224ee12f9e
 workflow-type: tm+mt
-source-wordcount: '3355'
+source-wordcount: '3406'
 ht-degree: 2%
 
 ---
@@ -173,18 +173,19 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-### 建立選取的表格
+### 建立選取的表格 {#create-table-as-select}
 
 下列語法定義 `CREATE TABLE AS SELECT` (CTAS)查詢：
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
 ```
 
 | 參數 | 說明 |
 | ----- | ----- |
 | `schema` | XDM架構的標題。 只有在您想要對CTAS查詢建立的新資料集使用現有XDM架構時，才使用此子句。 |
 | `rowvalidation` | （選用）指定使用者是否想要對新建立的資料集擷取的每個新批次進行列層級驗證。 預設值為 `true`。 |
+| `label` | 使用CTAS查詢建立資料集時，請使用此標籤並搭配值 `profile` 將資料集標示為已啟用設定檔。 這表示您的資料集在建立時會自動為設定檔加上標籤。 如需使用的詳細資訊，請參閱衍生屬性擴充功能檔案 `label`. |
 | `select_query` | A `SELECT` 語句。 的語法 `SELECT` 查詢可在 [「選擇查詢」部分](#select-queries). |
 
 **範例**
@@ -192,7 +193,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
-CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```
