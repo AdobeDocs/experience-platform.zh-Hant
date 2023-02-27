@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2023年2月Adobe Experience Platform發行說明。
-source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
+source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1171'
 ht-degree: 7%
 
 ---
@@ -82,20 +82,14 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 | 功能 | 說明 |
 | --- | --- |
-| 為配置檔案啟用SQL資料集 | 在CTAS查詢中使用LABEL來建立資料集「已啟用配置檔案」，或使用ALTER更新要為配置檔案啟用的現有資料集。 |
-| 監視計畫查詢 | 使用「計畫查詢」頁簽查找有關查詢運行和訂閱警報的重要資訊。 如果排程詳細資訊、狀態和錯誤訊息/代碼失敗，則監視查詢。 |
-| 切換自動完成功能 | 切換查詢編輯器自動完成功能，消除特定中繼資料命令並改善處理時間。 此功能會在您編寫查詢時，自動為查詢建議潛在的SQL關鍵字和表詳細資訊。 |
-| 資料集範例 | 在查詢中指定取樣率，並使用資料集範例來建立統一的隨機範例，或根據特定條件建立條件範例。 |
+| 為配置檔案啟用SQL資料集 | [在CTAS查詢中使用LABEL，讓資料集「啟用設定檔」](../../query-service/sql/syntax.md#create-table-as-select)，或使用ALTER更新要啟用設定檔的現有資料集。 您可以使用此擴展的SQL結構，為您的即時客戶配置檔案業務使用案例的派生屬性提供無縫支援。 請參閱 [派生屬性文檔的無縫SQL流](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) 以取得更多詳細資訊。 |
+| 監視計畫查詢 | 使用 [「計畫查詢」頁簽](../../query-service/ui/monitor-queries.md) 查找有關查詢運行和訂閱警報的重要資訊。 如果排程詳細資訊、狀態和錯誤訊息/代碼失敗，則監視查詢。 |
+| 切換自動完成功能 | 消除某些元資料命令，並通過 [切換查詢編輯器自動完成功能](../../query-service/ui/user-guide.md#auto-complete). 此功能會在您編寫查詢時，自動為查詢建議潛在的SQL關鍵字和表詳細資訊。 |
+| 資料集範例 | 在查詢中指定取樣率，並 [使用資料集範例建立統一的隨機範例](../../query-service/essential-concepts/dataset-samples.md)，或根據特定條件建立條件範例。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 有關Query Services的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).
-
-<!-- Links for QS feature docs after release day: -->
-<!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
-<!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
-<!-- Toggle auto-complete feature link: https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html#auto-complete -->
-<!-- dataset samples: https://experienceleague.adobe.com/docs/experience-platform/query/essential-concepts/dataset-samples.html -->
 
 ## Real-Time Customer Data Platform B2B 版本 {#b2b}
 
