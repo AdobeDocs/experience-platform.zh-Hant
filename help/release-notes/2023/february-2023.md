@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform發行說明2023年2月
 description: 2023年2月Adobe Experience Platform發行說明。
-source-git-commit: 66ca8d3972045cffe4a1614f638546f4e7838680
+source-git-commit: deb8512d3c585512520dae04e555c6497d74ba4c
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 6%
@@ -45,9 +45,12 @@ Adobe Experience Platform 現有功能更新：
 XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料提供通用結構和定義（結構）。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
 
 **更新功能**
-&#x200B; |功能 |說明 | | — | — | |透過UI取代欄位 |您現在可以 [擷取資料後，會取代結構中的欄位](../../xdm/tutorials/field-deprecation-ui.md). 取代XDM欄位可讓您從UI檢視中移除欄位，同時保留欄位以供使用。 您可以視需要再次顯示已棄用的欄位，而任何參考欄位的區段、查詢或下游解決方案將照常執行。 |
 
+| 功能 | 說明 |
+| --- | --- |
+| 透過UI取代欄位 | 您現在可以 [擷取資料後，會取代結構中的欄位](../../xdm/tutorials/field-deprecation-ui.md). 取代XDM欄位可讓您從UI檢視中移除欄位，同時保留欄位以供使用。 您可以視需要再次顯示已棄用的欄位，而任何參考欄位的區段、查詢或下游解決方案將照常執行。 |
 
+{style=&quot;table-layout:auto&quot;}
 
 **新XDM元件**
 
@@ -76,9 +79,18 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以加入Data Lake中的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或擷取至即時客戶個人檔案。
 
 **更新功能**
-&#x200B; |功能 |說明 | | — | — | |為配置檔案啟用資料集（使用SQL） |在CTAS查詢中使用LABEL來將資料集「profile enabled」，或使用ALTER來更新要為profile啟用的現有資料集。 | |監視計畫查詢 |使用「計畫查詢」頁簽查找有關查詢運行和訂閱警報的重要資訊。 如果排程詳細資訊、狀態和錯誤訊息/代碼失敗，則監視查詢。  | |切換自動完成功能 |切換查詢編輯器自動完成功能，消除特定中繼資料命令並縮短處理時間。 此功能會在您編寫查詢時，自動為查詢建議潛在的SQL關鍵字和表詳細資訊。 | |資料集範例 |在查詢中指定取樣率，並使用資料集範例來建立統一的隨機範例，或根據特定條件建立條件範例。 |
 
-有&#x200B;關查詢服務的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).&#x200B;
+| 功能 | 說明 |
+| --- | --- |
+| 為配置檔案啟用SQL資料集 | 在CTAS查詢中使用LABEL來建立資料集「已啟用配置檔案」，或使用ALTER更新要為配置檔案啟用的現有資料集。 |
+| 監視計畫查詢 | 使用「計畫查詢」頁簽查找有關查詢運行和訂閱警報的重要資訊。 如果排程詳細資訊、狀態和錯誤訊息/代碼失敗，則監視查詢。 |
+| 切換自動完成功能 | 切換查詢編輯器自動完成功能，消除特定中繼資料命令並改善處理時間。 此功能會在您編寫查詢時，自動為查詢建議潛在的SQL關鍵字和表詳細資訊。 |
+| 資料集範例 | 在查詢中指定取樣率，並使用資料集範例來建立統一的隨機範例，或根據特定條件建立條件範例。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+有關Query Services的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).
+
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
