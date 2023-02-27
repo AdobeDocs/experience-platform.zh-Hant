@@ -47,7 +47,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 **更新功能**
 &#x200B; |功能 |說明 | | — | — | |透過UI取代欄位 |您現在可以 [擷取資料後，會取代結構中的欄位](../../xdm/tutorials/field-deprecation-ui.md). 取代XDM欄位可讓您從UI檢視中移除欄位，同時保留欄位以供使用。 您可以視需要再次顯示已棄用的欄位，而任何參考欄位的區段、查詢或下游解決方案將照常執行。 |
 
-{style=&quot;table-layout:auto&quot;}
+
 
 **新XDM元件**
 
@@ -78,7 +78,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 **更新功能**
 &#x200B; |功能 |說明 | | — | — | |為配置檔案啟用資料集（使用SQL） |在CTAS查詢中使用LABEL來將資料集「profile enabled」，或使用ALTER來更新要為profile啟用的現有資料集。 | |監視計畫查詢 |使用「計畫查詢」頁簽查找有關查詢運行和訂閱警報的重要資訊。 如果排程詳細資訊、狀態和錯誤訊息/代碼失敗，則監視查詢。  | |切換自動完成功能 |切換查詢編輯器自動完成功能，消除特定中繼資料命令並縮短處理時間。 此功能會在您編寫查詢時，自動為查詢建議潛在的SQL關鍵字和表詳細資訊。 | |資料集範例 |在查詢中指定取樣率，並使用資料集範例來建立統一的隨機範例，或根據特定條件建立條件範例。 |
 
-{style=&quot;table-layout:auto&quot;}有&#x200B;關查詢服務的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).&#x200B;
+有&#x200B;關查詢服務的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).&#x200B;
 <!-- Links for QS feature docs after release day: -->
 <!-- Enable datasets for profile with SQL link: https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html#create-table-as-select -->
 <!-- Monitor scheduled queries link: https://experienceleague.adobe.com/docs/experience-platform/query/monitor-queries.html  -->
