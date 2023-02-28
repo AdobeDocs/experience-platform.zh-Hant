@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流程服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API為原始和XDM資料使用HTTP API來源建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
+source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1544'
 ht-degree: 2%
 
 ---
@@ -475,6 +475,8 @@ POST /flows
 
 >[!TAB 無需轉換]
 
+下列請求會為HTTP API建立資料流，而不進行資料轉換。
+
 ```shell
 curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -500,6 +502,10 @@ curl -X POST \
 ```
 
 >[!TAB 轉換]
+
+下列請求會為HTTP API建立串流資料流，並將對應轉換套用至您的資料。
+
+使用轉換建立資料流時， `name` 參數無法變更。 此值必須一律設為 `Mapping`.
 
 ```shell
 curl -X POST \
