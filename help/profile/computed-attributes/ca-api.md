@@ -4,7 +4,7 @@ title: 計算屬性API端點
 type: Documentation
 description: 在Adobe Experience Platform中，計算屬性是用來將事件層級資料匯總至設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。 本指南說明如何使用即時客戶設定檔API來建立、檢視、更新和刪除計算屬性。
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 2%
@@ -610,6 +610,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         },
         "dataGovernancePolicy": {
             "excludeOptOut": true
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": false
+            },
+            "continuous": {
+                "enabled": true
+            },
+            "synchronous": {
+                "enabled": false
+            }
         }
     }'
 ```

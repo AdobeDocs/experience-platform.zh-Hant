@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1261'
 ht-degree: 3%
 
 ---
@@ -178,6 +178,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
             "format": "pql/text",
             "value": "workAddress.country = \"US\""
         },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
         "schema": {
             "name": "_xdm.context.profile"
         },
@@ -189,6 +200,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `name` | **必填。** 要用來參照區段的唯一名稱。 |
+| `description` | 您要建立的區段定義說明。 |
+| `evaluationInfo` | 您要建立的區段類型。 如果要建立批次區段，請設定 `evaluationInfo.batch.enabled` 是真的。 如果您想要建立串流區段，請設定 `evaluationInfo.continuous.enabled` 是真的。 如果要建立邊段，請設定 `evaluationInfo.synchronous.enabled` 是真的。 如果保留為空白，則會將區段建立為 **批次** 區段。 |
 | `schema` | **必填。** 與區段中的實體相關聯的架構。 包含 `id` 或 `name` 欄位。 |
 | `expression` | **必填。** 包含區段定義相關欄位資訊的實體。 |
 | `expression.type` | 指定運算式類型。 目前僅支援「PQL」。 |
@@ -251,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 系統產生的新建立區段定義ID。 |
-| `evaluationInfo` | 系統產生的物件，告訴區段定義將進行的評估類型。 可以是批次、連續（也稱為串流）或同步分段。 |
+| `evaluationInfo` | 指出區段定義將進行何種評估類型的物件。 可以是批次、串流（也稱為連續）或邊緣（亦稱為同步）分段。 |
 
 ## 擷取特定區段定義 {#get}
 
@@ -333,7 +346,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據已發佈的PQL文法的區段定義的文字表示。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
 | `expression.value` | 符合以下中所示類型的運算式： `expression.format`. |
 | `description` | 人類看得懂的定義說明。 |
-| `evaluationInfo` | 系統產生的物件，會告訴要進行哪種評估、批次、連續（也稱為串流）或同步，區段定義會經過。 |
+| `evaluationInfo` | 指出評估、批次、串流（也稱為連續）或邊緣（也稱為同步）類型的物件，區段定義將會進行。 |
 
 ## 大量擷取區段定義 {#bulk-get}
 
@@ -466,7 +479,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | `expression.format` | 指示值中表達式的結構。 目前支援下列格式： <ul><li>`pql/text`:根據已發佈的PQL文法的區段定義的文字表示。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
 | `expression.value` | 符合以下中所示類型的運算式： `expression.format`. |
 | `description` | 人類看得懂的定義說明。 |
-| `evaluationInfo` | 系統產生的物件，會告訴要進行哪種評估、批次、連續（也稱為串流）或同步，區段定義會經過。 |
+| `evaluationInfo` | 指出評估、批次、串流（也稱為連續）或邊緣（也稱為同步）類型的物件，區段定義將會進行。 |
 
 ## 刪除特定區段定義 {#delete}
 
