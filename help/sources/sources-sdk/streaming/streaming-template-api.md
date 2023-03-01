@@ -3,9 +3,9 @@ title: 串流SDK API的檔案自助範本
 description: 了解如何使用流量服務API將串流資料從來源帶入Adobe Experience Platform。
 hide: true
 hidefromtoc: true
-source-git-commit: 7744fef9751212a40f8f20df52812d38130c42fc
+source-git-commit: eb317f38499a32b1a6eb072ec74e68cdfebf994f
 workflow-type: tm+mt
-source-wordcount: '1775'
+source-wordcount: '1699'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 1%
 
 ### 建立源連接 {#source-connection}
 
-若要為串流來源建立來源連線，請向 `/sourceConnections` 端點 [!DNL Flow Service] 提供連線名稱、來源的連線規格ID和資料格式時的API。
+向發出POST請求以建立來源連線 [!DNL Flow Service] API，在提供來源的連線規格ID時，會提供名稱和說明等詳細資訊，以及資料的格式。
 
 **API格式**
 
@@ -259,9 +259,6 @@ curl -X POST \
 * [對應ID](#mapping)
 
 資料流負責從源中調度和收集資料。 您可以在裝載中提供先前提及的值時，執行POST要求來建立資料流。
-
-若要排程擷取，您必須先將開始時間值設為紀元時間（以秒為單位）。 然後，您必須將頻率值設定為以下五個選項之一： `once`, `minute`, `hour`, `day`，或 `week`. 間隔值會指定兩個連續擷取之間的期間，但建立一次性擷取不需要設定間隔。 對於所有其他頻率，間隔值必須設定為等於或大於 `15`.
-
 
 **API格式**
 
