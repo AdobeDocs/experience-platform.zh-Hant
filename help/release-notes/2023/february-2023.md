@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2023年2月
 description: 2023年2月Adobe Experience Platform發行說明。
-source-git-commit: 72ae96f72bfffe376fec5c0e1dcf79406cb86a26
+source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1317'
 ht-degree: 6%
 
 ---
@@ -14,11 +14,30 @@ ht-degree: 6%
 
 Adobe Experience Platform 現有功能更新：
 
+- [資料收集](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model(XDM)](#xdm)
 - [查詢服務](#query-service)
 - [Real-Time Customer Data Platform B2B 版本](#b2b)
 - [來源](#sources)
+
+## 資料收集 {#data-collection}
+
+Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體驗資料，並傳送至Adobe Experience Platform Edge Network，以便在中加以擴充、轉換及分發至Adobe或非Adobe目的地。
+
+### 保證 {#assurance}
+
+Adobe保證可讓您檢查、校樣、模擬及驗證您收集資料或提供行動應用程式體驗的方式。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 公用API | Adobe保證API現已可用。 保證API是API的集合，當使用者搭配Mobile SDK的Adobe保證擴充功能時，可讓使用者測試和除錯自己的網頁和行動應用程式。 若要進一步了解保障API，請參閱 [保證API概觀](https://developer.adobe.com/adobe-assurance-public-apis/). |
+
+{style=&quot;table-layout:auto&quot;}
+
+如需Assurance的詳細資訊，請閱讀 [保證檔案](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
