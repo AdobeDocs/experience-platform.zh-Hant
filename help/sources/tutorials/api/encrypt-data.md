@@ -3,9 +3,9 @@ title: 加密資料擷取
 description: Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的檔案。
 hide: true
 hidefromtoc: true
-source-git-commit: f0bbefcd9b4595f02c400ea0c5bb76bfa6c5e33e
+source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '967'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,15 @@ Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的�
 
 加密的資料擷取程式如下：
 
-1. [使用Experience PlatformAPI建立加密金鑰組](#create-encryption-key-pair). 加密密鑰對由私鑰和公鑰組成。 建立後，您可以複製或下載公開金鑰，及其對應的公開金鑰ID和到期時間。 在此過程中，私鑰將由Experience Platform儲存在安全保管庫中。
+1. [使用Experience PlatformAPI建立加密金鑰組](#create-encryption-key-pair). 加密密鑰對由私鑰和公鑰組成。 建立後，您可以複製或下載公開金鑰，及其對應的公開金鑰ID和到期時間。 在此過程中，私鑰將由Experience Platform儲存在安全保管庫中。 **注意：** 回應中的公開金鑰為Base64編碼，且必須在使用前解密。
 2. 使用公開金鑰加密您要擷取的資料檔案。
 3. 將加密的檔案放入雲端儲存空間。
 4. 一旦加密檔案準備就緒， [為雲儲存源建立源連接和資料流](#create-a-dataflow-for-encrypted-data). 在流程建立步驟期間，您必須提供 `encryption` 參數，並加入您的公開金鑰ID。
 5. Experience Platform從安全保管庫中檢索私鑰以在獲取時解密資料。
+
+>[!IMPORTANT]
+>
+>單一加密檔案的最大大小為100MB。 例如，您可以在單個資料流運行中內嵌2GB的資料，但該資料中的任何單個檔案不能超過100MB。
 
 本檔案提供如何產生加密金鑰組以加密您的資料，以及將加密的資料內嵌至使用雲端儲存來源Experience Platform的步驟。
 
@@ -73,7 +77,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回您的公開金鑰、公開金鑰ID，以及金鑰的到期時間。 到期時間會自動設為金鑰產生日期後180天。 當前無法配置到期時間。
+成功的回應會傳回Base64編碼的公開金鑰、公開金鑰ID，以及金鑰的到期時間。 到期時間會自動設為金鑰產生日期後180天。 當前無法配置到期時間。
 
 ```json
 {
