@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制端到端指南
 description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制的端對端指南
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: bf6fd07404ac6d937aa8660a0de024173f24f5c9
+source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
 workflow-type: tm+mt
-source-wordcount: '2425'
+source-wordcount: '1726'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,8 @@ ht-degree: 1%
 
 * [為您的使用者標籤角色](#label-roles):以其行銷組與外部代理合作的醫療保健提供商（ACME業務組）為例。
 * [標示資源（結構欄位和區段）](#label-resources):指派 **[!UICONTROL PHI/受管制的健康資料]** 標籤至架構資源和區段。
-* [建立將它們連結在一起的策略](#policy):建立原則以將資源上的標籤連結至您角色中的標籤，拒絕存取結構欄位和區段。 這會授予具有相符標籤之使用者的所有沙箱中結構欄位和區段的存取權。
+* 
+   * [激活將它們連結在一起的策略： ](#policy):啟用預設原則，將資源上的標籤連結至角色中的標籤，以防止存取架構欄位和區段。 接著，系統會為具有相符標籤的使用者提供所有沙箱之結構欄位和區段的存取權。
 
 ## 權限
 
@@ -152,82 +153,102 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 
 使用 **[!UICONTROL 胰島素&lt;50]**.
 
-## 建立訪問控制策略 {#policy}
+## 激活訪問控制策略 {#policy}
+
+預設的存取控制原則會利用標籤來定義哪些使用者角色可存取特定平台資源。 在此範例中，對於不在架構欄位中具有對應標籤之角色的使用者，在所有沙箱中都會拒絕存取架構欄位和區段。
+
+要激活訪問控制策略，請選擇 [!UICONTROL 權限] 從左側導覽列中，然後選取 **[!UICONTROL 原則]**.
+
+![顯示的策略清單](../images/abac-end-to-end-user-guide/abac-policies-page.png)
+
+接下來，選取省略號(`...`)旁邊，下拉式清單會顯示編輯、啟用、刪除或複製角色的控制項。 選擇 **[!UICONTROL 啟動]** 中。
+
+![啟動策略的下拉式清單](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+
+此時將顯示激活策略對話框，提示您確認激活。 選擇 **[!UICONTROL 確認]**.
+
+![激活策略對話框](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
+
+收到策略激活的確認，並將您返回 [!UICONTROL 原則] 頁面。
+
+![激活策略確認](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
+
+<!-- ## Create an access control policy {#policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about"
->title="什麼是政策？"
->abstract="政策是將屬性集合在一起，以制定允許和不允許的行動的聲明。 每個組織都會提供預設原則，您必須啟用此原則，才能定義區段和結構欄位等資源的規則。 不能編輯或刪除預設策略。 但是，可以激活或停用預設策略。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="管理原則"
+>title="What are policies?"
+>abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
->title="建立原則"
->abstract="建立原則以定義使用者可以和無法對您的區段和結構欄位採取的動作。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="建立原則"
+>title="Create a policy"
+>abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
->title="為策略配置允許和不允許的操作"
->abstract="A <b>拒絕訪問</b> 當符合條件時，原則會拒絕使用者存取。 結合 <b>以下為false</b>  — 除非所有用戶都符合匹配標準集，否則他們將被拒絕訪問。 此類型的策略允許您保護敏感資源，並僅允許訪問具有匹配標籤的用戶。 <br>A <b>允許訪問</b> 當符合條件時，原則將允許使用者存取。 結合時 <b>以下為true</b>  — 如果使用者符合相符的條件集，即可取得存取權。 這不會明確拒絕使用者的存取權，但會新增允許存取權。 此類型的策略允許您提供對資源的額外訪問，以及那些可能已經通過角色權限擁有訪問權限的用戶。」</br>
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="編輯策略"
+>title="Configure permissible and impermissible actions for a policy"
+>abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."</br>
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
->title="配置資源的權限"
->abstract="資源是使用者可以或無法存取的資產或物件。 資源可以是區段或結構欄位。 您可以為區段和結構欄位設定寫入、讀取或刪除權限。"
+>title="Configure permissions for a resource"
+>abstract="A resource is the asset or object that a user can or cannot access. Resources can be segments or schemas fields. You can configure write, read, or delete permissions for segments and schema fields."
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_condition"
->title="編輯條件"
->abstract="將條件陳述式套用至您的原則，以設定使用者對特定資源的存取權。 選擇「全部匹配」以要求用戶具有與資源具有相同標籤的角色以允許訪問。 選擇「匹配」以要求用戶具有一個角色，該角色只有一個標籤與資源上的標籤匹配。 標籤可定義為核心或自訂標籤，核心標籤代表Adobe建立和提供的標籤，自訂標籤代表您為組織建立的標籤。"
+>title="Edit conditions"
+>abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-存取控制原則會利用標籤來定義哪些使用者角色可存取特定平台資源。 策略可以是本地策略，也可以是全局策略，並可以覆蓋其他策略。 在此範例中，對於架構欄位中沒有對應標籤的使用者，在所有沙箱中都會拒絕存取架構欄位和區段。
+Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
->系統會建立「拒絕原則」來授與敏感資源的存取權，因為角色會授予主體的權限。 本示例中的書面策略 **否認** 如果缺少必要標籤，則可以訪問。
+>A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
 
-要建立訪問控制策略，請選擇 **[!UICONTROL 權限]** 從左側導覽列中，然後選取 **[!UICONTROL 原則]**. 下一步，選擇 **[!UICONTROL 建立原則]**.
+To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
-![顯示在「權限」中選擇的「建立」策略的影像](../images/abac-end-to-end-user-guide/abac-create-policy.png)
+![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
 
-此 **[!UICONTROL 建立新策略]** 對話框，提示您輸入名稱和可選說明。 選擇 **[!UICONTROL 確認]** 完成時。
+The **[!UICONTROL Create new policy]** dialog appears, prompting you to enter a name and an optional description. Select **[!UICONTROL Confirm]** when finished.
 
-![顯示「建立新策略」對話框並選擇「確認」的影像](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
+![Image showing the Create new policy dialog and selecting Confirm](../images/abac-end-to-end-user-guide/abac-create-policy-details.png)
 
-要拒絕對架構欄位的訪問，請使用下拉箭頭並選擇 **[!UICONTROL 拒絕訪問]** 然後選取 **[!UICONTROL 未選擇資源]**. 下一步，選擇 **[!UICONTROL 架構欄位]** 然後選取 **[!UICONTROL 全部]**.
+To deny access to the schema fields, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Schema Field]** and then select **[!UICONTROL All]**.
 
-![顯示已選擇拒絕訪問和資源的影像](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
+![Image showing Deny access and resources selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema.png)
 
-下表顯示了建立策略時可用的條件：
+The table below shows the conditions available when creating a policy:
 
-| 條件 | 說明 |
+| Conditions | Description |
 | --- | --- |
-| 以下為false | 設定「拒絕存取」時，如果使用者不符合選取的條件，則會限制存取。 |
-| 以下為true | 當設定「允許訪問」時，如果用戶滿足所選標準，則允許訪問。 |
-| 符合任何 | 使用者的標籤符合套用至資源的任何標籤。 |
-| 符合所有 | 使用者的所有標籤都符合套用至資源的所有標籤。 |
-| 核心標籤 | 核心標籤是Adobe定義的標籤，可在所有Platform執行個體中使用。 |
-| 自訂標籤 | 自訂標籤是貴組織已建立的標籤。 |
+| The following being false| When 'Deny access to' is set, access will be restricted if the user does not meet the criteria selected. |
+| The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
+| Matches any| The user has a label that matches any label applied to a resource. |
+| Matches all| The user has all labels that matches all labels applied to a resource. |
+| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Custom label| A custom label is a label that has been created by your organization.|
 
-選擇 **[!UICONTROL 以下為false]** 然後選取 **[!UICONTROL 未選擇屬性]**. 接下來，選取使用者 **[!UICONTROL 核心標籤]**，然後選取 **[!UICONTROL 符合所有]**. 選取資源 **[!UICONTROL 核心標籤]** 最後選取 **[!UICONTROL 新增資源]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.
 
-![顯示所選條件和新增所選資源的影像](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
+![Image showing the conditions being selected and Add resource being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-schema-expression.png)
 
 >[!TIP]
 >
->資源是主體可以或無法存取的資產或物件。 資源可以是區段或結構。
+>A resource is the asset or object that a subject can or cannot access. Resources can be segments or schemas.
 
-若要拒絕區段的存取，請使用下拉式箭頭並選取 **[!UICONTROL 拒絕訪問]** 然後選取 **[!UICONTROL 未選擇資源]**. 下一步，選擇 **[!UICONTROL 區段]** 然後選取 **[!UICONTROL 全部]**.
+To deny access to the segments, use the dropdown arrow and select **[!UICONTROL Deny access to]** and then select **[!UICONTROL No resource selected]**. Next, select **[!UICONTROL Segment]** and then select **[!UICONTROL All]**.
 
-選擇 **[!UICONTROL 以下為false]** 然後選取 **[!UICONTROL 未選擇屬性]**. 接下來，選取使用者 **[!UICONTROL 核心標籤]**，然後選取 **[!UICONTROL 符合所有]**. 選取資源 **[!UICONTROL 核心標籤]** 最後選取 **[!UICONTROL 儲存]**.
+Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Save]**.
 
-![顯示已選條件和已選保存的影像](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
+![Image showing conditions selected and Save being selected](../images/abac-end-to-end-user-guide/abac-create-policy-deny-access-segment.png)
 
-選擇 **[!UICONTROL 啟動]** 要激活策略，將顯示一個對話框，提示您確認激活。 選擇 **[!UICONTROL 確認]** 然後選取 **[!UICONTROL 關閉]**.
+Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears which prompts you to confirm activation. Select **[!UICONTROL Confirm]** and then select **[!UICONTROL Close]**.
 
-![顯示正在激活的策略的影像 ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png)
+![Image showing the Policy being activated ](../images/abac-end-to-end-user-guide/abac-create-policy-activation.png) -->
 
 ## 後續步驟
 
