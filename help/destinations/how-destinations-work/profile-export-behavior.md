@@ -1,9 +1,9 @@
 ---
 title: 設定檔匯出行為
 description: 了解設定檔匯出行為如何因Experience Platform目的地支援的不同整合路徑而有所不同。
-source-git-commit: 5d404d723ea0b7cc72c5188dcff1f59a1874cfe2
+source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2979'
+source-wordcount: '2954'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Experience Platform目的地會以HTTPS呼叫的形式，將資料匯出至API�
 
 >[!IMPORTANT]
 >
-> 企業目標僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+> 企業目標僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 
 此 [企業目的地](/help/destinations/destination-types.md#streaming-profile-export) Experience Platform中有Amazon Kinesis、Azure事件中心和HTTP API。
 
@@ -173,7 +173,7 @@ Experience Platform會最佳化設定檔匯出行為至您的串流目的地，�
 
 | 決定目標匯出的因素 | 匯出的檔案中包含的內容 |
 |---------|----------|
-| <ul><li>UI或API中設定的匯出排程和使用者動作(選取 [立即匯出檔案](/help/destinations/ui/export-file-now.md) 或使用 [臨機啟動API](/help/destinations/api/ad-hoc-activation-api.md))決定目的地匯出的開始。</li><li>設定檔的區段成員資格變更（無論是否符合區段資格或取消資格）都可讓設定檔納入增量匯出。</li></ul> | 在完整檔案匯出中，根據最新區段評估，每個檔案匯出都會包含區段的整個作用中設定檔母體。 選取要匯出的每個XDM屬性的最新值也會納入為每個檔案中的欄。 請注意，處於退出狀態的設定檔不會包含在檔案匯出中。 |
+| <ul><li>UI或API中設定的匯出排程和使用者動作(選取 [立即匯出檔案](/help/destinations/ui/export-file-now.md) 或使用 [臨機啟動API](/help/destinations/api/ad-hoc-activation-api.md))決定目的地匯出的開始。</li></ul> | 在完整檔案匯出中，根據最新區段評估，每個檔案匯出都會包含區段的整個作用中設定檔母體。 選取要匯出的每個XDM屬性的最新值也會納入為每個檔案中的欄。 請注意，處於退出狀態的設定檔不會包含在檔案匯出中。 |
 
 {style=&quot;table-layout:fixed&quot;}
 
