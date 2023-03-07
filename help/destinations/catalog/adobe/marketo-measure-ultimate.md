@@ -2,9 +2,9 @@
 title: Marketo Measure最終目的地
 description: 了解如何將資料連線並啟動至Marketo Measure Ultimate目的地。
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: 60ea8a608b85661f3a5d23dc3ba52cb0952fe2d2
+source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -60,21 +60,23 @@ Marketo Measure（前身為Bizible）可讓行銷人員深入了解哪些行銷�
 * **[!UICONTROL 名稱]**:日後您將透過此名稱識別此目的地。
 * **[!UICONTROL 說明]**:未來可協助您識別此目的地的說明。
 
+![Marketo Measure目的地的連線至目的地工作流程。](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+
 ### 啟用警報 {#enable-alerts}
 
 您可以啟用警報，接收有關資料流到目標狀態的通知。 從清單中選擇要訂閱的警報，以接收有關資料流狀態的通知。 如需警報的詳細資訊，請參閱 [使用UI訂閱目的地警報](../../ui/alerts.md).
 
 完成提供目標連接的詳細資訊後，請選擇 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 將資料集匯出至此目的地 {#export-datasets}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
-閱讀 [（測試版）匯出資料集](/help/destinations/ui/export-datasets.md) 如需將資料集匯出至此目的地的詳細指示。
+閱讀 [（測試版）匯出資料集](/help/destinations/ui/export-datasets.md) 教學課程，以取得將資料集匯出至此目的地的詳細指示。
 
-## 匯出的資料/驗證資料匯出 {#exported-data}
+## 驗證資料匯出 {#exported-data}
 
 若要驗證資料集匯出是否成功，您可以檢查資料集是否已成功傳入您的 [Snowflake資料倉儲](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
 
@@ -82,5 +84,6 @@ Marketo Measure（前身為Bizible）可讓行銷人員深入了解哪些行銷�
 
 全部 [!DNL Adobe Experience Platform] 處理資料時，目的地符合資料使用原則。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料控管概觀](/help/data-governance/home.md).
 
-## 其他資源 {#additional-resources}
+<!--## Additional resources {#additional-resources}-->
+
 
