@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備映射函式
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2584e804674cc54f9cdd0b3a28ee6fb1600b6216
+source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
 workflow-type: tm+mt
-source-wordcount: '4392'
+source-wordcount: '4557'
 ht-degree: 3%
 
 ---
@@ -64,7 +64,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 等於 | 比較兩個字串以確認其是否相等。 此函式區分大小寫。 | <ul><li>字串1: **必填** 您要比較的第一個字串。</li><li>字串2: **必填** 您要比較的第二個字串。</li></ul> | 字串1&#x200B;.equals(&#x200B;STRING2) | &quot;string1&quot;&#x200B;。等於&#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | 比較兩個字串以確認其是否相等。 此函式為 **not** 區分大小寫。 | <ul><li>字串1: **必填** 您要比較的第一個字串。</li><li>字串2: **必填** 您要比較的第二個字串。</li></ul> | 字串1&#x200B;.equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;&#x200B;。equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 規則運算式函式
 
@@ -73,7 +73,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | extract_regex | 根據規則運算式從輸入字串中擷取群組。 | <ul><li>字串： **必填** 從中提取組的字串。</li><li>REGEX: **必填** 您要群組相符的規則運算式。</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)」) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | 檢查字串是否與輸入的規則運算式相符。 | <ul><li>字串： **必填** 您要檢查的字串與規則運算式相符。</li><li>REGEX: **必填** 要比較的規則運算式。</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)」) | true |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 雜湊函式 {#hashing}
 
@@ -89,7 +89,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | md5 | 取用輸入，並使用MD5產生雜湊值。 | <ul><li>輸入： **必填** 要雜湊的純文字。</li><li>字元集： *可選* 字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。 </li></ul> | md5（輸入，字元集） | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B;e9bd0198d03ba6852c7 |
 | crc32 | 取用輸入使用循環冗餘校驗(CRC)算法來產生32位循環碼。 | <ul><li>輸入： **必填** 要雜湊的純文字。</li><li>字元集： *可選* 字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### URL函式 {#url}
 
@@ -104,8 +104,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_port | 傳回指定URL的連接埠。 如果輸入無效，則返回null。 | <ul><li>URL: **必填** 需要擷取連接埠的URL。</li></ul> | get_url_port(URL) | get_url_port(&#x200B;&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | 傳回指定URL的路徑。 依預設，會傳回完整路徑。 | <ul><li>URL: **必填** 需要擷取路徑的URL。</li><li>完整路徑(_P): *可選* 一個布林值，它確定是否返回完整路徑。 若設為false，則只會傳迴路徑的結尾。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;/home/joe/&#x200B; employee.csv&quot; |
 | get_url_query_str | 傳回指定URL的查詢字串，作為查詢字串名稱和查詢字串值的映射。 | <ul><li>URL: **必填** 您嘗試從中取得查詢字串的URL。</li><li>錨點： **必填** 決定要對查詢字串中的錨點執行什麼動作。 可以是三個值的其中之一：&quot;retain&quot;、&quot;remove&quot;或&quot;append&quot;。<br><br>如果值為「retain」，則錨點會附加至傳回的值。<br>如果值為「remove」，則會從傳回值中移除錨點。<br>如果值為「append」，則錨點會以個別值傳回。</li></ul> | get_url_query_str(&#x200B;URL，錨點) | get_url_query_str(&#x200B;&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;retain&quot;<br>get_url_query_str(&#x200B;&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;<br>get_url_query_str&#x200B;(&quot;foo://example.com &#x200B;:8042/over/thre &#x200B;?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_encoded | 此函式以URL作為輸入，並以ASCII字元替換或編碼特殊字元。 有關特殊字元的詳細資訊，請閱讀 [特殊字元清單](#special-characters) 在本檔案附錄中。 | <ul><li>URL: **必填** 輸入URL，其中包含您要替換的特殊字元，或用ASCII字元進行編碼。</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022」) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
+| get_url_decoded | 此函式會將URL視為輸入，並將ASCII字元解碼為特殊字元。  有關特殊字元的詳細資訊，請閱讀 [特殊字元清單](#special-characters) 在本檔案附錄中。 | <ul><li>URL: **必填** 要解碼為特殊字元的ASCII字元的輸入URL。</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 日期和時間函式 {#date-and-time}
 
@@ -128,7 +130,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | zone_date_to_utc | 將任何時區的日期轉換為UTC的日期。 | <ul><li>日期： **必填** 您嘗試轉換的日期。</li></ul> | zone_date_to_utc(&#x200B;DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
 | zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期： **必填** 您嘗試轉換的日期。</li><li>區域： **必填** 您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone(&#x200B;DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 層次 — 對象 {#objects}
 
@@ -147,7 +149,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_keys | 剖析索引鍵/值組並傳回所有索引鍵。 | <ul><li>對象： **必填** 將從中擷取鍵值的物件。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;):《傲慢與偏見》、《書2》：《1984年》) | `["book1", "book2"]` |
 | get_values | 分析索引鍵/值配對，並根據指定索引鍵傳回字串的值。 | <ul><li>字串： **必填** 要分析的字串。</li><li>索引鍵： **必填** 必須擷取值的索引鍵。</li><li>VALUE_DELIMITER: **必填** 分隔欄位和值的分隔字元。 若 `null` 或空白字串，則此值為 `:`.</li><li>FIELD_DELIMITER: *可選* 分隔欄位和值組的分隔字元。 若 `null` 或空白字串，則此值為 `,`.</li></ul> | get_values(STRING, KEY, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | 約翰 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 有關對象複製功能的資訊，請參閱 [low](#object-copy).
 
@@ -169,7 +171,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | upsert_array_append | 此函式用於將整個輸入陣列中的所有元素附加到配置檔案中陣列的末尾。 此函式為 **僅限** 適用。 如果用於插入的上下文，則此函式將按原樣返回輸入。 | <ul><li>陣列： **必填** 要在配置檔案中附加陣列的陣列。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | 此函式可用來取代陣列中的元素。 此函式為 **僅限** 適用。 如果用於插入的上下文，則此函式將按原樣返回輸入。 | <ul><li>陣列： **必填** 要替換配置檔案中陣列的陣列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 邏輯運算子 {#logical-operators}
 
@@ -182,7 +184,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 解碼 | 在提供以陣列扁平化的索引鍵和索引鍵值配對清單的情況下，如果找到索引鍵，函式會傳回值，如果陣列中存在預設值，則會傳回預設值。 | <ul><li>索引鍵： **必填** 要匹配的密鑰。</li><li>OPTIONS: **必填** 平面化的索引鍵/值組陣列。 （可選）可將預設值放在結尾。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 如果提供的stateCode是「ca」、「California」。<br>如果給定的stateCode是&quot;pa&quot;，則為&quot;Pennsylvania&quot;。<br>如果stateCode不符合下列項目，則為「N/A」。 |
 | ii | 計算給定的布爾表達式，並根據結果返回指定值。 | <ul><li>運算式： **必填** 要評估的布林表達式。</li><li>TRUE_VALUE: **必填** 如果運算式評估為true，則會傳回的值。</li><li>FALSE_VALUE: **必填** 如果運算式評估為false，則傳回的值。</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 彙總 {#aggregation}
 
@@ -195,7 +197,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | min | 返回給定參數的最小值。 使用自然排序。 | <ul><li>OPTIONS: **必填** 可相互比較的一個或多個對象。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 傳回指定引數的最大值。 使用自然排序。 | <ul><li>OPTIONS: **必填** 可相互比較的一個或多個對象。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 類型轉換 {#type-conversions}
 
@@ -210,7 +212,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_float | 將字串轉換為浮點數。 | <ul><li>字串： **必填** 要轉換為Float的字串。</li></ul> | to_float(STRING) | to_float(「12.3456」) | 12.34566 |
 | to_integer | 將字串轉換為整數。 | <ul><li>字串： **必填** 要轉換為整數的字串。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### JSON函式 {#json}
 
@@ -222,7 +224,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 從指定字串反序列化JSON內容。 | <ul><li>字串： **必填** 要反序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}) | 代表JSON的物件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 特別行動 {#special-operations}
 
@@ -234,7 +236,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 用戶代理函式 {#user-agent}
 
@@ -258,7 +260,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | ua_agent_name | 從用戶代理字串中提取代理名。 | <ul><li>USER_AGENT: **必填** 使用者代理字串。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | Safari |
 | ua_device_class | 從用戶代理字串中提取設備類。 | <ul><li>USER_AGENT: **必填** 使用者代理字串。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class(&#x200B;&quot;Mozilla/5.0(iPhone;CPU iPhone OS 5_1_1(如Mac OS X)AppleWebKit/534.46（KHTML如Gecko）Version/5.1 Mobile/9B206 Safari/7534.48.3」) | 電話 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 對象副本 {#object-copy}
 
@@ -302,3 +304,43 @@ address.line1 -> addr.addrLine1
 * 新屬性在來源架構和XDM架構中應具有相符的名稱。
 
 如果未滿足任何先決條件，則必須使用資料準備手動將來源架構對應至XDM架構。
+
+## 附錄
+
+以下提供有關使用資料準備映射函式的其他資訊
+
+### 特殊字元 {#special-characters}
+
+下表概述保留字元及其對應的編碼字元清單。
+
+| 保留字元 | 編碼字元 |
+| --- | --- |
+| 空間 | %20 |
+| ! | %21 |
+| 」 | %22 |
+| # | %23 |
+| $ | %24 |
+| % | %25 |
+| &amp; | %26 |
+| &#39; | %27 |
+| ( | %28 |
+| ) | %29 |
+| * | %2A |
+| + | %2B |
+| , | %2C |
+| / | %2F |
+| ： | %3A |
+| ; | %3B |
+| &lt; | %3C |
+| = | %3D |
+| > | %3E |
+| ? | %3F |
+| @ | %40 |
+| [ | %5B |
+| | | %5C |
+| ] | %5D |
+| ^ | %5E |
+| ` | %60 |
+| ~ | %7E |
+
+{style="table-layout:auto"}
