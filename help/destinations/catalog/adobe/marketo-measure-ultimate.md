@@ -2,7 +2,7 @@
 title: Marketo Measure最終目的地
 description: 了解如何將資料連線並啟動至Marketo Measure Ultimate目的地。
 last-substantial-update: 2023-03-07T00:00:00Z
-source-git-commit: bd2869e48c2d831460fb817c6ddfb800f88b8600
+source-git-commit: c2c7a4cd860fed2c8124fe46fe3fd405ba49ecf4
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
@@ -83,7 +83,5 @@ Marketo Measure（前身為Bizible）可讓行銷人員深入了解哪些行銷�
 ## 資料使用與控管 {#data-usage-governance}
 
 全部 [!DNL Adobe Experience Platform] 處理資料時，目的地符合資料使用原則。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料控管概觀](/help/data-governance/home.md).
-
-<!--## Additional resources {#additional-resources}-->
 
 
