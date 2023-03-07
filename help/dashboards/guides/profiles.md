@@ -4,9 +4,9 @@ title: 設定檔控制面板指南
 description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織「即時客戶個人檔案」資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
 workflow-type: tm+mt
-source-wordcount: '3381'
+source-wordcount: '3385'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 單一身分設定檔]](#single-identity-profiles)
 * [[!UICONTROL 依身分的單一身分設定檔]](#single-identity-profiles-by-identity)
 * [[!UICONTROL 未分段的設定檔]](#unsegmented-profiles)
-* [[!UICONTROL 未細分的設定檔趨勢]](#unsegmented-profiles-trend)
+* [[!UICONTROL 未細分的設定檔變更趨勢]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL 依身分取消細分的設定檔]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 受眾]](#audiences)
 * [[!UICONTROL 對應至目的地狀態的對象]](#audiences-mapped-to-destination-status)
@@ -262,21 +262,22 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 ![未細分的設定檔Widget。](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL 未細分的設定檔趨勢] {#unsegmented-profiles-trend}
+### [!UICONTROL 未細分的設定檔變更趨勢] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="未細分的設定檔趨勢"
 >abstract="此介面工具集提供線條圖圖示，說明指定時段內未附加至任何區段的設定檔數量。 未附加至任何區段的設定檔趨勢可以在30天、90天和12個月期間內視覺化。"
 
-此 [!UICONTROL 未分段的設定檔趨勢] 介面工具集提供線條圖圖圖，說明指定時段內未附加至任何區段的設定檔數量。 未附加至任何區段的設定檔趨勢可以在30天、90天和12個月期間內視覺化。 時段是從介面工具集的下拉式選單中選擇。 輪廓計數會反映在y軸上，而時間會反映在x軸上。
+此 [!UICONTROL 未細分的設定檔變更趨勢] 介面工具集使用折線圖來說明自上次每日快照後新增而未附加至任何區段的設定檔數量。 未附加至任何區段的設定檔變更趨勢可在30天、90天和12個月期間內視覺化。 時段是從介面工具集的下拉式選單中選擇。 輪廓計數會反映在y軸上，而時間會反映在x軸上。
 
-![未細分的設定檔趨勢介面工具集。](../images/profiles/unsegmented-profiles-trend.png)
+![未分段的設定檔會變更趨勢介面工具集。](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL 依身分取消細分的設定檔] {#unsegmented-profiles-by-identity}
 
->!![NOTE]
-自2022年10月起，「依身分Widget劃分的未細分設定檔」已淘汰，不再提供使用。
+>[!NOTE]
+>
+>自2022年10月起，「依身分Widget劃分的未細分設定檔」已淘汰，不再提供使用。
 
 <!-- 
 
@@ -323,7 +324,8 @@ The visualization allows you to monitor the overall health of audiences within A
 ![對象重疊報表對話方塊。](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
-選取 **[!UICONTROL 重疊]** 欄標題，將結果的排名從最高到最低或從最低到最高。
+>
+>選取 **[!UICONTROL 重疊]** 欄標題，將結果的排名從最高到最低或從最低到最高。
 
 若要以PDF格式下載整個報表，請選取選項功能表(**`...`**)後面跟著 **[!UICONTROL 下載]**.
 
