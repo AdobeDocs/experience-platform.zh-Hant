@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 查看目標詳細資訊
 description: 個別目的地的詳細資訊頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的區段，以及編輯啟用和啟用資料流的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a84d67e433d70cc6194ca20abc656e4b141d42a6
+source-git-commit: 0a300660ce0fc53c403d2ceeb3d4d7d2c32ac117
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '912'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 1%
 | [!UICONTROL 建立者] | 指示建立此目標的用戶。 |
 | [!UICONTROL 已建立] | 指示建立此目標時的UTC日期時間。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL 已啟用]/[!UICONTROL 已停用] 切換 {#enabled-disabled-toggle}
 
@@ -86,9 +86,23 @@ ht-degree: 1%
 
 ### 資料流運行持續時間 {#dataflow-runs-duration}
 
-資料流運行的顯示持續時間中存在已知問題。 若 **[!UICONTROL 處理期間]** 如下圖所示，對於大多數資料流運行，指示的時間約為4小時，任何資料流運行的實際處理時間都要短得多。 如果Experience Platform需要重試對目標進行調用，資料流運行窗口將保持更長的開啟時間。
+資料流在流和基於檔案的目標之間運行的顯示持續時間有所不同。
 
-![「資料流」運行頁的映像，其中突出顯示了「處理時間」列。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run.png)
+### 串流目的地 {#streaming}
+
+若 **[!UICONTROL 處理期間]** 如下圖所示，對於大多數流資料流運行而言，指示為4小時左右，任何資料流運行的實際處理時間都要短得多。 如果Experience Platform需要重試對目標進行呼叫，並確保不會在同一時間窗口的任何延遲送達資料上遺漏資料流運行窗口，則資料流運行窗口將保持更長的開啟時間。
+
+![資料流的映像運行頁，其中為流目標突出顯示了「處理時間」列。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
+
+如需詳細資訊，請參閱 [資料流運行到流目標](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) 在監控檔案中。
+
+### 檔案型目的地 {#file-based}
+
+對於運行到基於檔案的目標的資料流， **[!UICONTROL 處理期間]** 取決於要匯出的資料大小和系統負載。 另請注意，資料流會依區段劃分，並執行至以檔案為基礎的目的地。
+
+![資料流的映像運行頁，其中為基於檔案的目標突出顯示了「處理時間」列。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
+
+如需詳細資訊，請參閱 [資料流運行到批處理（基於檔案）目標](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 在監控檔案中。
 
 ## [!UICONTROL 啟動資料] {#activation-data}
 
