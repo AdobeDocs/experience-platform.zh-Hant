@@ -3,9 +3,9 @@ keywords: 目的地；experience cloud解決方案；目標；目標目的地；
 title: Adobe目的地概觀
 description: 將您在Platform中的資料連結至其他Adobe Experience Cloud解決方案，以進行廣告鎖定、個人化、行銷自動化等作業，借此管理客戶體驗
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 4ac73a83188a11900f38307ca8d743de4c186fdb
+source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '234'
 ht-degree: 12%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 12%
 * [Adobe Target連線](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [（測試版）Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Marketo Engage連線](/help/destinations/catalog/adobe/marketo-engage.md)
+* [Marketo Measure Ultimate連線](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
 
 ### 擴充功能
 
