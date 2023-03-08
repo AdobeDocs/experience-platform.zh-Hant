@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform B2B版的區段使用案例
 description: 概述各種可用的Adobe Real-time Customer Data Platform B2B版使用案例。
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b436aeb8a8628d9b481041be518c1113fb54c342
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -84,13 +84,13 @@ B2B類及其屬性會附加 `B2B` 標籤，以區別於Real-time Customer Data P
 
 ### 範例5:按部門名稱和機會金額查找B2B配置檔案以查找機會 {#find-department-opportunity-amount}
 
-查找所有在人力資源部(HR)工作的人員，這些人員與任何具有至少一個價值給定金額（100萬美元）或更多的開放機會的帳戶相關。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM業務機會] 類別。
+查找在人力資源部(HR)工作的所有人員，並找到任何帳戶，這些帳戶至少具有一個價值給定金額（100萬美元）或更多的開放機會。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM業務機會] 類別。
 
 ![顯示示例5設定的UI](../assets/segmentation/example-5.png)
 
 ### 範例6:依職銜和年度客戶收入尋找B2B設定檔 {#find-by-job-title-and-revenue}
 
-查找其職稱為副總裁且與任何年收入達指定金額（1億美元）或以上的帳戶相關的所有人員，並在上個月至少訪問過定價頁面3次。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM ExperienceEvent] 類別。
+查找所有職稱為副總裁且擁有年收入達到指定金額（1億美元）或更高帳戶的人員，並在上個月至少訪問了定價頁面3次。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM ExperienceEvent] 類別。
 
 ![顯示示例6設定的UI](../assets/segmentation/example-6.png)
 
@@ -104,13 +104,37 @@ B2B類及其屬性會附加 `B2B` 標籤，以區別於Real-time Customer Data P
 
 查找在人力資源(HR)部門工作且與任何帳戶相關的所有人員 *或任何一個賬戶的相關賬戶* 至少有一個機會值得指定數額（100萬美元）或更多。 此區段需要 [!UICONTROL XDM個別設定檔] 類別， [!UICONTROL XDM商業帳戶] 類別，和 [!UICONTROL XDM業務機會] 類別。
 
-![顯示相關帳戶分段的UI](../assets/segmentation/segmentation-related-accounts.png)
+![顯示相關帳戶分段的UI](../assets/segmentation/example-8.png)
 
 ### 範例9:使用銷售機會分數和/或帳戶分數來限定設定檔 {#account-scoring}
 
 尋找銷售機會分數超過80的所有設定檔。
 
-![UI顯示預測性銷售機會和帳戶計分的細分](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
+![UI顯示預測性銷售機會和帳戶計分的細分](../assets/segmentation/example-9.png)
+
+### 範例10:尋找與其父組織的收入超過特定美金金額的帳戶相關聯的B2B設定檔 {#find-parent-org-amount}
+
+查找與其父組織的收入超過指定金額($100,000,000)的帳戶關聯的所有人員。
+
+![顯示分段父組織的UI](../assets/segmentation/example-10.png)
+
+### 範例11:按職務和帳戶名稱查找具有活動關係的B2B配置檔案 {#find-by-job-title-and-account-name}
+
+在帳戶「Acme」（其帳戶關係為「有效」）上查找所有是「經理」的人員。
+
+![顯示分段父組織的UI](../assets/segmentation/example-11.png)
+
+### 範例12:尋找B2B設定檔，以實際成本超過預算成本的促銷活動為目標 {#find-actualcost-exceed-budgetcost}
+
+查找實際成本超過預算成本的促銷活動的目標人員。
+
+![顯示分段父組織的UI](../assets/segmentation/example-12.png)
+
+### 範例13:尋找屬於Marketo靜態清單的B2B設定檔，而isDeleted=false {#find-marketo-static-list}
+
+尋找屬於Marketo靜態清單「週年使用者」（其中isDeleted=false）的所有人員。
+
+![顯示分段父組織的UI](../assets/segmentation/example-13.png)
 
 ## 後續步驟 {#next-steps}
 
