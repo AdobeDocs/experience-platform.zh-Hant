@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 身分命名空間概述
 description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。 例如，他們會將「name@email.com」值區分為電子郵件地址，或將「443522」區分為數值CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1681'
 ht-degree: 2%
 
 ---
@@ -78,7 +78,12 @@ Experience Platform提供數個可供所有組織使用的身分識別命名空�
 | TNTID | 代表Adobe Target的命名空間。 請參閱下列檔案，內容如下 [目標](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) 以取得詳細資訊。 |
 | Windows AID | 代表Windows廣告ID的命名空間。 請參閱下列檔案，內容如下 [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) 以取得更多資訊。 |
 
-### 檢視身分識別命名空間
+### 檢視身分識別命名空間 {#view-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_view_integration_identities"
+>title="檢視整合身分"
+>abstract="整合身分識別是用來與其他系統連線的命名空間，不用於身分解析或連結身分識別。 <br> 預設會隱藏這些身分。 使用切換功能檢視整合的命名空間。"
 
 若要在UI中檢視身分識別命名空間，請選取 **[!UICONTROL 身分]** 在左側導覽器中，然後選取 **[!UICONTROL 瀏覽]**.
 
