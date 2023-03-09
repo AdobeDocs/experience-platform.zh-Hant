@@ -1,8 +1,10 @@
 ---
 title: 使用流服務API為Customer.io建立源連接和資料流
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至Customer.io。
+hide: true
+hidefromtoc: true
 badge: "Beta"
-source-git-commit: cb4b92f4d71d42d57363e16d4764217b6de7f8ee
+source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 1%

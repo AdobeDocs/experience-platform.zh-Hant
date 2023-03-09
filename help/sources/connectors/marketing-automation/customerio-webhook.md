@@ -1,8 +1,10 @@
 ---
 title: Customer.io源概述
 description: 了解如何運用WebHook，使用API或使用者介面將Customer.io連線至Adobe Experience Platform
+hide: true
+hidefromtoc: true
 badge: "Beta"
-source-git-commit: 516ec2cbfb954764f1a6fb2007e20acac425607d
+source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
