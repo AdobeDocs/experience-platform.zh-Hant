@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義身分欄位
 description: 了解如何在Experience Platform使用者介面中定義身分欄位。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,12 @@ ht-degree: 0%
    * [身分識別命名空間](../../../identity-service/namespaces.md):身分識別命名空間會定義可與單一人員相關的不同身分資訊類型，且是每個身分欄位的必要元件。
 * [即時客戶個人檔案](../../../profile/home.md):運用客戶身分圖表，根據來自多個來源的匯總資料提供統一的消費者設定檔，且幾乎即時更新。
 
-## 定義身分欄位
+## 定義身分欄位 {#define-a-identity-field}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_identityField_primaryIdentityRestriction"
+>title="主要身分限制"
+>abstract="此架構使用的欄位組用於特定源連接。 此連線需要將identityMap用作主要身分，且已自動設定。"
 
 當 [定義新欄位](./overview.md#define) 在UI中，您可以選取 **[!UICONTROL 身分]** 核取方塊。
 
