@@ -2,7 +2,7 @@
 title: 發行擴充功能
 description: 了解如何在Adobe Experience Platform中私下或公開發行標籤擴充功能。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 46%
@@ -36,4 +36,4 @@ ht-degree: 46%
 
 在完成私人發行後，您可要求 Adobe 將其公開發行。如此，您的擴充功能就會在公開目錄中提供。任何資料收集使用者都可以將您的擴充功能安裝至任何屬性。
 
-請填妥[公開發行申請表](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest)，開始進行發行程序。
+請填妥[公開發行申請表](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest)，開始進行發行程序。
