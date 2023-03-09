@@ -2,18 +2,18 @@
 title: 監視批查詢許可證使用情況
 description: Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢視貴組織Data Distiller授權使用情形的重要資訊。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: a1c5b687108a9fc8729008e2b0e39ec6b1842f54
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
-# （測試版）監控批次查詢授權使用情況 {#monitor-license-usage}
+# (Alpha)監控批次查詢許可證使用情況 {#monitor-license-usage}
 
 >[!IMPORTANT]
 >
->透過UI監控批次查詢授權使用情況的功能為測試版。 其功能和檔案可能會有所變更。
+>尚無法讓所有使用者透過UI監控批次查詢授權使用情形。 此功能為Alpha版，仍在測試中。 本檔案可能會有所變更。
 
 Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過該控制面板檢視貴組織Query Service授權使用情形的重要資訊。
 
