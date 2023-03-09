@@ -2,9 +2,7 @@
 keywords: Experience Platform；標籤類別；標籤；
 title: 標籤類別
 description: 本檔案提供在Adobe Experience Cloud中管理管理標籤類別的相關資訊
-hide: true
-hidefromtoc: true
-source-git-commit: 7f0572af2d582353a0dde12bdb6692f342463312
+source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 0%

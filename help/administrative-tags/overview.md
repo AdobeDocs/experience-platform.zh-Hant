@@ -2,9 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；管理標籤；標籤；
 title: 管理標籤概述
 description: 本檔案提供Adobe Experience Platform中管理標籤的相關資訊
-hide: true
-hidefromtoc: true
-source-git-commit: 7f0572af2d582353a0dde12bdb6692f342463312
+source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 2%
