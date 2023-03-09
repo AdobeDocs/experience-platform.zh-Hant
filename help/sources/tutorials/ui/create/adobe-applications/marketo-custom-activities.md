@@ -1,9 +1,9 @@
 ---
 title: 在UI中為自訂活動資料建立Marketo Engage來源連線和資料流
 description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流，將自訂活動資料匯入Adobe Experience Platform的步驟。
-source-git-commit: d049a29d4c39fa41917e8da1dde530966f4cbaf4
+source-git-commit: e584fbdfa64516a0dad1e7b99eb347f18e59d6d5
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -145,9 +145,30 @@ ht-degree: 0%
 
 ![最後的審核步驟，用於總結有關連接、資料集和映射欄位的資訊。](../../../../images/tutorials/create/marketo-custom-activities/review.png)
 
->[!NOTE]
->
->擷取完成後，擷取的資料集將包含所有活動，包括您 [!DNL Marketo] 例項。 若要在Platform上選取自訂活動記錄，您必須使用 [查詢服務](../../../../../query-service/home.md) 並提供合適的謂語。
+### 將自訂活動新增至現有活動資料流 {#add-to-existing-dataflows}
+
+要將自定義活動資料添加到現有資料流，請修改現有活動資料流與要內嵌的自定義活動資料的映射。 這可讓您將自訂活動內嵌至相同的現有活動資料集。 有關如何更新現有資料流映射的詳細資訊，請閱讀 [更新UI中的資料流](../../update-dataflows.md).
+
+### 使用 [!DNL Query Service] 要篩選自訂活動的活動 {#query-service-filter}
+
+資料流完成後，您可以使用 [查詢服務](../../../../../query-service/home.md) 篩選自訂活動資料的活動。
+
+將自訂活動擷取至Platform時，自訂活動的API名稱會自動變為其 `eventType`. 使用 `eventType={API_NAME}` 以篩選自訂活動資料。
+
+```sql
+SELECT * FROM with_custom_activities_ds_today WHERE eventType='aepCustomActivityDemo1' 
+```
+
+使用 `IN` 用於篩選多個自定義活動的子句：
+
+```sql
+SELECT * FROM $datasetName WHERE eventType='{API_NAME}'
+SELECT * FROM $datasetName WHERE eventType IN ('aepCustomActivityDemo1', 'aepCustomActivityDemo2')
+```
+
+下圖顯示了 [查詢編輯器](../../../../../query-service/ui/user-guide.md) 來篩選自訂活動資料。
+
+![顯示自訂活動查詢範例的平台UI。](../../../../images/tutorials/create/marketo-custom-activities/queries.png)
 
 ## 後續步驟
 
