@@ -1,15 +1,19 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；管理標籤；標籤；
-title: 管理標籤概述
-description: 本檔案提供Adobe Experience Platform中管理標籤的相關資訊
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+keywords: Experience Platform；首頁；熱門主題；統一標籤；標籤；
+title: （測試版）統一標籤概述
+description: 本檔案提供Adobe Experience Platform中統一標籤的相關資訊
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 2%
+source-wordcount: '607'
+ht-degree: 1%
 
 ---
 
-# 標記總覽
+# （測試版）統一標籤概觀
+
+>[!IMPORTANT]
+>
+>統一標籤在測試版中。 如果您想要提供意見反應，請選取「標籤管理」頁面頂端的按鈕，即可。
 
 標籤是Adobe Experience Platform的一項功能，使管理員能夠管理元資料分類，以便對業務對象進行分類，以便更輕鬆地發現和分類。 標籤是中繼資料，可視為可附加至區段、資料集、歷程或其他物件的關鍵字，以便搜尋以尋找該物件和相關物件。 標籤分為兩種類型：分類和取消分類。
 

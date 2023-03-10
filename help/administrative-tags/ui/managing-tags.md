@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；管理標籤；標籤；
-title: 管理管理標籤
-description: 本檔案提供在Adobe Experience Cloud中管理管理標籤的相關資訊
-source-git-commit: f184e94350a79936cbbd9072791650af99fa945f
+title: 管理統一標籤
+description: 本檔案提供在Adobe Experience Cloud中管理統一標籤的相關資訊
+source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
