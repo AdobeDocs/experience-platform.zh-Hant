@@ -4,14 +4,19 @@ solution: Experience Platform
 title: 在UI中管理資料使用量標籤
 description: 本指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用量標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
 
-# 在UI中管理資料使用量標籤
+# 在UI中管理資料使用量標籤 {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_description"
+>title="說明"
+>abstract=""
 
 本使用手冊涵蓋在 [!DNL Experience Platform] 使用者介面。
 
@@ -77,7 +82,12 @@ ht-degree: 0%
 
 ![隱藏繼承的標籤](../images/labels/inherited-labels.png)
 
-## 在資料集欄位層級管理標籤
+## 在資料集欄位層級管理標籤 {#manage-labels-at-dataset-field-level}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataGovernance_instructions"
+>title="說明"
+>abstract=""
 
 >[!IMPORTANT]
 >

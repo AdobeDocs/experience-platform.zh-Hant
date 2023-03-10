@@ -2,14 +2,19 @@
 title: 管理資料集有效期
 description: 了解如何在Adobe Experience Platform UI中排程資料集的有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
 
-# 管理資料集過期時間
+# 管理資料集過期時間 {#dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_description"
+>title="說明"
+>abstract=""
 
 >[!IMPORTANT]
 >
@@ -23,7 +28,12 @@ ht-degree: 0%
 
 本檔案說明如何在Platform UI中排程和管理資料集有效期。
 
-## 排程資料集的有效期
+## 排程資料集的有效期 {#schedule-dataset-expiration}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
+>title="說明"
+>abstract=""
 
 若要建立新請求，請選取 **[!UICONTROL 建立請求]** 從工作區的主要頁面。
 

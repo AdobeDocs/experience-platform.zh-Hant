@@ -2,9 +2,9 @@
 title: 稽核記錄概述
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: cf6ff8bcd3dfebe551ac3d7289fa8d5fb2a78079
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '946'
 ht-degree: 25%
 
 ---
@@ -20,6 +20,11 @@ ht-degree: 25%
 >id="platform_audits_privacyconsole_users"
 >title="最常使用者"
 >abstract="此介面工具集會顯示在所選時間範圍內執行Experience Platform中最多動作的使用者。 若要查看Platform中記錄動作的完整清單，請選取 **稽核** 的下一頁。"
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_description"
+>title="說明"
+>abstract=""
 
 為了提高系統中執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些日誌形成了審核跟蹤，可以幫助Platform上的問題進行故障排除，並幫助您的企業有效遵守公司資料管理策略和法規要求。
 
@@ -65,7 +70,12 @@ ht-degree: 25%
 
 若要檢視及匯出稽核記錄檔，您必須具備 **[!UICONTROL 查看用戶活動日誌]** 授予的存取控制權限(可在 [!UICONTROL 資料控管] 類別)。 若要了解如何管理Platform功能的個別權限，請參閱 [存取控制檔案](../../../access-control/home.md).
 
-## 在UI中管理稽核記錄
+## 在UI中管理稽核記錄 {#managing-audit-logs-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_instructions"
+>title="說明"
+>abstract=""
 
 您可以在 **[!UICONTROL 稽核]** 工作區。 工作區會顯示記錄的記錄清單，依預設會從最近到最近排序。
 

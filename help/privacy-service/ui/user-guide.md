@@ -4,14 +4,19 @@ solution: Experience Platform
 title: 在Privacy ServiceUI中管理隱私權作業
 description: 了解如何使用Privacy Service使用者介面協調及監控各種Experience Cloud應用程式的隱私權要求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1151'
-ht-degree: 1%
+source-wordcount: '1150'
+ht-degree: 0%
 
 ---
 
-# 在Privacy ServiceUI中管理隱私權作業
+# 在Privacy ServiceUI中管理隱私權作業 {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_description"
+>title="說明"
+>abstract=""
 
 本檔案提供使用 [!DNL Privacy Service] 使用者介面。
 
@@ -37,7 +42,7 @@ ht-degree: 1%
 | [!UICONTROL APA_AUS] | 此 [!DNL Australia Privacy Act (Privacy Act)] |
 | [!UICONTROL HIPAA_AUS] | 此 [!DNL Health Insurance Portability and Accountability Act] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -93,7 +98,12 @@ ht-degree: 1%
 
 若要以CSV檔案格式下載完整的作業資料，請選取 **[!UICONTROL 匯出至CSV]** 對話框的右上角。
 
-## 建立新的隱私權工作請求
+## 建立新的隱私權工作請求 {#create-a-new-privacy-job-request}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_requests_instructions"
+>title="說明"
+>abstract=""
 
 >[!NOTE]
 >

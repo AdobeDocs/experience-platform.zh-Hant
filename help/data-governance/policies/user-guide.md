@@ -4,14 +4,19 @@ solution: Experience Platform
 title: 在UI中管理資料使用原則
 description: Adobe Experience Platform資料控管提供的使用者介面可讓您建立和管理資料使用原則。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1413'
 ht-degree: 0%
 
 ---
 
-# 在UI中管理資料使用原則
+# 在UI中管理資料使用原則 {#user-guide}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_description"
+>title="說明"
+>abstract=""
 
 本檔案說明如何使用 **[!UICONTROL 原則]** 工作區，以建立和管理資料使用原則。
 
@@ -83,6 +88,11 @@ ht-degree: 0%
 ![](../images/policies/created-policy.png)
 
 ### 建立同意原則 {#consent-policy}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsagePolicies_instructions"
+>title="說明"
+>abstract=""
 
 >[!IMPORTANT]
 >

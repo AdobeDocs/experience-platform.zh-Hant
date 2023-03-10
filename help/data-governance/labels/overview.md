@@ -4,14 +4,19 @@ solution: Experience Platform
 title: 資料使用量標籤概述
 description: 了解如何使用資料使用量標籤來協助在Adobe Experience Platform中強制執行資料控管法規遵循。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 0%
+source-wordcount: '682'
+ht-degree: 1%
 
 ---
 
-# 資料使用標籤總覽
+# 資料使用標籤總覽 {#overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_description"
+>title="說明"
+>abstract=""
 
 Adobe Experience Platform可讓您將資料使用量標籤套用至資料集和欄位，並依相關項目對每個欄位進行分類 [資料控管原則](../policies/overview.md) 和 [訪問控制策略](../../access-control/abac/ui/policies.md).
 
@@ -42,6 +47,11 @@ Adobe Experience Platform可讓您將資料使用量標籤套用至資料集和�
 如需特定資料匯出控制項如何對應至 [!DNL Platform]，請參閱 [Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## 在中管理資料使用量標籤 [!DNL Experience Platform] {#manage-labels}
+
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_dataUsageLabels_instructions"
+>title="說明"
+>abstract=""
 
 您可以使用 [!DNL Experience Platform] API或使用者介面。 如需各個項目的詳細資訊，請參閱以下子區段。
 
