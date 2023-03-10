@@ -2,10 +2,10 @@
 title: （測試版）Azure資料湖儲存Gen2連接
 description: 了解如何連線至Azure Data Lake Storage Gen2以啟用區段和匯出資料集。
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 010818b56154067402a7cd66f489dd2080142e53
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 1%
+source-wordcount: '680'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 | 匯出類型 | **[!UICONTROL 設定檔]** | 您要依「 」的「選取設定檔屬性」畫面中的選取，匯出區段的所有成員，以及適用的結構欄位（例如PPID） [目的地啟動工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以3、6、8、12或24小時為增量將檔案匯出至下游平台。 深入了解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 先決條件 {#prerequisites}
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 若要驗證目的地，請填寫必填欄位並選取 **[!UICONTROL 連接到目標]**.
 
-* **[!UICONTROL URL]**:的端點 [!DNL Azure Data Lake Storage Gen2]. 端點模式為： `https://<accountname>.dfs.core.windows.net`.
+* **[!UICONTROL URL]**:的端點 [!DNL Azure Data Lake Storage Gen2]. 端點模式為： `abfss://<container>@<accountname>.dfs.core.windows.net`.
 * **[!UICONTROL 租用戶]**:包含您應用程式的租用戶資訊。
 * **[!UICONTROL 服務主體ID]**:應用程式的用戶端ID。
 * **[!UICONTROL 服務主體密鑰]**:應用程式的密鑰。
