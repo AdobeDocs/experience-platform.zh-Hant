@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；統一標籤；標籤；
-title: （測試版）統一標籤概述
+title: 統一標籤概述（測試版）
 description: 本檔案提供Adobe Experience Platform中統一標籤的相關資訊
-source-git-commit: 6f9787909b8155d2bf032b4a42483f2cb4d44eb4
+source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 1%
 
 ---
 
-# （測試版）統一標籤概觀
+# 統一標籤概述（測試版）
 
 >[!IMPORTANT]
 >
