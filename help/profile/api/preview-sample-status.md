@@ -3,7 +3,7 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 預覽範例狀態（設定檔預覽）API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分送，以及產生顯示資料集重疊、身分重疊和未拼接設定檔的報表。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
 source-wordcount: '2874'
 ht-degree: 1%
@@ -369,7 +369,7 @@ curl -X GET \
 * 有107個設定檔僅由資料集的資料組成 `5eeda0032af7bb19162172a7`.
 * 組織中共有454,642個設定檔。
 
-## 產生身分命名空間重疊報表
+## 產生身分命名空間重疊報表 {#identity-overlap-report}
 
 身分命名空間重疊報表會公開對可定址對象（合併的設定檔）貢獻最大的身分命名空間，讓您可洞察組織的設定檔存放區組成。 這包括Adobe提供的標準身分識別命名空間，以及貴組織定義的自訂身分識別命名空間。
 

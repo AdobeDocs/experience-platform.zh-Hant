@@ -5,9 +5,9 @@ title: 假名設定檔資料過期
 description: 本檔案提供在Adobe Experience Platform中為假名設定檔設定資料過期的一般指引。
 hide: true
 hidefromtoc: true
-source-git-commit: 3f776255ca858a86f501fd587c44fe176c45e103
+source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 - 假名設定檔刪除時要考慮的身分類型。
    - 例如： `ECID` 只有， `AAID` 僅，或 `ECID` 和 `AAID`.
-- 刪除假名的設定檔之前的等待時間。 客戶的預設建議為30天。 不過，此值可能會因您的使用案例而異。
+- 刪除假名的設定檔之前的等待時間。 客戶的預設建議為14天。 不過，此值可能會因您的使用案例而異。
 - 與授權設定檔計數相比的目前設定檔計數。
 
 ## 常見問答 {#faq}
@@ -37,10 +37,10 @@ ht-degree: 0%
 
 ### 哪些使用者應使用假名的設定檔資料過期？
 
-- 如果您使用的連接器會將資料從其來源直接傳送至Platform。
+- 如果您使用的串流來源會直接將資料傳送至Platform。
 - 如果您有網站，會一同為未驗證的客戶提供服務。
 - 如果您的資料集中有過多的設定檔計數，且已確認此過多的設定檔計數是因為匿名的Cookie型身分類型。
-   - 若要判斷，您應使用身分類型重疊報表。 有關此報告的更多資訊，請參閱連結
+   - 若要判斷，您應使用身分類型重疊報表。 如需此報告的詳細資訊，請參閱 [身分重疊報表區段](./api/preview-sample-status.md#identity-overlap-report) 預覽範例狀態API指南。
 
 ### 使用假名設定檔資料過期前，您應注意哪些警告？
 
