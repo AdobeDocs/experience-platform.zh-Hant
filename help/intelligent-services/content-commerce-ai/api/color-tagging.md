@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；快速入門；內容ai；商務ai；內容標籤；顏色標籤；顏色擷取；
+keywords: Experience Platform；快速入門；內容；內容標籤；顏色標籤；顏色擷取；
 solution: Experience Platform
 title: 內容標籤API中的顏色標籤
-description: 給定影像時，顏色標籤服務可計算像素顏色的色階分佈圖，並依主色將其排序為貯體。
+description: 給定影像時，「顏色標籤」服務可計算像素顏色的色階分佈圖，並依主色將其排序為貯體。
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '497'
 ht-degree: 4%
 
 ---

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；快速入門；content ai;commerce ai；內容標籤ai；關鍵字標籤；關鍵字標籤
+keywords: Experience Platform；快速入門；內容；內容標籤ai；關鍵字標籤；關鍵字標籤
 solution: Experience Platform
 title: 內容標籤API中的關鍵字標籤
-description: 關鍵字標籤服務在給定文本文檔時，會自動提取最能描述文檔主題的關鍵字或關鍵字。 為了提取關鍵字，使用命名實體識別(NER)和無監督關鍵字標籤算法的組合。
+description: 「關鍵字標籤」服務在提供文本文檔時，會自動提取最能描述文檔主題的關鍵字或關鍵詞。 為了提取關鍵字，使用命名實體識別(NER)和無監督關鍵字標籤算法的組合。
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '450'
 ht-degree: 5%
 
 ---

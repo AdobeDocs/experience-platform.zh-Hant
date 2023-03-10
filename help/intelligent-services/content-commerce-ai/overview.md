@@ -1,12 +1,12 @@
 ---
-keywords: Experience Cloud；快速入門；內容與商務ai；熱門主題；Intelligent Services;ccai
+keywords: Experience Cloud；快速入門；內容標籤；熱門主題；Intelligent Services
 solution: Experience Platform
 title: 內容標籤概觀
-description: Content and Commerce AI是一組AI服務，可讓您從內容中擷取智慧功能、組織、簡化內容流程，以及為客戶提供更具影響力的個人化體驗。
+description: 內容標籤是一組AI服務，可讓您從內容中擷取智慧功能、組織、簡化內容流程，以及為客戶提供更具影響力的個人化體驗。
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '319'
 ht-degree: 1%
 
 ---
