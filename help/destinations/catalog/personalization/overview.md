@@ -3,10 +3,10 @@ keywords: 個人化；個人化
 title: 個人化目的地概觀
 description: 個人化平台會收集個別行為的資料和深入分析。 這些平台可協助行銷人員導覽匿名資料、根據先前的活動或作為具有類似習慣之受眾區段的一部分，向潛在客戶提供優惠方案或廣告。
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: bdc6ef162e9684065b60a13670848dac64be21fd
+source-git-commit: 0dbd050a9057f491537777ab539bfc687f8c89cb
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 11%
+source-wordcount: '153'
+ht-degree: 12%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 11%
 **連線**
 
 * [Adobe Target](adobe-target-connection.md)
-* [（測試版）Adobe Commerce](adobe-commerce.md)
+* [Adobe Commerce](adobe-commerce.md)
 * [自訂個人化連線](custom-personalization.md)
 * [Pega客戶決策中心連線](pega.md)
 * [Pega配置檔案連接](pega-profile.md)
