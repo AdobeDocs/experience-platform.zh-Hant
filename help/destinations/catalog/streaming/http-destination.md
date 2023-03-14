@@ -3,9 +3,9 @@ keywords: 流；HTTP目的地
 title: HTTP API連線
 description: 使用Adobe Experience Platform中的HTTP API目的地，將設定檔資料傳送至協力廠商HTTP端點，以執行您自己的分析，或對匯出出Experience Platform的設定檔資料執行任何其他可能需要的作業。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 1c844d86834ef78d1206a8698dbcbfe2fae49661
+source-git-commit: 01e4a32222bb94ab87751b2375ad616e5b5c0738
 workflow-type: tm+mt
-source-wordcount: '2442'
+source-wordcount: '2535'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 此目的地僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+> 此目的地僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 
 HTTP API目的地為 [!DNL Adobe Experience Platform] 可協助您將設定檔資料傳送至協力廠商HTTP端點的串流目的地。
 
@@ -37,7 +37,7 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 | 匯出類型 | **[!UICONTROL 設定檔]** | 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，如 [目的地啟動工作流程](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 先決條件 {#prerequisites}
 
@@ -158,7 +158,7 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="包含區段時間戳記"
->abstract="如果您希望資料匯出包含建立和更新區段時的UNIX時間戳記，以及將區段對應至要啟用的目的地時的UNIX時間戳記，則切換。 檢視已選取此選項之資料匯出範例的檔案。"
+>abstract="如果您希望資料匯出包含建立和更新區段時的UNIX時間戳記，以及將區段對應至要啟用的目的地時的UNIX時間戳記，則切換。 檢視已選取此選項之資料匯出範例的檔案。<p>第一個項目符號的內容</p><p>第二個項目符號的內容</p><ul><li>清單項目1。</li><li>第2項。</li></ul>  — 更多行文本。  — 更多行文本。 格式化測試，看看我們是否能： <br>使用HTML格式</p><p>甚至使用段落標籤。這是第一行。</p><p>還有更多段落標籤，用於第二行。</p><p>所有段落標籤。 第三行。</p>最後是要納入連結與Markdown的測試 [https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html]（絕對連結）和HTML <a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=zh-Hant">連結文字</a> 語法。最後，測試是加入連結與Markdown [../overview.md]（相對連結）和HTML <a href="../overview.md">相對連結文字</a> 語法。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
@@ -215,7 +215,7 @@ Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API�
 |---------|----------|
 | <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至HTTP API目的地，因此指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 例如，將此資料流視為HTTP目標，其中資料流中選擇了三個段，四個屬性映射到目標。
 
