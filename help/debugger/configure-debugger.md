@@ -12,23 +12,23 @@ ht-degree: 50%
 
 ---
 
-# 配置平台調試器
+# 設定Platform Debugger
 
-您可以配置Adobe Experience Platform調試器的外觀和工作方式的某些方面。
+您可以設定Adobe Experience Platform Debugger外觀和運作方式的某些設定。
 
 ![](images/settings.jpg)
 
 ## 淺色或深色模式
 
-開啟平台調試器後，您可以轉到 **[!UICONTROL 設定]** 選擇 **暗模式** （預設）或 **光模式**。
+Platform Debugger開啟後，您可以前往 **[!UICONTROL 設定]** 選取 **深色模式** （預設）或 **光源模式**.
 
 ## 重設
 
-選擇 **[!UICONTROL 重置所有資料和設定]** 返回以清除所有資料並返回到預設設定。
+選擇 **[!UICONTROL 重設所有資料和設定]** 返回清除所有資料並返回預設設定。
 
 ## 將 Experience Platform Debugger 鎖定在單一頁面
 
-在您變更網站頁面後，Experience Platform Debugger 視窗會隨之更新，顯示該頁面的實際資訊。畫面底部會顯示您所連線的頁面名稱。要將Experience Platform調試器鎖定在一頁上，請選擇 **[!UICONTROL 鎖]** 在「平台調試器」窗口的右下角。
+在您變更網站頁面後，Experience Platform Debugger 視窗會隨之更新，顯示該頁面的實際資訊。畫面底部會顯示您所連線的頁面名稱。若要將Experience Platform偵錯工具鎖定在單一頁面，請選取 **[!UICONTROL 鎖定]** 位於Platform Debugger視窗的右下角。
 
 ![](images/lock.jpg)
 
