@@ -141,7 +141,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ![](../images/merge-policies/dataset-precedence-experienceevent.png)
 
-## [!UICONTROL 檢閱] {#review}
+## [!UICONTROL 請檢閱] {#review}
 
 工作流程的最後一步是檢閱您的合併原則。 此 **[!UICONTROL 檢閱]** 畫面會顯示合併原則的相關資訊，包括選取的ID匯整方法、選取的合併方法，以及包含的資料集。 （若要檢視包含的所有設定檔或ExperienceEvent資料集，請選取要展開下拉式清單的資料集數量。）
 

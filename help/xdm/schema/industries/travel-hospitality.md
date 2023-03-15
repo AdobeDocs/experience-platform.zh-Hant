@@ -5,8 +5,8 @@ description: 檢視實體關係圖(ERD)，此圖表說明旅行與旅宿業的�
 exl-id: 4d454160-9066-4702-815b-9509942f709e
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 1%
+source-wordcount: '448'
+ht-degree: 0%
 
 ---
 
@@ -43,4 +43,4 @@ ht-degree: 1%
 | 向市場內的客人和即將預訂酒店的客人提供追加銷售的酒店和其他常駐景點。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[保留詳細資訊](../../field-groups/event/reservation-details.md)</li><li>[住宿預訂](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[XDM個別設定檔](../../classes/individual-profile.md)**:<ul><li>[人口統計詳細資料](../../field-groups/profile/demographic-details.md)</li><li>[個人聯繫人詳細資訊](../../field-groups/profile/personal-contact-details.md)</li><li>[工作聯繫人詳細資訊](../../field-groups/profile/work-contact-details.md)</li><li>[忠誠度詳細資料](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
 | 向即將預訂酒店的市場客人和客人提供追加銷售的航班和其他常住景點。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[保留詳細資訊](../../field-groups/event/reservation-details.md)</li><li>[航班預訂](../../field-groups/event/flight-reservation.md)</li></ul></li><li>**[XDM個別設定檔](../../classes/individual-profile.md)**:<ul><li>[人口統計詳細資料](../../field-groups/profile/demographic-details.md)</li><li>[個人聯繫人詳細資訊](../../field-groups/profile/personal-contact-details.md)</li><li>[工作聯繫人詳細資訊](../../field-groups/profile/work-contact-details.md)</li><li>[忠誠度詳細資料](../../field-groups/profile/loyalty-details.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

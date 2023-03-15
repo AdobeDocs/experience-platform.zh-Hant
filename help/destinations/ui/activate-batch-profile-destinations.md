@@ -6,7 +6,7 @@ description: 了解如何將區段傳送至批次設定檔式型目的地，以�
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
-source-wordcount: '3595'
+source-wordcount: '3592'
 ht-degree: 0%
 
 ---
@@ -185,7 +185,7 @@ ht-degree: 0%
 | **[!UICONTROL 組織名稱]** | 您的組織名稱Experience Platform。 <br> **附註**:此檔案名稱附加選項僅適用於參與改善的檔案匯出功能測試版程式的測試版客戶。 如果您想要存取測試版計畫，請連絡您的Adobe代表或客戶服務。 |
 | **[!UICONTROL 沙箱名稱]** | 您用來匯出區段的沙箱ID。 <br> **附註**:此檔案名稱附加選項僅適用於參與改善的檔案匯出功能測試版程式的測試版客戶。 如果您想要存取測試版計畫，請連絡您的Adobe代表或客戶服務。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 選擇 **[!UICONTROL 套用變更]** 以確認您的選取。
 

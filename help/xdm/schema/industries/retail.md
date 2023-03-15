@@ -5,8 +5,8 @@ description: 檢視與Experience Data Model(XDM)相容、可在Adobe Experience 
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 2%
+source-wordcount: '519'
+ht-degree: 1%
 
 ---
 
@@ -45,6 +45,6 @@ ht-degree: 2%
 | 內嵌忠誠度（合作夥伴）資料，以增加網路、電子郵件和數位行銷管道中的相關產品資訊。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Web詳細資訊](../../field-groups/event/web-details.md)</li></ul></li><li>**[XDM個別設定檔](../../classes/individual-profile.md)**:<ul><li>[人口統計詳細資料](../../field-groups/profile/demographic-details.md)</li><li>[忠誠度詳細資料](../../field-groups/profile/loyalty-details.md)</li></ul></li><li>**[產品](../../classes/product.md)**:<ul><li>[產品目錄](../../field-groups/product/product-catalog.md)</li><li>[產品類別](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 | 透過自動化和個人化電子郵件重新鎖定購物車放棄者。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[商務詳細資訊](../../field-groups/event/commerce-details.md)</li><li>[Web詳細資訊](../../field-groups/event/web-details.md)</li></ul></li><li>**[產品](../../classes/product.md)**:<ul><li>[產品目錄](../../field-groups/product/product-catalog.md)</li><li>[產品類別](../../field-groups/product/product-category.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 *\*雖然規劃未來版本的標準產品類別，但目前必須使用自訂類別來建置產品結構。 因此，您必須手動建立架構類別的結構，以及您新增至架構之任何欄位群組的結構。 請參閱 [建立自訂類別](../../ui/resources/classes.md#create) （位於XDM UI指南中）以取得詳細資訊。*

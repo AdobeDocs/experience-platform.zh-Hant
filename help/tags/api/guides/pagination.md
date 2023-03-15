@@ -1,7 +1,8 @@
 ---
 title: 在Reactor API中為回應分頁
 description: 了解在Reactor API中列出資源時，如何對結果分頁。
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+exl-id: bccb6e78-4ac8-4786-b398-6e55109d99dd
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # 在Reactor API中為回應分頁
 
-Reactor API傳回的回應會編頁。 預設頁面大小為25個元素。 有關分頁的詳細資訊會報告在API回應物件的`meta.pagination `區段中：
+Reactor API傳回的回應會編頁。 預設頁面大小為25個元素。 分頁的詳細資訊會報告於 `meta.pagination `API回應物件的區段：
 
 ```json
 "meta": {
@@ -24,7 +25,7 @@ Reactor API傳回的回應會編頁。 預設頁面大小為25個元素。 有�
 }
 ```
 
-您可以在請求路徑中加入`page`查詢參數，以取得特定頁面並修改頁面大小。
+您可以取得特定頁面，並借由加入 `page` 請求路徑中的查詢參數。
 
 ## 擷取特定頁面
 

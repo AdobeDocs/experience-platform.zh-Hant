@@ -6,7 +6,7 @@ description: 了解如何在Experience Platform使用者介面中定義XDM欄位
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1401'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 4%
 | [!UICONTROL 顯示名稱] | 欄位的顯示名稱。 這是將用來表示「架構編輯器」畫布中欄位的名稱。 |
 | [!UICONTROL 類型] | 欄位將包含的資料類型。 從此下拉式功能表中，您可以選取 [標準標量類型](../../schema/field-constraints.md) 由XDM支援，或多欄位其中一個 [資料類型](../resources/data-types.md) 中 [!DNL Schema Registry].<br><br>您也可以選取 **[!UICONTROL 進階類型搜尋]** 若要搜尋及篩選現有資料類型，並更輕鬆找出所需類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 您也可以提供人類看得懂的選用 **[!UICONTROL 說明]** 至欄位，提供有關欄位預期使用案例的更多內容。
 
@@ -96,7 +96,7 @@ ht-degree: 4%
 | [!UICONTROL 獨佔最小值] | [!UICONTROL 雙倍] | 擷取期間要接受Double的最大值。 如果擷取的值與此處輸入的值完全相符，則拒絕該值。 使用此限制時，[!UICONTROL 最小值]「（非獨佔）約束必須留空。 |
 | [!UICONTROL 獨佔最大值] | [!UICONTROL 雙倍] | 擷取期間要接受Double的最大值。 如果擷取的值與此處輸入的值完全相符，則拒絕該值。 使用此限制時，[!UICONTROL 最大值]「（非獨佔）約束必須留空。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 特殊欄位類型 {#special}
 

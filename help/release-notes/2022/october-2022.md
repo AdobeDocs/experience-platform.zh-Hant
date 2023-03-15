@@ -4,8 +4,8 @@ description: 2022年10月Adobe Experience Platform發行說明。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 4%
+source-wordcount: '1337'
+ht-degree: 3%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | [!DNL Splunk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Splunk] 擴充功能概觀](../../tags/extensions/server/splunk/overview.md) 以取得更多資訊。 |
 | [!DNL Zendesk] 事件轉送擴充功能 | 您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../../tags/extensions/server/zendesk/overview.md) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Destinations] {#destinations}
 
@@ -54,7 +54,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | （測試版）資料集匯出 | 此 [資料集匯出測試版功能](/help/destinations/ui/export-datasets.md) 可讓您匯出第一代資料(如 [Real-time Customer Data Platform產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html))透過目的地使用者介面從Adobe Experience Platform輸出至您自己的外部客戶系統。 這可讓您透過無代碼/低代碼工作流程，將資料從Experience Platform中傳出至6個雲端儲存目標（如下表所列），以利分析和法規遵循使用案例。 |
 | （測試版）增強的檔案匯出功能 | 現在，當將檔案匯出Experience Platform時，您可以受益於增強的自訂功能： <br><ul><li>其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>可透過 [改良的映射步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[可自訂匯出CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> 下表列出的6個全新測試版雲端儲存卡支援此功能。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新目的地或更新目的地**
 
@@ -70,7 +70,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | 測試版參與者現在看到兩個 [!DNL Azure Blob] 目的地卡片在目的地目錄中並排。 新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
 | [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | 測試版參與者現在看到兩個 [!DNL SFTP] 目的地卡片在目的地目錄中並排。 新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新檔案或更新檔案**
 
@@ -92,7 +92,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 資料類型 | [[!UICONTROL 廣告詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 已重新命名為 `friendlyName`，和 `ID` 已重新命名為 `name`. |
 | 資料類型 | [[!UICONTROL 錯誤詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 已重新命名為 `name`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
 
@@ -107,7 +107,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 透過Platform UI監控查詢 | 查詢服務 [!UICONTROL 排程查詢] 索引標籤可改善透過UI查詢作業狀態的可見性。 您現在可以找到查詢執行狀態的重要資訊，包括錯誤訊息和失敗的程式碼，從 [!UICONTROL 排程查詢] 標籤。 您也可以根據其狀態，透過UI訂閱這些查詢中任何一個的警報。 請參閱 [監視查詢文檔](../../query-service/ui/monitor-queries.md) 以深入了解此功能。 |
 | 查詢加速報告前瞻分析資料模型 | 作為Data Distiller SKU的一部分，查詢加速儲存可讓您減少從資料中獲取重要見解所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改善您的報表分析及其視覺效果。 請參閱 [查詢加速儲存報告深入分析檔案](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) 以深入了解此功能。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 有關Query Services的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).
 Adobe Experience Platform的新功能：

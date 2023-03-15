@@ -6,8 +6,8 @@ description: 本文檔提供「工作聯繫人詳細資訊」架構欄位組的�
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 4%
+source-wordcount: '190'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 | `workPhone` | [電話號碼](../../data-types/phone-number.md) | 說明人員的工作電話號碼。 |
 | `organizations` | 字串（陣列） | 自由格式字串的陣列，代表人員所屬的組織。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

@@ -1,25 +1,25 @@
 ---
-title: 產品目錄架構欄位組
+title: 產品目錄結構欄位組
 description: 本文檔提供產品目錄架構欄位組的概述。
-source-git-commit: 9c06c58553aef4937454ced82d3e89867b5567b7
+exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
+source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 8%
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
+# [!UICONTROL 產品目錄] 方案欄位組
 
-# [!UICONTROL 產品目錄] 架構欄位組
-
-[!UICONTROL Product Catalog] is a standard schema field group for the [[!UICONTROL Product] class](../../classes/product.md) which captures properties related to a product catalog.
+[!UICONTROL 產品目錄] 是的標準架構欄位組 [[!UICONTROL 產品] 類](../../classes/product.md) 會擷取與產品目錄相關的屬性。
 
 ![](../../images/field-groups/product/product-catalog.png)
 
-| 屬性 | Data type | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `productCatalogDescription` | 字串 | 產品目錄的說明。 |
 | `productCatalogName` | 字串 | 產品目錄的名稱。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-有關欄位組的詳細資訊，請參閱 [公共XDM儲存庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json)。
+如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

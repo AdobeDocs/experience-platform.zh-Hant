@@ -46,7 +46,7 @@ Platform使用者介面中的身分圖表檢視器可讓您視覺化，並更清
 
 >[!TIP]
 >
->選取表格圖示 ![表格圖示](../images/identity-graph-viewer/table-icon.png) 若要查看面板，其中包含貴組織中可用的所有身分識別命名空間清單。 只要您已將有效的身分值連結至這些命名空間，即可使用任何身分識別命名空間。 如需詳細資訊，請閱讀 [身分命名空間指南](../namespaces.md).
+>選取表格圖示 ![表格圖示](../images/identity-graph-viewer/table-icon.png) 若要查看面板，其中包含貴組織中可用的所有身分識別命名空間清單。 只要您已將有效的身分值連線至這些識別名稱空間，即可使用任何身分識別命名空間。 如需詳細資訊，請閱讀 [身分命名空間指南](../namespaces.md).
 
 ![在「身分圖表」查閱畫面中提供的身分命名空間及其對應值。](../images/graph-viewer/namespace-and-value.png)
 

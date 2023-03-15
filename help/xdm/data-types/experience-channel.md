@@ -6,8 +6,8 @@ description: 本檔案概述Experience Channel Experience Data Model(XDM)資料�
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 4%
+source-wordcount: '268'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 4%
 | `mode` | 字串 | 體驗在此管道中的傳遞方式。 |
 | `typeAtSource` | 字串 | 管道的自訂名稱。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

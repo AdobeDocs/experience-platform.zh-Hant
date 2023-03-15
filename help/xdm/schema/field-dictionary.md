@@ -6,7 +6,7 @@ description: Experience Data Model(XDM)定義了一組標準欄位，可在合�
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '25236'
+source-wordcount: '25233'
 ht-degree: 3%
 
 ---
@@ -529,4 +529,4 @@ ht-degree: 3%
 | xdm:xid | 體驗識別碼 | 如果存在，此值代表跨命名空間識別碼，此識別碼在所有命名空間中所有命名空間範圍的識別碼中都是唯一的。 | 字串 |  | 字串 | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-profile-segmentation, https://ns.adobe.com/experience/profile/profile-all, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-enduserids, https://ns.adobe.com/experience/target/activity/activityevent/segmentevent, https://ns.adobe.com/experience/target/experienceevent-all, https://ns.adobe.com/xdm/context/experienceevent-enduserids-deprecated, https://ns.adobe.com/xdm/context/experienceevent-profile-stitch, https://ns.adobe.com/xdm/context/experienceevent-segmentmembership, https://ns.adobe.com/xdm/context/profile-identities-deprecated, https://ns.adobe.com/xdm/context/profile-segmentation, , , , , , , , , , ,  |
 | xmpDM:duration | 章節長度/期間 | 章節的長度（以秒為單位）。 | 整數 |  | int | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-reference, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

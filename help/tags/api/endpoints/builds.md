@@ -1,35 +1,35 @@
 ---
-title: 生成終結點
-description: 瞭解如何調用Reactor API中的/build端點。
+title: 組建端點
+description: 了解如何在Reactor API中呼叫/builds端點。
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 8%
+source-wordcount: '803'
+ht-degree: 4%
 
 ---
 
-# 生成終結點
+# 組建端點
 
-擴展、規則和資料元素是Adobe Experience Platform中標籤的構成塊。 當您希望應用程式執行某些操作時，這些構建基塊將添加到 [庫](./libraries.md)。 為了在您的體驗應用程式上部署庫，將庫編譯為生成。 的 `/builds` Reactor API中的端點允許您以寫程式方式管理體驗應用程式中的生成。
+擴充功能、規則和資料元素是Adobe Experience Platform中標籤的基礎要素。 當您希望讓應用程式執行某項操作時，這些基礎要素會新增至 [資料庫](./libraries.md). 若要在您的體驗應用程式上部署程式庫，程式庫會編譯到組建中。 此 `/builds` reactor API中的端點可讓您以程式設計方式管理experience應用程式中的組建。
 
-生成是Web和移動應用程式中載入的實際檔案（或檔案）。 每個生成的內容因以下因素而異：
+組建是在網頁和行動應用程式中載入的實際檔案（或檔案）。 每個組建的內容會因下列因素而異：
 
-* 庫中包含的資源
-* 配置 [環境](./environments.md) 在其中構建庫
-* 平台 [屬性](./properties.md) 構件所屬的
+* 程式庫中包含的資源
+* 的設定 [環境](./environments.md) 建置程式庫的位置
+* 平台 [屬性](./properties.md) 組建所屬的
 
-一個版本正好屬於一個庫。 庫可以有許多內部版本。
+組建只屬於一個程式庫。 程式庫可以有許多組建。
 
-有關生成以及它們如何適用於標籤的發佈工作流的詳細資訊，請參閱 [發佈概述](../../ui/publishing/overview.md)。
+如需關於組建及其如何配合標籤發佈工作流程的一般資訊，請參閱 [發佈概述](../../ui/publishing/overview.md).
 
 ## 快速入門
 
-本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
+本指南中使用的端點屬於 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
 
-## 檢索生成清單 {#list}
+## 擷取組建清單 {#list}
 
-通過將庫的ID包括在請求路徑中，可以列出特定庫的生成。
+您可以將程式庫的ID加入特定程式庫的請求路徑中，以列出特定程式庫的組建。
 
 **API格式**
 
@@ -39,13 +39,13 @@ GET /libraries/{LIBRARY_ID}/builds
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 的 `id` 要列出的庫。 |
+| `LIBRARY_ID` | 此 `id` 要列出其組建的程式庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
->使用查詢參數，可以根據以下屬性篩選列出的生成：<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
+>您可以使用查詢參數，根據下列屬性來篩選列出的組建：<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱 [篩選回應](../guides/filtering.md) 以取得更多資訊。
 
 **要求**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定庫的生成清單。
+成功的回應會傳回指定程式庫的組建清單。
 
 ```json
 {
@@ -144,9 +144,9 @@ curl -X GET \
 }
 ```
 
-## 查找構建 {#lookup}
+## 查找組建 {#lookup}
 
-您可以通過在請求路徑中提供其ID來查找生成。
+您可以在請求的路徑中提供組建ID，以便查詢GET。
 
 **API格式**
 
@@ -156,9 +156,9 @@ GET /builds/{BUILD_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `BUILD_ID` | 的 `id` 你想查的那棟樓。 |
+| `BUILD_ID` | 此 `id` 你要查的建築。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 
@@ -174,7 +174,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回生成的詳細資訊。
+成功的回應會傳回組建的詳細資訊。
 
 ```json
 {
@@ -246,9 +246,9 @@ curl -X GET \
 }
 ```
 
-## 建立生成 {#create}
+## 建立組建 {#create}
 
-您可以為庫建立生成，包括庫的ID在POST請求路徑中。
+您可以為程式庫建立組建，包括程式庫ID在POST請求的路徑中。
 
 **API格式**
 
@@ -258,13 +258,13 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 的 `id` 定義構建的庫。 |
+| `LIBRARY_ID` | 此 `id` 定義下組建的程式庫。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 
-以下請求為請求路徑中指定的庫建立新的生成。 不需要請求負載。
+下列請求會為請求路徑中指定的程式庫建立新的組建。 不需要要求裝載。
 
 ```shell
 curl -X POST \
@@ -276,7 +276,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應將返回新建立的生成的詳細資訊。
+成功的回應會傳回新建立之組建的詳細資訊。
 
 ```json
 {
@@ -348,9 +348,9 @@ curl -X POST \
 }
 ```
 
-## 重新發佈生成 {#republish}
+## 重新發佈組建 {#republish}
 
-您可以從 [已發佈庫](./libraries.md#publish) 將其ID包含在PATCH請求的路徑中。
+您可以從 [發佈程式庫](./libraries.md#publish) 將ID納入PATCH要求的路徑中。
 
 **API格式**
 
@@ -360,13 +360,13 @@ PATCH /builds/{BUILD_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `BUILD_ID` | 的 `id` 要重新發佈的版本。 |
+| `BUILD_ID` | 此 `id` 建置，以重新發佈。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 
-以下請求更新 `app_id` 為現有應用配置。
+下列請求會更新 `app_id` （適用於現有應用程式設定）。
 
 ```shell
 curl -X PATCH \
@@ -388,15 +388,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 的 `id` 要更新的版本。 這應與 `{BUILD_ID}` 請求路徑中提供的值。 |
-| `type` | 要更新的資源類型。 對於此終結點，值必須為 `builds`。 |
-| `meta.action` | 要執行的PATCH操作的類型。 必須設定為 `republish`。 |
+| `id` | 此 `id` 要更新的組建。 這應符合 `{BUILD_ID}` 值。 |
+| `type` | 要更新的資源類型。 對於此端點，值必須是 `builds`. |
+| `meta.action` | 要執行的PATCH動作類型。 必須設為 `republish`. |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **回應**
 
-成功的響應返回重新發佈的生成的詳細資訊。
+成功的回應會傳回重新發佈之組建的詳細資訊。
 
 ```json
 {
@@ -469,15 +469,15 @@ curl -X PATCH \
 }
 ```
 
-## 檢索生成的相關資源 {#related}
+## 擷取組建的相關資源 {#related}
 
-以下調用演示如何檢索生成的相關資源。 當 [查房](#lookup)，這些關係列在 `relationships` 屬性。
+下列呼叫示範如何擷取組建的相關資源。 當 [查找組建](#lookup)，這些關係會列在 `relationships` 屬性。
 
-查看 [關係指南](../guides/relationships.md) 的子菜單。
+請參閱 [關係指南](../guides/relationships.md) 以取得Reactor API中關係的詳細資訊。
 
-### 列出生成的相關資料元素 {#data-elements}
+### 列出組建的相關資料元素 {#data-elements}
 
-可通過附加來列出生成的相關資料元素 `/data_elements` 查找請求的路徑。
+您可以透過附加 `/data_elements` 至查詢請求的路徑。
 
 **API格式**
 
@@ -487,9 +487,9 @@ GET  /builds/{BUILD_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 的 `id` 要列出其資料元素的生成。 |
+| `{BUILD_ID}` | 此 `id` 您要列出其資料元素的組建。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 
@@ -505,7 +505,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回與生成相關的資料元素的清單。
+成功的回應會傳回與組建相關的資料元素清單。
 
 ```json
 {
@@ -616,9 +616,9 @@ curl -X GET \
 }
 ```
 
-### 列出生成的相關擴展 {#extensions}
+### 列出組建的相關擴充功能 {#extensions}
 
-可通過附加來列出生成的相關擴展 `/extensions` 查找請求的路徑。
+您可以透過附加 `/extensions` 至查詢請求的路徑。
 
 **API格式**
 
@@ -628,9 +628,9 @@ GET  /builds/{BUILD_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 的 `id` 要列出其副檔名的生成。 |
+| `{BUILD_ID}` | 此 `id` 您要列出其擴充功能的組建。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 
@@ -646,7 +646,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回與生成相關的擴展的清單。
+成功的回應會傳回與組建相關的擴充功能清單。
 
 ```json
 {
@@ -747,9 +747,9 @@ curl -X GET \
 }
 ```
 
-### 列出生成的相關規則 {#rules}
+### 列出組建的相關規則 {#rules}
 
-可通過附加來列出生成的相關規則 `/rules` 查找請求的路徑。
+您可以透過附加 `/rules` 至查詢請求的路徑。
 
 **API格式**
 
@@ -759,9 +759,9 @@ GET  /builds/{BUILD_ID}/rules
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 的 `id` 要列出其規則的生成。 |
+| `{BUILD_ID}` | 此 `id` 您想列出的規則。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 
@@ -777,7 +777,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回與生成相關的規則清單。
+成功的回應會傳回與組建相關的規則清單。
 
 ```json
 {
@@ -860,9 +860,9 @@ curl -X GET \
 }
 ```
 
-### 查找相關庫以生成 {#library}
+### 尋找組建的相關程式庫 {#library}
 
-可通過附加來檢索生成的相關庫 `/library` 查找請求的路徑。
+您可以借由附加 `/library` 至查詢請求的路徑。
 
 **API格式**
 
@@ -872,9 +872,9 @@ GET  /builds/{BUILD_ID}/library
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 的 `id` 你想查的那棟樓。 |
+| `{BUILD_ID}` | 此 `id` 您要查詢其程式庫的組建。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 
@@ -973,9 +973,9 @@ curl -X GET \
 }
 ```
 
-### 查找構建的相關環境 {#environment}
+### 查找組建的相關環境 {#environment}
 
-可通過附加來檢索生成的相關環境 `/environment` 查找請求的路徑。
+您可以借由附加 `/environment` 至查詢請求的路徑。
 
 **API格式**
 
@@ -985,9 +985,9 @@ GET  /builds/{BUILD_ID}/environment
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BUILD_ID}` | 的 `id` 你想查的環境。 |
+| `{BUILD_ID}` | 此 `id` 您要查詢的環境。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
 **要求**
 

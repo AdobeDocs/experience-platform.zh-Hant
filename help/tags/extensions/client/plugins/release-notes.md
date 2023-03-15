@@ -5,7 +5,7 @@ exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '329'
-ht-degree: 56%
+ht-degree: 55%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 56%
 
 * 修正使用一般初始化動作時getTimeParting無法正確初始化的問題
 
-## 2021 年 3 月 26 日
+## 2021年3月26日
 
 ### 常見 Analytics 外掛程式擴充功能 3.0.4
 
@@ -76,7 +76,7 @@ ht-degree: 56%
 
 * 更新初始化動作中的文件
 
-## 2019 年 12 月 5 日
+## 2019年12月5日
 
 ### 常見 Analytics 外掛程式擴充功能 2.1.1
 

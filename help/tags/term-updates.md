@@ -1,10 +1,11 @@
 ---
 title: 術語更新
 description: 受Adobe Experience Platform Launch品牌重塑影響的詞語和UI元素完整清單。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+exl-id: 93dc0abf-c80d-4a67-bf0c-3fb09ca915a2
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -18,6 +19,6 @@ Adobe Experience Platform Launch已整合至Adobe Experience Platform，為資�
 
 | 上一個詞語 | 更新詞語 |
 |---|---|
-| platform launch（用戶端） | [標籤](./home.md) |
+| platform launch（用戶端） | [標記](./home.md) |
 | platform launch伺服器端 | [事件轉送](./ui/event-forwarding/overview.md) |
-| 邊緣配置 | [資料流](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) |
+| 邊緣配置 | [資料串流](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) |

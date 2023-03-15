@@ -5,7 +5,7 @@ exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
 source-wordcount: '612'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -66,7 +66,7 @@ AdobeExchange團隊會提供您的沙箱名稱，您必須在呼叫Destination S
 * [可用的Experience Platform](/help/access-control/home.md#permissions)
 * [Adobe Admin Console檔案](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)
 
-## 其他考量 {#additional-considerations}
+## 其他考量事項 {#additional-considerations}
 
 * 您對目標設定所做的任何變更（無論您是建立還是編輯目標設定）都需由Adobe審核和核准。 您的變更只有在審核完成後才會反映在您的目的地中。
 * 只有屬於相同組織且可存取沙箱的使用者才能編輯目的地設定。

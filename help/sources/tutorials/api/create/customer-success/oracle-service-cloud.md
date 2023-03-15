@@ -2,7 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；oracle服務雲端
 title: 使用流程服務API建立Oracle服務雲端來源連線
 description: 了解如何使用流量服務API將Adobe Experience Platform連線至Oracle服務雲端。
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
+exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 1%

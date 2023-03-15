@@ -12,7 +12,7 @@ ht-degree: 6%
 
 # 自動收集的資訊
 
-Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特殊設定。 不過，如果需要，可使用`configure`命令中的`context`選項禁用此資訊。 [請參閱設定SDK](../fundamentals/configuring-the-sdk.md)。下面是這些資訊的清單。 括弧中的名稱表示設定上下文時要使用的字串。
+Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特殊設定。 不過，如有需要，可使用 `context` 選項 `configure` 命令。 [請參閱設定SDK](../fundamentals/configuring-the-sdk.md). 下面是這些資訊的清單。 括弧中的名稱表示設定上下文時要使用的字串。
 
 ## 裝置 (`device`)
 
@@ -54,7 +54,7 @@ Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特�
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-體驗隨之呈現的環境類型。 Adobe Experience Platform Web SDK一律將此值設為`browser`。
+體驗隨之呈現的環境類型。 Adobe Experience Platform Web SDK一律將此值設為 `browser`.
 
 ### 檢視區高度
 
@@ -82,7 +82,7 @@ Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特�
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-軟體開發套件(SDK)識別碼。  此欄位使用URI來改進由不同軟體庫提供的標識符之間的唯一性。 使用獨立程式庫時，值為`https://ns.adobe.com/experience/alloy`。 當程式庫用作標籤擴充功能的一部分時，值為`https://ns.adobe.com/experience/alloy+reactor`。
+軟體開發套件(SDK)識別碼。  此欄位使用URI來改進由不同軟體庫提供的標識符之間的唯一性。 使用獨立程式庫時，值為 `https://ns.adobe.com/experience/alloy`. 當程式庫用作標籤擴充功能的一部分時，值為 `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### 版本
 
@@ -90,7 +90,7 @@ Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特�
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-使用獨立程式庫時，值只是程式庫版本。 當程式庫用作標籤擴充功能的一部分時，此為程式庫版本，以及以「+」連結的標籤擴充功能版本。 例如，如果程式庫版本為2.1.0，而標籤擴充功能版本為2.1.3，則值會是`2.1.0+2.1.3`。
+使用獨立程式庫時，值只是程式庫版本。 當程式庫用作標籤擴充功能的一部分時，此為程式庫版本，以及以「+」連結的標籤擴充功能版本。 例如，如果程式庫版本為2.1.0，而標籤擴充功能版本為2.1.3，則值會是 `2.1.0+2.1.3`.
 
 ### 環境
 
@@ -98,7 +98,7 @@ Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特�
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
-收集資料的環境。 此值一律設為`browser`。
+收集資料的環境。 此值一律設為 `browser`.
 
 ## 放置上下文(`placeContext`)
 
@@ -110,7 +110,7 @@ Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特�
 | ------------------------------------- | ------------------------------- |
 | `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
 
-簡化的擴展ISO格式[ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6)的最終用戶的本地時間戳。
+簡化的擴展ISO格式的最終用戶的本地時間戳 [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
 ### 本地時區偏移
 
@@ -128,9 +128,9 @@ Adobe Experience Platform Web SDK可自動收集許多資訊，無需任何特�
 
 事件的時間戳記。  無法移除這部分內容。
 
-簡化的擴展ISO格式[ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6)的最終用戶的UTC時間戳。
+簡化的ISO擴展格式的最終用戶的UTC時間戳 [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6).
 
-## Web詳細資訊(`web`)
+## 網頁詳細資訊(`web`)
 
 使用者所在頁面的詳細資訊。
 

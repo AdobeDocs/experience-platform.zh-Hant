@@ -6,8 +6,8 @@ description: 本檔案概述環境XDM資料類型。
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 5%
+source-wordcount: '465'
+ht-degree: 4%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 5%
 | `viewportHeight` | 整數 | 體驗內顯示的視窗的垂直大小（像素）。 對於Web檢視事件，這是瀏覽器檢視區高度。 |
 | `viewPortWidth` | 整數 | 體驗內顯示的視窗水準大小（像素）。 對於Web檢視事件，這是瀏覽器檢視區寬度。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

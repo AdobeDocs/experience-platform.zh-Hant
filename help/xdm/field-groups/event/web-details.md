@@ -6,8 +6,8 @@ description: 本文檔提供Web詳細資訊架構欄位組的概述。
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 3%
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 | --- | --- | --- |
 | `web` | [網路資訊](../../data-types/web-information.md) | 說明連結點按、網頁詳細資訊、反向連結資訊和瀏覽器詳細資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

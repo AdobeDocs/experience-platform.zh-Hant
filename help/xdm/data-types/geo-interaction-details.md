@@ -6,8 +6,8 @@ description: 本檔案概述「地理互動詳細資料」XDM資料類型。
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 4%
 | `deviceGeoAccuracy` | 雙倍 | 地球測量裝置或機構的準確度，以公尺為單位測量。 |
 | `distanceToCenter` | 雙倍 | 以公尺為單位的地理圈與地理中心的距離。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

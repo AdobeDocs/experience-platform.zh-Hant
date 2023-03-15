@@ -6,8 +6,8 @@ description: Schema Registry API中的/classes端點可讓您以程式設計方�
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 3%
+source-wordcount: '1508'
+ht-degree: 1%
 
 ---
 
@@ -47,7 +47,7 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 要從中檢索類的容器： `global` Adobe建立的類或 `tenant` 適用於貴組織擁有的類別。 |
 | `{QUERY_PARAMS}` | 可選的查詢參數，以依據篩選結果。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用參數的清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -70,7 +70,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
 | `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON類別（原始） `$ref` 和 `allOf` 已包含。 (限制：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -127,7 +127,7 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | 容納要檢索的類的容器： `global` 針對Adobe建立的類或 `tenant` 為貴組織擁有的類。 |
 | `{CLASS_ID}` | 此 `meta:altId` 或URL編碼 `$id` 你想查的班級。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -153,7 +153,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 和 `allOf` 已解析，沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解析，包含描述符。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -252,7 +252,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->根據定義的自定義類合成架構時，將無法使用標準欄位組。 每個欄位組定義它們在其中相容的類 `meta:intendedToExtend` 屬性。 開始定義與新類相容的欄位組後(使用 `$id` 新課的 `meta:intendedToExtend` 欄位群組)，則每次定義實施您定義之類的架構時，您都可以重複使用這些欄位群組。 請參閱 [建立欄位群組](./field-groups.md#create) 和 [建立綱要](./schemas.md#create) 以取得詳細資訊。
+>根據定義的自定義類合成架構時，將無法使用標準欄位組。 每個欄位組定義它們在其中相容的類 `meta:intendedToExtend` 屬性。 開始定義與新類相容的欄位組後(使用 `$id` 新課的 `meta:intendedToExtend` 欄位群組)，則每次定義實施您所定義類別的架構時，您都可以重複使用這些欄位群組。 請參閱 [建立欄位群組](./field-groups.md#create) 和 [建立綱要](./schemas.md#create) 以取得詳細資訊。
 >
 >如果您打算在即時客戶設定檔中使用以自訂類別為基礎的結構，也請務必留意，聯合結構僅根據共用相同類別的結構而建構。 如果要在聯合中包含其他類(如 [!UICONTROL XDM個別設定檔] 或 [!UICONTROL XDM ExperienceEvent]，您必須與採用該類別的其他架構建立關係。 請參閱 [在API中建立兩個架構的關係](../tutorials/relationship-api.md) 以取得更多資訊。
 
@@ -320,7 +320,7 @@ curl -X POST \
 | `_{TENANT_ID}` | 此 `TENANT_ID` 組織的命名空間。 您的組織建立的所有資源都必須包含此屬性，以避免與 [!DNL Schema Registry]. |
 | `allOf` | 要由新類繼承其屬性的資源清單。 其中 `$ref` 陣列內的對象定義類的行為。 在此示例中，類繼承「記錄」行為。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -408,7 +408,7 @@ PUT /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | 此 `meta:altId` 或URL編碼 `$id` 你想重寫的課。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -545,7 +545,7 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | URL編碼 `$id` URI或 `meta:altId` 要更新的類。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -647,7 +647,7 @@ DELETE /tenant/classes/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | URL編碼 `$id` URI或 `meta:altId` 刪除的類。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 

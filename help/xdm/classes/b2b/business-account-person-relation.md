@@ -4,8 +4,8 @@ description: 本檔案概述Experience Data Model(XDM)中的XDM商業帳戶人�
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 3%
+source-wordcount: '442'
+ht-degree: 2%
 
 ---
 
@@ -39,6 +39,6 @@ ht-degree: 3%
 | `relationStartDate` | DateTime | 帳戶與人員之間的關係開始的日期。 |
 | `relationshipSource` | 字串 | 帳戶 — 人員關係的來源。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [Real-Time CDP B2B版中的結構關係](../../tutorials/relationship-b2b.md) 了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

@@ -9,7 +9,7 @@ topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1303'
 ht-degree: 5%
 
 ---
@@ -126,7 +126,7 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能�
 | `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> 或<br /> `arc.event.data._tenant.isSyncing` | 布林值 | 使用建立的事件 `is_syncing` 設為 `true` **不會** 觸發自動 | 無 |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> 或 `arc.event.data._tenant.occuredAt` | 字串 | 事件發生時的ISO 8601時間戳記 | 無 |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  

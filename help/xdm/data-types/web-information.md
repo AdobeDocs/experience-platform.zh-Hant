@@ -6,8 +6,8 @@ description: 本檔案概述Experience Data Model(XDM)資料類型的網頁資�
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 3%
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 | `webPageDetails` | [[!UICONTROL 網頁詳細資訊]](./webpage-details.md) | 說明發生Web互動的網頁的詳細資訊。 |
 | `webReferrer` | [!UICONTROL 物件] | 說明網頁互動的反向連結，即訪客在記錄目前的網頁互動前所來的URL。 包含下列子屬性： <ul><li>`URL`:反向連結URL。</li><li>`type`:反向連結類型。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

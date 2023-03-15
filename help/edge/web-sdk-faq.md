@@ -173,5 +173,5 @@ Adobe Experience Platform Web SDK的設計，可在最新版Google Chrome、Safa
 
 ## 我可以在何處取得Adobe Experience Platform Web SDK的詳細資訊？
 
-* [文件](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
+* [文件](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=zh-Hant)
 * [原始碼](https://github.com/adobe/alloy)

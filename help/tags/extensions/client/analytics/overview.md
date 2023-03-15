@@ -5,11 +5,11 @@ exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '2275'
-ht-degree: 82%
+ht-degree: 83%
 
 ---
 
-# Adobe Analytics擴充功能概觀
+# Adobe Analytics 擴充功能概觀
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ _satellite.cookie.set("sat_track", "true");
 
 判斷要套用至收入和貨幣事件的轉換率。如果您的網站允許訪客以多種貨幣購買，設定貨幣代碼可確保正確轉換和儲存貨幣金額。
 
-如需支援的貨幣代碼詳細資訊，請參閱 [currencyCode](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html)。
+如需支援的貨幣代碼詳細資訊，請參閱 [currencyCode](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html?lang=zh-Hant)。
 
 ### 追蹤伺服器
 
@@ -221,7 +221,7 @@ SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSe
 
 不重複值，代表離線和線上系統的客戶。
 
-請參閱 [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html)。
+請參閱 [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=zh-Hant)。
 
 ### 訪客命名空間
 
@@ -245,7 +245,7 @@ SSL 追蹤伺服器可在 Analytics 自訂程式碼中使用 `s.trackingServerSe
 
 決定 Cookie 的存留時間。
 
-請參閱 [s.cookieLifetime](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookielifetime.html)。
+請參閱 [s.cookieLifetime](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookielifetime.html?lang=zh-Hant)。
 
 ### 安全 Cookie
 
@@ -292,13 +292,13 @@ Analytics 擴充功能提供下列動作：
 
 #### eVar
 
-設定一或多個 [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html)。
+設定一或多個 [eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=zh-Hant)。
 
 1. 從下拉式清單中選取 eVar。
 1. 指定您要將 eVar 設定為值 (「Set As」) 或複製 (「Duplicate From」) 另一個 eVar。
 1. 提供「Set As」的值，或選擇您要複製的 eVar。
 1. (選用) 選取「新增 eVar」以設定更多 eVar。
-1. 選擇 **[!UICONTROL 保留變更]**.
+1. 選取&#x200B;**[!UICONTROL 「保留變更」]**。
 
 #### Prop
 
@@ -308,7 +308,7 @@ Analytics 擴充功能提供下列動作：
 1. 指定您要將 Prop 設定為值 (「Set As」) 或複製 (「Duplicate From」) 另一個 eVar。
 1. 提供「Set As」的值，或選擇您要複製 Prop 的來源 eVar。
 1. （選用）選取 **[!UICONTROL 新增Prop]** 來設定更多prop。
-1. 選擇 **[!UICONTROL 保留變更]**.
+1. 選取&#x200B;**[!UICONTROL 「保留變更」]**。
 
 #### 事件
 
@@ -317,7 +317,7 @@ Analytics 擴充功能提供下列動作：
 1. 從下拉式清單中選取事件。
 1. (選用) 選擇或指定用於[事件序列化](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html)的資料元素。
 1. （選用）選取 **[!UICONTROL 新增事件]** 來設定更多事件。
-1. 選擇 **[!UICONTROL 保留變更]**.
+1. 選取&#x200B;**[!UICONTROL 「保留變更」]**。
 
 #### 階層
 
@@ -394,7 +394,7 @@ Analytics 擴充功能提供下列動作：
    * 自訂連結：指定連結名稱。
    * 下載連結：指定檔案名稱。
    * 退出連結：指定目的地 URL。
-1. 選擇 **[!UICONTROL 保留變更]**.
+1. 選取&#x200B;**[!UICONTROL 「保留變更」]**。
 
 ### 清除變數 {#clear-variables}
 

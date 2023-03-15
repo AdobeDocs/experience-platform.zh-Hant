@@ -112,7 +112,7 @@ ht-degree: 0%
 
 ![在UI中顯示策略基本配置的影像](./images/e2e/configure-policy.png)
 
-在下一個畫面中，選取此原則將限制使用先前選取的標籤的行銷動作。 選擇 **[!UICONTROL 下一個]** 繼續。
+在下一個畫面中，選取此原則將限制使用先前選取的標籤的行銷動作。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
 ![在UI中顯示指派給原則的行銷動作的影像](./images/e2e/select-marketing-action.png)
 

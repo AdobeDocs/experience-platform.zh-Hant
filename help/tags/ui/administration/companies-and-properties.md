@@ -1,10 +1,11 @@
 ---
 title: 屬性
 description: 了解在Adobe Experience Platform中，如何為您的組織組織組織和分組擴充功能、環境和程式庫。
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1178'
-ht-degree: 56%
+ht-degree: 58%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 ## Web 屬性
 
@@ -96,7 +97,7 @@ Properties 清單會顯示下列資訊：
 
 開始之前，請檢閱[規劃屬性的最佳作法](companies-and-properties.md#best-practices-for-planning-properties)中的屬性。
 
-導覽至您的公司頁面，然後選取&#x200B;**[!UICONTROL 新增屬性]**，或從清單中選取現有屬性，然後選取&#x200B;**[!UICONTROL 設定]**。
+導覽至您的公司頁面，然後選取 **[!UICONTROL 新增屬性]**，或從清單中選取現有屬性並選取 **[!UICONTROL 設定]**.
 
 ![](../../images/property-settings.png)
 
@@ -110,10 +111,10 @@ Properties 清單會顯示下列資訊：
 
    **Domains：**&#x200B;打算要部署此屬性的網站基本 URL。
 
-1. （進階）**[!UICONTROL 依序執行規則元件]**&#x200B;選取此核取方塊，讓條件和動作等待上一個元件完成後再執行
-1. （進階）**[!UICONTROL 傳回遺失資料元素的空字串：]**&#x200B;如果您參考程式庫內不存在的資料元素，通常會傳回`undefined`。  如果您希望該藍本改為傳回空字串，請選取此核取方塊。
-1. （進階）**[!UICONTROL 設定擴充功能開發：]**&#x200B;如果您打算安裝公司主動開發的開發擴充功能，請選取此核取方塊
-1. 選取&#x200B;**[!UICONTROL 「儲存」]**。
+1. （進階） **[!UICONTROL 依序執行規則元件]** 選取此核取方塊，讓條件和動作等待上一個動作完成後再執行。
+1. （進階） **[!UICONTROL 傳回遺失資料元素的空白字串：]** 如果您參考的資料元素不存在於程式庫中，通常會傳回 `undefined`.  如果您希望該藍本改為傳回空字串，請選取此核取方塊。
+1. （進階） **[!UICONTROL 為擴充功能開發進行配置：]** 如果您打算安裝公司主動開發的開發擴充功能，請選取此核取方塊
+1. 選取「**[!UICONTROL 儲存]**」。
 
 ### 適用於行動
 
@@ -130,7 +131,7 @@ Properties 清單會顯示下列資訊：
 
    * **Use HTTPS：**&#x200B;如果所有資料通訊應經由 HTTP 或 HTTPS 傳送，請選擇此選項。
 
-1. 選取&#x200B;**[!UICONTROL 「儲存」]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
 建立屬性後，Platform會自動新增預設主機、一組環境（開發、測試和生產）以及預設擴充功能。
 
@@ -146,4 +147,4 @@ Properties 清單會顯示下列資訊：
 
    您可以選取要刪除的多個屬性。
 
-1. 選擇&#x200B;**[!UICONTROL Delete]**，然後確認屬性的刪除。
+1. 選擇 **[!UICONTROL 刪除]**，然後確認屬性的移除。

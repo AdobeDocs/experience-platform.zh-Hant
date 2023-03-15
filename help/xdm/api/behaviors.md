@@ -6,8 +6,8 @@ description: 架構註冊表API中的/behaviors端點可讓您擷取全域容器
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 3%
+source-wordcount: '425'
+ht-degree: 2%
 
 ---
 
@@ -101,7 +101,7 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | --- | --- |
 | `{BEHAVIOR_ID}` | 此 `meta:altId` 或URL編碼 `$id` 你想查的行為。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 

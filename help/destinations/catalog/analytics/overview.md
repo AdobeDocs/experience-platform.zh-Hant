@@ -12,7 +12,7 @@ ht-degree: 6%
 
 # Analytics目的地概觀 {#analytics-destinations}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 Analytics目的地會追蹤訪客與您網站上內容的互動情形，並收集資料以了解您對象的行為。 這些平台針對您最有價值訪客的參與和轉換提供獨特的深入分析。
 

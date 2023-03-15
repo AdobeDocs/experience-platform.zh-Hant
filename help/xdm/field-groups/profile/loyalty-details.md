@@ -6,8 +6,8 @@ description: 本檔案提供「忠誠度詳細資料」結構欄位群組的概�
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 3%
+source-wordcount: '302'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 | `tier` | 字串 | 擷取已註冊人員的忠誠計畫層級。 |
 | `upgradeDate` | 字串 | 將忠誠會員升級至其最新層級的日期。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

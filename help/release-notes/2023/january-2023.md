@@ -3,7 +3,7 @@ title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
 source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2414'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform 現有功能更新：
 - [資料收集](#data-collection)
 - [[!DNL Destinations]](#destinations)
 - [Experience Data Model(XDM)](#xdm)
-- [即時客戶個人檔案](#profile)
+- [即時客戶設定檔](#profile)
 - [細分服務](#segmentation)
 - [來源](#sources)
 
@@ -38,7 +38,7 @@ Attribution AI可用來將點數歸因於導致轉換事件的接觸點。 行�
 | HIPAA 整備程度 | 醫療保健防護客戶現在可以在Attribution AI和某些其他基於Experience Platform的應用程式中接收、使用、維護或傳輸受保護的健康資訊。 Healthcare Shield適用於受保護實體或HIPAA管轄的業務關聯的醫療保健客戶。 如需詳細資訊，請參閱 [HIPAA和Adobe產品和服務](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) |
 | 編輯其他分數資料集欄 | 現在當您編輯現有模型時，可以新增或移除其他分數資料集欄（報表欄）。 這可擴充歸因分數的彈性，讓您在建立模型後，就能深入分析其他維度。 請參閱 [歸因UI指南](../../intelligent-services/attribution-ai/user-guide.md) 了解更多。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [AI/ML服務](../../intelligent-services/attribution-ai/overview.md) 概觀以取得詳細資訊。
 
@@ -52,7 +52,7 @@ Real-time Customer Data Platform適用的Customer AI可產生自訂傾向分數�
 | ------- | ----------- |
 | HIPAA 整備程度 | Healthcare Shield客戶現在可以在Customer AI中接收、使用、維護或傳輸受保護的健康資訊(適用於Real-time Customer Data Platform和某些其他基於Experience Platform的應用程式)。 Healthcare Shield適用於受保護實體或HIPAA管轄的業務關聯的醫療保健客戶。 如需詳細資訊，請參閱 [HIPAA和Adobe產品和服務](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [AI/ML服務](../../intelligent-services/customer-ai/overview.md) 概觀以取得詳細資訊。
 
@@ -66,7 +66,7 @@ Adobe保證可讓您檢查、校樣、模擬及驗證您收集資料或提供行
 | ------- | ----------- |
 | 驗證編輯器 | 已新增驗證編輯器的增強功能。 這些增強功能包括驗證欄、新的程式碼建立工具和改良的檢視。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Assurance的詳細資訊，請閱讀 [保證檔案](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -81,7 +81,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 全新主畫面 | 資料收集UI的首頁已更新，其中包含實用入門資訊和連結，以簡化生產力。 其中包括:<ol><li>開始使用的檔案和建議工作流程</li><li>最近的屬性、規則和資料元素</li><li>熱門擴充功能</li><li>透過快速安裝功能更新全新擴充功能</li></ol> |
 | 將資料傳送至 [!DNL Google Ads] 使用事件轉送 | 您現在可以使用 [[!DNL Google Ads Enhanced Conversions] API擴充功能](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) 用於事件轉送，結合 [Google Oauth 2密碼](../../tags/ui/event-forwarding/secrets.md#google-oauth2)，以安全地將伺服器端資料傳送至 [!DNL Google Ads] 即時。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 目的地（2月2日更新） {#destinations}
 
@@ -160,11 +160,11 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 欄位群組 | [[!UICONTROL 天氣觸發器]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | 此 `weatherTriggers` 欄位現在巢狀內嵌於 `weather` 物件。 |
 | 欄位群組 | [[!UICONTROL XDM相關商業帳戶]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account/related-accounts.schema.json) | 欄位組現在穩定。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
 
-## 即時客戶個人檔案 {#profile}
+## 即時客戶設定檔 {#profile}
 
 Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面了解各個客戶，其中結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 設定檔可讓您將客戶資料併入統一檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 
@@ -190,7 +190,7 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 | 外部受眾成員資格有效期 | 依預設，外部受眾會籍會保留30天。 若要保留更久，請使用 `validUntil` 欄位。 |
 | 平台產生的區段成員資格有效期 | 任何位於 `Exited` 狀態超過30天，根據 `lastQualificationTime` 欄位可能會遭到刪除。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需 [!DNL Segmentation Service]，請參閱 [區段概觀](../../segmentation/home.md).
 

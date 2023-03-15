@@ -6,8 +6,8 @@ last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 1%
+source-wordcount: '1180'
+ht-degree: 0%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 | 匯出類型 | **[!UICONTROL 設定檔]** | 您正在匯出區段（對象）的所有成員，其中包含 [!DNL LINE] 目的地。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連接到目標 {#connect}
 

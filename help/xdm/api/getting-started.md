@@ -6,7 +6,7 @@ description: 本檔案介紹您在嘗試呼叫結構註冊表API前，需要了�
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
@@ -212,7 +212,7 @@ XDM資源的識別方式為 `$id` 屬性，如下列範例：
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 屬性和 `allOf` 已解決。 包括描述符。 |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 和 `allOf` 已解析，有標題和說明。 已棄用的欄位以 `meta:status` 屬性 `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

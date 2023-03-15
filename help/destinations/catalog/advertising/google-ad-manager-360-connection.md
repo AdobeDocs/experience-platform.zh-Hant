@@ -4,8 +4,8 @@ description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈�
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 2%
+source-wordcount: '920'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 2%
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | 選取此目標身分以傳送對象至 [!DNL Google Ad Manager 360] |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 | 匯出類型 | **[!UICONTROL 設定檔]** | 您要依「 」的「選取設定檔屬性」畫面中的選取，匯出區段的所有成員，以及適用的結構欄位（例如PPID） [目的地啟動工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以3、6、8、12或24小時為增量將檔案匯出至下游平台。 深入了解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 先決條件 {#prerequisites}
 

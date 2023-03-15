@@ -64,11 +64,11 @@ Cloud Connector事件轉送擴充功能可讓您建立自訂HTTP要求，將資�
 | 標頭 | 說明 |
 |---|---|
 | [A-IM](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | 由使用者代理程式傳送，表示想存取原始資源的過去狀態。為此，針對原始資源 TimeGate 所發送的 HTTP 要求中會傳送 `Accept-Datetime` 標頭，其值表示所需原始資源過去狀態的日期時間。 |
+| [Accept-Datetime](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) | 由使用者代理程式傳送，表示想存取原始資源的過去狀態。為此，針對原始資源 TimeGate 所發送的 HTTP 要求中會傳送 `Accept-Datetime` 標頭，其值表示所需原始資源過去狀態的日期時間。 |
 | Access-Control-Request-Headers | 瀏覽器在發出[預檢要求](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request)時使用，讓伺服器知道用戶端提出實際要求時，可能會傳送哪些 [HTTP 標頭](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)。 |
 | Access-Control-Request-Method | 瀏覽器在發出[預檢要求](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request)時使用，讓伺服器知道用戶端提出實際要求時可能會使用哪種 [HTTP 方法](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)。此標頭為必填項目，因為預檢要求一概都是 [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS)，且不使用與實際要求相同的方法。 |
 | Authorization | 包含向伺服器驗證使用者代理程式的認證。 |

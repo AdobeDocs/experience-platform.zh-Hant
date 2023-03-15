@@ -6,8 +6,8 @@ description: 本檔案概述人員名稱XDM資料類型。
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 1%
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 | `middleName` | 名字和姓氏之間提供的中間、替代或其他名稱。 |
 | `suffix` | 在人員姓名之後提供的一組信函，以提供其他資訊(例如 `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`等)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需人員名稱資料類型的詳細資訊，請參閱公用XDM存放庫：
 

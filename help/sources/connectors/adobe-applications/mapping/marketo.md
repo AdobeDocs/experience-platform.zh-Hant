@@ -6,8 +6,8 @@ description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 4%
+source-wordcount: '922'
+ht-degree: 1%
 
 ---
 
@@ -133,9 +133,9 @@ ht-degree: 4%
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## 計畫 {#programs}
+## 方案 {#programs}
 
 閱讀 [XDM Business Campaign概觀](../../../../xdm/classes/b2b/business-campaign.md) 以取得XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請參閱 [業務促銷活動詳細資訊結構欄位組](../../../../xdm/field-groups/b2b-campaign/details.md) 指南。
 
@@ -164,7 +164,7 @@ ht-degree: 4%
 | `endDate` | `campaignEndDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 方案成員資格 {#program-memberships}
 
@@ -197,7 +197,7 @@ ht-degree: 4%
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 公司 {#companies}
 
@@ -229,7 +229,7 @@ ht-degree: 4%
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 靜態清單 {#static-lists}
 
@@ -247,7 +247,7 @@ ht-degree: 4%
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 靜態清單成員資格 {#static-list-memberships}
 
@@ -264,7 +264,7 @@ ht-degree: 4%
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 已命名帳戶 {#named-accounts}
 
@@ -296,7 +296,7 @@ ht-degree: 4%
 | `sourceType` | `accountSourceType` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 機會 {#opportunities}
 
@@ -333,7 +333,7 @@ ht-degree: 4%
 | `nextStep` | `nextStep` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 機會聯繫人角色 {#opportunity-contact-roles}
 
@@ -354,7 +354,7 @@ ht-degree: 4%
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `marketoIsDeleted` | `isDeleted` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 人員 {#persons}
 
@@ -412,7 +412,7 @@ ht-degree: 4%
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | 這是計算欄位。 |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | 這是計算欄位。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

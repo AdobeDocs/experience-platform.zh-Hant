@@ -138,7 +138,7 @@ ht-degree: 0%
 每個 [!DNL Marketo] 資料集有其專屬的對應規則可遵循。 如需如何對應的詳細資訊，請參閱下列內容 [!DNL Marketo] 資料集到XDM:
 
 * [活動](../../../../connectors/adobe-applications/mapping/marketo.md#activities)
-* [計畫](../../../../connectors/adobe-applications/mapping/marketo.md#programs)
+* [方案](../../../../connectors/adobe-applications/mapping/marketo.md#programs)
 * [方案成員資格](../../../../connectors/adobe-applications/mapping/marketo.md#program-memberships)
 * [公司](../../../../connectors/adobe-applications/mapping/marketo.md#companies)
 * [靜態清單](../../../../connectors/adobe-applications/mapping/marketo.md#static-lists)

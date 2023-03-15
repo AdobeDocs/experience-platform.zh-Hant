@@ -113,7 +113,7 @@ Adobe Experience Platform Query Service可讓您使用標準SQL來查詢Experien
 
 請參閱 [查詢服務概述](../query-service/home.md) 以取得服務的詳細資訊。
 
-### 即時客戶個人檔案
+### 即時客戶設定檔
 
 「即時客戶設定檔」提供集中的消費者設定檔，以便進行目標式和個人化的體驗管理。 每個設定檔都包含所有系統中匯總的資料，以及涉及個人事件的可操作的時間戳記帳戶，這些事件發生在您搭配Experience Platform使用的任何系統中。
 

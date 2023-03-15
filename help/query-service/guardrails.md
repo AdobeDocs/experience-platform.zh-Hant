@@ -5,8 +5,8 @@ description: 本文檔提供有關查詢服務資料使用限制的資訊，以�
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 2%
+source-wordcount: '1020'
+ht-degree: 1%
 
 ---
 
@@ -62,13 +62,13 @@ ht-degree: 2%
 | 客戶端連接器和結果輸出限制 | 用戶端連接器<ul><li>查詢UI（100列）</li><li>第三方客戶端(50,000)</li><li>[!DNL PostgresSQL] 客戶端(50,000)</li></ul> | 硬 | 查詢結果可通過以下方式接收：<ul><li>查詢服務UI</li><li>第三方用戶端</li><li>[!DNL PostgresSQL] 客戶</li></ul>注意：對輸出計數加上限制可能會更快傳回結果。 例如， `LIMIT 5`, `LIMIT 10`等。 |
 | 透過 | 用戶端UI | 不適用 | 這會定義如何讓使用者取得結果。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **批次查詢**
 
 | **瓜德拉伊** | **限制** | **限制類型** | **說明** |
 |---|---|---|---|
-| 最大執行時間 | 24小時 | 硬 | 這定義了批處理SQL查詢的最大執行時間。<br>查詢的處理時間取決於要處理的資料量和查詢複雜度。 |
+| 最大執行時間 | 24 小時 | 硬 | 這定義了批處理SQL查詢的最大執行時間。<br>查詢的處理時間取決於要處理的資料量和查詢複雜度。 |
 | 未計畫批的併發查詢服務用戶 | <ul><li>如應用程式產品說明中所指定。</li><li>+5（每購買一個附加的Ad Hoc Query Users附加包）</li></ul> | 硬 | 對於未計畫批處理查詢（例如，交互模式下的CTAS/ITAS查詢），它定義了可以為特定組織同時建立會話的用戶數。 如果超過併發限制，則用戶會收到 `Session Limit Reached` 錯誤。 |
 | 計畫批的併發查詢服務用戶 | 無用戶限制 | 不適用 | 排程的批次查詢為非同步作業，因此沒有使用者限制。 |
 | 批處理資料的計算小時數 | 如客戶的Adobe Experience Platform Intelligence Query Custom SKU銷售訂單中所指定 | 軟 | 這定義了允許客戶執行批次查詢以掃描、處理和將資料寫回資料湖的計算時間範圍。 |
@@ -76,7 +76,7 @@ ht-degree: 2%
 | 客戶端連接器和結果輸出限制 | 用戶端連接器<ul><li>查詢UI（沒有列上限）</li><li>第三方用戶端（無列上限）</li><li>[!DNL PostgresSQL] 用戶端（沒有列上限）</li><li>REST API（無列上限）</li></ul> | 硬 | 查詢的結果可使用下列方法：<ul><li>可儲存為衍生資料集</li><li>可插入現有的衍生資料集</li></ul>注意：查詢結果中的記錄計數編號沒有上限。 |
 | 透過 | 資料集 | 不適用 | 這會定義如何讓使用者取得結果。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 查詢加速儲存 {#query-accelerated-store}
 
@@ -86,7 +86,7 @@ ht-degree: 2%
 |---|---|---|---|
 | 查詢併發 | 4 | 硬 | 為確保透過報表API對匯總資料的查詢(包括增強資料模型(例如Real-Time CDP資料模型)的查詢)有資源可有效執行，報表API會為每個查詢指派併發槽來追蹤資源利用率。 系統會將查詢放入佇列中，並等待併發槽可用或可從快取提供。 任何指定時間最多可使用四個同時查詢槽。<br>如果您透過BI工具存取報表API，且需要更多並行，則需要BI伺服器。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 後續步驟
 

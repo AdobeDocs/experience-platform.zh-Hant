@@ -5,7 +5,7 @@ description: Google Customer Match可讓您使用您的線上和離線資料，�
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1763'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Experience Platform中的某些目的地對於傳送至目的地平台或從目�
 | email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 遵循 [ID比對需求](#id-matching-requirements-id-matching-requirements) 區段，並分別使用純文字和雜湊電子郵件地址的適當命名空間。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，必須 [!DNL Platform] 啟動時自動雜湊資料。 |
 | user_id | 自訂使用者ID | 當源標識為自定義命名空間時，選擇此目標標識。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -59,7 +59,7 @@ Experience Platform中的某些目的地對於傳送至目的地平台或從目�
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，其中包含 [!DNL Google Customer Match] 目的地。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Google Customer Match] 帳戶必要條件 {#google-account-prerequisites}
 

@@ -29,7 +29,7 @@ ht-degree: 3%
 
 此 [!UICONTROL 結構] 工作區提供強大的工具，可供您建立和自訂組織的XDM資源。 請參閱下列檔案，了解如何建立和編輯UI中的每種資源類型：
 
-* [結構描述](./resources/schemas.md)
+* [綱要](./resources/schemas.md)
 * [類別](./resources/classes.md)
 * [欄位群組](./resources/field-groups.md)
 * [資料類型](./resources/data-types.md)

@@ -4,7 +4,7 @@ description: 了解Adobe Experience Platform中用於事件轉送的Splunk擴充
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1051'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Splunk使用承載權杖作為驗證機制，以與Splunk事件收集器API通�
 | 客戶行為分析 | 組織可從其網站擷取客戶互動事件資料，並將相關事件轉送至Splunk。 然後，行銷和分析團隊可在Splunk平台內執行後續分析，以了解關鍵使用者互動和行為。 Splunk平台可用來產生圖形、控制面板或其他視覺化，以通知業務利害關係人。 |
 | 大型資料集上的可擴充搜尋 | 組織可以擷取交易式或對話式輸入，作為來自網站的事件資料，並將事件轉送至Splunk。 然後，Analytics團隊便能運用Splunk的可擴充索引功能，篩選及處理大型資料集，以衍生任何業務分析並做出明智的決策。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 先決條件 {#prerequisites}
 

@@ -4,7 +4,7 @@ title: 目的地API端點作業
 exl-id: 96755e9d-be62-432f-b985-91330575b395
 source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2539'
 ht-degree: 4%
 
 ---
@@ -180,7 +180,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 使用此參數可指定是否要將匯出的設定檔匯總為單一身分的群組（GAID、IDFA、電話號碼、電子郵件等）。 |
 | `aggregation.configurableAggregation.aggregationKey.groups` | 字串 | 請參閱範例設定中的參數 [此處](./destination-configuration.md#example-configuration). 如果您想要依身分命名空間的群組，將匯出至目的地的設定檔分組，請建立身分群組清單。 例如，您可以使用範例中的設定，將包含IDFA和GAID行動識別碼的設定檔，合併至對您目的地的呼叫和電子郵件中。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -604,7 +604,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目標啟動工作流程中的區段對應ID是否為Experience Platform區段名稱。 |
 | `segmentMappingConfig.audienceTemplateId` | 布林值 | 此 `instanceId` 的 [對象中繼資料範本](./audience-metadata-management.md) 用於此目的地。 若要設定對象中繼資料範本，請閱讀 [對象中繼資料API參考](./audience-metadata-api.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 更新現有目標配置 {#update}
 

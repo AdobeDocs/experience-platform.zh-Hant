@@ -6,37 +6,37 @@ keywords: adobe analytics；變數；analytics；自動對應；自動對應；
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 source-git-commit: dcbe4c1b5a085878562990ed2db8e5cb27b93e28
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 5%
+source-wordcount: '915'
+ht-degree: 6%
 
 ---
 
 # 自動映射至 [!DNL Analytics]
 
-以下是Adobe Experience Platform Edge Network自動對應至Adobe Analytics的變數清單。 如需Adobe Analytics資料收集查詢參數的詳細資訊，請參閱 [Analytics實施指南](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
+以下是Adobe Experience Platform Edge Network自動對應至Adobe Analytics的變數清單。 如需Adobe Analytics資料收集查詢參數的詳細資訊，請參閱 [Analytics實施指南](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html?lang=zh-Hant).
 
 >[!NOTE]
 >本頁的資訊也適用於Adobe行動SDK。
 
-| XDM欄位路徑 | [!DNL Analytics Query String] / HTTP 標題 | 說明 |
+| XDM 欄位路徑 | [!DNL Analytics Query String] / HTTP 標題 | 說明 |
 | ---------- | ------------------------- | ----------------------------------------- |
 | application.id | c.a.appid | AppMeasurement內容資料 `c.a.appid` 對應。 |
 | application.launches.value | c.a.launches | AppMeasurement內容資料 `c.a.launches` 對應。 |
 | commerce.checkouts.id | events | `scCheckout` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
-| commerce.checkouts.value | 事件 | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_CHECKOUT的對應，使用分隔字元 `,`. |
+| commerce.checkouts.value | events | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_CHECKOUT的對應，使用分隔字元 `,`. |
 | commerce.order.currencyCode | cc | AppMeasurement查詢參數CURRENCY對應。 |
 | commerce.order.purchaseID | pi | AppMeasurement查詢參數PURCHASEID對應。 |
-| commerce.productListAdds.id | 事件 | `scAdd` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
-| commerce.productListAdds.value | 事件 | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_ADD的映射，使用分隔符 `,`. |
-| commerce.productListOpens.id | 事件 | `scOpen` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
-| commerce.productListOpens.value | 事件 | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_OPEN的映射，使用分隔符 `,`. |
-| commerce.productListRemovals.id | 事件 | `scRemove` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
-| commerce.productListRemovals.value | 事件 | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_REMOVE的映射，使用分隔符 `,`. |
-| commerce.productListViews.id | 事件 | `scView` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
-| commerce.productListViews.value | 事件 | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_VIEW的映射，使用分隔符 `,`. |
-| commerce.productViews.id | 事件 | `prodView` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
-| commerce.productViews.value | 事件 | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_PROD_VIEW的映射，使用分隔符 `,`. |
-| commerce.purchases.value | 事件 | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_PURCHASE的對應，使用分隔字元 `,`. |
+| commerce.productListAdds.id | events | `scAdd` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
+| commerce.productListAdds.value | events | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_ADD的映射，使用分隔符 `,`. |
+| commerce.productListOpens.id | events | `scOpen` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
+| commerce.productListOpens.value | events | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_OPEN的映射，使用分隔符 `,`. |
+| commerce.productListRemovals.id | events | `scRemove` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
+| commerce.productListRemovals.value | events | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_REMOVE的映射，使用分隔符 `,`. |
+| commerce.productListViews.id | events | `scView` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
+| commerce.productListViews.value | events | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_SC_VIEW的映射，使用分隔符 `,`. |
+| commerce.productViews.id | events | `prodView` 事件序列化。 如果排除此欄位（亦即針對未序列化事件），系統會產生並指派其專屬ID值給實體。 |
+| commerce.productViews.value | events | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_PROD_VIEW的映射，使用分隔符 `,`. |
+| commerce.purchases.value | events | AppMeasurement查詢參數EVENT_LIST_FULL與轉換COMMERCE_PURCHASE的對應，使用分隔字元 `,`. |
 | device.colorDepth | c | AppMeasurement查詢參數C_COLOR對應。 |
 | device.screenHeight | s | AppMeasurement查詢參數螢幕解析度對應。 |
 | device.screenWidth | s | AppMeasurement查詢參數螢幕解析度對應。 |
@@ -92,9 +92,9 @@ ht-degree: 5%
 | placeContext.geo.postalCode | zip | AppMeasurement查詢參數ZIP對應。 |
 | placeContext.geo.stateProvince | state | AppMeasurement查詢參數STATE對應。 |
 | productListItems[N].lineItemId | products | AppMeasurement查詢參數產品類別對應。 |
-| productlistitems[N].name | 產品 | AppMeasurement查詢參數產品名稱對應。 |
-| productlistitems[N].priceTotal | 產品 | AppMeasurement查詢參數產品價格對應。 |
-| productlistitems[N].quantity | 產品 | AppMeasurement查詢參數產品數量對應。 |
+| productlistitems[N].name | products | AppMeasurement查詢參數產品名稱對應。 |
+| productlistitems[N].priceTotal | products | AppMeasurement查詢參數產品價格對應。 |
+| productlistitems[N].quantity | products | AppMeasurement查詢參數產品數量對應。 |
 | web.webInteraction.URL | pev1 | AppMeasurement查詢參數PAGE_EVENT_VAR1對應。 |
 | web.webInteraction.name | pev2 | AppMeasurement查詢參數PAGE_EVENT_VAR2對應。 |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` to `pe=lnk_o`; `web.webInteraction.type=download` to `pe=lnk_d`; `web.webInteraction.type=exit` to `pe=lnk_e` |
@@ -106,4 +106,4 @@ ht-degree: 5%
 | web.webPageDetails.siteSection | ch | AppMeasurement查詢參數CHANNEL對應。 |
 | web.webReferrer.URL | r | AppMeasurement查詢參數REFERRER對應。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

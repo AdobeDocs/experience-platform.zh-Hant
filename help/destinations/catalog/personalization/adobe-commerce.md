@@ -1,34 +1,54 @@
 ---
-title: Adobe Commerce Destination Connector
-description: 了解Adobe Commerce和Real-Time CDP商家如何透過提供高度相關的網站內容和促銷活動(根據Real-Time CDP中建置和管理的客戶受眾自訂)來個人化購物體驗。
+title: (Beta)Adobe Commerce Destination Connector
+description: 了解Adobe Commerce和Real-Time CDP商家如何透過提供高度相關的網站內容和促銷活動(根據Real-Time CDP中建立和管理的客戶區段加以自訂)來個人化購物體驗。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 813a564eb02a5366945468ee689b2744e31baaa8
+source-git-commit: 638a778d1d999ab6a1726333f9cde0a0b4fad57b
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '691'
 ht-degree: 1%
 
 ---
 
-# Adobe Commerce Connection {#adobe-commerce}
+# （測試版）Adobe Commerce連線 {#adobe-commerce}
 
 ## 總覽 {#overview}
 
-此 [!DNL Adobe Commerce] 目的地連接器可讓您選取一或多個Real-Time CDP對象，以便啟用 [!DNL Adobe Commerce] 帳戶，為購物者提供動態的個人化體驗。 內 [!DNL Adobe Commerce]，您就可以選取這些Real-Time CDP對象，以個人化購物車中的獨特選件，例如「購買2即可免費獲得1」。 您也可以顯示主圖橫幅廣告，並透過促銷優惠方案修改產品定價，所有優惠方案皆自訂給Adobe Real-Time CDP對象。
+>[!IMPORTANT]
+> 
+>此 **[!UICONTROL Adobe Commerce]** 連接器為測試版，僅適用於特定數量的客戶。
+
+此 [!DNL Adobe Commerce] 目的地連接器可讓您選取一或多個要啟用的Real-Time CDP區段 [!DNL Adobe Commerce] 帳戶，為購物者提供動態的個人化體驗。 內 [!DNL Adobe Commerce]，您就可以選取這些Real-Time CDP區段，以個人化購物車中的獨特選件，例如「購買2即可免費獲得1」。 您也可以顯示主圖橫幅廣告，並透過促銷優惠方案修改產品定價，所有優惠方案皆自訂為Adobe Real-Time CDP區段。
+
+<!--## Use cases {#use-cases}
+
+To help you better understand how and when you should use the *YourDestination* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+
+### Use case #1 {#use-case-1}
+
+*For mobile messaging platforms:*
+
+*A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
+
+### Use case #2 {#use-case-2}
+
+*For social network platforms:*
+
+*An athletic apparel brand wants to reach existing customers through their social media accounts. The apparel brand can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to YourDestination, to display ads in their customers' social media feeds.*-->
 
 ## 先決條件 {#prerequisites}
 
-已購買Real-Time CDP Prime或Ultimate及Adobe Commerce的客戶，可在目的地目錄中找到此連接器。
+目的地目錄中提供此擴充功能，供已購買Real-Time CDP Prime或Ultimate及Adobe Commerce的精選測試版客戶使用。
 
-若要使用此目的地連線，請確定您擁有下列存取權：
+測試版客戶應可存取：
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). 您可以透過開發人員控制台來檢視所需的服務帳戶和憑證資訊 [完成設定](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) 的擴充功能。
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/)
 - [Adobe Commerce Cloud 2.4.4版或更新版本](https://business.adobe.com/products/magento/magento-commerce.html)
 
 在Experience Platform中，建立下列項目：
 
 - [方案](../../../xdm/schema/composition.md). 您建立的結構代表您計畫從Adobe Commerce擷取的資料。 [深入了解](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) 關於如何建立包含商務專用欄位群組的結構。
-- [資料集](../../../catalog/datasets/user-guide.md#create). 資料集是資料集合的儲存和管理結構。 您可以從上方建立的結構建立此資料集。
+- [資料集](../../../catalog/datasets/user-guide.md#create). 資料集是資料集合的儲存和管理結構。 您必須從上方建立的結構中建立此資料集。
 - [資料流](../../../edge/datastreams/overview.md#create). 允許資料從Adobe Experience Platform流向其他AdobeDX產品的ID。 此ID必須與您特定Adobe Commerce例項內的特定網站相關聯。 建立此資料流時，請指定您在上方建立的XDM架構。
 
 完成必要條件後，請連線至 [!DNL Commerce] 目的地。
@@ -53,7 +73,7 @@ ht-degree: 1%
 - **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 - **[!UICONTROL 說明]**:輸入目的地的說明。 例如，您可以提及您使用此目的地的促銷活動。 此欄位為選填欄位。
 - **[!UICONTROL 整合別名]**:此值會以JSON物件名稱的形式傳送至Experience PlatformWeb SDK。
-- **[!UICONTROL 資料流ID]**:這會決定哪個資料收集資料流包含回應頁面所包含的對象。 下拉式功能表只會顯示已啟用目的地設定的資料流。 請參閱 [設定資料流](../../../edge/datastreams/overview.md) 以取得更多詳細資訊。
+- **[!UICONTROL 資料流ID]**:這會決定要將區段納入頁面回應中的資料收集資料流。 下拉式功能表只會顯示已啟用目的地設定的資料流。 請參閱 [設定資料流](../../../edge/datastreams/overview.md) 以取得更多詳細資訊。
 
 ### 啟用警報 {#enable-alerts}
 
@@ -61,7 +81,7 @@ ht-degree: 1%
 
 完成提供目標連接的詳細資訊後，請選擇 **[!UICONTROL 下一個]**.
 
-## 對 [!DNL Commerce] 目的地 {#activate}
+## 將區段啟用至 [!DNL Commerce] 目的地 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -71,13 +91,13 @@ ht-degree: 1%
 
 ## 下一步 [!DNL Adobe Commerce]
 
-現在您已設定 [!DNL Commerce] Experience Platform內的目的地，您必須安裝 [!DNL Audience Activation] 擴充功能 [!DNL Commerce] 和設定 [!DNL Commerce Admin] 匯入您建立的Real-Time CDP對象。 請參閱 [[!DNL Commerce] 檔案](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) 了解更多。
+現在您已設定 [!DNL Commerce] Experience Platform內的目的地，您必須設定 [!DNL Commerce Admin] 匯入您建立的Real-Time CDP區段。 請參閱 [[!DNL Commerce] 檔案](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/customer-segment-rtcdp.html) 了解更多。
 
 ## 驗證Commerce中的受眾啟動 {#exported-data}
 
-在您的 [!DNL Adobe Commerce] 帳戶時，您會在前往 _管理_ 邊欄，然後前往 **[!UICONTROL 客戶]** > **[!UICONTROL Real-time CDP受眾]**.
+在您將Real-Time CDP區段啟用至 [!DNL Adobe Commerce] 帳戶，您會在 [!DNL Admin] 建立購物車價格規則時：
 
-![Real-Time CDP Audiences Dashboard](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
+![Adobe Commerce管理員](../../assets/catalog/personalization/adobe-commerce/rtcdp-in-admin.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 

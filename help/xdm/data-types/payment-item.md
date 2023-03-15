@@ -6,8 +6,8 @@ description: 本文檔概述了「付款項體驗資料模型」(XDM)資料類�
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 7%
+source-wordcount: '161'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
 | `paymentType` | 字串 | 此訂單的付款方式。 接受的列舉值包括： <li> `cash` </li> <li> `credit_card` </li> <li> `debit_card` </li> <li> `gift_card` </li> <li> `check` </li> <li> `paypal` </li> <li> `wire_transfer` </li> <li> `credit_card_reference` </li> <li> `other` </li> |
 | `transactionID` | 字串 | 此付款項的唯一事務處理標識符。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

@@ -5,13 +5,13 @@ exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
 # Real-time Customer Data Platform結構
 
-匯入Adobe Real-time Customer Data Platform的所有資料都必須符合標準的非正常結構，才能透過下游功能和功能加以辨識和處理。 Experience Data Model(XDM)是以結構形式提供此結構的標準架構。
+匯入Adobe Real-time Customer Data Platform的所有資料都必須符合標準的非正常結構，才能透過下游功能和功能加以辨識和處理。 體驗資料模型 (XDM) 是以結構形式提供此結構的標準框架。
 
 建立結構後，您可以將資料結構對應至XDM，以便擷取至系統中。
 

@@ -136,6 +136,6 @@ Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許�
 
 **已知問題**
 
-* 無
+* None
 
 若要進一步了解來源，請參閱 [來源概觀](../../sources/home.md).

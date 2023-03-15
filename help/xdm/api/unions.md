@@ -6,8 +6,8 @@ description: Schema Registry API中的/union端點可讓您以程式設計方式
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 3%
+source-wordcount: '896'
+ht-degree: 1%
 
 ---
 
@@ -64,7 +64,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
 | `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON類別（原始） `$ref` 和 `allOf` 已包含。 (限制：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -108,7 +108,7 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | URL編碼 `$id` 你要查的聯盟的URI。 聯合架構的URI會附加「__union」。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -131,7 +131,7 @@ curl -X GET \
 | `application/vnd.adobe.xed+json; version=1` | 原始格式 `$ref` 和 `allOf`. 包含標題和說明。 |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` 屬性和 `allOf` 已解決。 包含標題和說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -196,7 +196,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | 此 `$id` 要列出其聯合啟用結構的類。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -219,7 +219,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
 | `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON結構（原始） `$ref` 和 `allOf` 已包含。 (限制：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 

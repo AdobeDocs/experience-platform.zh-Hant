@@ -1,10 +1,11 @@
 ---
 title: 附註
 description: 了解如何在Adobe Experience Platform中為特定標籤資源新增文字注釋。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 14d6b6a1-3bd0-4181-8181-e6b35c197a44
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 56%
+ht-degree: 65%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 附註是可新增至Adobe Experience Platform中特定標籤資源的文字注釋。 您可為以下資源加上附註：
 
@@ -38,7 +39,7 @@ ht-degree: 56%
 
 如果資源可建立附註，畫面右側會顯示窄邊欄。邊欄中會包含附註圖示。此圖示會顯示目前附加至資源的附註數量。
 
-選取&#x200B;**[!UICONTROL 附註]**&#x200B;以展開右側邊欄並顯示附註，最近的附註位於頂端。  要添加新注釋，請在頂部的框中輸入注釋文本，然後選擇&#x200B;**[!UICONTROL 添加註釋]**。
+選擇 **[!UICONTROL 附註]** 以展開右側邊欄並顯示附註，最近的附註會顯示在上方。  要添加新附註，請在頂部的框中輸入附註文本，然後選擇 **[!UICONTROL 添加註釋]**.
 
 ## 其他
 

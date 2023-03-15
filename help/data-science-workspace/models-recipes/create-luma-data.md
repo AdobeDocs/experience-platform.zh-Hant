@@ -16,7 +16,7 @@ ht-degree: 1%
 
 本教學課程提供所有其他必要條件和資產 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 教學課程。 完成後，您和IMS組織將能使用下列結構和資料集。
 
-**結構描述:**
+**綱要:**
 
 - Luma網站資料結構
 - 傾向模型分數結果結構

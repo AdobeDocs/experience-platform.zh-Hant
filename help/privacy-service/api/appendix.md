@@ -6,8 +6,8 @@ description: 本檔案包含使用Privacy ServiceAPI的其他資訊。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 7%
+source-wordcount: '476'
+ht-degree: 5%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 7%
 | [!DNL Google] 廣告 ID | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ ht-degree: 7%
 | `analytics` | 內部對應的自訂命名空間 [!DNL Analytics]，而不是在命名空間服務中。 這會以原始請求指定的方式直接傳入，沒有命名空間ID |
 | `target` | 內部了解的自訂命名空間 [!DNL Target]，而不是在命名空間服務中。 這會以原始請求指定的方式直接傳入，沒有命名空間ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 接受的產品值
 
@@ -75,4 +75,4 @@ ht-degree: 7%
 | 身份識別服務 | `identity` |
 | Marketo Engage | `marketo` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

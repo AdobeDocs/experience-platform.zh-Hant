@@ -6,8 +6,8 @@ description: Experience Data Model(XDM)中欄位類型限制的參考，包括�
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 6%
+source-wordcount: '654'
+ht-degree: 4%
 
 ---
 
@@ -146,7 +146,7 @@ XDM是以JSON結構描述為基礎而建置，因此XDM欄位在定義其類型�
 | [!UICONTROL 布林值] | 類型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL 地圖] | `MAP` — 注釋組<br><br>(`<key-type>` 必須 `STRING`) | `MapType`<br><br>(`keyType` 必須 `StringType`) | `java.util.Map` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Scala、.NET和CosmosDB {#scala}
 
@@ -163,7 +163,7 @@ XDM是以JSON結構描述為基礎而建置，因此XDM欄位在定義其類型�
 | [!UICONTROL 布林值] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL 地圖] | `Map` | (不適用) | `object` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### MongoDB、Aerospike和Protobuf 2 {#mongo}
 
@@ -180,7 +180,7 @@ XDM是以JSON結構描述為基礎而建置，因此XDM欄位在定義其類型�
 | [!UICONTROL 布林值] | `bool` | `Integer`<br>（0/1二進位） | `bool` |
 | [!UICONTROL 地圖] | `object` | `map` | `map<key_type, value_type>` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 在API中定義XDM欄位類型 {#define-fields}
 

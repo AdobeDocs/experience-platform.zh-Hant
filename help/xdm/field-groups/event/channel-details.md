@@ -6,8 +6,8 @@ description: 本檔案提供「管道詳細資料」結構欄位群組的概觀�
 exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 3%
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 | --- | --- | --- |
 | `channel` | [體驗管道](../../data-types/experience-channel.md) | 描述產品退貨、保修註冊和購物車/訂單流程的對象。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

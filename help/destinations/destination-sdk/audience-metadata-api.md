@@ -1,29 +1,29 @@
 ---
-description: 本頁介紹了可以使用「/創作/觀眾 — 模板」 API終結點執行的所有API操作。
-title: 受眾元資料終結點API操作
+description: 本頁說明您可以使用「/authoring/audience-templates」 API端點執行的所有API操作。
+title: 對象中繼資料端點API操作
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '876'
 ht-degree: 4%
 
 ---
 
-# 受眾元資料終結點API操作
+# 對象中繼資料端點API操作
 
 >[!IMPORTANT]
 >
->**API終結點**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API端點**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-此頁列出並說明了可以使用 `/authoring/audience-templates` API終結點。 有關何時使用此終結點的說明，請閱讀 [受眾元資料管理](./audience-metadata-management.md)。
+此頁面列出並說明您可使用 `/authoring/audience-templates` API端點。 有關使用此端點的時間的說明，請閱讀 [對象中繼資料管理](./audience-metadata-management.md).
 
-## 受眾模板API操作入門 {#get-started}
+## 對象範本API操作快速入門 {#get-started}
 
-在繼續之前，請查看 [入門指南](./getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
 
-## 建立新的受眾模板 {#create}
+## 建立新受眾範本 {#create}
 
-您可以通過向POST `/authoring/audience-templates` 端點。
+您可以向 `/authoring/audience-templates` 端點。
 
 **API格式**
 
@@ -33,7 +33,7 @@ POST /authoring/audience-templates
 
 **要求**
 
-以下請求將建立由負載中提供的參數配置的新受眾元資料模板。 下面的負載包括接受的所有參數 `/authoring/audience-templates` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+下列請求會建立新的受眾中繼資料範本，由裝載中提供的參數設定。 以下裝載包含接受的所有參數 `/authoring/audience-templates` 端點。 請注意，您不必在呼叫上新增所有參數，且可根據您的API需求自訂範本。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -183,28 +183,28 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | 屬性 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | 目標的受眾元資料模板的名稱。 此名稱將出現在Experience Platform用戶介面中特定於合作夥伴的任何錯誤消息中，然後是從中分析的錯誤消息 `metadataTemplate.create.errorSchemaMap`。 |
-| `url` | 字串 | API的URL和終結點，用於建立、更新、刪除或驗證平台中的受眾/段。 兩個行業示例： `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` 和 `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`。 |
-| `httpMethod` | 字串 | 端點上用於以寫程式方式建立、更新、刪除或驗證目標中的段/受眾的方法。 例如: `POST`, `PUT`, `DELETE` |
-| `headers.header` | 字串 | 指定應添加到對API的調用的任何HTTP標頭。 例如, `"Content-Type"` |
-| `headers.value` | 字串 | 指定應添加到對API的調用的HTTP標頭的值。 例如, `"application/x-www-form-urlencoded"` |
-| `requestBody` | 字串 | 指定應發送到API的消息正文的內容。 應添加到的參數 `requestBody` 對象取決於API接受的欄位。 例如，請參閱 [第一個模板示例](./audience-metadata-management.md#example-1) 在「受眾元資料」功能文檔中。 |
-| `responseFields.name` | 字串 | 指定調用API時返回的任何響應欄位。 例如，請參閱 [模板示例](./audience-metadata-management.md#examples) 在「受眾元資料」功能文檔中。 |
-| `responseFields.value` | 字串 | 指定調用API時返回的任何響應欄位的值。 |
-| `responseErrorFields.name` | 字串 | 指定調用API時返回的任何響應欄位。 例如，請參閱 [ 模板示例](./audience-metadata-management.md#examples) 在「受眾元資料」功能文檔中。 |
-| `responseErrorFields.value` | 字串 | 解析從目標API調用響應返回的任何錯誤消息。 這些錯誤消息將出現給Experience Platform用戶介面中的用戶。 |
-| `validations.field` | 字串 | 指示在對目標進行API調用之前是否應為任何欄位運行驗證。 例如，您可以 `{{validations.accountId}}` 驗證用戶的帳戶ID。 |
-| `validations.regex` | 字串 | 指示如何構造欄位以便驗證通過。 |
+| `name` | 字串 | 目的地的對象中繼資料範本名稱。 此名稱將出現在Experience Platform使用者介面中任何特定於合作夥伴的錯誤訊息中，隨後將顯示從 `metadataTemplate.create.errorSchemaMap`. |
+| `url` | 字串 | API的URL和端點，用於建立、更新、刪除或驗證平台中的對象/區段。 兩個行業例子是： `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` 和 `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | 字串 | 端點上用來以程式設計方式建立、更新、刪除或驗證目的地中的區段/對象的方法。 例如: `POST`, `PUT`, `DELETE` |
+| `headers.header` | 字串 | 指定應新增至對API的呼叫的任何HTTP標題。 例如, `"Content-Type"` |
+| `headers.value` | 字串 | 指定應新增至API呼叫的HTTP標題值。 例如, `"application/x-www-form-urlencoded"` |
+| `requestBody` | 字串 | 指定應傳送至API的訊息內文內容。 應新增至 `requestBody` 物件取決於API接受的欄位。 如需範例，請參閱 [第一個範本範例](./audience-metadata-management.md#example-1) 在「對象中繼資料」功能檔案中。 |
+| `responseFields.name` | 字串 | 指定API在呼叫時傳回的任何回應欄位。 如需範例，請參閱 [範本範例](./audience-metadata-management.md#examples) 在「對象中繼資料」功能檔案中。 |
+| `responseFields.value` | 字串 | 指定呼叫API時傳回之任何回應欄位的值。 |
+| `responseErrorFields.name` | 字串 | 指定API在呼叫時傳回的任何回應欄位。 如需範例，請參閱 [ 範本範例](./audience-metadata-management.md#examples) 在「對象中繼資料」功能檔案中。 |
+| `responseErrorFields.value` | 字串 | 剖析來自您目的地之API呼叫回應傳回的任何錯誤訊息。 這些錯誤訊息會在Experience Platform使用者介面中呈現給使用者。 |
+| `validations.field` | 字串 | 指出在對您的目的地進行API呼叫之前，是否應對任何欄位執行驗證。 例如，您可以使用 `{{validations.accountId}}` 以驗證使用者的帳戶ID。 |
+| `validations.regex` | 字串 | 指出欄位的結構方式，以便驗證通過。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含新建立的受眾模板的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含新建立之對象範本的詳細資訊。
 
-## 更新受眾模板 {#update}
+## 更新受眾範本 {#update}
 
-您可以通過向PUT請求更新現有受眾模板 `/authoring/audience-templates` 終結點並提供要更新的受眾模板的實例ID。 在呼叫正文中，提供更新的模板。
+您可以向 `/authoring/audience-templates` 端點，並提供您要更新之對象範本的例項ID。 在呼叫內文中，提供更新的範本。
 
 **API格式**
 
@@ -214,11 +214,11 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 要更新的受眾元資料模板的ID。 |
+| `{INSTANCE_ID}` | 您要更新之對象中繼資料範本的ID。 |
 
 **要求**
 
-以下請求更新由負載中提供的參數配置的現有受眾元資料模板。
+下列要求會更新現有的受眾中繼資料範本，由裝載中提供的參數設定。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-templates/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
@@ -316,9 +316,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 }
 ```
 
-## 檢索受眾模板清單 {#retrieve-list}
+## 擷取對象範本清單 {#retrieve-list}
 
-通過向IMS組織發出GET請求，您可以檢索IMS組織的所有受眾模板的清單 `/authoring/audience-templates` 端點。
+您可以向提出GET請求，以擷取IMS組織的所有對象範本清單 `/authoring/audience-templates` 端點。
 
 **API格式**
 
@@ -329,7 +329,7 @@ GET /authoring/audience-templates
 
 **要求**
 
-以下請求將根據IMS組織和沙盒配置檢索您有權訪問的受眾模板清單。
+下列請求會根據IMS組織和沙箱設定，擷取您有權存取的對象範本清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **回應**
 
-以下響應會根據您使用的IMS組織ID和沙盒名稱返回HTTP狀態200，其中包含您有權訪問的訪問對象元資料模板清單。 一 `instanceId` 對應於一個目標的模板。 響應被截斷以便簡化。
+下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並包含您可存取的對象中繼資料範本清單。 一 `instanceId` 對應至一個目的地的範本。 回應會為簡潔而截斷。
 
 ```json
 {
@@ -447,9 +447,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 }
 ```
 
-## 檢索特定受眾模板 {#get}
+## 擷取特定對象範本 {#get}
 
-您可以通過向以下站點發出GET請求來檢索有關特定受眾模板的詳細資訊 `/authoring/audience-templates` 終結點，並提供要檢索的受眾模板的實例ID。
+您可以向提出GET要求，以擷取特定對象範本的詳細資訊 `/authoring/audience-templates` 端點，並提供您要擷取之對象範本的例項ID。
 
 **API格式**
 
@@ -459,7 +459,7 @@ GET /authoring/audience-templates/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 要檢索的受眾元資料模板的ID。 |
+| `{INSTANCE_ID}` | 您要擷取的對象中繼資料範本ID。 |
 
 **要求**
 
@@ -473,7 +473,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關指定受眾模板的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含指定對象範本的詳細資訊。
 
 ```json
 {
@@ -583,9 +583,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 ```
 
 
-## 刪除特定受眾模板 {#delete}
+## 刪除特定對象範本 {#delete}
 
-您可以通過向以下站點發出DELETE請求來刪除指定的受眾模板 `/authoring/audience-templates` 終結點，並提供要在請求路徑中刪除的訪問群體模板的ID。
+您可以透過向 `/authoring/audience-templates` 端點，並提供您要在請求路徑中刪除之對象範本的ID。
 
 **API格式**
 
@@ -595,7 +595,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 的 `id` 的子菜單。 |
+| `{INSTANCE_ID}` | 此 `id` 對象範本中。 |
 
 **要求**
 
@@ -609,12 +609,12 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
 
 **回應**
 
-成功的響應返回HTTP狀態200以及空的HTTP響應。
+成功的回應會傳回HTTP狀態200，並傳回空的HTTP回應。
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道何時使用受眾元資料模板以及如何使用 `/authoring/audience-templates` API終結點。 閱讀 [如何使用Destination SDK配置目標](./configure-destination-instructions.md) 瞭解此步驟在配置目標過程中的適用範圍。
+閱讀本檔案後，您現在知道何時該使用對象中繼資料範本，以及如何使用設定對象中繼資料範本 `/authoring/audience-templates` API端點。 閱讀 [如何使用Destination SDK來設定您的目的地](./configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。

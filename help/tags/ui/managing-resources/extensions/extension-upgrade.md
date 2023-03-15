@@ -1,10 +1,11 @@
 ---
 title: 擴充功能升級
 description: 了解擴充功能升級的封裝與呈現方式在擴充功能目錄中。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 68%
+ht-degree: 76%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 68%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。這些更新會封裝成新版本的擴充功能，並可在擴充功能目錄中提供作為升級版本。
 
@@ -24,7 +25,7 @@ ht-degree: 68%
 
 ## 升級通知
 
-當您已安裝至屬性的擴充功能，且目錄中有較新版本時，當您檢視「已安裝擴充功能」頁面時，將會在擴充功能卡上看到[!UICONTROL 升級]按鈕。
+當您已安裝至屬性的擴充功能，且目錄中有較新版本時，您會看到 [!UICONTROL 升級] 按鈕。
 
 您也可以在該擴充功能提供的資源編輯資源時看到通知。
 
@@ -40,11 +41,11 @@ ht-degree: 68%
 
 安裝升級和第一次安裝擴充功能差不多。
 
-1. 選擇&#x200B;**[!UICONTROL Upgrade]**&#x200B;以轉到[!UICONTROL Extension Configuration]螢幕。
+1. 選擇 **[!UICONTROL 升級]** 前往 [!UICONTROL 擴充功能組態] 螢幕。
 1. 依需求變更任何設定。
-1. 選取&#x200B;**[!UICONTROL 「儲存」]**。
+1. 選取「**[!UICONTROL 儲存]**」。
 
-在您點擊&#x200B;**[!UICONTROL Save]**&#x200B;之前，實際上不會執行升級。 在此之前，您可以隨時選擇[!UICONTROL 取消]並保持當前安裝的版本。 選擇&#x200B;**[!UICONTROL Save]**&#x200B;是無法返回的點。
+在您點按之前，實際上並不會執行升級作業 **[!UICONTROL 儲存]**. 在此動作之前，您可以選取 [!UICONTROL 取消] 並保持在目前安裝的版本。 選取 **[!UICONTROL 儲存]** 是無法挽回的。
 
 如果您的程式庫處於 `Approved` 或 `Submitted` 狀態，無法升級擴充功能。因下一個版本必須包含新的擴充功能版本。若為處於 `Approved` 或 `Submitted` 狀態的程式庫，下一個版本為生產版本。該版本會失敗，因未包含最新版本，因此工作流程是先發佈或拒絕處於 `Approved` 或 `Submitted` 狀態的程式庫，_再_&#x200B;升級擴充功能。
 
@@ -54,10 +55,10 @@ ht-degree: 68%
 
 除此之外，新增升級的擴充功能至程式庫，也就像[新增其他變更](../../publishing/libraries.md)至程式庫一樣。
 
-從[!UICONTROL Edit Library]螢幕中，可以使用「[!UICONTROL Add All Changed Resources]」按鈕，也可以使用「[!UICONTROL Add a Resource]」按鈕並自行選擇升級的擴展。
+從 [!UICONTROL 編輯程式庫] 畫面中，您可以使用「[!UICONTROL 新增所有已變更的資源]「 」按鈕，或者您可以使用「[!UICONTROL 新增資源]「 」按鈕並自行選取升級版擴充功能。
 
 >[!TIP]
 >
 >擴充功能開發人員可以在擴充功能檢視中新增設定項目，以啓用新功能。如果您在升級至新的擴充功能版本後發現組件失敗，而且您已隔離以建立該擴充功能的失敗，則首先要前往擴充功能的「設定」頁面並確定「儲存」(即使您未變更任何項目)。接著，將新變更新增到程式庫，然後嘗試再次建置。
 
-將擴充功能升級新增至程式庫後，您可以依照[發佈流程](../../publishing/publishing-flow.md)中概述的步驟，將程式庫發佈至生產環境。
+將擴充功能升級新增到程式庫後，即可依照在[發佈流程](../../publishing/publishing-flow.md)中概述的步驟，將您的程式庫發佈到生產環境。

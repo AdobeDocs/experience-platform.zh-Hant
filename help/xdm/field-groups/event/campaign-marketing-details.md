@@ -6,8 +6,8 @@ description: 本檔案提供「促銷活動行銷詳細資料」結構欄位群�
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 3%
+source-wordcount: '147'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 3%
 | --- | --- | --- |
 | `marketing` | [行銷](../../data-types/marketing.md) | 描述行銷活動資訊（例如促銷活動群組、名稱及追蹤代碼）的物件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

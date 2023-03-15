@@ -72,8 +72,8 @@ ht-degree: 55%
 雖然順序一律會強制執行，但有些規則可能會在標籤程式庫完成載入時立即執行，而有些可能會稍後執行。 當標籤程式庫完成載入時，會發生下列情況：
 
 1. 規則 A 會立即執行。
-1. 如果 `DOMContentLoaded` 瀏覽器事件 (DOM Ready) 已發生，規則 B 和規則 C 就會立即執行。否則，規則 B 和規則 C 會在 [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) 瀏覽器事件發生的稍後執行。
-1. 如果 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件 (已載入視窗) 已發生，則會立即執行規則 D。否則，當 [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) 瀏覽器事件發生時，規則 D 將在稍後執行。請注意，如果您已根據指示安裝標籤程式庫，則標籤程式庫 *always* 在完成載入之前 [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) 瀏覽器事件。
+1. 如果 `DOMContentLoaded` 瀏覽器事件 (DOM Ready) 已發生，規則 B 和規則 C 就會立即執行。否則，規則 B 和規則 C 會在 [`DOMContentLoaded`](https://developer.mozilla.org/zh-TW/docs/Web/Events/DOMContentLoaded) 瀏覽器事件發生的稍後執行。
+1. 如果 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件 (已載入視窗) 已發生，則會立即執行規則 D。否則，當 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件發生時，規則 D 將在稍後執行。請注意，如果您已根據指示安裝標籤程式庫，則標籤程式庫 *always* 在完成載入之前 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件。
 
 將這些原則套用到您自己的網站時，請考量下列事項：
 

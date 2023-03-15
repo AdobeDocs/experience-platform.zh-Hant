@@ -4,7 +4,7 @@ description: 了解在Reactor API中如何處理錯誤。
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 | `source` | 包含對錯誤源的引用的對象，可選地包括以下任一成員：<ul><li>`pointer`:a [JSON指標(RFC6901)](https://datatracker.ietf.org/doc/html/rfc6901) 引用請求文檔中關聯實體的字串(如 `/data` 主要資料物件，或 `/data/attributes/title` )。</li></ul> |
 | `meta` | 包含錯誤相關非標準中繼資料的物件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 錯誤參考
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 | `ims-session-error` | 登入工作階段有問題。 請註銷並重新登錄。 |
 | `internal-error` | 發生內部錯誤。 請稍候幾分鐘，然後重試。 如果問題仍然存在，請聯絡客戶服務。 |
 | `invalid-data_element` | 無法將無效的資料元素添加到庫中。 |
-| `invalid-embed_code` | 這不是有效的內嵌程式碼，或您正嘗試將其連結至開發或測試環境。 Dynamic Tag Management(DTM)內嵌程式碼只能連結至生產環境。 |
+| `invalid-embed_code` | 這不是有效的內嵌程式碼，或您正嘗試將其連結至開發或測試環境。 動態Tag Management(DTM)內嵌程式碼只能連結至生產環境。 |
 | `invalid-extension` | 無法將無效的擴充功能新增至程式庫。 |
 | `invalid-extension_package_id` | 您只能修改擴展包的某些對象屬性。 您嘗試修改其中一個不允許的。 |
 | `invalid-new-owner-org-id` | 您嘗試指派的組織ID不是有效的組織ID。 |
@@ -107,4 +107,4 @@ ht-degree: 0%
 | `upgraded-extension-required` | 安裝擴充功能升級後，您必須將其納入所有程式庫中，直到升級到生產環境為止。 唯一的例外是擴充功能尚未發佈。 |
 | `upstream-build-required` | 您必須先成功建立上遊程式庫，才能建立此程式庫。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

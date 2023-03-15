@@ -4,8 +4,8 @@ description: 了解如何在Reactor API中設定機密，以用於事件轉送�
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1241'
-ht-degree: 2%
+source-wordcount: '1232'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 | `simple-http` | 包含用戶名和密碼的兩個字串屬性。 |
 | `oauth2-client_credentials` | 包含數個要支援的屬性 [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格。 事件轉送會要求您取得所需資訊，然後以指定的間隔為您處理這些代號的續約。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 本指南提供如何設定機密以用於事件轉送的概觀。 如需如何在Reactor API中管理機密的詳細指引，包括機密結構的範例JSON，請參閱 [secrets端點指南](../endpoints/secrets.md).
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `token` | 字串 | 目的地系統所理解的機密代號。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 代號會儲存為靜態值，因此會儲存機密 `expires_at` 和 `refresh_at` 屬性設為 `null` 密碼建立時。
 
@@ -55,7 +55,7 @@ ht-degree: 2%
 | `username` | 字串 | 使用者名稱。 |
 | `password` | 字串 | 密碼。 API回應中未包含此值。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 建立機密時，兩個屬性會以 `username:password`. 交換後，秘密 `expires_at` 和 `refresh_at` 屬性設為 `null`.
 

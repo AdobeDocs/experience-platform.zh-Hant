@@ -5,7 +5,7 @@ description: 了解如何使用Adobe Experience Platform UI建立Zendesk來源�
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '794'
 ht-degree: 6%
 
 ---
@@ -153,7 +153,7 @@ ht-degree: 6%
 | `results.url` | 字串 |
 | `results.verified` | 布林值 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 限制 {#limits}
 

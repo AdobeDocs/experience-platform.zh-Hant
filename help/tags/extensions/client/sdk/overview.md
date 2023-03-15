@@ -5,11 +5,11 @@ exl-id: 2bc738b9-5939-47a6-a829-429937e4c673
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 36%
+ht-degree: 41%
 
 ---
 
-# Adobe Experience Platform Web SDK擴充功能概述
+# Adobe Experience Platform Web SDK 擴充功能概觀
 
 >[!NOTE]
 >

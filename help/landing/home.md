@@ -59,7 +59,7 @@ Adobe已在Experience Platform之上構建了多個應用程式服務。 您可�
 * [**字彙**](glossary.md)\
    檢閱Adobe Experience Platform術語。
 
-* [**年發行說明**](https://www.adobe.com/go/platform-release-notes-en)\
+* [**發行說明**](https://www.adobe.com/go/platform-release-notes_tw)\
    尋找有關最近 [!DNL Experience Platform] 發行並檢閱過去的發行。
 
 * [**疑難排解指南**](troubleshooting.md)\

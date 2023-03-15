@@ -4,8 +4,8 @@ description: DataX是Verizon Media/Yahoo的聚合基礎架構，它承載各種�
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 3%
+source-wordcount: '778'
+ht-degree: 2%
 
 ---
 
@@ -63,7 +63,7 @@ ht-degree: 3%
 |---------|----------|---------|
 | 429請求太多 | 超出的速率限制 **(限制：100)** | 每個提供程式一小時內允許的請求數。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 支援的身分 {#supported-identities}
 
@@ -75,7 +75,7 @@ ht-degree: 3%
 | GAID | Google Advertising ID | 當源標識為GAID命名空間時，選擇GAID目標標識。 |
 | IDFA | Apple ID for Advertisers | 如果來源識別為IDFA命名空間，請選取IDFA目標識別。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -86,7 +86,7 @@ ht-degree: 3%
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，以及Verizon媒體目的地所使用的識別碼（電子郵件、GAID、IDFA）。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 使用案例 {#use-cases}
 

@@ -1,58 +1,59 @@
 ---
-title: 活動分析與Adobe Target
-description: 本文檔介紹如何使用查詢服務從使用您的Adobe Target資料建立的資料集中建立可操作的洞見。
-source-git-commit: 870626f25b1aabdcb5739bbb1ab85bdad44df195
+title: 使用Adobe Target進行活動分析
+description: 本檔案說明如何使用Query Service從以Adobe Target資料建立的資料集中建立可操作的深入分析。
+exl-id: a5181ee2-1e1c-405d-8dfe-5a32c28ac9f1
+source-git-commit: d573c01a0aa9989f581796a0be4aec6904ffc569
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 3%
 
 ---
 
-# Adobe Target活動分析
+# 使用Adobe Target進行活動分析
 
-Adobe Experience Platform允許您使用「體驗資料模型」(XDM)欄位從Adobe Target接收資料，以建立資料集，以便與查詢服務一起使用。 由於Adobe Target旨在定制內容並個性化用戶體驗，因此運行在這些資料集上的查詢通過通過SQL分析用戶活動，可提供高度個性化和集中的見解。
+Adobe Experience Platform可讓您使用Experience Data Model(XDM)欄位從Adobe Target內嵌資料，以建立資料集以搭配Query Service使用。 由於Adobe Target的設計目的是自訂內容並個人化使用者體驗，因此透過SQL分析使用者活動，在這些資料集上執行查詢可提供高度個人化且專注的深入分析。
 
-本文檔提供了各種SQL查詢示例，這些示例查詢基於客戶的行為和特徵演示了常見的使用案例。
+本文檔提供了各種示例SQL查詢，這些查詢基於客戶的行為和特性演示常見的使用案例。
 
 ## 快速入門
 
-對於以下每種使用情形，都會提供一個參數化SQL查詢示例作為模板供您自定義。 無論您看到什麼位置都提供參數 `{ }` 在您感興趣的SQL示例中。
+對於以下每個使用案例，都將提供參數化SQL查詢示例作為模板，供您自定義。 無論您在哪裡看到，都提供參數 `{ }` 在您想要評估的SQL示例中。
 
-## 高級部分XDM欄位映射
+## 高階部分XDM欄位對應
 
-下表列出了常用目標欄位及其映射到的相應XDM欄位。
+下表列出常見的Target欄位及其對應的對應XDM欄位。
 
 >[!NOTE]
 >
->使用 `[ ]` 在XDM欄位中表示一個陣列。
+>使用 `[ ]` 在「XDM」欄位內表示陣列。
 
-| 目標欄位名 | XDM欄位名 | 附註 |
+| 目標欄位名稱 | XDM欄位名稱 | 附註 |
 |---|---|---|
 | `mboxName` | `_experience.target.mboxname` | 不適用 |
 | 活動 ID | `_experience.target.activities.activityID` | 不適用 |
 | 體驗 ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` | 不適用 |
-| 段ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` | 不適用 |
-| 事件範圍 | `_experience.target.activities[].activityEvents[].eventScope` | 這個領域跟蹤新的訪問者和訪問者。 |
-| 步驟ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | 此欄位是Adobe Campaign的自定義步驟ID。 |
-| 價格合計 | commerce.order.priceTotal | 不適用 |
+| 區段ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` | 不適用 |
+| 事件範圍 | `_experience.target.activities[].activityEvents[].eventScope` | 此欄位會追蹤新訪客和造訪。 |
+| 步驟ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | 此欄位是Adobe Campaign的自訂步驟ID。 |
+| 價格總計 | commerce.order.priceTotal | 不適用 |
 
 >[!IMPORTANT]
 >
->使用目標資料自動建立的資料集的名稱是「Adobe Target體驗事件」。 將此資料集與查詢一起使用時，請使用名稱 `adobe_target_experience_events`。
+>使用Target資料自動建立的資料集名稱為「Adobe Target Experience Events」。 使用此資料集進行查詢時，請使用名稱 `adobe_target_experience_events`.
 
 ## 目標
 
-通過分析用戶活動，您可以個性化特定受眾的內容，並為單個實體test不同版本的內容。 此外，通過分析給定時間段內的特定活動或針對單個用戶的特定活動，可以更清楚地瞭解每個單個活動的效能。 此組合分析的結果可用於瞭解每個單獨活動的效能。
+透過分析使用者活動，您可以個人化特定對象的內容，並測試個別實體的不同版本內容。 此外，通過分析指定時段內或針對個別使用者的特定活動，可更清楚地了解每個個別活動的效能。 這種組合分析的結果可以用來了解每個活動的效能。
 
-以下個性化使用案例是使用Adobe Target資料建立的，並側重於用戶活動，以便對客戶在業務應用程式上的行為進行有價值的洞見。
+下列個人化使用案例是使用Adobe Target資料建立，並著重於使用者活動，以針對客戶在業務應用程式上的行為建立有價值的深入分析。
 
-本指南通過用例示例說明了以下主要概念：
+本指南透過使用案例範例說明下列重要概念：
 
-* 瞭解給定日的活動ID的效能，如計數、詳細資訊和關聯的體驗ID。
-* 確定活動的訪問者和事件範圍。
-* 要收集「體驗ID」、「段ID」和「活動ID」的訪問者數、訪問次數和印象資訊。
+* 了解指定日期的活動ID效能，例如計數、詳細資料和相關的體驗ID。
+* 決定活動的訪客和事件範圍。
+* 收集體驗ID、區段ID和活動ID的訪客數、造訪次數和曝光資訊。
 
-### 生成給定日的每小時活動計數
+### 產生指定日的每小時活動計數
 
 ```sql
 SELECT
@@ -73,7 +74,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-### 為特定生成小時詳細資訊
+### 生成特定的每小時詳細資訊
 
 ```sql
 SELECT
@@ -90,7 +91,7 @@ ORDER BY Hour DESC
 LIMIT 24
 ```
 
-### 確定給定日的特定活動的體驗ID清單
+### 決定指定日期特定活動的體驗ID清單
 
 ```sql
 SELECT
@@ -121,7 +122,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-### 按每個活動ID的實例返回給定日期的事件範圍（訪問者、訪問者、印象）清單
+### 傳回指定日內每個活動ID的事件範圍（訪客、造訪、曝光）例項清單
 
 ```sql
 SELECT
@@ -152,7 +153,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-### 確定給定一天內每個活動的訪問者、訪問次數和觀感數
+### 決定指定日內每個活動的訪客數、造訪次數和曝光數
 
 ```sql
 SELECT
@@ -183,7 +184,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-### 確定給定日期的體驗ID、段ID和EventScope的訪問者、訪問和印象
+### 決定指定日期的體驗ID、區段ID和EventScope的訪客、造訪和曝光數
 
 ```sql
 SELECT
@@ -228,7 +229,7 @@ ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, V
 LIMIT 20
 ```
 
-### 返回給定日期的框名稱和記錄計數
+### 傳回指定日期的mbox名稱和記錄計數
 
 ```sql
 SELECT

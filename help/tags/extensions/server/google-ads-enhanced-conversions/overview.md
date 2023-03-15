@@ -4,7 +4,7 @@ description: 了解Adobe Experience Platform中用於事件轉送的Google Ads E
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 1%
 | 帳戶 ID | 您的 [!DNL Google Ads] 帳戶ID。 若要尋找此值，請登入 [!DNL Google Ads] 並導覽至： **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Install the Tag yourself]**. 帳戶ID字串可在程式碼片段視窗中找到，開頭為 `AW-` 或 `d`. |
 | 產品 | 選擇 **[!UICONTROL Google廣告(AdWords)]**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 完成後，請選取 **[!UICONTROL 新增帳戶]**，然後選取 **[!UICONTROL 儲存]**.
 

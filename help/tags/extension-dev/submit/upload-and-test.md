@@ -5,7 +5,7 @@ exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '2394'
-ht-degree: 34%
+ht-degree: 35%
 
 ---
 
@@ -160,7 +160,7 @@ npx @adobe/reactor-uploader
 
 ![](../images/getting-started/load-event.png)
 
-此 `Window Loaded` **事件類型** 確保每當頁面載入測試網站，就會觸發此規則。 選擇 **保留變更**. 在此示例中，忽略 **條件** ，因為此規則應針對測試網站上的任何頁面觸發。
+此 `Window Loaded` **事件類型** 確保每當頁面載入測試網站，就會觸發此規則。 選取&#x200B;**「保留變更」**。在此示例中，忽略 **條件** ，因為此規則應針對測試網站上的任何頁面觸發。
 
 在 **動作** 選取 **新增**. 此 **動作設定** 螢幕隨即顯示。接下來，您必須選擇要應用規則的擴展，以及觸發規則時要發生的操作。 選擇 **Facebook Pixel** 從 **擴充功能** 下拉清單和 **傳送頁面檢視** 從 **動作類型** 下拉式清單。 選擇 **保留變更**，然後 **儲存** 在以下 **編輯規則** 螢幕。
 

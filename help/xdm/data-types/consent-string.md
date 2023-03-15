@@ -5,8 +5,8 @@ description: 本檔案概述同意字串XDM資料類型。
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 4%
+source-wordcount: '198'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 | `containsPersonalData` | 布林值 | 如果此欄位為true，表示需要處理此同意字串以強制執行同意。 |
 | `gdprApplies` | 布林值 | 如果此欄位為true，表示同意會隨個人資料提供。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

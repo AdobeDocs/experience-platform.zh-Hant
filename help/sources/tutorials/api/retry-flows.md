@@ -2,7 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；流量服務；
 title: 重試失敗的資料流運行
 description: 本教學課程涵蓋如何使用流服務API重試失敗的資料流運行的步驟
-source-git-commit: dfb95f457d7ddb730950159165ed85b2f532f9ab
+exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 2%

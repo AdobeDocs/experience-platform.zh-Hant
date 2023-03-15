@@ -1,39 +1,39 @@
 ---
-description: 本頁說明如何使用Destination SDK中的/sample-profiles API終結點來基於源架構生成示例配置檔案。 您可以使用這些示例配置檔案來test基於檔案的目標配置。
-title: 基於源架構生成示例配置檔案
-source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
+description: 本頁說明如何從Destination SDK使用/sample-profiles API端點，根據來源架構產生範例設定檔。 您可以使用這些範例設定檔來測試您的檔案式目的地設定。
+title: 根據來源結構產生範例設定檔
+exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 2%
+source-wordcount: '675'
+ht-degree: 1%
 
 ---
 
-
-# 基於源架構生成示例配置檔案
+# 根據來源結構產生範例設定檔
 
 ## 總覽 {#overview}
 
-測試基於檔案的目標的第一步是使用 `/sample-profiles` 終結點，以基於現有源架構生成示例配置檔案。
+測試檔案式目的地的第一步，是使用 `/sample-profiles` 端點，根據您現有的來源架構產生範例設定檔。
 
-示例配置檔案可幫助您瞭解配置檔案的JSON結構。 此外，它們還為您提供了一個預設值，您可以使用自己的配置檔案資料進行自定義，以便進行進一步的目標測試。
+範例設定檔可協助您了解設定檔的JSON結構。 此外，它們也提供您預設值，您可以使用自己的設定檔資料加以自訂，以進一步進行目的地測試。
 
 ## 快速入門 {#getting-started}
 
-在繼續之前，請查看 [入門指南](./getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
 
 ## 先決條件 {#prerequisites}
 
-在使用 `/sample-profiles` 端點，確保滿足以下條件：
+您可以使用 `/sample-profiles` 端點，確定您符合下列條件：
 
-* 您通過Destination SDK建立了一個現有的基於檔案的目標，您可以在 [目標目錄](../ui/destinations-workspace.md)。
-* 您在Experience PlatformUI中至少為目標建立了一個激活流。 的 `/sample-profiles` 終結點根據您在激活流中定義的源架構建立配置檔案。 查看 [激活教程](../ui/activate-batch-profile-destinations.md) 瞭解如何建立激活流。
-* 要成功發出API請求，您需要與要測試的目標實例對應的目標實例ID。 在平台UI中瀏覽與目標的連接時，從URL獲取在API調用中應使用的目標實例ID。
+* 您已透過Destination SDK建立現有的檔案型目的地，並可在 [目的地目錄](../ui/destinations-workspace.md).
+* 您已在Experience PlatformUI中為您的目的地建立至少一個啟用流程。 此 `/sample-profiles` 端點會根據您在啟動流程中定義的來源架構來建立設定檔。 請參閱 [啟用教學課程](../ui/activate-batch-profile-destinations.md) 了解如何建立啟動流程。
+* 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Platform UI中瀏覽與目的地的連線時，從URL取得應用於API呼叫的目的地執行個體ID。
 
-   ![顯示如何從URL獲取目標實例ID的UI影像。](assets/get-destination-instance-id.png)
+   ![顯示如何從URL取得目的地執行個體ID的UI影像。](assets/get-destination-instance-id.png)
 
-## 生成目標測試的示例配置檔案 {#generate-sample-profiles}
+## 產生用於目的地測試的範例設定檔 {#generate-sample-profiles}
 
-通過向Web站點發出GET請求，可以根據源架構生成示例配置檔案 `/sample-profiles` 包含要test的目標的目標實例ID的終結點。
+您可以向發出GET要求，以根據來源結構產生範例設定檔 `/sample-profiles` 端點，包含您要測試之目的地的目的地執行個體ID。
 
 **API格式**
 
@@ -43,12 +43,12 @@ GET /authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&c
 
 | 查詢參數 | 說明 |
 | -------- | ----------- |
-| `destinationInstanceId` | 要為其生成示例配置檔案的目標實例的ID。 查看 [先決條件](#prerequisites) 的子菜單。 |
-| `count` | *可選*. 要生成的示例配置檔案數。 參數可以取值 `1 - 1000`。 如果未定義此屬性，則API將生成單個示例配置檔案。 |
+| `destinationInstanceId` | 您要產生範例設定檔的目的地例項ID。 請參閱 [必要條件](#prerequisites) 一節，以取得此ID的詳細資訊。 |
+| `count` | *可選*. 您要產生的範例設定檔數目。 參數可以取用 `1 - 1000`. 如果此屬性未定義，則API會產生單一範例設定檔。 |
 
 **要求**
 
-以下請求基於在目標實例中定義的源模式生成示例配置檔案，其中 `destinationInstanceId`。
+下列請求會根據目標例項中定義的來源結構，以及對應的來源結構，產生範例設定檔 `destinationInstanceId`.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}' \
@@ -61,11 +61,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含指定數量的示例配置檔案，以及與源XDM架構對應的段成員資格、標識和配置檔案屬性。
+成功的回應會傳回HTTP狀態200，包含指定數量的範例設定檔，以及對應至來源XDM架構的區段成員資格、身分和設定檔屬性。
 
 >[!NOTE]
 >
-> 響應僅返回目標實例中使用的段成員身份、標識和配置檔案屬性。 即使源架構有其他欄位，也會忽略這些欄位。
+> 回應只會傳回目的地例項中使用的區段成員資格、身分和設定檔屬性。 即使您的源架構有其他欄位，這些欄位也會被忽略。
 
 ```json
 [
@@ -102,23 +102,23 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 ]
 ```
 
-![顯示從UI到API響應欄位的映射的影像。](assets/sample-api-response-mapping.png)
+![顯示從UI對應至API回應之欄位的影像。](assets/sample-api-response-mapping.png)
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentMembership` | 描述個人段成員身份的映射對象。 有關 `segmentMembership`，閱讀 [段成員身份詳細資訊](../../xdm/field-groups/profile/segmentation.md)。 |
-| `lastQualificationTime` | 此配置檔案上次限定段的時間的時間戳。 |
-| `status` | 一個字串欄位，指示是否已將段成員資格作為當前請求的一部分實現。 接受以下值： <ul><li>`existing`:在請求之前，配置檔案已是段的一部分，並繼續保持其成員資格。</li><li>`realized`:配置檔案正在輸入段作為當前請求的一部分。</li><li>`exited`:配置檔案作為當前請求的一部分退出段。</li></ul> |
-| `identityMap` | 映射類型欄位，它描述個人的各種標識值及其關聯的命名空間。 有關 `identityMap`，請參閱 [模式組合基礎](../../xdm/schema/composition.md#identityMap)。 |
+| `segmentMembership` | 描述個人區段成員資格的映射物件。 如需 `segmentMembership`，讀取 [區段成員資格詳細資料](../../xdm/field-groups/profile/segmentation.md). |
+| `lastQualificationTime` | 此設定檔符合區段資格的上次時間時間戳記。 |
+| `status` | 字串欄位，指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`existing`:在請求前，設定檔已是區段的一部分，並會繼續保留其成員資格。</li><li>`realized`:設定檔會在目前請求中輸入區段。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
+| `identityMap` | 一種地圖類型欄位，說明個人的各種身分值及其相關聯的命名空間。 如需 `identityMap`，請參閱 [綱要組合的基礎](../../xdm/schema/composition.md#identityMap). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道如何根據在目標中配置的源架構生成示例配置檔案 [激活流](../ui/activate-batch-profile-destinations.md)。
+閱讀本檔案後，您現在知道如何根據您在目的地中設定的來源架構產生範例設定檔 [啟動流程](../ui/activate-batch-profile-destinations.md).
 
-您現在可以自定義這些配置檔案，或在API返回時使用它們， [test基於檔案的目標配置](file-based-destination-testing-api.md)。
+您現在可以自訂這些設定檔，或在API傳回時使用這些設定檔， [測試基於檔案的目標配置](file-based-destination-testing-api.md).

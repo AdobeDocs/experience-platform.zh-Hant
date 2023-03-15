@@ -5,7 +5,7 @@ exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -75,7 +75,7 @@ Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個�
 
 ### [!UICONTROL 從VisitorAPI移轉ECID]
 
-依預設，會啟用此選項。啟用此功能後，SDK將可讀取AMCV和s_ecid Cookie，並設定Visitor.js使用的AMCV Cookie。 移轉至Adobe Experience Platform Web SDK時，此功能很重要，因為某些頁面可能仍在使用Visitor.js。 它可讓SDK繼續使用相同的ECID，以免將使用者識別為兩個不同的使用者。
+此選項已預設啟用。啟用此功能後，SDK將可讀取AMCV和s_ecid Cookie，並設定Visitor.js使用的AMCV Cookie。 移轉至Adobe Experience Platform Web SDK時，此功能很重要，因為某些頁面可能仍在使用Visitor.js。 它可讓SDK繼續使用相同的ECID，以免將使用者識別為兩個不同的使用者。
 
 ### [!UICONTROL 使用第三方Cookie]
 
@@ -93,7 +93,7 @@ Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個�
 
 ### [!UICONTROL 回呼函式]
 
-擴充功能中提供的回呼函式也稱為 [`onBeforeEventSend` 函式](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) 在資料庫中。 此函式可讓您在將事件傳送至Adobe Edge網路之前，先全域修改事件。 如需如何使用此函式的詳細資訊，請參閱 [此處](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+擴充功能中提供的回呼函式也稱為 [`onBeforeEventSend` 函式](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=zh-Hant) 在資料庫中。 此函式可讓您在將事件傳送至Adobe Edge網路之前，先全域修改事件。 如需如何使用此函式的詳細資訊，請參閱 [此處](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL 按一下資料收集]
 

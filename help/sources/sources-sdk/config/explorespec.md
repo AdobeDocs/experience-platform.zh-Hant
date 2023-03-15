@@ -5,8 +5,8 @@ description: 本檔案概述使用自助來源（批次SDK）所需準備的設�
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 2%
+source-wordcount: '255'
+ht-degree: 1%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 2%
 | `responseSpec.schema.properties.columns.items.properties.name` | 顯示檔案的名稱。 |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | 定義檔案名的資料類型。 | `string` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 後續步驟
 

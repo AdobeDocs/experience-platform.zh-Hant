@@ -2,31 +2,31 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM;ExperienceEvent；欄位；結構；結構；結構設計；欄位群組；欄位群組；訂房；投放；
 title: 飛行預定架構欄位組
 description: 本文檔提供「飛行預定」架構欄位組的概述。
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '649'
 ht-degree: 4%
 
 ---
 
+# [!UICONTROL 航班預訂] 方案欄位組
 
-# [!UICONTROL 飛行] 預留方案欄位組
+[!UICONTROL 航班預訂] 是的標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md) 用於捕獲有關航班預訂的資訊。
 
-[!UICONTROL 飛行] 預訂是類別的標準架構欄位 [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) 群組，用於擷取有關飛行預訂的資訊。
-
-欄位組是[!UICONTROL 保留詳細資訊]欄位組的擴展，在單個對象類型欄位`reservations`下包含所有相同的欄位。 除了這些通用欄位外，[!UICONTROL 飛行預留]還包括`flightReservations`陣列。 該對象陣列用於描述具有航空旅行特有的屬性的一個或多個保留。
+欄位群組是 [!UICONTROL 保留詳細資訊] 欄位組，並在單個對象類型欄位下包含所有相同的欄位， `reservations`. 除了這些通用欄位， [!UICONTROL 航班預訂] 也包括 `flightReservations` 陣列。 該對象陣列用於描述具有航空旅行特有的屬性的一個或多個保留。
 
 >[!NOTE]
 >
->本文檔涵蓋`flightReservations`陣列的詳細資訊。 有關`reservations`對象下提供的其他欄位的資訊，請參閱[[!UICONTROL 保留詳細資訊]欄位組引用](./reservation-details.md)。
+>本檔案說明 `flightReservations` 陣列。 欲知下方提供的其他欄位 `reservations` 物件，請參閱 [[!UICONTROL 保留詳細資訊] 欄位群組參考](./reservation-details.md).
 
 ![飛行預訂結構](../../images/field-groups/flight-reservation/structure.png)
 
 ## `flightReservations`
 
-`flightReservations` 是表示飛行保留清單的對象陣列。如果預訂事件涉及對一次行程中的多個連接航班的預訂，例如，對於單個事件，這些預訂可以列為`flightReservations`下的單個對象。
+`flightReservations` 是表示飛行保留清單的對象陣列。 如果預訂事件涉及對一次旅行中的多個連接航班的預訂，例如，這些預訂可以列為下面的單個對象 `flightReservations` 的URL。
 
-`flightReservations`下提供的每個對象的結構如下。
+下方提供之每個物件的結構 `flightReservations` 如下所示。
 
 ![flightReservations結構](../../images/field-groups/flight-reservation/flightReservations.png)
 
@@ -61,7 +61,7 @@ ht-degree: 4%
 | `ticketNumber` | 字串 | 保留編號或標識符。 |
 | `tripType` | 字串 | 指出預訂是單程旅行、往返旅行還是多城旅行。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

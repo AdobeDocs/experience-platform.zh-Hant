@@ -6,8 +6,8 @@ description: 本檔案提供「人口統計詳細資料」結構欄位群組的�
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 4%
+source-wordcount: '279'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 4%
 | `person.nationality` | 字串 | 使用ISO 3166-1 Alpha-2代碼表示的個人與其國家之間的法律關係。 |
 | `person.taxId` | 字串 | 人員的稅/會計ID，例如美國的TIN或西班牙的CIF/NIF。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

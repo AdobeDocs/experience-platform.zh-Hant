@@ -4,8 +4,8 @@ title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 2%
+source-wordcount: '837'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Destination SDK檔案提供相關指示，供您使用Adobe Experience Platform 
 
 >[!IMPORTANT]
 >
-> 建立私人自訂目的地的功能僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+> 建立私人自訂目的地的功能僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 
 身為Destination SDK合作夥伴，您可以將已分類的目的地新增至 [Experience Platform目錄](/help/destinations/catalog/overview.md):
 1. 使用預先設定的參數標準化客戶的整合設定，並簡化客戶的設定體驗。
@@ -58,9 +58,9 @@ Destination SDK存取權會因您身為Real-Time CDPExperience Platform或合作
 ---------|----------|
 | 獨立軟體供應商(ISV) | 加入 [Adobe交換計畫](https://partners.adobe.com/exchangeprogram/experiencecloud.html) 和請求取得布建的Experience Platform沙箱，以存取Destination SDK。 |
 | 系統整合商(SI) | 您必須處於 [Adobe解決方案合作夥伴計畫](https://solutionpartners.adobe.com/home.html)，您將會獲得布建的Experience Platform沙箱，以及Destination SDK的存取權。 |
-| Experience Platform客戶 [Real-Time CDP Ultimate套件](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | 依預設，您可以存取Experience Platform沙箱和Destination SDK，為組織建立私人目的地。 |
+| Experience Platform客戶 [Real-Time CDP Ultimate套件](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | 依預設，您可以存取Experience Platform沙箱和Destination SDK，為組織建立私人目的地。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 高級流程 {#process}
 

@@ -6,8 +6,8 @@ description: 本檔案概略介紹Web互動Experience Data Model(XDM)資料類�
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 4%
+source-wordcount: '187'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 | `name` | 字串 | 用於此Web連結的規範名稱。 這會用於分類用途。 |
 | `type` | 字串 | 連結類型。 此屬性必須等於下列列舉值之一： <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

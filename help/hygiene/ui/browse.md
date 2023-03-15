@@ -4,7 +4,7 @@ description: 了解如何在Adobe Experience Platform使用者介面中檢視及
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 1%
 | [!UICONTROL 到期日] | 根據相關資料集的排程刪除日期，篩選資料集到期請求。 |
 | [!UICONTROL 更新日期] | 根據上次更新工作單的時間進行篩選。 建立和過期均計為更新。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 查看工作單的詳細資訊 {#view-details}
 

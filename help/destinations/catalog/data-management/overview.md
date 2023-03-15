@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL Data Management Platform] (DMP)目的地概觀 {#dmp-destinations}
 
-[!DNL Data Management Platforms] (DMP)可讓廣告商、發佈商和代理商建立不重複的受眾設定檔、識別其最有價值的區段，並在任何數位頻道上使用它們。這可讓您建立消費者設定檔的360檢視，建立並啟用有意義的對象。
+[!DNL Data Management Platforms] (DMP)可讓廣告商、發佈商和代理商建立不重複的受眾設定檔、識別其最有價值的區段，並在任何數位頻道上使用它們。 這可讓您建立消費者設定檔的360檢視，建立並啟用有意義的對象。
 
 目前，Adobe Experience Platform支援下列資料管理平台(DMP)目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 

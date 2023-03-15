@@ -49,7 +49,7 @@ ht-degree: 1%
 
 ![此 [!UICONTROL 產生金鑰組] 選項 [!UICONTROL 設定API] 螢幕](../images/api/getting-started/generate-key-pair.png)
 
-系統會自動產生金鑰組，而瀏覽器會下載包含私密金鑰和公開憑證的ZIP檔案（以用於後續步驟）。 選擇 **[!UICONTROL 下一個]** 繼續。
+系統會自動產生金鑰組，而瀏覽器會下載包含私密金鑰和公開憑證的ZIP檔案（以用於後續步驟）。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
 ![產生的鍵組（顯示在UI中），其值會由瀏覽器自動下載](../images/api/getting-started/key-pair-generated.png)
 

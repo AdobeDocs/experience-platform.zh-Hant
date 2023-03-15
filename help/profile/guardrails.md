@@ -8,8 +8,8 @@ description: Adobe Experience Platform 使用與傳統關聯式資料模型不�
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 5%
+source-wordcount: '1967'
+ht-degree: 4%
 
 ---
 
@@ -61,7 +61,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 | ExperienceEvent中的陣列基數 | &lt;=10 | 軟 | ExperienceEvent（時間序列資料）中的最佳陣列基數為&lt;=10。 |
 | 個別設定檔身分圖表的身分計數 | 50 | 硬 | **個別設定檔的身分圖表中，身分的最大數量為50。** 任何身分超過50個的設定檔，都會從區段、匯出和查詢中排除。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Dimension實體護欄
 
@@ -71,7 +71,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 | 無嵌套關係 | 0 | 軟 | 您不應在兩個非[!DNL XDM Individual Profile] 結構。 對於不屬於 [!DNL Profile] 聯合架構。 |
 | 主要ID欄位的JSON深度 | 4 | 軟 | 主要ID欄位的建議最大JSON深度為4。 這表示在高度巢狀結構中，如果欄位的深度巢狀超過4個層級，則不應選取該欄位作為主要ID。 位於第4個巢狀層級的欄位可作為主要ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 資料大小限制
 
@@ -92,7 +92,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 | 每日擷取的設定檔或ExperienceEvent批次數 | 90 | 軟 | **每日擷取的Profile或ExperienceEvent批次數上限為90。** 這表示每天擷取的Profile和ExperienceEvent批次總計不得超過90個。 接收其他批次將影響系統效能。 |
 | 每個設定檔記錄的ExperienceEvents數量 | 5000 | 軟 | **每個設定檔記錄的ExperienceEvents最大數量為5000。** 超過5000個ExperienceEvents的設定檔將會 **not** 會納入分段考量。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Dimension實體護欄
 
@@ -102,7 +102,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 | 每維實體結構的資料集 | 5 | 軟 | 建議最多使用5個與每個維度實體結構相關的資料集。 例如，如果您為「產品」建立結構，並新增五個貢獻資料集，則不應建立與產品結構相連結的第六個資料集。 |
 | Dimension實體每天擷取批次 | 每個實體4 | 軟 | 建議每天擷取的維度實體批次數上限為每個實體4個。 例如，您每天最多可以擷取4次產品目錄的更新。 為同一實體獲取其他維實體批可能會影響系統效能。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 分段護欄
 
@@ -115,7 +115,7 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 | 每個沙箱的串流區段 | 500 | 軟 | 只要每個沙箱中的串流區段少於500個，一個組織總共可以有超過500個串流區段。 嘗試建立其他串流區段可能會影響系統效能。 |
 | 每個沙箱批次區段 | 4000 | 軟 | 只要每個沙箱中的批次區段總數少於4000個，組織就可以有超過4000個批次區段。 嘗試建立其他批處理段可能會影響系統效能。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 附錄
 

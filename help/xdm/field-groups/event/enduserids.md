@@ -6,8 +6,8 @@ description: 本文檔概述了最終用戶ID詳細資訊架構欄位組。
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 5%
+source-wordcount: '223'
+ht-degree: 4%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 5%
 | `phonenumberid` | [身分](../../data-types/identity.md) | 電話號碼ID。 |
 | `tntid` | [身分](../../data-types/identity.md) | Adobe Target的一般使用者ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

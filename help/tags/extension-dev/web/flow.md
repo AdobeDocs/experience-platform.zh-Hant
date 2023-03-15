@@ -1,10 +1,11 @@
 ---
 title: 網頁擴充功能流程
 description: 了解Adobe Experience Platform中，網頁擴充功能元件在執行階段如何彼此互動。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 47%
+ht-degree: 57%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 Web 擴充功能中，每個事件、條件、動作和資料元素類型都具有可讓使用者修改設定的檢視，還有程式庫模組可依使用者定義的設定來執行。
 
@@ -28,6 +29,6 @@ Web 擴充功能中，每個事件、條件、動作和資料元素類型都具�
 
 1. 啟動時，將 `settings` 和 `trigger` 方法提供給事件程式庫模組。
 1. 一旦事件程式庫模組判定事件已發生，事件程式庫模組就會呼叫 `trigger`。
-1. 標籤會將`settings`傳入規則的條件程式庫模組中，以評估條件。
+1. 標籤傳遞 `settings` 放入規則的條件程式庫模組中，以評估條件。
 1. 每個條件程式庫模組會分別傳回條件是否評估為 true 的結果。
 1. 如果所有條件都通過，系統就會執行規則的動作。

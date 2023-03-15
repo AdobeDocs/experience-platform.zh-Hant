@@ -5,7 +5,7 @@ description: 目的地是預先建置與目的地平台的整合，可順暢地�
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Platform中的目的地功能可與Adobe Experience Platform存取控制權限�
 | **[!UICONTROL 管理目的地]** | 若要連線至目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制權限](/help/access-control/home.md#permissions). |
 | **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** | 若要對目的地啟用區段，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需存取控制的詳細資訊，請參閱 [存取控制使用手冊](../access-control/ui/overview.md).
 

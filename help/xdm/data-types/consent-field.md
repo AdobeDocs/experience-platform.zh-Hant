@@ -5,8 +5,8 @@ description: 本檔案概述「一般同意欄位」XDM資料類型。
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 2%
+source-wordcount: '606'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 2%
 | --- | --- | --- |
 | `val` | 字串 | 此使用案例由客戶提供的同意選擇。 請參閱下表，了解接受的值和定義。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 下表概述 `val`:
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 | `VI` | 個人的切身利益 | 為了保護個人的切身利益，需要收集資料。 |
 | `PI` | 公共利益 | 為特定目的收集資料是為了公共利益或行使官方權力而執行任務。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

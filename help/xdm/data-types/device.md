@@ -6,8 +6,8 @@ description: 本檔案概述Device XDM資料類型。
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 5%
+source-wordcount: '326'
+ht-degree: 4%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 5%
 | `typeID` | 字串 | 裝置的識別碼。 這可能是DeviceAtlas的識別碼，或是識別正在使用之硬體的其他服務。 |
 | `typeIDService` | 字串 | 用於識別裝置類型的服務的命名空間。 請參閱 [附錄](#typeIDService) 以取得接受值的詳細資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

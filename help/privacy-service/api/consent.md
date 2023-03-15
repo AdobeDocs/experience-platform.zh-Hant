@@ -6,8 +6,8 @@ description: 了解如何使用Experience CloudAPI管理Privacy Service應用程
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 2%
+source-wordcount: '244'
+ht-degree: 1%
 
 ---
 
@@ -65,7 +65,7 @@ curl -X POST \
 | `nameSpace` | 中的每個物件 `entities` 陣列必須包含其中一個 [標準身分命名空間](./appendix.md#standard-namespaces) 由Privacy ServiceAPI辨識。 |
 | `values` | 每個使用者的值陣列，與提供的 `nameSpace`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

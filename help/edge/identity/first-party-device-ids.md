@@ -4,14 +4,14 @@ description: 了解如何為Adobe Experience Platform Web SDK設定第一方裝�
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
 source-git-commit: f5270d1d1b9697173bc60d16c94c54d001ae175a
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1773'
 ht-degree: 0%
 
 ---
 
 # Platform Web SDK中的第一方裝置ID
 
-Adobe Experience Platform Web SDK指派 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) 來追蹤使用者行為。 若要說明瀏覽器對Cookie存留期限的限制，您可以選擇設定並管理您自己的裝置識別碼。 這些稱為第一方裝置ID(FPID)。
+Adobe Experience Platform Web SDK指派 [Adobe Experience Cloud ID(ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) 來追蹤使用者行為。 若要說明瀏覽器對Cookie存留期限的限制，您可以選擇設定並管理您自己的裝置識別碼。 這些被稱為第一方裝置 ID (FPID)。 
 
 >[!NOTE]
 >
@@ -211,7 +211,7 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 
 ![圖表顯示移轉至FPID後，客戶的ID值在兩次造訪之間如何更新](../assets/identity/tracking/visits.png)
 
-| 瀏覽 | 說明 |
+| 造訪 | 說明 |
 | --- | --- |
 | 首次造訪 | 假設您尚未開始設定FPID Cookie。 包含於 [AMCV cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) 將是用來識別訪客的識別碼。 |
 | 第二次造訪 | 開始推出第一方裝置ID解決方案。 現有的ECID仍然存在，且仍是訪客識別的主要識別碼。 |
@@ -219,7 +219,7 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 | 第四次訪問 | 在第三次和第四次瀏覽之間，已經過足夠的時間，ECID已因瀏覽器原則而刪除。 與上次造訪一樣，FPID仍因其設定方式而存在。 這次會產生的ECID與上次造訪相同。 在整個Experience Platform和Experience Cloud解決方案中，使用者會與上次造訪的使用者相同。 |
 | 第五次訪問 | 在第四次至第五次瀏覽之間，使用者清除了其瀏覽器中的所有Cookie。 會產生新的FPID，用來為建立新ECID的種子。 在Adobe Experience Platform和Experience Cloud解決方案中，使用者現在會被視為新訪客。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 常見問題集
 

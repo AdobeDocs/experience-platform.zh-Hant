@@ -179,7 +179,7 @@ Customer AI是Intelligent Services的一部分，可讓行銷人員在個別層�
 
 欲知更多資訊，請閱讀 [Customer AI概觀](../../intelligent-services/customer-ai/overview.md).
 
-## 即時客戶個人檔案 {#profile}
+## 即時客戶設定檔 {#profile}
 
 Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 透過即時客戶個人檔案，您可以全面了解各個客戶，其中結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 [!DNL Profile] 可讓您將不同的客戶資料整合至統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 

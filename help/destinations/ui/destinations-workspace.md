@@ -5,7 +5,7 @@ description: 「目的地」工作區包含5個區段：概述、目錄、瀏覽
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1217'
 ht-degree: 2%
 
 ---
@@ -51,9 +51,9 @@ ht-degree: 2%
 | [!UICONTROL 匯出資料集] | 建立與目的地的連線後，您就可以將資料集匯出至此目的地。 |
 | [!UICONTROL 查看帳戶] | 查看您為目標而連接的帳戶。 |
 | [!UICONTROL 查看資料流] | 檢視目的地的資料啟動流程。 |
-| [!UICONTROL 檢視檔案] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您進行設定。 |
+| [!UICONTROL 檢視文件] | 開啟該特定目的地的檔案頁面連結，以取得詳細資訊並協助您進行設定。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![控制目的地卡](../assets/ui/workspace/destination-card-options.png)
 
@@ -84,7 +84,7 @@ ht-degree: 2%
 | [!UICONTROL 目的地] | 表示與為目標建立的基本資訊連接的唯一成功目標資料流的數量。 |
 | [!UICONTROL 已驗證] | 授權與此目的地的連線的日期。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!UICONTROL 瀏覽] {#browse}
 
@@ -122,8 +122,8 @@ ht-degree: 2%
 
 此 **[!UICONTROL 系統視圖]** 標籤會顯示您已在Adobe Experience Platform中設定的啟用流程的圖形表示。
 
-![資料流1](../assets/ui/workspace/data-flows1.png)
+![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
 選取頁面上顯示的任何目的地，然後按一下 **[!UICONTROL 查看資料流]** 查看已為每個目標設定的所有連接的資訊。
 
-![資料流2](../assets/ui/workspace/data-flows2.png)
+![Data-flows2](../assets/ui/workspace/data-flows2.png)

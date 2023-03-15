@@ -4,8 +4,8 @@ title: 目標伺服器端點API操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
 source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
 workflow-type: tm+mt
-source-wordcount: '1361'
-ht-degree: 4%
+source-wordcount: '1358'
+ht-degree: 3%
 
 ---
 
@@ -74,7 +74,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `httpTemplate.requestBody.value` | 字串 | *必填。* 此字串是字元逸出版本，可將Platform客戶的資料轉換為服務預期的格式。 <br> <ul><li> 如需如何編寫範本的資訊，請閱讀 [使用模板部分](./message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 如需簡單轉換的範例，請參閱 [設定檔屬性](./message-format.md#attributes) 轉換。 </li></ul> |
 | `httpTemplate.contentType` | 字串 | *必填。* 伺服器接受的內容類型。 此值很可能 `application/json`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 

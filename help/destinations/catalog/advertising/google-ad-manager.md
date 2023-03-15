@@ -5,8 +5,8 @@ description: Google Ad Manager（舊稱DoubleClick for Publishers或DoubleClick 
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 3%
+source-wordcount: '884'
+ht-degree: 2%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 | 女傭 | Microsoft Advertising ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
 | Amazon Fire TV ID | 此ID可唯一識別Amazon Fire TV。 |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -50,7 +50,7 @@ ht-degree: 3%
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在將區段（對象）的所有成員匯出至Google目的地。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 先決條件 {#prerequisites}
 

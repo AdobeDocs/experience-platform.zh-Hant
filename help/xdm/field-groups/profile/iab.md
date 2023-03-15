@@ -6,8 +6,8 @@ description: 本檔案概述XDM個別設定檔類別的IAB TCF 2.0同意結構�
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 1%
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `identityPrivacyInfo` | 地圖 | 將客戶的個別身分值與不同TCF同意字串建立關聯的對應類型物件。 以下提供此物件結構的範例。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 下列JSON示範的結構 `identityPrivacyInfo` 地圖。
 

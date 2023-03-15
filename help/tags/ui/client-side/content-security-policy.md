@@ -1,10 +1,11 @@
 ---
 title: 內容安全性原則(CSP)支援
 description: 了解在Adobe Experience Platform中整合您的網站與標籤時，如何處理內容安全性原則(CSP)限制。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1080'
-ht-degree: 54%
+ht-degree: 57%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 內容安全性原則 (CSP) 這項安全性功能有助於防止跨網站指令碼攻擊 (XSS)。當瀏覽器遭到誘騙而執行似乎是來自信任來源但其實是來自其他位置的惡意內容時，就會發生此情況。 CSP 能讓瀏覽器 (代表使用者) 驗證指令碼是否的確來自信任的來源。
 
@@ -53,7 +54,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Adobe 管理託管
 
-如果您使用 [Adobe 管理主機](../publishing/hosts/managed-by-adobe-host.md)，則會在 `assets.adobedtm.com` 維護您的組建。您應將`self`指定為安全網域，這樣就不會破壞已載入的任何指令碼，但您也需要將`assets.adobedtm.com`列為安全項目，否則頁面不會載入您的標籤程式庫。 在這種情況下，請使用下列設定：
+如果您使用 [Adobe 管理主機](../publishing/hosts/managed-by-adobe-host.md)，則會在 `assets.adobedtm.com` 維護您的組建。您應指定 `self` 作為安全網域，這樣就不會破壞已載入的任何指令碼，但您也需要 `assets.adobedtm.com` 清單為安全，否則頁面不會載入您的標籤程式庫。 在這種情況下，請使用下列設定：
 
 **HTTP 標頭**
 
@@ -64,7 +65,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` 標籤**
 
 
-有一個非常重要的先決條件：您必須非同步載入標籤庫[](./asynchronous-deployment.md)。 無法同步載入標籤程式庫（這會導致主控台錯誤和規則無法正確執行）。
+有一個非常重要的先決條件：您必須載入標籤程式庫 [非同步](./asynchronous-deployment.md). 無法同步載入標籤程式庫（這會導致主控台錯誤和規則無法正確執行）。
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -81,7 +82,7 @@ CSP 預設不允許內嵌指令碼，因此必須手動設定以允許。您可�
 
 >[!NOTE]
 >
->CSP規格有第三種方法，也就是使用雜湊的詳細資訊，但這種方法無法用於標籤之類的標籤管理系統。 如需在Platform中搭配標籤使用雜湊的限制詳細資訊，請參閱[子資源完整性(SRI)指南](./sri.md)。
+>CSP規格有第三種方法，也就是使用雜湊的詳細資訊，但這種方法無法用於標籤之類的標籤管理系統。 如需在Platform中搭配標籤使用雜湊的限制詳細資訊，請參閱 [子資源完整性(SRI)指南](./sri.md).
 
 ### 透過 Nonce 允許 {#nonce}
 
@@ -157,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 閱讀本檔案後，您現在應了解如何設定CSP標頭，以接受標籤程式庫檔案和內嵌指令碼。
 
-您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤管理系統（例如標籤）搭配使用時有一些重大限制。 如需詳細資訊，請參閱Platform](./sri.md)中[SRI相容性的指南。
+您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤管理系統（例如標籤）搭配使用時有一些重大限制。 請參閱 [Platform中的SRI相容性](./sri.md) 以取得更多資訊。

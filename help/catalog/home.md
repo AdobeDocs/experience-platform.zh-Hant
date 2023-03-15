@@ -55,7 +55,7 @@ ht-degree: 5%
 |---|---|---|
 | 帳戶 | `/accounts` | 建立源連接時，必須提供身份驗證憑據。 帳戶代表用來建立特定類型連線的驗證憑證集合。 每個連線都有一組唯一參數，由 [!DNL Catalog] 和 [!DNL Azure Key Vault]. |
 | 批次 | `/batches` | 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。中的批處理對象 [!DNL Catalog] 概述批次的擷取量度（例如已處理的記錄數或磁碟大小），並可能包含受批次操作影響的資料集、檢視和其他資源的連結。 |
-| Connection | `/connections` | 連線是來源連接器的單一例項，對您的組織來說是唯一的，並使用連接器類型的適當驗證憑證進行設定。 |
+| Connection | `/connections` | 連線是來源連接器的單一例項，對您的組織而言是唯一的，且使用連接器類型的適當驗證憑證進行設定。 |
 | 連接器 | `/connectors` | 連接器定義來源連線如何從其他Adobe應用程式(例如Adobe Analytics和Adobe Audience Manager)、第三方雲端儲存來源(例如 [!DNL Azure Blob], [!DNL Amazon S3]、FTP伺服器和SFTP伺服器)以及協力廠商CRM系統(例如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])。 |
 | 資料集 | `/dataSets` | 資料集是用於收集資料（通常是表格）的儲存和管理結構，其中包含結構（欄）和欄位（列）。 請參閱 [資料集概述](./datasets/overview.md) 以取得更多資訊。 |
 | 資料集檔案 | `/datasetFiles` | 資料集檔案代表儲存在的資料區塊 [!DNL Platform]. 作為常值檔案的記錄，您可以在這些位置找到檔案的大小、其包含的記錄數，以及對擷取檔案的批次的參考。 |

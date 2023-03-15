@@ -54,7 +54,7 @@ XDM是公開記錄的規格，提供通用結構和定義，可讓您內嵌來�
 請參閱下列內容，以取得關於 [!DNL Marketo] 資料集和Platform:
 
 * [活動](../mapping/marketo.md#activities)
-* [計畫](../mapping/marketo.md#programs)
+* [方案](../mapping/marketo.md#programs)
 * [方案成員資格](../mapping/marketo.md#program-memberships)
 * [公司](../mapping/marketo.md#companies)
 * [靜態清單](../mapping/marketo.md#static-lists)

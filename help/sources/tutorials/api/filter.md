@@ -2,10 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；流量服務；流量服務API；來源；來源
 title: 使用流量服務API篩選來源的列層級資料
 description: 本教學課程涵蓋如何使用流量服務API在來源層級篩選資料的步驟
-source-git-commit: 122f6bda2fbcf72bf098b972ff7b081f4c5e3388
+exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 3%
+source-wordcount: '779'
+ht-degree: 2%
 
 ---
 
@@ -103,7 +104,7 @@ curl -X GET \
 | `attributes.filterAtSource.columnNameEscapeChar` | 確定用於轉義列的字元。 |
 | `attributes.filterAtSource.valueEscapeChar` | 確定在寫入SQL查詢時如何包圍值。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 比較運算子
 
@@ -118,7 +119,7 @@ curl -X GET \
 | `like` | 在中使用以篩選 `WHERE` 子句來搜索指定的模式。 |
 | `in` | 依屬性是否在指定範圍內進行篩選。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 指定擷取的篩選條件
 

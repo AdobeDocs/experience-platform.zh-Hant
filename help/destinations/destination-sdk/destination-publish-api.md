@@ -1,42 +1,42 @@
 ---
-description: 此頁列出並說明了可以使用「/authoring/destination/publish」 API終結點執行的所有API操作。
-title: 發佈目標API終結點操作
+description: 本頁列出並說明所有可透過「/authoring/destinations/publish」 API端點執行的API操作。
+title: 發佈目標API端點作業
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '773'
 ht-degree: 3%
 
 ---
 
-# 發佈目標終結點API操作 {#publish-destination}
+# 發佈目標端點API操作 {#publish-destination}
 
 >[!IMPORTANT]
 >
->只有在提交要供其他Experience Platform客戶使用的產品化（公共）目標時，才需要使用此API終結點。 如果您正在建立專用目標供自己使用，則無需使用發佈API正式提交目標。
+>如果您要提交要供其他Experience Platform客戶使用的已分產品化（公開）目的地，則只需使用此API端點。 如果您要建立私人目的地供自己使用，則不需使用發佈API正式提交目的地。
 
 >[!IMPORTANT]
 >
->**API終結點**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
+>**API端點**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-此頁列出並說明了可以使用 `/authoring/destinations/publish` API終結點。
+此頁面列出並說明您可使用 `/authoring/destinations/publish` API端點。
 
-配置和測試目標後，您可以將其提交給Adobe以進行審閱和發佈。 閱讀 [提交以審閱在Destination SDK中創作的目標](./submit-destination.md) 對於作為目標提交流程的一部分必須執行的所有其他步驟。
+設定並測試您的目的地後，您就可以將其提交至Adobe以進行審核和發佈。 閱讀 [提交以審核在Destination SDK中創作的目標](./submit-destination.md) 在目標提交程式中，您必須執行的所有其他步驟。
 
-在以下情況下，使用發佈目標API終結點提交發佈請求：
+符合下列情形時，請使用發佈目標API端點提交發佈請求：
 
-* 作為Destination SDK合作夥伴，您希望使所有Experience Platform組織中的產品化目標都可用於所有Experience Platform客戶；
-* 你 *任何更新* 配置。 配置更新僅在您提交新發佈請求後才反映在目標中，新發佈請求已獲得Experience Platform團隊的批准。
+* 作為Destination SDK合作夥伴，您希望讓所有Experience Platform組織都能提供產品化目的地，供所有Experience Platform客戶使用；
+* 你讓 *任何更新* 設定。 只有在您提交經Experience Platform團隊核准的新發佈請求後，設定更新才會反映在目的地中。
 
 <!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
-## 目標發佈API操作入門 {#get-started}
+## 目的地發佈API作業快速入門 {#get-started}
 
-在繼續之前，請查看 [入門指南](./getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
 
 ## 提交要發佈的目標配置 {#create}
 
-通過向發佈伺服器發出POST請求，可以提交要發佈的目標配置 `/authoring/destinations/publish` 端點。
+您可以向提交POST請求，以提交要發佈的目標設定 `/authoring/destinations/publish` 端點。
 
 **API格式**
 
@@ -46,7 +46,7 @@ POST /authoring/destinations/publish
 
 **要求**
 
-以下請求將提交一個目標，以便跨由負載中提供的參數配置的組織發佈。 下面的負載包括接受的所有參數 `/authoring/destinations/publish` 端點。
+下列要求會提交要發佈的目的地，涵蓋由裝載中提供的參數所設定的組織。 以下裝載包含接受的所有參數 `/authoring/destinations/publish` 端點。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,18 +64,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `destinationId` | 字串 | 要提交以發佈的目標配置的目標ID。 使用 [目標配置API參考](./destination-configuration-api.md#retrieve-list)。 |
-| `destinationAccess` | 字串 | 使用 `ALL` 目標在所有Experience Platform客戶的目錄中。 |
+| `destinationId` | 字串 | 您要提交以進行發佈的目的地設定的目的地ID。 使用 [目的地設定API參考](./destination-configuration-api.md#retrieve-list). |
+| `destinationAccess` | 字串 | 使用 `ALL` 讓您的目的地出現在所有Experience Platform客戶的目錄中。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
-成功的響應返回HTTP狀態201，其中包含目標發佈請求的詳細資訊。
+成功的回應會傳回HTTP狀態201，並包含目的地發佈請求的詳細資訊。
 
 ## 列出目標發佈請求 {#retrieve-list}
 
-通過向IMS組織發出GET請求，您可以檢索為發佈而提交的所有目標的清單 `/authoring/destinations/publish` 端點。
+您可以向提出GET要求，以擷取所有提交供IMS組織發佈的目的地清單 `/authoring/destinations/publish` 端點。
 
 **API格式**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **要求**
 
-以下請求將根據IMS組織和沙盒配置檢索您有權訪問的已提交發佈的目標清單。
+下列請求會根據IMS組織和沙箱設定，擷取您有權存取的已提交以發佈目的地清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-以下響應將返回HTTP狀態200，其中根據您使用的IMS組織ID和沙盒名稱，列出您有權訪問的已提交發佈目標。 一 `configId` 對應於一個目標的發佈請求。
+下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並附上您有權存取的發佈目的地清單。 一 `configId` 對應至一個目的地的發佈請求。
 
 ```json
 {
@@ -118,18 +118,18 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `destinationId` | 字串 | 已提交用於發佈的目標配置的目標ID。 |
-| `publishDetailsList.configId` | 字串 | 已提交目標的目標發佈請求的唯一ID。 |
-| `publishDetailsList.allowedOrgs` | 字串 | 返回目標可用的Experience Platform組織。 <br> <ul><li> 對於 `"destinationType": "PUBLIC"`，此參數將返回 `"*"`，這意味著目標可用於所有Experience Platform組織。</li><li> 對於 `"destinationType": "DEV"`，此參數返回您用於建立和test目標的組織的組織ID。</li></ul> |
-| `publishDetailsList.status` | 字串 | 目標發佈請求的狀態。 可能的值為 `TEST`。 `REVIEW`。 `APPROVED`。 `PUBLISHED`。 `DENIED`。 `REVOKED`。 `DEPRECATED`。 具有值的目標 `PUBLISHED` 可供Experience Platform客戶使用。 |
-| `publishDetailsList.destinationType` | 字串 | 目標類型。 值可以是 `DEV` 和 `PUBLIC`。 `DEV` 對應於您的Experience Platform組織中的目標。 `PUBLIC` 與您已提交用於發佈的目標相對應。 用Git的話來想這兩個選擇 `DEV` 版本表示本地創作分支和 `PUBLIC` 版本表示遠程主分支。 |
-| `publishDetailsList.publishedDate` | 字串 | 提交目標以進行發佈的日期（以大紀元為單位）。 |
+| `destinationId` | 字串 | 您提交以供發佈的目標配置的目標ID。 |
+| `publishDetailsList.configId` | 字串 | 已提交目的地的目的地發佈請求的唯一ID。 |
+| `publishDetailsList.allowedOrgs` | 字串 | 傳回目標可用的Experience Platform組織。 <br> <ul><li> 針對 `"destinationType": "PUBLIC"`，此參數會傳回 `"*"`，這表示目的地可供所有Experience Platform組織使用。</li><li> 針對 `"destinationType": "DEV"`，此參數會傳回您用來製作和測試目的地之組織的組織ID。</li></ul> |
+| `publishDetailsList.status` | 字串 | 目的地發佈請求的狀態。 可能的值包括 `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. 具有值的目的地 `PUBLISHED` 即時，可供Experience Platform客戶使用。 |
+| `publishDetailsList.destinationType` | 字串 | 目的地的類型。 值可以是 `DEV` 和 `PUBLIC`. `DEV` 對應至Experience Platform組織中的目的地。 `PUBLIC` 對應至您提交以供發佈的目的地。 以Git術語來思考這兩個選項， `DEV` 版本代表您的本機製作分支和 `PUBLIC` 版本代表遠端主分支。 |
+| `publishDetailsList.publishedDate` | 字串 | 目的地提交以進行發佈的日期（以紀元時間為單位）。 |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}
 
-## 獲取特定目標發佈請求的狀態 {#get}
+## 取得特定目標發佈請求的狀態 {#get}
 
-您可以通過向以下站點發出GET請求來檢索有關特定目標發佈請求的詳細資訊 `/authoring/destinations/publish` 終結點，並提供要檢索其發佈狀態的目標的ID。
+您可以向提出GET請求，以擷取特定目標發佈請求的詳細資訊 `/authoring/destinations/publish` 端點，並提供您要擷取發佈狀態之目的地的ID。
 
 **API格式**
 
@@ -139,7 +139,7 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{DESTINATION_ID}` | 要檢索其發佈狀態的目標的ID。 |
+| `{DESTINATION_ID}` | 您要擷取發佈狀態的目的地ID。 |
 
 **要求**
 
@@ -153,7 +153,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關指定目標發佈請求的詳細資訊。
+成功的回應會傳回HTTP狀態200，並包含指定目的地發佈請求的詳細資訊。
 
 ```json
 {
@@ -191,8 +191,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道如何提交目標的發佈請求。 Adobe Experience Platform團隊將審閱您的發佈請求，並在5個工作日後回復您。
+閱讀本檔案後，您現在知道如何提交目的地的發佈請求。 Adobe Experience Platform團隊將檢閱您的發佈請求，並在5個工作天內回覆給您。

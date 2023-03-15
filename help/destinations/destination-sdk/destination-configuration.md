@@ -4,8 +4,8 @@ title: 串流目的地組態選項，適用於Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
 workflow-type: tm+mt
-source-wordcount: '1907'
-ht-degree: 4%
+source-wordcount: '1883'
+ht-degree: 3%
 
 ---
 
@@ -131,7 +131,7 @@ ht-degree: 4%
 | `description` | 字串 | 在Experience Platform目的地目錄中提供目的地卡片的說明。 目標不超過4-5句。 |
 | `status` | 字串 | 指示目標卡的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 設定目的地時。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 客戶驗證設定 {#customer-authentication-configurations}
 
@@ -154,7 +154,7 @@ ht-degree: 4%
 | `customerAuthenticationConfigurations` | 字串 | 指示用於驗證Experience Platform客戶到伺服器的配置。 請參閱 `authType` 以取得接受的值。 |
 | `authType` | 字串 | 串流目的地的接受值為：<ul><li>`BASIC`。如果您的目的地支援基本驗證，請設定 `"authType":"Basic"` 和  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li><li>`BEARER`。如果您的目的地支援承載驗證，請設定 `"authType":"Bearer"` 和  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li><li>`OAUTH2`。如果您的目的地支援OAuth 2驗證，請設定 `"authType":"OAUTH2"` 和新增OAuth 2的必要欄位，如 [Destination SDKOAuth 2驗證頁面](./oauth2-authentication.md). 此外，請設定 `"authenticationRule":"CUSTOMER_AUTHENTICATION"` 在 [目的地傳送區段](./destination-configuration.md).</li> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 客戶資料欄位 {#customer-data-fields}
 
@@ -176,7 +176,7 @@ ht-degree: 4%
 | `enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
 | `pattern` | 字串 | 視需要為自訂欄位強制使用模式。 使用規則運算式來強制模式。 例如，若您的客戶ID未包含數字或底線，請輸入 `^[A-Za-z]+$` 在此欄位中。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## UI屬性 {#ui-attributes}
 
@@ -191,7 +191,7 @@ ht-degree: 4%
 | `connectionType` | 字串 | `Server-to-server` 是目前唯一可用的選項。 |
 | `frequency` | 字串 | 是指目的地支援的資料匯出類型。 支援的值： <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 對應步驟中的架構配置 {#schema-configuration}
 
@@ -206,7 +206,7 @@ ht-degree: 4%
 | `segmentRequired` | 布林值 | 一律使用 `segmentRequired:true`. |
 | `identityRequired` | 布林值 | 使用 `true` 如果使用者應能將身分識別命名空間從Experience Platform對應至您所需的架構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 身分和屬性 {#identities-and-attributes}
 
@@ -228,7 +228,7 @@ ht-degree: 4%
 | `transformation` | 字串 | *範例設定中未顯示*. 例如，當 [!DNL Platform] 客戶有純電子郵件地址作為屬性，而您的平台僅接受雜湊電子郵件。 在此物件中，您可以套用需要的轉換（例如，將電子郵件轉換為小寫，然後雜湊）。 如需範例，請參閱 `requiredTransformation` 在 [目的地設定API參考](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | - | 指出 [標準身分命名空間](/help/identity-service/namespaces.md#standard) （例如IDFA）客戶可對應至您所設定的身分。 <br> 使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 小寫和雜湊電子郵件地址或電話號碼。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 目的地傳送 {#destination-delivery}
 
@@ -237,7 +237,7 @@ ht-degree: 4%
 | `authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶可連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過使用者名稱和密碼、承載權杖或其他驗證方法登入您的系統。 例如，如果您也選取了 `authType: OAUTH2` 或 `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 [憑證](./credentials-configuration-api.md) 設定。 </li><li>使用 `NONE` 若無需驗證即可將資料傳送至目的地平台。 </li></ul> |
 | `destinationServerId` | 字串 | 此 `instanceId` 的 [目標伺服器配置](./destination-server-api.md) 用於此目的地。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 區段對應設定 {#segment-mapping}
 
@@ -297,7 +297,7 @@ ht-degree: 4%
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。 <br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 此設定如何連接目的地的所有必要資訊 {#connecting-all-configurations}
 

@@ -4,7 +4,7 @@ description: Adobe Advertising Cloud DSP是Adobe Real-time Customer Data Platfor
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ Adobe Advertising Cloud DSP目的地支援啟用下表所述的身分。 深入�
 |---|---|---|
 | email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | Experience Platform支援純文字和SHA256雜湊電子郵件地址。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，讓Experience Platform在啟動時自動雜湊資料。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -58,7 +58,7 @@ Adobe Advertising Cloud DSP目的地支援啟用下表所述的身分。 深入�
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，以及Advertising Cloud DSP目的地中使用的識別碼（電子郵件或雜湊電子郵件）。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 當設定檔根據區段評估以Experience Platform更新時，連接器會將更新下游傳送至目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連接到目標 {#connect}
 

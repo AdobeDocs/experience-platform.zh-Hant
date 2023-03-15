@@ -4,7 +4,7 @@ title: 基於檔案的目標配置選項，用於Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
 source-git-commit: 74f617afe8a0f678d43fb7b949d43cef25e78b9d
 workflow-type: tm+mt
-source-wordcount: '3012'
+source-wordcount: '2982'
 ht-degree: 4%
 
 ---
@@ -323,7 +323,7 @@ ht-degree: 4%
 | `maxProfileAttributes` | 字串 | 指出客戶可匯出至目的地的設定檔屬性數目上限。 預設值為 `2000`。 |
 | `maxIdentityAttributes` | 字串 | 指出客戶可匯出至目的地的身分識別命名空間數目上限。 預設值為 `10`。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 客戶驗證設定 {#customer-authentication-configurations}
 
@@ -572,7 +572,7 @@ ht-degree: 4%
 | `enum` | 字串 | 將自訂欄位轉譯為下拉式功能表，並列出使用者可用的選項。 |
 | `default` | 字串 | 從 `enum` 清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## UI屬性 {#ui-attributes}
 
@@ -600,7 +600,7 @@ ht-degree: 4%
 | `monitoringSupported` | 布林值 | 指出目標連線是否包含在 [監視UI](../ui/destinations-workspace.md#browse). 將此設定為 `true`, **[!UICONTROL 在監視中查看]** 選項。 |
 | `frequency` | 字串 | 是指目的地支援的資料匯出類型。 設為 `Batch` 適用於檔案型目的地。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 目的地傳送 {#destination-delivery}
 
@@ -630,7 +630,7 @@ ht-degree: 4%
 | `authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶可連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過下列任何方法登入您的系統： <ul><li>`"authType": "S3"`</li><li>`"authType":"AZURE_CONNECTION_STRING"`</li><li>`"authType":"AZURE_SERVICE_PRINCIPAL"`</li><li>`"authType":"SFTP_WITH_SSH_KEY"`</li><li>`"authType":"SFTP_WITH_PASSWORD"`</li></ul> </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與目的地之間有全域驗證系統，則 [!DNL Platform] 客戶不需要提供任何驗證憑證來連線至您的目的地。 在此情況下，您必須使用 [憑證](./credentials-configuration-api.md) 設定。 </li><li>使用 `NONE` 若無需驗證即可將資料傳送至目的地平台。 </li></ul> |
 | `destinationServerId` | 字串 | 此 `instanceId` 的 [目標伺服器配置](./server-and-file-configuration.md) 你 [已建立](/help/destinations/destination-sdk/destination-server-api.md#create-file-based) 為此目的地。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 區段對應設定 {#segment-mapping}
 
@@ -692,7 +692,7 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 | `segmentRequired` | 布林值 | 一律使用 `segmentRequired:true`. |
 | `identityRequired` | 布林值 | 使用 `true` 如果使用者應能將身分識別命名空間從Experience Platform對應至您所需的架構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 對應步驟中的動態架構設定 {#dynamic-schema-configuration}
 
@@ -724,7 +724,7 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 | `value` | 字串 | 要在映射步驟的Experience Platform用戶介面中顯示的架構名稱。 |
 | `responseFormat` | 字串 | 一律設為 `SCHEMA` 定義自訂結構時。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 必要對應 {#required-mappings}
 
@@ -775,7 +775,7 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 | `requiredMappings.source` | 字串 | 指示所需的源欄位。 |
 | `requiredMappings.destination` | 字串 | 指出必要的目的地欄位。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 身分和屬性 {#identities-and-attributes}
 
@@ -857,7 +857,7 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 | `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必填*. 預選的預設檔案名宏，用戶可以取消選中這些宏。<br><br> 此清單中的巨集是 `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | 字串 | *可選*. 定義導出檔案的預設檔案名宏。 使用者無法覆寫這些項目。 <br><br>定義的任何宏 `allowedFilenameAppendOptions` 會附加在 `defaultFilename` 巨集。 <br><br>若 `defaultFilename` 空白，您必須在中定義至少一個巨集 `allowedFilenameAppendOptions`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 檔案名配置 {#file-name-configuration}
 
@@ -881,7 +881,7 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 | `CUSTOM_TEXT` | [!UICONTROL 自訂文字] | 要包含在檔案名稱中的用戶定義自定義文本。 無法用於 `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 日期和時間] | 10位數的檔案產生時間時間戳記，採用Unix格式。 | 1652131584 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ![顯示檔案名配置螢幕的UI影像以及預先選擇的宏](assets/file-name-configuration.png)
 
@@ -915,7 +915,7 @@ Adobe Experience Platform Destination SDK支援合作夥伴定義的結構。 �
 |---------|----------|------|
 | `backfillHistoricalProfileData` | 布林值 | 控制在將區段啟動至目的地時，是否匯出歷史設定檔資料。 <br> <ul><li> `true`: [!DNL Platform] 傳送在啟用區段之前符合區段資格的歷史使用者設定檔。 </li><li> `false`: [!DNL Platform] 僅包含區段啟動後符合區段資格的使用者設定檔。 </li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 此設定如何連接目的地的所有必要資訊 {#connecting-all-configurations}
 

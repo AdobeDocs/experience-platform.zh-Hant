@@ -5,8 +5,8 @@ description: 檢視描述電信業標準化資料模型的實體關係圖(ERD)�
 exl-id: 96f267ce-a177-4384-a512-841c89d942ba
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 1%
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
@@ -43,4 +43,4 @@ ht-degree: 1%
 | 透過相關廣告和自動個人化電子郵件重新鎖定購物車放棄者。 在廣告轉換時隱藏廣告。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL 商務詳細資訊]](../../field-groups/event/upsell-details.md) （若要擷取放棄購物車）</li></ul></li><li>**[[!UICONTROL XDM個別設定檔]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 電信訂閱]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL 人口統計詳細資料]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人聯繫人詳細資訊]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 | 當客戶標示為可能流失時（根據員工互動或自動機器學習演算法），請將客戶詳細資訊傳送至數位和非數位通道。 | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL 促銷活動行銷詳細資料]](../../field-groups/event/campaign-marketing-details.md)</li><li>[[!UICONTROL 管道詳細資料]](../../field-groups/event/channel-details.md)</li><li>包含個人化內容的自訂欄位群組</li></ul></li><li>**[[!UICONTROL XDM個別設定檔]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL 人口統計詳細資料]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL 個人聯繫人詳細資訊]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -6,8 +6,8 @@ description: 本檔案提供ExperienceEvent環境詳細資料結構欄位群組�
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 3%
+source-wordcount: '212'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 3%
 | `environment` | [環境](../../data-types/environment.md) | 說明事件觀測的情境環境資訊，具體說明網路或軟體版本等暫時性資訊。 |
 | `placeContext` | [放置內容](../../data-types/place-context.md) | 說明與事件觀測相關的暫時情況。 例如，地區特定資訊，例如天氣、當地時間、流量、一週中某天、工作日與節日，以及工作時間。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

@@ -1,10 +1,11 @@
 ---
 title: 實作協力廠商程式庫
 description: 了解在Adobe Experience Platform標籤擴充功能中托管協力廠商程式庫的不同方法。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1330'
-ht-degree: 66%
+ht-degree: 68%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 Adobe Experience Platform中標籤擴充功能的主要用途之一，是讓您輕鬆將現有行銷技術（程式庫）實作至您的網站。 只要使用擴充功能，您就能實作協力廠商內容傳遞網路 (CDN) 提供的程式庫，不必手動編輯網站的 HTML。
 
@@ -20,7 +21,7 @@ Adobe Experience Platform中標籤擴充功能的主要用途之一，是讓您�
 
 ## 先決條件
 
-本檔案需要妥善了解標籤內的擴充功能，包括擴充功能的功能及組成方式。 如需詳細資訊，請參閱[擴充功能開發概述](./overview.md) 。
+本檔案需要妥善了解標籤內的擴充功能，包括擴充功能的功能及組成方式。 請參閱 [擴充功能開發概觀](./overview.md) 以取得更多資訊。
 
 ## 基底程式碼載入程序
 
@@ -38,7 +39,7 @@ Adobe Experience Platform中標籤擴充功能的主要用途之一，是讓您�
 
 ### 基底程式碼範例
 
-以下JavaScript是[Pinterest轉換標籤](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?)的未縮制基本程式碼範例，本檔案稍後將參考此範例，以示範如何針對具有標籤的不同實施策略調整基本程式碼：
+下列JavaScript是 [Pinterest轉換標籤](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?)，本檔案稍後將會參考此說明，以示範如何針對具有標籤的不同實施策略調整基礎程式碼：
 
 ```js
 !function(scriptUrl) {
@@ -83,7 +84,7 @@ firstScriptElement.parentNode.insertBefore(
 
 ## 標籤實作選項
 
-下一節會以先前所示的 Pinterest 基底程式碼為例，示範在擴充功能中載入廠商程式庫的各種方法。這些範例中，每個都包括為網頁擴充功能](./web/action-types.md)建立[動作類型，以在您的網站上載入程式庫。
+下一節會以先前所示的 Pinterest 基底程式碼為例，示範在擴充功能中載入廠商程式庫的各種方法。這些範例中的每個範例都包含 [網頁擴充功能的動作類型](./web/action-types.md) 會載入程式庫。
 
 >[!NOTE]
 >
@@ -138,7 +139,7 @@ module.exports = function() {
 
 或者，您也可以採取其他措施，重新調整此實作。變數 `scriptElement` 和 `firstScriptElement` 的適用範圍現在已設限於匯出函數，沒有變成全域函數的風險，因此您可以移除 IIFE。
 
-此外，標籤還提供數個[核心模組](./web/core.md)，這些實用程式是任何擴充功能都可以使用的。 具體來說，`@adobe/reactor-load-script` 模組會建立指令碼元素並將其新增至文件，從遠端位置載入指令碼。針對指令碼載入程序使用此模組，您就能進一步重新調整動作程式碼：
+此外，標籤提供數個 [核心模組](./web/core.md) 是任何擴充功能皆可使用的公用程式。 具體來說，`@adobe/reactor-load-script` 模組會建立指令碼元素並將其新增至文件，從遠端位置載入指令碼。針對指令碼載入程序使用此模組，您就能進一步重新調整動作程式碼：
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -171,7 +172,7 @@ module.exports = function() {
 
 若要實作，您必須先將廠商程式庫下載到您的電腦上。在 Pinterest 的案例中，廠商程式庫位於 [https://s.pinimg.com/ct/core.js](https://s.pinimg.com/ct/core.js)。下載檔案後，您必須將檔案放在擴充功能專案中。下方範例中，該檔案位於專案目錄的 `vendor` 資料夾，名稱為 `pinterest.js`。
 
-程式庫檔案在您的專案中後，您必須更新[擴充功能資訊清單](./manifest.md)(`extension.json`)，以指出應將供應商程式庫與主要標籤程式庫一併傳送。 將路徑新增至 `hostedLibFiles` 陣列中的程式庫檔案，加以更新：
+程式庫檔案放入專案後，您必須更新 [擴充功能資訊清單](./manifest.md) (`extension.json`)，指出供應商程式庫應與主要標籤程式庫一併傳送。 將路徑新增至 `hostedLibFiles` 陣列中的程式庫檔案，加以更新：
 
 ```json
 {

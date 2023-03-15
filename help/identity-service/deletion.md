@@ -3,8 +3,8 @@ title: Identity Service中的刪除內容
 description: 本檔案概略介紹您可在Experience Platform中刪除身分資料的各種機制，並說明身分圖表可能受到哪些影響。
 source-git-commit: da1ce4560d28d43db47318883f9656cebb2eb487
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 1%
+source-wordcount: '1198'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +47,7 @@ Privacy Service會處理客戶要求存取、選擇退出銷售或刪除其個�
 | 受影響的服務 | Privacy Service中的單一身分刪除可讓您選取資料是從Identity Service、即時客戶個人檔案還是資料湖中刪除。 |
 | 刪除模式 | 從Identity Service刪除身分。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 資料集刪除
 
@@ -70,7 +70,7 @@ Privacy Service會處理客戶要求存取、選擇退出銷售或刪除其個�
 | 受影響的服務 | 透過目錄服務刪除資料集會從Identity Service、即時客戶個人檔案和資料湖中刪除資料。 | 透過資料衛生刪除資料集會刪除Identity Service、即時客戶設定檔和資料湖的資料。 |
 | 刪除模式 | 從特定資料集建立的Identity Service中刪除連結的身分識別。 | 根據到期時間表，從特定資料集建立的Identity Service中刪除連結的身分。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 刪除後身份圖的不同狀態
 
@@ -84,7 +84,7 @@ Privacy Service會處理客戶要求存取、選擇退出銷售或刪除其個�
 | 完全移除 | 圖表必須至少有兩個連結的身分，才能存在。 因此，如果刪除請求導致移除圖表內的所有現有連結，則圖表將會完全移除。 |
 | 無更改 | 如果特定刪除請求包含未與圖形任何成員關聯的身分或資料集，則圖形不會受到影響。 此外，即使刪除請求並未移除資料集或身分資料集組合之間的連結，由於該連結是由另一個未刪除的連結所建立，該圖表也不會更新。 這表示如果兩個不同的資料集中有連結，圖表將不會更新，因為只會移除其中一個資料集。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 後續步驟
 

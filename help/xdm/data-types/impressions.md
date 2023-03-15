@@ -1,16 +1,17 @@
 ---
 title: 曝光數資料類型
 description: 本檔案概述曝光數XDM資料類型。
-source-git-commit: 7fc16546176d196582a3cdfcee51f799eeef9788
+exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
+source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 6%
+source-wordcount: '138'
+ht-degree: 4%
 
 ---
 
-#  Impressions資料類型
+# [!UICONTROL 曝光數] 資料類型
 
- 曝光是描述行銷曝光的標準XDM資料類型，此量度用於量化廣告、數位貼文或網頁等內容的數位檢視或參與次數。
+[!UICONTROL 曝光數] 是描述行銷曝光的標準XDM資料類型，此量度用於量化廣告、數位貼文或網頁等內容的數位檢視或參與次數。
 
 ![](../images/data-types/impressions.png)
 
@@ -21,7 +22,7 @@ ht-degree: 6%
 | `selected` | 整數 | 已選取或點按曝光項目的次數。 |
 | `type` | 字串 | 曝光類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

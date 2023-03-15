@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；標籤標識
-title: 在UI中將欄位標籤為標識
-description: 包含個人身份資訊(PII)的欄位可以標籤為身份欄位。 標識欄位中提供的值被標識服務解釋為標識。 標識的命名空間被指定為標籤欄位的一部分。
-source-git-commit: ae51c9bd07944f26be2809a6d15f9d9e8c2fd5a1
+keywords: Experience Platform；首頁；熱門主題；標籤身分
+title: 在UI中將欄位標示為身分
+description: 包含個人識別資訊(PII)的欄位可標示為身分欄位。 身分欄位中提供的值由身分識別服務解譯為身分識別。 身分識別的命名空間會指定為欄位標籤的一部分。
+exl-id: c3097030-0242-404f-9e4c-72a7fa574011
+source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-# 在UI中將欄位標籤為標識
+# 在UI中將欄位標示為身分
 
-包含個人身份資訊(PII)的欄位可以標籤為身份欄位。 在標識欄位中提供的值被解釋為標識 [!DNL Identity Service]。 標識的命名空間被指定為標籤欄位的一部分。
+包含個人識別資訊(PII)的欄位可標示為身分欄位。 在身分欄位中提供的值，由 [!DNL Identity Service]. 身分識別的命名空間會指定為欄位標籤的一部分。
 
-要將欄位標籤為標識，必須滿足以下條件：
+欄位必須符合下列條件，才能標示為身分：
 
 * 只能將字串類型欄位用於標識
-* 標識僅在記錄和時間序列資料中識別
-* 只應將PII欄位標籤為標識。 選擇表示更一般資料的欄位將導致更不精確的關係，並可能導致從身份圖訪問相關身份的錯誤
+* 只在記錄和時間序列資料中識別身分
+* 只有PII欄位應標示為身分。 選擇代表較通用資料的欄位，會導致關係較不精確，且從身分圖存取相關身分時可能會發生錯誤
 
-有關如何在UI中標籤標識欄位的說明，請參見上的指南 [定義UI中的標識欄位](../../xdm/ui/fields/identity.md)。
+如需如何在UI中標示身分欄位的指示，請參閱 [定義UI中的身分欄位](../../xdm/ui/fields/identity.md).
 
 ## 後續步驟
 
-有關 [!DNL Identity Service]，請參見 [[!DNL Identity Service] 概述](../home.md)。
+如需 [!DNL Identity Service]，請參閱 [[!DNL Identity Service] 概述](../home.md).

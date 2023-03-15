@@ -1,8 +1,8 @@
 ---
-title: 基於FPID的訪客身份識別
-description: 瞭解如何使用FPID通過伺服器API一致地識別訪問者
+title: 透過FPID識別訪客
+description: 了解如何使用FPID透過伺服器API一致地識別訪客
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
-keywords: 邊緣網路；網關；api;visitor;identification;fpid
+keywords: 邊緣網路；閘道；API；訪客；身分識別；fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
 source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 ---
 
-# 基於FPID的訪客身份識別
+# 透過FPID識別訪客
 
-[!DNL First-party IDs] (`FPIDs`)是由客戶生成、管理和儲存的設備ID。 這使客戶能夠控制識別用戶設備。 通過發送 `FPIDs`，邊緣網路不生成全新 `ECID` 一個不包含請求的請求。
+[!DNL First-party IDs] (`FPIDs`)是客戶產生、管理和儲存的裝置ID。 這可讓客戶控制識別使用者裝置。 透過傳送 `FPIDs`，邊緣網路不會產生全新 `ECID` ，以取得不包含任何項的要求。
 
-的 `FPID` 可以作為API請求主體的一部分 `identityMap` 或者它可以作為cookie發送。
+此 `FPID` 可包含在API要求內文中，作為 `identityMap` 或可以Cookie形式傳送。
 
-安 `FPID` 可以確定性地翻譯成 `ECID` 邊緣網路，所以 `FPID` 身份與Experience Cloud解決方案完全相容。 獲取 `ECID` 從特定 `FPID` 始終會產生相同的結果，因此用戶將擁有一致的體驗。
+安 `FPID` 可以決定性地翻譯成 `ECID` 邊緣網路，所以 `FPID` 身分與Experience Cloud解決方案完全相容。 取得 `ECID` 從特定 `FPID` 結果一律相同，因此使用者會有一致的體驗。
 
-的 `ECID` 通過 `identity.fetch` 查詢：
+此 `ECID` 取得的方式可透過 `identity.fetch` 查詢：
 
 ```json
 {
@@ -33,15 +33,15 @@ ht-degree: 0%
 }
 ```
 
-對於同時包含 `FPID` 和 `ECID`，也請參見Wiki頁。 `ECID` 請求中已存在的請求將優先於從 `FPID`。 換句話說，邊緣網路使用 `ECID` 已提供和 `FPID` 忽略。 新 `ECID` 僅在 `FPID` 是自己提供的。
+若請求中同時包含 `FPID` 和 `ECID`, `ECID` 請求中已存在的請求優先於可從 `FPID`. 換言之，邊緣網路會使用 `ECID` 已提供和 `FPID` 會忽略。 新 `ECID` 只有在 `FPID` 是自行提供。
 
-就設備ID而言， `server` 資料流應使用 `FPID` 作為設備ID。 其他身份(即 `EMAIL`)，但邊緣網路要求顯式提供主標識。 主標識是配置檔案資料將儲存到的基本標識。
+就裝置ID而言， `server` datastreams應使用 `FPID` 做為裝置ID。 其他身分(即 `EMAIL`)也可在要求內文中提供，但邊緣網路要求明確提供主要身分。 主要身分是要儲存設定檔資料的基本身分。
 
 >[!NOTE]
 >
->沒有標識的請求將失敗。
+>若要求內文中分別未明確設定主要身分的沒有身分，則會失敗。
 
-以下 `identityMap` 為 `server` 資料流請求：
+以下 `identityMap` 為 `server` datastream請求：
 
 ```json
 {
@@ -63,7 +63,7 @@ ht-degree: 0%
 }
 ```
 
-以下 `identityMap` 在上設定時，欄位組將導致錯誤響應 `server` 資料流請求：
+以下 `identityMap` 欄位群組在 `server` datastream請求：
 
 ```json
 {
@@ -84,7 +84,7 @@ ht-degree: 0%
 }
 ```
 
-在此情況下，邊緣網路返回的錯誤響應與以下類似：
+在此情況下，邊緣網路傳回的錯誤回應類似於：
 
 ```json
 {
@@ -100,9 +100,9 @@ ht-degree: 0%
 }
 ```
 
-## 訪問者識別 `FPID`
+## 訪客身分識別(使用 `FPID`
 
-通過 `FPID`，確保 `FPID` 在向邊緣網路發出任何請求之前已發送了cookie。 的 `FPID` 可以以cookie或作為 `identityMap` 在請求的正文中。
+若要透過 `FPID`，請確定 `FPID` 在向邊緣網路提出任何請求前已傳送cookie。 此 `FPID` 可傳遞至Cookie，或做為 `identityMap` 在請求內文中。
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## 請求 `FPID` 傳遞 `identityMap` 場
+## 請求 `FPID` 傳遞 `identityMap` 欄位
 
-下面的示例通過 [!DNL FPID] 作為 `identityMap` 的下界。
+以下範例將 [!DNL FPID] as a `identityMap` 參數。
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

@@ -14,6 +14,6 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform [!DNL Web SDK]目前為測試版，不適用於所有使用者。 文件和功能可能會有所變更。
+>Adobe Experience Platform [!DNL Web SDK] 目前為測試版，不適用於所有使用者。 文件和功能可能會有所變更。
 
-在內嵌於行動應用程式內的瀏覽器中，SDK的運作方式與一般瀏覽器完全相同；不過，您應該確定訪客ID是透過URL從行動應用程式傳入網站。 此程式概述於[Experience SDK for Mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html)的檔案中。
+在內嵌於行動應用程式內的瀏覽器中，SDK的運作方式與一般瀏覽器完全相同；不過，您應該確定訪客ID是透過URL從行動應用程式傳入網站。 此程式概述於 [行動版Experience SDK](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html).

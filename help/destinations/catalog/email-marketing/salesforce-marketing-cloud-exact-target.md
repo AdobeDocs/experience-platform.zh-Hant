@@ -5,8 +5,8 @@ description: SalesforceMarketing Cloud（舊稱ExactTarget）目的地可讓您�
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
 source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
 workflow-type: tm+mt
-source-wordcount: '2464'
-ht-degree: 1%
+source-wordcount: '2458'
+ht-degree: 0%
 
 ---
 
@@ -92,7 +92,7 @@ A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [Marketing Cloud帳戶
 | 用戶端ID | 請參閱 [!DNL Salesforce Marketing Cloud] [檔案](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) 若要了解如何從 [!DNL Salesforce Marketing Cloud] 介面。 | r23kxxxxxxxx0z05xxxxxx |
 | 用戶端密碼 | 請參閱 [!DNL Salesforce Marketing Cloud] [檔案](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/access-token-s2s.html) 若要了解如何從 [!DNL Salesforce Marketing Cloud] 介面。 | ipxxxxxxxxxxT4xxxxxxxxxx |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 護欄 {#guardrails}
 
@@ -124,7 +124,7 @@ A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [Marketing Cloud帳戶
 | 匯出類型 | **[!UICONTROL 設定檔]** | <ul><li>您要匯出區段的所有成員，以及所需的結構欄位 *(例如：電子郵件地址、電話號碼、姓氏)*，根據您的欄位對應。</li><li> 中的每個區段狀態 [!DNL Salesforce Marketing Cloud] 會根據 **[!UICONTROL 對應ID]** 值 [區段排程](#schedule-segment-export-example) 步驟。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連接到目標 {#connect}
 

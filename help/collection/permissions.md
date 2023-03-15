@@ -4,7 +4,7 @@ description: 概略說明如何管理Adobe Experience Platform中的權限及控
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1303'
 ht-degree: 5%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Platform底下的權限包括資料流、身分、結構描述�
 | 資料彙集 | 管理資料流 | 授予檢視、建立和編輯的能力 [資料流](../edge/datastreams/overview.md). |
 | 資料彙集 | 檢視資料流 | 授予資料流的唯讀存取權。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 <!-- (Feature not yet available?)
 | Dashboards | Manage Custom Dashboards | |
@@ -64,7 +64,7 @@ Adobe Experience Platform資料收集底下的權限可控制對標籤和事件�
 | 公司權利 | 開發擴充功能 | 授予建立和修改您組織擁有的擴充功能套件的能力，包括私人發行和公開發行請求。 |
 | 公司權利 | 管理擴充功能 | 只有在您擁有Adobe Journey Optimizer的授權，或其他授予行動應用程式內及推送訊息存取權的解決方案，才適用此權限。 這可讓您管理Adobe Experience Cloud所知的應用程式，以及與Firebase雲端訊息服務和Apple推播通知服務通訊所需的必要推播憑證。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -133,7 +133,7 @@ Adobe Experience Platform資料收集底下的權限可控制對標籤和事件�
 
 ![影像顯示Admin Console中產品設定檔的使用者索引標籤](./images/permissions/manage-users.png)
 
-如需管理產品設定檔使用者的詳細資訊，請參閱 [Admin Console檔案](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
+如需管理產品設定檔使用者的詳細資訊，請參閱 [Admin Console檔案](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html).
 
 ## 後續步驟
 

@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: 6650894c145fd1f42731fd5ed8aeb6e38062aa61
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 3%
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 | 源流運行延遲、故障和錯誤 | 擷取延遲 | 批次內嵌流程執行需要超過150分鐘的時間來處理，就會觸發此警報。 |
 | 源流運行延遲、故障和錯誤 | 擷取失敗 | 當失敗記錄與所有記錄的比率超過0.5%的臨界值時，就會觸發此警報。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如果您先前已訂閱下列警報類型，您將不會再收到警報，因為此警報已淘汰：
 
@@ -37,7 +37,7 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 | --- | --- | --- |
 | 源流運行延遲、故障和錯誤 | 缺乏擷取 | 如果擷取延遲超過七小時，且未將任何資料擷取至Platform，此警報會傳送訊息給您。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 身份識別服務
 
@@ -50,9 +50,9 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 | 身份獲取延遲、失敗和錯誤 | 身份服務流運行延遲 | 當Identity Service流程執行需要超過150分鐘的時間來處理時，就會觸發此警報。 |
 | 身份獲取延遲、失敗和錯誤 | 身份服務流運行失敗 | 將資料擷取至Identity Service時發生錯誤時，就會觸發此警報。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
-## 即時客戶個人檔案
+## 即時客戶設定檔
 
 以下是 [即時客戶個人檔案](../../profile/home.md):
 
@@ -63,7 +63,7 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 | 設定檔擷取延遲、失敗和錯誤 | 設定檔流程執行延遲 | 將資料從資料湖載入設定檔時，系統會觸發此警報，處理時間超過150分鐘。 |
 | 設定檔擷取延遲、失敗和錯誤 | 配置檔案流運行失敗 | 將資料擷取至設定檔時發生錯誤時，就會觸發此警報。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 區段
 
@@ -77,7 +77,7 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 | 區段評估作業延遲、失敗和錯誤 | 區段作業失敗 | 當區段評估工作導致錯誤時，就會觸發此警報。 |
 | 區段評估作業延遲、失敗和錯誤 | 區段定義已停用 | 當區段定義因內部錯誤而停用時，就會觸發此警報。 這會自動觸發Adobe工程團隊的戰場，以調查問題。 此警報僅供參考，不需要您採取任何動作。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 目的地
 
@@ -91,7 +91,7 @@ Adobe Experience Platform提供數個預先定義的警報規則，您可為組�
 | 目標流運行延遲、故障和錯誤 | 目標流運行失敗 | 在啟動目的地區段時發生錯誤時，就會觸發此警報。 |
 | 目標流運行延遲、故障和錯誤 | 跳過頁面速率超過臨界值 | 跳過的ID與總ID的比率超過臨界值時，就會觸發此警報。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 查詢服務
 

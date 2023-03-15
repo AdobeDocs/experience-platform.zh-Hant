@@ -1,16 +1,16 @@
 ---
 keywords: 電子郵件；電子郵件；電子郵件目的地；oracle雄辯；oracle
-title: （檔案）OracleEloqua連接
+title: OracleEloqua連線
 description: OracleEloqua是Oracle提供的軟體即服務(SaaS)平台，用於實現行銷自動化，旨在幫助B2B行銷人員和組織管理行銷活動和銷售機會的產生。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: e986fd9479ca2258fc9aab752e2d0376c608554b
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
 
-# [!DNL (Files) Oracle Eloqua] 連接
+# [!DNL Oracle Eloqua] 連接
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 是一種軟體即服務(SaaS)平台，用於實現營銷自動化，由 [!DNL Oracle] 這可協助B2B行銷人員和組織管理行銷活動和銷售機會的產生。
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；資料擷取；資料位置；資料位置；資料管理；資料管理；世系；世系；批次；批次；內嵌資料
 solution: Experience Platform
-title: 資料擷取概述
+title: 資料擷取概觀
 description: 本檔案介紹將資料擷取至Platform的三種主要方式，以及各自概述檔案的連結，以取得詳細資訊。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 

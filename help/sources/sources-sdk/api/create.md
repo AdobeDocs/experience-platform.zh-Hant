@@ -6,7 +6,7 @@ description: 以下文檔提供了有關如何使用流服務API建立連接規�
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '797'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 1%
 | {your_source}-label.txt | 源應顯示在Experience Platform源目錄中的名稱。 | Mailchimp成員 |
 | {your_source}-connectionSpec.json | 包含源的連接規範的JSON檔案。 此檔案最初不是必需的，因為您將在完成本指南時填充連接規範。 | `mailchimp-members-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

@@ -6,8 +6,8 @@ description: 了解如何在Experience Platform使用者介面中定義陣列欄
 exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 2%
+source-wordcount: '363'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 | [!UICONTROL 長度上限] | 陣列必須包含的項目數上限，才能成功擷取。 |
 | [!UICONTROL 僅限不重複項目] | 如果設為「[!UICONTROL True]&quot;，陣列中的每個項目必須是唯一的，才能成功擷取。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 完成欄位設定後，請選取 **[!UICONTROL 套用]** 將更改應用到架構。
 

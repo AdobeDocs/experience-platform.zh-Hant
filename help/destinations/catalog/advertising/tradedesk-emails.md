@@ -5,8 +5,8 @@ last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 1%
+source-wordcount: '1078'
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 | 電子郵件 | 電子郵件地址（清除文本） | 輸入 `email` 作為目標標識（如果源標識是電子郵件命名空間或屬性）。 |
 | Email_LC_SHA256 | 電子郵件地址必須使用SHA256和小寫進行雜湊處理。 請務必遵循任何 [電子郵件標準化](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 規則為必要。 您以後將無法更改此設定。 | 輸入 `hashed_email` 當源標識為Email_LC_SHA256命名空間或屬性時，作為目標標識。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 電子郵件雜湊要求 {#hashing-requirements}
 
@@ -76,7 +76,7 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，其中包含「交易台」目的地中使用的識別碼（電子郵件或雜湊電子郵件）。 |
 | 匯出頻率 | **[!UICONTROL 每日批]** | 隨著根據區段評估在Experience Platform中更新設定檔，設定檔（身分）每天會在下游至目的地平台時更新一次。 深入了解 [批次匯出](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連接到目標 {#connect}
 

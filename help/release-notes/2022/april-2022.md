@@ -4,7 +4,7 @@ description: 2022年4月Adobe Experience Platform發行說明。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2904'
 ht-degree: 6%
 
 ---
@@ -55,7 +55,7 @@ Platform提供多個控制面板，您可以透過這些控制面板檢視有關
 | ------- | --------- | ----------- |
 | 孤立的設定檔區段成員資格清除 | 設定檔和授權使用 | 設定檔服務現在會每天移除剩餘的區段成員，以更精確地呈現您在系統中的設定檔。 指定設定檔的所有設定檔片段都被刪除後，就會進行此清除。 這可能會在授權使用控制面板中顯示「可定址的受眾」量度下降，也可能在設定檔控制面板中顯示「設定檔計數」量度下降，因為這些量度包含此版本之前剩餘的區段片段。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需詳細資訊，請參閱本檔案 [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)，和 [[!DNL Segments]](../../dashboards/guides/segments.md) 控制面板。
 
@@ -126,7 +126,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | --- | --- |
 | 新增或移除結構的個別標準欄位 | 結構編輯器UI現在可讓您將標準欄位群組的部分新增至結構，為您選擇加入的欄位提供更大彈性，而無須從頭建立自訂資源。<br><br>您現在也可以直接在架構結構中定義臨機自訂欄位，並將它們指派給新的或現有的自訂欄位群組，而不需要事先建立或編輯欄位群組。<br><br>請參閱 [在UI中建立和編輯結構](../../xdm/ui/resources/schemas.md) 以取得這些新工作流程的詳細資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新XDM元件**
 
@@ -151,7 +151,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 擴充功能(Workfront) | [[!UICONTROL 工作計畫屬性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | 捕獲與工作程式相關的詳細資訊。 |
 | 擴充功能(Workfront) | [[!UICONTROL 工作項目屬性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | 擷取與工作專案相關的詳細資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **更新XDM元件**
 
@@ -167,7 +167,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 擴充功能(Workfront) | [[!UICONTROL 工作任務屬性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | 新增數個欄位。 |
 | 擴充功能(Workfront) | [[!UICONTROL 工作對象]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | 父對象類型和自定義表單欄位的新欄位。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
 

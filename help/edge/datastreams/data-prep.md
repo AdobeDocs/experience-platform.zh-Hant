@@ -5,7 +5,7 @@ exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
 source-wordcount: '914'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -130,7 +130,7 @@ ht-degree: 1%
 
 +++
 
-您可以選取以檔案形式上傳物件的選項，或將原始物件貼到提供的文字方塊中。 如果JSON有效，右側面板中會顯示預覽結構。 選擇 **[!UICONTROL 下一個]** 繼續。
+您可以選取以檔案形式上傳物件的選項，或將原始物件貼到提供的文字方塊中。 如果JSON有效，右側面板中會顯示預覽結構。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
 ![預期傳入資料的JSON範例](../assets/datastreams/data-prep/select-data.png)
 

@@ -6,8 +6,8 @@ description: 了解Experience Data Model(XDM)中的名稱調整功能可如何�
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 1%
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
@@ -81,7 +81,7 @@ Experience Data Model(XDM)結構中的所有欄位都有相關聯的命名空間
 | `https://ns.adobe.com/vendorA/product/stockNumber` | 供應商資源提供的欄位使用其獨特的命名空間。 在此範例中， `https://ns.adobe.com/vendorA/product` 是供應商命名空間， `stockNumber` 是欄位名稱。 |
 | `tenantId:internalSku` | 貴組織定義的欄位會使用您的唯一租用戶ID做為其命名空間。 在此範例中， `tenantId` 是租用戶命名空間(`https://ns.adobe.com/tenantId`)和 `internalSku` 是欄位名稱。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 相容性模式 {#compatibility}
 

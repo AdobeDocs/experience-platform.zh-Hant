@@ -8,13 +8,13 @@ exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 30%
+ht-degree: 36%
 
 ---
 
 # Attribution AI 概述
 
-Attribution AI是Intelligent Services的一部分，是多管道演算法歸因服務，可計算客戶互動對指定結果的影響和增量影響。 透過Attribution AI，行銷人員可透過了解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量及最佳化行銷和廣告支出。
+Attribution AI是Intelligent Services的一部分，是多管道演算法歸因服務，可計算客戶互動對指定結果的影響和增量影響。 透過 Attribution AI，行銷人員可經由了解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
 
 ## 了解Attribution AI
 

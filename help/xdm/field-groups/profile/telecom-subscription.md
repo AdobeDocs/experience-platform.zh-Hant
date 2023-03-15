@@ -6,8 +6,8 @@ description: 本文檔提供電信訂閱架構欄位組的概述。
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 6%
+source-wordcount: '715'
+ht-degree: 4%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 6%
 | `bundleName` | 字串 | 擷取客戶已註冊之任何類型訂閱套件的名稱，例如 `Internet + Media`. |
 | `primaryPartyID` | 字串 | 負責訂閱之主要人員的識別碼，通常可能是其裝置電話號碼。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
@@ -55,7 +55,7 @@ ht-degree: 6%
 | `selfSetup` | 布林值 | 指示客戶是否有資格進行網際網路設定，而無需技術人員的訪問。 |
 | `uploadSpeed` | 整數 | 訂閱的可用上載速度上限(MB)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `landlineSubscription` {#landlineSubscription}
 
@@ -78,7 +78,7 @@ ht-degree: 6%
 | `unlimitedLocalCalling` | 布林值 | 指示固定電話訂閱功能是否包括無限的本地呼叫。 |
 | `voicemail` | 布林值 | 指示固定電話訂閱功能是否包括語音郵件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mediaSubscription` {#mediaSubscription}
 
@@ -92,7 +92,7 @@ ht-degree: 6%
 | `subscriptionDetails` | [[!UICONTROL 電信訂閱]](../../data-types/telecom-subscription.md) | 說明訂閱的一般詳細資訊，包括訂閱長度、費用、狀態等。 |
 | `channels` | 整數 | 媒體訂閱包含的頻道數。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `mobileSubscription` {#mobileSubscription}
 
@@ -108,4 +108,4 @@ ht-degree: 6%
 | `planLevel` | 字串 | 指派給此訂閱的行動計畫名稱。 |
 | `portedNumber` | 布林值 | 指示客戶是否從另一個電信商埠號。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

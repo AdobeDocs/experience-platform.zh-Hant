@@ -1,10 +1,11 @@
 ---
 title: 用戶端資訊
 description: 了解如何管理網頁或行動應用程式用戶端上的標籤作業。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 54c66066-93f7-4311-a255-0825055d0dec
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '198'
-ht-degree: 32%
+ht-degree: 45%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 32%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 本節包含在Adobe Experience Platform中管理用戶端標籤作業時很實用的資訊。
 

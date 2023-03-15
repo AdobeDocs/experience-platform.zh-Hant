@@ -1,10 +1,11 @@
 ---
 title: 管理Privacy Service
 description: 了解如何使用Adobe Admin Console管理Adobe Experience Platform Privacy Service的使用者權限。
-source-git-commit: 59dc28a84971dc8c21d633741cfe2dc1b44ea1a6
+exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
+source-git-commit: ebcfdc9f73fc9120cf3819169d72bd828d0b35a6
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 1%
+source-wordcount: '961'
+ht-degree: 2%
 
 ---
 
@@ -36,7 +37,7 @@ ht-degree: 1%
 | [!UICONTROL 選擇退出銷售權限] | [!UICONTROL 閱讀權限 — 選擇退出銷售] | 判斷使用者是否可檢視現有的選擇退出銷售請求及其詳細資訊。 |
 | [!UICONTROL 選擇退出銷售權限] | [!UICONTROL 寫入權限 — 選擇退出銷售] | 判斷使用者是否可以建立新的選擇退出銷售請求。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 管理權限 {#manage}
 
@@ -80,7 +81,7 @@ ht-degree: 1%
 
 ![影像顯示Admin Console中產品設定檔的使用者索引標籤](./images/permissions/manage-users.png)
 
-如需管理產品設定檔使用者的詳細資訊，請參閱 [Admin Console檔案](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
+如需管理產品設定檔使用者的詳細資訊，請參閱 [Admin Console檔案](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html).
 
 ### 將舊版API憑證移轉至設定檔 {#migrate-tech-accounts}
 

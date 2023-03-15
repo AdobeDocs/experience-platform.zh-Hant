@@ -4,7 +4,7 @@ description: 本檔案概述建立B2B來源連接器時所需的自訂命名空�
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1718'
 ht-degree: 4%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 4%
 | `TENANT_ID` | 用來確保所建立資源與IMS組織中的ID命名方式正確，且內容也包含在您的IMS組織中。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | 您進行API呼叫的URL端點。 此值已修正，且一律設為： `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 執行指令碼
 
@@ -90,7 +90,7 @@ B2B命名空間用於實體的主要身分識別中。
 | B2B行銷清單成員 | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
 | B2B帳戶人員關係 | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## B2B結構
 
@@ -119,7 +119,7 @@ Experience Platform 會使用結構，以一致且可重複使用的方式說明
 | B2B活動 | [XDM ExperienceEvent](../../../../xdm/classes/experienceevent.md) | <ul><li>造訪網頁</li><li>新銷售機會</li><li>轉換銷售機會</li><li>添加到清單</li><li>從清單中刪除</li><li>添加到機會</li><li>從銷售機會中刪除</li><li>已填寫表單</li><li>連結點按次數</li><li>電子郵件傳送</li><li>已開啟電子郵件</li><li>已點按電子郵件</li><li>電子郵件已退信</li><li>電子郵件已跳出軟體</li><li>取消訂閱電子郵件</li><li>分數已變更</li><li>已更新銷售機會</li><li>促銷活動進展中的狀態已變更</li><li>人員識別碼</li><li>Marketo Web URL</li><li>有趣的時刻</li><li>呼叫Webhook</li><li>變更促銷活動順序</li><li>收入階段已變更</li><li>合併銷售機會</li><li>已傳送電子郵件</li><li>變更促銷活動資料流</li><li>新增至Campaign</li></ul> | 啟用 | `personKey.sourceKey` 人員標識符欄位組 | B2B人員 | None | None | **第一關係**<ul><li>`listOperations.listKey.sourceKey` 欄位</li><li>類型：一對一</li><li>參考結構：B2B行銷清單</li><li>命名空間：B2B行銷清單</li></ul>**第二關係**<ul><li>`opportunityEvent.opportunityKey.sourceKey` 欄位</li><li>類型：一對一</li><li>參考結構：B2B機會</li><li>命名空間：B2B機會</li></ul>**第三種關係**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` 欄位</li><li>類型：一對一</li><li>參考結構：B2B行銷活動</li><li>命名空間：B2B行銷活動</li></ul> | `ExperienceEvent` 與實體不同。 體驗事件的身分是執行活動的人員。 |
 | B2B帳戶人員關係 | [XDM企業帳戶人員關係](../../../../xdm/classes/b2b/business-account-person-relation.md) | 身分對應 | 啟用 | `accountPersonKey.sourceKey` 在基類中 | B2B帳戶人員關係 | None | None | **第一關係**<ul><li>`personKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B人員</li><li>命名空間：B2B人員</li><li>目標屬性： `b2b.personKey.SourceKey`</li><li>當前架構的關係名稱：人員</li><li>引用架構的關係名稱：帳戶</li></ul>**第二關係**<ul><li>`accountKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B帳戶</li><li>命名空間：B2B帳戶</li><li>目標屬性： `accountKey.sourceKey`</li><li>當前架構的關係名稱：帳戶</li><li>引用架構的關係名稱：人員</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 後續步驟
 

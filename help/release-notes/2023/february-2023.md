@@ -3,8 +3,8 @@ title: Adobe Experience Platform發行說明2023年2月
 description: 2023年2月Adobe Experience Platform發行說明。
 source-git-commit: 0935a50527800b255901f8047051c47b45ab33b8
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 6%
+source-wordcount: '1293'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ Adobe保證可讓您檢查、校樣、模擬及驗證您收集資料或提供行
 | ------- | ----------- |
 | 公用API | Adobe保證API現已可用。 保證API是API的集合，當使用者搭配Mobile SDK的Adobe保證擴充功能時，可讓使用者測試和除錯自己的網頁和行動應用程式。 若要進一步了解保障API，請參閱 [保證API概觀](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Assurance的詳細資訊，請閱讀 [保證檔案](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
@@ -49,7 +49,7 @@ Adobe保證可讓您檢查、校樣、模擬及驗證您收集資料或提供行
 | ----------- | ----------- |
 | [同意政策增強](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) 與 [檔案型（批次）目的地](/help/destinations/destination-types.md#file-based) | <p> 當設定檔不再符合同意原則的資格時，Experience Platform現在會主動將其退出政策通訊至檔案式目的地。 這遵循 [於2023年2月發行](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) 流目的地功能相同。 </p> <p> <b>附註</b>:此功能僅適用於 **[!UICONTROL 隱私與安全防護]**，以及 **[!UICONTROL 醫療保健盾]**. </p> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新檔案或更新檔案** {#destinations-new-updated-documentation}
 
@@ -69,7 +69,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | --- | --- |
 | 透過UI取代欄位 | 您現在可以 [擷取資料後，會取代結構中的欄位](../../xdm/tutorials/field-deprecation-ui.md). 取代XDM欄位可讓您從UI檢視中移除欄位，同時保留欄位以供使用。 您可以視需要再次顯示已棄用的欄位，而任何參考欄位的區段、查詢或下游解決方案將照常執行。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **新XDM元件**
 
@@ -77,7 +77,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | --- | --- | --- |
 | 類別 | [[!UICONTROL XDM個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1669/files) | XDM個別潛在客戶設定檔類別會提供合作夥伴提供的ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **更新XDM元件**
 
@@ -89,7 +89,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 欄位組 | [!UICONTROL AdobeCJM ExperienceEvent — 訊息互動詳細資料] | [空白 `meta:enum` 屬性已移除](https://github.com/adobe/xdm/pull/1668/files) 從URL [!UICONTROL 追蹤類型] 欄位。 |
 | 資料類型 | [!UICONTROL 媒體資訊] | [來自的規則運算式模式 `videoSegment` 屬性 [!UICONTROL 媒體資訊] 資料類型已刪除](https://github.com/adobe/xdm/pull/1667/files). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md). &#x200B;
 
@@ -106,7 +106,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 切換自動完成功能 | 消除某些元資料命令，並通過 [切換查詢編輯器自動完成功能](../../query-service/ui/user-guide.md#auto-complete). 此功能會在您編寫查詢時，自動為查詢建議潛在的SQL關鍵字和表詳細資訊。 |
 | 資料集範例 | 在查詢中指定取樣率，並 [使用資料集範例建立統一的隨機範例](../../query-service/essential-concepts/dataset-samples.md)，或根據特定條件建立條件範例。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 有關Query Services的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).
 
@@ -121,7 +121,7 @@ Real-Time CDP B2B Edition以Real-time Customer Data Platform(Real-Time CDP)為�
 | --- | --- |
 | 啟用相關帳戶服務 | 新的切換功能可讓您在帳戶上啟用相關帳戶服務。 如需詳細資訊，請參閱 [啟用相關帳戶服務](../../rtcdp/b2b-ai-ml-services/related-accounts.md#enable). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 若要進一步了解Real-Time CDP B2B版，請閱讀 [Real-Time CDP B2B版概述](../../rtcdp/overview.md).
 
@@ -139,6 +139,6 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 | 從內嵌自訂活動資料 [!DNL Marketo] | 您現在可以從 [!DNL Marketo] 例項Experience Platform。 若要內嵌自訂活動資料，您必須在B2B活動結構中設定自訂活動欄位群組，並使用活動資料集建立資料流。 資料流完成後，所擷取的資料集將同時包含您 [!DNL Marketo] 例項。 然後，您就可以使用 [查詢服務](../../query-service/home.md) 存取Platform上的自訂活動記錄。 如需詳細資訊，請參閱 [為自訂活動資料建立資料流](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | 從 [!DNL Marketo] | 您現在可以設定在為公司資料建立資料流時，是否要排除或納入未申請的帳戶以免擷取。 如需詳細資訊，請參閱 [建立源連接和資料流 [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 若要進一步了解來源，請閱讀 [來源概觀](../../sources/home.md).

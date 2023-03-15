@@ -7,7 +7,7 @@ description: 了解如何在UI中建立Adobe Analytics來源連線，將消費�
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2384'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+&lt;! — 可一次為一個沙箱設定Analytics報表套裝。 若要將相同的報表套裝匯入不同的沙箱中，資料集流量必須透過不同沙箱的設定再次遭到刪除和實例化。—>
 
 ### 映射
 
@@ -250,7 +250,7 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 
 ![dataflow detail](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### 檢閱
+### 請檢閱
 
 此 [!UICONTROL 檢閱] 步驟，讓您在建立新Analytics資料流之前先加以檢閱。 連線的詳細資訊會依類別分組，包括：
 

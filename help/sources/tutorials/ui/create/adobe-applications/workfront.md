@@ -6,7 +6,7 @@ exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '771'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ![資料流詳細資訊頁，其中包含資料流名稱、說明和警報通知的資訊](../../../../images/tutorials/create/workfront/dataflow-detail.png)
 
-## 檢閱
+## 請檢閱
 
 此 **[!UICONTROL 檢閱]** 步驟顯示，允許您在建立新資料流之前對其進行查看。 詳細資料會分組為下列類別：
 

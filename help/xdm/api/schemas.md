@@ -6,8 +6,8 @@ description: Schema Registry API中的/schemas端點可讓您以程式設計方�
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1468'
-ht-degree: 4%
+source-wordcount: '1441'
+ht-degree: 2%
 
 ---
 
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 存放您要擷取之結構的容器： `global` Adobe建立的結構或 `tenant` ，取得貴組織擁有的結構。 |
 | `{QUERY_PARAMS}` | 可選的查詢參數，以依據篩選結果。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用參數的清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -61,7 +61,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
 | `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON結構（原始） `$ref` 和 `allOf` 已包含。 (限制：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -112,7 +112,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | 存放您要擷取之結構的容器： `global` Adobe建立的架構或 `tenant` ，取得貴組織擁有的結構。 |
 | `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要查找的結構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -139,7 +139,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解析，包含描述符。 |
 | `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 和 `allOf` 已解析，有標題和說明。 已棄用的欄位以 `meta:status` 屬性 `deprecated`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -236,7 +236,7 @@ curl -X POST \
 | --- | --- |
 | `allOf` | 對象的陣列，每個對象引用模式實現的域的類或欄位組。 每個物件都包含單一屬性(`$ref`)，其值代表 `$id` 將實施新架構的類或欄位組。 必須提供一個類，其中包含零個或多個附加欄位組。 在上例中， `allOf` array是架構的類別。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -297,7 +297,7 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要重寫的結構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -380,7 +380,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 更新結構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -471,7 +471,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 啟用的架構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -554,7 +554,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 刪除的架構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 

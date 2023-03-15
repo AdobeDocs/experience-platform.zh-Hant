@@ -6,7 +6,7 @@ description: 本檔案概述網頁詳細資訊Experience Data Model(XDM)資料�
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '408'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 | `siteSection` | 字串 | 此網頁所在網站區域的規範性名稱。 這可用來分類互動或加以分類。 |
 | `viewName` | 字串 | 頁面內的檢視名稱。 此屬性通常用於單頁應用程式或具有可更改大多數頁面佈局的標籤或控制項的頁面。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

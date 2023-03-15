@@ -74,7 +74,7 @@ Adobe Experience Platform資料控管是一系列策略和技術，用於管理�
 
 請參閱 [Privacy Service概述](../../privacy-service/home.md) 以取得服務的詳細資訊。
 
-## 即時客戶個人檔案 {#profile}
+## 即時客戶設定檔 {#profile}
 
 Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 使用 [!DNL Real-Time Customer Profile]，您可以全面了解將多個管道資料結合在一起的每個客戶，包括線上、離線、CRM和協力廠商資料。 [!DNL Profile] 可讓您將不同的客戶資料整合至統一的檢視中，提供每個客戶互動的可操作、時間戳記帳戶。
 

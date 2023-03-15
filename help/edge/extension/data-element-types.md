@@ -11,7 +11,7 @@ ht-degree: 19%
 
 # 資料元素類型
 
-在您於[Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md)中設定[動作類型](action-types.md)後，請設定您的資料元素類型。
+在您設定 [動作類型](action-types.md) 在 [Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md)，設定您的資料元素類型。
 
 此頁面說明可用的資料元素類型。
 
@@ -22,19 +22,19 @@ ht-degree: 19%
 
 ## 身分對應
 
-身分對應可讓您為網頁的訪客建立身分。 身分對應包含命名空間，例如&#x200B;_phone_&#x200B;或&#x200B;_email_，每個命名空間包含一或多個識別碼。 例如，若您網站上的個人已提供兩個電話號碼，您的電話命名空間應包含兩個識別碼。
+身分對應可讓您為網頁的訪客建立身分。 身分對應包含命名空間，例如 _phone_ 或 _電子郵件_，而每個命名空間都包含一或多個識別碼。 例如，若您網站上的個人已提供兩個電話號碼，您的電話命名空間應包含兩個識別碼。
 
-在[!UICONTROL Identity map]資料元素中，您將提供每個識別碼的下列資訊片段：
+在 [!UICONTROL 身分對應] 資料元素，您會為每個識別碼提供下列資訊：
 
-* **[!UICONTROL ID]**:識別訪客的值。例如，如果識別碼屬於&#x200B;_phone_&#x200B;命名空間，[!UICONTROL ID]可能為&#x200B;_555-555-5555_。 此值通常衍生自JavaScript變數或您頁面上的其他資料片段，因此最好建立參考頁面資料的資料元素，然後參考[!UICONTROL Identity map]資料元素內[!UICONTROL ID]欄位中的資料元素。 如果在您的頁面上執行時，ID值不是填入的字串，則識別碼會自動從身分對應中移除。
+* **[!UICONTROL ID]**:識別訪客的值。 例如，如果識別碼屬於 _phone_ 命名空間， [!UICONTROL ID] 可能 _555-555-5555_. 此值通常衍生自JavaScript變數或頁面上的其他資料片段，因此最好建立參考頁面資料的資料元素，然後參考 [!UICONTROL ID] 欄位 [!UICONTROL 身分對應] 資料元素。 如果在您的頁面上執行時，ID值不是填入的字串，則識別碼會自動從身分對應中移除。
 * **[!UICONTROL 驗證狀態]**:指出訪客是否已驗證的選取項目。
-* **[!UICONTROL 主要]**:指示是否應將標識符用作個人的主要標識符的選擇。如果未將任何識別碼標示為主要識別碼，系統會將ECID設為主要識別碼。
+* **[!UICONTROL 主要]**:指示是否應將標識符用作個人的主要標識符的選擇。 如果未將任何識別碼標示為主要識別碼，系統會將ECID設為主要識別碼。
 
 建立身分對應時，您不應提供ECID。 使用SDK時，系統會自動在伺服器上產生ECID，並包含在身分對應中。
 
-身分對應資料元素通常與[[!UICONTROL XDM物件]資料元素類型](#xdm-object)和[[!UICONTROL 設定同意]動作類型](action-types.md#set-consent)搭配使用。
+身分對應資料元素通常會與 [[!UICONTROL XDM物件] 資料元素類型](#xdm-object) 和 [[!UICONTROL 設定同意] 動作類型](action-types.md#set-consent).
 
-深入了解[Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=zh-Hant)。
+深入了解 [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=zh-Hant).
 
 ![](./assets/identity-map-data-element.png)
 
@@ -44,7 +44,7 @@ ht-degree: 19%
 
 ![](./assets/XDM-object.png)
 
-請注意，當您開啟架構的某些欄位時（例如`web.webPageDetails.URL`），系統會自動收集某些項目。 即使自動收集了數個項目，您仍可視需要覆寫任何項目。 所有值都可手動填寫，也可使用其他資料元素來填寫。
+請注意，當您開啟結構的特定欄位時，例如 `web.webPageDetails.URL`，則會自動收集某些項目。 即使自動收集了數個項目，您仍可視需要覆寫任何項目。 所有值都可手動填寫，也可使用其他資料元素來填寫。
 
 >[!NOTE]
 >

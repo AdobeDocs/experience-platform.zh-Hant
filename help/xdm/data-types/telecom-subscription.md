@@ -6,8 +6,8 @@ description: 本檔案概述電信訂閱體驗資料模型(XDM)資料類型。
 exl-id: d67915b6-daaa-489f-81b4-bd3dbe0ffa44
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 10%
+source-wordcount: '605'
+ht-degree: 9%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 10%
 | `topUp` | 字串 | 說明在帳單期間如何購回訂閱的消耗性部分的協定條款。 |
 | `type` | 字串 | 與訂閱涵蓋的人數有關的權利範圍。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 
@@ -77,4 +77,4 @@ ht-degree: 10%
 | `storageCapacity` | 字串 | 設備儲存容量。 |
 | `type` | 字串 | 裝置類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

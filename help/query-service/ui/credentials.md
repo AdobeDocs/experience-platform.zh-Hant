@@ -56,7 +56,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 2. [選取產品設定檔。](../../access-control/ui/browse.md)
 3. [設定 **沙箱** 和 **管理查詢服務整合** 權限](../../access-control/ui/permissions.md) 針對產品設定檔。
 4. [將新使用者新增至產品設定檔](../../access-control/ui/users.md) 因此，系統會授予這些使用者已設定的權限。
-5. [將使用者新增為產品設定檔管理員](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) 允許為任何作用中的產品設定檔建立帳戶。
+5. [將使用者新增為產品設定檔管理員](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html) 允許為任何作用中的產品設定檔建立帳戶。
 6. [將使用者新增為產品設定檔開發人員](https://helpx.adobe.com/enterprise/using/manage-developers.html) 以建立整合。
 
 若要進一步了解如何指派權限，請參閱 [存取控制](../../access-control/home.md).

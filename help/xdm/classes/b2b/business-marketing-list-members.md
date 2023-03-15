@@ -4,7 +4,7 @@ description: 本檔案概述Experience Data Model(XDM)中的XDM Business Marketi
 exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '336'
 ht-degree: 2%
 
 ---
@@ -31,6 +31,6 @@ ht-degree: 2%
 | `marketingListMemberID` | 字串 | 行銷清單成員資格實體的唯一ID。 |
 | `personId` | 字串 | 人員的唯一ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [Real-Time CDP B2B版中的結構關係](../../tutorials/relationship-b2b.md) 了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

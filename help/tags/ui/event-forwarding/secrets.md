@@ -4,8 +4,8 @@ description: 了解如何在UI中設定機密，以驗證事件轉送屬性中�
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1763'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 | [!UICONTROL OAuth 2] | 包含數個要支援的屬性 [客戶端憑據授予類型](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) 針對 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格。 系統會要求您取得所需資訊，然後以指定的間隔為您處理這些代號的續約。 |
 | [!UICONTROL GoogleOAuth 2] | 包含數個要支援的屬性 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規範，用於 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 和 [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 系統會要求您取得所需資訊，然後以指定的間隔為您處理這些代號的續約。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 本指南提供如何設定事件轉送之機密([!UICONTROL Edge])屬性(位於Experience PlatformUI或資料收集UI中)。
 

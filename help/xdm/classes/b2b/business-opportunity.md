@@ -4,8 +4,8 @@ description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportu
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 4%
+source-wordcount: '319'
+ht-degree: 3%
 
 ---
 
@@ -33,6 +33,6 @@ ht-degree: 4%
 | `opportunityStage` | 字串 | 銷售階段。 |
 | `opportunityType` | 字串 | 機會的類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [Real-Time CDP B2B版中的結構關係](../../tutorials/relationship-b2b.md) 了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

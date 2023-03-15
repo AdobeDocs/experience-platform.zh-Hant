@@ -37,7 +37,7 @@ ht-degree: 5%
 | UI中的命名空間類型 | 您現在可以在「請求產生器」中指定不同的命名空間類型，位於 [!DNL Privacy Service] UI。 請參閱 [使用手冊](ui/user-guide.md) 以取得更多資訊。 |
 | 淘汰舊端點 | 舊的API端點(`data/privacy/gdpr`)已過時。 |
 
-## 2020 年 1 月 14 日
+## 2020年1月14日
 
 ### 新功能
 

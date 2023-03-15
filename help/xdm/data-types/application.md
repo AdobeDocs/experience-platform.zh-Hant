@@ -6,8 +6,8 @@ description: 本檔案概述Application Experience Data Model(XDM)資料類型�
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 2%
+source-wordcount: '439'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 | `userPerspective` | 字串 | 事件發生時，使用者與應用程式或品牌之間的透視或實體關係。 了解使用者對應用程式的看法，有助於在您不想納入的大多數時間內，準確產生工作階段 `background` 和 `detached` 事件作為「作用中」工作階段的一部分。 此屬性的值必須等於下列列舉值之一。 <li> `foreground`:使用者和應用程式會直接彼此互動。 </li> <li> `background`:應用程式和使用者間接互動。 例如，應用程式可測量值並在畫面鎖定或前景中使用另一個應用程式時重新整理。  </li> <li> `detached`:分離表示事件與應用程式相關，但並非直接來自應用程式，例如從外部系統傳送電子郵件或推播通知。 |
 | `version` | 字串 | 應用程式的版本。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

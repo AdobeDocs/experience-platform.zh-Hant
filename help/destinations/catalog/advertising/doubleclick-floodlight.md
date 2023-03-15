@@ -12,43 +12,43 @@ ht-degree: 3%
 
 # [!DNL DoubleClick Floodlight] （測試版）擴充功能
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
-此擴充功能可讓您使用傳統Floodlight格式（而非全域網站標籤），快速輕鬆部署[!DNL DoubleClick Floodlight]標籤。 注意：此擴充功能正在測試中。
+此擴充功能可讓您快速輕鬆部署 [!DNL DoubleClick Floodlight] 標籤（而非全域網站標籤）。 注意：此擴充功能正在測試中。
 
-[!DNL DoubleClick Floodlight] (Beta)是Adobe Experience Platform的廣告擴充功能。如需擴充功能的詳細資訊，請參閱[DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en)的[!DNL Google]支援檔案。
+[!DNL DoubleClick Floodlight] (Beta)是Adobe Experience Platform的廣告擴充功能。 如需擴充功能的詳細資訊，請參閱 [!DNL Google] 支援檔案 [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
-此目的地是標籤擴充功能。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概述](../launch-extensions/overview.md)。
+此目的地是標籤擴充功能。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱 [標籤擴充功能概觀](../launch-extensions/overview.md).
 
 ![Doubleclick Floodlight擴充功能](../../assets/catalog/advertising/doubleclick-floodlight/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-[!DNL Destinations]目錄中提供此擴充功能，供已購買Platform的所有客戶使用。
+此擴充功能適用於 [!DNL Destinations] 目錄供已購買Platform的所有客戶使用。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限，以便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您 **[!UICONTROL manage_properties]** 權限，讓您可以安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
 若要安裝DoubleClick Floodlight(Beta)擴充功能：
 
-在[Platform interface](https://platform.adobe.com/)中，前往&#x200B;**[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**。
+在 [平台介面](https://platform.adobe.com/)，前往 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**.
 
 從目錄中選取擴充功能，或使用搜尋列。
 
-按一下目的地以反白標示，然後選取右側邊欄中的&#x200B;**[!UICONTROL 設定]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈灰色，表示您缺少&#x200B;**[!UICONTROL manage_properties]**&#x200B;權限。 請參閱[必要條件](#prerequisites)。
+按一下目的地以反白標示，然後選取 **[!UICONTROL 設定]** 在右側邊欄。 若 **[!UICONTROL 設定]** 控制項呈灰色，則您缺少 **[!UICONTROL manage_properties]** 權限。 請參閱 [必要條件](#prerequisites).
 
-選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。了解標籤檔案中[的「屬性」頁面區段](../../../tags/ui/administration/companies-and-properties.md#properties-page)中的屬性。
+選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。了解中的屬性 [「屬性」頁部分](../../../tags/ui/administration/companies-and-properties.md#properties-page) 的。
 
-工作流程會逐步帶您完成安裝的步驟。
+工作流程會逐步引導您完成安裝。
 
-您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱標籤檔案中的[新增新擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)一節。
+您也可以直接在 [資料收集UI](https://experience.adobe.com/#/data-collection/). 如需詳細資訊，請參閱 [新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) 在標籤檔案中。
 
 ## 如何使用擴充功能 {#how-to-use}
 
 安裝擴充功能後，您就可以開始設定規則。
 
-您可以為已安裝的擴充功能設定規則，以僅在特定情況下將事件資料傳送至擴充功能目的地。 如需為擴充功能設定規則的詳細資訊，請參閱[標籤檔案](../../../tags/ui/managing-resources/rules.md)。
+您可以為已安裝的擴充功能設定規則，以僅在特定情況下將事件資料傳送至擴充功能目的地。 如需為擴充功能設定規則的詳細資訊，請參閱 [標籤檔案](../../../tags/ui/managing-resources/rules.md).
 
 ## 設定、升級和刪除擴充功能 {#configure-upgrade-delete}
 
@@ -56,6 +56,6 @@ ht-degree: 3%
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，Platform UI仍會顯示擴充功能的&#x200B;**[!UICONTROL Install]**。 按照[Install extension](#install-extension)中的說明啟動安裝工作流，以配置或刪除您的擴展。
+>如果擴充功能已安裝在您的其中一個屬性上，平台UI仍會顯示 **[!UICONTROL 安裝]** ，以取得擴充功能。 啟動安裝工作流程，如 [安裝擴充功能](#install-extension) 設定或刪除擴充功能。
 
-若要升級您的擴充功能，請參閱標籤檔案中[擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)的指南。
+若要升級您的擴充功能，請參閱 [擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) 在標籤檔案中。

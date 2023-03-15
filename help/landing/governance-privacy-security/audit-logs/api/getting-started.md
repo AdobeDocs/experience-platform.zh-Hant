@@ -1,7 +1,8 @@
 ---
 title: 稽核查詢API快速入門
 description: 稽核查詢API可讓您擷取各種Adobe Experience Platform功能的量度資料。 本檔案簡介您在嘗試呼叫稽核查詢API前，需要知道的核心概念。
-source-git-commit: 5b3459711f41430977f9d7b06f8b35801739207c
+exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
+source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 9%

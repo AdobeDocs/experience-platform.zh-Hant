@@ -6,7 +6,7 @@ hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '481'
 ht-degree: 1%
 
 ---
@@ -110,7 +110,7 @@ curl -X POST \
 | `companyContexts` | 包含貴組織驗證資訊的陣列。 它必須包含具有下列屬性的單一物件： <ul><li>`namespace`:必須設為 `imsOrgID`.</li><li>`value`:您的IMS組織ID。 這與 `x-gw-ims-org-id` 頁首。</li></ul> |
 | `users` | 一個陣列，其中包含至少一個要刪除其資訊的用戶的集合。 每個使用者物件包含下列資訊： <ul><li>`key`:用來限定回應資料中個別作業ID的使用者識別碼。 最佳實務是為此值選擇可輕鬆識別的唯一字串，以便日後參考或查閱。</li><li>`action`:列出對使用者資料採取之所需動作的陣列。 必須包含單一字串值： `delete`.</li><li>`userIDs`:使用者的身分集合。 單一使用者可擁有的身分數目上限為九。 每個身分包含下列屬性： <ul><li>`namespace`:此 [身分命名空間](../../identity-service/namespaces.md) 與ID相關聯。 這可以是 [標準命名空間](../../privacy-service/api/appendix.md#standard-namespaces) 可由Platform識別，或是由您的組織定義的自訂命名空間。 使用的命名空間類型必須反映在 `type` 屬性。</li><li>`value`:身分值。</li><li>`type`:必須設為 `standard` 如果使用全域識別的命名空間，或 `custom` 如果您使用的是組織定義的命名空間。</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 

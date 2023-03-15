@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM;ExperienceEvent；欄位；結構；結構；結構設計；欄位群組；欄位群組；訂房；住宿；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM;ExperienceEvent；欄位；結構；結構；結構設計；欄位群組；欄位群組；訂房；住宿；
 title: 住宿預訂結構欄位組
 description: 本檔案提供「住宿預訂」結構欄位組的概述。
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+exl-id: f0eafc83-21f1-483d-9397-1133e3777699
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 4%
+source-wordcount: '679'
+ht-degree: 5%
 
 ---
 
+# [!UICONTROL 住宿預訂] 方案欄位組
 
-# [!UICONTROL 住宿預] 留方案欄位組
+[!UICONTROL 住宿預訂] 是的標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md) 用來擷取住宿預訂的相關資訊。
 
-[!UICONTROL 住宿] 預訂是類別的標準結構欄位 [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) 群組，用於擷取與住宿預訂相關的資訊。
-
-欄位組是[!UICONTROL 保留詳細資訊]欄位組的擴展，在單個對象類型欄位`reservations`下包含所有相同的欄位。 除了這些通用欄位外，[!UICONTROL Lodging Reservation]還包含`lodgingReservations`陣列。 此對象陣列用於描述一個或多個保留，這些保留具有與倒置特有的屬性。
+欄位群組是 [!UICONTROL 保留詳細資訊] 欄位組，並在單個對象類型欄位下包含所有相同的欄位， `reservations`. 除了這些通用欄位， [!UICONTROL 住宿預訂] 也包括 `lodgingReservations` 陣列。 此對象陣列用於描述一個或多個保留，這些保留具有與倒置特有的屬性。
 
 >[!NOTE]
 >
->本文檔涵蓋`lodgingReservations`陣列的詳細資訊。 有關`reservations`對象下提供的其他欄位的資訊，請參閱[[!UICONTROL 保留詳細資訊]欄位組引用](./reservation-details.md)。
+>本檔案說明 `lodgingReservations` 陣列。 欲知下方提供的其他欄位 `reservations` 物件，請參閱 [[!UICONTROL 保留詳細資訊] 欄位群組參考](./reservation-details.md).
 
 ![住宿預訂結構](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` 是一個物件陣列，代表lodging保留清單。例如，如果預訂事件涉及沿行程路線在多個不同酒店的預訂，則這些預訂可以作為單個事件的`lodgingReservations`下的單個對象列出。
+`lodgingReservations` 是一個物件陣列，代表lodging保留清單。 例如，如果訂房事件涉及沿行程線的多個不同酒店的預訂，則這些預訂可以列為下面的單個對象 `lodgingReservations` 的URL。
 
-`lodgingReservations`下提供的每個對象的結構如下。
+下方提供之每個物件的結構 `lodgingReservations` 如下所示。
 
 ![lodgingReservations結構](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
@@ -68,7 +68,7 @@ ht-degree: 4%
 | `smoking` | 布林值 | 指示房間是否允許吸煙。 |
 | `tripType` | 字串 | 指出預訂是單程旅行、往返旅行還是多城旅行。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

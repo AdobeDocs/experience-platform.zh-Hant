@@ -4,8 +4,8 @@ description: 本檔案概述Experience Data Model(XDM)中的XDM Business Opportu
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 3%
+source-wordcount: '365'
+ht-degree: 2%
 
 ---
 
@@ -33,6 +33,6 @@ ht-degree: 3%
 | `personID` | 字串 | 業務機會 — 人員關係中人員的唯一標識符。 |
 | `personRole` | 字串 | 人員在機會 — 人員關係中的角色。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [Real-Time CDP B2B版中的結構關係](../../tutorials/relationship-b2b.md) 了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係。

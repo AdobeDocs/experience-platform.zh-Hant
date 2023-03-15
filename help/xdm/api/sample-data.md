@@ -6,8 +6,8 @@ description: Schema Registry API中的/sampledata端點可讓您產生對應至�
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 2%
+source-wordcount: '315'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` ，以產生範例資料。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 

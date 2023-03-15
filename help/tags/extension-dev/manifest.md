@@ -134,7 +134,20 @@ ht-degree: 76%
       <td><code>schema</code></td>
       <td><a href="https://json-schema.org/">JSON 結構描述</a>的物件，說明使用者可儲存的有效設定物件格式。設定通常由使用者使用資料收集使用者介面來設定和儲存。 在這些情況下，擴充功能的檢視可採取必要步驟來驗證使用者提供的設定。另一方面，有些使用者會選擇直接使用標籤API，而不需要任何使用者介面的協助。 此結構描述的目的是讓 Platform 能正確驗證使用者儲存的設定物件 (不論是否使用使用者介面) 的格式，與將在執行階段依據設定物件執行動作的程式庫模組相容。<br><br>以下是範例結構描述物件：<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema":"http://json-schema.org/draft-04/schema#", "type":"object", "properties":{ "delay":{ "type":"number"、"minimum":1 } }，「必填」：[ "delay" ], "additionalProperties":false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       我們建議使用 <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> 這類工具，以手動方式測試您的結構描述。</td>
     </tr>

@@ -6,7 +6,7 @@ user-guide-description: 了解 Experience Platform 如何即時將個人化體�
 source-git-commit: 695675aed5a1de4bb6869b733769f8e7e86a0d5b
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 26%
 
 * [平台概觀](home.md)
 * [平台概述（影片）](video/platform-overview.md)
-* [Platform教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Platform教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant)
 * [由Platform提供技術支援的客戶體驗（影片）](video/customer-experience.md)
 * [由Platform提供技術支援的客戶體驗的幕後（影片）](video/customer-experience-bts.md)
 * 快速入門 {#getting-started}
@@ -71,4 +71,4 @@ ht-degree: 26%
 * [疑難排解指南](troubleshooting.md)
 * [Gen2資料湖遷移](adls2-gen2-migration.md)
 * [字彙](glossary.md)
-* [發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [發行說明](https://www.adobe.com/go/platform-release-notes_tw)

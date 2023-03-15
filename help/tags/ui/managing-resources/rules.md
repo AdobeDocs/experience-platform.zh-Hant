@@ -5,7 +5,7 @@ exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1973'
-ht-degree: 66%
+ht-degree: 67%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 66%
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-Adobe Experience Platform中的標籤會遵循規則型系統。 它們會尋找使用者互動和相關資料。 當符合列於您規則中的準則時，規則會觸發您識別的擴充功能、指令黨指令檔或用戶端代碼。
+Adobe Experience Platform 中的標籤會遵循規則型系統。它們會尋找使用者互動與相關資料。當符合列於您規則中的準則時，規則會觸發您識別的擴充功能、指令黨指令檔或用戶端代碼。
 
 建置規則來整合行銷和廣告技術的資料和功能，將不同的產品整合為單一解決方案。
 

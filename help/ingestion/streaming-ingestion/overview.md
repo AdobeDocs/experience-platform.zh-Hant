@@ -39,7 +39,7 @@ Adobe Experience Platform可讓您透過產生 [!DNL Real-Time Customer Profile]
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
-| 即時客戶個人檔案 | &lt; 1分鐘 |
+| 即時客戶設定檔 | &lt; 1分鐘 |
 | 資料湖 | &lt; 60 分鐘 |
 
 ## 流獲取的每秒請求數(RPS)指導

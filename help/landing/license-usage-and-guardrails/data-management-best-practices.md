@@ -5,7 +5,7 @@ description: 了解可用來更好地管理 Adobe Experience Platform 授權權�
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 9a8e247784dc51d7dc667b7467042399df700b3c
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2125'
 ht-degree: 2%
 
 ---
@@ -107,7 +107,7 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 | Web SDK與行動SDK資料排除 | Web和Mobile SDK收集的資料類型有兩種：自動收集的資料和開發人員明確收集的資料。 若要更妥善地管理授權規範，您可以透過內容設定，在SDK設定中停用自動資料收集。 您的開發人員也可以移除或不設定自訂資料。 請參閱 [配置SDK基礎知識](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) 以取得更多資訊。 |
 | 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Platform，您可以移除規則動作中的對應以在所有事件中排除它，或將條件新增至規則，讓資料只針對特定事件而觸發，來排除所傳送的資料。 請參閱 [事件與條件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 設定檔存放區 {#profile-service}
 
@@ -120,7 +120,7 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 | 時間序列資料（行為） | **時間序列資料** 提供使用者行為的相關資訊。 由標準結構類別Experience Data Model(XDM)表示 [!DNL ExperienceEvent]，時間序列資料可說明新增至購物車的項目、點按的連結，以及檢視的影片等事件。 行為的價值可能隨著時間的流逝而減少。 |
 | 身分命名空間（身分） | 當客戶資料匯整在一起時，會透過使用 **身分識別命名空間**，以及當使用者的相關資訊越來越多時，將這些身分結合在一起的能力。 請參閱 [身分識別命名空間概述](../../identity-service/namespaces.md) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 
@@ -165,4 +165,4 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 | [資料集重疊報表API](../../profile/tutorials/dataset-overlap-report.md) | 輸出對可定址對象貢獻最大的資料集 |
 | [身分重疊報表API](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | 輸出對可定址對象貢獻最大的身分命名空間 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

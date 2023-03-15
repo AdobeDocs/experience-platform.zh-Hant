@@ -5,7 +5,7 @@ description: 了解如何使用流量服務API將資料集匯出至選取目的�
 type: Tutorial
 source-git-commit: c16fbc89b7bc7a8f1ee4a0ca4fd9f7541df095ca
 workflow-type: tm+mt
-source-wordcount: '3326'
+source-wordcount: '3323'
 ht-degree: 4%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 4%
 | [!DNL Google Cloud Storage] | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `354d6aad-4754-46e4-a576-1b384561c440` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 您需要這些ID來建構各種 [!DNL Flow Service] 實體。 您也需要參考 [!DNL Connection Spec] 自身來設定特定實體，以便您能夠擷取 [!DNL Connection Spec] 從 [!DNL Flow Service APIs]. 請參閱下表中所有目標的檢索連接規範的示例：
 

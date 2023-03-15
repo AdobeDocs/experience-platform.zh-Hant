@@ -6,8 +6,8 @@ description: 了解如何將Adobe Target事件欄位對應至Experience Data Mod
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 1%
+source-wordcount: '479'
+ht-degree: 0%
 
 ---
 
@@ -87,4 +87,4 @@ Adobe Experience Platform可讓您透過Target來源連接器內嵌Adobe Target�
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

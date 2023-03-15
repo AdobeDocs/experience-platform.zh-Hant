@@ -4,8 +4,8 @@ description: 資料衛生API中的/ttl端點可讓您以程式設計方式排程
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 4%
+source-wordcount: '1426'
+ht-degree: 2%
 
 ---
 
@@ -49,7 +49,7 @@ GET /ttl?{QUERY_PARAMETERS}
 | --- | --- |
 | `{QUERY_PARAMETERS}` | 選用的查詢參數清單，多個參數以 `&` 字元。 常見參數包括 `size` 和 `page` 分頁用途。 如需支援查詢參數的完整清單，請參閱 [附錄](#query-params). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -106,7 +106,7 @@ curl -X GET \
 | `totalRecords` | 符合清單呼叫參數的資料集過期計數。 |
 | `ttlDetails` | 包含傳回資料集有效期的詳細資料。 如需資料集有效期屬性的詳細資訊，請參閱 [查閱呼叫](#lookup). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 查詢資料集的有效期 {#lookup}
 
@@ -122,7 +122,7 @@ GET /ttl/{DATASET_ID}
 | --- | --- |
 | `{DATASET_ID}` | 您要查詢其有效期的資料集ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -167,7 +167,7 @@ curl -X GET \
 | `displayName` | 過期請求的顯示名稱。 |
 | `description` | 過期請求的說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 目錄過期標籤
 
@@ -230,7 +230,7 @@ curl -X PUT \
 | `displayName` | 過期請求的顯示名稱。 |
 | `description` | 過期請求的可選說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -260,7 +260,7 @@ curl -X PUT \
 | `updatedAt` | 上次更新過期時間的時間戳記。 |
 | `updatedBy` | 上次更新過期的使用者。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 取消資料集過期 {#delete}
 
@@ -280,7 +280,7 @@ DELETE /ttl/{EXPIRATION_ID}
 | --- | --- |
 | `{EXPIRATION_ID}` | 此 `workorderId` 取消的資料集過期時間。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -313,7 +313,7 @@ GET /ttl/{DATASET_ID}?include=history
 | --- | --- |
 | `{DATASET_ID}` | 您要查詢其有效期記錄的資料集ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -377,7 +377,7 @@ curl -X GET \
 | `imsOrg` | 您組織的ID。 |
 | `history` | 以對象陣列形式列出過期的更新歷史記錄，每個對象都包含 `status`, `expiry`, `updatedAt`，和 `updatedBy` 屬性。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 附錄
 
@@ -402,4 +402,4 @@ curl -X GET \
 | `completedDate` / `completedToDate` / `completedFromDate` | 相符項目：在指定間隔內完成的到期日。 | `completedToDate=2021-11-11-06:00` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | 在指定間隔內，將執行或已執行的過期時間相符。 | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

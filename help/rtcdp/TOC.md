@@ -7,7 +7,7 @@ user-guide-description: 將來自多個企業來源的已知和匿名資料放�
 source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
 workflow-type: tm+mt
 source-wordcount: '205'
-ht-degree: 29%
+ht-degree: 31%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 29%
    * 預測性銷售機會和帳戶計分 {#predictive-lead-and-account-scoring-intro}
       * [預測性銷售機會和帳戶計分概觀](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [管理預測性銷售機會和帳戶計分](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
-* 結構描述 {#schemas}
+* 綱要 {#schemas}
    * [結構概觀](schemas/overview.md)
    * [Real-Time CDP B2B版中的結構描述](schemas/b2b.md)
 * 區段 {#segmentation}
@@ -62,5 +62,5 @@ ht-degree: 29%
 * 來源 {#sources}
    * [來源概觀](sources/sources-overview.md)
    * [Real-Time CDP B2B版中的來源](sources/b2b.md)
-* [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [Experience Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary-en)

@@ -1,6 +1,6 @@
 ---
-title: 摘要頁籤
-description: 瞭解如何在Adobe Experience Platform調試器中使用摘要頁籤。
+title: 摘要標籤
+description: 了解如何使用Adobe Experience Platform Debugger中的「摘要」標籤。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；摘要；清除；要求；摘要畫面；解決方案；資訊；Analytics；Target；DTM；Audience Manager；Launch；ID 服務
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
@@ -9,13 +9,13 @@ exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
 source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
 workflow-type: tm+mt
 source-wordcount: '909'
-ht-degree: 73%
+ht-degree: 74%
 
 ---
 
-# 摘要頁籤
+# 摘要索引標籤
 
-要運行Adobe Experience Platform調試器，請開啟要在瀏覽器中檢查的頁面，然後選擇表徵圖(![](images/start-icon.jpg))。 在 **摘要** 頁籤。
+若要執行Adobe Experience Platform Debugger，請在瀏覽器中開啟您要檢查的頁面，然後選取圖示(![](images/start-icon.jpg))。 擴充功能會在 **摘要** 標籤。
 
 ![](images/summary.jpg)
 
@@ -85,11 +85,11 @@ Experience Platform Debugger 針對各個解決方案顯示的資訊如下：
   </tr> 
   <tr> 
    <td colname="col1"> <p>建置日期 </p> </td> 
-   <td colname="col2"> <p>標籤 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> 庫</a> 生成日期 </p> </td> 
+   <td colname="col2"> <p>標籤 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> 資料庫</a> 建置日期 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>環境 </p> </td> 
-   <td colname="col2"> <p>的 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> 環境</a> 由標籤庫使用 </p> </td> 
+   <td colname="col2"> <p>此 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> 環境</a> 由標籤程式庫使用 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>擴充功能 </p> </td> 
@@ -112,7 +112,7 @@ Experience Platform Debugger 針對各個解決方案顯示的資訊如下：
   </tr> 
   <tr> 
    <td colname="col1"> <p>屬性 ID </p> </td> 
-   <td colname="col2"> <p>擴展中指定的標籤屬性的名稱 </p> </td> 
+   <td colname="col2"> <p>擴充功能中指定的標籤屬性名稱 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>邊緣網域 </p> </td> 

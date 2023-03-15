@@ -5,8 +5,8 @@ description: Experience PlatformReal-Time CDP B2B中相關帳戶功能的概述�
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
 source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 6%
+source-wordcount: '430'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ B2B企業通常將客戶資訊儲存在多個系統中，每個系統都只包�
 | 4 | Acme諮詢服務 | `http://www.acme.com/consulting` | 技術咨詢 | 紐約 | (212)471-0904 | x |
 | 5 | Acme IT |  |  | CA |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 有了相關賬戶， [!DNL Real-Time CDP B2B] 現在會顯示與您瀏覽之帳戶類似的帳戶清單。
 

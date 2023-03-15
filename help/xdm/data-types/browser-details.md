@@ -6,8 +6,8 @@ description: 本檔案概述「瀏覽器詳細資料」XDM資料類型。
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 12%
+source-wordcount: '263'
+ht-degree: 11%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 12%
 | `viewportHeight` | 整數 | 事件顯示內部的視窗垂直大小（像素）。 對於Web檢視事件，這是瀏覽器檢視區高度。 |
 | `viewportWidth` | 整數 | 事件顯示內部視窗的水準大小（像素）。 對於Web檢視事件，這是瀏覽器檢視區寬度。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

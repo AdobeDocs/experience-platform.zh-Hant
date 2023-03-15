@@ -6,7 +6,7 @@ feature: Observability
 source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 45%
+ht-degree: 52%
 
 ---
 
@@ -24,4 +24,4 @@ ht-degree: 45%
    * [UI指南](./alerts/ui.md)
    * [訂閱I/O事件通知](./alerts/subscribe.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)

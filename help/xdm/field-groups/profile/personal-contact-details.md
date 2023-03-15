@@ -6,8 +6,8 @@ description: 本文檔提供「個人聯繫人詳細資訊」架構欄位組的�
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 7%
+source-wordcount: '166'
+ht-degree: 6%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 7%
 | `mobilePhone` | [電話號碼](../../data-types/phone-number.md) | 說明該人員的行動電話號碼。 |
 | `personalEmail` | [電子郵件地址](../../data-types/email-address.md) | 說明人員的電子郵件地址。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

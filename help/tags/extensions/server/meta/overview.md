@@ -4,7 +4,7 @@ description: 了解Adobe Experience Platform中用於事件轉送的中繼轉換
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
 source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 0%
 | [!UICONTROL 自訂資料] | 要用於廣告傳送最佳化的其他資料，以JSON物件的形式提供。 請參閱 [[!DNL Conversions API] 檔案](https://developers.facebook.com/docs/marketing-api/conversions-api/parameters/custom-data) ，以了解此對象的接受屬性。<br><br>如果您要傳送購買事件，必須使用此區段來提供必要的屬性 `currency` 和 `value`. |
 | [!UICONTROL 測試事件] | 此選項用於驗證您的配置是否導致接收伺服器事件 [!DNL Meta] 如預期。 若要使用此功能，請選取 **[!UICONTROL 以測試事件的形式傳送]** 核取方塊，然後在下方輸入中提供您所選取的測試事件程式碼。 部署事件轉送規則後，如果您正確設定擴充功能和動作，應該會看到活動出現在 **[!DNL Test Events]** 檢視 [!DNL Meta Events Manager]. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 完成後，請選取 **[!UICONTROL 保留變更]** 將動作新增至規則設定。
 

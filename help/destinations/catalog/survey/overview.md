@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # 調查目的地概觀 {#survey-destinations}
 
-## 概覽 {#overview}
+## 總覽 {#overview}
 
 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見，並與Adobe Experience Platform共用資料。
 

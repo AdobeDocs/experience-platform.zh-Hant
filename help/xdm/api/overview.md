@@ -25,7 +25,7 @@ Schema Registry API提供數個端點，可讓您以程式設計方式管理Plat
 
 若要檢視所有可用端點和CRUD作業，請造訪 [結構註冊表API參考](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-## 結構描述
+## 綱要
 
 XDM結構表示並驗證匯入Platform的資料結構和格式。 架構由類和零個或多個架構欄位組組成。 您可以使用 `/schemas` 端點。 若要了解如何使用此端點，請參閱 [schemas endpoint指南](./schemas.md).
 

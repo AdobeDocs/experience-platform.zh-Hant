@@ -6,8 +6,8 @@ description: 本檔案概述「電子郵件地址XDM」資料類型。
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 2%
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 | `statusReason` | 目前的說明 `status`. |
 | `type` | 帳戶與人員的關聯方式(例如 `work` 或 `personal`)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 如需電子郵件地址資料類型的詳細資訊，請參閱公用XDM存放庫：

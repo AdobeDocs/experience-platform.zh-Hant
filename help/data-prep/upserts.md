@@ -52,7 +52,7 @@ ht-degree: 1%
 * 不過，您必須確定身分資料集與 [!DNL Profile] 資料集。 如果資料集相同，資料會遭到覆寫，而非更新；
 * 初始資料集必須為 [!DNL Profile]，身分資料集 **不應** 為 [!DNL Profile]. 否則，資料也會遭到覆寫，而非更新。
 
-#### 與身分資料集關聯的結構中的必填欄位 {#identity-dataset-required-fileds}
+#### 與身分資料集相關聯的結構中的必填欄位 {#identity-dataset-required-fileds}
 
 如果您的結構包含必要欄位，則必須隱藏資料集的驗證才能啟用 [!DNL Identity Service] 只接收身份。 通過應用 `disabled` 值 `acp_validationContext` 參數。 請參閱下列範例：
 

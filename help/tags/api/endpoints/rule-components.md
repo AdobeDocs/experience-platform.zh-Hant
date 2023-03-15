@@ -4,8 +4,8 @@ description: 了解如何在Reactor API中呼叫/rule_components端點。
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '1190'
-ht-degree: 6%
+source-wordcount: '1157'
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 6%
 | 條件 | 條件是評估在執行任何動作之前是否符合特定標準。 一旦發生事件，就會評估條件。 只有在滿足所有條件時，才會執行規則的動作。 |
 | 動作 | 這些是您希望規則實際執行的動作，例如傳送Adobe Analytics信標、擷取自訂訪客ID，或引發特定mbox。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 規則元件只屬於一個規則。 規則可以（且應該）有許多規則元件。
 
@@ -49,7 +49,7 @@ GET /rules/{RULE_ID}/rule_components
 | --- | --- |
 | `RULE_ID` | 此 `id` 要列出其元件的規則。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | 此 `id` 的規則元件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -312,7 +312,7 @@ POST /properties/{PROPERTY_ID}/rule_components
 | --- | --- |
 | `PROPERTY_ID` | 此 `id` 屬性（在下定義規則元件）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -369,7 +369,7 @@ curl -X POST \
 | `relationships` | 為規則元件建立必要關係的物件。 必須建立兩種關係： <ol><li>`extension`:定義此規則元件的擴充功能。 這必須是相同的擴充功能，其擴充功能套件會以 `delegate_descriptor_id`.</li><li>`rules`:在下定義此元件的規則。</li></ol>有關關係的更一般資訊，請參閱 [關係指南](../guides/relationships.md). |
 | `type` | 要建立的資源類型。 對於此端點，值必須是 `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -485,7 +485,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | 此 `id` 的規則元件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -516,7 +516,7 @@ curl -X PATCH \
 | `id` | 此 `id` 的規則元件。 這應符合 `{RULE_COMPONENT_ID}` 值。 |
 | `type` | 要更新的資源類型。 對於此端點，值必須是 `rule_components`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -628,7 +628,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 | --- | --- |
 | `RULE_COMPONENT_ID` | 此 `id` 刪除的規則元件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -668,7 +668,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 此 `id` 要列出其規則的規則元件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -772,7 +772,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 此 `id` 要查詢其擴充功能的規則元件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -892,7 +892,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 | --- | --- |
 | `{RULE_COMPONENT_ID}` | 此 `id` 要查找其來源的規則元件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 

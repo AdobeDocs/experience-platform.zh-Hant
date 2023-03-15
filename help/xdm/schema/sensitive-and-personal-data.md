@@ -1,7 +1,8 @@
 ---
 title: XDM中的敏感與個人資訊
 description: 了解Experience Data Model(XDM)中有關敏感個人資訊(SPI)和個人識別資訊(PII)的主要考量事項。
-source-git-commit: 76815389a1c87fbf908e499c50594a4b356a11a9
+exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
+source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%

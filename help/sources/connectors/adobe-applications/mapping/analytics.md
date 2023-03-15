@@ -6,7 +6,7 @@ description: Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe 
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3419'
 ht-degree: 15%
 
 ---
@@ -122,7 +122,7 @@ Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe Analytics資�
 | videopausetime | media.mediaTimed.pauseTime | 物件 | <!-- MISSING --> | {id（字串），值（數字）} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | 整數 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 分割對應欄位
 
@@ -134,7 +134,7 @@ Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe Analytics資�
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | 字串 | 行動作業系統版本。 |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | 整數 | 視訊廣告長度。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 生成的映射欄位
 
@@ -194,7 +194,7 @@ Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe Analytics資�
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | 整數 | 視訊章節的名稱。 |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | 整數 | 視訊的長度。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 進階對應欄位
 
@@ -274,4 +274,4 @@ Adobe Experience Platform可讓您透過Analytics來源內嵌Adobe Analytics資�
 | visit_search_engine | _experience.analytics.session.search.searchEngine | 字串 | 造訪的第一個搜尋引擎數值 ID。 |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | 整數 | 造訪的首次點擊時間戳記（單位為Unix時間）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -7,7 +7,7 @@ hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Adobe Experience Platform [!DNL Identity Service] 可協助您跨裝置和系統
 | 使用者身分命名空間 | 使用者身分命名空間代表已驗證（登入）的共用裝置使用者。 |
 | 上次驗證的使用者 | 如果裝置是由多個帳戶登入，則上次驗證的使用者代表上次登入裝置的使用者。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 [!DNL Shared Device Detection] 可建立兩個命名空間來運作。the **共用身分命名空間** 和 **使用者身分命名空間**.
 

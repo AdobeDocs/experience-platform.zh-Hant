@@ -1,51 +1,51 @@
 ---
-description: 伺服器和模板規範可通過公共端點「/創作/目標伺服器」在Adobe Experience Platform Destination SDK中配置。
-title: 伺服器和模板規範的配置選項Destination SDK
+description: 伺服器和模板規格可通過公共端點「/authoring/destination-servers」在Adobe Experience Platform Destination SDK中配置。
+title: 伺服器和模板規格的配置選項，Destination SDK
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 8%
+source-wordcount: '419'
+ht-degree: 7%
 
 ---
 
-# 流目標伺服器和模板規範的配置選項
+# 串流目的地伺服器和範本規格的設定選項
 
 ## 總覽 {#overview}
 
-伺服器和模板規範可通過公共端點在Adobe Experience Platform Destination SDK中配置 `/authoring/destination-servers`。 閱讀 [目標API終結點操作](./destination-server-api.md) 可在端點上執行的操作的完整清單。
+伺服器和模板規格可通過公共端點在Adobe Experience Platform Destination SDK中配置 `/authoring/destination-servers`. 閱讀 [目的地API端點作業](./destination-server-api.md) 可在端點上執行的操作的完整清單。
 
 ## 伺服器規格 {#server-specs}
 
-![已突出顯示伺服器配置](./assets/server-configuration.png)
+![突出顯示伺服器配置](./assets/server-configuration.png)
 
-客戶將能夠通過HTTP導出將資料從Adobe Experience Platform激活到您的目標。 伺服器配置包含有關伺服器接收消息的資訊（伺服器位於您的一側）。
+客戶將能透過HTTP匯出功能，將資料從Adobe Experience Platform啟動至您的目的地。 伺服器配置包含接收消息的伺服器（您這邊的伺服器）的相關資訊。
 
-此進程將用戶資料作為一系列HTTP消息傳送到目標平台。 下面的參數構成HTTP伺服器規範模板。
+此程式會以一系列HTTP訊息的形式將使用者資料傳送至您的目的地平台。 以下參數構成HTTP伺服器規格模板。
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `name` | 字串 | *必填。* 表示伺服器的友好名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
-| `destinationServerType` | 字串 | *必填。* 設定為 `URL_BASED` 流目標。 |
-| `templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 在 `value` 的子菜單。 如果您具有端點，如： `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有一個端點，如： `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | 字串 | *必填。* 填寫Experience Platform應連接到的API終結點的地址。 |
+| `name` | 字串 | *必填。* 代表您伺服器的好記名稱，只顯示給Adobe。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
+| `destinationServerType` | 字串 | *必填。* 設為 `URL_BASED` 用於串流目的地。 |
+| `templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 如果您在 `value` 欄位。 如果您的端點如下所示，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有如下的端點： `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | 字串 | *必填。* 填入Experience Platform應連線之API端點的位址。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 模板規格 {#template-specs}
 
-![已突出顯示模板配置](./assets/template-configuration.png)
+![醒目提示範本設定](./assets/template-configuration.png)
 
-模板規範允許您配置如何將導出的消息格式化到目標。 Adobe使用類似於 [金賈](https://jinja.palletsprojects.com/en/2.11.x/) 將XDM架構中的欄位轉換為目標支援的格式。 有關轉換的詳細資訊，請訪問以下連結：
+範本規格可讓您設定如何將匯出的訊息格式化至目的地。 Adobe使用類似以下的範本語言： [金子](https://jinja.palletsprojects.com/en/2.11.x/) 將XDM架構的欄位轉換為目的地支援的格式。 如需轉換的詳細資訊，請造訪下列連結：
 
 * [訊息格式](./message-format.md)
-* [使用模板語言進行身份、屬性和段成員身份轉換 ](./message-format.md#using-templating)
+* [使用範本語言進行身分、屬性和區段成員資格轉換 ](./message-format.md#using-templating)
 
 >[!TIP]
 >
->Adobe提供 [開發者工具](./create-template.md) 幫助您建立和test消息轉換模板。
+>Adobe提供 [開發人員工具](./create-template.md) 可協助您建立和測試訊息轉換範本。
 
-## 流目標示例配置  {#example-configuration}
+## 串流目的地範例設定  {#example-configuration}
 
 ```json
 {
@@ -70,9 +70,9 @@ ht-degree: 8%
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `httpMethod` | 字串 | *必填。* Adobe在對伺服器的調用中使用的方法。 選項為 `GET`。 `PUT`。 `POST`。 `DELETE`。 `PATCH`。 |
+| `httpMethod` | 字串 | *必填。* Adobe將用於呼叫伺服器的方法。 選項包括 `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `value` | 字串 | *必填。* 此字串是字元轉義版本，它將平台客戶的資料轉換為服務所需的格式。 <br> 有關如何編寫模板的資訊，請閱讀 [使用模板部](./message-format.md#using-templating)。 <br> 有關字元轉義的詳細資訊，請參閱 [RFC JSON標準，第7節](https://tools.ietf.org/html/rfc8259#section-7)。 <br> 有關簡單轉換的示例，請參閱 [配置檔案屬性](./message-format.md#attributes) 轉換。 |
-| `contentType` | 字串 | *必填。* 伺服器接受的內容類型。 此值極有可能 `application/json`。 |
+| `value` | 字串 | *必填。* 此字串是字元逸出版本，可將Platform客戶的資料轉換為服務預期的格式。 <br> 如需如何編寫範本的資訊，請閱讀 [使用模板部分](./message-format.md#using-templating). <br> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). <br> 如需簡單轉換的範例，請參閱 [設定檔屬性](./message-format.md#attributes) 轉換。 |
+| `contentType` | 字串 | *必填。* 伺服器接受的內容類型。 此值很可能 `application/json`. |
 
-{style=&quot;table-layout:auto&quot;&quot;
+{style="table-layout:auto"}

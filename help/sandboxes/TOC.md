@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '60'
-ht-degree: 46%
+ht-degree: 53%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 46%
    * [附錄](api/appendix.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)

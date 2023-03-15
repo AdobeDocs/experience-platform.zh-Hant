@@ -4,8 +4,8 @@ description: 了解如何在Reactor API中建立資源關係，包括每個資�
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 10%
+source-wordcount: '762'
+ht-degree: 5%
 
 ---
 
@@ -40,7 +40,7 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | `{PROPERTY_ID}` | 資源所屬屬性的ID。 |
 | `{RESOURCE_TYPE}` | 要建立的資源類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -89,7 +89,7 @@ curl -X POST \
 | `id` | 資源的唯一ID。 每個 `id` 必須和兄弟姐妹一起 `type` 屬性，表示相關資源的類型。 |
 | `type` | 由同層引用的資源類型 `id` 欄位。 接受的值包括 `data_elements`, `rules`, `extensions`，和 `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 按URL建立關係 {#url}
 
@@ -136,7 +136,7 @@ curl -X POST \
 | `id` | 資源的唯一ID。 每個 `id` 必須和兄弟姐妹一起 `type` 屬性，表示相關資源的類型。 |
 | `type` | 由同層引用的資源類型 `id` 欄位。 接受的值包括 `data_elements`, `rules`, `extensions`，和 `environments`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 按資源分列的關係需求 {#requirements}
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `property` | ✓ |  |  |
 | `entity` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 組建
 
@@ -166,7 +166,7 @@ curl -X POST \
 | `library` | ✓ |  |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 回呼
 
@@ -174,7 +174,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 公司
 
@@ -182,7 +182,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 資料元素
 
@@ -197,7 +197,7 @@ curl -X POST \
 | `updated_with_extension` | ✓ |  |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 環境
 
@@ -208,7 +208,7 @@ curl -X POST \
 | `host` | ✓ | ✓ |  |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 擴充功能
 
@@ -222,7 +222,7 @@ curl -X POST \
 | `extension_package` | ✓ | ✓ |  |
 | `updated_with_extension_package` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 主機
 
@@ -230,7 +230,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 程式庫
 
@@ -246,7 +246,7 @@ curl -X POST \
 | `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 附註
 
@@ -254,7 +254,7 @@ curl -X POST \
 | :--- | :---: | :---: | :---: |
 | `resource` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 屬性
 
@@ -268,7 +268,7 @@ curl -X POST \
 | `extensions` |  |  |  |
 | `extensions` |  |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 規則元件
 
@@ -283,7 +283,7 @@ curl -X POST \
 | `rules` | ✓ | ✓ |  |
 | `revisions` | ✓ |  |  |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 規則
 

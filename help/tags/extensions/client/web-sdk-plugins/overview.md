@@ -135,7 +135,7 @@ ht-degree: 49%
 
 ### `getTimeParting`
 
-可讓您設定 [`getTimeParting` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html). 此 `getTimeParting` 資料元素會擷取網站上發生任何可測量活動的時間詳細資訊。 如果您想要依指定日期範圍內任何可重複的時間劃分來劃分量度，此資料元素就十分實用。 例如，您可以比較一週內兩天之間的轉換率，例如所有週日比較所有週四。您也可以比較一天中的時段，例如所有早上比較所有晚上。
+可讓您設定 [`getTimeParting` Analytics外掛程式](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/gettimeparting.html?lang=zh-Hant). 此 `getTimeParting` 資料元素會擷取網站上發生任何可測量活動的時間詳細資訊。 如果您想要依指定日期範圍內任何可重複的時間劃分來劃分量度，此資料元素就十分實用。 例如，您可以比較一週內兩天之間的轉換率，例如所有週日比較所有週四。您也可以比較一天中的時段，例如所有早上比較所有晚上。
 
 此 `getTimeParting` 資料元素使用下列引數：
 

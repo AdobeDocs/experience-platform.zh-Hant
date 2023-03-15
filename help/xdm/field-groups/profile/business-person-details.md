@@ -4,7 +4,7 @@ description: 本檔案提供「 XDM業務人員詳細資訊」結構欄位群組
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '598'
 ht-degree: 6%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 6%
 | `isDeleted` | 布林值 | 指示此人員是否已在Marketo Engage中刪除。<br><br>使用 [Marketo來源連接器](../../../sources/connectors/adobe-applications/marketo/marketo.md),Marketo中刪除的任何記錄都會自動反映在即時客戶個人檔案中。 不過，與這些設定檔相關的記錄仍可能會保留在Data Lake。 設定 `isDeleted` to `true`，您可以使用欄位來篩選已在查詢資料湖時從來源刪除的記錄。 |
 | `organizations` | 字串陣列 | 人員工作所在的組織名稱清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

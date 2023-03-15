@@ -4,8 +4,8 @@ description: 使用Adobe Experience Platform中的Pega客戶決策中心目的�
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
 workflow-type: tm+mt
-source-wordcount: '1013'
-ht-degree: 1%
+source-wordcount: '1007'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 |---|---|
 | *CustomerID* | 唯一識別設定檔的通用使用者識別碼，位於 [!DNL Pega Customer Decision Hub] 和Adobe Experience Platform |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -60,7 +60,7 @@ ht-degree: 1%
 | 匯出類型 | **[!UICONTROL 設定檔]** | 匯出具有識別碼(*CustomerID*)、屬性（姓氏、名字、位置等） 和區段成員資格資料。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地一律以API為基礎的連線。 在Experience Platform中更新設定檔時，連接器會根據區段評估，將更新下游傳送至目的地平台。 如需詳細資訊，請參閱 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連接到目標 {#connect}
 

@@ -2,7 +2,8 @@
 keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；oracle服務雲端
 title: Oracle服務雲端來源連接器概述
 description: 了解如何使用API或使用者介面將Adobe Service Cloud與Oracle連線。
-source-git-commit: 078a266967cd7b0818f958283a58a8af4c886a21
+exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%

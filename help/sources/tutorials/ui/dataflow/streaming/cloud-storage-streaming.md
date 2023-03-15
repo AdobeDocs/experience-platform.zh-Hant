@@ -8,7 +8,7 @@ exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -118,7 +118,7 @@ ht-degree: 0%
 
 ![dataflow detail](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
-### 檢閱
+### 請檢閱
 
 此 **[!UICONTROL 檢閱]** 步驟顯示，允許您在建立新資料流之前對其進行查看。 詳細資料會分組為下列類別：
 

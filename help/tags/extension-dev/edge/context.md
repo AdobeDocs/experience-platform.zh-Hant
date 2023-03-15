@@ -1,10 +1,11 @@
 ---
 title: 邊緣擴充功能模組中的內容
 description: 了解內容物件，及其在邊緣屬性標籤延伸模組與程式庫模組互動中所扮演的角色。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 74%
+ht-degree: 77%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+> Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 邊緣擴充功能中的所有程式庫模組執行時，系統都會為其提供 `context` 物件。本文介紹 `context` 物件所提供的屬性，並說明這些屬性在程式庫模組中扮演的角色。
 
@@ -22,7 +23,7 @@ ht-degree: 74%
 
 ### [!DNL event]
 
-`event`物件代表觸發規則的事件，並包含下列值：
+此 `event` 物件代表觸發規則的事件，並包含下列值：
 
 ```js
 logger.log(context.arc.event);
@@ -41,7 +42,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-`request` 物件有兩個頂層屬性：`body` 和 `head`。`body`屬性包含Experience Data Model(XDM)資訊，當您導覽至&#x200B;**[!UICONTROL Launch]**&#x200B;並選取&#x200B;**[!UICONTROL Edge Trace]**&#x200B;標籤時，可在Adobe Experience Platform Debugger中加以檢查。
+`request` 物件有兩個頂層屬性：`body` 和 `head`。此 `body` 屬性包含Experience Data Model(XDM)資訊，當您導覽至 **[!UICONTROL Launch]** ，然後選取 **[!UICONTROL 邊跡]** 標籤。
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -99,11 +100,11 @@ module.exports = (context) => {
 
 ## 公用程式
 
-`utils`屬性表示一個對象，該對象提供特定於標籤運行時的實用程式。
+此 `utils` 屬性代表一個物件，提供標籤執行階段的特定公用程式。
 
 ### [!DNL logger]
 
-`logger`公用程式可讓您記錄使用[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)時，除錯工作階段期間所顯示的訊息。
+此 `logger` 公用程式可讓您記錄在使用 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');

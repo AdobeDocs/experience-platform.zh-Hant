@@ -8,8 +8,8 @@ description: 進一步了解資料啟用的預設使用量和比率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 3%
+source-wordcount: '1177'
+ht-degree: 1%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 3%
 | 已啟動至目的地的資料類型 | 設定檔資料，包括身分和身分對應 | 硬 | 目前，僅可匯出 *設定檔記錄屬性* 目的地。 目前不支援匯出描述事件資料的XDM屬性。 |
 | 已啟動至目的地的資料類型 — 陣列和地圖屬性支援 | 未提供 | 硬 | 現在， **not** 可匯出 *陣列或地圖屬性* 目的地。 此規則的例外是 [身分圖](/help/xdm/field-groups/profile/identitymap.md)，會匯出至串流和檔案型啟用中。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 串流啟動 {#streaming-activation}
 
@@ -58,7 +58,7 @@ ht-degree: 3%
 | --- | --- | --- | --- |
 | 每秒激活數（具有配置檔案導出的HTTP消息） | 不適用 | - | 目前，從Experience Platform傳送至合作夥伴目的地的API端點的訊息數目沒有限制。 <br> 任何限制或延遲由Experience Platform傳送資料的端點指定。 也務必檢查 [目錄](/help/destinations/catalog/overview.md) 連線和啟用資料的目標頁面。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 批次（基於檔案）激活 {#batch-file-based-activation}
 
@@ -70,7 +70,7 @@ ht-degree: 3%
 | 在指定小時可匯出的區段數上限 | 100 | 軟 | 建議將最多100個區段新增至批次目標資料流。 |
 | 每個檔案要激活的最大行數（記錄） | 500萬 | 硬 | Adobe Experience Platform會自動將每個檔案中500萬筆記錄（列）的匯出檔案分割。 每一列代表一個設定檔。 拆分檔案名後附加一個數字，表示該檔案是較大導出的一部分，例如： `filename.csv`, `filename_2.csv`, `filename_3.csv`. 如需詳細資訊，請閱讀 [排程區段](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 啟動批次目的地教學課程中的「 」。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 臨機啟動 {#ad-hoc-activation}
 
@@ -81,7 +81,7 @@ ht-degree: 3%
 | 針對臨機啟動工作啟動的區段 | 80 | 硬 | 目前，每個臨機啟動工作最多可啟動80個區段。 嘗試啟動每個作業超過80個區段會導致作業失敗。 此行為在未來版本中可能會有所變更。 |
 | 每個區段的同時臨機啟動工作 | 1 | 硬 | 每個區段請勿執行多個同時執行的臨機啟動工作。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Edge個人化目的地啟用 {#edge-destinations-activation}
 
@@ -93,7 +93,7 @@ ht-degree: 3%
 | 每個沙箱對應至個人化目的地的屬性數上限 | 20 | 硬 | 在資料流中，每個沙箱最多可將20個屬性對應至個人化目的地。 |
 | 對應至單一的區段數上限 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 目的地 | 50 | 軟 | 在啟動流程中，您最多可以對單一Adobe Target目的地啟動50個區段。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### Destination SDK護欄 {#destination-sdk-guardrails}
 
@@ -104,7 +104,7 @@ ht-degree: 3%
 | 最大數量 [私人自訂目的地](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 軟 | 您可以使用Destination SDK，建立最多5個私人自訂串流或批次目的地。 如果您需要建立5個以上的此類目的地，請聯絡自訂服務代表。 |
 | 配置檔案導出策略用於Destination SDK | <ul><li>`maxBatchAgeInSecs` （最少1.800個，最多3.600個）</li><li>`maxNumEventsInBatch` （最少1.000，最多10.000）</li></ul> | 硬 | 使用 [可配置聚合](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) 選項，請留意決定HTTP訊息傳送至API型目的地的頻率以及訊息應包含多少設定檔的最小值和最大值。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 目標限制和重試策略 {#destination-throttling-and-retry-policy}
 
@@ -114,7 +114,7 @@ ht-degree: 3%
 | --- | --- |
 | 企業目的地(HTTP API、Amazon Kinesis、Azure EventHubs) | 在95%的時間內，Experience Platform會嘗試為成功發送的報文提供少於10分鐘的吞吐量延遲，每個資料流每秒的請求速率小於10,000個。 <br> 如果向您的企業目的地發出失敗請求，Experience Platform會儲存失敗的請求並重試兩次，以將請求傳送至端點。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 其他Experience Platform服務的護欄 {#guardrails-other-services}
 

@@ -5,8 +5,8 @@ description: 本檔案概述「一般行銷偏好設定」欄位與「訂閱XDM�
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 2%
+source-wordcount: '891'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 2%
 | `time` | DateTime | 行銷偏好設定變更時的ISO 8601時間戳記（若適用）。 |
 | `val` | 字串 | 此行銷使用案例由客戶提供的偏好選擇。 請參閱 [下一節](#val) 以取得接受的值和定義。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `val` {#val}
 
@@ -49,7 +49,7 @@ ht-degree: 2%
 | `VI` | 個人的切身利益 | 為了保護個人的切身利益，需要收集資料。 |
 | `PI` | 公共利益 | 為特定目的收集資料是為了公共利益或行使官方權力而執行任務。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## `subscriptions` {#subscriptions}
 
@@ -99,7 +99,7 @@ ht-degree: 2%
 | `topics` | 代表客戶所訂閱之感興趣區域的字串陣列，可用來傳送相關內容。 |
 | `subscribers` | 可選的地圖類型欄位，代表已訂閱特定訂閱的一組識別碼（例如電子郵件地址或電話號碼）。 此物件中的每個索引鍵代表相關的識別碼，並包含兩個子屬性： <ul><li>`time`:身分訂閱時的ISO 8601時間戳記（若適用）。</li><li>`source`:訂閱者源。 這可以是任何描述性字串，但須為15個或更少字元。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 其他資源
 

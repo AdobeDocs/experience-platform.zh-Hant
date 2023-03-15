@@ -5,8 +5,8 @@ description: 本檔案概述使用自助來源（批次SDK）所需準備的設�
 exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 1%
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 | `sourceSpec` | 此 `sourceSpec` array包含與來源相關的一般資訊，包括在UI中呈現來源所需屬性的相關資訊、檔案連結，以及關於分頁、標題、內文和排程的參數。 此外， `sourceSpec` 描述了從基連接建立源連接所需的參數的架構，並且是建立源連接所必需的。 |
 | `exploreSpec` | 此 `exploreSpec` array定義探索和檢查源中包含的對象所需的參數。 此 `exploreSpec` 也會定義探索和檢查對象時傳回的回應格式。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 填充連接規範值
 

@@ -14,7 +14,7 @@ ht-degree: 52%
 
 # Adobe Experience Platform 隱私權服務 {#privacy}
 
-* [Privacy Service 概述](./home.md)
+* [Privacy Service 概觀](./home.md)
 * [管理Privacy Service權限](./permissions.md)
 * [Privacy Service和Experience Cloud應用程式](./experience-cloud-apps.md)
 * [隱私權要求的身分資料](./identity-data.md)

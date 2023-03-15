@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 27%
+ht-degree: 30%
 
 ---
 
@@ -66,4 +66,4 @@ ht-degree: 27%
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制區段符合資料使用情形](tutorials/governance.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+- [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)

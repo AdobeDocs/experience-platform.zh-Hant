@@ -8,7 +8,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 ![排程快顯視窗](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### 檢閱
+### 請檢閱
 
 此 **[!UICONTROL 檢閱]** 步驟，允許您在更新資料流之前先對其進行查看。
 

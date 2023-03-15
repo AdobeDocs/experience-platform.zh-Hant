@@ -4,8 +4,8 @@ description: 本檔案提供「 XDM業務促銷活動詳細資料結構」欄位
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 5%
+source-wordcount: '363'
+ht-degree: 4%
 
 ---
 
@@ -39,6 +39,6 @@ ht-degree: 5%
 | `webinarSessionDescription` | [!UICONTROL 字串] | 與此促銷活動相關聯的網路研討會會期說明。 |
 | `webinarSessionName` | [!UICONTROL 字串] | 與此促銷活動相關聯的網路研討會工作階段的名稱。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).

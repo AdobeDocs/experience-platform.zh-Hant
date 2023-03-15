@@ -6,8 +6,8 @@ description: 本檔案概述Commerce Experience Data Model(XDM)資料類型。
 exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 1%
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 | `purchases` | [[!UICONTROL 測量]](./measure.md) | 用於追蹤何時接受訂單。 購買事件是商務轉換中唯一的必要動作。 購買事件必須有參考的產品清單。 |
 | `saveForLaters` | [[!UICONTROL 測量]](./measure.md) | 產品清單會儲存以供日後使用，例如願望清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

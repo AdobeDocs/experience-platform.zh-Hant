@@ -1,6 +1,6 @@
 ---
 title: 在Adobe Experience Platform中建立動態區段
-description: 此影片提供使用平台UI建立動態區段的基本理解。
+description: 本影片可讓您基本了解如何使用Platform UI建立動態區段。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,23 +9,22 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: d06e3c979b9279c6178e5049442fa009927bbb11
+exl-id: 62345f9d-11fe-4659-a513-ee15938f0c85
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
+# 在Experience PlatformUI中建立動態區段
 
-# 在Experience Platform UI中建立動態區段
+以下影片旨在協助您了解如何建立動態區段。 它顯示客戶體驗範例，接著快速導覽中的主要功能 [!DNL Platform] 介面。 若要進一步了解區段以及如何在UI中建立區段，請參閱 [區段產生器指南](../ui/segment-builder.md).
 
-以下視訊旨在協助您瞭解建立動態區段。 它顯示客戶體驗範例，然後快速導覽[!DNL Platform]介面中的主要功能。 若要進一步瞭解區段以及如何在UI中建立區段，請閱讀[區段產生器指南](../ui/segment-builder.md)。
-
-如果您想要使用區段API建立區段，請閱讀[建立區段API指南](../tutorials/create-a-segment.md)。
+如果您有興趣使用區段API建立區段，請參閱 [建立區段API指南](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自錄制此視訊後可能已變更。 如需最新資訊，請參閱[區段產生器指南](../ui/segment-builder.md)。
+>Experience Platform使用者介面經常更新，且自此視訊錄制以來可能已變更。 如需最新資訊，請參閱 [區段產生器指南](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

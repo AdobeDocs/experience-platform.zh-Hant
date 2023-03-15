@@ -6,8 +6,8 @@ description: 本文檔提供「商務詳細資訊」架構欄位組的概述。
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 3%
+source-wordcount: '181'
+ht-degree: 1%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 | `commerce` | [Commerce](../../data-types/commerce.md) | 描述產品退貨、保修註冊和購物車/訂單流程的對象。 |
 | `productListItems` | 陣列 [產品清單項目](../../data-types/product-list-item.md) | 代表客戶所選產品的項目清單，具有特定選項和特定時間點的定價（可能與產品記錄不同）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

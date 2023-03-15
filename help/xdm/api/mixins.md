@@ -6,8 +6,8 @@ description: Schema Registry API中的/mixins端點可讓您以程式設計方�
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 3%
+source-wordcount: '1189'
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | 要從中檢索混合的容器： `global` 針對Adobe建立的mixin或 `tenant` 貴組織擁有的mixin。 |
 | `{QUERY_PARAMS}` | 可選的查詢參數，以依據篩選結果。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用參數的清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -68,7 +68,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標題。 (限制：300) |
 | `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON mixin（原始） `$ref` 和 `allOf` 已包含。 (限制：300) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -131,7 +131,7 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | 儲存您要擷取之混合器的容器： `global` 為Adobe建立的mixin或 `tenant` 貴組織擁有的混音。 |
 | `{MIXIN_ID}` | 此 `meta:altId` 或URL編碼 `$id` 你想查的混酒。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -157,7 +157,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 和 `allOf` 已解析，沒有標題或說明。 |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解析，包含描述符。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -411,7 +411,7 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | 此 `meta:altId` 或URL編碼 `$id` 你想重寫的混音。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -596,7 +596,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | URL編碼 `$id` URI或 `meta:altId` 要更新的混音。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -735,7 +735,7 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | URL編碼 `$id` URI或 `meta:altId` 您要刪除的混音。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 

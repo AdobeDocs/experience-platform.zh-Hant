@@ -1,69 +1,68 @@
 ---
-title: Adobe Experience Platform Web SDK的單頁應用程式實作
-description: 瞭解如何使用Adobe Target建立Adobe Experience Platform Web SDK的單頁應用程式(SPA)實作。
-keywords: target;adobe target;xdm檢視；視圖；單頁應用程式；SPA;SPA生命週期；客戶端；AB測試；AB；體驗目標；XT;VEC
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: 適用於Adobe Experience Platform Web SDK的單頁應用程式實作
+description: 了解如何使用Adobe Target建立Adobe Experience Platform Web SDK的單頁應用程式(SPA)實作。
+keywords: target;adobe target;xdm檢視；檢視；單頁應用程式；SPA;SPA生命週期；用戶端；AB測試；AB；體驗鎖定目標；XT;VEC
+exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '1665'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
+# 實作單頁應用程式
 
-# 單頁應用程式實作
-
-Adobe Experience Platform Web SDK提供多樣化功能，讓您的企業能夠運用新一代的用戶端技術(例如單頁應用程式(SPA))進行個人化。
+Adobe Experience Platform Web SDK提供豐富的功能，讓貴公司能以新世代用戶端技術(例如單頁應用程式(SPA))為基礎進行個人化。
 
 傳統的網站採用「頁面至頁面」導覽模型 (又稱為「多頁應用程式」)，網站設計與 URL 緊密結合，而從某網頁轉換到另一個網頁，需要頁面載入。
 
-現代的Web應用程式（例如單頁應用程式）則採用一種模型，可快速使用瀏覽器UI轉換，這通常不受頁面重新載入的影響。 客戶互動（例如捲動、點按和游標移動）可觸發這些體驗。 隨著現代網路的范式演變，傳統通用事件（例如頁面載入）與部署個人化和實驗的關聯性不再有效。
+單頁應用程式等現代Web應用程式已改採可加速瀏覽器UI轉譯的模型，這種轉譯通常與頁面重新載入無關。 這些體驗可由客戶互動觸發，例如捲動、點按和游標移動。 隨著現代網路的范式不斷演化，傳統通用事件（例如頁面載入）與部署個人化和實驗的相關性已失效。
 
 ![](assets/spa-vs-traditional-lifecycle.png)
 
-## 適用於SPA的平台網頁SDK的優點
+## 適用於SPA的Platform Web SDK的優點
 
-以下是將Adobe Experience Platform Web SDK用於單頁應用程式的一些優點：
+以下為將Adobe Experience Platform Web SDK用於單頁應用程式的幾項優點：
 
 * 可在頁面載入時快取所有選件，以減少對單一伺服器呼叫發出的多個伺服器呼叫。
-* 大幅改善您網站上的使用者體驗，因為選件會立即透過快取顯示，而不會因傳統伺服器呼叫而延遲。
-* 單一程式碼行和一次性開發人員設定可讓行銷人員透過SPA上的Visual Experience Composer(VEC)建立並執行A/B和Experience Targeting(XT)活動。
+* 大幅改善網站上的使用者體驗，因為選件會透過快取立即顯示，而不會因傳統伺服器呼叫而造成延遲時間。
+* 一行程式碼和一次性開發人員設定可讓行銷人員透過SPA上的可視化體驗撰寫器(VEC)建立和執行A/B和體驗鎖定目標(XT)活動。
 
 ## XDM檢視和單頁應用程式
 
-適用於SPA的Adobe Target VEC運用了稱為「檢視」的概念：邏輯的視覺元素群組，可組成SPA體驗。 因此，根據使用者互動，單頁應用程式可視為透過檢視進行轉換，而非URL。 檢視通常可代表整個網站或網站內的分組視覺元素。
+適用於SPA的Adobe Target VEC充分運用了「檢視」的概念：視覺元素的邏輯群組，可共同組成SPA體驗。 因此，單頁應用程式可視為根據使用者互動轉換檢視，而非轉換URL。 檢視通常可代表整個網站或網站內的分組視覺元素。
 
-為進一步說明「檢視」是什麼，下列範例使用React中建置的虛擬線上電子商務網站來探索範例「檢視」。
+為進一步說明檢視，下列範例使用在React中實作的假想線上電子商務網站來探索檢視範例。
 
-導覽至首頁後，英雄影像會促銷復活節銷售，以及網站上最新推出的產品。 在這種情況下，可以為整個主螢幕定義視圖。 此視圖可簡稱為「首頁」。
+導覽至首頁後，主圖影像會促銷復活節特賣活動以及網站上可用的最新產品。 在此情況下，可以為整個主畫面定義檢視。 這種觀點可以簡單地稱為「家」。
 
 ![](assets/example-views.png)
 
-隨著客戶對企業所銷售的產品越來越感興趣，他們決定按一下&#x200B;**產品**&#x200B;連結。 與首頁相似，產品網站整體可定義為一個檢視。此檢視可命名為「產品——全部」。
+隨著客戶對企業銷售的產品越來越感興趣，他們決定按一下 **產品** 連結。 與首頁相似，產品網站整體可定義為一個檢視。此檢視可命名為「products-all」。
 
 ![](assets/example-products-all.png)
 
-由於「檢視」可定義為整個網站或網站上的一組視覺元素，因此產品網站上顯示的四種產品可分組，並視為「檢視」。 此檢視可命名為「產品」。
+由於檢視可定義為整個網站或網站上的一組視覺元素，因此產品網站上顯示的四個產品可分組並視為檢視。 此檢視可命名為「products」。
 
 ![](assets/example-products.png)
 
-當客戶決定按一下&#x200B;**載入更多**&#x200B;按鈕以探索網站上的更多產品時，網站URL不會變更，但此處可建立檢視，僅代表顯示的第二列產品。 檢視名稱可能是&quot;products-page-2&quot;。
+客戶決定按一下 **載入更多** 按鈕來探索網站上的更多產品，這種情況下網站URL不會變更，但您可以在此處建立檢視，僅代表所顯示的第二列產品。 檢視名稱可以是「products-page-2」。
 
 ![](assets/example-load-more.png)
 
-客戶決定從網站購買幾種產品，然後繼續到結帳畫面。 在結帳站點上，客戶可以選擇正常交貨或快速交貨。 「檢視」可以是網站上任何視覺元素群組，因此可針對傳送偏好設定建立「檢視」，並稱為「傳送偏好設定」。
+客戶決定從網站購買幾項產品，然後繼續到結帳畫面。 在結帳站點，系統會為客戶提供選擇一般送貨或快遞的選項。 檢視可以是網站上的任何視覺元素群組，因此可針對傳送偏好設定建立檢視，並稱為「傳送偏好設定」。
 
 ![](assets/example-check-out.png)
 
-「檢視」的概念可進一步延伸。 這些只是網站上可定義的幾個檢視範例。
+檢視的概念可進一步延伸。 這些只是可在網站上定義的幾個檢視範例。
 
-## 實施XDM視圖
+## 實作XDM檢視
 
-XDM檢視可在Adobe Target中運用，讓行銷人員透過Visual Experience Composer在SPA上執行A/B和XT測試。 這需要執行下列步驟，才能完成一次性開發人員設定：
+可在Adobe Target中運用XDM檢視，讓行銷人員透過可視化體驗撰寫器在SPA上執行A/B和XT測試。 若要完成一次性開發人員設定，必須執行下列步驟：
 
-1. 安裝[Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
-2. 確定您單頁應用程式中要個性化的所有XDM視圖。
-3. 在定義XDM視圖後，為了傳遞AB或XT VEC活動，在單頁應用程式中實施`sendEvent()`函式，其中`renderDecisions`設定為`true`並且相應的XDM視圖。 必須在`xdm.web.webPageDetails.viewName`中傳遞XDM視圖。 此步驟可讓行銷人員運用Visual Experience Composer來啟動這些XDM的A/B和XT測試。
+1. 安裝 [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
+2. 決定您要個人化的單頁應用程式中的所有XDM檢視。
+3. 定義XDM檢視後，若要傳送AB或XT VEC活動，請實作 `sendEvent()` 函式 `renderDecisions` 設為 `true` 和單頁應用程式中對應的XDM檢視。 必須傳入XDM檢視 `xdm.web.webPageDetails.viewName`. 此步驟可讓行銷人員運用可視化體驗撰寫器，為這些XDM啟動A/B和XT測試。
 
    ```javascript
    alloy("sendEvent", { 
@@ -80,11 +79,11 @@ XDM檢視可在Adobe Target中運用，讓行銷人員透過Visual Experience Co
 
 >[!NOTE]
 >
->在第一個`sendEvent()`呼叫中，將會擷取並快取所有應轉譯給使用者的XDM檢視。 隨後傳入XDM視圖的`sendEvent()`調用將從快取中讀取，並在不進行伺服器調用的情況下呈現。
+>第一個 `sendEvent()` 呼叫，系統會擷取並快取所有應轉譯給使用者的XDM檢視。 後續 `sendEvent()` 傳入XDM檢視的呼叫將從快取中讀取，且不需伺服器呼叫即可呈現。
 
-## `sendEvent()` 函式示例
+## `sendEvent()` 函式範例
 
-本節概述三個範例，說明如何在React中呼叫`sendEvent()`函式，以建立虛擬的電子商務SPA。
+本節概述三個範例，說明如何叫用 `sendEvent()` 函式（在React中）以取得假想的電子商務SPA。
 
 ### 範例1:A/B測試首頁
 
@@ -92,7 +91,7 @@ XDM檢視可在Adobe Target中運用，讓行銷人員透過Visual Experience Co
 
 ![](assets/use-case-1.png)
 
-要在整個主站點上運行A/B測試，`sendEvent()`必須在XDM `viewName`設定為`home`時調用：
+要在整個主站點上運行A/B測試， `sendEvent()` 必須與XDM叫用 `viewName` 設為 `home`:
 
 ```jsx
 function onViewChange() { 
@@ -132,7 +131,7 @@ history.listen(onViewChange);
 
 ### 範例2:個人化產品
 
-行銷團隊希望在使用者按一下「載入更多」後，將價格標籤顏色變更為紅色，以個人化第二列產品。****
+行銷團隊想要將使用者點按後的價格標籤顏色變更為紅色，以個人化第二列產品 **載入更多**.
 
 ![](assets/use-case-2.png)
 
@@ -170,11 +169,11 @@ class Products extends Component {
 
 ### 範例3:A/B測試傳送偏好設定
 
-行銷團隊想要執行A/B測試，以檢視在選取「快速傳送」時，將按鈕的顏色從藍色變更為紅色，是否可大幅提升轉換率（而不是針對兩個傳送選項保留按鈕的藍色）。****
+行銷團隊想執行A/B測試，以查看按鈕的顏色是否在 **快遞** 選取「 」可增加轉換次數（與兩個傳送選項的按鈕均保持藍色相反）。
 
 ![](assets/use-case-3.png)
 
-若要根據所選的傳送偏好設定個人化網站上的內容，可針對每個傳送偏好設定建立檢視。 選擇&#x200B;**Normal Delivery**&#x200B;時，該視圖可命名為「checkout-normal」。 如果選擇了「快遞」(Express Delivery)**，則「視圖」(View)可命名為「checkout-express」。**
+若要根據選取的傳送偏好設定個人化網站上的內容，可針對每個傳送偏好設定建立一個檢視。 當 **正常傳送** ，則可將「檢視」命名為「checkout-normal」。 若 **快遞** ，則可將「檢視」命名為「checkout-express」。
 
 ```jsx
 function onViewChange(viewName) { 
@@ -215,23 +214,23 @@ class Checkout extends Component {
 } 
 ```
 
-## 使用Visual Experience Composer進行SPA
+## 使用適用於SPA的可視化體驗撰寫器
 
-當您定義完XDM視圖並使用傳遞的XDM視圖實施`sendEvent()`後，VEC將能夠檢測這些視圖，並允許用戶為A/B或XT活動建立操作和修改。
+完成XDM檢視的定義並實作後 `sendEvent()` 傳入這些XDM檢視後，VEC就能偵測這些檢視，並允許使用者建立A/B或XT活動的動作和修改。
 
 >[!NOTE]
 >
->若要將VEC用於您的SPA，您必須安裝並啟動[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)或[Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension。
+>若要針對SPA使用VEC，您必須安裝並啟用 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) 或 [鉻黃](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper擴充功能。
 
 ### 「修改」面板
 
-「修改」面板會擷取為特定檢視所建立的動作。 視圖的所有操作都在該視圖下分組。
+「修改」面板會擷取為特定檢視建立的動作。 視圖的所有操作都在該視圖下分組。
 
 ![](assets/modifications-panel.png)
 
 ### 動作
 
-按一下動作會醒目顯示將套用該動作之網站上的元素。在「視圖」(View)下建立的每個VEC操作都具有以下表徵圖：**資訊**、**編輯**、**克隆**、**移動**&#x200B;和&#x200B;**刪除**。 下表將詳細說明這些圖示。
+按一下動作會醒目顯示將套用該動作之網站上的元素。在檢視下建立的每個VEC動作都有下列圖示： **資訊**, **編輯**, **原地複製**, **移動**，和 **刪除**. 下表將詳細說明這些表徵圖。
 
 ![](assets/action-icons.png)
 
@@ -239,55 +238,55 @@ class Checkout extends Component {
 |---|---|
 | 資訊 | 顯示此動作的詳細資料。 |
 | 編輯 | 可讓您直接編輯該動作的屬性。 |
-| 原地複製 | 將動作原地複製至一或多個存在於修改面板上的檢視，或原地複製至一或多個您已在 VEC 中瀏覽及導覽的目標檢視。動作未必會存在於修改面板中。<br/><br/>**注意：** 執行克隆操作後，您必須透過瀏覽導覽至VEC中的檢視，以查看克隆的動作是否為有效的操作。如果無法將動作套用到檢視，則會出現錯誤. |
-| 移動 | 可將動作移動至頁面載入事件，或修改面板中已存在的任何其他檢視。<br/><br/>**頁面載入事件：** 與頁面載入事件相對應的任何動作都會套用至網頁應用程式的初始頁面載入。<br/><br/>**注意：**&#x200B;執行移動操作後，必須通過瀏覽導航到VEC中的「視圖」(View)，以查看移動是否為有效操作。如果無法將動作套用到檢視，則會出現錯誤. |
+| 原地複製 | 將動作原地複製至一或多個存在於修改面板上的檢視，或原地複製至一或多個您已在 VEC 中瀏覽及導覽的目標檢視。動作未必會存在於修改面板中。<br/><br/>**注意：** 執行原地復製作業後，您必須透過瀏覽導覽至VEC中的檢視，才能查看原地複製動作是否為有效作業。 如果無法將動作套用到檢視，則會出現錯誤. |
+| 移動 | 可將動作移動至頁面載入事件，或修改面板中已存在的任何其他檢視。<br/><br/>**頁面載入事件：** 任何對應至頁面載入事件的動作都會套用至網頁應用程式的初始頁面載入上。 <br/><br/>**注意：** 執行移動作業後，您必須透過瀏覽導覽至VEC中的檢視，才能查看該移動作業是否有效。 如果無法將動作套用到檢視，則會出現錯誤. |
 | 刪除 | 刪除動作。 |
 
-## 使用VEC for SPA範例
+## 使用VEC取得SPA範例
 
-本節概述使用Visual Experience Composer為A/B或XT活動建立動作和修改的三個範例。
+本節概述使用可視化體驗撰寫器來建立A/B或XT活動之動作和修改的三個範例。
 
-### 範例1:更新「首頁」檢視
+### 範例1:更新「首頁」視圖
 
-在本文稍早的部分，已為整個首頁定義了名為&quot;home&quot;的視圖。 現在，行銷團隊想要以下列方式更新「首頁」檢視：
+在本文檔的前面，為整個首頁定義了一個名為「home」的視圖。 現在，行銷團隊想要以下列方式更新「首頁」檢視：
 
-* 將&#x200B;**新增至購物車**&#x200B;和&#x200B;**贊**&#x200B;按鈕變更為較淺的藍色分享。 在頁面載入期間，這應該會發生，因為它涉及變更頁首的元件。
-* 將&#x200B;**2019**&#x200B;的最新產品標籤變更為&#x200B;**2019**&#x200B;最熱的產品，並將文字顏色變更為紫色。
+* 變更 **新增至購物車** 和 **贊** 按鈕以更淺的藍色。 這應會在頁面載入期間發生，因為涉及變更標頭的元件。
+* 變更 **2019年最新產品** 標籤為 **2019年最熱的產品** 並將文字顏色變更為紫色。
 
-要在VEC中進行這些更新，請選擇&#x200B;**合成**&#x200B;並將這些更改應用到「首頁」視圖。
+若要在VEC中進行這些更新，請選取 **撰寫** 並將這些變更套用至「首頁」檢視。
 
 ![](assets/vec-home.png)
 
 ### 範例2:變更產品標籤
 
-對於「products-page-2」檢視，行銷團隊會將&#x200B;**Price**&#x200B;標籤變更為&#x200B;**Sale Price**，並將標籤顏色變更為紅色。
+對於「products-page-2」檢視，行銷團隊想要變更 **價格** 標籤為 **售價** 並將標籤顏色變更為紅色。
 
-若要在VEC中進行這些更新，必須執行下列步驟：
+若要在VEC中進行這些更新，需執行下列步驟：
 
-1. 在VEC中選擇&#x200B;**瀏覽**。
-2. 在站點的頂部導航中選擇&#x200B;**產品**。
-3. 選擇&#x200B;**Load More**&#x200B;一次，以檢視第二列產品。
-4. 在VEC中選擇&#x200B;**合成**。
-5. 套用動作，將文字標籤變更為&#x200B;**Sale Price**，並將顏色變更為紅色。
+1. 選擇 **瀏覽** 在VEC中。
+2. 選擇 **產品** ，即可檢視此屬性。
+3. 選擇 **載入更多** 一次，檢視產品的第二列。
+4. 選擇 **撰寫** 在VEC中。
+5. 套用動作以將文字標籤變更為 **售價** 顏色變成紅色。
 
 ![](assets/vec-products-page-2.png)
 
 ### 範例3:個人化傳送偏好設定樣式
 
-檢視可在精細層級定義，例如狀態或選項按鈕中的選項。 在本文稍早的章節中，已針對傳送偏好設定、「checkout-normal」和「checkout-express」來定義檢視。 行銷團隊想要將「checkout-express」檢視的按鈕顏色變更為紅色。
+檢視可在精細層級定義，例如選項按鈕的狀態或選項。 在本檔案的前面，已針對傳送偏好設定、「checkout-normal」和「checkout-express」定義檢視。 行銷團隊想要將「checkout-express」檢視的按鈕顏色變更為紅色。
 
-若要在VEC中進行這些更新，必須執行下列步驟：
+若要在VEC中進行這些更新，需執行下列步驟：
 
-1. 在VEC中選擇&#x200B;**瀏覽**。
+1. 選擇 **瀏覽** 在VEC中。
 2. 將產品新增至網站上的購物車。
 3. 選取網站右上角的購物車圖示。
-4. 選擇&#x200B;**結帳您的訂單**。
-5. 在&#x200B;**傳送偏好設定**&#x200B;下方，選取「快速傳送&#x200B;**」選項按鈕。**
-6. 在VEC中選擇&#x200B;**合成**。
-7. 將&#x200B;**Pay**&#x200B;按鈕顏色變更為紅色。
+4. 選擇 **結帳訂單**.
+5. 選取 **快遞** 選項按鈕 **傳送偏好設定**.
+6. 選擇 **撰寫** 在VEC中。
+7. 變更 **支付** 按鈕顏色變為紅色。
 
 >[!NOTE]
 >
->在選擇&#x200B;**Express Delivery**&#x200B;單選按鈕之前，「checkout-express」視圖不會出現在「修改」面板中。 這是因為在選擇了&#x200B;**快速傳送**&#x200B;選項按鈕時會執行`sendEvent()`函式，因此VEC在選擇單選按鈕之前不會察覺到「checkout-express」視圖。
+>「checkout-express」檢視不會出現在「修改」面板中，直到 **快遞** 選項按鈕。 這是因為 `sendEvent()` 函式於 **快遞** 已選取選項按鈕，因此在選取選項按鈕之前，VEC不會察覺「checkout-express」檢視。
 
 ![](assets/vec-delivery-preference.png)

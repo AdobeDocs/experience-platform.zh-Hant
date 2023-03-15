@@ -1,10 +1,11 @@
 ---
 title: 使用Adobe Target Debugger測試Adobe Experience Platform實作
 description: 了解如何使用Adobe Experience Platform Debugger測試和除錯已啟用Adobe Target的網站。
-source-git-commit: 1ce7ac78936040d76faa3a58b92333a737fbeb66
+exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
+source-git-commit: c3b5b63767a934be16a479d04853e1250b3bf775
 workflow-type: tm+mt
-source-wordcount: '1220'
-ht-degree: 5%
+source-wordcount: '1211'
+ht-degree: 4%
 
 ---
 
@@ -37,7 +38,7 @@ Adobe Experience Platform Debugger提供一套實用工具，可用來測試和�
 | 全域請求名稱 | 的名稱 [全域mbox](https://developer.adobe.com/target/implement/client-side/atjs/global-mbox/global-mbox-overview/?) 對於Target實作，預設名稱為 `target-global-mbox`. |
 | 頁面載入事件 | 指示 [頁面載入事件](https://developer.adobe.com/target/implement/client-side/atjs/how-atjs-works/how-atjs-works/#atjs-2x-diagrams) 已發生。 at.js 2.x僅支援頁面載入事件。對於不相容的版本，此值預設為 `None`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## [!DNL Network Requests] {#network}
 
@@ -93,7 +94,7 @@ Adobe Experience Platform Debugger提供一套實用工具，可用來測試和�
 | [!DNL vst] | 此 [Experience CloudIdentity服務API設定](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html). |
 | [!DNL webGLRenderer] | 提供頁面上使用之WebGL轉譯器的相關資訊（若適用）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 要查看特定網路事件參數的詳細資訊，請選擇相關的表單元格。 此時會出現彈出視窗，提供參數的詳細資訊，包括說明及其值。 如果值是JSON物件，對話方塊會包含物件結構的完全導覽檢視。
 
@@ -111,4 +112,4 @@ Adobe Experience Platform Debugger提供一套實用工具，可用來測試和�
 | [!DNL Target Diable] | 啟用後，頁面上會停用所有Target功能。 這可用來判斷特定於Target的選件是否是造成頁面上問題的原因。 |
 | [!DNL Target Trace] | **附註**:您必須登入才能啟用此功能。<br><br>啟用後，追蹤Token會隨每個請求一併傳送，並在每個回應中傳回追蹤物件。 `at.js` 解析回應 `window.__targetTraces`. 每個跟蹤對象包含與[[!DNL Network Requests] 標籤]，並新增下列內容：<ul><li>設定檔快照，可讓您查看請求前後的屬性。</li><li>匹配和不匹配 [活動](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html)，顯示目前設定檔為何未符合特定活動的資格。<ul><li>這可協助識別設定檔在指定時間點符合哪些對象資格，以及為何需要。</li><li>Target檔案包含有關不同活動類型的詳細資訊</li></ul></li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

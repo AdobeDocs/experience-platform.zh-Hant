@@ -6,8 +6,8 @@ description: 架構註冊表API中的/auditlog端點可讓您擷取已對現有X
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 3%
+source-wordcount: '401'
+ht-degree: 1%
 
 ---
 
@@ -35,7 +35,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要檢索其審核日誌的資源。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -125,4 +125,4 @@ curl -X GET \
 | `path` | A [JSON指標](../../landing/api-fundamentals.md#json-pointer) 字串，指出已變更或新增之特定欄位的路徑。 |
 | `value` | 指派給新欄位或更新欄位的值。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

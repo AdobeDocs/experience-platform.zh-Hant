@@ -1,7 +1,8 @@
 ---
 title: 使用Python和SQLAlchemy管理平台資料
 description: 了解如何使用SQLAlchemy來使用Python（而非SQL）管理您的平台資料。
-source-git-commit: 6b7de4236982181eaac2aa37d525604cba31198e
+exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
+source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%

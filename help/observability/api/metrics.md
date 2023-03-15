@@ -6,8 +6,8 @@ description: 了解如何使用可觀察性前瞻分析API在Experience Platform
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
-source-wordcount: '1409'
-ht-degree: 4%
+source-wordcount: '1388'
+ht-degree: 3%
 
 ---
 
@@ -86,7 +86,7 @@ curl -X POST \
 | `aggregator` | 指定應用於將多個時間序列記錄分組為單個結果的聚合函式。 有關可用聚合器的詳細資訊，請參閱 [OpenTSDB檔案](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 | `downsample` | 選用欄位，可讓您指定匯總函式，透過將欄位排序為間隔（或「貯體」）來降低量度資料的取樣率。 縮減取樣的間隔由 `granularity` 屬性。 有關縮減取樣的詳細資訊，請參閱 [OpenTSDB檔案](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -180,7 +180,7 @@ curl -X POST \
 | `groupBy` | 若在 `filter` 量度的屬性，以及 `groupBy` 選項設為true時，此物件將會包含對應之資料集的ID `dps` 屬性。<br><br>如果此物件在回應中顯示為空白，則對應的 `dps` 屬性會套用至中提供的所有資料集 `filters` 陣列（或所有資料集） [!DNL Platform] 若未提供篩選器)。 |
 | `dps` | 指定量度、篩選器和時間範圍的傳回資料。 此物件中的每個索引鍵代表時間戳記，以及指定量度的對應值。 每個資料點之間的時段取決於 `granularity` 值。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 附錄
 
@@ -211,7 +211,7 @@ curl -X POST \
 | **timeseries.data.collection.inlet.success** | 對一個資料入口或所有資料入口成功的HTTP呼叫總數。 | 入口ID |
 | **timeseries.data.collection.inlet.failure** | 對一個資料入口或所有資料入口的失敗HTTP調用總數。 | 入口ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Identity Service] {#identity}
 
@@ -227,7 +227,7 @@ curl -X POST \
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 命名空間的身分圖表中儲存的不重複身分數。 | 命名空間ID(**必填**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 針對特定圖表強度（「未知」、「弱」或「強」），儲存在您IMS組織之身分圖表中的不重複身分數。 | 圖表強度(**必填**) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### [!DNL Real-Time Customer Profile] {#profile}
 
@@ -239,7 +239,7 @@ curl -X POST \
 | timeseries.profiles.dataset.recordsuccess.count | 寫入其資料源的記錄數(按 [!DNL Profile]，適用於一個資料集或所有資料集。 | 資料集 ID |
 | timeseries.profiles.dataset.batchsuccess.count | 數量 [!DNL Profile] 為資料集或所有資料集批次匯入。 | 資料集 ID |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 錯誤訊息
 
@@ -274,7 +274,7 @@ curl -X POST \
 | `title` | 包含錯誤訊息的字串，以及可能發生的可能原因。 |
 | `report` | 包含錯誤的相關內容資訊，包括觸發錯誤的操作所使用的沙箱和IMS組織。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 下表列出API可傳回的不同錯誤碼：
 
@@ -286,4 +286,4 @@ curl -X POST \
 | `INSGHT-1002-500` | 服務錯誤 | 由於內部錯誤，無法處理該請求。 請再試一次請求，如果問題仍然存在，請聯繫Adobe支援。 |
 | `INSGHT-1003-401` | 沙箱驗證錯誤 | 由於沙箱驗證錯誤，無法處理請求。 確定您在 `x-sandbox-name` 標題代表IMS組織的有效且已啟用的沙箱，然後再次嘗試請求。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

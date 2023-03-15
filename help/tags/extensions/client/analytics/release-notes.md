@@ -15,7 +15,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Analytics標籤擴充功能（通常為回應的更新而更新） [AppMeasurement JavaScript程式庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant). 請參閱 [AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 以取得下列特定版本的詳細資訊。
+>Analytics標籤擴充功能（通常為回應的更新而更新） [AppMeasurement JavaScript程式庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant). 請參閱 [AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant) 以取得下列特定版本的詳細資訊。
 
 ## 2022 年 9 月 23 日
 
@@ -57,7 +57,7 @@ ht-degree: 84%
 
 **錯誤修正**:
 
-* 升級 [AppMeasurement至v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* 升級 [AppMeasurement至v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant).
 * 更新後援linkName以鏡像Activity Map邏輯，而非使用innerHTML。
 
 ## 2020 年 8 月 6 日
@@ -70,7 +70,7 @@ ht-degree: 84%
 
 **功能**:
 
-* [AppMeasurement 已更新為 2.22.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)。
+* [AppMeasurement 已更新為 2.22.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)。
 * UI 些微變動，現在其他設定會以選單收合的形式顯示，而非核取方塊。
 
 ## 2020 年 6 月 2 日
@@ -98,7 +98,7 @@ ht-degree: 84%
 
 **功能**:
 
-* [將 AppMeasurement 更新至 2.20.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* [將 AppMeasurement 更新至 2.20.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)
 
 ## 2020 年 3 月 2 日
 
@@ -110,7 +110,7 @@ ht-degree: 84%
 
 **功能**:
 
-* [將 AppMeasurement 更新至 2.18.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
+* [將 AppMeasurement 更新至 2.18.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)
 * 將 Audience Manager 模組中的 DIL 資料庫更新至 9.4 版
 * 增加擴充功能中輸入欄位的長度
 * 擴充功能和動作設定中的 eVar 和 prop 現在會顯示 Analytics 的好記名稱

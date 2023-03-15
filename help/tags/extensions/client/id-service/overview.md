@@ -5,7 +5,7 @@ exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 77%
+ht-degree: 81%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 77%
 
 請使用此參考資料來了解有關設定Adobe Experience Cloud ID擴充功能的資訊，以及使用此擴充功能建立規則時可用的選項。
 
-使用此擴充功能將Experience CloudIdentity服務與您的屬性整合。 透過Experience CloudIdentity Service，您可以為網站訪客建立並儲存唯一的永久性識別碼。
+使用此擴充功能整合 Experience Cloud Identity 服務與您的屬性。使用 Experience Cloud Identity 服務，您可以為網站訪客建立並儲存唯一的永久性識別碼。
 
 ## 設定 Experience Cloud ID 擴充功能
 
@@ -118,4 +118,4 @@ ht-degree: 77%
    * 已登出
 
 1. （選用）選取 **[!UICONTROL 新增]** 來設定更多客戶ID。
-1. 選擇 **[!UICONTROL 保留變更]**.
+1. 選取&#x200B;**[!UICONTROL 「保留變更」]**。

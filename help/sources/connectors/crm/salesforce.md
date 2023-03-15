@@ -6,7 +6,7 @@ description: 了解如何使用API或使用者介面將Salesforce連線至Adobe 
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '897'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 支援CRM提供
 | `has_abm` | 布林值，指出您是否訂閱 [!DNL Marketo Account-Based Marketing]. | `false` |
 | `has_msi` | 布林值，指出您是否被切換至 [!DNL Marketo Sales Insight]. | `false` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 執行指令碼
 

@@ -4,8 +4,8 @@ description: 本檔案概述Experience Data Model(XDM)中的XDM Business Campaig
 exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 4%
+source-wordcount: '237'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
 | `campaignName` | 字串 | 促銷活動的名稱。 |
 | `campaignType` | 字串 | 促銷活動類型或目標對象。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 若要了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係，請參閱 [Real-Time CDP B2B版中的結構關係](../../tutorials/relationship-b2b.md)
 

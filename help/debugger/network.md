@@ -1,6 +1,6 @@
 ---
-title: 網路頁籤
-description: 瞭解如何在Adobe Experience Platform調試器中使用「網路」頁籤。
+title: 網路標籤
+description: 了解如何使用Adobe Experience Platform Debugger中的「網路」標籤。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；網路；資訊
 seo-description: Experience Platform Debugger Network screen
 seo-title: Network Tab
@@ -13,9 +13,9 @@ ht-degree: 62%
 
 ---
 
-# 「網路」頁籤
+# 網路標籤
 
-的 **網路** 頁籤聚合頁面上所有Adobe Experience Cloud解決方案調用，並按從左到右的順序顯示它們。 標準參數會自動加上好記名稱的標示，並將相同角色的常見參數編排為分組顯示。
+此 **網路** tab會匯總頁面上發出的所有Adobe Experience Cloud解決方案呼叫，並從左到右依序顯示。 標準參數會自動加上好記名稱的標示，並將相同角色的常見參數編排為分組顯示。
 
 ![](images/network.jpg)
 
@@ -29,9 +29,9 @@ ht-degree: 62%
 
 ![](images/network-analytics.jpg)
 
-要返回顯示所有解決方案，請選擇 **[!UICONTROL 網路]**
+若要返回顯示所有解決方案，請選取 **[!UICONTROL 網路]**
 
-在「網路」視圖中的項上選擇以查看展開視圖。 從展開的視圖視窗中，您可以將顯示的資訊複製到剪貼簿。
+在「網路」視圖中的項上選擇以查看擴展視圖。 從展開的視圖視窗中，您可以將顯示的資訊複製到剪貼簿。
 
 ![](images/network-expand.jpg)
 
@@ -39,6 +39,6 @@ ht-degree: 62%
 
 ![](images/copy.jpg)-->
 
-要清除清單，請選擇 **[!UICONTROL 刪除事件]**。
+要清除清單，請選擇 **[!UICONTROL 移除事件]**.
 
-要下載包含此螢幕上資訊的Excel檔案，請選擇 **[!UICONTROL 下載]**。
+若要下載包含此畫面上資訊的Excel檔案，請選取 **[!UICONTROL 下載]**.

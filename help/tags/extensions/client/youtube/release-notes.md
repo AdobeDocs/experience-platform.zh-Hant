@@ -5,7 +5,7 @@ exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 36%
 * 多個iFrame之頁面的錯誤修正
 * 品牌名稱變更
 
-## 2021年4月23日
+## 2021 年 4 月 23 日
 
 ### YouTube影片追蹤擴充功能2.0.0
 

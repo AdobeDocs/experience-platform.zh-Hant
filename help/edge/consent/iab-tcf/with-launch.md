@@ -81,7 +81,7 @@ XDM體驗事件中應包含同意字串。 若要這麼做，請使用XDM物件�
 1. 展開 **[!UICONTROL consentString]** 標題，然後展開第一個項目，然後填入下列值：
 
 * `consentStandard`:IAB TCF
-* `consentStandardVersion`:2.0
+* `consentStandardVersion`: 2.0
 * `consentStringValue`:%IAB TCF同意字串%
 * `gdprApplies`:%IAB TCF同意GDPR%
 

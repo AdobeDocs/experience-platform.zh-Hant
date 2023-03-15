@@ -6,13 +6,13 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 2cec87d3f45b1b774925a9b669b53a958e65e57a
 workflow-type: tm+mt
 source-wordcount: '780'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 # 資料流概觀
 
-資料流代表實作Adobe Experience Platform Web和Mobile SDK時的伺服器端設定。 若 [configure命令](../fundamentals/configuring-the-sdk.md) 在SDK中會控制必須在用戶端上處理的項目(例如 `edgeDomain`)，資料流會處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時， `edgeConfigId` 用於參考資料流。 這可讓您更新伺服器端設定，而無須在網站上變更程式碼。
+資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。若 [configure命令](../fundamentals/configuring-the-sdk.md) 在SDK中會控制必須在用戶端上處理的項目(例如 `edgeDomain`)，資料流會處理SDK的所有其他設定。 當請求傳送至Adobe Experience Platform Edge Network時， `edgeConfigId` 用於參考資料流。 這可讓您更新伺服器端設定，而無須在網站上變更程式碼。
 
 您可以透過選取 **[!UICONTROL 資料流]** 在Adobe Experience Platform UI或資料收集UI的左側導覽中。
 

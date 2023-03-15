@@ -5,7 +5,7 @@ description: 本檔案概述使用自助來源（批次SDK）所需準備的設�
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1690'
+source-wordcount: '1687'
 ht-degree: 1%
 
 ---
@@ -265,7 +265,7 @@ ht-degree: 1%
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | 定義 `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.spec.properties` | 定義用戶提供的參數以獲取資源值。 | 請參閱 [其他資源](#user-input) 例如，用戶輸入的參數 `spec.properties`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 其他資源 {#appendix}
 

@@ -4,8 +4,8 @@ description: Adobe Campaign Managed Cloud Services提供設計跨管道客戶體
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
 source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 4%
+source-wordcount: '1362'
+ht-degree: 3%
 
 ---
 
@@ -61,7 +61,7 @@ Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、a
 | GAID | Google Advertising ID | 當源標識為GAID命名空間時，選擇GAID目標標識。 |
 | IDFA | Apple ID for Advertisers | 如果來源識別為IDFA命名空間，請選取IDFA目標識別。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -72,7 +72,7 @@ Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、a
 | 匯出類型 | **[!UICONTROL 設定檔]** | 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，如「選取設定檔屬性」畫面中所選 [目的地啟動工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以3、6、8、12或24小時為增量將檔案匯出至下游平台。 深入了解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連接到目標 {#connect}
 

@@ -1,24 +1,24 @@
 ---
-title: '存取ECID '
+title: 存取ECID
 description: Adobe Experience Platform Web SDK擴充功能運用標籤中的ECID
-source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
+exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 5%
 
 ---
 
-
 # 存取ECID
 
-[!DNL Experience Cloud Identity (ECID)]是您網站訪客的永久識別碼。 在某些情況下，您可能會偏好存取ECID（例如傳送給第三方）。
+此 [!DNL Experience Cloud Identity (ECID)] 是您網站訪客的永久識別碼。 在某些情況下，您可能會偏好存取ECID（例如傳送給第三方）。
 
 若要在標籤中存取ECID,Adobe建議：
 
-1. 請確定屬性已設定為已啟用[規則元件排序](../../tags/ui/managing-resources/rules.md#sequencing)。
+1. 確認屬性已設定 [規則元件排序](../../tags/ui/managing-resources/rules.md#sequencing) 已啟用。
 1. 建立新規則。
-1. 將[!UICONTROL 程式庫已載入]事件新增至規則。
-1. 使用下列程式碼將[!UICONTROL 自訂條件]動作新增至規則（假設您為SDK例項設定的名稱為`alloy`）:
+1. 新增 [!UICONTROL 程式庫已載入] 事件。
+1. 新增 [!UICONTROL 自訂條件] 動作至具有下列程式碼的規則(假設您為SDK例項設定的名稱為 `alloy`):
 
    ```javascript
     return alloy("getIdentity")
@@ -29,4 +29,4 @@ ht-degree: 5%
 
 1. 儲存規則。
 
-之後，您應該就能像使用任何其他資料元素一樣，使用`%ECID%`或`_satellite.getVar("ECID")`存取後續規則中的ECID。
+之後，您應該就能使用 `%ECID%` 或 `_satellite.getVar("ECID")` 就像您要其他資料元素一樣。

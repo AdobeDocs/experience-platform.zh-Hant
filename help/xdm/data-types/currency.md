@@ -6,8 +6,8 @@ description: 本檔案概述貨幣XDM資料類型。
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 5%
+source-wordcount: '124'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 5%
 | `conversionDate` | DateTime | 貨幣轉換時間的時間戳記。 |
 | `currencyCode` | 字串 | ISO 4217代碼，用於指示 `amount` 代表。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

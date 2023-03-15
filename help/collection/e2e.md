@@ -141,7 +141,7 @@ Adobe Experience Platform會收集您的資料，並將其傳輸至其他Adobe�
 
 此時會出現SDK的設定頁面。 大部分必要值會自動填入預設值，您可以視需要選擇變更。
 
-![配置Web SDK](./images/e2e/configure-sdk.png)
+![設定 Web SDK](./images/e2e/configure-sdk.png)
 
 不過，您必須先選取資料流，資料流才能知道要將資料傳送至何處，才能安裝SDK。 在 **[!UICONTROL 資料流]**，請使用下拉式選單，選取您在 [先前步驟](#datastream). 設定資料流後，請選取 **[!UICONTROL 儲存]** 完成將SDK安裝至屬性。
 

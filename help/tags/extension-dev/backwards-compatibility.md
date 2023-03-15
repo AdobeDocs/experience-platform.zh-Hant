@@ -1,10 +1,11 @@
 ---
 title: 回溯相容性標準
 description: 了解Adobe Experience Platform中的回溯相容性標準，確保更新版本的標籤擴充功能與舊版相容。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
-ht-degree: 81%
+ht-degree: 84%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 Adobe Experience Platform中標籤擴充功能的更新必須回溯相容於舊版擴充功能。 這表示：
 

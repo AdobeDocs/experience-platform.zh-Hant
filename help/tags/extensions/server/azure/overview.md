@@ -4,8 +4,8 @@ description: 了解Adobe Experience Platform中用於事件轉送的Microsoft Az
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
 source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 4%
+source-wordcount: '931'
+ht-degree: 3%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 4%
 | [!UICONTROL SAS訪問密鑰] | 共用訪問授權規則的主密鑰 [!DNL Event Hubs] 命名空間或您要傳送資料的特定事件中樞例項。 請參閱附錄一節 [獲取SAS授權值](#sas) 以取得更多資訊。 |
 | [!UICONTROL 分區ID] | [!DNL Event Hubs] 可讓您 [將事件直接發送到特定分區](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/event-hubs/partitioning-in-event-hubs-and-kafka). 要利用此功能，請提供要接收事件的分區的ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **資料**
 
@@ -61,7 +61,7 @@ ht-degree: 4%
 | --- | --- |
 | [!UICONTROL 裝載] | 此欄位包含要轉送至 [!DNL Event Hubs]. 資料可以是JSON物件、字串或資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 完成後，請選取 **[!UICONTROL 保留變更]** 將動作新增至規則設定。 對規則感到滿意時，請選取 **[!UICONTROL 儲存至程式庫]**.
 

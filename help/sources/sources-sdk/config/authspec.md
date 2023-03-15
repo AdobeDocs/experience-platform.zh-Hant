@@ -5,8 +5,8 @@ description: 本檔案概述使用自助來源（批次SDK）所需準備的設�
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 2%
+source-wordcount: '519'
+ht-degree: 1%
 
 ---
 
@@ -130,7 +130,7 @@ OAuth 2重新整理程式碼可產生暫時存取權杖和重新整理權杖，�
 | `authSpec.spec.properties.requestParameterOverride` | 允許您指定在驗證時要覆蓋的憑據參數。 |
 | `authSpec.spec.required` | 顯示驗證所需的憑據。 | `accessToken` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 
 ### 基本驗證
@@ -177,7 +177,7 @@ OAuth 2重新整理程式碼可產生暫時存取權杖和重新整理權杖，�
 | `authSpec.spec.properties.password` | 與您的應用程式相關聯的帳戶密碼。 |
 | `authSpec.spec.required` | 指定在Platform中要輸入的必填值所需欄位。 | `username` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 驗證規範示例
 

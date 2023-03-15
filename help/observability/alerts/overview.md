@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: b1c82169056e66b9cdcf99f73daa7d37a3a01600
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 5%
+source-wordcount: '751'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform可讓您訂閱Adobe Experience Platform活動的事件
 | 不會重複。 | 如果異常狀況持續存在，則可重複。 |
 | 例如：<ul><li>資料擷取已成功完成。</li><li>查詢執行已完成。</li><li>資料已刪除。</li></ul> | 例如：<ul><li>擷取持續時間超過服務層級合約(SLA)。</li><li>過去24小時內並未發生每日擷取。</li><li>流處理器的錯誤率高於配置的閾值。</li><li>設定檔總數超過權限。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 警報解剖
 
@@ -43,7 +43,7 @@ Adobe Experience Platform可讓您訂閱Adobe Experience Platform活動的事件
 | **動作** | 觸發警報時，會執行動作。 具體而言，訊息會透過傳遞通道(例如預先設定的Webhook或Experience PlatformUI)傳送給適用的收件者。 |
 | **頻率** | （選用）如果警報的條件維持為true或未解析，則可將警報設定為以定義的間隔重複其動作。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 接收和管理警報
 
@@ -71,7 +71,7 @@ Adobe Experience Platform可讓您訂閱Adobe Experience Platform活動的事件
 | 管理警報* | 可讓您透過 [!UICONTROL 警報] 標籤。 |
 | 解決警報* | 可讓您透過 [!UICONTROL 警報] 標籤。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **若要存取 [!UICONTROL 警報] 標籤中，您還必須獲得「檢視警報」權限，並結合其他權限之一。*
 

@@ -4,8 +4,8 @@ description: 本檔案提供XDM Business Campaign「成員詳細資訊」結構�
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 4%
+source-wordcount: '357'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 | `webinarConfirmationUrl` | [!UICONTROL 字串] | 促銷活動成員的網路研討會確認URL。 |
 | `webinarRegistrationID` | [!UICONTROL 字串] | 促銷活動成員的網路研討會註冊ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

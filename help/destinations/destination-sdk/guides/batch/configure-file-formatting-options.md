@@ -1,9 +1,10 @@
 ---
 description: 為檔案型目的地配置檔案格式選項
 title: 了解如何使用Destination SDK為檔案式目的地設定檔案格式選項。
-source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
+exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '929'
 ht-degree: 1%
 
 ---
@@ -711,9 +712,9 @@ emptyValue -> ""
 | 名字 | lastname | 國家 | state |
 |---------|----------|---------|--------|
 | 麥克 | 玫瑰 | 美國 | 紐約 |
-| 詹姆斯 | 史密斯 |  | null |
+| 詹姆斯 | Smith |  | null |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 這會產生如下所示的輸出。 請注意，表格中的null值如何錯誤地匯出為逸出引號。
 

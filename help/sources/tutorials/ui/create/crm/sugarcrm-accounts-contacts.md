@@ -4,7 +4,7 @@ description: 了解如何使用Adobe Experience Platform UI建立SugarCRM帳戶�
 source-git-commit: d4b5c3b897371eea591925d071afc120a3f246d7
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 

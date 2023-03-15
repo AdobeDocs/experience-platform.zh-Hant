@@ -6,8 +6,8 @@ type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1398'
-ht-degree: 2%
+source-wordcount: '1383'
+ht-degree: 1%
 
 ---
 
@@ -232,7 +232,7 @@ curl -X POST\
 | --- | --- |
 | `$id` | 只讀，系統生成新欄位組的唯一標識符。 以URI的形式。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 記錄 `$id` 欄位組的URI，用於將欄位組添加到源架構的下一步。
 
@@ -250,7 +250,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 源架構的。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -281,7 +281,7 @@ curl -X PATCH \
 | `path` | 新增新資源的架構欄位路徑。 將欄位群組新增至結構時，值必須是「/allOf/ — 」。 |
 | `value.$ref` | 此 `$id` 的欄位組。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -385,7 +385,7 @@ curl -X POST \
 | `sourceProperty` | 源架構中用於引用引用架構的主要標識的欄位路徑。 |
 | `xdm:identityNamespace` | 參考欄位的身分命名空間。 這必須與參考架構的主要身分相同的命名空間。 請參閱 [身分命名空間概述](../../identity-service/home.md) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -446,7 +446,7 @@ curl -X POST \
 | `xdm:destinationVersion` | 參考架構的版本號。 |
 | `xdm:destinationProperty` | 引用架構中主標識欄位的路徑。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 回應
 

@@ -6,8 +6,8 @@ description: 本檔案概述搜尋體驗資料模型(XDM)資料類型。
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 6%
+source-wordcount: '181'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 6%
 | `searchEngineID` | 字串 | 用來識別搜尋引擎的應用程式專屬識別碼。 |
 | `slot` | 字串 | 出現搜尋結果之頁面的已命名區段。 此屬性的值必須等於您定義的任何已知列舉值，例如 `top`, `side`，或 `bottom`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

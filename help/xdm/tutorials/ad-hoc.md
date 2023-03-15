@@ -7,8 +7,8 @@ type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 3%
+source-wordcount: '819'
+ht-degree: 2%
 
 ---
 
@@ -85,7 +85,7 @@ curl -X POST \
 | `$ref` | 新類的資料行為。 對於臨機類，此值必須設定為 `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | 包含類別自訂欄位的物件，以欄位名稱和資料類型的索引鍵值組表示。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -148,7 +148,7 @@ curl -X POST \
 | --- | --- |
 | `$id` | 作為只讀、系統生成的新Ad-Hoc類唯一標識符的URI。 此值將用於建立臨機架構的下一個步驟。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 建立隨選結構
 
@@ -241,7 +241,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 要存取的臨機結構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 

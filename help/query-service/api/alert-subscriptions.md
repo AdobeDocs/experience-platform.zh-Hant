@@ -5,7 +5,7 @@ description: 本指南提供您可使用Query Service API對警報訂閱端點�
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2661'
 ht-degree: 2%
 
 ---
@@ -553,7 +553,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | `subscriptions.inContextNotifications` | 一個布林值，可決定使用者接收警報通知的方式。 A `true` 值可確認應透過UI提供警報。 A `false` 值可確保不會透過該管道通知使用者。 |
 | `subscriptions.emailNotifications` | 一個布林值，可決定使用者接收警報通知的方式。 A `true` 值可確認警報應由電子郵件提供。 A `false` 值可確保不會透過該管道通知使用者。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -643,7 +643,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | `path` | 此值與端點中的命名空間相關。 目前，唯一接受的值是 `/status`. |
 | `value` | 在成功的PATCH請求中，這會變更 `status` 警報的值。 目前，接受的值為 `enable` 或 `disable`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 

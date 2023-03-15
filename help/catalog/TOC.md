@@ -6,7 +6,7 @@ feature: Catalog
 source-git-commit: f456b28016af6d2978933deac68f45c2f8d37f80
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 20%
+ht-degree: 24%
 
 ---
 
@@ -35,4 +35,4 @@ ht-degree: 20%
    * [啟用設定檔更新的資料集（插入）](datasets/enable-upsert.md)
 * [資料湖的隱私權要求處理](privacy.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)

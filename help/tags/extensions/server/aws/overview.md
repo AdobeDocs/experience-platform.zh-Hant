@@ -4,8 +4,8 @@ description: 了解Adobe Experience Platform中用於事件轉送的AWS擴充功
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
 workflow-type: tm+mt
-source-wordcount: '847'
-ht-degree: 4%
+source-wordcount: '841'
+ht-degree: 3%
 
 ---
 
@@ -59,7 +59,7 @@ ht-degree: 4%
 | [!UICONTROL AWS地區] | 此 [!DNL AWS] 地區， [!DNL Kinesis] 資料流已建立。 |
 | [!UICONTROL 分區密鑰] | 此 [分區密鑰](https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#partition-key) 擴充功能在傳送資料至資料流時使用的欄位。<br><br>[!DNL Kinesis Data Streams] 將屬於資料流的資料記錄分隔到多個分區中。 它使用與每個資料記錄一起發送的分區密鑰來確定給定資料記錄屬於哪個分區。<br><br>分發客戶的好分區密鑰可能是客戶編號，因為每個客戶的編號都不同。 分區密鑰不好，可能是郵遞區號，因為它們都可能住在附近的同一區域。 通常，您應選擇具有不同潛在值最大範圍的分區鍵。 請參閱 [!DNL AWS] 文章 [縮放 [!DNL Kinesis] 資料流](https://aws.amazon.com/blogs/big-data/under-the-hood-scaling-your-kinesis-data-streams/) 以了解有關管理分區密鑰的最佳做法。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **[!UICONTROL 資料]**
 
@@ -67,7 +67,7 @@ ht-degree: 4%
 | --- | --- |
 | [!UICONTROL 裝載] | 此欄位包含要轉送至 [!DNL Kinesis] 資料流，格式為JSON。<br><br>在 **[!UICONTROL 原始]** 選項，您可以直接將JSON物件貼到提供的文字欄位，或選取資料元素圖示(![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png))，以從現有資料元素清單中選取以表示裝載。<br><br>您也可以使用 **[!UICONTROL JSON索引鍵值配對編輯器]** 選項，透過UI編輯器手動新增每個機碼 — 值組。 每個值都可由原始輸入來表示，或可以改為選取資料元素。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 完成後，請選取 **[!UICONTROL 保留變更]** 將動作新增至規則設定。 對規則感到滿意時，請選取 **[!UICONTROL 儲存至程式庫]**.
 

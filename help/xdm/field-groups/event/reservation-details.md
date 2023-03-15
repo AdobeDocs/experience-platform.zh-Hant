@@ -2,19 +2,19 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM;ExperienceEvent；欄位；結構；結構；結構；結構設計；欄位群組；欄位群組；保留；保留詳細資訊；
 title: 保留詳細資訊結構欄位組
 description: 本文檔概述了「保留詳細資訊」架構欄位組。
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 5%
+source-wordcount: '334'
+ht-degree: 4%
 
 ---
 
+# [!UICONTROL 保留詳細資訊] 方案欄位組
 
-# [!UICONTROL 保留詳] 細資訊架構欄位組
+[!UICONTROL 保留詳細資訊] 是的標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md) 用來擷取保留的相關資訊，包括長度、修改、可退還狀態和房間數。
 
-[!UICONTROL 訂] 房詳細說明用來擷取訂房相關 [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) 資訊的類別的標準結構欄位群組，包括長度、修改、可退還狀態和房間數。
-
-欄位組提供單個對象類型欄位`reservations`。 此物件中包含的屬性說明如下。
+欄位組提供單個對象類型欄位， `reservations`. 此物件中包含的屬性說明如下。
 
 ![保留詳細資訊結構](../../images/field-groups/reservation-details.png)
 
@@ -37,7 +37,7 @@ ht-degree: 5%
 | `startDate` | DateTime | 預訂的開始接收、出站或簽入日期。 |
 | `triptype` | 字串 | 指出預訂是單程旅行、往返旅行還是多城旅行。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
@@ -46,7 +46,7 @@ ht-degree: 5%
 
 ## 特定於行業的保留欄位組
 
-還有其他幾個標準欄位群組可針對特定產業使用案例擴充[!UICONTROL 保留詳細資料]架構。 如需詳細資訊，請參閱下列檔案：
+有數個其他標準欄位群組會擴充 [!UICONTROL 保留詳細資訊] 特定產業使用案例的結構描述。 如需詳細資訊，請參閱下列檔案：
 
 * [[!UICONTROL 餐廳預訂]](./dining-reservation.md)
 * [[!UICONTROL 航班預訂]](./flight-reservation.md)

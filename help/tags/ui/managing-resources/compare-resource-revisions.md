@@ -1,10 +1,11 @@
 ---
 title: 比較資源修訂版本
 description: 了解如何在Adobe Experience Platform中檢視標籤資源修訂版本的歷史記錄。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 83%
+ht-degree: 86%
 
 ---
 
@@ -12,17 +13,17 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 比較資源修訂版本以查看個別資源的歷程記錄。您可以將資源的目前狀態與舊版進行比較，或將目前發佈的資源版本與最新一組已儲存的變更進行比較。
 
 ## 啟動比較作業
 
-就所有資源類型而言，啟動比較作業的方式都相同。開啟個別資源的Edit檢視，然後尋找&#x200B;**[!UICONTROL Save]**&#x200B;按鈕旁的三個點圖示，以檢視該資源的可用動作。  從清單中選擇&#x200B;**[!UICONTROL 比較修訂版本]**。
+就所有資源類型而言，啟動比較作業的方式都相同。開啟個別資源的「編輯」檢視，然後尋找旁邊的三個點圖示 **[!UICONTROL 儲存]** 按鈕，查看該資源的可用操作。  選擇 **[!UICONTROL 比較修訂版本]** 從清單中。
 
 ![啟動擴充功能的比較作業](../../images/compare-initiate-extension.png)
 
-對於擴充功能，請在檢視已安裝擴充功能清單時選取&#x200B;**[!UICONTROL 設定]**&#x200B;按鈕，以存取詳細資料檢視。  針對資料元素和規則，從清單中選取一個項目。
+對於擴充功能，請選取 **[!UICONTROL 設定]** 按鈕。  針對資料元素和規則，從清單中選取一個項目。
 
 ## 使用「比較」檢視
 
@@ -32,7 +33,7 @@ ht-degree: 83%
 
 ![比較 Analytics 擴充功能的版本](../../images/compare-interpret-extension.png)
 
-選擇「**[!UICONTROL 使用這些更改]**」將設定從所選修訂版本（左）複製到最新版本（右）。  這麼做能將設定從舊修訂版本複製到未儲存的最新變更。若要保留這些變更，請務必在退出Compare檢視後&#x200B;**[!UICONTROL Save]**。
+選擇 **[!UICONTROL 使用這些變更]** 將設定從您選取的修訂版本（左）複製到最新版本（右）。  這麼做能將設定從舊修訂版本複製到未儲存的最新變更。若要保留這些變更，請務必 **[!UICONTROL 儲存]** 退出Compare檢視之後。
 
 >[!TIP]
 >個別資源可能同時具備屬性和設定。這些設定會儲存為 JSON 區塊，這是一種儲存資料的結構化方式，但優點是夠靈活，擴充功能開發人員可依要達成的目標放入所需內容。

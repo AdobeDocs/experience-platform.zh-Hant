@@ -7,13 +7,13 @@ exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
 source-wordcount: '311'
-ht-degree: 5%
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform中的協助工具
 
-協助工具是指一系列功能，可讓軟體產品可供視覺、聽覺、認知、運動或其他類型的殘疾使用者使用，且盡量不費力。 Adobe是無障礙環境領先者，鼓勵開發人員製作可供所有使用者存取的豐富且吸引人的內容，進而支援建立出色的網頁體驗。 如需Adobe對無障礙環境承諾的詳細資訊，請參閱 [Adobe協助工具](https://www.adobe.com/accessibility.html).
+協助工具是指一系列功能，這些功能使具有視覺、聽覺、認知、運動或其他類型的殘疾使用者能盡可能輕鬆使用軟體產品。Adobe 是協助工具領域的領先者，鼓勵開發人員製作可供所有使用者存取的豐富且吸引人的內容，進而支援建立出色的網頁體驗。如需Adobe對無障礙環境承諾的詳細資訊，請參閱 [Adobe協助工具](https://www.adobe.com/accessibility.html).
 
 Adobe Experience Platform致力於為所有個人提供無障礙且包容的功能，包括使用語音識別軟體和螢幕閱讀器等輔助裝置的使用者。 Experience Platform不斷得到增強，以滿足所有類型的用戶的需求，並遵守包括視覺、聽覺、移動性或其他損傷的個人在內的全球標準。
 

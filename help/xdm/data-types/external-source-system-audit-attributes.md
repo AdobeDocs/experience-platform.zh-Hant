@@ -4,8 +4,8 @@ description: 本檔案概述外部來源系統稽核屬性Experience Data Model(
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 3%
+source-wordcount: '214'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 | `lastUpdatedDate` | DateTime | 源系統的上次更新日期。 |
 | `lastViewedDate` | DateTime | 源系統的上次查看日期。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

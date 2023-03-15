@@ -6,7 +6,7 @@ exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '872'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -56,7 +56,7 @@ ht-degree: 26%
 
 在 **[!UICONTROL 標籤]** 工作區，建立類型的屬性 **[!UICONTROL Edge]**.
 
-1. 選擇 **[!UICONTROL 新屬性]**.
+1. 選取&#x200B;**[!UICONTROL 「新屬性」]**。
 
 1. 為屬性命名。
 

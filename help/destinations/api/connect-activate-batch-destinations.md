@@ -7,8 +7,8 @@ type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '3420'
-ht-degree: 2%
+source-wordcount: '3402'
+ht-degree: 1%
 
 ---
 
@@ -130,7 +130,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 | [!DNL Salesforce Marketing Cloud] | `f599a5b3-60a7-4951-950a-cc4115c7ea27` |
 | SFTP | `64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連線至您的 [!DNL Experience Platform] 資料 {#connect-to-your-experience-platform-data}
 
@@ -174,7 +174,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `description` | 或者，您可以提供基本連接的說明。 |
 | `connectionSpec.id` | 將連接規範ID用於 [Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -227,7 +227,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `baseConnectionId` | 使用您在上一步中取得的基本連線ID。 |
 | `data.format` | `CSV` 是目前唯一支援的檔案匯出格式。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -531,7 +531,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `auth.specname` | 指示目標的驗證格式。 要查找目標的specName，請執行 [GET對連接規範端點的調用](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)，提供您所需目的地的連線規格。 尋找參數 `authSpec.name` 中。 <br> 例如，若為Adobe Campaign目的地，您可以使用 `S3`, `SFTP with Password`，或 `SFTP with SSH Key`. |
 | `params` | 您必鬚根據要連線的目標提供不同的必要驗證參數。 若是Amazon S3連線，您必須提供存取ID和機密金鑰給Amazon S3儲存位置。 <br> 若要找出目的地的必要參數，請執行 [GET對連接規範端點的調用](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec)，提供您所需目的地的連線規格。 尋找參數 `authSpec.spec.required` 中。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -848,7 +848,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.path` | 對於S3連線，請在要匯出檔案的儲存位置中提供檔案路徑。 |
 | `params.format` | `CSV` 是目前唯一支援的檔案匯出類型。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -1033,7 +1033,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | 您要用更新參數的新值。 |
 | `id` | 指定要添加到目標資料流的段的ID。 |
 | `name` | *可選*. 指定要添加到目標資料流的段的名稱。 請注意，此欄位不是必填欄位，您可以在不提供其名稱的情況下成功將段添加到目標資料流。 |
-| `filenameTemplate` | 此欄位確定導出到目標的檔案的檔案名格式。 <br> 可使用下列選項： <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出區段的ID。</li><li>`%SEGMENT_NAME%`: 選填. 匯出的檔案包含匯出區段的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`:選填。 為檔案選取這兩個選項之一，以納入Experience Platform產生檔案的時間。</li><li>`custom-text`: 選填. 將此佔位符替換為要在檔案名末尾附加的任何自定義文本。</li></ul> <br> 有關配置檔案名的詳細資訊，請參閱 [配置檔案名](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 批次目的地啟動教學課程中的一節。 |
+| `filenameTemplate` | 此欄位確定導出到目標的檔案的檔案名格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出區段的ID。</li><li>`%SEGMENT_NAME%`: 選填. 匯出的檔案包含匯出區段的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`:選填。 為檔案選取這兩個選項之一，以納入Experience Platform產生檔案的時間。</li><li>`custom-text`: 選填. 將此佔位符替換為要在檔案名末尾附加的任何自定義文本。</li></ul> <br> 有關配置檔案名的詳細資訊，請參閱 [配置檔案名](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 批次目的地啟動教學課程中的一節。 |
 | `exportMode` | 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。如需這兩個選項的詳細資訊，請參閱 [導出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在批次目的地啟動教學課程中。 |
 | `startDate` | 選取區段應開始將設定檔匯出至目的地的日期。 |
 | `frequency` | 必要. <br> <ul><li>若 `"DAILY_FULL_EXPORT"` 導出模式，可以選擇 `ONCE` 或 `DAILY`.</li><li>若 `"FIRST_FULL_THEN_INCREMENTAL"` 導出模式，可以選擇 `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
@@ -1041,7 +1041,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `endDate` | 針對 *批次目的地* 只有。 只有在批次檔案匯出目的地(如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 不適用於選擇 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`. <br> 設定區段成員停止匯出至目的地的日期。 |
 | `startTime` | 針對 *批次目的地* 只有。 只有在批次檔案匯出目的地(如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. 選取何時應產生包含區段成員的檔案並匯出至您的目的地。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

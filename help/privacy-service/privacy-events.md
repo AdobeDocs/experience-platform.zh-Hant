@@ -30,7 +30,7 @@ ht-degree: 2%
 
 開始本教學課程之前，請先檢閱下列Privacy Service檔案：
 
-* [Privacy Service 概述](./home.md)
+* [Privacy Service 概觀](./home.md)
 * [Privacy ServiceAPI指南](./api/overview.md)
 
 ## 將網頁鈎註冊到 [!DNL Privacy Service Events]

@@ -6,8 +6,8 @@ hide: true
 hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 4%
+source-wordcount: '1011'
+ht-degree: 2%
 
 ---
 
@@ -84,7 +84,7 @@ curl -X POST \
 | `description` | 記錄刪除請求的說明。 |
 | `identities` | 一個陣列，包含至少一個要刪除其資訊的用戶的標識。 每個身分都由 [身分命名空間](../../identity-service/namespaces.md) 和值：<ul><li>`namespace`:包含單一字串屬性， `code`，代表身分識別命名空間。 </li><li>`id`:身分值。</ul>若 `datasetId` 指定單一資料集，每個實體位於 `identities` 必須使用與架構的主要身分相同的身分命名空間。<br><br>若 `datasetId` 設為 `ALL`, `identities` 陣列不受限於任何單一命名空間，因為每個資料集可能不同。 不過，您的要求仍受到組織可用的命名空間限制，如 [Identity服務](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -118,7 +118,7 @@ curl -X POST \
 | `createdBy` | 建立刪除順序的用戶。 |
 | `datasetId` | 受要求約束的資料集ID。 如果要求適用於所有資料集，則值會設為 `ALL`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 檢索記錄刪除的狀態(#lookup)
 
@@ -134,7 +134,7 @@ GET /workorder/{WORK_ORDER_ID}
 | --- | --- |
 | `{WORK_ORDER_ID}` | 此 `workorderId` 你正在查的記錄刪除。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -211,7 +211,7 @@ PUT /workorder{WORK_ORDER_ID}
 | --- | --- |
 | `{WORK_ORDER_ID}` | 此 `workorderId` 你正在查的記錄刪除。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -233,7 +233,7 @@ curl -X GET \
 | `displayName` | 記錄刪除請求的更新顯示名稱。 |
 | `description` | 記錄刪除請求的更新說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -285,4 +285,4 @@ curl -X GET \
 | `datasetId` | 受要求約束的資料集ID。 如果要求適用於所有資料集，則值會設為 `ALL`. |
 | `productStatusDetails` | 列出與請求相關之下遊程式的目前狀態的陣列。 每個陣列物件都包含下列屬性：<ul><li>`productName`:下游服務的名稱。</li><li>`productStatus`:來自下游服務的請求的目前處理狀態。</li><li>`createdAt`:服務張貼最新狀態的時間戳記。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

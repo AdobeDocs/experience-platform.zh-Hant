@@ -6,8 +6,8 @@ description: 本檔案概述興趣點詳細資料XDM資料類型。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 5%
+source-wordcount: '201'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 5%
 | `poiID` | 字串 | POI的唯一識別碼。 |
 | `type` | 字串 | POI的一般類型，使用POI定義管理員選取的類型結構。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

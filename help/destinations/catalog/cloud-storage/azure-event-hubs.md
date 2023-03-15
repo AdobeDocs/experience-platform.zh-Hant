@@ -5,7 +5,7 @@ description: 建立與 [!DNL Azure Event Hubs] 儲存以從Experience Platform�
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '2067'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 此目的地僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+> 此目的地僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 
 [!DNL Azure Event Hubs] 是大資料串流平台和事件擷取服務。 它每秒可接收並處理數百萬個事件。 透過任何即時分析提供者或批次處理程式/儲存轉接器，即可轉換及儲存傳送至事件中樞的資料。
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 | 匯出類型 | **[!UICONTROL 設定檔]** | 您要匯出區段的所有成員，以及所需的結構欄位(例如：電子郵件地址、電話號碼、姓氏)，如「選取設定檔屬性」畫面中所選 [目的地啟動工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## IP位址允許清單 {#ip-address-allowlist}
 
@@ -136,7 +136,7 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Azure Event Hub
 |---------|----------|
 | <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至 [!DNL Azure Event Hubs] 目的地、指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援 [!DNL Azure Event Hubs] 目的地)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 例如，將此資料流視為 [!DNL Azure Event Hubs] 目標中，在資料流中選擇了三個段，四個屬性映射到目標。
 

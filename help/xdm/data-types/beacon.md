@@ -6,8 +6,8 @@ description: 本檔案概述XDM個別設定檔類別。
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 4%
+source-wordcount: '250'
+ht-degree: 3%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 | `proximity` | 字串 | 估計的信標距離。 請參閱 [附錄](#proximity) 以取得接受的值和定義。 |
 | `proximityUUID` | 字串 | 鄰近地區UUID（通用唯一標識符）是一種特殊類型的標識符，用於區分網路中的信標與您控制之外的網路中的所有其他信標。 鄰近UUID設定為信標，以傳輸至範圍內的行動裝置，以識別組織的信標。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

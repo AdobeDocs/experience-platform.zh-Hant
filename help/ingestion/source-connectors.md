@@ -7,11 +7,11 @@ exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 源連接器
+# 來源連接器
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM。
 

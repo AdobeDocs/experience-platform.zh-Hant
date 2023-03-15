@@ -4,7 +4,7 @@ description: 本檔案概述「XDM企業人員元件」結構欄位群組。
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '549'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 2%
 | `sourceExternalID` | 字串 | 源系統的唯一基於字串的標識符，該人員的資料源自該標識符。 |
 | `sourcePersonID` | 字串 | 人員的唯一字串型識別碼。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

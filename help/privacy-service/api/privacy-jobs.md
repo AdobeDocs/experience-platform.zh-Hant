@@ -6,8 +6,8 @@ description: 了解如何使用Experience CloudAPI管理Privacy Service應用程
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 3%
+source-wordcount: '1433'
+ht-degree: 1%
 
 ---
 
@@ -40,7 +40,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{PAGE}` | 要顯示的資料頁，使用基於0的編號。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上要顯示的結果數。 預設為 `1` 而最大值是 `100`. 超過上限會導致API傳回400程式碼錯誤。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -162,7 +162,7 @@ curl -X POST \
 | `mergePolicyId` | 向即時客戶設定檔提出隱私權要求時(`profileService`)，您可以選擇提供特定 [合併策略](../../profile/merge-policies/overview.md) 供ID匯整使用。 透過指定合併原則，隱私權要求可在傳回客戶資料時包含區段資訊。 每個請求只能指定一個合併策略。 如果未提供合併原則，回應中就不會包含分段資訊。 |
 | `regulation` **(必填)** | 隱私權工作的規範。 接受下列值： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>請參閱 [支援的法規](../regulations/overview.md) 如需上述值代表之隱私權法規的詳細資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -214,7 +214,7 @@ curl -X POST \
 | --- | --- |
 | `jobId` | 作業的唯讀、唯一系統產生的ID。 此值將用於查找特定作業的下一步。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 成功提交作業請求後，您可以繼續執行 [檢查作業狀態](#check-status).
 
@@ -236,7 +236,7 @@ GET /jobs/{JOB_ID}
 | --- | --- |
 | `{JOB_ID}` | 要查找的作業的ID。 此ID會在 `jobId` 的成功API回應中 [建立工作](#create-job) 和 [列出所有作業](#list). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -334,7 +334,7 @@ curl -X GET \
 | `productStatusResponse.results` | 對於某些狀態，某些產品可能會傳回 `results` 提供未涵蓋的其他資訊的對象 `responseMsgDetail`. |
 | `downloadURL` | 如果作業的狀態為 `complete`，此屬性會提供URL，以ZIP檔案形式下載工作結果。 作業完成後60天內可下載此檔案。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 作業狀態類別 {#status-categories}
 
@@ -347,7 +347,7 @@ curl -X GET \
 | `submitted` | 工作將提交至每個適用的應用程式。 |
 | `error` | 處理作業時失敗 — 通過檢索單個作業詳細資訊，可獲得更具體的資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

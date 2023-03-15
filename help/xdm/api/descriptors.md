@@ -6,8 +6,8 @@ description: Schema Registry API中的/descriptors端點可讓您以程式設計
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 3%
+source-wordcount: '1873'
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ curl -X GET \
 | `application/vnd.adobe.xdm+json` | 返回擴展描述符對象的陣列 |
 | `application/vnd.adobe.xdm-v2+json` | 此 `Accept` 必須使用報頭才能使用分頁功能。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **回應**
 
@@ -98,7 +98,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 此 `@id` 你要查找的描述符。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -207,7 +207,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 此 `@id` 要更新的描述符。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -264,7 +264,7 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | 此 `@id` 刪除描述符。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -318,7 +318,7 @@ curl -X DELETE \
 | `xdm:property` | 其中 `xdm:id` 或 `xdm:code`，視 `xdm:namespace` 已使用。 |
 | `xdm:isPrimary` | 選用的布林值。 若為true，則將欄位指示為主要身分。 結構只能包含一個主要身分。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 友好名稱描述符 {#friendly-name}
 
@@ -359,7 +359,7 @@ curl -X DELETE \
 | `meta:enum` | 如果以指示的欄位 `xdm:sourceProperty` 是字串欄位， `meta:enum` 可用來為區段UI中的欄位新增建議值。 請務必注意 `meta:enum` 不會宣告分項或提供XDM欄位的任何資料驗證。<br><br>此欄位僅應用於Adobe定義的核心XDM欄位。 如果來源屬性是貴組織定義的自訂欄位，您應改為編輯欄位的 `meta:enum` 屬性，直接透過欄位的上層資源的PATCH請求。 |
 | `meta:excludeMetaEnum` | 如果以指示的欄位 `xdm:sourceProperty` 是字串欄位，其中包含 `meta:enum` 欄位中，您可以將此物件包含在易記名稱描述元中，以從分段中排除這些值的部分或全部。 每個項目的鍵值和值必須與原始條目中包含的鍵值和值匹配 `meta:enum` ，以便排除項目。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 關係描述符
 
@@ -389,7 +389,7 @@ curl -X DELETE \
 | `xdm:destinationVersion` | 參考結構的主要版本。 |
 | `xdm:destinationProperty` | 參考架構內目標欄位的選用路徑。 如果省略此屬性，則目標欄位將由包含匹配引用標識描述符的任何欄位推斷（請參見下面）。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 引用標識描述符
 
@@ -413,7 +413,7 @@ curl -X DELETE \
 | `xdm:sourceProperty` | 用於引用引用架構的源架構中欄位的路徑。 應以「/」開頭，而非以「/」結尾。 請勿在路徑中加入「屬性」(例如 `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
 | `xdm:identityNamespace` | 原始碼屬性的身份命名空間代碼。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 已棄用的欄位描述符
 
@@ -435,4 +435,4 @@ curl -X DELETE \
 | `xdm:sourceVersion` | 要應用描述符的架構的版本。 應設為 `1`. |
 | `xdm:sourceProperty` | 應用描述符的架構內屬性的路徑。 如果要將描述符應用於多個屬性，可以以陣列的形式提供路徑清單(例如， `["/firstName", "/lastName"]`)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

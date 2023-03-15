@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；架構；
-title: 函式API終結點
-description: 可以使用資料準備API中的「/functions」終結點驗證映射表達式並列出可用的映射集函式。
+keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；結構；
+title: 函式API端點
+description: 您可以使用資料準備API中的「/functions」端點來驗證映射運算式，並列出可用的映射集函式。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 2%
 
 # 函式端點
 
-映射集函式允許您在源架構和目標架構之間轉換資料。 您可以使用 `/languages/el` 終結點，以驗證表達式並獲取所有可用映射集函式的清單。
+對應集函式允許您在源架構和目標架構之間轉換資料。 您可以使用 `/languages/el` 端點來驗證您的運算式，並取得所有可用對應集函式的清單。
 
-## 驗證表達式
+## 驗證運算式
 
-您可以通過向以下對象發出POST請求來驗證當前表達式是否有效 `/languages/el/validate` 端點。
+您可以向 `/languages/el/validate` 端點。
 
 **API格式**
 
@@ -41,7 +41,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 **回應**
 
-成功的響應返回HTTP狀態200，其驗證狀態為表達式。
+成功的回應會傳回HTTP狀態200，並顯示運算式的驗證狀態。
 
 ```json
 {
@@ -52,7 +52,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 ## 清單映射集函式
 
-通過向Web站點發出GET請求，可以檢索所有可用映射集函式的清單 `/languages/el/functions` 端點。
+您可以透過向 `/languages/el/functions` 端點。
 
 **API格式**
 
@@ -72,11 +72,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含所有可用映射集函式的清單。
+成功的回應會傳回HTTP狀態200，並包含所有可用的對應集函式清單。
 
 >[!NOTE]
 >
->此響應已被截斷為空間。
+>此回應已因空間而截斷。
 
 ```json
 [
@@ -117,7 +117,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 ## 清單映射集運算子
 
-通過向 `/languages/el/operators` 端點。
+您可以向提供GET請求，以擷取所有可用的對應集運算子清單 `/languages/el/operators` 端點。
 
 **API格式**
 
@@ -137,11 +137,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含所有可用映射集運算子的清單。
+成功的回應會傳回HTTP狀態200，並包含所有可用的對應集運算子清單。
 
 >[!NOTE]
 >
->此響應已被截斷為空間。
+>此回應已因空間而截斷。
 
 ```json
 [

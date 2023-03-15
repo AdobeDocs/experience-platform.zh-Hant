@@ -4,8 +4,8 @@ description: 了解標籤可用的不同權限類型，以及不同業務使用�
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 17%
+source-wordcount: '1299'
+ht-degree: 16%
 
 ---
 
@@ -58,7 +58,7 @@ Adobe Experience Platform中標籤的使用者權限會透過Adobe Admin Console
 | **管理擴充功能** | 這可讓您執行下列動作： <ul><li>將新擴充功能安裝至屬性</li><li>修改已安裝擴充功能的設定</li><li>刪除擴充功能</li></ul>請參閱的擴充功能概觀檔案 [擴充功能的詳細資訊](../managing-resources/extensions/overview.md). 視您的組織而定，此角色通常屬於 IT 或行銷部門。 |
 | **管理環境** | 這可讓您建立和修改環境。 請參閱 [環境檔案](../publishing/environments.md) 以取得更多資訊。 此角色通常屬於 IT 群組。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 公司權利
 
@@ -70,7 +70,7 @@ Adobe Experience Platform中標籤的使用者權限會透過Adobe Admin Console
 | **開發擴充功能** | 授予建立和修改公司擁有的擴充功能套件的能力，包括私人發行和公開發行請求。 |
 | **管理應用程式設定** | 只有在您擁有Adobe Journey Optimizer的授權，或其他授予行動應用程式內及推送訊息存取權的解決方案，才能使用此功能。  這可讓您管理Experience Cloud所知的應用程式，以及與Firebase雲端訊息服務和Apple推播通知服務通訊所需的必要推播憑證。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 總計使用者權限
 
@@ -117,7 +117,7 @@ Adobe Experience Platform中標籤的使用者權限會透過Adobe Admin Console
 | 擴充功能開發人員 | 開發擴充功能並可提交以進行核准，但無法發佈或新增至現有屬性。 | 自動納入 | <ul><li>開發</li></ul> | <ul><li>管理屬性</li><li>開發擴充功能</li></ul> |
 | 超級用戶 | 做所有事。 | 自動納入 | <ul><li>開發</li><li>核准</li><li>發佈</li><li>管理擴充功能</li><li>管理環境</li></ul> | <ul><li>管理屬性</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 後續步驟
 

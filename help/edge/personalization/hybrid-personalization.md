@@ -2,13 +2,13 @@
 title: 使用Web SDK和邊緣網路伺服器API的混合個人化
 description: 本文示範如何搭配使用Web SDK和伺服器API，在您的Web屬性上部署混合個人化。
 keywords: 個人化；混合；伺服器api;伺服器端；混合實施；
-source-git-commit: f280d4cbcde434ccf36df37e95f1902cfd02c96c
+exl-id: 506991e8-701c-49b8-9d9d-265415779876
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 3%
 
 ---
-
 
 # 使用Web SDK和邊緣網路伺服器API的混合個人化
 
@@ -38,7 +38,7 @@ Hybdrid個人化說明在伺服器端擷取個人化內容的程式，使用 [�
 1. 應用程式伺服器收到頁面請求時，會發出 `POST` 請求 [伺服器API互動式資料收集端點](../../server-api/interactive-data-collection.md) 擷取個人化內容。 此 `POST` 要求包含 `event` 和 `query`. 前一步驟的Cookie（若有）會包含在 `meta>state>entries` 陣列。
 1. 伺服器API會將個人化內容傳回至您的應用程式伺服器。
 1. 應用程式伺服器會傳回HTML回應給用戶端瀏覽器，其中包含 [身分和叢集Cookie](#cookies).
-1. 在用戶端頁面上， [!DNL Web SDK] `applyResponse` 會呼叫，並傳遞標題和內文 [!UICONTROL 伺服器API] 上一步的回應。
+1. 在用戶端頁面上， [!DNL Web SDK] `applyResponse` 會呼叫，並傳遞標題和內文 [!UICONTROL 伺服器API] 回應。
 1. 此 [!DNL Web SDK] 呈現頁面載入 [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 自動提供，因為 `renderDecisions` 標幟設為 `true`.
 1. 表單式 [!DNL JSON] 選件會透過手動套用 `applyPersonalization` 方法，要更新 [!DNL DOM] 根據個人化選件。
 1. 對於表單式活動，必須手動傳送顯示事件，以指出已顯示選件。 這是透過 `sendEvent` 命令。
@@ -281,9 +281,3 @@ function sendDisplayEvent(decision) {
 ## 範例應用程式 {#sample-app}
 
 為協助您實驗並深入了解此類個人化，我們提供範例應用程式，供您下載並用於測試。 您可以從以下網址下載應用程式，以及如何使用應用程式的詳細指示 [GitHub存放庫](https://github.com/adobe/alloy-samples).
-
-
-
-
-
-

@@ -4,8 +4,8 @@ description: Adobe Experience Platform的Zendesk事件轉送擴充功能。
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 6%
+source-wordcount: '1271'
+ht-degree: 5%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 | 子網域 | 在註冊過程中， **子網域** 是針對帳戶而建立。 請參閱 [Zendesk文檔](https://developer.zendesk.com/documentation/ticketing/working-with-oauth/creating-and-using-oauth-tokens-with-the-api/) 以取得更多資訊。 | `xxxxx.zendesk.com` (其中 `xxxxx` 是在帳戶建立期間提供的值) |
 | API代號 | Zendesk使用承載令牌作為與Zendesk API通信的驗證機制。 登入Zendesk入口網站後，產生API代號。 請參閱 [Zendesk文檔](https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token) 以取得更多資訊。 | `cwWyOtHAv12w4dhpiulfe9BdZFTz3OKaTSzn2QvV` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 最後，您必須為API Token建立事件轉送機密。 將密碼類型設定為 **[!UICONTROL 代號]**，並將值設為您從Zendesk設定收集的API代號。 請參閱 [事件轉發中的機密](../../../ui/event-forwarding/secrets.md) 以取得設定機密的詳細資訊。
 
@@ -78,7 +78,7 @@ ht-degree: 6%
 | `created_at` | 字串 | `arc.event.xdm.timestamp` | 反映事件建立時間的ISO-8601時間戳記。 | 無 | (不適用) |
 | `properties` | 物件 | `arc.event.xdm._extconndev.EventProperties` | 自訂JSON物件，包含事件的詳細資訊。 | 是 | (不適用) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ ht-degree: 6%
 | `identifiers` | 陣列 | `arc.event.xdm._extconndev.identifiers` | 包含至少一個標識符的陣列。 每個識別碼都包含類型和值。 | 是 | 請參閱 [Zendesk文檔](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) 以了解 `identifiers` 陣列。 所有欄位和值都必須是唯一的。 |
 | `attributes` | 物件 | `arc.event.xdm._extconndev.attrbutes` | 包含有關人員的用戶定義屬性的對象。 | 無 | 請參閱 [Zendesk文檔](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) 以取得設定檔屬性的詳細資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 驗證Zendesk中的資料 {#validate}
 
@@ -125,7 +125,7 @@ ht-degree: 6%
 | [!DNL Enterprise] | 750 |
 | [!DNL Enterprise Plus] | 1000 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [Zendesk文檔](https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/#:~:text=API%20requests%20made%20by%20Zendesk%20apps%20are%20subject,sources%20for%20the%20account%2C%20including%20internal%20product%20requests.) 以取得這些限制的詳細資訊。
 
@@ -133,7 +133,7 @@ ht-degree: 6%
 
 使用或設定擴充功能時，Zendesk Events API可能會傳回下列錯誤：
 
-| 錯誤代碼 | 說明 | 解析度 | 範例 |
+| 錯誤代碼 | 說明 | 解決方法 | 範例 |
 |---|---|---|---|
 | 400 | **配置檔案長度無效：** 當設定檔屬性的長度包含超過40個字元時，就會發生此錯誤。 | 將設定檔屬性資料的長度限制為最多40個字元。 | `{"error": [{"code":"InvalidProfileTypeLength","title": "Profile type length > 40 chars"}]}` |
 | 401 | **未找到路由：** 提供無效域時，將發生此錯誤。 | 驗證是否以以下格式提供有效域： `{subdomain}.zendesk.com` | `{"error": [{"description": "No route found for host {subdomain}.zendesk.com","title": "RouteNotFound"}]}` |
@@ -141,7 +141,7 @@ ht-degree: 6%
 | 403 | **權限不足：** 未提供足夠的存取資源權限時，就會發生此錯誤。 | 驗證是否已提供必要權限。 | `{"error": [{"code":"PermissionDenied","title": "Insufficient permisssions to perform operation"}]}` |
 | 429 | **請求太多：** 超過端點對象記錄限制時，會發生此錯誤。 | 請參閱上文的章節， [要求限制](#limits) 有關每限制閾值的詳細資訊。 | `{"error": [{"code":"TooManyRequests","title": "Too Many Requests"}]}` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 後續步驟
 

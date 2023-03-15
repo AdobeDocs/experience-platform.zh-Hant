@@ -4,8 +4,8 @@ description: 本檔案概述Experience Data Model(XDM)中的XDM Business Campaig
 exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 2%
+source-wordcount: '246'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 | `personKey` | [[!UICONTROL B2B源]](../../data-types/b2b-source.md) | 關聯促銷活動成員的人員的複合標識符。 |
 | `_id` | 字串 | 記錄的唯一標識符。 這是系統產生的值，與 `campaignMemberID`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 若要了解此類別在概念上如何與其他B2B類別相關，以及如何在Adobe Experience Platform UI中建立這些關係，請參閱 [Real-Time CDP B2B版中的結構關係](../../tutorials/relationship-b2b.md)
 

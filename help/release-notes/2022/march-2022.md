@@ -4,8 +4,8 @@ description: 2022年3月Adobe Experience Platform發行說明。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 6%
+source-wordcount: '1176'
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ Experience Platform可讓您稽核各種服務和功能的使用者活動。 稽
 | 資料集、結構、類別、欄位群組、資料類型、沙箱、目的地、區段、合併原則、計算屬性、產品設定檔和帳戶(Adobe)的稽核記錄 | 這些是由稽核記錄所記錄的資源。 如果啟用功能，稽核記錄會在活動發生時自動收集。 您無需手動啟用記錄收集。 |
 | 導出審核日誌 | 稽核記錄可下載為 `CSV` 或 `JSON` 檔案。 產生的檔案會直接儲存至您的電腦。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Platform中稽核記錄的詳細資訊，請參閱 [稽核記錄概述](../../landing/governance-privacy-security/audit-logs/overview.md).
 
@@ -67,7 +67,7 @@ Experience Platform可讓您訂閱各種平台活動的事件型警報。 您可
 | --- | --- |
 | 新警報規則 | 現在有兩個新的警報規則可用於資料擷取的相關來源。 請參閱 [警報規則](../../observability/alerts/rules.md) 以取得更新的警報類型清單。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Platform中警報的詳細資訊，請參閱 [警報概觀](../../observability/alerts/overview.md).
 
@@ -88,7 +88,7 @@ Adobe Experience Platform提供多個 [!DNL dashboards] 通過它可以查看有
 | 依身分識別Widget的未分段設定檔 | 此介面工具集會依其唯一識別碼來分類未分段的設定檔總數。 資料以橫條圖視覺化。 請參閱 [profiles standard widget檔案](../../dashboards/guides/profiles.md#standard-widgets) 以取得更多資訊。 |
 | 單一身分設定檔Widget | 此介面工具集可提供貴組織的設定檔計數，這些設定檔只有一種可建立其身分的ID類型，可能是電子郵件或ECID。 請參閱 [profiles standard widget檔案](../../dashboards/guides/profiles.md#standard-widgets) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需設定檔控制面板的詳細資訊，請參閱 [設定檔控制面板概觀](../../dashboards/guides/profiles.md).
 
@@ -102,7 +102,7 @@ Adobe Experience Platform提供多個 [!DNL dashboards] 通過它可以查看有
 | --- | --- |
 | 目的地計數介面工具集 | 介面工具集提供可在系統中啟用和傳遞受眾的可用端點總數。 此數字包含使用中和非使用中目的地。 請參閱 [destinations standard widget檔案](../../dashboards/guides/destinations.md#standard-widgets) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需Platform中「目標」控制面板的詳細資訊，請參閱 [目的地控制面板概觀](../../dashboards/guides/destinations.md).
 
@@ -129,7 +129,7 @@ Platform提供一套技術，可讓您收集用戶端客戶體驗資料，並傳
 | --- | --- |
 | `table_exists` | 新功能命令用於確認系統中當前是否存在表。 命令返回一個布爾值： `true` 如果表格 **does** 存在，且 `false` 如果表格顯示 **not** 存在。 請參閱 [SQL語法文檔](../../query-service/sql/syntax.md) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 有關可用功能的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).
 
@@ -147,6 +147,6 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 | 全面推出 [!DNL Oracle Eloqua] 來源 | 您現在可以使用 [!DNL Oracle Eloqua] 源無縫地從 [!DNL Oracle Eloqua] 例項（帳戶、行銷活動、連絡人）至Platform。 請參閱 [建立 [!DNL Oracle Eloqua] 源連接](../../sources/connectors/marketing-automation/oracle-eloqua.md) 以取得更多資訊。 |
 | 適用於 [!DNL Data Landing Zone] | 此 [!DNL Data Landing Zone] 原始碼現在支援使用 [!DNL Flow Service] API。 請參閱 [建立 [!DNL Data Landing Zone] 源連接](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 以取得更多資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 若要進一步了解來源，請參閱 [來源概觀](../../sources/home.md).

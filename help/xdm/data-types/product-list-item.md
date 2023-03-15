@@ -6,8 +6,8 @@ description: 本檔案概述產品清單項目XDM資料類型。
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 4%
+source-wordcount: '367'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 | `quantity` | [!UICONTROL 整數] | 客戶已表示他們需要該產品的件數。 |
 | `unitOfMeasureCode` | [!UICONTROL 字串] | 標準 [單位代碼](https://ucum.org/ucum) 與 `quantity` 屬性。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需郵遞區號資料類型的詳細資訊，請參閱公用XDM存放庫：
 

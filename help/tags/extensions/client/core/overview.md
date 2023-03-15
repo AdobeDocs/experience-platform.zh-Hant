@@ -592,7 +592,7 @@ console.log(event);
 
 *JavaScript*
 
-建立 JavaScript 自訂程式碼動作後，您可能會從動作傳回 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。唯有傳回的 Promise 順利解決後，系統才會執行規則中的下一個動作。如果 Promise 遭拒，系統就不會執行規則的下一個動作。
+建立 JavaScript 自訂程式碼動作後，您可能會從動作傳回 [Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)。唯有傳回的 Promise 順利解決後，系統才會執行規則中的下一個動作。如果 Promise 遭拒，系統就不會執行規則的下一個動作。
 
 >[!NOTE]
 >

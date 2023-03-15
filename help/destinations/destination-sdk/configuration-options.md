@@ -4,7 +4,7 @@ title: 配置Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 source-git-commit: 9b4c7da5aa02ae27608c2841b1d825445ac3015e
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '560'
 ht-degree: 1%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platform中的目的地服務使用多個元件的設定端點�
 | [串流目的地的測試工具](./test-destination.md) | [檔案型目的地的測試工具](/help/destinations/destination-sdk/file-based-destination-testing-overview.md) | [目的地測試API操作](./destination-testing-api.md) |
 | [目的地發佈](./configure-destination-instructions.md#publish-destination) | 與串流目的地相同 | [目的地發佈API作業](./destination-publish-api.md) |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 後續步驟 {#next-steps}
 

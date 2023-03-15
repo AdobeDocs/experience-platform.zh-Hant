@@ -4,8 +4,8 @@ title: 基於檔案的目標伺服器規格配置選項
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 9%
+source-wordcount: '1227'
+ht-degree: 8%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 9%
 | `fileBasedS3Destination.path.value` | 字串 | 將承載導出檔案的目標資料夾的路徑。 |
 | `fileConfigurations` | 物件 | 請參閱 [檔案格式設定](#file-configuration) 以取得本節的詳細說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 基於檔案的SFTP目標伺服器規格 {#sftp-example}
 
@@ -93,7 +93,7 @@ ht-degree: 9%
 | `encryptionMode` | 字串 | 指示是否使用檔案加密。 支援的值： <ul><li>PGP</li><li>None</li></ul> |
 | `fileConfigurations` | 物件 | 請參閱 [檔案格式設定](#file-configuration) 以取得本節的詳細說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 檔案型 [!DNL Azure Data Lake Storage] ([!DNL ADLS])目標伺服器規格 {#adls-example}
 
@@ -123,7 +123,7 @@ ht-degree: 9%
 | `fileBasedAdlsGen2Destination.path.value` | 字串 | 將承載導出檔案的目標資料夾的路徑。 |
 | `fileConfigurations` | 物件 | 請參閱 [檔案格式設定](#file-configuration) 以取得本節的詳細說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 檔案型 [!DNL Azure Blob Storage] 目標伺服器規格 {#blob-example}
 
@@ -159,7 +159,7 @@ ht-degree: 9%
 | `fileBasedAzureBlobDestination.container.value` | 字串 | 的名稱 [!DNL Azure Blob Storage] 供此目的地使用的容器。 |
 | `fileConfigurations` | 物件 | 請參閱 [檔案格式設定](#file-configuration) 以取得本節的詳細說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 檔案型 [!DNL Data Landing Zone] ([!DNL DLZ])目標伺服器規格 {#dlz-example}
 
@@ -190,7 +190,7 @@ ht-degree: 9%
 | `fileBasedDlzDestination.path.value` | 字串 | 將承載導出檔案的目標資料夾的路徑。 |
 | `fileConfigurations` | 物件 | 請參閱 [檔案格式設定](#file-configuration) 以取得本節的詳細說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 檔案型 [!DNL Google Cloud Storage] 目標伺服器規格 {#gcs-example}
 
@@ -226,7 +226,7 @@ ht-degree: 9%
 | `fileBasedGoogleCloudStorageDestination.path.value` | 字串 | 將承載導出檔案的目標資料夾的路徑。 |
 | `fileConfigurations` | 物件 | 請參閱 [檔案格式設定](#file-configuration) 以取得本節的詳細說明。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 檔案格式設定 {#file-configuration}
 
@@ -357,17 +357,17 @@ ht-degree: 9%
 | `compression.value` | 選填 | 在將資料保存到檔案時使用的壓縮編解碼器。 支援的值： `none`, `bzip2`, `gzip`, `lz4`，和 `snappy`. | `none` | - | - |
 | `fileType.value` | 選填 | 指定輸出檔案格式。 支援的值： `csv`, `parquet`，和 `json`. | `csv` | - | - |
 | `csvOptions.quote.value` | 選填 | *僅限`"fileType.value": "csv"`*. 設定用於逸出引號值的單一字元，其中分隔符可以是值的一部分。 | `null` | - | - |
-| `csvOptions.quoteAll.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否應始終以引號括住所有值。 預設值為僅逸出包含引號字元的值。 | `false` | `quoteAll`:`false` —> `male,John,"TestLastName"` | `quoteAll`:`true` —>`"male","John","TestLastName"` |
-| `csvOptions.delimiter.value` | 選填 | *僅限`"fileType.value": "csv"`*. 為每個欄位和值設定分隔符號。 此分隔符號可以是一或多個字元。 | `,` | `delimiter`:`,` —> `comma-separated values"` | `delimiter`:`\t` —> `tab-separated values` |
-| `csvOptions.escape.value` | 選填 | *僅限`"fileType.value": "csv"`*. 在已引號的值內設定用於逸出引號的單字元。 | `\` | `"escape"`:`"\\"` —> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` —> `male,John,"Test,'''"LastName5"` |
+| `csvOptions.quoteAll.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否應始終以引號括住所有值。 預設值為僅逸出包含引號字元的值。 | `false` | `quoteAll`:`false` —> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
+| `csvOptions.delimiter.value` | 選填 | *僅限`"fileType.value": "csv"`*. 為每個欄位和值設定分隔符號。 此分隔符號可以是一或多個字元。 | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
+| `csvOptions.escape.value` | 選填 | *僅限`"fileType.value": "csv"`*. 在已引號的值內設定用於逸出引號的單字元。 | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |
 | `csvOptions.escapeQuotes.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否應始終將包含引號的值括在引號中。 預設值是逸出包含引號字元的所有值。 | `true` | - | - |
 | `csvOptions.header.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否將列的名稱寫入導出檔案中的第一行。 | `true` | - | - |
-| `csvOptions.ignoreLeadingWhiteSpace.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否從值中修剪前導空格。 | `true` | `ignoreLeadingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`—> `"    male","John","TestLastName"` |
-| `csvOptions.ignoreTrailingWhiteSpace.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否從值修剪尾隨空格。 | `true` | `ignoreTrailingWhiteSpace`:`true` —> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`—> `"male    ","John","TestLastName"` |
-| `csvOptions.nullValue.value` | 選填 | *僅限`"fileType.value": "csv"`*. 設定空值的字串表示。 | `""` | `nullvalue`:`""` —> `male,"",TestLastName` | `nullvalue`:`"NULL"` —> `male,NULL,TestLastName` |
-| `csvOptions.dateFormat.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指出日期格式。 | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` —> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` —> `male,TestLastName,John,02/24/2022` |
+| `csvOptions.ignoreLeadingWhiteSpace.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否從值中修剪前導空格。 | `true` | `ignoreLeadingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreLeadingWhiteSpace`:`false`--> `"    male","John","TestLastName"` |
+| `csvOptions.ignoreTrailingWhiteSpace.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指示是否從值修剪尾隨空格。 | `true` | `ignoreTrailingWhiteSpace`:`true` --> `"male","John","TestLastName"` | `ignoreTrailingWhiteSpace`:`false`--> `"male    ","John","TestLastName"` |
+| `csvOptions.nullValue.value` | 選填 | *僅限`"fileType.value": "csv"`*. 設定空值的字串表示。 | `""` | `nullvalue`:`""` --> `male,"",TestLastName` | `nullvalue`:`"NULL"` --> `male,NULL,TestLastName` |
+| `csvOptions.dateFormat.value` | 選填 | *僅限`"fileType.value": "csv"`*. 指出日期格式。 | `yyyy-MM-dd` | `dateFormat`:`yyyy-MM-dd` --> `male,TestLastName,John,2022-02-24` | `dateFormat`:`MM/dd/yyyy` --> `male,TestLastName,John,02/24/2022` |
 | `csvOptions.timestampFormat.value` | 選填 | *僅限`"fileType.value": "csv"`*. 設定指示時間戳格式的字串。 | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | 選填 | *僅限`"fileType.value": "csv"`*. 設定用於逸出引號字元的逸出的單一字元。 | `\` 當逸出字元和引號字元不同時。 `\0` 引號和轉義字元相同時，就會顯示此變數。 | - | - |
-| `csvOptions.emptyValue.value` | 選填 | *僅限`"fileType.value": "csv"`*. 設定空值的字串表示。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` —> `male,empty,John` |
+| `csvOptions.emptyValue.value` | 選填 | *僅限`"fileType.value": "csv"`*. 設定空值的字串表示。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

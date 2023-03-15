@@ -7,7 +7,7 @@ feature: Data Access
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 57%
+ht-degree: 68%
 
 ---
 
@@ -18,4 +18,4 @@ ht-degree: 57%
 - [資料存取API](api.md)
 - 教學課程 {#tutorials}
    - [檢視資料集資料](tutorials/dataset-data.md)
-- [平台發行說明](https://www.adobe.com/go/platform-release-notes-en)
+- [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)

@@ -6,8 +6,8 @@ description: 本檔案概述「郵遞區號」XDM資料類型。
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 1%
+source-wordcount: '338'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 1%
 | `statusReason` | 目前的說明 `status`. |
 | `street1` - `street4` | 這四個欄位的用途是包含主要街道級別資訊、公寓編號、街號和街道名稱。 `street2` to `street4` 為選填。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需郵遞區號資料類型的詳細資訊，請參閱公用XDM存放庫：
 

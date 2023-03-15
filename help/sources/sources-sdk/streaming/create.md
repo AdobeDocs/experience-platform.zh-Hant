@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 source-git-commit: 6b78ed695bca5912c9af4371a8423fdcd7471bde
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '748'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 1%
 | {your_source}-label.txt | 源應顯示在Experience Platform源目錄中的名稱。 | 梅達利亞 |
 | {your_source}-connectionSpec.json | 包含源的連接規範的JSON檔案。 此檔案最初不是必需的，因為您將在完成本指南時填充連接規範。 | `medallia-connectionSpec.json` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

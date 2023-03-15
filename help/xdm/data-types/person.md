@@ -6,7 +6,7 @@ description: 本檔案概述人員體驗資料模型(XDM)資料類型。
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '338'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 4%
 | `nationality` | 字串 | 使用ISO 3166-1 Alpha-2代碼表示的個人與其國家之間的法律關係。 此屬性的格式必須符合此規則運算式 `^[A-Z]{2}$`. |
 | `taxId` | 字串 | 人員的稅或會計ID，例如美國的納稅人標識號(TIN)或西班牙的CIF/NIF(CIF/NIF)。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

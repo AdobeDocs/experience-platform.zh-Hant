@@ -2,31 +2,31 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構； XDM;ExperienceEvent；欄位；結構；結構；結構設計；欄位群組；欄位群組；訂房；用餐；
 title: 用餐預訂方案欄位組
 description: 本檔案提供「餐飲預訂」結構欄位群組的概觀。
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '459'
 ht-degree: 5%
 
 ---
 
+# [!UICONTROL 餐廳預訂] 方案欄位組
 
-# [!UICONTROL Dining ] Reservationschema欄位組
+[!UICONTROL 餐廳預訂] 是的標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md) 用來擷取有關餐飲預訂的資訊。
 
-[!UICONTROL Dining Reservation] 是類別的標準結構欄位群組， [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) 用於擷取與用餐預訂相關的資訊。
-
-欄位組是[!UICONTROL 保留詳細資訊]欄位組的擴展，在單個對象類型欄位`reservations`下包含所有相同的欄位。 除了這些通用欄位外，[!UICONTROL Dining Reservation]還包括`diningReservations`陣列。 此物件陣列可用來說明具有餐廳特定屬性的一或多個保留。
+欄位群組是 [!UICONTROL 保留詳細資訊] 欄位組，並在單個對象類型欄位下包含所有相同的欄位， `reservations`. 除了這些通用欄位， [!UICONTROL 餐廳預訂] 也包括 `diningReservations` 陣列。 此物件陣列可用來說明具有餐廳特定屬性的一或多個保留。
 
 >[!NOTE]
 >
->本文檔涵蓋`diningReservations`陣列的詳細資訊。 有關`reservations`對象下提供的其他欄位的資訊，請參閱[[!UICONTROL 保留詳細資訊]欄位組引用](./reservation-details.md)。
+>本檔案說明 `diningReservations` 陣列。 欲知下方提供的其他欄位 `reservations` 物件，請參閱 [[!UICONTROL 保留詳細資訊] 欄位群組參考](./reservation-details.md).
 
 ![餐廳預訂結構](../../images/field-groups/dining-reservation/structure.png)
 
 ## `diningReservations`
 
-`diningReservations` 是一系列物件，代表餐飲預訂清單。例如，如果預訂事件涉及在一天中不同時間在多個不同餐廳預訂的情況，則這些預訂可以作為單個事件的`diningReservations`下的單個對象列出。
+`diningReservations` 是一系列物件，代表餐飲預訂清單。 例如，如果訂房事件涉及一天中不同時間在多家不同餐廳預訂的情況，則這些預訂可以列為下方的個別對象 `diningReservations` 的URL。
 
-`diningReservations`下提供的每個對象的結構如下。
+下方提供之每個物件的結構 `diningReservations` 如下所示。
 
 ![diningReservations結構](../../images/field-groups/dining-reservation/diningReservations.png)
 
@@ -57,7 +57,7 @@ ht-degree: 5%
 | `specialOccasion` | 布林值 | 指出是否正在為特殊場合提出保留。 |
 | `status` | 整數 | 餐飲預訂的狀態。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 

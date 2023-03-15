@@ -1,10 +1,11 @@
 ---
 title: 使用AI產生的Recommendations(Beta)將CSV檔案對應至XDM結構
 description: 本教學課程說明如何使用AI產生的建議，將CSV檔案對應至XDM架構。
-source-git-commit: d6f858af8bc44be74b1aaf12b973fb6818c1b2a5
+exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
+source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 0%
+source-wordcount: '1040'
+ht-degree: 1%
 
 ---
 
@@ -51,7 +52,7 @@ ht-degree: 0%
 | [!UICONTROL 資料流詳細資訊] | 為將CSV資料匯入Platform的資料流提供名稱和可選說明。 啟動此工作流時，系統會自動為資料流分配預設名稱。 可選擇變更名稱。 |
 | [!UICONTROL 警示] | 從 [產品內警報](../../../observability/alerts/overview.md) 在資料流啟動後，您要接收有關資料流狀態的資訊。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 完成資料流配置後，請選擇 **[!UICONTROL 下一個]**.
 
@@ -63,7 +64,7 @@ ht-degree: 0%
 
 ![此 [!UICONTROL 選擇檔案] 按鈕和拖放區域(在 [!UICONTROL 選擇資料] 步驟](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
-上傳檔案後，會顯示範例資料區段，顯示收到資料的前10列，以便您驗證其已正確上傳。 選擇 **[!UICONTROL 下一個]** 繼續。
+上傳檔案後，會顯示範例資料區段，顯示收到資料的前10列，以便您驗證其已正確上傳。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
 ![範例資料列會填入工作區中](../../images/tutorials/map-csv-recommendations/data-uploaded.png)
 

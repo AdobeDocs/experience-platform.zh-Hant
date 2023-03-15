@@ -58,7 +58,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的強大功能。 它為�
 
 **已知問題**
 
-* 無
+* None
 
 如需 [!DNL Privacy Service]，請先閱讀 [Privacy Service概述](../../privacy-service/home.md).
 
@@ -85,7 +85,7 @@ Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許�
 
 **已知問題**
 
-* 無
+* None
 
 如需來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md)
 
@@ -109,6 +109,6 @@ Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許�
 
 **已知問題**
 
-* 無
+* None
 
 請參閱 [目的地概觀](../../destinations/home.md) 以取得更多資訊。

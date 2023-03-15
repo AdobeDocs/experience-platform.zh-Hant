@@ -6,8 +6,8 @@ description: 本檔案概述XDM ExperienceEvent類別的IAB TCF 2.0同意結構�
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 1%
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `consentStrings` | 陣列 [同意字串](../../data-types/consent-string.md) | 與事件相關聯的同意字串值陣列。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 請參閱 [平台中的IAB TCF 2.0支援](../../../landing/governance-privacy-security/consent/iab/overview.md) 有關此欄位組的使用案例的詳細資訊。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
 

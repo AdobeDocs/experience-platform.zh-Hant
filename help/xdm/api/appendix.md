@@ -6,8 +6,8 @@ description: 本檔案提供與使用Schema Registry API相關的補充資訊。
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 1%
+source-wordcount: '978'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 | `limit` | 當與 `orderby` 參數， `limit` 會限制指定請求應傳回的項目數上限。 若沒有 `orderby` 參數。<br><br>此 `limit` 參數指定正整數(介於 `0` 和 `500`)as a *提示* 至應傳回的項目數上限。 例如， `limit=5` 在清單中只傳回5個資源。 但是，並未嚴格執行此值。 實際響應尺寸可以小於或大於由提供可靠操作的需要所限制 `start` 參數（若有提供）。 |
 | `start` | 當與 `orderby` 參數， `start` 指定項目子設定清單的開始位置。 若沒有 `orderby` 參數。 此值可從 `_page.next` 清單回應的屬性，並用於存取結果的下一頁。 若 `_page.next` 值為null，則沒有其他可用頁面。<br><br>通常會忽略此參數，以取得結果的第一頁。 之後， `start` 應設為的主要排序屬性的最大值 `orderby` 在上一頁中收到的欄位。 然後，API回應會傳回以具有主要排序屬性的項目開頭的項目 `orderby` 嚴格大於（對於升序）或嚴格小於（對於降序）指定值。<br><br>例如，若 `orderby` 參數設為 `orderby=name,firstname`, `start` 參數會包含 `name` 屬性。 在此情況下，如果您想要在名稱「Miller」後立即顯示資源的後20個項目，則將使用： `?orderby=name,firstname&start=Miller&limit=20`. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 篩選 {#filtering}
 
@@ -50,7 +50,7 @@ ht-degree: 1%
 | `~` | 依屬性是否符合提供的規則運算式來篩選。 | `property=title~test$` |
 | (None) | 僅聲明屬性名稱只會傳回屬性存在的項目。 | `property=title` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 >[!TIP]
 >

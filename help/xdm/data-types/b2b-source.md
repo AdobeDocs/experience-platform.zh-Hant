@@ -4,8 +4,8 @@ description: 本檔案概述B2B來源Experience Data Model(XDM)資料類型。
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 3%
+source-wordcount: '270'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 3%
 | `sourceKey` | 字串 | 由 `sourceId`, `sourceInstanceId`，和 `sourceType` 以下列格式串連： `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>某些來源連接器(例如Marketo)會針對特定識別碼自動串連此值。 其他必須使用 [資料準備 `concat` 函式](../../data-prep/functions.md#string)，例如： `concat(id,"@${ORG_ID}.Marketo")` |
 | `sourceType` | 字串 | 提供來源資料的平台名稱。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 如需資料類型的詳細資訊，請參閱公用XDM存放庫：
 

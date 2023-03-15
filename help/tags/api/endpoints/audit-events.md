@@ -1,23 +1,23 @@
 ---
-title: 審核事件終結點
-description: 瞭解如何調用Reactor API中的/audit_events終結點。
+title: 審核事件端點
+description: 了解如何在Reactor API中呼叫/audit_events端點。
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 4%
+source-wordcount: '259'
+ht-degree: 3%
 
 ---
 
-# 審核事件終結點
+# 審核事件端點
 
 >[!WARNING]
 >
->執行 `/audit_events` 端點在添加、刪除和重新處理特徵時處於流量狀態。
+>實施 `/audit_events` 隨著功能的添加、刪除和重作，端點處於通量中。
 
-審計事件是在進行更改時生成的對反應器API中的另一個資源的特定更改的記錄。 這些是可通過使用 [回調](./callbacks.md)。 的 `/audit_events` Reactor API中的端點允許您以寫程式方式管理體驗應用程式中的審計事件。
+稽核事件是對Reactor API中其他資源進行特定變更的記錄，會在進行變更時產生。 這些是可透過使用 [回撥](./callbacks.md). 此 `/audit_events` reactor API中的端點可讓您以程式設計方式管理experience應用程式中的稽核事件。
 
-審核事件以審核 `{RESOURCE_TYPE}.{EVENT}`，例如 `build.created` 或 `rule.updated`。
+審核事件以 `{RESOURCE_TYPE}.{EVENT}`，例如 `build.created` 或 `rule.updated`.
 
 資源類型可以是下列任一類型：
 
@@ -31,7 +31,7 @@ ht-degree: 4%
 * `environment`
 * `host`
 
-每種資源類型都支援以下事件：
+每種資源類型均支援下列事件：
 
 * `created`
 * `updated`
@@ -39,11 +39,11 @@ ht-degree: 4%
 
 ## 快速入門
 
-本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
+本指南中使用的端點屬於 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
 
-## 檢索審計事件清單 {#list}
+## 擷取稽核事件清單 {#list}
 
-通過向以下對象發出GET請求，您可以檢索組織擁有的所有屬性的審計事件清單 `/audit_events` 端點。
+您可以向 `/audit_events` 端點。
 
 **API格式**
 
@@ -65,7 +65,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回審計事件清單。 下面的示例響應已被截斷為空間。
+成功的回應會傳回稽核事件清單。 下列範例回應已截斷空格。
 
 ```json
 {
@@ -160,7 +160,7 @@ curl -X GET \
 
 ## 查找審核事件 {#lookup}
 
-您可以通過在GET請求的路徑中提供其ID來查找審計事件。
+您可以在稽核請求的路徑中提供其ID，借此查詢GET事件。
 
 **API格式**
 
@@ -170,9 +170,9 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `AUDIT_EVENT_ID` | 的 `id` 查找的審核事件。 |
+| `AUDIT_EVENT_ID` | 此 `id` 查找的審計事件。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **要求**
 
@@ -188,7 +188,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回審計事件的詳細資訊。
+成功的回應會傳回稽核事件的詳細資訊。
 
 ```json
 {

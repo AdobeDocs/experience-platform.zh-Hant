@@ -6,7 +6,7 @@ description: 本檔案概述XDM ExperienceEvent類別，以及事件資料模型
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '1836'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 1%
 | `identityMap` | 一個地圖欄位，其中包含事件所套用之個人的命名空間身分識別集。 系統會在擷取身分資料時自動更新此欄位。 為了正確利用此欄位 [即時客戶個人檔案](../../profile/home.md)，請勿嘗試手動更新資料操作中欄位的內容。<br /><br />請參閱 [綱要構成基本知識](../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
 | `timestamp`<br>**(必填)** | 事件發生時的ISO 8601時間戳記，格式如下 [RFC 3339第5.6節](https://tools.ietf.org/html/rfc3339#section-5.6). 此時間戳記必須發生在過去。 請參閱下方的章節，內容如下： [時間戳記](#timestamps) 以了解使用此欄位的最佳實務。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 事件模型的最佳作法
 
@@ -144,7 +144,7 @@ Adobe提供數個標準欄位群組，以搭配 [!DNL XDM ExperienceEvent] 類�
 | `web.webinteraction.linkClicks` | 連結已選取一或多次。 |
 | `web.webpagedetails.pageViews` | 網頁已接收到一個或多個視圖。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 的建議值 `producedBy` {#producedBy}
 

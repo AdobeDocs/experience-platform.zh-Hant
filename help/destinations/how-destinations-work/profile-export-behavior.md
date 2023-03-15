@@ -3,7 +3,7 @@ title: 設定檔匯出行為
 description: 了解設定檔匯出行為如何因Experience Platform目的地支援的不同整合路徑而有所不同。
 source-git-commit: 90964189396b3b89f35a96eb4c04e248dc34b9b4
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2942'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Experience Platform會最佳化設定檔匯出行為至您的企業目的地，�
 |---------|----------|
 | <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至企業目的地，因此指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援企業目標中的身分對應)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -110,7 +110,7 @@ Experience Platform會最佳化設定檔匯出行為至您的串流目的地，�
 |---------|----------|
 | <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>身分對應中的變更定義為針對 [身分圖](/help/identity-service/ui/identity-graph-viewer.md) 的，適用於對應以匯出的身分識別命名空間。</li><li>屬性的變更定義為對映至目的地之屬性的屬性的任何更新。</li></ul> | <ul><li>對應至目的地且已變更的區段將包含在 `segmentMembership` 物件。 在某些情況下，可能會使用多個呼叫匯出。 此外，在某些情況下，某些未變更的區段也可能包含在呼叫中。 無論如何，只會匯出對應的區段。</li><li>來自命名空間且對應至中目的地的所有身分識別 `identityMap` 也包含物件。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
@@ -175,7 +175,7 @@ Experience Platform會最佳化設定檔匯出行為至您的串流目的地，�
 |---------|----------|
 | <ul><li>UI或API中設定的匯出排程和使用者動作(選取 [立即匯出檔案](/help/destinations/ui/export-file-now.md) 或使用 [臨機啟動API](/help/destinations/api/ad-hoc-activation-api.md))決定目的地匯出的開始。</li></ul> | 在完整檔案匯出中，根據最新區段評估，每個檔案匯出都會包含區段的整個作用中設定檔母體。 選取要匯出的每個XDM屬性的最新值也會納入為每個檔案中的欄。 請注意，處於退出狀態的設定檔不會包含在檔案匯出中。 |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 **增量檔案導出**
 
@@ -185,7 +185,7 @@ Experience Platform會最佳化設定檔匯出行為至您的串流目的地，�
 |---------|----------|
 | <ul><li>UI或API中設定的匯出排程會決定目的地匯出的開始。</li><li>設定檔的區段成員資格變更（無論是否符合區段資格或取消資格）都可讓設定檔納入增量匯出。 設定檔屬性或身分對應中的變更 *不* 允許將配置檔案包含在增量導出中。</li></ul> | <p>區段成員資格已變更的設定檔，以及每個選取要匯出之XDM屬性的最新資訊。</p><p>具有退出狀態的設定檔會包含在目的地匯出中(如果 `segmentMembership.status` 已在對應步驟中選取XDM欄位。</p> |
 
-{style=&quot;table-layout:fixed&quot;}
+{style="table-layout:fixed"}
 
 >[!TIP]
 >

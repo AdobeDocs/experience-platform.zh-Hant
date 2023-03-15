@@ -5,7 +5,7 @@ description: Adobe Target是一款應用程式，可在網站、行動應用程�
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1011'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Adobe Target是Adobe Experience Platform目的地目錄中的個人化連線。
 | 匯出類型 | **[!DNL Profile request]** | 您正在為單一設定檔要求Adobe Target目的地中對應的所有區段。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 使用案例 {#use-cases}
 

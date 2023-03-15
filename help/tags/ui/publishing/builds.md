@@ -1,10 +1,11 @@
 ---
 title: 組建
 description: 了解組建的概念及其在Adobe Experience Platform中的運作方式。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，產品檔案中已推出數個術語變更。 有關術語更改的綜合參考，請參閱以下[document](../../term-updates.md)。
+>Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 組建版本是包含所有在用戶端裝置上執行之程式碼的檔案集。
 
@@ -41,7 +42,7 @@ ht-degree: 55%
 
 組建的預設檔案格式是一組檔案封包，其中包含您的擴充功能、資料元素和規則的所有必要程式碼，以供您依想要的方式執行。
 
-不過，在某些情況下，您可能會偏好使用檔案的 .zip 封存，而不是可執行的用戶端代碼檔案。例如，如果您自行託管組建且想要將該組建用於其他部署，您可能會想要建立封存。如果您在程式庫欄位的自行托管路徑中提供任何內容，便可儲存您的環境。 已封存下載的連結將與新程式碼一併顯示。建置程式庫後，您可以選擇將zip檔案部署至Akamai，然後從`assets.adobedtm.com/...`下載。
+不過，在某些情況下，您可能會偏好使用檔案的 .zip 封存，而不是可執行的用戶端代碼檔案。例如，如果您自行託管組建且想要將該組建用於其他部署，您可能會想要建立封存。如果您在程式庫欄位的自行托管路徑中提供任何內容，便可儲存您的環境。 已封存下載的連結將與新程式碼一併顯示。建置程式庫後，您可以選擇將zip檔案部署至Akamai，然後從下載 `assets.adobedtm.com/...`.
 
 >[!NOTE]
 >
@@ -75,6 +76,6 @@ ht-degree: 55%
 
 如果擴充功能開發人員使用其擴充功能提供縮制的程式碼，Platform不會在未縮制的組建中提供未縮制的程式碼。 同樣地，如果Platform使用者將縮制的程式碼放入自訂程式碼方塊中，該程式碼在未縮制的組建中仍為縮制的程式碼。 平台不會取消任何縮制。
 
-如需詳細資訊的詳細資訊，請參閱[此堆疊路徑文章](https://blog.stackpath.com/glossary/minification/)。
+如需詳細資訊的詳細資訊，請參閱 [這篇書本文章](https://blog.stackpath.com/glossary/minification/).
 
 執行組建時，會先建構未縮制的程式庫，然後一次將整個程式庫縮制。

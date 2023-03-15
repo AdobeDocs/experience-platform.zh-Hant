@@ -57,7 +57,7 @@ alloy("sendEvent", {
 
 商務物件也有特殊欄位，可收集訂單詳細資料，稱為 `order`.
 
-| **順序** | **選項** | **建議** | **說明** |
+| **順序** | **Option** | **建議** | **說明** |
 |---|---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | 此 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 訂單總計的貨幣。 |
 | [payments[paymentItems]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | 訂單上的付款清單。 A [paymentItem](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) 包含下列項目。 |

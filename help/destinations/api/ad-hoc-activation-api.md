@@ -7,7 +7,7 @@ type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1554'
 ht-degree: 1%
 
 ---
@@ -169,7 +169,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 您要啟用區段的目的地例項ID。 您可以導覽至 **[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]** ，然後按一下所需的目的地列，在右側邊欄中顯示目的地ID。 如需詳細資訊，請閱讀 [目的地工作區檔案](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 您要啟用至所選目的地之區段的ID。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 具有匯出ID的請求（即將廢止） {#request-deprecated}
 
@@ -207,7 +207,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 您要啟用至所選目的地之區段的ID。 |
 | <ul><li>`exportId1`</li></ul> | 回應中傳回的ID為 [區段匯出](../../segmentation/api/export-jobs.md#retrieve-list) 工作。 請參閱 [步驟4:取得最新的區段匯出工作ID](#segment-export-id) 以取得如何找到此ID的指示。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 回應 {#response}
 
@@ -231,7 +231,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | `order` | 已啟動區段的目的地ID。 |
 | `statusURL` | 啟動流程的狀態URL。 您可以使用 [流量服務API](../../sources/tutorials/api/monitor.md). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## API錯誤處理 {#api-error-handling}
 

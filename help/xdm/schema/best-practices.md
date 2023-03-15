@@ -6,8 +6,8 @@ description: 本檔案介紹Experience Data Model(XDM)結構，以及合成結�
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
 workflow-type: tm+mt
-source-wordcount: '2722'
-ht-degree: 2%
+source-wordcount: '2713'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 2%
 | 查閱實體 | 查詢實體代表可與個別人員相關的概念，但無法直接用於識別個人。 屬於此類別的實體應由結構來表示，其基礎為 **自定義類**，並透過連結至設定檔和事件 [模式關係](../tutorials/relationship-ui.md). |
 | 事件實體 | 事件實體代表與客戶可採取的動作、系統事件或您想追蹤隨時間變更的任何其他概念相關的概念。 屬於此類別的實體應由結構來表示，其基礎為 **[!DNL XDM ExperienceEvent]類**. |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 實體排序的考量事項
 
@@ -88,7 +88,7 @@ ht-degree: 2%
 | 1234567 | 新增 | 486502 | 1 | 10月1日，上午10點41分 |
 | 1234567 | 新增 | 910482 | 5 | 10月3日，下午2:15 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 #### 區段使用案例
 
@@ -131,7 +131,7 @@ ht-degree: 2%
 | 客戶和忠誠度帳戶 | 一對一 | 單一客戶只能有一個忠誠帳戶，反之亦然。 由於關係是一對一，因此「客戶」和「忠誠帳戶」都代表設定檔實體。 |
 | 客戶與訂閱 | 一對多 | 單一客戶可能有許多訂閱。 由於公司只關注客戶的目前訂閱，因此「客戶」是設定檔實體，而「訂閱」是查閱實體。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ### 不同實體類的優點和缺點 {#pros-and-cons}
 

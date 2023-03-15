@@ -6,7 +6,7 @@ description: 授予使用者使用Adobe Admin Console檢視、編輯和更新Exp
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '642'
 ht-degree: 6%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 6%
 | [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] 控制面板。<br/>編輯Widget結構並新增屬性以自訂Widget的功能 | **需要管理 — 標準 — 儀表板** | **必填（每個控制面板）** | 不適用 | 不適用 |
 | [!DNL License Usage Dashboard] | 不適用 | 不適用 | 不適用 | 已啟用 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 將權限新增至您的產品設定檔
 

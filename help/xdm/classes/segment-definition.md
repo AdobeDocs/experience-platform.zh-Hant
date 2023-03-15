@@ -5,8 +5,8 @@ description: 本檔案概述Experience Data Model(XDM)中的區段定義類別�
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 1%
+source-wordcount: '374'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +34,4 @@ ht-degree: 1%
 | `segmentStatus` | 來自外部系統的區段狀態。 接受下列值： <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
 | `version` | 區段定義的最新版本號碼。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

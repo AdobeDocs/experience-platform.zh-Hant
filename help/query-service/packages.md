@@ -4,7 +4,7 @@ description: 以下檔案概述可用於Query Service的功能和產品套件，
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '714'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform查詢服務可根據可執行的查詢模式，分為�
 | 支援的查詢模式 | 僅臨機查詢 | 批次查詢 |
 | 支援的使用案例 | <ul><li>探&#x200B;索</li><li>資料探&#x200B;索</li><li>資料驗證</li><li>實驗</li></ul> | <ul><li>清潔</li><li>整形</li><li>操控</li><li>豐富</li></ul> |
 | 支援語義 | <ul><li>選擇查詢</li></ul> | <ul><li>CTAS和ITAS查詢</li></ul> |
-| 最大執行時間 | 10 分鐘 | 24小時 |
+| 最大執行時間 | 10 分鐘 | 24 小時 |
 | 授權量度 | **查詢用戶併發**: <ul><li>1名同時使用者(Real-Time CDP、Adobe Journey Optimizer &#x200B;)</li><li>5個同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢併發**: <ul><li>1個併發運行查詢（所有應用程式）&#x200B;</li></ul> **其他臨機查詢使用者套件附加元件** 可購買，以增加客戶的授權臨機查詢權限。 <ul><li>每包多5個併發用戶</li><li>每個包附加1個併發運行查詢</li></ul> | **計算小時數**: <ul><li>變數（根據客戶的應用程式權限限定範圍）</li></ul> **計算小時數** 是查詢服務引擎在執行批次查詢時讀取、處理和將資料寫回資料湖所花費的時間量。 |
 | 查詢執行介面 | <ul><li>查詢服務UI</li><li>第三方用戶端UI</li><li>[!DNL PostgresSQL] 用戶端UI</li></ul> | <ul><li>查詢UI </li><li>第三方用戶端UI</li><li>[!DNL PostgresSQL] 用戶端UI</li><li>REST API</li></ul> |
 | 透過傳回的查詢結果 | 用戶端UI | 資料湖中儲存的衍生資料集 |
@@ -41,7 +41,7 @@ Adobe Experience Platform查詢服務可根據可執行的查詢模式，分為�
 | 監控容量 | 是 | 是 |
 | 查詢警報設定容量 | 無 | 是 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 存取控制
 
@@ -58,7 +58,7 @@ Experience Platform的存取控制透過 [Adobe Admin Console](https://admincons
 | [!DNL Manage Queries] （無寫資料權限） | 提供執行臨機查詢的存取權 |
 | [!DNL Manage Queries] （具有寫資料權限） | 提供執行批處理查詢的訪問 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 沙箱支援
 

@@ -4,7 +4,7 @@ description: 了解如何將區段從Experience Platform分享至各種Experienc
 last-substantial-update: 2023-01-25T00:00:00Z
 source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1515'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 >[!IMPORTANT]
 >
-> * 此目標可用於 [Adobe Real-time Customer Data Platform Prime與Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+> * 此目標可用於 [Adobe Real-time Customer Data Platform Prime與Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
 > * 您需要Audience Manager授權，才能啟用上節所述的Data Management Platform使用案例。
 > * 您 *不需要* Audience Manager授權，可透過「Experience Platform對象」整合，與Adobe Advertising Cloud、Adobe Target、Marketo和其他Experience Cloud解決方案共用Experience Cloud區段。
 
@@ -96,7 +96,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 | IDFA | Apple ID for Advertisers | 以Apple ID for Advertisers(IDFA)主要身分擷取至Experience Platform的設定檔，可匯出至此目的地。 |
 | email_lc_sha256 | 使用SHA256演算法雜湊的電子郵件地址 | 以雜湊電子郵件地址主要身分擷取至Experience Platform的設定檔，可匯出至此目的地。 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 匯出類型和頻率 {#export-type-frequency}
 
@@ -107,7 +107,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 | 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，以將上方區段所列的身分識別作為輸入。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」API型連線。 一旦根據區段評估在Experience Platform中更新設定檔，連接器就會將更新傳送至下游的目的地平台。 深入了解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## 連接到目標 {#connect}
 

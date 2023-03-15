@@ -124,7 +124,7 @@ Parquet檔案必須符合XDM標準，且不要求您手動設定對應，而CSV�
 
 ![dataflow detail](../../../../images/tutorials/create/http/dataflow-detail.png)
 
-## 檢閱
+## 請檢閱
 
 此 **[!UICONTROL 檢閱]** 步驟，允許您在建立資料流之前查看資料流的詳細資訊。 詳細資料分為下列類別：
 

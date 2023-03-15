@@ -4,8 +4,8 @@ description: 資料衛生API中的/quota端點可讓您根據組織對每種作�
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
 source-git-commit: 1c6a5df6473e572cae88a5980fe0db9dfcf9944e
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 3%
+source-wordcount: '347'
+ht-degree: 2%
 
 ---
 
@@ -83,4 +83,4 @@ curl -X GET \
 | --- | --- |
 | `quotas` | 列出每個資料衛生作業類型的配額資訊。 每個配額對象包含以下屬性：<ul><li>`name`:資料衛生作業類型：<ul><li>`expirationDatasetQuota`:資料集有效期</li><li>`deleteIdentityWorkOrderDatasetQuota`:記錄刪除</li></ul></li><li>`description`:資料衛生作業類型的說明。</li><li>`consumed`:此類型的作業數在當前每月期間運行。</li><li>`quota`:此作業類型的配額限制。 對於記錄的刪除和更新，這表示每個月可執行的作業數。 對於資料集過期時間，這代表可在任何指定時間同時作用的工作數量。</li></ul> |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}

@@ -35,7 +35,7 @@ ht-degree: 50%
 
 >[!NOTE]
 >
->解決方案合作夥伴也必須 [註冊](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) 針對Exchange合作夥伴計畫，因為Exchange合約包含Adobe Experience Platform擴充功能開發的條款與條件。
+>解決方案合作夥伴也必須 [註冊](https://partners.adobe.com/tw/exchangeprogram/experiencecloud/prereg.html) 針對Exchange合作夥伴計畫，因為Exchange合約包含Adobe Experience Platform擴充功能開發的條款與條件。
 >
 >在您完成 Exchange 註冊之前，請傳送電子郵件給 Exchange 管理員 (<ExchangeHelpEC@adobe.com>)，說明您正在註冊以便能夠推廣您的 擴充功能。若無法這麼做，可能會拒絕您的申請，請改向SPP。
 >

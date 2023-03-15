@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->企業目的地或串流設定檔匯出目的地皆適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) 僅限客戶。
+>企業目的地或串流設定檔匯出目的地皆適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 僅限客戶。
 
 使用企業目標Data Connectors將Adobe Real-time Customer Data Platform設定檔近乎即時傳送至內部系統或其他協力廠商系統，以進行資料同步、分析，並進一步擴充設定檔使用案例。
 
