@@ -5,9 +5,9 @@ title: 假名設定檔資料過期
 description: 本檔案提供在Adobe Experience Platform中為假名設定檔設定資料過期的一般指引。
 hide: true
 hidefromtoc: true
-source-git-commit: ab5eb1e7a3f2c20efcb44b1699a5938f6d54fa04
+source-git-commit: 6ba219162f6fde37d8bd258c43ed1bdbbbcdf569
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '875'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ ht-degree: 0%
 - 假名設定檔刪除時要考慮的身分命名空間。
    - 例如： `ECID` 只有， `AAID` 僅，或 `ECID` 和 `AAID`.
 - 刪除假名的設定檔之前的等待時間。 客戶的預設建議為14天。 不過，此值可能會因您的使用案例而異。
-- 與授權設定檔計數相比的目前設定檔計數。
 
 ## 常見問答 {#faq}
 
