@@ -1,12 +1,12 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform說明中的統一標籤
-breadcrumb-title: 統一標籤指南
-user-guide-description: 使用統一的標籤來管理元資料分類。 了解如何建立標籤類別和標籤。
+user-guide-title: Adobe Experience Platform 說明中的統一標記
+breadcrumb-title: 統一標記指南
+user-guide-description: 使用統一標記管理中繼資料分類法。了解如何建立標記類別和標記。
 source-git-commit: de258d0e9fe8304b239633c6901a62e3d7b9e214
 workflow-type: tm+mt
 source-wordcount: '39'
-ht-degree: 0%
+ht-degree: 64%
 
 ---
 
