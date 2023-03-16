@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform常見問題集和疑難排解指南
 description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 landing-page-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
+short-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 3%
