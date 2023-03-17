@@ -2,9 +2,9 @@
 title: Adobe Analytics報表套裝資料的來源連接器
 description: 本檔案概述Analytics並說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 486f5bdd834808c6262f41c0b0187721fc9b0799
+source-git-commit: 35298fc6b3e272c1b7b14cfa17713d18427ba2ce
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1042'
 ht-degree: 7%
 
 ---
@@ -50,7 +50,7 @@ XDM是公開記錄的規範，為應用程式提供通用結構和定義，以�
 | Analytics 資料 | 預期延遲 |
 | -------------- | ---------------- |
 | 新資料 [!DNL Real-Time Customer Profile] (A4T) **not** 已啟用) | &lt; 2 分鐘 |
-| 新資料 [!DNL Real-Time Customer Profile] (A4T) **is** 已啟用) | &lt; 15 分鐘 |
+| 新資料 [!DNL Real-Time Customer Profile] (A4T) **is** 已啟用) | 最多30分鐘 |
 | 資料湖的新資料 | &lt; 90 分鐘 |
 | 回填少於100億個事件 | &lt; 4 週 |
 
