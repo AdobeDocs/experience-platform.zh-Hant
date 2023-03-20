@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 94f682487630867aff2d1cb1898d62980055cdb4
+source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1046'
 ht-degree: 6%
 
 ---
@@ -122,6 +122,7 @@ ht-degree: 6%
       * [Salesforce CRM連線](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365連線](./catalog/crm/microsoft-dynamics-365.md)
       * [外聯聯繫](catalog/crm/outreach.md)
+      * [Zendesk連接](catalog/crm/zendesk.md)
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL擴充功能](./catalog/data-management/aam-dil-extension.md)
@@ -134,7 +135,8 @@ ht-degree: 6%
       * [電子郵件行銷目的地概觀](./catalog/email-marketing/overview.md)
       * [Adobe Campaign連線](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services連線](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [OracleEloqua連線](./catalog/email-marketing/oracle-eloqua.md)
+      * [(API)OracleEloqua連線](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [（檔案）OracleEloqua連接](./catalog/email-marketing/oracle-eloqua.md)
       * [OracleResponsys連線](./catalog/email-marketing/oracle-responsys.md)
       * [(API)SalesforceMarketing Cloud連線](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
       * [（檔案）SalesforceMarketing Cloud連接](./catalog/email-marketing/salesforce-marketing-cloud.md)
@@ -149,7 +151,7 @@ ht-degree: 6%
       * [線路連接](./catalog/mobile-engagement/line.md)
    * 個人化目的地 {#personalization}
       * [個人化目的地概觀](./catalog/personalization/overview.md)
-      * [（測試版）Adobe Commerce連線](./catalog/personalization/adobe-commerce.md)
+      * [Adobe Commerce連線](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target連線](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 擴充功能](./catalog/personalization/adobe-target-v2.md)
@@ -167,6 +169,7 @@ ht-degree: 6%
       * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [Facebook連線](./catalog/social/facebook.md)
       * [linkedIn相符的對象連線](./catalog/social/linkedin.md)
+      * [TikTok連線](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 連接](./catalog/social/twitter.md)
    * 串流目的地 {#streaming}
       * [HTTP API連線](./catalog/streaming/http-destination.md)
