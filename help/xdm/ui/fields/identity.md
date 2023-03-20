@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: 857c1d4f74b6352e90f9c97ef22d686a883e3563
 workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -27,8 +27,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
->title="主要身分限制"
->abstract="此架構使用的欄位組用於特定源連接。 此連線需要將identityMap用作主要身分，且已自動設定。"
+>title="對主要身分的限制"
+>abstract="此結構描述使用的欄位群組用於特定來源連接。此連接要求將 identityMap 做為主要身分並已自動設定。"
 
 當 [定義新欄位](./overview.md#define) 在UI中，您可以選取 **[!UICONTROL 身分]** 核取方塊。
 

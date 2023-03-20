@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
 source-wordcount: '1413'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -113,8 +113,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
->title="If條件"
->abstract="首先，定義將觸發策略檢查的條件。 條件包括要採取的特定行銷動作、要呈現的特定資料控管標籤，或兩者的組合。"
+>title="If 條件"
+>abstract="首先定義將觸發原則檢查的條件。條件可以包括正在採取的特定行銷動作、存在的特定資料控管標籤，或兩者的組合。"
 
 在 **[!UICONTROL 若]** 區段中，選取應觸發此原則的行銷動作和/或資料使用標籤。 選擇 **[!UICONTROL 查看全部]** 和 **[!UICONTROL 選擇標籤]** 檢視可用行銷動作和標籤的完整清單。
 
@@ -130,10 +130,10 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
->title="Then條件"
->abstract="定義「If」條件後，請使用「Then」區段，從聯合架構中選取至少一個同意屬性。 這是必須存在的屬性，配置檔案才能包含在此策略所管轄的操作中。"
+>title="Then 條件"
+>abstract="定義「If」條件後，使用「Then」部分從聯合結構描述中選擇至少一個同意屬性。此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。"
 
-在 **[!UICONTROL 然後]** 節，從聯合架構中至少選擇一個同意屬性。 這是必須存在的屬性，配置檔案才能包含在此策略所管轄的操作中。 您可以從清單中選擇一個提供的選項，或選擇 **[!UICONTROL 查看全部]** 從聯合架構中直接選擇屬性。
+在 **[!UICONTROL 然後]** 節，從聯合架構中至少選擇一個同意屬性。 此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。您可以從清單中選擇一個提供的選項，或選擇 **[!UICONTROL 查看全部]** 從聯合架構中直接選擇屬性。
 
 選擇同意屬性時，選擇要此策略檢查的屬性值。
 

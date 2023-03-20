@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cf6ff8bcd3dfebe551ac3d7289fa8d5fb2a78079
 workflow-type: tm+mt
 source-wordcount: '946'
-ht-degree: 25%
+ht-degree: 33%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 25%
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
->title="排名在前的動作"
->abstract="此介面工具集顯示在所選時間範圍內Experience Platform中採取的最上層動作類型。 若要查看Platform中記錄動作的完整清單，請選取 **稽核** 的下一頁。"
+>title="熱門動作"
+>abstract="此 Widget 顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
->title="最常使用者"
->abstract="此介面工具集會顯示在所選時間範圍內執行Experience Platform中最多動作的使用者。 若要查看Platform中記錄動作的完整清單，請選取 **稽核** 的下一頁。"
+>title="熱門使用者"
+>abstract="此 Widget 顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"

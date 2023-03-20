@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
 workflow-type: tm+mt
 source-wordcount: '3385'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -112,13 +112,13 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 設定檔計數變更]](#profile-count-change)
 * [[!UICONTROL 設定檔計數變更趨勢]](#profiles-count-change-trend)
 * [[!UICONTROL 依身分設定檔計數變更趨勢]](#profiles-count-change-trend-by-identity)
-* [[!UICONTROL 依身分設定檔]](#profiles-by-identity)
-* [[!UICONTROL 身分重疊]](#identity-overlap)
+* [[!UICONTROL 依身分劃分的設定檔]](#profiles-by-identity)
+* [[!UICONTROL 身份重疊]](#identity-overlap)
 * [[!UICONTROL 單一身分設定檔]](#single-identity-profiles)
 * [[!UICONTROL 依身分的單一身分設定檔]](#single-identity-profiles-by-identity)
-* [[!UICONTROL 未分段的設定檔]](#unsegmented-profiles)
+* [[!UICONTROL 無區段設定檔]](#unsegmented-profiles)
 * [[!UICONTROL 未細分的設定檔變更趨勢]](#unsegmented-profiles-change-trend)
-* [[!UICONTROL 依身分取消細分的設定檔]](#unsegmented-profiles-by-identity)
+* [[!UICONTROL 依身分劃分的無區段設定檔]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL 受眾]](#audiences)
 * [[!UICONTROL 對應至目的地狀態的對象]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 對象大小]](#audiences-size)
@@ -130,7 +130,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
 >title="設定檔計數"
->abstract="此Widget會顯示建立快照時，設定檔存放區中合併的設定檔總數。 數字取決於要應用到配置檔案資料的所選合併策略。"
+>abstract="此 Widget 顯示取得快照時設定檔存放區內合併的設定檔總數。該數量取決於套用至您設定檔資料的所選合併原則。"
 
 此 **[!UICONTROL 設定檔計數]** 介面工具集會顯示建立快照時「設定檔存放區」內合併的設定檔總數。 此數字是您的設定檔資料所套用的所選合併原則的結果，以便將設定檔片段合併在一起，以便為每個個人建立單一設定檔。
 
@@ -155,7 +155,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="設定檔計數變更"
->abstract="此介面工具集顯示合併的設定檔總數 **新增** 到配置檔案儲存區。 數字取決於要應用到配置檔案資料的所選合併策略。"
+>abstract="此 Widget 顯示上一次快照時&#x200B;**新增**&#x200B;至設定檔存放區之合併的設定檔總數。該數量取決於套用至您設定檔資料的所選合併原則。"
 
 此 **[!UICONTROL 設定檔計數變更]** 介面工具集顯示自上次快照以來新增至設定檔存放區的合併設定檔數量。 此數字是您的設定檔資料所套用的所選合併原則的結果，以便將設定檔片段合併在一起，以便為每個個人建立單一設定檔。 您可以使用下拉式選取器，檢視過去30天、90天或12個月內新增的設定檔數量。
 
@@ -170,7 +170,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="設定檔計數變更趨勢"
->abstract="此介面工具集會顯示過去30天、90天或12個月內，每天新增至設定檔存放區的合併設定檔數量。 數字還取決於所選合併策略正應用於您的配置檔案資料。"
+>abstract="此 Widget 顯示在過去 30 天、90 天或 12 個月內每天新增至設定檔存放區之合併的設定檔總數。該數量也取決於套用至您設定檔資料的所選合併原則。"
 
 此 **[!UICONTROL 設定檔計數變更趨勢]** 介面工具集會顯示過去30天、90天或12個月內，每天新增至設定檔存放區的合併設定檔總數。 拍攝快照時每天都會更新此數字，因此，如果您要將設定檔內嵌至Platform，則在拍攝下一個快照前不會反映設定檔數。 新增的設定檔計數是將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，以便為每個個人建立單一設定檔。
 
@@ -194,12 +194,12 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 ![設定檔計數會依身分介面工具集變更趨勢。](../images/profiles/profiles-count-change-trend-by-identity.png)
 
-### [!UICONTROL 依身分設定檔] {#profiles-by-identity}
+### [!UICONTROL 依身分劃分的設定檔] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
->title="依身分設定檔"
->abstract="此介面工具集會依身分顯示「設定檔存放區」中所有合併設定檔的劃分。"
+>title="依身分劃分的設定檔"
+>abstract="此 Widget 顯示設定檔存放區中依身分劃分的所有合併的設定檔。"
 
 此 **[!UICONTROL 依身分設定檔]** 介面工具集會顯示您的個人資料存放區中所有合併設定檔的身分劃分。 依身分劃分的設定檔總數（換句話說，將每個命名空間顯示的值加總）可能高於合併的設定檔總數，因為一個設定檔可能有多個相關聯的命名空間。 例如，如果客戶在多個管道上與您的品牌互動，則多個命名空間將會與該個別客戶相關聯。
 
@@ -215,12 +215,12 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 若要進一步了解身分，請造訪 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md).
 
-### [!UICONTROL 身分重疊] {#identity-overlap}
+### [!UICONTROL 身份重疊] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_identityoverlap"
->title="身分重疊"
->abstract="此介面工具集使用文氏圖表，顯示您的設定檔存放區中包含兩個所選身分的設定檔重疊。"
+>title="身份重疊"
+>abstract="此 Widget 使用文氏圖表顯示設定檔存放區中包含兩個所選身分的設定檔重疊。"
 
 此 **[!UICONTROL 身分重疊]** 介面工具集會使用Venn圖表或設定圖表，來顯示設定檔存放區中包含兩個所選身分的設定檔重疊。
 
@@ -237,9 +237,9 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="單一身分設定檔"
->abstract="此介面工具集可提供貴組織的設定檔計數，這些設定檔只有一種可建立其身分的ID類型。 此ID類型可以是電子郵件或ECID。"
+>abstract="此 Widget 提供您組織的設定檔計數，這些設定檔只有一種可以建立其身分的 ID 類型。此 ID 類型可以是電子郵件或 ECID。"
 
-此 [!UICONTROL 單一身分設定檔] 介面工具集會提供貴組織的設定檔計數，這些設定檔只有一種可建立其身分的ID類型。 此ID類型可以是電子郵件或ECID。 配置檔案計數從最近快照中包含的資料生成。
+此 [!UICONTROL 單一身分設定檔] 介面工具集會提供貴組織的設定檔計數，這些設定檔只有一種可建立其身分的ID類型。 此 ID 類型可以是電子郵件或 ECID。配置檔案計數從最近快照中包含的資料生成。
 
 ![單一身分設定檔Widget。](../images/profiles/single-identity-profiles.png)
 
@@ -251,12 +251,12 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 ![依身分介面工具集的單一身分設定檔。](../images/profiles/single-identity-profiles-by-identity.png)
 
-### [!UICONTROL 未分段的設定檔] {#unsegmented-profiles}
+### [!UICONTROL 無區段設定檔] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
->title="未分段的設定檔"
->abstract="此介面工具集提供未附加至任何區段的所有設定檔總數，並代表貴組織啟用設定檔的機會。"
+>title="無區段設定檔"
+>abstract="此 Widget 提供未附加到任何區段的所有設定檔總數，代表在整個組織中啟用設定檔的機會。"
 
 此 [!UICONTROL 未分段的設定檔] 介面工具集提供未附加至任何區段的所有設定檔總數。 生成的數字與上次快照時的資料一致，並代表整個組織的配置檔案激活機會。 它還表示了擴展不提供足夠ROI的配置檔案的機會。
 
@@ -266,14 +266,14 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
->title="未細分的設定檔趨勢"
->abstract="此介面工具集提供線條圖圖示，說明指定時段內未附加至任何區段的設定檔數量。 未附加至任何區段的設定檔趨勢可以在30天、90天和12個月期間內視覺化。"
+>title="無區段設定檔趨勢"
+>abstract="此 Widget 提供了一個折線圖，說明在給定時間段內未附加到任何區段的所有設定檔數量。可以將 30 天、90 天和 12 個月時段內未附加到任何區段的設定檔趨勢視覺化。"
 
 此 [!UICONTROL 未細分的設定檔變更趨勢] 介面工具集使用折線圖來說明自上次每日快照後新增而未附加至任何區段的設定檔數量。 未附加至任何區段的設定檔變更趨勢可在30天、90天和12個月期間內視覺化。 時段是從介面工具集的下拉式選單中選擇。 輪廓計數會反映在y軸上，而時間會反映在x軸上。
 
 ![未分段的設定檔會變更趨勢介面工具集。](../images/profiles/unsegmented-profiles-change-trend.png)
 
-### [!UICONTROL 依身分取消細分的設定檔] {#unsegmented-profiles-by-identity}
+### [!UICONTROL 依身分劃分的無區段設定檔] {#unsegmented-profiles-by-identity}
 
 >[!NOTE]
 >

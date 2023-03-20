@@ -8,7 +8,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
 workflow-type: tm+mt
 source-wordcount: '3228'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -44,32 +44,32 @@ ht-degree: 0%
 | 正在處理 | 此 `Processing` 狀態表示資料流尚未處於活動狀態。 建立新資料流後，通常會立即出現此狀態。 |
 | 錯誤 | 此 `Error` 狀態表示資料流的激活過程已中斷。 |
 
-### 流目的地的資料流運行 {#dataflow-runs-for-streaming-destinations}
+### 用於串流目的地的資料流執行 {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
->title="資料流運行詳細資訊"
->abstract="目標資料流運行詳細資訊包含有關段激活狀態的資訊，以及從即時客戶配置檔案獲取的用於生成唯一標識的度量。 若要深入了解，請檢閱量度定義指南。"
+>title="資料流執行詳細資訊"
+>abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
 >title="收到的設定檔"
->abstract="資料流中接收的配置檔案總數。 此值每60分鐘更新一次。"
+>abstract="資料流中收到的設定檔總數。此值每 60 分鐘更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
->title="已激活身份"
->abstract="已成功啟動至所選目的地的個別設定檔身分識別計數。 此量度包含從匯出區段建立、更新和移除的身分。"
+>title="啟用的身分"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的區段中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
->title="已排除的身分"
->abstract="根據遺失屬性和同意違規，從所選目的地啟動中排除的個別設定檔記錄計數。"
+>title="排除的身分"
+>abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別設定檔記錄的計數。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
->title="身份失敗"
->abstract="針對所選目的地失敗的個別設定檔身分識別計數。 有關詳細資訊，請查看錯誤診斷。"
+>title="失敗的身分"
+>abstract="針對所選目的地失敗的個別設定檔身分的計數。請檢查錯誤診斷以取得詳細資料。"
 
 若為串流目的地， [!UICONTROL 資料流運行] 索引標籤會每小時更新資料流執行中的量度資料。 標有「身份」標籤的最顯著統計資料。
 
@@ -77,7 +77,7 @@ ht-degree: 0%
 
 個別執行的清單及其特定量度會顯示，以及下列身分總計：
 
-- **[!UICONTROL 已激活身份]**:成功啟動至所選目的地的設定檔身分總數。 此量度包含從匯出區段建立、更新和移除的身分。
+- **[!UICONTROL 已激活身份]**:成功啟動至所選目的地的設定檔身分總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
 - **[!UICONTROL 已排除的身分]**:根據遺失屬性和同意違反而略過以進行啟用的設定檔身分總數。
 - **[!UICONTROL 身份失敗]**:因錯誤而未啟動至目的地的設定檔身分識別總數。
 
@@ -90,7 +90,7 @@ ht-degree: 0%
    - 針對 **[!UICONTROL 已完成]** 執行時，處理時間量度一律顯示1小時。
    - 對於仍在 **[!UICONTROL 處理]** 狀態時，捕獲所有度量的窗口將保持開啟超過一小時，以處理與資料流運行對應的所有度量。 例如，從上午9:30開始的資料流運行可能會在處理狀態中停留1小時30分鐘，以捕獲和處理所有度量。 然後，一旦處理窗口關閉，資料流運行的狀態將更新為 **已完成**，則顯示的處理時間會變更為1小時。
 - **[!UICONTROL 收到的設定檔]**:資料流中接收的配置檔案總數。
-- **[!UICONTROL 已激活身份]**:在資料流運行過程中成功激活到選定目標的配置檔案標識的總數。 此量度包含從匯出區段建立、更新和移除的身分。
+- **[!UICONTROL 已激活身份]**:在資料流運行過程中成功激活到選定目標的配置檔案標識的總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
 - **[!UICONTROL 已排除的身分]**:根據遺失屬性和同意違反而從啟動中排除的設定檔身分總數。
 - **[!UICONTROL 身份失敗]** 因錯誤而未啟動至目的地的設定檔身分識別總數。
 - **[!UICONTROL 啟動率]**:已成功啟動或跳過的接收身份的百分比。 下列公式示範如何計算此值：
@@ -111,28 +111,28 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
->title="資料流運行詳細資訊"
->abstract="目標資料流運行詳細資訊包含有關段激活狀態的資訊，以及從即時客戶配置檔案獲取的用於生成唯一標識的度量。 若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="流目的地的資料流運行"
+>title="資料流執行詳細資訊"
+>abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="收到的設定檔"
->abstract="資料流中接收的配置檔案總數。 此值每60分鐘更新一次。"
+>abstract="資料流中收到的設定檔總數。此值每 60 分鐘更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
->title="已激活身份"
->abstract="已成功啟動至所選目的地的個別設定檔身分識別計數。 此量度包含從匯出區段建立、更新和移除的身分。"
+>title="啟用的身分"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的區段中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
->title="已排除的身分"
->abstract="根據遺失屬性和同意違規，從所選目的地啟動中排除的個別設定檔記錄計數。"
+>title="排除的身分"
+>abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別設定檔記錄的計數。"
 
 針對批次目的地， [!UICONTROL 資料流運行] 索引標籤提供資料流執行時的量度資料。 個別執行的清單及其特定量度會顯示，以及下列身分總計：
 
-- **[!UICONTROL 已激活身份]**:成功啟動至所選目的地的設定檔身分總數。 此量度包含從匯出區段建立、更新和移除的身分。
+- **[!UICONTROL 已激活身份]**:成功啟動至所選目的地的設定檔身分總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
 - **[!UICONTROL 已排除的身分]**:根據遺失的屬性和同意違反，從所選目的地的啟動中排除的個別設定檔身分識別計數。
 
 ![批處理目標的資料流運行視圖](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -142,8 +142,8 @@ ht-degree: 0%
 - **[!UICONTROL 資料流運行開始]**:資料流運行的開始時間。
 - **[!UICONTROL 區段]**:與每個資料流運行關聯的段的名稱。
 - **[!UICONTROL 處理時間]**:處理資料流運行所花費的時間。
-- **[!UICONTROL 收到的設定檔]**:資料流中接收的配置檔案總數。 此值每60分鐘更新一次。
-- **[!UICONTROL 已激活身份]**:在資料流運行過程中成功激活到選定目標的配置檔案標識的總數。 此量度包含從匯出區段建立、更新和移除的身分。
+- **[!UICONTROL 收到的設定檔]**:資料流中接收的配置檔案總數。 此值每 60 分鐘更新一次。
+- **[!UICONTROL 已激活身份]**:在資料流運行過程中成功激活到選定目標的配置檔案標識的總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
 - **[!UICONTROL 已排除的身分]**:根據遺失屬性和同意違反而從啟動中排除的設定檔身分總數。
 - **[!UICONTROL 狀態]**:表示資料流所處的狀態。 這可以是三種狀態之一： [!UICONTROL 成功], [!UICONTROL 失敗]，和 [!UICONTROL 處理]. [!UICONTROL 成功] 表示資料流處於活動狀態，並正在根據其提供的調度導出資料。 [!UICONTROL 失敗] 表示資料的啟動因錯誤而暫停。 [!UICONTROL 處理] 表示資料流尚未處於活動狀態，並且通常在建立新資料流時遇到。
 
@@ -176,7 +176,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="啟用"
->abstract="目的地啟動檢視包含區段啟動狀態的相關資訊，以及從即時客戶設定檔擷取的量度，以產生唯一身分。"
+>abstract="目的地啟用檢視包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。"
 
 若要存取 [!UICONTROL 監控] 控制面板，選取 **[!UICONTROL 監控]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 一次 [!UICONTROL 監控] 頁面，選取 [!UICONTROL 目的地]. 此 [!UICONTROL 監控] 控制面板包含目標執行作業的度量和資訊。
 
@@ -209,9 +209,9 @@ ht-degree: 0%
 | 量度 | 目的地類型 |
 ---------|----------|
 | **[!UICONTROL 收到的設定檔]** | 串流和批次 |
-| **[!UICONTROL 已激活身份]** | 串流和批次 |
-| **[!UICONTROL 身份失敗]** | 串流 |
-| **[!UICONTROL 已排除的身分]** | 串流和批次 |
+| **[!UICONTROL 啟用的身分]** | 串流和批次 |
+| **[!UICONTROL 失敗的身分]** | 串流 |
+| **[!UICONTROL 排除的身分]** | 串流和批次 |
 | **[!UICONTROL 啟動率]** | 串流 |
 | **[!UICONTROL 失敗的資料流總數]** | 批次 |
 | **[!UICONTROL 上次更新時間]** | 串流和批次 |

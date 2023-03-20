@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -128,7 +128,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="建立標籤"
->abstract="標籤可讓您根據套用至該資料的使用原則，對資料集和欄位進行分類。 Platform提供一組標準標籤供您使用，但您也可以建立專屬於貴組織的自訂標籤。"
+>abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。平台提供了一組標準標籤供您使用，但您也可以建立您組織專用的自訂標籤。"
 
 您可以在 **[!UICONTROL 原則]** 工作區中 [!DNL Experience Platform] UI。 選擇 **[!UICONTROL 原則]** 在左側導覽中，然後選取 **[!UICONTROL 標籤]** 來查看現有標籤的清單。 從此處，選擇 **[!UICONTROL 建立標籤]**.
 

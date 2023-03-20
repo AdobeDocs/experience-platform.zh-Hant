@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2105'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -86,8 +86,8 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 * [[!UICONTROL 受眾規模（依身分）趨勢]](#audience-size-trend-by-identity)
 * [[!UICONTROL 對象重疊]](#audience-overlap)
 * [[!UICONTROL 對象重疊報表]](#audience-overlap-report)
-* [[!UICONTROL 身分重疊]](#identity-overlap)
-* [[!UICONTROL 依身分設定檔]](#profiles-by-identity)
+* [[!UICONTROL 身份重疊]](#identity-overlap)
+* [[!UICONTROL 依身分劃分的設定檔]](#profiles-by-identity)
 * [[!UICONTROL 已排程的啟動]](#scheduled-activations)
 
 ### [!UICONTROL 對象規模] {#audience-size}
@@ -176,11 +176,11 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 選擇 **[!UICONTROL 關閉]** 返回 [!UICONTROL 區段] 控制面板。
 
-### [!UICONTROL 身分重疊] {#identity-overlap}
+### [!UICONTROL 身份重疊] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
->title="身分重疊"
+>title="身份重疊"
 >abstract="此介面工具集顯示您包含兩個所選身分的區段中設定檔的重疊。 圓圈會顯示每個身分的相對大小。 包含兩個命名空間的設定檔數目會由圓圈之間的重疊表示。"
 
 此 **[!UICONTROL 身分重疊]** 介面工具集會顯示Venn圖表或設定圖表，顯示您包含多個身分的區段中設定檔的重疊。
@@ -193,11 +193,11 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 ![區段控制面板概述，並反白顯示身分重疊Widget。](../images/segments/identity-overlap.png)
 
-### [!UICONTROL 依身分設定檔] {#profiles-by-identity}
+### [!UICONTROL 依身分劃分的設定檔] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
->title="依身分設定檔"
+>title="依身分劃分的設定檔"
 >abstract="此介面工具集會顯示您所選區段中每個合併設定檔的身分劃分。"
 
 此 **[!UICONTROL 依身分設定檔]** 介面工具集會顯示您所選區段中每個合併設定檔的身分劃分。 依身分劃分的設定檔總數可能高於區段中的設定檔總數，因為一個設定檔可能有多個與其相關聯的身分。 換句話說，將每個身分顯示的值加總後，可能會超過區段中的總受眾規模，因為如果客戶在多個管道上與您的品牌互動，則多個身分可能會與該個別客戶相關聯。

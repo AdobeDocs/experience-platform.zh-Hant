@@ -7,7 +7,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
 source-wordcount: '1681'
-ht-degree: 2%
+ht-degree: 7%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="指定身分類型"
->abstract="身分類型會控制資料是否儲存至身分圖表。 不會儲存非人員識別碼，而所有其他身分類型都會儲存。"
+>abstract="身份類型控制資料是否儲存到身分圖中。非人識別碼不會儲存，所有其他身分類型都會儲存。"
 >text="Learn more in documentation"
 
 資料可由數種不同的身分類型識別。 身分類型是在建立身分命名空間時指定，並控制資料是否會保存至身分圖表，以及如何處理該資料的任何特殊指示。 除外的所有身分類型 **非人員識別碼** 請遵循將命名空間及其對應ID值拼接至身分圖叢集的相同行為。 使用 **非人員識別碼**.
@@ -83,7 +83,7 @@ Experience Platform提供數個可供所有組織使用的身分識別命名空�
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="檢視整合身分"
->abstract="整合身分識別是用來與其他系統連線的命名空間，不用於身分解析或連結身分識別。 <br> 預設會隱藏這些身分。 使用切換功能檢視整合的命名空間。"
+>abstract="整合身分是用於連接其他系統的命名空間，不用於身分解析或拼接身份。<br>這些身分依預設是隱藏的。使用切換來檢視整合命名空間。"
 
 若要在UI中檢視身分識別命名空間，請選取 **[!UICONTROL 身分]** 在左側導覽器中，然後選取 **[!UICONTROL 瀏覽]**.
 

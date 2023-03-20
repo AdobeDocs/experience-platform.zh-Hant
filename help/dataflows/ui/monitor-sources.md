@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
->title="資料流運行詳細資訊"
+>title="資料流執行詳細資訊"
 >abstract="來源處理包含資料湖服務中資料活動狀態和量度的資訊，包括擷取的記錄和失敗的記錄。 檢閱量度定義指南，以進一步了解量度和圖形。"
 >text="Learn more in documentation"
 

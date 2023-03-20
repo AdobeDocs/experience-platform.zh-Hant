@@ -6,7 +6,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
 workflow-type: tm+mt
 source-wordcount: '1726'
-ht-degree: 1%
+ht-degree: 19%
 
 ---
 
@@ -65,32 +65,32 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
->title="標籤是什麼？"
->abstract="標籤可讓您根據套用至該資料的使用原則，對資料集和欄位進行分類。 Platform提供數個Adobe定義的「核心」資料使用標籤，涵蓋適用於資料控管的各種常見限制。 例如，敏感的「S」標籤(如RHD（受管理的運行狀況資料）)允許您對引用受保護的運行狀況資訊(PHI)的資料進行分類。 您也可以定義符合組織需求的自訂標籤。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels" text="資料使用標籤總覽"
+>title="什麼是標籤？"
+>abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。平台提供了幾個 Adobe 定義的「核心」資料使用標籤，涵蓋了適用於資料控管的各種常見限制。例如，敏感資料「S」標籤 (例如 RHD (受監管的健康資料))，可讓您將受保護的健康資訊 (PHI) 加以分類。您也可以定義適合您組織需求的自訂標籤。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant#understanding-data-usage-labels" text="資料使用標籤總覽"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="建立新標籤"
->abstract="您可以建立自訂標籤，以符合組織的需求。 自訂標籤可用來將資料控管和存取控制設定同時套用至您的資料。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#manage-labels" text="管理自訂標籤"
+>abstract="您可以建立適合您組織需求的自訂標籤。自訂標籤可用於資料控管和存取控制設定套用到您的資料。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant#manage-labels" text="管理自訂標籤"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="什麼是角色？"
->abstract="角色是將與您的Platform例項互動，且是存取控制原則基礎的使用者類型分類的方法。 角色具有一組指定的權限，而您組織的成員可以根據其所需的檢視或寫入存取範圍，指派給一或多個角色。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en" text="管理角色"
+>abstract="角色用於分類與 Platform 執行個體互動的使用者類型，也是存取控制原則的組成要素。一個角色具有一組給定的權限，您的組織成員可以指派到一個或多個角色，取決於他們需要的檢視範圍或寫入權限。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=zh-Hant" text="管理角色"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="建立新角色"
->abstract="您可以建立新角色，以便對存取您的Platform例項的使用者進行更妥善的分類。 例如，您可以為內部營銷團隊建立角色，並將RHD標籤應用到該角色，從而允許您的內部營銷團隊訪問受保護的健康資訊(PHI)。 或者，您也可以為外部代理建立角色，並不將RHD標籤應用到該角色，從而拒絕該角色對PHI資料的訪問。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=en#create-a-new-role" text="建立新角色"
+>abstract="您可以建立一個新角色以更好地分類存取您 Platform 執行個體的使用者。例如，您可以為內部行銷團隊建立角色並將 RHD 標籤套用到該角色，從而允許您的內部行銷團隊存取受保護的健康資訊 (PHI)。或者，您也可以為外部機構建立一個角色，且不將 RHD 標籤套用到該角色來拒絕該角色存取 PHI 資料。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=zh-Hant#create-a-new-role" text="建立新角色"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
 >title="角色概觀"
->abstract="角色概述對話方塊會顯示指定角色有權存取的資源和沙箱。"
+>abstract="角色概觀對話框顯示給定角色可存取的資源和沙箱。"
 
 角色是將與您的Platform例項互動的使用者類型分類的方法，也是存取控制原則的基礎要素。 角色具有一組指定的權限，而您組織的成員可依其需要的存取範圍，指派給一或多個角色。
 

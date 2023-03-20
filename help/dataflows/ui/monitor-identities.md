@@ -34,7 +34,7 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
->title="資料流運行詳細資訊"
+>title="資料流執行詳細資訊"
 >abstract="「資料流運行詳細資訊」頁顯示了有關身份資料流運行的詳細資訊，包括其組織ID和資料流運行ID。"
 
 若要存取 **[!UICONTROL 身分]** 控制面板，選取 **[!UICONTROL 監控]** 的下一頁。 一次 **[!UICONTROL 監控]** 頁面，選擇 **[!UICONTROL 身分]** 卡片。
