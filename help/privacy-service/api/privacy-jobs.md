@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權工作API端點
 description: 了解如何使用Experience CloudAPI管理Privacy Service應用程式的隱私權工作。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1549'
 ht-degree: 1%
 
 ---
@@ -63,6 +63,12 @@ curl -X GET \
 若要在編頁回應中擷取下一組結果，您必須對相同端點進行另一個API呼叫，同時增加 `page` 查詢參數（按1）。
 
 ## 建立隱私權工作 {#create-job}
+
+>[!IMPORTANT]
+>
+>Privacy Service僅適用於資料主體和消費者權限請求。 不支援或不允許使用Privacy Service進行資料清理或維護。 Adobe有法律義務及時履行。 因此，不允許對Privacy Service進行負載測試，因為它是僅限生產的環境，並會造成有效隱私權要求的不必要的積壓。
+>
+>現已設定硬式每日上傳限制，以協助防止濫用服務。 發現濫用系統的用戶將禁用其對服務的訪問。 隨後將與他們舉行會議，討論他們的行動，討論可接受的Privacy Service用途。
 
 建立新工作請求之前，您必須先收集有關資料主體的識別資訊，這些資料主體的資料要存取、刪除或選擇退出銷售。 取得所需資料後，必須在POST要求的裝載中提供給 `/jobs` 端點。
 

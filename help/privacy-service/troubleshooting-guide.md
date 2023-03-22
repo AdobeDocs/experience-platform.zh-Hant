@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service疑難排解指南
 description: 本檔案提供Privacy Service常見問題的解答，以及API中常見錯誤的相關資訊。
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fc115801ac8e75cd58356060ad98f1e340d2494a
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '917'
 ht-degree: 1%
 
 ---
@@ -65,7 +65,9 @@ Adobe Experience Platform [!DNL Privacy Service] 提供RESTful API和使用者�
 
 ## 我可以使用 [!DNL Privacy Service] 清除意外傳送至的資料 [!DNL Platform]?
 
-Adobe不支援使用 [!DNL Privacy Service] 用於清除意外提交至產品的資料。 [!DNL Privacy Service] 旨在協助您履行資料主體（或消費者）存取或刪除請求的義務。 這些要求會區分大小寫，且會根據適用的隱私權法完成。 提交非資料主體/消費者存取或刪除請求會影響所有 [!DNL Privacy Service] 客戶和 [!DNL Privacy Service] 支援適當的法律時間表。
+Adobe不支援使用 [!DNL Privacy Service] 用於清除意外提交至產品的資料。 [!DNL Privacy Service] 旨在協助您履行資料主體（或消費者）存取或刪除請求的義務。 不支援或不允許使用Privacy Service進行資料清理或維護。
+
+隱私權要求會區分大小寫，且會根據適用的隱私權法完成。 提交非資料主體/消費者存取或刪除請求會影響所有 [!DNL Privacy Service] 客戶和 [!DNL Privacy Service] 支援適當的法律時間表。 現已設定硬式每日上傳限制，以協助防止濫用服務。
 
 請連絡您的客戶經理(CDM)，以協調並提供移除任何PII或資料問題的努力。
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service概述
 description: Privacy Service可讓您在Experience Cloud資料操作中，自動遵循法律隱私權法規。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 6%
+source-wordcount: '1505'
+ht-degree: 5%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 6%
 Adobe Experience Platform [!DNL Privacy Service] 是因應企業管理其客戶個人資料之方式發生根本轉變而開發。 其核心目的 [!DNL Privacy Service] 是要自動遵守資料隱私權法規，一旦違反這些法規，可能會導致貴機構的大額罰款，並中斷貴機構的資料操作。
 
 [!DNL Privacy Service] 提供RESTful API和使用者介面，協助您管理客戶資料請求。 使用 [!DNL Privacy Service]，您可以提交從Adobe Experience Cloud應用程式存取和刪除個人客戶資料的請求，協助您自動遵循法律和組織隱私權法規。
+
+>[!IMPORTANT]
+>
+>Privacy Service僅適用於資料主體和消費者權限請求。 不支援或不允許使用Privacy Service進行資料清理或維護。 Adobe有法律義務及時履行。 因此，不允許對Privacy Service進行負載測試，因為它是僅限生產的環境，並會造成有效隱私權要求的不必要的積壓。
+>
+>現已設定硬式每日上傳限制，以協助防止濫用服務。 發現濫用系統的用戶將禁用其對服務的訪問。 隨後將與他們舉行會議，討論他們的行動，討論可接受的Privacy Service用途。
 
 ## 開始使用 [!DNL Privacy Service] {#getting-started}
 

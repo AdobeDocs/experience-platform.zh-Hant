@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在Privacy ServiceUI中管理隱私權作業
 description: 了解如何使用Privacy Service使用者介面協調及監控各種Experience Cloud應用程式的隱私權要求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,12 @@ ht-degree: 0%
 >abstract=""
 
 本檔案提供使用 [!DNL Privacy Service] 使用者介面。
+
+>[!IMPORTANT]
+>
+>Privacy Service僅適用於資料主體和消費者權限請求。 不支援或不允許使用Privacy Service進行資料清理或維護。 Adobe有法律義務及時履行。 因此，不允許對Privacy Service進行負載測試，因為它是僅限生產的環境，並會造成有效隱私權要求的不必要的積壓。
+>
+>現已設定硬式每日上傳限制，以協助防止濫用服務。 發現濫用系統的用戶將禁用其對服務的訪問。 隨後將與他們舉行會議，討論他們的行動，討論可接受的Privacy Service用途。
 
 ## 瀏覽 [!DNL Privacy Service] UI控制面板
 
