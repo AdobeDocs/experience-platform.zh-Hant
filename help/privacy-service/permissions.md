@@ -2,14 +2,20 @@
 title: 管理Privacy Service
 description: 了解如何使用Adobe Admin Console管理Adobe Experience Platform Privacy Service的使用者權限。
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: ebcfdc9f73fc9120cf3819169d72bd828d0b35a6
+source-git-commit: 37a67b19fa0cb38e9e34066c869dd9dc49edefd6
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 2%
+source-wordcount: '1064'
+ht-degree: 1%
 
 ---
 
 # 管理Privacy Service權限
+
+>[!IMPORTANT]
+>
+>Adobe Experience Platform Privacy Service的權限已經過改良，以提升其精細度。 這些變更可讓組織管理員授予更多使用者所需角色和權限層級的存取權。 技術帳戶使用者必須更新其Privacy Service權限，因為此即將進行的更新對他們而言構成重大變更。 此權限變更的實施將在 **2023年3月28日**.
+>
+>技術帳戶可供企業客戶使用，並透過Adobe開發人員控制台建立。 技術帳戶持有人的Adobe ID終止於 `@techacct.adobe.com`. 如果您不確定自己是否是技術帳戶持有者，請聯絡您的組織管理員。
 
 存取 [Adobe Experience Platform Privacy Service](./home.md) 是透過Adobe Admin Console中精細的角色型權限控制。 透過建立將權限指派給使用者群組的產品設定檔，您可以決定誰有權存取Privacy Service中的哪些功能 [UI](./ui/overview.md) 和 [API](./api/overview.md).
 
