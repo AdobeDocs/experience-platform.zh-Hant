@@ -2,7 +2,7 @@
 description: 了解如何在將資料啟用至以檔案為基礎的目的地時設定檔案格式選項
 title: （測試版）為檔案式目的地設定檔案格式選項
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 14ce4a11f53ef24b3008b3f775cc926d05ea8f8e
+source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 * 逗號 `(,)`
 * 直立線符號 `(|)`
 * 分號 `(;)`
-* Tab 鍵 `(\\t)`
+* Tab 鍵 `(\t)`
 
 ### 引號字元
 
