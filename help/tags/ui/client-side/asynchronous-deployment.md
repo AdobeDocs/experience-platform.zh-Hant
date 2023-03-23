@@ -5,7 +5,7 @@ exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 55%
+ht-degree: 61%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 >[!CONTEXTUALHELP]
 >id="platform_tags_asynchronous_deployment"
 >title="非同步部署"
->abstract="如果啟用此選項，在剖析此指令碼標籤時，瀏覽器將開始載入JavaScript檔案，但與其等待程式庫載入及執行，瀏覽器會繼續剖析及轉譯其餘的檔案。 這可以改善網頁效能，但對於執行特定規則的方式有重要影響。 如需詳細資訊，請參閱文件。"
+>abstract="若啟用此選項，在剖析此指令碼標記時，瀏覽器會開始載入 JavaScript 檔案，但與其等待資料庫載入及執行，瀏覽器應繼續剖析及轉譯其餘的文件。這可以提高網頁效能，但在涉及特定規則的執行方式時具有重要意義。如需詳細資訊，請查看文件。"
 
 >[!NOTE]
 >

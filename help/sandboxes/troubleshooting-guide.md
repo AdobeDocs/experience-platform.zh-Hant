@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '857'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -26,8 +26,8 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtypes"
 >title="沙箱類型"
->abstract="沙箱類型會指出這是生產沙箱還是開發沙箱。 生產沙箱包含即時資料，而開發沙箱則用於測試和開發。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="在UI中建立沙箱"
+>abstract="沙箱類型會說明這是生產沙箱或是開發沙箱。生產沙箱包括即時資料，而開發沙箱則用於測試和開發。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="在 UI 中建立沙箱"
 
 Experience Platform中提供兩種沙箱類型：
 

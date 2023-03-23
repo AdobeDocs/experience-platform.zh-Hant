@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
 >title="資料集活動中的負數"
->abstract="擷取記錄中的負數表示使用者已在選取的時間範圍內刪除某些批次。"
+>abstract="擷取記錄中的負數表示使用者在選取的時間範圍內刪除了某些批次。"
 >text="Learn more in documentation"
 
 在 [!DNL Experience Platform] UI, select **[!UICONTROL 資料集]** 在左側導覽中開啟 **[!UICONTROL 資料集]** 控制面板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資訊，包括其名稱、資料集所遵守的結構，以及最新擷取執行的狀態。

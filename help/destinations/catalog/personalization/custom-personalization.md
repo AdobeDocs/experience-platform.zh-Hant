@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -75,8 +75,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="關於資料流ID"
->abstract="此選項會決定要將區段納入頁面回應中的資料收集資料流。 下拉式功能表只會顯示已啟用目的地設定的資料流。 您必須先設定資料流，才能設定目的地。"
+>title="關於資料流 ID"
+>abstract="此選項會確定哪個資料收集資料流中會在頁面回應中包含區段。下拉式選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="了解如何設定資料流"
 
 >[!IMPORTANT]
@@ -92,7 +92,7 @@ ht-degree: 0%
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
 * **[!UICONTROL 說明]**:輸入目的地的說明。 例如，您可以提及您使用此目的地的促銷活動。 此欄位為選填欄位。
 * **[!UICONTROL 整合別名]**:此值會以JSON物件名稱的形式傳送至Experience PlatformWeb SDK。
-* **[!UICONTROL 資料流ID]**:這會決定要將區段納入頁面回應中的資料收集資料流。 下拉式功能表只會顯示已啟用目的地設定的資料流。 請參閱 [設定資料流](../../../edge/datastreams/overview.md) 以取得更多詳細資訊。
+* **[!UICONTROL 資料流ID]**:這會決定要將區段納入頁面回應中的資料收集資料流。 下拉式選單僅顯示已啟用目的地設定的資料流。請參閱 [設定資料流](../../../edge/datastreams/overview.md) 以取得更多詳細資訊。
 
 ### 啟用警報 {#enable-alerts}
 

@@ -8,11 +8,11 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
-# 監視UI中源的資料流
+# 監視 UI 中來源的資料流
 
 >[!IMPORTANT]
 >
@@ -40,13 +40,13 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="來源擷取"
->abstract="「來源擷取」檢視包含資料湖服務中資料活動狀態和量度的相關資訊，包括擷取的記錄和失敗的記錄。 檢閱量度定義指南，以進一步了解量度和圖形。"
+>abstract="來源擷取視圖會包含有關資料湖服務中資料活動狀態和量度的資訊，包括擷取的記錄和失敗的記錄。檢閱量度定義指南以了解有關量度和圖表的詳細資訊。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="資料流執行詳細資訊"
->abstract="來源處理包含資料湖服務中資料活動狀態和量度的資訊，包括擷取的記錄和失敗的記錄。 檢閱量度定義指南，以進一步了解量度和圖形。"
+>abstract="來源處理會包含有關資料湖服務中資料活動狀態和量度的資訊，包括擷取的記錄和失敗的記錄。檢閱量度定義指南以了解有關量度和圖表的詳細資訊。"
 >text="Learn more in documentation"
 
 在 [平台UI](https://platform.adobe.com)，選取 **[!UICONTROL 監控]** 從左側導覽器存取 [!UICONTROL 監控] 控制面板。 此 [!UICONTROL 監控] 儀表板包含所有源資料流的度量和資訊，包括對源到源資料流運行狀況的深入分析 [!DNL Identity Service]和 [!DNL Profile].
@@ -69,8 +69,8 @@ ht-degree: 0%
 
 | 來源擷取 | 說明 |
 | ---------------- | ----------- |
-| [!UICONTROL 擷取的記錄 ] | 擷取的記錄總數。 |
-| [!UICONTROL 記錄失敗] | 因資料中的錯誤而未擷取的記錄總數。 |
+| [!UICONTROL 已擷取的記錄 ] | 擷取的記錄總數。 |
+| [!UICONTROL 失敗的記錄] | 因資料中的錯誤而未擷取的記錄總數。 |
 | [!UICONTROL 失敗的資料流總數] | 具有 `failed` 狀態。 |
 
 來源擷取清單會顯示至少包含一個現有帳戶的所有來源。 該清單還包括有關每個源的獲取率、失敗記錄數以及基於所應用的時間範圍的失敗資料流總數的資訊。

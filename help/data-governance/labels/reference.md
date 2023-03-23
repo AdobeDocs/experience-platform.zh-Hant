@@ -7,7 +7,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
 >title="標籤類型"
->abstract="資料使用量標籤有數個類別。 Adobe定義的標籤包括合約標籤、身分標籤和敏感標籤。 貴組織定義的標籤會分類為自訂標籤。"
+>abstract="資料使用標籤有多種類別。Adobe 定義的標籤包括合約標籤、身分識別標籤和敏感標籤。您的組織定義的標籤被歸類為自訂標籤。"
 >text="See the data usage labels glossary for more information on these label types."
 
 資料使用量標籤可讓您根據 [治理政策](../policies/overview.md) 和 [訪問控制策略](../../access-control/abac/overview.md) 適用於該資料。 Adobe Experience Platform提供數個現成可用的核心資料使用量標籤，供您用來開始分類資料。

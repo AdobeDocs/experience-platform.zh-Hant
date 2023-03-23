@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 9bde403338187409892d76de68805535de03d59f
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -77,12 +77,12 @@ ht-degree: 0%
 
 1. 要添加更多映射，請重複步驟1到5。
 
-### 套用轉換 {#apply-transformation}
+### 套用轉換  {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="套用轉換"
->abstract="使用未雜湊的來源欄位時，請核取此選項，讓Adobe Experience Platform在啟動時自動雜湊這些欄位。"
+>title="套用轉換 "
+>abstract="使用未雜湊的來源欄位時勾選此選項，讓 Adobe Experience Platform 在啟動時自動將它們雜湊。"
 
 將非雜湊來源屬性對應至目標預期雜湊的目標屬性時(例如： `email_lc_sha256` 或 `phone_sha256`)，檢查 **套用轉換** 選項，讓Adobe Experience Platform在啟動時自動雜湊來源屬性。
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="結束日期"
->abstract="無法新增區段排程的結束日期。"
+>abstract="無法使用新增區段排程的結束日期。"
 
 依預設， [!UICONTROL 區段排程] 頁面只會顯示您在目前啟動流程中選取的新區段。
 
@@ -109,11 +109,11 @@ ht-degree: 0%
 
    * 某些目的地會要求您選取 **[!UICONTROL 受眾來源]** 對於每個區段，使用日曆選取器下方的下拉式功能表。 如果您的目的地不包含此選取器，請略過此步驟。
 
-      ![對應ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+      ![對應 ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * 有些目的地需要您手動對應 [!DNL Platform] 區段至目標目的地的對應項目。 若要這麼做，請選取每個區段，然後在 **[!UICONTROL 對應ID]** 欄位。 如果您的目的地不包含此欄位，請略過此步驟。
 
-      ![對應ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+      ![對應 ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * 有些目的地會要求您輸入 **[!UICONTROL 應用程式ID]** 啟用 [!DNL IDFA] 或 [!DNL GAID] 區段。 如果您的目的地不包含此欄位，請略過此步驟。
 
@@ -129,7 +129,7 @@ ht-degree: 0%
 
 ### 同意政策評估 {#consent-policy-evaluation}
 
-如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 

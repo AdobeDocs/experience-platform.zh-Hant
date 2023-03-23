@@ -7,7 +7,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -49,20 +49,20 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
->title="評價方法"
->abstract="Platform目前支援三種評估區段的方法：串流分段、批次分段和邊緣分段。"
+>title="評估方式"
+>abstract="Platform 目前支援三種評估區段的方式：串流分段、批次分段以及邊緣分段。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
->title="流評估"
->abstract="串流區段是持續進行的資料選取程式，會根據使用者活動更新您的區段。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="透過串流細分以近乎即時的方式評估事件"
+>title="串流評估"
+>abstract="串流分段是一種持續的資料選取流程，會根據使用者活動更新您的區段。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=zh-Hant" text="使用串流分段近乎即時地評估事件"
 
-Platform目前支援三種評估區段的方法：串流分段、批次分段和邊緣分段。
+Platform 目前支援三種評估區段的方式：串流分段、批次分段以及邊緣分段。
 
 ### 串流細分 {#streaming}
 
-串流區段是持續進行的資料選取程式，會根據使用者活動更新您的區段。 建立並儲存區段後，會對傳入的資料套用區段定義至 [!DNL Real-Time Customer Profile]. 會定期處理區段新增和移除，確保目標受眾仍具相關性。
+串流分段是一種持續的資料選取流程，會根據使用者活動更新您的區段。建立並儲存區段後，會對傳入的資料套用區段定義至 [!DNL Real-Time Customer Profile]. 會定期處理區段新增和移除，確保目標受眾仍具相關性。
 
 若要進一步了解串流細分，請閱讀 [串流細分檔案](./api/streaming-segmentation.md).
 
@@ -71,9 +71,9 @@ Platform目前支援三種評估區段的方法：串流分段、批次分段和
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="批次評估"
->abstract="作為持續資料選取程式的替代方法，批次區段會透過區段定義一次移動所有設定檔資料，以產生對應的對象。 區段一經建立便會儲存，供您匯出使用。"
+>abstract="批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，會將區段儲存並存放，以便您可以將其匯出使用。"
 
-作為持續資料選取程式的替代方法，批次區段會透過區段定義一次移動所有設定檔資料，以產生對應的對象。 建立後，會儲存此區段，供您匯出使用。
+批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，會儲存此區段，供您匯出使用。
 
 每24小時會自動評估批次區段。 如果要按需評估批段，則可以使用段任務。 若要進一步了解區段作業，請參閱 [區段工作檔案](./api/segment-jobs.md).
 
@@ -82,8 +82,8 @@ Platform目前支援三種評估區段的方法：串流分段、批次分段和
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
->abstract="邊緣分段是在Experience Edge上即時評估Platform中區段的功能，可啟用同頁和下一頁個人化使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge劃分UI指南"
+>abstract="邊緣分段指在 Experience Edge 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="邊緣分段服務 UI 指南"
 
 邊緣分割是即時評估Platform中區段的功能 [在Experience Edge上](../edge/home.md)，啟用同頁和下一頁個人化的使用案例。
 

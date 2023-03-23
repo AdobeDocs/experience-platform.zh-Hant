@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -38,20 +38,20 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
->title="Adobe Campaign環境例項"
->abstract="您要使用的Adobe Campaign環境名稱。"
+>title="Adobe Campaign 環境執行個體"
+>abstract="您要使用的 Adobe Campaign 環境的名稱。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
 >title="目標對應"
->abstract="目標對應是Campaign用來傳送訊息的技術物件，並包含傳送傳送所需的所有技術設定（地址、電話號碼、選擇加入指標、其他識別碼……）。"
+>abstract="目標對應指 Campaign 用於傳遞訊息的技術物件，並包含傳送傳遞所需的所有技術設定 (地址、電話號碼、選擇加入指標、額外的識別碼……)。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_schema"
->title="架構名稱"
->abstract="Adobe Campaign資料庫中定義的實體名稱。"
+>title="方案名稱"
+>abstract="Adobe Campaign 資料庫中定義的實體的名稱。"
 >text="Learn more in documentation"
 
 此 [!UICONTROL 選擇資料] 步驟，提供介面來設定 [!UICONTROL Adobe Campaign例項], [!UICONTROL 目標對應]，和 [!UICONTROL 架構名稱].
@@ -60,7 +60,7 @@ ht-degree: 1%
 | --- | --- |
 | Adobe Campaign例項 | 您使用的Adobe Campaign環境例項名稱。 |
 | 目標對應 | Campaign用於傳送訊息的技術物件，並包含傳送傳送所需的所有技術設定。 |
-| 架構名稱 | 您要帶入Platform的架構實體名稱。 選項包括傳送記錄和追蹤記錄。 |
+| 方案名稱 | 您要帶入Platform的架構實體名稱。 選項包括傳送記錄和追蹤記錄。 |
 
 ![可在其中設定Adobe Campaign例項、目標對應和結構名稱的介面。](../../../../images/tutorials/create/campaign/select-data.png)
 

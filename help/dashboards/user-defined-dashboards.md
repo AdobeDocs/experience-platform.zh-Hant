@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
 source-wordcount: '956'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -37,14 +37,14 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
->title="Widget的最大數量"
->abstract="使用者定義的控制面板最多支援10個小工具。 在您新增10個介面工具集至控制面板後， [!UICONTROL 新增介面工具集] 選項已停用且顯示為灰色。"
+>title="Widget 的最大數量"
+>abstract="使用者定義的儀表板最多支援十個 Widget。將十個 Widget 新增到儀表板後，[!UICONTROL 新增 Widget] 選項會停用並顯示為灰色。"
 
 在新控制面板檢視中，選取 **[!UICONTROL 新增介面工具集]** 以開始介面工具集建立程式。
 
 >[!IMPORTANT]
 >
->使用者定義的控制面板最多支援10個小工具。 在您新增10個介面工具集至控制面板後， [!UICONTROL 新增介面工具集] 選項已停用且顯示為灰色。
+>使用者定義的儀表板最多支援十個 Widget。將十個 Widget 新增到儀表板後，[!UICONTROL 新增 Widget] 選項會停用並顯示為灰色。
 
 ![反白顯示「新增介面工具集」的新空白控制面板。](./images/user-defined-dashboards/add-new-widget.png)
 

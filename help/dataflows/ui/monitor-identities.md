@@ -7,7 +7,7 @@ exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -28,14 +28,14 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
->title="身分處理"
->abstract="「身分處理」檢視包含擷取至身分服務之記錄的相關資訊，包括新增的身分數、建立的圖形，以及更新的圖形。 檢閱量度定義指南，以進一步了解量度和圖形。"
+>title="身分識別處理"
+>abstract="身分識別處理視圖會包含有關擷取到身分識別服務的記錄的資訊，包括新增的身分識別數量、建立的圖表和更新的圖表。檢閱量度定義指南以了解有關量度和圖表的詳細資訊。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
 >title="資料流執行詳細資訊"
->abstract="「資料流運行詳細資訊」頁顯示了有關身份資料流運行的詳細資訊，包括其組織ID和資料流運行ID。"
+>abstract="資料流執行詳細資訊頁面會顯示有關身分識別資料流執行的詳細資訊，包括其組織 ID 和資料流執行 ID。"
 
 若要存取 **[!UICONTROL 身分]** 控制面板，選取 **[!UICONTROL 監控]** 的下一頁。 一次 **[!UICONTROL 監控]** 頁面，選擇 **[!UICONTROL 身分]** 卡片。
 
@@ -53,10 +53,10 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 | 身分量度 | 說明 |
 | ---------------- | ----------- |
-| **[!UICONTROL 收到的記錄]** | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 記錄失敗]** | 因資料錯誤而未擷取至Platform的記錄數。 |
+| **[!UICONTROL 已收到的記錄]** | 從資料湖接收的記錄數。 |
+| **[!UICONTROL 失敗的記錄]** | 因資料錯誤而未擷取至Platform的記錄數。 |
 | **[!UICONTROL 略過的記錄]** | 已擷取但未擷取至 [!DNL Identity Service] 因為記錄列中只有一個標識符。 |
-| **[!UICONTROL 擷取的記錄]** | 擷取到的記錄數 [!DNL Identity Service]. |
+| **[!UICONTROL 已擷取的記錄]** | 擷取到的記錄數 [!DNL Identity Service]. |
 | **[!UICONTROL 已新增身分]** | 新增至的新識別碼淨數 [!DNL Identity Service]. |
 | **[!UICONTROL 建立的圖表]** | 在中建立的淨新標識圖數 [!DNL Identity Service]. |
 | **[!UICONTROL 圖形已更新]** | 已用新邊更新的現有標識圖形的數量。 |
@@ -77,10 +77,10 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | **[!UICONTROL 資料流]** | 資料流的名稱。 |
 | **[!UICONTROL 資料集]** | 資料流要插入的資料集的名稱。 |
 | **[!UICONTROL 源名稱]** | 資料流所屬的源的名稱。 |
-| **[!UICONTROL 收到的記錄]** | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 記錄失敗]** | 因資料錯誤而未擷取至Platform的記錄數。 |
+| **[!UICONTROL 已收到的記錄]** | 從資料湖接收的記錄數。 |
+| **[!UICONTROL 失敗的記錄]** | 因資料錯誤而未擷取至Platform的記錄數。 |
 | **[!UICONTROL 略過的記錄]** | 已擷取但未擷取至 [!DNL Identity Service] 因為記錄列中只有一個標識符。 |
-| **[!UICONTROL 擷取的記錄]** | 擷取到的記錄數 [!DNL Identity Service]. |
+| **[!UICONTROL 已擷取的記錄]** | 擷取到的記錄數 [!DNL Identity Service]. |
 | **[!UICONTROL 記錄總數]** | 所有記錄的總計數，包括失敗的記錄、已跳過的記錄、已添加的身份和重複的記錄。 |
 | **[!UICONTROL 已新增身分]** | 新增至的新識別碼淨數 [!DNL Identity Service]. |
 | **[!UICONTROL 建立的圖表]** | 在中建立的淨新標識圖數 [!DNL Identity Service]. |
@@ -99,10 +99,10 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 | 量度 | 說明 |
 | -------| ----------- |
-| **[!UICONTROL 收到的記錄]** | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 記錄失敗]** | 因資料錯誤而未擷取至Platform的記錄數。 |
+| **[!UICONTROL 已收到的記錄]** | 從資料湖接收的記錄數。 |
+| **[!UICONTROL 失敗的記錄]** | 因資料錯誤而未擷取至Platform的記錄數。 |
 | **[!UICONTROL 略過的記錄]** | 已擷取但未擷取至 [!DNL Identity Service] 因為記錄列中只有一個標識符。 |
-| **[!UICONTROL 擷取的記錄]** | 擷取到的記錄數 [!DNL Identity Service]. |
+| **[!UICONTROL 已擷取的記錄]** | 擷取到的記錄數 [!DNL Identity Service]. |
 | **[!UICONTROL 已新增身分]** | 新增至的新識別碼淨數 [!DNL Identity Service]. |
 | **[!UICONTROL 建立的圖表]** | 在中建立的淨新標識圖數 [!DNL Identity Service]. |
 | **[!UICONTROL 圖形已更新]** | 已用新邊更新的現有標識圖形的數量。 |

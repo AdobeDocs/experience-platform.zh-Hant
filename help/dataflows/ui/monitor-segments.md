@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1923'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="區段"
->abstract="區段檢視包含您所有IMS組織區段的資訊，以及其啟用和評估工作的詳細資訊。"
+>abstract="區段視圖會包含有關您的 IMS 組織區段的所有資訊，以及有關其啟動和評估作業的進一步資訊。"
 
 若要存取 **[!UICONTROL 區段]** 控制面板，選取 **[!UICONTROL 監控]** 的下一頁。 一次 **[!UICONTROL 監控]** 頁面，選擇 **[!UICONTROL 區段]** 卡片。
 
@@ -101,8 +101,8 @@ ht-degree: 1%
 | 量度 | 說明 |
 | ------ | ----------- |
 | **[!UICONTROL 收到的設定檔]** | 啟動流程中收到的設定檔總數。 |
-| **[!UICONTROL 已激活身份]** | 根據收到的設定檔成功啟動至目的地的身分總數。 |
-| **[!UICONTROL 已排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭排除。 |
+| **[!UICONTROL 啟用的身分]** | 根據收到的設定檔成功啟動至目的地的身分總數。 |
+| **[!UICONTROL 排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭排除。 |
 | **[!UICONTROL 資料大小]** | 要激活的資料流的大小。 |
 | **[!UICONTROL 檔案總數]** | 資料流中要激活的檔案總數。 |
 | **[!UICONTROL 狀態]** | 激活作業的當前狀態。 |
@@ -129,8 +129,8 @@ ht-degree: 1%
 | 量度 | 說明 |
 | ------ | ----------- |
 | **[!UICONTROL 名稱]** | 已啟用的區段名稱。 |
-| **[!UICONTROL 已激活身份]** | 根據收到的設定檔成功啟動至目的地的身分總數。 |
-| **[!UICONTROL 已排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭到排除。 |
+| **[!UICONTROL 啟用的身分]** | 根據收到的設定檔成功啟動至目的地的身分總數。 |
+| **[!UICONTROL 排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭排除。 |
 | **[!UICONTROL 上次資料流運行狀態]** | 為該區段執行的上次啟動工作的狀態。 |
 | **[!UICONTROL 上次資料流運行日期]** | 針對該區段執行的上次啟動工作的日期和時間。 |
 
@@ -173,7 +173,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="區段作業"
->abstract="區段作業檢視包含有關評估和匯出所有區段作業的資訊。"
+>abstract="區段作業視圖會包含有關所有區段的評估和匯出作業的資訊。"
 
 若要存取 **[!UICONTROL 區段作業]** 控制面板，選取 **[!UICONTROL 監控]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 一次 [!UICONTROL 監控] 頁面，選取 **[!UICONTROL 區段作業]**. 此 [!UICONTROL 監控] 控制面板包含區段評估和匯出作業的度量和資訊。
 

@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 25%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
->title="工作單ID"
->abstract="當資料衛生請求被發送到系統時，建立工作單以執行所請求的任務。 換言之，工作單代表特定的資料衛生過程，包括其當前狀態和其他相關細節。 每個工作單在建立時都會自動分配其唯一ID。"
+>title="工單 ID"
+>abstract="將資料檢疫要求傳送到系統時，會建立工單以執行要求的任務。換句話說，工單代表特定的資料檢疫流程，包括其目前的狀態和其他相關的詳細資訊。每個工單在建立時都會被自動指派自己的唯一 ID。"
 >text="See the data hygiene UI guide to learn more."
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platform中的資料衛生功能目前僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**.
 
-當資料衛生請求被發送到系統時，建立工作單以執行所請求的任務。 工作單代表特定資料衛生程式，例如排程的資料集有效期，包括其目前狀態和其他相關詳細資訊。
+將資料檢疫要求傳送到系統時，會建立工單以執行要求的任務。工作單代表特定資料衛生程式，例如排程的資料集有效期，包括其目前狀態和其他相關詳細資訊。
 
 本指南說明如何在Adobe Experience Platform UI中檢視及管理現有工作單。
 
@@ -68,18 +68,18 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
->title="按服務列出的狀態"
->abstract="多個Experience Platform服務會獨立處理資料衛生請求。 本節概述每個服務的要求目前處理狀態。 要了解更多資訊，請參閱資料衛生UI指南。"
+>title="服務狀態"
+>abstract="資料檢疫要求會由多個 Experience Platform 服務獨立處理。本區段會針對各個服務概述要求目前的處理狀態。若要了解詳細資訊，請參閱資料檢疫 UI 指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
->title="身分數"
->abstract="請求在此工作單中更新或刪除其記錄的身份數。 計數中包含的身分不一定存在於受影響的資料集中。 要了解更多資訊，請參閱資料衛生UI指南。"
+>title="身分識別的數量"
+>abstract="作為此工單的一部分，其記錄被要求更新或刪除的身分識別的數量。計數中包含的身分識別不一定存在於受影響的資料集中。若要了解詳細資訊，請參閱資料檢疫 UI 指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
->title="記錄刪除響應"
->abstract="記錄刪除程式從系統收到回應時，這些訊息會顯示在 **[!UICONTROL 結果]** 區段。 如果在處理工作單時發生問題，本區段會顯示任何相關錯誤訊息，以協助您疑難排解問題。 若要進一步了解，請參閱資料衛生UI指南。"
+>title="記錄刪除回應"
+>abstract="當記錄刪除流程收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;區段下。如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要了解詳細資訊，請查看資料檢疫 UI 指南。"
 
 選擇列出的工作單的ID以查看其詳細資訊。
 

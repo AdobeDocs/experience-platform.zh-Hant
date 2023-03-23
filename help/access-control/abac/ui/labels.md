@@ -6,7 +6,7 @@ exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
->title="標籤用法"
->abstract="您可以使用自訂標籤，將資料控管和存取控制設定套用至資料。"
+>title="標籤使用"
+>abstract="您可以使用自訂標籤，將資料治理和存取權控制的設定套用至您的資料。"
 
 >[!NOTE]
 >

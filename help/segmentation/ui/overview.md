@@ -7,7 +7,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '2647'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -48,18 +48,18 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
->title="流失率"
->abstract="流失率代表在區段定義內變更的設定檔百分比，與上次執行區段工作的時間相比。"
+>title="流失"
+>abstract="流失表示和上次執行區段作業時相比，區段定義內正在變更的設定檔的百分比。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
->title="評價方法"
->abstract="區段的評估方法包括批次、串流和邊緣。"
+>title="評估方式"
+>abstract="區段的評估方式包括批次、串流和邊緣。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="新增所有區段至排程"
->abstract="啟用，將所有批評估段納入每日計畫更新。 停用以從排程更新中移除所有區段。"
+>title="將所有區段新增到排程"
+>abstract="啟用以在每日排程更新中包含所有批次評估區段。停用以從排程更新中移除所有區段。"
 
 選取 **[!UICONTROL 瀏覽]** 標籤，查看組織的所有區段定義清單。
 

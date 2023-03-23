@@ -6,7 +6,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 3%
+ht-degree: 10%
 
 ---
 
@@ -68,9 +68,9 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
->title="設定Mixpanel擷取的時區"
->abstract="時區必須與您的Mixpanel設定檔時區設定相同，因為Platform會使用指定的專案時區，從Mixpanel擷取相關資料。 在將事件記錄到Mixpanel資料儲存區之前，Mixpanel會調整其時區以協調您的專案時區。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="進一步了解檔案"
+>title="設定 Mixpanel 擷取的時區"
+>abstract="該時區必須和您的 Mixpanel 設定檔時區設定相同，因為平台會使用指定的專案時區從 Mixpanel 擷取相關資料。將事件記錄到 Mixpanel 資料存放區之前，Mixpanel 會調整其時區以和您的專案時區協調一致。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="了解文件的詳細資訊"
 
 驗證來源後，請提供您的專案ID和時區，然後選取 **[!UICONTROL 選擇]**.
 

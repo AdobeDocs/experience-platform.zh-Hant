@@ -131,7 +131,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Then 條件"
->abstract="定義「If」條件後，使用「Then」部分從聯合結構描述中選擇至少一個同意屬性。此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。"
+>abstract="定義「If」條件後，使用「Then」部分從聯合方案中選擇至少一個同意屬性。此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。"
 
 在 **[!UICONTROL 然後]** 節，從聯合架構中至少選擇一個同意屬性。 此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。您可以從清單中選擇一個提供的選項，或選擇 **[!UICONTROL 查看全部]** 從聯合架構中直接選擇屬性。
 

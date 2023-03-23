@@ -7,7 +7,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
 source-wordcount: '3258'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
->abstract="組成區段的三個欄位類型為屬性、事件和對象。 屬性可讓您使用屬於XDM個別設定檔類別的設定檔屬性、事件可讓您根據使用XDM ExperienceEvent資料元素所發生的動作或事件建立對象，而對象則可讓您使用外部來源匯入的對象。"
+>abstract="構成區段的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
 
 區段定義的基本組成要素為屬性和事件。 此外，現有對象中包含的屬性和事件也可作為新定義的元件。
 
@@ -235,13 +235,13 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="區段屬性"
->abstract="區段屬性區段會顯示所產生區段的預估大小，顯示與設定檔總數比較的合格設定檔數。 這可讓您在建立對象本身之前，視需要調整區段定義。"
+>abstract="區段屬性部分會顯示產生的區段大小的估計值，以顯示合格設定檔數量和設定檔總數的比較。這可讓您在建置對象本身之前根據需要調整您的區段定義。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
->title="更新估計"
->abstract="您可以重新整理區段的估計值，立即預覽有多少個設定檔符合建議的區段。 觀眾預估是使用當天範例資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="預估和預覽受眾"
+>title="重新整理預估"
+>abstract="您可以重新整理區段的預估值，以立即預覽有多少設定檔符合建議的區段。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 建立區段定義時， **[!UICONTROL 區段屬性]** 工作區右側的區段會顯示所產生區段的預估大小，讓您在建立對象本身之前，可視需要調整區段定義。
 
@@ -253,7 +253,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->觀眾預估是使用當天範例資料的樣本大小產生。 如果您的設定檔存放區中實體少於100萬個，則會使用完整資料集；100萬至2000萬個實體使用100萬個實體；超過2,000萬個實體，佔實體總數的5%。 有關產生區段估計的詳細資訊，請參閱 [估計生成部分](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段建立教學課程中的。
+>對象預估值會透過使用當天的樣本資料的樣本大小產生。如果您的設定檔存放區中實體少於100萬個，則會使用完整資料集；100萬至2000萬個實體使用100萬個實體；超過2,000萬個實體，佔實體總數的5%。 有關產生區段估計的詳細資訊，請參閱 [估計生成部分](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段建立教學課程中的。
 
 您也可以選取評估方法。 如果您知道要使用哪種評估方法，可以使用下拉清單選擇所需的評估方法。 如果您想要知道此區段符合的評估類型，可以選取瀏覽圖示 ![帶放大鏡的資料夾表徵圖](../images/ui/segment-builder/segment-evaluation-select-icon.png) ，查看可用區段評估方法的清單。
 

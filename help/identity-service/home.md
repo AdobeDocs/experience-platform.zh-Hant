@@ -7,7 +7,7 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
 source-wordcount: '1839'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | --- | --- |
 | 身分 | 身分是實體（通常為個人）專屬的資料。 身分識別（例如登入ID、ECID或忠誠度ID）也稱為「已知身分」。 |
 | ECID | Experience CloudID(ECID)是跨Experience Platform和Adobe Experience Cloud應用程式使用的共用身分命名空間。 ECID為客戶身分提供基礎，並作為裝置的主要ID，以及身分圖表的基節點。 請參閱 [ECID概觀](./ecid.md) 以取得更多資訊。 |
-| 身分命名空間 | 身分命名空間可用來區分身分的內容或類型。 例如，身分會區分「name」<span>@email.com」作為電子郵件地址，或「443522」作為數值CRM ID。 身分識別命名空間可用來尋找個別身分識別，並提供身分值的內容。 這可讓您判斷 [!DNL Profile] 包含不同主要ID，但共用相同值的片段 `email` 身分命名空間實際上是同一個人。 請參閱 [身分命名空間概述](./namespaces.md) 以取得更多資訊。 |
+| 身分命名空間 | 身分識別命名空間用於區分身分識別的內容或類型。例如，身分識別會將「name<span>@email.com」區分為電子郵件地址或將「443522」區分為數值的 CRM ID。身分識別命名空間可用來尋找個別身分識別，並提供身分值的內容。 這可讓您判斷 [!DNL Profile] 包含不同主要ID，但共用相同值的片段 `email` 身分命名空間實際上是同一個人。 請參閱 [身分命名空間概述](./namespaces.md) 以取得更多資訊。 |
 | 身分圖 | 身分圖表是不同身分之間關係的地圖，可讓您以視覺化方式呈現並更清楚了解哪些客戶身分識別會匯整在一起，以及匯整方式。 請參閱 [使用身分圖表檢視器](./ui/identity-graph-viewer.md) 以取得更多資訊。 |
 | 個人識別資訊(PII) | PII是可直接識別客戶的資訊，例如電子郵件地址或電話號碼。 PII值常用來比對。 不同系統間客戶的多重身分識別。 |
 | 未知或匿名身份 | 未知或匿名的身分是指示器，可隔離裝置，而不識別使用裝置的實際人員。 未知和匿名身分識別包含訪客的IP位址和Cookie ID等資訊。 雖然未知和匿名的身分可提供行為資料，但在客戶提供其PII前，這些身分資料有限。 |
@@ -67,13 +67,13 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="身分識別命名空間"
->abstract="身分命名空間可用來區分身分的內容或類型。 例如，身分會區分「name」<span>@email.com」作為電子郵件地址，或「443522」作為數值CRM ID。"
+>abstract="身分識別命名空間用於區分身分識別的內容或類型。例如，身分識別會將「name<span>@email.com」區分為電子郵件地址或將「443522」區分為數值的 CRM ID。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
->title="身分值"
->abstract="身分值是代表不重複個人、組織或資產的識別碼。 值代表的內容或身分類型由對應的身分命名空間定義。 當跨設定檔片段比對記錄資料時，命名空間和身分值必須符合。當跨設定檔片段比對記錄資料時，命名空間和身分值必須符合。"
+>title="身分識別值"
+>abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分識別命名空間定義。在不同設定檔片段之間比對記錄資料時，命名空間和身分識別值必須相符。"
 >text="Learn more in documentation"
 
 如果你問一個人「你的ID是什麼？」 如果沒有任何進一步的背景，他們就很難提供有用的答案。 根據相同邏輯，表示標識值的字串值（無論是系統生成的ID還是電子郵件地址）僅在提供給字串值上下文的限定符時完成：身分識別命名空間。

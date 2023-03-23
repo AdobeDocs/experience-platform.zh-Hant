@@ -6,7 +6,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
 workflow-type: tm+mt
 source-wordcount: '1949'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -111,13 +111,13 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
->title="包含區段名稱"
->abstract="如果要讓資料匯出包含要匯出的區段名稱，請切換。 檢視已選取此選項之資料匯出範例的檔案。"
+>title="包括區段名稱"
+>abstract="切換是否希望資料匯出包括您正在匯出的區段的名稱。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmenttimestamps"
->title="包含區段時間戳記"
->abstract="如果您希望資料匯出包含建立和更新區段時的UNIX時間戳記，以及將區段對應至要啟用的目的地時的UNIX時間戳記，則切換。 檢視已選取此選項之資料匯出範例的檔案。"
+>title="包括區段時間戳記"
+>abstract="切換是否希望資料匯出包括建立和更新區段時的 Unix 時間戳記，以及區段對應至啟動目的地時的 Unix 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 

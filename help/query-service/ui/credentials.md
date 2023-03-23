@@ -7,7 +7,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
 workflow-type: tm+mt
 source-wordcount: '1330'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -19,8 +19,8 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
->title="用戶端的SSL模式"
->abstract="必須在連接至查詢服務的用戶端中啟用SSL。 確認SSL模式設為「必要」。"
+>title="用戶端的 SSL 模式"
+>abstract="必須在連線至查詢服務的用戶端中啟用 SSL。確保 SSL 模式設定為「要求」。"
 
 您可以使用到期憑證來快速設定與外部用戶端的連線。
 

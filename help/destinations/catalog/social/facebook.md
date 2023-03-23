@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
 source-wordcount: '1856'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
@@ -145,13 +145,13 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_facebook_accountid"
 >title="帳戶 ID"
->abstract="您的Facebook廣告帳戶ID。 您可以在Facebook Ads Manager帳戶中找到此ID。 輸入此ID時，請一律加上首碼 `act_`."
+>abstract="您的 Facebook 廣告帳戶 ID。您可以在您的 Facebook 廣告管理員帳戶中找到此 ID。輸入此 ID 時，都必須加上首碼 `act_`。"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 
 * **[!UICONTROL 名稱]**:日後您將透過此名稱識別此目的地。
 * **[!UICONTROL 說明]**:未來可協助您識別此目的地的說明。
-* **[!UICONTROL 帳戶ID]**:您的 [!DNL Facebook Ad Account ID]. 您可以在 [!DNL Facebook Ads Manager] 帳戶。 輸入此ID時，請一律加上首碼 `act_`.
+* **[!UICONTROL 帳戶ID]**:您的 [!DNL Facebook Ad Account ID]. 您可以在 [!DNL Facebook Ads Manager] 帳戶。 輸入此 ID 時，都必須加上首碼 `act_`。
 
 ### 啟用警報 {#enable-alerts}
 
@@ -163,23 +163,23 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="受眾來源"
->abstract="選擇區段中客戶資料的最初收集方式。 當區段鎖定使用者時，資料會顯示在Facebook中"
+>title="對象來源"
+>abstract="選擇最初如何在區段中收集客戶資料。當區段以使用者為目標時，資料會顯示在 Facebook 中"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
->title="受眾來源"
->abstract="廣告商直接從客戶收集資料。"
+>title="對象來源"
+>abstract="廣告商直接從客戶那裡收集到資料了。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_partners"
->title="受眾來源"
->abstract="廣告商直接從其合作夥伴收集資料。"
+>title="對象來源"
+>abstract="廣告商直接從他們的合作夥伴那裡收集到資料了。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
->title="受眾來源"
->abstract="廣告商直接從其客戶和合作夥伴收集資料。"
+>title="對象來源"
+>abstract="廣告商直接從他們的客戶和合作夥伴那裡收集到資料了。"
 
 >[!IMPORTANT]
 > 

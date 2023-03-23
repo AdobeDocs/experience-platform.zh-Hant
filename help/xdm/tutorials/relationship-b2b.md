@@ -5,7 +5,7 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 0%
+ht-degree: 14%
 
 ---
 
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
->title="參考結構"
->abstract="選擇要建立關係的架構。 根據架構的類別，它也可能與B2B內容中的其他實體有現有關係。 請參閱本檔案，了解B2B架構類別彼此之間的關聯。"
+>title="參考方案"
+>abstract="選取要建立關係的方案。根據方案的類別，方案還可能和 B2B 內容中的其他實體存在現有關係。請查看文件以了解 B2B 方案類別彼此間的關係。"
 
 Adobe Real-time Customer Data Platform B2B Edition提供數種擷取基本B2B資料實體的Experience Data Model(XDM)類別，包括 [帳戶](../classes/b2b/business-account.md), [商機](../classes/b2b/business-opportunity.md), [行銷活動](../classes/b2b/business-campaign.md)、等。 根據這些類別建立結構，並啟用這些結構以用於 [即時客戶個人檔案](../../profile/home.md)，您可以將不同來源的資料合併為統一表示法，稱為聯合架構。
 
@@ -50,8 +50,8 @@ Adobe Real-time Customer Data Platform B2B Edition提供數種擷取基本B2B資
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
->title="參考身分命名空間"
->abstract="參考架構的主要身分欄位的命名空間（類型）。 引用架構必須具有已建立的主標識欄位，才能參與關係。 請參閱本檔案，深入了解B2B關係中的身分。"
+>title="參考身分識別命名空間"
+>abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。請查看文件以了解有關 B2B 關係中身分識別的詳細資訊。"
 
 為了建立關係，引用架構必須具有已定義的主標識。 為B2B實體設定主要身分時，請記住，如果您跨不同系統或位置收集字串型實體ID，可能會重疊，這可能會在Platform中導致資料衝突。
 
@@ -83,13 +83,13 @@ Adobe Real-time Customer Data Platform B2B Edition提供數種擷取基本B2B資
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
->title="當前架構的關係名稱"
->abstract="描述從當前架構到引用架構（如「相關帳戶」）的關係的標籤。 此標籤用於「設定檔」和「分段」，以提供相關B2B實體資料的內容。 請參閱本檔案，以進一步了解如何建立B2B架構關係。"
+>title="目前方案中的關係名稱"
+>abstract="說明從目前方案到參考方案的關係的標籤 (例如，「相關帳戶」)。此標籤會用於設定檔和分段中，以從相關 B2B 實體將內容提供給資料。請查看文件以了解有關建置 B2B 方案關係的詳細資訊。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
->title="引用架構的關係名稱"
->abstract="描述從引用架構到當前架構（如「相關機會」）的關係的標籤。 此標籤用於「設定檔」和「分段」，以提供相關B2B實體資料的內容。 請參閱本檔案，以進一步了解如何建立B2B架構關係。"
+>title="參考方案中的關係名稱"
+>abstract="說明從參考方案到目前方案的關係的標籤 (例如，「相關機會」)。此標籤會用於設定檔和分段中，以從相關 B2B 實體將內容提供給資料。請查看文件以了解有關建置 B2B 方案關係的詳細資訊。"
 
 為了定義兩個架構之間的關係，源架構必須具有指示引用架構主要標識的專用欄位。 標準B2B類包括常用相關業務實體的專用源密鑰欄位。 例如， [!UICONTROL XDM業務機會] 類包含相關帳戶的源密鑰欄位(`accountKey`)和相關促銷活動(`campaignKey`)。 不過，您也可以新增其他 [!UICONTROL B2B源] 欄位（如果需要的元件超過預設元件），請使用自訂欄位群組將欄位傳送至架構。
 

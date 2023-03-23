@@ -5,7 +5,7 @@ exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
 workflow-type: tm+mt
 source-wordcount: '1763'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -40,15 +40,15 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_eventforwarding_secrets_environments"
->title="機密環境"
->abstract="為了讓事件轉送可使用機密，必須將其指派給現有環境。 如果您尚未為事件轉送屬性建立任何環境，則必須先進行設定，才能繼續。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="環境概覽"
+>title="密碼環境"
+>abstract="為了讓密碼可供事件轉送使用，必須將其指派給現有環境。如果您沒有為事件轉送屬性建立任何環境，則必須進行設定才能繼續。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="環境概觀"
 
 若要建立密碼，請選取 **[!UICONTROL 事件轉送]** 在左側導覽中，開啟您要新增機密的事件轉送屬性。 下一步，選擇 **[!UICONTROL 秘密]** 在左側導覽器中，隨後 **[!UICONTROL 建立新密碼]**.
 
 ![建立新機密](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
-下一個畫面可讓您設定機密的詳細資訊。 為了讓事件轉送可使用機密，必須將其指派給現有環境。 如果您尚未為事件轉送屬性建立任何環境，請參閱上的指南 [環境](../publishing/environments.md) 以取得如何設定這些欄位的指引，再繼續。
+下一個畫面可讓您設定機密的詳細資訊。 為了讓密碼可供事件轉送使用，必須將其指派給現有環境。如果您尚未為事件轉送屬性建立任何環境，請參閱上的指南 [環境](../publishing/environments.md) 以取得如何設定這些欄位的指引，再繼續。
 
 >[!NOTE]
 >

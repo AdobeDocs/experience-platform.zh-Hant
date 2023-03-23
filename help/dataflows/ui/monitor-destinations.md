@@ -176,7 +176,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="啟用"
->abstract="目的地啟用檢視包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。"
+>abstract="目的地啟用視圖包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。"
 
 若要存取 [!UICONTROL 監控] 控制面板，選取 **[!UICONTROL 監控]** (![監視表徵圖](../assets/ui/monitor-destinations/monitoring-icon.png))。 一次 [!UICONTROL 監控] 頁面，選取 [!UICONTROL 目的地]. 此 [!UICONTROL 監控] 控制面板包含目標執行作業的度量和資訊。
 

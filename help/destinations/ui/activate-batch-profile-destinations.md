@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
 workflow-type: tm+mt
 source-wordcount: '3592'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="排程"
->abstract="使用鉛筆圖示來設定檔案匯出類型（完整檔案或增量檔案）和匯出頻率。"
+>abstract="使用鉛筆圖示設定檔案匯出類型 (完整檔案或增量檔案) 和匯出頻率。"
 
 [!DNL Adobe Experience Platform] 以 [!DNL CSV] 檔案。 在 **[!UICONTROL 排程]** 頁面，您可以為要匯出的每個區段設定排程和檔案名稱。 必須設定排程，但設定檔案名稱為選用。
 
@@ -73,19 +73,19 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
->title="檔案導出選項"
->abstract="選擇 **導出完整檔案** 匯出所有符合區段資格之設定檔的完整快照。 選擇 **導出增量檔案** 僅匯出自上次匯出以來符合區段資格的設定檔。 <br> 第一個增量檔案匯出包含所有符合區段資格的設定檔，可作為回填。 將來的增量檔案僅包括自首次增量檔案導出以來符合段資格的配置檔案。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="導出增量檔案"
+>title="檔案匯出選項 "
+>abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合區段資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合區段資格的設定檔。<br> 第一個增量檔案匯出包括符合區段資格的所有設定檔，充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合區段資格的設定檔。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="區段評估後啟動"
->abstract="每日細分工作完成後，啟動會立即執行。 這可確保匯出最新的設定檔。"
+>abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="排程啟動"
->abstract="啟動會在一天中的固定時間執行。"
+>abstract="在一天中的固定時間執行啟動。"
 
 選擇 **[!UICONTROL 導出完整檔案]** 觸發匯出檔案，該檔案包含所選區段之所有設定檔資格的完整快照。
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 1. 選擇 **[!UICONTROL 建立]** 以儲存排程。
 
-### 導出增量檔案 {#export-incremental-files}
+### 匯出增量檔案 {#export-incremental-files}
 
 選擇 **[!UICONTROL 導出增量檔案]** 觸發導出，其中第一個檔案是選定段的所有配置檔案資格的完整快照，而後續檔案是自上次導出以來的增量配置檔案資格。
 
@@ -156,8 +156,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
->title="配置檔案名"
->abstract="針對以檔案為基礎的目的地，每個區段會產生唯一的檔案名稱。 使用檔案名編輯器建立和編輯唯一的檔案名或保留預設名稱。"
+>title="設定檔案名稱"
+>abstract="若是檔案型目的地，會對每個區段產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 對於大多數目的地，預設檔案名稱包含目的地名稱、區段ID以及日期和時間指標。 例如，您可以編輯匯出的檔案名稱以區分不同的促銷活動，或將資料匯出時間附加至檔案。 請注意，某些目的地開發人員可能會選取為其目的地顯示不同的預設檔案名稱附加選項。
 
@@ -233,8 +233,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
->title="關於必要屬性"
->abstract="選取所有匯出的設定檔都應包含的XDM結構屬性。 不含強制鍵的設定檔不會匯出至目的地。 不選取強制索引鍵會匯出所有符合資格的設定檔（無論其屬性為何）。"
+>title="關於強制屬性"
+>abstract="選取所有匯出的設定檔應包含的 XDM 方案屬性。沒有強制金鑰的設定檔不會匯出到目的地。未選取強制金鑰會匯出所有合格的設定檔，無論其屬性如何。"
 
 強制屬性是啟用使用者的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
 
@@ -248,8 +248,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
->title="關於重複資料刪除金鑰"
->abstract="選取重複資料刪除金鑰，即可在匯出檔案中消除相同設定檔的多個記錄。 選取單一命名空間或最多兩個XDM架構屬性作為重複資料刪除索引鍵。 未選取重複資料刪除金鑰可能會導致匯出檔案中出現重複的設定檔項目。"
+>title="關於去重複化索引鍵"
+>abstract="選取去重複化索引鍵，以消除匯出檔案中同一設定檔的多筆記錄。選取單一命名空間或最多兩個 XDM 方案屬性作為去重複化索引鍵。未選取去重複化索引鍵可能會導致匯出檔案中出現重複的設定檔項目。"
 
 重複資料刪除金鑰是使用者定義的主金鑰，可決定使用者要依此身分對其設定檔進行重複資料刪除的&#x200B;身分。
 
@@ -469,10 +469,10 @@ Adobe建議您選取身分命名空間，例如 [!DNL CRM ID] 或電子郵件地
 
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_viewApplicableConsentPolicies"
->title="檢視適用的同意政策"
->abstract="如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 如果您的公司沒有上述SKU的存取權，此控制即會停用。"
+>title="檢視適用的同意原則"
+>abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如果您的公司無權存取上述 SKU，則會停用此控制項。"
 
-如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 

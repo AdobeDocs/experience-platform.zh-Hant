@@ -7,7 +7,7 @@ exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '816'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -40,12 +40,12 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxname"
 >title="沙箱名稱"
->abstract="沙箱名稱是用於後端的文字，用於為此沙箱建立唯一ID。"
+>abstract="沙箱名稱指在後端用於為此沙箱建立唯一 ID 的文字。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
 >title="沙箱標題"
->abstract="沙箱標題是顯示名稱，代表功能表中的沙箱，以及整個Experience PlatformUI的下拉式清單。"
+>abstract="沙箱標題指在整個 Experience Platform UI 的選單和下拉式清單中代表沙箱的顯示名稱。"
 
 >[!NOTE]
 >

@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -69,9 +69,9 @@ Adobe Target是Adobe Experience Platform目的地目錄中的個人化連線。
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
->title="關於資料流ID"
->abstract="此選項會決定要納入區段的資料收集資料流。 下拉式功能表只會顯示已啟用Target設定的資料流。 若要使用邊緣分段，您必須選取資料流ID。 選取「無」會停用所有使用邊緣分段的使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="進一步了解選取資料流"
+>title="關於資料流 ID"
+>abstract="此選項會確定哪個資料收集資料流中將包含區段。下拉式選單僅顯示已啟用目標設定的資料流。若要使用邊緣分段，您必須選取一個資料流 ID。選取不停用所有使用邊緣分段的使用案例。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="了解有關選取資料流的詳細資訊"
 
 >[!IMPORTANT]
 > 

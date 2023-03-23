@@ -7,7 +7,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
 source-wordcount: '2087'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -53,7 +53,7 @@ Experience Platform提供使用者介面和RESTful API，您可從中檢視及�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="資料行為"
->abstract="用於Experience Platform的資料分為三種行為類型：記錄、時間系列和臨機。 記錄結構提供有關主題屬性的資訊，而時間序列結構在執行操作時捕獲系統的快照。 隨選結構會擷取命名空間欄位，僅供單一資料集使用。 如需Platform中資料行為的詳細資訊，請參閱本檔案。"
+>abstract="用於 Experience Platform 的資料分為三種行為類型：記錄、時間序列和臨時。記錄方案會提供有關主體屬性的資訊，而時間序列方案則會在採取動作時擷取系統的快照。臨時方案會擷取僅供單一資料集使用的命名空間的欄位。如需有關 Platform 中資料行為的詳細資訊，請查看此文件。"
 
 用於Experience Platform的資料分為三種行為類型：
 
@@ -69,7 +69,7 @@ Experience Platform提供使用者介面和RESTful API，您可從中檢視及�
 >
 >沒有基於臨機行為的標準類。 採用臨機結構的平台程式會自動產生這些結構，但也可以 [使用方案註冊表API手動建立](./tutorials/ad-hoc.md).
 
-### [!UICONTROL XDM個別設定檔] {#xdm-individual-profile}
+### [!UICONTROL XDM 個別設定檔] {#xdm-individual-profile}
 
 [!UICONTROL XDM個別設定檔] 是基於記錄的類，它對已識別和部分已識別的主題的屬性形成奇異的表示。 高度識別的配置檔案可用於個人通信或目標性參與，並且可以包含詳細的個人資訊，如姓名、性別、出生日期、位置和聯繫資訊，包括電話號碼和電子郵件地址。
 

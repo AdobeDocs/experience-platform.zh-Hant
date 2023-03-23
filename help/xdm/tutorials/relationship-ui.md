@@ -8,7 +8,7 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -16,18 +16,18 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
->title="結構關係"
->abstract="屬於不同類別的結構可透過關係欄位根據內容連結，讓您建立更複雜的分段規則。 如需結構關係的詳細資訊，請參閱本檔案。"
+>title="方案關係"
+>abstract="屬於不同類別的方案可藉由關係欄位建立內容連結，從而讓您能夠建置更複雜的分段規則。如需有關方案關係的詳細資訊，請查看此文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
->title="參考結構"
->abstract="選擇要建立關係的架構。 此架構可以是與當前架構不同的類。 如需結構關係的詳細資訊，請參閱本檔案。"
+>title="參考方案"
+>abstract="選取要建立關係的方案。此方案可能和目前方案屬於不同類別。如需有關方案關係的詳細資訊，請查看此文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
->title="參考身分命名空間"
->abstract="參考架構的主要身分欄位的命名空間（類型）。 引用架構必須具有已建立的主標識欄位，才能參與關係。 如需結構關係的詳細資訊，請參閱本檔案。"
+>title="參考身分識別命名空間"
+>abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。如需有關方案關係的詳細資訊，請查看此文件。"
 
 了解客戶之間的關係，以及客戶在不同管道與品牌互動的能力，是Adobe Experience Platform的重要一環。 在 [!DNL Experience Data Model] (XDM)結構可讓您對客戶資料獲得複雜的深入分析。
 

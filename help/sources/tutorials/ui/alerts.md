@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 3f7f66c0d58d127299ad12027869ca0e9837f5cd
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -34,8 +34,8 @@ Adobe Experience Platform可讓您訂閱Adobe Experience Platform活動的事件
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"
->title="訂閱源警報"
->abstract="警報允許您根據源資料流的狀態接收通知。 如果資料流已啟動、成功、失敗或未內嵌任何資料，則可以設定警報通知來獲取更新。"
+>title="訂閱來源警示"
+>abstract="警示可讓您根據來源資料流的狀態接收通知。如果資料流已啟動、成功、失敗或未擷取任何資料，您可以設定警示通知以獲取更新。"
 >text="Learn more in documentation"
 
 >[!IMPORTANT]

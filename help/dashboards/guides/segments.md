@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '2105'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -81,13 +81,13 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 * [[!UICONTROL 對象規模]](#audience-size)
 * [[!UICONTROL 對象啟動順序]](#audience-activation-order)
-* [[!UICONTROL 對象大小趨勢]](#audience-size-trend)
+* [[!UICONTROL 對象規模趨勢]](#audience-size-trend)
 * [[!UICONTROL 對象大小變更趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 受眾規模（依身分）趨勢]](#audience-size-trend-by-identity)
 * [[!UICONTROL 對象重疊]](#audience-overlap)
 * [[!UICONTROL 對象重疊報表]](#audience-overlap-report)
-* [[!UICONTROL 身份重疊]](#identity-overlap)
-* [[!UICONTROL 依身分劃分的設定檔]](#profiles-by-identity)
+* [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
+* [[!UICONTROL 依身分識別劃分的設定檔]](#profiles-by-identity)
 * [[!UICONTROL 已排程的啟動]](#scheduled-activations)
 
 ### [!UICONTROL 對象規模] {#audience-size}
@@ -95,7 +95,7 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="對象規模"
->abstract="此介面工具集會顯示所選區段內合併的設定檔總數。 此數字取決於應用於資料的合併策略，在最新快照時正確。"
+>abstract="此 Widget 會顯示選取區段內合併設定檔的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
 
 此 **[!UICONTROL 對象大小]** 介面工具集會顯示拍攝快照時，所選區段內合併的設定檔總數。 此數字是將區段合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為區段中的每個個人形成單一設定檔。
 
@@ -103,12 +103,12 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 ![區段控制面板概述，並反白顯示對象大小介面工具集。](../images/segments/audience-size.png)
 
-### [!UICONTROL 對象大小趨勢] {#audience-size-trend}
+### [!UICONTROL 對象規模趨勢] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="對象大小趨勢"
->abstract="此介面工具集提供符合以下條件的設定檔總數的相關資訊： **any** 過去30天、90天或12個月的區段定義（在每日快照期間擷取）。"
+>title="對象規模趨勢"
+>abstract="此 Widget 會提供有關符合&#x200B;**任何**&#x200B;區段定義標準的設定檔總數的資訊，這會在過去 30 天、90 天或 12 個月每日快照期間擷取。"
 
 此 **[!UICONTROL 對象大小趨勢]** 介面工具集提供符合以下條件的設定檔總數的折線圖插圖： **any** 指定時段的區段定義。 對象大小趨勢可以在30天、90天和12個月期間內視覺化。 時段是從介面工具集的下拉式選單中選擇。 對象大小會反映在Y軸上，而時間會反映在X軸上。
 
@@ -176,12 +176,12 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 選擇 **[!UICONTROL 關閉]** 返回 [!UICONTROL 區段] 控制面板。
 
-### [!UICONTROL 身份重疊] {#identity-overlap}
+### [!UICONTROL 身分識別覆蓋] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
->title="身份重疊"
->abstract="此介面工具集顯示您包含兩個所選身分的區段中設定檔的重疊。 圓圈會顯示每個身分的相對大小。 包含兩個命名空間的設定檔數目會由圓圈之間的重疊表示。"
+>title="身分識別覆蓋"
+>abstract="此 Widget 會顯示包含兩個所選身分識別的區段中設定檔的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的設定檔的數量由圓圈之間的覆蓋表示。"
 
 此 **[!UICONTROL 身分重疊]** 介面工具集會顯示Venn圖表或設定圖表，顯示您包含多個身分的區段中設定檔的重疊。
 
@@ -193,12 +193,12 @@ Adobe提供多個標準Widget，您可用來視覺化與區段相關的不同量
 
 ![區段控制面板概述，並反白顯示身分重疊Widget。](../images/segments/identity-overlap.png)
 
-### [!UICONTROL 依身分劃分的設定檔] {#profiles-by-identity}
+### [!UICONTROL 依身分識別劃分的設定檔] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
->title="依身分劃分的設定檔"
->abstract="此介面工具集會顯示您所選區段中每個合併設定檔的身分劃分。"
+>title="依身分識別劃分的設定檔"
+>abstract="此 Widget 會顯示選取區段中每個合併設定檔身分識別的劃分。"
 
 此 **[!UICONTROL 依身分設定檔]** 介面工具集會顯示您所選區段中每個合併設定檔的身分劃分。 依身分劃分的設定檔總數可能高於區段中的設定檔總數，因為一個設定檔可能有多個與其相關聯的身分。 換句話說，將每個身分顯示的值加總後，可能會超過區段中的總受眾規模，因為如果客戶在多個管道上與您的品牌互動，則多個身分可能會與該個別客戶相關聯。
 

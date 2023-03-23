@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '737'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -37,8 +37,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
->title="編輯控管標籤"
->abstract="將標籤應用於架構欄位，以指明應用於該特定欄位中包含的資料的使用策略。"
+>title="編輯治理標籤"
+>abstract="將標籤套用在方案欄位以顯示適用於該特定欄位中包含的資料的使用原則。"
 
 若要開始新增標籤，您必須先 [選擇要編輯的現有架構](../ui/resources/schemas.md#edit) 或 [建立新架構](../ui/resources/schemas.md#create) 在架構編輯器中查看其結構。
 

@@ -6,7 +6,7 @@ exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
 source-wordcount: '1034'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -65,26 +65,26 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_received"
->title="收到的記錄"
->abstract="「已接收記錄」度量指示在資料流中接收的記錄總數。"
+>title="已收到的記錄"
+>abstract="已收到的記錄量度會顯示資料流中收到的記錄總計數。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_ingested"
->title="擷取的記錄"
->abstract="「擷取的記錄」量度會指出擷取到資料湖的記錄總數。"
+>title="已擷取的記錄"
+>abstract="已擷取的記錄量度會顯示擷取至資料湖的記錄總計數。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_failed"
->title="記錄失敗"
->abstract="「記錄失敗」量度會指出因資料中的錯誤而未擷取至資料湖的記錄總數。"
+>title="失敗的記錄"
+>abstract="失敗的記錄量度會顯示由於資料錯誤而未擷取至資料湖的記錄總計數。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_warnings"
->title="帶有警告的記錄"
->abstract="帶有警告的記錄指示使用映射器轉換警告所獲取記錄的總數。 所有映射器轉換錯誤都會回報為警告，而部分擷取的列會被視為成功並顯示警告"
+>title="包含警告的記錄"
+>abstract="包含警告的記錄會顯示包含對應工具轉換警告的記錄總計數。所有的對應工具轉換錯誤都會通報為警告，部分擷取的列則會被視為包含警告的成功"
 >text="Learn more in documentation"
 
 每個資料流運行都顯示以下詳細資訊：

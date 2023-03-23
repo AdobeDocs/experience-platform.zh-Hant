@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
 source-wordcount: '1184'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -64,13 +64,13 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="主要身分"
->abstract="主要身分是將記錄系結至Experience Platform中消費者設定檔的屬性。 資料集的主要身分欄位由資料集所依據的結構所定義。 在此欄中，您必須提供記錄主要身分的類型（或命名空間），例如 `email` 對於電子郵件地址和 `ecid` Experience CloudID。 若要深入了解，請參閱資料衛生UI指南。"
+>title="主要身分識別"
+>abstract="主要身分識別指將記錄和 Experience Platform 中的消費者設定檔繫結的屬性。資料集的主要身分識別欄位由資料集建立基礎的方案定義。在此欄中，您必須提供記錄的主要身分識別的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看資料檢疫 UI 指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="身分值"
->abstract="在此列中，必須提供記錄的主要標識的值，該值必須與左列中提供的標識類型相對應。 如果主要身分類型為 `email`，值應為記錄的電子郵件地址。 若要進一步了解，請參閱資料衛生UI指南。"
+>title="身分識別值"
+>abstract="在此欄中，您必須提供記錄的主要身分識別的值，該值必須和左欄中提供的身分識別類型相對應。如果主要身分識別類型是 `email`，則該值應該是記錄的電子郵件地址。若要了解詳細資訊，請查看資料檢疫 UI 指南。"
 
 刪除記錄時，必須提供身份資訊，以便系統能夠確定必須刪除哪些記錄。 若是Platform中的任何資料集，記錄會根據 **主要身分** 由資料集結構定義的欄位。
 

@@ -8,7 +8,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: c4cb3783cbbab6f9bf25ffaa5b27a200c555b181
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -46,9 +46,9 @@ Adobe Experience Platform提供預先設定的範本，供您加速資料擷取�
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
->title="選擇業務類型"
->abstract="為您的使用案例選擇適當的業務類型。 您的存取權限可能會因您的Real-time Customer Data Platform訂閱帳戶而異。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant" text="Real-Time CDP概述"
+>title="選取商業類型"
+>abstract="為您的使用案例選取適合的商業類型。您的存取權限可能會依據您的即時客戶資料平台訂閱帳戶而不同。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant" text="Real-Time CDP 概觀"
 
 在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區，並查看Experience Platform中可用的來源目錄。
 
@@ -127,10 +127,10 @@ Adobe Experience Platform提供預先設定的範本，供您加速資料擷取�
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_review"
->title="檢閱自動產生的資產"
->abstract="產生所有資產最多需要5分鐘。 如果您選擇離開頁面，資產一旦完成，您會收到要傳回的通知。 產生資產後，您就可以檢閱資產，並隨時對您的資料流進行其他設定。"
+>title="檢閱您自動產生的資產"
+>abstract="產生所有資產最多可能需要五分鐘的時間。如果您選擇離開頁面，資產完成後您將收到傳回的通知。您可以在產生資產後檢閱資產，並可隨時對資料流進行其他設定。"
 
-此 [!UICONTROL 檢閱範本資產] 頁面會顯示範本中自動產生的資產。 在本頁面中，您可以檢視與來源連線相關聯的自動產生結構、資料集、身分識別命名空間及資料流。 產生所有資產最多需要5分鐘。 如果您選擇離開頁面，資產一旦完成，您會收到要傳回的通知。 產生資產後，您就可以檢閱資產，並隨時對您的資料流進行其他設定。
+此 [!UICONTROL 檢閱範本資產] 頁面會顯示範本中自動產生的資產。 在本頁面中，您可以檢視與來源連線相關聯的自動產生結構、資料集、身分識別命名空間及資料流。 產生所有資產最多可能需要五分鐘的時間。如果您選擇離開頁面，資產完成後您將收到傳回的通知。您可以在產生資產後檢閱資產，並可隨時對資料流進行其他設定。
 
 預設情況下，將啟用自動生成的資料流。 選取點(`...`)，然後選取 **[!UICONTROL 預覽對應]** 查看為資料流建立的映射集。
 

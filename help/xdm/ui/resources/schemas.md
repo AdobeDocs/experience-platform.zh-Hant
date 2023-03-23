@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -251,8 +251,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="為設定檔啟用結構"
->abstract="為「設定檔」啟用結構時，從此結構建立的任何資料集都會參與「即時客戶設定檔」，即時客戶設定檔會合併不同來源的資料，以建構每個客戶的完整檢視。 一旦使用結構將資料內嵌至設定檔，便無法停用。 如需詳細資訊，請參閱文件。"
+>title="啟用設定檔的方案"
+>abstract="為設定檔啟用方案時，從此方案建立的任何資料集都會參與即時客戶設定檔，該設定檔會合併來自不同來源的資料以建構每個客戶的完整視圖。一旦將方案用於擷取資料至設定檔中，即無法停用。如需詳細資訊，請參閱文件。"
 
 [即時客戶個人檔案](../../../profile/home.md) 合併來自不同來源的資料，以建構每個客戶的完整檢視。 如果希望架構捕獲的資料參與此過程，則必須啟用該架構以用於 [!DNL Profile].
 

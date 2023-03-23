@@ -14,12 +14,12 @@ ht-degree: 33%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="熱門動作"
->abstract="此 Widget 顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此 Widget 會顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="熱門使用者"
->abstract="此 Widget 顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此 Widget 會顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"

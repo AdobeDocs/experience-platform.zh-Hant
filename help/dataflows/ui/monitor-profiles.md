@@ -7,7 +7,7 @@ exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
 source-wordcount: '1074'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="設定檔處理"
->abstract="設定檔處理檢視包含擷取至設定檔服務的記錄相關資訊，包括建立的設定檔片段數、更新的設定檔片段數，以及設定檔片段總數。"
+>abstract="設定檔處理視圖會包含有關擷取至設定檔服務的記錄的資訊，包括建立的設定檔片段數、更新的設定檔片段數以及設定檔片段總數。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
 >title="資料流執行詳細資訊"
->abstract="「資料流運行詳細資訊」頁顯示了有關配置檔案資料流運行的詳細資訊，包括其組織ID和資料流運行ID。"
+>abstract="資料流執行詳細資訊頁面會顯示有關設定檔資料流執行的詳細資訊，包括其組織 ID 和資料流執行 ID。"
 
 若要存取 **[!UICONTROL 設定檔]** 控制面板，選取 **[!UICONTROL 監控]** 的下一頁。 一次 **[!UICONTROL 監控]** 頁面，選擇 **[!UICONTROL 設定檔]** 卡片。
 
@@ -56,8 +56,8 @@ ht-degree: 3%
 | 量度 | 說明 |
 | -------| ----------- |
 | **[!UICONTROL 源名稱]** | 源的名稱。 |
-| **[!UICONTROL 收到的記錄]** | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 記錄失敗]** | 已擷取但未擷取至 [!DNL Profile] 錯誤。 |
+| **[!UICONTROL 已收到的記錄]** | 從資料湖接收的記錄數。 |
+| **[!UICONTROL 失敗的記錄]** | 已擷取但未擷取至 [!DNL Profile] 錯誤。 |
 | **[!UICONTROL 建立的設定檔片段]** | 新淨數 [!DNL Profile] 新增片段。 |
 | **[!UICONTROL 已更新設定檔片段]** | 現有的 [!DNL Profile] 片段已更新。 |
 | **[!UICONTROL 設定檔片段總計]** | 寫入的記錄總數 [!DNL Profile]，包括所有現有 [!DNL Profile] 片段已更新並新增 [!DNL Profile] 已建立片段。 |
@@ -78,8 +78,8 @@ ht-degree: 3%
 | **[!UICONTROL 資料流]** | 資料流的名稱。 |
 | **[!UICONTROL 資料集]** | 資料流要插入的資料集的名稱。 |
 | **[!UICONTROL 源名稱]** | 資料流所屬的源的名稱。 |
-| **[!UICONTROL 收到的記錄**] | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 記錄失敗]** | 已擷取但未擷取至 [!DNL Profile] 錯誤。 |
+| **[!UICONTROL 已收到的記錄**] | 從資料湖接收的記錄數。 |
+| **[!UICONTROL 失敗的記錄]** | 已擷取但未擷取至 [!DNL Profile] 錯誤。 |
 | **[!UICONTROL 建立的設定檔片段]** | 新淨數 [!DNL Profile] 新增片段。 |
 | **[!UICONTROL 已更新設定檔片段]** | 現有的 [!DNL Profile] 更新片段 |
 | **[!UICONTROL 設定檔片段總計]** | 寫入的記錄總數 [!DNL Profile]，包括所有現有 [!DNL Profile] 片段已更新並新增 [!DNL Profile] 已建立片段。 |
@@ -98,8 +98,8 @@ ht-degree: 3%
 
 | 量度 | 說明 |
 | -------| ----------- |
-| **[!UICONTROL 收到的記錄]** | 從資料湖接收的記錄數。 |
-| **[!UICONTROL 記錄失敗]** | 已擷取但未擷取至 [!DNL Profile] 錯誤。 |
+| **[!UICONTROL 已收到的記錄]** | 從資料湖接收的記錄數。 |
+| **[!UICONTROL 失敗的記錄]** | 已擷取但未擷取至 [!DNL Profile] 錯誤。 |
 | **[!UICONTROL 建立的設定檔片段]** | 新淨數 [!DNL Profile] 新增片段。 |
 | **[!UICONTROL 已更新設定檔片段]** | 現有的 [!DNL Profile] 片段已更新。 |
 | **[!UICONTROL 狀態]** | 定義資料流的總體狀態。 可能的狀態值為： <ul><li>`Success`:指示資料流處於活動狀態，並正在根據資料流提供的計畫來接收資料。</li><li>`Failed`:表示資料流的激活過程因錯誤而中斷。 </li><li>`Processing`:指示資料流尚未處於活動狀態。 建立新資料流後，通常會立即出現此狀態。</li></ul> |

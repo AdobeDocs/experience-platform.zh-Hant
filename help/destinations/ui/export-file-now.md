@@ -6,7 +6,7 @@ exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 29962e07aa50c97b6098f4c892facf48508d28cf
 workflow-type: tm+mt
 source-wordcount: '743'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="立即匯出檔案"
->abstract="選取此控制項，除了任何先前排程的匯出外，還可傳送完整檔案匯出。 檔案匯出會立即觸發，並從Experience Platform細分執行中擷取最新結果。"
+>abstract="選取此控制項可在任何先前排程的匯出外實現完整的檔案匯出。檔案匯出會即刻觸發，並從 Experience Platform 分段執行中獲取最新結果。"
 
 本文說明如何使用Experience PlatformUI，依需求將檔案匯出至批次目的地，例如 [雲端儲存](/help/destinations/catalog/cloud-storage/overview.md) 和 [電子郵件行銷](/help/destinations/catalog/email-marketing/overview.md) 目的地。
 
-此 **[!UICONTROL 立即匯出檔案]** 控制項可讓您匯出完整檔案，而不會中斷先前排程區段的目前匯出排程。 此匯出除了先前排程的匯出外，也不會變更區段的匯出頻率。 檔案匯出會立即觸發，並從Experience Platform細分執行中擷取最新結果。
+此 **[!UICONTROL 立即匯出檔案]** 控制項可讓您匯出完整檔案，而不會中斷先前排程區段的目前匯出排程。 此匯出除了先前排程的匯出外，也不會變更區段的匯出頻率。 檔案匯出會即刻觸發，並從 Experience Platform 分段執行中獲取最新結果。
 
 您也可以為此目的使用Experience PlatformAPI。 閱讀如何 [透過臨機啟動API隨選啟動對象區段，以批次目的地](/help/destinations/api/ad-hoc-activation-api.md).
 
