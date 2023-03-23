@@ -2,10 +2,10 @@
 title: 標籤疑難排解指南
 description: 取得Adobe Experience Platform中標籤常見問題的解答。
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: b0cc02478273c0b6035488a5d21191ce5cc0e268
+source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 27%
+source-wordcount: '1044'
+ht-degree: 26%
 
 ---
 
@@ -45,6 +45,8 @@ Tags已開啟幾近全自助的入口網站，擴充功能開發人員可透過�
 
 我們有許多客戶也選擇使用相同擴充功能開發法，建立自己的私人擴充功能，僅供公司內部使用。
 
+若要開發擴充功能，請查看 [擴充功能開發概述](./extension-dev/overview.md) 頁面。
+
 ## 標籤是否符合我公司的安全標準？
 
 標籤符為SOC-2和金融服務現代化法案(Gramm-Leach-Bliley Act)。 標籤也提供自行托管的功能。 您可從自己的伺服器或您選擇的CDN提供JavaScript程式庫和行動設定。 對 IT 和安全團隊而言，這可讓您執行自動化的測試、將檔案簽入您自己的版本控制系統，同時完全遵守任何內部生產移轉程序、安全相關規範或其他規定。
@@ -71,22 +73,7 @@ Tags已開啟幾近全自助的入口網站，擴充功能開發人員可透過�
 
 ## 標籤支援哪些瀏覽器？
 
-標籤的瀏覽器支援：
-
-- [!DNL Chrome] (最新版)
-- [!DNL Safari] (最新版)
-- [!DNL Firefox] (最新版)
-- [!DNL Microsoft Edge] (最新版)
-- [!DNL Internet Explorer] (第 10 版及以上版本)
-- [!DNL iOS Safari] (最新版)
-- [!DNL Android Chrome] (最新版)
-
-標籤應用程式介面的瀏覽器支援：
-
-- [!DNL Chrome] (最新版)
-- [!DNL Safari] (最新版)
-- [!DNL Firefox] (最新版)
-- [!DNL Microsoft Edge] (最新版)
+查看支援的瀏覽器 [此處](./extension-dev/browsers.md).
 
 大部分的Adobe用戶端都透過最新版的瀏覽器運用更現代化的Web平台功能，建立更優質的使用者體驗，包括單頁應用程式和互動式Ajax密集型網站與頁面。 隨著大部分的客戶網站改用更現代化的作法，他們需要能支援這些作法的標籤等解決方案。
 

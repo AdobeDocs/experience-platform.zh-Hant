@@ -2,9 +2,9 @@
 title: 快速入門手冊
 description: 了解如何在Adobe Experience Platform中快速上手並執行標籤。
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1525'
 ht-degree: 43%
 
 ---
@@ -135,5 +135,5 @@ ht-degree: 43%
 若要進一步了解標籤，請參閱下列資源：
 
 * **[資料收集社群](https://forums.adobe.com/community/experience-cloud/platform/launch)**:詢問和回答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
-* **[開發人員檔案](https://developer.adobelaunch.com/)**:參與標籤開發人員社群，以建立擴充功能或使用標籤API
+* **[開發人員檔案](../api/overview.md)**:參與標籤開發人員社群，以建立擴充功能或使用標籤API
 * **[Tutorials概述](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**:這些檔案會向您介紹標籤概念，包括事件轉送和Android應用程式中的行動SDK。

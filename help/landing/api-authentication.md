@@ -5,9 +5,9 @@ title: 驗證及存取Experience PlatformAPI
 type: Tutorial
 description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1269'
 ht-degree: 5%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 5%
 
 ### 新增Experience Platform至專案
 
-前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並登入您的Adobe ID。 接下來，請依照 [建立空白專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 在Adobe Developer Console檔案中。
+前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並登入您的Adobe ID。 接下來，請依照 [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) 在Adobe Developer Console檔案中。
 
 建立新專案後，請選取 **[!UICONTROL 新增API]** 在 **[!UICONTROL 專案概述]** 螢幕。
 

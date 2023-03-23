@@ -4,9 +4,9 @@ title: 訂閱Adobe I/O事件通知
 description: 本檔案提供如何訂閱Adobe Experience Platform服務Adobe I/O事件通知的步驟。 也提供關於可用事件類型的參考資訊，以及如何解釋每個適用事件傳回資料的進一步檔案連結 [!DNL Platform] 服務。
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 29b1942e4009770d4f9d346a760b6e78cef23969
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '771'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ## 在Adobe Developer Console中建立新專案
 
-前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並登入您的Adobe ID。 接下來，請依照 [建立空白專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 在Adobe Developer Console檔案中。
+前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並登入您的Adobe ID。 接下來，請依照 [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) 在Adobe Developer Console檔案中。
 
 ## 訂閱事件
 

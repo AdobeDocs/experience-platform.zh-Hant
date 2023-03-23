@@ -2,9 +2,9 @@
 title: Reactor API快速入門
 description: 了解如何開始使用Reactor API，包括產生必要存取憑證的步驟。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1050'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 取得開發人員存取Adobe Experience Platform
 
-您必須擁有開發人員存取Experience Platform的權限，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請遵循 [Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 進入「在Adobe Developer主控台中產生存取認證」步驟後，請返回本教學課程以產生Reactor API專屬的認證。
+您必須擁有開發人員存取Experience Platform的權限，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請遵循 [Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成「取得使用者存取權」步驟後，請返回本教學課程，產生Reactor API專屬的憑證。
 
 ## 生成訪問憑據
 
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 ### 一次性設定
 
-前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並登入您的Adobe ID。 接下來，請依照 [建立空白專案](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) （位於開發人員控制台檔案中）。
+前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並登入您的Adobe ID。 接下來，請依照 [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) （位於開發人員控制台檔案中）。
 
 建立專案後，請選取 **新增API** 在 **專案概述** 螢幕。
 

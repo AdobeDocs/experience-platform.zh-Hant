@@ -2,10 +2,10 @@
 title: 發行擴充功能
 description: 了解如何在Adobe Experience Platform中私下或公開發行標籤擴充功能。
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 3e349c5d78d964c8c2a5b635ef1866d4f41ef6bb
+source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 46%
+source-wordcount: '311'
+ht-degree: 44%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 46%
 
 要透過私人提供來發行擴充功能，最簡單的方式是使用 [標籤擴充功能發行器](https://www.npmjs.com/package/@adobe/reactor-releaser). 如需詳細指示，請參閱其文件。
 
-如果您想要直接透過API在私人可用性下發行擴充功能，請參閱的範例呼叫 [私下發行擴充功能套件](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/release_private/) 以取得詳細資訊。
+如果您想要直接透過API在私人可用性下發行擴充功能，請參閱的範例呼叫 [私下發行擴充功能套件](../../api/endpoints/extension-packages.md/#private-release) 以取得詳細資訊。
 
 ## 公開發行
 

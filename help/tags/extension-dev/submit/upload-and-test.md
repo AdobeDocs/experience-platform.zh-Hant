@@ -2,10 +2,10 @@
 title: 上傳並實作擴充功能的端對端測試
 description: 了解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2394'
-ht-degree: 35%
+source-wordcount: '2382'
+ht-degree: 34%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 35%
 
 若要使用API或命令列工具，您需要具有Adobe I/O的技術帳戶。您必須在I/O主控台中建立技術帳戶，然後使用上傳程式工具來上傳擴充功能套件。
 
-如需建立技術帳戶以在Adobe Experience Platform中與標籤搭配使用的資訊，請參閱 [存取權杖](https://developer.adobelaunch.com/api/guides/access_tokens/) 指南。
+如需建立技術帳戶以在Adobe Experience Platform中與標籤搭配使用的資訊，請參閱 [Reactor API快速入門](../../api/getting-started.md) 指南。
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ npx @adobe/reactor-uploader
 
 目錄會顯示每個可用擴充功能的卡片圖示。如果您的擴充功能未顯示在目錄中，請確定您已完成「Adobe管理控制台設定」和「建立您的擴充功能套件」區段中的上述步驟。 如果Platform尚未完成初始處理，您的擴充功能套件也可能會顯示為「擱置中」。
 
-如果您已依照先前步驟操作，但目錄中仍未顯示「擱置中」或「失敗」擴充功能套件，則應直接使用API檢查擴充功能套件的狀態。 如需如何建立適當API呼叫的詳細資訊，請閱讀 [擷取ExtensionPackage](https://developer.adobelaunch.com/api/reference/1.0/extension_packages/fetch/) 在API檔案中。
+如果您已按照先前的步驟進行，但目錄中仍未顯示「擱置中」或「失敗」擴充功能套件，則應直接使用API檢查擴充功能套件的狀態。 如需如何建立適當API呼叫的詳細資訊，請閱讀 [擷取ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) 在API檔案中。
 
 擴充功能套件處理完成後，請選取 **安裝** 卡底。
 

@@ -2,10 +2,10 @@
 title: 擴充功能開發快速入門
 description: 開始在Adobe Experience Platform中開發您自己的標籤擴充功能。
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 91%
+source-wordcount: '451'
+ht-degree: 88%
 
 ---
 
@@ -61,3 +61,7 @@ npx @adobe/reactor-scaffold
 >* 可以新增多個事件、條件、動作。
 >* 只能有一個組態檢視。
 
+
+## 後續步驟
+
+* 關注 [提交程式概觀](./submit/overview.md) 準備 [驗證](./submit/upload-and-test.md#validate) 和 [上傳](./submit/upload-and-test.md#integration) 您要在「標籤」生態系統中測試的擴充功能。
