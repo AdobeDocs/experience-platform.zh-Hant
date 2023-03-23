@@ -3,10 +3,10 @@ keywords: 流；HTTP目的地
 title: HTTP API連線
 description: 使用Adobe Experience Platform中的HTTP API目的地，將設定檔資料傳送至協力廠商HTTP端點，以執行您自己的分析，或對匯出出Experience Platform的設定檔資料執行任何其他可能需要的作業。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e22472443eef8aa053aeb0eb35488de581e4b2bd
+source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
 workflow-type: tm+mt
-source-wordcount: '2648'
-ht-degree: 7%
+source-wordcount: '2436'
+ht-degree: 8%
 
 ---
 
@@ -158,12 +158,12 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="包括區段時間戳記"
->abstract="切換是否希望資料匯出包括建立和更新區段時的 Unix 時間戳記，以及區段對應至啟動目的地時的 Unix 時間戳記。檢視選取此選項時的資料匯出範例的文件。**監視Platform中的使用者活動**<h2>說明</h2><p>您可以以稽核記錄的形式，監控各種Platform服務和功能的使用者活動。 這些記錄會形成稽核軌跡，記錄 <b>誰</b> 執行 <b>what</b> 行動與 <b>when</b>. 稽核記錄可協助疑難排解Platform上的問題，並協助您的業務有效遵守公司資料管理政策和法規要求。</p><h2>說明</h2><ul><li>選擇 <b>稽核</b> 的下一頁。 「稽核」工作區依預設會從最近到最近排序記錄的清單。</li>   <li> 注意：稽核記錄會保留365天，之後將從系統中刪除。 因此，您最多只能返回365天的期間。 如果您需要回顧365天以前的資料，則應定期匯出記錄檔，以符合內部政策要求。 </li><li>從清單中選取事件，以在右側邊欄中檢視其詳細資訊。 </li><li>選取漏斗圖示，以顯示篩選控制項清單，協助縮小結果。 無論選取的篩選器為何，都只會顯示最近1000筆記錄。 </li><li>要導出審核日誌的當前清單，請選擇 **下載記錄檔**.</li><li>如需此功能的詳細說明，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概述</a> Experience League。</li></ul>"
+>abstract="切換是否希望資料匯出包括建立和更新區段時的 Unix 時間戳記，以及區段對應至啟動目的地時的 Unix 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
 
-[!CONTEXTUALHELP]
-id="platform_destinations_connect_http_queryparameters"
-title="查詢參數"
-abstract="或者，您可以將查詢參數新增到 HTTP 端點 URL。將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。"
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="查詢參數"
+>abstract="或者，您可以將查詢參數新增到 HTTP 端點 URL。將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 
@@ -186,7 +186,8 @@ abstract="或者，您可以將查詢參數新增到 HTTP 端點 URL。將您使
 ## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
-若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
+> 
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
 請參閱 [對串流設定檔匯出目的地啟用受眾資料](../../ui/activate-streaming-profile-destinations.md) 以取得啟用受眾區段至此目的地的指示。
 
