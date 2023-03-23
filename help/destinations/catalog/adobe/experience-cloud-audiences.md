@@ -2,9 +2,9 @@
 title: （測試版）Experience Cloud對象
 description: 了解如何將區段從Experience Platform分享至各種Experience Platform解決方案。
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '1512'
 ht-degree: 2%
 
 ---
@@ -61,8 +61,8 @@ Note: briefly talk about when to share segments to these destinations using the 
 >[!IMPORTANT]
 >
 > * 此目標可用於 [Adobe Real-time Customer Data Platform Prime與Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
-> * 您需要Audience Manager授權，才能啟用上節所述的Data Management Platform使用案例。
-> * 您 *不需要* Audience Manager授權，可透過「Experience Platform對象」整合，與Adobe Advertising Cloud、Adobe Target、Marketo和其他Experience Cloud解決方案共用Experience Cloud區段。
+> * 您需要Audience Manager授權才能啟用 [Data Management Platform使用案例](#dmp-use-cases) 上述。
+> * 您 *不需要* 與Adobe Advertising Cloud、Adobe Target、Marketo和其他Experience Cloud解決方案共用Experience Platform區段的Audience Manager授權，如 [上一節](#share-segments-with-other-solutions).
 
 
 ### 針對使用舊式區段共用解決方案的客戶
