@@ -3,10 +3,10 @@ title: （測試版）將資料集匯出至雲端儲存目的地
 type: Tutorial
 description: 了解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存空間位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: aebb1494a6ed667730997048d30a2ca3e00f9452
+source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 1%
+source-wordcount: '1359'
+ht-degree: 5%
 
 ---
 
@@ -22,6 +22,19 @@ ht-degree: 1%
 本文說明匯出所需的工作流程 [資料集](/help/catalog/datasets/overview.md) 從Adobe Experience Platform移至您偏好的雲端儲存空間位置，例如 [!DNL Amazon S3]、SFTP位置，或 [!DNL Google Cloud Storage] 使用Experience PlatformUI。
 
 您也可以使用Experience PlatformAPI來匯出資料集。 閱讀 [匯出資料集API教學課程](/help/destinations/api/export-datasets.md) 以取得更多資訊。
+
+## 支援的目的地 {#supported-destinations}
+
+目前，您可以將資料集匯出至螢幕擷取畫面中反白顯示且列於下方的雲端儲存目的地。
+
+![支援資料集匯出的目的地](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+
+* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
 ## 何時啟用區段或匯出資料集 {#when-to-activate-segments-or-activate-datasets}
 
@@ -75,7 +88,7 @@ Experience Platform目錄中有些以檔案為基礎的目的地支援區段啟�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="資料集的檔案匯出選項"
->abstract="選擇 **導出增量檔案** 僅匯出自上次匯出以來新增至資料集的資料。 <br> 第一個增量檔案匯出包含資料集中的所有資料，可作為回填。 未來的增量檔案僅包含自首次匯出以來新增至資料集的資料。"
+>abstract="選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後新增至資料集的資料。<br>第一個增量檔案匯出包括資料集中的所有資料，充當回填。未來的增量檔案僅包括第一次匯出後新增至資料集的資料。"
 
 在 **[!UICONTROL 排程]** 步驟中，您可以為資料集匯出設定開始日期和匯出順序。
 
