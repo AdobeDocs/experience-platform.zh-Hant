@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 5095ba2a2c40194aac3b9b0c985d36fd9fca864b
+source-git-commit: 80864c67bc80f3c2ef12e9571adc2c065512e61f
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1065'
 ht-degree: 6%
 
 ---
@@ -22,12 +22,14 @@ ht-degree: 6%
    * [不同目的地類型的設定檔匯出行為](./how-destinations-work/profile-export-behavior.md)
    * [目的地啟動工作流程中的身分處理](./how-destinations-work/identity-handling.md)
 * API教學課程 {#api}
+   * [雲端儲存目的地的API移轉指南](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [使用流量服務API連線至串流目的地並啟用資料](./api/streaming-destinations.md)
    * [使用流量服務API連線至批次雲端儲存空間和電子郵件行銷目的地，並啟用資料](./api/connect-activate-batch-destinations.md)
    * [（測試版）透過臨機啟動API啟動對象區段以批次目的地](./api/ad-hoc-activation-api.md)
    * [更新目標資料流](./api/update-destination-dataflows.md)
    * [刪除目標帳戶](./api/delete-destination-account.md)
    * [刪除目標資料流](./api/delete-destination-dataflow.md)
+   * [（測試版）使用流量服務API，將資料啟動至檔案式目的地](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [（測試版）匯出資料集](/help/destinations/api/export-datasets.md)
 * UI指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2022年10月
 description: 2022年10月Adobe Experience Platform發行說明。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: cd99ccb7b026565814dd6f268b2a92dda34bc7f0
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1343'
 ht-degree: 3%
 
 ---
@@ -17,11 +17,13 @@ ht-degree: 3%
 
 Adobe Experience Platform 現有功能更新：
 
-- [資料收集](#data-collection)
-- [目的地](#destinations)
-- [Experience Data Model(XDM)](#xdm)
-- [查詢服務](#query-service)
-- [來源](#sources)
+- [Adobe Experience Platform 發行說明](#adobe-experience-platform-release-notes)
+   - [客戶管理金鑰 {#cmk}](#customer-managed-keys-cmk)
+   - [資料彙集 {#data-collection}](#data-collection-data-collection)
+   - [\[!DNL Destinations\] {#destinations}](#dnl-destinations-destinations)
+   - [Experience Data Model(XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [查詢服務 {#query-service}](#query-service-query-service)
+   - [來源 {#sources}](#sources-sources)
 
 ## 客戶管理金鑰 {#cmk}
 
@@ -56,7 +58,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 
 {style="table-layout:auto"}
 
-**新目的地或更新目的地**
+**新目的地或更新目的地** {#new-or-updated-destinations}
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
