@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 資料擷取說明
 breadcrumb-title: Data Ingestion 指南
 user-guide-description: 透過批次或串流擷取，將您的資料匯入 Experience Platform。
 feature: Data Ingestion
-source-git-commit: f77bbc60f2bc1f12970e8050ec6a924b9713f303
+source-git-commit: 6110bf51cbd0005428e7dab4552944c5c9b54d03
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 29%
+source-wordcount: '156'
+ht-degree: 26%
 
 ---
 
@@ -46,5 +46,6 @@ ht-degree: 29%
    - [資料擷取通知](quality/subscribe-events.md)
 - [資料擷取的護欄](guardrails.md)
 - [來源連接器](source-connectors.md)
-- [API 參考資料](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [批次內嵌API參考](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [串流獲取API參考](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)

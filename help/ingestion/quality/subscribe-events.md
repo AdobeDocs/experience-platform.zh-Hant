@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料擷取通知
 description: 為協助監控擷取程式，Adobe Experience Platform可訂閱程式每個步驟所發佈的一組事件，並通知您所擷取資料的狀態以及任何可能的失敗情況。
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # 資料擷取通知
 
-將資料擷取至Adobe Experience Platform的程式由多個步驟組成。 識別需要擷取至的資料檔案後 [!DNL Platform]，擷取程式會開始，且每個步驟會連續進行，直到資料成功擷取或失敗為止。 擷取程式可使用 [Adobe Experience Platform資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) 或使用 [!DNL Experience Platform] 使用者介面。
+將資料擷取至Adobe Experience Platform的程式由多個步驟組成。 識別需要擷取至的資料檔案後 [!DNL Platform]，擷取程式會開始，且每個步驟會連續進行，直到資料成功擷取或失敗為止。 擷取程式可使用 [Adobe Experience Platform批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) 或使用 [!DNL Experience Platform] 使用者介面。
 
 資料載入 [!DNL Platform] 必須執行多個步驟才能到達目的地， [!DNL Data Lake] 或 [!DNL Real-Time Customer Profile] 資料儲存。 每個步驟都包括處理資料、驗證資料，然後儲存資料再傳遞至下一個步驟。 視擷取的資料量而定，這可能會成為耗時的程式，且程式總有可能因驗證、語意或處理錯誤而失敗。 發生失敗時，需要修正資料問題，然後必須使用修正的資料檔案重新啟動整個擷取程式。
 

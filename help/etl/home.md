@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 開發適用於Adobe Experience Platform的ETL整合
 description: ETL整合指南概述建立高效能、安全連接器以Experience Platform及將資料擷取至Platform的一般步驟。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '4075'
+source-wordcount: '4081'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,8 @@ ETL整合指南概述建立高效能、安全連接器的一般步驟 [!DNL Expe
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
-- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
+- [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Experience PlatformAPI的驗證和授權](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
@@ -490,7 +491,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-資料將寫入 [!DNL Experience Platform] 使用 [資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).  資料寫入是一個非同步過程。 將資料寫入Adobe Experience Platform時，只有在完全寫入資料後，才會建立批次並標示為成功。
+資料將寫入 [!DNL Experience Platform] 使用 [批次內嵌API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).  資料寫入是一個非同步過程。 將資料寫入Adobe Experience Platform時，只有在完全寫入資料後，才會建立批次並標示為成功。
 
 中的資料 [!DNL Experience Platform] 應以Parquet檔案的形式寫成。
 
@@ -579,7 +580,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### 建立批次
 
-處理資料後，ETL工具會將資料寫回 [!DNL Experience Platform] 使用 [批次內嵌API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 資料必須先連結至批次資料，之後才能上傳至特定資料集。
+處理資料後，ETL工具會將資料寫回 [!DNL Experience Platform] 使用 [批次內嵌API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). 資料必須先連結至批次資料，之後才能上傳至特定資料集。
 
 **要求**
 

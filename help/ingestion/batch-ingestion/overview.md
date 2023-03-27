@@ -2,9 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；資料擷取；批次；啟用資料集；批次擷取概觀；概觀；批次擷取概觀；
 solution: Experience Platform
 title: 批次擷取API概觀
-description: Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形式內嵌至Platform。 所擷取的資料可以是CRM系統中一般檔案（例如Parquet檔案）的設定檔資料，或符合Experience Data Model(XDM)註冊表中已知結構的資料。
+description: Adobe Experience Platform批次內嵌API可讓您將資料以批次檔案的形式內嵌至Platform。 所擷取的資料可以是CRM系統中一般檔案（例如Parquet檔案）的設定檔資料，或符合Experience Data Model(XDM)註冊表中已知結構的資料。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '1387'
 ht-degree: 6%
@@ -13,9 +13,9 @@ ht-degree: 6%
 
 # 批次內嵌API概觀
 
-Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形式內嵌至Platform。 擷取的資料可以是來自一般檔案（例如Parquet檔案）的設定檔資料，或符合 [!DNL Experience Data Model] (XDM)註冊表。
+Adobe Experience Platform批次內嵌API可讓您將資料以批次檔案的形式內嵌至Platform。 擷取的資料可以是來自一般檔案（例如Parquet檔案）的設定檔資料，或符合 [!DNL Experience Data Model] (XDM)註冊表。
 
-此 [資料擷取API參考](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) 提供這些API呼叫的其他資訊。
+此 [批次內嵌API參考](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) 提供這些API呼叫的其他資訊。
 
 下圖概述批次擷取程式：
 
@@ -23,7 +23,7 @@ Adobe Experience Platform資料擷取API可讓您將資料以批次檔案的形�
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
+本指南中使用的API端點屬於 [批次內嵌API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). 繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
 
 ### [!DNL Data Ingestion] 必要條件
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identity服務疑難排解指南
 description: 本檔案提供Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 0%
@@ -282,7 +282,7 @@ Internal solutions|Preferred|Common
 
 [!DNL Identity Service] 從記錄和上傳到的時間序列資料中嵌入身份資料 [!DNL Platform] 使用批次內嵌。 由於批次內嵌是非同步流程，因此您必須檢視批次的詳細資訊才能檢視錯誤。 錯誤會隨著批次進行而累積，直到批次完成為止。
 
-以下是與 [!DNL Identity Service] 使用 [資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+以下是與 [!DNL Identity Service] 使用 [批次內嵌API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 
 ### 未知XDM架構
 

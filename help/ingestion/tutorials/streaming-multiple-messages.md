@@ -5,9 +5,9 @@ title: 在單一HTTP要求中傳送多則訊息
 type: Tutorial
 description: 本檔案提供教學課程，說明如何使用串流內嵌，在單一HTTP要求內傳送多則訊息至Adobe Experience Platform。
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 3ad5c06db07b360df255d3afb1c177cc5de613bb
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1490'
 ht-degree: 1%
 
 ---
@@ -508,7 +508,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
     },
 ```
 
-第三則訊息失敗，因為標題中使用的IMS組織ID無效。 IMS組織必須符合您嘗試張貼到的{CONNECTION_ID}。 若要判斷哪個IMS組織ID符合您使用的串流連線，您可以執行 `GET inlet` 使用 [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 請參閱 [檢索流連接](./create-streaming-connection.md#get-data-collection-url) ，以了解如何擷取先前建立的串流連線。
+第三則訊息失敗，因為標題中使用的組織ID無效。 組織必須與您嘗試張貼到的{CONNECTION_ID}相符。 若要判斷哪個組織ID符合您使用的串流連線，您可以執行 `GET inlet` 使用 [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). 請參閱 [檢索流連接](./create-streaming-connection.md#get-data-collection-url) ，以了解如何擷取先前建立的串流連線。
 
 第四則訊息失敗，因為未遵循預期的XDM架構。 此 `xdmSchema` 請求的標題和內文中包含的XDM結構不符合 `{DATASET_ID}`. 修正訊息標題和內文中的結構，可讓其通過DCCS驗證，並成功傳送至 [!DNL Platform]. 也必須更新訊息內文，以符合 `{DATASET_ID}` 供it透過串流驗證 [!DNL Platform]. 如需成功串流至Platform之訊息有何變化的詳細資訊，請參閱 [確認已擷取訊息](#confirm-messages-ingested) 一節。
 

@@ -4,22 +4,22 @@ solution: Experience Platform
 title: 批次內嵌API指南
 description: 本檔案為開發人員提供使用適用於Adobe Experience Platform的批次擷取API的完整指南。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 49281d6ef959c84c3da964f0a9e19859fd8901a5
+source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
 workflow-type: tm+mt
-source-wordcount: '2413'
+source-wordcount: '2412'
 ht-degree: 4%
 
 ---
 
 # 批次內嵌開發人員指南
 
-本檔案提供使用 [批次內嵌API端點](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) 在Adobe Experience Platform。 如需批次擷取API的概觀，包括必要條件和最佳實務，請先閱讀 [批次擷取API概觀](overview.md).
+本檔案提供使用 [批次內嵌API端點](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) 在Adobe Experience Platform。 如需批次擷取API的概觀，包括必要條件和最佳實務，請先閱讀 [批次擷取API概觀](overview.md).
 
 本檔案附錄提供 [格式化要用於擷取的資料](#data-transformation-for-batch-ingestion)，包括範例CSV和JSON資料檔案。
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [資料擷取API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 資料擷取提供RESTful API，您可透過此API對支援的物件類型執行基本CRUD作業。
+本指南中使用的API端點屬於 [批次內嵌API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). 批次內嵌是透過RESTful API提供，您可對支援的物件類型執行基本CRUD作業。
 
 繼續之前，請檢閱 [批次擷取API概觀](overview.md) 和 [快速入門手冊](getting-started.md).
 
