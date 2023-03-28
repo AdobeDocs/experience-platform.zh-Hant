@@ -4,10 +4,10 @@ title: 對設定檔要求目的地啟用受眾資料
 type: Tutorial
 description: 了解如何將區段對應至設定檔要求目的地，以啟動您在Adobe Experience Platform中擁有的對象資料。
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 811aba50fb4509e77910499f8d01c4bc13d06841
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 0%
+source-wordcount: '898'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 總覽 {#overview}
 
-本文說明在Adobe Experience Platform設定檔要求目的地中啟用受眾資料所需的工作流程。 搭配使用時 [邊緣分割](../../segmentation/ui/edge-segmentation.md)，這些目的地會在您的Web屬性上啟用同頁和下一頁個人化使用案例。 深入了解 [啟用同頁和下一頁個人化使用案例](/help/destinations/ui/configure-personalization-destinations.md).
+本文說明在Adobe Experience Platform設定檔要求目的地中啟用受眾資料所需的工作流程。 搭配使用時 [邊緣分割](../../segmentation/ui/edge-segmentation.md)，這些目的地可在您的網頁和行動屬性上啟用相同頁面和下一頁個人化使用案例。 深入了解 [啟用同頁和下一頁個人化使用案例](/help/destinations/ui/configure-personalization-destinations.md).
 
 設定檔要求目的地的範例為 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 連線。
 
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 ### 同意政策評估 {#consent-policy-evaluation}
 
-如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 
