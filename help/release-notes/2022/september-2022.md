@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2940'
 ht-degree: 5%
 
 ---
@@ -68,7 +68,7 @@ Real-time Customer Data Platform提供的Customer AI可產生自訂傾向分數�
 | 功能 | 說明 |
 | --- | --- |
 | 儲存草稿例項 | 這項新功能可讓行銷分析人員將模型設定儲存為草稿例項，並繼續編輯，直到完成為止，再進行訓練和計分。 此功能有幫助的案例包括：使用者在工作流程中有多個要定義的欄位，但由於時間限制而無法完成。 另一個案例是正在處理一或多個資料集統計資料，但尚未提供。 閱讀 [Customer AI使用手冊](../../intelligent-services/customer-ai/user-guide/configure.md#governance-policies) 了解更多。 |
-| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用的原則，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
+| 治理政策 | 在使用者透過設定工作流程提交以建立執行個體後，新的原則實施服務會檢查是否有任何違反資料使用原則的情況，並在彈出式視窗中顯示詳細資訊。 它可確保資料操作和行銷動作符合Adobe Experience Platform上設定的資料使用原則。 |
 
 如需Customer AI的詳細資訊，請參閱 [Customer AI概觀](../../intelligent-services/customer-ai/overview.md). 如需資料控管原則的資訊，請參閱 [原則概述](../../data-governance/policies/overview.md).
 
@@ -112,11 +112,9 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | [[!DNL Snap Conversions API] 擴充功能](https://exchange.adobe.com/apps/ec/108550) 用於事件轉送 | 您現在可以將資料傳送至 [!DNL Snapchat Conversions API] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 擴充功能。 如需如何驗證和使用API的詳細資訊，請參閱 [[!DNL Snapchat Marketing API] 檔案](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] 在Web SDK中](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK現在支援 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 客戶端提示允許網站所有者訪問 [!DNL User-Agent] 串，但更能保護隱私。 |
 | [網頁SDK逐頁移轉](../../edge/home.md#migrating-to-web-sdk) | 您現在可以從其他Experience Cloud程式庫(例如 [!DNL at.js]，至Web SDK，一次一頁。 這可以分階段移轉Web SDK，而不需一次移轉所有頁面。 |
+| [[!DNL Adobe Journey Optimizer] 支援資料流](../../edge/datastreams/overview.md#aep) | 適用於資料流的Adobe Experience Platform服務現在支援 [!DNL Adobe Journey Optimizer]. 此選項可讓您在 [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
-
-<!-- | [[!DNL Adobe Journey Optimizer] support for datastreams](../../edge/datastreams/overview.md#aep)| The Adobe Experience Platform service for datastreams now supports [!DNL Adobe Journey Optimizer]. This option allows you to use web and app-based inbound channels in [!DNL Adobe Journey Optimizer].|
--->
 
 如需Platform中資料收集的詳細資訊，請參閱 [資料匯集概述](../../collection/home.md).
 
