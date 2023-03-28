@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 使用流量服務API將區段啟用至檔案式目的地
 description: 了解如何使用流量服務API，將含有合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+source-git-commit: d925802489d5da006cd9cfacb89b3e880663edaf
 workflow-type: tm+mt
 source-wordcount: '4337'
 ht-degree: 2%
@@ -3645,6 +3645,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 接下來，必須為導出設定輸出架構。 首先，您需要尋找並檢查您現有的合作夥伴架構。
 
+>[!BEGINSHADEBOX]
+
 **要求**
 
 +++請求獲取輸出架構的合作夥伴架構
@@ -3957,7 +3959,7 @@ Inspect您執行上述呼叫時取得的回應。 您需要深入到回應中以
 
 **要求**
 
-+++ 建立輸出結構 — 請求
++++建立輸出結構 — 請求
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -3977,7 +3979,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **回應**
 
-+++ 建立輸出架構 — 回應
++++建立輸出架構 — 回應
 
 ```json
 {
@@ -4287,7 +4289,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-### 建立對應集
+### 建立對應集 {#create-mapping-set}
 
 接下來，使用 [資料準備API](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) 使用輸入架構ID、輸出架構ID和所需欄位映射建立映射集。
 
@@ -4295,7 +4297,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **要求**
 
-+++ 建立對應集 — 請求
++++建立對應集 — 請求
 
 >[!IMPORTANT]
 >
@@ -4304,7 +4306,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 >* 另請注意，即使以下範例設定包含 `Email` 和 `Phone_E.164`，則只能為每個資料流導出一個標識屬性。
 
 
-```shell{line-numbers="true" start-line="1" highlight="16-38"}
+```shell {line-numbers="true" start-line="1" highlight="16-38"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
