@@ -3,9 +3,9 @@ keywords: 廣告目的地；目的地；平台目的地
 title: 廣告目的地概觀
 description: 將Adobe Experience Platform連線至協力廠商廣告平台(例如DSP、廣告網路、SSP)，並與這些平台共用假名受眾。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
+source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 1%
 ### 連線
 
 * [Adobe Advertising Cloud連線](adobe-advertising-cloud-connection.md)
+* [(Beta)Amazon Ads連線](amazon-ads.md)
 * [(Beta)Criteo連接](criteo.md)
 * [Google Display &amp; Video 360連線](google-dv360.md)
 * [Google Ads連線](google-ads-destination.md)

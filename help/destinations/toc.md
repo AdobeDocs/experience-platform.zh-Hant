@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: aa915c24dc6d73a5bdd3345cfb0fb7049bdd2679
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1068'
 ht-degree: 6%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 6%
       * [廣告目的地概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud連線](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud擴充功能](./catalog/advertising/adobe-advertising-cloud.md)
+      * [(Beta)Amazon Ads連線](./catalog/advertising/amazon-ads.md)
       * [Awin廣告商轉換標籤擴充功能](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag擴充功能](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads通用事件追蹤(UET)擴充功能](./catalog/advertising/bing-ads.md)
