@@ -2,9 +2,9 @@
 title: 查詢服務中的資料控管
 description: 此概觀涵蓋Experience Platform查詢服務中資料控管的主要元素。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
+source-git-commit: 54a6f508818016df1a4ab2a217bc0765b91df9e9
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2843'
 ht-degree: 1%
 
 ---
@@ -93,6 +93,16 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 此 `CREATE VIEW` 關鍵字定義查詢的視圖，但該視圖未實際實現。 反之，查詢會在每次查詢中參考檢視時執行。 使用者從資料集建立檢視時，父資料集的角色和屬性型存取控制規則為 **not** 分層應用。 因此，在建立檢視時，您必須明確設定每個欄的權限。
 
+#### 在加速的資料集上建立依欄位的存取限制 {#create-field-based-access-restrictions-on-accelerated-datasets}
+
+使用 [基於屬性的訪問控制能力](../../access-control/abac/overview.md) 您可以在事實和維度資料集上定義組織或資料使用範圍 [加速儲存](../data-distiller/query-accelerated-store/send-accelerated-queries.md). 這可讓管理員管理特定區段的存取權，並更妥善地管理指定給使用者或使用者群組的存取權。
+
+若要對加速的資料集建立欄位式存取限制，您可以使用Query Service CTAS查詢來建立加速資料集，並根據現有XDM結構或臨機結構來建構這些資料集。 然後，管理員 [新增及編輯結構的資料使用量標籤](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) 或 [臨機綱要](./ad-hoc-schema-labels.md#edit-governance-labels). 您可以透過 [!UICONTROL 標籤] 工作區中 [!UICONTROL 結構] UI。
+
+資料使用量標籤也可以 [直接套用或編輯至資料集](../../data-governance/labels/user-guide.md#add-labels) 透過資料集UI，或從存取控制建立 [!UICONTROL 標籤] 工作區。 請參閱如何 [建立新標籤](../../access-control/abac/ui/labels.md) 以取得更多資訊。
+
+接著，使用者對個別欄的存取權便可透過附加的資料使用量標籤，以及套用至指派給使用者之角色的權限集來控制。
+
 ### 連接 {#connectivity}
 
 可透過Platform UI或與外部相容用戶端建立連線，存取查詢服務。 所有可用前線的訪問由一組憑據控制。
@@ -131,7 +141,7 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 加密是指使用一種算法過程將資料轉換為編碼和不可讀的文本，以確保在沒有解密密鑰的情況下資訊得到保護和不可訪問。
 
-查詢服務資料合規性確保資料始終被加密。 傳輸中資料一律符合HTTPS規範，而Azure Data Lake存放區中的靜態資料會使用系統層級金鑰加密。 請參閱 [Adobe Experience Platform中資料的加密方式](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/encryption.html) 以取得更多資訊。 有關Azure Data Lake Storage中靜態資料的加密方式的詳細資訊，請參閱 [官方Azure檔案](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+查詢服務資料合規性確保資料始終被加密。 傳輸中資料一律符合HTTPS規範，而Azure Data Lake存放區中的靜態資料會使用系統層級金鑰加密。 請參閱 [Adobe Experience Platform中資料的加密方式](../../landing/governance-privacy-security/encryption.md) 以取得更多資訊。 有關Azure Data Lake Storage中靜態資料的加密方式的詳細資訊，請參閱 [官方Azure檔案](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 <!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
 
