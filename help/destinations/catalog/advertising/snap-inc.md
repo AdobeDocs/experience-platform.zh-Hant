@@ -1,15 +1,15 @@
 ---
-title: （測試版）Snap Inc連接
+title: Snap Inc連接
 description: 了解如何連線至Snapchat Ads平台，並從Experience Platform中匯出您的受眾區段。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
+source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '993'
 ht-degree: 1%
 
 ---
 
-# （測試版）Snap Inc
+# Snap Inc連接
 
 ## 總覽 {#overview}
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->本檔案頁面由 *Snap Inc* 團隊。 這目前是測試版產品，功能可能會有所變更。 如有任何查詢或更新請求，請直接與他們聯繫，地址為 *dev-support@snap.com*
+>本檔案頁面由 *Snap Inc* 團隊。 如有任何查詢或更新請求，請直接與他們聯繫，地址為 *dev-support@snap.com*
 
 ## 使用案例 {#use-cases}
 
