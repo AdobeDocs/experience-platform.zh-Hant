@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2023年3月Adobe Experience Platform發行說明。
-source-git-commit: 2a7ff5d56ccc1a0b4c86018936d139f2e6d46cd6
+source-git-commit: c5061a759f1098ce1dcc7e3f00c52e064239d7c5
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '663'
 ht-degree: 5%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 
 | 功能 | 說明 |
 | --- | --- |
-| 設定檔量度 | 為了讓您更精確地呈現設定檔量度，系統會結合成員劃分和流失量度，現在會在24小時內計算。 如需詳細資訊，請參閱 [區段UI指南](../../segmentation/ui/overview.md) |
+| 設定檔量度 | 為了讓您更精確地呈現設定檔量度，系統會結合成員劃分和流失量度，現在會在24小時內計算。 如需詳細資訊，請參閱 [區段UI指南](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
