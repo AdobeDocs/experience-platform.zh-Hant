@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: e34661f70a3550e579afe5133d85f76b1125e004
+source-git-commit: 7bff76b6c06e3d596dd811d04b3673c08ed9c250
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '962'
 ht-degree: 30%
 
 ---
@@ -221,7 +221,9 @@ ht-degree: 30%
       * [!DNL Meta Conversions API] {#meta}
          * [概述](./extensions/server/meta/overview.md)
       * [!UICONTROL Microsoft Azure] {#azure}
-         * [總覽](./extensions/server/azure/overview.md)
+         * [概述](./extensions/server/azure/overview.md)
+      * [!DNL Mixpanel] {#mixpanel}
+         * [概述](./extensions/server/mixpanel/overview.md)
       * [Pega客戶決策中心](https://exchange.adobe.com/apps/ec/107597)
       * [快照轉換API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
