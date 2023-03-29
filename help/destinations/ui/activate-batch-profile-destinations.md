@@ -4,9 +4,9 @@ title: 啟用受眾資料以批次設定檔匯出目的地
 type: Tutorial
 description: 了解如何將區段傳送至批次設定檔式型目的地，以啟動Adobe Experience Platform中的受眾資料。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7d680567cee8b47532bb66434e2f0582cde68532
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '3592'
+source-wordcount: '3629'
 ht-degree: 10%
 
 ---
@@ -15,9 +15,12 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
+> * 啟用資料並啟用 [對應步驟](#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions).
+> * 若要啟動資料，而不要透過 [對應步驟](#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟用區段而不對應]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions).
+> 
+> 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 >
->參與改善檔案匯出功能測試版的部分客戶看到新的 **[!UICONTROL 對應]** 作為其啟動工作流程的一部分 [全新測試版雲端儲存目的地](/help/release-notes/2022/october-2022.md#destinations). 另請注意 [已知限制](#known-limitations) 做為版本的一部分。
+> 參與改善檔案匯出功能測試版的部分客戶看到新的 **[!UICONTROL 對應]** 作為其啟動工作流程的一部分 [全新測試版雲端儲存目的地](/help/release-notes/2022/october-2022.md#destinations). 另請注意 [已知限制](#known-limitations) 做為版本的一部分。
 
 ## 總覽 {#overview}
 

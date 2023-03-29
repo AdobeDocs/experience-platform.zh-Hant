@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 56f1cbc622450b154e6e29a8116789b316901f66
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1542'
 ht-degree: 3%
 
 ---
@@ -106,9 +106,10 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 | [!DNL Sandbox Administration] | [!UICONTROL 管理沙箱] | 存取讀取、建立、編輯和刪除沙箱。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 檢視沙箱] | 屬於您組織的沙箱的唯讀存取權。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 重設沙箱] | 重設沙箱的功能。 |
-| [!DNL Destinations] | [!UICONTROL 管理目的地] | 讀取、建立、編輯和停用目的地的存取權。 |
+| [!DNL Destinations] | [!UICONTROL 管理目的地] | 讀取、建立和刪除目標激活流和目標帳戶的訪問權限。 |
 | [!DNL Destinations] | [!UICONTROL 檢視目的地] | 以唯讀方式存取 **[!UICONTROL 目錄]** 標籤和已驗證的目的地 **[!UICONTROL 瀏覽]** 標籤。 |
-| [!DNL Destinations] | [!UICONTROL 啟動目的地] | 可將資料啟用至已建立的作用中目的地。 此權限需要 [!UICONTROL 檢視目的地] 或 [!UICONTROL 管理目的地] 授予將啟用目的地的使用者。 |
+| [!DNL Destinations] | [!UICONTROL 啟動目的地] | 讓使用者能對現有目的地啟用區段。 在啟動工作流程中啟用對應步驟。 此權限需要 [!UICONTROL 檢視目的地] 或 [!UICONTROL 管理目的地] 授予將對目的地啟用資料的使用者。 |
+| [!DNL Destinations] | [!UICONTROL 啟用區段而不對應] | 讓使用者能啟動區段至現有目的地，而不顯示 [對應步驟](../destinations/ui/activate-batch-profile-destinations.md#mapping). 使用者可以在啟用工作流程中新增和移除區段，但無法新增或移除已對應的屬性或身分。 此權限需要 [!UICONTROL 啟動目的地] 將啟用資料至目的地的使用者，可獲得此權限。 |
 | [!DNL Destinations] | [!UICONTROL 管理和啟用資料集目的地] | 可讀取、建立、編輯和停用資料集匯出流程。 也能對已建立的作用中資料集啟用資料。 |
 | [!DNL Destinations] | [!UICONTROL 目標編寫] | 可使用 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和禁用源的訪問權。 |

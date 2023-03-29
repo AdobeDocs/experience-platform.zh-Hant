@@ -3,9 +3,9 @@ keywords: 目的地；adobe experience platform；平台；目的地概述；啟
 title: 目的地概觀
 description: 目的地是預先建置與目的地平台的整合，可順暢地從Adobe Experience Platform啟動資料。 您可以使用Adobe Experience Platform中的目的地，針對跨通路行銷活動、電子郵件行銷活動、目標廣告和其他許多使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,8 @@ Platform中的目的地功能可與Adobe Experience Platform存取控制權限�
 | 權限層級 | 說明 |
 | ---- | ----|
 | **[!UICONTROL 管理目的地]** | 若要連線至目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制權限](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** | 若要對目的地啟用區段，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** | 若要啟用目的地的區段並啟用 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 啟用區段而不進行對應]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** | 若要啟用目的地的區段並隱藏 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 啟用區段而不進行對應]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 

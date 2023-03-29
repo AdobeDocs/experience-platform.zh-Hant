@@ -4,10 +4,10 @@ title: 對串流設定檔匯出目的地啟用受眾資料
 type: Tutorial
 description: 了解如何將區段傳送至以設定檔為基礎的串流目的地，以啟動Adobe Experience Platform中您擁有的受眾資料。
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9bde403338187409892d76de68805535de03d59f
+source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 0%
+source-wordcount: '780'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
+> * 啟用資料並啟用 [對應步驟](#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions).
+> * 若要啟動資料，而不要透過 [對應步驟](#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟用區段而不對應]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions).
+> 
+> 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
 ## 總覽 {#overview}
 
@@ -84,7 +87,7 @@ ht-degree: 0%
 
 ### 同意政策評估 {#consent-policy-evaluation}
 
-如果貴組織已購買 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**，選取 **[!UICONTROL 檢視適用的同意政策]** 查看已套用的同意政策，以及啟動中因此包含的設定檔數量。 閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀 [同意政策評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得更多資訊。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 

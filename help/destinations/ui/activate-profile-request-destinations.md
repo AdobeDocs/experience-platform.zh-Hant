@@ -4,9 +4,9 @@ title: 對設定檔要求目的地啟用受眾資料
 type: Tutorial
 description: 了解如何將區段對應至設定檔要求目的地，以啟動您在Adobe Experience Platform中擁有的對象資料。
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 811aba50fb4509e77910499f8d01c4bc13d06841
+source-git-commit: f771cf0c9ea692ad02cf987608b3710772712d54
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '935'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,10 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions). 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
+> * 啟用資料並啟用 [對應步驟](#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟動目的地]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions).
+> * 若要啟動資料，而不要透過 [對應步驟](#mapping) 工作流程中，您需要 **[!UICONTROL 管理目的地]**, **[!UICONTROL 啟用區段而不對應]**, **[!UICONTROL 檢視設定檔]**，和 **[!UICONTROL 檢視區段]** [存取控制權限](/help/access-control/home.md#permissions).
+> 
+> 閱讀 [存取控制概觀](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得所需的權限。
 
 ## 總覽 {#overview}
 
