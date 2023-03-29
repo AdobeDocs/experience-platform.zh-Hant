@@ -2,10 +2,10 @@
 title: 核心擴充功能發行說明
 description: Adobe Experience Platform核心擴充功能的最新發行說明。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 0955646164269d868be5161a117c6e12dbd9a4cb
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 58%
+source-wordcount: '1654'
+ht-degree: 55%
 
 ---
 
@@ -14,6 +14,26 @@ ht-degree: 58%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## 2023 年 3 月 29 日
+
+v3.4.1
+
+* 新增Web原生委派事件：
+   * 下鍵
+   * KeyUp
+* 新增針對下列委派對許多值（「新增其他」選項）進行測試的能力：
+   * 活動
+      * 變更
+   * 條件
+      * Cookie
+      * 登陸頁面
+      * 查詢字串參數
+      * 流量來源
+      * 變數
+* 變更事件/EntersViewport委派以使用 [交集觀察器API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) 而非手動偵測進入檢視區的元素。
+* 移除將DTM Cookie移轉至LocalStorage的程式碼。
+* 當LocalStorage和SessionStorage API不可用時，將警告記錄到控制台。
 
 ## 2022 年 1 月 4 日
 
