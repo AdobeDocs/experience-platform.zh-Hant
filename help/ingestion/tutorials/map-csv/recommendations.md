@@ -1,19 +1,17 @@
 ---
-title: 使用AI產生的Recommendations(Beta)將CSV檔案對應至XDM結構
+title: 使用AI產生的Recommendations將CSV檔案對應至XDM結構
 description: 本教學課程說明如何使用AI產生的建議，將CSV檔案對應至XDM架構。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1014'
 ht-degree: 1%
 
 ---
 
-# 使用AI產生的建議（測試版）將CSV檔案對應至XDM結構
+# 使用AI產生的建議將CSV檔案對應至XDM結構
 
->[!IMPORTANT]
->
->此功能目前仍在測試中，您的組織可能尚未取得存取權。 檔案和功能可能會有所變更。
+>[!NOTE]
 >
 >如需Platform中一般可用CSV對應功能的資訊，請參閱 [將CSV檔案對應至現有結構](./existing-schema.md).
 
@@ -32,7 +30,7 @@ ht-degree: 1%
 
 在Experience PlatformUI中，選取 **[!UICONTROL 來源]** 的下一頁。 在 **[!UICONTROL 目錄]** 檢視，導覽至 **[!UICONTROL 本地系統]** 類別。 在 **[!UICONTROL 本機檔案上傳]**，選取 **[!UICONTROL 新增資料]**.
 
-![此 [!UICONTROL 來源] 平台UI中的目錄，搭配 [!UICONTROL 新增資料] 在 [!UICONTROL 本機檔案上傳] 已選取](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![此 [!UICONTROL 來源] 平台UI中的目錄，搭配 [!UICONTROL 新增資料] 在 [!UICONTROL 本機檔案上傳] 中。](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 此 **[!UICONTROL 對應CSV XDM結構]** 工作流程隨即顯示，從 **[!UICONTROL 資料流詳細資訊]** 步驟。
 
@@ -56,13 +54,13 @@ ht-degree: 1%
 
 完成資料流配置後，請選擇 **[!UICONTROL 下一個]**.
 
-![此 [!UICONTROL 資料流詳細資訊] 部分已完成](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![此 [!UICONTROL 資料流詳細資訊] 區段已完成。](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## 選擇資料
 
 在 **[!UICONTROL 選擇資料]** 步驟中，使用左欄上傳CSV檔案。 您可以選取 **[!UICONTROL 選擇檔案]** 要開啟檔案資源管理器對話框以從中選擇檔案，或者可以直接將檔案拖放到列上。
 
-![此 [!UICONTROL 選擇檔案] 按鈕和拖放區域(在 [!UICONTROL 選擇資料] 步驟](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![此 [!UICONTROL 選擇檔案] 按鈕和拖放區域(在 [!UICONTROL 選擇資料] 步驟。](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 上傳檔案後，會顯示範例資料區段，顯示收到資料的前10列，以便您驗證其已正確上傳。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
@@ -72,11 +70,11 @@ ht-degree: 1%
 
 運行ML模型以根據您的資料流配置和上載的CSV檔案生成新架構。 程式完成後， [!UICONTROL 對應] 步驟會填入，以連同所產生結構的完全可導覽檢視，一併顯示每個個別欄位的對應。
 
-![此 [!UICONTROL 對應] 步驟，顯示所有已映射的CSV欄位以及產生的結構](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![此 [!UICONTROL 對應] 步驟，顯示所有已映射的CSV欄位以及產生的結構。](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
 從這裡，您可以選擇 [編輯欄位對應](#edit-mappings) 或 [更改與其關聯的欄位組](#edit-schema) 根據你的需要。 滿足後，選擇 **[!UICONTROL 完成]** 完成映射並啟動您先前配置的資料流。 CSV資料會擷取至系統中，並根據產生的結構填入資料集，以供下游Platform服務使用。
 
-![此 [!UICONTROL 完成] 按鈕，完成CSV對應程式](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![此 [!UICONTROL 完成] 按鈕，完成CSV對應程式。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### 編輯欄位對應 {#edit-mappings}
 
@@ -86,11 +84,11 @@ ht-degree: 1%
 
 CSV欄位會使用ML模型自動對應至現有的XDM欄位群組。 如果要變更任何特定CSV欄位的欄位群組，請選取 **[!UICONTROL 編輯]** 在架構樹旁邊。
 
-![此 [!UICONTROL 編輯] 在架構樹旁邊選擇的按鈕](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![此 [!UICONTROL 編輯] 按鈕。](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
 將出現一個對話框，允許您編輯映射中任何欄位的顯示名稱、資料類型和欄位組。 選取編輯圖示(![編輯圖示](../../images/tutorials/map-csv-recommendations/edit-icon.png))，以在選取前，編輯其右欄的詳細資訊 **[!UICONTROL 套用]**.
 
-![要更改的源欄位的建議欄位組](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
+![要更改的源欄位的建議欄位組。](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
 調整完來源欄位的結構建議後，請選取 **[!UICONTROL 儲存]** 來套用變更。
 
