@@ -1,10 +1,8 @@
 ---
 title: 在UI中建立Customer.io源連接和資料流
 description: 了解如何使用Adobe Experience Platform UI建立Customer.io來源連線。
-hide: true
-hidefromtoc: true
 badge: "Beta"
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 1%

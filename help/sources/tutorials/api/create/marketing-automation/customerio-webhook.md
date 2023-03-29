@@ -1,10 +1,8 @@
 ---
 title: 使用流服務API為Customer.io建立源連接和資料流
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至Customer.io。
-hide: true
-hidefromtoc: true
 badge: "Beta"
-source-git-commit: f92a42a5d53121cc3338432a3cd975f0aa29b9a8
+source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
 workflow-type: tm+mt
 source-wordcount: '1457'
 ht-degree: 1%
@@ -257,7 +255,7 @@ curl -X POST \
 
 * [源連接ID](#source-connection)
 * [Target連線ID](#target-connection)
-* [對應ID](#mapping)
+* [對應 ID](#mapping)
 
 資料流負責從源中調度和收集資料。 您可以在裝載中提供先前提及的值時，執行POST要求來建立資料流。
 

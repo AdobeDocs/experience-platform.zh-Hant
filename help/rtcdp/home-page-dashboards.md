@@ -2,70 +2,77 @@
 keywords: 量度概觀；rtcdp量度概觀
 title: Real-time Customer Data Platform首頁和控制面板
 description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
+badge: "Beta"
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: cc6d962e1c4a9afe1b608dfa06e9812b33dc7e6d
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 2%
+source-wordcount: '817'
+ht-degree: 1%
 
 ---
 
-# [!DNL Real-Time Customer Data Platform] 首頁和儀表板
+# [!DNL Real-Time Customer Data Platform] 首頁
 
-Adobe Real-time Customer Data Platform(Real-Time CDP)首頁包含量度控制面板，會在您登入Real-Time CDP時顯示。
+>[!NOTE]
+>
+>此 [!DNL Real-Time Customer Data Platform] 首頁為測試版。 其功能和檔案可能會有所變更。
 
-首頁只是顯示量度卡的其中一個位置。 Real-Time CDP會在您的整個體驗中提供量度卡。 這些量度會通知您系統中的資料、設定檔和區段對象。
+Adobe Real-time Customer Data Platform(Real-Time CDP)首頁是登入Real-Time CDP後顯示的第一頁。
 
-![image](assets/home.png)
+Real-Time CDP首頁包含快速入門Widget，可讓您快速存取數種不同功能，以及量度區段，可顯示貴組織內資料的最新資訊。
 
-如果您登入Real-Time CDP時系統中沒有資料，首頁的控制面板就不會顯示。 在這種情況下，首頁會提供第一次使用者體驗的學習資料。 當收集資料時，換句話說， <!--sources-->資料集、設定檔、區段和目的地會建立，資料會流入系統，控制面板會自動更新，以顯示該資料的相關資訊<!-- in metric cards-->.
+本檔案概述Real-Time CDP首頁和量度控制面板。
 
-## 首頁儀表板視圖
+![平台UI首頁。](assets/platform-home/home.png)
 
-<!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
+## 快速入門介面工具集
 
-控制面板分為<!-- two areas.-->:
+此 [!UICONTROL 即時客戶個人檔案快速入門] 介面工具集分為四個區段：
 
-* **排行榜** 在控制面板的頂端。 排行榜會顯示系統中的資料集、設定檔、區段和目的地數量。
+* **將資料內嵌至Platform**:此介面工具集會將您導向源目錄。 使用來源目錄來選取來源並擷取資料以Experience Platform。 如需詳細資訊，請閱讀 [來源概觀](../sources/home.md)
+* **模型資料結構**:此介面工具集會將您導向結構概觀。 使用結構概觀來瀏覽現有的結構，或建立描述資料結構的基礎要素。 如需詳細資訊，請閱讀 [綱要概觀](../xdm/home.md).
+* **區段對象**:此介面工具集會將您導向 [!DNL Segment Builder] 在UI中。 使用 [!DNL Segment Builder] 與設定檔資料元素互動並定義區段規則。 如需詳細資訊，請閱讀 [區段服務概觀](../segmentation/home.md).
+* **將資料傳送至目的地**:此介面工具集會將您導向目標目錄。 使用目標目錄來選取目的地，然後您可以連線至該目的地，並將區段傳送至該目的地。 如需詳細資訊，請閱讀 [目的地概述](../destinations/home.md)
 
-   ![image](assets/leaderboard.png)
+![顯示快速入門介面工具集的Platform UI首頁](assets/platform-home/getting-started-widget.png)
 
-<!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
-    ![image](assets/home-metrics.jpg)
-Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **最近的項目** 列出系統中新增的5個最近資料集、來源、區段和目的地。
+## 量度控制面板
 
-   ![image](assets/recent.png)
+量度控制面板會顯示您Experience Platform資料的最新資訊。 控制面板分為兩個區段：
 
-其他量度（例如設定檔和區段）可在Real-time Customer Data Platform的其他部分使用。
+### 排行榜
 
-### 資料集
+展示板會顯示貴組織中目前的結構、資料集、設定檔和區段總數，以及其最近的更新日期。
 
-此 **[!UICONTROL 資料集]** 計數器會顯示系統中的資料集數，以及 [!DNL Platform]. 建立資料集時，會更新此計數器。
+![Platform UI首頁的排行榜區段。](assets/platform-home/leaderboard.png)
 
-如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
+* **結構總計**:此 **結構總計** 計數器顯示系統中的結構數目。 建立架構時會更新此計數器。 如需詳細資訊，請閱讀 [綱要概觀](../xdm/home.md).
+* **資料集總計**:此 **資料集總計** 計數器會顯示系統中的資料集數，以及 [!DNL Platform]. 建立資料集時，會更新此計數器。 如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
+* **設定檔總計**:此 **設定檔** count會顯示在 [!DNL Real-Time Customer Profile]. 其中不包含設定檔片段。 這是可定址的受眾總數。 此計數使用預設值 [合併策略](profile/merge-policies.md) 在統一配置檔案的合併策略配置中設定。 每24小時更新一次設定檔數目。 如需設定檔的詳細資訊，請參閱 [即時客戶個人檔案概觀](../profile/home.md).
+* **總區段**: **區段** 顯示為組織建立的區段總數。 建立新區段時，會更新此數字。 如需區段的詳細資訊，請參閱 [區段服務概觀](../segmentation/home.md).
 
-### 設定檔
+### 最近的項目
 
-此 **[!UICONTROL 設定檔]** count會顯示在 [!DNL Real-Time Customer Profile]. 其中不包含設定檔片段。 這是可定址的受眾總數。
+最近的項目列出貴組織中最近的變更。 在以下範例中，最近的變更涉及資料集、來源、區段和目的地。
 
-此計數使用預設值 [合併策略](profile/merge-policies.md) 在統一配置檔案的合併策略配置中設定。
+![Platform UI首頁的最近項目區段。](assets/platform-home/recent-items.png)
 
-每24小時更新一次設定檔數目。
+* **最近的資料集**:此 **[!UICONTROL 最近的資料集]** 卡片顯示組織內最近建立的五個資料集。 建立新資料集時，會更新此清單。 選取資料集以檢視該項目的詳細資訊，或選取 **[!UICONTROL 查看全部]** 以取得資料集清單。 從那裡，您可以選擇特定的來源以獲取詳細資訊。 如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
+* **最近的來源**:此 **[!UICONTROL 最近的來源]** 「量度卡」會顯示組織內建立的5個最近來源。 建立新源時，將更新此清單。 選擇一個源以查看該項的詳細資訊，或選擇 **[!UICONTROL 查看全部]** 來源清單。 從那裡，您可以選擇特定的來源以獲取詳細資訊。 如需來源的詳細資訊，請參閱 [來源概觀](../sources/home.md).
+* **最近區段**:此 **[!UICONTROL 最近區段]** 量度卡顯示組織內建立的5個最近區段。 建立新區段時，會更新此清單。 選取要檢視該項目的詳細資料的區段，或選取 **[!UICONTROL 查看全部]** ，以取得區段清單。 如需區段的詳細資訊，請參閱 [區段服務概觀](../segmentation/home.md).
+* **近期目的地**:此 **[!UICONTROL 近期目的地]** 量度卡顯示組織內建立的5個最近目的地。 建立新目的地時，會更新此清單。 選擇要查看該項的詳細資訊的目標，或選擇 **[!UICONTROL 查看全部]** 以取得目的地清單。 如需詳細資訊，請閱讀 [目的地概述](../destinations/home.md).
 
-如需設定檔的詳細資訊，請參閱 [Real-Time CDP中客戶的統一檢視](profile/profile-overview.md).
+## 資源
 
-### 區段
+最後，資源Widget會提供您可參考的其他檔案資源。 這些類別包括：
 
-**[!UICONTROL 區段]** 顯示為組織建立的區段總數。 建立新區段時，會更新此數字。
+![Platform UI首頁的「資源」區段。](assets/platform-home/resources.png)
 
-如需區段的詳細資訊，請參閱 [區段服務概觀](segmentation/segmentation-overview.md).
-
-### 目的地
-
-**[!UICONTROL 目的地]** 顯示為組織建立的目的地總數。 建立新目的地時，會更新此數字。
-
-如需目的地的詳細資訊，請參閱 [目的地概觀](destinations/overview.md).
+* [了解結構](../xdm/schema/composition.md)
+* [連接源](../sources/home.md)
+* [如何填入您的即時客戶個人檔案](../profile/home.md)
+* [連接目的地](../destinations/home.md)
+* [管理存取](../access-control/abac/overview.md)
 
 <!-- ### Successful profile records
 
@@ -100,35 +107,3 @@ In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of
 The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
-
-### 最近的資料集
-
-此 **[!UICONTROL 最近的資料集]** 卡片顯示組織內最近建立的五個資料集。 建立新資料集時，會更新此清單。
-
-選取資料集以檢視該項目的詳細資訊，或 **[!UICONTROL 查看全部]** 來查看資料集清單。 從那裡，您可以選擇特定的來源以獲取詳細資訊。
-
-如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
-
-### 最近的來源
-
-此 **[!UICONTROL 最近的來源]** 「量度卡」會顯示組織內建立的5個最近來源。 建立新源時，將更新此清單。
-
-選擇一個源以查看該項的詳細資訊，或 **[!UICONTROL 查看全部]** 來查看源清單。 從那裡，您可以選擇特定的來源以獲取詳細資訊。
-
-如需來源的詳細資訊，請參閱 [來源概觀](sources/sources-overview.md).
-
-### 最近區段
-
-此 **[!UICONTROL 最近區段]** 量度卡顯示組織內建立的5個最近區段。 建立新區段時，會更新此清單。
-
-選取區段以檢視該項目的詳細資訊，或 **[!UICONTROL 查看全部]** 以查看更多區段的相關資訊。
-
-如需區段的詳細資訊，請參閱 [區段服務概觀](segmentation/segmentation-overview.md).
-
-### 近期目的地
-
-此 **[!UICONTROL 近期目的地]** 量度卡顯示組織內建立的5個最近目的地。 建立新目的地時，會更新此清單。
-
-選取要檢視該項目詳細資訊的目的地，或 **[!UICONTROL 查看全部]** 以了解更多目的地的相關資訊。
-
-如需目的地的詳細資訊，請參閱 [目的地概觀](destinations/overview.md).
