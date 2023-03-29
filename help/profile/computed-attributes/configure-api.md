@@ -4,7 +4,9 @@ title: 如何配置計算屬性欄位
 type: Documentation
 description: 計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 此欄位可使用Schema Registry API來建立，以定義將保存計算屬性欄位的架構和自定義欄位組。
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 2%

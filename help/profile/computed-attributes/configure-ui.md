@@ -3,7 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 如何配置計算屬性欄位
 type: Documentation
 description: 計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用架構欄位組建立此欄位，以將該欄位添加到現有架構，或者選擇已在架構中定義的欄位。
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 1%

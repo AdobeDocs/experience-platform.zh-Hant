@@ -4,7 +4,9 @@ title: 計算屬性的PQL表達式示例
 type: Documentation
 description: 計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 這些函式需要使用有效的配置檔案查詢語言(PQL)表達式。 本指南概述了一些最常用的計算屬性PQL表達式。
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+hide: true
+hidefromtoc: true
+source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 2%
