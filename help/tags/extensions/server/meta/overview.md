@@ -2,9 +2,9 @@
 title: 中繼轉換API擴充功能概觀
 description: 了解Adobe Experience Platform中用於事件轉送的中繼轉換API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 24001da61306a00d295bf9441c55041e20f488c0
+source-git-commit: ec1e2b792ff827fd791576d904858ef9abb98947
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '2261'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,113 @@ ht-degree: 0%
 如果您從客戶端和伺服器發送不同的事件類型，且兩者之間沒有重疊，則不需要重複資料刪除。 不過，如果兩者共用任何單一事件 [!DNL Meta Pixel] 和 [!DNL Conversions API]，您必須確保這些重複事件已去除重複資料，以免對您的報表造成不利影響。
 
 傳送共用事件時，請務必在您從用戶端和伺服器傳送的每個事件中加入事件ID和名稱。 收到多個ID和名稱相同的事件時， [!DNL Meta] 會自動採用數種策略來去除重複項目，並保留最相關的資料。 請參閱 [!DNL Meta] 檔案 [重複資料消除 [!DNL Meta Pixel] 和 [!DNL Conversions API] 事件](https://www.facebook.com/business/help/823677331451951?id=1205376682832142) 以取得此程式的詳細資訊。
+
+## 快速入門工作流程：中繼轉換API擴充功能（測試版） {#quick-start}
+
+>[!IMPORTANT]
+>
+>* 已購買Real-Time CDP Prime和Ultimate套件的客戶可使用快速入門功能。 如需詳細資訊，請連絡您的Adobe代表。
+>* 此功能適用於新的淨實作，目前不支援在現有標籤和事件轉送屬性上自動安裝擴充功能和設定。
+
+
+快速入門功能可協助您透過中繼轉換API和中繼像素擴充功能，輕鬆且有效率地完成設定。 此工具會自動執行Adobe標籤和事件轉送中的多個步驟，大幅縮短設定時間。
+
+此功能會自動在新自動產生的標籤和事件轉送屬性上，使用必要的規則和資料元素，安裝並設定中繼轉換API和中繼像素擴充功能。 此外，它也會自動安裝及設定Experience PlatformWeb SDK和資料流。 最後，快速入門功能會在開發環境中自動將程式庫發佈至指定的URL，透過事件轉送和Experience Edge即時執行用戶端資料收集和伺服器端事件轉送。
+
+以下影片介紹快速入門功能。
+
+>[!VIDEO](https://publish.tv.adobe.com/bucket/1/category/5138/video/3416939/)
+
+### 安裝快速入門功能
+
+>[!NOTE]
+>
+>此功能旨在協助您開始實施事件轉送。 它不會提供端對端、功能完整的實作，以配合所有使用案例。
+
+此設定會自動安裝中繼轉換API和中繼像素擴充功能。 Meta建議此混合式實作，以收集和轉送事件轉換伺服器端。
+快速設定功能旨在協助客戶開始實施事件轉送實施，不是要提供端對端、功能完整的實施，以因應所有使用案例。
+
+要安裝該功能，請選擇 **[!UICONTROL 開始使用]** for **[!DNL Send Conversions Data to Meta]** 在Adobe Experience Platform資料收集上 **[!UICONTROL 首頁]** 頁面。
+
+![資料收集首頁，顯示轉換資料至中繼](../../../images/extensions/server/meta/conversion-data-to-meta.png)
+
+輸入 **[!UICONTROL 網域]**，然後選取 **[!UICONTROL 下一個]**. 此網域將用作自動產生的標籤和事件轉送屬性、規則、資料元素、資料流等的命名慣例。
+
+![請求域名的歡迎螢幕](../../../images/extensions/server/meta/welcome.png)
+
+在 **[!UICONTROL 初始設定]** 對話框輸入 **[!UICONTROL 元像素ID]**, **[!UICONTROL 中繼轉換API存取權杖]**，和 **[!UICONTROL 資料層路徑]**，然後選取 **[!UICONTROL 下一個]**.
+
+![初始設定對話框](../../../images/extensions/server/meta/initial-setup.png)
+
+完成初始設定程式需要幾分鐘，然後選取 **[!UICONTROL 下一個]**.
+
+![初始設定完成確認螢幕](../../../images/extensions/server/meta/setup-complete.png)
+
+從 **[!UICONTROL 在您的網站上新增程式碼]** 對話方塊會複製使用復本提供的程式碼 ![複製](../../../images/extensions/server/meta/copy-icon.png) 函式，並將其貼入 `<head>` 來源網站。 實作後，選取 **[!UICONTROL 開始驗證]**
+
+![在您的網站對話方塊上新增程式碼](../../../images/extensions/server/meta/add-code-on-your-site.png)
+
+此 [!UICONTROL 驗證結果] 對話框顯示元擴展實施結果。 選取&#x200B;**[!UICONTROL 「下一步」]**。您也可以選取 **[!UICONTROL 保證]** 連結。
+
+![測試結果對話方塊顯示實作結果](../../../images/extensions/server/meta/test-results.png)
+
+此 **[!UICONTROL 後續步驟]** 螢幕顯示可確認設定完成。 從這裡，您可以選擇透過新增事件來最佳化實作，新事件會顯示在下一節。
+
+如果您不想新增其他事件，請選取 **[!UICONTROL 關閉]**.
+
+![「下一步」對話框](../../../images/extensions/server/meta/next-steps.png)
+
+#### 新增其他事件
+
+若要新增事件，請選取 **[!UICONTROL 編輯標籤Web屬性]**.
+
+![顯示編輯標籤Web屬性的「下一步」對話框](../../../images/extensions/server/meta/edit-your-tags-web-property.png)
+
+選取與您要編輯之中繼事件相對應的規則。 例如， **MetaConversion_AddToCart**.
+
+>[!NOTE]
+>
+>如果沒有事件，則此規則不會執行。 所有規則皆適用，且 **MetaConversion_PageView** 規則為例外。
+
+若要新增事件，請選取 **[!UICONTROL 新增]** 在 [!UICONTROL 事件] 標題。
+
+![標籤屬性頁面沒有顯示事件](../../../images/extensions/server/meta/edit-rule.png)
+
+選取 [!UICONTROL 事件類型]. 在此範例中，我們已選取 [!UICONTROL 按一下] 事件，並將其設定為在 **.add-to-cart-button** 中所有規則的URL。 選取&#x200B;**[!UICONTROL 「保留變更」]**。
+
+![顯示點按事件的事件設定畫面](../../../images/extensions/server/meta/event-configuration.png)
+
+已儲存新事件。 選擇 **[!UICONTROL 選取工作程式庫]** 並選取您要建置的程式庫。
+
+![選取工作程式庫下拉式清單](../../../images/extensions/server/meta/working-library.png)
+
+下一步，選取旁邊的下拉式清單 **[!UICONTROL 儲存至程式庫]** 選取 **[!UICONTROL 儲存至程式庫並建置]**. 這會在程式庫中發佈變更。
+
+![選取儲存至程式庫並建置](../../../images/extensions/server/meta/save-and-build.png)
+
+對您要設定的任何其他中繼轉換事件重複這些步驟。
+
+#### 資料層組態
+
+>[!IMPORTANT]
+>
+>更新此全域資料層的方式取決於您的網站架構。 單頁應用程式與伺服器端轉譯應用程式不同。 您也可能全權負責在標籤產品中建立和更新此資料。 在所有情況下，每次執行 `MetaConversion_* rules`. 如果您未更新規則之間的資料，可能也會遇到您從上次傳送過時資料的情況 `MetaConversion_* rule` 在當前 `MetaConversion_* rule`.
+
+在設定期間，系統會詢問您的資料層位置。 依預設，這會是 `window.dataLayer.meta`，和內部 `meta` 物件，您的資料將會如下所示。
+
+![資料層元資訊](../../../images/extensions/server/meta/data-layer-meta.png)
+
+這一點很重要 `MetaConversion_*` 規則會使用此資料結構，將相關資料片段傳遞至 [!DNL Meta Pixel] 擴充功能和 [!DNL Meta Conversions API]. 請參閱 [標準事件](https://developers.facebook.com/docs/meta-pixel/reference#standard-events) 以取得不同中繼事件所需資料的詳細資訊。
+
+例如，如果您想使用 `MetaConversion_Subscribe` 規則，您需要更新 `window.dataLayer.meta.currency`, `window.dataLayer.meta.predicted_ltv`，和 `window.dataLayer.meta.value` 如 [標準事件](https://developers.facebook.com/docs/meta-pixel/reference#standard-events).
+
+以下是在執行規則之前，需要在網站上執行以更新資料層的範例。
+
+![更新資料層元資訊](../../../images/extensions/server/meta/update-data-layer-meta.png)
+
+依預設， `<datalayerpath>.conversionData.eventId` 會由任何 `MetaConversion_* rules`.
+
+若要取得資料層外觀的本機參考，您可以在 `MetaConversion_DataLayer` 屬性上的資料元素。
 
 ## 後續步驟
 
