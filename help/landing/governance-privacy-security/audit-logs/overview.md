@@ -24,7 +24,7 @@ ht-degree: 48%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
 >title="監控 Platform 中的使用者活動"
->abstract="<h2>說明</h2><p>您可以採用「稽核記錄」的方式監控各種 Platform 服務和功能的使用者活動。這些記錄形成了稽核軌跡，其中記錄了<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管要求。</p>"
+>abstract="<h2>說明</h2><p>您可以採用「稽核記錄」的方式監控各種 Platform 服務和功能的使用者活動。這些記錄會形成稽核軌跡，其中會記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管要求。</p>"
 
 為了提高系統中執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些日誌形成了審核跟蹤，可以幫助Platform上的問題進行故障排除，並幫助您的企業有效遵守公司資料管理策略和法規要求。
 
@@ -75,7 +75,7 @@ ht-degree: 48%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"
 >title="說明"
->abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區顯示已記錄的記錄清單，預設是從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部政策要求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>有關此功能的更多幫助，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
+>abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區會顯示已記錄的記錄清單，依預設會從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部政策要求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
 
 您可以在 **[!UICONTROL 稽核]** 工作區。 工作區會顯示記錄的記錄清單，依預設會從最近到最近排序。
 
