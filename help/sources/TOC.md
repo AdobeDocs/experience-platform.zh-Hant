@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 840ad16b3762afee0b36bdd93c5be566c5a29b18
+source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 11%
+source-wordcount: '963'
+ht-degree: 12%
 
 ---
 
@@ -352,6 +352,9 @@ ht-degree: 11%
       - [記錄來源（串流SDK）](sources-sdk/streaming/document-streaming.md)
       - [檔案自助服務API串流範本](sources-sdk/streaming/streaming-template-api.md)
       - [檔案自助服務UI串流範本](sources-sdk/streaming/streaming-template-ui.md)
+- 錯誤訊息 {#errors}
+   - [源中的錯誤消息](./errors/sources-errors.md)
+   - [流服務中的錯誤消息](./errors/flow-service-errors.md)
 - [流運行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
