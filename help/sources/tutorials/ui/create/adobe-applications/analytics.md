@@ -5,10 +5,10 @@ title: 在UI中建立Adobe Analytics來源連線
 type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3530c91cd36e9e2729515827978e6115857f2405
+source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 6%
+source-wordcount: '2365'
+ht-degree: 5%
 
 ---
 
@@ -159,16 +159,12 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 * [資料準備映射函式](../../../../../data-prep/functions.md)
 * [新增計算欄位](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-### 篩選即時客戶設定檔（測試版） {#filtering-for-profile}
+### 篩選即時客戶設定檔 {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="建立篩選規則 "
 >abstract="將資料傳送到即時客戶設定檔時定義列層級和欄層級的篩選規則。使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於設定檔擷取**。使用欄層級篩選來選取您要&#x200B;**為設定檔擷取排除**&#x200B;的資料欄。篩選規則不適用於傳送到資料湖的資料。"
-
->[!IMPORTANT]
->
->支援篩選 [!DNL Analytics] 資料目前處於測試狀態，並非所有使用者都能使用。 文件和功能可能會有所變更。
 
 完成對應後 [!DNL Analytics] 報表套裝資料，您可以套用篩選規則和條件，以選擇性地將資料納入或排除不匯入至即時客戶設定檔。 篩選支援僅適用於 [!DNL Analytics] 只會在輸入前篩選資料和資料 [!DNL Profile.] 所有資料都會擷取至資料湖。
 
