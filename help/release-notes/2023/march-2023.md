@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2023年3月
 description: 2023年3月Adobe Experience Platform發行說明。
-source-git-commit: 74b609572b6e5e9b5e641fe497f53f3463b900c4
+source-git-commit: 582305583aa5869d8cc29f871aeb3fa0ef0b6ab1
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 3%
+source-wordcount: '1724'
+ht-degree: 4%
 
 ---
 
@@ -14,11 +14,29 @@ ht-degree: 3%
 
 Adobe Experience Platform 現有功能更新：
 
+- [儀表板](#dashboards)
 - [資料收集](#data-collection)
 - [資料準備](#data-prep)
 - [目的地](#destinations)
+- [體驗資料模型](#xdm)
+- [查詢服務](#query-service)
+- [Real-Time Customer Data Platform B2B 版本](#b2b)
 - [細分服務](#segmentation)
 - [來源](#sources)
+
+## 儀表板 {#dashboards}
+
+Adobe Experience Platform提供多個控制面板，讓您透過這些控制面板檢視組織資料的重要深入分析（在每日快照中擷取）。
+
+**新功能或更新功能** {#dashboards-new-updated-features}
+
+| 功能 | 說明 |
+| --- | --- |
+| 使用者定義的控制面板 | 您現在可以 **範例屬性值** 在使用者定義的控制面板工具集撰寫器中，將屬性新增至工具集之前。 建立介面工具集時，該屬性欄中的一些範例值可供個別屬性使用。<br>您現在可以 **交換X軸和Y軸** 帶交換軸按鈕的介面工具集上。 這樣可節省時間，並在將屬性新增至小工具集時提供符合人體工程學的體驗。 這樣，您就無需再從「屬性」面板中尋找這兩個屬性。<br> 您現在可以 **更改圖例的位置和標題** 在介面工具集中。 在Widget上出現圖例後，可以將圖例重新定位到圖表的任意位置，並重新命名圖例標題，同樣可以使用軸標籤和Widget標題。 |
+
+{style="table-layout:auto"}
+
+如需控制面板的詳細資訊，包括如何授與存取權限和建立自訂Widget，請從閱讀 [控制面板概觀](../../dashboards/home.md).
 
 ## 資料收集 {#data-collection}
 
@@ -82,6 +100,48 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 - 未來使用加密時的擴充功能： `filename.csv.gpg`
 
 如需目的地的詳細一般資訊，請參閱 [目的地概述](../../destinations/home.md).
+
+## Experience Data Model(XDM) {#xdm}
+
+XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料提供通用結構和定義（結構）。 遵循XDM標準，所有客戶體驗資料皆可整合至通用表示法，以更快速、更整合的方式提供深入分析。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| CSV結構建議 | 您現在可以上傳本機檔案，以建立機器學習產生的結構，而不需要手動建立結構。 從 [!UICONTROL 來源] 工作區、上傳範例CSV檔案，而Adobe機器學習演算法將根據目標欄位為您建議結構。 請參閱 [檔案](../../ingestion/tutorials/map-csv/recommendations.md) 」。 |
+
+{style="table-layout:auto"}
+
+如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
+
+## 查詢服務 {#query-service}
+
+查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以加入Data Lake中的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或擷取至即時客戶個人檔案。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 基於屬性的加速儲存訪問控制 | 使用「屬性型存取控制與資料Distiller」 ，針對加速存放區上的所有資料集定義存取控制。 這可控制對使用者建立並儲存於加速存放區的自訂資料模型的存取，以支援自訂控制面板。 |
+
+{style="table-layout:auto"}
+
+有關Query Services的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md).
+
+## Real-Time Customer Data Platform B2B 版本 {#b2b}
+
+Real-Time CDP B2B Edition以Real-time Customer Data Platform(Real-Time CDP)為基礎，專為以企業對企業服務模式運作的行銷人員所打造。 它匯集了來自多個來源的資料，並將其結合為人員和帳戶設定檔的單一檢視。 此統一的資料可讓行銷人員精確鎖定特定對象，並參與所有可用管道中的這些對象。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 錯誤修正 | 為了在您的系統中提供更精確的描述檔，系統不再在Real-time Customer Data Platform B2B版的總設定檔計數或可定址對象量度中包含內部設定檔。 從今天開始，設定檔總計數/可定址對象量度可能會一次性下降。 你的所有資料都沒有被清除，這只是計數的變化。 如有任何疑慮，請連絡您的Adobe主管 |
+
+{style="table-layout:auto"}
+
+若要進一步了解Real-Time CDP B2B版，請閱讀 [Real-Time CDP B2B版概述](../../rtcdp/overview.md).
 
 ## 分段服務 {#segmentation}
 
