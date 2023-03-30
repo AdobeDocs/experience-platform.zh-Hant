@@ -3,10 +3,10 @@ title: 使用Adobe Experience Platform Web SDK追蹤連結
 description: 了解如何使用Web SDK將連結資料傳送至Adobe Analytics
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction；網頁互動；頁面檢視；連結追蹤；連結；追蹤連結；clickCollection；點擊集合；
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: dac14cd358922b577c71f8d9b7f7c9b7e1b4f87d
+source-git-commit: 04078a53bc6bdc01d8bfe0f2e262a28bbaf542da
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
@@ -34,6 +34,8 @@ alloy("sendEvent", {
   }
 });
 ```
+
+從2.15.0版開始，Web SDK會擷取 `region` 的「已點按HTML」元素。 這可讓 [Activity Map](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) Adobe Analytics中的報表功能。
 
 連結類型可以是下列三個值之一：
 
@@ -90,3 +92,23 @@ alloy("configure", {
 });
 ```
 
+從Web SDK 2.15.0版開始，透過自動連結追蹤所收集的資料，可借由提供 [onBeforeLinkClickSend回呼函式](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend).
+
+只有在發生自動連結點按事件時，才會執行此回呼函式。
+
+```javascript
+alloy("configure", {
+  onBeforeLinkClickSend: function(options) {
+    if (options.xdm.web.webInteraction.type === "download") {
+      options.xdm.web.webInteraction.name = undefined;
+    }
+  }
+});
+```
+
+使用 `onBeforeLinkClickSend` 命令，Adobe建議返回 `false` 的連結點按次數。 任何其他回應都會讓Web SDK將資料傳送至邊緣網路。
+
+
+>[!NOTE]
+>
+>**當 `onBeforeEventSend` 和 `onBeforeLinkClickSend` 回呼函式已設定，Web SDK會執行 `onBeforeLinkClickSend` 回呼函式來篩選及擴大連結點按互動事件，後接 `onBeforeEventSend` 回呼函式。

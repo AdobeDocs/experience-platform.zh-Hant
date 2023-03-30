@@ -4,10 +4,10 @@ description: 了解如何配置Adobe Experience Platform Web SDK。
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: 設定；設定；SDK；邊緣；Web SDK；設定；edgeConfigId；內容；網頁；裝置；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent；網頁設定；prehidingStyle；不透明度；cookieDestinationsEnabled;urlDesitionsEnabled;idMigrationEnabled；第三方CookiesEnabled
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: ed39d782ba6991a00a31b48abb9d143e15e6d89e
+source-git-commit: a192a746fa227b658fcdb8caa07ea6fb4ac1a944
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 10%
+source-wordcount: '1128'
+ht-degree: 9%
 
 ---
 
@@ -36,7 +36,7 @@ alloy("configure", {
 >
 >**Edge Configurations已重新命名為Datastreams。 資料流ID與設定ID相同。**
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 字串 | 是 | None |
 
@@ -46,7 +46,7 @@ alloy("configure", {
 
 ### `context` {#context}
 
-| **類型** | **必填** | **預設值** |
+| **類型** | 必填 | **預設值** |
 | ---------------- | ------------ | -------------------------------------------------- |
 | 字串陣列 | 無 | `["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]` |
 
@@ -67,7 +67,7 @@ alloy("configure", {
 
 ### `debugEnabled`
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `false` |
 
@@ -91,7 +91,7 @@ alloy("configure", {
 
 用於與Adobe服務通訊及互動的edgeDomain後面的路徑。  這通常只有在不使用預設生產環境時才會變更。
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 字串 | 無 | ee |
 
@@ -99,7 +99,7 @@ alloy("configure", {
 
 ### `orgId`
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 字串 | 是 | None |
 
@@ -111,7 +111,7 @@ alloy("configure", {
 
 ### `clickCollectionEnabled` {#clickCollectionEnabled}
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
@@ -121,7 +121,7 @@ alloy("configure", {
 
 ### `onBeforeEventSend`
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 函數 | 無 | ()=>未定義 |
 
@@ -129,11 +129,30 @@ alloy("configure", {
 
 設定在傳送前對每個事件呼叫的回呼。 具有欄位的物件 `xdm` 會傳送至回呼。 若要變更已傳送的內容，請修改 `xdm` 物件。 在回呼內， `xdm` 物件已在event命令中傳遞資料，且已自動收集資訊。 如需此回呼的時間和範例的詳細資訊，請參閱 [全域修改事件](tracking-events.md#modifying-events-globally).
 
+### `onBeforeLinkClickSend` {#onBeforeLinkClickSend}
+
+| 類型 | 必填 | 預設值 |
+| -------- | ------------ | ----------------- |
+| 函數 | 無 | ()=>未定義 |
+
+{style="table-layout:auto"}
+
+設定在傳送前，為每個連結點擊追蹤事件呼叫的回呼。 回呼會傳送物件，並搭配 `xdm`, `clickedElement`，和 `data` 欄位。
+
+使用DOM元素結構來篩選連結追蹤時，您可以使用 `clickElement` 命令。 `clickedElement` 是已點按並封裝父節點樹狀結構的DOM元素節點。
+
+若要變更要傳送的資料，請修改 `xdm` 和/或 `data` 對象。 在回呼內， `xdm` 物件已在event命令中傳遞資料，且已自動收集資訊。
+
+* 任何值 `false` 將允許傳送事件和回呼。
+* 如果回呼傳回 `false` 值時，會停止事件處理，且沒有錯誤，且不會傳送事件。 此機制可透過檢查事件資料並傳回，來篩選掉特定事件 `false` 如果事件不應傳送。
+* 如果回呼擲回例外狀況，則會停止處理事件且不會傳送事件。
+
+
 ## 隱私權選項
 
 ### `defaultConsent` {#default-consent}
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 物件 | 無 | `"in"` |
 
@@ -149,7 +168,7 @@ alloy("configure", {
 
 ### `prehidingStyle` {#prehidingStyle}
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 字串 | 無 | None |
 
@@ -169,7 +188,7 @@ alloy("configure", {
 
 使用此選項可讓Web SDK讀取和寫入舊版 `mbox` 和 `mboxEdgeCluster` 由 [!DNL at.js]. 這可協助您從使用Web SDK的頁面移至使用的頁面時，保留訪客設定檔 [!DNL at.js] 程式庫，反之亦然。
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `false` |
 
@@ -177,7 +196,7 @@ alloy("configure", {
 
 ### `cookieDestinationsEnabled`
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
@@ -187,7 +206,7 @@ alloy("configure", {
 
 ### `urlDestinationsEnabled`
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
@@ -199,7 +218,7 @@ alloy("configure", {
 
 ### `idMigrationEnabled` {#id-migration-enabled}
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
@@ -211,7 +230,7 @@ alloy("configure", {
 
 ### `thirdPartyCookiesEnabled`
 
-| **類型** | **必填** | **預設值** |
+| 類型 | 必填 | 預設值 |
 | -------- | ------------ | ----------------- |
 | 布林值 | 無 | `true` |
 
