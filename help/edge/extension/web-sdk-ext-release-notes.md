@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5ec1ede39489ce48fc20739030884ec3811a8426
+source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
 workflow-type: tm+mt
-source-wordcount: '1528'
-ht-degree: 40%
+source-wordcount: '1597'
+ht-degree: 39%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 40%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 2.16.0版 — 2023年3月30日
+
+**新功能**
+
+* （測試版）新增 **[!UICONTROL 更新變數]** 行動與 **[!UICONTROL 變數]** 資料元素。
+* 新增 [`onBeforeLinkClickSend`](../fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) 回呼函式。
+
+**修正和改良**
+
+* 修正當錨點標籤內的元素無法運作時， **[!UICONTROL 使用身分重新導向]** 已使用動作。
+* 修正當只有一個架構時，XDM物件資料元素無法運作的問題。
+* 包含2.15.0版的Adobe Experience Platform Web SDK。
+
 
 ## 2.15.1版 — 2023年1月26日
 
