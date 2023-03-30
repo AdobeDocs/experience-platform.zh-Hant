@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中管理資料使用量標籤
 description: 本指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用量標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1529'
 ht-degree: 3%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="說明"
->abstract=""
+>title="控管Platform中的資料使用方式"
+>abstract="<h2>說明</h2><p>「Experience Platform」中的「資料控管」架構可讓您根據資料使用限制來標示屬性和資料集，並設定原則，針對特定行銷動作識別並遵循這些限制。</p>"
 
 本使用手冊涵蓋在 [!DNL Experience Platform] 使用者介面。
 
@@ -87,7 +87,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="說明"
->abstract=""
+>abstract="<ul><li>選擇 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">資料集</a> 在左側導覽器中，選取您要限制其資料的資料集。</li><li>從資料集詳細資料檢視中，選取 <b>資料控管</b> 標籤。</li><li>選取您要限制的資料集欄位，然後選取 <b>編輯控管標籤</b> 以根據使用限制來標籤資料。</li><li>為資料加上標籤後，請選取 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a> 在左側導覽器中，然後選取 <b>建立原則</b>.</li><li>選擇建立 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">資料控管政策</a>，然後選擇策略將應用到策略的資料使用量標籤。</li><li>選擇策略將拒絕包含這些標籤的任何資料的行銷操作。 建立原則後，從清單中選取該原則，然後使用右側邊欄的切換按鈕加以啟用。</li><li>對於每個啟用的原則，Platform會防止任何包含指定標籤的資料用於定義的行銷動作。 當您嘗試將標示為的資料啟用至具有相關行銷動作（使用案例）的目的地時，就會自動執行此規範。</li></ul>"
 
 >[!IMPORTANT]
 >

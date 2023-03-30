@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用量標籤概述
 description: 了解如何使用資料使用量標籤來協助在Adobe Experience Platform中強制執行資料控管法規遵循。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
->title="說明"
->abstract=""
+>title="控制對敏感和受保護資料的訪問"
+>abstract="<h2>說明</h2><p>控制對特定資料屬性和/或區段的存取，讓您針對各種角色和團隊作業Experience Platform使用案例設計彈性的工作流程。</p>"
 
 Adobe Experience Platform可讓您將資料使用量標籤套用至資料集和欄位，並依相關項目對每個欄位進行分類 [資料控管原則](../policies/overview.md) 和 [訪問控制策略](../../access-control/abac/ui/policies.md).
 
@@ -51,7 +51,7 @@ Adobe Experience Platform可讓您將資料使用量標籤套用至資料集和�
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"
 >title="說明"
->abstract=""
+>abstract="<ul><li>標籤XDM欄位和區段，以分類您要限制存取的欄位和或區段。</li><li>標籤角色，向角色添加標籤可讓您定義此角色的標籤成員應具有的限制。</li><li>建立策略時，策略會在標籤對象（如XDM欄位和區段）上的標籤與角色上的標籤之間建立關係。 如果標籤匹配，則可以定義允許或限制訪問。</li></ul>"
 
 您可以使用 [!DNL Experience Platform] API或使用者介面。 如需各個項目的詳細資訊，請參閱以下子區段。
 

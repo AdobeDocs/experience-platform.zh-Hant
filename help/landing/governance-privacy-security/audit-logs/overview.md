@@ -2,10 +2,10 @@
 title: 稽核記錄概述
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1157'
-ht-degree: 27%
+source-wordcount: '1156'
+ht-degree: 48%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 27%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="監視Platform中的使用者活動"
->abstract="<h2>說明</h2><p>您可以以稽核記錄的形式，監控各種Platform服務和功能的使用者活動。 這些記錄會形成稽核軌跡，記錄 <b>誰</b> 執行 <b>what</b> 行動與 <b>when</b>. 稽核記錄可協助疑難排解Platform上的問題，並協助您的業務有效遵守公司資料管理政策和法規要求。</p><h2>說明</h2><ul><li>選擇 <b>稽核</b> 的下一頁。 「稽核」工作區依預設會從最近到最近排序記錄的清單。</li>   <li> 注意：稽核記錄會保留365天，之後將從系統中刪除。 因此，您最多只能返回365天的期間。 如果您需要回顧365天以前的資料，則應定期匯出記錄檔，以符合內部政策要求。 </li><li>從清單中選取事件，以在右側邊欄中檢視其詳細資訊。 </li><li>選取漏斗圖示，以顯示篩選控制項清單，協助縮小結果。 無論選取的篩選器為何，都只會顯示最近1000筆記錄。 </li><li>要導出審核日誌的當前清單，請選擇 **下載記錄檔**.</li><li>如需此功能的詳細說明，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概述</a> Experience League。</li></ul>"
+>title="監控 Platform 中的使用者活動"
+>abstract="<h2>說明</h2><p>您可以採用「稽核記錄」的方式監控各種 Platform 服務和功能的使用者活動。這些記錄形成了稽核軌跡，其中記錄了<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管要求。</p>"
 
 為了提高系統中執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些日誌形成了審核跟蹤，可以幫助Platform上的問題進行故障排除，並幫助您的企業有效遵守公司資料管理策略和法規要求。
 
@@ -72,18 +72,18 @@ ht-degree: 27%
 
 ## 在UI中管理稽核記錄 {#managing-audit-logs-in-the-ui}
 
-[!CONTEXTUALHELP]
-id="platform_privacyConsole_audits_instructions"
-title="說明"
-abstract=""
+>[!CONTEXTUALHELP]
+>id="platform_privacyConsole_audits_instructions"
+>title="說明"
+>abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區顯示已記錄的記錄清單，預設是從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部政策要求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>有關此功能的更多幫助，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
 
 您可以在 **[!UICONTROL 稽核]** 工作區。 工作區會顯示記錄的記錄清單，依預設會從最近到最近排序。
 
 ![稽核記錄控制面板](../../images/audit-logs/audits.png)
 
-稽核記錄會保留365天，之後將從系統中刪除。 因此，您最多只能返回365天的期間。 如果您需要超過365天的資料，則應定期匯出日誌，以符合內部政策要求。
+稽核記錄會保留365天，之後將從系統中刪除。 因此，您最多只能往回查看 365 天。如果您需要超過365天的資料，則應定期匯出日誌，以符合內部政策要求。
 
-從清單中選取事件，以在右側邊欄中檢視其詳細資訊。
+從清單中選取一個事件以在右邊欄中查看其詳細資料。
 
 ![事件詳細資料](../../images/audit-logs/select-event.png)
 
@@ -113,7 +113,7 @@ abstract=""
 
 ### 導出審核日誌
 
-要導出審核日誌的當前清單，請選擇 **[!UICONTROL 下載記錄檔]**.
+若要匯出目前的稽核記錄清單，請選取&#x200B;**[!UICONTROL 下載記錄]**。
 
 ![下載記錄檔](../../images/audit-logs/download.png)
 

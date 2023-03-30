@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中管理資料使用原則
 description: Adobe Experience Platform資料控管提供的使用者介面可讓您建立和管理資料使用原則。 本檔案概述您可在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: e539b1e165227d9a888bfe12d8205e285b3ce259
+source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1618'
 ht-degree: 7%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="說明"
->abstract=""
+>title="在您的設定檔資料中整合併強制執行客戶同意"
+>abstract="<h2>說明</h2><p>Platform可讓您將您從客戶收集到的同意資料整合至其個別設定檔。 然後，您可以設定同意原則，以判斷這些資料是否可包含在已啟動至特定目的地的區段中。</p>"
 
 本檔案說明如何使用 **[!UICONTROL 原則]** 工作區，以建立和管理資料使用原則。
 
@@ -92,7 +92,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="說明"
->abstract=""
+>abstract="<ul><li>請確定您要透過OneTrust來源連接器或標準XDM架構擷取偏好設定資料至聯合結構，以取得同意。</li><li>選擇 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a> 在左側導覽器中，然後選取 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">建立原則</a>.</li><li>在 <b>若</b> 部分，說明將觸發策略檢查的條件或操作。</li><li>在 <b>然後</b> 小節，輸入必須存在的同意屬性，配置檔案才能包含在觸發策略的操作中。</li><li>選擇 <b>儲存</b> 來建立策略。 要啟用策略，請選擇 <b>狀態</b> 在右側邊欄中切換。</li><li>Experience Platform會在您對目的地啟用區段時自動執行已啟用的同意原則，並提供每個原則如何影響對象規模的詳細資訊。</li><li>如需此功能的詳細說明，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">建立同意原則</a> Experience League。</li></ul>"
 
 >[!IMPORTANT]
 >
