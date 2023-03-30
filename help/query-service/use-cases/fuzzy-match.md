@@ -1,18 +1,18 @@
 ---
 title: 查詢服務中的模糊匹配
 description: 了解如何對Platform資料執行比對，將多個資料集的結果加以結合，方法是大約比對您選擇的字串。
-source-git-commit: a3a4ca4179610348eba73cf1239861265d2bf887
+source-git-commit: 633210fe5e824d8686a23b877a406db3780ebdd4
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# 模糊匹配
+# 查詢服務中的模糊匹配
 
-在您的Platform資料上使用「fuzzy」比對，以傳回最可能的近似相符項目，而不需搜尋字元相同的字串。 這可讓您更靈活地搜尋資料，並節省時間和精力，讓資料更容易存取。
+在您的Adobe Experience Platform資料上使用「fuzzy」比對，以傳回最可能的近似相符項目，而不需搜尋字元相同的字串。 這可讓您更靈活地搜尋資料，並節省時間和精力，讓資料更容易存取。
 
-模糊匹配不會嘗試重新格式化搜索字串以便匹配它們，而是會分析兩個序列之間的相似度比率並返回相似度百分比。 [!DNL FuzzyWuzzy] 建議此程式使用，因為其功能更適合在較複雜的情況下協助比對字串， [!DNL regex] 或 [!DNL difflib].
+模糊匹配不會嘗試重新格式化搜索字串以便匹配它們，而是會分析兩個序列之間的相似度比率並返回相似度百分比。 [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) 建議此程式使用，因為其功能更適合在較複雜的情況下協助比對字串， [!DNL regex] 或 [!DNL difflib].
 
 此使用案例中提供的範例著重於在兩個不同的旅行社資料集中，比對酒店房間搜尋的類似屬性。 此檔案示範如何根據字串與大型不同資料來源的相似度來比對字串。 在此示例中，模糊匹配將比較Luma和Acme旅行社的房間功能的搜索結果。
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 在此過程中，需要您培訓機器學習模型，本文檔假定一個或多個機器學習環境的工作知識。
 
-此範例使用 [!DNL Python] 和 [!DNL Jupyter Notebook] 開發環境。 雖然有許多選擇， [!DNL Jupyter Notebook] 建議使用，因為這是一個開放原始碼Web應用程式，具有低的計算需求。 可能是 [從官方的朱佩特網站下載](https://jupyter.org/).
+此範例使用 [!DNL Python] 和 [!DNL Jupyter Notebook] 開發環境。 雖然有許多選擇， [!DNL Jupyter Notebook] 建議使用，因為這是一個開放原始碼Web應用程式，具有低的計算需求。 可從下載 [官方的朱佩特網站](https://jupyter.org/).
 
 開始之前，您必須匯入必要的程式庫。 [!DNL FuzzyWuzzy] 是開源的 [!DNL Python] 內建於 [!DNL difflib] 程式庫，並用來比對字串。 它使用 [!DNL Levenshtein Distance] 來計算序列和模式之間的差異。 [!DNL FuzzyWuzzy] 有下列需求：
 
