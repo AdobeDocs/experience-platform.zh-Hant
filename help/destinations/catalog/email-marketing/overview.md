@@ -2,11 +2,11 @@
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地
 title: 電子郵件行銷目的地概觀
 type: Tutorial
-description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。
+description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 了解哪些ESP是受支援的Experience Platform目的地。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+source-git-commit: d6ea94b275ab0ed7c0638200188fe7ada7bacf5c
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '377'
 ht-degree: 4%
 
 ---
@@ -17,16 +17,17 @@ ht-degree: 4%
 
 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 Adobe Experience Platform可讓您啟用區段至電子郵件行銷目的地，與ESP整合。
 
-Platform會將您的區段匯出為 `.csv` 檔案，並將其傳送至您偏好的位置。 從中啟用的儲存位置，排程電子郵件行銷平台中的資料匯入 [!DNL Platform]. 匯入資料的程式因各合作夥伴而異。 如需詳細資訊，請參閱個別目的地文章。
-
 ## 支援的電子郵件行銷目的地 {#supported-destinations}
 
 Adobe Experience Platform支援下列電子郵件行銷目的地：
 
 * [Adobe Campaign](adobe-campaign.md)
-* [Oracle雄辯](oracle-eloqua.md)
+* [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [(API)OracleEloqua](oracle-eloqua-api.md)
+* [(API)SalesforceMarketing Cloud](salesforce-marketing-cloud-exact-target.md)
+* [（檔案）OracleEloqua](oracle-eloqua.md)
+* [（檔案）SalesforceMarketing Cloud](salesforce-marketing-cloud.md)
 * [OracleResponsys](oracle-responsys.md)
-* [SalesforceMarketing Cloud](salesforce-marketing-cloud.md)
 * [SendGrid](sendgrid.md)
 
 ## 連線至新的電子郵件行銷目的地 {#connect-destination}
@@ -45,7 +46,9 @@ Adobe建議您從 [聯合方案](../../../profile/home.md#profile-fragments-and-
 | 電話 | `mobilePhone.number` |
 | 忠誠計畫ID | `Customer-defined XDM field` |
 
-### 其他目標屬性
+{style="table-layout:auto"}
+
+### 其他目標屬性 {#other-destination-attributes}
 
 在「結構」欄位選取器中，選擇要匯出至電子郵件目的地的其他欄位。 建議的選項有：
 
@@ -60,20 +63,17 @@ Adobe建議您從 [聯合方案](../../../profile/home.md#profile-fragments-and-
 | 生日 | `person.birthDayAndMonth` |
 | 區段成員資格 | `segmentMembership.status` |
 
-## 將資料從儲存位置匯入目的地 {#import-data-into-destination}
-
-請參閱個別電子郵件行銷目的地文章，了解如何將資料從您的儲存位置匯入目的地：
-
-* [Adobe Campaign](adobe-campaign.md)
-* [Oracle雄辯](oracle-eloqua.md)
-* [OracleResponsys](oracle-responsys.md)
-* [SalesforceMarketing Cloud](salesforce-marketing-cloud.md)
+{style="table-layout:auto"}
 
 ## 啟用區段至電子郵件行銷目的地 {#activate}
 
-如需如何啟用區段至電子郵件行銷目的地的指示，請參閱 [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md).
+目錄中的某些電子郵件行銷目的地會透過與目的地的API整合，以串流方式匯出設定檔。
 
-## 其他資源
+其他目標會將檔案匯出至雲端儲存空間位置。 匯出完成後，您需要將資料從雲端儲存空間匯入電子郵件行銷目的地。
+
+請遵循 [支援電子郵件行銷目的地](#supported-destinations) 區段，了解如何為每個電子郵件行銷目的地啟用區段。
+
+## 其他資源 {#additional-resources}
 
 * [啟用受眾資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md)
 * [使用流量服務API建立電子郵件行銷目的地和啟用資料](../../api/connect-activate-batch-destinations.md)
