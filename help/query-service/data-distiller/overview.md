@@ -1,7 +1,7 @@
 ---
 title: 資料Distiller概述
 description: 與您的授權權限相關的查詢服務資料的資料Distiller使用限制摘要。
-source-git-commit: ae4ecd43071a198592193a1a598a064cdc6be2f6
+source-git-commit: c7e753e54f087ee45daabb9094edeb51e54271fc
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 1%
@@ -14,7 +14,7 @@ Data Distiller是套件，包含Adobe Experience Platform中的一部分功能�
 
 ## 授權使用情況 {#license-usage}
 
-此  [Data Distiller授權使用控制面板](./license-usage.md) 在您購買Data Distiller計算小時數後即可使用。 許可證使用控制面板幫助您監控已授權計算小時數的使用情況。 請參閱 [資料Distiller授權使用檔案](./license-usage.md) 查看貴組織的查詢服務許可證使用情況的重要資訊。
+此 [Data Distiller授權使用控制面板](./license-usage.md) 在您購買Data Distiller計算小時數後即可使用。 許可證使用控制面板幫助您監控已授權計算小時數的使用情況。 請參閱 [資料Distiller授權使用檔案](./license-usage.md) 查看貴組織的查詢服務許可證使用情況的重要資訊。
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
