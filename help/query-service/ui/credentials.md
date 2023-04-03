@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務憑證指南
 description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 879f3eb1f6856470e8e2d87537ca12438ca25d22
+source-git-commit: d86e1118fc8886f3a55b0224a2e065b33d96daf2
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 3%
@@ -129,7 +129,7 @@ Adobe Experience Platform查詢服務可讓您與外部用戶端連線。 您可
 | **連接埠** | 要連接的伺服器/主機的埠。 <ul><li>此值用於即將到期的憑據和非即將到期的憑據，可在以下找到 **[!UICONTROL 埠]** 在 [!UICONTROL 即將到期的憑據] 區段。</ul></li> | `80` |
 | **資料庫** | 您要連接的資料庫。 <ul><li>此值用於即將到期的憑證和非即將到期的憑證，可在 **[!UICONTROL 資料庫]** 在 [!UICONTROL 即將到期的憑據] 區段。 </ul></li> | `prod:all` |
 | **使用者名稱** | 連接到外部客戶端的用戶的用戶名。 <ul><li>此值用於即將到期的憑據和非即將到期的憑據。 其格式為字母數字字串 `@AdobeOrg`. 此值位於 **[!UICONTROL 使用者名稱]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **密碼** | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您使用即將到期的憑證，可在 **[!UICONTROL 密碼]** 在 [!UICONTROL 即將到期的憑據] 區段。</li><li>如果您使用的是未到期的憑證，此值是來自technicalAccountID的串連引數，以及來自設定JSON檔案的憑證。 密碼值採用以下形式： `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>即將到期的憑據密碼超過一千個字元的英數字串。 不會給出任何例子。</li><li>未到期的憑據密碼如下：`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **密碼** | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您使用即將到期的憑證，可在 **[!UICONTROL 密碼]** 在 [!UICONTROL 即將到期的憑據] 區段。</li><li>如果您使用的是未到期的憑證，此值是來自technicalAccountID的串連引數，以及來自設定JSON檔案的憑證。 密碼值採用以下形式： `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>即將到期的憑據密碼超過一千個字元的英數字串。 不會給出任何例子。</li><li>未到期的憑據密碼如下：<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 
