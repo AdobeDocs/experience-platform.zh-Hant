@@ -2,9 +2,9 @@
 title: Query Accelerated Store Reporting Insights指南
 description: 了解如何透過Query Service建立報表前瞻分析資料模型，以便與加速儲存資料和使用者定義的控制面板搭配使用。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,11 @@ Adobe Experience Platform的Real-Time CDP資料模型可提供設定檔、區段
 
 ## 快速入門
 
-您必須建立自訂資料模型，以便進行報表分析，並擴充包含豐富Platform資料的Real-Time CDP資料模型，才能使用Data Distiller SKU。 請參閱 [包裝](../../packages.md), [護欄](../../guardrails.md#query-accelerated-store)，和 [授權](../../data-distiller/license-usage.md) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
+您必須建立自訂資料模型，以便進行報表分析，並擴充包含豐富Platform資料的Real-Time CDP資料模型，才能使用Data Distiller SKU。 請參閱 [包裝](../../packages.md) 和 [護欄](../../guardrails.md#query-accelerated-store) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得詳細資訊。
+
+<!-- Document is hidden temporarily
+Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
+-->
 
 ## 建立報表前瞻分析資料模型
 
