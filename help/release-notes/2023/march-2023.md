@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2023年3月
 description: 2023年3月Adobe Experience Platform發行說明。
-source-git-commit: 1ead97aa9b197cd1c046175bdcd06c03fd35ac17
+source-git-commit: e597656949ba81b4a07c2962a02ddd94c6dc23e3
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '2206'
 ht-degree: 4%
 
 ---
@@ -111,6 +111,38 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 功能 | 說明 |
 | --- | --- |
 | CSV結構建議 | 您現在可以上傳本機檔案，以建立機器學習產生的結構，而不需要手動建立結構。 從 [!UICONTROL 來源] 工作區、上傳範例CSV檔案，而Adobe機器學習演算法將根據目標欄位為您建議結構。 請參閱 [檔案](../../ingestion/tutorials/map-csv/recommendations.md) 」。 |
+
+{style="table-layout:auto"}
+
+**新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 類別 | [[!UICONTROL 選件項目]](https://github.com/adobe/xdm/pull/1678/files) | 代表選件的類別。 |
+| 類別 | [[!UICONTROL 決策項目]](https://github.com/adobe/xdm/pull/1678/files) | 可進行決策的項目。 決策過程的輸出是一個或多個決策項。 |
+| 類別 | [[!UICONTROL 媒體工作階段伺服器逾時]](https://github.com/adobe/xdm/pull/1676/files) | 這表示使用者上次已知互動與工作階段關閉之間所經過的時間長度（以秒為單位）。 |
+| 欄位組 | [[!UICONTROL XDM設定檔計算屬性]](https://github.com/adobe/xdm/pull/1686/files) | 這會將內部Adobe服務的計算屬性新增至傳入的客戶資料。 客戶不應使用此ID擷取資料。 |
+| 資料類型 | [[!UICONTROL 退款項目]](https://github.com/adobe/xdm/pull/1685/files) | 指明退款是否與訂單關聯，並定義退款類型、金額和關聯幣種。 |
+| 資料類型 | [[!UICONTROL 類別資料]](https://github.com/adobe/xdm/pull/1677/files) | 此新資料類型表示產品的類別。 |
+| 方案 | [[!UICONTROL Adobe Target分類欄位]](https://github.com/adobe/xdm/pull/1682/files) | 已為Target分類資料集建立新的XDM結構。 它包含一組可分類Target活動和體驗的中繼資料欄位。 |
+
+{style="table-layout:auto"}
+
+**更新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位組 | [[!UICONTROL 內容元件詳細資訊]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` 已從 [!UICONTROL 內容元件詳細資訊] |
+| 欄位組 | [[!UICONTROL AJO實體標籤]](https://github.com/adobe/xdm/pull/1672/files) | 將AJO實體標籤新增至 [!UICONTROL AJO實體欄位]，對應至歷程或行銷活動 |
+| 欄位組 | （多個） | 新增數個欄位 [[!UICONTROL Journey Orchestration步驟事件常見欄位]](https://github.com/adobe/xdm/pull/1671/files) |
+| 欄位組 | （多個） | [為新增數種XDM事件類型 [!UICONTROL 媒體報表]](https://github.com/adobe/xdm/pull/1670/files). |
+| 欄位群組 | [!UICONTROL Workfront變更事件] | 此 `Full Record` 和 `Accessor Employee Ids` 已新增欄位群組。 |
+| 資料類型 | [[!UICONTROL 產品清單項目]](https://github.com/adobe/xdm/pull/1685/files) | 此 [!UICONTROL 退款金額] 已新增，以指出該項目所退還的金額（如有）。 |
+| 資料類型 | [[!UICONTROL 順序 ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL 退款清單] 已新增至此訂單的退款清單。 |
+| 資料類型 | [[!UICONTROL 產品清單項目 ]](https://github.com/adobe/xdm/pull/1677/files) | 已將產品類別新增至此產品的類別資料清單。 |
+| 資料類型 | [!UICONTROL 工作階段詳細資訊] | 新增 `pev3` 字串欄位 [指出用於報告的媒體資料流的類型](https://github.com/adobe/xdm/pull/1676/files). 也新增 `pccr` 屬性會指出是否發生重新導向。 |
+| 資料類型 | [!UICONTROL 申請清單] | 提供 [申請清單屬性](https://github.com/adobe/xdm/pull/1675/files). 包括名稱、ID和說明。 |
+| 資料類型 | [!UICONTROL Commerce] | 此 [已更新商務資料類型](https://github.com/adobe/xdm/pull/1675/files) 包含 `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`，和 `requisitionList`. |
 
 {style="table-layout:auto"}
 
