@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規常見問題集
 description: 本檔案提供支援之法律隱私權法規及其在Adobe Experience Cloud中實作之常見問題的解答。
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 7e86721f6dd6fd280ae7e7e67aca21b4258ffb66
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,11 @@ A **資料控制器** 有權力和責任決定收集、使用或披露個人
 
 假設業務已收集個人資訊，並且能夠驗證或驗證特定消費者的身份，隱私法規允許履行消費者請求的特定時間窗口。 下表列出每個規範的適用時間窗口，並附上一些例外的附註：
 
-| 規範 | 符合性窗口 | 附註 |
+>[!NOTE]
+>
+>在「天」內做出回應的時間表，反映了每部監管法規定的完成消費者要求的時限。
+
+| 規範 | 回應的時間範圍 | 附註 |
 | --- | --- | --- |
 | CCPA（加利福利亞） | 45 天 |  |
 | GDPR（歐盟） | 30 天 | 如果要求很複雜，或相同資料主體已提出許多要求，則要求可延長至60天。 |
