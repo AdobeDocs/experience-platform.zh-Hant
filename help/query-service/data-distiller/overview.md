@@ -1,9 +1,9 @@
 ---
 title: 資料Distiller概述
 description: 與您的授權權限相關的查詢服務資料的資料Distiller使用限制摘要。
-source-git-commit: e4337dcebaf313365ed9e403a5891f49decb29e9
+source-git-commit: 5958a9764ebe749a6c945c984a6e9979c444d4dc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
@@ -12,13 +12,14 @@ ht-degree: 0%
 
 Data Distiller是套件，包含Adobe Experience Platform中的一部分功能。 透過Data Distiller，您可以在Query Service中執行批次查詢，針對即時客戶設定檔或分析使用案例，執行擷取後資料準備（例如清理、整形和操作）。 您使用Data Distiller的方式取決於您對平台型應用程式的權限。
 
-## 授權使用情況 {#license-usage}
-
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
-The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
--->
+## License usage {#license-usage}
 
-在您購買資料Distiller計算小時數後，即可使用資料Distiller授權使用控制面板。 許可證使用控制面板幫助您監控已授權計算小時數的使用情況。
+
+The [Data Distiller license usage dashboard](./license-usage.md) is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours. See the [Data Distiller license usage document](./license-usage.md) to view important information about your organization's Query Service license usage. 
+
+The Data Distiller license usage dashboard is available once you have purchased Data Distiller compute hours. The license usage dashboard helps you to monitor the consumption of entitled compute hours.
+-->
 
 <!-- Update these descriptions post 23.3 release
 ## Scoping parameters {#scoping-parameters}
