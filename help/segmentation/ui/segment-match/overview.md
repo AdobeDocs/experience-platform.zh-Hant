@@ -118,7 +118,7 @@ Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多�
 >[!CONTEXTUALHELP]
 >id="platform_segment_match_marketing"
 >title="受限制的行銷使用案例"
->abstract="受限制的行銷使用案例有助於為您的合作夥伴提供指引，以確保根據您的資料治理限制正確使用共用的區段。"
+>abstract="受限制的行銷使用案例有助於為您的合作夥伴提供指引，以確保根據您的資料控管限制正確使用共用的區段。"
 >text="Learn more in documentation"
 
 A **摘要** 是資料（區段）的分組、資料公開或使用方式的規則，以及決定資料與合作夥伴資料相符之方式的設定。 摘要可以獨立管理，並透過與其他Platform使用者交換 [!DNL Segment Match].

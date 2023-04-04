@@ -7,7 +7,7 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1463'
-ht-degree: 1%
+ht-degree: 14%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
->title="執行資料主體隱私請求"
->abstract="<h2>說明</h2><p>Adobe Experience Platform Privacy Service可讓您代表想要依照法律隱私權法規存取或刪除其個人資料的客戶，建立及管理隱私權要求。</p>"
+>title="執行資料主體隱私權要求"
+>abstract="<h2>說明</h2><p>Adobe Experience Platform Privacy Service 可讓您代表想要存取或刪除其個人資料的客戶，根據隱私權法規建立和管理隱私權要求。</p>"
 
 本檔案提供使用 [!DNL Privacy Service] 使用者介面。
 
@@ -109,7 +109,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="說明"
->abstract="<ul><li>選擇 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">請求</a> 在左側導覽中開啟「隱私權Ul」，然後選取 <b>建立請求</b>.</li><li>從這裡，您可以使用請求產生器，或上傳資料主體的JSON檔案。</li><li>如果使用請求產生器，請選取工作類型（存取和/或刪除），然後選擇您提供的身分類型（電子郵件、ECID或AAID）或輸入自訂身分命名空間。 為客戶輸入適當的標識值並選擇 <b>建立</b> 完成時。</li><li>如果上傳JSON檔案，請選取「建立請求」旁的箭頭。 從選項清單中，選取 <b>上傳JSON</b> 上傳您的檔案。 如果您沒有要上傳的JSON檔案，請選取 <b>下載Adobe-GDPR-Request.json</b> 下載可填入的範本。 上傳JSON並選取 <b>建立</b> 完成時。</li><li>如需此功能的詳細說明，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=zh-Hant">Privacy Service使用手冊</a> Experience League。</li></ul>"
+>abstract="<ul><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform">要求</a>以開啟隱私權 UI，然後選取<b>建立要求</b>。</li><li>從這裡您可以使用要求產生器或上傳資料主體的 JSON 檔案。</li><li>如果使用要求產生器，請選取工作類型 (存取和/或刪除)，然後選擇您提供的身分類型 (電子郵件、ECID 或 AAID) 或輸入自訂身分命名空間。為客戶輸入適當的身分值，完成後選取<b>建立</b>。</li><li>如果上傳 JSON 檔案，請選取「建立要求」旁邊的箭頭。從選項清單中，選取<b>上傳 JSON</b> 並上傳您的檔案。如果您沒有要上傳的 JSON 檔案，請選取<b>下載 Adobe-GDPR-Request.json</b> 以下載您可以填入的範本。完成後，上傳 JSON 並選取<b>建立</b>。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的 <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html?lang=zh-Hant">Privacy Service 使用手冊</a>。</li></ul>"
 
 >[!NOTE]
 >

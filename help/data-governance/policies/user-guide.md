@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
 workflow-type: tm+mt
 source-wordcount: '1618'
-ht-degree: 7%
+ht-degree: 19%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="在您的設定檔資料中整合併強制執行客戶同意"
->abstract="<h2>說明</h2><p>Platform可讓您將您從客戶收集到的同意資料整合至其個別設定檔。 然後，您可以設定同意原則，以判斷這些資料是否可包含在已啟動至特定目的地的區段中。</p>"
+>title="在您的設定檔資料中整合並強制執行客戶同意"
+>abstract="<h2>說明</h2><p>Platform 可讓您將從客戶收集來的同意資料整合到他們各自的設定檔中。然後，您可以設定同意原則以確定此資料是否可以包含在已啟用至特定目的地的區段中。</p>"
 
 本檔案說明如何使用 **[!UICONTROL 原則]** 工作區，以建立和管理資料使用原則。
 
@@ -92,7 +92,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="說明"
->abstract="<ul><li>請確定您要透過OneTrust來源連接器或標準XDM架構擷取偏好設定資料至聯合結構，以取得同意。</li><li>選擇 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a> 在左側導覽器中，然後選取 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">建立原則</a>.</li><li>在 <b>若</b> 部分，說明將觸發策略檢查的條件或操作。</li><li>在 <b>然後</b> 小節，輸入必須存在的同意屬性，配置檔案才能包含在觸發策略的操作中。</li><li>選擇 <b>儲存</b> 來建立策略。 要啟用策略，請選擇 <b>狀態</b> 在右側邊欄中切換。</li><li>Experience Platform會在您對目的地啟用區段時自動執行已啟用的同意原則，並提供每個原則如何影響對象規模的詳細資訊。</li><li>如需此功能的詳細說明，請參閱 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">建立同意原則</a> Experience League。</li></ul>"
+>abstract="<ul><li>確保您透過 OneTrust 來源連接器或標準 XDM 結構描述，將偏好設定資料擷取到您的聯合結構描述以取得同意。</li><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">建立原則</a>。</li><li>在 <b>If</b> 區段下，描述將觸發原則檢查的條件或動作。</li><li>在 <b>Then</b> 區段下，輸入同意屬性，此同意屬性必須存在才能將設定檔包含在觸發原則的動作中。</li><li>選取<b>儲存</b>以建立原則。若要啟用原則，請選取右側邊欄中的 <b>狀態</b>切換。</li><li>當您將區段啟用到目的地時，Experience Platform 會自動強制執行您的已啟用同意原則，並提供每個原則如何影響對象大小的詳細資訊。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy">建立同意原則</a>指南。</li></ul>"
 
 >[!IMPORTANT]
 >

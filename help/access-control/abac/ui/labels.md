@@ -19,7 +19,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_abac_labelusage"
 >title="標籤使用"
->abstract="您可以使用自訂標籤，將資料治理和存取權控制的設定套用至您的資料。"
+>abstract="您可以使用自訂標籤，將資料控管和存取權控制的設定套用至您的資料。"
 
 >[!NOTE]
 >

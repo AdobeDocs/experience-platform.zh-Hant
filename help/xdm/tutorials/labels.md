@@ -37,7 +37,7 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
->title="編輯治理標籤"
+>title="編輯控管標籤"
 >abstract="將標籤套用在方案欄位以顯示適用於該特定欄位中包含的資料的使用原則。"
 
 若要開始新增標籤，您必須先 [選擇要編輯的現有架構](../ui/resources/schemas.md#edit) 或 [建立新架構](../ui/resources/schemas.md#create) 在架構編輯器中查看其結構。

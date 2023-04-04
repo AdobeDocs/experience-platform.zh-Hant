@@ -16,7 +16,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_restrictusage"
 >title="限制資料使用方式"
->abstract="資料使用原則類型會評估套用於資料治理標籤的特定行銷動作，以限制行銷活動的資料使用方式。"
+>abstract="資料使用原則類型會評估套用於資料控管標籤的特定行銷動作，以限制行銷活動的資料使用方式。"
 
 為了讓資料使用標籤有效支援資料合規性，必須實施資料使用策略。 資料使用原則是描述您可對內的資料執行或限制的行銷動作類型的規則 [!DNL Experience Platform].
 
