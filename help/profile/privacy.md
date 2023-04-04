@@ -5,9 +5,9 @@ title: 即時客戶個人檔案中的隱私權要求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service會處理客戶存取、選擇退出銷售或刪除其個人資料的請求，這些資料是多項隱私權法規所規定。 本檔案涵蓋與處理即時客戶個人檔案隱私權要求相關的基本概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 4cb6280ea646f813a064eb08fef4ab29126ec3ea
+source-git-commit: e5ea0672ba8e9b5951464396a75decc5d8508ff4
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -186,10 +186,6 @@ curl -X POST \
 ## 刪除請求處理 {#delete}
 
 當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service], [!DNL Platform] 發送確認 [!DNL Privacy Service] 已收到請求，且受影響的資料已標示為刪除。 一旦隱私權工作完成，記錄便會移除。
-
->[!IMPORTANT]
->
->隱私權刪除請求並非即時執行，且可能會因相關服務和其他影響因素（例如地理位置）而有所不同。 完成隱私權工作的時間範圍可從15天到45天不等，但無法保證。
 
 視您是否也包含Identity Service(`identity`)和資料湖(`aepDataLake`)作為設定檔的隱私權要求中的產品(`ProfileService`)，則會在可能不同的時間從系統中移除與設定檔相關的不同資料集：
 
