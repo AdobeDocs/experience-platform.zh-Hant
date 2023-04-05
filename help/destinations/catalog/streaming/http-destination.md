@@ -3,9 +3,9 @@ keywords: 流；HTTP目的地
 title: HTTP API連線
 description: 使用Adobe Experience Platform中的HTTP API目的地，將設定檔資料傳送至協力廠商HTTP端點，以執行您自己的分析，或對匯出出Experience Platform的設定檔資料執行任何其他可能需要的作業。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 658cd7ec2d88d4b3633412f5c6d571351904e70b
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2431'
 ht-degree: 8%
 
 ---
@@ -213,7 +213,7 @@ Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API�
 
 | 決定目標匯出的因素 | 目的地匯出包含的項目 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至HTTP API目的地，因此指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果任何對應的區段變更狀態(從 `null` to `realized` 或 `realized` to `exiting`)或任何已對應的屬性，目的地匯出將會開始。</li><li>由於身分目前無法對應至HTTP API目的地，因此指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援HTTP API目的地中的身分對應)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -253,11 +253,11 @@ Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API�
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
          "lastQualificationTime":"2022-01-02T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
          "lastQualificationTime":"2021-08-25T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
          "lastQualificationTime":"2022-01-11T23:37:33Z",
@@ -295,7 +295,7 @@ Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API�
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
@@ -315,7 +315,7 @@ Experience Platform會最佳化將設定檔匯出行為匯出至您的HTTP API�
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,

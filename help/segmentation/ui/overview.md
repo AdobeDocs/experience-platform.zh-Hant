@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段服務UI指南
 description: Adobe Experience Platform區段服務提供建立和管理區段定義的使用者介面。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 11a4bb90b5d88f86ac14d702a213f56432a30c24
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2650'
 ht-degree: 3%
 
 ---
@@ -69,12 +69,11 @@ ht-degree: 3%
 
 您可以選取 ![篩選屬性圖示](../images/ui/overview/filter-attribute.png). 這些額外欄位包括劃分、評估方法和工作ID。
 
-如果選取劃分，顯示的橫條圖會概述屬於下列每個計算之設定檔狀態的設定檔百分比： [!UICONTROL 已實現], [!UICONTROL 現有]，和 [!UICONTROL 退出]. 此外， [!UICONTROL 瀏覽] 標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概述] 頁簽，您應使用 [!UICONTROL 瀏覽] 標籤作為正確的資訊源，因為 [!UICONTROL 概述] 標籤號每天只更新一次。
+如果選取劃分，顯示的橫條圖會概述屬於下列每個計算之設定檔狀態的設定檔百分比： [!UICONTROL 已實現] 和 [!UICONTROL 退出]. 此外， [!UICONTROL 瀏覽] 標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概述] 頁簽，您應使用 [!UICONTROL 瀏覽] 標籤作為正確的資訊源，因為 [!UICONTROL 概述] 標籤號每天只更新一次。
 
 | 狀態 | 說明 |
 | ------ | ----------- |
 | 已實現 | 過去24小時內符合區段資格的設定檔計數。 因此，自上次執行批次區段作業以來符合區段資格的設定檔數。 |
-| 現有 | 過去24小時內仍符合區段資格的設定檔計數。 因此，自上次執行批次區段工作以來，仍符合區段資格的設定檔數。 |
 | 退出 | 過去24小時內退出區段的設定檔計數。 因此，自上次執行批次區段工作以來，不再符合區段資格的設定檔數量。 |
 
 評估方法可以是串流、批次或邊。 資料進入系統時，會持續評估串流區段。 系統會根據設定的排程來評估批次區段。 會即時評估邊緣區段，以利使用相同的頁面和下一頁個人化使用案例。

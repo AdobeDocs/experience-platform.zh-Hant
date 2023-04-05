@@ -2,9 +2,9 @@
 description: 本頁面說明從Adobe Experience Platform匯出至目的地之資料中的訊息格式和設定檔轉換。
 title: 訊息格式
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
-source-wordcount: '2266'
+source-wordcount: '2267'
 ht-degree: 2%
 
 ---
@@ -93,7 +93,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 設定檔有3個區段：
 
 * `segmentMembership` （一律顯示在設定檔中）
-   * 本節包含設定檔上呈現的所有區段。 區段可以有3種狀態之一： `realized`, `existing`, `exited`.
+   * 本節包含設定檔上呈現的所有區段。 區段可以有兩種狀態之一： `realized` 或 `exited`.
 * `identityMap` （一律顯示在設定檔中）
    * 本節包含設定檔(電子郵件、Google GAID、Apple IDFA等)上呈現的所有身分識別，以及在啟用工作流程中對應以匯出的使用者。
 * 屬性（視目標設定而定，這些屬性可能存在於設定檔中）。 預先定義的屬性和自由格式屬性之間也有些許差異：
@@ -110,7 +110,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -139,7 +139,7 @@ Authorization: Bearer YOUR_REST_API_KEY
     "ups": {
       "11111111-1111-1111-1111-111111111111": {
         "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },
@@ -268,7 +268,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
       },
       "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
-        "status": "existing"
+        "status": "realized"
       },
       "8f812592-3f06-416b-bd50-e7831848a31a": {
         "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -291,7 +291,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
       },
       "af854278-894a-4192-a96b-320fbf2623fd": {
         "lastQualificationTime": "2021-08-20T16:44:37Z",
-        "status": "existing"
+        "status": "realized"
       },
       "66505bf9-bc08-4bac-afbc-8b6706650ea4": {
         "lastQualificationTime": "2019-08-20T17:23:04Z",
@@ -511,7 +511,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -685,7 +685,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
             },
             "788d8874-8007-4253-92b7-ee6b6c20c6f3": {
               "lastQualificationTime": "2019-11-20T13:15:49Z",
-              "status": "existing"
+              "status": "realized"
             },
             "8f812592-3f06-416b-bd50-e7831848a31a": {
                 "lastQualificationTime": "2019-11-20T13:15:49Z",
@@ -874,7 +874,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -894,7 +894,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
       "ups":{
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -914,7 +914,7 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -934,11 +934,11 @@ Adobe使用 [卵石模板](https://pebbletemplates.io/)，範本語言類似 [�
       "ups":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"existing"
+            "status":"realized"
          },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
-            "status":"existing"
+            "status":"realized"
          }
       }
    }
@@ -1194,7 +1194,7 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `input.profile` | 設定檔，表示為 [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). 遵循本頁上述的合作夥伴XDM結構。 |
 | `destination.segmentAliases` | 從Adobe Experience Platform命名空間中的區段ID對應至合作夥伴系統中的區段別名。 |
 | `destination.segmentNames` | 從Adobe Experience Platform命名空間中的區段名稱對應至合作夥伴系統中的區段名稱。 |
-| `addedSegments(listOfSegments)` | 僅傳回具有狀態的區段 `realized` 或 `existing`. |
+| `addedSegments(listOfSegments)` | 僅傳回具有狀態的區段 `realized`. |
 | `removedSegments(listOfSegments)` | 僅傳回具有狀態的區段 `exited`. |
 
 {style="table-layout:auto"}

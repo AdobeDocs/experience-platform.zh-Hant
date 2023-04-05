@@ -2,7 +2,7 @@
 description: 本頁列出並說明了您可使用「/authoring/testing/template/render」 API端點來執行的所有API操作，以便根據您的訊息轉換範本，呈現目的地的匯出資料。
 title: 呈現範本API操作
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 1%
@@ -84,7 +84,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -139,7 +139,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828461Z",
-                                "status": "existing"
+                                "status": "realized"
                             },
                             "segmentid3": {
                                 "lastQualificationTime": "2021-10-26T16:59:00.828469Z",
@@ -205,7 +205,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947859Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.947860Z",
@@ -255,7 +255,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                 "ups": {
                     "segmentid1": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948187Z",
-                        "status": "existing"
+                        "status": "realized"
                     },
                     "segmentid3": {
                         "lastQualificationTime": "2021-10-26T17:41:55.948188Z",
@@ -509,7 +509,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "android_channel",
                     "amazon_channel",
@@ -523,7 +523,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -545,7 +545,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -567,7 +567,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -589,7 +589,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -611,7 +611,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -633,7 +633,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -655,7 +655,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -677,7 +677,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -950,7 +950,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
             "aggregationKey": {
                 "destinationInstanceId": "49966037-32cd-4457-a105-2cbf9c01826a",
                 "segmentId": "segmentid1",
-                "segmentStatus": "existing",
+                "segmentStatus": "realized",
                 "identityNamespaces": [
                     "named_user_id"
                 ]
@@ -961,7 +961,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.947+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },
@@ -983,7 +983,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
                         "ups": {
                             "segmentid1": {
                                 "lastQualificationTime": "2021-10-26T17:41:55.948+0000",
-                                "status": "existing"
+                                "status": "realized"
                             }
                         }
                     },

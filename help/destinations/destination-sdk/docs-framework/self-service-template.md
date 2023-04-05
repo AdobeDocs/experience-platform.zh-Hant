@@ -2,7 +2,7 @@
 title: 檔案自助服務範本//以目的地名稱取代
 description: 使用此範本，在Adobe Experience Platform目錄中為您的目的地建立公開檔案。//將取代為概述區段中的段落
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 49b3553c3e408d2dfbca491b1df71be1d4aefaae
+source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -163,7 +163,7 @@ ht-degree: 1%
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

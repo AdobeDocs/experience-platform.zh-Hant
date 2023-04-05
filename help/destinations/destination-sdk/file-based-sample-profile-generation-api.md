@@ -2,9 +2,9 @@
 description: 本頁說明如何從Destination SDK使用/sample-profiles API端點，根據來源架構產生範例設定檔。 您可以使用這些範例設定檔來測試您的檔案式目的地設定。
 title: 根據來源結構產生範例設定檔
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '652'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 | -------- | ----------- |
 | `segmentMembership` | 描述個人區段成員資格的映射物件。 如需 `segmentMembership`，讀取 [區段成員資格詳細資料](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | 此設定檔符合區段資格的上次時間時間戳記。 |
-| `status` | 字串欄位，指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`existing`:在請求前，設定檔已是區段的一部分，並會繼續保留其成員資格。</li><li>`realized`:設定檔會在目前請求中輸入區段。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
+| `status` | 字串欄位，指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`realized`:設定檔是區段的一部分。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
 | `identityMap` | 一種地圖類型欄位，說明個人的各種身分值及其相關聯的命名空間。 如需 `identityMap`，請參閱 [綱要組合的基礎](../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}

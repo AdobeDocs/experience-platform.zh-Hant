@@ -2,9 +2,9 @@
 description: 本頁列出並說明了所有可使用「/authoring/sample-profiles」 API端點來執行的API操作，以產生要用於目標測試的範例設定檔。
 title: 設定檔產生API操作範例
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 789a3928379d200af292c722806f7ca72441d9f3
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '943'
 ht-degree: 1%
 
 ---
@@ -183,7 +183,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | -------- | ----------- |
 | `segmentMembership` | 描述個人區段成員資格的映射物件。 如需 `segmentMembership`，讀取 [區段成員資格詳細資料](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | 此設定檔符合區段資格的上次時間時間戳記。 |
-| `xdm:status` | 字串欄位，指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`existing`:在請求前，設定檔已是區段的一部分，並會繼續保留其成員資格。</li><li>`realized`:設定檔會在目前請求中輸入區段。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
+| `xdm:status` | 字串欄位，指出區段成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`realized`:設定檔是區段的一部分。</li><li>`exited`:設定檔會隨著目前請求退出區段。</li></ul> |
 | `identityMap` | 一種地圖類型欄位，說明個人的各種身分值及其相關聯的命名空間。 如需 `identityMap`，讀取 [方案組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style="table-layout:auto"}
@@ -240,7 +240,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609326Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609328Z",
@@ -285,7 +285,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609626Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609627Z",
@@ -330,7 +330,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
             "ups": {
                 "segmentid1": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609823Z",
-                    "status": "existing"
+                    "status": "realized"
                 },
                 "segmentid3": {
                     "lastQualificationTime": "2021-06-30T18:42:27.609824Z",

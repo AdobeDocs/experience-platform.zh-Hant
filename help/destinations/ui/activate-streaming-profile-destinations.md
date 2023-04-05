@@ -4,7 +4,7 @@ title: 對串流設定檔匯出目的地啟用受眾資料
 type: Tutorial
 description: 了解如何將區段傳送至以設定檔為基礎的串流目的地，以啟動Adobe Experience Platform中您擁有的受眾資料。
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 5bb2981b8187fcd3de46f80ca6c892421b3590f6
 workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 5%
@@ -120,7 +120,7 @@ ht-degree: 5%
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
         "lastQualificationTime": "2020-05-25T23:37:33Z",
-        "status": "existing"
+        "status": "realized"
       }
     }
   },

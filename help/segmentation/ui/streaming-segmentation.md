@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流劃分UI指南
 description: Adobe Experience Platform上的串流細分可讓您近乎即時執行細分，同時專注於資料的豐富性。 透過串流細分，區段資格現在會在資料進入Platform時進行，以緩解排程及執行區段工作的需求。 透過此功能，現在大部分的區段規則都可在資料傳入Platform時評估，這表示區段成員資格會保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果區段從沒有狀態變成已實現，或從退出變成已實現，則會視為合格。 如果區段從「已實現」變為「退出」，或從「現有」變為「退出」，則會視為無資格。
+>如果區段從沒有狀態變成已實現，或從退出變成已實現，則會視為合格。 如果區段從已實現到退出，則會視為無資格。
 >
 >有關這些狀態的詳細資訊，請參閱 [細分概述](./overview.md#browse).
 

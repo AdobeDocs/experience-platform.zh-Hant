@@ -5,9 +5,9 @@ title: 評估和存取區段結果
 type: Tutorial
 description: 請依照本教學課程，了解如何使用Adobe Experience Platform區段服務API評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 378f9260703d388976054431a76ac285724a9ae3
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1608'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ ht-degree: 0%
     "UPS": {
       "04a81716-43d6-4e7a-a49c-f1d8b3129ba9": {
         "timestamp": "2018-04-26T15:52:25+00:00",
-        "status": "existing"
+        "status": "realized"
       },
       "53cba6b2-a23b-454a-8069-fc41308f1c0f": {
         "lastQualificationTime": "2018-04-26T15:52:25+00:00",
@@ -129,7 +129,7 @@ ht-degree: 0%
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `lastQualificationTime` | 建立區段成員資格斷言以及設定檔輸入或退出區段時的時間戳記。 |
-| `status` | 目前請求中區段參與率的狀態。 必須等於下列其中一個已知值： <ul><li>`existing`:實體繼續在分部中。</li><li>`realized`:實體正在輸入區段。</li><li>`exited`:實體正在退出區段。</li></ul> |
+| `status` | 目前請求中區段參與率的狀態。 必須等於下列其中一個已知值： <ul><li>`realized`:實體符合區段資格。</li><li>`exited`:實體正在退出區段。</li></ul> |
 
 >[!NOTE]
 >

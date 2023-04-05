@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段作業API端點
 description: Adobe Experience Platform區段服務API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1498'
 ht-degree: 2%
 
 ---
@@ -130,7 +130,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -226,7 +225,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                 "segmentedProfileByStatusCounter":{
                     "94509dba-7387-452f-addc-5d8d979f6ae8":{
                         "exited":144646,
-                        "existing":10,
                         "realized":2056
                     }
                 },
@@ -275,7 +273,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.profileSegmentationTime` | 此物件包含分段評估開始和結束時間，以及所用總時間的相關資訊。 |
 | `metrics.segmentProfileCounter` | 每個區段合格的設定檔數量。 |
 | `metrics.segmentedProfileByNamespaceCounter` | 每個區段中符合每個身分命名空間資格的設定檔數量。 |
-| `metrics.segmentProfileByStatusCounter` | 每個狀態的設定檔計數。 支援下列三種狀態： <ul><li>「已實現」 — 進入區段的新設定檔數量。</li><li>「現有」 — 區段中繼續存在的設定檔數目。</li><li>「退出」 — 區段中已不存在的設定檔區段數。</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | 每個狀態的設定檔計數。 支援下列三種狀態： <ul><li>「已實現」 — 符合區段資格的設定檔數量。</li><li>「退出」 — 區段中已不存在的設定檔區段數。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 每個合併策略的合併配置檔案總數。 |
 
 ## 建立新區段作業 {#create}
@@ -373,7 +371,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -494,7 +491,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },
@@ -674,7 +670,6 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
         "segmentedProfileByStatusCounter":{
             "7863c010-e092-41c8-ae5e-9e533186752e":{
                 "exited":144646,
-                "existing":10,
                 "realized":2056
             }
         },

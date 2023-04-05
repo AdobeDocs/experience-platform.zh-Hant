@@ -3,9 +3,9 @@ keywords: Azure事件中心目標；Azure事件中心；Azure eventhub
 title: Azure事件集線器連接
 description: 建立與 [!DNL Azure Event Hubs] 儲存以從Experience Platform串流資料。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: ce20c273cb6a87264363c03611ccfdfb783e595f
+source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2062'
 ht-degree: 4%
 
 ---
@@ -134,7 +134,7 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Azure Event Hub
 
 | 決定目標匯出的因素 | 目的地匯出包含的項目 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示，如果任何映射的段更改狀態（從null更改為已實現或從已實現/現有更新為正在退出）或任何映射的屬性被更新，則將啟動目標導出。</li><li>由於身分目前無法對應至 [!DNL Azure Event Hubs] 目的地、指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援 [!DNL Azure Event Hubs] 目的地)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果任何對應的區段變更狀態(從 `null` to `realized` 或 `realized` to `exiting`)或任何已對應的屬性，目的地匯出將會開始。</li><li>由於身分目前無法對應至 [!DNL Azure Event Hubs] 目的地、指定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的更改定義為對屬性的任何更新，無論其是否為相同值。 這表示即使值本身未變更，屬性的覆寫仍視為變更。</li></ul> | <ul><li>此 `segmentMembership` 對象包括在激活資料流中映射的段，在資格鑑定或段退出事件後，配置檔案的狀態已更改。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可能是目的地匯出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 作為激活資料流中映射的段。 </li><li>中的所有身分 `identityMap` 也包含物件(Experience Platform目前不支援 [!DNL Azure Event Hubs] 目的地)。</li><li>目標匯出中僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -174,11 +174,11 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Azure Event Hub
       },
       "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae":{
          "lastQualificationTime":"2022-01-02T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "947c1c46-008d-40b0-92ec-3af86eaf41c1":{
          "lastQualificationTime":"2021-08-25T23:37:33Z",
-         "status":"existing"
+         "status":"realized"
       },
       "5114d758-ce71-43ba-b53e-e2a91d67b67f":{
          "lastQualificationTime":"2022-01-11T23:37:33Z",
@@ -216,7 +216,7 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Azure Event Hub
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
@@ -236,7 +236,7 @@ Experience Platform會最佳化將設定檔匯出至您的 [!DNL Azure Event Hub
         "ups": {
           "5b998cb9-9488-4ec3-8d95-fa8338ced490": {
             "lastQualificationTime": "2019-04-15T02:41:50+0000",
-            "status": "existing",
+            "status": "realized",
             "createdAt": 1648553325000,
             "updatedAt": 1648553330000,
             "mappingCreatedAt": 1649856570000,
