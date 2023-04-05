@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2023年3月Adobe Experience Platform發行說明。
-source-git-commit: 1aeaf832f6cb2acf65c25199693b06669682883b
+source-git-commit: 5f7cc08d48b7cf7d057fe199882be011607e51e6
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -51,6 +51,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 功能 | 說明 |
 | --- | --- |
 | 中繼轉換API（測試版）的全新快速入門工作流程 | 從資料收集主畫面存取「快速入門」底下的全新快速入門工作流程！ 此 [中繼轉換API的快速入門工作流程](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) 讓客戶只需幾個簡單步驟，即可快速收集和轉送事件資料（從伺服器端轉送至中繼），以進行廣告轉換。 |
+| Mobile SDK（測試版）全新快速入門工作流程 | 從資料收集主畫面存取「快速入門」底下的全新快速入門工作流程！ 此 [行動SDK的快速入門工作流程](https://developer.adobe.com/client-sdks/documentation/) 可讓您快速實作行動SDK，並只需幾個簡單步驟即可驗證基本行動事件。 |
 | [!DNL Braze] 事件轉送擴充功能 | 此 [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 事件轉送擴充功能可讓您運用Adobe Experience Platform邊緣網路中擷取的資料，並將其傳送至 [!DNL Braze] 以伺服器端事件的形式，使用 [!DNL Braze] 使用者追蹤API。 |
 | [!DNL Epsilon] 事件轉送擴充功能 | 此 [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 擴充功能可讓您運用事件轉送功能，擷取Adobe Experience Platform邊緣網路中的事件資訊，並傳送至 [!DNL Epsilon] 使用 [!DNL Epsilon] 事件API。 |
 | [!DNL Mixpanel] 事件轉送擴充功能 | 此 [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 擴充功能可讓客戶運用事件轉送功能，擷取Adobe Experience Platform邊緣網路中的事件資訊，並使用追蹤事件API將其傳送至Mixpanel。 |
