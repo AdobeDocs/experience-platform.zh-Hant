@@ -1,18 +1,14 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: 2023年3月Adobe Experience Platform發行說明。
-source-git-commit: 5f7cc08d48b7cf7d057fe199882be011607e51e6
+source-git-commit: 5b8dd4b295f9363fd7e848070b1ec21ff519c524
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2205'
+ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform 發行說明
-
->[!IMPORTANT]
->
->從2023年4月5日起， `Existing` 狀態將從區段成員資格映射中淘汰，以在區段成員資格生命週期中移除備援。 此變更後，區段中符合資格的設定檔會顯示為 `Realized` 取消資格的設定檔會繼續顯示為 `Exited`. 欲知有關此更改的更多詳情，請閱讀 [區段服務區段](#segmentation).
 
 **發行日期：2023 年 3 月 29 日**
 
@@ -189,7 +185,6 @@ Real-Time CDP B2B Edition以Real-time Customer Data Platform(Real-Time CDP)為�
 | 功能 | 說明 |
 | ------- | ----------- |
 | 設定檔量度 | 為了讓您更精確地呈現設定檔量度，系統會結合成員劃分和流失量度，現在會在24小時內計算。 如需詳細資訊，請參閱 [區段UI指南](../../segmentation/ui/overview.md#browse) |
-| 區段成員資格對應 | 為貫徹上次於2023年2月5日發佈的公告， `Existing` 狀態將從區段成員資格映射中淘汰，以在區段成員資格生命週期中移除備援。 此變更後，區段中符合資格的設定檔會顯示為 `Realized` 取消資格的設定檔會繼續顯示為 `Exited`.<br/><br/> 如果您使用 [企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure事件中樞、HTTP API)，且可能已根據 `Existing` 狀態。 如果適合您，請檢閱您的下游整合。 如果您想要識別超過特定時間的新合格設定檔，請考慮使用 `Realized` 狀態和 `lastQualificationTime` 在區段成員資格對應中。 如需詳細資訊，請洽詢您的Adobe代表。 |
 
 {style="table-layout:auto"}
 
