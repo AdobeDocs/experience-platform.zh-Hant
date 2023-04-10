@@ -3,9 +3,9 @@ title: 事件轉送快速入門
 description: 請依照此逐步教學課程，開始使用Adobe Experience Platform中的事件轉送。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '873'
 ht-degree: 27%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 27%
 
 ## 先決條件
 
-* Adobe Experience Platform Collection Enterprise（請洽詢您的客戶經理以取得價格）
+* Adobe Experience Platform Collection Enterprise(請聯絡您的Adobe客戶團隊以取得定價)
 * Adobe Experience Platform中的事件轉送
 * 設定 Adobe Experience Platform Web 或 Mobile SDK，將資料傳送至 Edge Network
 * 將資料對應至Experience Data Model(XDM)（此對應可使用標籤完成）

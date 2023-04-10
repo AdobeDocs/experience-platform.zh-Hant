@@ -2,9 +2,9 @@
 title: 資料收集端對端概述
 description: 概略說明如何使用Adobe Experience Platform的資料收集功能，將事件資料傳送至Adobe Experience Cloud解決方案。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2621'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform會收集您的資料，並將其傳輸至其他Adobe�
 
 請參閱 [管理資料收集的權限](./permissions.md) 了解如何授予屬性和屬性權限的存取權。
 
-若要使用本指南中提及的各種資料收集產品，您還必須擁有資料流的存取權，以及建立和管理結構的功能。 若您需要存取其中一項功能，請聯絡您的CSM以協助您取得必要的存取權。 請注意，如果您尚未購買Adobe Experience Platform,Adobe會免費提供您使用SDK的必要存取權。
+若要使用本指南中提及的各種資料收集產品，您還必須擁有資料流的存取權，以及建立和管理結構的功能。 如果您需要存取其中一項功能，請聯絡您的Adobe客戶團隊，協助您取得必要的存取權。 請注意，如果您尚未購買Adobe Experience Platform,Adobe會免費提供您使用SDK的必要存取權。
 
 如果您已擁有Platform的存取權，您必須確保擁有 [權限](../access-control/home.md#permissions) 在啟用的下列類別下：
 

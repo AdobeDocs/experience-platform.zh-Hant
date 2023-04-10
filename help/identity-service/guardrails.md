@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用和比率限制資訊，協助您最佳化身分圖表的使用。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b5368382b42f478f6019c5ee925e56ec91ea6930
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '491'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 ### 身分命名空間擷取
 
-自2023年3月31日起，Identity Service將封鎖新客戶擷取Adobe Analytics ID(AAID)的程式。 此身分識別通常會透過 [Adobe Analytics來源](../sources/connectors/adobe-applications/analytics.md) 和 [Adobe Audience Manager來源](../sources//connectors/adobe-applications/audience-manager.md) 且是多餘的，因為ECID代表相同的Web瀏覽器。 如果您想要變更此預設設定，請連絡您的帳戶管理員。
+自2023年3月31日起，Identity Service將封鎖新客戶擷取Adobe Analytics ID(AAID)的程式。 此身分識別通常會透過 [Adobe Analytics來源](../sources/connectors/adobe-applications/analytics.md) 和 [Adobe Audience Manager來源](../sources//connectors/adobe-applications/audience-manager.md) 且是多餘的，因為ECID代表相同的Web瀏覽器。 如果您想要變更此預設設定，請連絡您的Adobe帳戶團隊。
 
 ## 後續步驟
 

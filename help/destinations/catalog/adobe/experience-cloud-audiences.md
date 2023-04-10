@@ -2,9 +2,9 @@
 title: （測試版）Experience Cloud對象
 description: 了解如何將區段從Experience Platform分享至各種Experience Platform解決方案。
 last-substantial-update: 2023-01-25T00:00:00Z
-source-git-commit: 32222aa1c96537b51cd0db35d9cdabce9210f64a
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '1512'
+source-wordcount: '1509'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ Note: briefly talk about when to share segments to these destinations using the 
 
 ### 針對使用舊式區段共用解決方案的客戶
 
-如果您已透過以下連結共用區段：從Experience Platform共用至Audience Manager和其他Experience Cloud解決方案 [舊式區段共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=en#aep-segments-in-aam)，您必須聯絡客戶服務或您的客戶成功經理，才能停用舊版整合。 客戶服務和客戶支援管理團隊必須提交Jira票證(請參閱範本票證AAM-52354)以停用整合。
+如果您已透過以下連結共用區段：從Experience Platform共用至Audience Manager和其他Experience Cloud解決方案 [舊式區段共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)，您必須聯絡客戶服務或您的Adobe帳戶團隊，以停用舊版整合。 客戶服務和Adobe帳戶團隊必須提交Jira票證(請參閱範本票證AAM-52354)，才能停用整合。
 
 解決測試版客戶取消資源調配票證的週轉時間為6個工作日或更短時間。 停用現有舊版整合後，您可以繼續 [建立連線](#connect) 透過自助服務目的地卡。
 

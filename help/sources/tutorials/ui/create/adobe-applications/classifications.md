@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 在UI中為分類資料建立Adobe Analytics來源連線
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '659'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 6%
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md):Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-Analytics分類Data Connector會要求您的資料已移轉至新的 [!DNL Classifications] Adobe Analytics基礎設施。 若要確認資料的移轉狀態，請連絡您的Adobe客戶成功經理。
+Analytics分類Data Connector會要求您的資料已移轉至新的 [!DNL Classifications] Adobe Analytics基礎設施。 若要確認資料的移轉狀態，請連絡您的Adobe客戶團隊。
 
 ## 選取您的分類
 

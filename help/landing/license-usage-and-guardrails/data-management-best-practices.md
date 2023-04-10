@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料管理；授權；
 title: 資料管理許可證權限最佳做法
 description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 252ca6c62b6b95e3a01211c15d7361146dee5116
+source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2133'
 ht-degree: 2%
 
 ---
@@ -156,7 +156,7 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 | 功能 | 說明 |
 | --- | --- |
 | [啟用/停用設定檔的資料集](../../catalog/datasets/user-guide.md) | 啟用或停用將資料集內嵌至即時客戶個人檔案中。 |
-| [體驗事件過期](../../profile/event-expirations.md) | 對擷取至啟用設定檔資料集的所有事件套用到期時間。 請連絡您的Adobe支援代表以啟用此功能。 |
+| [體驗事件過期](../../profile/event-expirations.md) | 對擷取至啟用設定檔資料集的所有事件套用到期時間。 請連絡您的Adobe客戶團隊或客戶服務以啟用此功能。 |
 | [Adobe Analytics資料準備篩選器](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 套用 [!DNL Kafka] 從擷取中排除不必要資料的篩選器 |
 | [Adobe Audience Manager來源連接器篩選器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | 套用Audience Manager來源連線篩選器，以排除不必要的資料不擷取 |
 | [Alloy SDK資料篩選器](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | 套用合金篩選器以排除不必要的資料不擷取 |

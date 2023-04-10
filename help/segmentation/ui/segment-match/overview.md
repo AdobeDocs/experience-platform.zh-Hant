@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 區段符合概述
 description: 區段比對是Adobe Experience Platform中的區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式來交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 2%
@@ -56,7 +56,7 @@ Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多�
 
 選擇加入和選擇退出同意檢查會決定您是否可以以同意的方式操作，以依預設共用使用者資料。 如果同意設定預設設為 `opt-out`，則可共用使用者資料，除非使用者明確選擇退出。 如果預設值設為 `opt-in`，則無法共用使用者資料，除非使用者明確選擇加入。
 
-的預設同意設定 [!DNL Segment Match] 設為 `opt-out`. 若要對您的資料強制執行選擇加入模型，請傳送電子郵件要求給您的Adobe客戶經理。
+的預設同意設定 [!DNL Segment Match] 設為 `opt-out`. 若要對您的資料強制執行選擇加入模型，請傳送電子郵件要求給您的Adobe帳戶團隊。
 
 如需 `share` 用於設定資料共用同意值的屬性，請參閱下列檔案，位於 [隱私權與同意欄位群組](../../../xdm/field-groups/profile/consents.md). 如需用於擷取消費者同意以收集和使用與隱私權、個人化和行銷偏好設定相關資料之特定欄位群組的資訊，請參閱下列內容 [隱私權、個人化和行銷偏好設定的同意GitHub範例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

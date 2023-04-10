@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Analytics分類資料的Source Connector
 description: 了解如何使用使用者介面將Analytics分類連結至Platform
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用來�
 
 [!DNL Experience Platform] 支援將Analytics分類資料擷取至Adobe Experience Platform。
 
-分類可讓Analytics變數資料在產生報表時，以不同方式分類和顯示。 Analytics分類Data Connector會要求您的資料已移轉至新的 [!DNL Classifications] Adobe Analytics基礎設施。 若要確認資料的移轉狀態，請連絡您的Adobe客戶成功經理。
+分類可讓Analytics變數資料在產生報表時，以不同方式分類和顯示。 Analytics分類Data Connector會要求您的資料已移轉至新的 [!DNL Classifications] Adobe Analytics基礎設施。 若要確認資料的移轉狀態，請連絡您的Adobe客戶團隊。
 
 以下檔案提供如何使用使用者介面將Analytics分類連結至Platform的資訊：
 

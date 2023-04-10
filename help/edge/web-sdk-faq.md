@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 5586c788f4ae5c61b3b94f93b4180fc293d7e179
+source-git-commit: a8f6bb8c3e35f4c17812ef944440210b7fe3f87b
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2104'
 ht-degree: 2%
 
 ---
@@ -101,7 +101,7 @@ Adobe Experience Platform Web SDK已開發給下列人員：
 
 ## 如何存取Adobe Experience Platform Web SDK?
 
-Web SDK目前可供一般大眾使用，且可用於傳送資料至Adobe Experience Cloud產品。 將資料傳送至協力廠商解決方案的功能即將推出。 SDK是免費的、由Adobe免費托管，且可以下載，讓您可以視需要免費在自己的伺服器上托管。 Platform Web SDK需要存取Datastream設定和Adobe Experience Platform XDM結構產生器，以便Adobe的伺服器正確處理來自SDK的傳入資料。 若想取得存取權，請聯絡客戶成功經理(CSM)以開始要求程式。
+Web SDK目前可供一般大眾使用，且可用於傳送資料至Adobe Experience Cloud產品。 將資料傳送至協力廠商解決方案的功能即將推出。 SDK不收費，且由Adobe免費托管。 如有需要，您可以免費下載並在自己的伺服器上托管。 Platform Web SDK需要存取Datastream設定和Adobe Experience Platform XDM結構產生器，以便Adobe的伺服器正確處理來自SDK的傳入資料。 如果您想要取得存取權，請連絡您的Adobe帳戶團隊以開始請求程式。
 
 ## Web SDK目前支援哪些使用案例？
 
