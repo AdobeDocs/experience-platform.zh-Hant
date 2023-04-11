@@ -3,10 +3,10 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: (API)SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud（舊稱ExactTarget）目的地可讓您匯出帳戶資料，並在SalesforceMarketing Cloud中根據您的業務需求啟用它。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 5a9b7af3b009f8529f2e473b17f77c54de35003e
+source-git-commit: 017ccadc1689663059aa1214c5440549b509e81b
 workflow-type: tm+mt
-source-wordcount: '2458'
-ht-degree: 0%
+source-wordcount: '2619'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >請注意此連線與其他 [[!DNL Salesforce Marketing Cloud] 連接](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 存在於電子郵件行銷目錄區段中。 另一個SalesforceMarketing Cloud連線可讓您將檔案匯出至指定的儲存位置，而這是以API為基礎的串流連線。
 
-此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 利用 [!DNL Salesforce Marketing Cloud] [更新聯繫人](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API，可讓您在新的 [!DNL Salesforce Marketing Cloud] 區段。
+此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 利用 [!DNL Salesforce Marketing Cloud] [更新聯繫人](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API，可讓您 **添加聯繫人和更新聯繫人資料** 在新 [!DNL Salesforce Marketing Cloud] 區段。
 
 [!DNL Salesforce Marketing Cloud] 使用OAuth 2搭配用戶端憑證作為驗證機制，與 [!DNL Salesforce Marketing Cloud] API。 向您的 [!DNL Salesforce Marketing Cloud] 執行個體在下方， [驗證到目標](#authenticate) 區段。
 
@@ -260,3 +260,20 @@ A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [Marketing Cloud帳戶
 
 * [!DNL Salesforce Marketing Cloud] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/apis-overview.html)
 * [!DNL Salesforce Marketing Cloud] [檔案](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) 說明如何使用指定屬性組中的指定資訊更新聯繫人。
+
+### 變更記錄 {#changelog}
+
+本節將說明此目的地連接器的功能及重要檔案更新。
+
++++ 查看更改日誌
+
+| 發行月 | 更新類型 | 說明 |
+|---|---|---|
+| 2023 年 2 月 | 檔案更新 | 我們已更新 [(API)SalesforceMarketing Cloud中的必要條件](#prerequisites-destination) 區段來包含引用連結呼叫， [!DNL Salesforce Marketing Cloud Account Engagement] 是使用此目的地的強制訂閱。 |
+| 2023 年 2 月 | 功能更新 | 我們修正了目標中的錯誤設定導致格式錯誤的JSON傳送至Salesforce的問題。 這導致某些使用者在啟動時發現大量身分識別失敗。 (PLATIR-26299) |
+| 2023 年 1 月 | 檔案更新 | <ul><li>我們已更新 [中的必要條件 [!DNL Salesforce]](#prerequisites-destination) 區段來呼叫需要在 [!DNL Salesforce] 側。 本節現在包含如何執行此動作的詳細指示，以及中關於命名屬性的最佳實務 [!DNL Salesforce]. (PLATIR-25602)</li><li>我們已新增清楚指示，說明如何在 [區段排程](#schedule-segment-export-example) 步驟。 (PLATIR-25602)</li></ul> |
+| 2022 年 10 月 | 首次發行 | 初始目的地發行和檔案發佈。 |
+
+{style="table-layout:auto"}
+
++++
