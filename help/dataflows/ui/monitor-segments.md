@@ -4,10 +4,10 @@ description: 區段可讓您透過即時客戶個人檔案資料建立區段和�
 title: 監視UI中區段的資料流
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1923'
-ht-degree: 4%
+source-wordcount: '1919'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="區段"
->abstract="區段視圖會包含有關您的 IMS 組織區段的所有資訊，以及有關其啟動和評估作業的進一步資訊。"
+>abstract="區段檢視包含您組織所有區段的相關資訊，以及其啟用和評估工作的詳細資訊。"
 
 若要存取 **[!UICONTROL 區段]** 控制面板，選取 **[!UICONTROL 監控]** 的下一頁。 一次 **[!UICONTROL 監控]** 頁面，選擇 **[!UICONTROL 區段]** 卡片。
 
@@ -48,7 +48,7 @@ ht-degree: 4%
 >
 >目前，僅限啟動至的區段 [批次（檔案型）目的地](../../destinations/destination-types.md#file-based) 「監控區段」控制面板支援。
 
-![區段控制面板。 系統會顯示您IMS組織和沙箱中不同區段的相關資訊。](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
+![區段控制面板。 系統會顯示您組織和沙箱中不同區段的相關資訊。](../assets/ui/monitor-segments/segment-monitoring-dashboard.png)
 
 此控制面板檢視可使用下列量度：
 
@@ -109,7 +109,7 @@ ht-degree: 4%
 | **[!UICONTROL 資料流運行開始]** | 啟動作業的開始日期和時間。 |
 | **[!UICONTROL 資料流運行結束]** | 啟動作業結束的日期和時間。 |
 | **[!UICONTROL 資料流運行ID]** | 當前激活作業的ID。 |
-| **[!UICONTROL IMS組織ID]** | 啟動工作所屬的IMS組織ID。 |
+| **[!UICONTROL IMS組織ID]** | 啟動工作所屬組織的ID。 |
 | **[!UICONTROL 目的地名稱]** | 要啟動資料的目標名稱。 |
 
 量度下方會顯示切換按鈕，在資料流執行錯誤和區段之間進行選取。
@@ -130,7 +130,7 @@ ht-degree: 4%
 | ------ | ----------- |
 | **[!UICONTROL 名稱]** | 已啟用的區段名稱。 |
 | **[!UICONTROL 啟用的身分]** | 根據收到的設定檔成功啟動至目的地的身分總數。 |
-| **[!UICONTROL 排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭排除。 |
+| **[!UICONTROL 排除的身分]** | 根據收到的設定檔，排除不會啟動至目的地的身分總數。 由於遺失屬性或違反同意，這些身分可能會遭到排除。 |
 | **[!UICONTROL 上次資料流運行狀態]** | 為該區段執行的上次啟動工作的狀態。 |
 | **[!UICONTROL 上次資料流運行日期]** | 針對該區段執行的上次啟動工作的日期和時間。 |
 
@@ -151,7 +151,7 @@ ht-degree: 4%
 | **[!UICONTROL 作業類型]** | 區段作業的類型。 在此情況下，它將永遠是區段評估工作。 |
 | **[!UICONTROL 評估類型]** | 正在進行的評估類型。 這可以是 **[!UICONTROL 批次]** 或 **[!UICONTROL 串流]**. |
 | **[!UICONTROL 工作ID]** | 評估作業的ID。 |
-| **[!UICONTROL IMS組織ID]** | 評估工作所屬的IMS組織ID。 |
+| **[!UICONTROL IMS組織ID]** | 評估作業所屬組織的ID。 |
 | **[!UICONTROL 區段名稱]** | 要評估的區段名稱。 |
 | **[!UICONTROL 區段ID]** | 正在評估的區段ID。 |
 
