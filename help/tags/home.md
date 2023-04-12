@@ -2,14 +2,18 @@
 title: 標籤概覽
 description: Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標記功能，以強化相關客戶體驗。
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 4f31c77fd3efe06797055ca04a30ae5ff4872b4e
+source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 78%
+source-wordcount: '585'
+ht-degree: 75%
 
 ---
 
 # 標記總覽
+
+>[!NOTE]
+>
+>事件轉送是付費功能，包含在Adobe Real-time Customer Data Platform連線、Prime或Ultimate等產品中。
 
 >[!NOTE]
 >
