@@ -2,9 +2,9 @@
 title: 位置提示
 description: 本文說明位置提示在邊緣網路伺服器API中如何運作，以便讓一般使用者要求一律路由至相同的伺服器。
 exl-id: 8cd2f8e2-2065-4b7e-8d35-4ed1a716f1b3
-source-git-commit: 80c527ab3c82e01fe19e5003e224d63e79b23bdc
+source-git-commit: 2c7a5f007189d897ed32302a2a80c1e16af6af80
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -62,4 +62,4 @@ POST 'https://edge.adobedc.net/ee/{LOCATION_HINT}/v2/interact?dataStreamId={Data
 
 若要確保邊緣網路傳回的位置提示在工作階段期間持續存在，您可以將位置提示值與Cookie期限(包含在 `ttlSeconds` 欄位（通常為1800秒）。
 
-和大部分的Cookie一樣，每次有來自邊緣網路的回應時，您都應延長此Cookie的存留期。 若要確保與Web SDK的最大相容性，請使用Cookie名稱 `kndctr_{IMSORG}_AdobeOrg_cluster`. IMS組織ID的結尾通常為 `@AdobeOrg`. 此 `@` 值必須轉換為底線，才能確保cookie的格式正確。
+和大部分的Cookie一樣，每次有來自邊緣網路的回應時，您都應延長此Cookie的存留期。 若要確保與Web SDK的最大相容性，請使用Cookie名稱 `kndctr_{IMSORG}_AdobeOrg_cluster`. 組織ID的結尾通常為 `@AdobeOrg`. 此 `@` 值必須轉換為底線，才能確保cookie的格式正確。

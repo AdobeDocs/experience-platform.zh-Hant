@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 自助來源快速入門（批次SDK）
 description: 本檔案介紹您在嘗試使用自助來源（批次SDK）建立新來源之前，需要知道的先決條件資訊。
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-若要使用自助來源（批次SDK），您必須確定擁有已布建Adobe Experience Platform來源之IMS組織沙箱的存取權。
+若要使用自助來源（批次SDK），您必須確保擁有布建有Adobe Experience Platform來源之組織沙箱的存取權。
 
 本指南也需要妥善了解下列Adobe Experience Platform元件：
 

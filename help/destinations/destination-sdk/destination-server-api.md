@@ -2,9 +2,9 @@
 description: 本頁列出並說明所有可使用「/authoring/destination-servers」 API端點執行的API操作。 目標的伺服器和模板規格可通過公共端點「/authoring/destination-servers」在Adobe Experience Platform Destination SDK中配置。
 title: 目標伺服器端點API操作
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1355'
 ht-degree: 3%
 
 ---
@@ -603,7 +603,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 列出目標伺服器配置 {#retrieve-list}
 
-您可以向提出GET要求，以擷取IMS組織的所有目標伺服器設定清單 `/authoring/destination-servers` 端點。
+您可以向 `/authoring/destination-servers` 端點。
 
 **API格式**
 
@@ -613,7 +613,7 @@ GET /authoring/destination-servers
 
 **要求**
 
-下列請求會根據IMS組織和沙箱設定，擷取您有權存取的目標伺服器設定清單。
+下列請求會根據組織和沙箱設定，擷取您有權存取的目標伺服器設定清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -625,7 +625,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您可存取的目標伺服器設定。 一 `instanceId` 對應於一個目標伺服器的模板。 回應會為簡潔而截斷。
+下列回應會根據您使用的組織ID和沙箱名稱，傳回HTTP狀態200，以及您有權存取的目標伺服器設定清單。 一 `instanceId` 對應於一個目標伺服器的模板。 回應會為簡潔而截斷。
 
 ```json
 {

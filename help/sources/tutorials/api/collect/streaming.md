@@ -5,9 +5,9 @@ title: 使用流服務API為原始資料建立流資料流
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源連接器和API將其匯入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1098'
 ht-degree: 2%
 
 ---
@@ -204,7 +204,7 @@ curl -X POST \
 
 ## 建立目標連線 {#target-connection}
 
-Target連線會建立和管理到Platform或傳輸資料將著陸的任何位置的目的地連線。 目標連接包含有關資料目標、資料格式以及建立資料流所需的目標連接ID的資訊。 Target連線例項是租用戶和IMS組織專屬的。
+Target連線會建立和管理到Platform或傳輸資料將著陸的任何位置的目的地連線。 目標連接包含有關資料目標、資料格式以及建立資料流所需的目標連接ID的資訊。 Target連線例項是租用戶和組織專屬的。
 
 若要建立目標連線，請向 `/targetConnections` 端點 [!DNL Flow Service] API。 在請求中，您必須提供資料格式，即 `dataSetId` 在前一步驟中檢索到，並且固定連接規範ID與 [!DNL Data Lake]. 此ID為 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -419,7 +419,7 @@ curl -X GET \
 
 - [源連接ID](#source)
 - [Target連線ID](#target)
-- [對應ID](#mapping)
+- [對應 ID](#mapping)
 - [資料流規範ID](#specs)
 
 資料流負責從源中調度和收集資料。 您可以在裝載中提供先前提及的值時，執行POST要求來建立資料流。

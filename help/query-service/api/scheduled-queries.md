@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 計畫端點
 description: 以下小節將逐步說明您可使用Query Service API針對已排程查詢所進行的各種API呼叫。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1132'
 ht-degree: 2%
 
 ---
@@ -45,7 +45,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 **要求**
 
-下列請求會擷取為您的IMS組織建立的最新排程查詢。
+下列請求會擷取為貴組織建立的最新排程查詢。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並附上指定IMS組織的已排程查詢清單。 下列回應會傳回為IMS組織建立的最新排程查詢。
+成功的回應會傳回HTTP狀態200，並附上指定組織的已排程查詢清單。 下列回應會傳回為組織建立的最新排程查詢。
 
 ```json
 {

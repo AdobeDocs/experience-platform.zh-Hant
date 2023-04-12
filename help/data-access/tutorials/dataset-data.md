@@ -5,9 +5,9 @@ title: 使用資料存取API檢視資料集資料
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform中的「資料存取API」來尋找、存取和下載資料集內儲存的資料。 此外，我們也會介紹您使用資料存取API的部分獨特功能，例如分頁和部分下載。
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1388'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 若要取得 [!DNL Catalog] API，請參閱 [API參考](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
-## 在您的IMS組織下擷取批次清單
+## 擷取組織下的批次清單
 
 使用 [!DNL Catalog] API，您可以在組織下傳回批次清單：
 
@@ -84,7 +84,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **回應**
 
-回應包含一個物件，列出與IMS組織相關的所有批次，每個頂層值代表一個批次。 單個批對象包含該特定批的詳細資訊。 已針對空間最小化以下響應。
+回應包含一個物件，列出與組織相關的所有批次，每個頂層值代表一個批次。 單個批對象包含該特定批的詳細資訊。 已針對空間最小化以下響應。
 
 ```json
 {

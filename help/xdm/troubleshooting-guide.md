@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找Experience Data Model(XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2073'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,7 @@ ht-degree: 0%
 
 當您嘗試建立命名空間不正確的欄位的資源，或將命名空間不正確的欄位新增至現有資源時，會顯示此錯誤訊息。
 
-由您的IMS組織定義的資源必須命名您的租用戶ID下的欄位，以避免與其他產業和廠商資源產生衝突。 使用標準欄位群組建立架構時，您在這些欄位群組結構中新增的任何自訂欄位，也必須以租用戶ID命名。
+貴組織定義的資源必須命名租用戶ID下的欄位，以避免與其他產業和廠商資源產生衝突。 使用標準欄位群組建立架構時，您在這些欄位群組結構中新增的任何自訂欄位，也必須以租用戶ID命名。
 
 >[!NOTE]
 >

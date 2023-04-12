@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 批次內嵌API指南
 description: 本檔案為開發人員提供使用適用於Adobe Experience Platform的批次擷取API的完整指南。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2412'
+source-wordcount: '2411'
 ht-degree: 4%
 
 ---
@@ -549,7 +549,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{TENANT_ID}` | 此ID可確保您建立的資源與IMS組織中的資源命名正確，且完整無缺。 |
+| `{TENANT_ID}` | 此ID可用來確保您建立的資源與組織中的資源命名正確，並加以包含。 |
 | `{SCHEMA_ID}` | 您建立的架構ID。 |
 
 ### 建立批次

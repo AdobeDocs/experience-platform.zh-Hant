@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將DbVisualizer連接到查詢服務
 description: 本檔案會逐步說明將DbVisualizer與Adobe Experience Platform Query Service連線的步驟。
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: 106a2e4606e94f71d6359cf947e05f193c19c660
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '921'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 本指南要求您已具備 [!DNL DbVisualizer] 案頭應用程式，熟悉如何導覽其介面。 若要下載 [!DNL DbVisualizer] 案頭應用程式或，如需詳細資訊，請參閱 [官方 [!DNL DbVisualizer] 檔案](https://www.dbvis.com/download/).
 
-獲取連接所需的憑據 [!DNL  DbVisualizer] 若要Experience Platform，您必須擁有平台UI中查詢工作區的存取權。 如果您目前沒有查詢工作區的存取權，請連絡您的IMS組織管理員。
+獲取連接所需的憑據 [!DNL  DbVisualizer] 若要Experience Platform，您必須擁有平台UI中查詢工作區的存取權。 如果您目前沒有查詢工作區的存取權，請聯絡您的組織管理員。
 
 ## 建立資料庫連接 {#connect-database}
 

@@ -2,18 +2,18 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢編輯器；查詢編輯器；查詢編輯器；
 solution: Experience Platform
 title: Query Service UI指南
-description: Adobe Experience Platform查詢服務提供可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。
+description: Adobe Experience Platform Query Service提供的使用者介面可用來撰寫和執行查詢、檢視先前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 5a027200efc22051cca6d4c041e857b2abc7d96f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1133'
 ht-degree: 2%
 
 ---
 
 # [!DNL Query Service] UI指南
 
-Adobe Experience Platform [!DNL Query Service] 提供可用來寫入及執行查詢、檢視先前執行的查詢，以及存取由您IMS組織內的使用者儲存的查詢的使用者介面。 若要在中存取UI [Adobe Experience Platform](https://platform.adobe.com)，選取 **[!UICONTROL 查詢]** 的下一頁。
+Adobe Experience Platform [!DNL Query Service] 提供可用於寫入和執行查詢、查看先前執行的查詢以及訪問由組織內的用戶保存的查詢的用戶介面。 若要在中存取UI [Adobe Experience Platform](https://platform.adobe.com)，選取 **[!UICONTROL 查詢]** 的下一頁。
 
 ## [!DNL Query Editor]
 

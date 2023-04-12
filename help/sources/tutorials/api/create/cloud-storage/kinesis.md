@@ -5,9 +5,9 @@ title: 使用流程服務API建立Amazon Kinesis來源連線
 type: Tutorial
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至Amazon Kinesis來源。
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ curl -X POST \
 
 ## 建立源連接 {#source}
 
-來源連線會建立並管理資料擷取所在之外部來源的連線。 源連接由資料源、資料格式和建立資料流所需的源連接ID等資訊組成。 來源連線例項是租用戶和IMS組織專屬的。
+來源連線會建立並管理資料擷取所在之外部來源的連線。 源連接由資料源、資料格式和建立資料流所需的源連接ID等資訊組成。 源連接實例是租戶和組織特有的。
 
 若要建立來源連線，請向 `/sourceConnections` 端點 [!DNL Flow Service] API。
 

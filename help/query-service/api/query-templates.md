@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢範本API端點
 description: 本指南詳細說明您可使用查詢服務API進行的各種查詢範本API呼叫。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: ee6a54aeba4ddfeb98ee5e11283c299f00969a53
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '890'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 **要求**
 
-下列請求會擷取為您IMS組織建立的最新查詢範本。
+下列請求會擷取為您的組織建立的最新查詢範本。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並附上指定IMS組織的查詢範本清單。 下列回應會傳回為IMS組織建立的最新查詢範本。
+成功的回應會傳回HTTP狀態200，並包含指定組織的查詢範本清單。 下列回應會傳回為貴組織建立的最新查詢範本。
 
 ```json
 {

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 架構註冊表API快速入門
 description: 本檔案介紹您在嘗試呼叫結構註冊表API前，需要了解的核心概念。
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1350'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ XDM使用JSON結構描述格式來說明和驗證擷取的客戶體驗資料結�
 
 ## 知道您的TENANT_ID {#know-your-tenant_id}
 
-在API指南中，您會看到的參考 `TENANT_ID`. 此ID可確保您建立的資源與IMS組織中的資源命名正確，且完整無缺。 如果您不知道您的ID，則可執行下列GET請求來存取：
+在API指南中，您會看到的參考 `TENANT_ID`. 此ID可用來確保您建立的資源與組織中的資源命名正確，並加以包含。 如果您不知道您的ID，則可執行下列GET請求來存取：
 
 **API格式**
 
@@ -168,7 +168,7 @@ GET /global/classes
 
 ### 租用戶容器
 
-不要與你的獨特 `TENANT_ID`, `tenant` 容器包含由IMS組織定義的所有類別、欄位群組、資料類型、結構和描述元。 這是每個組織專屬的值，表示其他IMS組織無法看到或管理這些值。 您可以對您在 `tenant` 容器。
+不要與你的獨特 `TENANT_ID`, `tenant` 容器包含由組織定義的所有類、欄位組、資料類型、結構和描述符。 每個組織都有這些特徵，這表示其他組織無法看到或管理這些特徵。 您可以對您在 `tenant` 容器。
 
 使用 `tenant` 容器看起來如下所示：
 

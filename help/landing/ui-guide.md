@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Experience PlatformUI概述
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1811'
-ht-degree: 1%
+source-wordcount: '1797'
+ht-degree: 2%
 
 ---
 
@@ -29,13 +29,13 @@ ht-degree: 1%
 
 ![](images/user-guide/homepage-dashboard.png)
 
-此 **[!UICONTROL 資料集]** 區段會顯示您IMS組織中的資料集數量。 建立新資料集時，會更新此數字。 如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
+此 **[!UICONTROL 資料集]** 區段顯示組織內的資料集數量。 建立新資料集時，會更新此數字。 如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
 
-此 **[!UICONTROL 設定檔]** 區段會顯示您IMS組織內具有設定檔的人員總數，不包括設定檔片段。 此總人數代表可定址的受眾總數，每24小時更新一次。 如需設定檔的詳細資訊，請參閱 [即時客戶個人檔案概觀](../profile/home.md).
+此 **[!UICONTROL 設定檔]** 區段顯示組織內具有設定檔的人員總數，不包括設定檔片段。 此總人數代表可定址的受眾總數，每24小時更新一次。 如需設定檔的詳細資訊，請參閱 [即時客戶個人檔案概觀](../profile/home.md).
 
-此 **[!UICONTROL 區段]** 區段會顯示在您的IMS組織內建立的區段總數。 建立新區段時，會更新此數字。 如需區段的詳細資訊，請參閱 [區段服務概觀](../segmentation/home.md).
+此 **[!UICONTROL 區段]** 區段會顯示在您的組織內建立的區段總數。 建立新區段時，會更新此數字。 如需區段的詳細資訊，請參閱 [區段服務概觀](../segmentation/home.md).
 
-此 **[!UICONTROL 目的地]** 區段會顯示為IMS組織建立的目的地總數。 建立新目的地時，會更新此數字。 如需目的地的詳細資訊，請參閱 [目的地概述](../destinations/home.md).
+此 **[!UICONTROL 目的地]** 區段顯示為組織建立的目的地總數。 建立新目的地時，會更新此數字。 如需目的地的詳細資訊，請參閱 [目的地概述](../destinations/home.md).
 
 ### 近期資料
 
@@ -43,13 +43,13 @@ ht-degree: 1%
 
 ![](images/user-guide/homepage-recent.png)
 
-此 **[!UICONTROL 最近的資料集]** 區段會列出您IMS組織中最近建立的五個資料集。 每次建立新資料集時，都會更新此清單。 您可以從清單中選取資料集，以檢視指定資料集的詳細資訊，或選取 **[!UICONTROL 查看全部]** ，查看所有已建立資料集的清單。 如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
+此 **[!UICONTROL 最近的資料集]** 區段列出貴組織內最近建立的五個資料集。 每次建立新資料集時，都會更新此清單。 您可以從清單中選取資料集，以檢視指定資料集的詳細資訊，或選取 **[!UICONTROL 查看全部]** ，查看所有已建立資料集的清單。 如需資料集的詳細資訊，請參閱 [資料集概述](../catalog/datasets/overview.md).
 
-此 **[!UICONTROL 最近的來源]** 小節列出您IMS組織中最近建立的五個來源連接器。 每次建立新源連接器時，都會更新此清單。 您可以從清單中選擇源連接，以查看有關指定連接器的更多資訊，或選擇 **[!UICONTROL 查看全部]** 查看所有已建立源連接的清單。 有關來源的詳細資訊，請參閱 [來源概觀](../sources/home.md).
+此 **[!UICONTROL 最近的來源]** 小節列出貴組織內最近建立的五個來源連接器。 每次建立新源連接器時，都會更新此清單。 您可以從清單中選擇源連接，以查看有關指定連接器的更多資訊，或選擇 **[!UICONTROL 查看全部]** 查看所有已建立源連接的清單。 有關來源的詳細資訊，請參閱 [來源概觀](../sources/home.md).
 
-此 **[!UICONTROL 最近區段]** 區段會列出您IMS組織中最近建立的五個區段定義。 每次建立新區段定義時，就會更新此清單。 您可以從清單中選取區段定義，以檢視有關指定區段定義的詳細資訊，或選取 **[!UICONTROL 查看全部]** ，查看所有已建立區段定義的清單。 如需區段的詳細資訊，請參閱 [區段服務概觀](../segmentation/home.md).
+此 **[!UICONTROL 最近區段]** 一節列出貴組織內最近建立的五個區段定義。 每次建立新區段定義時，就會更新此清單。 您可以從清單中選取區段定義，以檢視有關指定區段定義的詳細資訊，或選取 **[!UICONTROL 查看全部]** ，查看所有已建立區段定義的清單。 如需區段的詳細資訊，請參閱 [區段服務概觀](../segmentation/home.md).
 
-此 **[!UICONTROL 近期目的地]** 區段會列出您IMS組織中最近建立的五個目的地。 每次建立新目的地時，都會更新此清單。 您可以從清單中選取目的地，以檢視有關指定目的地的詳細資訊或選取 **[!UICONTROL 查看全部]** ，查看所有已建立目的地的清單。 如需目的地的詳細資訊，請參閱 [目的地概述](../destinations/home.md).
+此 **[!UICONTROL 近期目的地]** 區段列出貴組織內最近建立的五個目的地。 每次建立新目的地時，都會更新此清單。 您可以從清單中選取目的地，以檢視有關指定目的地的詳細資訊或選取 **[!UICONTROL 查看全部]** ，查看所有已建立目的地的清單。 如需目的地的詳細資訊，請參閱 [目的地概述](../destinations/home.md).
 
 ### 建議的學習
 
@@ -59,23 +59,23 @@ ht-degree: 1%
 
 ## 頂端導覽列
 
-Platform UI的頂端導覽列會顯示您目前登入的IMS組織，並提供數個重要的控制項。
+Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個重要的控制項。
 
 導覽列的左側是Adobe Experience Platform標誌。 您隨時可以選取此標誌，回到Platform UI主畫面。
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
-### IMS組織切換器
+### 組織切換器
 
-頂端導覽列右側的第一個項目是 **IMS組織切換器**.
+頂端導覽列右側的第一個項目是 **組織切換器**.
 
 ![](./images/user-guide/homepage-ims-org-switcher.png)
 
-選取切換器會開啟您可存取之IMS組織的下拉式功能表（如果有的話）。 若要切換至其他IMS組織，請選取列出的選項。
+選取切換器會開啟您可存取之組織的下拉式功能表（如果有的話）。 若要切換至其他組織，請選取列出的選項。
 
 ### 交換應用程式
 
-頂端導覽右側的下一個項目是 **應用程式切換器**，以 ![應用程式切換器](./images/user-guide/app-switcher-icon.png) 表徵圖。 選取此圖示時，您可以在您的IMS組織可存取的Adobe應用程式之間切換，例如Experience Platform、Analytics、資產等。
+頂端導覽右側的下一個項目是 **應用程式切換器**，以 ![應用程式切換器](./images/user-guide/app-switcher-icon.png) 表徵圖。 選取此圖示時，您可以在貴組織有權存取的Adobe應用程式之間切換，例如Experience Platform、Analytics、資產等。
 
 ### 說明
 

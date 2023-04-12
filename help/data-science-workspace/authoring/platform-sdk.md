@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用Adobe Experience Platform Platform SDK進行模型編寫
 description: 本教程提供了有關在Python和R中將data_access_sdk_python轉換為新的Python平台_sdk的資訊。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '489'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 ## 建立驗證 {#build-authentication}
 
-必須進行驗證才能對 [!DNL Adobe Experience Platform]，且由API金鑰、IMS組織ID、使用者代號和服務代號組成。
+必須進行驗證才能對 [!DNL Adobe Experience Platform]，由API金鑰、組織ID、使用者代號和服務代號組成。
 
 ### Python
 
@@ -31,7 +31,7 @@ ht-degree: 5%
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-如果您未使用Jupyter筆記型電腦，或需要變更IMS組織，請使用下列程式碼範例：
+如果您未使用Jupyter筆記型電腦，或需要更改組織，請使用以下代碼示例：
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-如果您未使用Jupyter筆記型電腦，或需要變更IMS組織，請使用下列程式碼範例：
+如果您未使用Jupyter筆記型電腦，或需要更改組織，請使用以下代碼示例：
 
 ```r
 library(reticulate)
@@ -79,7 +79,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 >[!NOTE]
 >
->IMS組織設定於 `client_context`.
+>組織設定於 `client_context`.
 
 ### Python
 
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->IMS組織設定於 `client_context`.
+>組織設定於 `client_context`.
 
 要在Python和R中寫入資料，請使用以下示例之一：
 

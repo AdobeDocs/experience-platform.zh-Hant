@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 排程API端點
 description: 排程是一種工具，可用來每天自動執行一次批次分段工作。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: e24a2ba0321ebaa8e91f96477f58bfa4915f47ce
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2009'
 ht-degree: 3%
 
 ---
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並將指定IMS組織的排程清單顯示為JSON。
+成功的回應會傳回HTTP狀態200，並將指定組織的排程清單顯示為JSON。
 
 >[!NOTE]
 >
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `path` | 要修補的值的路徑。 在此情況下，由於您要更新排程的狀態，因此必須設定 `path` 「/state」。 |
-| `value` | 計畫狀態的更新值。 此值可設為「作用中」或「非作用中」，以啟用或停用排程。 請注意 **不能** 如果已啟用串流功能，請停用排程。 |
+| `value` | 計畫狀態的更新值。 此值可設為「作用中」或「非作用中」，以啟用或停用排程。 請注意 **不能** 如果組織已啟用串流功能，請停用排程。 |
 
 **回應**
 

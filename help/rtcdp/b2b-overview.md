@@ -3,9 +3,9 @@ keywords: RTCDP; CDP;B2B Edition;Real-time Customer Data Platform；即時客戶
 title: Real-Time CDP B2B版概述
 description: Real-Time Customer Data Platform B2B Edition 帳戶總覽
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1082'
 ht-degree: 1%
 
 ---
@@ -51,13 +51,13 @@ Real-Time CDP B2B版提供數種新的XDM結構類別、欄位群組和關係類
 
 ## 設定檔與區段
 
-一旦Real-Time CDP B2B版內嵌了與人員、公司、屬性和行為相關的資料和已解析的身分識別，該資料就會用來建構設定檔。 然後，這些設定檔可以分段為可瀏覽的對象，然後可以啟動至各種目的地。
+一旦Real-Time CDP B2B版內嵌了與人員、公司、屬性和行為相關的資料和已解析的身分識別，該資料便可用來建構設定檔。 然後，這些設定檔可以分段為可瀏覽的對象，然後可以啟動至各種目的地。
 
 正確實作時，系統會使用唯一的主要識別碼來追蹤使用者，而非可能變更的屬性，例如電子郵件地址。 這表示當有人變更工作時，系統仍會依循這些工作。 該人員仍是同一實體，但會連結至新帳戶。 此原生功能提供擴展至新帳戶的絕佳向量，因為系統會以個人身分跟隨這些人，包括其所有屬性和行為。
 
 ## B2B來源
 
-Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加上標籤，以及增強傳入資料。 此 [!DNL Marketo] 來源可讓您將B2B資料串流至Platform，並使用與平台連線的應用程式讓此資料保持最新。 支援任意數量的例項 [!DNL Marketo] （這對具有多個執行個體的大型公司有好處）並拉進合併資料的單一IMS組織。
+Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加上標籤，以及增強傳入資料。 此 [!DNL Marketo] 來源可讓您將B2B資料串流至Platform，並使用與平台連線的應用程式讓此資料保持最新。 支援任意數量的例項 [!DNL Marketo] （這對具有多個執行個體的大型公司有好處）並拉進合併資料的單一組織。
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Googl
 
 ## 後續步驟
 
-現在您更清楚了解Real-Time CDP B2B Edition為行銷人員帶來的好處，以及它與Real-Time CDP之間的差異，您就可以了解如何將這些功能套用至您自己的IMS組織。
+現在，您更清楚了解Real-Time CDP B2B Edition為行銷人員提供的優點，以及它與Real-Time CDP之間的差異，接下來就可以了解如何將這些功能套用至您自己的組織。
 
 若要了解Real-Time CDP B2B Edition如何讓您的企業對企業服務模式受益，請參閱下列檔案以協助您快速上手：
 

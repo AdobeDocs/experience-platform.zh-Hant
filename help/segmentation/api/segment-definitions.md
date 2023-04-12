@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 9aa86b8d541836504be6b8667a2e069116c6002c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1258'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform可讓您建立區段，從一組設定檔中定義一�
 
 ## 擷取區段定義清單 {#list}
 
-您可以向提出GET請求，以擷取IMS組織的所有區段定義清單 `/segment/definitions` 端點。
+您可以向 `/segment/definitions` 端點。
 
 **API格式**
 
@@ -46,7 +46,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **要求**
 
-下列請求會擷取張貼在您IMS組織中的最後兩個區段定義。
+下列請求會擷取發佈在您組織內的最後兩個區段定義。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並將指定IMS組織的區段定義清單顯示為JSON。
+成功的回應會傳回HTTP狀態200，並將指定組織的區段定義清單設為JSON。
 
 ```json
 {

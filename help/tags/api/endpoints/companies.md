@@ -2,16 +2,16 @@
 title: 公司端點
 description: 了解如何在Reactor API中呼叫/companys端點。
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '239'
 ht-degree: 3%
 
 ---
 
 # 公司端點
 
-公司代表客戶組織，通常是企業。 在Reactor API中，這些公司會將1:1與IMS組織ID相符。 API使用者只能查看其有權存取的公司。 公司可能包含許多 [屬性](./properties.md). 屬性只屬於一個公司。
+公司代表客戶組織，通常是企業。 在Reactor API中，這些公司會比對1:1與組織ID。 API使用者只能查看其有權存取的公司。 公司可能包含許多 [屬性](./properties.md). 屬性只屬於一個公司。
 
 此 `/companies` reactor API中的端點可讓您以程式設計方式擷取您在experience應用程式中可存取的公司。
 

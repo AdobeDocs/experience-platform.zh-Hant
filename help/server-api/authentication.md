@@ -2,9 +2,9 @@
 title: 驗證
 description: 了解如何設定Adobe Experience Platform Edge Network Server API的驗證。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '637'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 在您可以呼叫 [!DNL Server API]，請確定您符合下列必要條件：
 
-* 您有可存取Adobe Experience Platform的IMS組織帳戶。
+* 您有可存取Adobe Experience Platform的組織帳戶。
 * 您的Experience Platform帳戶具有 `developer` 和 `user` 為Adobe Experience Platform API產品設定檔啟用的角色。 請連絡您的 [Admin Console](../access-control/home.md) 管理員來為您的帳戶啟用這些角色。
 * 你有Adobe ID。 如果您沒有Adobe ID，請前往 [Adobe Developer Console](https://developer.adobe.com/console) 並建立新帳戶。
 

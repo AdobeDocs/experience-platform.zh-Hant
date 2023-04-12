@@ -5,9 +5,9 @@ title: 驗證及存取Experience PlatformAPI
 type: Tutorial
 description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1267'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 5%
 
 若要成功呼叫Experience PlatformAPI，您必須具備下列條件：
 
-* 可存取Adobe Experience Platform的IMS組織。
+* 可存取Adobe Experience Platform的組織。
 * Admin Console管理員，可將您新增為產品設定檔的開發人員和使用者。
 
 您也必須有Adobe ID才能完成本教學課程。 如果您沒有Adobe ID，則可使用下列步驟來建立：
@@ -54,7 +54,7 @@ ht-degree: 5%
 
 您的 [!DNL Admin Console] 管理員也必須將您新增為相同產品設定檔的使用者。 請參閱 [管理使用者群組 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 以取得更多資訊。
 
-## 產生API金鑰、IMS組織ID和用戶端密碼 {#api-ims-secret}
+## 產生API金鑰、組織ID和用戶端密碼 {#api-ims-secret}
 
 >[!NOTE]
 >

@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 透過串流細分即時評估事件
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用串流區段的範例。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1967'
 ht-degree: 1%
 
 ---
 
-# 透過串流細分以近乎即時的方式評估事件
+# 使用串流分段近乎即時地評估事件
 
 >[!NOTE]
 >
@@ -126,7 +126,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回IMS組織中已啟用串流細分的區段陣列。
+成功的回應會傳回組織中已啟用串流分段的區段陣列。
 
 ```json
 {
@@ -307,7 +307,7 @@ curl -X POST \
 
 ## 啟用計畫評估 {#enable-scheduled-segmentation}
 
-啟用串流評估後，必須建立基線（在基線後區段一律為最新狀態）。 必須先啟用計畫評估（也稱為計劃分段），系統才能自動執行基線設定。 透過已排程的細分，您的IMS組織可以遵循循環排程，自動執行匯出工作以評估區段。
+啟用串流評估後，必須建立基線（在基線後區段一律為最新狀態）。 必須先啟用計畫評估（也稱為計劃分段），系統才能自動執行基線設定。 透過已排程的區段，您的組織可遵循循環排程，自動執行匯出工作以評估區段。
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ curl -X POST \
 | `properties` | **（必要）** 包含與排程相關的其他屬性的物件。 |
 | `properties.segments` | **(必要時 `type` 等於 `batch_segmentation`)** 使用 `["*"]` 確保包含所有區段。 |
 | `schedule` | **（必要）** 包含作業計畫的字串。 作業只能排程為每天執行一次，這表示您無法排程作業在24小時期間執行多次。 顯示的範例(`0 0 1 * * ?`)表示每天1時觸發工作:00:00 UTC。 欲知更多資訊，請查閱 [cron運算式格式](./schedules.md#appendix) 在檔案中的分段內排程。 |
-| `state` | *（可選）* 包含排程狀態的字串。 可用值： `active` 和 `inactive`. 預設值為 `inactive`。IMS組織只能建立一個排程。 更新排程的步驟將在本教學課程的稍後部分提供。 |
+| `state` | *（可選）* 包含排程狀態的字串。 可用值： `active` 和 `inactive`. 預設值為 `inactive`。組織只能建立一個排程。 更新排程的步驟將在本教學課程的稍後部分提供。 |
 
 **回應**
 

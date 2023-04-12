@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 量度API端點
 description: 了解如何使用可觀察性前瞻分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1384'
 ht-degree: 3%
 
 ---
@@ -223,9 +223,9 @@ curl -X POST \
 | timeseries.identity.dataset.recordfailed.count | 失敗的記錄數 [!DNL Identity Service]，適用於一個資料集或所有資料集。 | 資料集 ID |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 命名空間失敗的身份記錄數。 | 命名空間ID(**必填**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 命名空間跳過的身份記錄數。 | 命名空間ID(**必填**) |
-| timeseries.identity.graph.imsorg.uniqueidentities.count | 您IMS組織的身分圖表中儲存的不重複身分數。 | 不適用 |
+| timeseries.identity.graph.imsorg.uniqueidentities.count | 儲存在組織之身分圖中的不重複身分數。 | 不適用 |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 命名空間的身分圖表中儲存的不重複身分數。 | 命名空間ID(**必填**) |
-| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 針對特定圖表強度（「未知」、「弱」或「強」），儲存在您IMS組織之身分圖表中的不重複身分數。 | 圖表強度(**必填**) |
+| timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 針對特定圖表強度（「未知」、「弱」或「強」），儲存在組織之身分圖中的唯一身分數。 | 圖表強度(**必填**) |
 
 {style="table-layout:auto"}
 
@@ -272,7 +272,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `title` | 包含錯誤訊息的字串，以及可能發生的可能原因。 |
-| `report` | 包含錯誤的相關內容資訊，包括觸發錯誤的操作所使用的沙箱和IMS組織。 |
+| `report` | 包含錯誤的相關內容資訊，包括觸發錯誤的操作所使用的沙箱和組織。 |
 
 {style="table-layout:auto"}
 
@@ -284,6 +284,6 @@ curl -X POST \
 | `INSGHT-1001-400` | 度量查詢失敗 | 由於請求錯誤或查詢本身不可剖析，因此嘗試查詢量度資料庫時發生錯誤。 請先確定請求的格式正確，然後再重試。 |
 | `INSGHT-1001-500` | 度量查詢失敗 | 由於伺服器錯誤，嘗試查詢度量資料庫時出錯。 請再試一次請求，如果問題仍然存在，請聯繫Adobe支援。 |
 | `INSGHT-1002-500` | 服務錯誤 | 由於內部錯誤，無法處理該請求。 請再試一次請求，如果問題仍然存在，請聯繫Adobe支援。 |
-| `INSGHT-1003-401` | 沙箱驗證錯誤 | 由於沙箱驗證錯誤，無法處理請求。 確定您在 `x-sandbox-name` 標題代表IMS組織的有效且已啟用的沙箱，然後再次嘗試請求。 |
+| `INSGHT-1003-401` | 沙箱驗證錯誤 | 由於沙箱驗證錯誤，無法處理請求。 確定您在 `x-sandbox-name` 標題代表貴組織的有效且已啟用的沙箱，然後再次嘗試請求。 |
 
 {style="table-layout:auto"}

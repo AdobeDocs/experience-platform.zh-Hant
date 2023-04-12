@@ -2,7 +2,7 @@
 title: （測試版） [!DNL Google Ad Manager 360] 連接
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈商管理其網站上、透過視訊和行動應用程式的廣告顯示。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->此目的地目前為測試版，僅適用於有限數量的客戶。 若要要求存取 [!DNL Google Ad Manager 360] 連線，請連絡您的Adobe代表，並提供 [!DNL IMS Organization ID].
+>此目的地目前為測試版，僅適用於有限數量的客戶。 若要要求存取 [!DNL Google Ad Manager 360] 連線，請連絡您的Adobe代表，並提供 [!DNL organization ID].
 
 此 [!DNL Google Ad Manager 360] 目的地匯出 [!DNL CSV] 檔案 [!DNL Google Cloud Storage] 桶。 一旦匯出 [!DNL CSV] 檔案，您必須將它們匯入 [!DNL Google Ad Manager 360] 帳戶。
 

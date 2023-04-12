@@ -1,10 +1,10 @@
 ---
 title: 匯入API端點
-description: 「結構註冊表API」中的/import端點可讓您在IMS組織和沙箱之間共用XDM資源。
+description: Schema Registry API中的/import端點可讓您在組織和沙箱之間共用XDM資源。
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
-source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '292'
 ht-degree: 1%
 
 ---
@@ -187,7 +187,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回匯入資源的清單，並套用適當的租用戶ID和IMS組織值。
+成功的回應會傳回匯入資源的清單，並套用適當的租用戶ID和組織值。
 
 ```json
 [

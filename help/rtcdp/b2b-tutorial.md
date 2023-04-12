@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Real-time Customer Data Platform B2B版快速入門
 description: 設定Adobe Real-time Customer Data Platform B2B Edition實作時，請使用此範例案例作為範例。
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1205'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Adobe Experience Platform可讓您自動產生B2B資料來源所需的結構和�
 
 若要建立Marketo帳戶與Platform之間的連線，您必須取得驗證憑證。 請參閱 [取得Marketo原始碼連接器驗證認證指南](../sources/connectors/adobe-applications/marketo/marketo-auth.md) 以取得詳細指示。
 
-取得驗證憑證後，Bodea行銷人員會建立Marketo帳戶與其Platform IMS組織之間的連線。 如需相關指示，請參閱本檔案。 [如何使用Platform UI連線Marketo帳戶](../sources/tutorials/ui/create/adobe-applications/marketo.md).
+取得驗證憑證後，Bodea行銷人員會建立Marketo帳戶與其平台組織之間的連線。 如需相關指示，請參閱本檔案。 [如何使用Platform UI連線Marketo帳戶](../sources/tutorials/ui/create/adobe-applications/marketo.md).
 
 Marketo Engage來源連接器提供自動對應功能，讓將所有資料欄位對應至新建立結構的欄位的程式簡單得多。
 

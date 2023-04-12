@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 預覽範例狀態（設定檔預覽）API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分送，以及產生顯示資料集重疊、身分重疊和未拼接設定檔的報表。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: a6173860adda4bd71c94750e5cce6dd4cbe820c6
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2873'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ Adobe Experience Platform可讓您內嵌來自多個來源的客戶資料，以�
 
 ## 查看最後一個示例狀態 {#view-last-sample-status}
 
-您可以對 `/previewsamplestatus` 端點來檢視上次為IMS組織執行的成功範例作業的詳細資訊。 這包括範例中的設定檔總數，以及設定檔計數量度，或您的組織在Experience Platform內的設定檔總數。
+您可以對 `/previewsamplestatus` 端點來檢視上次為貴組織執行的成功範例作業的詳細資訊。 這包括範例中的設定檔總數，以及設定檔計數量度，或您的組織在Experience Platform內的設定檔總數。
 
 將設定檔片段合併為每個個別客戶的單一設定檔後，會產生設定檔計數。 換句話說，將設定檔片段合併在一起時，會傳回「1」設定檔的計數，因為它們都與相同的個人相關。
 

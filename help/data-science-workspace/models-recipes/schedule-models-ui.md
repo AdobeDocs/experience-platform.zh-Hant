@@ -5,9 +5,9 @@ title: 在Data Science Workspace UI中排程模型
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace可讓您在機器學習服務上設定排程的分數和訓練執行。 自動化培訓和計分流程有助於通過跟上資料中的模式，在一段時間內維護和提高服務的效率。
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---

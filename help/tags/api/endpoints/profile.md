@@ -2,9 +2,9 @@
 title: 設定檔端點
 description: 了解如何在Reactor API中呼叫/profiles端點。
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '169'
 ht-degree: 5%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 在Reactor API中，設定檔代表Adobe Experience Platform使用者。 Reactor API不會維護自己的使用者和權限資料庫，而是仰賴由管理的AdobeID [Adobe的身分管理系統(IMS)](https://helpx.adobe.com/tw/enterprise/using/identity.html).
 
-設定檔包含登入使用者的所有資訊，包括其所屬的所有IMS組織、每個組織內其所屬的產品設定檔，以及各產品設定檔所擁有的權限。
+設定檔包含登入使用者的所有資訊，包括其所屬的所有組織、每個組織內其所屬的產品設定檔，以及其從每個產品設定檔擁有的權限。
 
 ## 快速入門
 
@@ -51,14 +51,14 @@ curl -X GET \
     "id": "UR0bd696624e844d6ba5bfc248ba1eca11",
     "type": "users",
     "attributes": {
-      "active_org": "{IMS_ORG_1}",
+      "active_org": "{ORG_1}",
       "expires_in": 0,
       "display_name": "John Smith",
       "job_function": null,
       "email": "jsmith@example.com",
       "organizations": {
-        "{IMS_ORG_1}": {
-          "name": "Example IMS Org A",
+        "{ORG_1}": {
+          "name": "Example organization A",
           "admin": true,
           "active": true,
           "login_companies": [
@@ -73,8 +73,8 @@ curl -X GET \
           ],
           "tenant_id": "{TENANT_ID_1}"
         },
-        "{IMS_ORG_2}": {
-          "name": "Example IMS Org B",
+        "{ORG_2}": {
+          "name": "Example organization B",
           "admin": false,
           "active": false,
           "login_companies": [

@@ -5,9 +5,9 @@ solution: Experience Platform
 title: 在UI中監視目標的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 133b3e6b8074bab52f23330ac8d3efc468f29d55
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '3228'
+source-wordcount: '3227'
 ht-degree: 10%
 
 ---
@@ -289,7 +289,7 @@ ht-degree: 10%
 除了資料流運行清單上顯示的詳細資訊外，資料流運行詳細資訊頁還顯示有關資料流的更具體資訊：
 
 - **[!UICONTROL 資料流運行ID]**:資料流的ID。
-- **[!UICONTROL IMS組織ID]**:資料流所屬的IMS組織。
+- **[!UICONTROL IMS組織ID]**:資料流所屬的組織。
 - **[!UICONTROL 上次更新]**:上次更新資料流運行的時間。
 
 「詳細資訊」頁還可切換資料流運行錯誤和段。 此選項僅適用於批處理目標中運行的資料流。

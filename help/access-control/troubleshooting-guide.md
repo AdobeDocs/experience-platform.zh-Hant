@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制疑難排解指南
 description: 本檔案提供關於Adobe Experience Platform存取控制常見問題的解答。
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 在哪裡可以找到我目前的存取權限？
 
-如果您是IMS組織的系統管理員、產品管理員或產品設定檔管理員，可以檢視指派的產品設定檔及其在Adobe Admin Console內提供的權限。 請參閱 [存取控制使用手冊](./ui/overview.md) 導航說明 [!DNL Admin Console] 檢視產品設定檔的權限。
+如果您是貴組織的系統管理員、產品管理員或產品設定檔管理員，則可以檢視指派的產品設定檔，以及其在Adobe Admin Console內提供的權限。 請參閱 [存取控制使用手冊](./ui/overview.md) 導航說明 [!DNL Admin Console] 檢視產品設定檔的權限。
 
 如果您不是管理員，您仍可以透過傳送要求至 `/acl/effective-policies` 端點。 請參閱 [存取控制開發人員指南](./api/effective-policies.md) 以取得更多資訊。
 

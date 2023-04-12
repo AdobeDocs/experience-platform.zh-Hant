@@ -4,9 +4,9 @@ title: 配置檔案導出作業API端點
 type: Documentation
 description: 即時客戶設定檔可讓您將來自多個來源的資料（包括屬性資料和行為資料）整合在一起，以建立Adobe Experience Platform中個別客戶的單一檢視。 接著，可將設定檔資料匯出至資料集以進一步處理。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1517'
 ht-degree: 2%
 
 ---
@@ -180,7 +180,7 @@ curl -X POST \
 
 ## 列出所有導出作業
 
-您可以向傳回特定IMS組織的所有匯出工作清單，方法是執行GET請求 `export/jobs` 端點。 請求也支援查詢參數 `limit` 和 `offset`，如下所示。
+您可以向 `export/jobs` 端點。 請求也支援查詢參數 `limit` 和 `offset`，如下所示。
 
 **API格式**
 
@@ -209,7 +209,7 @@ curl -X GET \
 
 **回應**
 
-回應包含 `records` 包含您IMS組織所建立匯出作業的物件。
+回應包含 `records` 包含貴組織建立之匯出作業的物件。
 
 ```json
 {

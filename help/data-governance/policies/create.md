@@ -5,9 +5,9 @@ title: 在API中建立資料控管原則
 type: Tutorial
 description: 了解如何使用Policy Service API建立資料控管原則。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ GET /marketingActions/custom
 
 **要求**
 
-下列請求會使用 `marketingActions/custom` 端點，會擷取您IMS組織所定義之所有行銷動作的清單。
+下列請求會使用 `marketingActions/custom` 端點，會擷取您組織定義之所有行銷動作的清單。
 
 ```shell
 curl -X GET \

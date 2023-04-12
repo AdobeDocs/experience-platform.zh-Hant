@@ -5,9 +5,9 @@ title: 使用串流獲取API的串流記錄資料
 type: Tutorial
 description: 本教學課程將協助您開始使用Adobe Experience Platform資料擷取服務API中的串流擷取API。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1024'
 ht-degree: 2%
 
 ---
@@ -128,7 +128,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{TENANT_ID}` | 此ID可確保您建立的資源與IMS組織中的資源命名正確，且完整無缺。 如需租用戶ID的詳細資訊，請閱讀 [方案註冊表指南](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | 此ID可用來確保您建立的資源與組織中的資源命名正確，並加以包含。 如需租用戶ID的詳細資訊，請閱讀 [方案註冊表指南](../../xdm/api/getting-started.md#know-your-tenant-id). |
 
 請注意 `$id` 以及 `version` 屬性，因為建立資料集時，會同時使用這些屬性。
 

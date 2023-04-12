@@ -4,9 +4,9 @@ title: 產生資料集重疊報表
 type: Tutorial
 description: 本教學課程概述使用即時客戶設定檔API產生資料集重疊報表所需的步驟。
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '884'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 * `Authorization: Bearer {ACCESS_TOKEN}`:此 `Authorization` 標題需要以字詞為前置的存取權杖 `Bearer`. 每24小時必須產生一個新的存取權杖值。
 * `x-api-key: {API_KEY}`:此 `API Key` 也稱為 `Client ID` 和值只需產生一次。
-* `x-gw-ims-org-id: {ORG_ID}`:此 `IMS Org` 也稱為 `Organization ID` 只需產生一次。
+* `x-gw-ims-org-id: {ORG_ID}`:組織ID只需產生一次。
 
 完成驗證教學課程並收集所需標題的值後，您就可以開始呼叫即時客戶API。
 

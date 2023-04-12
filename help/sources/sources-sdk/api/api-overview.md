@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；來源；連接器；來
 title: 自助來源（批次SDK）API指南
 description: 本文檔概述了建立新源的過程，包括如何使用流服務API檢索、寫入和提交新連接規範的步驟。
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 配置新源的第一步是建立新的連接規範。
 
-連接規範返回源的連接器屬性。 它們包括與建立基本連接和源連接相關的驗證規範，以及分配給特定源的固定連接規範ID。 連線規格不受租用戶和IMS組織限制。 典型的連接規範包含有關給定源的基本資訊以及三個不同的部分： `authSpec`, `sourceSpec`，和 `exploreSpec`.
+連接規範返回源的連接器屬性。 它們包括與建立基本連接和源連接相關的驗證規範，以及分配給特定源的固定連接規範ID。 連線規格不受租用戶和組織限制。 典型的連接規範包含有關給定源的基本資訊以及三個不同的部分： `authSpec`, `sourceSpec`，和 `exploreSpec`.
 
 如需詳細指示，請參閱 [建立新的連接規範](./create.md). 有關用於連接規範的屬性和值的資訊，包括有關配置身份驗證、源和瀏覽規範的詳細資訊，請參閱 [配置選項文檔](../config/config.md).
 

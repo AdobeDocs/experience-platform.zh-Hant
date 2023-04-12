@@ -2,9 +2,9 @@
 description: 本頁面說明如何驗證及開始使用Adobe Experience Platform Destination SDK。 其中包含如何取得Adobe I/O驗證憑證、沙箱名稱及目的地編寫存取控制權限的指示。
 title: 開始使用Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 557db5b7eefdd7902895e428f7bc34e3ad8a6f58
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '610'
 ht-degree: 4%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 4%
 
 ## 術語 {#terminology}
 
-本指南使用平台專屬的概念，例如IMS組織和沙箱。 請參閱 [Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) 和其他術語的定義。
+本指南使用平台專屬概念，例如組織和沙箱。 請參閱 [Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) 和其他術語的定義。
 
 ## 獲取所需的身份驗證憑據 {#obtain-authentication-credentials}
 
 Destination SDK使用 [Adobe I/O](https://www.adobe.io/) 驗證的網關。 若要對Destination SDK端點進行API呼叫，您必須在API呼叫中提供特定標題。 與AdobeExchange團隊合作，為您設定驗證 [Adobe Developer Console](https://developer.adobe.com/console).
 
-若要成功呼叫Destination SDKAPI端點，請遵循 [Experience Platform驗證教學課程](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). 從「[產生API金鑰、IMS組織ID和用戶端密碼](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)」步驟。 Adobe交換團隊將為您處理前述步驟。 完成驗證教學課程會提供Destination SDKAPI呼叫中每個必要標題的值，如下所示：
+若要成功呼叫Destination SDKAPI端點，請遵循 [Experience Platform驗證教學課程](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). 從「[產生API金鑰、組織ID和用戶端密碼](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)」步驟。 Adobe交換團隊將為您處理前述步驟。 完成驗證教學課程會提供Destination SDKAPI呼叫中每個必要標題的值，如下所示：
 
 * `x-api-key: {API_KEY}`，也稱為用戶端ID
 * `x-gw-ims-org-id: {ORG_ID}`，又稱為組織ID

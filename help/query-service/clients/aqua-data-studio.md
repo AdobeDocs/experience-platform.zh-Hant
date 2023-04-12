@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將Aqua Data Studio連接到Query Service
 description: 本檔案會逐步說明將Aqua Data Studio與Adobe Experience Platform Query Service連線的步驟。
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: 3ffb535e9a6648f037678acebba0de5f2088e79e
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---

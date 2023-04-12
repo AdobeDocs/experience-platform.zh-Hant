@@ -6,9 +6,9 @@ description: 在Adobe Experience Platform中，計算屬性是用來將事件層
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 hide: true
 hidefromtoc: true
-source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2274'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | 計算屬性欄位的名稱，作為字串。 |
 | `path` | 包含計算屬性的欄位路徑。 此路徑位於 `properties` 屬性，且「不應」在路徑中包含欄位名稱。 寫入路徑時，忽略 `properties` 屬性。 |
 | `{TENANT_ID}` | 若您不熟悉租用戶ID，請參閱 [Schema Registry開發人員指南](../../xdm/api/getting-started.md#know-your-tenant_id). |
-| `description` | 計算屬性的說明。 一旦定義了多個計算屬性，這特別有用，因為它將幫助IMS組織內的其他人決定要使用的正確計算屬性。 |
+| `description` | 計算屬性的說明。 定義了多個計算屬性後，這特別有用，因為它將幫助組織內的其他人確定要使用的正確計算屬性。 |
 | `expression.value` | 有效 [!DNL Profile Query Language] (PQL)表達式。 計算屬性當前支援以下函式：總和、計數、最小值、最大值和布林值。 如需範例運算式的清單，請參閱 [PQL表達式示例](expressions.md) 檔案。 |
 | `schema.name` | 包含計算屬性欄位的架構所基於的類。 範例： `_xdm.context.experienceevent` ，以根據XDM ExperienceEvent類別的結構。 |
 

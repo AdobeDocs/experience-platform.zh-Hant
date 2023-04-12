@@ -2,16 +2,16 @@
 title: Platform控制面板的Power BI報表範本
 description: 使用報表範本來探索使用Experience Platform資料的Power BI。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1471'
 ht-degree: 0%
 
 ---
 
 # Power BI控制面板的報表範本
 
-Power BI報表範本功能可讓您建立填入Adobe Experience Platform資料的引人入勝報表。 簡化的安裝程式會自動安裝適用於即時客戶個人檔案、細分和目的地的標準Widget。 安裝程式也會將Power BI連接至您的資料模型，讓您可輕鬆自訂和擴充報表範本。 這些報表可在整個組織間共用，收件者不需要您Platform上IMS組織的認證。
+Power BI報表範本功能可讓您建立填入Adobe Experience Platform資料的引人入勝報表。 簡化的安裝程式會自動安裝適用於即時客戶個人檔案、細分和目的地的標準Widget。 安裝程式也會將Power BI連接至您的資料模型，讓您可輕鬆自訂和擴充報表範本。 這些報表可在整個組織間共用，收件者不需要貴組織在Platform上的認證。
 
 本檔案提供如何將Adobe Experience Platform與Power BI應用程式連線，以及使用報表範本，與外部使用者共用重要的Platform資料深入分析的指示。
 

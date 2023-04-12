@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；api指南
 solution: Experience Platform
 title: 範例資料API端點
 description: 您可以使用Adobe Experience Platform API中的「/samples」端點，以程式設計方式擷取、建立、更新及驗證對應範例資料。
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 4%
+source-wordcount: '399'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 ## 清單範例資料
 
-您可以向提出GET要求，以擷取IMS組織的所有對應範例資料清單 `/samples` 端點。
+您可以向 `/samples` 端點。
 
 **API格式**
 
@@ -34,7 +34,7 @@ GET /samples?limit={LIMIT}&start={START}
 
 **要求**
 
-下列請求會在您的IMS組織內擷取最後兩個對應範例資料。
+下列請求會擷取組織內最後兩個對應範例資料。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \

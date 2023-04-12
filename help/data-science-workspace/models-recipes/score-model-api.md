@@ -5,9 +5,9 @@ title: 使用Sensei機器學習API對模型評分
 type: Tutorial
 description: 本教學課程將示範如何運用Sensei機器學習API來建立實驗和實驗執行。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '550'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。\
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
 `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:要發送的實驗運行對象。 以下是我們在教學課程中使用的範例：
@@ -122,7 +122,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。\
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
 `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{EXPERIMENT_ID}`:與您要定位之實驗相對應的ID。 建立實驗時，可在回應中找到。\
@@ -187,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`:與運行所在實驗對應的ID。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。
 
 由於特定實驗有多個實驗執行，傳回的回應將會有一組執行ID。
 
@@ -230,7 +230,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:與實驗對應的ID。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2182'
 ht-degree: 5%
 
 ---
@@ -34,7 +34,7 @@ Adobe Experience Platform的新功能：
 
 ## Adobe Experience Platform Data Lake移轉 {#migration}
 
-當Adobe將資料湖從Gen1遷移到Gen2時，用戶將能夠從資料湖中讀取資料，但寫入資料湖的所有功能都將受到影響。 Adobe會聯絡系統管理員，詳細討論移轉的影響，並確認特定IMS組織的移轉日期和時間。
+當Adobe將資料湖從Gen1遷移到Gen2時，用戶將能夠從資料湖中讀取資料，但寫入資料湖的所有功能都將受到影響。 Adobe將連絡系統管理員，詳細討論移轉的影響，並確認特定組織的移轉日期和時間。
 
 欲知更多資訊，請閱讀 [Data Lake移轉指南](../../landing/adls2-gen2-migration.md).
 
@@ -213,7 +213,7 @@ Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許�
 | 分層映射 | 您可以在資料擷取程式期間預覽階層式來源檔案，例如JSON或Parquet。 請參閱 [在UI中為雲儲存連接器配置資料流](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 以取得更多資訊。 |
 | 串流來源中對應的API支援 | 您現在可以使用API來執行串流來源的對應功能。 |
 | 雲端儲存來源自訂分隔字元的API支援 | 您現在可以使用雲端儲存來源收集非CSV分隔的檔案。 您可以使用任何單一欄的分隔字元（例如索引標籤、逗號、垂直號、分號或雜湊），以任何格式收集平面檔案。 |
-| Adobe Audience Manager連接器的沙箱支援 | Audience Manager連接器現在可感知沙箱。 使用者可讓連接器將Audience Manager資料集路由至自己選擇的沙箱（包括非生產沙箱）。 設定限制為每個IMS組織一個沙箱。 |
+| Adobe Audience Manager連接器的沙箱支援 | Audience Manager連接器現在可感知沙箱。 使用者可讓連接器將Audience Manager資料集路由至自己選擇的沙箱（包括非生產沙箱）。 設定限制為每個組織一個沙箱。 |
 | UX改良功能 | 檔案型擷取現在可透過來源目錄存取。 |
 
 若要進一步了解來源，請參閱 [來源概觀](../../sources/home.md).

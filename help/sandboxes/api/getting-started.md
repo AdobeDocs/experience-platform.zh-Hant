@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱API快速入門
 description: 沙箱API可讓開發人員以程式設計方式管理Adobe Experience Platform中的沙箱。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '375'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform中的沙箱提供孤立的開發環境，可讓您測�
 
 ## 先決條件
 
-若要管理您IMS組織的沙箱，您必須擁有沙箱管理權限。 沒有存取權限的使用者只能使用 [可用沙箱端點](./available.md) 列出目前使用者的作用中沙箱。 請參閱 [存取控制概觀](../../access-control/home.md) 以取得如何指派沙箱權限以進行Experience Platform的詳細資訊。
+若要管理貴組織的沙箱，您必須擁有沙箱管理權限。 沒有存取權限的使用者只能使用 [可用沙箱端點](./available.md) 列出目前使用者的作用中沙箱。 請參閱 [存取控制概觀](../../access-control/home.md) 以取得如何指派沙箱權限以進行Experience Platform的詳細資訊。
 
 ### 讀取範例API呼叫
 

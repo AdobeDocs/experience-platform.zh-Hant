@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；api指南
 solution: Experience Platform
 title: 結構API端點
 description: 您可以使用Adobe Experience Platform API中的「/schemas」端點，以程式設計方式擷取、建立和更新結構，以便與Platform中的Mapper搭配使用。
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '611'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## 取得所有結構
 
-您可以向提出GET請求，以擷取IMS組織所有可用的映射器結構清單 `/schemas` 端點。
+您可以向 `/schemas` 端點。
 
 **API格式**
 
@@ -43,7 +43,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 **要求**
 
-下列請求會擷取您IMS組織的最後兩個已建立結構。
+下列請求會擷取您組織的最後兩個已建立結構。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \

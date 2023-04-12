@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料品質
 description: 以下檔案提供Adobe Experience Platform中批次和串流內嵌支援的檢查和驗證行為摘要。
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 5%
+source-wordcount: '423'
+ht-degree: 6%
 
 ---
 
@@ -49,7 +49,7 @@ Adobe Experience Platform針對透過批次或串流內嵌上傳的任何資料�
 | 方案 | 確保架構為 **not** empty ，並包含對union架構的引用，如下所示： `"meta:immutableTags": ["union"]` |
 | `identityField` | 確保定義所有有效的身份描述符。 |
 | JSON | 確保JSON有效。 |
-| IMS組織 | 確保列出的IMS組織是有效的組織。 |
+| 組織 | 確保列出的組織是有效的組織。 |
 | 源名稱 | 確保指定資料源的名稱。 |
 | 資料集 | 確保指定、啟用和未移除資料集。 |
 | 標頭 | 確保標頭已指定且有效。 |

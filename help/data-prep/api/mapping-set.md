@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 映射集API端點
 description: 您可以使用Adobe Experience Platform API中的「/mappingSets」端點，以程式設計方式擷取、建立、更新及驗證對應集。
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '852'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 ## 清單映射集
 
-您可以向提出GET要求，以擷取IMS組織的所有對應集清單 `/mappingSets` 端點。
+您可以向 `/mappingSets` 端點。
 
 **API格式**
 
@@ -40,7 +40,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 **要求**
 
-下列請求會擷取您IMS組織內的最後兩個對應集。
+下列請求將擷取您組織內的最後兩個對應集。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \

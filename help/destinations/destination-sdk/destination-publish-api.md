@@ -2,9 +2,9 @@
 description: 本頁列出並說明所有可透過「/authoring/destinations/publish」 API端點執行的API操作。
 title: 發佈目標API端點作業
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '770'
 ht-degree: 3%
 
 ---
@@ -75,7 +75,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 列出目標發佈請求 {#retrieve-list}
 
-您可以向提出GET要求，以擷取所有提交供IMS組織發佈的目的地清單 `/authoring/destinations/publish` 端點。
+您可以向提出GET請求，以擷取所有已提交以供發佈給組織的目的地清單 `/authoring/destinations/publish` 端點。
 
 **API格式**
 
@@ -85,7 +85,7 @@ GET /authoring/destinations/publish
 
 **要求**
 
-下列請求會根據IMS組織和沙箱設定，擷取您有權存取的已提交以發佈目的地清單。
+下列請求會根據組織和沙箱設定，擷取您有權存取的已提交以供發佈的目的地清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -97,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並附上您有權存取的發佈目的地清單。 一 `configId` 對應至一個目的地的發佈請求。
+下列回應會根據您使用的組織ID和沙箱名稱，傳回HTTP狀態200，並列出您有權存取的發佈目的地。 一 `configId` 對應至一個目的地的發佈請求。
 
 ```json
 {

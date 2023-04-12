@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 帳戶API端點
 description: 您可以為永久性建立查詢服務帳戶。
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '494'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ POST /accounts
 
 **要求**
 
-下列請求會為您的IMS組織建立新的查詢服務整合帳戶。
+下列請求將為您的組織建立新的Query Service整合帳戶。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \

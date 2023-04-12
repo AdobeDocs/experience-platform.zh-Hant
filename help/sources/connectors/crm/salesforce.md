@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Salesforce源連接器概述
 description: 了解如何使用API或使用者介面將Salesforce連線至Adobe Experience Platform。
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '896'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Experience Platform支援從協力廠商CRM系統擷取資料。 支援CRM提供
 | `IMS` | Identity Management系統(IMS)提供Adobe服務驗證的架構。 關於 [!DNL Marketo]，此值已修正，且一律設為： `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 擁有或許可產品和服務並允許訪問其成員的公司實體。 請參閱 [設定開發人員主控台和 [!DNL Postman]](../../../landing/postman.md) 有關如何檢索 `{ORG_ID}` 資訊。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 您使用的虛擬沙箱分區的名稱。 | `prod` |
-| `TENANT_ID` | 用來確保所建立資源與IMS組織中的ID命名方式正確，且內容也包含在您的IMS組織中。 | `b2bcdpproductiontest` |
+| `TENANT_ID` | 用來確保您建立的資源命名正確，且包含在組織中的ID。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | 您進行API呼叫的URL端點。 此值已修正，且一律設為： `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 | `munchkinId` | 您 [!DNL Marketo] 帳戶。 請參閱 [驗證 [!DNL Marketo] 執行個體](../adobe-applications/marketo/marketo-auth.md) 以了解如何擷取 `munchkinId`. | `123-ABC-456` |
 | `sfdc_org_id` | 組織ID [!DNL Salesforce] 帳戶。 請參閱下列內容 [[!DNL Salesforce] 指南](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) 如需有關 [!DNL Salesforce] 組織ID。 | `00D4W000000FgYJUA0` |

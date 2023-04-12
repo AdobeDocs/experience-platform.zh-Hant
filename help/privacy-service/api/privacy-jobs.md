@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權工作API端點
 description: 了解如何使用Experience CloudAPI管理Privacy Service應用程式的隱私權工作。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 21347074ed6160511888d4b543133dfd1ec4d35c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1547'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 **要求**
 
-下列請求會從頁面大小為50的第三個頁面開始，擷取IMS組織內所有工作的編頁清單。
+下列請求會從頁面大小為50的第三個頁面開始，擷取組織內所有作業的編頁清單。
 
 ```shell
 curl -X GET \
@@ -159,7 +159,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 所列的每個識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的命名空間。</li><li>`value`:識別碼的值。</li></ul>是 **必填** 其中一個識別碼使用 `imsOrgId` as `namespace`，連同其 `value` 包含您IMS組織的唯一ID。 <br/><br/>其他識別碼可以是產品專屬的公司限定碼(例如 `Campaign`)，可識別與貴組織所屬Adobe應用程式的整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
+| `companyContexts` **(必填)** | 包含貴組織驗證資訊的陣列。 所列的每個識別碼都包含下列屬性： <ul><li>`namespace`:識別碼的命名空間。</li><li>`value`:識別碼的值。</li></ul>是 **必填** 其中一個識別碼使用 `imsOrgId` as `namespace`，連同其 `value` 包含貴組織的唯一ID。 <br/><br/>其他識別碼可以是產品專屬的公司限定碼(例如 `Campaign`)，可識別與貴組織所屬Adobe應用程式的整合。 潛在值包括帳戶名稱、用戶端代碼、租用戶ID或其他應用程式識別碼。 |
 | `users` **(必填)** | 一個陣列，其中包含至少一個用戶的集合，您要訪問或刪除其資訊。 單一請求最多可提供1000個使用者ID。 每個使用者物件包含下列資訊： <ul><li>`key`:用來限定回應資料中個別作業ID的使用者識別碼。 最佳實務是為此值選擇可輕鬆識別的唯一字串，以便日後輕鬆參考或查詢。</li><li>`action`:列出對使用者資料採取之所需動作的陣列。 根據您要執行的動作，此陣列必須包含 `access`, `delete`，或兩者皆有。</li><li>`userIDs`:使用者的身分集合。 單一使用者可擁有的身分數目上限為九。 每個身分都包含 `namespace`, `value`，以及命名空間限定符(`type`)。 請參閱 [附錄](appendix.md) 以取得這些必要屬性的詳細資訊。</li></ul> 有關 `users` 和 `userIDs`，請參閱 [疑難排解指南](../troubleshooting-guide.md#user-ids). |
 | `include` **(必填)** | 要包含在處理中的Adobe產品陣列。 如果此值遺失或空白，則會拒絕要求。 僅包含貴組織已與整合的產品。 請參閱 [接受的產品值](appendix.md) ，以了解詳細資訊。 |
 | `expandIDs` | 選用屬性，若設為 `true`，代表處理應用程式中ID的最佳化(目前僅支援 [!DNL Analytics])。 若省略，此值會預設為 `false`. |

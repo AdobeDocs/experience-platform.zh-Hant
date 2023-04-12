@@ -3,11 +3,11 @@ keywords: Experience Platform；零售銷售方式； Data Science Workspace；�
 solution: Experience Platform
 title: 建立零售銷售結構和資料集
 type: Tutorial
-description: 本教學課程提供其他Adobe Experience Platform Data Science Workspace教學課程所需的必要條件和資產。 完成後，您和IMS組織成員即可Experience Platform使用零售銷售結構和資料集。
+description: 本教學課程提供其他Adobe Experience Platform Data Science Workspace教學課程所需的必要條件和資產。 完成後，您和組織成員即可Experience Platform「零售銷售」結構和資料集。
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '551'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # 建立零售銷售結構和資料集
 
-本教學課程提供所有其他必要條件和資產 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 教學課程。 完成後，您和IMS組織成員即可使用零售銷售結構和資料集 [!DNL Experience Platform].
+本教學課程提供所有其他必要條件和資產 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 教學課程。 完成後，您和組織成員即可在 [!DNL Experience Platform].
 
 ## 快速入門
 

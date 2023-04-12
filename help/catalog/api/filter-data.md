@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用查詢參數篩選目錄資料
 description: 目錄服務API可透過使用要求查詢參數來篩選回應資料。 「目錄」的最佳實務是在所有API呼叫中使用篩選器，因為這些篩選器可減少API的負載，並有助於改善整體效能。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2120'
 ht-degree: 1%
 
 ---
@@ -206,7 +206,7 @@ curl -X GET \
 使用標籤時需考慮一些限制：
 
 * 目前唯一支援標籤的目錄物件是資料集、批次和連線。
-* 標籤名稱對您的IMS組織是唯一的。
+* 標籤名稱對您的組織是唯一的。
 * Adobe程式可能會針對特定行為使用標籤。 這些標籤的名稱會加上前置詞「adobe」作為標準。 因此，在聲明標籤名稱時應避免此慣例。
 * 下列標籤名稱會保留供 [!DNL Experience Platform]，因此無法宣告為貴組織的標籤名稱：
    * `unifiedProfile`:此標籤名稱會保留給要擷取的資料集 [[!DNL Real-Time Customer Profile]](../../profile/home.md).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema Registry API指南
 description: Schema Registry API可讓開發人員以程式設計方式管理Adobe Experience Platform中的所有結構描述和相關Experience Data Model(XDM)資源。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1116'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ XDM結構表示並驗證匯入Platform的資料結構和格式。 架構由類�
 
 ## 轉存 {#export}
 
-「結構註冊表API」可讓您在沙箱與IMS組織之間傳輸和共用XDM資源。 對於任何架構、欄位組或資料類型，您可以生成包含資源結構和任何相依資源的導出裝載。 然後，此裝載可用來將資源匯入目的地沙箱和IMS組織。
+Schema Registry API可讓您在沙箱和組織之間傳輸和共用XDM資源。 對於任何架構、欄位組或資料類型，您可以生成包含資源結構和任何相依資源的導出裝載。 然後，此裝載可用來將資源匯入目標沙箱和組織。
 
 請參閱 [匯出端點指南](./export.md) 以取得如何為現有XDM資源建立匯出裝載的詳細資訊。
 

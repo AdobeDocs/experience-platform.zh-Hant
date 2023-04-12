@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱管理API端點
 description: 沙箱API中的/沙箱端點可讓您以程式設計方式管理Adobe Experience Platform中的沙箱。
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1488'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platform中的沙箱提供孤立的開發環境，可讓您測�
 
 ## 擷取沙箱清單 {#list}
 
-您可以向 `/sandboxes` 端點。
+您可以向下列項目提出GET要求，以列出屬於您組織（活動或其他）的所有沙箱： `/sandboxes` 端點。
 
 **API格式**
 

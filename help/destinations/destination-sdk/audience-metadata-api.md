@@ -2,9 +2,9 @@
 description: 本頁說明您可以使用「/authoring/audience-templates」 API端點執行的所有API操作。
 title: 對象中繼資料端點API操作
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '873'
 ht-degree: 4%
 
 ---
@@ -318,7 +318,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## 擷取對象範本清單 {#retrieve-list}
 
-您可以向提出GET請求，以擷取IMS組織的所有對象範本清單 `/authoring/audience-templates` 端點。
+您可以向 `/authoring/audience-templates` 端點。
 
 **API格式**
 
@@ -329,7 +329,7 @@ GET /authoring/audience-templates
 
 **要求**
 
-下列請求會根據IMS組織和沙箱設定，擷取您有權存取的對象範本清單。
+下列請求會根據組織和沙箱設定，擷取您有權存取的對象範本清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -341,7 +341,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並包含您可存取的對象中繼資料範本清單。 一 `instanceId` 對應至一個目的地的範本。 回應會為簡潔而截斷。
+下列回應會根據您使用的組織ID和沙箱名稱，傳回HTTP狀態200，並提供您可存取的對象中繼資料範本清單。 一 `instanceId` 對應至一個目的地的範本。 回應會為簡潔而截斷。
 
 ```json
 {

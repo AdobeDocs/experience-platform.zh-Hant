@@ -2,9 +2,9 @@
 title: 匯出API端點
 description: Schema Registry API中的/export端點可讓您在沙箱之間共用XDM資源。
 exl-id: 1dcbfa59-af98-4db5-b6f4-f848e5bf5e81
-source-git-commit: 32d4a364ba740194d4fd7a0f4df7bd69f25f62b8
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '410'
 ht-degree: 1%
 
 ---
@@ -51,7 +51,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回物件陣列，代表目標XDM資源及其所有相依資源。 在此範例中，陣列中的第一個物件是租用戶建立的 `Property` 資料類型 `Restaurant` 欄位組採用，而第二個物件為 `Restaurant` 欄位群組本身。 然後，此裝載便可用於 [匯入資源](#import) 進入不同的沙箱或IMS組織。
+成功的回應會傳回物件陣列，代表目標XDM資源及其所有相依資源。 在此範例中，陣列中的第一個物件是租用戶建立的 `Property` 資料類型 `Restaurant` 欄位組採用，而第二個物件為 `Restaurant` 欄位群組本身。 然後，此裝載便可用於 [匯入資源](#import) 進入不同的沙箱或組織。
 
 請注意，資源的租用戶ID的所有例項都會取代為 `<XDM_TENANTID_PLACEHOLDER>`. 這可讓架構註冊表根據資源在後續匯入呼叫中的傳送位置，自動將正確的租用戶ID套用至資源。
 

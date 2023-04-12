@@ -2,9 +2,9 @@
 title: Reactor API指南
 description: Reactor API 可讓開發人員以程式設計方式管理 Adobe Experience Platform 標記的所有資源。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1081'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ Reactor API提供數個端點，可讓您以程式設計方式管理Adobe Experi
 
 ## 公司
 
-公司代表標籤使用者的組織，通常是企業。 這些公司會比對1:1與IMS組織ID。 API使用者將只能看見其可存取的公司。
+公司代表標籤使用者的組織，通常是企業。 這些公司符合1:1與組織ID。 API使用者將只能看見其可存取的公司。
 
 請參閱 [《公司端點指南》](./endpoints/companies.md) 了解如何在API中檢視可用公司。
 

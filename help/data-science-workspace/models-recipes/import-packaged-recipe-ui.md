@@ -5,9 +5,9 @@ title: 在Data Science Workspace UI中匯入封裝方式
 type: Tutorial
 description: 本教學課程透過提供的零售銷售範例，深入分析如何設定和匯入封裝方式。 在本教學課程結束前，您將準備好在Adobe Experience Platform Data Science Workspace中建立、訓練和評估模型。
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1833'
+source-wordcount: '1832'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ ht-degree: 0%
 | `ACP_DSW_INPUT_FEATURES` | 字串 | 逗號分隔的輸入架構屬性清單。 |
 | `ACP_DSW_TARGET_FEATURES` | 字串 | 逗號分隔的輸出架構屬性清單。 |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | 布林值 | 確定輸入和輸出特徵是否可修改 |
-| `tenantId` | 字串 | 此ID可確保您建立的資源與IMS組織中的命名方式正確無誤。 [請依照此處的步驟操作](../../xdm/api/getting-started.md#know-your-tenant_id) 找到您的租用戶ID。 |
+| `tenantId` | 字串 | 此ID可確保您建立的資源與組織命名時間正確，且內容完整。 [請依照此處的步驟操作](../../xdm/api/getting-started.md#know-your-tenant_id) 找到您的租用戶ID。 |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | 字串 | 用於訓練模型的輸入結構。 在UI中匯入時，請保留此空白，在使用API匯入時，請以訓練SchemaID取代。 |
 | `evaluation.labelColumn` | 字串 | 評估視覺效果的欄標籤。 |
 | `evaluation.metrics` | 字串 | 用於評估模型的評估度量清單（以逗號分隔）。 |

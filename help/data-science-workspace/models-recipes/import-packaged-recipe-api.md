@@ -5,9 +5,9 @@ title: 使用Sensei機器學習API匯入封裝配方
 type: Tutorial
 description: 本教學課程使用Sensei機器學習API來建立引擎，也稱為使用者介面中的方式。
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 2%
 本教學課程要求您完成 [驗證Adobe Experience Platform教學課程](https://www.adobe.com/go/platform-api-authentication-en) 以便成功呼叫 [!DNL Platform] API。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API呼叫，如下所示：
 
 - `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。
-- `{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。
+- `{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。
 - `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。
 
 ## 建立引擎

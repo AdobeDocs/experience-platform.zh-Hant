@@ -2,9 +2,9 @@
 description: 本頁列出並說明您可使用「/authoring/destinations」 API端點執行的所有API操作。
 title: 目的地API端點作業
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 59ac7749d788d8527da3578ec140248f7acf8e98
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2536'
 ht-degree: 4%
 
 ---
@@ -443,7 +443,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## 列出目標配置 {#retrieve-list}
 
-您可以向提出GET要求，以擷取IMS組織的所有目的地設定清單 `/authoring/destinations` 端點。
+您可以向 `/authoring/destinations` 端點。
 
 **API格式**
 
@@ -454,7 +454,7 @@ GET /authoring/destinations
 
 **要求**
 
-下列請求會根據IMS組織和沙箱設定，擷取您有權存取的目的地設定清單。
+下列請求會根據組織和沙箱設定，擷取您有權存取的目的地設定清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -466,7 +466,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您可存取的目標設定。 一 `instanceId` 對應至一個目的地的範本。 回應會為簡潔而截斷。
+下列回應會根據您使用的組織ID和沙箱名稱，傳回HTTP狀態200，並列出您可存取的目標設定。 一 `instanceId` 對應至一個目的地的範本。 回應會為簡潔而截斷。
 
 ```json
 {

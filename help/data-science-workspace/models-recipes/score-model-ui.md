@@ -5,9 +5,9 @@ title: 在Data Science Workspace UI中對模型評分
 type: Tutorial
 description: 在Adobe Experience Platform Data Science Workspace中，可將輸入資料饋送至現有的訓練模型，以達到計分。 然後會儲存計分結果，並以新批次形式在指定的輸出資料集中檢視。
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---

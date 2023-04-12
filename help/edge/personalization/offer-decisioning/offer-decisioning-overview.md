@@ -3,9 +3,9 @@ title: 搭配Platform Web SDK使用Offer decisioning
 description: Adobe Experience Platform Web SDK可提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
 keywords: offer decisioning；決策；Web SDK;Platform Web SDK；個人化優惠方案；傳送優惠方案；優惠方案傳送；優惠方案個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '863'
 ht-degree: 5%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe Experience Platform Web SDK中可提前存取特定使用者，以使用Offer decisioning。 並非所有IMS組織都能使用此功能。
+>Adobe Experience Platform Web SDK中可提前存取特定使用者，以使用Offer decisioning。 並非所有組織都可使用此功能。
 
 Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用 Offer Decisioning 使用者介面 (UI) 或 API 建立您的優惠方案與其他相關物件。 
 
 ## 先決條件
 
-* IMS組織已啟用邊緣決策功能
+* 組織已啟用邊緣決策功能
 * 選件，已建立的活動
 * 資料流已發佈
 

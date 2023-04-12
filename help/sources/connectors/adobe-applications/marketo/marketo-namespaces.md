@@ -2,9 +2,9 @@
 title: B2B命名空間和結構
 description: 本檔案概述建立B2B來源連接器時所需的自訂命名空間。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: fa3f937862dd8b6078f73b2a172b3fb5db652dc7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 4%
 
 ---
@@ -47,7 +47,7 @@ ht-degree: 4%
 | `IMS` | Identity Management系統(IMS)提供Adobe服務驗證的架構。 關於 [!DNL Marketo]，此值已修正，且一律設為： `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
 | `IMS_ORG` | 擁有或許可產品和服務並允許訪問其成員的公司實體。 請參閱 [設定開發人員主控台和 [!DNL Postman]](../../../../landing/postman.md) 有關如何檢索 `{ORG_ID}` 資訊。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | 您使用的虛擬沙箱分區的名稱。 | `prod` |
-| `TENANT_ID` | 用來確保所建立資源與IMS組織中的ID命名方式正確，且內容也包含在您的IMS組織中。 | `b2bcdpproductiontest` |
+| `TENANT_ID` | 用來確保您建立的資源命名正確，且包含在組織中的ID。 | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | 您進行API呼叫的URL端點。 此值已修正，且一律設為： `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
 
 {style="table-layout:auto"}
@@ -78,7 +78,7 @@ B2B命名空間用於實體的主要身分識別中。
 >
 >請向左/向右滾動以查看表的完整內容。
 
-| 顯示名稱 | 身分符號 | 身分類型 |
+| 顯示名稱 | 身分識別符號 | 身分類型 |
 | --- | --- | --- |
 | B2B人員 | `b2b_person` | `CROSS_DEVICE` |
 | B2B帳戶 | `b2b_account` | `B2B_ACCOUNT` |
@@ -106,10 +106,10 @@ Experience Platform 會使用結構，以一致且可重複使用的方式說明
 >
 >請向左/向右滾動以查看表的完整內容。
 
-| 架構名稱 | 基類 | 欄位群組 | [!DNL Profile] 結構 | 主要身分 | 主要身分命名空間 | 次要身分 | 次要身分命名空間 | 關係 | 附註 |
+| 方案名稱 | 基類 | 欄位群組 | [!DNL Profile] 結構 | 主要身分識別 | 主要身分命名空間 | 次要身分 | 次要身分命名空間 | 關係 | 附註 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | B2B帳戶 | [XDM商業帳戶](../../../../xdm/classes/b2b/business-account.md) | XDM業務帳戶詳細資訊 | 啟用 | `accountKey.sourceKey` 在基類中 | B2B帳戶 | `extSourceSystemAudit.externalKey.sourceKey` 在基類中 | B2B帳戶 | <ul><li>`accountParentKey.sourceKey` 在「 XDM業務帳戶詳細資訊」欄位組中</li><li>目標屬性： `/accountKey/sourceKey`</li><li>類型：一對一</li><li>參考結構：B2B帳戶</li><li>命名空間：B2B帳戶</li></ul> |
-| B2B人員 | [XDM個別設定檔](../../../../xdm/classes/individual-profile.md) | <ul><li>XDM業務人員詳細資訊</li><li>XDM企業人員元件</li><li>IdentityMap</li><li>同意和偏好設定詳細資訊</li></ul> | 啟用 | `b2b.personKey.sourceKey` 「 XDM業務人員詳細資訊」欄位組 | B2B人員 | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` XDM業務人員詳細資訊欄位組</li><li>`workEmail.address` XDM業務人員詳細資訊欄位組</ol></li> | <ol><li>B2B人員</li><li>電子郵件</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` XDM業務人員元件欄位組</li><li>類型：多對一</li><li>參考結構：B2B帳戶</li><li>命名空間：B2B帳戶</li><li>目標屬性：accountKey.sourceKey</li><li>當前架構的關係名稱：帳戶</li><li>引用架構的關係名稱：人員</li></ul> |
+| B2B人員 | [XDM 個別設定檔](../../../../xdm/classes/individual-profile.md) | <ul><li>XDM業務人員詳細資訊</li><li>XDM企業人員元件</li><li>IdentityMap</li><li>同意和偏好設定詳細資訊</li></ul> | 啟用 | `b2b.personKey.sourceKey` 「 XDM業務人員詳細資訊」欄位組 | B2B人員 | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` XDM業務人員詳細資訊欄位組</li><li>`workEmail.address` XDM業務人員詳細資訊欄位組</ol></li> | <ol><li>B2B人員</li><li>電子郵件</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` XDM業務人員元件欄位組</li><li>類型：多對一</li><li>參考結構：B2B帳戶</li><li>命名空間：B2B帳戶</li><li>目標屬性：accountKey.sourceKey</li><li>當前架構的關係名稱：帳戶</li><li>引用架構的關係名稱：人員</li></ul> |
 | B2B機會 | [XDM業務機會](../../../../xdm/classes/b2b/business-opportunity.md) | XDM業務機會詳細資訊 | 啟用 | `opportunityKey.sourceKey` 在基類中 | B2B機會 | `extSourceSystemAudit.externalKey.sourceKey` 在基類中 | B2B機會 | <ul><li>`accountKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B帳戶</li><li>命名空間：B2B帳戶</li><li>目標屬性： `accountKey.sourceKey`</li><li>當前架構的關係名稱：帳戶</li><li>引用架構的關係名稱：機會</li></ul> |
 | B2B機會人員關係 | [XDM商機人員關係](../../../../xdm/classes/b2b/business-opportunity-person-relation.md) | None | 啟用 | `opportunityPersonKey.sourceKey` 在基類中 | B2B機會人員關係 | `extSourceSystemAudit.externalKey.sourceKey` 在基類中 | B2B機會人員關係 | **第一關係**<ul><li>`personKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B人員</li><li>命名空間：B2B人員</li><li>目標屬性：b2b.personKey.sourceKey</li><li>當前架構的關係名稱：人員</li><li>引用架構的關係名稱：機會</li></ul>**第二關係**<ul><li>`opportunityKey.sourceKey` 在基類中</li><li>類型：多對一</li><li>參考結構：B2B機會 </li><li>命名空間：B2B機會 </li><li>目標屬性： `opportunityKey.sourceKey`</li><li>當前架構的關係名稱：機會</li><li>引用架構的關係名稱：人員</li></ul> |
 | B2B行銷活動 | [XDM商業宣傳](../../../../xdm/classes/b2b/business-campaign.md) | XDM商業促銷活動詳細資訊 | 啟用 | `campaignKey.sourceKey` 在基類中 | B2B行銷活動 | `extSourceSystemAudit.externalKey.sourceKey` 在基類中 | B2B行銷活動 |

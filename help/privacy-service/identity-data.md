@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權要求的身分資料
 description: 本檔案提供如何設定資料操作及運用Adobe技術，以有效擷取適當客戶隱私權要求身分資訊的一般指引。
 exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 當客戶可透過數個不同管道與您的品牌互動時，若要協調從這些多次互動中記錄的不同識別碼，可能會很困難。 這進而可能會讓您難以判斷哪些資料屬於您的 [!DNL Experience Cloud] 應用程式。
 
-例如，在 [!DNL Privacy Service]，身分可代表在Adobe控制網域下設定的Cookie值、在協力廠商網域下並與Adobe共用的Cookie值，或您在IMS組織中明確定義的自訂識別碼。
+例如，在 [!DNL Privacy Service]，身分可代表在Adobe控制網域下設定的Cookie值、在協力廠商網域下並與Adobe共用的Cookie值，或您在組織內明確定義的自訂識別碼。
 
 因此，每個身分都必須傳送至 [!DNL Privacy Service] 伴有命名空間，提供內容，並將身分值與其來源系統相關。 命名空間可代表一般概念，例如電子郵件地址（「電子郵件」），或將身分識別與特定應用程式建立關聯，例如Adobe Advertising Cloud ID(「AdCloud」)或Adobe Target ID(「TNTID」)。
 

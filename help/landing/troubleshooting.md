@@ -7,9 +7,9 @@ landing-page-description: 尋找常見問題的解答，以及針對 Experience 
 short-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1868'
 ht-degree: 4%
 
 ---
@@ -32,9 +32,9 @@ ht-degree: 4%
 
 如需建立API請求的詳細資訊，請參閱Platform API快速入門手冊 [讀取範例API呼叫](./api-guide.md#sample-api) 區段。
 
-## 什麼是我的IMS組織？ {#what-is-my-ims-organization}
+## 我的組織是什麼？ {#what-is-my-ims-organization}
 
-IMS組織是Adobe的代表。 任何經授權的Adobe解決方案都與此客戶組織整合。 當IMS組織有權使用 [!DNL Experience Platform]，則可指派開發人員的存取權。 IMS組織ID(`x-gw-ims-org-id`)代表應為執行API呼叫的組織，因此在所有API請求中都是標題。 此ID可透過 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui):在 **整合** 頁簽，導航到 **概述** 區段，以尋找下方的ID **客戶端憑據**. 如何驗證的逐步說明 [!DNL Platform]，請參閱 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en).
+組織是Adobe的代表。 任何經授權的Adobe解決方案都與此客戶組織整合。 當組織有權 [!DNL Experience Platform]，則可指派開發人員的存取權。 組織ID(`x-gw-ims-org-id`)代表應為執行API呼叫的組織，因此在所有API請求中都是標題。 此ID可透過 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui):在 **整合** 頁簽，導航到 **概述** 區段，以尋找下方的ID **客戶端憑據**. 如何驗證的逐步說明 [!DNL Platform]，請參閱 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## 在哪裡可以找到我的API金鑰？ {#where-can-i-find-my-api-key}
 
@@ -42,7 +42,7 @@ IMS組織是Adobe的代表。 任何經授權的Adobe解決方案都與此客戶
 
 ## 如何取得存取權杖？ {#how-do-i-get-an-access-token}
 
-所有API呼叫的「授權」標題中都需要存取權杖。 可使用 `curl` 命令，前提是您有權存取IMS組織的整合。 存取權杖的有效期限僅為24小時，之後必須產生新權杖，才能繼續使用API。 如需產生存取權杖的詳細資訊，請參閱 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en).
+所有API呼叫的「授權」標題中都需要存取權杖。 只要您有權存取組織的整合，就可使用CURL命令產生這些URL。 存取權杖的有效期限僅為24小時，之後必須產生新權杖，才能繼續使用API。 如需產生存取權杖的詳細資訊，請參閱 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## 如何使用查詢參數？ {#how-do-i-user-query-parameters}
 
@@ -151,7 +151,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當IMS組織標題(`x-gw-ims-org-id`)缺少。 再次嘗試之前，請確定標題已包含在您IMS組織的ID中。
+組織標題(`x-gw-ims-org-id`)缺少。 請確定標題已包含在貴組織的ID中，然後再次嘗試。
 
 ### 配置檔案無效 {#profile-is-not-valid}
 
@@ -162,7 +162,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 }
 ```
 
-當使用者或Adobe I/O整合時(由 [存取權杖](#how-do-i-get-an-access-token) 在 `Authorization` 標題)無權呼叫 [!DNL Experience Platform] 提供於 `x-gw-ims-org-id` 頁首。 請確定您已在標題中為IMS組織提供正確的ID，然後再試一次。 如果您不知道組織ID，可在 [Adobe I/O主控台](https://console.adobe.io):在 **整合** 頁簽，導航到 **概述** 區段，以尋找 **客戶端憑據**.
+當使用者或Adobe I/O整合時(由 [存取權杖](#how-do-i-get-an-access-token) 在 `Authorization` 標題)無權呼叫 [!DNL Experience Platform] 提供於 `x-gw-ims-org-id` 頁首。 請確定您已在標題中為組織提供正確的ID，然後再試一次。 如果您不知道組織ID，可在 [Adobe I/O主控台](https://console.adobe.io):在 **整合** 頁簽，導航到 **概述** 區段，以尋找 **客戶端憑據**.
 
 ### 刷新etag錯誤 {#refresh-etag-error}
 
@@ -199,7 +199,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 ```
 
 此錯誤訊息會顯示在以下兩種情況之一：
-- 當IMS組織標題不正確或格式錯誤時(`x-gw-ims-org-id`)會傳遞至API請求。 再試一次之前，請確定已包含正確的ID。
+- 當組織ID標題不正確或格式錯誤時(`x-gw-ims-org-id`)會傳遞至API請求。 再次嘗試之前，請確定已包含正確的組織ID。
 - 當您的帳戶（如提供的驗證憑證所示）未與產品設定檔建立關聯以進行Experience Platform時。 請依照 [生成訪問憑據](./api-authentication.md#authentication-for-each-session) 在Platform API驗證教學課程中，將Platform新增至您的帳戶，並據此更新您的驗證憑證。
 
 ## 服務故障排除目錄 {#service-troubleshooting-directory}

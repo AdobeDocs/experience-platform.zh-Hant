@@ -5,9 +5,9 @@ title: 評估和存取區段結果
 type: Tutorial
 description: 請依照本教學課程，了解如何使用Adobe Experience Platform區段服務API評估區段並存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1607'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ## 計畫評估 {#scheduled-evaluation}
 
-透過排程的評估，您的IMS組織可以建立循環排程以自動執行匯出作業。
+透過排程評估，您的組織可建立循環排程以自動執行匯出作業。
 
 >[!NOTE]
 >

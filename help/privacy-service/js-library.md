@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe隱私權JavaScript程式庫概觀
 description: Adobe隱私權JavaScript程式庫可讓您擷取資料主體身分識別，以用於Privacy Service。
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 6%
 
 ---
@@ -207,7 +207,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 | 參數 | 說明 |
 | --- | --- |
-| `imsOrgID` | 您的IMS組織ID。 |
+| `imsOrgID` | 您的組織 ID。 |
 
 **Adobe Target**
 

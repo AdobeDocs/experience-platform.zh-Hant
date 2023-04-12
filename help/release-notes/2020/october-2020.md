@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1015'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 設定檔預覽API新增 | 設定檔預覽API(`/previewsamplestatus`)現在包含檢視整個IMS組織之設定檔片段總數的劃分，以及檢視不同身分命名空間之設定檔片段的分佈。 |
+| 設定檔預覽API新增 | 設定檔預覽API(`/previewsamplestatus`)現在包含檢視整個組織之設定檔片段總數的劃分，以及檢視身分識別命名空間中設定檔片段的分佈。 |
 | 聯合架構視圖更新 | 在Experience PlatformUI中，使用者可更輕鬆找到關於聯合結構的所有結構和資料集，以及身分和關係欄位等表面關鍵屬性的資訊。 這些更新可改善疑難排解及驗證設定檔已正確設定、身分識別已正確匯整，以及資料已成功內嵌的功能。 |
 
 如需 [!DNL Real-Time Customer Profile]，包括教學課程和使用的最佳實務 [!DNL Profile] 資料，請閱讀 [即時客戶個人檔案概觀](../../profile/home.md).

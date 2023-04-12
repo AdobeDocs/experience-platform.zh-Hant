@@ -5,9 +5,9 @@ title: 使用資料存取API擷取失敗的批次
 type: Tutorial
 description: 本教學課程涵蓋使用資料擷取API擷取失敗批次相關資訊的步驟。
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -194,9 +194,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 與上一個範例流程中的時間戳記錯誤相同，這些錯誤是因為XDM格式不正確。 這些錯誤消息會因問題的性質而有所不同。 因此，無法顯示特定的錯誤範例。
 
-### 遺失或無效的IMS組織ID
+### 缺少或無效的組織ID
 
-如果裝載中缺少IMS組織ID無效，就會顯示此錯誤。
+如果裝載中缺少組織ID即無效，則會顯示此錯誤。
 
 ```json
 {

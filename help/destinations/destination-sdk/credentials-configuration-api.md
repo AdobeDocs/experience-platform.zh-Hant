@@ -2,9 +2,9 @@
 description: 本頁面說明您可以使用「/authoring/credentials」 API端點執行的所有API操作。
 title: 憑證端點API操作
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '791'
 ht-degree: 4%
 
 ---
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 ## 列出憑據配置 {#retrieve-list}
 
-您可以向提出GET要求，以擷取IMS組織的所有認證設定清單 `/authoring/credentials` 端點。
+您可以向提出GET要求，以擷取組織的所有憑證設定清單 `/authoring/credentials` 端點。
 
 **API格式**
 
@@ -151,7 +151,7 @@ GET /authoring/credentials
 
 **要求**
 
-下列要求會根據IMS組織和沙箱設定，擷取您有權存取的認證設定清單。
+下列請求會根據組織和沙箱設定，擷取您有權存取的認證設定清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -163,7 +163,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **回應**
 
-下列回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，並列出您有權存取的憑證設定。 一 `instanceId` 與一個憑據配置的模板相對應。 回應會為簡潔而截斷。
+下列回應會根據您使用的組織ID和沙箱名稱，傳回HTTP狀態200，並列出您有權存取的憑證設定。 一 `instanceId` 與一個憑據配置的模板相對應。 回應會為簡潔而截斷。
 
 ```json
 {

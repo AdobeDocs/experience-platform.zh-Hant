@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 策略服務API快速入門
 description: Policy Service API允許您建立和管理與Adobe Experience Platform Data Governance相關的各種資源。 本文檔介紹了在嘗試調用策略服務API之前需要知道的核心概念。
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ API檔案也要求您完成 [驗證教學課程](https://www.adobe.com/go/platfo
 
 在 [!DNL Policy Service] API、所有原則和行銷動作皆可稱為 `core` 或 `custom` 資源。
 
-`core` 資源是指由Adobe定義和維護的資源，然而 `custom` 資源是由您的組織建立和維護的資源，因此只有您的IMS組織可看見。 因此，請列出和查閱操作(`GET`)是 `core` 資源，則列出、查詢和更新操作(`POST`, `PUT`, `PATCH`，和 `DELETE`)可供 `custom` 資源。
+`core` 資源是指由Adobe定義和維護的資源，然而 `custom` 資源是您的組織建立和維護的資源，因此只有您的組織才能看到。 因此，請列出和查閱操作(`GET`)是 `core` 資源，則列出、查詢和更新操作(`POST`, `PUT`, `PATCH`，和 `DELETE`)可供 `custom` 資源。
 
 ## 後續步驟
 

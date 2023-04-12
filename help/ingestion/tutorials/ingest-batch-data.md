@@ -5,9 +5,9 @@ title: 將資料內嵌至Experience Platform
 type: Tutorial
 description: Adobe Experience Platform可讓您輕鬆以Parquet檔案或符合已知Experience Data Model(XDM)結構的資料形式，將資料匯入為批次檔案。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform可讓您輕鬆將資料匯入 [!DNL Platform] 作為�
 
 ## 資料集工作區
 
-內的資料集工作區 [!DNL Experience Platform] 可讓您檢視及管理IMS組織建立的所有資料集，並建立新的資料集。
+內的資料集工作區 [!DNL Experience Platform] 可讓您檢視及管理組織建立的所有資料集，以及建立新資料集。
 
 按一下「 」以檢視資料集工作區 **[!UICONTROL 資料集]** 的下一頁。 「資料集」工作區包含資料集清單，包括顯示名稱、已建立（日期和時間）、來源、結構、上次批次狀態的欄，以及上次更新資料集的日期和時間。
 

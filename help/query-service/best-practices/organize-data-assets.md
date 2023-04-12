@@ -2,9 +2,9 @@
 title: 查詢服務中資料資產組織的最佳實務
 description: 本檔案概述組織資料以方便與Query Service搭配使用的邏輯方法。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: d3ea7ee751962bb507c91e1afea0da35da60a66d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -129,7 +129,7 @@ dataset3| table
 
 ## 更新或移除資料容器中的資料資產
 
-隨著IMS組織（或沙箱）中的資料資產量增加，您就必須更新或移除資料容器中的資料資產。 使用點記號參考適當的資料庫和結構名稱，即可從組織容器中移除個別資產。 表格和檢視(`t1` 和 `v1` ) `databaseA.schema1` 在第一個範例中，會使用下列範例中的語法來移除。
+隨著組織（或沙箱）中的資料資產量增加，您就必須更新或移除資料容器中的資料資產。 使用點記號參考適當的資料庫和結構名稱，即可從組織容器中移除個別資產。 表格和檢視(`t1` 和 `v1` ) `databaseA.schema1` 在第一個範例中，會使用下列範例中的語法來移除。
 
 ```sql
 ALTER TABLE databaseA.schema2.t1 REMOVE SCHEMA databaseA.schema2;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### 移除資料資產
 
-此 [拖放表](../sql/syntax.md#drop-table) 函式只會以物理方式從 [!DNL Data Lake] 當IMS組織中所有資料庫都有單一表格參考時。
+此 [拖放表](../sql/syntax.md#drop-table) 函式只會以物理方式從 [!DNL Data Lake] 當組織中所有資料庫中都存在對表的單個引用時。
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

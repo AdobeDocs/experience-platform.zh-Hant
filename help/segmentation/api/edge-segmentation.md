@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用API進行邊緣劃分
 description: 本檔案包含如何搭配Adobe Experience Platform區段服務API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 1c4da50b2c211aae06d6702d75e5650447fae0eb
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回IMS組織中已啟用邊緣分段的區段陣列。 如需傳回之區段定義的詳細資訊，請參閱 [區段定義端點指南](./segment-definitions.md).
+成功的回應會傳回組織中已啟用邊緣分段的區段陣列。 如需傳回之區段定義的詳細資訊，請參閱 [區段定義端點指南](./segment-definitions.md).
 
 ```json
 {

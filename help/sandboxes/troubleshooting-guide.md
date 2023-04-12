@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱疑難排解指南
 description: 本檔案提供Adobe Experience Platform中沙箱常見問題的解答。
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '855'
 ht-degree: 6%
 
 ---
@@ -45,7 +45,7 @@ Experience Platform中提供兩種沙箱類型：
 
 ## 預設的生產沙箱為何？
 
-預設的生產沙箱是首次布建IMS組織時建立的第一個生產沙箱。 預設的生產沙箱可讓您從Platform擷取或使用資料，以及接受不包含沙箱名稱或沙箱ID值的要求。 可重設預設生產沙箱，但不可刪除。
+預設的生產沙箱是初次布建組織時建立的第一個生產沙箱。 預設的生產沙箱可讓您從Platform擷取或使用資料，以及接受不包含沙箱名稱或沙箱ID值的要求。 可重設預設生產沙箱，但不可刪除。
 
 ## 我可以有多少個生產沙箱？
 
@@ -63,7 +63,7 @@ Experience Platform例項支援多個生產與開發沙箱，每個沙箱都維�
 
 ## 我可以有多少個開發沙箱？
 
-Experience Platform目前最多可在單一IMS組織內啟用總共75個沙箱（生產與開發）。
+Experience Platform目前可讓單一組織內最多有75個沙箱（生產和開發）作用中。
 
 開發沙箱支援重設和刪除功能。
 

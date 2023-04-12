@@ -4,9 +4,9 @@ title: 合併策略API端點
 type: Documentation
 description: Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起，並加以結合，以便查看每個客戶的完整檢視。 將這些資料整合在一起時，Platform會使用合併原則來判斷資料的優先順序，以及將哪些資料合併以建立統一檢視。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '2472'
+source-wordcount: '2468'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ## 合併策略的元件 {#components-of-merge-policies}
 
-合併原則是IMS組織專用的，可讓您建立不同的原則，以便以您需要的特定方式合併結構。 任何API存取 [!DNL Profile] 資料需要合併策略，但如果未明確提供，則會使用預設策略。 [!DNL Platform] 為組織提供預設的合併原則，或者您可以為特定Experience Data Model(XDM)結構類別建立合併原則，並將其標示為組織的預設值。
+合併策略對您的組織是專用的，允許您建立不同的策略，以按所需的特定方式合併結構。 任何API存取 [!DNL Profile] 資料需要合併策略，但如果未明確提供，則會使用預設策略。 [!DNL Platform] 為組織提供預設的合併原則，或者您可以為特定Experience Data Model(XDM)結構類別建立合併原則，並將其標示為組織的預設值。
 
 雖然每個組織可能具有每個架構類的多個合併策略，但每個類只能有一個預設的合併策略。 如果提供架構類名稱，但需要但未提供合併策略，則將使用任何設定為預設的合併策略。
 
@@ -37,7 +37,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 為確保所有配置檔案使用者在邊緣上使用相同的視圖，可以將合併策略標籤為邊緣上的活動策略。 要在邊緣上激活段（標籤為邊緣段），必須將其綁定到標籤為邊緣上活動的合併策略。 如果區段為 **not** 系結至標示為在邊緣處於作用中狀態的合併原則，區段不會標示為在邊緣處於作用中狀態，且會標示為串流區段。
 
-此外，每個IMS組織只能 **one** 在邊緣處活動的合併策略。 如果合併策略在邊緣處於活動狀態，則該策略可用於邊緣處的其他系統，如邊緣配置檔案、邊緣分段和邊緣處的目標。
+此外，每個組織只能 **one** 在邊緣處活動的合併策略。 如果合併策略在邊緣處於活動狀態，則該策略可用於邊緣處的其他系統，如邊緣配置檔案、邊緣分段和邊緣處的目標。
 
 ### 完整合併策略對象
 
@@ -193,7 +193,7 @@ Adobe Experience Platform可讓您從多個來源將資料片段匯整在一起�
 
 ## 訪問合併策略 {#access-merge-policies}
 
-使用 [!DNL Real-Time Customer Profile] API、 `/config/mergePolicies` 端點可讓您執行查詢請求，依其ID檢視特定的合併原則，或存取IMS組織中依特定條件篩選的所有合併原則。 您也可以使用 `/config/mergePolicies/bulk-get` 端點，通過其ID檢索多個合併策略。 以下各節將概述執行這些呼叫的步驟。
+使用 [!DNL Real-Time Customer Profile] API、 `/config/mergePolicies` 端點允許您執行查找請求以按其ID查看特定合併策略，或訪問組織中按特定條件篩選的所有合併策略。 您也可以使用 `/config/mergePolicies/bulk-get` 端點，通過其ID檢索多個合併策略。 以下各節將概述執行這些呼叫的步驟。
 
 ### 按ID訪問單個合併策略
 
@@ -347,7 +347,7 @@ curl -X POST \
 
 ### 按條件列出多個合併策略
 
-您可以向以下網站發出GET請求，列出IMS組織內的多個合併原則： `/config/mergePolicies` 端點，並使用選用的查詢參數來篩選、排序和分頁回應。 可包含多個參數，以&amp;符號分隔。 對此端點進行無參數呼叫將檢索組織可用的所有合併策略。
+您可以向以下機構發出GET請求，以列出組織內的多個合併策略： `/config/mergePolicies` 端點，並使用選用的查詢參數來篩選、排序和分頁回應。 可包含多個參數，以&amp;符號分隔。 對此端點進行無參數呼叫將檢索組織可用的所有合併策略。
 
 **API格式**
 

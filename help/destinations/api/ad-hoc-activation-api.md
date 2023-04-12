@@ -5,9 +5,9 @@ title: 透過臨機啟動API啟動對象區段以批次目的地
 description: 本文說明透過臨機啟動API來啟動對象區段的端對端工作流程，包括啟動前發生的區段工作。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
@@ -62,7 +62,7 @@ Adobe Experience Platform每24小時執行一次已排程的分段工作。 臨�
 
 呼叫Adobe Experience Platform API之前，請務必符合下列必要條件：
 
-* 您有可存取Adobe Experience Platform的IMS組織帳戶。
+* 您有可存取Adobe Experience Platform的組織帳戶。
 * 您的Experience Platform帳戶具有 `developer` 和 `user` 為Adobe Experience Platform API產品設定檔啟用的角色。 請連絡您的 [Admin Console](../../access-control/home.md) 管理員來為您的帳戶啟用這些角色。
 * 你有Adobe ID。 如果您沒有Adobe ID，請前往 [Adobe Developer Console](https://developer.adobe.com/console) 並建立新帳戶。
 

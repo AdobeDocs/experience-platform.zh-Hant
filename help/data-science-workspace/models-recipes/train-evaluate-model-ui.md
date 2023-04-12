@@ -5,9 +5,9 @@ title: 在Data Science Workspace UI中訓練和評估模型
 type: Tutorial
 description: 在Adobe Experience Platform Data Science Workspace中，機器學習模型是透過結合適合模型目的的現有方式而建立。 然後，對模型進行訓練和評估，通過微調其相關的超參數來優化其運行效率和效能。 方式可重複使用，這表示您可以使用單一方式，針對特定用途建立並量身打造多個模型。
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
@@ -120,7 +120,7 @@ ht-degree: 2%
 | `ACP_DSW_INPUT_FEATURES` | 字串 | 逗號分隔的輸入架構屬性清單。 |
 | `ACP_DSW_TARGET_FEATURES` | 字串 | 逗號分隔的輸出架構屬性清單。 |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | 布林值 | 確定輸入和輸出特徵是否可修改 |
-| `tenantId` | 字串 | 此ID可確保您建立的資源與IMS組織中的命名方式正確無誤。 [請依照此處的步驟操作](../../xdm/api/getting-started.md#know-your-tenant_id) 找到您的租用戶ID。 |
+| `tenantId` | 字串 | 此ID可確保您建立的資源與組織命名時間正確，且內容完整。 [請依照此處的步驟操作](../../xdm/api/getting-started.md#know-your-tenant_id) 找到您的租用戶ID。 |
 | `ACP_DSW_TRAINING_XDM_SCHEMA` | 字串 | 用於訓練模型的輸入結構。 |
 | `evaluation.labelColumn` | 字串 | 評估視覺效果的欄標籤。 |
 | `evaluation.metrics` | 字串 | 用於評估模型的評估度量清單（以逗號分隔）。 |

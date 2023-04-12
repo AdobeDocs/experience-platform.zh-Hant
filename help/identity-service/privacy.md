@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題
 title: Identity Service中的隱私權要求處理
 description: Adobe Experience Platform Privacy Service會處理客戶存取、選擇退出銷售或刪除其個人資料的請求，這些資料是多項隱私權法規所規定。 本檔案涵蓋與處理Identity Service隱私權要求相關的基本概念。
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,7 @@ curl -X POST \
 
 ## 刪除請求處理
 
-當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service], [!DNL Platform] 發送確認 [!DNL Privacy Service] 已收到請求，且受影響的資料已標示為刪除。 個別身分的刪除是根據提供的命名空間及/或ID值。 此外，會刪除與指定IMS組織相關聯的所有沙箱。
+當 [!DNL Experience Platform] 從接收刪除請求 [!DNL Privacy Service], [!DNL Platform] 發送確認 [!DNL Privacy Service] 已收到請求，且受影響的資料已標示為刪除。 個別身分的刪除是根據提供的命名空間及/或ID值。 此外，會刪除與指定組織相關聯的所有沙箱。
 
 視您是否也包含即時客戶個人檔案而定(`ProfileService`)和資料湖(`aepDataLake`)作為您針對Identity Service的隱私權要求中的產品(`identity`)，則會在可能不同的時間從系統中移除與身分相關的不同資料集：
 

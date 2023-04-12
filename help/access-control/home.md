@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能會運用Admin Console中的產品設定檔，將使用者與權限和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1540'
 ht-degree: 3%
 
 ---
@@ -55,7 +55,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 
 ## 沙箱和權限
 
-非生產沙箱是資料虛擬化的一種形式，可讓您將資料與其他沙箱隔離，且通常用於開發實驗、測試或測試。 產品設定檔的權限可授予設定檔的使用者存取權 [!DNL Platform] 沙箱環境中已授予其存取權的功能。 預設Experience Platform授權會授予您五個沙箱（一個生產，四個非生產）。 您最多可新增10個非生產沙箱，最多75個沙箱。 如需詳細資訊，請聯絡您的IMS組織管理員或Adobe銷售代表。
+非生產沙箱是資料虛擬化的一種形式，可讓您將資料與其他沙箱隔離，且通常用於開發實驗、測試或測試。 產品設定檔的權限可授予設定檔的使用者存取權 [!DNL Platform] 沙箱環境中已授予其存取權的功能。 預設Experience Platform授權會授予您五個沙箱（一個生產，四個非生產）。 您最多可新增10個非生產沙箱，最多75個沙箱。 如需詳細資訊，請聯絡貴組織的管理員或Adobe銷售代表。
 
 如需中沙箱的詳細資訊，請參閱 [!DNL Experience Platform]，請參閱 [沙箱概述](../sandboxes/home.md).
 
@@ -114,7 +114,7 @@ Adobe Admin Console提供管理Adobe產品權益和組織存取權限的集中�
 | [!DNL Destinations] | [!UICONTROL 目標編寫] | 可使用 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和禁用源的訪問權。 |
 | [!DNL Data Ingestion] | [!UICONTROL 查看源] | 對 **[!UICONTROL 目錄]** 標籤和已驗證的來源(在 **[!UICONTROL 瀏覽]** 標籤。 |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 建立、接受和拒絕合作夥伴握手的存取權，以連接兩個IMS組織並啟用 [!DNL Segment Match] 流量。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 訪問建立、接受和拒絕合作夥伴握手以連接兩個組織並啟用 [!DNL Segment Match] 流量。 |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 讀取、建立、編輯和發佈的存取權 [!DNL Segment Match] 與作用中合作夥伴的摘要。 |
 | [!DNL Data Science Workspace] | [!UICONTROL 管理Data Science Workspace] | 在中讀取、建立、編輯和刪除 [!DNL Data Science Workspace]. |
 | 資料治理 | [!UICONTROL 套用資料使用量標籤] | 讀取、建立和刪除使用標籤的存取權。 |

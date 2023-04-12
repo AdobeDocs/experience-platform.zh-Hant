@@ -1,21 +1,21 @@
 ---
 solution: Experience Platform
 title: 在UI中匯出XDM結構
-description: 了解如何在Adobe Experience Platform使用者介面中，將現有結構匯出至不同的沙箱或IMS組織。
+description: 了解如何在Adobe Experience Platform使用者介面中，將現有結構匯出至不同的沙箱或組織。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
 
 # 在UI中匯出XDM結構
 
-結構資料庫中的所有資源都包含在IMS組織內的特定沙箱中。 在某些情況下，您可能會想在沙箱與IMS組織之間共用Experience Data Model(XDM)資源。
+結構資料庫中的所有資源都包含在組織內的特定沙箱中。 在某些情況下，您可能會想在沙箱和組織之間共用Experience Data Model(XDM)資源。
 
-為滿足此需求， [!UICONTROL 結構] Adobe Experience Platform UI中的工作區可讓您為架構資料庫中的任何架構產生匯出裝載。 接著，此裝載便可用於呼叫結構註冊表API，以將結構（以及所有相依資源）匯入目標沙箱和IMS組織。
+為滿足此需求， [!UICONTROL 結構] Adobe Experience Platform UI中的工作區可讓您為架構資料庫中的任何架構產生匯出裝載。 然後，此裝載可用於呼叫Schema Registry API，以將結構（以及所有相依資源）匯入目標沙箱和組織中。
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-雖然Platform UI可讓您匯出XDM資源，但您必須使用「結構註冊表API」將這些資源匯入其他沙箱或IMS組織，才能完成工作流程。 請參閱 [架構註冊表API快速入門](../api/getting-started.md) 如需遵循本指南之前所需驗證標題的重要資訊。
+雖然Platform UI可讓您匯出XDM資源，但您必須使用Schema Registry API將這些資源匯入其他沙箱或組織，才能完成工作流程。 請參閱 [架構註冊表API快速入門](../api/getting-started.md) 如需遵循本指南之前所需驗證標題的重要資訊。
 
 ## 產生匯出裝載
 
@@ -201,14 +201,14 @@ ht-degree: 0%
 ]
 ```
 
-裝載會以陣列的形式呈現，而每個陣列項目都是代表要匯出之自訂XDM資源的物件。 在上例中，[!DNL Loyalty details]&quot;自定義欄位組和&quot;[!DNL Loyalty Members]」架構。 匯出中不包含結構採用的任何核心資源，因為這些資源可用於所有沙箱和IMS組織。
+裝載會以陣列的形式呈現，而每個陣列項目都是代表要匯出之自訂XDM資源的物件。 在上例中，[!DNL Loyalty details]&quot;自定義欄位組和&quot;[!DNL Loyalty Members]」架構。 匯出中不會包含架構使用的任何核心資源，因為這些資源可用於所有沙箱和組織。
 
 請注意，您組織的租用戶ID的每個例項都顯示為 `<XDM_TENANTID_PLACEHOLDER>` 在裝載中。 視您在下個步驟中匯入結構的位置而定，這些預留位置會自動取代為適當的租用戶ID值。
 
 ## 使用API匯入資源
 
-複製結構的匯出JSON後，您就可以將它當作POST要求的裝載，傳送至 `/rpc/import` 結構註冊表API中的端點。 請參閱 [匯入端點指南](../api/import.md) 如需如何設定呼叫以傳送結構給所需IMS組織和沙箱的詳細資訊。
+複製結構的匯出JSON後，您就可以將它當作POST要求的裝載，傳送至 `/rpc/import` 結構註冊表API中的端點。 請參閱 [匯入端點指南](../api/import.md) 如需如何設定呼叫以將結構傳送至所需組織和沙箱的詳細資訊。
 
 ## 後續步驟
 
-依照本指南，您已成功將XDM結構匯出至不同的IMS組織或沙箱。 如需功能的詳細資訊，請參閱 [!UICONTROL 結構] UI，請參閱 [[!UICONTROL 結構] UI概述](./overview.md).
+依照本指南，您已成功將XDM結構匯出至不同的組織或沙箱。 如需功能的詳細資訊，請參閱 [!UICONTROL 結構] UI，請參閱 [[!UICONTROL 結構] UI概述](./overview.md).

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段匯出作業API端點
 description: 匯出工作是非同步程式，可用來將對象區段成員保留至資料集。 您可以在Adobe Experience Platform分段服務API中使用/export/jobs端點，這可讓您以程式設計方式擷取、建立和取消匯出工作。
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: d28cebaf4b9fe5c35240e28653e99424db08d9d2
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1629'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ GET /export/jobs?status={STATUS}
 
 **要求**
 
-下列請求會擷取您IMS組織內最後兩個匯出工作。
+下列請求將擷取組織內最後兩個匯出作業。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \

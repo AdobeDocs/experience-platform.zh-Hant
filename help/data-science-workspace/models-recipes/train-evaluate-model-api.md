@@ -5,9 +5,9 @@ title: 使用Sensei機器學習API訓練和評估模型
 type: Tutorial
 description: 本教學課程將示範如何使用Sensei機器學習API呼叫來建立、訓練和評估模型。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1227'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 在教學課程中，您現在應該有下列值：
 
 - `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。
-- `{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。
+- `{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。
 - `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。
 
 - 連結至智慧服務的Docker映像
@@ -65,7 +65,7 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。\
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。\
 `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:MLInstance的配置。 以下是我們在教學課程中使用的範例：
 
@@ -176,7 +176,7 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。\
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
 `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:已建立的實驗物件。 以下是我們在教學課程中使用的範例：
@@ -232,7 +232,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。\
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
 `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:要張貼的資料集。 以下是我們在教學課程中使用的範例：
@@ -320,7 +320,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`:與您要定位之實驗相對應的ID。 建立實驗時，可在回應中找到。\
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。\
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
 `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。\
 `{JSON_PAYLOAD}`:若要建立訓練執行，您必須在內文中包含下列項目：
@@ -391,7 +391,7 @@ curl -X GET \
 `{EXPERIMENT_ID}`:代表實驗的ID。\
 `{EXPERIMENT_RUN_ID}`:代表實驗執行的ID。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。\
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。\
 `{API_KEY}`:您在獨特Adobe Experience Platform整合中找到的特定API金鑰值。
 
 **回應**
@@ -454,7 +454,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`:與您要定位之「實驗執行」對應的ID。 建立實驗執行時，可在回應中找到。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。
 
 響應表示已建立的訓練模型。
 
@@ -501,7 +501,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:與實驗對應的ID。\
 `{ACCESS_TOKEN}`:驗證後提供的特定承載令牌值。\
-`{ORG_ID}`:在您獨特的Adobe Experience Platform整合中找到您的IMS組織認證。
+`{ORG_ID}`:您在獨特Adobe Experience Platform整合中找到的組織認證。
 
 >[!NOTE]
 >

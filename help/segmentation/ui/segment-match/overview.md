@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段符合概述
 description: 區段比對是Adobe Experience Platform中的區段共用服務，可讓兩位或多位Platform使用者以安全、受控且符合隱私權的方式來交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '1997'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ Adobe Experience Platform區段比對是區段共用服務，可讓兩位或多�
 
 | 權限 | 說明 |
 | --- | --- |
-| 管理對象共用連線 | 此權限可讓您完成合作夥伴交握程式，此程式會連接兩個IMS組織以啟用 [!DNL Segment Match] 流量。 |
+| 管理對象共用連線 | 此權限可讓您完成合作夥伴握手過程，該過程會連接兩個組織以啟用 [!DNL Segment Match] 流量。 |
 | 管理受眾分享 | 此權限可讓您建立、編輯和發佈摘要（用於的資料套件） [!DNL Segment Match])與活躍合作夥伴(管理員使用者已與 **[!UICONTROL 對象共用連線]** 存取)。 |
 
 請參閱 [存取控制概觀](../../../access-control/home.md) 以取得存取控制和權限的詳細資訊。

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 串流擷取疑難排解指南
 description: 本檔案提供Adobe Experience Platform上串流獲取的常見問題解答。
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Adobe Experience Platform [!DNL Data Ingestion] 提供RESTful API，供您用來
 
 ### 如何確保僅從受信任的來源收集資料？
 
-[!DNL Experience Platform] 支援安全資料收集。 啟用已驗證的資料收集時，用戶端必須傳送JSON網頁代號(JWT)及其IMS組織ID作為要求標題。 如需如何將已驗證資料傳送至的詳細資訊 [!DNL Platform]，請參閱 [驗證的資料收集](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] 支援安全資料收集。 啟用已驗證的資料收集時，用戶端必須傳送JSON網頁代號(JWT)及其組織ID作為要求標題。 如需如何將已驗證資料傳送至的詳細資訊 [!DNL Platform]，請參閱 [驗證的資料收集](../tutorials/create-authenticated-streaming-connection.md).
 
 ### 將資料串流至的延遲為何 [!DNL Real-Time Customer Profile]?
 

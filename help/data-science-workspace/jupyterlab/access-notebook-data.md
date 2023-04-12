@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupyterlab筆記型電腦中的資料存取
 description: 本指南著重於如何使用Data Science Workspace內建的Jupyter Notebooks來存取您的資料。
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '3294'
+source-wordcount: '3292'
 ht-degree: 8%
 
 ---
@@ -519,7 +519,7 @@ df1.show(10)
 | df1 | 一個變數，代表用於讀取和寫入資料的Pancotis資料幀。 |
 | user-token | 使用自動擷取的使用者代號 `clientContext.getUserToken()`. |
 | service-token | 您的服務代號會使用 `clientContext.getServiceToken()`. |
-| ims-org | 您的IMS組織ID會使用 `clientContext.getOrgId()`. |
+| ims-org | 您的組織ID會使用 `clientContext.getOrgId()`. |
 | api-key | 使用自動擷取的API金鑰 `clientContext.getApiKey()`. |
 
 >[!TIP]
@@ -571,7 +571,7 @@ df1.write.format("com.adobe.platform.query")
 | df1 | 一個變數，代表用於讀取和寫入資料的Pancotis資料幀。 |
 | user-token | 使用自動擷取的使用者代號 `clientContext.getUserToken()`. |
 | service-token | 您的服務代號會使用 `clientContext.getServiceToken()`. |
-| ims-org | 您的IMS組織ID會使用 `clientContext.getOrgId()`. |
+| ims-org | 您的組織ID會使用 `clientContext.getOrgId()`. |
 | api-key | 使用自動擷取的API金鑰 `clientContext.getApiKey()`. |
 
 >[!TIP]

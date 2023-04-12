@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 描述符API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述元。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1872'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 結構會定義資料實體的靜態檢視，但不提供根據這些結構（例如資料集）的資料如何彼此關聯的特定詳細資料。 Adobe Experience Platform可讓您使用描述元來描述這些關係和關於架構的其他解釋性中繼資料。
 
-結構描述元是租戶層級的中繼資料，這表示它們對您的IMS組織是唯一的，所有描述元操作都會在租戶容器中進行。
+架構描述符是租戶級元資料，這表示它們對您的組織是唯一的，所有描述符操作都在租戶容器中進行。
 
 每個架構都可以應用一個或多個架構描述符實體。 每個架構描述符實體包括描述符 `@type` 和 `sourceSchema` 適用。 套用後，這些描述元將套用至使用結構建立的所有資料集。
 

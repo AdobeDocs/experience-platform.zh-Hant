@@ -4,9 +4,9 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 96a092efe5ceefeb7b6c3ddd9845d78b8862ac68
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '429'
 ht-degree: 4%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 4%
 ## 版本1.1.0 - 2021年10月5日
 
 * 遠端除錯視覺效果 — 將遠端除錯事件整理至Adobe Experience Platform Web SDK >邊緣交易區段中的視覺化流程圖。
-* 啟動新的遠端除錯工作階段時，需要頁面上使用的Adobe Experience Platform Web SDK IMS組織符合登入的組織。
+* 啟動新的遠端除錯工作階段時，頁面上使用的Adobe Experience Platform Web SDK組織必須與登入組織相符。
 * 僅顯示所連接頁簽的邊緣事務。 Target追蹤記錄仍可在「記錄> Edge」區段中使用。
 * 為頁面上的Adobe Experience Platform Web SDK每個例項允許個別的資料流ID設定覆寫。 新增已啟用除錯的切換按鈕。
 * 修正Adobe Target追蹤Token未一律與Adobe Experience Platform Web SDK的遠端除錯工作階段一起傳送的問題。

@@ -5,9 +5,9 @@ title: 建立和發佈機器學習模型
 type: Tutorial
 description: 以下指南說明建立和發佈機器學習模型所需的步驟。
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Data Science Workspace UI和API可讓您以模型形式發佈方式。 此外，
 
 ## 發佈計分模型作為服務
 
-Data Science Workspace可讓您將訓練好的模型發佈為服務。 這可讓您IMS組織內的使用者對資料評分，而無須建立自己的模型。
+Data Science Workspace可讓您將訓練好的模型發佈為服務。 這可讓您組織內的使用者對資料評分，而無須建立自己的模型。
 
 若要了解如何以服務形式發佈模型，請造訪 [UI教學課程](./publish-model-service-ui.md) 或 [API教學課程](./publish-model-service-api.md).
 

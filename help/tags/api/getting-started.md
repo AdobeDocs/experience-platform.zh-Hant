@@ -2,9 +2,9 @@
 title: Reactor API快速入門
 description: 了解如何開始使用Reactor API，包括產生必要存取憑證的步驟。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1049'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-您的IMS組織ID(`{ORG_ID}`)和API金鑰(`{API_KEY}`)可在日後的API呼叫中，於初次產生後重複使用。 不過，您的存取權杖(`{ACCESS_TOKEN}`)是暫時的，必須每24小時重新產生一次。
+貴組織的ID(`{ORG_ID}`)和API金鑰(`{API_KEY}`)可在日後的API呼叫中，於初次產生後重複使用。 不過，您的存取權杖(`{ACCESS_TOKEN}`)是暫時的，必須每24小時重新產生一次。
 
 以下詳細說明產生這些值的步驟。
 

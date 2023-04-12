@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段作業API端點
 description: Adobe Experience Platform區段服務API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1497'
 ht-degree: 2%
 
 ---
@@ -56,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並將指定IMS組織的區段作業清單顯示為JSON。 不過，回應會因區段作業中的區段數而異。
+成功的回應會傳回HTTP狀態200，並將指定組織的區段作業清單顯示為JSON。 不過，回應會因區段作業中的區段數而異。
 
 **區段工作中的小於或等於1500個區段**
 

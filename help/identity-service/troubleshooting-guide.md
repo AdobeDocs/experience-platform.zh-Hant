@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity服務疑難排解指南
 description: 本檔案提供Adobe Experience Platform Identity Service常見問題的解答，以及常見錯誤的疑難排解指南。
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2176'
 ht-degree: 0%
 
 ---
@@ -204,7 +204,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-當您的IMS組織尚未布建適當的權限時，會顯示此錯誤訊息 [!DNL Identity Service]. 請連絡您的系統管理員以解決此問題。
+若您的組織尚未布建適當的權限，則會顯示此錯誤訊息 [!DNL Identity Service]. 請連絡您的系統管理員以解決此問題。
 
 ### 網關服務令牌無效
 
@@ -264,7 +264,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-當您的IMS組織尚未布建適當的權限時，會顯示此錯誤訊息 [!DNL Identity Service]. 請連絡您的系統管理員以解決此問題。
+若您的組織尚未布建適當的權限，則會顯示此錯誤訊息 [!DNL Identity Service]. 請連絡您的系統管理員以解決此問題。
 
 ### 內部伺服器錯誤
 
@@ -330,7 +330,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-擷取的記錄呈現的身分不存在或您的IMS組織無法存取其相關聯命名空間時，就會顯示此錯誤。
+擷取的記錄呈現的身分不存在或您的組織無法存取其相關命名空間時，就會顯示此錯誤。
 
 ### 由於未針對私人身分圖布建IMS組織，因此略過批次內嵌
 
@@ -342,7 +342,7 @@ Internal solutions|Preferred|Common
 }
 ```
 
-擷取批次資料時，當您的IMS組織尚未布建適當的權限， [!DNL Identity Service]. 請連絡您的系統管理員以解決此問題。
+擷取批次資料時，當貴組織尚未布建適當的權限， [!DNL Identity Service]. 請連絡您的系統管理員以解決此問題。
 
 ### 內部錯誤
 

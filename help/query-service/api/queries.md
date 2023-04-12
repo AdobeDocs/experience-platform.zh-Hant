@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢API端點
 description: 以下各節將逐步說明您可以使用查詢服務API中的/querys端點進行的呼叫。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 08e19149a84273231c6261d2a4e09584dfb6e38d
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '864'
 ht-degree: 2%
 
 ---
@@ -46,7 +46,7 @@ GET /queries?{QUERY_PARAMETERS}
 
 **要求**
 
-下列請求會擷取為您的IMS組織建立的最新查詢。
+下列請求會擷取為您的組織建立的最新查詢。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並將指定IMS組織的查詢清單顯示為JSON。 下列回應會傳回為IMS組織建立的最新查詢。
+成功的回應會傳回HTTP狀態200，並將指定組織的查詢清單顯示為JSON。 下列回應會傳回為您的組織建立的最新查詢。
 
 ```json
 {
