@@ -2,7 +2,8 @@
 keywords: 事件轉送擴充功能；mixpanel;mixpanel事件轉送擴充功能
 title: Mixpanel追蹤事件API事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能會將Adobe Experience Edge網路事件傳送至Mixpanel。
-source-git-commit: 8538e3a2899c3e2451519996cabeffc4b42d706c
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%

@@ -2,7 +2,8 @@
 title: Microsoft Azure擴充功能概述
 description: 了解Adobe Experience Platform中用於事件轉送的Microsoft Azure擴充功能。
 exl-id: 2337d99d-861e-44e7-94ed-ba21ef28d815
-source-git-commit: f6c11fadc0d8019044fbdd2923af00ce18ce39e1
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '931'
 ht-degree: 3%

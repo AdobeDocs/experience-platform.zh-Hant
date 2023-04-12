@@ -2,7 +2,8 @@
 title: AWS擴充功能概述
 description: 了解Adobe Experience Platform中用於事件轉送的AWS擴充功能。
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
-source-git-commit: b4ff3dbc9c62dceefdf2b842cafa65132dde41fc
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 3%

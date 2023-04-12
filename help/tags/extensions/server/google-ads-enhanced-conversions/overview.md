@@ -2,7 +2,8 @@
 title: Google Ads Enhanced Conversions擴充功能
 description: 了解Adobe Experience Platform中用於事件轉送的Google Ads Enhanced Conversions擴充功能。
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+last-substantial-update: 2022-11-23T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 1%

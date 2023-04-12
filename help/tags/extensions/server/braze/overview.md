@@ -2,7 +2,8 @@
 keywords: 事件轉送擴充功能；Braze;Braze事件轉送擴充功能
 title: Braze事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能會將Adobe Experience Edge Network事件傳送至Braze。
-source-git-commit: 6815b5eb0426efd1dde901db1e8b86e86615530a
+last-substantial-update: 2023-03-29T00:00:00Z
+source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 4%
