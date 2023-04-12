@@ -5,12 +5,12 @@ feature: Customer AI
 title: Customer AI 概述
 description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 不必將企業需求轉換為機器學習問題、挑選演算法、培訓或部署，就能達成上述目的。
 landing-page-description: Customer AI 可產生自訂傾向評分，例如大量個別設定檔的流失和轉換情形。
-short-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+short-description: Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: b21367814e38fb5ee017709a29b39de982d59d24
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 26%
+source-wordcount: '571'
+ht-degree: 29%
 
 ---
 
