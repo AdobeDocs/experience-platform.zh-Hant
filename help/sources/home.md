@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 來源連接器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ac5eb6467d0fcaf13c27c31a9bcdfb57d3b90e01
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 2%
@@ -18,6 +18,13 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 [!DNL Flow Service] 用於收集和集中Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證您的協力廠商系統、設定擷取執行的時間，以及管理資料擷取吞吐量。
 
 透過Experience Platform，您可以集中收集來自不同來源的資料，並利用從中獲得的見解執行更多工作。
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 ## 來源類型
 

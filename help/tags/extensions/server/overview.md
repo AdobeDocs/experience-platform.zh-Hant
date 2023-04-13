@@ -2,7 +2,7 @@
 title: 事件轉送擴充功能參考
 description: 如需Adobe Experience Platform中事件轉送擴充功能的檔案。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 30ac89d9af3e1d69c464650879d239a8c3edb525
+source-git-commit: e0c1b4e2cc7444ab97d0eae6ff4f3455b0017d4a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 17%
@@ -14,6 +14,13 @@ ht-degree: 17%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
 
 以下是伺服器端事件轉送擴充功能的檔案清單。 如需可用用戶端擴充功能的清單，請參閱 [標籤擴充功能參考](../client/overview.md) 。
 
