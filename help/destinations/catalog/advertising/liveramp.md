@@ -3,7 +3,7 @@ title: (Alpha) [!DNL LiveRamp SFTP] 連接
 description: 了解如何使用LiveRamp連接器將受眾從Adobe Real-time Customer Data Platform上架到LiveRamp Connect。
 hidefromtoc: true
 hide: true
-source-git-commit: b308def0e9b9643cfc1dcc8ac7db19eb733750ea
+source-git-commit: 367ef59f623acc38e636a6cae0c85f186eaccfda
 workflow-type: tm+mt
 source-wordcount: '1738'
 ht-degree: 0%
@@ -91,7 +91,7 @@ LiveRamp SFTP支援身分識別的啟用，例如以PII為基礎的識別碼、�
 >id="platform_destinations_liveramp_subkey"
 >title="加密子密鑰ID"
 >abstract="用於加密的子密鑰ID（基於LiveRamp公共加密密鑰）。 如果您在驗證步驟中提供了加密密鑰，則此欄位為必填欄位。"
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="了解如何取得子索引鍵ID。"
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="了解如何取得子索引鍵ID"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 
