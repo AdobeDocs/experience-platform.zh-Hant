@@ -1,8 +1,10 @@
 ---
 title: Pendo源概述
 description: 了解如何使用API或使用者介面，透過Webhook將Pendo連線至Adobe Experience Platform
-badge: "Beta"
-source-git-commit: 24691e3ded33c3af31fd0cee107f2f3ca898585f
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -50,4 +52,3 @@ A [!DNL Pendo] 帳戶。 如果您還沒有看到 [[!DNL Pendo] 註冊](https://
 ### Connect [!DNL Pendo] 使用UI設為Platform {#connect-to-platform-using-ui}
 
 * [建立源連接以 [!DNL Pendo] 使用者介面將資料傳送至Platform](../../tutorials/ui/create/analytics/pendo-webhook.md)
-

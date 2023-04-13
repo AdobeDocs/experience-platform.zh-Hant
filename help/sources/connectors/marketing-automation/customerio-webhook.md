@@ -1,8 +1,10 @@
 ---
 title: Customer.io源概述
 description: 了解如何運用WebHook，使用API或使用者介面將Customer.io連線至Adobe Experience Platform
-badge: "Beta"
-source-git-commit: 9d6a4b5f60f7895e2c1833493926db147064f3f1
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -57,4 +59,3 @@ Experience Platform支援從串流應用程式擷取資料。 支援串流提供
 ### Connect [!DNL Customer.io] 使用UI設為Platform {#connect-to-platform-using-ui}
 
 * [建立源連接和資料流以帶來 [!DNL Customer.io] 使用者介面將資料傳送至Platform](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
-

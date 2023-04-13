@@ -1,8 +1,10 @@
 ---
 title: 查圖源概述
 description: 了解如何使用API或使用者介面，運用Webhook將Chatlio連線至Adobe Experience Platform
-badge: "Beta"
-source-git-commit: 2c13cb5a951a3144d0047b567194732acdc35dab
+badge: Beta
+last-substantial-update: 2023-03-29T00:00:00Z
+exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
+source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -55,4 +57,3 @@ Experience Platform支援從串流應用程式擷取資料。 支援串流提供
 ### Connect [!DNL Chatlio] 使用UI設為Platform {#connect-to-platform-using-ui}
 
 * [建立源連接以 [!DNL Chatlio] 使用者介面將資料傳送至Platform](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)
-
