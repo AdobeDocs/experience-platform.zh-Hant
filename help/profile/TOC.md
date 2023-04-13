@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
-source-git-commit: 81d219116479aa71e9540e4efa636bec8dea5d23
+source-git-commit: 9de3af9402a245779cfaf765c40bb54da57b91e2
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 25%
+source-wordcount: '124'
+ht-degree: 27%
 
 ---
 
@@ -30,11 +30,6 @@ ht-degree: 25%
 * 設定檔UI {#ui}
    * [[!DNL Profile] UI指南](ui/user-guide.md)
    * [[!DNL Profile] 詳細自訂](ui/profile-customization.md)
-* (Alpha)計算屬性 {#computed-attributes}
-   * [總覽](computed-attributes/overview.md)
-   * [計算屬性API](computed-attributes/ca-api.md)
-   * [配置計算屬性欄位](computed-attributes/configure-api.md)
-   * [範例運算式](computed-attributes/expressions.md)
 * 合併策略 {#merge-policies}
    * [總覽](merge-policies/overview.md)
    * [合併策略API](api/merge-policies.md)

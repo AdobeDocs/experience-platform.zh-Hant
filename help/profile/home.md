@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶個人檔案概觀
 description: 即時客戶設定檔可合併來自各種來源的資料，並以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 737a67b7e30f770d65751b1a924d8378af8bde52
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -90,13 +90,13 @@ Experience PlatformUI提供控制面板，您可透過控制面板檢視即時�
 
 若要進一步了解聯合結構，包括如何在UI中存取聯合結構，請造訪 [union schema UI指南](ui/union-schema.md).
 
-### (Alpha)計算屬性
+<!-- ### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
->計算屬性功能為Alpha。 檔案和功能可能會有所變更。
+>Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。 這些計算有助於您輕鬆回答與期限購買值、購買間時間或應用程式開啟數量等相關的問題，而無需您每次需要資訊時都手動執行複雜的計算。 如需計算屬性的詳細資訊，包括了解計算屬性在Adobe Experience Platform中的角色，請先閱讀 [計算屬性概述](computed-attributes/overview.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
 ## 設定檔和區段
 

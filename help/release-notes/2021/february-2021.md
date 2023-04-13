@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1135'
 ht-degree: 6%
 
 ---
@@ -114,7 +114,7 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 計算屬性(Alpha) | ***注意：此功能目前為Alpha版，並非所有使用者都能使用。 文件和功能可能會有所變更。*** <br/><br/>計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 然後，您就可以在細分、啟動和個人化中使用匯總。 這些函式的某些範例包括計數、總和、平均、最小、最大、true/false。 目前僅透過API提供計算屬性。 如需詳細資訊，請參閱 [計算屬性概述](../../profile/computed-attributes/overview.md). |
+| 計算屬性(Alpha) | ***注意：此功能目前為Alpha版，並非所有使用者都能使用。 文件和功能可能會有所變更。*** <br/><br/>計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 然後，您就可以在細分、啟動和個人化中使用匯總。 這些函式的某些範例包括計數、總和、平均、最小、最大、true/false。 目前僅透過API提供計算屬性。 |
 
 如需即時客戶設定檔的詳細資訊，包括使用的教學課程和最佳實務 [!DNL Profile] 資料，請先閱讀 [即時客戶個人檔案概觀](../../profile/home.md).
 

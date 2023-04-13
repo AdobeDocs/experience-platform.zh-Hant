@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶個人檔案API指南
 description: 即時客戶設定檔API可讓開發人員探索及使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或有錯誤新增的設定檔資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '792'
 ht-degree: 1%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 1%
 
 使用指南 [!DNL Real-Time Customer Profile] 資料 [!DNL Experience Platform] UI，請參閱 [設定檔使用手冊](../ui/user-guide.md).
 
-## (Alpha)計算屬性 {#computed-attributes}
+<!-- ## (Alpha) Computed attributes {#computed-attributes}
 
 >[!IMPORTANT]
 >
->計算屬性功能為Alpha值，不適用於所有用戶。 檔案和功能可能會有所變更。
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
 
-計算屬性是用於將事件層級資料匯總到設定檔層級屬性的函式。 系統會自動計算這些函式，以便用於不同區段、啟動和個人化。
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
-每個計算屬性都包含一個運算式（或「規則」），用於評估傳入的資料並將產生的值儲存在設定檔屬性中。 這些計算有助於您輕鬆回答與期限購買值、購買間時間或應用程式開啟數量等相關的問題，而無需您每次需要資訊時都手動執行複雜的計算。 然後，這些計算屬性值便可在設定檔中檢視、用於建立區段，或透過許多不同的存取模式存取。
+Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
 
-您可以使用 `config/computedAttributes` 端點。 若要了解如何使用計算屬性，請參閱 [計算屬性概述](../computed-attributes/overview.md). 若為API操作，請造訪 [計算屬性API端點指南](../computed-attributes/ca-api.md).
+You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md). -->
 
 ## 邊緣投影 {#edge-projections}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1216'
 ht-degree: 3%
 
 ---
@@ -209,11 +209,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | 符合以下中所示類型的運算式： `expression.format`. |
 | `description` | 人類看得懂的定義說明。 |
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->段定義表達式也可以參考計算的屬性。 若要進一步了解，請參閱 [計算屬性API端點指南](../../profile/computed-attributes/ca-api.md)
+>A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
 >
->計算屬性功能為Alpha值，不適用於所有用戶。 檔案和功能可能會有所變更。
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
 
 **回應**
 
