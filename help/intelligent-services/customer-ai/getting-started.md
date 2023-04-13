@@ -5,7 +5,7 @@ feature: Customer AI
 title: Customer AI快速入門
 description: 本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 596921163bf64d11545dcde49039bcdd07c253dd
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
@@ -49,4 +49,4 @@ Experience Platform中的所有資源都會隔離至特定的虛擬沙箱。 對
 
 ## 後續步驟
 
-完成上述檔案中概述的步驟後，請造訪 [輸入和輸出](./input-output.md) 檔案。 本檔案簡要概述在Customer AI中使用和產生的資料類型。
+完成上述檔案中概述的步驟後，請造訪 [輸入和輸出](./data-requirements.md) 檔案。 本檔案簡要概述在Customer AI中使用和產生的資料類型。

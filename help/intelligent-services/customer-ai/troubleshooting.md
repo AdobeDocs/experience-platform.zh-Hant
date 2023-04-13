@@ -6,7 +6,7 @@ title: Customer AI錯誤疑難排解
 description: 尋找Customer AI中常見錯誤的解答。
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 首先，檢查資料的準確性。 您的資料必須包含預測結果所需的必要欄位。
 
 - 檢查您的資料集是否有最新日期。 Customer AI一律假設資料是觸發模型時的最新狀態。
-- 檢查您定義的預測和資格窗口中是否缺少資料。 您的資料必須完整無缺。 同時確認資料集符合 [Customer AI歷史資料需求](./input-output.md#data-requirements).
+- 檢查您定義的預測和資格窗口中是否缺少資料。 您的資料必須完整無缺。 同時確認資料集符合 [Customer AI歷史資料需求](./data-requirements.md#data-requirements).
 - 在您的架構欄位屬性中，檢查商務、應用程式、Web和搜尋中是否遺失資料。
 
 如果您的資料似乎不是問題所在，請嘗試變更資格母體條件，將模型限制在特定設定檔(例如 `_experience.analytics.customDimensions.eVars.eVar142` 存在於最近56天)。 這會限制訓練視窗中所使用資料的母體和大小。

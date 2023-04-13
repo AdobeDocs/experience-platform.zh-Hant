@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 準備資料以用於Intelligent Services
 description: 為了讓Intelligent Services從您的行銷事件資料中探索深入分析，資料必須在語義上加以擴充並維護為標準結構。 Intelligent Services會使用Experience Data Model(XDM)結構來達成此目標。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
 workflow-type: tm+mt
 source-wordcount: '2936'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 例如，如果您使用Customer AI來預測購買產品的傾向，Customer AI的模型需要成功購買路徑的範例和失敗路徑的範例。 這是因為在模型訓練期間，Customer AI會了解導致購買的事件和歷程。 這也包括未購買的客戶所採取的動作，例如在將項目新增至購物車時停止歷程的個人。 這些客戶可能表現出類似的行為，但Customer AI可提供深入分析並深入分析導致傾向分數較高的主要差異和因素。 同樣地，Attribution AI需要事件和歷程兩種類型，才能依接觸點位置顯示量度，例如接觸點效益、最上層轉換路徑和劃分。
 
-如需歷史資料需求的更多範例和資訊，請造訪 [Customer AI](./customer-ai/input-output.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements) 輸入/輸出檔案中的歷史資料需求區段。
+如需歷史資料需求的更多範例和資訊，請造訪 [Customer AI](./customer-ai/data-requirements.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements) 輸入/輸出檔案中的歷史資料需求區段。
 
 ### 連結資料的准則
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 如果您的資料儲存在Experience Platform之外，您必須將資料對應至 [消費者體驗事件結構](#cee-schema). 此結構可以與自訂欄位群組搭配使用，以更妥善地擷取客戶資料。 對應後，您就可以使用消費者體驗事件結構建立資料集，並 [將資料內嵌至Platform](../ingestion/home.md). 然後，在設定 [!DNL Intelligent Service].
 
-視 [!DNL Intelligent Service] 若您想使用，可能需要不同欄位。 請注意，如果您有可用資料，最好將資料新增至欄位。 若要進一步了解必填欄位，請造訪 [Attribution AI](./attribution-ai/input-output.md) 或 [Customer AI](./customer-ai/input-output.md) 輸入/輸出指南。
+視 [!DNL Intelligent Service] 若您想使用，可能需要不同欄位。 請注意，如果您有可用資料，最好將資料新增至欄位。 若要進一步了解必填欄位，請造訪 [Attribution AI](./attribution-ai/input-output.md) 或 [Customer AI](./customer-ai/data-requirements.md) 資料需求指南。
 
 ### Adobe Analytics資料準備 {#analytics-data}
 
@@ -65,7 +65,7 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Adobe Analytics連接器最多需要四周時間來回填資料。 如果您最近設定了連線，應確認資料集擁有客戶或Attribution AI所需的最小資料長度。 請參閱 [Customer AI](./customer-ai/input-output.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements)，並驗證您有足夠的資料用於預測目標。
+>Adobe Analytics連接器最多需要四周時間來回填資料。 如果您最近設定了連線，應確認資料集擁有客戶或Attribution AI所需的最小資料長度。 請參閱 [Customer AI](./customer-ai/data-requirements.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements)，並驗證您有足夠的資料用於預測目標。
 
 ### Adobe Audience Manager資料準備（僅限客戶AI） {#AAM-data}
 
@@ -75,7 +75,7 @@ Customer AI原生支援Adobe Audience Manager資料。 若要使用Audience Mana
 
 >[!IMPORTANT]
 >
->如果您最近設定了連接器，應確認資料集具有所需的最小資料長度。 請參閱 [輸入/輸出檔案](./customer-ai/input-output.md) 針對Customer AI，並確認您有足夠的資料用於您的預測目標。
+>如果您最近設定了連接器，應確認資料集具有所需的最小資料長度。 請參閱 [輸入/輸出檔案](./customer-ai/data-requirements.md) 針對Customer AI，並確認您有足夠的資料用於您的預測目標。
 
 ### [!DNL Experience Platform] 資料準備
 
@@ -110,7 +110,7 @@ CEE欄位組中有幾個關鍵欄位，應按順序使用 [!DNL Intelligent Serv
 * [xdm:timestamp](#timestamp)
 * [xdm:channel](#channel) (僅Attribution AI強制)
 
-#### 主要身分 {#identity}
+#### 主要身分識別 {#identity}
 
 架構中的其中一個欄位必須設定為主要身分欄位，這可允許 [!DNL Intelligent Services] 將時間序列資料的每個例項連結至個別人員。
 

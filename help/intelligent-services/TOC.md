@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Intelligent Services 說明
 breadcrumb-title: Intelligent Services 指南
 user-guide-description: 使用智慧型人工智慧服務，從行銷事件資料產生分數、探索見解並建立區段。
-source-git-commit: 56f0ea4ee1fcefecb317eb2a078b01f7a9767c52
+source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '139'
 ht-degree: 32%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 32%
 - Customer AI {#customer-ai}
    - [總覽](customer-ai/overview.md)
    - [Customer AI快速入門](customer-ai/getting-started.md)
-   - [輸入和輸出](customer-ai/input-output.md)
+   - [資料需求](customer-ai/data-requirements.md)
    - UI指南{#user-guide}
       - [設定執行個體](customer-ai/user-guide/configure.md)
       - [探索見解](customer-ai/user-guide/discover-insights.md)
