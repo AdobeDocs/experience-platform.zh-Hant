@@ -2,9 +2,9 @@
 title: 監視計畫查詢
 description: 了解如何透過Query Service UI監控查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 5e6fa112ccca7405c3dfd0653d3d6cad8b9ed2af
+source-git-commit: 1b4554e204663d40c3a18da792614305abb7d296
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -120,11 +120,15 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ### 運行具有匿名塊的查詢的詳細資訊 {#anonymous-block-queries}
 
-使用匿名塊來組成其SQL陳述式的查詢被分離到其各個查詢中。 這可讓您個別檢查每個查詢區塊的執行詳細資料。
+使用匿名塊來組成其SQL陳述式的查詢被分離到其各個子查詢中。 這可讓您個別檢查每個查詢區塊的執行詳細資料。
+
+>[!NOTE]
+>
+>使用DROP命令的匿名塊的運行詳細資訊將 **not** 作為單獨的子查詢報告。 CTAS查詢、ITAS查詢和用作匿名塊子查詢的COPY語句可以使用單獨的運行詳細資訊。 當前不支援DROP命令的運行詳細資訊。
 
 匿名塊的表示方式為使用 `$$` 前置詞。 請參閱 [匿名塊文檔](../essential-concepts/anonymous-block.md) 以進一步了解查詢服務中的匿名區塊。
 
-匿名塊查詢在運行狀態左側有頁簽。 選擇一個頁簽以顯示運行詳細資訊。
+匿名塊子查詢在運行狀態左側有頁簽。 選擇一個頁簽以顯示運行詳細資訊。
 
 ![顯示匿名塊查詢的查詢運行概述。 系統會反白顯示多個查詢標籤。](../images/ui/monitor-queries/anonymous-block-overview.png)
 
