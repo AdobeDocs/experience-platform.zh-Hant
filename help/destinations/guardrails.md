@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 進一步了解資料啟用的預設使用量和比率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 1%
@@ -90,7 +90,7 @@ ht-degree: 1%
 | 瓜德拉伊 | 限制 | 限制類型 | 說明 |
 | --- | --- | --- | --- |
 | 最大數量 [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md) 目的地 | 10 | 軟 | 您可以為每個沙箱設定10個自訂個人化目的地的資料流。 |
-| 每個沙箱對應至個人化目的地的屬性數上限 | 20 | 硬 | 在資料流中，每個沙箱最多可將20個屬性對應至個人化目的地。 |
+| 每個沙箱對應至個人化目的地的屬性數上限 | 30 | 硬 | 在資料流中，每個沙箱最多可將30個屬性對應至個人化目的地。 |
 | 對應至單一的區段數上限 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 目的地 | 50 | 軟 | 在啟動流程中，您最多可以對單一Adobe Target目的地啟動50個區段。 |
 
 {style="table-layout:auto"}
