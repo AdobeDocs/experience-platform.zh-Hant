@@ -2,9 +2,9 @@
 title: 管理Privacy Service
 description: 了解如何使用Adobe Admin Console管理Adobe Experience Platform Privacy Service的使用者權限。
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: fc6c22ab1185b9692ece86de75149102ce020474
+source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1634'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Privacy Service的權限已經過改良，以提升其精細度。 這些變更可讓組織管理員授予更多使用者所需角色和權限層級的存取權。 技術帳戶使用者必須更新其Privacy Service權限，因為此即將進行的更新對他們而言構成重大變更。 此權限變更的實施將在 **2023年3月28日**.
+>Adobe Experience Platform Privacy Service的權限已經過改良，以提升其精細度。 這些變更可讓組織管理員授予更多使用者所需角色和權限層級的存取權。 技術帳戶使用者必須更新其Privacy Service權限，因為此即將進行的更新對他們而言構成重大變更。 此權限變更的實施將在 **2023年4月13日**. 請參閱 [移轉舊版API憑證](#migrate-tech-accounts) 以取得解決此問題的指引。
 >
 >技術帳戶可供企業客戶使用，並透過Adobe開發人員控制台建立。 技術帳戶持有人的Adobe ID終止於 `@techacct.adobe.com`. 如果您不確定自己是否是技術帳戶持有者，請聯絡您的組織管理員。
 
@@ -99,11 +99,49 @@ ht-degree: 1%
 >
 >本節內容僅適用於在將Privacy Service權限整合至Adobe Admin Console之前建立的現有API憑證。 若為新憑證，會透過指派產品設定檔（及其權限） [Adobe Developer Console專案](https://developer.adobe.com/developer-console/docs/guides/projects/) 。<br><br>請參閱 [將產品設定檔指派給專案](./api/getting-started.md#product-profiles) (位於「Privacy ServiceAPI快速入門手冊」中)，以取得詳細資訊。
 
-若要將舊版API憑證移轉至產品設定檔，請選取 **[!UICONTROL API憑證]**，後跟 **[!UICONTROL 新增API憑證]**.
+以前，技術帳戶不需要產品設定檔才能進行整合和權限。 不過，由於最近Privacy Service權限有所改善，現在必須將舊版API憑證移轉至產品設定檔。 此更新可授予技術帳戶擁有者詳細權限。 請依照下列步驟操作，更新Privacy Service的技術帳戶權限。
 
-![[!UICONTROL 新增API憑證] 在Admin Console中選取，位於 [!UICONTROL API憑證] 標籤](./images/permissions/api-credentials.png)
+#### 更新技術帳戶權限 {#update-tech-account-permissions}
 
-從清單中選擇所需的開發人員控制台專案，然後選取 **[!UICONTROL 儲存]** 將其新增至產品設定檔。 所有使用這些專案憑證的API呼叫都將繼承產品設定檔所授予的詳細權限。
+為您的技術帳戶指派權限集的第一步，是導覽至 [Adobe Admin Console](https://adminconsole.adobe.com/) 並建立新的產品設定檔以供Privacy Service。
+
+從Admin ConsoleUI中，選取 **產品** 從導覽列，然後 **[!UICONTROL Experience Cloud]** 和 **[!UICONTROL Adobe Experience Platform Privacy Service]** 在左側邊欄。 此 [!UICONTROL 產品設定檔] 頁簽。 選擇 **新設定檔** 建立新的產品設定檔以供Privacy Service。
+
+![Adobe Admin Console中的「Experience PlatformPrivacy Service產品設定檔」標籤會反白顯示「新設定檔」。](./images/permissions/create-product-profile.png)
+
+此 [!UICONTROL 建立新的產品設定檔] 對話框。 如需如何建立產品設定檔的完整指示，請參閱 [建立設定檔的UI指南](../access-control/ui/create-profile.md).
+
+儲存新產品設定檔後，請導覽至 [Adobe Developer Console](https://developer.adobe.com/console/home) 登入該產品或專案。 選擇 **[!UICONTROL 專案]** 從頂端導覽列，接著是您專案的卡片。
+
+>[!NOTE]
+>
+>您可能必須清除快取和/或等候一段時間，才能讓新專案出現在開發人員控制台專案清單中。
+
+登入專案後，請選取 **[!UICONTROL Privacy ServiceAPI]** 從左側邊欄整合。
+
+![反白顯示Adobe Developer Console的「專案」標籤和「Privacy ServiceAPI」。](./images/permissions/login-to-dev-console-project.png)
+
+Privacy ServiceAPI整合控制面板隨即顯示。 在此控制面板中，您可以編輯與該專案相關聯的產品設定檔。 選擇 **[!UICONTROL 編輯產品設定檔]** 來開始處理。 此 [!UICONTROL 設定API] 對話框。
+
+![Adobe Developer Console中的Privacy ServiceAPI整合控制面板上會強調顯示編輯產品設定檔](./images/permissions/edit-product-profiles.png)
+
+此 [!UICONTROL 設定API] 對話方塊顯示服務中目前可用的產品設定檔。 它們會與Admin Console中建立的產品設定檔產生關聯。 從可用產品設定檔清單中，選取您在admin console中為技術帳戶建立之新產品設定檔的核取方塊。 這會自動將此技術帳戶與所選產品設定檔中的權限建立關聯。 選擇 **[!UICONTROL 儲存已設定的API]** 確認設定。
+
+>[!NOTE]
+>
+>如果技術帳戶已與產品設定檔相關聯，則將已選取可用產品設定檔清單中的一個核取方塊。
+
+![在Adobe Developer Console中，使用產品設定檔核取方塊顯示「設定API」對話方塊，並反白顯示「儲存已設定的API」 。](./images/permissions/select-profile-for-tech-account.png)
+
+#### 確認已套用您的設定 {#confirm-applied-settings}
+
+確認您的設定已套用至帳戶。 返回 [Admin Console](https://adminconsole.adobe.com/) 並導覽至新建立的產品設定檔。 選取 **[!UICONTROL API憑證]** 頁簽，查看關聯項目的清單。 在開發人員控制台中，您將產品設定檔指派給技術帳戶的專案，會顯示在憑證清單中。 每個API憑證的名稱都是由專案名稱所組成，且尾碼為隨機產生的數字。 選擇要開啟的憑據 [!UICONTROL 詳細資料] 中。
+
+![Admin Console中的產品設定檔，會顯示API憑證索引標籤和一列專案憑證。](./images/permissions/confirm-credentials-in-admin-console.png)
+
+此 [!UICONTROL 詳細資料] 面板包含有關API憑證的資訊，包括相關的技術ID、API金鑰、建立和上次修改的日期，以及相關的Adobe產品。
+
+![Admin Console內API憑證的「詳細資訊」面板，已反白顯示。](./images/permissions/admin-console-details-panel.png)
 
 ## 後續步驟
 
