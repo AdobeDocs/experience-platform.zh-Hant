@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2b8307422e4f073451c23ae9b35061d845f0893c
+source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
 workflow-type: tm+mt
-source-wordcount: '1597'
+source-wordcount: '1620'
 ht-degree: 39%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 39%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 2.16.1版 — 2023年4月14日
+
+* 修正XDM物件和變數資料元素無法從非預設沙箱選取結構的問題。
 
 ## 2.16.0版 — 2023年3月30日
 
