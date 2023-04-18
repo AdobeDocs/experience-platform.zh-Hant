@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="區段"
->abstract="區段檢視包含您組織所有區段的相關資訊，以及其啟用和評估工作的詳細資訊。"
+>abstract="區段檢視包含有關您組織之區段的所有資訊，以及有關其啟動和評估作業的進一步資訊。"
 
 若要存取 **[!UICONTROL 區段]** 控制面板，選取 **[!UICONTROL 監控]** 的下一頁。 一次 **[!UICONTROL 監控]** 頁面，選擇 **[!UICONTROL 區段]** 卡片。
 

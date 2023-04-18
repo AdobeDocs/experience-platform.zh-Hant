@@ -7,7 +7,7 @@ exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
 workflow-type: tm+mt
 source-wordcount: '1738'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -91,7 +91,7 @@ LiveRamp SFTP支援身分識別的啟用，例如以PII為基礎的識別碼、�
 >id="platform_destinations_liveramp_subkey"
 >title="加密子機碼 ID"
 >abstract="用於加密的子機碼 ID，是根據 LiveRamp 公開加密金鑰。如果您在驗證步驟中提供了加密金鑰，則需要此欄位。"
->additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="了解如何取得子索引鍵ID"
+>additional-url="https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key" text="了解如何取得子機碼 ID"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 

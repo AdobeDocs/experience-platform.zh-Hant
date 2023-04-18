@@ -57,7 +57,7 @@ ht-degree: 6%
 
 這些系統可以是外部個人化平台、內容管理系統、廣告伺服器，以及在客戶的Web和行動屬性上執行的其他應用程式。
 
-### 同頁個人化 {#same-page}
+### 同一頁面的個人化 {#same-page}
 
 使用者造訪您網站的某個頁面。 客戶可使用目前的頁面瀏覽資訊（例如，反向連結URL、瀏覽器語言、內嵌產品資訊），使用非Adobe平台的自訂個人化連線(例如， [!DNL Pega], [!DNL Optimizely]等)。
 
@@ -65,7 +65,7 @@ ht-degree: 6%
 
 使用者造訪您網站上的頁面A。 根據此互動，使用者已符合一組區段的資格。 然後，使用者點按連結，將使用者從頁面A帶往頁面B。使用者在頁面A的上次互動期間符合資格的區段，以及目前網站造訪所決定的設定檔更新，將用來支援下一個動作/決策（例如要向訪客顯示哪個廣告橫幅，或在A/B測試的情況下，要顯示哪個頁面版本）。
 
-### 下一工作階段個人化 {#next-session}
+### 下一個工作階段的個人化 {#next-session}
 
 使用者瀏覽您網站上的數個頁面。 根據這些互動，使用者已符合一組區段的資格。 然後，用戶終止當前瀏覽會話。
 
@@ -77,7 +77,7 @@ ht-degree: 6%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流 ID"
 >abstract="此選項會確定哪個資料收集資料流中會在頁面回應中包含區段。下拉式選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=zh-Hant" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 > 
