@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 文本存在與光學字元識別
 description: 在內容標籤API中，文字是否存在/光學字元辨識(OCR)服務可指出指定影像中是否有文字。 如果存在文本，OCR可以返回文本。
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
-source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
+source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 3%
@@ -110,7 +110,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
       "tags": [
         {
           "text": "yosemite",
-          "relevance": 0.05604639115920341
+          "relevance": 0.06
         }
       ],
       "request_element_id": 0

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 內容標籤API中的關鍵字標籤
 description: 「關鍵字標籤」服務在提供文本文檔時，會自動提取最能描述文檔主題的關鍵字或關鍵詞。 為了提取關鍵字，使用命名實體識別(NER)和無監督關鍵字標籤算法的組合。
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '447'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 給定文本文檔時，關鍵字標籤服務會自動提取最能描述文檔主題的關鍵字或關鍵短語。 為了提取關鍵字，使用命名實體識別(NER)和無監督關鍵字標籤算法的組合。
 
-下表列出了 [!DNL Content Tagging] 已識別：
+下表列出了 [!DNL Content Tagging] 可識別：
 
 | 實體名稱 | 說明 |
 | --- | --- |
@@ -86,15 +86,18 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@simple-text.pdf'
 ```
 
+**輸入參數**
+
 | 屬性 | 說明 | 必要 |
 | --- | --- | --- |
-| `application-id` | 已建立應用程式的ID。 | 是 |
 | `top_n` | 要返回的結果數。 0，返回所有結果。 與臨界值搭配使用時，傳回的結果數量將小於任一限制。 | 無 |
 | `min_relevance` | 必須傳回結果的分數臨界值。 排除參數以傳回所有結果。 | 無 |
 | `min_key_phrase_length` | 關鍵片語中需要的字詞數量下限。 | 無 |
 | `max_key_phrase_length` | 關鍵片語中需要的字詞數上限。 | 無 |
 | `last_semantic_unit_type` | 在分層響應中只返回到給定級別的語義單位。 &quot;key_phrase&quot;僅返回關鍵片語，&quot;linked_entity&quot;僅返回關鍵片語及其對應的連結實體，而&quot;concept&quot;返回關鍵片語、連結實體和概念。 | 無 |
 | `entity_types` | 要傳回為關鍵片語的實體類型。 | 無 |
+
+**文檔對象**
 
 | 名稱 | 資料類型 | 必填 | 預設 | 值 | 說明 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
