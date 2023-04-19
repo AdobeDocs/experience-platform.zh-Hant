@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 內容標籤API中的顏色標籤
 description: 給定影像時，「顏色標籤」服務可計算像素顏色的色階分佈圖，並依主色將其排序為貯體。
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
-source-git-commit: e6ea347252b898f73c2bc495b0324361ee6cae9b
+source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 **色調提取**
 
-除了上述變體外，您也可以設定服務以擷取色調色階分佈圖：
+除了上述變體外，您還可以設定服務以擷取以下項目的色調色階分佈圖：
 
 - 整體影像（使用完整影像變體時）
 - 整體影像、前景和背景區域（當使用帶掩碼的變體時）
@@ -161,7 +161,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **請求 — 遮罩的影像變體**
 
-下列範例要求使用遮罩方法進行顏色標籤。 我們會設定 `enable_mask` 參數 `true` 中。
+下列範例要求使用遮罩方法進行顏色標籤。 這可透過設定 `enable_mask` 參數 `true` 中。
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -202,7 +202,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
->注意：此外，我們也會將 `retrieve_tone` 參數 `true` 中。 這使我們能夠在影像的整體、前景和背景區域中檢索熱色、中性和冷色色調上的色調分佈直方圖。
+>[!NOTE]
+>
+>此外， `retrieve_tone` 參數也設為 `true` 中。 這使我們能夠在影像的整體、前景和背景區域中檢索溫、中和和涼爽色調上的色調分佈直方圖。
 
 **回應 — 遮罩的影像變體**
 
@@ -352,16 +354,16 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 }]
 ```
 
-除了整體影像中的顏色之外，您現在還可以從前景和背景區域中看到顏色。 由於我們為上述每個區域啟用了色調檢索，因此我們也可以檢索色調直方圖。
+除了整體影像中的顏色之外，您現在還可以從前景和背景區域中看到顏色。 由於已為上述每個區域啟用色調檢索，因此您也可以檢索色調的直方圖。
 
 **輸入參數**
 
 | 名稱 | 資料類型 | 必填 | 預設 | 值 | 說明 |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array(Document-Object) | 是 | - | 請參閱下方 | json元素清單，清單中的每個項目代表一個檔案。 |
+| `documents` | array(Document-Object) | 是 | - | 請參閱下方 | JSON元素清單，清單中的每個項目代表一個檔案。 |
 | `top_n` | 數字 | 無 | 0 | 非負整數 | 要返回的結果數。 0，返回所有結果。 與臨界值搭配使用時，傳回的結果數量會少於任一限制。 |
 | `min_coverage` | 數字 | 無 | 0.05 | 實數 | 需要返回結果的覆蓋範圍閾值。 排除參數以傳回所有結果。 |
-| `resize_image` | 數字 | 無 | True | True/False | 是否調整輸入影像的大小。 在執行顏色提取之前，預設會將影像調整為320*320像素。 為了偵錯目的，我們可將此值設為False，以允許程式碼在完整影像上執行。 |
+| `resize_image` | 數字 | 無 | True | True/False | 是否調整輸入影像的大小。 在執行顏色提取之前，預設會將影像調整為320*320像素。 為了偵錯目的，我們也可以將此設為，讓程式碼在完整影像上執行 `False`. |
 | `enable_mask` | 數字 | 無 | False | True/False | 啟用/停用顏色提取 |
 | `retrieve_tone` | 數字 | 無 | False | True/False | 啟用/禁用音調提取 |
 
@@ -369,7 +371,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 | 名稱 | 資料類型 | 必填 | 預設 | 值 | 說明 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | 字串 | - | - | - | 要從中提取關鍵片語的文檔的預簽URL。 |
-| `sensei:repoType` | 字串 | - | - | HTTPS | 儲存文檔的儲存庫類型。 |
-| `sensei:multipart_field_name` | 字串 | - | - | - | 將檔案以多部分引數傳遞時，請使用此選項，而非使用預先簽署的url。 |
-| `dc:format` | 字串 | 是 | - | &quot;文本/純文字檔案&quot;,<br>&quot;application/pdf&quot;,<br>&quot;text/pdf&quot;,<br>&quot;text/html&quot;,<br>&quot;text/rtf&quot;,<br>&quot;application/rtf&quot;,<br>&quot;application/msword&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;,<br>&quot;application/mspowerpoint&quot;,<br>&quot;application/vnd.ms-powerpoint&quot;,<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | 在處理前，將根據允許的輸入編碼類型來檢查文檔編碼。 |
+| `repo:path` | 字串 | - | - | - | 文檔的預簽URL。 |
+| `sensei:repoType` | 字串 | - | - | HTTPS | 儲存影像的存放庫類型。 |
+| `sensei:multipart_field_name` | 字串 | - | - | - | 以多部分引數傳遞影像檔案時，請使用此選項，而非使用預先簽署的URL。 |
+| `dc:format` | 字串 | 是 | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | 在處理之前，會根據允許的輸入編碼類型檢查影像編碼。 |
