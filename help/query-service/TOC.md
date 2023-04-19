@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 83d1889450ba292573a6f995120691fc57cb6cfa
+source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '270'
 ht-degree: 18%
 
 ---
@@ -31,7 +31,6 @@ ht-degree: 18%
       - [建立基於資料的派生屬性](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - 使用案例 {#use-cases}
    - [放棄的瀏覽](use-cases/abandoned-browse.md)
-   - [使用Adobe Target進行活動分析](use-cases/activity-analysis-with-adobe-target.md)
    - [歸因分析](use-cases/attribution-analysis.md)
    - [機器人篩選](use-cases/bot-filtering.md)
    - [建立事件的趨勢報表](use-cases/trended-report-of-events.md)
