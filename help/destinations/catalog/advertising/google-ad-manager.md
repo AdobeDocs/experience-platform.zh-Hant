@@ -3,9 +3,9 @@ keywords: google廣告管理員；google廣告；doubleclick;DoubleClick AdX;Dou
 title: Google Ad Manager連線
 description: Google Ad Manager（舊稱DoubleClick for Publishers或DoubleClick AdX）是Google的廣告服務平台，可讓發佈商透過視訊和行動應用程式管理其網站上廣告的顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: ec4d064f90348f9eafb1d0fe4b9df5e102295507
+source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '911'
 ht-degree: 2%
 
 ---
@@ -73,6 +73,11 @@ ht-degree: 2%
 
 ### 連線參數 {#parameters}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gam_appendSegmentID"
+>title="將區段ID附加至區段名稱"
+>abstract="選取此選項，讓Google廣告管理員中的區段名稱包含來自Experience Platform的區段ID，如下所示： `Segment Name (Segment ID)`"
+
 同時 [設定](../../ui/connect-destination.md) 此目的地時，您必須提供下列資訊：
 
 * **[!UICONTROL 名稱]**:填寫此目的地的首選名稱。
@@ -82,6 +87,11 @@ ht-degree: 2%
    * 使用 `DFP by Google` for [!DNL DoubleClick] 適用於發佈者
    * 使用 `AdX buyer` for [!DNL Google AdX]
 
+<!--
+
+*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
+
+-->
 
 >[!NOTE]
 >
