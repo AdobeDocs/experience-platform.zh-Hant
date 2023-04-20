@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Analytics來源連接器；Analytics來源；分析；篩選；設定檔篩選；即時客戶設定檔；篩選；篩選設定檔資料；列層級篩選；欄層級篩選
 title: 在UI中建立Adobe Analytics來源連線
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
+source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
 workflow-type: tm+mt
-source-wordcount: '2380'
+source-wordcount: '2352'
 ht-degree: 5%
 
 ---
