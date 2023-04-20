@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Analytics來源連接器；Analytics連接器；Analytics來源；Analytics
-solution: Experience Platform
+keywords: Experience Platform；首頁；熱門主題；Analytics來源連接器；Analytics來源；分析；篩選；設定檔篩選；即時客戶設定檔；篩選；篩選設定檔資料；列層級篩選；欄層級篩選
 title: 在UI中建立Adobe Analytics來源連線
-type: Tutorial
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 9c2ede973aa4348f15362ba80fdcd7a231577909
+source-git-commit: 23a99a46cfd6e42dd0f4815bb972dbe46104b60f
 workflow-type: tm+mt
-source-wordcount: '2365'
+source-wordcount: '2380'
 ht-degree: 5%
 
 ---
@@ -281,7 +279,7 @@ Platform會自動偵測您的對應集，以找出任何好記的名稱衝突。
 
 要刪除資料流，請轉至 [!UICONTROL 資料流] 頁面，然後選取點(`...`)，然後選取 [!UICONTROL 刪除].
 
-![刪除](../../../../images/tutorials/create/analytics/delete.png)
+![delete](../../../../images/tutorials/create/analytics/delete.png)
 
 ## 後續步驟和其他資源
 
