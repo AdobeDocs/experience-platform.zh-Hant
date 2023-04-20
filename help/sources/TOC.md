@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 10edb5dfd9ce99b69cf5bb014f4903942c9bff3e
+source-git-commit: 33a660800e3202d9969c4e44eba8419e22db57a3
 workflow-type: tm+mt
-source-wordcount: '963'
-ht-degree: 12%
+source-wordcount: '968'
+ht-degree: 11%
 
 ---
 
@@ -90,7 +90,8 @@ ht-degree: 12%
       - [Snowflake連接器](connectors/databases/snowflake.md)
       - [TeradataVantage連接器](connectors/databases/teradata-vantage.md)
    - 電子商務 {#ecommerce}
-      - [Shopify連接器](connectors/ecommerce/shopify.md)
+      - [Shopify](connectors/ecommerce/shopify.md)
+      - [Shopify串流](connectors/ecommerce/shopify-streaming.md)
    - 本地系統 {#local-system}
       - [本機檔案上傳連接器](connectors/local-system/local-file-upload.md)
    - 行銷自動化 {#marketing-automation}
@@ -167,6 +168,7 @@ ht-degree: 12%
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
+         - [Shopify串流](tutorials/api/create/ecommerce/shopify-streaming.md)
       - 行銷自動化 {#marketing-automation}
          - [沙特里奧](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -284,6 +286,7 @@ ht-degree: 12%
          - [Teradata](tutorials/ui/create/databases/teradata-vantage.md)
       - 電子商務 {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+         - [Shopify串流](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - 本地系統 {#local-system}
          - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
       - 行銷自動化 {#marketing-automation}
