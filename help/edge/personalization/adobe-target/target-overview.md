@@ -3,9 +3,9 @@ title: 將Adobe Target與Platform Web SDK搭配使用
 description: 了解如何使用Adobe Target透過Experience PlatformWeb SDK轉譯個人化內容
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；系統圖表；圖表
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1318'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,10 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->此 [Adobe Target檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) 包含與Target功能相關之Platform Web SDK特定資訊的主題。
+>了解如何使用將Target實作移轉至Platform Web SDK [將Target從at.js 2.x移轉至Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) 教學課程。
+>
+>了解如何使用首次實作Target [使用Web SDK實作Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=zh-Hant) 教學課程。 如需Target的特定資訊，請參閱教學課程區段 [使用Platform Web SDK設定Target](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+
 
 下列功能已通過測試，目前支援於 [!DNL Target]:
 
@@ -168,9 +171,9 @@ alloy("sendEvent",
 
 更新 [!DNL Target] 設定檔，請確定設定檔資料是以下項目傳遞：
 
-* 在 `“data {“` 底下。
-* 在 `“__adobe.target”` 底下。
-* 前置詞 `“profile.”` 例如，如下所示
+* 在 `"data {"` 底下。
+* 在 `"__adobe.target"` 底下。
+* 前置詞 `"profile."` 例如，如下所示
 
 | 代碼 | 類型 | 說明 |
 | --- | --- | --- |
