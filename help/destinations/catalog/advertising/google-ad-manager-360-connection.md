@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
 workflow-type: tm+mt
 source-wordcount: '947'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -85,8 +85,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="將區段ID附加至區段名稱"
->abstract="選取此選項，讓Google Ad Manager 360中的區段名稱包含來自Experience Platform的區段ID，如下所示： `Segment Name (Segment ID)`"
+>title="將區段 ID 附加到區段名稱"
+>abstract="選取此選項可讓 Google Ad Manager 360 中的區段名稱包含來自 Experience Platform 的區段 ID，如下所示：`Segment Name (Segment ID)`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 

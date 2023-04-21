@@ -48,7 +48,7 @@ Adobe Experience Platform提供預先設定的範本，供您加速資料擷取�
 >id="platform_sources_templates_accounttype"
 >title="選取商業類型"
 >abstract="為您的使用案例選取適合的商業類型。您的存取權限可能會依據您的即時客戶資料平台訂閱帳戶而不同。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant" text="Real-Time CDP 概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html" text="Real-Time CDP 概觀"
 
 在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區，並查看Experience Platform中可用的來源目錄。
 

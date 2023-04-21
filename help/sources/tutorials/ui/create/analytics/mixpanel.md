@@ -70,7 +70,7 @@ ht-degree: 10%
 >id="platform_sources_mixpanel_timezone"
 >title="設定 Mixpanel 擷取的時區"
 >abstract="該時區必須和您的 Mixpanel 設定檔時區設定相同，因為平台會使用指定的專案時區從 Mixpanel 擷取相關資料。將事件記錄到 Mixpanel 資料存放區之前，Mixpanel 會調整其時區以和您的專案時區協調一致。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=zh-Hant#project-id-and-timezone" text="了解文件的詳細資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="了解文件的詳細資訊"
 
 驗證來源後，請提供您的專案ID和時區，然後選取 **[!UICONTROL 選擇]**.
 

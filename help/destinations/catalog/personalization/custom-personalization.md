@@ -77,7 +77,7 @@ ht-degree: 6%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流 ID"
 >abstract="此選項會確定哪個資料收集資料流中會在頁面回應中包含區段。下拉式選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=zh-Hant" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 > 
