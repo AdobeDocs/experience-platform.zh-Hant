@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: (API)SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud（舊稱ExactTarget）目的地可讓您匯出帳戶資料，並在SalesforceMarketing Cloud中根據您的業務需求啟用它。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 017ccadc1689663059aa1214c5440549b509e81b
+source-git-commit: 877bf4886e563e8a571f067c06107776a0c81d5d
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2911'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,13 @@ ht-degree: 1%
 
 ## 總覽 {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/overview/) (先前稱為 [!DNL ExactTarget])是數位行銷套裝，可讓您建置和自訂歷程，供訪客和客戶個人化其體驗。
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (先前稱為 [!DNL ExactTarget])是數位行銷套裝，可讓您建置和自訂歷程，供訪客和客戶個人化其體驗。
 
 >[!IMPORTANT]
 >
 >請注意此連線與其他 [[!DNL Salesforce Marketing Cloud] 連接](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 存在於電子郵件行銷目錄區段中。 另一個SalesforceMarketing Cloud連線可讓您將檔案匯出至指定的儲存位置，而這是以API為基礎的串流連線。
+
+與 [!DNL Salesforce Marketing Cloud Account Engagement] 更注重 **B2B** 行銷， [!DNL (API) Salesforce Marketing Cloud] 目的地是理想的 **B2C** 交易決策週期較短的使用案例。 您可以合併代表目標對象行為的大型資料集，透過排定聯絡人的優先順序並加以區隔，尤其是從外部資料集調整並改善行銷活動 [!DNL Salesforce]. *注意，Experience Platform也有 [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
 此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 利用 [!DNL Salesforce Marketing Cloud] [更新聯繫人](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API，可讓您 **添加聯繫人和更新聯繫人資料** 在新 [!DNL Salesforce Marketing Cloud] 區段。
 
@@ -44,9 +46,9 @@ ht-degree: 1%
 
 #### 你需要 [!DNL Salesforce Marketing Cloud] 帳戶 {#prerequisites-account}
 
-A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [Marketing Cloud帳戶參與](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) 產品必須繼續。
+A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [[!DNL Marketing Cloud Engagement]](https://www.salesforce.com/products/marketing-cloud/engagement/) 產品必須繼續。
 
-伸手 [[!DNL Salesforce] 支援](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) 如果您沒有 [!DNL Salesforce Marketing Cloud] 帳戶或帳戶遺失 [!DNL Marketing Cloud Account Engagement] 產品訂閱。
+伸手 [[!DNL Salesforce] 支援](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) 如果您沒有 [!DNL Salesforce Marketing Cloud] 帳戶或帳戶遺失 [!DNL Marketing Cloud Engagement] 產品訂閱。
 
 #### 在內建立屬性 [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
@@ -81,6 +83,21 @@ A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [Marketing Cloud帳戶
 >* 區分用於Platform區段的屬性和內的其他屬性 [!DNL Salesforce Marketing Cloud]，您可以為用於Adobe區段的屬性加入可識別的首碼或尾碼。 例如，而非 `test_segment`，使用 `Adobe_test_segment` 或 `test_segment_Adobe`.
 >* 如果您已在中建立其他屬性 [!DNL Salesforce Marketing Cloud]，您可以使用與Platform區段相同的名稱，輕鬆識別 [!DNL Salesforce Marketing Cloud].
 
+
+#### 在中指派使用者角色和權限 [!DNL Salesforce Marketing Cloud] {#prerequisites-roles-permissions}
+
+As [!DNL Salesforce Marketing Cloud] 根據您的使用案例支援自訂角色，您應為您的使用者指派相關角色，以更新您 [!DNL Salesforce Marketing Cloud] 屬性集。 指派給使用者的角色範例如下所示：
+![所選用戶的SalesforceMarketing CloudUI，該UI顯示其分配的角色。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-edit-roles.png)
+
+視您的 [!DNL Salesforce Marketing Cloud] 已指派使用者，您也需要指派權限給 [!DNL Salesforce Marketing Cloud] 屬性集，包含您要更新的欄位。
+
+因為此目的地需要存取 `[!DNL Email Demographics system attribute-set]`，您必須允許 `Email` 如下所示：
+![SalesforceMarketing CloudUI顯示具有允許權限的電子郵件屬性集。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
+
+若要限制存取層級，您也可以使用精細權限來覆寫個別存取。
+![SalesforceMarketing CloudUI會顯示具有精細權限的電子郵件屬性集。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
+
+請參閱 [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) 和 [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) 頁面，以取得詳細指引。
 
 #### 收集 [!DNL Salesforce Marketing Cloud] 憑據 {#gather-credentials}
 
@@ -269,7 +286,8 @@ A [!DNL Salesforce Marketing Cloud] 具有訂閱的帳戶 [Marketing Cloud帳戶
 
 | 發行月 | 更新類型 | 說明 |
 |---|---|---|
-| 2023 年 2 月 | 檔案更新 | 我們已更新 [(API)SalesforceMarketing Cloud中的必要條件](#prerequisites-destination) 區段來包含引用連結呼叫， [!DNL Salesforce Marketing Cloud Account Engagement] 是使用此目的地的強制訂閱。 |
+| 2023 年 4 月 | 檔案更新 | <ul><li>我們已更正 [(API)SalesforceMarketing Cloud中的必要條件](#prerequisites-destination) 區段 [!DNL Salesforce Marketing Cloud Engagement] 是使用此目的地的強制訂閱。 先前呼叫的區段錯誤地指出使用者需要訂閱Marketing Cloud **帳戶** 參與以繼續。</li> <li>我們在 [必要條件](#prerequisites) for [角色和權限](#prerequisites-roles-permissions) 要分配給 [!DNL Salesforce] 使用者。 (PLATIR-26299)</li></ul> |
+| 2023 年 2 月 | 檔案更新 | 我們已更新 [(API)SalesforceMarketing Cloud中的必要條件](#prerequisites-destination) 區段來包含引用連結呼叫， [!DNL Salesforce Marketing Cloud Engagement] 是使用此目的地的強制訂閱。 |
 | 2023 年 2 月 | 功能更新 | 我們修正了目標中的錯誤設定導致格式錯誤的JSON傳送至Salesforce的問題。 這導致某些使用者在啟動時發現大量身分識別失敗。 (PLATIR-26299) |
 | 2023 年 1 月 | 檔案更新 | <ul><li>我們已更新 [中的必要條件 [!DNL Salesforce]](#prerequisites-destination) 區段來呼叫需要在 [!DNL Salesforce] 側。 本節現在包含如何執行此動作的詳細指示，以及中關於命名屬性的最佳實務 [!DNL Salesforce]. (PLATIR-25602)</li><li>我們已新增清楚指示，說明如何在 [區段排程](#schedule-segment-export-example) 步驟。 (PLATIR-25602)</li></ul> |
 | 2022 年 10 月 | 首次發行 | 初始目的地發行和檔案發佈。 |
