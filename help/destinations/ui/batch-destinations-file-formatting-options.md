@@ -2,10 +2,10 @@
 description: 了解如何在將資料啟用至以檔案為基礎的目的地時設定檔案格式選項
 title: （測試版）為檔案式目的地設定檔案格式選項
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 379a3769965bb425ca2c8df195b99a98f0b5398d
+source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 1%
+source-wordcount: '1214'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 * To configure file formatting options for exported files by using the Experience Platform Flow Service API, read [Flow Service API - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
 -->
 
-## 檔案格式設定 {#file-configuration}
+## CSV檔案的檔案格式設定 {#file-configuration}
 
 要顯示檔案格式選項，請啟動 [連接到目的地](/help/destinations/ui/connect-destination.md) 工作流程。 選擇 **資料類型：區段** 和 **檔案類型：CSV** 顯示可用於導出的 `CSV` 檔案。
 
@@ -41,7 +41,12 @@ ht-degree: 1%
 
 ### 分隔字元 {#delimiter}
 
-為每個欄位和值設定分隔符號。 可選擇下列選項：
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_delimiter"
+>title="分隔字元"
+>abstract="使用此控制項可為每個欄位和值設定分隔符號。 檢視檔案以取得每個選取項目的範例。"
+
+使用此控制項可為匯出的CSV檔案中的每個欄位和值設定分隔符號。 可選擇下列選項：
 
 * 冒號 `(:)`
 * 逗號 `(,)`
@@ -49,29 +54,108 @@ ht-degree: 1%
 * 分號 `(;)`
 * Tab 鍵 `(\t)`
 
-### 引號字元
+#### 範例
 
-設定用於逸出引號值的單一字元，其中分隔符可以是值的一部分。
+檢視下列範例，說明匯出的CSV檔案中包含哪些內容，以及UI中的每個選取項目。
 
-### 逸出字元
+* 輸出範例，包含 **[!UICONTROL 冒號`(:)`]** 已選取： `male:John:Doe`
+* 輸出範例，包含 **[!UICONTROL 逗號`(,)`]** 已選取： `male,John,Doe`
+* 輸出範例，包含 **[!UICONTROL 管道`(|)`]** 已選取： `male|John|Doe`
+* 輸出範例，包含 **[!UICONTROL 分號`(;)`]** 已選取： `male;John;Doe`
+* 輸出範例，包含 **[!UICONTROL 標籤`(\t)`]** 已選取： `male \t John \t Doe`
 
-在已引號的值內設定用於逸出引號的單字元。
+### 引號字元 {#quote-character}
 
-### 空值輸出
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_quoteCharacter"
+>title="引號字元"
+>abstract="如果要從導出的字串中刪除雙引號，請使用此選項。 檢視檔案以取得每個選取項目的範例。"
 
-設定空值的字串表示。
+如果要從導出的字串中刪除雙引號，請使用此選項。 可選擇下列選項：
 
-### Null值輸出
+* **[!UICONTROL 空字元(\0000)]**. 使用此選項可從匯出的CSV檔案中移除雙引號。
+* **[!UICONTROL 雙引號(&quot;)]**. 使用此選項，在匯出的CSV檔案中保留雙引號。
 
-在導出的檔案中設定空值的字串表示。
+#### 範例
 
-輸出範例，包含 **[!UICONTROL null]** 已選取： `male,NULL,TestLastName`
-輸出範例，包含 **&quot;** 已選取： `male,"",TestLastName`
-輸出範例，包含 **[!UICONTROL 空字串]** 已選取： `male,,TestLastName`
+檢視下列範例，說明UI中各個選取項目所匯出之CSV檔案的內容。
 
-### 壓縮格式
+* 輸出範例，包含 **[!UICONTROL 空字元(\0000)]** 已選取： `Test,John,LastName`
+* 輸出範例，包含 **[!UICONTROL 雙引號(&quot;)]** 已選取： `"Test","John","LastName"`
 
-設定將資料保存到檔案時要使用的壓縮編解碼器。 支援的選項為GZIP和NONE。
+### 逸出字元 {#escape-character}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_escapeCharacter"
+>title="逸出字元"
+>abstract="在已引號的值內設定用於逸出引號的單字元。 檢視檔案以取得每個選取項目的範例。"
+
+使用此選項可設定一個單字元，用於在已引號的值內逸出引號。 例如，如果字串已用雙引號括住，而字串的一部分已用雙引號括住，則此選項非常有用。 此選項確定要用哪個字元替換內雙引號。 可選擇下列選項：
+
+* 反斜線 `(\)`
+* 單報價 `(')`
+
+#### 範例
+
+檢視下列範例，說明UI中各個選取項目所匯出之CSV檔案的內容。
+
+* 輸出範例，包含 **[!UICONTROL 反斜線`(\)`]** 已選取： `"Test,\"John\",LastName"`
+* 輸出範例，包含 **[!UICONTROL 單報價`(')`]** 已選取： `"Test,'"John'",LastName"`
+
+### 空值輸出 {#empty-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_emptyValueOutput"
+>title="空值輸出"
+>abstract="使用此選項可設定在匯出的CSV檔案中應如何呈現空值。 檢視檔案以取得每個選取項目的範例。"
+
+使用此控制項可設定空值的字串表示法。 此選項可決定在匯出的CSV檔案中呈現空白值的方式。 可選擇下列選項：
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL 空字串]**
+
+#### 範例
+
+檢視下列範例，說明UI中各個選取項目所匯出之CSV檔案的內容。
+
+* 輸出範例，包含 **[!UICONTROL null]** 已選取： `male,NULL,TestLastName`. 在此情況下，Experience Platform會將空值轉換為null值。
+* 輸出範例，包含 **&quot;** 已選取： `male,"",TestLastName`. 在此情況下，Experience Platform會將空值轉換為一對雙引號。
+* 輸出範例，包含 **[!UICONTROL 空字串]** 已選取： `male,,TestLastName`. 在此情況下，Experience Platform會維護空白值，並依原樣匯出（不含雙引號）。
+
+>[!TIP]
+>
+>在以下部分中，空值輸出與空值輸出之間的差異在於，空值具有實際的空值。 NULL值完全沒有任何值。 將空白值想像成桌上的空玻璃，而空值則認為桌上根本沒有玻璃。
+
+### Null值輸出 {#null-value-output}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_nullValueOutput"
+>title="Null值輸出"
+>abstract="使用此控制項可在導出的檔案中設定空值的字串表示。 檢視檔案以取得每個選取項目的範例。"
+
+使用此控制項可在導出的檔案中設定空值的字串表示。 此選項可決定在匯出的CSV檔案中呈現空值的方式。 可選擇下列選項：
+
+* **[!UICONTROL null]**
+* **&quot;&quot;**
+* **[!UICONTROL 空字串]**
+
+#### 範例
+
+檢視下列範例，說明UI中各個選取項目所匯出之CSV檔案的內容。
+
+* 輸出範例，包含 **[!UICONTROL null]** 已選取： `male,NULL,TestLastName`. 在此情況下，不會進行轉換，而CSV檔案包含null值。
+* 輸出範例，包含 **&quot;** 已選取： `male,"",TestLastName`. 在此情況下，Experience Platform會以雙引號取代空字串周圍的null值。
+* 輸出範例，包含 **[!UICONTROL 空字串]** 已選取： `male,,TestLastName`. 在此情況下，Experience Platform會以空字串（不含雙引號）取代空值。
+
+### 壓縮格式 {#compression-format}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_csvOptions_compressionFormat"
+>title="壓縮格式"
+>abstract="設定將資料保存到檔案時要使用的壓縮類型。 支援的選項為GZIP和NONE。 檢視檔案以取得每個選取項目的範例。"
+
+設定將資料保存到檔案時要使用的壓縮類型。 支援的選項為GZIP和NONE。 此選項決定您是否要匯出壓縮檔案。
 
 ### 編碼
 
