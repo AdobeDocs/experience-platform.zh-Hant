@@ -5,10 +5,10 @@ title: 驗證及存取Experience PlatformAPI
 type: Tutorial
 description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '1267'
-ht-degree: 5%
+source-wordcount: '1581'
+ht-degree: 6%
 
 ---
 
@@ -198,8 +198,70 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 [Postman](https://www.postman.com/) 是一種熱門工具，可讓開發人員探索及測試RESTful API。 此 [中等貼文](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) 說明如何設定Postman以自動執行JWT驗證，以及使用它來使用Platform API。
 
+## 具有Experience Platform權限的開發人員和API存取控制
+
+>[!NOTE]
+>
+>只有系統管理員能夠在「權限」中檢視及管理API憑證。
+
+在Adobe Developer Console中建立整合之前，您的帳戶必須擁有Adobe Admin Console中Experience Platform產品設定檔的開發人員和使用者權限。
+
+### 將開發人員新增至產品設定檔
+
+移至 [[!DNL Admin Console]](https://adminconsole.adobe.com/) 並使用您的 Adobe ID 登入。
+
+選擇 **[!UICONTROL 產品]**，然後選取 **[!UICONTROL Adobe Experience Platform]** 從產品清單中。
+
+![產品清單(Admin Console)](././images/api-authentication/products.png)
+
+從 **[!UICONTROL 產品設定檔]** 索引標籤，選取 **[!UICONTROL AEP-Default-All-Users]**. 或者，使用搜尋列，輸入名稱以搜尋產品設定檔。
+
+![搜尋產品設定檔](././images/api-authentication/select-product-profile.png)
+
+選取 **[!UICONTROL 開發人員]** ，然後選取 **[!UICONTROL 新增開發人員]**.
+
+![從「開發人員」索引標籤新增開發人員](././images/api-authentication/add-developer1.png)
+
+輸入開發人員的 **[!UICONTROL 電子郵件或使用者名稱]**. 有效 [!UICONTROL 電子郵件或使用者名稱] 會顯示開發人員詳細資訊。 選取「**[!UICONTROL 儲存]**」。
+
+![使用其電子郵件或使用者名稱新增開發人員](././images/api-authentication/add-developer-email.png)
+
+已成功添加開發人員，並顯示在 [!UICONTROL 開發人員] 標籤。
+
+![「開發人員」標籤上列出的開發人員](././images/api-authentication/developer-added.png)
+
+### 設定API
+
+開發人員可在Adobe Developer Console的專案中新增和設定API。
+
+選取您的專案，然後選取 **[!UICONTROL 新增API]**.
+
+![新增API至專案](././images/api-authentication/add-api-project.png)
+
+在 **[!UICONTROL 新增API]** 對話框選擇 **[!UICONTROL Adobe Experience Platform]**，然後選取 **[!UICONTROL Experience PlatformAPI]**.
+
+![在Experience Platform中新增API](././images/api-authentication/add-api-platform.png)
+
+在 **[!UICONTROL 設定API]** 螢幕，選擇 **[!UICONTROL AEP-Default-All-Users]**.
+
+### 將API指派給角色
+
+系統管理員可以在Experience PlatformUI中將API指派給角色。
+
+選擇 **[!UICONTROL 權限]** 和您要新增API的角色。 選取 **[!UICONTROL API憑證]** ，然後選取 **[!UICONTROL 新增API憑證]**.
+
+![所選角色中的API憑證索引標籤](././images/api-authentication/api-credentials.png)
+
+選取您要新增至角色的API，然後選取 **[!UICONTROL 儲存]**.
+
+![可供選擇的API清單](././images/api-authentication/select-api.png)
+
+您會回到 [!UICONTROL API憑證] 標籤中，列出新新增的API。
+
+![新增API的API憑證索引標籤](././images/api-authentication/api-credentials-with-added-api.png)
+
 ## 後續步驟
 
 閱讀本檔案後，您已收集並成功測試了Platform API的存取憑證。 您現在可以依照 [檔案](../landing/documentation/overview.md).
 
-除了在本教學課程中收集的驗證值之外，許多Platform API也需要有效的 `{SANDBOX_NAME}` 作為標題提供。 請參閱 [沙箱概述](../sandboxes/home.md) 以取得更多資訊。
+除了在本教學課程中收集的驗證值之外，許多Platform API也需要有效的 `{SANDBOX_NAME}` 作為標題提供。 如需詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。

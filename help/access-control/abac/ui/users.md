@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制管理用戶
 description: 本檔案提供有關透過Adobe Experience Cloud的「權限」介面管理使用者和使用者群組的資訊
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: fa4786b081b46c8f3c0030282ae3900891fbd652
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 2%
+source-wordcount: '218'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,14 @@ ht-degree: 2%
 選取 **[!UICONTROL 角色]** 頁簽，查看用戶被分配的角色。
 
 ![flac-users-roles](../../images/flac-ui/flac-users-roles.png)
+
+## 具有Experience Platform權限的開發人員和API存取控制
+
+>[!NOTE]
+>
+>只有系統管理員能夠在「權限」中檢視及管理API憑證。
+
+轉換至Adobe Experience Platform權限的過程中，有其他步驟需要完成，才能處理先前依賴產品設定檔的開發人員API工作流程。 請參閱 [API驗證](../../../landing/api-authentication.md) 以取得更多資訊。
 
 ## 後續步驟
 
