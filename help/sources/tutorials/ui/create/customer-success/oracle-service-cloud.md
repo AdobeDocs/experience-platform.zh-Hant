@@ -3,18 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；ora
 title: 在UI中建立Oracle服務雲端來源連線
 description: 了解如何使用Adobe Experience Platform UI建立Oracle服務雲端來源連線。
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '480'
 ht-degree: 1%
 
 ---
 
-# （測試版）在UI中建立Oracle服務雲端來源連線
-
->[!NOTE]
->
->oracle服務雲端來源為測試版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得使用測試版標籤來源的詳細資訊。
+# 在UI中建立Oracle服務雲端來源連線
 
 本教學課程提供使用Adobe Experience Platform使用者介面建立Oracle服務雲端來源連線的步驟。
 

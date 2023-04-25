@@ -1,10 +1,9 @@
 ---
 title: 在UI中建立Shopify串流連線和資料流
 description: 了解如何使用Platform使用者介面建立Shopify串流來源連線和資料流
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: 3368ecf6-0c61-49ce-bc9c-29ee50b3f037
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -95,4 +94,3 @@ Platform會根據您選取的目標結構或資料集，為自動對應欄位提
 ## 後續步驟
 
 按照本教程，您已建立了與 [!DNL Shopify Streaming] 帳戶。 有關如何連接 [!DNL Shopify Streaming] 帳戶，請參閱 [建立源連接和資料流 [!DNL Shopify] 使用流量服務API的資料](../../../api/create/ecommerce/shopify-streaming.md).
-

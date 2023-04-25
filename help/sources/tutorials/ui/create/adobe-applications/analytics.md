@@ -2,9 +2,9 @@
 title: 在UI中建立Adobe Analytics來源連線
 description: 了解如何在UI中建立Adobe Analytics來源連線，將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 3b86c071c4b5dc151bf83ad0042c10ac7a5648db
+source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
 workflow-type: tm+mt
-source-wordcount: '2352'
+source-wordcount: '2406'
 ht-degree: 5%
 
 ---
@@ -31,6 +31,14 @@ ht-degree: 5%
 * **易記名稱**:好記名稱是人工提供的標籤，適用於 [!DNL Analytics] 實作。 請參閱下列內容 [[!DNL Analytics] 轉換變數檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 以取得好記名稱的詳細資訊。
 
 ## 使用Adobe Analytics建立來源連線
+
+>[!NOTE]
+>
+>在生產沙箱中建立Analytics來源資料流時，會建立兩個資料流：
+>
+>* 將13個月的歷史報表套裝資料回填至資料湖的資料流。 此資料流在回填完成時結束。
+>* 將即時資料發送到資料湖和的資料流 [!DNL Real-Time Customer Profile]. 此資料流持續運行。
+
 
 在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以用來建立帳戶的各種來源。
 

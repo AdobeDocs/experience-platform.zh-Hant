@@ -1,10 +1,9 @@
 ---
 title: 使用流服務API建立流源連接和資料流，以便對資料進行修改
 description: 了解如何使用流量服務API為Shopify資料建立串流來源連線和資料流。
-badge: "Beta"
-hidefromtoc: y
-hide: y
-source-git-commit: 279d8e307c8ca5a799a47c6f903b9a082d9cf034
+badge: Beta
+exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
+source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 1%

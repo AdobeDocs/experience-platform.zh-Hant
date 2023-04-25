@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；onetrust;OneTrust
 solution: Experience Platform
-title: （測試版）在UI中建立OneTrust來源連線
+title: 在UI中建立OneTrust來源連線
 type: Tutorial
 description: 了解如何使用Adobe Experience Platform UI建立OneTrust來源連線。
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 35095ec8c22106ba0a8f11e0a970ed7989a7f06c
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
 
-# （測試版）建立 [!DNL OneTrust Integration] UI中的源連接
+# 建立 [!DNL OneTrust Integration] UI中的源連接
 
 >[!NOTE]
 >
->此 [!DNL OneTrust Integration] 來源為測試版。 其功能和檔案可能會有所變更。 如需使用測試版標籤來源的詳細資訊，請參閱 [來源概觀](../../../../home.md#terms-and-conditions).
+>此 [!DNL OneTrust Integration] 來源僅支援擷取同意和偏好設定資料，而不支援Cookie。
 
 本教學課程提供建立 [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) 來源連線，使用Platform使用者介面將歷史和排程的同意資料內嵌至Adobe Experience Platform。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 | 憑據 | 說明 | 範例 |
 | --- | --- | --- |
-| 主機名稱 | 來自 [!DNL OneTrust Integration] 需要從中提取資料。 | `https://uat.onetrust.com/` |
+| 主機名稱 | 來自 [!DNL OneTrust Integration] 需要從中提取資料。 | `app.onetrust.com` |
 | 授權測試URL | （可選）建立基本連線時，授權測試URL用於驗證憑證。 如果未提供，則在建立源連接步驟期間將自動檢查憑據。 |  |
 | 存取權杖 | 與 [!DNL OneTrust Integration] 帳戶。 | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 
@@ -48,13 +48,13 @@ ht-degree: 0%
 >
 >此 [!DNL OneTrust Integration] API規格已與Adobe共用，以供資料擷取。
 
-在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可建立帳戶的各種來源。
+在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽器存取 [!UICONTROL 來源] 工作區，以取得Experience Platform中可用的來源目錄。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
+使用 *[!UICONTROL 類別]* 功能表來依類別篩選來源。 或者，在搜索欄中輸入源名稱，從目錄中查找特定源。
 
-在 *[!UICONTROL 同意與偏好設定]* 類別，選擇 [!DNL OneTrust Integration]，然後選取 **[!UICONTROL 新增資料]**.
+前往 [!UICONTROL 同意與偏好設定] 類別 [!DNL OneTrust Integration] 源卡。 若要開始，請選取 **[!UICONTROL 新增資料]**.
 
-![目錄](../../../../images/tutorials/create/onetrust/catalog.png)
+![Experience PlatformUI來源目錄。](../../../../images/tutorials/create/onetrust/catalog.png)
 
 此 **[!UICONTROL 連接OneTrust整合帳戶]** 頁。 在此頁面上，您可以使用新憑證或現有憑證。
 
@@ -62,13 +62,13 @@ ht-degree: 0%
 
 若要使用現有帳戶，請選取 [!DNL OneTrust Integration] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
 
-![現有](../../../../images/tutorials/create/onetrust/existing.png)
+![來源工作流程中的現有帳戶驗證步驟。](../../../../images/tutorials/create/onetrust/existing.png)
 
 ### 新帳戶
 
 如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、選用說明和您的憑證。 完成後，請選取 **[!UICONTROL 連接到源]** 然後讓新連接建立一段時間。
 
-![new](../../../../images/tutorials/create/onetrust/new.png)
+![來源工作流程中的新帳戶驗證步驟。](../../../../images/tutorials/create/onetrust/new.png)
 
 ## 後續步驟
 

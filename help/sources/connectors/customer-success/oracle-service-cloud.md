@@ -3,18 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；ora
 title: Oracle服務雲端來源連接器概述
 description: 了解如何使用API或使用者介面將Adobe Service Cloud與Oracle連線。
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-# （測試版）Oracle服務雲端來源
-
->[!NOTE]
->
->oracle服務雲端來源為測試版。 請參閱 [來源概觀](../../home.md#terms-and-conditions) 以取得使用測試版標籤來源的詳細資訊。
+# Oracle服務雲端來源
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
 
