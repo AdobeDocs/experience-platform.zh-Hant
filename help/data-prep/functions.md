@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備映射函式
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: da7eff7966679635efa71cbbd33768ef4f412241
+source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4591'
 ht-degree: 3%
 
 ---
@@ -235,6 +235,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 產生偽隨機ID。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+| `fpid_to_ecid ` | 此函式會取用FPID字串，並將其轉換為ECID以用於Adobe Experience Platform和Adobe Experience Cloud應用程式。 | <ul><li>字串： **必填** 要轉換為ECID的FPID字串。</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
 
 {style="table-layout:auto"}
 
