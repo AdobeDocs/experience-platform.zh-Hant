@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 52c6420a7fba6474dd2e9e97c9b2f49b5208be1d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1620'
-ht-degree: 39%
+source-wordcount: '1654'
+ht-degree: 38%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 39%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 2.17.0版 — 2023年4月25日
+
+**新功能**
+
+* 新增對資料流設定覆寫的支援。
+* 將淘汰通知新增至 `datasetId` 選項 `sendEvent` 命令。
+
+**修正和改良**
+
+* 修正在Safari中捲動會關閉資料流選取器的問題。
 
 ## 2.16.1版 — 2023年4月14日
 

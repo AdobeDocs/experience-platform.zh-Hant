@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 009475c8bab3eb29a5d8a97763967d49ccf0999d
+source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 3%
 
 本檔案涵蓋Adobe Experience Platform Web SDK的發行說明。
 如需Web SDK標籤擴充功能的最新發行說明，請參閱 [Web SDK標籤擴充功能發行說明](extension/web-sdk-ext-release-notes.md).
+
+## 2.16.0版 — 2023年4月25日
+
+**新功能**
+
+* 新增對資料流設定覆寫的支援。
 
 ## 2.15.0版 — 2023年3月30日
 
