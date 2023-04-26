@@ -5,7 +5,7 @@ exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 2%
+ht-degree: 19%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_delimiter"
 >title="分隔字元"
->abstract="使用此控制項可為每個欄位和值設定分隔符號。 檢視檔案以取得每個選取項目的範例。"
+>abstract="使用此控制項為每個欄位和值設定分隔符號。查看每個選項的範例文件。"
 
 使用此控制項可為匯出的CSV檔案中的每個欄位和值設定分隔符號。 可選擇下列選項：
 
@@ -69,9 +69,9 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_quoteCharacter"
 >title="引號字元"
->abstract="如果要從導出的字串中刪除雙引號，請使用此選項。 檢視檔案以取得每個選取項目的範例。"
+>abstract="如果要從匯出的字串中移除雙引號，請使用此選項。查看每個選項的範例文件。"
 
-如果要從導出的字串中刪除雙引號，請使用此選項。 可選擇下列選項：
+如果要從匯出的字串中移除雙引號，請使用此選項。可選擇下列選項：
 
 * **[!UICONTROL 空字元(\0000)]**. 使用此選項可從匯出的CSV檔案中移除雙引號。
 * **[!UICONTROL 雙引號(&quot;)]**. 使用此選項，在匯出的CSV檔案中保留雙引號。
@@ -88,7 +88,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_escapeCharacter"
 >title="逸出字元"
->abstract="在已引號的值內設定用於逸出引號的單字元。 檢視檔案以取得每個選取項目的範例。"
+>abstract="在已引用的值中設定用於逸出引號的單一字元。查看每個選項的範例文件。"
 
 使用此選項可設定一個單字元，用於在已引號的值內逸出引號。 例如，如果字串已用雙引號括住，而字串的一部分已用雙引號括住，則此選項非常有用。 此選項確定要用哪個字元替換內雙引號。 可選擇下列選項：
 
@@ -107,7 +107,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_emptyValueOutput"
 >title="空值輸出"
->abstract="使用此選項可設定在匯出的CSV檔案中應如何呈現空值。 檢視檔案以取得每個選取項目的範例。"
+>abstract="使用此選項可設定空值在匯出的 CSV 檔案中的表示方式。查看每個選項的範例文件。"
 
 使用此控制項可設定空值的字串表示法。 此選項可決定在匯出的CSV檔案中呈現空白值的方式。 可選擇下列選項：
 
@@ -127,14 +127,14 @@ ht-degree: 2%
 >
 >在以下部分中，空值輸出與空值輸出之間的差異在於，空值具有實際的空值。 NULL值完全沒有任何值。 將空白值想像成桌上的空玻璃，而空值則認為桌上根本沒有玻璃。
 
-### Null值輸出 {#null-value-output}
+### Null 值輸出 {#null-value-output}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_nullValueOutput"
->title="Null值輸出"
->abstract="使用此控制項可在導出的檔案中設定空值的字串表示。 檢視檔案以取得每個選取項目的範例。"
+>title="Null 值輸出"
+>abstract="使用此控制項在匯出的檔案中設定 Null 值的字串表示方式。查看每個選項的範例文件。"
 
-使用此控制項可在導出的檔案中設定空值的字串表示。 此選項可決定在匯出的CSV檔案中呈現空值的方式。 可選擇下列選項：
+使用此控制項在匯出的檔案中設定 Null 值的字串表示方式。此選項可決定在匯出的CSV檔案中呈現空值的方式。 可選擇下列選項：
 
 * **[!UICONTROL null]**
 * **&quot;&quot;**
@@ -153,9 +153,9 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_csvOptions_compressionFormat"
 >title="壓縮格式"
->abstract="設定將資料保存到檔案時要使用的壓縮類型。 支援的選項為GZIP和NONE。 檢視檔案以取得每個選取項目的範例。"
+>abstract="設定將資料儲存到檔案時要使用的壓縮類型。支援的選項為 GZIP 和 NONE。查看每個選項的範例文件。"
 
-設定將資料保存到檔案時要使用的壓縮類型。 支援的選項為GZIP和NONE。 此選項決定您是否要匯出壓縮檔案。
+設定將資料儲存到檔案時要使用的壓縮類型。支援的選項為 GZIP 和 NONE。此選項決定您是否要匯出壓縮檔案。
 
 ### 編碼
 
