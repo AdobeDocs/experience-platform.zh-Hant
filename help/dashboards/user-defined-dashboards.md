@@ -2,10 +2,10 @@
 title: 使用者定義的控制面板
 description: 了解如何建立和管理自訂控制面板，以便建立、新增和編輯自訂小工具，以視覺化關鍵量度。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: a0be2f8625ca60f9c8f355c1230a889002436d6d
+source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
-source-wordcount: '1307'
-ht-degree: 4%
+source-wordcount: '1608'
+ht-degree: 3%
 
 ---
 
@@ -112,6 +112,20 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![篩選對話方塊，用於從介面工具集篩選值。](./images/user-defined-dashboards/filter-dialog.png)
 
+#### 篩選歷史資料 {#filter-historical-data}
+
+若要從介面工具集產生的深入分析中篩選出歷史資料，請新增 `date_key` 屬性作為篩選並選取 **[!UICONTROL 最近日期]** 後跟 **[!UICONTROL 套用]**. 此篩選器可確保用於獲取深入分析的資料來自最近的系統快照。
+
+![此 [!UICONTROL 篩選：date_key] 對話 [!UICONTROL 最近日期] 和 [!UICONTROL 套用] 突出顯示。](./images/user-defined-dashboards/recent-date.png)
+
+或者，您也可以建立自訂句點，依據篩選資料。 選擇 **[!UICONTROL 選擇日期]** 以使用可用日期清單擴展對話框。 使用 **[!UICONTROL 全選]** 啟用或禁用所有可用選項的複選框，或單獨選擇每天的複選框。 最後，選取 **[!UICONTROL 套用]** 確認您的選擇。
+
+>[!NOTE]
+>
+>若 `date_key` 屬性已新增為篩選條件，請選取省略號，之後再選取 **[!UICONTROL 編輯]** 從下拉式選項變更篩選期間。
+
+![此 [!UICONTROL 篩選：date_key] 對話框中的「單日」複選框已選中且未選中。](./images/user-defined-dashboards/select-dates.png)
+
 ### 介面工具集屬性
 
 選取屬性圖示(![屬性圖示。](./images/user-defined-dashboards/properties-icon.png))以開啟「屬性」面板。 在 [!UICONTROL 屬性] 面板中，在 [!UICONTROL 介面工具集標題] 文字欄位。
@@ -135,6 +149,22 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 ![使用自訂介面工具集的使用者定義控制面板，並反白顯示「儲存」按鈕。](./images/user-defined-dashboards/user-defined-dashboard.png)
 
 為確保Adobe Real-time Customer Data Platform深入分析控制面板的每個查詢都有足夠的資源來有效執行，API會為每個查詢指派並行槽來追蹤資源使用情形。 該系統最多可處理四個併發查詢，因此，在任何給定時間都有四個併發查詢槽可用。 根據併發槽將查詢放入隊列，然後在隊列中等待，直到有足夠的併發槽可用。
+
+### 複製介面工具集
+
+建立介面工具集後，您就可以複製整個介面工具集並自訂其屬性，以建立獨特的介面工具集，而無須從頭開始。 若要複製介面工具集，請先導覽至控制面板詳細目錄。 然後從清單中選取控制面板名稱。 您的自訂控制面板隨即顯示。
+
+![反白顯示控制面板和自訂控制面板名稱的Platform UI。](./images/user-defined-dashboards/dashbaord-inventory.png)
+
+選取鉛筆圖示(![鉛筆圖示。](./images/user-defined-dashboards/edit-icon.png))，進入編輯模式。
+
+![醒目提示鉛筆圖示的自訂控制面板。](./images/user-defined-dashboards/edit-mode.png)
+
+接下來，選取您要複製之Widget右上角的點，然後按 **[!UICONTROL 複製]** 從可用選項清單。
+
+![使用者定義控制面板中的介面工具集，會強調顯示點與重複介面工具集。](./images/user-defined-dashboards/duplicate.png)
+
+您的使用者定義控制面板中會顯示重複的介面工具集。 選取新Widget的點，然後 **[!UICONTROL 編輯]**，可自訂新介面工具集。
 
 ## 後續步驟和其他資源
 
