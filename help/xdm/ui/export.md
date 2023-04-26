@@ -4,9 +4,9 @@ title: 在UI中匯出XDM結構
 description: 了解如何在Adobe Experience Platform使用者介面中，將現有結構匯出至不同的沙箱或組織。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ ht-degree: 0%
 
 雖然Platform UI可讓您匯出XDM資源，但您必須使用Schema Registry API將這些資源匯入其他沙箱或組織，才能完成工作流程。 請參閱 [架構註冊表API快速入門](../api/getting-started.md) 如需遵循本指南之前所需驗證標題的重要資訊。
 
-## 產生匯出裝載
+## 產生匯出裝載 {#generate-export-payload}
 
-在平台UI中，選取 **[!UICONTROL 結構]** 的下一頁。 在 [!UICONTROL 結構] 工作區，找出您要匯出的結構，並在 [!DNL Schema Editor].
+在平台UI中，選取 **[!UICONTROL 結構]** 的下一頁。 在 [!UICONTROL 結構] 工作區中，選取您要匯出的結構的列，以在右側邊欄中顯示結構詳細資訊。
 
 >[!TIP]
 >
 >請參閱 [探索XDM資源](./explore.md) 以取得如何尋找您所尋找之XDM資源的詳細資訊。
 
-開啟架構後，請選取 **[!UICONTROL 複製JSON]** 圖示(![復製圖示](../images/ui/export/icon.png))。
+下一步，選取 **[!UICONTROL 複製JSON]** 圖示(![復製圖示](../images/ui/export/icon.png))。
 
-![](../images/ui/export/copy-json.png)
+![具有結構列和 [!UICONTROL 複製到JSON] 突出顯示。](../images/ui/export/copy-json.png)
 
 這會根據結構，將JSON裝載複製到剪貼簿。 針對「[!DNL Loyalty Members]&quot;結構（如上所示）會產生下列JSON:
 

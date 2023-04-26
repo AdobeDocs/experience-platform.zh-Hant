@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義XDM欄位
 description: 了解如何在Experience Platform使用者介面中定義XDM欄位。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: f1a8bcc7c1ba33d74e1f687b4cfd83bddce2fadc
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1414'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 若要在UI中定義新的XDM欄位，您必須先在 [!DNL Schema Editor]. 視您目前在 [!DNL Schema Library]，您可以選擇 [建立新架構](../resources/schemas.md#create) 或 [選擇要編輯的現有架構](../resources/schemas.md#edit).
 
-一旦您擁有 [!DNL Schema Editor] 開啟，畫布中會顯示新增或編輯欄位的控制項。 這些控制項會出現在架構名稱旁邊，以及已在所選類或欄位組下定義的任何對象類型欄位。
+一旦您擁有 [!DNL Schema Editor] 開啟，則畫布中會顯示新增欄位的控制項。 這些控制項會出現在架構名稱旁邊，以及已在所選類或欄位組下定義的任何對象類型欄位。
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
@@ -53,7 +53,7 @@ ht-degree: 4%
 | 欄位屬性 | 說明 |
 | --- | --- |
 | [!UICONTROL 欄位名稱] | 欄位的不重複、描述性名稱。 請注意，一旦儲存架構，就無法變更欄位的名稱。 此值可用來識別並參考程式碼和其他下游應用程式中的欄位<br><br>名稱最好用camelCase寫。 它可能包含英數字元、破折號或底線字元，但它 **不能** 從底線開始。<ul><li>**正確**: `fieldName`</li><li>**可接受：** `field_name2`, `Field-Name`, `field-name_3`</li><li>**錯誤**: `_fieldName`</li></ul> |
-| [!UICONTROL 顯示名稱] | 欄位的顯示名稱。 這是將用來表示「架構編輯器」畫布中欄位的名稱。 |
+| [!UICONTROL 顯示名稱] | 欄位的顯示名稱。 這是將用來表示「架構編輯器」畫布中欄位的名稱。 欄位名稱可變更為顯示名稱，使用 [顯示名稱切換](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL 類型] | 欄位將包含的資料類型。 從此下拉式功能表中，您可以選取 [標準標量類型](../../schema/field-constraints.md) 由XDM支援，或多欄位其中一個 [資料類型](../resources/data-types.md) 中 [!DNL Schema Registry].<br><br>您也可以選取 **[!UICONTROL 進階類型搜尋]** 若要搜尋及篩選現有資料類型，並更輕鬆找出所需類型。 |
 
 {style="table-layout:auto"}

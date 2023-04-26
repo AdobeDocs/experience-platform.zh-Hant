@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯結構
 description: 了解如何在Experience Platform使用者介面中建立和編輯結構的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
-source-wordcount: '3203'
+source-wordcount: '3340'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,18 @@ ht-degree: 1%
 
 選取架構後， [!DNL Schema Editor] 畫布中顯示結構。 您現在可以 [新增欄位群組](#add-field-groups) 結構(或 [新增個別欄位](#add-individual-fields) ), [編輯欄位顯示名稱](#display-names)，或 [編輯現有的自訂欄位群組](./field-groups.md#edit) 如果架構採用任何。
 
+## 顯示名稱切換 {#display-name-toggle}
+
+為方便起見，「結構編輯器」提供切換按鈕，可在原始欄位名稱和更容易理解的顯示名稱之間進行變更。 此彈性可改善欄位探索能力，以及編輯結構。 切換按鈕位於「結構編輯器」檢視的右上角。
+
+>[!NOTE]
+>
+>從欄位名稱變更為顯示名稱純粹是美化，不會變更任何下游資源。
+
+![結構編輯器 [!UICONTROL 顯示欄位的顯示名稱] 突出顯示。](../../images/ui/resources/schemas/display-name-toggle.png)
+
+標準欄位組的顯示名稱是系統產生的，但可自訂，如 [顯示名稱](#display-names) 區段。 顯示名稱會反映在多個UI檢視中，包括對應和資料集預覽。 預設設定為關閉，並按欄位名稱的原始值顯示欄位名稱。
+
 ## 將欄位群組新增至結構 {#add-field-groups}
 
 >[!NOTE]
@@ -65,7 +77,7 @@ ht-degree: 1%
 
 在中開啟架構後 [!DNL Schema Editor]，您可以使用欄位群組，將欄位新增至結構。 若要開始，請選取 **[!UICONTROL 新增]** 下一頁 **[!UICONTROL 欄位群組]** 在左側邊欄。
 
-![](../../images/ui/resources/schemas/add-field-group-button.png)
+![結構編輯器，使用 [!UICONTROL 新增] 從 [!UICONTROL 欄位群組] 區段。](../../images/ui/resources/schemas/add-field-group-button.png)
 
 隨即出現對話框，其中顯示可為架構選擇的欄位組清單。 由於欄位組僅與一個類相容，因此將只列出與架構的所選類相關聯的那些欄位組。 依預設，列出的欄位群組會根據其在您組織中的使用人氣排序。
 
