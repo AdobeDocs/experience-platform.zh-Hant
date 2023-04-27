@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料管理；授權；
 title: 資料管理許可證權限最佳做法
 description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b5afceff59105eb6e0d17e22c2810a5c25ae760
+source-git-commit: fd594e19e13ca6e7f9f92674107d8ac6dabac9d6
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2169'
 ht-degree: 2%
 
 ---
@@ -122,8 +122,6 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 
 {style="table-layout:auto"}
 
-
-
 #### 設定檔存放區組成報表
 
 有許多報表可協助您了解設定檔存放區的組成。 這些報表可協助您針對如何及何處設定體驗事件有效期做出明智的決策，以更妥善地最佳化您的授權使用情形：
@@ -132,6 +130,10 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 * **身分重疊報表API**:公開對可定址對象貢獻最大的身分命名空間。 請參閱 [產生身分重疊報表](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) 以取得更多資訊。
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
+
+#### 假名描述檔資料過期 {#pseudonymous-profile-expirations}
+
+此功能可讓您從設定檔存放區自動移除過時的匿名設定檔。 有關此功能的詳細資訊，請閱讀 [假名設定檔資料過期概觀](../../profile/pseudonymous-profiles.md).
 
 #### 體驗事件過期 {#event-expirations}
 
@@ -144,7 +146,7 @@ Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢�
 * 使用 [授權使用控制面板](../../dashboards/guides/license-usage.md) 追蹤及監控客戶使用趨勢。 這可讓您搶在任何可能發生的超額之前處理。
 * 設定 [內嵌篩選器](#ingestion-filters) 識別您的細分和個人化使用案例所需的事件。 這可讓您只傳送使用案例所需的重要事件。
 * 請確定您只有 [啟用設定檔資料集](#ingestion-filters) 區段和個人化使用案例所需的項目。
-* 設定 [體驗事件過期](#event-expirations) 適用於高頻率資料，例如網頁資料。
+* 設定 [體驗事件過期](#event-expirations) 和 [假名描述檔資料過期](#pseudonymous-profile-expirations) 適用於高頻率資料，例如網頁資料。
 * 定期檢查 [設定檔組成報表](#profile-store-composition-reports) 來了解您的設定檔存放區構成。 這可讓您了解對授權使用量貢獻最大的資料來源。
 
 ## 功能摘要和可用性 {#feature-summary}
