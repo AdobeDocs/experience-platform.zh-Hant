@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2023年4月
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
+source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
 workflow-type: tm+mt
-source-wordcount: '1373'
+source-wordcount: '1422'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform提供多個控制面板，讓您透過這些控制面�
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用者定義的控制面板 | 您現在可以 **篩選歷史資料** 從介面工具集分析，並使用最近的資料或自訂分析時段。<br>您現在也可以 **複製現有小工具**. 透過自訂復本並編輯其屬性，您可以避免在建立新、獨特的Widget時從頭重新啟動。 |
+| 使用者定義的控制面板 | 您現在可以 **篩選歷史資料** 從介面工具集分析，並使用最近的資料或自訂分析時段。 請參閱 [使用者定義的控制面板指南](../../dashboards/user-defined-dashboards.md#filter-historical-data) 以取得更多資訊。<br>您現在也可以 **複製現有小工具**. 透過自訂復本並編輯其屬性，您可以避免在建立新、獨特的Widget時從頭重新啟動。 閱讀 [widget複製指南](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) 了解更多。 |
 
 {style="table-layout:auto"}
 
@@ -107,7 +107,7 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 
 | 功能 | 說明 |
 | --- | --- |
-| 顯示名稱切換 | 結構編輯器現在提供切換按鈕，讓您在原始欄位名稱和更容易閱讀的顯示名稱之間進行變更。 此彈性可改善欄位探索能力，以及編輯結構。 標準欄位群組的顯示名稱是系統產生的，但如有需要，也可透過UI自訂。 |
+| 顯示名稱切換 | 結構編輯器現在提供切換按鈕，讓您在原始欄位名稱和更容易閱讀的顯示名稱之間進行變更。<br>![以顯示名稱顯示的結構編輯器會切換醒目提示。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "結構編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>此彈性可改善欄位探索能力，以及編輯結構。 標準欄位群組的顯示名稱是系統產生的，但如有需要，也可透過UI自訂。 請閱讀 [顯示名稱切換檔案](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) 了解更多。 |
 
 {style="table-layout:auto"}
 
