@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
+source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1296'
 ht-degree: 4%
 
 ---
@@ -82,7 +82,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 功能 | 說明 |
 | ----------- | ----------- |
 | 資料流監視 [!DNL Custom Personalization] 和 [!DNL Adobe Commerce] 目的地 | <p> 您現在可以看到 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 和 [使用屬性的自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 連線。 </p> <p>![Adobe Commerce影像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce量度"){width="100" zoomable="yes"}</p>  請參閱 [監視目標工作區中的資料流](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) 以取得更多詳細資訊。 |
-| 新增 **[!UICONTROL 將區段ID附加至區段名稱]** 欄位 [!DNL Google Ad Manager] 和 [!DNL Google Ad Manager 360] 目的地 | 您現在可以在 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 和 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 包括來自Experience Platform的區段ID，如下所示： `Segment Name (Segment ID)`. |
+| 新增 **[!UICONTROL 將區段ID附加至區段名稱]** 欄位 [!DNL Google Ad Manager] 和 [!DNL Google Ad Manager 360] 目的地 | <p>您現在可以在 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 和 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 包括來自Experience Platform的區段ID，如下所示： `Segment Name (Segment ID)`.</p><p>![附加區段ID影像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新增在區段名稱欄位中附加區段ID "){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 
 - 我們已修正 **已排除的身分** 檔案型目的地匯出的報表量度。 客戶會如預期般從啟動的匯出接收所有匯出的ID。 不過， **已排除的身分** UI中的報表量度因為錯誤地計算原本不應匯出的身分，而不正確地顯示大量已排除的身分。 (PLAT-149774)
-- 我們已修正啟動工作流程的排程步驟問題。 對於需要對應ID的目的地，客戶無法為新增至現有目的地連線的區段新增對應ID。 (PLAT-148808)
+- 我們已修正 **排程** 啟動工作流程的步驟。 對於需要對應ID的目的地，客戶無法為新增至現有目的地連線的區段新增對應ID。 (PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
