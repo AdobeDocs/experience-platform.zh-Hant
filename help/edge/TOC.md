@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: b53be9f2f2d55d5f9e8081fb0ca6732dcc2a8c11
+source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 34%
+source-wordcount: '212'
+ht-degree: 33%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 34%
 * 資料串流 {#datastreams}
    * [總覽](./datastreams/overview.md)
    * [設定資料流](./datastreams/configure.md)
+   * [設定資料流覆蓋](./datastreams/overrides.md)
    * [資料收集的資料準備](./datastreams/data-prep.md)
    * 資料擴充 {#data-enrichment}
       * [各天氣管道的天氣資料](./datastreams/data-enrichment/weather.md)

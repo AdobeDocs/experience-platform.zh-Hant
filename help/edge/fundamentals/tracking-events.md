@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK追蹤事件
 description: 了解如何追蹤Adobe Experience Platform Web SDK事件。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;documentUnloading；檔案卸載；onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
+source-git-commit: a6948e3744aa754eda22831a7e68b847eb904e76
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1194'
 ht-degree: 1%
 
 ---
@@ -138,7 +138,12 @@ alloy("sendEvent", {
 
 ### 覆寫資料集ID
 
+>[!IMPORTANT]
+>
+>此 `datasetId` 選項 `sendEvent` 已棄用命令。 若要覆寫資料集ID，請使用 [配置覆蓋](../datastreams/overrides.md) 。
+
 在某些使用案例中，您可能會想要將事件傳送至設定UI中設定之資料集以外的資料集。 為此，您需要設定 `datasetId` 選項 `sendEvent` 命令：
+
 
 
 ```javascript

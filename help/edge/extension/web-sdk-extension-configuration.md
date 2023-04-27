@@ -2,10 +2,10 @@
 title: 設定Adobe Experience Platform Web SDK擴充功能
 description: 如何在UI中設定Adobe Experience Platform Web SDK標籤擴充功能。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 7%
+source-wordcount: '1184'
+ht-degree: 6%
 
 ---
 
@@ -102,6 +102,23 @@ SDK可自動為您收集連結點按資訊。 此功能預設為啟用，但可�
 ### [!UICONTROL 自動收集的內容資料]
 
 依預設，SDK會收集與裝置、網頁、環境和放置內容相關的特定內容資料。 如果您想查看Adobe收集的資訊清單，可以找到 [此處](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). 如果您不想要收集此資料，或只想收集特定類別的資料，您可以變更這些選項。
+
+## [!UICONTROL 資料流配置覆蓋]
+
+資料流覆寫可讓您定義資料流的其他設定，這些設定會透過Web SDK傳遞至邊緣網路。
+
+這可協助您觸發與預設資料流不同的資料流行為，而不需建立新資料流或修改現有設定。
+
+資料流配置覆蓋是兩個步驟：
+
+1. 首先，您必須在 [datastream配置頁](../datastreams/configure.md).
+2. 然後，您必須透過Web SDK命令或使用Web SDK標籤擴充功能，將覆寫傳送至邊緣網路。
+
+請參閱資料流 [設定覆寫檔案](../datastreams/overrides.md) 以取得如何覆寫資料流設定的詳細指示。
+
+除了透過Web SDK命令傳遞覆寫外，您也可以在下方所示的標籤擴充畫面中設定覆寫。
+
+![在Web SDK標籤擴充頁面中顯示資料流設定覆寫的影像。](../assets/extension/overview/datastream-overrides.png)
 
 ## [!UICONTROL 進階設定]
 

@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2023年4月
 description: 2023年4月Adobe Experience Platform發行說明。
-source-git-commit: f8ef0c6fb949cb5c9071e84d88a9151a5558848f
+exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
+source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1285'
 ht-degree: 4%
 
 ---
@@ -60,7 +61,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | 功能 | 說明 |
 | --- | --- |
 | 資料流的IP位址模糊化 | 您現在可以在 [資料流配置UI](../../edge/datastreams/configure.md). <br><br>資料流層級IP模糊化設定優先於Adobe Target和Audience Manager中設定的任何IP模糊化。 <br><br>傳送至Adobe Analytics的資料不受資料流層級影響 [!UICONTROL IP模糊化] 設定。 Adobe Analytics目前會收到未經過模糊處理的IP位址。 若要讓Analytics接收模糊化的IP位址，您必須在Adobe Analytics中個別設定IP模糊化。 未來發行版本將更新此行為。<br><br> 如需IP模糊化的詳細資訊以及如何設定的指示，請參閱 [datastream配置檔案](../../edge/datastreams/configure.md#advanced-options). |
-| 資料流配置覆蓋 | 您現在可以定義資料流的其他設定選項，以便用來覆寫特定設定，例如事件資料集、Target屬性Token、ID同步容器和Analytics報表套裝。 <br><br>覆寫資料流設定是兩個步驟的程式。 首先，您必須在資料流UI中定義資料流配置覆蓋。 然後，您必須透過Web SDK命令將覆寫傳送至邊緣網路。 |
+| [資料流配置覆蓋](../../edge/datastreams/overrides.md) | 您現在可以定義資料流的其他設定選項，以便用來覆寫特定設定，例如事件資料集、Target屬性Token、ID同步容器和Analytics報表套裝。 <br><br>覆寫資料流設定是兩個步驟： <ol><li>首先，您必須在 [datastream配置頁](../../edge/datastreams/configure.md).</li><li>然後，您必須透過Web SDK命令或使用Web SDK將覆寫傳送至邊緣網路 [標籤擴充功能](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
 
 {style="table-layout:auto"}
 
