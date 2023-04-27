@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: efd69011f1ba81ece0a1c270cc71b9706ab7b88f
+source-git-commit: 8b77b3a91d8724591ec389aa214c81c4bef6baf8
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1372'
 ht-degree: 4%
 
 ---
@@ -83,16 +83,9 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | ----------- | ----------- |
 | 資料流監視 [!DNL Custom Personalization] 和 [!DNL Adobe Commerce] 目的地 | <p> 您現在可以看到 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 和 [使用屬性的自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 連線。 </p> <p>![Adobe Commerce影像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce量度"){width="100" zoomable="yes"}</p>  請參閱 [監視目標工作區中的資料流](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) 以取得更多詳細資訊。 |
 | 新增 **[!UICONTROL 將區段ID附加至區段名稱]** 欄位 [!DNL Google Ad Manager] 和 [!DNL Google Ad Manager 360] 目的地 | <p>您現在可以在 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 和 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 包括來自Experience Platform的區段ID，如下所示： `Segment Name (Segment ID)`.</p><p>![附加區段ID影像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新增在區段名稱欄位中附加區段ID "){width="100" zoomable="yes"}</p> |
+| 排程對象回填 | <p>若 [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 目的地時，系統會排程在區段首次對應至目的地連線後24到48小時，啟用回填至目的地的對象。 此更新是針對Google的政策，即等候24小時，直到擷取資料，並將改善即時CDP與 [!DNL Google Display & Video 360].</p> <p>請注意，這是僅適用於此目的地的後端設定，且與UI中任何客戶可設定的排程選項無關。</p> |
 
 {style="table-layout:auto"}
-
-<!--
-
-| New **[!UICONTROL Append segment ID to segment name]** field for the [!DNL Google Ad Manager] and [!DNL Google Ad Manager 360] destinations | You can now have the segment name in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) and [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`. |
-| Scheduled audience backfills | <p>For the [!DNL Google Display & Video 360] destination, the activation of audience backfills to the destination is scheduled to occur 24-48 hours after a segment is first mapped to a destination connection. This update is in response to Google's policy to wait 24 hours until ingesting data and will improve match rates between Real-time CDP and [!DNL Google Display & Video 360].</p> <p>Note that this is a backend configuration applicable to this destination only and that is unrelated to any customer-configurable scheduling options in the UI.</p> |
-
--->
-
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 

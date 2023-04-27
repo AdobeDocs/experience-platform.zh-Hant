@@ -2,9 +2,9 @@
 title: （測試版） [!DNL Google Ad Manager 360] 連接
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈商管理其網站上、透過視訊和行動應用程式的廣告顯示。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: ea480854c6058d84615b66a7df2d7c8fbd619bab
+source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '974'
 ht-degree: 4%
 
 ---
@@ -98,12 +98,7 @@ ht-degree: 4%
 * **[!UICONTROL 帳戶類型]**:根據您的 [!DNL Google] 帳戶：
    * 使用 `AdX buyer` for [!DNL Google AdX]
    * 使用 `DFP by Google` for [!DNL DoubleClick] 適用於發佈者
-
-<!--
-
-*  **[!UICONTROL Append segment ID to segment name]**: Select this option to have the segment name in Google Ad Manager 360 include the segment ID from Experience Platform, like this: `Segment Name (Segment ID)`
-
--->
+* **[!UICONTROL 將區段ID附加至區段名稱]**:選取此選項，讓Google Ad Manager 360中的區段名稱包含來自Experience Platform的區段ID，如下所示： `Segment Name (Segment ID)`.
 
 ### 啟用警報 {#enable-alerts}
 
