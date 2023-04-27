@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1517'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 **新功能**
 
-* 新增對資料流設定覆寫的支援。
+* 新增 [資料流配置覆蓋](datastreams/overrides.md).
 
 ## 2.15.0版 — 2023年3月30日
 

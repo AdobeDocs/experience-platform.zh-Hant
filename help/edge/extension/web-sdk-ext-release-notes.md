@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ccd02ea014d514b56a8e1bd540bb2c2c4bb2eb1b
+source-git-commit: 952ffa14537058ad03121747846a96c7c978b833
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 38%
@@ -18,7 +18,7 @@ ht-degree: 38%
 
 **新功能**
 
-* 新增對資料流設定覆寫的支援。
+* 新增 [資料流配置覆蓋](../datastreams/overrides.md).
 * 將淘汰通知新增至 `datasetId` 選項 `sendEvent` 命令。
 
 **修正和改良**
