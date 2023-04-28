@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c4bdee9f8599e27ffab776c4df5083d2e29e26c
+source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
 workflow-type: tm+mt
 source-wordcount: '1421'
 ht-degree: 4%
@@ -122,6 +122,8 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 | 功能 | 說明 |
 | ------- | ----------- |
 | 假名的設定檔資料過期 | 現在正式提供匿名的設定檔資料過期！ 啟用後，此版本會持續從您的Experience Platform例項移除過時的匿名設定檔。 若要進一步了解此功能和假名的設定檔，請閱讀 [假名描述檔資料過期指南](../../profile/pseudonymous-profiles.md). |
+
+{style="table-layout:auto"}
 
 ## 來源 {#sources}
 
