@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1c092cd66a8a96623359a0e56de76e2a3d077c8d
+source-git-commit: 8ee68e5416c28a08dffc358dad70055e9b4cdd28
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1980'
 ht-degree: 4%
 
 ---
@@ -47,6 +47,8 @@ Adobe Experience Platform可讓您以即時客戶設定檔的形式，根據行�
 ## 資料模型限制
 
 以下護欄在建模即時客戶設定檔資料時提供建議的限制。 要進一步了解主要圖元和維圖元，請參閱 [實體類型](#entity-types) 在附錄中。
+
+![此圖表顯示Adobe Experience Platform中「設定檔」資料的不同護欄。](./images/guardrails/profile-guardrails.png)
 
 ### 主實體護欄
 
