@@ -3,7 +3,7 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 了解at.js功能與Experience PlatformWeb SDK有何不同
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決策；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 519d77ca7bfb910b03fea3567e08824e6f852eb4
+source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
 workflow-type: tm+mt
 source-wordcount: '2286'
 ht-degree: 6%
@@ -597,7 +597,7 @@ alloy("sendEvent", {
     // Find the discount proposition, if it exists.
     for (var i = 0; i < propositions.length; i++) {
       var proposition = propositions[i];
-      for (var j = 0; j < proposition.items; j++) {
+      for (var j = 0; j < proposition.items.length; j++) {
         var item = proposition.items[j];
 
         if (item.schema === "https://ns.adobe.com/personalization/measurement") {
