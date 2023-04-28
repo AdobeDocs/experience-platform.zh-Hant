@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2023年4月
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
+source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
 workflow-type: tm+mt
-source-wordcount: '1492'
-ht-degree: 3%
+source-wordcount: '1662'
+ht-degree: 4%
 
 ---
 
@@ -110,6 +110,26 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 | 功能 | 說明 |
 | --- | --- |
 | 顯示名稱切換 | 結構編輯器現在提供切換按鈕，讓您在原始欄位名稱和更容易閱讀的顯示名稱之間進行變更。<br>![以顯示名稱顯示的結構編輯器會切換醒目提示。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "結構編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>此彈性可改善欄位探索能力，以及編輯結構。 標準欄位群組的顯示名稱是系統產生的，但如有需要，也可透過UI自訂。 請閱讀 [顯示名稱切換檔案](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) 了解更多。 |
+
+{style="table-layout:auto"}
+
+**新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 方案 | [[!UICONTROL Adobe Target分類欄位]](https://github.com/adobe/xdm/pull/1719/files) | Target分類資料集的新XDM結構，包含一組可分類Target活動和體驗的中繼資料欄位。 |
+
+{style="table-layout:auto"}
+
+**更新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位組 | [[!UICONTROL Adobe統一配置檔案服務帳戶聯合擴展]](https://github.com/adobe/xdm/pull/1696/files) | 為「即時客戶設定檔」新增帳戶擴充欄位群組，讓使用者能在「帳戶聯合」中新增區段成員資格。 |
+| 方案 | [[!UICONTROL 計算屬性系統架構]](https://github.com/adobe/xdm/pull/1696/files) | 「即時客戶設定檔」使用的「計算屬性」欄位群組已更新為系統唯讀全域架構。 |
+| 欄位組 | 多個 | 新增數個事件作為 [[!UICONTROL 時間序列結構]](https://github.com/adobe/xdm/pull/1718/files). |
+| 欄位組 | 設定檔忠誠度詳細資料 | [修正標題](https://github.com/adobe/xdm/pull/1717/files) for `xdm:upgradeDate` 從「計畫名稱」到「升級日期」。 |
+| 欄位組 | 多個 | 多個欄位來自 [[!UICONTROL 決策項目]](https://github.com/adobe/xdm/pull/1714/files) 已更新，以移除雙重巢狀階層。 |
 
 {style="table-layout:auto"}
 
