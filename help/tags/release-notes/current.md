@@ -2,14 +2,22 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3ebf8df16f88660eab481bd0a0ba88816b470255
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '798'
 ht-degree: 3%
 
 ---
 
 # 標籤和事件轉送的發行說明
+
+## 2023 年 4 月 26 日
+
+* **OAuth JWT密碼**:此 [OAuth JWT密碼](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用Adobe和Google服務代號，以支援事件轉送中的伺服器對伺服器互動。
+
+已發行下列新擴充功能：
+
+* **[!DNL Pinterest Conversions API]擴充功能**:此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 事件轉送擴充功能可讓您運用Adobe Experience Platform邊緣網路中擷取的資料，並將其傳送至 [!DNL Pinterest] 以伺服器端事件的形式，使用 [!DNL Pinterest Conversions API].
 
 ## 2023 年 3 月 29 日
 

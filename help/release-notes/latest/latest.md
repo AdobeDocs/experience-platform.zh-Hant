@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a8e59d6386a51c4d5d3173be16ee45311f8d2929
+source-git-commit: c7f09da40d2ea84de6f21669bdda16c0175a63c1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1491'
 ht-degree: 4%
 
 ---
@@ -62,6 +62,8 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | --- | --- |
 | 資料流的IP位址模糊化 | 您現在可以在 [資料流配置UI](../../edge/datastreams/configure.md). <br><br>資料流層級IP模糊化設定優先於Adobe Target和Audience Manager中設定的任何IP模糊化。 <br><br>傳送至Adobe Analytics的資料不受資料流層級影響 [!UICONTROL IP模糊化] 設定。 Adobe Analytics目前會收到未經過模糊處理的IP位址。 若要讓Analytics接收模糊化的IP位址，您必須在Adobe Analytics中個別設定IP模糊化。 未來發行版本將更新此行為。<br><br> 如需IP模糊化的詳細資訊以及如何設定的指示，請參閱 [datastream配置檔案](../../edge/datastreams/configure.md#advanced-options). |
 | [資料流配置覆蓋](../../edge/datastreams/overrides.md) | 您現在可以定義資料流的其他設定選項，以便用來覆寫特定設定，例如事件資料集、Target屬性Token、ID同步容器和Analytics報表套裝。 <br><br>覆寫資料流設定是兩個步驟： <ol><li>首先，您必須在 [datastream配置頁](../../edge/datastreams/configure.md).</li><li>然後，您必須透過Web SDK命令或使用Web SDK將覆寫傳送至邊緣網路 [標籤擴充功能](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
+| OAuth JWT密碼 | 此 [OAuth JWT密碼](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用Adobe和Google服務代號，以支援事件轉送中的伺服器對伺服器互動。 |
+| [!DNL Pinterest Conversions API] 擴充功能 | 此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 事件轉送擴充功能可讓您運用Adobe Experience Platform邊緣網路中擷取的資料，並將其傳送至 [!DNL Pinterest] 以伺服器端事件的形式，使用 [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
