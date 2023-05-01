@@ -2,9 +2,9 @@
 title: 使用Adobe Experience Platform Web SDK處理客戶同意資料
 description: 了解如何整合Adobe Experience Platform Web SDK，以在Adobe Experience Platform中處理客戶同意資料。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: dc269f952d0970cb5be1b28ab91c6006de975df3
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1349'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,6 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 | 資料流欄位 | 值 |
 | --- | --- |
 | [!UICONTROL 沙箱] | 平台的名稱 [沙箱](../../../sandboxes/home.md) 包含設定資料流所需的串流連線和資料集。 |
-| [!UICONTROL 串流入口] | 有效的串流連線，用於Experience Platform。 請參閱 [建立串流連線](../../../ingestion/tutorials/create-streaming-connection-ui.md) 如果您沒有現有的串流入口。 |
 | [!UICONTROL 事件資料集] | 安 [!DNL XDM ExperienceEvent] 您計畫使用SDK將事件資料傳送至的資料集。 雖然您必須提供事件資料集才能建立Platform資料流，請注意，下游實施工作流程不會遵循透過事件傳送的同意資料。 |
 | [!UICONTROL 設定檔資料集] | 此 [!DNL Profile] — 啟用資料集，並包含您建立的客戶同意欄位 [較早](#prerequisites). |
 
