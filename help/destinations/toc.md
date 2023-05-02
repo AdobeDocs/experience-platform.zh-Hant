@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: fb1a8f3a8f78578a0c7d6b8ab4feb60d8c5da1af
+source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1074'
 ht-degree: 6%
 
 ---
@@ -26,6 +26,7 @@ ht-degree: 6%
    * [使用流量服務API連線至串流目的地並啟用資料](./api/streaming-destinations.md)
    * [使用流量服務API連線至批次雲端儲存空間和電子郵件行銷目的地，並啟用資料](./api/connect-activate-batch-destinations.md)
    * [（測試版）透過臨機啟動API啟動對象區段以批次目的地](./api/ad-hoc-activation-api.md)
+   * [編輯目的地](./api/edit-destination.md)
    * [更新目標資料流](./api/update-destination-dataflows.md)
    * [刪除目標帳戶](./api/delete-destination-account.md)
    * [刪除目標資料流](./api/delete-destination-dataflow.md)
