@@ -2,9 +2,9 @@
 title: Zendesk連接
 description: Zendesk目的地允許您導出帳戶資料，並在Zendesk中激活它以滿足您的業務需要。
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 3197eddcf9fef2870589fdf9f09276a333f30cd1
+source-git-commit: 55f1eafa68124b044d20f8f909f6238766076a7a
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1471'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 [[!DNL Zendesk]](https://www.zendesk.com) 是客戶服務解決方案和銷售工具。
 
-此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 利用 [[!DNL Zendesk] 聯絡人API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/)，以在區段內建立和更新身分識別，做為內的聯絡人 [!DNL Zendesk].
+此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 利用 [[!DNL Zendesk] 聯絡人API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/)，到 **建立和更新身分** 區段內作為內的聯絡人 [!DNL Zendesk].
 
 [!DNL Zendesk] 使用承載令牌作為與通信的驗證機制 [!DNL Zendesk] 聯繫人API。 向您的 [!DNL Zendesk] 執行個體在下方， [驗證到目標](#authenticate) 區段。
 
 ## 使用案例 {#use-cases}
 
-身為行銷人員，您可以根據使用者Adobe Experience Platform設定檔的屬性，為使用者提供個人化體驗。 您可以從離線資料建立區段，並將這些區段傳送至 [!DNL Zendesk]，可在Adobe Experience Platform中更新區段和設定檔時，立即顯示在使用者的動態消息中。
+多頻道B2C平台的客戶服務部門希望確保為其客戶提供順暢的個人化體驗。 部門可以從自己的離線資料建立區段，以建立新的使用者設定檔，或更新來自不同互動（例如購買、退貨等）的現有設定檔資訊 將這些區段從Adobe Experience Platform傳送至 [!DNL Zendesk]. 在 [!DNL Zendesk] 確保客戶服務代理立即獲得客戶的最新資訊，從而加快響應和解決問題。
 
 ## 先決條件 {#prerequisites}
 
@@ -118,17 +118,15 @@ ht-degree: 1%
 
 1. 在 **[!UICONTROL 對應]** 步驟，選取 **[!UICONTROL 新增對應]**. 畫面上會顯示新的對應列。
 1. 在 **[!UICONTROL 選擇源欄位]** 窗口，選擇 **[!UICONTROL 選擇屬性]** 類別，然後選取XDM屬性或選擇 **[!UICONTROL 選取身分命名空間]** 並選擇身份。
-1. 在 **[!UICONTROL 選擇目標欄位]** 窗口，選擇 **[!UICONTROL 選取身分命名空間]** 並選擇身份或 **[!UICONTROL 選取自訂屬性]** 類別，並視需要選取屬性。
-   * 重複這些步驟，新增XDM設定檔架構與 [!DNL Zendesk] 例項： |源欄位|目標欄位|必填| |—|—|—| |`xdm: person.name.lastName`|`Attribute: last_name` <br>或 `Attribute: name`|是 | |`IdentityMap: Email`|`Identity: email`|是 |
+1. 在 **[!UICONTROL 選擇目標欄位]** 窗口，選擇 **[!UICONTROL 選取身分命名空間]** 類別，並選取目標身分，或選擇 **[!UICONTROL 選擇屬性]** 類別，並選擇支援的架構屬性之一。
+   * 重複這些步驟以新增下列強制對應，您也可以在XDM設定檔架構與 [!DNL Zendesk] 例項： |源欄位|目標欄位|必填| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`|是 | |`IdentityMap: Email`|`Identity: email`|是 | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * 使用這些對應的範例如下所示：
       ![Platform UI螢幕擷取範例及屬性對應。](../../assets/catalog/crm/zendesk/mappings.png)
 
-      >[!IMPORTANT]
-      >
-      >目標欄位對應都是必填的，且是 [!DNL Zendesk] 工作。
-      >
-      >的對應 *姓氏* 或 *名稱* 為必要項目，否則 [!DNL Zendesk] API不會回應任何錯誤，且會忽略任何傳遞的屬性值。
+>[!IMPORTANT]
+>
+>此 `Attribute: last_name` 和 `Identity: email` 此目標必須有目標對應。 如果缺少這些對應，則會忽略任何其他對應，且不會傳送至 [!DNL Zendesk].
 
 完成為目標連接提供映射時，請選擇 **[!UICONTROL 下一個]**.
 
@@ -167,3 +165,18 @@ ht-degree: 1%
 來自 [!DNL Zendesk] 檔案如下：
 * [第一次打電話](https://developer.zendesk.com/documentation/sales-crm/first-call/)
 * [自訂欄位](https://developer.zendesk.com/api-reference/sales-crm/requests/#custom-fields)
+
+### 變更記錄
+
+本節將說明此目的地連接器的功能及重要檔案更新。
+
++++ 查看更改日誌
+
+| 發行月 | 更新類型 | 說明 |
+|---|---|---|
+| 2023 年 4 月 | 檔案更新 | <ul><li>我們已更新 [使用案例](#use-cases) 區段，提供更清楚的範例，說明客戶何時可使用此目的地獲益。</li> <li>我們已更新 [映射](#mapping-considerations-example) 區段來反映正確的必要對應。 此 `Attribute: last_name` 和 `Identity: email` 此目標必須有目標對應。 如果缺少這些對應，則會忽略任何其他對應，且不會傳送至 [!DNL Zendesk].</li> <li>我們已更新 [映射](#mapping-considerations-example) 區段，其中包含強制和選用對應的清楚範例。</li></ul> |
+| 2023 年 3 月 | 首次發行 | 初始目的地發行和檔案發佈。 |
+
+{style="table-layout:auto"}
+
++++
