@@ -3,7 +3,8 @@ title: 加密資料擷取
 description: Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的檔案。
 hide: true
 hidefromtoc: true
-source-git-commit: a1babf70a7a4e20f3e535741c95ac927597c9f48
+exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
+source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 2%
@@ -24,7 +25,7 @@ Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的�
 
 >[!IMPORTANT]
 >
->單一加密檔案的最大大小為100MB。 例如，您可以在單個資料流運行中內嵌2GB的資料，但該資料中的任何單個檔案不能超過100MB。
+>單個加密檔案的最大大小為1 GB。 例如，您可以在單個資料流運行中內嵌價值2 GB的資料，但該資料中的任何單個檔案不能超過1 GB。
 
 本檔案提供如何產生加密金鑰組以加密您的資料，以及將加密的資料內嵌至使用雲端儲存來源Experience Platform的步驟。
 
@@ -114,7 +115,7 @@ curl -X POST \
 >* [公開金鑰ID](#create-encryption-key-pair)
 >* [源連接ID](../api/collect/cloud-storage.md#source)
 >* [Target連線ID](../api/collect/cloud-storage.md#target)
->* [對應ID](../api/collect/cloud-storage.md#mapping)
+>* [對應 ID](../api/collect/cloud-storage.md#mapping)
 
 
 若要建立資料流，請向 `/flows` 端點 [!DNL Flow Service] API。 若要內嵌加密資料，您必須新增 `encryption` 區段 `transformations` 屬性，並包含 `publicKeyId` 是在先前的步驟中建立。
