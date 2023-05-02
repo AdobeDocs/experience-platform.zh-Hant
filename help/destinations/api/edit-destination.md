@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 使用流量服務API編輯目的地連線
 type: Tutorial
 description: 了解如何使用流量服務API編輯目的地連線的各種元件。
-source-git-commit: 52fe0ef2ab195756c381b3ef0a5792dffe459b8d
+source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1565'
 ht-degree: 2%
 
 ---
@@ -196,9 +196,6 @@ curl -X GET \
 PATCH /targetConnections/{TARGET_CONNECTION_ID}
 ```
 
->[!ENDSHADEBOX]
-
-
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
@@ -244,11 +241,11 @@ curl -X PATCH \
 }
 ```
 
->[!TAB Google Ad Manager 360]
+>[!TAB Google廣告管理員和Google廣告管理員360]
 
 **要求**
 
-下列請求會更新 [[!DNL Google Ad Manager 360] 目的地](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 連線，將新的附加區段ID新增至區段名稱欄位。
+下列請求會更新 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 或 [[!DNL Google Ad Manager 360] 目的地](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 連線以新增 [**[!UICONTROL 將區段ID附加至區段名稱]**](/help/release-notes/2023/april-2023.md#destinations) 欄位。
 
 ```shell
 curl -X PATCH \
@@ -328,6 +325,8 @@ curl -X PATCH \
 
 >[!ENDTABS]
 
+>[!ENDSHADEBOX]
+
 ## 編輯基本連接元件（驗證參數和其他元件） {#patch-base-connection}
 
 基本連接的元件因目的而異。 例如， [!DNL Amazon S3] 目的地，您可以將存取金鑰和機密金鑰更新至您的 [!DNL Amazon S3] 位置。
@@ -340,11 +339,13 @@ curl -X PATCH \
 >
 >此 `If-Match` 提出PATCH請求時需要標題。 此標題的值是要更新的基本連接的唯一版本。 etag值會隨著流實體（如資料流、基本連接等）的每次成功更新而更新。
 >
-> 若要取得etag值的最新版本，請向 `/connections/{BASE_CONNECTION_ID}` 端點，其中 `{BASE_CONNECTION_ID}` 是您要更新的基本連線ID。
+> 若要取得最新版的Etag值，請向 `/connections/{BASE_CONNECTION_ID}` 端點，其中 `{BASE_CONNECTION_ID}` 是您要更新的基本連線ID。
 
 以下是更新不同目的地類型基本連線規格參數的幾個範例。 但更新任何目的地參數的一般規則如下：
 
 獲取連接的資料流ID >獲取基本連接ID >用所需參數的更新值PATCH基本連接。
+
+>[!BEGINSHADEBOX]
 
 **API格式**
 
@@ -440,6 +441,8 @@ curl -X PATCH \
 ```
 
 >[!ENDTABS]
+
+>[!ENDSHADEBOX]
 
 ## API錯誤處理 {#api-error-handling}
 
