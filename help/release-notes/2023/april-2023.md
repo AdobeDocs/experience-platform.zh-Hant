@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2023年4月
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3594b20ee495dadf91d745958eac1a06647cae24
+source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1842'
 ht-degree: 4%
 
 ---
@@ -20,6 +20,7 @@ Adobe Experience Platform 現有功能更新：
 - [資料彙集](#data-collection)
 - [目的地](#destinations)
 - [體驗資料模型](#xdm)
+- [Real-Time Customer Data Platform](#rtcdp)
 - [即時客戶設定檔](#profile)
 - [來源](#sources)
 
@@ -134,6 +135,19 @@ XDM是開放原始碼規格，可針對匯入Adobe Experience Platform的資料�
 {style="table-layout:auto"}
 
 如需Platform中XDM的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md).
+
+## Real-Time Customer Data Platform
+
+建置於Experience Platform上，Real-time Customer Data Platform([!DNL Real-Time CDP])可協助公司整合已知和未知的資料，在客戶歷程中運用智慧決策功能啟用客戶設定檔。 [!DNL Real-Time CDP] 結合多個企業資料來源，即時建立客戶設定檔。 然後，從這些設定檔建立的區段可傳送至下游目的地，以在所有通道和裝置上提供一對一的個人化客戶體驗。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 增強的Real-Time CDP首頁 | 此 [Real-Time CDP首頁](https://experience.adobe.com) 已透過重新整理的外觀和改善的效能而增強。 首頁現在具有權限感知功能，且會顯示與您有權存取的功能相關的Widget。 如需詳細資訊，請閱讀 [Real-Time CDP首頁控制面板概觀](../../rtcdp/home-page-dashboards.md). |
+| 自我識別調查 | 自我識別調查是在Adobe Experience Platform UI首頁中提供的簡短問卷。 使用自我識別調查來建立您的Experience Platform個人設定檔，並根據您的選擇接受量身打造的准則。 如需詳細資訊，請閱讀 [自我識別調查概述](../../landing/self-identification.md). |
+
+如需 [!DNL Real-Time CDP]，請參閱 [[!DNL Real-Time CDP] 概述](../../rtcdp/overview.md).
 
 ## 即時客戶設定檔 {#profile}
 
