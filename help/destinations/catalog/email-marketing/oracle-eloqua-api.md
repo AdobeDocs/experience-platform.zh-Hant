@@ -6,7 +6,7 @@ exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
 workflow-type: tm+mt
 source-wordcount: '2125'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -97,8 +97,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
->title="公司名稱\用戶名"
->abstract="在表單中，以您的公司名稱和OracleEloqua的使用者名稱填入此欄位 `{COMPANY_NAME}\{USERNAME}`"
+>title="公司名稱\使用者名稱"
+>abstract="在此欄位中填寫 `{COMPANY_NAME}\{USERNAME}` 表單中來自 Oracle Eloqua 的公司名稱和使用者名稱"
 
 填寫下方的必填欄位。 請參閱 [收集 [!DNL Oracle Eloqua] 憑據](#gather-credentials) 區段。
 * **[!UICONTROL 密碼]**:您 [!DNL Oracle Eloqua] 帳戶。
@@ -114,8 +114,8 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="若要尋找您的pod號碼，請登入EloquaOracle。 成功登入後，請記下瀏覽器中的URL。 "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle知識庫 — 了解您的Pod編號"
+>abstract="若要尋找您的 Pod 編號，請登入 Oracle Eloqua。成功登入後，記下瀏覽器中的 URL。 "
+>additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle 知識庫 - 找出您的 Pod 編號"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 ![Platform UI螢幕擷取畫面，顯示目的地詳細資訊。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
