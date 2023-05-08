@@ -3,9 +3,9 @@ keywords: Experience Platform；疑難排解；護欄；准則；
 title: 資料擷取的護欄
 description: 本檔案提供Adobe Experience Platform中資料擷取護欄的相關指引
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 96ab28f9f909cedd1148d6b27610aebb7cf61b29
+source-git-commit: 582f6ffdea6fa1978f6af6f0f0f92e50a12f6200
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 | 擷取類型 | 準則 | 附註 |
 | --- | --- | --- |
-| 串流擷取 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>您可以在一分鐘內每秒20000次處理對設定檔的請求。</li><li>在15分鐘內，您每秒最多可以處理20000個資料湖請求。</li></ul> | 如果您需要較高的資料吞吐量，請使用批次內嵌API。 |
+| 串流擷取 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>您每秒最多可以處理2500個請求給設定檔。</li><li>在15分鐘內，您每秒最多可以處理20000個資料湖請求。</li></ul> | 如果您需要較高的資料吞吐量，請使用批次內嵌API。 |
 | 串流來源 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>建立新源連接時，每秒支援4000到5000個請求。 **附註**:最多可能需要30分鐘，才能將串流資料完全處理至data lake。</li><li>您每秒可以處理4000到5000個資料湖請求。 **附註**:最多可能需要30分鐘，才能將串流資料完全處理至data lake。</li></ul> | 串流來源，例如 [!DNL Kafka], [!DNL Azure Event Hubs]，和 [!DNL Amazon Kinesis] 不使用 [!DNL Data Collection Core Service] (DCCS)路由，可能有不同的吞吐量限制。 請參閱 [來源概觀](../sources/home.md) 用於資料擷取的來源目錄。 |
 
 ## 後續步驟
