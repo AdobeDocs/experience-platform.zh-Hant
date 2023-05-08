@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬
 title: 基於屬性的訪問控制管理角色權限
 description: 本檔案提供透過Adobe Experience Cloud中的權限介面來設定角色權限的相關資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: a94cf02a57bd91d2342b53ced7da98836343aa2b
+source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 4%
@@ -159,7 +159,7 @@ ht-degree: 4%
 
 此 **[!UICONTROL 新增使用者至您的團隊]** 對話框。 輸入使用者電子郵件地址、名字（選用）和姓氏（選用）。
 
-選取鉛筆圖示以選取產品和使用者群組，選取 **[!UICONTROL Adobe異常平台]**，然後選取 **[!UICONTROL AEP-Default-All-Users]**，然後選取  **[!UICONTROL 儲存]**.
+選取鉛筆圖示以選取產品和使用者群組，選取 **[!UICONTROL Adobe Experience Platform]**，然後選取 **[!UICONTROL AEP-Default-All-Users]**，然後選取  **[!UICONTROL 儲存]**.
 
 ![product-profile](../../images/flac-ui/product-profile.png)
 
