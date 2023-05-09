@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；google ads;Google Ads;google ads；廣告
 title: 使用流程服務API建立Google Ads基本連線
 description: 了解如何使用Flow Service API將Adobe Experience Platform連線至Google Ads。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 56419f41188c9bfdbeda7dde680f269b980a37f0
+source-git-commit: 7c77b0dc658ad45a25f4ead4e14f5826701cf645
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '747'
 ht-degree: 1%
 
 ---
@@ -36,6 +35,7 @@ ht-degree: 1%
 | 憑據 | 說明 |
 | ---------- | ----------- |
 | `clientCustomerId` | 用戶端客戶ID是與您要透過Google Ads API管理之Google Ads用戶端帳戶對應的帳號。 此ID會遵循 `123-456-7890`. |
+| `loginCustomerId` | 登入客戶ID是與您的Google Ads管理員帳戶對應的帳號，用於從特定作業客戶擷取報表資料。 如需登入客戶ID的詳細資訊，請參閱 [Google Ads API檔案](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
 | `developerToken` | 開發人員代號可讓您存取Google Ads API。 您可以使用相同的開發人員代號，對您的所有Google Ads帳戶提出要求。 擷取開發人員代號，方法為 [登入您的經理帳戶](https://ads.google.com/home/tools/manager-accounts/) 然後導覽至 [!DNL API Center] 頁面。 |
 | `refreshToken` | 重新整理代號是 [!DNL OAuth2] 驗證。 此Token可讓您在存取Token過期後重新產生存取Token。 |
 | `clientId` | 用戶端ID會與用戶端密碼一併用於 [!DNL OAuth2] 驗證。 用戶端ID和用戶端密碼可搭配使用，將您的應用程式識別至Google，以代表您的帳戶運作。 |
@@ -79,6 +79,7 @@ curl -X POST \
           "specName": "Basic Authentication",
           "params": {
               "clientCustomerID": "{CLIENT_CUSTOMER_ID}",
+              "loginCustomerID": "{LOGIN_CUSTOMER_ID}",
               "developerToken": "{DEVELOPER_TOKEN}",
               "authenticationType": "{AUTHENTICATION_TYPE}"
               "clientId": "{CLIENT_ID}",
@@ -96,6 +97,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --------- | ----------- |
 | `auth.params.clientCustomerID` | Google Ads帳戶的用戶端客戶ID。 |
+| `auth.params.loginCustomerID` | 與您的Google Ads經理帳戶對應的登入客戶ID。 |
 | `auth.params.developerToken` | Google Ads帳戶的開發人員代號。 |
 | `auth.params.refreshToken` | Google Ads帳戶的重新整理Token。 |
 | `auth.params.clientID` | Google Ads帳戶的用戶端ID。 |
