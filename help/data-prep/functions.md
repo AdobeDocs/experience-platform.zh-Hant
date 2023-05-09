@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備映射函式
 description: 本文檔介紹與資料準備一起使用的映射函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: cce2d7b4f950248807bd700bae5e371418df634d
+source-git-commit: a89faf5f1d1befdc057cd872fcd190703c620c2d
 workflow-type: tm+mt
-source-wordcount: '4591'
+source-wordcount: '4916'
 ht-degree: 3%
 
 ---
@@ -246,6 +246,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 * 手機 — 螢幕較小的行動裝置（通常&lt; 7英吋）
 * 行動 — 尚未識別的行動裝置。 此行動裝置可以是電子閱讀器、平板電腦、手機、手錶等。
 
+有關設備欄位值的詳細資訊，請閱讀 [設備欄位值清單](#device-field-values) 在本檔案附錄中。
+
 >[!NOTE]
 >
 >請向左/向右滾動以查看表的完整內容。
@@ -343,5 +345,36 @@ address.line1 -> addr.addrLine1
 | ^ | %5E |
 | ` | %60 |
 | ~ | %7E |
+
+{style="table-layout:auto"}
+
+### 裝置欄位值 {#device-field-values}
+
+下表概述裝置欄位值清單及其對應說明。
+
+| 裝置 | 說明 |
+| --- | --- |
+| 桌面 | 台式機或筆記型電腦類型的設備。 |
+| 匿名 | 匿名設備。 在某些情況下， `useragents` 由匿名軟體修改。 |
+| 未知 | 未知設備。 這些通常是 `useragents` 不包含有關設備的資訊。 |
+| 行動 | 尚未識別的行動裝置。 此行動裝置可以是電子閱讀器、平板電腦、手機、手錶等。 |
+| 平板電腦 | 大螢幕的行動裝置（通常> 7英吋）。 |
+| 電話 | 小螢幕的行動裝置（通常&lt; 7&quot;）。 |
+| Watch | 螢幕很小的行動裝置（通常&lt; 2英吋）。 這些裝置通常作為手機/平板電腦類型裝置的額外螢幕運作。 |
+| 增強現實 | 具有AR功能的行動裝置。 |
+| 虛擬現實 | 具有VR功能的行動裝置。 |
+| eReader | 類似平板電腦的裝置，但通常使用 [!DNL eInk] 螢幕。 |
+| 機頂盒 | 允許通過電視螢幕進行交互的連接設備。 |
+| TV | 類似機上盒的裝置，但內建在電視中。 |
+| 家用設備 | 家用電器（通常是大的），比如冰箱。 |
+| 遊戲機 | 像 [!DNL Playstation] 或 [!DNL XBox]. |
+| 手持遊戲機 | 移動遊戲系統，如 [!DNL Nintendo Switch]. |
+| 聲音 | 聲音驅動設備，如 [!DNL Amazon Alexa] 或 [!DNL Google Home]. |
+| 車 | 基於車輛的瀏覽器。 |
+| 機器人 | 造訪網站的機器人。 |
+| 機器人移動 | 造訪網站但指出其想被視為行動訪客的機器人。 |
+| 機器人模擬器 | 造訪網站的機器人，假裝它們像機器人 [!DNL Google]但事實並非如此。 **附註**:在大多數情況下，機器人模仿者其實是機器人。 |
+| Cloud | 雲端型應用程式。 它們既不是機器人也不是駭客，而是需要連接的應用。 包括 [!DNL Mastodon] 伺服器。 |
+| 駭客 | 此裝置值用於在 `useragent` 字串。 |
 
 {style="table-layout:auto"}
