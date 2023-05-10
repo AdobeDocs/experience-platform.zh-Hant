@@ -1,9 +1,10 @@
 ---
 title: 派生屬性的無縫SQL流
 description: Query Service SQL已擴展，可提供衍生屬性的無縫支援。 了解如何使用此SQL擴充功能建立為設定檔啟用的衍生屬性，以及如何為即時客戶設定檔和細分服務使用屬性。
-source-git-commit: 1ff66d0ac8e0491a6db518545d122555d9d54c75
+exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
+source-git-commit: 6202b1a5956da83691eeb5422d3ebe7f3fb7d974
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -40,6 +41,16 @@ Query Service SQL已擴展，可提供衍生屬性的無縫支援。 這為您�
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
 ```
 
+支援的資料類型為：布林值、日期、日期時間、文本、浮點、bigint、整數、映射、陣列和struct/row。
+
+下面的SQl代碼塊提供了定義結構/行、映射和陣列資料類型的示例。 第1行示範行語法。 第二行示範地圖語法，第三行示範陣列語法。
+
+```sql {line-numbers="true"}
+ROW (Column_name <data_type> [, column name <data_type> ]*)
+MAP <data_type, data_type>
+ARRAY <data_type>
+```
+
 或者，您也可以透過Platform UI為設定檔啟用資料集。 如需將資料集標示為已啟用設定檔的詳細資訊，請參閱 [啟用即時客戶個人檔案檔案的資料集](../../../catalog/datasets/user-guide.md#enable-profile).
 
 在以下範例查詢中， `decile_table` 資料集建立時使用 `id` 作為主要身分欄，且具有命名空間 `IDFA`. 還有一個欄位名為 `decile1Month` 地圖資料類型。 建立的表格(`decile_table`)已針對設定檔啟用。
@@ -48,12 +59,6 @@ CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> prima
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
             decile1Month map<text, integer>) WITH (label='PROFILE');
 ```
-
-<!--        decile3Month map<text, integer>,
-            decile6Month map<text, integer>,
-            decile9month map<text, integer>,
-            decile12month map<text, integer>,
-            decilelifetime map<text, integer> -->
 
 成功執行查詢時，資料集ID會傳回至主控台，如下列範例所示。
 
