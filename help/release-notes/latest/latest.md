@@ -2,14 +2,18 @@
 title: Adobe Experience Platform 發行說明
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: da28de44fc8ab37d530c2f9b3c167e365f00dca6
+source-git-commit: e3fc587d924b2183806918f91e5ae3aa3fee52f3
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '2094'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform 發行說明
+
+>[!IMPORTANT]
+>
+>自2023年5月15日起， `Existing` 狀態將從區段成員資格映射中淘汰，以在區段成員資格生命週期中移除備援。 此變更後，區段中符合資格的設定檔會顯示為 `Realized` 取消資格的設定檔會繼續顯示為 `Exited`. 欲知有關此更改的更多詳情，請閱讀 [區段服務區段](#segmentation).
 
 **發行日期：2023 年 4 月 26 日**
 
@@ -22,6 +26,7 @@ Adobe Experience Platform 現有功能更新：
 - [體驗資料模型](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [即時客戶設定檔](#profile)
+- [細分服務](#segmentation)
 - [來源](#sources)
 
 ## 儀表板 {#dashboards}
@@ -160,6 +165,20 @@ Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體�
 | 假名的設定檔資料過期 | 現在正式提供匿名的設定檔資料過期！ 啟用後，此版本會持續從您的Experience Platform例項移除過時的匿名設定檔。 若要進一步了解此功能和假名的設定檔，請閱讀 [假名描述檔資料過期指南](../../profile/pseudonymous-profiles.md). |
 
 {style="table-layout:auto"}
+
+## 分段服務 {#segmentation}
+
+[!DNL Segmentation Service] 會透過說明區分客戶群中可行銷人員群組的條件，來定義特定設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與您品牌互動的時間序列事件。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 區段成員資格對應 | 為貫徹上次於2023年2月15日發佈的公告， `Existing` 狀態將從區段成員資格映射中淘汰，以在區段成員資格生命週期中移除備援。 此變更後，區段中符合資格的設定檔會顯示為 `Realized` 取消資格的設定檔會繼續顯示為 `Exited`.<br/><br/> 如果您使用 [企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure事件中樞、HTTP API)，且可能已根據 `Existing` 狀態。 如果您有此情況，請檢閱您的下游整合。 如果您想要識別超過特定時間的新合格設定檔，請考慮使用 `Realized` 狀態和 `lastQualificationTime` 在區段成員資格對應中。 如需詳細資訊，請洽詢您的Adobe代表。 |
+
+{style="table-layout:auto"}
+
+如需 [!DNL Segmentation Service]，請參閱 [區段概觀](../../segmentation/home.md).
 
 ## 來源 {#sources}
 
