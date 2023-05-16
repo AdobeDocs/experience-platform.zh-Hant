@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 進一步了解資料啟用的預設使用量和比率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1132c5166f1271f1b8eb0c618b83d028b413b991
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 1%
@@ -102,7 +102,7 @@ ht-degree: 1%
 | 瓜德拉伊 | 限制 | 限制類型 | 說明 |
 | --- | --- | --- | --- |
 | 最大數量 [私人自訂目的地](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 軟 | 您可以使用Destination SDK，建立最多5個私人自訂串流或批次目的地。 如果您需要建立5個以上的此類目的地，請聯絡自訂服務代表。 |
-| 配置檔案導出策略用於Destination SDK | <ul><li>`maxBatchAgeInSecs` （最少1.800個，最多3.600個）</li><li>`maxNumEventsInBatch` （最少1.000，最多10.000）</li></ul> | 硬 | 使用 [可配置聚合](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation) 選項，請留意決定HTTP訊息傳送至API型目的地的頻率以及訊息應包含多少設定檔的最小值和最大值。 |
+| 配置檔案導出策略用於Destination SDK | <ul><li>`maxBatchAgeInSecs` （最少1.800個，最多3.600個）</li><li>`maxNumEventsInBatch` （最少1.000，最多10.000）</li></ul> | 硬 | 使用 [可配置聚合](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 選項，請留意決定HTTP訊息傳送至API型目的地的頻率以及訊息應包含多少設定檔的最小值和最大值。 |
 
 {style="table-layout:auto"}
 

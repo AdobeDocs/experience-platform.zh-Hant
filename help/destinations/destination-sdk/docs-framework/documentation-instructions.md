@@ -2,7 +2,7 @@
 title: 在Adobe Experience Platform中記錄您的目的地
 description: 在Adobe Experience Platform中為目的地建立檔案頁面的逐步指示
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 1%
@@ -51,7 +51,7 @@ ht-degree: 1%
 
 為協助您建立檔案頁面，Adobe已預填 [檔案範本](./self-service-template.md) 為了你。 在下方，您可以找到如何編輯範本和開啟提取請求的指示。 Adobe檔案團隊將檢閱並發佈您新目的地的檔案。
 
-[在此處下載範本](assets/yourdestination-template.zip) 並將檔案解壓縮以解壓縮 `yourdestination.md` 檔案。
+[在此處下載範本](../assets/docs-framework/yourdestination-template.zip) 並將檔案解壓縮以解壓縮 `yourdestination.md` 檔案。
 
 下文將詳細說明如何使用範本建立檔案頁面。
 

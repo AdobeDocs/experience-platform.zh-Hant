@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform發行說明2023年1月
 description: 2023年1月Adobe Experience Platform發行說明。
-source-git-commit: 6388c72aa0be8f5f91efaaa6a0edd22f3eb99de8
+exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2414'
 ht-degree: 6%
@@ -101,7 +102,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 | ----------- | ----------- |
 | 付費媒體同意政策增強與串流目的地的整合 | 安 [增強同意政策執行](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) on [串流目的地](/help/destinations/destination-types.md#streaming-destinations) 適用於付費媒體啟用使用案例。 當設定檔不再符合同意政策的資格時，Experience Platform現在會主動將其政策退出訊息傳達至串流目的地。 <br> <b>附註</b>:此功能僅適用於 **[!UICONTROL 隱私與安全防護]**，以及 **[!UICONTROL 醫療保健盾]**. |
 | 測試版雲端儲存目的地連接器的新分隔字元選項 | 三個新的分隔字元選項(冒號 `:`，垂直號，分號 `;`)現已可供新的測試版雲端儲存空間目的地使用 —  [(Beta)Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [（測試版）Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [(Beta)Azure資料湖儲存Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [（測試版）資料登陸區](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [（測試版）Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [（測試版）SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br> 閱讀支援的 [檔案格式選項](/help/destinations/ui/batch-destinations-file-formatting-options.md) 適用於檔案型目的地。 |
-| 中提供的新選用參數 [客戶資料欄位](/help/destinations/destination-sdk/destination-configuration.md#customer-data-fields) 配置 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:當您需要建立客戶資料欄位時，使用此參數，該欄位的值必須在用戶組織設定的所有目標資料流中是唯一的。 <br> 例如， **[!UICONTROL 整合別名]** 欄位 [[!UICONTROL 自訂個人化]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 目標必須是唯一的，這表示到此目標的兩個單獨的資料流不能具有此欄位的相同值。 |
+| 中提供的新選用參數 [客戶資料欄位](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md) 配置 [Destination SDK](/help/destinations/destination-sdk/overview.md) | `unique`:當您需要建立客戶資料欄位時，使用此參數，該欄位的值必須在用戶組織設定的所有目標資料流中是唯一的。 <br> 例如， **[!UICONTROL 整合別名]** 欄位 [[!UICONTROL 自訂個人化]](/help/destinations/catalog/personalization/custom-personalization.md#parameters) 目標必須是唯一的，這表示到此目標的兩個單獨的資料流不能具有此欄位的相同值。 |
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 

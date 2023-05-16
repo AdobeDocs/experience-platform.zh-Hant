@@ -2,7 +2,7 @@
 title: 檔案自助服務範本//以目的地名稱取代
 description: 使用此範本，在Adobe Experience Platform目錄中為您的目的地建立公開檔案。//將取代為概述區段中的段落
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* 按照模板中概述的順序填入此模板中的所有部分。
->* 根據合作夥伴的意見，此範本不常更新。 開始編寫目的地的檔案之前，請確定您已下載 [最新版範本](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+>* 根據合作夥伴的意見，此範本不常更新。 開始編寫目的地的檔案之前，請確定您已下載 [最新版範本](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## 總覽 {#overview}
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 若要驗證目的地，請填寫必填欄位並選取 **[!UICONTROL 連接到目標]**.
 
-![螢幕擷圖範例，說明如何驗證至目的地](/help/destinations/destination-sdk/docs-framework/assets/authenticate-destination.png)
+![螢幕擷圖範例，說明如何驗證至目的地](../assets/docs-framework/authenticate-destination.png)
 
 * **[!UICONTROL 承載令牌]**:填入承載權杖，以驗證目的地。
 
@@ -113,7 +113,7 @@ ht-degree: 1%
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選填欄位。 UI中欄位旁的星號表示該欄位為必要欄位。
 
-![螢幕擷圖範例，顯示如何填入目的地的詳細資訊](/help/destinations/destination-sdk/docs-framework/assets/configure-destination-details.png)
+![螢幕擷圖範例，顯示如何填入目的地的詳細資訊](../assets/docs-framework/configure-destination-details.png)
 
 * **[!UICONTROL 名稱]**:日後您將透過此名稱識別此目的地。
 * **[!UICONTROL 說明]**:未來可協助您識別此目的地的說明。

@@ -4,10 +4,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: eb261675ffbd131a00aaa5d526d03e966b94c7c7
+source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 6%
+source-wordcount: '1178'
+ht-degree: 5%
 
 ---
 
@@ -196,44 +196,34 @@ ht-degree: 6%
 * 目標 SDK {#destination-sdk}
    * [總覽](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
-   * [快速入門](./destination-sdk/getting-started.md)
-   * Destination SDK功能 {#functionality}
-      * [設定選項](./destination-sdk/configuration-options.md)
-      * [串流目的地設定](./destination-sdk/destination-configuration.md)
-      * [基於檔案的目標配置](./destination-sdk/file-based-destination-configuration.md)
-      * [串流目的地伺服器和範本規格](./destination-sdk/server-and-template-configuration.md)
-      * [基於檔案的目的地伺服器和檔案規格](./destination-sdk/server-and-file-configuration.md)
-      * [訊息格式](./destination-sdk/message-format.md)
-      * [對象中繼資料管理](./destination-sdk/audience-metadata-management.md)
-      * 驗證 {#authentication}
-         * [驗證配置](./destination-sdk/authentication-configuration.md)
-         * [OAuth 2驗證](./destination-sdk/oauth2-authentication.md)
-      * 開發人員工具 {#developer-tools}
-         * [建立並測試訊息轉換範本](./destination-sdk/create-template.md)
-         * [測試您的目標配置](./destination-sdk/test-destination.md)
-   * API操作 {#api}
-      * [Destination SDK（目標編寫）API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
-      * [目的地端點API作業](./destination-sdk/destination-configuration-api.md)
-      * [目標伺服器端點API操作](./destination-sdk/destination-server-api.md)
-      * [對象中繼資料端點API操作](./destination-sdk/audience-metadata-api.md)
-      * [憑證端點API操作](./destination-sdk/credentials-configuration-api.md)
-      * [發佈端點API操作](./destination-sdk/destination-publish-api.md)
-      * 開發人員工具參考 {#developer-tools-reference}
-         * 串流目的地測試API {#streaming-destination-testing-api}
-            * [取得範本API操作範例](./destination-sdk/sample-template-api.md)
-            * [呈現範本API操作](./destination-sdk/render-template-api.md)
-            * [目的地測試API操作](./destination-sdk/destination-testing-api.md)
-            * [設定檔產生API操作範例](./destination-sdk/sample-profile-generation-api.md)
-         * 檔案式目的地測試API {#file-based-destination-testing-api}
-            * [檔案式目的地測試API概觀](./destination-sdk/file-based-destination-testing-overview.md)
-            * [根據來源結構產生範例設定檔](./destination-sdk/file-based-sample-profile-generation-api.md)
-            * [使用範例設定檔測試您的檔案式目的地](./destination-sdk/file-based-destination-testing-api.md)
-            * [查看詳細的激活結果](./destination-sdk/file-based-destination-results-api.md)
-            * [驗證範本化客戶欄位](./destination-sdk/file-based-render-template-api.md)
+   * [開始使用Destination SDK](./destination-sdk/getting-started.md)
+   * 功能 {#functionality}
+      * [設定選項](./destination-sdk/functionality/configuration-options.md)
+      * 目標伺服器元件 {#destination-server}
+         * [伺服器規格](./destination-sdk/functionality/destination-server/server-specs.md)
+         * [模板規格](./destination-sdk/functionality/destination-server/templating-specs.md)
+         * [訊息格式](./destination-sdk/functionality/destination-server/message-format.md)
+         * [支援的轉換函式](./destination-sdk/functionality/destination-server/supported-functions.md)
+         * [檔案格式設定](./destination-sdk/functionality/destination-server/file-formatting.md)
+      * 目標配置元件 {#destination-configuration}
+         * [客戶驗證配置](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
+         * [OAuth2驗證](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [客戶資料欄位](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
+         * [UI屬性](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
+         * [合作夥伴架構配置](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
+         * [身分命名空間設定](./destination-sdk/functionality/destination-configuration/identity-namespace-configuration.md)
+         * [支援的對應配置](./destination-sdk/functionality/destination-configuration/supported-mapping-configurations.md)
+         * [目的地傳送](./destination-sdk/functionality/destination-configuration/destination-delivery.md)
+         * [對象中繼資料設定](./destination-sdk/functionality/destination-configuration/audience-metadata-configuration.md)
+         * [聚合策略](./destination-sdk/functionality/destination-configuration/aggregation-policy.md)
+         * [批次設定](./destination-sdk/functionality/destination-configuration/batch-configuration.md)
+         * [歷史設定檔資格](./destination-sdk/functionality/destination-configuration/historical-profile-qualifications.md)
+      * [流目的地的速率限制和重試策略](./destination-sdk/functionality/rate-limiting-retry-policy.md)
+      * [對象中繼資料管理](./destination-sdk/functionality/audience-metadata-management.md)
    * 指南 {#guides}
-      * [使用Destination SDK來設定串流目的地](./destination-sdk/configure-destination-instructions.md)
-      * [使用Destination SDK配置基於檔案的目標](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [提交以審核在Destination SDK中創作的目標](./destination-sdk/submit-destination.md)
+      * [使用Destination SDK來設定串流目的地](./destination-sdk/guides/configure-destination-instructions.md)
+      * [使用Destination SDK配置基於檔案的目標](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+      * [提交以審核在Destination SDK中創作的目標](./destination-sdk/guides/submit-destination.md)
       * 設定檔案式目的地 {#configure-file-based-destinations}
          * [配置檔案格式選項](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [使用預先定義的檔案格式選項和自訂檔案名稱設定來設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
@@ -242,9 +232,45 @@ ht-degree: 6%
          * [使用自訂檔案格式選項和自訂檔案名配置配置Azure Data Lake儲存目標](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [使用自定義檔案格式選項和自定義檔案名配置配置配置資料登錄區域(DLZ)目標](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
-   * 參考 {#reference}
-      * [流目的地的速率限制和重試策略](./destination-sdk/rate-limiting-retry-policy.md)
-      * [支援的轉換函式](./destination-sdk/supported-functions.md)
+   * 目標編寫API參考 {#authoring-api}
+      * [Destination SDK（目標編寫）API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * 目標伺服器操作 {#server-operations}
+         * [建立目標伺服器配置](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
+         * [檢索目標伺服器配置](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
+         * [更新目標伺服器配置](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
+         * [刪除目標伺服器配置](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
+      * 目標配置操作 {#destination-operations}
+         * [建立目標配置](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
+         * [檢索目標配置](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
+         * [更新目標配置](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
+         * [刪除目標配置](./destination-sdk/authoring-api/destination-configuration/delete-destination-configuration.md)
+   * 對象中繼資料API參考 {#audience-template-api}
+      * [建立受眾範本](./destination-sdk/metadata-api/create-audience-template.md)
+      * [擷取對象範本](./destination-sdk/metadata-api/retrieve-audience-template.md)
+      * [更新對象範本](./destination-sdk/metadata-api/update-audience-template.md)
+      * [刪除對象範本](./destination-sdk/metadata-api/delete-audience-template.md)
+   * 憑證設定API參考 {#credentials-api}
+      * [建立憑據配置](./destination-sdk/credentials-api/create-credential-configuration.md)
+      * [檢索憑據配置](./destination-sdk/credentials-api/retrieve-credential-configuration.md)
+      * [更新憑據配置](./destination-sdk/credentials-api/update-credential-configuration.md)
+      * [刪除憑據配置](./destination-sdk/credentials-api/delete-credential-configuration.md)
+   * 目的地測試API參考 {#testing-api}
+      * 串流目的地測試API {#streaming-destinations}
+         * [串流目的地測試API概觀](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
+         * [根據來源結構產生範例設定檔](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
+         * [生成示例消息轉換模板 ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [驗證導出的配置檔案結構](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
+         * [使用範例設定檔測試您的串流目的地](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
+         * [建立並測試訊息轉換範本](./destination-sdk/testing-api/streaming-destinations/create-template.md)
+      * 檔案式目的地測試API {#batch-destinations}
+         * [檔案式目的地測試API概觀](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [根據來源結構產生範例設定檔](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
+         * [使用範例設定檔測試您的檔案式目的地](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
+         * [查看詳細的激活結果](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
+         * [驗證範本化客戶欄位](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
+   * 目的地發佈API參考 {#publishing-api}
+      * [建立目標發佈請求](./destination-sdk/publishing-api/create-publishing-request.md)
+      * [擷取目的地發佈請求](./destination-sdk/publishing-api/retrieve-publishing-request.md)
    * 記錄您的目的地 {#document-destination}
       * [在Adobe Experience Platform中記錄您的目的地](./destination-sdk/docs-framework/documentation-instructions.md)
       * [使用GitHub網頁介面建立目的地檔案頁面](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)

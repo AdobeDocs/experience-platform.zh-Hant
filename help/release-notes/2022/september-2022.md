@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年9月
 description: 2022年9月Adobe Experience Platform發行說明。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 3d829018b527aacb81c16db5e889b2e50f625e28
+source-git-commit: 8904d44cc8d289d103ec6d65116b8385ed615c4d
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 5%
@@ -126,7 +126,7 @@ Adobe Experience Platform提供一套技術，可讓您收集用戶端客戶體�
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 目標 SDK | Destination SDK現在可為合作夥伴和客戶提供完整支援，協助他們建立批次（或檔案型）產品化或私人目的地。 如需詳細資訊，請參閱下列檔案頁面： <ul><li>[Destination SDK概述](/help/destinations/destination-sdk/overview.md)</li><li>[配置基於檔案的目標](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[為檔案型目的地配置檔案格式選項](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md)</li><li>[測試您的檔案型目的地](/help/destinations/destination-sdk/file-based-destination-testing-overview.md)</li></ul> |
+| 目標 SDK | Destination SDK現在可為合作夥伴和客戶提供完整支援，協助他們建立批次（或檔案型）產品化或私人目的地。 如需詳細資訊，請參閱下列檔案頁面： <ul><li>[Destination SDK概述](../../destinations/destination-sdk/overview.md)</li><li>[配置基於檔案的目標](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[為檔案型目的地配置檔案格式選項](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[測試您的檔案型目的地](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 

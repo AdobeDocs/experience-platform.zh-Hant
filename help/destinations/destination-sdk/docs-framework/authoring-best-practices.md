@@ -2,7 +2,7 @@
 title: 製作最佳實務
 description: 了解編寫目的地檔案頁面時，您應遵循哪些規則和秘訣，以確保符合Adobe Experience Platform檔案品質標準。
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
+source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -56,5 +56,5 @@ ht-degree: 0%
 
 ## 程序 {#process}
 
-* 此 [檔案範本](./self-service-template.md) 會根據合作夥伴的意見而不常更新。 開始編寫目的地的檔案之前，請確定您已下載 [最新版範本](/help/destinations/destination-sdk/docs-framework/assets/yourdestination-template.zip).
+* 此 [檔案範本](./self-service-template.md) 會根據合作夥伴的意見而不常更新。 開始編寫目的地的檔案之前，請確定您已下載 [最新版範本](../assets/docs-framework/yourdestination-template.zip).
 * 撰寫檔案，並從分支的分支建立檔案提取請求(PR) *除主分支外*. 在 [GitHub介面](./use-github-interface-to-create-documentation.md#submit-review) 或 [您的本地環境](./work-in-local-environment.md#submit-review).

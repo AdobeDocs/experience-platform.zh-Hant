@@ -2,9 +2,9 @@
 description: 本頁面說明如何驗證及開始使用Adobe Experience Platform Destination SDK。 其中包含如何取得Adobe I/O驗證憑證、沙箱名稱及目的地編寫存取控制權限的指示。
 title: 開始使用Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '627'
 ht-degree: 4%
 
 ---
@@ -56,7 +56,7 @@ AdobeExchange團隊會提供您的沙箱名稱，您必須在呼叫Destination S
 
 ## 基於角色的訪問控制(RBAC) {#rbac}
 
-若要使用Destination SDKAPI端點，請參閱 [參考檔案](./configuration-options.md)，您需要 **[!UICONTROL 目標編寫]** 存取控制權限。 與AdobeExchange團隊合作，在 [Adobe Admin Console](https://adminconsole.adobe.com/).
+若要使用Destination SDKAPI端點，請參閱 [參考檔案](functionality/configuration-options.md)，您需要 **[!UICONTROL 目標編寫]** 存取控制權限。 與AdobeExchange團隊合作，在 [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![目標編寫權限](./assets/destination-authoring-permission.png)
 
@@ -68,7 +68,7 @@ AdobeExchange團隊會提供您的沙箱名稱，您必須在呼叫Destination S
 
 ## 其他考量事項 {#additional-considerations}
 
-* 您對目標設定所做的任何變更（無論您是建立還是編輯目標設定）都需由Adobe審核和核准。 您的變更只有在審核完成後才會反映在您的目的地中。
+* 對於已產品化/公用目的地，您對目的地設定所做的任何變更（無論您是建立還是編輯目的地設定）都需由Adobe審核和核准。 您的變更只有在審核完成後才會反映在您的目的地中。 這不適用於僅供您使用的私人目的地。
 * 只有屬於相同組織且可存取沙箱的使用者才能編輯目的地設定。
 
 ## 後續步驟 {#next-steps}
@@ -77,8 +77,8 @@ AdobeExchange團隊會提供您的沙箱名稱，您必須在呼叫Destination S
 
 * 視您的目的地類型而定，請閱讀下列設定指南：
 
-   * [使用Destination SDK來設定串流目的地](./configure-destination-instructions.md)
-   * [使用Destination SDK配置基於檔案的目標](./configure-file-based-destination-instructions.md)
+   * [使用Destination SDK來設定串流目的地](guides/configure-destination-instructions.md)
+   * [使用Destination SDK配置基於檔案的目標](guides/configure-file-based-destination-instructions.md)
 
 * 對於所有操作，請參閱 [Destination Authoring API檔案](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * 使用 [Destination Authoring API Postman集合](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) 使用Destination SDKAPI端點來設定您的目的地。 若要開始使用Postman，請參閱 [匯入環境和集合的步驟](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 和 [建立Postman環境的影片指南](https://video.tv.adobe.com/v/28832).

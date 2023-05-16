@@ -1,7 +1,8 @@
 ---
 title: 設定檔匯出行為
 description: 了解設定檔匯出行為如何因Experience Platform目的地支援的不同整合路徑而有所不同。
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+exl-id: 2be62843-0644-41fa-a860-ccd65472562e
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -26,16 +27,16 @@ Experience Platform目的地會以HTTPS呼叫的形式，將資料匯出至API�
 
 在將設定檔發送至目的地API端點之前，先匯總為HTTPS訊息的程式稱為 *微量分批*.
 
-取用 [Facebook目的地](/help/destinations/catalog/social/facebook.md) 帶 *[可配置聚合](/help/destinations/destination-sdk/destination-configuration.md#configurable-aggregation)* 原則為範例 — 資料會以匯總方式傳送，其中目的地服務會擷取設定檔服務上游的所有傳入資料，並依下列其中一項匯總，再將其發送至Facebook:
+取用 [Facebook目的地](/help/destinations/catalog/social/facebook.md) 帶 *[可配置聚合](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 原則為範例 — 資料會以匯總方式傳送，其中目的地服務會擷取設定檔服務上游的所有傳入資料，並依下列其中一項匯總，再將其發送至Facebook:
 
 * 記錄數（最多10.000）或
 * 時間窗口間隔（30分鐘）
 
 以上任一臨界值首次符合時，就會觸發匯出至Facebook。 所以，在 [!DNL Facebook Custom Audiences] 控制面板，您可能會看到以10.000記錄增量從Experience Platform傳入的對象。 您可能每10-15分鐘會看到10.000筆記錄，因為資料的處理和匯總速度比30分鐘匯出間隔快，而且傳送速度也快，因此大約每10-15分鐘就會看到一次，直到所有記錄都處理完畢。 如果記錄不足，無法組成10.000批，則當前記錄數將如符合時間窗口閾值時一樣發送，因此您可能也會看到傳送到Facebook的較小批。
 
-另外，請考量 [HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md)，其中 *[最佳成果匯總](/help/destinations/destination-sdk/destination-configuration.md#best-effort-aggregation)* 政策， `maxUsersPerRequest: 10`. 這表示在向此目的地觸發HTTP呼叫之前，最多會匯總10個設定檔，但當目標服務收到來自上游服務的更新重新評估資訊時，Experience Platform會嘗試將設定檔分派至目的地。
+另外，請考量 [HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md)，其中 *[最佳成果匯總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 政策， `maxUsersPerRequest: 10`. 這表示在向此目的地觸發HTTP呼叫之前，最多會匯總10個設定檔，但當目標服務收到來自上游服務的更新重新評估資訊時，Experience Platform會嘗試將設定檔分派至目的地。
 
-聚合策略是可配置的，目標開發人員可以決定如何配置聚合策略以最好地滿足下游API端點的速率限制。 深入了解 [聚合策略](/help/destinations/destination-sdk/destination-configuration.md#aggregation) 在Destination SDK檔案中。
+聚合策略是可配置的，目標開發人員可以決定如何配置聚合策略以最好地滿足下游API端點的速率限制。 深入了解 [聚合策略](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) 在Destination SDK檔案中。
 
 ## 串流設定檔匯出（企業）目的地 {#streaming-profile-destinations}
 

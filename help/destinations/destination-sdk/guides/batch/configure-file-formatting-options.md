@@ -2,9 +2,9 @@
 description: 為檔案型目的地配置檔案格式選項
 title: 了解如何使用Destination SDK為檔案式目的地設定檔案格式選項。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -23,18 +23,14 @@ Destination SDK可讓您大幅調整匯出檔案的格式和壓縮選項，以�
 
 Adobe也建議您先閱讀並熟悉下列檔案，再繼續操作：
 
-* 每個可用的檔案格式選項都會記錄在 [檔案格式設定](../../server-and-file-configuration.md#file-configuration) 區段。
-* 完成步驟以 [配置基於檔案的目標](/help/destinations/destination-sdk/configure-file-based-destination-instructions.md) 使用Destination SDK。
+* 每個可用的檔案格式選項都會記錄在 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 區段。
+* 完成步驟以 [配置基於檔案的目標](../../guides/configure-file-based-destination-instructions.md) 使用Destination SDK。
 
 ## 建立伺服器和檔案配置 {#create-server-file-configuration}
 
 從使用 `/destination-server` 端點，確定要為導出的檔案設定的檔案格式配置選項。
 
 以下是 [!DNL Amazon S3] 目的地，並選取數個檔案格式選項。
-
->[!TIP]
->
->提醒您，所有可用的檔案格式選項都記錄在 [檔案格式設定](../../server-and-file-configuration.md#file-configuration) 區段。
 
 **API格式**
 
@@ -116,13 +112,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 在此步驟中，您可以依需要的順序將顯示的選項分組，您可以根據選取的檔案類型建立自訂分組、下拉式欄位和條件分組。 所有這些設定都顯示在錄制中，並顯示在以下更多章節中。
 
-![螢幕記錄，顯示批次檔案的各種檔案格式選項。](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-options.gif)
+![螢幕記錄，顯示批次檔案的各種檔案格式選項。](../../assets/guides/batch/file-formatting-options.gif)
 
 ### 排序檔案格式選項 {#ordering}
 
 在目的地設定中，新增檔案格式選項作為客戶資料欄位的順序會反映在UI中。 例如，UI會相應反映下列設定，並依順序顯示選項 **[!UICONTROL 分隔字元]**, **[!UICONTROL 引號字元]**, **[!UICONTROL 逸出字元]**, **[!UICONTROL 空值]**, **[!UICONTROL Null值]**.
 
-![顯示Experience PlatformUI中檔案格式選項順序的影像。](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-order.png)
+![顯示Experience PlatformUI中檔案格式選項順序的影像。](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -247,38 +243,43 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 若要這麼做，請使用 `"type": "object"` 若要建立群組，並收集 `properties` 參數，如下列範例所示，其中分組 **[!UICONTROL CSV選項]** 會加亮顯示。
 
-```json
-        {
-            "name": "csvOptions",
-            "title": "CSV Options",
-            "description": "Select your CSV options",
-            "type": "object",
-            "properties": [
-                {
-                    "name": "delimiter",
-                    "title": "Delimiter",
-                    "description": "Select your Delimiter",
-                    "type": "string",
-                    "isRequired": false,
-                    "default": ",",
-                    "namedEnum": [
-                        {
-                            "name": "Comma (,)",
-                            "value": ","
-                        },
-                        {
-                            "name": "Tab (\\t)",
-                            "value": "\t"
-                        }
-                    ],
-                    "readOnly": false,
-                    "hidden": false
-                },
-
+```json {line-numbers="true" start-number="100" highlight="106-128"}
+"customerDataFields":[
 [...]
+{
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![顯示UI中CSV選項分組的影像。](/help/destinations/destination-sdk/assets/guides/batch/file-formatting-grouping.png)
+![顯示UI中CSV選項分組的影像。](../../assets/guides/batch/file-formatting-grouping.png)
 
 ### 建立檔案格式選項的下拉式選取器 {#dropdown-selectors}
 
@@ -286,27 +287,44 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 若要這麼做，請使用 `namedEnum` 物件，如下所示，並設定 `default` 值，供使用者選取。
 
-```json
+```json {line-numbers="true" start-number="100" highlight="114-124"}
+[...]
+"customerDataFields":[
+[...]
 {
-   "name": "delimiter",
-   "type": "string",
-   "title": "Delimiter",
-   "description": "Select your Delimiter",
-   "namedEnum": [
-   {
-      "name": "Comma (,)",
-      "value": ","
-   },
-   {
-      "name": "Tab (\\t)",
-      "value": "\t"
-   }
-   ],
-   "default": ","
-},
+   "name":"csvOptions",
+   "title":"CSV Options",
+   "description":"Select your CSV options",
+   "type":"object",
+   "properties":[
+      {
+         "name":"delimiter",
+         "title":"Delimiter",
+         "description":"Select your Delimiter",
+         "type":"string",
+         "isRequired":false,
+         "default":",",
+         "namedEnum":[
+            {
+               "name":"Comma (,)",
+               "value":","
+            },
+            {
+               "name":"Tab (\\t)",
+               "value":"\t"
+            }
+         ],
+         "readOnly":false,
+         "hidden":false
+      },
+      [...]
+   ]
+}
+[...]
+]
 ```
 
-![螢幕記錄顯示以上所示組態建立的下拉式選取器範例。](/help/destinations/destination-sdk/assets/guides/batch/dropdown-options-file-formatting.gif)
+![螢幕記錄顯示以上所示組態建立的下拉式選取器範例。](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### 建立條件式檔案格式選項 {#conditional-options}
 
@@ -467,7 +485,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 在下方，您可以根據上述設定，查看產生的UI畫面。 當使用者選取檔案類型CSV時，UI中會顯示引用CSV檔案類型的其他檔案格式選項。
 
-![螢幕記錄，顯示CSV檔案的條件式檔案格式選項。](/help/destinations/destination-sdk/assets/guides/batch/conditional-file-formatting.gif)
+![螢幕記錄，顯示CSV檔案的條件式檔案格式選項。](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### 完整的API要求，包含上述所有選項
 
@@ -486,7 +504,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
   "name": "My S3 Destination",
   "description": "Test destination",
-  "releaseNotes": "Test destination",
   "status": "TEST",
   "sources": [
     "UNIFIED_PROFILE"

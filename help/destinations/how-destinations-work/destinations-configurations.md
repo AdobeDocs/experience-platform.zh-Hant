@@ -1,13 +1,13 @@
 ---
 title: 目的地中的可設定和通用匯出設定
 description: 了解目標中的哪些匯出設定可在目標層級設定，哪些已修正且無法編輯。
-source-git-commit: 372231ab4fc1148c1c2c0c5fdbfd3cd5328b17cc
+exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
+source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 0%
 
 ---
-
 
 # 目的地中的可設定和通用匯出設定
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 目標開發人員可使用 [Destination SDK](/help/destinations/destination-sdk/overview.md) 建立自訂或產品化（私人或公用）目的地。 Destination SDK可讓開發人員根據其API端點和檔案接收系統的下游功能，有極大的彈性設定目的地。 根據下游功能，目標開發人員在使用Destination SDK設定目標時可使用下列設定選項：
 
 * 決定哪些屬性和身分可從Experience Platform匯出至目的地。 也判斷目的地為成功匯出資料所需的身分。
-* 設定匯總原則，決定Experience Platform在匯總要傳送至API整合的HTTP訊息時應等待多久。 目標開發人員可以配置不同的聚合類型，以確定傳出HTTP消息中應包含多少配置檔案，以及Experience Platform應等待多久才發送HTTP消息。 尋找有關 [聚合策略配置選項](/help/destinations/destination-sdk/destination-configuration.md#aggregation) 可在Destination SDK檔案中供目的地開發人員使用。
+* 設定匯總原則，決定Experience Platform在匯總要傳送至API整合的HTTP訊息時應等待多久。 目標開發人員可以配置不同的聚合類型，以確定傳出HTTP消息中應包含多少配置檔案，以及Experience Platform應等待多久才發送HTTP消息。 尋找有關 [聚合策略配置選項](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) 可在Destination SDK檔案中供目的地開發人員使用。
 * 判斷HTTP訊息匯出是否應包含符合區段、從區段移除或兩者皆移除的設定檔。
 * 確定在導出檔案時，用戶應使用哪些檔案名和檔案格式配置。
 
