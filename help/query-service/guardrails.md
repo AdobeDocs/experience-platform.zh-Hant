@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢；查詢服務；疑難排解；護欄；
 title: 查詢服務的護欄
 description: 本文檔提供有關查詢服務資料使用限制的資訊，以幫助您優化查詢使用。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 5ceb261dbf1cac58d0cfe620875b8fa7c761abf2
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1004'
 ht-degree: 1%
 
 ---
@@ -33,8 +33,6 @@ ht-degree: 1%
 * **報表API**:用於進行資料擷取呼叫（內部或外部）的API。 延伸報表資料模型衍生自Adobe Experience Platform中的原生報表資料模型，例如Real-Time CDP控制面板資料模型。
 
 下圖概括了Query Service功能當前的打包和許可方式：
-
-![說明與授權相關的Query Service功能的分發和封裝的圖表。](./images/guardrails/query-capabilities.png)
 
 ## 限制類型
 
