@@ -3,9 +3,10 @@ solution: Experience Platform
 title: 雲端儲存目的地的API移轉指南
 description: 了解在移轉至新雲儲存目標卡時，啟動雲儲存目標的工作流程中有哪些變更，並提供其他功能。
 type: Tutorial
-source-git-commit: 6ed78a96f099fb4552716ac4a598c43f4d65cf37
+exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
+source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
@@ -82,7 +83,7 @@ API使用者回溯不相容的變更已更新 `connection spec ID` 和 `flow spe
 
 | [!DNL Amazon S3] | 舊版 | 新增 |
 |---------|----------|---------|
-| 流量規格 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 269ba276-16fc-47db-92b0-c1049a3c131f |
+| 流量規格 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | 連接規格 | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
 查看完整的舊連接和新基本連接以及目標連接示例 [!DNL Amazon S3] 中。 建立基礎連接所需的參數 [!DNL Amazon S3] 目的地不會變更。
@@ -254,7 +255,7 @@ API使用者回溯不相容的變更已更新 `connection spec ID` 和 `flow spe
 
 | [!DNL Azure Blob] | 舊版 | 新增 |
 |---------|----------|---------|
-| 流量規格 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| 流量規格 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | 連接規格 | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 
 查看完整的舊連接和新基本連接以及目標連接示例 [!DNL Azure Blob] 中。 為Azure Blob目的地建立基本連線所需的參數不會變更。
@@ -426,7 +427,7 @@ API使用者回溯不相容的變更已更新 `connection spec ID` 和 `flow spe
 
 | SFTP | 舊版 | 新增 |
 |---------|----------|---------|
-| 流量規格 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 354d6aad-4754-46e4-a576-1b384561c440 |
+| 流量規格 | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeb799 |
 | 連接規格 | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
 
 除了上述更新的流程和連線規格外，建立SFTP基礎連線時，參數也會有所變更。
