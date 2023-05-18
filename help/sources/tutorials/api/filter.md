@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；流量服務；流量服
 title: 使用流量服務API篩選來源的列層級資料
 description: 本教學課程涵蓋如何使用流量服務API在來源層級篩選資料的步驟
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: da6f5a79b1ee16fb0d44a5c2990ed1b8be1f99e2
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 3%
+source-wordcount: '780'
+ht-degree: 2%
 
 ---
 
@@ -17,9 +17,7 @@ ht-degree: 3%
 >篩選列層級資料的支援目前僅適用於下列來源：
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
->* [SalesforceMarketing Cloud](../../connectors/marketing-automation/salesforce-marketing-cloud.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2023年4月
 description: 2023年4月Adobe Experience Platform發行說明。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: c95d2ab1a6f104c18c491d3a533ee2c304a0aa68
+source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2084'
 ht-degree: 4%
 
 ---
@@ -190,7 +190,7 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆為各種資料
 
 | 功能 | 說明 |
 | --- | --- |
-| API支援篩選Microsoft Dynamics、Salesforce CRM和SalesforceMarketing Cloud的列層級資料 | 使用邏輯和比較運算子來篩選Microsoft Dynamics、Salesforce CRM和SalesforceMarketing Cloud來源的列層級資料。 閱讀指南 [使用API篩選來源的資料](../../sources/tutorials/api/filter.md) 以取得更多資訊。 |
+| API支援篩選Salesforce CRM來源的列層級資料。 | 使用邏輯和比較運算子來篩選Salesforce CRM來源的列層級資料。 閱讀指南 [使用API篩選來源的資料](../../sources/tutorials/api/filter.md) 以取得更多資訊。 |
 | Shopify串流測試版可用性 | 此 [Shopify流源](../../sources/connectors/ecommerce/shopify-streaming.md) 現已提供測試版。 使用Shopify串流來源，將資料從Shopify合作夥伴帳戶串流到Experience Platform。 |
 | OneTrust整合的全面推出 | 此 [OneTrust整合源](../../sources/connectors/consent-and-preferences/onetrust.md) 現已正式啟用。 使用OneTrust整合源將OneTrust整合帳戶中的同意和首選項資料帶入Experience Platform。 |
 | oracle服務雲端正式發行 | 此 [Oracle服務雲端來源](../../sources/connectors/customer-success/oracle-service-cloud.md) 現已正式啟用。 使用Oracle服務雲端來源將Oracle服務雲端資料帶入Experience Platform。 |
