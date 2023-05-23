@@ -1,76 +1,120 @@
 ---
-title: 在UI中建立Google PubSub Source Connection
-description: 了解如何使用Platform使用者介面建立Google PubSub來源連接器。
+title: 在UI中建立GooglePubSub源連接
+description: 瞭解如何使用平台用戶介面建立GooglePubSub源連接器。
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 1%
+source-wordcount: '1010'
+ht-degree: 0%
 
 ---
 
 # 建立 [!DNL Google PubSub] UI中的源連接
 
-本教學課程提供建立 [!DNL Google PubSub] (下稱「[!DNL PubSub]&quot;)使用Platform使用者介面。
+本教程提供建立 [!DNL Google PubSub] (以下簡稱：[!DNL PubSub]&quot;)使用平台用戶介面。
 
 ## 快速入門
 
-本教學課程需要妥善了解下列Adobe Experience Platform元件：
+本教程需要對Adobe Experience Platform的以下部分進行有效的理解：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
-* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [源](../../../../home.md):Experience Platform允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
+* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-如果您已有有效 [!DNL PubSub] 連線，您可以略過本檔案的其餘部分，並繼續進行有關 [配置資料流](../../dataflow/batch/cloud-storage.md).
+如果您已經有 [!DNL PubSub] 連接，您可以跳過本文檔的其餘部分並繼續學習有關 [配置資料流](../../dataflow/batch/cloud-storage.md)。
 
 ### 收集所需憑據
 
-為了連接 [!DNL PubSub] 若要使用Platform，您必須為下列憑證提供有效值：
+為了連接 [!DNL PubSub] 要使用平台，必須為以下憑據提供有效值：
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
-| 專案 ID | 驗證所需的專案ID [!DNL PubSub]. |
-| 憑證 | 驗證所需的憑據或私鑰ID [!DNL PubSub]. |
-| 主題ID | 的ID [!DNL PubSub] 代表訊息摘要的資源。 如果要提供對中特定資料流的存取權，必須指定主題ID [!DNL Google PubSub] 來源。 |
-| 訂閱ID | 您的 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您訂閱已發佈訊息的主題，借此接收訊息。 |
+| 專案 ID | 驗證所需的項目ID [!DNL PubSub]。 |
+| 憑據 | 驗證所需的憑據或私鑰ID [!DNL PubSub]。 |
+| 主題名稱 | 您的名稱 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱允許您通過訂閱已發佈消息的主題來接收消息。 **注釋**:單 [!DNL PubSub] 訂閱只能用於一個資料流。 要建立多個資料流，必須有多個預訂。 |
+| 訂閱名稱 | 您的名稱 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱允許您通過訂閱已發佈消息的主題來接收消息。 |
 
-如需這些值的詳細資訊，請參閱下列內容 [PubSub驗證](https://cloud.google.com/pubsub/docs/authentication) 檔案。 如果您使用服務帳戶型驗證，請參閱下列內容 [PubSub指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生憑證的步驟。
+有關這些值的詳細資訊，請參閱以下 [PubSub身份驗證](https://cloud.google.com/pubsub/docs/authentication) 的子菜單。 如果使用基於服務帳戶的身份驗證，請參閱以下內容 [PubSub指南](https://cloud.google.com/docs/authentication/production#create_service_account) 有關如何生成憑據的步驟。
 
 >[!TIP]
 >
->如果您使用服務帳戶型驗證，請確定您已授予您服務帳戶的足夠使用者存取權，且複製和貼上憑證時，JSON中沒有額外的空格。
+>如果您使用基於服務帳戶的身份驗證，請確保在複製和貼上憑據時，已授予用戶對服務帳戶的足夠訪問權限，並且JSON中沒有額外的空白。
 
-收集完所需憑證後，您可以依照下列步驟連結您的 [!DNL PubSub] 帳戶至Platform。
+收集了所需的憑據後，您可以按照以下步驟連結 [!DNL PubSub] 帳戶到平台。
 
-## 連接您的 [!DNL PubSub] 帳戶
+## 連接 [!DNL PubSub] 帳戶
 
-在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可建立帳戶的各種來源。
+在平台UI中，選擇 **[!UICONTROL 源]** 從左側導航 [!UICONTROL 源] 工作區。 的 [!UICONTROL 目錄] 螢幕顯示可以建立帳戶的各種源。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
+可以從螢幕左側的目錄中選擇相應的類別。 或者，您可以使用搜索選項找到要使用的特定源。
 
-在 [!UICONTROL 雲端儲存空間] 類別，選擇 **[!UICONTROL Google PubSub]**，然後選取 **[!UICONTROL 新增資料]**.
+在 [!UICONTROL 雲儲存] 類別，選擇 **[!UICONTROL Google酒吧]**，然後選擇 **[!UICONTROL 添加資料]**。
 
-![Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![Experience PlatformUI上的源目錄。](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
-此 **[!UICONTROL 連線至Google PubSub]** 頁。 在此頁面上，您可以使用新憑證或現有憑證。
+的 **[!UICONTROL 連接到GooglePubSub]** 的子菜單。 在此頁上，您可以使用新憑據或現有憑據。
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取 [!DNL PubSub] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
+要使用現有帳戶，請選擇 [!DNL PubSub] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
 
-![來源工作流程中的現有帳戶選項。](../../../../images/tutorials/create/google-pubsub/existing.png)
+![源工作流中的現有帳戶選擇。](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### 新帳戶
 
-如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、選用說明，以及 [!DNL PubSub] 輸入表單上的驗證憑據。 在此步驟中，您可以提供主題ID，以定義您的帳戶可存取的資料。 只能存取與該主題ID相關聯的訂閱。
+>[!TIP]
+>
+>建立具有受限訪問權限的帳戶時，必須至少提供一個主題名稱或訂閱名稱。 如果兩個值都缺失，驗證將失敗。
+
+如果要建立新帳戶，請選擇 **[!UICONTROL 新帳戶]**，然後提供新名稱和可選說明 [!DNL PubSub] 帳戶。
+
+![源工作流中GooglePubSub源的新帳戶介面](../../../../images/tutorials/create/google-pubsub/new.png)
+
+的 [!DNL PubSub] 源允許您指定在驗證期間允許的訪問類型。 您可以設定帳戶，使其具有基於項目的身份驗證或基於主題和訂閱的身份驗證。 基於項目的身份驗證允許您授予對帳戶中根級別項目的訪問權限，而基於主題和基於訂閱的身份驗證允許您限制對特定項目的訪問權限 [!DNL PubSub] 主題和訂閱。
+
+>[!BEGINTABS]
+
+>[!TAB 基於項目的身份驗證]
+
+建立具有訪問根帳戶權限的帳戶 [!DNL PubSub] 項目資料夾。 選擇 **[!UICONTROL GooglePubSub身份驗證憑據]** 作為驗證類型，並提供項目ID和憑據。 完成後，選擇 **[!UICONTROL 連接到源]** 然後再給新連接建立一段時間。
+
+![已選擇根訪問的GooglePubSub源的新帳戶介面。](../../../../images/tutorials/create/google-pubsub/root.png)
+
+>[!TAB 基於主題和訂閱的身份驗證]
+
+建立僅限特定帳戶的受限訪問權限的帳戶 [!DNL PubSub] 主題和訂閱，選擇 **[!UICONTROL GooglePubSub作用域身份驗證憑據]** 然後提供您的憑據、主題名和/或訂閱名。 完成後，選擇 **[!UICONTROL 連接到源]** 然後再給新連接建立一段時間。
+
+![已選擇範圍訪問的GooglePubSub源的新帳戶介面。](../../../../images/tutorials/create/google-pubsub/scoped.png)
+
+>[!ENDTABS]
 
 >[!NOTE]
 >
->指派給發佈子專案的承擔者（角色）會繼承在 [!DNL PubSub] 專案。 如果要添加主體（角色）以訪問特定主題，則該主體（角色）也必須添加到主題的相應訂閱中。 如需詳細資訊，請閱讀 [[!DNL PubSub] 存取控制檔案](https://cloud.google.com/pubsub/docs/access-control).
+>分配給的承擔者（角色） [!DNL PubSub] 項目在建立於 [!DNL PubSub] 項目。 如果希望承擔者（角色）有權訪問特定主題，則還必須將該承擔者（角色）添加到主題的相應訂閱中。 有關詳細資訊，請閱讀 [[!DNL PubSub] 訪問控制文檔](<https://cloud.google.com/pubsub/docs/access-control>)。
 
-完成後，請選取 **[!UICONTROL 連接到源]** 然後讓新連接建立一段時間。
+## 選擇資料
 
-![來源工作流程中的新帳戶介面。](../../../../images/tutorials/create/google-pubsub/new.png)
+成功的身份驗證將帶您 [!UICONTROL 選擇資料] 步驟，您可以在 [!DNL PubSub] 資料層次，並選擇要將其帶到Experience Platform的資料。
+
+>[!BEGINTABS]
+
+>[!TAB 基於項目的身份驗證]
+
+如果您已通過基於項目的訪問驗證， [!UICONTROL 選擇資料] interface將顯示項目中附加了主題的所有訂閱。
+
+![使用基於項目的身份驗證的源工作流的選擇資料步驟。](../../../../images/tutorials/create/google-pubsub/root-folders.png)
+
+>[!TAB 基於主題和訂閱的身份驗證]
+
+如果您已通過主題和基於訂閱的訪問驗證， [!UICONTROL 選擇資料] 介面顯示可能因您提供的資訊而異。
+
+* 如果僅提供主題名稱，則介面將顯示與提供的主題對應的所有主題預訂對。
+* 如果僅提供訂閱名稱，則介面將顯示與提供的訂閱名稱對應的所有主題訂閱對。
+* 如果同時提供了主題名和訂閱名，則介面將顯示與兩個提供的值對應的主題訂閱對。
+
+![具有主題和基於訂閱的身份驗證的源工作流的選擇資料步驟。](../../../../images/tutorials/create/google-pubsub/scoped-folders.png)
+
+>[!ENDTABS]
 
 ## 後續步驟
 
-依照本教學課程，您可以在 [!DNL PubSub] 帳戶和平台。 您現在可以繼續下一個教學課程，以及 [配置資料流，將雲儲存中的資料流導入Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+按照本教程，您已在 [!DNL PubSub] 帳戶和平台。 現在，您可以繼續下一個教程， [配置資料流，將雲儲存中的流資料引入平台](../../dataflow/streaming/cloud-storage-streaming.md)。
