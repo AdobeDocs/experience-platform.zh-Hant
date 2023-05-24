@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；源；連接器；源連接器；源sdk;sdk;SDK
-title: 配置自助源源的源規範（批處理SDK）
-description: 本文檔概述了使用自助源（批處理SDK）所需準備的配置。
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
+title: 設定自助式來源的來源規格（批次SDK）
+description: 本檔案提供使用Self-Serve Sources (Batch SDK)所需準備的設定概觀。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b1173adb0e0c3a6460b2cb15cba9218ddad7abcb
 workflow-type: tm+mt
-source-wordcount: '1687'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 0%
 
 ---
 
-# 配置自助源源的源規範（批處理SDK）
+# 設定自助式來源的來源規格（批次SDK）
 
-源規範包含特定於源的資訊，包括與源的類別、測試狀態和目錄表徵圖相關的屬性。 它們還包含URL參數、內容、標題和時間表等有用資訊。 源規範還描述了從基本連接建立源連接所需參數的模式。 建立源連接時必須使用架構。
+來源規格包含來源的特定資訊，包括與來源類別、測試版狀態和目錄圖示相關的屬性。 它們也包含有用的資訊，例如URL引數、內容、標題和排程。 來源規格也說明從基本連線建立來源連線所需之引數的結構。 若要建立來源連線，結構描述是必要的。
 
-查看 [附錄](#source-spec) 例如，完全填充的源規範。
+請參閱 [附錄](#source-spec) 以完全填入的來源規格為例。
 
 
 ```json
@@ -229,51 +229,51 @@ ht-degree: 1%
 
 | 屬性 | 說明 | 範例 |
 | --- | --- | --- |
-| `sourceSpec.attributes` | 包含有關特定於UI或API的源的資訊。 |
-| `sourceSpec.attributes.uiAttributes` | 顯示特定於UI的源的資訊。 |
-| `sourceSpec.attributes.uiAttributes.isBeta` | 一個布爾屬性，指明源是否需要客戶提供更多反饋才能添加到其功能中。 | <ul><li>`true`</li><li>`false`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.category` | 定義源的類別。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | 定義用於在平台UI中呈現源的表徵圖。 | `mailchimp-icon.svg` |
-| `sourceSpec.attributes.uiAttributes.description` | 顯示源的簡要說明。 |
-| `sourceSpec.attributes.uiAttributes.label` | 在平台UI中顯示用於呈現源的標籤。 |
-| `sourceSpec.attributes.spec.properties.urlParams` | 包含有關URL資源路徑、方法和支援的查詢參數的資訊。 |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.path` | 定義從何處獲取資料的資源路徑。 | `/3.0/reports/${campaignId}/email-activity` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | 定義用於向資源請求讀取資料的HTTP方法。 | `GET`、`POST` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | 定義支援的查詢參數，當請求提取資料時，這些參數可用於追加源URL。 **注釋**:任何用戶提供的參數值必須格式化為佔位符。 例如: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` 將作為以下內容附加到源URL: `/?key=value&key1=value1` |
-| `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | 定義在讀取資料時需要在HTTP請求中提供到源URL的標頭。 | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | 此屬性可配置為通過POST請求發送HTTP正文。 |
-| `sourceSpec.attributes.spec.properties.contentPath` | 定義包含需要接收到平台的項目清單的節點。 此屬性應遵循有效的JSON路徑語法，並必須指向特定陣列。 | 查看 [附加資源科](#content-path) 例如，內容路徑中包含的資源示例。 |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | 指向要接收到平台的集合記錄的路徑。 | `$.emails` |
-| `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | 此屬性允許您從內容路徑中標識的資源中標識要排除的、不被攝入的特定項。 | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | 此屬性允許您顯式指定要保留的單個屬性。 | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | 此屬性允許您覆蓋在中指定的屬性名稱的值 `contentPath`。 | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 此屬性允許您拼合兩個陣列並將資源資料轉換為平台資源。 |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | 指向要拼合的集合記錄的路徑。 | `$.email.activity` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | 此屬性允許您從實體路徑中標識的資源中標識要排除的、不被攝入的特定項。 | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | 此屬性允許您顯式指定要保留的單個屬性。 | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | 此屬性允許您覆蓋在中指定的屬性名稱的值 `explodeEntityPath`。 | `activity` |
-| `sourceSpec.attributes.spec.properties.paginationParams` | 定義必須提供的參數或欄位，以便從用戶的當前頁面響應或在建立下一頁URL時獲取到下一頁的連結。 |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | 顯示源支援的分頁類型的類型。 | <ul><li>`OFFSET`:此分頁類型允許您通過指定從何處啟動結果陣列的索引以及返回結果數量的限制來分析結果。</li><li>`POINTER`:此分頁類型允許您使用 `pointer` 變數，指向需要隨請求一起發送的特定項。 指針類型分頁要求負載中指向下一頁的路徑。</li><li>`CONTINUATION_TOKEN`:此分頁類型允許您將查詢或標頭參數附加為連續標籤，以從源中檢索剩餘的返回資料，由於預先確定的最大值，最初未返回這些資料。</li><li>`PAGE`:此分頁類型允許您將查詢參數與分頁參數一起追加，以便從零頁開始按頁遍歷返回資料。</li><li>`NONE`:此分頁類型可用於不支援任何可用分頁類型的源。 分頁類型 `NONE` 在請求後返回整個響應資料。</li></ul> |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | API可以指定在頁中讀取的記錄數的限制的名稱。 | `limit` 或 `count` |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | 要在頁面中提取的記錄數。 | `limit=10` 或 `count=10` |
-| `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | 偏移屬性名稱。 如果分頁類型設定為，則此為必需欄位 `offset`。 | `offset` |
-| `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | 指針屬性名稱。 這需要指向下一頁的屬性的json路徑。 如果分頁類型設定為，則此為必需欄位 `pointer`。 | `pointer` |
-| `sourceSpec.attributes.spec.properties.scheduleParams` | 包含為源定義支援的計畫格式的參數。 計畫參數包括 `startTime` 和 `endTime`，這兩個時間間隔都允許您為批處理運行設定特定時間間隔，這樣可確保不會再次提取在前一批處理運行中提取的記錄。 |
-| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | 定義開始時間參數名稱 | `since_last_changed` |
-| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 定義結束時間參數名稱 | `before_last_changed` |
-| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | 定義支援的格式 `scheduleStartParamName`。 | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | 定義支援的格式 `scheduleEndParamName`。 | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | 定義用戶提供的參數以提取資源值。 | 查看 [額外資源](#user-input) 例如用戶輸入的參數 `spec.properties`。 |
+| `sourceSpec.attributes` | 包含UI或API專屬來源的資訊。 |
+| `sourceSpec.attributes.uiAttributes` | 顯示UI特定來源的資訊。 |
+| `sourceSpec.attributes.uiAttributes.isBeta` | 布林值屬性，指出來源是否需要客戶提供更多意見回饋才能新增至其功能。 | <ul><li>`true`</li><li>`false`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.category` | 定義來源的類別。 | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.icon` | 定義在Platform UI中用於呈現來源的圖示。 | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.description` | 顯示來源的簡短說明。 |
+| `sourceSpec.attributes.uiAttributes.label` | 顯示用於在Platform UI中呈現來源的標籤。 |
+| `sourceSpec.attributes.spec.properties.urlParams` | 包含有關URL資源路徑、方法和支援的查詢引數的資訊。 |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.path` | 定義從何處擷取資料的來源資源路徑。 | `/3.0/reports/${campaignId}/email-activity` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | 定義用於向資源發出擷取資料之請求的HTTP方法。 | `GET`、`POST` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | 定義支援的查詢引數，可在提出擷取資料的請求時，用於附加來源URL。 **注意**：任何使用者提供的引數值都必須格式化為預留位置。 例如: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` 將會附加至來源URL作為： `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | 定義擷取資料時，必須在來源URL的HTTP請求中提供的標頭。 | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
+| `sourceSpec.attributes.spec.properties.bodyParams` | 此屬性可設定為透過POST要求傳送HTTP內文。 |
+| `sourceSpec.attributes.spec.properties.contentPath` | 定義包含需要擷取至Platform的專案清單的節點。 此屬性應遵循有效的JSON路徑語法，且必須指向特定陣列。 | 檢視 [其他資源區段](#content-path) 內容路徑中包含的資源範例。 |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | 指向要擷取至Platform的集合記錄的路徑。 | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | 此屬性可讓您從在內容路徑中識別的資源中，識別要排除以避免內嵌的特定專案。 | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | 此屬性可讓您明確指定要保留的個別屬性。 | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | 此屬性可讓您覆寫您在中指定的屬性名稱值 `contentPath`. | `email` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | 此屬性可讓您平面化兩個陣列，並將資源資料轉換為Platform資源。 |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | 指向您要平面化的集合記錄的路徑。 | `$.email.activity` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | 此屬性可讓您從實體路徑中識別的資源中，識別要排除以防止內嵌的特定專案。 | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | 此屬性可讓您明確指定要保留的個別屬性。 | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | 此屬性可讓您覆寫您在中指定的屬性名稱值 `explodeEntityPath`. | `activity` |
+| `sourceSpec.attributes.spec.properties.paginationParams` | 定義必須提供的引數或欄位，才能從使用者目前的頁面回應或建立下一頁URL時，取得下一頁的連結。 |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | 顯示您的來源支援的分頁型別型別。 | <ul><li>`OFFSET`：此分頁型別可讓您透過指定從何處開始產生陣列以及限制傳回的結果來剖析結果。</li><li>`POINTER`：此分頁型別可讓您使用 `pointer` 變數來指向需要隨請求傳送的特定專案。 指標型別分頁需要在裝載中指向下一頁的路徑。</li><li>`CONTINUATION_TOKEN`：此分頁型別可讓您將查詢或標頭引數附加一個接續Token，以從來源擷取剩餘的傳回資料（由於預先決定的最大值，這些資料最初並未傳回）。</li><li>`PAGE`：此分頁型別可讓您將查詢引數附加至分頁引數，以便依頁面周遊傳回資料，從第0頁開始。</li><li>`NONE`：此分頁型別可用於不支援任何可用分頁型別的來源。 分頁型別 `NONE` 會在要求後傳回整個回應資料。</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | 限制的名稱，API可透過該名稱指定要在頁面中擷取的記錄數。 | `limit` 或 `count` |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | 要在頁面中擷取的記錄數。 | `limit=10` 或 `count=10` |
+| `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | 位移屬性名稱。 如果分頁型別設定為，則必須執行此設定 `offset`. | `offset` |
+| `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | 指標屬性名稱。 這需要指向下一頁之屬性的json路徑。 如果分頁型別設定為，則必須執行此設定 `pointer`. | `pointer` |
+| `sourceSpec.attributes.spec.properties.scheduleParams` | 包含定義來源支援之排程格式的引數。 排程引數包括 `startTime` 和 `endTime`，兩者皆可讓您設定批次執行的特定時間間隔，進而確保不會再次擷取先前批次執行中擷取的記錄。 |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | 定義開始時間引數名稱 | `since_last_changed` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | 定義結束時間引數名稱 | `before_last_changed` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | 定義支援的格式 `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | 定義支援的格式 `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.spec.properties` | 定義使用者提供的引數，以擷取資源值。 | 請參閱 [其他資源](#user-input) 例如，使用者輸入的引數範例 `spec.properties`. |
 
 {style="table-layout:auto"}
 
 ## 其他資源 {#appendix}
 
-以下各節提供了有關您可以對 `sourceSpec`包括高級計畫和自定義架構。
+以下小節提供您可以對進行其他設定的相關資訊 `sourceSpec`，包括進階排程和自訂結構描述。
 
-### 內容路徑示例 {#content-path}
+### 內容路徑範例 {#content-path}
 
-以下是 `contentPath` 屬性 [!DNL MailChimp Members] 連接規範。
+以下範例為 `contentPath` 中的屬性 [!DNL MailChimp Members] 連線規格。
 
 ```json
 "contentPath": {
@@ -287,11 +287,11 @@ ht-degree: 1%
 }
 ```
 
-### `spec.properties` 用戶輸入示例 {#user-input}
+### `spec.properties` 使用者輸入範例 {#user-input}
 
-以下是用戶提供的示例 `spec.properties` 使用 [!DNL MailChimp Members] 連接規範。
+以下是使用者提供的範例 `spec.properties` 使用 [!DNL MailChimp Members] 連線規格。
 
-在本例中， `listId` 作為 `urlParams.path`。 如果需要檢索 `listId` 從客戶那裡，您還必須將其定義為 `spec.properties`。
+在此範例中， `listId` 作為的一部分提供 `urlParams.path`. 如果您需要擷取 `listId` 來自客戶，則您也必須將其定義為的一部分 `spec.properties`.
 
 
 ```json
@@ -312,9 +312,9 @@ ht-degree: 1%
     }
 ```
 
-### 源規格示例 {#source-spec}
+### 來源規格範例 {#source-spec}
 
-以下是使用 [!DNL MailChimp Members]:
+以下為已完成的來源規格，使用 [!DNL MailChimp Members]：
 
 ```json
   "sourceSpec": {
@@ -377,15 +377,15 @@ ht-degree: 1%
   }
 ```
 
-### 為源配置不同的分頁類型 {#pagination}
+### 為您的來源設定不同的分頁型別 {#pagination}
 
-以下是自助源（批處理SDK）支援的其他分頁類型的示例：
+以下是自助來源（批次SDK）支援的其他分頁型別範例：
 
 #### `CONTINUATION_TOKEN`
 
-分頁的連續標籤類型返回字串標籤，該字串標籤表示由於在單個響應中可以返回的預定最大項目數而無法返回的項目數。
+分頁的繼續權杖型別會傳回字串權杖，表示由於單一回應中可傳回的專案數量已預先設定上限，因此存在更多無法傳回的專案。
 
-支援連續標籤類型分頁的源可能具有類似於：
+支援繼續記號型別分頁的來源可能有類似下列的分頁引數：
 
 ```json
 "paginationParams": {
@@ -399,13 +399,13 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `type` | 用於返回資料的分頁類型。 |
-| `continuationTokenPath` | 必須附加到查詢參數以移動到返回結果的下一頁的值。 |
-| `parameterType` | 的 `parameterType` 屬性定義位置 `parameterName` 。 的 `QUERYPARAM` 類型允許您將查詢附加到 `parameterName`。 的 `HEADERPARAM` 允許您添加 `parameterName` 你的報頭請求。 |
-| `parameterName` | 用於合併連續標籤的參數的名稱。 格式如下： `{PARAMETER_NAME}={CONTINUATION_TOKEN}`。 |
-| `delayRequestMillis` | 的 `delayRequestMillis` 分頁中的屬性允許您控制向源發出請求的速率。 某些源可以限制每分鐘可發出的請求數。 比如說， [!DNL Zendesk] 每分鐘限制100個請求，並定義  `delayRequestMillis` 至 `850` 允許您將源配置為每分鐘大約80次請求進行呼叫，這一點低於每分鐘100次請求的閾值。 |
+| `type` | 用來傳回資料的分頁型別。 |
+| `continuationTokenPath` | 必須附加至查詢引數的值，才能移至傳回結果的下一頁。 |
+| `parameterType` | 此 `parameterType` 屬性會定義 `parameterName` 必須新增。 此 `QUERYPARAM` type可讓您將查詢附加 `parameterName`. 此 `HEADERPARAM` 可讓您新增 `parameterName` 至您的標頭請求。 |
+| `parameterName` | 用於合併接續權杖的引數名稱。 格式如下： `{PARAMETER_NAME}={CONTINUATION_TOKEN}`. |
+| `delayRequestMillis` | 此 `delayRequestMillis` 分頁屬性可讓您控制向來源提出要求的速率。 有些來源會限制每分鐘可提出的請求數。 例如， [!DNL Zendesk] 具有每分鐘100個請求的限制，並定義  `delayRequestMillis` 至 `850` 可讓您將來源設定為每分鐘發出約80個請求，遠低於每分鐘100個請求的臨界值。 |
 
-下面是使用連續標籤類型分頁返回的響應的示例：
+以下範例為使用接續權杖型別分頁傳回的回應：
 
 ```json
 {
@@ -434,29 +434,36 @@ ht-degree: 1%
 
 #### `PAGE`
 
-的 `PAGE` 分頁類型允許您按從零開始的頁數遍歷返回資料。 使用時 `PAGE` 類型分頁，必須提供單頁中給定的記錄數。
+此 `PAGE` 分頁型別可讓您依從零開始的頁數遍歷傳回資料。 使用時 `PAGE` 輸入分頁，您必須提供單一頁面中給定的記錄數。
 
 ```json
 "paginationParams": {
   "type": "PAGE",
-  "limitName": "records",
-  "limitValue": "100",
-  "pageParamName": "pageIndex",
+  "limitName": "pageSize",
+  "limitValue": 100,
+  "initialPageIndex": 1,
+  "endPageIndex": "headers.x-pagecount",
+  "pageParamName": "pageNumber",
   "maximumRequest": 10000
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `type` | 用於返回資料的分頁類型。 |
-| `limitName` | API可以指定在頁中讀取的記錄數的限制的名稱。 |
-| `limitValue` | 要在頁面中提取的記錄數。 |
-| `pageParamName` | 要遍歷返回資料的不同頁，必須追加到查詢參數的參數的名稱。 比如說， `https://abc.com?pageIndex=1` 將返回API返回負載的第二頁。 |
-| `maximumRequest` | 源可為給定增量運行發出的最大請求數。 當前預設限制為10000。 |
+| `type` | 用來傳回資料的分頁型別。 |
+| `limitName` | 限制的名稱，API可透過該名稱指定要在頁面中擷取的記錄數。 |
+| `limitValue` | 要在頁面中擷取的記錄數。 |
+| `initialPageIndex` | （可選）初始分頁索引會定義分頁開始的頁碼。 此欄位可用於分頁不是從0開始的來源。 如果未提供，初始分頁索引將預設為0。 此欄位必須是整數。 |
+| `endPageIndex` | （可選）結束頁面索引可讓您建立結束條件並停止分頁。 當停止分頁的預設結束條件不可用時，可使用此欄位。 如果要擷取的頁數或透過回應標題提供最後一個頁碼（使用時很常見），也可以使用此欄位 `PAGE` 型別分頁。 結束頁面索引的值可以是最後一個頁碼，也可以是回應標頭中的字串型別運算式值。 例如，您可以使用 `headers.x-pagecount` 將結束頁面索引指派給 `x-pagecount` 回應標頭中的值。 **注意**： `x-pagecount` 是某些來源的強制回應標頭，並儲存要擷取的頁數值。 |
+| `pageParamName` | 您必須附加至查詢引數的引數名稱，才能在傳回資料的不同頁面中周遊。 例如， `https://abc.com?pageIndex=1` 會傳回API傳回裝載的第二頁。 |
+| `maximumRequest` | 來源可為指定的增量執行提出的最大請求數。 目前的預設限製為10000。 |
+
+{style="table-layout:auto"}
+
 
 #### `NONE`
 
-的 `NONE` 分頁類型可用於不支援任何可用分頁類型的源。 使用分頁類型的源 `NONE` 只需在發出GET請求時返回所有可檢索的記錄。
+此 `NONE` 分頁型別可用於不支援任何可用分頁型別的來源。 使用下列分頁型別的來源： `NONE` 提出GET要求時，只需傳回所有可擷取的記錄即可。
 
 ```json
 "paginationParams": {
@@ -464,11 +471,11 @@ ht-degree: 1%
 }
 ```
 
-### 自助源的高級計畫（批處理SDK）
+### 自助式來源的進階排程（批次SDK）
 
-使用高級計畫配置源的增量和回填計畫。 的 `incremental` 屬性允許您配置計畫，其中源將只接收新記錄或修改的記錄，而 `backfill` 屬性允許您建立接收歷史資料的計畫。
+使用進階排程來設定來源的增量與回填排程。 此 `incremental` 屬性可讓您設定排程，讓來源僅擷取新記錄或已修改的記錄，而 `backfill` 屬性可讓您建立排程來擷取歷史資料。
 
-使用高級計畫，您可以使用特定於源的表達式和函式來配置增量和回填計畫。 在下面的示例中， [!DNL Zendesk] 源要求將增量計畫格式化為 `type:user updated > {START_TIME} updated < {END_TIME}` 和回填 `type:user updated < {END_TIME}`。
+透過進階排程，您可以使用來源特定的運算式和函式來設定增量排程和回填排程。 在以下範例中， [!DNL Zendesk] 來源需要將增量排程格式化為 `type:user updated > {START_TIME} updated < {END_TIME}` 和回填為 `type:user updated < {END_TIME}`.
 
 ```json
 "scheduleParams": {
@@ -481,12 +488,12 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `scheduleParams.type` | 源將使用的計畫類型。 將此值設定為 `ADVANCE` 的子菜單。 |
-| `scheduleParams.paramFormat` | 計畫參數的定義格式。 此值可以與源的 `scheduleStartParamFormat` 和 `scheduleEndParamFormat` 值。 |
-| `scheduleParams.incremental` | 源的增量查詢。 增量是指只接收新資料或已修改資料的接收方法。 |
-| `scheduleParams.backfill` | 源的回填查詢。 回填是指接收歷史資料的接收方法。 |
+| `scheduleParams.type` | 您的來源將使用的排程型別。 將此值設定為 `ADVANCE` 以使用進階排程型態。 |
+| `scheduleParams.paramFormat` | 排程引數的定義格式。 此值可與您來源的 `scheduleStartParamFormat` 和 `scheduleEndParamFormat` 值。 |
+| `scheduleParams.incremental` | 來源的增量查詢。 增量是指只擷取新資料或修改過的資料的擷取方法。 |
+| `scheduleParams.backfill` | 來源的回填查詢。 回填是指擷取歷史資料的擷取方法。 |
 
-配置高級計畫後，必須參考 `scheduleParams` 的子菜單。 在下面的示例中， `{SCHEDULE_QUERY}` 是用於指定將使用增量和回填計畫表達式的位置的佔位符。 對於 [!DNL Zendesk] 源， `query` 在 `queryParams` 指定高級計畫。
+設定進階排程後，您必須參考 `scheduleParams` 在URL、內文或標頭引數區段中，視您的特定來源支援而定。 在以下範例中， `{SCHEDULE_QUERY}` 是用來指定增量與回填排程運算式使用位置的預留位置。 若是 [!DNL Zendesk] 來源， `query` 用於 `queryParams` 以指定進階排程。
 
 ```json
 "urlParams": {
@@ -499,11 +506,11 @@ ht-degree: 1%
       }
 ```
 
-### 添加自定義架構以定義源的動態屬性
+### 新增自訂結構描述以定義來源的動態屬性
 
-可以將自定義架構包含到 `sourceSpec` 定義源所需的所有屬性，包括可能需要的任何動態屬性。 您可以通過向PUT請求更新源的相應連接規範 `/connectionSpecs` 端點 [!DNL Flow Service] API，同時在 `sourceSpec` 連接規範的部分。
+您可以包含自訂結構描述至 `sourceSpec` 定義來源所需的所有屬性，包括您可能需要的動態屬性。 您可以透過向以下專案發出PUT請求，更新來源對應的連線規格： `/connectionSpecs` 的端點 [!DNL Flow Service] API，同時在中提供您的自訂結構 `sourceSpec` 區段。
 
-以下是可添加到源連接規範的自定義架構示例：
+以下是您可以新增至來源連線規格的自訂結構描述範例：
 
 ```json
       "schema": {
@@ -604,4 +611,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-在填充了源規範後，您可以繼續為要整合到平台的源配置瀏覽規範。 查看上的文檔 [配置瀏覽規範](./explorespec.md) 的子菜單。
+填入您的來源規格後，您可以繼續設定您要整合至平台的來源之瀏覽規格。 檢視檔案： [設定瀏覽規格](./explorespec.md) 以取得詳細資訊。
