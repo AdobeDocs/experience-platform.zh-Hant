@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Cloud Identity Service擴充功能發行說明
-description: Adobe Experience Platform中Adobe Experience Cloud Identity Service標籤擴充功能的最新發行說明。
+title: Adobe Experience Cloud身份服務擴展發行說明
+description: Adobe Experience Cloud身份服務標籤擴展在Adobe Experience Platform的最新發行說明。
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -9,44 +9,44 @@ ht-degree: 64%
 
 ---
 
-# Adobe Experience Cloud Identity Service擴充功能發行說明
+# Adobe Experience CloudIdentity Service擴展發行說明
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-本檔案涵蓋Adobe Experience Cloud Identity Service標籤擴充功能的發行說明。 如需Experience CloudIdentity Service本身的發行說明，請參閱 [Identity服務檔案](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
+本文檔介紹Adobe Experience Cloud身份服務標籤擴展的發行說明。 有關Experience Cloud身份服務本身的發行說明，請參閱 [Identity Service文檔](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)。
 
 ## 2022年10月17日
 
 ### Experience Cloud ID 擴充功能 5.5.0
 
-* 擴充功能現在支援5.5.0版的 [訪客JS用戶端](https://github.com/Adobe-Marketing-Cloud/id-service). 請參閱 [訪客發行說明](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) 以取得特定更新。
+* 擴展現在支援5.5.0版 [訪問者JS客戶端](https://github.com/Adobe-Marketing-Cloud/id-service)。 請參閱 [訪問者發佈說明](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) 的子菜單。
 
 ## 2022年3月9日
 
 ### Experience Cloud ID 擴充功能 5.4.0
 
-* 此版本包含最新的Visitor 5.4.0，其有下列更新：
+* 此版本包含最新的訪問者5.4.0，該訪問者具有以下更新：
 
-   * 可設定 `s_ecid` cookie使用cookieLifetime設定
-   * 更新子iFrame中載入頁面時發生的Firefox瀏覽器問題
+   * 能夠配置 `s_ecid` cookie使用cookieLifetime配置
+   * 在子iFrame中載入頁面時發生的Firefox瀏覽器問題的更新
 
 ## 2021年10月10日
 
 ### Experience Cloud ID 擴充功能 5.3.1
 
-* 此版本包含最新的Visitor 5.3.0，其有下列新更新：
+* 此版本包含最新的訪問者5.3.0，該訪問者具有以下新更新：
 
-   * 更新演算法以產生本機ECID
-   * 使用 `Secure` 和 `SameSite` 隱私權cookie的標幟
-   * 修正子iFrame中載入頁面時的Firefox瀏覽器問題
+   * 更新的算法以生成本地ECID
+   * 最新選擇加入 `Secure` 和 `SameSite` 隱私cookie的標誌
+   * 在子iFrame中載入頁面時修復Firefox瀏覽器問題
 
 ## 2021 年 1 月 12 日
 
 ### Experience Cloud ID 擴充功能 5.2.0
 
-* 更新至具有ECID DataElement修正的VisitorJS 5.2.0修補程式時，收到同意時無法更新。
+* 在接收同意後，無法使用ECID DataElement的修復程式更新到VisitorJS 5.2.0修補程式。
 
 ## 2020 年 11 月 3 日
 
@@ -127,7 +127,7 @@ ht-degree: 64%
 ### Experience Cloud ID 擴充功能 4.3.1
 
 * 將 visitor.js 更新至 4.3
-* 新增ECID的資料元素類型，並加入標籤擴充功能
+* 作為標籤擴展的一部分為ECID添加的資料元素類型
 
    ![](../../../images/ecid-data-element.png)
 

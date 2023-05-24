@@ -1,8 +1,8 @@
 ---
-keywords: IP位址、IP範圍、允許清單目的地、允許清單、允許清單串流目的地
-title: 串流目的地的IP位址允許清單
+keywords: IP地址、IP範圍、允許清單目標、允許清單、允許清單流目標
+title: 流目標的IP地址允許清單
 type: Documentation
-description: 此頁面提供可新增至允許清單的IP範圍，以安全地將資料從Experience Platform匯出至HTTP REST API端點、Amazon Kinesis或Azure事件中心執行個體。
+description: 此頁提供可添加到允許清單的IP範圍，以安全地將資料從Experience Platform導出到HTTP REST API終結點、AmazonKinesis或Azure事件中心實例。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
 source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
 workflow-type: tm+mt
@@ -11,29 +11,29 @@ ht-degree: 0%
 
 ---
 
-# 串流目的地的IP位址允許清單 {#ip-address-allowlist}
+# 流目標的IP地址允許清單 {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
-> * Adobe建議您將此頁面加入書籤，並每三個月重新造訪一次，以檢查最新的IP位址。 Adobe不提供新IP範圍的通知。
-> * 此處記錄的IP清單 *不* 套用至您使用建置的任何目的地 [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * Adobe建議您將此頁面加入書籤，然後每三個月重新訪問一次，以檢查最新的IP地址。 Adobe不提供新IP範圍的通知。
+> * 此處記錄的IP清單 *不* 應用於您使用 [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md)。
 
 
 ## 總覽 {#overview}
 
-此處記錄的IP範圍適用於下列目的地：
+此處介紹的IP範圍適用於以下目標：
 
-* [HTTP API目的地](./http-destination.md)
+* [HTTP API目標](./http-destination.md)
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-從Experience Platform到這些目的地的傳出流量一律會經過本頁面所列的IP。
+從Experience Platform到這些目標的出站流量始終通過此頁上列出的IP。
 
-此頁面提供可新增至允許清單的IP範圍，以安全地將資料從Experience Platform匯出至HTTP端點， [!DNL Amazon Kinesis]，或 [!DNL Azure Event Hubs] 例項。 如果您的HTTP端點位於企業防火牆後，或您的公司安全性和法規遵循標準要求列出允許的IP範圍清單，則此功能特別有用。
+本頁提供了IP範圍，您可以將這些範圍添加到允許清單中，以安全地將資料從Experience Platform導出到HTTP終結點， [!DNL Amazon Kinesis]或 [!DNL Azure Event Hubs] 實例。 如果HTTP端點位於企業防火牆後面，或者如果您的公司安全和合規性標準要求允許列出IP範圍清單，則此功能特別有用。
 
-您可以通過網路防火牆定義網路訪問控制。 通過指定適當的IP範圍，可以允許資料傳輸服務的通信。
+您可以通過網路防火牆定義網路訪問控制。 通過指定適當的IP範圍，您可以允許資料傳輸服務的通信。
 
-Adobe建議您先將下列IP範圍新增至允許清單，再使用本頁面上提及的目的地。 若未將您地區專屬的IP範圍新增至允許清單，在使用這些串流目的地時，可能會導致錯誤或效能不佳。
+Adobe建議在使用此頁上提到的目標之前，將以下IP範圍添加到允許清單。 如果無法將特定於區域的IP範圍添加到允許清單，則在使用這些流目標時可能會導致錯誤或效能不佳。
 
 ## VA7:美國和美洲客戶 {#us-americas}
 

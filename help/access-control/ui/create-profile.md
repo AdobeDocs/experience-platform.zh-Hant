@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；產品設定檔
+keywords: Experience Platform；首頁；熱門主題；產品配置檔案
 solution: Experience Platform
-title: 在Adobe Admin Console中建立新產品設定檔
-description: 本檔案說明在Adobe Admin Console中建立新產品設定檔所需的必要步驟。 若要開始建立新設定檔，請導覽至產品設定檔標籤，然後按一下新設定檔。
+title: 在Adobe Admin Console建立新產品配置檔案
+description: 本文檔介紹在Adobe Admin Console建立新產品配置檔案所需的必要步驟。 要開始建立新配置檔案，請導航到「產品配置檔案」頁籤，然後按一下「新建配置檔案」。
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
@@ -11,30 +11,30 @@ ht-degree: 1%
 
 ---
 
-# 在Adobe Admin Console中建立新的產品設定檔
+# 在Adobe Admin Console建立新產品配置檔案
 
-若要開始建立新設定檔，請導覽至 **[!UICONTROL 產品設定檔]** 索引標籤和選取 **[!UICONTROL 新設定檔]**.
+要開始建立新配置檔案，請導航到 **[!UICONTROL 產品配置檔案]** 頁籤 **[!UICONTROL 新建配置檔案]**。
 
-![新設定檔](../images/new-profile.png)
+![新配置檔案](../images/new-profile.png)
 
-此 **[!UICONTROL 建立新的產品設定檔]** 對話框，提示您輸入配置檔案、可選顯示名稱和可選說明。 在 **[!UICONTROL 使用者通知]**，您可以切換將使用者從設定檔新增或移除時，使用者是否會收到電子郵件通知。
+的 **[!UICONTROL 建立新產品配置檔案]** 對話框，提示您輸入配置檔案、可選顯示名稱和可選說明。 下 **[!UICONTROL 用戶通知]**，您可以切換用戶在添加或從配置檔案中刪除時是否通過電子郵件收到通知。
 
-完成後，請選取 **[!UICONTROL 下一個]**.
+完成後，選擇 **[!UICONTROL 下一個]**。
 
-![create-new-product-profile](../images/create-new-product-profile.png)
+![建立新產品配置檔案](../images/create-new-product-profile.png)
 
-下一個畫面會提示您選擇要包含在設定檔中的平台服務。 選取服務旁的切換按鈕以加以停用。 如果停用服務，指派給此產品設定檔的使用者將無法使用與該服務相關聯的所有功能。 完成後，請選取 **[!UICONTROL 儲存]**.
+下一個螢幕提示您選擇要在配置檔案中包括的平台服務。 選擇服務旁邊的切換按鈕以禁用它。 如果禁用了服務，則與該服務關聯的所有功能將不可用於分配給此產品配置檔案的用戶。 完成後，選擇 **[!UICONTROL 保存]**。
 
-![enable-services](../images/enable-services.png)
+![啟用服務](../images/enable-services.png)
 
-有權使用B2B或B2P版本的客戶可存取B2B UI。 可透過 [!UICONTROL 啟用服務菜單]. 選取旁邊的切換 [!UICONTROL B2B UI] 為特定產品配置檔案啟用服務，然後選擇 **[!UICONTROL 儲存]**.
+有權使用B2B或B2P版本的客戶可以訪問B2B UI。 可通過 [!UICONTROL 啟用服務菜單]。 選擇旁邊的切換 [!UICONTROL B2B UI] 為特定產品配置檔案啟用服務，然後選擇 **[!UICONTROL 保存]**。
 
-B2B UI切換可讓使用者檢視與管理帳戶和機會相關的B2B工作流程，以及建立B2B相關區段。 如需詳細資訊，請參閱 [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
+B2B UI切換使用戶能夠圍繞管理帳戶和機會查看B2B工作流，並建立與B2B相關的段。 有關詳細資訊，請參閱 [[!DNL Adobe Real-Time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md)。
 
 ![enable-b2b](../images/enable-b2b.png)
 
-新產品設定檔已成功建立，系統會將您重新導向至設定檔的 [編輯權限頁面](#edit-permissions). 請參閱 [管理權限](#manage-permissions-for-a-product-profile) 和 [管理使用者](#manage-users-for-a-product-profile) 如需建立產品設定檔後如何管理這些設定檔的詳細資訊。
+新產品配置檔案已成功建立，並且您被重定向到配置檔案 [編輯權限頁](#edit-permissions)。 請參閱 [管理權限](#manage-permissions-for-a-product-profile) 和 [管理用戶](#manage-users-for-a-product-profile) 有關建立產品配置檔案後如何管理這些配置檔案的詳細資訊。
 
 ## 後續步驟
 
-建立新產品設定檔後，您可以繼續進行下一個步驟： [管理產品設定檔的權限](permissions.md)
+建立新產品配置檔案後，您可以繼續執行下一步 [管理產品配置檔案的權限](permissions.md)

@@ -1,33 +1,34 @@
 ---
-title: 從分析資料傳回及使用銷售變數
-description: 了解如何提供XDM欄位和範例查詢，以存取Analytics資料集中的銷售變數。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+title: 從分析資料返回和使用促銷變數
+description: 瞭解如何提供XDM欄位和示例查詢以訪問分析資料集中的促銷變數。
+exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 4%
 
 ---
 
-# 從分析資料傳回及使用銷售變數
+# 從分析資料返回和使用促銷變數
 
-使用Query Service管理從Adobe Analytics擷取至Adobe Experience Platform的資料，做為資料集。 以下小節提供範例查詢，供您用來存取Analytics資料集中的銷售變數。 如需詳細資訊，請參閱本檔案 [如何內嵌和對應Adobe Analytics資料](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html) 透過Analytics來源
+使用查詢服務管理從Adobe Analytics以資料集形式接收到Adobe Experience Platform的資料。 以下各節提供了示例查詢，您可以使用這些查詢來訪問分析資料集中的促銷變數。 有關 [如何採集和繪製Adobe Analytics資料](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html) 通過分析源
 
 ## 銷售變數 {#merchandising-variables}
 
 銷售變數可遵循下列其中一種語法：
 
-* **產品語法**:將eVar值關聯至產品。 
-* **轉換變數語法**:僅在發生捆綁事件時才將eVar與產品關聯。 您可以選取作為系結事件的事件。
+* **產品語法**:將eVar值與產品關聯。 
+* **轉換變數語法**:僅當發生綁定事件時才將eVar與產品關聯。 您可以選擇充當綁定事件的事件。
 
 ## 產品語法 {#product-syntax}
 
-在Adobe Analytics中，自訂產品層級資料可透過特別設定的變數（稱為銷售變數）來收集。 這些事件是以eVar或自訂事件為基礎。 這些變數與其一般用途的差異在於，它們代表點擊上找到之每個產品的個別值，而非該點擊的單一值。
+在Adobe Analytics，定制產品級資料可以通過特殊配置的變數來收集。 這些基於eVar或自定義事件。 這些變數與其典型用途的不同之處在於它們代表在命中點上找到的每個產品的單獨值，而不是僅代表命中點的單個值。
 
-這些變數稱為產品語法銷售變數。 這可讓您收集資訊，例如每個產品的「折扣金額」，或客戶搜尋結果中有關產品「頁面位置」的資訊。
+這些變數稱為產品語法促銷變數。 這允許收集資訊，如每個產品的「折扣額」或客戶搜索結果中有關產品「頁面位置」的資訊。
 
-若要進一步了解如何使用產品語法，請參閱Adobe Analytics檔案，位於 [使用產品語法實作eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+要瞭解有關使用產品語法的更多資訊，請閱讀Adobe Analytics文檔， [使用產品語法實現eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax)。
 
-以下各節將概述存取您 [!DNL Analytics] 資料集：
+以下各節概述了訪問您的促銷變數所需的XDM欄位 [!DNL Analytics] 資料集：
 
 ### eVar
 
@@ -35,8 +36,8 @@ ht-degree: 4%
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-* `#`:您正在訪問的陣列的索引。
-* `evar#`:您要存取的特定eVar變數。
+* `#`:正在訪問的陣列的索引。
+* `evar#`:您正在訪問的特定eVar變數。
 
 ### 自訂事件
 
@@ -44,16 +45,16 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-* `#`:您正在訪問的陣列的索引。
-* `event#`:您要存取的特定自訂事件變數。
+* `#`:正在訪問的陣列的索引。
+* `event#`:您正在訪問的特定自定義事件變數。
 
 ## 產品語法使用案例 {#product-use-cases}
 
-下列使用案例著重於從 `productListItems` 陣列。
+以下使用案例側重於從 `productListItems` 陣列。
 
-### 傳回銷售eVar和事件
+### 返回促銷eVar和活動
 
-以下查詢會傳回在 `productListItems` 陣列。
+下面的查詢返回在中找到的第一個產品的促銷eVar和活動 `productListItems` 陣列。
 
 ```sql
 SELECT
@@ -67,9 +68,9 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-### 分解productListItems陣列並傳回每個產品的銷售eVar和事件。
+### 展開productListItems陣列並返回每個產品的促銷eVar和事件。
 
-下一個查詢會分解 `productListItems` array和傳回每個產品的每個銷售eVar和事件。 此 `_id` 欄位，以顯示與原始點擊的關係。 此 `_id` 值是資料集的唯一主鍵。
+此下一個查詢將展開 `productListItems` 並返回每個產品的促銷eVar和活動。 的 `_id` 欄位以顯示與原始命中的關係。 的 `_id` value是資料集的唯一主鍵。
 
 >[!NOTE]
 >
@@ -95,7 +96,7 @@ LIMIT 20
 
 >[!NOTE]
 >
-> 如果嘗試檢索當前資料集中不存在的欄位，則會出現「沒有此類結構欄位」錯誤。 評估錯誤訊息中傳回的原因，以識別可用欄位，然後更新查詢並重新執行。
+> 如果嘗試檢索當前資料集中不存在的欄位，則會出現「無此類結構欄位」錯誤。 評估錯誤消息中返回的原因以標識可用欄位，然後更新查詢並重新運行它。
 >
 >
 ```console
@@ -104,32 +105,32 @@ LIMIT 20
 
 ### 轉換變數語法 {#conversion-variable-syntax}
 
-Adobe Analytics中提供的另一種銷售變數類型是轉換變數語法。 無法在產品變數中設定eVar值時，會使用轉換變數語法。 這種情況通常表示您的頁面沒有銷售管道或尋找方法的內容。在這些情況下，您應在使用者到達產品頁面之前設定銷售變數，而值會持續到系結事件發生為止。
+在Adobe Analytics找到的另一種類型的商品化變數是轉換變數語法。 當無法在products變數中設定eVar值時，將使用轉換變數語法。 這種情況通常表示您的頁面沒有銷售管道或尋找方法的內容。在這些情況下，您應在用戶到達產品頁面之前設定促銷變數，該值將一直存在，直到發生綁定事件。
 
-例如，以下的產品尋找案例說明在轉換或與產品相關的事件發生之前，必要資料如何出現在頁面上。
+例如，下面的產品查找方案說明了在發生與產品相關的轉換或事件之前，所需資料如何在頁面上顯示。
 
-1. 使用者會執行「winter hat」的內部搜尋，將啟用轉換語法的銷售eVar6設為「internal search:winter hat」。
-2. 使用者點按「華夫餅」並開啟產品詳細資料頁面。\
-   a.這裡的著陸點 `Product View` 12.99美元的「華夫餅燕」活動。\
-   b.自 `Product View` 已設為系結事件，產品「華夫餅」現在會系結至「內部搜尋：冬季帽子」的eVar6值。 只要收集「華夫餅帽」產品，就會與「內部搜尋：冬季帽子」相關聯。 這會發生在達到eVar過期設定，或設定新eVar6值，且該產品再次發生捆綁事件之前。
-3. 使用者將產品新增至購物車，並引發 `Cart Add` 事件。
-4. 使用者對「夏季襯衫」執行另一個內部搜尋，其會將啟用轉換語法的銷售eVar6設為「內部搜尋：夏季襯衫」。
-5. 使用者選取「sporty t-shirt」並登陸產品詳細資料頁面。\
-   a.這裡的著陸點 `Product View` 19.99美元的「運動t恤」活動。\
-   b.作為 `Product View` 事件是系結事件，產品「sporty t-shirt」現在會系結至「internal search:summer shirt」的eVar6值。 先前產品「華夫餅」仍系結至「內部搜尋：華夫餅」的eVar6值。
-6. 使用者將產品新增至購物車，並引發 `Cart Add` 事件。
-7. 使用者簽出這兩種產品。
+1. 用戶對「冬帽」執行內部搜索，該搜索將啟用了轉換語法的商品eVar6設定為「內部搜索：冬帽」。
+2. 用戶點擊「華夫餅燕」，然後登錄到產品詳細資訊頁面。\
+   a.降落在這裡會引發 `Product View` 12.99美元的「華夫餅燕」活動。\
+   b.自 `Product View` 「waffle beanie」被配置為綁定事件，現在將綁定到「internal search:winter hat」的eVar6值。 「華夫餅燕」產品每次被收集，都與「內部搜索：冬帽」相關。 這種情況會一直發生，直到達到eVar到期設定，或者設定新eVar6值，並且該產品再次發生綁定事件。
+3. 用戶將產品添加到其購物車，並激發 `Cart Add` 的子菜單。
+4. 用戶對「夏季襯衫」執行另一個內部搜索，該搜索將啟用商品eVar6的轉換語法設定為「內部搜索：夏季襯衫」。
+5. 用戶選擇「運動T恤衫」並登錄到產品詳細資訊頁面。\
+   a.降落在這裡會引發 `Product View` &quot;運動T恤&quot;活動，19.99美元。\
+   b.作為 `Product View` 事件是綁定事件，產品「sporty t-t-thirt」現在與「internal search:summer shirt」的eVar6值綁定。 先前產品「華夫餅豆」仍然與「內部搜索：華夫餅豆」的eVar6價值相符。
+6. 用戶將產品添加到其購物車，並激發 `Cart Add` 的子菜單。
+7. 用戶簽出兩個產品。
 
-在報表中，訂單、收入、產品檢視和購物車新增會針對eVar6報告，並與系結產品的活動一致。
+在報告中，訂單、收入、產品視圖和購物車添加將根據eVar6報告，並與綁定產品的活動保持一致。
 
-| eVar6（產品尋找方法） | 收入 | 訂購 | 產品檢視 | 購物車新增 |
+| eVar6（產品查找方法） | 收入 | 訂單 | 產品視圖 | 購物車添加 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
 | 內部搜索：夏季襯衫 | 19.99 | 1 | 1 | 1 |
 | 內部搜索：冬季帽 | 12.99 | 1 | 1 | 1 |
 
-若要進一步了解如何使用轉換變數語法，請參閱以下的Adobe Analytics檔案： [使用轉換變數語法實作eVar](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+要瞭解有關使用轉換變數語法的更多資訊，請閱讀Adobe Analytics文檔， [使用轉換變數語法實現eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax)。
 
-以下顯示的是XDM欄位，以在您的 [!DNL Analytics] 資料集：
+下面顯示的是在中生成轉換變數語法的XDM欄位 [!DNL Analytics] 資料集：
 
 #### eVar
 
@@ -137,7 +138,7 @@ Adobe Analytics中提供的另一種銷售變數類型是轉換變數語法。 �
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-* `evar#`:您要存取的特定eVar變數。
+* `evar#`:您正在訪問的特定eVar變數。
 
 #### 產品
 
@@ -145,15 +146,15 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-* `#`:您正在訪問的陣列的索引。
+* `#`:正在訪問的陣列的索引。
 
 ## 轉換變數使用案例 {#conversion-variable-use-cases}
 
-以下的使用案例反映了需要轉換變數語法的情況。
+下面的使用情形反映了需要轉換變數語法的情形。
 
-### 將值系結至特定產品和事件組
+### 將值綁定到特定的產品和事件對
 
-以下查詢會將值系結至特定產品和事件組。 在此範例中，值會系結至產品檢視事件。
+下面的查詢將值綁定到特定的產品和事件對。 在此示例中，該值將綁定到產品視圖事件。
 
 ```sql
 SELECT
@@ -172,9 +173,9 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-### 將界定值保留至個別產品的後續出現次數
+### 將綁定值保留到相應產品的後續出現
 
-以下範例查詢會將綁定值保存到相應產品的後續出現次數。 最低子查詢在聲明綁定事件上建立值與產品的關係。 下一個子查詢會在後續與各產品的互動中執行該界限值的歸因。 頂層SELECT會匯總結果以產生報表。
+下面的示例查詢將綁定值保留到相應產品的後續出現。 最低子查詢在聲明的綁定事件上建立值與產品的關係。 下一個子查詢在隨後與相應產品的交互過程中執行該綁定值的歸屬。 頂級SELECT聚合結果以生成報告。
 
 ```sql
 SELECT
@@ -218,6 +219,6 @@ LIMIT 100
 
 ## 後續步驟
 
-閱讀本檔案後，您應該更清楚了解如何使用產品語法傳回銷售eVar，並使用轉換變數語法將值系結至特定產品。
+通過閱讀此文檔，您應更瞭解如何使用產品語法返回促銷eVar，以及如何使用轉換變數語法將值綁定到特定產品。
 
-如果您尚未這麼做，請閱讀 [網頁與行動互動分析檔案](./analytics-insights.md) 下一個。 它提供常見的使用案例，並示範如何使用Query Service，從網頁和行動Adobe Analytics資料建立可操作的深入分析。
+如果您尚未這樣做，應閱讀 [Web和移動交互文檔的分析見解](./analytics-insights.md) 的子菜單。 它提供了常見使用案例，並演示了如何使用查詢服務從Web和移動Adobe Analytics資料中建立可操作的見解。

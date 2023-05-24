@@ -1,7 +1,7 @@
 ---
-title: 搭配Platform Web SDK使用Offer decisioning
-description: Adobe Experience Platform Web SDK可提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用Offer decisioningUI或API來建立選件和其他相關物件。
-keywords: offer decisioning；決策；Web SDK;Platform Web SDK；個人化優惠方案；傳送優惠方案；優惠方案傳送；優惠方案個人化；
+title: 使用Offer decisioning與平台Web SDK
+description: Adobe Experience PlatformWeb SDK可以提供和呈現以Offer decisioning管理的個性化服務。 您可以使用Offer decisioningUI或API建立優惠和其他相關對象。
+keywords: offer decisioning；決定；Web SDK；平台Web SDK；個性化服務；提供服務；提供服務；提供個性化服務；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -10,27 +10,27 @@ ht-degree: 5%
 
 ---
 
-# 搭配Platform Web SDK使用Offer decisioning
+# 使用Offer decisioning與平台Web SDK
 
 >[!NOTE]
 >
->Adobe Experience Platform Web SDK中可提前存取特定使用者，以使用Offer decisioning。 並非所有組織都可使用此功能。
+>在Adobe Experience PlatformWeb SDK中使用Offer decisioning可以提前訪問選定用戶。 此功能不適用於所有組織。
 
-Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioning管理的個人化優惠方案。 您可以使用 Offer Decisioning 使用者介面 (UI) 或 API 建立您的優惠方案與其他相關物件。 
+Adobe Experience Platform [!DNL Web SDK] 可以交付和呈現以Offer decisioning管理的個性化優惠。 您可以使用 Offer Decisioning 使用者介面 (UI) 或 API 建立您的優惠方案與其他相關物件。 
 
 ## 先決條件
 
-* 組織已啟用邊緣決策功能
-* 選件，已建立的活動
+* 已啟用組織以進行邊緣確定
+* 優惠、建立的活動
 * 資料流已發佈
 
 ## 術語
 
-使用Offer decisioning時，請務必了解下列術語。 欲知更多資訊和查看其他條款，請訪問 [offer decisioning字彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+在使用Offer decisioning時，必須瞭解以下術語。 如欲瞭解更多資訊並查看其他條款，請訪問 [offer decisioning辭彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
 
-* **容器：** 容器是隔離機制，可分開不同的關注點。 容器ID是所有存放庫API的第一個路徑元素。 所有決策物件都位於容器中。
+* **容器：** 容器是一種隔離機構，用於將不同的問題分開。 容器ID是所有儲存庫API的第一個路徑元素。 所有決策對象都駐留在容器中。
 
-* **決策範圍：** 若為Offer decisioning，決策範圍是JSON的Base64編碼字串，其中包含您希望offer decisioning服務用來建議選件的活動和位置ID。
+* **決策範圍：** 對於Offer decisioning，決策作用域是JSON的Base64編碼字串，包含希望offer decisioning服務用於建議優惠的活動和位置ID。
 
    *決策範圍JSON:*
 
@@ -49,24 +49,24 @@ Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioni
 
    >[!TIP]
    >
-   >您可以從 **活動概覽** 頁面。
+   >您可以從 **活動概述** 的子菜單。
 
    ![](assets/decision-scope-copy.png)
 
-* **資料流：** 欲知更多資訊，請閱讀 [資料流](../../datastreams/overview.md) 檔案。
+* **資料流：** 有關詳細資訊，請閱讀 [資料流](../../datastreams/overview.md) 文檔。
 
-* **身分**:如需詳細資訊，請閱讀本檔案，概述如何 [Platform Web SDK使用Identity Service](../../identity/overview.md).
+* **身份**:有關詳細資訊，請閱讀本文檔，概述如何 [平台Web SDK使用Identity Service](../../identity/overview.md)。
 
 ## 啟用Offer decisioning
 
 要啟用Offer decisioning，請執行以下步驟：
 
-1. 在您的 [資料流](../../datastreams/overview.md) 並勾選「Offer decisioning」方塊
+1. 已啟用您的Adobe Experience Platform [資料流](../../datastreams/overview.md) 選中「Offer decisioning」框
 
-   ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
+   ![提供決策邊緣配置](./assets/offer-decisioning-edge-config.png)
 
-1. 請依照 [安裝SDK](../../fundamentals/installing-the-sdk.md) (SDK可獨立安裝，或透過UI安裝。 請參閱 [標籤快速入門手冊](../../../tags/quick-start/quick-start.md))以取得詳細資訊。
-1. [配置SDK](../../fundamentals/configuring-the-sdk.md) offer decisioning。 以下提供其他Offer decisioning特定步驟。
+1. 按照說明 [安裝SDK](../../fundamentals/installing-the-sdk.md) (SDK可以單獨安裝，也可以通過UI安裝。 查看 [標籤快速入門手冊](../../../tags/quick-start/quick-start.md))。
+1. [配置SDK](../../fundamentals/configuring-the-sdk.md) offer decisioning。 下面提供了其他Offer decisioning特定步驟。
 
    * 安裝獨立SDK
 
@@ -81,34 +81,34 @@ Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioni
              ]
           })
          ```
-   * 透過標籤安裝SDK
+   * 通過標籤安裝SDK
 
       1. [建立標籤屬性](../../../tags/ui/administration/companies-and-properties.md)
-      1. [新增內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 從「Datastream」下拉式清單中選取設定，使用您建立的Datastream安裝並設定Platform Web SDK擴充功能。 請參閱 [擴充功能](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. [添加嵌入代碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. 從「Datastream」下拉清單中選擇配置，使用您建立的Datastream安裝和配置平台Web SDK擴展。 請參閱 [擴展](../../../tags/ui/managing-resources/extensions/overview.md)。
 
-         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
+         ![install-aep-web-sdk — 擴展](./assets/install-aep-web-sdk-extension.png)
 
-         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
+         ![configure-aep-web-sdk — 擴展](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 建立必要 [資料元素](../../../tags/ui/managing-resources/data-elements.md). 您至少必須建立Platform Web SDK身分對應和Platform Web SDK XDM物件資料元素。
+      1. 建立必要 [資料元素](../../../tags/ui/managing-resources/data-elements.md)。 至少，必須建立平台Web SDK標識映射和平台Web SDK XDM對象資料元素。
 
-         ![identity-map-data-element](./assets/identity-map-data-element.png)
+         ![標識 — 映射 — 資料元](./assets/identity-map-data-element.png)
 
-         ![xdm-object-data-element](./assets/xdm-object-data-element.png)
+         ![xdm對象資料元](./assets/xdm-object-data-element.png)
 
-      1. 建立 [規則](../../../tags/ui/managing-resources/rules.md).
+      1. 建立 [規則](../../../tags/ui/managing-resources/rules.md)。
 
-         * 新增平台Web SDK傳送事件動作並新增相關 `decisionScopes` 至動作的設定
+         * 添加平台Web SDK發送事件操作並添加相關 `decisionScopes` 到該操作的配置
 
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [建立並發佈程式庫](../../../tags/ui/publishing/libraries.md) 包含您所設定的所有相關規則、資料元素和擴充功能
+      1. [建立和發佈庫](../../../tags/ui/publishing/libraries.md) 包含您配置的所有相關規則、資料元素和擴展
 
 
 
-## 範例要求與回應
+## 請求和響應示例
 
-### 一 `decisionScopes` value
+### 一 `decisionScopes` 值
 
 **要求**
 
@@ -139,8 +139,8 @@ Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioni
 
 | 屬性 | 必填 | 說明 | 限制 | 範例 |
 |---|---|---|---|---|
-| `identityMap` | 是 | 請參閱 [Identity服務檔案](../../identity/overview.md). | 每個請求一個身分。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：使用者不需要 `ECID` 參數。 如有需要，此參數會自動新增至呼叫。 |
-| `decisionScopes` | 是 | 包含活動和位置ID之JSON的Base64編碼字串陣列。 | 最多30個 `decisionScopes` 每個請求。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `identityMap` | 是 | 請參閱此 [Identity Service文檔](../../identity/overview.md)。 | 每個請求一個標識。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注：用戶不需要包括 `ECID` API調用中的參數。 如果需要，此參數將自動添加到調用中。 |
+| `decisionScopes` | 是 | 包含活動和位置ID的Base64編碼的JSON字串陣列。 | 最多30 `decisionScopes` 按請求。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **回應**
 
@@ -191,19 +191,19 @@ Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioni
 
 | 屬性 | 說明 | 範例 |
 |---|---|---|
-| `scope` | 產生提議的決定範圍。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `activity.id` | 優惠方案活動的唯一ID。 | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
-| `placement.id` | 優惠方案版位的唯一ID。 | `"id": "xcore:offer-placement:1175009612b0100c"` |
-| `items.id` | 建議選件的ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `schema` | 與建議選件相關聯的內容綱要。 | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
-| `data.id` | 建議選件的ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `format` | 與建議選件相關聯的內容格式。 | `"format": "text/html"` |
-| `language` | 與建議選件之內容相關聯的語言陣列。 | `"language": [ "en-US" ]` |
-| `content` | 以字串格式與建議的選件相關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
-| `deliveryUrl` | 以URL格式與建議的選件相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
-| `characteristics` | 與建議的選件相關聯的特性，為JSON物件格式。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+| `scope` | 導致提議的報價的決定範圍。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `activity.id` | 優惠活動的唯一ID。 | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
+| `placement.id` | 聘用位置的唯一ID。 | `"id": "xcore:offer-placement:1175009612b0100c"` |
+| `items.id` | 建議的報價的ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `schema` | 與建議的優惠關聯的內容的模式。 | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
+| `data.id` | 建議的報價的ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `format` | 與建議的優惠關聯的內容的格式。 | `"format": "text/html"` |
+| `language` | 與建議的服務內容關聯的一組語言。 | `"language": [ "en-US" ]` |
+| `content` | 以字串格式與建議的優惠關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
+| `deliveryUrl` | 以URL格式與建議的優惠相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
+| `characteristics` | 與JSON對象格式的建議提供關聯的特性。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
-### 多個 `decisionScopes` 值
+### 多重 `decisionScopes` 值
 
 **要求**
 
@@ -236,8 +236,8 @@ Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioni
 
 | 屬性 | 必填 | 說明 | 限制 | 範例 |
 |---|---|---|---|---|
-| `identityMap` | 是 | 請參閱 [Identity服務檔案](../../identity/overview.md). | 每個請求一個身分。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：使用者不需要 `ECID` 參數。 如有需要，此參數會自動新增至呼叫。 |
-| `decisionScopes` | 是 | 包含活動和位置ID之JSON的Base64編碼字串陣列。 | 最多30個 `decisionScopes` 每個請求。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `identityMap` | 是 | 請參閱此 [Identity Service文檔](../../identity/overview.md)。 | 每個請求一個標識。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注：用戶不需要包括 `ECID` API調用中的參數。 如果需要，此參數將自動添加到調用中。 |
+| `decisionScopes` | 是 | 包含活動和位置ID的Base64編碼的JSON字串陣列。 | 最多30 `decisionScopes` 按請求。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **回應**
 
@@ -318,18 +318,18 @@ Adobe Experience Platform [!DNL Web SDK] 可以提供及呈現以Offer decisioni
 
 | 屬性 | 說明 | 範例 |
 |---|---|---|
-| `scope` | 產生提議的決定範圍。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `activity.id` | 優惠方案活動的唯一ID。 | `"id": "xcore:offer-activity:11cfb1fa93381123"` |
-| `placement.id` | 優惠方案版位的唯一ID。 | `"xcore:offer-placement:1175009612b01123"` |
-| `items.id` | 建議選件的ID。 | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
-| `schema` | 與建議選件相關聯的內容綱要。 | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-text"` |
-| `data.id` | 建議選件的ID。 | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
-| `format` | 與建議選件相關聯的內容格式。 | `"format": "text/text"` |
-| `language` | 與建議選件之內容相關聯的語言陣列。 | `"language": [ "en-US" ]` |
-| `content` | 以字串格式與建議的選件相關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
-| `deliveryUrl` | 以URL格式與建議的選件相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
-| `characteristics` | 與建議的選件相關聯的特性，為JSON物件格式。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+| `scope` | 導致提議的報價的決定範圍。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `activity.id` | 優惠活動的唯一ID。 | `"id": "xcore:offer-activity:11cfb1fa93381123"` |
+| `placement.id` | 聘用位置的唯一ID。 | `"xcore:offer-placement:1175009612b01123"` |
+| `items.id` | 建議的報價的ID。 | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
+| `schema` | 與建議的優惠關聯的內容的模式。 | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-text"` |
+| `data.id` | 建議的報價的ID。 | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
+| `format` | 與建議的優惠關聯的內容的格式。 | `"format": "text/text"` |
+| `language` | 與建議的服務內容關聯的一組語言。 | `"language": [ "en-US" ]` |
+| `content` | 以字串格式與建議的優惠關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
+| `deliveryUrl` | 以URL格式與建議的優惠相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
+| `characteristics` | 與JSON對象格式的建議提供關聯的特性。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
 ## 限制
 
-行動體驗邊緣工作流程目前不支援某些選件限制，例如限定上限。 「限定」欄位值會指定可向所有使用者呈現選件的次數。 如需詳細資訊，請參閱 [優惠方案適用性規則與限制檔案](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+移動體驗邊緣工作流當前不支援某些服務約束，例如封頂。 「上限設定」欄位值指定可在所有用戶間顯示優惠的次數。 有關詳細資訊，請參閱 [提供資格規則和約束文檔](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)。

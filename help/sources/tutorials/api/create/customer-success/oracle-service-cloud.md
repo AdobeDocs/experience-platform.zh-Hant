@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；oracle服務雲端
-title: 使用流程服務API建立Oracle服務雲端來源連線
-description: 了解如何使用流量服務API將Adobe Experience Platform連線至Oracle服務雲端。
+keywords: Experience Platform；首頁；熱門主題；Oracle服務雲；oracle服務雲
+title: 使用流服務API建立Oracle服務雲源連接
+description: 瞭解如何使用流服務API將Adobe Experience Platform連接到Oracle服務雲。
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
 source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
@@ -10,43 +10,43 @@ ht-degree: 1%
 
 ---
 
-# 使用建立Oracle服務雲端來源連線 [!DNL Flow Service] API
+# 使用以下項建立Oracle服務雲源連接： [!DNL Flow Service] API
 
-基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
+基連接表示源和Adobe Experience Platform之間經過驗證的連接。
 
-本教學課程會逐步引導您完成使用以下步驟，為Oracle服務雲建立基本連線： [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教程將引導您完成使用以下步驟建立Oracle服務雲的基本連接： [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
 
 ## 快速入門
 
-本指南需要妥善了解下列Experience Platform元件：
+本指南要求對以下Experience Platform元件進行工作理解：
 
-* [來源](../../../../home.md):Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
-* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
+* [源](../../../../home.md):Experience Platform允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
+* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-以下小節提供您需要知道的其他資訊，以便使用成功連線至Oracle服務雲端 [!DNL Flow Service] API。
+以下各節提供您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API。
 
 ### 收集所需憑據
 
-為了 [!DNL Flow Service] 若要與Oracle服務雲端連線，您必須提供下列連線屬性的值：
+為了 [!DNL Flow Service] 要與Oracle服務雲連接，必須提供以下連接屬性的值：
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
-| `host` | 您的Oracle服務雲例項的主機URL。 |
-| `username` | 您的Oracle服務雲端使用者帳戶的使用者名稱。 |
-| `password` | 您的Oracle服務雲端帳戶的密碼。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 oracle服務雲的連接規範ID為： `ba5126ec-c9ac-11eb-b8bc-0242ac130003`. |
+| `host` | oracle服務雲實例的主機URL。 |
+| `username` | oracle服務雲用戶帳戶的用戶名。 |
+| `password` | oracle服務雲帳戶的密碼。 |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 oracle服務雲的連接規範ID為： `ba5126ec-c9ac-11eb-b8bc-0242ac130003`。 |
 
-如需驗證Oracle服務雲端帳戶的詳細資訊，請參閱 [[!DNL Oracle] 驗證指南](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
+有關驗證Oracle服務雲帳戶的詳細資訊，請參閱 [[!DNL Oracle] 認證指南](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../../../landing/api-guide.md).
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../../landing/api-guide.md)。
 
 ## 建立基本連接
 
-基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
+基本連接將保留源和平台之間的資訊，包括源的驗證憑據、連接的當前狀態和唯一的基本連接ID。 基本連接ID允許您從源中瀏覽和導航檔案，並標識要攝取的特定項目，包括有關其資料類型和格式的資訊。
 
-若要建立基本連線ID，請向 `/connections` 端點，同時提供您的Oracle服務雲端驗證憑證，作為請求參數的一部分。
+要建立基本連接ID，請向 `/connections` 端點，同時提供Oracle服務雲身份驗證憑據作為請求參數的一部分。
 
 **API格式**
 
@@ -56,7 +56,7 @@ POST /connections
 
 **要求**
 
-以下請求會為Analytics Service Cloud建立基礎連線：Oracle服務雲端
+以下請求為Oracle服務雲建立基連接：
 
 ```shell
 curl -X POST \
@@ -86,14 +86,14 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `auth.params.host` | 您的Oracle服務雲例項的主機URL。 |
-| `auth.params.username` | 與您的Oracle服務雲端帳戶相關聯的使用者名稱。 |
-| `auth.params.password` | 與您的Oracle服務雲端帳戶相關聯的密碼。 |
+| `auth.params.host` | oracle服務雲實例的主機URL。 |
+| `auth.params.username` | 與您的Oracle服務雲帳戶關聯的用戶名。 |
+| `auth.params.password` | 與您的Oracle服務雲帳戶關聯的密碼。 |
 | `connectionSpec.id` | oracle服務雲連接規範ID: `ba5126ec-c9ac-11eb-b8bc-0242ac130003` |
 
 **回應**
 
-成功的回應會傳回新建立的連線，包括其唯一識別碼(`id`)。 在下一個步驟中探索您的CRM系統時需要此ID。
+成功的響應返回新建立的連接，包括其唯一標識符(`id`)。 在下一步中瀏覽CRM系統需要此ID。
 
 ```json
 {
@@ -104,7 +104,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已使用 [!DNL Flow Service] API。 您可以在下列教學課程中使用此基本連線ID:
+通過遵循本教程，您已使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
 
 * [使用 [!DNL Flow Service] API](../../explore/tabular.md)
 * [建立資料流，使用 [!DNL Flow Service] API](../../collect/customer-success.md)

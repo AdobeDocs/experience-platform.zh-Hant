@@ -1,6 +1,6 @@
 ---
-description: 了解如何透過「/authoring/destination-servers」端點在Adobe Experience Platform Destination SDK中設定目標伺服器規格。
-title: 使用Destination SDK建立的目的地的伺服器規格
+description: 瞭解如何通過「/authoring/destination-servers」端點在Adobe Experience Platform Destination SDK中配置目標伺服器規範。
+title: 使用Destination SDK建立的目標的伺服器規格
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '2750'
@@ -9,65 +9,65 @@ ht-degree: 3%
 ---
 
 
-# 使用Destination SDK建立的目的地的伺服器規格
+# 使用Destination SDK建立的目標的伺服器規格
 
-目的地伺服器規格會定義將從Adobe Experience Platform接收資料的目的地平台類型，以及Platform與您目的地之間的通訊參數。 例如：
+目標伺服器規格定義將從Adobe Experience Platform接收資料的目標平台的類型以及平台與目標之間的通信參數。 例如：
 
-* A [串流](#streaming-example) 目標伺服器規格定義將接收來自Platform的HTTP訊息的HTTP伺服器端點。 若要了解如何設定端點的HTTP呼叫格式，請閱讀 [模板規格](templating-specs.md) 頁面。
-* 安 [Amazon S3](#s3-example) 目標伺服器規格定義 [!DNL S3] 貯體名稱及Platform將匯出檔案的路徑。
-* 安 [SFTP](#sftp-example) 目標伺服器規格定義Platform將匯出檔案的SFTP伺服器的主機名、根目錄、通訊埠和加密類型。
+* A [流](#streaming-example) 目標伺服器規範定義將從平台接收HTTP消息的HTTP伺服器終結點。 要瞭解如何配置HTTP調用到終結點的格式，請閱讀 [模板化規範](templating-specs.md) 的子菜單。
+* 安 [AmazonS3](#s3-example) 目標伺服器規範定義 [!DNL S3] 儲存段名稱和平台將導出檔案的路徑。
+* 安 [SFTP](#sftp-example) 目標伺服器規範定義SFTP伺服器的主機名、根目錄、通信埠和加密類型，平台將在其中導出檔案。
 
-若要了解此元件在透過Destination SDK建立的整合中的插入位置，請參閱 [配置選項](../configuration-options.md) 檔案或請參閱下列目的地組態概觀頁面：
+要瞭解此元件在與Destination SDK建立的整合中的位置，請參閱 [配置選項](../configuration-options.md) 文檔，或參閱以下目標配置概述頁：
 
-* [使用Destination SDK來設定串流目的地](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
+* [使用Destination SDK配置流目標](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
 * [使用Destination SDK配置基於檔案的目標](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
 
-您可以通過 `/authoring/destination-servers` 端點。 如需詳細API呼叫範例，請參閱下列API參考頁面，您可在其中設定本頁面所示的元件。
+您可以通過 `/authoring/destination-servers` 端點。 有關詳細的API調用示例，請參閱以下API參考頁，在這些示例中可以配置此頁中顯示的元件。
 
 * [建立目標伺服器配置](../../authoring-api/destination-server/create-destination-server.md)
 * [更新目標伺服器配置](../../authoring-api/destination-server/update-destination-server.md)
 
-此頁顯示Destination SDK支援的所有目標伺服器類型及其所有配置參數。 建立您的目的地時，請以您自己的值取代參數值。
+此頁顯示Destination SDK支援的所有目標伺服器類型及其所有配置參數。 建立目標時，請用自己的參數值替換。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名稱和值均為 **區分大小寫**. 為避免區分大小寫錯誤，請使用參數名稱和值，如說明檔案所示。
+>Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
 
 ## 支援的整合類型 {#supported-integration-types}
 
-如需詳細資訊，請參閱下表以了解哪些類型的整合支援本頁面所述的功能。
+有關哪些類型的整合支援本頁所述功能的詳細資訊，請參閱下表。
 
 | 整合類型 | 支援功能 |
 |---|---|
-| 即時（串流）整合 | 是 |
-| 檔案式（批次）整合 | 是 |
+| 即時（流）整合 | 是 |
+| 基於檔案（批處理）的整合 | 是 |
 
-當 [建立](../../authoring-api/destination-server/create-destination-server.md) 或 [更新](../../authoring-api/destination-server/update-destination-server.md) 目標伺服器，請使用本頁所述的其中一種伺服器類型配置。 視您的整合需求而定，請務必將這些範例的範例參數值取代為您自己的範例。
+當 [建立](../../authoring-api/destination-server/create-destination-server.md) 或 [更新](../../authoring-api/destination-server/update-destination-server.md) 目標伺服器，使用此頁中描述的伺服器類型配置之一。 根據整合要求，確保用您自己的示例替換這些示例中的示例參數值。
 
-## 硬式編碼與範本化欄位 {#templatized-fields}
+## 硬編碼與模板化場 {#templatized-fields}
 
-透過Destination SDK建立目標伺服器時，您可以將設定參數值硬式編碼至設定，或使用範本化欄位來定義。 範本化欄位可讓您從Platform UI讀取使用者提供的值。
+通過Destination SDK建立目標伺服器時，可以通過將配置參數值硬編碼到配置中或使用模板化欄位來定義配置參數值。 模板化欄位允許您從平台UI中讀取用戶提供的值。
 
-目標伺服器參數有兩個可配置欄位。 這些選項決定您使用的是硬式編碼或範本化值。
+目標伺服器參數有兩個可配置欄位。 這些選項指示您是使用硬編碼值還是模板化值。
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `templatingStrategy` | 字串 | *必填。* 定義是否有透過 `value` 欄位，或UI中使用者可設定的值。 支援的值： <ul><li>`NONE`:當您透過硬式編碼參數值時，請使用此值 `value` 參數（請參閱下一列）。 範例:`"value": "my-storage-bucket"`.</li><li>`PEBBLE_V1`:當您希望使用者在UI中提供參數值時，請使用此值。 範例：`"value": "{{customerData.bucket}}"`。 </li></ul> |
-| `value` | 字串 | *必填*. 定義參數值。 支援的值類型： <ul><li>**硬式編碼值**:使用硬式編碼值(例如 `"value": "my-storage-bucket"`)，而不需要使用者在UI中輸入參數值。 對值進行硬編碼時， `templatingStrategy` 應一律設為 `NONE`.</li><li>**範本化值**:使用範本化值(例如 `"value": "{{customerData.bucket}}"`)，以便讓使用者在UI中提供參數值時，才能使用此變數。 使用範本化值時， `templatingStrategy` 應一律設為 `PEBBLE_V1`.</li></ul> |
+| `templatingStrategy` | 字串 | *必填。* 定義是否通過 `value` 或UI中的用戶可配置值。 支援的值： <ul><li>`NONE`:在通過 `value` 參數（請參見下一行）。 範例:`"value": "my-storage-bucket"`.</li><li>`PEBBLE_V1`:當希望用戶在UI中提供參數值時，請使用此值。 範例：`"value": "{{customerData.bucket}}"`。 </li></ul> |
+| `value` | 字串 | *必填*. 定義參數值。 支援的值類型： <ul><li>**硬編碼值**:使用硬編碼值(例如 `"value": "my-storage-bucket"`)時，不需要用戶在UI中輸入參數值。 當硬編碼值時， `templatingStrategy` 應始終設定為 `NONE`。</li><li>**模板化值**:使用模板化值(例如 `"value": "{{customerData.bucket}}"`)。 使用模板化值時， `templatingStrategy` 應始終設定為 `PEBBLE_V1`。</li></ul> |
 
 {style="table-layout:auto"}
 
-### 何時使用硬式編碼欄位與範本化欄位
+### 何時使用硬編碼欄位與模板欄位
 
-硬式編碼和範本化欄位在Destination SDK中都有其專用，端視您要建立的整合類型而定。
+硬編碼欄位和模板化欄位在Destination SDK中都有其自己的用途，這取決於您正在建立的整合類型。
 
-**無需用戶輸入即可連接到目標**
+**在不輸入用戶的情況下連接到目標**
 
-使用者 [連線至目的地](../../../ui/connect-destination.md) 在Platform UI中，您可能會想要在不輸入的情況下處理目的地連線程式。
+當用戶 [連接到目標](../../../ui/connect-destination.md) 在平台UI中，您可能希望在沒有輸入的情況下處理目標連接進程。
 
-要執行此操作，可以在伺服器規範中硬編碼目標平台連接參數。 若您在目的地伺服器設定中使用硬式編碼參數值，系統會處理Adobe Experience Platform與目的地平台之間的連線，而使用者不需進行任何輸入。
+為此，可以在伺服器規範中硬編碼目標平台連接參數。 當您在目標伺服器配置中使用硬編碼參數值時，將處理Adobe Experience Platform與目標平台之間的連接，而無需用戶輸入任何內容。
 
-在以下範例中，合作夥伴會使用 `path.value` 以硬式編碼撰寫的欄位。
+在下面的示例中，合作夥伴使用 `path.value` 已硬編碼欄位。
 
 ```json
 {
@@ -83,15 +83,15 @@ ht-degree: 3%
 }
 ```
 
-因此，當使用者 [目的地連線教學課程](../../../ui/connect-destination.md)，他們將看不到 [驗證步驟](../../../ui/connect-destination.md#authenticate). 而是由Platform處理驗證，如下圖所示。
+因此，當用戶通過 [目標連接教程](../../../ui/connect-destination.md)他們看不到 [認證步驟](../../../ui/connect-destination.md#authenticate)。 相反，驗證由平台處理，如下圖所示。
 
-![顯示Platform和DLZ目標之間的身份驗證螢幕的UI影像。](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![顯示平台和DLZ目標之間的驗證螢幕的UI影像。](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
-**透過使用者輸入連線至您的目的地**
+**使用用戶輸入連接到目標**
 
-當Platform和您的目的地之間的連線應在Platform UI中的特定使用者輸入後建立，例如選取API端點或提供欄位值時，您可以使用伺服器規格中的範本欄位來讀取使用者輸入，並連線至您的目的地平台。
+當平台和目標之間的連接應在平台UI中的特定用戶輸入（如選擇API終結點或提供欄位值）後建立時，您可以使用伺服器規範中的模板化欄位來讀取用戶輸入並連接到目標平台。
 
-在以下範例中，合作夥伴會建立 [即時（串流）](#streaming-example) 整合與 `url.value` 欄位使用範本化參數 `{{customerData.region}}` 根據使用者輸入個人化部分API端點。
+在下面的示例中，合作夥伴建立 [即時（流）](#streaming-example) 整合和 `url.value` 欄位使用模板化參數 `{{customerData.region}}` 根據用戶輸入對部分API終結點進行個性化。
 
 ```json
 {
@@ -106,7 +106,7 @@ ht-degree: 3%
 }
 ```
 
-若要讓使用者可以選擇從Platform UI選取值，請 `region` 參數也必須定義於 [目的地配置](../../authoring-api/destination-configuration/create-destination-configuration.md) 作為客戶資料欄位，如下所示：
+要向用戶提供從平台UI中選擇值的選項， `region` 參數也必須在 [目標配置](../../authoring-api/destination-configuration/create-destination-configuration.md) 欄位，如下所示：
 
 ```json
 "customerDataFields":[
@@ -124,17 +124,17 @@ ht-degree: 3%
    }
 ```
 
-因此，當使用者 [目的地連線教學課程](../../../ui/connect-destination.md)，使用者必須先選取地區，才能連線至目的地平台。 當使用者連線至目的地時，範本欄位 `{{customerData.region}}` 會以使用者在UI中已選取的值取代，如下圖所示。
+因此，當用戶通過 [目標連接教程](../../../ui/connect-destination.md)，必須選擇一個區域才能連接到目標平台。 當它們連接到目標時，模板化欄位 `{{customerData.region}}` 替換為用戶在UI中選擇的值，如下圖所示。
 
-![顯示目的地連線畫面的UI影像，以及區域選取器。](../../assets/functionality/destination-server/server-spec-template-region.png)
+![顯示帶有區域選擇器的目標連接螢幕的UI影像。](../../assets/functionality/destination-server/server-spec-template-region.png)
 
-## 即時（串流）目的地伺服器 {#streaming-example}
+## 即時（流）目標伺服器 {#streaming-example}
 
-此目的地伺服器類型可讓您透過HTTP要求，將資料從Adobe Experience Platform匯出至目的地。 伺服器配置包含接收消息的伺服器（您這邊的伺服器）的相關資訊。
+此目標伺服器類型允許您通過HTTP請求將資料從Adobe Experience Platform導出到目標。 伺服器配置包含有關伺服器接收消息的資訊（伺服器位於您的一側）。
 
-此程式會以一系列HTTP訊息的形式將使用者資料傳送至您的目的地平台。 以下參數構成HTTP伺服器規格模板。
+此進程將用戶資料作為一系列HTTP消息傳送到目標平台。 下面的參數構成HTTP伺服器規範模板。
 
-以下範例顯示即時（串流）目的地的目的地伺服器設定範例。
+下面的示例顯示了即時（流式）目標的目標伺服器配置示例。
 
 ```json
 {
@@ -151,18 +151,18 @@ ht-degree: 3%
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `name` | 字串 | *必填。* 代表您伺服器的好記名稱，只顯示給Adobe。 合作夥伴或客戶看不到此名稱。 範例：`Moviestar destination server`。 |
-| `destinationServerType` | 字串 | *必填。* 將此設定為 `URL_BASED` 用於串流目的地。 |
-| `templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 若您在 `value` 欄位。 如果您的端點如下所示，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`，使用者必須從Platform UI中選取端點區域。 </li><li> 使用 `NONE` 如果Adobe端不需要範本化轉換，例如，如果您有如下的端點： `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | 字串 | *必填。* 填入Experience Platform應連線之API端點的位址。 |
+| `name` | 字串 | *必填。* 表示伺服器的友好名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例：`Moviestar destination server`。 |
+| `destinationServerType` | 字串 | *必填。* 將此設定為 `URL_BASED` 流目標。 |
+| `templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 如果使用的是模板化欄位，而不是硬編碼值 `value` 的子菜單。 如果您具有端點，如： `https://api.moviestar.com/data/{{customerData.region}}/items`，其中用戶必須從平台UI中選擇終結點區域。 </li><li> 使用 `NONE` 如果Adobe端不需要模板化轉換，例如，如果您有端點，如： `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | 字串 | *必填。* 填寫Experience Platform應連接到的API終結點的地址。 |
 
 {style="table-layout:auto"}
 
-## [!DNL Amazon S3] 目的地伺服器 {#s3-example}
+## [!DNL Amazon S3] 目標伺服器 {#s3-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至Amazon S3儲存空間。
+此目標伺服器允許您將包含Adobe Experience Platform資料的檔案導出到AmazonS3儲存。
 
-下列範例顯示Amazon S3目的地的目的地伺服器設定範例。
+以下示例顯示了AmazonS3目標的目標伺服器配置示例。
 
 ```json
 {
@@ -184,19 +184,19 @@ ht-degree: 3%
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目標伺服器的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 若要將檔案匯出至 [!DNL Amazon S3] 貯體，設定為 `FILE_BASED_S3`. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | 字串 | *必填*. 根據 `bucket.value` 欄位。<ul><li>如果您希望使用者在Experience PlatformUI中輸入自己的貯體名稱，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `value` 欄位，從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您的整合使用硬式編碼貯體名稱，例如 `"bucket.value":"MyBucket"`，然後將值設為 `NONE`.</li></ul> |
-| `fileBasedS3Destination.bucket.value` | 字串 | 的名稱 [!DNL Amazon S3] 此目的地所使用的貯體。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `"value":"MyBucket"`. |
-| `fileBasedS3Destination.path.templatingStrategy` | 字串 | *必填*. 根據 `path.value` 欄位。<ul><li>如果您希望使用者在Experience PlatformUI中輸入自己的路徑，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `path.value` 欄位，從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您使用硬式編碼路徑進行整合，例如 `"bucket.value":"/path/to/MyBucket"`，然後將值設為 `NONE`.</li></ul> |
-| `fileBasedS3Destination.path.value` | 字串 | 路徑 [!DNL Amazon S3] 此目的地所使用的貯體。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `"value":"/path/to/MyBucket"`. |
+| `destinationServerType` | 字串 | 根據目標平台設定此值。 將檔案導出到 [!DNL Amazon S3] 桶，將此設定為 `FILE_BASED_S3`。 |
+| `fileBasedS3Destination.bucket.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `bucket.value` 的子菜單。<ul><li>如果希望用戶在Experience PlatformUI中輸入自己的儲存段名稱，請將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `value` 欄位以從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼儲存段名稱進行整合，例如 `"bucket.value":"MyBucket"`，然後將此值設定為 `NONE`。</li></ul> |
+| `fileBasedS3Destination.bucket.value` | 字串 | 名稱 [!DNL Amazon S3] 該目標使用的儲存桶。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `"value":"MyBucket"`。 |
+| `fileBasedS3Destination.path.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `path.value` 的子菜單。<ul><li>如果希望用戶在Experience PlatformUI中輸入其自己的路徑，請將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `path.value` 欄位以從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼路徑進行整合，例如 `"bucket.value":"/path/to/MyBucket"`，然後將此值設定為 `NONE`。</li></ul> |
+| `fileBasedS3Destination.path.value` | 字串 | 到 [!DNL Amazon S3] 該目標使用的儲存桶。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `"value":"/path/to/MyBucket"`。 |
 
 {style="table-layout:auto"}
 
-## [!DNL SFTP] 目的地伺服器 {#sftp-example}
+## [!DNL SFTP] 目標伺服器 {#sftp-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至 [!DNL SFTP] 儲存伺服器。
+此目標伺服器允許您將包含Adobe Experience Platform資料的檔案導出到 [!DNL SFTP] 儲存伺服器。
 
-以下範例顯示SFTP目的地的目的地伺服器設定範例。
+下面的示例顯示了SFTP目標的目標伺服器配置示例。
 
 ```json
 {
@@ -220,11 +220,11 @@ ht-degree: 3%
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目標伺服器的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 若要將檔案匯出至 [!DNL SFTP] 目的地，將此設定為 `FILE_BASED_SFTP`. |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 字串 | *必填*. 根據 `rootDirectory.value` 欄位。<ul><li>如果您希望使用者在Experience PlatformUI中輸入自己的根目錄路徑，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `rootDirectory.value` 欄位，從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您使用硬式編碼的根目錄路徑進行整合，例如 `"rootDirectory.value":"Storage/MyDirectory"`，然後將值設為 `NONE`.</li></ul> |
-| `fileBasedSFTPDestination.rootDirectory.value` | 字串 | 將承載導出檔案的目錄的路徑。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `"value":"Storage/MyDirectory"` |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | 字串 | *必填*. 根據 `hostName.value` 欄位。<ul><li>如果您希望使用者在Experience PlatformUI中輸入自己的主機名稱，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `hostName.value` 欄位，從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您的整合使用硬式編碼主機名稱，例如 `"hostName.value":"my.hostname.com"`，然後將值設為 `NONE`.</li></ul> |
-| `fileBasedSFTPDestination.hostName.value` | 字串 | SFTP伺服器的主機名稱。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `"hostName.value":"my.hostname.com"`. |
+| `destinationServerType` | 字串 | 根據目標平台設定此值。 將檔案導出到 [!DNL SFTP] 目標，將其設定為 `FILE_BASED_SFTP`。 |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `rootDirectory.value` 的子菜單。<ul><li>如果希望用戶在Experience PlatformUI中輸入其自己的根目錄路徑，請將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `rootDirectory.value` 從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果使用硬編碼的根目錄路徑進行整合，例如 `"rootDirectory.value":"Storage/MyDirectory"`，然後將此值設定為 `NONE`。</li></ul> |
+| `fileBasedSFTPDestination.rootDirectory.value` | 字串 | 將承載導出檔案的目錄的路徑。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `"value":"Storage/MyDirectory"` |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `hostName.value` 的子菜單。<ul><li>如果希望用戶在Experience PlatformUI中輸入其自己的主機名，請將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `hostName.value` 從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼的主機名進行整合，例如 `"hostName.value":"my.hostname.com"`，然後將此值設定為 `NONE`。</li></ul> |
+| `fileBasedSFTPDestination.hostName.value` | 字串 | SFTP伺服器的主機名。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `"hostName.value":"my.hostname.com"`。 |
 | `port` | 整數 | SFTP檔案伺服器埠。 |
 | `encryptionMode` | 字串 | 指示是否使用檔案加密。 支援的值： <ul><li>PGP</li><li>None</li></ul> |
 
@@ -232,9 +232,9 @@ ht-degree: 3%
 
 ## [!DNL Azure Data Lake Storage] ([!DNL ADLS])目標伺服器 {#adls-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至 [!DNL Azure Data Lake Storage] 帳戶。
+此目標伺服器允許您將包含Adobe Experience Platform資料的檔案導出到 [!DNL Azure Data Lake Storage] 帳戶。
 
-以下範例顯示 [!DNL Azure Data Lake Storage] 目的地。
+下面的示例顯示了一個目標伺服器配置示例 [!DNL Azure Data Lake Storage] 目標。
 
 ```json
 {
@@ -251,18 +251,18 @@ ht-degree: 3%
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 針對 [!DNL Azure Data Lake Storage] 目的地，請將此設為 `FILE_BASED_ADLS_GEN2`. |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 字串 | *必填*. 根據 `path.value` 欄位。<ul><li>如果您希望使用者輸入 [!DNL ADLS] Experience PlatformUI中的資料夾路徑，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `path.value` 欄位，從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您使用硬式編碼路徑進行整合，例如 `"abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/"`，然後將值設為 `NONE`.</li></ul> |
-| `fileBasedAdlsGen2Destination.path.value` | 字串 | 您的 [!DNL ADLS] 儲存資料夾。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/`. |
+| `name` | 字串 | 目標連接的名稱。 |
+| `destinationServerType` | 字串 | 根據目標平台設定此值。 對於 [!DNL Azure Data Lake Storage] 目標，將其設定為 `FILE_BASED_ADLS_GEN2`。 |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `path.value` 的子菜單。<ul><li>如果希望用戶輸入 [!DNL ADLS] Experience PlatformUI中的資料夾路徑，將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `path.value` 欄位以從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼路徑進行整合，例如 `"abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/"`，然後將此值設定為 `NONE`。</li></ul> |
+| `fileBasedAdlsGen2Destination.path.value` | 字串 | 通往您的路徑 [!DNL ADLS] 儲存資料夾。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/`。 |
 
 {style="table-layout:auto"}
 
-## [!DNL Azure Blob Storage] 目的地伺服器 {#blob-example}
+## [!DNL Azure Blob Storage] 目標伺服器 {#blob-example}
 
-此目的地伺服器可讓您將包含Adobe Experience Platform資料的檔案匯出至 [!DNL Azure Blob Storage] 容器。
+此目標伺服器允許您將包含Adobe Experience Platform資料的檔案導出到 [!DNL Azure Blob Storage] 容器。
 
-以下範例顯示 [!DNL Azure Blob Storage] 目的地。
+下面的示例顯示了一個目標伺服器配置示例 [!DNL Azure Blob Storage] 目標。
 
 ```json
 {
@@ -283,20 +283,20 @@ ht-degree: 3%
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 針對 [!DNL Azure Blob Storage] 目的地，請將此設為 `FILE_BASED_AZURE_BLOB`. |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | 字串 | *必填*. 根據 `path.value` 欄位。<ul><li>如果您希望使用者輸入自己的 [!DNL Azure Blob] [儲存帳戶URI](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) 在Experience PlatformUI中，將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `path.value` 欄位，從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您使用硬式編碼路徑進行整合，例如 `"path.value": "https://myaccount.blob.core.windows.net/"`，然後將值設為 `NONE`. |
-| `fileBasedAzureBlobDestination.path.value` | 字串 | 您的 [!DNL Azure Blob] 儲存。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `https://myaccount.blob.core.windows.net/`. |
-| `fileBasedAzureBlobDestination.container.templatingStrategy` | 字串 | *必填*. 根據 `container.value` 欄位。<ul><li>如果您希望使用者輸入自己的 [!DNL Azure Blob] [容器名稱](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) 在Experience PlatformUI中，將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `container.value` 欄位，從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您的整合使用硬式編碼容器名稱，例如 `"path.value: myContainer"`，然後將值設為 `NONE`. |
-| `fileBasedAzureBlobDestination.container.value` | 字串 | 要用於此目的地的Azure Blob儲存容器的名稱。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `myContainer`. |
+| `name` | 字串 | 目標連接的名稱。 |
+| `destinationServerType` | 字串 | 根據目標平台設定此值。 對於 [!DNL Azure Blob Storage] 目標，將其設定為 `FILE_BASED_AZURE_BLOB`。 |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `path.value` 的子菜單。<ul><li>如果希望用戶輸入自己的 [!DNL Azure Blob] [儲存帳戶URI](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) 在Experience PlatformUI中，將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `path.value` 欄位以從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼路徑進行整合，例如 `"path.value": "https://myaccount.blob.core.windows.net/"`，然後將此值設定為 `NONE`。 |
+| `fileBasedAzureBlobDestination.path.value` | 字串 | 通往您的路徑 [!DNL Azure Blob] 儲存。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `https://myaccount.blob.core.windows.net/`。 |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `container.value` 的子菜單。<ul><li>如果希望用戶輸入自己的 [!DNL Azure Blob] [容器名稱](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) 在Experience PlatformUI中，將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `container.value` 欄位以從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果使用硬編碼容器名稱進行整合，例如 `"path.value: myContainer"`，然後將此值設定為 `NONE`。 |
+| `fileBasedAzureBlobDestination.container.value` | 字串 | 要用於此目標的Azure Blob儲存容器的名稱。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `myContainer`。 |
 
 {style="table-layout:auto"}
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ])目標伺服器 {#dlz-example}
 
-此目標伺服器可讓您將包含Platform資料的檔案匯出至 [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) 儲存。
+此目標伺服器允許您將包含平台資料的檔案導出到 [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) 儲存。
 
-以下範例顯示 [!DNL Data Landing Zone] ([!DNL DLZ])目的地。
+下面的示例顯示了一個目標伺服器配置示例 [!DNL Data Landing Zone] ([!DNL DLZ])目標。
 
 ```json
 {
@@ -314,18 +314,18 @@ ht-degree: 3%
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 針對 [!DNL Data Landing Zone] 目的地，請將此設為 `FILE_BASED_DLZ`. |
-| `fileBasedDlzDestination.path.templatingStrategy` | 字串 | *必填*. 根據 `path.value` 欄位。<ul><li>如果您希望使用者輸入自己的 [!DNL Data Landing Zone] 帳戶，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `path.value` 欄位，從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您使用硬式編碼路徑進行整合，例如 `"path.value": "https://myaccount.blob.core.windows.net/"`，然後將值設為 `NONE`. |
+| `name` | 字串 | 目標連接的名稱。 |
+| `destinationServerType` | 字串 | 根據目標平台設定此值。 對於 [!DNL Data Landing Zone] 目標，將其設定為 `FILE_BASED_DLZ`。 |
+| `fileBasedDlzDestination.path.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `path.value` 的子菜單。<ul><li>如果希望用戶輸入自己的 [!DNL Data Landing Zone] Experience PlatformUI中的帳戶，將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `path.value` 欄位以從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼路徑進行整合，例如 `"path.value": "https://myaccount.blob.core.windows.net/"`，然後將此值設定為 `NONE`。 |
 | `fileBasedDlzDestination.path.value` | 字串 | 將承載導出檔案的目標資料夾的路徑。 |
 
 {style="table-layout:auto"}
 
-## [!DNL Google Cloud Storage] 目的地伺服器 {#gcs-example}
+## [!DNL Google Cloud Storage] 目標伺服器 {#gcs-example}
 
-此目標伺服器可讓您將包含Platform資料的檔案匯出至 [!DNL Google Cloud Storage] 帳戶。
+此目標伺服器允許您將包含平台資料的檔案導出到 [!DNL Google Cloud Storage] 帳戶。
 
-以下範例顯示 [!DNL Google Cloud Storage] 目的地。
+下面的示例顯示了一個目標伺服器配置示例 [!DNL Google Cloud Storage] 目標。
 
 ```json
 {
@@ -346,21 +346,21 @@ ht-degree: 3%
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 針對 [!DNL Google Cloud Storage] 目的地，請將此設為 `FILE_BASED_GOOGLE_CLOUD`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 字串 | *必填*. 根據 `bucket.value` 欄位。<ul><li>如果您希望使用者輸入自己的 [!DNL Google Cloud Storage] Experience PlatformUI中的貯體名稱，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `bucket.value` 欄位，從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您的整合使用硬式編碼貯體名稱，例如 `"bucket.value": "my-bucket"`，然後將值設為 `NONE`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.value` | 字串 | 的名稱 [!DNL Google Cloud Storage] 此目的地所使用的貯體。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `"value": "my-bucket"`. |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 字串 | *必填*. 根據 `path.value` 欄位。<ul><li>如果您希望使用者輸入自己的 [!DNL Google Cloud Storage] Experience PlatformUI中的貯體路徑，請將此值設為 `PEBBLE_V1`. 在此情況下，您必須將 `path.value` 欄位，從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入。 上述範例中顯示此使用案例。</li><li>如果您使用硬式編碼路徑進行整合，例如 `"path.value": "/path/to/my-bucket"`，然後將值設為 `NONE`.</li></ul> |
-| `fileBasedGoogleCloudStorageDestination.path.value` | 字串 | 路徑 [!DNL Google Cloud Storage] 資料夾。 這可以是範本欄位，將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 填入（如上例所示），或硬式編碼值，例如 `"value": "/path/to/my-bucket"`. |
+| `name` | 字串 | 目標連接的名稱。 |
+| `destinationServerType` | 字串 | 根據目標平台設定此值。 對於 [!DNL Google Cloud Storage] 目標，將其設定為 `FILE_BASED_GOOGLE_CLOUD`。 |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `bucket.value` 的子菜單。<ul><li>如果希望用戶輸入自己的 [!DNL Google Cloud Storage] Experience PlatformUI中的儲存段名稱，將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `bucket.value` 欄位以從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼儲存段名稱進行整合，例如 `"bucket.value": "my-bucket"`，然後將此值設定為 `NONE`。 |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | 字串 | 名稱 [!DNL Google Cloud Storage] 該目標使用的儲存桶。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `"value": "my-bucket"`。 |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 字串 | *必填*. 根據中使用的值的類型設定此值 `path.value` 的子菜單。<ul><li>如果希望用戶輸入自己的 [!DNL Google Cloud Storage] Experience PlatformUI中的儲存桶路徑，將此值設定為 `PEBBLE_V1`。 在這種情況下，您必須將 `path.value` 欄位以從中讀取值 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填寫。 上例中顯示了此使用情形。</li><li>如果您使用硬編碼路徑進行整合，例如 `"path.value": "/path/to/my-bucket"`，然後將此值設定為 `NONE`。</li></ul> |
+| `fileBasedGoogleCloudStorageDestination.path.value` | 字串 | 到 [!DNL Google Cloud Storage] 資料夾。 這可以是一個模板化欄位，該欄位將從 [客戶資料欄位](../destination-configuration/customer-data-fields.md) 由用戶填充（如上例所示）或硬編碼值，如 `"value": "/path/to/my-bucket"`。 |
 
 {style="table-layout:auto"}
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文後，您應更清楚了解目標伺服器規格是什麼，以及如何配置。
+閱讀本文後，您應更好地瞭解目標伺服器規範是什麼以及如何配置它。
 
-若要進一步了解其他目標伺服器元件，請參閱下列文章：
+要瞭解有關其他目標伺服器元件的詳細資訊，請參閱以下文章：
 
 * [模板規格](templating-specs.md)
 * [訊息格式](message-format.md)
-* [檔案格式設定](file-formatting.md)
+* [檔案格式配置](file-formatting.md)

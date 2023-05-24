@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Azure AzureData Explorer;AzureData Explorer;AzureData Explorer
 solution: Experience Platform
-title: 使用流服務API建立Azure AzureData Explorer基礎連接
+title: 使用流服務API建立Azure AzureData Explorer基連接
 type: Tutorial
-description: 了解如何使用流程服務API將Azure AzureData Explorer連線至Adobe Experience Platform。
+description: 瞭解如何使用流服務API將AzureData Explorer連接到Adobe Experience Platform。
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -14,44 +14,44 @@ ht-degree: 1%
 
 # 建立 [!DNL Azure Azure Data Explorer] 基本連接使用 [!DNL Flow Service] API
 
-基本連線代表來源和Adobe Experience Platform之間已驗證的連線。
+基連接表示源和Adobe Experience Platform之間經過驗證的連接。
 
-本教學課程會逐步引導您完成建立基礎連線的步驟 [!DNL Azure Data Explorer] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教程將指導您完成建立基本連接的步驟 [!DNL Azure Data Explorer] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
 
 
 ## 快速入門
 
-本指南需要妥善了解下列Adobe Experience Platform元件：
+本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
 
-* [來源](../../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
+* [源](../../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
+* [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-以下各節提供您需要了解的其他資訊，以便成功連接到 [!DNL Azure Data Explorer] 使用 [!DNL Flow Service] API。
+以下各節提供了要成功連接到所需的其他資訊 [!DNL Azure Data Explorer] 使用 [!DNL Flow Service] API。
 
 ### 收集所需憑據
 
-為了 [!DNL Flow Service] 連線 [!DNL Azure Data Explorer]，您必須提供下列連線屬性的值：
+為了 [!DNL Flow Service] 連接 [!DNL Azure Data Explorer]，必須為以下連接屬性提供值：
 
 | 憑據 | 說明 |
 | ---------- | ----------- |
 | `endpoint` | 的端點 [!DNL Azure Data Explorer] 伺服器。 |
-| `database` | 的名稱 [!DNL Azure Data Explorer] 資料庫。 |
-| `tenant` | 用來連線至的不重複租用戶ID [!DNL Azure Data Explorer] 資料庫。 |
+| `database` | 名稱 [!DNL Azure Data Explorer] 資料庫。 |
+| `tenant` | 用於連接到的唯一租戶ID [!DNL Azure Data Explorer] 資料庫。 |
 | `servicePrincipalId` | 用於連接到的唯一服務主體ID [!DNL Azure Data Explorer] 資料庫。 |
 | `servicePrincipalKey` | 用於連接到的唯一服務主體密鑰 [!DNL Azure Data Explorer] 資料庫。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 的連接規範ID [!DNL Azure Data Explorer] is `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 連接規範ID [!DNL Azure Data Explorer] 是 `0479cc14-7651-4354-b233-7480606c2ac3`。 |
 
-如需快速入門的詳細資訊，請參閱 [[!DNL Azure Data Explorer] 檔案](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad).
+有關入門的詳細資訊，請參閱此 [[!DNL Azure Data Explorer] 文檔](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../../../landing/api-guide.md).
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../../landing/api-guide.md)。
 
 ## 建立基本連接
 
-基本連接在源和平台之間保留資訊，包括源的驗證憑據、連接的當前狀態和唯一基本連接ID。 基本連線ID可讓您從來源探索和導覽檔案，並識別您要擷取的特定項目，包括其資料類型和格式的相關資訊。
+基本連接將保留源和平台之間的資訊，包括源的驗證憑據、連接的當前狀態和唯一的基本連接ID。 基本連接ID允許您從源中瀏覽和導航檔案，並標識要攝取的特定項目，包括有關其資料類型和格式的資訊。
 
-若要建立基本連線ID，請向 `/connections` 端點提供 [!DNL Azure Data Explorer] 驗證憑證作為要求參數的一部分。
+要建立基本連接ID，請向 `/connections` 提供端點 [!DNL Azure Data Explorer] 身份驗證憑據作為請求參數的一部分。
 
 **API格式**
 
@@ -61,7 +61,7 @@ POST /connections
 
 **要求**
 
-下列請求會為 [!DNL Azure Data Explorer]:
+以下請求為 [!DNL Azure Data Explorer]:
 
 ```shell
 curl -X POST \
@@ -94,15 +94,15 @@ curl -X POST \
 | 參數 | 說明 |
 | --------- | ----------- |
 | `auth.params.endpoint` | 的端點 [!DNL Azure Data Explorer] 伺服器。 |
-| `auth.params.database` | 的名稱 [!DNL Azure Data Explorer] 資料庫。 |
-| `auth.params.tenant` | 用來連線至的不重複租用戶ID [!DNL Azure Data Explorer] 資料庫。 |
+| `auth.params.database` | 名稱 [!DNL Azure Data Explorer] 資料庫。 |
+| `auth.params.tenant` | 用於連接到的唯一租戶ID [!DNL Azure Data Explorer] 資料庫。 |
 | `auth.params.servicePrincipalId` | 用於連接到的唯一服務主體ID [!DNL Azure Data Explorer] 資料庫。 |
 | `auth.params.servicePrincipalKey` | 用於連接到的唯一服務主體密鑰 [!DNL Azure Data Explorer] 資料庫。 |
-| `connectionSpec.id` | 此 [!DNL Azure Data Explorer] 連接規範ID: `0479cc14-7651-4354-b233-7480606c2ac3`. |
+| `connectionSpec.id` | 的 [!DNL Azure Data Explorer] 連接規範ID: `0479cc14-7651-4354-b233-7480606c2ac3`。 |
 
 **回應**
 
-成功的回應會傳回新建立連線的詳細資訊，包括其唯一識別碼(`id`)。 在下一個教學課程中探索資料時需要此ID。
+成功的響應返回新建立的連接的詳細資訊，包括其唯一標識符(`id`)。 在下一教程中瀏覽資料時需要此ID。
 
 ```json
 {
@@ -113,7 +113,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立 [!DNL Azure Data Explorer] 基本連接使用 [!DNL Flow Service] API。 您可以在下列教學課程中使用此基本連線ID:
+按照本教程，您建立了 [!DNL Azure Data Explorer] 基本連接使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
 
 * [使用 [!DNL Flow Service] API](../../explore/tabular.md)
 * [建立資料流，使用 [!DNL Flow Service] API](../../collect/database-nosql.md)

@@ -1,7 +1,7 @@
 ---
-title: 使用Web SDK和邊緣網路伺服器API的混合個人化
-description: 本文示範如何搭配使用Web SDK和伺服器API，在您的Web屬性上部署混合個人化。
-keywords: 個人化；混合；伺服器api;伺服器端；混合實施；
+title: 使用Web SDK和邊緣網路伺服器API的混合個性化
+description: 本文演示了如何將Web SDK與伺服器API結合使用以在Web屬性上部署混合個性化。
+keywords: 個性化；混合；伺服器api;伺服器端；混合實現；
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
 source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
 workflow-type: tm+mt
@@ -10,78 +10,78 @@ ht-degree: 3%
 
 ---
 
-# 使用Web SDK和邊緣網路伺服器API的混合個人化
+# 使用Web SDK和邊緣網路伺服器API的混合個性化
 
 ## 總覽 {#overview}
 
-Hybdrid個人化說明在伺服器端擷取個人化內容的程式，使用 [邊緣網路伺服器API](../..//server-api/overview.md)，並在用戶端呈現，使用 [Web SDK](../home.md).
+Hybdrid個性化描述了使用 [邊緣網路伺服器API](../..//server-api/overview.md)，並使用 [Web SDK](../home.md)。
 
-您可以搭配Adobe Target或Offer decisioning等個人化解決方案使用混合個人化，差異在於 [!UICONTROL 伺服器API] 裝載。
+您可以將混合個性化與個性化解決方案結合使用，如Adobe Target或Offer decisioning，其區別在於 [!UICONTROL 伺服器API] 負載。
 
 ## 先決條件 {#prerequisites}
 
-在Web屬性上實作混合個人化之前，請確定您符合下列條件：
+在Web屬性上實施混合個性化之前，請確保滿足以下條件：
 
-* 您已決定要使用哪個個人化解決方案。 這會影響 [!UICONTROL 伺服器API] 裝載。
-* 您可以存取應用程式伺服器，以便用來 [!UICONTROL 伺服器API] 呼叫。
-* 您可以存取 [邊緣網路伺服器API](../../server-api/authentication.md).
-* 您已正確 [配置和部署](../fundamentals/configuring-the-sdk.md) 網頁上的網頁SDK。
+* 您已決定要使用什麼個性化解決方案。 這將影響 [!UICONTROL 伺服器API] 負載。
+* 您有權訪問可用於 [!UICONTROL 伺服器API] 呼叫。
+* 您有權訪問 [邊緣網路伺服器API](../../server-api/authentication.md)。
+* 您正確 [配置和部署](../fundamentals/configuring-the-sdk.md) 要個性化的頁面上的Web SDK。
 
 ## 流程圖 {#flow-diagram}
 
-以下流程圖表說明提供混合個人化所採取步驟的順序。
+下面的流程圖描述了為實現混合個性化而採取的步驟的順序。
 
-![視覺化流程圖表，顯示提供混合個人化所採取步驟的順序。](assets/hybrid-personalization-diagram.png)
+![可視化流程圖顯示了為提供混合個性化而採取的步驟的順序。](assets/hybrid-personalization-diagram.png)
 
-1. 瀏覽器先前儲存的任何現有Cookie，首碼為 `kndctr_`，會包含在瀏覽器請求中。
-1. 客戶端Web瀏覽器向應用伺服器請求該網頁。
-1. 應用程式伺服器收到頁面請求時，會發出 `POST` 請求 [伺服器API互動式資料收集端點](../../server-api/interactive-data-collection.md) 擷取個人化內容。 此 `POST` 要求包含 `event` 和 `query`. 前一步驟的Cookie（若有）會包含在 `meta>state>entries` 陣列。
-1. 伺服器API會將個人化內容傳回至您的應用程式伺服器。
-1. 應用程式伺服器會傳回HTML回應給用戶端瀏覽器，其中包含 [身分和叢集Cookie](#cookies).
-1. 在用戶端頁面上， [!DNL Web SDK] `applyResponse` 會呼叫，並傳遞標題和內文 [!UICONTROL 伺服器API] 回應。
-1. 此 [!DNL Web SDK] 呈現頁面載入 [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 自動提供，因為 `renderDecisions` 標幟設為 `true`.
-1. 表單式 [!DNL JSON] 選件會透過手動套用 `applyPersonalization` 方法，要更新 [!DNL DOM] 根據個人化選件。
-1. 對於表單式活動，必須手動傳送顯示事件，以指出已顯示選件。 這是透過 `sendEvent` 命令。
+1. 瀏覽器先前儲存的任何現有Cookie，前置詞為 `kndctr_`，包含在瀏覽器請求中。
+1. 客戶端Web瀏覽器從應用伺服器請求網頁。
+1. 當應用伺服器接收到頁面請求時， `POST` 請求 [伺服器API互動式資料收集終結點](../../server-api/interactive-data-collection.md) 獲取個性化內容。 的 `POST` 請求包含 `event` 和 `query`。 上一步中的Cookie（如果可用）包含在 `meta>state>entries` 陣列。
+1. 伺服器API將個性化內容返回到應用伺服器。
+1. 應用伺服器返回對客戶端瀏覽器的HTML響應，其中包含 [標識和群集cookie](#cookies)。
+1. 在客戶端頁面上， [!DNL Web SDK] `applyResponse` 命令被調用，傳遞到 [!UICONTROL 伺服器API] 響應。
+1. 的 [!DNL Web SDK] 呈現頁載入 [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 自動提供，因為 `renderDecisions` 標誌設定為 `true`。
+1. 基於表單 [!DNL JSON] 通過 `applyPersonalization` 方法，更新 [!DNL DOM] 基於個性化服務。
+1. 對於基於表單的活動，必須手動發送顯示事件，以指示何時顯示優惠。 此操作通過 `sendEvent` 的子菜單。
 
 ## Cookie {#cookies}
 
-Cookie可用來保存使用者身分和叢集資訊。  使用混合實作時，Web應用程式伺服器會在請求生命週期期間處理這些Cookie的儲存和傳送。
+Cookie用於保留用戶標識和群集資訊。  當使用混合實現時，Web應用程式伺服器在請求生命週期中處理這些cookie的儲存和發送。
 
-| Cookie | 用途 | 儲存者 | 傳送者 |
+| Cookie | 用途 | 儲存者 | 發送者 |
 |---|---|---|---|
-| `kndctr_AdobeOrg_identity` | 包含使用者身分詳細資料。 | 應用程式伺服器 | 應用程式伺服器 |
+| `kndctr_AdobeOrg_identity` | 包含用戶標識詳細資訊。 | 應用程式伺服器 | 應用程式伺服器 |
 | `kndctr_AdobeOrg_cluster` | 指示應使用哪個邊緣網路群集來滿足請求。 | 應用程式伺服器 | 應用程式伺服器 |
 
-## 請求投放 {#request-placement}
+## 請求放置 {#request-placement}
 
-需要伺服器API請求才能獲取命題併發送顯示通知。 使用混合式實作時，應用程式伺服器會向伺服器API提出這些要求。
+需要伺服器API請求才能獲取主張併發送顯示通知。 當使用混合實現時，應用伺服器向伺服器API發出這些請求。
 
 | 請求 | 製作者 |
 |---|---|
-| Interact請求以檢索主張 | 應用程式伺服器 |
-| 傳送顯示通知的互動請求 | 應用程式伺服器 |
+| 交互請求以檢索主張 | 應用程式伺服器 |
+| 交互請求以發送顯示通知 | 應用程式伺服器 |
 
-## Analytics含意 {#analytics}
+## 分析影響 {#analytics}
 
-實作混合個人化時，您必須特別注意，這樣Analytics就不會多次計算頁面點擊。
+在實施混合個性化時，您必須特別注意，以便在分析中不會多次計算頁面命中。
 
-當您 [設定資料流](../datastreams/overview.md) 若為Analytics，事件會自動轉送，以便擷取頁面點擊。
+當你 [配置資料流](../datastreams/overview.md) 對於分析，自動轉發事件以捕獲頁面命中。
 
-此實作的範例使用兩種不同的資料流：
+此實現的示例使用兩種不同的資料流：
 
-* 為Analytics設定的資料流。 此資料流用於Web SDK互動。
-* 不使用Analytics設定的第二個資料流。 此資料流用於伺服器API請求。
+* 為分析配置的資料流。 此資料流用於Web SDK交互。
+* 沒有分析配置的第二個資料流。 此資料流用於伺服器API請求。
 
-如此一來，伺服器端請求就不會註冊任何Analytics事件，但用戶端請求會註冊。 這會導致Analytics請求被準確計算。
+這樣，伺服器端請求不會註冊任何分析事件，但客戶端請求會註冊。 這將導致準確計算分析請求。
 
 
-## 伺服器端要求 {#server-side-request}
+## 伺服器端請求 {#server-side-request}
 
-以下範例要求說明您的應用程式伺服器可用於擷取個人化內容的伺服器API要求。
+下面的示例請求說明了應用程式伺服器可用於檢索個性化內容的伺服器API請求。
 
 >[!IMPORTANT]
 >
->此範例要求使用Adobe Target作為個人化解決方案。 您的請求可能會因您選擇的個人化解決方案而異。
+>此示例請求將Adobe Target用作個性化解決方案。 您的請求可能會根據您選擇的個性化解決方案而有所不同。
 
 
 **API格式**
@@ -162,12 +162,12 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | 參數 | 類型 | 必填 | 說明 |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | 可以。 | 用來將互動傳遞至邊緣網路之資料流的ID。 請參閱 [資料流概觀](../datastreams/overview.md) 了解如何設定資料流。 |
-| `requestId` | `String` | 無 | 用於關聯內部伺服器請求的隨機ID。 若未提供，邊緣網路將產生一個，並在回應中傳回。 |
+| `dataStreamId` | `String` | 可以。 | 用於將交互傳遞到邊緣網路的資料流的ID。 查看 [資料流概述](../datastreams/overview.md) 瞭解如何配置資料流。 |
+| `requestId` | `String` | 無 | 用於關聯內部伺服器請求的隨機ID。 如果未提供，則邊緣網路將生成一個並在響應中返回。 |
 
-### 伺服器端回應 {#server-response}
+### 伺服器端響應 {#server-response}
 
-以下範例回應顯示伺服器API回應的外觀。
+下面的示例響應顯示伺服器API響應可能的樣式。
 
 
 ```json
@@ -201,9 +201,9 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 }
 ```
 
-## 用戶端要求 {#client-request}
+## 客戶端請求 {#client-request}
 
-在用戶端頁面上， [!DNL Web SDK] `applyResponse` 會呼叫命令，並傳遞伺服器端回應的標題和內文。
+在客戶端頁面上， [!DNL Web SDK] `applyResponse` 命令被調用，並傳遞伺服器端響應的標頭和正文。
 
 ```js
    alloy("applyResponse", {
@@ -253,7 +253,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
    ).then(applyPersonalization("sample-json-offer"));
 ```
 
-表單式 [!DNL JSON] 選件會透過手動套用 `applyPersonalization` 方法，要更新 [!DNL DOM] 根據個人化選件。 對於表單式活動，必須手動傳送顯示事件，以指出已顯示選件。 這是透過 `sendEvent` 命令。
+基於表單 [!DNL JSON] 通過 `applyPersonalization` 方法，更新 [!DNL DOM] 基於個性化服務。 對於基於表單的活動，必須手動發送顯示事件，以指示何時顯示優惠。 此操作通過 `sendEvent` 的子菜單。
 
 ```js
 function sendDisplayEvent(decision) {
@@ -278,6 +278,6 @@ function sendDisplayEvent(decision) {
 }
 ```
 
-## 範例應用程式 {#sample-app}
+## 示例應用程式 {#sample-app}
 
-為協助您實驗並深入了解此類個人化，我們提供範例應用程式，供您下載並用於測試。 您可以從以下網址下載應用程式，以及如何使用應用程式的詳細指示 [GitHub存放庫](https://github.com/adobe/alloy-samples).
+為了幫助您進行實驗並瞭解有關這種個性化類型的更多資訊，我們提供了一個示例應用程式，您可以下載該應用程式並將其用於測試。 您可以從此下載應用程式以及有關如何使用它的詳細說明 [GitHub儲存庫](https://github.com/adobe/alloy-samples)。

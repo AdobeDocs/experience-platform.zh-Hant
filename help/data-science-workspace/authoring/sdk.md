@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；開發人員指南； SDK；模型編寫； Data Science Workspace；熱門主題；測試
+keywords: Experience Platform；開發人員指南；SDK；模型創作；資料科學工作區；熱門主題；測試
 solution: Experience Platform
-title: 模型編寫SDK
-description: 模型製作SDK可讓您開發可在Adobe Experience Platform Data Science Workspace中使用的自訂機器學習秘訣和功能管道，在PySpark和Spark(Scala)中提供可實作的範本。
+title: 模型創作SDK
+description: 通過「模型創作SDK」，您可以開發可用於Adobe Experience Platform資料科學工作區的自定義機器學習配方和特徵管道，在PySpark和Spark(Scala)中提供可實施模板。
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 1%
 
 ---
 
-# 模型編寫SDK
+# 模型創作SDK
 
-模型編寫SDK可讓您開發自訂的機器學習秘訣和功能管道，以用於 [!DNL Adobe Experience Platform] Data Science Workspace，提供可實作的範本，位於 [!DNL PySpark] 和 [!DNL Spark (Scala)].
+通過「模型創作SDK」，您可以開發可用於的自定義機器學習配方和特徵管道 [!DNL Adobe Experience Platform] Data Science Workspace，在 [!DNL PySpark] 和 [!DNL Spark (Scala)]。
 
-本檔案提供有關Model Authoring SDK中各種類別的資訊。
+本文檔提供有關在模型創作SDK中找到的各種類的資訊。
 
-## DataLoader {#dataloader}
+## 資料載入器 {#dataloader}
 
-DataLoader類封裝與檢索、過濾和返回原始輸入資料相關的任何內容。 輸入資料的範例包括訓練、評分或功能工程的資料。 資料載入器擴展抽象類 `DataLoader` 和必須覆蓋抽象方法 `load`.
+DataLoader類封裝與檢索、篩選和返回原始輸入資料相關的任何內容。 輸入資料的示例包括用於培訓、評分或特徵工程的資料。 資料載入器擴展抽象類 `DataLoader` 必須覆蓋抽象方法 `load`。
 
 **PySpark**
 
-下表描述了PySpark資料載入器類的抽象方法：
+下表介紹了PySpark資料載入器類的抽象方法：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
@@ -36,13 +36,13 @@ DataLoader類封裝與檢索、過濾和返回原始輸入資料相關的任何�
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>將Platform資料載入並返回為Apcontis DataFrame</p>
+                <p>將平台資料作為Panotis DataFrame載入和返回</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性映射</li>
-                    <li><code>spark</code>:Spark會話</li>
+                    <li><code>spark</code>:火花會話</li>
                 </ul>
             </td>
         </tr>
@@ -51,12 +51,12 @@ DataLoader類封裝與檢索、過濾和返回原始輸入資料相關的任何�
 
 **火花**
 
-下表說明 [!DNL Spark] 資料載入器類：
+下表介紹了 [!DNL Spark] 資料載入器類：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
@@ -64,12 +64,12 @@ DataLoader類封裝與檢索、過濾和返回原始輸入資料相關的任何�
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>以DataFrame載入並傳回Platform資料</p>
+                <p>將平台資料作為DataFrame載入和返回</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>:配置屬性映射</li>
-                    <li><code>sparkSession</code>:Spark會話</li>
+                    <li><code>sparkSession</code>:火花會話</li>
                 </ul>
             </td>
         </tr>
@@ -78,7 +78,7 @@ DataLoader類封裝與檢索、過濾和返回原始輸入資料相關的任何�
 
 ### 從 [!DNL Platform] 資料集 {#load-data-from-a-platform-dataset}
 
-下列範例會擷取 [!DNL Platform] 資料（依ID）並傳回DataFrame，其中資料集ID(`datasetId`)是設定檔案中已定義的屬性。
+以下示例檢索 [!DNL Platform] 按ID顯示的資料並返回DataFrame，其中資料集ID(`datasetId`)是配置檔案中的已定義屬性。
 
 **PySpark**
 
@@ -128,7 +128,7 @@ class MyDataLoader(DataLoader):
         return pd
 ```
 
-**Spark(Scala)**
+**火花（斯卡拉）**
 
 ```scala
 // Spark
@@ -191,18 +191,18 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver {#datasaver}
+## 資料保護程式 {#datasaver}
 
-DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自計分或功能工程的輸出資料。 資料保護程式擴展了抽象類 `DataSaver` 和必須覆蓋抽象方法 `save`.
+DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自評分或功能工程的輸出資料。 資料保存程式擴展抽象類 `DataSaver` 必須覆蓋抽象方法 `save`。
 
 **PySpark**
 
-下表說明 [!DNL PySpark] 資料保護程式類：
+下表介紹了 [!DNL PySpark] 資料保護程式類：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
@@ -210,27 +210,27 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>以DataFrame形式接收輸出資料，並將其儲存在Platform資料集中</p>
+                <p>將輸出資料作為DataFrame接收，並將其儲存在平台資料集中</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性映射</li>
-                    <li><code>dataframe</code>:要以DataFrame形式儲存的資料</li>
+                    <li><code>dataframe</code>:以DataFrame形式儲存的資料</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark(Scala)**
+**火花（斯卡拉）**
 
-下表說明 [!DNL Spark] 資料保護程式類：
+下表介紹了 [!DNL Spark] 資料保護程式類：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
@@ -238,26 +238,26 @@ DataSaver類封裝了與儲存輸出資料相關的任何內容，包括來自�
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>以DataFrame形式接收輸出資料，並將其儲存在Platform資料集中</p>
+                <p>將輸出資料作為DataFrame接收，並將其儲存在平台資料集中</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>:配置屬性映射</li>
-                    <li><code>dataFrame</code>:要以DataFrame形式儲存的資料</li>
+                    <li><code>dataFrame</code>:以DataFrame形式儲存的資料</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-### 將資料儲存至 [!DNL Platform] 資料集 {#save-data-to-a-platform-dataset}
+### 將資料保存到 [!DNL Platform] 資料集 {#save-data-to-a-platform-dataset}
 
-若要將資料儲存至 [!DNL Platform] 資料集，必須在設定檔案中提供或定義屬性：
+為了將資料儲存到 [!DNL Platform] 資料集，必須在配置檔案中提供或定義屬性：
 
-- 有效 [!DNL Platform] 資料要儲存至的資料集ID
-- 屬於您組織的租用戶ID
+- 有效 [!DNL Platform] 資料集ID，資料將儲存到
+- 屬於您組織的租戶ID
 
-下列範例會儲存資料(`prediction`)到 [!DNL Platform] 資料集，資料集ID(`datasetId`)和租用戶ID(`tenantId`)是在設定檔案中定義的屬性。
+以下示例儲存資料(`prediction`) [!DNL Platform] 資料集，其中資料集ID(`datasetId`)和租戶ID(`tenantId`)是配置檔案中定義的屬性。
 
 
 **PySpark**
@@ -325,7 +325,7 @@ class MyDataSaver(DataSaver):
             .save()
 ```
 
-**Spark(Scala)**
+**火花（斯卡拉）**
 
 ```scala
 // Spark
@@ -391,32 +391,32 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer {#datasettransformer}
+## 資料集轉換器 {#datasettransformer}
 
-DatasetTransformer類別會修改和轉換資料集的結構。 此 [!DNL Sensei Machine Learning Runtime] 不需要定義此元件，且會根據您的需求實作。
+DatasetTransformer類修改和轉換資料集的結構。 的 [!DNL Sensei Machine Learning Runtime] 不要求定義此元件，並根據您的要求實施。
 
-關於功能管線，資料集轉換器可以與功能管線工廠協作使用，以準備用於功能工程的資料。
+關於特徵管線，資料集變換器可以與特徵管線工廠協同使用，以準備用於特徵工程的資料。
 
 **PySpark**
 
-下表介紹了PySpark資料集變壓器類的類方法：
+下表介紹了PySpark資料集轉換器類的類方法：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>transform(self, configProperties, dataset)</code></p>
-                <p>以資料集作為輸入，並輸出新的衍生資料集</p>
+                <p><i>抽象</i><br/><code>transform(self, configProperties, dataset)</code></p>
+                <p>將資料集作為輸入並輸出新的派生資料集</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性映射</li>
                     <li><code>dataset</code>:轉換的輸入資料集</li>
                 </ul>
@@ -425,14 +425,14 @@ DatasetTransformer類別會修改和轉換資料集的結構。 此 [!DNL Sensei
     </tbody>
 </table>
 
-**Spark(Scala)**
+**火花（斯卡拉）**
 
-下表說明 [!DNL Spark] 資料集變壓器類別：
+下表介紹了 [!DNL Spark] 資料集轉換器類：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
@@ -440,7 +440,7 @@ DatasetTransformer類別會修改和轉換資料集的結構。 此 [!DNL Sensei
         <tr>
             <td>
                 <p><code>transform(configProperties, dataset)</code></p>
-                <p>以資料集作為輸入，並輸出新的衍生資料集</p>
+                <p>將資料集作為輸入並輸出新的派生資料集</p>
             </td>
             <td>
                 <ul>
@@ -452,66 +452,66 @@ DatasetTransformer類別會修改和轉換資料集的結構。 此 [!DNL Sensei
     </tbody>
 </table>
 
-## FeaturePipelineFactory {#featurepipelinefactory}
+## 特徵管道工廠 {#featurepipelinefactory}
 
-FeaturePipelineFactory類包含特徵提取算法，並定義特徵管道從頭到尾的階段。
+FeaturePipelineFactory類包含特徵提取算法，並定義從開始到結束的特徵管線階段。
 
 **PySpark**
 
-下表描述了PySpark FeaturePipelineFactory的類方法：
+下表介紹了PySpark FeaturePipelineFactory的類方法：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>create_pipeline(self, configProperties)</code></p>
-                <p>建立並返回包含一系列火花變壓器的火花管道</p>
+                <p><i>抽象</i><br/><code>create_pipeline(self, configProperties)</code></p>
+                <p>建立並返回包含一系列火花變壓器的火花管線</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性映射</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>抽象</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>從配置屬性檢索並返回參數映射</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>sparkSession</code>:Spark會話</li>
+                    <li><code>sparkSession</code>:火花會話</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark(Scala)**
+**火花（斯卡拉）**
 
-下表說明 [!DNL Spark] FeaturePipelineFactory:
+下表介紹了 [!DNL Spark] 特徵管道工廠：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>createPipeline(configProperties)</code></p>
-                <p>建立並返回包含一系列變壓器的管道</p>
+                <p><i>抽象</i><br/><code>createPipeline(configProperties)</code></p>
+                <p>建立並返回包含一系列變形器的管道</p>
             </td>
             <td>
                 <ul>
@@ -521,106 +521,106 @@ FeaturePipelineFactory類包含特徵提取算法，並定義特徵管道從頭�
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>抽象</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>從配置屬性檢索並返回參數映射</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>sparkSession</code>:Spark會話</li>
+                    <li><code>sparkSession</code>:火花會話</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-## PipelineFactory {#pipelinefactory}
+## 管道工廠 {#pipelinefactory}
 
 PipelineFactory類封裝了模型培訓和評分的方法和定義，其中培訓邏輯和算法以 [!DNL Spark] 管道。
 
 **PySpark**
 
-下表描述了PySpark管道工廠的類方法：
+下表介紹了PySpark PipelineFactory的類方法：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>apply(self, configProperties)</code></p>
-                <p>建立並傳回Spark管道，其中包含用於模型訓練和評分的邏輯和演算法</p>
+                <p><i>抽象</i><br/><code>apply(self, configProperties)</code></p>
+                <p>建立並返回包含模型訓練和評分的邏輯和算法的Spark Pipeline</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>train(self, configProperties, dataframe)</code></p>
-                <p>傳回自訂管道，其中包含用於訓練模型的邏輯和演算法。 如果使用Spark管道，則不需要此方法</p>
+                <p><i>抽象</i><br/><code>train(self, configProperties, dataframe)</code></p>
+                <p>返回包含用於訓練模型的邏輯和算法的自定義管線。 如果使用Spark Pipeline，則不需要此方法</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>dataframe</code>:訓練輸入的功能資料集</li>
+                    <li><code>dataframe</code>:用於訓練輸入的特徵資料集</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
-                <p>使用訓練的模型進行分數並傳回結果</p>
+                <p><i>抽象</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
+                <p>使用已訓練的模型進行評分並返回結果</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>dataframe</code>:輸入計分資料集</li>
+                    <li><code>dataframe</code>:用於評分的輸入資料集</li>
                     <li><code>model</code>:用於評分的訓練模型</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>抽象</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>從配置屬性檢索並返回參數映射</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>sparkSession</code>:Spark會話</li>
+                    <li><code>sparkSession</code>:火花會話</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark(Scala)**
+**火花（斯卡拉）**
 
-下表說明 [!DNL Spark] 管道工廠：
+下表介紹了 [!DNL Spark] 管道工廠：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>apply(configProperties)</code></p>
-                <p>建立並傳回管道，其中包含用於模型訓練和計分的邏輯和演算法</p>
+                <p><i>抽象</i><br/><code>apply(configProperties)</code></p>
+                <p>建立並返回包含用於模型訓練和評分的邏輯和算法的管線</p>
             </td>
             <td>
                 <ul>
@@ -630,58 +630,58 @@ PipelineFactory類封裝了模型培訓和評分的方法和定義，其中培�
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>抽象</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>從配置屬性檢索並返回參數映射</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>sparkSession</code>:Spark會話</li>
+                    <li><code>sparkSession</code>:火花會話</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-## MLEvaluator {#mlevaluator}
+## MLE值器 {#mlevaluator}
 
-MLEvaluator類提供了定義評估度量和確定培訓和測試資料集的方法。
+MLEvaluator類提供了定義評估度量以及確定培訓和測試資料集的方法。
 
 **PySpark**
 
-下表描述了PySpark ML值器的類方法：
+下表介紹了PySpark MLEvaluator的類方法：
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>split(self, configProperties, dataframe)</code></p>
-                <p>將輸入資料集分割為訓練和測試子集</p>
+                <p><i>抽象</i><br/><code>split(self, configProperties, dataframe)</code></p>
+                <p>將輸入資料集拆分為培訓和測試子集</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
+                    <li><code>self</code>:自引用</li>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>dataframe</code>:要分割的輸入資料集</li>
+                    <li><code>dataframe</code>:要拆分的輸入資料集</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
-                <p>評估經過訓練的模型並返回評估結果</p>
+                <p><i>抽象</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
+                <p>評估已訓練的模型並返回評估結果</p>
             </td>
             <td>
                 <ul>
-                    <li><code>self</code>:自我參考</li>
-                    <li><code>dataframe</code>:由訓練和測試資料組成的DataFrame</li>
-                    <li><code>model</code>:訓練過的模型</li>
+                    <li><code>self</code>:自引用</li>
+                    <li><code>dataframe</code>:由訓練和測試資料組成的資料框架</li>
+                    <li><code>model</code>:一個訓練好的模型</li>
                     <li><code>configProperties</code>:配置屬性</li>
                 </ul>
             </td>
@@ -689,40 +689,40 @@ MLEvaluator類提供了定義評估度量和確定培訓和測試資料集的方
     </tbody>
 </table>
 
-**Spark(Scala)**
+**火花（斯卡拉）**
 
-下表說明 [!DNL Spark] MLEvaluator:
+下表介紹了 [!DNL Spark] MLEvaluator:
 
 <table>
     <thead>
         <tr>
-            <th>方法和說明</th>
+            <th>方法和描述</th>
             <th>參數</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>split(configProperties, data)</code></p>
-                <p>將輸入資料集分割為訓練和測試子集</p>
+                <p><i>抽象</i><br/><code>split(configProperties, data)</code></p>
+                <p>將輸入資料集拆分為培訓和測試子集</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>data</code>:要分割的輸入資料集</li>
+                    <li><code>data</code>:要拆分的輸入資料集</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>摘要</i><br/><code>evaluate(configProperties, model, data)</code></p>
-                <p>評估經過訓練的模型並返回評估結果</p>
+                <p><i>抽象</i><br/><code>evaluate(configProperties, model, data)</code></p>
+                <p>評估已訓練的模型並返回評估結果</p>
             </td>
             <td>
                 <ul>
                     <li><code>configProperties</code>:配置屬性</li>
-                    <li><code>model</code>:訓練過的模型</li>
-                    <li><code>data</code>:由訓練和測試資料組成的DataFrame</li>
+                    <li><code>model</code>:一個訓練好的模型</li>
+                    <li><code>data</code>:由訓練和測試資料組成的資料框架</li>
                 </ul>
             </td>
         </tr>

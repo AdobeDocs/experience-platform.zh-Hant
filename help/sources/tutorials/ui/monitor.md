@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；監視器帳戶；監視器資料流；資料流
-description: Adobe Experience Platform中的來源連接器可讓您依排程內嵌外部來源資料。 本教學課程提供從來源工作區檢視現有資料流的步驟。
+keywords: Experience Platform；首頁；熱門主題；監視帳戶；監視資料流；資料流
+description: Adobe Experience Platform的源連接器提供了定期接收外部源資料的能力。 本教程提供了從源工作區查看現有資料流的步驟。
 solution: Experience Platform
 title: 監視UI中的資料流
 type: Tutorial
@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # 監視UI中的資料流
 
-Adobe Experience Platform中的來源連接器可讓您依排程內嵌外部來源資料。
+Adobe Experience Platform的源連接器提供了定期接收外部源資料的能力。
 
-要了解有關監視源連接器資料流的詳細資訊，請閱讀 [監視源中的資料流](../../../dataflows/ui/monitor-sources.md) 教學課程。
+要瞭解有關監視源連接器的資料流的詳細資訊，請閱讀 [監視源中的資料流](../../../dataflows/ui/monitor-sources.md) 教程。

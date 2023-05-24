@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；客戶屬性連接器
 solution: Experience Platform
-title: 客戶屬性來源連接器概述
-description: 了解如何使用API或使用者介面將客戶屬性連線至Adobe Experience Platform
+title: 客戶屬性來源連接器概覽
+description: 瞭解如何使用API或用戶介面將客戶屬性連接到Adobe Experience Platform
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,26 +13,26 @@ ht-degree: 10%
 
 # 客戶屬性連接器
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
+Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) 在「Experience Cloud」中，您可以上傳從客戶關係管理(CRM)資料庫擷取的企業資料。 您可以將資料上傳至 Experience Cloud 中的客戶屬性資料來源，然後將資料用於 Adobe Analytics 和 Adobe Target。
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) inExperience Cloud使您能夠從客戶關係管理(CRM)資料庫上載捕獲的企業資料。 您可以將資料上傳至 Experience Cloud 中的客戶屬性資料來源，然後將資料用於 Adobe Analytics 和 Adobe Target。
 
-Experience Platform支援擷取 [!DNL Customer Attributes] 設定檔資料匯入Adobe Experience Platform。
+Experience Platform為攝取提供支援 [!DNL Customer Attributes] 記錄資料到Adobe Experience Platform。
 
-## 資料集和結構
+## 資料集和架構
 
-此 [!DNL Customer Attributes] 來源會自動建立資料集，以便登陸。 此自動建立的資料集已修正，無法手動選取。 來源也會根據輸入資料來源自動建立資料集的結構。 此程式還涉及自動建立架構與來源資料之間的必要對應。
+的 [!DNL Customer Attributes] 源自動建立資料集，以便資料登錄。 此自動建立的資料集是固定的，無法手動選擇。 源還基於輸入資料源自動建立資料集的模式。 此過程還涉及在架構和源資料之間自動建立必要的映射。
 
 ## 身分
 
-資料集的主要身分會包含在來源資料之CSV檔案的第一欄中。 此 [!DNL Customer Attributes] 來源會假設身分一律對應至 [`CORE` 命名空間](../../../identity-service/namespaces.md)，此系統產生的命名空間支援 [[!DNL Identity Service]](../../../identity-service/home.md).
+資料集的主標識包含在源資料的CSV檔案的第一列中。 的 [!DNL Customer Attributes] 源假定標識始終映射到 [`CORE` 命名空間](../../../identity-service/namespaces.md)，系統生成的命名空間，支援 [[!DNL Identity Service]](../../../identity-service/home.md)。
 
-使用 [!DNL Customer Attributes] 源 [!DNL Customer Attributes] 假設架構的主要身分一律位於身分對應中。 [!DNL Customer Attributes] 然後以自動方式建立來源ID與身分對應UUID的對應。
+使用時，無法為標識選擇現有命名空間 [!DNL Customer Attributes] 源 [!DNL Customer Attributes] 假定架構的主標識始終位於標識映射中。 [!DNL Customer Attributes] 然後以自動方式建立源ID到標識映射UUID的映射。
 
-針對 [!DNL Customer Attributes] 連結至其他 [!DNL Profile] 資料集、其資料和身分必須能與Experience CloudID相符。
+對於 [!DNL Customer Attributes] 與其他 [!DNL Profile] 資料集，其資料和標識必須能夠與Experience CloudID匹配。
 
-您可以建立 `CORE` 命名空間，方法是使用 [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [行動SDK](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity)，或 [Experience CloudID服務API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant).
+您可以 `CORE` 命名空間，方法是使用 [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en)。 [移動SDK](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity)，或 [Experience CloudID服務API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant)。
 
-此 [!DNL Customer Attributes] 檔案不會進一步填入任何其他身分關係。 例如，若 [!DNL Customer Attributes] 來源資料集包含 **電子郵件** 和 **忠誠度ID** 欄位，則這些欄位必須標示為架構中的身分欄位，才能加以處理 [!DNL Identity Service].
+的 [!DNL Customer Attributes] 檔案不會進一步填充任何其他身份關係。 例如，如果 [!DNL Customer Attributes] 源資料集包含 **電子郵件** 和 **會員ID** 欄位，則必須將這些欄位標籤為架構中的標識欄位，以便處理到 [!DNL Identity Service]。
 
-請參閱 [建立 [!DNL Customer Attributes] UI中的源連接](../../tutorials/ui/create/adobe-applications/customer-attributes.md) 以取得更多資訊。
+請參閱上的教程 [建立 [!DNL Customer Attributes] UI中的源連接](../../tutorials/ui/create/adobe-applications/customer-attributes.md) 的子菜單。

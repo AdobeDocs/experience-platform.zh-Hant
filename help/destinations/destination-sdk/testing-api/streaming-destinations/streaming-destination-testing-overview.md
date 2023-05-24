@@ -1,6 +1,6 @@
 ---
-description: 了解如何在發佈前，使用目的地測試API來測試您的串流目的地設定。
-title: 串流目的地測試API概觀
+description: 瞭解如何在發佈流目標配置之前使用目標測試APItest流目標配置。
+title: 流目標測試API概述
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
 workflow-type: tm+mt
@@ -10,48 +10,48 @@ ht-degree: 0%
 ---
 
 
-# 串流目的地測試API概觀
+# 流目標測試API概述
 
-作為Destination SDK的一部分，Adobe提供開發人員工具，協助您設定和測試目的地。 本頁面說明如何測試您的目的地設定。 有關如何建立消息轉換模板的資訊，請參閱 [建立並測試訊息轉換範本](../../testing-api/streaming-destinations/create-template.md).
+作為Destination SDK的一部分，Adobe提供開發人員工具，幫助您配置和測試目標。 本頁介紹如何test目標配置。 有關如何建立消息轉換模板的資訊，請閱讀 [建立和test消息轉換模板](../../testing-api/streaming-destinations/create-template.md)。
 
-結束日期 **測試您的目的地是否已正確設定，以及驗證資料流是否完整性以傳送至您設定的目的地**，請使用 *目的地測試工具*. 透過此工具，您可以傳送訊息至REST API端點，以測試您的目的地設定。
+至 **test：是否正確配置了目標並驗證到配置目標的資料流的完整性**，使用 *目標測試工具*。 使用此工具，您可以通過向REST API終結點發送消息來test目標配置。
 
-下圖說明如何測試您的目的地 [目標配置工作流](../../guides/configure-destination-instructions.md) 在Destination SDK中：
+下面說明測試目標與 [目標配置工作流](../../guides/configure-destination-instructions.md) Destination SDK:
 
-![目標測試步驟適用於目標配置工作流的圖形](../../assets/testing-api/test-destination-step.png)
+![目標測試步驟適合目標配置工作流的圖形](../../assets/testing-api/test-destination-step.png)
 
-## 目的地測試工具 — 用途和必要條件 {#destination-testing-tool}
+## 目標測試工具 — 目的和先決條件 {#destination-testing-tool}
 
-使用目的地測試工具，將訊息傳送至您在 [伺服器配置](../../authoring-api/destination-server/create-destination-server.md).
+使用目標測試工具通過向您在中提供的合作夥伴終結點發送消息來test目標配置 [伺服器配置](../../authoring-api/destination-server/create-destination-server.md)。
 
-使用工具之前，請確定您：
-* 依照 [目標配置工作流](../../authoring-api/destination-configuration/create-destination-configuration.md) 和
-* 建立與目的地的連線，如 [如何取得目的地執行個體ID](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
+使用該工具之前，請確保：
+* 按照中概述的步驟配置目標 [目標配置工作流](../../authoring-api/destination-configuration/create-destination-configuration.md) 和
+* 建立到目標的連接，如中所述 [如何獲取目標實例ID](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id)。
 
-透過此工具，在設定您的目的地後，您可以：
-* 測試您的目的地是否已正確設定；
-* 驗證資料流到您配置的目標的完整性。
+使用此工具，在配置目標後，您可以：
+* Test：目標配置正確；
+* 驗證資料流到配置目標的完整性。
 
 ### 如何使用 {#how-to-use}
 
 >[!NOTE]
 >
->如需完整的API參考檔案，請參閱 [目的地測試API操作](../../testing-api/streaming-destinations/destination-testing-api.md).
+>有關完整的API參考文檔，請閱讀 [目標測試API操作](../../testing-api/streaming-destinations/destination-testing-api.md)。
 
-您可以使用或不在請求上新增設定檔，對目的地測試API端點進行呼叫。
+可以在請求中添加配置檔案或不添加配置檔案時調用目標測試API終結點。
 
-如果您未在請求中新增任何設定檔，Adobe會在內部為您產生這些設定檔，並將其新增至請求。 如果您想要產生要在此請求中使用的設定檔，請參閱 [設定檔產生API參考範例](../../testing-api/streaming-destinations/sample-profile-generation-api.md). 您需要根據來源XDM架構產生設定檔，如 [API參考](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). 請注意，來源架構為 [聯合方案](../../../../profile/ui/union-schema.md) 所使用沙箱的區段。
+如果您未在請求中添加任何配置檔案，Adobe將在內部為您生成這些配置檔案並將它們添加到請求中。 如果要生成要在此請求中使用的配置檔案，請參閱 [示例配置檔案生成API參考](../../testing-api/streaming-destinations/sample-profile-generation-api.md)。 您需要根據源XDM架構生成配置檔案，如 [API引用](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema)。 請注意，源架構 [聯合架構](../../../../profile/ui/union-schema.md) 你用的沙盒。
 
-回應包含目標請求處理的結果。 請求包含三個主要部分：
-* 由目標Adobe產生的請求。
-* 從目的地收到的回應。
-* 請求中傳送的設定檔清單，無論設定檔是否為 [由您在請求中新增](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)，或由Adobe產生(若 [目標測試請求的正文為空](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+響應包含目標請求處理的結果。 請求包括三個主要部分：
+* 由Adobe為目標生成的請求。
+* 從目標接收的響應。
+* 請求中發送的配置檔案清單，配置檔案是否 [由您在請求中添加](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles)，或由Adobe生成 [目標測試請求的正文為空](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles)。
 
 >[!NOTE]
 >
->Adobe可產生多個請求和回應組。 例如，如果您傳送10個設定檔至具有 `maxUsersPerRequest` 值為7時，會有一個請求具有7個設定檔，另一個請求具有3個設定檔。
+>Adobe可以生成多個請求和響應對。 例如，如果向具有 `maxUsersPerRequest` 值為7，將有一個請求帶有7個配置檔案，另一個請求帶有3個配置檔案。
 
-**內文中含有設定檔參數的要求範例**
+**正文中具有配置檔案參數的示例請求**
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/3e0ac39c-ef14-4101-9fd9-cf0909814510' \
@@ -108,7 +108,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }'
 ```
 
-**內文中沒有設定檔參數的要求範例**
+**主體中不帶配置檔案參數的示例請求**
 
 
 ```shell
@@ -124,7 +124,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **範例回應**
 
-請注意， `results.httpCalls` 參數是您的REST API專屬的。
+請注意， `results.httpCalls` 參數是特定於您的REST API的。
 
 ```json
 {
@@ -228,8 +228,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-如需請求和回應參數的說明，請參閱 [目的地測試API操作](../../testing-api/streaming-destinations/destination-testing-api.md).
+有關請求和響應參數的說明，請參閱 [目標測試API操作](../../testing-api/streaming-destinations/destination-testing-api.md)。
 
 ## 後續步驟
 
-測試您的目的地並確認其設定正確後，請使用 [目的地發佈API](../../publishing-api/create-publishing-request.md) 將配置提交到Adobe以供審核。
+測試目標並確認其配置正確後，使用 [目標發佈API](../../publishing-api/create-publishing-request.md) 將您的配置提交給Adobe以供審閱。

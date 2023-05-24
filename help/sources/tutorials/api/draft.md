@@ -1,42 +1,43 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流量服務；
-title: 使用流服務API起草資料流
-description: 了解如何使用流量服務API將資料流設定為草稿狀態。
+keywords: Experience Platform；首頁；熱門主題；流式服務；
+title: 使用流服務API繪製資料流
+description: 瞭解如何使用流服務API將資料流設定為草稿狀態。
 badge: label="新功能" type="正"
-source-git-commit: d093e34ae4b353d1ed6db922b6da66cf23f25c48
+exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 2%
 
 ---
 
-# 使用流服務API起草資料流
+# 使用流服務API繪製資料流
 
-使用流量服務API時，請提供 `mode=draft` 查詢參數。 草稿稍後可以更新為新資訊，並在準備就緒後發佈。 本教學課程涵蓋使用流程服務API，將資料流設定為草稿狀態的步驟。
+使用流服務API時，通過提供 `mode=draft` 查詢參數。 稍後可以用新資訊更新草稿，然後在草稿準備好後發佈。 本教程介紹使用流服務API將資料流設定為草稿狀態的步驟。
 
 ## 快速入門
 
-本教學課程需要您妥善了解下列Adobe Experience Platform元件：
+本教程要求您對以下Adobe Experience Platform元件有一定的瞭解：
 
-* [來源](../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
+* [源](../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
+* [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
 ### 先決條件
 
-本教學課程需要您已產生建立資料流所需的資產。 這包括下列項目：
+本教程要求您已生成建立資料流所需的資產。 這包括以下內容：
 
-* 已驗證的基本連接
+* 已驗證的基連接
 * 源連接
 * 目標XDM架構
 * 目標資料集
 * 目標連接
-* 對應
+* 映射
 
-如果您尚未擁有這些值，請從中選取來源 [來源中的目錄概述](../../home.md). 然後，按照指定源的說明生成起草資料流所需的資產。
+如果尚沒有這些值，則從中選擇源 [源概覽中的目錄](../../home.md)。 然後，按照給定源的說明生成起草資料流所需的資產。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../landing/api-guide.md).
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../landing/api-guide.md)。
 
 ## 將資料流設定為草稿狀態
 
@@ -44,7 +45,7 @@ ht-degree: 2%
 
 ### 起草資料流
 
-若要將資料流設定為草稿，請向 `/flows` 端點 `mode=draft` 作為查詢參數。 這可讓您建立資料流並將其儲存為草稿。
+要將資料流設定為草稿，請向 `/flows` 添加端點時 `mode=draft` 作為查詢參數。 這允許您建立資料流並將其另存為草稿。
 
 **API格式**
 
@@ -54,7 +55,7 @@ POST /flows?mode=draft
 
 | 參數 | 說明 |
 | --- | --- |
-| `mode` | 由用戶提供的查詢參數，它決定資料流的狀態。 要將資料流設定為草稿，請設定 `mode` to `draft`. |
+| `mode` | 用戶提供的查詢參數，它決定資料流的狀態。 要將資料流設定為草稿，請設定 `mode` 至 `draft`。 |
 
 **要求**
 
@@ -84,7 +85,7 @@ POST /flows?mode=draft
 
 **回應**
 
-成功的回應會傳回 `id` 和對應 `etag` 資料流的資料流。
+成功的響應返回 `id` 和對應 `etag` 資料流。
 
 ```json
 {
@@ -95,7 +96,7 @@ POST /flows?mode=draft
 
 ### 更新資料流
 
-若要更新草稿，請向 `/flows` 端點，同時提供要更新的資料流的ID。 在此步驟中，您也必須提供 `If-Match` header參數，與 `etag` 要更新的資料流。
+要更新草稿，請向 `/flows` 終結點，同時提供要更新的資料流的ID。 在此步驟中，您還必須提供 `If-Match` 標頭參數，與 `etag` 要更新的資料流。
 
 **API格式**
 
@@ -105,7 +106,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求將映射轉換添加到起草的資料流。
+以下請求將映射轉換添加到已起草的資料流。
 
 ```shell
 curl -X PATCH \
@@ -134,7 +135,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回您的流程ID，並 `etag`. 若要驗證變更，您可以向 `/flows` 端點，同時提供流ID。
+成功的響應返回流ID和 `etag`。 要驗證更改，可向 `/flows` 提供流ID時的終結點。
 
 ```json
 {
@@ -145,7 +146,7 @@ curl -X PATCH \
 
 ### 發佈資料流
 
-草稿準備好發佈後，請向 `/flows` 端點，同時提供您要發佈的草稿資料流的ID以及發佈的動作操作。
+一旦您的草稿準備好發佈，請向 `/flows` 終結點，同時提供要發佈的草稿資料流的ID以及用於發佈的操作操作。
 
 **API格式**
 
@@ -155,11 +156,11 @@ POST /flows/{FLOW_ID}/action?op=publish
 
 | 參數 | 說明 |
 | --- | --- |
-| `op` | 更新查詢的資料流狀態的操作操作。 要發佈草稿資料流，請設定 `op` to `publish`. |
+| `op` | 更新查詢的資料流狀態的操作操作。 要發佈草稿資料流，請設定 `op` 至 `publish`。 |
 
 **要求**
 
-以下請求會發佈您的草稿資料流。
+以下請求發佈您的草稿資料流。
 
 ```shell
 curl -X POST \
@@ -172,7 +173,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回ID和對應的 `etag` 資料流的資料流。
+成功的響應返回ID和相應 `etag` 資料流。
 
 ```json
 {
@@ -183,4 +184,4 @@ curl -X POST \
 
 ### 刪除資料流
 
-若要刪除資料流，請向 `/flows` 端點，同時提供要刪除的資料流的ID。 有關如何使用流服務API刪除資料流的詳細步驟，請閱讀 [在API中刪除資料流](./delete-dataflows.md).
+要刪除資料流，請向 `/flows` 提供要刪除的資料流的ID時的終結點。 有關如何使用流服務API刪除資料流的詳細步驟，請閱讀上的指南 [刪除API中的資料流](./delete-dataflows.md)。

@@ -1,6 +1,6 @@
 ---
-title: Adobe Target擴充功能發行說明
-description: Adobe Experience Platform中Adobe Target標籤擴充功能的最新發行說明。
+title: Adobe Target分機的發行說明
+description: Adobe Target標籤擴展在Adobe Experience Platform的最新發行說明。
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -13,14 +13,14 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 ## 2021 年 9 月 16 日
 
 ### Adobe Target 擴充功能 0.11.4 版
 
-* 更新至at.js v1.8.3
-* 新增 `SameSite=None` 和 `Secure` 設定cookie時的屬性
+* 更新為at.js v1.8.3
+* 已添加 `SameSite=None` 和 `Secure` 設定cookie時的屬性
 
 ## 2020 年 7 月 24 日
 
@@ -50,13 +50,13 @@ ht-degree: 74%
 * 之前，ECID 程式庫要進行兩次封鎖呼叫，at.js 才能擷取體驗。這已簡化為單一呼叫，可大幅提升效能。
 
 >[!NOTE]
->請將Adobe Experience Platform的ECID標籤擴充功能升級至v4.4.1，以運用此效能增強功能。
+>請將Adobe Experience Platform的ECID標籤擴展升級到v4.4.1以利用此效能增強。
 
 ## 2019 年 7 月 31 日
 
 ### Adobe Target 擴充功能 0.10.1 版
 
-* 處理Adobe Target標籤擴充功能之參數的Hotfix
+* 用於處理Adobe Target標籤擴展的參數的修補程式
 
 ## 2019 年 5 月 4 日
 
@@ -82,7 +82,7 @@ ht-degree: 74%
 
 #### **功能**
 
-* 更新擴充功能，以使用at.js 1.7.0（透過標籤支援選擇加入隱私權功能），以控制觸發Target標籤的方式和時機。 請檢查標籤檔案，了解如何設定選擇加入的實作。 新增自訂具有空白值的 mbox 參數是否應傳送至 Target 的可能性。
+* 已更新擴展以使用at.js 1.7.0，該擴展通過標籤支援選擇加入隱私功能，以控制觸發目標標籤的方式和時間。 請查看標籤文檔，瞭解如何設定選擇加入的實施。 新增自訂具有空白值的 mbox 參數是否應傳送至 Target 的可能性。
 
 ## 2019 年 1 月 23 日
 
@@ -148,7 +148,7 @@ ht-degree: 74%
 
 #### **錯誤修正**
 
-* 修正Adobe Target擴充功能中，可視化體驗撰寫器在透過標籤部署時無法取消隱藏頁面的錯誤。
+* 修復了Adobe Target擴展中的錯誤，該錯誤阻止Visual Experience Composer在通過標籤部署時取消隱藏頁面。
 
 ## 2018 年 2 月 8 日
 

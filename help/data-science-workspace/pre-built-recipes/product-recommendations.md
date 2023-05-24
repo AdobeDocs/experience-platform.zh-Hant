@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；產品建議方式；Data Science Workspace；熱門主題；方式；預先建立方式
+keywords: Experience Platform；產品推薦配方；資料科學工作區；熱門主題；配方；預構建配方
 solution: Experience Platform
-title: 產品建議方式
-description: 產品Recommendations方式可讓您根據客戶的需求和興趣，提供個人化的產品建議。 透過精確的預測模型，客戶的購買記錄可讓您深入了解他們可能感興趣的產品。
+title: 產品建議處方
+description: 「產品Recommendations」配方使您能夠提供個性化的產品建議，這些建議可根據客戶的需求和興趣而定制。 通過準確的預測模型，客戶的購買歷史記錄可以讓您深入瞭解他們可能感興趣的產品。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,49 +11,49 @@ ht-degree: 2%
 
 ---
 
-# 產品建議方式
+# 產品推薦處方
 
-產品Recommendations方式可讓您根據客戶的需求和興趣，提供個人化的產品建議。 透過精確的預測模型，客戶的購買記錄可讓您深入了解他們可能感興趣的產品。
+「產品Recommendations」配方使您能夠提供個性化的產品建議，這些建議可根據客戶的需求和興趣而定制。 通過準確的預測模型，客戶的購買歷史記錄可以讓您深入瞭解他們可能感興趣的產品。
 
-## 這個食譜是為誰建的？
+## 這秘方是為誰準備的？
 
-在現代，零售商可以提供多種產品，為客戶提供許多選擇，這也會阻礙其客戶的搜尋。 由於時間和精力的限制，客戶可能找不到他們想要的產品，導致購買時認知失調或完全不購買。
+在現代，零售商可以提供多種產品，給顧客很多選擇，這也會阻礙顧客的搜索。 由於時間和精力的限制，客戶可能找不到他們想要的產品，從而導致購買時認知失調程度很高或根本沒有購買。
 
 ## 這食譜是做什麼的？
 
-產品Recommendations配方使用機器學習來分析客戶過去與產品的互動，並快速輕鬆產生產品建議的個人化清單。 這樣可以優化產品發現過程，並消除對客戶的長時間、低效、無關的搜索。 因此，產品Recommendations方式可改善客戶的整體購買體驗，進而提升參與度和提升品牌忠誠度。
+產品Recommendations配方使用機器學習來分析客戶過去與產品的互動，並快速輕鬆地生成個性化的產品推薦清單。 這優化了產品發現過程，並消除了對客戶的長時間、無效、無關的搜索。 因此，產品Recommendations配方可改善客戶的整體購買體驗，從而提高客戶的參與度和更強的品牌忠誠度。
 
 ## 如何開始？
 
-您可以依照Adobe Experience Platform Lab教學課程（請參閱下方的Lab連結）來開始使用。 本教學課程將示範如何遵循以下步驟，在Jupyter筆記型電腦中建立產品Recommendations配方： [筆記型電腦](../jupyterlab/create-a-model.md) 工作流程，並在中實作方式 [!DNL Experience Platform] [!DNL Data Science Workspace].
+您可以按照Adobe Experience Platform實驗室教程（請參閱下面的實驗室連結）開始。 本教程將向您介紹如何在Jupyter筆記本中建立產品Recommendations配方 [筆記型電腦](../jupyterlab/create-a-model.md) 工作流，並在中實施處方 [!DNL Experience Platform] [!DNL Data Science Workspace]。
 
-* [實驗：使用Data Science Workspace預測未來](https://expleague.azureedge.net/labs/L777/index.html)
+* [實驗：利用資料科學工作區預測未來](https://expleague.azureedge.net/labs/L777/index.html)
 * [實驗室資源](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
 
-## 資料結構
+## 資料架構
 
-此方式使用自訂 [XDM結構](../../xdm/schema/field-dictionary.md) 要建立輸入和輸出資料的模型，請執行以下操作：
+此處方使用自定義 [XDM架構](../../xdm/schema/field-dictionary.md) 要對輸入和輸出資料建模：
 
-### 輸入資料結構
+### 輸入資料架構
 
 | 欄位名稱 | 類型 |
 | --- | --- |
-| itemId | 字串 |
-| interactionType | 字串 |
+| 項ID | 字串 |
+| 交互類型 | 字串 |
 | timestamp | 字串 |
-| userId | 字串 |
+| 用戶ID | 字串 |
 
 ### 輸出資料架構
 
 | 欄位名稱 | 類型 |
 | --- | --- |
 | 建議 | 字串 |
-| userId | 整數 |
+| 用戶ID | 整數 |
 
-## 演算法
+## 算法
 
-產品Recommendations方式利用協作篩選為客戶產生個人化產品建議清單。 協作篩選（與基於內容的方法不同）不需要有關特定產品的資訊，而是利用客戶對一組產品的歷史偏好。 這項功能強大的建議技術使用兩個簡單的假設：
-* 有些客戶有類似的興趣，可透過比較其購買和瀏覽行為來分組。
-* 客戶對基於相似客戶的購買和瀏覽行為的建議更感興趣。
+產品Recommendations配方利用協作過濾為客戶生成個性化產品建議清單。 與基於內容的方法不同，協作過濾不需要有關特定產品的資訊，而是利用客戶對一組產品的歷史偏好。 這種強大的推薦技術使用了兩個簡單的假設：
+* 有些客戶興趣相似，可以通過比較他們的購買行為和瀏覽行為對他們進行分組。
+* 客戶更有可能對基於相似客戶的購買和瀏覽行為的推薦感興趣。
 
-此程式分為兩個主要步驟。 首先，定義類似客戶的子集。 然後，在該集合內，識別這些客戶之間的類似功能，以傳回目標客戶的建議。
+這個過程分為兩個主要步驟。 首先，定義相似客戶的子集。 然後，在該集合中，確定這些客戶之間的相似特徵，以便為目標客戶返回建議。

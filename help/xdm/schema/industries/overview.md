@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: 產業資料模型概觀
-description: 了解可使用標準Experience Data Model(XDM)元件來建構的各種垂直產業的標準化資料模型。
+title: 行業資料模型概述
+description: 瞭解使用標準體驗資料模型(XDM)元件可構建的各種行業垂直行業的標準化資料模型。
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
@@ -10,37 +10,37 @@ ht-degree: 1%
 
 ---
 
-# 產業資料模型概觀
+# 行業資料模型概述
 
-Experience Data Model(XDM)可讓您建立可高度自訂的結構，以擷取與您的業務相關的重要客戶體驗資料。 為協助簡化資料建模以符合XDM的程式，Adobe Experience Platform提供一套多功能的標準XDM元件，其中包含多個產業常用的概念。
+體驗資料模型(XDM)允許您建立高度可定製的架構，以捕獲與您的業務相關的關鍵客戶體驗資料。 為幫助簡化為符合XDM的資料建模過程，Adobe Experience Platform提供了一套通用的標準XDM元件，這些元件捕獲了在多個行業中常用的概念。
 
 >[!NOTE]
 >
->新標準XDM元件正持續推出，以符合消費者的需求。 如需最新元件的清單，您可以 [探索UI中的現有資源](../../ui/explore.md) 或請參閱 [官方XDM存放庫](https://github.com/adobe/xdm/tree/master/components) 在GitHub上。
+>新的標準XDM元件正在不斷發佈，以滿足最佳的消費者需求。 對於最新元件的清單，您可以 [瀏覽UI中的現有資源](../../ui/explore.md) 或參考 [正式XDM儲存庫](https://github.com/adobe/xdm/tree/master/components) 在GitHub上。
 
-根據您的業務所在的行業，某些XDM元件與您的需求的相關度會高於其他元件。 此外，您在XDM結構之間建立的關係，會依產業而異。
+根據您的業務所處的行業，某些XDM元件將比其他元件更適合您的需求。 此外，您在XDM架構之間建立的關係將因您所在行業而異。
 
-為了幫助根據您的特定行業指導您的資料建模策略，本指南提供了幾個受支援行業垂直行業的實體關係圖(ERD)的參考。
+為了幫助根據特定行業指導您的資料建模策略，本指南提供了幾個受支援行業的實體關係圖(ERD)的參考。
 
 ## 先決條件
 
-若要閱讀本指南中參考的ERD，您必須認真了解XDM元件如何互動形成結構，以及XDM結構如何以整體Experience Platform運作。 繼續之前，請確定您已閱讀下列概述檔案：
+要閱讀本指南中引用的ERD，您必須瞭解XDM元件如何交互以形成架構以及XDM架構如何作為一個整體在Experience Platform中運行。 確保在繼續之前已閱讀以下概述文檔：
 
-* [XDM系統概觀](../../home.md):了解XDM在Platform生態系統中的運作方式。
-* [結構構成基本概念](../../schema/composition.md):了解XDM元件（例如結構欄位群組、類別和資料類型）對結構的貢獻，以及身分欄位的角色。
+* [XDM系統概述](../../home.md):瞭解XDM在平台生態系統中的運行方式。
+* [架構組合的基礎](../../schema/composition.md):瞭解XDM元件（如架構欄位組、類和資料類型）如何對架構結構以及標識欄位的角色作出貢獻。
 
-建議您檢閱 [資料模型最佳實務指南](../../schema/best-practices.md) 以取得如何將資料對應至XDM的一般准則。
+還建議您查看 [資料建模最佳做法指南](../../schema/best-practices.md) 有關如何將資料映射到XDM的一般指導。
 
-## 行業資料模型ERD {#erds}
+## 行業資料模型ERDs {#erds}
 
-ERD適用於以下行業：
+ERD適用於以下行業垂直領域：
 
 * [[!UICONTROL 零售業]](./retail.md)
 * [[!UICONTROL 金融服務]](./financial.md)
-* [[!UICONTROL 醫療保健]](./healthcare.md)
+* [[!UICONTROL 保健]](./healthcare.md)
 * [[!UICONTROL 電信]](./telecom.md)
 * [[!UICONTROL 旅行和招待]](./travel-hospitality.md)
 
 ## 後續步驟
 
-本文檔概述了行業資料模型ERD以及如何解釋它們。 要查看ERD，請從上面的清單中選擇一個。
+本文檔概述了行業資料模型ERDs以及如何解釋它們。 要查看ERD，請從上面的清單中選擇一個。

@@ -1,6 +1,6 @@
 ---
-title: 帳戶設定檔控制面板指南
-description: Adobe Experience Platform提供控制面板，讓您透過該控制面板檢視貴組織B2B帳戶設定檔的重要資訊。
+title: 帳戶配置檔案儀表板指南
+description: Adobe Experience Platform提供了一個儀表板，您可以通過該儀表板查看有關組織B2B帳戶配置檔案的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
@@ -9,103 +9,103 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL 帳戶設定檔] 儀表板
+# [!UICONTROL 帳戶配置檔案] 儀表板
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，您可以透過控制面板檢視帳戶設定檔的重要資訊，如每日快照中所擷取。 本指南概述如何存取及使用 [!UICONTROL 帳戶設定檔] 控制面板，並提供控制面板中所顯示視覺效果的詳細資訊。
+Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通過該儀表板查看有關帳戶配置檔案的重要資訊，這些資訊在每日快照中捕獲。 本指南概括介紹了如何訪問和使用 [!UICONTROL 帳戶配置檔案] UI中的儀表板，並提供了有關儀表板中顯示的可視化效果的詳細資訊。
 
-如需帳戶設定檔使用者介面中所有功能的概觀，請造訪 [帳戶設定檔UI指南](../../rtcdp/accounts/account-profile-ui-guide.md).
+有關帳戶配置檔案用戶介面中所有功能的概述，請訪問 [帳戶配置檔案UI指南](../../rtcdp/accounts/account-profile-ui-guide.md)。
 
 ## 快速入門
 
-您必須有權 [Adobe Real-time Customer Data Platform B2B版](../../rtcdp/b2b-overview.md) 以存取B2B [!UICONTROL 帳戶設定檔] 控制面板。
+你必須有權 [Adobe Real-time Customer Data PlatformB2B版](../../rtcdp/b2b-overview.md) 為了訪問B2B [!UICONTROL 帳戶配置檔案] 控制項欄。
 
-## 帳戶設定檔資料
+## 帳戶配置檔案資料
 
-此 [!UICONTROL 帳戶設定檔] 控制面板會顯示來自您的行銷管道的多個來源，以及您的組織目前用來儲存客戶帳戶資訊的不同系統的統一帳戶資訊快照。
+的 [!UICONTROL 帳戶配置檔案] 控制面板顯示來自多個來源的統一帳戶資訊的快照，這些來源來自您的市場營銷渠道以及您的組織當前用於儲存客戶帳戶資訊的各種系統。
 
-快照中的配置檔案資料顯示的資料與拍攝快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似值或樣本，而且 [!UICONTROL 帳戶設定檔] 控制面板不會即時更新。
+快照中的配置檔案資料與拍攝快照時在特定時間點顯示的資料完全相同。 換句話說，快照不是資料的近似或示例， [!UICONTROL 帳戶配置檔案] 儀表板不會即時更新。
 
 >[!NOTE]
 >
->自拍攝快照以來對資料所做的任何更改或更新都不會反映在儀表板中，直到拍攝下一個快照。
+>自拍攝快照以來對資料所做的任何更改或更新不會反映在儀表板中，直到拍攝下一個快照。
 
-## 探索 [!UICONTROL 帳戶設定檔] 儀表板
+## 瀏覽 [!UICONTROL 帳戶配置檔案] 儀表板
 
-導覽至 [!UICONTROL 帳戶設定檔] 平台UI中的控制面板，請選取 **[!UICONTROL 設定檔]** 在 [!UICONTROL 帳戶] ，即可取得Advertising Cloud的說明。
+導航到 [!UICONTROL 帳戶配置檔案] 平台UI中的儀表板，選擇 **[!UICONTROL 配置檔案]** 在 [!UICONTROL 帳戶] 的子菜單。
 
-![左側導覽中顯示「帳戶設定檔」的Platform UI，並顯示「概觀」標籤。](../images/account-profiles/account-profiles-dashboard.png)
+![左側導航中的「Platform UI（平台UI）」和「Account Profiles（帳戶配置檔案）」突出顯示，並顯示「Overview（概述）」頁籤。](../images/account-profiles/account-profiles-dashboard.png)
 
-從 [!UICONTROL 帳戶設定檔] 控制面板，您可以 [瀏覽匯入您組織的帳戶設定檔](#browse-account-profiles)，或 [使用widget快速檢視帳戶設定檔資料的完整](#standard-widgets) 視覺化資料的各個方面。
+從 [!UICONTROL 帳戶配置檔案] 儀表板 [瀏覽已導入您組織的帳戶配置檔案](#browse-account-profiles)或 [使用小部件一目瞭然地查看整個帳戶配置檔案資料](#standard-widgets) 可以直觀地顯示資料的各個方面。
 
-## 瀏覽帳戶設定檔 {#browse-account-profiles}
+## 瀏覽帳戶配置檔案 {#browse-account-profiles}
 
-此 [!UICONTROL 瀏覽] 索引標籤可讓您使用來自連線企業來源的帳戶ID或直接輸入來源詳細資訊，來搜尋及檢視內嵌至您組織的唯讀帳戶設定檔。 從這裡，您可以看到屬於帳戶設定檔的重要資訊，包括名稱、產業、收入和區段等。
+的 [!UICONTROL 瀏覽] 頁籤允許您使用連接的企業來源中的帳戶ID或直接輸入來源詳細資訊來搜索和查看導入您組織的只讀帳戶配置檔案。 從此處，您可以看到屬於帳戶配置檔案的重要資訊，包括其名稱、行業、收入和細分等。
 
-選取 [!UICONTROL 設定檔ID] 從 [!UICONTROL 瀏覽] 標籤來開啟 [!UICONTROL 詳細資料] 標籤。
+選擇 [!UICONTROL 配置檔案ID] 顯示在 [!UICONTROL 瀏覽] 按鈕 [!UICONTROL 詳細資訊] 頁籤。
 
-![顯示結果的「帳戶配置檔案」瀏覽頁簽，突出顯示配置檔案ID。](../images/account-profiles/account-profiles-browse-tab.png)
+![「帳戶配置檔案」瀏覽頁籤顯示結果，並突出顯示「配置檔案ID」。](../images/account-profiles/account-profiles-browse-tab.png)
 
-顯示在 [!UICONTROL 詳細資料] 索引標籤已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 請參閱 [瀏覽Adobe Real-time Customer Data Platform的帳戶設定檔](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 若要進一步了解Platform UI中的帳戶設定檔檢視功能。
+顯示在 [!UICONTROL 詳細資訊] 已從多個配置檔案片段合併到一起，以形成單個帳戶的單個視圖。 請參閱 [瀏覽帳戶配置檔案Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 瞭解有關平台UI中帳戶配置檔案查看功能的詳細資訊。
 
-## 此 [!UICONTROL 帳戶設定檔] [!UICONTROL 概述] {#overview}
+## 的 [!UICONTROL 帳戶配置檔案] [!UICONTROL 概述] {#overview}
 
-此 [!UICONTROL 概述] 索引標籤由小工具組成，小工具可提供唯讀量度，以傳達關於帳戶設定檔的重要資訊。 選擇 **[!UICONTROL 修改控制面板]** 更改 [!UICONTROL 概述] 頁簽。
+的 [!UICONTROL 概述] 頁籤由提供只讀度量以傳遞有關帳戶配置檔案的重要資訊的小部件組成。 選擇 **[!UICONTROL 修改儀表板]** 更改 [!UICONTROL 概述] 按鈕。
 
-![「帳戶設定檔概述」標籤，並反白顯示「修改」控制面板。](../images/account-profiles/modify-dashboard.png)
+![突出顯示了「修改」面板的「帳戶概要檔案」概述頁籤。](../images/account-profiles/modify-dashboard.png)
 
-請參閱 [修改控制面板](../customize/modify.md) 和 [介面工具集程式庫概觀](../customize/widget-library.md) 了解更多。
+請參閱上的文檔 [修改儀表板](../customize/modify.md) 和 [小部件庫概述](../customize/widget-library.md) 來瞭解更多資訊。
 
-## 標準介面工具集 {#standard-widgets}
+## 標準小部件 {#standard-widgets}
 
-Adobe提供標準Widget，您可使用這些Widget來視覺化與帳戶設定檔相關的不同量度。
+Adobe提供了標準小部件，您可以使用這些小部件來可視化與帳戶配置檔案相關的不同度量。
 
-若要進一步了解每個可用的標準介面工具集，請從下列清單中選取介面工具集的名稱：
+要瞭解有關每個可用標準小部件的詳細資訊，請從以下清單中選擇小部件的名稱：
 
 * [按行業分列的總帳](#total-accounts-by-industry)
-* [新增帳戶設定檔](#account-profiles-added)
-* [預測性計分分佈](#predictive-scoring-distribution)
-* [預測性計分最具影響力的因素](#predictive-scoring-top-influential-factors)
+* [已添加帳戶配置檔案](#account-profiles-added)
+* [預測計分分配](#predictive-scoring-distribution)
+* [預測性評分最大影響因素](#predictive-scoring-top-influential-factors)
 
 ### 按行業分列的總帳 {#total-accounts-by-industry}
 
-此Widget會以單一量度顯示帳戶總數，並使用環圈圖來說明構成整體數量之產業的計數比例大小。 鍵為構成環圈圖的不同行業提供顏色編碼資訊。
+此小部件以單個度量顯示帳戶總數，並使用甜圈圖來說明構成總數的行業計數的比例大小。 該鍵為構成環形圖的不同行業提供顏色編碼資訊。
 
-當游標停留在環圈圖的相應部分上時，不同行業的單個計數將顯示在對話框中。
+當游標懸停在圓圈圖的相應部分上時，不同行業的單個計數將顯示在對話框中。
 
-![按行業介面工具集列出的總帳。](../images/account-profiles/total-accounts-by-industry-widget.png)
+![按行業小部件列出的帳戶總數。](../images/account-profiles/total-accounts-by-industry-widget.png)
 
-### 新增帳戶設定檔 {#account-profiles-added}
+### 已添加帳戶配置檔案 {#account-profiles-added}
 
-此介面工具集使用色彩編碼的長條圖，來說明指定時段內新增至帳戶的設定檔數，以及構成這些新增設定檔的不同產業的比例。 這些行業都用顏色編碼，鍵為構成長條圖的不同行業提供顏色編碼資訊。 分析期間從介面工具集下拉式選單中選取。 長條圖可在30天、90天和12個月期間內視覺化。
+此小部件使用彩色編碼條形圖來說明在給定時間段內添加到帳戶的配置檔案計數，以及構成這些添加的配置檔案的不同行業的比例。 這些行業是彩色編碼的，一個鍵為組成條形圖的不同行業提供顏色編碼資訊。 分析期間從構件下拉菜單中選擇。 條形圖可在30天、90天和12個月期間可視化。
 
 >[!NOTE]
 >
->由於設定檔只會新增至帳戶且從未移除，因此一段時間內新增的設定檔數量可能最低，為零。
+>由於配置檔案只被添加到帳戶且從未被刪除，因此在一段時間內添加的配置檔案的數量可能最低為零。
 
-![帳戶設定檔新增了介面工具集。](../images/account-profiles/accounts-profiles-added-widget.png)
+![帳戶配置檔案已添加小部件。](../images/account-profiles/accounts-profiles-added-widget.png)
 
-### 預測性計分分佈 {#predictive-scoring-distribution}
+### 預測計分分配 {#predictive-scoring-distribution}
 
-此 [!UICONTROL 預測性計分分佈] 介面工具集顯示所有帳戶設定檔的分數分佈，幫助您了解銷售管道的狀況，一覽無遺。 計分資料通過環圈圖和列圖傳送。
+的 [!UICONTROL 預測計分分配] 小部件顯示所有帳戶配置檔案的分數分佈，以幫助您一目瞭然地瞭解銷售渠道的運行狀況。 記分資料通過環形圖和柱形圖傳送。
 
-環圈圖說明在高、中、低購買貯體的傾向中，帳戶設定檔總數的比例。 索引鍵提供色彩編碼的區段的詳細資訊，包括計分貯體範圍及該範圍中的帳戶設定檔數目。
+甜甜圈圖說明了在購買時段的高、中和低傾向中，您的總帳戶配置檔案所佔的比例。 該關鍵字提供了有關顏色編碼部分的更多詳細資訊，包括評分時段範圍和該範圍內的帳戶配置檔案數。
 
-欄圖表提供更精細的計分劃分。 每欄會顯示20個五點增量貯體中每個貯體的帳戶設定檔數量。
+該清單提供了更細粒度的評分細分。 每列顯示20個五點增量時段中每個時段中的帳戶配置檔案數。
 
-介面工具集內的下拉式功能表可讓您選取帳戶計分模型。
+構件中的下拉菜單允許您選擇帳戶計分模型。
 
-![預測性計分分分佈介面工具集。](../images/account-profiles/predictive-scoring-distribution.png)
+![預測計分分發構件。](../images/account-profiles/predictive-scoring-distribution.png)
 
-### 預測性計分最具影響力的因素 {#predictive-scoring-top-influential-factors}
+### 預測性評分最大影響因素 {#predictive-scoring-top-influential-factors}
 
-此 [!UICONTROL 預測性計分最具影響力的因素] 介面工具集可協助您了解促成每個傾向貯體之分數的最重要因素。
+的 [!UICONTROL 預測性評分最大影響因素] 小部件可幫助您瞭解推動每個傾向時段得分的最重要因素。
 
-此Widget會顯示高、中、低傾向貯體中每個的最高影響因素。 每個影響因素的長條代表該傾向貯體中包含特定影響因素的帳戶設定檔百分比。
+此小部件顯示了高、中和低傾向時段中每個時段的最主要影響因素。 每個影響因素的條表示該傾向時段中包含特定影響因素的帳戶配置檔案的百分比。
 
-介面工具集內的下拉式功能表可讓您選取帳戶計分模型。
+構件中的下拉菜單允許您選擇帳戶計分模型。
 
-![預測性計分最具影響力的因素Widget。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+![預測性評分頂級影響因素小部件。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
 ## 後續步驟
 
-依照本檔案操作，您現在應了解如何找到 [!UICONTROL 帳戶設定檔] 控制面板。 您也應了解可用介面工具集中顯示的量度。 若要進一步了解如何在Experience PlatformUI中使用帳戶設定檔作為B2B資料的一部分，請參閱 [帳戶設定檔概觀](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDP的B2B版。
+現在，您應該知道如何查找 [!UICONTROL 帳戶配置檔案] 控制項欄。 您還應瞭解可用小部件中顯示的度量。 要瞭解有關在Experience PlatformUI中將帳戶配置檔案作為B2B資料一部分的詳細資訊，請參閱 [帳戶概要資訊](../../rtcdp/accounts/account-profile-overview.md) Adobe Real-Time CDPB2B版。

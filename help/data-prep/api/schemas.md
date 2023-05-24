@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；結構；
+keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；架構；
 solution: Experience Platform
-title: 結構API端點
-description: 您可以使用Adobe Experience Platform API中的「/schemas」端點，以程式設計方式擷取、建立和更新結構，以便與Platform中的Mapper搭配使用。
+title: 架構API終結點
+description: 可以使用Adobe Experience PlatformAPI中的「/schemas」端點以寫程式方式檢索、建立和更新架構，以便與平台中的映射器一起使用。
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '611'
@@ -12,21 +12,21 @@ ht-degree: 4%
 
 
 
-# 方案端點
+# 架構終結點
 
-結構可與映射器搭配使用，以確保已內嵌至Adobe Experience Platform的資料符合您要內嵌的資料。 您可以使用 `/schemas` 端點以程式設計方式建立、列出及取得自訂結構，以便與Platform中的Mapper搭配使用。
+架構可與映射器一起使用，以確保您在Adobe Experience Platform攝取的資料與您要攝取的資料相匹配。 您可以使用 `/schemas` 終結點，以寫程式方式建立、列出和獲取自定義架構，以便與平台中的映射器一起使用。
 
 >[!NOTE]
 >
->使用此端點建立的結構僅與映射器和映射集一起使用。 若要建立其他Platform服務可存取的結構，請參閱 [Schema Registry開發人員指南](../../xdm/api/schemas.md).
+>使用此終結點建立的架構專用於映射器和映射集。 要建立其他平台服務可訪問的架構，請閱讀 [架構註冊表開發人員指南](../../xdm/api/schemas.md)。
 
-## 取得所有結構
+## 獲取所有架構
 
-您可以向 `/schemas` 端點。
+您可以通過向以下組織發出GET請求來檢索組織的所有可用映射器架構的清單： `/schemas` 端點。
 
 **API格式**
 
-此 `/schemas` 端點支援數個查詢參數，可協助您篩選結果。 雖然這些參數大多為可選參數，但強烈建議使用這些參數，以幫助降低昂貴的開銷。 不過，您必須同時包含 `start` 和 `limit` 參數。 可包含多個參數，以&amp;符號分隔(`&`)。
+的 `/schemas` 終結點支援多個查詢參數，以幫助您篩選結果。 雖然這些參數大多是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 但是，必須同時包括 `start` 和 `limit` 參數。 可以包括多個參數，用和符號分隔(`&`)。
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -36,14 +36,14 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{LIMIT}` | **必填**. 指定傳回的結構數目。 |
-| `{START}` | **必填**. 指定結果頁的偏移。 若要取得結果的第一頁，請將值設為 `start=0`. |
-| `{NAME}` | 根據名稱篩選結構。 |
-| `{ORDER_BY}` | 對結果的順序進行排序。 支援的欄位包括 `modifiedDate` 和 `createdDate`. 您可以在屬性的開頭附加上 `+` 或 `-` 按升序或降序排序。 |
+| `{LIMIT}` | **必填**. 指定返回的架構數。 |
+| `{START}` | **必填**. 指定結果頁的偏移。 要獲取結果的第一頁，請將值設定為 `start=0`。 |
+| `{NAME}` | 根據名稱篩選架構。 |
+| `{ORDER_BY}` | 對結果的順序進行排序。 支援的欄位為 `modifiedDate` 和 `createdDate`。 您可以用 `+` 或 `-` 按升序或降序排序。 |
 
 **要求**
 
-下列請求會擷取您組織的最後兩個已建立結構。
+以下請求將檢索組織的最後兩個建立的方案。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
@@ -55,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **回應**
 
-以下響應返回HTTP狀態200，並列出請求的架構。
+以下響應返回HTTP狀態200，其中包含請求的架構的清單。
 
 >[!NOTE]
 >
->下列回應已截斷空格。
+>以下響應已被截斷為空間。
 
 ```json
 {
@@ -132,17 +132,17 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 ## 建立方案
 
-您可以建立要驗證的結構，方法是向 `/schemas` 端點。 建立結構有三種方式：傳送 [JSON結構](https://json-schema.org/)、使用範例資料，或參考現有XDM架構。
+您可以通過向Web站點發出POST請求來建立要驗證的架構 `/schemas` 端點。 建立架構有三種方法：發送 [JSON架構](https://json-schema.org/)、使用示例資料或引用現有XDM架構。
 
 ```http
 POST /schemas
 ```
 
-### 使用JSON結構
+### 使用JSON架構
 
 **要求**
 
-下列請求可讓您透過傳送 [JSON結構](https://json-schema.org/).
+以下請求允許您通過發送 [JSON架構](https://json-schema.org/)。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -163,7 +163,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含您新建立結構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 ```json
 {
@@ -177,11 +177,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### 使用範例資料
+### 使用示例資料
 
 **要求**
 
-下列請求可讓您使用先前上傳的範例資料來建立結構。
+以下請求允許您使用先前上載的示例資料建立方案。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -198,11 +198,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sampleId` | 結構為的範例資料的ID。 |
+| `sampleId` | 基於的架構的示例資料的ID。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含您新建立結構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 ```json
 {
@@ -242,11 +242,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### 請參閱XDM結構
+### 參考XDM架構
 
 **要求**
 
-下列要求可讓您參考現有XDM架構以建立架構。
+以下請求允許您通過引用現有XDM架構來建立架構。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -269,15 +269,15 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `name` | 要建立的架構的名稱。 |
 | `schemaRef.id` | 您引用的架構的ID。 |
-| `schemaRef.contentType` | 確定引用架構的響應格式。 如需此欄位的詳細資訊，請參閱 [方案註冊開發人員指南](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.contentType` | 確定引用架構的響應格式。 有關此欄位的詳細資訊，請參閱 [架構註冊表開發者指南](../../xdm/api/schemas.md#lookup) |
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含您新建立結構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 >[!NOTE]
 >
->下列回應已截斷空格。
+>以下響應已被截斷為空間。
 
 ```json
 {
@@ -292,9 +292,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-## 使用檔案上傳建立結構
+## 使用檔案上載建立架構
 
-您可以上傳JSON檔案，以便從中轉換結構，
+可以通過上載JSON檔案來建立要從中轉換的架構。
 
 **API格式**
 
@@ -304,7 +304,7 @@ POST /schemas/upload
 
 **要求**
 
-下列要求可讓您從上傳的JSON檔案建立結構。
+以下請求允許您從上載的JSON檔案建立架構。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
@@ -318,7 +318,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含您新建立結構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
 
 ```json
 {
@@ -332,9 +332,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 }
 ```
 
-## 擷取特定結構
+## 檢索特定架構
 
-您可以向提出GET要求，以擷取特定結構的相關資訊 `/schemas` 端點，並提供您要在請求路徑中擷取之架構的ID。
+可通過向Web站點發出GET請求來檢索有關特定架構的資訊 `/schemas` 端點，並提供要在請求路徑中檢索的架構的ID。
 
 **API格式**
 
@@ -344,11 +344,11 @@ GET /schemas/{SCHEMA_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEMA_ID}` | 您正在查詢的結構ID。 |
+| `{SCHEMA_ID}` | 您正在查找的架構的ID。 |
 
 **要求**
 
-下列請求會擷取指定架構的相關資訊。
+以下請求檢索有關指定架構的資訊。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
@@ -360,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含指定架構的相關資訊。
+成功的響應返回HTTP狀態200，其中包含有關指定架構的資訊。
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
-title: 擴充功能套件端點
-description: 了解如何在Reactor API中呼叫/extension_packages端點。
+title: 擴展包終結點
+description: 瞭解如何調用Reactor API中的/extension_packages終結點。
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
 workflow-type: tm+mt
@@ -9,51 +9,51 @@ ht-degree: 3%
 
 ---
 
-# 擴充功能套件端點
+# 擴展包終結點
 
 >[!WARNING]
 >
->實施 `/extension_packages` 隨著功能的添加、刪除和重作，端點處於通量中。
+>執行 `/extension_packages` 端點在添加、刪除和重新處理特徵時處於流量狀態。
 
-擴充功能套件代表 [擴充功能](./extensions.md) 由擴充功能開發人員撰寫。 擴充功能套件定義了可供標籤使用者使用的其他功能。 這些功能大多以 [規則元件](./rule-components.md) （事件、條件和動作）和 [資料元素](./data-elements.md)，但也可以包括主要模組和共用模組。
+擴展包表示 [擴展](./extensions.md) 由擴展開發人員創作。 擴展包定義了可用於標籤用戶的附加功能。 最常見的是，這些功能以 [規則元件](./rule-components.md) （事件、條件和操作） [資料元素](./data-elements.md)，還可以包括主模組和共用模組。
 
-擴充功能套件會顯示在資料收集UI和Adobe Experience Platform UI內的擴充功能目錄中，供使用者安裝。 將擴充功能套件新增至屬性，是透過建立包含擴充功能套件連結的擴充功能來完成。
+擴展包顯示在資料收集UI和Adobe Experience PlatformUI中的擴展目錄中，供用戶安裝。 通過將擴展包的連結建立到擴展包的擴展來將擴展包添加到屬性。
 
-擴充功能套件屬於 [公司](./companies.md) 開發者的。
+擴展包屬於 [公司](./companies.md) 創造它的開發商。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-除了了解如何呼叫Reactor API，了解擴充功能套件的 `status` 和 `availability` 屬性會影響您可以對其執行的動作。 以下各節將說明這些內容。
+除了瞭解如何調用Reactor API外，瞭解擴展包的 `status` 和 `availability` 屬性會影響您可以對其執行的操作。 下面各節對這些內容進行了說明。
 
 ### 狀態
 
-擴充功能套件有三種可能狀態： `pending`, `succeeded`，和 `failed`.
+擴展包有三種潛在狀態： `pending`。 `succeeded`, `failed`。
 
 | 狀態 | 說明 |
 | --- | --- |
-| `pending` | 建立擴充功能套件時，其 `status` 設為 `pending`. 這表示系統已收到擴充功能套件的資訊，並將開始處理。 狀態為的擴充功能套件 `pending` 無法使用。 |
-| `succeeded` | 擴充功能套件的狀態更新為 `succeeded` 如果成功完成處理。 |
-| `failed` | 擴充功能套件的狀態更新為 `failed` 如果處理失敗。 狀態為的擴充功能套件 `failed` 可能會更新，直到處理成功為止。 狀態為的擴充功能套件 `failed` 無法使用。 |
+| `pending` | 建立擴展包時， `status` 設定為 `pending`。 這表示系統已收到擴展包的資訊並將開始處理。 狀態為 `pending` 不可用。 |
+| `succeeded` | 擴展包的狀態更新 `succeeded` 如果成功完成處理。 |
+| `failed` | 擴展包的狀態更新 `failed` 如果處理失敗。 狀態為 `failed` 可能會更新，直到處理成功。 狀態為 `failed` 不可用。 |
 
 ### 可用性
 
-擴充功能套件的可用性層級如下： `development`, `private`，和 `public`.
+擴展包的可用性級別有： `development`。 `private`, `public`。
 
 | 可用性 | 說明 |
 | --- | --- |
-| `development` | 中的擴充功能套件 `development` 只對擁有此資訊的公司可見，也可在其內使用。 此外，它只能用於設定為擴充功能開發的屬性。 |
-| `private` | A `private` 擴充功能套件只會顯示給擁有此套件的公司，且只能安裝在公司擁有的屬性上。 |
-| `public` | A `public` 擴充功能套件可見，且可供所有公司和屬性使用。 |
+| `development` | 中的擴展包 `development` 只能在擁有它的公司中可見，也可在其內部使用。 此外，它只能用於配置用於擴展開發的屬性。 |
+| `private` | A `private` 擴展包僅對擁有它的公司可見，並且只能安裝在公司擁有的屬性上。 |
+| `public` | A `public` 擴展包是可見的，可用於所有公司和屬性。 |
 
 >[!NOTE]
 >
->建立擴充功能套件時， `availability` 設為 `development`. 測試完成後，您可以將擴充功能套件轉換為 `private` 或 `public`.
+>建立擴展包時， `availability` 設定為 `development`。 測試完成後，可以將擴展包轉換為 `private` 或 `public`。
 
-## 擷取擴充功能套件清單 {#list}
+## 檢索擴展包清單 {#list}
 
-您可以向發出GET要求，以擷取擴充功能套件清單 `/extension_packages`.
+可以通過發出GET請求來檢索擴展包清單 `/extension_packages`。
 
 **API格式**
 
@@ -63,7 +63,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->使用查詢參數，可根據下列屬性來篩選列出的擴充功能套件：<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱 [篩選回應](../guides/filtering.md) 以取得更多資訊。
+>使用查詢參數，可以根據以下屬性篩選列出的擴展包：<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回擴充功能套件清單。
+成功的響應返回擴展包清單。
 
 ```json
 {
@@ -237,7 +237,7 @@ curl -X GET \
 
 ## 查找擴展包 {#lookup}
 
-您可以在請求的路徑中提供擴充功能套件的ID，以便查詢其GET。
+通過在GET請求的路徑中提供擴展包的ID，可以查找擴展包。
 
 **API格式**
 
@@ -247,7 +247,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 此 `id` 擴充功能套件中。 |
+| `EXTENSION_PACKAGE_ID` | 的 `id` 要查找的擴展包。 |
 
 {style="table-layout:auto"}
 
@@ -265,7 +265,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回擴充功能套件的詳細資訊，包括其委派資源，例如 `actions`, `conditions`, `data_elements`、等。 下列範例回應已截斷空格。
+成功的響應返回擴展包的詳細資訊，包括其委託資源，如 `actions`。 `conditions`。 `data_elements`。 下面的示例響應已被截斷為空間。
 
 ```json
 {
@@ -470,11 +470,11 @@ curl -X GET \
 }
 ```
 
-## 建立擴充功能套件 {#create}
+## 建立擴展包 {#create}
 
-擴充功能套件是使用Node.js架構工具建立，並先儲存在本機電腦上，再提交至Reactor API。 如需設定擴充功能套件的詳細資訊，請參閱 [擴充功能開發快速入門](../../extension-dev/getting-started.md).
+擴展包使用Node.js腳手架工具建立，並在提交到Reactor API之前保存在本地機器上。 有關配置擴展包的詳細資訊，請參閱上的指南 [開始擴展開發](../../extension-dev/getting-started.md)。
 
-建立擴充功能套件檔案後，您就可以透過POST請求將其提交至Reactor API。
+建立擴展包檔案後，可通過POST請求將其提交到Reactor API。
 
 **API格式**
 
@@ -484,7 +484,7 @@ POST /extension_packages
 
 **要求**
 
-下列請求會建立新的擴充功能套件。 上傳之套件檔案的本機路徑會參照為表單資料(`package`)，因此此端點需要 `Content-Type` 標題 `multipart/form-data`.
+以下請求將建立新的擴展包。 要上載的包檔案的本地路徑被作為表單資料引用(`package`)，因此此端點需要 `Content-Type` 標題 `multipart/form-data`。
 
 ```shell
 curl -X POST \
@@ -498,7 +498,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立之擴充功能套件的詳細資訊。
+成功的響應將返回新建立的擴展包的詳細資訊。
 
 ```json
 {
@@ -703,9 +703,9 @@ curl -X POST \
 }
 ```
 
-## 更新擴充功能套件 {#update}
+## 更新擴展包 {#update}
 
-您可以在PATCH請求的路徑中加入擴充功能套件ID，以更新其ID。
+可以通過將擴展包的ID包含在PATCH請求的路徑中來更新擴展包。
 
 **API格式**
 
@@ -715,13 +715,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 此 `id` 擴充功能套件的URL區段。 |
+| `EXTENSION_PACKAGE_ID` | 的 `id` 要更新的擴展包。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-與 [建立擴充功能套件](#create)，必須透過表單資料上傳更新套件的本機版本。
+與 [建立擴展包](#create)，必須通過表單資料上載更新的包的本地版本。
 
 ```shell
 curl -X PATCH \
@@ -735,7 +735,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回更新擴充功能套件的詳細資訊。
+成功響應將返回更新的擴展包的詳細資訊。
 
 ```json
 {
@@ -940,11 +940,11 @@ curl -X PATCH \
 }
 ```
 
-## 私下發行擴充功能套件 {#private-release}
+## 私下發佈擴展包 {#private-release}
 
-完成擴充功能套件的測試後，即可私下發行。 這可讓您公司內的任何屬性都能使用。
+測試完擴展包後，您可以私下發佈它。 這樣，您公司內的任何財產都可以使用它。
 
-私下發行後，您可以填寫 [公開發行申請表](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
+在您私下發佈後，您可以通過填寫 [公共發佈請求表](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest)。
 
 **API格式**
 
@@ -954,13 +954,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 此 `id` 的擴充功能套件。 |
+| `EXTENSION_PACKAGE_ID` | 的 `id` 要私下發佈的擴展包。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-通過提供 `action` 值為 `release_private` 在 `meta` 請求資料。
+通過提供 `action` 值為 `release_private` 的 `meta` 請求資料。
 
 ```shell
 curl -X PATCH \
@@ -982,7 +982,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回擴充功能套件的詳細資訊。
+成功響應將返回擴展包的詳細資訊。
 
 ```json
 {
@@ -1187,9 +1187,9 @@ curl -X PATCH \
 }
 ```
 
-## 中止擴充功能套件 {#discontinue}
+## 停止擴展包 {#discontinue}
 
-您可以透過設定擴充功能套件，來中止擴充功能套件 `discontinued` 屬性至 `true` 透過PATCH要求。
+可以通過設定擴展包 `discontinued` 屬性 `true` 通過PATCH。
 
 **API格式**
 
@@ -1199,13 +1199,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 此 `id` 中斷的擴充功能套件。 |
+| `EXTENSION_PACKAGE_ID` | 的 `id` 要終止的擴展包。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-通過提供 `action` 值為 `release_private` 在 `meta` 請求資料。
+通過提供 `action` 值為 `release_private` 的 `meta` 請求資料。
 
 ```shell
 curl -X PATCH \
@@ -1227,7 +1227,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回擴充功能套件的詳細資訊。
+成功響應將返回擴展包的詳細資訊。
 
 ```json
 {
@@ -1280,9 +1280,9 @@ curl -X PATCH \
 }
 ```
 
-## 列出擴充功能套件的版本
+## 列出擴展包的版本
 
-您可以透過附加 `/versions` 至查詢請求的路徑。
+可以通過附加來列出擴展包的版本 `/versions` 查找請求的路徑。
 
 **API格式**
 
@@ -1292,7 +1292,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 此 `id` 要列出其版本的擴充功能套件。 |
+| `EXTENSION_PACKAGE_ID` | 的 `id` 要列出其版本的擴展包。 |
 
 {style="table-layout:auto"}
 
@@ -1310,4 +1310,4 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回擴充功能套件的舊版陣列。 空間省略了示例響應。
+成功的響應返回擴展包的早期版本陣列。 空間已省略示例響應。

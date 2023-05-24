@@ -1,6 +1,6 @@
 ---
 title: 互動式資料收集
-description: 了解Adobe Experience Platform Edge Network Server API如何執行互動式資料收集。
+description: 瞭解Adobe Experience Platform邊緣網路伺服器API如何執行互動式資料收集。
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 6%
 
 ## 總覽 {#overview}
 
-互動式資料收集端點會接收單一事件，並在用戶端預期Adobe Experience Platform邊緣網路伺服器會傳回回應時使用。 執行資料收集時，這些端點也可以從其他Experience Edge服務傳回內容。
+互動式資料收集端點接收單個事件，並在客戶端希望Adobe Experience Platform邊緣網路伺服器返迴響應時使用。 這些端點還可以從其他體驗邊緣服務返回內容，同時執行資料收集。
 
-伺服器響應包括一個或多個 `Handle` 物件，如下所示。
+伺服器響應包括一個或多個 `Handle` 對象，如下所示。
 
-## API呼叫範例
+## API調用示例
 
 ### API格式 {#format}
 
@@ -63,11 +63,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | 參數 | 類型 | 必填 | 說明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 可以。 | 資料流ID。 |
-| `requestId` | `String` | 無 | 提供用於關聯內部伺服器請求的用戶端隨機ID。 若未提供，邊緣網路將產生一個，並在回應中傳回。 |
+| `requestId` | `String` | 無 | 提供用於關聯內部伺服器請求的客戶端隨機ID。 如果未提供，則邊緣網路將生成一個並在響應中返回。 |
 
 ### 回應 {#response}
 
-成功的回應會傳回HTTP狀態 `200 OK`，包含一或多個 `Handle` 物件，視資料流設定中啟用的即時邊緣服務而定。
+成功響應返回HTTP狀態 `200 OK`，帶一個或多個 `Handle` 對象，具體取決於在資料流配置中啟用的即時邊緣服務。
 
 ```json
 {

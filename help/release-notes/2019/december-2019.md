@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform發行說明2019年12月
-description: 2019年12月Adobe Experience Platform發行說明。
+description: 2019年12月發佈的Adobe Experience Platform說明。
 doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
@@ -25,32 +25,32 @@ Adobe Experience Platform 現有功能更新：
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform劃分服務提供使用者介面和RESTful API，可讓您建立區段，並從 [!DNL Real-Time Customer Profile] 資料。 這些區段是在 [!DNL Platform]，讓任何Adobe應用程式都能輕鬆存取。
+Adobe Experience Platform分段服務提供用戶介面和REST風格的API，使您能夠生成分段並從您的 [!DNL Real-Time Customer Profile] 資料。 這些段在 [!DNL Platform]使任何Adobe應用程式都可輕鬆訪問。
 
-[!DNL Segmentation Service] 會透過說明區分客戶群中可行銷人員群組的條件，來定義特定設定檔子集。 區段可以根據記錄資料（例如人口統計資訊）或代表客戶與您品牌互動的時間序列事件。
+[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
 
 **新功能**
 
 | 功能 | 說明 |
 |--- | ---|
-| 中的「合併對象」索引標籤 [!DNL Segment Builder] | 此 [!UICONTROL 區段] 和 [!UICONTROL 對象] 標籤 [!DNL Segment Builder] 合併成一個 [!UICONTROL 對象] 標籤。 此索引標籤可讓您瀏覽和搜尋現有對象，然後將其拖放至規則產生器畫布以建立新區段定義。 參考對象可將下列其中一組規則邏輯新增至新區段定義：對象成員資格作為規則，是定義所參考對象的完整規則邏輯集。 |
-| 合併策略選擇器的新位置 | 合併策略選擇器在 [!DNL Segment Builder] 已變更。 若要為區段定義選取合併原則，請選取 **[!UICONTROL 欄位]** 標籤，然後使用 **[!UICONTROL 合併策略]** 下拉式功能表，選取您要使用的合併原則。 |
+| 合併的受眾頁籤 [!DNL Segment Builder] | 的 [!UICONTROL 段] 和 [!UICONTROL 觀眾] 頁籤 [!DNL Segment Builder] 被合為一個 [!UICONTROL 觀眾] 頁籤。 此頁籤允許您瀏覽和搜索現有受眾，然後可將其拖放到規則生成器畫布中，以建立新段定義。 引用訪問群體可將以下一組規則邏輯添加到新段定義中：作為規則的受眾成員資格，是定義引用的受眾的全套規則邏輯。 |
+| 合併策略選擇器的新位置 | 合併策略選擇器在 [!DNL Segment Builder] 已更改。 要為段定義選擇合併策略，請在 **[!UICONTROL 欄位]** ，則使用 **[!UICONTROL 合併策略]** 下拉菜單，以選擇要使用的合併策略。 |
 
 **已知問題**
 
 * None
 
-如需詳細資訊，請參閱 [區段服務概觀](../../segmentation/home.md).
+有關詳細資訊，請參閱 [分段服務概述](../../segmentation/home.md)。
 
 ## [!DNL Decisioning Service] {#decisioning}
 
-Adobe Experience Platform [!DNL Decisioning Service] 提供以程式設計方式智慧地從指定個人的一組可用選項中選取「下一個最佳體驗」、將其傳遞至任何通道或應用程式，以及執行報告和分析的功能。
+Adobe Experience Platform [!DNL Decisioning Service] 提供了以寫程式方式智慧地從給定個人的一組可用選項中選擇「下一最佳體驗」、將它們交付到任何渠道或應用程式以及執行報告和分析的能力。
 
 **新功能**
 
 | 功能 | 說明 |
 | -----------| ---------- |
-| 排名函式 | 設定檔的選件順序現在是透過排名函式衍生，而非所有設定檔的一組固定選件。 |
+| 排序函式 | 配置檔案的聘用順序現在通過排序函式而不是所有配置檔案的固定聘用集來導出。 |
 
 **已知問題**
 
@@ -58,42 +58,42 @@ Adobe Experience Platform [!DNL Decisioning Service] 提供以程式設計方式
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許您使用 [!DNL Platform] 服務。 您可以內嵌來自各種來源的資料，例如Adobe解決方案、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可以從外部源接收資料，同時允許您使用 [!DNL Platform] 服務。 您可以從多種來源(如Adobe解決方案、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
 
-[!DNL Experience Platform] 提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您對儲存系統和CRM服務進行身份驗證、設定獲取運行的時間，以及管理資料獲取吞吐量。
+[!DNL Experience Platform] 提供了REST風格的API和互動式UI，使您可以輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
 
 **新功能**
 
 | 功能 | 說明 |
 | ---------- | ------------ |
-| 串流連線 | 串流內嵌可讓您將用戶端和伺服器端裝置的資料傳送至 [!DNL Experience Platform] 即時。 版本包含新的串流連線使用者介面。 |
-| 用於的連接器支撐 [!DNL Google Cloud Store] | 支援從 [!DNL Google Cloud Store]. |
+| 流連接 | 流式接收使您能夠將資料從客戶端和伺服器端設備發送到 [!DNL Experience Platform] 即時。 版本包括新的流連接用戶介面。 |
+| 連接器支撐 [!DNL Google Cloud Store] | 支援從 [!DNL Google Cloud Store]。 |
 
 **已知問題**
 
 * None.
 
-如需來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md).
+有關源的詳細資訊，請參見 [源概述](../../sources/home.md)。
 
 ## [!DNL Experience Data Model] (XDM)系統 {#xdm}
 
-標準化和互操作性是背後的關鍵概念 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)受Adobe推動，致力標準化客戶體驗資料並定義客戶體驗管理的結構。
+標準化和互操作性是其背後的關鍵概念 [!DNL Experience Platform]。 [!DNL Experience Data Model] (XDM)在Adobe的推動下，致力於標準化客戶體驗資料並定義客戶體驗管理模式。
 
-XDM是公開記錄的規格，旨在改善數位體驗的強大功能。 它為與Adobe Experience Platform上的服務通訊的任何應用程式提供共同的結構和定義。 遵循XDM標準，所有客戶體驗資料皆可整合至以更快速、更整合的方式提供深入分析的通用表示法中。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
+XDM是一種公開記錄的規範，旨在提高數字型驗的威力。 它為任何與Adobe Experience Platform服務通信的應用程式提供了共同的結構和定義。 通過遵守XDM標準，所有客戶體驗資料都可以納入到一個通用的表示形式中，以更快、更整合的方式提供洞察力。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
 
 **新功能**
 
 | 功能 | 說明 |
 |--- | ---|
-| 改善結構驗證 | 新的檢查，以確保參照如預期解析至其他欄位。 新增其他檢查至定義為物件陣列的欄位，以確保物件已完全定義。 改善錯誤訊息，以協助識別和修正問題。 |
+| 改進的架構驗證 | 新檢查以確保引用按預期解析到其他欄位。 向定義為對象陣列的欄位添加了其他檢查，以確保對象已完全定義。 改進了錯誤消息，以幫助識別和解決問題。 |
 
 **錯誤修正**
 
-* 與存取控制和沙箱相關的維護和改良。
-* 支援 `eTag` 針對 `/descriptors` 端點 [!DNL Schema Registry] API。
+* 與訪問控制和沙箱相關的維護和改進。
+* 支援 `eTag` 為 `/descriptors` 端點 [!DNL Schema Registry] API。
 
 **已知問題**
 
 * None
 
-若要進一步了解如何使用XDM，請使用 [!DNL Schema Registry] API和 [!DNL Schema Editor] 用戶介面，請閱讀 [XDM系統檔案](../../xdm/home.md).
+瞭解有關使用XDM的更多資訊 [!DNL Schema Registry] API和 [!DNL Schema Editor] 用戶介面，請閱讀 [XDM系統文檔](../../xdm/home.md)。

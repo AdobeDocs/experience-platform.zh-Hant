@@ -1,7 +1,7 @@
 ---
 title: Customer.io源概述
-description: 了解如何運用WebHook，使用API或使用者介面將Customer.io連線至Adobe Experience Platform
-badge: Beta
+description: 瞭解如何使用API或用戶介面通過利用Webhook將Customer.io連接到Adobe Experience Platform
+badge: β
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
 source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
@@ -15,47 +15,47 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此 [!DNL Customer.io] 來源為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得使用測試版標籤來源的詳細資訊。
+>的 [!DNL Customer.io] 源為beta。 請閱讀 [源概述](../../home.md#terms-and-conditions) 的子菜單。
 
-Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(如Adobe應用程式、雲儲存、資料庫等)內嵌資料。
+Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
 
-Experience Platform支援從串流應用程式擷取資料。 支援串流提供者包括 [!DNL Customer.io].
+Experience Platform支援從流應用程式中接收資料。 對流提供商的支援包括 [!DNL Customer.io]。
 
-[[!DNL Customer.io]](https://customer.io/) 是自動化傳訊平台，適合行銷人員，他們想要擁有更多控制力和彈性，以製作和傳送資料導向的電子郵件、推播通知、應用程式內訊息和簡訊。
+[[!DNL Customer.io]](https://customer.io/) 是一個自動消息傳遞平台，面向希望擁有更大控制和靈活性的營銷人員，他們可以編寫和發送資料驅動的電子郵件、推送通知、應用內消息和簡訊。
 
-此 [!DNL Customer.io] 來源可讓您從擷取支援的網頁連結事件結構及其相關事件資料 [!DNL Customer.io] 使用 [[!DNL Customer.io] 報告Webhook](https://customer.io/docs/api/webhooks/).
+的 [!DNL Customer.io] 源允許您從中獲取支援的webhook事件架構及其關聯事件資料 [!DNL Customer.io] 使用 [[!DNL Customer.io] 報告Webhooks](https://customer.io/docs/api/webhooks/)。
 
-支援的Webhook事件結構包括：
+支援的webhook事件架構包括：
 
 * 客戶事件
 * 電子郵件事件
 * SMS事件
-* 推播通知事件
-* 應用程式內訊息事件
+* 推送通知事件
+* 應用內消息事件
 * Slack事件
 * Webhook事件
 
-如需可透過Webhook使用的事件清單，請參閱 [[!DNL Customer.io] 報告Webhook事件](https://customer.io/docs/webhooks/#events) 檔案。
+有關通過Webhooks可用的事件清單，請參閱 [[!DNL Customer.io] 報告Webhook事件](https://customer.io/docs/webhooks/#events) 文檔。
 
 ## 先決條件 {#prerequisites}
 
-建立 [!DNL Customer.io] 源連接時，必須首先確保您具有以下內容：
+在建立 [!DNL Customer.io] 源連接，必須首先確保您具有以下功能：
 
-* A [!DNL Customer.io] 帳戶。 如果沒有人讀 [[!DNL Customer.io] 註冊頁面](https://fly.customer.io/signup) 註冊並建立帳戶。
-* 建立帳戶後，您還需要驗證您的帳戶。 請依照 [[!DNL Customer.io] 帳戶驗證](https://customer.io/docs/account-verification/) 頁面來完成程式。
+* A [!DNL Customer.io] 帳戶。 如果你沒看過 [[!DNL Customer.io] 註冊頁](https://fly.customer.io/signup) 註冊並建立帳戶。
+* 建立帳戶後，您還需要驗證帳戶。 按照 [[!DNL Customer.io] 帳戶驗證](https://customer.io/docs/account-verification/) 的子菜單。
 
-### 設定 [!DNL Customer.io] Webhook {#set-up-webhook}
+### 設定 [!DNL Customer.io] 網鈎 {#set-up-webhook}
 
-成功建立資料流後，必須設定Reporting Webhook以通知Platform [!DNL Customer.io] 事件。 Webhook可在客戶屬性變更或人員開啟您的訊息時立即通知您，並將此資訊傳送至您的 [!DNL Customer.io] 來源。 如需詳細資訊，請參閱 [取得串流端點URL](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) 和 [設定 [!DNL Customer.io] Webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
+成功建立資料流後，必須設定報告網頁掛接以通知平台 [!DNL Customer.io] 事件。 Webhooks可以在客戶屬性發生更改或人員開啟您的郵件時立即通知您，並將此資訊發送給您 [!DNL Customer.io] 源。 有關詳細資訊，請閱讀上的教程 [獲取流終結點URL](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) 和 [設定 [!DNL Customer.io] 網鈎](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook)。
 
 ## 連接 [!DNL Customer.io] 到平台 {#connect-to-platform}
 
-以下檔案提供如何建立 [!DNL Customer.io] 串流連線以連線至 [!DNL Platform] 使用API或使用者介面：
+以下文檔提供了有關如何建立 [!DNL Customer.io] 流連接與 [!DNL Platform] 使用API或用戶介面：
 
-### Connect [!DNL Customer.io] 使用API到平台 {#connect-to-platform-using-api}
+### 連接 [!DNL Customer.io] 到使用API的平台 {#connect-to-platform-using-api}
 
-* [建立源連接和資料流以帶來 [!DNL Customer.io] 使用API將資料傳送至Platform。](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
+* [建立源連接和資料流以 [!DNL Customer.io] 使用API向平台發送資料。](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
-### Connect [!DNL Customer.io] 使用UI設為Platform {#connect-to-platform-using-ui}
+### 連接 [!DNL Customer.io] 到使用UI的平台 {#connect-to-platform-using-ui}
 
-* [建立源連接和資料流以帶來 [!DNL Customer.io] 使用者介面將資料傳送至Platform](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
+* [建立源連接和資料流以 [!DNL Customer.io] 使用用戶介面向平台發送資料](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)

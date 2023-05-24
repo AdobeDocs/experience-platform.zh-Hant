@@ -13,7 +13,7 @@ ht-degree: 94%
 
 # Adobe Experience Platform 發行說明 {#release-notes}
 
-* [最新Platform發行說明](latest/latest.md)
+* [當前平台發行說明](latest/latest.md)
 * 2023 {#2023}
    * [2023 年 4 月](2023/april-2023.md)
    * [2023 年 3 月](2023/march-2023.md)

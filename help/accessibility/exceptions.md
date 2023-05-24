@@ -1,5 +1,5 @@
 ---
-title: 協助工具例外狀況和Experience Platform因應措施
+title: 輔助功能例外和解決Experience Platform
 type: Documentation
 description: Adobe Experience Platform 致力於為每個人提供無障礙和包容的功能。
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
@@ -10,6 +10,6 @@ ht-degree: 34%
 ---
 
 
-# 協助工具例外狀況和Experience Platform因應措施
+# 輔助功能例外和解決Experience Platform
 
-目前，Experience Platform中並無例外之處。
+目前，除了Experience Platform方面的變通辦法外，沒有明顯的例外。

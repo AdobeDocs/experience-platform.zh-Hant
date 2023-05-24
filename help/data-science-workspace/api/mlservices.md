@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；mlservices;sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；mlservices;sensei機器學習api
 solution: Experience Platform
-title: MLServices API端點
-description: MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的一個關鍵功能是能夠按計畫自動執行培訓和評分。 排程的訓練執行有助於維持模型的效率和正確性，而排程的計分執行可確保一致地產生新的深入分析。
+title: MLServices API終結點
+description: MLService是已發佈的經過培訓的模型，使您的組織能夠訪問和重新使用以前開發的模型。 MLServices的一個關鍵特點是能夠按計畫自動進行培訓和評分。 計畫的培訓運行有助於保持模型的效率和準確性，而計畫的評分運行可確保始終如一地生成新洞見。
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 2%
 
 ---
 
-# MLServices端點
+# MLServices終結點
 
-MLService是已發佈的訓練模型，可讓您的組織存取和重複使用先前開發的模型。 MLServices的一個關鍵功能是能夠按計畫自動執行培訓和評分。 排程的訓練執行有助於維持模型的效率和正確性，而排程的計分執行可確保一致地產生新的深入分析。
+MLService是已發佈的經過培訓的模型，使您的組織能夠訪問和重新使用以前開發的模型。 MLServices的一個關鍵特點是能夠按計畫自動進行培訓和評分。 計畫的培訓運行有助於保持模型的效率和準確性，而計畫的評分運行可確保始終如一地生成新洞見。
 
-自動化培訓和計分排程的定義是起始時間戳記、結束時間戳記，以及以 [cron表達](https://en.wikipedia.org/wiki/Cron). 當 [建立MLService](#create-an-mlservice) 或 [更新現有MLService](#update-an-mlservice).
+使用開始時間戳、結束時間戳和表示為 [cron表達](https://en.wikipedia.org/wiki/Cron)。 可在 [建立MLService](#create-an-mlservice) 或 [更新現有MLService](#update-an-mlservice)。
 
 ## 建立MLService {#create-an-mlservice}
 
-您可以執行POST請求和裝載來建立MLService，該裝載提供服務的名稱和有效的MLInstance ID。 建立MLService所用的MLInstance不需要有現有的訓練實驗，但您可以透過提供對應的實驗ID和訓練執行ID，選擇使用現有的訓練模型來建立MLService。
+您可以通過執行POST請求和負載來建立MLService，該負載提供服務的名稱和有效的MLInstance ID。 用於建立MLService的MLInstance不需要具有現有的訓練實驗，但您可以通過提供相應的實驗ID和訓練運行ID來選擇使用現有的訓練模型建立MLService。
 
 **API格式**
 
@@ -59,24 +59,24 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 所需的MLService名稱。 與此MLService對應的服務將繼承此值，該值將顯示在服務庫UI中，作為服務的名稱。 |
-| `description` | MLService的選用說明。 與此MLService對應的服務將繼承此值，該值將顯示在服務庫UI中，作為服務的說明。 |
+| `name` | MLService所需的名稱。 與此MLService對應的服務將繼承此值，該值將作為服務名稱顯示在服務庫UI中。 |
+| `description` | MLService的可選說明。 與此MLService對應的服務將繼承此值，該值將作為服務的說明顯示在服務庫UI中。 |
 | `mlInstanceId` | 有效的MLInstance ID。 |
-| `trainingDataSetId` | 訓練資料集ID（若提供）會覆寫MLInstance的預設資料集ID。 如果用來建立MLService的MLInstance未定義訓練資料集，則必須提供適當的訓練資料集ID。 |
-| `trainingExperimentId` | 實驗ID，您可以選擇提供。 如果未提供此值，則建立MLService也將使用MLInstance的預設配置建立新實驗。 |
-| `trainingExperimentRunId` | 培訓運行ID，您可以選擇提供。 如果未提供此值，則建立MLService還會使用MLInstance的預設培訓參數建立並執行培訓運行。 |
-| `trainingSchedule` | 自動培訓運行的時間表。 如果已定義此屬性，則MLService將自動按計畫執行培訓運行。 |
-| `trainingSchedule.startTime` | 計畫培訓運行的時間戳。 |
+| `trainingDataSetId` | 提供的培訓資料集ID將覆蓋MLInstance的預設資料集ID。 如果用於建立MLService的MLInstance未定義培訓資料集，則必須提供適當的培訓資料集ID。 |
+| `trainingExperimentId` | 可選地提供的實驗ID。 如果未提供此值，則建立MLService還將使用MLInstance的預設配置建立新的實驗。 |
+| `trainingExperimentRunId` | 可以選擇提供的培訓運行ID。 如果未提供此值，則建立MLService還將使用MLInstance的預設培訓參數建立並執行培訓運行。 |
+| `trainingSchedule` | 自動培訓運行的計畫。 如果定義了此屬性，則MLService將自動按計畫執行培訓運行。 |
+| `trainingSchedule.startTime` | 將開始計畫培訓的時間戳。 |
 | `trainingSchedule.endTime` | 計畫培訓運行將結束的時間戳。 |
 | `trainingSchedule.cron` | 定義自動培訓運行頻率的cron表達式。 |
-| `scoringSchedule` | 自動計分的排程執行。 如果已定義此屬性，則MLService將自動按計畫執行計分。 |
-| `scoringSchedule.startTime` | 將開始執行計分的時間戳記。 |
-| `scoringSchedule.endTime` | 計分執行的時間戳記將結束。 |
-| `scoringSchedule.cron` | 定義自動計分執行頻率的cron運算式。 |
+| `scoringSchedule` | 自動計分運行的計畫。 如果定義了此屬性，則MLService將自動按計畫執行計分運行。 |
+| `scoringSchedule.startTime` | 計畫計分運行的時間戳。 |
+| `scoringSchedule.endTime` | 計畫計分運行將結束的時間戳。 |
+| `scoringSchedule.cron` | 定義自動計分運行頻率的cron表達式。 |
 
 **回應**
 
-成功的回應會傳回包含新建立之MLService之詳細資訊的裝載，包括其唯一識別碼(`id`)，訓練的實驗ID(`trainingExperimentId`)，計分的實驗ID(`scoringExperimentId`)和輸入訓練資料集ID(`trainingDataSetId`)。
+成功的響應返回包含新建立的MLService的詳細資訊（包括其唯一標識符）的負載(`id`)，用於培訓的實驗ID(`trainingExperimentId`)，評分的實驗ID(`scoringExperimentId`)和輸入培訓資料集ID(`trainingDataSetId`)。
 
 ```json
 {
@@ -105,9 +105,9 @@ curl -X POST \
 }
 ```
 
-## 擷取MLServices清單 {#retrieve-a-list-of-mlservices}
+## 檢索MLServices清單 {#retrieve-a-list-of-mlservices}
 
-您可以執行單一GET請求，以擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢參數。 如需可用查詢的清單，請參閱 [資產檢索查詢參數](./appendix.md#query).
+通過執行單個GET請求，可以檢索MLServices清單。 要幫助篩選結果，可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
 
 **API格式**
 
@@ -120,11 +120,11 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 | 參數 | 說明 |
 | --- | --- |
 | `{QUERY_PARAMETER}` | 其中 [可用查詢參數](./appendix.md#query) 用於篩選結果。 |
-| `{VALUE}` | 前一查詢參數的值。 |
+| `{VALUE}` | 前面查詢參數的值。 |
 
 **要求**
 
-下列請求包含查詢，並擷取共用相同MLInstance ID的MLServices清單(`{MLINSTANCE_ID}`)。
+以下請求包含查詢並檢索共用相同MLinstance ID的MLServices清單(`{MLINSTANCE_ID}`)。
 
 ```shell
 curl -X GET \
@@ -137,7 +137,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回MLServices及其詳細資訊（包括其MLService ID）清單(`{MLSERVICE_ID}`)，訓練的實驗ID(`{TRAINING_ID}`)，計分的實驗ID(`{SCORING_ID}`)和輸入訓練資料集ID(`{DATASET_ID}`)。
+成功的響應返回MLServices及其詳細資訊（包括其MLService ID）的清單(`{MLSERVICE_ID}`)，用於培訓的實驗ID(`{TRAINING_ID}`)，評分的實驗ID(`{SCORING_ID}`)和輸入培訓資料集ID(`{DATASET_ID}`)。
 
 ```json
 {
@@ -164,9 +164,9 @@ curl -X GET \
 }
 ```
 
-## 擷取特定MLService {#retrieve-a-specific-mlservice}
+## 檢索特定MLService {#retrieve-a-specific-mlservice}
 
-您可以執行GET請求，將所需MLService的ID包含在請求路徑中，借此擷取特定實驗的詳細資訊。
+通過執行請求路徑中包含所需MLService ID的GET請求，可以檢索特定實驗的詳細資訊。
 
 **API格式**
 
@@ -189,7 +189,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含所請求MLService詳細資訊的裝載。
+成功的響應返回包含所請求MLService詳細資訊的負載。
 
 ```json
 {
@@ -210,11 +210,11 @@ curl -X GET \
 
 ## 更新MLService {#update-an-mlservice}
 
-您可以透過PUT請求覆寫現有MLService的屬性，該請求在請求路徑中包含目標MLService的ID，並提供包含已更新屬性的JSON裝載，借此更新現有的MLService。
+通過PUT請求覆蓋現有MLService的屬性，該請求將目標MLService的ID包括在請求路徑中，並提供包含已更新屬性的JSON負載，可以更新現有MLService。
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求， [依ID擷取MLService](#retrieve-a-specific-mlservice). 接著，修改並更新傳回的JSON物件，並套用修改後JSON物件的整體，作為PUT要求的裝載。
+>為確保此PUT請求成功，建議您首先執行GET請求， [按ID檢索MLService](#retrieve-a-specific-mlservice)。 然後，修改和更新返回的JSON對象，並應用已修改的JSON對象的整個作為PUT請求的負載。
 
 **API格式**
 
@@ -256,7 +256,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回包含MLService更新詳細資料的裝載。
+成功的響應返回包含MLService的更新詳細資訊的負載。
 
 ```json
 {
@@ -287,7 +287,7 @@ curl -X PUT \
 
 ## 刪除MLService
 
-您可以執行DELETE請求來刪除單一MLService，請求路徑中包含目標MLService的ID。
+您可以通過執行DELETE請求來刪除單個MLService，該請求將目標MLService的ID包括在請求路徑中。
 
 **API格式**
 
@@ -322,7 +322,7 @@ curl -X DELETE \
 
 ## 按MLInstance ID刪除MLServices
 
-您可以執行DELETE請求，將MLInstance ID指定為查詢參數，以刪除屬於特定MLInstance的所有MLServices。
+通過執行將MLInstance ID指定為查詢參數的DELETE請求，可以刪除屬於特定MLInstance的所有MLService。
 
 **API格式**
 

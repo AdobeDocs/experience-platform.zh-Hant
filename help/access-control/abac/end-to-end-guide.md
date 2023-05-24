@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；存取控制；基於屬性的存取控制；
+keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬性的訪問控制；
 title: 基於屬性的訪問控制端到端指南
-description: 本檔案提供Adobe Experience Platform中以屬性為基礎的存取控制的端對端指南
+description: 本文檔提供了Adobe Experience Platform基於屬性的訪問控制的端到端指南
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 004f6183f597132629481e3792b5523317b7fb2f
 workflow-type: tm+mt
@@ -12,54 +12,54 @@ ht-degree: 19%
 
 # 基於屬性的訪問控制端到端指南
 
-基於屬性的存取控制是Adobe Experience Platform的一項功能，可讓多品牌和注重隱私的客戶擁有更大的彈性來管理使用者存取。 可以根據對象的屬性和角色使用策略來授予/拒絕對單個對象（如方案欄位和段）的訪問權。 此功能可讓您授予或撤銷組織中特定Platform使用者對個別物件的存取權。
+基於屬性的訪問控制是Adobe Experience Platform公司的一項功能，它為多品牌和注重隱私的客戶提供了管理用戶訪問的更大靈活性。 可以使用基於對象屬性和角色的策略來授予/拒絕對單個對象（如架構欄位和段）的訪問。 此功能允許您授予或撤消組織中特定平台用戶對單個對象的訪問權限。
 
-此功能可讓您使用定義組織或資料使用範圍的標籤，對結構欄位、區段等進行分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義Experience Data Model(XDM)結構欄位的存取原則，並更妥善地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
+此功能允許您使用定義組織或資料使用範圍的標籤對架構欄位、段等進行分類。 您可以將這些相同的標籤應用於Adobe Journey Optimizer的旅程、優惠和其他對象。 同時，管理員可以定義圍繞體驗資料模型(XDM)架構欄位的訪問策略，並更好地管理哪些用戶或組（內部、外部或第三方用戶）可以訪問這些欄位。
 
 >[!NOTE]
 >
->本文檔重點介紹訪問控制策略的使用案例。 如果您正嘗試設定策略以管理 **use** 請參閱上的端對端指南， [資料控管](../../data-governance/e2e.md) 。
+>本文檔重點介紹訪問控制策略的使用案例。 如果您試圖設定策略來管理 **使用** 的端到端指南，請參閱 [資料治理](../../data-governance/e2e.md) 的雙曲餘切值。
 
 ## 快速入門
 
-本教學課程需要妥善了解下列平台元件：
+本教程需要瞭解以下平台元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化架構。
-   * [結構構成基本概念](../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
-   * [結構編輯器教學課程](../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [Adobe Experience Platform區段服務](../../segmentation/home.md):內的分段引擎 [!DNL Platform] 用於根據客戶行為和屬性，從您的客戶設定檔建立受眾區段。
+* [[!DNL Experience Data Model (XDM)] 系統](../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化框架。
+   * [架構組合的基礎](../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
+   * [架構編輯器教程](../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自定義架構。
+* [Adobe Experience Platform分段服務](../../segmentation/home.md):分段引擎 [!DNL Platform] 用於根據客戶行為和屬性從客戶配置檔案建立受眾段。
 
-### 使用案例概觀
+### 用例概述
 
-您將執行一個基於屬性的訪問控制工作流示例，在該工作流中，您將建立並分配角色、標籤和策略，以配置您的用戶是否可以訪問組織中的特定資源。 本指南使用限制存取敏感資料的範例來示範工作流程。 此使用案例概述如下：
+您將通過一個基於屬性的訪問控制工作流示例，在該工作流中，您將建立和分配角色、標籤和策略，以配置用戶是否可以訪問組織中的特定資源。 本指南使用限制對敏感資料的訪問的示例來演示工作流。 此使用案例概述如下：
 
-您是醫療保健提供商，希望配置對組織中資源的訪問。
+您是醫療保健提供商，希望配置對組織中資源的訪問權。
 
-* 您的內部行銷團隊應能存取 **[!UICONTROL PHI/受管制的健康資料]** 資料。
+* 您的內部營銷團隊應能夠 **[!UICONTROL PHI/受管制的健康資料]** 資料。
 * 您的外部機構應無法訪問 **[!UICONTROL PHI/受管制的健康資料]** 資料。
 
-要執行此操作，您必須設定角色、資源和原則。
+要執行此操作，必須配置角色、資源和策略。
 
-您會：
+您將：
 
-* [為您的使用者標籤角色](#label-roles):以其行銷組與外部代理合作的醫療保健提供商（ACME業務組）為例。
-* [標示資源（結構欄位和區段）](#label-resources):指派 **[!UICONTROL PHI/受管制的健康資料]** 標籤至架構資源和區段。
+* [為用戶標籤角色](#label-roles):請使用其市場營銷組與外部代理機構合作的醫療保健提供商（ACME業務組）的示例。
+* [標籤資源（架構欄位和段）](#label-resources):分配 **[!UICONTROL PHI/受管制的健康資料]** 標籤到架構資源和段。
 * 
-   * [激活將它們連結在一起的策略： ](#policy):啟用預設原則，將資源上的標籤連結至角色中的標籤，以防止存取架構欄位和區段。 接著，系統會為具有相符標籤的使用者提供所有沙箱之結構欄位和區段的存取權。
+   * [激活將它們連結在一起的策略： ](#policy):啟用預設策略，通過將資源上的標籤連接到角色中的標籤來防止訪問架構欄位和段。 然後，具有匹配標籤的用戶將有權訪問所有沙箱中的架構欄位和段。
 
 ## 權限
 
-[!UICONTROL 權限] 是Experience Cloud的區域，管理員可在其中定義用戶角色和策略，以管理產品應用程式內的功能和對象的權限。
+[!UICONTROL 權限] 是Experience Cloud區域，管理員可以在該區域定義用戶角色和策略，以管理產品應用程式中功能和對象的權限。
 
-通過 [!UICONTROL 權限]，您可以建立和管理角色，並為這些角色指派所需的資源權限。 [!UICONTROL 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。]
+通過 [!UICONTROL 權限]，您可以建立和管理角色，並為這些角色分配所需的資源權限。 [!UICONTROL 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。]
 
-如果您沒有管理員權限，請連絡您的系統管理員以取得存取權。
+如果您沒有管理員權限，請與系統管理員聯繫以獲得訪問權限。
 
-取得管理員權限後，請前往 [Adobe Experience Cloud](https://experience.adobe.com/) 並使用您的Adobe憑證登入。 登入後， **[!UICONTROL 概述]** 會針對您擁有管理員權限的組織顯示頁面。 此頁面顯示您組織訂閱的產品，以及新增使用者和管理員至組織的其他控制項。 選擇 **[!UICONTROL 權限]** 以開啟您的平台整合工作區。
+一旦您具有管理員權限，請轉到 [Adobe Experience Cloud](https://experience.adobe.com/) 並使用您的Adobe憑據登錄。 登錄後， **[!UICONTROL 概述]** 頁面。 此頁顯示您的組織訂閱的產品以及向組織添加用戶和管理員的其他控制項。 選擇 **[!UICONTROL 權限]** 開啟用於平台整合的工作區。
 
-![顯示在Adobe Experience Cloud中選取之權限產品的影像](../images/flac-ui/flac-select-product.png)
+![顯示在Adobe Experience Cloud中選擇的「權限」產品的影像](../images/flac-ui/flac-select-product.png)
 
-Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** 頁面。
+將顯示「平台UI的權限」工作區，在 **[!UICONTROL 角色]** 的子菜單。
 
 ## 將標籤應用於角色 {#label-roles}
 
@@ -92,84 +92,84 @@ Platform UI的「權限」工作區隨即顯示，在 **[!UICONTROL 角色]** �
 >title="角色概觀"
 >abstract="角色概觀對話框顯示給定角色可存取的資源和沙箱。"
 
-角色是將與您的Platform例項互動的使用者類型分類的方法，也是存取控制原則的基礎要素。 角色具有一組指定的權限，而您組織的成員可依其需要的存取範圍，指派給一或多個角色。
+角色是對與平台實例交互的用戶類型進行分類的方法，是訪問控制策略的構建基塊。 某個角色具有給定的一組權限，您組織的成員可以分配給一個或多個角色，具體取決於他們需要的訪問範圍。
 
-若要開始，請選取 **[!UICONTROL ACME Business Group]** 從 **[!UICONTROL 角色]** 頁面。
+要開始，請選擇 **[!UICONTROL ACME業務組]** 從 **[!UICONTROL 角色]** 的子菜單。
 
-![此影像顯示在「角色」中選擇的ACME業務角色](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![顯示在角色中選擇的ACME業務角色的影像](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-下一步，選擇 **[!UICONTROL 標籤]** 然後選取 **[!UICONTROL 新增標籤]**.
+下一步，選擇 **[!UICONTROL 標籤]** ，然後選擇 **[!UICONTROL 添加標籤]**。
 
-![在「標籤」頁簽上顯示「添加標籤」的影像](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![顯示在「標籤」頁籤上選擇的「添加標籤」的影像](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-組織中所有標籤的清單隨即顯示。 選擇 **[!UICONTROL RHD]** 為添加標籤 **[!UICONTROL PHI/受管制的健康資料]**. 讓藍色勾號在標籤旁出現幾分鐘，然後選取 **[!UICONTROL 儲存]**.
+此時將顯示組織中所有標籤的清單。 選擇 **[!UICONTROL RHD]** 添加標籤 **[!UICONTROL PHI/受管制的健康資料]**。 允許在標籤旁邊出現藍色複選標籤，然後選擇 **[!UICONTROL 保存]**。
 
 ![顯示正在選擇和保存的RHD標籤的影像](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 >[!NOTE]
 >
->將組織群組新增至角色時，該群組中的所有使用者都會新增至角色。 對組織群組所做的任何變更（移除或新增的使用者）都會在角色內自動更新。
+>將組織組添加到角色時，該組中的所有用戶都將添加到該角色。 對組織組（刪除或添加的用戶）的任何更改將在角色中自動更新。
 
 ## 將標籤應用於架構欄位 {#label-resources}
 
-現在您已使用 [!UICONTROL RHD] 標籤，下一步是將相同標籤新增至您要控制該角色的資源。
+現在，您已使用 [!UICONTROL RHD] 標籤，下一步是將該標籤添加到要控制該角色的資源中。
 
-選擇 **[!UICONTROL 結構]** 從左側導覽列中，然後選取 **[!UICONTROL ACME Healthcare]** 從顯示的結構清單中。
+選擇 **[!UICONTROL 架構]** 從左側導航中，然後選擇 **[!UICONTROL ACME醫療保健]** 框中。
 
-![顯示從「結構」頁簽中選擇的ACME醫療保健結構的影像](../images/abac-end-to-end-user-guide/abac-select-schema.png)
+![顯示從「方案」頁籤中選擇的ACME醫療保健方案的影像](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-下一步，選擇 **[!UICONTROL 標籤]** 以查看顯示與架構關聯欄位的清單。 從這裡，您可以一次將標籤指派給一或多個欄位。 選取 **[!UICONTROL 血糖]** 和 **[!UICONTROL 胰島素水準]** 欄位，然後選取 **[!UICONTROL 套用存取權和資料控管標籤]**.
+下一步，選擇 **[!UICONTROL 標籤]** 查看顯示與方案關聯的欄位的清單。 在此處，您可以一次將標籤分配給一個或多個欄位。 選擇 **[!UICONTROL 血糖]** 和 **[!UICONTROL 胰島素水準]** 欄位，然後選擇 **[!UICONTROL 應用訪問和資料治理標籤]**。
 
-![該影像顯示正在選擇的血糖和胰島素水準，並應用正在選擇的訪問和資料控管標籤](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![顯示正在選擇的血糖和胰島素水準並應用正在選擇的訪問和資料治理標籤的影像](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-此 **[!UICONTROL 編輯標籤]** 對話框，可讓您選擇要應用到架構欄位的標籤。 針對此使用案例，選取 **[!UICONTROL PHI/受管制的健康資料]** 標籤，然後選取 **[!UICONTROL 儲存]**.
+的 **[!UICONTROL 編輯標籤]** 對話框，允許您選擇要應用於架構欄位的標籤。 對於此用例，選擇 **[!UICONTROL PHI/受管制的健康資料]** 標籤，然後選擇 **[!UICONTROL 保存]**。
 
 ![顯示正在選擇和保存的RHD標籤的影像](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE]
 >
->將標籤添加到欄位時，該標籤將應用到該欄位的父資源（類或欄位組）。 如果父類或欄位組被其他方案採用，則這些方案將繼承相同的標籤。
+>在將標籤添加到欄位時，該標籤將應用於該欄位的父資源（類或欄位組）。 如果父類或欄位組被其他方案使用，則這些方案將繼承相同的標籤。
 
-## 將標籤套用至區段
+## 將標籤應用於段
 
-完成架構欄位的標籤後，您現在可以開始標籤區段。
+在完成對架構欄位的標籤後，現在可以開始標籤段。
 
-選擇 **[!UICONTROL 區段]** 從左側導覽。 隨即顯示組織中可用的區段清單。 在此範例中，以下兩個區段的標籤為包含敏感健康資料：
+選擇 **[!UICONTROL 段]** 的上界。 將顯示組織中可用段的清單。 在本示例中，將標籤以下兩個段，因為它們包含敏感健康資料：
 
 * 血糖>100
 * 胰島素&lt;50
 
-選擇 **[!UICONTROL 血糖>100]** 開始為區段加上標籤。
+選擇 **[!UICONTROL 血糖>100]** 開始標籤段。
 
-![顯示從「區段」標籤中選取的「血糖>100」的影像](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![顯示從「段」頁籤中選擇的血糖>100的影像](../images/abac-end-to-end-user-guide/abac-select-segment.png)
 
-區段 **[!UICONTROL 詳細資料]** 畫面。 選擇 **[!UICONTROL 管理存取]**.
+分部 **[!UICONTROL 詳細資訊]** 的上界。 選擇 **[!UICONTROL 管理訪問]**。
 
-![顯示選擇「管理」訪問的影像](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![顯示「管理」訪問選擇的影像](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-此 **[!UICONTROL 編輯標籤]** 對話方塊，讓您選擇要套用至區段的標籤。 針對此使用案例，選取 **[!UICONTROL PHI/受管制的健康資料]** 標籤，然後選取 **[!UICONTROL 儲存]**.
+的 **[!UICONTROL 編輯標籤]** 對話框，允許您選擇要應用於段的標籤。 對於此用例，選擇 **[!UICONTROL PHI/受管制的健康資料]** 標籤，然後選擇 **[!UICONTROL 保存]**。
 
 ![顯示所選RHD標籤和保存的影像](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
-使用 **[!UICONTROL 胰島素&lt;50]**.
+重複上述步驟 **[!UICONTROL 胰島素&lt;50]**。
 
 ## 激活訪問控制策略 {#policy}
 
-預設的存取控制原則會利用標籤來定義哪些使用者角色可存取特定平台資源。 在此範例中，對於不在架構欄位中具有對應標籤之角色的使用者，在所有沙箱中都會拒絕存取架構欄位和區段。
+預設訪問控制策略將利用標籤來定義哪些用戶角色有權訪問特定平台資源。 在本示例中，對於不在架構欄位中具有相應標籤的角色的用戶，將在所有沙箱中拒絕訪問架構欄位和段。
 
-要激活訪問控制策略，請選擇 [!UICONTROL 權限] 從左側導覽列中，然後選取 **[!UICONTROL 原則]**.
+要激活訪問控制策略，請選擇 [!UICONTROL 權限] 從左側導航中，然後選擇 **[!UICONTROL 策略]**。
 
 ![顯示的策略清單](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-接下來，選取省略號(`...`)旁邊，下拉式清單會顯示編輯、啟用、刪除或複製角色的控制項。 選擇 **[!UICONTROL 啟動]** 中。
+接下來，選擇省略號(`...`)旁邊，下拉清單將顯示編輯、激活、刪除或複製角色的控制項。 選擇 **[!UICONTROL 激活]** 的下界。
 
-![啟動策略的下拉式清單](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
+![要激活策略的下拉清單](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-此時將顯示激活策略對話框，提示您確認激活。 選擇 **[!UICONTROL 確認]**.
+此時將顯示激活策略對話框，提示您確認激活。 選擇 **[!UICONTROL 確認]**。
 
 ![激活策略對話框](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-收到策略激活的確認，並將您返回 [!UICONTROL 原則] 頁面。
+接收策略激活的確認，並返回到 [!UICONTROL 策略] 的子菜單。
 
 ![激活策略確認](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 
@@ -252,6 +252,6 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## 後續步驟
 
-您已完成將標籤套用至角色、結構欄位和區段的作業。 指派給這些角色的外部代理受限於無法在結構、資料集和設定檔檢視中檢視這些標籤及其值。 使用「區段產生器」時，這些欄位也無法用於區段定義中。
+您已完成將標籤應用到角色、架構欄位和段。 分配給這些角色的外部代理在架構、資料集和配置檔案視圖中禁止查看這些標籤及其值。 使用「段生成器」時，這些欄位也限制在段定義中使用。
 
-有關基於屬性的訪問控制的詳細資訊，請參見 [基於屬性的訪問控制概述](./overview.md).
+有關基於屬性的訪問控制的詳細資訊，請參閱 [基於屬性的訪問控制概述](./overview.md)。

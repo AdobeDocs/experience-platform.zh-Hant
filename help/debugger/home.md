@@ -13,29 +13,29 @@ ht-degree: 21%
 
 ---
 
-# Adobe Experience Platform Debugger概觀
+# Adobe Experience Platform調試器概述
 
-適用於的Adobe Experience Platform Debugger擴充功能 [鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) 和 [Firefox](https://addons.mozilla.org/zh-TW/firefox/addon/adobe-experience-platform-dbg/) 檢查您的網頁，協助您找出Adobe Experience Cloud解決方案實作方式的相關問題。
+的Adobe Experience Platform調試器擴展 [鉻](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) 和 [火狐](https://addons.mozilla.org/zh-TW/firefox/addon/adobe-experience-platform-dbg/) 檢查網頁，並幫助您查找如何實施Adobe Experience Cloud解決方案的問題。
 
-您可以將Platform Debugger與其他Adobe啟用解決方案搭配使用，以執行下列作業：
+您可以將平台調試器與其他Adobe激活解決方案一起使用，以執行以下操作：
 
-1. 使用 [標籤](../tags/home.md) 插入啟用 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=zh-Hant) 產品。
-1. 使用 [**[!UICONTROL Auditor ]**標籤](./auditor/overview.md) 在Platform Debugger中測試您的實作。
-1. 使用Platform Debugger中以事件為基礎且針對解決方案而設的工具，對Auditor發現的問題進行除錯，或檢查實作的其他相關資訊。
+1. 使用 [標籤](../tags/home.md) 插入激活的代碼 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=zh-Hant) 產品。
+1. 使用 [**[!UICONTROL 審計員&#x200B;]**頁籤](./auditor/overview.md) 在平台調試器中test您的實現。
+1. 使用平台調試器中基於事件和特定於解決方案的工具來調試審計者發現的問題或檢查有關實施的其他資訊。
 
 >[!NOTE]
 >
->雖然上述步驟代表一個通用程式，但不一定會依照所述順序執行。
+>雖然上述步驟代表一個共同的過程，但不一定按規定的順序執行。
 
-您可以在任何網頁上執行Platform Debugger，且擴充功能將可存取公開資料。 若要使用擴充功能存取非公開資料，您必須在開啟的瀏覽器分頁中通過Experience Cloud驗證。
+您可以在任何網頁上運行平台調試器，副檔名將具有訪問公共資料的權限。 要使用副檔名訪問非公共資料，必須在開啟的瀏覽器頁籤中通過Experience Cloud驗證。
 
 ## 使用案例 {#section-9fcd0583ed184943a8f0c2d3c00658e0}
 
-您可以使用Platform Debugger收集的資訊，更清楚了解Experience Cloud解決方案的實作方式。 例如：
+您可以使用平台調試器收集的資訊更好地瞭解如何實施Experience Cloud解決方案。 例如：
 
-* **標籤**:查看頁面上部署了哪些屬性、環境和版本。
-* **Adobe Target**:了解您符合或不符合哪些活動的資格及原因。
-* **Adobe Analytics**:查看目前頁面上哪些報表套裝處於作用中狀態。
+* **標籤**:查看在頁面上部署了哪些屬性、環境和生成。
+* **Adobe Target**:查看您符合或不符合哪些活動以及原因。
+* **Adobe Analytics**:查看當前頁面上哪些報表套件處於活動狀態。
 
 ## 教學課程影片
 

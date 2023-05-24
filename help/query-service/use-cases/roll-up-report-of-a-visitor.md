@@ -1,23 +1,24 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；體驗事件查詢；體驗事件查詢；體驗事件查詢；體驗事件查詢；
-title: 檢視特定訪客的統計報表
-description: 下列檔案提供與Adobe Experience Platform Query Service中的Experience Events有關的查詢範例。
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；體驗事件查詢；體驗事件查詢；體驗事件查詢；
+title: 查看特定訪問者的匯總報告
+description: 以下文檔提供了涉及Adobe Experience Platform查詢服務中的體驗事件的查詢示例。
+exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%
 
 ---
 
-# 檢視特定訪客的統計報表
+# 查看特定訪問者的匯總報告
 
-本檔案提供SQL範例，用於匯總特定使用者從多個分析屬性收集的資料，並在一份報表中一併查看該資料。 使用Adobe Experience Platform Query Service，您可以撰寫使用 [!DNL Experience Events] 擷取各種使用案例。 體驗事件由Experience Data Model(XDM)ExperienceEvent類別表示，該類別會在使用者與網站或服務互動時擷取系統的不可變和非匯總快照。 體驗事件甚至可用於時域分析。 請參閱 [後續步驟區段](#next-steps) 對於涉及 [!DNL Experience Events] 來產生訪客報表。
+本文檔提供了一個SQL示例，用於從特定用戶的多個分析屬性中聚合資料，並在一個報告中一起查看該資料。 使用Adobe Experience Platform查詢服務，可以編寫使用 [!DNL Experience Events] 以捕獲各種使用案例。 體驗事件由體驗資料模型(XDM)ExperienceEvent類表示，該類在用戶與網站或服務交互時捕獲系統的不可改變和非聚合快照。 體驗事件甚至可用於時域分析。 查看 [後續步驟部分](#next-steps) 更多涉及 [!DNL Experience Events] 生成訪問者報告。
 
-XDM和 [!DNL Experience Events] 可在 [[!DNL XDM System] 概述](../../xdm/home.md). 將Query Service與 [!DNL Experience Events]，您就可以有效追蹤使用者的行為趨勢。 以下文檔提供了涉及 [!DNL Experience Events].
+有關XDM和 [!DNL Experience Events] 在 [[!DNL XDM System] 概述](../../xdm/home.md)。 通過將Query Service與 [!DNL Experience Events]，您可以有效跟蹤用戶間的行為趨勢。 以下文檔提供了涉及 [!DNL Experience Events]。
 
 ## 目標
 
-以下SQL示例說明如何查看指定用戶的各種分析值的匯總報告。
+以下SQL示例說明如何查看指定用戶的各種分析值的聚合報告。
 
 ```sql
 SELECT 
@@ -48,10 +49,10 @@ ORDER BY pageViews DESC;
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案，您就能更清楚了解如何搭配 [!DNL Experience Events] 檢視指定使用者之analytics值的匯總報表。
+通過閱讀此文檔，您可以更好地瞭解如何使用查詢服務 [!DNL Experience Events] 查看指定用戶的分析值的聚合報告。
 
-請參閱下列使用案例，了解其他以訪客為基礎的使用案例：
+請參閱以下使用案例以瞭解其他基於訪問者的使用案例：
 
-- [依頁面檢視次數擷取組織的訪客清單。](./visitors-by-number-of-page-views.md)
-- [列出訪客先前的工作階段。](./list-visitor-sessions.md)
-- [依日建立事件的趨勢報表。](./trended-report-of-events.md)
+- [檢索按頁面視圖陣列織的訪問者清單。](./visitors-by-number-of-page-views.md)
+- [列出訪問者以前的會話。](./list-visitor-sessions.md)
+- [按天建立事件趨勢報告。](./trended-report-of-events.md)

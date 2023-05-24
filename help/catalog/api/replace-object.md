@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；目錄；api；取代物件
+keywords: Experience Platform；首頁；熱門主題；目錄；api;replace對象
 solution: Experience Platform
 title: 替換目錄對象
-description: 您可以使用PUT要求覆寫目錄物件的內容，其中會以要求裝載取代整個資源。
+description: 可以使用PUT請求覆蓋目錄對象的內容，其中整個資源將替換為請求負載。
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # 替換目錄對象
 
-您可以覆寫 [!DNL Catalog] 物件，其中整個資源會以要求裝載取代。
+可以覆蓋 [!DNL Catalog] 使用PUT請求的對象，其中整個資源被請求負載替換。
 
 >[!NOTE]
 >
->如果您只需更新 [!DNL Catalog] 物件，則使用PATCH要求可能會更有效率。
+>如果您只需更新 [!DNL Catalog] 對象，使用PATCH請求可能更有效。
 
 **API格式**
 
@@ -32,7 +32,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 **要求**
 
-下列請求會使用裝載中提供的值覆寫資料集。
+以下請求使用負載中提供的值覆蓋資料集。
 
 ```shell
 curl -X PUT \
@@ -57,7 +57,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回包含覆寫物件ID的陣列。 此ID應符合PUT請求中傳送的ID。 現在，對此物件執行GET要求時，會顯示其詳細資料已取代為先前PUT要求之裝載中提供的詳細資料。
+成功的響應返回包含被覆蓋對象ID的陣列。 此ID應與在PUT請求中發送的ID匹配。 現在，對此對象執行GET請求時顯示其詳細資訊已替換為先前PUT請求的負載中提供的詳細資訊。
 
 ```json
 [

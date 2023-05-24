@@ -1,6 +1,6 @@
 ---
-description: 了解如何使用Destination SDK，使用自訂檔案格式設定選項和自訂檔案名稱設定來設定Azure Data Lake儲存目標。
-title: 使用自訂檔案格式選項和自訂檔案名稱設定來設定Azure Data Lake Storage目的地。
+description: 瞭解如何使用Destination SDK配置具有自定義檔案格式選項和自定義檔案名配置的Azure資料湖儲存目標。
+title: 使用自定義檔案格式設定選項和自定義檔案名配置配置Azure Data Lake儲存目標。
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 0%
 
 ---
 
-# 設定 [!DNL Azure Data Lake Storage] 具有自定義檔案格式選項和自定義檔案名配置的目標
+# 配置 [!DNL Azure Data Lake Storage] 具有自定義檔案格式選項和自定義檔案名配置的目標
 
 ## 總覽 {#overview}
 
-本頁說明如何使用Destination SDK來設定 [!DNL Azure Data Lake Storage] 自訂目的地 [檔案格式選項](configure-file-formatting-options.md) 和自訂 [檔案名配置](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+本頁介紹如何使用Destination SDK配置 [!DNL Azure Data Lake Storage] 自定義目標 [檔案格式選項](configure-file-formatting-options.md) 和習俗 [檔案名配置](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration)。
 
-此頁顯示Azure Data Lake儲存目的地的所有可用配置選項。 您可以編輯下列步驟中顯示的設定，或視需要刪除設定的某些部分。
+此頁顯示Azure Data Lake Storage目標的所有可用配置選項。 您可以編輯下面步驟中顯示的配置，或根據需要刪除配置的某些部分。
 
-如需下方所用參數的詳細說明，請參閱 [目的地SDK中的設定選項](../../functionality/configuration-options.md).
+有關下面使用的參數的詳細說明，請參見 [目標SDK中的配置選項](../../functionality/configuration-options.md)。
 
 ## 先決條件 {#prerequisites}
 
-開始執行下列步驟之前，請閱讀 [Destination SDK快速入門](../../getting-started.md) 頁面，以取得使用Adobe I/OAPI所需的Destination SDK驗證憑證和其他必要條件的相關資訊。
+在前進到下面概述的步驟之前，請閱讀 [Destination SDK入門](../../getting-started.md) 頁，以獲取使用Adobe I/OAPI的必要Destination SDK身份驗證憑據和其他先決條件。
 
 ## 步驟1:建立伺服器和檔案配置 {#create-server-file-configuration}
 
-從使用 `/destination-server` 端點 [建立伺服器和檔案配置](../../authoring-api/destination-server/create-destination-server.md).
+開始使用 `/destination-server` 終結點到 [建立伺服器和檔案配置](../../authoring-api/destination-server/create-destination-server.md)。
 
 **API格式**
 
@@ -35,8 +35,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **要求**
 
-下列請求會建立新的目標伺服器設定，由裝載中提供的參數所設定。
-以下裝載包含通用 [!DNL Azure Data Lake Storage] 配置，使用自定義 [CSV檔案格式](../../functionality/destination-server/file-formatting.md) 設定參數，供使用者在Experience PlatformUI中定義。
+以下請求將建立由負載中提供的參數配置的新目標伺服器配置。
+下面的負載包括通用 [!DNL Azure Data Lake Storage] 配置，使用自定義 [CSV檔案格式](../../functionality/destination-server/file-formatting.md) 用戶可以在Experience PlatformUI中定義的配置參數。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -119,13 +119,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-成功的回應會傳回新的目標伺服器設定，包括唯一識別碼(`instanceId`)。 在下一個步驟中，視需要儲存此值。
+成功的響應返回新的目標伺服器配置，包括唯一標識符(`instanceId`)。 根據下一步的要求儲存此值。
 
 ## 步驟2:建立目標配置 {#create-destination-configuration}
 
-在上一步中建立目標伺服器和檔案格式設定後，您現在可以使用 `/destinations` API端點來建立目的地設定。
+在上一步中建立目標伺服器和檔案格式配置後，現在可以使用 `/destinations` 用於建立目標配置的API終結點。
 
-在中連接伺服器配置 [步驟1](#create-server-file-configuration) 若要取代至此目標設定，請取代 `destinationServerId` 值（與在中建立目標伺服器時取得的值） [步驟1](#create-server-file-configuration).
+連接中的伺服器配置 [步驟1](#create-server-file-configuration) 替換到此目標配置 `destinationServerId` API請求中的值，以及在中建立目標伺服器時獲得的值 [步驟1](#create-server-file-configuration)。
 
 **API格式**
 
@@ -394,48 +394,48 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-成功的回應會傳回新的目的地設定，包括唯一識別碼(`instanceId`)。 如果您需要進一步提出HTTP要求來更新目的地設定，請視需要儲存此值。
+成功的響應返回新的目標配置，包括唯一標識符(`instanceId`)。 如果需要進一步的HTTP請求來更新目標配置，請根據需要儲存此值。
 
-## 步驟3:驗證Experience PlatformUI {#verify-ui}
+## 第3步：驗證Experience PlatformUI {#verify-ui}
 
-根據上述設定，Experience Platform目錄現在會顯示新的私人目的地卡，供您使用。
+根據上述配置，Experience Platform目錄現在將顯示一個新的專用目標卡供您使用。
 
-![螢幕記錄顯示含有選定目的地卡片的目的地目錄頁面。](../../assets/guides/batch/adls-destination-card.gif)
+![螢幕錄制顯示具有選定目標卡的目標目錄頁。](../../assets/guides/batch/adls-destination-card.gif)
 
-在以下影像和錄影中，請注意 [檔案式目的地的啟用工作流程](../../../ui/activate-batch-profile-destinations.md) 符合您在目的地設定中選取的選項。
+在下面的影像和錄制中，請注意 [用於基於檔案的目標的激活工作流](../../../ui/activate-batch-profile-destinations.md) 匹配在目標配置中選擇的選項。
 
-填寫目的地的詳細資訊時，請注意呈現欄位的方式是您在設定中設定的自訂資料欄位。
+在填寫有關目標的詳細資訊時，請注意這些欄位是如何呈現的是您在配置中設定的自定義資料欄位。
 
 >[!TIP]
 >
->將自訂資料欄位新增至目標設定的順序不會反映在UI中。 自訂資料欄位一律會依下列畫面記錄中的顯示順序顯示。
+>將自定義資料欄位添加到目標配置的順序不會反映在UI中。 自定義資料欄位始終按螢幕錄制中顯示的順序顯示。
 
-![填寫目的地詳細資訊](../../assets/guides/batch/file-configuration-options.gif)
+![填寫目標詳細資訊](../../assets/guides/batch/file-configuration-options.gif)
 
-排程匯出間隔時，請注意欄位是您在 `batchConfig` 設定。
+在計畫導出間隔時，請注意這些欄位是您在 `batchConfig` 配置。
 ![導出計畫選項](../../assets/guides/batch/file-export-scheduling.png)
 
-檢視檔案名稱設定選項時，請注意呈現的欄位代表 `filenameConfig` 設定的選項。
+查看檔案名配置選項時，請注意顯示的欄位如何表示 `filenameConfig` 選項。
 ![檔案名配置選項](../../assets/guides/batch/file-naming-options.gif)
 
-如果您想要調整上述任何欄位，請重複 [步驟一](#create-server-file-configuration) 和 [two](#create-destination-configuration) 以根據您的需求修改設定。
+如果要調整上述任何欄位，請重複 [步驟一](#create-server-file-configuration) 和 [二](#create-destination-configuration) 根據需要修改配置。
 
-## 步驟4:（選用）發佈您的目的地 {#publish-destination}
-
->[!NOTE]
->
->如果您要建立私人目的地以供自己使用，且不想將其發佈至目的地目錄以供其他客戶使用，則不需要執行此步驟。
-
-設定您的目的地後，請使用 [目的地發佈API](../../publishing-api/create-publishing-request.md) 將配置提交到Adobe以供審核。
-
-## 步驟5:（可選）記錄您的目的地 {#document-destination}
+## 第4步：（可選）發佈目標 {#publish-destination}
 
 >[!NOTE]
 >
->如果您要建立私人目的地以供自己使用，且不想將其發佈至目的地目錄以供其他客戶使用，則不需要執行此步驟。
+>如果您要建立專用目標供自己使用，並且不想將其發佈到目標目錄中以供其他客戶使用，則無需執行此步驟。
 
-如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則建立 [產品化整合](../../overview.md#productized-custom-integrations)，請使用 [自助服務檔案程式](../../docs-framework/documentation-instructions.md) 若要為您的目的地建立產品檔案頁面，請在 [Experience Platform目的地目錄](../../../catalog/overview.md).
+配置目標後，使用 [目標發佈API](../../publishing-api/create-publishing-request.md) 將您的配置提交給Adobe以供審閱。
+
+## 第5步：（可選）記錄目標 {#document-destination}
+
+>[!NOTE]
+>
+>如果您要建立專用目標供自己使用，並且不想將其發佈到目標目錄中以供其他客戶使用，則無需執行此步驟。
+
+如果您是獨立軟體供應商(ISV)或系統整合商(SI)，則 [產品化整合](../../overview.md#productized-custom-integrations)，使用 [自助文檔處理](../../docs-framework/documentation-instructions.md) 為目標建立產品文檔頁面 [Experience Platform目標目錄](../../../catalog/overview.md)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文，您現在知道如何製作自訂 [!DNL Azure Data Lake Storage] 目的地(使用Destination SDK)。 接下來，您的團隊可以使用 [檔案式目的地的啟用工作流程](../../../ui/activate-batch-profile-destinations.md) 將資料匯出至目的地。
+通過閱讀這篇文章，您現在知道如何編寫自定義 [!DNL Azure Data Lake Storage] 目標Destination SDK。 接下來，您的團隊可以 [用於基於檔案的目標的激活工作流](../../../ui/activate-batch-profile-destinations.md) 將資料導出到目標。

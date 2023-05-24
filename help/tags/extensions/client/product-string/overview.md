@@ -1,6 +1,6 @@
 ---
-title: Adobe Analytics Product String擴充功能概述
-description: 了解Adobe Experience Platform中的Adobe Analytics Product String標籤擴充功能。
+title: Adobe Analytics產品字串擴展概述
+description: 瞭解Adobe Analytics產品字串標籤擴展在Adobe Experience Platform。
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 90%
 
 ---
 
-# Adobe Analytics Product String擴充功能概觀
+# Adobe Analytics產品字串擴展概述
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 `products` 變數會追蹤使用者在您的網站上與產品的互動情形。例如，`products` 變數可追蹤某項產品被檢視、新增至購物車、結帳和購買的次數。此外也可追蹤您的網站上各種商品銷售類別的相對成效。
 
@@ -81,7 +81,7 @@ digitalData.transaction.item.productInfo.productName
 
 如果實作時要使用自訂事件或銷售 eVar，請按照下列步驟操作：
 
-1. 選擇關聯的 **[!UICONTROL 新增]** 按鈕。
+1. 選擇關聯的 **[!UICONTROL 添加]** 按鈕
 1. 在下拉式清單中選擇您需設定的事件或 eVar。
 1. 使用上方所述語法，輸入適當資料層變數的路徑。
 

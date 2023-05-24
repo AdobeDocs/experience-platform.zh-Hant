@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；快速入門；歸因ai；熱門主題
+keywords: Experience Platform；入門；屬性；熱門主題
 feature: Attribution AI
-title: 開始使用Attribution AI
-description: 下列指南需要了解使用Attribution AI時涉及的各種Adobe Experience Platform服務。 開始教學課程之前，請檢閱下列檔案。
+title: 入門Attribution AI
+description: 以下指南要求瞭解Adobe Experience Platform與使用Attribution AI有關的各種服務。 在開始教程之前，請查看以下文檔。
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
 workflow-type: tm+mt
@@ -11,52 +11,52 @@ ht-degree: 1%
 
 ---
 
-# 開始使用Attribution AI
+# Attribution AI入門
 
-以下指南需要了解 [!DNL Adobe Experience Platform] 與使用Attribution AI相關的服務。 開始教學課程之前，請檢閱下列檔案：
+以下指南要求瞭解 [!DNL Adobe Experience Platform] 與使用Attribution AI相關的服務。 在開始教程之前，請查看以下文檔：
 
-- [Experience Data Model(XDM)系統概觀](../../xdm/home.md):XDM是可讓 [!DNL Adobe Experience Cloud]由Experience Platform提供技術支援，在正確的時間，透過正確的管道將正確的訊息傳送給正確的人員。 建置Experience Platform的方法 — XDM系統可操作Experience Data Model結構，以供Platform服務使用。
-- [結構構成基本概念](../../xdm/schema/composition.md):本檔案介紹Experience Data Model(XDM)結構，以及合成結構以用於 [!DNL Adobe Experience Platform].
-- [建立結構](../../xdm/tutorials/create-schema-ui.md):本教學課程涵蓋使用Experience Platform中的結構編輯器建立結構的步驟。
+- [體驗資料模型(XDM)系統概述](../../xdm/home.md):XDM是一個基礎框架，它允許 [!DNL Adobe Experience Cloud]在Experience Platform的支援下，在正確的時刻，在正確的頻道向正確的人傳遞正確的資訊。 構建Experience Platform的方法體系XDM系統可操作經驗資料模型模式供平台服務使用。
+- [架構組合的基礎](../../xdm/schema/composition.md):本文檔介紹了經驗資料模型(XDM)架構，以及組合要用於的架構的構造塊、原則和最佳做法 [!DNL Adobe Experience Platform]。
+- [生成架構](../../xdm/tutorials/create-schema-ui.md):本教程介紹了在Experience Platform中使用架構編輯器建立架構的步驟。
 
-Attribution AI需要資料集才能符合消費者體驗事件(CEE)結構，此結構為 [Experience Data Model(XDM)](../../xdm/home.md) 架構欄位組。 請透過attributionai-support@adobe.com聯絡Adobe支援，以實作或變更此資料。 如果存在媒體支出資料，您可以進行進一步分析，如增加收入和ROI。 如果客戶設定檔資料可用，您可以進一步將評分歸因於客戶設定檔層級。
+Attribution AI需要資料集以符合消費者體驗事件(CEE)架構，該架構是 [體驗資料模型(XDM)](../../xdm/home.md) 架構欄位組。 請通過attributionai-support@adobe.com與Adobe支援部門聯繫，以實施或更改此資料。 如果存在介質支出資料，您可以進一步分析，如增量收入和ROI。 如果客戶配置檔案資料可用，您可以進一步將貸項屬性至客戶配置檔案層。
 
 ## 術語
 
-- **轉換事件：** 客戶為指出目標（例如會議註冊）的里程碑而做的任何數位事件或數位互動。 其他範例包括付費轉換、免費帳戶註冊或特徵資格。
+- **轉換事件：** 客戶為指示目標（如會議註冊）的里程碑而做的任何數字事件或數字交互。 其他示例包括付費轉換、免費帳戶註冊或特徵合格。
 
-- **接觸點：** 客戶在邁向目標的路徑中執行的任何數位事件或數位互動。 例如購買前相關的行銷工作、顯示已檢視的廣告曝光次數以及付費搜尋點按次數。
+- **觸點：** 客戶在實現目標的過程中所做的任何數字事件或數字交互。 示例包括與購買前相關的營銷工作、顯示已查看的廣告印象以及付費搜索點擊。
 
 ## 下載Attribution AI分數
 
 >[!NOTE]
 >
->如果您不需要下載原始分數，可以略過此步驟，並繼續 [後續步驟](#next-steps).
+>如果不需要下載原始分數，可跳過此步驟並繼續 [後續步驟](#next-steps)。
 
-下載Attribution AI分數是透過API呼叫的組合來完成。 若要呼叫Platform API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程後，所有Experience PlatformAPI呼叫中每個必要標題的值都會顯示，如下所示：
+通過API調用的組合來下載Attribution AI分數。 要調用平台API，必須先完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。 完成Experience Platform教程將提供所有驗證API調用中每個必需標頭的值，如下所示：
 
-- 授權：承載 `{ACCESS_TOKEN}`
+- 授權：持 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Experience Platform中的所有資源都會隔離至特定的虛擬沙箱。 對Platform API提出的所有請求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
+Experience Platform中的所有資源都與特定的虛擬沙箱隔離。 所有對平台API的請求都需要一個標頭，該標頭指定操作將在以下位置進行的沙盒的名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需Platform中沙箱的詳細資訊，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
+>有關平台中沙箱的詳細資訊，請參閱 [沙盒概述文檔](../../sandboxes/home.md)。
 
-### 讀取範例API呼叫
+### 讀取示例API調用
 
-本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/troubleshooting.md) Experience Platform疑難排解指南中。
+本指南提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../landing/troubleshooting.md) Experience Platform疑難解答指南。
 
 ## 存取控制 {#access-control}
 
-使用角色型存取控制時， **檢視Attribution AI** 和 **管理Attribution AI** 權限可授予對不同Attribution AI功能的存取。 此 **管理Attribution AI** 讓您 **建立**, **克隆**, **編輯**, **刪除**, **啟用**，或 **disable** 例項，而 **檢視Attribution AI** 讓您 **讀取** 或 **檢視** 它。 此 **建立**, **編輯** 和 **刪除** 動作會由稽核記錄檔記錄。
+使用基於角色的訪問控制時， **查看Attribution AI** 和 **管理Attribution AI** 權限授予對不同功能的Attribution AI訪問權限。 的 **管理Attribution AI** 讓 **建立**。 **克隆**。 **編輯**。 **刪除**。 **啟用**&#x200B;或 **禁用** 在 **查看Attribution AI** 讓 **讀** 或 **視圖** 它。 的 **建立**。 **編輯** 和 **刪除** 操作由審核日誌記錄。
 
-請參閱檔案以了解 [為訪問控制分配權限](../../../help/access-control/home.md) 或方法 [使用審核日誌來監視訪問和活動](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
+請參閱要瞭解的文檔 [分配訪問控制權限](../../../help/access-control/home.md) 或如何 [使用審核日誌來監視訪問和活動](../../../help/landing/governance-privacy-security/audit-logs/overview.md)。
 
 ## 後續步驟 {#next-steps}
 
-準備就緒並部署所有憑證和結構後，請先遵循 [Attribution AI介面指南](./user-guide.md). 本指南會逐步引導您建立執行個體，並提交以進行訓練和計分。
+準備好並準備好所有憑據和架構後，請按照 [Attribution AI用戶介面指南](./user-guide.md)。 本指南指導您建立實例並提交它以進行培訓和評分。

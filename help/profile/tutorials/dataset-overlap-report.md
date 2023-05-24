@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；報表；資料集重疊報表；設定檔資料
-title: 產生資料集重疊報表
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API;reporting；資料集重疊報告；配置檔案資料
+title: 生成資料集重疊報告
 type: Tutorial
-description: 本教學課程概述使用即時客戶設定檔API產生資料集重疊報表所需的步驟。
+description: 本教程概括介紹了使用即時客戶配置檔案API生成資料集重疊報告所需的步驟。
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,33 +11,33 @@ ht-degree: 1%
 
 ---
 
-# 產生資料集重疊報表
+# 生成資料集重疊報告
 
-資料集重疊報表可讓您清楚掌握組織的組成 [!DNL Profile] 顯示對可定址對象（設定檔）貢獻最多的資料集來儲存。
+資料集重疊報告可查看組織的組成 [!DNL Profile] 通過公開對可定址的受眾（配置檔案）貢獻最大的資料集來儲存。
 
-除了提供資料的深入分析外，此報表還可協助您採取動作，以最佳化授權使用，例如設定特定資料的有效期限限制。
+除了提供對資料的洞察力外，此報告還可以幫助您採取措施來優化許可證使用，例如設定某些資料的使用壽命限制。
 
-本教學課程概述使用 [!DNL Real-Time Customer Profile] API和解譯您組織的結果。
+本教程概括介紹了使用 [!DNL Real-Time Customer Profile] API並解釋組織的結果。
 
 ## 快速入門
 
-若要使用Adobe Experience Platform API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en) 以收集所需標題的值。 若要進一步了解Experience PlatformAPI，請參閱 [Platform API快速入門檔案](../../landing/api-guide.md).
+要使用Adobe Experience PlatformAPI，必須先完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en) 以收集所需標題所需的值。 要瞭解有關Experience PlatformAPI的詳細資訊，請參閱 [平台API文檔入門](../../landing/api-guide.md)。
 
-本教學課程中所有API呼叫的必要標題為：
+本教程中所有API調用的必需標頭包括：
 
-* `Authorization: Bearer {ACCESS_TOKEN}`:此 `Authorization` 標題需要以字詞為前置的存取權杖 `Bearer`. 每24小時必須產生一個新的存取權杖值。
-* `x-api-key: {API_KEY}`:此 `API Key` 也稱為 `Client ID` 和值只需產生一次。
-* `x-gw-ims-org-id: {ORG_ID}`:組織ID只需產生一次。
+* `Authorization: Bearer {ACCESS_TOKEN}`:的 `Authorization` 頭需要以單詞為前置詞的訪問令牌 `Bearer`。 必須每24小時生成一個新訪問令牌值。
+* `x-api-key: {API_KEY}`:的 `API Key` 也稱為a `Client ID` 並且是只需生成一次的值。
+* `x-gw-ims-org-id: {ORG_ID}`:組織ID只需生成一次。
 
-完成驗證教學課程並收集所需標題的值後，您就可以開始呼叫即時客戶API。
+完成身份驗證教程並收集所需標頭的值後，您就可以開始調用即時客戶API。
 
-## 使用命令列產生資料集重疊報表
+## 使用命令行生成資料集重疊報告
 
-如果您熟悉使用命令列，則可使用下列cURL要求，透過執行以下GET要求來產生資料集重疊報表 `/previewsamplestatus/report/dataset/overlap`.
+如果您熟悉使用命令行，可以通過執行GET請求來使用以下cURL請求來生成資料集重疊報告 `/previewsamplestatus/report/dataset/overlap`。
 
 **要求**
 
-下列請求會使用 `date` 參數來傳回指定日期的最新報表。
+以下請求使用 `date` 參數，以返回指定日期的最新報表。
 
 ```shell
 curl -X GET \
@@ -49,11 +49,11 @@ curl -X GET \
 
 | 參數 | 說明 |
 |---|---|
-| `date` | 指定要傳回的報表日期。 如果在日期上執行了多個報表，則會傳回該日期的最新報表。 如果指定日期沒有報表，則會傳回HTTP狀態404（找不到）錯誤。 若未指定日期，則會傳回最近的報表。 格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
+| `date` | 指定要返回的報告的日期。 如果在該日期運行了多個報表，則返回該日期的最新報表。 如果指定日期不存在報告，則返回HTTP狀態404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
 
 **回應**
 
-成功的要求會傳回HTTP狀態200（確定）和資料集重疊報表。 報表包含 `data` 物件，包含以逗號分隔的資料集清單及其個別的設定檔計數。 如需如何閱讀報表的詳細資訊，請參閱 [解譯資料集重疊報表資料](#interpret-the-report) 稍後在本教學課程中。
+成功的請求返回HTTP狀態200(OK)和資料集重疊報告。 報告包括 `data` 對象，包含以逗號分隔的資料集清單及其各自的配置檔案計數。 有關如何閱讀報告的詳細資訊，請參閱 [解釋資料集重疊報告資料](#interpret-the-report) 在本教程的後面。
 
 ```json
 {
@@ -66,56 +66,56 @@ curl -X GET \
 }
 ```
 
-### 使用Postman產生資料集重疊報表
+### 使用Postman生成資料集重疊報告
 
-Postman是API開發的協作平台，可用來視覺化API呼叫。 您可以從 [Postman網站](https://www.postman.com) 和提供易於使用的UI，用於執行API呼叫。 下列螢幕擷取畫面使用Postman介面。
+Postman是API開發的協作平台，對API調用的可視化非常有用。 可以從 [Postman網站](https://www.postman.com) 並提供了一個易於使用的UI，用於執行API調用。 以下螢幕截圖使用Postman介面。
 
 **要求**
 
-若要使用Postman請求資料集重疊報表，請完成下列步驟：
+要使用Postman請求資料集重疊報告，請完成以下步驟：
 
-* 使用下拉式清單，選取GET作為請求類型。
-* 在 `KEY` 欄：
+* 使用下拉清單，選擇GET作為請求類型。
+* 在 `KEY` 列：
    * `Authorization`
    * `x-api-key`
    * `x-gw-ims-org-id`
-* 在 `VALUE` 欄，取代大括弧(`{{ }}`)和大括弧內的任何內容。
-* 輸入請求路徑，其中包含或不包含可選 `date` 參數：
+* 將驗證期間生成的值輸入到 `VALUE` 列，替換大括弧(`{{ }}`)和大括弧中的任何內容。
+* 輸入帶可選路徑或不帶可選路徑的請求路徑 `date` 參數：
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap`\
    或
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=YYYY-MM-DD`
 
 | 參數 | 說明 |
 |---|---|
-| `date` | 指定要傳回的報表日期。 如果在日期上執行了多個報表，則會傳回該日期的最新報表。 如果指定日期沒有報表，則會傳回HTTP狀態404（找不到）錯誤。 若未指定日期，則會傳回最近的報表。 <br/>格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
+| `date` | 指定要返回的報告的日期。 如果在該日期運行了多個報表，則返回該日期的最新報表。 如果指定日期不存在報告，則返回HTTP狀態404（未找到）錯誤。 如果未指定日期，則返回最近的報告。 <br/>格式：YYYY-MM-DD。 範例：`date=2024-12-31` |
 
-請求類型、標題、值和路徑完成後，請選取 **傳送** 傳送API請求並產生報表。
+請求類型、標頭、值和路徑完成後，選擇 **發送** 發送API請求並生成報告。
 
 ![](../images/dataset-overlap-report/postman-request.png)
 
 **回應**
 
-成功的要求會傳回HTTP狀態200（確定）和資料集重疊報表。 報表包含 `data` 物件，包含以逗號分隔的資料集清單及其個別的設定檔計數。 如需如何閱讀報表的詳細資訊，請參閱 [解譯資料集重疊報表資料](#interpret-the-report).
+成功的請求返回HTTP狀態200(OK)和資料集重疊報告。 報告包括 `data` 對象，包含以逗號分隔的資料集清單及其各自的配置檔案計數。 有關如何閱讀報告的詳細資訊，請參閱 [解釋資料集重疊報告資料](#interpret-the-report)。
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
-## 解譯資料集重疊報表資料 {#interpret-the-report}
+## 解釋資料集重疊報表資料 {#interpret-the-report}
 
-產生的資料集重疊報表會提供顯示報表日期和時間的時間戳記，以及包含以逗號分隔清單形式之資料集ID唯一組合的資料物件。 以下各節提供有關報告組成部分的其他資訊。
+生成的資料集重疊報告提供了顯示報告日期和時間的時間戳以及包含資料集ID的唯一組合作為逗號分隔清單的資料對象。 以下各節提供了有關報告各組成部分的補充資訊。
 
-### 報表時間戳記
+### 報表時間戳
 
-此 `reportTimestamp` 符合API請求中提供的日期，或若未提供日期，則為最近報表的時間戳記。
+的 `reportTimestamp` 與API請求中提供的日期匹配，或者如果未提供日期，則與最近報告的時間戳匹配。
 
 ### 資料集ID清單
 
-此 `data` 物件包含以逗號分隔清單的資料集ID不重複組合，以及該資料集組合的個別設定檔計數。
+的 `data` 對象包括作為逗號分隔清單的資料集ID的唯一組合以及該資料集組合的相應配置檔案計數。
 
 >[!NOTE]
 >
->與資料集重疊報表每一列相關聯的所有設定檔計數總和，應與您組織中的設定檔總數相等。
+>與資料集重疊報告的每一行關聯的所有配置檔案計數的總和應等於組織中配置檔案總數。
 
-若要解譯報表的結果，請考量下列範例：
+要解釋報告結果，請考慮以下示例：
 
 ```json
   "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
@@ -123,13 +123,13 @@ Postman是API開發的協作平台，可用來視覺化API呼叫。 您可以從
   "5eeda0032af7bb19162172a7": 107
 ```
 
-此報告提供下列資訊：
+此報表提供以下資訊：
 
-* 有123個設定檔，由來自下列資料集的資料組成： `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
-* 來自這兩個資料集的資料共454,412個設定檔： `5d92921872831c163452edc8` 和 `5eb2cdc6fa3f9a18a7592a98`.
-* 有107個設定檔僅由資料集的資料組成 `5eeda0032af7bb19162172a7`.
-* 組織中共有454,642個設定檔。
+* 有123個配置檔案，包括來自以下資料集的資料： `5d92921872831c163452edc8`。 `5da7292579975918a851db57`。 `5eb2cdc6fa3f9a18a7592a98`。
+* 共有454,412個配置檔案包含來自這兩個資料集的資料： `5d92921872831c163452edc8` 和 `5eb2cdc6fa3f9a18a7592a98`。
+* 有107個配置檔案僅包含來自資料集的資料 `5eeda0032af7bb19162172a7`。
+* 該組織共有454 642份檔案。
 
 ## 後續步驟
 
-完成本教學課程後，您現在可以使用即時客戶設定檔API產生資料集重疊報表。 若要進一步了解如何在API和Experience PlatformUI中使用設定檔資料，請先閱讀 [設定檔概述檔案](../home.md).
+完成本教程後，您現在可以使用Real-Time Customer Profile API生成資料集重疊報告。 要瞭解有關在API和Experience PlatformUI中使用配置檔案資料的更多資訊，請首先閱讀 [概述文檔](../home.md)。

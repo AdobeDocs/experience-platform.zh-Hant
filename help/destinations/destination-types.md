@@ -1,7 +1,7 @@
 ---
-keywords: 目的地；目的地；目的地類型
-title: 目的地類型和類別
-description: 了解Adobe Experience Platform中不同的目的地類型和類別。
+keywords: 目標；目標；目標類型
+title: 目標類型和類別
+description: 瞭解Adobe Experience Platform不同類型和類別的目的地。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
 workflow-type: tm+mt
@@ -10,93 +10,93 @@ ht-degree: 0%
 
 ---
 
-# 目的地類型和類別
+# 目標類型和類別
 
-請閱讀本頁面，了解Adobe Experience Platform目的地的不同類型和類別。
+閱讀本頁，瞭解Adobe Experience Platform目標的不同類型和類別。
 
-## 目的地類型 {#destination-types}
+## 目標類型 {#destination-types}
 
-在Adobe Experience Platform中，我們會區分不同的目的地類型：連線、資料集匯出和擴充功能。 有數種連線目的地，可讓您將資料匯出至以API為基礎的目的地。
+在Adobe Experience Platform，我們區分不同的目標類型 — 連接、資料集導出和擴展。 有幾種類型的連接目標，允許您將資料導出到基於API的目標。
 
-最後，還可以區分目標目錄中所有組織中可用的公共目標與Real-time CDP Ultimate客戶可建立的專用目標，以滿足其特定的導出使用案例。
+最後，還可以區分目標目錄中所有組織中可用的公共目標與私有目標之間的連接，即時CDP最終客戶可以建立這些私有目標來滿足其特定的出口使用情形。
 
-![目的地圖表的類型。](./assets/destination-types/types-of-destinations-no-highlight.png)
+![目標圖的類型。](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## 連線 {#connections}
 
-**[!UICONTROL 設定檔匯出]**, **[!UICONTROL 串流區段匯出]**，和 **[!DNL Edge Personalization]** Adobe Experience Platform中的目的地擷取事件資料，將其與其他資料來源結合以形成 [即時客戶個人檔案](../profile/home.md)，套用區段，並將區段和合格設定檔匯出至目的地。
+**[!UICONTROL 配置檔案導出]**。 **[!UICONTROL 流段導出]**, **[!DNL Edge Personalization]** 目標在Adobe Experience Platform捕獲事件資料，將其與其他資料源組合以形成 [即時客戶配置檔案](../profile/home.md)，應用分段，並將段和限定配置檔案導出到目標。
 
-## 設定檔匯出目的地 {#profile-export}
+## 配置檔案導出目標 {#profile-export}
 
-設定檔匯出目的地會接收原始資料，通常以電子郵件地址作為主要金鑰。 Experience Platform目前支援兩種類型的設定檔匯出目的地：
+配置檔案導出目標接收原始資料，通常以電子郵件地址作為主鍵。 Experience Platform當前支援兩種類型的配置檔案導出目標：
 
-* [串流設定檔匯出目的地（企業目的地）](#streaming-profile-export)
-* [批次（檔案型）目的地](#file-based)
+* [流配置檔案導出目標（企業目標）](#streaming-profile-export)
+* [批處理（基於檔案）目標](#file-based)
 
-### 串流設定檔匯出目的地（企業目的地） {#streaming-profile-export}
+### 流配置檔案導出目標（企業目標） {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->企業目的地或串流設定檔匯出目的地皆適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 僅限客戶。
+>企業目標或流配置檔案導出目標可用於 [Adobe Real-time Customer Data Platform旗艦](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 僅限客戶。
 
-使用企業目標Data Connectors將Adobe Real-time Customer Data Platform設定檔近乎即時傳送至內部系統或其他協力廠商系統，以進行資料同步、分析，並進一步擴充設定檔使用案例。
+使用企業目標資料連接器將Adobe Real-time Customer Data Platform概要檔案以接近即時的方式傳送到內部系統或其他第三方系統，以便進行資料同步、分析和進一步概要檔案濃縮使用案例。
 
-這些目的地會以Experience Platform資料流的形式接收區段和設定檔資料。
+這些目的地接收段和輪廓資料作為Experience Platform資料流。
 
-企業目的地包括：
+企業目標包括：
 
-* [HTTP API目的地](catalog/streaming/http-destination.md)
+* [HTTP API目標](catalog/streaming/http-destination.md)
 * [AmazonKinesis](catalog/cloud-storage/amazon-kinesis.md)
 * [Azure事件中心](catalog/cloud-storage/azure-event-hubs.md)
 
-### 批次（檔案型）目的地 {#file-based}
+### 批處理（基於檔案）目標 {#file-based}
 
-檔案型目的地接收 `.csv` 包含設定檔和/或屬性的檔案。 [Amazon S3](catalog/cloud-storage/amazon-s3.md) 是可匯出包含設定檔匯出的檔案的目的地範例。
+基於檔案的目標接收 `.csv` 包含配置檔案和/或屬性的檔案。 [AmazonS3](catalog/cloud-storage/amazon-s3.md) 是可導出包含配置檔案導出的檔案的目標示例。
 
-## 串流區段匯出目的地 {#streaming-destinations}
+## 流段導出目標 {#streaming-destinations}
 
-區段匯出目的地會接收Experience Platform區段資料。 這些目的地使用區段ID或使用者ID。 廣告和社交目的地，例如 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)，或 [Facebook](catalog/social/facebook.md) 是這類目的地的範例。
+段導出目標接收Experience Platform段資料。 這些目標使用段ID或用戶ID。 廣告和社交目的地，如 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)。 [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)或 [Facebook](catalog/social/facebook.md) 就是這些目的地的例子。
 
-## Edge個人化目的地 {#edge-personalization-destinations}
+## 邊緣個性化目標 {#edge-personalization-destinations}
 
-Experience Platform中的邊緣個人化目的地包括 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化目的地](/help/destinations/catalog/personalization/custom-personalization.md). 使用這些目的地，您可以為客戶啟用相同頁面和下一頁個人化使用案例。
+Experience Platform中的邊緣個性化目標包括 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化目標](/help/destinations/catalog/personalization/custom-personalization.md)。 通過使用這些目標，您可以為客戶啟用同頁和下頁個性化使用案例。
 
-深入了解如何 [為同一頁面和下一頁個人化設定個人化目的地](/help/destinations/ui/configure-personalization-destinations.md).
+閱讀有關如何 [為同一頁和下一頁個性化設定配置個性化目標](/help/destinations/ui/configure-personalization-destinations.md)。
 
-## 設定檔匯出和區段匯出目的地 — 影片概觀 {#video}
+## 配置檔案導出和段導出目標 — 視頻概述 {#video}
 
-以下影片會逐一說明兩種目的地的特殊性：
+以下視頻將您瀏覽兩種目標類型的特殊性：
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-## （測試版）資料集匯出目的地 {#dataset-export-destinations}
+## (Beta)資料集導出目標 {#dataset-export-destinations}
 
-目的地目錄中的某些雲端儲存目標支援資料集匯出。 使用這些目的地將原始資料集匯出至雲端儲存空間位置。
+目標目錄中的某些雲儲存目標支援資料集導出。 使用這些目標將原始資料集導出到雲儲存位置。
 
-深入了解如何 [匯出資料集](/help/destinations/ui/export-datasets.md).
+閱讀有關如何 [導出資料集](/help/destinations/ui/export-datasets.md)。
 
 ## 擴充功能 {#extensions}
 
-平台運用標籤管理的強大功能和彈性，可讓您在UI中設定標籤擴充功能。
+平台利用了標籤管理的強大功能和靈活性，允許您在UI中配置標籤擴展。
 
 >[!TIP]
 >
->如需標籤擴充功能的詳細資訊，包括使用案例以及如何在介面中尋找，請參閱 [標籤擴充功能概觀](./catalog/launch-extensions/overview.md).
+>有關標籤擴展的詳細資訊，包括使用案例以及如何在介面中查找它們，請參見 [標籤擴展概述](./catalog/launch-extensions/overview.md)。
 
-標籤擴充功能會將原始事件資料轉送至數種目的地。 將擴充功能視為 **事件轉送** 目的地類型。 這是與目的地平台整合的更簡單類型，目的地平台只會轉送原始事件資料。 例如 [Gainsight個人化擴充功能](./catalog/personalization/gainsight.md) 或 [確認客戶擴充功能的語音](./catalog/voice/confirmit-digital-feedback.md).
+標籤擴展將原始事件資料轉發到多種目標類型。 將擴展視為 **事件轉發** 目標類型。 這是與目標平台的更簡單的整合類型，目標平台只轉發原始事件資料。 這些例子 [Gainsight個性化擴展](./catalog/personalization/gainsight.md) 或 [確認客戶分機聲音](./catalog/voice/confirmit-digital-feedback.md)。
 
-![與其他目的地比較的標籤擴充功能](./assets/common/launch-and-other-destinations.png)
+![與其他目標相比的標籤擴展](./assets/common/launch-and-other-destinations.png)
 
-## 何時使用連線和擴充功能 {#when-to-use}
+## 何時使用連接和擴展 {#when-to-use}
 
-身為行銷人員，您可以結合連線和擴充功能，解決您的使用案例。
+作為營銷人員，您可以使用連接和擴展的組合來解決您的使用案例。
 
-如有必要運用完整的集中化客戶設定檔或客戶區段進行啟用，連線就十分實用。 例如，如果您要將來自分析系統的行為資料與上傳的CRM資料連結，以在將個人化訊息傳送給該使用者之前，讓使用者符合指定區段的資格，請使用連線。
+在需要利用完整的集中式客戶配置檔案或客戶細分段進行激活時，連接非常有用。 例如，如果要將分析系統中的行為資料與上傳的CRM資料聯合起來，則使用連接，以在向該用戶傳遞個性化消息之前，為用戶限定給定段。
 
-當事件資料用來觸發動作，或在外部環境中執行區段時，擴充功能會很有幫助。 例如，如果行為資料需要轉送至外部系統，而不需要連結至指定使用者的檔案上的其他資料來源。
+當事件資料用於觸發操作或在外部環境中執行分段時，擴展會很有幫助。 例如，如果行為資料需要被轉發到外部系統，而不需要與給定用戶的檔案上的其他資料源連接。
 
 ## 目標類別 {#categories}
 
-中的連線和擴充功能 [目的地目錄](https://platform.adobe.com/destination/catalog) 按目標類別分組(**廣告**, **雲端儲存空間**, **調查平台**, **電子郵件行銷**&#x200B;等)，取決於協助您達成的行銷動作。 如需各個類別的詳細資訊，以及每個類別中包含的目的地，請參閱 [目的地目錄檔案](./catalog/overview.md).
+中的連接和擴展 [目標目錄](https://platform.adobe.com/destination/catalog) 按目標類別分組(**廣告**。 **雲儲存**。 **調查平台**。 **電子郵件營銷**&#x200B;等)，具體取決於他們幫助您實現的營銷活動。 有關每個類別以及每個類別中包括的目標的詳細資訊，請參閱 [目標目錄文檔](./catalog/overview.md)。
 
-![目錄頁面中反白顯示的目的地類別。](./assets/destination-types/destination-categories-menu.png)
+![目錄頁中突出顯示的目標類別。](./assets/destination-types/destination-categories-menu.png)

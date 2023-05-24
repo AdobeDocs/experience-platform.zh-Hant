@@ -1,6 +1,6 @@
 ---
-title: 邊緣擴充功能模組中的內容
-description: 了解內容物件，及其在邊緣屬性標籤延伸模組與程式庫模組互動中所扮演的角色。
+title: 邊擴展模組中的上下文
+description: 瞭解上下文對象及其在邊緣屬性標籤擴展中與庫模組交互時所起的作用。
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+> Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 邊緣擴充功能中的所有程式庫模組執行時，系統都會為其提供 `context` 物件。本文介紹 `context` 物件所提供的屬性，並說明這些屬性在程式庫模組中扮演的角色。
 
@@ -23,7 +23,7 @@ ht-degree: 77%
 
 ### [!DNL event]
 
-此 `event` 物件代表觸發規則的事件，並包含下列值：
+的 `event` object表示觸發規則的事件，並包含以下值：
 
 ```js
 logger.log(context.arc.event);
@@ -42,7 +42,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-`request` 物件有兩個頂層屬性：`body` 和 `head`。此 `body` 屬性包含Experience Data Model(XDM)資訊，當您導覽至 **[!UICONTROL Launch]** ，然後選取 **[!UICONTROL 邊跡]** 標籤。
+`request` 物件有兩個頂層屬性：`body` 和 `head`。的 `body` 屬性包含體驗資料模型(XDM)資訊，在導航到Adobe Experience Platform調試器時可在調試器中進行檢查 **[!UICONTROL 啟動]** 的 **[!UICONTROL 邊跡]** 頁籤。
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -96,15 +96,15 @@ module.exports = (context) => {
 
 >[!NOTE]
 >
->使用此策略時，請小心一律將完整的擴充規則存放區退回。 如果您只傳回值，則會覆寫您可能設定的任何其他屬性。
+>使用此策略時，請務必始終返回完全擴展規則儲存。 如果只返回值，則它將覆蓋您可能已設定的任何其他屬性。
 
 ## 公用程式
 
-此 `utils` 屬性代表一個物件，提供標籤執行階段的特定公用程式。
+的 `utils` 屬性表示提供特定於標籤運行時的實用程式的對象。
 
 ### [!DNL logger]
 
-此 `logger` 公用程式可讓您記錄在使用 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+的 `logger` 實用程式允許您記錄在使用 [Adobe Experience Platform調試器](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)。
 
 ```js
 context.utils.logger.error('Error!');
@@ -131,7 +131,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-此公用程式會傳回物件，其中包含目前標籤執行階段程式庫組建的相關資訊。
+此實用程式返回包含有關當前標籤運行時庫生成的資訊的對象。
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);

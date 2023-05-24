@@ -1,6 +1,6 @@
 ---
-title: 核心事件轉送擴充功能概觀
-description: 了解Adobe Experience Platform中的核心事件轉送擴充功能。
+title: 核心事件轉發擴展概述
+description: 瞭解Adobe Experience Platform的核心事件轉發擴展。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
@@ -10,13 +10,13 @@ ht-degree: 91%
 
 ---
 
-# 核心事件轉送擴充功能概觀
+# 核心事件轉發擴展概述
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-核心事件轉送擴充功能提供Adobe Experience Platform中事件轉送的預設事件、條件和資料類型。
+核心事件轉發擴展提供預設事件、條件和資料類型，用於Adobe Experience Platform的事件轉發。
 
 您可參閱此參考文件，了解使用此擴充功能建立規則時可使用哪些選項。
 
@@ -26,9 +26,9 @@ ht-degree: 91%
 
 ### 自訂程式碼
 
-指定必須存在作為事件條件的任何自訂程式碼。使用內建程式碼編輯器輸入自訂程式碼。Adobe Experience Platform中的事件轉送支援ES6。
+指定必須存在作為事件條件的任何自訂程式碼。使用內建程式碼編輯器輸入自訂程式碼。Adobe Experience Platform的事件轉發支援ES6。
 
-1. 選擇 **[!UICONTROL 開啟編輯器]**.
+1. 選擇 **[!UICONTROL 開啟編輯器]**。
 1. 輸入自訂程式碼。
 1. 選取「**[!UICONTROL 儲存]**」。
 
@@ -155,11 +155,11 @@ module.exports = (context) => {
 
 ### 自訂程式碼
 
-提供觸發事件和評估條件後執行的程式碼。Adobe Experience Platform中的事件轉送支援ES6。
+提供觸發事件和評估條件後執行的程式碼。Adobe Experience Platform的事件轉發支援ES6。
 
 1. 為動作程式碼命名。
-1. 選擇 **[!UICONTROL 開啟編輯器]**.
-1. 編輯程式碼，然後選取 **[!UICONTROL 儲存]**.
+1. 選擇 **[!UICONTROL 開啟編輯器]**。
+1. 編輯代碼，然後選擇 **[!UICONTROL 保存]**。
 
 若要存取自訂程式碼中資料元素的值，請使用 `getDataElementValue` 方法。舉例來說，若要擷取資料元素 `productName` 的值，請編寫以下內容：
 
@@ -167,7 +167,7 @@ module.exports = (context) => {
 getDataElementValue('productName') 
 ```
 
-事件轉送動作會依序執行。 自訂程式碼也可以在一個動作中傳回可用於後續動作的值。傳回的值可能來自該動作中的程式碼，或來自呼叫外部來源的回應內文。若要參照使用核心擴充功能之單一規則中先前執行動作的資料，請建立 `Path` 類型資料元素，並使用以下路徑來參照核心擴充功能中自訂程式碼定義之 `productCategory` 變數的值：
+事件轉發操作按順序執行。 自訂程式碼也可以在一個動作中傳回可用於後續動作的值。傳回的值可能來自該動作中的程式碼，或來自呼叫外部來源的回應內文。若要參照使用核心擴充功能之單一規則中先前執行動作的資料，請建立 `Path` 類型資料元素，並使用以下路徑來參照核心擴充功能中自訂程式碼定義之 `productCategory` 變數的值：
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
@@ -183,7 +183,7 @@ arc.ruleStash.core.productCategory
 
 ### 自訂程式碼
 
-在UI中可以選取  **[!UICONTROL 開啟編輯器]** 和在編輯器視窗中插入程式碼。
+通過選擇  **[!UICONTROL 開啟編輯器]** 並在編輯器窗口中插入代碼。
 
 編輯器視窗中需有傳回陳述式，以指明應作為資料元素值使用的值。如果未包含傳回陳述式，或系統傳回 `null` 或 `undefined` 值，則資料元素的預設值會反映 `null` 或 `undefined`。
 
@@ -226,4 +226,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->此 `interact` 來自用戶端的呼叫已 `events`，但若為事件轉送，您需要 `event`. 這是因為事件轉送會個別檢查每個事件，而非像用戶端上所示的多個事件批次。
+>的 `interact` 來自客戶端的呼叫 `events`但是，對於事件轉發，您需要 `event`。 這是因為事件轉發會單獨檢查每個事件，而不是像客戶端上所示那樣作為多個事件的批處理。

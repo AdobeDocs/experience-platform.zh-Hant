@@ -1,6 +1,6 @@
 ---
 title: 資料衛生概述
-description: Adobe Experience Platform資料衛生功能可讓您更新或清除過時或不準確的記錄，以管理資料的生命週期。
+description: Adobe Experience Platform資料衛生服務允許您通過更新或清除過時或不準確的記錄來管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->目前，只有已購買的組織才能使用資料衛生 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**. 這些功能預計於近期內正式發行。 如需近期上市的詳細資訊，請洽詢您的Adobe服務代表。 不過，您可以立即 [透過刪除資料集 [!UICONTROL 資料集] UI](../catalog/datasets/user-guide.md#delete).
+>目前，資料衛生功能僅適用於已購買的組織 **Adobe醫療保健盾** 或 **Adobe隱私與安全防護**。 這些功能將在不久的將來發佈。 有關他們即將上市的更多資訊，請與您的Adobe服務代表聯繫。 但是，你可以馬上 [刪除資料集 [!UICONTROL 資料集] UI](../catalog/datasets/user-guide.md#delete)。
 
-Adobe Experience Platform提供一組完善的工具，可管理大型、複雜的資料操作，以便協調消費者體驗。 隨著資料隨著時間傳入系統中，管理資料儲存變得越來越重要，這樣資料就能如預期般使用、在需要更正錯誤資料時更新，並在組織原則認為有必要時刪除。
+Adobe Experience Platform公司提供一套強大的工具來管理大型、複雜的資料操作，以協調消費者體驗。 隨著資料逐漸被引入系統，管理資料儲存變得越來越重要，這樣資料就可以按預期使用，當不正確的資料需要更正時更新，當組織策略認為有必要時刪除。
 
 <!-- Platform's data hygiene capabilities allow you to manage your stored data through the following:
 
@@ -26,34 +26,34 @@ Adobe Experience Platform提供一組完善的工具，可管理大型、複雜�
 >
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
-這些活動可使用 [[!UICONTROL 資料衛生] UI工作區](#ui) 或 [資料衛生API](#api). 當執行資料衛生作業時，系統在處理的每個步驟提供透明度更新。 請參閱 [時間表和透明度](#timelines-and-transparency) 有關在系統中如何表示每個作業類型的詳細資訊。
+這些活動可以使用 [[!UICONTROL 資料衛生] UI工作區](#ui) 或 [資料衛生API](#api)。 當資料衛生作業執行時，系統在處理的每個步驟提供透明度更新。 請參閱 [時間表和透明度](#timelines-and-transparency) 的子菜單。
 
 ## [!UICONTROL 資料衛生] UI工作區 {#ui}
 
-此 [!UICONTROL 資料衛生] platform UI中的workspace可讓您設定及排程資料衛生作業，協助確保記錄可如預期般維護。
+的 [!UICONTROL 資料衛生] 平台UI中的工作區允許您配置和安排資料衛生操作，從而幫助確保記錄按預期進行維護。
 
-如需在UI中管理資料衛生工作的詳細步驟，請參閱 [資料衛生UI指南](./ui/overview.md).
+有關在UI中管理資料衛生任務的詳細步驟，請參見 [資料衛生UI指南](./ui/overview.md)。
 
 ## 資料衛生API {#api}
 
-此 [!UICONTROL 資料衛生] UI是以資料衛生API為基礎而建置的，如果您偏好讓資料衛生活動自動化，其端點可供您直接使用。 請參閱 [資料衛生API指南](./api/overview.md) 以取得更多資訊。
+的 [!UICONTROL 資料衛生] UI構建在資料衛生API之上，如果您希望自動執行資料衛生活動，其端點可供您直接使用。 查看 [資料衛生API指南](./api/overview.md) 的子菜單。
 
 ## 時間表和透明度
 
-記錄刪除和資料集過期請求各自有各自的處理時間軸，並在各自工作流程的關鍵點提供透明度更新。
+記錄刪除和資料集過期請求每個都有自己的處理時間表，並在其各自工作流的關鍵點提供透明度更新。
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
-若 [資料集過期請求](./ui/dataset-expiration.md) 已建立：
+以下是 [資料集過期請求](./ui/dataset-expiration.md) 已建立：
 
-| 測試 | 排程的過期後時間 | 說明 |
+| 測試 | 計畫到期後的時間 | 說明 |
 | --- | --- | --- |
-| 請求已提交 | 0 小時 | 資料管理員或隱私權分析員會提交資料集要求，讓資料集在指定時間過期。 請求會顯示在 [!UICONTROL 資料衛生UI] 提交後，且會維持擱置狀態，直到排程的到期時間結束為止，之後請求就會執行。 |
-| 資料集已丟棄 | 1 小時 | 資料集會從 [資料集詳細目錄頁面](../catalog/datasets/user-guide.md) 在UI中。 資料湖內的資料只會遭到軟性刪除，且會一直保留，直到程式結束為止，之後資料就會遭到硬性刪除。 |
-| 已更新設定檔計數 | 30 小時 | 如果某些設定檔的所有元件屬性皆系結至該資料集，系統可能會根據要刪除的資料集內容將其移除。 刪除資料集30小時後，所有導致的設定檔總數變更都會反映在 [控制面板小工具](../dashboards/guides/profiles.md#profile-count-trend) 和其他報告。 |
-| 已更新區段 | 48 小時 | 更新所有受影響的設定檔後，所有相關 [區段](../segmentation/home.md) 會更新以反映其新大小。 根據已移除的資料集和您要分段的屬性，每個區段的大小可能會因刪除而增加或減少。 |
-| 已更新歷程和目的地 | 50 小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)，和 [目的地](../destinations/home.md) 會根據相關區段的變更而更新。 |
-| 硬刪除完成 | 14 天 | 與資料集相關的所有資料都會從資料湖中硬性刪除。 此 [衛生工作狀況](./ui/browse.md#view-details) 會更新刪除資料集的資訊，以反映此情況。 |
+| 請求已提交 | 0 小時 | 資料管理員或隱私分析員提交資料集在給定時間過期的請求。 請求在 [!UICONTROL 資料衛生UI] 在提交後，並且一直處於掛起狀態，直到計畫到期時間，在此時間後，請求將執行。 |
+| 已刪除資料集 | 1 小時 | 從 [資料集清單頁](../catalog/datasets/user-guide.md) 的子菜單。 資料湖中的資料只是軟刪除，並且將一直保留到過程結束，之後將硬刪除。 |
+| 已更新配置檔案計數 | 30 小時 | 根據要刪除的資料集的內容，如果某些配置檔案的所有元件屬性都與該資料集關聯，則可能會從系統中刪除這些配置檔案。 在刪除資料集30小時後，在總體配置檔案計數中出現的任何更改都反映在 [儀表板小部件](../dashboards/guides/profiles.md#profile-count-trend) 等報告。 |
+| 已更新段 | 48 小時 | 更新所有受影響的配置檔案後，所有相關 [段](../segmentation/home.md) 更新以反映其新大小。 根據刪除的資料集和要分割的屬性，每個段的大小可能會因刪除而增加或減少。 |
+| 更新的旅程和目的地 | 50 小時 | [旅程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html)。 [活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), [目的地](../destinations/home.md) 會根據相關分類之變動而更新。 |
+| 硬刪除完成 | 14 天 | 與資料集相關的所有資料都從資料湖中硬刪除。 的 [衛生工作的狀況](./ui/browse.md#view-details) 將更新刪除資料集以反映這一點。 |
 
 {style="table-layout:auto"}
 
@@ -78,4 +78,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## 後續步驟
 
-本檔案概述Platform的資料衛生功能。 若要開始在UI中提出資料衛生請求，請參閱 [UI指南](./ui/overview.md). 若要了解如何以程式設計方式建立資料衛生工作，請參閱 [資料衛生API指南](./api/overview.md)
+本文檔概述了平台的資料衛生功能。 要開始在UI中發出資料衛生請求，請參閱 [UI指南](./ui/overview.md)。 要瞭解如何以寫程式方式建立資料衛生作業，請參閱 [資料衛生API指南](./api/overview.md)

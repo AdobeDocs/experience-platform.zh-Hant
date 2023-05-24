@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；UI; XDM; XDM系統；體驗資料模型；體驗資料模型；體驗資料模型；資料模型；結構編輯器；結構編輯器；結構；結構；結構；建立；關係；關係；參考；參考；
+keywords: Experience Platform；主題；熱門主題；UI;UI;XDM;XDM系統；經驗資料模型；經驗資料模型；資料模型；資料模型；資料模型；架構編輯器；架構編輯器；架構；架構；架構；建立；關係；參考；引用；
 solution: Experience Platform
-title: 使用結構編輯器定義兩個結構之間的關係
-description: 本檔案提供一個教學課程，用於使用Experience Platform使用者介面中的結構編輯器定義兩個結構之間的關係。
+title: 使用架構編輯器定義兩個架構之間的關係
+description: 本文檔提供了一個教程，用於使用Experience Platform用戶介面中的架構編輯器定義兩個架構之間的關係。
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
@@ -29,96 +29,96 @@ ht-degree: 9%
 >title="參考身分識別命名空間"
 >abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。如需有關方案關係的詳細資訊，請查看此文件。"
 
-了解客戶之間的關係，以及客戶在不同管道與品牌互動的能力，是Adobe Experience Platform的重要一環。 在 [!DNL Experience Data Model] (XDM)結構可讓您對客戶資料獲得複雜的深入分析。
+瞭解客戶之間的關係以及客戶與品牌之間通過各種渠道進行的互動是Adobe Experience Platform的重要部分。 在結構中定義這些關係 [!DNL Experience Data Model] (XDM)架構使您能夠對客戶資料獲得複雜的見解。
 
-而架構關係則可透過使用聯合架構和 [!DNL Real-Time Customer Profile]，此欄位僅適用於共用相同類別的結構。 要在屬於不同類的兩個架構之間建立關係，必須將專用的關係欄位添加到源架構中，該源架構引用其他相關架構的標識。
+而架構關係可通過使用聯合架構和 [!DNL Real-Time Customer Profile]，這僅適用於共用同一類的方案。 要在屬於不同類的兩個架構之間建立關係，必須將專用關係欄位添加到源架構中，該源架構引用其他相關架構的標識。
 
-本檔案提供教學課程，以使用 [!DNL Experience Platform] 使用者介面。 如需使用API定義結構關係的步驟，請參閱 [使用結構註冊表API定義關係](relationship-api.md).
+本文檔提供了使用中的架構編輯器定義兩個架構之間的關係的教程 [!DNL Experience Platform] 用戶介面。 有關使用API定義架構關係的步驟，請參見上的教程 [使用方案註冊表API定義關係](relationship-api.md)。
 
 >[!NOTE]
 >
->如需在Adobe Real-time Customer Data Platform B2B版中建立多對一關係的步驟，請參閱 [建立B2B關係](./relationship-b2b.md).
+>有關如何在Adobe Real-time Customer Data PlatformB2B版中建立多對一關係的步驟，請參見上的指南 [建立B2B關係](./relationship-b2b.md)。
 
 ## 快速入門
 
-本教學課程需要深入了解 [!DNL XDM System] 和 [!DNL Experience Platform] UI。 開始本教學課程之前，請檢閱下列檔案：
+本教程要求您對 [!DNL XDM System] 和架構編輯器 [!DNL Experience Platform] UI。 在開始本教程之前，請查看以下文檔：
 
-* [XDM系統Experience Platform](../home.md):XDM及其實作概述 [!DNL Experience Platform].
-* [結構構成基本概念](../schema/composition.md):介紹XDM結構的建置組塊。
-* [使用 [!DNL Schema Editor]](create-schema-ui.md):本教學課程說明使用 [!DNL Schema Editor].
+* [XDM系統在Experience Platform](../home.md):XDM及其在XDM中的應用 [!DNL Experience Platform]。
+* [架構組合的基礎](../schema/composition.md):介紹了XDM模式的構件。
+* [使用 [!DNL Schema Editor]](create-schema-ui.md):本教程介紹使用 [!DNL Schema Editor]。
 
-## 定義源和引用架構
+## 定義源和引用方案
 
-您應已建立將在關係中定義的兩個結構。 為了示範，本教學課程會建立組織忠誠計畫成員之間的關係(定義於[!DNL Loyalty Members]」)及其最愛的酒店(定義於「[!DNL Hotels]&quot;架構)。
+預期您已經建立了將在關係中定義的兩個架構。 為了進行演示，本教程將建立組織忠誠計畫的成員之間的關係（在「」中定義）[!DNL Loyalty Members]&quot;架構及其最喜愛的酒店(定義於「[!DNL Hotels]&quot;架構)。
 
 >[!IMPORTANT]
 >
->若要建立關係，兩個結構都必須定義主要身分，並啟用 [!DNL Real-Time Customer Profile]. 請參閱 [啟用結構以用於配置檔案](./create-schema-ui.md#profile) 如果您需要如何據以設定結構的指引，請參閱結構建立教學課程。
+>要建立關係，兩個方案必須都定義了主標識並且都為 [!DNL Real-Time Customer Profile]。 請參閱 [啟用在配置檔案中使用的架構](./create-schema-ui.md#profile) 在架構建立教程中，如果您需要有關如何相應地配置架構的指導。
 
-架構關係由 **來源綱要** 指向 **參考綱要**. 在下列步驟中，「[!DNL Loyalty Members]&quot;將是源架構，而&quot;[!DNL Hotels]「 」將作為參考架構。
+模式關係由 **源架構** 指向另一個欄位 **參考模式**。 在後續步驟中， &quot;[!DNL Loyalty Members]&quot;將是源架構，而&quot;[!DNL Hotels]&quot;將用作引用架構。
 
-在定義關係之前，以下幾節將說明本教學課程中使用的每個架構的結構。
+以下各節介紹在定義關係之前在本教程中使用的每個架構的結構。
 
-### [!DNL Loyalty Members] 綱要
+### [!DNL Loyalty Members] 架構
 
-源架構「[!DNL Loyalty Members]」是以 [!DNL XDM Individual Profile] 類別，包含描述忠誠計畫成員的欄位。 其中一個領域， `personalEmail.addess`，可做為結構的主要身分，位於 [!UICONTROL 電子郵件] 命名空間。 如下所示 **[!UICONTROL 架構屬性]**，此架構可在 [!DNL Real-Time Customer Profile].
+源架構「」[!DNL Loyalty Members]」基於 [!DNL XDM Individual Profile] 類，包含描述忠誠計畫成員的欄位。 其中一個領域， `personalEmail.addess`，用作架構的主標識 [!UICONTROL 電子郵件] 命名空間。 如下所示 **[!UICONTROL 架構屬性]**，此架構已啟用，供使用 [!DNL Real-Time Customer Profile]。
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### [!DNL Hotels] 綱要
+### [!DNL Hotels] 架構
 
-引用架構「[!DNL Hotels]「 」是以自訂「[!DNL Hotels]」類，包含描述酒店的欄位。 為了參與關係，引用架構還必須定義主標識，並為 [!UICONTROL 設定檔]. 在這種情況下， `_tenantId.hotelId`使用自訂「[!DNL Hotel ID]「身分命名空間。
+引用架構「[!DNL Hotels]&quot;基於自定義&quot;[!DNL Hotels]&quot;類，包含描述酒店的欄位。 為了參與關係，引用方案還必須定義並為 [!UICONTROL 配置檔案]。 在這個例子中， `_tenantId.hotelId`使用自定義「」作為架構的主標識[!DNL Hotel ID]&quot;標識命名空間。
 
-![啟用設定檔](../images/tutorials/relationship/hotels.png)
+![啟用配置檔案](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->若要了解如何建立自訂身分識別命名空間，請參閱 [Identity服務檔案](../../identity-service/namespaces.md#manage-namespaces).
+>要瞭解如何建立自定義標識命名空間，請參閱 [Identity Service文檔](../../identity-service/namespaces.md#manage-namespaces)。
 
 ## 建立關係欄位組
 
 >[!NOTE]
 >
->只有在源架構沒有專用的字串類型欄位用作指向引用架構的主要標識的指針時，才需要執行此步驟。 如果源架構中已定義此欄位，請跳到 [定義關係欄位](#relationship-field).
+>只有在源架構沒有專用的字串類型欄位用作指向引用架構主標識的指針時，才需要此步驟。 如果此欄位已在源架構中定義，請跳至 [定義關係欄位](#relationship-field)。
 
-為了定義兩個架構之間的關係，源架構必須有一個專用欄位，該欄位將指示引用架構的主要身份。 通過建立新架構欄位組或擴展現有架構欄位組，可以將此欄位添加到源架構。
+為了定義兩個架構之間的關係，源架構必須有一個專用欄位，該欄位將指示引用架構的主標識。 可以通過建立新架構欄位組或擴展現有架構欄位組將此欄位添加到源架構。
 
-若 [!DNL Loyalty Members] 綱要，新 `preferredHotel` 欄位將會新增，以指出忠誠會員在公司造訪時偏好的酒店。 首先，選取加號圖示(**+**)。
+對於 [!DNL Loyalty Members] 架構，新 `preferredHotel` 欄位將被添加，以指示忠誠會員為公司拜訪首選的酒店。 首先選擇加號表徵圖(**+**)。
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-畫布中會顯示新欄位預留位置。 在 **[!UICONTROL 欄位屬性]**，請提供欄位名稱和顯示名稱，並將其類型設為「[!UICONTROL 字串]」。 在 **[!UICONTROL 指派給]**，選擇要擴展的現有欄位組，或鍵入唯一名稱以建立新欄位組。 在此案例中，新「[!DNL Preferred Hotel]「 」欄位組已建立。
+在畫布中將顯示新的欄位佔位符。 下 **[!UICONTROL 欄位屬性]**，為欄位提供欄位名和顯示名，並將其類型設定為&quot;[!UICONTROL 字串]。 下 **[!UICONTROL 分配給]**，選擇要擴展的現有欄位組，或鍵入唯一名稱以建立新欄位組。 在此情況下，新的&quot;[!DNL Preferred Hotel]「 」欄位組已建立。
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-完成後，請選取 **[!UICONTROL 套用]**.
+完成後，選擇 **[!UICONTROL 應用]**。
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-已更新 `preferredHotel` 欄位會顯示在畫布中，位於 `_tenantId` 物件，因為它是自訂欄位。 選擇 **[!UICONTROL 儲存]** 完成對架構的變更。
+已更新 `preferredHotel` 欄位出現在畫布中，位於 `_tenantId` 對象，因為它是自定義欄位。 選擇 **[!UICONTROL 保存]** 完成對架構的更改。
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## 為源架構定義關係欄位 {#relationship-field}
+## 為源方案定義關係欄位 {#relationship-field}
 
-在源架構定義了專用的引用欄位後，您可以將其指定為關係欄位。
+在源架構定義了專用引用欄位後，可以將其指定為關係欄位。
 
 >[!NOTE]
 >
->下列步驟說明如何使用畫布中的右欄控制項來定義關係欄位。 如果您有Real-Time CDP B2B Edition的存取權，您也可以使用 [相同對話](./relationship-b2b.md#relationship-field) 和建立多對一關係時一樣。
+>下面的步驟介紹如何使用畫布中的右滑軌控制項定義關係欄位。 如果您有訪問Real-Time CDPB2B版的權限，您還可以使用 [同一對話](./relationship-b2b.md#relationship-field) 建立多對一關係時。
 
-選取 `preferredHotel` 欄位，然後向下捲動 **[!UICONTROL 欄位屬性]** 直到 **[!UICONTROL 關係]** 複選框。 選取核取方塊以顯示設定關係欄位所需的參數。
+選擇 `preferredHotel` 欄位，然後向下滾動 **[!UICONTROL 欄位屬性]** 直到 **[!UICONTROL 關係]** 的子菜單。 選中該複選框可顯示配置關係欄位所需的參數。
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-選取下拉式清單 **[!UICONTROL 參考結構]** 並選擇關係的引用架構(&quot;[!DNL Hotels]&quot;)。 在 **[!UICONTROL 參考身分命名空間]**，請選取參考架構之身分欄位的命名空間(在此例中為「[!DNL Hotel ID]「)。 選擇 **[!UICONTROL 套用]** 完成時。
+選擇的下拉清單 **[!UICONTROL 引用架構]** 並選擇關係的引用架構(&quot;[!DNL Hotels])。 下 **[!UICONTROL 引用標識命名空間]**，選擇引用架構的標識欄位的命名空間(在本例中，為「[!DNL Hotel ID]「)。 選擇 **[!UICONTROL 應用]** 的子菜單。
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-此 `preferredHotel` 欄位現在會在畫布中以關係的形式強調顯示，並顯示參考架構的名稱。 選擇 **[!UICONTROL 儲存]** 以儲存變更並完成工作流程。
+的 `preferredHotel` 欄位現在在畫布中突出顯示為關係，顯示引用架構的名稱。 選擇 **[!UICONTROL 保存]** 保存更改並完成工作流。
 
 ![](../images/tutorials/relationship/relationship-save.png)
 
 ## 後續步驟
 
-依照本教學課程，您已使用 [!DNL Schema Editor]. 如需如何使用API定義關係的步驟，請參閱 [使用結構註冊表API定義關係](relationship-api.md).
+通過本教程，您已使用 [!DNL Schema Editor]。 有關如何使用API定義關係的步驟，請參見上的教程 [使用方案註冊表API定義關係](relationship-api.md)。

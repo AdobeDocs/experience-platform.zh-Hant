@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；ETL;etl;etl工作流程；ETL工作流程
+keywords: Experience Platform；首頁；熱門主題；ETL;etl;etl workflow;ETL工作流
 solution: Experience Platform
-title: ETL工作流程
-description: 各種擷取、轉換和載入(ETL)工具的格式可能不同，但大多數都會公開類似的功能，以協助結合多個資料來源。
+title: ETL工作流
+description: 各種提取、轉換和載入(ETL)工具的格式可能不同，但大多數工具都會公開類似的功能，以幫助組合多個資料源。
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 0%
 
 ---
 
-# ETL工作流程
+# ETL工作流
 
-各種擷取、轉換和載入(ETL)工具的格式可能不同，但大多數都會公開類似的功能，以協助結合多個資料來源。
+各種提取、轉換和載入(ETL)工具的格式可能不同，但大多數工具都會公開類似的功能，以幫助組合多個資料源。
 
-## ETL工具範例
+## ETL工具示例
 
-下列圖表提供常見ETL動作的模型，以及根據標準互動的一般使用者體驗。 這些影像可輕鬆適應特定ETL用戶體驗。
+以下圖提供了常見ETL操作的模型以及基於標準交互的通用用戶體驗。 這些影像可以容易地適應特定的ETL用戶體驗。
 
-以下說明的動作會說明於 [ETL整合指南](home.md). 有些步驟會參考特定「圖表」，有些則會說明與此處顯示的工作流程類似的動作。
+下面所示的操作在 [ETL整合指南](home.md)。 某些步驟引用了特定的「圖」，其他步驟描述了與此處顯示的工作流類似的操作。
 
-### 圖1 — 配置新的Adobe Experience Platform連接器：
+### 圖1 — 配置新Adobe Experience Platform接頭：
 
 ![](images/image2.png)
 
-### 圖2 - [!DNL Experience Platform] 已激活連接器：
+### 圖2 - [!DNL Experience Platform] 連接器已激活：
 
 ![](images/image3.png)
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ![](images/image4.png)
 
-### 圖4 — 新的轉換UI，選擇 [!DNL Experience Platform] 連接：
+### 圖4 — 新建轉換UI，選擇 [!DNL Experience Platform] 連接：
 
 ![](images/image5.png)
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ![](images/image7.png)
 
-### 圖7 — 從資料集查看欄位結構資訊：
+### 圖7 — 從資料集查看欄位架構資訊：
 
 ![](images/image8.png)
 
@@ -61,10 +61,10 @@ ht-degree: 0%
 
 ![](images/image11.png)
 
-### 圖11 — 查看XDM分層結構和元資料以支援映射/轉換：
+### 圖11 — 查看XDM分層架構和元資料以支援映射/轉換：
 
 ![](images/image12.png)
 
-### 圖12 — 儲存並執行/排程轉換：
+### 圖12 — 保存並運行/計畫轉換：
 
 ![](images/image13.png)

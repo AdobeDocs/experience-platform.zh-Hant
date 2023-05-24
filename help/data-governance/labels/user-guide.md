@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料控管；資料使用標籤；原則服務；資料使用標籤使用指南
+keywords: Experience Platform；首頁；熱門主題；資料管理；資料使用標籤；策略服務；資料使用標籤使用手冊
 solution: Experience Platform
-title: 在UI中管理資料使用量標籤
-description: 本指南涵蓋在Adobe Experience Platform使用者介面中使用資料使用量標籤的步驟。
+title: 在UI中管理資料使用標籤
+description: 本指南介紹在Adobe Experience Platform用戶介面內使用資料使用標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 1a4e71ee07900fb4f1581274f740ddb96cb93289
 workflow-type: tm+mt
@@ -11,117 +11,117 @@ ht-degree: 17%
 
 ---
 
-# 在UI中管理資料使用量標籤 {#user-guide}
+# 管理UI中的資料使用標籤 {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="控管 Platform 中的資料使用情況"
 >abstract="<h2>說明</h2><p>Experience Platform 中的資料控管架構可讓您根據資料使用限制來標記屬性和資料集，並設定原則來識別和執行特定行銷活動的這些限制。</p>"
 
-本使用手冊涵蓋在 [!DNL Experience Platform] 使用者介面。
+本使用手冊介紹了在以下位置使用資料使用標籤的步驟： [!DNL Experience Platform] 用戶介面。
 
-## 在資料集層級管理標籤
+## 在資料集級別管理標籤
 
 >[!IMPORTANT]
 >
->只有資料控管使用案例才支援在資料集層級套用標籤。 如果您嘗試為資料建立訪問策略，則必須 [將標籤應用於方案](../../xdm/tutorials/labels.md) 資料集所依據之資料集。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 以取得更多資訊。
+>僅在資料治理使用案例中支援在資料集級別應用標籤。 如果嘗試為資料建立訪問策略，則必須 [將標籤應用於架構](../../xdm/tutorials/labels.md) 資料集所基於。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 的子菜單。
 
-若要在資料集層級管理資料使用量標籤，您必須選取現有的資料集或建立新的資料集。 登入Adobe Experience Platform後，請選取 **[!UICONTROL 資料集]** 在左側導覽上，開啟 **[!UICONTROL 資料集]** 工作區。 此頁面列出屬於您組織的所有已建立資料集，以及與每個資料集相關的實用詳細資料。
+為了在資料集級別管理資料使用標籤，必須選擇現有資料集或建立新資料集。 登錄到Adobe Experience Platform後，選擇 **[!UICONTROL 資料集]** 開啟 **[!UICONTROL 資料集]** 工作區。 此頁列出屬於您組織的所有建立的資料集以及與每個資料集相關的有用詳細資訊。
 
-![Data Workspace中的資料集索引標籤](../images/labels/datasets-tab.png)
+![資料工作區中的「資料集」頁籤](../images/labels/datasets-tab.png)
 
-下一節提供建立新資料集以套用標籤的步驟。 如果您想要編輯現有資料集的標籤，請從清單中選取資料集，然後跳到 [將資料使用量標籤新增至資料集](#add-labels).
+下一節提供了建立新資料集以將標籤應用到的步驟。 如果要編輯現有資料集的標籤，請從清單中選擇該資料集並跳到 [向資料集添加資料使用標籤](#add-labels)。
 
 ### 建立新資料集
 
 >[!NOTE]
 >
->在此範例中，資料集是使用預先設定的 [!DNL Experience Data Model] (XDM)結構。 如需XDM結構的詳細資訊，請參閱 [XDM系統概觀](../../xdm/home.md) 和 [綱要構成基本知識](../../xdm/schema/composition.md).
+>在此示例中，使用預配置的 [!DNL Experience Data Model] (XDM)架構。 有關XDM架構的詳細資訊，請參見 [XDM系統概述](../../xdm/home.md) 和 [架構組合基礎](../../xdm/schema/composition.md)。
 
-若要建立新資料集，請選取 **[!UICONTROL 建立資料集]** 在 **[!UICONTROL 資料集]** 工作區。
+要建立新資料集，請選擇 **[!UICONTROL 建立資料集]** 右上角 **[!UICONTROL 資料集]** 工作區。
 
 ![](../images/labels/create-dataset.png)
 
-此 **[!UICONTROL 建立資料集]** 畫面。 從此處，選擇 **[!UICONTROL 從結構建立資料集]**.
+的 **[!UICONTROL 建立資料集]** 的上界。 從此處，選擇 **[!UICONTROL 從架構建立資料集]**。
 
-![從結構建立資料集](../images/labels/create-from-dataset.png)
+![從架構建立資料集](../images/labels/create-from-dataset.png)
 
-此 **[!UICONTROL 選擇架構]** 畫面中顯示，其中列出所有可用的結構描述，供您建立資料集時使用。 選取架構旁的選項按鈕以加以選取。 此 **[!UICONTROL 結構]** 右側的區段會顯示有關所選架構的其他詳細資訊。 選擇架構後，選擇 **[!UICONTROL 下一個]**.
+的 **[!UICONTROL 選擇方案]** 螢幕，其中列出了可用於建立資料集的所有可用方案。 選擇方案旁邊的單選按鈕以選擇它。 的 **[!UICONTROL 架構]** 右側的部分顯示有關選定方案的附加詳細資訊。 選擇架構後，選擇 **[!UICONTROL 下一個]**。
 
-![選取資料集結構](../images/labels/select-schema.png)
+![選擇資料集架構](../images/labels/select-schema.png)
 
-此 **[!UICONTROL 設定資料集]** 畫面。 提供新資料集的名稱（必要）和說明（選用，但建議使用），然後選取 **[!UICONTROL 完成]**.
+的 **[!UICONTROL 配置資料集]** 的上界。 為新資料集提供名稱（必需）和說明（可選，但建議），然後選擇 **[!UICONTROL 完成]**。
 
-![使用名稱和說明設定資料集](../images/labels/configure-dataset.png)
+![使用名稱和說明配置資料集](../images/labels/configure-dataset.png)
 
-此 **[!UICONTROL 資料集活動]** 頁面，顯示新建立資料集的相關資訊。 在此範例中，資料集名為「忠誠會員」，因此會顯示最上層導覽 **資料集>忠誠會員**.
+的 **[!UICONTROL 資料集活動]** 的子菜單。 在此示例中，該資料集名為「會員成員」，因此頂部導航顯示 **資料集>會員成員**。
 
-![資料集活動頁面](../images/labels/dataset-created.png)
+![「資料集活動」頁](../images/labels/dataset-created.png)
 
-### 將資料使用量標籤新增至資料集 {#add-labels}
+### 向資料集添加資料使用標籤 {#add-labels}
 
-建立新資料集或從 **[!UICONTROL 資料集]** 工作區，選取 **[!UICONTROL 資料控管]** 開啟 **[!UICONTROL 資料控管]** 工作區。 工作區可讓您在資料集層級和欄位層級管理資料使用量標籤。
+在建立新資料集或從清單中選擇現有資料集後 **[!UICONTROL 資料集]** 工作區，選擇 **[!UICONTROL 資料治理]** 開啟 **[!UICONTROL 資料治理]** 工作區。 工作區允許您在資料集級別和欄位級別管理資料使用情況標籤。
 
-![資料集資料控管標籤](../images/labels/dataset-governance.png)
+![「資料集資料治理」頁籤](../images/labels/dataset-governance.png)
 
-若要在資料集層級編輯資料使用量標籤，請先選取資料集名稱旁的鉛筆圖示。
+要在資料集級別編輯資料使用標籤，請從選擇資料集名稱旁邊的鉛筆表徵圖開始。
 
-![編輯資料集層級標籤](../images/labels/dataset-level-edit.png)
+![編輯資料集級別標籤](../images/labels/dataset-level-edit.png)
 
-此 **[!UICONTROL 編輯控管標籤]** 對話框開啟。 在對話方塊中，勾選您要套用至資料集之標籤旁的方塊。 請記住，這些標籤將由資料集內的所有欄位繼承。 此 **[!UICONTROL 套用的標籤]** 標題會隨著您勾選每個方塊而更新，並顯示您選取的標籤。 選取所需標籤後，請選取 **[!UICONTROL 儲存變更]**.
+的 **[!UICONTROL 編輯治理標籤]** 對話框。 在對話框中，選中要應用於資料集的標籤旁邊的框。 請記住，資料集中的所有欄位將繼承這些標籤。 的 **[!UICONTROL 已應用標籤]** 在選中每個框時，標題將更新，顯示您選擇的標籤。 選擇所需標籤後，選擇 **[!UICONTROL 保存更改]**。
 
-![在資料集層級套用控管標籤](../images/labels/apply-labels-dataset.png)
+![在資料集級別應用治理標籤](../images/labels/apply-labels-dataset.png)
 
-此 **[!UICONTROL 資料控管]** 工作區會重新顯示，顯示您已在資料集層級套用的標籤。 您也可以看到標籤會繼承到資料集內的每個欄位。
+的 **[!UICONTROL 資料治理]** 工作區將重新顯示，其中顯示在資料集級別應用的標籤。 您還可以看到標籤將繼承到資料集中的每個欄位。
 
-![欄位繼承的資料集標籤](../images/labels/dataset-labels-applied.png)
+![由欄位繼承的資料集標籤](../images/labels/dataset-labels-applied.png)
 
-請注意，資料集層級的標籤旁會出現「x」，讓您移除標籤。 每個欄位旁繼承的標籤旁邊沒有「x」，並且會顯示為「灰色」，無法移除或編輯。 這是因為 **繼承的欄位為只讀**，表示無法在欄位層級移除。
+請注意，在資料集級別的標籤旁邊會出現一個「x」，允許您刪除標籤。 每個欄位旁邊繼承的標籤旁邊沒有「x」，並且顯示為「灰顯」，無法刪除或編輯。 這是因為 **繼承的欄位為只讀**，表示無法在欄位級刪除它們。
 
-此 **[!UICONTROL 顯示繼承的標籤]** 切換為「 」預設為「 」，可讓您查看從資料集繼承到其欄位的任何標籤。 切換關閉功能會隱藏資料集內任何繼承的標籤。
+的 **[!UICONTROL 顯示繼承的標籤]** 預設情況下，切換為on ，這允許您查看從資料集繼承到其欄位的任何標籤。 關閉切換將隱藏資料集中任何繼承的標籤。
 
 ![隱藏繼承的標籤](../images/labels/inherited-labels.png)
 
-## 在資料集欄位層級管理標籤 {#manage-labels-at-dataset-field-level}
+## 在資料集欄位級別管理標籤 {#manage-labels-at-dataset-field-level}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="說明"
->abstract="<ol><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html">資料集</a>，然後選取要限制其資料的資料集。</li><li>從資料集的詳細資料檢視中，選取<b>資料控管</b>索引標籤。</li><li>選取要限制的資料集欄位，然後選取<b>編輯控管標籤</b>以根據使用限制來標記資料。</li><li>標記資料後，在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<b>建立原則</b>。</li><li>選擇建立<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">資料控管原則</a>，然後選取原則將套用到原則的資料使用標籤。</li><li>選取行銷動作，原則將拒絕對包含這些標籤的任何資料。建立原則後，從清單中選擇它並使用右側邊欄中的切換啟用它。</li><li>對於每個啟用的原則，Platform 會阻止包含指定之標籤的任何資料用於定義的行銷動作。當您嘗試對具有關聯的行銷動作的目的地啟用標記的資料時，此強制執行會自動發生。</li></ol>"
+>abstract="<ol><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=zh-Hant">資料集</a>，然後選取要限制其資料的資料集。</li><li>從資料集的詳細資料檢視中，選取<b>資料控管</b>索引標籤。</li><li>選取要限制的資料集欄位，然後選取<b>編輯控管標籤</b>以根據使用限制來標記資料。</li><li>標記資料後，在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<b>建立原則</b>。</li><li>選擇建立<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">資料控管原則</a>，然後選取原則將套用到原則的資料使用標籤。</li><li>選取行銷動作，原則將拒絕對包含這些標籤的任何資料。建立原則後，從清單中選擇它並使用右側邊欄中的切換啟用它。</li><li>對於每個啟用的原則，Platform 會阻止包含指定之標籤的任何資料用於定義的行銷動作。當您嘗試對具有關聯的行銷動作的目的地啟用標記的資料時，此強制執行會自動發生。</li></ol>"
 
 >[!IMPORTANT]
 >
->只有資料控管使用案例才支援在資料集欄位層級套用標籤。 如果您嘗試為資料建立訪問策略，則必須 [將標籤應用於方案](../../xdm/tutorials/labels.md) 資料集所依據之資料集。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 以取得更多資訊。
+>僅資料治理使用案例支援在資料集欄位級別應用標籤。 如果嘗試為資料建立訪問策略，則必須 [將標籤應用於架構](../../xdm/tutorials/labels.md) 資料集所基於。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 的子菜單。
 
-繼續工作流程 [在資料集層級新增及編輯資料使用量標籤](#add-labels)，您也可以在 **[!UICONTROL 資料控管]** 工作區。
+繼續工作流 [在資料集級別添加和編輯資料使用標籤](#add-labels)，也可以在 **[!UICONTROL 資料治理]** 該資料集的工作區。
 
-若要將資料使用量標籤套用至個別欄位，請選取欄位名稱旁的核取方塊，然後選取 **[!UICONTROL 編輯控管標籤]**.
+要將資料使用標籤應用於單個欄位，請選中欄位名稱旁邊的複選框，然後選擇 **[!UICONTROL 編輯治理標籤]**。
 
 ![編輯欄位標籤](../images/labels/field-label-edit.png)
 
-此 **[!UICONTROL 編輯控管標籤]** 對話框。 對話方塊會顯示標題，其中顯示選取的欄位、套用的標籤和繼承的標籤。 請注意，對話方塊中繼承的標籤（C2和C5）會呈現灰色。 這些標籤是從資料集層級繼承的唯讀標籤，因此只能在資料集層級編輯。
+的 **[!UICONTROL 編輯治理標籤]** 對話框。 該對話框顯示顯示選定欄位、已應用標籤和繼承標籤的標題。 請注意，繼承的標籤（C2和C5）在對話框中呈灰色顯示。 它們是從資料集級別繼承的只讀標籤，因此只能在資料集級別進行編輯。
 
-![編輯個別欄位的控管標籤](../images/labels/field-label-inheritance.png)
+![編輯單個欄位的治理標籤](../images/labels/field-label-inheritance.png)
 
-選取您要使用之每個標籤旁的核取方塊，以選取欄位層級標籤。 當您選取標籤時， **[!UICONTROL 套用的標籤]** 標題更新，顯示套用至 **[!UICONTROL 所選欄位]** 頁首。 完成欄位層級標籤的選取後，請選取 **[!UICONTROL 儲存變更]**.
+通過選中要使用的每個標籤旁邊的複選框來選擇欄位級標籤。 選擇標籤時， **[!UICONTROL 已應用標籤]** 標題更新，以顯示應用於中顯示的欄位的標籤 **[!UICONTROL 所選欄位]** 標題。 選擇完欄位級標籤後，選擇 **[!UICONTROL 保存更改]**。
 
-![套用欄位層級標籤](../images/labels/apply-labels-field.png)
+![應用欄位級標籤](../images/labels/apply-labels-field.png)
 
-此 **[!UICONTROL 資料控管]** 工作區會重新顯示，現在欄位名稱旁的列會顯示選取的欄位層級標籤。 請注意，欄位層級標籤旁有&quot;x&quot;，可讓您移除標籤。
+的 **[!UICONTROL 資料治理]** 工作區將重新出現，此時欄位名稱旁邊的行中將顯示選定的欄位級標籤。 請注意，欄位級標籤旁邊有一個「x」，允許您刪除標籤。
 
 ![顯示欄位級標籤的欄位](../images/labels/field-labels-applied.png)
 
-您可以重複這些步驟，繼續為其他欄位新增和編輯欄位層級標籤，包括同時選取多個欄位以套用欄位層級標籤。
+您可以重複這些步驟以繼續添加和編輯附加欄位的欄位級標籤，包括選擇多個欄位以同時應用欄位級標籤。
 
 ![選擇多個欄位以同時應用欄位級標籤。](../images/labels/multiple-fields.png)
 
-請務必記住，繼承只會從上層(資料集→欄位)向下移動，這表示在欄位層級套用的標籤不會傳播至其他欄位或資料集。
+必須記住，繼承僅從頂級向下移動(資料集→欄位)，這意味著在欄位級別應用的標籤不會傳播到其他欄位或資料集。
 
-## 在結構層級管理標籤
+## 在架構級別管理標籤
 
-您可以直接將標籤新增至該架構內的架構或欄位。 在結構層級套用的任何欄位，都會傳播至以該結構為基礎的所有資料集。
+可以直接將標籤添加到該架構中的架構或欄位。 在架構級別應用的任何欄位都將傳播到基於該架構的所有資料集。
 
-請參閱 [管理架構層級標籤](../../xdm/tutorials/labels.md) 以取得更多資訊。
+請參閱上的教程 [管理模式級標籤](../../xdm/tutorials/labels.md) 的子菜單。
 
 ## 管理自訂標籤 {#manage-custom-labels}
 
@@ -130,36 +130,36 @@ ht-degree: 17%
 >title="建立標籤"
 >abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。平台提供了一組標準標籤供您使用，但您也可以建立您組織專用的自訂標籤。"
 
-您可以在 **[!UICONTROL 原則]** 工作區中 [!DNL Experience Platform] UI。 選擇 **[!UICONTROL 原則]** 在左側導覽中，然後選取 **[!UICONTROL 標籤]** 來查看現有標籤的清單。 從此處，選擇 **[!UICONTROL 建立標籤]**.
+您可以在 **[!UICONTROL 策略]** 工作區 [!DNL Experience Platform] UI。 選擇 **[!UICONTROL 策略]** 在左導航中，選擇 **[!UICONTROL 標籤]** 的子菜單。 從此處，選擇 **[!UICONTROL 建立標籤]**。
 
 ![](../images/labels/create-label-btn.png)
 
-此 **[!UICONTROL 建立標籤]** 對話框。 在此處，為新標籤提供下列資訊：
+的 **[!UICONTROL 建立標籤]** 對話框。 在此處，為新標籤提供以下資訊：
 
-* **[!UICONTROL 識別碼]**:標籤的唯一識別碼。 此值會用於查詢用途，因此應簡短明瞭。
-* **[!UICONTROL 名稱]**:好記的標籤顯示名稱。
-* **[!UICONTROL 說明]**:（選用）提供進一步內容之標籤的說明。
+* **[!UICONTROL 標識符]**:標籤的唯一標識符。 此值用於查找目的，因此應簡短而簡潔。
+* **[!UICONTROL 名稱]**:標籤的友好顯示名稱。
+* **[!UICONTROL 說明]**:（可選）標籤的說明，以提供更多上下文。
 
-完成後，請選取 **[!UICONTROL 建立]**.
+完成後，選擇 **[!UICONTROL 建立]**。
 
 ![](../images/labels/create-label.png)
 
-對話方塊會關閉，而新建立的自訂標籤會顯示在 **[!UICONTROL 標籤]** 標籤。
+對話框關閉，新建立的自定義標籤將出現在 **[!UICONTROL 標籤]** 頁籤。
 
 ![](../images/labels/label-created.png)
 
-現在可在 **[!UICONTROL 自訂標籤]** 編輯資料集和欄位的使用量標籤時，或建立資料使用量原則時。
+現在可以在 **[!UICONTROL 自定義標籤]** 編輯資料集和欄位的使用情況標籤時，或建立資料使用情況策略時。
 
 <img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## 後續步驟
 
-現在您已在資料集和欄位層級新增資料使用量標籤，可以開始將資料內嵌至 [!DNL Experience Platform]. 若要進一步了解，請先閱讀 [資料擷取檔案](../../ingestion/home.md).
+現在，您已在資料集和欄位級別添加了資料使用標籤，您可以開始將資料插入 [!DNL Experience Platform]。 要瞭解更多資訊，請從閱讀 [資料攝取文檔](../../ingestion/home.md)。
 
-您現在也可以根據已套用的標籤來定義資料使用原則。 如需詳細資訊，請參閱 [資料使用原則概觀](../policies/overview.md).
+您現在還可以根據已應用的標籤定義資料使用策略。 有關詳細資訊，請參見 [資料使用策略概述](../policies/overview.md)。
 
 ## 其他資源
 
-以下影片旨在協助您了解資料控管，並概述如何將標籤套用至資料集和個別欄位。
+以下視頻旨在支援您對資料治理的理解，並概述如何將標籤應用於資料集和各個欄位。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)

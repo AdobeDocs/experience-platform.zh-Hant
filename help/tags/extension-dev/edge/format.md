@@ -1,6 +1,6 @@
 ---
-title: Edge擴充功能中的程式庫模組
-description: 在Edge屬性中，為標籤擴充功能設定程式庫模組格式。
+title: 邊擴展中的庫模組
+description: 設定邊屬性中標籤擴展的庫模組的格式。
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 >[!IMPORTANT]
 >
 >本文介紹邊緣擴充功能的程式庫模組格式。如果您正在開發 Web 擴充功能，請參閱[格式化 Web 擴充功能模組](../web/format.md)指南。
 
-程式庫模組是一段可重複使用的程式碼，由Adobe Experience Platform中標籤執行階段程式庫（在邊緣節點上執行的程式庫）內發出的擴充功能所提供。 例如，`sendBeacon` 動作類型就會有在邊緣節點上執行並傳送信標的程式庫模組。
+庫模組是由在Adobe Experience Platform的標籤運行時庫（運行在邊緣節點上的庫）內發出的擴展提供的可重用代碼。 例如，`sendBeacon` 動作類型就會有在邊緣節點上執行並傳送信標的程式庫模組。
 
 程式庫模組採取 [CommonJS 模組](https://nodejs.org/api/modules.html#modules-commonjs-modules)的結構。CommonJS 模組內有下列變數可供使用：
 

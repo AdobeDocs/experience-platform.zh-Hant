@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；廣告系統；廣告系統
+keywords: Experience Platform；家庭；熱門主題；廣告系統；廣告系統
 solution: Experience Platform
-title: 使用流量服務API探索廣告系統
-description: 流量服務用於收集和集中Adobe Experience Platform內各種不同來源的客戶資料。 該服務提供用戶介面和RESTful API，所有受支援的源都可從中連接。 本教學課程使用流量服務API來探索廣告系統。
+title: 利用流服務API開發廣告系統
+description: Flow Service用於收集和集中Adobe Experience Platform內各種不同來源的客戶資料。 該服務提供了用戶介面和REST風格的API，所有支援的源都可從中連接。 本教程使用Flow Service API來瀏覽廣告系統。
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -13,30 +13,30 @@ ht-degree: 2%
 
 # 使用 [!DNL Flow Service] API
 
-建立基本連線後，您現在可以使用唯一的基本連線ID來導覽及探索來源的資料結構和內容。 這可讓您在建立資料流並將其帶入Adobe Experience Platform之前，先識別特定項目及其各自的資料類型和格式。
+建立基本連接後，您現在可以使用唯一的基本連接ID來導航和瀏覽源的資料結構和內容。 這允許您在建立資料流並將其傳送到Adobe Experience Platform之前，確定特定項目及其各自的資料類型和格式。
 
-本教學課程使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 探索廣告系統。
+本教程使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 探索廣告系統。
 
 ## 快速入門
 
 >[!IMPORTANT]
 >
->本教學課程要求您擁有廣告來源的唯一基本連線ID。 如果您沒有此ID，請參閱 [將廣告來源連接到Platform](../../api/create/advertising/ads.md) 教學課程。
+>本教程要求您具有廣告來源的唯一基本連接ID。 如果您沒有此ID，請參見上的教程 [將廣告源連接到平台](../../api/create/advertising/ads.md) 教程。
 
-本指南需要妥善了解下列Adobe Experience Platform元件：
+本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
 
-* [來源](../../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
+* [源](../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
+* [沙箱](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
-以下章節提供您需要知道的其他資訊，以便成功連線至使用 [!DNL Flow Service] API。
+以下各節提供您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../../landing/api-guide.md).
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../landing/api-guide.md)。
 
-## 探索資料表
+## 瀏覽資料表
 
-使用廣告系統的基本連線，您可以執行GET請求來探索資料表。 使用以下調用查找要檢查或將其嵌入的表的路徑 [!DNL Platform].
+使用廣告系統的基本連接，您可以通過執行GET請求來瀏覽資料表。 使用以下調用查找要檢查或插入的表的路徑 [!DNL Platform]。
 
 **API格式**
 
@@ -46,7 +46,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 廣告系統的基本連線ID。 |
+| `{BASE_CONNECTION_ID}` | 廣告系統的基本連接的ID。 |
 
 **要求**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應是從到廣告系統的一組表格。 找到要放進的桌子 [!DNL Platform] 並注意 `path` 屬性，因為您必須在下一個步驟中提供屬性，以檢查其結構。
+成功的響應是從廣告系統到廣告系統的一系清單。 查找要放入的表 [!DNL Platform] 並注意到 `path` 屬性，因為在下一步中需要提供該屬性來檢查其結構。
 
 ```json
 [
@@ -96,9 +96,9 @@ curl -X GET \
 ]
 ```
 
-## Inspect表的結構
+## Inspect桌子的結構
 
-若要從廣告系統檢查表格的結構，請在指定表格路徑作為查詢參數時執行GET要求。
+要從廣告系統檢查表的結構，請在將表的路徑指定為查詢參數時執行GET請求。
 
 **API格式**
 
@@ -108,8 +108,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 廣告系統的連線ID。 |
-| `{TABLE_PATH}` | 廣告系統內的表格路徑。 |
+| `{BASE_CONNECTION_ID}` | 廣告系統的連接ID。 |
+| `{TABLE_PATH}` | 廣告系統中表的路徑。 |
 
 **要求**
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回表格的結構。 有關表格各欄的詳細資訊位於 `columns` 陣列。
+成功的響應返回表的結構。 有關每個表列的詳細資訊位於 `columns` 陣列。
 
 ```json
 {
@@ -170,4 +170,4 @@ curl -X GET \
 
 ## 後續步驟
 
-依照本教學課程，您已探索廣告系統，並找到您要帶入的表格路徑 [!DNL Platform]，並取得其結構的相關資訊。 您可以在下一個教學課程中使用此資訊，以 [從您的廣告系統收集資料並匯入Platform](../collect/advertising.md).
+通過學習本教程，您已探索了廣告系統，找到了要導入的表的路徑 [!DNL Platform]並獲取了有關其結構的資訊。 您可以在下一教程中使用此資訊 [從您的廣告系統收集資料並將其導入平台](../collect/advertising.md)。

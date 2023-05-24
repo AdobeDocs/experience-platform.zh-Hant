@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；稽核；稽核記錄；變更記錄；變更記錄；rpc;
+keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；資料模型；審計；審計日誌；更改日誌；rpc;
 solution: Experience Platform
-title: 稽核記錄API端點
-description: 架構註冊表API中的/auditlog端點可讓您擷取已對現有XDM資源進行之變更的時間順序清單。
+title: 審核日誌API終結點
+description: 通過架構註冊表API中的/auditlog終結點，可以檢索對現有XDM資源所做更改的按時間順序排列的清單。
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 1%
 
 ---
 
-# 審核日誌端點
+# 審核日誌終結點
 
-對於每個Experience Data Model(XDM)資源， [!DNL Schema Registry] 維護在不同更新之間發生的所有更改的日誌。 此 `/auditlog` 端點 [!DNL Schema Registry] API可讓您擷取ID所指定之任何類別、結構欄位群組、資料類型或結構的稽核記錄。
+對於每個體驗資料模型(XDM)資源， [!DNL Schema Registry] 維護不同更新之間發生的所有更改的日誌。 的 `/auditlog` 端點 [!DNL Schema Registry] API允許您檢索由ID指定的任何類、架構欄位組、資料類型或架構的審核日誌。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
+本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
 
-此 `/auditlog` 端點是遠端程式呼叫(RPC)的一部分，這些呼叫由 [!DNL Schema Registry]. 不同於 [!DNL Schema Registry] API、RPC端點不需要其他標題，例如 `Accept` 或 `Content-Type`，且不使用 `CONTAINER_ID`. 而是必須使用 `/rpc` 命名空間，如下方API呼叫所示。
+的 `/auditlog` endpoint是遠程過程調用(RPC)的一部分，該調用由 [!DNL Schema Registry]。 不同於 [!DNL Schema Registry] API、RPC終結點不需要像 `Accept` 或 `Content-Type`，並且不使用 `CONTAINER_ID`。 相反，他們必須使用 `/rpc` 命名空間，如下面的API調用所示。
 
-## 檢索資源的審核日誌
+## 檢索資源的審計日誌
 
-您可以在方案庫內的任何類、欄位組、資料類型或方案中檢索審核日誌，方法是在GET請求的路徑中指定資源的ID `/auditlog` 端點。
+通過在GET請求到的路徑中指定資源的ID，可以檢索架構庫中任何類、欄位組、資料類型或架構的審核日誌 `/auditlog` 端點。
 
 **API格式**
 
@@ -33,13 +33,13 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RESOURCE_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要檢索其審核日誌的資源。 |
+| `{RESOURCE_ID}` | 的 `meta:altId` 或URL編碼 `$id` 要檢索其審核日誌的資源。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列請求會擷取結構的稽核記錄。
+以下請求檢索架構的審計日誌。
 
 ```shell
 curl -X GET \
@@ -52,7 +52,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回對資源所做變更（從最近到最近）的時間順序清單。
+成功的響應返回對資源從最近到最近所做更改的按時間順序排列的清單。
 
 ```json
 [
@@ -118,11 +118,11 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `updates` | 對象的陣列，每個對象表示對指定資源或其一個相關資源所做的更改。 |
-| `id` | 此 `$id` 已變更的資源。 此值通常代表請求路徑中指定的資源，但如果是變更的來源，則可能代表相依資源。 |
-| `xdmType` | 已變更的資源類型。 |
-| `action` | 已進行的變更類型。 |
-| `path` | A [JSON指標](../../landing/api-fundamentals.md#json-pointer) 字串，指出已變更或新增之特定欄位的路徑。 |
-| `value` | 指派給新欄位或更新欄位的值。 |
+| `updates` | 對象陣列，其中每個對象表示對指定資源或其從屬資源之一所做的更改。 |
+| `id` | 的 `$id` 已更改的資源。 此值通常表示在請求路徑中指定的資源，但如果是更改的源，則可能表示從屬資源。 |
+| `xdmType` | 已更改的資源類型。 |
+| `action` | 所做更改的類型。 |
+| `path` | A [JSON指針](../../landing/api-fundamentals.md#json-pointer) 字串，指示已更改或添加的特定欄位的路徑。 |
+| `value` | 分配給新欄位或更新欄位的值。 |
 
 {style="table-layout:auto"}

@@ -1,9 +1,9 @@
 ---
-title: 將Adobe Journey Optimizer與Platform Web SDK搭配使用
-description: 了解如何使用Adobe Journey Optimizer透過Experience PlatformWeb SDK轉譯個人化內容
-keywords: ajo;ajo web;adobe journey optimizer;renderDecisions；曲面；決策；主張；範圍；結構
-exl-id: e608952c-9598-11ed-b382-d72064651cac
-source-git-commit: 1b0f1e2e1625f6994a6e09bd086e4b63a3e8d4ab
+title: 將Adobe Journey Optimizer與平台Web SDK配合使用
+description: 瞭解如何使用Experience PlatformWeb SDK使用Adobe Journey Optimizer呈現個性化內容
+keywords: ajo;ajo web;adobe journey optimizer;renderDecisions;surfaces;decisions;spatitions;scope;schema
+exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -12,28 +12,28 @@ ht-degree: 0%
 
 # 使用 [!DNL Adobe Journey Optimizer] 和 [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] 可提供及呈現管理的個人化體驗 [!DNL Adobe Journey Optimizer] 至網頁頻道。 您可以使用WYSIWYG編輯器， [!DNL Adobe Journey Optimizer] [網頁行銷活動UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)，建立、啟用和傳遞 [!DNL Journey Optimizer Web] 行銷活動和個人化體驗。
+[!DNL Adobe Experience Platform] [!DNL Web SDK] 可以提供和呈現管理的個性化體驗 [!DNL Adobe Journey Optimizer] 到Web頻道。 你可以使用WYSIWYG編輯器， [!DNL Adobe Journey Optimizer] [Web市場活動UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)，建立、激活和交付 [!DNL Journey Optimizer Web] 市場活動和個性化體驗。
 
 >[!IMPORTANT]
 >
->閱讀 [Adobe Journey Optimizer網路頻道檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) 如需快速入門的資訊 [!DNL Journey Optimizer Web] 體驗製作和報告。
+>閱讀 [Adobe Journey OptimizerWeb渠道文檔](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) 有關入門的資訊 [!DNL Journey Optimizer Web] 體驗創作和報告。
 
 ## 術語 {#terminology}
 
-**[!UICONTROL 曲面]**:Web曲面是由URL識別的Web屬性，其中 [!DNL Adobe Journey Optimizer] 體驗內容將會傳送。
+**[!UICONTROL 曲面]**:Web曲面是由URL標識的Web屬性， [!DNL Adobe Journey Optimizer] 將提供體驗內容。
 
-**[!UICONTROL 主張]**:在 [!DNL Adobe Journey Optimizer]，建議與從 [!DNL Journey Optimizer Campaign].
+**[!UICONTROL 命題]**:在 [!DNL Adobe Journey Optimizer]，命題與從 [!DNL Journey Optimizer Campaign]。
 
 ## 啟用 [!DNL Adobe Journey Optimizer] {#enable-ajo}
 
-若要開始使用 [!DNL Adobe Journey Optimizer]，請遵循下列步驟。
+開始使用 [!DNL Adobe Journey Optimizer]，請執行以下步驟。
 
-1. 瀏覽 [必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) 從 [!DNL Adobe Journey Optimizer] [網頁體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)，具體說明：
-   * 設定 [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * 啟用 [!DNL Adobe Journey Optimizer] 在 [資料流](../../datastreams/overview.md).
-   * 啟用 [!UICONTROL 邊緣活動合併策略] 選項。
+1. 通過 [先決條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) 從 [!DNL Adobe Journey Optimizer] [Web體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)，具體為：
+   * 設定 [!DNL Adobe Experience Cloud Visual Editing Helper]。
+   * 啟用 [!DNL Adobe Journey Optimizer] 在 [資料流](../../datastreams/overview.md)。
+   * 啟用 [!UICONTROL 活動 — 邊緣合併策略] 的雙曲餘切值。
 
-2. 新增 `renderDecisions` 選項。 設定 `renderDecisions` to `true` 以在您的網頁表面上自動呈現已傳送的Journey Optimizer內容主張。
+2. 添加 `renderDecisions` 頁籤 設定 `renderDecisions` 至 `true` 用於在您的網頁表面上自動呈現已傳遞的Journey Optimizer內容陳述。
 
    ```javascript
    alloy("sendEvent", {
@@ -42,7 +42,7 @@ ht-degree: 0%
    })
    ```
 
-3. （可選）在事件中指定其他曲面。 依預設，Web SDK會自動產生目前網頁的網頁表面，並將其納入向邊緣網路發出的請求中。 如有需要，可在請求中納入其他曲面，方法是在 `personalization.surfaces` 選項 `sendEvent` ，或 **[!UICONTROL 曲面]** [[!UICONTROL 傳送事件] 動作](../../extension/action-types.md#send-event) Web SDK擴充功能的設定。
+3. （可選）在事件中指定附加曲面。 預設情況下，Web SDK將自動為當前網頁生成Web曲面，並將其包含在向邊緣網路的請求中。 如果需要，可通過在 `personalization.surfaces` 選項 `sendEvent` 或 **[!UICONTROL 曲面]** [[!UICONTROL 發送事件] 動作](../../extension/action-types.md#send-event) Web SDK擴展的配置。
 
    ```javascript
    alloy("sendEvent", {
@@ -53,7 +53,7 @@ ht-degree: 0%
    })
    ```
 
-   ![extension-add-surface](./assets/extension-add-surface.png)
+   ![擴展加曲面](./assets/extension-add-surface.png)
 
    事件曲面包含在 `query.personalization.surfaces` 請求欄位：
 
@@ -80,19 +80,19 @@ ht-degree: 0%
    }
    ```
 
-4. 與其他個人化功能類似，您可以新增 **[預先隱藏程式碼片段](../manage-flicker.md)** 以在擷取體驗時僅隱藏頁面的某些部分。
+4. 與其他個性化功能類似，您可以添加 **[預隱藏代碼](../manage-flicker.md)** 只隱藏頁面的某些部分，同時獲取體驗。
 
-## 建立Adobe Journey Optimizer Web體驗 {#create-ajo-web-experiences}
+## 建立Adobe Journey OptimizerWeb體驗 {#create-ajo-web-experiences}
 
-關注 [網站行銷活動製作](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) 中的說明 [!DNL Adobe Journey Optimizer] [網頁體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 建立 [!DNL Journey Optimizer Web] 行銷活動和體驗。
+關注 [Web活動編輯](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) 說明 [!DNL Adobe Journey Optimizer] [Web體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 建立 [!DNL Journey Optimizer Web] 活動和經驗。
 
-## 轉譯個人化內容 {#rendering-personalized-content}
+## 呈現個性化內容 {#rendering-personalized-content}
 
-請參閱 [呈現個人化內容](../rendering-personalization-content.md) 以取得更多資訊。
+請參閱 [呈現個性化內容](../rendering-personalization-content.md) 的子菜單。
 
-Adobe Journey Optimizer Web曲面命題的處理方式與 `__view__` 決策範圍主張。 具體來說，當 `renderDecisions` 選項設為 `true` 在 `sendEvent` 命令，Web SDK會自動呈現這些內容。
+對網面的Adobe Journey Optimizer命題的處理方式與 `__view__` 決策範圍建議。 具體來說，當 `renderDecisions` 選項設定為 `true` 的 `sendEvent` 命令這些命令將由Web SDK自動呈現。
 
-範例Journey Optimizer內容主張：
+示例Journey Optimizer內容陳述：
 
 ```json
 {
@@ -145,8 +145,6 @@ Adobe Journey Optimizer Web曲面命題的處理方式與 `__view__` 決策範�
 
 ## 為  除錯 {#debugging}
 
-若要對Adobe Journey Optimizer個人化實作除錯，請使用 [[!DNL Web SDK] 偵錯](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] 使用進行疑難排解時，可使用除錯追蹤 [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). 檢查事件 `AJO:` 前置詞。
+要調試Adobe Journey Optimizer個性化設定，請使用 [[!DNL Web SDK] 調試](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html)。 [!DNL Adobe Journey Optimizer] 排除故障時，使用 [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)。 使用 `AJO:` 前置詞。
 
-![assurance-ajo-trace](./assets/assurance-ajo-trace.png)
-
-
+![保證 — 跟蹤](./assets/assurance-ajo-trace.png)

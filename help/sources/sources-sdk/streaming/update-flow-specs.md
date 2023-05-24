@@ -1,30 +1,31 @@
 ---
-title: 使用流量服務API更新串流SDK的流量規格
-description: 以下檔案提供如何使用自助來源（串流SDK）的流量服務API來擷取和更新流量規格的步驟。
+title: 使用流服務API更新流SDK的流規範
+description: 以下文檔提供了如何使用自助源流服務API（流SDK）檢索和更新流規範的步驟。
 hide: true
 hidefromtoc: true
-source-git-commit: f91ebcf8e27fd7d9019c5bb6d270b89fd08785ef
+exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 1%
 
 ---
 
-# 使用更新流量規格 [!DNL Flow Service] API
+# 使用 [!DNL Flow Service] API
 
-生成新的連接規範ID後，必須將此ID添加到流規範中，才能建立資料流。
+生成新連接規範ID後，必須將此ID添加到流規範中才能建立資料流。
 
-流規範包含定義流的資訊，包括它支援的源和目標連接ID、需要應用於資料的轉換規範，以及生成流所需的調度參數。 您可以使用 `/flowSpecs` 端點。
+流規範包含定義流的資訊，包括它支援的源連接ID和目標連接ID、需要應用到資料的轉換規範以及生成流所需的調度參數。 可以使用 `/flowSpecs` 端點。
 
-以下文檔提供了有關如何使用 [!DNL Flow Service] 自助來源API（串流SDK）。
+以下文檔提供了有關如何使用 [!DNL Flow Service] 自助源API（流SDK）。
 
 ## 快速入門
 
-繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Experience PlatformAPI所需的必要標頭重要資訊。
+在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
 
 ## 查找流規範 {#lookup}
 
-使用建立的來源 `generic-streaming` 範本全部使用 `GenericStreamingAEP` 流量規格。 此流規範可借由向 `/flowSpecs/` 端點，並提供 `flowSpec.id` of `e77fde5a-22a8-11ed-861d-0242ac120002`.
+使用 `generic-streaming` 模板全部使用 `GenericStreamingAEP` 流規範。 可通過向Web伺服器發出GET請求來檢索此流規範 `/flowSpecs/` 端點，並提供 `flowSpec.id` 共 `e77fde5a-22a8-11ed-861d-0242ac120002`。
 
 **API格式**
 
@@ -34,7 +35,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **要求**
 
-下列請求會擷取 `e77fde5a-22a8-11ed-861d-0242ac120002` 流量規格。
+以下請求將檢索 `e77fde5a-22a8-11ed-861d-0242ac120002` 流規範。
 
 ```shell
 curl -X GET \
@@ -146,7 +147,7 @@ curl -X GET \
 
 ## 更新流規範 {#update}
 
-您可以通過PUT操作更新流規格的欄位。 通過PUT請求更新流規範時，主體必須包括在POST請求中建立新流規範時需要的所有欄位。
+您可以通過PUT操作更新流規範的欄位。 通過PUT請求更新流規範時，主體必須包括在POST請求中建立新流規範時需要的所有欄位。
 
 >[!IMPORTANT]
 >
@@ -160,7 +161,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **要求**
 
-以下請求更新 `e77fde5a-22a8-11ed-861d-0242ac120002` 包括連接規範ID `bdb5b792-451b-42de-acf8-15f3195821de`.
+以下請求更新了 `e77fde5a-22a8-11ed-861d-0242ac120002` 要包括連接規範ID `bdb5b792-451b-42de-acf8-15f3195821de`。
 
 ```shell
 PUT -X GET \
@@ -262,7 +263,7 @@ PUT -X GET \
 
 **回應**
 
-成功的響應返回查詢的流規範的詳細資訊，包括其更新的清單 `sourceConnectionSpecIds`.
+成功的響應返回查詢的流規範的詳細資訊，包括其更新清單 `sourceConnectionSpecIds`。
 
 ```json
 {
@@ -364,4 +365,4 @@ PUT -X GET \
 
 ## 後續步驟
 
-將新連接規範添加到相應的流規範後，您現在可以繼續測試和提交新源。 請參閱 [測試和提交新源](./submit.md) 以取得更多資訊。
+將新連接規範添加到相應的流規範後，您現在可以繼續測試和提交新源。 請參閱上的指南 [測試和提交新源](./submit.md) 的子菜單。

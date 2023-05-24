@@ -1,5 +1,5 @@
 ---
-description: 了解如何設定匯總原則，以決定對您目的地的HTTP請求進行分組和批次處理的方式。
+description: 瞭解如何設定聚合策略以確定對目標的HTTP請求應如何分組和批處理。
 title: 聚合策略
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
@@ -11,41 +11,41 @@ ht-degree: 2%
 
 # 聚合策略
 
-若要確保將資料匯出至API端點時能有最高效率，您可以使用各種設定，將匯出的設定檔匯總為較大或較小的批次、依身分和其他使用案例加以分組。 這也可讓您量身打造資料匯出，使其符合API端點的任何下游限制（速率限制、每個API呼叫的身分數量等）。
+為確保將資料導出到API端點時達到最高效率，您可以使用各種設定將導出的配置檔案聚合到更大或更小的批中，按身份和其他使用情形對它們進行分組。 這還允許您定制資料導出到API端點上的任何下游限制（速率限制、每個API調用的標識數等）。
 
-使用可設定的匯總功能深入探討Destination SDK提供的設定，或使用最佳的匯總功能告知Destination SDK盡可能將API呼叫分批。
+使用可配置的聚合深入到Destination SDK提供的設定中，或使用盡力聚合告訴Destination SDK盡可能地對API調用進行批處理。
 
-使用Destination SDK建立即時（串流）目的地時，您可以設定匯出的設定檔應如何結合到產生的匯出中。 此行為由聚合策略設定確定。
+在構建帶Destination SDK的即時（流）目標時，可以配置導出的配置檔案在生成的導出中如何組合。 此行為由聚合策略設定決定。
 
-若要了解此元件在透過Destination SDK建立的整合中的插入位置，請參閱 [配置選項](../configuration-options.md) 檔案，或參閱如何 [使用Destination SDK來設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration).
+要瞭解此元件在與Destination SDK建立的整合中的位置，請參閱 [配置選項](../configuration-options.md) 文檔，或參閱有關如何 [使用Destination SDK配置流目標](../../guides/configure-destination-instructions.md#create-destination-configuration)。
 
-您可以通過 `/authoring/destinations` 端點。 如需詳細API呼叫範例，請參閱下列API參考頁面，您可在其中設定本頁面所示的元件。
+您可以通過 `/authoring/destinations` 端點。 有關詳細的API調用示例，請參閱以下API參考頁，在這些示例中可以配置此頁中顯示的元件。
 
 * [建立目標配置](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [更新目標配置](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
 本文介紹可用於目標的所有支援的聚合策略設定。
 
-閱讀本檔案後，請參閱 [使用模板](../../functionality/destination-server/message-format.md#using-templating) 和 [聚合鍵示例](../../functionality/destination-server/message-format.md#template-aggregation-key) 了解如何根據所選聚合策略將聚合策略包含在消息轉換模板中。
+閱讀完本文檔後，請參閱 [使用模板](../../functionality/destination-server/message-format.md#using-templating) 和 [聚合鍵示例](../../functionality/destination-server/message-format.md#template-aggregation-key) 瞭解如何根據所選聚合策略將聚合策略包含在消息轉換模板中。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名稱和值均為 **區分大小寫**. 為避免區分大小寫錯誤，請使用參數名稱和值，如說明檔案所示。
+>Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
 
 ## 支援的整合類型 {#supported-integration-types}
 
-如需詳細資訊，請參閱下表以了解哪些類型的整合支援本頁面所述的功能。
+有關哪些類型的整合支援本頁所述功能的詳細資訊，請參閱下表。
 
 | 整合類型 | 支援功能 |
 |---|---|
-| 即時（串流）整合 | 是 |
-| 檔案式（批次）整合 | 無 |
+| 即時（流）整合 | 是 |
+| 基於檔案（批處理）的整合 | 無 |
 
-## 最佳成果匯總 {#best-effort-aggregation}
+## 盡力聚合 {#best-effort-aggregation}
 
-「最佳工作匯總」最適合每個請求偏好較少設定檔的目的地，而且寧可接收資料較少的請求，也不願接收資料較少的請求。
+盡力聚合最適合於每個請求更喜歡較少配置檔案的目標，而更願意接收更多資料較少的請求，而不是更少資料較多的請求。
 
-以下示例配置顯示了最佳的聚合配置。 有關可配置聚合的示例，請參見 [可配置聚合](#configurable-aggregation) 區段。 下表記錄了適用於最佳工作匯總的參數。
+下面的示例配置顯示了盡力的聚合配置。 有關可配置聚合的示例，請參見 [可配置聚合](#configurable-aggregation) 的子菜單。 下表列出了適用於最佳工作聚合的參數。
 
 ```json
 "aggregation":{
@@ -60,20 +60,20 @@ ht-degree: 2%
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `aggregationType` | 字串 | 指示目標應使用的聚合策略的類型。 支援的聚合類型： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單一HTTP呼叫中匯總多個匯出的設定檔。 <br><br>此值表示端點在單一HTTP呼叫中應接收的設定檔數目上限。 請注意，這是最佳的匯總方式。 例如，如果您指定值100,Platform可能會在呼叫中傳送小於100的任何設定檔數量。 <br><br> 如果您的伺服器不接受每個請求的多個使用者，請將此值設為 `1`. |
-| `bestEffortAggregation.splitUserById` | 布林值 | 如果目標的呼叫應依身分分割，請使用此標幟。 將此標幟設為 `true` 如果您的伺服器在每次呼叫中僅接受一個身分識別，則會接受指定的身分命名空間。 |
+| `bestEffortAggregation.maxUsersPerRequest` | 整數 | Experience Platform可以在單個HTTP調用中聚合多個導出的配置檔案。 <br><br>此值指示終結點在單個HTTP調用中應接收的最大配置檔案數。 請注意，這是一種盡力的聚合。 例如，如果指定值100，平台可能會在呼叫時發送小於100的任意數量的配置檔案。 <br><br> 如果伺服器不接受每個請求多個用戶，請將此值設定為 `1`。 |
+| `bestEffortAggregation.splitUserById` | 布林值 | 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器每次調用只接受一個標識，則指定的標識名稱空間為。 |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
->如果您的API端點接受的每個API呼叫少於100個設定檔，請盡量匯總。
+>如果API終結點每個API調用接受的配置檔案少於100個，則使用盡力聚合。
 
 ## 可配置聚合 {#configurable-aggregation}
 
-如果您偏好以大批次執行，且同一呼叫上有數千個設定檔，可設定的匯總最能運作。 此選項也可讓您根據複雜的匯總規則匯總匯出的設定檔。
+如果您更願意大批處理同一呼叫上的數千個配置檔案，則可配置的聚合效果最好。 此選項還允許您基於複雜的聚合規則聚合導出的配置檔案。
 
-下面的示例配置顯示了可配置的聚合配置。 如需最佳努力匯總的範例，請參閱 [最佳成果匯總](#best-effort-aggregation) 區段。 下表介紹了適用於可配置聚合的參數。
+下面的示例配置顯示了可配置的聚合配置。 有關盡力匯總的示例，請參見 [最佳工作聚合](#best-effort-aggregation) 的子菜單。 下表列出了適用於可配置聚合的參數。
 
 ```json
 "aggregation":{
@@ -108,32 +108,32 @@ ht-degree: 2%
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
 | `aggregationType` | 字串 | 指示目標應使用的聚合策略的類型。 支援的聚合類型： <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `configurableAggregation.splitUserById` | 布林值 | 如果目標的呼叫應依身分分割，請使用此標幟。 將此標幟設為 `true` 如果您的伺服器在每次呼叫中僅接受一個身分識別，則會接受指定的身分命名空間。 |
-| `configurableAggregation.maxBatchAgeInSecs` | 整數 | 用於與 `maxNumEventsInBatch`，此參數會決定Experience Platform應等待多久，直到傳送API呼叫至您的端點。 <ul><li>最小值（秒）:1800</li><li>最大值（秒）:3600</li></ul> 例如，如果您對這兩個參數使用最大值，Experience Platform會等待3600秒或直到有10000個合格設定檔才進行API呼叫（以先發生者為準）。 |
-| `configurableAggregation.maxNumEventsInBatch` | 整數 | 與 `maxBatchAgeInSecs`，此參數會決定API呼叫中應匯總多少個合格設定檔。 <ul><li>最小值：1000</li><li>最大值：10000</li></ul> 例如，如果您對這兩個參數使用最大值，Experience Platform會等待3600秒或直到有10000個合格設定檔才進行API呼叫（以先發生者為準）。 |
-| `configurableAggregation.aggregationKey` | - | 可讓您根據下列參數，匯總對應至目的地的匯出設定檔。 |
-| `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 將此參數設為 `true` 如果您想要依區段ID將匯出至目的地的設定檔分組。 |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 同時設定此參數和 `includeSegmentId` to `true`，如果您想要依區段ID和區段狀態將匯出至目的地的設定檔分組。 |
-| `configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 將此參數設為 `true` 如果您想要依身分命名空間將匯出至目的地的設定檔分組。 |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 將此參數設定為 `true` 如果您希望匯出的設定檔能根據單一身分（GAID、IDFA、電話號碼、電子郵件等）匯總至群組。 |
-| `configurableAggregation.aggregationKey.groups` | 陣列 | 如果您想要依身分識別命名空間的群組，將匯出至目的地的設定檔分組，請建立身分群組清單。 例如，您可以使用上述範例中的設定，將包含IDFA和GAID行動識別碼的設定檔，合併至對您目的地的呼叫和電子郵件中。 |
+| `configurableAggregation.splitUserById` | 布林值 | 如果應按標識拆分到目標的調用，則使用此標誌。 將此標誌設定為 `true` 如果伺服器每次調用只接受一個標識，則指定的標識名稱空間為。 |
+| `configurableAggregation.maxBatchAgeInSecs` | 整數 | 用於與 `maxNumEventsInBatch`，此參數確定Experience Platform應等待多長時間，直到將API調用發送到您的終結點。 <ul><li>最小值（秒）:1800</li><li>最大值（秒）:3600</li></ul> 例如，如果對這兩個參數都使用最大值，Experience Platform將等待3600秒或直到有10000個限定配置檔案才進行API調用（以先發生的情況為準）。 |
+| `configurableAggregation.maxNumEventsInBatch` | 整數 | 與 `maxBatchAgeInSecs`，此參數確定在API調用中應聚合多少個合格配置檔案。 <ul><li>最小值：1000</li><li>最大值：10000</li></ul> 例如，如果對這兩個參數都使用最大值，Experience Platform將等待3600秒或直到有10000個限定配置檔案才進行API調用（以先發生的情況為準）。 |
+| `configurableAggregation.aggregationKey` | - | 允許您根據下面描述的參數聚合映射到目標的導出配置檔案。 |
+| `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 將此參數設定為 `true` 按段ID對導出到目標的配置檔案進行分組。 |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 設定此參數和 `includeSegmentId` 至 `true`，如果要按段ID和段狀態將導出到目標的配置檔案分組。 |
+| `configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 將此參數設定為 `true` 按標識名稱空間將導出到目標的配置檔案分組。 |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 將此參數設定為 `true` 如果希望將導出的配置檔案根據單個身份（GAID、IDFA、電話號碼、電子郵件等）聚合到組中。 |
+| `configurableAggregation.aggregationKey.groups` | 陣列 | 如果要按標識命名空間的組將導出到目標的配置檔案分組，請建立標識組清單。 例如，您可以使用上例中所示的配置將包含IDFA和GAID移動標識符的配置檔案合併為到目標的一個呼叫和電子郵件，再將電子郵件合併為另一個。 |
 
 {style="table-layout:auto"}
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文後，您應該更了解如何為目標配置聚合策略。
+閱讀這篇文章後，您應更好地瞭解如何為目標配置聚合策略。
 
-若要進一步了解其他目的地元件，請參閱下列文章：
+要瞭解有關其他目標元件的詳細資訊，請參閱以下文章：
 
-* [客戶驗證配置](customer-authentication.md)
-* [OAuth2驗證](oauth2-authentication.md)
+* [客戶身份驗證配置](customer-authentication.md)
+* [OAuth2身份驗證](oauth2-authentication.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
-* [結構配置](schema-configuration.md)
-* [身分命名空間設定](identity-namespace-configuration.md)
-* [支援的對應配置](supported-mapping-configurations.md)
-* [目的地傳送](destination-delivery.md)
-* [對象中繼資料設定](audience-metadata-configuration.md)
-* [批次設定](batch-configuration.md)
-* [歷史設定檔資格](historical-profile-qualifications.md)
+* [架構配置](schema-configuration.md)
+* [標識命名空間配置](identity-namespace-configuration.md)
+* [支援的映射配置](supported-mapping-configurations.md)
+* [目標傳遞](destination-delivery.md)
+* [受眾元資料配置](audience-metadata-configuration.md)
+* [批配置](batch-configuration.md)
+* [歷史配置檔案資格](historical-profile-qualifications.md)

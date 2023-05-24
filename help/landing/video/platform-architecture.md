@@ -1,6 +1,6 @@
 ---
-title: Experience Platform架構概觀
-description: 本影片會逐步介紹概觀圖表，並說明Adobe Experience Platform的主要元件。
+title: Experience Platform體系結構概述
+description: 此視頻瀏覽概覽圖並解釋Adobe Experience Platform的主要元件。
 kt: 4336
 audience: all
 doc-type: video
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# Experience Platform架構概觀
+# Experience Platform體系結構概述
 
-本影片會逐步介紹高階架構圖，說明Experience Platform的主要元件。
+此視頻通過一個高級體系結構圖來解釋Experience Platform的主要元件。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)

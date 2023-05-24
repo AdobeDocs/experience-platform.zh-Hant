@@ -13,8 +13,8 @@ ht-degree: 52%
 
 # 可觀察性深入分析 {#observability}
 
-* [可觀察性深入分析概述](./home.md)
-* 可觀察性前瞻分析API {#api}
+* [可觀性透視概述](./home.md)
+* 可觀性透視API {#api}
    * [總覽](./api/overview.md)
    * [快速入門](./api/getting-started.md)
    * [量度](./api/metrics.md)

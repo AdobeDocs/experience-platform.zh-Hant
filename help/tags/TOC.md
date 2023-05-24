@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '984'
 ht-degree: 30%
 
 ---
@@ -233,9 +233,7 @@ ht-degree: 30%
          * [總覽](./extensions/server/pinterest/overview.md)
       * [快照轉換API](https://exchange.adobe.com/apps/ec/108550)
       * [!DNL Splunk] {#splunk}
-         * [概述](./extensions/server/splunk/overview.md)
-      * [!DNL Twitter] {#twitter}
-         * [概述](./extensions/server/twitter/overview.md)
+         * [總覽](./extensions/server/splunk/overview.md)
       * [!DNL Zendesk] 事件API {#zendesk}
          * [總覽](./extensions/server/zendesk/overview.md)
 * 擴充功能開發 {#extension-dev}

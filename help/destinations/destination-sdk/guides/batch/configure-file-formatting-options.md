@@ -1,6 +1,6 @@
 ---
-description: 為檔案型目的地配置檔案格式選項
-title: 了解如何使用Destination SDK為檔案式目的地設定檔案格式選項。
+description: 為基於檔案的目標配置檔案格式選項
+title: 瞭解如何使用Destination SDK為基於檔案的目標配置檔案格式選項。
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 1%
 
 ---
 
-# 為檔案型目的地配置檔案格式選項
+# 為基於檔案的目標配置檔案格式選項
 
 ## 總覽 {#overview}
 
-Destination SDK可讓您大幅調整匯出檔案的格式和壓縮選項，以符合儲存位置中的任何下游需求。
+Destination SDK允許您廣泛調整導出檔案的格式設定和壓縮選項，以滿足儲存位置中的任何下游要求。
 
-本頁面說明如何使用Destination SDK，為檔案式目的地設定檔案格式選項。
+本頁介紹如何使用Destination SDK為基於檔案的目標配置檔案格式選項。
 
 ## 先決條件 {#prerequisites}
 
-開始執行下列步驟之前，請閱讀 [Destination SDK快速入門](../../getting-started.md) 頁面，以取得使用Adobe I/OAPI所需的Destination SDK驗證憑證和其他必要條件的相關資訊。
+在前進到下面概述的步驟之前，請閱讀 [Destination SDK入門](../../getting-started.md) 頁，以獲取使用Adobe I/OAPI的必要Destination SDK身份驗證憑據和其他先決條件。
 
-Adobe也建議您先閱讀並熟悉下列檔案，再繼續操作：
+Adobe還建議您在繼續之前閱讀並熟悉以下文檔：
 
-* 每個可用的檔案格式選項都會記錄在 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 區段。
-* 完成步驟以 [配置基於檔案的目標](../../guides/configure-file-based-destination-instructions.md) 使用Destination SDK。
+* 每個可用的檔案格式選項都將在 [檔案格式配置](../../functionality/destination-server/file-formatting.md) 的子菜單。
+* 完成步驟 [配置基於檔案的目標](../../guides/configure-file-based-destination-instructions.md) 使用Destination SDK。
 
 ## 建立伺服器和檔案配置 {#create-server-file-configuration}
 
-從使用 `/destination-server` 端點，確定要為導出的檔案設定的檔案格式配置選項。
+開始使用 `/destination-server` 終結點，以確定要為導出的檔案設定的檔案格式配置選項。
 
-以下是 [!DNL Amazon S3] 目的地，並選取數個檔案格式選項。
+下面是一個目標伺服器配置示例 [!DNL Amazon S3] 目標，並選擇了多個檔案格式選項。
 
 **API格式**
 
@@ -102,21 +102,21 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**驗證Experience PlatformUI**. 當您使用以下各節所示的設定來設定檔案格式選項時，應檢查Experience PlatformUI，了解這些選項的呈現方式。
+>**驗證Experience PlatformUI**。 在配置檔案格式選項時，應使用下面各節中說明的配置，檢查Experience PlatformUI以瞭解如何呈現這些選項。
 
-在上一步驟中，將所需的檔案格式選項新增至目標伺服器並設定檔案格式後，您現在可以使用 `/destinations` API端點，將所需欄位新增為客戶資料欄位至目標設定。
+將所需的檔案格式選項添加到目標伺服器中，並在上一步中添加檔案格式配置後，現在可以使用 `/destinations` API終結點，將所需欄位作為客戶資料欄位添加到目標配置。
 
 >[!IMPORTANT]
 >
->此步驟為選用，而且只會決定應在Experience PlatformUI中向使用者呈現哪些檔案格式選項。 如果您未將檔案格式選項設定為客戶資料欄位，則檔案匯出將繼續執行 [伺服器和檔案配置](#create-server-file-configuration).
+>此步驟是可選的，它只確定應在Experience PlatformUI中向用戶呈現哪些檔案格式選項。 如果未將檔案格式設定選項設定為客戶資料欄位，則檔案導出將繼續使用中配置的預設值 [伺服器和檔案配置](#create-server-file-configuration)。
 
-在此步驟中，您可以依需要的順序將顯示的選項分組，您可以根據選取的檔案類型建立自訂分組、下拉式欄位和條件分組。 所有這些設定都顯示在錄制中，並顯示在以下更多章節中。
+在此步驟中，您可以按所需的任何順序對顯示的選項進行分組，也可以根據所選檔案類型建立自定義分組、下拉欄位和條件分組。 所有這些設定都顯示在錄制和下面的部分。
 
-![螢幕記錄，顯示批次檔案的各種檔案格式選項。](../../assets/guides/batch/file-formatting-options.gif)
+![螢幕錄制顯示批處理檔案的各種檔案格式選項。](../../assets/guides/batch/file-formatting-options.gif)
 
 ### 排序檔案格式選項 {#ordering}
 
-在目的地設定中，新增檔案格式選項作為客戶資料欄位的順序會反映在UI中。 例如，UI會相應反映下列設定，並依順序顯示選項 **[!UICONTROL 分隔字元]**, **[!UICONTROL 引號字元]**, **[!UICONTROL 逸出字元]**, **[!UICONTROL 空值]**, **[!UICONTROL Null值]**.
+在目標配置中將檔案格式選項作為客戶資料欄位添加到UI中的順序。 例如，下面的配置會相應地反映在UI中，選項按順序顯示 **[!UICONTROL 分隔符]**。 **[!UICONTROL 引號字元]**。 **[!UICONTROL 轉義字元]**。 **[!UICONTROL 空值]**。 **[!UICONTROL 空值]**。
 
 ![顯示Experience PlatformUI中檔案格式選項順序的影像。](../../assets/guides/batch/file-formatting-order.png)
 
@@ -239,9 +239,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 將檔案格式選項分組 {#grouping}
 
-您可以在一個區段內將數個檔案格式選項分組。 在UI中設定與目的地的連線時，使用者可以看到類似欄位的視覺化分組，並從中受益。
+可以在一個節中對多個檔案格式選項進行分組。 在UI中設定到目標的連接時，用戶可以看到類似欄位的可視分組並從中受益。
 
-若要這麼做，請使用 `"type": "object"` 若要建立群組，並收集 `properties` 參數，如下列範例所示，其中分組 **[!UICONTROL CSV選項]** 會加亮顯示。
+要執行此操作，請使用 `"type": "object"` 建立組，並收集 `properties` 參數，如下例所示，其中分組 **[!UICONTROL CSV選項]** 的子菜單。
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -281,11 +281,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ![顯示UI中CSV選項分組的影像。](../../assets/guides/batch/file-formatting-grouping.png)
 
-### 建立檔案格式選項的下拉式選取器 {#dropdown-selectors}
+### 為檔案格式選項建立下拉選擇器 {#dropdown-selectors}
 
-若您想要讓使用者在多個選項之間進行選取（例如應使用哪個字元來分隔CSV檔案中的欄位），您可以將下拉式清單欄位新增至UI。
+對於希望允許用戶在多個選項之間進行選擇的情況，例如，應使用哪個字元來分隔CSV檔案中的欄位，可以向UI中添加下拉欄位。
 
-若要這麼做，請使用 `namedEnum` 物件，如下所示，並設定 `default` 值，供使用者選取。
+要執行此操作，請使用 `namedEnum` 如下所示對象並配置 `default` 選項的值。
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
 [...]
@@ -324,13 +324,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 ]
 ```
 
-![螢幕記錄顯示以上所示組態建立的下拉式選取器範例。](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![螢幕錄制顯示了使用上面所示配置建立的下拉選擇器示例。](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
-### 建立條件式檔案格式選項 {#conditional-options}
+### 建立條件檔案格式選項 {#conditional-options}
 
-您可以建立條件式檔案格式選項，這些選項只有在使用者選取特定檔案類型以進行匯出時，才會顯示在啟動工作流程中。 例如，下列設定會為CSV檔案選項建立條件式分組。 只有當使用者選取CSV作為要匯出的檔案類型時，才會顯示CSV檔案選項。
+您可以建立條件檔案格式設定選項，這些選項僅在用戶選擇特定檔案類型進行導出時才顯示在激活工作流中。 例如，以下配置為CSV檔案選項建立條件分組。 僅當用戶選擇CSV作為所需的檔案類型以進行導出時，才顯示CSV檔案選項。
 
-若要將欄位設為條件式，請使用 `conditional` 參數，如下所示：
+要將欄位設定為條件，請使用 `conditional` 參數，如下所示：
 
 ```json
             "conditional": {
@@ -340,7 +340,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
             }
 ```
 
-在更廣泛的情境中，您可以看到 `conditional` 欄位(與 `fileType` 字串和 `csvOptions` 定義對象的對象。
+在更廣的上下文中，您可以 `conditional` 在下面的目標配置中使用的欄位 `fileType` 字串和 `csvOptions` 定義對象。
 
 ```json
         {
@@ -483,13 +483,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
         }
 ```
 
-在下方，您可以根據上述設定，查看產生的UI畫面。 當使用者選取檔案類型CSV時，UI中會顯示引用CSV檔案類型的其他檔案格式選項。
+在下面，您可以根據上述配置看到生成的UI螢幕。 當用戶選擇檔案類型CSV時，UI中將顯示引用CSV檔案類型的其他檔案格式選項。
 
-![螢幕記錄，顯示CSV檔案的條件式檔案格式選項。](../../assets/guides/batch/conditional-file-formatting.gif)
+![螢幕錄制顯示CSV檔案的條件檔案格式選項。](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### 完整的API要求，包含上述所有選項
+### 完成API請求，包括上面顯示的所有選項
 
-以下API要求會以單一設定結合上述各節所述的所有選項。
+下面的API請求將上述各節中描述的所有選項組合到一個配置中。
 
 **要求**
 
@@ -711,12 +711,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 }'
 ```
 
-成功的回應會傳回目標設定，包括唯一識別碼(`instanceId`)。
+成功的響應返回目標配置，包括唯一標識符(`instanceId`)。
 
 ## 已知限制 {#known-limitations}
 
-某些檔案格式選項組合可能會導致不適當的檔案導出結果。
-Adobe建議不要選取下列CSV選項組合：
+某些檔案格式選項組合可能會導致不希望的檔案導出結果。
+Adobe建議不要選擇以下CSV選項組合：
 
 ```
 nullValue -> ""
@@ -724,16 +724,16 @@ quote -> "
 emptyValue -> ""
 ```
 
-要說明此限制，請考慮導出包含以下值的檔案：
+要說明限制，請考慮導出具有以下值的檔案：
 
-| 名字 | lastname | 國家 | state |
+| 名字 | lastname | 鄉 | state |
 |---------|----------|---------|--------|
-| 麥克 | 玫瑰 | 美國 | 紐約 |
+| 麥克 | 玫瑰 | 美國 | 尼 |
 | 詹姆斯 | Smith |  | null |
 
 {style="table-layout:auto"}
 
-這會產生如下所示的輸出。 請注意，表格中的null值如何錯誤地匯出為逸出引號。
+這將產生如下所示的輸出。 注意表中的null值如何錯誤地導出為轉義引號。
 
 ```csv
 Michael,Rose,USA,NY 
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文後，您現在知道如何使用Destination SDK，為匯出的檔案設定自訂檔案格式選項。 接下來，您的團隊可以使用 [檔案式目的地的啟用工作流程](../../../ui/activate-batch-profile-destinations.md) 將資料匯出至目的地。
+通過閱讀本文，您現在知道如何使用Destination SDK為導出的檔案設定自定義檔案格式選項。 接下來，您的團隊可以 [用於基於檔案的目標的激活工作流](../../../ui/activate-batch-profile-destinations.md) 將資料導出到目標。

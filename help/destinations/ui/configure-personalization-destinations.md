@@ -1,8 +1,8 @@
 ---
-keywords: 個人化；目標；目的地；個性化目標；設定個人化目的地；同一頁；下一頁；
-title: 為同一頁面和下一頁個人化設定個人化目的地
+keywords: 個性化；目標；目的地；目的地個性化；配置個性化目標；同一頁；下一頁；
+title: 配置同頁和下一頁個性化的個性化目標
 type: Tutorial
-description: 了解如何為同一頁面和下一頁個人化設定個人化目的地。
+description: 瞭解如何為同一頁和下一頁個性化配置個性化目標。
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
 source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
@@ -11,67 +11,67 @@ ht-degree: 0%
 
 ---
 
-# 為同一頁面和下一頁個人化設定個人化目的地
+# 配置同頁和下一頁個性化的個性化目標
 
 ## 總覽 {#overview}
 
 >[!NOTE]
 >
->當 [設定Adobe Target連線](../catalog/personalization/adobe-target-connection.md) 若不使用datastream ID，則不支援本文所述的使用案例。
+>當 [配置Adobe Target連接](../catalog/personalization/adobe-target-connection.md) 如果不使用資料流ID，則不支援本文中描述的使用案例。
 
-Adobe Experience Platform使用 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 讓客戶即時大規模建立和鎖定受眾區段。
+Adobe Experience Platform用途 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 使客戶能夠即時、高規模地建立和瞄準受眾群。
 
-此功能可協助您設定同頁和下一頁個人化使用案例。
+此功能可幫助您配置同頁和下一頁個性化使用案例。
 
-本文提供如何針對這些使用案例設定Experience Platform和您的個人化目的地的逐步指示。
+本文提供了有關如何為這些使用案例配置Experience Platform和個性化目標的逐步說明。
 
-此外，請觀看以下影片以了解端對端設定程式的概觀。
+此外，請觀看下面的視頻，瞭解端到端配置過程的概述。
 
 >[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，且自此視訊錄制以來可能已變更。 如需最新資訊，請參閱以下各節所述的設定步驟。
+>Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱以下各節中介紹的配置步驟。
 
-## 步驟1:在資料收集UI中設定資料流 {#configure-datastream}
+## 步驟1:在資料收集UI中配置資料流 {#configure-datastream}
 
-設定個人化目的地的第一步，是為Experience PlatformWeb SDK設定資料流。 這是在資料收集UI中完成。
+設定個性化目標的第一步是為Experience PlatformWeb SDK配置資料流。 此操作在資料收集UI中完成。
 
-設定資料流時，位於 **[!UICONTROL Adobe Experience Platform]** 確保兩者 **[!UICONTROL 邊緣分割]** 和 **[!UICONTROL 個人化目的地]** 中所有規則的URL。
+配置資料流時，在 **[!UICONTROL Adobe Experience Platform]** 確保兩者 **[!UICONTROL 邊緣分割]** 和 **[!UICONTROL 個性化目標]** 的上界。
 
 ![資料流配置](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-如需如何設定資料流的詳細資訊，請遵循 [Platform Web SDK檔案](../../edge/datastreams/overview.md).
+有關如何設定資料流的詳細資訊，請按照 [平台Web SDK文檔](../../edge/datastreams/overview.md)。
 
-## 步驟2:設定您的個人化目的地 {#configure-destination}
+## 步驟2:配置個性化目標 {#configure-destination}
 
-設定資料流後，您就可以開始設定個人化目的地。
+配置資料流後，可以開始配置個性化目標。
 
-關注 [目的地連線建立教學課程](../ui/connect-destination.md) 以了解如何建立新目的地連線的詳細指示。
+關注 [目標連接建立教程](../ui/connect-destination.md) 有關如何建立新目標連接的詳細說明。
 
-請根據您要設定的目的地，參閱下列文章以取得目的地特定的必要條件和相關資訊：
+根據您正在配置的目標，請參閱以下文章以瞭解特定於目標的先決條件和相關資訊：
 
-* [Adobe Target連線](../catalog/personalization/adobe-target-connection.md)
-* [自訂個人化連線](../catalog/personalization/custom-personalization.md)
+* [Adobe Target](../catalog/personalization/adobe-target-connection.md)
+* [自定義個性化連接](../catalog/personalization/custom-personalization.md)
 
-## 步驟3:建立 [!DNL Active-On-Edge] 合併策略 {#create-merge-policy}
+## 第3步：建立 [!DNL Active-On-Edge] 合併策略 {#create-merge-policy}
 
-建立目的地連線後，您必須建立 [!DNL Active-On-Edge] 合併策略。
+建立目標連接後，必須建立 [!DNL Active-On-Edge] 合併策略。
 
-遵循 [建立合併策略](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確定啟用 **[!UICONTROL 邊緣活動合併策略]** 切換。
+按照 [建立合併策略](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確保啟用 **[!UICONTROL 活動 — 邊緣合併策略]** 切換。
 
-## 步驟4:在Platform中建立新區段 {#create-segment}
+## 第4步：在平台中建立新段 {#create-segment}
 
-建立 [!DNL Active-On-Edge] 合併原則，您必須在Platform中建立新區段。
+建立後 [!DNL Active-On-Edge] 合併策略，必須在平台中建立新段。
 
-關注 [區段產生器](../../segmentation/ui/segment-builder.md) 指南來建立新區段，並請務必 [指派](../../segmentation/ui/segment-builder.md#merge-policies) the [!DNL Active-On-Edge] 合併您在步驟3中建立的策略。
+關注 [段構建器](../../segmentation/ui/segment-builder.md) 指南，確保 [分配](../../segmentation/ui/segment-builder.md#merge-policies) 這樣 [!DNL Active-On-Edge] 合併您在步驟3中建立的策略。
 
-## 步驟5:啟動區段至您的目的地
+## 第5步：將段激活到目標
 
-設定程式的最後一個步驟是將您在步驟4建立的區段啟動至您在步驟2建立的目的地。
+配置過程的最後一步是將您在步驟4中建立的段激活到您在步驟2中建立的目標。
 
-要執行此操作，請遵循此操作 [啟用教學課程](../ui/activate-profile-request-destinations.md).
+要執行此操作，請遵循此操作 [激活教程](../ui/activate-profile-request-destinations.md)。
 
 ## 驗證設定 {#validate-configuration}
 
-成功執行上述步驟後，您應該會在個人化目的地中看到新區段。
+成功執行上述步驟後，您應在個性化目標中看到新段。

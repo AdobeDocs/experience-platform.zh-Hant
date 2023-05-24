@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；CJA；歷程分析；客戶歷程分析；行銷活動協調；協調；客戶歷程；歷程；歷程協調；功能；工作流程
+keywords: Experience Platform；首頁；熱門主題；CJA；行程分析；客戶行程分析；活動業務流程；業務流程；客戶行程；行程；行程協調；工作流；工作流
 solution: Experience Platform
-title: Experience Platform檔案概述
-description: Adobe Experience Platform檔案提供多種格式，包括概述、教學課程和使用者介面與API的指南。 以下是Experience Platform服務最常見的檔案類型的簡短說明。
+title: Experience Platform文檔概述
+description: Adobe Experience Platform文檔以多種格式提供，包括用戶介面和API的概述、教程和指南。 下面簡要介紹可用於Experience Platform服務的最常見文檔類型。
 exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
@@ -11,26 +11,26 @@ ht-degree: 2%
 
 ---
 
-# Experience Platform檔案概觀
+# Experience Platform文檔概述
 
 >[!NOTE]
 >
->Adobe Experience Platform檔案最近已移動。 請花點時間檢閱新的導覽，並更新任何現有書籤。
+>Adobe Experience Platform檔案最近已移動。 請花點時間查看新導航並更新任何現有書籤。
 
-Adobe Experience Platform檔案適用於許多Platform功能和服務。 若要存取Experience Platform檔案，請返回 [檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html) 並選取您要檢視的指南。
+Adobe Experience Platform文檔可用於許多平台功能和服務。 要訪問Experience Platform文檔，請返回 [文檔登錄頁](https://experienceleague.adobe.com/docs/experience-platform.html) 並選擇要查看的指南。
 
-## Experience Platform檔案類型
+## Experience Platform文檔類型
 
-Experience Platform檔案提供多種格式，包括概述、教學課程和使用者介面(UI)和API的指南。 最常見的檔案類型摘要列於下列清單中：
+Experience Platform文檔以多種格式提供，包括用戶介面(UI)和API的概述、教程和指南。 最常見的文檔類型在以下清單中進行了概述：
 
-* **API參考：** 請參閱各服務的API參考檔案，以了解可用端點的詳細資訊，包括標題、參數、範例要求和回應。 這些參考資料提供的詳細程度與檔案不同。 如需詳細的API使用範例，建議您參閱服務專用開發人員指南。
+* **API引用：** 請查閱每個服務的API參考文檔，以瞭解有關可用終結點的詳細資訊，包括標題、參數、示例請求和響應。 這些參考材料提供的詳細程度與文檔不同。 建議參考特定於服務的開發人員指南，以瞭解詳細的API使用示例。
 
-* **開發人員指南：** 每個開發人員指南都提供特定服務可用之所有API端點的深入使用資訊。 本指南包含可用的查詢參數、範例要求和範例回應，以及概述「gotcha」以避免在呼叫 [!DNL Platform] API。
+* **開發人員指南：** 每個開發人員指南都提供特定服務可用的所有API端點的深度使用資訊。 本指南包括可用的查詢參數、示例請求和示例響應，以及概述在調用時要避免的「gotchas」 [!DNL Platform] API。
 
-* **概述：** 概述提供服務或功能的概要概述，以及其如何與其他功能互動 [!DNL Platform] 服務。 此概觀是您了解中新功能的最佳起點 [!DNL Platform].
+* **概述：** 概述提供了服務或功能及其如何與其他功能交互的概要 [!DNL Platform] 服務。 概述是瞭解中的新功能時的最佳開始位置 [!DNL Platform]。
 
-* **疑難排解指南：** 使用疑難排解指南，針對使用API時可能遇到的錯誤訊息，尋找常見問題的解答和資訊。 此 [!DNL Experience Platform] 疑難排解指南支援一般問題和錯誤，而個別服務則提供其區域專屬的疑難排解指南。
+* **故障排除指南：** 使用故障排除指南可找到有關使用API時可能遇到的錯誤消息的常見問題解答和資訊。 的 [!DNL Experience Platform] 故障排除指南提供對一般問題和錯誤的支援，而各個服務提供特定於其區域的故障排除指南。
 
-* **教學課程：** 教學課程是逐步指南，內容涵蓋UI、API或兩者，可帶來特定結果。 與開發人員指南不同，API教學課程可能只會關注一或兩個端點，並非完整的API資源。 同樣地，UI教學課程可能只會著重於特定步驟，而不會著重於該服務提供的完整使用者介面。 Tutorials通常是大型工作流程的一部分，並提供「後續步驟」，說明您可能想要接下來嘗試哪些教學課程。
+* **教程：** 教程是UI、API或兩者的混合的逐步指南，可導致特定結果。 與開發人員指南不同，API教程只能關注一個或兩個端點，而不是詳盡的API資源。 同樣，UI教程可能只關注特定步驟，而不是該服務可用的完整用戶介面。 Tutorials通常是較大工作流和功能「後續步驟」的一部分，這些步驟描述了您下一步可能要嘗試的教程。
 
-* **UI指南：** UI指南概述 [!DNL Platform] 特定服務的使用者介面。 這些檔案包含螢幕擷取畫面，以及透過UI與Platform互動的步驟。 與開發人員指南類似，UI指南概述所有可用的動作和選項，包括要避免的「gotcha」。 這是使用  UI 時最詳細的資源。
+* **UI指南：** UI指南概述了在 [!DNL Platform] 特定服務的用戶介面。 這些文檔包含螢幕截圖和通過UI與平台交互的步驟。 與開發人員指南類似，UI指南概述了所有可用操作和選項，包括要避免的「gotchas」。 這是使用  UI 時最詳細的資源。

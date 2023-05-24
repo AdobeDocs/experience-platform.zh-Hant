@@ -1,6 +1,6 @@
 ---
-title: Secrets端點
-description: 了解如何在Reactor API中呼叫/secrets端點。
+title: 機密終結點
+description: 瞭解如何調用Repartor API中的/secrets端點。
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: 24e79c14268b9eab0e8286eb8cd1352c1dfcd1b6
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 4%
 
 ---
 
-# Secrets端點
+# 機密終結點
 
-機密是僅存在於事件轉送屬性（具有的屬性）內的資源 `platform` 屬性設定為 `edge`)。 它們允許事件轉發到另一個系統進行身份驗證，以便進行安全資料交換。
+機密是僅存在於事件轉發屬性(具有 `platform` 屬性集 `edge`)。 它們允許事件轉發到另一個系統以進行安全資料交換。
 
-本指南會示範如何呼叫 `/secrets` 端點。 如需不同機密類型的詳細說明及使用方式，請參閱 [秘密](../guides/secrets.md) 再返回本指南。
+本指南將介紹如何撥打 `/secrets` 端點。 有關不同機密類型及其使用方法的詳細說明，請參閱 [秘密](../guides/secrets.md) 然後返回本指南。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). 繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 擷取屬性的機密清單 {#list-property}
+## 檢索屬性的機密清單 {#list-property}
 
-您可以提出GET要求，以列出屬於屬性的機密。
+通過發出GET請求，可以列出屬於屬性的機密。
 
 **API格式**
 
@@ -31,7 +31,7 @@ GET /properties/{PROPERTY_ID}/secrets
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 您要列出其機密之屬性的ID。 |
+| `{PROPERTY_ID}` | 要列出其機密的屬性的ID。 |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回屬於屬性的機密清單。
+成功的響應返回屬於該屬性的秘密清單。
 
 ```json
 {
@@ -115,9 +115,9 @@ curl -X GET \
 }
 ```
 
-## 擷取環境的機密清單 {#list-environment}
+## 檢索環境的機密清單 {#list-environment}
 
-您可以提出GET要求，列出屬於某個環境的機密。
+通過發出GET請求，可以列出屬於環境的機密。
 
 **API格式**
 
@@ -127,7 +127,7 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 您要列出其機密之環境的ID。 |
+| `{ENVIRONMENT_ID}` | 要列出其機密的環境的ID。 |
 
 {style="table-layout:auto"}
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回屬於環境的機密清單。
+成功的響應返回屬於該環境的機密清單。
 
 ```json
 {
@@ -213,7 +213,7 @@ curl -X GET \
 
 ## 查個秘密 {#lookup}
 
-您可以在GET要求的路徑中加入密碼，以尋找密碼。
+可以通過將機密ID包含在請求路徑中來查找機密。
 
 **API格式**
 
@@ -241,7 +241,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回機密的詳細資訊。
+成功的響應返回機密的詳細資訊。
 
 ```json
 {
@@ -296,13 +296,13 @@ curl -X GET \
 }
 ```
 
-## 建立機密 {#create}
+## 建立密碼 {#create}
 
-您可以提出POST要求來建立機密。
+可以通過發出POST請求來建立秘密。
 
 >[!NOTE]
 >
->建立新機密時，API會傳回包含該資源資訊的立即回應。 同時，觸發秘密交換任務以測試憑證交換是否正常運作。 此任務會非同步處理，並將機密的狀態屬性更新為 `succeeded` 或 `failed` 取決於結果。
+>建立新機密時，API將返回包含該資源資訊的即時響應。 同時，觸發秘密交換任務以test憑證交換功能。 非同步處理此任務，並將機密的狀態屬性更新為 `succeeded` 或 `failed` 取決於結果。
 
 **API格式**
 
@@ -312,7 +312,7 @@ POST /properties/{PROPERTY_ID}/secrets
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 您要定義下方機密之屬性的ID。 |
+| `{PROPERTY_ID}` | 要在下定義機密的屬性的ID。 |
 
 {style="table-layout:auto"}
 
@@ -351,17 +351,17 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 機密的不重複、描述性名稱。 |
-| `type_of` | 密碼代表的驗證憑證類型。 有三個接受的值：<ul><li>`token`:代號字串。</li><li>`simple-http`:用戶名和密碼。</li><li>`oauth2`:符合OAuth標準的認證。</li></ul> |
-| `credentials` | 包含密碼憑據值的對象。 視 `type_of` 屬性，必須提供不同的屬性。 請參閱 [憑據](../guides/secrets.md#credentials) 以取得每種類型需求的詳細資訊。 |
-| `relationships.environment` | 每個機密在首次建立時都必須與環境相關聯。 此 `data` 此屬性中的物件必須包含 `id` 被指派的機密，以及 `type` 值 `environments`. |
-| `type` | 要建立的資源類型。 對於此呼叫，值必須是 `secrets`. |
+| `name` | 機密的唯一描述性名稱。 |
+| `type_of` | 密鑰表示的身份驗證憑據類型。 有三個可接受的值：<ul><li>`token`:令牌字串。</li><li>`simple-http`:用戶名和密碼。</li><li>`oauth2`:符合OAuth標準的憑據。</li></ul> |
+| `credentials` | 包含機密的憑據值的對象。 取決於 `type_of` 屬性，必須提供不同的屬性。 請參閱 [憑據](../guides/secrets.md#credentials) 的詳細資訊。 |
+| `relationships.environment` | 每個機密在首次建立時必須與環境關聯。 的 `data` 此屬性中的對象必須包含 `id` 所分配的機密以及 `type` 值 `environments`。 |
+| `type` | 正在建立的資源類型。 對於此呼叫，值必須為 `secrets`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回機密的詳細資訊。 請注意，根據機密類型， `credentials` 可能已隱藏。
+成功的響應返回機密的詳細資訊。 請注意，根據機密類型， `credentials` 可能是隱藏的。
 
 ```json
 {
@@ -417,13 +417,13 @@ curl -X POST \
 }
 ```
 
-## 測試 `oauth2` 秘密 {#test}
+## Test `oauth2` 秘密 {#test}
 
 >[!NOTE]
 >
->此操作只能對具有 `type_of` 值 `oauth2`.
+>此操作只能使用 `type_of` 值 `oauth2`。
 
-您可以測試 `oauth2` 將ID加入PATCH要求的路徑中以加密。 測試操作執行交換並包括授權服務響應 `test_exchange` 屬性 `meta` 物件。 此操作不會更新機密本身。
+您可以test `oauth2` 將其ID包含在PATCH請求路徑中。 test操作執行交換並包括授權服務響應 `test_exchange` 機密中的屬性 `meta` 的雙曲餘切值。 此操作不更新機密本身。
 
 **API格式**
 
@@ -433,7 +433,7 @@ PATCH /secrets/{SECRET_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 的ID `oauth2` 要測試的秘密。 |
+| `{SECRET_ID}` | 的ID `oauth2` 你想test的秘密。 |
 
 {style="table-layout:auto"}
 
@@ -463,16 +463,16 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 必須包含 `type_of` 值為的屬性 `oauth2`. |
-| `meta` | 必須包含 `action` 值為的屬性 `test`. |
-| `id` | 您要測試之機密的ID。 這必須符合請求路徑中提供的ID。 |
-| `type` | 要操作的資源類型。 必須設為 `secrets`. |
+| `attributes` | 必須包含 `type_of` 值為 `oauth2`。 |
+| `meta` | 必須包含 `action` 值為 `test`。 |
+| `id` | 你正在測試的秘密的ID。 這必須與請求路徑中提供的ID匹配。 |
+| `type` | 正在操作的資源類型。 必須設定為 `secrets`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回機密的詳細資訊，且授權服務的回應會包含在 `meta.test_exchange`.
+成功的響應返回機密的詳細資訊，授權服務的響應包含在 `meta.test_exchange`。
 
 ```json
 { 
@@ -538,9 +538,9 @@ curl -X PATCH \
 }
 ```
 
-## 重試機密 {#retry}
+## 重試密碼 {#retry}
 
-重試機密是手動觸發機密交換的動作。 您可以在PATCH請求的路徑中加入密碼ID，以重試密碼。
+重試密鑰是手動觸發密鑰交換的操作。 您可以通過在PATCH請求的路徑中包含密鑰ID來重試密鑰。
 
 **API格式**
 
@@ -550,7 +550,7 @@ PATCH /secrets/{SECRET_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 要重試的機密ID。 |
+| `{SECRET_ID}` | 要重試的機密的ID。 |
 
 {style="table-layout:auto"}
 
@@ -580,16 +580,16 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 必須包含 `type_of` 與要更新之密碼的屬性相符(`token`, `simple-http`，或 `oauth2`)。 |
-| `meta` | 必須包含 `action` 值為的屬性 `retry`. |
-| `id` | 正在重試的機密ID。 這必須符合請求路徑中提供的ID。 |
-| `type` | 要操作的資源類型。 必須設為 `secrets`. |
+| `attributes` | 必須包含 `type_of` 與正在更新的機密的屬性匹配(`token`。 `simple-http`或 `oauth2`)。 |
+| `meta` | 必須包含 `action` 值為 `retry`。 |
+| `id` | 正在重試的機密的ID。 這必須與請求路徑中提供的ID匹配。 |
+| `type` | 正在操作的資源類型。 必須設定為 `secrets`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回機密的詳細資訊，其狀態會重設為 `pending`. 交換完成後，密碼的狀態會更新為 `succeeded` 或 `failed` 取決於結果。
+成功的響應將返回機密的詳細資訊，其狀態重置為 `pending`。 交換完成後，機密的狀態將更新為 `succeeded` 或 `failed` 取決於結果。
 
 ```json
 {
@@ -646,9 +646,9 @@ curl -X PATCH \
 
 ## 重新授權 `oauth2-google` 秘密 {#reauthorize}
 
-每個 `oauth2-google` 密碼包含 `meta.authorization_url_expires_at` 指出授權URL何時過期的屬性。 此後，必須重新授權機密，才能續訂驗證程式。
+每個 `oauth2-google` 機密包含 `meta.authorization_url_expires_at` 指示授權URL何時過期的屬性。 此後，必須重新授權該秘密，以便其更新身份驗證過程。
 
-重新授權 `oauth2-google` 機密，請PATCH有關機密。
+重新授權 `oauth2-google` 秘密，向PATCH提出要求。
 
 **API格式**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 此 `id` 重新授權的秘密。 |
+| `{SECRET_ID}` | 的 `id` 你想重新授權的秘密。 |
 
 **要求**
 
-此 `data` 要求裝載中的物件必須包含 `meta.action` 屬性設定為 `reauthorize`.
+的 `data` 請求負載中的對象必須包含 `meta.action` 屬性設定為 `reauthorize`。
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回更新機密的詳細資訊。 您必須從此處複製並貼上 `meta.authorization_url` 進入瀏覽器以完成授權程式。
+成功的響應返回更新的機密的詳細資訊。 在此處，必須複製並貼上 `meta.authorization_url` 進入瀏覽器以完成授權過程。
 
 ```json
 {
@@ -753,13 +753,13 @@ curl -X PATCH \
 
 ## 刪除機密 {#delete}
 
-您可以在DELETE請求的路徑中加入機密ID，以刪除機密。 這是硬刪除，會立即生效，不需要程式庫重新發佈。
+可以通過將機密ID包含在DELETE請求的路徑中來刪除機密。 這是一個具有即時效果的硬刪除，不需要重新發佈庫。
 
-此操作會從與其相關的環境中移除機密，並刪除基礎資源。
+此操作會從與其相關的環境中刪除機密，並刪除基礎資源。
 
 >[!WARNING]
 >
->如果您有任何部署的規則會參考已刪除的機密，這些規則將會立即停止運作。 參考此機密的任何資料元素必須在之後更新或移除。
+>如果您有任何已部署的規則引用已刪除的機密，這些規則將立即停止運行。 引用此機密的任何資料元素必須在之後更新或刪除。
 
 **API格式**
 
@@ -769,7 +769,7 @@ DELETE /secrets/{SECRET_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 您要刪除之機密的ID。 |
+| `{SECRET_ID}` | 要刪除的機密的ID。 |
 
 {style="table-layout:auto"}
 
@@ -787,17 +787,17 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容）和空回應內文，指出已從系統中刪除機密。
+成功的響應返回HTTP狀態204（無內容）和空的響應正文，表示該機密已從系統中刪除。
 
-## 列出機密附註 {#notes}
+## 列出機密的注釋 {#notes}
 
-Reactor API可讓您將附註新增至特定資源，包括機密。 附註是對資源行為沒有影響的文字注釋，可用於各種使用案例。
+Reactor API允許您向某些資源（包括機密）添加註釋。 注釋是文本注釋，對資源行為沒有影響，可用於各種使用案例。
 
 >[!NOTE]
 >
->請參閱 [附註端點指南](./notes.md) 以取得如何建立和編輯Reactor API資源附註的詳細資訊。
+>查看 [notes endpoint guide（注釋終結點指南）](./notes.md) 有關如何建立和編輯Reactor API資源注釋的詳細資訊。
 
-您可以提出GET要求，以擷取與機密相關的所有附註。
+可通過發出GET請求來檢索與機密相關的所有注釋。
 
 **API格式**
 
@@ -807,7 +807,7 @@ GET /secrets/{SECRET_ID}/notes
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 您要列出其備注的機密ID。 |
+| `{SECRET_ID}` | 要列出其筆記的秘密的ID。 |
 
 {style="table-layout:auto"}
 
@@ -825,7 +825,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回屬於機密的附註清單。
+成功的響應返回屬於機密的注釋清單。
 
 ```json
 {
@@ -868,15 +868,15 @@ curl -X GET \
 }
 ```
 
-## 擷取機密的相關資源 {#related}
+## 檢索機密的相關資源 {#related}
 
-下列呼叫示範如何擷取機密的相關資源。 當 [查找秘密](#lookup)，這些關係會列在 `relationships` 屬性。
+以下調用演示如何檢索機密的相關資源。 當 [查出秘密](#lookup)，這些關係列在 `relationships` 屬性。
 
-請參閱 [關係指南](../guides/relationships.md) 以取得Reactor API中關係的詳細資訊。
+查看 [關係指南](../guides/relationships.md) 的子菜單。
 
-### 尋找機密的相關環境 {#environment}
+### 查找相關環境以查找機密 {#environment}
 
-您可以借由附加 `/environment` 至GET請求的路徑。
+可通過附加 `/environment` 到GET請求的路徑。
 
 **API格式**
 
@@ -886,7 +886,7 @@ GET /secrets/{SECRET_ID}/environment
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 您要查詢其環境的機密ID。 |
+| `{SECRET_ID}` | 要查找其環境的機密的ID。 |
 
 {style="table-layout:auto"}
 
@@ -904,7 +904,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回環境的詳細資訊。
+成功的響應將返回環境的詳細資訊。
 
 ```json
 {
@@ -983,9 +983,9 @@ curl -X GET \
 }
 ```
 
-### 查找機密的相關屬性 {#property}
+### 查找相關屬性以查找機密 {#property}
 
-您可以借由附加 `/property` 至GET請求的路徑。
+可以通過附加 `/property` 到GET請求的路徑。
 
 **API格式**
 
@@ -995,7 +995,7 @@ GET /secrets/{SECRET_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 您要查詢其屬性的機密ID。 |
+| `{SECRET_ID}` | 要查找其屬性的機密的ID。 |
 
 {style="table-layout:auto"}
 
@@ -1013,7 +1013,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回屬性的詳細資訊。
+成功的響應返回屬性的詳細資訊。
 
 ```json
 {

@@ -1,5 +1,5 @@
 ---
-description: 了解如何格式化API呼叫，以透過Adobe Experience Platform Destination SDK提交目的地發佈請求。
+description: 瞭解如何格式化API調用以通過Adobe Experience Platform Destination SDK提交目標發佈請求。
 title: 建立目標發佈請求
 source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
 workflow-type: tm+mt
@@ -13,30 +13,30 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->如果您要提交要供其他Experience Platform客戶使用的已分產品化（公開）目的地，則只需使用此API端點。 如果您要建立私人目的地供自己使用，則不需使用發佈API正式提交目的地。
+>只有在提交要供其他Experience Platform客戶使用的產品化（公共）目標時，才需要使用此API終結點。 如果您正在建立專用目標供自己使用，則無需使用發佈API正式提交目標。
 
 >[!IMPORTANT]
 >
->**API端點**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
+>**API終結點**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-設定並測試您的目的地後，您就可以將其提交至Adobe以進行審核和發佈。 閱讀 [提交以審核在Destination SDK中創作的目標](../guides/submit-destination.md) 在目標提交程式中，您必須執行的所有其他步驟。
+配置和測試目標後，您可以將其提交給Adobe以進行審閱和發佈。 閱讀 [提交以審閱在Destination SDK中創作的目標](../guides/submit-destination.md) 對於作為目標提交流程的一部分必須執行的所有其他步驟。
 
-符合下列情形時，請使用發佈目標API端點提交發佈請求：
+在以下情況下，使用發佈目標API終結點提交發佈請求：
 
-* 作為Destination SDK合作夥伴，您希望讓所有Experience Platform組織都能提供產品化目的地，供所有Experience Platform客戶使用；
-* 你讓 *任何更新* 設定。 只有在您提交經Experience Platform團隊核准的新發佈請求後，設定更新才會反映在目的地中。
+* 作為Destination SDK合作夥伴，您希望使所有Experience Platform組織中的產品化目標都可用於所有Experience Platform客戶；
+* 你 *任何更新* 配置。 配置更新僅在您提交新發佈請求後才反映在目標中，新發佈請求已獲得Experience Platform團隊的批准。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名稱和值均為 **區分大小寫**. 為避免區分大小寫錯誤，請使用參數名稱和值，如說明檔案所示。
+>Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
 
-## 目的地發佈API作業快速入門 {#get-started}
+## 目標發佈API操作入門 {#get-started}
 
-繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
+在繼續之前，請查看 [入門指南](../getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
 
 ## 提交要發佈的目標配置 {#create}
 
-您可以向提交POST請求，以提交要發佈的目標設定 `/authoring/destinations/publish` 端點。
+通過向發佈伺服器發出POST請求，可以提交要發佈的目標配置 `/authoring/destinations/publish` 端點。
 
 **API格式**
 
@@ -46,7 +46,7 @@ POST /authoring/destinations/publish
 
 +++請求
 
-下列要求會提交要發佈的目的地，涵蓋由裝載中提供的參數所設定的組織。 以下裝載包含接受的所有參數 `/authoring/destinations/publish` 端點。
+以下請求將提交一個目標，以便跨由負載中提供的參數配置的組織發佈。 下面的負載包括接受的所有參數 `/authoring/destinations/publish` 端點。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,19 +64,19 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `destinationId` | 字串 | 您要提交以進行發佈的目的地設定的目的地ID。 使用 [檢索目標配置](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API呼叫。 |
-| `destinationAccess` | 字串 | 使用 `ALL` 讓您的目的地出現在所有Experience Platform客戶的目錄中。 |
+| `destinationId` | 字串 | 要提交以發佈的目標配置的目標ID。 使用 [檢索目標配置](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API調用。 |
+| `destinationAccess` | 字串 | 使用 `ALL` 目標在所有Experience Platform客戶的目錄中。 |
 
 {style="table-layout:auto"}
 
 +++回應
 
-成功的回應會傳回HTTP狀態201，並包含目的地發佈請求的詳細資訊。
+成功的響應返回HTTP狀態201，其中包含目標發佈請求的詳細資訊。
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) 中。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道如何提交目的地的發佈請求。 Adobe Experience Platform團隊將檢閱您的發佈請求，並在5個工作天內回覆給您。
+閱讀此文檔後，您現在知道如何提交目標的發佈請求。 Adobe Experience Platform團隊將審閱您的發佈請求，並在5個工作日後回復您。

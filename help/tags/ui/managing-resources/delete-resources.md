@@ -1,6 +1,6 @@
 ---
 title: 刪除資源
-description: 了解如何刪除Adobe Experience Platform中的標籤資源。
+description: 瞭解如何刪除Adobe Experience Platform中的標籤資源。
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-刪除資源是將該資源從Adobe Experience Platform中永久移除。 如果您想從特定標籤程式庫中移除資源，但仍希望該資源可供其他程式庫使用，請參閱上的指南 [從程式庫中移除資源](remove-resources-from-library.md).
+刪除資源是從Adobe Experience Platform永久刪除該資源。 如果要從特定標籤庫中刪除資源，但仍希望該資源可用於其他庫，請參閱上的指南 [從庫中刪除資源](remove-resources-from-library.md)。
 
 您可以刪除資料元素、規則、擴充功能、主機、環境和屬性。刪除之後，就無法復原這些資源。
 
@@ -50,7 +50,7 @@ ht-degree: 79%
 
 所有其他資源 (規則、規則元件和資料元素) 均由擴充功能提供。
 
-規則元件和資料元素視擴充功能而定，但也只會顯示在資料收集使用者介面中。 如果您在解析相依性之前刪除了擴充功能，將無法再檢視這些孤立的資源。這些孤立的資源會顯示在清單檢視中，但當您嘗試開啟詳細資料檢視時，將會出現錯誤。
+規則元件和資料元素的行為取決於擴展，但也只能顯示在「資料收集」用戶介面中。 如果您在解析相依性之前刪除了擴充功能，將無法再檢視這些孤立的資源。這些孤立的資源會顯示在清單檢視中，但當您嘗試開啟詳細資料檢視時，將會出現錯誤。
 
 因此，刪除擴充功能時應格外小心，而且您必須先解析相依性，才能刪除這些擴充功能。
 
@@ -78,4 +78,4 @@ ht-degree: 79%
 
 ## 刪除資源
 
-從適當的清單檢視中，選取您要刪除的資源，然後選取 **[!UICONTROL 刪除]**.
+從相應的清單視圖中，選擇要刪除的資源，然後選擇 **[!UICONTROL 刪除]**。

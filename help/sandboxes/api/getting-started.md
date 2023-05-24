@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；沙箱開發人員指南
+keywords: Experience Platform；首頁；熱門主題；沙盒開發人員指南
 solution: Experience Platform
-title: 沙箱API快速入門
-description: 沙箱API可讓開發人員以程式設計方式管理Adobe Experience Platform中的沙箱。 請遵循本指南以了解如何使用 API 執行關鍵作業。
+title: 沙盒API入門
+description: 沙盒API允許開發人員以寫程式方式管理Adobe Experience Platform的沙盒。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,36 +11,36 @@ ht-degree: 5%
 
 ---
 
-# 沙箱API快速入門
+# 沙盒API入門
 
-Adobe Experience Platform中的沙箱提供孤立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。
+Adobe Experience Platform的沙箱提供獨立的開發環境，使您能夠test功能、運行實驗和進行定制配置，而不會影響您的生產環境。
 
-本開發人員指南提供的步驟可協助您使用沙箱API來管理Experience Platform中的沙箱，並包含執行各種作業的範例API呼叫。
+本開發人員指南提供了一些步驟，幫助您使用沙盒API管理Experience Platform中的沙盒，並包括執行各種操作的示例API調用。
 
 ## 先決條件
 
-若要管理貴組織的沙箱，您必須擁有沙箱管理權限。 沒有存取權限的使用者只能使用 [可用沙箱端點](./available.md) 列出目前使用者的作用中沙箱。 請參閱 [存取控制概觀](../../access-control/home.md) 以取得如何指派沙箱權限以進行Experience Platform的詳細資訊。
+為了管理組織的沙箱，您必須具有「沙箱管理」權限。 沒有訪問權限的用戶只能使用 [可用沙箱端點](./available.md) 列出當前用戶的活動沙箱。 查看 [訪問控制概述](../../access-control/home.md) 的子菜單。
 
-### 讀取範例API呼叫
+### 讀取示例API調用
 
-本指南提供範例API呼叫，以示範如何設定請求格式。 這些功能包括路徑、必要標題和格式正確的請求裝載。 也提供API回應中傳回的範例JSON。 如需範例API呼叫檔案中所使用慣例的相關資訊，請參閱 [如何閱讀API呼叫範例](../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform疑難排解指南中。
+本指南提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform疑難解答指南。
 
-### 收集必要標題的值
+### 收集所需標題的值
 
-本指南要求您完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en) 以便成功呼叫Platform API。 完成驗證教學課程後，所有Experience PlatformAPI呼叫中每個必要標題的值都會顯示，如下所示：
+本指南要求您完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en) 以便成功調用平台API。 完成Experience Platform教程將提供所有驗證API調用中每個必需標頭的值，如下所示：
 
-* 授權：承載 `{ACCESS_TOKEN}`
+* 授權：持 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-除了驗證標題外，所有要求都需要標題，以指定作業將在下列位置進行的沙箱名稱：
+除了驗證標頭之外，所有請求都需要一個標頭，該標頭指定操作將在以下位置進行的沙盒的名稱：
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-所有包含裝載(POST、PUT和PATCH)的請求都需要額外的標題：
+包含負載(POST、PUT和PATCH)的所有請求都需要附加標頭：
 
-* 內容類型：application/json
+* 內容類型：應用程式/json
 
 ## 後續步驟
 
-現在您已收集必要的認證，您可以繼續閱讀開發人員指南的其餘部分。 每個區段都提供其端點的重要資訊，並示範執行CRUD作業的範例API呼叫。 每個呼叫都包含一般API格式、顯示必要標題和格式正確之裝載的範例要求，以及成功呼叫的範例回應。
+現在，您已收集了所需的憑據，現在可以繼續閱讀開發人員指南的其餘部分。 每個部分都提供有關其端點的重要資訊，並演示用於執行CRUD操作的示例API調用。 每個調用都包括一般API格式、顯示所需標頭和正確格式化負載的示例請求，以及成功調用的示例響應。

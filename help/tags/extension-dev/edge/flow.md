@@ -1,6 +1,6 @@
 ---
-title: 邊緣延伸功能流量
-description: 了解Adobe Experience Platform中邊緣擴充功能的元件在執行階段如何彼此互動。
+title: 邊擴展流
+description: 瞭解在運行時，Adobe Experience Platform的邊緣擴展的元件如何相互交互。
 exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 在邊緣擴充功能中，每個條件、動作和資料元素類型都會具備可供使用者修改設定的檢視，以及可依這些使用者定義設定運作的程式庫模組。
 
-如下列高階圖表所示，擴充功能的動作類型檢視會顯示在與Adobe Experience Platform整合之應用程式內的iframe中。 然後，檢視會用來修改設定，並儲存在Platform中。 建置標籤執行階段程式庫時，擴充功能的動作類型程式庫模組以及使用者定義的設定都會包含在部署至邊緣節點的執行階段程式庫中。 執行階段會將Platform的使用者定義設定插入程式庫模組中。
+如下圖所示，擴展的操作類型視圖顯示在與Adobe Experience Platform整合的應用程式內的iframe中。 然後，該視圖用於修改設定，這些設定隨後將保存在平台中。 構建標籤運行時庫時，擴展的操作類型庫模組以及用戶定義的設定都將包括在部署到邊緣節點的運行時庫中。 運行時，平台中的用戶定義的設定將注入到庫模組中。
 
 ![擴充功能流程圖](../images/flow/edge/event-processing-flow.png)
 

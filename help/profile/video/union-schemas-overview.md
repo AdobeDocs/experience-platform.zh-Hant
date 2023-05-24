@@ -1,6 +1,6 @@
 ---
-title: 聯合結構概述
-description: 本影片主要說明如何基本了解Adobe Experience Platform中的聯合結構，並概述如何使用Platform UI探索聯合結構。
+title: 聯合架構概述
+description: 此視頻提供了對Adobe Experience Platform內聯合架構的基本理解，並概述了如何使用平台UI來瀏覽聯合架構。
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -19,10 +19,10 @@ ht-degree: 2%
 
 # 聯集結構概觀
 
-本影片主要說明如何基本了解Adobe Experience Platform中的聯合結構，並概述如何使用Platform使用者介面探索聯合結構。 若要進一步了解聯合結構，請造訪 [聯合結構UI指南](../ui/union-schema.md).
+此視頻提供了對Adobe Experience Platform內聯合架構的基本理解，並概述了如何使用平台用戶介面來探索聯合架構。 要瞭解有關聯合架構的詳細資訊，請訪問 [聯合架構UI指南](../ui/union-schema.md)。
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，且自此視訊錄制以來可能已變更。 如需最新資訊，請參閱 [聯合結構UI指南](../ui/union-schema.md).
+>Experience Platform用戶介面頻繁更新，自此視頻記錄後可能已更改。 有關最新資訊，請參閱 [聯合架構UI指南](../ui/union-schema.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)

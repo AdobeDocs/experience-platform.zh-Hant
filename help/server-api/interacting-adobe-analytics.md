@@ -1,6 +1,6 @@
 ---
 title: 與Adobe Analytics互動
-description: 了解如何使用Edge Network Server API與Adobe Analytics互動。
+description: 瞭解如何使用邊緣網路伺服器API與Adobe Analytics交互。
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 ## 總覽 {#overview}
 
-Adobe Analytics資料收集的運作方式是將XDM資料轉譯為Adobe Analytics可理解的格式。 數個XDM欄位包括 [自動對應](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) 至Analytics變數。
+Adobe Analytics的資料收集工作是將XDM資料轉換為Adobe Analytics能夠理解的格式。 幾個XDM欄位 [自動映射](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) 到分析變數。
 
-您也可以 [手動對應XDM值](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) 舊版Analytics變數。
+您也可以 [手動映射XDM值](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) 舊分析變數。
 
-若要讓Adobe Analytics能夠從伺服器API接收資料，您必須 [設定資料流](../edge/datastreams/overview.md#adobe-analytics-settings) 若要將事件轉送至Adobe Analytics，請在datastream設定頁面中輸入報表套裝ID。
+要使Adobe Analytics能夠從伺服器API接收資料，您需要 [配置資料流](../edge/datastreams/overview.md#adobe-analytics-settings) 要將事件轉發到Adobe Analytics，請在資料流配置頁中輸入報告套件ID。
 
-![Adobe Analytics Datastream設定](assets/analytics-datastream.png)
+![Adobe Analytics資料流配置](assets/analytics-datastream.png)
 
 ## 與Adobe Analytics互動 {#interacting-analytics}
 
@@ -31,9 +31,9 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### 請求 {#request}
 
-以下範例包含 `_experience.analytics` 欄位群組。 也包含JSON型資料層。 雖然這些資料層無法自動對應，但您仍可使用 [資料收集的資料準備](../edge/datastreams/data-prep.md) 將這些值映射到包含上述欄位組的架構。
+下面的示例包括幾個自動映射的值 `_experience.analytics` 欄位組。 它還包括基於JSON的資料層。 雖然這些資料層無法自動映射，但可以使用 [資料收集的資料準備](../edge/datastreams/data-prep.md) 將這些值映射到包含上述欄位組的架構。
 
-使用者對應至這些欄位的所有值，都會自動對應至適當的Analytics值，就像這些值包含在API請求中一樣。
+用戶映射到這些欄位的所有值將自動映射到相應的分析值，就像它們包含在API請求中一樣。
 
 ```shell
 curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \
@@ -121,7 +121,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 }'
 ```
 
-### 回應 {#response}
+### 雷龐塞 {#response}
 
 ```json
 {

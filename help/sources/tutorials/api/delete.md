@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流程服務；刪除帳戶；刪除；API
+keywords: Experience Platform；首頁；熱門主題；流式服務；刪除帳戶；delete;api
 solution: Experience Platform
-title: 使用流量服務API刪除帳戶
+title: 使用流服務API刪除帳戶
 type: Tutorial
-description: 了解如何使用流量服務API刪除帳戶。
+description: 瞭解如何使用流服務API刪除帳戶。
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,32 +12,32 @@ ht-degree: 2%
 
 ---
 
-# 使用流量服務API刪除帳戶
+# 使用流服務API刪除帳戶
 
-您可以刪除包含錯誤或已使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+您可以使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
 
-請參閱下列教學課程，了解如何使用API刪除帳戶的步驟。
+有關如何使用API刪除帳戶的步驟，請參見以下教程。
 
 ## 快速入門
 
-本教學課程要求您具備有效的連線ID。 如果您沒有有效的連線ID，請從 [來源概觀](../../home.md) 並遵循在嘗試本教學課程之前概述的步驟。
+本教程要求您具有有效的連接ID。 如果您沒有有效的連接ID，請從 [源概述](../../home.md) 在嘗試本教程之前，請按照上述步驟操作。
 
-本教學課程也需要您妥善了解下列Adobe Experience Platform元件：
+本教程還要求您對以下Adobe Experience Platform元件有一定的瞭解：
 
-* [來源](../../home.md): [!DNL Experience Platform] 可讓您從各種來源擷取資料，同時使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供可分割單一沙箱的虛擬沙箱 [!DNL Platform] 例項放入個別的虛擬環境，以協助開發及改進數位體驗應用程式。
+* [源](../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
+* [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱 [Platform API快速入門](../../../landing/api-guide.md).
+有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../landing/api-guide.md)。
 
 ## 刪除帳戶
 
 >[!TIP]
 >
->在刪除源帳戶之前，必須先刪除與源帳戶關聯的任何現有資料流。 要刪除現有資料流，請參閱 [刪除源資料流](./delete-dataflows.md).
+>在刪除源帳戶之前，必須先刪除與源帳戶關聯的任何現有資料流。 要刪除現有資料流，請參閱上的教程 [刪除源資料流](./delete-dataflows.md)。
 
-若要刪除帳戶，請向 [!DNL Flow Service] API，同時提供與您要刪除之帳戶對應的基本連線ID。
+要刪除帳戶，請向 [!DNL Flow Service] API，同時提供與要刪除的帳戶對應的基本連接ID。
 
 **API格式**
 
@@ -62,12 +62,12 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容）和空白內文。
+成功的響應返回HTTP狀態204（無內容）和空白正文。
 
-您可以嘗試對連線進行查詢(GET)以確認刪除。
+您可以通過嘗試查找(GET)連接請求來確認刪除。
 
 ## 後續步驟
 
-依照本教學課程，您已成功使用 [!DNL Flow Service] 刪除現有帳戶的API。
+按照本教程，您已成功使用 [!DNL Flow Service] 用於刪除現有帳戶的API。
 
-有關如何使用用戶介面執行這些操作的步驟，請參閱 [刪除UI中的帳戶](../../tutorials/ui/delete-accounts.md).
+有關如何使用用戶介面執行這些操作的步驟，請參閱上的教程 [刪除UI中的帳戶](../../tutorials/ui/delete-accounts.md)。

@@ -1,6 +1,6 @@
 ---
-title: 自行托管程式庫
-description: 了解如何在Adobe Experience Platform中為您的標籤程式庫組建實作自行托管。
+title: 自主托管庫
+description: 瞭解如何在Adobe Experience Platform為標籤庫構建實施自主托管。
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
 source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-Adobe Experience Platform中的標籤可產生一組稱為 [建置](../builds.md). 這組檔案控制應用程式在運行時的行為。
+Adobe Experience Platform中的標籤允許生成一組名為 [構建](../builds.md)。 這組檔案控制應用程式在運行時的行為。
 
 組建需要在某處託管，用戶端裝置才能在需要時於執行階段擷取這些組建。
 
@@ -33,7 +33,7 @@ Adobe 不從事 Web 託管業務。如果您選擇交由 Adobe 管理託管作�
 
 ## 自行託管
 
-若您不希望 Adobe 管理您的託管檔案，您必須自行託管。若要托管您的檔案，您必須從Platform取得完成的組建，並負責透過公司的發行週期將檔案發佈至由公司管理的伺服器。
+若您不希望 Adobe 管理您的託管檔案，您必須自行託管。要托管您的檔案，您需要從平台獲取已完成的內部版本，並負責將檔案通過公司的發佈週期傳輸到公司管理的伺服器。
 
 ### 為何要使用自行託管？
 
@@ -42,7 +42,7 @@ Adobe 不從事 Web 託管業務。如果您選擇交由 Adobe 管理託管作�
 * 有些瀏覽器會根據終端使用者設定的隱私權設定，封鎖 assets.adobedtm.com 網域
 * 自行託管可減少所需的 DNS 查閱數
 * 您擁有設定安全性所需的特定標題
-* 您的快取控制要求與Adobe預設設定不同
+* 快取控制要求與Adobe預設設定不同
 * 您希望更全面控制邊緣節點的位置
 * 您的組織設有安全和法律規定，導致您無法使用由 Adobe 管理的選項
 
@@ -55,12 +55,12 @@ Adobe 不從事 Web 託管業務。如果您選擇交由 Adobe 管理託管作�
 
 #### 下載
 
-組建可以封裝的.zip檔案傳送（可選擇加密）。 然後您可以將套件解壓縮並將內容插入至您的發行週期中，藉此將組建放置在您自己的伺服器上。
+生成可以作為打包的.zip檔案（可選加密）提供。 然後您可以將套件解壓縮並將內容插入至您的發行週期中，藉此將組建放置在您自己的伺服器上。
 
 使用 [Managed by Adobe](self-hosting-libraries.md) 主機，並在您的環境中選取 [Archive](../environments.md) 選項。環境會提供下載連結。每當建立組建時，您都能透過環境的下載連結擷取該組建。
 
 #### 直接傳送
 
-組建也可直接傳送至您建立的SFTP伺服器。 您有責任將這些組建歸檔到您的發行週期中，並推動其上線。
+此外，生成還可以直接傳送到您建立的SFTP伺服器。 您有責任將這些組建歸檔到您的發行週期中，並推動其上線。
 
 若要執行直接傳送，您應建立 [SFTP 主機](sftp-host.md)，並將該主機指派給您的環境。每當您在該環境中建立程式庫，檔案都會傳送至您的 SFTP 伺服器。

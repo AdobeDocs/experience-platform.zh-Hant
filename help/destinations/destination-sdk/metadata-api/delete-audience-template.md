@@ -1,6 +1,6 @@
 ---
-description: 本頁說明透過Adobe Experience Platform Destination SDK刪除現有對象範本所使用的API呼叫。
-title: 刪除對象範本
+description: 本頁說明了用於通過Adobe Experience Platform Destination SDK刪除現有受眾模板的API調用。
+title: 刪除受眾模板
 source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
 workflow-type: tm+mt
 source-wordcount: '287'
@@ -9,29 +9,29 @@ ht-degree: 2%
 ---
 
 
-# 刪除對象範本
+# 刪除受眾模板
 
 >[!IMPORTANT]
 >
->**API端點**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API終結點**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-此頁面是API要求和裝載的範例，您可使用 `/authoring/audience-templates` API端點。
+本頁說明了API請求和負載，您可以使用 `/authoring/audience-templates` API終結點。
 
-如需可透過此端點設定的功能詳細說明，請參閱 [對象中繼資料管理](../functionality/audience-metadata-management.md).
+有關可以通過此終結點配置的功能的詳細說明，請參見 [受眾元資料管理](../functionality/audience-metadata-management.md)。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名稱和值均為 **區分大小寫**. 為避免區分大小寫錯誤，請使用參數名稱和值，如說明檔案所示。
+>Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
 
-## 對象範本API操作快速入門 {#get-started}
+## 受眾模板API操作入門 {#get-started}
 
-繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 若要成功呼叫API，需知的重要資訊，包括如何取得必要的目的地編寫權限和必要的標題。
+在繼續之前，請查看 [入門指南](../getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
 
-## 刪除對象範本 {#delete}
+## 刪除受眾模板 {#delete}
 
-您可以刪除 [現有](create-audience-template.md) 透過建立 `DELETE` 請求 `/authoring/audience-templates` 端點為 `{INSTANCE_ID}`對象範本中。
+可以刪除 [現有](create-audience-template.md) 通過建立 `DELETE` 請求 `/authoring/audience-templates` 端點 `{INSTANCE_ID}`的子菜單。
 
-若要取得現有的對象範本及其對應 `{INSTANCE_ID}`，請參閱關於 [擷取對象範本](retrieve-audience-template.md).
+獲取現有受眾模板及其相應模板 `{INSTANCE_ID}`，請參閱有關 [檢索受眾模板](retrieve-audience-template.md)。
 
 **API格式**
 
@@ -41,7 +41,7 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 此 `ID` 對象範本中。 |
+| `{INSTANCE_ID}` | 的 `ID` 的子菜單。 |
 
 +++請求
 
@@ -57,14 +57,14 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/audience
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，並傳回空的HTTP回應。
+成功的響應返回HTTP狀態200以及空的HTTP響應。
 
 +++
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標題錯誤](../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) 中。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道如何使用 `/authoring/audience-templates` API端點。 閱讀 [如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md) 了解此步驟在設定目的地程式中的適用位置。
+閱讀此文檔後，您現在知道如何使用 `/authoring/audience-templates` API終結點。 閱讀 [如何使用Destination SDK配置目標](../guides/configure-destination-instructions.md) 瞭解此步驟在配置目標過程中的適用範圍。

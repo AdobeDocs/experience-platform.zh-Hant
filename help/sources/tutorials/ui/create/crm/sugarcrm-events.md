@@ -1,98 +1,99 @@
 ---
-title: 在UI中建立SugarCRM事件來源連線
-description: 了解如何使用Adobe Experience Platform UI建立SugarCRM事件來源連線。
-source-git-commit: 17d8a6517686ee2459955f766d75980b41851320
+title: 在UI中建立SugarCRM事件源連接
+description: 瞭解如何使用Adobe Experience PlatformUI建立SugarCRM事件源連接。
+exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 1%
 
 ---
 
-# （測試版）建立 [!DNL SugarCRM Events] UI中的源連接
+# (Beta)建立 [!DNL SugarCRM Events] UI中的源連接
 
 >[!NOTE]
 >
->此 [!DNL SugarCRM Events] 來源為測試版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得使用測試版標籤來源的詳細資訊。
+>的 [!DNL SugarCRM Events] 源為beta。 查看 [源概述](../../../../home.md#terms-and-conditions) 的子菜單。
 
-本教學課程提供建立 [!DNL SugarCRM Events] 源連接(使用Adobe Experience Platform用戶介面)。
+本教程提供建立 [!DNL SugarCRM Events] 源連接，使用Adobe Experience Platform用戶介面。
 
 ## 快速入門
 
-本教學課程需要妥善了解下列Experience Platform元件：
+本教程需要對以下Experience Platform組成部分進行有效理解：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
-   * [結構構成基本概念](../../../../../xdm/schema/composition.md):了解XDM結構描述的基本建置組塊，包括結構描述的主要原則和最佳實務。
-   * [結構編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md):了解如何使用結構編輯器UI建立自訂結構。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):根據來自多個來源的匯總資料，提供統一的即時消費者設定檔。
+   * [架構組合的基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
+   * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自定義架構。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
 
-如果您已有有效 [!DNL SugarCRM] 帳戶，您可以略過本檔案的其餘部分，並繼續進行有關 [配置資料流](../../dataflow/crm.md).
+如果您已經有 [!DNL SugarCRM] 帳戶，您可以跳過本文檔的其餘部分，繼續學習本教程。 [配置資料流](../../dataflow/crm.md)。
 
 ### 收集所需憑據
 
-為了連接 [!DNL SugarCRM Events] 若要使用Platform，您必須提供下列連線屬性的值：
+為了連接 [!DNL SugarCRM Events] 到平台，必須提供以下連接屬性的值：
 
 | 憑據 | 說明 | 範例 |
 | --- | --- | --- |
-| `Host` | 源連接的SugarCRM API端點。 | `developer.salesfusion.com` |
-| `Username` | 您的SugarCRM開發人員帳戶使用者名稱。 | `abc.def@example.com@sugarmarketdemo000.com` |
+| `Host` | 源連接到的SugarCRM API終結點。 | `developer.salesfusion.com` |
+| `Username` | 您的SugarCRM開發人員帳戶用戶名。 | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | 您的SugarCRM開發人員帳戶密碼。 | `123456789` |
 
-### 建立平台結構 [!DNL SugarCRM]
+### 建立平台架構 [!DNL SugarCRM]
 
-建立之前 [!DNL SugarCRM] 源連接時，您還必須確保首先建立要用於源的平台架構。 請參閱 [建立平台結構](../../../../../xdm/schema/composition.md) 以取得如何建立結構的完整步驟。
+在建立 [!DNL SugarCRM] 源連接，還必須確保首先建立用於源的平台架構。 請參閱上的教程 [建立平台架構](../../../../../xdm/schema/composition.md) 有關如何建立架構的全面步驟。
 
-![Platform UI螢幕擷取畫面，顯示SugarCRM事件的範例結構](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
+![平台UI螢幕快照，顯示SugarCRM事件示例架構](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 
 >[!WARNING]
 >
->對應結構時，請確定您也對應必填項目 `event_id` 和 `timestamp` Platform所需的欄位。
+>映射架構時，請確保還映射強制 `event_id` 和 `timestamp` 平台所需的欄位。
 
-## 連接您的 [!DNL SugarCRM Events] 帳戶
+## 連接 [!DNL SugarCRM Events] 帳戶
 
-在平台UI中，選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可建立帳戶的各種來源。
+在平台UI中，選擇 **[!UICONTROL 源]** 從左導航欄訪問 [!UICONTROL 源] 工作區。 的 [!UICONTROL 目錄] 螢幕顯示可建立帳戶的各種源。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項找到您要使用的特定來源。
+可以從螢幕左側的目錄中選擇相應的類別。 或者，您可以使用搜索選項找到要使用的特定源。
 
-在 *CRM* 類別，選擇 **[!UICONTROL SugarCRM事件]**，然後選取 **[!UICONTROL 新增資料]**.
+在 *CRM* 類別，選擇 **[!UICONTROL SugarCRM事件]**，然後選擇 **[!UICONTROL 添加資料]**。
 
-![具有SugarCRM事件卡的目錄的平台UI螢幕擷取畫面](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
+![SugarCRM Events卡目錄的平台UI螢幕快照](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
-此 **[!UICONTROL 連接SugarCRM事件帳戶]** 頁。 在此頁面上，您可以使用新憑證或現有憑證。
+的 **[!UICONTROL 連接SugarCRM事件帳戶]** 的子菜單。 在此頁上，您可以使用新憑據或現有憑據。
 
 ### 現有帳戶
 
-若要使用現有帳戶，請選取 [!DNL SugarCRM Events] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
+要使用現有帳戶，請選擇 [!DNL SugarCRM Events] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
 
-![Platform UI螢幕截圖顯示現有帳戶的Connect SugarCRM Events帳戶](../../../../images/tutorials/create/sugarcrm-events/existing.png)
+![將SugarCRM事件帳戶與現有帳戶連接的平台UI螢幕快照](../../../../images/tutorials/create/sugarcrm-events/existing.png)
 
 ### 新帳戶
 
-如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、選用說明和您的憑證。 完成後，請選取 **[!UICONTROL 連接到源]** 然後讓新連接建立一段時間。
+如果要建立新帳戶，請選擇 **[!UICONTROL 新帳戶]**，然後提供名稱、可選說明和您的憑據。 完成後，選擇 **[!UICONTROL 連接到源]** 然後再給新連接建立一段時間。
 
-![使用新帳戶連接SugarCRM事件帳戶的平台UI螢幕截圖](../../../../images/tutorials/create/sugarcrm-events/new.png)
+![將SugarCRM事件帳戶與新帳戶連接的平台UI螢幕快照](../../../../images/tutorials/create/sugarcrm-events/new.png)
 
 ## 後續步驟
 
-依照本教學課程，您已建立與 [!DNL SugarCRM Events] 帳戶。 您現在可以繼續下一個教學課程，以及 [配置資料流以將資料導入Platform](../../dataflow/crm.md).
+按照本教程，您已建立到 [!DNL SugarCRM Events] 帳戶。 現在，您可以繼續下一個教程， [配置資料流以將資料引入平台](../../dataflow/crm.md)。
 
 ## 其他資源
 
-以下各節提供您在使用 [!DNL SugarCRM] 來源。
+以下各節提供了在使用 [!DNL SugarCRM] 源。
 
 ### 護欄 {#guardrails}
 
-此 [!DNL SugarCRM] API限制率為每分鐘90次呼叫，或每天2000次呼叫（以先發生者為準）。 但是，在連接規格中添加參數將延遲請求時間，從而永遠不會達到速率限制，這樣就可以繞過此限制。
+的 [!DNL SugarCRM] API限制速率為每分鐘90次或每天2000次（以最先發生的情況為準）。 但是，通過向連接規範中添加一個參數來繞過此限制，該參數將延遲請求時間，以便永遠不會達到速率限制。
 
 ### 驗證 {#validation}
 
-驗證您已正確設定來源和 [!DNL SugarCRM Events] 正在擷取資料，請遵循下列步驟：
+驗證是否正確設定了源和 [!DNL SugarCRM Events] 正在接收資料，請執行以下步驟：
 
-* 在平台UI中，選取 **[!UICONTROL 查看資料流]** 旁邊 [!DNL SugarCRM Events] 來源目錄上的卡片功能表。 下一步，選擇 **[!UICONTROL 預覽資料集]** 來驗證已擷取的資料。
+* 在平台UI中，選擇 **[!UICONTROL 查看資料流]** 欄 [!DNL SugarCRM Events] 源目錄上的卡菜單。 下一步，選擇 **[!UICONTROL 預覽資料集]** 驗證所攝入的資料。
 
-* 根據您使用的物件類型，您可以根據 [!DNL SugarMarket] 事件頁面如下：
+* 根據您所使用的對象類型，您可以根據在 [!DNL SugarMarket] 事件頁面：
 
 ![顯示帳戶清單的SugarMarket帳戶頁面螢幕截圖](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
 
 >[!NOTE]
 >
->此 [!DNL SugarMarket] 頁面不包含已刪除的物件計數。 不過，透過此來源擷取的資料也會包含已刪除的計數，這些計數會以已刪除的標幟標示。
+>的 [!DNL SugarMarket] 頁面不包括已刪除的對象計數。 但是，通過此源檢索到的資料也將包括已刪除的計數，這些資料將用已刪除的標籤標籤。

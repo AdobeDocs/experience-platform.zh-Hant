@@ -1,6 +1,6 @@
 ---
-title: 常見Analytics擴充功能概觀
-description: 了解Adobe Experience Platform中的常見Analytics標籤擴充功能。
+title: 通用分析擴展概述
+description: 瞭解Adobe Experience Platform的Common Analytics標籤擴展。
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 77%
 
 ---
 
-# 常見Analytics外掛程式擴充功能概觀
+# 通用分析插件擴展概述
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 此參考資料會說明設定常見 Analytics 外掛程式擴充功能的相關資訊，以及使用此擴充功能擴大 [!DNL Adobe Analytics] 擴充功能時可用的選項。
 
@@ -56,9 +56,9 @@ ht-degree: 77%
 
 這些動作會初始化您要個別使用的特定外掛程式。若要初始化您要在屬性中使用的所有外掛程式，只需將對應動作新增至規則並儲存規則即可。雖然以這種方式設定擴充功能需花費更多心力，但能提高程式碼運作效率。因此，Adobe 建議採取此方法。
 
-## 常見Analytics外掛程式擴充功能資料元素
+## 通用分析插件擴展資料元
 
-常見Analytics外掛程式擴充功能中提供下列資料元素，這些資料元素會利用標籤功能在Analytics中設定和設定其對應的外掛程式：
+以下資料元素在「通用分析插件」擴展中可用，該擴展利用標籤功能在分析中設定和配置其相應插件：
 
 * `getGeoCoordinates`
 * `getNewRepeat`
@@ -71,4 +71,4 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->如需上述外掛程式的詳細資訊，請參閱 [Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+>有關上述插件的詳細資訊，請參閱 [分析文檔](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html)。

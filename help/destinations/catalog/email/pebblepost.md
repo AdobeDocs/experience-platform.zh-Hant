@@ -1,7 +1,7 @@
 ---
-keywords: PebblePost;Pebblepost;PebblePost程式直接郵件；Pebblepost程式直接郵件
+keywords: PebblePost;pebblepost;PebblePost程式直接郵件；pebblepost程式直接郵件
 title: PebblePost擴展
-description: PebblePost擴充功能是Adobe Experience Platform的電子郵件目的地。 如需擴充功能的詳細資訊，請參閱Exchange上的擴充功能頁面。
+description: PebblePost分機是Adobe Experience Platform的一個電子郵件目的地。 有關擴展功能的詳細資訊，請參閱AdobeExchange上的擴展頁。
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
@@ -14,48 +14,48 @@ ht-degree: 3%
 
 ## 總覽 {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] 解決方案可協助數位行銷人員將線上興趣和意圖連結至可轉換的離線、有形媒體。 行銷人員現在可以運用在Adobe中建立的自訂資料區段，針對具有相關、更長久、內部媒體曝光的消費者。 根據回應路徑活動和站上轉換即時分析效能。
+[!DNL PebblePost's Programmatic Direct Mail®] 解決方案幫助數字營銷人員將線上興趣和意圖與可轉換的離線有形媒體聯繫起來。 營銷人員可以利用他們在Adobe中建立的定製資料段，現在瞄準具有相關的、更持久的家庭媒體印象的消費者。 根據響應路徑活動和現場轉換即時分析效能。
 
-[!DNL PebblePost] 是Adobe Experience Platform中的電子郵件擴充功能。 如需PebblePost的詳細資訊，請閱讀 [整合部落格貼文](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
+[!DNL PebblePost] 是Adobe Experience Platform的電子郵件分機。 有關PebblePost的更多資訊，請閱讀 [整合部落格](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq)。
 
-此目的地是標籤擴充功能。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱 [標籤擴充功能概觀](../launch-extensions/overview.md).
+此目標是標籤擴展。 有關標籤擴展在平台中如何工作的詳細資訊，請參見 [標籤擴展概述](../launch-extensions/overview.md)。
 
 ![PebblePost擴展](../../assets/catalog/email/pebblepost/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
-此擴充功能適用於 [!DNL Destinations] 目錄供已購買Platform的所有客戶使用。
+此擴展在 [!DNL Destinations] 為購買平台的所有客戶編錄。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員以取得標籤的存取權，並要求他們授予您 **[!UICONTROL manage_properties]** 權限，讓您可以安裝擴充功能。
+要使用此副檔名，您需要訪問Adobe Experience Platform中的標籤。 標籤作為附帶的增值功能提供給Adobe Experience Cloud客戶。 請與組織管理員聯繫以獲得對標籤的訪問權限，並請他們授予您 **[!UICONTROL 管理屬性]** 以便您可以安裝擴展。
 
-## 安裝擴充功能 {#install-extension}
+## 安裝擴展 {#install-extension}
 
-若要安裝 [!DNL PebblePost] 擴充功能：
+安裝 [!DNL PebblePost] 擴展：
 
-在 [平台介面](https://platform.adobe.com/)，前往 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**.
+在 [平台介面](https://platform.adobe.com/)，轉到 **[!UICONTROL 目標]** > **[!UICONTROL 目錄]**。
 
-從目錄中選取擴充功能，或使用搜尋列。
+從目錄中選擇副檔名或使用搜索欄。
 
-按一下目的地以反白標示，然後選取 **[!UICONTROL 設定]** 在右側邊欄。 若 **[!UICONTROL 設定]** 控制項呈灰色，則您缺少 **[!UICONTROL manage_properties]** 權限。 請參閱 [必要條件](#prerequisites).
+按一下目標以突出顯示它，然後選擇 **[!UICONTROL 配置]** 右欄。 如果 **[!UICONTROL 配置]** 控制項呈灰色顯示，您缺少 **[!UICONTROL 管理屬性]** 權限。 請參閱 [先決條件](#prerequisites)。
 
-選取您要安裝擴充功能的屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。了解中的屬性 [「屬性」頁部分](../../../tags/ui/administration/companies-and-properties.md#properties-page) 的。
+選擇要在其中安裝副檔名的屬性。 您還可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解中的屬性 [「屬性」頁部分](../../../tags/ui/administration/companies-and-properties.md#properties-page) 中。
 
-工作流程會逐步引導您完成安裝。
+工作流將指導您完成安裝的步驟。
 
-您也可以直接在 [資料收集UI](https://experience.adobe.com/#/data-collection/). 如需詳細資訊，請參閱 [新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) 在標籤檔案中。
+您還可以直接在 [資料收集UI](https://experience.adobe.com/#/data-collection/)。 有關詳細資訊，請參閱 [添加新擴展](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) 的下界。
 
-## 如何使用擴充功能 {#how-to-use}
+## 如何使用擴展 {#how-to-use}
 
-安裝擴充功能後，您就可以開始設定規則。
+安裝擴展後，可以開始設定規則。
 
-您可以為已安裝的擴充功能設定規則，以僅在特定情況下將事件資料傳送至擴充功能目的地。 如需為擴充功能設定規則的詳細資訊，請參閱 [標籤檔案](../../../tags/ui/managing-resources/rules.md).
+您可以為已安裝的擴展設定規則，以便僅在某些情況下將事件資料發送到擴展目標。 有關設定擴展規則的詳細資訊，請參閱 [標籤文檔](../../../tags/ui/managing-resources/rules.md)。
 
-## 設定、升級和刪除擴充功能 {#configure-upgrade-delete}
+## 配置、升級和刪除擴展 {#configure-upgrade-delete}
 
-您可以在資料收集UI中設定、升級和刪除擴充功能。
+可以在資料收集UI中配置、升級和刪除擴展。
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，平台UI仍會顯示 **[!UICONTROL 安裝]** ，以取得擴充功能。 啟動安裝工作流程，如 [安裝擴充功能](#install-extension) 設定或刪除擴充功能。
+>如果某個屬性上已安裝擴展，則仍會顯示平台UI **[!UICONTROL 安裝]** 的。 啟動安裝工作流，如中所述 [安裝擴展](#install-extension) 配置或刪除擴展。
 
-若要升級您的擴充功能，請參閱 [擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) 在標籤檔案中。
+要升級擴展，請參閱 [擴展升級過程](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) 的下界。

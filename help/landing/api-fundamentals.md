@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: Experience PlatformAPI基礎知識
-description: 本檔案簡要概述與Experience PlatformAPI相關的一些基礎技術和語法。
+title: Experience PlatformAPI基礎
+description: 本文檔簡要概述了與Experience PlatformAPI相關的一些底層技術和語法。
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 1%
 
 ---
 
-# Experience PlatformAPI基礎知識
+# Experience PlatformAPI基礎
 
-Adobe Experience Platform API採用數種須了解的基礎技術和語法，以有效管理JSON型 [!DNL Platform] 資源。 本檔案提供這些技術的簡短概述，以及外部檔案的連結以取得詳細資訊。
+Adobe Experience PlatformAPI採用了一些基礎技術和語法，對於有效管理基於JSON的API來說，這些技術和語法非常重要 [!DNL Platform] 資源。 本文檔簡要概述了這些技術，並提供了指向外部文檔的連結以瞭解更多資訊。
 
-## JSON指標 {#json-pointer}
+## JSON指針 {#json-pointer}
 
-JSON指標是標準化的字串語法([RFC 6901](https://tools.ietf.org/html/rfc6901))，以識別JSON檔案中的特定值。 JSON指標是以 `/` 字元，可指定物件索引或陣列索引，代號可以是字串或數字。 JSON指標字串用於的許多PATCH操作 [!DNL Platform] API，如本檔案稍後所述。 如需JSON指標的詳細資訊，請參閱 [JSON指標概觀檔案](https://rapidjson.org/md_doc_pointer.html).
+JSON指針是標準字串語法([RFC 6901](https://tools.ietf.org/html/rfc6901))，用於標識JSON文檔中的特定值。 JSON指針是由 `/` 字元，這些字元指定對象鍵或陣列索引，標籤可以是字串或數字。 JSON指針字串用於許多PATCH操作 [!DNL Platform] API，如本文檔後面所述。 有關JSON指針的詳細資訊，請參閱 [JSON指針概述文檔](https://rapidjson.org/md_doc_pointer.html)。
 
-### 範例JSON結構描述物件
+### 示例JSON架構對象
 
-下列JSON代表簡化的XDM結構，其欄位可使用JSON指標字串參照。 請注意，使用自訂結構欄位群組新增的所有欄位(例如 `loyaltyLevel`)的命名空間位於 `_{TENANT_ID}` 物件，而使用核心欄位群組新增的欄位(例如 `fullName`)則否。
+以下JSON表示一個簡化的XDM架構，其欄位可以使用JSON指針字串引用。 請注意，已使用自定義架構欄位組添加的所有欄位(如 `loyaltyLevel`)在 `_{TENANT_ID}` 對象，而已使用核心欄位組添加的欄位(如 `fullName`)不是。
 
 ```json
 {
@@ -80,25 +80,25 @@ JSON指標是標準化的字串語法([RFC 6901](https://tools.ietf.org/html/rfc
 }
 ```
 
-### 基於結構描述物件的JSON指標範例
+### 基於架構對象的JSON指針示例
 
-| JSON指標 | 解析至 |
+| JSON指針 | 解析為 |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (傳回對 `fullName` 欄位，由核心欄位群組提供。) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (傳回對 `loyaltyLevel` 欄位，由自訂欄位群組提供。) |
+| `"/properties/person/properties/name/properties/fullName"` | (返回對 `fullName` 欄位，由核心欄位組提供)。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (返回對 `loyaltyLevel` 欄位，由自定義欄位組提供)。 |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->當處理 `xdm:sourceProperty` 和 `xdm:destinationProperty` 屬性 [!DNL Experience Data Model] (XDM)描述元，任何 `properties` 鍵必須 **已排除** 從JSON指標字串。 請參閱 [!DNL Schema Registry] 上的API開發人員指南子指南 [描述符](../xdm/api/descriptors.md) 以取得更多資訊。
+>處理 `xdm:sourceProperty` 和 `xdm:destinationProperty` 屬性 [!DNL Experience Data Model] (XDM)描述符，任何 `properties` 鍵 **排除** 從JSON指針字串中。 查看 [!DNL Schema Registry] API開發人員指南子指南 [描述符](../xdm/api/descriptors.md) 的子菜單。
 
 ## JSON修補程式 {#json-patch}
 
-有許多PATCH操作 [!DNL Platform] 接受JSON修補程式物件作為要求裝載的API。 JSON修補程式是標準化格式([RFC 6902](https://tools.ietf.org/html/rfc6902))，以說明JSON檔案的變更。 它可讓您定義JSON的部分更新，而不需在要求內文中傳送整個檔案。
+有許多PATCH操作 [!DNL Platform] 接受JSON修補程式對象的請求負載的API。 JSON修補程式是標準化格式([RFC 6902](https://tools.ietf.org/html/rfc6902))，用於描述對JSON文檔的更改。 它允許您定義對JSON的部分更新，而無需在請求正文中發送整個文檔。
 
-### 範例JSON修補程式物件
+### 示例JSON修補程式對象
 
 ```json
 {
@@ -107,21 +107,21 @@ JSON指標是標準化的字串語法([RFC 6901](https://tools.ietf.org/html/rfc
 }
 ```
 
-* `op`:修補程式操作的類型。 雖然JSON修補程式支援數種不同的作業類型，但並非所有PATCH作業均位於 [!DNL Platform] API與每種作業類型相容。 可用的操作類型包括：
+* `op`:修補程式操作的類型。 雖然JSON修補程式支援多種不同的操作類型，但並非所有PATCH操作 [!DNL Platform] API與每種操作類型相容。 可用的操作類型有：
    * `add`
    * `remove`
    * `replace`
    * `copy`
    * `move`
    * `test`
-* `path`:要更新的JSON結構部分，請使用 [JSON指標](#json-pointer) 標籤法。
+* `path`:要更新的JSON結構的部分，使用 [JSON指針](#json-pointer) 符號。
 
-視 `op`，則JSON Patch物件可能需要其他屬性。 如需不同JSON修補程式作業及其必要語法的詳細資訊，請參閱 [JSON修補程式檔案](https://datatracker.ietf.org/doc/html/rfc6902).
+取決於中指示的操作類型 `op`,JSON修補程式對象可能需要其他屬性。 有關不同JSON修補程式操作及其所需語法的詳細資訊，請參閱 [JSON修補程式文檔](https://datatracker.ietf.org/doc/html/rfc6902)。
 
-## JSON結構 {#json-schema}
+## JSON架構 {#json-schema}
 
-JSON結構描述是用來說明和驗證JSON資料結構的格式。 [Experience Data Model(XDM)](../xdm/home.md) 運用JSON結構功能，對擷取的客戶體驗資料的結構和格式強制執行限制。 如需JSON結構的詳細資訊，請參閱 [官方檔案](https://json-schema.org/).
+JSON架構是用於描述和驗證JSON資料結構的格式。 [體驗資料模型(XDM)](../xdm/home.md) 利用JSON架構功能對所接收客戶體驗資料的結構和格式強制實施約束。 有關JSON架構的詳細資訊，請參閱 [正式檔案](https://json-schema.org/)。
 
 ## 後續步驟
 
-本檔案介紹管理JSON型資源(適用於 [!DNL Experience Platform]. 請參閱 [快速入門手冊](api-guide.md) 如需使用Platform API的詳細資訊，包括最佳實務。 如需常見問題的解答，請參閱 [平台疑難排解指南](troubleshooting.md).
+本文檔介紹了管理基於JSON的資源時涉及的一些技術和語法 [!DNL Experience Platform]。 請參閱 [入門指南](api-guide.md) 瞭解有關使用平台API（包括最佳實踐）的更多資訊。 有關常見問題的回答，請參閱 [平台故障排除指南](troubleshooting.md)。

@@ -1,6 +1,6 @@
 ---
-title: Turbine自由變數
-description: 了解Turbine物件，此自由變數可提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式。
+title: 渦輪自由變數
+description: 瞭解渦輪對象，該對象是一個自由變數，提供特定於Adobe Experience Platform標籤運行時的資訊和實用程式。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
-`turbine` 物件是您擴充功能的程式庫模組範圍內的「自由變數」。它提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式，且程式庫模組隨時都可使用，不需使用 `require()`.
+`turbine` 物件是您擴充功能的程式庫模組範圍內的「自由變數」。它提供特定於Adobe Experience Platform標籤運行時的資訊和實用程式，並且始終可供庫模組使用，而無需使用 `require()`。
 
 ## `buildInfo`
 
@@ -23,7 +23,7 @@ ht-degree: 49%
 console.log(turbine.buildInfo.turbineBuildDate);
 ```
 
-`turbine.buildInfo` 是物件，其中包含目前標籤執行階段程式庫的相關建置資訊。
+`turbine.buildInfo` 是包含有關當前標籤運行時庫的生成資訊的對象。
 
 ```js
 {
@@ -47,7 +47,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 console.log(turbine.environment.stage);
 ```
 
-`turbine.environment` 是一個物件，其中包含有關程式庫所部署環境的資訊。
+`turbine.environment` 是包含有關庫所部署的環境的資訊的對象。
 
 ```js
 {
@@ -58,16 +58,16 @@ console.log(turbine.environment.stage);
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 環境ID。 |
-| `stage` | 建置此程式庫的環境。可能的值包括 `development`, `staging`，和 `production`. |
+| `id` | 環境的ID。 |
+| `stage` | 建置此程式庫的環境。可能的值為 `development`。 `staging`, `production`。 |
 
 {style="table-layout:auto"}
 
 ## `debugEnabled`
 
-指示標籤偵錯目前是否已啟用的布林值。
+一個布爾值，指示當前是否啟用標籤調試。
 
-如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用 `turbine.logger` 以確保訊息只會在啟用標籤偵錯時列印至主控台。
+如果您只是要記錄訊息，則不太可能需要使用此功能。而是始終使用 `turbine.logger` 確保消息僅在啟用標籤調試時打印到控制台。
 
 ## `getDataElementValue`
 
@@ -85,7 +85,7 @@ var extensionSettings = turbine.getExtensionSettings();
 
 傳回上次從[擴充功能組態](./configuration.md)檢視儲存的設定物件。
 
-請注意，傳回的設定物件中包含的值可能來自資料元素。因此，如果資料元素的值已變更，則在不同時間呼叫 `getExtensionSettings()` 可能會產生不同的結果。若要取得最新的值，請盡可能等候再呼叫 `getExtensionSettings()`.
+請注意，傳回的設定物件中包含的值可能來自資料元素。因此，如果資料元素的值已變更，則在不同時間呼叫 `getExtensionSettings()` 可能會產生不同的結果。要獲取最新值，請在呼叫前盡可能等待 `getExtensionSettings()`。
 
 ## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
@@ -96,7 +96,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 })
 ```
 
-此 [hostedLibFiles](./manifest.md) 屬性可在擴充功能資訊清單中定義，以便與標籤執行階段程式庫一起托管各種檔案。 此模組會傳回指定的程式庫檔案託管所在的 URL。
+的 [托管的LibFiles](./manifest.md) 可以在擴展清單中定義屬性，以便隨標籤運行時庫一起托管各種檔案。 此模組會傳回指定的程式庫檔案託管所在的 URL。
 
 ## `getSharedModule` {#shared}
 
@@ -104,7 +104,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 ```
 
-擷取已從其他擴充功能共用的模組。 若未找到相符的模組，將會傳回 `undefined`。如需關於共用模組的詳細資訊，請參閱[實作共用模組](./web/shared.md)。
+檢索已從另一擴展共用的模組。 若未找到相符的模組，將會傳回 `undefined`。如需關於共用模組的詳細資訊，請參閱[實作共用模組](./web/shared.md)。
 
 ## `logger`
 
@@ -112,20 +112,20 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-記錄公用程式可用來將訊息記錄到主控台。 只有在使用者開啟除錯功能時，訊息才會顯示在主控台中。開啟偵錯的建議方式是使用 [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). 或者，用戶可以運行以下命令 `_satellite.setDebug(true)` 在瀏覽器開發人員主控台內。 記錄器具有下列方法：
+日誌記錄實用程式用於將消息記錄到控制台。 只有在使用者開啟除錯功能時，訊息才會顯示在主控台中。啟用調試的建議方法是使用 [Adobe Experience Cloud調試器](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda)。 作為替代，用戶可以運行以下命令 `_satellite.setDebug(true)` 瀏覽器開發人員控制台。 記錄器具有下列方法：
 
 * `logger.log(message: string)`：將訊息記錄到主控台。
 * `logger.info(message: string)`：將資訊性訊息記錄到主控台。
 * `logger.warn(message: string)`：將警告訊息記錄到主控台。
 * `logger.error(message: string)`：將錯誤訊息記錄到主控台。
 * `logger.debug(message: string)`：將除錯訊息記錄到主控台。(只有在您的瀏覽器主控台內啟用 `verbose` 記錄時才可見。)
-* `logger.deprecation(message: string)`:無論使用者是否啟用標籤偵錯，都會將警告訊息記錄到主控台。
+* `logger.deprecation(message: string)`:無論用戶是否啟用標籤調試，都會將警告消息記錄到控制台。
 
 ## `onDebugChanged`
 
-將回呼函式傳遞至 `turbine.onDebugChanged`，只要切換除錯功能，標籤就會呼叫您的回呼。 標籤會將布林值傳遞至回呼函式，若已啟用除錯，則為true；若停用除錯，則為false。
+通過將回調函式傳遞到 `turbine.onDebugChanged`，只要調試被切換，標籤將調用回調。 標籤將向回調函式傳遞一個布爾值，如果啟用調試，該布爾值將為true；如果禁用調試，則為false。
 
-如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用 `turbine.logger` 和標籤可確保訊息只會在啟用標籤偵錯時列印至主控台。
+如果您只是要記錄訊息，則不太可能需要使用此功能。而是始終使用 `turbine.logger` 並且標籤將確保只在啟用標籤調試時將消息打印到控制台。
 
 ## `propertySettings` {#property-settings}
 
@@ -133,7 +133,7 @@ turbine.logger.error('Error!');
 console.log(turbine.propertySettings.domains);
 ```
 
-一個物件，其中包含使用者為目前標籤執行階段程式庫的屬性所定義的下列設定：
+包含以下設定的對象，用戶為當前標籤運行時庫的屬性定義這些設定：
 
 * `propertySettings.domains: Array<String>`
 

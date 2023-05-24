@@ -2,9 +2,9 @@
 title: Experience Platform中資料收集的權限管理
 description: 關於如何管理權限和控制對Adobe Experience Platform資料收集功能的訪問的高級概述。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
+source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1303'
 ht-degree: 5%
 
 ---
@@ -41,6 +41,11 @@ Adobe Experience Platform權限包括對資料流、標識、架構和沙箱的�
 
 {style="table-layout:auto"}
 
+<!-- (Feature not yet available?)
+| Dashboards | Manage Custom Dashboards | |
+| Dashboards | View Custom Dashboards | |
+-->
+
 ### Adobe Experience Platform資料收集權限
 
 Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發功能（包括屬性、擴展和環境）的訪問。 有關如何配置Adobe Experience Platform資料收集權限的步驟，請參見 [下面](#manage)。
@@ -49,7 +54,6 @@ Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發�
 | --- | --- | --- |
 | 平台 | Web | 授予訪問 [Web屬性](../tags/ui/administration/companies-and-properties.md) 與其他產權合併。 |
 | 平台 | 行動 | 授予訪問 [移動屬性](../tags/ui/administration/companies-and-properties.md) 與其他產權合併。 |
-| 平台 | Edge | 授予訪問 [事件轉發邊緣屬性](../tags/ui/event-forwarding/getting-started.md) 與其他產權合併。 |
 | 屬性 | (不適用) | 根據在您的組織下建立的屬性，您可以通過Admin Console中的此權限類別控制對每個屬性的訪問。<br><br>用戶分配的屬性權限僅適用於通過此權限類別授予其訪問權限的屬性。 |
 | 屬性權利 | 核准 | 授予將庫構建作為 [發佈流](../tags/ui/publishing/publishing-flow.md)。 |
 | 屬性權利 | 開發 | 授予開發作為元件一部分的圖書館構建的能力 [發佈流](../tags/ui/publishing/publishing-flow.md)。 |
@@ -68,16 +72,16 @@ Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發�
 
 ## 管理權限 {#manage}
 
-通過以下兩種產品指定管理資料收集的權限： **Adobe Experience Platform** 和 **Adobe Experience Platform資料收集**。
+如上節所述，資料收集權限通過Admin Console中的兩種產品指定進行管理： **Adobe Experience Platform** 和 **Adobe Experience Platform資料收集**。
 
-有關如何管理Admin Console中每個產品下的相關權限的步驟，請參閱以下子部分：
+要管理這些權限，請登錄到 [Admin Console](https://adminconsole.adobe.com/) 選擇 **[!UICONTROL 產品]** 的上界。 在此處，選擇要配置權限的產品卡。 有關如何管理Admin Console中每個產品下的相關權限的步驟，請參閱以下子部分：
 
 * [Adobe Experience Platform權限](#manage-platform)
 * [Adobe Experience Platform資料收集權限](#manage-collection)
 
 ### 管理Adobe Experience Platform下的權限 {#manage-platform}
 
-從 **[!UICONTROL 權限]** 的子菜單。
+從 **[!UICONTROL 產品]** 在Admin Console中查看，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。 選擇要編輯其權限的產品配置檔案，然後導航到 **[!UICONTROL 權限]** 頁籤。
 
 要訪問資料收集功能，必須在 **[!UICONTROL 沙箱]**。 **[!UICONTROL 資料建模]**。 **[!UICONTROL Identity Management]**, **[!UICONTROL 資料收集]** 的下界。
 
@@ -91,7 +95,7 @@ Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發�
 
 ### 管理Adobe Experience Platform資料收集下的權限 {#manage-collection}
 
-要管理這些權限，請登錄到Admin Console並選擇 **[!UICONTROL 產品]** 從頂部導航中，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。
+從 **[!UICONTROL 產品]** 在Admin Console中查看，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。
 
 ![顯示Admin Console中資料收集產品卡的影像](./images/permissions/data-collection-card.png)
 

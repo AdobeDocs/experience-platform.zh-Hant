@@ -1,69 +1,70 @@
 ---
-title: 查詢記錄檔
-description: 每次執行查詢時都會自動產生查詢記錄，並可透過UI使用，以協助進行疑難排解。 本檔案概述如何使用和導覽UI的「查詢服務記錄檔」區段。
-source-git-commit: 95d3604a9589a4d0db7e426dd000ddec9cd4f2ce
+title: 查詢日誌
+description: 每次執行查詢時都會自動生成查詢日誌，並可通過UI獲得查詢日誌，以幫助進行故障排除。 本文檔概述了如何使用和導航UI的「查詢服務日誌」部分。
+exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
-# 查詢記錄檔
+# 查詢日誌
 
 >[!IMPORTANT]
 >
->某些查詢記錄功能目前處於有限版本中，並非所有客戶都能使用。 若沒有編輯圖示，您的UI可能會呈現稍微不同的外觀。 此外，選取查詢名稱的程式可導覽至「查詢編輯器」，而非 [!UICONTROL 查詢日誌詳細資訊] 檢視。
+>某些查詢日誌功能當前處於有限的版本中，並且不適用於所有客戶。 您的UI在沒有編輯表徵圖的情況下可能會略有不同。 此外，選擇查詢名稱的過程可以導航到查詢編輯器，而不是 [!UICONTROL 查詢日誌詳細資訊] 的子菜單。
 
-Adobe Experience Platform會維護透過API和UI發生的所有查詢事件記錄。 此資訊可在查詢服務UI中，從 [!UICONTROL 記錄檔] 標籤。
+Adobe Experience Platform維護通過API和UI發生的所有查詢事件的日誌。 此資訊可在查詢服務UI中 [!UICONTROL 日誌] 頁籤。
 
-日誌檔案由任何查詢事件自動生成，並包含包括所使用的SQL、查詢的狀態、所用時間和上次運行時間等資訊。 您可以使用查詢日誌資料作為功能強大的工具，用於排除低效或有問題的查詢。 更全面的記錄資訊會保留為稽核記錄功能的一部分，可在 [稽核記錄檔案](../../landing/governance-privacy-security/audit-logs/overview.md).
+日誌檔案由任何查詢事件自動生成，並包含包括使用的SQL、查詢狀態、查詢花費的時間和上次運行時間在內的資訊。 您可以將查詢日誌資料用作排除低效或問題查詢的強大工具。 更全面的日誌資訊作為審核日誌功能的一部分而保留，可在 [審核日誌文檔](../../landing/governance-privacy-security/audit-logs/overview.md)。
 
 ## 檢查查詢日誌
 
-要檢查查詢日誌，請選擇 [!UICONTROL 查詢] 導覽至「查詢服務」工作區，然後選取 [!UICONTROL 記錄檔] 中。
+要檢查查詢日誌，請選擇 [!UICONTROL 查詢] 導航到查詢服務工作區並選擇 [!UICONTROL 日誌] 的子菜單。
 
-![反白顯示查詢和記錄的Platform UI。](../images/ui/query-log/logs.png)
+![突出顯示了「Queries（查詢）」和「Log（日誌）」的平台UI。](../images/ui/query-log/logs.png)
 
-## 自訂和搜尋 {#customize-and-search}
+## 自定義和搜索 {#customize-and-search}
 
-查詢服務日誌以可自定義的表格格式顯示。 若要自訂表格欄，請選取設定圖示(![設定圖示。](../images/ui/query-log/settings-icon.png))即可取得Advertising Cloud的說明。 A [!UICONTROL 自訂表格] 對話框出現，可取消選擇每列。
+查詢服務日誌以可自定義的表格格式顯示。 要自定義表列，請選擇設定表徵圖(![設定表徵圖。](../images/ui/query-log/settings-icon.png))。 A [!UICONTROL 自定義表] 對話框，其中可取消選擇每列。
 
-您也可以在搜尋欄位中輸入範本名稱，以搜尋與特定查詢範本相關的記錄檔。
+您還可以通過在搜索欄位中鍵入模板名稱來搜索與特定查詢模板相關的日誌。
 
-![反白顯示「查詢記錄工作區」(Querys Log workspace with the search bar and manage column table)下拉式清單。](../images/ui/query-log/customize-logs.png)
+![突出顯示了「查詢日誌」工作區，其中搜索欄和管理清單下拉清單。](../images/ui/query-log/customize-logs.png)
 
-A [記錄表各列的說明](./overview.md#log) 可在「查詢服務」概覽的「記錄」區段中找到。
+A [日誌表各列的說明](./overview.md#log) 可在「查詢服務」概述的「日誌」部分找到。
 
 ## 發現日誌資料
 
-每一列代表與查詢範本相關聯的查詢執行的記錄資料。 從表格中選取任何一列，將該執行的記錄資料填入右側側欄。
+每行表示與查詢模板關聯的查詢運行的日誌資料。 從表中選擇任何行，以用該運行的日誌資料填充右側欄。
 
-![選中一行的「查詢日誌」工作區，右側邊欄中突出顯示日誌資料。](../images/ui/query-log/log-details.png)
+![選中一行的「查詢日誌」工作區，右側欄中的日誌資料突出顯示。](../images/ui/query-log/log-details.png)
 
-在日誌詳細資訊面板中，您可以選擇新的輸出資料集，並查看或複製運行中使用的完整SQL查詢。
+在日誌詳細資訊面板中，可以選擇新的輸出資料集，並查看或複製運行中使用的完整SQL查詢。
 
-![選中一行的「查詢日誌」工作區，並突出顯示輸出資料集和SQL查詢。](../images/ui/query-log/edit-output-dataset.png)
+![選中了一行的查詢日誌工作區，並突出顯示了輸出資料集和SQL查詢。](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
->某些查詢記錄功能目前處於有限版本中，並非所有客戶都能使用。
+>某些查詢日誌功能當前處於有限的版本中，並且不適用於所有客戶。
 
-您也可以從 [!UICONTROL 名稱] 欄以直接導覽至 [!UICONTROL 查詢日誌詳細資訊] 檢視。
+也可以從 [!UICONTROL 名稱] 欄，直接導航至 [!UICONTROL 查詢日誌詳細資訊] 的子菜單。
 
 >[!NOTE]
 >
->如果查詢是使用API建立的，在初始化期間未提供任何模板名稱，則會改為顯示SQL查詢的前幾個字元。
+>如果查詢是使用API建立的，且初始化期間未提供模板名稱，則會顯示SQL查詢的前幾十個字元。
 
-![查詢日誌詳細資訊視圖。](../images/ui/query-log/query-log-details.png)
+![「查詢日誌詳細資訊」視圖。](../images/ui/query-log/query-log-details.png)
 
-每一列的範本名稱或SQL程式碼片段旁都是鉛筆圖示(![鉛筆圖示。](../images/ui/query-log/edit-icon.png))，以導覽至查詢編輯器。 然後，查詢會預先填入編輯器中以進行編輯。
+每行的模板名稱或SQL代碼段旁邊有一個鉛筆表徵圖(![鉛筆表徵圖。](../images/ui/query-log/edit-icon.png))。 然後，在編輯器中預填充查詢以進行編輯。
 
-![以鉛筆圖示反白顯示「查詢記錄」工作區。](../images/ui/query-log/edit-query.png)
+![突出顯示「查詢日誌」(Queries Log)工作區的鉛筆表徵圖。](../images/ui/query-log/edit-query.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您現在更清楚了解查詢服務UI中如何存取及使用查詢記錄檔。
+通過閱讀此文檔，您現在可以更好地瞭解查詢日誌在查詢服務UI中的訪問和使用方式。
 
-請參閱 [UI概述](./overview.md)，或 [查詢服務API指南](../api/getting-started.md) 以進一步了解Query Service功能。
+查看 [UI概述](./overview.md)，或 [查詢服務API指南](../api/getting-started.md) 瞭解有關查詢服務功能的詳細資訊。
 
-請參閱 [監視查詢文檔](./monitor-queries.md) 了解查詢服務如何改善已排程查詢執行的可見性。
+查看 [監視查詢文檔](./monitor-queries.md) 瞭解查詢服務如何提高計畫查詢運行的可見性。

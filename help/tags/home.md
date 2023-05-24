@@ -13,17 +13,17 @@ ht-degree: 75%
 
 >[!NOTE]
 >
->事件轉送是付費功能，包含在Adobe Real-time Customer Data Platform連線、Prime或Ultimate等產品中。
+>事件轉發是一種付費功能，它包含在Adobe Real-time Customer Data Platform連接、Prime或Ultimate產品中。
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](./term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](./term-updates.md)。
 
 Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標記功能，以強化相關客戶體驗。
 
-標籤可讓任何人建置和維護自己的整合，稱為 *擴充功能*. 這些擴充功能可為 [!DNL Adobe Experience Cloud] 客戶提供應用程式商店的使用體驗，讓客戶快速安裝、設定和部署自己的標籤。
+標籤使任何人能夠構建和維護自己的整合，稱為 *擴展*。 這些擴充功能可為 [!DNL Adobe Experience Cloud] 客戶提供應用程式商店的使用體驗，讓客戶快速安裝、設定和部署自己的標籤。
 
-提供標籤給 [!DNL Adobe Experience Cloud] 客戶作為隨附的加值功能。
+提供標籤 [!DNL Adobe Experience Cloud] 作為附帶的增值功能。
 
 ## 主要優點 {#key-benefits}
 
@@ -35,7 +35,7 @@ Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記�
 
 ### 擴充功能 {#extensions}
 
-擴充功能是可擴充標記功能的程式碼 (JavaScript、HTML 及 CSS) 套件。使用幾乎為自助服務的介面來建置、管理和更新您的整合。您可以將擴充功能視為您用來完成工作的應用程式。
+擴充功能是可擴充標記功能的程式碼 (JavaScript、HTML 及 CSS) 套件。使用幾乎為自助服務的介面來建置、管理和更新您的整合。可以將擴展視為用於完成任務的應用。
 
 ### 擴充功能目錄 {#extension-catalog}
 
@@ -60,22 +60,22 @@ Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記�
 
 ### 企業發佈 {#enterprise-publishing}
 
-發佈程序可讓團隊將程式碼發佈至頁面。不同的人員可以建立實施、核准，然後在您的頁面上發佈。
+發佈程序可讓團隊將程式碼發佈至頁面。不同的人員可以建立實施、批准它並將其發佈到您的頁面上。
 
-* 程式碼的變更會封裝到您定義的程式庫中。
+* 對代碼所做的更改將封裝在您定義的庫中。
 * 您可以指定部署程式碼的位置和時機。
 * 不同團隊可同時建置多個程式庫。
 * 開發環境不受任何限制。
-* 以權限為基礎的審慎程式，可將程式庫合併在一起。
+* 一種深思熟慮的、基於權限的流程，用於將庫合併到一起。
 
 ### 開放 API {#open-apis}
 
-將個別技術或一組技術的實作自動化。
+自動實施單個技術或一組技術。
 
-* 標籤會與Reactor API互動。
+* 標籤與Reactor API交互。
 * 可透過 API 自動部署。
 * 將  API 與您自己的內部系統進行整合。
-* 您可以視需要建立自己的使用者介面。
+* 如果需要，可以構建自己的用戶介面。
 
 ### 輕量型模組化容器標籤 {#modular-tag}
 
@@ -83,7 +83,7 @@ Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記�
 
 ## 其他重點項目 {#other-highlights}
 
-標籤在類似系統上提供數項改善，包括：
+標籤提供了與類似系統相比的幾項改進，包括：
 
 * Chrome 未允許的情況下，不得使用 `document.write ()`。
 * 將 Page Top 和 Page Bottom 規則內建到主要程式庫，將不必要的 HTTP 呼叫減至最少。

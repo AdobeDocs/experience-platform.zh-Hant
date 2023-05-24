@@ -1,6 +1,6 @@
 ---
 title: 設定資料流
-description: 了解如何將用戶端Web SDK整合與其他Adobe產品和協力廠商目的地連結。
+description: 瞭解如何將客戶端Web SDK整合與其他Adobe產品和第三方目標連接。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
 source-git-commit: 209aa63717e05fabc8742ac591102b8fdb243ee4
 workflow-type: tm+mt
@@ -12,171 +12,171 @@ ht-degree: 2%
 
 # 設定資料流
 
-本檔案說明設定 [資料流](./overview.md) 在UI中。
+本文檔介紹配置 [資料流](./overview.md) 的子菜單。
 
-## 存取 [!UICONTROL 資料流] 工作區
+## 訪問 [!UICONTROL 資料流] 工作區
 
-您可以在資料收集UI或Experience PlatformUI中，透過選取 **[!UICONTROL 資料流]** 的下一頁。
+通過選擇Data Collection UI或Experience PlatformUI，可以建立和管理資料流 **[!UICONTROL 資料流]** 的子菜單。
 
-![資料收集UI中的「資料流」索引標籤](../assets/datastreams/configure/datastreams-tab.png)
+![資料收集UI中的資料流頁籤](../assets/datastreams/configure/datastreams-tab.png)
 
-此 **[!UICONTROL 資料流]** 索引標籤會顯示現有資料流的清單，包括其易記名稱、ID和上次修改日期。 選取資料流的名稱 [查看其詳細資訊並配置服務](#view-details).
+的 **[!UICONTROL 資料流]** 頁籤顯示現有資料流的清單，包括其友好名稱、ID和上次修改日期。 選擇要 [查看其詳細資訊並配置服務](#view-details)。
 
-選取「更多」圖示(**...**)以顯示更多選項。 選擇 **[!UICONTROL 編輯]** 更新 [基本配置](#configure) ，或選取 **[!UICONTROL 刪除]** 移除資料流。
+選擇「更多」表徵圖(**...**)以顯示更多選項。 選擇 **[!UICONTROL 編輯]** 更新 [基本配置](#configure) 或選擇 **[!UICONTROL 刪除]** 刪除資料流。
 
 ![編輯或刪除現有資料流的選項](../assets/datastreams/configure/edit-datastream.png)
 
 ## 建立新資料流 {#create}
 
-若要建立資料流，請從選取 **[!UICONTROL 新資料流]**.
+要建立資料流，請通過選擇 **[!UICONTROL 新建資料流]**。
 
 ![選擇新資料流](../assets/datastreams/configure/new-datastream-button.png)
 
-從設定步驟開始，資料流建立工作流程隨即顯示。 您必須在此提供資料流的名稱和可選說明。
+將顯示資料流建立工作流，從配置步驟開始。 在此處，必須提供資料流的名稱和可選說明。
 
-如果您要設定此資料流以用於Experience Platform，且使用Platform Web SDK，您也必須選取 [事件型Experience Data Model(XDM)結構](../../xdm/classes/experienceevent.md) 來表示您計畫擷取的資料。
+如果要配置此資料流以在Experience Platform中使用，並且使用平台Web SDK，則還必須選擇 [基於事件的經驗資料模型(XDM)模式](../../xdm/classes/experienceevent.md) 表示您計畫接收的資料。
 
 ![資料流的基本配置](../assets/datastreams/configure/configure.png)
 
-選擇 **[!UICONTROL 進階選項]** 以顯示設定資料流的其他控制項。
+選擇 **[!UICONTROL 高級選項]** 顯示配置資料流的其他控制項。
 
-![進階設定選項](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
+![高級配置選項](../assets/datastreams/configure/advanced-options.png) {#advanced-options}
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL 地理位置] | 根據使用者的IP位址來判斷地理位置查閱是否發生。 預設設定 **[!UICONTROL 無]** 會停用任何地理位置查閱，而 **[!UICONTROL 城市]** 設定可提供兩位小數的GPS座標。 地理位置發生在之前 [!UICONTROL IP模糊化] 和不受  [!UICONTROL IP模糊化] 設定。 |
-| [!UICONTROL IP 模糊化] | 指出要套用至資料流的IP模糊化類型。 任何以客戶IP為基礎的處理都會受到IP模糊化設定的影響。 這包括從您的資料流接收資料的所有Experience Cloud服務。 <p>可用選項：</p> <ul><li>**[!UICONTROL 無]**:停用IP模糊化。 完整使用者IP位址將透過資料流傳送。</li><li>**[!UICONTROL 部分]**:若為IPv4位址，會模糊化使用者IP位址的最後八位元。 對於IPv6地址，將地址的最後80位模糊化。 <p>範例：</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 完整]**:模糊化整個IP位址。 <p>範例：</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP模糊化對其他Adobe產品的影響： <ul><li>**Adobe Target**:資料流層級 [!UICONTROL IP模糊化] 設定優先於Adobe Target中設定的任何IP模糊化選項。 例如，若資料流層級 [!UICONTROL IP模糊化] 選項設為 **[!UICONTROL 完整]** 和Adobe Target IP模糊化選項設為 **[!UICONTROL 最後八位數字模糊化]**,Adobe Target會收到完全模糊化的IP。 請參閱Adobe Target檔案，位於 [IP模糊化](https://developer.adobe.com/target/before-implement/privacy/privacy/) 和 [地理位置](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) 以取得更多詳細資訊。</li><li>**Audience Manager**:資料流級IP模糊化設定優先於Audience Manager中設定的任何IP模糊化選項，並套用至所有IP位址。 任何由Audience Manager完成的地理位置查閱都會受到資料流層級的影響 [!UICONTROL IP模糊化] 選項。 Audience Manager中的地理位置查閱（以完全模糊化的IP為基礎）會產生未知區域，且任何以結果的地理位置資料為基礎的區段將無法實現。 請參閱Audience Manager檔案，位於 [IP模糊化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) 以取得更多詳細資訊。</li><li>**Adobe Analytics**:如果選取「無」以外的任何IP模糊化選項，Adobe Analytics目前會收到部分模糊化的IP位址。 若要讓Analytics接收完全模糊化的IP位址，您必須在Adobe Analytics中個別設定IP模糊化。 未來發行版本將更新此行為。 請參閱Adobe Analytics [檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) 如需如何在Analytics中啟用IP模糊化的詳細資訊。</li></ul> |
-| [!UICONTROL 第一方ID Cookie] | 啟用後，此設定會在查詢 [第一方裝置ID](../identity/first-party-device-ids.md)，而非在「身分對應」中查詢此值。<br><br>啟用此設定時，您必須提供預期會儲存ID之Cookie的名稱。 |
-| [!UICONTROL 第三方ID同步] | ID同步可分組為容器，以便在不同時間執行不同的ID同步。 啟用後，此設定可讓您指定要為此資料流執行哪個ID同步容器。 |
-| [!UICONTROL 第三方ID同步容器ID] | 要用於協力廠商ID同步之容器的數值ID。 |
-| [!UICONTROL 容器ID覆寫] | 在本節中，您可以定義其他協力廠商ID同步容器ID，以便用來覆寫預設容器ID。 |
-| [!UICONTROL 存取類型] | 定義邊緣網路接受的資料流的驗證類型。 <ul><li>**[!UICONTROL 混合驗證]**:選取此選項時，邊緣網路會接受已驗證和未驗證的請求。 當您打算使用Web SDK時，請選取此選項，或 [行動SDK](https://aep-sdks.gitbook.io/docs/)，連同 [伺服器API](../../server-api/overview.md). </li><li>**[!UICONTROL 僅驗證]**:選取此選項時，邊緣網路僅接受已驗證的請求。 當您打算只使用伺服器API，並想要防止邊緣網路處理任何未驗證的請求時，請選取此選項。</li></ul> |
+| [!UICONTROL 地理位置] | 根據用戶的IP地址確定是否進行地理位置查找。 預設設定 **[!UICONTROL 無]** 禁用任何地理位置查找，而 **[!UICONTROL 城市]** 設定將GPS坐標設定為兩個小數位。 地理位置在 [!UICONTROL IP混淆] 不受  [!UICONTROL IP混淆] 的子菜單。 |
+| [!UICONTROL IP 模糊化] | 指示要應用於資料流的IP混淆類型。 任何基於客戶IP的處理都將受IP混淆設定的影響。 這包括從資料流接收資料的所有Experience Cloud服務。 <p>可用選項：</p> <ul><li>**[!UICONTROL 無]**:禁用IP混淆。 完整用戶IP地址將通過資料流發送。</li><li>**[!UICONTROL 部分]**:對於IPv4地址，對用戶IP地址的最後一個八進位進行模糊處理。 對於IPv6地址，對地址的最後80位進行模糊處理。 <p>範例：</p> <ul><li>IPv4: `1.2.3.4` -> `1.2.3.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 滿]**:對整個IP地址進行模糊處理。 <p>範例：</p> <ul><li>IPv4: `1.2.3.4` -> `0.0.0.0`</li><li>IPv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP混淆對其他Adobe產品的影響： <ul><li>**Adobe Target**:資料流級別 [!UICONTROL IP混淆] 設定優先於在Adobe Target設定的任何IP混淆選項。 例如，如果 [!UICONTROL IP混淆] 選項設定為 **[!UICONTROL 滿]** 而Adobe TargetIP混淆選項設定為 **[!UICONTROL 上次八位數模糊處理]**&#x200B;而Adobe Target將獲得完全模糊的IP。 請參閱Adobe Target文檔 [IP混淆](https://developer.adobe.com/target/before-implement/privacy/privacy/) 和 [地理位置](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) 的子菜單。</li><li>**Audience Manager**:資料流級別的IP混淆設定優先於Audience Manager中設定的任何IP混淆選項，並應用於所有IP地址。 由Audience Manager完成的任何地理位置查找都受資料流級別的影響 [!UICONTROL IP混淆] 的雙曲餘切值。 基於完全模糊的IP的Audience Manager中的地理位置查找將導致未知區域，並且不會實現基於結果的地理位置資料的任何段。 請參閱上的Audience Manager文檔 [IP混淆](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) 的子菜單。</li><li>**Adobe Analytics**:如果選擇了IP混淆選項（NONE除外）,Adobe Analytics當前將接收部分模糊化的IP地址。 要使分析接收完全模糊化的IP地址，必須在Adobe Analytics單獨配置IP模糊。 此行為將在以後的版本中更新。 見Adobe Analytics [文檔](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) 有關如何在分析中啟用IP混淆的詳細資訊。</li></ul> |
+| [!UICONTROL 第一方ID Cookie] | 啟用後，此設定將指示邊緣網路在查找 [第一方設備ID](../identity/first-party-device-ids.md)，而不是在「身份映射」中查找此值。<br><br>啟用此設定時，必須提供應儲存ID的Cookie的名稱。 |
+| [!UICONTROL 第三方ID同步] | ID同步可以分組到容器中，以允許在不同時間運行不同的ID同步。 啟用此設定後，可以指定為此資料流運行ID同步的容器。 |
+| [!UICONTROL 第三方ID同步容器ID] | 要用於第三方ID同步的容器的數字ID。 |
+| [!UICONTROL 容器ID覆蓋] | 在本節中，您可以定義其他第三方ID同步容器ID，您可以使用這些ID覆蓋預設容器ID。 |
+| [!UICONTROL 訪問類型] | 定義邊緣網路接受的資料流的驗證類型。 <ul><li>**[!UICONTROL 混合身份驗證]**:選中此選項後，邊緣網路將接受經過身份驗證的請求和未經身份驗證的請求。 當您計畫使用Web SDK或 [移動SDK](https://aep-sdks.gitbook.io/docs/)，以及 [伺服器API](../../server-api/overview.md)。 </li><li>**[!UICONTROL 僅經過身份驗證]**:選中此選項後，邊緣網路僅接受經過身份驗證的請求。 當您計畫僅使用伺服器API並希望阻止邊緣網路處理任何未經驗證的請求時，請選擇此選項。</li></ul> |
 
-若要在此設定資料流以供Experience Platform，請依照 [資料收集的資料準備](./data-prep.md) 若要先將資料對應至Platform事件結構，再返回本指南。 否則，請選取 **[!UICONTROL 儲存]** 並繼續下一節。
+在此處，如果要配置資料流以進行Experience Platform，請按照上面的教程操作 [資料收集的資料準備](./data-prep.md) 在返回本指南之前，將資料映射到平台事件架構。 否則，選擇 **[!UICONTROL 保存]** 繼續下一節。
 
-## 檢視資料流詳細資訊 {#view-details}
+## 查看資料流詳細資訊 {#view-details}
 
-設定新資料流或選取要檢視的現有資料流後，該資料流的詳細資訊頁面隨即顯示。 您可在這裡找到資料流的詳細資訊，包括其ID。
+配置新資料流或選擇要查看的現有資料流後，將顯示該資料流的詳細資訊頁。 在此，您可以找到有關資料流（包括其ID）的詳細資訊。
 
-![已建立資料流的詳細資訊頁面](../assets/datastreams/configure/view-details.png)
+![已建立資料流的「詳細資訊」頁](../assets/datastreams/configure/view-details.png)
 
-從資料流詳細資訊螢幕，您可以 [新增服務](#add-services) 若要從您可存取的Adobe Experience Cloud產品啟用功能。 您也可以編輯資料流的 [基本配置](#create)，更新 [對應規則](./data-prep.md), [複製資料流](#copy)，或將其完全刪除。
+在資料流詳細資訊螢幕中， [添加服務](#add-services) 從您有權訪問的Adobe Experience Cloud產品啟用功能。 您還可以編輯資料流的 [基本配置](#create)，更新 [映射規則](./data-prep.md)。 [複製資料流](#copy)或將其完全刪除。
 
-## 新增服務至資料流 {#add-services}
+## 將服務添加到資料流 {#add-services}
 
-在資料流的詳細資訊頁面上，選取 **[!UICONTROL 添加服務]** 開始為該資料流添加可用服務。
+在資料流的詳細資訊頁面上，選擇 **[!UICONTROL 添加服務]** 開始為該資料流添加可用服務。
 
 ![選擇添加服務以繼續](../assets/datastreams/configure/add-service.png)
 
-在下一個畫面中，使用下拉式選單來選取要針對此資料流設定的服務。 只有您有權存取的服務才會顯示在此清單中。
+在下一螢幕上，使用下拉菜單選擇要為此資料流配置的服務。 只有您有權訪問的服務才會顯示在此清單中。
 
 ![從清單中選擇服務](../assets/datastreams/configure/service-selection.png)
 
-選取所需的服務，填入顯示的設定選項，然後選取 **[!UICONTROL 儲存]** 將服務新增至資料流。 所有新增的服務都會顯示在資料流的詳細資訊檢視中。
+選擇所需的服務，填寫顯示的配置選項，然後選擇 **[!UICONTROL 保存]** 將服務添加到資料流。 所有添加的服務都顯示在資料流的詳細資訊視圖中。
 
-![新增至資料流的服務](../assets/datastreams/configure/services-added.png)
+![添加到資料流的服務](../assets/datastreams/configure/services-added.png)
 
-以下子節說明每個服務的設定選項。
+以下各節介紹了每項服務的配置選項。
 
 >[!NOTE]
 >
->每個服務配置都包含 **[!UICONTROL 已啟用]** 切換選取服務時自動啟用的選項。 若要停用此資料流的所選服務，請選取 **[!UICONTROL 已啟用]** 切換。
+>每個服務配置都包含 **[!UICONTROL 已啟用]** 切換在選擇服務時自動激活的選項。 要禁用此資料流的選定服務，請選擇 **[!UICONTROL 已啟用]** 再次切換。
 
 ### Adobe Analytics設定 {#analytics}
 
-此服務會控制資料是否以及如何傳送至Adobe Analytics。 如需其他詳細資訊，請參閱 [傳送資料至Analytics](../data-collection/adobe-analytics/analytics-overview.md).
+此服務控制資料是否以及如何發送到Adobe Analytics。 有關其他詳細資訊，請參閱上 [將資料發送到分析](../data-collection/adobe-analytics/analytics-overview.md)。
 
-![Adobe Analytics設定區塊](../assets/datastreams/configure/analytics-config.png)
+![Adobe Analytics設定塊](../assets/datastreams/configure/analytics-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL 報告套裝 ID] | **（必要）** 您要傳送資料的目的地Analytics報表套裝ID。 此ID可在Adobe Analytics UI的 [!UICONTROL 管理] > [!UICONTROL 報表套裝]. 若指定多個報表套裝，則資料會複製到每個報表套裝。 |
-| [!UICONTROL 報表套裝覆寫] | 在本節中，您可以新增其他報表套裝ID，以供您用來覆寫預設ID。 |
+| [!UICONTROL 報告套裝 ID] | **（必需）** 要向其發送資料的分析報告套件的ID。 此ID可在Adobe AnalyticsUI下找到 [!UICONTROL 管理] > [!UICONTROL 報表套件]。 如果指定了多個報表套件，則資料將複製到每個報表套件。 |
+| [!UICONTROL 報表套件覆蓋] | 在本節中，您可以添加可用於覆蓋預設報表套件ID的其他報表套件ID。 |
 
 ### Adobe Audience Manager設定 {#audience-manager}
 
-此服務會控制資料是否以及如何傳送至Adobe Audience Manager。 將資料傳送至Audience Manager所需的全部是啟用此區段。 其他設定為選用，但建議使用。
+此服務控制資料是否以及如何發送到Adobe Audience Manager。 將資料發送到Audience Manager所需的一切就是啟用此部分。 其他設定是可選的，但是是鼓勵的。
 
-![Adobe對象管理設定區塊](../assets/datastreams/configure/audience-manager-config.png)
+![Adobe受眾管理設定塊](../assets/datastreams/configure/audience-manager-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL Cookie目的地已啟用] | 允許SDK透過共用區段資訊 [cookie目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 從 [!DNL Audience Manager]. |
-| [!UICONTROL 已啟用URL目的地] | 允許SDK透過共用區段資訊 [URL目的地](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) 從 [!DNL Audience Manager]. |
+| [!UICONTROL 已啟用Cookie目標] | 允許SDK通過 [cookie目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 從 [!DNL Audience Manager]。 |
+| [!UICONTROL 已啟用URL目標] | 允許SDK通過 [URL目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) 從 [!DNL Audience Manager]。 |
 
 ### Adobe Experience Platform設定 {#aep}
 
 >[!IMPORTANT]
 >
->為Platform啟用資料流時，請記下您目前使用的Platform沙箱，如UI頂端功能區所示。
+>在為平台啟用資料流時，請注意您當前使用的平台沙箱，如UI頂部功能區中所示。
 >
->![所選沙箱](../assets/datastreams/configure/platform-sandbox.png)
+>![所選沙盒](../assets/datastreams/configure/platform-sandbox.png)
 >
->沙箱是Adobe Experience Platform中的虛擬分區，可讓您將資料和實施與組織中的其他項目隔離開來。 建立資料流後，其沙箱便無法變更。 如需沙箱在Experience Platform中角色的詳細資訊，請參閱 [沙箱檔案](../../sandboxes/home.md).
+>沙箱是Adobe Experience Platform的虛擬分區，允許您將資料和實施與組織中的其他人隔離開來。 建立資料流後，其沙盒將無法更改。 有關沙箱在Experience Platform中角色的詳細資訊，請參見 [箱文檔](../../sandboxes/home.md)。
 
-此服務會控制資料是否以及如何傳送至Adobe Experience Platform。
+此服務控制資料是否以及如何發送到Adobe Experience Platform。
 
-![Adobe Experience Platform設定區塊](../assets/datastreams/configure/platform-config.png)
+![Adobe Experience Platform設定塊](../assets/datastreams/configure/platform-config.png)
 
 | 設定 | 說明 |
 |---| --- |
-| [!UICONTROL 事件資料集] | **（必要）** 選取客戶事件資料要串流至的Platform資料集。 此架構必須使用 [XDM ExperienceEvent類別](../../xdm/classes/experienceevent.md). 若要新增其他資料集，請選取 **[!UICONTROL 新增事件資料集]**. |
-| [!UICONTROL 設定檔資料集] | 選取客戶屬性資料要傳送至的Platform資料集。 此架構必須使用 [XDM個別設定檔類別](../../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | 選取此核取方塊以啟用Platform Web SDK實作的Offer decisioning。 請參閱 [搭配Platform Web SDK使用Offer decisioning](../personalization/offer-decisioning/offer-decisioning-overview.md) 以取得更多實作詳細資訊。<br><br>如需Offer decisioning功能的詳細資訊，請參閱 [Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=zh-Hant). |
-| [!UICONTROL 邊緣分割] | 選中此複選框以啟用 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 資料流。 當SDK透過啟用邊緣分段的資料流傳送資料時，回應中會傳回相關設定檔的任何更新區段成員資格。<br><br>此選項可與 [!UICONTROL 個人化目的地] for [下一頁個人化使用案例](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL 個人化目的地] | 若在啟用 [!UICONTROL 邊緣分割] 核取方塊，此選項可讓資料流連線至個人化目的地，例如 [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md).<br><br>如需的特定步驟，請參閱目的地檔案 [設定個人化目的地](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL Adobe Journey Optimizer] | 選中此複選框以啟用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 資料流。 <br><br> 啟用此選項可讓資料流從以下的網頁和應用程式為基礎的傳入促銷活動，傳回個人化內容： [!DNL Adobe Journey Optimizer]. 此選項需要 [!UICONTROL 邊緣分割] 活動。 若 [!UICONTROL 邊緣分割] 未勾選，此選項會反灰。 |
+| [!UICONTROL 事件資料集] | **（必需）** 選擇將客戶事件資料流式傳輸到的平台資料集。 此架構必須使用 [XDM ExperienceEvent類](../../xdm/classes/experienceevent.md)。 要添加其他資料集，請選擇 **[!UICONTROL 添加事件資料集]**。 |
+| [!UICONTROL 配置檔案資料集] | 選擇客戶屬性資料將發送到的平台資料集。 此架構必須使用 [XDM個人配置檔案類](../../xdm/classes/individual-profile.md)。 |
+| [!UICONTROL Offer Decisioning] | 選中此複選框可啟用平台Web SDK實現的Offer decisioning。 請參閱上的指南 [與平台Web SDK一起使用Offer decisioning](../personalization/offer-decisioning/offer-decisioning-overview.md) 的子菜單。<br><br>有關Offer decisioning功能的詳細資訊，請參閱 [Adobe Journey Optimizer文檔](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=zh-Hant)。 |
+| [!UICONTROL 邊緣分割] | 選中此複選框以啟用 [邊緣分割](../../segmentation/ui/edge-segmentation.md) 資料流。 當SDK通過啟用邊緣分割的資料流發送資料時，在響應中將有關配置檔案的任何更新的段成員身份發回。<br><br>此選項可與 [!UICONTROL 個性化目標] 為 [下一頁個性化用例](../../destinations/ui/configure-personalization-destinations.md)。 |
+| [!UICONTROL 個性化目標] | 啟用後啟用此功能時 [!UICONTROL 邊緣分割] 複選框，此選項允許資料流連接到個性化目標，如 [自定義個性化](../../destinations/catalog/personalization/custom-personalization.md)。<br><br>請參閱目標文檔以瞭解有關 [配置個性化目標](../../destinations/ui/configure-personalization-destinations.md)。 |
+| [!UICONTROL Adobe Journey Optimizer] | 選中此複選框以啟用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 資料流。 <br><br> 啟用此選項允許資料流從Web和基於應用的入站市場活動中返回個性化內容 [!DNL Adobe Journey Optimizer]。 此選項需要 [!UICONTROL 邊緣分割] 激活。 如果 [!UICONTROL 邊緣分割] 未選中，此選項將呈灰色顯示。 |
 
 ### Adobe Target設定 {#target}
 
-此服務會控制資料是否以及如何傳送至Adobe Target。
+此服務控制資料是否以及如何發送到Adobe Target。
 
-![Adobe Target設定區塊](../assets/datastreams/configure/target-config.png)
-
-| 設定 | 說明 |
-| --- | --- |
-| [!UICONTROL 屬性代號] | [!DNL Target] 可讓客戶透過使用屬性來控制權限。 如需屬性的詳細資訊，請參閱 [配置企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) 在 [!DNL Target] 檔案。<br><br>您可以在Adobe Target UI的下方找到屬性代號 [!UICONTROL 設定] > [!UICONTROL 屬性]. |
-| [!UICONTROL 目標環境ID] | [Adobe Target環境](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) 可協助您管理所有開發階段的實作。 此設定會指定您要與此資料流搭配使用的環境。<br><br>最佳實務是以不同方式為每個 `dev`, `stage`，和 `prod` 資料流環境，讓事情保持簡單。 不過，如果您已定義Adobe Target環境，則可使用這些環境。 |
-| [!UICONTROL Target第三方ID命名空間] | 的身分識別命名空間 `mbox3rdPartyId` 您想要用於此資料流。 請參閱 [實施 `mbox3rdPartyId` 與Web SDK](../personalization/adobe-target/using-mbox-3rdpartyid.md) 以取得更多資訊。 |
-| [!UICONTROL 屬性代號覆蓋] | 在本節中，您可以定義可用來覆寫預設屬性代號的其他屬性代號。 |
-
-### [!UICONTROL 事件轉送] 設定
-
-此服務會控制資料是否及如何傳送至 [事件轉送](../../tags/ui/event-forwarding/overview.md).
-
-![設定UI的「事件轉送」區段](../assets/datastreams/configure/event-forwarding-config.png)
+![Adobe Target設定塊](../assets/datastreams/configure/target-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL Launch屬性] | **（必要）** 您要將資料傳送至的事件轉送屬性。 |
-| [!UICONTROL Launch環境] | **（必要）** 您要傳送資料的目標屬性內的環境。 |
+| [!UICONTROL 屬性標籤] | [!DNL Target] 允許客戶通過使用屬性來控制權限。 有關屬性的詳細資訊，請參見上的指南 [配置企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) 的 [!DNL Target] 文檔。<br><br>在Adobe TargetUI中，可以找到屬性令牌 [!UICONTROL 設定] > [!UICONTROL 屬性]。 |
+| [!UICONTROL 目標環境ID] | [Adobe Target環境](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) 幫助您管理實施過程的所有階段。 此設定指定要與此資料流一起使用的環境。<br><br>最佳做法是為您的 `dev`。 `stage`, `prod` 資料流環境使事情變得簡單。 但是，如果您已經定義了Adobe Target環境，則可以使用這些環境。 |
+| [!UICONTROL 目標第三方ID命名空間] | 的標識命名空間 `mbox3rdPartyId` 要用於此資料流。 請參閱上的指南 [實施 `mbox3rdPartyId` Web SDK](../personalization/adobe-target/using-mbox-3rdpartyid.md) 的子菜單。 |
+| [!UICONTROL 屬性令牌覆蓋] | 在本節中，您可以定義可用於覆蓋預設屬性標籤的附加屬性標籤。 |
+
+### [!UICONTROL 事件轉發] 設定
+
+此服務控制資料是否以及如何發送到 [事件轉發](../../tags/ui/event-forwarding/overview.md)。
+
+![配置UI的「事件轉發」部分](../assets/datastreams/configure/event-forwarding-config.png)
+
+| 設定 | 說明 |
+| --- | --- |
+| [!UICONTROL 啟動屬性] | **（必需）** 要向其發送資料的事件轉發屬性。 |
+| [!UICONTROL 啟動環境] | **（必需）** 要向其發送資料的選定屬性中的環境。 |
 
 >[!NOTE]
 >
->您可以選取 **[!UICONTROL 手動輸入ID]** 輸入屬性和環境名稱，而非使用下拉式功能表。
+>可以選擇 **[!UICONTROL 手動輸入ID]** 鍵入屬性和環境名稱，而不是使用下拉菜單。
 
 ## 複製資料流 {#copy}
 
-您可以建立現有資料流的復本，並視需要變更其詳細資訊。
+您可以建立現有資料流的副本，並根據需要更改其詳細資訊。
 
 >[!NOTE]
 >
->資料流只能複製在 [沙箱](../../sandboxes/home.md). 換言之，您無法將資料流從一個沙箱複製到另一個沙箱。
+>只能在同一資料流內複製資料流 [沙坑](../../sandboxes/home.md)。 換句話說，不能將資料流從一個沙箱複製到另一個沙箱。
 
-從 [!UICONTROL 資料流] 工作區，選取省略號(**....**)，然後選取 **[!UICONTROL 複製]**.
+從 [!UICONTROL 資料流] 工作區，選擇省略號(**...。**)，然後選擇 **[!UICONTROL 複製]**。
 
 ![顯示 [!UICONTROL 複製] 從資料流清單視圖中選擇的選項](../assets/datastreams/configure/copy-datastream-list.png)
 
-或者，您也可以選取 **[!UICONTROL 複製資料流]** 從指定資料流的詳細資訊檢視。
+或者，可以選擇 **[!UICONTROL 複製資料流]** 從給定資料流的詳細資訊視圖中。
 
-![顯示 [!UICONTROL 複製] 從資料流詳細資訊檢視中選取的選項](../assets/datastreams/configure/copy-datastream-details.png)
+![顯示 [!UICONTROL 複製] 從資料流詳細資訊視圖中選擇的選項](../assets/datastreams/configure/copy-datastream-details.png)
 
-此時會出現確認對話方塊，提示您為要建立的新資料流提供唯一名稱，以及將複製的配置選項的詳細資訊。 準備就緒時，請選取 **[!UICONTROL 複製]**.
+此時將顯示確認對話框，提示您為要建立的新資料流提供唯一名稱，以及將複製的配置選項的詳細資訊。 準備好後，選擇 **[!UICONTROL 複製]**。
 
 ![用於複製資料流的確認對話框的影像](../assets/datastreams/configure/copy-datastream-confirm.png)
 
-的主要頁面 [!UICONTROL 資料流] 工作區會重新顯示，並列出新的資料流。
+首頁 [!UICONTROL 資料流] 工作區將重新顯示，並列出新資料流。
 
 ## 後續步驟
 
-本指南說明如何在資料收集UI中管理資料流。 如需設定資料流後如何安裝和設定Web SDK的詳細資訊，請參閱 [資料收集E2E指南](../../collection/e2e.md#install).
+本指南介紹了如何管理資料收集UI中的資料流。 有關如何在設定資料流後安裝和配置Web SDK的詳細資訊，請參閱 [資料收集E2E指南](../../collection/e2e.md#install)。

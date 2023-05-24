@@ -1,8 +1,8 @@
 ---
 solution: Experience Platform
-title: 下載Experience Platform控制面板以PDF
+title: 將Experience Platform儀表板下載到PDF
 type: Documentation
-description: 使用Experience PlatformUI中提供的「下載至PDF」功能，儲存控制面板視覺效果的副本。
+description: 使用Experience PlatformUI中提供的下載到PDF功能保存儀表板可視化效果的副本。
 exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
 source-git-commit: 5d9428c4323e65c2605fd116160e160af7d9086d
 workflow-type: tm+mt
@@ -11,58 +11,58 @@ ht-degree: 0%
 
 ---
 
-# 下載控制面板以PDF
+# 將儀表板下載到PDF
 
-Adobe Experience Platform中的控制面板可從Platform使用者介面下載至PDF，以方便與組織成員共用資訊。
+Adobe Experience Platform內的儀表板可以從平台用戶介面下載到PDF中，以便與貴組織成員共用資訊。
 
-本檔案提供如何使用Platform UI下載控制面板，以及使用預設瀏覽器列印功能表儲存控制面板以進行PDF的摘要。
+本文檔提供了如何使用平台UI下載儀表板以及使用預設瀏覽器打印菜單將儀表板保存到PDF的摘要。
 
 >[!WARNING]
 >
->控制面板中包含的資料可能包含客戶的個人識別資訊(PII)，或與組織相關的敏感資料。 儲存至PDF的任何控制面板資料，都應根據貴組織的資料隱私權准則加以適當處理。
+>儀表板中包含的資料可能包含有關客戶的個人身份資訊(PII)或與您的組織相關的敏感資料。 保存到PDF的任何儀表板資料都應根據您組織的資料隱私准則進行適當處理。
 
-## 下載控制面板
+## 下載儀表板
 
-若要開始下載控制面板，請導覽至您要下載的控制面板(例如 [!UICONTROL 設定檔] 控制面板)，然後選取「更多選項」功能表(**`...`**)。 下一步，選擇 **[!UICONTROL 下載]**.
+要開始下載儀表板，請導航到要下載的儀表板(例如， [!UICONTROL 配置檔案] )，然後選擇「更多選項」菜單(**`...`**)。 下一步，選擇 **[!UICONTROL 下載]**。
 
-![Experience Platform描述檔控制面板，反白顯示省略號和下載下拉式清單。](images/download/download-button.png)
+![突出顯示了「Experience Platform配置式」儀表板，其中省略號和「下載」下拉清單。](images/download/download-button.png)
 
 ## 預覽PDF
 
-選取後 **[!UICONTROL 下載]**，則會開啟瀏覽器的預設列印功能表。 在此範例中，會顯示Google Chrome列印功能表。
+選擇後 **[!UICONTROL 下載]**，瀏覽器的預設打印菜單開啟。 在此示例中，顯示了GoogleChrome打印菜單。
 
-列印功能表可讓您預覽要儲存的PDF。 PDF是Platform UI中顯示之控制面板小工具的真實表示，且PDF的大小會自動調整，以顯示單一頁面上所有目前可見的控制面板小工具。
+打印菜單允許您預覽要保存的PDF。 PDF是儀表板小部件在平台UI中顯示時的真實表示形式，並且PDF的大小將自動調整以在單個頁面上顯示所有當前可見的儀表板小部件。
 
-![「配置檔案」概述以單頁格式顯示，右側是「打印選項」面板。](images/download/download-chrome-print.png)
+![單頁格式上顯示的「配置式」概述，右側是「打印選項」面板。](images/download/download-chrome-print.png)
 
-PDF包含自動產生的標題，其中包含Experience Platform標誌、控制面板的名稱、您的名稱，以及控制面板下載的日期和時間。 此資訊為唯讀，無法在PDF中編輯。
+PDF包括自動生成的標題，其中包含Experience Platform徽標、儀表板名稱、您的名稱以及下載儀表板的日期和時間。 此資訊是只讀的，無法在PDF中編輯。
 
-![打印預覽的特寫，自動生成的標題突出顯示。](images/download/download-pdf.png)
+![自動生成的標題突出顯示的打印預覽的特寫。](images/download/download-pdf.png)
 
 ## 另存為PDF
 
-預覽PDF後，選取 **儲存** ，選擇要保存PDF的位置。
+預覽PDF後，選擇 **保存** 選擇要保存PDF的位置。
 
 >[!NOTE]
 >
->如有必要，您可以使用 **目的地** 下拉式清單選取 **另存為PDF** 如果未自動為您選取該選項。
+>如有必要，可使用 **目標** 下拉清單選擇 **另存為PDF** 選項。
 
-![單頁格式顯示配置檔案概覽，其中「目標」下拉式清單「另存為PDF」打印選項突出顯示。](images/download/download-chrome-print-destination.png)
+![單頁格式上顯示的「配置式」概述，「目標」下拉清單「另存為PDF」打印選項突出顯示。](images/download/download-chrome-print-destination.png)
 
-## 自訂控制面板PDF
+## 自定義儀表板PDF
 
-產生的PDF會符合您在UI中看到的控制面板，並僅包含目前顯示在控制面板上的小工具。 某些控制面板可以自定義，以更改小部件的大小和位置，或添加小部件並從視圖中刪除小部件。 在Platform UI中自訂控制面板的外觀，也會變更產生的PDF外觀。
+生成的PDF與您在UI中可以看到的儀表板匹配，並且只包括儀表板上當前可見的小部件。 可以自定義某些儀表板以更改小部件的大小和位置，或從視圖中添加和刪除小部件。 在平台UI中自定義儀表板的外觀還會更改生成的PDF的外觀。
 
-例如，您可以修改設定檔控制面板的外觀，以包含多個堆疊在三個標準介面工具集上的全寬介面工具集。
+例如，您可以修改配置檔案操控板的外觀，以包括堆疊在三個標準小部件之上的多個全寬小部件。
 
-![展示細長構件的「配置檔案」儀表板。](images/download/download-modify.png)
+![演示細長構件顯示的「配置檔案」儀表板。](images/download/download-modify.png)
 
-選取以下載更新的控制面板，會產生符合自訂設定檔控制面板外觀的新PDF預覽。 它也會自動調整PDF的大小，以確保所有可見介面工具集都包含在單頁PDF中。
+選擇以下載更新的儀表板會生成與自定義的配置檔案儀表板的外觀相匹配的新PDF預覽。 它還自動調整PDF的大小，以確保所有可見小部件都包含在一頁PDF中。
 
-![「配置檔案」概述以單頁格式顯示，右側是「打印選項」面板。](images/download/download-chrome-print-modified.png)
+![單頁格式上顯示的「配置式」概述，右側是「打印選項」面板。](images/download/download-chrome-print-modified.png)
 
-若要進一步了解自訂控制面板，請先閱讀 [控制面板自訂概觀](customize/overview.md).
+要瞭解有關自定義儀表板的詳細資訊，請首先閱讀 [儀表板自定義概述](customize/overview.md)。
 
 ## 後續步驟
 
-現在您已下載控制面板並儲存為PDF，您可以重複這些步驟來下載其他控制面板，或與組織成員共用PDF。
+現在，您已下載儀表板並將其保存為PDF，您可以重複這些步驟以下載其他儀表板或與組織成員共用PDF。

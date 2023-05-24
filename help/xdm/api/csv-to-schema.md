@@ -1,6 +1,6 @@
 ---
-title: 結構轉換API端點的CSV範本
-description: Schema Registry API中的/rpc/csv2schema端點可讓您使用CSV範本自動建立Experience Data Model(XDM)結構。
+title: CSV模板到架構轉換API終結點
+description: 使用架構註冊表API中的/rpc/csv2schema終結點，可以使用CSV模板自動建立體驗資料模型(XDM)架構。
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
 source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
 workflow-type: tm+mt
@@ -9,53 +9,53 @@ ht-degree: 5%
 
 ---
 
-# 結構轉換API端點的CSV範本
+# CSV模板到架構轉換API終結點
 
-此 `/rpc/csv2schema` 端點 [!DNL Schema Registry] API可讓您以CSV檔案作為範本，自動建立Experience Data Model(XDM)結構。 使用此端點，您可以建立範本，以大量匯入結構欄位，並減少手動API或UI的工作。
+的 `/rpc/csv2schema` 端點 [!DNL Schema Registry] API允許您使用CSV檔案作為模板自動建立體驗資料模型(XDM)架構。 使用此終結點，可以建立模板以批量導入架構欄位並減少手動API或UI工作。
 
 ## 快速入門
 
-此 `/rpc/csv2schema` 端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案中讀取範例API呼叫的指南，以及成功呼叫任何Adobe Experience Platform API所需的必要標頭重要資訊。
+的 `/rpc/csv2schema` 端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、本文檔中讀取示例API調用的指南，以及成功調用任何Adobe Experience PlatformAPI所需的標頭的重要資訊。
 
-此 `/rpc/csv2schema` 端點是遠端程式呼叫(RPC)的一部分，這些呼叫由 [!DNL Schema Registry]. 不同於 [!DNL Schema Registry] API、RPC端點不需要其他標題，例如 `Accept` 或 `Content-Type`，且不使用 `CONTAINER_ID`. 而是必須使用 `/rpc` 命名空間，如下方API呼叫所示。
+的 `/rpc/csv2schema` endpoint是遠程過程調用(RPC)的一部分，該調用由 [!DNL Schema Registry]。 不同於 [!DNL Schema Registry] API、RPC終結點不需要像 `Accept` 或 `Content-Type`，並且不使用 `CONTAINER_ID`。 相反，他們必須使用 `/rpc` 命名空間，如下面的API調用中所示。
 
-## CSV檔案需求
+## CSV檔案要求
 
-若要使用此端點，您必須先建立CSV檔案，其中包含適當的欄標題和對應的值。 某些欄為必要欄，其餘則為選用欄。 下表說明了這些列及其在架構構建中的角色。
+要使用此終結點，必須先建立具有相應列標題和相應值的CSV檔案。 某些列是必需的，而其餘列是可選的。 下表介紹了這些列及其在架構構建中的角色。
 
 | CSV標題位置 | CSV標題名稱 | 必填/選填 | 說明 |
 | --- | --- | --- | --- |
-| 1 | `isIgnored` | 選填 | 包含時，並設為 `true`，表示欄位尚未準備好供API上傳，因此應忽略。 |
-| 2 | `isCustom` | 必填 | 指出欄位是否為自訂欄位。 |
-| 3 | `fieldGroupId` | 選填 | 自訂欄位應與之關聯的欄位群組ID。 |
-| 4 | `fieldGroupName` | （請參閱說明） | 要與此欄位關聯的欄位組的名稱。<br><br>自訂欄位不會擴充現有標準欄位為選用。 如果保留為空白，系統將自動指定名稱。<br><br>標準欄位或擴充標準欄位群組的自訂欄位(用於查詢 `fieldGroupId`. |
-| 5 | `fieldPath` | 必填 | 欄位的完整XED點記號路徑。 要包括標準欄位組中的所有欄位(如 `fieldGroupName`)，將值設定為 `ALL`. |
-| 6 | `displayName` | 選填 | 欄位的標題或易記顯示名稱。 也可以是標題的別名（如果存在）。 |
-| 7 | `fieldDescription` | 選填 | 欄位的說明。 也可以是說明的別名（如果存在）。 |
-| 8 | `dataType` | （請參閱說明） | 指出 [基本資料類型](../schema/field-constraints.md#basic-types) 欄位。 所有自訂欄位皆為必要。<br><br>若 `dataType` 設為 `object`，或 `properties` 或 `$ref` 也需要為同一列定義，但不能同時定義兩者。 |
-| 9 | `isRequired` | 選填 | 指出資料擷取是否需要欄位。 |
-| 10 | `isArray` | 選填 | 指示欄位是否為其指示的陣列 `dataType`. |
+| 1 | `isIgnored` | 選填 | 包括時，並設定為 `true`，表示該欄位未準備好進行API上載，應忽略。 |
+| 2 | `isCustom` | 必填 | 指示該欄位是否為自定義欄位。 |
+| 3 | `fieldGroupId` | 選填 | 自定義欄位應與的欄位組的ID。 |
+| 4 | `fieldGroupName` | （請參閱說明） | 要與此欄位關聯的欄位組的名稱。<br><br>對於不擴展現有標準欄位的自定義欄位，可選。 如果留空，系統將自動分配名稱。<br><br>標準欄位或擴展標準欄位組的自定義欄位是必需的，用於查詢 `fieldGroupId`。 |
+| 5 | `fieldPath` | 必填 | 欄位的完整XED點符號路徑。 要包括標準欄位組中的所有欄位（如下所示） `fieldGroupName`)，將值設定為 `ALL`。 |
+| 6 | `displayName` | 選填 | 欄位的標題或友好顯示名稱。 如果存在別名，也可以是標題的別名。 |
+| 7 | `fieldDescription` | 選填 | 欄位的說明。 如果存在，也可以是說明的別名。 |
+| 8 | `dataType` | （請參閱說明） | 指示 [基本資料類型](../schema/field-constraints.md#basic-types) 的下界。 所有自定義欄位都是必需的。<br><br>如果 `dataType` 設定為 `object`或 `properties` 或 `$ref` 也需要為同一行定義，但不能同時定義兩行。 |
+| 9 | `isRequired` | 選填 | 指示資料接收是否需要該欄位。 |
+| 10 | `isArray` | 選填 | 指示欄位是否為其指示的陣列 `dataType`。 |
 | 11 | `isIdentity` | 選填 | 指示該欄位是否為標識欄位。 |
-| 12 | `identityNamespace` | 若 `isIdentity` 為true | 此 [身分命名空間](../../identity-service/namespaces.md) （用於標識欄位）。 |
-| 13 | `isPrimaryIdentity` | 選填 | 指示欄位是否為架構的主要標識。 |
-| 14 | `minimum` | 選填 | （僅限數值欄位）欄位的最小值。 |
-| 15 | `maximum` | 選填 | （僅限數值欄位）欄位的最大值。 |
-| 16 | `enum` | 選填 | 欄位的列舉值清單，以陣列(例如 `[value1,value2,value3]`)。 |
-| 17 | `stringPattern` | 選填 | （僅限字串欄位）規則運算式模式，字串值必須符合，才能在資料擷取期間傳遞驗證。 |
-| 18 | `format` | 選填 | （僅限字串欄位）字串欄位的格式。 |
-| 19 | `minLength` | 選填 | （僅限字串欄位）字串欄位的最小長度。 |
+| 12 | `identityNamespace` | 如果 `isIdentity` 為真 | 的 [標識命名空間](../../identity-service/namespaces.md) 的子菜單。 |
+| 13 | `isPrimaryIdentity` | 選填 | 指示欄位是否是架構的主標識。 |
+| 14 | `minimum` | 選填 | （僅適用於數字欄位）欄位的最小值。 |
+| 15 | `maximum` | 選填 | （僅適用於數字欄位）欄位的最大值。 |
+| 16 | `enum` | 選填 | 欄位的枚舉值清單，表示為陣列(例如， `[value1,value2,value3]`)。 |
+| 17 | `stringPattern` | 選填 | （僅適用於字串欄位）規則運算式模式，字串值必須匹配，才能在資料接收期間通過驗證。 |
+| 18 | `format` | 選填 | （僅適用於字串欄位）字串欄位的格式。 |
+| 19 | `minLength` | 選填 | （僅適用於字串欄位）字串欄位的最小長度。 |
 | 20 | `maxLength` | 選填 | （僅適用於字串欄位）字串欄位的最大長度。 |
-| 21 | `properties` | （請參閱說明） | 若 `dataType` 設為 `object` 和 `$ref` 未定義。 這會將物件內文定義為JSON字串(例如 `{"myField": {"type": "string"}}`)。 |
-| 22 | `$ref` | （請參閱說明） | 若 `dataType` 設為 `object` 和 `properties` 未定義。 這會定義 `$id` 對象類型的引用對象(例如 `https://ns.adobe.com/xdm/context/person`)。 |
-| 23 | `comment` | 選填 | 當 `isIgnored` 設為 `true`，則此欄用於提供結構的標題資訊。 |
+| 21 | `properties` | （請參閱說明） | 如果 `dataType` 設定為 `object` 和 `$ref` 未定義。 這將對象主體定義為JSON字串(如 `{"myField": {"type": "string"}}`)。 |
+| 22 | `$ref` | （請參閱說明） | 如果 `dataType` 設定為 `object` 和 `properties` 未定義。 這定義了 `$id` 對象類型的引用對象(例如 `https://ns.adobe.com/xdm/context/person`)。 |
+| 23 | `comment` | 選填 | 當 `isIgnored` 設定為 `true`，此列用於提供架構的標題資訊。 |
 
 {style="table-layout:auto"}
 
-請參閱下列內容 [CSV範本](../assets/sample-csv-template.csv) 以決定CSV檔案的格式。
+請參閱以下內容 [CSV模板](../assets/sample-csv-template.csv) 確定CSV檔案的格式。
 
-## 從CSV檔案建立匯出裝載
+## 從CSV檔案建立導出負載
 
-設定CSV範本後，即可將檔案傳送至 `/rpc/csv2schema` 並將其轉換為匯出裝載。
+設定CSV模板後，可以將檔案發送到 `/rpc/csv2schema` 並將其轉換為導出負載。
 
 **API格式**
 
@@ -65,7 +65,7 @@ POST /rpc/csv2schema
 
 **要求**
 
-要求裝載必須使用表單資料作為其格式。 必填的表單欄位如下所示。
+請求負載必須使用表單資料作為其格式。 下面顯示了必需的表單欄位。
 
 ```shell
 curl -X POST \
@@ -82,16 +82,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `csv-file` | 儲存在本機電腦上的CSV範本路徑。 |
-| `schema-class-id` | 此 `$id` XDM的 [類](../schema/composition.md#class) 此架構將採用的資料。 |
+| `csv-file` | 儲存在本地電腦上的CSV模板的路徑。 |
+| `schema-class-id` | 的 `$id` XDM [類](../schema/composition.md#class) 此架構將採用的。 |
 | `schema-name` | 架構的顯示名稱。 |
-| `schema-description` | 結構的說明。 |
+| `schema-description` | 架構的說明。 |
 
 **回應**
 
-成功的回應會傳回從CSV檔案產生的匯出裝載。 裝載採用陣列的形式，而每個陣列項目都是代表架構之相依XDM元件的物件。 選取下方的區段，以檢視從CSV檔案產生的匯出裝載的完整範例。
+成功的響應返回從CSV檔案生成的導出負載。 負載採用陣列的形式，並且每個陣列項都是表示模式的從屬XDM元件的對象。 選擇下面的部分以查看從CSV檔案生成的導出負載的完整示例。
 
-+++ 回應裝載範例
++++ 響應負載示例
 
 ```json
 [
@@ -358,8 +358,8 @@ curl -X POST \
 
 +++
 
-## 匯入結構裝載
+## 導入架構負載
 
-從CSV檔案產生匯出裝載後，您可以將該裝載傳送至 `/rpc/import` 端點來產生架構。
+從CSV檔案生成導出負載後，可以將該負載發送到 `/rpc/import` 終結點以生成架構。
 
-請參閱 [匯入端點指南](./import.md) 有關如何從匯出裝載產生綱要的詳細資訊。
+查看 [導入終結點指南](./import.md) 有關如何從導出負載生成架構的詳細資訊。

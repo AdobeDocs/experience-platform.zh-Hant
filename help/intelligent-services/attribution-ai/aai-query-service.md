@@ -1,8 +1,8 @@
 ---
-keywords: 前瞻分析；歸因ai；歸因ai深入分析；AAI查詢服務；歸因查詢；歸因分數
+keywords: 見解；屬性；屬性；屬性；屬性；屬性；屬性；屬性；屬性；屬性；屬性；attribution ai insights;AAI查詢服務；屬性查詢；屬性得分
 feature: Attribution AI
-title: 使用查詢服務分析歸因分數
-description: 了解如何使用Adobe Experience Platform Query Service分析Attribution AI分數。
+title: 基於查詢服務的屬性評分分析
+description: 瞭解如何使用Adobe Experience Platform查詢服務來分析Attribution AI分數。
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
 workflow-type: tm+mt
@@ -11,61 +11,61 @@ ht-degree: 0%
 
 ---
 
-# 使用Query Service分析歸因分數
+# 使用查詢服務分析屬性得分
 
-資料中的每一列代表轉換，相關接觸點的資訊會儲存為 `touchpointsDetail` 欄。
+資料中的每一行表示轉換，在轉換中，相關觸點的資訊作為結構陣列儲存在 `touchpointsDetail` 的雙曲餘切值。
 
-| 接觸點資訊 | 欄 |
+| 觸點資訊 | 欄 |
 | ---------------------- | ------ |
-| 接觸點名稱 | `touchpointsDetail. touchpointName` |
-| 接觸點管道 | `touchpointsDetail.touchPoint.mediaChannel` |
-| 接觸點Attribution AI演算法分數 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| 觸點名稱 | `touchpointsDetail. touchpointName` |
+| 觸點通道 | `touchpointsDetail.touchPoint.mediaChannel` |
+| 觸點Attribution AI算法得分 | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
-## 尋找資料路徑
+## 查找資料路徑
 
-在Adobe Experience Platform UI中，選取 **[!UICONTROL 資料集]** 的下一頁。 此 **[!UICONTROL 資料集]** 頁。 下一步，選取 **[!UICONTROL 瀏覽]** 標籤，然後找到Attribution AI分數的輸出資料集。
+在Adobe Experience PlatformUI中，選擇 **[!UICONTROL 資料集]** 的子菜單。 的 **[!UICONTROL 資料集]** 的子菜單。 接下來，選擇 **[!UICONTROL 瀏覽]** 頁籤，並查找Attribution AI分數的輸出資料集。
 
-![存取您的模型](./images/aai-query/datasets_browse.png)
+![訪問模型](./images/aai-query/datasets_browse.png)
 
-選取您的輸出資料集。 資料集活動頁面隨即顯示。
+選擇輸出資料集。 此時將顯示資料集活動頁。
 
-![資料集活動頁面](./images/aai-query/select_preview.png)
+![資料集活動頁](./images/aai-query/select_preview.png)
 
-在資料集活動頁面中，選取 **[!UICONTROL 預覽資料集]** 在右上角，預覽資料並確認資料已如預期擷取。
+在資料集活動頁中，選擇 **[!UICONTROL 預覽資料集]** 在右上角預覽資料，並確保按預期接收資料。
 
 ![預覽資料集](./images/aai-query/preview_dataset.JPG)
 
-預覽您的資料後，請在右側邊欄中選取結構。 畫面隨即顯示彈出式視窗，其中包含架構名稱和說明。 選擇架構名稱超連結以重定向到計分架構。
+預覽資料後，在右欄中選擇架構。 出現帶方案名稱和說明的跨距。 選擇方案名稱超連結以重定向到計分方案。
 
-![選擇架構](./images/aai-query/select_schema.png)
+![選擇方案](./images/aai-query/select_schema.png)
 
-使用計分結構，您可以選取或搜尋值。 選取後， **[!UICONTROL 欄位屬性]** 側邊欄開啟，供您複製路徑以用於建立查詢。
+使用計分方案，可以選擇或搜索值。 選擇後， **[!UICONTROL 欄位屬性]** 側軌開啟，允許您複製路徑以用於建立查詢。
 
 ![複製路徑](./images/aai-query/copy_path.png)
 
 ## 訪問查詢服務
 
-若要從Platform UI記憶體取查詢服務，請從選取 **[!UICONTROL 查詢]** 在左側導覽器中，選取 **[!UICONTROL 瀏覽]** 標籤。 會載入先前儲存的查詢清單。
+要從平台UI中訪問查詢服務，請通過選擇 **[!UICONTROL 查詢]** 在左側導航中，選擇 **[!UICONTROL 瀏覽]** 頁籤。 載入先前保存的查詢的清單。
 
 ![查詢服務瀏覽](./images/aai-query/query_tab.png)
 
-下一步，選擇 **[!UICONTROL 建立查詢]** 在右上角。 查詢編輯器載入。 使用查詢編輯器，您可以開始使用計分資料建立查詢。
+下一步，選擇 **[!UICONTROL 建立查詢]** 在右上角。 將載入查詢編輯器。 使用查詢編輯器，您可以開始使用計分資料建立查詢。
 
 ![查詢編輯器](./images/aai-query/query_example.png)
 
-如需查詢編輯器的詳細資訊，請造訪 [查詢編輯器使用手冊](../../query-service/ui/user-guide.md).
+有關查詢編輯器的詳細資訊，請訪問 [查詢編輯器使用手冊](../../query-service/ui/user-guide.md)。
 
-## 歸因分數分析的查詢範本
+## 用於屬性得分分析的查詢模板
 
-以下查詢可作為不同分數分析案例的範本。 您需要取代 `_tenantId` 和 `your_score_output_dataset` 以及計分輸出架構中找到的正確值。
+下面的查詢可用作不同得分分析方案的模板。 您需要 `_tenantId` 和 `your_score_output_dataset` 在計分輸出架構中找到正確的值。
 
 >[!NOTE]
 >
-> 根據您資料的擷取方式，下方使用的值如 `timestamp` 可能是不同的格式。
+> 根據資料的接收方式，下面使用的值如 `timestamp` 可能是另一種格式。
 
-### 驗證範例
+### 驗證示例
 
-**依轉換事件（在轉換視窗內）的轉換總數**
+**按轉換事件（在轉換窗口中）進行的轉換總數**
 
 ```sql
     SELECT conversionName,
@@ -88,7 +88,7 @@ ht-degree: 0%
         conversionName
 ```
 
-**僅限轉換的事件總數（在轉換視窗內）**
+**僅轉換事件總數（在轉換窗口中）**
 
 ```sql
     SELECT
@@ -104,9 +104,9 @@ ht-degree: 0%
         conversionName
 ```
 
-### 趨勢分析範例
+### 趨勢分析示例
 
-**每天轉換次數**
+**每天轉換數**
 
 ```sql
     SELECT conversionName,
@@ -129,7 +129,7 @@ ht-degree: 0%
 
 ### 分佈分析示例
 
-**依定義類型（在轉換視窗中）的轉換路徑上的接觸點量**
+**按定義類型（在轉換窗口中）顯示轉換路徑上的接點數**
 
 ```sql
     SELECT conversionName,
@@ -153,9 +153,9 @@ ht-degree: 0%
         conversionName, tp_count DESC
 ```
 
-### 分析產生範例
+### 真知灼見生成示例
 
-**依接觸點和轉換日期劃分的增量件數（在轉換視窗中）**
+**按觸點和轉換日期（在轉換窗口中）分解的增量單位**
 
 ```sql
     SELECT conversionName,
@@ -180,7 +180,7 @@ ht-degree: 0%
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**依接觸點和接觸點日期（在轉換視窗中）劃分的增量件數**
+**按觸點和觸點日期（在轉換窗口中）劃分的增量單位**
 
 ```sql
     SELECT conversionName,
@@ -206,7 +206,7 @@ ht-degree: 0%
     LIMIT 20
 ```
 
-**所有計分模型（在轉換視窗中）的特定接觸點類型的匯總分數**
+**所有評分模型（在轉換窗口中）的某類觸地點的聚合得分**
 
 ```sql
     SELECT
@@ -237,9 +237,9 @@ ht-degree: 0%
         conversionName, touchpointName
 ```
 
-**進階 — 路徑長度分析**
+**高級 — 路徑長度分析**
 
-取得每個轉換事件類型的路徑長度分佈：
+獲取每個轉換事件類型的路徑長度分佈：
 
 ```sql
     WITH agg_path AS (
@@ -268,9 +268,9 @@ ht-degree: 0%
         conversionName, path_length
 ```
 
-**進階 — 轉換路徑分析上的不同接觸點數量**
+**高級 — 轉換路徑分析上的點數不同**
 
-取得每個轉換事件類型的轉換路徑上不同接觸點數目的分佈：
+獲取每個轉換事件類型的轉換路徑上不同觸點數的分佈：
 
 ```sql
     WITH agg_path AS (
@@ -299,13 +299,13 @@ ht-degree: 0%
         conversionName, num_dist_tp
 ```
 
-### 平面化和展開範例
+### 架構展平和展開示例
 
-此查詢會將結構列拼合為多個單數列，並將陣列分解為多個行。 這有助於將歸因分數轉換為CSV格式。 此查詢的輸出具有一個轉換，以及每行中與該轉換相對應的接觸點之一。
+此查詢將結構列拼合為多個單數列，並將分解陣列分解為多個行。 這有助於將屬性分數轉換為CSV格式。 此查詢的輸出在每行中具有一個轉換和一個對應於該轉換的觸點。
 
 >[!TIP]
 >
-> 在此範例中，您需要取代 `{COLUMN_NAME}` 除 `_tenantId` 和 `your_score_output_dataset`. 此 `COLUMN_NAME` 變數可取用在設定Attribution AI模型期間新增的選用傳遞欄名稱（報表欄）的值。 請查看您的計分輸出架構以尋找 `{COLUMN_NAME}` 完成此查詢所需的值。
+> 在此示例中，您需要 `{COLUMN_NAME}` 除了 `_tenantId` 和 `your_score_output_dataset`。 的 `COLUMN_NAME` 變數可以採用配置Attribution AI模型期間添加的可選傳遞列名（報告列）的值。 請查看您的評分輸出架構以查找 `{COLUMN_NAME}` 完成此查詢所需的值。
 
 ```sql
 SELECT 

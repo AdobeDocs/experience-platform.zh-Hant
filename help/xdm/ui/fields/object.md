@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API;API;XDM;XDM系統；體驗資料模型；資料模型；ui；工作區；物件；欄位；
+keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；經驗資料模型；資料模型；ui;workspace;object;field;
 solution: Experience Platform
-title: 在UI中定義物件欄位
-description: 了解如何在Experience Platform使用者介面中定義物件類型欄位。
+title: 在UI中定義對象欄位
+description: 瞭解如何在Experience Platform用戶介面中定義對象類型欄位。
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
 workflow-type: tm+mt
@@ -11,26 +11,26 @@ ht-degree: 0%
 
 ---
 
-# 在UI中定義物件欄位
+# 在UI中定義對象欄位
 
-Adobe Experience Platform可讓您完全自訂自訂Experience Data Model(XDM)類別、結構欄位群組和資料類型的結構。 若要在自訂XDM資源中組織與巢狀內嵌相關欄位，您可以定義物件類型欄位，其中可包含其他子欄位。
+Adobe Experience Platform允許您完全自定義自定義體驗資料模型(XDM)類、架構欄位組和資料類型的結構。 為了在自定義XDM資源中組織和嵌套相關欄位，可以定義可包含附加子欄位的對象類型欄位。
 
-當 [定義新欄位](./overview.md#define) 在Adobe Experience Platform使用者介面中，使用 **[!UICONTROL 類型]** 下拉式清單，選取「[!UICONTROL 物件]」。
+當 [定義新欄位](./overview.md#define) 在Adobe Experience Platform用戶介面中，使用 **[!UICONTROL 類型]** 下拉清單，選擇&quot;[!UICONTROL 對象]清單中。
 
 ![](../../images/ui/fields/special/object.png)
 
-選擇 **[!UICONTROL 套用]** 將對象添加到架構中。 畫布會更新，以使用 [!UICONTROL 物件] 套用的資料類型，包括編輯子欄位和新增子欄位至物件的控制項。
+選擇 **[!UICONTROL 應用]** 將對象添加到架構。 畫布將更新以使用 [!UICONTROL 對象] 應用的資料類型，包括用於編輯子欄位和將子欄位添加到對象的控制項。
 
 ![](../../images/ui/fields/special/object-applied.png)
 
-若要新增子欄位，請選取 **加號(+)** 表徵圖。 物件下方會顯示新欄位，並提供右側邊欄中設定子欄位的控制項。
+要添加子欄位，請選擇 **加(+)** 表徵圖。 對象下方將出現一個新欄位，其中包含用於在右滑軌中配置子欄位的控制項。
 
 ![](../../images/ui/fields/special/object-add-field.png)
 
-設定子欄位並選取後 **[!UICONTROL 套用]**，您可以繼續使用相同程式將欄位新增至物件。 您也可以新增屬於物件本身的子欄位，讓您盡可能深地巢狀內嵌欄位。
+配置子欄位並選擇後 **[!UICONTROL 應用]**，可以使用同一進程繼續向對象添加欄位。 您還可以添加子欄位，這些子欄位本身是對象，從而允許您根據需要將欄位嵌套得盡可能深。
 
-完成對象的構建後，您可能會發現要在不同的類和欄位組中重複使用其結構。 在此情況下，您可以選擇將對象轉換為資料類型。 請參閱 [將對象轉換為資料類型](../resources/data-types.md#convert) （位於資料類型UI指南中）以取得詳細資訊。
+構建完對象後，您可能會發現要在不同的類和欄位組中重複使用其結構。 在這種情況下，您可以選擇將對象轉換為資料類型。 請參閱 [將對象轉換為資料類型](../resources/data-types.md#convert) 的子菜單。
 
 ## 後續步驟
 
-本指南說明如何在UI中定義物件欄位。 請參閱 [定義UI中的欄位](./overview.md#special) 若要了解如何定義 [!DNL Schema Editor].
+本指南介紹如何在UI中定義對象欄位。 請參閱 [定義UI中的欄位](./overview.md#special) 瞭解如何在 [!DNL Schema Editor]。

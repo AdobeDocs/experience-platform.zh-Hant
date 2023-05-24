@@ -2,10 +2,10 @@
 title: 事件轉發擴展引用
 description: 在Adobe Experience Platform查找事件轉發擴展的文檔。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
+source-git-commit: 24220c24af89e3eabc3d21854c1f70a418b2da59
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 18%
+source-wordcount: '165'
+ht-degree: 17%
 
 ---
 
@@ -33,6 +33,7 @@ ht-degree: 18%
 * [[!DNL Braze]](./braze/overview.md)
 * [核心](./core/overview.md)
 * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)*
+* [Facebook轉換API](https://exchange.adobe.com/apps/ec/105509)
 * [Google廣告增強轉換](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!UICONTROL MicrosoftAzure]](./azure/overview.md)
@@ -41,5 +42,4 @@ ht-degree: 18%
 * [[!DNL Pinterest]](./pinterest/overview.md)
 * [快照轉換API](https://exchange.adobe.com/apps/ec/108550)*
 * [[!DNL Splunk]](./splunk/overview.md)
-* [[!DNL Twitter]](./twitter/overview.md)
 * [[!DNL Zendesk] 事件API](./zendesk/overview.md)

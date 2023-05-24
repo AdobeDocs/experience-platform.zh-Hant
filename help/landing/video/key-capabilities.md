@@ -1,6 +1,6 @@
 ---
-title: 關鍵Experience Platform功能
-description: 此影片會審視Adobe Experience Platform&mdash；建立可操作、智慧、即時的客戶設定檔；使用AI/ML模型和資料查詢豐富資料並獲得更多見解；運用開放且可組合的元件進行創新；增強即時體驗的傳送和個人化；在治理、安全和隱私控制方面獲得信任。
+title: 關鍵Experience Platform
+description: 此視頻回顧了Adobe Experience Platform&mdash；建立可操作、智慧、即時的客戶配置檔案；利用AI/ML模型和資料查詢豐富資料，獲得更多見解；用開放和可組合的元件進行創新；增強即時體驗的交付和個性化；在治理、安全和隱私控制方面獲得信任。
 kt: 4332
 audience: all
 doc-type: video
@@ -14,14 +14,14 @@ ht-degree: 0%
 
 ---
 
-# 主要Experience Platform功能
+# 關鍵Experience Platform
 
-本影片會檢閱Experience Platform的主要功能：
+此視頻回顧了Experience Platform的關鍵功能：
 
-1. 建立可操作、智慧、即時的客戶設定檔
-1. 使用AI/ML模型和資料查詢擴充資料並衍生更深入分析
-1. 使用開放且可組合的元件進行創新
-1. 增強即時體驗的傳送和個人化
-1. 獲得控管、安全性和隱私權控制的信任
+1. 建立可操作、智慧、即時的客戶配置檔案
+1. 利用AI/ML模型和資料查詢豐富資料並獲得更多見解
+1. 使用開放和可組合的元件進行創新
+1. 增強即時體驗的交付和個性化
+1. 通過治理、安全和隱私控制獲得信任
 
 >[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)

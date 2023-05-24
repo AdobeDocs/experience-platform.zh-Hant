@@ -1,6 +1,6 @@
 ---
 title: Marketo Munchkin 擴充功能 總覽
-description: 了解Adobe Experience Platform中的Marketo Munchkin標籤擴充功能。
+description: 瞭解Marketo在Adobe Experience Platform的Munchkin標籤擴展。
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 75%
 
 ---
 
-# Marketo Munchkin擴充功能概觀
+# Marketo·蒙奇金分機概述
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch在Adobe Experience Platform中已重新命名為一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 此擴充功能可整合 [!DNL Marketo Munchkin] JavaScript 追蹤程式碼與您的屬性。[!DNL Marketo Munchkin] JavaScript 可追蹤一般使用者頁面瀏覽次數，以及您 Marketo 登陸頁面和外部網頁的導覽次數。
 
 ## 安裝 Marketo Munchkin 擴充功能
 
-若 [!DNL Marketo Munchkin] 尚未安裝擴充功能，請開啟屬性，然後選取 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在 [!DNL Marketo Munchkin] 擴充功能，然後選取 **[!UICONTROL 安裝]**.
+如果 [!DNL Marketo Munchkin] 尚未安裝擴展，請開啟您的屬性，然後選擇 **[!UICONTROL 擴展>目錄]**，懸停在 [!DNL Marketo Munchkin] 擴展，然後選擇 **[!UICONTROL 安裝]**。
 
 此擴充功能沒有必要的設定。
 

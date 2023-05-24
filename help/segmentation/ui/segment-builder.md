@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段服務；分段服務；使用手冊；ui指南；分段ui指南；區段產生器；區段產生器；
+keywords: Experience Platform；主題；熱門主題；分段服務；分段服務；分段服務；使用手冊；使用手冊；分段使用手冊；分段使用手冊；分段生成器；分段生成器；
 solution: Experience Platform
-title: 區段產生器UI指南
-description: Adobe Experience Platform UI中的「區段產生器」提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
+title: 段生成器UI指南
+description: Adobe Experience PlatformUI中的段生成器提供了一個豐富的工作區，允許您與配置檔案資料元素交互。 工作區為生成和編輯規則提供了直觀的控制項，如用於表示資料屬性的拖放拼貼。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
 workflow-type: tm+mt
@@ -13,222 +13,222 @@ ht-degree: 6%
 
 # [!DNL Segment Builder] UI指南
 
-[!DNL Segment Builder] 提供豐富的工作區，可讓您與 [!DNL Profile] 資料元素。 工作區提供建立和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
+[!DNL Segment Builder] 提供豐富的工作區，允許您與 [!DNL Profile] 資料元素。 工作區為生成和編輯規則提供了直觀的控制項，如用於表示資料屬性的拖放拼貼。
 
-![區段產生器UI隨即顯示。](../images/ui/segment-builder/segment-builder.png)
+![將顯示段生成器UI。](../images/ui/segment-builder/segment-builder.png)
 
-## 區段定義建置區塊 {#building-blocks}
+## 段定義構件塊 {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
 >abstract="構成區段的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
 
-區段定義的基本組成要素為屬性和事件。 此外，現有對象中包含的屬性和事件也可作為新定義的元件。
+段定義的基本構造塊是屬性和事件。 此外，現有受眾中包含的屬性和事件可以用作新定義的元件。
 
-您可以在 **[!UICONTROL 欄位]** 區段 [!DNL Segment Builder] 工作區。 **[!UICONTROL 欄位]** 包含每個主要建置區塊的索引標籤：&quot;[!UICONTROL 屬性]&quot;, &quot;[!UICONTROL 事件]&quot;和&quot;[!UICONTROL 對象]」。
+你可以在 **[!UICONTROL 欄位]** 的 [!DNL Segment Builder] 工作區。 **[!UICONTROL 欄位]** 包含每個主要構造塊的頁籤：&quot;[!UICONTROL 屬性]&quot;, &quot;[!UICONTROL 事件]&quot;和&quot;[!UICONTROL 觀眾]。
 
-![區段產生器的欄位區段會反白顯示。](../images/ui/segment-builder/segment-fields.png)
+![段生成器的欄位部分會加亮顯示。](../images/ui/segment-builder/segment-fields.png)
 
 ### 屬性
 
-此 **[!UICONTROL 屬性]** 索引標籤可讓您瀏覽 [!DNL Profile] 屬於的屬性 [!DNL XDM Individual Profile] 類別。 每個資料夾都可展開，以顯示其他屬性，其中每個屬性都是一個圖磚，可拖曳至工作區中央的規則產生器畫布上。 此 [規則產生器畫布](#rule-builder-canvas) 在本指南的稍後部分會詳細說明。
+的 **[!UICONTROL 屬性]** 頁籤 [!DNL Profile] 屬於屬性 [!DNL XDM Individual Profile] 類。 可展開每個資料夾以顯示其他屬性，其中每個屬性都是一個磁貼，可拖動到工作區中心的規則生成器畫布上。 的 [規則生成器畫布](#rule-builder-canvas) 將在本指南的後面更詳細地討論。
 
-![「區段產生器」欄位的屬性區段會反白顯示。](../images/ui/segment-builder/attributes.png)
+![「段生成器」(Segment Builder)欄位的屬性部分會突出顯示。](../images/ui/segment-builder/attributes.png)
 
 ### 活動
 
-此 **[!UICONTROL 事件]** 標籤可讓您根據使用 [!DNL XDM ExperienceEvent] 資料元素。 您也可以在 **[!UICONTROL 事件]** 索引標籤，此為常用事件的集合，可讓您更快速建立區段。
+的 **[!UICONTROL 事件]** 頁籤允許您根據使用 [!DNL XDM ExperienceEvent] 資料元素。 您還可以在 **[!UICONTROL 事件]** 頁籤，這是常用事件的集合，使您能夠更快地建立段。
 
-除了能夠瀏覽 [!DNL ExperienceEvent] 元素，您也可以搜尋事件類型。 事件類型使用與相同的編碼邏輯 [!DNL ExperienceEvents]，而無須透過 [!DNL XDM ExperienceEvent] 類別，尋找正確的事件。 例如，使用搜尋列來搜尋「購物車」時，會傳回「事件類型」[!UICONTROL AddCart]&quot;和&quot;[!UICONTROL RemoveCart]「 」，這是建立區段定義時最常用的兩個購物車動作。
+除了能夠瀏覽 [!DNL ExperienceEvent] 元素，您也可以搜索事件類型。 事件類型使用與 [!DNL ExperienceEvents]，不要求您搜索 [!DNL XDM ExperienceEvent] 類尋找正確的事件。 例如，使用搜索欄搜索&quot;cart&quot;將返回事件類型&quot;[!UICONTROL 添加購物車]&quot;和&quot;[!UICONTROL 刪除購物車]「 」，這是生成段定義時最常用的兩種操作。
 
-您可以在搜尋列中輸入元件名稱，以搜尋任何類型的元件，搜尋列會使用 [Lucene的搜索語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 在輸入整個字詞時，搜尋結果會開始填入。 例如，若要根據XDM欄位建立規則 `ExperienceEvent.commerce.productViews`，開始在搜尋欄位中輸入「產品檢視」。 輸入&quot;product&quot;一字後，搜尋結果就會開始顯示。 每個結果都包含其所屬的物件階層。
+可以通過在搜索欄中鍵入元件名稱來搜索任何類型的元件，該搜索欄使用 [Lucene的搜索語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 在輸入整個詞時，搜索結果開始填充。 例如，要基於XDM欄位生成規則 `ExperienceEvent.commerce.productViews`，開始在搜索欄位中鍵入「product views」。 鍵入「product」一詞後，將開始顯示搜索結果。 每個結果都包括它所屬的對象層次結構。
 
 >[!NOTE]
 >
->貴組織定義的自訂結構欄位可能需要最多24小時才會顯示，並可在建立規則時使用。
+>您的組織定義的自定義架構欄位可能需要24小時才能顯示，並且可用於構建規則。
 
-然後，您可以輕鬆拖放 [!DNL ExperienceEvents] 和[!UICONTROL 事件類型]」填入區段定義中。
+然後可以輕鬆拖放 [!DNL ExperienceEvents] 和[!UICONTROL 事件類型]」。
 
-![區段產生器UI的事件區段會反白顯示。](../images/ui/segment-builder/events.png)
+![段生成器UI的事件部分將突出顯示。](../images/ui/segment-builder/events.png)
 
-依預設，只會顯示資料存放區中填入的結構欄位。 這包括「[!UICONTROL 事件類型]」。 若[!UICONTROL 事件類型]&quot;清單不可見，或者您只能選擇&quot;[!UICONTROL 任何]&quot;作為&quot;[!UICONTROL 事件類型]」，選擇 **齒輪表徵圖** 下一頁 **[!UICONTROL 欄位]**，然後選取 **[!UICONTROL 顯示完整的XDM架構]** 在 **[!UICONTROL 可用欄位]**. 選取 **齒輪表徵圖** 返回 **[!UICONTROL 欄位]** 頁簽，您現在應該可以檢視多個「[!UICONTROL 事件類型]「 」和綱要欄位，無論其是否包含資料。
+預設情況下，只顯示資料儲存中填充的架構欄位。 這包括「」[!UICONTROL 事件類型]。 如果[!UICONTROL 事件類型]「 」清單不可見，或者您只能選擇「 」[!UICONTROL 任意]&quot;作為&quot;[!UICONTROL 事件類型]，選擇 **齒輪表徵圖** 下 **[!UICONTROL 欄位]**，然後選擇 **[!UICONTROL 顯示完整XDM架構]** 在 **[!UICONTROL 可用欄位]**。 選擇 **齒輪表徵圖** 返回 **[!UICONTROL 欄位]** 頁籤，您現在應能查看多個&quot;[!UICONTROL 事件類型]&quot;和架構欄位，無論它們是否包含資料。
 
-![會反白顯示選項按鈕，讓您選擇只顯示含有資料的欄位或顯示所有XDM欄位。](../images/ui/segment-builder/show-populated.png)
+![選中的單選按鈕僅顯示帶資料的欄位或顯示所有XDM欄位。](../images/ui/segment-builder/show-populated.png)
 
-#### Adobe Analytics報表套裝資料集
+#### Adobe Analytics報告套件資料集
 
-您可以使用單一或多個Adobe Analytics報表套裝的資料做為區段內的事件。
+您可以將來自單個或多個Adobe Analytics報告套件的資料用作分段內的事件。
 
-使用單一Analytics報表套裝的資料時，Platform會自動將描述元和好記名稱新增至eVar，以便在中尋找這些欄位 [!DNL Segment Builder].
+使用單個分析報告套件中的資料時，平台將自動向eVars添加描述符和友好名稱，使查找這些欄位更容易 [!DNL Segment Builder]。
 
-![此影像顯示如何以好記的名稱對應一般變數(eVar)。](../images/ui/segment-builder/single-report-suite.png)
+![顯示如何使用用戶友好名稱映射泛型變數(eVar)的影像。](../images/ui/segment-builder/single-report-suite.png)
 
-使用來自多個Analytics報表套裝的資料時，平台 **不能** 自動將描述元或好記名稱新增至eVar。 因此，您必須先對應至XDM欄位，才能使用Analytics報表套裝的資料。 如需將Analytics變數對應至XDM的詳細資訊，請參閱 [Adobe Analytics來源連線指南](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping).
+使用來自多個分析報告套件的資料時，平台 **不能** 自動將描述符或友好名稱添加到eVars。 因此，在使用分析報告套件中的資料之前，必須映射到XDM欄位。 有關將分析變數映射到XDM的詳細資訊，請參見 [Adobe Analytics源連接指南](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping)。
 
-例如，假設您有兩個報表套裝，且變數如下：
+例如，假設您有兩個具有以下變數的報告套件：
 
-| 欄位 | 報表套裝結構A | 報表套裝結構B |
+| 欄位 | 報表套件架構A | 報表套件架構B |
 | ----- | --------------------- | --------------------- |
-| eVar1 | 反向連結網域 | 登入Y/N |
-| eVar2 | 頁面名稱 | 會員忠誠度ID |
+| eVar1 | 反向連結網域 | 已登錄Y/N |
+| eVar2 | 頁面名稱 | 成員會員ID |
 | eVar3 | URL | 頁面名稱 |
-| eVar4 | 搜尋詞 | 產品名稱 |
+| eVar4 | 搜索詞 | 產品名稱 |
 | event1 | 點擊次數 | 頁面檢視 |
 | event2 | 頁面檢視 | 購物車新增 |
 | event3 | 購物車新增 | 結帳 |
 | event4 | 購買 | 購買 |
 
-在此情況下，您可以使用下列結構來對應兩個報表套裝：
+在這種情況下，可以使用以下架構映射兩個報表套件：
 
-![此影像顯示如何將兩個報表套裝對應至一個聯合結構。](../images/ui/segment-builder/union-schema.png)
+![顯示兩個報表套件如何映射到一個聯合架構的影像。](../images/ui/segment-builder/union-schema.png)
 
 >[!NOTE]
 >
->一般eVar值仍會填入，您應 **not** 在區段定義中使用它們（如果可能），因為值可能具有與其報表中原本不同的意義。
+>當通用eVar值仍被填充時，應 **不** 在段定義中（如果可能）使用它們，因為這些值可能與它們最初在報告中的內容不同。
 
-報表套裝完成對應後，您就可以在與設定檔相關的工作流程和區段中使用這些新對應的欄位。
+一旦映射了報表套件，您就可以在與配置檔案相關的工作流和分段中使用這些新映射的欄位。
 
-| 情境 | 聯合結構體驗 | 區段通用變數 | 區段對應變數 |
+| 情境 | 聯合架構體驗 | 分段通用變數 | 分段映射變數 |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
-| 單一報表套裝 | 易記名稱描述符隨通用變數一起包含。 <br><br>**範例：** 頁面名稱(eVar2) | <ul><li>包含通用變數的友好名稱描述符</li><li>查詢使用特定資料集的資料，因為這是唯一一個</li></ul> | 查詢可使用Adobe Analytics資料和潛在的其他來源。 |
-| 多報表套裝 | 一般變數不包含好記的名稱描述元。 <br><br>**範例：** eVar2 | <ul><li>任何包含多個描述元的欄位都會顯示為一般。 這表示UI中沒有好記的名稱。</li><li>查詢可以使用包含eVar的任何資料集的資料，這可能導致混合或錯誤的結果。</li></ul> | 查詢會使用多個資料集的正確合併結果。 |
+| 單個報告套件 | 友好名稱描述符隨泛型變數一起提供。 <br><br>**示例：** 頁名(eVar2) | <ul><li>泛型變數包含的友好名稱描述符</li><li>查詢使用特定資料集中的資料，因為它是唯一</li></ul> | 查詢可以使用Adobe Analytics資料和可能的其他源。 |
+| 多報表套裝 | 泛型變數不包含友好名稱描述符。 <br><br>**示例：** eVar2 | <ul><li>具有多個描述符的任何欄位都顯示為泛型。 這意味著UI中不顯示友好名稱。</li><li>查詢可以使用包含該eVar的任何資料集中的資料，這可能導致結果混合或不正確。</li></ul> | 查詢使用多個資料集中正確組合的結果。 |
 
 ### 對象
 
-此 **[!UICONTROL 對象]** 索引標籤會列出從外部來源(例如Adobe Audience Manager)匯入的所有對象，以及在中建立的對象 [!DNL Experience Platform].
+的 **[!UICONTROL 觀眾]** 頁籤列出從外部源(如Adobe Audience Manager)導入的所有受眾以及在 [!DNL Experience Platform]。
 
-在 **[!UICONTROL 對象]** 標籤中，您可以將所有可用源作為一組資料夾來查看。 選取資料夾時，可以看到可用的子資料夾和對象。 此外，您可以選取資料夾圖示（如最右側影像所示）以檢視資料夾結構（勾選記號表示您目前所在的資料夾），並透過選取樹狀結構中資料夾的名稱來輕鬆導覽資料夾。
+在 **[!UICONTROL 觀眾]** 頁籤，您可以將所有可用源作為資料夾組查看。 在選擇資料夾時，可以看到可用的子資料夾和受眾。 此外，您可以選擇資料夾表徵圖（如最右圖所示），以查看資料夾結構（複選標籤表示當前所在的資料夾），並通過選擇樹中資料夾的名稱，輕鬆地在資料夾中導航。
 
-您可以將游標暫留在對象ⓘ旁的上方，以檢視對象的相關資訊，包括其ID、說明，以及資料夾階層，以便找出對象。
+您可以將滑鼠懸停在受眾ⓘ旁，查看有關受眾的資訊，包括其ID、說明和資料夾層次結構，以查找受眾。
 
-![說明資料夾階層如何對對象運作的影像。](../images/ui/segment-builder/audience-folder-structure.png)
+![演示資料夾層次結構如何為受眾使用的影像。](../images/ui/segment-builder/audience-folder-structure.png)
 
-您也可以使用搜尋列來搜尋對象，這會利用 [Lucene的搜索語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 在 **[!UICONTROL 對象]** 頁簽，則選擇頂層資料夾會顯示搜索欄，從而允許您在該資料夾中進行搜索。 只有輸入完整的字詞後，搜尋結果才會開始填入。 例如，若要尋找名為 `Online Shoppers`，開始在搜尋列中輸入「線上」。 完整輸入「Online」後，將顯示包含「Online」字的搜索結果。
+您還可以使用使用搜索欄搜索受眾 [Lucene的搜索語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 在 **[!UICONTROL 觀眾]** 的子菜單。 只有輸入完整單詞後，搜索結果才會開始填充。 例如，要查找名為 `Online Shoppers`，開始在搜索欄中鍵入「Online」。 一旦「Online（聯機）」一詞已全部鍵入，將顯示包含「Online（聯機）」一詞的搜索結果。
 
-## 規則產生器畫布 {#rule-builder-canvas}
+## 規則生成器畫布 {#rule-builder-canvas}
 
-區段定義是一組規則，用於描述目標對象的關鍵特徵或行為。 這些規則是使用位於 [!DNL Segment Builder].
+段定義是用於描述目標受眾的關鍵特徵或行為的規則集合。 這些規則是使用位於 [!DNL Segment Builder]。
 
-若要將新規則新增至區段定義，請從 **[!UICONTROL 欄位]** 標籤，並將其拖曳至規則產生器畫布。 接著，系統會根據要新增的資料類型，為您顯示內容特定選項。 可用的資料類型包括：字串，日期， [!DNL ExperienceEvents], &quot;[!UICONTROL 事件類型]「和對象。
+要將新規則添加到段定義，請從 **[!UICONTROL 欄位]** 頁籤並將其放到規則生成器畫布上。 然後，您將根據要添加的資料類型使用特定於上下文的選項。 可用資料類型包括：字串，日期， [!DNL ExperienceEvents]。[!UICONTROL 事件類型]和觀眾。
 
-![空白規則產生器畫布。](../images/ui/segment-builder/rule-builder-canvas.png)
+![空白規則生成器畫布。](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform的最新變更已更新 `OR` 和 `AND` 事件之間的邏輯運算子。 這些更新不會影響現有區段。 但是，對現有區段和新區段建立的所有後續更新都將受到這些變更的影響。 請閱讀 [時間常數更新](./segment-refactoring.md) 以取得更多資訊。
+>Adobe Experience Platform的最新更改已更新 `OR` 和 `AND` 事件之間的邏輯運算子。 這些更新不會影響現有段。 但是，對現有段及新段建立的所有後續更新都將受這些更改的影響。 請閱讀 [時間常數更新](./segment-refactoring.md) 的子菜單。
 
-為屬性選取值時，您會看到屬性可以是的列舉值清單。
+為屬性選擇值時，您將看到屬性可以是的枚舉值清單。
 
-![顯示列舉值清單的影像，屬性可以是。](../images/ui/segment-builder/enum-list.png)
+![顯示屬性可以是的枚舉值清單的影像。](../images/ui/segment-builder/enum-list.png)
 
-如果從列舉清單中選取值，則會以實體邊框框列出值。 不過，對於使用 `meta:enum` （可變）列號，您也可以選取 **not** 從列清單中。 如果您建立自己的值，則會以虛線邊框列出值，並發出警告，指出此值不在列舉清單中。
+如果從此枚舉清單中選取一個值，則值將用實體邊框進行概述。 但是，對於使用 `meta:enum` （可變）枚舉，也可選取 **不** 清單中。 如果建立自己的值，則會用虛線邊框來概括該值，並警告該值不在枚舉清單中。
 
-![如果插入的值不是枚舉清單的一部分，則會顯示警告。](../images/ui/segment-builder/enum-warning.png)
+![如果插入的值不是枚舉清單的一部分，則顯示警告。](../images/ui/segment-builder/enum-warning.png)
 
-如果您要建立多個值，則可使用大量上傳一次新增所有值。 選取 ![加號表徵圖](../images/ui/segment-builder/plus-icon.png) 顯示 **[!UICONTROL 大量新增值]** 彈出式視窗。
+如果要建立多個值，則可以使用批量上載一次添加所有值。 選擇 ![加號](../images/ui/segment-builder/plus-icon.png) 顯示 **[!UICONTROL 以批量方式添加值]** 沿面。
 
-![此時會強調顯示加號圖示，顯示您可以選取以存取大量上傳彈出視窗的按鈕。](../images/ui/segment-builder/add-bulk-values.png)
+![加號表徵圖將突出顯示，其中顯示了您可以選擇訪問批量上載跨距的按鈕。](../images/ui/segment-builder/add-bulk-values.png)
 
-在 **[!UICONTROL 大量新增值]** 彈出式視窗中，您可以上傳CSV或TSV檔案。
+在 **[!UICONTROL 以批量方式添加值]** 沿面，可以上載CSV或TSV檔案。
 
-![此時會顯示「以大量彈出視窗新增值」。 您可以選取上傳CSV或TSV檔案的對話方塊會反白顯示。](../images/ui/segment-builder/bulk-values-popover.png)
+![將顯示「在主體跨距中添加值」(Add values in bulk popover)。 可以選擇上載CSV或TSV檔案的對話框將突出顯示。](../images/ui/segment-builder/bulk-values-popover.png)
 
-或者，您也可以手動新增逗號分隔值。
+或者，可以手動添加逗號分隔的值。
 
-![此時會顯示「以大量彈出視窗新增值」。 您可用來插入值的對話方塊和新增的值都會反白顯示。](../images/ui/segment-builder/bulk-values-comma-separated.png)
+![將顯示「在主體跨距中添加值」(Add values in bulk popover)。 可用於插入值的對話框和添加的值都會突出顯示。](../images/ui/segment-builder/bulk-values-comma-separated.png)
 
-請注意，最多允許250個值。 如果超過此量，您必須先移除某些值，才能新增更多值。
+請注意，最多允許250個值。 如果超過此值，則需要先刪除一些值，然後再添加更多值。
 
-![系統會顯示警告，指出您已達到值數上限。](../images/ui/segment-builder/maximum-values.png)
+![將顯示一個警告，表明您已達到最大值數。](../images/ui/segment-builder/maximum-values.png)
 
-### 新增對象
+### 添加受眾
 
-您可以從 **[!UICONTROL 對象]** 標籤至規則產生器畫布上，以參考新區段定義中的對象成員資格。 這可讓您在新區段規則中，將對象成員資格納入或排除為屬性。
+您可以從 **[!UICONTROL 觀眾]** 頁籤到規則生成器畫布上，以引用新段定義中的訪問群體成員身份。 這允許您在新段規則中將受眾成員資格作為屬性包括或排除。
 
-針對 [!DNL Platform] 使用 [!DNL Segment Builder]，您可以選擇將對象轉換為該對象在區段定義中使用的規則集。 此轉換會製作規則邏輯的復本，然後可在不影響原始區段定義的情況下加以修改。 將區段定義轉換為規則邏輯之前，請確定您已儲存區段定義的近期變更。
+對於 [!DNL Platform] 建立的受眾 [!DNL Segment Builder]，您可以選擇將受眾轉換為在該受眾的段定義中使用的一組規則。 此轉換會生成規則邏輯的副本，然後可以在不影響原始段定義的情況下修改該副本。 確保在將段定義轉換為規則邏輯之前已保存對段定義的任何最近更改。
 
 >[!NOTE]
 >
->從外部來源新增對象時，只會參考對象成員資格。 您無法將對象轉換為規則，因此，用於建立原始對象的規則無法在新區段定義中修改。
+>從外部源添加受眾時，僅引用受眾成員身份。 您不能將訪問群體轉換為規則，因此在新段定義中不能修改用於建立原始訪問群體的規則。
 
-![此影像顯示如何將受眾屬性轉換為規則。](../images/ui/segment-builder/add-audience-to-segment.png)
+![此圖顯示了如何將受眾屬性轉換為規則。](../images/ui/segment-builder/add-audience-to-segment.png)
 
-如果對象轉換為規則時發生任何衝突， [!DNL Segment Builder] 會盡量保留現有選項。
+如果將受眾轉換為規則時出現任何衝突， [!DNL Segment Builder] 會盡量保留現有的選項。
 
-### 程式碼檢視
+### 代碼視圖
 
-或者，您也可以檢視中建立之規則的程式碼版本，該規則以 [!DNL Segment Builder]. 在規則產生器畫布中建立規則後，您就可以選取 **[!UICONTROL 程式碼檢視]** 將區段顯示為PQL。
+或者，可以查看在 [!DNL Segment Builder]。 在規則生成器畫布中建立規則後，可以選擇 **[!UICONTROL 代碼視圖]** 將段視為PQL。
 
-![系統會強調顯示程式碼檢視按鈕，讓您以PQL形式查看區段。](../images/ui/segment-builder/code-view.png)
+![代碼視圖按鈕會突出顯示，這允許您將段視為PQL。](../images/ui/segment-builder/code-view.png)
 
-程式碼檢視提供一個按鈕，可讓您複製要在API呼叫中使用的區段值。 若要取得最新版區段，請確定您已儲存區段的最新變更。
+「代碼」視圖提供了一個按鈕，允許您複製要在API調用中使用的段值。 要獲取段的最新版本，請確保已將最新更改保存到段。
 
-![系統會反白顯示複製代碼按鈕，讓您 ](../images/ui/segment-builder/copy-code.png)
+![複製代碼按鈕會突出顯示，這允許您 ](../images/ui/segment-builder/copy-code.png)
 
 ### 聚合函式
 
-中的匯總 [!DNL Segment Builder] 是對資料類型為數字（雙倍或整數）的一組XDM屬性的計算。 「區段產生器」中支援的四個匯總函式為SUM、AVERAGE、MIN和MAX。
+中的聚合 [!DNL Segment Builder] 是對XDM屬性組的計算，其資料類型為數字（雙精度或整數）。 段生成器中支援的四個聚合函式是SUM、AVERAGE、MIN和MAX。
 
-若要建立匯總函式，請從左側邊欄選取事件，然後將其插入 [!UICONTROL 事件] 容器。
+要建立聚合函式，請從左滑軌中選擇一個事件，然後將其插入 [!UICONTROL 事件] 容器。
 
-![會反白顯示「事件」區段。](../images/ui/segment-builder/events.png)
+![事件部分將突出顯示。](../images/ui/segment-builder/events.png)
 
-將事件放入「事件」容器中後，選取點圖示(...)，接著 **[!UICONTROL 匯總]**.
+在「事件」容器中放置事件後，選擇省略號表徵圖(...)，然後 **[!UICONTROL 聚合]**。
 
-![會反白顯示匯總文字。 選擇此選項可以選擇聚合函式。](../images/ui/segment-builder/add-aggregation.png)
+![聚合文本被加亮。 選擇此選項可以選擇聚合函式。](../images/ui/segment-builder/add-aggregation.png)
 
-現在已新增匯總。 您現在可以選取匯總函式、選擇要匯總的屬性、相等函式以及值。 在以下範例中，此區段會限定任何購買值總和大於$100的設定檔，即使每次個別購買小於$100亦然。
+現在添加聚合。 現在，您可以選擇聚合函式，選擇要聚合的屬性、等式函式以及值。 對於下例，此段將限定任何採購值總和大於$100的配置檔案，即使每個單獨採購金額小於$100。
 
-![事件規則，可顯示匯總函式。](../images/ui/segment-builder/filled-aggregation.png)
+![事件規則，它顯示聚合函式。](../images/ui/segment-builder/filled-aggregation.png)
 
 ### 計數函式 {#count-functions}
 
-區段產生器中的計數函式可用來尋找指定的事件並計算完成的次數。 「區段產生器」中支援的計數函式為「至少」、「最多」、「精確」、「介於」和「全部」。
+段生成器中的計數函式用於查找指定的事件並計數它們完成的次數。 段生成器中支援的計數函式為「至少」、「最多」、「準確」、「介於」和「全部」。
 
-若要建立計數函式，請從左側邊欄選取事件，並將其插入 [!UICONTROL 事件] 容器。
+要建立計數函式，請從左滑軌中選擇一個事件並將其插入 [!UICONTROL 事件] 容器。
 
-![會反白顯示事件欄位。](../images/ui/segment-builder/events.png)
+![事件欄位將突出顯示。](../images/ui/segment-builder/events.png)
 
-將事件放入「事件」容器中後，請選取 [!UICONTROL 至少1] 按鈕。
+將事件置於「事件」容器中後，選擇 [!UICONTROL 至少1] 按鈕
 
-![「至少」(Lay)被加亮，顯示要選擇的區域，以查看計數函式的完整清單。](../images/ui/segment-builder/add-count.png)
+![「至少」(Lay)被高亮顯示，顯示要選擇以查看計數函式完整清單的區域。](../images/ui/segment-builder/add-count.png)
 
-現在已新增計數函式。 您現在可以選取計數函式和函式的值。 以下範例將包含至少點擊一次的事件。
+現在添加了count函式。 現在，您可以選擇count函式和該函式的值。 下面的示例將包括至少按一下一次的任何事件。
 
-![會顯示並反白顯示計數函式的清單。](../images/ui/segment-builder/select-count.png)
+![顯示並突出顯示計數函式的清單。](../images/ui/segment-builder/select-count.png)
 
 ## 容器
 
-區段規則的評估順序為。 容器可透過使用巢狀查詢來控制執行順序。
+段規則按列出的順序進行評估。 容器允許通過使用嵌套查詢來控制執行順序。
 
-在您將至少一個圖磚新增至規則產生器畫布後，就可以開始新增容器。 若要建立新容器，請選取圖磚右上角的點(...)，然後選取 **[!UICONTROL 新增容器]**.
+至少將一個磁貼添加到規則生成器畫布後，就可以開始添加容器。 要建立新容器，請選擇磁貼右上角的橢圓(...)，然後選擇 **[!UICONTROL 添加容器]**。
 
-![系統會強調顯示「新增容器」按鈕，讓您新增容器作為第一個容器的子項。](../images/ui/segment-builder/add-container.png)
+![「添加容器」(add container)按鈕會突出顯示，它允許您將容器添加為第一個容器的子容器。](../images/ui/segment-builder/add-container.png)
 
-新容器顯示為第一個容器的子容器，但您可以拖曳和移動容器來調整階層。 容器的預設行為為「[!UICONTROL 包括]「提供的屬性、事件或對象。 您可以將規則設為「[!UICONTROL 排除]」符合容器條件的設定檔，請選取 **[!UICONTROL 包括]** ，然後選取「[!UICONTROL 排除]」。
+新容器將作為第一個容器的子容器出現，但您可以通過拖動和移動容器來調整層次結構。 容器的預設行為為「[!UICONTROL 包括]&quot;提供的屬性、事件或訪問群體。 可以將規則設定為「」[!UICONTROL 排除]通過選擇符合容器條件的配置檔案 **[!UICONTROL 包括]** 在磁貼的左上角並選擇「[!UICONTROL 排除]。
 
-您也可以選取子容器上的「取消包裝容器」，以內嵌方式擷取子容器並新增至父容器。 選取子容器右上角的點(...)以存取此選項。
+通過在子容器上選擇「取消包裝容器」，也可以提取子容器並將其內聯添加到父容器。 選擇子容器右上角的橢圓(...)以訪問此選項。
 
-![系統會強調顯示讓您取消包裝或刪除容器的選項。](../images/ui/segment-builder/include-exclude.png)
+![允許您取消包裝或刪除容器的選項會突出顯示。](../images/ui/segment-builder/include-exclude.png)
 
-選取 **[!UICONTROL 取消包裝容器]** 子容器即會移除，條件會內嵌顯示。
+一旦選擇 **[!UICONTROL 取消包裝容器]** 子容器被刪除，條件將顯示在內聯。
 
 >[!NOTE]
 >
->展開容器時，請留意邏輯是否仍符合所需的區段定義。
+>在展開容器時，請注意邏輯繼續滿足所需的段定義。
 
-![容器在解包後會顯示。](../images/ui/segment-builder/unwrapped-container.png)
+![展開包裝後顯示容器。](../images/ui/segment-builder/unwrapped-container.png)
 
 ## 合併策略
 
-[!DNL Experience Platform] 可讓您從多個來源匯整資料，並加以結合，以便查看每個客戶的完整檢視。 將這些資料放在一起時，合併策略是 [!DNL Platform] 用來決定資料的優先順序，以及將結合哪些資料以建立設定檔。
+[!DNL Experience Platform] 使您能夠將來自多個來源的資料合併在一起，以便查看您每個客戶的完整視圖。 將此資料整合在一起時，合併策略是 [!DNL Platform] 用於確定資料的優先順序以及將組合哪些資料以建立配置檔案。
 
-您可以選取符合您針對此對象之行銷目的的合併原則，或使用 [!DNL Platform]. 您可以建立組織特有的多個合併原則，包括建立自己的預設合併原則。 如需為貴組織建立合併原則的逐步指示，請先閱讀 [合併策略概述](../../profile/merge-policies/overview.md).
+您可以選擇與此受眾的市場營銷目的匹配的合併策略，或使用由 [!DNL Platform]。 您可以建立組織特有的多個合併策略，包括建立自己的預設合併策略。 有關為組織建立合併策略的逐步說明，請首先閱讀 [合併策略概述](../../profile/merge-policies/overview.md)。
 
-若要為區段定義選取合併原則，請選取 **[!UICONTROL 欄位]** 標籤，然後使用 **[!UICONTROL 合併策略]** 下拉式功能表，選取您要使用的合併原則。
+要為段定義選擇合併策略，請在 **[!UICONTROL 欄位]** ，則使用 **[!UICONTROL 合併策略]** 下拉菜單，以選擇要使用的合併策略。
 
-![將突出顯示合併策略選擇器。 這可讓您選擇要為段定義選擇的合併策略。](../images/ui/segment-builder/merge-policy-selector.png)
+![合併策略選擇器將突出顯示。 這允許您選擇要為段定義選擇的合併策略。](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## 區段屬性 {#segment-properties}
 
@@ -243,38 +243,38 @@ ht-degree: 6%
 >abstract="您可以重新整理區段的預估值，以立即預覽有多少設定檔符合建議的區段。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="預估和預覽對象"
 
-建立區段定義時， **[!UICONTROL 區段屬性]** 工作區右側的區段會顯示所產生區段的預估大小，讓您在建立對象本身之前，可視需要調整區段定義。
+構建段定義時， **[!UICONTROL 段屬性]** 工作區右側的部分顯示結果段的大小估計值，允許您根據需要調整段定義，然後再構建受眾本身。
 
-此 **[!UICONTROL 區段屬性]** 區段也可讓您指定區段定義的重要資訊，包括名稱、說明和評估類型。 區段定義名稱是用來在組織定義的區段中識別區段，因此應具有描述性、簡潔明瞭且獨特。
+的 **[!UICONTROL 段屬性]** 節也可在其中指定有關段定義的重要資訊，包括其名稱、說明和評估類型。 段定義名稱用於在組織定義的段中標識段，因此應是描述性、簡潔和唯一的。
 
-當您繼續建立區段定義時，可以透過選取 **[!UICONTROL 檢視設定檔]**.
+在繼續構建段定義時，可以通過選擇 **[!UICONTROL 查看配置檔案]**。
 
-![會反白顯示區段定義屬性區段。 區段屬性包括但不限於區段名稱、說明和評估方法。](../images/ui/segment-builder/segment-properties.png)
+![段定義屬性部分被加亮。 段屬性包括但不限於段名稱、描述和評價方法。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->對象預估值會透過使用當天的樣本資料的樣本大小產生。如果您的設定檔存放區中實體少於100萬個，則會使用完整資料集；100萬至2000萬個實體使用100萬個實體；超過2,000萬個實體，佔實體總數的5%。 有關產生區段估計的詳細資訊，請參閱 [估計生成部分](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段建立教學課程中的。
+>對象預估值會透過使用當天的樣本資料的樣本大小產生。如果配置檔案儲存中的實體少於100萬個，則使用完整的資料集；100萬至2000萬個單位使用100萬個單位；超過2000萬戶，佔全部用戶的5%。 有關生成段估計的詳細資訊，請參閱 [估計生成部分](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 的子菜單。
 
-您也可以選取評估方法。 如果您知道要使用哪種評估方法，可以使用下拉清單選擇所需的評估方法。 如果您想要知道此區段符合的評估類型，可以選取瀏覽圖示 ![帶放大鏡的資料夾表徵圖](../images/ui/segment-builder/segment-evaluation-select-icon.png) ，查看可用區段評估方法的清單。
+也可以選擇評估方法。 如果您知道要使用什麼評估方法，則可以使用下拉清單選擇所需的評估方法。 如果想知道此段適合的評估類型，可以選擇瀏覽表徵圖 ![帶有放大鏡的資料夾表徵圖](../images/ui/segment-builder/segment-evaluation-select-icon.png) 查看可用段評估方法的清單。
 
-此 [!UICONTROL 評價方法資格] 彈出視窗隨即出現。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出式視窗會顯示哪些評估方法符合資格和不符合資格。 視您在區段定義中使用的參數而定，它可能不符合特定評估方法的資格。 有關每種評估方法要求的詳細資訊，請閱讀 [串流細分](./streaming-segmentation.md#query-types) 或 [邊緣分割](./edge-segmentation.md#query-types) 概述。
+的 [!UICONTROL 評價方法資格] 出現「popover（跨距）」。 此跨距顯示可用的評估方法，即批處理、流處理和邊。 「跨距」(Popover)顯示哪些評估方法符合條件且不符合條件。 根據段定義中使用的參數，它可能不符合某些評估方法。 有關每種評估方法要求的詳細資訊，請閱讀 [流分割](./streaming-segmentation.md#query-types) 或 [邊緣分割](./edge-segmentation.md#query-types) 概述。
 
-![出現「評估方法」(evaluation method)資格彈出窗口。 這會顯示哪些區段評估方法符合和不符合區段資格。](../images/ui/segment-builder/select-evaluation-method.png)
+![此時將出現「評估方法資格」彈出窗口。 這將顯示哪些段評估方法適合和不適合該段。](../images/ui/segment-builder/select-evaluation-method.png)
 
-如果您選擇了無效的評估方法，系統將提示您更改段定義規則或更改評估方法。
+如果選擇的評估方法無效，系統將提示您更改段定義規則或更改評估方法。
 
-![出現評估方法。 如果選取了不符合條件的區段評估方法，快顯視窗會說明為何不符合條件。](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![將彈出評估方法。 如果選擇了不合格的段評估方法，則彈出窗口將說明為什麼它不合格。](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
-有關不同區段定義評估方法的詳細資訊，請參閱 [細分概述](../home.md#evaluate-segments).
+有關不同段定義評估方法的詳細資訊，請參閱 [分段概述](../home.md#evaluate-segments)。
 
 ## 後續步驟 {#next-steps}
 
-區段產生器提供豐富的工作流程，讓您將有價對象與 [!DNL Real-Time Customer Profile] 資料。 閱讀本指南後，您現在應該能夠：
+段構建器提供了豐富的工作流，允許您將可銷售的受眾與 [!DNL Real-Time Customer Profile] 資料。 閱讀本指南後，您現在應能：
 
-- 使用屬性、事件和現有對象的組合作為建置區塊，建立區段定義。
-- 使用規則產生器畫布和容器來控制執行區段規則的順序。
-- 檢視潛在對象的預估值，以便您視需要調整區段定義。
-- 啟用排程分段的所有區段定義。
-- 為串流細分啟用指定的區段定義。
+- 使用屬性、事件和現有受眾的組合作為構建塊建立段定義。
+- 使用規則生成器畫布和容器來控制段規則的執行順序。
+- 查看預期受眾的估計值，以便根據需要調整段定義。
+- 啟用所有段定義以執行計劃分段。
+- 為流分段啟用指定的段定義。
 
-若要深入了解 [!DNL Segmentation Service]，請繼續閱讀本檔案，並觀看相關影片以補充您的學習內容。 若要進一步了解 [!DNL Segmentation Service] UI，請閱讀 [[!DNL Segmentation Service] 使用手冊](./overview.md)
+瞭解有關 [!DNL Segmentation Service]，請繼續閱讀文檔，並通過觀看相關視頻來補充您的學習。 瞭解有關 [!DNL Segmentation Service] UI，請閱讀 [[!DNL Segmentation Service] 使用手冊](./overview.md)

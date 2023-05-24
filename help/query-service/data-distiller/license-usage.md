@@ -1,6 +1,6 @@
 ---
 title: 監視批查詢許可證使用情況
-description: Adobe Experience Platform UI提供控制面板，您可透過該控制面板檢視貴組織Data Distiller授權使用情形的重要資訊。
+description: Adobe Experience PlatformUI提供了一個儀表板，您可以通過該儀表板查看有關您組織的資料Distiller許可證使用情況的重要資訊。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
 hide: true
 hidefromtoc: true
@@ -12,35 +12,35 @@ ht-degree: 0%
 
 ---
 
-# (Alpha)監控批次查詢許可證使用情況 {#monitor-license-usage}
+# (Alpha)監視批查詢許可證使用情況 {#monitor-license-usage}
 
 >[!IMPORTANT]
 >
->尚無法讓所有使用者透過UI監控批次查詢授權使用情形。 此功能為Alpha版，仍在測試中。 本檔案可能會有所變更。
+>尚不能通過UI監視批查詢許可證使用情況。 此功能在Alpha中，仍在測試中。 此文檔可能會更改。
 
-Adobe Experience Platform使用者介面(UI)提供控制面板，您可透過該控制面板檢視貴組織Query Service授權使用情形的重要資訊。
+Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通過該儀表板查看有關組織的查詢服務許可證使用情況的重要資訊。
 
-如需如何存取UI中的授權使用控制面板並與之互動，以及進一步了解控制面板中顯示的可用量度的詳細指示，請造訪 [授權使用控制面板指南](../../dashboards/guides/license-usage.md).
+有關如何訪問和與UI中的許可證使用儀表板進行交互的詳細說明，以及有關儀表板中顯示的可用度量的詳細資訊，請訪問 [許可證使用儀表板指南](../../dashboards/guides/license-usage.md)。
 
-請閱讀 [控制面板概觀](../../dashboards/home.md) 以取得Experience Platform中所有控制面板功能的摘要。
+請閱讀 [儀表板概述](../../dashboards/home.md) 的子菜單。
 
-## 介面工具集 {#widgets}
+## 小部件 {#widgets}
 
-授權使用控制面板由Widget組成，Widget會顯示唯讀量度，提供貴組織授權使用的重要資訊。 可見的量度取決於貴組織的特定授權。
+許可證使用儀表板由小部件組成，這些部件顯示只讀度量，提供有關您組織的許可證使用情況的重要資訊。 可見的指標取決於您組織的特定許可。
 
-選取選項按鈕以選擇要分析的沙箱，並使用下拉式清單來選取分析的時段。 可用的選項有30天、90天、12個月期間、最後一年、完整合約期間或自訂日期。
+選擇一個單選按鈕以選擇用於分析的沙盒，然後使用下拉菜單選擇分析的時段。 可用選項包括30天、90天、12個月期間、最後一年、完整合同期間或自定義日期。
 
 ## 計算小時數 {#compute-hours}
 
-此 [!UICONTROL 計算小時數] 介面工具集使用折線圖來視覺化您組織的每日批次查詢處理時間。 介面工具集在介面工具集的左上方顯示三個度量，以數字表示。 分別為
+的 [!UICONTROL 計算小時數] 小部件使用線形圖來直觀顯示組織每天的批處理查詢處理時間。 小部件在小部件的左上角顯示數字指示的三個度量。 分別為
 
-- [!UICONTROL 實際]:在概述下拉式清單中選擇的時段的總計計算小時數。 此量度也會在圖形上以實線表示。
-- [!UICONTROL 授權]:貴組織的授權合約允許的計算小時數總計。 此量度也會在圖形上以虛線表示。
-- [!UICONTROL 使用狀況]:這是您使用量相對於授權同意的最大計算時數的百分比。
+- [!UICONTROL 實際]:在概述下拉清單中選擇的時段的計算小時數。 此度量也通過實線在圖形上表示。
+- [!UICONTROL 許可]:您組織的許可協定允許的計算小時數。 此度量也用虛線在圖形上表示。
+- [!UICONTROL 用法]:這是您使用的百分比，相對於您的許可證同意的最大計算時數。
 
 >[!IMPORTANT]
 >
->此 [!UICONTROL 計算小時數] widget僅適用於擁有批次查詢資料Distiller授權的客戶。
+>的 [!UICONTROL 計算小時數] 小部件僅適用於具有批查詢資料Distiller許可證的客戶。
 
-![使用許可證儀表板，突出顯示計算時數小工具。](../images/data-distiller/compute-hours.png)
+![已突出顯示計算小時數構件的許可證使用儀表板。](../images/data-distiller/compute-hours.png)
 

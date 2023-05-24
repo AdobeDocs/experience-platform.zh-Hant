@@ -1,6 +1,6 @@
 ---
-title: 環境端點
-description: 了解如何在Reactor API中呼叫/environments端點。
+title: 環境終結點
+description: 瞭解如何調用Reactor API中的/environments端點。
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
@@ -9,18 +9,18 @@ ht-degree: 4%
 
 ---
 
-# 環境端點
+# 環境終結點
 
-當 [資料庫](./libraries.md) 編譯到 [建置](./builds.md) 在Reactor API中，組建的確切內容取決於環境設定和程式庫中包含的資源。 具體而言，環境會決定下列項目：
+當 [庫](./libraries.md) 編譯成 [構建](./builds.md) 在Reactor API中，生成的確切內容取決於環境設定和庫中包含的資源。 具體來說，環境確定了以下內容：
 
-1. **目的地**:您希望部署組建的位置。 您可以選取 [主機](./hosts.md) 供環境使用。
-1. **封存**:您可以選擇以可部署的檔案集來擷取組建，或以封存格式壓縮組建。 這是由 `archive` 設定。
+1. **目標**:要部署生成的位置。 通過選擇 [主機](./hosts.md) 供環境使用。
+1. **存檔**:您可以選擇將生成作為可部署的檔案集進行檢索，或者將其壓縮為存檔格式。 此項由 `archive` 的下界。
 
-由環境設定的目的地和封存格式會變更您參考應用程式中組建(該參考為 [內嵌程式碼](../../ui/publishing/environments.md#embed-code))。 如果您對目標或檔案格式進行任何更改，則必須對應用程式進行匹配更新，以使用新引用。
+環境配置的目標和存檔格式會更改您引用應用程式中生成的方式(該引用是 [嵌入代碼](../../ui/publishing/environments.md#embed-code))。 如果對目標或檔案格式進行了任何更改，則必須對應用程式進行匹配更新才能使用新引用。
 
-環境分為三種類型（或階段），每種類型對您可擁有的總數有不同的限制：
+環境分為三種類型（或階段），每種類型對您可以擁有的總數量有不同的限制：
 
-| 環境類型 | 允許的數字 |
+| 環境類型 | 允許的編號 |
 | --- | --- |
 | 開發 | （無限制） |
 | 預備 | 一 |
@@ -28,19 +28,19 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-這些環境類型具有類似的行為，但會用於 [標籤發佈工作流程](../../ui/publishing/publishing-flow.md).
+這些環境類型具有相似的行為，但在 [標籤發佈工作流](../../ui/publishing/publishing-flow.md)。
 
-環境只屬於一個 [屬性](./properties.md).
+環境正好屬於 [屬性](./properties.md)。
 
-如需環境的更一般資訊，請參閱 [環境](../../ui/publishing/environments.md) 在發佈檔案中。
+有關環境的更多一般資訊，請參見 [環境](../../ui/publishing/environments.md) 在發佈文檔中。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 擷取環境清單 {#list}
+## 檢索環境清單 {#list}
 
-您可以在GET要求的路徑中加入屬性的ID，以擷取屬性的環境清單。
+通過將屬性的ID包括在GET請求的路徑中，可以檢索屬性的環境清單。
 
 **API格式**
 
@@ -50,13 +50,13 @@ GET /properties/{PROPERTY_ID}/environments
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 擁有環境的屬性。 |
+| `PROPERTY_ID` | 的 `id` 擁有環境的財產。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選列出的環境：<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱 [篩選回應](../guides/filtering.md) 以取得更多資訊。
+>使用查詢參數，可以根據以下屬性篩選列出的環境：<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -72,7 +72,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回指定屬性的環境清單。
+成功的響應將返回指定屬性的環境清單。
 
 ```json
 {
@@ -164,7 +164,7 @@ curl -X GET \
 
 ## 查找環境 {#lookup}
 
-您可以在GET要求的路徑中提供環境ID，借此查詢環境。
+您可以通過在GET請求的路徑中提供其ID來查找環境。
 
 **API格式**
 
@@ -174,7 +174,7 @@ GET /environments/{ENVIRONMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 此 `id` 你想查的環境。 |
+| `ENVIRONMENT_ID` | 的 `id` 你想查的環境。 |
 
 {style="table-layout:auto"}
 
@@ -192,7 +192,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回環境的詳細資訊。
+成功的響應將返回環境的詳細資訊。
 
 ```json
 {
@@ -273,7 +273,7 @@ curl -X GET \
 
 ## 建立環境 {#create}
 
-您可以提出POST要求，以建立新環境。
+可以通過發出POST請求來建立新環境。
 
 **API格式**
 
@@ -283,13 +283,13 @@ POST /properties/{PROPERTY_ID}/environments
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 的 [屬性](./properties.md) 定義下的環境。 |
+| `PROPERTY_ID` | 的 `id` 的 [屬性](./properties.md) 定義環境。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列請求會為指定的屬性建立新環境。 呼叫也會透過將環境與現有主機建立關聯 `relationships` 屬性。 請參閱 [關係](../guides/relationships.md) 以取得更多資訊。
+以下請求為指定的屬性建立新環境。 此調用還通過以下方式將環境與現有主機關聯： `relationships` 屬性。 請參閱上的指南 [關係](../guides/relationships.md) 的子菜單。
 
 ```shell
 curl -X POST \
@@ -322,19 +322,19 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必要）** 環境的人類看得懂的名稱。 |
-| `attributes.archive` | 一個布林值，用於指示其是否為歸檔格式的生成。 |
+| `attributes.name` | **（必需）** 環境的可讀名稱。 |
+| `attributes.archive` | 一個布爾值，指示該生成是否為存檔格式。 |
 | `attributes.archive_passphrase` | 可用於解鎖存檔檔案的字串密碼。 |
-| `attributes.path` | 來自環境主機URL的路徑。 |
-| `attributes.stage` | 環境階段（開發、測試或生產）。 |
-| `id` | 此 `id` 的URL。 這應符合 `{ENVIRONMENT_ID}` 值。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須是 `environments`. |
+| `attributes.path` | 來自環境的主機URL的路徑。 |
+| `attributes.stage` | 環境的階段（開發、試運行或生產）。 |
+| `id` | 的 `id` 的下界。 這應與 `{ENVIRONMENT_ID}` 請求路徑中提供的值。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `environments`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回新建立環境的詳細資訊。
+成功的響應將返回新建立環境的詳細資訊。
 
 ```json
 {
@@ -415,7 +415,7 @@ curl -X POST \
 
 ## 更新環境 {#update}
 
-您可以在PATCH請求的路徑中加入環境ID，以更新環境。
+您可以通過將環境ID包含在PATCH請求的路徑中來更新環境。
 
 **API格式**
 
@@ -425,13 +425,13 @@ PATCH /environments/{ENVIRONMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 此 `id` 的URL。 |
+| `ENVIRONMENT_ID` | 的 `id` 要更新的環境。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列請求會更新 `name` 的URL區段。
+以下請求更新 `name` 的下界。
 
 ```shell
 curl -X PATCH \
@@ -453,15 +453,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 一個對象，其屬性表示要為環境更新的屬性。 可更新下列環境屬性： <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> 請參閱的範例呼叫 [建立環境](#create) 以取得屬性清單及其使用案例。 |
-| `id` | 此 `id` 的URL。 這應符合 `{ENVIRONMENT_ID}` 值。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須是 `environments`. |
+| `attributes` | 其屬性表示要為環境更新的屬性的對象。 可以更新以下環境屬性： <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> 請參閱的示例調用 [建立環境](#create) 的子菜單。 |
+| `id` | 的 `id` 的下界。 這應與 `{ENVIRONMENT_ID}` 請求路徑中提供的值。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `environments`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回更新環境的詳細資訊。
+成功的響應將返回更新環境的詳細資訊。
 
 ```json
 {
@@ -542,7 +542,7 @@ curl -X PATCH \
 
 ## 刪除環境
 
-您可以在DELETE請求的路徑中加入環境ID，以刪除環境。
+可以通過將環境ID包含在DELETE請求的路徑中來刪除環境。
 
 **API格式**
 
@@ -552,7 +552,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 此 `id` 刪除的環境。 |
+| `ENVIRONMENT_ID` | 的 `id` 的子菜單。 |
 
 {style="table-layout:auto"}
 
@@ -568,17 +568,17 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容），但沒有回應內文，表示環境已遭刪除。
+成功的響應返回沒有響應正文的HTTP狀態204（無內容），表示該環境已被刪除。
 
 ## 檢索環境的相關資源 {#related}
 
-下列呼叫示範如何擷取環境的相關資源。 當 [查找環境](#lookup)，這些關係會列在 `relationships` 屬性。
+以下調用演示如何檢索環境的相關資源。 當 [查找環境](#lookup)，這些關係列在 `relationships` 屬性。
 
-請參閱 [關係指南](../guides/relationships.md) 以取得Reactor API中關係的詳細資訊。
+查看 [關係指南](../guides/relationships.md) 的子菜單。
 
-### 列出環境的相關組建 {#builds}
+### 列出環境的相關生成 {#builds}
 
-您可以透過附加 `/builds` 至查詢請求的路徑。
+可通過附加來列出使用環境的生成 `/builds` 查找請求的路徑。
 
 **API格式**
 
@@ -588,7 +588,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 此 `id` 您要列出其組建的環境。 |
+| `{ENVIRONMENT_ID}` | 的 `id` 要列出其生成的環境。 |
 
 {style="table-layout:auto"}
 
@@ -606,7 +606,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回使用指定環境的組建清單。
+成功的響應返回使用指定環境的生成清單。
 
 ```json
 {
@@ -691,11 +691,11 @@ curl -X GET \
 
 ### 查找環境的相關主機 {#host}
 
-您可以借由附加 `/host` 至GET請求的路徑。
+可以通過附加 `/host` 到GET請求的路徑。
 
 >[!NOTE]
 >
->您可以透過 [獨立呼叫](#host-relationship).
+>您可以通過 [單獨呼叫](#host-relationship)。
 
 **API格式**
 
@@ -705,7 +705,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 此 `id` 您想要查找的環境。 |
+| `{ENVIRONMENT_ID}` | 的 `id` 要查找其主機的環境。 |
 
 {style="table-layout:auto"}
 
@@ -723,7 +723,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回使用指定環境之主機的詳細資訊。
+成功的響應返回使用指定環境的主機的詳細資訊。
 
 ```json
 {
@@ -760,9 +760,9 @@ curl -X GET \
 }
 ```
 
-### 尋找環境的相關程式庫 {#library}
+### 查找環境的相關庫 {#library}
 
-您可以借由附加 `/library` 至GET請求的路徑。
+可通過附加 `/library` 到GET請求的路徑。
 
 **API格式**
 
@@ -772,7 +772,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 此 `id` 您要查詢其程式庫的環境。 |
+| `{ENVIRONMENT_ID}` | 的 `id` 你要查找的環境。 |
 
 {style="table-layout:auto"}
 
@@ -790,7 +790,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回使用指定環境之程式庫的詳細資訊。
+成功的響應返回使用指定環境的庫的詳細資訊。
 
 ```json
 {
@@ -877,7 +877,7 @@ curl -X GET \
 
 ### 查找環境的相關屬性 {#property}
 
-您可以借由附加 `/property` 至GET請求的路徑。
+可通過附加 `/property` 到GET請求的路徑。
 
 **API格式**
 
@@ -887,7 +887,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 此 `id` 您要查詢其屬性的環境。 |
+| `{ENVIRONMENT_ID}` | 的 `id` 你想查的環境。 |
 
 {style="table-layout:auto"}
 
@@ -905,7 +905,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回擁有指定環境之屬性的詳細資訊。
+成功的響應將返回擁有指定環境的屬性的詳細資訊。
 
 ```json
 {

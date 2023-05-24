@@ -11,9 +11,9 @@ ht-degree: 64%
 ---
 
 
-# 統一標籤（測試版）{#administrative-tags}
+# 統一標籤(beta){#administrative-tags}
 
-* [統一標籤概述（測試版）](overview.md)
+* [統一標籤概述(Beta)](overview.md)
 * 統一標籤UI {#ui}
    * [管理標籤](ui/managing-tags.md)
    * [標籤類別](ui/tags-categories.md)

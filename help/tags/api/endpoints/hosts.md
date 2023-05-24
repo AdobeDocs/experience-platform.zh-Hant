@@ -1,6 +1,6 @@
 ---
-title: 主機端點
-description: 了解如何在Reactor API中呼叫/hosts端點。
+title: 主機終結點
+description: 瞭解如何調用Repartor API中的/hosts端點。
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: 905384b3190cd55e7caa9c4560d6b2774280eee7
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 3%
 
 ---
 
-# 主機端點
+# 主機終結點
 
 >[!NOTE]
 >
->本檔案說明如何在Reactor API中管理主機。 如需標籤主機的詳細資訊，請參閱 [主機概述](../../ui/publishing/hosts/hosts-overview.md) （在發佈檔案中）。
+>本文檔介紹如何管理Reactor API中的主機。 有關標籤的主機的更多一般資訊，請參見上的指南 [主機概述](../../ui/publishing/hosts/hosts-overview.md) 的下界。
 
-在Reactor API中，主機會定義目的地，其中 [建置](./builds.md) 可傳送。
+在Reactor API中，主機定義目標 [構建](./builds.md) 可以交付。
 
-當Adobe Experience Platform中的標籤使用者要求組建時，系統會檢查程式庫以判斷 [環境](./environments.md) 程式庫應建置至。 每個環境都與主機有關係，指出要傳送組建的位置。
+當Adobe Experience Platform的標籤用戶請求生成時，系統會檢查庫以確定 [環境](./environments.md) 圖書館應該建成。 每個環境都與主機有關係，指明在何處交付生成。
 
-主機只屬於一個 [屬性](./properties.md)，而屬性可以有許多主機。 屬性至少必須有一個主機，您才能發佈。
+主機恰好屬於 [屬性](./properties.md)，而屬性可以具有多個主機。 在可以發佈之前，屬性必須至少有一個主機。
 
-一個屬性內的多個環境可以使用主機。 在屬性上常有單一主機，且該屬性上的所有環境都使用相同主機。
+一個屬性中的多個環境可以使用主機。 在屬性上有單個主機，並且該屬性上的所有環境都使用同一台主機是常見的。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
 
-## 擷取主機清單 {#list}
+## 檢索主機清單 {#list}
 
-您可以在GET請求的路徑中加入屬性的ID，以擷取屬性的主機清單。
+通過將屬性的ID包含在GET請求的路徑中，可以檢索屬性的主機清單。
 
 **API格式**
 
@@ -39,13 +39,13 @@ GET /properties/{PROPERTY_ID}/hosts
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 擁有主機的屬性。 |
+| `PROPERTY_ID` | 的 `id` 擁有主機的財產。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->您可以使用查詢參數，根據下列屬性來篩選列出的主機：<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>請參閱 [篩選回應](../guides/filtering.md) 以取得更多資訊。
+>使用查詢參數，可以根據以下屬性篩選列出的主機：<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
 
 **要求**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定屬性的主機清單。
+成功的響應將返回指定屬性的主機清單。
 
 ```json
 {
@@ -111,7 +111,7 @@ curl -X GET \
 
 ## 查找主機 {#lookup}
 
-您可以在請求的路徑中提供主機ID，以便查詢GET。
+通過在GET請求的路徑中提供主機ID，可以查找主機。
 
 **API格式**
 
@@ -121,7 +121,7 @@ GET /hosts/{HOST_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `HOST_ID` | 此 `id` 你要查的主人。 |
+| `HOST_ID` | 的 `id` 你想查的主人。 |
 
 {style="table-layout:auto"}
 
@@ -139,7 +139,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回主機的詳細資訊。
+成功的響應將返回主機的詳細資訊。
 
 ```json
 {
@@ -178,7 +178,7 @@ curl -X GET \
 
 ## 建立主機 {#create}
 
-您可以提出POST要求來建立新主機。
+通過發出POST請求，可以建立新主機。
 
 **API格式**
 
@@ -188,13 +188,13 @@ POST /properties/{PROPERTY_ID}/hosts
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 的 [屬性](./properties.md) 在下定義主機。 |
+| `PROPERTY_ID` | 的 `id` 的 [屬性](./properties.md) 定義主機。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列請求會為指定的屬性建立新主機。 呼叫也會透過將主機與現有擴充功能建立關聯 `relationships` 屬性。 請參閱 [關係](../guides/relationships.md) 以取得更多資訊。
+以下請求為指定的屬性建立新主機。 該呼叫還將主機與通過 `relationships` 屬性。 請參閱上的指南 [關係](../guides/relationships.md) 的子菜單。
 
 ```shell
 curl -X POST \
@@ -222,21 +222,21 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必要）** 主機人類看得懂的名稱。 |
-| `attributes.type_of` | **（必要）** 主機的類型。 可以是下列兩個選項之一： <ul><li>`akamai` for [Adobe管理主機](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` for [SFTP主機](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
-| `attributes.encrypted_private_key` | 用於主機驗證的可選私鑰。 |
-| `attributes.path` | 要附加至 `server` URL。 |
-| `attributes.port` | 一個整數，用於指示要使用的特定伺服器埠。 |
+| `attributes.name` | **（必需）** 主機的可讀名稱。 |
+| `attributes.type_of` | **（必需）** 主機類型。 可以是兩種選項之一： <ul><li>`akamai` 為 [Adobe管理的主機](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` 為 [SFTP主機](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.encrypted_private_key` | 用於主機身份驗證的可選私鑰。 |
+| `attributes.path` | 附加到的路徑 `server` URL。 |
+| `attributes.port` | 一個整數，指示要使用的特定伺服器埠。 |
 | `attributes.server` | 伺服器的主機URL。 |
-| `attributes.skip_symlinks`<br><br>（僅限SFTP主機） | 依預設，所有SFTP主機都使用符號連結（符號連結）來參照儲存至伺服器的程式庫組建。 但是，並非所有伺服器都支援使用symlink。 包含此屬性時，將設為 `true`，主機會使用複製操作直接更新建置資產，而非使用symlink。 |
-| `attributes.username` | 驗證的選用使用者名稱。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須是 `hosts`. |
+| `attributes.skip_symlinks`<br><br>（僅適用於SFTP主機） | 預設情況下，所有SFTP主機都使用符號連結（符號連結）來引用保存到伺服器的庫生成。 但是，並非所有伺服器都支援使用符號連結。 當包含此屬性並設定為 `true`，主機使用複製操作直接更新生成資產，而不是使用symlinks。 |
+| `attributes.username` | 驗證的可選用戶名。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `hosts`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回新建立之主機的詳細資訊。
+成功的響應將返回新建立的主機的詳細資訊。
 
 ```json
 {
@@ -280,7 +280,7 @@ curl -X POST \
 >
 >只能更新SFTP主機。
 
-您可以在PATCH請求的路徑中加入主機ID，以更新主機。
+您可以通過將主機ID包含在PATCH請求的路徑中來更新主機。
 
 **API格式**
 
@@ -290,13 +290,13 @@ PATCH /hosts/{HOST_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `HOST_ID` | 此 `id` 要更新的主機。 |
+| `HOST_ID` | 的 `id` 要更新的主機。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列請求會更新 `name` （適用於現有主機）。
+以下請求更新 `name` 的下界。
 
 ```shell
 curl -X PATCH \
@@ -318,15 +318,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 一個對象，其屬性表示要為主機更新的屬性。 可針對主機更新下列屬性： <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | 此 `id` 要更新的主機。 這應符合 `{HOST_ID}` 值。 |
-| `type` | 要更新的資源類型。 對於此端點，值必須是 `hosts`. |
+| `attributes` | 其屬性表示要為主機更新的屬性的對象。 可以為主機更新以下屬性： <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
+| `id` | 的 `id` 要更新的主機。 這應與 `{HOST_ID}` 請求路徑中提供的值。 |
+| `type` | 要更新的資源類型。 對於此終結點，值必須為 `hosts`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回更新主機的詳細資訊。
+成功的響應將返回更新主機的詳細資訊。
 
 ```json
 {
@@ -366,7 +366,7 @@ curl -X PATCH \
 
 ## 刪除主機
 
-您可以在DELETE請求的路徑中加入主機ID，以刪除該主機。
+通過將主機ID包含在DELETE請求的路徑中，可以刪除該主機。
 
 **API格式**
 
@@ -376,7 +376,7 @@ DELETE /hosts/{HOST_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `HOST_ID` | 此 `id` 刪除的主機。 |
+| `HOST_ID` | 的 `id` 刪除的主機。 |
 
 {style="table-layout:auto"}
 
@@ -392,17 +392,17 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204（無內容），但沒有回應內文，指出主機已遭刪除。
+成功的響應返回HTTP狀態204（無內容），沒有響應正文，表示主機已被刪除。
 
-## 為主機擷取相關資源 {#related}
+## 檢索主機的相關資源 {#related}
 
-下列呼叫示範如何擷取主機的相關資源。 當 [查找主機](#lookup)，這些關係會列在 `relationships` 屬性。
+以下調用演示如何檢索主機的相關資源。 當 [查找主機](#lookup)，這些關係列在 `relationships` 屬性。
 
-請參閱 [關係指南](../guides/relationships.md) 以取得Reactor API中關係的詳細資訊。
+查看 [關係指南](../guides/relationships.md) 的子菜單。
 
 ### 查找主機的相關屬性 {#property}
 
-您可以借由附加 `/property` 至查詢請求的路徑。
+可以通過附加 `/property` 查找請求的路徑。
 
 **API格式**
 
@@ -412,7 +412,7 @@ GET /hosts/{HOST_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{HOST_ID}` | 此 `id` 您要查找其屬性的主機。 |
+| `{HOST_ID}` | 的 `id` 要查找其財產的主人。 |
 
 {style="table-layout:auto"}
 
@@ -430,7 +430,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回指定主機屬性的詳細資訊。
+成功的響應將返回指定主機屬性的詳細資訊。
 
 ```json
 {

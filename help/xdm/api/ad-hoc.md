@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API; XDM; XDM系統；體驗資料模型；體驗資料模型；資料模型；結構註冊表；結構註冊表；臨機；臨機；臨機；臨機；臨機；臨機；臨機；臨機；
+keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；資料模型；架構註冊；架構註冊；ad-hoc;adhoc;ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Ad-hoc;Adhoc;
 solution: Experience Platform
-title: 臨機結構
-description: 在特定情況下，您可能需要建立XDM結構，其欄位的命名空間僅限單一資料集使用。 這稱為臨機結構。
+title: 即席架構
+description: 在特定情況下，可能需要建立XDM架構，該架構包含僅由單個資料集使用而命名的欄位。 這稱為即席模式。
 exl-id: 8ee43bdc-3f16-4ec9-b17a-9942e4599023
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
@@ -11,6 +11,6 @@ ht-degree: 0%
 
 ---
 
-# 臨機結構
+# 點對點架構
 
-在特定情況下，可能需要建立 [!DNL Experience Data Model] (XDM)結構，其欄位的名稱僅限單一資料集使用。 這稱為臨機結構。 數個資料擷取工作流程中會使用臨機結構，包括擷取CSV檔案和建立特定類型的來源連接器。 如需臨機結構的詳細資訊，包括如何在 [!DNL Schema Registry] API，請參閱 [臨機結構教學課程](../tutorials/ad-hoc.md).
+在特定情況下，可能需要 [!DNL Experience Data Model] (XDM)模式，其欄位僅由單個資料集使用。 這稱為即席模式。 Ad-hoc模式用於多個資料接收工作流，包括接收CSV檔案和建立某些類型的源連接器。 有關即席架構的詳細資訊，包括有關如何在 [!DNL Schema Registry] API，請參閱 [ad hoc模式教程](../tutorials/ad-hoc.md)。

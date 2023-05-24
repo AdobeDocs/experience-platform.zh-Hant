@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；使用者介面；UI；控制面板；控制面板；設定檔；區段；目的地；授權使用
-title: 修改UI中的Platform控制面板
-description: 本指南提供逐步指示，自訂組織的Adobe Experience Platform資料在控制面板中的顯示方式。
+keywords: Experience Platform；用戶介面；UI；儀表板；配置檔案；段；目標；許可證使用
+title: 在UI中修改平台儀表板
+description: 本指南提供了有關自定義您組織的Adobe Experience Platform資料在儀表板中顯示方式的逐步說明。
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
 workflow-type: tm+mt
@@ -10,52 +10,52 @@ ht-degree: 0%
 
 ---
 
-# 修改控制面板 {#modify-dashboards}
+# 修改儀表板 {#modify-dashboards}
 
-在Adobe Experience Platform使用者介面(UI)中，您可以使用多個控制面板來檢視及與組織的資料互動。 控制面板中顯示的預設介面工具集和量度可在個別使用者層級進行調整，以顯示偏好的資料，且介面工具集可在相同組織中的使用者間建立和共用。
+在Adobe Experience Platform用戶介面(UI)中，您可以使用多個儀表板查看和與組織的資料交互。 儀表板中顯示的預設小部件和度量可以在單個用戶級別進行調整以顯示首選資料，也可以在同一組織中的用戶之間建立和共用小部件。
 
-本指南提供逐步指示，自訂控制面板資料在 [!UICONTROL 設定檔], [!UICONTROL 區段]，和 [!UICONTROL 目的地] 平台UI中的控制面板。
+本指南提供有關自定義儀表板資料在 [!UICONTROL 配置檔案]。 [!UICONTROL 段], [!UICONTROL 目標] 平台UI中的儀表板。
 
 >[!NOTE]
 >
->無法自訂授權使用控制面板中顯示的介面工具集。 請參閱 [授權使用控制面板檔案](../guides/license-usage.md) 以深入了解此唯一的控制面板。
+>無法自定義許可證使用儀表板中顯示的小部件。 請參閱 [許可證使用儀表板文檔](../guides/license-usage.md) 瞭解有關此唯一儀表板的詳細資訊。
 
 ## 快速入門
 
-從任何控制面板(例如 [!UICONTROL 設定檔] 控制面板)，您可以選取 **[!UICONTROL 修改控制面板]** 以調整現有小工具的大小並重新排序。
+從任何儀表板(例如， [!UICONTROL 配置檔案] ) **[!UICONTROL 修改儀表板]** 以調整現有小部件的大小並重新排序。
 
-![突出顯示帶有「修改」(Modify)控制面板的「配置檔案」(Profiles)控制面板。](../images/customization/modify-dashboard.png)
+![加亮顯示「修改」操控板的「配置檔案」操控板。](../images/customization/modify-dashboard.png)
 
 ## 重新排序小部件
 
-選擇修改控制面板後，您可以通過選擇介面工具集標題，並將介面工具集拖放到所需順序來重新排序介面工具集。 在此範例中， **[!UICONTROL 設定檔計數趨勢]** 介面工具集會移至頂端列，而 **[!UICONTROL 設定檔計數]** 介面工具集現在會顯示在第二列。
+選擇修改儀表板後，可以通過選擇小部件標題並將小部件拖放到所需順序來重新排序小部件。 在此示例中， **[!UICONTROL 配置檔案計數趨勢]** 小部件將移到頂行， **[!UICONTROL 配置檔案計數]** 小部件現在出現在第二行中。
 
-![「設定檔」控制面板中突出顯示了兩個重新排序的小部件。](../images/customization/move-widget.png)
+![「配置式」操控板中加亮了兩個重排小部件。](../images/customization/move-widget.png)
 
-## 調整小工具的大小
+## 調整小部件大小
 
-您也可以選取介面工具集右下角的角度符號(`⌟`)並將介面工具集拖曳至所需大小。 在此範例中， **[!UICONTROL 依身分設定檔]** 對介面工具集調整大小，以填充整個頂行，並自動將其他介面工具集移動到第二行。 請注意，水準軸會如何調整，以隨著介面工具集變大提供更詳細的增量。
+也可以通過選擇小部件右下角的角度符號來調整小部件的大小(`⌟`)，並將小部件拖動到所需大小。 在此示例中， **[!UICONTROL 按身份顯示的配置檔案]** 小部件將調整大小以填充整個頂行，從而自動將其他小部件移動到第二行。 注意水準軸如何調整，以在小部件變大時提供更詳細的增量。
 
 >[!NOTE]
 >
->隨著小工具的大小調整，周圍小工具會動態重新定位。 這可能會導致某些小工具被移動到其他行，需要您滾動才能查看所有小工具。
+>隨著小部件大小的調整，周圍的小部件會動態地重新定位。 這可能導致某些小部件被移動到其他行，這要求您滾動以查看所有小部件。
 
-![「配置檔案」控制面板，其中突出顯示了調整大小的Widget。](../images/customization/resize-widget.png)
+![突出顯示了已調整大小的小部件的「配置檔案」儀表板。](../images/customization/resize-widget.png)
 
-## 儲存控制面板更新
+## 保存儀表板更新
 
-完成移動和調整小部件大小後，請選擇 **[!UICONTROL 儲存並退出]** 以儲存變更並返回主控制面板檢視。 如果您不想保留變更，請選取 **[!UICONTROL 取消]** 重設控制面板並返回主控制面板檢視。
+移動完小部件並調整小部件大小後，選擇 **[!UICONTROL 保存並退出]** 保存更改並返回主儀表板視圖。 如果不想保留更改，請選擇 **[!UICONTROL 取消]** 重置儀表板並返回到主儀表板視圖。
 
-![會反白顯示「取消」和「儲存並退出」的「設定檔」控制面板。](../images/customization/save-changes.png)
+![「配置式」操控板中，「取消」(Cancel)和「保存」(Save)和「退出」(Exit)都突出顯示。](../images/customization/save-changes.png)
 
-## 介面工具集程式庫
+## 小部件庫
 
-除了調整小部件大小和重新排序小部件外，選擇 **[!UICONTROL 修改控制面板]** 在 [!UICONTROL 設定檔], [!UICONTROL 區段]，和 [!UICONTROL 目的地] 控制面板可讓您 **[!UICONTROL 介面工具集程式庫]** 您可在其中找到更多介面工具集，以顯示或建立貴組織的自訂介面工具集。
+除調整小部件大小和重新排序外，選擇 **[!UICONTROL 修改儀表板]** 的 [!UICONTROL 配置檔案]。 [!UICONTROL 段], [!UICONTROL 目標] 儀表板使您能夠訪問 **[!UICONTROL 小部件庫]** 您可以在其中找到更多小部件來顯示或為組織建立自定義小部件。
 
-如需存取和使用的逐步指示 [!UICONTROL 介面工具集程式庫]，請參閱 [widget程式庫指南](widget-library.md).
+有關如何訪問和使用的逐步說明 [!UICONTROL 小部件庫]，請參閱 [構件庫指南](widget-library.md)。
 
-![反白顯示「標準」和「自訂」的Widget程式庫工作區。](../images/customization/widget-library.png)
+![突出顯示了「標準」和「自定義」的小部件庫工作區。](../images/customization/widget-library.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您學習了如何使用修改控制面板功能來重新排序小工具並調整其大小，以自訂控制面板檢視。 若要了解如何建立介面工具集並新增至控制面板，請閱讀 [widget程式庫指南](widget-library.md).
+閱讀此文檔後，您已學會如何使用修改儀表板功能對小部件重新排序和調整大小以自定義儀表板視圖。 要瞭解如何建立小部件並將其添加到儀表板，請閱讀 [構件庫指南](widget-library.md)。

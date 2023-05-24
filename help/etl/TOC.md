@@ -15,5 +15,5 @@ ht-degree: 58%
 
 - [開發ETL整合](home.md)
 - [ETL轉換](transformations.md)
-- [ETL工作流程](workflow.md)
+- [ETL工作流](workflow.md)
 - [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)

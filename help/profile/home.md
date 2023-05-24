@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp;XDM圖表
-title: 即時客戶個人檔案概觀
-description: 即時客戶設定檔可合併來自各種來源的資料，並以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。
+keywords: Experience Platform；配置檔案；即時客戶配置檔案；故障排除；API；統一配置檔案；統一配置檔案；配置檔案；rtcp;XDM圖形
+title: 即時客戶概要資訊概述
+description: 即時客戶配置檔案合併來自各種來源的資料，並以單個客戶配置檔案和相關時間系列事件的形式提供對這些資料的訪問。 此功能使營銷人員能夠跨多個渠道與其受眾進行協調、一致和相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
 workflow-type: tm+mt
@@ -12,83 +12,83 @@ ht-degree: 0%
 
 # [!DNL Real-Time Customer Profile] 概覽
 
-Adobe Experience Platform可讓您為客戶提供協調、一致且相關的體驗，無論客戶在何處或何時與您的品牌互動。 使用 [!DNL Real-Time Customer Profile]，您可結合來自多個管道的資料，包括線上、離線、CRM和協力廠商，全面了解每個客戶。 [!DNL Profile] 可讓您將客戶資料併入統一檢視中，提供每個客戶互動的可操作、時間戳記帳戶。 此概述將協助您了解 [!DNL Real-Time Customer Profile] in [!DNL Experience Platform].
+Adobe Experience Platform使您能夠為您的客戶提供協調、一致和相關的體驗，無論客戶在何處或何時與您的品牌進行交互。 與 [!DNL Real-Time Customer Profile]，通過組合來自多個渠道（包括線上、離線、CRM和第三方）的資料，您可以看到每個客戶的整體視圖。 [!DNL Profile] 允許您將客戶資料整合到一個統一視圖中，為每次客戶交互提供一個可操作且時間戳記的帳戶。 本概述將幫助您瞭解 [!DNL Real-Time Customer Profile] 在 [!DNL Experience Platform]。
 
 ## [!DNL Profile] Experience Platform
 
-下圖強調顯示「即時客戶個人檔案」與Experience Platform內其他服務之間的關係：
+Real-Time Customer Profile與Experience Platform內其他服務之間的關係在以下圖中突出顯示：
 
-![Adobe Experience Platform中「即時客戶個人檔案」與其他服務之間的關係。 此圖表顯示設定檔是Adobe Experience Platform的其中一個核心元件。](images/profile-overview/profile-in-platform.png)
+![Real-Time Customer Profile與Adobe Experience Platform其他服務之間的關係。 此圖表顯示Profile是Adobe Experience Platform的核心元件之一。](images/profile-overview/profile-in-platform.png)
 
-## 了解設定檔
+## 瞭解配置檔案
 
-[!DNL Real-Time Customer Profile] 合併來自各種企業系統的資料，然後以客戶配置檔案的形式提供對資料的訪問，並包含相關的時間序列事件。 此功能可讓行銷人員跨多個管道，透過受眾推動協調、一致且相關的體驗。 以下小節著重說明您必須了解的一些核心概念，以便在Platform內有效建立和維護設定檔。
+[!DNL Real-Time Customer Profile] 合併來自各種企業系統的資料，然後以客戶配置檔案的形式提供對該資料的訪問，並顯示相關的時間系列事件。 此功能使營銷人員能夠跨多個渠道與其受眾進行協調、一致和相關的體驗。 以下各節重點介紹一些必須瞭解的核心概念，以便在平台內有效地構建和維護配置檔案。
 
-### 輪廓實體組合
+### 配置檔案實體組合
 
-即時客戶設定檔由稱為 **主要實體**，以及各種支援實體。 在Experience Platform內容中，主要實體通常為 **設定檔實體**，由個人的特徵、行為和區段成員組成。 其他實體可讓分段引擎利用設定檔主要實體以外的資料，並包含下列項目：
+即時客戶配置檔案由主實體組成，稱為 **主實體**&#x200B;以及各種配套實體。 在Experience Platform上下文中，主實體通常是 **配置檔案實體**&#x200B;由個人的特徵，行為和分會員構成。 其它實體允許分割引擎利用輪廓的主實體之外的資料，並包括：
 
-- **維實體**:用於簡化資料建模過程的實體，用於在事件或配置檔案記錄之間共用的資訊。 這也稱為查閱實體或分類實體。
-- **B2B實體**:描述配置檔案與業務對業務帳戶和機會關係的實體。
+- **維實體**:用於簡化資料建模過程的實體，用於在事件或配置檔案記錄之間共用資訊。 這也稱為查找實體或分類實體。
+- **B2B實體**:描述配置檔案與業務對業務客戶和機會關係的實體。
 
-![說明設定檔實體組成的圖表。](./images/profile-overview/profile-entity-composition.png)
+![說明配置檔案圖元組成的圖。](./images/profile-overview/profile-entity-composition.png)
 
 >[!IMPORTANT]
 >
->由於維度和B2B實體僅存在於主要實體之外，因此這些實體僅用於批次分段。
+>由於維實體和B2B實體僅存在於主實體之外，因此它們僅用於批分割。
 
-維和B2B實體通過 **模式關係**. 如需詳細資訊，請參閱下列檔案：
+維實體和B2B實體通過 **架構關係**。 有關詳細資訊，請參閱以下文檔：
 
-- [為查詢實體建立一對一結構關係](../xdm/tutorials/relationship-ui.md)
-- [為B2B實體建立多對一結構關係](../xdm/tutorials/relationship-b2b.md)
+- [為查找實體建立一對一架構關係](../xdm/tutorials/relationship-ui.md)
+- [為B2B實體建立多對一模式關係](../xdm/tutorials/relationship-b2b.md)
 
-### 設定檔資料存放區
+### 配置檔案資料儲存
 
-雖然 [!DNL Real-Time Customer Profile] 處理擷取的資料和使用Adobe Experience Platform [!DNL Identity Service] 若要透過身分對應來合併相關資料，會在 [!DNL Profile] 資料儲存。 此 [!DNL Profile] 儲存區與資料湖中的目錄資料不同，且 [!DNL Identity Service] 身分圖中的資料。
+儘管 [!DNL Real-Time Customer Profile] 處理所測資料和使用Adobe Experience Platform [!DNL Identity Service] 通過身份映射來合併相關資料，在中維護自己的資料 [!DNL Profile] 資料儲存。 的 [!DNL Profile] 儲存與資料湖中的目錄資料分離， [!DNL Identity Service] 標識圖中的資料。
 
-設定檔存放區使用Microsoft Azure Cosmos DB基礎架構，而Platform Data Lake則使用Microsoft Azure Data Lake儲存。
+配置檔案儲存使用MicrosoftAzure Cosmos DB基礎架構，平台資料湖使用MicrosoftAzure資料湖儲存。
 
-### 設定檔護欄
+### 輪廓護欄
 
-Experience Platform提供一系列護欄，幫助您避免建立 [Experience Data Model(XDM)結構](../xdm/home.md) 即時客戶設定檔無法支援。 這包括會導致效能降低的軟限制，以及會導致錯誤和系統中斷的硬限制。 如需詳細資訊，包括指引清單和範例使用案例，請參閱 [設定檔護欄](guardrails.md) 檔案。
+Experience Platform提供一系列護欄，幫助您避免建立 [體驗資料模型(XDM)架構](../xdm/home.md) Real-Time Customer Profile不能支援。 這包括導致效能降低的軟限制，以及導致錯誤和系統中斷的硬限制。 有關詳細資訊，包括指南和示例使用案例清單，請閱讀 [輪廓護欄](guardrails.md) 文檔。
 
-### 設定檔控制面板 {#profile-dashboard}
+### 配置檔案儀表板 {#profile-dashboard}
 
-Experience PlatformUI提供控制面板，您可透過控制面板檢視即時客戶個人檔案資料的重要資訊，如每日快照中所擷取。 了解如何存取及使用 [!DNL Profile] UI中的控制面板，以及控制面板中顯示之量度的詳細資訊，請參閱 [設定檔控制面板UI指南](ui/profile-dashboard.md).
+Experience PlatformUI提供了一個儀表板，您可以通過該儀表板查看有關即時客戶配置檔案資料的重要資訊，這些資訊在每日快照中捕獲。 瞭解如何訪問和使用 [!DNL Profile] UI中的儀表板，以及有關儀表板中顯示的度量的詳細資訊，請參閱 [配置檔案儀表板UI指南](ui/profile-dashboard.md)。
 
-### 設定檔片段與合併的設定檔 {#profile-fragments-vs-merged-profiles}
+### 配置檔案片段與合併的配置檔案 {#profile-fragments-vs-merged-profiles}
 
-每個個別客戶設定檔都由多個已合併的設定檔片段組成，以形成該客戶的單一檢視。 例如，如果客戶跨多個管道與您的品牌互動，您的組織會在多個資料集中顯示與該單一客戶相關的多個設定檔片段。 將這些片段擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。
+每個單獨的客戶配置檔案由多個配置檔案片段組成，這些片段已合併以形成該客戶的單個視圖。 例如，如果客戶通過多個渠道與您的品牌進行交互，您的組織將具有多個與該單個客戶相關的配置檔案片段，這些配置檔案片段出現在多個資料集中。 當這些片段被放入平台中時，它們會合併在一起，以便為該客戶建立單個配置檔案。
 
-換句話說，設定檔片段代表唯一的主要身分和對應的 [記錄](#record-data) 或 [事件](#time-series-events) 資料集內該ID的資料。
+換句話說，簡檔片段表示唯一的主身份和相應的 [記錄](#record-data) 或 [事件](#time-series-events) 給定資料集中該ID的資料。
 
-當多個資料集的資料發生衝突時（例如，一個片段將客戶列為「單一」，而另一個片段將客戶列為「已婚」）, [合併策略](#merge-policies) 決定要排定優先順序的資訊，並納入個人的設定檔中。 因此，Platform內的設定檔片段總數可能一律高於已合併設定檔的總數，因為每個設定檔通常由多個資料集的多個片段組成。
+當來自多個資料集的資料發生衝突時（例如，一個片段將客戶列為「單一」，而另一個片段將客戶列為「已婚」） [合併策略](#merge-policies) 確定要排定優先順序並包含在個人配置檔案中的資訊。 因此，平台內配置檔案片段的總數可能總是高於合併配置檔案的總數，因為每個配置檔案通常由多個資料集中的多個片段組成。
 
 ### 記錄資料 {#record-data}
 
-設定檔是由許多屬性（也稱為記錄資料）所組成的主體、組織或個人的表示。 例如，產品的設定檔可能包含SKU和說明，而人員的設定檔則包含名字、姓氏和電子郵件地址等資訊。 使用 [!DNL Experience Platform]，您可以自訂設定檔，以使用與業務相關的特定資料。 標準 [!DNL Experience Data Model] (XDM)類別， [!DNL XDM Individual Profile]，是在描述客戶記錄資料時建立架構的偏好類別，且為Platform服務之間的許多互動提供資料的必要部分。 如需使用結構的詳細資訊，請參閱 [!DNL Experience Platform]，請先閱讀 [XDM系統概觀](../xdm/home.md).
+配置檔案是由許多屬性（也稱為記錄資料）組成的主題、組織或個人的表示。 例如，產品的配置檔案可能包括SKU和說明，而人員的配置檔案則包含諸如名、姓和電子郵件地址等資訊。 使用 [!DNL Experience Platform]，您可以自定義配置檔案以使用與業務相關的特定資料。 標準 [!DNL Experience Data Model] (XDM)類， [!DNL XDM Individual Profile]，是描述客戶記錄資料時構建模式的首選類，並為平台服務之間的許多交互提供資料。 有關使用中的架構的詳細資訊 [!DNL Experience Platform]，請從閱讀 [XDM系統概述](../xdm/home.md)。
 
-### 時間序列事件 {#time-series-events}
+### 時間系列事件 {#time-series-events}
 
-時間序列資料提供了在主題直接或間接地採取某個動作時系統的快照，以及詳細說明事件本身的資料。 以標準結構類別XDM ExperienceEvent表示，時間系列資料可說明事件，例如新增至購物車的項目、點按的連結，以及檢視的視訊。 時間序列資料可用來建立區段規則的基礎，而事件則可在設定檔的內容中個別存取。
+時間序列資料提供了對象直接或間接執行操作時系統的快照，以及詳細描述事件本身的資料。 由標準架構類XDM ExperienceEvent表示，時間序列資料可以描述事件，如添加到購物車的項目、按一下的連結和查看的視頻。 時間序列資料可用於基於分段規則，並且事件可在概要檔案的上下文中單獨訪問。
 
 ### 身分
 
-每家企業都想以一種個人化的方式與客戶溝通。 不過，向客戶提供相關數位體驗的其中一項挑戰，是了解如何將其中斷連結的資料連結在一起，這通常會分散在不同的數位通道，例如平板電腦、行動電話和筆記型電腦。 [!DNL Identity Service] 可讓您從多個管道連結身分，並為每個客戶建立身分圖表，將客戶的完整圖片拼湊在一起。 造訪 [Identity服務概述](../identity-service/home.md) 以取得更多資訊。
+每家企業都希望以一種感覺私人的方式與客戶溝通。 然而，向客戶提供相關數字型驗的一個挑戰是瞭解如何將其斷開連接的資料聯繫起來，這種資料通常分佈在不同的數字渠道，如平板電腦、行動電話和筆記型電腦。 [!DNL Identity Service] 通過連結來自多個渠道的身份並為每個客戶建立身份圖表，您可以將客戶的完整圖片拼湊在一起。 訪問 [Identity Service概述](../identity-service/home.md) 的子菜單。
 
 ### 合併策略
 
-將來自多個來源的資料片段匯整在一起並加以合併，以便查看每個客戶的完整檢視時，合併原則是 [!DNL Platform] 用來決定資料的優先順序，以及將使用哪些資料來建立客戶設定檔。
+將來自多個源的資料片段合併在一起並合併這些片段以便查看每個客戶的完整視圖時，合併策略是 [!DNL Platform] 用於確定資料的優先順序以及將使用哪些資料建立客戶配置檔案。
 
-當多個資料集中有衝突資料時，合併策略將確定應如何處理該資料以及應使用哪個值。 通過RESTful API或用戶介面，您可以建立新的合併策略、管理現有策略，以及為組織設定預設的合併策略。
+當來自多個資料集的資料發生衝突時，合併策略將確定應如何處理該資料以及應使用哪個值。 通過REST風格的API或用戶介面，您可以建立新的合併策略、管理現有策略以及為組織設定預設的合併策略。
 
-若要進一步了解合併原則及其在Experience Platform中的角色，請先閱讀 [合併策略概述](merge-policies/overview.md).
+要瞭解有關合併策略及其在Experience Platform中的角色的詳細資訊，請首先閱讀 [合併策略概述](merge-policies/overview.md)。
 
-### 聯合結構 {#profile-fragments-and-union-schemas}
+### 聯合架構 {#profile-fragments-and-union-schemas}
 
-其中一項主要功能 [!DNL Real-Time Customer Profile] 是整合多通道資料的能力。 當 [!DNL Real-Time Customer Profile] 用於存取實體，它可為您提供跨資料集該實體所有設定檔片段的合併檢視（稱為「聯合檢視」），並透過所謂的聯合架構實現。
+C.C.C.C.C. [!DNL Real-Time Customer Profile] 是統一多通道資料的能力。 當 [!DNL Real-Time Customer Profile] 用於訪問實體，它可為您提供跨資料集的該實體的所有配置檔案片段的合併視圖，稱為「聯合視圖」，並通過稱為聯合架構的內容實現。
 
-若要進一步了解聯合結構，包括如何在UI中存取聯合結構，請造訪 [union schema UI指南](ui/union-schema.md).
+要瞭解有關聯合架構的詳細資訊，包括如何訪問UI中的聯合架構，請訪問 [聯合架構UI指南](ui/union-schema.md)。
 
 <!-- ### (Alpha) Computed attributes
 
@@ -98,50 +98,50 @@ Experience PlatformUI提供控制面板，您可透過控制面板檢視即時�
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## 設定檔和區段
+## 配置檔案和段
 
-Adobe Experience Platform [!DNL Segmentation Service] 會產生支援個別客戶體驗所需的對象。 建立受眾區段時，該區段的ID會新增至所有合格設定檔的區段成員資格清單中。 區段規則會建立並套用至 [!DNL Real-Time Customer Profile] 使用RESTful API和區段產生器使用者介面的資料。 若要進一步了解細分，請先閱讀 [區段服務概觀](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] 為您的個別客戶提供強大體驗所需的受眾。 建立受眾段時，該段的ID將添加到所有合格配置檔案的段成員資格清單中。 段規則生成並應用於 [!DNL Real-Time Customer Profile] 使用REST風格的API和段生成器用戶介面的資料。 要瞭解有關分段的詳細資訊，請首先閱讀 [分段服務概述](../segmentation/home.md)。
 
-### 串流獲取和串流細分
+### 流攝入和流分割
 
-即時輸入可通過稱為流獲取的過程實現。 擷取設定檔和時間序列資料時， [!DNL Real-Time Customer Profile] 在將資料與現有資料合併並更新聯合檢視之前，自動決定透過稱為串流分段的持續程式，將該資料納入或排除區段。 因此，您可以即時執行計算，並做出決策，在客戶與您的品牌互動時，向客戶提供增強的個人化體驗。 擷取資料時，也會進行驗證，以確保正確擷取資料，並符合資料集所依據的結構。 如需擷取期間會執行哪些驗證的詳細資訊，請先閱讀 [資料擷取品質概觀](../ingestion/quality/overview.md).
+通過稱為流式接收的過程使即時輸入成為可能。 在接收資料和時間序列資料時， [!DNL Real-Time Customer Profile] 在將資料與現有資料合併並更新聯合視圖之前，自動決定通過稱為流分段的持續過程將資料包括或排除在資料段中。 因此，您可以即時執行計算並做出決策，在客戶與您的品牌進行交互時向客戶提供增強的個性化體驗。 在攝取資料的同時，還進行驗證以確保正確攝取資料並且符合資料集所基於的模式。 有關在接收期間執行的驗證操作的詳細資訊，請首先閱讀 [資料接收質量概述](../ingestion/quality/overview.md)。
 
 ## 邊緣投影
 
-為了即時為跨多個管道的客戶提供協調、一致且個人化的體驗，需要隨著變更隨時提供正確的資料並持續更新。 Adobe Experience Platform可透過使用所謂的Edge來即時存取資料。 邊緣是地理位置的伺服器，可儲存資料，讓應用程式可輕鬆存取。 例如，Adobe Target和Adobe Campaign等Adobe應用程式會使用Edge，以即時提供個人化的客戶體驗。 通過投影將資料路由到邊，投影目標定義要向其發送資料的邊，投影配置定義將在邊上提供的特定資訊。 若要深入了解，並開始使用投影功能，請使用 [!DNL Real-Time Customer Profile] API，請參閱 [邊緣投影端點指南](api/edge-projections.md).
+為了在多個渠道中為客戶提供協調、一致和個性化的即時體驗，需要隨時提供適當的資料並在發生更改時不斷更新。 Adobe Experience Platform通過使用所謂的邊緣實現對資料的即時訪問。 邊緣是位於地理位置的伺服器，它儲存資料，並使應用程式能夠方便地訪問資料。 例如，Adobe應用程式(如Adobe Target和Adobe Campaign)使用邊緣，以便即時提供個性化的客戶體驗。 資料通過投影被路由到邊緣，投影目的地定義要向其發送資料的邊緣，投影配置定義將在邊緣上提供的特定資訊。 要瞭解更多資訊，並使用 [!DNL Real-Time Customer Profile] API，請參閱 [邊緣投影端點導引](api/edge-projections.md)。
 
-## 將資料擷取至 [!DNL Profile]
+## 將資料插入 [!DNL Profile]
 
-[!DNL Platform] 可配置為將記錄和時間序列資料發送到 [!DNL Profile]，支援即時串流內嵌和批次內嵌。 如需詳細資訊，請參閱教學課程，概述如何 [新增資料至即時客戶個人檔案](tutorials/add-profile-data.md).
+[!DNL Platform] 可以配置為將記錄和時間序列資料發送到 [!DNL Profile]支援即時流攝入和批量攝入。 有關詳細資訊，請參閱概述如何 [將資料添加到即時客戶配置檔案](tutorials/add-profile-data.md)。
 
 >[!NOTE]
 >
->透過Adobe解決方案收集的資料，包括 [!DNL Analytics Cloud], [!DNL Marketing Cloud]，和 [!DNL Advertising Cloud]，流入 [!DNL Experience Platform] 並進入 [!DNL Profile].
+>通過Adobe解決方案收集的資料，包括 [!DNL Analytics Cloud]。 [!DNL Marketing Cloud], [!DNL Advertising Cloud]，流入 [!DNL Experience Platform] 被攝入 [!DNL Profile]。
 
-### 設定檔擷取量度
+### 配置檔案接收度量
 
-可觀察性前瞻分析可讓您公開Adobe Experience Platform中的關鍵量度。 除 [!DNL Experience Platform] 各種使用統計和效能指標 [!DNL Platform] 功能，則有特定的設定檔相關量度，可讓您深入分析傳入的請求率、成功的擷取率、擷取的記錄大小等。 若要進一步了解，請先閱讀 [可觀察性前瞻分析API概述](../observability/api/overview.md)，如需即時客戶設定檔量度的完整清單，請參閱 [可用量度](../observability/api/metrics.md#available-metrics).
+Oncebrity Insights允許您公開Adobe Experience Platform的關鍵指標。 除 [!DNL Experience Platform] 使用統計和績效指標 [!DNL Platform] 功能，有特定的與配置檔案相關的度量，使您能夠深入瞭解傳入請求速率、成功攝取速率、攝取的記錄大小等。 要瞭解更多資訊，請從閱讀 [可觀性透視API概述](../observability/api/overview.md)，有關即時客戶配置檔案度量的完整清單，請參閱 [可用度量](../observability/api/metrics.md#available-metrics)。
 
-## 更新設定檔存放區資料
+## 更新配置檔案儲存資料
 
-有時候，您可能需要更新組織的設定檔存放區中的資料。 例如，您可能需要更正記錄或更改屬性值。 您可以透過批次內嵌完成此操作，且需要已啟用設定檔的資料集搭配上新插入標籤。 如需如何設定資料集以進行屬性更新的詳細資訊，請參閱的教學課程 [啟用「設定檔」和「插入」的資料集](../catalog/datasets/enable-upsert.md).
+有時可能需要更新組織的配置檔案儲存中的資料。 例如，您可能需要更正記錄或更改屬性值。 這可以通過批處理接收來完成，並且需要使用upsert標籤配置啟用配置檔案的資料集。 有關如何配置資料集以進行屬性更新的詳細資訊，請參閱本教程以瞭解 [為配置檔案和upsert啟用資料集](../catalog/datasets/enable-upsert.md)。
 
-## 資料控管和 [!DNL Privacy]
+## 資料治理和 [!DNL Privacy]
 
-資料控管是一系列策略和技術，用於管理客戶資料並確保符合適用於資料使用的法規、限制和政策。
+資料治理是用於管理客戶資料和確保遵守適用於資料使用的法規、限制和策略的一系列策略和技術。
 
-資料控管與存取資料相關，在 [!DNL Experience Platform] 在不同層級：
+由於資料存取相關，資料治理在 [!DNL Experience Platform] 各級：
 
 - 資料使用標籤
-- 資料存取原則
-- 對行銷動作資料的存取控制
+- 資料存取策略
+- 對市場營銷活動資料的訪問控制
 
-資料控管可在數個時間點進行管理。 包括決定要擷取哪些資料 [!DNL Platform] 以及擷取指定行銷動作後可存取哪些資料。 如需詳細資訊，請先閱讀 [資料控管概觀](../data-governance/home.md).
+資料治理在幾個點進行管理。 這些包括確定所攝取的資料 [!DNL Platform] 以及在接收特定營銷活動後可以訪問哪些資料。 有關詳細資訊，請首先閱讀 [資料治理概述](../data-governance/home.md)。
 
-### 處理選擇退出與資料隱私權請求
+### 處理選擇退出和資料隱私請求
 
-[!DNL Experience Platform] 可讓客戶在內傳送與其資料的使用和儲存相關的退出請求 [!DNL Real-Time Customer Profile]. 如需如何處理選擇退出請求的詳細資訊，請參閱 [接受選擇退出請求](../segmentation/consents.md).
+[!DNL Experience Platform] 使您的客戶能夠發送與其資料在以下位置的使用和儲存相關的退出請求 [!DNL Real-Time Customer Profile]。 有關如何處理選擇退出請求的詳細資訊，請參閱 [處理選擇退出請求](../segmentation/consents.md)。
 
 ## 後續步驟和其他資源
 
-若要進一步了解如何使用Experience PlatformUI或設定檔API使用即時客戶設定檔資料，請先閱讀 [設定檔UI指南](ui/user-guide.md) 或 [API開發人員指南](api/overview.md)，分別為。
+要瞭解有關使用Experience PlatformUI或配置檔案API處理即時客戶配置檔案資料的更多資訊，請從閱讀 [配置檔案UI指南](ui/user-guide.md) 或 [API開發人員指南](api/overview.md)的下界。

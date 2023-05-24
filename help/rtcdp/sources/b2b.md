@@ -1,6 +1,6 @@
 ---
-title: Real-time Customer Data Platform B2B版中的來源
-description: 概略說明來源在Adobe Real-time Customer Data Platform B2B版中的角色。
+title: Real-time Customer Data PlatformB2B版來源
+description: 概述源在Adobe Real-time Customer Data PlatformB2B版中的作用。
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版中的來源
+# Real-time Customer Data PlatformB2B版來源
 
 >[!NOTE]
 >
->如果您未使用Adobe Real-time Customer Data Platform B2B Edition，請參閱 [來源概觀](./sources-overview.md) 。
+>如果您未使用Adobe Real-time Customer Data PlatformB2B版，請參閱 [源概述](./sources-overview.md) 的雙曲餘切值。
 
-Adobe Real-time Customer Data Platform B2B版可讓您透過各種來源帶入B2B資料，包括 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 來源連接器、Salesforce、Amazon S3和ADLS等。 此範圍的源允許您使用服務來構建、標籤和增強傳入資料。
+Adobe Real-time Customer Data PlatformB2B版允許您通過各種來源(包括 [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) 源連接器、Salesforce、AmazonS3和ADLS等。 此範圍的源使您能夠使用服務構造、標籤和增強傳入資料。
 
-若要了解來源與B2B工作流程的契合程度，請參閱 [端對端教學課程](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
+要瞭解B2B工作流中的源的適用情況，請參閱 [端到端教程](../b2b-tutorial.md#ingest-your-data-into-experience-platform)。
 
-請參閱 [來源連接器概觀](../../sources/home.md) 以取得Adobe Experience Platform中可用來源類型的詳細資訊。
+查看 [源連接器概述](../../sources/home.md) 瞭解有關Adobe Experience Platform可用來源類型的更多資訊。
 
 >[!IMPORTANT]
 >
->您必須擁有 [Real-time Customer Data Platform B2B版](../../rctcdp/../rtcdp/b2b-overview.md) 讓B2B架構參與 [即時客戶個人檔案](../proile/../../profile/home.md).
+>您必須有權訪問 [Real-time Customer Data PlatformB2B版](../../rctcdp/../rtcdp/b2b-overview.md) 以便B2B模式參與 [即時客戶配置檔案](../proile/../../profile/home.md)。
 
-下列檔案提供有關使用 [!DNL Marketo] 將B2B資料帶入Platform:
+以下文檔提供了有關使用 [!DNL Marketo] 將B2B資料帶到平台：
 
-* 有關如何連接您的 [!DNL Marketo] 若要將資料傳送至Platform，請參閱 [在UI中建立Marketo來源連接器](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
-* 如需B2B命名空間和結構的基礎設定相關資訊，請參閱 [!DNL Marketo]，請參閱 [B2B命名空間和結構](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
-* 如需尋找 [!DNL Marketo] Munchkin ID和產生您的憑證，請參閱 [[!DNL Marketo] 驗證指南](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
-* 有關適用於的特定映射規則的資訊 [!DNL Marketo] 資料集，請參閱 [[!DNL Marketo] 欄位對應](../../sources/connectors/adobe-applications//mapping/marketo.md).
+* 有關如何連接的資訊 [!DNL Marketo] 資料到平台，請參閱上的教程 [在UI中建立Marketo源連接器](../../sources/tutorials/ui/create/adobe-applications/marketo.md)。
+* 有關B2B命名空間和使用的架構的基礎設定的資訊 [!DNL Marketo]，請參閱 [B2B命名空間和架構](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
+* 有關查找 [!DNL Marketo] Munchkin ID和生成憑據，請參閱 [[!DNL Marketo] 認證指南](../../sources/connectors/adobe-applications/marketo/marketo-auth.md)。
+* 有關適用於的特定映射規則的資訊 [!DNL Marketo] 資料集，請參閱 [[!DNL Marketo] 欄位映射](../../sources/connectors/adobe-applications//mapping/marketo.md)。

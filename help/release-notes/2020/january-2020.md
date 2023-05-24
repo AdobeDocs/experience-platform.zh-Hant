@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform發行說明2020年1月
-description: 2020年1月Adobe Experience Platform發行說明。
+description: 2020年1月為Adobe Experience Platform發行的說明。
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
@@ -25,90 +25,90 @@ Adobe Experience Platform 現有功能更新：
 
 ## [!DNL Experience Data Model] (XDM)系統 {#xdm}
 
-標準化和互操作性是背後的關鍵概念 [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)受Adobe推動，致力標準化客戶體驗資料並定義客戶體驗管理的結構。
+標準化和互操作性是其背後的關鍵概念 [!DNL Experience Platform]。 [!DNL Experience Data Model] (XDM)在Adobe的推動下，致力於標準化客戶體驗資料並定義客戶體驗管理模式。
 
-XDM是公開記錄的規格，旨在改善數位體驗的強大功能。 它為與Adobe Experience Platform上的服務通訊的任何應用程式提供共同的結構和定義。 遵循XDM標準，所有客戶體驗資料皆可整合至以更快速、更整合的方式提供深入分析的通用表示法中。 您可以從客戶動作中獲得寶貴的深入分析、透過區段定義客戶受眾，以及將客戶屬性用於個人化目的。
+XDM是一種公開記錄的規範，旨在提高數字型驗的威力。 它為任何與Adobe Experience Platform服務通信的應用程式提供了共同的結構和定義。 通過遵守XDM標準，所有客戶體驗資料都可以納入到一個通用的表示形式中，以更快、更整合的方式提供洞察力。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
 
 **新功能**
 
 | 功能 | 說明 |
 |--- | ---|
-| 等層次結構欄位的欄位類型限制 | 將XDM欄位定義為特定類型後，任何其他名稱和階層相同的欄位都必須使用相同的欄位類型，無論其中使用的類別或架構欄位群組為何。 例如，如果XDM的欄位群組 [!DNL Profile] 類包含 `profile.age` 類型為&quot;integer&quot;的欄位，與XDM的類似欄位群組 [!DNL ExperienceEvent] 不能有 `profile.age` 「字串」類型的欄位。 若要使用不同的欄位類型，欄位必須具有與先前定義的欄位不同的階層(例如， `profile.person.age`)。 此功能的用意是在結合中結合結構時防止衝突。 雖然此限制不會回溯影響現有結構，但強烈建議您檢閱您的結構中的欄位類型衝突，並視需要加以編輯。 |
-| 區分大小寫欄位驗證 | 相同層級的自訂欄位必須有不同的名稱，不論大小寫為何。 例如，如果您新增名為「Email」的自訂欄位，則無法在同一層級新增名為「email」的其他自訂欄位。 |
+| 等層次的欄位的欄位類型限制 | 在將XDM欄位定義為特定類型後，任何具有相同名稱和層次結構的其他欄位都必須使用相同的欄位類型，而不管它們在中使用的類或架構欄位組。 例如，如果XDM的欄位組 [!DNL Profile] 類包含 `profile.age` 類型為&quot;integer&quot;的欄位，XDM的類似欄位組 [!DNL ExperienceEvent] 不能 `profile.age` 「字串」類型的欄位。 為了使用不同的欄位類型，該欄位必須具有與先前定義的欄位不同的層次(例如， `profile.person.age`)。 此功能旨在防止在將架構合併到聯合中時發生衝突。 雖然約束不追溯影響現有方案，但強烈建議您查看方案中的欄位類型衝突，並根據需要編輯它們。 |
+| 區分大小寫的欄位驗證 | 同一級別上的自定義欄位必須具有不同的名稱，而不考慮大寫。 例如，如果添加了名為「電子郵件」的自定義欄位，則不能在名為「email」的同一級別添加另一個自定義欄位。 |
 
 **已知問題**
 
 * None
 
-若要進一步了解如何使用XDM，請使用 [!DNL Schema Registry] API和 [!DNL Schema Editor] 用戶介面，請閱讀 [XDM系統檔案](../../xdm/home.md).
+瞭解有關使用XDM的更多資訊 [!DNL Schema Registry] API和 [!DNL Schema Editor] 用戶介面，請閱讀 [XDM系統文檔](../../xdm/home.md)。
 
 ## [!DNL Privacy Service] {#privacy}
 
-新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。Adobe Experience Platform [!DNL Privacy Service] 提供RESTful API和使用者介面，協助您管理客戶的這些資料請求。 使用 [!DNL Privacy Service]，您可以提交從Adobe Experience Cloud應用程式存取和刪除私人或個人客戶資料的請求，協助您自動遵循法律和組織隱私權法規。
+新的法律和組織法規授予使用者權利，讓使用者有權應要求從您的資料存放區存取或刪除其個人資料。Adobe Experience Platform [!DNL Privacy Service] 提供REST風格的API和用戶介面，幫助您管理客戶的這些資料請求。 與 [!DNL Privacy Service]，您可以提交訪問和刪除Adobe Experience Cloud應用程式中的私人或個人客戶資料的請求，以便自動遵守法律和組織隱私法規。
 
 **新功能**
 
 | 功能 | 說明 |
 |--- | ---|
-| [!DNL Privacy Service] 品牌重塑 | 先前名為「GDPR服務」的品牌已重新命名為 [!DNL Privacy Service] 隨著服務逐漸發展，除了GDPR以外，還可支援其他法規。 |
-| 新API端點 | 的基本路徑 [!DNL Privacy Service] API已從 `/data/privacy/gdpr` to `/data/core/privacy/jobs`. |
-| 新增必要項目 `regulation` 屬性 | 在 [!DNL Privacy Service] API, a `regulation` 必須在要求裝載中提供屬性，以指出要追蹤工作的法規。 接受的值為 `gdpr` 和 `ccpa`. |
-| 支援 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 現在接受來自Adobe的存取/刪除請求 [!DNL Primetime Authentication]，使用 `primetimeAuthentication` 作為其產品價值。 |
-| Privacy ServiceUI增強功能 | 區隔GDPR和CCPA法規的工作追蹤頁面。 新**規則類型**下拉式清單，可切換GDPR和CCPA的追蹤資料。 |
+| [!DNL Privacy Service] 重新標籤 | 以前名為「 GDPR服務」已重新標籤為 [!DNL Privacy Service] 隨著服務的發展，除了GDPR外，還支援其他法規。 |
+| 新API終結點 | 的基本路徑 [!DNL Privacy Service] API已從 `/data/privacy/gdpr` 至 `/data/core/privacy/jobs`。 |
+| 需要新建 `regulation` 屬性 | 在中建立新作業時 [!DNL Privacy Service] API, a `regulation` 必須在請求負載中提供屬性，以指示跟蹤作業的法規。 接受的值為 `gdpr` 和 `ccpa`。 |
+| 支援 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 現在接受訪問/刪除來自Adobe的請求 [!DNL Primetime Authentication]，使用 `primetimeAuthentication` 作為產品價值。 |
+| Privacy ServiceUI增強 | 為GDPR和CCPA管理法規分開作業跟蹤頁。 新建**Regulation Type **dropdown ，用於在GDPR和CCPA的跟蹤資料之間切換。 |
 
 **已知問題**
 
 * None
 
-如需 [!DNL Privacy Service]，請先閱讀 [Privacy Service概述](../../privacy-service/home.md).
+有關 [!DNL Privacy Service]，請從閱讀 [Privacy Service概述](../../privacy-service/home.md)。
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以內嵌來自外部來源的資料，同時允許您使用 [!DNL Platform] 服務。 您可以從多種來源擷取資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可以從外部源接收資料，同時允許您使用 [!DNL Platform] 服務。 您可以從多種源(如Adobe應用程式、基於雲的儲存、第三方軟體和CRM系統)中接收資料。
 
-[!DNL Experience Platform] 提供RESTful API和互動式UI，讓您輕鬆為各種資料提供者設定來源連線。 這些源連接允許您驗證並連接到外部儲存系統和CRM服務、設定獲取運行時間以及管理資料獲取吞吐量。
+[!DNL Experience Platform] 提供了REST風格的API和互動式UI，使您可以輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
 
 **新功能**
 
 | 功能 | 說明 |
 |--- | ---|
-| 支援客戶屬性資料 | 建立串流連接器以內嵌客戶屬性資料的UI和API支援。 |
-| 雲端儲存空間的其他檔案格式支援 | 從雲端儲存擷取檔案現在支援符合XDM的Parquet和JSON檔案格式。 |
-| 支援存取控制權限 | Adobe Experience Platform中的存取控制架構提供授與資料擷取中來源存取權所需的權限。 根據用戶的權限級別，用戶可以查看源、管理源或完全被拒絕訪問。 |
+| 支援客戶屬性資料 | UI和API支援建立流連接器以接收客戶屬性資料。 |
+| 對雲儲存的其他檔案格式支援 | 從雲儲存中接收檔案現在支援符合XDM的Parfece和JSON檔案格式。 |
+| 支援訪問控制權限 | Adobe Experience Platform的訪問控制框架提供了授予對資料接收中的源的訪問權限所需的權限。 根據用戶的權限級別，用戶可以查看源、管理源或完全被拒絕訪問。 |
 
-**存取控制權限**
+**訪問控制權限**
 
 | 類別 | 權限 | 說明 |
 |--- | --- | ---|
-| 資料擷取 | 管理來源 | 讀取、建立、編輯和禁用源的訪問權。 |
-| 資料擷取 | 查看源 | 對 **[!UICONTROL 目錄]** 標籤和已驗證的來源(在 **[!UICONTROL 瀏覽]** 標籤。 |
+| 資料擷取 | 管理源 | 訪問讀取、建立、編輯和禁用源。 |
+| 資料擷取 | 查看源 | 對中可用源的只讀訪問 **[!UICONTROL 目錄]** 頁籤和經過驗證的源 **[!UICONTROL 瀏覽]** 頁籤。 |
 
 **已知問題**
 
 * None
 
-如需來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md)
+有關源的詳細資訊，請參見 [源概述](../../sources/home.md)
 
 ## 目的地 {#destinations}
 
-在 [Real-Time CDP](../../rtcdp/overview.md)，目的地是與目的地平台預先建立的整合，可順暢地向這些合作夥伴啟用資料。
+在 [Real-Time CDP](../../rtcdp/overview.md)，目標是與目標平台預構建的整合，這些平台可以無縫地向這些合作夥伴激活資料。
 
 **新功能**
 
 | 功能 | 說明 |
 |--- | ---|
-| 支援存取控制權限 | Real-Time CDP中的目的地功能可與Adobe Experience Platform存取控制權限搭配使用。 您可以檢視、管理和啟用目的地，視使用者的權限層級而定。 |
+| 支援訪問控制權限 | Real-Time CDP的目標功能與Adobe Experience Platform訪問控制權限配合使用。 根據用戶的權限級別，您可以查看、管理和激活目標。 |
 
-**存取控制權限**
+**訪問控制權限**
 
 | 類別 | 權限 | 說明 |
 |--- | --- | ---|
-| 目的地 | 管理目的地 | 讀取、建立、編輯和停用目的地的存取權。 |
-| 目的地 | 檢視目的地 | 以唯讀方式存取 **[!UICONTROL 目錄]** 標籤和已驗證的目的地 **瀏覽** 標籤。 |
-| 目的地 | 啟動目的地 | 可對目的地啟用資料。 此權限需要將「管理目的地」或「檢視目的地」新增至產品設定檔。 |
+| 目的地 | 管理目標 | 訪問讀取、建立、編輯和禁用目標。 |
+| 目的地 | 查看目標 | 對中的可用目標的只讀訪問 **[!UICONTROL 目錄]** 頁籤和已驗證的目標 **瀏覽** 頁籤。 |
+| 目的地 | 激活目標 | 能夠將資料激活到目標。 此權限要求將「管理目標」或「查看目標」添加到產品配置檔案中。 |
 
 **已知問題**
 
 * None
 
-請參閱 [目的地概觀](../../destinations/home.md) 以取得更多資訊。
+查看 [目標概述](../../destinations/home.md) 的子菜單。
