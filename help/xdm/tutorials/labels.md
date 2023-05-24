@@ -1,91 +1,91 @@
 ---
-title: 管理架構的資料使用標籤
-description: 瞭解如何將資料使用標籤添加到Adobe Experience PlatformUI中的「體驗資料模型」(XDM)架構欄位。
+title: 管理結構描述的資料使用標籤
+description: 瞭解如何在Adobe Experience Platform UI中新增資料使用標籤至Experience Data Model (XDM)結構描述欄位。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 6%
+source-wordcount: '795'
+ht-degree: 5%
 
 ---
 
-# 管理架構的資料使用標籤
+# 管理結構描述的資料使用標籤
 
 >[!IMPORTANT]
 >
->基於模式的標籤是 [基於屬性的訪問控制](../../access-control/abac/overview.md)目前，該產品在面向美國醫療保健客戶的有限版本中提供。 這一功能一旦完全發佈，將可供所有Adobe Real-time Customer Data Platform客戶使用。
+>以結構描述為基礎的標籤是的一部分 [基於屬性的存取控制](../../access-control/abac/overview.md)，目前提供限量版給美國的醫療保健客戶。 此功能在完全發行後，將可供所有Adobe Real-time Customer Data Platform客戶使用。
 
-引入Adobe Experience Platform的所有資料都受經驗資料模型(XDM)架構的約束。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 為此，平台允許您通過使用 [資料使用標籤](../../data-governance/labels/overview.md)。
+所有帶入Adobe Experience Platform的資料都受到Experience Data Model (XDM)結構描述的限制。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 為了解決這個問題，Platform可讓您透過使用來限制特定資料集和欄位的使用 [資料使用標籤](../../data-governance/labels/overview.md).
 
-應用於架構欄位的標籤表示應用於該特定欄位中包含的資料的使用策略。
+套用至結構描述欄位的標籤會指出套用至該特定欄位中所包含資料的使用原則。
 
-雖然標籤可以應用於單個資料集（以及這些資料集中的欄位），但您也可以在架構級別應用標籤。 將標籤直接應用到架構時，這些標籤將傳播到基於該架構的所有現有和將來資料集。
+標籤可套用至套用至個別結構描述，以及這些結構描述中的欄位。 標籤直接套用至結構描述時，這些標籤會傳播至以該結構描述為基礎的所有現有和未來資料集。
 
-此外，在一個方案中添加的任何欄位標籤都會傳播到使用共用類或欄位組中相同欄位的所有其他方案。 這有助於確保整個資料模型中類似欄位的使用規則保持一致。
+此外，您在某個結構描述中新增的任何欄位標籤，都會傳播至使用共用類別或欄位群組中相同欄位的所有其他結構描述。 這有助於確保類似欄位的使用規則在整個資料模型中保持一致。
 
-本教程介紹了使用平台UI中的架構編輯器向架構添加標籤的步驟。
+本教學課程涵蓋在Platform UI中使用「結構描述編輯器」將標籤新增到結構描述的步驟。
 
 ## 快速入門
 
-本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
+本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
-   * [架構編輯器](../ui/overview.md):瞭解如何在平台UI中建立和管理架構和其他資源。
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):提供對平台操作強制實施資料使用限制的基礎架構，使用策略定義可以（或不能）對標籤資料執行哪些市場營銷操作。
+* [[!DNL Experience Data Model (XDM) System]](../home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+   * [結構描述編輯器](../ui/overview.md)：瞭解如何在Platform UI中建立和管理結構描述和其他資源。
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：提供基礎結構，以強制對Platform作業執行資料使用限制，使用定義哪些行銷動作可以（或無法）對標籤資料執行的原則。
 
-## 選擇要將標籤添加到的架構或欄位 {#select-schema-field}
+## 選取要新增標籤的結構描述或欄位 {#select-schema-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"
 >title="編輯控管標籤"
 >abstract="將標籤套用在方案欄位以顯示適用於該特定欄位中包含的資料的使用原則。"
 
-要開始添加標籤，必須先 [選擇要編輯的現有架構](../ui/resources/schemas.md#edit) 或 [建立新架構](../ui/resources/schemas.md#create) 在架構編輯器中查看其結構。
+若要開始新增標籤，您必須先 [選取要編輯的現有結構描述](../ui/resources/schemas.md#edit) 或 [建立新結構描述](../ui/resources/schemas.md#create) 以在「架構編輯器」中檢視其結構。
 
-要編輯單個欄位的標籤，可以在畫布中選擇該欄位，然後選擇 **[!UICONTROL 管理訪問]** 右欄。
+若要編輯個別欄位的標籤，您可以在畫布中選取欄位，然後選取 **[!UICONTROL 管理存取權]** 在右側邊欄中。
 
-![從「架構編輯器」畫布中選擇一個欄位](../images/tutorials/labels/manage-access.png)
+![從結構編輯器畫布選取欄位](../images/tutorials/labels/manage-access.png)
 
-也可以選擇 **[!UICONTROL 標籤]** 頁籤 **[!UICONTROL 編輯治理標籤]** 右欄。
+您也可以選取 **[!UICONTROL 標籤]** 索引標籤中，從清單中選擇所需的欄位，然後選取 **[!UICONTROL 套用存取權和資料控管標籤]** 在右側邊欄中。
 
-![從 [!UICONTROL 標籤] 頁籤](../images/tutorials/labels/select-field-on-labels-tab.png)
+![從「 」中選取欄位 [!UICONTROL 標籤] 標籤](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-要編輯整個架構的標籤，請選擇鉛筆表徵圖(![](../images/tutorials/labels/pencil-icon.png)) **[!UICONTROL 標籤]** 頁籤。
+若要編輯整個結構描述的標籤，請在 **[!UICONTROL 標籤]** 索引標籤中，選取篩選圖示下的核取方塊。 這會選取結構描述中的每個可用欄位。 接下來，選取 **[!UICONTROL 套用存取權和資料控管標籤]** 在右側邊欄中。
 
-![從 [!UICONTROL 標籤] 頁籤](../images/tutorials/labels/select-schema-on-labels-tab.png)
-
->[!NOTE]
->
->當您首次嘗試編輯架構或欄位的標籤時，將顯示免責聲明消息，說明標籤使用如何根據組織的策略影響下游操作。 選擇 **[!UICONTROL 繼續]** 來編輯。
->
->![標籤使用免責聲明](../images/tutorials/labels/disclaimer.png)
-
-## 編輯架構或欄位的標籤
-
-此時將顯示一個對話框，允許您編輯選定欄位的標籤。 如果選擇了單個對象類型欄位，右欄將列出應用標籤將傳播到的子欄位。
-
-![顯示的選定欄位](../images/tutorials/labels/edit-labels.png)
+![從以下專案選取結構描述名稱： [!UICONTROL 標籤] 標籤](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >
->如果正在為整個方案編輯欄位，右欄將不列出適用的欄位，而是顯示方案名稱。
+>當您首次嘗試編輯結構描述或欄位的標籤時，會出現免責宣告訊息，說明標籤使用方式如何根據您組織的原則影響下游作業。 選取 **[!UICONTROL 繼續]** 以繼續編輯。
+>
+>![標籤使用免責宣告](../images/tutorials/labels/disclaimer.png)
 
-使用顯示的清單選擇要添加到方案或欄位的標籤。 選擇標籤後， **[!UICONTROL 已應用標籤]** 部分更新，顯示到目前為止已選擇的標籤。
+## 編輯結構描述或欄位的標籤 {#edit-labels}
 
-![顯示的已應用標籤](../images/tutorials/labels/applied-labels.png)
+會出現一個對話方塊，可讓您編輯所選欄位的標籤。 如果您選取了個別的物件型別欄位，右側欄會列出套用標籤將傳播到的子欄位。
 
-要按類型篩選顯示的標籤，請在左滑軌中選擇所需的類別。 要建立新的自定義標籤，請選擇 **[!UICONTROL 建立標籤]**。
+![「套用存取權和資料控管標籤」對話方塊中，選取的欄位會反白顯示。](../images/tutorials/labels/edit-labels.png)
 
-![篩選顯示的標籤或建立新標籤](../images/tutorials/labels/filter-and-create-custom.png)
+>[!NOTE]
+>
+>如果您正在編輯整個結構描述的欄位，右側邊欄不會列出適用的欄位，而是顯示結構描述名稱。
 
-一旦對所選標籤滿意，請選擇 **[!UICONTROL 保存]** 將其應用於欄位或架構。
+使用顯示的清單來選取您要新增到結構描述或欄位的標籤。 選擇標籤後， **[!UICONTROL 套用的標籤]** 區段更新以顯示目前為止已選取的標籤。
 
-![保存選定的標籤](../images/tutorials/labels/save-labels.png)
+![反白顯示套用標籤的「套用存取權和資料控管標籤」對話方塊。](../images/tutorials/labels/applied-labels.png)
 
-的 **[!UICONTROL 標籤]** 頁籤，其中顯示架構的已應用標籤。
+若要依型別篩選顯示的標籤，請在左側邊欄中選取所需的類別。 若要建立新的自訂標籤，請選取 **[!UICONTROL 建立標籤]**.
 
-![已應用欄位標籤](../images/tutorials/labels/field-labels-added.png)
+![套用存取權和資料控管標籤對話方塊，其中已套用標籤型別篩選器，並反白顯示建立標籤。](../images/tutorials/labels/filter-and-create-custom.png)
+
+在您對所選標籤滿意後，請選取 **[!UICONTROL 儲存]** 以將其套用至欄位或結構描述。
+
+![反白顯示「套用存取權和資料控管標籤」對話方塊，並顯示「儲存」。](../images/tutorials/labels/save-labels.png)
+
+此 **[!UICONTROL 標籤]** 標籤會重新出現，顯示結構描述已套用的標籤。
+
+![反白顯示已套用欄位標籤的結構描述工作區的「標籤」標籤。](../images/tutorials/labels/field-labels-added.png)
 
 ## 後續步驟
 
-本指南介紹了如何管理架構和欄位的資料使用標籤。 有關管理資料使用標籤的資訊，包括如何將其添加到特定資料集而不是架構級別，請參見 [資料使用標籤UI指南](../../data-governance/labels/user-guide.md)。
+本指南說明如何管理結構描述和欄位的資料使用標籤。 如需有關管理資料使用標籤的資訊，包括如何將其新增到特定資料集而不是結構描述層級，請參閱 [資料使用標籤UI指南](../../data-governance/labels/user-guide.md).

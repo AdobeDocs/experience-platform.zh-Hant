@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料管理；資料使用標籤api；策略服務api；資料使用標籤概述
+keywords: Experience Platform；首頁；熱門主題；資料控管；資料使用標籤api；原則服務api；資料使用標籤總覽
 solution: Experience Platform
-title: 資料使用情況標籤概述
-description: 瞭解如何使用資料使用標籤幫助在Adobe Experience Platform強制實施資料治理合規性。
+title: 資料使用標籤概觀
+description: 瞭解如何使用資料使用標籤來協助強制執行Adobe Experience Platform中的資料控管合規性。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 15%
+source-wordcount: '802'
+ht-degree: 14%
 
 ---
 
@@ -18,33 +18,33 @@ ht-degree: 15%
 >title="控制敏感和受保護資料的存取權"
 >abstract="<h2>說明</h2><p>控制特定資料屬性和/或區段的存取權，使您能夠為操作 Experience Platform 使用案例的各種角色和團隊設計靈活的工作流程。</p>"
 
-Adobe Experience Platform允許您將資料使用標籤應用到資料集和欄位，根據相關內容對每個欄位進行分類 [資料治理策略](../policies/overview.md) 和 [訪問控制策略](../../access-control/abac/ui/policies.md)。
+Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄位，並根據相關專案對每個欄位進行分類 [資料治理原則](../policies/overview.md) 和 [存取控制原則](../../access-control/abac/ui/policies.md).
 
-本文檔概述了中的資料使用標籤 [!DNL Experience Platform]。
+本檔案提供資料使用標籤總覽，位於 [!DNL Experience Platform].
 
 ## 瞭解資料使用標籤
 
-資料使用標籤允許您根據應用於該資料的治理策略對資料集和欄位進行分類。 標籤可以隨時應用，在選擇管理資料的方式上提供了靈活性。 最佳做法鼓勵在將資料攝取到 [!DNL Experience Platform]，或當資料可用時 [!DNL Platform]。
+資料使用標籤可讓您根據套用至該資料的治理原則來分類資料集和欄位。 標籤可隨時套用，讓您靈活選擇控管資料的方式。 最佳實務建議在資料內嵌至後立即加上標籤 [!DNL Experience Platform]，或在資料可用於以下專案時立即啟用： [!DNL Platform].
 
-在資料集級別應用的資料使用標籤將傳播到資料集中的所有欄位。 標籤也可以直接應用到資料集中的各個欄位（列標題），而不進行傳播。
+套用至資料集層級的資料使用標籤會傳播至資料集內的所有欄位。 標籤也可以直接套用至資料集中的個別欄位（欄標題），而不需傳播。
 
-[!DNL Platform] 提供了幾個「核心」資料使用標籤，這些標籤包含適用於資料治理的各種常見限制。 有關這些標籤及其代表的治理策略的詳細資訊，請參見上的指南 [核心資料使用標籤](reference.md)。
+[!DNL Platform] 提供數種現成的「核心」資料使用標籤，涵蓋適用於資料控管的各種常見限制。 如需這些標籤及其代表的治理原則的詳細資訊，請參閱以下指南： [核心資料使用標籤](reference.md).
 
-除了Adobe提供的標籤外，您還可以為組織定義自己的自定義標籤。 請參閱 [管理標籤](#manage-labels) 的子菜單。
+除了Adobe提供的標籤之外，您也可以為組織定義自己的自訂標籤。 請參閱以下小節： [管理標籤](#manage-labels) 以取得詳細資訊。
 
-## 受眾段的標籤繼承
+## 對象區段的標籤繼承
 
-建立的所有受眾段 [Adobe Experience Platform分段服務](../../segmentation/home.md) 繼承其相應資料集的用法標籤。 這允許Experience Platform在將段激活到目標時提供自動策略強制。
+建立的所有對象區段 [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) 繼承對應資料集的使用情況標籤。 這可讓Experience Platform在將區段啟用至目的地時，提供自動原則執行。
 
-除了繼承資料集級別標籤外，預設情況下，段還繼承與其關聯的資料集中的所有欄位級別標籤。 因此，您可以更輕鬆地確定哪些屬性應從段中排除，並防止它們繼承排除欄位中的標籤。
+除了繼承資料集層級標籤之外，根據預設，區段還會從關聯的資料集中繼承所有欄位層級標籤。 因此，您可以更輕鬆地識別應從區段排除的屬性，並防止其從排除的欄位繼承標籤。
 
-有關自動強制在平台中如何工作的詳細資訊，請參閱 [自動策略執行](../enforcement/auto-enforcement.md)。
+如需如何在Platform中自動強制執行的詳細資訊，請參閱以下主題的概觀： [自動原則執行](../enforcement/auto-enforcement.md).
 
-### 從Adobe Audience Manager資料導出控制項繼承
+### Adobe Audience Manager資料匯出控制項的繼承
 
-[!DNL Experience Platform] 有能力與Adobe Audience Manager分享。 已應用於Audience Manager段的任何資料導出控制都會轉換為由 [!DNL Experience Platform] 資料治理。
+[!DNL Experience Platform] 能夠與Adobe Audience Manager共用區段。 套用至Audience Manager區段的任何資料匯出控制都會轉譯為相等的標籤和行銷動作，可由 [!DNL Experience Platform] 資料控管。
 
-有關特定資料導出控制項如何映射到中的資料使用標籤的參考 [!DNL Platform]，請參閱 [Audience Manager文檔](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+如需瞭解特定資料匯出控制項如何對應至中的資料使用標籤，請參閱 [!DNL Platform]，請參閱 [Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## 管理中的資料使用標籤 [!DNL Experience Platform] {#manage-labels}
 
@@ -53,26 +53,22 @@ Adobe Experience Platform允許您將資料使用標籤應用到資料集和欄�
 >title="說明"
 >abstract="<ul><li>標記 XDM 欄位和區段以對要限制存取的欄位和/或區段進行分類。</li><li>標記角色，為角色新增標籤可以讓您定義該角色的成員應該有限制的標籤。</li><li>建立原則，原則會建立被標記物件 (例如 XDM 欄位和區段) 的標籤和角色的標籤之間的關係。如果標籤相符，則可以定義允許存取或限制存取。</li></ul>"
 
-您可以使用 [!DNL Experience Platform] API或用戶介面。 有關每個子部分的詳細資訊，請參閱以下各部分。
+您可以使用以下專案管理資料使用標籤 [!DNL Experience Platform] API或使用者介面。 如需各個專案的詳細資訊，請參閱以下各小節。
 
 ### 使用UI
 
-的 **[!UICONTROL 策略]** 工作區 [!DNL Experience Platform] UI允許您查看和管理組織的核心標籤和自定義標籤。 您可以使用 **[!UICONTROL 架構]** 工作區 [將標籤應用到您的體驗資料模型(XDM)架構](../../xdm/tutorials/labels.md)，或 **[!DNL Datasets]** 工作區 [將標籤應用於資料集](./user-guide.md) 的雙曲餘切值。
+此 **[!UICONTROL 原則]** 工作區在 [!DNL Experience Platform] UI可讓您檢視和管理組織的核心和自訂標籤。 您可以使用 **[!UICONTROL 結構描述]** 工作區至 [將標籤套用至您的Experience Data Model (XDM)結構描述](../../xdm/tutorials/labels.md)，或瞭解如何 [在**中建立和管理自訂標籤[!UICONTROL 原則] UI](./user-guide.md) 請改為閱讀資料使用標籤使用手冊。
 
->[!NOTE]
+>[!IMPORTANT]
 >
->僅在資料治理使用案例中支援在資料集級別應用標籤。 如果試圖為資料建立訪問策略，則必須將標籤應用到資料集所基於的架構。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 的子菜單。
+>標籤無法再套用至資料集層級的欄位。 此工作流程已過時，改為在結構描述層級套用標籤。 在2024年5月31日之前，先前在資料集物件層級套用的任何標籤仍可透過Platform UI取得支援。 為確保您的標籤在所有結構描述中保持一致，您必須在來年將之前附加至資料集層級欄位的任何標籤移轉至結構描述層級。 請參閱以下小節： [移轉先前套用的標籤](../e2e.md#migrate-labels) 以取得相關指示。
 
 ### 使用API
 
-的 `/labels` 端點 [策略服務API](https://www.adobe.io/experience-platform-apis/references/policy-service/) 允許您以寫程式方式管理資料使用標籤，包括建立自定義標籤。 請參閱 [標籤端點指南](../api/labels.md) 的子菜單。
+此 `/labels` 中的端點 [原則服務API](https://www.adobe.io/experience-platform-apis/references/policy-service/) 可讓您以程式設計方式管理資料使用標籤，包括建立自訂標籤。 請參閱 [標籤端點指南](../api/labels.md) 以取得詳細資訊。
 
-的 [資料集服務API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) 用於管理資料集和欄位的標籤。 請參閱上的指南 [管理資料集標籤](./dataset-api.md) 的子菜單。
-
->[!NOTE]
->
->僅在資料治理使用案例中支援在資料集級別應用標籤。 如果嘗試為資料建立訪問策略，則必須 [將標籤應用於架構](../../xdm/tutorials/labels.md) 資料集所基於。 請參閱 [基於屬性的訪問控制](../../access-control/abac/overview.md) 的子菜單。
+此 [資料集服務API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) 用於管理資料集和欄位的標籤。 請參閱指南： [管理資料集標籤](./dataset-api.md) 以取得詳細資訊。
 
 ## 後續步驟
 
-本文檔介紹了資料使用標籤及其在資料治理框架中的角色。 請參閱本指南中連結的文檔，瞭解有關如何管理標籤的詳細資訊 [!DNL Experience Platform]。
+本檔案介紹了資料使用標籤及其在資料控管框架中的角色。 請參閱本指南中的檔案連結，以進一步瞭解如何在中管理標籤 [!DNL Experience Platform].
