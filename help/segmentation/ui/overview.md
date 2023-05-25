@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: Adobe Experience Platform Segmentation Service提供使用者介面，用於建立和管理區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 207cddae6b632866d564729de49d28fc5c29ef7f
 workflow-type: tm+mt
-source-wordcount: '2650'
+source-wordcount: '2646'
 ht-degree: 3%
 
 ---
@@ -69,12 +69,13 @@ ht-degree: 3%
 
 您可以透過選取「 」，將其他欄位新增到此顯示 ![篩選屬性圖示](../images/ui/overview/filter-attribute.png). 這些額外的欄位包括劃分、評估方法和工作ID。
 
-如果選取劃分，畫面會顯示長條圖，概述屬於下列每個已計算設定檔狀態的設定檔百分比： [!UICONTROL 已實現] 和 [!UICONTROL 正在退出]. 此外，劃分會顯示在 [!UICONTROL 瀏覽] 索引標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概觀] 標籤上，您應該使用位於 [!UICONTROL 瀏覽] 標籤作為正確的資訊來源，因為 [!UICONTROL 概觀] 索引標籤編號每天僅更新一次。
+如果選取劃分，畫面會顯示長條圖，概述屬於下列每個已計算設定檔狀態的設定檔百分比： [!UICONTROL 已實現]， [!UICONTROL 現有]、和 [!UICONTROL 正在退出]. 此外，劃分會顯示在 [!UICONTROL 瀏覽] 索引標籤是區段狀態最準確的劃分。 如果此數字與 [!UICONTROL 概觀] 標籤上，您應該使用位於 [!UICONTROL 瀏覽] 標籤作為正確的資訊來源，因為 [!UICONTROL 概觀] 索引標籤編號每天僅更新一次。
 
 | 狀態 | 說明 |
 | ------ | ----------- |
-| 已實現 | 過去24小時內符合區段資格的設定檔計數。 因此，自上次執行批次區段作業以來，符合區段資格的設定檔數。 |
-| 正在退出 | 過去24小時內退出區段的設定檔計數。 因此，自上次執行批次區段作業以來，不再符合區段資格的設定檔數。 |
+| [!UICONTROL 已實現] | 符合以下條件的設定檔計數： **合格** 用於自上次批次區段作業執行以來過去24小時內的區段。 |
+| [!UICONTROL 現有] | 設定檔計數，其中 **剩餘** 區段中上次執行批次區段作業後過去24小時的資料。 |
+| [!UICONTROL 正在退出] | 設定檔計數，其中 **已退出** 自上次執行批次區段作業以來過去24小時的區段。 |
 
 評估方法可以是串流、批次或邊緣。 當資料進入系統時，會持續評估串流區段。 根據設定的排程評估批次區段。 會即時評估邊緣區段，以允許相同頁面和下一頁個人化使用案例。
 
