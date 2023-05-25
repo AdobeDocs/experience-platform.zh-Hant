@@ -2,7 +2,7 @@
 title: 資料控管端對端指南
 description: 請依照在Adobe Experience Platform中強制欄位和資料集使用資料限制的完整程式操作。
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
 source-wordcount: '1881'
 ht-degree: 0%
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 資料集的詳細資訊檢視隨即顯示。 選取 **[!UICONTROL 資料控管]** 索引標籤來檢視資料集欄位清單和已套用至這些欄位的任何標籤。 選取鉛筆圖示以編輯資料集標籤。
 
-![醒目提示鉛筆圖示的忠誠度會員資料集的「資料控管」索引標籤。](./images/e2e/edit-dataset-labels.png)
+![「忠誠會員」資料集的「資料控管」索引標籤中會反白顯示鉛筆圖示。](./images/e2e/edit-dataset-labels.png)
 
 此 [!UICONTROL 編輯治理標籤] 對話方塊隨即顯示。 選取適當的治理標籤，然後選取 **[!UICONTROL 儲存]**.
 
