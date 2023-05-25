@@ -1,50 +1,50 @@
 ---
-title: 在UI中建立Adobe Analytics源連接
-description: 瞭解如何在UI中建立Adobe Analytics源連接，以將消費者資料帶入Adobe Experience Platform。
+title: 在使用者介面中建立Adobe Analytics來源連線
+description: 瞭解如何在UI中建立Adobe Analytics來源連線，以將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 1839e67d86a04762d93a5c35050e261fb1d1cf50
+source-git-commit: b8764b4b39aba43687c7ac0540d392a3aa808df4
 workflow-type: tm+mt
-source-wordcount: '2406'
-ht-degree: 5%
+source-wordcount: '2299'
+ht-degree: 6%
 
 ---
 
-# 在UI中建立Adobe Analytics源連接
+# 在使用者介面中建立Adobe Analytics來源連線
 
-本教程提供了在UI中建立Adobe Analytics源連接以將Adobe Analytics報告套件資料引入Adobe Experience Platform的步驟。
+本教學課程提供在UI中建立Adobe Analytics來源連線的步驟，以便將Adobe Analytics報表套裝資料匯入Adobe Experience Platform。
 
 ## 快速入門
 
-本教程需要對以下Experience Platform組成部分進行有效理解：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [體驗資料模型(XDM)系統](../../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化框架。
-* [即時客戶配置檔案](../../../../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
-* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [Experience Data Model (XDM)系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+* [即時客戶個人檔案](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
+* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 重要術語
 
-瞭解本文檔中使用的以下關鍵術語非常重要：
+請務必瞭解本檔案中使用的下列重要術語：
 
-* **標準屬性**:標準屬性是任何由Adobe預定義的屬性。 它們對所有客戶具有相同的含義，在 [!DNL Analytics] 源資料和 [!DNL Analytics] 架構欄位組。
-* **自定義屬性**:自定義屬性是中的自定義變數層次結構中的任何屬性 [!DNL Analytics]。 在Adobe Analytics實施中使用自定義屬性將特定資訊捕獲到報告套件中，而且從報告套件到報告套件的使用方式可能有所不同。 自定義屬性包括eVars 、道具和清單。 請參閱以下內容 [[!DNL Analytics] 轉換變數文檔](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 的雙曲餘切值。
-* **自定義欄位組中的任何屬性**:源自客戶建立的欄位組的屬性都是用戶定義的，並且不被視為標準屬性或自定義屬性。
-* **友好名稱**:友好名稱是中的自定義變數的人為提供的標籤 [!DNL Analytics] 執行。 請參閱以下內容 [[!DNL Analytics] 轉換變數文檔](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 的子菜單。
+* **標準屬性**：標準屬性是Adobe預先定義的任何屬性。 它們對於所有客戶都包含相同涵義，並且可在 [!DNL Analytics] 來源資料和 [!DNL Analytics] 結構描述欄位群組。
+* **自訂屬性**：自訂屬性是中自訂變數階層內的任何屬性 [!DNL Analytics]. 自訂屬性用於Adobe Analytics實作，將特定資訊擷取到報表套裝中，各報表套裝的屬性使用方式可能有所不同。 自訂屬性包括eVar、prop和清單。 請參閱下列內容 [[!DNL Analytics] 有關轉換變數的檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 以取得有關eVar的詳細資訊。
+* **自訂欄位群組中的任何屬性**：源自客戶建立的欄位群組的屬性都是使用者定義的，不屬於標準或自訂屬性。
+* **易記名稱**：易記名稱是使用者為中的自訂變數提供的標籤。 [!DNL Analytics] 實作。 請參閱下列內容 [[!DNL Analytics] 有關轉換變數的檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) 以取得易記名稱的詳細資訊。
 
-## 建立與Adobe Analytics的源連接
+## 建立與Adobe Analytics的來源連線
 
 >[!NOTE]
 >
->在生產沙箱中建立分析源資料流時，將建立兩個資料流：
+>在生產沙箱中建立Analytics來源資料流時，會建立兩個資料流：
 >
->* 一種資料流，將歷史報告套件資料13個月的回填到資料湖中。 當回填完成時，此資料流將結束。
->* 向資料湖和資料湖發送即時資料的資料流 [!DNL Real-Time Customer Profile]。 此資料流會持續運行。
+>* 此資料流會將13個月的歷史報告套裝資料回填至Data Lake。 此資料流會在回填完成時結束。
+>* 將即時資料傳送至資料湖和的資料流流程 [!DNL Real-Time Customer Profile]. 此資料流會持續執行。
 
 
-在平台UI中，選擇 **[!UICONTROL 源]** 從左側導航 [!UICONTROL 源] 工作區。 的 [!UICONTROL 目錄] 螢幕顯示可建立帳戶的各種源。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以用來建立帳戶的各種來源。
 
-可以從螢幕左側的目錄中選擇相應的類別。 還可以使用搜索欄縮小顯示的源。
+您可以從畫面左側的目錄中選取適當的類別。 您也可以使用搜尋列來縮小顯示的來源。
 
-在 **[!UICONTROL Adobe應用程式]** 類別，選擇 **[!UICONTROL Adobe Analytics]** ，然後選擇 **[!UICONTROL 添加資料]**。
+在 **[!UICONTROL Adobe應用程式]** 類別，選取 **[!UICONTROL Adobe Analytics]** 然後選取 **[!UICONTROL 新增資料]**.
 
 ![目錄](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -52,150 +52,155 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->螢幕上列出的報告套件可能來自不同地區。 您負責瞭解資料的局限性和義務，以及您如何在Adobe Experience Platform跨地區使用這些資料。 請確保公司允許這樣做。
+>畫面上列出的報表套裝可能來自不同區域。 您有責任瞭解您資料的限制與義務，以及如何跨地區在Adobe Experience Platform中使用該資料。 請確定貴公司允許這樣做。
 
-的 **[!UICONTROL 分析源添加資料]** 步驟提供了 [!DNL Analytics] 用於建立源連接的報表套件資料。
+此 **[!UICONTROL Analytics來源新增資料]** 步驟為您提供以下清單 [!DNL Analytics] 建立來源連線的報表套裝資料。
 
-報表套件是構成報表基礎的資料容器 [!DNL Analytics] 報告。 一個組織可以有許多報告套件，每個套件包含不同的資料集。
+報表套裝是資料容器，可構成下列專案的基礎 [!DNL Analytics] 報告。 一個組織可以有許多報表套裝，每個報表套裝都包含不同的資料集。
 
-只要報表套件與正在其中建立源連接的Experience Platform沙盒實例映射到同一組織，您就可以從任何區域（美國、英國或新加坡）接收報表套件。 只能使用單個活動資料流來接收報表套件。 已在您正在使用的沙盒中或在其他沙盒中攝取了無法選擇的報告套件。
+您可以從任何區域擷取報表套裝（美國、英國或新加坡），前提是這些報表套裝對應到與建立來源連線的Experience Platform沙箱例項相同的組織。 報告套裝只能使用單一作用中資料流擷取。 已在您使用的沙箱或其他沙箱中擷取無法選取的報表套裝。
 
-可以建立多個綁定連接，將多個報告套件帶入同一沙箱。 如果報告套件具有不同的變數架構（如eVars或事件），則應將這些架構映射到自定義欄位組中的特定欄位，並避免使用 [資料準備](../../../../../data-prep/ui/mapping.md)。 只能將報表套件添加到單個沙盒中。
+可以建立多個繫結連線，將多個報告套裝帶入同一個沙箱。 如果報表套裝中變數（例如eVar或事件）有不同的結構描述，則應將其對應至自訂欄位群組中的特定欄位，避免使用時發生資料衝突 [資料準備](../../../../../data-prep/ui/mapping.md). 報表套裝只能新增至單一沙箱。
 
 ![](../../../../images/tutorials/create/analytics/report-suite.png)
 
 >[!NOTE]
 >
->只有當不存在資料衝突(如兩個具有不同含義的自定義屬性（eVars、清單和道具）)時，才能為即時客戶配置檔案啟用來自多個報表套件的資料。
+>只有在沒有資料衝突(例如兩個具有不同含義的自訂屬性（eVar、清單和prop）)時，才能為即時客戶設定檔啟用多個報表套裝的資料。
 
-建立 [!DNL Analytics] 源連接，選擇報表套件，然後選擇 **[!UICONTROL 下一個]** 繼續。
+若要建立 [!DNL Analytics] 來源連線，選取報表套裝，然後選取 **[!UICONTROL 下一個]** 以繼續進行。
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-&lt;! — 一次可以為一個沙箱配置分析報告套件。 要將同一報表套件導入到不同的沙盒中，必須通過配置不同的沙盒來刪除並再次實例化資料集流。—>
+&lt;!—Analytics報表套裝一次可設定一個沙箱。 若要將相同的報表套裝匯入不同的沙箱，必須透過不同沙箱的設定刪除資料集流程並重新例項化。—>
 
 ### 映射
 
 >[!IMPORTANT]
 >
->資料準備轉換可能會增加整個資料流的延遲。 增加的附加延遲根據轉換邏輯的複雜性而改變。
+>「資料準備」轉換可能會增加整個資料流程的延遲。 新增的額外延遲因轉換邏輯的複雜度而異。
 
-在映射之前 [!DNL Analytics] 資料到目標XDM架構，必須首先選擇是使用預設架構還是使用自定義架構。
+在您可以對應您的 [!DNL Analytics] 資料目標XDM結構描述時，您必須先選取您是使用預設結構描述還是自訂結構描述。
 
-預設架構代表您建立新架構，包含 [!DNL Adobe Analytics ExperienceEvent Template] 欄位組。 要使用預設架構，請選擇 **[!UICONTROL 預設架構]**。
+預設結構描述會代表您建立新的結構描述，包含 [!DNL Adobe Analytics ExperienceEvent Template] 欄位群組。 若要使用預設綱要，請選取 **[!UICONTROL 預設結構描述]**.
 
-![預設模式](../../../../images/tutorials/create/analytics/default-schema.png)
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
 
-使用自定義架構，您可以為 [!DNL Analytics] 資料，只要該架構 [!DNL Adobe Analytics ExperienceEvent Template] 欄位組。 要使用自定義架構，請選擇 **[!UICONTROL 自定義架構]**。
+透過自訂結構描述，您可以為您的選擇任何可用的結構描述 [!DNL Analytics] 資料，只要該結構描述具有 [!DNL Adobe Analytics ExperienceEvent Template] 欄位群組。 若要使用自訂結構描述，請選取 **[!UICONTROL 自訂結構描述]**.
 
-![自定義模式](../../../../images/tutorials/create/analytics/custom-schema.png)
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
-的 [!UICONTROL 映射] 頁提供了將源欄位映射到相應目標模式欄位的介面。 在此處，您可以將自定義變數映射到新架構欄位組，並應用資料準備支援的計算。 選擇目標方案以啟動映射進程。
+此 [!UICONTROL 對應] 頁面提供了一個介面，用於將來源欄位對應到它們適當的目標結構描述欄位。 從這裡，您可以將自訂變數對應到新的結構描述欄位群組，並套用資料準備支援的計算。 選取目標結構描述以開始對應程式。
 
 >[!TIP]
 >
->僅具有 [!DNL Adobe Analytics ExperienceEvent Template] 欄位組將顯示在模式選擇菜單中。 省略其他架構。 如果報表套件資料沒有適當的架構，則必須建立新架構。 有關建立架構的詳細步驟，請參見上的指南 [在UI中建立和編輯架構](../../../../../xdm/ui/resources/schemas.md)。
+>只有結構描述具有 [!DNL Adobe Analytics ExperienceEvent Template] 欄位群組會顯示在結構描述選取功能表中。 省略其他結構描述。 如果您的報表套裝資料沒有適用的結構描述，則必須建立新的結構描述。 如需建立結構描述的詳細步驟，請參閱以下指南： [在UI中建立和編輯方案](../../../../../xdm/ui/resources/schemas.md).
 
-![選擇模式](../../../../images/tutorials/create/analytics/select-schema.png)
+![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
-的 [!UICONTROL 映射標準欄位] 剖面顯示面板 [!UICONTROL 已應用標準映射]。 [!UICONTROL 非匹配標準映射] 和 [!UICONTROL 自定義映射]。 有關每個類別的特定資訊，請參閱下表：
+此 [!UICONTROL 對應標準欄位] 區段顯示面板 [!UICONTROL 已套用標準對應]， [!UICONTROL 不符合的標準對應] 和 [!UICONTROL 自訂對應]. 如需各個類別的特定資訊，請參閱下表：
 
-| 映射標準欄位 | 說明 |
+| 對應標準欄位 | 說明 |
 | --- | --- |
-| [!UICONTROL 已應用標準映射] | 的 [!UICONTROL 已應用標準映射] 面板顯示映射屬性的總數。 標準映射指源中所有屬性之間的映射集 [!DNL Analytics] 資料和相應屬性 [!DNL Analytics] 欄位組。 這些是預映射的，無法編輯。 |
-| [!UICONTROL 非匹配標準映射] | 的 [!UICONTROL 非匹配標準映射] 面板是指包含友好名稱衝突的映射屬性數。 當您重新使用已從其他報告套件中填充了一組欄位描述符的架構時，會出現這些衝突。 您可以繼續 [!DNL Analytics] 即使存在友好名稱衝突的資料流。 |
-| [!UICONTROL 自定義映射] | 的 [!UICONTROL 自定義映射] 面板顯示映射的自定義屬性（包括eVars、props和list）的數量。 自定義映射引用源中自定義屬性之間的映射集 [!DNL Analytics] 所選架構中包含的自定義欄位組中的資料和屬性。 |
+| [!UICONTROL 已套用標準對應] | 此 [!UICONTROL 已套用標準對應] 面板會顯示對應屬性的總數。 標準對應是指來源中所有屬性之間的對應集 [!DNL Analytics] 中的資料和對應屬性 [!DNL Analytics] 欄位群組。 這些專案已預先對應，無法編輯。 |
+| [!UICONTROL 不符合的標準對應] | 此 [!UICONTROL 不符合的標準對應] panel是指包含易記名稱衝突的對應屬性數目。 當您重複使用已有來自不同報表套裝之欄位描述項填入集的結構描述時，這些衝突就會出現。 您可以繼續進行 [!DNL Analytics] 資料流，即使易記名稱有衝突。 |
+| [!UICONTROL 自訂對應] | 此 [!UICONTROL 自訂對應] 面板會顯示對應自訂屬性的數量，包括eVar、prop和清單。 自訂對應是指來源中自訂屬性之間的對應集 [!DNL Analytics] 包含在所選結構描述中的自訂欄位群組中的資料和屬性。 |
 
-![映射標準域](../../../../images/tutorials/create/analytics/map-standard-fields.png)
+![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
-預覽 [!DNL Analytics] ExperienceEvent模板架構欄位組，選擇 **[!UICONTROL 視圖]** 的 [!UICONTROL 已應用標準映射] 的子菜單。
+若要預覽 [!DNL Analytics] ExperienceEvent範本結構描述欄位群組，選取 **[!UICONTROL 檢視]** 在 [!UICONTROL 已套用標準對應] 面板。
 
 ![檢視](../../../../images/tutorials/create/analytics/view.png)
 
-的 [!UICONTROL Adobe AnalyticsExperienceEvent模板架構欄位組] 頁為您提供了用於檢查架構結構的介面。 完成後，選擇 **[!UICONTROL 關閉]**。
+此 [!UICONTROL Adobe Analytics ExperienceEvent範本結構欄位群組] 頁面提供檢查結構描述結構時使用的介面。 完成後，選取 **[!UICONTROL 關閉]**.
 
-![欄位組預覽](../../../../images/tutorials/create/analytics/field-group-preview.png)
+![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-平台自動檢測映射集中是否存在任何友好名稱衝突。 如果映射集沒有衝突，請選擇 **[!UICONTROL 下一個]** 繼續。
+Platform會自動偵測您的對應集是否有任何易記名稱衝突。 如果對應集沒有衝突，請選取 **[!UICONTROL 下一個]** 以繼續進行。
 
-![映射](../../../../images/tutorials/create/analytics/mapping.png)
+![對應](../../../../images/tutorials/create/analytics/mapping.png)
 
-如果源報告套件和所選架構之間存在友好名稱衝突，您仍可以繼續 [!DNL Analytics] 資料流，確認欄位描述符不會更改。 或者，可以選擇使用一組空描述符建立新架構。
+>[!TIP]
+>
+>如果您的來源報告套裝和您選取的結構描述之間有易記名稱衝突，您仍可以繼續進行 [!DNL Analytics] 資料流，確認欄位描述項不會變更。 或者，您可以選擇使用一組空白的描述項建立新結構描述。
 
-選擇 **[!UICONTROL 下一個]** 繼續。
+#### 自訂對應
 
-![謹慎](../../../../images/tutorials/create/analytics/caution.png)
+您可以使用「資料準備」函式，為自訂屬性新增自訂對應或計算欄位。 若要新增自訂對應，請選取「 」 **[!UICONTROL 自訂]**.
 
-#### 自定義映射
+![自訂](../../../../images/tutorials/create/analytics/custom.png)
 
-要使用「資料準備」功能並為自定義屬性添加新的映射或計算欄位，請選擇 **[!UICONTROL 查看自定義映射]**。
+視您的需求而定，您可以選取 **[!UICONTROL 新增對應]** 或 **[!UICONTROL 新增計算欄位]** 然後繼續建立自訂屬性的自訂對應。 如需使用「資料準備」功能的完整步驟，請參閱 [資料準備UI指南](../../../../../data-prep/ui/mapping.md).
 
-![視圖自定義映射](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+下列檔案提供進一步瞭解「資料準備」、計算欄位和對映函式的資源：
 
-下一步，選擇 **[!UICONTROL 添加新映射]**。
+* [資料準備總覽](../../../../../data-prep/home.md)
+* [資料準備對應函式](../../../../../data-prep/functions.md)
+* [新增計算欄位](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
-根據您的需要，您可以選擇 **[!UICONTROL 添加新映射]** 或 **[!UICONTROL 添加計算欄位]** 的子菜單。
+<!-- 
+To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
 
-![新增映射](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
 
-出現空映射集。 選擇映射表徵圖以添加源欄位。
+Next, select **[!UICONTROL Add new mapping]**.
 
-![選擇源欄位](../../../../images/tutorials/create/analytics/select-source-field.png)
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. 
 
-您可以使用介面瀏覽源架構結構並標識要使用的新源欄位。 選擇要映射的源欄位後，選擇 **[!UICONTROL 選擇]**。
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
 
-![選擇映射](../../../../images/tutorials/create/analytics/select-mapping.png)
+An empty mapping set appears. Select the mapping icon to add a source field.
 
-接下來，選擇下面的映射表徵圖 [!UICONTROL 目標欄位] 將所選源欄位映射到其相應的目標欄位。
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
 
-![選擇目標域](../../../../images/tutorials/create/analytics/select-target-field.png)
+You can use the interface to navigate through the source schema structure and identify the new source field that you want to use. Once you have selected the source field that you want to map, select **[!UICONTROL Select]**.
 
-與源架構類似，您可以使用介面在目標架構結構中導航並選擇要映射到的目標欄位。 選擇相應的目標欄位後，選擇 **[!UICONTROL 選擇]**。
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
 
-![選擇目標映射](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+Next, select the mapping icon under [!UICONTROL Target Field] to map your selected source field to its appropriate target field.
 
-完成自定義映射集後，選擇 **[!UICONTROL 下一個]** 繼續。
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
 
-![完整自定義映射](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+Similar to the source schema, you can use the interface to navigate through the target schema structure and select the target field you want to map to. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
 
-以下文檔提供了更多資源，用於瞭解資料準備、計算欄位和映射功能：
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
 
-* [資料準備概述](../../../../../data-prep/home.md)
-* [資料準備映射函式](../../../../../data-prep/functions.md)
-* [添加計算欄位](../../../../../data-prep/ui/mapping.md#calculated-fields)
+With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
-### 即時客戶配置檔案篩選 {#filtering-for-profile}
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
+
+### 篩選即時客戶設定檔 {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="建立篩選規則 "
 >abstract="將資料傳送到即時客戶設定檔時定義列層級和欄層級的篩選規則。使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於設定檔擷取**。使用欄層級篩選來選取您要&#x200B;**為設定檔擷取排除**&#x200B;的資料欄。篩選規則不適用於傳送到資料湖的資料。"
 
-完成映射後 [!DNL Analytics] 報告套件資料，您可以應用篩選規則和條件，以有選擇地將資料包括在接收中或從接收中排除在即時客戶配置檔案中。 僅對 [!DNL Analytics] 資料和資料僅在輸入前過濾 [!DNL Profile.] 所有資料都被攝入資料湖。
+完成下列專案的對應後： [!DNL Analytics] 報表套裝資料時，您可以套用篩選規則和條件，選擇性地將資料納入或排除在內嵌至Real-Time Customer Profile中。 篩選支援僅適用於 [!DNL Analytics] 資料與資料僅在輸入前進行篩選 [!DNL Profile.] 所有資料都會內嵌至Data Lake。
 
-#### 行級篩選
+#### 列層級篩選
 
 >[!IMPORTANT]
 >
 >使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於設定檔擷取**。使用欄層級篩選來選取您要&#x200B;**為設定檔擷取排除**&#x200B;的資料欄。
 
-您可以篩選資料 [!DNL Profile] 在行級和列級接收。 使用行級篩選可以定義條件，如字串包含、等於、開始或結束。 也可以使用行級篩選來連接條件 `AND` 以及 `OR`，使用 `NOT`。
+您可以篩選資料 [!DNL Profile] 列層級和欄層級的擷取。 列層級篩選可讓您定義字串包含、等於、開頭或結尾等條件。 您也可以使用列層級篩選來聯結條件，使用 `AND` 以及 `OR`，並使用否定條件 `NOT`.
 
-篩選 [!DNL Analytics] 在行級別，選擇 **[!UICONTROL 行篩選器]**。
+若要篩選您的 [!DNL Analytics] 資料列層級，選取 **[!UICONTROL 列篩選]**.
 
-![行篩選器](../../../../images/tutorials/create/analytics/row-filter.png)
+![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
 
-使用左滑軌在架構層次結構中導航並選擇所選的架構屬性，以進一步細化特定架構。
+使用左側邊欄瀏覽結構描述階層，並選取您選擇的結構描述屬性，以進一步向下鑽研特定結構描述。
 
-![左滑軌](../../../../images/tutorials/create/analytics/left-rail.png)
+![左側欄](../../../../images/tutorials/create/analytics/left-rail.png)
 
-確定要配置的屬性後，選擇該屬性並將其從左滑軌拖動到篩選面板。
+識別您要設定的屬性後，選取該屬性，並將其從左側邊欄拖曳至篩選面板。
 
-![過濾面板](../../../../images/tutorials/create/analytics/filtering-panel.png)
+![filtering-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
-要配置不同的條件，請選擇 **[!UICONTROL 等於]** 然後，從出現的下拉窗口中選擇一個條件。
+若要設定不同的條件，請選取 **[!UICONTROL 等於]** 然後從出現的下拉式視窗中選取條件。
 
-可配置條件清單包括：
+可設定的條件清單包括：
 
 * [!UICONTROL 等於]
 * [!UICONTROL 不等於]
@@ -209,98 +214,98 @@ ht-degree: 5%
 
 ![條件](../../../../images/tutorials/create/analytics/conditions.png)
 
-接下來，根據所選屬性輸入要包括的值。 在下面的示例中， [!DNL Apple] 和 [!DNL Google] 被選作攝入的一部分 **[!UICONTROL 製造商]** 屬性。
+接下來，根據您選取的屬性輸入您要包含的值。 在以下範例中， [!DNL Apple] 和 [!DNL Google] 被選取作為內嵌的一部分 **[!UICONTROL 製造商]** 屬性。
 
-![包括製造商](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
 
-要進一步指定篩選條件，請從架構中添加另一個屬性，然後根據該屬性添加值。 在下面的示例中， **[!UICONTROL 模型]** 屬性被添加，模型如 [!DNL iPhone 13] 和 [!DNL Google Pixel 6] 過濾以攝取。
+若要進一步指定篩選條件，請從結構描述新增另一個屬性，然後根據該屬性新增值。 在以下範例中， **[!UICONTROL 模型]** 屬性已新增，且模型如下 [!DNL iPhone 13] 和 [!DNL Google Pixel 6] 經過篩選以便擷取。
 
-![包括模型](../../../../images/tutorials/create/analytics/include-model.png)
+![include-model](../../../../images/tutorials/create/analytics/include-model.png)
 
-要添加新容器，請選取橢圓(`...`)，然後選擇 **[!UICONTROL 添加容器]**。
+若要新增容器，請選取省略符號(`...`)，然後選取「 」 **[!UICONTROL 新增容器]**.
 
-![添加容器](../../../../images/tutorials/create/analytics/add-container.png)
+![add-container](../../../../images/tutorials/create/analytics/add-container.png)
 
-添加新容器後，選擇 **[!UICONTROL 包括]** ，然後選擇 **[!UICONTROL 排除]** 的子菜單。
+新增容器後，選取 **[!UICONTROL 包含]** 然後選取 **[!UICONTROL 排除]** 從出現的下拉式視窗中。
 
 ![排除](../../../../images/tutorials/create/analytics/exclude.png)
 
-接下來，通過拖動架構屬性並添加要從篩選中排除的相應值來完成同一進程。 在下面的示例中， [!DNL iPhone 12]。 [!DNL iPhone 12 mini], [!DNL Google Pixel 5] 全部從排除項中篩選 **[!UICONTROL 模型]** 屬性，橫向從 **[!UICONTROL 螢幕方向]**，和型號 [!DNL A1633] 排除自 **[!UICONTROL 型號]**。
+接下來，拖曳結構描述屬性，並新增您要從篩選中排除的對應值，以完成相同的程式。 在以下範例中， [!DNL iPhone 12]， [!DNL iPhone 12 mini]、和 [!DNL Google Pixel 5] 都是從排除清單中篩選出來的 **[!UICONTROL 模型]** 屬性，橫向會從 **[!UICONTROL 熒幕方向]**，和型號 [!DNL A1633] 排除自 **[!UICONTROL 型號]**.
 
-完成後，選擇 **[!UICONTROL 下一個]**。
+完成後，選取 **[!UICONTROL 下一個]**.
 
-![排除示例](../../../../images/tutorials/create/analytics/exclude-examples.png)
+![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### 列級篩選
+#### 欄層級篩選
 
-選擇 **[!UICONTROL 列篩選器]** 的子菜單。
+選取 **[!UICONTROL 欄篩選器]** 以套用欄層級篩選。
 
-![列過濾器](../../../../images/tutorials/create/analytics/column-filter.png)
+![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
 
-該頁將更新到互動式架構樹中，在列級別顯示您的架構屬性。 在此處，您可以選擇要從中排除的資料列 [!DNL Profile] 攝食。 或者，可以展開列並選擇特定屬性以排除。
+頁面會更新為互動式結構描述樹狀結構，在欄層級顯示結構描述屬性。 從這裡，您可以選取要從中排除的資料欄 [!DNL Profile] 內嵌。 或者，您可以展開欄並選取要排除的特定屬性。
 
-預設情況下，全部 [!DNL Analytics] 轉到 [!DNL Profile] 此過程允許將XDM資料的分支從 [!DNL Profile] 攝食。
+依預設，全部 [!DNL Analytics] 前往 [!DNL Profile] 而且此程式允許排除XDM資料的分支 [!DNL Profile] 內嵌。
 
-完成後，選擇 **[!UICONTROL 下一個]**。
+完成後，選取 **[!UICONTROL 下一個]**.
 
-![列選定](../../../../images/tutorials/create/analytics/columns-selected.png)
+![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
 
-### 提供資料流詳細資訊
+### 提供資料流詳細資料
 
-的 **[!UICONTROL 資料流詳細資訊]** 步驟，您必須在其中為資料流提供名稱和可選說明。 選擇 **[!UICONTROL 下一個]** 的子菜單。
+此 **[!UICONTROL 資料流詳細資料]** 步驟隨即顯示，您必須在此為資料流提供名稱和說明（選用）。 選取 **[!UICONTROL 下一個]** 完成後。
 
-![資料流詳細資訊](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+![資料流 — 詳細資料](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### 請檢閱
 
-的 [!UICONTROL 審閱] 步驟，允許您在建立新的分析資料流之前查看它。 連接的詳細資訊按類別分組，包括：
+此 [!UICONTROL 檢閱] 步驟隨即顯示，可讓您在建立新的Analytics資料流之前先檢閱該資料流。 連線的詳細資訊會依類別分組，包括：
 
-* [!UICONTROL 連接]:顯示連接的源平台。
-* [!UICONTROL 資料類型]:顯示所選報表套件及其相應的報表套件ID。
+* [!UICONTROL 連線]：顯示連線的來源平台。
+* [!UICONTROL 資料型別]：顯示選取的報表套裝及其對應的報表套裝ID。
 
-![審查](../../../../images/tutorials/create/analytics/review.png)
+![檢閱](../../../../images/tutorials/create/analytics/review.png)
 
 ### 監視資料流
 
-建立資料流後，您可以監視通過它接收的資料。 從 [!UICONTROL 目錄] 螢幕，選擇 **[!UICONTROL 資料流]** 查看與分析帳戶關聯的已建立流的清單。
+建立資料流後，您可以監視透過該資料流擷取的資料。 從 [!UICONTROL 目錄] 畫面，選取 **[!UICONTROL 資料流]** 以檢視與您的Analytics帳戶相關聯的已建立流程清單。
 
-![選擇資料流](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-的 **資料流** 的上界。 此頁上是一對資料集流，包括有關其名稱、源資料、建立時間和狀態的資訊。
+此 **資料流** 畫面隨即顯示。 在此頁面是一對資料集流程，包括有關其名稱、來源資料、建立時間和狀態的資訊。
 
-連接器實例化兩個資料集流。 一個流表示回填資料，另一個流表示即時資料。 回填資料未配置為Profile，但會發送到資料湖以用於分析和資料科學使用案例。
+聯結器會將兩個資料集流程例項化。 一個流程代表回填資料，另一個流程代表即時資料。 未針對設定檔設定回填資料，但會傳送至資料湖，以用於分析和資料科學的使用案例。
 
-有關回填、即時資料及其各自延遲的詳細資訊，請參見 [分析資料連接器概述](../../../../connectors/adobe-applications/analytics.md)。
+如需回填、即時資料及其各自延遲的詳細資訊，請參閱 [Analytics Data Connector概述](../../../../connectors/adobe-applications/analytics.md).
 
-從清單中選擇要查看的資料集流。
+從清單中選取您要檢視的資料集流程。
 
-![選擇 — 目標 — 資料集](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-的 **[!UICONTROL 資料集活動]** 的子菜單。 此頁顯示以圖形形式使用的消息的速率。 選擇 **[!UICONTROL 資料治理]** 的子菜單。
+此 **[!UICONTROL 資料集活動]** 頁面便會顯示。 此頁面會以圖表形式顯示使用訊息的速率。 選取 **[!UICONTROL 資料控管]** 以存取標籤欄位。
 
-![資料集活動](../../../../images/tutorials/create/analytics/dataset-activity.png)
+![資料集 — 活動](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-您可以從 [!UICONTROL 資料治理] 的上界。 有關如何標籤來自分析的資料的詳細資訊，請訪問 [資料使用標籤指南](../../../../../data-governance/labels/user-guide.md)。
+您可以檢視資料集流程的繼承標籤，從 [!UICONTROL 資料控管] 畫面。 如需如何為來自Analytics的資料加上標籤的詳細資訊，請造訪 [資料使用標籤指南](../../../../../data-governance/labels/user-guide.md).
 
-![資料 — gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
 
-要刪除資料流，請轉至 [!UICONTROL 資料流] 頁面，然後選擇橢圓(`...`)旁邊，然後選擇 [!UICONTROL 刪除]。
+若要刪除資料流，請前往 [!UICONTROL 資料流] 頁面，然後選取省略符號(`...`)，然後選取「 」 [!UICONTROL 刪除].
 
 ![delete](../../../../images/tutorials/create/analytics/delete.png)
 
 ## 後續步驟和其他資源
 
-建立連接後，將自動建立資料流，以包含傳入資料並使用所選模式填充資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始攝取完成後， [!DNL Analytics] 資料和供下游平台服務使用，例如 [!DNL Real-Time Customer Profile] 和分段服務。 有關詳細資訊，請參閱以下文檔：
+建立連線後，系統會自動建立資料流以包含傳入的資料，並以您選取的結構描述填入資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始內嵌完成時， [!DNL Analytics] 資料以及供下游平台服務使用的資訊，例如 [!DNL Real-Time Customer Profile] 和細分服務。 如需更多詳細資訊，請參閱下列檔案：
 
 * [[!DNL Real-Time Customer Profile] 概覽](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] 概覽](../../../../../segmentation/home.md)
 * [[!DNL Data Science Workspace] 概覽](../../../../../data-science-workspace/home.md)
 * [[!DNL Query Service] 概覽](../../../../../query-service/home.md)
 
-以下視頻旨在支援您對使用Adobe Analytics源連接器接收資料的理解：
+以下影片旨在協助您瞭解如何使用Adobe Analytics來源聯結器擷取資料：
 
 >[!WARNING]
 >
-> 的 [!DNL Platform] 以下視頻中顯示的UI已過期。 有關最新的UI螢幕截圖和功能，請參閱上面的文檔。
+> 此 [!DNL Platform] 以下影片中顯示的UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
