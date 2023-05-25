@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 1a6282104af60d66c54bfb20c3c4e8eb74427461
+source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '979'
 ht-degree: 11%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 11%
       - [oracle聯結器](connectors/databases/oracle.md)
       - [Phoenix聯結器](connectors/databases/phoenix.md)
       - [PostgreSQL聯結器](connectors/databases/postgres.md)
+      - [Snowflake串流聯結器](connectors/databases/snowflake-streaming.md)
       - [Snowflake聯結器](connectors/databases/snowflake.md)
       - [teradata Vantage聯結器](connectors/databases/teradata-vantage.md)
    - 電子商務 {#ecommerce}
@@ -163,6 +164,7 @@ ht-degree: 11%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake串流](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [teradata優勢](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
