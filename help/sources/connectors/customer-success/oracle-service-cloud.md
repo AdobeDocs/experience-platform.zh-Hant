@@ -2,8 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；oracle服務雲端
 title: oracle服務雲端來源聯結器總覽
 description: 瞭解如何使用API或使用者介面將Oracle Service Cloud連線至Adobe Experience Platform。
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

@@ -2,8 +2,9 @@
 title: Shopify串流來源
 description: 瞭解如何建立來源連線和資料流，以將串流資料從您的Shopify執行個體擷取到Adobe Experience Platform
 badge: Beta
+last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
-source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
+source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 2%
