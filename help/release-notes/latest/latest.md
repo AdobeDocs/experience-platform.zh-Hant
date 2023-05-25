@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年5月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fea5fdf4b4982b59fb1c4954b8f81e131af9955b
+source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1360'
 ht-degree: 4%
 
 ---
@@ -33,6 +33,7 @@ Adobe Experience Platform 現有功能更新：
 - [資料治理](#data-governance)
 - [資料擷取](#data-ingestion)
 - [目的地](#destinations)
+- [身份識別服務](#identity-service)
 - [查詢服務](#query-service)
 - [來源](#sources)
 
@@ -108,6 +109,18 @@ Adobe Experience Platform提供豐富的功能，可擷取任何型別和任何�
 
 如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
 
+## 身份識別服務 {#identity-service}
+
+Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，藉此全面瞭解客戶及其行為。
+
+**更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 支援Adobe Experience Cloud應用程式中的合作夥伴ID | Identity Service現在提供合作夥伴ID。 合作夥伴ID是資料合作夥伴用來代表人員的識別碼。 在Real-time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充。 合作夥伴ID不會儲存在身分圖表中。 如需詳細資訊，請閱讀以下檔案： [身分型別](../../identity-service/namespaces.md#identity-types). |
+
+若要進一步瞭解Identity Service，請閱讀 [Identity Service概觀](../../identity-service/home.md)
+
 ## 查詢服務 {#query-service}
 
 查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL data lake]. 您可以聯結Data Lake的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或內嵌到即時客戶個人檔案中。
@@ -132,6 +145,7 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資
 
 | 功能 | 說明 |
 | --- | --- |
+| API支援來自的串流資料 [!DNL Snowflake] 資料庫 | 您現在可以從以下位置串流資料： [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake-streaming.md) 使用 [!DNL Flow Service] API。 |
 | 擴充對草稿模式的API支援 | 您現在可以在使用時暫停並儲存來源工作流程期間的進度 [!DNL Flow Service] API隨時提供。 使用 `mode=draft` 將基礎、來源和目標連線儲存為草稿的狀態。 可稍後重新檢視所有草繪圖元，以便完成。 閱讀指南： [設定您的 [!DNL Flow Service] 圖元變成草稿狀態](../../sources/tutorials/api/draft.md) 以取得詳細資訊。 |
 | 全面發行 [!DNL Salesforce Marketing Cloud] source | 此 [[!DNL Salesforce Marketing Cloud source] 現在為GA](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). 使用此來源將您的 [!DNL Salesforce Marketing Cloud] 要Experience Platform的資料。 |
 | [!DNL Google Ads] 驗證更新 | 您現在可以在驗證您的憑證時提供登入客戶ID。 [!DNL Google Ads] 從特定作業客戶擷取報表資料的來源帳戶。 閱讀 [[!DNL Google Ads] 來原始檔](../../sources/connectors/advertising/ads.md) 以取得詳細資訊。 |
@@ -142,5 +156,3 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資
 {style="table-layout:auto"}
 
 若要進一步瞭解來源，請閱讀 [來源概觀](../../sources/home.md).
-
-<!-- | API support for streaming data from a [!DNL Snowflake] database | You can now stream data from a [[!DNL Snowflake] source](../../sources/connectors/databases/snowflake.md) using the [!DNL Flow Service] API. | -->
