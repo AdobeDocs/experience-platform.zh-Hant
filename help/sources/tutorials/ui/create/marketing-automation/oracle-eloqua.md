@@ -1,6 +1,6 @@
 ---
-title: 使用平台UI建立OracleEloqua源連接
-description: 瞭解如何使用平台UI將Adobe Experience Platform連接到OracleEloqua。
+title: 使用Platform UI建立OracleEloqua來源連線
+description: 瞭解如何使用Platform UI將Adobe Experience Platform連結至Oracle Eloqua。
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
@@ -9,57 +9,57 @@ ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Oracle Eloqua] 使用平台UI的源連接
+# 建立 [!DNL Oracle Eloqua] 使用Platform UI的來源連線
 
-本教程提供建立 [!DNL Oracle Eloqua] 源連接，使用Adobe Experience Platform用戶介面。
+本教學課程提供建立 [!DNL Oracle Eloqua] 使用Adobe Experience Platform使用者介面的來源連線。
 
 ## 快速入門
 
-本指南要求對平台的以下元件有良好的理解：
+本指南需要深入瞭解下列Platform元件：
 
-* [源](../../../../home.md):平台允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
-* [沙箱](../../../../../sandboxes/home.md):平台提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../../../home.md)：Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [沙箱](../../../../../sandboxes/home.md)：Platform提供虛擬沙箱，可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-如果您已經通過身份驗證 [!DNL Oracle Eloqua] 平台上的帳戶，則您可以跳過本文檔的其餘部分，繼續學習有關 [建立資料流，將營銷自動化資料帶到平台](../../dataflow/marketing-automation.md)。
+如果您已經驗證 [!DNL Oracle Eloqua] 帳戶，然後您可以略過本檔案的其餘部分，並前往上的教學課程 [建立資料流以將行銷自動化資料帶入Platform](../../dataflow/marketing-automation.md).
 
-### 收集所需憑據
+### 收集必要的認證
 
-為了連接 [!DNL Oracle Eloqua] 到平台，必須提供以下驗證屬性的值：
+為了連線 [!DNL Oracle Eloqua] 對於Platform，您必須提供下列驗證屬性的值：
 
-| 憑據 | 說明 |
+| 認證 | 說明 |
 | --- | --- |
-| 端點 | 您的終結點 [!DNL Oracle Eloqua] 伺服器。 [!DNL Oracle Eloqua] 支援多個資料中心。 要查找您的終結點，請登錄到 [[!DNL Oracle Eloqua] 介面](https://login.eloqua.com) 然後從重定向URL複製基URL部分。 URL模式的格式為 `xxx.xx.eloqua.com` 應輸入 `http` 或 `https`。 |
-| 用戶名 | 您的用戶名 [!DNL Oracle Eloqua] 伺服器。 用戶名必須格式化為 `siteName + \\ + username`，也請參見Wiki頁。 `siteName` 是您用於登錄的公司名稱 [!DNL Oracle Eloqua] 和 `username` 是您的用戶名。 例如，您的登錄用戶名可以是： `Eloqua\Andy`。 **注釋**:必須使用單個反斜線(`\`)使用UI時，因為Experience PlatformUI會自動添加附加反斜線(`\`)。 |
-| 密碼 | 與您的 [!DNL Oracle Eloqua] 用戶名。 |
+| 端點 | 您的的端點 [!DNL Oracle Eloqua] 伺服器。 [!DNL Oracle Eloqua] 支援多個資料中心。 若要尋找您的端點，請登入 [[!DNL Oracle Eloqua] 介面](https://login.eloqua.com) ，然後從重新導向URL複製基本URL部分。 URL模式的格式為 `xxx.xx.eloqua.com` 且輸入時應不包含 `http` 或 `https`. |
+| 使用者名稱 | 您的使用者名稱 [!DNL Oracle Eloqua] 伺服器。 使用者名稱的格式必須是 `siteName + \\ + username`，其中 `siteName` 是您用來登入的公司名稱 [!DNL Oracle Eloqua] 和 `username` 是您的使用者名稱。 例如，您的登入使用者名稱可以是： `Eloqua\Andy`. **注意**：您必須使用單一反斜線(`\`)使用UI時，因為Experience PlatformUI會自動新增額外的反斜線(`\`)時，輸入使用者名稱。 |
+| 密碼 | 與您的對應的密碼 [!DNL Oracle Eloqua] 使用者名稱。 |
 
-有關的身份驗證憑據的詳細資訊 [!DNL Oracle Eloqua]，請參見 [[!DNL Oracle Eloqua] 認證指南](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html)。
+如需下列專案的驗證認證詳細資訊： [!DNL Oracle Eloqua]，請參閱 [[!DNL Oracle Eloqua] 驗證指南](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
-收集了所需的憑據後，您可以按照以下步驟連結 [!DNL Oracle Eloqua] 帳戶到平台。
+收集完所需的認證後，您可以依照下列步驟連結 [!DNL Oracle Eloqua] 至平台的帳戶。
 
-## 連接 [!DNL Oracle Eloqua] 帳戶
+## 連線您的 [!DNL Oracle Eloqua] 帳戶
 
-在平台UI中，選擇 **[!UICONTROL 源]** 從左側導航 [!UICONTROL 源] 工作區。 的 [!UICONTROL 目錄] 螢幕顯示可建立帳戶的各種源。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以用來建立帳戶的各種來源。
 
-可以從螢幕左側的目錄中選擇相應的類別。 或者，您可以使用搜索選項找到要使用的特定源。
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項來尋找您要使用的特定來源。
 
-在 [!UICONTROL 營銷自動化] 類別，選擇 **[!UICONTROL Oracle雄辯]**，然後選擇 **[!UICONTROL 添加資料]**。
+在 [!UICONTROL 行銷自動化] 類別，選取 **[!UICONTROL oracleEloqua]**，然後選取 **[!UICONTROL 新增資料]**.
 
 ![目錄](../../../../images/tutorials/create/oracle-eloqua/catalog.png)
 
-的 **[!UICONTROL 連接OracleEloqua帳戶]** 的子菜單。 在此頁上，您可以使用新憑據或現有憑據。
+此 **[!UICONTROL 連線Oracle Eloqua帳戶]** 頁面便會顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 現有帳戶
 
-要使用現有帳戶，請選擇 [!DNL Oracle Eloqua] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
+若要使用現有帳戶，請選取 [!DNL Oracle Eloqua] 要用來建立新資料流的帳戶，然後選取 **[!UICONTROL 下一個]** 以繼續進行。
 
 ![現有](../../../../images/tutorials/create/oracle-eloqua/existing.png)
 
 ### 新帳戶
 
-如果要建立新帳戶，請選擇 **[!UICONTROL 新帳戶]**，然後為您提供名稱、可選說明和相應的值 [!DNL Oracle Eloqua] 憑據。 完成後，選擇 **[!UICONTROL 連接到源]** 然後再給新連接建立一段時間。
+如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、可選說明和適合您的專案的適當值。 [!DNL Oracle Eloqua] 認證。 完成後，選取 **[!UICONTROL 連線到來源]** 然後等待一段時間以建立新連線。
 
 ![新](../../../../images/tutorials/create/oracle-eloqua/new.png)
 
 ## 後續步驟
 
-按照本教程，您已經驗證並建立了源連接 [!DNL Oracle Eloqua] 帳戶和平台。 現在，您可以繼續下一個教程， [建立資料流，將營銷自動化資料帶到平台](../../dataflow/marketing-automation.md)。
+依照本教學課程所述，您已驗證並建立您與 [!DNL Oracle Eloqua] 帳戶和平台。 您現在可以繼續下一節教學課程和 [建立資料流，將行銷自動化資料帶入Platform](../../dataflow/marketing-automation.md).

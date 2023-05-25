@@ -1,6 +1,6 @@
 ---
-title: 委託描述符ID
-description: 瞭解有關Reactor API中委託描述符ID的資訊，以及它們如何將資源與擴展連結。
+title: 委派描述項ID
+description: 瞭解Reactor API中的委派描述項ID，以及它們如何將資源與擴充功能連結。
 exl-id: 2c2b9b31-0618-4b93-97ec-0798fc06aac0
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,46 +9,46 @@ ht-degree: 1%
 
 ---
 
-# 委託描述符ID
+# 委派描述項ID
 
-在Adobe Experience Platform使用標籤時，您可以在站點上部署的所有功能都由擴展提供。 每個擴展提供的功能由擴展開發者定義。 部署擴展時，它會與其各種功能捆綁在一起， [擴展包](../endpoints/extension-packages.md)。 開發人員添加到擴展包的功能被視為該包的「委派」。
+使用Adobe Experience Platform中的標籤時，擴充功能會提供您可以在網站上部署的所有功能。 擴充功能開發人員會定義每個擴充功能所提供的功能。 部署擴充功能時，會以「 」的形式，與其各種功能搭配 [擴充功能套件](../endpoints/extension-packages.md). 開發人員新增至擴充功能套件的功能會視為該套件的「委派」。
 
-擴展包內的每個委託都被賦予唯一的委託描述符ID。 特定資源的委託描述符ID將告訴系統它屬於哪種資源及其屬於哪個擴展包。
+擴充功能套件內的每個委派都會獲得唯一的委派描述項ID。 特定資源的委派描述項ID會告訴系統它是什麼資源，以及它屬於哪個擴充功能套件。
 
 ## 語法
 
-委託描述符ID由三個由雙冒號字元聯接的字串組成(`::`)，分別表示擴展包名稱、委託類型和委託名稱。 這些字串被構成為人可讀的，並且當接收擴展包時由系統自動生成和分配。
+委派描述項ID包含三個以雙冒號字元(`::`)，分別代表擴充功能套件名稱、委派型別和委派名稱。 這些字串的構成方式可供讀取，並會在擷取擴充功能套件時，由系統自動產生和指派。
 
-例如，如果名為 `example-package` 具有名為 `custom-code`，該操作將具有以下委託描述符ID: `example-package::actions::custom-code`。
+例如，如果擴充功能套件名為 `example-package` 具有名為的動作 `custom-code`，則該動作會有以下委派描述項ID： `example-package::actions::custom-code`.
 
-## 在適用資源上使用委託描述符ID
+## 在適用的資源上使用委派描述項ID
 
-在定義API中的規則元件（事件、條件和操作）和資料元素時，委派描述符ID非常重要。 以下各節概述了這些ID如何為每個資源發揮作用。
+談到在API中定義規則元件（事件、條件和動作）和資料元素時，委派描述項ID務必要瞭解。 以下各節會概述這些ID如何對每個資源發揮作用。
 
 ### 規則元件
 
-A [規則元件](../endpoints/rule-components.md) 必須與屬於擴展包的事件、條件或操作關聯。 這表示規則元件的「類型」，因為它與整個規則（事件、條件或操作）的邏輯相關。 因此，在建立規則元件時，必須提供委託描述符ID以指示規則元件應與哪個事件、條件或操作關聯。
+A [規則元件](../endpoints/rule-components.md) 必須與屬於擴充功能套件的事件、條件或動作相關聯。 這代表規則元件的「型別」，因為它與整體規則（事件、條件或動作）的邏輯相關。 因此，建立規則元件時，必須提供委派描述項ID以指出應將規則元件與哪個事件、條件或動作相關聯。
 
-例如，建立基於 `click` 擴展包中的事件 `example-package`，規則元件將使用以下 `delegate_descriptor_id` 值： `example-package::events::click`。
+例如，若要建立事件規則元件，其基礎為 `click` 擴充功能套件中的事件 `example-package`，規則元件會使用下列 `delegate_descriptor_id` 值： `example-package::events::click`.
 
-請參閱 [建立規則元件](../endpoints/rule-components.md#create) 的子菜單。
+請參閱以下小節： [建立規則元件](../endpoints/rule-components.md#create) 以取得詳細資訊。
 
 ### 資料元素
 
-A [資料元](../endpoints/data-elements.md) 首次建立擴展包時，必須與擴展包關聯，因為每個擴展包都為其委託資料元素定義了相容類型以及它們的預期行為。
+A [資料元素](../endpoints/data-elements.md) 擴充功能套件首次建立時必須與擴充功能套件相關聯，因為每個擴充功能套件都會定義其委派資料元素的相容型別，以及其預期行為。
 
-例如，建立使用 `cookie` 由擴展包定義的類型 `example-package`，資料元素將使用以下 `delegate_descriptor_id` 值： `example-package::dataElements::cookie`。
+例如，若要建立使用 `cookie` 擴充功能套件所定義的型別 `example-package`，資料元素會使用下列專案 `delegate_descriptor_id` 值： `example-package::dataElements::cookie`.
 
-請參閱 [建立資料元素](../endpoints/data-elements.md#create) 的子菜單。
+請參閱以下小節： [建立資料元素](../endpoints/data-elements.md#create) 以取得詳細資訊。
 
 ### 擴充功能
 
-安 [擴展](../endpoints/extensions.md) 在首次建立擴展包時自動與擴展包關聯，並在擴展包中表示 `relationships` 的雙曲餘切值。 如果您的擴展需要自定義設定，則還需要委託描述符ID。
+一個 [擴充功能](../endpoints/extensions.md) 會在第一次建立擴充功能套件時自動與其建立關聯，並在擴充功能的 `relationships` 物件。 如果您的擴充功能需要自訂設定，則還需要委派描述項ID。
 
 >[!NOTE]
 >
->不需要自定義設定的擴展不需要委託描述符ID。
+>不需要自訂設定的擴充功能不需要委派描述項ID。
 
-例如，要向屬於擴展包的擴展添加委託描述符ID `example-package`，擴展將使用以下 `delegate_descriptor_id` 值： `example-package::extensionConfiguration::config`。
+例如，若要將委派描述項ID新增至擴充功能套件的擴充功能 `example-package`，擴充功能會使用下列 `delegate_descriptor_id` 值： `example-package::extensionConfiguration::config`.
 
-請參閱上的指南 [建立擴展](../endpoints/extensions.md#create) 的子菜單。
+請參閱指南： [建立擴充功能](../endpoints/extensions.md#create) 以取得詳細資訊。

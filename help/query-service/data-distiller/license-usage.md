@@ -1,6 +1,6 @@
 ---
-title: 監視批查詢許可證使用情況
-description: Adobe Experience PlatformUI提供了一個儀表板，您可以通過該儀表板查看有關您組織的資料Distiller許可證使用情況的重要資訊。
+title: 監控批次查詢授權使用情況
+description: Adobe Experience Platform UI提供控制面板，讓您檢視有關貴組織Data Distiller授權使用情況的重要資訊。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
 hide: true
 hidefromtoc: true
@@ -12,35 +12,35 @@ ht-degree: 0%
 
 ---
 
-# (Alpha)監視批查詢許可證使用情況 {#monitor-license-usage}
+# (Alpha)監控批次查詢授權使用情況 {#monitor-license-usage}
 
 >[!IMPORTANT]
 >
->尚不能通過UI監視批查詢許可證使用情況。 此功能在Alpha中，仍在測試中。 此文檔可能會更改。
+>並非所有使用者都能透過UI監控批次查詢授權使用情況。 此功能目前處於Alpha測試階段，仍在測試中。 此檔案可能會有變動。
 
-Adobe Experience Platform用戶介面(UI)提供了一個儀表板，您可以通過該儀表板查看有關組織的查詢服務許可證使用情況的重要資訊。
+Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以通過該儀表板檢視有關您組織的Query Service授權使用情況的重要資訊。
 
-有關如何訪問和與UI中的許可證使用儀表板進行交互的詳細說明，以及有關儀表板中顯示的可用度量的詳細資訊，請訪問 [許可證使用儀表板指南](../../dashboards/guides/license-usage.md)。
+如需如何在UI中存取授權使用儀表板並與之互動的詳細指示，以及深入瞭解儀表板中顯示的可用量度，請造訪 [授權使用儀表板指南](../../dashboards/guides/license-usage.md).
 
-請閱讀 [儀表板概述](../../dashboards/home.md) 的子菜單。
+請閱讀 [儀表板概觀](../../dashboards/home.md) 以取得Experience Platform中所有儀表板功能的摘要。
 
-## 小部件 {#widgets}
+## Widget {#widgets}
 
-許可證使用儀表板由小部件組成，這些部件顯示只讀度量，提供有關您組織的許可證使用情況的重要資訊。 可見的指標取決於您組織的特定許可。
+授權使用儀表板是由Widget組成，這些介面會以唯讀方式顯示度量，提供關於您組織授權使用的重要資訊。 可見的量度取決於您組織的特定授權。
 
-選擇一個單選按鈕以選擇用於分析的沙盒，然後使用下拉菜單選擇分析的時段。 可用選項包括30天、90天、12個月期間、最後一年、完整合同期間或自定義日期。
+選取選項按鈕以選擇要分析的沙箱，並使用下拉式選單來選取分析的時間段。 可用的選項包括30天、90天、12個月期間、去年、完整合約期間或自訂日期。
 
-## 計算小時數 {#compute-hours}
+## 計算時數 {#compute-hours}
 
-的 [!UICONTROL 計算小時數] 小部件使用線形圖來直觀顯示組織每天的批處理查詢處理時間。 小部件在小部件的左上角顯示數字指示的三個度量。 分別為
+此 [!UICONTROL 計算時數] Widget會使用線圖，以視覺效果呈現貴組織每天的批次查詢處理時間。 Widget會在Widget左上角顯示三個以數字表示的量度。 分別為
 
-- [!UICONTROL 實際]:在概述下拉清單中選擇的時段的計算小時數。 此度量也通過實線在圖形上表示。
-- [!UICONTROL 許可]:您組織的許可協定允許的計算小時數。 此度量也用虛線在圖形上表示。
-- [!UICONTROL 用法]:這是您使用的百分比，相對於您的許可證同意的最大計算時數。
+- [!UICONTROL 實際]：在概覽下拉式清單中選擇的時段的總運算時數。 此量度也會在圖形中以實線表示。
+- [!UICONTROL 已授權]：貴組織的授權合約所允許的運算時數總計。 此量度也會在圖表中以虛線表示。
+- [!UICONTROL 使用狀況]：這是您的使用量相對於授權所同意的最大運算時數的百分比。
 
 >[!IMPORTANT]
 >
->的 [!UICONTROL 計算小時數] 小部件僅適用於具有批查詢資料Distiller許可證的客戶。
+>此 [!UICONTROL 計算時數] widget僅適用於擁有Data Distiller授權進行批次查詢的客戶。
 
-![已突出顯示計算小時數構件的許可證使用儀表板。](../images/data-distiller/compute-hours.png)
+![已反白顯示計算時數Widget的授權使用儀表板。](../images/data-distiller/compute-hours.png)
 

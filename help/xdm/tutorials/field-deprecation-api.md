@@ -1,6 +1,6 @@
 ---
 title: 棄用API中的XDM欄位
-description: 瞭解如何棄用架構註冊表API中的「體驗資料模型」(XDM)欄位。
+description: 瞭解如何棄用結構描述登入API中的Experience Data Model (XDM)欄位。
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
@@ -11,28 +11,28 @@ ht-degree: 2%
 
 # 棄用API中的XDM欄位
 
-在體驗資料模型(XDM)中，可以使用 [架構註冊表API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)。 棄用某個欄位會使其隱藏在下游UI中，如 [!UICONTROL 配置檔案] 工作區和Customer Journey Analytics，但是，它不會發生中斷更改，不會對現有資料流產生負面影響。
+在Experience Data Model (XDM)中，您可以使用來取代結構描述或自訂資源中的欄位。 [結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 棄用欄位會導致其在下游UI中隱藏，例如 [!UICONTROL 設定檔] 工作區和Customer Journey Analytics，但若不同，則為永久性變更，不會對現有資料流程造成負面影響。
 
-本文檔介紹如何為不同的XDM資源棄用欄位。 有關使用Experience Platform用戶介面中的架構編輯器來棄用XDM欄位的步驟，請參見上的教程 [棄用UI中的XDM欄位](./field-deprecation-ui.md)。
+本文介紹如何為不同的XDM資源棄用欄位。 如需在Experience Platform使用者介面中使用「結構描述編輯器」來取代XDM欄位的相關步驟，請參閱以下教學課程： [棄用UI中的XDM欄位](./field-deprecation-ui.md).
 
 ## 快速入門
 
-本教程要求調用架構註冊表API。 請查看 [開發者指南](../api/getting-started.md) 獲取進行這些API調用所需的重要資訊。 這包括您 `{TENANT_ID}`、&quot;容器&quot;的概念以及提出請求所需的標題(特別注意 `Accept` 標題及其可能值)。
+本教學課程需要呼叫Schema Registry API。 請檢閱 [開發人員指南](../api/getting-started.md) 如需發出這些API呼叫所需瞭解的重要資訊。 這包括您的 `{TENANT_ID}`、「容器」的概念，以及提出請求所需的標頭(請特別注意 `Accept` 標頭及其可能的值)。
 
-## 棄用自定義欄位 {#custom}
+## 棄用自訂欄位 {#custom}
 
-要棄用自定義類、欄位組或資料類型中的欄位，請通過PUT或PATCH請求更新自定義資源，並添加屬性 `meta:status: deprecated` 去那個領域。
+若要棄用自訂類別、欄位群組或資料型別中的欄位，請透過PUT或PATCH請求更新自訂資源並新增屬性 `meta:status: deprecated` 至有問題的欄位。
 
 >[!NOTE]
 >
->有關在XDM中更新自定義資源的一般資訊，請參閱以下文檔：
+>如需更新XDM中自訂資源的一般資訊，請參閱下列檔案：
 >
->* [更新類](../api/classes.md#patch)
->* [更新欄位組](../api/field-groups.md#patch)
->* [更新資料類型](../api/data-types.md#patch)
+>* [更新類別](../api/classes.md#patch)
+>* [更新欄位群組](../api/field-groups.md#patch)
+>* [更新資料型別](../api/data-types.md#patch)
 
 
-下面的示例API調用使自定義資料類型中的欄位失效。
+以下範例API呼叫會棄用自訂資料型別中的欄位。
 
 **API格式**
 
@@ -42,7 +42,7 @@ PATCH /tenant/datatypes/{DATA_TYPE_ID}
 
 **要求**
 
-以下請求棄用 `expansionArea` 用於描述不動產屬性的資料類型的欄位。
+以下請求會使 `expansionArea` 描述不動產屬性的資料型別欄位。
 
 ```shell
 curl -X PATCH \
@@ -63,7 +63,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的響應將返回自定義資源的更新詳細資訊，其中不建議使用的欄位包含 `meta:status` 值 `deprecated`。 下面的示例響應已被截斷為空間。
+成功回應會傳回自訂資源的更新詳細資料，且已棄用的欄位包含 `meta:status` 值 `deprecated`. 以下範例回應已因空格而截斷。
 
 ```json
 {
@@ -163,13 +163,13 @@ curl -X PATCH \
 }
 ```
 
-## 棄用架構中的標準欄位 {#standard}
+## 棄用結構描述中的標準欄位 {#standard}
 
-不能直接棄用標準類、欄位組和資料類型中的欄位。 相反，您可以通過使用描述符來取消它們在使用這些標準資源的各個方案中的使用。
+標準類別、欄位群組和資料型別中的欄位不能直接棄用。 反之，您可以在採用這些標準資源的個別結構描述中，使用描述項來取代標準資源。
 
-### 建立欄位棄用描述符 {#create-descriptor}
+### 建立欄位棄用描述項 {#create-descriptor}
 
-要為要棄用的架構欄位建立POST符，請向 `/tenant/descriptors` 端點。
+POST若要為您要棄用的結構描述欄位建立描述項，請向 `/tenant/descriptors` 端點。
 
 **API格式**
 
@@ -197,10 +197,10 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 描述符的類型。 對於欄位棄用描述符，必須將此值設定為 `xdm:descriptorDeprecated`。 |
-| `xdm:sourceSchema` | URI `$id` 將描述符應用到的架構。 |
-| `xdm:sourceVersion` | 要將描述符應用到的架構的版本。 應設定為 `1`。 |
-| `xdm:sourceProperty` | 將描述符應用到的架構中的屬性的路徑。 如果要將描述符應用於多個屬性，可以以陣列的形式提供路徑清單(例如， `["/firstName", "/lastName"]`)。 |
+| `@type` | 描述項的型別。 對於欄位淘汰描述項，此值必須設定為 `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | URI `$id` 要套用描述項的結構描述中。 |
+| `xdm:sourceVersion` | 您要套用描述項的結構描述版本。 應設為 `1`. |
+| `xdm:sourceProperty` | 要套用描述項的結構描述中的屬性路徑。 如果您想要將描述項套用至多個屬性，可以陣列形式提供路徑清單(例如， `["/firstName", "/lastName"]`)。 |
 
 **回應**
 
@@ -219,13 +219,13 @@ curl -X POST \
 }
 ```
 
-### 驗證已棄用欄位 {#verify-deprecation}
+### 驗證已棄用的欄位 {#verify-deprecation}
 
-在應用描述符後，您可以使用相應的方法查找有關的架構，以驗證是否已棄用該欄位 `Accept` 標題。
+套用描述項後，您可以在使用適當的同時查詢相關結構描述，以確認欄位是否已棄用 `Accept` 標頭。
 
 >[!NOTE]
 >
->當列出架構時顯示不建議使用的欄位。
+>目前不支援在列出結構描述時顯示已棄用的欄位。
 
 **API格式**
 
@@ -235,7 +235,7 @@ GET /tenant/schemas
 
 **要求**
 
-要在API響應中包括有關已過時欄位的資訊，必須設定 `Accept` 標題 `application/vnd.adobe.xed-deprecatefield+json; version=1`。
+若要在API回應中包含已棄用欄位的資訊，您必須將 `Accept` 頁首至 `application/vnd.adobe.xed-deprecatefield+json; version=1`.
 
 ```shell
 curl -X GET \
@@ -249,7 +249,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回架構的詳細資訊，其中不建議使用的欄位包含 `meta:status` 值 `deprecated`。 下面的示例響應已被截斷為空間。
+成功的回應會傳回結構的詳細資訊，且會包含已棄用的欄位 `meta:status` 值 `deprecated`. 以下範例回應已因空格而截斷。
 
 ```json
 "faxPhone": {
@@ -266,4 +266,4 @@ curl -X GET \
 
 ## 後續步驟
 
-本文檔介紹了如何使用架構註冊表API棄用XDM欄位。 有關為自定義資源配置欄位的詳細資訊，請參見上的指南 [定義API中的XDM欄位](./custom-fields-api.md)。 有關管理描述符的詳細資訊，請參見 [描述符端點指南](../api/descriptors.md)。
+本檔案說明如何使用結構描述登入API來棄用XDM欄位。 如需為自訂資源設定欄位的詳細資訊，請參閱以下指南： [在API中定義XDM欄位](./custom-fields-api.md). 如需管理描述元的詳細資訊，請參閱 [描述項端點指南](../api/descriptors.md).

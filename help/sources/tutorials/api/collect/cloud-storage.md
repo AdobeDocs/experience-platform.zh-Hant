@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；雲儲存資料
+keywords: Experience Platform；首頁；熱門主題；雲端儲存資料
 solution: Experience Platform
-title: 使用流服務API為雲儲存源建立資料流
+title: 使用流量服務API為雲端儲存空間來源建立資料流
 type: Tutorial
-description: 本教程介紹了使用源連接器和API從第三方雲儲存中檢索資料並將其引入平台的步驟。
+description: 本教學課程涵蓋從協力廠商雲端儲存空間擷取資料，以及使用來源聯結器和API將資料帶入Platform的步驟。
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,44 +12,44 @@ ht-degree: 1%
 
 ---
 
-# 使用 [!DNL Flow Service] API
+# 使用為雲端儲存空間來源建立資料流 [!DNL Flow Service] API
 
-本教程介紹從雲儲存源檢索資料並將資料帶入平台的步驟 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
+本教學課程涵蓋從雲端儲存空間來源擷取資料，以及使用將資料帶到Platform的步驟 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->為了建立資料流，您必須已具有與雲儲存源的有效基本連接ID。 如果您沒有此ID，請查看 [源概述](../../../home.md#cloud-storage) 的子目錄。
+>為了建立資料流，您必須擁有雲端儲存空間來源的有效基本連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#cloud-storage) 以取得您可以用來建立基本連線的雲端儲存空間來源清單。
 
 ## 快速入門
 
-本教程要求您對以下Adobe Experience Platform元件有一定的瞭解：
+本教學課程需要您實際瞭解Adobe Experience Platform的下列元件：
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platform組織客戶體驗資料的標準化框架。
-   - [架構組合的基礎](../../../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
-   - [架構註冊表開發人員指南](../../../../xdm/api/getting-started.md):包括成功執行對架構註冊表API的調用所需要瞭解的重要資訊。 這包括您 `{TENANT_ID}`、「容器」的概念和發出請求所需的標頭（特別要注意「接受」標頭及其可能值）。
-- [[!DNL Catalog Service]](../../../../catalog/home.md):目錄是記錄Experience Platform中資料位置和沿襲的系統。
-- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):批處理接收API允許您將資料作為批處理檔案接收到Experience Platform中。
-- [沙箱](../../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+   - [結構描述組合基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
+   - [Schema Registry開發人員指南](../../../../xdm/api/getting-started.md)：包含成功執行對Schema Registry API的呼叫所需瞭解的重要資訊。 這包括您的 `{TENANT_ID}`、「容器」的概念，以及發出請求所需的標頭（特別注意「接受」標頭及其可能的值）。
+- [[!DNL Catalog Service]](../../../../catalog/home.md)：目錄是Experience Platform中資料位置和譜系的記錄系統。
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform中。
+- [沙箱](../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../landing/api-guide.md).
 
-## 建立源連接 {#source}
+## 建立來源連線 {#source}
 
-您可以通過向POST請求建立源連接 `sourceConnections` 端點 [!DNL Flow Service] 提供基本連接ID時的API、要接收的源檔案的路徑以及源的相應連接規範ID。
+您可以向以下發出POST要求來建立來源連線： `sourceConnections` 端點 [!DNL Flow Service] API，同時提供您的基本連線ID、您要擷取的來源檔案路徑，以及來源對應的連線規格ID。
 
-建立源連接時，還必須為資料格式屬性定義枚舉值。
+建立來源連線時，您也必須定義資料格式屬性的列舉值。
 
-對基於檔案的源使用以下枚舉值：
+對檔案型來源使用下列列舉值：
 
-| 資料格式 | 枚舉值 |
+| 資料格式 | 列舉值 |
 | ----------- | ---------- |
-| 分隔 | `delimited` |
+| 已分隔 | `delimited` |
 | JSON | `json` |
-| 鑲木 | `parquet` |
+| Parquet | `parquet` |
 
-對於所有基於表的源，將值設定為 `tabular`。
+對於所有以表格為基礎的來源，將值設定為 `tabular`.
 
 **API格式**
 
@@ -92,19 +92,19 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `baseConnectionId` | 雲儲存源的基本連接ID。 |
-| `data.format` | 要帶到平台的資料的格式。 支援的值為： `delimited`。 `JSON`, `parquet`。 |
-| `data.properties` | （可選）一組屬性，在建立源連接時可應用於資料。 |
-| `data.properties.columnDelimiter` | （可選）在收集平面檔案時可指定的單字元列分隔符。 任何單個字元值都是允許的列分隔符。 如果未提供，則使用逗號(`,`)作為預設值。 **注釋**:的 `columnDelimiter` 僅當插入分隔的檔案時才能使用屬性。 |
-| `data.properties.encoding` | （可選）定義將資料插入平台時使用的編碼類型的屬性。 支援的編碼類型有： `UTF-8` 和 `ISO-8859-1`。 **注釋**:的 `encoding` 參數僅在插入分隔的CSV檔案時可用。 其他檔案類型將採用預設編碼， `UTF-8`。 |
-| `data.properties.compressionType` | （可選）定義用於接收的壓縮檔案類型的屬性。 支援的壓縮檔案類型有： `bzip2`。 `gzip`。 `deflate`。 `zipDeflate`。 `tarGzip`, `tar`。 **注釋**:的 `compressionType` 僅當插入分隔檔案或JSON檔案時才能使用屬性。 |
-| `params.path` | 要訪問的源檔案的路徑。 此參數指向單個檔案或整個資料夾。  **注釋**:可以使用星號代替檔案名來指定整個資料夾的接收。 例如： `/acme/summerCampaign/*.csv` 會吃掉整個 `/acme/summerCampaign/` 的子菜單。 |
-| `params.type` | 您正在接收的源資料檔案的檔案類型。 使用類型 `file` 接收單個檔案並使用類型 `folder` 來錄制整個資料夾。 |
-| `connectionSpec.id` | 與特定雲儲存源關聯的連接規範ID。 查看 [附錄](#appendix) 連接規範ID清單。 |
+| `baseConnectionId` | 雲端儲存空間來源的基本連線ID。 |
+| `data.format` | 您要帶到Platform的資料格式。 支援的值為： `delimited`， `JSON`、和 `parquet`. |
+| `data.properties` | （選用）一組屬性，可在建立來源連線時套用至您的資料。 |
+| `data.properties.columnDelimiter` | （選用）收集一般檔案時可指定的單一字元欄分隔字元。 任何單一字元值都是允許的欄分隔符號。 若未提供，請使用逗號(`,`)作為預設值。 **注意**：此 `columnDelimiter` 屬性只可在內嵌分隔檔案時使用。 |
+| `data.properties.encoding` | （選用）屬性，定義將資料擷取至Platform時使用的編碼型別。 支援的編碼型別為： `UTF-8` 和 `ISO-8859-1`. **注意**：此 `encoding` 只有在擷取分隔的CSV檔案時，引數才可用。 其他檔案型別將會以預設編碼擷取。 `UTF-8`. |
+| `data.properties.compressionType` | （選用）定義要擷取的壓縮檔案型別的屬性。 支援的壓縮檔案型別為： `bzip2`， `gzip`， `deflate`， `zipDeflate`， `tarGzip`、和 `tar`. **注意**：此 `compressionType` 屬性只可在內嵌分隔或JSON檔案時使用。 |
+| `params.path` | 您正在存取之來源檔案的路徑。 此引數指向個別檔案或整個資料夾。  **注意**：您可以使用星號來取代檔案名稱，以指定整個資料夾的擷取。 例如： `/acme/summerCampaign/*.csv` 將會擷取整個 `/acme/summerCampaign/` 資料夾。 |
+| `params.type` | 您正在擷取的來源資料檔案的檔案型別。 使用型別 `file` 擷取個別檔案並使用型別 `folder` 擷取整個資料夾。 |
+| `connectionSpec.id` | 與特定雲端儲存空間來源相關聯的連線規格ID。 請參閱 [附錄](#appendix) 以取得連線規格ID的清單。 |
 
 **回應**
 
-成功的響應返回唯一標識符(`id`)。 在後續步驟中建立資料流時需要此ID。
+成功的回應會傳回唯一識別碼(`id`)。 此ID在後續步驟中是建立資料流的必要專案。
 
 ```json
 {
@@ -113,9 +113,9 @@ curl -X POST \
 }
 ```
 
-### 使用規則運算式來選擇特定的檔案集以進行接收 {#regex}
+### 使用規則運算式來選取要擷取的特定檔案集 {#regex}
 
-在建立源連接時，可以使用規則運算式將特定的一組檔案從源檔案接收到平台。
+建立來源連線時，您可以使用規則運算式從來源擷取特定檔案集至Platform。
 
 **API格式**
 
@@ -125,7 +125,7 @@ POST /sourceConnections
 
 **要求**
 
-在以下示例中，在檔案路徑中使用規則運算式來指定接收所有具有 `premium` 以他們的名義。
+在以下範例中，檔案路徑中使用規則運算式，以指定擷取具有下列條件的所有CSV檔案： `premium` 以他們的名稱。
 
 ```shell
 curl -X POST \
@@ -153,9 +153,9 @@ curl -X POST \
   }'
 ```
 
-### 配置源連接以遞歸接收資料
+### 設定來源連線以遞回方式擷取資料
 
-建立源連接時，可以使用 `recursive` 參數，以從深度嵌套的資料夾中接收資料。
+建立來源連線時，您可以使用 `recursive` 用於從深度巢狀資料夾擷取資料的引數。
 
 **API格式**
 
@@ -165,7 +165,7 @@ POST /sourceConnections
 
 **要求**
 
-在下面的示例中， `recursive: true` 參數通知 [!DNL Flow Service] 以在攝取過程中遞歸讀取所有子資料夾。
+在以下範例中， `recursive: true` 引數通知 [!DNL Flow Service] 在擷取程式期間以遞回方式讀取所有子資料夾。
 
 ```shell
 curl -X POST \
@@ -194,25 +194,25 @@ curl -X POST \
   }'
 ```
 
-## 建立目標XDM架構 {#target-schema}
+## 建立目標XDM結構描述 {#target-schema}
 
-為了在平台中使用源資料，必須建立目標架構以根據您的需要來構造源資料。 然後使用目標模式建立包含源資料的平台資料集。
+為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後，目標結構描述會用於建立包含來源資料的Platform資料集。
 
-通過執行對目標XDM的POST請求，可以建立目標XDM模式 [架構註冊表API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。
+可透過對以下專案執行POST請求來建立目標XDM結構描述： [結構描述登入API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-有關如何建立目標XDM架構的詳細步驟，請參見上的教程 [使用API建立架構](../../../../xdm/api/schemas.md)。
+如需建立目標XDM結構的詳細步驟，請參閱以下教學課程： [使用API建立結構描述](../../../../xdm/api/schemas.md).
 
 ## 建立目標資料集 {#target-dataset}
 
-通過對目標資料集執行POST請求，可以建立目標資料集 [目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，提供負載內目標架構的ID。
+您可以透過對「 」執行POST請求來建立目標資料集 [目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，在裝載中提供目標結構描述的ID。
 
-有關如何建立目標資料集的詳細步驟，請參見上的教程 [使用API建立資料集](../../../../catalog/api/create-dataset.md)。
+如需建立目標資料集的詳細步驟，請參閱以下教學課程： [使用API建立資料集](../../../../catalog/api/create-dataset.md).
 
-## 建立目標連接 {#target-connection}
+## 建立目標連線 {#target-connection}
 
-目標連接表示到所接收資料所在目的地的連接。 要建立目標連接，必須提供與資料湖關聯的固定連接規範ID。 此連接規範ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`。
+目標連線代表所擷取資料登陸目的地之間的連線。 若要建立目標連線，您必須提供與Data Lake相關聯的固定連線規格ID。 此連線規格ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-您現在將唯一標識符作為目標模式、目標資料集和到資料湖的連接規範ID。 使用這些標識符，可以使用 [!DNL Flow Service] API，用於指定將包含入站源資料的資料集。
+您現在擁有目標結構描述、目標資料集和資料湖的連線規格ID的唯一識別碼。 使用這些識別碼，您可以使用 [!DNL Flow Service] 指定將包含傳入來源資料之資料集的API。
 
 **API格式**
 
@@ -251,14 +251,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `data.schema.id` | 的 `$id` 目標XDM架構。 |
-| `data.schema.version` | 架構的版本。 必須設定此值 `application/vnd.adobe.xed-full+json;version=1`，返回架構的最新次版本。 |
-| `params.dataSetId` | 目標資料集的ID。 |
-| `connectionSpec.id` | 到資料湖的固定連接規範ID。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`。 |
+| `data.schema.id` | 此 `$id` 目標XDM結構描述的。 |
+| `data.schema.version` | 結構描述的版本。 此值必須設定 `application/vnd.adobe.xed-full+json;version=1`，會傳回結構描述的最新次要版本。 |
+| `params.dataSetId` | 目標資料集的識別碼。 |
+| `connectionSpec.id` | 與Data Lake的固定連線規格ID。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **回應**
 
-成功的響應返回新目標連接的唯一標識符(`id`)。 後續步驟中需要此ID。
+成功回應會傳回新目標連線的唯一識別碼(`id`)。 此ID在後續步驟中是必要的。
 
 ```json
 {
@@ -267,15 +267,15 @@ curl -X POST \
 }
 ```
 
-## 建立映射 {#mapping}
+## 建立對應 {#mapping}
 
-為了將源資料攝取到目標資料集中，必須首先將其映射到目標資料集所遵循的目標模式。
+為了將來源資料內嵌到目標資料集中，必須先將其對應到目標資料集所遵守的目標結構描述。
 
-要建立映射集，請向 `mappingSets` 端點 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) 提供目標XDM架構時 `$id` 以及要建立的映射集的詳細資訊。
+若要建立對應集，請向以下發出POST請求： `mappingSets` 的端點 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) 提供您的目標XDM結構描述時 `$id` 以及要建立的對應集的詳細資訊。
 
 >[!TIP]
 >
->可以使用雲儲存源連接器在JSON檔案中映射複雜資料類型（如陣列）。
+>您可以使用雲端儲存空間來源聯結器來對應複雜的資料型別，例如JSON檔案中的陣列。
 
 **API格式**
 
@@ -329,11 +329,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `xdmSchema` | 目標XDM架構的ID。 |
+| `xdmSchema` | 目標XDM結構的ID。 |
 
 **回應**
 
-成功的響應返回新建立的映射的詳細資訊，包括其唯一標識符(`id`)。 在後續步驟中建立資料流時需要此值。
+成功回應會傳回新建立對應的詳細資料，包括其唯一識別碼(`id`)。 在後續步驟中需要此值，才能建立資料流。
 
 ```json
 {
@@ -346,9 +346,9 @@ curl -X POST \
 }
 ```
 
-## 檢索資料流規範 {#specs}
+## 擷取資料流規格 {#specs}
 
-資料流負責從源收集資料，並將其引入平台。 要建立資料流，必須首先獲得負責收集雲儲存資料的資料流規範。
+資料流負責從來源收集資料，並將資料匯入Platform。 為了建立資料流，您必須先取得負責收集雲端儲存體資料的資料流規格。
 
 **API格式**
 
@@ -368,13 +368,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->下面的JSON響應負載隱藏以便簡單。 選擇「負載」以查看響應負載。
+>為了簡單起見，以下JSON回應裝載已隱藏。 選取「裝載」以檢視回應裝載。
 
-+++ 查看負載
++++ 檢視裝載
 
 **回應**
 
-成功的響應將返回負責將資料從源引入平台的資料流規範的詳細資訊。 響應包括唯一流規範 `id` 建立新資料流所需。
+成功的回應會傳回負責將資料從來源帶入Platform的資料流規格的詳細資訊。 回應包含唯一的流量規格 `id` 建立新資料流時需要。
 
 ```json
 {
@@ -589,24 +589,24 @@ curl -X GET \
 
 ## 建立資料流
 
-收集雲儲存資料的最後一步是建立資料流。 現在，您準備了以下必需值：
+收集雲端儲存空間資料的最後一步是建立資料流。 到現在為止，您已準備下列必要值：
 
-- [源連接ID](#source)
-- [目標連接ID](#target)
+- [來源連線ID](#source)
+- [目標連線ID](#target)
 - [對應 ID](#mapping)
-- [資料流規範ID](#specs)
+- [資料流規格ID](#specs)
 
-資料流負責從源調度和收集資料。 通過在負載中提供先前提到的值的同時執行POST請求，可以建立資料流。
+資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提及的值，藉此建立資料流。
 
 >[!NOTE]
 >
->對於批處理接收，每個後續資料流都會根據源檔案選擇要從源檔案接收的檔案 **上次修改** 時間戳。 這意味著批處理資料流從源中選擇新檔案或自上次資料流運行以來已修改的檔案。
+>對於批次擷取，每個後續的資料流都會根據其 **上次修改時間** 時間戳記。 這表示批次資料流會從來源選取新的檔案，或自上次資料流執行以來修改的檔案。
 
-要計畫攝取，必須首先將開始時間值設定為劃時代（秒）。 然後，必須將頻率值設定為以下五個選項之一： `once`。 `minute`。 `hour`。 `day`或 `week`。 該間隔值指定兩個連續接收之間的期間，並且建立一次性接收不需要設定間隔。 對於所有其它頻率，間隔值必須設定為等於或大於 `15`。
+若要排程內嵌，您必須先將開始時間值設為以秒為單位的epoch時間。 然後，您必須將頻率值設定為下列五個選項之一： `once`， `minute`， `hour`， `day`，或 `week`. 間隔值會指定兩個連續內嵌之間的期間，而建立一次性內嵌不需要設定間隔。 對於所有其他頻率，間隔值必須設定為等於或大於 `15`.
 
 >[!IMPORTANT]
 >
->強烈建議在使用 [FTP連接器](../../../connectors/cloud-storage/ftp.md)。
+>強烈建議您在使用時，排程資料流進行一次性擷取 [FTP聯結器](../../../connectors/cloud-storage/ftp.md).
 
 **API格式**
 
@@ -655,17 +655,17 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `flowSpec.id` | 的 [流規範ID](#specs) 在上一步中檢索。 |
-| `sourceConnectionIds` | 的 [源連接ID](#source) 在較早的步驟中檢索。 |
-| `targetConnectionIds` | 的 [目標連接ID](#target-connection) 在較早的步驟中檢索。 |
-| `transformations.params.mappingId` | 的 [映射ID](#mapping) 在較早的步驟中檢索。 |
-| `scheduleParams.startTime` | 資料流在紀元時間中的開始時間。 |
-| `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受值包括： `once`。 `minute`。 `hour`。 `day`或 `week`。 |
-| `scheduleParams.interval` | 該間隔指定兩個連續流運行之間的期間。 間隔的值應為非零整數。 頻率設定為時不需要間隔 `once` 應大於或等於 `15` 其他頻率值。 |
+| `flowSpec.id` | 此 [流量規格ID](#specs) 已在上一步中擷取。 |
+| `sourceConnectionIds` | 此 [來源連線ID](#source) 已在先前步驟中擷取。 |
+| `targetConnectionIds` | 此 [目標連線ID](#target-connection) 已在先前步驟中擷取。 |
+| `transformations.params.mappingId` | 此 [對應ID](#mapping) 已在先前步驟中擷取。 |
+| `scheduleParams.startTime` | 資料流的開始時間（以Epoch時間計）。 |
+| `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`， `minute`， `hour`， `day`，或 `week`. |
+| `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 間隔值應為非零整數。 當頻率設定為時，不需要間隔 `once` 和應大於或等於 `15` （其他頻率值）。 |
 
 **回應**
 
-成功的響應返回ID(`id`)。
+成功的回應會傳回ID (`id`)。
 
 ```json
 {
@@ -676,28 +676,28 @@ curl -X POST \
 
 ## 監視資料流
 
-建立資料流後，您可以監視正在通過其接收的資料，以查看有關流運行、完成狀態和錯誤的資訊。 有關如何監視資料流的詳細資訊，請參見上的教程 [監視API中的資料流](../monitor.md)
+建立資料流後，您可以監視透過它擷取的資料，以檢視有關資料流執行、完成狀態和錯誤的資訊。 如需如何監視資料流的詳細資訊，請參閱以下教學課程： [監視API中的資料流](../monitor.md)
 
 ## 後續步驟
 
-按照本教程，您建立了源連接器，以按計畫從雲儲存中收集資料。 現在，下游平台服務(如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]。 有關詳細資訊，請參閱以下文檔：
+依照本教學課程所述，您已建立來源聯結器，以依排程從雲端儲存空間收集資料。 傳入資料現在可供下游平台服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
 
-- [即時客戶概要資訊概述](../../../../profile/home.md)
-- [資料科學工作區概述](../../../../data-science-workspace/home.md)
+- [即時客戶個人檔案總覽](../../../../profile/home.md)
+- [資料科學工作區概觀](../../../../data-science-workspace/home.md)
 
 ## 附錄 {#appendix}
 
-以下部分列出了不同的雲儲存源連接器及其連接規範。
+下節列出不同的雲端儲存空間來源聯結器及其連線規格。
 
-### 連接規範
+### 連線規格
 
-| 連接器名稱 | 連接規範 |
+| 聯結器名稱 | 連線規格 |
 | -------------- | --------------- |
 | [!DNL Amazon S3] (S3) | `ecadc60c-7455-4d87-84dc-2a0e293d997b` |
 | [!DNL Amazon Kinesis] (Kinesis) | `86043421-563b-46ec-8e6c-e23184711bf6` |
 | [!DNL Azure Blob] (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
-| [!DNL Azure Data Lake Storage Gen2] （ADLS第2代） | `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` |
-| [!DNL Azure Event Hubs] （事件中心） | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) | `b3ba5556-48be-44b7-8b85-ff2b69b46dc4` |
+| [!DNL Azure Event Hubs] （事件中樞） | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | [!DNL HDFS] | `54e221aa-d342-4707-bcff-7a4bceef0001` |

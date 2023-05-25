@@ -1,6 +1,6 @@
 ---
-title: 公司終結點
-description: 瞭解如何調用Repartor API中的/companys端點。
+title: 公司端點
+description: 瞭解如何在Reactor API中呼叫/companies端點。
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 3%
 
 ---
 
-# 公司終結點
+# 公司端點
 
-公司代表客戶組織，通常是企業。 在Reactor API中，這些公司與組織ID匹配1:1。 API用戶只能查看他們有權訪問的公司。 公司可能包含許多 [屬性](./properties.md)。 一處房產只屬於一家公司。
+公司代表客戶組織，通常是企業。 在Reactor API中，這些公司將1:1與組織ID配對。 API使用者只能檢視他們有權存取的公司。 公司可能包含許多 [屬性](./properties.md). 屬性只屬於一個公司。
 
-的 `/companies` Reactor API中的端點允許您以寫程式方式檢索您在體驗應用程式中有權訪問的公司。
+此 `/companies` Reactor API中的端點可讓您以程式設計方式擷取您在體驗應用程式中有權存取的公司。
 
 ## 快速入門
 
-本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
+本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
 
-## 檢索公司清單 {#list}
+## 擷取公司清單 {#list}
 
-您可以通過向以下站點發出GET請求來列出您有權使用的公司 `/companies` 端點。 在大多數情況下，只有一個。
+您可以透過向以下網站發出GET請求，列出您有權使用的公司： `/companies` 端點。 在大多數情況下，只會有一個。
 
 **API格式**
 
@@ -31,7 +31,7 @@ GET /companies
 
 >[!NOTE]
 >
->使用查詢參數，可以根據以下屬性篩選上市公司：<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
+>使用查詢引數，可以根據以下屬性篩選上市公司：<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
 
 **要求**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回您有權訪問的公司清單。
+成功回應會傳回您有權存取的公司清單。
 
 ```json
 {
@@ -107,9 +107,9 @@ curl -X GET \
 }
 ```
 
-## 查找公司 {#lookup}
+## 查詢公司 {#lookup}
 
-您可以通過在GET請求路徑中包含其ID來查找特定公司。
+您可以在GET請求的路徑中包含其ID來查詢特定公司。
 
 **API格式**
 
@@ -119,7 +119,7 @@ GET /companies/{COMPANY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{COMPANY_ID}` | 的 `id` 你想查的公司的價值。 |
+| `{COMPANY_ID}` | 此 `id` 您要查閱之公司的價值。 |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回公司的詳細資訊。
+成功的回應會傳回公司的詳細資料。
 
 ```json
 {

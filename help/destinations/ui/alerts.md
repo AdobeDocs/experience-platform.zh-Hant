@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；警報；目標
-description: 在建立資料流時，您可以訂閱警報，以接收有關流運行狀態、成功或失敗的警報消息。
-title: 訂閱上下文中的目標警報
+keywords: Experience Platform；首頁；熱門主題；警示；目的地
+description: 您可以在建立資料流時訂閱警示，以接收有關資料流執行狀態、成功或失敗的警示訊息。
+title: 訂閱內容感知目的地警示
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
 source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
 workflow-type: tm+mt
@@ -10,23 +10,23 @@ ht-degree: 5%
 
 ---
 
-# 訂閱上下文中的目標警報
+# 訂閱內容感知目的地警示
 
-Adobe Experience Platform允許您訂閱有關Adobe Experience Platform活動的基於事件的警報。 警報減少或消除輪詢 [[!DNL Observability Insights] API](../../observability/api/overview.md) 以檢查作業是否已完成、是否已達到工作流中的某個里程碑，或是否發生任何錯誤。
+Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的事件型警報。 警報可減少或免除輪詢 [[!DNL Observability Insights] API](../../observability/api/overview.md) 以檢查工作是否已完成、是否已到達工作流程中的某個里程碑，或是否已發生任何錯誤。
 
-在建立資料流以接收有關流運行狀態、成功或失敗的警報消息時，可以訂閱警報。
+建立資料流以接收有關資料流執行的狀態、成功或失敗的警報訊息時，您可以訂閱警報。
 
-本文檔提供了如何訂閱目標資料流的警報消息的步驟。
+本檔案提供如何訂閱接收目的地資料流程之警示訊息的步驟。
 
 ## 快速入門
 
-本檔案要求對Adobe Experience Platform的下列構成部分有工作上的理解：
+本檔案需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [目標](../home.md):預構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
-* [可觀測性](../../observability/home.md): [!DNL Observability Insights] 允許您通過使用統計度量和事件通知來監視平台活動。
-   * [警報](../../observability/alerts/overview.md):當平台操作中達到某組條件時（例如當系統超過閾值時可能出現的問題），平台可以向組織中已訂閱這些條件的任何用戶發送警報消息。
+* [目的地](../home.md)：預先建立與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+* [可觀察性](../../observability/home.md)： [!DNL Observability Insights] 可讓您透過使用統計量度和事件通知來監控Platform活動。
+   * [警報](../../observability/alerts/overview.md)：當您的Platform作業達到特定條件集時（例如系統違反臨界值時會發生問題），Platform可以向您組織中訂閱警報訊息的任何使用者傳送警報訊息。
 
-## 訂閱UI中的警報 {#subscribe-destination-alerts}
+## 訂閱UI中的警示 {#subscribe-destination-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_destination_alerts_subscribe"
@@ -36,83 +36,83 @@ Adobe Experience Platform允許您訂閱有關Adobe Experience Platform活動的
 
 >[!IMPORTANT]
 >
->您必須為平台帳戶啟用電子郵件即時通知才能接收資料流基於電子郵件的警報通知。
+>您必須啟用Platform帳戶的即時電子郵件通知，才能接收資料流的電子郵件警示通知。
 
-您可以在 [!UICONTROL 配置新目標] 的 [目標連接](connect-destination.md) 工作流。
+您可以在以下期間為資料流啟用警報： [!UICONTROL 設定新目的地] 步驟 [目的地連線](connect-destination.md) 工作流程。
 
-![顯示目標警報部分的UI影像。](../assets/ui/alerts/destination-alerts.png)
+![顯示目的地警報區段的UI影像。](../assets/ui/alerts/destination-alerts.png)
 
-選擇要訂閱的警報，然後選擇 **[!UICONTROL 下一個]** 查看並完成資料流。
+選取您要訂閱的警示，然後選取 **[!UICONTROL 下一個]** 以檢閱並完成您的資料流。
 
-下表介紹了目標資料流可用的警報。
+下表說明目的地資料流可用的警示。
 
-* 對於流目標，僅 [!DNL Activation Skipped Rate Exceeded] 警報可用。
-* 對於基於檔案的目標，所有警報都可用。
+* 對於串流目的地，僅限 [!DNL Activation Skipped Rate Exceeded] 警報可供使用。
+* 針對以檔案為基礎的目的地，所有警報皆可使用。
 
 | 警報 | 說明 |
 | --- | --- |
-| 目標流運行延遲 | 當目標流運行激活段所用時間超過150分鐘時，此警報會通知您。 |
-| 目標流運行失敗 | 當激活到目標的段時出錯時，此警報會通知您。 |
-| 目標流運行成功 | 當網段成功激活到目標時，此警報會通知您。 |
-| 目標流運行開始 | 當目標流運行開始激活段時，此警報會通知您。 |
-| 已跳過激活率 | 當激活跳過率超過總激活的1%時，此警報會通知您。 當標識缺少屬性或違反同意時，在激活過程中將跳過標識。 |
+| 目的地資料流執行延遲 | 此警報會在目的地流程執行耗時超過150分鐘啟動區段時通知您。 |
+| 目的地流程執行失敗 | 此警報會在啟用區段至目的地時發生錯誤時通知您。 |
+| 目的地流程執行成功 | 此警報會在區段成功啟用至目的地時通知您。 |
+| 目的地流程執行開始 | 此警報會在目的地流程執行開始啟用區段時通知您。 |
+| 超過啟用略過率 | 此警報會在啟用略過率超過啟用總數的1%時通知您。 當身分缺少屬性或違反同意時，會在啟用期間略過身分。 |
 
-## 接收警報 {#receiving-alerts}
+## 接收警示 {#receiving-alerts}
 
-目標資料流一旦運行，您就可以通過UI或電子郵件接收警報。
+目的地資料流執行後，您可以透過UI或電子郵件接收警報。
 
 ### 在UI中接收警報 {#receiving-alerts-in-ui}
 
-警報在UI中由平台UI頂部標題中的通知表徵圖表示。 選擇通知表徵圖以查看有關資料流的特定警報消息。
+警報會在UI中以Platform UI頂端標題中的通知圖示表示。 選取通知圖示以檢視與資料流相關的特定警報訊息。
 
-![顯示Experience Platform中通知表徵圖的UI影像](../assets/ui/alerts/notification.png)
+![顯示Experience Platform通知圖示的UI影像](../assets/ui/alerts/notification.png)
 
-此時將顯示通知面板，其中顯示您建立的資料流上的狀態更新清單。
+此時會顯示通知面板，其中顯示您所建立之資料流上的狀態更新清單。
 
 ![顯示通知面板的UI影像](../assets/ui/alerts/alert-window.png)
 
-您可以懸停在警報消息上，將其標籤為已讀，也可以選擇時鐘錶徵圖以設定將來有關資料流狀態的提醒。
+您可以將滑鼠指標暫留在警示訊息上，將其標示為已讀取，也可以選取時鐘圖示來設定資料流狀態的未來提醒。
 
 ![顯示通知提醒選項的UI影像](../assets/ui/alerts/remind-me.png)
 
-選擇警報消息以查看有關資料流的特定資訊。
+選取警報訊息以檢視資料流的特定資訊。
 
-![顯示如何選擇通知的UI影像](../assets/ui/alerts/select-alert-message.png)
+![顯示如何選取通知的UI影像](../assets/ui/alerts/select-alert-message.png)
 
-的 [!UICONTROL 資料流運行詳細資訊] 的子菜單。 螢幕的上半部分顯示有關資料流的概述，包括有關其屬性、相應資料流運行ID和高級錯誤摘要的資訊。
+此 [!UICONTROL 資料流執行詳細資料] 頁面便會顯示。 畫面的上半部分會顯示資料流的概觀，包括其屬性、對應資料流執行ID和高級別錯誤摘要的相關資訊。
 
-![顯示「資料流運行詳細資料」頁的UI影像。](../assets/ui/alerts/dataflow-overview.png)
+![顯示資料流執行詳細資訊頁面的UI影像。](../assets/ui/alerts/dataflow-overview.png)
 
-頁面的下半部分顯示任何 [!UICONTROL 資料流運行錯誤] 在資料流運行階段出現。 在此處，您可以預覽錯誤診斷或使用 [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) 下載錯誤診斷或與資料流對應的檔案清單。
+頁面下半部會顯示任何 [!UICONTROL 資料流執行錯誤] 在資料流執行階段發生的錯誤。 從這裡，您可以預覽錯誤診斷或使用 [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) 以下載與您的資料流對應的錯誤診斷或檔案資訊清單。
 
-![顯示「資料流運行詳細資訊」頁的UI影像，錯誤部分上有突出顯示部分。](../assets/ui/alerts/dataflow-run-error.png)
+![顯示資料流執行詳細資訊頁面的UI影像，並在錯誤區段加上醒目提示。](../assets/ui/alerts/dataflow-run-error.png)
 
-有關處理資料流錯誤的詳細資訊，請參見上的指南 [監視UI中的目標資料流](../../dataflows/ui/monitor-destinations.md)。
+如需處理資料流錯誤的詳細資訊，請參閱以下指南： [在UI中監視目的地資料流](../../dataflows/ui/monitor-destinations.md).
 
-### 通過電子郵件接收警報 {#receiving-alerts-by-email}
+### 透過電子郵件接收警示 {#receiving-alerts-by-email}
 
-您的資料流警報也通過電子郵件發送給您。 選擇電子郵件正文中的資料流名稱，以查看有關資料流的詳細資訊。
+資料流的警報也會透過電子郵件傳送給您。 選取電子郵件內文中的資料流名稱，以檢視資料流的詳細資訊。
 
-![警報電子郵件的螢幕快照](../assets/ui/alerts/email.png)
+![警示電子郵件的熒幕擷圖](../assets/ui/alerts/email.png)
 
-與UI警報類似， [!UICONTROL 資料流運行概述] 的子菜單。
+與UI警報類似， [!UICONTROL 資料流執行概觀] 頁面隨即顯示，提供您一個介面來調查與資料流關聯的任何錯誤。
 
-![資料流概述](../assets/ui/alerts/dataflow-overview.png)
+![資料流 — 概觀](../assets/ui/alerts/dataflow-overview.png)
 
-## 訂閱和取消訂閱警報 {#subscribe-and-unsubscribe}
+## 訂閱和取消訂閱警示 {#subscribe-and-unsubscribe}
 
-您可以訂閱目標中現有目標資料流的更多警報或取消訂閱已建立的警報 [!UICONTROL 瀏覽] 的子菜單。
+您可以針對目的地中現有的目的地資料流，訂閱更多警報或取消訂閱已建立的警報 [!UICONTROL 瀏覽] 頁面。
 
-![顯示「目標瀏覽」頁的UI影像](../assets/ui/alerts/destination-list.png)
+![顯示目的地瀏覽頁面的UI影像](../assets/ui/alerts/destination-list.png)
 
-找到要接收警報的目標連接並選擇橢圓(`...`)以查看選項的下拉菜單。 下一步，選擇 **[!UICONTROL 訂閱警報]** 修改目標資料流的警報設定。
+找到您要接收警示的目的地連線，並選取省略符號(`...`)，以檢視選項的下拉式功能表。 接下來，選取 **[!UICONTROL 訂閱警示]** 修改目的地資料流的警示設定。
 
-![顯示目標選項的UI影像](../assets/ui/alerts/destination-alerts-subscribe.png)
+![顯示目的地選項的UI影像](../assets/ui/alerts/destination-alerts-subscribe.png)
 
-此時將出現一個彈出窗口，為您提供目標警報清單。 選擇要訂閱的警報或取消選擇要取消訂閱的警報。 完成後，選擇 **[!UICONTROL 保存]**。
+隨即出現快顯視窗，提供目的地警示清單。 選取您要訂閱的警示，或取消選取您要取消訂閱的警示。 完成後，選取 **[!UICONTROL 儲存]**.
 
-![顯示目標警報訂閱頁的UI影像](../assets/ui/alerts/destination-alerts-list.png)
+![顯示目的地警示訂閱頁面的UI影像](../assets/ui/alerts/destination-alerts-list.png)
 
 ## 後續步驟 {#next-steps}
 
-本文檔提供了有關如何訂閱目標資料流的上下文警報的逐步指南。 有關詳細資訊，請參見 [警報UI指南](../../observability/alerts/ui.md)。
+本檔案提供逐步指南，說明如何訂閱目的地資料流的內容感知警報。 如需詳細資訊，請參閱 [警報UI指南](../../observability/alerts/ui.md).

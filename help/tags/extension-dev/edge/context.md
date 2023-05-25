@@ -1,6 +1,6 @@
 ---
-title: 邊擴展模組中的上下文
-description: 瞭解上下文對象及其在邊緣屬性標籤擴展中與庫模組交互時所起的作用。
+title: Edge擴充功能模組中的內容
+description: 瞭解上下文物件，及其在與Edge屬性的標籤擴充功能中的程式庫模組互動時所扮演的角色。
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+> Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 邊緣擴充功能中的所有程式庫模組執行時，系統都會為其提供 `context` 物件。本文介紹 `context` 物件所提供的屬性，並說明這些屬性在程式庫模組中扮演的角色。
 
@@ -23,7 +23,7 @@ ht-degree: 77%
 
 ### [!DNL event]
 
-的 `event` object表示觸發規則的事件，並包含以下值：
+此 `event` object代表觸發規則的事件，並包含以下值：
 
 ```js
 logger.log(context.arc.event);
@@ -42,7 +42,7 @@ logger.log(context.arc.event);
 logger.log(context.arc.request)
 ```
 
-`request` 物件有兩個頂層屬性：`body` 和 `head`。的 `body` 屬性包含體驗資料模型(XDM)資訊，在導航到Adobe Experience Platform調試器時可在調試器中進行檢查 **[!UICONTROL 啟動]** 的 **[!UICONTROL 邊跡]** 頁籤。
+`request` 物件有兩個頂層屬性：`body` 和 `head`。此 `body` 屬性包含Experience Data Model (XDM)資訊，當您導覽至「 」時，可在Adobe Experience Platform Debugger中檢視 **[!UICONTROL Launch]** 並選取 **[!UICONTROL 邊緣追蹤]** 標籤。
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -96,15 +96,15 @@ module.exports = (context) => {
 
 >[!NOTE]
 >
->使用此策略時，請務必始終返回完全擴展規則儲存。 如果只返回值，則它將覆蓋您可能已設定的任何其他屬性。
+>使用此策略時，請務必小心傳回完整的擴充功能規則隱藏專案。 如果您只傳回值，則會覆寫您可能已設定的任何其他屬性。
 
 ## 公用程式
 
-的 `utils` 屬性表示提供特定於標籤運行時的實用程式的對象。
+此 `utils` 屬性代表提供標籤執行階段專用公用程式的物件。
 
 ### [!DNL logger]
 
-的 `logger` 實用程式允許您記錄在使用 [Adobe Experience Platform調試器](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)。
+此 `logger` 公用程式可讓您記錄在使用時於偵錯工作階段顯示的訊息 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ```js
 context.utils.logger.error('Error!');
@@ -131,7 +131,7 @@ context.utils.fetch('http://example.com/movies.json')
 
 ### [!DNL getBuildInfo]
 
-此實用程式返回包含有關當前標籤運行時庫生成的資訊的對象。
+此公用程式會傳回物件，內含目前標籤執行階段程式庫組建的相關資訊。
 
 ```js
 logger.log(context.utils.getBuildInfo().turbineBuildDate);

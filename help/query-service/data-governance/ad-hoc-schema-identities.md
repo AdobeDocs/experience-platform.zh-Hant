@@ -1,6 +1,6 @@
 ---
-title: 在即席資料集中設定主標識
-description: Adobe Experience Platform查詢服務允許您通過SQL ALTER TABLE命令直接為ad hoc模式資料集欄位設定標識或主標識。 該文檔說明如何使用ALTER TABLE命令設定主標識或次標識。
+title: 在臨時資料集中設定主要身分
+description: Adobe Experience Platform查詢服務可讓您直接透過SQL ALTER TABLE命令，為臨機架構資料集欄位設定身分或主要身分。 本檔案說明如何使用ALTER TABLE指令來設定主要身分或次要身分。
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
 source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
 workflow-type: tm+mt
@@ -9,62 +9,62 @@ ht-degree: 1%
 
 ---
 
-# 在即席資料集中設定主標識
+# 在臨時資料集中設定主要身分
 
-Adobe Experience Platform查詢服務允許您使用SQL的約束將資料集列標籤為主標識或次標識 `ALTER TABLE` 的子菜單。 您可以使用此功能確保標籤的欄位符合資料隱私要求。 此命令允許您直接通過SQL添加或刪除主標識表列和次標識表列的約束。
+Adobe Experience Platform查詢服務可讓您使用SQL的限制將資料集欄標示為主要或次要身分 `ALTER TABLE` 命令。 您可以使用此功能來確保標幟的欄位符合資料隱私權要求。 這個命令可讓您直接透過SQL新增或刪除主要和次要識別資料表資料行的限制。
 
 ## 快速入門
 
-將資料集列標籤為主標識或次標識需要瞭解 `ALTER TABLE` SQL命令和對資料隱私要求的良好理解。 在繼續本文檔之前，請查看以下文檔：
+將資料集欄標示為主要或次要身分時，必須瞭解 `ALTER TABLE` SQL命令，並充分瞭解資料隱私權需求。 在繼續本檔案之前，請先檢閱下列檔案：
 
-* [SQL語法指南 `ALTER TABLE` 命令](../sql/syntax.md)。
-* [資料治理概述](../../data-governance/home.md) 的子菜單。
+* [的SQL語法指南 `ALTER TABLE` 命令](../sql/syntax.md).
+* [資料控管概觀](../../data-governance/home.md) 以取得詳細資訊。
 
 ## 新增限制 {#add-constraints}
 
-的 `ALTER TABLE` 命令允許您將資料集列標籤為個人身份，然後使用該標籤作為主要身份，方法是使用SQL更新關聯的元資料。 當通過SQL而不是通過平台UI直接從架構建立資料集時，此功能特別有用。 該命令可用於確保平台中的資料操作符合資料使用策略。
+此 `ALTER TABLE` command可讓您將資料集欄標示為個人的身分，然後使用SQL更新關聯的中繼資料，將該標籤作為主要身分使用。 當資料集是透過SQL建立的，而非直接透過平台UI從結構描述建立時，此功能特別有用。 命令可用來確保您在Platform中的資料作業符合資料使用原則。
 
 **範例**
 
-下面的示例將約束添加到現有 `t1` 的子菜單。 的值 `id` 列現在標籤為主標識 `IDFA` 命名空間。 標識命名空間是聲明欄位所表示的標識資料類型的關鍵字。
+下列範例會將限制新增至現有 `t1` 表格。 的值 `id` 欄現在標籤為「 」下的主要身分 `IDFA` 名稱空間。 身分名稱空間是關鍵字，可宣告欄位代表的身分資料型別。
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
 ```
 
-第二個示例確保 `id` 列標籤為輔助標識。
+第二個範例會確保 `id` 欄會標示為次要身分。
 
 ```sql
 ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
 ```
 
-## 刪除約束 {#drop-constraints}
+## 卸除限制 {#drop-constraints}
 
-也可以使用 `ALTER TABLE` 的子菜單。
+您也可使用從表格欄移除限制 `ALTER TABLE` 命令。
 
 **範例**
 
-以下示例刪除了 `c1` 列標籤為現有 `t1` 的子菜單。
+以下範例取消要求 `c1` 欄中標籤為主要身分 `t1` 表格。
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ```
 
-如下所示，刪除標識約束時使用的語法相同。
+如下所示，移除身分限制時，會使用相同的語法。
 
 ```sql
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-## 顯示標識
+## 顯示身分
 
-使用元資料命令 `show identities` 命令行介面中，以顯示一個表，其中每個屬性都被指定為標識。
+使用中繼資料命令 `show identities` 從命令列介面顯示表格，其中包含指派為身分識別的每個屬性。
 
 ```shell
 > show identities;
 ```
 
-下面顯示了返回的表的示例。
+以下顯示傳回表格的範例。
 
 ```console
  tableName | columnName | datatype | namespace | ifPrimary
@@ -74,8 +74,8 @@ ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 
 ## XDM限制 {#limitations}
 
-以下清單說明了在使用XDM時更新現有資料集中標識的重要注意事項。
+以下清單說明使用XDM時更新現有資料集中身分的重要考量事項。
 
-* 要將列指定為標識， **必須** 還定義要保留為列元資料的命名空間。
-* XDM不支援在命名空間屬性中指定列名。
-* 如果架構使用 `identityMap` XDM欄位，根或頂級 `identityMap` 對象 **必須** 標籤為身份或主身份。
+* 若要將欄指定為身分，您可以 **必須** 也會定義要保留為欄中繼資料的名稱空間。
+* XDM不支援在名稱空間屬性中指定欄名稱。
+* 如果您的結構描述使用 `identityMap` XDM欄位，根或頂層 `identityMap` 物件 **必須** 標籤為身分或主要身分。

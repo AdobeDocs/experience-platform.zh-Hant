@@ -1,7 +1,7 @@
 ---
-keywords: 調查目的地；調查；預測；inmont;web攔截調查；質量
-title: 調查目標概述
-description: 調查平台可檢測調查事件，通過資料元素即時獲取客戶反饋，並與Adobe Experience Platform共用資料。
+keywords: 調查目的地；調查；foresee；inmoment；網路攔截調查；qualtrics
+title: 調查目的地概觀
+description: 調查平台會偵測調查事件、透過資料元素即時擷取客戶意見回饋，並與Adobe Experience Platform共用資料。
 exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
@@ -10,17 +10,17 @@ ht-degree: 1%
 
 ---
 
-# 調查目標概述 {#survey-destinations}
+# 調查目的地概觀 {#survey-destinations}
 
 ## 總覽 {#overview}
 
-調查平台可檢測調查事件，通過資料元素即時獲取客戶反饋，並與Adobe Experience Platform共用資料。
+調查平台會偵測調查事件、透過資料元素即時擷取客戶意見回饋，並與Adobe Experience Platform共用資料。
 
-## 支援的調查目標 {#supported-destinations}
+## 支援的調查目的地 {#supported-destinations}
 
-目前，平台支援下面列出的調查目標。 有關如何連接到這些目標的資訊，請參見各個連結：
+目前Platform支援下列調查目的地。 如需如何連線至這些目的地的詳細資訊，請參閱個別連結：
 
-* [預測擴展](./foresee.md)
-* [InMoment擴展](./inmoment.md)
-* [質量網站反饋擴展](./qualtrics.md)
-* [Web攔截調查 — QuestionPro擴展](./web-intercept-surveys.md)
+* [Foresee擴充功能](./foresee.md)
+* [InMoment擴充功能](./inmoment.md)
+* [Qualtrics網站意見回饋擴充功能](./qualtrics.md)
+* [網路攔截調查 — QuestionPro擴充功能](./web-intercept-surveys.md)

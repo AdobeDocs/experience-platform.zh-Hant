@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；配置；即時客戶配置；故障排除；API
-title: 計算屬性的PQL表達式示例
+keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
+title: 計算屬性的PQL運算式範例
 type: Documentation
-description: 計算屬性是用於將事件級資料聚合到配置檔案級屬性中的函式。 這些函式需要使用有效的配置檔案查詢語言(PQL)表達式。 本指南概述了計算屬性中最常用的一些PQL表達式。
+description: 計算屬性是用來將事件層級資料彙總到設定檔層級屬性的函式。 這些函式需要使用有效的設定檔查詢語言(PQL)運算式。 本指南概述計算屬性最常使用的PQL運算式。
 exl-id: 7c80e2d3-919a-47f9-a59f-833a70f02a8f
 hide: true
 hidefromtoc: true
@@ -13,46 +13,46 @@ ht-degree: 2%
 
 ---
 
-# (Alpha)計算屬性的PQL表達式示例
+# (Alpha)計算屬性的PQL運算式範例
 
 >[!IMPORTANT]
 >
->計算屬性功能當前位於Alpha中，並且不適用於所有用戶。 文件和功能可能會有所變更。
+>計算屬性功能目前為Alpha版，並非所有使用者都可使用。 文件和功能可能會有所變更。
 
-在Adobe Experience Platform，計算屬性是用於將事件級資料聚合到配置檔案級屬性中的函式。 這些函式被自動計算，以便可以跨分段、激活和個性化使用。 每個計算屬性都使用基本資訊定義，如名稱和說明、將保留值的欄位的架構類和路徑，以及一個表達式，其計算值是要儲存在計算屬性中的值。
+在Adobe Experience Platform中，計算屬性是用於彙總事件層級資料至設定檔層級屬性的函式。 這些函式會自動計算，以便用於區段、啟用和個人化。 每個計算屬性都以基本資訊定義，例如名稱和說明、結構描述類別和將保留值的欄位路徑，以及運算式，其計算值是您想要儲存在計算屬性中的值。
 
-在計算屬性中使用的表達式是使用 [!DNL Profile Query Language] (PQL)，一種符合體驗資料模型(XDM)的查詢語言，旨在支援即時客戶配置檔案資料查詢的定義和執行。
+計算屬性中使用的運算式是使用 [!DNL Profile Query Language] (PQL)，與Experience Data Model (XDM)相容的查詢語言，專為支援即時客戶個人檔案資料的查詢定義和執行而設計。
 
-計算屬性當前支援以下函式：sum、count、min、max和boolean。 本指南概述了在為組織定義自己的計算屬性時可以使用的一些最常用PQL表達式。 有關PQL的詳細資訊以及指向附加格式准則和支援查詢示例的連結，請訪問 [PQL概述](../../segmentation/pql/overview.md)。
+計算屬性目前支援下列函式：sum、count、min、max和boolean。 本指南概述一些最常用的PQL運算式，可供您為組織定義自己的計算屬性時使用。 如需PQL的詳細資訊，以及額外格式化指引的連結和支援的查詢範例，請造訪 [PQL概述](../../segmentation/pql/overview.md).
 
-## 流表達式
+## 串流運算式
 
-下表提供了流模式下支援的常用查詢表達式的詳細資訊。
+下表提供串流模式支援的常用查詢運算式的詳細資訊。
 
-| 說明 | PQL表達式 | 輸入類型：<br/>配置檔案或體驗事件(EE)[]) | 結果類型 |
+| 說明 | PQL運算式 | 輸入型別：<br/>設定檔或體驗事件(EE[]) | 結果型別 |
 |---|---|---|---|
-| 過去7天內下載的映像數。 | x事件[（timestamp在現在之前7天內發生）和eventType=&quot;download&quot;和contentType = &quot;image&quot;].count() | 配置檔案和EE[] | 整數 |
-| 過去7天內客戶在體育用品上花費的總和。 | x事件[（時間戳早於7天發生）和eventType=&quot;transaction&quot;和category = &quot;體育用品&quot;].sum(commerce.order.priceTotal) | 配置檔案和EE[] | 整數或雙 |
-| 過去7天中，客戶平均花費在體育用品上。<br/><br/>**注：** 需要建立三個計算屬性。 | **ca1:** x事件[（時間戳早於7天發生）和eventType=&quot;transaction&quot;和category = &quot;體育用品&quot;].sum(commerce.order.priceTotal)<br/><br/>**ca2:** x事件[（時間戳早於7天發生）和eventType=&quot;transaction&quot;和category = &quot;體育用品&quot;].count()<br/><br/>**ca3:** ca1/ca2 | 配置檔案和EE[] | 雙倍 |
-| 客戶最近7天在體育用品上花費了100美元以上嗎？<br/><br/>**注：** 需要建立兩個計算屬性。 | **ca1:** x事件[（時間戳早於7天發生）和eventType=&quot;transaction&quot;和category = &quot;體育用品&quot;].sum(commerce.order.priceTotal)<br/><br/>**ca2:** ca1 > 100 | 配置檔案和EE[] | 布林值 |
-| 客戶在過去7天內是否進行了購買？ | chain(xEvent, timestamp，時間戳， [答：WHAT(eventType = &quot;transaction&quot;)WHEN（&lt; 7天前）]) | 配置檔案和EE[] | 布林值 |
-| 在過去7天中，用戶在體育用品上花費最少。 | x事件[（時間戳早於7天發生）和eventType=&quot;transaction&quot;和category = &quot;體育用品&quot;].min(commerce.order.priceTotal) | 配置檔案和EE[] | 整數或雙 |
-| 在過去7天中，用戶在體育用品上花費的最高。 | x事件[（時間戳早於7天發生）和eventType=&quot;transaction&quot;和category = &quot;體育用品&quot;].max(commerce.order.priceTotal) | 配置檔案和EE[] | 整數或雙 |
-| 最近7天內按產品編製索引的每個下載產品的下載計數。 | x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.count())) | 配置檔案和EE[] | 地圖[字串，整數] |
-| 過去7天內，每個下載產品的下載中按產品編製索引的數字屬性總和。 | x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.sum(commerce.order.priceTotal)) | 配置檔案和EE[] | 地圖[字串，整數] 或映射[字串，雙] |
-| 過去7天內，每個下載的產品下載中按產品編製索引的數字屬性的平均值。<br/><br/>**注：** 需要建立三個計算屬性。 | **ca1:** x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.sum(commerce.order.priceTotal))<br/><br/>**ca2:** x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.count()))<br/><br/>**ca3:** ca2/ca1 | 配置檔案和EE[] | 地圖[字串，雙] |
-| 過去7天內，每個下載產品的下載中按產品編製索引的最小數字屬性。 | x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.min(commerce.order.priceTotal)) | 配置檔案和EE[] | 地圖[字串，整數] 或映射[字串，雙] |
-| 過去7天內，每個下載產品的下載中按產品編製索引的最大數字屬性數。 | x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.max(commerce.order.priceTotal)) | 配置檔案和EE[] | 地圖[字串，整數] 或映射[字串，雙] |
-| 配置檔案上的數字表達式，不引用事件。 | if（person.gedem = &quot;女性&quot;,60,65） | 設定檔 | 整數或雙 |
-| 配置檔案上的布爾表達式，不引用事件。 | person.phirzyYear >= 2000 | 設定檔 | 布林值 |
-| 配置檔案上的字串表達式，不引用事件。 | if(homeAddress.countryCode) [&quot;US&quot;、&quot;MX&quot;、&quot;CA&quot;], &quot;NA&quot;, &quot;ROW&quot;) | 設定檔 | 字串 |
+| 過去7天內的影像下載次數。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;以及contentType = &quot;image&quot;].count() | 設定檔與EE[] | 整數 |
+| 客戶過去7天在體育用品上的花費總和。 | xEvent[（時間戳記發生於現在之前&lt; 7天）及eventType=&quot;transaction&quot;與category = &quot;sporting goods&quot;].sum(commerce.order.priceTotal) | 設定檔與EE[] | 整數或雙精度 |
+| 過去7天客戶在體育用品上的平均支出。<br/><br/>**注意：** 需要建立三個計算屬性。 | **ca1：** xEvent[（時間戳記發生於現在之前&lt; 7天）及eventType=&quot;transaction&quot;與category = &quot;sporting goods&quot;].sum(commerce.order.priceTotal)<br/><br/>**ca2：** xEvent[（時間戳記發生於現在之前&lt; 7天）及eventType=&quot;transaction&quot;與category = &quot;sporting goods&quot;].count()<br/><br/>**ca3：** ca1 / ca2 | 設定檔與EE[] | 雙倍 |
+| 客戶過去7天在體育用品上的花費是否超過$100？<br/><br/>**注意：** 需要建立兩個計算屬性。 | **ca1：** xEvent[（時間戳記發生於現在之前&lt; 7天）及eventType=&quot;transaction&quot;與category = &quot;sporting goods&quot;].sum(commerce.order.priceTotal)<br/><br/>**ca2：** ca1 > 100 | 設定檔與EE[] | 布林值 |
+| 客戶在過去7天內有購買過嗎？ | chain(xEvent， timestamp， [答：WHAT(eventType = &quot;transaction&quot;) WHEN（&lt; 7天前）]) | 設定檔與EE[] | 布林值 |
+| 過去7天使用者在體育用品上的花費最低。 | xEvent[（時間戳記發生於現在之前&lt; 7天）及eventType=&quot;transaction&quot;與category = &quot;sporting goods&quot;].min(commerce.order.priceTotal) | 設定檔與EE[] | 整數或雙精度 |
+| 過去7天使用者在體育用品上的最高支出。 | xEvent[（時間戳記發生於現在之前&lt; 7天）及eventType=&quot;transaction&quot;與category = &quot;sporting goods&quot;].max(commerce.order.priceTotal) | 設定檔與EE[] | 整數或雙精度 |
+| 過去7天內每個已下載產品的下載計數（依產品索引）。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.count())) | 設定檔與EE[] | 地圖[字串，整數] |
+| 過去7天內，每個已下載產品之下載次數的numeric屬性總和，依產品索引。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.sum(commerce.order.priceTotal))) | 設定檔與EE[] | 地圖[字串，整數] 或地圖[字串，雙精度] |
+| 過去7天內，每個已下載產品下載的數值屬性平均值（依產品索引）。<br/><br/>**注意：** 需要建立三個計算屬性。 | **ca1：** xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.sum(commerce.order.priceTotal)))<br/><br/>**ca2：** xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.count()))<br/><br/>**ca3：** ca2 / ca1 | 設定檔與EE[] | 地圖[字串，雙精度] |
+| 過去7天內，每個已下載產品之下載的數值屬性下限，依產品索引。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.min(commerce.order.priceTotal))) | 設定檔與EE[] | 地圖[字串，整數] 或地圖[字串，雙精度] |
+| 過去7天內，每個已下載產品下載的數值屬性上限，依產品索引。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.max(commerce.order.priceTotal))) | 設定檔與EE[] | 地圖[字串，整數] 或地圖[字串，雙精度] |
+| 設定檔上的數值運算式，未參考事件。 | if(person.gender = &quot;female&quot;， 60， 65) | 設定檔 | 整數或雙精度 |
+| 設定檔上的布林運算式，不會參考事件。 | person.birthYear >= 2000 | 設定檔 | 布林值 |
+| 設定檔上的字串運算式，未參考事件。 | if(homeAddress.countryCode in [&quot;US&quot;，&quot;MX&quot;，&quot;CA&quot;]， &quot;NA&quot;， &quot;ROW&quot;) | 設定檔 | 字串 |
 
-## 批處理表達式
+## 批次運算式
 
-下表提供了僅在批處理模式下可用的查詢表達式的詳細資訊，這意味著它們當前在流式處理中不可用。
+下表提供僅可用於批次模式的查詢運算式的詳細資訊，這表示它們目前無法在串流中使用。
 
-| 說明 | PQL表達式 | 輸入類型：<br/>配置檔案或體驗事件(EE)[]) | 結果類型 |
+| 說明 | PQL運算式 | 輸入型別：<br/>設定檔或體驗事件(EE[]) | 結果型別 |
 |---|---|---|---|
-| 過去7天內產品下載中的數字表達式總和是否超過100（按產品編製索引）。 | x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.sum(commerce.order.priceTotal)> 100) | 配置檔案和EE[] | 地圖[字串，布爾] |
-| 過去7天內產品下載中數字表達式的平均值是否超過100（按產品編製索引）。 | x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, G.average(commerce.order.priceTotal)> 100) | 配置檔案和EE[] | 地圖[字串，布爾] |
-| 在過去7天內累計每個下載產品的各種指標，按產品編製索引。 | x事件[（時間戳早於7天發生）和eventType=&quot;download&quot;].groupBy(product)。map((K, G)=> mapEntry(K, {&quot;count&quot;):G.count(), &quot;sum&quot;:G.sum(commerce.order.priceTotal)) | 配置檔案和EE[] | 地圖[字串，對象] 其中對象是自定義XDM類型 |
+| 過去7天內產品下載的數值運算式總和是否超過100 （依產品索引）。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.sum(commerce.order.priceTotal) > 100)) | 設定檔與EE[] | 地圖[字串，布林值] |
+| 過去7天內產品下載的平均數值運算式是否超過100 （依產品索引）。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， G.average(commerce.order.priceTotal) > 100)) | 設定檔與EE[] | 地圖[字串，布林值] |
+| 過去7天內，每個已下載產品的各種量度累積值，並依產品編制索引。 | xEvent[（時間戳記發生在現在之前7天）和eventType=&quot;download&quot;].groupBy(product)。map((K， G) => mapEntry(K， {&quot;count&quot;： G.count()， &quot;sum&quot;： G.sum(commerce.order.priceTotal)}) | 設定檔與EE[] | 地圖[字串，物件] 其中物件是自訂XDM型別 |

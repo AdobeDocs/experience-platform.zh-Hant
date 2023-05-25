@@ -1,6 +1,6 @@
 ---
-title: 定義Real-time Customer Data PlatformB2B版中兩個架構之間的關係
-description: 瞭解如何在Adobe Real-time Customer Data PlatformB2B版中定義兩個架構之間的多對一關係。
+title: 在Real-time Customer Data Platform B2B版本中定義兩個結構描述之間的關係
+description: 瞭解如何在Adobe Real-time Customer Data Platform B2B Edition中定義兩個結構描述之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
@@ -9,77 +9,77 @@ ht-degree: 14%
 
 ---
 
-# 在Real-time Customer Data PlatformB2B版中定義兩個架構之間的多對一關係 {#relationship-b2b}
+# 在Real-time Customer Data Platform B2B版本中定義兩個結構描述之間的多對一關係 {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="參考方案"
 >abstract="選取要建立關係的方案。根據方案的類別，方案還可能和 B2B 內容中的其他實體存在現有關係。請查看文件以了解 B2B 方案類別彼此間的關係。"
 
-Adobe Real-time Customer Data PlatformB2B版提供了幾個體驗資料模型(XDM)類，這些類捕獲基本B2B資料實體，包括 [帳戶](../classes/b2b/business-account.md)。 [機會](../classes/b2b/business-opportunity.md)。 [活動](../classes/b2b/business-campaign.md)。 通過基於這些類構建架構並啟用它們以用於 [即時客戶配置檔案](../../profile/home.md)，可以將來自不同源的資料合併到稱為聯合架構的統一表示中。
+Adobe Real-time Customer Data Platform B2B Edition提供數種Experience Data Model (XDM)類別，可擷取基本B2B資料實體，包括 [帳戶](../classes/b2b/business-account.md)， [機會](../classes/b2b/business-opportunity.md)， [行銷活動](../classes/b2b/business-campaign.md)、等等。 根據這些類別建立結構描述，並啟用它們以用於中 [即時客戶個人檔案](../../profile/home.md)，您可以將不同來源的資料合併成稱為聯合結構描述的統一表示法。
 
-但是，聯合架構只能包含由共用同一類的架構捕獲的欄位。 這是架構關係的來源。 通過在B2B架構中實現關係，您可以描述這些業務實體如何相互關聯，並可以在下游分段使用案例中包括來自多個類的屬性。
+不過，聯合結構描述只能包含共用相同類別的結構描述所擷取的欄位。 這就是結構描述關係的用處。 透過在B2B結構描述中實作關係，您可以說明這些業務實體如何彼此關聯，並可在下游細分使用案例中包含來自多個類別的屬性。
 
-下圖提供了一個示例，說明在基本實現中不同的B2B類如何彼此關聯：
+下圖提供不同B2B類別在基本實作中如何相互關聯的範例：
 
-![B2B類關係](../images/tutorials/relationship-b2b/classes.png)
+![B2B類別關係](../images/tutorials/relationship-b2b/classes.png)
 
-本教程介紹了在Real-Time CDPB2B版中定義兩個架構之間多對一關係的步驟。
+本教學課程涵蓋在Real-Time CDP B2B Edition中定義兩個結構描述之間多對一關係的步驟。
 
 >[!NOTE]
 >
->如果您沒有使用Real-time Customer Data PlatformB2B版或想建立一對一關係，請參閱上的指南 [建立一對一關係](./relationship-ui.md) 的雙曲餘切值。
+>如果您沒有使用Real-time Customer Data Platform B2B Edition或想建立一對一的關係，請參閱以下指南中的內容： [建立一對一關係](./relationship-ui.md) 而非。
 >
->本教程重點介紹如何在平台UI中手動建立B2B架構之間的關係。 如果從B2B源連接引入資料，則可以使用自動生成實用程式來建立所需的架構、標識和關係。 有關B2B命名空間和架構的詳細資訊，請參閱源文檔 [使用自動生成實用程式](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md)。
+>本教學課程著重於如何在Platform UI中手動建立B2B結構描述之間的關係。 如果您從B2B來源連線引進資料，您可以使用自動產生公用程式來建立所需的結構描述、身分和關係。 如需有關的詳細資訊，請參閱B2B名稱空間和結構描述的來原始檔 [使用自動產生公用程式](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ## 快速入門
 
-本教程要求您對 [!DNL XDM System] 和架構編輯器 [!DNL Experience Platform] UI。 在開始本教程之前，請查看以下文檔：
+本教學課程需要您實際瞭解 [!DNL XDM System] 以及中的結構編輯器 [!DNL Experience Platform] UI。 在開始本教學課程之前，請檢閱下列檔案：
 
-* [XDM系統在Experience Platform](../home.md):XDM及其在XDM中的應用 [!DNL Experience Platform]。
-* [架構組合的基礎](../schema/composition.md):介紹了XDM模式的構件。
-* [使用 [!DNL Schema Editor]](create-schema-ui.md):本教程介紹如何在UI中生成和編輯架構的基本知識。
+* [Experience Platform中的XDM系統](../home.md)：XDM及其在中的實作概觀 [!DNL Experience Platform].
+* [結構描述組合基本概念](../schema/composition.md)：XDM結構描述建置區塊簡介。
+* [使用建立方案 [!DNL Schema Editor]](create-schema-ui.md)：此教學課程涵蓋如何在UI中建立及編輯結構描述的基礎知識。
 
-## 定義源和引用方案
+## 定義來源和參考結構描述
 
-預期您已經建立了將在關係中定義的兩個架構。 為了進行演示，本教程將建立業務機會（在「 」中定義）之間的關係[!DNL Opportunities]&quot;架構及其關聯的業務帳戶(在&quot;[!DNL Accounts]&quot;架構)。
+您應已建立將在關係中定義的兩個結構描述。 為了示範，本教學課程會在商業機會之間建立關係(定義於「[!DNL Opportunities]「結構描述)及其相關聯的商業帳戶(定義於「[!DNL Accounts]&quot;結構描述)。
 
-模式關係由 **源架構** 引用的 **參考模式**。 在後續步驟中， &quot;[!DNL Opportunities]&quot;用作源架構，而&quot;[!DNL Accounts]&quot;用作引用架構。
+結構描述關係由內的專用欄位表示。 **來源結構描述** 會參照的主要身分欄位 **參考結構描述**. 在接下來的步驟中， 」[!DNL Opportunities]&quot;作為來源結構描述，而&quot;[!DNL Accounts]「 」可作為參考結構描述。
 
-### 理解B2B關係中的恆等式
+### 瞭解B2B關係中的身分
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="參考身分識別命名空間"
 >abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。請查看文件以了解有關 B2B 關係中身分識別的詳細資訊。"
 
-要建立關係，引用架構必須具有已定義的主標識。 為B2B實體設定主標識時，請記住，如果您跨不同系統或位置收集基於字串的實體ID，則它們可能會重疊，這可能導致平台中的資料衝突。
+為了建立關係，參考結構描述必須具有定義的主要身分。 為B2B實體設定主要身分時，請記住，如果您跨不同系統或位置收集字串型實體ID，則這些ID可能會重疊，這可能會導致Platform中的資料衝突。
 
-為此，所有標準B2B類都包含符合 [[!UICONTROL B2B源] 資料類型](../data-types/b2b-source.md)。 此資料類型提供B2B實體的字串標識符的欄位以及有關標識符源的其他上下文資訊。 其中一個領域， `sourceKey`，連接資料類型中其他欄位的值，以生成實體的唯一標識符。 此欄位應始終用作B2B實體架構的主標識。
+為了解決這個問題，所有標準B2B類別都包含符合 [[!UICONTROL B2B來源] 資料型別](../data-types/b2b-source.md). 此資料型別提供B2B實體的字串識別碼欄位，以及有關識別碼來源的其他內容資訊。 其中一個欄位， `sourceKey`，串連資料型別中其他欄位的值，以產生實體的完全唯一識別碼。 此欄位一律用作B2B實體結構描述的主要身分。
 
 ![sourceKey欄位](../images/tutorials/relationship-b2b/sourcekey.png)
 
 >[!NOTE]
 >
->當 [將XDM欄位設定為標識](../ui/fields/identity.md)，必須提供標識名稱空間以在下定義標識。 這可以是Adobe提供的標準命名空間，也可以是組織定義的自定義命名空間。 在實踐中，命名空間只是一個上下文字串，可以設定為任何您喜歡的值，前提是它對於組織對標識類型的分類有意義。 請參閱 [標識命名空間](../../identity-service/namespaces.md) 的子菜單。
+>時間 [將XDM欄位設定為身分](../ui/fields/identity.md)，您必須提供身分名稱空間，才能在下定義身分。 這可以是Adobe提供的標準名稱空間，也可以是貴組織定義的自訂名稱空間。 實際上，名稱空間只是內容字串，您可以設定為您喜歡的任何值，前提是這對於您的組織分類身分型別有意義。 請參閱以下文章的概觀： [身分名稱空間](../../identity-service/namespaces.md) 以取得詳細資訊。
 
-為便於參考，以下各節介紹在定義關係之前在本教程中使用的每個架構的結構。 請注意在架構結構中定義了主要標識的位置以及它們使用的自定義命名空間。
+為方便參考，以下幾節將說明在定義關係之前，本教學課程中使用的每個結構描述的結構。 記下在結構描述結構中定義主要身分的位置，以及這些身分使用的自訂名稱空間。
 
-### [!DNL Opportunities] 架構
+### [!DNL Opportunities] 綱要
 
-源架構「」[!DNL Opportunities]」基於 [!UICONTROL XDM業務機會] 類。 類提供的一個欄位， `opportunityKey`，用作架構的標識符。 具體而言， `sourceKey` 欄位 `opportunityKey` 對象在名為的自定義命名空間下設定為架構的主標識 [!DNL B2B Opportunity]。
+來源結構描述&quot;[!DNL Opportunities]&quot;是根據 [!UICONTROL XDM商業機會] 類別。 類別提供的其中一個欄位， `opportunityKey`，當作結構描述的識別碼。 具體而言， `sourceKey` 欄位位於 `opportunityKey` 物件在名為的自訂名稱空間下設定為結構描述的主要身分 [!DNL B2B Opportunity].
 
-如下所示 **[!UICONTROL 架構屬性]**，此架構已啟用，供使用 [!DNL Real-Time Customer Profile]。
+如下方所示 **[!UICONTROL 結構描述屬性]**，此結構描述已啟用以用於中 [!DNL Real-Time Customer Profile].
 
-![機會架構](../images/tutorials/relationship-b2b/opportunities.png)
+![機會結構描述](../images/tutorials/relationship-b2b/opportunities.png)
 
-### [!DNL Accounts] 架構
+### [!DNL Accounts] 綱要
 
-引用架構「[!DNL Accounts]」基於 [!UICONTROL XDM帳戶] 類。 根級別 `accountKey` 欄位包含 `sourceKey` 在稱為 [!DNL B2B Account]。 此架構也已啟用，以便在配置檔案中使用。
+參考結構描述»[!DNL Accounts]&quot;是根據 [!UICONTROL XDM帳戶] 類別。 根層級 `accountKey` 欄位包含 `sourceKey` 會在名為的自訂名稱空間下當作其主要身分識別 [!DNL B2B Account]. 此結構描述也已啟用以供設定檔使用。
 
-![帳戶架構](../images/tutorials/relationship-b2b/accounts.png)
+![帳戶結構描述](../images/tutorials/relationship-b2b/accounts.png)
 
-## 為源方案定義關係欄位 {#relationship-field}
+## 定義來源結構描述的關係欄位 {#relationship-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
@@ -91,36 +91,36 @@ Adobe Real-time Customer Data PlatformB2B版提供了幾個體驗資料模型(XD
 >title="參考方案中的關係名稱"
 >abstract="說明從參考方案到目前方案的關係的標籤 (例如，「相關機會」)。此標籤會用於設定檔和分段中，以從相關 B2B 實體將內容提供給資料。請查看文件以了解有關建置 B2B 方案關係的詳細資訊。"
 
-為了定義兩個方案之間的關係，源方案必須具有指示引用方案的主標識的專用欄位。 標準B2B類包括用於常見相關業務實體的專用源關鍵字欄位。 例如， [!UICONTROL XDM業務機會] 類包含相關帳戶的源關鍵字欄位(`accountKey`)和相關活動(`campaignKey`)。 但是，您也可以添加其他 [!UICONTROL B2B源] 使用自定義欄位組（如果需要的元件多於預設元件）將欄位輸入架構。
+為了定義兩個結構描述之間的關係，來源結構描述必須具有專用欄位，以指示參考結構描述的主要身分。 標準B2B類別包含一般相關商業實體的專用來源索引鍵欄位。 例如， [!UICONTROL XDM商業機會] 類別包含相關帳戶(`accountKey`)和相關的行銷活動(`campaignKey`)。 不過，您也可以新增其他 [!UICONTROL B2B來源] 如果需要的元件超過預設元件，請使用自訂欄位群組將欄位新增至結構描述。
 
 >[!NOTE]
 >
->當前，只能從源架構到引用架構定義多對一和一對一關係。 對於一對多關係，必須在表示「many」的架構中定義關係欄位。
+>目前，從來源結構描述到參考結構描述只能定義多對一和一對一關係。 對於一對多關係，您必須在代表「許多」的結構描述中定義關係欄位。
 
-要設定關係欄位，請選擇箭頭表徵圖(![箭頭表徵圖](../images/tutorials/relationship-b2b/arrow.png))。 對於 [!DNL Opportunities] 架構，這是 `accountKey.sourceKey` 欄位，因為目標是與帳戶建立多對一關係。
+若要設定關係欄位，請選取箭頭圖示(![箭頭圖示](../images/tutorials/relationship-b2b/arrow.png))位於畫布中相關欄位旁。 若為 [!DNL Opportunities] 結構描述，這是 `accountKey.sourceKey` 欄位，因為目標是與帳戶建立多對一關係。
 
 ![關係按鈕](../images/tutorials/relationship-b2b/relationship-button.png)
 
-此時將顯示一個對話框，用於指定關係的詳細資訊。 關係類型自動設定為 **[!UICONTROL 多對一]**。
+會出現一個對話方塊，可讓您指定有關關係的詳細資訊。 關係型別會自動設定為 **[!UICONTROL 多對一]**.
 
-![關係對話框](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![關係對話方塊](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-下 **[!UICONTROL 引用架構]**，使用搜索欄查找引用架構的名稱。 突出顯示引用架構的名稱時， **[!UICONTROL 引用標識命名空間]** 欄位將自動更新到架構的主標識的命名空間。
+下 **[!UICONTROL 參考結構描述]**，使用搜尋列來尋找參考結構描述的名稱。 反白參考結構描述名稱時， **[!UICONTROL 參考身分名稱空間]** 欄位會自動更新為結構描述主要身分的名稱空間。
 
-![引用架構](../images/tutorials/relationship-b2b/reference-schema.png)
+![參考結構描述](../images/tutorials/relationship-b2b/reference-schema.png)
 
-下 **[!UICONTROL 當前架構中的關係名稱]** 和 **[!UICONTROL 引用架構中的關係名稱]**，分別在源架構和引用架構的上下文中為關係提供友好名稱。 完成後，選擇 **[!UICONTROL 保存]** 應用更改並保存架構。
+下 **[!UICONTROL 來自目前結構描述的關係名稱]** 和 **[!UICONTROL 引用結構描述中的關係名稱]**，分別為來源和參考結構描述中的關係提供易記名稱。 完成後，選取 **[!UICONTROL 儲存]** 以套用變更並儲存結構。
 
 ![關係名稱](../images/tutorials/relationship-b2b/relationship-name.png)
 
-畫布重新出現，關係欄位現在用您先前提供的友好名稱標籤。 關係名稱也列在左滑軌下以便參考。
+畫布會重新出現，而關係欄位現在會以您先前提供的好記名稱標籤。 此關係名稱也會列在左側邊欄下方，以方便參考。
 
-![已應用關係](../images/tutorials/relationship-b2b/relationship-applied.png)
+![已套用關係](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-如果查看引用架構的結構，則關係標籤將出現在架構的主標識欄位旁邊和左側欄中。
+如果您檢視參考結構描述的結構，關係標籤會出現在結構描述的主要身分欄位旁和左側邊欄中。
 
-![目標架構關係標籤](../images/tutorials/relationship-b2b/destination-relationship.png)
+![目的地結構描述關係標籤](../images/tutorials/relationship-b2b/destination-relationship.png)
 
 ## 後續步驟
 
-通過本教程，您已使用 [!DNL Schema Editor]。 使用基於這些架構的資料集攝取資料並在配置檔案資料儲存中激活資料後，您就可以使用兩個架構中的屬性 [多類分割用例](../../rtcdp/segmentation/b2b.md)。
+依照本教學課程所述，您已使用下列範例成功建立兩個結構描述之間的多對一關係： [!DNL Schema Editor]. 使用以這些結構為基礎的資料集擷取資料，且該資料已在設定檔資料存放區中啟動後，您就可以將這兩個結構中的屬性用於 [多類別細分使用案例](../../rtcdp/segmentation/b2b.md).

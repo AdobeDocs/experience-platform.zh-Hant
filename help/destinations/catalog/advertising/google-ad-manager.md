@@ -1,7 +1,7 @@
 ---
-keywords: google廣告管理器；google廣告；按兩下廣告；按兩下廣告；Google廣告管理器；Google廣告管理器；DFP
-title: Google廣告經理連接
-description: Google廣告管理器以前叫DoubleClick for Publishers或DoubleClick AdX，是Google的一個廣告服務平台，它使出版商能夠通過視頻和移動應用管理其網站上廣告的顯示。
+keywords: google廣告管理員；google廣告；doubleclick；DoubleClick AdX；DoubleClick；Google廣告管理員；Google廣告管理員；DFP
+title: Google Ad Manager連線
+description: Google Ad Manager （舊稱為DoubleClick for Publishers或DoubleClick AdX）是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式管理其網站上廣告的顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
 workflow-type: tm+mt
@@ -10,111 +10,111 @@ ht-degree: 5%
 
 ---
 
-# [!DNL Google Ad Manager] 連接
+# [!DNL Google Ad Manager] 連線
 
 ## 總覽 {#overview}
 
-[!DNL Google Ad Manager]，以前稱為 [!DNL DoubleClick for Publishers] (DFP)或 [!DNL DoubleClick AdX]，是來自 [!DNL Google] 這讓出版商能夠通過視頻和移動應用管理其網站上的廣告顯示。
+[!DNL Google Ad Manager]，先前稱為 [!DNL DoubleClick for Publishers] (DFP)或 [!DNL DoubleClick AdX]，是來自的廣告服務平台 [!DNL Google] 這可讓發佈商透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 
-## 目標說明 {#specifics}
+## 目的地詳情 {#specifics}
 
-請注意以下特定於 [!DNL Google Ad Manager] 目標：
+請注意以下專屬於的詳細資訊 [!DNL Google Ad Manager] 目的地：
 
-* 在中以寫程式方式建立激活的受眾 [!DNL Google] 平台。
-* [!DNL Platform] 當前不包括用於驗證成功激活的度量度量。 請參考Google的受眾數量，以驗證整合併瞭解受眾的目標規模。
-* 將段映射到 [!DNL Google Ad Manager] 目標，段名稱將立即顯示在 [!DNL Google Ad Manager] 用戶介面。
-* 部分人口需要24至48小時才能出現 [!DNL Google Ad Manager]。 此外，網段的受眾大小必須至少為50個配置檔案才能顯示在 [!DNL Google Ad Manager]。 不會將受眾小於50個配置檔案的段填充到 [!DNL Google Ad Manager]。
+* 啟用的對象是以程式設計方式建立於 [!DNL Google] 平台。
+* [!DNL Platform] 目前不包含用於驗證成功啟用的測量量度。 請參考Google中的對象計數，以驗證整合併瞭解對象鎖定目標大小。
+* 將區段對應至之後 [!DNL Google Ad Manager] 目的地，區段名稱會隨即出現在 [!DNL Google Ad Manager] 使用者介面。
+* 區段母體需要24到48小時才能顯示於 [!DNL Google Ad Manager]. 此外，區段必須有至少50個設定檔的對象大小，才能顯示在 [!DNL Google Ad Manager]. 對象規模小於50個設定檔的區段不會填入 [!DNL Google Ad Manager].
 
-## 支援的身份 {#supported-identities}
+## 支援的身分 {#supported-identities}
 
-[!DNL Google Ad Manager] 支援激活下表中描述的身份。
+[!DNL Google Ad Manager] 支援下表所述的身分啟用。
 
-| 目標標識 | 說明 | 考量事項 |
+| 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | 當源標識為GAID命名空間時，選擇此目標標識。 |
-| IDFA | [!DNL Apple ID for Advertisers] | 當源標識為IDFA命名空間時，選擇此目標標識。 |
-| UUIDAAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)，也稱為 [!DNL Device ID]。 一個38位的數字設備ID,Audience Manager將其與其交互的每個設備相關聯。 | Google用途 [UUIDAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=zh-Hant) 目標加州用戶和所有其他用戶的GoogleCookie ID。 |
-| [!DNL Google] Cookie ID | [!DNL Google] Cookie ID | [!DNL Google] 使用此ID將目標用戶鎖定在加利福尼亞以外的地區。 |
-| 里達 | 廣告的Roku ID。 此ID唯一標識Roku設備。 |  |
-| 女僕 | Microsoft廣告ID。 此ID唯一標識運行Windows 10的設備。 |  |
-| Amazon消防電視ID | 此ID唯一標識Amazon消防電視。 |  |
+| GAID | [!DNL Google Advertising ID] | 當您的來源身分是GAID名稱空間時，選取此目標身分。 |
+| IDFA | [!DNL Apple ID for Advertisers] | 當您的來源身分識別是IDFA名稱空間時，請選取此目標身分。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)，也稱為 [!DNL Device ID]. 38位數的裝置ID，Audience Manager會與每個與其互動的裝置建立關聯。 | Google使用 [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=zh-Hant) 目標鎖定加州的使用者，以及所有其他使用者的Google Cookie ID。 |
+| [!DNL Google] Cookie ID | [!DNL Google] Cookie ID | [!DNL Google] 使用此ID來鎖定加州以外的使用者。 |
+| RIDA | 適用於廣告的Roku ID。 此ID可唯一識別Roku裝置。 |  |
+| MAID | Microsoft Advertising ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
+| Amazon Fire TV ID | 此ID可唯一識別Amazon Fire電視。 |  |
 
 {style="table-layout:auto"}
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出型別和頻率 {#export-type-frequency}
 
-有關目標導出類型和頻率的資訊，請參閱下表。
+請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在將段（受眾）的所有成員導出到Google目標。 |
-| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在將區段（受眾）的所有成員匯出至Google目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## 先決條件 {#prerequisites}
 
-如果您希望建立第一個目標 [!DNL Google Ad Manager] 還沒啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 在過去的Experience CloudID服務(包括Audience Manager或其他應用程式)中，請聯繫Adobe咨詢或客戶服務以啟用ID同步。 如果你之前 [!DNL Google] Audience Manager中的整合，您設定的ID同步將傳遞到平台。
+如果您想要使用建立您的第一個目的地 [!DNL Google Ad Manager] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Audience Manager或其他應用程式)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL Google] Audience Manager中的整合，您所設定的ID同步會結轉到Platform。
 
 ### 允許清單 {#allow-listing}
 
-在設定第一個允許清單之前，必須列出 [!DNL Google Ad Manager] 目標。 在建立目標之前，請確保完成下面所述的允許清單過程。
+必須先允許清單，才能設定您的第一個 [!DNL Google Ad Manager] Platform中的目的地。 在建立目的地之前，請務必完成下述允許清單程式。
 
-1. 按照中介紹的步驟操作 [Google廣告經理文檔](https://support.google.com/admanager/answer/3289669?hl=en) 將Adobe添加為連結的資料管理平台(DMP)。
-2. 在 [!DNL Google Ad Manager] 介面，轉到 **[!UICONTROL 管理]** > **[!UICONTROL 全局設定]** > **[!UICONTROL 網路設定]**，並啟用 **[!UICONTROL API訪問]** 按鈕。
+1. 請依照以下說明步驟操作： [Google Ad Manager檔案](https://support.google.com/admanager/answer/3289669?hl=en) 將Adobe新增為連結的資料管理平台(DMP)。
+2. 在 [!DNL Google Ad Manager] 介面，前往 **[!UICONTROL 管理員]** > **[!UICONTROL 全域設定]** > **[!UICONTROL 網路設定]**，並啟用 **[!UICONTROL API存取]** 滑桿。
 
-## 連接到目標 {#connect}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 > 
->要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
+若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 連接參數 {#parameters}
+### 連線引數 {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
 >title="將區段 ID 附加到區段名稱"
 >abstract="選取此選項可讓 Google Ad Manager 中的區段名稱包含來自 Experience Platform 的區段 ID，如下所示：`Segment Name (Segment ID)`"
 
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
+當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊：
 
-* **[!UICONTROL 名稱]**:填寫此目標的首選名稱。
-* **[!UICONTROL 說明]**:可選。 例如，您可以提及您為此目標使用的市場活動。
-* **[!UICONTROL 帳戶ID]**:輸入 [!DNL Audience Link ID] 從 [!DNL Google] 帳戶。 這是與您的 [!DNL Google Ad Manager] 網路 [!DNL Network code])。 你可以在 **[!UICONTROL 「管理」>「全局設定」]** 的 [!DNL Google Ad Manager] 。
-* **[!UICONTROL 帳戶類型]**:根據您與Google的帳戶選擇選項：
-   * 使用 `DFP by Google` 為 [!DNL DoubleClick] 對於發佈者
-   * 使用 `AdX buyer` 為 [!DNL Google AdX]
-* **[!UICONTROL 將段ID追加到段名稱]**:選擇此選項可使Google廣告管理器中的段名稱包括Experience Platform中的段ID，如下所示： `Segment Name (Segment ID)`。
+* **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
+* **[!UICONTROL 說明]**：選擇性。 例如，您可以提及要將此目的地用於哪個行銷活動。
+* **[!UICONTROL 帳戶ID]**：輸入您的 [!DNL Audience Link ID] 從您的 [!DNL Google] 帳戶。 這是與您的檔案相關聯的特定識別碼， [!DNL Google Ad Manager] 網路(不是您的 [!DNL Network code])。 您可以在下方找到此專案 **[!UICONTROL 「管理員>全域設定」]** 在 [!DNL Google Ad Manager] 介面。
+* **[!UICONTROL 帳戶型別]**：根據您使用Google的帳戶，選取選項：
+   * 使用 `DFP by Google` 的 [!DNL DoubleClick] 適用於發佈商的
+   * 使用 `AdX buyer` 的 [!DNL Google AdX]
+* **[!UICONTROL 將區段ID附加至區段名稱]**：選取此選項，讓Google Ad Manager中的區段名稱包含Experience Platform中的區段ID，如下所示： `Segment Name (Segment ID)`.
 
 >[!NOTE]
 >
->設定 [!DNL Google Ad Manager] 目標，請與 [!DNL Google Account Manager] 或Adobe代表，瞭解您的帳戶類型。
+>設定時 [!DNL Google Ad Manager] 目的地，請與您的 [!DNL Google Account Manager] 或Adobe代表，以瞭解您的帳戶型別。
 
-### 啟用警報 {#enable-alerts}
+### 啟用警示 {#enable-alerts}
 
-您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
 
-完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 將段激活到此目標 {#activate}
+## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 > 
->要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-請參閱 [將受眾資料激活到流段導出目標](../../ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
+另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
-## 導出的資料 {#exported-data}
+## 匯出的資料 {#exported-data}
 
-驗證資料是否已成功導出到 [!DNL Google Ad Manager] 目標，檢查 [!DNL Google Ad Manager] 帳戶。 如果激活成功，則會在您的帳戶中填充受眾。
+驗證資料是否已成功匯出至 [!DNL Google Ad Manager] 目的地，檢查您的 [!DNL Google Ad Manager] 帳戶。 如果成功啟用，系統會將對象填入您的帳戶。
 
 ## 疑難排解 {#troubleshooting}
 
-如果您在使用此目標時遇到任何錯誤，並且需要訪問Adobe或Google，請保留以下ID。
+如果您在使用此目的地時遇到任何錯誤，且需要聯絡Adobe或Google，請隨時保留以下ID。
 
-這些是Adobe的Google帳戶ID:
+這些是Adobe的Google帳戶ID：
 
-* **[!UICONTROL 帳戶ID]**:87933855
-* **[!UICONTROL 客戶ID]**:89690775
+* **[!UICONTROL 帳戶ID]**：87933855
+* **[!UICONTROL 客戶ID]**：89690775

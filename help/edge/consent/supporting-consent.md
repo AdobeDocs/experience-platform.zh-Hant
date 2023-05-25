@@ -1,7 +1,7 @@
 ---
-title: 使用Adobe Experience PlatformWeb SDK支援客戶同意首選項
-description: 瞭解如何支援使用Adobe Experience PlatformWeb SDK的同意首選項。
-keywords: 同意；預設同意；預設同意；setConnence；配置檔案隱私欄位組；體驗事件隱私欄位組；隱私欄位組；
+title: 使用Adobe Experience Platform Web SDK支援客戶同意偏好設定
+description: 瞭解如何使用Adobe Experience Platform Web SDK支援同意偏好設定。
+keywords: 同意；defaultConsent；預設同意；setConsent；設定檔隱私權欄位群組；體驗事件隱私權欄位群組；隱私權欄位群組；
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,20 +10,20 @@ ht-degree: 0%
 
 ---
 
-# 支援客戶同意首選項
+# 支援客戶同意偏好設定
 
-為了尊重用戶的隱私，您可能希望在允許SDK出於某些目的使用用戶特定的資料之前徵求用戶的同意。 目前，SDK僅允許用戶選擇加入或退出所有目的，但在未來Adobe中希望能夠對特定目的提供更精細的控制。
+為了尊重使用者的隱私權，在允許SDK針對特定目的使用使用者特定資料之前，您可能需要要求使用者同意。 目前SDK僅允許使用者選擇加入或退出所有用途，但未來Adobe希望針對特定用途提供更精細的控制。
 
-如果用戶選擇所有目的，則允許SDK執行以下任務：
+如果使用者選擇加入所有用途，SDK可以執行下列工作：
 
-* 向和從Adobe的伺服器發送資料。
-* 讀取和寫入Cookie或Web儲存項。
+* 傳送資料至Adobe的伺服器或從中傳送。
+* 讀取和寫入Cookie或Web儲存專案。
 
-如果用戶出於所有目的而選擇，則SDK不執行任何這些任務。
+如果使用者選擇退出所有用途，SDK不會執行任何這些工作。
 
-## 配置同意
+## 設定同意
 
-預設情況下，用戶將被選擇用於所有目的。 要防止SDK執行上述任務，直到用戶開啟，請通過 `"defaultConsent": "pending"` 在SDK配置過程中，如下所示：
+根據預設，使用者會選擇加入所有用途。 若要在使用者選擇加入之前阻止SDK執行上述工作，請通過 `"defaultConsent": "pending"` 在SDK設定期間，如下所示：
 
 ```javascript
 alloy("configure", {
@@ -33,29 +33,29 @@ alloy("configure", {
 });
 ```
 
-當一般用途的預設同意設定為掛起時，嘗試執行任何依賴於用戶選擇加入首選項的命令(例如， `sendEvent` 命令)導致命令在SDK中排隊。 在將用戶的選擇加入首選項傳遞到SDK之前，不會處理這些命令。
+當一般用途的預設同意設定為pending時，嘗試執行任何取決於使用者選擇加入偏好設定的命令(例如 `sendEvent` command)會導致命令在SDK中排入佇列。 直到您將使用者的選擇加入偏好設定傳達給SDK後，才會處理這些命令。
 
 >[!NOTE]
 >
->命令僅在記憶體中排隊。 不會在頁載入中保存它們。
+>命令僅在記憶體中排入佇列。 它們不會跨頁面載入儲存。
 
-如果您不想收集在設定用戶的選擇加入首選項之前發生的事件，則可以通過 `"defaultConsent": "out"` 在SDK配置過程中。 嘗試執行任何依賴於用戶選擇加入首選項的命令在您將用戶的選擇加入首選項傳送到SDK之前將無效。
+如果您不想收集在設定使用者的選擇加入偏好設定之前發生的事件，您可以傳遞 `"defaultConsent": "out"` 在SDK設定期間。 在您將使用者的選擇加入偏好設定傳達給SDK之前，嘗試執行任何取決於使用者選擇加入偏好設定的命令將不會生效。
 
 >[!NOTE]
 >
->目前，SDK僅支援單一的全部或無用途。 儘管我們計畫構建一組更強健的目標或類別，這些目標或類別將與不同的Adobe功能和產品選項相對應，但當前的實施是選擇加入的全部或全部方法。  這隻適用於Adobe Experience Platform [!DNL Web SDK] 和NOT其他AdobeJavaScript庫。
+>目前SDK僅支援單一all或nothing用途。 雖然我們計畫建立更強大的用途或類別集，以對應不同的Adobe功能和產品方案，但目前的實作是全有或全無選擇加入的方法。  這僅適用於Adobe Experience Platform [!DNL Web SDK] 而不是其他AdobeJavaScript程式庫。
 
-此時，您可能希望用戶選擇在用戶介面中的某個位置。 收集用戶首選項後，將這些首選項通知SDK。
+此時，您可能會偏好要求使用者在您的使用者介面中選擇加入。 收集使用者的偏好設定後，請將這些偏好設定傳達SDK。
 
-## 通過Adobe Experience Platform標準傳達同意偏好
+## 透過Adobe Experience Platform Standard通訊同意偏好設定
 
-SDK支援1.0和2.0版的Adobe Experience Platform同意標準。 目前，1.0和2.0標準僅支援自動執行全部或無許可優先。 1.0標準正在逐步取消，以利於2.0標準。 2.0標準允許您添加附加的同意首選項，這些首選項可用於手動強制實施同意首選項。
+SDK支援Adobe Experience Platform同意標準1.0版和2.0版。 目前，1.0和2.0標準僅支援自動執行全部或全部不同意的偏好設定。 1.0標準正在逐步淘汰，取而代之的是2.0標準。 2.0標準允許您新增其他同意偏好設定，這些偏好設定可用於手動強制執行同意偏好設定。
 
-### 使用Adobe標準版本2.0
+### 使用Adobe standard 2.0版
 
-如果使用Adobe Experience Platform，則需要將隱私架構欄位組包含到您的配置檔案架構中。 請參閱 [Adobe Experience Platform的治理、隱私和安全](../../landing/governance-privacy-security/overview.md) 的子菜單。您可以在下面的值對象中添加與 `consents` 的 [!UICONTROL 同意和首選項] 配置檔案欄位組。
+如果您使用Adobe Experience Platform，則需要在您的設定檔結構描述中加入隱私權結構描述欄位群組。 另請參閱 [Adobe Experience Platform中的治理、隱私和安全性](../../landing/governance-privacy-security/overview.md) 以取得有關Adobe standard 2.0版的詳細資訊。您可以將資料新增至與結構描述相對應的下方值物件中 `consents` 的欄位 [!UICONTROL 同意和偏好設定] 設定檔欄位群組。
 
-如果用戶選擇，請執行 `setConsent` 將collect首選項設定為的命令 `y` 如下：
+如果使用者選擇加入，請執行 `setConsent` 收集偏好設定設定為的命令 `y` 如下所示：
 
 ```javascript
 alloy("setConsent", {
@@ -74,7 +74,7 @@ alloy("setConsent", {
 });
 ```
 
-時間欄位應指定用戶上次更新其同意首選項的時間。 如果用戶選擇退出，則執行 `setConsent` 將collect首選項設定為的命令 `n` 如下：
+時間欄位應指定使用者上次更新其同意偏好設定的時間。 如果使用者選擇退出，請執行 `setConsent` 收集偏好設定設定為的命令 `n` 如下所示：
 
 ```javascript
 alloy("setConsent", {
@@ -93,9 +93,9 @@ alloy("setConsent", {
 });
 ```
 
-### 使用Adobe標準版本1.0
+### 使用Adobe standard 1.0版
 
-如果用戶選擇，請執行 `setConsent` 命令 `general` 選項設定為 `in` 如下：
+如果使用者選擇加入，請執行 `setConsent` 命令與 `general` 選項設定為 `in` 如下所示：
 
 ```javascript
 alloy("setConsent", {
@@ -109,7 +109,7 @@ alloy("setConsent", {
 });
 ```
 
-如果用戶選擇退出，則執行 `setConsent` 命令 `general` 選項設定為 `out` 如下：
+如果使用者選擇退出，請執行 `setConsent` 命令與 `general` 選項設定為 `out` 如下所示：
 
 ```javascript
 alloy("setConsent", {
@@ -123,9 +123,9 @@ alloy("setConsent", {
 });
 ```
 
-## 通過IAB TCF標準傳達同意偏好
+## 透過IAB TCF標準通訊同意偏好設定
 
-SDK支援記錄用戶通過互動式廣告局歐洲(IAB)透明度和同意框架(TCF)標準提供的同意偏好。 可以通過同一協定設定同意字串 `setConsent` 命令如下所示：
+SDK支援記錄透過Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF)標準提供的使用者同意偏好設定。 同意字串可透過相同的設定 `setConsent` 命令如下所示：
 
 ```javascript
 alloy("setConsent", {
@@ -138,11 +138,11 @@ alloy("setConsent", {
 });
 ```
 
-以此方式設定同意後，將使用同意資訊更新即時客戶配置檔案。 要使此功能正常運行，配置檔案XDM架構需要包含 [配置檔案隱私架構欄位組](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)。 在發送事件時，需要將IAB同意資訊手動添加到事件XDM對象。 SDK不會自動在事件中包含同意資訊。 要在事件中發送同意資訊， [體驗事件隱私欄位組](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) 需要添加到「體驗事件」架構。
+以這種方式設定同意時，即時客戶設定檔會更新同意資訊。 為了讓此功能發揮作用，設定檔XDM結構描述需要包含 [設定檔隱私權結構描述欄位群組](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). 傳送事件時，需要手動將IAB同意資訊新增至事件XDM物件。 SDK不會自動在事件中包含同意資訊。 若要在事件中傳送同意資訊，請 [體驗事件隱私權欄位群組](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) 需要新增至體驗事件結構描述。
 
-## 在一個請求中發送多個標準
+## 在一個請求中傳送多個標準
 
-SDK還支援在請求中發送多個同意對象。
+SDK也支援在要求中傳送多個同意物件。
 
 ```javascript
 alloy("setConsent", {
@@ -166,12 +166,12 @@ alloy("setConsent", {
 });
 ```
 
-## 同意偏好的持續存在
+## 同意偏好設定的持續性
 
-將用戶首選項通過 `setConsent` 命令， SDK將用戶的首選項保留為cookie。 下次用戶在瀏覽器中載入您的網站時，SDK將檢索並使用這些永續首選項來確定事件是否可以發送到Adobe。
+在您使用向SDK傳達使用者偏好設定後 `setConsent` 命令中，SDK會儲存使用者對Cookie的偏好設定。 下次使用者在瀏覽器中載入您的網站時，SDK將會擷取並使用這些儲存的偏好設定來判斷是否可將事件傳送至Adobe。
 
-您需要獨立儲存用戶首選項才能顯示與當前首選項的同意對話框。 無法從SDK檢索用戶首選項。 要確保用戶首選項與SDK保持同步，可以調用 `setConsent` 命令。 只有在首選項發生更改時，SDK才會進行伺服器調用。
+您需要單獨儲存使用者偏好設定，才能顯示同意對話方塊與目前的偏好設定。 無法從SDK擷取使用者偏好設定。 為確保使用者偏好設定與SDK保持同步，您可以呼叫 `setConsent` 命令來載入每個頁面。 只有當偏好設定已變更時，SDK才會進行伺服器呼叫。
 
-## 在設定同意時同步身份
+## 在設定同意時同步身分
 
-當預設同意被掛起或取消時， `setConsent` 可能是第一個發出並確定身份的請求。 因此，在第一個請求上同步身份可能很重要。 可以將標識映射添加到 `setConsent` 就像 `sendEvent` 的子菜單。 請參閱 [正在檢索Experience CloudID](../identity/overview.md)
+當預設同意擱置或取消時， `setConsent` 可能是第一個發出並建立身分的要求。 因此，在第一個要求上同步身分識別可能很重要。 身分對應可以新增至 `setConsent` 命令，就像在 `sendEvent` 命令。 另請參閱 [正在擷取Experience CloudID](../identity/overview.md)

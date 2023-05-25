@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；體驗事件查詢；體驗事件查詢；體驗事件查詢；
-title: 列出用戶的頁面視圖
-description: 瞭解如何編寫使用「體驗事件」建立指定用戶已使用的最後100頁清單的查詢。
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；experienceevent查詢；experienceevent查詢；體驗事件查詢；
+title: 列出使用者的頁面檢視
+description: 瞭解如何使用體驗事件來建立指定使用者已使用的最後100頁的清單的查詢內容。
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -10,15 +10,15 @@ ht-degree: 1%
 
 ---
 
-# 列出用戶的頁面視圖
+# 列出使用者的頁面檢視
 
-本文檔提供了列出指定用戶的頁面視圖所需的SQL示例。 使用Adobe Experience Platform查詢服務，可以編寫使用 [!DNL Experience Events] 以捕獲各種使用案例。 體驗事件由體驗資料模型(XDM)ExperienceEvent類表示，該類在用戶與網站或服務交互時捕獲系統的不可改變和非聚合快照。 體驗事件甚至可用於時域分析。 查看 [後續步驟部分](#next-steps) 更多涉及 [!DNL Experience Events] 生成訪問者報告。
+本檔案提供列出指定使用者的頁面檢視所需的SQL範例。 透過Adobe Experience Platform查詢服務，您可以編寫使用 [!DNL Experience Events] 以擷取各種使用案例。 體驗事件由Experience Data Model (XDM) ExperienceEvent類別表示，可在使用者與網站或服務互動時，擷取系統不可變且非彙總的快照。 體驗事件甚至可用於時間網域分析。 請參閱 [後續步驟區段](#next-steps) 有關更多使用案例，包括 [!DNL Experience Events] 以產生訪客報表。
 
-有關XDM和 [!DNL Experience Events] 在 [[!DNL XDM System] 概述](../../xdm/home.md)。 通過將Query Service與 [!DNL Experience Events]，您可以有效跟蹤用戶間的行為趨勢。 以下文檔提供了涉及 [!DNL Experience Events]。
+有關XDM和的更多資訊 [!DNL Experience Events] 您可在以下網址找到： [[!DNL XDM System] 概觀](../../xdm/home.md). 透過結合查詢服務與 [!DNL Experience Events]，您就能有效追蹤使用者之間的行為趨勢。 以下檔案提供涉及下列專案的查詢範例： [!DNL Experience Events].
 
 ## 目標
 
-以下示例列出了指定用戶已查看的最後100頁。
+以下範例列出指定使用者已檢視的最後100個頁面。
 
 ```sql
 SELECT 
@@ -65,10 +65,10 @@ LIMIT 100;
 
 ## 後續步驟 {#next-steps}
 
-通過閱讀此文檔，您可以更好地瞭解如何使用查詢服務 [!DNL Experience Events] 列出頁面視圖。
+閱讀本檔案可讓您更瞭解如何使用查詢服務搭配 [!DNL Experience Events] 以指定使用者的身分列出頁面檢視。
 
-請參閱以下使用案例以瞭解其他基於訪問者的使用案例：
+請參閱下列使用案例，以瞭解其他以訪客為基礎的使用案例：
 
-- [檢索按頁面視圖陣列織的訪問者清單。](./visitors-by-number-of-page-views.md)
-- [查看訪問者的匯總報告。](./roll-up-report-of-a-visitor.md)
-- [按天建立事件趨勢報告。](./trended-report-of-events.md)
+- [擷取依頁面檢視次陣列織的訪客清單。](./visitors-by-number-of-page-views.md)
+- [檢視訪客的統計報表。](./roll-up-report-of-a-visitor.md)
+- [依日期建立事件的趨勢報表。](./trended-report-of-events.md)

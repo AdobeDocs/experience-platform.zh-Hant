@@ -1,7 +1,7 @@
 ---
-keywords: 資料管理rtcdp;rtcdp資料管理；即時客戶資料配置檔案資料管理；privacy rtcdp;rtcdp privacy;
-title: Real-time Customer Data Platform隱私
-description: Adobe Real-time Customer Data Platform使您能夠簡化使資料操作符合隱私法規的流程。
+keywords: 資料治理rtcdp；rtcdp資料治理；即時客戶資料設定檔資料治理；隱私權rtcdp；rtcdp隱私權
+title: Real-time Customer Data Platform中的隱私權
+description: Adobe Real-time Customer Data Platform可讓您精簡資料作業符合隱私權法規的程式。
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,32 +10,32 @@ ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform隱私
+# Real-time Customer Data Platform中的隱私權
 
-[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP])幫助營銷人員將來自多個企業系統的資料整合在一起，使他們能夠更好地識別、理解和吸引客戶。 Adobe將消費者資料隱私視為一項基本的設計原則，並提供各種控制來幫助營銷人員管理其客戶的資料隱私。
+[!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP])可協助行銷人員將來自多個企業系統的資料彙集在一起，讓他們更能識別、瞭解客戶，並與客戶互動。 Adobe將消費者資料隱私權視為基本設計原則，並提供各種控制項，以協助行銷人員管理其客戶的資料隱私權。
 
-大多數 [!DNL Real-Time CDP] 能力由Adobe Experience Platform提供。 本文檔提供有關支援的各種隱私增強技術的資訊 [!DNL Real-Time CDP]，具有連結 [!DNL Experience Platform] 的子菜單。
+大部份 [!DNL Real-Time CDP] 功能由Adobe Experience Platform提供。 本檔案提供以下支援的各種隱私權增強技術的相關資訊： [!DNL Real-Time CDP]，包含連結至 [!DNL Experience Platform] 說明檔案以取得詳細資訊。
 
-## 支援客戶訪問和刪除請求
+## 接受客戶存取和刪除請求
 
-法律隱私法規，如 [!DNL General Data Protection Regulation] (GDPR)及 [!DNL California Consumer Privacy Act] (CCPA)授予客戶請求訪問或刪除您從他們那裡收集的個人資料的權利。 自 [!DNL Real-Time CDP] 利用 [!DNL Experience Platform] 資料收集和儲存功能、客戶訪問和刪除其個人資料的請求應在 [!DNL Platform]。 請參閱 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 的子菜單。
+法律隱私權法規，例如 [!DNL General Data Protection Regulation] (GDPR)和 [!DNL California Consumer Privacy Act] (CCPA)給予客戶要求存取或刪除您向他們收集之個人資料的權利。 從 [!DNL Real-Time CDP] 利用 [!DNL Experience Platform] 資料收集與儲存功能、客戶存取和刪除其個人資料的請求應在以下進行管理： [!DNL Platform]. 請參閱以下文章的概觀： [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 以取得詳細資訊。
 
 >[!IMPORTANT]
 >
-> 通過Adobe Experience Platform Privacy Service提交的Adobe Marketo Engage隱私請求僅適用於Real-Time CDPB2B客戶。
+> 透過Adobe Experience Platform Privacy Service for Adobe Marketo Engage提交的隱私權請求僅適用於Real-Time CDP B2B客戶。
 
 ## 選擇退出功能
 
-[!DNL Real-Time CDP] 允許客戶選擇不將其個人資料包括在細分使用案例中。 客戶的選擇退出首選項由 [!DNL Real-Time Customer Profile]，並且可以通過排除使用段謂語中的布爾邏輯(「AND NOT」)從段中選擇退出的用戶來實施。
+[!DNL Real-Time CDP] 可讓客戶選擇退出在細分使用案例中包含其個人資料。 客戶選擇退出的偏好設定會透過以下方式擷取和儲存： [!DNL Real-Time Customer Profile]，並可在區段述詞中使用布林值邏輯(「AND NOT」)來排除已選擇退出區段的使用者。
 
-查看上的文檔 [處理選擇退出請求](../../segmentation/consents.md) 在Adobe Experience Platform分段服務文檔中瞭解詳細資訊。
+檢視檔案： [接受選擇退出請求](../../segmentation/consents.md) 如需詳細資訊，請參閱Adobe Experience Platform Segmentation Service檔案。
 
 ## IAB TCF 2.0支援
 
-[!DNL Real-Time CDP] 建在Adobe Experience Platform上，是註冊的 [供應商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/) 為 [!DNL Transparency & Consent Framework (TCF)]，如 [!DNL Interactive Advertising Bureau (IAB)]。 根據TCF 2.0要求，平台允許您收集詳細的客戶同意資料並將其整合到您儲存的客戶配置檔案中。 然後，可以根據特定配置檔案的使用情況，將此同意資料納入導出的受眾段中。
+[!DNL Real-Time CDP] 內建於Adobe Experience Platform，是已註冊的 [廠商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/) 的 [!DNL Transparency & Consent Framework (TCF)]，如 [!DNL Interactive Advertising Bureau (IAB)]. 為符合TCF 2.0的要求，Platform可讓您收集詳細的客戶同意資料，並將其整合至您儲存的客戶設定檔中。 之後，可根據特定設定檔的使用案例，將此同意資料納入轉存的對象區段中，決定是否包含這些設定檔。
 
-請參閱 [IAB TCF 2.0支援Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) 的子菜單。
+請參閱以下文章的概觀： [Experience Platform中的IAB TCF 2.0支援](../../landing/governance-privacy-security/consent/iab/overview.md) 以取得詳細資訊。
 
 ## 後續步驟
 
-本文檔簡要介紹了 [!DNL Real-Time CDP]。 請查看本指南中連結的文檔，以瞭解有關每個功能的詳細資訊。
+本檔案簡要介紹的隱私權功能 [!DNL Real-Time CDP]. 請參閱本指南中的檔案連結，瞭解每項功能的詳細資訊。

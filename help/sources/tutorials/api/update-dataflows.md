@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流服務；更新資料流
+keywords: Experience Platform；首頁；熱門主題；流程服務；更新資料流程
 solution: Experience Platform
-title: 使用流服務API更新資料流
+title: 使用流量服務API更新資料流
 type: Tutorial
-description: 本教程介紹使用流服務API更新資料流的步驟，包括其名稱、說明和計畫。
+description: 本教學課程涵蓋使用流量服務API更新資料流的步驟，包括其名稱、說明和排程。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,26 +12,26 @@ ht-degree: 2%
 
 ---
 
-# 使用流服務API更新資料流
+# 使用流量服務API更新資料流
 
-本教程介紹了更新資料流的步驟，包括使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
+本教學課程涵蓋更新資料流的步驟，包括其基本資訊、排程及使用之對應集 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門
 
-本教程要求您具有有效的流ID。 如果沒有有效的流ID，請從 [源概述](../../home.md) 在嘗試本教程之前，請按照上述步驟操作。
+本教學課程要求您具備有效的流量ID。 如果您沒有有效的流量ID，請從「 」中選擇您選擇的聯結器 [來源概觀](../../home.md) 並依照在嘗試本教學課程之前概述的步驟進行。
 
-本教程還要求您對以下Adobe Experience Platform元件有一定的瞭解：
+本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
 
-* [源](../../home.md):Experience Platform允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
-* [沙箱](../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../landing/api-guide.md).
 
-## 查找資料流詳細資訊
+## 查詢資料流詳細資料
 
-更新資料流的第一步是使用流ID檢索資料流詳細資訊。 您可以通過向以下站點發出GET請求來查看現有資料流的當前詳細資訊 `/flows` 端點。
+更新資料流的第一步，是使用資料流ID擷取資料流詳細資料。 您可以透過向以下網站發出GET要求，檢視現有資料流的目前詳細資料： `/flows` 端點。
 
 **API格式**
 
@@ -41,11 +41,11 @@ GET /flows/{FLOW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 獨特 `id` 要檢索的資料流的值。 |
+| `{FLOW_ID}` | 唯一 `id` 您要擷取之資料流的值。 |
 
 **要求**
 
-以下請求將檢索有關流ID的更新資訊。
+以下請求會擷取有關您的流程ID的更新資訊。
 
 ```shell
 curl -X GET \
@@ -58,7 +58,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回資料流的當前詳細資訊，包括其版本、計畫和唯一標識符(`id`)。
+成功回應會傳回資料流的目前詳細資料，包括其版本、排程和唯一識別碼(`id`)。
 
 ```json
 {
@@ -172,11 +172,11 @@ curl -X GET \
 
 ## 更新資料流
 
-要更新資料流的運行計畫、名稱和說明，請向 [!DNL Flow Service] 提供流ID、版本和要使用的新計畫時的API。
+PATCH若要更新資料流的執行排程、名稱和說明，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本以及您要使用的新排程。
 
 >[!IMPORTANT]
 >
->的 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是要更新的連接的唯一版本。 etag值會隨著資料流的每次成功更新而更新。
+>此 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是您要更新的連線唯一版本。 每次成功更新資料流時，etag值都會隨之更新。
 
 **API格式**
 
@@ -186,7 +186,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求將更新流運行計畫以及資料流的名稱和說明。
+下列請求會更新您的流程執行排程，以及資料流的名稱和說明。
 
 ```shell
 curl -X PATCH \
@@ -217,13 +217,13 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 |
-| `path` | 定義要更新的流的部分。 |
-| `value` | 要用更新參數的新值。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. |
+| `path` | 定義要更新的流程部分。 |
+| `value` | 您想要用來更新引數的新值。 |
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -232,9 +232,9 @@ curl -X PATCH \
 }
 ```
 
-## 更新映射
+## 更新對應
 
-可以通過向PATCH請求更新現有資料流的映射集 [!DNL Flow Service] API和為您提供更新的值 `mappingId` 和 `mappingVersion`。
+您可以透過向以下專案發出PATCH請求，更新現有資料流的對應集： [!DNL Flow Service] API並為您提供更新的值 `mappingId` 和 `mappingVersion`.
 
 **API格式**
 
@@ -244,7 +244,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求更新資料流的映射集。
+以下請求會更新資料流的對應集。
 
 ```shell
 curl -X PATCH \
@@ -271,15 +271,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 |
-| `path` | 定義要更新的流的部分。 在本例中， `transformations` 正在更新。 |
-| `value.name` | 要更新的屬性的名稱。 |
-| `value.params.mappingId` | 用於更新資料流的映射集的新映射ID。 |
-| `value.params.mappingVersion` | 與更新的映射ID關聯的新映射版本。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. |
+| `path` | 定義要更新的流程部分。 在此範例中， `transformations` 正在更新。 |
+| `value.name` | 要更新的屬性名稱。 |
+| `value.params.mappingId` | 用於更新資料流對應集的新對應ID。 |
+| `value.params.mappingVersion` | 與更新後的對應ID相關聯的新對應版本。 |
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -290,4 +290,4 @@ curl -X PATCH \
 
 ## 後續步驟
 
-通過本教程，您已使用 [!DNL Flow Service] API。 有關使用源連接器的詳細資訊，請參見 [源概述](../../home.md)。
+依照本教學課程，您已使用更新資料流的基本資訊、排程和對映集。 [!DNL Flow Service] API。 如需使用來源聯結器的詳細資訊，請參閱 [來源概觀](../../home.md).

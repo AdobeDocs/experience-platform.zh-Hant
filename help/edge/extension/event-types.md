@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience PlatformWeb SDK擴展中的事件類型
-description: 瞭解如何使用Adobe Experience Platform LaunchAdobe Experience PlatformWeb SDK擴展提供的事件類型。
+title: Adobe Experience Platform Web SDK擴充功能中的事件型別
+description: 瞭解如何使用Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的事件型別。
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
@@ -12,39 +12,39 @@ ht-degree: 1%
 
 # 事件類型
 
-本頁介紹由Adobe Experience PlatformWeb SDK標籤擴展提供的Adobe Experience Platform事件類型。 這些 [構建規則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) 不應該和 [`eventType` 欄位](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant)。
+本頁說明Adobe Experience Platform Web SDK標籤擴充功能提供的Adobe Experience Platform事件型別。 這些已用來 [建置規則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) 且不應與 [`eventType` xdm中的欄位](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant).
 
-## [!UICONTROL 發送事件完成]
+## [!UICONTROL 傳送事件完成]
 
-通常，您的屬性會使用 [[!UICONTROL 發送事件] 動作](action-types.md#send-event) 向Adobe Experience Platform邊緣網路發送事件。 每次將事件發送到邊緣網路時，都會向瀏覽器返回帶有用資料的響應。 沒有 [!UICONTROL 發送事件完成] 事件類型，您將無權訪問此返回的資料。
+通常，您的屬性會有一或多個規則使用 [[!UICONTROL 傳送事件] 動作](action-types.md#send-event) 傳送事件至Adobe Experience Platform Edge Network。 每次將事件傳送至Edge Network時，都會傳回包含有用資料的回應給瀏覽器。 不含 [!UICONTROL 傳送事件完成] 事件型別，則您沒有許可權存取此傳回的資料。
 
-要訪問返回的資料，請建立單獨的規則，然後添加 [!UICONTROL 發送事件完成] 事件。 每次從伺服器收到成功響應時，都會觸發此規則 [!UICONTROL 發送事件] 操作。
+若要存取傳回的資料，請建立個別規則，然後新增 [!UICONTROL 傳送事件完成] 事件至規則。 每次從伺服器收到成功的回應時，就會觸發此規則。 [!UICONTROL 傳送事件] 動作。
 
-當 [!UICONTROL 發送事件完成] 事件觸發規則，它提供從伺服器返回的資料，這些資料對於完成某些任務可能非常有用。 通常，您會 [!UICONTROL 自定義代碼] 操作(從 [!UICONTROL 核心] 擴展)到包含 [!UICONTROL 發送事件完成] 的子菜單。 在 [!UICONTROL 自定義代碼] 操作，您的自定義代碼將有權訪問名為 `event`。 此 `event` 變數將包含從伺服器返回的資料。
+當 [!UICONTROL 傳送事件完成] 事件會觸發規則，提供從伺服器傳回的有助於完成特定任務的資料。 通常，您會新增 [!UICONTROL 自訂程式碼] 動作(來自 [!UICONTROL 核心] 擴充功能)，與包含 [!UICONTROL 傳送事件完成] 事件。 在 [!UICONTROL 自訂程式碼] 動作，您的自訂程式碼將可存取名為的變數 `event`. 此 `event` 變數會包含從伺服器傳回的資料。
 
-處理從邊緣網路返回的資料的規則可能如下所示：
+處理從Edge Network傳回之資料的規則可能如下所示：
 
 ![](./assets/send-event-complete.png)
 
-下面是如何使用 [!UICONTROL 自定義代碼] 此規則中的操作。
+以下是如何使用執行特定工作的一些範例。 [!UICONTROL 自訂程式碼] 動作。
 
-### 手動呈現個性化內容
+### 手動呈現個人化內容
 
-在「自定義代碼」操作中，您可以訪問從伺服器返回的個性化主張。 為此，您應鍵入以下自定義代碼：
+在「自訂程式碼」動作（位於處理回應資料的規則中）中，您可以存取從伺服器傳回的個人化主張。 若要這麼做，您可以輸入下列自訂程式碼：
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-如果 `event.propositions` 存在，它是一個包含個性化命題對象的陣列。 在很大程度上，陣列中包含的主張是由事件如何發送到伺服器決定的。
+若 `event.propositions` 存在，它是包含個人化主張物件的陣列。 陣列中包含的建議在很大程度上取決於事件傳送至伺服器的方式。
 
-對於第一個方案，假設您尚未檢查 [!UICONTROL 作出決定] 複選框，但未提供任何 [!UICONTROL 決策範圍] 內 [!UICONTROL 發送事件] 負責發送事件的操作。
+對於第一個案例，假設您尚未核取 [!UICONTROL 呈現決定] 核取方塊，且尚未提供任何 [!UICONTROL 決定範圍] 內部 [!UICONTROL 傳送事件] 負責傳送事件的動作。
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
-在此示例中， `propositions` 陣列只包含與符合自動呈現條件的事件相關的建議。
+在此範例中， `propositions` 陣列僅包含與事件相關的主張，這些事件符合自動轉譯的條件。
 
-的 `propositions` 陣列可能與此示例類似：
+此 `propositions` 陣列看起來可能類似於此範例：
 
 ```json
 [
@@ -85,17 +85,17 @@ var propositions = event.propositions;
 ]
 ```
 
-發送事件時， [!UICONTROL 作出決定] 複選框未選中，因此SDK未嘗試自動呈現任何內容。 但是，SDK仍會自動檢索符合自動呈現條件的內容，並提供給您在您願意的情況下手動呈現。 請注意，每個命題對象 `renderAttempted` 屬性設定為 `false`。
+傳送事件時， [!UICONTROL 呈現決定] 未勾選核取方塊，因此SDK未嘗試自動轉譯任何內容。 不過，SDK仍會自動擷取符合自動轉譯資格的內容，並提供給您手動轉譯（如果您想要這麼做）。 請注意，每個主張物件都有其 `renderAttempted` 屬性設定為 `false`.
 
-如果您選擇 [!UICONTROL 作出決定] 複選框在發送事件時，SDK將嘗試呈現符合自動呈現條件的任何主張。 因此，每個命題對象都會 `renderAttempted` 屬性設定為 `true`。 在本例中，不需要手動提出這些建議。
+如果您選擇不檢查 [!UICONTROL 呈現決定] 核取方塊傳送事件時，SDK會嘗試轉譯任何符合自動轉譯資格的主張。 因此，每個主張物件都會有其 `renderAttempted` 屬性設定為 `true`. 在此情況下，不需要手動轉譯這些主張。
 
-到目前為止，您只查看了符合自動渲染條件的個性化內容(例如，在Adobe Target的Visual Experience Composer中建立的任何內容)。 檢索任何個性化內容 _不_ 符合自動呈現條件，通過使用 [!UICONTROL 決策範圍] 的 [!UICONTROL 發送事件] 操作。 範圍是一個字串，用於標識要從伺服器中檢索的特定命題。
+到目前為止，您只檢視了符合自動轉譯資格的個人化內容(例如，任何在Adobe Target視覺化體驗撰寫器中建立的內容)。 擷取任何個人化內容 _not_ 符合自動轉譯的條件，請使用 [!UICONTROL 決定範圍] 中的欄位 [!UICONTROL 傳送事件] 動作。 範圍是字串，可識別您要從伺服器擷取的特定主張。
 
-的 [!UICONTROL 發送事件] 操作如下所示：
+此 [!UICONTROL 傳送事件] 動作如下所示：
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-在本示例中，如果在與 `salutation` 或 `discount` 範圍，返回並包含在 `propositions` 陣列。 請注意，符合自動渲染條件的主張將繼續包含在 `propositions` 陣列，無論您如何配置 [!UICONTROL 作出決定] 或 [!UICONTROL 決策範圍] 的 [!UICONTROL 發送事件] 操作。 的 `propositions` 在本例中，array與以下示例類似：
+在此範例中，如果在伺服器上找到符合以下條件的建議： `salutation` 或 `discount` 範圍，它們會傳回並包含在 `propositions` 陣列。 請注意，符合自動轉譯資格的主張將繼續包含在 `propositions` 陣列，無論您如何設定 [!UICONTROL 呈現決定] 或 [!UICONTROL 決定範圍] 中的欄位 [!UICONTROL 傳送事件] 動作。 此 `propositions` 在此範例中，陣列看起來會類似於以下範例：
 
 ```json
 [
@@ -169,14 +169,14 @@ var propositions = event.propositions;
 ]
 ```
 
-此時，您可以根據您所認為的適合情況呈現命題內容。 在本例中，與 `discount` scope是使用Adobe Target基於表單的體驗作曲家構建的HTML命題。 假設您的頁面上有一個ID為 `daily-special` 並希望從 `discount` 建議 `daily-special` 的子菜單。 請執行下列動作：
+此時，您可以視需要演算主張內容。 在此範例中，主張符合 `discount` scope是使用Adobe Target的表單式體驗撰寫器建立的HTML主張。 假設您的頁面上有一個元素，其ID為 `daily-special` 並希望從呈現內容 `discount` 中的主張 `daily-special` 元素。 請執行下列動作：
 
-1. 從 `event` 的雙曲餘切值。
-1. 循環查看每個命題，查找包含 `discount`。
-1. 如果您找到一個建議，請循環查看建議中的每個項目，查找HTML內容的項目。 （檢查總比假設好。）
-1. 如果找到包含HTML內容的項目，請查找 `daily-special` 元素，並將其HTML替換為個性化內容。
+1. 從擷取主張 `event` 物件。
+1. 循環瀏覽每個主張，尋找具有下列範圍的主張 `discount`.
+1. 如果您找到主張，會在主張中的每個專案之間回圈，尋找是HTML內容的專案。 （檢查總比假設要好。）
+1. 如果您找到包含HTML內容的專案，請找到 `daily-special` 元素並以個人化內容取代其HTML。
 
-您的自定義代碼位於 [!UICONTROL 自定義代碼] 操作可能如下所示：
+您在中建立的自訂程式碼 [!UICONTROL 自訂程式碼] 動作可能如下所示：
 
 ```javascript
 var propositions = event.propositions;
@@ -215,27 +215,27 @@ if (discountHtml) {
 }
 ```
 
-### 訪問Adobe Target響應令牌
+### 存取Adobe Target回應Token
 
-從Adobe Target返回的個性化內容包括 [響應令牌](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，這些是有關活動、服務、體驗、用戶配置檔案、地理資訊等的詳細資訊。 這些詳細資訊可以與第三方工具共用或用於調試。 可以在Adobe Target用戶介面中配置響應令牌。
+Adobe Target傳回的個人化內容包括 [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，此為有關活動、選件、體驗、使用者設定檔、地理資訊等專案的詳細資訊。 這些詳細資料可與協力廠商工具共用，或用於偵錯。 可在Adobe Target使用者介面中設定回應Token。
 
-在「自定義代碼」操作中，您可以訪問從伺服器返回的個性化主張。 為此，請鍵入以下自定義代碼：
+在「自訂程式碼」動作（位於處理回應資料的規則中）中，您可以存取從伺服器傳回的個人化主張。 若要這麼做，請輸入下列自訂程式碼：
 
 ```javascript
 var propositions = event.propositions;
 ```
 
-如果 `event.propositions` 存在，它是一個包含個性化命題對象的陣列。 請參閱 [手動呈現個性化內容](#manually-render-personalized-content) 的 `result.propositions`。
+若 `event.propositions` 存在，它是包含個人化主張物件的陣列。 另請參閱 [手動呈現個人化內容](#manually-render-personalized-content) 以取得有關以下專案的內容的詳細資訊： `result.propositions`.
 
-假設您希望從所有由Web SDK自動呈現的主張中收集所有活動名稱，並將它們推入單個陣列。 然後，您可以將單個陣列發送到第三方。 在這種情況下，在 [!UICONTROL 自定義代碼] 操作：
+假設您想從Web SDK自動轉譯的所有主張中收集所有活動名稱，並將其推送到單一陣列中。 然後，您可以將單一陣列傳送給協力廠商。 在此情況下，請撰寫自訂程式碼至 [!UICONTROL 自訂程式碼] 動作至：
 
-1. 從 `event` 的雙曲餘切值。
-1. 回答每個命題。
-1. 確定SDK是否提出該命題。
-1. 如果是，則循環討論命題中的每個項目。
-1. 從 `meta` 屬性，該屬性是包含響應令牌的對象。
+1. 從擷取主張 `event` 物件。
+1. 循環瀏覽每個主張。
+1. 判斷SDK是否呈現主張。
+1. 如果是，則重複檢查主張中的每個專案。
+1. 從擷取活動名稱 `meta` 屬性，包含回應Token的物件。
 1. 將活動名稱推入陣列。
-1. 將活動名稱發送給第三方。
+1. 將活動名稱傳送給第三方。
 
 ```javascript
 var propositions = event.propositions;

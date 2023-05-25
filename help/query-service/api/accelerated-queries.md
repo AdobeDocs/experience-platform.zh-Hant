@@ -1,6 +1,6 @@
 ---
-title: 加速查詢終結點
-description: 瞭解如何以無狀態方式訪問查詢加速儲存，以快速返回基於聚合資料的結果。 此文檔提供查詢服務加速查詢終結點的示例HTTP請求和響應。
+title: 加速查詢端點
+description: 瞭解如何以無狀態方式存取查詢加速存放區，以根據彙總資料快速傳回結果。 本檔案提供查詢服務加速查詢端點的範例HTTP請求和回應。
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
 source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 1%
 
 ---
 
-# 加速查詢終結點
+# 加速的查詢端點
 
-作為資料DistillerSKU的一部分， [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/) 允許您對加速儲存進行無狀態查詢。 返回的結果基於聚合資料。 結果延遲的減少允許更互動式的資訊交換。 加速查詢API還用於提供電源 [用戶定義的儀表板](../../dashboards/user-defined-dashboards.md)。
+在Data Distiller SKU中， [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/) 可讓您對加速存放區進行無狀態查詢。 傳回的結果會根據彙總的資料。 減少結果的延遲可讓您以更具互動性的方式交換資訊。 加速查詢API也用於提供動力 [使用者定義儀表板](../../dashboards/user-defined-dashboards.md).
 
-在繼續閱讀本指南之前，請確保您已閱讀並瞭解 [查詢服務API指南](./getting-started.md) 以便成功使用查詢服務API。
+在繼續使用本指南之前，請確定您已閱讀並瞭解 [查詢服務API指南](./getting-started.md) 才能成功使用查詢服務API。
 
 ## 快速入門
 
-資料DistillerSKU需要使用查詢加速儲存。 請參閱 [包裝](../packages.md) 和 [護欄](../guardrails.md#query-accelerated-store) 與資料DistillerSKU相關的文檔。 如果您沒有資料DistillerSKU，請聯繫您的Adobe客戶服務代表以獲取詳細資訊。
+需要Data Distiller SKU才能使用查詢加速存放區。 請參閱 [封裝](../packages.md) 和 [護欄](../guardrails.md#query-accelerated-store) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
 
 <!-- Document is hidden temporarily
 Please see the [packaging](../packages.md), [guardrails](../guardrails.md#query-accelerated-store), and [licensing](../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
 -->
 
-以下各節詳細介紹了通過查詢服務API以無狀態方式訪問查詢加速儲存所需的API調用。 每個調用包括一般API格式、顯示所需標頭的示例請求和示例響應。
+以下各節將詳細介紹透過查詢服務API以無狀態方式存取查詢加速存放區所需的API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
-## 運行加速查詢 {#run-accelerated-query}
+## 執行加速查詢 {#run-accelerated-query}
 
-向POST請求 `/accelerated-queries` 要運行加速查詢的終結點。 查詢直接包含在請求負載中，或使用模板ID引用。
+向發出POST請求 `/accelerated-queries` 端點以執行加速查詢。 查詢直接包含在請求承載中，或使用範本ID參照。
 
 **API格式**
 
@@ -39,9 +39,9 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->請求 `/accelerated-queries` 終結點需要SQL陳述式或模板ID，但不需要兩者。 在請求中提交這兩項都會導致錯誤。
+>向以下專案的請求： `/accelerated-queries` 端點需要SQL陳述式或範本ID，但不是兩者都需要。 在請求中提交兩者會導致錯誤。
 
-以下請求將請求正文中的SQL查詢提交到加速儲存。
+下列請求會將請求內文中的SQL查詢提交至加速存放區。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -61,7 +61,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 '
 ```
 
-此備用請求將請求正文中的模板ID提交到加速儲存。 來自相應模板的SQL用於查詢加速儲存。
+此替代請求會將請求內文中的範本ID提交至加速存放區。 使用對應範本中的SQL來查詢加速存放區。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
@@ -83,19 +83,19 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | 屬性 | 說明 |
 |---|---|
-| `dbName` | 要對其進行加速查詢的資料庫的名稱。 的值 `dbName` 應採用 `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`。 所提供的資料庫必須存在於加速儲存中，否則請求將導致錯誤。 您還必須確保 `x-sandbox-name` 標頭和沙箱名稱 `dbName` 參考同一沙盒。 |
-| `sql` | SQL陳述式字串。 允許的最大大小為100000個字元。 |
-| `templateId` | 在向Web站點發出POST請求時，建立並另存為模板的查詢的唯一標識符 `/templates` 端點。 |
+| `dbName` | 您向其提出加速查詢的資料庫名稱。 的值 `dbName` 應採用以下格式 `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. 提供的資料庫必須存在於加速存放區中，否則請求會導致錯誤。 您也必須確保 `x-sandbox-name` 中的標題和沙箱名稱 `dbName` 請參閱相同的沙箱。 |
+| `sql` | SQL陳述式字串。 允許的大小上限為1000000個字元。 |
+| `templateId` | 向發出POST請求時建立並儲存為範本的查詢的唯一識別碼 `/templates` 端點。 |
 | `name` | 加速查詢的可選人性化描述性名稱。 |
-| `description` | 有關查詢意圖的可選注釋，以幫助其他用戶瞭解其目的。 允許的最大大小為1000位元組。 |
+| `description` | 有關查詢意圖的可選評論，可幫助其他使用者瞭解其目的。 允許的大小上限為1000個位元組。 |
 
 **回應**
 
-成功的響應返回HTTP狀態200，並且查詢建立了臨時架構。
+成功的回應會傳回HTTP狀態200及查詢建立的隨選結構描述。
 
 >[!NOTE]
 >
->以下響應已被截斷以便簡化。
+>為簡短起見，下列回應已截斷。
 
 ```json
 {
@@ -208,10 +208,10 @@ curl -X POST https://platform.adobe.io/data/foundation/query/acceleated-queries
 
 | 屬性 | 說明 |
 |---|---|
-| `queryId` | 建立的查詢的ID值。 |
-| `resultsMeta` | 此對象包含結果中返回的每個列的元資料，以便用戶知道每個列的名稱和類型。 |
-| `resultsMeta._adhoc` | 一種即席體驗資料模型(XDM)架構，其欄位僅由單個資料集使用而命名。 |
-| `resultsMeta._adhoc.type` | 即席架構的資料類型。 |
-| `resultsMeta._adhoc.meta:xdmType` | 這是系統為XDM欄位類型生成的值。 有關可用類型的詳細資訊，請參閱 [可用XDM類型](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html)。 |
-| `resultsMeta._adhoc.properties` | 這些是查詢的資料集的列名。 |
-| `resultsMeta._adhoc.results` | 這些是查詢的資料集的行名。 它們反映每個返回的列。 |
+| `queryId` | 已建立查詢的ID值。 |
+| `resultsMeta` | 此物件包含結果中傳回之每個欄的中繼資料，讓使用者知道每個欄的名稱和型別。 |
+| `resultsMeta._adhoc` | 臨機Experience Data Model (XDM)結構描述，其欄位已命名為僅供單一資料集使用。 |
+| `resultsMeta._adhoc.type` | 臨時結構描述的資料型別。 |
+| `resultsMeta._adhoc.meta:xdmType` | 這是系統為XDM欄位型別產生的值。 如需可用型別的詳細資訊，請參閱以下檔案： [可用的XDM型別](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html). |
+| `resultsMeta._adhoc.properties` | 這些是查詢資料集的欄名稱。 |
+| `resultsMeta._adhoc.results` | 這些是查詢資料集的列名稱。 它們會反映每個傳回的欄。 |

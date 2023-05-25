@@ -1,6 +1,6 @@
 ---
-keywords: rtcdp b2b;b2b;account;account profile;account profiles rtcdp;real-time customer data platform;
-title: Real-Time CDPB2B版中的帳戶配置檔案
+keywords: rtcdp b2b；b2b；帳戶；帳戶設定檔；帳戶設定檔rtcdp；即時客戶資料平台；
+title: Real-Time CDP B2B版本中的帳戶設定檔
 description: 了解 Adobe Real-Time Customer Data Platform B2B Edition 如何讓您使用帳戶設定檔整合來自多個來源的帳戶資訊。
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
@@ -10,16 +10,16 @@ ht-degree: 7%
 
 ---
 
-# 帳戶配置檔案概述
+# 帳戶設定檔概述
 
 >[!NOTE]
 >
->客戶配置檔案僅對Adobe Real-time Customer Data PlatformB2B版客戶可用。 要瞭解有關Real-Time CDPB2B版的更多資訊，包括可用的功能和特性，請首先閱讀 [Real-Time CDPB2B版概述](../b2b-overview.md)。
+>帳戶設定檔僅供Adobe Real-time Customer Data Platform B2B Edition客戶使用。 若要進一步瞭解Real-Time CDP、B2B版本，包括可用功能，請先閱讀 [Real-Time CDP， B2B版本概觀](../b2b-overview.md).
 
-帳戶配置檔案使您能夠統一來自多個來源的帳戶資訊。 此帳戶的統一視圖將來自您許多市場營銷渠道的資料以及您的組織當前用於儲存客戶帳戶資料的各種系統的資料匯集在一起。 要瞭解有關如何作為B2B工作流的一部分建立帳戶配置檔案的詳細資訊，請參閱 [端到端教程](../b2b-tutorial.md)。
+帳戶設定檔可讓您統一來自多個來源的帳戶資訊。 此統一的帳戶檢視彙集來自您多個行銷管道的資料，以及您的組織目前用來儲存客戶帳戶資料的各種系統。 若要進一步瞭解如何在B2B工作流程中建立帳戶設定檔，請參閱 [端到端教學課程](../b2b-tutorial.md).
 
-通過將不同來源的帳戶資料拼合在一起，您可以開始查看每個客戶帳戶及其相關機會和聯繫人的完整圖片。 這使您的組織能夠將B2B營銷活動提升到一個新的水準。 要瞭解有關Real-Time CDPB2B版功能的更多資訊，請閱讀 [Real-Time CDPB2B版示例用例](../b2b-use-case.md)。
+將不同來源的帳戶資料拼接在一起，您就可以開始檢視每個客戶帳戶及其相關商機與聯絡人的完整圖片。 這可讓您的組織將B2B行銷活動提升到新的境界。 若要進一步瞭解Real-Time CDP， B2B版的強大功能，請閱讀 [Real-Time CDP， B2B版本範例使用案例](../b2b-use-case.md).
 
-## 帳戶配置檔案查看器
+## 帳戶設定檔檢視器
 
-使用Real-Time CDPB2B版，您可以使用Experience Platform用戶介面查看帳戶配置檔案，並使用連接的企業來源的帳戶ID或直接輸入來源詳細資訊來搜索特定帳戶。 有關如何在平台UI中查看帳戶配置檔案的詳細資訊，請參閱 [帳戶配置檔案UI指南](account-profile-ui-guide.md)。
+透過Real-Time CDP （B2B版），您可以使用Experience Platform使用者介面檢視帳戶設定檔，並使用連線企業來源的帳戶ID或直接輸入來源詳細資料來搜尋特定帳戶。 如需如何在Platform UI中檢視帳戶設定檔的詳細資訊，請參閱 [帳戶設定檔UI指南](account-profile-ui-guide.md).

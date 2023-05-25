@@ -1,6 +1,6 @@
 ---
-title: 基於屬性的Ad Hoc模式訪問控制支援
-description: 用於限制訪問通過Adobe Experience Platform查詢服務生成的臨時架構中的資料欄位的指南。
+title: Ad Hoc結構描述的屬性式存取控制支援
+description: 限制存取透過Adobe Experience Platform查詢服務產生的臨時結構描述中資料欄位的指南。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
 source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
 workflow-type: tm+mt
@@ -9,89 +9,89 @@ ht-degree: 2%
 
 ---
 
-# 基於屬性的訪問控制支援ad hoc模式
+# 針對臨時結構描述的屬性型存取控制支援
 
-引入Adobe Experience Platform的任何資料都由經驗資料模型(XDM)架構封裝，並可能受組織或法律法規定義的使用限制的約束。
+任何帶入Adobe Experience Platform的資料都會由Experience Data Model (XDM)結構描述封裝，並可能會受到貴組織或法規定義的使用限制所規範。
 
-通過在未指定架構時通過查詢服務執行CTAS查詢，自動生成ad hoc架構。 通常需要限制特定架構的某些欄位或資料集的使用，以控制對敏感個人資料和個人身份資訊的訪問。 Adobe Experience Platform通過允許您使用基於屬性的訪問控制功能通過平台UI標籤架構欄位，從而方便了此訪問控制。
+當未指定結構描述時，透過查詢服務執行CTAS查詢，便會自動產生臨時結構描述。 通常需要限制使用特定結構描述的特定欄位或資料集，以控制對敏感個人資料和個人識別資訊的存取。 Adobe Experience Platform可讓您使用以屬性為基礎的存取控制功能，透過Platform UI標籤結構描述欄位，以協助進行此存取控制。
 
-標籤可以隨時應用，在選擇管理資料的方式上提供了靈活性。 儘管如此，最好在資料被引入平台或資料在平台中可用時立即標籤它。
+標籤可隨時套用，讓您靈活選擇控管資料的方式。 不過，最佳實務是在資料內嵌至Platform時，或資料可在Platform中使用時，立即加上標籤。
 
-基於模式的標籤是基於屬性的訪問控制的重要組成部分，用於更好地管理對用戶或用戶組的訪問。 Adobe Experience Platform允許您通過建立和應用標籤來限制對臨時架構的任何欄位的訪問。
+結構描述型標籤是以屬性為基礎的存取控制的重要元件，可更好地管理使用者或使用者群組的存取許可權。 Adobe Experience Platform可讓您透過建立和套用標籤，限制對臨時結構描述的任何欄位的存取。
 
-本文檔提供一個教程，用於通過將標籤應用於通過查詢服務生成的即席架構的資料欄位來管理對敏感資料的訪問。
+本檔案提供教學課程，說明如何透過將標籤套用至透過查詢服務產生的臨時結構描述的資料欄位，以管理對敏感資料的存取。
 
 ## 快速入門
 
-本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
+本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [體驗資料模型(XDM)系統](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant):Experience Platform組織客戶體驗資料的標準化框架。
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=zh-Hant):瞭解如何在平台UI中建立和管理架構和其他資源。
-* [[!DNL Data Governance]](../../data-governance/home.md):瞭解如何 [!DNL Data Governance] 允許您管理客戶資料並確保遵守適用於資料使用的法規、限制和策略。
-* [基於屬性的訪問控制](../../access-control/abac/overview.md):基於屬性的訪問控制是Adobe Experience Platform的一種功能，它使管理員能夠基於屬性控制對特定對象和/或權能的訪問。 屬性可以是添加到對象的元資料，如添加到即席或常規模式欄位的標籤。 管理員定義包括屬性的訪問策略以管理用戶訪問權限。
+* [Experience Data Model (XDM)系統](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant)：Experience Platform用來組織客戶體驗資料的標準化架構。
+   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=zh-Hant)：瞭解如何在Platform UI中建立和管理結構描述和其他資源。
+* [[!DNL Data Governance]](../../data-governance/home.md)：瞭解如何 [!DNL Data Governance] 可讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和原則。
+* [以屬性為基礎的存取控制](../../access-control/abac/overview.md)：以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制對特定物件和/或權能的存取。 屬性可以是新增至物件的中繼資料，例如新增至臨時或一般結構描述欄位的標籤。 管理員定義包含管理使用者存取許可權的屬性的存取原則。
 
-## 建立即席架構
+## 建立臨時結構描述
 
-執行查詢並生成結果後，將自動生成即席模式並將其添加到模式清單。
+執行查詢並產生結果後，就會自動產生臨時結構描述，並將其新增至結構描述詳細目錄。
 
-要添加資料標籤，請導航至 [!UICONTROL 架構] 通過選擇 [!UICONTROL 架構] 在平台UI的左滑軌中。 將顯示架構清單。
+若要新增資料標籤，請導覽至 [!UICONTROL 結構描述] 控制面板瀏覽標籤，方法是選取 [!UICONTROL 結構描述] （在Platform UI的左側邊欄中）。 此時會顯示結構描述詳細目錄。
 
 >[!NOTE]
 >
->預設情況下，在架構清單中不顯示即席架構。
+>依預設，臨時結構描述不會顯示在結構描述詳細目錄中。
 
-## 在平台UI的架構清單中發現即席架構 {#discover-ad-hoc-schemas}
+## 探索Platform UI結構描述詳細目錄中的臨時結構描述 {#discover-ad-hoc-schemas}
 
-要在平台UI中啟用即席架構的顯示，請選擇篩選器表徵圖(![篩選器表徵圖。](../images/data-governance/filter.png))，然後選擇**[!UICONTROL 顯示即席架構] 左欄。
+若要在Platform UI中啟用臨時結構描述的顯示，請選取篩選圖示(![篩選圖示。](../images/data-governance/filter.png))，然後選取「 ** 」[!UICONTROL 顯示臨時結構描述] （在出現的左側邊欄中）。
 
-![啟用「顯示即席架構」切換的「架構」儀表板篩選器選項左側的欄。](../images/data-governance/adhoc-schema-toggle.png)
+![「結構描述」控制面板篩選選項左側邊欄的「顯示臨機結構描述」切換功能已啟用。](../images/data-governance/adhoc-schema-toggle.png)
 
-從可用清單中選擇最近建立的臨時架構的名稱。 此時將顯示即席模式結構的可視化。
+從可用清單中選取最近建立的臨時結構描述的名稱。 隨即顯示臨機架構結構的視覺效果。
 
-![ad hoc架構結構圖示例。](../images/data-governance/adhoc-schema-structure-diagram.png)
+![臨時結構描述結構圖範例。](../images/data-governance/adhoc-schema-structure-diagram.png)
 
 ## 編輯控管標籤
 
-要編輯即席架構的資料標籤，請選擇 [!UICONTROL 標籤] 頁籤。 標籤工作區允許您將標籤應用、建立和編輯到您的即席架構欄位，並通過UI控制訪問權限。 此處表示即席架構中的所有欄位。
+若要編輯臨機操作結構描述的資料標籤，請選取 [!UICONTROL 標籤] 標籤。 標籤工作區可讓您對臨時結構描述欄位套用、建立和編輯標籤，並透過UI控制存取許可權。 此處顯示臨時結構描述中的所有欄位。
 
-## 編輯架構或欄位的標籤
+## 編輯結構描述或欄位的標籤
 
-要編輯整個架構的標籤，請選擇鉛筆表徵圖(![鉛筆表徵圖。](../images/data-governance/edit-icon.png))到架構名稱的一側 [!UICONTROL 標籤] 頁籤。
+若要編輯整個結構描述的標籤，請選取鉛筆圖示(![鉛筆圖示。](../images/data-governance/edit-icon.png))至結構描述名稱旁邊 [!UICONTROL 標籤] 標籤。
 
-![方案工作區中的標籤視圖，鉛筆表徵圖突出顯示。](../images/data-governance/edit-entire-schema-labels.png)
+![標籤會在結構描述工作區中檢視，並反白顯示鉛筆圖示。](../images/data-governance/edit-entire-schema-labels.png)
 
-要將標籤應用於現有欄位，請從清單中選擇一個或多個欄位，後跟 [!UICONTROL 編輯治理標籤] 的下界。
+若要將標籤套用至現有欄位，請從清單中選取一個或多個欄位，然後選取 [!UICONTROL 編輯治理標籤] 在右側邊欄中。
 
-![架構工作區中的標籤視圖，右側提要欄中突出顯示了「編輯治理標籤」選項。](../images/data-governance/edit-governance-labels.png)
+![在右側邊欄中反白顯示「編輯治理標籤」選項的結構描述工作區中的標籤檢視。](../images/data-governance/edit-governance-labels.png)
 
-## 編輯標籤沿面
+## 編輯標籤彈出視窗
 
-的 [!UICONTROL 編輯標籤] 出現「popover（跨距）」。 通過此視圖，可以通過UI建立或編輯現有治理標籤。
+此 [!UICONTROL 編輯標籤] 彈出視窗隨即顯示。 從這個檢視，您可以透過UI建立或編輯現有的治理標籤。
 
-![「編輯」(Edit)標籤沿面。](../images/data-governance/edit-labels-popover.png)
+![編輯標籤彈出視窗。](../images/data-governance/edit-labels-popover.png)
 
-請參閱文檔，瞭解有關如何 [建立或編輯所選方案或欄位的標籤](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field)。
+請參閱檔案，取得以下操作的指引： [建立或編輯所選結構描述或欄位的標籤](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
->建立新標籤或編輯現有標籤需要您組織的管理員權限。 如果您沒有管理員權限，請與系統管理員聯繫以安排訪問。
+>建立新標籤或編輯現有標籤需要您組織的管理員許可權。 如果您沒有管理員許可權，請聯絡您的系統管理員以安排存取權。
 
-也可以使用權限工作區建立標籤。 查看 [有關在權限工作區中建立標籤的指南](../../access-control/abac/ui/labels.md) 的雙曲餘切值。
+您也可以使用許可權工作區來建立標籤。 請參閱 [在許可權工作區中建立標籤指南](../../access-control/abac/ui/labels.md) 以取得指示。
 
-一旦應用了相應級別的基於屬性的訪問控制，則當用戶嘗試訪問不可訪問的資料時，以下系統行為將應用於通過查詢服務執行的任何查詢：
+套用以屬性為基礎的適當層級存取控制後，當使用者嘗試存取無法存取的資料時，以下系統行為適用於透過「查詢服務」執行的任何查詢：
 
-1. 如果用戶被拒絕訪問架構中的某個欄位，則用戶將無法讀取或寫入受限欄位。 這適用於以下常見方案：
+1. 如果拒絕使用者存取結構描述中的其中一個欄位，使用者將無法讀取或寫入受限制的欄位。 這種情況適用於下列常見案例：
 
-   * 當用戶嘗試僅使用受限列執行查詢時，系統將引發一個列不存在的錯誤。
-   * 當用戶嘗試執行包含限制列的多個列的查詢時，系統將僅返回所有非限制列的輸出。
+   * 當使用者嘗試執行僅具有受限欄的查詢時，系統將擲回該欄不存在的錯誤。
+   * 當使用者嘗試執行具有多個包含受限欄的查詢時，系統將只為所有非受限欄傳回輸出。
 
-1. 如果用戶請求訪問計算欄位，則用戶必須有權訪問合成中使用的所有欄位，否則系統將拒絕訪問計算欄位。
+1. 如果使用者請求存取計算欄位，該使用者需要存取構成中使用的所有欄位，或者系統將拒絕存取計算欄位。
 
-如果在即席模式上設定了標識或主標識，則系統將自動執行任何關聯的資料衛生請求並清除那些與標識列關聯的資料集中的資料。
+如果在臨時結構描述上設定了身分或主要身分，則系統會自動執行任何關聯的資料衛生請求，並清除與身分欄繫結的資料集中的資料。
 
 ## 後續步驟
 
-閱讀此文檔後，您更瞭解如何將資料使用標籤添加到通過查詢服務CTAS查詢建立的即席架構。 如果尚未執行此操作，則以下文檔對於提高您對查詢服務中資料治理的瞭解非常有用：
+閱讀本檔案後，您對如何透過查詢服務CTAS查詢建立的臨時結構描述新增資料使用標籤有了更深入的瞭解。 如果您尚未這麼做，下列檔案有助於您進一步瞭解Query Service中的資料控管：
 
-* [即席架構標識](./ad-hoc-schema-identities.md)
-* [資料治理](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)
+* [臨時結構描述身分](./ad-hoc-schema-identities.md)
+* [資料控管](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)

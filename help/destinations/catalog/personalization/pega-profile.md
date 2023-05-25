@@ -1,6 +1,6 @@
 ---
-title: Pega輪廓連接器
-description: 使用Adobe Experience PlatformAmazonS3的Pega配置檔案連接器將完整或增量配置檔案資料導出到AmazonS3雲儲存。 在Pega客戶決策中心中，可以在客戶配置檔案設計器中安排資料作業，以定期從AmazonS3儲存中導入配置檔案資料。
+title: Pega設定檔聯結器
+description: 使用Adobe Experience Platform中Amazon S3的Pega設定檔聯結器，將完整或增量（或兩者）設定檔資料匯出至Amazon S3雲端儲存空間。 在Pega Customer Decision Hub中，可在Customer Profile Designer中排程資料工作，以定期從Amazon S3儲存空間匯入設定檔資料。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
@@ -10,124 +10,124 @@ ht-degree: 0%
 
 ---
 
-# Pega輪廓連接器
+# Pega設定檔聯結器
 
 ## 總覽 {#overview}
 
-使用 [!DNL Pega Profile Connector] 在Adobe Experience Platform建立與 [!DNL Amazon Web Services] (AWS)S3儲存，定期將配置檔案資料從Adobe Experience Platform導出到CSV檔案，並將其導出到您自己的S3儲存桶中。 在 [!DNL Pega Customer Decision Hub]，您可以安排資料作業從S3儲存導入此配置檔案資料以更新 [!DNL Pega Customer Decision Hub] 檔案。
+使用 [!DNL Pega Profile Connector] 在Adobe Experience Platform中建立與您的的即時輸出連線 [!DNL Amazon Web Services] (AWS) S3儲存空間，可定期從Adobe Experience Platform將設定檔資料匯出為CSV檔案，並放入您自己的S3儲存貯體。 在 [!DNL Pega Customer Decision Hub]，您可以排程資料工作，以從S3儲存空間匯入此設定檔資料來更新 [!DNL Pega Customer Decision Hub] 設定檔。
 
-此連接器有助於設定配置檔案資料的初始導出，還有助於定期將新配置檔案同步到 [!DNL Pega Customer Decision Hub]。  在客戶決策中心擁有最新資料，為下一最佳行動決策提供了更好、更新的客戶群視圖。
+此聯結器有助於設定設定檔資料的初始匯出，也有助於定期將新設定檔同步到 [!DNL Pega Customer Decision Hub].  在客戶決策中心擁有最新資料，可為您的客戶群提供更好、更新的檢視，以便做出次佳決策。
 
 >[!IMPORTANT]
 >
->此文檔頁面由Pegasystems建立。 如有任何查詢或更新請求，請直接與Pega聯繫 [這裡](mailto:support@pega.com)。
+>本檔案頁面由Pegasystems建立。 如有任何查詢或更新要求，請直接與Pega聯絡 [此處](mailto:support@pega.com).
 
 ## 使用案例
 
-幫助您更好地瞭解您應如何以及何時使用 [!DNL Pega Profile Connector] 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
+為了協助您更清楚瞭解應該如何及何時使用 [!DNL Pega Profile Connector] 目的地，以下是Adobe Experience Platform客戶可以使用此目的地來解決的範例使用案例。
 
-### 用例1
+### 使用案例1
 
-營銷商希望最初設定 [!DNL Pega Customer Decision Hub] 從Adobe Experience Platform裝載的資料。 這是初始滿載，然後是按計畫的增量載荷。
+行銷人員想要進行初始設定 [!DNL Pega Customer Decision Hub] 並從Adobe Experience Platform載入設定檔資料。 這是初始完整載入，之後依排程進行增量載入。
 
-### 用例2
+### 使用案例2
 
-營銷商希望從Adobe Experience Platform獲得最新的個人資料資料 [!DNL Pega Customer Decision Hub] 這可以不斷增強Pega對客戶簡介的洞察力。
+行銷人員想要從Adobe Experience Platform取得最新的設定檔資料，請前往 [!DNL Pega Customer Decision Hub] 持續增強Pega對客戶個人檔案的深入分析。
 
 ## 先決條件 {#prerequisites}
 
-在使用此目標將資料導出到Adobe Experience Platform並將配置檔案導入到 [!DNL Pega Customer Decision Hub]，確保完成以下先決條件：
+使用此目的地將資料匯出Adobe Experience Platform以及將設定檔匯入之前 [!DNL Pega Customer Decision Hub]，請務必完成下列必要條件：
 
-* 配置 [!DNL Amazon S3] 儲存段和用於導出和導入資料檔案的資料夾路徑。
-* 配置 [!DNL Amazon S3] 訪問密鑰和 [!DNL Amazon S3] 密鑰：在 [!DNL Amazon S3]，生成 `access key - secret access key` 對以授予您的平台訪問權 [!DNL Amazon S3] 帳戶。
-* 要成功將資料連接和導出到 [!DNL Amazon S3] 建立Identity and Access Management(IAM)用戶 [!DNL Platform] 在 [!DNL Amazon S3] 分配權限，如 `s3:DeleteObject`。 `s3:GetBucketLocation`。 `s3:GetObject`。 `s3:ListBucket`。 `s3:PutObject`。 `s3:ListMultipartUploadParts`
-* 確保 [!DNL Pega Customer Decision Hub] 實例已升級到8.8版或更高版本。
+* 設定 [!DNL Amazon S3] 用於匯出和匯入資料檔案的儲存貯體和資料夾路徑。
+* 設定 [!DNL Amazon S3] 存取金鑰和 [!DNL Amazon S3] 秘密金鑰：在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對以授予Platform存取權給您的 [!DNL Amazon S3] 帳戶。
+* 若要成功連線並匯出資料至 [!DNL Amazon S3] 儲存位置，建立「識別與存取管理」(IAM)使用者 [!DNL Platform] 在 [!DNL Amazon S3] 並指派許可權，例如 `s3:DeleteObject`， `s3:GetBucketLocation`， `s3:GetObject`， `s3:ListBucket`， `s3:PutObject`， `s3:ListMultipartUploadParts`
+* 確定您的 [!DNL Pega Customer Decision Hub] 執行個體已升級至8.8版或更新版本。
 
-## 支援的身份 {#supported-identities}
+## 支援的身分 {#supported-identities}
 
-[!DNL Pega Customer Decision Hub] 支援激活下表中所述的自定義用戶ID。 有關詳細資訊，請參閱 [身份](/help/identity-service/namespaces.md)。
+[!DNL Pega Customer Decision Hub] 支援自訂使用者ID的啟用，如下表所述。 如需詳細資訊，請參閱 [身分](/help/identity-service/namespaces.md).
 
-| 目標標識 | 說明 |
+| 目標身分 | 說明 |
 |---|---|
-| *客戶ID* | 唯一標識中配置檔案的通用用戶標識符 [!DNL Pega Customer Decision Hub] 和Adobe Experience Platform |
+| *客戶ID* | 可唯一識別中設定檔的一般使用者識別碼 [!DNL Pega Customer Decision Hub] 和Adobe Experience Platform |
 
 {style="table-layout:auto"}
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出型別和頻率 {#export-type-frequency}
 
-有關目標導出類型和頻率的資訊，請參閱下表。
+請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
-| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，在「選擇配置檔案屬性」螢幕中選擇 [目標激活工作流](../../ui/activate-batch-profile-destinations.md#select-attributes)。 |
-| 導出頻率 | **[!UICONTROL 批]** | 批處理目標將檔案以3、6、8、12或24小時的增量導出到下游平台。 閱讀有關 [基於批檔案的目標](/help/destinations/destination-types.md#file-based)。 |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如&lt;客戶名稱>的「選取設定檔屬性」畫面中所選。 [目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
-## 連接到目標 {#connect}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 > 
->要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在目標配置工作流中，填寫下面兩節中列出的欄位。
+若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目標 {#authenticate}
+### 驗證至目的地 {#authenticate}
 
-要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
+若要驗證目的地，請填入必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
-* **[!DNL Amazon S3]訪問密鑰** 和 **[!DNL Amazon S3]密鑰**:在 [!DNL Amazon S3]，生成 `access key - secret access key` 兩對給Adobe Experience Platform訪問 [!DNL Amazon S3] 帳戶。 在 [Amazon Web Services文檔](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]秘密金鑰**：在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對以授予Adobe Experience Platform存取權給您的 [!DNL Amazon S3] 帳戶。 進一步瞭解 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目的地詳細資料 {#destination-details}
 
-在建立與 [!DNL Amazon S3]，提供目標的以下資訊：
+在建立驗證連線之後，到 [!DNL Amazon S3]，提供目的地的下列資訊：
 
-![UI螢幕的影像顯示Pega配置檔案連接器目標詳細資訊的已完成欄位](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
+![顯示Pega設定檔聯結器目的地詳細資訊的已完成欄位的UI畫面影像](../../assets/catalog/personalization/pega-profile/pega-profile-connect-destination.png)
 
-要配置目標的詳細資訊，請填寫必填欄位並選擇 **[!UICONTROL 下一個]**。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+若要設定目的地的詳細資訊，請填寫必填欄位並選取 **[!UICONTROL 下一個]**. UI中欄位旁的星號表示該欄位為必填。
 
-* **[!UICONTROL 名稱]**:輸入一個名稱，以幫助您標識此目標。
-* **[!UICONTROL 說明]**:輸入此目標的說明。
-* **[!UICONTROL 儲存段名稱]**:輸入 [!DNL Amazon S3] 該目標使用的儲存桶。
-* **[!UICONTROL 資料夾路徑]**:輸入將承載導出檔案的目標資料夾的路徑。
-* **[!UICONTROL 壓縮類型]**:選擇壓縮類型為GZIP或NONE。
+* **[!UICONTROL 名稱]**：輸入有助於您識別此目的地的名稱。
+* **[!UICONTROL 說明]**：輸入此目的地的說明。
+* **[!UICONTROL 貯體名稱]**：輸入 [!DNL Amazon S3] 要由此目的地使用的貯體。
+* **[!UICONTROL 資料夾路徑]**：輸入存放匯出檔案的目標資料夾路徑。
+* **[!UICONTROL 壓縮型別]**：選取GZIP或NONE壓縮型別。
 
 >[!TIP]
 >
->在連接目標工作流中，您可以在每個導出的段檔案的AmazonS3儲存中建立一個自定義資料夾。 閱讀 [使用宏在儲存位置中建立資料夾](/help/destinations/catalog/cloud-storage/overview.md#use-macros) 的雙曲餘切值。
+>在連線目標工作流程中，您可以根據匯出的每個區段檔案，在Amazon S3儲存空間中建立自訂資料夾。 讀取 [使用巨集在您的儲存位置中建立資料夾](/help/destinations/catalog/cloud-storage/overview.md#use-macros) 以取得指示。
 
-### 啟用警報 {#enable-alerts}
+### 啟用警示 {#enable-alerts}
 
-您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
 
-完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 將段激活到此目標 {#activate}
+## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 > 
->要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-請參閱 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 有關激活此目標受眾段的說明。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
-### 映射屬性和標識 {#map}
+### 對應屬性和身分 {#map}
 
-在 **[!UICONTROL 映射]** 步驟，您可以選擇要為配置檔案導出的屬性和標識欄位。 也可以選擇將導出檔案中的標題更改為任何您希望的友好名稱。 有關詳細資訊，請查看 [映射步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 在激活批處理目標UI教程中。
+在 **[!UICONTROL 對應]** 步驟，您可以選取要為設定檔匯出的屬性和身分欄位。 您也可以選取將匯出檔案中的標題變更為任何您想要的易記名稱。 如需詳細資訊，請檢視 [對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) 在啟動批次目的地UI教學課程中。
 
-## 驗證資料導出 {#exported-data}
+## 驗證資料匯出 {#exported-data}
 
-對於 [!DNL Pega Profile Connector] 目的地， [!DNL Platform] 建立 `.csv` 檔案位於您提供的AmazonS3儲存位置。 有關檔案的詳細資訊，請參見 [將受眾資料激活到批配置檔案導出目標](../../ui/activate-batch-profile-destinations.md) 在段激活教程中。
+對象 [!DNL Pega Profile Connector] 目的地， [!DNL Platform] 建立 `.csv` 個檔案儲存在您提供的Amazon S3儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 區段啟動教學課程中的。
 
-從S3成功導入配置檔案資料會在 [!DNL Pega Customer] 配置檔案資料儲存。 導入的客戶配置檔案資料可在 [!DNL Pega Customer Profile Designer] ，如下圖所示。
-![UI螢幕的影像，您可以在客戶配置檔案設計器中驗證Adobe配置檔案資料](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+成功從S3匯入設定檔資料後，會將資料插入 [!DNL Pega Customer] 設定檔資料存放區。 可以在中驗證匯入的客戶設定檔資料 [!DNL Pega Customer Profile Designer] ，如下圖所示。
+![您可以在其中驗證Customer Profile Designer中Adobe設定檔資料的UI畫面影像](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
-在 [!DNL Pega Customer Decision Hub]，資料管理員可以配置資料作業 [!DNL Customer Profile Designer] 定期從S3導入配置檔案資料，如下圖所示。 查看 [額外資源](#additional-resources) 有關如何配置資料作業以從導入配置檔案資料的詳細資訊 [!DNL Amazon S3]。
-![UI螢幕的影像，用於配置客戶配置檔案設計器中的資料作業](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
+在 [!DNL Pega Customer Decision Hub]，資料管理員可以在以下位置設定資料工作： [!DNL Customer Profile Designer] 從S3定期匯入設定檔資料，如下圖所示。 請參閱 [其他資源](#additional-resources) 有關如何設定資料作業，以從匯入設定檔資料的詳細資訊 [!DNL Amazon S3].
+![在Customer Profile Designer中設定資料工作的UI畫面影像](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)
 
 ## 其他資源 {#additional-resources}
 
-請參閱 [導入資料作業](https://academy.pega.com/topic/import-data-jobs/v1) 在 [!DNL Pega Customer Decision Hub]。
+另請參閱 [匯入資料工作](https://academy.pega.com/topic/import-data-jobs/v1) 在 [!DNL Pega Customer Decision Hub].
 
-## 資料使用和治理 {#data-usage-governance}
+## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](/help/data-governance/home.md)。
+全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，請參閱 [資料控管概觀](/help/data-governance/home.md).

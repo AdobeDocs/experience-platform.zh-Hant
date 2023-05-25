@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流式服務；流式服務API；源；源
-title: 使用流服務API篩選源的行級資料
-description: 本教程介紹如何使用流服務API在源級別篩選資料的步驟
+keywords: Experience Platform；首頁；熱門主題；流程服務；流程服務API；來源；來源
+title: 使用Flow Service API篩選來源的列層級資料
+description: 本教學課程涵蓋如何使用Flow Service API在來源層級篩選資料的步驟
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
 workflow-type: tm+mt
@@ -10,39 +10,39 @@ ht-degree: 2%
 
 ---
 
-# 使用 [!DNL Flow Service] API
+# 使用「 」篩選來源的列層級資料 [!DNL Flow Service] API
 
 >[!IMPORTANT]
 >
->當前僅對以下源提供對篩選行級資料的支援：
+>篩選列層級資料的支援目前僅適用於下列來源：
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
 
-本教程介紹如何使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
+本教學課程提供如何使用來篩選來源的列層級資料的步驟。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門
 
-本教程要求您對以下Adobe Experience Platform元件有一定的瞭解：
+本教學課程需要您實際瞭解Adobe Experience Platform的下列元件：
 
-* [源](../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
-* [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
+* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../landing/api-guide.md).
 
-## 篩選源資料
+## 篩選來源資料
 
-下面概述了為篩選源的行級資料而要採取的步驟。
+以下概述篩選來源之列層級資料時應採取的步驟。
 
-### 查找連接規範
+### 查詢連線規格
 
-在使用API篩選源的行級資料之前，必須先檢索源的連接規範詳細資訊，以確定特定源支援的運算子和語言。
+在使用API來篩選來源的列層級資料之前，您必須先擷取來源的連線規格詳細資料，以判斷特定來源支援的運運算元和語言。
 
-要檢索給定源的連接規範，請向 `/connectionSpecs` 端點 [!DNL Flow Service] API，同時將源的屬性名稱作為查詢參數的一部分提供。
+GET若要擷取指定來源的連線規格，請向 `/connectionSpecs` 的端點 [!DNL Flow Service] API時輸入來源的屬性名稱，作為查詢引數的一部分。
 
 **API格式**
 
@@ -52,11 +52,11 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{QUERY_PARAMS}` | 篩選結果的可選查詢參數。 可以檢索 [!DNL Google BigQuery] 通過應用 `name` 屬性和指定 `"google-big-query"` 搜索。 |
+| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 您可以擷取 [!DNL Google BigQuery] 透過套用 `name` 屬性和指定 `"google-big-query"` 以取得搜尋結果。 |
 
 **要求**
 
-以下請求檢索的連接規範 [!DNL Google BigQuery]。
+下列要求會擷取下列專案的連線規格： [!DNL Google BigQuery].
 
 ```shell
 curl -X GET \
@@ -69,11 +69,11 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回的連接規範 [!DNL Google BigQuery]，包括有關其支援的查詢語言和邏輯運算子的資訊。
+成功的回應會傳回的連線規格 [!DNL Google BigQuery]，包括其支援的查詢語言和邏輯運運算元的資訊。
 
 >[!NOTE]
 >
->以下API響應被截斷以便簡單。
+>以下API回應會因簡短原因而截斷。
 
 ```json
 "attributes": {
@@ -102,12 +102,12 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.filterAtSource.enabled` | 確定查詢的源是否支援篩選行級資料。 |
-| `attributes.filterAtSource.queryLanguage` | 確定查詢源支援的查詢語言。 |
-| `attributes.filterAtSource.logicalOperators` | 確定可用於篩選源的行級資料的邏輯運算子。 |
-| `attributes.filterAtSource.comparisonOperators` | 確定可用於篩選源的行級資料的比較運算子。 有關比較運算子的詳細資訊，請參閱下表。 |
-| `attributes.filterAtSource.columnNameEscapeChar` | 確定用於轉義列的字元。 |
-| `attributes.filterAtSource.valueEscapeChar` | 確定在寫入SQL查詢時如何包圍值。 |
+| `attributes.filterAtSource.enabled` | 決定查詢的來源是否支援篩選列層級資料。 |
+| `attributes.filterAtSource.queryLanguage` | 決定查詢來源支援的查詢語言。 |
+| `attributes.filterAtSource.logicalOperators` | 決定可用來篩選來源之列層級資料的邏輯運運算元。 |
+| `attributes.filterAtSource.comparisonOperators` | 決定可用來篩選來源之列層級資料的比較運運算元。 請參閱下表以瞭解比較運運算元的詳細資訊。 |
+| `attributes.filterAtSource.columnNameEscapeChar` | 決定用於逸出欄的字元。 |
+| `attributes.filterAtSource.valueEscapeChar` | 決定寫入SQL查詢時如何包圍值。 |
 
 {style="table-layout:auto"}
 
@@ -115,22 +115,22 @@ curl -X GET \
 
 | 運算子 | 說明 |
 | --- | --- |
-| `==` | 按屬性是否等於提供的值進行篩選。 |
-| `!=` | 按屬性是否不等於提供的值進行篩選。 |
-| `<` | 按屬性是否小於提供的值進行篩選。 |
-| `>` | 按屬性是否大於提供的值進行篩選。 |
-| `<=` | 按屬性是否小於或等於提供的值進行篩選。 |
-| `>=` | 按屬性是否大於或等於提供的值進行篩選。 |
-| `like` | 在中使用的篩選器 `WHERE` 子句以搜索指定的模式。 |
-| `in` | 按屬性是否在指定範圍內進行篩選。 |
+| `==` | 依據屬性是否等於提供的值來篩選。 |
+| `!=` | 依據屬性是否不等於提供的值來篩選。 |
+| `<` | 依據屬性是否小於提供的值來篩選。 |
+| `>` | 依據屬性是否大於提供的值來篩選。 |
+| `<=` | 依據屬性是否小於或等於提供的值來篩選。 |
+| `>=` | 依據屬性是否大於或等於提供的值來篩選。 |
+| `like` | 在中使用的篩選器 `WHERE` 子句以搜尋指定的模式。 |
+| `in` | 依據屬性是否在指定範圍內進行篩選。 |
 
 {style="table-layout:auto"}
 
-### 指定接收的篩選條件
+### 指定擷取的篩選條件
 
-一旦確定了源支援的邏輯運算子和查詢語言，您就可以使用配置檔案查詢語言(PQL)指定要應用於源資料的篩選條件。
+在識別來源支援的邏輯運運算元和查詢語言之後，您可以使用設定檔查詢語言(PQL)來指定您要套用至來源資料的篩選條件。
 
-在下面的示例中，條件只應用於選擇與作為參數列出的節點類型的提供值相等的資料。
+在下列範例中，條件僅會套用至選取與引數中所列節點型別所提供值相等的資料。
 
 ```json
 {
@@ -153,9 +153,9 @@ curl -X GET \
 }
 ```
 
-### 預覽資料
+### 預覽您的資料
 
-您可以通過向 `/explore` 端點 [!DNL Flow Service] API，同時提供 `filters` 作為查詢參數的一部分，並在 [!DNL Base64]。
+您可以透過向以下發出GET請求來預覽資料： `/explore` 的端點 [!DNL Flow Service] API同時提供 `filters` 作為查詢引數的一部分，並在中指定PQL輸入條件 [!DNL Base64].
 
 **API格式**
 
@@ -165,9 +165,9 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 源的基本連接ID。 |
-| `{TABLE_PATH}` | 要檢查的表的路徑屬性。 |
-| `{FILTERS}` | PQL篩選條件編碼為 [!DNL Base64]。 |
+| `{BASE_CONNECTION_ID}` | 來源的基本連線ID。 |
+| `{TABLE_PATH}` | 您要檢查的資料表的path屬性。 |
+| `{FILTERS}` | 您的PQL篩選條件編碼於 [!DNL Base64]. |
 
 **要求**
 
@@ -182,7 +182,7 @@ curl -X GET \
 
 **回應**
 
-成功的請求返回以下響應。
+成功的請求會傳回以下回應。
 
 ```json
 {
@@ -328,9 +328,9 @@ curl -X GET \
 }
 ```
 
-### 為篩選的資料建立源連接
+### 建立篩選資料的來源連線
 
-要建立源連接並接收篩選的資料，請向 `/sourceConnections` 端點，同時將過濾條件作為主體參數的一部分。
+若要建立來源連線並擷取經過篩選的資料，請向發出POST要求 `/sourceConnections` 端點時，將篩選條件提供為body引數的一部分。
 
 **API格式**
 
@@ -340,7 +340,7 @@ POST /sourceConnections
 
 **要求**
 
-以下請求建立源連接以從中接收資料 `test1.fasTestTable` 何處 `city` = `DDN`。
+以下請求會建立來源連線，以從中擷取資料 `test1.fasTestTable` 位置 `city` = `DDN`.
 
 ```shell
 curl -X POST \
@@ -387,7 +387,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回唯一標識符(`id`)。
+成功的回應會傳回唯一識別碼(`id`)。
 
 ```json
 {
@@ -398,11 +398,11 @@ curl -X POST \
 
 ## 附錄
 
-本節提供了用於過濾的不同負載的進一步示例。
+本節提供不同裝載的更多範例以供篩選。
 
 ### 奇異條件
 
-可以省略初始 `fnApply` 只需要一個條件的情況。
+您可以省略初始值 `fnApply` 適用於只需要一個條件的案例。
 
 ```json
 {
@@ -425,9 +425,9 @@ curl -X POST \
 }
 ```
 
-### 使用 `in` 算子
+### 使用 `in` 運運算元
 
-有關操作符的示例，請參見下面的示例負載 `in`。
+如需運運算元的範例，請參閱下方的裝載範例 `in`.
 
 ```json
 {
@@ -459,9 +459,9 @@ curl -X POST \
 }
 ```
 
-### 使用 `isNull` 算子
+### 使用 `isNull` 運運算元
 
-有關操作符的示例，請參見下面的示例負載 `isNull`。
+如需運運算元的範例，請參閱下方的裝載範例 `isNull`.
 
 ```json
 {
@@ -480,9 +480,9 @@ curl -X POST \
 }
 ```
 
-### 使用 `NOT` 算子
+### 使用 `NOT` 運運算元
 
-有關操作符的示例，請參見下面的示例負載 `NOT`。
+如需運運算元的範例，請參閱下方的裝載範例 `NOT`.
 
 ```json
 {
@@ -507,9 +507,9 @@ curl -X POST \
 }
 ```
 
-### 帶嵌套條件的示例
+### 具有巢狀條件的範例
 
-有關複雜嵌套條件的示例，請參見下面的示例負載。
+如需複雜巢狀條件的範例，請參閱下列裝載範例。
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
-title: Real-time Customer Data PlatformB2B版的訪問控制
-description: 訪問控制在Adobe Real-time Customer Data PlatformB2B版中的作用概述。
+title: Real-time Customer Data Platform B2B版本中的存取控制
+description: 概述Adobe Real-time Customer Data Platform B2B版本中存取控制的角色。
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
 source-wordcount: '153'
@@ -8,13 +8,13 @@ ht-degree: 2%
 
 ---
 
-# Adobe Real-time Customer Data PlatformB2B版的訪問控制
+# Adobe Real-time Customer Data Platform B2B版本中的存取控制
 
-Real-Time CDPB2B版的訪問控制通過 [Adobe Admin Console](https://adminconsole.adobe.com)。 此功能利用中的產品配置檔案 [!DNL Admin Console]，允許您將用戶與權限和沙箱連結。 使用此功能，管理員可以授予或限制對已定義用戶集的特定Real-Time CDP功能（如B2B UI）的訪問權限。
+Real-Time CDP B2B Edition的存取控制需透過 [Adobe Admin Console](https://adminconsole.adobe.com). 此功能可運用產品設定檔於 [!DNL Admin Console]，可讓您連結具有許可權和沙箱的使用者。 使用此功能，管理員可以為已定義的使用者集授予或限制特定Real-Time CDP功能（例如B2B UI）的存取權。
 
-要瞭解有關訪問控制的詳細資訊，請參閱 [訪問控制概述](../../access-control/home.md) 的 [!DNL Experience Platform] 文檔。
+若要進一步瞭解存取控制，請參閱 [存取控制總覽](../../access-control/home.md) 在 [!DNL Experience Platform] 說明檔案。
 
-有關如何使用 [Adobe Admin Console](https://adminconsole.adobe.com) 要為產品配置檔案啟用B2B UI訪問：
+請參閱下列檔案，以取得有關如何使用 [Adobe Admin Console](https://adminconsole.adobe.com) 若要啟用產品設定檔的B2B UI存取權：
 
-* [為新產品配置檔案啟用B2B UI](../../access-control/ui/create-profile.md)
-* [為現有產品配置檔案啟用B2B UI](../../access-control/ui/details-and-services.md)
+* [為新產品設定檔啟用B2B UI](../../access-control/ui/create-profile.md)
+* [為現有的產品設定檔啟用B2B UI](../../access-control/ui/details-and-services.md)

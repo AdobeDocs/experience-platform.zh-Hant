@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；主題；熱門主題；訪問控制；基於屬性的訪問控制；ABAC
-title: 基於屬性的訪問控制沙箱
-description: 本文檔提供有關通過Adobe Experience Cloud的「權限」介面管理沙箱的資訊
+keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型存取控制；ABAC
+title: 以屬性為基礎的存取控制沙箱
+description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管理沙箱的相關資訊
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
 workflow-type: tm+mt
@@ -12,24 +12,24 @@ ht-degree: 0%
 
 # 管理沙箱
 
-沙箱是單個Experience Platform實例中的虛擬分區，它允許與數字型驗應用程式的開發過程無縫整合。 沙盒內執行的所有內容和操作僅限於該沙盒，不影響任何其他沙盒。 有關沙箱的詳細資訊，請參閱 [沙箱概述](../../../sandboxes/home.md)。
+沙箱是單一Experience Platform例項中的虛擬分割區，可與數位體驗應用程式的開發程式緊密整合。 在沙箱內執行的所有內容和動作都僅限於該沙箱，不會影響任何其他沙箱。 如需沙箱的詳細資訊，請參閱 [沙箱總覽](../../../sandboxes/home.md).
 
-## 配置沙箱
+## 設定沙箱
 
-要查看沙盒分配給/與的詳細資訊和角色，請選擇 **[!UICONTROL 沙箱]** 頁籤。
+若要檢視沙箱指派給/搭配使用的詳細資訊和角色，請選取 **[!UICONTROL 沙箱]** 標籤。
 
-![黃沙箱 — 頁籤](../../images/flac-ui/flac-sandboxes-tab.png)
+![flac-sandboxes-tab](../../images/flac-ui/flac-sandboxes-tab.png)
 
-將出現沙箱清單。 從清單中選擇要查看的沙盒。 或者，使用搜索欄通過輸入沙盒名稱來搜索沙盒。
+沙箱清單隨即顯示。 從清單中選取您要檢視的沙箱。 或者，使用搜尋列，輸入沙箱名稱以搜尋沙箱。
 
-詳細資訊頁籤提供沙盒的概述。 概述顯示沙盒名稱、類型、區域、修改日期、修改沙盒的人和沙盒的狀態。
+詳細資訊索引標籤提供沙箱的概觀。 概述會顯示沙箱名稱、型別、區域、修改日期、沙箱的修改者以及沙箱的狀態。
 
-![黃沙箱細節](../../images/flac-ui/flac-sandboxes-details.png)
+![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-選擇 **[!UICONTROL 角色]** 頁籤，查看沙盒指派給的角色。
+選取 **[!UICONTROL 角色]** 標籤以檢視指派沙箱的角色。
 
-![黃沙箱角色](../../images/flac-ui/flac-sandboxes-roles.png)
+![flac-sandboxes-roles](../../images/flac-ui/flac-sandboxes-roles.png)
 
 ## 後續步驟
 
-您現在已學習了如何查看沙盒詳細資訊及其當前分配給的角色。 有關Experience Platform中沙箱的高級概述，請參閱 [沙盒概述文檔](../../sanboxes/../ui/overview.md)。
+您現在已瞭解如何檢視沙箱詳細資料及其目前指派給的角色。 如需Experience Platform沙箱的整體概觀，請參閱 [沙箱概述檔案](../../sanboxes/../ui/overview.md).

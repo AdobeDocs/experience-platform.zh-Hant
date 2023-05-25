@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；主題；熱門主題；分段；分段；分段服務；受眾；受眾；API;api;
-title: 訪問群API終結點
-description: Adobe Experience Platform分段服務API中的受眾終結點允許您以寫程式方式管理組織的受眾。
+keywords: Experience Platform；首頁；熱門主題；細分；細分；細分服務；對象；對象；API；API；
+title: Audiences API端點
+description: Adobe Experience Platform Segmentation Service API中的受眾端點可讓您以程式設計方式管理組織的受眾。
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
@@ -12,54 +12,54 @@ ht-degree: 4%
 
 ---
 
-# 受眾終結點
+# 受眾端點
 
 >[!IMPORTANT]
 >
->訪問群體終結點當前位於測試版中，並且不可用於所有用戶。 文件和功能可能會有所變更。
+>對象端點目前為測試版，並非所有使用者都可使用。 文件和功能可能會有所變更。
 
-受眾是具有相似行為和/或特徵的人的集合。 這些人的集合可以通過使用Adobe Experience Platform或從外部來源生成。 您可以使用 `/audiences` 分段API中的端點，它允許您以寫程式方式檢索、建立、更新和刪除受眾。
+對象是具有相同類似行為和/或特徵的人集合。 這些人員集合可以使用Adobe Experience Platform或從外部來源產生。 您可以使用 `/audiences` 區段API中的端點，可讓您以程式設計方式擷取、建立、更新和刪除對象。
 
 ## 快速入門
 
-本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API。 在繼續之前，請查看 [入門指南](./getting-started.md) 要成功調用API，您需要瞭解的重要資訊，包括必需的標頭以及如何讀取示例API調用。
+本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標頭及如何讀取範例API呼叫。
 
-## 檢索受眾清單 {#list}
+## 擷取對象清單 {#list}
 
-通過向組織發出GET請求，可以檢索組織的所有受眾清單 `/audiences` 端點。
+您可以透過向以下網站發出GET請求，擷取貴組織的所有對象清單： `/audiences` 端點。
 
 **API格式**
 
-的 `/audiences` 終結點支援多個查詢參數以幫助篩選結果。 雖然這些參數是可選的，但強烈建議使用它們以幫助減少列出資源時的昂貴開銷。 如果您在沒有參數的情況下調用此終結點，則將檢索組織的所有可用訪問群體。 可以包括多個參數，用和符號分隔(`&`)。
+此 `/audiences` 端點支援數個查詢引數，以協助篩選結果。 雖然這些引數是選用的，但強烈建議使用這些引數，以幫助在列出資源時減少昂貴的額外負荷。 如果您在不使用引數的情況下呼叫此端點，則會擷取貴組織可用的所有對象。 可包含多個引數，以&amp;符號(`&`)。
 
 ```http
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
 
-檢索訪問群體清單時可以使用以下查詢參數：
+擷取對象清單時，可使用下列查詢引數：
 
 | 查詢參數 | 說明 | 範例 |
 | --------------- | ----------- | ------- |
-| `start` | 指定返回的受眾的起始偏移。 | `start=5` |
-| `limit` | 指定每頁返回的最大訪問群體數。 | `limit=10` |
-| `sort` | 指定結果排序依據的順序。 這是以格式寫的 `attributeName:[desc/asc]`。 | `sort=updateTime:desc` |
-| `property` | 允許您指定受眾的篩選器 **正確** 匹配屬性的值。 這是以格式寫的 `property=` | `property=audienceId==test-audience-id` |
-| `name` | 允許您指定其名稱的受眾的篩選器 **含** 提供的值。 此值不區分大小寫。 | `name=Sample` |
-| `description` | 一個篩選器，允許您指定其說明的受眾 **含** 提供的值。 此值不區分大小寫。 | `description=Test Description` |
-| `withMetrics` | 除訪問群體之外還返回度量的篩選器。 | `property=withMetrics==true` |
+| `start` | 指定傳回對象的開始位移。 | `start=5` |
+| `limit` | 指定每頁傳回的最大對象數。 | `limit=10` |
+| `sort` | 指定排序結果的順序。 這會以格式撰寫 `attributeName:[desc/asc]`. | `sort=updateTime:desc` |
+| `property` | 可讓您指定受眾的篩選器 **完全符合** 符合屬性的值。 這會以格式撰寫 `property=` | `property=audienceId==test-audience-id` |
+| `name` | 可讓您指定名稱為的對象的篩選器 **contain** 提供的值。 此值不區分大小寫。 | `name=Sample` |
+| `description` | 可讓您指定其說明的對象的篩選器 **contain** 提供的值。 此值不區分大小寫。 | `description=Test Description` |
+| `withMetrics` | 除了傳回對象外，還傳回量度的篩選器。 | `property=withMetrics==true` |
 
 >[!IMPORTANT]
 >
->對於受眾，在 `metrics` 屬性，並包含有關配置檔案計數、建立和更新時間戳的資訊。
+>針對對象，量度會傳回至 `metrics` 屬性，並包含設定檔計數、建立和更新時間戳記的資訊。
 
-**無度量**
+**無量度**
 
-在 `withMetrics` 查詢參數不存在。
+下列請求/回應配對用於 `withMetrics` 查詢引數不存在。
 
 **要求**
 
-以下請求將檢索您組織中建立的最後五個受眾。
+以下請求會擷取貴組織中建立的最後5個對象。
 
 ```shell
 curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
@@ -71,11 +71,11 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
 
 **回應** {#no-metrics}
 
-成功的響應返回HTTP狀態200，其中包含在您的組織中建立為JSON的受眾清單。
+成功的回應會傳回HTTP狀態200，其中包含您的組織中建立為JSON的對象清單。
 
 >[!NOTE]
 >
->以下響應已被截斷為空間，並且僅顯示返回的第一個受眾。
+>下列回應已截斷空格，且僅顯示傳回的第一個對象。
 
 ```json
 {
@@ -145,33 +145,33 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
 }
 ```
 
-| 屬性 | 受眾類型 | 說明 |
+| 屬性 | 對象型別 | 說明 |
 | -------- | ------------- | ----------- | 
-| `id` | 兩者 | 系統生成的受眾的只讀標識符。 |
-| `audienceId` | 兩者 | 如果受眾是平台生成的受眾，則此值與 `id`。 如果受眾是外部生成的，則此值由客戶端提供。 |
-| `schema` | 兩者 | 受眾的體驗資料模型(XDM)架構。 |
-| `imsOrgId` | 兩者 | 受眾所屬組織的ID。 |
-| `sandbox` | 兩者 | 有關受眾所屬的沙盒的資訊。 有關沙箱的詳細資訊，請參閱 [箱概述](../../sandboxes/home.md)。 |
+| `id` | 兩者 | 系統產生的對象唯讀識別碼。 |
+| `audienceId` | 兩者 | 如果對象是平台產生的對象，則此值與的值相同。 `id`. 如果對象是外部產生的，此值由使用者端提供。 |
+| `schema` | 兩者 | 對象的Experience Data Model (XDM)結構描述。 |
+| `imsOrgId` | 兩者 | 對象所屬組織的ID。 |
+| `sandbox` | 兩者 | 受眾所屬沙箱的相關資訊。 有關沙箱的更多資訊可在以下網址找到： [沙箱總覽](../../sandboxes/home.md). |
 | `name` | 兩者 | 對象名稱。 |
-| `description` | 兩者 | 受眾的描述。 |
-| `expression` | 平台生成 | 訪問群體的配置檔案查詢語言(PQL)表達式。 有關PQL表達式的詳細資訊，請參閱 [PQL表達式指南](../pql/overview.md)。 |
-| `mergePolicyId` | 平台生成 | 訪問群體所關聯的合併策略的ID。 有關合併策略的詳細資訊，請參閱 [合併策略指南](../../profile/api/merge-policies.md)。 |
-| `evaluationInfo` | 平台生成 | 顯示如何評估受眾。 可能的評估方法包括批處理、流處理或邊緣處理。 有關評估方法的詳細資訊，請參閱 [分段概述](../home.md) |
-| `dependents` | 兩者 | 取決於當前受眾的一系列受眾ID。 如果建立的受眾是段的段，則將使用此選項。 |
-| `dependencies` | 兩者 | 受眾所依賴的受眾ID。 如果建立的受眾是段的段，則將使用此選項。 |
-| `type` | 兩者 | 系統生成的欄位，顯示受眾是平台生成的還是外部生成的受眾。 可能的值包括 `SegmentDefinition` 和 `ExternalAudience`。 A `SegmentDefinition` 是指在平台中生成的受眾，而 `ExternalAudience` 是指未在平台中生成的受眾。 |
-| `createdBy` | 兩者 | 建立訪問群體的用戶的ID。 |
-| `labels` | 兩者 | 對象級資料使用和與受眾相關的基於屬性的訪問控制標籤。 |
-| `namespace` | 兩者 | 訪問群體所屬的命名空間。 可能的值包括 `AAM`。 `AAMSegments`。 `AAMTraits`, `AEPSegments`。 |
-| `audienceMeta` | 外部 | 從外部建立的受眾中外部建立的元資料。 |
+| `description` | 兩者 | 對象說明。 |
+| `expression` | 平台產生 | 對象的設定檔查詢語言(PQL)運算式。 如需PQL運算式的詳細資訊，請參閱 [PQL運算式指南](../pql/overview.md). |
+| `mergePolicyId` | 平台產生 | 與對象相關聯的合併原則ID。 有關合併原則的更多資訊可在以下網址找到： [合併原則指南](../../profile/api/merge-policies.md). |
+| `evaluationInfo` | 平台產生 | 顯示評估對象的方式。 可能的評估方法包括批次、串流或邊緣。 有關評估方法的詳細資訊，請參閱 [區段概述](../home.md) |
+| `dependents` | 兩者 | 相依於目前受眾的受眾ID陣列。 如果您建立的對象是區段的區段，則會使用此屬性。 |
+| `dependencies` | 兩者 | 受眾相依的受眾ID陣列。 如果您建立的對象是區段的區段，則會使用此屬性。 |
+| `type` | 兩者 | 系統產生的欄位，顯示對象是平台產生的還是外部產生的對象。 可能的值包括 `SegmentDefinition` 和 `ExternalAudience`. A `SegmentDefinition` 指在Platform中產生的對象，而 `ExternalAudience` 指不是在Platform中產生的對象。 |
+| `createdBy` | 兩者 | 建立受眾之使用者的ID。 |
+| `labels` | 兩者 | 與對象相關的物件層級資料使用情況和屬性型存取控制標籤。 |
+| `namespace` | 兩者 | 對象所屬的名稱空間。 可能的值包括 `AAM`， `AAMSegments`， `AAMTraits`、和 `AEPSegments`. |
+| `audienceMeta` | 外部 | 從外部建立的對象中從外部建立的中繼資料。 |
 
-**使用度量**
+**使用量度**
 
-在 `withMetrics` 查詢參數存在。
+下列請求/回應配對用於 `withMetrics` 出現查詢引數。
 
 **要求**
 
-以下請求檢索在您的組織中建立的最後五個受眾（包括度量）。
+以下請求會擷取您組織中建立的最後5個對象（含量度）。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetrics==true&limit=5&sort=totalProfiles:desc \
@@ -183,11 +183,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetr
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含指定組織的JSON訪問群體清單和度量。
+成功回應會傳回HTTP狀態200，其中包含指定組織的對象清單及量度，格式為JSON。
 
 >[!NOTE]
 >
->以下響應已被截斷為空間，並且僅顯示返回的第一個受眾。
+>下列回應已截斷空格，且僅顯示傳回的第一個對象。
 
 ```json
 {
@@ -283,22 +283,22 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?propoerty=withMetr
 }
 ```
 
-以下列出屬性 **獨佔** 到 `withMetrics` 回應。 如果您想瞭解標準受眾屬性，請閱讀 [上一節](#no-metrics)。
+以下列出屬性 **獨佔** 至 `withMetrics` 回應。 如果您想知道標準對象屬性，請閱讀 [上一節](#no-metrics).
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `metrics.imsOrgId` | 受眾的組織ID。 |
-| `metrics.sandbox` | 與受眾相關的沙盒資訊。 |
-| `metrics.jobId` | 處理受眾的段作業的ID。 |
-| `metrics.type` | 段作業類型。 這可以是 `export` 或 `batch_segmentation`。 |
-| `metrics.id` | 觀眾的身份證。 |
-| `metrics.data` | 與受眾相關的指標。 這包括以下資訊：包括在受眾中的配置檔案總數、基於每個命名空間的配置檔案總數以及基於每個狀態的配置檔案總數。 |
-| `metrics.createEpoch` | 顯示建立訪問群體的時間戳。 |
-| `metrics.updateEpoch` | 顯示上次更新訪問群體的時間的時間戳。 |
+| `metrics.imsOrgId` | 對象的組織ID。 |
+| `metrics.sandbox` | 和受眾相關的沙箱資訊。 |
+| `metrics.jobId` | 處理對象的區段作業ID。 |
+| `metrics.type` | 區段作業型別。 這可以是 `export` 或 `batch_segmentation`. |
+| `metrics.id` | 對象的ID。 |
+| `metrics.data` | 與對象相關的量度。 這包括對象中包含的設定檔總數、依每個名稱空間的設定檔總數，以及依每個狀態的設定檔總數。 |
+| `metrics.createEpoch` | 顯示對象建立時間的時間戳記。 |
+| `metrics.updateEpoch` | 顯示上次更新對象時間的時間戳記。 |
 
 ## 建立新受眾 {#create}
 
-您可以通過向 `/audiences` 端點。
+您可以透過向以下傳送POST請求來建立新受眾： `/audiences` 端點。
 
 **API格式**
 
@@ -337,11 +337,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | 屬性 | 說明 |
 | -------- | ----------- | 
 | `name` | 對象名稱。 |
-| `description` | 受眾的描述。 |
-| `type` | 顯示受眾是平台生成的受眾還是外部生成的受眾的欄位。 可能的值包括 `SegmentDefinition` 和 `ExternalAudience`。 A `SegmentDefinition` 是指在平台中生成的受眾，而 `ExternalAudience` 是指未在平台中生成的受眾。 |
-| `expression` | 訪問群體的配置檔案查詢語言(PQL)表達式。 有關PQL表達式的詳細資訊，請參閱 [PQL表達式指南](../pql/overview.md)。 |
-| `schema` | 受眾的體驗資料模型(XDM)架構。 |
-| `labels` | 對象級資料使用和與受眾相關的基於屬性的訪問控制標籤。 |
+| `description` | 對象說明。 |
+| `type` | 此欄位會顯示對象是平台產生的受眾，還是外部產生的受眾。 可能的值包括 `SegmentDefinition` 和 `ExternalAudience`. A `SegmentDefinition` 指在Platform中產生的對象，而 `ExternalAudience` 指不是在Platform中產生的對象。 |
+| `expression` | 對象的設定檔查詢語言(PQL)運算式。 如需PQL運算式的詳細資訊，請參閱 [PQL運算式指南](../pql/overview.md). |
+| `schema` | 對象的Experience Data Model (XDM)結構描述。 |
+| `labels` | 與對象相關的物件層級資料使用情況和屬性型存取控制標籤。 |
 
 **回應**
 
@@ -409,9 +409,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 }
 ```
 
-## 查找指定的受眾 {#get}
+## 查詢指定的對象 {#get}
 
-您可以通過向以下站點發出GET請求來查找有關特定受眾的詳細資訊： `/audiences` 端點，並提供您希望在請求路徑中檢索的訪問群體的ID。
+您可以透過向以下網站發出GET要求，查詢有關特定對象的詳細資訊： `/audiences` 端點，並提供您想要在請求路徑中擷取之對象的ID。
 
 **API格式**
 
@@ -422,8 +422,8 @@ GET /audiences/{AUDIENCE_ID}?property=withmetrics==true
 
 | 參數 | 說明 |
 | --------- | ----------- | 
-| `{AUDIENCE_ID}` | 您嘗試檢索的受眾的ID。 |
-| `property=withmetrics==true` | 如果要用受眾度量檢索指定的受眾，可以使用的可選查詢參數。 |
+| `{AUDIENCE_ID}` | 您嘗試擷取的對象ID。 |
+| `property=withmetrics==true` | 選擇性查詢引數，如果要使用對象量度擷取指定的對象，可使用此引數。 |
 
 **要求**
 
@@ -437,9 +437,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關指定受眾的資訊。 響應會因為受眾是Adobe Experience Platform或外部來源而不同。
+成功的回應會傳回HTTP狀態200，其中包含指定對象的資訊。 回應將因對象是使用Adobe Experience Platform還是外部來源產生而異。
 
-**平台生成**
+**平台產生**
 
 ```json
 {
@@ -505,7 +505,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 }
 ```
 
-**外部生成**
+**外部產生**
 
 ```json
 {
@@ -537,9 +537,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 }
 ```
 
-## 更新受眾中的欄位 {#update-field}
+## 更新對象中的欄位 {#update-field}
 
-您可以通過向以下站點發出PATCH請求來更新特定受眾的欄位 `/audiences` 終結點，並提供您希望在請求路徑中更新的訪問群體的ID。
+您可以透過向以下連結發出PATCH請求，更新特定對象的欄位： `/audiences` 端點，並在請求路徑中提供您要更新的對象ID。
 
 **API格式**
 
@@ -549,7 +549,7 @@ PATCH /audiences/{AUDIENCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 要更新的受眾的ID。 |
+| `{AUDIENCE_ID}` | 您要更新的對象ID。 |
 
 **要求**
 
@@ -576,13 +576,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `op` | 對於更新受眾，此值始終 `add`。 |
-| `path` | 要更新的欄位的路徑。 |
-| `value` | 要將欄位更新為的值。 |
+| `op` | 若要更新對象，此值一律為 `add`. |
+| `path` | 您要更新的欄位路徑。 |
+| `value` | 您要更新欄位的值。 |
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關新更新的受眾的資訊。
+成功回應會傳回HTTP狀態200，其中包含您新更新對象的資訊。
 
 ```json
 {
@@ -647,9 +647,9 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-45
 }
 ```
 
-## 更新受眾 {#put}
+## 更新對象 {#put}
 
-您可以通過向以下站點發出PUT請求來更新（覆蓋）特定受眾 `/audiences` 終結點，並提供您希望在請求路徑中更新的訪問群體的ID。
+您可以透過向以下專案發出PUT請求，更新（覆寫）特定對象： `/audiences` 端點，並在請求路徑中提供您要更新的對象ID。
 
 **API格式**
 
@@ -682,18 +682,18 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 | 屬性 | 說明 |
 | -------- | ----------- | 
-| `audienceId` | 觀眾的ID。 外部受眾使用 |
+| `audienceId` | 對象的ID。 外部對象會使用此專案 |
 | `name` | 對象名稱。 |
 | `namespace` |  |
-| `description` | 受眾的描述。 |
-| `type` | 系統生成的欄位，顯示受眾是平台生成的還是外部生成的受眾。 可能的值包括 `SegmentDefinition` 和 `ExternalAudience`。 A `SegmentDefinition` 是指在平台中生成的受眾，而 `ExternalAudience` 是指未在平台中生成的受眾。 |
-| `lifecycle` | 受眾的狀態。 可能的值包括 `draft`。 `published`。 `inactive`, `archived`。 `draft` 表示建立受眾時， `published` 當觀眾發表時， `inactive` 當觀眾不再活躍時， `archived` 的子菜單。 |
-| `datasetId` | 可找到受眾資料的資料集的ID。 |
-| `labels` | 對象級資料使用和與受眾相關的基於屬性的訪問控制標籤。 |
+| `description` | 對象說明。 |
+| `type` | 系統產生的欄位，顯示對象是平台產生的還是外部產生的對象。 可能的值包括 `SegmentDefinition` 和 `ExternalAudience`. A `SegmentDefinition` 指在Platform中產生的對象，而 `ExternalAudience` 指不是在Platform中產生的對象。 |
+| `lifecycle` | 對象的狀態。 可能的值包括 `draft`， `published`， `inactive`、和 `archived`. `draft` 代表建立對象的時間， `published` 發佈對象時， `inactive` 對象不再作用中時，以及 `archived` 是否刪除對象。 |
+| `datasetId` | 可找到對象資料的資料集ID。 |
+| `labels` | 與對象相關的物件層級資料使用情況和屬性型存取控制標籤。 |
 
 **回應**
 
-成功的響應返回HTTP狀態200，並返回您最近更新的受眾的詳細資訊。 請注意，您的受眾的詳細資訊將因平台生成的受眾或外部生成的受眾而異。
+成功回應會傳回HTTP狀態200以及您新更新對象的詳細資料。 請注意，您的對象詳細資訊會因平台產生的對象或外部產生的對象而有所不同。
 
 ```json
 {
@@ -721,9 +721,9 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 }
 ```
 
-## 刪除受眾 {#delete}
+## 刪除對象 {#delete}
 
-您可以通過向DELETE請求刪除特定受眾 `/audiences` 終結點，並提供要在請求路徑中刪除的訪問群體的ID。
+您可以透過向以下專案發出DELETE請求來刪除特定對象： `/audiences` 端點並在請求路徑中提供您要刪除之對象的ID。
 
 **API格式**
 
@@ -733,7 +733,7 @@ DELETE /audiences/{AUDIENCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{AUDIENCE_ID}` | 要刪除的受眾的ID。 |
+| `{AUDIENCE_ID}` | 您要刪除的對象ID。 |
 
 **要求**
 
@@ -747,4 +747,4 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4
 
 **回應**
 
-成功的響應返回HTTP狀態204，無消息。
+成功的回應會傳回HTTP狀態204，但無訊息。

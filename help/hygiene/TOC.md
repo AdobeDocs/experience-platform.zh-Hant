@@ -14,15 +14,15 @@ ht-degree: 50%
 
 # 資料衛生 {#hygiene}
 
-* [資料衛生概述](./home.md)
+* [資料檢疫概觀](./home.md)
 * 資料衛生UI {#ui}
    * [總覽](./ui/overview.md)
-   * [瀏覽現有工作單](./ui/browse.md)
-   * [管理資料集過期](./ui/dataset-expiration.md)
+   * [瀏覽現有工單](./ui/browse.md)
+   * [管理資料集有效期](./ui/dataset-expiration.md)
    * [刪除記錄](./ui/record-delete.md)
 * 資料衛生API {#api}
    * [總覽](./api/overview.md)
-   * [資料集過期](./api/dataset-expiration.md)
+   * [資料集有效期](./api/dataset-expiration.md)
    * [記錄刪除](./api/jobs.md)
    * [記錄刪除](./api/workorder.md)
    * [配額](./api/quota.md)

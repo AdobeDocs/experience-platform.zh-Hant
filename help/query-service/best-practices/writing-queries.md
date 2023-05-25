@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；寫入查詢；寫入查詢；
 solution: Experience Platform
-title: 查詢服務中查詢執行的一般指導
+title: 查詢服務中查詢執行的一般指引
 type: Tutorial
-description: 本文檔概述了在Adobe Experience Platform查詢服務中編寫查詢時需要瞭解的重要詳細資訊。
+description: 本檔案概述在Adobe Experience Platform查詢服務中寫入查詢時需要瞭解的重要細節。
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
 workflow-type: tm+mt
@@ -12,45 +12,45 @@ ht-degree: 3%
 
 ---
 
-# 查詢執行的一般指南 [!DNL Query Service]
+# 中查詢執行的一般指引 [!DNL Query Service]
 
-本文檔詳細介紹了在Adobe Experience Platform編寫查詢時需要瞭解的重要詳細資訊 [!DNL Query Service]。
+本檔案詳細說明在Adobe Experience Platform中撰寫查詢時需要瞭解的重要細節 [!DNL Query Service].
 
-有關中使用的SQL語法的詳細資訊 [!DNL Query Service]，請閱讀 [SQL語法文檔](../sql/syntax.md)。
+如需中使用的SQL語法的詳細資訊， [!DNL Query Service]，請閱讀 [SQL語法檔案](../sql/syntax.md).
 
 ## 查詢執行模型
 
-Adobe Experience Platform [!DNL Query Service] 有兩種查詢執行模型：互動和非互動。 互動式執行用於商業智慧工具中的查詢開發和報告生成，而非互動式用於作為資料處理工作流的一部分的較大作業和操作查詢。
+Adobe Experience Platform [!DNL Query Service] 有兩種查詢執行模式：互動式和非互動式。 互動式執行用於商業智慧工具中的查詢開發和報表產生，而非互動式則用於大型作業和作業查詢作為資料處理工作流程的一部分。
 
 ### 互動式查詢執行
 
-通過以下方式提交查詢，可以交互地執行查詢： [!DNL Query Service] UI或 [通過連接的客戶端](../clients/overview.md)。 運行時 [!DNL Query Service] 通過連接的客戶端，在客戶端和 [!DNL Query Service] 直到提交的查詢返回或超時。
+透過提交查詢，能以互動方式執行查詢。 [!DNL Query Service] UI或 [透過連線的使用者端](../clients/overview.md). 執行時 [!DNL Query Service] 透過連線的使用者端，使用中的工作階段會在使用者端和之間執行 [!DNL Query Service] 直到提交的查詢傳回或逾時。
 
-互動式查詢執行具有以下限制：
+互動式查詢執行有下列限制：
 
 | 參數 | 限制 |
 | --------- | ---------- |
-| 查詢超時 | 10 分鐘 |
-| 返回的最大行數 | 50,000 |
-| 最大併發查詢數 | 5 |
+| 查詢逾時 | 10 分鐘 |
+| 傳回的最大列數 | 50,000 |
+| 最大並行查詢數 | 5 |
 
 >[!NOTE]
 >
->要覆蓋最大行限制，請包括 `LIMIT 0` 的雙曲余弦值。 10分鐘的查詢超時仍然適用。
+>若要覆寫最大列數限制，請包含 `LIMIT 0` （在您的查詢中）。 10分鐘的查詢逾時仍然適用。
 
-預設情況下，交互查詢的結果將返回給客戶端，並且 **不** 永續。 將結果作為資料集保留在 [!DNL Experience Platform]，查詢必須使用 `CREATE TABLE AS SELECT` 語法。
+依預設，互動式查詢的結果會傳回至使用者端，並會 **not** 持續存在。 為了將結果作為資料集儲存在中 [!DNL Experience Platform]，查詢必須使用 `CREATE TABLE AS SELECT` 語法。
 
 ### 非互動式查詢執行
 
-通過 [!DNL Query Service] API是非互動式運行的。 非互動式執行意味著 [!DNL Query Service] 接收API調用並按接收順序執行查詢。 非互動式查詢總是導致在 [!DNL Experience Platform] 接收結果或將新行插入現有資料集。
+透過提交的查詢 [!DNL Query Service] API是以非互動方式執行。 非互動式執行意味著 [!DNL Query Service] 會接收API呼叫，並依接收順序執行查詢。 非互動式查詢一律會在中產生新資料集 [!DNL Experience Platform] 以接收結果，或將新列插入現有資料集中。
 
-## 訪問對象中的特定欄位
+## 存取物件中的特定欄位
 
-要訪問查詢中對象中的欄位，可以使用點標籤(`.`)或括弧符號(`[]`)。 以下SQL陳述式使用點表示法遍歷 `endUserIds` 對象向下到 `mcid` 的雙曲餘切值。
+若要存取查詢中物件內的欄位，您可以使用點標籤法(`.`)或方括弧標籤法(`[]`)。 下列SQL陳述式使用點標籤法來遍歷 `endUserIds` 物件向下延伸至 `mcid` 物件。
 
 >[!NOTE]
 >
->Experience CloudID(ECID)也稱為MCID，繼續用於命名空間。
+>Experience CloudID (ECID)也稱為MCID，並將繼續用於名稱空間。
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -62,9 +62,9 @@ LIMIT 1
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | 分析表的名稱。 |
+| `{ANALYTICS_TABLE_NAME}` | 分析表格的名稱。 |
 
-以下SQL陳述式使用括弧表示法遍歷 `endUserIds` 對象向下到 `mcid` 的雙曲餘切值。
+下列SQL陳述式使用方括弧記號來遍歷 `endUserIds` 物件向下延伸至 `mcid` 物件。
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -76,13 +76,13 @@ LIMIT 1
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | 分析表的名稱。 |
+| `{ANALYTICS_TABLE_NAME}` | 分析表格的名稱。 |
 
 >[!NOTE]
 >
->由於每種表示法類型都返回相同的結果，因此您選擇使用的結果與您的首選項相符。
+>由於每個記號型別會傳回相同的結果，因此您選擇使用的結果取決於您的偏好。
 
-上述兩個示例查詢都返回一個拼合對象，而不是一個值：
+上述兩個查詢範例都傳回平面化的物件，而不是單一值：
 
 ```console
               endUserIds._experience.mcid   
@@ -91,13 +91,13 @@ LIMIT 1
 (1 row)
 ```
 
-返回 `endUserIds._experience.mcid` object包含下列參數的相應值：
+傳回的 `endUserIds._experience.mcid` 物件包含下列引數的對應值：
 
 - `id`
 - `namespace`
 - `primary`
 
-當列僅聲明到對象時，它將以字串形式返回整個對象。 要僅查看ID，請使用：
+當欄僅宣告為向下至物件時，會將整個物件傳回為字串。 若只要檢視ID，請使用：
 
 ```sql
 SELECT endUserIds._experience.mcid.id
@@ -114,15 +114,15 @@ LIMIT 1
 (1 row)
 ```
 
-## 報價
+## 引號
 
-單引號、雙引號和後引號在查詢服務查詢中有不同的用法。
+單引號、雙引號及後引號在Query Service查詢中的使用方式不同。
 
 ### 單引號
 
-單引號(`'`)用於建立文本字串。 例如，它可用於 `SELECT` 語句以返回結果中和中的靜態文本值 `WHERE` 子句，用於計算列的內容。
+單引號(`'`)來建立文字字串。 例如，它可用於 `SELECT` 陳述式傳回結果中的靜態文字值，以及 `WHERE` 子句來評估資料行內容。
 
-以下查詢聲明靜態文本值(`'datasetA'`):
+下列查詢會宣告靜態文字值(`'datasetA'`)代表欄：
 
 ```sql
 SELECT 
@@ -134,7 +134,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-以下查詢使用單引號字串(`'homepage'`)中返回特定頁的事件。
+下列查詢使用單引號字串(`'homepage'`)的WHERE子句中傳回特定頁面的事件。
 
 ```sql
 SELECT 
@@ -148,9 +148,9 @@ LIMIT 10
 
 ### 雙引號
 
-雙引號(`"`)用於聲明帶空格的標識符。
+雙引號(`"`)來宣告含空格的識別碼。
 
-當一個列的標識符中包含空格時，以下查詢使用雙引號從指定的列返回值：
+當一欄的識別碼中包含空格時，下列查詢會使用雙引號來傳回指定欄的值：
 
 ```sql
 SELECT
@@ -165,11 +165,11 @@ FROM
 
 >[!NOTE]
 >
->雙引號 **不能** 與點標籤欄位訪問一起使用。
+>雙引號 **無法** 與點標籤法欄位存取權搭配使用。
 
 ### 後引號
 
-後引號 `` ` `` 用於轉義保留列名 **僅** 使用點符號語法時。 例如，自 `order` 是SQL中的保留字，必須使用後引號才能訪問該欄位 `commerce.order`:
+後引號 `` ` `` 用於逸出保留的欄名稱 **僅限** 使用點標籤法語法時。 例如，從 `order` 是SQL中的保留字，您必須使用反引號來存取欄位 `commerce.order`：
 
 ```sql
 SELECT 
@@ -179,7 +179,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-後引號還用於訪問以數字開頭的欄位。 例如，訪問欄位 `30_day_value`，您需要使用後引號符號。
+後引號也可用來存取以數字開頭的欄位。 例如，若要存取欄位 `30_day_value`，您需要使用後引號標籤法。
 
 ```SQL
 SELECT
@@ -189,7 +189,7 @@ WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
 LIMIT 10
 ```
 
-後引號是 **不** 用括弧表示法時需要。
+後引號為 **not** 如果您使用方括弧標籤法則需要。
 
 ```sql
  SELECT
@@ -199,13 +199,13 @@ LIMIT 10
  LIMIT 10
 ```
 
-## 查看表資訊
+## 檢視表格資訊
 
-連接到查詢服務後，可以使用以下任一命令查看平台上的所有可用表： `\d` 或 `SHOW TABLES` 的雙曲餘切值。
+連線到Query Service後，您可以使用 `\d` 或 `SHOW TABLES` 命令。
 
-### 標準表視圖
+### 標準表格檢視
 
-的 `\d` 命令顯示標準 [!DNL PostgreSQL] 的子菜單。 以下是此命令輸出的示例：
+此 `\d` 命令顯示標準 [!DNL PostgreSQL] 檢視以列出表格。 此命令的輸出範例如下所示：
 
 ```sql
              List of relations
@@ -216,9 +216,9 @@ LIMIT 10
 (2 rows)
 ```
 
-### 詳細表視圖
+### 詳細的表格檢視
 
-`SHOW TABLES` 命令是一個自定義命令，提供了有關表的更詳細資訊。 以下是此命令輸出的示例：
+`SHOW TABLES` command是自訂命令，可提供有關表格的詳細資訊。 此命令的輸出範例如下所示：
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -228,11 +228,11 @@ LIMIT 10
 (2 rows)
 ```
 
-### 架構資訊
+### 結構描述資訊
 
-要查看有關表中方案的詳細資訊，可使用 `\d {TABLE_NAME}` 命令，其中 `{TABLE_NAME}` 是要查看其架構資訊的表的名稱。
+若要檢視表格中綱要的詳細資訊，您可以使用 `\d {TABLE_NAME}` 命令，其中 `{TABLE_NAME}` 是要檢視其綱要資訊的表格名稱。
 
-以下示例顯示了 `luma_midvalues` 表，通過使用 `\d luma_midvalues`:
+以下範例顯示 `luma_midvalues` 表格，可透過以下方式檢視： `\d luma_midvalues`：
 
 ```sql
                          Table "public.luma_midvalues"
@@ -255,9 +255,9 @@ LIMIT 10
  search            | search                      |           |          | 
 ```
 
-此外，通過將列名附加到表名中，可以獲取有關特定列的詳細資訊。 將以格式寫入 `\d {TABLE_NAME}_{COLUMN}`。
+此外，您可以將欄的名稱附加至表格名稱，以取得特定欄的詳細資訊。 這會以格式撰寫 `\d {TABLE_NAME}_{COLUMN}`.
 
-以下示例顯示了 `web` ，並將使用以下命令調用： `\d luma_midvalues_web`:
+以下範例顯示的其他資訊 `web` 欄，並使用下列命令叫用和： `\d luma_midvalues_web`：
 
 ```sql
                  Composite type "public.luma_midvalues_web"
@@ -269,9 +269,9 @@ LIMIT 10
 
 ## 加入資料集
 
-您可以將多個資料集聯合在一起，以便在查詢中包括來自其他資料集的資料。
+您可以將多個資料集聯結在一起，以將其他資料集的資料包含在查詢中。
 
-以下示例將加入以下兩個資料集(`your_analytics_table` 和 `custom_operating_system_lookup`)並建立 `SELECT` 按頁面視圖數列出的前50個作業系統的語句。
+以下範例將連線以下兩個資料集(`your_analytics_table` 和 `custom_operating_system_lookup`)並建立 `SELECT` 前50名作業系統（依頁面檢視次數）的陳述式。
 
 **查詢**
 
@@ -290,19 +290,19 @@ LIMIT 50;
 
 **結果**
 
-| 作業系統 | 頁面視圖 |
+| 作業系統 | 頁面檢視 |
 | --------------- | --------- |
 | Windows 7 | 2781979.0 |
 | Windows XP | 1669824.0 |
 | Windows 8 | 420024.0 |
 | Adobe AIR | 315032.0 |
 | Windows Vista | 173566.0 |
-| 移動iOS6.1.3 | 119069.0 |
+| 行動iOS 6.1.3 | 119069.0 |
 | Linux | 56516.0 |
 | OSX 10.6.8 | 53652.0 |
 | Android 4.0.4 | 46167.0 |
 | Android 4.0.3 | 31852.0 |
-| Windows Server 2003和XP x64版 | 28883.0 |
+| Windows Server 2003和XP x64 Edition | 28883.0 |
 | Android 4.1.1 | 24336.0 |
 | Android 2.3.6 | 15735.0 |
 | OSX 10.6 | 13357.0 |
@@ -311,20 +311,20 @@ LIMIT 50;
 
 ## 去重複化
 
-查詢服務支援重複資料消除或從資料中刪除重複行。 有關重複資料消除的詳細資訊，請閱讀 [查詢服務重複資料消除指南](../essential-concepts/deduplication.md)。
+查詢服務支援重複資料刪除，或從資料中移除重複資料列。 如需重複資料刪除的詳細資訊，請閱讀 [查詢服務重複資料刪除指南](../essential-concepts/deduplication.md).
 
 ## 查詢服務中的時區計算
 
-查詢服務使用UTC時間戳格式對Adobe Experience Platform的永續資料進行標準化。 有關如何將時區要求轉換為UTC時間戳和從UTC時間戳轉換時區要求的詳細資訊，請參閱 [有關如何將時區更改為UTC時間戳和從UTC時間戳更改時的常見問題部分](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?)。
+查詢服務會使用UTC時間戳記格式，標準化Adobe Experience Platform中的持續資料。 如需有關如何將時區要求轉換為UTC時間戳記的詳細資訊，請參閱 [有關如何將時區變更為UTC時間戳記及從UTC時間戳記變更的常見問題集區段](../troubleshooting-guide.md#How-do-I-change-the-time-zone-to-and-from-a-UTC-Timestamp?).
 
 ## 後續步驟
 
-通過閱讀本文檔，您在使用 [!DNL Query Service]。 有關如何使用SQL語法編寫您自己的查詢的詳細資訊，請閱讀 [SQL語法文檔](../sql/syntax.md)。
+閱讀本檔案後，您已經瞭解使用撰寫查詢時的一些重要考量 [!DNL Query Service]. 如需有關如何使用SQL語法來撰寫您自己的查詢的詳細資訊，請參閱 [SQL語法檔案](../sql/syntax.md).
 
-有關查詢服務中可以使用的更多查詢示例，請閱讀以下用例文檔：
+如需可在Query Service中使用的更多查詢範例，請閱讀以下使用案例檔案：
 
-- [分析學洞見](../use-cases/analytics-insights.md)
-- [建立事件趨勢報告](../use-cases/trended-report-of-events.md)
-- [查看訪問者的匯總報告](../use-cases/roll-up-report-of-a-visitor.md)
-- [列出用戶的頁面視圖](../use-cases/list-visitor-sessions.md)
-- [按訪問者的頁面視圖數列出訪問者](../use-cases/visitors-by-number-of-page-views.md)
+- [Analytics深入分析](../use-cases/analytics-insights.md)
+- [建立事件的趨勢報表](../use-cases/trended-report-of-events.md)
+- [檢視訪客的統計報表](../use-cases/roll-up-report-of-a-visitor.md)
+- [列出使用者的頁面檢視](../use-cases/list-visitor-sessions.md)
+- [依訪客的頁面檢視次數列出訪客](../use-cases/visitors-by-number-of-page-views.md)

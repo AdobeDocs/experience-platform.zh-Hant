@@ -1,6 +1,6 @@
 ---
-title: 非互動式資料收集
-description: 瞭解Adobe Experience Platform邊緣網路伺服器API如何執行非互動式資料收集。
+title: 非互動式資料彙集
+description: 瞭解Adobe Experience Platform Edge Network Server API如何執行非互動式資料收集。
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 4%
 
 ---
 
-# 非互動式資料收集
+# 非互動式資料彙集
 
 ## 總覽 {#overview}
 
-非互動式事件資料收集端點用於將多個事件發送到Experience Platform資料集或其它插座。
+非互動式事件資料收集端點可用來傳送多個事件至Experience Platform資料集或其他插座。
 
-建議在最終用戶事件在本地排隊一段短時間（例如，沒有網路連接時）時以批處理形式發送事件。
+當一般使用者事件在本機佇列較短時間（例如，沒有網路連線時）時，建議批次傳送事件。
 
-批處理事件不一定屬於同一最終用戶，這意味著事件可以在其中包含不同的身份 `identityMap` 的雙曲餘切值。
+批次事件不一定要屬於相同的一般使用者，這表示事件可以在其內包含不同的身分 `identityMap` 物件。
 
-## 非互動式API調用示例 {#example}
+## 非互動式API呼叫範例 {#example}
 
 ### API格式 {#api-format}
 
@@ -89,18 +89,18 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 
 | 參數 | 類型 | 必填 | 說明 |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | 是 | 資料收集終結點使用的資料流的ID。 |
-| `requestId` | `String` | 無 | 提供外部請求跟蹤ID。 如果未提供，則邊緣網路將為您生成一個，並將其返回到響應正文/標頭中。 |
-| `silent` | `Boolean` | 無 | 指示邊緣網路是否應返回的可選布爾參數 `204 No Content` 響應是否為空負載。 使用相應的HTTP狀態代碼和負載報告嚴重錯誤。 |
+| `dataStreamId` | `String` | 是 | 資料收集端點使用的資料串流的ID。 |
+| `requestId` | `String` | 無 | 提供外部要求追蹤ID。 如果未提供，Edge Network會為您產生回應，並將其傳回至回應內文/標頭。 |
+| `silent` | `Boolean` | 無 | 選用的布林值引數，指出Edge Network是否應該傳回 `204 No Content` 是否以空白承載回應。 系統會使用對應的HTTP狀態代碼和裝載來報告嚴重錯誤。 |
 
 
 ### 回應 {#response}
 
-成功的響應返回以下狀態之一，並返回 `requestID` 的下界。
+成功回應會傳回下列其中一種狀態，以及 `requestID` 請求中未提供任何請求時。
 
-* `202 Accepted` 請求成功處理時；
-* `204 No Content` 成功處理請求時， `silent` 參數設定為 `true`;
-* `400 Bad Request` 當請求未正確形成時（例如，找不到強制主標識）。
+* `202 Accepted` 成功處理要求時；
+* `204 No Content` 成功處理要求時，且 `silent` 引數已設為 `true`；
+* `400 Bad Request` 要求格式不正確時（例如，找不到必要的主要身分）。
 
 ```json
 {

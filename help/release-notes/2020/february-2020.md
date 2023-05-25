@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform發行說明2020年2月
-description: 2020年2月為Adobe Experience Platform發行的說明。
+description: Adobe Experience Platform的2020年2月發行說明。
 doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
@@ -22,22 +22,22 @@ Adobe Experience Platform 現有功能更新：
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以從外部源接收資料，同時允許您使用 [!DNL Platform] 服務。 您可以從多種源(如Adobe應用程式、基於雲的儲存、第三方軟體和CRM系統)中接收資料。
+Adobe Experience Platform可從外部來源內嵌資料，同時允許您使用建構、加標籤及增強該資料 [!DNL Platform] 服務。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-[!DNL Experience Platform] 提供了REST風格的API和互動式UI，使您可以輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+[!DNL Experience Platform] 提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理資料擷取輸送量。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| SaaS — 服務系統的API支援 | 新的源連接器 [!DNL Salesforce Service Cloud] API和 [!DNL ServiceNow] API。 |
-| SaaS的API支援 — 營銷系統 | 新的源連接器 [!DNL HubSpot] API。 |
-| API支援 [!DNL NoSQL] 資料庫系統 | 新的源連接器 [!DNL AWS Redshift]。 [!DNL Google BigQuery]。 [!DNL MariaDB]。 [!DNL MySQL]。 [!DNL PostgreSQL], [!DNL SQL Server] API。 |
-| 雲儲存系統的API支援 | 新的源連接器 [!DNL Azure Data Lake Service Gen 2] API和 [!DNL Google Cloud Storage] API。 |
-| 雲儲存系統的UI支援 | 新源連接器 [!DNL Google Cloud Storage] 的子菜單。 |
+| SaaS的API支援 — 服務系統 | 新的來源聯結器 [!DNL Salesforce Service Cloud] API和 [!DNL ServiceNow] API。 |
+| SaaS的API支援 — 行銷系統 | 新的來源聯結器 [!DNL HubSpot] API。 |
+| API支援 [!DNL NoSQL] 資料庫系統 | 新的來源聯結器 [!DNL AWS Redshift]， [!DNL Google BigQuery]， [!DNL MariaDB]， [!DNL MySQL]， [!DNL PostgreSQL]、和 [!DNL SQL Server] API。 |
+| 雲端儲存系統的API支援 | 新的來源聯結器 [!DNL Azure Data Lake Service Gen 2] API和 [!DNL Google Cloud Storage] API。 |
+| 雲端儲存系統的UI支援 | 新的來源聯結器 [!DNL Google Cloud Storage] 在UI中。 |
 
 **已知問題**
 
 * None
 
-有關源的詳細資訊，請參見 [源概述](../../sources/home.md)。
+如需來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md).

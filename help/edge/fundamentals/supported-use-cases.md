@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience PlatformWeb SDK支援的使用案例
-description: 瞭解Adobe Experience PlatformWeb SDK支援哪些使用案例。
+title: Adobe Experience Platform Web SDK支援的使用案例
+description: 瞭解Adobe Experience Platform Web SDK支援的使用案例。
 keywords: web sdk；使用案例
 exl-id: e0643c2c-ceb3-4ea2-aafa-1e18e0c66453
 source-git-commit: 388143afa333db2bb9a6f0cacced16255665b524
@@ -12,6 +12,6 @@ ht-degree: 0%
 
 # 支援的使用案例
 
-Adobe Experience PlatformWeb SDK可支援多種個性化使用案例，並與其他Adobe解決方案(如Adobe Analytics、Audience Manager、目標和Experience Platform)一起使用。
+Adobe Experience Platform Web SDK結合其他Adobe解決方案(例如Adobe Analytics、Audience Manager、Target和Experience Platform)，支援各種個人化使用案例。
 
-有關實施支援的使用案例的詳細資訊，請查看 [「Web SDK使用案例」項目頁](https://github.com/orgs/adobe/projects/18/views/1)。
+如需實作支援的使用案例的詳細資訊，請查閱以下檔案中的對應檔案： [Web SDK使用案例專案頁面](https://github.com/orgs/adobe/projects/18/views/1).

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；模式；模式；XDM；欄位；模式；模式；設備；資料類型；資料類型；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；裝置；資料型別；資料型別；
 solution: Experience Platform
-title: 設備資料類型
-description: 本文檔概述了Device XDM資料類型。
+title: 裝置資料型別
+description: 本檔案提供裝置XDM資料型別的概觀。
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
@@ -11,41 +11,41 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL 設備] 資料類型
+# [!UICONTROL 裝置] 資料型別
 
-[!UICONTROL 設備] 是描述已識別設備的標準XDM資料類型。 設備是可跨會話跟蹤的應用程式或瀏覽器實例，通常由cookie跟蹤。
+[!UICONTROL 裝置] 是描述已識別裝置的標準XDM資料型別。 裝置是可跨工作階段追蹤的應用程式或瀏覽器例項，通常可透過Cookie追蹤。
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `colorDepth` | 整數 | 顯示器能夠表示的顏色數。 |
-| `manufacturer` | 字串 | 負責設計和建立設備的組織的名稱。 |
-| `model` | 字串 | 設備的型號名稱。 這是設備的常用、可讀或營銷名稱。 例如，&quot;iPhone6S&quot;是一款特定的手機。 |
-| `modelNumber` | 字串 | 製造商為此設備指定的唯一型號編號。 型號不是版本，而是標識特定型號配置的唯一標識符。 |
-| `screenHeight` | 整數 | 設備的活動顯示在預設方向上的垂直像素數。 |
-| `screenOrientation` | 字串 | 當前螢幕方向。 接受的值包括 `portrait` 和 `landscape`。 |
-| `screenWidth` | 字串 | 設備活動顯示在預設方向的水準像素數。 |
-| `type` | 字串 | 正在跟蹤的設備類型。 接受的值包括： <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
-| `typeID` | 字串 | 設備的標識符。 這可能是DeviceAtlas或標識正在使用的硬體的其他服務的標識符。 |
-| `typeIDService` | 字串 | 用於標識設備類型的服務的命名空間。 查看 [附錄](#typeIDService) 中。 |
+| `colorDepth` | 整數 | 顯示器能夠表示的顏色數量。 |
+| `manufacturer` | 字串 | 擁有裝置設計和建立的組織名稱。 |
+| `model` | 字串 | 裝置的型號名稱。 這是裝置常見、可讀取或行銷的名稱。 例如，「iPhone 6S」是行動電話的一種特定型號。 |
+| `modelNumber` | 字串 | 製造商為此裝置指定的唯一型號編號。 型號不是版本，而是識別特定型號設定的唯一識別碼。 |
+| `screenHeight` | 整數 | 裝置的活動顯示（以預設方向）的垂直畫素數。 |
+| `screenOrientation` | 字串 | 目前的熒幕方向。 接受的值包括 `portrait` 和 `landscape`. |
+| `screenWidth` | 字串 | 裝置的活動顯示（以預設方向）的水準畫素數。 |
+| `type` | 字串 | 被追蹤的裝置型別。 接受的值包括： <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
+| `typeID` | 字串 | 裝置的識別碼。 這可能是來自DeviceAtlas或其他服務的識別碼，可識別正在使用的硬體。 |
+| `typeIDService` | 字串 | 用於識別裝置型別的服務的名稱空間。 請參閱 [附錄](#typeIDService) 以取得接受值的詳細資訊。 |
 
 {style="table-layout:auto"}
 
-有關欄位組的詳細資訊，請參閱公共XDM儲存庫：
+如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填充示例](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
+* [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
 
 ## 附錄
 
-以下部分包含有關 [!UICONTROL 設備] 資料類型。
+以下小節包含更多關於 [!UICONTROL 裝置] 資料型別。
 
-## 類型IDService的接受值 {#typeIDService}
+## typeIDService的接受值 {#typeIDService}
 
-下表概述了 `typeIDService` 及其相關含義：
+下表概述下列專案的可接受值 `typeIDService` 及其相關涵義：
 
 | 值 | 說明 |
 | --- | --- |
-| `https://ns.adobe.com/xdm/external/deviceatlas` | 已使用DeviceAtlas識別設備。 |
-| `https://ns.adobe.com/xdm/external/adobecampaign` | 已使用Adobe Campaign識別設備。 |
+| `https://ns.adobe.com/xdm/external/deviceatlas` | 已使用DeviceAtlas識別裝置。 |
+| `https://ns.adobe.com/xdm/external/adobecampaign` | 已使用Adobe Campaign識別裝置。 |

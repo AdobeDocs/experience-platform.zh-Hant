@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform發行說明2022年3月
-description: 2022年3月為Adobe Experience Platform發佈的說明。
+description: Adobe Experience Platform的2022年3月發行說明。
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -13,140 +13,140 @@ ht-degree: 8%
 
 **發行日期：2022 年 3 月 30 日**
 
-Adobe Experience Platform的新功能：
+Adobe Experience Platform中的新功能：
 
 - [稽核記錄](#audit-logs)
-- [Real-Time CDPB2B版相關帳戶](#related-accounts)
+- [Real-Time CDP B2B版本中的相關帳戶](#related-accounts)
 
 Adobe Experience Platform 現有功能更新：
 
 - [警報](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [資料收集](#data-collection)
+- [資料彙集](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [來源](#sources)
 
 ## 稽核記錄 {#audit-logs}
 
-Experience Platform允許您審計用戶活動中的各種服務和功能。 審計日誌提供了有關誰執行了什麼和何時執行的資訊。
+Experience Platform可讓您稽核各種服務和功能的使用者活動。 稽核記錄會提供有關誰做了哪些事、何時做的資訊。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料集、架構、類、欄位組、資料類型、沙盒、目標、段、合併策略、計算屬性、產品配置檔案和帳戶的審核日誌(Adobe) | 這些資源由審計日誌記錄。 如果啟用該功能，則在活動發生時自動收集審計日誌。 您無需手動啟用記錄收集。 |
-| 導出審核日誌 | 審核日誌可以作為 `CSV` 或 `JSON` 的子菜單。 生成的檔案將直接保存到您的電腦。 |
+| 資料集、結構、類別、欄位群組、資料型別、沙箱、目的地、區段、合併原則、計算屬性、產品設定檔和帳戶(Adobe)的稽核記錄 | 這些是由稽核記錄檔記錄的資源。 如果啟用此功能，將會在活動發生時自動收集稽核記錄。 您無需手動啟用記錄收集。 |
+| 匯出稽核記錄 | 稽核記錄可下載為 `CSV` 或 `JSON` 檔案。 產生的檔案會直接儲存至您的電腦。 |
 
 {style="table-layout:auto"}
 
-有關平台中審核日誌的詳細資訊，請參閱 [審核日誌概述](../../landing/governance-privacy-security/audit-logs/overview.md)。
+如需Platform稽核記錄的詳細資訊，請參閱 [稽核記錄概觀](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Real-Time CDPB2B版相關帳戶 {#related-accounts}
+## Real-Time CDP B2B版本中的相關帳戶 {#related-accounts}
 
 >[!NOTE]
 >
->相關客戶功能僅適用於Real-Time CDPB2B版的客戶。
+>「相關帳戶」功能僅適用於Real-Time CDP B2B版本的客戶。
 
-B2B企業通常將客戶資訊儲存在多個系統中，每個系統都只包含同一真實業務實體的部分甚至衝突資料。 這就帶來了一個巨大的挑戰，即要準確地瞭解客戶的情況，從而降低其B2B營銷和銷售工作的效率和效率。 隨著相關賬戶的發佈， [!DNL Real-Time CDP B2B] 現在顯示與您正在瀏覽的帳戶類似的帳戶清單。 您可以將相關帳戶包括在段定義中，以擴大範圍或在段中應用更寬的標準。
+B2B企業通常將其客戶資訊儲存在多個系統中，每個系統僅包含相同真實世界商業實體的部分或甚至衝突資料。 這造成了一個巨大的挑戰，即難以準確瞭解客戶，進而降低了他們的B2B行銷和銷售工作的效率和成效。 隨著相關帳戶的發行， [!DNL Real-Time CDP B2B] 現在會顯示與您瀏覽的帳戶類似的帳戶清單。 您可以在區段定義中加入相關帳戶，以擴大您的業務範圍，或在區段中套用更廣的標準。
 
-閱讀以下文檔頁中有關該功能的詳細資訊：
+請在下列檔案頁面中進一步瞭解此功能：
 
-- [Real-Time CDPB2B版相關帳戶概述](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
-- [「帳戶配置檔案UI」指南中的「相關帳戶」頁籤](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [如何在段定義中使用相關帳戶](../../rtcdp/segmentation/b2b.md#related-accounts)
+- [Real-Time CDP B2B版本中的相關帳戶概觀](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [帳戶設定檔UI指南中的相關帳戶標籤](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [如何在區段定義中使用相關科目](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-要瞭解有關Real-Time CDPB2B版的詳細資訊，請參閱 [概述](../../rtcdp/overview.md)。
+若要進一步瞭解Real-Time CDP B2B版本，請參閱 [概觀](../../rtcdp/overview.md).
 
 ## 警報 {#alerts}
 
-Experience Platform允許您訂閱各種平台活動的基於事件的警報。 您可以通過 [!UICONTROL 警報] 頁籤，並可以選擇在UI本身或通過電子郵件通知接收警報消息。
+Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤中，並可選擇在UI本身或透過電子郵件通知接收警示訊息。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 新警報規則 | 現在，兩個新警報規則可用於與資料接收相關的源。 請參閱 [警報規則](../../observability/alerts/rules.md) 的子菜單。 |
+| 新警報規則 | 兩個新警報規則現在可用於與資料擷取相關的來源。 請參閱以下文章的概觀： [警示規則](../../observability/alerts/rules.md) 以取得更新的警示型別清單。 |
 
 {style="table-layout:auto"}
 
-有關平台中警報的詳細資訊，請參閱 [警報概述](../../observability/alerts/overview.md)。
+如需Platform警示的詳細資訊，請參閱 [警報概觀](../../observability/alerts/overview.md).
 
 ## 儀表板 {#dashboards}
 
-Adobe Experience Platform提供 [!DNL dashboards] 您可以通過查看有關組織資料的重要資訊（在每日快照中捕獲）。
+Adobe Experience Platform提供多個 [!DNL dashboards] 您可以透過它檢視有關您組織資料的重要資訊，如每日快照期間所擷取。
 
-### 配置檔案儀表板
+### 設定檔儀表板
 
-「配置式」控制面板顯示您的組織在「配置式儲存」Experience Platform中擁有的屬性（記錄）資料的快照。
+設定檔儀表板會顯示貴組織在Experience Platform的設定檔存放區中擁有的屬性（記錄）資料快照。
 
-**已更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 未分段的配置檔案構件 | 該構件提供未附加到任何段的所有配置檔案的總數。 生成的數字在上次快照時準確無誤，表示整個組織中配置檔案激活的機會。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
-| 未分段的配置檔案趨勢構件 | 此 Widget 會提供折線圖，說明在特定時段內未附加到任何區段的所有設定檔數量。該趨勢可以在30天、90天和12個月期間進行可視化。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
-| 按身份構件分段的配置檔案 | 此 Widget 會依照其唯一識別碼來分類無區段設定檔的總數。資料以條形圖顯示。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
-| 單個身份配置檔案小部件 | 此小部件提供組織的配置檔案的計數，這些配置檔案只具有一種類型的ID類型，可建立其標識，即電子郵件或ECID。 查看 [配置檔案標準小部件文檔](../../dashboards/guides/profiles.md#standard-widgets) 的子菜單。 |
-
-{style="table-layout:auto"}
-
-有關配置式儀表板的詳細資訊，請參閱 [配置檔案儀表板概述](../../dashboards/guides/profiles.md)。
-
-### 目標儀表板
-
-「目標」控制面板顯示您的組織在Experience Platform中啟用的目標的快照。
-
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 目標計數小部件 | 該小部件提供了可用終結點的總數，在該總數中，可在系統內激活和傳遞受眾。 此數字包括使用中和非使用中的目的地。查看 [目標標準構件文檔](../../dashboards/guides/destinations.md#standard-widgets) 的子菜單。 |
+| 未分段的設定檔Widget | Widget會提供未附加至任何區段的所有設定檔總數。 產生的數字自上次快照以來都是準確的，代表您組織內個人資料啟用的機會。 請參閱 [設定檔標準Widget檔案](../../dashboards/guides/profiles.md#standard-widgets) 以取得詳細資訊。 |
+| 未分段的設定檔趨勢Widget | 此 Widget 會提供折線圖，說明在特定時段內未附加到任何區段的所有設定檔數量。趨勢可以視覺化呈現超過30天、90天和12個月期間。 請參閱 [設定檔標準Widget檔案](../../dashboards/guides/profiles.md#standard-widgets) 以取得詳細資訊。 |
+| 依身分Widget區分的未分段設定檔 | 此 Widget 會依照其唯一識別碼來分類無區段設定檔的總數。資料會以長條圖呈現。 請參閱 [設定檔標準Widget檔案](../../dashboards/guides/profiles.md#standard-widgets) 以取得詳細資訊。 |
+| 單一身分設定檔Widget | 此Widget提供貴組織設定檔的計數，這些設定檔只有一種ID型別（電子郵件或ECID）可建立其身分識別。 請參閱 [設定檔標準Widget檔案](../../dashboards/guides/profiles.md#standard-widgets) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}
 
-有關平台中目標儀表板的詳細資訊，請參閱 [目標儀表板概述](../../dashboards/guides/destinations.md)。
+如需「設定檔」儀表板的詳細資訊，請參閱 [設定檔儀表板概觀](../../dashboards/guides/profiles.md).
 
-## 資料收集 {#data-collection}
+### 目的地儀表板
 
-平台提供一套技術，使您能夠收集客戶端客戶體驗資料並將其發送到Adobe Experience Platform邊緣網路，在該網路中，資料可以得到豐富、轉換並分發到Adobe或非Adobe目的地。
+目的地儀表板會顯示貴組織在Experience Platform中啟用的目的地的快照。
+
+**更新的功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 目的地計數Widget | Widget提供可在系統中啟用及傳送對象的可用端點總數。 此數字包括使用中和非使用中的目的地。請參閱 [目的地標準Widget檔案](../../dashboards/guides/destinations.md#standard-widgets) 以取得詳細資訊。 |
+
+{style="table-layout:auto"}
+
+如需Platform中「目的地」儀表板的詳細資訊，請參閱 [目的地儀表板概觀](../../dashboards/guides/destinations.md).
+
+## 資料彙集 {#data-collection}
+
+Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將其傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將其分發到Adobe或非Adobe目的地。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 全局資料流設定 | 現在，在配置資料流時可以配置幾個新的全局設定：地理位置、第一方IDcookie和第三方ID同步。 請參閱 [配置資料流](../../edge/datastreams/overview.md#create) 的子菜單。 |
-| [邊緣網路伺服器 API](../../server-api/overview.md) | 伺服器API使客戶能夠使用新的經過驗證的端點與Experience Platform邊緣網路進行交互，以支援各種資料收集，個性化，廣告和營銷使用案例。 |
+| 全域資料流設定 | 您現在可以在設定資料流時設定數個新的全域設定：地理位置、第一方ID Cookie和協力廠商ID同步。 請參閱以下小節： [設定資料串流](../../edge/datastreams/overview.md#create) 如需詳細資訊，請參閱資料串流UI指南。 |
+| [邊緣網路伺服器 API](../../server-api/overview.md) | 伺服器API可讓客戶使用新的、經過驗證的端點與Experience Platform邊緣網路互動，以支援各種資料收集、個人化、廣告和行銷使用案例。 |
 
-有關平台中資料收集的詳細資訊，請參閱 [資料收集概述](../../collection/home.md)。
+如需Platform資料收集的詳細資訊，請參閱 [資料彙集概觀](../../collection/home.md).
 
 ## 查詢服務 {#query-service}
 
-[!DNL Query Service] 允許您使用標準SQL查詢Adobe Experience Platform的資料 [!DNL Data Lake]。 您可以加入來自 [!DNL Data Lake] 並將查詢結果捕獲為新資料集，用於報告、Data Science Workspace或用於接收到即時客戶配置檔案。
+[!DNL Query Service] 可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以從以下位置聯結任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或內嵌至即時客戶個人檔案。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| `table_exists` | 新功能命令用於確認系統中當前是否存在表。 該命令返回一個布爾值： `true` 的 **是** 存在 `false` 如果表 **不** 存在。 查看 [SQL語法文檔](../../query-service/sql/syntax.md) 的子菜單。 |
+| `table_exists` | 新特徵指令用於確認表格目前是否存在於系統中。 該命令會傳回布林值： `true` 如果表格 **會** 存在，和 `false` 如果表格有 **not** 存在。 請參閱 [SQL語法檔案](../../query-service/sql/syntax.md) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}
 
-有關可用功能的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md)。
+如需可用功能的詳細資訊，請參閱 [查詢服務總覽](../../query-service/home.md).
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以從外部源接收資料，同時允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並在整個過程中管理資料接收。
+Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理整個過程中的資料擷取。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 現在可用於B2B的新源 | 現在，您可以將平台上所有可用的源用於B2B使用案例。 查看 [源目錄](../../sources/home.md) 的子菜單。 |
-| 全面提供新 [!DNL Oracle Eloqua] 源 | 您現在可以使用 [!DNL Oracle Eloqua] 源，以無縫地從 [!DNL Oracle Eloqua] 實例（帳戶、市場活動、聯繫人）到平台。 請參閱 [建立 [!DNL Oracle Eloqua] 源連接](../../sources/connectors/marketing-automation/oracle-eloqua.md) 的子菜單。 |
-| API增強功能 [!DNL Data Landing Zone] | 的 [!DNL Data Landing Zone] 現在，使用 [!DNL Flow Service] API。 請參閱 [建立 [!DNL Data Landing Zone] 源連接](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 的子菜單。 |
+| 新來源現在可用於B2B使用 | 您現在可以針對B2B使用案例使用Platform上所有可用的來源。 請參閱 [來源目錄](../../sources/home.md) 以取得可用來源的完整清單。 |
+| 全面推出新功能 [!DNL Oracle Eloqua] source | 您現在可以使用 [!DNL Oracle Eloqua] 從您的網站順暢擷取資料的來源 [!DNL Oracle Eloqua] 執行個體（帳戶、行銷活動、連絡人）到Platform。 請參閱以下說明檔案： [建立 [!DNL Oracle Eloqua] 來源連線](../../sources/connectors/marketing-automation/oracle-eloqua.md) 以取得詳細資訊。 |
+| 的API增強功能 [!DNL Data Landing Zone] | 此 [!DNL Data Landing Zone] 來源現在支援在使用時自動偵測檔案屬性 [!DNL Flow Service] API。 請參閱以下說明檔案： [建立 [!DNL Data Landing Zone] 來源連線](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}
 
-要瞭解有關源的詳細資訊，請參閱 [源概述](../../sources/home.md)。
+若要進一步瞭解來源，請參閱 [來源概觀](../../sources/home.md).

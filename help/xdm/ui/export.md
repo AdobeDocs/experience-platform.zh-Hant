@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: 在UI中導出XDM架構
-description: 瞭解如何將現有架構導出到Adobe Experience Platform用戶介面中的其他沙箱或組織。
+title: 在UI中匯出XDM結構描述
+description: 瞭解如何在Adobe Experience Platform使用者介面中匯出現有結構描述至其他沙箱或組織。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
@@ -11,33 +11,33 @@ ht-degree: 0%
 
 ---
 
-# 在UI中導出XDM架構
+# 在UI中匯出XDM結構描述
 
-架構庫中的所有資源都包含在組織內的特定沙箱中。 在某些情況下，您可能希望在沙箱和組織之間共用經驗資料模型(XDM)資源。
+Schema Library內的所有資源都包含在組織內的特定沙箱中。 在某些情況下，您可能會想要在沙箱和組織之間共用Experience Data Model (XDM)資源。
 
-為滿足此需求， [!UICONTROL 架構] 使用Adobe Experience PlatformUI中的工作區，可以為架構庫中的任何架構生成導出負載。 然後，此負載可用於調用架構註冊表API，以將架構（和所有從屬資源）導入目標沙箱和組織中。
+為了滿足此需求， [!UICONTROL 結構描述] Adobe Experience Platform UI中的工作區可讓您為架構資料庫中的任何架構產生匯出裝載。 然後，此裝載可用於對結構描述登入API的呼叫中，以將結構描述（以及所有相依資源）匯入目標沙箱和組織。
 
 >[!NOTE]
 >
->您還可以使用方案註冊表API導出除方案外的其他資源，包括類、方案欄位組和資料類型。 查看 [導出終結點指南](../api/export.md) 的子菜單。
+>您也可以使用Schema Registry API匯出除了結構描述以外的其他資源，包括類別、結構描述欄位群組和資料型別。 請參閱 [匯出端點指南](../api/export.md) 以取得詳細資訊。
 
 ## 先決條件
 
-雖然平台UI允許導出XDM資源，但必須使用架構註冊表API將這些資源導入其他沙箱或組織以完成工作流。 請參閱上的指南 [架構註冊表API入門](../api/getting-started.md) 有關本指南之前所需的身份驗證標頭的重要資訊。
+雖然Platform UI可讓您匯出XDM資源，但您必須使用Schema Registry API將這些資源匯入其他沙箱或組織以完成工作流程。 請參閱指南，網址為 [開始使用結構描述登入API](../api/getting-started.md) 請參閱本指南，瞭解必要驗證標頭的重要資訊。
 
-## 生成導出負載 {#generate-export-payload}
+## 產生匯出裝載 {#generate-export-payload}
 
-在平台UI中，選擇 **[!UICONTROL 架構]** 的子菜單。 在 [!UICONTROL 架構] 工作區，選擇要導出的架構的行以在右側欄中顯示架構詳細資訊。
+在Platform UI中選取 **[!UICONTROL 結構描述]** 左側導覽列中。 在內 [!UICONTROL 結構描述] 工作區中，選取您要匯出的結構描述列，以在右側邊欄中顯示結構描述詳細資訊。
 
 >[!TIP]
 >
->請參閱上的指南 [探索XDM資源](./explore.md) 有關如何查找要查找的XDM資源的詳細資訊。
+>請參閱指南： [探索XDM資源](./explore.md) 有關如何尋找您所尋找XDM資源的詳細資訊。
 
-接下來，選擇 **[!UICONTROL 複製JSON]** 表徵圖。![複製表徵圖](../images/ui/export/icon.png))。
+接下來，選取 **[!UICONTROL 複製JSON]** 圖示(![復製圖示](../images/ui/export/icon.png))。
 
-![具有架構行和 [!UICONTROL 複製到JSON] 。](../images/ui/export/copy-json.png)
+![具有結構描述列和的「結構描述」工作區 [!UICONTROL 複製到JSON] 反白顯示。](../images/ui/export/copy-json.png)
 
-這會將JSON負載複製到剪貼簿，並基於架構結構生成。 對於「」[!DNL Loyalty Members]&quot;上面所示的架構，將生成以下JSON:
+這會將JSON裝載複製到剪貼簿，並根據結構描述結構產生。 針對&quot;[!DNL Loyalty Members]」結構描述如上所示，會產生以下JSON：
 
 ```json
 [
@@ -201,14 +201,14 @@ ht-degree: 0%
 ]
 ```
 
-負載採用陣列的形式，每個陣列項都是表示要導出的自定義XDM資源的對象。 在上例中， &quot;[!DNL Loyalty details]&quot;自定義欄位組和&quot;[!DNL Loyalty Members]&quot;架構。 導出中不包含模式使用的任何核心資源，因為這些資源在所有沙箱和組織中都可用。
+裝載採用陣列的形式，每個陣列專案都是一個物件，代表要匯出的自訂XDM資源。 在上述範例中， 「[!DNL Loyalty details]「自訂欄位群組和」[!DNL Loyalty Members]「結構描述包含在內。 結構描述採用的任何核心資源都不會包含在匯出中，因為這些資源可用於所有沙箱和組織。
 
-請注意，您組織的租戶ID的每個實例都顯示為 `<XDM_TENANTID_PLACEHOLDER>` 在有效載荷中。 這些佔位符將自動替換為相應的租戶ID值，具體取決於您在下一步中導入架構的位置。
+請注意，您組織的租使用者ID的每個例項都顯示為 `<XDM_TENANTID_PLACEHOLDER>` 在承載中。 這些預留位置會自動取代為適當的租使用者ID值，具體取決於您在下一個步驟中匯入結構描述的位置。
 
-## 使用API導入資源
+## 使用API匯入資源
 
-複製架構的導出JSON後，可以將其用作POST請求的負載 `/rpc/import` 架構註冊表API中的終結點。 查看 [導入終結點指南](../api/import.md) 有關如何配置調用以將架構發送到所需組織和沙盒的詳細資訊。
+複製結構描述的匯出JSON後，您可以將其用作POST請求的裝載 `/rpc/import` 結構描述登入API中的端點。 請參閱 [匯入端點指南](../api/import.md) 有關如何設定呼叫以將結構描述傳送至所需組織和沙箱的詳細資訊。
 
 ## 後續步驟
 
-按照本指南，您已成功將XDM架構導出到其他組織或沙盒。 有關功能的詳細資訊 [!UICONTROL 架構] UI，請參閱 [[!UICONTROL 架構] UI概述](./overview.md)。
+依照本指南，您已成功將XDM結構描述匯出至不同的組織或沙箱。 如需功能的詳細資訊， [!UICONTROL 結構描述] UI，請參閱 [[!UICONTROL 結構描述] UI總覽](./overview.md).

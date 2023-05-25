@@ -1,6 +1,6 @@
 ---
-description: 本頁說明了用於通過Adobe Experience Platform Destination SDK刪除現有目標配置的API調用。
-title: 刪除目標配置
+description: 此頁面是用來透過Adobe Experience Platform Destination SDK刪除現有目的地設定的API呼叫的範例。
+title: 刪除目的地設定
 source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
 workflow-type: tm+mt
 source-wordcount: '278'
@@ -9,27 +9,27 @@ ht-degree: 2%
 ---
 
 
-# 刪除目標配置
+# 刪除目的地設定
 
-本頁說明了API請求和負載，您可以使用 `/authoring/destinations` API終結點。
+此頁面透過以下範例說明您可用來刪除現有目的地設定的API請求和裝載： `/authoring/destinations` api端點。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
+>Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
 
-## 目標配置API操作入門 {#get-started}
+## 目的地設定API操作快速入門 {#get-started}
 
-在繼續之前，請查看 [入門指南](../../getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
-## 刪除目標配置 {#delete}
+## 刪除目的地設定 {#delete}
 
-可以刪除 [現有](create-destination-configuration.md) 通過建立目標伺服器配置 `DELETE` 請求 `/authoring/destinations` 端點 `{INSTANCE_ID}`刪除的目標配置。
+您可以刪除 [現有](create-destination-configuration.md) 目標伺服器設定，方法是將 `DELETE` 向以下專案提出的請求： `/authoring/destinations` 端點與 `{INSTANCE_ID}`要刪除的目的地組態。
 
 >[!TIP]
 >
->**API終結點**: `platform.adobe.io/data/core/activation/authoring/destinations`
+>**API端點**： `platform.adobe.io/data/core/activation/authoring/destinations`
 
-獲取現有目標配置及其相應的 `{INSTANCE_ID}`，請參閱有關 [檢索目標配置](retrieve-destination-configuration.md)。
+若要取得現有的目的地組態及其對應的 `{INSTANCE_ID}`，請參閱這篇文章，瞭解 [擷取目的地設定](retrieve-destination-configuration.md).
 
 **API格式**
 
@@ -39,7 +39,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | 的 `ID` 目標配置。 |
+| `{INSTANCE_ID}` | 此 `ID` 要刪除的目的地組態。 |
 
 +++請求
 
@@ -53,20 +53,20 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
 
 +++回應
 
-成功的響應返回HTTP狀態200以及空的HTTP響應。
+成功的回應會傳回HTTP狀態200以及空的HTTP回應。
 
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道如何通過Destination SDK刪除現有目標配置 `/authoring/destinations` API終結點。
+閱讀本檔案後，您現在知道如何透過Destination SDK刪除現有的目的地設定 `/authoring/destinations` api端點。
 
-要瞭解有關可以使用此端點執行什麼操作的詳細資訊，請參閱以下文章：
+若要進一步瞭解您可以使用此端點做什麼，請參閱下列文章：
 
-* [建立目標配置](create-destination-configuration.md)
-* [檢索目標配置](retrieve-destination-configuration.md)
-* [更新目標配置](update-destination-configuration.md)
+* [建立目的地設定](create-destination-configuration.md)
+* [擷取目的地設定](retrieve-destination-configuration.md)
+* [更新目的地設定](update-destination-configuration.md)
 

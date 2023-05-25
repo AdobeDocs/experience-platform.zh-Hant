@@ -1,6 +1,6 @@
 ---
-description: 要使用Destination SDK，合作夥伴公司必須滿足本文檔中列出的先決條件。
-title: 整合先決條件
+description: 若要使用Destination SDK，合作夥伴公司必須符合本檔案所列之先決條件。
+title: 整合必要條件
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 0%
 
 ---
 
-# 整合先決條件
+# 整合必要條件
 
-要使用Destination SDK，請確保滿足以下各節中列出的技術和合作夥伴關係先決條件。
+若要使用Destination SDK，請確定您符合下列各節所列的技術和合作關係先決條件。
 
-## 流目標的技術/API先決條件 {#streaming-prerequisites}
+## 串流目的地的技術/API必要條件 {#streaming-prerequisites}
 
-1. 您擁有Adobe Experience Platform的REST API終結點，可將以下類型的資料傳送到：
-   * 會員資訊；
-   * 配置式身份資訊；
-   * （可選）配置檔案豐富的附加屬性。
-2. 您的REST API終結點支援基本、承載令牌或OAuth 2.0身份驗證協定。
-3. （可選）您具有用於寫程式元資料管理的段建立/更新/刪除API或API終結點。
+1. 您有Adobe Experience Platform的REST API端點，可將下列型別的資料傳送至：
+   * 區塊會籍資訊；
+   * 設定檔身分資訊；
+   * （選用）用於擴充設定檔的其他屬性。
+2. 您的REST API端點支援基本、持有人權杖或OAuth 2.0驗證通訊協定。
+3. （選用）您有區段建立/更新/刪除API或API端點，用於程式化中繼資料管理。
 
-## 批目標的技術先決條件 {#batch-prerequisites}
+## 批次目的地的技術先決條件 {#batch-prerequisites}
 
-1. 您的目標位置托管在 [!DNL Amazon S3]。 [!DNL Azure Blob]。 [!DNL Azure Data Lake Storage]。 [!DNL SFTP]。 [!DNL Google Cloud]，或私有 [!DNL Data Landing Zone]中，您可以接收導出的檔案，而不是Experience Platform。
-2. 目標平台可以以通過 [檔案格式選項](functionality/destination-server/file-formatting.md) Destination SDK。
-3. （可選）您有段建立/檢索/更新/刪除([!DNL CRUD])API或API終結點，用於寫程式元資料管理。
+1. 您的目的地位置託管於 [!DNL Amazon S3]， [!DNL Azure Blob]， [!DNL Azure Data Lake Storage]， [!DNL SFTP]， [!DNL Google Cloud]，或私人 [!DNL Data Landing Zone]，您可在此接收從Experience Platform匯出的檔案。
+2. 您的目的地平台可以透過設定的格式內嵌檔案 [檔案格式選項](functionality/destination-server/file-formatting.md) 批次目的地的Destination SDK。
+3. （選用）您有建立/擷取/更新/刪除區段([!DNL CRUD])程式化中繼資料管理的API或API端點。
 
-## 夥伴關係先決條件 {#partnership-prerequisites}
+## 合作關係必要條件 {#partnership-prerequisites}
 
-如果您是希望使用Destination SDK的獨立軟體供應商(ISV)或系統整合商(SI)，請閱讀中的ISV和SI的合作夥伴要求 [獲取訪問部分](overview.md#get-access)。
+如果您是想要使用Destination SDK的獨立軟體廠商(ISV)或系統整合商(SI)，請閱讀 [取得存取許可權區段](overview.md#get-access).

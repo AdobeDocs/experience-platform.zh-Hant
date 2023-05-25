@@ -1,6 +1,6 @@
 ---
-title: 使用流服務API更新流式SDK的連接規範
-description: 以下文檔提供了如何使用自服務源流服務API（流式SDK）進行連接規範的步驟。
+title: 使用流量服務API更新串流SDK的連線規格
+description: 以下檔案提供如何使用Flow Service API for Self-Serve Sources (Streaming SDK)建立連線規格的步驟。
 hide: true
 hidefromtoc: true
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
@@ -11,9 +11,9 @@ ht-degree: 2%
 
 ---
 
-# 使用流服務API更新連接規範
+# 使用流程服務API更新連線規格
 
-您可以通過PUT操作更新連接規範的屬性。 通過PUT請求更新連接規範時，主體必須包括在POST請求中建立新連接規範時需要的所有欄位。
+您可以透過PUT操作更新連線規格的屬性。 透過PUT要求更新連線規格時，內文必須包含在POST要求中建立新連線規格時所需的所有欄位。
 
 **API格式**
 
@@ -23,7 +23,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **要求**
 
-以下請求將說明添加到上一教程中建立的流連接規範中。
+下列要求會將說明新增至上一個教學課程中建立的串流連線規格。
 
 ```shell
 PUT -X GET \
@@ -107,7 +107,7 @@ PUT -X GET \
 
 **回應**
 
-成功的調用將返回更新的連接規範詳細資訊，包括其更新的名稱。
+成功的呼叫會傳回更新的連線規格詳細資料，包括其更新的名稱。
 
 ```json
 {
@@ -193,4 +193,4 @@ PUT -X GET \
 
 ## 後續步驟
 
-完成對連接規範的更新後，您現在可以繼續 [test並提交源以進行整合](./submit.md)。
+完成連線規格的更新後，您現在可以繼續進行 [測試並提交您的來源以進行整合](./submit.md).

@@ -12,9 +12,9 @@ ht-degree: 58%
 
 # Adobe Experience Platform 協助工具 {#accessibility}
 
-* [輔助功能概述](home.md)
+* [協助工具概覽](home.md)
 * [協助工具功能](features.md)
-* [平台的自定義輔助功能](custom.md)
-* [平台文檔](https://experienceleague.adobe.com/docs/experience-platform.html)
-* [平台概述](https://www.adobe.com/go/platform-overview-en)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform的自訂協助工具](custom.md)
+* [平台檔案](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [平台概觀](https://www.adobe.com/go/platform-overview-en)
+* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)

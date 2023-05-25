@@ -1,6 +1,6 @@
 ---
-title: 在架構註冊表API中定義XDM欄位
-description: 瞭解如何在架構註冊表API中建立自定義體驗資料模型(XDM)資源時定義不同的欄位。
+title: 在結構描述登入API中定義XDM欄位
+description: 瞭解如何在Schema Registry API中建立自訂Experience Data Model (XDM)資源時定義不同的欄位。
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# 在架構註冊表API中定義XDM欄位
+# 在結構描述登入API中定義XDM欄位
 
-所有體驗資料模型(XDM)欄位都使用標準 [JSON架構](https://json-schema.org/) 適用於其欄位類型的約束，以及Adobe Experience Platform強制實施的欄位名稱的附加約束。 使用方案註冊表API，您可以通過使用格式和可選約束來定義方案中的自定義欄位。 XDM欄位類型由欄位級屬性公開， `meta:xdmType`。
+所有體驗資料模型(XDM)欄位都是使用標準來定義 [JSON結構描述](https://json-schema.org/) 適用於其欄位型別的限制，以及Adobe Experience Platform強制執行的欄位名稱的其他限制。 Schema Registry API可讓您透過使用格式和選用限制來定義結構中的自訂欄位。 XDM欄位型別會由欄位層級屬性公開， `meta:xdmType`.
 
 >[!NOTE]
 >
->`meta:xdmType` 是系統生成的值，因此使用API時不需要將此屬性添加到欄位的JSON(除非 [建立自定義映射類型](#custom-maps))。 最佳做法是使用JSON架構類型(如 `string` 和 `integer`)，具有下表中定義的相應最小/最大約束。
+>`meta:xdmType` 是系統產生的值，因此使用API時不需要將此屬性新增到欄位的JSON （使用API時除外） [建立自訂地圖型別](#custom-maps))。 最佳實務是使用JSON結構描述型別(例如 `string` 和 `integer`)，並具備下表所定義的適當最小值/最大值限制。
 
-本指南概述了定義不同欄位類型（包括具有可選屬性的欄位類型）的適當格式。 有關可選屬性和類型特定關鍵字的詳細資訊，請通過 [JSON架構文檔](https://json-schema.org/understanding-json-schema/reference/type.html)。
+本指南會概述定義不同欄位型別的適當格式，包括具選擇性屬性的欄位型別。 有關可選屬性和型別特定關鍵字的更多資訊，請參閱 [JSON結構描述檔案](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-要開始，請查找所需的欄位類型，並使用提供的示例代碼生成API請求 [建立欄位組](../api/field-groups.md#create) 或 [建立資料類型](../api/data-types.md#create)。
+若要開始，請尋找所需的欄位型別，並使用提供的範常式式碼來建置您的API請求 [建立欄位群組](../api/field-groups.md#create) 或 [建立資料型別](../api/data-types.md#create).
 
 ## [!UICONTROL 字串] {#string}
 
-[!UICONTROL 字串] 欄位由 `type: string`。
+[!UICONTROL 字串] 欄位表示方式 `type: string`.
 
 ```json
 "sampleField": {
@@ -33,11 +33,11 @@ ht-degree: 0%
 }
 ```
 
-可以通過以下附加屬性來根據需要約束可以為字串輸入哪些類型的值：
+您可選擇透過下列其他屬性，來限制可為字串輸入哪些型別的值：
 
-* `pattern`:要約束的規則運算式模式。
-* `minLength`:字串的最小長度。
-* `maxLength`:字串的最大長度。
+* `pattern`：限制所依據的規則運算式模式。
+* `minLength`：字串的最小長度。
+* `maxLength`：字串的長度上限。
 
 ```json
 "sampleField": {
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 ## [!UICONTROL URI] {#uri}
 
-[!UICONTROL URI] 欄位由 `type: string` 帶 `format` 屬性設定為 `uri`。 不接受其他屬性。
+[!UICONTROL URI] 欄位表示方式 `type: string` 搭配 `format` 屬性設定為 `uri`. 不接受任何其他屬性。
 
 ```json
 "sampleField": {
@@ -62,9 +62,9 @@ ht-degree: 0%
 }
 ```
 
-## [!UICONTROL 枚舉] {#enum}
+## [!UICONTROL 列舉] {#enum}
 
-[!UICONTROL 枚舉] 必須使用 `type: string`，在 `enum` 陣列：
+[!UICONTROL 列舉] 欄位必須使用 `type: string`，而列舉值本身則提供在 `enum` 陣列：
 
 ```json
 "sampleField": {
@@ -79,7 +79,7 @@ ht-degree: 0%
 }
 ```
 
-您可以選擇在以下位置為每個值提供面向客戶的標籤 `meta:enum` 屬性，每個標籤在下面的相應值 `enum`。
+您可以選擇性地為下的每個值提供面對客戶的標籤 `meta:enum` 屬性，每個標籤都標示為底下的對應值 `enum`.
 
 ```json
 "sampleField": {
@@ -101,9 +101,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->的 `meta:enum` 值 **不** 聲明枚舉或自行驅動任何資料驗證。 在大多數情況下， `meta:enum` 也提供 `enum` 確保資料受到約束。 但是，有些使用情況 `meta:enum` 沒有相應的 `enum` 陣列。 請參閱上的教程 [定義建議值](../tutorials/suggested-values.md) 的子菜單。
+>此 `meta:enum` 值會 **not** 自行宣告分項清單或驅動任何資料驗證。 在大多數情況下，字串提供於 `meta:enum` 也提供於 `enum` 以確保資料受到限制。 不過，有些使用案例會 `meta:enum` 提供，但不提供對應的 `enum` 陣列。 請參閱教學課程，位置如下： [定義建議值](../tutorials/suggested-values.md) 以取得詳細資訊。
 
-您可以選擇提供 `default` 屬性，以指示預設值 `enum` 欄位在未提供值時使用的值。
+您可以選擇提供 `default` 屬性以表示預設值 `enum` 如果未提供值，則欄位將使用的值。
 
 ```json
 "sampleField": {
@@ -126,11 +126,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->否 `default` 提供值，並將枚舉欄位設定為 `required`，任何缺少此欄位的接受值的記錄在接收時將無法驗證。
+>若否 `default` 會提供值，且列舉欄位會設為 `required`，任何遺失此欄位可接受值的記錄將在擷取時驗證失敗。
 
 ## [!UICONTROL 數字] {#number}
 
-數字欄位由 `type: number` 沒有其他必需的屬性。
+數字欄位表示為 `type: number` 且沒有其他必要屬性。
 
 ```json
 "sampleField": {
@@ -142,11 +142,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`number` 類型用於任何數字類型（整數或浮點數），而 [`integer` 類型](#integer) 具體用於積分數。 請參閱 [數字類型上的JSON架構文檔](https://json-schema.org/understanding-json-schema/reference/numeric.html) 的子菜單。
+>`number` 型別適用於任何數值型別，可以是整數或浮點數，而 [`integer` 型別](#integer) 專門用於整數值。 請參閱 [有關數值型別的JSON結構描述檔案](https://json-schema.org/understanding-json-schema/reference/numeric.html) 如需每種型別使用案例的詳細資訊。
 
 ## [!UICONTROL 整數] {#integer}
 
-[!UICONTROL 整數] 欄位由 `type: integer` 沒有其他必填欄位。
+[!UICONTROL 整數] 欄位表示方式 `type: integer` 且沒有其他必要欄位。
 
 ```json
 "sampleField": {
@@ -158,9 +158,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->同時 `integer` 類型具體是指整數， [`number` 類型](#number) 用於任何數字類型（整數或浮點數）。 請參閱 [數字類型上的JSON架構文檔](https://json-schema.org/understanding-json-schema/reference/numeric.html) 的子菜單。
+>當 `integer` 型別是指整數值， [`number` 型別](#number) 用於任何數值型別，可以是整數或浮點數。 請參閱 [有關數值型別的JSON結構描述檔案](https://json-schema.org/understanding-json-schema/reference/numeric.html) 如需每種型別使用案例的詳細資訊。
 
-可以通過添加 `minimum` 和 `maximum` 屬性。 架構生成器UI支援的其他幾種數值類型 `integer` 特定類型 `minimum` 和 `maximum` 約束，例如 [[!UICONTROL 龍]](#long)。 [[!UICONTROL 短]](#short), [[!UICONTROL 位元組]](#byte)。
+您可以選擇透過新增來限制整數的範圍 `minimum` 和 `maximum` 屬性至定義。 結構描述產生器UI支援的其他數位型別包括 `integer` 具有特定的 `minimum` 和 `maximum` 限制，例如 [[!UICONTROL 長]](#long)， [[!UICONTROL 短]](#short)、和 [[!UICONTROL 位元組]](#byte).
 
 ```json
 "sampleField": {
@@ -172,9 +172,9 @@ ht-degree: 0%
 }
 ```
 
-## [!UICONTROL 龍] {#long}
+## [!UICONTROL 長] {#long}
 
-等價於 [!UICONTROL 龍] 通過架構生成器UI建立的欄位是 [`integer` 類型欄位](#integer) 具體 `minimum` 和 `maximum` 值(`-9007199254740992` 和 `9007199254740992`)。
+相當於 [!UICONTROL 長] 透過結構描述產生器UI建立的欄位是 [`integer` 型別欄位](#integer) 具有特定 `minimum` 和 `maximum` 值(`-9007199254740992` 和 `9007199254740992`（分別）。
 
 ```json
 "sampleField": {
@@ -188,7 +188,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 短] {#short}
 
-等價於 [!UICONTROL 短] 通過架構生成器UI建立的欄位是 [`integer` 類型欄位](#integer) 具體 `minimum` 和 `maximum` 值(`-32768` 和 `32768`)。
+相當於 [!UICONTROL 短] 透過結構描述產生器UI建立的欄位是 [`integer` 型別欄位](#integer) 具有特定 `minimum` 和 `maximum` 值(`-32768` 和 `32768`（分別）。
 
 ```json
 "sampleField": {
@@ -202,7 +202,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 位元組] {#byte}
 
-等價於 [!UICONTROL 位元組] 通過架構生成器UI建立的欄位是 [`integer` 類型欄位](#integer) 具體 `minimum` 和 `maximum` 值(`-128` 和 `128`)。
+相當於 [!UICONTROL 位元組] 透過結構描述產生器UI建立的欄位是 [`integer` 型別欄位](#integer) 具有特定 `minimum` 和 `maximum` 值(`-128` 和 `128`（分別）。
 
 ```json
 "sampleField": {
@@ -216,7 +216,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 布林值] {#boolean}
 
-[!UICONTROL 布爾型] 欄位由 `type: boolean`。
+[!UICONTROL 布林值] 欄位表示方式 `type: boolean`.
 
 ```json
 "sampleField": {
@@ -226,7 +226,7 @@ ht-degree: 0%
 }
 ```
 
-您可以選擇提供 `default` 在接收期間未提供顯式值時欄位將使用的值。
+您可以選擇提供 `default` 擷取期間未提供明確值時，欄位將使用的值。
 
 ```json
 "sampleField": {
@@ -239,11 +239,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->否 `default` 值，布爾欄位設定為 `required`，任何缺少此欄位的接受值的記錄在接收時將無法驗證。
+>若否 `default` 會提供值，而布林值欄位會設為 `required`，任何遺失此欄位可接受值的記錄將在擷取時驗證失敗。
 
 ## [!UICONTROL 日期] {#date}
 
-[!UICONTROL 日期] 欄位由 `type: string` 和 `format: date`。 您還可以選擇提供 `examples` 在您希望為手動輸入資料的用戶顯示示例日期字串時，可使用。
+[!UICONTROL 日期] 欄位表示方式 `type: string` 和 `format: date`. 您也可以選擇提供陣列 `examples` 若您想要為手動輸入資料的使用者顯示範例日期字串，請善用此選項。
 
 ```json
 "sampleField": {
@@ -257,7 +257,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 日期時間] {#date-time}
 
-[!UICONTROL 日期時間] 欄位由 `type: string` 和 `format: date-time`。 您還可以選擇提供 `examples` 在希望為手動輸入資料的用戶顯示示例日期時間字串時，可使用此選項。
+[!UICONTROL 日期時間] 欄位表示方式 `type: string` 和 `format: date-time`. 您也可以選擇提供陣列 `examples` 若您想要為手動輸入資料的使用者顯示範例日期時間字串，請善用此選項。
 
 ```json
 "sampleField": {
@@ -271,9 +271,9 @@ ht-degree: 0%
 
 ## [!UICONTROL 陣列] {#array}
 
-[!UICONTROL 陣列] 欄位由 `type: array` 和 `items` 定義陣列將接受的項的架構的對象。
+[!UICONTROL 陣列] 欄位表示方式 `type: array` 和 `items` 物件，定義陣列將接受之專案的結構描述。
 
-可以使用基元類型定義陣列項，如字串陣列：
+您可以使用基本型別（例如字串陣列）來定義陣列專案：
 
 ```json
 "sampleField": {
@@ -286,7 +286,7 @@ ht-degree: 0%
 }
 ```
 
-您還可以參考 `$id` 資料類型 `$ref` 屬性。 以下是 [!UICONTROL 付款項] 對象：
+您也可以參考 `$id` 透過 `$ref` 屬性。 以下是以下陣列 [!UICONTROL 付款專案] 物件：
 
 ```json
 "sampleField": {
@@ -301,9 +301,9 @@ ht-degree: 0%
 
 ## [!UICONTROL 物件] {#object}
 
-[!UICONTROL 對象] 欄位由 `type: object` 和 `properties` 定義架構欄位子屬性的對象。
+[!UICONTROL 物件] 欄位表示方式 `type: object` 和 `properties` 定義結構描述欄位之子屬性的物件。
 
-定義的每個子欄位 `properties` 可以使用任何基元定義 `type` 或通過 `$ref` 指向 `$id` 類型：
+下定義的每個子欄位 `properties` 可使用任何基本值來定義 `type` 或透過 `$ref` 屬性指向 `$id` 有問題的資料型別：
 
 ```json
 "sampleField": {
@@ -321,7 +321,7 @@ ht-degree: 0%
 }
 ```
 
-也可以通過引用資料類型來定義整個對象，前提是所討論的資料類型本身定義為 `type: object`:
+您也可以透過參考資料型別來定義整個物件，前提是相關資料型別本身定義為 `type: object`：
 
 ```json
 "sampleField": {
@@ -333,11 +333,11 @@ ht-degree: 0%
 
 ## [!UICONTROL 地圖] {#map}
 
-映射欄位本質上是 [`object` — 類型欄位](#object) 不受約束的鍵集。 與對象一樣，地圖 `type` 值 `object`但是 `meta:xdmType` 已顯式設定為 `map`。
+對應欄位本質上是 [`object`-type欄位](#object) 具有一組未限制的索引鍵。 如同物件，地圖具有 `type` 值 `object`，但其 `meta:xdmType` 明確設定為 `map`.
 
-地圖 **不能** 定義任何屬性。 它 **必須** 定義單個 `additionalProperties` 模式，用於描述映射中包含的值的類型（每個映射只能包含單個資料類型）。 的 `type` 值必須為 `string` 或 `integer`。
+地圖 **不得** 定義任何屬性。 It **必須** 定義單一 `additionalProperties` 結構描述，說明對應中包含的值型別（每個對應只能包含單一資料型別）。 此 `type` 值必須是 `string` 或 `integer`.
 
-例如，將定義一個具有字串類型值的映射欄位，如下所示：
+例如，具有字串型別值的對應欄位的定義如下：
 
 ```json
 "sampleField": {
@@ -351,25 +351,25 @@ ht-degree: 0%
 }
 ```
 
-有關建立自定義映射欄位的進一步詳細資訊，請參閱下節。
+如需建立自訂對應欄位的詳細資訊，請參閱以下章節。
 
-### 建立自定義映射類型 {#custom-maps}
+### 建立自訂地圖型別 {#custom-maps}
 
-為了在XDM中有效地支援「類地圖」資料，可以使用 `meta:xdmType` 設定為 `map` 以明確管理對象時，應將鍵集視為不受約束。 被攝入到映射欄位中的資料必須使用字串鍵，並且只使用字串或整數值(由 `additionalProperties.type`)。
+為了在XDM中有效支援「類似地圖」的資料，物件可能會使用 `meta:xdmType` 設定為 `map` 以清楚說明物件的管理方式應如同金鑰集未受限制一樣。 擷取至對應欄位的資料必須使用字串索引鍵，且只能使用字串或整數值（由決定） `additionalProperties.type`)。
 
-XDM對此儲存提示的使用設定了以下限制：
+XDM會針對此儲存提示的使用設定下列限制：
 
-* 映射類型MUST為類型 `object`。
-* 映射類型不能定義屬性（換句話說，它們定義「空」對象）。
-* 映射類型必須包括 `additionalProperties.type` 欄位，該欄位描述可能放置在映射中的值 `string` 或 `integer`。
+* 對應型別必須是型別 `object`.
+* 對應型別不能有已定義的屬性（換言之，它們定義「空白」物件）。
+* 對應型別必須包括 `additionalProperties.type` 說明可放置在地圖中的值的欄位，可以 `string` 或 `integer`.
 
-確保在完全必要時僅使用映射類型欄位，因為這些欄位具有以下效能缺陷：
+請確定您只在絕對必要時才使用對應型別欄位，因為這些欄位具有下列效能缺陷：
 
-* 響應時間 [Adobe Experience Platform查詢服務](../../query-service/home.md) 從3秒到10秒就有1億條記錄。
-* 地圖必須少於16個鍵，否則可能會進一步退化。
+* 回應時間來自 [Adobe Experience Platform查詢服務](../../query-service/home.md) 1億筆記錄從3秒降至10秒。
+* 地圖必須少於16個索引鍵，否則可能會進一步降低。
 
-平台用戶介面在如何提取映射類型欄位的鍵方面也有局限性。 對象類型欄位可以展開，但映射將顯示為單個欄位。
+Platform使用者介面在擷取對應型別欄位索引鍵的方式上也有限制。 雖然物件型別欄位可以展開，但地圖會顯示為單一欄位。
 
 ## 後續步驟
 
-本指南介紹如何在API中定義不同的欄位類型。 有關如何格式化XDM欄位類型的詳細資訊，請參見上的指南 [XDM欄位類型約束](../schema/field-constraints.md)。
+本指南說明如何在API中定義不同的欄位型別。 如需如何格式化XDM欄位型別的詳細資訊，請參閱以下指南： [XDM欄位型別限制](../schema/field-constraints.md).

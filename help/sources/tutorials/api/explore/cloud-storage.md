@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；雲儲存；雲儲存
-title: 使用流服務API瀏覽雲儲存資料夾
-description: 本教程使用流服務API來瀏覽第三方雲儲存系統。
+keywords: Experience Platform；首頁；熱門主題；雲端儲存；雲端儲存
+title: 使用流量服務API探索雲端儲存資料夾
+description: 本教學課程使用流量服務API來探索協力廠商雲端儲存系統。
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
@@ -10,35 +10,35 @@ ht-degree: 2%
 
 ---
 
-# 使用 [!DNL Flow Service] API
+# 使用探索您的雲端儲存資料夾 [!DNL Flow Service] API
 
-本教程提供了有關如何使用 [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API。
+本教學課程提供如何使用，探索及預覽雲端儲存空間的結構與內容的步驟。 [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) API。
 
 >[!NOTE]
 >
->為了瀏覽雲儲存，您必須已擁有雲儲存源的有效基本連接ID。 如果您沒有此ID，請查看 [源概述](../../../home.md#cloud-storage) 的子目錄。
+>為了探索您的雲端儲存空間，您必須擁有雲端儲存空間來源的有效基本連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#cloud-storage) 以取得您可以用來建立基本連線的雲端儲存空間來源清單。
 
 ## 快速入門
 
-本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
+本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [源](../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
-* [沙箱](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../landing/api-guide.md).
 
-## 瀏覽雲儲存資料夾
+## 探索您的雲端儲存資料夾
 
-您可以通過向以下站點發出GET請求來檢索有關雲儲存資料夾結構的資訊 [!DNL Flow Service] API，同時提供源的基本連接ID。
+您可以透過向以下發出GET請求，擷取有關雲端儲存資料夾結構的資訊： [!DNL Flow Service] API，同時提供來源的基本連線ID。
 
-執行GET請求以瀏覽雲儲存時，必須包括下表中列出的查詢參數：
+執行GET請求以探索您的雲端儲存空間時，您必須包含下表列出的查詢引數：
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `objectType` | 要瀏覽的對象的類型。 將此值設定為： <ul><li>`folder`:瀏覽特定目錄</li><li>`root`:瀏覽根目錄。</li></ul> |
-| `object` | 僅當查看特定目錄時才需要此參數。 其值表示要瀏覽的目錄的路徑。 |
+| `objectType` | 您要探索的物件型別。 將此值設定為： <ul><li>`folder`：探索特定目錄</li><li>`root`：探索根目錄。</li></ul> |
+| `object` | 只有在檢視特定目錄時才需要此引數。 其值代表您要探索的目錄路徑。 |
 
 
 **API格式**
@@ -50,7 +50,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 雲儲存源的基本連接ID。 |
+| `{BASE_CONNECTION_ID}` | 雲端儲存空間來源的基本連線ID。 |
 | `{PATH}` | 目錄的路徑。 |
 
 **要求**
@@ -66,7 +66,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回查詢目錄中找到的檔案和資料夾陣列。 注意 `path` 要上載的檔案的屬性，因為需要在下一步中提供該屬性以檢查其結構。
+成功的回應會傳回在查詢的目錄中找到的檔案和資料夾陣列。 記下 `path` 要上傳之檔案的屬性，因為您必須在下一個步驟中提供該屬性，以檢查其結構。
 
 ```json
 [
@@ -94,11 +94,11 @@ curl -X GET \
 ]
 ```
 
-## Inspect檔案結構
+## Inspect檔案的結構
 
-要從雲儲存中檢查資料檔案的結構，請在提供檔案路徑和類型作為查詢參數的同時執行GET請求。
+若要從雲端儲存空間檢查資料檔案的結構，請在提供檔案路徑和型別作為查詢引數的同時執行GET請求。
 
-您可以在提供檔案路徑和類型的同時執行GET請求，從雲儲存源檢查資料檔案的結構。 您還可以通過指定不同檔案類型作為查詢參數的一部分來檢查不同的檔案類型，如CSV、TSV或壓縮的JSON和分隔檔案。
+您可以在提供檔案的路徑和型別的同時執行GET請求，從雲端儲存空間來源檢查資料檔案的結構。 您也可以透過指定查詢引數中的檔案型別來檢查不同的檔案型別（例如CSV、TSV或壓縮的JSON和分隔檔案）。
 
 **API格式**
 
@@ -111,10 +111,10 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 雲儲存源連接器的連接ID。 |
-| `{FILE_PATH}` | 要檢查的檔案的路徑。 |
-| `{FILE_TYPE}` | 檔案的類型。 支援的檔案類型包括：<ul><li>分隔</code>:分隔符分隔的值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>:JavaScript對象表示法。 JSON檔案必須符合XDM</li><li>鑲木</code>:阿帕奇鑲木地板。 拼花檔案必須符合XDM。</li></ul> |
-| `{QUERY_PARAMS}` | 可用於篩選結果的可選查詢參數。 請參閱 [查詢參數](#query) 的子菜單。 |
+| `{BASE_CONNECTION_ID}` | 您的雲端儲存空間來源聯結器的連線ID。 |
+| `{FILE_PATH}` | 您要檢查的檔案路徑。 |
+| `{FILE_TYPE}` | 檔案的型別。 支援的檔案型別包括：<ul><li>已分隔</code>：以分隔符號分隔的值。 DSV檔案必須以逗號分隔。</li><li>JSON</code>：JavaScript物件標籤法。 JSON檔案必須符合XDM規範</li><li>PARQUET</code>：Apache Parquet。 Parquet檔案必須符合XDM標準。</li></ul> |
+| `{QUERY_PARAMS}` | 可用來篩選結果的可選查詢引數。 請參閱以下小節： [查詢引數](#query) 以取得詳細資訊。 |
 
 **要求**
 
@@ -129,7 +129,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回查詢檔案的結構，包括表名和資料類型。
+成功的回應會傳回查詢檔案的結構，包括表格名稱和資料型別。
 
 ```json
 [
@@ -156,16 +156,16 @@ curl -X GET \
 ]
 ```
 
-## 使用查詢參數 {#query}
+## 使用查詢引數 {#query}
 
-的 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 支援使用查詢參數來預覽和檢查不同的檔案類型。
+此 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 支援使用查詢引數來預覽和檢查不同的檔案型別。
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `columnDelimiter` | 指定為列分隔符以檢查CSV或TSV檔案的單個字元值。 如果未提供參數，則值預設為逗號 `(,)`。 |
-| `compressionType` | 預覽壓縮分隔檔案或JSON檔案所需的查詢參數。 支援的壓縮檔案包括： <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
-| `encoding` | 定義呈現預覽時要使用的編碼類型。 支援的編碼類型有： `UTF-8` 和 `ISO-8859-1`。 **注釋**:的 `encoding` 參數僅在插入分隔的CSV檔案時可用。 其他檔案類型將採用預設編碼， `UTF-8`。 |
+| `columnDelimiter` | 您指定為欄分隔字元的單一字元值，用於檢查CSV或TSV檔案。 如果未提供引數，則值預設為逗號 `(,)`. |
+| `compressionType` | 預覽壓縮分隔或JSON檔案所需的查詢引數。 支援的壓縮檔案包括： <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `encoding` | 定義呈現預覽時要使用的編碼型別。 支援的編碼型別為： `UTF-8` 和 `ISO-8859-1`. **注意**：此 `encoding` 只有在擷取分隔的CSV檔案時，引數才可用。 其他檔案型別將會以預設編碼擷取。 `UTF-8`. |
 
 ## 後續步驟
 
-按照本教程，您已探索了雲儲存系統，找到了要導入的檔案的路徑 [!DNL Platform]，並查看其結構。 您可以在下一教程中使用此資訊 [從雲儲存中收集資料並將其引入平台](../collect/cloud-storage.md)。
+依照本教學課程，您已探索雲端儲存系統，找到您要帶入的檔案路徑 [!DNL Platform]，並檢視其結構。 您可以在下一個教學課程中使用此資訊來 [從雲端儲存空間收集資料，並將其帶入Platform](../collect/cloud-storage.md).

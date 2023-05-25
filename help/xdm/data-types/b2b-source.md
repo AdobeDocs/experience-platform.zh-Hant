@@ -1,6 +1,6 @@
 ---
-title: B2B源資料類型
-description: 本文檔概述了B2B源體驗資料模型(XDM)資料類型。
+title: B2B來源資料型別
+description: 本檔案提供B2B來源體驗資料模型(XDM)資料型別的概觀。
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
 source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL B2B源] 資料類型
+# [!UICONTROL B2B來源] 資料型別
 
-[!UICONTROL B2B源] 是標準體驗資料模型(XDM)資料類型，它表示B2B實體(如 [帳戶](../classes/b2b/business-account.md)的 [機會](../classes/b2b/business-opportunity.md)或 [活動](../classes/b2b/business-campaign.md))。
+[!UICONTROL B2B來源] 是標準的體驗資料模型(XDM)資料型別，代表B2B實體(例如 [帳戶](../classes/b2b/business-account.md)，和 [商機](../classes/b2b/business-opportunity.md)，或 [行銷活動](../classes/b2b/business-campaign.md))。
 
-當僅依賴基於字串的標識符時，跨多個系統的ID之間可能存在重疊（例如，可以在一個CRM系統上為機會指定字串ID，但該ID可以指代完全不同的機會）。 在中合併資料時，這可能會導致資料衝突 [即時客戶配置檔案](../../profile/home.md)。
+當僅依賴字串型識別碼時，多個系統之間的ID可能會重疊（例如，機會可能會在一個CRM系統上獲得字串ID，但同一ID可能會引用完全不同的機會）。 這可能會導致合併中的資料發生衝突 [即時客戶個人檔案](../../profile/home.md).
 
-的 [!UICONTROL B2B源] 資料類型允許您使用實體的原始字串ID，並將其與特定於源的上下文資訊組合，以確保它在平台系統中保持完全唯一，而不管它源自什麼源。
+此 [!UICONTROL B2B來源] 資料型別可讓您使用實體的原始字串ID，並將其與來源特定的內容資訊結合，以確保無論其來源為何，在Platform系統中都保持完全唯一。
 
-![B2B源結構](../images/data-types/b2b-source.png)
+![B2B來源結構](../images/data-types/b2b-source.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `sourceID` | 字串 | 源記錄的唯一ID。 |
-| `sourceInstanceID` | 字串 | 源資料的實例或組織ID。 |
-| `sourceKey` | 字串 | 由 `sourceId`。 `sourceInstanceId`, `sourceType` 以下格式連接在一起： `[sourceID]@[sourceInstanceID].[sourceType]`。<br><br>某些源連接器(如Marketo)自動連接某些標識符的值。 必須使用 [資料準備 `concat` 函式](../../data-prep/functions.md#string)，例如： `concat(id,"@${ORG_ID}.Marketo")` |
-| `sourceType` | 字串 | 提供源資料的平台的名稱。 |
+| `sourceID` | 字串 | 來源記錄的唯一ID。 |
+| `sourceInstanceID` | 字串 | 來源資料的執行個體或組織ID。 |
+| `sourceKey` | 字串 | 由以下專案組成的唯一識別碼 `sourceId`， `sourceInstanceId`、和 `sourceType` 以下列格式串連在一起： `[sourceID]@[sourceInstanceID].[sourceType]`.<br><br>某些來源聯結器(如Marketo)會自動為特定識別碼串連此值。 其他必須使用 [資料準備 `concat` 函式](../../data-prep/functions.md#string)例如： `concat(id,"@${ORG_ID}.Marketo")` |
+| `sourceType` | 字串 | 提供來源資料的平台名稱。 |
 
 {style="table-layout:auto"}
 
-有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
+如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填充示例](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.example.1.json)
+* [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/b2b/b2b-source.schema.json)

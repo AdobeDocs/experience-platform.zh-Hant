@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；資料流；資料流；資料；監視；監視；監視資料流；監視資料流；監視；監視資料流；監視資料流；監視資料流；流；流服務；
+keywords: Experience Platform；首頁；熱門主題；資料流程；資料流程；資料；監控；監控資料流程；監控；監控資料流程；監控資料流程；監控資料流程；流程；流程服務；
 solution: Experience Platform
-title: 資料流概述
-description: 本文檔介紹了資料流，以說明它們在Adobe Experience Platform的使用方式。
+title: 資料流概觀
+description: 本檔案會介紹資料流程，說明資料流程在Adobe Experience Platform中的使用方式。
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
@@ -11,22 +11,22 @@ ht-degree: 5%
 
 ---
 
-# 資料流概述
+# 資料流概觀
 
-在Adobe Experience Platform，資料從各種來源中攝取，在Experience Platform內分析，並激活到各種目的地。 通過向資料流提供透明性，平台使跟蹤這種潛在的非線性資料流的過程變得更容易。
+在Adobe Experience Platform中，資料會從各種來源擷取、在Experience Platform中分析，並啟用至各種目的地。 Platform藉由提供資料流透明度，讓追蹤這種潛在非線性資料流的程式變得更輕鬆。
 
 ## 使用資料流
 
-資料流能呈現資料處理作業在平台上移動資料的情形。這些資料流是跨不同的服務配置的，可幫助將資料從源連接器移動到目標資料集，然後由Identity Service和Real-Time Customer Profile利用，最終激活到目標。
+資料流能呈現資料處理作業在平台上移動資料的情形。這些資料流會在不同的服務中設定，有助於將資料從來源聯結器移動到目標資料集，然後由Identity Service和即時客戶個人檔案使用，最後啟用到目的地。
 
-要瞭解有關在源連接器中使用資料流的詳細資訊，請閱讀 [源概述](../sources/home.md)。
+若要進一步瞭解如何在來源聯結器中使用資料流，請閱讀 [來源概觀](../sources/home.md).
 
-## 準備資料
+## 正在準備資料
 
-資料準備允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
+「資料準備」可讓資料工程師對應、轉換和驗證與Experience Data Model (XDM)之間的資料。
 
-要瞭解有關在資料被攝取後準備資料的詳細資訊，請閱讀 [資料準備概述](../data-prep/home.md)。
+若要進一步瞭解在資料被擷取後如何準備資料，請參閱 [資料準備總覽](../data-prep/home.md).
 
-## 監視資料流
+## 監控資料流
 
-可以使用平台API或平台UI來監視資料流。 要瞭解如何使用API監視資料流，請閱讀 [監視資料流API教程](./api/monitor.md)。 要瞭解如何監視平台UI中的資料流，請閱讀上的教程 [監視源的資料流](./ui/monitor-sources.md) 和 [監視目標的資料流](./ui/monitor-destinations.md)。
+監控資料流可使用Platform API或Platform UI來完成。 若要瞭解如何使用API監控資料流，請參閱 [監控資料流API教學課程](./api/monitor.md). 若要瞭解如何監視Platform UI中的資料流，請閱讀上的教學課程 [監控來源的資料流](./ui/monitor-sources.md) 和 [監控目的地的資料流](./ui/monitor-destinations.md).

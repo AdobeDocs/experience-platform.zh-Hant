@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；映射器；映射集；映射；
+keywords: Experience Platform；首頁；對應程式；對應集；對應；
 solution: Experience Platform
-title: 映射集概述
-description: 瞭解如何將映射集與Adobe Experience Platform資料準備一起使用。
+title: 對應集概述
+description: 瞭解如何搭配Adobe Experience Platform資料準備使用對應集。
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 0%
 
 ---
 
-# 映射集概述
+# 對應集概述
 
-映射集是一組映射，用於將資料從一個模式轉換到另一個模式。 本文檔提供了如何構成映射集的資訊，包括輸入架構、輸出架構和映射。
+對應集是一組對應，可將資料從一個結構描述轉換為另一個結構描述。 本檔案提供有關對應集如何組成的資訊，包括輸入結構描述、輸出結構描述和對應。
 
 ## 快速入門
 
-本概述要求對Adobe Experience Platform的下列組成部分進行工作理解：
+此概觀需要深入瞭解下列Adobe Experience Platform元件：
 
-- [資料準備](./home.md):資料準備允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
-- [資料流](../dataflows/home.md):資料流是跨平台移動資料的資料作業的表示形式。 資料流是跨不同服務配置的，有助於將資料從源連接器移動到目標資料集 [!DNL Identity] 和 [!DNL Profile], [!DNL Destinations]。
-- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md):資料可通過以下方法發送 [!DNL Experience Platform]。
-- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
+- [資料準備](./home.md)：資料準備可讓資料工程師對應、轉換和驗證與Experience Data Model (XDM)之間的資料。
+- [資料流](../dataflows/home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流會跨不同服務進行設定，有助於將資料從來源聯結器移至目標資料集，以及 [!DNL Identity] 和 [!DNL Profile]，並至 [!DNL Destinations].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md)：資料可傳送至的方法 [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
 
-## 映射集語法
+## 對應集語法
 
-映射集由ID、名稱、輸入模式、輸出模式和關聯映射的清單組成。
+對應集是由ID、名稱、輸入結構描述、輸出結構描述和相關聯的對應清單所組成。
 
-以下JSON是典型映射集的示例：
+以下JSON為典型對應集的範例：
 
 ```json
 {
@@ -68,33 +68,33 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `id` | 映射集的唯一標識符。 |
-| `name` | 映射集的名稱。 |
-| `inputSchema` | 傳入資料的XDM架構。 |
-| `outputSchema` | 將轉換輸入資料的XDM模式以符合。 |
-| `mappings` | 從源架構到目標架構的欄位到欄位映射的陣列。 |
-| `sourceType` | 對於每個列出的映射， `sourceType` attribute指示要映射的源的類型。 可以是 `ATTRIBUTE`。 `STATIC`或 `EXPRESSION`: <ul><li> `ATTRIBUTE` 用於源路徑中找到的任何值。 </li><li>`STATIC` 用於注入到目標路徑中的值。 此值保持不變，不受源架構的影響。</li><li> `EXPRESSION` 用於表達式，將在運行時解析該表達式。 可在 [映射函式指南](./functions.md)。</li> </ul> |
-| `source` | 對於每個列出的映射， `source` attribute表示要映射的欄位。 有關如何配置源的詳細資訊，請參閱 [源節](#sources)。 |
-| `destination` | 對於每個列出的映射， `destination` 屬性指示欄位或欄位的路徑，其中從 `source` 的下界。 有關如何配置目標的詳細資訊，請參閱 [目標部分](#destination)。 |
-| `mappings.name` | (*可選*)映射的名稱。 |
-| `mappings.description` | (*可選*)映射的說明。 |
+| `id` | 對應集的唯一識別碼。 |
+| `name` | 對應集的名稱。 |
+| `inputSchema` | 傳入資料的XDM結構描述。 |
+| `outputSchema` | 已轉換輸入資料以符合的XDM結構描述。 |
+| `mappings` | 從來源結構描述到目的地結構描述的欄位對欄位對應陣列。 |
+| `sourceType` | 對於每個列出的對應，其 `sourceType` attribute表示要對應的來源型別。 可以是其中一項 `ATTRIBUTE`， `STATIC`，或 `EXPRESSION`： <ul><li> `ATTRIBUTE` 用於來源路徑中找到的任何值。 </li><li>`STATIC` 用於插入目的地路徑中的值。 此值會保持不變，不受來源結構描述的影響。</li><li> `EXPRESSION` 用於運算式，將在執行階段期間解析。 可用的運算式清單可在以下網址找到： [對應函式指南](./functions.md).</li> </ul> |
+| `source` | 對於每個列出的對應， `source` attribute表示您要對應的欄位。 有關如何設定來源的更多資訊，請參閱 [來源區段](#sources). |
+| `destination` | 對於每個列出的對應， `destination` attribute表示欄位或欄位路徑，其中值擷取自 `source` 欄位將會放置。 如需如何設定目的地的詳細資訊，請參閱 [目的地區段](#destination). |
+| `mappings.name` | (*可選*)對應的名稱。 |
+| `mappings.description` | (*可選*)對應說明。 |
 
-## 配置映射源
+## 設定對應來源
 
-在映射中， `source` 可以是欄位、表達式或靜態值。 根據給定的源類型，可以採用多種方式提取值。
+在對映中， `source` 可以是欄位、運算式或靜態值。 根據給定的來源型別，可透過多種方式擷取值。
 
-### 列資料中的欄位
+### 欄位資料中的欄位
 
-在列資料（如CSV檔案）中映射欄位時，使用 `ATTRIBUTE` 源類型。 如果欄位包含 `.` 在其名稱內使用 `\` 來轉義值。 以下是此映射的示例：
+對應欄位資料（例如CSV檔案）中的欄位時，請使用 `ATTRIBUTE` 來源型別。 如果欄位包含 `.` 在其名稱內，使用 `\` 以逸出值。 此對應的範例可在以下找到：
 
-**示例CSV檔案：**
+**範例CSV檔案：**
 
 ```csv
 Full.Name, Email
 John Smith, js@example.com
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -104,7 +104,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -114,11 +114,11 @@ John Smith, js@example.com
 }
 ```
 
-### 嵌套資料中的欄位
+### 巢狀資料中的欄位
 
-在映射嵌套資料（如JSON檔案）中的欄位時，使用 `ATTRIBUTE` 源類型。 如果欄位包含 `.` 在其名稱內使用 `\` 來轉義值。 以下是此映射的示例：
+對應巢狀資料（例如JSON檔案）中的欄位時，請使用 `ATTRIBUTE` 來源型別。 如果欄位包含 `.` 在其名稱內，使用 `\` 以逸出值。 此對應的範例可在以下找到：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -129,7 +129,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -139,7 +139,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -151,9 +151,9 @@ John Smith, js@example.com
 
 ### 陣列中的欄位
 
-映射陣列中的欄位時，可以使用索引檢索特定值。 要執行此操作，請使用 `ATTRIBUTE` 源類型和要映射的值的索引。 以下是此映射的示例：
+對應陣列中的欄位時，您可以使用索引來擷取特定值。 若要這麼做，請使用 `ATTRIBUTE` 來源型別和您要對應的值的索引。 此對應的範例可在以下找到：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -172,7 +172,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -182,7 +182,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -192,11 +192,11 @@ John Smith, js@example.com
 }
 ```
 
-### 陣列到陣列或對象到對象
+### 陣列到陣列或物件到物件
 
-使用 `ATTRIBUTE` 源類型中，還可以將陣列直接映射到陣列或對象到對象。 以下是此映射的示例：
+使用 `ATTRIBUTE` 來源型別，您也可以直接將陣列對應至陣列，或將物件對應至物件。 此對應的範例可在以下找到：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -215,7 +215,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -225,7 +225,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -244,11 +244,11 @@ John Smith, js@example.com
 }
 ```
 
-### 陣列上的迭代操作
+### 陣列上的反複運算
 
-使用 `ATTRIBUTE` 源類型，您可以反複循環使用陣列，並使用通配符索引(`[*]`)。 以下是此映射的示例：
+使用 `ATTRIBUTE` 來源型別，您可以使用萬用字元索引(`[*]`)。 此對應的範例可在以下找到：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -267,7 +267,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -277,7 +277,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -298,9 +298,9 @@ John Smith, js@example.com
 
 ### 常數值
 
-如果要映射常數或靜態值，請使用 `STATIC` 源類型。  使用 `STATIC` 源類型， `source` 表示要分配給的硬編碼值 `destination`。 以下是此映射的示例：
+如果您想要對應常數或靜態值，請使用 `STATIC` 來源型別。  使用時 `STATIC` 來源型別， `source` 代表您要指派給的硬式編碼值 `destination`. 此對應的範例可在以下找到：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -309,7 +309,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -319,7 +319,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -327,11 +327,11 @@ John Smith, js@example.com
 }
 ```
 
-### 表達式
+### 運算式
 
-如果要映射表達式，請使用 `EXPRESSION` 源類型。 可在 [映射函式指南](./functions.md)。 使用 `EXPRESSION` 源類型， `source` 表示要解析的函式。 以下是此映射的示例：
+如果您想要對應運算式，請使用 `EXPRESSION` 來源型別。 接受的函式清單可在以下網址找到： [對應函式指南](./functions.md). 使用時 `EXPRESSION` 來源型別， `source` 代表您要解析的功能。 此對應的範例可在以下找到：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -341,7 +341,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -351,7 +351,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -361,15 +361,15 @@ John Smith, js@example.com
 }
 ```
 
-## 配置映射目標
+## 設定對應目的地
 
-在映射中， `destination` 是從 `source` 的子菜單。
+在對映中， `destination` 是從中擷取值的位置 `source` 將會插入。
 
-### 根級別的欄位
+### 根層級的欄位
 
-當要映射 `source` 值到已轉換資料的根級別，請遵循以下示例：
+當您想要對應 `source` 值轉換為轉換後資料的根層級，請遵循以下範例：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -380,7 +380,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -390,7 +390,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -398,11 +398,11 @@ John Smith, js@example.com
 }
 ```
 
-### 嵌套欄位
+### 巢狀欄位
 
-當要映射 `source` 值到已轉換資料中的嵌套欄位，請遵循以下示例：
+當您想要對應 `source` 值至轉換後資料中的巢狀欄位，請遵循以下範例：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -411,7 +411,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -421,7 +421,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -431,11 +431,11 @@ John Smith, js@example.com
 }
 ```
 
-### 特定陣列索引處的欄位
+### 位於特定陣列索引的欄位
 
-當要映射 `source` 值到已轉換資料中陣列中的特定索引，請遵循以下示例：
+當您想要對應 `source` 轉換後資料中陣列內特定索引的值，請遵循以下範例：
 
-**示例JSON檔案**
+**範例JSON檔案**
 
 ```json
 {
@@ -446,7 +446,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -456,7 +456,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -464,9 +464,9 @@ John Smith, js@example.com
 }
 ```
 
-### 迭代陣列操作
+### 反複陣列操作
 
-當要反複循環遍歷陣列並將值映射到目標時，可以使用通配符索引(`[*]`)。 下面可以看到此示例：
+如果您想要反複循環陣列並將值對應至目標，可以使用萬用字元索引(`[*]`)。 這方面的範例可檢視如下：
 
 ```json
 {
@@ -485,7 +485,7 @@ John Smith, js@example.com
 }
 ```
 
-**示例映射**
+**範例對應**
 
 ```json
 {
@@ -495,7 +495,7 @@ John Smith, js@example.com
 }
 ```
 
-**已轉換的資料**
+**轉換的資料**
 
 ```json
 {
@@ -516,4 +516,4 @@ John Smith, js@example.com
 
 ## 後續步驟
 
-通過閱讀本文檔，您現在應該瞭解如何構建映射集，包括如何在映射集內配置單個映射。 有關其他資料準備功能的詳細資訊，請閱讀 [資料準備概述](./home.md)。 要瞭解如何在資料準備API中使用映射集，請閱讀 [資料準備開發人員指南](./api/overview.md)。
+閱讀本檔案後，您現在應瞭解對應集的建構方式，包括如何在對應集中設定個別對應。 如需其他「資料準備」功能的詳細資訊，請參閱 [資料準備總覽](./home.md). 若要瞭解如何在資料準備API中使用對應集，請閱讀 [資料準備開發人員指南](./api/overview.md).

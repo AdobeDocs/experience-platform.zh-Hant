@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；pql;PQL；配置檔案查詢語言；布爾函式；布爾函式；
+keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；pql；PQL；設定檔查詢語言；布林函式；布林值；
 solution: Experience Platform
-title: PQL布爾函式
-description: 布爾函式用於對配置檔案查詢語言(PQL)中的不同元素執行布爾邏輯。
+title: PQL布林函式
+description: 布林函式可用來針對設定檔查詢語言(PQL)中的不同元素執行布林邏輯。
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 5%
 
 ---
 
-# 布爾函式
+# 布林函式
 
-布爾函式用於對中的不同元素執行布爾邏輯 [!DNL Profile Query Language] (PQL)。  有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
+布林函式是用來對中的不同元素執行布林邏輯 [!DNL Profile Query Language] (PQL)。  如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
 
 ## 和
 
-的 `and` 函式用於建立邏輯連接。
+此 `and` 函式用來建立邏輯結合。
 
 **格式**
 
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 **範例**
 
-以下PQL查詢將返回所有在加拿大和1985年出生的人。
+以下PQL查詢將傳回所有以加拿大為母國且出生年份為1985年的人。
 
 ```sql
 homeAddress.countryISO = "CA" and person.birthYear = 1985
@@ -35,7 +35,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## 或
 
-的 `or` 函式用於建立邏輯斷開。
+此 `or` 函式用來建立邏輯分離。
 
 **格式**
 
@@ -45,7 +45,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 **範例**
 
-以下PQL查詢將返回所有在加拿大或1985年出生的人。
+以下PQL查詢將傳回所有以加拿大為母國或1985年出生年份為出生地的人。
 
 ```sql
 homeAddress.countryISO = "CA" or person.birthYear = 1985
@@ -53,7 +53,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 ## Not
 
-的 `not` 或 `!`)函式用於建立邏輯否定。
+此 `not` (或 `!`)函式來建立邏輯否定。
 
 **格式**
 
@@ -64,7 +64,7 @@ not ({QUERY})
 
 **範例**
 
-以下PQL查詢將返回所有沒有其祖國為加拿大的人。
+以下PQL查詢將傳回所有沒有其母國為加拿大的人。
 
 ```sql
 not (homeAddress.countryISO = "CA")
@@ -72,7 +72,7 @@ not (homeAddress.countryISO = "CA")
 
 ## 若  
 
-的 `if` 函式用於根據指定的條件是否為true來解析表達式。
+此 `if` 函式用於解析運算式，具體取決於指定的條件是否為true。
 
 **格式**
 
@@ -82,13 +82,13 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 
 | 引數 | 說明 |
 | --------- | ----------- |
-| `{TEST_EXPRESSION}` | 正在測試的布爾表達式。 |
-| `{TRUE_EXPRESSION}` | 在 `{TEST_EXPRESSION}` 是真的。 |
-| `{FALSE_EXPRESSION}` | 在 `{TEST_EXPRESSION}` 為false。 |
+| `{TEST_EXPRESSION}` | 正在測試的布林運算式。 |
+| `{TRUE_EXPRESSION}` | 其值將用於下列情況的運算式： `{TEST_EXPRESSION}` 為true。 |
+| `{FALSE_EXPRESSION}` | 其值將用於下列情況的運算式： `{TEST_EXPRESSION}` 為false。 |
 
 **範例**
 
-以下PQL查詢將值設定為 `1` 如果母國是加拿大 `2` 不是加拿大。
+下列PQL查詢會將值設為 `1` 如果母國為加拿大，且 `2` 如果母國不是加拿大。
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -96,4 +96,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## 後續步驟
 
-現在您已經瞭解了布爾函式，可以在PQL查詢中使用它們。 有關其他PQL功能的詳細資訊，請閱讀 [配置檔案查詢語言概述](./overview.md)。
+現在您已瞭解布林函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

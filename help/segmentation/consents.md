@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；選擇退出；分段；分段服務；分段服務；榮譽退出；選擇退出；選擇退出；同意；共用；收集；
+keywords: Experience Platform；首頁；熱門主題；選擇退出；分段；分段服務；榮譽選擇退出；選擇退出；選擇退出；同意；共用；收集；
 solution: Experience Platform
-title: 尊重段內的同意
-description: 瞭解如何在段操作中遵守客戶同意首選項以收集和共用個人資料。
+title: 在區段中接受同意
+description: 瞭解如何在區段操作中遵循個人資料收集和分享的客戶同意偏好設定。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -11,68 +11,68 @@ ht-degree: 0%
 
 ---
 
-# 遵守段內的同意
+# 在區段中接受同意
 
-法律隱私法規，如 [!DNL California Consumer Privacy Act] (CCPA)規定消費者有權選擇不收集或與第三方共用其個人資料。 Adobe Experience Platform提供標準體驗資料模型(XDM)元件，這些元件旨在在即時客戶配置檔案資料中捕獲這些客戶同意偏好。
+法律隱私權法規，例如 [!DNL California Consumer Privacy Act] (CCPA)給予消費者選擇退出收集其個人資料或與第三方分享的權利。 Adobe Experience Platform提供標準Experience Data Model (XDM)元件，旨在擷取即時客戶個人檔案資料中的這些客戶同意偏好設定。
 
-如果客戶因共用其個人資料而撤回或拒絕同意，那麼在為市場營銷活動吸引受眾時，貴組織必須遵守這一偏好。 本文檔介紹如何使用Experience Platform用戶介面在段定義中整合客戶同意值。
+如果客戶撤回或拒絕同意分享其個人資料，貴組織在產生行銷活動的受眾時，務必遵循該偏好設定。 本檔案說明如何使用Experience Platform使用者介面，將客戶同意值整合到您的區段定義中。
 
 ## 快速入門
 
-遵守客戶同意價值需要瞭解 [!DNL Adobe Experience Platform] 服務。 開始本教程之前，請確保您熟悉以下服務：
+遵循客戶同意值需要瞭解各種 [!DNL Adobe Experience Platform] 涉及的服務。 開始進行本教學課程之前，請務必熟悉下列服務：
 
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):平台組織客戶體驗資料的標準化框架。
-* [[!DNL Real-Time Customer Profile]](../profile/home.md):根據來自多個來源的聚合資料即時提供統一的客戶配置檔案。
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):允許您從 [!DNL Real-Time Customer Profile] 資料。
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：Platform組織客戶體驗資料的標準化架構。
+* [[!DNL Real-Time Customer Profile]](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md)：可讓您從以下專案建立受眾區段： [!DNL Real-Time Customer Profile] 資料。
 
-## 同意架構欄位
+## 同意結構描述欄位
 
-為了遵守客戶同意和首選項，您的 [!UICONTROL XDM個人配置檔案] union架構必須包含標準欄位組 **[!UICONTROL 同意和首選項]**。
+為了遵循客戶同意和偏好設定，屬於您其中一部分的結構描述之一 [!UICONTROL XDM個別設定檔] 聯合結構描述必須包含標準欄位群組 **[!UICONTROL 同意和偏好設定]**.
 
-有關欄位組提供的每個屬性的結構和預期使用情形的詳細資訊，請參閱 [同意和首選項參考指南](../xdm/field-groups/profile/consents.md)。 有關如何將欄位組添加到架構的逐步說明，請參閱 [XDM UI指南](../xdm/ui/resources/schemas.md#add-field-groups)。
+有關欄位群組提供的每個屬性的結構和預期使用案例的詳細資訊，請參閱 [同意和偏好設定參考指南](../xdm/field-groups/profile/consents.md). 有關如何將欄位群組新增到結構描述的逐步指示，請參閱 [XDM UI指南](../xdm/ui/resources/schemas.md#add-field-groups).
 
-將欄位組添加到 [啟用配置檔案的架構](../xdm/ui/resources/schemas.md#profile) 並且其欄位已用於從您的體驗應用程式中接收同意資料，您可以使用段規則中收集的同意屬性。
+將欄位群組新增至後 [啟用設定檔的結構描述](../xdm/ui/resources/schemas.md#profile) 及其欄位已用來從體驗應用程式擷取同意資料，您可以在區段規則中使用收集的同意屬性。
 
-## 在分割中處理同意
+## 處理分段中的同意
 
-為了確保在段中不包括已選取的配置檔案，必須在建立任何新段時將特殊欄位添加到現有段並包括在內。
+為了確保選擇退出的設定檔不會包含在區段中，必須在建立任何新區段時向現有區段新增並包含特殊欄位。
 
-以下步驟演示如何為兩種類型的opt-out標誌添加相應欄位：
+以下步驟示範如何為兩種型別的選擇退出標幟新增適當的欄位：
 
 1. [!UICONTROL 資料收集]
 1. [!UICONTROL 共用資料]
 
 >[!NOTE]
 >
->本指南重點介紹上面的兩個選擇退出標誌，但您也可以配置段以同時包含附加同意信號。 的 [同意和首選項參考指南](../xdm/field-groups/profile/consents.md) 提供了有關這些選項及其預期使用情形的詳細資訊。
+>雖然本指南著重於上述兩個選擇退出標幟，但您可以設定區段以一併納入其他同意訊號。 此 [同意和偏好設定參考指南](../xdm/field-groups/profile/consents.md) 提供上述每個選項及其預期使用案例的詳細資訊。
 
-在UI中生成段時，在 **[!UICONTROL 屬性]**，導航 **[!UICONTROL XDM個人配置檔案]**，然後選擇 **[!UICONTROL 同意和首選項]**。 從這裡，您可以看到 **[!UICONTROL 資料收集]** 和 **[!UICONTROL 共用資料]**。
+在UI中建立區段時，在 **[!UICONTROL 屬性]**，導覽至 **[!UICONTROL XDM個別設定檔]**，然後選取 **[!UICONTROL 同意和偏好設定]**. 從這裡，您可以看到以下專案的選項 **[!UICONTROL 資料彙集]** 和 **[!UICONTROL 共用資料]**.
 
 ![](./images/opt-outs/consents.png)
 
-從選擇 **[!UICONTROL 資料收集]** 類別，然後拖動 **[!UICONTROL 選擇值]** 到段生成器。 將屬性添加到段時，可以指定 [同意值](../xdm/field-groups/profile/consents.md#choice-values) 必須包括或排除的。
+從選取 **[!UICONTROL 資料彙集]** 類別，然後拖曳 **[!UICONTROL 選擇值]** 放入區段產生器中。 將屬性新增至區段時，您可以指定 [同意值](../xdm/field-groups/profile/consents.md#choice-values) 必須包含或排除的專案。
 
 ![](./images/opt-outs/consent-values.png)
 
-一種方法是排除選擇不收集資料的任何客戶。 要執行此操作，請將運算子設定為 **[!UICONTROL 不等於]**，然後選擇以下值：
+其中一種方式是排除選擇退出收集其資料的任何客戶。 若要這麼做，請將運運算元設為 **[!UICONTROL 不等於]**，然後選擇下列值：
 
 * **[!UICONTROL 否（選擇退出）]**
-* **[!UICONTROL 預設值為「否」（選擇退出）]**
-* **[!UICONTROL 未知]** （假定在未知的情況下不予同意）
+* **[!UICONTROL 「否」（選擇退出）的預設值]**
+* **[!UICONTROL 未知]** （若另有不明情況，則會假設未獲得同意）
 
 ![](./images/opt-outs/collect.png)
 
-下 **[!UICONTROL 屬性]** 在左欄中，導航回 **[!UICONTROL 同意和首選項]** ，然後選擇 **[!UICONTROL 共用資料]**。 拖動其對應 **[!UICONTROL 選擇值]** 到畫布中，並選擇與 [!UICONTROL 資料收集] 選項值。 確保 **[!UICONTROL 或]** 建立了兩個屬性之間的關係。
+下 **[!UICONTROL 屬性]** 在左側邊欄中，導覽回 **[!UICONTROL 同意和偏好設定]** 區段，然後選取 **[!UICONTROL 共用資料]**. 拖曳其對應的 **[!UICONTROL 選擇值]** 並選取與相同的值 [!UICONTROL 資料彙集] 選擇值。 確保 **[!UICONTROL 或]** 在兩個屬性之間建立關係。
 
 ![](./images/opt-outs/share.png)
 
-同時使用 **[!UICONTROL 資料收集]** 和 **[!UICONTROL 共用資料]** 添加到該段的同意值後，任何選擇不使用其資料的客戶將被排除在結果受眾之外。 在此處，您可以在選擇 **[!UICONTROL 保存]** 完成該過程。
+同時使用 **[!UICONTROL 資料彙集]** 和 **[!UICONTROL 共用資料]** 新增至區段的同意值，則會從產生的對象中排除選擇退出使用其資料的任何客戶。 從這裡，您可以繼續自訂區段定義，然後再選取 **[!UICONTROL 儲存]** 以完成程式。
 
 ## 後續步驟
 
-通過學完本教程，您現在應更瞭解在Experience Platform中構建段時如何遵守客戶同意和首選項。
+依照本教學課程所述，您現在應該更瞭解在Experience Platform中建立區段時，如何遵循客戶同意和偏好設定。
 
-有關在平台中管理同意的詳細資訊，請參閱以下文檔：
+如需在Platform中管理同意的詳細資訊，請參閱下列檔案：
 
-* [使用Adobe標準的同意處理](../landing/governance-privacy-security/consent/adobe/overview.md)
-* [使用IAB TCF 2.0標準的同意處理](../landing/governance-privacy-security/consent/iab/overview.md)
+* [使用Adobe標準進行同意處理](../landing/governance-privacy-security/consent/adobe/overview.md)
+* [使用IAB TCF 2.0標準進行同意處理](../landing/governance-privacy-security/consent/iab/overview.md)

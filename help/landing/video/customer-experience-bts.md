@@ -1,6 +1,6 @@
 ---
-title: 幕後：由Adobe Experience Platform推動的客戶體驗
-description: 在上一段視頻中，我們看到了示範品牌Luma如何能夠創造豐富、有回報和相關的客戶體驗。 這段視頻看了Adobe Experience Platform如何完成這段旅程。
+title: 幕後：Adobe Experience Platform支援的客戶體驗
+description: 在上一段影片中，我們瞭解範例品牌Luma如何建立豐富、有報酬和相關的客戶體驗。 本影片說明如何使用Adobe Experience Platform完成此歷程。
 kt: 4340
 audience: all
 doc-type: video
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ---
 
-# 客戶體驗的幕後Experience Platform
+# 透過Experience Platform提供客戶體驗的幕後
 
-看完視頻後 [由平台支援的客戶體驗](customer-experience.md)，到幕後去看看Adobe Experience Platform是如何用來推動這次體驗的。
+觀看影片後，畫面顯示 [由Platform提供支援的客戶體驗](customer-experience.md)，前往幕後瞭解Adobe Experience Platform如何用來支援此體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)

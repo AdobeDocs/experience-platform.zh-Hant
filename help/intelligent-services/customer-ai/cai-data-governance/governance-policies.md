@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；使用手冊；客戶；熱門主題；訪問控制；建立模型；
+keywords: Experience Platform；使用手冊；customer ai；熱門主題；存取控制；建立模型；
 feature: Customer AI
-title: 客戶AI的治理策略
-description: Adobe Experience Platform提供多種服務和工具，讓您能夠放心地控制收集的體驗資料。
+title: Customer AI的治理政策
+description: Adobe Experience Platform提供數種服務和工具，讓您能夠自信地控制所收集的體驗資料。
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -11,10 +11,10 @@ ht-degree: 0%
 
 ---
 
-# 治理政策
+# 治理原則
 
-完成建立模型和提交模型配置的工作流後， [策略執行](/help/data-governance/enforcement/auto-enforcement.md) 檢查是否存在違規。 如果發生策略違規，則出現一個跨距，指示違反了一個或多個策略。 這是為了確保您的資料操作和平台中的營銷活動符合資料使用策略。
+完成建立模型並提交模型設定的工作流程後， [原則執行](/help/data-governance/enforcement/auto-enforcement.md) 檢查是否有任何違規。 如果發生原則違規，會出現一個彈出視窗，指出已違反一個或多個原則。 這是為了確保您在Platform中的資料作業和行銷動作符合資料使用原則。
 
-![顯示有關策略違規資訊的跨距](../images/user-guide/policy-violation-popover-cai.png)。
+![顯示原則違規相關資訊的彈出視窗](../images/user-guide/policy-violation-popover-cai.png).
 
-跨距提供有關違規的特定資訊。 您可以通過策略設定和其他與配置工作流不直接相關的措施來解決這些違規。 例如，您可以更改標籤，以便允許某些欄位用於資料科學目的。 或者，也可以修改模型配置本身，使其不使用帶有標籤的任何內容。 請參閱文檔以瞭解有關如何設定的詳細資訊 [策略](/help/data-governance/policies/overview.md)。
+彈出視窗提供有關違規的特定資訊。 您可以透過原則設定及其他與組態工作流程不直接相關的測量來解決這些違規。 例如，您可以變更標籤，讓某些欄位可用於資料科學目的。 或者，您也可以修改模型組態本身，使其不使用任何有標籤的內容。 請參閱檔案以進一步瞭解如何設定 [原則](/help/data-governance/policies/overview.md).

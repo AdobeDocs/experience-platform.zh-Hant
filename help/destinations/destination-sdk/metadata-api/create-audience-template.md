@@ -1,6 +1,6 @@
 ---
-description: 本頁說明了通過Adobe Experience Platform Destination SDK建立受眾模板的API調用。
-title: 建立受眾模板
+description: 此頁面是用來透過Adobe Experience Platform Destination SDK建立對象範本的API呼叫的範例。
+title: 建立對象範本
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '626'
@@ -9,27 +9,27 @@ ht-degree: 3%
 ---
 
 
-# 建立受眾模板
+# 建立對象範本
 
 >[!IMPORTANT]
 >
->**API終結點**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API端點**： `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-對於使用Destination SDK建立的某些目標，您需要建立訪問群體元資料配置以寫程式方式在目標中建立、更新或刪除段元資料。 此頁顯示如何使用 `/authoring/audience-templates` 用於建立配置的API終結點。
+對於使用Destination SDK建立的一些目的地，您需要建立對象中繼資料設定，以程式設計方式在目的地中建立、更新或刪除區段中繼資料。 此頁面說明如何使用 `/authoring/audience-templates` API端點以建立設定。
 
-有關可以通過此終結點配置的功能的詳細說明，請參見 [受眾元資料管理](../functionality/audience-metadata-management.md)。
+如需可透過此端點設定的功能的詳細說明，請參閱 [對象中繼資料管理](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
+>Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
 
-## 受眾模板API操作入門 {#get-started}
+## 開始使用對象範本API作業 {#get-started}
 
-在繼續之前，請查看 [入門指南](../getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
-## 建立受眾模板 {#create}
+## 建立對象範本 {#create}
 
-通過建立 `POST` 請求 `/authoring/audience-templates` 端點。
+您可以建立新的受眾範本，方法是建立 `POST` 向以下專案提出的請求： `/authoring/audience-templates` 端點。
 
 **API格式**
 
@@ -39,7 +39,7 @@ POST /authoring/audience-templates
 
 +++請求
 
-以下請求將建立由負載中提供的參數配置的新受眾模板。 下面的負載包括接受的所有參數 `/authoring/audience-templates` 端點。 請注意，您不必在調用中添加所有參數，並且模板可根據API要求進行自定義。
+以下請求會建立新的受眾範本，由承載中提供的引數設定。 以下裝載包含 `/authoring/audience-templates` 端點。 請注意，您不需要在呼叫上新增所有引數，而且範本可以根據您的API需求自訂。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -189,18 +189,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | 屬性 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | 目標的受眾元資料模板的名稱。 此名稱將出現在Experience Platform用戶介面中特定於合作夥伴的任何錯誤消息中，然後是從中分析的錯誤消息 `metadataTemplate.create.errorSchemaMap`。 |
-| `url` | 字串 | API的URL和終結點，用於建立、更新、刪除或驗證平台中的受眾/段。 兩個行業示例： `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` 和 `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`。 |
-| `httpMethod` | 字串 | 端點上用於以寫程式方式建立、更新、刪除或驗證目標中的段/受眾的方法。 例如: `POST`, `PUT`, `DELETE` |
-| `headers.header` | 字串 | 指定應添加到對API的調用的任何HTTP標頭。 例如, `"Content-Type"` |
-| `headers.value` | 字串 | 指定應添加到對API的調用的HTTP標頭的值。 例如, `"application/x-www-form-urlencoded"` |
-| `requestBody` | 字串 | 指定應發送到API的消息正文的內容。 應添加到的參數 `requestBody` 對象取決於API接受的欄位。 例如，請參閱 [第一個模板示例](../functionality/audience-metadata-management.md#example-1) 在「受眾元資料」功能文檔中。 |
-| `responseFields.name` | 字串 | 指定調用API時返回的任何響應欄位。 例如，請參閱 [模板示例](../functionality/audience-metadata-management.md#examples) 在「受眾元資料」功能文檔中。 |
-| `responseFields.value` | 字串 | 指定調用API時返回的任何響應欄位的值。 |
-| `responseErrorFields.name` | 字串 | 指定調用API時返回的任何響應欄位。 例如，請參閱 [ 模板示例](../functionality/audience-metadata-management.md#examples) 在「受眾元資料」功能文檔中。 |
-| `responseErrorFields.value` | 字串 | 解析從目標API調用響應返回的任何錯誤消息。 這些錯誤消息將出現給Experience Platform用戶介面中的用戶。 |
-| `validations.field` | 字串 | 指示在對目標進行API調用之前是否應為任何欄位運行驗證。 例如，您可以 `{{validations.accountId}}` 驗證用戶的帳戶ID。 |
-| `validations.regex` | 字串 | 指示如何構造欄位以便驗證通過。 |
+| `name` | 字串 | 您目的地的對象中繼資料範本名稱。 此名稱將出現在Experience Platform使用者介面的任何合作夥伴特定錯誤訊息中，隨後是剖析的錯誤訊息 `metadataTemplate.create.errorSchemaMap`. |
+| `url` | 字串 | API的URL和端點，用於在您的平台上建立、更新、刪除或驗證對象/區段。 兩個產業範例為： `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` 和 `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}`. |
+| `httpMethod` | 字串 | 在您的端點上使用的方法，以程式設計方式在您的目的地建立、更新、刪除或驗證區段/對象。 例如: `POST`, `PUT`, `DELETE` |
+| `headers.header` | 字串 | 指定應新增至API呼叫的任何HTTP標頭。 例如, `"Content-Type"` |
+| `headers.value` | 字串 | 指定應新增至API呼叫的HTTP標頭值。 例如, `"application/x-www-form-urlencoded"` |
+| `requestBody` | 字串 | 指定應傳送至API的訊息內文內容。 應新增至 `requestBody` 物件取決於API接受的欄位。 如需範例，請參閱 [第一個範本範例](../functionality/audience-metadata-management.md#example-1) （在對象中繼資料功能檔案中）。 |
+| `responseFields.name` | 字串 | 指定呼叫時API傳回的任何回應欄位。 如需範例，請參閱 [範本範例](../functionality/audience-metadata-management.md#examples) （在對象中繼資料功能檔案中）。 |
+| `responseFields.value` | 字串 | 指定API在呼叫時傳回之任何回應欄位的值。 |
+| `responseErrorFields.name` | 字串 | 指定呼叫時API傳回的任何回應欄位。 如需範例，請參閱 [ 範本範例](../functionality/audience-metadata-management.md#examples) （在對象中繼資料功能檔案中）。 |
+| `responseErrorFields.value` | 字串 | 剖析從您的目的地傳回API呼叫回應時的任何錯誤訊息。 這些錯誤訊息會在Experience Platform使用者介面中向使用者顯示。 |
+| `validations.field` | 字串 | 指示在對目的地進行API呼叫之前，是否應對任何欄位執行驗證。 例如，您可以使用 `{{validations.accountId}}` 驗證使用者的帳戶ID。 |
+| `validations.regex` | 字串 | 表示欄位應如何建構才能通過驗證。 |
 
 {style="table-layout:auto"}
 
@@ -208,14 +208,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 +++回應
 
-成功的響應返回HTTP狀態200，其中包含新建立的受眾模板的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您新建立的對象範本的詳細資訊。
 
 +++
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道何時使用受眾模板以及如何使用 `/authoring/audience-templates` API終結點。 閱讀 [如何使用Destination SDK配置目標](../guides/configure-destination-instructions.md) 瞭解此步驟在配置目標過程中的適用範圍。
+閱讀本檔案後，您現在知道何時該使用對象範本，以及如何使用設定對象範本 `/authoring/audience-templates` api端點。 讀取 [如何使用Destination SDK設定您的目的地](../guides/configure-destination-instructions.md) 以瞭解此步驟在設定目的地的程式中的適用位置。

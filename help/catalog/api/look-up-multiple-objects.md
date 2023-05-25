@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；目錄；多個對象查找；api
+keywords: Experience Platform；首頁；熱門主題；目錄；多物件查閱；API
 solution: Experience Platform
-title: 查找多個目錄對象
-description: 如果您希望查看多個特定對象，而不是對每個對象發出一個請求，則「目錄」提供了一個簡單快捷方式，用於請求多個同類型的對象。 可以使用單個GET請求通過包含逗號分隔的ID清單來返回多個特定對象。
+title: 查詢多個目錄物件
+description: 如果您想要檢視數個特定物件，而不是針對每個物件提出一項要求，Catalog會提供簡單的捷徑，讓您請求相同型別的多個物件。 您可以使用單一GET要求，包含以逗號分隔的ID清單來傳回多個特定物件。
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# 查找多個目錄對象
+# 查詢多個目錄物件
 
-如果您希望查看多個特定對象，而不是對每個對象發出一個請求， [!DNL Catalog] 提供了請求同一類型的多個對象的簡單快捷方式。 可以使用單個GET請求通過包含逗號分隔的ID清單來返回多個特定對象。
+如果您想要檢視數個特定物件，而不是針對每個物件提出一項要求， [!DNL Catalog] 為請求相同型別的多個物件提供簡單的捷徑。 您可以使用單一GET要求，包含以逗號分隔的ID清單來傳回多個特定物件。
 
 >[!NOTE]
 >
->即使在請求特定 [!DNL Catalog] 對象，它仍然是 `properties` 查詢參數以僅返回所需的屬性。
+>即使請求特定 [!DNL Catalog] 物件，最佳做法仍是 `properties` 查詢引數以僅傳回您需要的屬性。
 
 **API格式**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 類型 [!DNL Catalog] 要檢索的對象。 有效對象包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{ID}` | 要檢索的特定對象之一的標識符。 |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | 您要擷取的特定物件之一的識別碼。 |
 
 **要求**
 
-以下請求包括以逗號分隔的資料集ID清單以及要為每個資料集返回的以逗號分隔的屬性清單。
+以下請求包含以逗號分隔的資料集ID清單，以及要為每個資料集傳回的以逗號分隔的屬性清單。
 
 ```shell
 curl -X GET \
@@ -46,11 +46,11 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定資料集的清單，該清單僅包含請求的屬性(`name`。 `description`, `files`)。
+成功的回應會傳回指定資料集清單，其中僅包含要求的屬性(`name`， `description`、和 `files`)表示。
 
 >[!NOTE]
 >
->如果返回的對象不包含由 `properties` 查詢時，響應僅返回它確實包含的請求屬性，如中所示 ***`Sample Dataset 3`*** 和 ***`Sample Dataset 4`*** 下。
+>如果傳回的物件不包含下列專案所指示的一或多個要求屬性： `properties` 查詢時，回應只會傳回所請求的屬性，如所示 ***`Sample Dataset 3`*** 和 ***`Sample Dataset 4`*** 下方的。
 
 ```json
 {

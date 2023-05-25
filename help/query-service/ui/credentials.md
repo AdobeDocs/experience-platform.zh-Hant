@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢編輯器；查詢編輯器；查詢編輯器；查詢編輯器；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；查詢；查詢編輯器；查詢編輯器；
 solution: Experience Platform
-title: 查詢服務憑據指南
-description: Adobe Experience Platform查詢服務提供一個用戶介面，可用於編寫和執行查詢、查看以前執行的查詢以及訪問組織內用戶保存的查詢。
+title: 查詢服務認證指南
+description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取由您組織內的使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,128 +11,128 @@ ht-degree: 3%
 
 ---
 
-# 憑據指南
+# 認證指南
 
-Adobe Experience Platform查詢服務允許您與外部客戶端連接。 您可以使用過期憑據或非過期憑據連接到這些外部客戶端。
+Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您可以使用即將到期的認證或不即將到期的認證來連線到這些外部使用者端。
 
-## 過期憑據 {#expiring-credentials}
+## 即將到期的認證 {#expiring-credentials}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"
 >title="用戶端的 SSL 模式"
 >abstract="必須在連線至查詢服務的用戶端中啟用 SSL。確保 SSL 模式設定為「要求」。"
 
-您可以使用過期憑據快速設定到外部客戶端的連接。
+您可以使用即將到期的認證來快速設定與外部使用者端的連線。
 
-![「查詢」面板「身份證明」頁籤，其中「過期身份證明」部分突出顯示。](../images/ui/credentials/expiring-credentials.png)
+![「查詢儀表板認證」索引標籤中會反白顯示「即將到期的認證」區段。](../images/ui/credentials/expiring-credentials.png)
 
-的 **[!UICONTROL 過期憑據]** 部分提供了以下資訊：
+此 **[!UICONTROL 即將到期的認證]** 一節提供下列資訊：
 
-- **[!UICONTROL 主機]**:將客戶端連接到的主機的名稱。 這合併了平台UI頂部功能區中顯示的組織名稱。
-- **[!UICONTROL 埠]**:要連接的主機的埠號。
-- **[!UICONTROL 資料庫]**:要將客戶端連接到的資料庫的名稱。
-- **[!UICONTROL 用戶名]**:用於連接到查詢服務的用戶名。
-- **[!UICONTROL 密碼]**:用於連接到查詢服務的密碼。 UI中的密碼已經過散列以確保安全。 選擇複製表徵圖(![複製表徵圖。](../images/ui/credentials/copy-icon.png))將完整的未散列憑據複製到剪貼簿。
-- **[!UICONTROL PSQL命令]**:一個命令，它自動插入了所有相關資訊，以便您使用命令行上的PSQL連接到查詢服務。
-- **[!UICONTROL 過期]**:過期憑據的到期日期和時間。 令牌的預設有效期為24小時，但可以在Admin Console的高級設定中更改。
+- **[!UICONTROL 主機]**：要將使用者端連線至的主機名稱。 這會合併您的組織名稱，如同在Platform UI的頂端功能區中所見。
+- **[!UICONTROL 連線埠]**：要連線之主機的連線埠號碼。
+- **[!UICONTROL 資料庫]**：要連線使用者端的資料庫名稱。
+- **[!UICONTROL 使用者名稱]**：用來連線至查詢服務的使用者名稱。
+- **[!UICONTROL 密碼]**：用來連線至查詢服務的密碼。 UI中的密碼已進行雜湊處理，以提供安全性。 選取復製圖示(![復製圖示。](../images/ui/credentials/copy-icon.png))，將完整、未雜湊的認證複製到剪貼簿。
+- **[!UICONTROL PSQL命令]**：自動插入所有相關資訊的命令，讓您在命令列上使用PSQL連線至Query Service。
+- **[!UICONTROL 過期]**：即將到期的認證的到期日期和時間。 權杖的預設有效期間為24小時，但可在Admin Console的進階設定中變更。
 
 >[!TIP]
 >
->要更改到查詢服務的過期憑據連接的會話壽命，請導航到 [Admin Console](https://adminconsole.adobe.com/) 並選擇以下螢幕選項： **設定** > **隱私和安全** > **驗證設定** > **高級設定** > **最大會話壽命**。
+>若要變更「查詢服務」之到期認證連線的工作階段期限，請瀏覽至 [Admin Console](https://adminconsole.adobe.com/) 並選取下列熒幕選項： **設定** > **隱私權與安全性** > **驗證設定** > **進階設定** > **最長工作階段期限**.
 >
->![Admin Console設定頁籤中突出顯示了「隱私和安全」、「身份驗證」設定和「最大會話時間」。](../images/ui/credentials/max-session-life.png)
+>![反白顯示「隱私權與安全性」、「驗證設定」和「最長工作階段期限」的「Admin Console設定」索引標籤。](../images/ui/credentials/max-session-life.png)
 >
->有關Adobe的詳細資訊，請參閱「幫助」文檔 [高級設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) 由管理控制台提供。
+>請參閱Adobe說明檔案，以瞭解有關 [進階設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) 由Admin Console提供。
 
-## 未過期的憑據 {#non-expiring-credentials}
+## 不會到期的認證 {#non-expiring-credentials}
 
-可以使用非過期憑據設定到外部客戶端的更永久連接。
+您可以使用不會到期的認證來設定與外部使用者端更永久的連線。
 
 ### 先決條件
 
-在生成未過期的憑據之前，必須在Adobe Admin Console完成以下步驟：
+您必須先在Adobe Admin Console中完成下列步驟，才能產生不會到期的認證：
 
-1. 登錄 [Adobe Admin Console](https://adminconsole.adobe.com/) 並從頂部導航欄中選擇相關組織。
-2. [選擇產品配置檔案。](../../access-control/ui/browse.md)
-3. [配置 **沙箱** 和 **管理查詢服務整合** 權限](../../access-control/ui/permissions.md) 的下界。
-4. [將新用戶添加到產品配置檔案](../../access-control/ui/users.md) 因此它們被授予其配置的權限。
-5. [將用戶添加為產品配置檔案管理員](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html) 允許為任何活動產品配置檔案建立帳戶。
-6. [將用戶添加為產品配置檔案開發人員](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) 以建立整合。
+1. 登入 [Adobe Admin Console](https://adminconsole.adobe.com/) 並從上方導覽列中選取相關組織。
+2. [選取產品設定檔。](../../access-control/ui/browse.md)
+3. [設定兩者 **沙箱** 和 **管理查詢服務整合** 許可權](../../access-control/ui/permissions.md) 用於產品設定檔。
+4. [將新使用者新增至產品設定檔](../../access-control/ui/users.md) 因此會授予他們已設定的許可權。
+5. [將使用者新增為產品設定檔管理員](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html) 允許為任何使用中產品設定檔建立帳戶。
+6. [將使用者新增為產品設定檔開發人員](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) 以便建立整合。
 
-要瞭解有關如何分配權限的詳細資訊，請閱讀上的文檔 [訪問控制](../../access-control/home.md)。
+若要進一步瞭解如何指派許可權，請閱讀以下檔案： [存取控制](../../access-control/home.md).
 
-所有所需權限現在都在Adobe Developer控制台中配置，以便用戶使用過期的憑據功能。
+現在，所有必要的許可權都已在Adobe Developer Console中設定，以便使用者使用即將到期的認證功能。
 
-### 生成憑據
+### 產生認證
 
-要建立一組未過期的憑據，請返回平台UI並選擇 **[!UICONTROL 查詢]** 從左側導航 [!UICONTROL 查詢] 工作區。 接下來，選擇 **[!UICONTROL 憑據]** 後跟 **[!UICONTROL 生成憑據]**。
+若要建立一組不會到期的認證，請返回Platform UI並選擇 **[!UICONTROL 查詢]** 從左側導覽存取 [!UICONTROL 查詢] 工作區。 接下來，選取 **[!UICONTROL 認證]** 索引標籤後接 **[!UICONTROL 產生認證]**.
 
-![「查詢」面板中的「身份證明」頁籤和「生成身份證明」突出顯示。](../images/ui/credentials/generate-credentials.png)
+![「查詢」控制面板中反白了「認證」標籤和「產生認證」。](../images/ui/credentials/generate-credentials.png)
 
-將顯示一個對話框，允許您生成憑據。 要建立未過期的憑據，必須提供以下詳細資訊：
+會出現一個對話方塊，讓您產生認證。 若要建立不會到期的證明資料，您必須提供下列詳細資訊：
 
-- **[!UICONTROL 名稱]**:您正在生成的憑據的名稱。
-- **[!UICONTROL 說明]**:（可選）您正在生成的憑據的說明。
-- **[!UICONTROL 分配給]**:將為其分配憑據的用戶。 此值應為建立憑據的用戶的電子郵件地址。
-- **[!UICONTROL 密碼]** （可選）憑據的可選密碼。 如果未設定密碼，Adobe將自動為您生成密碼。
+- **[!UICONTROL 名稱]**：您產生的認證名稱。
+- **[!UICONTROL 說明]**：（選用）您產生之認證的說明。
+- **[!UICONTROL 指派給]**：將指派認證的使用者。 此值應為建立認證之使用者的電子郵件地址。
+- **[!UICONTROL 密碼]** （選用）憑證的選用密碼。 如果未設定密碼，Adobe會自動為您產生密碼。
 
-提供所有必需的詳細資訊後，選擇 **[!UICONTROL 生成憑據]** 生成憑據。
+提供所有必要的詳細資訊後，請選取 **[!UICONTROL 產生認證]** 以產生您的認證。
 
-![「生成憑據」對話框突出顯示。](../images/ui/credentials/create-account.png)
+![[Generate credentials]對話方塊會反白顯示。](../images/ui/credentials/create-account.png)
 
 >[!IMPORTANT]
 >
->當 **[!UICONTROL 生成憑據]** 選中後，配置JSON檔案將下載到您的本地電腦。 因為Adobe **不** 記錄生成的憑據，必須安全地儲存下載的檔案並保留憑據的記錄。
+>時間 **[!UICONTROL 產生認證]** ，則會將設定JSON檔案下載至您的本機電腦。 因為Adobe會 **not** 記錄產生的認證，您必須安全地儲存下載的檔案，並保留認證的記錄。
 >
->此外，如果憑據在90天內未使用，則會刪除憑據。
+>此外，如果認證已有90天未使用，則會將認證清除。
 
-配置JSON檔案包含技術帳戶名、技術帳戶ID和憑據等資訊。 它以下列格式提供。
+設定JSON檔案包含技術帳戶名稱、技術帳戶ID和認證等資訊。 其提供格式如下。
 
 ```json
 {"technicalAccountName":"9F0A21EE-B8F3-4165-9871-846D3C8BC49E@TECHACCT.ADOBE.COM","credential":"3d184fa9e0b94f33a7781905c05203ee","technicalAccountId":"4F2611B8613AA3670A495E55"}
 ```
 
-保存生成的憑據後，選擇 **[!UICONTROL 關閉]**。 您現在可以看到所有未過期的憑據的清單。
+儲存產生的認證後，選取 **[!UICONTROL 關閉]**. 您現在可以看到所有不會到期的認證清單。
 
-![「查詢」面板「身份證明」頁籤，「未過期身份證明」部分突出顯示。](../images/ui/credentials/list-credentials.png)
+![「查詢儀表板認證」索引標籤中反白了「不會到期的認證」區段。](../images/ui/credentials/list-credentials.png)
 
-您可以編輯或刪除未過期的憑據。 要編輯未過期的憑據，請選擇鉛筆表徵圖(![鉛筆表徵圖。](../images/ui/credentials/edit-icon.png))。要刪除未過期的憑據，請選擇刪除表徵圖(![垃圾桶表徵圖。](../images/ui/credentials/delete-icon.png))。
+您可以編輯或刪除不會到期的認證。 若要編輯不會到期的認證，請選取鉛筆圖示(![鉛筆圖示。](../images/ui/credentials/edit-icon.png))。若要刪除不會到期的認證，請選取刪除圖示(![垃圾桶圖示。](../images/ui/credentials/delete-icon.png))。
 
-編輯未過期的憑據時，將顯示模式。 您可以提供以下詳細資訊以進行更新：
+編輯不會到期的認證時，強制回應視窗會出現。 您可以提供下列詳細資料以進行更新：
 
-- **[!UICONTROL 名稱]**:您正在生成的憑據的名稱。
-- **[!UICONTROL 說明]**:（可選）您正在生成的憑據的說明。
-- **[!UICONTROL 分配給]**:將為其分配憑據的用戶。 此值應為建立憑據的用戶的電子郵件地址。
+- **[!UICONTROL 名稱]**：您產生的認證名稱。
+- **[!UICONTROL 說明]**：（選用）您產生之認證的說明。
+- **[!UICONTROL 指派給]**：將指派認證的使用者。 此值應為建立認證之使用者的電子郵件地址。
 
-![「更新帳戶」對話框。](../images/ui/credentials/update-credentials.png)
+![更新帳戶對話方塊。](../images/ui/credentials/update-credentials.png)
 
-提供所有必需的詳細資訊後，選擇 **[!UICONTROL 更新帳戶]** 完成對憑據的更新。
+提供所有必要的詳細資訊後，請選取 **[!UICONTROL 更新帳戶]** 以完成認證的更新。
 
-## 使用憑據連接到外部客戶端 {#use-credential-to-connect}
+## 使用認證來連線到外部使用者端 {#use-credential-to-connect}
 
-您可以使用過期或未過期的憑據與外部客戶端(如Aqua Data Studio、Looker或Power BI)連接。 這些憑據的輸入方法會因外部客戶端而異。 有關使用這些憑據的具體說明，請參閱外部客戶的文檔。
+您可以使用到期或不到期的認證來連線到外部使用者端，例如Aqua Data Studio、Looker或Power BI。 這些憑證的輸入方法會因外部使用者端而異。 請參閱外部使用者端檔案，取得使用這些憑證的特定指示。
 
-該影像指示在UI中找到的每個參數的位置，但不包括未過期憑據的密碼。 當非過期憑據由其JSON配置檔案提供時，您可以在 **憑據** 頁籤
+此影像會指出在UI中找到的每個引數的位置，但不包括不會到期的認證的密碼。 雖然不會到期的認證是由其JSON設定檔案所提供，但您可以在底下檢視即將到期的認證 **認證** UI中的Tab鍵。
 
-![「查詢」工作區「身份證明」頁籤，「過期身份證明」部分突出顯示。](../images/ui/credentials/expiring-credentials.png)
+![「查詢」工作區的「認證」索引標籤中反白了「即將到期的認證」區段。](../images/ui/credentials/expiring-credentials.png)
 
-下表概述了通常連接到外部客戶端所需的參數。
+下表概述連線至外部使用者端通常所需的引數。
 
 >[!NOTE]
 >
->使用未過期的憑據連接到主機時，仍需要使用中列出的所有參數 [!UICONTROL 過期憑據] 除密碼和用戶名外。
->輸入用戶名和密碼的格式使用冒號分隔的值，如本示例所示 `username:{your_username}` 和 `password:{password_string}`。
+>使用不會到期的證明資料連線到主機時，仍需使用 [!UICONTROL 即將到期的認證] 區段，但密碼和使用者名稱除外。
+>輸入使用者名稱和密碼的格式使用冒號分隔值，如本範例所示 `username:{your_username}` 和 `password:{password_string}`.
 
 | 參數 | 說明 | 範例 |
 |---|---|---|
-| **伺服器/主機** | 要連接的伺服器/主機的名稱。 <ul><li>此值用於過期的憑據和非過期的憑據，其形式為 `server.adobe.io`。 值位於 **[!UICONTROL 主機]** 的 [!UICONTROL 過期憑據] 的子菜單。</ul></li> | `acme.platform.adobe.io` |
-| **連接埠** | 要連接的伺服器/主機的埠。 <ul><li>此值用於過期憑據和非過期憑據，可在 **[!UICONTROL 埠]** 的 [!UICONTROL 過期憑據] 的子菜單。</ul></li> | `80` |
-| **資料庫** | 要連接的資料庫。 <ul><li>此值用於過期憑據和非過期憑據，在 **[!UICONTROL 資料庫]** 的 [!UICONTROL 過期憑據] 的子菜單。 </ul></li> | `prod:all` |
-| **用戶名** | 連接到外部客戶端的用戶的用戶名。 <ul><li>此值用於過期憑據和非過期憑據。 它採用字母數字字串的形式 `@AdobeOrg`。 此值位於 **[!UICONTROL 用戶名]**。</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **密碼** | 連接到外部客戶端的用戶的密碼。 <ul><li>如果您正在使用過期憑據，則可以在 **[!UICONTROL 密碼]** 在 [!UICONTROL 過期憑據] 的子菜單。</li><li>如果您使用的是非過期憑據，則此值是technicalAccountID的級連參數和從配置JSON檔案獲取的憑據。 密碼值採用以下形式： `{technicalAccountId}:{credential}`。</li></ul> | <ul><li>過期的憑據密碼超過一千個字元的字母數字字串。 不給出實例。</li><li>未過期的憑據密碼如下：<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **伺服器/主機** | 您要連線的伺服器/主機名稱。 <ul><li>此值會用於即將到期的認證和不即將到期的認證，其形式為 `server.adobe.io`. 值位於 **[!UICONTROL 主機]** 在 [!UICONTROL 即將到期的認證] 區段。</ul></li> | `acme.platform.adobe.io` |
+| **連接埠** | 您要連線的伺服器/主機連線埠。 <ul><li>此值會用於即將到期的認證和不即將到期的認證，並位於下方 **[!UICONTROL 連線埠]** 在 [!UICONTROL 即將到期的認證] 區段。</ul></li> | `80` |
+| **資料庫** | 您正在連線的資料庫。 <ul><li>此值會用於即將到期的認證和不即將到期的認證，並會發現於 **[!UICONTROL 資料庫]** 在 [!UICONTROL 即將到期的認證] 區段。 </ul></li> | `prod:all` |
+| **使用者名稱** | 連線至外部使用者端的使用者使用者名稱。 <ul><li>此值會用於即將到期的認證和不即將到期的認證。 它以前採用英數字串的形式 `@AdobeOrg`. 此值位於 **[!UICONTROL 使用者名稱]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
+| **密碼** | 連線到外部使用者端的使用者密碼。 <ul><li>如果您使用即將到期的認證，您可在下列位置找到： **[!UICONTROL 密碼]** 在 [!UICONTROL 即將到期的認證] 區段。</li><li>如果您使用不會到期的認證，此值是從technicalAccountID串連的引數，以及從設定JSON檔案取得的認證。 密碼值採用以下形式： `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>即將到期的認證密碼超過一千個字元的英數字串。 將不會提供範例。</li><li>不會到期的認證密碼如下：<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 後續步驟
 
-現在，您已經瞭解過期和未過期的憑據的工作原理，可以使用這些憑據連接到外部客戶端。 有關外部客戶端的詳細資訊，請閱讀 [將客戶端連接到查詢服務指南](../clients/overview.md)。
+現在您已瞭解即將到期和未到期的認證如何運作，您可以使用這些認證連線到外部使用者端。 如需有關外部使用者端的詳細資訊，請參閱 [連線使用者端至查詢服務指南](../clients/overview.md).

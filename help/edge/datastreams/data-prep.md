@@ -1,6 +1,6 @@
 ---
 title: 資料收集的資料準備
-description: 瞭解如何在為Adobe Experience PlatformWeb和移動SDK配置資料流時將資料映射到體驗資料模型(XDM)事件模式。
+description: 瞭解在為Adobe Experience Platform Web和Mobile SDK設定資料流時，如何將您的資料對應到Experience Data Model (XDM)事件結構。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
 source-git-commit: 3ab02646968222c0ad09c1d8ce8fda04de7aaac6
 workflow-type: tm+mt
@@ -11,30 +11,30 @@ ht-degree: 2%
 
 # 資料收集的資料準備
 
-資料準備是一種Adobe Experience Platform服務，它允許您將資料映射、轉換和驗證資料 [體驗資料模型(XDM)](../../xdm/home.md)。 配置啟用平台時 [資料流](./overview.md)，在將源資料發送到平台邊緣網路時，可以使用資料準備功能將其映射到XDM。
+「資料準備」是一項Adobe Experience Platform服務，可讓您對應、轉換及驗證來往資料 [體驗資料模型(XDM)](../../xdm/home.md). 設定啟用平台時 [資料串流](./overview.md)，則可在將來源資料傳送至Platform Edge Network時，使用「資料準備」功能將其對應至XDM。
 
 >[!NOTE]
 >
->有關所有資料準備功能（包括計算欄位的轉換函式）的全面指導，請參閱以下文檔：
+>如需所有「資料準備」功能的全面指引，包括計算欄位的轉換函式，請參閱下列檔案：
 >
->* [資料準備概述](../../data-prep/home.md)
->* [資料準備映射函式](../../data-prep/functions.md)
->* [使用資料準備處理資料格式](../../data-prep/data-handling.md)
+>* [資料準備總覽](../../data-prep/home.md)
+>* [資料準備對應函式](../../data-prep/functions.md)
+>* [使用「資料準備」處理資料格式](../../data-prep/data-handling.md)
 
 
-本指南介紹如何在UI中映射資料。 要遵循這些步驟，請啟動建立資料流至（包括） [基本配置步驟](./overview.md#create)。
+本指南說明如何在UI中對應資料。 若要隨著步驟進行，請開始建立資料流的程式，直到（並包括） [基本設定步驟](./overview.md#create).
 
-有關資料收集資料準備過程的快速演示，請參閱以下視頻：
+如需資料收集程式資料準備的快速示範，請參閱下列影片：
 
 >[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL 選擇資料] {#select-data}
 
-選擇 **[!UICONTROL 保存和添加映射]** 完成資料流的基本配置後， **[!UICONTROL 選擇資料]** 的上界。 在此處，您必須提供一個示例JSON對象，該對象表示您計畫發送到平台的資料的結構。
+選取 **[!UICONTROL 儲存並新增對應]** 完成資料串流的基本設定後，以及 **[!UICONTROL 選取資料]** 步驟隨即顯示。 從這裡，您必須提供範例JSON物件，代表您計畫傳送至Platform的資料結構。
 
-要直接從資料層捕獲屬性，JSON對象必須具有單個根屬性 `data`。 的子屬性 `data` 然後，應以映射到要捕獲的資料層屬性的方式構建對象。 選擇下面的部分，查看帶有 `data` 根。
+若要直接從資料層擷取屬性，JSON物件必須具有單一根屬性 `data`. 的子屬性 `data` 物件之後應該以對應至您要擷取的資料層屬性的方式建構。 選取以下區段，檢視格式正確的JSON物件範例(包含 `data` 根。
 
-+++示例JSON檔案，帶 `data` 根
++++範例JSON檔案，使用 `data` 根
 
 ```json
 {
@@ -97,9 +97,9 @@ ht-degree: 2%
 
 +++
 
-要從XDM對象資料元素捕獲屬性，相同的規則適用於JSON對象，但根屬性必須被鍵控為 `xdm` 的雙曲餘切值。 選擇下面的部分，查看帶有 `xdm` 根。
+若要從XDM物件資料元素擷取屬性，相同的規則會套用至JSON物件，但根屬性必須輸入為 `xdm` 而非。 選取以下區段，檢視格式正確的JSON物件範例，其中包含 `xdm` 根。
 
-+++示例JSON檔案，帶 `xdm` 根
++++範例JSON檔案，使用 `xdm` 根
 
 ```json
 {
@@ -130,77 +130,77 @@ ht-degree: 2%
 
 +++
 
-您可以選擇將對象作為檔案上載的選項，或將原始對象貼上到提供的文本框中。 如果JSON有效，則在右面板中顯示預覽架構。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
+您可以選取將物件上傳為檔案的選項，或將原始物件貼到提供的文字方塊中。 如果JSON有效，右側面板中會顯示預覽結構描述。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
-![預期傳入資料的JSON示例](../assets/datastreams/data-prep/select-data.png)
+![預期傳入資料的JSON範例](../assets/datastreams/data-prep/select-data.png)
 
 ## [!UICONTROL 對應]
 
-的 **[!UICONTROL 映射]** 步驟，允許您將源資料中的欄位映射到平台中目標事件模式的欄位。 在此處，可以通過兩種方式配置映射：
+此 **[!UICONTROL 對應]** 步驟隨即顯示，可讓您將來源資料中的欄位對應到Platform中目標事件結構描述的欄位。 從這裡，您可以透過兩種方式設定對應：
 
-* [建立新映射規則](#create-mapping) 通過手動流程來獲取。
-* [導入映射規則](#import-mapping) 從現有資料流中。
+* [建立新的對應規則](#create-mapping) 流執行手動程式時，才會使用此資料。
+* [匯入對應規則](#import-mapping) 從現有資料串流。
 
-### 建立新映射 {#create-mapping}
+### 建立新對應 {#create-mapping}
 
-要開始，請選擇 **[!UICONTROL 添加新映射]** 的子菜單。
+若要開始使用，請選取 **[!UICONTROL 新增對應]** 以建立新的對應列。
 
-![添加新映射](../assets/datastreams/data-prep/add-new-mapping.png)
+![新增對應](../assets/datastreams/data-prep/add-new-mapping.png)
 
-選擇源表徵圖(![源表徵圖](../assets/datastreams/data-prep/source-icon.png))，並在顯示的對話框中選擇要在提供的畫布中映射的源欄位。 選擇欄位後，使用 **[!UICONTROL 選擇]** 按鈕繼續。
+選取來源圖示(![來源圖示](../assets/datastreams/data-prep/source-icon.png))，然後在出現的對話方塊中，選取您要在提供的畫布中對應的來源欄位。 選擇欄位後，請使用 **[!UICONTROL 選取]** 按鈕以繼續。
 
-![選擇要在源架構中映射的欄位](../assets/datastreams/data-prep/source-mapping.png)
+![選取要在來源結構描述中對應的欄位](../assets/datastreams/data-prep/source-mapping.png)
 
-接下來，選擇架構表徵圖(![「架構」表徵圖](../assets/datastreams/data-prep/schema-icon.png))開啟目標事件架構的類似對話框。 選擇在確認之前要將資料映射到的欄位 **[!UICONTROL 選擇]**。
+接下來，選取結構描述圖示(![結構描述圖示](../assets/datastreams/data-prep/schema-icon.png))以開啟目標事件結構描述的類似對話方塊。 在確認之前，選擇您要對應資料的欄位 **[!UICONTROL 選取]**.
 
-![選擇目標架構中要映射的欄位](../assets/datastreams/data-prep/target-mapping.png)
+![選取要在目標結構描述中對應的欄位](../assets/datastreams/data-prep/target-mapping.png)
 
-此時將重新顯示映射頁，並顯示已完成的欄位映射。 的 **[!UICONTROL 映射進度]** 部分更新以反映已成功映射的欄位總數。
+對應頁面會重新出現，並顯示已完成的欄位對應。 此 **[!UICONTROL 對應進度]** 區段更新以反映已成功對應的欄位總數。
 
-![已成功映射反映進度的欄位](../assets/datastreams/data-prep/field-mapped.png)
+![欄位已成功對應，並反映進度](../assets/datastreams/data-prep/field-mapped.png)
 
 >[!TIP]
 >
->如果要將對象陣列（在源欄位中）映射到不同對象陣列（在目標欄位中），請添加 `[*]` 位於源和目標欄位路徑中的陣列名稱后，如下所示。
+>如果您想要將物件陣列（在來源欄位中）對應至不同物件陣列（在目標欄位中），請新增 `[*]` 在來源和目的地欄位路徑中的陣列名稱之後，如下所示。
 >
->![陣列對象映射](../assets/datastreams/data-prep/array-object-mapping.png)
+>![陣列物件對應](../assets/datastreams/data-prep/array-object-mapping.png)
 
-### 導入現有映射規則 {#import-mapping}
+### 匯入現有的對應規則 {#import-mapping}
 
-如果您以前建立過資料流，則可以重新使用其配置的映射規則來建立新資料流。
+如果您先前已建立資料流，您可以針對新資料流重複使用其已設定的對應規則。
 
 >[!WARNING]
 >
->從另一個資料流導入映射規則將覆蓋導入之前可能添加的任何欄位映射。
+>從其他資料流匯入對應規則將會覆寫您在匯入之前可能已新增的任何欄位對應。
 
-要開始，請選擇 **[!UICONTROL 導入映射]**。
+若要開始，請選取 **[!UICONTROL 匯入對應]**.
 
-![顯示 [!UICONTROL 導入映射] 按鈕](../assets/datastreams/data-prep/import-mapping-button.png)
+![影像顯示 [!UICONTROL 匯入對應] 正在選取按鈕](../assets/datastreams/data-prep/import-mapping-button.png)
 
-在顯示的對話框中，選擇要導入其映射規則的資料流。 選擇資料流後，選擇 **[!UICONTROL 預覽]**。
+在出現的對話方塊中，選取您要匯入其對應規則的資料流。 選擇資料流後，選取 **[!UICONTROL 預覽]**.
 
-![顯示正在選擇的現有資料流的影像](../assets/datastreams/data-prep/select-mapping-rules.png)
-
->[!NOTE]
->
->只能在同一資料流中導入資料流 [沙坑](../../sandboxes/home.md)。 換句話說，無法將資料流從一個沙箱導入到另一個沙箱。
-
-下一螢幕顯示所選資料流的已保存映射規則的預覽。 確保顯示的映射是您期望的，然後選擇 **[!UICONTROL 導入]** 確認映射並將其添加到新資料流。
-
-![顯示要導入的映射規則的影像](../assets/datastreams/data-prep/import-mapping-rules.png)
+![顯示正在選取的現有資料串流的影像](../assets/datastreams/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
->如果導入的映射規則中的任何源欄位未包含在示例JSON資料中 [提前](#select-data)，這些欄位映射將不包括在導入中。
+>資料串流只能匯入相同內 [沙箱](../../sandboxes/home.md). 換言之，您無法將資料串流從一個沙箱匯入另一個沙箱。
 
-### 完成映射
+下一個畫面會顯示所選資料串流的已儲存對應規則預覽。 確認顯示的對應符合您的預期，然後選取 **[!UICONTROL 匯入]** 以確認並將對應新增至新資料流。
 
-繼續執行上述步驟，將其餘欄位映射到目標架構。 雖然您不必映射所有可用的源欄位，但必須映射目標架構中根據需要設定的任何欄位才能完成此步驟。 的 **[!UICONTROL 必填欄位]** counter表示當前配置中尚未映射的必填欄位數。
+![顯示要匯入之對應規則的影像](../assets/datastreams/data-prep/import-mapping-rules.png)
 
-一旦必填欄位數達到零且您對映射感到滿意，請選擇 **[!UICONTROL 保存]** 完成更改。
+>[!NOTE]
+>
+>如果匯入的對應規則中有任何來源欄位未包含在您指定的JSON範例資料中 [先前提供](#select-data)，這些欄位對應將不會包含在匯入中。
 
-![映射完成](../assets/datastreams/data-prep/mapping-complete.png)
+### 完成對應
+
+繼續上述步驟，將其餘欄位對應至目標結構描述。 雖然您不必對應所有可用的來源欄位，但是目標結構描述中設定為必要的任何欄位都必須對應，才能完成此步驟。 此 **[!UICONTROL 必填欄位]** counter指出目前設定中尚未對應多少必要欄位。
+
+必填欄位計數達到零且對對應滿意後，請選擇 **[!UICONTROL 儲存]** 以完成變更。
+
+![對應完成](../assets/datastreams/data-prep/mapping-complete.png)
 
 ## 後續步驟
 
-本指南介紹了在UI中設定資料流時如何將資料映射到XDM。 如果您正在遵循常規資料流教程，則現在可以返回到上的步驟 [查看資料流詳細資訊](./overview.md)。
+本指南說明在UI中設定資料流時，如何將資料對應至XDM。 如果您正在遵循一般資料串流教學課程，您現在可以回到上的步驟 [檢視資料流詳細資料](./overview.md).

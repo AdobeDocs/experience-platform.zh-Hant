@@ -1,8 +1,8 @@
 ---
 solution: Experience Platform
-title: 如何獲取和授予Experience Platform儀表板的訪問權限
+title: 如何取得並授予Experience Platform儀表板的存取許可權
 type: Documentation
-description: 允許用戶使用Adobe Admin Console查看、編輯和更新Experience Platform儀表板。
+description: 授予使用者使用Adobe Admin Console檢視、編輯和更新Experience Platform儀表板的能力。
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
@@ -11,31 +11,31 @@ ht-degree: 6%
 
 ---
 
-# 儀表板的訪問權限
+# 儀表板的存取許可權
 
-要授予用戶查看、編輯和更新儀表板的能力，必須首先啟用權限。 在Adobe Experience Platform，通過 [Adobe Admin Console](https://adminconsole.adobe.com/)。 用戶通過產品配置檔案連結到 [!DNL Admin Console]。
+若要授與使用者檢視、編輯和更新控制面板的能力，您必須先啟用許可權。 在Adobe Experience Platform中，存取控制是透過 [Adobe Admin Console](https://adminconsole.adobe.com/). 使用者透過中的產品設定檔連結許可權和沙箱 [!DNL Admin Console].
 
-此文檔提供儀表板可用權限的摘要，包括儀表板所授予的訪問權限和所啟用的用戶功能。 有關獲取和分配訪問權限的詳細資訊，請從閱讀 [訪問控制概述](../access-control/home.md)。
+本檔案提供儀表板可用許可權的摘要，包括這些許可權授予的存取權功能以及這些許可權啟用的使用者功能。 如需取得和指派存取許可權的詳細資訊，請先閱讀 [存取控制總覽](../access-control/home.md).
 
 ## 先決條件
 
-為了配置訪問控制 [!DNL Experience Platform]，您必須具有具有 [!DNL Experience Platform] 產品整合。 參見Adobe Help Center上的 [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) 的子菜單。
+為了設定存取控制 [!DNL Experience Platform]，您必須擁有組織的管理員許可權， [!DNL Experience Platform] 產品整合。 請參閱以下文章中的Adobe Help Center： [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) 以取得詳細資訊。
 
-## 可用儀表板權限 {#available-permissions}
+## 可用的儀表板許可權 {#available-permissions}
 
-的 [!DNL Dashboards] 服務提供三種權限，當組合時，提供對 [!UICONTROL 配置檔案]。 [!UICONTROL 段]。 [!UICONTROL 目標], [!UICONTROL 許可證使用] Adobe Experience Platform的儀錶盤。 這些權限是：
+此 [!DNL Dashboards] 服務提供三種許可權，結合後可提供對的完整存取 [!UICONTROL 設定檔]， [!UICONTROL 區段]， [!UICONTROL 目的地]、和 [!UICONTROL 授權使用情況] Adobe Experience Platform中的儀表板。 這些許可權包括：
 
 | 權限 | 說明 |
 |---|---|
-| **管理標準儀表板** | 此權限是 **全局讀寫權限**。 它允許你 [建立自定義小部件](./customize/custom-widgets.md) 和 [編輯構件架構](./customize/edit-schema.md) 通過 [!UICONTROL 小部件庫]。 |
-| **查看標準儀表板** | 這提供了 **只讀** 功能 [!UICONTROL 配置檔案]。 [!UICONTROL 目標], [!UICONTROL 段] 並允許通過平台的左側導航訪問儀表板。 它還補充了 [!UICONTROL 儀表板] 的 [!UICONTROL 儀表板] 清單和整合頁籤。 |
-| **查看許可證使用儀表板** | 此權限允許用戶 **只讀** 訪問 [許可證使用儀表板](./guides/license-usage.md) 在Experience PlatformUI中。 |
+| **管理標準儀表板** | 此許可權是 **全域讀取和寫入許可權**. 它可讓您 [建立自訂Widget](./customize/custom-widgets.md) 和 [編輯Widget結構描述](./customize/edit-schema.md) 透過 [!UICONTROL Widget資料庫]. |
+| **檢視標準儀表板** | 這可提供 **唯讀** 的功能 [!UICONTROL 設定檔]， [!UICONTROL 目的地]、和 [!UICONTROL 區段] 控制面板，並可透過Platform的左側導覽存取控制面板。 它也會新增 [!UICONTROL 儀表板] 左側導覽並存取 [!UICONTROL 儀表板] 詳細目錄與整合索引標籤。 |
+| **檢視授權使用量儀表板** | 此許可權可讓使用者 **唯讀** 存取 [授權使用量儀表板](./guides/license-usage.md) 在Experience PlatformUI中。 |
 
-有五個權限未包含在 [!DNL Dashboard] 可能需要的類別。 下表概述了它們在Admin Console中的類別位置：
+有五個許可權未包含在 [!DNL Dashboard] 根據您的需求而可能需要的類別。 下表概述其在Admin Console中的類別位置：
 
 >[!IMPORTANT]
 >
->都 **[!DNL Manage Standard Dashboards]** 和 **[!DNL View Standard Dashboards]** 權限 **要求** 「查看」或「管理」權限 [!DNL Profile Management] 或 [!DNL Destinations] Admin Console中的類別，以激活平台UI中的相關部分。
+>兩者皆有 **[!DNL Manage Standard Dashboards]** 和 **[!DNL View Standard Dashboards]** 許可權 **需要** 來自的「檢視」或「管理」許可權 [!DNL Profile Management] 或 [!DNL Destinations] Admin Console類別，以啟用Platform UI內的相關區段。
 
 | 權限 | Admin Console類別位置 |
 |---|---|
@@ -45,30 +45,30 @@ ht-degree: 6%
 | [!DNL Manage Queries] | [!DNL Query Service] |
 | [!DNL Manage Sandboxes] | [!DNL Sandbox Administration] |
 
-## 訪問控制矩陣
+## 存取控制矩陣
 
-下面的訪問控制清單提供了需要哪些權限以及它們在訪問不同儀表板功能方面提供哪些功能的細分。 權限列在上水準行中，平台UI工作區列在左列中。
+下列存取控制矩陣提供需要哪些許可權，以及這些許可權提供的有關存取不同儀表板功能的功能劃分。 許可權會列在頂端水準列上，而Platform UI工作區則會列在左側欄。
 
-|  | [!UICONTROL 查看標準儀表板] 或 [!UICONTROL 管理標準儀表板] | [!UICONTROL 查看配置檔案]。<br/>[!UICONTROL 查看段]。<br/> [!UICONTROL 查看目標] | [!UICONTROL 管理查詢] &amp; [!UICONTROL 管理沙箱] | [!UICONTROL 查看許可證使用儀表板] |
+|  | [!UICONTROL 檢視標準儀表板] 或 [!UICONTROL 管理標準儀表板] | [!UICONTROL 檢視設定檔]，<br/>[!UICONTROL 檢視區段]，<br/> [!UICONTROL 檢視目的地] | [!UICONTROL 管理查詢] 和 [!UICONTROL 管理沙箱] | [!UICONTROL 檢視授權使用量儀表板] |
 |---|---|---|---|---|
-| [!DNL Profiles]。<br/>[!DNL Segments]。<br/>[!DNL Destinations] 的子菜單。 | 不適用 | **需要「查看」或「管理」權限** 每個控制板。 | 不適用 | 不適用 |
-| [!DNL Dashboards] 的子菜單。 | 已啟用 | **至少需要一個**。 | 不適用 | 不適用 |
-| [!DNL Dashboards] [!DNL Inventory] <br/>（瀏覽頁籤） | 已啟用 | 不適用 | 不適用 | 不適用 |
-| [!DNL Dashboards] [!DNL Integrations] 頁籤 <br/>(用於安裝Power BI) | 已啟用 | **至少需要一個** | 不適用 | 不適用 |
-| Power BI安裝按鈕和工作流 | 已啟用 | 不適用 | **必需** | 不適用 |
-| [!DNL Profiles]。<br/>[!DNL Segments]。<br/>[!DNL Destinations] 儀表板。<br/>編輯小部件架構和添加新屬性以進行小部件自定義的功能 | **需要管理標準儀表板** | **必需（對於每個相應儀表板）** | 不適用 | 不適用 |
+| [!DNL Profiles]，<br/>[!DNL Segments]，<br/>[!DNL Destinations] 左側導覽列中。 | 不適用 | **需要「檢視」或「管理」許可權** 每個個別控制面板的預設值。 | 不適用 | 不適用 |
+| [!DNL Dashboards] 左側導覽列中。 | 已啟用 | **至少需要一個**. | 不適用 | 不適用 |
+| [!DNL Dashboards] [!DNL Inventory] <br/>（瀏覽標籤） | 已啟用 | 不適用 | 不適用 | 不適用 |
+| [!DNL Dashboards] [!DNL Integrations] 標籤 <br/>(用於安裝Power BI) | 已啟用 | **至少需要一個** | 不適用 | 不適用 |
+| Power BI安裝按鈕和工作流程 | 已啟用 | 不適用 | **必填** | 不適用 |
+| [!DNL Profiles]，<br/>[!DNL Segments]，<br/>[!DNL Destinations] 儀表板。<br/>能夠編輯Widget結構描述並新增新屬性以進行Widget自訂 | **需要Manage-standard-dashboard** | **必填（適用於各個控制面板）** | 不適用 | 不適用 |
 | [!DNL License Usage Dashboard] | 不適用 | 不適用 | 不適用 | 已啟用 |
 
 {style="table-layout:auto"}
 
-## 將權限添加到您的產品配置檔案
+## 將許可權新增至您的產品設定檔
 
-使用上面提供的資訊將相應的權限添加到產品配置檔案中。 請參閱文檔以瞭解有關 [如何通過訪問控制UI添加權限](../access-control/ui/permissions.md)。
+使用上方提供的資訊，將適當的許可權新增至您的產品設定檔。 如需下列專案的完整指示，請參閱檔案： [如何透過存取控制UI新增許可權](../access-control/ui/permissions.md).
 
-有關權限的說明，請參閱 [可用權限](#available-permissions) 的子菜單。
+如需許可權的描述，請參閱 [可用許可權](#available-permissions) 章節。
 
 >[!NOTE]
 >
->您不必為所有用戶啟用所有權限。 根據您組織的結構，您可能希望為某些用戶建立單獨的產品配置檔案並授予有限訪問權限（如只讀）。 請參閱有關管理產品配置檔案用戶的文檔以瞭解 [如何為特定用戶分配權限](../access-control/ui/users.md)。
+>您不必為所有使用者啟用所有許可權。 根據您組織的結構，您可能想要為特定使用者建立單獨的產品設定檔，並授予有限存取權（例如唯讀）。 如需瞭解詳細資訊，請參閱有關管理產品設定檔的使用者檔案 [如何為特定使用者指派許可權](../access-control/ui/users.md).
 
-添加必要的訪問權限後，組織內的用戶可以開始查看Experience PlatformUI中的儀表板，並根據您分配的權限執行其他操作。
+新增必要的存取許可權後，組織內的使用者可以開始在Experience PlatformUI中檢視儀表板，並根據您指派的許可權執行其他動作。

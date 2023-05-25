@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；api;XDM;XDM;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；架構註冊；模式註冊；描述符；描述符；描述符；描述符；標識；身份；友好名稱；替代顯示資訊；參考；關係；關係
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述登入；結構描述登入；描述項；描述項；描述項；描述項；身分；身分；易記名稱；易記名稱；alternatedisplayinfo；參考；參考；關係；關係
 solution: Experience Platform
-title: 描述符API終結點
-description: 通過架構註冊表API中的/descriptors終結點，可以以寫程式方式管理體驗應用程式中的XDM描述符。
+title: 描述項API端點
+description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述項。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,23 +11,23 @@ ht-degree: 1%
 
 ---
 
-# 描述符終結點
+# 描述項端點
 
-方案定義資料實體的靜態視圖，但不提供關於基於這些方案（例如資料集）的資料如何彼此關聯的特定詳細資訊。 Adobe Experience Platform允許您使用描述符描述這些關係和關於架構的其他解釋性元資料。
+結構描述會定義資料實體的靜態檢視，但不會提供基於這些結構描述（例如資料集）的資料如何彼此關聯的特定詳細資訊。 Adobe Experience Platform可讓您使用描述項描述這些關係以及有關結構描述的其他解釋性中繼資料。
 
-架構描述符是租戶級元資料，這意味著它們對您的組織是唯一的，所有描述符操作都在租戶容器中進行。
+結構描述項是租使用者層級的中繼資料，這表示它們對於您的組織是唯一的，並且所有描述項作業都在租使用者容器中進行。
 
-每個架構可以應用一個或多個架構描述符實體。 每個模式描述符實體包括描述符 `@type` 和 `sourceSchema` 適用的。 應用後，這些描述符將應用於使用架構建立的所有資料集。
+每個結構描述可以套用一或多個結構描述項實體。 每個結構描述項實體都包含一個描述項 `@type` 和 `sourceSchema` 要套用到的屬性。 套用後，這些描述項將套用至使用該結構描述建立的所有資料集。
 
-的 `/descriptors` 端點 [!DNL Schema Registry] API允許您以寫程式方式管理體驗應用程式中的描述符。
+此 `/descriptors` 中的端點 [!DNL Schema Registry] API可讓您以程式設計方式管理體驗應用程式中的描述項。
 
 ## 快速入門
 
-本指南中使用的端點是 [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+本指南中使用的端點是 [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-## 檢索描述符清單 {#list}
+## 擷取描述項清單 {#list}
 
-通過向組織發出GET請求，可以列出組織定義的所有描述符 `/tenant/descriptors`。
+您可以透過向以下發出GET要求，列出貴組織已定義的所有描述項： `/tenant/descriptors`.
 
 **API格式**
 
@@ -47,26 +47,26 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-響應格式取決於 `Accept` 請求中發送的標頭。 請注意 `/descriptors` 終結點使用 `Accept` 與所有其他端點不同的標題 [!DNL Schema Registry] API。
+回應格式取決於 `Accept` 標頭已在請求中傳送。 請注意 `/descriptors` 端點使用 `Accept` 與中所有其他端點不同的標頭 [!DNL Schema Registry] API。
 
 >[!IMPORTANT]
 >
->描述符需要唯一 `Accept` 替換的標題 `xed` 與 `xdm`，並提供 `link` 描述符唯一的選項。 本 `Accept` 標頭已包括在下面的示例調用中，但要確保在使用描述符時使用正確的標頭，請格外小心。
+>描述項需要唯一 `Accept` 取代的標頭 `xed` 替換為 `xdm`，也提供 `link` 描述項獨有的選項。 適當的 `Accept` 標頭已包含在以下的範例呼叫中，但請格外小心，以確保在使用描述項時使用正確的標頭。
 
-| `Accept` 標題 | 說明 |
+| `Accept` 頁首 | 說明 |
 | -------|------------ |
-| `application/vnd.adobe.xdm-id+json` | 返回描述符ID陣列 |
-| `application/vnd.adobe.xdm-link+json` | 返回描述符API路徑陣列 |
-| `application/vnd.adobe.xdm+json` | 返回擴展描述符對象的陣列 |
-| `application/vnd.adobe.xdm-v2+json` | 此 `Accept` 必須使用報頭才能利用分頁功能。 |
+| `application/vnd.adobe.xdm-id+json` | 傳回描述項ID的陣列 |
+| `application/vnd.adobe.xdm-link+json` | 傳回描述項API路徑的陣列 |
+| `application/vnd.adobe.xdm+json` | 傳回擴充描述項物件的陣列 |
+| `application/vnd.adobe.xdm-v2+json` | 此 `Accept` 必須使用頁首才能使用分頁功能。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-響應包括每個具有定義描述符的描述符類型的陣列。 換句話說，如果沒有 `@type` 定義時，註冊表將不會為該描述符類型返回空陣列。
+此回應包含已定義描述項的每個描述項型別的陣列。 換言之，如果沒有特定的 `@type` 定義，登入將不會傳回該描述項型別的空白陣列。
 
-使用 `link` `Accept` 標題，每個描述符以格式顯示為陣列項 `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
+使用時 `link` `Accept` 標題，每個描述項都會以格式顯示為陣列專案 `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
 
 ```JSON
 {
@@ -84,9 +84,9 @@ curl -X GET \
 }
 ```
 
-## 查找描述符 {#lookup}
+## 查詢描述項 {#lookup}
 
-如果要查看特定描述符的詳細資訊，可使用其查找(GET)單個描述符 `@id`。
+如果您想要檢視特定描述項的詳細資訊，可以使用其來查詢(GET)個別描述項 `@id`.
 
 **API格式**
 
@@ -96,13 +96,13 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DESCRIPTOR_ID}` | 的 `@id` 描述子的。 |
+| `{DESCRIPTOR_ID}` | 此 `@id` 要查閱的描述項的ID。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求通過其檢索描述符 `@id` 值。 描述符未版本化，因此沒有 `Accept` 查找請求中需要標頭。
+以下請求會依照其擷取描述項 `@id` 值。 描述項不會建立版本，因此不會 `Accept` 查詢請求中需要標頭。
 
 ```SHELL
 curl -X GET \
@@ -115,7 +115,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回描述符的詳細資訊，包括其 `@type` 和 `sourceSchema`，以及根據描述符類型而不同的其他資訊。 返回 `@id` 應與描述符匹配 `@id` 請求中提供。
+成功的回應會傳回描述項的詳細資訊，包括其 `@type` 和 `sourceSchema`以及視描述項型別而異的其他資訊。 傳回的 `@id` 應該符合描述項 `@id` 要求中提供。
 
 ```JSON
 {
@@ -137,13 +137,13 @@ curl -X GET \
 }
 ```
 
-## 建立描述符 {#create}
+## 建立描述項 {#create}
 
-通過向POST請求，可以建立新描述符 `/tenant/descriptors` 端點。
+您可以向以下網址發出POST要求，以建立新的描述項： `/tenant/descriptors` 端點。
 
 >[!IMPORTANT]
 >
->的 [!DNL Schema Registry] 允許您定義多種不同的描述符類型。 每個描述符類型都要求在請求正文中發送其自己的特定欄位。 查看 [附錄](#defining-descriptors) 的子菜單。
+>此 [!DNL Schema Registry] 可讓您定義數種不同的描述項型別。 每個描述項型別都需要有專屬的特定欄位，才能在要求內文中傳送。 請參閱 [附錄](#defining-descriptors) 取得描述元的完整清單，以及定義描述元所需的欄位。
 
 **API格式**
 
@@ -153,7 +153,7 @@ POST /tenant/descriptors
 
 **要求**
 
-以下請求在示例架構的「電子郵件地址」欄位上定義標識描述符。 這說明 [!DNL Experience Platform] 將電子郵件地址用作標識符，以幫助拼湊有關個人的資訊。
+以下請求在範例結構描述中的「電子郵件地址」欄位上定義身分描述項。 這說明 [!DNL Experience Platform] 將電子郵件地址當作識別碼，以協助彙整個人的相關資訊。
 
 ```SHELL
 curl -X POST \
@@ -177,7 +177,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立）以及新建立的描述符的詳細資訊，包括其 `@id`。 的 `@id` 是由 [!DNL Schema Registry] 用於引用API中的描述符。
+成功的回應會傳回HTTP狀態201 （已建立）和新建立之描述項的詳細資訊，包括其 `@id`. 此 `@id` 是由指派的唯讀欄位 [!DNL Schema Registry] 和用於參考API中的描述項。
 
 ```JSON
 {
@@ -193,9 +193,9 @@ curl -X POST \
 }
 ```
 
-## 更新描述符 {#put}
+## 更新描述項 {#put}
 
-可以通過包含描述符 `@id` 的子菜單。
+您可以包含描述項來更新描述項 `@id` 在PUT請求的路徑中。
 
 **API格式**
 
@@ -205,19 +205,19 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DESCRIPTOR_ID}` | 的 `@id` 要更新的描述符。 |
+| `{DESCRIPTOR_ID}` | 此 `@id` 要更新的描述項。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-此請求實質上重寫描述符，因此請求正文必須包含定義該類型的描述符所需的所有欄位。 換句話說，用於更新(PUT)描述符的請求負載與要更新的負載相同 [建立(POST)描述符](#create) 類型相同。
+此請求基本上會重新寫入描述項，因此請求內文必須包含定義該型別描述項所需的所有欄位。 換言之，更新(PUT)描述項的要求裝載與的裝載相同 [建立(POST)描述項](#create) 相同型別。
 
 >[!IMPORTANT]
 >
->與使用POST請求建立描述符一樣，每個描述符類型都要求在PUT請求負載中發送其自己的特定欄位。 查看 [附錄](#defining-descriptors) 的子菜單。
+>如同使用POST要求建立描述項一樣，每個描述項型別都需要在PUT要求裝載中傳送其專屬的特定欄位。 請參閱 [附錄](#defining-descriptors) 取得描述元的完整清單，以及定義描述元所需的欄位。
 
-以下示例更新標識描述符以引用其他 `xdm:sourceProperty` (`mobile phone`)並更改 `xdm:namespace` 至 `Phone`。
+以下範例會更新身分描述項以參考不同的身分 `xdm:sourceProperty` (`mobile phone`)並變更 `xdm:namespace` 至 `Phone`.
 
 ```SHELL
 curl -X PUT \
@@ -240,7 +240,7 @@ curl -X PUT \
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立）和 `@id` 更新的描述符(應與 `@id` 請求中發送)。
+成功的回應會傳回HTTP狀態201 （已建立），並且 `@id` 更新描述項的(應比對 `@id` （以請求傳送）。
 
 ```JSON
 {
@@ -248,11 +248,11 @@ curl -X PUT \
 }
 ```
 
-執行 [查找(GET)請求](#lookup) 要查看描述符，將顯示欄位現在已更新以反映在PUT請求中發送的更改。
+執行 [查詢(GET)請求](#lookup) 若要檢視描述項，將顯示欄位現在已更新，以反映PUT請求中傳送的變更。
 
-## 刪除描述符 {#delete}
+## 刪除描述項 {#delete}
 
-有時，您可能需要刪除從 [!DNL Schema Registry]。 這是通過發出引用 `@id` 刪除的描述符。
+有時候，您可能需要從以下位置移除已定義的描述項： [!DNL Schema Registry]. 這可透過參考「 」的「 」DELETE請求來完成 `@id` 要移除的描述項。
 
 **API格式**
 
@@ -262,7 +262,7 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DESCRIPTOR_ID}` | 的 `@id` 刪除的描述符。 |
+| `{DESCRIPTOR_ID}` | 此 `@id` 個要刪除的描述項。 |
 
 {style="table-layout:auto"}
 
@@ -279,21 +279,21 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應返回HTTP狀態204（無內容）和空白正文。
+成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
 
-要確認描述符已被刪除，可以執行 [查找請求](#lookup) 描述符 `@id`。 響應返回HTTP狀態404（未找到），因為描述符已從 [!DNL Schema Registry]。
+若要確認描述項已刪除，您可以執行 [查詢請求](#lookup) 針對描述項 `@id`. 回應會傳回HTTP狀態404 （找不到），因為描述項已從 [!DNL Schema Registry].
 
 ## 附錄
 
-以下部分提供了有關使用中的描述符的其他資訊 [!DNL Schema Registry] API。
+下節提供有關在中使用描述項的其他資訊 [!DNL Schema Registry] API。
 
-### 定義描述符 {#defining-descriptors}
+### 定義描述項 {#defining-descriptors}
 
-以下各節概述了可用的描述符類型，包括定義每種類型的描述符的必需欄位。
+以下小節提供可用描述項型別的概覽，包括定義每種型別描述項所需的欄位。
 
-#### 標識描述符
+#### 身分描述項
 
-標識描述符表示[!UICONTROL sourceProperty]「 」[!UICONTROL 源架構]「是 [!DNL Identity] 欄位，如所述 [Adobe Experience Platform身份服務](../../identity-service/home.md)。
+身分描述項會指出「[!UICONTROL sourceProperty]的「」[!UICONTROL sourceSchema]「是 [!DNL Identity] 欄位，如所述 [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -310,19 +310,19 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 對於標識描述符，必須將此值設定為 `xdm:descriptorIdentity`。 |
-| `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
-| `xdm:sourceVersion` | 源架構的主版本。 |
-| `xdm:sourceProperty` | 將作為標識的特定屬性的路徑。 路徑應以「/」開頭，而不以「/」結尾。 不要在路徑中包括&quot;properties&quot;（例如，使用&quot;/personalEmail/address&quot;而不是&quot;/properties/personalEmail/properties/address&quot;） |
-| `xdm:namespace` | 的 `id` 或 `code` 標識名稱空間的值。 使用 [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service)。 |
-| `xdm:property` | 要麼 `xdm:id` 或 `xdm:code`，具體取決於 `xdm:namespace` 。 |
-| `xdm:isPrimary` | 可選布爾值。 如果為true，則將欄位指示為主標識。 架構只能包含一個主標識。 |
+| `@type` | 正在定義的描述項型別。 對於身分描述項，此值必須設定為 `xdm:descriptorIdentity`. |
+| `xdm:sourceSchema` | 此 `$id` 正在定義描述項的結構描述的URI。 |
+| `xdm:sourceVersion` | 來源結構描述的主要版本。 |
+| `xdm:sourceProperty` | 將成為身分的特定屬性的路徑。 路徑應該以「/」開頭，而不是以一個結尾。 不要在路徑中包含「properties」（例如，使用「/personalEmail/address」而不是「/properties/personalEmail/properties/address」） |
+| `xdm:namespace` | 此 `id` 或 `code` 身分名稱空間的值。 名稱空間清單可透過以下網址找到： [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
+| `xdm:property` | 兩者之一 `xdm:id` 或 `xdm:code`，取決於 `xdm:namespace` 已使用。 |
+| `xdm:isPrimary` | 選用的布林值。 為true時，會將該欄位表示為主要身分。 結構描述只能包含一個主要身分。 |
 
 {style="table-layout:auto"}
 
-#### 友好名稱描述符 {#friendly-name}
+#### 易記名稱描述項 {#friendly-name}
 
-友好名稱描述符允許用戶修改 `title`。 `description`, `meta:enum` 核心庫架構欄位的值。 在使用「eVars」和其他「一般」欄位時特別有用，您希望將這些欄位標籤為包含特定於您的組織的資訊。 UI可以使用這些命令來顯示更友好的名稱或僅顯示具有友好名稱的欄位。
+易記名稱描述項可讓使用者修改 `title`， `description`、和 `meta:enum` 核心程式庫結構描述欄位的值。 使用「eVars」和其他「一般」欄位時，如果想要標示為包含貴組織的特定資訊，這個功能會特別有用。 UI可以使用這些來顯示更好記的名稱，或只顯示具有更好記名稱的欄位。
 
 ```json
 {
@@ -350,20 +350,20 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 對於友好名稱描述符，必須將此值設定為 `xdm:alternateDisplayInfo`。 |
-| `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
-| `xdm:sourceVersion` | 源架構的主版本。 |
-| `xdm:sourceProperty` | 要修改其詳細資訊的特定屬性的路徑。路徑應以斜槓(`/`)而不是以一個結尾。 不包括 `properties` 在路徑中(例如，使用 `/personalEmail/address` 而不是 `/properties/personalEmail/properties/address`)。 |
-| `xdm:title` | 要為此欄位顯示的新標題，以標題大小寫形式寫入。 |
-| `xdm:description` | 可以隨標題一起添加可選說明。 |
-| `meta:enum` | 如果由 `xdm:sourceProperty` 是字串欄位， `meta:enum` 可用於為「分段UI」中的欄位添加建議的值。 必須指出， `meta:enum` 不為XDM欄位聲明枚舉或提供任何資料驗證。<br><br>這隻應用於由Adobe定義的核心XDM欄位。 如果源屬性是您的組織定義的自定義欄位，則應改為編輯該欄位的 `meta:enum` 屬性直接通過PATCH請求訪問欄位的父資源。 |
-| `meta:excludeMetaEnum` | 如果由 `xdm:sourceProperty` 是一個字串欄位，該欄位具有在 `meta:enum` 欄位中，可以將此對象包含在友好名稱描述符中，以從分割中排除這些值中的部分或全部。 每個條目的鍵和值必須與原始條目中包含的鍵和值匹配 `meta:enum` 的子菜單。 |
+| `@type` | 正在定義的描述項型別。 對於易記名稱描述項，此值必須設定為 `xdm:alternateDisplayInfo`. |
+| `xdm:sourceSchema` | 此 `$id` 正在定義描述項的結構描述的URI。 |
+| `xdm:sourceVersion` | 來源結構描述的主要版本。 |
+| `xdm:sourceProperty` | 您要修改其詳細資訊之特定屬性的路徑。路徑應該以斜線(`/`)且結尾不是1。 不包括 `properties` 在路徑中(例如，使用 `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
+| `xdm:title` | 您要為此欄位顯示的新標題，以「字首大寫」撰寫。 |
+| `xdm:description` | 可選擇在標題中新增說明。 |
+| `meta:enum` | 如果欄位指示為 `xdm:sourceProperty` 是字串欄位， `meta:enum` 可用來在分段UI中新增欄位的建議值。 請務必注意 `meta:enum` 不會為XDM欄位宣告分項清單或提供任何資料驗證。<br><br>這僅能用於Adobe定義的核心XDM欄位。 如果來源屬性是您的組織定義的自訂欄位，您應改為編輯欄位的 `meta:enum` 屬性直接透過PATCH要求傳遞至欄位的父資源。 |
+| `meta:excludeMetaEnum` | 如果欄位指示為 `xdm:sourceProperty` 是字串欄位，其下提供了現有的建議值。 `meta:enum` 欄位，您可以在易記名稱描述項中包含此物件，從區段中排除部分或全部這些值。 每個專案的索引鍵和值都必須符合原始專案中所包含的索引鍵和值 `meta:enum` 欄位的URL來排除輸入。 |
 
 {style="table-layout:auto"}
 
-#### 關係描述符
+#### 關係描述項
 
-關係描述符描述兩個不同架構之間的關係，並對中所述的屬性進行鍵控 `sourceProperty` 和 `destinationProperty`。 請參閱上的教程 [定義兩個架構之間的關係](../tutorials/relationship-api.md) 的子菜單。
+關係描述項說明兩個不同結構描述之間的關係，其關鍵字為中所述的屬性 `sourceProperty` 和 `destinationProperty`. 請參閱教學課程，位置如下： [定義兩個結構描述之間的關係](../tutorials/relationship-api.md) 以取得詳細資訊。
 
 ```json
 {
@@ -381,19 +381,19 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 對於關係描述符，必須將此值設定為 `xdm:descriptorOneToOne`。 |
-| `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
-| `xdm:sourceVersion` | 源架構的主版本。 |
-| `xdm:sourceProperty` | 源架構中定義關係的欄位的路徑。 應以「/」開頭，而不以「/」結尾。 不要在路徑中包括「properties」（例如，「/personalEmail/address」，而不是「/properties/personalEmail/properties/address」）。 |
-| `xdm:destinationSchema` | 的 `$id` 此描述符正在定義與的關係的引用架構的URI。 |
-| `xdm:destinationVersion` | 引用架構的主版本。 |
-| `xdm:destinationProperty` | 引用架構中目標欄位的可選路徑。 如果省略此屬性，則目標欄位將由包含匹配引用標識描述符的任何欄位來推斷（請參閱下文）。 |
+| `@type` | 正在定義的描述項型別。 對於關係描述項，此值必須設定為 `xdm:descriptorOneToOne`. |
+| `xdm:sourceSchema` | 此 `$id` 正在定義描述項的結構描述的URI。 |
+| `xdm:sourceVersion` | 來源結構描述的主要版本。 |
+| `xdm:sourceProperty` | 定義關係的來源結構描述中欄位的路徑。 應該以「/」開頭，而不是以開頭。 請勿在路徑中加入「properties」（例如，「/personalEmail/address」而非「/properties/personalEmail/properties/address」）。 |
+| `xdm:destinationSchema` | 此 `$id` 此描述項正在定義關係的參考結構描述的URI。 |
+| `xdm:destinationVersion` | 參考結構描述的主要版本。 |
+| `xdm:destinationProperty` | 參考結構描述中目標欄位的可選路徑。 如果省略此屬性，則包含相符參考身分描述項的任何欄位都會推斷目標欄位（請參閱下文）。 |
 
 {style="table-layout:auto"}
 
-#### 引用標識描述符
+#### 參考身分描述項
 
-引用標識描述符提供對模式欄位的主要標識的引用上下文，允許其他模式中的欄位引用它。 引用架構必須已定義一個主標識欄位，然後才能通過此描述符由其他架構引用它。
+參考身分描述項提供結構描述欄位主要身分的參考內容，以供其他結構描述中的欄位參考。 參考結構描述必須先定義主要身分欄位，其他結構描述才能透過此描述項參考參考它。
 
 ```json
 {
@@ -407,17 +407,17 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 正在定義的描述符的類型。 對於引用標識描述符，必須將此值設定為 `xdm:descriptorReferenceIdentity`。 |
-| `xdm:sourceSchema` | 的 `$id` 定義描述符的架構的URI。 |
-| `xdm:sourceVersion` | 源架構的主版本。 |
-| `xdm:sourceProperty` | 源架構中用於引用引用架構的欄位的路徑。 應以「/」開頭，而不以「/」結尾。 路徑中不包含「屬性」(例如， `/personalEmail/address` 而不是 `/properties/personalEmail/properties/address`)。 |
-| `xdm:identityNamespace` | 源屬性的標識名稱空間代碼。 |
+| `@type` | 正在定義的描述項型別。 對於參考身分描述項，此值必須設定為 `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | 此 `$id` 正在定義描述項的結構描述的URI。 |
+| `xdm:sourceVersion` | 來源結構描述的主要版本。 |
+| `xdm:sourceProperty` | 來源結構描述中用於參考結構描述的欄位路徑。 應該以「/」開頭，而不是以開頭。 請勿在路徑中包含「properties」(例如， `/personalEmail/address` 而非 `/properties/personalEmail/properties/address`)。 |
+| `xdm:identityNamespace` | 來源屬性的身分名稱空間代碼。 |
 
 {style="table-layout:auto"}
 
-#### 不建議使用的欄位描述符
+#### 已棄用的欄位描述項
 
-你可以 [棄用自定義XDM資源中的欄位](../tutorials/field-deprecation-api.md#custom) 通過添加 `meta:status` 屬性集 `deprecated` 去那個領域。 如果要棄用架構中標準XDM資源提供的欄位，則可以將已棄用的欄位描述符分配給有關的架構，以達到相同的效果。 使用 [正確 `Accept` 標題](../tutorials/field-deprecation-api.md#verify-deprecation)，然後在API中查找架構時，可以查看該架構不建議使用的標準欄位。
+您可以 [棄用自訂XDM資源中的欄位](../tutorials/field-deprecation-api.md#custom) 藉由新增 `meta:status` 屬性設定為 `deprecated` 至有問題的欄位。 不過，如果您想要取代結構描述中標準XDM資源提供的欄位，您可以將取代的欄位描述項指派給有問題的結構描述，以達到相同的效果。 使用 [正確 `Accept` 頁首](../tutorials/field-deprecation-api.md#verify-deprecation)，則在API中查詢結構描述時，您可以檢視哪些標準欄位已過時。
 
 ```json
 {
@@ -430,9 +430,9 @@ curl -X DELETE \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `@type` | 描述符的類型。 對於欄位棄用描述符，必須將此值設定為 `xdm:descriptorDeprecated`。 |
-| `xdm:sourceSchema` | URI `$id` 將描述符應用到的架構。 |
-| `xdm:sourceVersion` | 要將描述符應用到的架構的版本。 應設定為 `1`。 |
-| `xdm:sourceProperty` | 將描述符應用到的架構中的屬性的路徑。 如果要將描述符應用於多個屬性，可以以陣列的形式提供路徑清單(例如， `["/firstName", "/lastName"]`)。 |
+| `@type` | 描述項的型別。 對於欄位淘汰描述項，此值必須設定為 `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | URI `$id` 要套用描述項的結構描述中。 |
+| `xdm:sourceVersion` | 您要套用描述項的結構描述版本。 應設為 `1`. |
+| `xdm:sourceProperty` | 要套用描述項的結構描述中的屬性路徑。 如果您想要將描述項套用至多個屬性，可以陣列形式提供路徑清單(例如， `["/firstName", "/lastName"]`)。 |
 
 {style="table-layout:auto"}

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；用戶介面；UI；儀表板；儀表板；配置檔案；段；目標；許可證使用；小部件；度量；
-title: 為儀表板建立自定義小部件
-description: 本指南提供了有關建立自定義小部件以便在Adobe Experience Platform儀表板中使用的逐步說明。
+keywords: Experience Platform；使用者介面；UI；控制面板；控制面板；設定檔；區段；目的地；授權使用；Widget；量度；
+title: 建立儀表板的自訂Widget
+description: 本指南提供建立用於Adobe Experience Platform控制面板的自訂Widget的逐步指示。
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
 source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
 workflow-type: tm+mt
@@ -10,108 +10,108 @@ ht-degree: 0%
 
 ---
 
-# 為儀表板建立自定義小部件
+# 建立儀表板的自訂Widget
 
-在Adobe Experience Platform，您可以使用多個儀表板查看組織的資料並與其進行交互。 您還可以通過向儀表板視圖添加新小部件來更新某些儀表板。 除了Adobe提供的標準小部件外，您還可以建立自定義小部件並在整個組織中共用它們。
+在Adobe Experience Platform中，您可以使用多個儀表板檢視組織的資料並與之互動。 您也可以將新Widget新增至儀表板檢視，以更新某些儀表板。 除了Adobe提供的標準Widget之外，您也可以建立自訂Widget，並在整個組織內共用。
 
-本指南提供有關建立自定義小部件並將其添加到 [!UICONTROL 配置檔案]。 [!UICONTROL 段], [!UICONTROL 目標] 平台UI中的儀表板。
+本指南提供建立和新增自訂Widget至的逐步指示 [!UICONTROL 設定檔]， [!UICONTROL 區段]、和 [!UICONTROL 目的地] 平台UI中的儀表板。
 
-要瞭解有關標準小部件的詳細資訊，請參閱指南 [將標準小部件添加到儀表板](standard-widgets.md)。
+若要進一步瞭解標準Widget，請參閱以下專案的指南： [新增標準Widget至您的儀表板](standard-widgets.md).
 
 >[!NOTE]
 >
->中顯示的小部件 [!UICONTROL 許可證使用] 無法自定義儀表板。 要瞭解有關此唯一儀表板的詳細資訊，請閱讀 [許可證使用儀表板文檔](../guides/license-usage.md)。
+>Widget會顯示在 [!UICONTROL 授權使用情況] 無法自訂儀表板。 若要深入瞭解此獨特控制面板，請閱讀 [授權使用情況儀表板檔案](../guides/license-usage.md).
 
-## 小部件庫 {#widget-library}
+## Widget資料庫 {#widget-library}
 
-本指南要求訪問 [!UICONTROL 小部件庫] Experience Platform。 要瞭解有關小部件庫的詳細資訊以及如何在UI中訪問它，請首先閱讀 [構件庫概述](widget-library.md)。
+本指南需要存取 [!UICONTROL Widget資料庫] 在Experience Platform內。 若要進一步瞭解Widget程式庫，以及如何在UI中存取它，請從閱讀 [Widget程式庫概觀](widget-library.md).
 
-## 自定義小部件入門
+## 自訂Widget快速入門
 
-在小部件庫中， **[!UICONTROL 自定義]** 頁籤，您可以建立小部件並與組織中的其他用戶共用這些小部件，以便自定義儀表板的外觀。
+在Widget程式庫中， **[!UICONTROL 自訂]** 索引標籤可讓您建立Widget並與您組織中的其他使用者共用，以自訂儀表板的外觀。
 
 >[!IMPORTANT]
 >
->您的組織可以在小部件庫中最多建立20個自定義小部件。
+>貴組織在Widget程式庫中最多可建立20個自訂Widget。
 
-選擇 **[!UICONTROL 自定義]** 頁籤，以開始建立自定義小部件或查看您的組織已建立的自定義小部件。
+選取 **[!UICONTROL 自訂]** 標籤以開始建立自訂Widget或檢視貴組織已建立的自訂Widget。
 
-![突出顯示了「自定義」頁籤的小部件庫工作區。](../images/customization/custom-widgets.png)
+![反白顯示「自訂」標籤的Widget程式庫工作區。](../images/customization/custom-widgets.png)
 
-## 建立自定義小部件
+## 建立自訂Widget
 
-要建立自定義小部件，請選擇 **[!UICONTROL 建立小部件]** 從小部件庫的右上角，或者，如果這是您組織的第一個自定義小部件，請選擇 **[!UICONTROL 建立]** 從小部件庫的中心。
+若要建立自訂Widget，請選取 **[!UICONTROL 建立Widget]** 從Widget程式庫的右上角，或如果這是您組織的第一個自訂Widget，請選取 **[!UICONTROL 建立]** 從Widget程式庫中心。
 
-![小部件庫工作區的「自定義」頁籤，「建立」突出顯示。](../images/customization/create-widget.png)
+![反白顯示「建立」之Widget程式庫工作區的「自訂」標籤。](../images/customization/create-widget.png)
 
-在 **[!UICONTROL 建立小部件]** 對話框，提供新小部件的標題和說明，然後選擇希望小部件顯示的屬性。
-
->[!NOTE]
->
->可用屬性清單取決於為您的組織配置的架構。 要瞭解有關屬性選擇和架構配置的詳細資訊，請閱讀上的指南 [編輯架構以建立自定義小部件](edit-schema.md)。
-
-要選擇屬性，請選擇要添加的屬性旁邊的單選按鈕。
+在 **[!UICONTROL 建立Widget]** 對話方塊，提供新Widget的標題和說明，並選擇您要讓Widget顯示的屬性。
 
 >[!NOTE]
 >
->每個小部件只能選擇一個屬性，每個屬性只能建立一個小部件。 如果已為屬性建立了小部件，則該屬性將顯示為灰色。
+>可用屬性的清單取決於為您的組織設定的結構描述。 若要進一步瞭解屬性選擇和結構描述設定，請閱讀以下指南： [編輯結構描述以建立自訂Widget](edit-schema.md).
 
-![建立小部件對話框。](../images/customization/create-widget-dialog.png)
-
-## 選擇可視化
-
-選擇屬性後，新小部件的預覽將顯示在對話框中。 人工智慧用於自動選擇最適合屬性資料的可視化，並提供可手動選擇的附加可視化選項。
-
-根據屬性，AI推薦不同的可視化選項。 可視化的完整清單包括：
-
-* 水準條形圖：水準線用於表示值。
-* 垂直條形圖：垂直線用於表示值。
-* 甜圈圖：與餅圖類似，值顯示為整體的一部分或部分。
-* 散點圖：使用水準軸和垂直軸來指示值。
-* 折線圖：使用單行顯示值以顯示一段時間內的更改。
-* 號碼卡：顯示一個匯總編號以表示單個鍵值。
-* 資料表：值以行的形式顯示在表中。
+若要選擇屬性，請選取要新增的屬性旁的單選按鈕。
 
 >[!NOTE]
 >
->當前所有屬性支援的唯一度量是配置檔案計數。
+>每個Widget只能選取一個屬性，且每個屬性只能建立一個Widget。 如果已為屬性建立Widget，則屬性會顯示為灰色。
+
+![建立Widget對話方塊。](../images/customization/create-widget-dialog.png)
+
+## 選取視覺效果
+
+選取屬性後，新介面工具集的預覽會顯示在對話方塊中。 人工智慧用於自動選取最符合屬性資料的視覺效果，並提供其他您可以手動選取的視覺效果選項。
+
+根據屬性，AI會建議不同的視覺效果選項。 完整的視覺效果清單包括：
+
+* 水準長條圖：水平線用來表示值。
+* 垂直長條圖：垂直線用來表示值。
+* 環圈圖：與圓形圖類似，值會顯示為整體的部分或片段。
+* 散點圖：使用水平軸和垂直軸來指示值。
+* 折線圖：值是使用單一線條來顯示，以顯示一段期間的變更。
+* 數字卡：顯示摘要數字，代表單一索引鍵值。
+* 資料表格：值在表格中顯示為列。
+
+>[!NOTE]
 >
->示例小部件中顯示的資料僅供圖示使用。 預覽不顯示組織的實際資料。
+>目前唯一支援所有屬性的量度是設定檔計數。
+>
+>範例Widget中顯示的資料僅供說明之用。 預覽不會顯示貴組織的實際資料。
 
-保存新小部件並返回到 [!UICONTROL 自定義] 頁籤 **[!UICONTROL 建立]**。
+若要儲存新的Widget並返回 [!UICONTROL 自訂] 索引標籤，選取 **[!UICONTROL 建立]**.
 
-![使用可視化選項和突出顯示的「建立」建立小部件對話框。](../images/customization/create-widget-select-attribute.png)
+![「建立Widget」對話方塊中包含視覺效果選項和醒目提示的「建立」 。](../images/customization/create-widget-select-attribute.png)
 
-現在，可以通過從庫中選擇該小部件並選擇，將新小部件添加到儀表板 **[!UICONTROL 添加小部件]**。
+您的新介面工具集現在可以從資料庫中選擇介面工具集，然後選取 **[!UICONTROL 新增Widget]**.
 
-![小部件庫工作區的「自定義」頁籤，其中突出顯示了新小部件和「添加小部件」。](../images/customization/custom-widgets-new.png)
+![Widget程式庫工作區的「自訂」索引標籤，其中反白顯示新Widget和「新增Widget」。](../images/customization/custom-widgets-new.png)
 
-## 隱藏自定義小部件
+## 隱藏自訂Widget
 
-將小部件添加到庫後，可以通過選擇橢圓(`...`)，然後選擇 **[!UICONTROL 隱藏小部件]**。 也可以從同一下拉清單中預覽和編輯小部件。
+將Widget新增至程式庫後，可以選取省略符號(`...`)，然後選取 **[!UICONTROL 隱藏Widget]**. 您也可以從相同的下拉式清單預覽和編輯Widget。
 
-要查看已隱藏的小部件，請選擇 **[!UICONTROL 顯示隱藏小部件]** 控制項庫的右上角。
+若要檢視已隱藏的Widget，請選取 **[!UICONTROL 顯示隱藏的Widget]** 從Widget程式庫的右上角。
 
 >[!WARNING]
 >
->在庫中隱藏小部件不會從單個用戶的儀表板中刪除該小部件。 如果組織中不再使用小部件，請確保您直接將該小部件與所有平台用戶通信，因為他們需要從他們的儀表板中刪除該小部件。
+>在程式庫中隱藏Widget並不會從個別使用者的控制面板中移除該Widget。 如果您的組織不應再使用Widget，請務必直接與所有Platform使用者溝通，因為他們需要將該Widget從其儀表板移除。
 
-![小部件庫工作區的「自定義」頁籤，其中小部件下拉菜單選項和「顯示隱藏小部件」突出顯示。](../images/customization/hide-widget.png)
+![Widget程式庫工作區的「自訂」索引標籤，其中的Widget下拉式選單選項和「顯示隱藏的Widget」會反白顯示。](../images/customization/hide-widget.png)
 
-## 編輯自定義小部件
+## 編輯自訂Widget
 
-通過選擇橢圓(`...`)，然後選擇 **[!UICONTROL 編輯]** 的下界。
+您可以選取省略符號(`...`)，然後選取 **[!UICONTROL 編輯]** 下拉式選單中的。
 
-![小部件下拉菜單選項，其中突出顯示了橢圓和「編輯」。](../images/customization/custom-widget-edit.png)
+![反白顯示橢圓形和「編輯」的Widget下拉式選單選項。](../images/customization/custom-widget-edit.png)
 
-在 **[!UICONTROL 編輯小部件]** 對話框，您可以編輯小部件的標題和說明，以及預覽和選擇不同的可視化效果。 編輯完成後，選擇 **[!UICONTROL 保存]** 以保存更改並返回到「自定義小部件」頁籤。
+於 **[!UICONTROL 編輯Widget]** 您可以編輯工具集的標題和說明，以及預覽和選取不同的視覺效果。 完成編輯後，選取「 」 **[!UICONTROL 儲存]** 以儲存變更並返回自訂Widget標籤。
 
 >[!WARNING]
 >
->在庫中編輯小部件不會更新單個用戶的小部件。 如果小部件已更新，請確保您直接將此內容與所有平台用戶通信，因為他們需要從其儀表板中刪除過期的小部件，然後從小部件庫中選擇並添加更新的小部件。
+>編輯資料庫中的Widget不會更新個別使用者的Widget。 如果Widget已更新，請確定您將此資訊直接傳達給所有Platform使用者，因為他們需要從儀表板上移除過時的Widget，然後從Widget資料庫中選取並新增更新後的Widget。
 
-![編輯小部件對話框。](../images/customization/edit-widget.png)
+![「編輯Widget」對話方塊。](../images/customization/edit-widget.png)
 
 ## 後續步驟
 
-讀取此文檔後，您可以訪問小部件庫，並使用它為您的組織建立和添加自定義小部件。 要修改儀表板中顯示的小部件的大小和位置，請參閱 [修改儀表板指南](modify.md)。
+閱讀本檔案後，您就能存取Widget程式庫，並使用它為您的組織建立和新增自訂Widget。 若要修改顯示於儀表板中的Widget大小與位置，請參閱 [修改儀表板指南](modify.md).

@@ -1,6 +1,6 @@
 ---
-title: 使用機器學習生成的預測模型確定傾向分數
-description: 瞭解如何使用查詢服務將預測模型應用於平台資料。 本文檔演示如何使用平台資料來預測客戶每次訪問時的購買傾向。
+title: 使用機器學習產生的預測性模型來判斷傾向分數
+description: 瞭解如何使用查詢服務將您的預測模型套用至Platform資料。 本檔案示範如何使用Platform資料來預測客戶每次造訪時的購買傾向。
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
 source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# 使用機器學習生成的預測模型確定傾向得分
+# 使用機器學習產生的預測性模型來判斷傾向分數
 
-使用查詢服務，您可以利用基於機器學習平台構建的預測模型來分析Experience Platform資料。
+使用查詢服務，您可以善用機器學習平台上建立的預測模型（例如傾向分數）來分析Experience Platform資料。
 
-本指南說明如何使用查詢服務將資料發送到機器學習平台以在計算筆記本中訓練模型。 訓練好的模型可以應用到使用SQL的資料中，以預測客戶每次訪問的購買傾向。
+本指南說明如何使用查詢服務將資料傳送至您的機器學習平台，以便在運算型筆記本中訓練模型。 訓練好的模型可套用至使用SQL的資料，以預測客戶每次造訪的購買傾向。
 
 ## 快速入門
 
-作為此過程的一部分，您需要培訓機器學習模型，本文檔假定您瞭解一個或多個機器學習環境的工作知識。
+此程式的一部分需要您訓練機器學習模型，本檔案假設您具備一個或多個機器學習環境的工作知識。
 
-此示例使用 [!DNL Jupyter Notebook] 作為發展環境。 雖然有很多選擇， [!DNL Jupyter Notebook] 建議使用，因為它是一個計算要求低的開源Web應用程式。 可能 [從官方網站下載](https://jupyter.org/)。
+此範例使用 [!DNL Jupyter Notebook] 作為開發環境。 雖然有許多可用選項， [!DNL Jupyter Notebook] 建議使用，因為這是開放原始碼Web應用程式，運算需求低。 它可以 [從官方網站下載](https://jupyter.org/).
 
-如果尚未執行此操作，請執行以下步驟： [連接 [!DNL Jupyter Notebook] 與Adobe Experience Platform查詢服務](../clients/jupyter-notebook.md) 在繼續本指南之前。
+如果您尚未這麼做，請依照以下步驟操作 [connect [!DNL Jupyter Notebook] 使用Adobe Experience Platform查詢服務](../clients/jupyter-notebook.md) 再繼續閱讀本指南。
 
-此示例中使用的庫包括：
+此範例中使用的程式庫包括：
 
 ```console
 python=3.6.7
@@ -35,21 +35,21 @@ numpy
 tqdm
 ```
 
-## 將分析表從平台導入到 [!DNL Jupyter Notebook] {#import-analytics-tables}
+## 從Platform將分析表格匯入 [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-要生成傾向得分模型，必須將儲存在平台中的分析資料的投影導入到 [!DNL Jupyter Notebook]。 從 [!DNL Python] 3 [!DNL Jupyter Notebook] 連接到查詢服務後，以下命令從虛擬服裝店Luma導入客戶行為資料集。 當平台資料使用體驗資料模型(XDM)格式儲存時，必須生成符合架構結構的示例JSON對象。 有關如何 [生成示例JSON對象](../../xdm/ui/sample.md)。
+若要產生傾向分數模型，必須將Platform中儲存之分析資料的投影匯入 [!DNL Jupyter Notebook]. 從 [!DNL Python] 3 [!DNL Jupyter Notebook] 下列命令已連線至查詢服務，並從虛擬服裝商店Luma匯入客戶行為資料集。 當平台資料以Experience Data Model (XDM)格式儲存時，必須產生符合結構描述結構的範例JSON物件。 請參閱檔案以瞭解如何操作的說明 [產生範例JSON物件](../../xdm/ui/sample.md).
 
-![的 [!DNL Jupyter Notebook] 加亮了多個命令的儀表板。](../images/use-cases/jupyter-commands.png)
+![此 [!DNL Jupyter Notebook] 反白數個指令的圖示板。](../images/use-cases/jupyter-commands.png)
 
-輸出顯示Luma行為資料集中所有列的表格化視圖 [!DNL Jupyter Notebook] 控制項欄。
+輸出會顯示表格化檢視中Luma行為資料集的所有欄 [!DNL Jupyter Notebook] 儀表板。
 
-![Luma導入的客戶行為資料集在 [!DNL Jupyter Notebook]。](../images/use-cases/behavioural-dataset-results.png)
+![Luma在中匯入的客戶行為資料集的清單化輸出 [!DNL Jupyter Notebook].](../images/use-cases/behavioural-dataset-results.png)
 
-## 準備資料以進行機器學習 {#prepare-data-for-machine-learning}
+## 為機器學習準備資料 {#prepare-data-for-machine-learning}
 
-必須標識目標列以訓練機器學習模型。 由於購買傾向是此使用案例的目標， `analytic_action` 列被選作Luma結果中的目標列。 值 `productPurchase` 是客戶購買的指標。 的 `purchase_value` 和 `purchase_num` 列與產品採購操作直接相關，因此也會刪除這些列。
+必須識別目標欄才能訓練機器學習模型。 由於此使用案例的目標是購買傾向，因此 `analytic_action` 從Luma結果中選擇欄作為目標欄。 值 `productPurchase` 是客戶購買的指標。 此 `purchase_value` 和 `purchase_num` 欄也會被移除，因為它們與產品購買動作直接相關。
 
-執行這些操作的命令如下：
+執行這些動作的指令如下：
 
 ```python
 #define the target label for prediction
@@ -58,10 +58,10 @@ df['target'] = (df['analytic_action'] == 'productPurchase').astype(int)
 df.drop(['analytic_action','purchase_value'],axis=1,inplace=True)
 ```
 
-接下來，必須將Luma資料集中的資料轉換為適當的表示形式。 需要兩個步驟：
+接下來，必須將Luma資料集中的資料轉換為適當的表示方式。 需要兩個步驟：
 
-1. 將表示數字的列轉換為數字列。 為此，請顯式轉換 `dataframe`。
-1. 將分類列也轉換為數字列。
+1. 將代表數字的欄轉換為數值欄。 若要這麼做，請明確轉換 `dataframe`.
+1. 也將分類欄轉換為數值欄。
 
 ```python
 #convert columns that represent numbers
@@ -69,7 +69,7 @@ num_cols = ['purchase_num', 'value_cart', 'value_lifetime']
 df[num_cols] = df[num_cols].apply(pd.to_numeric, errors='coerce')
 ```
 
-一種叫做 *一個熱編碼* 用於轉換用於機器和深度學習算法的分類資料變數。 這反過來改善了模型的預測和分類精度。 使用 `Sklearn` 庫以表示單獨列中的每個類別值。
+稱為「 」的技術 *一個熱編碼* 用於轉換分類資料變數，以便與機器和深度學習演演算法搭配使用。 這進而可改善預測及模型的分類準確度。 使用 `Sklearn` 程式庫，以個別欄表示每個類別值。
 
 ```python
 from sklearn.preprocessing import OneHotEncoder
@@ -98,14 +98,14 @@ X = pd.DataFrame( np.concatenate((enc.transform(df_cat).toarray(),df[num_cols]),
 y = df['target']
 ```
 
-定義為 `X` 顯示為表格，如下所示：
+定義為下列專案的資料 `X` 會以表格形式顯示，如下所示：
 
-![內X的表化輸出 [!DNL Jupyter Notebook]。](../images/use-cases/x-output-table.png)
+![X在中的清單化輸出 [!DNL Jupyter Notebook].](../images/use-cases/x-output-table.png)
 
 
-現在，機器學習所需的資料已可用，因此它可以在 [!DNL Python]`s `sklearn` 的下界。 [!DNL Logistics Regression] 用於訓練傾向模型，並允許您查看test資料的準確性。 在這種情況下，約為85%。
+現在機器學習的必要資料已可供使用，它可符合中預先設定的機器學習模型 [!DNL Python]的 `sklearn` 資料庫。 [!DNL Logistics Regression] 用於訓練傾向性模型，並可讓您檢視測試資料的準確性。 在此案例中，約為85%。
 
-的 [!DNL Logistic Regression] 算法和訓練 — test分割法用於評估機器學習算法的效能，在下面的代碼塊中導入：
+此 [!DNL Logistic Regression] 用於估計機器學習演演算法效能的演演算法和訓練測試分割方法，會匯入下列程式碼區塊中：
 
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -119,11 +119,11 @@ clf = LogisticRegression(max_iter=2000, random_state=0).fit(X_train, y_train)
 print("Test data accuracy: {}".format(clf.score(X_test, y_test)))
 ```
 
-test資料準確度為0.8518518518519。
+測試資料的正確性為0.8518518518518519。
 
-通過使用「物流回歸」，您可以直觀地顯示採購原因，並按降序重要性排序確定傾向的特徵。 第一清單示導致購買行為的較高因果關係。 後一列指明不導致採購行為的因素。
+透過使用物流回歸，您可以視覺化購買的原因，並依傾向性的重要性排序（以遞減順序排列）來決定傾向性。 第一個欄位表示導致採購行為的較高原因。 後一欄會指出不會導致購買行為的因素。
 
-將結果可視化為兩個條形圖的代碼如下所示：
+將結果視覺化為兩個長條圖的程式碼如下：
 
 ```python
 from matplotlib import pyplot as plt
@@ -153,19 +153,19 @@ ax2.set_title("Top 10 features to define \n a propensity to NOT purchase")
 plt.show()
 ```
 
-下面顯示了結果的垂直條形圖可視化：
+結果的垂直長條圖視覺效果如下所示：
 
-![前10項功能的可視化功能定義了購買傾向或不購買傾向。](../images/use-cases/visualized-results.png)
+![前10大功能的視覺效果，這些功能定義購買或不購買的傾向。](../images/use-cases/visualized-results.png)
 
-可以從條形圖中識別多個模式。 渠道的銷售點(POS)和作為報銷的呼叫主題是決定購買行為的最重要因素。 而「呼叫」主題作為投訴和發票是定義非採購行為的重要職責。 這些是可量化的、可操作的洞見，營銷人員可以利用這些洞見進行營銷活動，以解決購買這些客戶的傾向。
+可以從長條圖上分辨出數個模式。 作為補助的管道銷售點(POS)和通話主題是決定購買行為的最重要因素。 雖然投訴和發票等通話主題是定義非購買行為的重要角色。 這些是可量化的可操作深入分析，行銷人員可運用這些深入分析進行行銷活動，以解決這些客戶的購買傾向。
 
-## 使用查詢服務應用已訓練的模型 {#use-query-service-to-apply-trained-model}
+## 使用查詢服務來套用經過訓練的模型 {#use-query-service-to-apply-trained-model}
 
-在建立經過訓練的模型後，必須將其應用於保存在Experience Platform中的資料。 為此，必須將機器學習流水線的邏輯轉換為SQL。 此轉換的兩個關鍵元件如下：
+建立經過訓練的模型後，必須將其套用至Experience Platform中保留的資料。 若要這麼做，機器學習管道的邏輯必須轉換為SQL。 此轉變的兩個主要元件如下：
 
-- 首先，SQL必須代替 [!DNL Logistics Regression] 模組獲取預測標籤的概率。 物流回歸模型生成回歸模型 `y = wX + c`  權重 `w` 攔截 `c` 是模型的輸出。 SQL功能可用於乘權以獲得概率。
+- 首先，SQL必須取代 [!DNL Logistics Regression] 用於取得預測標籤機率的模組。 物流回歸建立的模型產生回歸模型 `y = wX + c`  其中權重 `w` 和截距 `c` 是模型的輸出。 SQL功能可用來將權重相乘以獲得機率。
 
-- 其次，在CC500000000000000000000000000000000000000000000000000000000000000000000000000000000000 [!DNL Python] 還必須將一個熱編碼併入SQL。 例如，在原始資料庫中， `geo_county` 列以儲存縣，但列將轉換為 `geo_county=Bexar`。 `geo_county=Dallas`。 `geo_county=DeKalb`。 以下SQL陳述式執行相同的轉換，其中 `w1`。 `w2`, `w3` 可以用中從模型中學習的權重替換 [!DNL Python]:
+- 其次，工程程式達成於 [!DNL Python] 具有一個熱編碼也必須合併到SQL中。 例如，在原始資料庫中，我們有 `geo_county` 欄以儲存縣/市，但此欄會轉換為 `geo_county=Bexar`， `geo_county=Dallas`， `geo_county=DeKalb`. 下列SQL陳述式會執行相同的轉換，其中 `w1`， `w2`、和 `w3` 可用從模型中學習的權重替代。 [!DNL Python]：
 
 ```sql
 SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
@@ -173,29 +173,29 @@ SELECT  CASE WHEN geo_state = 'Bexar' THEN FLOAT(w1) ELSE 0 END AS f1,
         CASE WHEN geo_state = 'Bexar' THEN FLOAT(w3) ELSE 0 END AS f3,
 ```
 
-對於數字特徵，可以直接用權值乘列，如下面的SQL陳述式中所示。
+若是數值功能，您可以直接用權重乘以資料行，如下面的SQL陳述式所示。
 
 ```sql
 SELECT FLOAT(purchase_num) * FLOAT(w4) AS f4,
 ```
 
-在得到數值後，可以將其移植到Sigmoid函式中，Logistics Regression算法生成最終的預測。 在以下陳述中， `intercept` 是回歸中截距的數。
+取得數字後，可將其移轉到sigmoid函式，其中物流回歸演演算法產生最終預測。 在以下陳述中， `intercept` 是回歸中的截距。
         
 
 ```sql
 SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
 ```
  
-### 端到端示例
+### 端對端範例
 
-在您有兩列(`c1` 和 `c2`)，如果 `c1` 有兩類， [!DNL Logistic Regression] 算法採用以下函式進行訓練：
+如果您有兩個欄(`c1` 和 `c2`)，如果 `c1` 有兩個類別： [!DNL Logistic Regression] 使用下列函式訓練演演算法：
  
 
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
  
-SQL中的等效項如下：
+SQL中的對等項如下：
 
 ```sql
 SELECT
@@ -210,7 +210,7 @@ FROM
   )
 ```
  
-的 [!DNL Python] 自動翻譯流程的代碼如下：
+此 [!DNL Python] 自動化翻譯程式的程式碼如下：
 
 ```python
 def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
@@ -235,7 +235,7 @@ def generate_lr_inference_sql(ohc_columns, num_cols, clf, db):
     return final_sql
 ```
 
-當使用SQL推斷資料庫時，輸出如下：
+使用SQL來推斷資料庫時，輸出如下：
 
 ```python
 sql = generate_lr_inference_sql(ohc_columns, num_cols, clf, "fdu_luma_raw")
@@ -245,13 +245,13 @@ colnames = [desc[0] for desc in cur.description]
 pd.DataFrame(samples,columns=colnames)
 ```
 
-表格化結果顯示每次客戶會話購買的傾向 `0` 意味著沒有購買和 `1` 意味著確定的購買傾向。
+以表格化的結果會顯示每個客戶工作階段的購買傾向 `0` 表示沒有購買和的傾向 `1` 表示已證實的購買傾向。
 
-![使用SQL進行資料庫推理的表格化結果。](../images/use-cases/inference-results.png)
+![使用SQL的資料庫推斷的清單化結果。](../images/use-cases/inference-results.png)
 
-## 處理採樣資料：引導 {#working-on-sampled-data}
+## 使用抽樣資料：啟動程式 {#working-on-sampled-data}
 
-如果資料大小太大，本地電腦無法儲存用於模型培訓的資料，則可以採集樣本，而不是從Query Service獲取完整資料。 要瞭解從Query Service中採樣需要多少資料，可以應用一種稱為引導的技術。 在這方面，自舉意味著利用不同樣本對模型進行多次訓練，並檢驗模型精度在不同樣本之間的方差。 為了調整上述的傾向性模型示例，首先將整個機器學習工作流封裝成一個函式。 代碼如下：
+如果您的本機電腦無法儲存資料以進行模型訓練，資料大小太大時，您可以取樣本，而不是從Query Service取完整資料。 若要知道從查詢服務取樣需要多少資料，您可以套用稱為啟動載入的技術。 就此而言，啟動程式意味著使用不同樣本多次訓練模型，並檢查不同樣本之間模型精度的差異。 若要調整上述傾向性模型範例，請先將整個機器學習工作流程封裝成函式。 程式碼如下：
 
 ```python
 def end_to_end_pipeline(df):
@@ -295,7 +295,7 @@ def end_to_end_pipeline(df):
     return clf.score(X_test, y_test)
 ```
 
-此函式隨後可以在循環中運行多次，例如10次。 與上一代碼的不同之處在於，現在不是從整個表中抽取樣本，而是只抽取行樣本。 例如，下面的示例代碼僅佔用1000行。 可以儲存每個迭代的精度。
+此函式接著可以在回圈中執行多次，例如10次。 與前一個程式碼的不同之處在於，範例現在並非取自整個表格，而僅取自列的範例。 例如，下列範常式式碼僅需1000列。 可以儲存每個反複專案的精確度。
 
 ```python
 from tqdm import tqdm
@@ -320,8 +320,8 @@ for i in tqdm(range(100)):
 bootstrap_accuracy = np.sort(bootstrap_accuracy)
 ```
 
-然後對引導模型的準確度進行排序。 之後，模型的第10和第90個量的精度在給定樣本大小的情況下變為模型的95%置信區間。
+然後會排序啟動載入模型的精確度。 之後，模型精確度的第10和第90個數量位數會變成指定樣本大小下模型精確度的95%信賴區間。
 
-![顯示傾向得分置信區間的打印命令。](../images/use-cases/confidence-interval.png)
+![顯示傾向分數之信賴區間的列印命令。](../images/use-cases/confidence-interval.png)
 
-上圖說明，如果您只需要1000行來培訓模型，則預計精度將降低約84%到88%。 您可以調整 `LIMIT` 查詢服務查詢中的子句，以確保模型的效能。
+上圖指出，如果您只用1000列來訓練模型，可預期精確度會下降約84%至88%。 您可以調整 `LIMIT` 查詢服務中的子句會根據您的需求來查詢以確保模型的效能。

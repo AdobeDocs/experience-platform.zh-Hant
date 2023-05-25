@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；目錄服務；目錄服務；資料位置；資料位置；資料管理；沿襲；沿襲；目錄；啟用資料集
+keywords: Experience Platform；首頁；熱門主題；目錄服務；目錄；目錄服務；資料位置；資料位置；資料管理；資料管理；譜系；譜系；目錄；啟用資料集
 solution: Experience Platform
-title: 目錄服務概述
-description: 目錄服務是Adobe Experience Platform內資料位置和沿襲的記錄系統。 雖然所有被攝取到Experience Platform中的資料都作為檔案和目錄儲存在資料湖中，但目錄保存這些檔案和目錄的元資料和說明，以便進行查找和監視。
+title: 目錄服務概觀
+description: 目錄服務是Adobe Experience Platform中資料位置和譜系的記錄系統。 雖然所有內嵌至Experience Platform的資料都會以檔案和目錄的形式儲存在Data Lake中，但Catalog仍會儲存這些檔案和目錄的中繼資料和說明，以供查閱和監視。
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
@@ -13,53 +13,53 @@ ht-degree: 5%
 
 # [!DNL Catalog Service] 概覽
 
-[!DNL Catalog Service] 是Adobe Experience Platform內資料位置和世系的記錄系統。 所有被攝入的資料 [!DNL Experience Platform] 儲存在 [!DNL Data Lake] 作為檔案和目錄， [!DNL Catalog] 保存這些檔案和目錄的元資料和說明，以便進行查找和監視。
+[!DNL Catalog Service] 是Adobe Experience Platform中資料位置和譜系的記錄系統。 雖然所有資料已擷取至 [!DNL Experience Platform] 儲存在 [!DNL Data Lake] 作為檔案和目錄， [!DNL Catalog] 儲存這些檔案和目錄的中繼資料和說明，以供查閱和監視。
 
-簡單說， [!DNL Catalog] 充當元資料儲存或「目錄」，在此您可以查找有關資料的資訊 [!DNL Experience Platform]。 您可以使用 [!DNL Catalog] 回答以下問題：
+簡言之， [!DNL Catalog] 充當中繼資料存放區或「目錄」，您可在其中找到有關您資料的資訊 [!DNL Experience Platform]. 您可以使用 [!DNL Catalog] 回答下列問題：
 
-* 我的資料在哪？
-* 這些資料處理到什麼階段？
-* 哪些系統或進程對我的資料有作用？
+* 我的資料位於何處？
+* 此資料處於哪個處理階段？
+* 哪些系統或程式對我的資料採取行動？
 * 已成功處理多少資料？
-* 處理過程中發生了哪些錯誤？
+* 處理期間發生什麼錯誤？
 
-[!DNL Catalog] 提供了REST風格的API，允許您以寫程式方式管理 [!DNL Platform] 元資料。 查看 [目錄開發人員指南](api/getting-started.md) 的子菜單。
+[!DNL Catalog] 提供RESTful API，可讓您以程式設計方式管理 [!DNL Platform] 使用基本CRUD作業的中繼資料。 請參閱 [目錄開發人員指南](api/getting-started.md) 以取得詳細資訊。
 
 ## [!DNL Catalog] 和 [!DNL Experience Platform] 服務
 
-資源 [!DNL Catalog Service] 多個磁軌使用 [!DNL Experience Platform] 服務。 為了充分利用 [!DNL Catalog's] 功能，建議您熟悉這些服務及其與 [!DNL Catalog]。
+符合以下條件的資源： [!DNL Catalog Service] 多個曲目使用 [!DNL Experience Platform] 服務。 為了充分利用 [!DNL Catalog's] 功能，建議您熟悉這些服務及其互動方式 [!DNL Catalog].
 
 ### [!DNL Experience Data Model] (XDM)系統
 
-[!DNL Experience Data Model] (XDM)系統是標準化框架， [!DNL Platform] 組織客戶體驗資料。 [!DNL Experience Platform] 利用XDM架構以一致且可重複使用的方式描述資料結構。
+[!DNL Experience Data Model] (XDM)系統是一種標準化的架構，其中 [!DNL Platform] 組織客戶體驗資料。 [!DNL Experience Platform] 運用XDM結構描述，以一致且可重複使用的方式描述資料結構。
 
-當資料被攝入 [!DNL Platform]，該資料的結構將映射到XDM架構並儲存在 [!DNL Data Lake] 作為資料集的一部分。 每個資料集的元資料由 [!DNL Catalog Service]，包括對資料集符合的XDM架構的引用。
+當資料被擷取到 [!DNL Platform]，則該資料的結構會對映至XDM結構描述並儲存在 [!DNL Data Lake] 做為資料集的一部分。 每個資料集的中繼資料由追蹤 [!DNL Catalog Service]，其中包含資料集符合的XDM結構描述參考。
 
-有關XDM系統的更多一般資訊，請參閱 [XDM系統概述](../xdm/home.md)。
+如需XDM系統的一般資訊，請參閱 [XDM系統總覽](../xdm/home.md).
 
 ### [!DNL Data Ingestion]
 
-[!DNL Experience Platform] 從多個源中接收資料，並將記錄作為資料集保留在 [!DNL Data Lake]。 [!DNL Catalog] 跟蹤這些資料集的元資料，而不管其來源或接收方法如何。
+[!DNL Experience Platform] 從多個來源擷取資料，並將記錄作為資料集儲存在中 [!DNL Data Lake]. [!DNL Catalog] 追蹤這些資料集的中繼資料，無論其來源或擷取方法為何。
 
-使用批量攝取法時， [!DNL Catalog] 還跟蹤批處理檔案的其他元資料。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。[!DNL Catalog] 跟蹤這些批處理檔案的元資料，以及接收後保留的資料集。 批處理元資料包括有關成功接收的記錄數以及所有失敗記錄和相關錯誤消息的資訊。
+使用批次擷取方法時， [!DNL Catalog] 也會追蹤批次檔案的其他中繼資料。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。[!DNL Catalog] 追蹤這些批次檔案的中繼資料，以及擷取後它們持續存在的資料集。 批次中繼資料包含有關成功擷取的記錄數，以及任何失敗記錄和關聯的錯誤訊息的資訊。
 
-查看 [資料攝取概述](../ingestion/home.md) 的子菜單。
+請參閱 [資料擷取概觀](../ingestion/home.md) 以取得詳細資訊。
 
-## [!DNL Catalog] 對象
+## [!DNL Catalog] 物件
 
-如上節所述， [!DNL Catalog] 跟蹤其他資源和操作使用的多種資源和操作的元資料 [!DNL Platform] 服務。 [!DNL Catalog] 維護自己的「對象」儲存，這些對象封裝了此元資料。 [!DNL Catalog] 對象的可查詢表示 [!DNL Platform] 資料，使您可以搜索、監視和標籤資料，而無需訪問資料本身。
+如上一節所述， [!DNL Catalog] 追蹤其他使用者使用的多種資源和作業的中繼資料 [!DNL Platform] 服務。 [!DNL Catalog] 會維護自己封裝此中繼資料的「物件」存放區。 [!DNL Catalog] 物件是可查詢的 [!DNL Platform] 可讓您搜尋、監控及標示資料，而不需要存取資料本身的資料。
 
-下表概述了支援的不同對象類型 [!DNL Catalog]:
+下表概述支援的不同物件型別 [!DNL Catalog]：
 
-| 物件 | API終結點 | 定義 |
+| 物件 | API端點 | 定義 |
 |---|---|---|
-| 帳戶 | `/accounts` | 建立源連接時，必須提供身份驗證憑據。 帳戶表示用於建立特定類型連接的身份驗證憑據的集合。 每個連接都具有一組由 [!DNL Catalog] 並以 [!DNL Azure Key Vault]。 |
-| 批 | `/batches` | 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。中的批處理對象 [!DNL Catalog] 概述批處理的攝取度量（如處理的記錄數或磁碟大小），還可能包括到資料集、視圖和受批處理操作影響的其他資源的連結。 |
-| Connection | `/connections` | 連接是源連接器的單個實例，它對您的組織是唯一的，並且使用連接器類型的相應身份驗證憑據進行配置。 |
-| 連接器 | `/connectors` | 連接器定義源連接如何從其他Adobe應用程式(如Adobe Analytics和Adobe Audience Manager)、第三方雲儲存源(如 [!DNL Azure Blob]。 [!DNL Amazon S3]、FTP伺服器和SFTP伺服器)，以及第三方CRM系統(如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])。 |
-| 資料集 | `/dataSets` | 資料集是用於收集資料（通常是表）的儲存和管理構造，該資料集包含模式（列）和欄位（行）。 查看 [資料集概述](./datasets/overview.md) 的子菜單。 |
-| 資料集檔案 | `/datasetFiles` | 資料集檔案表示已保存的資料塊 [!DNL Platform]。 作為文本檔案的記錄，您可以在這些記錄中找到檔案的大小、包含的記錄數以及對接收檔案的批的引用。 |
+| 帳戶 | `/accounts` | 建立來源連線時，必須提供驗證認證。 帳戶代表用來建立特定型別連線的驗證憑證集合。 每個連線都有一組唯一引數，這些引數會由儲存在 [!DNL Catalog] 並在以下位置提供保護： [!DNL Azure Key Vault]. |
+| 批次 | `/batches` | 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。中的批次物件 [!DNL Catalog] 概述批次的擷取量度（例如處理的記錄數或磁碟大小），並且可能包含資料集、檢視和其他受批次作業影響的資源的連結。 |
+| Connection | `/connections` | 連線是來源聯結器的單一執行個體，對您的組織而言是唯一的，並使用聯結器型別的適當驗證憑證進行設定。 |
+| 連接器 | `/connectors` | 聯結器會定義來源連線如何從其他Adobe應用程式(例如Adobe Analytics和Adobe Audience Manager)、協力廠商雲端儲存空間(例如 [!DNL Azure Blob]， [!DNL Amazon S3]、FTP伺服器和SFTP伺服器)以及協力廠商CRM系統(例如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])。 |
+| 資料集 | `/dataSets` | 資料集是一種儲存和管理結構，用於收集包含方案（欄）和欄位（列）的資料（通常是表格）。 請參閱 [資料集總覽](./datasets/overview.md) 以取得詳細資訊。 |
+| 資料集檔案 | `/datasetFiles` | 資料集檔案代表已儲存的資料區塊 [!DNL Platform]. 作為常值檔案的記錄，您可以在這裡找到檔案的大小、檔案包含的記錄數，以及對擷取檔案之批次的參照。 |
 
 ## 後續步驟
 
-本檔案介紹了 [!DNL Catalog Service] 以及它在更大範圍內的作用 [!DNL Experience Platform]。 查看 [[!DNL Catalog] 開發者指南](api/getting-started.md) 與其不同端點交互的步驟 [!DNL Catalog] API。 建議您也參考上的指南 [篩選目錄資料](api/filter-data.md) 以遵循限制API響應中返回的資料的最佳做法。
+本檔案提供以下內容的簡介： [!DNL Catalog Service] 以及它如何在 [!DNL Experience Platform]. 請參閱 [[!DNL Catalog] 開發人員指南](api/getting-started.md) 有關與不同端點互動的步驟 [!DNL Catalog] API。 建議您也參閱以下專案的指南： [篩選目錄資料](api/filter-data.md) 以遵循最佳實務來限制API回應中傳回的資料。

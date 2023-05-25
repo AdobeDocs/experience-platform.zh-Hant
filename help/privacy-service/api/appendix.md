@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
-title: Privacy ServiceAPI指南附錄
-description: 此文檔包含有關使用Privacy ServiceAPI的其他資訊。
+title: Privacy Service API指南附錄
+description: 本檔案包含使用Privacy Service API的其他資訊。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
@@ -11,24 +11,24 @@ ht-degree: 5%
 
 ---
 
-# Privacy ServiceAPI指南附錄
+# Privacy Service API指南附錄
 
-以下各節包含有關使用Adobe Experience Platform Privacy ServiceAPI的其他資訊。
+以下小節包含使用Adobe Experience Platform Privacy Service API的其他資訊。
 
-## 標準標識命名空間 {#standard-namespaces}
+## 標準身分名稱空間 {#standard-namespaces}
 
-發送到的所有標識 [!DNL Privacy Service] 必須在特定標識名稱空間下提供。 標識命名空間是 [Adobe Experience Platform身份服務](../../identity-service/home.md) 指明身份相關的上下文。
+所有傳送至的身分 [!DNL Privacy Service] 必須在特定的身分名稱空間下提供。 身分名稱空間是的元件 [Adobe Experience Platform Identity Service](../../identity-service/home.md) 指示與身分相關的內容。
 
-下表概述了幾種常用的預定義標識類型，這些類型由 [!DNL Experience Platform]以及他們的關聯 `namespace` 值：
+下表概述由提供的幾種常用的預先定義身分型別 [!DNL Experience Platform]，以及其相關聯的 `namespace` 值：
 
-| 標識類型 | `namespace` | `namespaceId` |
+| 身分型別 | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | 電子郵件 | `Email` | `6` |
 | 電話 | `Phone` | `7` |
-| Adobe Advertising CloudID | `AdCloud` | `411` |
-| Adobe Audience ManagerUUID | `CORE` | `0` |
+| ADOBE ADVERTISING CLOUD ID | `AdCloud` | `411` |
+| ADOBE AUDIENCE MANAGER UUID | `CORE` | `0` |
 | Adobe Experience Cloud ID | `ECID` | `4` |
-| Adobe TargetID | `TNTID` | `9` |
+| ADOBE TARGET ID | `TNTID` | `9` |
 | [!DNL Apple] 廣告商ID | `IDFA` | `20915` |
 | [!DNL Google] 廣告 ID | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
@@ -37,38 +37,38 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->每個標識類型還 `namespaceId` 整數值，可用來代替 `namespace` 設定標識時的字串 `type` 屬性。 請參閱 [命名空間限定符](#namespace-qualifiers) 的子菜單。
+>每個身分型別也有 `namespaceId` 整數值，可用來取代 `namespace` 字串（設定身分時） `type` 屬性重新命名為「namespaceId」。 請參閱以下小節： [名稱空間限定詞](#namespace-qualifiers) 以取得詳細資訊。
 
-您可以通過向以下站點發出GET請求來檢索組織正在使用的標識命名空間清單 `idnamespace/identities` 端點 [!DNL Identity Service] API。 查看 [Identity Service開發人員指南](../../identity-service/api/getting-started.md) 的子菜單。
+您可以透過向以下網站發出GET要求，擷取貴組織正在使用的身分名稱空間清單： `idnamespace/identities` 中的端點 [!DNL Identity Service] API。 請參閱 [Identity Service開發人員指南](../../identity-service/api/getting-started.md) 以取得詳細資訊。
 
-## 命名空間限定符
+## 名稱空間限定詞
 
-指定 `namespace` 值 [!DNL Privacy Service] API, a **命名空間限定符** 必須包含在相應 `type` 的下界。 下表概述了不同的接受的命名空間限定符。
+指定 `namespace` 中的值 [!DNL Privacy Service] API， a **名稱空間限定詞** 必須包含在相對應的 `type` 引數。 下表概述不同的接受名稱空間限定詞。
 
-| 限定符 | 定義 |
+| 限定詞 | 定義 |
 | --------- | ---------- |
-| `standard` | 一個標準命名空間是全局定義的，不與單個組織資料集（例如，電子郵件、電話號碼等）相關。 提供了命名空間ID。 |
-| `custom` | 在組織上下文中建立的、未在 [!DNL Experience Cloud]。 值表示要搜索的友好名稱（「名稱」欄位）。 提供了命名空間ID。 |
-| `integrationCode` | 整合代碼 — 類似於「自定義」，但具體定義為要搜索的資料源的整合代碼。 提供了命名空間ID。 |
-| `namespaceId` | 指示值是通過命名空間服務建立或映射的命名空間的實際ID。 |
-| `unregistered` | 未在命名空間服務中定義且採用「原樣」的自由形式字串。 處理這些類型命名空間的任何應用程式都會針對它們進行檢查，並在適合公司上下文和資料集時進行處理。 未提供命名空間ID。 |
-| `analytics` | 內部映射的自定義命名空間 [!DNL Analytics]，不在命名空間服務中。 此命令直接按照原始請求指定的方式傳入，但沒有命名空間ID |
-| `target` | 內部理解的自定義命名空間 [!DNL Target]，不在命名空間服務中。 此命令直接按照原始請求指定的方式傳入，但沒有命名空間ID |
+| `standard` | 全域定義的標準名稱空間之一，不會繫結至個別組織資料集（例如電子郵件、電話號碼等）。 提供名稱空間ID。 |
+| `custom` | 在組織內容中建立的唯一名稱空間，未在之間共用 [!DNL Experience Cloud]. 值代表要搜尋的易記名稱（「名稱」欄位）。 提供名稱空間ID。 |
+| `integrationCode` | 整合代碼 — 類似「自訂」，但特別定義為要搜尋的資料來源的整合代碼。 提供名稱空間ID。 |
+| `namespaceId` | 表示該值是通過名稱空間服務建立或對應的名稱空間的實際ID。 |
+| `unregistered` | 名稱空間服務中未定義的自由格式字串，採用「原樣」處理。 處理這些型別名稱空間的任何應用程式會根據此類名稱空間進行檢查，並在適合公司內容和資料集時進行處理。 未提供名稱空間ID。 |
+| `analytics` | 內部對應的自訂名稱空間，位於 [!DNL Analytics]，不在名稱空間服務中。 這會依照原始請求的指定直接傳入，不含名稱空間ID |
+| `target` | 內部可瞭解的自訂名稱空間 [!DNL Target]，不在名稱空間服務中。 這會依照原始請求的指定直接傳入，不含名稱空間ID |
 
 {style="table-layout:auto"}
 
 ## 接受的產品值
 
-下表概述了在中指定Adobe產品的接受值 `include` 作業建立請求的屬性。
+下表概述在「 」中指定Adobe產品的接受值 `include` 工作建立請求的屬性。
 
-| 產品 | 用於 `include` 屬性 |
+| 產品 | 在中使用的值 `include` 屬性 |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform（資料湖） | `aepDataLake` |
-| Adobe Experience Platform（即時客戶概要資訊） | `profileService` |
+| Adobe Experience Platform （資料湖） | `aepDataLake` |
+| Adobe Experience Platform （即時客戶個人檔案） | `profileService` |
 | Adobe Primetime驗證 | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | 客戶屬性(CRS) | `CRS` |

@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience PlatformWeb SDK擴展中的操作類型
-description: 瞭解Adobe Experience PlatformWeb SDK標籤擴展提供的不同操作類型。
+title: Adobe Experience Platform Web SDK擴充功能中的動作型別
+description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
 source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
@@ -13,50 +13,50 @@ ht-degree: 2%
 
 # 動作類型
 
-配置 [Adobe Experience PlatformWeb SDK標籤擴展](web-sdk-extension-configuration.md)，必須配置操作類型。
+在您設定 [Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md)，您必須設定動作型別。
 
-此頁介紹了支援的操作類型 [Adobe Experience PlatformWeb SDK標籤擴展](web-sdk-extension-configuration.md)。
+此頁面說明支援的動作型別。 [Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md).
 
-## 發送事件 {#send-event}
+## 傳送事件 {#send-event}
 
-將事件發送到Adobe [!DNL Experience Platform] 這樣Adobe Experience Platform就能收集你發送的資料，並根據這些資訊採取行動。 選擇一個實例（如果您有多個實例）。 您要發送的任何資料都可以在 **[!UICONTROL XDM資料]** 的子菜單。 使用符合XDM架構結構的JSON對象。 此對象可以在您的頁面上建立，也可以通過 **[!UICONTROL 自定義代碼]** **[!UICONTROL 資料元素]**。
+傳送事件給Adobe [!DNL Experience Platform] 以便Adobe Experience Platform可以收集您傳送的資料，並對該資訊採取行動。 選取執行個體（如果有多個執行個體）。 任何您想要傳送的資料都可傳送至 **[!UICONTROL XDM資料]** 欄位。 使用符合XDM結構描述結構的JSON物件。 此物件可在您的頁面上建立，或透過 **[!UICONTROL 自訂程式碼]** **[!UICONTROL 資料元素]**.
 
-「發送事件」操作類型中還有一些其它欄位，這些欄位可能也會根據您的實施情況而有用。 請注意，這些欄位都是可選的。
+「傳送事件」動作型別中有一些其他欄位可能也有用，具體取決於您的實作。 請注意，這些欄位都是選用欄位。
 
-- **類型：** 此欄位允許您指定將記錄在XDM架構中的事件類型。 查看 [文檔](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 的子菜單。
-- **資料：** 可以使用此欄位發送與XDM架構不匹配的資料。 如果您試圖更新Adobe Target配置檔案或發送目標Recommendations屬性，則此欄位非常有用。 有關示例，請查看 [文檔](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant)。<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
-- **資料集ID:** 如果您需要將資料發送到資料流中指定的資料集以外的資料集，則可以在此處指定該資料集ID。
-- **文檔將卸載：** 如果希望確保事件到達伺服器，即使用戶從頁面導航出去，請檢查 **[!UICONTROL 將卸載文檔]** 複選框。 這允許事件到達伺服器，但忽略響應。
-- **呈現可視個性化決定：** 如果要在頁面上呈現個性化內容，請檢查 **[!UICONTROL 呈現可視個性化決定]** 複選框。 如有必要，還可以指定決策範圍和/或曲面。 查看 [個性化文檔](../personalization/rendering-personalization-content.md#automatically-rendering-content) 的子菜單。
+- **型別：** 此欄位可讓您指定將記錄在XDM結構描述中的事件型別。 請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 以取得預設事件型別的詳細資訊。
+- **資料：** 不符合XDM結構描述的資料可以使用此欄位傳送。 如果您嘗試更新Adobe Target設定檔或傳送Target Recommendations屬性，此欄位會很有用。 如需範例，請檢視我們的 [檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+- **資料集ID：** 如果您需要傳送資料至資料流中所指定資料集以外的資料集，可以在此處指定該資料集ID。
+- **檔案將解除安裝：** 如果您想要確保事件可到達伺服器，即使使用者導覽離開頁面，請檢查 **[!UICONTROL 檔案將解除安裝]** 核取方塊。 這可讓事件到達伺服器，但會忽略回應。
+- **呈現視覺化個人化決定：** 如果您想在頁面上呈現個人化內容，請檢查 **[!UICONTROL 呈現視覺化個人化決定]** 核取方塊。 您也可以視需要指定決定範圍和/或曲面。 請參閱 [個人化檔案](../personalization/rendering-personalization-content.md#automatically-rendering-content) 以取得個人化內容的詳細資訊。
 
 ## 設定同意 {#set-consent}
 
-在您收到用戶的同意後，必須使用「設定同意」操作類型將此同意傳達給Adobe Experience PlatformWeb SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。請參閱 [支援客戶同意首選項](../consent/supporting-consent.md)。 使用Adobe2.0版時，僅支援資料元素值。 您需要建立一個解析為同意對象的資料元素。
+在您收到使用者的同意後，必須使用「設定同意」動作型別將此同意傳達給Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。另請參閱 [支援客戶同意偏好設定](../consent/supporting-consent.md). 使用Adobe版本2.0時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
 
-在此操作中，還為您提供了一個可選欄位以包含身份映射，以便在收到同意後可以同步身份。 同步在同意配置為「待處理」或「出現」時非常有用，因為同意呼叫可能是第一個呼叫觸發。
+在此動作中，系統也會提供選填欄位，讓您加入「身分對應」，以便在收到同意後同步身分資料。 同意設為「待處理」或「退出」時，同步會很有用，因為同意呼叫可能是第一個要觸發的呼叫。
 
-## 重置事件合併ID {#reset-event-merge-id}
+## 重設事件合併ID {#reset-event-merge-id}
 
-如果要在頁面上重置事件合併ID，可以通過此操作進行重置。 要重置ID，請選擇要重置的合併ID，然後根據需要啟動操作。
+如果您想在頁面上重設事件合併ID，可以透過此動作來執行。 若要重設ID，請選取您要重設的合併ID，然後視需要觸發動作。
 
 ## (Beta)更新變數 {#update-variable}
 
 >[!IMPORTANT]
 >
->這是當前的測試版功能，可能會發生更改。 將來的版本可能包含中斷更改。
+>此為目前的Beta版功能，可能會有變動。 未來版本可能包含重大變更。
 
-使用此操作可以修改XDM對象作為事件的結果。 此操作旨在構建一個以後可以從 **[!UICONTROL 發送事件]** 操作，記錄事件XDM對象。
+使用此動作來修改作為事件結果的XDM物件。 此動作的目的是建立物件，以便稍後從 **[!UICONTROL 傳送事件]** 動作，記錄事件XDM物件。
 
-要使用此操作類型，必須已定義 [變數](data-element-types.md#variable) 資料元素。 選擇要修改的變數資料元素後，將出現一個編輯器，類似於 [XDM對象](data-element-types.md#xdm-object) 資料元素。
+若要使用此動作型別，您必須定義 [變數](data-element-types.md#variable) 資料元素。 選擇要修改的變數資料元素後，會出現一個編輯器，類似於的編輯器 [XDM物件](data-element-types.md#xdm-object) 資料元素。
 
 ![](./assets/update-variable.png)
 
-用於編輯器的XDM架構是在 [!UICONTROL 變數] 資料元素。 通過按一下左側樹中的一個屬性，然後修改右側的值，可以設定對象的一個或多個屬性。例如，在下面的螢幕快照中，productedBy屬性將設定為資料元素「由資料元素生成」。
+用於編輯器的XDM結構描述是在 [!UICONTROL 變數] 資料元素。 您可以按一下左方樹狀結構中的其中一個屬性，然後修改右方的值，來設定物件的一或多個屬性。例如，在下方的熒幕擷圖中，productedBy屬性會設定為資料元素「Producted by data element」。
 
 ![](./assets/update-variable-set-property.png)
 
-更新變數操作中的編輯器與XDM對象資料元素中的編輯器之間有一些差異。 首先，更新變數操作具有標有「xdm」的根級別項。 如果按一下此項，則可以指定用於設定整個對象的資料元素。 其次，更新變數操作具有用於從xdm對象中清除資料的複選框。 按一下左側的一個屬性，然後選中右側的複選框以清除該值。 這將在設定變數的任何值之前清除當前值。
+更新變數動作中的編輯器與XDM物件資料元素中的編輯器有一些差異。 首先，更新變數動作具有標示為「xdm」的根層級專案。 如果按一下此專案，您可以指定要用來設定整個物件的資料元素。 其次，更新變數動作有可清除xdm物件中資料的核取方塊。 按一下左側的其中一個屬性，然後核取右側的核取方塊以清除值。 在變數上設定任何值之前，這會清除目前的值。
 
 ## 後續步驟 {#next-steps}
 
-閱讀這篇文章後，您應該對如何配置操作有更好的瞭解。 接下來，閱讀有關 [配置資料元素類型](data-element-types.md)。
+閱讀本文章後，您應該更瞭解如何設定動作。 接下來，閱讀如何 [設定您的資料元素型別](data-element-types.md).

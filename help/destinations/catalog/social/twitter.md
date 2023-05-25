@@ -1,6 +1,6 @@
 ---
-title: Twitter自定義觀眾連接
-description: 瞄準您在Twitter的現有追隨者和客戶，並通過激活您在Adobe Experience Platform內構建的受眾來建立相關的再營銷活動
+title: twitter自訂對象連線
+description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用Adobe Experience Platform中建立的對象來建立相關的再行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
@@ -9,100 +9,100 @@ ht-degree: 4%
 
 ---
 
-# [!DNL Twitter Custom Audiences] 連接
+# [!DNL Twitter Custom Audiences] 連線
 
 ## 總覽 {#overview}
 
-瞄準您在Twitter的現有追隨者和客戶，並通過激活您在Adobe Experience Platform內構建的受眾來建立相關的再營銷活動。
+在Twitter中鎖定您現有的追隨者和客戶，並透過啟用Adobe Experience Platform中建立的對象來建立相關的再行銷活動。
 
 ## 先決條件 {#prerequisites}
 
-在配置之前 [!DNL Twitter Custom Audiences] 目標，確保查看您需要滿足的以下Twitter先決條件。
+設定前 [!DNL Twitter Custom Audiences] 目的地，請務必檢閱您需要符合的下列Twitter必要條件。
 
-1. 您 [!DNL Twitter Ads] 帳戶必須符合廣告資格。 新建 [!DNL Twitter Ads] 帳戶在建立後的頭2週內無資格進行廣告。
-2. 您授權訪問的Twitter用戶帳戶 [!DNL Twitter Audience Manager] 必須 *[!DNL Partner Audience Manager]* 權限已啟用。
+1. 您的 [!DNL Twitter Ads] 帳戶必須符合廣告資格。 新增 [!DNL Twitter Ads] 帳戶在建立後的前2週內不符合廣告資格。
+2. 您在中授權存取的Twitter使用者帳戶 [!DNL Twitter Audience Manager] 必須具有 *[!DNL Partner Audience Manager]* 許可權已啟用。
 
-## 支援的身份 {#supported-identities}
+## 支援的身分 {#supported-identities}
 
-[!DNL Twitter Custom Audiences] 支援激活下表中描述的身份。 瞭解有關 [身份](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)。
+[!DNL Twitter Custom Audiences] 支援下表所述的身分啟用。 進一步瞭解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-| 目標標識 | 說明 | 考量事項 |
+| 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| 設備id | IDFA/AdID/Android ID | Google廣告ID(GAID)和Apple廣告商IDFA(IDFA)在Adobe Experience Platform得到支援。 請相應地在中從源架構映射這些命名空間和/或屬性 [映射步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 目標激活工作流。 |
-| 電子郵件 | 用戶的電子郵件地址 | 請將純文字檔案電子郵件地址和SHA256散列的電子郵件地址映射到此欄位。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 如果您在將客戶電子郵件地址上傳到Adobe Experience Platform之前先對它們進行散列，請注意，這些標識必須使用SHA256進行散列，而不需要鹽。 |
+| device_id | IDFA/AdID/Android ID | Adobe Experience Platform支援廣告商Google Advertising ID (GAID)和Apple ID (IDFA)。 請對應來源結構描述中的這些名稱空間和/或屬性，位於 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 目的地啟用工作流程的URL。 |
+| 電子郵件 | 使用者的電子郵件地址 | 請將純文字電子郵件地址和SHA256雜湊電子郵件地址對應至此欄位。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 如果您將客戶電子郵件地址雜湊再上傳至Adobe Experience Platform，請注意，這些身分識別必須使用SHA256進行雜湊處理，不可使用。 |
 
 {style="table-layout:auto"}
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出型別和頻率 {#export-type-frequency}
 
-有關目標導出類型和頻率的資訊，請參閱下表。
+請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在導出段（受眾）的所有成員，其標識符在Twitter自定義受眾目標中使用。 |
-| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正使用Twitter自訂對象目的地中使用的識別碼匯出區段（對象）的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## 使用案例 {#use-cases}
 
-幫助您更好地瞭解您應如何以及何時使用 [!DNL Twitter Custom Audiences] 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
+為了協助您更清楚瞭解應該如何及何時使用 [!DNL Twitter Custom Audiences] 目的地，以下是Adobe Experience Platform客戶可以使用此目的地來解決的範例使用案例。
 
-### 用例#1
+### 使用案例#1
 
-瞄準您在Twitter的現有追隨者和客戶，並通過激活您在Adobe Experience Platform內構建的受眾，建立相關的再營銷活動 [!DNL List Custom Audiences] 在Twitter。
+在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再行銷活動，做為 [!DNL List Custom Audiences] 在Twitter中。
 
-## 連接到目標 {#connect}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 > 
->要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
+若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目標 {#authenticate}
+### 驗證至目的地 {#authenticate}
 
-1. 查找 [!DNL Twitter Custom Audiences] 目標目錄中的目標，然後選擇 **[!UICONTROL 設定]**。
-2. 選擇 **[!UICONTROL 連接到目標]**。
-   ![驗證到LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. 輸入您的Twitter憑據並選擇 **登錄**。
+1. 尋找 [!DNL Twitter Custom Audiences] 目的地目錄中的目的地，然後選取 **[!UICONTROL 設定]**.
+2. 選取 **[!UICONTROL 連線到目的地]**.
+   ![向LinkedIn進行驗證](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. 輸入您的Twitter認證，然後選取 **登入**.
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目的地詳細資料 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"
 >title="帳戶 ID"
 >abstract="您的 Twitter 廣告帳戶 ID。這可以在您的 Twitter 廣告設定中找到。"
 
-要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
 
-* **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
-* **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
-* **[!UICONTROL 帳戶ID]**:您 [!DNL Twitter Ads] 帳戶ID。 可以在 [!DNL Twitter Ads] 的子菜單。
+* **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
+* **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL 帳戶ID]**：您的 [!DNL Twitter Ads] 帳戶ID。 您可在以下網址找到此專案： [!DNL Twitter Ads] 設定。
 
-### 啟用警報 {#enable-alerts}
+### 啟用警示 {#enable-alerts}
 
-您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
 
-完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 將段激活到此目標 {#activate}
+## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 > 
->要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-閱讀 [激活配置檔案和段以流式處理段導出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
+讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
-## 資料使用和治理 {#data-usage-governance}
+## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)。
+全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，請參閱 [資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant).
 
 ## 其他資源 {#additional-resources}
 
-將受眾段映射到Twitter時，請確保滿足以下段命名要求：
+將受眾區段對應至Twitter時，請確定符合下列區段命名需求：
 
-1. 提供人可讀段映射名稱。 我們建議使用您用於Experience Platform段的相同名稱。
-2. 不要使用特殊字元(+ &amp;, % :;@ / = $)。 如果您的Experience Platform段名稱包含這些字元，請在將段映射到Twitter目標之前將其刪除。
+1. 提供人類看得懂的區段對應名稱。 建議您使用與Experience Platform區段相同的名稱。
+2. 請勿使用特殊字元(+ &amp; ， % ： ； @ / = ？ $)在區段和區段對應名稱中。 如果您的Experience Platform區段名稱包含這些字元，請在將區段對應至Twitter目的地之前移除這些字元。
 
-有關 [!DNL List Custom Audiences] 在Twitter [Twitter文檔](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html)。
+更多關於的資訊 [!DNL List Custom Audiences] 在Twitter中，您可以在下文中找到： [twitter檔案](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

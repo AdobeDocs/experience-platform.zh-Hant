@@ -1,6 +1,6 @@
 ---
-title: 資料Distiller概述
-description: 查詢服務資料與您的許可權限相關的資料Distiller使用限制摘要。
+title: 資料Distiller概觀
+description: 與您授權權益相關的查詢服務資料的Data Distiller使用限制摘要。
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# 資料Distiller概述
+# 資料Distiller概觀
 
-資料Distiller是一個包，包含來自Adobe Experience Platform的功能的子集。 使用「資料Distiller」，您可以通過在查詢服務中執行批處理查詢，為即時客戶配置檔案或分析用例執行接收後資料準備（如清理、整形和處理）。 您對資料Distiller的使用取決於您對基於平台的應用程式的權利。
+Data Distiller是一套產品，其中包括Adobe Experience Platform的部分功能。 使用Data Distiller，您可以透過在查詢服務中執行批次查詢，針對即時客戶設定檔或分析使用案例執行擷取後資料準備（例如清理、整形和操作）。 您對Data Distiller的使用取決於您對平台型應用程式的權益。
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## 護欄
 
-查看 [查詢服務護欄](../guardrails.md) 有關與授權權限相關的查詢服務資料的預設使用限制的文檔。
+請參閱 [查詢服務護欄](../guardrails.md) 有關與您的授權許可權相關之查詢服務資料預設使用限制的檔案。
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

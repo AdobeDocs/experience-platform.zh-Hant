@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；架構；架構；XDM；欄位；架構；架構；標識；資料類型；資料類型；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；身分；資料型別；資料型別；
 solution: Experience Platform
-title: 標識資料類型
-description: 此文檔概述了Identity XDM資料類型。
+title: 身分資料型別
+description: 本檔案提供身分XDM資料型別的概觀。
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
@@ -11,37 +11,37 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL 身份] 資料類型
+# [!UICONTROL 身分] 資料型別
 
-[!UICONTROL 身份] 是一種標準的XDM資料類型，用於清晰地區分與數字型驗交互的人。 標識由標識提供程式建立，它本身在 `namespace` 屬性。 每個 `namespace`，標識是唯一的。
+[!UICONTROL 身分] 是標準XDM資料型別，用來明確區分與數位體驗互動的人。 身分由身分提供者建立，其本身會在以下專案中參照： `namespace` 屬性。 在每個 `namespace`，此身分是唯一的。
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `namespace` | 物件 | 包含單個字串欄位(`code`)，指示與提供的 `id` 屬性。 |
-| `authenticatedState` | 字串 | 在觀察到的體驗事件時此標識的已驗證狀態。 查看 [附錄](#authenticatedState) 以獲取接受的值和定義。 |
-| `id` | 字串 | 相關命名空間中的使用者的標識。 |
-| `primary` | 布林值 | 指示這是否是個人的主要標識。 每個個人只能有一個主標識。 |
-| `xid` | 字串 | 當存在時，此值表示跨命名空間標識符，該標識符在所有命名空間中所有命名空間範圍內的標識符之間都是唯一的。 |
+| `namespace` | 物件 | 包含單一字串欄位(`code`)，表示與提供的相關聯的名稱空間 `id` 屬性。 |
+| `authenticatedState` | 字串 | 觀察到Experience事件時此身分的驗證狀態。 請參閱 [附錄](#authenticatedState) 以取得接受的值和定義。 |
+| `id` | 字串 | 消費者在相關名稱空間中的身分。 |
+| `primary` | 布林值 | 指出這是否為個人的主要身分。 每個個人只能有一個主要身分。 |
+| `xid` | 字串 | 當出現時，這個值代表跨名稱空間的識別碼，在所有名稱空間中都是唯一，也就是所有名稱空間中的範圍識別碼。 |
 
 {style="table-layout:auto"}
 
-有關資料類型的詳細資訊，請參閱公共XDM儲存庫：
+如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填充示例](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
+* [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
 
 ## 附錄
 
-以下部分包含有關 [!UICONTROL 身份] 資料類型。
+以下小節包含更多關於 [!UICONTROL 身分] 資料型別。
 
 ## authenticatedState的接受值 {#authenticatedState}
 
-下表概述了 `authenticatedState` 及其相關含義：
+下表概述下列專案的可接受值 `authenticatedState` 及其相關涵義：
 
 | 值 | 說明 |
 | --- | --- |
-| `ambiguous` | 已驗證狀態不明確。 |
-| `authenticated` | 用戶由在事件觀察時有效的登錄或類似操作標識。 |
-| `loggedOut` | 用戶在以前某個時間點由登錄操作標識，但在事件觀察時未登錄。 |
+| `ambiguous` | 驗證狀態不明確。 |
+| `authenticated` | 透過在事件觀察時有效的登入或類似動作來識別使用者。 |
+| `loggedOut` | 在先前某個時間點，使用者已由登入動作識別，但在事件觀察時未登入。 |

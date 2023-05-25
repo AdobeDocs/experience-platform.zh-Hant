@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；方塊；方形
-title: 使用流服務API建立方形基連接
-description: 瞭解如何使用流服務API將Square連接到Adobe Experience Platform。
+keywords: Experience Platform；首頁；熱門主題；方形；方形
+title: 使用Flow Service API建立方形基底連線
+description: 瞭解如何使用流量服務API將Square連線至Adobe Experience Platform。
 exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
@@ -10,45 +10,45 @@ ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Square] 基本連接使用 [!DNL Flow Service] API
+# 建立 [!DNL Square] 基礎連線使用 [!DNL Flow Service] API
 
-基連接表示源和Adobe Experience Platform之間經過驗證的連接。
+基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教程將指導您完成建立基本連接的步驟 [!DNL Square] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
+本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL Square] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門
 
-本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
+本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [源](../../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個平台實例分區到單獨的虛擬環境中，以幫助開發和發展數字型驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以協助開發及改進數位體驗應用程式。
 
-以下各節提供了要成功連接到所需的其他資訊 [!DNL Square] 使用 [!DNL Flow Service] API。
+以下小節提供成功連線所需瞭解的其他資訊 [!DNL Square] 使用 [!DNL Flow Service] API。
 
-### 收集所需憑據
+### 收集必要的認證
 
-為了 [!DNL Flow Service] 連接 [!DNL Square]，必須為以下連接屬性提供值：
+為了 [!DNL Flow Service] 以連線 [!DNL Square]，您必須提供下列連線屬性的值：
 
-| 憑據 | 說明 |
+| 認證 | 說明 |
 | --- | --- |
-| `host` | 的URL [!DNL Square] 實例。 |
-| `clientId` | 與您的 [!DNL Square] 帳戶。 |
-| `clientSecret` | 與您的 [!DNL Square] 帳戶。 |
-| `accessToken` | 訪問令牌用於驗證 [!DNL Square] OAuth 2.0身份驗證的帳戶。 可以從 [!DNL Square]。 |
-| `refreshToken` | 刷新令牌用於在當前訪問令牌過期後生成新訪問令牌。 可從中獲取刷新令牌 [!DNL Square]。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 連接規範ID [!DNL Square] 為： `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
+| `host` | 的URL [!DNL Square] 執行個體。 |
+| `clientId` | 與您的關聯的使用者端ID [!DNL Square] 帳戶。 |
+| `clientSecret` | 與您的關聯的使用者端密碼 [!DNL Square] 帳戶。 |
+| `accessToken` | 存取權杖會用於驗證您的 [!DNL Square] 具有OAuth 2.0驗證的帳戶。 存取權杖可以從 [!DNL Square]. |
+| `refreshToken` | 重新整理Token可在您目前的存取Token過期後，用來產生新的存取Token。 重新整理權杖可以從 [!DNL Square]. |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Square] 為： `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
 
-有關這些憑據以及如何獲取這些憑據的詳細資訊，請參見 [[!DNL Square] OAuth文檔](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens)。
+如需這些認證以及如何取得認證的詳細資訊，請參閱 [[!DNL Square] oauth上的檔案](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../../landing/api-guide.md).
 
-## 建立基本連接
+## 建立基礎連線
 
-基本連接將保留源和平台之間的資訊，包括源的驗證憑據、連接的當前狀態和唯一的基本連接ID。 基本連接ID允許您從源中瀏覽和導航檔案，並標識要攝取的特定項目，包括有關其資料類型和格式的資訊。
+基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基本連線ID可讓您瀏覽和瀏覽來源內的檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-要建立基本連接ID，請向 `/connections` 提供端點 [!DNL Square] 身份驗證憑據作為請求參數的一部分。
+POST若要建立基本連線ID，請向 `/connections` 端點，同時提供 [!DNL Square] 要求引數中的驗證認證。
 
 **API格式**
 
@@ -58,7 +58,7 @@ POST /connections
 
 **要求**
 
-以下請求為 [!DNL Square]:
+下列要求會建立 [!DNL Square]：
 
 ```shell
 curl -X POST \
@@ -90,16 +90,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `auth.params.host` | 的URL [!DNL Square] 實例。 |
-| `auth.params.clientId` | 與您的 [!DNL Square] 帳戶。 |
-| `auth.params.clientSecret` | 與您的 [!DNL Square] 帳戶。 |
-| `auth.params.accessToken` | 訪問令牌用於驗證 [!DNL Square] OAuth 2.0身份驗證的帳戶。 可以從 [!DNL Square]。 |
-| `auth.params.refreshToken` | 刷新令牌用於在當前訪問令牌過期後生成新訪問令牌。 可從中獲取刷新令牌 [!DNL Square]。 |
-| `connectionSpec.id` | 的 [!DNL Square] 連接規範ID: `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`。 |
+| `auth.params.host` | 的URL [!DNL Square] 執行個體。 |
+| `auth.params.clientId` | 與您的關聯的使用者端ID [!DNL Square] 帳戶。 |
+| `auth.params.clientSecret` | 與您的關聯的使用者端密碼 [!DNL Square] 帳戶。 |
+| `auth.params.accessToken` | 存取權杖會用於驗證您的 [!DNL Square] 具有OAuth 2.0驗證的帳戶。 存取權杖可以從 [!DNL Square]. |
+| `auth.params.refreshToken` | 重新整理Token可在您目前的存取Token過期後，用來產生新的存取Token。 重新整理權杖可以從 [!DNL Square]. |
+| `connectionSpec.id` | 此 [!DNL Square] 連線規格ID： `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
 
 **回應**
 
-成功的響應返回新建立的連接，包括其唯一連接標識符(`id`)。 在下一教程中瀏覽資料時需要此ID。
+成功回應會傳回新建立的連線，包括其唯一連線識別碼(`id`)。 在下一個教學課程中探索您的資料時，需要此ID。
 
 ```json
 {
@@ -110,4 +110,4 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您建立了 [!DNL Square] 使用 [!DNL Flow Service] API，並已獲取連接的唯一ID值。 在學習如何 [使用流服務API瀏覽付款應用程式](../../explore/payments.md)。
+依照本教學課程，您已建立 [!DNL Square] 使用下列專案的連線： [!DNL Flow Service] API且已取得連線的唯一ID值。 您可在下一個教學課程中使用此ID，瞭解如何 [使用流程服務API探索付款應用程式](../../explore/payments.md).

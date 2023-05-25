@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；架構；
+keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；結構描述；
 solution: Experience Platform
-title: 架構API終結點
-description: 可以使用Adobe Experience PlatformAPI中的「/schemas」端點以寫程式方式檢索、建立和更新架構，以便與平台中的映射器一起使用。
+title: 結構描述API端點
+description: 您可以在Adobe Experience Platform API中使用「/schemas」端點，以程式設計方式擷取、建立和更新方案，以便在Platform中與對應程式搭配使用。
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '611'
@@ -12,21 +12,21 @@ ht-degree: 4%
 
 
 
-# 架構終結點
+# 結構描述端點
 
-架構可與映射器一起使用，以確保您在Adobe Experience Platform攝取的資料與您要攝取的資料相匹配。 您可以使用 `/schemas` 終結點，以寫程式方式建立、列出和獲取自定義架構，以便與平台中的映射器一起使用。
+結構描述可與對應程式搭配使用，以確保您擷取到Adobe Experience Platform的資料與您想要擷取的資料相符。 您可以使用 `/schemas` 端點，以程式設計方式建立、列出和取得自訂結構描述，以便在Platform中搭配對應程式使用。
 
 >[!NOTE]
 >
->使用此終結點建立的架構專用於映射器和映射集。 要建立其他平台服務可訪問的架構，請閱讀 [架構註冊表開發人員指南](../../xdm/api/schemas.md)。
+>使用此端點建立的結構描述只會搭配對應程式和對應集使用。 若要建立其他平台服務可存取的結構描述，請參閱 [Schema Registry開發人員指南](../../xdm/api/schemas.md).
 
-## 獲取所有架構
+## 取得所有結構描述
 
-您可以通過向以下組織發出GET請求來檢索組織的所有可用映射器架構的清單： `/schemas` 端點。
+您可以透過向以下專案發出GET要求，擷取貴組織所有可用對應程式結構的清單： `/schemas` 端點。
 
 **API格式**
 
-的 `/schemas` 終結點支援多個查詢參數，以幫助您篩選結果。 雖然這些參數大多是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 但是，必須同時包括 `start` 和 `limit` 參數。 可以包括多個參數，用和符號分隔(`&`)。
+此 `/schemas` 端點支援數個查詢引數，可協助您篩選結果。 雖然這些引數大部分是選用的，但強烈建議使用它們來協助減少昂貴的額外負荷。 不過，您必須同時包含 `start` 和 `limit` 請求中的引數。 可包含多個引數，以&amp;符號(`&`)。
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -36,14 +36,14 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{LIMIT}` | **必填**. 指定返回的架構數。 |
-| `{START}` | **必填**. 指定結果頁的偏移。 要獲取結果的第一頁，請將值設定為 `start=0`。 |
-| `{NAME}` | 根據名稱篩選架構。 |
-| `{ORDER_BY}` | 對結果的順序進行排序。 支援的欄位為 `modifiedDate` 和 `createdDate`。 您可以用 `+` 或 `-` 按升序或降序排序。 |
+| `{LIMIT}` | **必填**. 指定傳回的結構描述數目。 |
+| `{START}` | **必填**. 指定結果頁面的位移。 若要取得結果的第一頁，請將值設為 `start=0`. |
+| `{NAME}` | 根據名稱篩選結構。 |
+| `{ORDER_BY}` | 排序結果的順序。 支援的欄位包括 `modifiedDate` 和 `createdDate`. 您可以在屬性前面加上 `+` 或 `-` 以分別依遞增或遞減順序排序。 |
 
 **要求**
 
-以下請求將檢索組織的最後兩個建立的方案。
+以下請求會擷取您組織最後兩個建立的結構描述。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
@@ -55,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **回應**
 
-以下響應返回HTTP狀態200，其中包含請求的架構的清單。
+以下回應會傳回HTTP狀態200及要求的結構描述清單。
 
 >[!NOTE]
 >
->以下響應已被截斷為空間。
+>下列回應已因空格而截斷。
 
 ```json
 {
@@ -132,17 +132,17 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 ## 建立方案
 
-您可以通過向Web站點發出POST請求來建立要驗證的架構 `/schemas` 端點。 建立架構有三種方法：發送 [JSON架構](https://json-schema.org/)、使用示例資料或引用現有XDM架構。
+您可以透過向以下發出POST請求，建立要驗證的結構描述： `/schemas` 端點。 建立結構描述的方法有三種：傳送 [JSON結構描述](https://json-schema.org/)，使用範例資料或參考現有XDM結構描述。
 
 ```http
 POST /schemas
 ```
 
-### 使用JSON架構
+### 使用JSON結構描述
 
 **要求**
 
-以下請求允許您通過發送 [JSON架構](https://json-schema.org/)。
+以下請求可讓您透過傳送 [JSON結構描述](https://json-schema.org/).
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -163,7 +163,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新建立之結構描述的相關資訊。
 
 ```json
 {
@@ -177,11 +177,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### 使用示例資料
+### 使用範例資料
 
 **要求**
 
-以下請求允許您使用先前上載的示例資料建立方案。
+下列請求可讓您使用先前上傳的範例資料建立結構描述。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -198,11 +198,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sampleId` | 基於的架構的示例資料的ID。 |
+| `sampleId` | 架構所依據的範例資料ID。 |
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新建立之結構描述的相關資訊。
 
 ```json
 {
@@ -242,11 +242,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### 參考XDM架構
+### 參考XDM結構描述
 
 **要求**
 
-以下請求允許您通過引用現有XDM架構來建立架構。
+以下請求可讓您參照現有的XDM結構描述來建立結構描述。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -267,17 +267,17 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `name` | 要建立的架構的名稱。 |
-| `schemaRef.id` | 您引用的架構的ID。 |
-| `schemaRef.contentType` | 確定引用架構的響應格式。 有關此欄位的詳細資訊，請參閱 [架構註冊表開發者指南](../../xdm/api/schemas.md#lookup) |
+| `name` | 您要建立的結構描述名稱。 |
+| `schemaRef.id` | 您參考的結構描述ID。 |
+| `schemaRef.contentType` | 決定參考之結構描述的回應格式。 如需此欄位的詳細資訊，請參閱 [結構描述登入開發人員指南](../../xdm/api/schemas.md#lookup) |
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新建立之結構描述的相關資訊。
 
 >[!NOTE]
 >
->以下響應已被截斷為空間。
+>下列回應已因空格而截斷。
 
 ```json
 {
@@ -292,9 +292,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-## 使用檔案上載建立架構
+## 使用檔案上傳建立結構描述
 
-可以通過上載JSON檔案來建立要從中轉換的架構。
+您可以上傳要轉換的JSON檔案來建立結構描述。
 
 **API格式**
 
@@ -304,7 +304,7 @@ POST /schemas/upload
 
 **要求**
 
-以下請求允許您從上載的JSON檔案建立架構。
+以下請求可讓您從上傳的JSON檔案建立結構描述。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
@@ -318,7 +318,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關新建立的架構的資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新建立之結構描述的相關資訊。
 
 ```json
 {
@@ -332,9 +332,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 }
 ```
 
-## 檢索特定架構
+## 擷取特定結構描述
 
-可通過向Web站點發出GET請求來檢索有關特定架構的資訊 `/schemas` 端點，並提供要在請求路徑中檢索的架構的ID。
+您可以透過向以下網址發出GET要求，擷取有關特定結構的資訊： `/schemas` 端點，並提供您要在請求路徑中擷取的結構描述ID。
 
 **API格式**
 
@@ -344,11 +344,11 @@ GET /schemas/{SCHEMA_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEMA_ID}` | 您正在查找的架構的ID。 |
+| `{SCHEMA_ID}` | 您要查詢的結構描述ID。 |
 
 **要求**
 
-以下請求檢索有關指定架構的資訊。
+下列要求會擷取指定之結構描述的相關資訊。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
@@ -360,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關指定架構的資訊。
+成功的回應會傳回HTTP狀態200，其中包含指定結構描述的相關資訊。
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
-title: 使用流服務API建立SalesforceMarketing Cloud基連接
-description: 瞭解如何使用流服務API對Experience Platform驗證SalesforceMarketing Cloud帳戶。
+title: 使用Flow Service API建立SalesforceMarketing Cloud基礎連線
+description: 瞭解如何使用流量服務API根據Experience Platform驗證您的SalesforceMarketing Cloud帳戶。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
 source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
 workflow-type: tm+mt
@@ -9,47 +9,47 @@ ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Salesforce Marketing Cloud] 基本連接使用 [!DNL Flow Service] API
+# 建立 [!DNL Salesforce Marketing Cloud] 基礎連線使用 [!DNL Flow Service] API
 
 >[!IMPORTANT]
 >
->當前不支援自定義對象攝取 [!DNL Salesforce Marketing Cloud] 源整合。
+>自訂物件擷取目前不支援 [!DNL Salesforce Marketing Cloud] 來源整合。
 
-基連接表示源和Adobe Experience Platform之間經過驗證的連接。
+基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教程將指導您完成建立基本連接的步驟 [!DNL Salesforce Marketing Cloud] 使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)。
+本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL Salesforce Marketing Cloud] 使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## 快速入門
 
-本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
+本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [源](../../../../home.md):Experience Platform允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
-* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../../landing/api-guide.md).
 
-以下部分提供了成功連接到所需的其他資訊 [!DNL Salesforce Marketing Cloud] 使用 [!DNL Flow Service] API。
+下節提供成功連線所需瞭解的其他資訊 [!DNL Salesforce Marketing Cloud] 使用 [!DNL Flow Service] API。
 
-### 收集所需憑據
+### 收集必要的認證
 
-為了 [!DNL Flow Service] 連接 [!DNL Salesforce Marketing Cloud]，必須提供以下連接屬性：
+為了 [!DNL Flow Service] 以連線 [!DNL Salesforce Marketing Cloud]，您必須提供下列連線屬性：
 
-| 憑據 | 說明 |
+| 認證 | 說明 |
 | ---------- | ----------- |
-| `host` | 應用程式的主機伺服器。 這通常是您的子域。 **注：** 輸入 `host` 值，只需指定子域，而不是整個URL。 例如，如果主機URL為 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`，則只需輸入 `acme-ab12c3d4e5fg6hijk7lmnop8qrst` 作為主機值。 |
-| `clientId` | 與您的 [!DNL Salesforce Marketing Cloud] 的子菜單。 |
-| `clientSecret` | 與您的 [!DNL Salesforce Marketing Cloud] 的子菜單。 |
-| `connectionSpec.id` | 連接規範返回源的連接器屬性，包括與建立基連接和源連接相關的驗證規範。 連接規範ID [!DNL Salesforce Marketing Cloud] 為： `ea1c2a08-b722-11eb-8529-0242ac130003`。 |
+| `host` | 應用程式的主機伺服器。 這通常是您的子網域。 **注意：** 輸入您的 `host` 值，您只需要指定子網域而不是整個URL。 例如，如果您的主機URL為 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`，則您只需輸入 `acme-ab12c3d4e5fg6hijk7lmnop8qrst` 作為您的主機值。 |
+| `clientId` | 與您的關聯的使用者端ID [!DNL Salesforce Marketing Cloud] 應用程式。 |
+| `clientSecret` | 與您的關聯的使用者端密碼 [!DNL Salesforce Marketing Cloud] 應用程式。 |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Salesforce Marketing Cloud] 為： `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
-有關入門的詳細資訊，請參閱此 [[!DNL Salesforce Marketing Cloud] 文檔](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>)。
+如需入門的詳細資訊，請參閱此 [[!DNL Salesforce Marketing Cloud] 檔案](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
-## 建立基本連接
+## 建立基礎連線
 
-基本連接將保留源和平台之間的資訊，包括源的驗證憑據、連接的當前狀態和唯一的基本連接ID。 基本連接ID允許您從源中瀏覽和導航檔案，並標識要攝取的特定項目，包括有關其資料類型和格式的資訊。
+基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基本連線ID可讓您瀏覽和瀏覽來源內的檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-要建立基本連接ID，請向 `/connections` 提供端點 [!DNL Salesforce Marketing Cloud] 身份驗證憑據作為請求正文的一部分。
+POST若要建立基本連線ID，請向 `/connections` 端點，同時提供 [!DNL Salesforce Marketing Cloud] 要求內文中的驗證認證。
 
 **API格式**
 
@@ -59,7 +59,7 @@ POST /connections
 
 **要求**
 
-以下請求為 [!DNL Salesforce Marketing Cloud]:
+下列要求會建立 [!DNL Salesforce Marketing Cloud]：
 
 ```shell
 curl -X POST \
@@ -89,13 +89,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.clientId` | 與您的 [!DNL Salesforce Marketing Cloud] 的子菜單。 |
-| `auth.params.clientSecret` | 與您的 [!DNL Salesforce Marketing Cloud] 的子菜單。 |
-| `connectionSpec.id` | 的 [!DNL Salesforce Marketing Cloud] 連接規範ID: `ea1c2a08-b722-11eb-8529-0242ac130003`。 |
+| `auth.params.clientId` | 與您的關聯的使用者端ID [!DNL Salesforce Marketing Cloud] 應用程式。 |
+| `auth.params.clientSecret` | 與您的關聯的使用者端密碼 [!DNL Salesforce Marketing Cloud] 應用程式。 |
+| `connectionSpec.id` | 此 [!DNL Salesforce Marketing Cloud] 連線規格ID： `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **回應**
 
-成功的響應返回新建立的連接，包括其唯一連接標識符(`id`)。 在下一教程中瀏覽資料時需要此ID。
+成功回應會傳回新建立的連線，包括其唯一連線識別碼(`id`)。 在下一個教學課程中探索您的資料時，需要此ID。
 
 ```json
 {
@@ -106,7 +106,7 @@ curl -X POST \
 
 ## 後續步驟
 
-按照本教程，您建立了 [!DNL Salesforce Marketing Cloud] 基本連接使用 [!DNL Flow Service] API。 您可以在以下教程中使用此基本連接ID:
+依照本教學課程，您已建立 [!DNL Salesforce Marketing Cloud] 基礎連線使用 [!DNL Flow Service] API。 您可以在下列教學課程中使用此基本連線ID：
 
-* [使用 [!DNL Flow Service] API](../../explore/tabular.md)
-* [建立資料流，使用 [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [使用探索資料表格的結構和內容 [!DNL Flow Service] API](../../explore/tabular.md)
+* [建立資料流，以使用將行銷自動化資料帶入Platform [!DNL Flow Service] API](../../collect/marketing-automation.md)

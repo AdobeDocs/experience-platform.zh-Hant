@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；開發人員指南；SDK；資料存取SDK；資料科學工作區；熱門主題
 solution: Experience Platform
-title: 使用Adobe Experience Platform平台SDK進行模型創作
-description: 本教程提供了有關將data_access_sdk_python轉換為Python和R中的新Python平台_sdk的資訊。
+title: 使用Adobe Experience Platform Platform SDK製作模型
+description: 本教學課程提供在Python和R中將data_access_sdk_python轉換為新Python平台_sdk的相關資訊。
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -11,27 +11,27 @@ ht-degree: 5%
 
 ---
 
-# 使用Adobe Experience Platform [!DNL Platform] SDK
+# 使用Adobe Experience Platform製作模型 [!DNL Platform] SDK
 
-本教程提供了有關轉換的資訊 `data_access_sdk_python` 新蟒蛇隊 `platform_sdk` 在Python和R本教程提供了以下操作的資訊：
+本教學課程提供有關轉換的資訊 `data_access_sdk_python` 到新Python `platform_sdk` Python和R.本教學課程提供有關下列操作的資訊：
 
-- [生成身份驗證](#build-authentication)
-- [資料的基本讀取](#basic-reading-of-data)
+- [建置驗證](#build-authentication)
+- [基本資料讀取](#basic-reading-of-data)
 - [基本資料寫入](#basic-writing-of-data)
 
-## 生成身份驗證 {#build-authentication}
+## 建置驗證 {#build-authentication}
 
-調用時需要身份驗證 [!DNL Adobe Experience Platform]，由API密鑰、組織ID、用戶令牌和服務令牌組成。
+需要驗證才能呼叫 [!DNL Adobe Experience Platform]、和由API金鑰、組織ID、使用者權杖和服務權杖組成。
 
-### 蟒
+### Python
 
-如果您使用的是Jupyter筆記本，請使用以下代碼生成 `client_context`:
+如果您使用Jupyter Notebook，請使用下列程式碼來建置 `client_context`：
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-如果您未使用Jupyter筆記本或需要更改組織，請使用以下代碼示例：
+如果您未使用Jupyter Notebook或需要變更組織，請使用下列程式碼範例：
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -43,7 +43,7 @@ client_context = ClientContext(api_key={API_KEY},
 
 ### R
 
-如果您使用的是Jupyter筆記本，請使用以下代碼生成 `client_context`:
+如果您使用Jupyter Notebook，請使用下列程式碼來建置 `client_context`：
 
 ```r
 library(reticulate)
@@ -54,7 +54,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-如果您未使用Jupyter筆記本或需要更改組織，請使用以下代碼示例：
+如果您未使用Jupyter Notebook或需要變更組織，請使用下列程式碼範例：
 
 ```r
 library(reticulate)
@@ -66,24 +66,24 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## 資料的基本讀取 {#basic-reading-of-data}
+## 基本資料讀取 {#basic-reading-of-data}
 
-新 [!DNL Platform] SDK，最大讀取大小為32 GB，最大讀取時間為10分鐘。
+使用新的 [!DNL Platform] SDK的讀取大小上限為32 GB，讀取時間上限為10分鐘。
 
-如果您的讀取時間太長，可以嘗試使用以下篩選選項之一：
+如果您的讀取時間太長，可以嘗試使用下列其中一個篩選選項：
 
-- [按偏移和限制篩選資料](#filter-by-offset-and-limit)
-- [按日期篩選資料](#filter-by-date)
-- [按列篩選資料](#filter-by-selected-columns)
-- [獲取排序結果](#get-sorted-results)
+- [依位移和限制篩選資料](#filter-by-offset-and-limit)
+- [依日期篩選資料](#filter-by-date)
+- [依欄篩選資料](#filter-by-selected-columns)
+- [取得排序的結果](#get-sorted-results)
 
 >[!NOTE]
 >
->組織設定在 `client_context`。
+>組織是在 `client_context`.
 
-### 蟒
+### Python
 
-要在Python中讀取資料，請使用以下代碼示例：
+若要以Python讀取資料，請使用下列程式碼範例：
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -94,7 +94,7 @@ df.head()
 
 ### R
 
-要讀取R中的資料，請使用以下代碼示例：
+若要在R中讀取資料，請使用下列程式碼範例：
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -103,11 +103,11 @@ df <- dataset_reader$read()
 df
 ```
 
-## 按偏移和限制篩選 {#filter-by-offset-and-limit}
+## 依位移和限制篩選 {#filter-by-offset-and-limit}
 
-由於不再支援按批ID篩選，因此，為了確定資料讀取的範圍，您需要使用 `offset` 和 `limit`。
+由於不再支援依批次ID篩選，若要設定資料讀取的範圍，您需要使用 `offset` 和 `limit`.
 
-### 蟒
+### Python
 
 ```python
 df = dataset_reader.limit(100).offset(1).read()
@@ -121,11 +121,11 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## 按日期篩選 {#filter-by-date}
+## 依日期篩選 {#filter-by-date}
 
-日期篩選的粒度現在由時間戳定義，而不是按日設定。
+日期篩選的詳細程度現在由時間戳記定義，而不是由日期設定。
 
-### 蟒
+### Python
 
 ```python
 df = dataset_reader.where(\
@@ -145,7 +145,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-新 [!DNL Platform] SDK支援以下操作：
+新 [!DNL Platform] SDK支援下列作業：
 
 | 操作 | 函數 |
 | --------- | -------- |
@@ -157,11 +157,11 @@ df2
 | 和(`&`) | `And()` |
 | 或 (`|`) | `Or()` |
 
-## 按選定列篩選 {#filter-by-selected-columns}
+## 依選取的欄篩選 {#filter-by-selected-columns}
 
-要進一步細化資料讀取，還可以按列名進行篩選。
+若要進一步縮小資料的讀取範圍，您也可以依欄名稱篩選。
 
-### 蟒
+### Python
 
 ```python
 df = dataset_reader.select(['column-a','column-b']).read()
@@ -173,13 +173,13 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## 獲取排序結果 {#get-sorted-results}
+## 取得排序的結果 {#get-sorted-results}
 
-接收的結果可以按目標資料集的指定列和它們的順序(asc/desc)分別排序。
+收到的結果可分別依照目標資料集的指定欄位及其順序(asc/desc)排序。
 
-在以下示例中，資料幀首先按&quot;column-a&quot;的升序排序。 對於&quot;column-a&quot;具有相同值的行按&quot;column-b&quot;按降序排序。
+在以下範例中，資料流會先以「column-a」遞增順序排序。 之後，「column-a」具有相同值的列會依「column-b」以遞減順序排序。
 
-### 蟒
+### Python
 
 ```python
 df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
@@ -195,11 +195,11 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->組織設定在 `client_context`。
+>組織是在 `client_context`.
 
-要在Python和R中寫入資料，請使用以下示例之一：
+若要以Python和R撰寫資料，請使用下列範例之一：
 
-### 蟒
+### Python
 
 ```python
 from platform_sdk.models import Dataset
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 後續步驟
 
-配置 `platform_sdk` 資料載入器，資料經過準備，然後被拆分到 `train` 和 `val` 資料集。 要瞭解資料準備和功能工程，請訪問 [資料準備與特徵工程](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) 在教程中使用 [!DNL JupyterLab] 筆記本。
+一旦您設定 `platform_sdk` 資料載入器會準備資料，然後分割至 `train` 和 `val` 資料集。 若要瞭解資料準備和功能工程，請造訪以下區段： [資料準備和功能工程](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) 在教學課程中，瞭解如何使用建立配方 [!DNL JupyterLab] 筆記本。

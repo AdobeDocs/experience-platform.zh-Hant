@@ -1,6 +1,6 @@
 ---
-title: 廣告詳細資訊架構欄位組
-description: 此文檔提供「廣告詳細資訊」架構欄位組的概述。
+title: 廣告詳細資料結構欄位群組
+description: 本檔案提供「廣告詳細資料」結構欄位群組的概觀。
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
@@ -9,42 +9,42 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL 廣告詳細資訊] 架構欄位組
+# [!UICONTROL 廣告詳細資料] 結構描述欄位群組
 
-[!UICONTROL 廣告詳細資訊] 是標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md)。 欄位組提供單個 `advertising` 對象到架構，該架構捕獲與廣告印象、點擊和屬性相關的資訊。
+[!UICONTROL 廣告詳細資料] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 欄位群組提供單一 `advertising` 物件放入結構描述，擷取與廣告曝光、點進和歸因相關的資訊。
 
-![欄位組結構](../../images/field-groups/advertising-details/structure.png)
+![欄位群組結構](../../images/field-groups/advertising-details/structure.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `adAssetReference` | 物件 | 捕獲有關廣告的資產資訊。 查看 [下文](#adAssetReference) 的子菜單。 |
-| `adAssetViewDetails` | 物件 | 捕獲廣告播放的視圖詳細資訊。 查看 [下文](#adAssetViewDetails) 的子菜單。 |
-| `adViewability` | 物件 | 捕獲最終用戶所看到的印象數，如播放器卷、庫版本、窗口狀態和廣告視區尺寸。 查看 [下文](#adViewability) 的子菜單。 |
-| `clicks` | [[!UICONTROL 度量]](../../data-types/measure.md) | 播發上的按一下操作數。 |
-| `completes` | [[!UICONTROL 度量]](../../data-types/measure.md) | 已定時媒體資產被監視完成的次數。 這並不一定意味著最終用戶在觀看整個視頻時會跳過。 |
-| `conversions` | [[!UICONTROL 度量]](../../data-types/measure.md) | 預定義操作（或操作）觸發用於效能評估的事件的次數。 |
-| `federated` | [[!UICONTROL 度量]](../../data-types/measure.md) | 指示是否通過資料聯合建立體驗事件，如客戶之間的資料共用。 |
-| `firstQuartiles` | [[!UICONTROL 度量]](../../data-types/measure.md) | 數字視頻廣告以正常速度播放其25%持續時間的次數。 |
-| `impressions` | [[!UICONTROL 度量]](../../data-types/measure.md) | 發送給具有被查看可能性的最終用戶的廣告印象數。 |
-| `midpoints` | [[!UICONTROL 度量]](../../data-types/measure.md) | 數字視頻廣告以正常速度播放其持續時間50%的次數。 |
-| `starts` | [[!UICONTROL 度量]](../../data-types/measure.md) | 數字視頻廣告開始播放的次數。 |
-| `thirdQuartiles` | [[!UICONTROL 度量]](../../data-types/measure.md) | 數字視頻廣告以正常速度播放其持續時間75%的次數。 |
-| `timePlayed` | [[!UICONTROL 度量]](../../data-types/measure.md) | 最終用戶在特定定時介質資產上花費的時間。 |
-| `downloadedPlayback` | 布林值 | 設定為時 `true`，表示由於播放下載的廣告會話而生成命中。 |
+| `adAssetReference` | 物件 | 擷取有關廣告的資產資訊。 請參閱 [下方的子區段](#adAssetReference) 以取得此物件結構的詳細資訊。 |
+| `adAssetViewDetails` | 物件 | 擷取廣告播放的檢視詳細資料。 請參閱 [下方的子區段](#adAssetViewDetails) 以取得此物件結構的詳細資訊。 |
+| `adViewability` | 物件 | 擷取一般使用者看到的曝光次數，例如播放器音量、資料庫版本、視窗狀態和廣告檢視區維度。 請參閱 [下方的子區段](#adViewability) 以取得此物件結構的詳細資訊。 |
+| `clicks` | [[!UICONTROL 測量]](../../data-types/measure.md) | 廣告上的點按動作次數。 |
+| `completes` | [[!UICONTROL 測量]](../../data-types/measure.md) | 定時媒體資產觀看至完成的次數。 這並不一定表示使用者看完整段影片，因為他們可能略過前面。 |
+| `conversions` | [[!UICONTROL 測量]](../../data-types/measure.md) | 預先定義的動作（或動作）觸發效能評估事件的次數。 |
+| `federated` | [[!UICONTROL 測量]](../../data-types/measure.md) | 指出體驗事件是否透過資料同盟（例如客戶之間的資料共用）建立。 |
+| `firstQuartiles` | [[!UICONTROL 測量]](../../data-types/measure.md) | 數位影片廣告以正常速度播放其長度的25%的次數。 |
+| `impressions` | [[!UICONTROL 測量]](../../data-types/measure.md) | 傳送給可能檢視的一般使用者的廣告曝光次數。 |
+| `midpoints` | [[!UICONTROL 測量]](../../data-types/measure.md) | 數位影片廣告以正常速度播放其長度的50%的次數。 |
+| `starts` | [[!UICONTROL 測量]](../../data-types/measure.md) | 數位視訊廣告開始播放的次數。 |
+| `thirdQuartiles` | [[!UICONTROL 測量]](../../data-types/measure.md) | 數位影片廣告以正常速度播放其長度的75%的次數。 |
+| `timePlayed` | [[!UICONTROL 測量]](../../data-types/measure.md) | 一般使用者在特定的定時媒體資產上所花費的時間。 |
+| `downloadedPlayback` | 布林值 | 當設定為 `true`，表示點選是由於播放已下載的廣告工作階段所產生。 |
 
 {style="table-layout:auto"}
 
 ## `adAssetReference` {#adAssetReference}
 
-的 `adAssetReference` object捕獲有關廣告的資產資訊。
+此 `adAssetReference` 物件會擷取與廣告相關的資產資訊。
 
 ![adAssetReference結構](../../images/field-groups/advertising-details/adAssetReference.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `_dc.title` | 字串 | 廣告資產的友好、可讀的名稱。 |
-| `_xmpDM.duration` | 整數 | 資產的長度或持續時間（以秒為單位）。 |
-| `_id` | 字串 | 廣告資產的唯一標識符，與 [廣告ID標準](https://datatracker.ietf.org/doc/html/rfc8107)。 |
+| `_dc.title` | 字串 | 易記且易讀的廣告資產名稱。 |
+| `_xmpDM.duration` | 整數 | 資產長度或持續時間（以秒為單位）。 |
+| `_id` | 字串 | 廣告資產的唯一識別碼，位於 [Ad-ID標準](https://datatracker.ietf.org/doc/html/rfc8107). |
 | `advertiser` | 字串 | 廣告中精選產品的公司或品牌. |
 | `campaign` | 字串 | 廣告促銷活動 ID. |
 | `creativeID` | 字串 | 廣告創意 ID. |
@@ -56,48 +56,48 @@ ht-degree: 8%
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
-的 `adAssetViewDetails` 對象捕獲廣告播放的視圖詳細資訊。
+此 `adAssetViewDetails` 物件會擷取廣告播放的檢視詳細資料。
 
 ![adAssetViewDetails結構](../../images/field-groups/advertising-details/adAssetViewDetails.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `adBreak` | [[!UICONTROL 廣告分段]](../../data-types/ad-break.md) | 描述如何將定時廣告插入到定時媒體中。 |
-| `index` | 整數 | 父廣告分段內廣告的索引。 例如，第一個廣告具有索引 `0` 第二個廣告有索引 `1`。 |
+| `adBreak` | [[!UICONTROL 廣告插播]](../../data-types/ad-break.md) | 說明如何將計時廣告插入計時媒體。 |
+| `index` | 整數 | 上層廣告插播內的廣告索引。 例如，第一個廣告有索引 `0` 而第二個廣告則有索引 `1`. |
 | `playerName` | 字串 | 負責轉譯廣告之播放器的名稱. |
 
 {style="table-layout:auto"}
 
 ## `adViewability` {#adViewability}
 
-的 `adViewability` object可捕獲最終用戶看到的印象數，如播放器卷、庫版本、窗口狀態和廣告視區尺寸。
+此 `adViewability` object會擷取一般使用者看到的曝光次數，例如播放器音量、資料庫版本、視窗狀態和廣告檢視區維度。
 
-![可視性結構](../../images/field-groups/advertising-details/adViewability.png)
+![adViewability結構](../../images/field-groups/advertising-details/adViewability.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `implementationDetails` | [[!UICONTROL 實作詳細資料]](../../data-types/implementation-details.md) | 用於度量可查看性度量的庫的名稱和版本。 |
-| `measuredAdNotVisible` | [[!UICONTROL 度量]](../../data-types/measure.md) | 指示廣告在印象時間由可查看性庫測量時不可見。 |
-| `measuredMuted` | [[!UICONTROL 度量]](../../data-types/measure.md) | 指示廣告在印象時間由可查看性庫測量而靜音。 |
-| `unmeasurableIframe` | [[!UICONTROL 度量]](../../data-types/measure.md) | 指示廣告顯示在非活動窗口中，該窗口由印象時間的可視性庫測量。 |
-| `unmeasurableOther` | [[!UICONTROL 度量]](../../data-types/measure.md) | 指示可查看性庫無法正確執行測量，因為在iframe內顯示廣告。 |
-| `viewabilityEligibleImpressions` | [[!UICONTROL 度量]](../../data-types/measure.md) | 利用可查看性庫對最終用戶進行指示的廣告印象。 |
-| `viewabilityCompletes` | [[!UICONTROL 度量]](../../data-types/measure.md) | 在完成時被可視性庫視為可視的最終用戶完成廣告。 |
-| `viewableFirstQuartiles` | [[!UICONTROL 度量]](../../data-types/measure.md) | 在可視性庫播放的第一四分位中，將廣告的第一四分位發送給被認為可觀看的終端用戶。 |
-| `viewableImpressions` | [[!UICONTROL 度量]](../../data-types/measure.md) | 在可觀看性庫播放兩秒後，向被認為可觀看的最終用戶展示廣告的印象。 |
-| `viewableMidpoints` | [[!UICONTROL 度量]](../../data-types/measure.md) | 在可觀看性庫播放的中點處被認為可觀看的廣告給最終用戶的中點。 |
-| `viewableThirdQuartiles` | [[!UICONTROL 度量]](../../data-types/measure.md) | 廣告的第三四分位給被可視性庫認為在播放的第三四分位上可視的最終用戶。 |
-| `activeWindow` | 布林值 | 指示廣告是否顯示在用戶設備的活動窗口中。 |
-| `adHeight` | 整數 | 在運行時測量的播放器的垂直像素數。 如果播放器具有額外的控制項或縮略圖，則此大小可能大於廣告的大小。 |
-| `adUnitDepth` | 整數 | 發佈者可以在容器(iFrames)內嵌入廣告單元，以限制廣告僅訪問頁面代碼。 此值描述廣告單元在中顯示的容器數。 |
-| `adWidth` | 整數 | 在運行時測量的播放器的水準像素數。 如果播放器具有額外的控制項或縮略圖，則此大小可能大於廣告的大小。 |
-| `measurementEligible` | 布林值 | 廣告是否符合可查看性度量條件。 如果單元具有支援的創作格式和標籤類型，則廣告符合條件。 |
-| `percentViewable` | 整數 | 廣告中在測量時被視為可查看的像素百分比。 |
-| `playerVolume` | 整數 | 運行時測量的播放器音量百分比，其中 `0` 靜音， `100` 是最大卷。 |
-| `viewable` | 布林值 | 指示在運行時是否可查看廣告。 當至少50%的廣告在至少一秒內可見時，顯示廣告被視為可視。 當視頻連續播放至少兩秒時，至少50%的廣告可見時，視頻廣告被視為可視。 |
-| `viewportHeight` | 整數 | 運行時在內部測量的顯示體驗的窗口的垂直大小（像素）。 對於Web視圖事件，此值指示瀏覽器視區高度。 |
-| `viewportWidth` | 整數 | 運行時在內部測量的顯示體驗的窗口水準大小（以像素為單位）。 對於Web視圖事件，此值表示瀏覽器視圖寬度。 |
+| `implementationDetails` | [[!UICONTROL 實作詳細資料]](../../data-types/implementation-details.md) | 用於測量可見度量度的資料庫名稱和版本。 |
+| `measuredAdNotVisible` | [[!UICONTROL 測量]](../../data-types/measure.md) | 表示在曝光時由可檢視度資料庫測量出的廣告不可見。 |
+| `measuredMuted` | [[!UICONTROL 測量]](../../data-types/measure.md) | 表示廣告在曝光時由可檢視度資料庫測量為靜音。 |
+| `unmeasurableIframe` | [[!UICONTROL 測量]](../../data-types/measure.md) | 表示廣告會顯示在非使用中視窗中，由閱聽時間的可檢視度資料庫測量。 |
+| `unmeasurableOther` | [[!UICONTROL 測量]](../../data-types/measure.md) | 指出由於iframe內所顯示的廣告，可檢視度資料庫無法正確執行測量。 |
+| `viewabilityEligibleImpressions` | [[!UICONTROL 測量]](../../data-types/measure.md) | 使用者透過檢測的可檢視度資料庫對廣告的閱聽。 |
+| `viewabilityCompletes` | [[!UICONTROL 測量]](../../data-types/measure.md) | 對於被視為可檢視的一般使用者在可檢視度資料庫完成時的廣告完成度。 |
+| `viewableFirstQuartiles` | [[!UICONTROL 測量]](../../data-types/measure.md) | 對於被視為可檢視的一般使用者在可檢視度資料庫播放至第一個四分位時的第一四分位廣告。 |
+| `viewableImpressions` | [[!UICONTROL 測量]](../../data-types/measure.md) | 對於被視為可檢視的一般使用者在可檢視度資料庫播放兩秒後對廣告的閱聽。 |
+| `viewableMidpoints` | [[!UICONTROL 測量]](../../data-types/measure.md) | 對於被視為可檢視的一般使用者在可檢視度資料庫播放至中點時的廣告中點。 |
+| `viewableThirdQuartiles` | [[!UICONTROL 測量]](../../data-types/measure.md) | 對於被視為可檢視的一般使用者在可檢視度資料庫播放至第三個四分位時的第三四分位廣告。 |
+| `activeWindow` | 布林值 | 指出廣告是否顯示在使用者裝置的作用中視窗。 |
+| `adHeight` | 整數 | 播放器的垂直畫素數（在執行階段測量）。 如果播放器有額外控制或縮圖，這可能會大於廣告大小。 |
+| `adUnitDepth` | 整數 | 發佈者可將廣告單位內嵌於容器(iFrames)中，以限制廣告僅能存取頁面程式碼。 此值說明廣告單位顯示在多少個容器內。 |
+| `adWidth` | 整數 | 播放器的水準畫素數（在執行階段測量）。 如果播放器有額外控制或縮圖，這可能會大於廣告大小。 |
+| `measurementEligible` | 布林值 | 廣告是否符合可檢視度測量的資格。 如果單位有受支援的創意格式和標籤型別，廣告即符合資格。 |
+| `percentViewable` | 整數 | 測量時被視為可檢視的廣告中的畫素百分比。 |
+| `playerVolume` | 整數 | 播放器音量百分比（在執行階段測量），其中 `0` 已設為靜音且 `100` 是最大磁碟區。 |
+| `viewable` | 布林值 | 表示在執行階段是否可檢視廣告。 當顯示廣告的至少50%可見至少一秒時，顯示廣告會被視為可檢視。 當視訊播放至少連續兩秒並看到至少50%的廣告時，視訊廣告會被視為可檢視。 |
+| `viewportHeight` | 整數 | 在執行階段測量顯示體驗的視窗垂直大小（畫素）。 若為網頁檢視事件，此值表示瀏覽器檢視區高度。 |
+| `viewportWidth` | 整數 | 在執行階段測量顯示體驗的視窗水準大小（畫素）。 若為網頁檢視事件，此值表示瀏覽器檢視區寬度。 |
 
 {style="table-layout:auto"}
 
-有關欄位組的詳細資訊，請參閱 [公共XDM儲存庫](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json)。
+如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

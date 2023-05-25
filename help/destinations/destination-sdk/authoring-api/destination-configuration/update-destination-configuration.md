@@ -1,6 +1,6 @@
 ---
-description: 本頁說明了用於通過Adobe Experience Platform Destination SDK更新現有目標配置的API調用。
-title: 更新目標配置
+description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新現有目的地設定的API呼叫的範例。
+title: 更新目的地設定
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '369'
@@ -9,46 +9,46 @@ ht-degree: 1%
 ---
 
 
-# 更新目標配置
+# 更新目的地設定
 
-本頁說明了可用於更新現有目標配置的API請求和負載 `/authoring/destinations` API終結點。
+此頁面以範例說明可用來更新現有目的地設定的API請求和裝載，使用 `/authoring/destinations` api端點。
 
 >[!TIP]
 >
->只有在使用 [發佈API](../../publishing-api/create-publishing-request.md) 並提交更新以供Adobe審閱。
+>生產/公開目的地上的任何更新操作只有在您使用 [發佈API](../../publishing-api/create-publishing-request.md) 並提交更新以供Adobe檢閱。
 
-有關目標配置功能的詳細說明，請閱讀以下文章：
+如需目的地設定的功能詳細說明，請閱讀以下文章：
 
-* [客戶身份驗證配置](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2身份驗證](../../functionality/destination-configuration/oauth2-authentication.md)
+* [客戶驗證設定](../../functionality/destination-configuration/customer-authentication.md)
+* [OAuth2驗證](../../functionality/destination-configuration/oauth2-authentication.md)
 * [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI屬性](../../functionality/destination-configuration/ui-attributes.md)
-* [架構配置](../../functionality/destination-configuration/schema-configuration.md)
-* [標識命名空間配置](../../functionality/destination-configuration/identity-namespace-configuration.md)
-* [目標傳遞](../../functionality/destination-configuration/destination-delivery.md)
-* [受眾元資料配置](../../functionality/destination-configuration/audience-metadata-configuration.md)
-* [受眾元資料配置](../../functionality/destination-configuration/audience-metadata-configuration.md)
-* [聚合策略](../../functionality/destination-configuration/aggregation-policy.md)
-* [批配置](../../functionality/destination-configuration/batch-configuration.md)
-* [歷史配置檔案資格](../../functionality/destination-configuration/historical-profile-qualifications.md)
+* [結構描述設定](../../functionality/destination-configuration/schema-configuration.md)
+* [身分名稱空間設定](../../functionality/destination-configuration/identity-namespace-configuration.md)
+* [目的地傳遞](../../functionality/destination-configuration/destination-delivery.md)
+* [對象中繼資料設定](../../functionality/destination-configuration/audience-metadata-configuration.md)
+* [對象中繼資料設定](../../functionality/destination-configuration/audience-metadata-configuration.md)
+* [彙總原則](../../functionality/destination-configuration/aggregation-policy.md)
+* [批次設定](../../functionality/destination-configuration/batch-configuration.md)
+* [歷史設定檔資格](../../functionality/destination-configuration/historical-profile-qualifications.md)
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
+>Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
 
-## 目標配置API操作入門 {#get-started}
+## 目的地設定API操作快速入門 {#get-started}
 
-在繼續之前，請查看 [入門指南](../../getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
-## 更新目標配置 {#update}
+## 更新目的地設定 {#update}
 
-您可以更新 [現有](create-destination-configuration.md) 通過建立 `PUT` 請求 `/authoring/destinations` 帶有更新負載的端點。
+您可以更新 [現有](create-destination-configuration.md) 目的地設定，透過設定 `PUT` 向以下專案提出的請求： `/authoring/destinations` 具有已更新裝載的端點。
 
 >[!TIP]
 >
->API終結點： `platform.adobe.io/data/core/activation/authoring/destinations`
+>API端點： `platform.adobe.io/data/core/activation/authoring/destinations`
 
-獲取現有目標配置及其相應的 `{INSTANCE_ID}`，請參閱有關 [檢索目標配置](retrieve-destination-configuration.md)。
+若要取得現有的目的地組態及其對應的 `{INSTANCE_ID}`，請參閱這篇文章，瞭解 [擷取目的地設定](retrieve-destination-configuration.md).
 
 **API格式**
 
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 要更新的目標配置的ID。 獲取現有目標配置及其相應的 `{INSTANCE_ID}`，請參閱 [檢索目標配置](retrieve-destination-configuration.md)。 |
+| `{INSTANCE_ID}` | 您要更新的目的地設定ID。 若要取得現有的目的地組態及其對應的 `{INSTANCE_ID}`，請參閱 [擷取目的地設定](retrieve-destination-configuration.md). |
 
 +++請求
 
-以下請求更新我們在中建立的目標 [此示例](create-destination-configuration.md#create) 不同 `filenameConfig` 頁籤
+以下請求會更新我們在中建立的目的地 [此範例](create-destination-configuration.md#create) 有不同的 `filenameConfig` 選項。
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -201,20 +201,20 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++回應
 
-成功的響應返回HTTP狀態200，其中包含更新的目標配置的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您更新後目的地設定的詳細資訊。
 
 +++
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道如何通過Destination SDK更新目標配置 `/authoring/destinations` API終結點。
+閱讀本檔案後，您現在知道如何透過Destination SDK更新目的地設定 `/authoring/destinations` api端點。
 
-要瞭解有關可以使用此端點執行什麼操作的詳細資訊，請參閱以下文章：
+若要進一步瞭解您可以使用此端點做什麼，請參閱下列文章：
 
-* [建立目標配置](create-destination-configuration.md)
-* [檢索目標配置](retrieve-destination-configuration.md)
-* [刪除目標配置](delete-destination-configuration.md)
+* [建立目的地設定](create-destination-configuration.md)
+* [擷取目的地設定](retrieve-destination-configuration.md)
+* [刪除目的地設定](delete-destination-configuration.md)

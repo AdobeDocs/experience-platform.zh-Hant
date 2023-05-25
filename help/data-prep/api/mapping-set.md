@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；映射集；
+keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；對應集；
 solution: Experience Platform
-title: 映射集API終結點
-description: 可以使用Adobe Experience PlatformAPI中的「/mappingSets」端點以寫程式方式檢索、建立、更新和驗證映射集。
+title: 對應集API端點
+description: 您可以在Adobe Experience Platform API中使用「/mappingSets」端點，以程式設計方式擷取、建立、更新及驗證對應集。
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 3%
 
 ---
 
-# 映射集端點
+# 對應集端點
 
-映射集可用於定義源模式中的資料如何映射到目標模式的資料。 您可以使用 `/mappingSets` 以寫程式方式檢索、建立、更新和驗證映射集。
+對應集可用來定義來源結構描述中的資料如何對應到目的地結構描述。 您可以使用 `/mappingSets` 資料準備API中的端點，以程式設計方式擷取、建立、更新和驗證對應集。
 
-## 清單映射集
+## 清單對應集
 
-您可以通過向以下站點發出GET請求來檢索組織的所有映射集的清單 `/mappingSets` 端點。
+您可以透過向以下專案發出GET請求，擷取貴組織的所有對應集清單： `/mappingSets` 端點。
 
 **API格式**
 
-的 `/mappingSets` 終結點支援多個查詢參數以幫助篩選結果。 雖然這些參數大多是可選的，但強烈建議使用這些參數以幫助降低昂貴的開銷。 但是，必須同時包括 `start` 和 `limit` 參數。 可以包括多個參數，用和符號分隔(`&`)。
+此 `/mappingSets` 端點支援數個查詢引數，以協助篩選結果。 雖然這些引數大部分是選用的，但強烈建議使用它們來協助減少昂貴的額外負荷。 不過，您必須同時包含 `start` 和 `limit` 請求中的引數。 可包含多個引數，以&amp;符號(`&`)。
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -32,15 +32,15 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{LIMIT}` | (**必需**)指定返回的映射集數。 |
-| `{START}` | (**必需**)指定結果頁的偏移。 要獲取結果的第一頁，請將值設定為 `start=0`。 |
-| `{NAME}` | 按名稱篩選映射集。 |
-| `{ORDER_BY}` | 對結果的順序進行排序。 唯一支援的欄位是 `createdDate` 和 `updatedDate`。 您可以用 `+` 或 `-` 按升序或降序排序。 |
-| `{EXPAND_SCHEMA}` | 一個布爾值，用於確定是否將完整輸出模式作為響應的一部分返回。 |
+| `{LIMIT}` | (**必填**)指定傳回的對應集數目。 |
+| `{START}` | (**必填**)指定結果頁面的位移。 若要取得結果的第一頁，請將值設為 `start=0`. |
+| `{NAME}` | 依名稱篩選對應集。 |
+| `{ORDER_BY}` | 排序結果的順序。 僅支援的欄位為 `createdDate` 和 `updatedDate`. 您可以在屬性前面加上 `+` 或 `-` 以分別依遞增或遞減順序排序。 |
+| `{EXPAND_SCHEMA}` | 一個布林值，可決定是否將完整輸出結構描述作為回應的一部分傳回。 |
 
 **要求**
 
-以下請求將檢索您組織內的最後兩個映射集。
+以下請求將擷取組織內最後兩個對應集。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -163,9 +163,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 }
 ```
 
-## 建立映射集
+## 建立對應集
 
-可通過向POST請求建立新映射集 `/mappingSets` 端點。
+您可以透過向以下專案發出POST請求來建立新的對應集： `/mappingSets` 端點。
 
 **API格式**
 
@@ -175,7 +175,7 @@ POST /mappingSets
 
 **要求**
 
-以下請求將建立一個新的映射集，該映射集由負載中提供的參數配置。
+以下請求會建立新的對應集，由承載中提供的引數設定。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
@@ -216,15 +216,15 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `outputSchema.schemaRef.id` | 您所引用的XDM架構的ID。 |
-| `outputSchema.schemaRef.contentType` | 確定引用架構的響應格式。 有關此欄位的詳細資訊，請參閱 [架構註冊表開發人員指南](../../xdm/api/schemas.md#lookup)。 |
-| `mappings.sourceType` | 源類型描述如何將值從源提取到目標。 源類型支援兩個可能的值： <ul><li>`ATTRIBUTE`:源類型 `ATTRIBUTE` 當輸入屬性來自源架構時使用。</li><li>`EXPRESSION`:源類型 `EXPRESSION` 在使用計算欄位完成映射時使用。</li></ul> **警告**:錯誤設定源類型值可能會呈現不可編輯的映射集。 |
-| `mappings.source` | 要映射資料的位置。 |
-| `mappings.destination` | 要映射資料的位置。 |
+| `outputSchema.schemaRef.id` | 您參考的XDM結構描述的ID。 |
+| `outputSchema.schemaRef.contentType` | 決定參考之結構描述的回應格式。 有關此欄位的詳細資訊，請參閱 [Schema Registry開發人員指南](../../xdm/api/schemas.md#lookup). |
+| `mappings.sourceType` | 來源型別說明如何將值從來源擷取至目的地。 來源型別支援兩種可能的值： <ul><li>`ATTRIBUTE`：來源型別 `ATTRIBUTE` 當輸入屬性來自來源結構描述時使用。</li><li>`EXPRESSION`：來源型別 `EXPRESSION` 使用計算欄位完成對應時使用。</li></ul> **警告**：錯誤設定來源型別值可能會使您的對應集無法編輯。 |
+| `mappings.source` | 您希望資料從中對應的位置。 |
+| `mappings.destination` | 您希望資料對應到的位置。 |
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關新建立的映射集的資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新建立對應集的相關資訊。
 
 ```json
 {
@@ -237,9 +237,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 }
 ```
 
-## 驗證映射
+## 驗證對應
 
-您可以通過向以下站點發出POST請求來驗證映射是否正確工作 `/mappingSets/validate` 端點。
+您可以透過向以下發出POST請求，驗證您的對應是否正常運作： `/mappingSets/validate` 端點。
 
 **API格式**
 
@@ -249,7 +249,7 @@ POST /mappingSets/validate
 
 **要求**
 
-以下請求驗證負載中提供的映射。
+以下請求會驗證承載中提供的對應。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/validate \
@@ -290,7 +290,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含建議映射的驗證資訊。
+成功的回應會傳回HTTP狀態200，其中包含建議對應的驗證資訊。
 
 ```json
 {
@@ -311,9 +311,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 }
 ```
 
-## 預覽映射的資料
+## 預覽對應資料
 
-您可以通過向POST發出請求來預覽要映射的資料 `/mappingSets/preview` 端點。
+您可以透過向以下專案發出POST請求，預覽您的資料將對應至的內容： `/mappingSets/preview` 端點。
 
 **API格式**
 
@@ -371,7 +371,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 **回應**
 
-成功的響應返回HTTP狀態200，並預覽映射的資料。
+成功的回應會傳回HTTP狀態200，並預覽您的對應資料。
 
 ```json
 [
@@ -390,9 +390,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 ]
 ```
 
-## 查找映射集
+## 查詢對應集
 
-通過在GET請求到的路徑中提供特定映射集的ID，可以檢索特定映射集 `/mappingSets` 端點。 此終結點還支援多個查詢參數，以幫助您檢索有關指定映射集版本的詳細資訊。
+您可以在GET請求的路徑中提供其ID以擷取特定的對應集。 `/mappingSets` 端點。 此端點也支援數個查詢引數，以協助您擷取有關指定對應集版本的詳細資訊。
 
 **API格式**
 
@@ -404,13 +404,13 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**必需**)要檢索的映射集的ID。 |
-| `{EXPAND_SCHEMA}` | 一個布爾查詢參數，它確定是否將輸出模式作為響應的一部分返回。 |
-| `{VERSION}` | 確定要檢索的映射集版本的整數查詢參數。 |
+| `{MAPPING_SET_ID}` | (**必填**)您要擷取之對應集的ID。 |
+| `{EXPAND_SCHEMA}` | 布林值查詢引數，可決定是否將輸出結構描述傳回為回應的一部分。 |
+| `{VERSION}` | 整數查詢引數，可決定要擷取哪個版本的對應集。 |
 
 **要求**
 
-以下請求檢索有關指定映射集的詳細資訊。
+下列請求會擷取有關指定對應集的詳細資訊。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
@@ -422,11 +422,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含要檢索的映射集的詳細資訊。
+成功的回應會傳回HTTP狀態200，其中包含您要擷取之對應集的詳細資訊。
 
 >[!NOTE]
 >
->以下響應已被截斷為空間。
+>下列回應已因空格而截斷。
 
 ```json
 {
@@ -581,9 +581,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 }
 ```
 
-## 更新映射集
+## 更新對應集
 
-可以通過在路徑中提供映射集的ID來更新映射集 `PUT` 請求 `mappingSets` 端點。
+您可以在的路徑中提供對應集的ID，以更新對應集。 `PUT` 向以下專案提出的請求： `mappingSets` 端點。
 
 **API格式**
 
@@ -593,7 +593,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | 要更新的映射集的ID。 |
+| `{MAPPING_SET_ID}` | 您要更新的對應集ID。 |
 
 **要求**
 
@@ -641,11 +641,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關新更新的映射集的詳細資訊。
+成功回應會傳回HTTP狀態200，其中包含您新更新對應集的詳細資訊。
 
 >[!NOTE]
 >
->以下響應已被截斷為空間。
+>下列回應已因空格而截斷。
 
 ```json
 {
@@ -808,9 +808,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 }
 ```
 
-## 列出映射集的映射
+## 列出對應集的對應
 
-通過在GET請求到以下端點的路徑中提供其ID，可以查看屬於特定映射集的所有映射。
+您可以在GET要求的路徑中提供特定對應集的ID至下列端點，以檢視屬於該對應集的所有對應。
 
 **API格式**
 
@@ -820,11 +820,11 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | 要檢索映射的映射集的ID。 |
+| `{MAPPING_SET_ID}` | 您要擷取對應的對應集ID。 |
 
 **要求**
 
-以下請求返回指定映射集中的所有映射。
+下列要求會傳回指定對應集中的所有對應。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
@@ -911,9 +911,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## 查找映射集內的映射
+## 查詢對應集內的對應
 
-通過在GET請求路徑中提供映射集的ID到以下端點，可以檢索映射集的特定映射。
+您可以在GET請求的路徑中提供其ID至下列端點，以擷取對應集的特定對應。
 
 **API格式**
 
@@ -923,12 +923,12 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | 要查找有關的映射資訊的映射集的ID。 |
-| `{MAPPING_ID}` | 要查找的映射的ID。 |
+| `{MAPPING_SET_ID}` | 您要查閱對應資訊之對應集的ID。 |
+| `{MAPPING_ID}` | 您要查閱的對應ID。 |
 
 **要求**
 
-以下請求檢索有關指定映射集中特定映射的資訊。
+下列請求會擷取指定對應集中特定對應的相關資訊。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings/394bec970d54410b98e1d4c55a3843ca \
@@ -940,7 +940,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關指定映射的詳細資訊。
+成功的回應會傳回HTTP狀態200，其中包含指定對應的詳細資訊。
 
 ```json
 {

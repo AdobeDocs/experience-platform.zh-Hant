@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；引擎；感性機器學習api
+keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；引擎；sensei機器學習api
 solution: Experience Platform
-title: 引擎API終結點
-description: 引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習算法、用於執行特徵工程的特徵管線，或兩者兼有。
+title: 引擎API端點
+description: 引擎是資料科學工作區中機器學習模型的基礎。 它們包含解決特定問題的機器學習演演算法、執行特徵工程的特徵配管或兩者。
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,15 +13,15 @@ ht-degree: 3%
 
 # 引擎端點
 
-引擎是資料科學工作區中機器學習模型的基礎。 它們包含可解決特定問題的機器學習算法、用於執行特徵工程的特徵管線，或兩者兼有。
+引擎是資料科學工作區中機器學習模型的基礎。 它們包含解決特定問題的機器學習演演算法、執行特徵工程的特徵配管或兩者。
 
-## 查找您的Docker註冊表
+## 查詢您的Docker登錄檔
 
 >[!TIP]
 >
->如果您沒有Docker URL，請訪問 [將源檔案打包到處方](../models-recipes/package-source-files-recipe.md) 有關建立Docker主機URL的逐步步驟的教程。
+>如果您沒有Docker URL，請訪問 [將來源檔案封裝到配方中](../models-recipes/package-source-files-recipe.md) 有關建立Docker主機URL的逐步解說教學課程。
 
-要上載打包的處方檔案，需要您的Docker註冊表憑據，包括您的Docker主機URL、用戶名和密碼。 您可以通過執行以下GET請求來查找此資訊：
+需要您的Docker登錄檔憑證才能上傳封裝的配方檔案，包括您的Docker主機URL、使用者名稱和密碼。 您可以執行下列GET要求來查閱此資訊：
 
 **API格式**
 
@@ -41,11 +41,11 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **回應**
 
-成功的響應返回包含Docker註冊表詳細資訊（包括Docker URL）的負載(`host`)，用戶名(`username`)和密碼(`password`)。
+成功的回應會傳回包含Docker登入詳細資訊的裝載，包括Docker URL (`host`)，使用者名稱(`username`)和密碼(`password`)。
 
 >[!NOTE]
 >
->您的Docker密碼隨時更改 `{ACCESS_TOKEN}` 。
+>您的Docker密碼每當 `{ACCESS_TOKEN}` 已更新。
 
 ```json
 {
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 ## 使用Docker URL建立引擎 {#docker-image}
 
-您可以通過在提供元資料和引用多部件表單中Docker影像的Docker URL的同時執行POST請求來建立引擎。
+您可以建立Engine，方法是在提供POST請求的中繼資料和參照多部分表單中Docker影像的Docker URL時，執行Engine。
 
 **API格式**
 
@@ -94,16 +94,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 引擎的所需名稱。 與此引擎對應的處方將繼承此值，該值將作為處方名稱顯示在UI中。 |
-| `description` | 引擎的可選說明。 與此引擎對應的處方將繼承此值，該值將作為處方說明顯示在UI中。 此為必要屬性。如果不想提供說明，請將其值設定為空字串。 |
-| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
-| `algorithm` | 指定機器學習算法類型的字串。 支援的算法類型包括「分類」、「回歸」或「自定義」。 |
-| `artifacts.default.image.location` | 由Docker URL連結到的Docker影像的位置。 |
-| `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
+| `name` | Engine所需的名稱。 對應至此引擎的配方將繼承此值，以作為配方名稱顯示在UI中。 |
+| `description` | Engine的選擇性說明。 對應至此引擎的配方將繼承此值，以顯示於UI中的配方說明。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
+| `type` | 引擎的執行型別。 此值對應於Docker影像建置所在的語言，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
+| `algorithm` | 字串；指定機器學習演演算法的型別。 支援的演演算法型別包括「分類」、「回歸」或「自訂」。 |
+| `artifacts.default.image.location` | Docker URL所連結的Docker影像的位置。 |
+| `artifacts.default.image.executionType` | 引擎的執行型別。 此值對應於Docker影像建置所在的語言，可以是&quot;Python&quot;、&quot;R&quot;或&quot;Tensorflow&quot;。 |
 
 **請求PySpark/Scala**
 
-在請求PySpark配方時， `executionType` 和 `type` 是&quot;PySpark&quot; 請求斯卡拉食譜時， `executionType` 和 `type` 是&quot;火花&quot; 以下Scala配方示例使用Spark:
+請求PySpark配方時， `executionType` 和 `type` 為「PySpark」。 請求Scala配方時， `executionType` 和 `type` 是「Spark」。 下列Scala配方範例使用Spark：
 
 ```shell
 curl -X POST \
@@ -133,16 +133,16 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 引擎的所需名稱。 與此引擎對應的處方將繼承此值，該值將作為處方名稱顯示在UI中。 |
-| `description` | 引擎的可選說明。 與此引擎對應的處方將繼承此值，該值將作為處方說明顯示在UI中。 此為必要屬性。如果不想提供說明，請將其值設定為空字串。 |
-| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 該值可設定為「Spark」或「PySpark」。 |
-| `mlLibrary` | 為PySpark和Scala配方建立引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
-| `artifacts.default.image.location` | Docker影像的位置。 僅支援AzureACR或Public（未驗證）Dockerhub。 |
-| `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
+| `name` | Engine所需的名稱。 對應至此引擎的配方將繼承此值，以作為配方名稱顯示在UI中。 |
+| `description` | Engine的選擇性說明。 對應至此引擎的配方將繼承此值，以顯示於UI中的配方說明。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
+| `type` | 引擎的執行型別。 此值對應於Docker映像構建所使用的語言。 此值可設定為Spark或PySpark。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`. |
+| `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或公用（未驗證） Dockerhub。 |
+| `artifacts.default.image.executionType` | 引擎的執行型別。 此值對應於Docker映像構建所使用的語言。 這可以是&quot;Spark&quot;或&quot;PySpark&quot;。 |
 
 **回應**
 
-成功的響應返回包含新建立引擎的詳細資訊（包括其唯一標識符）的負載(`id`)。 以下示例響應是Python引擎。 所有引擎響應都遵循以下格式：
+成功回應會傳回包含新建立之引擎的詳細資訊裝載，包括其唯一識別碼(`id`)。 以下範例回應適用於Python引擎。 所有引擎回應都遵循此格式：
 
 ```json
 {
@@ -169,9 +169,9 @@ curl -X POST \
 }
 ```
 
-## 使用Docker URL建立特徵管線引擎 {#feature-pipeline-docker}
+## 使用Docker URL建立功能管道引擎 {#feature-pipeline-docker}
 
-通過在提供其元資料和引用Docker影像的Docker URL的同時執行POST請求，可以建立功能管線引擎。
+您可以建立功能管道引擎，方法是在提供其中繼資料和參考Docker影像的Docker URL的同時執行POST請求。
 
 **API格式**
 
@@ -212,19 +212,19 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `type` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 該值可設定為「Spark」或「PySpark」。 |
-| `algorithm` | 所使用的算法，將此值設定為 `fp` （特徵管線）。 |
-| `name` | 特徵管線引擎的所需名稱。 與此引擎對應的處方將繼承此值，該值將作為處方名稱顯示在UI中。 |
-| `description` | 引擎的可選說明。 與此引擎對應的處方將繼承此值，該值將作為處方說明顯示在UI中。 此為必要屬性。如果不想提供說明，請將其值設定為空字串。 |
-| `mlLibrary` | 為PySpark和Scala配方建立引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`。 |
-| `artifacts.default.image.location` | Docker影像的位置。 僅支援AzureACR或Public（未驗證）Dockerhub。 |
-| `artifacts.default.image.executionType` | 引擎的執行類型。 此值與Docker映像所基於的語言相對應。 這可以是「Spark」或「PySpark」。 |
-| `artifacts.default.image.packagingType` | 引擎的包裝類型。 此值應設定為 `docker`。 |
-| `artifacts.default.defaultMLInstanceConfigs` | 您 `pipeline.json` 配置檔案參數。 |
+| `type` | 引擎的執行型別。 此值對應於Docker映像構建所使用的語言。 此值可設定為Spark或PySpark。 |
+| `algorithm` | 使用的演演算法，設定此值為 `fp` （功能管道）。 |
+| `name` | 特徵配管引擎的所需名稱。 對應至此引擎的配方將繼承此值，以作為配方名稱顯示在UI中。 |
+| `description` | Engine的選擇性說明。 對應至此引擎的配方將繼承此值，以顯示於UI中的配方說明。 此為必要屬性。如果您不想提供說明，請將其值設為空字串。 |
+| `mlLibrary` | 建立PySpark和Scala配方引擎時所需的欄位。 此欄位必須設定為 `databricks-spark`. |
+| `artifacts.default.image.location` | Docker映像的位置。 僅支援Azure ACR或公用（未驗證） Dockerhub。 |
+| `artifacts.default.image.executionType` | 引擎的執行型別。 此值對應於Docker映像構建所使用的語言。 這可以是&quot;Spark&quot;或&quot;PySpark&quot;。 |
+| `artifacts.default.image.packagingType` | 引擎的封裝型別。 此值應設為 `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | 您的 `pipeline.json` 組態檔案引數。 |
 
 **回應**
 
-成功的響應返回包含新建立的功能管道引擎詳細資訊（包括其唯一標識符）的負載(`id`)。 以下示例響應是PySpark特徵管道引擎。
+成功回應會傳回承載，其中包含新建立功能管道引擎的詳細資訊，包括其唯一識別碼(`id`)。 以下範例回應適用於PySpark特徵配管引擎。
 
 ```json
 {
@@ -251,9 +251,9 @@ curl -X POST \
 }
 ```
 
-## 檢索引擎清單
+## 擷取引擎清單
 
-通過執行單個GET請求，可以檢索引擎清單。 要幫助篩選結果，可以在請求路徑中指定查詢參數。 有關可用查詢的清單，請參閱附錄部分。 [資產檢索查詢參數](./appendix.md#query)。
+您可以透過執行單一GET請求來擷取引擎清單。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱附錄 [用於資產擷取的查詢引數](./appendix.md#query).
 
 **API格式**
 
@@ -276,7 +276,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回引擎及其詳細資訊的清單。
+成功回應會傳回引擎清單及其詳細資料。
 
 ```json
 {
@@ -326,9 +326,9 @@ curl -X GET \
 }
 ```
 
-### 檢索特定引擎 {#retrieve-specific}
+### 擷取特定引擎 {#retrieve-specific}
 
-通過執行請求路徑中包含所需引擎ID的GET請求，可以檢索特定引擎的詳細資訊。
+您可以透過執行GET請求，在請求路徑中包含所需引擎的ID，來擷取特定引擎的詳細資訊。
 
 **API格式**
 
@@ -338,7 +338,7 @@ GET /engines/{ENGINE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENGINE_ID}` | 現有引擎的ID。 |
+| `{ENGINE_ID}` | 現有引擎的識別碼。 |
 
 **要求**
 
@@ -353,7 +353,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回包含所需引擎詳細資訊的負載。
+成功的回應會傳回包含所需引擎詳細資訊的裝載。
 
 ```json
 {
@@ -382,13 +382,13 @@ curl -X GET \
 
 ## 更新引擎
 
-您可以通過PUT請求覆蓋現有引擎的屬性來修改和更新現有引擎，該請求在請求路徑中包括目標引擎的ID，並提供包含已更新屬性的JSON負載。
+您可以透過PUT請求（請求路徑中包含目標引擎的ID）來覆寫現有引擎的屬性，並提供包含已更新屬性的JSON裝載，藉此修改和更新現有引擎。
 
 >[!NOTE]
 >
->為確保此PUT請求成功，建議您首先執行GET請求， [按ID檢索引擎](#retrieve-specific)。 然後，修改和更新返回的JSON對象，並應用已修改的JSON對象的整個作為PUT請求的負載。
+>為確保此PUT請求成功，建議您先執行GET請求 [依ID擷取引擎](#retrieve-specific). 接著，修改並更新傳回的JSON物件，並將整個修改過的JSON物件套用為PUT請求的裝載。
 
-以下示例API調用將在最初具有這些屬性時更新引擎的名稱和說明：
+以下範例API呼叫最初具有這些屬性時，將會更新引擎的名稱和說明：
 
 ```json
 {
@@ -415,7 +415,7 @@ PUT /engines/{ENGINE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENGINE_ID}` | 現有引擎的ID。 |
+| `{ENGINE_ID}` | 現有引擎的識別碼。 |
 
 **要求**
 
@@ -445,7 +445,7 @@ curl -X PUT \
 
 **回應**
 
-成功的響應返回包含引擎更新的詳細資訊的負載。
+成功的回應會傳回包含引擎更新詳細資訊的裝載。
 
 ```json
 {
@@ -473,7 +473,7 @@ curl -X PUT \
 
 ## 刪除引擎
 
-在請求路徑中指定目標引擎的ID時，可通過執行DELETE請求來刪除引擎。 刪除引擎將級聯刪除引用該引擎的所有MLInstance，包括屬於這些MLInstance的任何「實驗」和「實驗」運行。
+您可以在請求路徑中指定DELETE引擎的ID時，透過執行目標請求來刪除引擎。 刪除引擎將會階層式刪除參照該引擎的所有MLInstances，包括屬於這些MLInstances的所有Experiments和Experiment執行。
 
 **API格式**
 
@@ -483,7 +483,7 @@ DELETE /engines/{ENGINE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{ENGINE_ID}` | 現有引擎的ID。 |
+| `{ENGINE_ID}` | 現有引擎的識別碼。 |
 
 **要求**
 

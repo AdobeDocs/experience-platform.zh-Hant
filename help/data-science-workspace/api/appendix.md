@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；
 solution: Experience Platform
-title: Sensei機器學習API指南附錄
-description: 以下各節提供Sensei機器學習API各種功能的參考資訊。
+title: Sensei Machine Learning API指南附錄
+description: 以下小節提供Sensei Machine Learning API各種功能的參考資訊。
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
@@ -13,28 +13,28 @@ ht-degree: 3%
 
 # [!DNL Sensei Machine Learning] API指南附錄
 
-以下各節提供了有關 [!DNL Sensei Machine Learning] API。
+以下各節提供各種功能的參考資訊 [!DNL Sensei Machine Learning] API。
 
-## 資產檢索的查詢參數 {#query}
+## 用於資產擷取的查詢引數 {#query}
 
-的 [!DNL Sensei Machine Learning] API支援檢索資產時的查詢參數。 下表介紹了可用查詢參數及其用法：
+此 [!DNL Sensei Machine Learning] API支援擷取資產的查詢引數。 下表說明可用的查詢引數及其用途：
 
 | 查詢參數 | 說明 | 預設值 |
 | --------------- | ----------- | ------- |
-| `start` | 指示分頁的起始索引。 | `start=0` |
-| `limit` | 指示要返回的最大結果數。 | `limit=25` |
-| `orderby` | 指示按優先順序順序排序的屬性。 包括破折號(**-**)，在屬性名稱前按降序排序，否則結果按升序排序。 | `orderby=created` |
-| `property` | 指示對象要返回必須滿足的比較表達式。 | `property=deleted==false` |
+| `start` | 表示分頁的起始索引。 | `start=0` |
+| `limit` | 表示要傳回的結果數目上限。 | `limit=25` |
+| `orderby` | 指示要用於依優先順序排序的屬性。 包含破折號(**-**)，然後依遞減順序排序，否則結果會依遞增順序排序。 | `orderby=created` |
+| `property` | 表示物件必須滿足才能傳回的比較運算式。 | `property=deleted==false` |
 
 >[!NOTE]
 >
->組合多個查詢參數時，必須用和符號分隔(**&amp;**)。
+>合併多個查詢引數時，必須以&amp;符號(**和**)。
 
-## Python CPU和GPU配置 {#cpu-gpu-config}
+## Python CPU和GPU設定 {#cpu-gpu-config}
 
-Python引擎能夠在CPU或GPU之間進行選擇，以便進行培訓或打分，並在 [MLInstance](./mlinstances.md) 作為任務規範(`tasks.specification`)。
+Python引擎能夠選擇CPU或GPU，用於訓練或評分目的，並定義於 [MLInstance](./mlinstances.md) 作為任務規格(`tasks.specification`)。
 
-以下是一個示例配置，它指定使用CPU進行培訓，使用GPU進行評分：
+以下是指定使用CPU進行訓練，並使用GPU進行評分的設定範例：
 
 ```json
 [
@@ -69,21 +69,21 @@ Python引擎能夠在CPU或GPU之間進行選擇，以便進行培訓或打分�
 
 >[!NOTE]
 >
->值 `cpus` 和 `gpus` 不表示CPU或GPU的數量，而是表示物理機的數量。 這些價值是可以允許的 `"1"` 否則會引發異常。
+>的值 `cpus` 和 `gpus` 並不表示CPU或GPU的數量，而是表示實體機器的數量。 這些值是可允許的 `"1"` 否則和會擲回例外狀況。
 
-## PySpark和Spark資源配置 {#resource-config}
+## PySpark和Spark資源設定 {#resource-config}
 
-Spark Engines能夠修改計算資源以用於培訓和評分。 下表介紹了這些資源：
+Spark引擎能夠修改運算資源，以用於訓練和評分目的。 下表說明這些資源：
 
 | 資源 | 說明 | 類型 |
 | -------- | ----------- | ---- |
-| 驅動程式記憶體 | 驅動程式的記憶體(MB) | int |
-| 驅動程式核心 | 驅動程式使用的內核數 | int |
-| 執行器記憶體 | 執行器的記憶體(MB) | int |
-| 執行器核心 | 執行器使用的內核數 | int |
-| 數執行器 | 執行者數 | int |
+| driverMemory | 驅動程式的記憶體(MB) | int |
+| driverCores | 驅動程式使用的核心數目 | int |
+| executorMemory | 執行器的記憶體(MB) | int |
+| executorCores | 執行程式使用的核心數目 | int |
+| numExecutors | 執行者數量 | int |
 
-可以在 [MLInstance](./mlinstances.md) 作為(A)單個培訓或評分參數，或(B)附加規範對象(`specification`)。 例如，以下資源配置對於培訓和評分都相同：
+資源可在 [MLInstance](./mlinstances.md) 作為(A)個別訓練或評分引數，或(B)其他規格物件內(`specification`)。 例如，下列資源設定對於訓練和評分都是相同的：
 
 ```json
 [

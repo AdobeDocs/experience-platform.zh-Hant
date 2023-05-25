@@ -1,6 +1,6 @@
 ---
-title: 文檔自助模板//替換為目標名稱
-description: 使用此模板可在Adobe Experience Platform目錄中為目標建立公共文檔。//替換為「概述」部分中的段落
+title: 檔案自助範本//取代為您的目的地名稱
+description: 使用此範本為Adobe Experience Platform目錄中的目的地建立公開檔案。//以總覽區段中的段落取代
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
 workflow-type: tm+mt
@@ -9,146 +9,146 @@ ht-degree: 1%
 
 ---
 
-# 您的目標連接 {#your-destination}
+# 您的目的地連線 {#your-destination}
 
-*在完成此模板時，替換或刪除斜體中的所有段落（從此段開始）。*
+*瀏覽此範本時，請取代或刪除所有斜體段落（從此段落開始）。*
 
-*首先更新頁面頂部的元資料（標題和說明）。 請忽略此頁上UICONTROL的所有實例。 這是一個標籤，它幫助我們的機器翻譯流程將頁面正確翻譯成我們支援的多種語言。 在您提交文檔後，我們將向其添加標籤。*
+*首先在頁面頂端更新中繼資料（標題和說明）。 請忽略此頁面上的所有UICONTROL執行個體。 此標籤可協助我們的機器翻譯程式將頁面正確翻譯為我們支援的多種語言。 我們會在您提交檔案後，將標籤新增至檔案。*
 
 >[!IMPORTANT]
 >
->* 按模板中概述的順序填充此模板中的所有部分。
->* 根據合作夥伴反饋，此模板不經常更新。 在開始為目標創作文檔之前，請確保已下載 [模板的最新版本](../assets/docs-framework/yourdestination-template.zip)。
+>* 依照範本中列出的順序，填入此範本中的所有區段。
+>* 此範本很少根據合作夥伴意見更新。 開始編寫目的地的檔案之前，請確定您已下載 [範本的最新版本](../assets/docs-framework/yourdestination-template.zip).
 
 
 ## 總覽 {#overview}
 
-*提供您公司的簡短概述，包括它為客戶提供的價值。 包括指向產品文檔首頁的連結，以供進一步閱讀。*
+*提供貴公司的簡短概觀，包括其對客戶的價值。 加入產品檔案首頁的連結，以供進一步閱讀。*
 
 >[!IMPORTANT]
 >
->此文檔頁面由 *目標* 團隊。 如有任何查詢或更新請求，請直接聯繫他們，地址為： *插入連結或電子郵件地址，以便可以訪問您進行更新，例如 `support@YourDestination.com`。*
+>此檔案頁面是由 *您的目的地* 團隊。 如有任何查詢或更新請求，請直接聯絡他們： *插入連結或電子郵件地址，您可以聯絡此處以取得更新，例如 `support@YourDestination.com`.*
 
 ## 使用案例 {#use-cases}
 
-幫助您更好地瞭解您應如何以及何時使用 *目標* 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
+為了協助您更清楚瞭解應該如何及何時使用 *您的目的地* 目的地，以下是Adobe Experience Platform客戶可以使用此目的地來解決的範例使用案例。
 
-### 用例#1 {#use-case-1}
+### 使用案例#1 {#use-case-1}
 
-*對於移動消息平台：*
+*若為行動訊息平台：*
 
-*一個房屋租賃和銷售平台希望將移動通知推送給客戶的Android和iOS設備，讓他們知道，在他們之前搜索的租房區域，有100個更新的房源。*
+*一個家用出租和銷售平台想要將行動通知推播到客戶的Android和iOS裝置，以便讓他們知道先前搜尋租用的區域有100個更新的清單。*
 
-### 用例#2 {#use-case-2}
+### 使用案例#2 {#use-case-2}
 
-*對於社交網路平台：*
+*若為社交網路平台：*
 
-*一個運動服裝品牌希望通過社交媒體賬戶接觸現有客戶。 服裝品牌可以將電子郵件地址從自己的CRM接收到Adobe Experience Platform，從自己的離線資料構建段，並將這些段發送到YourDestination，以在客戶的社交媒體源中顯示廣告。*
+*運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Adobe Experience Platform，從他們自己的離線資料建立區段，並將這些區段傳送到YourDestination，以便在他們客戶的社群媒體摘要中顯示廣告。*
 
 ## 先決條件 {#prerequisites}
 
-*在本節中添加有關客戶在開始在Adobe Experience Platform用戶介面中設定目標之前需要瞭解的任何資訊。 這可以是：*
+*在本節中新增客戶在Adobe Experience Platform使用者介面中開始設定目的地之前需要注意的任何相關資訊。 這可能與以下內容有關：*
 
-* *需要添加到允許清單*
-* *電子郵件散列要求*
-* *任何有關您的帳戶的詳細資訊*
-* *如何獲取API密鑰以連接到您的平台*
+* *需要新增至允許清單*
+* *電子郵件雜湊的需求*
+* *任何您這邊的帳戶細節*
+* *如何取得API金鑰以連線至您的平台*
 
-*如果對客戶有用，您可以連結到相關文檔。*
+*如果對客戶有幫助，您可以連結至相關檔案。*
 
-## 支援的身份 {#supported-identities}
+## 支援的身分 {#supported-identities}
 
-*在本節中添加有關目標支援的標識的資訊。 我們用一些標準值預填了表。 刪除不適用於目標的值和未預填充的任何值。*
+*在此區段中新增目的地支援之身分的相關資訊。 我們已在表格中預先填入了一些標準值。 刪除未套用至目的地的值和任何未預先填入的值。*
 
-*目標* 支援激活下表中描述的身份。 瞭解有關 [身份](/help/identity-service/namespaces.md)。
+*您的目的地* 支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
 
-| 目標標識 | 說明 | 考量事項 |
+| 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | Google廣告ID | 當源標識為GAID命名空間時，選擇GAID目標標識。 |
-| IDFA | Apple廣告商ID | 當源標識為IDFA命名空間時，選擇IDFA目標標識。 |
-| ECID | Experience Cloud ID | 表示ECID的命名空間。 以下別名也可以引用此命名空間：&quot;Adobe Marketing CloudID&quot;,&quot;Adobe Experience CloudID&quot;,&quot;Adobe Experience PlatformID&quot; 閱讀以下文檔 [ECID](/help/identity-service/ecid.md) 的子菜單。 |
-| phone_sha256 | 使用SHA256算法散列的電話號碼 | 純文字檔案和SHA256散列電話號碼都受Adobe Experience Platform支援。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 |
-| email_lc_sha256 | 使用SHA256算法散列的電子郵件地址 | 純文字檔案和SHA256散列電子郵件地址都受Adobe Experience Platform支援。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 |
-| 外部ID | 自定義用戶ID | 如果源標識是自定義命名空間，請選擇此目標標識。 |
+| GAID | Google廣告ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| IDFA | 廣告商適用的Apple ID | 當您的來源身分識別是IDFA名稱空間時，請選取IDFA目標身分。 |
+| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請閱讀以下檔案： [ECID](/help/identity-service/ecid.md) 以取得詳細資訊。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊處理的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
+| extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，選取此目標身分。 |
 
 {style="table-layout:auto"}
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出型別和頻率 {#export-type-frequency}
 
-*在表中，僅保留與目標對應的行。 您應該有一行表示「導出」類型，一行表示「導出」頻率。 刪除不適用於目標的值。*
+*在表格中，僅保留與目的地相對應的行。 您應該有一行用於匯出型別，一行用於匯出頻率。 刪除不適用於您的目的地的值。*
 
-有關目標導出類型和頻率的資訊，請參閱下表。
+請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在導出段（受眾）的所有成員，其中使用的標識符（名稱、電話號碼或其他） *目標* 目標。 |
-| 導出類型 | **[!UICONTROL 基於配置檔案]** | 您正在導出段的所有成員以及所需的架構欄位(例如：電子郵件地址、電話號碼、姓氏)，在「選擇配置檔案屬性」螢幕中選擇 [目標激活工作流](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)。 |
-| 導出類型 | **[!UICONTROL 資料集導出]** | 您正在導出未按受眾興趣或資格進行分組或結構化的原始資料集。 |
-| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
-| 導出頻率 | **[!UICONTROL 批]** | 批處理目標將檔案以3、6、8、12或24小時的增量導出到下游平台。 閱讀有關 [基於批檔案的目標](/help/destinations/destination-types.md#file-based)。 |
+| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *您的目的地* 目的地。 |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如&lt;客戶名稱>的「選取設定檔屬性」畫面中所選。 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 匯出型別 | **[!UICONTROL 資料集匯出]** | 您正在匯出未依對象興趣或資格進行分組或建構的原始資料集。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
-## 連接到目標 {#connect}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 > 
->要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
+若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目標 {#authenticate}
+### 驗證至目的地 {#authenticate}
 
-*添加客戶在向目標進行身份驗證時必須填寫的欄位。 這些欄位是特定於目標的，取決於您在Destination SDK中的配置。 目標的欄位可能與下面列出的欄位不同。 還請包括與下面顯示的示例螢幕快照類似的螢幕快照。*
+*新增客戶在對您的目的地進行驗證時必須填寫的欄位。 這些欄位特定於目的地，取決於Destination SDK中的設定。 您目的地的欄位可能與下方所列的欄位不同。 請一併加入類似下列範例熒幕擷圖的熒幕擷圖。*
 
-要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
+若要驗證目的地，請填入必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
-![示例螢幕截圖，顯示如何驗證到目標](../assets/docs-framework/authenticate-destination.png)
+![顯示如何驗證至目的地的範例熒幕擷圖](../assets/docs-framework/authenticate-destination.png)
 
-* **[!UICONTROL 持有者令牌]**:填寫承載令牌以驗證到目標。
+* **[!UICONTROL 持有人權杖]**：填寫持有人權杖以對目的地進行驗證。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目的地詳細資料 {#destination-details}
 
-*添加配置新目標時客戶必須填寫的欄位。 這些欄位是特定於目標的，取決於您在Destination SDK中的配置。 目標的欄位可能與下面列出的欄位不同。 還請包括與下面顯示的示例螢幕快照類似的螢幕快照。*
+*新增客戶在設定新目的地時必須填寫的欄位。 這些欄位特定於目的地，取決於Destination SDK中的設定。 您目的地的欄位可能與下方所列的欄位不同。 請一併加入類似下列範例熒幕擷圖的熒幕擷圖。*
 
-要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
 
-![示例螢幕截圖，顯示如何填寫目標的詳細資訊](../assets/docs-framework/configure-destination-details.png)
+![顯示如何填寫目的地詳細資料的範例熒幕擷圖](../assets/docs-framework/configure-destination-details.png)
 
-* **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
-* **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
-* **[!UICONTROL 帳戶ID]**:您 *目標* 帳戶ID。
+* **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
+* **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL 帳戶ID]**：您的 *您的目的地* 帳戶ID。
 
-### 啟用警報 {#enable-alerts}
+### 啟用警示 {#enable-alerts}
 
-您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請閱讀上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請閱讀以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
 
-完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 將段激活到此目標 {#activate}
+## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 > 
->要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-*酌情刪除 — 如果正在記錄新的流式傳輸目標，請保留下面的第一段。 如果您正在記錄新的基於檔案的目標，請保留第二段。 如果您正在記錄導出資料集的目標，請保留第三段。*
+*適當刪除 — 如果您要記錄新的串流目的地，請保留下方第一段。 如果您要記錄新的檔案型目的地，請保留第二段。 如果您要記錄匯出資料集的目的地，請保留第三段。*
 
-閱讀 [激活配置檔案和段以流式處理段導出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
+讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
-閱讀 [將受眾資料激活到批配置檔案導出目標](/help/destinations/ui/activate-batch-profile-destinations.md) 有關激活此目標受眾段的說明。
+讀取 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
-閱讀 [(Beta)導出資料集](/help/destinations/ui/export-datasets.md) 有關將資料集導出到此目標的詳細說明。
+讀取 [(Beta)匯出資料集](/help/destinations/ui/export-datasets.md) 以取得將資料集匯出至此目的地的詳細指示。
 
-### 映射屬性和標識 {#map}
+### 對應屬性和身分 {#map}
 
-*在激活工作流的「映射」步驟中，添加有關源欄位和目標欄位之間支援的映射的資訊。 目標可能支援導出配置檔案屬性、標識命名空間或兩者。 某些欄位可能是必需的。 目標屬性可能是預定義的或自定義的。 指出重要注意事項，並使用示例，最好帶螢幕截圖。 可以用作參考的目標頁的兩個示例是：*
+*在啟動工作流程的「對應」步驟中，新增來源和目標欄位之間支援的對應。 您的目的地可能支援匯出設定檔屬性、身分名稱空間或兩者。 部分欄位可能為必填欄位。 目標屬性可預先定義或自訂。 指出重要警告並使用範例，最好搭配熒幕擷取畫面。 您可參考的兩個目的地頁面範例如下：*
 
-* *[佩加](/help/destinations/catalog/personalization/pega.md#mapping-example)*
-* *[梅達利亞](/help/destinations/catalog/voice/medallia-connector.md#map)*
+* *[Pega](/help/destinations/catalog/personalization/pega.md#mapping-example)*
+* *[梅迪亞文](/help/destinations/catalog/voice/medallia-connector.md#map)*
 
-## 導出的資料/驗證資料導出 {#exported-data}
+## 匯出的資料/驗證資料匯出 {#exported-data}
 
-*添加有關如何將資料導出到目標的段落。 這將幫助客戶確保他們已正確整合到您的目標。 例如，您可以提供類似於下面的JSON示例。 或者，您可以從目標的介面提供螢幕截圖和資訊，以顯示客戶應如何期望在目標平台中填充段。*
+*新增段落以說明如何將資料匯出至目的地。 這可協助客戶確保已正確與您的目的地整合。 例如，您可以提供類似以下的JSON範例。 或者，您也可以提供目的地介面的熒幕擷取畫面和資訊，顯示客戶應如何預期區段填入目的地平台。*
 
 ```
 {
@@ -188,10 +188,10 @@ ht-degree: 1%
 }
 ```
 
-## 資料使用和治理 {#data-usage-governance}
+## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料治理概述](/help/data-governance/home.md)。
+全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，請閱讀 [資料控管概觀](/help/data-governance/home.md).
 
 ## 其他資源 {#additional-resources}
 
-*您可以提供指向產品文檔或您認為對客戶成功非常重要的任何其他資源的進一步連結。*
+*您可以提供產品檔案的進一步連結，或您認為對客戶成功很重要的任何其他資源。*

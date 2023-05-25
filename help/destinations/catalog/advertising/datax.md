@@ -1,6 +1,6 @@
 ---
-title: Verizon MediaYahoo DataX連接
-description: DataX是Verizon Media/Yahoo的聚合基礎架構，它承載著各種元件，使Verizon Media/Yahoo能夠以安全、自動和可擴展的方式與外部合作夥伴交換資料。
+title: Verizon MediaYahoo DataX連線
+description: DataX是彙總的Verizon Media/Yahoo基礎架構，其中託管各種元件，讓Verizon Media/Yahoo能夠以安全、自動化及可擴充的方式與外部合作夥伴交換資料。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Verizon Media/Yahoo DataX] 連接
+# [!DNL Verizon Media/Yahoo DataX] 連線
 
 ## 總覽 {#overview}
 
-[!DNL DataX] 是聚合 [!DNL Verizon Media/Yahoo] 承載各種元件的基礎架構 [!DNL Verizon Media/Yahoo] 以安全、自動化和可擴展的方式與外部合作夥伴交換資料。
+[!DNL DataX] 是彙總 [!DNL Verizon Media/Yahoo] 代管各種元件的基礎結構，這些元件可讓 [!DNL Verizon Media/Yahoo] 以安全、自動化及可擴充的方式與外部合作夥伴交換資料。
 
 >[!IMPORTANT]
 >
->此文檔頁面由 [!DNL Verizon Media/Yahoo]`s [!DNL DataX] 團隊。 如有任何查詢或更新請求，請直接聯繫他們，地址為： [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>此檔案頁面的建立者 [!DNL Verizon Media/Yahoo]的 [!DNL DataX] 團隊。 如有任何查詢或更新請求，請直接聯絡他們： [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## 先決條件 {#prerequisites}
 
 **MDM ID**
 
-這是中的唯一標識符 [!DNL Yahoo DataX] 並且它是用於設定資料導出到此目標的必填欄位。 如果您不知道此ID，請與 [!DNL Yahoo DataX] 客戶經理。
+此為中的唯一識別碼 [!DNL Yahoo DataX] 而且它是設定資料匯出至此目的地的必要欄位。 如果您不知道此ID，請連絡您的 [!DNL Yahoo DataX] 客戶經理。
 
-**分類元資料**
+**分類中繼資料**
 
-分類資源在基上定義擴展 [!DNL DataX] 元資料結構
+分類資源會定義基底上的擴充功能 [!DNL DataX] 中繼資料結構
 
 ```
 {
@@ -48,86 +48,86 @@ ht-degree: 2%
 }
 ```
 
-閱讀有關 [分類元資料](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) 的 [!DNL DataX] 開發人員文檔。
+深入瞭解 [分類中繼資料](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) 在 [!DNL DataX] 開發人員檔案。
 
-## 費率限制和護欄 {#rate-limits-guardrails}
+## 速率限制和護欄 {#rate-limits-guardrails}
 
 >[!IMPORTANT]
 >
->當激活100多個段時 [!DNL Verizon Media/Yahoo DataX]，您可能會從目標接收速率限制錯誤。 激活此目標的段時，嘗試在一個激活資料流中激活少於100個段。 如果需要激活更多段，請在同一帳戶上建立新目標。
+>啟用超過100個區段至 [!DNL Verizon Media/Yahoo DataX]，您可能會收到來自目的地的速率限制錯誤。 將區段啟用至此目的地時，請嘗試在一個啟用資料流中啟用少於100個區段。 如果您需要啟用更多區段，請在相同帳戶上建立新目的地。
 
-[!DNL DataX] 是按分類和訪問群體帖子的配額限制進行的速率限制 [DataX文檔](https://developer.verizonmedia.com/datax/guide/rate-limits/)。
+[!DNL DataX] 是費率限制，依據以下文章中概述的分類法和受眾貼文配額限制： [DataX檔案](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
 
-| 錯誤代碼 | 錯誤消息 | 說明 |
+| 錯誤代碼 | 錯誤訊息 | 說明 |
 |---------|----------|---------|
-| 429請求過多 | 超過每小時的速率限制 **(限制：100)** | 每個提供程式一小時內允許的請求數。 |
+| 429請求太多 | 每小時超過速率限制 **（上限： 100）** | 每個提供者一小時內允許的請求數。 |
 
 {style="table-layout:auto"}
 
-## 支援的身份 {#supported-identities}
+## 支援的身分 {#supported-identities}
 
-[!DNL Verizon Media] 支援激活下表中描述的身份。 瞭解有關 [身份](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started)。
+[!DNL Verizon Media] 支援下表所述的身分啟用。 進一步瞭解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-| 目標標識 | 說明 | 考量事項 |
+| 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| email_lc_sha256 | 使用SHA256算法散列的電子郵件地址 | 純文字檔案和SHA256散列電子郵件地址都受Adobe Experience Platform支援。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 |
-| GAID | Google廣告ID | 當源標識為GAID命名空間時，選擇GAID目標標識。 |
-| IDFA | Apple廣告商ID | 當源標識為IDFA命名空間時，選擇IDFA目標標識。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊處理的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
+| GAID | Google廣告ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| IDFA | 廣告商適用的Apple ID | 當您的來源身分識別是IDFA名稱空間時，請選取IDFA目標身分。 |
 
 {style="table-layout:auto"}
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出型別和頻率 {#export-type-frequency}
 
-有關目標導出類型和頻率的資訊，請參閱下表。
+請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在導出段（受眾）的所有成員，其中包含Verizon媒體目標中使用的標識符（電子郵件、GAID、IDFA）。 |
-| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，其中包含Verizon Media目的地中使用的識別碼（電子郵件、GAID、IDFA）。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## 使用案例 {#use-cases}
 
-[!DNL DataX] API可用於要針對特定受眾群的廣告商，這些特定受眾群在 [!DNL Verizon Media] (VMG)可以使用VMG的近即時API快速建立新段並推送所需的觀眾群。
+[!DNL DataX] API適用於廣告商，這些廣告商想要鎖定以中的電子郵件地址作為輸入的特定受眾群組 [!DNL Verizon Media] (VMG)可使用VMG的近乎即時API快速建立新區段並推送所需的對象群組。
 
-## 連接到目標 {#connect}
-
->[!IMPORTANT]
-> 
->要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
-
-![平台UI中的Yahoo DataX目標卡](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
-
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。
-
-### 連接參數 {#parameters}
-
-同時 [設定](../../ui/connect-destination.md) 此目標，必須提供以下資訊：
-
-* **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
-* **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
-* **[!UICONTROL MDM ID]**:這是中的唯一標識符 [!DNL Yahoo DataX] 並且它是用於設定資料導出到此目標的必填欄位。 如果您不知道此ID，請與 [!DNL Yahoo DataX] 客戶經理。  使用MDM ID時，資料可以被限制為僅用於特定的一組獨佔用戶（例如廣告商的第一方資料）。
-
-### 啟用警報 {#enable-alerts}
-
-您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
-
-完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
-
-## 將段激活到此目標 {#activate}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 > 
->要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-閱讀 [激活配置檔案和段到目標](../../ui/activate-segment-streaming-destinations.md) 有關激活目標受眾段的說明。
+![Platform UI中的Yahoo DataX目的地卡](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
-## 資料使用和治理 {#data-usage-governance}
+若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，請參見 [資料治理概述](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant)。
+### 連線引數 {#parameters}
+
+當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊：
+
+* **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
+* **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL MDM ID]**：這是中的唯一識別碼 [!DNL Yahoo DataX] 而且它是設定資料匯出至此目的地的必要欄位。 如果您不知道此ID，請連絡您的 [!DNL Yahoo DataX] 客戶經理。  使用MDM ID時，資料可以限製為僅用於特定一組專屬使用者（例如廣告商的第一方資料）。
+
+### 啟用警示 {#enable-alerts}
+
+您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
+
+當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
+
+## 啟用此目的地的區段 {#activate}
+
+>[!IMPORTANT]
+> 
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+
+讀取 [對目的地啟用設定檔和區段](../../ui/activate-segment-streaming-destinations.md) 以取得啟用目的地受眾區段的指示。
+
+## 資料使用與控管 {#data-usage-governance}
+
+全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，請參閱 [資料控管概觀](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant).
 
 ## 其他資源 {#additional-resources}
 
-有關詳細資訊，請閱讀 [!DNL Yahoo/Verizon Media] [文檔 [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/)。
+如需詳細資訊，請閱讀 [!DNL Yahoo/Verizon Media] [檔案： [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).

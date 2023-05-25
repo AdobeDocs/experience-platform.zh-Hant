@@ -1,6 +1,6 @@
 ---
-description: 瞭解使用Destination SDK構建的目標支援的歷史配置檔案資格。
-title: 歷史配置檔案資格
+description: 瞭解使用Destination SDK建立的目的地支援的歷史設定檔資格。
+title: 歷史設定檔資格
 source-git-commit: 65a658208b48a50184e55a6d64cdf7ad6de0f04f
 workflow-type: tm+mt
 source-wordcount: '214'
@@ -9,24 +9,24 @@ ht-degree: 1%
 ---
 
 
-# 歷史配置檔案資格
+# 歷史設定檔資格
 
-預設情況下，通過Destination SDK建立的所有目標都支援歷史配置檔案資格。 這意味著當用戶首次將激活資料流設定到目標時，第一次導出將包含該段中曾經限定的所有成員。
+依預設，透過Destination SDK建立的所有目的地都支援歷史設定檔資格。 這表示當使用者首次設定啟動資料流至您的目的地時，第一次匯出會包含符合該區段資格的所有區段成員。
 
-此行為由 `"backfillHistoricalProfileData":true` 目標配置中的參數。
+此行為由 `"backfillHistoricalProfileData":true` 目的地設定中的引數。
 
 >[!IMPORTANT]
 >
->為通過Destination SDK和 `backfillHistoricalProfileData` 參數不可用戶配置。
+>系統會針對透過Destination SDK建立的所有目的地啟用歷史設定檔資格，並且 `backfillHistoricalProfileData` 引數無法由使用者設定。
 
-## 支援的整合類型 {#supported-integration-types}
+## 支援的整合型別 {#supported-integration-types}
 
-有關哪些類型的整合支援本頁所述功能的詳細資訊，請參閱下表。
+請參閱下表，以取得關於哪些型別的整合支援本頁面所述功能的詳細資訊。
 
-| 整合類型 | 支援功能 |
+| 整合型別 | 支援功能 |
 |---|---|
-| 即時（流）整合 | 是 |
-| 基於檔案（批處理）的整合 | 是 |
+| 即時（串流）整合 | 是 |
+| 檔案式（批次）整合 | 是 |
 
 
 
@@ -40,18 +40,18 @@ ht-degree: 1%
 
 ## 後續步驟 {#next-steps}
 
-在閱讀本文之後，您應該知道，當段首次導出到目標時，Experience Platform會自動導出所有符合激活段條件的配置檔案的歷史總體。 在Destination SDK或Experience PlatformUI中不能配置此選項。
+閱讀本文後，您應該知道，Experience Platform會在區段首次匯出至目的地時，自動匯出曾符合啟用區段資格的所有設定檔歷史母體。 此選項無法在Destination SDK或Experience Platform UI中設定。
 
-要瞭解有關其他目標元件的詳細資訊，請參閱以下文章：
+若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證](customer-authentication.md)
-* [OAuth2身份驗證](oauth2-authentication.md)
+* [OAuth2驗證](oauth2-authentication.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
-* [架構配置](schema-configuration.md)
-* [標識命名空間配置](identity-namespace-configuration.md)
-* [支援的映射配置](supported-mapping-configurations.md)
-* [目標傳遞](destination-delivery.md)
-* [受眾元資料配置](audience-metadata-configuration.md)
-* [聚合策略](aggregation-policy.md)
-* [批配置](batch-configuration.md)
+* [結構描述設定](schema-configuration.md)
+* [身分名稱空間設定](identity-namespace-configuration.md)
+* [支援的對應設定](supported-mapping-configurations.md)
+* [目的地傳遞](destination-delivery.md)
+* [對象中繼資料設定](audience-metadata-configuration.md)
+* [彙總原則](aggregation-policy.md)
+* [批次設定](batch-configuration.md)

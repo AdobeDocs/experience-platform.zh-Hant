@@ -1,6 +1,6 @@
 ---
-title: 規則終結點
-description: 瞭解如何調用Repartor API中的/rules端點。
+title: 規則端點
+description: 瞭解如何在Reactor API中呼叫/rules端點。
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 5%
 
 ---
 
-# 規則終結點
+# 規則端點
 
-在資料收集標籤的上下文中，規則控制已部署庫中資源的行為。 規則由一個或多個 [規則元件](./rule-components.md)，以邏輯方式將規則元件連接在一起。 的 `/rules` Reactor API中的端點允許您以寫程式方式管理標籤規則。
+在資料收集標籤的內容中，規則會控制已部署程式庫中資源的行為。 規則是由一或多個專案所組成 [規則元件](./rule-components.md)，以邏輯方式將規則元件連結在一起。 此 `/rules` Reactor API中的端點可讓您以程式設計方式管理標籤規則。
 
 >[!NOTE]
 >
->本文檔介紹如何管理Reactor API中的規則。 有關如何與UI中的規則交互的資訊，請參閱 [UI指南](../../ui/managing-resources/rules.md)。
+>本文介紹如何管理Reactor API中的規則。 如需如何與UI中的規則互動的相關資訊，請參閱 [UI指南](../../ui/managing-resources/rules.md).
 
-一個規則只屬於 [屬性](./properties.md)。 一個屬性可以有許多規則。
+規則只屬於一個 [屬性](./properties.md). 屬性可以有許多規則。
 
 ## 快速入門
 
-本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
+本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
 
-## 檢索規則清單 {#list}
+## 擷取規則清單 {#list}
 
-您可以通過發出GET請求來檢索屬於屬性的規則清單。
+您可以透過提出GET請求來包含以擷取屬於某個屬性的規則清單。
 
 **API格式**
 
@@ -35,13 +35,13 @@ GET /properties/{PROPERTY_ID}/rules
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 的 `id` 要列出其元件的屬性。 |
+| `PROPERTY_ID` | 此 `id` 要列出其元件的屬性。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->使用查詢參數，可以根據以下屬性篩選列出的規則：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
+>使用查詢引數，可根據下列屬性篩選列出的規則：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>請參閱指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
 
 **要求**
 
@@ -57,7 +57,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定屬性的規則清單。
+成功的回應會傳回指定屬性的規則清單。
 
 ```json
 {
@@ -140,13 +140,13 @@ curl -X GET \
 }
 ```
 
-## 查找規則 {#lookup}
+## 查詢規則 {#lookup}
 
-通過在GET請求的路徑中提供規則ID，可以查找規則。
+您可以在GET請求的路徑中提供規則的ID以查詢規則。
 
 >[!NOTE]
 >
->刪除規則時，它們被標籤為已刪除，但實際上不會從系統中刪除。 因此，可以檢索已刪除的規則。 刪除的規則可通過 `meta.deleted_at` 屬性。
+>刪除規則時，會將其標籤為已刪除，但實際上並未從系統中移除。 因此，可以擷取已刪除的規則。 刪除的規則可透過以下專案加以識別： `meta.deleted_at` 屬性。
 
 **API格式**
 
@@ -156,7 +156,7 @@ GET /rules/{RULE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_ID` | 的 `id` 你想查的規則。 |
+| `RULE_ID` | 此 `id` ，屬於您要查閱的規則。 |
 
 {style="table-layout:auto"}
 
@@ -174,7 +174,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回規則的詳細資訊。
+成功的回應會傳回規則的詳細資料。
 
 ```json
 {
@@ -248,7 +248,7 @@ curl -X GET \
 
 ## 建立規則 {#create}
 
-可以通過發出POST請求來建立新規則。
+您可以發出POST要求來建立新規則。
 
 **API格式**
 
@@ -258,7 +258,7 @@ POST /properties/{PROPERTY_ID}/rules
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 的 `id` 定義規則的屬性。 |
+| `PROPERTY_ID` | 此 `id` 屬性下定義規則。 |
 
 {style="table-layout:auto"}
 
@@ -284,15 +284,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必需）** 規則的可讀名稱。 |
-| `attributes.enabled` | 一個布爾值，指示是否啟用該規則。 |
-| `type` | 正在建立的資源類型。 對於此終結點，值必須為 `rules`。 |
+| `attributes.name` | **（必要）** 人類看得懂的規則名稱。 |
+| `attributes.enabled` | 表示規則是否已啟用的布林值。 |
+| `type` | 正在建立的資源型別。 此端點的值必須為 `rules`. |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應將返回新建立的規則的詳細資訊。
+成功的回應會傳回新建立規則的詳細資料。
 
 ```json
 {
@@ -364,13 +364,13 @@ curl -X POST \
 }
 ```
 
-## 將事件、條件和操作添加到規則 {#components}
+## 將事件、條件和動作新增至規則 {#components}
 
-一旦你 [建立規則](#create)，可以通過添加事件、條件和操作（統稱為規則元件）開始構建其邏輯。 請參閱上 [建立規則元件](./rule-components.md#create) 的 `/rule_components` 終結點指南，瞭解如何在Repartor API中執行此操作。
+一旦您擁有 [已建立規則](#create)，您就可以透過新增事件、條件和動作（統稱為規則元件）來開始建立其邏輯。 請參閱以下章節： [建立規則元件](./rule-components.md#create) 在 `/rule_components` 端點指南，瞭解如何在Reactor API中執行此動作。
 
 ## 更新規則 {#update}
 
-您可以通過將規則的ID包括在PATCH請求的路徑中來更新規則的屬性。
+您可以在PATCH請求的路徑中包含規則的ID來更新規則的屬性。
 
 **API格式**
 
@@ -380,13 +380,13 @@ PATCH /rules/{RULE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_ID` | 的 `id` 你想更新的規則。 |
+| `RULE_ID` | 此 `id` 要更新的規則。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求更新 `name` 現有規則。
+以下請求會更新 `name` 現有規則的URL。
 
 ```shell
 curl -X PATCH \
@@ -408,15 +408,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 其規則表示要為規則更新的屬性的對象。 可以為規則更新以下屬性： <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | 的 `id` 您想要更新的規則。 這應與 `{RULE_ID}` 請求路徑中提供的值。 |
-| `type` | 要更新的資源類型。 對於此終結點，值必須為 `rules`。 |
+| `attributes` | 物件，其規則代表要針對規則更新的屬性。 您可以為規則更新下列屬性： <ul><li>`name`</li><li>`enabled`</li></ul> |
+| `id` | 此 `id` 要更新的規則。 這應該符合 `{RULE_ID}` 請求路徑中提供的值。 |
+| `type` | 正在更新的資源型別。 此端點的值必須為 `rules`. |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應將返回更新規則的詳細資訊。
+成功的回應會傳回已更新規則的詳細資料。
 
 ```json
 {
@@ -490,7 +490,7 @@ curl -X PATCH \
 
 ## 刪除規則
 
-可以通過將規則ID包含在DELETE請求的路徑中來刪除規則。
+您可以在DELETE請求的路徑中包含規則ID來刪除規則。
 
 **API格式**
 
@@ -500,7 +500,7 @@ DELETE /rules/{RULE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_ID` | 的 `id` 刪除規則。 |
+| `RULE_ID` | 此 `id` 要刪除的規則的。 |
 
 {style="table-layout:auto"}
 
@@ -516,21 +516,21 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應返回HTTP狀態204（無內容），沒有響應正文，表示規則已被刪除。
+成功的回應會傳回HTTP狀態204 （無內容），且沒有回應內文，表示規則已刪除。
 
-## 管理規則的注釋 {#notes}
+## 管理規則的附註 {#notes}
 
-規則是「顯著」資源，這意味著您可以建立和檢索每個資源上基於文本的注釋。 查看 [notes endpoint guide（注釋終結點指南）](./notes.md) 的子菜單。
+規則是「重要」資源，這表示您可以為每個個別資源建立和擷取文字型附註。 請參閱 [附註端點指南](./notes.md) 有關如何管理規則和其他相容資源附註的詳細資訊。
 
-## 檢索規則的相關資源 {#related}
+## 擷取規則的相關資源 {#related}
 
-以下調用演示如何檢索規則的相關資源。 當 [查找規則](#lookup)，這些關係列在 `relationships` 規則。
+下列呼叫示範如何擷取規則的相關資源。 時間 [查詢規則](#lookup)，這些關係會列在 `relationships` 規則。
 
-查看 [關係指南](../guides/relationships.md) 的子菜單。
+請參閱 [關係指南](../guides/relationships.md) 以取得有關Reactor API中關係的詳細資訊。
 
-### 列出規則的相關庫 {#libraries}
+### 列出規則的相關程式庫 {#libraries}
 
-可通過附加來列出利用特定規則的庫 `/libraries` 查找請求的路徑。
+您可以藉由附加，列出使用特定規則的程式庫 `/libraries` 至查閱請求的路徑。
 
 **API格式**
 
@@ -540,7 +540,7 @@ GET  /rules/{RULE_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RULE_ID}` | 的 `id` 列出其庫的規則。 |
+| `{RULE_ID}` | 此 `id` 要列出其程式庫的規則。 |
 
 {style="table-layout:auto"}
 
@@ -558,7 +558,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回使用指定規則的庫清單。
+成功回應會傳回使用指定規則的程式庫清單。
 
 ```json
 {
@@ -650,9 +650,9 @@ curl -X GET \
 }
 ```
 
-### 列出規則的相關修訂 {#revisions}
+### 列出規則的相關修訂版本 {#revisions}
 
-可通過附加來列出規則的修訂 `/revisions` 查找請求的路徑。
+您可以藉由附加來列出規則的修訂版本 `/revisions` 至查閱請求的路徑。
 
 **API格式**
 
@@ -662,7 +662,7 @@ GET  /rules/{RULE_ID}/revisions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RULE_ID}` | 的 `id` 要列出其修訂的規則。 |
+| `{RULE_ID}` | 此 `id` 要列出其修訂版本的規則。 |
 
 {style="table-layout:auto"}
 
@@ -680,7 +680,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回使用指定規則的修訂清單。
+成功的回應會傳回使用指定規則的修訂清單。
 
 ```json
 {
@@ -828,9 +828,9 @@ curl -X GET \
 }
 ```
 
-### 查找規則的相關原點 {#origin}
+### 查詢規則的相關來源 {#origin}
 
-可通過附加來查找規則的原點（早期版本） `/origin` 查找請求的路徑。
+您可以藉由附加來查閱規則的原始（舊版） `/origin` 至查閱請求的路徑。
 
 **API格式**
 
@@ -840,7 +840,7 @@ GET /rules/{RULE_ID}/origin
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RULE_ID}` | 的 `id` 你想查的原點。 |
+| `{RULE_ID}` | 此 `id` 要查詢其原點的規則。 |
 
 {style="table-layout:auto"}
 
@@ -858,7 +858,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定規則擴展的詳細資訊。
+成功的回應會傳回指定規則擴充功能的詳細資料。
 
 ```json
 {
@@ -930,9 +930,9 @@ curl -X GET \
 }
 ```
 
-### 查找規則的相關屬性 {#property}
+### 查詢規則的相關屬性 {#property}
 
-可通過附加來查找擁有規則的屬性 `/property` 查找請求的路徑。
+您可以透過附加來查詢擁有規則的屬性 `/property` 至查閱請求的路徑。
 
 **API格式**
 
@@ -942,7 +942,7 @@ GET /rules/{RULE_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RULE_ID}` | 的 `id` 你想查誰的財產。 |
+| `{RULE_ID}` | 此 `id` 要查詢其屬性的規則。 |
 
 {style="table-layout:auto"}
 
@@ -960,7 +960,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定規則屬性的詳細資訊。
+成功的回應會傳回指定規則屬性的詳細資料。
 
 ```json
 {

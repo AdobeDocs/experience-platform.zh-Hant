@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；命名空間；命名空間；命名空間；標識名稱空間；標識名稱空間；標識名稱空間；標識；標識；標識服務；標識服務
+keywords: Experience Platform；首頁；熱門主題；名稱空間；名稱空間；名稱空間；名稱空間；身分名稱空間；身分名稱空間；身分名稱空間；身分；身分；身分服務；身分服務
 solution: Experience Platform
-title: Identity Namespace概述
-description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。 例如，它們將值"name@email.com"區分為電子郵件地址，或將值"443522"區分為數字CRM ID。
+title: 身分名稱空間概觀
+description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。 例如，他們會將「name@email.com」的值視為電子郵件地址，或將「443522」的值視為數值CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 482de6a50d14b9de095014b070ce400a2fd273cc
 workflow-type: tm+mt
@@ -11,27 +11,27 @@ ht-degree: 8%
 
 ---
 
-# Identity命名空間概述
+# 身分名稱空間總覽
 
-標識命名空間是 [[!DNL Identity Service]](./home.md) 作為身份相關背景的指標。 例如，它們會區分「 name」的值<span>@email.com」作為電子郵件地址，或「443522」作為數字CRM ID。
+身分名稱空間是的元件 [[!DNL Identity Service]](./home.md) 做為身分識別相關內容的指示器。 例如，它們區分「name」的值<span>@email.com」作為電子郵件地址，或「443522」作為數值CRM ID。
 
 ## 快速入門
 
 使用身分命名空間需先了解所涉及的各種 Adobe Experience Platform 服務。開始使用命名空間之前，請先檢閱下列服務文件：
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md):根據來自多個來源的聚合資料即時提供統一的客戶配置檔案。
-- [[!DNL Identity Service]](./home.md):通過跨設備和系統橋接身份，更好地瞭解單個客戶及其行為。
-- [[!DNL Privacy Service]](../privacy-service/home.md):身份命名空間用於法律隱私法規(如一般資料保護法規(GDPR))的合規性請求。 每個隱私請求都相對於命名空間進行，以便確定哪些使用者的資料應受到影響。
+- [[!DNL Real-Time Customer Profile]](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
+- [[!DNL Identity Service]](./home.md)：透過跨裝置和系統橋接身分，更能瞭解個別客戶及其行為。
+- [[!DNL Privacy Service]](../privacy-service/home.md)：身分名稱空間用於一般資料保護規範(GDPR)等法律隱私權法規的合規性請求中。 每個隱私權請求都是相對於名稱空間提出，以識別哪些消費者的資料應該受到影響。
 
-## 瞭解標識命名空間
+## 瞭解身分名稱空間
 
-完全限定的標識包括ID值和命名空間。 在配置檔案片段間匹配記錄資料時，如何 [!DNL Real-Time Customer Profile] 合併配置檔案資料，標識值和命名空間必須匹配。
+完整身分包含ID值和名稱空間。 跨設定檔片段比對記錄資料時，例如 [!DNL Real-Time Customer Profile] 會合併設定檔資料，身分值和名稱空間必須相符。
 
-例如，兩個配置檔案片段可能包含不同的主ID，但它們共用「Email」命名空間的相同值，因此 [!DNL Platform] 能夠看到這些片段實際上是同一個個體並且把資料集合在個體的身份圖中
+例如，兩個設定檔片段可能包含不同的主要ID，但兩者的「電子郵件」名稱空間值相同，因此 [!DNL Platform] 能夠看到這些片段實際上是同一個人，並為該個人將資料彙整在身分圖表中。
 
 ![](images/identity-service-stitching.png)
 
-### 標識類型 {#identity-types}
+### 身分型別 {#identity-types}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
@@ -39,96 +39,96 @@ ht-degree: 8%
 >abstract="身分識別類型控制資料是否儲存到身分識別圖中。非人識別碼不會儲存，所有其他身分識別類型都會儲存。"
 >text="Learn more in documentation"
 
-資料可以由幾種不同的標識類型來標識。 標識類型是在建立標識命名空間時指定的，並控制資料是否永續到標識圖形以及如何處理該資料的任何特殊說明。 除外的所有標識類型 **非人員標識符** 按照將命名空間及其相應ID值拼接到標識圖簇的相同行為進行操作。 使用時資料不會拼接在一起 **非人員標識符**。
+資料可由數種不同的身分型別識別。 身分型別是在建立身分名稱空間時指定的，並控制資料是否持續存在身分圖表中，以及應該如何處理該資料的任何特殊指示。 除外的所有身分型別 **非人員識別碼** 請遵循相同的行為，將名稱空間及其對應的ID值拼接至身分圖表叢集。 使用時，資料不會彙整在一起 **非人員識別碼**.
 
-以下標識類型在 [!DNL Platform]:
+下列身分型別可在以下位置使用： [!DNL Platform]：
 
-| 標識類型 | 說明 |
+| 身分型別 | 說明 |
 | --- | --- |
-| Cookie ID | Cookie ID標識Web瀏覽器。 這些身份對於擴展至關重要，並且構成了身份圖的大部分。 然而，從本質上講，它們會迅速衰敗，並逐漸失去價值。 |
-| 跨設備ID | 跨設備ID標識單個ID，並通常將其他ID連接在一起。 示例包括登錄ID、CRM ID和會員ID。 這表示 [!DNL Identity Service] 以靈敏地處理價值。 |
-| 設備ID | 設備ID標識硬體設備，如IDFA(iPhone和iPad)、GAID(Android)和RIDA(Roku)，可由家庭中的多人共用。 |
-| 電子郵件地址 | 電子郵件地址通常與一個人關聯，因此可以用於通過不同渠道識別此人。 此類型的身份包括個人身份資訊(PII)。 這表示 [!DNL Identity Service] 以靈敏地處理價值。 |
-| 非人員識別碼 | 非人員ID用於儲存需要命名空間但未連接到人員群集的標識符。 例如，產品SKU、與產品、組織或商店相關的資料。 |
-| 電話號碼 | 電話號碼通常與一個人關聯，因此可以用於通過不同渠道識別此人。 此類型的身份包括PII。 這表明 [!DNL Identity Service] 以靈敏地處理價值。 |
+| Cookie ID | Cookie ID可識別網頁瀏覽器。 這些身分對於擴充至關重要，並構成身分圖表的大多數。 然而，它們自然會迅速衰落，並隨著時間而失去價值。 |
+| 跨裝置ID | 跨裝置ID會識別個人，通常會將其他ID連結在一起。 範例包括登入ID、CRM ID和熟客ID。 此表示會 [!DNL Identity Service] 以敏感地處理值。 |
+| 裝置ID | 裝置ID會識別硬體裝置，例如IDFA (iPhone和iPad)、GAID (Android)和RIDA (Roku)，而且可由家中的多個人共用。 |
+| 電子郵件地址 | 電子郵件地址通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 此型別的身分包含個人識別資訊(PII)。 此表示會 [!DNL Identity Service] 以敏感地處理值。 |
+| 非人員識別碼 | 非人員ID是用來儲存需要名稱空間但未連線至人員叢集的識別碼。 例如，產品SKU、與產品、組織或商店相關的資料。 |
+| 電話號碼 | 電話號碼通常與單一人員相關聯，因此可用於跨不同頻道識別該人員。 此型別的身分識別包括PII。 此表示以下情況： [!DNL Identity Service] 以敏感地處理值。 |
 
-### 標準命名空間 {#standard}
+### 標準名稱空間 {#standard}
 
-Experience Platform提供了多個可用於所有組織的標識命名空間。 這些名稱空間稱為標準命名空間，使用 [!DNL Identity Service] API或通過平台UI。
+Experience Platform提供數個適用於所有組織的身分名稱空間。 這些稱為標準名稱空間，可透過以下方式檢視： [!DNL Identity Service] API或透過Platform UI。
 
-以下標準命名空間可供平台內的所有組織使用：
+提供下列標準名稱空間，供Platform內的所有組織使用：
 
 | 顯示名稱 | 說明 |
 | ------------ | ----------- |
-| AdCloud | 表示AdobeAdCloud的命名空間。 |
-| Adobe Analytics（傳統ID） | 表示Adobe Analytics的命名空間。 請參閱以下文檔 [Adobe Analytics命名空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) 的子菜單。 |
-| AppleIDFA（廣告商ID） | 表示廣告商的AppleID的命名空間。 請參閱以下文檔 [基於興趣的廣告](https://support.apple.com/en-us/HT202074) 的子菜單。 |
-| Apple推送通知服務 | 表示使用Apple推送通知服務收集的標識的命名空間。 請參閱以下文檔 [Apple推送通知服務](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) 的子菜單。 |
-| 核心 | 表示Adobe Audience Manager的命名空間。 此命名空間也可以通過其舊名稱引用：&quot;Adobe AudienceManager&quot; 請參閱以下文檔 [Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) 的子菜單。 |
-| ECID | 表示ECID的命名空間。 以下別名也可以引用此命名空間：&quot;Adobe Marketing CloudID&quot;,&quot;Adobe Experience CloudID&quot;,&quot;Adobe Experience PlatformID&quot; 請參閱以下文檔 [ECID](./ecid.md) 的子菜單。 |
-| 電子郵件 | 表示電子郵件地址的命名空間。 此類型的命名空間通常與單個人關聯，因此可用於跨不同渠道標識該人。 |
-| 電子郵件（SHA256，小寫） | 預散列電子郵件地址的命名空間。 在使用SHA256散列之前，此命名空間中提供的值將轉換為小寫。 在對電子郵件地址進行規範化之前，需要裁剪前導空格和尾隨空格。 無法追溯更改此設定。 請參閱以下文檔 [SHA256散列支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) 的子菜單。 |
-| Firebase雲消息 | 表示使用GoogleFirebase雲消息為推送通知收集的身份的命名空間。 請參閱以下文檔 [GoogleFirebase雲消息](https://firebase.google.com/docs/cloud-messaging) 的子菜單。 |
-| Google廣告ID(GAID) | 表示Google廣告ID的命名空間。 請參閱以下文檔 [Google廣告ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) 的子菜單。 |
-| Google按一下ID | 表示Google按一下ID的命名空間。 請參閱以下文檔 [在Google廣告中點擊跟蹤](https://developers.google.com/adwords/api/docs/guides/click-tracking) 的子菜單。 |
-| 電話 | 表示電話號碼的命名空間。 此類型的命名空間通常與單個人關聯，因此可用於跨不同渠道標識該人。 |
-| 電話(E.164) | 表示需要以E.164格式散列的原始電話號碼的命名空間。 E.164格式包括加號(`+`)、國際國家/地區呼叫代碼、本地區代碼和電話號碼。 例如: `(+)(country code)(area code)(phone number)`. |
-| 電話(SHA256) | 表示需要使用SHA256散列的電話號碼的命名空間。 必須刪除符號、字母和任何前導零。 您還必須將國家/地區的調用代碼添加為前置詞。 |
-| 電話(SHA256_E.164) | 表示需要使用SHA256和E.164格式散列的原始電話號碼的命名空間。 |
-| TNTID | 表示Adobe Target的命名空間。 請參閱以下文檔 [目標](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) 獲取更多資訊。 |
-| Windows AID | 表示Windows廣告ID的命名空間。 請參閱以下文檔 [Windows廣告ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) 的子菜單。 |
+| AdCloud | 代表AdobeAdCloud的名稱空間。 |
+| Adobe Analytics （舊版ID） | 代表Adobe Analytics的名稱空間。 請參閱以下檔案： [Adobe Analytics名稱空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) 以取得詳細資訊。 |
+| Apple IDFA （廣告商的ID） | 代表廣告商Apple ID的名稱空間。 請參閱以下檔案： [興趣型廣告](https://support.apple.com/en-us/HT202074) 以取得詳細資訊。 |
+| Apple推播通知服務 | 代表使用Apple推播通知服務所收集之身分的名稱空間。 請參閱以下檔案： [Apple推播通知服務](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) 以取得詳細資訊。 |
+| 核心 | 代表Adobe Audience Manager的名稱空間。 此名稱空間也可以透過其舊版名稱來參照：「Adobe AudienceManager」。 請參閱以下檔案： [AUDIENCE MANAGERID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids) 以取得詳細資訊。 |
+| ECID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](./ecid.md) 以取得詳細資訊。 |
+| 電子郵件 | 代表電子郵件地址的名稱空間。 這類名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
+| 電子郵件（SHA256，小寫） | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪開頭和結尾的空格。 此設定無法回溯變更。 請參閱以下檔案： [sha256雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) 以取得詳細資訊。 |
+| Firebase雲端通訊 | 代表使用Google Firebase Cloud Messaging收集以進行推播通知的身分識別的名稱空間。 請參閱以下檔案： [Google Firebase雲端通訊](https://firebase.google.com/docs/cloud-messaging) 以取得詳細資訊。 |
+| Google Ad ID (GAID) | 代表Google Advertising ID的名稱空間。 請參閱以下檔案： [Google廣告ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) 以取得詳細資訊。 |
+| Google點按ID | 代表Google點選ID的名稱空間。 請參閱以下檔案： [Google Ads中的點選追蹤](https://developers.google.com/adwords/api/docs/guides/click-tracking) 以取得詳細資訊。 |
+| 電話 | 代表電話號碼的名稱空間。 這類名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
+| 電話(E.164) | 代表需要以E.164格式雜湊的原始電話號碼的名稱空間。 E.164格式包含加號(`+`)、國際國家/地區的電話代碼、區域代碼和電話號碼。 例如: `(+)(country code)(area code)(phone number)`. |
+| 電話(SHA256) | 代表需要使用SHA256雜湊之電話號碼的名稱空間。 您必須移除符號、字母及任何前導零。 您也必須新增國家/地區呼叫代碼作為前置詞。 |
+| 電話(SHA256_E.164) | 代表需要使用SHA256和E.164格式雜湊的原始電話號碼的名稱空間。 |
+| TNTID | 代表Adobe Target的名稱空間。 請參閱以下檔案： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) 瞭解更多資訊。 |
+| Windows AID | 代表Windows Advertising ID的名稱空間。 請參閱以下檔案： [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) 以取得詳細資訊。 |
 
-### 查看標識命名空間 {#view-identity-namespaces}
+### 檢視身分名稱空間 {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="檢視整合身分"
 >abstract="整合身分識別是用於連接其他系統的命名空間，不用於身分識別解析或拼接身分識別。<br>這些身分依預設是隱藏的。使用切換來檢視整合命名空間。"
 
-要在UI中查看標識命名空間，請選擇 **[!UICONTROL 身份]** 在左側導航中，然後選擇 **[!UICONTROL 瀏覽]**。
+若要在UI中檢視身分識別名稱空間，請選取 **[!UICONTROL 身分]** 在左側導覽中，然後選取 **[!UICONTROL 瀏覽]**.
 
 ![瀏覽](./images/browse.png)
 
-標識命名空間的清單將出現在頁面的主介面中，其中顯示了有關其名稱、標識符號、上次更新日期的資訊，以及它們是標準命名空間還是自定義命名空間。 右滑軌包含有關 [!UICONTROL 標識圖強度]。
+身分名稱空間清單會顯示在頁面的主要介面中，顯示有關其名稱、身分符號、上次更新日期以及是否為標準或自訂名稱空間的資訊。 右側欄包含的相關資訊 [!UICONTROL 身分圖表強度].
 
-![身份](./images/identities.png)
+![身分](./images/identities.png)
 
-平台還提供用於整合目的的命名空間。 預設情況下，這些命名空間會隱藏，因為它們用於與其他系統連接，而不用於縫合標識。 要查看整合命名空間，請選擇 **[!UICONTROL 查看整合標識]**。
+Platform也提供名稱空間以進行整合。 預設會隱藏這些名稱空間，因為它們是用來連線其他系統，而不是用來拼接身分。 若要檢視整合名稱空間，請選取 **[!UICONTROL 檢視整合身分]**.
 
-![視圖整合 — 標識](./images/view-integration-identities.png)
+![view-integration-identities](./images/view-integration-identities.png)
 
-從清單中選擇標識命名空間以查看有關特定命名空間的資訊。 選擇標識名稱空間將更新右欄上的顯示，以顯示與您選擇的標識名稱空間相關的元資料，包括接收的標識數和失敗和跳過的記錄數。
+從清單中選取身分名稱空間，以檢視特定名稱空間的資訊。 選取身分名稱空間會更新右側邊欄上的顯示，以顯示與您選取的身分名稱空間有關的中繼資料，包括擷取的身分數量以及失敗和略過的記錄數量。
 
 ![select-namespace](./images/select-namespace.png)
 
-## 管理自定義命名空間 {#manage-namespaces}
+## 管理自訂名稱空間 {#manage-namespaces}
 
-根據您的組織資料和使用案例，您可能需要自定義命名空間。 可以使用 [[!DNL Identity Service]](./api/create-custom-namespace.md) API或通過UI。
+根據您的組織資料和使用案例，您可能需要自訂名稱空間。 自訂名稱空間可透過以下方式建立： [[!DNL Identity Service]](./api/create-custom-namespace.md) API或透過UI。
 
-要使用UI建立自定義命名空間，請導航到 **[!UICONTROL 身份]** 工作區，選擇 **[!UICONTROL 瀏覽]**，然後選擇 **[!UICONTROL 建立標識命名空間]**。
+若要使用UI建立自訂名稱空間，請導覽至 **[!UICONTROL 身分]** 工作區，選取 **[!UICONTROL 瀏覽]**，然後選取 **[!UICONTROL 建立身分名稱空間]**.
 
-![選擇建立](./images/select-create.png)
+![select-create](./images/select-create.png)
 
-的 **[!UICONTROL 建立標識命名空間]** 對話框。 提供唯一 **[!UICONTROL 顯示名稱]** 和 **[!UICONTROL 身份符號]** 然後選擇要建立的標識類型。 您還可以添加可選說明以添加有關命名空間的詳細資訊。 所有標識類型(除 **非人員標識符** 跟拼接一樣。 如果選擇 **非人員標識符** 作為建立命名空間時的標識類型，不會進行縫合。 有關每個標識類型的特定資訊，請參閱上的表 [標識類型](#identity-types)。
+此 **[!UICONTROL 建立身分名稱空間]** 對話方塊隨即顯示。 提供唯一 **[!UICONTROL 顯示名稱]** 和 **[!UICONTROL 身分符號]** 然後選取您要建立的身分型別。 您也可以新增選擇性說明，以新增有關名稱空間的進一步資訊。 所有身分型別，但不包括 **非人員識別碼** 會遵循相同的拼接行為。 如果您選取 **非人員識別碼** 作為身分型別，在建立名稱空間時不會進行拼接。 如需有關每種身分型別的特定資訊，請參閱以下表格： [身分型別](#identity-types).
 
-完成後，選擇 **[!UICONTROL 建立]**。
+完成後，選取 **[!UICONTROL 建立]**.
 
 >[!IMPORTANT]
 >
->您定義的命名空間對您的組織是專用的，並且需要唯一的標識符才能成功建立。
+>您定義的名稱空間屬於貴組織專用，而且需要唯一的身分符號才能成功建立。
 
 ![create-identity-namespace](./images/create-identity-namespace.png)
 
-與標準命名空間類似，您可以從 **[!UICONTROL 瀏覽]** 頁籤。 但是，使用自定義命名空間，您還可以從詳細資訊區域編輯其顯示名稱和說明。
+與標準名稱空間類似，您可以從 **[!UICONTROL 瀏覽]** 標籤以檢視其詳細資訊。 不過，有了自訂名稱空間，您還可以從詳細資訊區域編輯其顯示名稱和說明。
 
 >[!NOTE]
 >
->命名空間一旦建立，就無法刪除，其標識符和類型也無法更改。
+>建立名稱空間後，便無法刪除該名稱空間，也無法變更其身分符號和型別。
 
-## 標識資料中的命名空間
+## 身分資料中的名稱空間
 
-為身份提供命名空間取決於您用於提供身份資料的方法。 有關提供資料標識資料的詳細資訊，請參閱 [提供身份資料](./home.md#supplying-identity-data-to-identity-service) 的 [!DNL Identity Service] 概述。
+提供身分的名稱空間取決於您用來提供身分資料的方法。 如需有關提供資料身分資料的詳細資訊，請參閱以下章節： [提供身分資料](./home.md#supplying-identity-data-to-identity-service) 在 [!DNL Identity Service] 概述。
 
 ## 後續步驟
 
-現在，您已經瞭解了標識命名空間的關鍵概念，可以開始學習如何使用標識圖 [標識圖查看器](./ui/identity-graph-viewer.md)。
+現在您已瞭解身分識別名稱空間的主要概念，可以開始瞭解如何使用身分識別圖表 [身分圖表檢視器](./ui/identity-graph-viewer.md).

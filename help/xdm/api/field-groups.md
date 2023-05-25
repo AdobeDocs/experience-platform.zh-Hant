@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；資料模型；模式註冊；欄位組；欄位組；欄位組；建立
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述登入；欄位群組；欄位群組；建立
 solution: Experience Platform
-title: 欄位組API終結點
-description: 通過架構註冊表API中的/fieldgroups終結點，可以以寫程式方式管理體驗應用程式中的XDM架構欄位組。
+title: 欄位群組API端點
+description: 結構描述登入API中的/fieldgroups端點可讓您以程式設計方式管理體驗應用程式中的XDM結構描述欄位群組。
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 2%
 
 ---
 
-# 架構欄位組終結點
+# 結構描述欄位群組端點
 
-模式欄位組是可重用的元件，它定義了表示特定概念的一個或多個欄位，如個人、郵件地址或Web瀏覽器環境。 欄位組將作為實現相容類的架構的一部分被包括，具體取決於它們所代表的資料（記錄或時間序列）的行為。 的 `/fieldgroups` 端點 [!DNL Schema Registry] API允許您以寫程式方式管理體驗應用程式中的欄位組。
+結構描述欄位群組是可重複使用的元件，可定義代表特定概念的一或多個欄位，例如個人、郵寄地址或網頁瀏覽器環境。 視欄位群組代表的資料行為（記錄或時間序列）而定，這些欄位群組旨在包含在實作相容類別的結構描述中。 此 `/fieldgroups` 中的端點 [!DNL Schema Registry] API可讓您以程式設計方式管理體驗應用程式中的欄位群組。
 
 ## 快速入門
 
-本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-## 檢索欄位組清單 {#list}
+## 擷取欄位群組清單 {#list}
 
-您可以列出 `global` 或 `tenant` 容器：向 `/global/fieldgroups` 或 `/tenant/fieldgroups`的下界。
+您可以在「 」下方列出所有欄位群組 `global` 或 `tenant` 向發出GET請求來建立容器 `/global/fieldgroups` 或 `/tenant/fieldgroups`（分別）。
 
 >[!NOTE]
 >
->列出資源時，方案註冊表將結果集限制為300個項。 要返回超出此限制的資源，必須使用分頁參數。 還建議您使用其他查詢參數來篩選結果並減少返回的資源數。 請參閱 [查詢參數](./appendix.md#query) 的子菜單。
+>列出資源時，結構描述登入將結果集限製為300個專案。 若要傳回超出此限制的資源，您必須使用分頁引數。 也建議您使用其他查詢引數來篩選結果並減少傳回的資源數量。 請參閱以下小節： [查詢引數](./appendix.md#query) 詳細資訊。
 
 **API格式**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 要從以下位置檢索欄位組的容器： `global` 用於Adobe建立的欄位組或 `tenant` 為您的組織擁有的欄位組。 |
-| `{QUERY_PARAMS}` | 用於篩選結果的可選查詢參數。 查看 [附錄文檔](./appendix.md#query) 的子菜單。 |
+| `{CONTAINER_ID}` | 您要從中擷取欄位群組的容器： `global` 適用於Adobe建立的欄位群組或 `tenant` 適用於貴組織擁有的欄位群組。 |
+| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用引數的清單。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求從 `tenant` 容器，使用 `orderby` 查詢參數，按欄位組排序 `title` 屬性。
+以下請求會從「 」擷取欄位群組清單 `tenant` 容器，使用 `orderby` 查詢引數，依欄位群組排序 `title` 屬性。
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-響應格式取決於 `Accept` 請求中發送的標頭。 以下 `Accept` 標題可用於清單欄位組：
+回應格式取決於 `Accept` 標頭已在請求中傳送。 下列專案 `Accept` 標頭可用於列出欄位群組：
 
-| `Accept` 標題 | 說明 |
+| `Accept` 頁首 | 說明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 返回每個資源的簡短摘要。 這是列出資源的建議標頭。 (限制：300) |
-| `application/vnd.adobe.xed+json` | 為每個資源返回完整的JSON欄位組（原始） `$ref` 和 `allOf` 包含。 (限制：300) |
+| `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標頭。 （上限： 300） |
+| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON欄位群組，包含原始欄位 `$ref` 和 `allOf` 包含。 （上限： 300） |
 
 {style="table-layout:auto"}
 
 **回應**
 
-上述請求使用 `application/vnd.adobe.xed-id+json` `Accept` 標頭，因此響應僅包括 `title`。 `$id`。 `meta:altId`, `version` 每個欄位組的屬性。 使用其他 `Accept` 標題(H)`application/vnd.adobe.xed+json`)返回每個欄位組的所有屬性。 選擇相應的 `Accept` 標題，具體取決於您在回應中需要的資訊。
+上述請求使用的是 `application/vnd.adobe.xed-id+json` `Accept` 標題，因此回應僅包含 `title`， `$id`， `meta:altId`、和 `version` 每個欄位群組的屬性。 使用另一個 `Accept` 頁首(`application/vnd.adobe.xed+json`)會傳回每個欄位群組的所有屬性。 選取適當的 `Accept` 標題依您在回應中所需的資訊而定。
 
 ```json
 {
@@ -109,9 +109,9 @@ curl -X GET \
 }
 ```
 
-## 查找欄位組 {#lookup}
+## 查詢欄位群組 {#lookup}
 
-通過將欄位組的ID包括在請求路徑中，可以查找特定的欄位組。
+您可以在GET請求的路徑中包含欄位群組ID來查詢特定欄位群組。
 
 **API格式**
 
@@ -121,14 +121,14 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 存放要檢索的欄位組的容器： `global` 為Adobe建立的欄位組或 `tenant` 為您的組織擁有的欄位組。 |
-| `{FIELD_GROUP_ID}` | 的 `meta:altId` 或URL編碼 `$id` 查找欄位組。 |
+| `{CONTAINER_ID}` | 存放您要擷取之欄位群組的容器： `global` 針對Adobe建立的欄位群組或 `tenant` 適用於貴組織擁有的欄位群組。 |
+| `{FIELD_GROUP_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要查閱的欄位群組的名稱。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求通過其檢索欄位組 `meta:altId` 路徑中提供的值。
+以下請求會依其擷取欄位群組 `meta:altId` 路徑中提供的值。
 
 ```shell
 curl -X GET \
@@ -140,21 +140,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-響應格式取決於 `Accept` 請求中發送的標頭。 所有查找請求都需要 `version` 包括在 `Accept` 標題。 以下 `Accept` 標題可用：
+回應格式取決於 `Accept` 標頭已在請求中傳送。 所有查詢請求都需要 `version` 包含在 `Accept` 標頭。 下列專案 `Accept` 標頭可供使用：
 
-| `Accept` 標題 | 說明 |
+| `Accept` 頁首 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | 原始 `$ref` 和 `allOf`，包含標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解析，有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 原始 `$ref` 和 `allOf`，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解析，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解析，包含描述符。 |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | 原始 `$ref` 和 `allOf`，有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解決，具有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 原始 `$ref` 和 `allOf`，無標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解決，無標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解決，包含描述項。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應返回欄位組的詳細資訊。 返回的欄位取決於 `Accept` 請求中發送的標頭。 不同實驗 `Accept` 標題：比較響應並確定哪個標題最適合您的使用案例。
+成功的回應會傳回欄位群組的詳細資訊。 傳回的欄位取決於 `Accept` 標頭已在請求中傳送。 使用不同的實驗 `Accept` 標頭，用來比較回應及判斷哪個標頭最適合您的使用案例。
 
 ```json
 {
@@ -217,7 +217,7 @@ curl -X GET \
 
 ## 建立欄位群組 {#create}
 
-您可以在 `tenant` 容器，方法是發出POST請求。
+您可以在下定義自訂欄位群組 `tenant` 容器建立POST要求。
 
 **API格式**
 
@@ -227,11 +227,11 @@ POST /tenant/fieldgroups
 
 **要求**
 
-定義新欄位組時，它必須包括 `meta:intendedToExtend` 屬性，列出 `$id` 欄位組與之相容的類。 在本示例中，欄位組與 `Property` 類。 自定義欄位必須嵌套在 `_{TENANT_ID}` （如示例所示），以避免類和其他欄位組提供的類似欄位發生衝突。
+定義新欄位群組時，必須包含 `meta:intendedToExtend` 屬性，列出 `$id` 與欄位群組相容的類別。 在此範例中，欄位群組與 `Property` 先前定義的類別。 自訂欄位必須巢狀內嵌於 `_{TENANT_ID}` （如範例所示）以避免與類別和其他欄位群組提供的類似欄位發生任何衝突。
 
 >[!NOTE]
 >
->有關如何定義要包括在欄位組中的不同欄位類型的詳細資訊，請參閱上的指南 [定義API中的自定義欄位](../tutorials/custom-fields-api.md#define-fields)。
+>有關如何定義要包含在欄位群組中的不同欄位型別的詳細資訊，請參閱以下指南： [在API中定義自訂欄位](../tutorials/custom-fields-api.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -300,7 +300,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立）和包含新建立欄位組的詳細資訊的負載，包括 `$id`。 `meta:altId`, `version`。 這些值是只讀的，由 [!DNL Schema Registry]。
+成功的回應會傳回HTTP狀態201 （已建立）以及包含新建立欄位群組詳細資訊的裝載，包括 `$id`， `meta:altId`、和 `version`. 這些值是唯讀的，並由 [!DNL Schema Registry].
 
 ```JSON
 {
@@ -384,15 +384,15 @@ curl -X POST \
 }
 ```
 
-執行GET請求 [列出所有欄位組](#list) 現在，租戶容器中將包含「屬性詳細資訊」欄位組，或者 [執行查找(GET)請求](#lookup) 使用URL編碼 `$id` URI可直接查看新欄位組。
+執行GET要求至 [列出所有欄位群組](#list) 「租使用者」容器中的「屬性詳細資料」欄位群組，或者您可以 [執行查詢(GET)請求](#lookup) 使用URL編碼 `$id` URI直接檢視新欄位群組。
 
-## 更新欄位組 {#put}
+## 更新欄位群組 {#put}
 
-您可以通過PUT操作替換整個欄位組，實際上就是重新寫入資源。 通過PUT請求更新欄位組時，正文必須包括在 [建立新欄位組](#create) POST。
+您可以透過PUT操作取代整個欄位群組，基本上是重寫資源。 透過PUT請求更新欄位群組時，本文必須包含以下情況所需的所有欄位： [建立新欄位群組](#create) 在POST請求中。
 
 >[!NOTE]
 >
->如果只想更新欄位組的一部分，而不想完全替換它，請參見上的部分 [更新欄位組的一部分](#patch)。
+>如果您只想更新部分欄位群組而不是完全取代它，請參閱 [更新欄位群組的一部分](#patch).
 
 **API格式**
 
@@ -402,13 +402,13 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | 的 `meta:altId` 或URL編碼 `$id` 要重寫的欄位組。 |
+| `{FIELD_GROUP_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要重新寫入的欄位群組。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求重寫現有欄位組，並添加新欄位組 `propertyCountry` 的子菜單。
+以下請求會重新寫入現有欄位群組，並新增 `propertyCountry` 欄位。
 
 ```SHELL
 curl -X PUT \
@@ -482,7 +482,7 @@ curl -X PUT \
 
 **回應**
 
-成功的響應將返回更新的欄位組的詳細資訊。
+成功的回應會傳回已更新欄位群組的詳細資訊。
 
 ```JSON
 {
@@ -571,13 +571,13 @@ curl -X PUT \
 }
 ```
 
-## 更新欄位組的一部分 {#patch}
+## 更新欄位群組的部分 {#patch}
 
-您可以使用PATCH請求更新欄位組的一部分。 的 [!DNL Schema Registry] 支援所有標準JSON修補程式操作，包括 `add`。 `remove`, `replace`。 有關JSON修補程式的詳細資訊，請參見 [API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求來更新部分欄位群組。 此 [!DNL Schema Registry] 支援所有標準JSON修補程式操作，包括 `add`， `remove`、和 `replace`. 如需JSON修補程式的詳細資訊，請參閱 [API基礎指南](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參閱上的部分 [使用PUT操作替換欄位組](#put)。
+>如果您想使用新值取代整個資源，而不是更新個別欄位，請參閱 [使用PUT操作取代欄位群組](#put).
 
 **API格式**
 
@@ -587,15 +587,15 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | URL編碼 `$id` URI或 `meta:altId` 的子菜單。 |
+| `{FIELD_GROUP_ID}` | URL編碼 `$id` URI或 `meta:altId` 要更新的欄位群組。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下面的示例請求更新 `description` ，並添加新 `propertyCity` 的子菜單。
+以下範例請求會更新 `description` 欄位群組中的欄位名稱，並新增一個 `propertyCity` 欄位。
 
-請求主體採用陣列的形式，每個列出的對象代表對單個欄位的特定更改。 每個對象都包括要執行的操作(`op`)，應對(執行的操作`path`)，以及該操作中應包含哪些資訊(`value`)。
+請求內文採用陣列形式，每個列出的物件都代表個別欄位的特定變更。 每個物件都包含要執行的操作(`op`)，操作應執行於哪個欄位(`path`)，以及該作業應包含哪些資訊(`value`)。
 
 ```SHELL
 curl -X PATCH \
@@ -625,7 +625,7 @@ curl -X PATCH \
 
 **回應**
 
-該響應顯示已成功執行兩個操作。 的 `description` 已更新， `propertyCountry` 已添加到 `definitions`。
+回應顯示兩個操作都已成功執行。 此 `description` 已更新，並且 `propertyCountry` 已新增至 `definitions`.
 
 ```JSON
 {
@@ -714,9 +714,9 @@ curl -X PATCH \
 }
 ```
 
-## 刪除欄位組 {#delete}
+## 刪除欄位群組 {#delete}
 
-有時可能需要從架構註冊表中刪除欄位組。 這是通過執行DELETE請求來完成的，該請求的欄位組ID在路徑中提供。
+有時可能需要從結構描述登入中移除欄位群組。 可透過使用路徑中提供的欄位群組ID執行DELETE請求來完成。
 
 **API格式**
 
@@ -726,7 +726,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | URL編碼 `$id` URI或 `meta:altId` 的子菜單。 |
+| `{FIELD_GROUP_ID}` | URL編碼 `$id` URI或 `meta:altId` 要刪除的欄位群組的名稱。 |
 
 {style="table-layout:auto"}
 
@@ -743,6 +743,6 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應返回HTTP狀態204（無內容）和空白正文。
+成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
 
-您可以通過嘗試 [查找(GET)請求](#lookup) 到欄位組。 您需要包括 `Accept` 請求中的標頭，但應接收HTTP狀態404（未找到），因為已從架構註冊表中刪除了欄位組。
+您可以嘗試 [查詢(GET)請求](#lookup) 至欄位群組。 您需要包含 `Accept` 標頭中，但應該會收到HTTP狀態404 （找不到），因為欄位群組已從Schema Registry中移除。

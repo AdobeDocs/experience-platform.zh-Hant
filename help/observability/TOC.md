@@ -13,8 +13,8 @@ ht-degree: 52%
 
 # 可觀察性深入分析 {#observability}
 
-* [可觀性透視概述](./home.md)
-* 可觀性透視API {#api}
+* [可觀察性深入分析概觀](./home.md)
+* 可觀察性深入分析API {#api}
    * [總覽](./api/overview.md)
    * [快速入門](./api/getting-started.md)
    * [量度](./api/metrics.md)
@@ -24,4 +24,4 @@ ht-degree: 52%
    * [UI指南](./alerts/ui.md)
    * [訂閱I/O事件通知](./alerts/subscribe.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)

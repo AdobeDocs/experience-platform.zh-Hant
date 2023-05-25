@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；第三方資料庫；資料庫流服務
+keywords: Experience Platform；首頁；熱門主題；第三方資料庫；資料庫流程服務
 solution: Experience Platform
-title: 使用流服務API瀏覽資料庫
-description: 本教程使用流服務API來探索第三方資料庫的內容和檔案結構。
+title: 使用流程服務API探索資料庫
+description: 本教學課程使用Flow Service API來探索協力廠商資料庫的內容和檔案結構。
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
@@ -11,46 +11,46 @@ ht-degree: 2%
 
 ---
 
-# 使用 [!DNL Flow Service] API
+# 探索資料庫，使用 [!DNL Flow Service] API
 
-本教程使用 [!DNL Flow Service] API，用於瀏覽第三方資料庫的內容和檔案結構。
+本教學課程使用 [!DNL Flow Service] 用於探索第三方資料庫的內容和檔案結構的API。
 
 ## 快速入門
 
-本指南要求對Adobe Experience Platform的下列組成部分有工作上的理解：
+本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [源](../../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
-* [沙箱](../../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
 
-以下各節提供了您需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API。
+以下小節提供您需要瞭解的其他資訊，才能使用成功連線至第三方資料庫。 [!DNL Flow Service] API。
 
-### 收集所需憑據
+### 收集必要的認證
 
-本教程要求您與要從中接收資料的第三方資料庫建立有效連接。 有效連接涉及資料庫的連接規範ID和連接ID。 有關建立資料庫連接和檢索這些值的詳細資訊，請參見 [源連接器概述](./../../../home.md#database)。
+本教學課程要求您與要從中擷取資料的協力廠商資料庫建立有效的連線。 有效的連線涉及資料庫的連線規格ID和連線ID。 有關建立資料庫連線和擷取這些值的詳細資訊，請參閱 [來源聯結器概觀](./../../../home.md#database).
 
-### 讀取示例API調用
+### 讀取範例API呼叫
 
-本教程提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 的 [!DNL Experience Platform] 疑難解答指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭，以及正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
-### 收集所需標題的值
+### 收集必要標題的值
 
-為了呼叫 [!DNL Platform] API，必須首先完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。 完成身份驗證教程將提供所有E中每個必需標頭的值[!DNL xperience Platform] API調用，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程後，會提供所有E中每個必要標題的值[!DNL xperience Platform] API呼叫，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-中的所有資源 [!DNL Experience Platform]包括那些 [!DNL Flow Service]，與特定虛擬沙箱隔離。 所有請求 [!DNL Platform] API需要一個標頭，該標頭指定操作將在以下位置進行的沙盒的名稱：
+中的所有資源 [!DNL Experience Platform]，包括屬於 [!DNL Flow Service]，會隔離至特定的虛擬沙箱。 的所有要求 [!DNL Platform] API需要標頭，用於指定將在其中執行操作的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-所有包含負載(POST、PUT、PATCH)的請求都需要附加的媒體類型報頭：
+包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
 * `Content-Type: application/json`
 
-## 瀏覽資料表
+## 探索您的資料表格
 
-使用資料庫的連接ID，可以通過執行GET請求來瀏覽資料表。 使用以下調用查找要檢查或插入的表的路徑 [!DNL Platform]。
+使用資料庫的連線ID，您可以透過執行GET請求來探索資料表格。 使用以下呼叫來尋找您要檢查或擷取的表格路徑 [!DNL Platform].
 
 **API格式**
 
@@ -60,7 +60,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 資料庫源的連接ID。 |
+| `{BASE_CONNECTION_ID}` | 資料庫來源的連線ID。 |
 
 **要求**
 
@@ -75,7 +75,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應會從資料庫返回一組表。 查找要放入的表 [!DNL Platform] 並注意到 `path` 屬性，因為在下一步中需要提供該屬性來檢查其結構。
+成功的回應會從資料庫傳回資料表陣列。 尋找您要加入的表格 [!DNL Platform] 並記下其 `path` 屬性，因為您必須在下一個步驟中提供它以檢查其結構。
 
 ```json
 [
@@ -96,9 +96,9 @@ curl -X GET \
 ]
 ```
 
-## Inspect桌子的結構
+## Inspect表格的結構
 
-要從資料庫中檢查表的結構，請在將表的路徑指定為查詢參數時執行GET請求。
+若要從資料庫檢查表格的結構，請在將表格的路徑指定為查詢引數時執行GET要求。
 
 **API格式**
 
@@ -108,8 +108,8 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 資料庫連接的ID。 |
-| `{TABLE_PATH}` | 表的路徑。 |
+| `{BASE_CONNECTION_ID}` | 資料庫連線的ID。 |
+| `{TABLE_PATH}` | 表格的路徑。 |
 
 **要求**
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定表的結構。 有關每個表列的詳細資訊位於 `columns` 陣列。
+成功的回應會傳回指定資料表的結構。 有關每個表格欄的詳細資訊位於 `columns` 陣列。
 
 ```json
 {
@@ -152,4 +152,4 @@ curl -X GET \
 
 ## 後續步驟
 
-通過遵循本教程，您已瀏覽了資料庫，找到了要插入的表的路徑 [!DNL Platform]並獲取了有關其結構的資訊。 您可以在下一教程中使用此資訊 [從資料庫中收集資料並將其放入平台](../collect/database-nosql.md)。
+依照本教學課程，您已探索您的資料庫，找到您要擷取的表格路徑 [!DNL Platform]，並取得有關其結構的資訊。 您可以在下一個教學課程中使用此資訊來 [從資料庫收集資料並將其帶入Platform](../collect/database-nosql.md).

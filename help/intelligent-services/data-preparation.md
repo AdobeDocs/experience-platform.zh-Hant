@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；家庭；智慧服務；熱門主題；智慧服務；智慧服務
+keywords: Experience Platform；首頁；Intelligent Services；熱門主題；Intelligent Service；Intelligent Service
 solution: Experience Platform
-title: 準備資料以在智慧服務中使用
-description: 為了讓智慧服務能夠從您的營銷事件資料中發現洞見，資料必須語義豐富並以標準結構進行維護。 智慧服務採用經驗資料模型(XDM)模式來實現。
+title: 準備資料以用於Intelligent Services
+description: 為了讓Intelligent Services從行銷事件資料中探索見解，資料必須在語義上豐富化，並以標準結構維護。 Intelligent Services使用Experience Data Model (XDM)結構描述來達成此目的。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 source-git-commit: 87a8ad253abb219662034652b5f8c4fabfa40484
 workflow-type: tm+mt
@@ -11,47 +11,47 @@ ht-degree: 0%
 
 ---
 
-# 準備資料以供使用 [!DNL Intelligent Services]
+# 準備資料以用於中 [!DNL Intelligent Services]
 
-為了 [!DNL Intelligent Services] 要從營銷活動資料中發現洞見，資料必須語義豐富並以標準結構進行維護。 [!DNL Intelligent Services] 槓桿 [!DNL Experience Data Model] (XDM)模式來實現。 具體來說，所有在 [!DNL Intelligent Services] 必須符合Consumer ExperienceEvent(CEE)XDM架構或使用Adobe Analytics連接器。 此外，客戶AI支援Adobe Audience Manager連接器。
+為了 [!DNL Intelligent Services] 若要從行銷事件資料中探索深入分析，資料必須在語義上豐富化，並以標準結構維護。 [!DNL Intelligent Services] 善用 [!DNL Experience Data Model] (XDM)結構描述才能達到此目的。 具體來說，就是所有用於 [!DNL Intelligent Services] 必須符合消費者ExperienceEvent (CEE) XDM結構描述或使用Adobe Analytics聯結器。 此外，Customer AI支援Adobe Audience Manager聯結器。
 
-本文檔提供有關將營銷事件資料從多個渠道映射到CEE架構的一般指導，概述有關架構中重要欄位的資訊，以幫助您確定如何有效地將資料映射到其架構。 如果您計畫使用Adobe Analytics資料，請查看 [Adobe Analytics資料準備](#analytics-data)。 如果您計畫使用Adobe Audience Manager資料（僅限客戶AI），請查看 [Adobe受眾管理器資料準備](#AAM-data)。
+本檔案提供將多個管道的行銷事件資料對應至CEE結構描述的一般指引，概述結構描述內重要欄位的資訊，以協助您決定如何有效地將資料對應至其結構。 如果您打算使用Adobe Analytics資料，請檢視以下專案的區段： [Adobe Analytics資料準備](#analytics-data). 如果您打算使用Adobe Audience Manager資料（僅限Customer AI），請檢視以下區段： [AdobeAudience Manger資料準備](#AAM-data).
 
-## 資料要求
+## 資料需求
 
-[!DNL Intelligent Services] 根據您建立的目標，需要不同數量的歷史資料。 無論如何，您準備的資料 **全部** [!DNL Intelligent Services] 必須同時包括正向和負向客戶行程/事件。 同時具有負事件和正事件可提高模型精度和準確性。
+[!DNL Intelligent Services] 會根據您建立的目標而需要不同的歷史資料量。 無論如何，您準備的資料 **全部** [!DNL Intelligent Services] 必須包含正面和負面客戶歷程/事件。 同時具有負值和正值事件可改善模型精確度和精確度。
 
-例如，如果您使用客戶AI來預測購買產品的傾向，則客戶AI的模型需要成功購買路徑的實例和失敗路徑的實例。 這是因為在模型培訓期間，客戶AI希望瞭解哪些事件和行程會導致購買。 這還包括未購買的客戶所採取的操作，例如在將物料添加到購物車時停止行程的個人。 但是，這些客戶可能表現出類似的行為，客戶AI可以提供洞察力並深入分析導致傾向得分較高的主要差異和因素。 同樣，Attribution AI需要事件和行程兩種類型，以便按觸點位置顯示諸如觸點效能、頂級轉換路徑和故障等指標。
+例如，如果您使用Customer AI來預測購買產品的傾向，Customer AI模型需要成功購買路徑的範例和失敗路徑的範例。 這是因為在模型訓練期間，Customer AI會尋找哪些事件和歷程會導致購買。 這也包括未購買的客戶所執行的動作，例如個人停止其將專案新增至購物車的歷程。 這些客戶可能會表現出相似的行為，但是Customer AI可以提供見解並深入研究導致更高傾向分數的主要差異和因素。 同樣地，Attribution AI需要事件和歷程這兩種型別，才能顯示量度，例如接觸點有效性、排名在前的轉換路徑，以及依接觸點位置的劃分。
 
-有關歷史資料要求的更多示例和資訊，請訪問 [客戶AI](./customer-ai/data-requirements.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements) 輸入/輸出文檔中的歷史資料要求部分。
+如需有關歷史資料需求的更多範例和資訊，請造訪 [Customer AI](./customer-ai/data-requirements.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements) 輸入/輸出檔案中的歷史資料需求區段。
 
-### 資料拼接准則
+### 彙整資料的准則
 
-建議您盡可能將用戶的事件縫製到公共ID上。 例如，您可能有10個事件中帶有&quot;id1&quot;的用戶資料。 之後，同一用戶刪除了Cookie ID，並在接下來的20個事件中記錄為「id2」。 如果您知道id1和id2對應於同一用戶，最佳做法是使用通用id編寫所有30個事件。
+建議您儘可能拼接通用ID中的使用者事件。 例如，您可能有跨10個事件具有「id1」的使用者資料。 稍後，該使用者刪除了Cookie ID，並在接下來的20個事件中記錄為「id2」。 如果您知道id1和id2對應至相同的使用者，最佳做法是將所有30個事件與通用id拼接在一起。
 
-如果不可能，則在建立模型輸入資料時應將每組事件視為不同的用戶。 這樣可確保在模型培訓和評分期間取得最佳結果。
+如果無法執行此操作，您應在建立模型輸入資料時，將每組事件視為不同的使用者。 這可確保在模型訓練和評分期間獲得最佳結果。
 
-## 工作流摘要
+## 工作流程摘要
 
-準備過程因資料是儲存在Adobe Experience Platform還是外部而異。 本部分概述了在兩種情況下需要採取的必要步驟。
+準備程式會因您的資料是儲存在Adobe Experience Platform中還是儲存在外部而異。 本節總結了您在任一情況下所需採取的必要步驟。
 
 ### 外部資料準備
 
-如果您的資料儲存在Experience Platform之外，則需要將資料映射到 [使用者體驗事件架構](#cee-schema)。 此模式可以與自定義欄位組一起增強，以便更好地捕獲客戶資料。 映射後，您可以使用Consumer ExperienceEvent架構和 [將資料傳輸到平台](../ingestion/home.md)。 然後，在配置 [!DNL Intelligent Service]。
+如果您的資料儲存在Experience Platform以外，您需要將資料對應到 [消費者ExperienceEvent結構描述](#cee-schema). 此結構描述可以透過自訂欄位群組增強，以更好地擷取您的客戶資料。 對應後，您可以使用消費者ExperienceEvent結構描述和建立資料集 [將您的資料內嵌至Platform](../ingestion/home.md). 之後，您便可在設定 [!DNL Intelligent Service].
 
-取決於 [!DNL Intelligent Service] 您希望使用，可能需要不同的欄位。 請注意，如果您有可用資料，則最好將資料添加到欄位。 要瞭解有關必填欄位的詳細資訊，請訪問 [Attribution AI](./attribution-ai/input-output.md) 或 [客戶AI](./customer-ai/data-requirements.md) 資料要求指南。
+根據 [!DNL Intelligent Service] 如果您希望使用，可能需要不同的欄位。 請注意，如果您有可用的資料，最佳實務就是將資料新增至欄位。 若要進一步瞭解必填欄位，請造訪 [Attribution AI](./attribution-ai/input-output.md) 或 [Customer AI](./customer-ai/data-requirements.md) 資料需求指南。
 
 ### Adobe Analytics資料準備 {#analytics-data}
 
-客戶AI和Attribution AI本機支援Adobe Analytics資料。 要使用Adobe Analytics資料，請按照文檔中概述的步驟設定 [分析源連接器](../sources/tutorials/ui/create/adobe-applications/analytics.md)。
+Customer AI和Attribution AI原生支援Adobe Analytics資料。 若要使用Adobe Analytics資料，請依照檔案中概述的步驟設定 [Analytics來源聯結器](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 
-在源連接器將資料流式傳輸到Experience Platform中後，您可以在實例配置期間選擇Adobe Analytics作為資料源，然後選擇資料集。 在連接設定期間，將自動建立所有必需的架構欄位組和各個欄位。 您不需要將資料集ETL（提取、轉換、載入）轉換為CEE格式。
+一旦來源聯結器將您的資料串流到Experience Platform中，您就可以在執行個體設定期間選取Adobe Analytics作為資料來源，然後選取資料集。 在連線設定期間會自動建立所有必要的結構描述欄位群組和個別欄位。 您不需要將資料集ETL （擷取、轉換、載入）為CEE格式。
 
-如果你將通過Adobe Analytics源連接器傳輸到Adobe Experience Platform的資料與Adobe Analytics資料進行比較，你可能會注意到一些差異。 分析源連接器可能會在轉換到體驗資料模型(XDM)架構期間丟棄行。 整行不適合轉換可能有多種原因，包括缺少時間戳、缺少personID、無效或較大的人員ID、無效的分析值等。
+如果您比較流經Adobe Analytics來源聯結器至Adobe Experience Platform的資料與Adobe Analytics資料，您可能會注意到一些差異。 Analytics來源聯結器在轉換為體驗資料模型(XDM)結構描述期間可能會捨棄多列。 整列不適用於轉換的原因有好幾種，包括遺漏時間戳記、遺漏人員ID、無效或大筆人員ID、無效分析值等等。
 
-有關詳細資訊和示例，請訪問文檔 [比較Adobe Analytics和Customer Journey Analytics資料](https://www.adobe.com/go/compare-aa-data-to-cja-data)。 本文旨在幫助您診斷和解決這些差異，以便您和您的團隊可以不受資料完整性問題的影響，將Adobe Experience Platform資料用於智慧服務。
+如需詳細資訊和範例，請瀏覽以下檔案： [比較Adobe Analytics和Customer Journey Analytics資料](https://www.adobe.com/go/compare-aa-data-to-cja-data). 本文章旨在協助您診斷並解決這些差異，好讓您和您的團隊能夠將Adobe Experience Platform資料用於智慧型服務，不會受到資料完整性疑慮的阻礙。
 
-在Adobe Experience Platform查詢服務中，按channel.typeAtSource查詢運行以下開始時間戳和結束時間戳之間的總記錄，以按市場營銷渠道查找計數。
+在Adobe Experience Platform查詢服務中，依channel.typeAtSource查詢執行下列開始和結束時間戳記之間的記錄總數，以依行銷管道尋找計數。
 
 ```SELECT channel.typeAtSource as typeAtSource,
        Count(_id) AS Records 
@@ -65,104 +65,104 @@ GROUP BY channel.typeAtSource
 
 >[!IMPORTANT]
 >
->Adobe Analytics連接器最多需要四周時間來回填資料。 如果您最近設定了連接，則應驗證資料集是否具有客戶或Attribution AI所需的最小資料長度。 請查看中的歷史資料部分 [客戶AI](./customer-ai/data-requirements.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements)，並驗證是否有足夠的資料用於預測目標。
+>Adobe Analytics聯結器最多需要四週的時間來回填資料。 如果您最近才設定連線，您應確認資料集具有客戶或Attribution AI所需的最小資料長度。 請檢閱歷史資料區段： [Customer AI](./customer-ai/data-requirements.md#data-requirements) 或 [Attribution AI](./attribution-ai/input-output.md#data-requirements)，並確認您有足夠的資料達成預測目標。
 
-### Adobe Audience Manager資料準備（僅限客戶AI） {#AAM-data}
+### Adobe Audience Manager資料準備（僅限Customer AI） {#AAM-data}
 
-客戶AI本機支援Adobe Audience Manager資料。 要使用Audience Manager資料，請按照文檔中概述的步驟設定 [Audience Manager源連接器](../sources/tutorials/ui/create/adobe-applications/audience-manager.md)。
+Customer AI原生支援Adobe Audience Manager資料。 若要使用Audience Manager資料，請依照檔案中概述的步驟設定 [Audience Manager來源聯結器](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
-一旦源連接器將資料流式傳輸到Experience Platform中，您就可以在客戶AI配置期間選擇Adobe Audience Manager作為資料源，然後選擇資料集。 所有架構欄位組和各個欄位都會在連接設定期間自動建立。 您不需要將資料集ETL（提取、轉換、載入）轉換為CEE格式。
+一旦來源聯結器將您的資料串流到Experience Platform中，您就可以在Customer AI設定期間選取Adobe Audience Manager作為資料來源，然後選取資料集。 所有結構描述欄位群組和個別欄位會在連線設定期間自動建立。 您不需要將資料集ETL （擷取、轉換、載入）為CEE格式。
 
 >[!IMPORTANT]
 >
->如果最近設定了連接器，則應驗證資料集是否具有所需的最小資料長度。 請查看中的歷史資料部分 [輸入/輸出文檔](./customer-ai/data-requirements.md) 對於客戶AI，並驗證您有足夠的資料用於預測目標。
+>如果您最近設定了聯結器，您應該確認資料集具有所需的最小資料長度。 請檢閱以下文章的歷史資料區段： [輸入/輸出檔案](./customer-ai/data-requirements.md) ，並確認您有足夠的資料達成預測目標。
 
 ### [!DNL Experience Platform] 資料準備
 
-如果資料已儲存在 [!DNL Platform] 不通過Adobe Analytics或Adobe Audience Manager（僅限客戶AI）源連接器流式傳輸，請執行以下步驟。 仍建議您瞭解CEE架構。
+如果您的資料已儲存在 [!DNL Platform] 並且不要透過Adobe Analytics或Adobe Audience Manager （僅限Customer AI）來源聯結器串流，請遵循以下步驟。 我們仍建議您瞭解CEE結構。
 
-1. 查看 [使用者體驗事件架構](#cee-schema) 並確定資料是否可以映射到其欄位。
-2. 聯繫Adobe咨詢服務，幫助將資料映射到架構並將其插入 [!DNL Intelligent Services]或 [按照本指南中的步驟操作](#mapping) 來映射資料。
+1. 檢閱結構 [消費者ExperienceEvent結構描述](#cee-schema) 以及決定是否可將您的資料對應至其欄位。
+2. 請聯絡Adobe諮詢服務，協助將您的資料對應到結構描述並將其擷取到 [!DNL Intelligent Services]，或 [請依照本指南中的步驟操作](#mapping) 如果您想要自行對應資料。
 
-## 瞭解CEE架構 {#cee-schema}
+## 瞭解CEE結構 {#cee-schema}
 
-消費者體驗事件模式描述個人的行為，因為它與數字營銷事件（Web或移動）以及線上或離線商務活動相關。 此架構的使用是 [!DNL Intelligent Services] 由於其語義上定義得很好的欄位（列），因此避免了任何未知名稱，否則這些名稱會使資料變得不那麼清晰。
+消費者ExperienceEvent結構描述個人與數位行銷事件（網頁或行動裝置）以及線上或離線商務活動相關的行為。 以下專案需要使用此結構描述： [!DNL Intelligent Services] 由於它的語義定義良好的欄位（欄），避免任何未知的名稱，否則會使資料不太清楚。
 
-與所有XDM ExperienceEvent架構一樣，CEE架構在發生事件（或事件集）時捕獲基於時間序列的系統狀態，包括所涉及的時間點和主題的標識。 「體驗事件」是事實記錄，因此它們是不可改變的，並代表所發生的事件，而不進行聚合或解釋。
+CEE結構描述和所有XDM ExperienceEvent結構描述一樣，會在事件（或事件集）發生時擷取系統以時間序列為基礎的狀態，包括時間點和所涉及的主體身分。 體驗事件是所發生事件的事實記錄，因此是不可變的，並代表在沒有彙總或詮釋的情況下所發生的情況。
 
-[!DNL Intelligent Services] 利用此架構中的幾個關鍵欄位來根據您的市場營銷事件資料生成洞見，所有這些資訊都可以在根級別找到並展開以顯示其必需的子欄位。
+[!DNL Intelligent Services] 利用此結構描述中的數個關鍵欄位，從行銷事件資料產生深入分析，所有這些可在根層級找到，並展開以顯示其必要的子欄位。
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-與所有XDM架構一樣，CEE架構欄位組是可擴展的。 換句話說，可以將附加欄位添加到CEE欄位組，並且如有必要，可以將不同的變體包括到多個方案中。
+和所有XDM結構描述一樣，CEE結構描述欄位群組也是可擴展的。 換言之，其他欄位可新增至CEE欄位群組，如有需要，多個結構描述中可包含不同的變數。
 
-在 [公共XDM儲存庫](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。 此外，您還可以查看和複製以下內容 [JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 例如，如何構建資料以符合CEE模式。 在瞭解下節中概述的關鍵欄位時，請參閱這兩個示例，以確定如何將您自己的資料映射到架構。
+欄位群組的完整範例可在以下網址找到： [公用XDM存放庫](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). 此外，您還可以檢視和複製下列專案 [JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 有關如何將資料結構化以符合CEE架構的範例。 瞭解下節中概述的關鍵欄位時，請參閱這兩個範例，以判斷如何將您自己的資料對應到結構描述。
 
 ## 關鍵欄位
 
-CEE欄位組中有幾個關鍵欄位應用於 [!DNL Intelligent Services] 以生成有用的見解。 本節介紹這些欄位的使用案例和預期資料，並提供指向參考文檔的連結以獲取更多示例。
+CEE欄位群組內有數個關鍵欄位，應加以使用以便用於 [!DNL Intelligent Services] 以產生有用的深入分析。 本節說明這些欄位的使用案例和預期資料，並提供參考檔案的連結以取得更多範例。
 
 ### 必填欄位
 
-儘管強烈建議使用所有關鍵欄位，但有兩個欄位 **要求** 為了 [!DNL Intelligent Services] 要工作：
+雖然強烈建議使用所有關鍵欄位，但有兩個欄位 **必填** 為了 [!DNL Intelligent Services] 若要運作：
 
-* [主標識欄位](#identity)
-* [xdm:timestamp](#timestamp)
-* [xdm：通道](#channel) (僅對Attribution AI強制)
+* [主要身分欄位](#identity)
+* [xdm：timestamp](#timestamp)
+* [xdm：channel](#channel) (僅對於Attribution AI為必要)
 
 #### 主要身分識別 {#identity}
 
-必須將架構中的一個欄位設定為主標識欄位，這允許 [!DNL Intelligent Services] 將時間序列資料的每個實例連結到單個人。
+結構描述中的其中一個欄位必須設定為主要身分欄位，這樣才允許 [!DNL Intelligent Services] 將時間序列資料的每個例項連結至個人。
 
-您必鬚根據資料的來源和性質確定用作主標識的最佳欄位。 標識欄位必須包括 **標識命名空間** 表示欄位需要的標識資料的類型。 某些有效的命名空間值包括：
+您必須根據資料的來源和性質，決定要當作主要身分使用的最佳欄位。 身分欄位必須包括 **身分名稱空間** 表示欄位預期做為值的身分資料型別。 一些有效的名稱空間值包括：
 
 >[!NOTE]
 >
->Experience CloudID(ECID)也稱為MCID，繼續用於命名空間。
+>Experience CloudID (ECID)也稱為MCID，並將繼續用於名稱空間。
 
 * &quot;電子郵件&quot;
 * &quot;phone&quot;
-* &quot;mcid&quot;(用於Adobe Audience ManagerID)
-* &quot;aaid&quot;(用於Adobe AnalyticsID)
+* &quot;mcid&quot; (適用於Adobe Audience Manager ID)
+* &quot;aaid&quot; (適用於Adobe Analytics ID)
 
-如果您不確定應將哪個欄位用作主要身份，請與Adobe咨詢服務聯繫以確定最佳解決方案。 如果未設定主標識，則智慧服務應用程式使用以下預設行為：
+如果您不確定應使用哪個欄位作為主要身分，請聯絡Adobe諮詢服務以決定最佳解決方案。 如果未設定主要身分，Intelligent Service應用程式會使用以下預設行為：
 
-| 預設 | Attribution AI | 客戶AI |
+| 預設 | Attribution AI | Customer AI |
 | --- | --- | --- |
-| 標識列 | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| 身分資料行 | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
 | 命名空間 | AAID | ECID |
 
-要設定主標識，請從 **[!UICONTROL 架構]** 頁籤，然後選擇模式名稱超連結以開啟 **[!DNL Schema Editor]**。
+若要設定主要身分，請從以下網址瀏覽至您的結構描述： **[!UICONTROL 結構描述]** 標籤並選取結構描述名稱超連結以開啟 **[!DNL Schema Editor]**.
 
-![導航到架構](./images/data-preparation/navigate_schema.png)
+![導覽至結構描述](./images/data-preparation/navigate_schema.png)
 
-接下來，導航到要作為主標識的欄位並選擇它。 的 **[!UICONTROL 欄位屬性]** 的子菜單。
+接下來，導覽至您要作為主要身分的欄位，然後選取它。 此 **[!UICONTROL 欄位屬性]** 該欄位的功能表隨即開啟。
 
-![選擇欄位](./images/data-preparation/find_field.png)
+![選取欄位](./images/data-preparation/find_field.png)
 
-在 **[!UICONTROL 欄位屬性]** 菜單，向下滾動直到找到 **[!UICONTROL 身份]** 複選框。 選中該框後，將選定標識設定為 **[!UICONTROL 主標識]** 的子菜單。 也選擇此框。
+在 **[!UICONTROL 欄位屬性]** 功能表，向下捲動直到您找到 **[!UICONTROL 身分]** 核取方塊。 核取此方塊後，將選取的身分設定為 **[!UICONTROL 主要身分]** 出現。 也請選取此方塊。
 
-![選中複選框](./images/data-preparation/set_primary_identity.png)
+![選取核取方塊](./images/data-preparation/set_primary_identity.png)
 
-接下來，必須提供 **[!UICONTROL 標識命名空間]** 從下拉清單中的預定義命名空間清單中。 在此示例中，ECID名稱是自Adobe Audience ManagerID以來選擇的 `mcid.id` 正在使用。 選擇 **[!UICONTROL 應用]** 確認更新，然後選擇 **[!UICONTROL 保存]** 的子菜單。
+接下來，您必須提供 **[!UICONTROL 身分名稱空間]** 從下拉式清單中的預先定義名稱空間清單。 在此範例中，會選取ECID名稱空間，因為Adobe Audience Manager ID `mcid.id` 正在使用中。 選取 **[!UICONTROL 套用]** 若要確認更新，請選取 **[!UICONTROL 儲存]** 以儲存對結構描述的變更。
 
-![保存更改](./images/data-preparation/select_namespace.png)
+![儲存變更](./images/data-preparation/select_namespace.png)
 
-#### xdm:timestamp {#timestamp}
+#### xdm：timestamp {#timestamp}
 
-此欄位表示事件發生的日期時間。 此值必須按照ISO 8601標準以字串形式提供。
+此欄位代表事件發生時的日期時間。 根據ISO 8601標準，此值必須以字串形式提供。
 
-#### xdm：通道 {#channel}
+#### xdm：channel {#channel}
 
 >[!NOTE]
 >
->此欄位僅在使用Attribution AI時是必需的。
+>只有在使用Attribution AI時，此欄位才為必要。
 
-此欄位表示與ExperienceEvent相關的市場營銷渠道。 該欄位包括有關頻道類型、媒體類型和位置類型的資訊。
+此欄位代表與ExperienceEvent相關的行銷管道。 欄位包含有關頻道型別、媒體型別和位置型別的資訊。
 
 ![](./images/data-preparation/channel.png)
 
-**示例架構**
+**範例結構描述**
 
 ```json
 {
@@ -173,34 +173,34 @@ CEE欄位組中有幾個關鍵欄位應用於 [!DNL Intelligent Services] 以生
 }
 ```
 
-有關的每個子欄位的完整資訊 `xdm:channel`，請參閱 [體驗通道模式](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) 規範 有關某些示例映射，請參見 [下表](#example-channels)。
+有關每個必要子欄位的完整資訊，請參見 `xdm:channel`，請參閱 [體驗管道結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) 規格 如需一些對應範例，請參閱 [下表](#example-channels).
 
-#### 通道映射示例 {#example-channels}
+#### 管道對應範例 {#example-channels}
 
-下表提供了映射到 `xdm:channel` 架構：
+下表提供一些對映至的行銷管道範例 `xdm:channel` 綱要：
 
 | Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| 付費搜尋 | https:/<span>/ns.adobe.com/xdm/channel types/search | 付 | 點擊 |
-| 社交 — 營銷 | https:/<span>/ns.adobe.com/xdm/渠道類型/社交 | 掙 | 點擊 |
-| 顯示 | https:/<span>/ns.adobe.com/xdm/channel types/display | 付 | 點擊 |
-| 電子郵件 | https:/<span>/ns.adobe.com/xdm/channel types/email | 付 | 點擊 |
-| 內部引用者 | https:/<span>/ns.adobe.com/xdm/channel types/direct | 自 | 點擊 |
-| 顯示查看方式 | https:/<span>/ns.adobe.com/xdm/channel types/display | 付 | 印象 |
-| QR碼重定向 | https:/<span>/ns.adobe.com/xdm/channel types/direct | 自 | 點擊 |
-| 行動 | https:/<span>/ns.adobe.com/xdm/channel types/mobile | 自 | 點擊 |
+| 付費搜尋 | https:/<span>/ns.adobe.com/xdm/channel-types/search | 付費 | 點按次數 |
+| 社交 — 行銷 | https:/<span>/ns.adobe.com/xdm/channel-types/social | 盈餘 | 點按次數 |
+| 顯示 | https:/<span>/ns.adobe.com/xdm/channel-types/display | 付費 | 點按次數 |
+| 電子郵件 | https:/<span>/ns.adobe.com/xdm/channel-types/email | 付費 | 點按次數 |
+| 內部反向連結 | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 擁有 | 點按次數 |
+| 顯示檢視 | https:/<span>/ns.adobe.com/xdm/channel-types/display | 付費 | 曝光次數 |
+| QR碼重新導向 | https:/<span>/ns.adobe.com/xdm/channel-types/direct | 擁有 | 點按次數 |
+| 行動 | https:/<span>/ns.adobe.com/xdm/channel-types/mobile | 擁有 | 點按次數 |
 
-### 推薦欄位
+### 建議欄位
 
-本節概述了其餘的關鍵欄位。 雖然這些欄位不一定是 [!DNL Intelligent Services] 為了工作，強烈建議您盡可能多地使用這些工具，以獲得更豐富的見解。
+本節將概述其餘主要欄位。 雖然這些欄位不一定需要 [!DNL Intelligent Services] 為了發揮作用，強烈建議您儘可能多地使用它們，以獲得更豐富的見解。
 
-#### xdm:productListItems
+#### xdm：productListItems
 
-此欄位是表示客戶選擇的產品的一組項目，包括產品SKU、名稱、價格和數量。
+此欄位是代表客戶所選產品的專案陣列，包括產品SKU、名稱、價格和數量。
 
 ![](./images/data-preparation/productListItems.png)
 
-**示例架構**
+**範例結構描述**
 
 ```json
 [
@@ -221,15 +221,15 @@ CEE欄位組中有幾個關鍵欄位應用於 [!DNL Intelligent Services] 以生
 ]
 ```
 
-有關的每個子欄位的完整資訊 `xdm:productListItems`，請參閱 [商務詳細資訊架構](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 規範
+有關每個必要子欄位的完整資訊，請參見 `xdm:productListItems`，請參閱 [商務詳細資料結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 規格
 
-#### xdm：商業
+#### xdm：commerce
 
-此欄位包含有關ExperienceEvent的特定於商業的資訊，包括採購訂單編號和付款資訊。
+此欄位包含有關ExperienceEvent的商務特定資訊，包括採購單編號和付款資訊。
 
 ![](./images/data-preparation/commerce.png)
 
-**示例架構**
+**範例結構描述**
 
 ```json
 {
@@ -259,15 +259,15 @@ CEE欄位組中有幾個關鍵欄位應用於 [!DNL Intelligent Services] 以生
   }
 ```
 
-有關的每個子欄位的完整資訊 `xdm:commerce`，請參閱 [商務詳細資訊架構](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 規範
+有關每個必要子欄位的完整資訊，請參見 `xdm:commerce`，請參閱 [商務詳細資料結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 規格
 
-#### xdm:web
+#### xdm：web
 
-此欄位表示與ExperienceEvent相關的Web詳細資訊，如交互、頁面詳細資訊和引用者。
+此欄位代表與ExperienceEvent相關的網頁詳細資訊，例如互動、頁面詳細資訊和反向連結。
 
 ![](./images/data-preparation/web.png)
 
-**示例架構**
+**範例結構描述**
 
 ```json
 {
@@ -289,15 +289,15 @@ CEE欄位組中有幾個關鍵欄位應用於 [!DNL Intelligent Services] 以生
 }
 ```
 
-有關的每個子欄位的完整資訊 `xdm:productListItems`，請參閱 [ExperienceEvent Web詳細資訊架構](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) 規範
+有關每個必要子欄位的完整資訊，請參見 `xdm:productListItems`，請參閱 [ExperienceEvent Web詳細資料結構描述](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) 規格
 
-#### xdm：市場營銷
+#### xdm：marketing
 
-此欄位包含與與觸點活動的市場營銷活動相關的資訊。
+此欄位包含與使用接觸點啟用的行銷活動相關的資訊。
 
 ![](./images/data-preparation/marketing.png)
 
-**示例架構**
+**範例結構描述**
 
 ```json
 {
@@ -307,65 +307,65 @@ CEE欄位組中有幾個關鍵欄位應用於 [!DNL Intelligent Services] 以生
 }
 ```
 
-有關的每個子欄位的完整資訊 `xdm:productListItems`，請參閱 [營銷](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 規範
+有關每個必要子欄位的完整資訊，請參見 `xdm:productListItems`，請參閱 [行銷密碼](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 規格
 
-## 映射和接收資料 {#mapping}
+## 對應和擷取資料 {#mapping}
 
-一旦確定是否可以將營銷事件資料映射到CEE架構，下一步就是確定要將哪些資料引入 [!DNL Intelligent Services]。 使用的所有歷史資料 [!DNL Intelligent Services] 必須在4個月資料的最短時間窗口內，加上要作為回望期的天數。
+一旦您確定行銷事件資料是否可對應至CEE結構描述後，下一步就是確定要帶入哪些資料 [!DNL Intelligent Services]. 所有歷史資料使用於 [!DNL Intelligent Services] 必須在資料的最短四個月時間範圍內，加上預期作為回顧期間的天數。
 
-在確定要發送的資料範圍後，請與Adobe咨詢服務部門聯繫，以幫助將您的資料映射到架構並將其插入服務。
+決定您要傳送的資料範圍後，請聯絡Adobe諮詢服務，協助將您的資料對應到結構描述並將其擷取到服務中。
 
-如果你有 [!DNL Adobe Experience Platform] 訂閱並想自己映射和接收資料，請按照下面一節中介紹的步驟操作。
+如果您擁有 [!DNL Adobe Experience Platform] 訂閱，並想自行對應及擷取資料，請遵循下節中概述的步驟。
 
 ### 使用Adobe Experience Platform
 
 >[!NOTE]
 >
->以下步驟需要訂閱Experience Platform。 如果您沒有訪問平台的權限，請跳到 [後續步驟](#next-steps) 的子菜單。
+>下列步驟需要訂閱Experience Platform。 如果您無法存取平台，請跳至 [後續步驟](#next-steps) 區段。
 
-本節概述了將資料映射和插入Experience Platform以用於的工作流 [!DNL Intelligent Services]，包括指向教程的連結，以瞭解詳細步驟。
+本節概述對應及擷取資料至Experience Platform以供使用的工作流程 [!DNL Intelligent Services]，包含教學課程的連結，以取得詳細步驟。
 
-#### 建立CEE架構和資料集
+#### 建立CEE方案和資料集
 
-當您準備開始準備接收資料時，第一步是建立一個使用CEE欄位組的新XDM架構。 以下教程將介紹在UI或API中建立新架構的過程：
+當您準備好開始準備要擷取的資料時，第一步是建立採用CEE欄位群組的新XDM結構描述。 以下教學課程會逐步說明在UI或API中建立新結構的程式：
 
-* [在UI中建立架構](../xdm/tutorials/create-schema-ui.md)
-* [在API中建立架構](../xdm/tutorials/create-schema-api.md)
+* [在UI中建立結構描述](../xdm/tutorials/create-schema-ui.md)
+* [在API中建立結構描述](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->上述教程遵循建立架構的通用工作流。 為架構選擇類時，必須使用 **XDM ExperienceEvent類**。 選擇此類後，可將CEE欄位組添加到架構。
+>上述教學課程遵循建立結構描述的一般工作流程。 為結構描述選擇類別時，您必須使用 **XDM ExperienceEvent類別**. 選擇此類別後，您就可以將CEE欄位群組新增到結構描述中。
 
-將CEE欄位組添加到方案後，您可以根據資料中其他欄位的需要添加其他欄位組。
+將CEE欄位群組新增到結構描述後，您可以視需要新增其他欄位群組，以用於資料內的其他欄位。
 
-建立並保存架構後，可以基於該架構建立新資料集。 以下教程將介紹在UI或API中建立新資料集的過程：
+建立並儲存結構描述後，您就可以根據該結構描述建立新的資料集。 以下教學課程會逐步說明在UI或API中建立新資料集的程式：
 
-* [在UI中建立資料集](../catalog/datasets/user-guide.md#create) （按照工作流使用現有架構）
+* [在UI中建立資料集](../catalog/datasets/user-guide.md#create) （遵循使用現有結構描述的工作流程）
 * [在API中建立資料集](../catalog/datasets/create.md)
 
-建立資料集後，您可以在以下位置的平台UI中找到它： **[!UICONTROL 資料集]** 工作區。
+建立資料集後，您可以在的Platform UI中找到 **[!UICONTROL 資料集]** 工作區。
 
 ![](images/data-preparation/dataset-location.png)
 
-#### 向資料集添加標識欄位
+#### 將身分欄位新增至資料集
 
-如果要從 [!DNL Adobe Audience Manager]。 [!DNL Adobe Analytics]，或另一個外部源，則可以選擇將架構欄位設定為標識欄位。 要將架構欄位設定為標識欄位，請查看在 [UI教程](../xdm/tutorials/create-schema-ui.md#identity-field) 或 [API教程](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) 建立架構。
+如果您要從以下來源匯入資料： [!DNL Adobe Audience Manager]， [!DNL Adobe Analytics]，或是其他外部來源，您就可以選擇將結構描述欄位設定為身分欄位。 若要將結構描述欄位設定為身分欄位，請檢視內關於設定身分欄位的區段 [UI教學課程](../xdm/tutorials/create-schema-ui.md#identity-field) 或 [api教學課程](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) 用於建立結構描述。
 
-如果要從本地CSV檔案中接收資料，可跳到上的下一節 [映射和接收資料](#ingest)。
+如果您從本機CSV檔案擷取資料，您可以跳至的下一節： [對應和擷取資料](#ingest).
 
-#### 映射和攝取資料 {#ingest}
+#### 對應及擷取資料 {#ingest}
 
-建立CEE模式和資料集後，可以開始將資料表映射到模式，並將資料接收到平台。 請參閱上的教程 [將CSV檔案映射到XDM架構](../ingestion/tutorials/map-csv/overview.md) 有關如何在UI中執行此操作的步驟。 可以使用以下 [示例JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) test攝取過程，然後使用您自己的資料。
+建立CEE結構和資料集後，您可以開始將資料表對應至結構，並將資料擷取到Platform。 請參閱教學課程，位置如下： [將CSV檔案對應至XDM結構描述](../ingestion/tutorials/map-csv/overview.md) 瞭解如何在UI中執行此動作的步驟。 您可以使用下列專案 [範例JSON檔案](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) ，在使用您自己的資料之前測試擷取程式。
 
-一旦填充了資料集，就可以使用同一資料集來接收其他資料檔案。
+填入資料集後，相同的資料集可用於擷取其他資料檔案。
 
-如果資料儲存在受支援的第三方應用程式中，您還可以選擇建立 [源連接器](../sources/home.md) 將營銷活動資料 [!DNL Platform] 即時。
+如果您的資料儲存在支援的協力廠商應用程式中，您也可以選擇建立 [來源聯結器](../sources/home.md) 將行銷事件資料內嵌至 [!DNL Platform] 即時。
 
 ## 後續步驟 {#next-steps}
 
-本文檔提供了有關準備資料以供使用的一般指導 [!DNL Intelligent Services]。 如果您需要根據您的使用案例進行其他咨詢，請聯繫Adobe咨詢支援。
+本檔案提供準備您的資料以用於的一般指引 [!DNL Intelligent Services]. 如果您需要根據使用案例提供其他諮詢，請聯絡Adobe諮詢支援。
 
-一旦您成功地使用客戶體驗資料填充了資料集，您就可以使用 [!DNL Intelligent Services] 來生成洞見。 請參閱以下文檔以開始：
+成功將客戶體驗資料填入資料集後，您就可以使用 [!DNL Intelligent Services] 以產生深入分析。 請參閱下列檔案以開始使用：
 
 * [Attribution AI 概述](./attribution-ai/overview.md)
 * [Customer AI 概述](./customer-ai/overview.md)

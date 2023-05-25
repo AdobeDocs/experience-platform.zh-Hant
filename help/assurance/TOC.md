@@ -14,19 +14,19 @@ ht-degree: 72%
 
 # Adobe Experience Platform Assurance {#assurance}
 
-- [保證概述](./home.md)
+- [保證總覽](./home.md)
 - [使用者存取權](./user-access.md)
 - 檢視 {#view}
-   - [事件交易記錄](./views/event-transactions.md)
-   - [擴展版本](./views/extension-versions.md)
+   - [事件交易](./views/event-transactions.md)
+   - [擴充功能版本](./views/extension-versions.md)
    - [應用程式內傳訊](./views/in-app-messaging.md)
-   - [在設備視圖上](./views/on-device-views.md)
+   - [在裝置上檢視](./views/on-device-views.md)
    - [Places Service](./views/places-service.md)
-   - [推送調試視圖](./views/push-debug-view.md)
+   - [推送偵錯檢視](./views/push-debug-view.md)
    - [驗證摘要](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
    - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - 教學課程 {#tutorials}
-   - [實施保證](./tutorials/implement-assurance.md)
+   - [實作保證](./tutorials/implement-assurance.md)
    - [使用保證](./tutorials/using-assurance.md)
 - [疑難排解](./troubleshooting.md)

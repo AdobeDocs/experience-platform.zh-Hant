@@ -1,6 +1,6 @@
 ---
-title: 通過Offer decisioning個性化
-description: 瞭解如何使用伺服器API通過Offer decisioning提供和呈現個性化體驗。
+title: 透過Offer decisioning個人化
+description: 瞭解如何使用伺服器API透過Offer decisioning傳遞和演算個人化體驗。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -9,37 +9,37 @@ ht-degree: 2%
 
 ---
 
-# 通過Offer decisioning個性化
+# 透過Offer decisioning個人化
 
 ## 總覽 {#overview}
 
-邊緣網路伺服器API可提供在 [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) 到Web頻道。
+Edge Network Server API可以提供受管理的個人化體驗 [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) 至網路頻道。
 
-[!DNL Offer Decisioning] 支援一個非可視介面，以建立、激活和提供您的活動和個性化體驗。
+[!DNL Offer Decisioning] 支援非視覺化介面，以建立、啟用及傳遞您的活動和個人化體驗。
 
-## 配置資料流 {#configure-your-datastream}
+## 設定您的資料串流 {#configure-your-datastream}
 
-在將伺服器API與Offer decisioning結合使用之前，必須在資料流配置上啟用Adobe Experience Platform個性化，並啟用 **[!UICONTROL offer decisioning]** 的雙曲餘切值。
+您必須先在資料流設定上啟用Adobe Experience Platform個人化，然後啟用「伺服器API與Offer Decisioning」，您才能使用 **[!UICONTROL offer decisioning]** 選項。
 
-查看 [將服務添加到資料流的指南](../edge/datastreams/overview.md#adobe-experience-platform-settings)，以獲取有關如何啟用Offer decisioning的詳細資訊。
+請參閱 [新增服務至資料流的指南](../edge/datastreams/overview.md#adobe-experience-platform-settings)，以取得如何啟用Offer Decisioning的詳細資訊。
 
-![顯示資料流服務配置螢幕的UI影像，已選擇Offer decisioning](assets/aep-od-datastream.png)
+![顯示資料流服務設定畫面的UI影像，其中選取Offer decisioning](assets/aep-od-datastream.png)
 
 ## 建立對象 {#audience-creation}
 
-[!DNL Offer Decisioning] 依靠Adobe Experience Platform分類服務來創造觀眾。 您可以找到 [!DNL Segmentation Service] [這裡](../segmentation/home.md)。
+[!DNL Offer Decisioning] 仰賴Adobe Experience Platform Segmentation Service建立對象。 您可以找到以下專案的檔案： [!DNL Segmentation Service] [此處](../segmentation/home.md).
 
-## 定義決策範圍 {#creating-decision-scopes}
+## 定義決定範圍 {#creating-decision-scopes}
 
-的 [!DNL Offer Decision Engine] 使用Adobe Experience Platform資料 [即時客戶配置檔案](../profile/home.md)，以及 [!DNL Offer Library]，在適當的時間向適當的客戶和渠道提供優惠。
+此 [!DNL Offer Decision Engine] 使用Adobe Experience Platform資料和 [即時客戶設定檔](../profile/home.md)，以及 [!DNL Offer Library]，在適當的時間將優惠方案提供給適當的客戶和管道。
 
-瞭解有關 [!DNL Offer Decisioning Engine]，請參閱 [文檔](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant)。
+若要進一步瞭解 [!DNL Offer Decisioning Engine]，請參閱專屬的 [檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant).
 
-之後 [配置資料流](#configure-your-datastream)，您必須定義要在個性化市場活動中使用的決策範圍。
+晚於 [設定您的資料串流](#configure-your-datastream)，您必須定義要在個人化行銷活動中使用的決定範圍。
 
-[決策範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) 是Base64編碼的JSON字串，包含您希望的活動和位置ID [!DNL Offer Decisioning Service] 在提出要約時使用。
+[決定範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) 是Base64編碼的JSON字串，其中包含您想要的活動和位置ID。 [!DNL Offer Decisioning Service] 建議優惠方案時使用。
 
-**決策範圍JSON**
+**決定範圍JSON**
 
 ```json
 {
@@ -48,17 +48,17 @@ ht-degree: 2%
 }
 ```
 
-**決策範圍Base64編碼字串**
+**決定範圍Base64編碼的字串**
 
 ```shell
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-在建立優惠和收集後，您需要定義 [決策範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes)。
+建立優惠方案與集合後，您需要定義 [決定範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
 
-複製Base64編碼的決策範圍。 您將在 `query` 伺服器API請求的對象。
+複製Base64編碼的決定範圍。 您會在以下位置使用它： `query` 伺服器API要求的物件。
 
-![顯示Offer decisioningUI的UI影像，突出顯示決策範圍。](assets/decision-scope.png)
+![顯示Offer decisioningUI的UI影像，醒目提示決定範圍。](assets/decision-scope.png)
 
 ```json
 "query":{
@@ -70,7 +70,7 @@ ht-degree: 2%
 }
 ```
 
-## API調用示例 {#api-example}
+## API呼叫範例 {#api-example}
 
 **API格式**
 
@@ -80,11 +80,11 @@ POST /ee/v2/interact
 
 ### 請求 {#request}
 
-下面概述了包含完整XDM對象、資料對象和Offer decisioning查詢的完整請求。
+包含完整XDM物件、資料物件和Offer decisioning查詢的完整請求概述如下。
 
 >[!NOTE]
 >
->的 `xdm` 和 `data` 對象是可選的，並且僅當您建立的段具有在其中任何一個對象中使用欄位的條件時，才需要Offer decisioning。
+>此 `xdm` 和 `data` 物件是選用的，而且只有在您已建立區段的條件在其中任何一個物件中使用欄位時，才需要Offer decisioning。
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -177,7 +177,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 回應 {#response}
 
-邊緣網路將返回與下面類似的響應。
+Edge Network會傳回類似下列的回應。
 
 ```json
 {
@@ -240,22 +240,22 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 }
 ```
 
-如果訪問者有資格根據發送到的資料進行個性化設定活動 [!DNL Offer Decisioning]，相關活動內容將在 `handle` 對象，其中類型為 `personalization:decisions`。
+如果訪客根據傳送至的資料符合個人化活動的資格 [!DNL Offer Decisioning]，相關活動內容會位於 `handle` 物件，其中型別為 `personalization:decisions`.
 
-其他內容將在 `handle` 對象也一樣。 其他內容類型與 [!DNL Offer Decisioning] 個性化。 如果訪問者有資格進行多項活動，則這些活動將包含在陣列中。
+其他內容將會傳回至 `handle` 物件。 其他內容型別與 [!DNL Offer Decisioning] 個人化。 如果訪客符合多個活動的資格，則會包含在陣列中。
 
-下表說明了該部分答復的關鍵要素。
+下表說明該部分回應的主要元素。
 
 | 屬性 | 說明 | 範例 |
 |---|---|---|
-| `scope` | 與已退回的建議要約關聯的決定範圍。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `scope` | 與傳回的建議優惠方案相關的決定範圍。 | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
 | `activity.id` | 優惠活動的唯一ID。 | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
-| `placement.id` | 聘用位置的唯一ID。 | `"id": "xcore:offer-placement:1175009612b0100c"` |
-| `items.id` | 建議的服務的唯一ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `schema` | 與建議的優惠關聯的內容的模式。 | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
-| `data.id` | 建議的服務的唯一ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `format` | 與建議的優惠關聯的內容的格式。 | `"format": "text/html"` |
-| `language` | 與建議的服務內容關聯的一組語言。 | `"language": [ "en-US" ]` |
-| `content` | 以字串格式與建議的優惠關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
-| `deliveryUrl` | 以URL格式與建議的優惠相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
-| `characteristics` | JSON對象包含與建議的服務關聯的特性。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
+| `placement.id` | 優惠方案位置的唯一ID。 | `"id": "xcore:offer-placement:1175009612b0100c"` |
+| `items.id` | 建議優惠方案的唯一ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `schema` | 與建議選件相關聯的內容結構描述。 | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
+| `data.id` | 建議優惠方案的唯一ID。 | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `format` | 與建議選件相關聯的內容格式。 | `"format": "text/html"` |
+| `language` | 與建議選件內容相關的一系列語言。 | `"language": [ "en-US" ]` |
+| `content` | 以字串格式與建議選件相關聯的內容。 | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
+| `deliveryUrl` | 以URL格式呈現與建議選件相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
+| `characteristics` | JSON物件，其中包含與建議選件相關聯的特性。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |

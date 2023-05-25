@@ -1,6 +1,6 @@
 ---
-title: Amazon廣告
-description: Amazon廣告為註冊銷售商、銷售商、圖書銷售商、Kindle Direct Publishing(KDP)作者、應用程式開發商和/或代理提供了一系列選項來幫助您實現廣告目標。 Amazon廣告與Adobe Experience Platform的整合為Amazon廣告產品，包括Amazon(ADSP)提供DSP了轉鍵整合。 使用Adobe Experience Platform的Amazon廣告目的地，用戶能夠定義廣告客戶受眾，以在Amazon進行定位和激DSP活。
+title: Amazon Ads
+description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書廠商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的全方位整合。 使用者可以在Adobe Experience Platform中使用Amazon Ads目的地，定義廣告商對象，以在Amazon DSP上鎖定和啟用。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
@@ -10,126 +10,126 @@ ht-degree: 1%
 
 ---
 
-# (Beta)Amazon廣告連接 {#amazon-ads}
+# （測試版） Amazon Ads連線 {#amazon-ads}
 
 ## 總覽 {#overview}
 
-Amazon廣告為註冊銷售商、銷售商、圖書銷售商、Kindle Direct Publishing(KDP)作者、應用程式開發商和/或代理提供了一系列選項來幫助您實現廣告目標。
+Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書廠商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。
 
-Amazon廣告與Adobe Experience Platform的整合為Amazon廣告產品，包括Amazon(ADSP)提供DSP了轉鍵整合。 使用Adobe Experience Platform的Amazon廣告目的地，用戶能夠定義廣告客戶受眾，以在Amazon進行定位和激DSP活。
+Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的全方位整合。 使用者可以在Adobe Experience Platform中使用Amazon Ads目的地，定義廣告商對象，以在Amazon DSP上鎖定和啟用。
 
-此連接支援以下Amazon市場中的受眾建立： `US`。 `CA`。 `MX`。 `BR`。
+此連線支援在以下Amazon Marketplaces中建立受眾： `US`， `CA`， `MX`， `BR`.
 
 >[!IMPORTANT]
 >
->此文檔頁面由 *Amazon廣告* 團隊。 這是當前的試用版產品，功能可能會更改。 如有任何查詢或更新請求，請直接聯繫他們，地址為： *`amc-support@amazon.com`。*
+>此檔案頁面是由 *Amazon Ads* 團隊。 此產品目前為測試版，功能可能會有所變更。 如有任何查詢或更新請求，請直接聯絡他們： *`amc-support@amazon.com`.*
 
 ## 使用案例 {#use-cases}
 
-幫助您更好地瞭解您應如何以及何時使用 *Amazon廣告* 目的地，以下是Adobe Experience Platform客戶可通過使用此目的地解決的示例使用案例。
+為了協助您更清楚瞭解應該如何及何時使用 *Amazon Ads* 目的地，以下是Adobe Experience Platform客戶可以使用此目的地來解決的範例使用案例。
 
-### 激活和定向 {#activation-and-targeting}
+### 啟用與定位 {#activation-and-targeting}
 
-與Amazon的DSP整合使Amazon廣告商能夠將廣告商的CDP片段從Adobe Experience Platform傳遞到Amazon,DSP以創造廣告商受眾以進行廣告定位。 可以在Amazon內選DSP擇觀眾進行正面瞄準和負面瞄準（壓制）。 此外，利用通過AmazonMarketing Cloud產生的信號，廣告商可以優化其廣告商受眾，從而使受眾變化與Amazon同DSP步。
+此與Amazon DSP的整合可讓Amazon Ads廣告商將廣告商CDP區段從Adobe Experience Platform傳遞至Amazon的DSP，以針對廣告鎖定目標建立廣告商受眾。 可在Amazon DSP中選取正面目標定位和負面目標定位（隱藏）的對象。 此外，透過AmazonMarketing Cloud產生的訊號，廣告商可最佳化其廣告商對象，將對象變更與Amazon DSP同步。
 
 ## 先決條件 {#prerequisites}
 
-為了使用Amazon廣告與Adobe Experience Platform的連接，用戶必須首先能夠訪問AmazonDSP廣告商帳戶。  要提供這些實例，請訪問Amazon廣告網站的以下頁面：
+若要將Amazon Ads連線與Adobe Experience Platform搭配使用，使用者必須先具有Amazon DSP廣告商帳戶的存取權。  若要布建這些例項，請造訪Amazon Ads網站上的下列頁面：
 
-* [開始使用AmazonDSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
+* [開始使用Amazon DSP](https://advertising.amazon.com/solutions/products/amazon-dsp?ref_=a20m_us_hnav_p_dsp_adtech)
 
-## 支援的身份 {#supported-identities}
+## 支援的身分 {#supported-identities}
 
-的 *Amazon廣告* 連接支援激活下表中描述的身份。 瞭解有關 [身份](/help/identity-service/namespaces.md)。 有關Amazon廣告支援的身份的詳細資訊，請訪問 [AmazonDSP支援中心](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE)。
+此 *Amazon Ads* 連線支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md). 如需Amazon Ads支援的身分識別的詳細資訊，請造訪 [Amazon DSP支援中心](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
-| 目標標識 | 說明 | 考量事項 |
+| 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| phone_sha256 | 使用SHA256算法散列的電話號碼 | 純文字檔案和SHA256散列電話號碼都受Adobe Experience Platform支援。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 |
-| email_lc_sha256 | 使用SHA256算法散列的電子郵件地址 | 純文字檔案和SHA256散列電子郵件地址都受Adobe Experience Platform支援。 如果源欄位包含未散列的屬性，請檢查 **[!UICONTROL 應用轉換]** 選項 [!DNL Platform] 激活時自動對資料進行散列。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform支援純文字和SHA256雜湊電話號碼。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊處理的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
 
 {style="table-layout:auto"}
 
-## 導出類型和頻率 {#export-type-frequency}
+## 匯出型別和頻率 {#export-type-frequency}
 
-有關目標導出類型和頻率的資訊，請參閱下表。
+請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 導出類型 | **[!UICONTROL 區段匯出]** | 您正在導出段（受眾）的所有成員，其中使用的標識符（名稱、電話號碼或其他） *Amazon廣告* 目標。 |
-| 導出頻率 | **[!UICONTROL 流]** | 流目標是基於API的「始終開啟」連接。 一旦基於段評估在Experience Platform中更新配置檔案，連接器就將更新下游發送到目標平台。 閱讀有關 [流目標](/help/destinations/destination-types.md#streaming-destinations)。 |
+| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *Amazon Ads* 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## 連接到目標 {#connect}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 > 
->要連接到目標，您需要 **[!UICONTROL 管理目標]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-要連接到此目標，請按照 [目標配置教程](../../ui/connect-destination.md)。 在配置目標工作流中，填寫下面兩節中列出的欄位。
+若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目標 {#authenticate}
+### 驗證至目的地 {#authenticate}
 
-要驗證到目標，請填寫必填欄位並選擇 **[!UICONTROL 連接到目標]**。
+若要驗證目的地，請填入必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
-您將被帶到Amazon廣告連接介面，在該介面中，您將首先選擇要連接到的廣告商帳戶。  連接後，您將重定向回Adobe Experience Platform，並帶有您選擇的廣告商帳戶的ID。 在目標配置螢幕上選擇相應的廣告商帳戶以繼續。
+系統會將您帶至Amazon Ads連線介面，您可在此處先選取想要連線的廣告商帳戶。  連線後，系統會將您重新導向回Adobe Experience Platform，並顯示新連線，以及您選取的廣告商帳戶ID。 在目的地設定畫面上選取適當的廣告商帳戶以繼續。
 
-* **[!UICONTROL 持有者令牌]**:填寫承載令牌以驗證到目標。
+* **[!UICONTROL 持有人權杖]**：填寫持有人權杖以對目的地進行驗證。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目的地詳細資料 {#destination-details}
 
-要配置目標的詳細資訊，請填寫以下必需欄位和可選欄位。 UI中某個欄位旁邊的星號表示該欄位是必需的。
+若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
 
-* **[!UICONTROL 名稱]**:您將來識別此目標的名稱。
-* **[!UICONTROL 說明]**:將幫助您在將來確定此目標的說明。
-* **[!UICONTROL Amazon廣告商ID]**:選擇用於目標的目標Amazon廣告帳戶的ID。
+* **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
+* **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL Amazon Ads廣告商ID]**：選取用於目的地的目標Amazon Ads帳戶ID。
 
-注：選擇此Amazon廣告商ID後，您需要建立新目標來更改此項。 如果您重新驗證OAuth憑據並選擇新的廣告商ID，則您所做的更改將不適用。
+注意：選取此Amazon Ads廣告商ID後，您需要建立新目的地才能變更此專案。 如果您重新驗證OAuth憑證並選取新的廣告商ID，您的變更將不會套用。
 
-![配置新目標](../../assets/catalog/advertising/amazon_ads_image_1.png)
+![設定新目的地](../../assets/catalog/advertising/amazon_ads_image_1.png)
 
-### 啟用警報 {#enable-alerts}
+### 啟用警示 {#enable-alerts}
 
-您可以啟用警報來接收有關目標資料流狀態的通知。 從清單中選擇要訂閱的警報以接收有關資料流狀態的通知。 有關警報的詳細資訊，請參閱上的指南 [使用UI訂閱目標警報](../../ui/alerts.md)。
+您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
 
-完成提供目標連接的詳細資訊後，選擇 **[!UICONTROL 下一個]**。
+當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 將段激活到此目標 {#activate}
+## 啟用此目的地的區段 {#activate}
 
 >[!IMPORTANT]
 > 
->要激活資料，您需要 **[!UICONTROL 管理目標]**。 **[!UICONTROL 激活目標]**。 **[!UICONTROL 查看配置檔案]**, **[!UICONTROL 查看段]** [訪問控制權限](/help/access-control/home.md#permissions)。 閱讀 [訪問控制概述](/help/access-control/ui/overview.md) 或聯繫您的產品管理員以獲取所需權限。
+>若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-閱讀 [激活配置檔案和段以流式處理段導出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 有關激活此目標受眾段的說明。
+讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
-### 映射屬性和標識 {#map}
+### 對應屬性和身分 {#map}
 
-Amazon廣告連接支援散列電子郵件地址和散列電話號碼，以便進行身份匹配。  下面的螢幕截圖提供了一個與Amazon廣告連接相容的匹配示例：
+Amazon Ads連線支援雜湊電子郵件地址和雜湊電話號碼，以進行身分比對。  以下熒幕擷圖提供與Amazon Ads連線相容的相符範例：
 
-![Adobe到Amazon廣告地圖](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![Adobe至Amazon Ads對應](../../assets/catalog/advertising/amazon_ads_image_2.png)
 
-* 要映射散列的電子郵件地址，請選擇 `Email_LC_SHA256` 標識名稱空間作為源欄位。
-* 要映射散列電話號碼，請選擇 `Phone_SHA256` 標識名稱空間作為源欄位。
-* 要映射未散列的電子郵件地址或電話號碼，請選擇相應的標識命名空間作為源欄位，然後檢查 `Apply Transformation` 選項，使平台在激活時散列標識。
+* 若要對應雜湊電子郵件地址，請選取 `Email_LC_SHA256` 身分名稱空間作為來源欄位。
+* 若要對應雜湊電話號碼，請選取 `Phone_SHA256` 身分名稱空間作為來源欄位。
+* 若要對應未雜湊的電子郵件地址或電話號碼，請選取對應的身分名稱空間作為來源欄位，並核取 `Apply Transformation` 啟用時讓Platform雜湊身分識別的選項。
 
-強烈建議您映射可用的盡可能多的欄位。 如果只有一個源屬性可用，則可以映射一個欄位。  Amazon廣告目的地將利用所有映射的欄位進行映射，如果提供更多欄位，則可獲得更高的匹配率。 有關接受的標識符的詳細資訊，請訪問 [Amazon廣告散播了受眾幫助頁面](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE)。
+強烈建議您儘量對應可用欄位。 如果只有一個來源屬性可用，您可以對應單一欄位。  Amazon Ads目的地會針對對應目的利用所有對應的欄位，如果提供更多欄位，可提供較高的匹配率。 如需所接受識別碼的詳細資訊，請造訪 [Amazon Ads雜湊對象說明頁面](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
-## 導出的資料/驗證資料導出 {#exported-data}
+## 匯出的資料/驗證資料匯出 {#exported-data}
 
-上載受眾後，您可以使用以下步驟驗證您的受眾是否已建立並正確上載：
+上傳對象後，您可以透過下列步驟驗證對象是否已正確建立及上傳：
 
-**為Amazon DSP**
+**適用於Amazon DSP**
 
-導航到您的廣告商ID →觀眾→廣告商受眾。 如果您的受眾已成功建立並且滿足最小受眾成員數，則您將看到的狀態為 `Active`。  有關觀眾規模和訪問範圍的其他詳細資訊，可在Amazon用戶介面右側的「預測訪問」面DSP板中找到。
+導覽至您的廣告商ID →受眾→廣告商受眾。 如果成功建立受眾且符合受眾成員的最低數量，您將會看到「狀態」 `Active`.  您可以在Amazon DSP使用者介面右側的預測觸及面板中找到有關您的對象人數和觸及率的更多詳細資料。
 
-![AmazonDSP觀眾建立驗證](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![Amazon DSP對象建立驗證](../../assets/catalog/advertising/amazon_ads_image_3.png)
 
-## 資料使用和治理 {#data-usage-governance}
+## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 目標在處理資料時符合資料使用策略。 有關如何 [!DNL Adobe Experience Platform] 強制實施資料治理，讀取 [資料治理概述](/help/data-governance/home.md)。
+全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，請閱讀 [資料控管概觀](/help/data-governance/home.md).
 
 ## 其他資源 {#additional-resources}
 
-有關其他幫助文檔，請訪問以下Amazon廣告幫助資源：
+如需其他說明檔案，請瀏覽下列Amazon Ads說明資源：
 
-* [AmazonDSP幫助中心](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)
+* [Amazon DSP說明中心](https://advertising.amazon.com/dsp/help/ss/en/audiences#/)

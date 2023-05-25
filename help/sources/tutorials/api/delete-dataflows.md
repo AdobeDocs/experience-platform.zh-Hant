@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流服務；API;api;delete;delete dataflows
+keywords: Experience Platform；首頁；熱門主題；流程服務；API；API；刪除；刪除資料流程
 solution: Experience Platform
-title: 使用流服務API刪除資料流
+title: 使用流量服務API刪除資料流
 type: Tutorial
-description: 瞭解如何使用流服務API刪除批處理和流資料流。
+description: 瞭解如何使用流量服務API刪除批次和串流資料流。
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -12,28 +12,28 @@ ht-degree: 2%
 
 ---
 
-# 使用流服務API刪除資料流
+# 使用流量服務API刪除資料流
 
-您可以使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。
+您可以使用來刪除包含錯誤或已過時的批次和串流資料流。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-本教程介紹了刪除使用批處理源和流式處理源建立的資料流的步驟 [!DNL Flow Service]。
+本教學課程涵蓋刪除使用批次和串流來源建立的資料流的步驟，這些資料流使用 [!DNL Flow Service].
 
 ## 快速入門
 
-本教程要求您具有有效的流ID。 如果沒有有效的流ID，請從 [源概述](../../home.md) 在嘗試本教程之前，請按照上述步驟操作。
+本教學課程要求您具備有效的流量ID。 如果您沒有有效的流量ID，請從「 」中選擇您選擇的聯結器 [來源概觀](../../home.md) 並依照在嘗試本教學課程之前概述的步驟進行。
 
-本教程還要求您對以下Adobe Experience Platform元件有一定的瞭解：
+本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
 
-* [源](../../home.md): [!DNL Experience Platform] 允許從各種源接收資料，同時讓您能夠使用 [!DNL Platform] 服務。
-* [沙箱](../../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
+* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-有關如何成功調用平台API的資訊，請參見上的指南 [平台API入門](../../../landing/api-guide.md)。
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../landing/api-guide.md).
 
 ## 刪除資料流
 
-使用現有流ID，可以通過執行對的DELETE請求來刪除資料流 [!DNL Flow Service] API。
+有了現有的流量ID，您可以透過對執行DELETE請求來刪除資料流 [!DNL Flow Service] API。
 
 **API格式**
 
@@ -43,7 +43,7 @@ DELETE /flows/{FLOW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 獨特 `id` 要刪除的資料流的值。 |
+| `{FLOW_ID}` | 唯一 `id` 您要刪除之資料流的值。 |
 
 **要求**
 
@@ -58,10 +58,10 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應返回HTTP狀態204（無內容）和空白正文。 您可以通過嘗試對資料流進行查找(GET)請求來確認刪除。 API將返回HTTP 404（未找到）錯誤，表示資料流已被刪除。
+成功的回應會傳回HTTP狀態204 （無內容）和空白內文。 您可以嘗試對資料流進行查詢(GET)請求以確認刪除。 API將傳回HTTP 404 （找不到）錯誤，這表示資料流已刪除。
 
 ## 後續步驟
 
-按照本教程，您已成功使用 [!DNL Flow Service] 刪除現有資料流的API。
+依照本教學課程，您已成功使用 [!DNL Flow Service] 要刪除現有資料流的API。
 
-有關如何使用用戶介面執行這些操作的步驟，請參閱上的教程 [刪除UI中的資料流](../../tutorials/ui/delete.md)
+如需如何使用使用者介面執行這些操作的步驟，請參閱以下教學課程： [在UI中刪除資料流](../../tutorials/ui/delete.md)

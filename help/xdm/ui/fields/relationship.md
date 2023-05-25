@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；經驗資料模型；資料模型；ui;workspace;relationship;field;
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；資料模型；ui；工作區；關係；欄位；
 solution: Experience Platform
 title: 在UI中定義關係欄位
-description: 瞭解如何在Experience Platform用戶介面中定義關係欄位。
+description: 瞭解如何在Experience Platform使用者介面中定義關係欄位。
 exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # 在UI中定義關係欄位
 
-在體驗資料模型(XDM)中， [聯合架構](../../schema/composition.md#union) 是屬於同一類的所有架構的統一視圖，這些架構也已為 [即時客戶配置檔案](../../../profile/home.md)。 聯合模式由Profile利用，以便從不同的體驗資料構造客戶的完整表示。
+在Experience Data Model (XDM)中， [聯合結構描述](../../schema/composition.md#union) 是屬於已啟用的相同類別之所有結構描述的統一檢視 [即時客戶個人檔案](../../../profile/home.md). 設定檔會運用聯合結構描述，以從不同的體驗資料中建構客戶的完整表示法。
 
-在某些情況下，您可能正在接收不一定是配置檔案一部分但與配置檔案相關的資料。 此類資料的一個示例是客戶「最喜愛的酒店」欄位。 由於人喜愛的酒店的屬性不是人本身的屬性，因此最好由基於自定義類而不是自定義類的單獨模式來表示酒店 [!DNL XDM Individual Profile]。
+在某些情況下，您擷取的資料不一定是設定檔的一部分，但依然與設定檔相關。 這類資料的範例是客戶的「最喜愛的飯店」欄位。 由於個人最喜愛的飯店屬性不是個人本身的屬性，因此飯店最適合根據自訂類別以個別結構描述，而不是 [!DNL XDM Individual Profile].
 
-由於聯合架構僅基於共用同一類的架構，因此僅啟用「Hotels」架構以在配置檔案中使用將不包括其欄位的聯合架構 [!DNL XDM Individual Profile]。 相反，您必須定義「Hotels」與屬於工會的另一個架構之間的關係。 這包括定義 **關係欄位** 引用引用架構的主標識的源架構中。
+由於聯合結構描述僅以共用相同類別的結構描述為基礎，僅啟用「飯店」結構描述以用於設定檔中將不會包含其欄位聯合結構描述 [!DNL XDM Individual Profile]. 而是必須定義「飯店」和屬於聯合的其他結構描述之間的關係。 這涉及定義 **關係欄位** 在參考參考結構描述的主要身分的來源結構描述中。
 
-有關在Adobe Experience PlatformUI中定義兩個架構之間關係的詳細步驟，請參見 [關係UI教程](../../tutorials/relationship-ui.md)。
+如需在Adobe Experience Platform UI中定義兩個結構描述之間關係的詳細步驟，請參閱 [關係UI教學課程](../../tutorials/relationship-ui.md).

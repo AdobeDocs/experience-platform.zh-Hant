@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；架構；架構；XDM；經驗事件；欄位；架構；架構；架構；架構設計；欄位組；欄位組；設備；貿易；貿易；貿易；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；ExperienceEvent；欄位；結構；結構描述；結構描述設計；欄位群組；欄位群組；裝置；交易；交易；
 solution: Experience Platform
-title: 設備折價詳細資訊架構欄位組
-description: 此文檔提供「設備折價貼換詳細資訊」架構欄位組的概述。
+title: 裝置折舊換新詳細資料結構描述欄位群組
+description: 本檔案提供「裝置以舊換新詳細資訊」結構描述欄位群組的概觀。
 exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
 source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
 workflow-type: tm+mt
@@ -11,25 +11,25 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL 設備折價詳細資訊] 架構欄位組
+# [!UICONTROL 裝置折舊換新細節] 結構描述欄位群組
 
 >[!NOTE]
 >
->多個架構欄位組的名稱已更改。 查看上的文檔 [欄位組名稱更新](../name-updates.md) 的子菜單。
+>數個結構描述欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../name-updates.md) 以取得詳細資訊。
 
-[!UICONTROL 設備折價詳細資訊] 是標準架構欄位組 [[!DNL XDM ExperienceEvent] 類](../../classes/experienceevent.md)。 它提供一個欄位(`deviceTradeInDetails`)，其中描述了設備折價換購交易，包括折價換購值、原始設備ID和新設備ID。
+[!UICONTROL 裝置折舊換新細節] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 它提供單一欄位(`deviceTradeInDetails`)以舊換新交易，包括折舊換新價值、原始裝置ID和新裝置ID。
 
-![設備折價詳細資訊結構](../../images/field-groups/device-trade-in-details.png)
+![裝置折舊換新詳細資料結構](../../images/field-groups/device-trade-in-details.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `tradeInValue` | [貨幣](../../data-types/currency.md) | 正在交易的設備的值。 |
-| `newDeviceID` | 字串 | 正在為其交易的新設備的ID。 |
-| `originalDeviceID` | 字串 | 正在交易的設備的ID。 |
+| `tradeInValue` | [貨幣](../../data-types/currency.md) | 交易的裝置值。 |
+| `newDeviceID` | 字串 | 交易的新裝置ID。 |
+| `originalDeviceID` | 字串 | 交易的裝置識別碼。 |
 
 {style="table-layout:auto"}
 
-有關欄位組的詳細資訊，請參閱公共XDM儲存庫：
+如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填充示例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
+* [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)

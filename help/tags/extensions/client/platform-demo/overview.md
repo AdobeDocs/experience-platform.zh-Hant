@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform演示擴展概述
-description: 瞭解Adobe Experience Platform演示在Adobe Experience Platform的擴展。
+title: Adobe Experience Platform示範擴充功能概觀
+description: 瞭解Adobe Experience Platform中的Adobe Experience Platform Demo擴充功能。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
@@ -13,18 +13,18 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 >[!NOTE]
 >
->此擴展已棄用， [Adobe Experience PlatformWeb SDK](../sdk/overview.md)。
+>此擴充功能已過時，傾向於 [Adobe Experience Platform Web SDK](../sdk/overview.md).
 
 此擴充功能的功能已移至新的擴充功能。以下快速比較目前功能。
 
-| 平台演示擴展 | 平台Web SDK |
+| Platform示範擴充功能 | 平台Web SDK |
 | ------------------ | ----------- |
 | 支援自訂客戶 ID | 支援自訂客戶 ID |
-| XDM的客戶端映射UI | 內建 ECID (不需 visitor.js) |
+| XDM的使用者端對應UI | 內建 ECID (不需 visitor.js) |
 | 能夠建立串流連線 | 選擇加入支援 |
 |  | XDM 支援為資料元素 |
 |  | 第一方網域支援 |
@@ -37,21 +37,21 @@ ht-degree: 72%
 
 本節提供設定 Adobe Experience Platform 擴充功能時可用選項的參考資料。
 
-如果尚未安裝Adobe Experience Platform擴展，請開啟您的屬性，然後選擇 **[!UICONTROL 擴展>目錄]**，懸停在Adobe Experience Platform分機上，然後選擇 **[!UICONTROL 安裝]**。
+如果尚未安裝Adobe Experience Platform擴充功能，請開啟您的屬性，然後選取「 」 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在Adobe Experience Platform擴充功能上，然後選取「 」 **[!UICONTROL 安裝]**.
 
-要配置擴展，請開啟 [!UICONTROL 擴展] 頁籤，懸停在擴展上，然後選擇 **[!UICONTROL 配置]**。
+若要設定擴充功能，請開啟 [!UICONTROL 擴充功能] 索引標籤，將游標停留在擴充功能上，然後選取「 」 **[!UICONTROL 設定]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### 串流連線
 
-選擇串流連線是您開始將資料串流至 Adobe Experience Platform 的第一步。您可以從串流連線下拉式方塊中選取連線。串流連線是必填欄位。如果沒有建立任何流連接，則可以通過選擇 **[!UICONTROL 建立流連接]** 按鈕
+選擇串流連線是您開始將資料串流至 Adobe Experience Platform 的第一步。您可以從串流連線下拉式方塊中選取連線。串流連線是必填欄位。如果您尚未建立任何串流連線，可以選取 **[!UICONTROL 建立串流連線]** 按鈕。
 
-如果選擇 **[!UICONTROL 建立流連接]** 將出現一個模式窗口。
+如果您選取 **[!UICONTROL 建立串流連線]** 將會出現強制回應視窗。
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-強制回應視窗中，某些欄位會預先填入值，您可以依個人需求適時變更。如果您計畫建立多個流連接，您應知道 **[!UICONTROL 資料源]** 欄位必須唯一。 嘗試使用 **[!UICONTROL 資料源]** 已在另一個連接上使用將失敗。
+強制回應視窗中，某些欄位會預先填入值，您可以依個人需求適時變更。如果您打算建立多個串流連線，請注意 **[!UICONTROL 資料來源]** 欄位必須是唯一的。 嘗試使用建立另一個串流連線 **[!UICONTROL 資料來源]** 已用於其他連線將會失敗。
 
 在您選取串流端點後，就會產生串流端點 URL 和來源。
 
@@ -81,7 +81,7 @@ ht-degree: 72%
 
 來源值欄位接受值或資料元素。您可以按一下來源值欄位旁的資料元素按鈕，以新增資料元素。
 
-目標模式欄位包含資料集模式中定義的XDM欄位的路徑。 對於在架構層次結構中更深入定義的欄位，可以使用點作為路徑部分之間的分隔符(例如 timeSeriesEvents.eventType) 作為分隔符號。
+目標結構描述欄位包含資料集結構描述中定義的XDM欄位路徑。 對於在更深層架構階層定義的欄位，您可以在路徑各部之間使用點(例如： timeSeriesEvents.eventType) 作為分隔符號。
 
 ### 結構描述欄位選擇器
 
@@ -91,7 +91,7 @@ ht-degree: 72%
 
 ### Adobe Experience Platform 中的身分欄位
 
-記錄資料模式和時間序列資料模式可以包含一個或多個標識欄位。 身分欄位會拼接在一起，形成主體的單一身分表示法，並包含諸如 CRM 識別碼、Experience Cloud ID (ECID)、瀏覽器 Cookie、Advertising ID，或其他網域中的其他 ID 等資訊。
+記錄資料結構描述和時間序列資料結構描述可能包含一或多個身分欄位。 身分欄位會拼接在一起，形成主體的單一身分表示法，並包含諸如 CRM 識別碼、Experience Cloud ID (ECID)、瀏覽器 Cookie、Advertising ID，或其他網域中的其他 ID 等資訊。
 
 結構描述中，身分欄位可以兩種方式定義：
 
@@ -116,16 +116,16 @@ ht-degree: 72%
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section.png)
 
-身分對應區段可包含多個列。每一列都可以定義特定的身分類型。您可以為標識定義以下屬性：類型、已驗證狀態、主和值。
+身分對應區段可包含多個列。每一列都可以定義特定的身分類型。您可以為身分定義下列屬性：型別、驗證狀態、主要身分和值。
 
 如果身分對應區段內有多個身分，您只能將一個身分標示為主要身分。
 
-如果您的架構具有 `xdm:identityMap` 欄位，同時另一個欄位被標籤為主標識欄位，則標識映射部分內的主列將不可見。
+如果您的結構描述具有 `xdm:identityMap` 欄位，而同時有另一個欄位標示為主要身分欄位，則身分對應區段內的主要身分欄不會顯示。
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section-not-primary.png)
 
 ### 必填欄位
 
-某些架構將具有頂級必填欄位。 最常見的欄位是「`timestamp`」和「`_id`」。若您未定義這些欄位，信標就會執行失敗。可以在架構映射部分內定義它們。
+有些結構描述會有頂層必要欄位。 最常見的欄位是「`timestamp`」和「`_id`」。若您未定義這些欄位，信標就會執行失敗。您可以在架構對應區段中加以定義。
 
 如果您的結構描述對應區段不包含「`timestamp`」或「`_id`」，但資料集結構描述需使用這些欄位，Adobe Experience Platform 擴充功能就會傳送信標，且信標內會有系統自動產生的值，這樣信標就不會執行失敗。唯有您未定義結構描述對應區段內的欄位時，信標資料中才會新增自動產生的值。

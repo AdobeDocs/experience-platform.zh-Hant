@@ -1,8 +1,8 @@
 ---
-keywords: 文本分類；文本分類
+keywords: 文字分類；文字分類
 solution: Experience Platform
-title: 內容與商務AI API中的文本分類
-description: 當給定文本片段時，文本分類服務可以將其分類為一個或多個標籤。 分類可以是單標籤、多標籤或分層。
+title: 內容與商務AI API中的文字分類
+description: 文字分類服務在指定文字片段時，可以將它分類為一個或多個標籤。 分類可以是單一標籤、多標籤或階層式。
 exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
 source-git-commit: b124ed97da8bde2a7fc4f10d350c81a47e096f29
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 4%
 
 ---
 
-# 文本分類
+# 文字分類
 
 >[!NOTE]
 >
->內容和商務AI處於測試版。 文檔可能會更改。
+>Content and Commerce AI為測試版。 檔案內容可能會有變動。
 
-當給定文本片段時，文本分類服務可以將其分類為一個或多個標籤。 分類可以是單標籤、多標籤或分層。
+文字分類服務在指定文字片段時，可以將它分類為一個或多個標籤。 分類可以是單一標籤、多標籤或階層式。
 
 **API格式**
 
@@ -27,11 +27,11 @@ POST /services/v1/predict
 
 **要求**
 
-以下請求基於在負載中提供的輸入參數對來自片段的文本進行分類。 有關所示輸入參數的詳細資訊，請參閱示例負載下表。
+以下請求會根據承載中提供的輸入引數來分類片段中的文字。 請參閱裝載範例下表，以瞭解有關所示輸入引數的詳細資訊。
 
 >[!CAUTION]
 >
->`analyzer_id` 確定 [!DNL Sensei Content Framework] 的子菜單。 請檢查一下 `analyzer_id` 在你提出要求之前。 聯繫內容和商務AI測試團隊以接收您的 `analyzer_id` 為此服務。
+>`analyzer_id` 決定哪些 [!DNL Sensei Content Framework] 已使用。 請檢查您是否擁有適當的 `analyzer_id` 進行要求之前。 聯絡Content and Commerce AI測試版團隊，接收您的 `analyzer_id` 以取得此服務。
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -60,21 +60,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | 屬性 | 說明 | 必要 |
 | --- | --- | --- |
-| `analyzer_id` | 的 [!DNL Sensei] 部署請求的服務ID。 此ID確定 [!DNL Sensei Content Frameworks] 的子菜單。 有關自定義服務，請與Content and Commerce AI團隊聯繫以設定自定義ID。 | 是 |
-| `application-id` | 已建立的應用程式的ID。 | 是 |
-| `data` | 包含JSON對象的陣列，其中每個對象都位於表示文檔的陣列中。 作為此陣列的一部分傳遞的任何參數都將覆蓋在 `data` 陣列。 此表中概述的任何剩餘屬性都可以從中覆蓋 `data`。 | 是 |
-| `language` | 輸入文本的語言。 預設值為 `en`。 | 無 |
-| `content-type` | 用於指示輸入是請求正文的一部分還是S3儲存段的帶簽名URL。 此屬性的預設值為 `inline`。 | 無 |
-| `encoding` | 輸入文本的編碼格式。 這可以是 `utf-8` 或 `utf-16`。 此屬性的預設值為 `utf-8`。 | 無 |
-| `threshold` | 需要返回結果的分數（0到1）的閾值。 使用值 `0` 返回所有結果。 此屬性的預設值為 `0`。 | 無 |
-| `top-N` | 要返回的結果數（不能為負整數）。 使用值 `0` 返回所有結果。 與 `threshold`，返回的結果數是任一限制集的較小值。 此屬性的預設值為 `0`。 | 無 |
-| `custom` | 要傳遞的任何自定義參數。 此屬性需要有效的JSON對象才能運行。 | 無 |
-| `content-id` | 響應中返回的資料元素的唯一ID。 如果未傳遞此資訊，則會分配自動生成的ID。 | 無 |
-| `content` | 文本分類服務使用的內容。 內容可以是原始文本（「內聯」內容類型）。 <br> 如果內容是S3(&#39;s3-bucket&#39; content-type)上的檔案，請傳遞帶簽名的URL。 | 是 |
+| `analyzer_id` | 此 [!DNL Sensei] 您的請求部署在下的服務ID。 此ID會決定 [!DNL Sensei Content Frameworks] 已使用。 若要使用自訂服務，請聯絡Content and Commerce AI團隊以設定自訂ID。 | 是 |
+| `application-id` | 已建立之應用程式的ID。 | 是 |
+| `data` | 一個陣列，其中包含JSON物件，而陣列中的每個物件都代表一個檔案。 在此陣列中傳遞的任何引數都會覆寫在 `data` 陣列。 此表格中下面列出的任何剩餘屬性，都可以從內覆寫 `data`. | 是 |
+| `language` | 輸入文字的語言。 預設值為 `en`。 | 無 |
+| `content-type` | 用於指出輸入是請求內文的一部分，還是S3儲存貯體的已簽署URL。 此屬性的預設值為 `inline`. | 無 |
+| `encoding` | 輸入文字的編碼格式。 這可以是 `utf-8` 或 `utf-16`. 此屬性的預設值為 `utf-8`. | 無 |
+| `threshold` | 分數臨界值（0至1），超過該臨界值即需要傳回結果。 使用值 `0` 以傳回所有結果。 此屬性的預設值為 `0`. | 無 |
+| `top-N` | 要傳回的結果數（不能為負整數）。 使用值 `0` 以傳回所有結果。 當與搭配使用時 `threshold`，傳回的結果數是設定的任一限制中的較小值。 此屬性的預設值為 `0`. | 無 |
+| `custom` | 任何要傳遞的自訂引數。 此屬性需要有效的JSON物件才能運作。 | 無 |
+| `content-id` | 回應中傳回之資料元素的唯一ID。 如果未傳遞此專案，則會指派自動產生的ID。 | 無 |
+| `content` | 文字分類服務使用的內容。 內容可以是原始文字（「inline」內容型別）。 <br> 如果內容是S3上的檔案（「s3-bucket」內容型別），請傳遞已簽署的URL。 | 是 |
 
 **回應**
 
-成功的響應返迴響應陣列中的分類文本。
+成功的回應會傳回回應陣列中的分類文字。
 
 ```json
 {

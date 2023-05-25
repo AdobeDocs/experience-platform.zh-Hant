@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；運行計畫查詢；運行計畫查詢；查詢服務；計畫查詢；計畫查詢；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；執行排定的查詢；執行排定的查詢；查詢服務；排定的查詢；排定的查詢；
 solution: Experience Platform
-title: 計畫查詢運行API終結點
-description: 以下各節將介紹您可以使用查詢服務API為運行計畫查詢而進行的各種API調用。
+title: 排定的查詢執行API端點
+description: 以下小節會逐步引導您執行各種API呼叫，以使用查詢服務API執行已排程的查詢。
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
@@ -11,15 +11,15 @@ ht-degree: 2%
 
 ---
 
-# 計畫查詢運行終結點
+# 排定的查詢執行端點
 
-## 示例API調用
+## API呼叫範例
 
-現在，您瞭解要使用哪些標頭後，就可以開始呼叫 [!DNL Query Service] API。 以下各節將介紹可以使用 [!DNL Query Service] API。 每個調用包括一般API格式、顯示所需標頭的示例請求和示例響應。
+現在您已瞭解要使用哪些標頭，可以開始對 [!DNL Query Service] API。 以下小節會逐步解說您可以使用進行的各種API呼叫 [!DNL Query Service] API。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
-### 檢索指定計畫查詢的所有運行的清單
+### 擷取指定排程查詢的所有執行清單
 
-您可以檢索特定計畫查詢的所有運行的清單，而不管這些運行當前正在運行還是已完成。 這是通過向 `/schedules/{SCHEDULE_ID}/runs` 端點，其中 `{SCHEDULE_ID}` 是 `id` 要檢索其運行的計畫查詢的值。
+您可以擷取特定排程查詢的所有執行清單，不論它們目前是否正在執行或已完成。 這可透過向以下網站發出GET請求來完成： `/schedules/{SCHEDULE_ID}/runs` 端點，其中 `{SCHEDULE_ID}` 是 `id` 您要擷取其執行的已排程查詢的值。
 
 **API格式**
 
@@ -30,23 +30,23 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 的 `id` 要檢索的計畫查詢的值。 |
-| `{QUERY_PARAMETERS}` | (*可選*)添加到請求路徑中的參數，該路徑配置在響應中返回的結果。 可以包括多個參數，用和符號分隔(`&`)。 下面列出了可用參數。 |
+| `{SCHEDULE_ID}` | 此 `id` 您要擷取的排定查詢值。 |
+| `{QUERY_PARAMETERS}` | (*可選*)將引數新增至要求路徑，以設定回應中傳回的結果。 可包含多個引數，以&amp;符號(`&`)。 可用的引數列示如下。 |
 
-**查詢參數**
+**查詢引數**
 
-以下是列出指定計畫查詢運行的可用查詢參數的清單。 所有這些參數都是可選的。 調用此終結點時沒有參數將檢索所有可用於指定計畫查詢的運行。
+以下為可用查詢引數清單，列出指定排程查詢的執行。 所有這些引數都是選用的。 在不使用引數的情況下呼叫此端點將會擷取可用於指定排程查詢的所有執行。
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定對結果排序依據的欄位。 支援的欄位為 `created` 和 `updated`。 比如說， `orderby=created` 將按建立結果的升序排序。 添加 `-` 之前建立(`orderby=-created`)將按降序順序建立項。 |
-| `limit` | 指定頁面大小限制以控制頁面中包含的結果數。 (*預設值：20*) |
-| `start` | 使用基於零的編號來偏移響應清單。 比如說， `start=2` 將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** 是HTML逃了。 使用逗號組合多組篩選器。 支援的欄位為 `created`。 `state`, `externalTrigger`。 支援的運算子清單為 `>` （大於）, `<` （小於），和  `==` （等於），和 `!=` （不等於）。 比如說， `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` 將返回在2019年4月20日之後手動建立、成功和建立的所有運行。 |
+| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位包括 `created` 和 `updated`. 例如， `orderby=created` 將依建立的結果遞增順序來排序結果。 新增 `-` 建立前(`orderby=-created`)會依建立的順序遞減排序專案。 |
+| `limit` | 指定頁面大小限制，以控制頁面中包含的結果數量。 (*預設值： 20*) |
+| `start` | 使用以零為基準的編號來位移回應清單。 例如， `start=2` 會傳回從第三個查詢開始的清單。 (*預設值： 0*) |
+| `property` | 根據欄位篩選結果。 篩選器 **必須** 已逸出HTML。 逗號可用來組合多組篩選器。 支援的欄位包括 `created`， `state`、和 `externalTrigger`. 支援的運運算元清單包括 `>` （大於）， `<` （小於），和  `==` （等於），和 `!=` （不等於）。 例如， `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` 將會傳回在2019年4月20日之後手動建立、成功和建立的所有執行。 |
 
 **要求**
 
-以下請求將檢索指定計畫查詢的最後四個運行。
+以下請求會擷取指定之排程查詢的最後四個執行。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中列出了指定計畫查詢的JSON運行清單。 以下響應返回指定計畫查詢的最後四次運行。
+成功的回應會傳回HTTP狀態200，其中包含指定排程查詢的執行清單，其形式為JSON。 下列回應會傳回指定之排程查詢的最後四個執行。
 
 ```json
 {
@@ -148,11 +148,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 >[!NOTE]
 >
->可以使用 `_links.cancel` 至 [停止為指定的計畫查詢運行](#immediately-stop-a-run-for-a-specific-scheduled-query)。
+>您可以使用以下專案的值： `_links.cancel` 至 [停止執行指定的排程查詢](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
-### 立即觸發特定計畫查詢的運行
+### 立即觸發特定排程查詢的執行
 
-通過向執行以下操作的POST請求，可以立即觸發指定計畫查詢的運行 `/schedules/{SCHEDULE_ID}/runs` 端點，其中 `{SCHEDULE_ID}` 是 `id` 要觸發其運行的計畫查詢的值。
+您可以透過向以下專案發出POST要求，立即觸發指定排程查詢的執行： `/schedules/{SCHEDULE_ID}/runs` 端點，其中 `{SCHEDULE_ID}` 是 `id` 您要觸發其執行的已排程查詢的值。
 
 **API格式**
 
@@ -172,7 +172,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 
 **回應**
 
-成功的響應返回HTTP狀態202（已接受），並顯示以下消息。
+成功的回應會傳回HTTP狀態202 （已接受），並出現以下訊息。
 
 ```json
 {
@@ -181,9 +181,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules/e95186d65
 }
 ```
 
-### 檢索特定計畫查詢的運行的詳細資訊
+### 擷取特定排程查詢的執行詳細資料
 
-通過向執行以下操作時發出GET請求，可以檢索有關特定計畫查詢運行的詳細資訊 `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` 端點，並提供調度查詢的ID和請求路徑中的運行。
+您可以透過向以下專案發出GET要求，擷取特定排程查詢之執行的相關詳細資訊： `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` 端點，並提供排程查詢的ID和請求路徑中的執行。
 
 **API格式**
 
@@ -193,8 +193,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 的 `id` 要檢索其詳細資訊的運行的計畫查詢的值。 |
-| `{RUN_ID}` | 的 `id` 要檢索的運行的值。 |
+| `{SCHEDULE_ID}` | 此 `id` 您要擷取其詳細資訊之執行已排程查詢的值。 |
+| `{RUN_ID}` | 此 `id` 要擷取的執行值。 |
 
 **要求**
 
@@ -208,7 +208,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **回應**
 
-成功的響應返回HTTP狀態200，並返回指定運行的詳細資訊。
+成功的回應會傳回HTTP狀態200以及指定執行的詳細資訊。
 
 ```json
 {
@@ -242,9 +242,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 }
 ```
 
-### 立即停止特定計畫查詢的運行
+### 立即停止特定排程查詢的執行
 
-通過向執行PATCH請求，可以立即停止特定計畫查詢的運行 `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` 端點，並提供調度查詢的ID和請求路徑中的運行。
+您可以透過向發出PATCH要求，立即停止特定排程查詢的執行 `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` 端點，並提供排程查詢的ID和請求路徑中的執行。
 
 **API格式**
 
@@ -254,12 +254,12 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 的 `id` 要檢索其詳細資訊的運行的計畫查詢的值。 |
-| `{RUN_ID}` | 的 `id` 要檢索的運行的值。 |
+| `{SCHEDULE_ID}` | 此 `id` 您要擷取其詳細資訊之執行已排程查詢的值。 |
+| `{RUN_ID}` | 此 `id` 要擷取的執行值。 |
 
 **要求**
 
-此API請求使用JSON修補程式語法作為其負載。 有關JSON修補程式如何工作的詳細資訊，請閱讀API基礎文檔。
+此API要求對其裝載使用JSON修補程式語法。 如需JSON修補程式運作方式的詳細資訊，請參閱API基礎檔案。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
@@ -274,7 +274,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 **回應**
 
-成功的響應返回HTTP狀態202（已接受），並顯示以下消息。
+成功的回應會傳回HTTP狀態202 （已接受），並出現以下訊息。
 
 ```json
 {

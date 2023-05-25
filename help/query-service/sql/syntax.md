@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: 2a5dd20d99f996652de5ba84246c78a1f7978693
 workflow-type: tm+mt
-source-wordcount: '3761'
+source-wordcount: '3706'
 ht-degree: 2%
 
 ---
@@ -570,10 +570,6 @@ SET property_key = property_value
 
 ### 分析表格 {#analyze-table}
 
-此 `ANALYZE TABLE` 命令會針對一個或多個命名表格執行分佈分析和統計計算。 使用 `ANALYZE TABLE` 視資料集是否儲存在 [加速存放區](#compute-statistics-accelerated-store) 或 [資料湖](#compute-statistics-data-lake). 如需其使用的詳細資訊，請參閱其各自的章節。
-
-#### 加速存放區上的計算統計資料 {#compute-statistics-accelerated-store}
-
 此 `ANALYZE TABLE` command會計算加速存放區上表格的統計資料。 統計資料是根據加速存放區上特定資料表的已執行CTAS或ITAS查詢計算而得。
 
 **範例**
@@ -596,7 +592,7 @@ ANALYZE TABLE <original_table_name>
 | `mean` | 分析表格的平均值。 |
 | `stdev` | 分析表格的標準差。 |
 
-#### 資料湖上的計算統計資料 {#compute-statistics-data-lake}
+#### 計算統計資料 {#compute-statistics}
 
 您現在可以在以下位置計算欄層級統計資料： [!DNL Azure Data Lake Storage] (ADLS)資料集具有 `COMPUTE STATISTICS` 和 `SHOW STATISTICS` SQL命令。 計算整個資料集、資料集子集、所有欄或欄子集上的欄統計資料。
 
@@ -612,7 +608,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 >
 >`FILTER CONTEXT` 根據提供的篩選條件計算資料集子集的統計資料，並且 `FOR COLUMNS` 鎖定特定欄位進行分析。
 
-控制檯輸出如下所示。
+主控台輸出如下所示。
 
 ```console
   Statistics ID 

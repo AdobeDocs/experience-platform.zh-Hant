@@ -1,6 +1,6 @@
 ---
-title: 使用AI生成的Recommendations將CSV檔案映射到XDM架構
-description: 本教程介紹如何使用AI生成的建議案將CSV檔案映射到XDM架構。
+title: 使用AI產生的Recommendations將CSV檔案對應到XDM結構描述
+description: 本教學課程涵蓋如何使用AI產生的建議將CSV檔案對應到XDM結構描述。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
 workflow-type: tm+mt
@@ -9,91 +9,91 @@ ht-degree: 1%
 
 ---
 
-# 使用AI生成的建議將CSV檔案映射到XDM架構
+# 使用AI產生的建議將CSV檔案對應到XDM結構描述
 
 >[!NOTE]
 >
->有關平台中通常可用的CSV映射功能的資訊，請參閱上的文檔 [將CSV檔案映射到現有架構](./existing-schema.md)。
+>如需Platform中一般可用CSV對應功能的相關資訊，請參閱以下檔案： [將CSV檔案對應到現有結構描述](./existing-schema.md).
 
-為了將CSV資料 [!DNL Adobe Experience Platform]，資料必須映射到 [!DNL Experience Data Model] (XDM)架構。 您可以選擇映射到 [現有架構](./existing-schema.md)，但如果您不確切知道要使用哪個架構或應如何構建它，則可以在平台UI中使用基於機器學習(ML)模型的動態建議。
+為了將CSV資料擷取到 [!DNL Adobe Experience Platform]，資料必須對應至 [!DNL Experience Data Model] (XDM)結構描述。 您可以選擇對應至 [現有結構描述](./existing-schema.md)，但如果您不確定要使用哪個結構描述或應該如何使用結構描述，可以在Platform UI中使用根據機器學習(ML)模型的動態建議。
 
 ## 快速入門
 
-本教程需要對以下元件進行有效的瞭解 [!DNL Platform]:
+本教學課程需要您深入瞭解下列元件 [!DNL Platform]：
 
-* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md):標準化框架 [!DNL Platform] 組織客戶體驗資料。
-   * 至少，你必須理解 [XDM中的行為](../../../xdm/home.md#data-behaviors)，這樣您就可以決定是否將資料映射到 [!UICONTROL 配置檔案] 類（記錄行為）或 [!UICONTROL 體驗事件] 類（時間序列行為）。
-* [批量攝取](../../batch-ingestion/overview.md):方法 [!DNL Platform] 從用戶提供的資料檔案中接收資料。
-* [Adobe Experience Platform資料準備](../../batch-ingestion/overview.md):一套功能，允許您映射和轉換所攝取的資料以符合XDM架構。 有關 [資料準備功能](../../../data-prep/functions.md) 與架構映射特別相關。
+* [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
+   * 您至少必須瞭解 [XDM中的行為](../../../xdm/home.md#data-behaviors)，以便決定是否將資料對應至 [!UICONTROL 設定檔] 類別（記錄行為）或 [!UICONTROL ExperienceEvent] 類別（時間序列行為）。
+* [批次擷取](../../batch-ingestion/overview.md)：用來執行 [!DNL Platform] 從使用者提供的資料檔擷取資料。
+* [Adobe Experience Platform資料準備](../../batch-ingestion/overview.md)：功能套件，可讓您對應及轉換所擷取的資料，以符合XDM結構描述。 上的檔案 [資料準備函式](../../../data-prep/functions.md) 與結構描述對應特別相關。
 
-## 提供資料流詳細資訊
+## 提供資料流詳細資料
 
-在Experience PlatformUI中，選擇 **[!UICONTROL 源]** 的子菜單。 在 **[!UICONTROL 目錄]** 視圖，導航至 **[!UICONTROL 本地系統]** 的子菜單。 下 **[!UICONTROL 本地檔案上載]**&#x200B;選中 **[!UICONTROL 添加資料]**。
+在Experience PlatformUI中，選取 **[!UICONTROL 來源]** 左側導覽列中。 於 **[!UICONTROL 目錄]** 檢視，導覽至 **[!UICONTROL 本機系統]** 類別。 下 **[!UICONTROL 本機檔案上傳]**，選取 **[!UICONTROL 新增資料]**.
 
-![的 [!UICONTROL 源] 平台UI中的目錄， [!UICONTROL 添加資料] 在 [!UICONTROL 本地檔案上載] 的子菜單。](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![此 [!UICONTROL 來源] Platform UI中的目錄，使用 [!UICONTROL 新增資料] 在 [!UICONTROL 本機檔案上傳] 已選取。](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
-的 **[!UICONTROL 映射CSV XDM架構]** 工作流」(workflow)，從 **[!UICONTROL 資料流詳細資訊]** 的子菜單。
+此 **[!UICONTROL 對應CSV XDM結構描述]** 工作流程隨即出現，從 **[!UICONTROL 資料流詳細資料]** 步驟。
 
-選擇 **[!UICONTROL 使用ML建議建立新架構]**，導致出現新控制項。 為要映射的CSV資料選擇適當的類([!UICONTROL 配置檔案] 或 [!UICONTROL 體驗事件])。 您可以選擇使用下拉菜單為您的業務選擇相關行業，如果提供的類別不適用於您，則將其留空。 如果您的組織在 [企業對企業(B2B)](../../../xdm/tutorials/relationship-b2b.md) 模型，選擇 **[!UICONTROL B2B資料]** 複選框。
+選取 **[!UICONTROL 使用ML建議建立新結構描述]**，造成新控制項出現。 選擇您要對應之CSV資料的適當類別([!UICONTROL 設定檔] 或 [!UICONTROL ExperienceEvent])。 您可以選擇使用下拉式選單來選取您企業的相關產業，或如果提供的類別不適用於您，則將其保留空白。 如果您的組織在 [企業對企業(B2B)](../../../xdm/tutorials/relationship-b2b.md) 模型，選取 **[!UICONTROL B2B資料]** 核取方塊。
 
-![的 [!UICONTROL 資料流詳細資訊] 步驟，選擇ML建議選項。 [!UICONTROL 配置檔案] 為類和選擇 [!UICONTROL 電信] 為行業選擇](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
+![此 [!UICONTROL 資料流詳細資料] 選取ML建議選項的步驟。 [!UICONTROL 設定檔] 已為類別選取，並且 [!UICONTROL 電信] 已針對產業選取](../../images/tutorials/map-csv-recommendations/select-class-and-industry.png)
 
-在此處，提供將從CSV資料建立的架構的名稱，以及將包含在該架構下接收的資料的輸出資料集的名稱。
+從這裡，為將從CSV資料建立的結構描述命名，以及包含在該結構描述下擷取之資料的輸出資料集名稱。
 
-您可以選擇在繼續之前為資料流配置以下附加功能：
+您可以選擇在繼續之前，為資料流設定下列附加功能：
 
 | 輸入名稱 | 說明 |
 | --- | --- |
 | [!UICONTROL 說明] | 資料流的說明。 |
-| [!UICONTROL 錯誤診斷] | 啟用後，將為新接收的批生成錯誤消息，在獲取中的相應批時可以查看這些消息 [API](../../batch-ingestion/api-overview.md)。 |
-| [!UICONTROL 部分攝取] | 啟用後，將在指定的錯誤閾值內接收新批資料的有效記錄。 此閾值允許您在整個批失敗之前配置可接受錯誤的百分比。 |
-| [!UICONTROL 資料流詳細資訊] | 提供將CSV資料引入平台的資料流的名稱和可選說明。 啟動此工作流時，將自動為資料流分配預設名稱。 更改名稱是可選的。 |
-| [!UICONTROL 警示] | 從 [產品內警報](../../../observability/alerts/overview.md) 啟動資料流後要接收的有關資料流狀態的資訊。 |
+| [!UICONTROL 錯誤診斷] | 啟用後，系統會為新擷取的批次產生錯誤訊息，您可在擷取中對應批次時檢視這些訊息 [API](../../batch-ingestion/api-overview.md). |
+| [!UICONTROL 部分擷取] | 啟用後，會在指定的錯誤臨界值內擷取新批次資料的有效記錄。 此臨界值可讓您設定在整個批次失敗之前可接受的錯誤百分比。 |
+| [!UICONTROL 資料流詳細資訊] | 為會將CSV資料帶入Platform的資料流提供名稱和可選描述。 啟動此工作流程時，會自動為資料流指派預設名稱。 變更名稱為選用。 |
+| [!UICONTROL 警示] | 從清單中選取 [產品內警示](../../../observability/alerts/overview.md) 啟動資料流後，您想要收到的資料流狀態相關資訊。 |
 
 {style="table-layout:auto"}
 
-配置完資料流後，選擇 **[!UICONTROL 下一個]**。
+完成資料流設定後，選取「 」 **[!UICONTROL 下一個]**.
 
-![的 [!UICONTROL 資料流詳細資訊] 的子菜單。](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
+![此 [!UICONTROL 資料流詳細資料] 區段已完成。](../../images/tutorials/map-csv-recommendations/dataflow-detail-complete.png)
 
 ## 選擇資料
 
-在 **[!UICONTROL 選擇資料]** 步驟，使用左欄上載CSV檔案。 可以選擇 **[!UICONTROL 選擇檔案]** 開啟檔案資源管理器對話框以從中選擇檔案，或者可以直接將檔案拖放到列上。
+於 **[!UICONTROL 選取資料]** 步驟，使用左欄上傳您的CSV檔案。 您可以選取 **[!UICONTROL 選擇檔案]** 開啟檔案總管對話方塊以從中選取檔案，或是直接將檔案拖放到欄中。
 
-![的 [!UICONTROL 選擇檔案] 按鈕和在 [!UICONTROL 選擇資料] 的子菜單。](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![此 [!UICONTROL 選擇檔案] 按鈕和拖放區域(醒目提示於 [!UICONTROL 選取資料] 步驟。](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
-上載檔案後，將出現一個示例資料部分，其中顯示接收資料的前十行，以便您能夠驗證其已正確上載。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
+上傳檔案後，會出現範例資料區段，顯示收到的前10列資料，以便您驗證其已正確上傳。 選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
-![示例資料行填充在工作區中](../../images/tutorials/map-csv-recommendations/data-uploaded.png)
+![範例資料列會填入工作區中](../../images/tutorials/map-csv-recommendations/data-uploaded.png)
 
-## 配置架構映射
+## 設定結構描述對應
 
-運行ML模型以根據資料流配置和上載的CSV檔案生成新模式。 當流程完成時， [!UICONTROL 映射] 步驟填充以在生成的架構結構的完全可導航視圖旁邊顯示每個單個欄位的映射。
+ML模型會根據您的資料流設定和您上傳的CSV檔案來執行以產生新結構描述。 當程式完成時， [!UICONTROL 對應] 步驟會填入，以顯示每個個別欄位的對應，以及所產生結構描述結構的完整可導覽檢視。
 
-![的 [!UICONTROL 映射] 步驟，顯示映射的所有CSV欄位和生成的架構結構。](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![此 [!UICONTROL 對應] UI中的步驟，顯示對應的所有CSV欄位以及產生的結構描述結構。](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
-從這裡，您可以選擇 [編輯欄位映射](#edit-mappings) 或 [更改與其關聯的欄位組](#edit-schema) 根據你的需要。 滿足後，選擇 **[!UICONTROL 完成]** 完成映射並啟動您先前配置的資料流。 CSV資料被接收到系統中，並基於所生成的模式結構填充資料集，該資料集準備由下游平台服務使用。
+從這裡，您可以選擇 [編輯欄位對應](#edit-mappings) 或 [變更與其關聯的欄位群組](#edit-schema) 根據您的需求。 滿意後，選取 **[!UICONTROL 完成]** 以完成對應並起始您先前設定的資料流。 CSV資料會內嵌至系統，並根據產生的結構描述結構填入資料集，以備下游平台服務使用。
 
-![的 [!UICONTROL 完成] 按鈕，完成CSV映射過程。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![此 [!UICONTROL 完成] 按鈕，完成CSV對應程式。](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
-### 編輯欄位映射 {#edit-mappings}
+### 編輯欄位對應 {#edit-mappings}
 
-使用欄位映射預覽可編輯現有映射或完全刪除它們。 有關如何管理UI中映射集的詳細資訊，請參閱 [資料準備映射的UI指南](../../../data-prep/ui/mapping.md#mapping-interface)。
+使用欄位對應預覽來編輯現有對應或完全移除現有對應。 有關如何管理UI中對應集的詳細資訊，請參閱 [資料準備對應的UI指南](../../../data-prep/ui/mapping.md#mapping-interface).
 
-### 編輯欄位組 {#edit-field-groups}
+### 編輯欄位群組 {#edit-field-groups}
 
-使用ML模型將CSV欄位自動映射到現有XDM欄位組。 如果要更改任何特定CSV欄位的欄位組，請選擇 **[!UICONTROL 編輯]** 模式樹旁邊。
+CSV欄位會使用ML模型自動對應到現有XDM欄位群組。 如果您想要變更任何特定CSV欄位的欄位群組，請選取 **[!UICONTROL 編輯]** 位於結構描述樹狀結構旁邊。
 
-![的 [!UICONTROL 編輯] 按鈕。](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![此 [!UICONTROL 編輯] 在結構描述樹旁邊選取的按鈕。](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-此時將出現一個對話框，允許您編輯映射中任何欄位的顯示名稱、資料類型和欄位組。 選擇編輯表徵圖(![編輯表徵圖](../../images/tutorials/map-csv-recommendations/edit-icon.png))旁邊的，以在右列中編輯其詳細資訊，然後選擇 **[!UICONTROL 應用]**。
+會出現一個對話方塊，讓您編輯對應中任何欄位的顯示名稱、資料型別和欄位群組。 選取編輯圖示(![編輯圖示](../../images/tutorials/map-csv-recommendations/edit-icon.png))來編輯其詳細資訊，然後再選取 **[!UICONTROL 套用]**.
 
-![正在更改的源欄位的建議欄位組。](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
+![要變更之來源欄位的建議欄位群組。](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 
-調整源欄位的架構建議案後，選擇 **[!UICONTROL 保存]** 按鈕。
+當您完成調整來源欄位的結構描述建議時，請選取 **[!UICONTROL 儲存]** 以套用變更。
 
 ## 後續步驟
 
-本指南介紹了如何使用AI生成的建議案將CSV檔案映射到XDM架構，從而允許您通過批處理接收將資料引入平台。
+本指南說明如何使用AI產生的建議將CSV檔案對應到XDM結構描述，讓您透過批次擷取將該資料帶入Platform。
 
-有關將CSV檔案映射到現有架構的步驟，請參閱 [現有架構映射工作流](./existing-schema.md)。 有關通過預構建的源連接即時將資料流式傳輸到平台的資訊，請參閱 [源概述](../../../sources/home.md)。
+如需將CSV檔案對應至現有結構的步驟，請參閱 [現有結構描述對應工作流程](./existing-schema.md). 如需透過預先建立的來源連線將資料即時串流至Platform的詳細資訊，請參閱 [來源概觀](../../../sources/home.md).

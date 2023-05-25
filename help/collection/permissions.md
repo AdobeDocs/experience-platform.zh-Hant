@@ -1,140 +1,136 @@
 ---
-title: Experience Platform中資料收集的權限管理
-description: 關於如何管理權限和控制對Adobe Experience Platform資料收集功能的訪問的高級概述。
+title: Experience Platform中資料收集的許可權管理
+description: 有關如何在Adobe Experience Platform中管理許可權和控制資料收集功能存取的高級概觀。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: e24cb8ad6b714a60363bcbec26e453f6445af1ac
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1274'
 ht-degree: 5%
 
 ---
 
-# Experience Platform中資料收集的權限管理
+# Experience Platform中資料收集的許可權管理
 
-[Adobe Experience Platform資料收集](./home.md) 由幾種不同的技術組成，這些技術可以協同工作來收集和傳輸資料。 對這些技術的訪問是通過Adobe Admin Console的基於角色的細粒度權限控制的。
+[Adobe Experience Platform中的資料彙集](./home.md) 由數種不同的技術組成，可共同合作收集及傳輸您的資料。 這些技術的存取權可透過Adobe Admin Console中精細的角色型許可權來控制。
 
-本指南說明如何管理資料收集功能的權限。
+本指南說明如何管理資料收集功能的許可權。
 
 ## 快速入門
 
-為配置資料收集的訪問控制，您必須對與Adobe Experience Platform資料收集進行產品整合的組織具有管理員權限。 可授予或撤消權限的最小角色是 **產品配置檔案管理員**。 可管理權限的其他管理員角色包括 **產品管理員** （可以管理產品中的所有配置檔案）和 **系統管理員** （無限制）。 請參閱 [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) 的子菜單。
+若要設定資料收集的存取控制，您必須擁有與Adobe Experience Platform Data Collection產品整合之組織的管理員許可權。 可授予或撤銷許可權的最小角色為 **產品設定檔管理員**. 可以管理許可權的其他管理員角色包括 **產品管理員** （可以管理產品內的所有設定檔）和 **系統管理員** （無限制）。 請參閱以下文章： [管理角色](https://helpx.adobe.com/enterprise/using/admin-roles.html) 如需詳細資訊，請參閱Adobe企業管理指南。
 
-本指南假定您熟悉基本的Admin Console概念，如產品配置檔案，以及它們如何將產品權限授予各個用戶和組。 有關詳細資訊，請參見 [Admin Console使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html)。
+本指南假設您熟悉基本的Admin Console概念，例如產品設定檔，以及產品設定檔如何授予個別使用者和群組的產品許可權。 如需詳細資訊，請參閱 [Admin Console使用手冊](https://helpx.adobe.com/tw/enterprise/using/admin-console.html).
 
-## 可用權限
+## 可用許可權
 
-通過Admin Console中的兩種產品標識提供資料收集的相關權限： **Adobe Experience Platform** 和 **Adobe Experience Platform資料收集**。 以下各節概述了在每個產品下提供的權限以及它們授予訪問權限的特定功能的說明。
+透過Admin Console中的兩個產品指定來提供資料收集的相關許可權： **Adobe Experience Platform** 和 **Adobe Experience Platform資料彙集**. 以下各節概述每個產品下提供的許可權，以及這些許可權授予存取權的特定功能的說明。
 
-### Adobe Experience Platform權限
+### Adobe Experience Platform許可權
 
-Adobe Experience Platform權限包括對資料流、標識、架構和沙箱的訪問。 有關如何配置Adobe Experience Platform權限的步驟，請參見 [訪問控制使用手冊](../access-control/ui/overview.md)。
+Adobe Experience Platform下的許可權包括存取資料串流、身分、結構描述和沙箱。 如需設定Adobe Experience Platform許可權的相關步驟，請參閱 [存取控制使用手冊](../access-control/ui/overview.md).
 
 | 類別 | 權限 | 說明 |
 | --- | --- | --- |
-| 沙箱 | (不適用) | 取決於 [沙箱](../sandboxes/home.md) 在您的組織下建立的，您可以通過Admin Console中的此權限類別控制對每個權限的訪問。 |
-| 資料模型製作 | 管理結構描述 | 授予查看、建立和編輯功能 [體驗資料模型(XDM)架構](../xdm/home.md)。 |
-| 資料模型製作 | 檢視結構描述 | 授予對架構的只讀訪問權限。 |
-| Identity Management | 管理身分識別命名空間 | 授予查看、建立和編輯功能 [標識命名空間](../identity-service/namespaces.md)。 |
-| Identity Management | 檢視身分命名空間 | 授予對標識命名空間的只讀訪問權限。 |
-| 資料彙集 | 管理資料流 | 授予查看、建立和編輯功能 [資料流](../edge/datastreams/overview.md)。 |
-| 資料彙集 | 查看資料流 | 授予對資料流的只讀訪問權限。 |
+| 沙箱 | (不適用) | 根據 [沙箱](../sandboxes/home.md) 如果您已在組織下建立，則可以透過Admin Console中的此許可權類別控制對每一個的存取。 |
+| 資料模型製作 | 管理結構描述 | 授予檢視、建立和編輯的能力 [體驗資料模型(XDM)結構描述](../xdm/home.md). |
+| 資料模型製作 | 檢視結構描述 | 授予結構描述的唯讀存取權。 |
+| Identity Management | 管理身分識別命名空間 | 授予檢視、建立和編輯的能力 [身分名稱空間](../identity-service/namespaces.md). |
+| Identity Management | 檢視身分命名空間 | 授予識別名稱空間的唯讀存取權。 |
+| 資料彙集 | 管理資料串流 | 授予檢視、建立和編輯的能力 [資料串流](../edge/datastreams/overview.md). |
+| 資料彙集 | 檢視資料串流 | 授予資料串流的唯讀存取權。 |
 
 {style="table-layout:auto"}
 
-<!-- (Feature not yet available?)
-| Dashboards | Manage Custom Dashboards | |
-| Dashboards | View Custom Dashboards | |
--->
+### Adobe Experience Platform資料收集許可權
 
-### Adobe Experience Platform資料收集權限
-
-Adobe Experience Platform資料收集下的權限控制對標籤和事件轉發功能（包括屬性、擴展和環境）的訪問。 有關如何配置Adobe Experience Platform資料收集權限的步驟，請參見 [下面](#manage)。
+Adobe Experience Platform資料收集下的許可權可控制對標籤和事件轉送功能（包括屬性、擴充功能和環境）的存取。 如需設定Adobe Experience Platform資料收集許可權的相關步驟，請參閱 [以下區段](#manage).
 
 | 類別 | 權限 | 說明 |
 | --- | --- | --- |
-| 平台 | Web | 授予訪問 [Web屬性](../tags/ui/administration/companies-and-properties.md) 與其他產權合併。 |
-| 平台 | 行動 | 授予訪問 [移動屬性](../tags/ui/administration/companies-and-properties.md) 與其他產權合併。 |
-| 屬性 | (不適用) | 根據在您的組織下建立的屬性，您可以通過Admin Console中的此權限類別控制對每個屬性的訪問。<br><br>用戶分配的屬性權限僅適用於通過此權限類別授予其訪問權限的屬性。 |
-| 屬性權利 | 核准 | 授予將庫構建作為 [發佈流](../tags/ui/publishing/publishing-flow.md)。 |
-| 屬性權利 | 開發 | 授予開發作為元件一部分的圖書館構建的能力 [發佈流](../tags/ui/publishing/publishing-flow.md)。 |
-| 屬性權利 | 編輯屬性 | 授予編輯用戶有權訪問的屬性的基本配置的功能。 |
-| 屬性權利 | 管理環境 | 授予管理 [環境](../tags/ui/publishing/environments.md) 用戶有權訪問的屬性。 |
-| 屬性權利 | 管理擴展 | 授予管理 [擴展](../tags/ui/managing-resources/extensions/overview.md) 用戶有權訪問的屬性。 |
-| 屬性權利 | 發佈 | 授予將庫構建作為 [發佈流](../tags/ui/publishing/publishing-flow.md)。 |
-| 公司權利 | 開發擴展 | 授予建立和修改您的組織擁有的擴展包（包括私有版本和公共版本請求）的能力。 |
-| 公司權利 | 管理擴展 | 僅當您擁有Adobe Journey Optimizer的許可證或授予對移動應用內和推送消息的訪問權限的其他解決方案時，此權限才適用。 這允許您管理Adobe Experience Cloud知道的應用以及與Firebase雲消息服務和Apple推送通知服務通信所需的推送憑據。 |
+| 平台 | Web | 授予存取權 [Web屬性](../tags/ui/administration/companies-and-properties.md) 與其他屬性權利結合時。 |
+| 平台 | 行動 | 授予存取權 [行動屬性](../tags/ui/administration/companies-and-properties.md) 與其他屬性權利結合時。 |
+| 平台 | Edge | 授予存取權 [事件轉送邊緣屬性](../tags/ui/event-forwarding/getting-started.md) 與其他屬性權利結合時。 |
+| 屬性 | (不適用) | 根據已在您的組織下建立的屬性，您可以透過Admin Console中的此許可權類別控制對每一個屬性的存取。<br><br>使用者的指派屬性許可權僅適用於他們透過此許可權類別被授予存取權的屬性。 |
+| 屬性權利 | 核准 | 授予核准程式庫組建的能力，使其成為 [發佈流程](../tags/ui/publishing/publishing-flow.md). |
+| 屬性權利 | 開發 | 授予開發程式庫組建作為一部分的能力 [發佈流程](../tags/ui/publishing/publishing-flow.md). |
+| 屬性權利 | 編輯屬性 | 授予編輯使用者有權存取之屬性的基本設定的能力。 |
+| 屬性權利 | 管理環境 | 授予管理 [環境](../tags/ui/publishing/environments.md) 使用者有權存取的屬性。 |
+| 屬性權利 | 管理擴充功能 | 授予管理 [擴充功能](../tags/ui/managing-resources/extensions/overview.md) 使用者有權存取的屬性。 |
+| 屬性權利 | 發佈 | 授予將程式庫組建發佈為 [發佈流程](../tags/ui/publishing/publishing-flow.md). |
+| 公司權利 | 開發擴充功能 | 授予建立及修改組織擁有的擴充功能套件的能力，包括私人發行和公開發行請求。 |
+| 公司權利 | 管理擴充功能 | 此許可權僅適用於您擁有Adobe Journey Optimizer或其他解決方案的授權，可授予行動應用程式內及推送訊息存取權時。 這可讓您管理Adobe Experience Cloud知道的應用程式，以及與Firebase Cloud Messaging服務和Apple推播通知服務通訊所需的推播認證。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->有關這些權限如何影響標籤中的權能（包括常見方案的管理策略）的詳細資訊，請參閱上的標籤文檔 [用戶權限](../tags/ui/administration/user-permissions.md)。
+>如需這些許可權如何影響標籤中功能的詳細資訊，包括常見情境的管理策略，請參閱標籤檔案： [使用者許可權](../tags/ui/administration/user-permissions.md).
 
 ## 管理權限 {#manage}
 
-如上節所述，資料收集權限通過Admin Console中的兩種產品指定進行管理： **Adobe Experience Platform** 和 **Adobe Experience Platform資料收集**。
+資料收集的許可權透過兩個產品名稱管理： **Adobe Experience Platform** 和 **Adobe Experience Platform資料彙集**.
 
-要管理這些權限，請登錄到 [Admin Console](https://adminconsole.adobe.com/) 選擇 **[!UICONTROL 產品]** 的上界。 在此處，選擇要配置權限的產品卡。 有關如何管理Admin Console中每個產品下的相關權限的步驟，請參閱以下子部分：
+如需如何管理Admin Console中每個產品下相關許可權的步驟，請參閱以下小節：
 
-* [Adobe Experience Platform權限](#manage-platform)
-* [Adobe Experience Platform資料收集權限](#manage-collection)
+* [Adobe Experience Platform許可權](#manage-platform)
+* [Adobe Experience Platform資料收集許可權](#manage-collection)
 
-### 管理Adobe Experience Platform下的權限 {#manage-platform}
+### 在Adobe Experience Platform下管理許可權 {#manage-platform}
 
-從 **[!UICONTROL 產品]** 在Admin Console中查看，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。 選擇要編輯其權限的產品配置檔案，然後導航到 **[!UICONTROL 權限]** 頁籤。
+從 **[!UICONTROL 許可權]** Adobe Experience Platform區域，選取您要編輯的角色。
 
-要訪問資料收集功能，必須在 **[!UICONTROL 沙箱]**。 **[!UICONTROL 資料建模]**。 **[!UICONTROL Identity Management]**, **[!UICONTROL 資料收集]** 的下界。
+若要存取資料收集功能，您必須啟用 **[!UICONTROL 沙箱]**， **[!UICONTROL 資料模型]**， **[!UICONTROL Identity Management]**、和 **[!UICONTROL 資料彙集]** 類別。
 
-![顯示Admin Console中資料收集產品卡的影像](./images/permissions/platform-permission-card.png)
+![以Admin Console顯示資料收集產品卡的影像](./images/permissions/platform-permission-card.png)
 
-查看 [訪問控制UI指南](../access-control/ui/overview.md) 有關管理平台權限的詳細說明。
+請參閱 [存取控制UI指南](../access-control/ui/overview.md) 以取得管理Platform許可權的詳細說明。
 
 >[!NOTE]
 >
->根據您的組織有權訪問的產品SKU，您可能沒有可用的所有平台權限。
+>根據您的組織有權存取的產品SKU，您可能沒有每個可用的平台許可權。
 
-### 管理Adobe Experience Platform資料收集下的權限 {#manage-collection}
+### 在Adobe Experience Platform資料收集下管理許可權 {#manage-collection}
 
-從 **[!UICONTROL 產品]** 在Admin Console中查看，選擇 **[!UICONTROL Adobe Experience Platform資料收集]**。
+若要管理這些許可權，請登入「Admin Console」並選取 **[!UICONTROL 產品]** 在頂端導覽列中，然後選取 **[!UICONTROL Adobe Experience Platform資料彙集]**.
 
-![顯示Admin Console中資料收集產品卡的影像](./images/permissions/data-collection-card.png)
+![以Admin Console顯示資料收集產品卡的影像](./images/permissions/data-collection-card.png)
 
-#### 選擇或建立產品配置檔案
+#### 選取或建立產品設定檔
 
-下一螢幕顯示組織下資料收集的可用產品配置檔案清單，預設配置檔案 **[!DNL Default Data Collection All Access]**。 如果需要，您可以選擇編輯預設產品配置檔案，也可以選擇 **[!UICONTROL 新建配置檔案]** 建立一個。 如果您的組織中有多個需要不同訪問級別的角色或用戶組，則應為每個角色或用戶組建立單獨的產品配置檔案。
+下一個畫面顯示貴組織下資料收集的可用產品設定檔清單，預設設定檔為 **[!DNL Default Data Collection All Access]**. 您可以視需要選擇編輯預設的產品設定檔，也可以選擇 **[!UICONTROL 新設定檔]** 以建立一個。 如果您的組織中有多個角色或使用者群組需要不同的存取層級，您應該為每個角色或使用者群組建立個別的產品設定檔。
 
-![該圖顯示了Admin Console中資料收集的產品配置檔案](./images/permissions/new-profile.png)
+![顯示Admin Console中資料收集的產品設定檔的影像](./images/permissions/new-profile.png)
 
-選擇或建立產品配置檔案後，您可以使用 **[!UICONTROL 編輯]** 表徵圖開始 [編輯權限](#edit-permissions) 或選擇 **[!UICONTROL 用戶]** 頁籤 [分配用戶](#assign-users) 到配置檔案。
+選取或建立產品設定檔後，您可以使用 **[!UICONTROL 編輯]** 要開始的圖示 [編輯許可權](#edit-permissions) ，或選取 **[!UICONTROL 使用者]** 索引標籤以開始 [指派使用者](#assign-users) 至設定檔。
 
-![顯示產品配置檔案權限頁籤的影像Admin Console](./images/permissions/edit-permission-categories.png)
+![顯示產品設定檔Admin Console的許可權索引標籤的影像](./images/permissions/edit-permission-categories.png)
 
-#### 編輯產品配置檔案的權限 {#edit-permissions}
+#### 編輯產品設定檔的許可權 {#edit-permissions}
 
-編輯配置檔案的權限時，可用權限將列在左列中，而包含在配置檔案中的可用權限將列在右列中。 選擇列出的權限以在任一列之間移動它們。
+編輯設定檔的許可權時，可用許可權會列在左欄，而包含在設定檔中的許可權則會列在右欄。 選取列出的許可權，以便在任一欄之間移動。
 
-![顯示在包含列下添加的權限的影像](./images/permissions/added-permissions.png)
+![此影像顯示新增至包含欄下的許可權](./images/permissions/added-permissions.png)
 
-權限按類別進行組織。 要在類別之間切換，請從左側導航中選擇所需的類別。
+許可權會整理到不同類別中。 若要在類別之間切換，請從左側導覽中選取所需的類別。
 
-![顯示權限下的公司權限部分的影像](./images/permissions/switch-category.png)
+![此影像顯示許可權底下的公司許可權區段](./images/permissions/switch-category.png)
 
-選擇 **[!UICONTROL 保存]** 完成權限配置後。
+選取 **[!UICONTROL 儲存]** 完成許可權設定後。
 
-![顯示為產品配置檔案保存的權限配置的影像](./images/permissions/save-permissions.png)
+![此影像顯示正在為產品設定檔儲存的許可權設定](./images/permissions/save-permissions.png)
 
-產品配置檔案視圖將重新顯示，並反映添加的權限。
+產品設定檔檢視會重新出現，並反映新增的許可權。
 
-![顯示為產品配置檔案添加的權限的影像](./images/permissions/permissions-added.png)
+![顯示產品設定檔新增許可權的影像](./images/permissions/permissions-added.png)
 
-#### 將用戶分配給產品配置檔案 {#assign-users}
+#### 將使用者指派至產品設定檔 {#assign-users}
 
-要將用戶分配給產品配置檔案（並授予他們配置檔案的配置權限），請選擇 **[!UICONTROL 用戶]** 頁籤，後跟 **[!UICONTROL 添加用戶]**。
+若要將使用者指派給產品設定檔（並授予他們設定檔設定的許可權），請選取 **[!UICONTROL 使用者]** 索引標籤，後面接著 **[!UICONTROL 新增使用者]**.
 
-![顯示Admin Console中產品配置檔案的用戶頁籤的影像](./images/permissions/manage-users.png)
+![顯示Admin Console中產品設定檔的使用者索引標籤的影像](./images/permissions/manage-users.png)
 
-有關管理產品配置檔案的用戶的詳細資訊，請參閱 [Admin Console文檔](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html)。
+如需管理產品設定檔使用者的詳細資訊，請參閱 [Admin Console檔案](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html).
 
 ## 後續步驟
 
-本指南介紹了資料收集的可用權限以及如何通過Admin Console管理這些權限。 有關管理其他Adobe Experience Platform功能權限的詳細資訊，請參閱 [訪問控制文檔](../access-control/home.md)。
+本指南說明資料收集的可用許可權，以及如何透過Admin Console管理這些許可權。 如需管理其他Adobe Experience Platform功能許可權的詳細資訊，請參閱 [存取控制檔案](../access-control/home.md).

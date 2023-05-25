@@ -1,6 +1,6 @@
 ---
-description: 本頁說明了通過Adobe Experience Platform Destination SDK更新受眾模板的API調用。
-title: 更新受眾模板
+description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新對象範本的API呼叫的範例。
+title: 更新對象範本
 source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
 workflow-type: tm+mt
 source-wordcount: '319'
@@ -9,29 +9,29 @@ ht-degree: 1%
 ---
 
 
-# 更新受眾模板
+# 更新對象範本
 
 >[!IMPORTANT]
 >
->**API終結點**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
+>**API端點**： `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-本頁說明了可用於更新受眾模板的API請求和負載，使用 `/authoring/audience-templates` API終結點。
+此頁面以範例說明可用於更新對象範本的API請求和裝載，使用 `/authoring/audience-templates` api端點。
 
-有關可以通過此終結點配置的功能的詳細說明，請參見 [受眾元資料管理](../functionality/audience-metadata-management.md)。
+如需可透過此端點設定的功能的詳細說明，請參閱 [對象中繼資料管理](../functionality/audience-metadata-management.md).
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
+>Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
 
-## 受眾模板API操作入門 {#get-started}
+## 開始使用對象範本API作業 {#get-started}
 
-在繼續之前，請查看 [入門指南](../getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
-## 更新受眾模板 {#create}
+## 更新對象範本 {#create}
 
-您可以更新 [現有](create-audience-template.md) 通過建立 `PUT` 請求 `/authoring/audience-templates` 帶有更新負載的端點。
+您可以更新 [現有](create-audience-template.md) 對象範本，做法是建立 `PUT` 向以下專案提出的請求： `/authoring/audience-templates` 具有已更新裝載的端點。
 
-獲取現有受眾模板及其相應模板 `{INSTANCE_ID}`，請參閱有關 [檢索受眾模板](retrieve-audience-template.md)。
+若要取得現有的對象範本及其對應的 `{INSTANCE_ID}`，請參閱這篇文章，瞭解 [擷取對象範本](retrieve-audience-template.md).
 
 **API格式**
 
@@ -41,9 +41,9 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 要更新的受眾模板的ID。 獲取現有受眾模板及其相應模板 `{INSTANCE_ID}`，請參閱 [檢索受眾模板](retrieve-audience-template.md)。 |
+| `{INSTANCE_ID}` | 您要更新的對象範本ID。 若要取得現有的對象範本及其對應的 `{INSTANCE_ID}`，請參閱 [擷取對象範本](retrieve-audience-template.md). |
 
-以下請求更新由負載中提供的參數配置的現有受眾元資料模板。
+以下請求會更新現有的受眾中繼資料範本，此範本已由承載中提供的引數設定。
 
 +++請求
 
@@ -147,14 +147,14 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++回應
 
-成功響應返回HTTP狀態200，並返回更新的受眾模板的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您更新後對象範本的詳細資料。
 
 +++
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀此文檔後，您現在知道何時使用受眾模板以及如何使用 `/authoring/audience-templates` API終結點。 閱讀 [如何使用Destination SDK配置目標](../guides/configure-destination-instructions.md) 瞭解此步驟在配置目標過程中的適用範圍。
+閱讀本檔案後，您現在知道何時該使用對象範本，以及如何使用更新對象範本 `/authoring/audience-templates` api端點。 讀取 [如何使用Destination SDK設定您的目的地](../guides/configure-destination-instructions.md) 以瞭解此步驟在設定目的地的程式中的適用位置。

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；RStudio;rstudio；連接到查詢服務；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；RStudio；rstudio；連線到查詢服務；
 solution: Experience Platform
-title: 將RStudio連接到查詢服務
-description: 本文檔介紹將R Studio與Adobe Experience Platform查詢服務連接的步驟。
+title: 將RStudio連線至查詢服務
+description: 本檔案將逐步說明將R Studio與Adobe Experience Platform Query Service連線的步驟。
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
@@ -11,35 +11,35 @@ ht-degree: 0%
 
 ---
 
-# 連接 [!DNL RStudio] 查詢服務
+# Connect [!DNL RStudio] 至查詢服務
 
-本文檔介紹了連接的步驟 [!DNL RStudio] 與Adobe Experience Platform [!DNL Query Service]。
+本檔案將逐步說明連線的步驟 [!DNL RStudio] 使用Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> [!DNL RStudio] 現在被重新標為 [!DNL Posit]。 [!DNL RStudio] 產品已更名為 [!DNL Posit Connect]。 [!DNL Posit Workbench]。 [!DNL Posit Package] 經理， [!DNL Posit Cloud], [!DNL Posit Academy]。
+> [!DNL RStudio] 現已更名為 [!DNL Posit]. [!DNL RStudio] 產品已重新命名為 [!DNL Posit Connect]， [!DNL Posit Workbench]， [!DNL Posit Package] 經理， [!DNL Posit Cloud]、和 [!DNL Posit Academy].
 >
-> 本指南假定您已具有訪問 [!DNL RStudio] 並熟悉如何使用。 有關 [!DNL RStudio] 在 [官 [!DNL RStudio] 文檔](https://rstudio.com/products/rstudio/)。
+> 本指南假設您已擁有 [!DNL RStudio] 並熟悉其使用方式。 更多關於的資訊 [!DNL RStudio] 您可在以下網址找到： [正式 [!DNL RStudio] 檔案](https://rstudio.com/products/rstudio/).
 > 
-> 此外，要使用 [!DNL RStudio] 使用Query Service時，需要安裝 [!DNL PostgreSQL] JDBC 4.2驅動程式。 可以從 [[!DNL PostgreSQL] 官方網站](https://jdbc.postgresql.org/download/)。
+> 此外，若要使用 [!DNL RStudio] 若使用查詢服務，您必須安裝 [!DNL PostgreSQL] JDBC 4.2驅動程式。 您可以從以下網址下載JDBC驅動程式： [[!DNL PostgreSQL] 官方網站](https://jdbc.postgresql.org/download/).
 
-## 建立 [!DNL Query Service] 連接 [!DNL RStudio] 介面
+## 建立 [!DNL Query Service] 中的連線 [!DNL RStudio] 介面
 
-安裝後 [!DNL RStudio]，需要安裝RJDBC包。 有關如何 [通過命令行連接資料庫](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) 可以在官方的Posit檔案中找到。
+安裝後 [!DNL RStudio]，您必須安裝RJDBC套件。 操作說明 [透過命令列連線資料庫](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) 請參閱官方Posit檔案。
 
-如果使用Mac作業系統，可以選擇 **[!UICONTROL 工具]** 按 **[!UICONTROL 安裝包]** 的下界。 或者，選擇 **[!DNL Packages]** 頁籤，然後選擇 **[!DNL Install]**。
+如果使用Mac作業系統，您可以選取 **[!UICONTROL 工具]** 從功能表列，後面接著 **[!UICONTROL 安裝套件]** 下拉式選單中的。 或者，選取 **[!DNL Packages]** 索引標籤從RStudio UI選取 **[!DNL Install]**.
 
-出現一個彈出窗口，顯示 **[!DNL Install Packages]** 的上界。 確保 **[!DNL Repository (CRAN)]** 為 **[!DNL Install from]** 的子菜單。 的值 **[!DNL Packages]** 應該 `RJDBC`。 確保 **[!DNL Install dependencies]** 的子菜單。 確認所有值均正確後，選擇 **[!DNL Install]** 安裝軟體包。 RJDBC包已安裝，請重新啟動 [!DNL RStudio] 完成安裝過程。
+隨即出現快顯視窗，顯示 **[!DNL Install Packages]** 畫面。 確定 **[!DNL Repository (CRAN)]** 已為「 」選取「 」 **[!DNL Install from]** 區段。 的值 **[!DNL Packages]** 應為 `RJDBC`. 確定 **[!DNL Install dependencies]** 「 」已選取。 在確認所有值都正確之後，選取 **[!DNL Install]** 以安裝套件。 現在已安裝RJDBC套件，請重新啟動 [!DNL RStudio] 以完成安裝程式。
 
-之後 [!DNL RStudio] 已重新啟動，您現在可以連接到查詢服務。 選擇 **[!DNL RJDBC]** 包 **[!DNL Packages]** ，然後在控制台中輸入以下命令：
+晚於 [!DNL RStudio] 已重新啟動，您現在可以連線至查詢服務。 選取 **[!DNL RJDBC]** 封裝於 **[!DNL Packages]** 窗格，然後在主控台中輸入下列命令：
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-位置 `{PATH TO THE POSTGRESQL JDBC JAR}` 表示到 [!DNL PostgreSQL] 已安裝在電腦上的JDBC JAR。
+位置 `{PATH TO THE POSTGRESQL JDBC JAR}` 代表以下專案的路徑： [!DNL PostgreSQL] 安裝在您電腦上的JDBC JAR。
 
-現在，您可以建立與查詢服務的連接。 在控制台中輸入以下命令：
+現在，您可以建立與查詢服務的連線。 在主控台中輸入以下命令：
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -47,17 +47,17 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->查看 [[!DNL Query Service] SSL文檔](./ssl-modes.md) 瞭解對與Adobe Experience Platform查詢服務的第三方連接的SSL支援，以及如何使用 `verify-full` SSL模式。
+>請參閱 [[!DNL Query Service] SSL檔案](./ssl-modes.md) 瞭解協力廠商連線至Adobe Experience Platform查詢服務的SSL支援，以及如何使用連線 `verify-full` SSL模式。
 
-有關查找資料庫名稱、主機、埠和登錄憑據的詳細資訊，請閱讀 [憑據指南](../ui/credentials.md)。 要查找憑據，請登錄到 [!DNL Platform]，然後選擇 **[!UICONTROL 查詢]**，後跟 **[!UICONTROL 憑據]**。
+如需尋找資料庫名稱、主機、連線埠和登入證明資料的詳細資訊，請閱讀 [認證指南](../ui/credentials.md). 若要尋找您的認證，請登入 [!DNL Platform]，然後選取 **[!UICONTROL 查詢]**，後接 **[!UICONTROL 認證]**.
 
-控制台輸出中的一條消息確認與查詢服務的連接。
+主控台輸出中會出現一則訊息，確認連線至查詢服務。
 
 ## 寫入查詢
 
-現在您已連接到 [!DNL Query Service]，您可以編寫查詢以執行和編輯SQL陳述式。 例如，您可以 `dbGetQuery(con, sql)` 執行查詢，其中 `sql` 是要運行的SQL查詢。
+現在您已連線至 [!DNL Query Service]，您可以撰寫查詢來執行及編輯SQL敘述句。 例如，您可以使用 `dbGetQuery(con, sql)` 執行查詢，其中 `sql` 是要執行的SQL查詢。
 
-以下查詢使用包含 [體驗事件](../../xdm/classes/experienceevent.md) 並根據設備的螢幕高度建立網站頁面視圖的直方圖。
+以下查詢使用的資料集包含 [體驗事件](../../xdm/classes/experienceevent.md) 和會建立網站的頁面檢視長條圖（在指定裝置的熒幕高度時）。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -78,7 +78,7 @@ ORDER BY buckets
 LIMIT 1000000")
 ```
 
-成功的響應返回查詢結果：
+成功的回應會傳回查詢的結果：
 
 ```r
 df_pageviews
@@ -94,4 +94,4 @@ df_pageviews
 
 ## 後續步驟
 
-有關如何編寫和運行查詢的詳細資訊，請閱讀上的指南 [運行查詢](../best-practices/writing-queries.md)。
+如需如何撰寫和執行查詢的詳細資訊，請閱讀以下指南： [正在執行查詢](../best-practices/writing-queries.md).

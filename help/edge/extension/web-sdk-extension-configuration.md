@@ -1,6 +1,6 @@
 ---
-title: 配置Adobe Experience PlatformWeb SDK擴展
-description: 如何在UI中配置Adobe Experience PlatformWeb SDK標籤擴展。
+title: 設定Adobe Experience Platform Web SDK擴充功能
+description: 如何在UI中設定Adobe Experience Platform Web SDK標籤擴充功能。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 source-git-commit: ce2e80a7ea7385be98bbcda6a0704cd0814c62b2
 workflow-type: tm+mt
@@ -9,121 +9,121 @@ ht-degree: 6%
 
 ---
 
-# 配置Adobe Experience PlatformWeb SDK擴展
+# 設定Adobe Experience Platform Web SDK擴充功能
 
-Adobe Experience PlatformWeb SDK標籤擴展通過Adobe Experience Platform邊緣網路從Web屬性向Adobe Experience Cloud發送資料。 擴展允許您將資料流入平台、同步身份、處理客戶同意信號並自動收集上下文資料。
+Adobe Experience Platform Web SDK標籤擴充功能會透過Adobe Experience Cloud Edge Network，將資料從Web屬性傳送至Adobe Experience Platform。 擴充功能可讓您將資料串流至Platform、同步身分、處理客戶同意訊號，以及自動收集內容資料。
 
-本文檔介紹如何在UI中配置擴展。
+本文介紹如何在UI中設定擴充功能。
 
 ## 快速入門
 
-如果已為屬性安裝了平台Web SDK擴展，請開啟UI中的屬性，然後選擇 **[!UICONTROL 擴展]** 頁籤。 在平台Web SDK下，選擇 **[!UICONTROL 配置]**。
+如果已經為某個屬性安裝了Platform Web SDK擴充功能，請在UI中開啟該屬性，然後選取 **[!UICONTROL 擴充功能]** 標籤。 在Platform Web SDK底下，選取 **[!UICONTROL 設定]**.
 
 ![](../assets/extension/overview/configure.png)
 
-如果尚未安裝擴展，請選擇 **[!UICONTROL 目錄]** 頁籤。 從可用擴展的清單中，查找平台Web SDK擴展，然後選擇 **[!UICONTROL 安裝]**。
+如果您尚未安裝擴充功能，請選取 **[!UICONTROL 目錄]** 標籤。 從可用擴充功能清單中，找到Platform Web SDK擴充功能，然後選取「 」 **[!UICONTROL 安裝]**.
 
 ![](../assets/extension/overview/install.png)
 
-在這兩種情況下，您都會到達平台Web SDK的配置頁。 以下各節說明了擴展的配置選項。
+在這兩種情況下，您都會進入Platform Web SDK的設定頁面。 以下各節說明擴充功能的設定選項。
 
 ![](../assets/extension/overview/config-screen.png)
 
-## 常規配置選項
+## 一般設定選項
 
-頁面頂部的配置選項告訴Adobe Experience Platform資料的路由位置以及伺服器上要使用的配置。
+頁面頂端的設定選項可告知Adobe Experience Platform將資料路由到何處以及要在伺服器上使用哪些設定。
 
 ### [!UICONTROL 名稱]
 
-Adobe Experience PlatformWeb SDK擴展支援頁面上的多個實例。 該名稱用於向具有標籤配置的多個組織發送資料。
+Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個體。 此名稱可用來透過標籤設定將資料傳送至多個組織。
 
-副檔名的名稱預設為「[!DNL alloy]。 不過您可將例項名稱變更為任何有效的 JavaScript 物件名稱。
+擴充功能的名稱預設為&quot;[!DNL alloy]「。 不過您可將例項名稱變更為任何有效的 JavaScript 物件名稱。
 
 ### **[!UICONTROL IMS 組織 ID]**
 
-的 [!UICONTROL IMS組織ID] 是您希望在Adobe發送資料的組織。 大多數情況下，使用自動填充的預設值。 在頁上具有多個實例時，使用要向其發送資料的第二個組織的值填充此欄位。
+此 [!UICONTROL IMS組織ID] 是您想要在Adobe時傳送資料的組織。 大多數情況下，會使用自動填入的預設值。 頁面上有多個例項時，請使用此欄位填入您要傳送資料的第二個組織的值。
 
 ### **[!UICONTROL 邊緣網域]**
 
-的 [!UICONTROL 邊緣域] 是Adobe Experience Platform分機發送和接收資料的域。 Adobe建議對此擴展使用第1方域(CNAME)。 預設的第三方網域適用於開發環境，但不適用於生產環境。若需設定第一方 CNAME 的相關說明，請參閱[此處](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
+此 [!UICONTROL 邊緣網域] 是Adobe Experience Platform擴充功能傳送及接收資料的網域。 Adobe建議對此擴充功能使用第一方網域(CNAME)。 預設的第三方網域適用於開發環境，但不適用於生產環境。若需設定第一方 CNAME 的相關說明，請參閱[此處](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
 
 ## [!UICONTROL 資料串流]
 
-當請求發送到Adobe Experience Platform邊緣網路時，資料流ID用於引用伺服器端配置。 您無需在網站上更改代碼即可更新配置。
+當請求傳送至Adobe Experience Platform Edge Network時，會使用資料串流ID來參考伺服器端設定。 您可以更新設定，而無須在您的網站上變更程式碼。
 
-請參閱上的指南 [資料流](../datastreams/overview.md) 的子菜單。
+請參閱指南： [資料串流](../datastreams/overview.md) 以取得詳細資訊。
 
 
 ## [!UICONTROL 隱私]
 
 ![](../assets/extension/overview/privacy.png)
 
-的 [!UICONTROL 隱私] 部分允許您配置SDK如何處理來自您網站的用戶同意信號。 具體來說，它允許您選擇在未提供其他明確的同意首選項時假定用戶的預設同意級別。 預設同意級別未保存到用戶的配置檔案。 下表分析了每個選項所包含的內容：
+此 [!UICONTROL 隱私權] 區段可讓您設定SDK如何處理來自您網站的使用者同意訊號。 具體來說，它可讓您選取在未提供其他明確同意偏好設定時假設為使用者的預設同意層級。 預設同意層級不會儲存至使用者的設定檔。 下表會劃分每個選項的含意：
 
-| [!UICONTROL 預設同意級別] | 說明 |
+| [!UICONTROL 預設同意層級] | 說明 |
 | --- | --- |
-| [!UICONTROL 在] | 收集在用戶提供同意首選項之前發生的事件。 |
-| [!UICONTROL 出] | 放棄在用戶提供同意首選項之前發生的事件。 |
-| [!UICONTROL 待定] | 在用戶提供同意首選項之前發生的隊列事件。 當提供同意偏好時，將根據提供的偏好收集或丟棄事件。 |
-| [!UICONTROL 由資料元素提供] | 預設同意級別由您定義的單獨資料元素確定。 使用此選項時，必須使用提供的下拉菜單指定資料元素。 |
+| [!UICONTROL 在] | 收集在使用者提供同意偏好設定之前發生的事件。 |
+| [!UICONTROL 輸出] | 捨棄在使用者提供同意偏好設定之前發生的事件。 |
+| [!UICONTROL 擱置中] | 在使用者提供同意偏好設定之前發生的佇列事件。 提供同意偏好設定時，會根據提供的偏好設定收集或捨棄事件。 |
+| [!UICONTROL 資料元素提供] | 預設同意層級由您定義的個別資料元素決定。 使用此選項時，您必須使用提供的下拉式選單指定資料元素。 |
 
-如果您需要明確的用戶同意才能進行業務操作，請使用「退出」或「待定」。
+如果您的業務操作需要明確的使用者同意，請使用「退出」或「擱置中」。
 
 ## [!UICONTROL 身分]
 
 ![](../assets/extension/overview/identity.png)
 
-### [!UICONTROL 從VisitorAPI遷移ECID]
+### [!UICONTROL 從VisitorAPI移轉ECID]
 
-此選項已預設啟用。啟用此功能後，SDK可以讀取AMCV和s_ecid Cookie，並設定Visitor.js使用的AMCV Cookie。 此功能在遷移到Adobe Experience PlatformWeb SDK時非常重要，因為某些頁面可能仍在使用Visitor.js。 它允許SDK繼續使用相同的ECID，以便用戶不被標識為兩個單獨的用戶。
+此選項已預設啟用。啟用此功能後，SDK就能讀取AMCV和s_ecid Cookie，並設定Visitor.js使用的AMCV Cookie。 移轉至Adobe Experience Platform Web SDK時，此功能很重要，因為有些頁面可能仍在使用Visitor.js。 它可讓SDK繼續使用相同的ECID，因此不會將使用者識別為兩個不同的使用者。
 
 ### [!UICONTROL 使用第三方Cookie]
 
-此選項使SDK能夠嘗試將用戶標識符儲存在第三方Cookie中。 如果成功，則當用戶在多個域中導航時，該用戶被標識為單個用戶，而不是被標識為每個域上的單獨用戶。 如果啟用此選項，則如果瀏覽器不支援第三方Cookie或用戶已配置為不允許第三方Cookie，則SDK可能仍無法將用戶標識符儲存在第三方Cookie中。 在這種情況下，SDK僅將標識符儲存在第一方域中。
+此選項可讓SDK嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為單獨的使用者。 如果啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，SDK仍可能無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。
 
 ## [!UICONTROL 個人化]
 
 ![](../assets/extension/overview/personalization.png)
 
-如果在載入個性化內容時要隱藏某些部件，則可以在預隱藏樣式編輯器中指定要隱藏的元素。 然後，您可以複製提供給您的預設預隱藏代碼段，並將其貼上到 `<head>`HTML站點的元素。
+如果您想要在個人化內容載入時隱藏網站上的某些零件，您可以在預先隱藏樣式編輯器中指定要隱藏的元素。 然後您可以複製提供給您的預設預先隱藏程式碼片段，並將其貼到中 `<head>`HTML網站的元素。
 
 ## [!UICONTROL 資料收集]
 
 ![](../assets/extension/overview/data-collection.png)
 
-### [!UICONTROL 回調函式]
+### [!UICONTROL 回呼函式]
 
-擴展中提供的回調函式也稱為 [`onBeforeEventSend` 函式](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=zh-Hant) 的下界。 此函式允許您在事件發送到Adobe Edge網路之前全局修改事件。 有關如何使用此函式的詳細資訊，請參閱 [這裡](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally)。
+擴充功能中提供的回呼函式也稱為 [`onBeforeEventSend` 函式](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=zh-Hant) 在程式庫中。 此函式可讓您在事件傳送至Adobe Edge Network之前，先全域修改事件。 如需如何使用此函式的詳細資訊，請參閱 [此處](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL 按一下資料收集]
 
-SDK可以自動收集您的連結點擊資訊。 預設情況下，此功能已啟用，但可以使用此選項禁用。 如果連結包含在 [!UICONTROL 下載連結限定符] 的子菜單。 Adobe為您提供了一些預設下載連結限定符，但可以隨時編輯這些限定符。
+SDK可以自動收集您的連結點選資訊。 此功能預設為啟用，但可使用此選項加以停用。 如果連結包含「 」中列出的下載運算式之一，這些連結也會標示為下載連結。 [!UICONTROL 下載連結限定詞] 文字方塊。 Adobe會提供您一些預設的下載連結限定詞，但這些限定詞可隨時編輯。
 
-### [!UICONTROL 自動收集的上下文資料]
+### [!UICONTROL 自動收集的內容資料]
 
-預設情況下，SDK會收集與設備、Web、環境和放置上下文相關的某些上下文資料。 如果您想看到Adobe收集的資訊清單，可以找到 [這裡](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en)。 如果您不想收集此資料或只想收集某些類別的資料，則可以更改這些選項。
+依預設，SDK會收集關於裝置、Web、環境和地標內容的特定內容資料。 如果您想檢視Adobe收集的資訊清單，可以找到 [此處](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). 如果您不想收集這些資料，或只想收集特定類別的資料，可以變更這些選項。
 
-## [!UICONTROL 資料流配置覆蓋]
+## [!UICONTROL 資料流設定覆寫]
 
-資料流覆蓋允許您為資料流定義其他配置，這些配置通過Web SDK傳遞到邊緣網路。
+資料串流覆寫可讓您為資料串流定義其他設定，這些設定會透過Web SDK傳遞到Edge Network。
 
-這有助於您觸發與預設資料流行為不同的資料流行為，而無需建立新資料流或修改現有設定。
+這有助於您觸發與預設資料流行為不同的資料流行為，而不會建立新的資料流或修改現有的設定。
 
-資料流配置覆蓋是兩個步驟：
+資料流設定覆寫是兩個步驟的程式：
 
-1. 首先，必須在 [資料流配置頁](../datastreams/configure.md)。
-2. 然後，您必須通過Web SDK命令或使用Web SDK標籤擴展將覆蓋發送到邊緣網路。
+1. 首先，您必須在以下位置定義資料流設定覆寫： [資料流設定頁面](../datastreams/configure.md).
+2. 然後，您必須透過Web SDK命令或使用Web SDK標籤擴充功能，將覆寫傳送至Edge Network。
 
-查看資料流 [配置覆蓋文檔](../datastreams/overrides.md) 有關如何覆蓋資料流配置的詳細說明。
+檢視資料流 [設定覆寫檔案](../datastreams/overrides.md) 以取得有關如何覆寫資料流設定的詳細說明。
 
-作為通過Web SDK命令傳遞替代的替代方法，您可以在下面顯示的標籤擴展螢幕中配置替代。
+除了透過Web SDK命令傳遞覆寫外，您也可以在下面顯示的標籤擴充功能畫面中設定覆寫。
 
-![顯示Web SDK標籤擴展頁中資料流配置覆蓋的影像。](../assets/extension/overview/datastream-overrides.png)
+![此影像顯示Web SDK標籤擴充功能頁面中的資料流設定覆寫。](../assets/extension/overview/datastream-overrides.png)
 
 ## [!UICONTROL 進階設定]
 
 ![](../assets/extension/overview/advanced-settings.png)
 
-### [!UICONTROL 邊基路徑]
+### [!UICONTROL 邊緣基底路徑]
 
-如果需要更改用於與Adobe Edge網路交互的基本路徑，請使用此欄位。 這不應需要更新，但是，如果您參與測試版或Alpha,Adobe可能會要求您更改此欄位。
+如果您需要變更用來與Adobe Edge Network互動的基本路徑，請使用此欄位。 這應該不需要更新，但在您參與Beta或Alpha版的情況下，Adobe可能會要求您變更此欄位。

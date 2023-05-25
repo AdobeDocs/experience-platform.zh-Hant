@@ -1,6 +1,6 @@
 ---
-title: 印刷資料類型
-description: 本文檔概述了Impress XDM資料類型。
+title: 曝光數資料型別
+description: 本檔案提供「曝光數」XDM資料型別的概觀。
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
 source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
 workflow-type: tm+mt
@@ -9,22 +9,22 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL 印象] 資料類型
+# [!UICONTROL 曝光次數] 資料型別
 
-[!UICONTROL 印象] 是描述市場營銷印象的標準XDM資料類型，該資料類型是用於量化廣告、數字帖子或網頁等內容的數字視圖或預訂數量的度量。
+[!UICONTROL 曝光次數] 是描述行銷印象的標準XDM資料型別，這是用於量化一段內容（例如廣告、數位貼文或網頁）的數位檢視或參與次數的量度。
 
 ![](../images/data-types/impressions.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `ID` | 字串 | 印象的唯一ID。 |
-| `displays` | 整數 | 向客戶顯示印象項的次數。 |
-| `selected` | 整數 | 選擇或按一下印象項的次數。 |
-| `type` | 字串 | 印象類型。 |
+| `ID` | 字串 | 閱聽的唯一ID。 |
+| `displays` | 整數 | 閱聽專案已向客戶顯示的次數。 |
+| `selected` | 整數 | 已選取或點按曝光專案的次數。 |
+| `type` | 字串 | 曝光型別。 |
 
 {style="table-layout:auto"}
 
-有關欄位組的詳細資訊，請參閱公共XDM儲存庫：
+如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填充示例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
-* [完整架構](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)
+* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
+* [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)

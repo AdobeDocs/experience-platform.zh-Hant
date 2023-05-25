@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；onetrust;OneTrust
+keywords: Experience Platform；首頁；熱門主題；onetrust；OneTrust
 solution: Experience Platform
-title: 在UI中建立OneTrust源連接
+title: 在使用者介面中建立OneTrust來源連線
 type: Tutorial
-description: 瞭解如何使用Adobe Experience PlatformUI建立OneTrust源連接。
+description: 瞭解如何使用Adobe Experience Platform UI建立OneTrust來源連線。
 exl-id: 6af0604d-cbb6-4c8e-b017-3eb82ec6ee1c
 source-git-commit: 35095ec8c22106ba0a8f11e0a970ed7989a7f06c
 workflow-type: tm+mt
@@ -12,64 +12,64 @@ ht-degree: 0%
 
 ---
 
-# 建立 [!DNL OneTrust Integration] UI中的源連接
+# 建立 [!DNL OneTrust Integration] ui中的來源連線
 
 >[!NOTE]
 >
->的 [!DNL OneTrust Integration] 源僅支援接收同意和偏好資料，而不支援cookie。
+>此 [!DNL OneTrust Integration] 來源僅支援擷取同意和偏好設定資料，不支援Cookie。
 
-本教程提供建立 [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) 源連接，使用平台用戶介面將歷史和計畫同意資料同時錄入Adobe Experience Platform。
+本教學課程提供建立 [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) 來源連線，以使用Platform使用者介面將歷史同意資料和排程同意資料擷取到Adobe Experience Platform。
 
 ## 先決條件
 
 >[!IMPORTANT]
 >
->的 [!DNL OneTrust Integration] 源連接器和文檔由 [!DNL OneTrust Integration] 團隊。 有關任何查詢或更新請求，請聯繫 [[!DNL OneTrust] 團隊](https://my.onetrust.com/s/contactsupport?language=en_US) 直接輸入。
+>此 [!DNL OneTrust Integration] 來源聯結器和檔案是由 [!DNL OneTrust Integration] 團隊。 如有任何查詢或更新請求，請聯絡 [[!DNL OneTrust] 團隊](https://my.onetrust.com/s/contactsupport?language=en_US) 直接。
 
-在連接之前 [!DNL OneTrust Integration] 到平台時，必須先檢索訪問令牌。 有關查找訪問令牌的詳細說明，請參閱 [[!DNL OneTrust Integration] OAuth 2指南](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token)。
+連線之前 [!DNL OneTrust Integration] 對於Platform，您必須先擷取存取權杖。 如需尋找存取權杖的詳細說明，請參閱 [[!DNL OneTrust Integration] OAuth 2指南](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-訪問令牌在過期後不會自動刷新，因為系統到系統的刷新令牌不受支援 [!DNL OneTrust]。 因此，必須確保在連接過期之前更新您的訪問令牌。 訪問令牌的最大可配置使用期限為一年。 要瞭解有關更新訪問令牌的詳細資訊，請參閱 [[!DNL OneTrust] 有關管理OAuth 2.0客戶端憑據的文檔](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials)。
+存取權杖過期後不會自動重新整理，因為系統間重新整理權杖不受支援 [!DNL OneTrust]. 因此，您必須確定您的存取權杖在過期之前已在連線中更新。 存取Token的最大可設定存留期為一年。 若要進一步瞭解如何更新存取權杖，請參閱 [[!DNL OneTrust] 有關管理您的OAuth 2.0使用者端憑證的檔案](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-### 收集所需憑據
+### 收集必要的認證
 
-為了連接 [!DNL OneTrust Integration] 在平台中，必須提供以下驗證憑據的值：
+為了連線 [!DNL OneTrust Integration] 對於Platform，您必須提供下列驗證認證的值：
 
-| 憑據 | 說明 | 範例 |
+| 認證 | 說明 | 範例 |
 | --- | --- | --- |
-| 主機名 | 環境 [!DNL OneTrust Integration] 資料需要從中提取。 | `app.onetrust.com` |
-| 授權TestURL | （可選）授權testURL用於在建立基連接時驗證憑據。 如果未提供，則在建立源連接步驟期間會自動檢查憑據。 |  |
-| 訪問令牌 | 與您的 [!DNL OneTrust Integration] 帳戶。 | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
+| 主機名稱 | 從中建立 [!DNL OneTrust Integration] 需要從中提取資料。 | `app.onetrust.com` |
+| 授權測試URL | （選用）建立基本連線時，會使用授權測試URL來驗證認證。 如果未提供，則會在來源連線建立步驟期間自動檢查認證。 |  |
+| 存取Token | 與您的對應的存取權杖 [!DNL OneTrust Integration] 帳戶。 | `ZGFkZDMyMjFhMmEyNDQ2ZGFhNTdkZjNkZjFmM2IyOWE6QjlUSERVUTNjOFVsRmpEZTJ6Vk9oRnF3Sk8xNlNtcm4=` |
 
-有關這些憑據的詳細資訊，請參見 [[!DNL OneTrust Integration] 驗證文檔](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token)。
+如需這些認證的詳細資訊，請參閱 [[!DNL OneTrust Integration] 驗證檔案](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-## 連接 [!DNL OneTrust Integration] 帳戶
+## 連線您的 [!DNL OneTrust Integration] 帳戶
 
 >[!NOTE]
 >
->的 [!DNL OneTrust Integration] API規範正與Adobe共用，用於資料接收。
+>此 [!DNL OneTrust Integration] 正在與Adobe共用API規格以擷取資料。
 
-在平台UI中，選擇 **[!UICONTROL 源]** 從左側導航 [!UICONTROL 源] 工作區，用於Experience Platform中可用的源目錄。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區以取得Experience Platform中可用的來源目錄。
 
-使用 *[!UICONTROL 類別]* 按類別篩選源。 或者，在搜索欄中輸入源名稱以從目錄中查找特定源。
+使用 *[!UICONTROL 類別]* 功能表，依類別篩選來源。 或者，在搜尋列中輸入來源名稱，從目錄中尋找特定來源。
 
-轉到 [!UICONTROL 同意和首選項] 的 [!DNL OneTrust Integration] 源卡。 要開始，請選擇 **[!UICONTROL 添加資料]**。
+前往 [!UICONTROL 同意與偏好設定] 類別 [!DNL OneTrust Integration] 來源卡。 若要開始，請選取 **[!UICONTROL 新增資料]**.
 
-![Experience PlatformUI源目錄。](../../../../images/tutorials/create/onetrust/catalog.png)
+![Experience PlatformUI來源目錄。](../../../../images/tutorials/create/onetrust/catalog.png)
 
-的 **[!UICONTROL 連接OneTrust整合帳戶]** 的子菜單。 在此頁上，您可以使用新憑據或現有憑據。
+此 **[!UICONTROL 連線OneTrust整合帳戶]** 頁面便會顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 現有帳戶
 
-要使用現有帳戶，請選擇 [!DNL OneTrust Integration] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
+若要使用現有帳戶，請選取 [!DNL OneTrust Integration] 要用來建立新資料流的帳戶，然後選取 **[!UICONTROL 下一個]** 以繼續進行。
 
-![源工作流中的現有帳戶驗證步驟。](../../../../images/tutorials/create/onetrust/existing.png)
+![來源工作流程中的現有帳戶驗證步驟。](../../../../images/tutorials/create/onetrust/existing.png)
 
 ### 新帳戶
 
-如果要建立新帳戶，請選擇 **[!UICONTROL 新帳戶]**，然後提供名稱、可選說明和您的憑據。 完成後，選擇 **[!UICONTROL 連接到源]** 然後再給新連接建立一段時間。
+如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、選擇性說明和您的認證。 完成後，選取 **[!UICONTROL 連線到來源]** 然後等待一段時間以建立新連線。
 
-![源工作流中的新帳戶驗證步驟。](../../../../images/tutorials/create/onetrust/new.png)
+![來源工作流程中的新帳戶驗證步驟。](../../../../images/tutorials/create/onetrust/new.png)
 
 ## 後續步驟
 
-按照本教程，您已建立到 [!DNL OneTrust Integration] 帳戶。 現在，您可以繼續下一個教程， [配置資料流以將同意資料引入平台](../../dataflow/consent-and-preferences.md)。
+依照本教學課程，您已建立與的連線， [!DNL OneTrust Integration] 帳戶。 您現在可以繼續下一節教學課程和 [設定資料流以將同意資料匯入Platform](../../dataflow/consent-and-preferences.md).

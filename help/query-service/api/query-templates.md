@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢模板；api指南；模板；查詢服務；
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢範本；API指南；範本；查詢服務；
 solution: Experience Platform
-title: 查詢模板API終結點
-description: 本指南詳細介紹了可以使用查詢服務API進行的各種查詢模板API調用。
+title: 查詢範本API端點
+description: 本指南詳細說明您可以使用查詢服務API進行的各種查詢範本API呼叫。
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -11,17 +11,17 @@ ht-degree: 2%
 
 ---
 
-# 查詢模板終結點
+# 查詢範本端點
 
-## 示例API調用
+## API呼叫範例
 
-以下各節介紹可以使用 [!DNL Query Service] API。 每個調用包括一般API格式、顯示所需標頭的示例請求和示例響應。
+以下小節說明您可以使用進行的各種API呼叫 [!DNL Query Service] API。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
-查看 [UI查詢模板文檔](../ui/query-templates.md) 有關通過Experience PlatformUI建立模板的資訊。
+請參閱 [UI查詢範本檔案](../ui/query-templates.md) 以取得有關透過Experience PlatformUI建立範本的資訊。
 
-### 檢索查詢模板清單
+### 擷取查詢範本清單
 
-您可以通過向以下站點發出GET請求來檢索組織的所有查詢模板的清單 `/query-templates` 端點。
+您可以透過向以下網站發出GET請求，擷取貴組織的所有查詢範本清單： `/query-templates` 端點。
 
 **API格式**
 
@@ -32,22 +32,22 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*可選*)添加到請求路徑中的參數，該路徑配置在響應中返回的結果。 可以包括多個參數，用和符號分隔(`&`)。 下面列出了可用參數。 |
+| `{QUERY_PARAMETERS}` | (*可選*)將引數新增至要求路徑，以設定回應中傳回的結果。 可包含多個引數，以&amp;符號(`&`)。 可用的引數列示如下。 |
 
-**查詢參數**
+**查詢引數**
 
-以下是列出查詢模板的可用查詢參數清單。 所有這些參數都是可選的。 在沒有參數的情況下調用此終結點將檢索可用於您的組織的所有查詢模板。
+以下是列出查詢範本的可用查詢引數清單。 所有這些引數都是選用的。 在不使用引數的情況下呼叫此端點將會擷取您的組織可用的所有查詢範本。
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定對結果排序依據的欄位。 支援的欄位為 `created` 和 `updated`。 比如說， `orderby=created` 將按建立結果的升序排序。 添加 `-` 之前建立(`orderby=-created`)將按降序順序建立項。 |
-| `limit` | 指定頁面大小限制以控制頁面中包含的結果數。 (*預設值：20*) |
-| `start` | 使用基於零的編號來偏移響應清單。 比如說， `start=2` 將返回從第三個列出的查詢開始的清單。 (*預設值：0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** 是HTML逃了。 使用逗號組合多組篩選器。 支援的欄位為 `name` 和 `userId`。 唯一支援的運算子是 `==` （等於）。 比如說， `name==my_template` 將返回所有具有名稱的查詢模板 `my_template`。 |
+| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位包括 `created` 和 `updated`. 例如， `orderby=created` 將依建立的結果遞增順序來排序結果。 新增 `-` 建立前(`orderby=-created`)會依建立的順序遞減排序專案。 |
+| `limit` | 指定頁面大小限制，以控制頁面中包含的結果數量。 (*預設值： 20*) |
+| `start` | 使用以零為基準的編號來位移回應清單。 例如， `start=2` 會傳回從第三個查詢開始的清單。 (*預設值： 0*) |
+| `property` | 根據欄位篩選結果。 篩選器 **必須** 已逸出HTML。 逗號可用來組合多組篩選器。 支援的欄位包括 `name` 和 `userId`. 唯一支援的運運算元是 `==` （等於）。 例如， `name==my_template` 將傳回名稱為的所有查詢範本 `my_template`. |
 
 **要求**
 
-以下請求將檢索為您的組織建立的最新查詢模板。
+以下請求會擷取為您的組織建立的最新查詢範本。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含指定組織的查詢模板清單。 以下響應返回為您的組織建立的最新查詢模板。
+成功的回應會傳回HTTP狀態200，其中包含指定組織的查詢範本清單。 下列回應會傳回為您組織建立的最新查詢範本。
 
 ```json
 {
@@ -108,11 +108,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 >[!NOTE]
 >
->可以使用 `_links.delete` 至 [刪除查詢模板](#delete-a-specified-query-template)。
+>您可以使用以下專案的值： `_links.delete` 至 [刪除您的查詢範本](#delete-a-specified-query-template).
 
-### 建立查詢模板
+### 建立查詢範本
 
-您可以通過向POST `/query-templates` 端點。
+您可以透過向以下專案發出POST請求來建立查詢範本： `/query-templates` 端點。
 
 **API格式**
 
@@ -139,13 +139,13 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sql` | 要建立的SQL查詢。 可以使用標準SQL或參數替換。 要在SQL中使用參數替換，必須用 `$`。 比如說， `$key`，並提供SQL中使用的參數作為JSON鍵值對 `queryParameters` 的子菜單。 此處傳遞的值將是模板中使用的預設參數。 如果要覆蓋這些參數，則必須在POST請求中覆蓋它們。 |
-| `name` | 查詢模板的名稱。 |
-| `queryParameters` | 用於替換SQL陳述式中任何參數化值的鍵值配對。 只需 **如果** 您正在提供的SQL中使用參數替換。 不對這些鍵值對執行值類型檢查。 |
+| `sql` | 您要建立的SQL查詢。 您可以使用標準SQL或引數取代。 若要在SQL中使用引數取代，您必須在引數索引鍵前面加上 `$`. 例如， `$key`，並提供SQL中使用的引數，作為 `queryParameters` 欄位。 此處傳遞的值將是範本中使用的預設引數。 如果要覆寫這些引數，必須在POST請求中覆寫它們。 |
+| `name` | 查詢範本的名稱。 |
+| `queryParameters` | 用來取代SQL陳述式中任何引數化值的索引鍵值配對。 此為必要專案 **如果** 您正在提供的SQL中使用引數取代。 不會對這些索引鍵值配對執行任何值型別檢查。 |
 
 **回應**
 
-成功的響應返回HTTP狀態202（已接受），並返回新建立的查詢模板的詳細資訊。
+成功的回應會傳回HTTP狀態202 （已接受）以及您新建立的查詢範本的詳細資料。
 
 ```json
 {
@@ -175,11 +175,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 >[!NOTE]
 >
->可以使用 `_links.delete` 至 [刪除查詢模板](#delete-a-specified-query-template)。
+>您可以使用以下專案的值： `_links.delete` 至 [刪除您的查詢範本](#delete-a-specified-query-template).
 
-### 檢索指定的查詢模板
+### 擷取指定的查詢範本
 
-您可以通過向 `/query-templates/{TEMPLATE_ID}` 在請求路徑中提供查詢模板的ID。
+您可以透過向以下專案發出GET請求來擷取特定的查詢範本： `/query-templates/{TEMPLATE_ID}` 端點並在請求路徑中提供查詢範本的ID。
 
 **API格式**
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | 的 `id` 要檢索的查詢模板的值。 |
+| `{TEMPLATE_ID}` | 此 `id` 您要擷取的查詢範本值。 |
 
 **要求**
 
@@ -203,7 +203,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 **回應**
 
-成功的響應返回HTTP狀態200，並返回指定查詢模板的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您指定的查詢範本的詳細資料。
 
 ```json
 {
@@ -233,11 +233,11 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->可以使用 `_links.delete` 至 [刪除查詢模板](#delete-a-specified-query-template)。
+>您可以使用以下專案的值： `_links.delete` 至 [刪除您的查詢範本](#delete-a-specified-query-template).
 
-### 更新指定的查詢模板
+### 更新指定的查詢範本
 
-您可以通過向PUT `/query-templates/{TEMPLATE_ID}` 在請求路徑中提供查詢模板的ID。
+您可以透過向以下專案發出PUT請求來更新特定的查詢範本： `/query-templates/{TEMPLATE_ID}` 端點並在請求路徑中提供查詢範本的ID。
 
 **API格式**
 
@@ -247,13 +247,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | 的 `id` 要檢索的查詢模板的值。 |
+| `{TEMPLATE_ID}` | 此 `id` 您要擷取的查詢範本值。 |
 
 **要求**
 
 >[!NOTE]
 >
->PUT請求要求同時填寫sql和name欄位，並且 **覆蓋** 查詢模板的當前內容。
+>PUT要求必須填寫sql和名稱欄位，且將 **覆寫** 該查詢範本的目前內容。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -272,13 +272,13 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sql` | 要建立的SQL查詢。 可以使用標準SQL或參數替換。 要在SQL中使用參數替換，必須用 `$`。 比如說， `$key`，並提供SQL中使用的參數作為JSON鍵值對 `queryParameters` 的子菜單。 此處傳遞的值將是模板中使用的預設參數。 如果要覆蓋這些參數，則必須在POST請求中覆蓋它們。 |
-| `name` | 查詢模板的名稱。 |
-| `queryParameters` | 用於替換SQL陳述式中任何參數化值的鍵值配對。 只需 **如果** 您正在提供的SQL中使用參數替換。 不對這些鍵值對執行值類型檢查。 |
+| `sql` | 您要建立的SQL查詢。 您可以使用標準SQL或引數取代。 若要在SQL中使用引數取代，您必須在引數索引鍵前面加上 `$`. 例如， `$key`，並提供SQL中使用的引數，作為 `queryParameters` 欄位。 此處傳遞的值將是範本中使用的預設引數。 如果要覆寫這些引數，必須在POST請求中覆寫它們。 |
+| `name` | 查詢範本的名稱。 |
+| `queryParameters` | 用來取代SQL陳述式中任何引數化值的索引鍵值配對。 此為必要專案 **如果** 您正在提供的SQL中使用引數取代。 不會對這些索引鍵值配對執行任何值型別檢查。 |
 
 **回應**
 
-成功的響應返回HTTP狀態202（已接受），並返回指定查詢模板的更新資訊。
+成功的回應會傳回HTTP狀態202 （已接受），其中包含指定查詢範本的更新資訊。
 
 ```json
 {
@@ -309,11 +309,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->可以使用 `_links.delete` 至 [刪除查詢模板](#delete-a-specified-query-template)。
+>您可以使用以下專案的值： `_links.delete` 至 [刪除您的查詢範本](#delete-a-specified-query-template).
 
-### 刪除指定的查詢模板
+### 刪除指定的查詢範本
 
-您可以通過向DELETE請求刪除特定查詢模板 `/query-templates/{TEMPLATE_ID}` 並在請求路徑中提供查詢模板的ID。
+您可以透過向以下專案發出DELETE請求來刪除特定的查詢範本： `/query-templates/{TEMPLATE_ID}` 並在請求路徑中提供查詢範本的ID。
 
 **API格式**
 
@@ -323,7 +323,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | 的 `id` 要檢索的查詢模板的值。 |
+| `{TEMPLATE_ID}` | 此 `id` 您要擷取的查詢範本值。 |
 
 **要求**
 
@@ -337,7 +337,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
 
 **回應**
 
-成功的響應返回HTTP狀態202（已接受），並顯示以下消息。
+成功的回應會傳回HTTP狀態202 （已接受），並出現以下訊息。
 
 ```json
 {

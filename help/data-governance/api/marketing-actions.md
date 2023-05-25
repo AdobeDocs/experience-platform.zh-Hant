@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；策略實施；市場營銷操作api；基於API的實施；資料治理
+keywords: Experience Platform；首頁；熱門主題；原則執行；行銷動作api；API型執行；資料控管
 solution: Experience Platform
-title: 市場營銷操作API終結點
-description: 在「Adobe Experience Platform資料治理」的背景下，市場營銷行動是Experience Platform資料使用者採取的行動，需要檢查是否違反了資料使用策略。
+title: 行銷動作API端點
+description: 在Adobe Experience Platform資料控管的內容中，行銷動作是Experience Platform資料消費者採取的動作，需要檢查其是否違反資料使用原則。
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 2%
 
 ---
 
-# 市場營銷操作終結點
+# 行銷動作端點
 
-在《Adobe Experience Platform資料治理》的背景下，營銷行動是一項 [!DNL Experience Platform] 資料使用者獲取的資料，需要檢查是否違反了資料使用策略。
+在Adobe Experience Platform資料控管的內容中，行銷動作是指 [!DNL Experience Platform] 資料取用者需要檢查資料使用原則是否違規。
 
-您可以使用 `/marketingActions` 策略服務API中的終結點。
+您可以使用管理組織的行銷動作 `/marketingActions` 原則服務API中的端點。
 
 ## 快速入門
 
-本指南中使用的API端點是 [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關指向相關文檔的連結、閱讀本文檔中示例API調用的指南，以及成功調用任何文檔所需的標題的重要資訊 [!DNL Experience Platform] API。
+本指南中使用的API端點屬於 [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功對任一檔案發出呼叫所需必要標題的重要資訊 [!DNL Experience Platform] API。
 
-## 檢索市場營銷操作清單 {#list}
+## 擷取行銷動作清單 {#list}
 
-您可以通過發出GET請求來檢索核心或自定義市場營銷操作的清單 `/marketingActions/core` 或 `/marketingActions/custom`的下界。
+您可以透過向以下發出GET請求，擷取核心或自訂行銷動作清單： `/marketingActions/core` 或 `/marketingActions/custom`（分別）。
 
 **API格式**
 
@@ -34,7 +34,7 @@ GET /marketingActions/custom
 
 **要求**
 
-以下請求將檢索您的組織維護的自定義市場營銷操作清單。
+以下請求會擷取貴組織維護的自訂行銷動作清單。
 
 ```shell
 curl -X GET \
@@ -47,7 +47,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回每個檢索到的市場營銷操作的詳細資訊，包括其 `name` 和 `href`。 的 `href` 值用於在 [建立資料使用策略](policies.md#create-policy)。
+成功的回應會傳回每個已擷取行銷動作的詳細資訊，包括其 `name` 和 `href`. 此 `href` 值用於識別行銷動作，當 [建立資料使用原則](policies.md#create-policy).
 
 ```json
 {
@@ -99,14 +99,14 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_page.count` | 返回的市場營銷活動總數。 |
-| `children` | 包含檢索到的市場營銷操作的詳細資訊的對象陣列。 |
-| `name` | 市場營銷活動的名稱，在 [查找具體的營銷行動](#lookup)。 |
-| `_links.self.href` | 市場營銷操作的URI引用，可用於完成 `marketingActionsRefs` 陣列 [建立資料使用策略](policies.md#create-policy)。 |
+| `_page.count` | 傳回的行銷動作總數。 |
+| `children` | 一個物件陣列，其中包含已擷取行銷動作的詳細資訊。 |
+| `name` | 行銷動作的名稱，在下列情況下當作其唯一識別碼： [查詢特定行銷動作](#lookup). |
+| `_links.self.href` | 行銷動作的URI參考，可用來完成 `marketingActionsRefs` 陣列時間 [建立資料使用原則](policies.md#create-policy). |
 
-## 查找具體的營銷活動 {#lookup}
+## 查詢特定的行銷動作 {#lookup}
 
-通過包括市場營銷活動的 `name` 屬性。
+您可以包含行銷動作的，以查詢特定行銷動作的詳細資訊 `name` GET要求路徑中的屬性。
 
 **API格式**
 
@@ -117,11 +117,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 的 `name` 要查找的市場營銷操作的屬性。 |
+| `{MARKETING_ACTION_NAME}` | 此 `name` 您要查閱之行銷動作的屬性。 |
 
 **要求**
 
-以下請求檢索名為的自定義市場營銷操作 `combineData`。
+以下請求會擷取名為的自訂行銷動作 `combineData`.
 
 ```shell
 curl -X GET \
@@ -134,7 +134,7 @@ curl -X GET \
 
 **回應**
 
-響應對象包含市場營銷操作的詳細資訊，包括路徑(`_links.self.href`)需要參考市場推廣行動 [定義資料使用策略](policies.md#create-policy) (`marketingActionsRefs`)。
+回應物件包含行銷動作的詳細資訊，包括路徑(`_links.self.href`)時參考行銷動作所需 [定義資料使用原則](policies.md#create-policy) (`marketingActionsRefs`)。
 
 ```JSON
 {
@@ -155,9 +155,9 @@ curl -X GET \
 }
 ```
 
-## 建立或更新自定義市場營銷活動 {#create-update}
+## 建立或更新自訂行銷動作 {#create-update}
 
-您可以建立新的自定義市場營銷活動，或通過將市場營銷活動的現有或預期名稱包括在PUT請求的路徑中來更新現有的市場營銷活動。
+您可以建立新的自訂行銷動作，或更新現有的行銷動作，方法是在PUT請求的路徑中包含行銷動作的現有名稱或預期名稱。
 
 **API格式**
 
@@ -167,11 +167,11 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 要建立或更新的市場營銷操作的名稱。 如果系統中已存在具有提供名稱的市場營銷活動，則更新該市場營銷活動。 如果不存在，則為提供的名稱建立新的市場營銷操作。 |
+| `{MARKETING_ACTION_NAME}` | 要建立或更新之行銷動作的名稱。 如果系統中已存在具有所提供名稱的行銷動作，則會更新該行銷動作。 如果不存在，則會針對提供的名稱建立新的行銷動作。 |
 
 **要求**
 
-以下請求將建立名為 `crossSiteTargeting`，前提是系統中尚不存在同名的營銷操作。 如果 `crossSiteTargeting` 市場營銷操作確實存在，但此呼叫會根據負載中提供的屬性更新市場營銷操作。
+以下請求會建立名為的新行銷動作 `crossSiteTargeting`，前提是系統中不存在相同名稱的行銷動作。 若為 `crossSiteTargeting` 行銷動作確實存在，此呼叫會根據裝載中提供的屬性更新行銷動作。
 
 ```shell
 curl -X PUT \
@@ -189,12 +189,12 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 要建立或更新的市場營銷操作的名稱。 <br><br>**重要**:此屬性必須與 `{MARKETING_ACTION_NAME}` 在路徑中，否則將出現HTTP 400（錯誤請求）錯誤。 換句話說，一旦建立了營銷活動， `name` 無法更改屬性。 |
-| `description` | 可選說明，為市場營銷活動提供進一步的上下文。 |
+| `name` | 要建立或更新之行銷動作的名稱。 <br><br>**重要**：此屬性必須與 `{MARKETING_ACTION_NAME}` 路徑中，否則會發生HTTP 400 （錯誤請求）錯誤。 換言之，建立行銷動作後， `name` 屬性無法變更。 |
+| `description` | 選用的說明，可提供行銷動作的進一步內容。 |
 
 **回應**
 
-成功的響應將返回市場營銷操作的詳細資訊。 如果更新了現有的市場營銷操作，則響應將返回HTTP狀態200（確定）。 如果建立了新的市場營銷操作，則響應將返回HTTP狀態201（已建立）。
+成功的回應會傳回行銷動作的詳細資訊。 如果更新了現有的行銷動作，回應會傳回HTTP狀態200 （確定）。 如果已建立新的行銷動作，回應會傳回HTTP狀態201 （已建立）。
 
 ```JSON
 {
@@ -215,13 +215,13 @@ curl -X PUT \
 }
 ```
 
-## 刪除自定義市場營銷操作 {#delete}
+## 刪除自訂行銷動作 {#delete}
 
-通過在DELETE請求的路徑中包含自定義市場營銷操作的名稱，可以刪除該操作。
+您可以在DELETE請求的路徑中包含自訂行銷動作的名稱，以刪除自訂行銷動作。
 
 >[!NOTE]
 >
->無法刪除現有策略引用的市場營銷操作。 嘗試刪除這些市場營銷操作之一將導致HTTP 400（錯誤請求）錯誤，並導致包含引用市場營銷操作的所有策略的ID的消息。
+>無法刪除現有原則所參考的行銷動作。 嘗試刪除其中一個行銷動作將導致HTTP 400 （錯誤請求）錯誤以及包含引用行銷動作之所有原則ID的訊息。
 
 **API格式**
 
@@ -231,7 +231,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 要刪除的市場營銷操作的名稱。 |
+| `{MARKETING_ACTION_NAME}` | 您要刪除的行銷動作名稱。 |
 
 **要求**
 
@@ -246,6 +246,6 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應返回HTTP狀態200(OK)，返回的響應正文為空。
+成功的回應會傳回HTTP狀態200 （確定），並帶有空白回應內文。
 
-您可以通過嘗試 [查看營銷活動](#look-up)。 如果從系統中刪除了市場營銷操作，則應收到HTTP 404（未找到）錯誤。
+您可以嘗試確認刪除 [查詢行銷動作](#look-up). 如果行銷動作已從系統中移除，您應該會收到HTTP 404 （找不到）錯誤。

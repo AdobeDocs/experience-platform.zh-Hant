@@ -1,6 +1,6 @@
 ---
-title: Google資料層擴展
-description: 瞭解Google客戶端資料層標籤擴展在Adobe Experience Platform。
+title: Google資料層擴充功能
+description: 瞭解Adobe Experience Platform中的Google Client Data Layer標籤擴充功能。
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
 source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
 workflow-type: tm+mt
@@ -9,100 +9,100 @@ ht-degree: 1%
 
 ---
 
-# Google資料層擴展
+# Google資料層擴充功能
 
-Google資料層擴展允許您在標籤實現中使用Google資料層。 該擴展可以單獨或同時與Google解決方案和Google的開放源使用 [資料層幫助程式庫](https://github.com/google/data-layer-helper)。
+Google Data Layer擴充功能可讓您在標籤實作中使用Google資料層。 此擴充功能可單獨使用，或與Google解決方案及Google的開放原始碼同時使用 [資料層協助程式庫](https://github.com/google/data-layer-helper).
 
-幫助程式庫提供與Adobe客戶端資料日期器(ACDL)類似的事件驅動功能。 Google資料層擴展的資料元素、規則和操作提供了與 [ACDL擴展](../client-data-layer/overview.md)。
+Helper Library提供與Adobe Client Data Dayer (ACDL)類似的事件導向功能。 Google Data Layer擴充功能的資料元素、規則和動作所提供的功能與 [ACDL擴充功能](../client-data-layer/overview.md).
 
-## 到期
+## 成熟度
 
-版本1.2.x是生產使用中的較晚的Beta。
+1.2.x版為最新測試版，現正用於生產環境。
 
 ## 安裝
 
-要安裝擴展，請導航到資料收集UI中的擴展目錄並選擇 **[!UICONTROL Google資料層]**。
+若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，然後選取 **[!UICONTROL Google資料層]**.
 
-安裝後，擴展將在Adobe Experience Platform標籤庫的每個負載上建立或訪問資料層。
+安裝後，擴充功能就會在每次載入Adobe Experience Platform Tags資料庫時，建立或存取資料層。
 
-## 擴展視圖
+## 擴充功能檢視
 
-擴展配置可用於定義擴展所使用的資料層的名稱。 如果載入Adobe Experience Platform標籤時不存在具有配置名稱的資料層，則擴展將建立一個。
+擴充功能組態可用來定義擴充功能使用的資料層名稱。 載入Adobe Experience Platform Tags時，如果沒有任何資料層具有已設定的名稱，擴充功能會建立一個資料層。
 
-資料層名稱預設為Google預設名稱 `dataLayer`。
+資料層名稱預設為Google預設名稱 `dataLayer`.
 
 >[!NOTE]
 >
->無論是Google還是Adobe代碼首先載入並建立資料層都無關緊要。 兩個系統的行為相同 — 如果資料層不存在或使用現有資料層，則建立資料層。
+>Google或Adobe程式碼會先載入並建立資料層並不重要。 兩個系統的行為相同 — 如果資料層不存在或使用現有的資料層，請建立資料層。
 
 ## 活動
 
 >[!NOTE]
 >
->詞 _事件_ 當事件驅動資料層在Adobe Experience Platform標籤中使用時會超載。 _事件_ 可以：
-> - Adobe Experience Platform標籤事件（庫已載入等）。
+>單字 _事件_ 在Adobe Experience Platform Tags中使用事件導向的資料層時，會多載。 _事件_ 可以是：
+> - Adobe Experience Platform Tags事件（Library Loaded等）。
 > - JavaScript事件。
-> - 將資料推送到資料層， _事件_ 的雙曲餘切值。
+> - 使用推送至資料層的資料 _事件_ 關鍵字。
 
 
-擴展功能使您能夠偵聽資料層上的更改。
+擴充功能可讓您接聽資料層上的變更。
 
 >[!NOTE]
 >
->瞭解使用 _事件_ 關鍵字將資料推送到Google資料層時，與Adobe客戶端資料層類似。 的 _事件_ 關鍵字更改Google資料層的行為，因此更改此擴展。\
-> 請閱讀Google的檔案，如果您不確定這一點，請進行研究。
+>請務必瞭解如何使用 _事件_ 關鍵字(類似於Adobe使用者端資料層)將資料推送至Google資料層時。 此 _事件_ 關鍵字會變更Google資料層的行為，進而變更此擴充功能。\
+> 請閱讀Google檔案，或如果對此點不確定，請進行研究。
 
-### 偵聽所有推送到資料層的內容
+### 聆聽資料層的所有推送
 
-如果選擇此選項，事件偵聽器將監聽對資料層所做的任何更改。
+如果您選取此選項，事件接聽程式會接聽資料層所做的任何變更。
 
-### 收聽推送排除事件
+### 接聽排除事件的推送
 
-如果選擇此選項，則事件偵聽器將監聽任何資料推送到資料層，但不包括事件。
+如果您選取此選項，事件接聽程式會接聽任何資料推送到資料層的動作，但不包括事件。
 
-監聽器將跟蹤以下推送事件示例：
+監聽器會追蹤下列範例推送事件：
 
 ```js
 dataLayer.push({"data":"something"})
 ```
 
-監聽程式將不跟蹤以下推送事件示例：
+監聽器不會追蹤下列範例推送事件：
 
 ```js
 dataLayer.push({"event":"myevent"})
 dataLayer.push({"event":"myevent","data":"something"})
 ```
 
-### 偵聽所有事件
+### 接聽所有事件
 
-如果選擇此選項，則事件偵聽器將監聽任何推送到資料層的事件。
+如果您選取此選項，事件接聽程式會接聽推播至資料層的任何事件。
 
-監聽器將跟蹤以下推送事件示例：
+監聽器會追蹤下列範例推送事件：
 
 ```js
 dataLayer.push({"event":"myevent"})
 dataLayer.push({"event":"myevent","data":"something"})
 ```
 
-監聽程式將不跟蹤以下示例推送事件：
+監聽器不會追蹤下列範例推送事件：
 
 ```js
 dataLayer.push({"data":"something"})
 ```
 
-### 偵聽特定事件
+### 接聽特定事件
 
-在指定事件的情況下，事件偵聽器將跟蹤與特定字串匹配的所有事件。
+如果您指定事件，則事件接聽程式會追蹤符合特定字串的任何事件。
 
-例如，設定 `myEvent` 使用此配置時，偵聽器將只跟蹤以下推送事件：
+例如，設定 `myEvent` 使用此設定時，監聽器只會追蹤下列推播事件：
 
 ```js
 dataLayer.push({"event":"myEvent"})
 ```
 
-(ECMAScript / JavaScript)規則運算式可用於匹配事件名稱。
+可以使用(ECMAScript / JavaScript)規則運算式來比對事件名稱。
 
-例如，設定「myEvent\d」將跟蹤 `myEvent` 帶數字(\d):
+例如，設定&#39;myEvent\d&#39;將追蹤 `myEvent` 加上數字(\d)：
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -111,13 +111,13 @@ dataLayer.push({"event":"myEvent2"})
 
 ## 動作
 
-### 推送到資料層 {#push-to-data-layer}
+### 推送至資料層 {#push-to-data-layer}
 
-該擴展提供了兩個將JSON推送到資料層的操作；用於手動建立要推送的JSON的自由文本欄位，以及從1.2.0版中的鍵值多欄位對話框。
+擴充功能提供您兩個將JSON推送至資料層的動作；一個是自由文字欄位，可手動建立要推送的JSON；另一個是從1.2.0版啟動的「索引鍵值多欄位」對話方塊。
 
-#### 自由文本JSON
+#### 自由文字JSON
 
-自由文本操作使直接在JSON中使用資料元素成為可能。 在JSON編輯器中，應使用百分比表示法引用資料元素。 例如 `%dataElementName%`。
+自由文字動作可讓您直接在JSON中使用資料元素。 在JSON編輯器中，應使用百分比標籤法參考資料元素。 例如 `%dataElementName%`。
 
 ```json
 {
@@ -129,27 +129,27 @@ dataLayer.push({"event":"myEvent2"})
 }
 ```
 
-#### 鍵值多欄位
+#### 索引鍵 — 值多欄位
 
-較新的key-value多欄位對話框是一個更方便用戶的介面，它允許配置推送，而無需手動寫入JSON。
+較新的索引鍵值多欄位對話方塊是更好記的介面，可讓您設定推送，而不需手動寫入JSON。
 
-### GoogleDL重置為計算狀態
+### Google DL重設為計算狀態
 
-該擴展為您提供了重置資料層的操作。 如果在處理Google資料層更改的規則中使用，則資料層被重置為觸發規則時資料層的計算狀態。 如果在不處理Google資料層更改的規則中使用該操作，則該操作會清空資料層。
+擴充功能提供您重設資料層的動作。 若用於處理Google資料層變更的規則中，資料層會重設為觸發規則時資料層的計算狀態。 如果動作用於不會處理Google資料層變更的規則中，該動作會清空資料層。
 
 ## 資料元素
 
-所提供的資料元素可在執行由Google資料層更改（推送事件）觸發的規則期間或在諸如庫載入的不相關規則中使用。 在前一種情況下，資料元素返回在資料層改變時從計算狀態獲取的值。 在後一種情況下，使用規則執行時的計算狀態。
+提供的資料元素可用於執行Google資料層變更（推送事件）所觸發的規則，或用於不相關的規則，例如Library Loaded。 在前一種情況下，資料元素會傳回資料層變更時從計算狀態取得的值。 在後一種情況下，會使用規則執行時的計算狀態。
 
-切換開關允許您選擇資料元素應從整個計算狀態返回值還是僅從事件資訊返回值（如果用於由資料層更改觸發的規則）。
+切換開關可讓您選擇資料元素是應該從整個計算狀態傳回值，還是隻從事件資訊傳回值（如果用於由資料層變更觸發的規則中）。
 
-因此，資料元素可以返回：
+因此，資料元素可以傳回：
 
-- 空欄位：資料層計算狀態。
-- 帶鍵的欄位（如上例中的page.previous_url）:事件對象或計算狀態中鍵的值。
+- 空白欄位：資料層計算狀態。
+- 具有索引鍵的欄位（例如上述範例中的page.previous_url）：事件物件或計算狀態中的索引鍵值。
 
 ## 其他資訊
 
-擴展的資料元素和事件對話框包含詳細的使用資訊和示例。
+擴充功能的資料元素和事件對話方塊包含詳細的使用資訊和範例。
 
-其他一般資訊位於 [項目自述檔案](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+其他一般資訊請參閱 [專案讀我檔案](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

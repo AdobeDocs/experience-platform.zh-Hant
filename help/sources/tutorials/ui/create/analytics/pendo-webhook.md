@@ -1,7 +1,7 @@
 ---
-title: 在UI中建立Pendo源連接
-description: 瞭解如何使用Adobe Experience PlatformUI建立Pendo源連接。
-badge: β
+title: 在使用者介面中建立Pendo來源連線
+description: 瞭解如何使用Adobe Experience Platform UI建立Pendo來源連線。
+badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -10,30 +10,30 @@ ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Pendo] 源連接資料流和UI中
+# 建立 [!DNL Pendo] 來源連線資料流和UI中
 
 >[!NOTE]
 >
->的 [!DNL Pendo] 源為beta。 查看 [源概述](../../../../home.md#terms-and-conditions) 的子菜單。
+>此 [!DNL Pendo] 來源為測試版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
-本教程提供建立 [!DNL Pendo] 源連接和資料流。
+本教學課程提供建立 [!DNL Pendo] 使用Adobe Experience Platform使用者介面的來源連線和資料流。
 
 ## 快速入門 {#getting-started}
 
-本教程需要對以下Experience Platform組成部分進行有效理解：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
-   * [架構組合的基礎](../../../../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
-   * [架構編輯器教程](../../../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自定義架構。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
+   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器UI建立自訂結構描述。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
 ## 先決條件 {#prerequisites}
 
-以下部分提供了有關在建立 [!DNL Pendo] 源連接。
+下節提供建立前必須完成的必要條件相關資訊 [!DNL Pendo] 來源連線。
 
-### 定義源架構的示例JSON [!DNL Pendo] {#prerequisites-json-schema}
+### 定義來源結構描述的JSON範例 [!DNL Pendo] {#prerequisites-json-schema}
 
-在建立 [!DNL Pendo] 源連接，需要提供源架構。 可以使用下面的JSON。
+建立之前 [!DNL Pendo] 來源連線，您需要提供來源結構描述。 您可以使用下方的JSON。
 
 ```
 {
@@ -49,129 +49,129 @@ ht-degree: 1%
 }
 ```
 
-有關詳細資訊，請閱讀 [[!DNL Pendo] Webhooks指南](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks)。
+如需詳細資訊，請閱讀 [[!DNL Pendo] webhook指南](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks).
 
-### 建立平台架構 [!DNL Pendo] {#create-platform-schema}
+### 建立平台結構描述 [!DNL Pendo] {#create-platform-schema}
 
-還必須確保首先建立用於源的平台架構。 請參閱上的教程 [建立平台架構](../../../../../xdm/schema/composition.md) 有關如何建立架構的全面步驟。
+您也必須確保先建立Platform結構描述以用於您的來源。 請參閱教學課程，位置如下： [建立平台結構描述](../../../../../xdm/schema/composition.md) 有關如何建立方案的完整步驟。
 
-![平台UI顯示Pendo的示例架構。](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![顯示Pendo之範例結構描述的平台UI。](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
-## 連接 [!DNL Pendo] 帳戶 {#connect-account}
+## 連線您的 [!DNL Pendo] 帳戶 {#connect-account}
 
-在平台UI中，選擇 **[!UICONTROL 源]** 從左側導航 [!UICONTROL 源] 工作區，並查看Experience Platform中可用的源目錄。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 並檢視Experience Platform中可用的來源目錄。
 
-使用 *[!UICONTROL 類別]* 按類別篩選源。 或者，在搜索欄中輸入源名稱以從目錄中查找特定源。
+使用 *[!UICONTROL 類別]* 功能表，依類別篩選來源。 或者，在搜尋列中輸入來源名稱，從目錄中尋找特定來源。
 
-轉到 [!UICONTROL 分析] 類別以查看 [!DNL Pendo] 源卡。 要開始，請選擇 **[!UICONTROL 添加資料]**。
+前往 [!UICONTROL 分析] 類別以檢視 [!DNL Pendo] 來源卡。 若要開始，請選取 **[!UICONTROL 新增資料]**.
 
-![平台UI源目錄（帶Pendo卡）。](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![具有Pendo卡的Platform UI來源目錄。](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## 選擇資料 {#select-data}
 
-的 **[!UICONTROL 選擇資料]** 步驟，為您提供一個介面，以選擇要帶到平台的資料。
+此 **[!UICONTROL 選取資料]** 步驟隨即顯示，提供介面供您選取要帶至Platform的資料。
 
-* 介面的左側部分是一個瀏覽器，允許您查看帳戶中的可用資料流；
-* 該介面的右部分允許您從JSON檔案預覽多達100行的資料。
+* 介面的左側是瀏覽器，可讓您檢視帳戶內的可用資料流；
+* 介面的右側部分可讓您預覽來自JSON檔案的最多100列資料。
 
-選擇 **[!UICONTROL 上載檔案]** 從本地系統上載JSON檔案。 或者，可以將要上載的JSON檔案拖放到 [!UICONTROL 拖放檔案] 的子菜單。
+選取 **[!UICONTROL 上傳檔案]** 以從您的本機系統上傳JSON檔案。 或者，您也可以將要上傳的JSON檔案拖放至 [!UICONTROL 拖放檔案] 面板。
 
-![源工作流的添加資料步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/add-data.png)
+![來源工作流程的新增資料步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/add-data.png)
 
-上載檔案後，預覽介面將更新以顯示上載的架構的預覽。 預覽介面允許您檢查檔案的內容和結構。 您還可以使用 [!UICONTROL 搜索欄位] 用於從架構中訪問特定項的實用程式。
+上傳檔案後，預覽介面會更新，以顯示您上傳的結構描述預覽。 預覽介面可讓您檢查檔案的內容和結構。 您也可以使用 [!UICONTROL 搜尋欄位] 用於從結構描述中存取特定專案的公用程式。
 
-完成後，選擇 **[!UICONTROL 下一個]**。
+完成後，選取 **[!UICONTROL 下一個]**.
 
-![源工作流的預覽步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/preview.png)
+![來源工作流程的預覽步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/preview.png)
 
 ## 資料流詳細資訊 {#dataflow-detail}
 
-的 **資料流詳細資訊** 步驟，為您提供了使用現有資料集或為資料流建立新資料集的選項，以及為資料流提供名稱和說明的機會。 在此步驟中，您還可以配置配置檔案接收、錯誤診斷、部分接收和警報的設定。
+此 **資料流詳細資料** 步驟隨即顯示，為您提供使用現有資料集或為資料流建立新資料集的選項，以及提供資料流名稱和說明的機會。 在此步驟中，您還可以配置設定檔擷取、錯誤診斷、部分擷取和警示的設定。
 
-完成後，選擇 **[!UICONTROL 下一個]**。
+完成後，選取 **[!UICONTROL 下一個]**.
 
-![源工作流的資料流詳細資訊步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/dataflow-detail.png)
+![來源工作流程的資料流詳細資料步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/dataflow-detail.png)
 
 ## 映射 {#mapping}
 
-的 [!UICONTROL 映射] 步驟，提供一個介面，用於將源欄位從源架構映射到目標架構中相應的目標XDM欄位。
+此 [!UICONTROL 對應] 步驟隨即顯示，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
-平台根據您選擇的目標架構或資料集為自動映射欄位提供智慧建議。 您可以手動調整映射規則以適合您的使用情形。 根據您的需要，您可以選擇直接映射欄位，或使用資料準備函式轉換源資料以導出計算值或計算值。 有關使用映射器介面和計算欄位的全面步驟，請參見 [資料準備UI指南](../../../../../data-prep/ui/mapping.md)。
+Platform會根據您選取的目標結構描述或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以視需要選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算值或計算值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱 [資料準備UI指南](../../../../../data-prep/ui/mapping.md).
 
-下面列出的映射是必需的，應先進行設定，然後再繼續到 [!UICONTROL 審閱] 。
+下列對應是強制性的，在繼續前應先設定 [!UICONTROL 檢閱] 階段。
 
 | 目標欄位 | 說明 |
 | --- | --- |
-| `uniqueId` | 的 [!DNL Pendo] 事件的標識符。 |
+| `uniqueId` | 此 [!DNL Pendo] 事件的識別碼。 |
 
-成功映射源資料後，選擇 **[!UICONTROL 下一個]**。
+成功對應來源資料後，請選取 **[!UICONTROL 下一個]**.
 
-![源工作流的映射步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/mapping.png)
+![來源工作流程的對應步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/mapping.png)
 
 ## 請檢閱 {#review}
 
-的 **[!UICONTROL 審閱]** 步驟，允許您在建立新資料流之前查看它。 詳細資訊按以下類別分組：
+此 **[!UICONTROL 檢閱]** 步驟隨即顯示，可讓您在建立新資料流之前對其進行檢閱。 詳細資料會分組到以下類別中：
 
-* **[!UICONTROL 連接]**:顯示源類型、所選源檔案的相關路徑以及該源檔案中的列數。
-* **[!UICONTROL 分配資料集和映射欄位]**:顯示源資料正被攝取到的資料集，包括該資料集所遵循的架構。
+* **[!UICONTROL 連線]**：顯示來源型別、所選來源檔案的相關路徑，以及該來源檔案中的欄數。
+* **[!UICONTROL 指派資料集和對應欄位]**：顯示要將來源資料擷取到哪個資料集中，包括資料集所堅持的結構描述。
 
-查看資料流後，選擇 **[!UICONTROL 完成]** 並為建立資料流留出一些時間。
+檢閱資料流後，選取 **[!UICONTROL 完成]** 並留出一些時間來建立資料流。
 
-![源工作流的審閱步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/review.png)
+![來源工作流程的稽核步驟。](../../../../images/tutorials/create/analytics-pendo-webhook/review.png)
 
-## 獲取流終結點URL {#get-streaming-endpoint-url}
+## 取得您的串流端點URL {#get-streaming-endpoint-url}
 
-建立流資料流後，現在可以檢索流終結點URL。 此終結點將用於訂閱Webhook，允許流源與Experience Platform通信。
+建立串流資料流後，您現在可以擷取串流端點URL。 此端點將用於訂閱您的webhook，允許您的串流來源與Experience Platform通訊。
 
-為了構造用於在上配置Webhook的URL [!DNL Pendo] 必須檢索以下內容：
+為了建構用來設定webhook的URL [!DNL Pendo] 您必須擷取下列專案：
 
 * **[!UICONTROL 資料流ID]**
-* **[!UICONTROL 流式處理終結點]**
+* **[!UICONTROL 串流端點]**
 
-要檢索 **[!UICONTROL 資料流ID]** 和 **[!UICONTROL 流式處理終結點]**，轉到 [!UICONTROL 資料流活動] 您剛建立的資料流的頁，並從 [!UICONTROL 屬性] 的子菜單。
+擷取您的 **[!UICONTROL 資料流ID]** 和 **[!UICONTROL 串流端點]**，前往 [!UICONTROL 資料流活動] 您剛建立之資料流的頁面，並從 [!UICONTROL 屬性] 面板。
 
-![資料流活動中的流終結點。](../../../../images/tutorials/create/analytics-pendo-webhook/endpoint-test.png)
+![資料流活動中的串流端點。](../../../../images/tutorials/create/analytics-pendo-webhook/endpoint-test.png)
 
-檢索到流終結點和資料流ID後，基於以下模式生成URL: ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```。 例如，構造的Webhook URL可能如下所示： ```https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95```
+擷取串流端點和資料流ID後，請根據以下模式建立URL： ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. 例如，建構的webhook URL可能如下所示： ```https://dcs.adobedc.net/collection/0c61859cc71939a0caf01123f91b2fc52589018800ad46b6c76c2dff3595ee95```
 
 ## 在中設定Webhook [!DNL Pendo] {#set-up-webhook}
 
-接下來，登錄到您的帳戶 [[!DNL Pendo]](https://pendo.io/) 並建立網鈎。 有關如何使用 [!DNL Pendo] 用戶介面，請參閱 [[!DNL Pendo] 建立Webhook的指南](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4)。
+接下來，於登入您的帳戶 [[!DNL Pendo]](https://pendo.io/) 並建立webhook。 如需有關如何使用 [!DNL Pendo] 使用者介面，請參閱 [[!DNL Pendo] 建立webhook指南](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
-建立網路掛接後，導航至 [!DNL Pendo] 網頁掛接，並在 [!DNL URL] 的子菜單。
+建立webhook後，請瀏覽至的設定頁面 [!DNL Pendo] webhook並在以下位置輸入您的webhook URL： [!DNL URL] 欄位。
 
-![顯示Webhook終結點欄位的Pendo UI螢幕快照](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
+![顯示webhook端點欄位的Pendo UI熒幕擷圖](../../../../images/tutorials/create/analytics-pendo-webhook/webhook.png)
 
 >[!TIP]
 >
->您可以訂閱各種不同的事件類別，以確定要從您的 [!DNL Pendo] 實例到平台。 有關不同事件的詳細資訊，請參閱 [[!DNL Pendo] 文檔](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4)。
+>您可以訂閱各種不同的事件類別，以決定您要從傳送的事件型別 [!DNL Pendo] 執行個體重新命名為Platform。 如需不同事件的詳細資訊，請參閱 [[!DNL Pendo] 檔案](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## 後續步驟 {#next-steps}
 
-通過遵循本教程，您已成功配置流資料流，以 [!DNL Pendo] 資料到Experience Platform。 要監視正在攝取的資料，請參閱上的指南 [使用平台UI監視流資料流](../../monitor-streaming.md)。
+依照本教學課程，您已成功設定串流資料流，將 [!DNL Pendo] 要Experience Platform的資料。 若要監視正在擷取的資料，請參閱上的指南 [使用Platform UI監控串流資料流](../../monitor-streaming.md).
 
 ## 其他資源 {#additional-resources}
 
-以下各節提供了在使用 [!DNL Pendo] 源。
+以下各節提供其他資源，您可在使用時參照 [!DNL Pendo] 來源。
 
 ### 驗證 {#validation}
 
-驗證是否正確設定了源和 [!DNL Pendo] 正在接收消息，請執行以下步驟：
+驗證您是否已正確設定來源及 [!DNL Pendo] 正在內嵌訊息，請遵循下列步驟：
 
-* 您可以檢查 [!DNL Pendo] **[!UICONTROL 報告]** > **[!UICONTROL 聊天歷史記錄]** 頁，用於標識捕獲的事件 [!DNL Pendo]。
+* 您可以檢查 [!DNL Pendo] **[!UICONTROL 報表]** > **[!UICONTROL 聊天記錄]** 識別所擷取事件的頁面 [!DNL Pendo].
 
-![顯示聊天歷史記錄的Pendo UI螢幕快照](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
+![顯示聊天記錄的Pendo UI熒幕擷圖](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
-* 在平台UI中，選擇 **[!UICONTROL 查看資料流]** 欄 [!DNL Pendo] 源目錄上的卡菜單。 下一步，選擇 **[!UICONTROL 預覽資料集]** 驗證為您在中配置的Webhook所攝取的資料 [!DNL Pendo]。
+* 在Platform UI中選取 **[!UICONTROL 檢視資料流]** 旁邊 [!DNL Pendo] 來源目錄上的卡片功能表。 接下來，選取 **[!UICONTROL 預覽資料集]** 驗證您所設定Webhook內擷取的資料 [!DNL Pendo].
 
-![顯示已接收事件的平台UI螢幕快照](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
+![顯示已擷取事件的平台UI熒幕擷圖](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png)
 
-### 錯誤和故障排除 {#errors-and-troubleshooting}
+### 錯誤與疑難排解 {#errors-and-troubleshooting}
 
-檢查資料流運行時，可能會遇到以下錯誤消息： `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
+檢查資料流執行時，您可能會遇到下列錯誤訊息： `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-![顯示錯誤的平台UI螢幕快照。](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
+![平台UI熒幕擷圖顯示錯誤。](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
-要修復此錯誤，必須驗證 *唯一ID* 已設定映射。 有關其他指導，請參閱 [姆普平](#mapping) 的子菜單。
+若要修正此錯誤，您必須確認 *唯一識別碼* 已設定對應。 如需其他指引，請參閱 [Mmping](#mapping) 區段。
 
-有關詳細資訊，請訪問 [[!DNL Pendo] 幫助中心](https://www.pendo.io/help-center/)。
+如需詳細資訊，請造訪 [[!DNL Pendo] 說明中心](https://www.pendo.io/help-center/).

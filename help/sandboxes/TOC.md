@@ -14,17 +14,17 @@ ht-degree: 53%
 
 # 沙箱 {#sandbox}
 
-* [沙箱概述](home.md)
-* 沙盒UI {#ui}
-   * [沙盒UI概述](ui/overview.md)
-   * [沙盒使用手冊](ui/user-guide.md)
-* 沙盒API {#api}
+* [沙箱總覽](home.md)
+* 沙箱UI {#ui}
+   * [沙箱UI總覽](ui/overview.md)
+   * [沙箱使用手冊](ui/user-guide.md)
+* Sandbox API {#api}
    * [總覽](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [可用沙箱](api/available.md)
-   * [沙盒管理](api/sandboxes.md)
-   * [沙盒類型](api/types.md)
+   * [可用的沙箱](api/available.md)
+   * [沙箱管理](api/sandboxes.md)
+   * [沙箱型別](api/types.md)
    * [附錄](api/appendix.md)
-* [故障排除指南](troubleshooting-guide.md)
+* [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [平台發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)

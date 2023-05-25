@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
+source-git-commit: 36d4908fc19916c5e107eb4883d741ba1904b5a4
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1178'
 ht-degree: 5%
 
 ---
@@ -140,7 +140,6 @@ ht-degree: 5%
       * [電子郵件行銷目的地概觀](./catalog/email-marketing/overview.md)
       * [Adobe Campaign連線](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services連線](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Mailchimp興趣類別](./catalog/email-marketing/mailchimp-interest-categories.md)
       * [(API) Oracle Eloqua連線](./catalog/email-marketing/oracle-eloqua-api.md)
       * [（檔案） Eloqua連線Oracle](./catalog/email-marketing/oracle-eloqua.md)
       * [oracleResponsys連線](./catalog/email-marketing/oracle-responsys.md)

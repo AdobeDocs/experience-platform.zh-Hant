@@ -2,7 +2,7 @@
 title: 查詢服務中資料資產組織的最佳實務
 description: 本檔案概述組織資料的邏輯方法，以方便使用查詢服務。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
+source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -45,13 +45,13 @@ ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 以下範例新增 `dataset1`， `dataset2`， `dataset3` 和 `v1` 至 `databaseA.schema1` 容器建立在上一個範例中。
 
 ```SQL
-ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
+ALTER TABLE dataset1 SET SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset2 ADD SCHEMA databaseA.schema1;
+ALTER TABLE dataset2 SET SCHEMA databaseA.schema1;
  
-ALTER TABLE dataset3 ADD SCHEMA databaseA.schema1;
+ALTER TABLE dataset3 SET SCHEMA databaseA.schema1;
  
-ALTER VIEW v1  ADD SCHEMA databaseA.schema1;
+ALTER VIEW v1  SET SCHEMA databaseA.schema1;
 ```
 
 ## 從資料容器存取資料資產

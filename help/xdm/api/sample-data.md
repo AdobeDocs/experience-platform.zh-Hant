@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；經驗資料模型；經驗資料模型；資料模型；資料模型；示例資料；rpc;
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；體驗資料模型；資料模型；資料模型；範例資料；範例資料；rpc；
 solution: Experience Platform
-title: 示例資料API終結點
-description: 通過架構註冊表API中的/sampledata終結點，可以生成映射到任何現有XDM架構結構的示例資料。
+title: 範例資料API端點
+description: 結構描述登入API中的/sampledata端點可讓您產生對應到任何現有XDM結構描述結構的範例資料。
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 1%
 
 ---
 
-# 示例資料終結點
+# 範例資料端點
 
-為了將資料導入Adobe Experience Platform，資料的格式和結構必須符合現有的經驗資料模型(XDM)架構。 根據特定資料集的模式的複雜性，很難確定資料集在攝取時期望的資料的確切形狀。
+若要將資料內嵌至Adobe Experience Platform，資料的格式和結構必須符合現有的Experience Data Model (XDM)結構。 根據特定資料集的結構描述複雜性，可能很難判斷資料集在擷取時預期的資料確切形狀。
 
-使用 `/sampledata` 端點 [!DNL Schema Registry] API，可以為任何先前建立的架構生成一個示例接收對象。
+使用 `/sampledata` 中的端點 [!DNL Schema Registry] API的環境中，您可以為先前建立的任何結構描述產生範例擷取物件。
 
 ## 快速入門
 
-本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-示例資料終結點是遠程過程調用(RPC)的一部分，該調用由 [!DNL Schema Registry]。 不同於 [!DNL Schema Registry] API、RPC終結點不需要像 `Accept` 或 `Content-Type`，並且不使用 `CONTAINER_ID`。 相反，他們必須使用 `/rpc` 命名空間，如下面的API調用所示。
+範例資料端點是 [!DNL Schema Registry]. 不像 [!DNL Schema Registry] API、RPC端點不需要其他標頭，例如 `Accept` 或 `Content-Type`，且請勿使用 `CONTAINER_ID`. 相反地，他們必須使用 `/rpc` 名稱空間，如下面的API呼叫所示。
 
-## 檢索架構的示例資料
+## 擷取結構描述的範例資料
 
-通過在指向終結點的GET請求路徑中指定架構的ID，可以檢索架構庫中任何架構的示例資料。
+您可以在端點的GET要求路徑中指定結構描述的ID，以擷取結構描述資料庫中任何結構的範例資料。
 
 **API格式**
 
@@ -35,13 +35,13 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 的 `meta:altId` 或URL編碼 `$id` 要為其生成示例資料的架構。 |
+| `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要為其產生範例資料的結構描述。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求為會員成員方案生成示例資料。
+下列請求會產生「忠誠會員」結構的範例資料。
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回指定架構的示例資料對象。
+成功的回應會傳回指定之結構描述的範例資料物件。
 
 ```json
 {

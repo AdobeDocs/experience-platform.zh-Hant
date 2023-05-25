@@ -1,6 +1,6 @@
 ---
-description: 瞭解如何使用目標測試API在正確配置流目標時進行test，並驗證到配置目標的資料流的完整性。
-title: Test包含示例配置檔案的流目標
+description: 瞭解如何使用目的地測試API來測試您的串流目的地是否正確設定，以及驗證流向您設定之目的地的資料流的完整性。
+title: 使用範例設定檔測試您的串流目的地
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
 workflow-type: tm+mt
@@ -10,34 +10,34 @@ ht-degree: 1%
 ---
 
 
-# Test包含示例配置檔案的流目標 {#template-api-operations}
+# 使用範例設定檔測試您的串流目的地 {#template-api-operations}
 
 >[!IMPORTANT]
 >
->**API終結點**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
+>**API端點**： `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-此頁列出並說明了可以使用 `/authoring/testing/destinationInstance/` API終結點，用於test目標是否配置正確，以及驗證到配置目標的資料流的完整性。 有關此終結點支援的功能的說明，請閱讀 [Test目標配置](streaming-destination-testing-overview.md)。
+此頁面列出並描述您可以使用執行的所有API作業。 `/authoring/testing/destinationInstance/` API端點，用於測試您的目的地是否已正確設定，以及驗證流向您設定之目的地的資料流的完整性。 如需此端點支援的功能的說明，請閱讀 [測試您的目的地設定](streaming-destination-testing-overview.md).
 
-您向測試端點發出請求，無論是否向調用添加配置檔案。 如果您未在請求中發送任何配置檔案，Adobe將為您內部生成這些配置檔案並將它們添加到請求中。
+無論您是否將設定檔新增至呼叫，您都可以向測試端點提出請求。 如果您未在請求上傳送任何設定檔，Adobe會在內部為您產生這些設定檔，並將其新增至請求。
 
-您可以使用 [示例配置檔案生成API](sample-profile-generation-api.md) 建立要用於目標測試API的請求的配置檔案。
+您可以使用 [範例設定檔產生API](sample-profile-generation-api.md) 建立設定檔，以用於目的地測試API的請求中。
 
-## 如何獲取目標實例ID {#get-destination-instance-id}
+## 如何取得目的地執行個體ID {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* 要使用此API，必須在Experience PlatformUI中與目標建立現有連接。 閱讀 [連接到目標](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 和 [激活配置檔案和段到目標](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 的子菜單。
-> * 在建立到目標的連接後，獲取在API調用到此終結點時應使用的目標實例ID [瀏覽與目標的連接](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en)。
-   >![UI映像如何獲取目標實例ID](../../assets/testing-api/get-destination-instance-id.png)
+>* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 讀取 [連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 和 [對目的地啟用設定檔和區段](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 以取得詳細資訊。
+> * 建立與目的地的連線後，請在以下情況下取得您應用於此端點的API呼叫中的目的地執行個體ID： [瀏覽與目的地的連線](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+   >![UI影像如何取得目的地執行個體ID](../../assets/testing-api/get-destination-instance-id.png)
 
 
-## 目標測試API操作入門 {#get-started}
+## 目的地測試API操作快速入門 {#get-started}
 
-在繼續之前，請查看 [入門指南](../../getting-started.md) 瞭解成功調用API所需的重要資訊，包括如何獲得所需的目標創作權限和所需的標題。
+在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
-## Test目標配置，而不向呼叫添加配置檔案 {#test-without-adding-profiles}
+## 測試您的目的地設定，而不將設定檔新增至呼叫 {#test-without-adding-profiles}
 
-您可以通過向test請求POST目標配置 `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 端點，並提供要測試的目標的目標實例ID。
+您可以透過向以下發出POST請求來測試您的目的地設定： `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 端點，並提供您正在測試之目的地的目的地例項ID。
 
 **API格式**
 
@@ -46,13 +46,13 @@ ht-degree: 1%
 POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 ```
 
-| 查詢參數 | 說明 |
+| 查詢引數 | 說明 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | 要測試的目標的目標實例ID。 |
+| `{DESTINATION_INSTANCE_ID}` | 您正在測試之目的地的目的地執行個體ID。 |
 
 **要求**
 
-以下請求調用目標的REST API終結點。 請求由 `{DESTINATION_INSTANCE_ID}` 查詢參數。
+以下請求會呼叫您目的地的REST API端點。 要求是由 `{DESTINATION_INSTANCE_ID}` 查詢引數。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -66,7 +66,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **回應**
 
-成功的響應會返回HTTP狀態200以及目標的REST API終結點的API響應。
+成功的回應會傳回HTTP狀態200以及來自您目的地REST API端點的API回應。
 
 ```json
 {
@@ -157,17 +157,17 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `aggregationKey` | 包括有關為目標配置的聚合策略的資訊。 有關詳細資訊，請閱讀 [聚合策略](../../functionality/destination-configuration/aggregation-policy.md) 文檔。 |
-| `traceId` | 操作的唯一標識符。 遇到錯誤時，您可以與Adobe團隊共用此ID以進行故障排除。 |
-| `results.httpCalls.request` | 包括由Adobe發送到目標的請求。 |
-| `results.httpCalls.response` | 包括Adobe從目標接收的響應。 |
-| `inputProfiles` | 包括在呼叫目標時導出的配置檔案。 配置檔案與源架構匹配。 |
+| `aggregationKey` | 包含針對目的地設定的彙總原則相關資訊。 如需詳細資訊，請閱讀 [彙總原則](../../functionality/destination-configuration/aggregation-policy.md) 說明檔案。 |
+| `traceId` | 作業的唯一識別碼。 遇到錯誤時，您可以與Adobe團隊共用此ID以進行疑難排解。 |
+| `results.httpCalls.request` | 包含Adobe傳送至您的目的地的要求。 |
+| `results.httpCalls.response` | 包含Adobe從目的地收到的回應。 |
+| `inputProfiles` | 包含從呼叫匯出至目的地的設定檔。 設定檔符合您的來源結構描述。 |
 
 {style="table-layout:auto"}
 
-## Test目標配置，並將配置檔案添加到呼叫 {#test-with-added-profiles}
+## 使用新增至呼叫的設定檔測試您的目的地設定 {#test-with-added-profiles}
 
-您可以通過向test請求POST目標配置 `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 端點，並提供要測試的目標的目標實例ID。
+您可以透過向以下發出POST請求來測試您的目的地設定： `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` 端點，並提供您正在測試之目的地的目的地例項ID。
 
 **API格式**
 
@@ -175,13 +175,13 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 ```
 
-| 查詢參數 | 說明 |
+| 查詢引數 | 說明 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | 要測試的目標的目標實例ID。 |
+| `{DESTINATION_INSTANCE_ID}` | 您正在測試之目的地的目的地執行個體ID。 |
 
 **要求**
 
-以下請求調用目標的REST API終結點。 請求由負載中提供的參數和 `{DESTINATION_INSTANCE_ID}` 查詢參數。
+以下請求會呼叫您目的地的REST API端點。 要求是由裝載中提供的引數所設定，而且 `{DESTINATION_INSTANCE_ID}` 查詢引數。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
@@ -230,7 +230,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **回應**
 
-成功的響應會返回HTTP狀態200以及目標的REST API終結點的API響應。
+成功的回應會傳回HTTP狀態200以及來自您目的地REST API端點的API回應。
 
 ```json
 {
@@ -323,8 +323,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDKAPI端點遵循常規Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) 中。
+Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀完此文檔後，您現在知道如何test目標。 您現在可以使用Adobe [自助文檔處理](../../docs-framework/documentation-instructions.md) 為目標建立文檔頁面。
+閱讀本檔案後，您現在知道如何測試目的地。 您現在可以使用Adobe [自助服務檔案程式](../../docs-framework/documentation-instructions.md) ，為您的目的地建立檔案頁面。

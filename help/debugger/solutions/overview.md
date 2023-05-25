@@ -15,36 +15,36 @@ ht-degree: 36%
 
 # 解決方案
 
-Adobe Experience Platform調試器提供 **解決方案** 的子菜單。 選擇解決方案查看特定Adobe Experience Cloud技術的結果。
+Adobe Experience Platform Debugger提供 **解決方案** 左側導覽列中。 選取解決方案以檢視特定Adobe Experience Cloud技術的結果。
 
-![調試器UI中顯示的可用解決方案清單](../images/solutions/overview/left-nav.png)
+![Debugger UI中顯示的可用解決方案清單](../images/solutions/overview/left-nav.png)
 
 ## Adobe Experience Platform Web SDK {#aep}
 
-Adobe Experience Platform Web SDK 畫面會顯示 Adobe Experience Platform Web SDK 的相關資訊。選擇 **[!UICONTROL 配置]** 開啟或關閉控制台登錄。
+Adobe Experience Platform Web SDK 畫面會顯示 Adobe Experience Platform Web SDK 的相關資訊。選取 **[!UICONTROL 設定]** 以開啟或關閉主控台登入。
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-的 [!UICONTROL 分析] 頁籤 [Adobe Analytics實施](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=zh-Hant)。
+此 [!UICONTROL 分析] 標籤會提供您對應 [Adobe Analytics實施](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=zh-Hant).
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
-使用 [!UICONTROL 目標] 螢幕，查看 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) 請求 [mbox跟蹤](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) 響應詳細資訊。
+使用 [!UICONTROL Target] 要檢視的畫面 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) 要求或 [mboxTrace](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) 回應詳細資料。
 
-請參閱上的指南 [使用調試器實現目標](./target.md) 的子菜單。
+請參閱指南： [使用Debugger進行Target實作](./target.md) 以取得詳細資訊。
 
 ## [!UICONTROL Audience Manager] {#section-1d4484f8b46f457f859ba88039a9a585}
 
-使用 [[!UICONTROL Audience Manager]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 頁籤，查看詳細資訊 [事件](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html) 在Adobe Audience Manager。 選擇要展開的組織並顯示資訊。
+使用 [[!UICONTROL Audience Manager]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 標籤以檢視詳細資訊 [事件](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html) 在Adobe Audience Manager中。 選取要展開的組織並顯示資訊。
 
 ## [!UICONTROL Adobe Experience Platform標籤] {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 
-使用 [!UICONTROL Adobe Experience Platform標籤] 的子菜單。 也可以選擇 **[!UICONTROL 配置]** 配置 [嵌入代碼](../../tags/ui/publishing/environments.md#embed-code)。 您可以在 Experience Platform Debugger 中編輯、替換或新增更多內嵌程式碼。登入的話，可以使用下拉式選單選取替代屬性。
+使用 [!UICONTROL Adobe Experience Platform標籤] 區段來檢視標籤請求。 您也可以選取 **[!UICONTROL 設定]** 進行設定 [內嵌程式碼](../../tags/ui/publishing/environments.md#embed-code). 您可以在 Experience Platform Debugger 中編輯、替換或新增更多內嵌程式碼。登入的話，可以使用下拉式選單選取替代屬性。
 
 ## [!UICONTROL Experience Cloud ID] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-使用 [!UICONTROL Experience CloudID] 頁籤 [Experience CloudID服務](https://experienceleague.adobe.com/docs/id-service/using/home.html) 請求。
+使用 [!UICONTROL EXPERIENCE CLOUDID] 標籤以檢視 [Experience CloudID服務](https://experienceleague.adobe.com/docs/id-service/using/home.html) 要求。
 
 ## [!UICONTROL 動態標籤管理]
 
-如果您以前在Experience Platform中實現了舊版本的標籤(稱為 [!DNL Dynamic Tag Management (DTM)])，您可以使用此頁籤配置嵌入代碼並查看網路請求詳細資訊。
+如果您先前已實施Experience Platform中的舊版標籤(稱為 [!DNL Dynamic Tag Management (DTM)])，您可以使用此標籤來設定內嵌程式碼並檢視網路要求詳細資訊。

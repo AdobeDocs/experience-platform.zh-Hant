@@ -1,6 +1,6 @@
 ---
-title: 資料收集端到端概述
-description: 高級概述如何使用Adobe Experience Platform的資料收集功能將事件資料發送到Adobe Experience Cloud解決方案。
+title: 資料收集端對端總覽
+description: 有關如何使用Adobe Experience Platform的資料收集功能將事件資料傳送至Adobe Experience Cloud解決方案的高層級概觀。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
 workflow-type: tm+mt
@@ -9,179 +9,179 @@ ht-degree: 0%
 
 ---
 
-# 資料收集端到端概述
+# 資料收集端對端概觀
 
-Adobe Experience Platform會收集您的資料並將其傳輸到其他Adobe產品和第三方目的地。 為了將事件資料從您的應用程式發送到Experience Platform邊緣網路，瞭解這些核心技術以及如何配置這些核心技術，以便在您需要時將資料傳輸到您需要的目的地，這一點非常重要。
+Adobe Experience Platform會收集您的資料並傳輸至其他Adobe產品和第三方目的地。 若要將事件資料從您的應用程式傳送至Experience Platform邊緣網路，請務必瞭解這些核心技術，以及如何設定這些技術，以便在您需要時將資料傳送至所需的目的地。
 
-本指南提供有關如何使用平台的資料收集功能通過邊緣網路發送事件的高級教程。 具體而言，本教程將介紹在資料收集UI(以前稱為Adobe Experience Platform Launch)中安裝和配置Adobe Experience PlatformWeb SDK標籤擴展的步驟。
+本指南提供如何使用Platform的資料收集功能透過Edge Network傳送事件的高階教學課程。 本教學課程會具體說明在資料收集UI (前身為Adobe Experience Platform Launch)中安裝和設定Adobe Experience Platform Web SDK標籤擴充功能的步驟。
 
 >[!NOTE]
 >
->如果您不想使用標籤，也可以選擇手動安裝和配置SDK，但必須按下面所述完成周圍的步驟。
+>如果您不想使用標籤，也可以選擇手動安裝及設定SDK，但周圍的步驟仍必須完成，如下所示。
 >
->還可以在Experience PlatformUI中執行涉及資料收集UI的所有步驟。
+>所有涉及資料收集UI的步驟也可以在Experience PlatformUI中執行。
 
 ## 先決條件
 
-本教程使用資料收集UI建立架構、配置資料流並安裝Web SDK。 要在UI中執行這些操作，必須授予您對至少一個Web屬性的訪問權限，並同時執行以下操作 [產權](../tags/ui/administration/user-permissions.md#property-rights):
+本教學課程使用資料收集UI來建立結構、設定資料串流及安裝Web SDK。 若要在UI中執行這些動作，您必須被授予至少一個Web屬性的存取權以及下列內容 [屬性權利](../tags/ui/administration/user-permissions.md#property-rights)：
 
 * 開發
-* 管理擴展
+* 管理擴充功能
 
-請參閱上的指南 [管理資料收集權限](./permissions.md) 瞭解如何授予對屬性和屬性權限的訪問權限。
+請參閱指南： [管理資料收集的許可權](./permissions.md) 以瞭解如何授予屬性和屬性許可權的存取權。
 
-要使用本指南中提到的各種資料收集產品，您還必須具有對資料流的訪問權限以及建立和管理架構的能力。 如果您需要訪問這些功能中的任何一個，請聯繫您的Adobe帳戶團隊以幫助您獲得必要的訪問權限。 請注意，如果您尚未購買Adobe Experience Platform,Adobe將為您提供使用SDK的必要訪問權，無需額外付費。
+若要使用本指南中提到的各種資料收集產品，您也必須有權存取資料串流，並能夠建立和管理結構描述。 如果您需要存取其中任何一項功能，請聯絡您的Adobe帳戶團隊以協助您取得必要的存取權。 請注意，如果您尚未購買Adobe Experience Platform，Adobe會免費提供您使用SDK的必要存取權。
 
-如果您已經擁有平台訪問權限，則必須確保您擁有 [權限](../access-control/home.md#permissions) 在啟用的以下類別下：
+如果您已擁有平台的存取權，請務必確保您已擁有 [許可權](../access-control/home.md#permissions) 啟用下列類別：
 
 * 資料模型製作
 * 身分
 
-查看 [訪問控制UI概述](../access-control/ui/overview.md) 瞭解如何向用戶授予平台權能的權限。
+請參閱 [存取控制UI總覽](../access-control/ui/overview.md) 瞭解如何將Platform功能的許可權授予使用者。
 
-## 流程摘要
+## 程式摘要
 
-為您的網站配置資料收集的過程可總結如下：
+為您的網站設定資料收集的程式可概述如下：
 
-1. [建立架構](#schema) 確定資料在發送到邊緣網路時的結構。
-1. [建立資料流](#datastream) 配置要將資料發送到的目標。
-1. [安裝和配置Web SDK](#sdk) 在網站上發生某些事件時將資料發送到資料流。
+1. [建立結構描述](#schema) 以判斷資料傳送至Edge Network時的結構方式。
+1. [建立資料串流](#datastream) 以設定要將資料傳送至哪些目的地。
+1. [安裝及設定Web SDK](#sdk) 當您的網站上發生某些事件時，將資料傳送至資料串流的方式。
 
-一旦您能夠將資料發送到邊緣網路，您還可以選擇 [配置事件轉發](#event-forwarding) 你的組織有許可證。
+一旦您將資料傳送至Edge Network，您也可以選擇使用 [設定事件轉送](#event-forwarding) 貴組織擁有其授權。
 
 ## 建立方案 {#schema}
 
-[體驗資料模型(XDM)](../xdm/home.md) 是一個開源規範，它為模式形式的資料提供通用結構和定義。 換句話說， XDM是一種構建和格式化資料的方法，該方法可由邊緣網路和其他Adobe Experience Cloud應用程式操作。
+[體驗資料模型(XDM)](../xdm/home.md) 是開放原始碼規格，以結構描述的形式提供資料的通用結構和定義。 換言之，XDM是一種可讓Edge Network和其他Adobe Experience Cloud應用程式採取動作的方式來建構和格式化資料的方式。
 
-設定資料收集操作的第一步是建立XDM架構來表示資料。 在本教程的後續步驟中，您將將要發送的資料映射到此架構的結構。
+設定資料收集作業的第一步，是建立XDM結構描述來代表您的資料。 在本教學課程的稍後步驟中，您會將您要傳送的資料對應至此結構描述的結構。
 
 >[!NOTE]
 >
->XDM模式是可定製的。 下面介紹的步驟不是過於規範，而是專門針對Web SDK的架構要求。 在這些參數之外，您可以自由定義資料的剩餘結構。
+>XDM結構描述非常可自訂。 以下概述的步驟並非過度規範化，而是特別針對Web SDK的結構描述需求。 在這些引數之外，您可以隨意定義資料的其他結構。
 
-在UI中，選擇 **[!UICONTROL 架構]** 的子菜單。 從此處，您可以看到屬於您組織的先前建立的架構的清單。 要繼續，請選擇 **[!UICONTROL 建立架構]**，然後選擇 **[!UICONTROL XDM體驗事件]** 的下界。
+在UI中，選取 **[!UICONTROL 結構描述]** 左側導覽列中。 從這裡，您可以看到屬於您組織之先前建立的結構描述清單。 若要繼續，請選取 **[!UICONTROL 建立結構描述]**，然後選取 **[!UICONTROL XDM ExperienceEvent]** 下拉式選單中的。
 
-![架構工作區](./images/e2e/schemas.png)
+![結構描述工作區](./images/e2e/schemas.png)
 
-出現一個對話框，提示您開始向架構添加欄位組。 要使用Web SDK發送事件，必須添加欄位組 **[!UICONTROL AEP Web SDK體驗事件混合]**。 此欄位組包含由Web SDK庫自動收集的資料屬性的定義。
+會出現一個對話方塊，提示您開始將欄位群組新增到結構描述。 若要使用Web SDK傳送事件，您必須新增欄位群組 **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. 此欄位群組包含Web SDK程式庫自動收集之資料屬性的定義。
 
-使用搜索欄縮小清單範圍，幫助更輕鬆地查找此欄位組。 找到後，在選擇之前從清單中選擇它 **[!UICONTROL 添加欄位組]**。
+使用搜尋列縮小清單的範圍，以協助更容易找到此欄位群組。 找到後，從清單中選取它，然後選取 **[!UICONTROL 新增欄位群組]**.
 
-![架構工作區](./images/e2e/add-field-group.png)
+![結構描述工作區](./images/e2e/add-field-group.png)
 
-此時將顯示架構畫布，其中顯示XDM架構的樹結構，包括Web SDK欄位組提供的欄位。
+結構畫布隨即出現，顯示XDM結構的樹狀結構，包括Web SDK欄位群組提供的欄位。
 
 ![綱要結構](./images/e2e/schema-structure.png)
 
-選擇樹中要開啟的根欄位 **[!UICONTROL 架構屬性]** 在右欄中，您可以提供架構的名稱和可選說明。
+在樹狀結構中選取要開啟的根欄位 **[!UICONTROL 結構描述屬性]** 在右側邊欄中，您可以在此為結構描述提供名稱和選擇性說明。
 
-![命名架構](./images/e2e/name-schema.png)
+![為結構描述命名](./images/e2e/name-schema.png)
 
-如果要向架構添加更多欄位，可通過選擇 **[!UICONTROL 添加]** 下 **[!UICONTROL 欄位組]** 在左欄上。
+如果您想要將更多欄位新增到結構描述，您可以選取 **[!UICONTROL 新增]** 在 **[!UICONTROL 欄位群組]** 區段。
 
-![添加欄位組](./images/e2e/add-field-groups.png)
-
->[!NOTE]
->
->請參閱上的指南 [添加欄位組](../xdm/ui/resources/schemas.md#add-field-groups) 在XDM文檔中，瞭解有關如何搜索不同欄位組以適合您的使用情形的詳細步驟。
->
->最佳做法是只為計畫通過邊緣網路發送的資料添加欄位。 將欄位添加到架構並保存後，以後只能對架構進行添加更改。 請參閱 [模式演化規則](../xdm/schema/composition.md#evolution) 的子菜單。
-
-添加所需欄位後，選擇 **[!UICONTROL 保存]** 的子菜單。
-
-![保存架構](./images/e2e/save-schema.png)
-
-## 建立資料流 {#datastream}
-
-資料流是一種配置，它告訴邊緣網路要將資料發送到的位置。 具體來說，資料流指定要將資料發送到的Experience Cloud產品，以及希望在每個產品中處理和儲存資料的方式。
+![新增欄位群組](./images/e2e/add-field-groups.png)
 
 >[!NOTE]
 >
->如果您想使用 [事件轉發](../tags/ui/event-forwarding/overview.md) （假定您的組織已獲得功能許可），您必須以啟用Adobe產品的方式為資料流啟用它。 有關此流程的詳細資訊，請參閱 [後續部分](#event-forwarding)。
+>請參閱指南： [新增欄位群組](../xdm/ui/resources/schemas.md#add-field-groups) XDM檔案中有關如何搜尋不同欄位群組以符合您使用案例的詳細步驟。
+>
+>最佳實務是只為您計畫透過Edge Network傳送的資料新增欄位。 一旦您將欄位新增到結構描述並儲存後，以後只能對結構描述進行附加變更。 請參閱以下小節： [結構描述演化規則](../xdm/schema/composition.md#evolution) 以取得詳細資訊。
 
-選擇 **[!UICONTROL 資料流]** 的子菜單。 在此，可以從清單中選擇要編輯的現有資料流，或通過選擇 **[!UICONTROL 新建資料流]**。
+新增所需的欄位後，請選取 **[!UICONTROL 儲存]** 以儲存結構。
+
+![儲存結構描述](./images/e2e/save-schema.png)
+
+## 建立資料串流 {#datastream}
+
+資料串流是一種設定，可告知Edge Network您要將資料傳送至何處。 具體而言，資料串流會指定您要將資料傳送至哪些Experience Cloud產品，以及您要將資料處理及儲存在每個產品中的方式。
+
+>[!NOTE]
+>
+>如果您想使用 [事件轉送](../tags/ui/event-forwarding/overview.md) （假設您的組織已獲得使用授權），您必須以啟用Adobe產品的相同方式，為資料流啟用它。 有關此程式的詳細資訊，請參見 [稍後章節](#event-forwarding).
+
+選取 **[!UICONTROL 資料串流]** 左側導覽列中。 從這裡，您可以從清單中選取要編輯的現有資料流，也可以透過選取來建立新設定 **[!UICONTROL 新增資料串流]**.
 
 ![資料串流](./images/e2e/datastreams.png)
 
-資料流的配置要求取決於您要將資料發送到哪些產品和功能。 有關每個產品的配置選項的詳細資訊，請參閱 [資料流概述](../edge/datastreams/overview.md)。
+資料串流的設定需求取決於您要將資料傳送至哪些產品和功能。 如需每個產品組態選項的詳細資訊，請參閱 [資料串流概觀](../edge/datastreams/overview.md).
 
-## 安裝和配置Web SDK {#install}
+## 安裝及設定Web SDK {#install}
 
-建立架構和資料流後，下一步是安裝和配置平台Web SDK，以開始向邊緣網路發送資料。
+建立方案和資料流後，下一步就是安裝和設定Platform Web SDK，以開始傳送資料給Edge Network。
 
 >[!NOTE]
 >
->本節使用資料收集UI配置Web SDK標籤擴展，但您也可以使用原始代碼安裝和配置它。 有關詳細資訊，請參閱以下指南：
+>本節使用資料收集UI來設定Web SDK標籤擴充功能，但您也可以改用原始程式碼來安裝和設定。 如需詳細資訊，請參閱下列指南：
 >
 >* [安裝SDK](../edge/fundamentals/installing-the-sdk.md)
->* [配置SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [設定SDK](../edge/fundamentals/configuring-the-sdk.md)
 >
->另請注意，即使您只想使用事件轉發，仍必須按照說明安裝和配置SDK，然後才能在 [後續步驟](#event-forwarding)。
+>另請注意，即使您只想使用事件轉送，您仍然必須如說明的那樣安裝和設定SDK，才能在 [後續步驟](#event-forwarding).
 
-該過程可概括如下：
+此程式可歸納如下：
 
-1. [在標籤屬性上安裝Adobe Experience PlatformWeb SDK](#install-sdk) 以獲取其功能。
-1. [建立XDM對象資料元素](#data-element) 將網站上的變數映射到先前建立的XDM架構的結構。
-1. [建立規則](#rule) 告知SDK何時向邊緣網路發送資料。
-1. [生成並安裝庫](#library) 在您的網站上執行規則。
+1. [在標籤屬性上安裝Adobe Experience Platform Web SDK](#install-sdk) 以存取其功能。
+1. [建立XDM物件資料元素](#data-element) 將網站上的變數對應至您先前建立的XDM結構描述的結構。
+1. [建立規則](#rule) 告訴SDK何時應將資料傳送至Edge Network。
+1. [建置及安裝程式庫](#library) ，以在您的網站上實作規則。
 
 ### 在標籤屬性上安裝SDK {#install-sdk}
 
-選擇 **[!UICONTROL 標籤]** 的子菜單。 如果需要，您可以選擇要編輯的現有屬性，也可以選擇 **[!UICONTROL 新建屬性]** 的雙曲餘切值。
+選取 **[!UICONTROL 標籤]** 以顯示標籤屬性清單。 您可以視需要選擇要編輯的現有屬性，也可以選取 **[!UICONTROL 新增屬性]** 而非。
 
 ![屬性](./images/e2e/properties.png)
 
-如果建立新屬性，請提供描述性名稱並設定 [!UICONTROL 平台] 至 **[!UICONTROL Web]**。 提供Web屬性的完整域，然後選擇 **[!UICONTROL 保存]**。
+如果建立新屬性，請提供描述性名稱並設定 [!UICONTROL Platform] 至 **[!UICONTROL Web]**. 提供Web屬性的完整網域，然後選取 **[!UICONTROL 儲存]**.
 
 ![建立屬性](./images/e2e/create-property.png)
 
-此時將顯示屬性的概述頁。 從此處，選擇 **[!UICONTROL 擴展]** 在左側導航中，然後選擇 **[!UICONTROL 目錄]**。 查找平台Web SDK的清單（可選地使用搜索欄縮小結果範圍），然後選擇 **[!UICONTROL 安裝]**。
+隨即顯示屬性的概觀頁面。 從此處選取 **[!UICONTROL 擴充功能]** 在左側導覽中，然後選取 **[!UICONTROL 目錄]**. 尋找Platform Web SDK的清單（可選擇使用搜尋列來縮小結果範圍）並選取 **[!UICONTROL 安裝]**.
 
 ![安裝Web SDK](./images/e2e/install-sdk.png)
 
-此時將顯示SDK的配置頁。 大多數必需值都自動填充了預設值，如果您願意，可以選擇更改這些預設值。
+SDK的設定頁面隨即顯示。 大多數必要值都會自動填入預設值，您可以視需要選擇變更這些預設值。
 
 ![設定 Web SDK](./images/e2e/configure-sdk.png)
 
-但是，在安裝SDK之前，必須選擇資料流，以便它知道將資料發送到哪裡。 下 **[!UICONTROL 資料流]**，使用下拉菜單選擇在 [前一步](#datastream)。 設定資料流後，選擇 **[!UICONTROL 保存]** 完成將SDK安裝到屬性。
+不過，在安裝SDK之前，您必須先選取資料流，讓資料流知道要將您的資料傳送至何處。 下 **[!UICONTROL 資料串流]**，使用下拉式選單來選取您在 [更早步驟](#datastream). 設定資料流後，選取 **[!UICONTROL 儲存]** 以完成將SDK安裝到屬性。
 
-![設定資料流和保存](./images/e2e/set-datastream.png)
+![設定資料流並儲存](./images/e2e/set-datastream.png)
 
 ### 建立XDM資料元素 {#data-element}
 
-為了使SDK將資料發送到邊緣網路，必須將該資料映射到您在 [上一步](#schema)。 此映射是通過使用資料元素來完成的。
+為了讓SDK將資料傳送至Edge Network，該資料必須對應至您在 [上一步](#schema). 此對應可透過使用資料元素來完成。
 
-在UI中，選擇 **[!UICONTROL 資料元素]**，然後選擇 **[!UICONTROL 建立新資料元素]**。
+在UI中，選取 **[!UICONTROL 資料元素]**，然後選取 **[!UICONTROL 建立新資料元素]**.
 
 ![建立新資料元素](./images/e2e/data-elements.png)
 
-在下一螢幕上，選擇 **[!UICONTROL Adobe Experience PlatformWeb SDK]** 下 [!UICONTROL 擴展] 下拉清單，然後選擇 **[!UICONTROL XDM對象]** 的子菜單。
+在下一個畫面中，選取 **[!UICONTROL Adobe Experience Platform Web SDK]** 在 [!UICONTROL 副檔名] 下拉式清單，然後選取 **[!UICONTROL XDM物件]** （資料元素型別）。
 
-![XDM對象類型](./images/e2e/xdm-object.png)
+![XDM物件型別](./images/e2e/xdm-object.png)
 
-此時將顯示XDM對象類型的配置對話框。 該對話框會自動選擇您的平台沙箱，從此您可以查看在該沙箱中建立的所有架構。 從清單中選擇先前建立的XDM架構。
+XDM物件型別的組態對話方塊隨即出現。 該對話方塊會自動選取您的Platform沙箱，從這裡您可以看到在該沙箱中建立的所有結構描述。 從清單中選取您先前建立的XDM結構描述。
 
-![XDM對象類型](./images/e2e/select-schema.png)
+![XDM物件型別](./images/e2e/select-schema.png)
 
-將顯示架構的結構。 所有帶星號的欄位(**\***)指示事件觸發時自動填充的欄位。 對於所有其它欄位，可以瀏覽架構的結構並填寫其餘資料。
+結構描述的結構隨即顯示。 所有欄位都有星號(**\***)表示在事件引發時將自動填入的欄位。 至於所有其他欄位，您可以探索結構描述的結構並填寫其餘資料。
 
-![將資料映射到XDM欄位](./images/e2e/map-schema.png)
+![將資料對應至XDM欄位](./images/e2e/map-schema.png)
 
 >[!NOTE]
 >
->上面的螢幕快照演示如何從網站的客戶端映射全局可訪問的變數(`cartAbandonsTotal`)到XDM欄位，方法是在 [!UICONTROL 值] 欄位，由百分號(`%`)。
+>上面的熒幕擷圖示範如何從網站的使用者端(`cartAbandonsTotal`)至XDM欄位，方法為在 [!UICONTROL 值] 欄位，由百分比符號包圍(`%`)。
 >
->您還可以使用以前建立的其他資料元素來填充這些欄位。 請參閱上的引用 [資料元素](../tags/ui/managing-resources/data-elements.md) 的子菜單。
+>您也可以使用其他先前建立的資料元素來填入這些欄位。 請參閱參考資料： [資料元素](../tags/ui/managing-resources/data-elements.md) 標籤檔案中以取得詳細資訊。
 
-完成資料到架構的映射後，請在選擇之前為資料元素提供名稱 **[!UICONTROL 保存]**。
+完成將資料對應至結構描述後，請先提供資料元素的名稱，然後再選取 **[!UICONTROL 儲存]**.
 
-![命名並保存資料元素](./images/e2e/name-and-save.png)
+![命名並儲存資料元素](./images/e2e/name-and-save.png)
 
 ### 建立規則
 
-保存資料元素後，下一步是建立規則，該規則將在網站上發生特定事件時（如客戶將產品添加到購物車時）將其發送到邊緣網路。
+儲存資料元素後，下一步就是建立規則，每當網站上發生特定事件（例如客戶將產品加入購物車時），就會傳送至Edge Network。
 
-您幾乎可以為任何可能在您的網站上發生的事件設定規則。 例如，本節說明如何建立客戶提交表單時將觸發的規則。 以下HTML表示一個帶有「添加到購物車」表單的簡單網頁，該表單將是規則的主題：
+您可以為網站上發生的幾乎任何事件設定規則。 例如，本節說明如何建立客戶提交表單時觸發的規則。 以下HTML代表具有「加入購物車」表單的簡單網頁，這會是規則的主題：
 
 ```html
 <!DOCTYPE html>
@@ -200,78 +200,78 @@ Adobe Experience Platform會收集您的資料並將其傳輸到其他Adobe產�
 </html>
 ```
 
-在資料收集UI中，選擇 **[!UICONTROL 規則]** 在左側導航中，然後選擇 **[!UICONTROL 建立新規則]**。
+在資料收集UI中，選取 **[!UICONTROL 規則]** 在左側導覽中，然後選取 **[!UICONTROL 建立新規則]**.
 
 ![規則](./images/e2e/rules.png)
 
-在下一螢幕中，提供規則的名稱。 從此開始，下一步是確定規則的事件（換句話說，規則何時觸發）。 選擇 **[!UICONTROL 添加]** 在 [!UICONTROL 事件]。
+在下一個畫面中，提供規則的名稱。 從這裡，下一步是決定規則的事件（換句話說，規則將於何時引發）。 選取 **[!UICONTROL 新增]** 在 [!UICONTROL 事件].
 
 ![名稱規則](./images/e2e/name-rule.png)
 
-此時將顯示事件配置頁。 要配置事件，必須首先選擇事件類型。 事件類型由擴展提供。 例如，要設定「表單提交」事件，請選擇 **[!UICONTROL 核心]** ，然後選擇 **[!UICONTROL 提交]** 在 **[!UICONTROL 窗體]** 的子菜單。
+事件組態頁面隨即顯示。 若要設定事件，您必須先選取事件型別。 事件型別由擴充功能提供。 例如，若要設定「表單提交」事件，請選取 **[!UICONTROL 核心]** 擴充功能，然後選取 **[!UICONTROL 提交]** 事件型別位於 **[!UICONTROL 表單]** 類別。
 
 >[!NOTE]
 >
->有關AdobeWeb擴展提供的不同事件類型（包括如何配置它們）的詳細資訊，請參見 [Adobe擴展引用](../tags/extensions/client/overview.md) 的下界。
+>如需AdobeWeb擴充功能所提供的各種事件型別（包括如何設定）的詳細資訊，請參閱 [Adobe擴充功能參考](../tags/extensions/client/overview.md) 標籤檔案中。
 
-表單提交事件允許您使用 [CSS選擇器](https://www.w3schools.com/css/css_selectors.asp) 引用要啟動的規則的特定元素。 在下面的示例中，ID `add-to-cart-form` 使此規則僅針對「添加到購物車」窗體觸發。 選擇 **[!UICONTROL 保留更改]** 將事件添加到規則。
+表單提交事件可讓您使用 [CSS選取器](https://www.w3schools.com/css/css_selectors.asp) 以參照規則要引發的特定元素。 在以下範例中，ID `add-to-cart-form` ，因此此規則只會在「加入購物車」表單中觸發。 選取 **[!UICONTROL 保留變更]** 將事件新增至規則。
 
 ![事件設定](./images/e2e/event-config.png)
 
-將重新顯示規則配置頁，顯示已添加事件。 您可以縮小&quot;[!UICONTROL 如果]通過增加規則的附加條件。
+規則設定頁面會重新顯示，顯示事件已新增。 您可以縮小&quot;[!UICONTROL 若]」的方式是將其他條件新增至規則。
 
-否則，下一步是添加規則在觸發時要執行的操作。 選擇 **[!UICONTROL 添加]** 在 **[!UICONTROL 操作]** 繼續。
+否則，下一步就是新增動作，讓規則在觸發時執行。 選取 **[!UICONTROL 新增]** 在 **[!UICONTROL 動作]** 以繼續。
 
-![添加操作](./images/e2e/add-action.png)
+![新增動作](./images/e2e/add-action.png)
 
-此時將顯示操作配置頁。 要獲取將資料發送到邊緣網路的規則，請選擇 **[!UICONTROL Adobe Experience PlatformWeb SDK]** 分機，和 **[!UICONTROL 發送事件]** 按鈕。
+動作設定頁面隨即顯示。 若要取得將資料傳送至Edge Network的規則，請選取 **[!UICONTROL Adobe Experience Platform Web SDK]** 擴充功能的，以及 **[!UICONTROL 傳送事件]** （動作型別）。
 
-![操作類型](./images/e2e/action-type.png)
+![動作型別](./images/e2e/action-type.png)
 
-螢幕將更新，顯示配置發送事件操作的其他選項。 下 **[!UICONTROL 類型]**，可提供自定義類型值以填充 `eventType` XDM欄位。 下 **[!UICONTROL XDM資料]**，提供先前建立的XDM資料類型的名稱（由百分號環繞），或選擇資料庫表徵圖(![資料庫表徵圖](./images/e2e/database-symbol.png))從清單中選擇。 這是最終將發送到邊緣網路的資料。
+畫面會更新以顯示其他選項，用於設定傳送事件動作。 下 **[!UICONTROL 型別]**，您可以提供自訂型別值以填入 `eventType` XDM欄位。 下 **[!UICONTROL XDM資料]**，提供您先前建立的XDM資料型別名稱（周圍有百分比符號），或選取資料庫圖示(![資料庫圖示](./images/e2e/database-symbol.png))以從清單中選取它。 這是最終傳送至Edge Network的資料。
 
-選擇 **[!UICONTROL 保留更改]** 的子菜單。
+選取 **[!UICONTROL 保留變更]** 完成後。
 
-![操作配置](./images/e2e/action-config.png)
+![動作設定](./images/e2e/action-config.png)
 
-配置完規則後，選擇 **[!UICONTROL 保存]** 完成該過程。
+設定完規則後，選取 **[!UICONTROL 儲存]** 以完成程式。
 
-![保存規則](./images/e2e/save-rule.png)
+![儲存規則](./images/e2e/save-rule.png)
 
-### 生成並安裝庫 {#library}
+### 建置及安裝程式庫 {#library}
 
-配置規則後，您就可以將其添加到標籤庫，將該庫構建到環境中，並在您的網站上安裝該庫。
-
->[!NOTE]
->
->如果尚未在資料收集UI中設定環境，則必須先設定環境，然後才能建立生成。 請參閱 [為Web屬性配置環境](../tags/ui/publishing/environments.md#web-configuration) 的子菜單。
-
-要瞭解如何建立庫、向庫添加擴展和規則以及將庫構建到環境中，請參閱上的指南 [管理庫](../tags/ui/publishing/libraries.md) 的下界。 建立庫時，請確保包含平台Web SDK擴展和以前建立的資料收集規則。
-
-建立庫並將其構建分配給某個環境後，您就可以在網站的客戶端安裝該環境。 請參閱 [安裝環境](../tags/ui/publishing/environments.md#installation) 的子菜單。
-
-在您的網站上安裝了該環境後，您可以 [test您的實施](../tags/ui/publishing/embed-code-testing.md) 使用Adobe Experience Platform調試器。
-
-## 配置事件轉發（可選） {#event-forwarding}
+設定規則後，您就可以將其新增至標籤程式庫、將該程式庫建置至環境，並在您的網站上安裝該建置。
 
 >[!NOTE]
 >
->事件轉發僅對已獲得許可的組織可用。
+>如果您尚未在資料收集UI中設定環境，必須先設定環境，然後才能建立組建。 請參閱以下小節： [設定Web屬性的環境](../tags/ui/publishing/environments.md#web-configuration) 標籤檔案中以取得詳細資訊。
 
-將SDK配置為將資料發送到邊緣網路後，可以設定事件轉發，以告知邊緣網路希望將資料傳送到何處。
+若要瞭解如何建立程式庫、將擴充功能和規則新增至程式庫，以及將該程式庫建置至環境，請參閱以下指南中的 [管理程式庫](../tags/ui/publishing/libraries.md) 標籤檔案中。 建立程式庫時，請務必包含Platform Web SDK擴充功能以及您先前建立的資料收集規則。
 
-要使用事件轉發，必須先建立事件轉發屬性。 選擇 **[!UICONTROL 事件轉發]** 在左導航中，選擇 **[!UICONTROL 新建屬性]**。 在選擇前提供屬性的名稱 **[!UICONTROL 保存]**。
+建立程式庫並將其組建指派給環境後，您就可以將該環境安裝在網站的使用者端。 請參閱以下小節： [安裝環境](../tags/ui/publishing/environments.md#installation) 以取得詳細資訊。
 
-建立事件轉發屬性後，下一步是建立一個規則來確定資料應在何處發送。 事件轉發屬性的規則的構建方式與標籤屬性的構造方式大致相同，但不能指定任何事件（因為事件轉發僅處理它直接從資料流接收的事件）。 對於規則的操作，您可以使用一個可用的事件轉發擴展，或使用自定義代碼來傳遞事件。
+在網站上安裝環境後，您可以 [測試您的實作](../tags/ui/publishing/embed-code-testing.md) 使用Adobe Experience Platform Debugger。
 
-![事件轉發規則](./images/e2e/event-forwarding-rule.png)
+## 設定事件轉送（選擇性） {#event-forwarding}
 
-與以前類似，配置規則後，必須將其添加到庫並將該庫構建到環境中。
+>[!NOTE]
+>
+>事件轉送僅適用於已獲得授權的組織。
 
-生成完成後，最後一步是更新您的資料流 [先前配置](#datastream) 並啟用事件轉發。 要開始，請導航到 **[!UICONTROL 資料流]** 並從清單中選擇有關的資料流。 在此啟用事件轉發的切換，並提供您剛剛配置的屬性和環境的名稱。
+設定SDK將資料傳送至Edge Network後，您就可以設定事件轉送，通知Edge Network您要將資料傳送至何處。
 
-![事件轉發資料流](./images/e2e/event-forwarding-datastream.png)
+若要使用事件轉送，您必須先建立事件轉送屬性。 選取 **[!UICONTROL 事件轉送]** 在左側導覽中，然後選取 **[!UICONTROL 新增屬性]**. 在選取之前提供屬性的名稱 **[!UICONTROL 儲存]**.
+
+建立事件轉送屬性後，下一步就是建立規則，決定應傳送資料的位置。 事件轉送屬性規則的建構方式與標籤屬性大致相同，唯一例外是不能指定任何事件（因為事件轉送只會處理直接從資料流接收的事件）。 對於規則的動作，您可以使用其中一個可用的事件轉送擴充功能，或使用自訂程式碼來傳送事件。
+
+![事件轉送規則](./images/e2e/event-forwarding-rule.png)
+
+與之前類似，設定規則後，您必須將其新增至程式庫，然後將該程式庫建置至環境。
+
+建置完成後，最後一個步驟是更新資料流 [先前設定](#datastream) 並啟用事件轉送。 若要開始，請導覽至 **[!UICONTROL 資料串流]** 並從清單中選取有問題的資料流。 從這裡，啟用事件轉送的切換，並提供您剛才設定的屬性和環境名稱。
+
+![事件轉送資料串流](./images/e2e/event-forwarding-datastream.png)
 
 ## 後續步驟
 
-本指南提供了如何使用平台Web SDK將資料發送到邊緣網路的高端端到端概述。 請參閱本指南中連結的文檔，瞭解有關各個元件和服務的詳細資訊。
+本指南提供如何使用Platform Web SDK傳送資料至Edge Network的高階端對端總覽。 請參閱本指南中的檔案連結，以取得各種相關元件和服務的詳細資訊。

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；PQL;PQL；配置檔案查詢語言；對象函式；對象；
+keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；pql；PQL；設定檔查詢語言；物件函式；物件；
 solution: Experience Platform
-title: PQL對象函式
-description: 配置檔案查詢語言(PQL)提供使與對象交互更簡單的功能。
+title: PQL物件函式
+description: 設定檔查詢語言(PQL)提供可讓您更輕鬆與物件互動的函式。
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 5%
 
 # 物件函式
 
-[!DNL Profile Query Language] (PQL)提供使與對象交互更簡單的函式。 有關其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md)。
+[!DNL Profile Query Language] (PQL)提供的函式可簡化與物件的互動。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
 
-## 為空
+## 為null
 
-的 `isNull` 函式確定對象引用是否不存在。
+此 `isNull` 函式決定物件參考是否不存在。
 
 **格式**
 
@@ -27,15 +27,15 @@ ht-degree: 5%
 
 **範例**
 
-以下PQL查詢檢查人員的住宅地址是否不存在。
+以下PQL查詢會檢查個人的住家地址是否不存在。
 
 ```sql
 person.homeAddress.isNull()
 ```
 
-## 不為空
+## 不是Null
 
-的 `isNotNull` 函式確定是否存在對象引用。
+此 `isNotNull` 函式決定物件參考是否存在。
 
 **格式**
 
@@ -45,7 +45,7 @@ person.homeAddress.isNull()
 
 **範例**
 
-以下PQL查詢檢查人員的住宅地址是否存在。
+以下PQL查詢會檢查個人的住家地址是否存在。
 
 ```sql
 person.homeAddress.isNotNull()
@@ -53,4 +53,4 @@ person.homeAddress.isNotNull()
 
 ## 後續步驟
 
-現在您已經瞭解了對象函式，可以在PQL查詢中使用它們。 有關其他PQL功能的詳細資訊，請閱讀 [配置檔案查詢語言概述](./overview.md)。
+現在您已瞭解物件函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

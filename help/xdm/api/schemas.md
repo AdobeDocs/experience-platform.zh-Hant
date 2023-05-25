@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；主題；熱門主題；api;API;XDM;XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；資料模型；架構註冊；架構註冊；架構註冊；架構；架構；架構；架構；建立
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述登入；結構描述登入；結構描述；結構描述；結構描述；建立
 solution: Experience Platform
-title: 架構API終結點
-description: 通過架構註冊表API中的/schemas終結點，可以以寫程式方式管理體驗應用程式中的XDM架構。
+title: 結構描述API端點
+description: Schema Registry API中的/schemas端點可讓您以程式設計方式管理體驗應用程式中的XDM結構描述。
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
@@ -11,21 +11,21 @@ ht-degree: 2%
 
 ---
 
-# 架構終結點
+# 結構描述端點
 
-可以將模式視為您希望輸入到Adobe Experience Platform的資料的藍圖。 每個架構由類和零個或多個架構欄位組組成。 的 `/schemas` 端點 [!DNL Schema Registry] API允許您以寫程式方式管理體驗應用程式中的架構。
+結構描述可視為您要擷取至Adobe Experience Platform的資料的藍圖。 每個結構描述都由一個類別和零個或多個結構描述欄位群組組成。 此 `/schemas` 中的端點 [!DNL Schema Registry] API可讓您以程式設計方式管理體驗應用程式中的結構描述。
 
 ## 快速入門
 
-本指南中使用的API終結點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+本指南中使用的API端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-## 檢索方案清單 {#list}
+## 擷取結構描述清單 {#list}
 
-您可以在 `global` 或 `tenant` 容器：向 `/global/schemas` 或 `/tenant/schemas`的下界。
+您可以在「 」下方列出所有結構描述 `global` 或 `tenant` 向發出GET請求來建立容器 `/global/schemas` 或 `/tenant/schemas`（分別）。
 
 >[!NOTE]
 >
->列出資源時，方案註冊表將結果集限制為300個項。 要返回超出此限制的資源，必須使用分頁參數。 還建議您使用其他查詢參數來篩選結果並減少返回的資源數。 請參閱 [查詢參數](./appendix.md#query) 的子菜單。
+>列出資源時，結構描述登入將結果集限製為300個專案。 若要傳回超出此限制的資源，您必須使用分頁引數。 也建議您使用其他查詢引數來篩選結果並減少傳回的資源數量。 請參閱以下小節： [查詢引數](./appendix.md#query) 詳細資訊。
 
 **API格式**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 儲存要檢索的架構的容器： `global` 用於Adobe建立的架構或 `tenant` 為組織擁有的架構。 |
-| `{QUERY_PARAMS}` | 用於篩選結果的可選查詢參數。 查看 [附錄文檔](./appendix.md#query) 的子菜單。 |
+| `{CONTAINER_ID}` | 容納您要擷取之結構描述的容器： `global` 適用於Adobe建立的方案或 `tenant` 適用於貴組織擁有的結構描述。 |
+| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用引數的清單。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求從 `tenant` 容器，使用 `orderby` 查詢參數，按結果排序 `title` 屬性。
+以下請求會從擷取結構描述清單 `tenant` 容器，使用 `orderby` 查詢引數，依結果排序 `title` 屬性。
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-響應格式取決於 `Accept` 請求中發送的標頭。 以下 `Accept` 標題可用於清單架構：
+回應格式取決於 `Accept` 標頭已在請求中傳送。 下列專案 `Accept` 標頭可用於列出結構描述：
 
-| `Accept` 標題 | 說明 |
+| `Accept` 頁首 | 說明 |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | 返回每個資源的簡短摘要。 這是列出資源的建議標頭。 (限制：300) |
-| `application/vnd.adobe.xed+json` | 為每個資源返回完整的JSON架構（原始） `$ref` 和 `allOf` 包含。 (限制：300) |
+| `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標頭。 （上限： 300） |
+| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON結構描述，包含原始檔案 `$ref` 和 `allOf` 包含。 （上限： 300） |
 
 {style="table-layout:auto"}
 
 **回應**
 
-上述請求使用 `application/vnd.adobe.xed-id+json` `Accept` 標頭，因此響應僅包括 `title`。 `$id`。 `meta:altId`, `version` 每個架構的屬性。 使用其他 `Accept` 標題(H)`application/vnd.adobe.xed+json`)返回每個架構的所有屬性。 選擇相應的 `Accept` 標題，具體取決於您在回應中需要的資訊。
+上述請求使用的是 `application/vnd.adobe.xed-id+json` `Accept` 標題，因此回應僅包含 `title`， `$id`， `meta:altId`、和 `version` 每個結構描述的屬性。 使用另一個 `Accept` 頁首(`application/vnd.adobe.xed+json`)會傳回每個結構描述的所有屬性。 選取適當的 `Accept` 標題依您在回應中所需的資訊而定。
 
 ```json
 {
@@ -97,9 +97,9 @@ curl -X GET \
 }
 ```
 
-## 查找架構 {#lookup}
+## 查詢結構描述 {#lookup}
 
-可以通過發出GET請求來查找特定架構，該請求在路徑中包括該架構的ID。
+您可以透過在路徑中包含結構描述ID的GET請求來查詢特定結構描述。
 
 **API格式**
 
@@ -109,14 +109,14 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 儲存要檢索的架構的容器： `global` Adobe建立的架構或 `tenant` 組織擁有的架構。 |
-| `{SCHEMA_ID}` | 的 `meta:altId` 或URL編碼 `$id` 要查找的架構。 |
+| `{CONTAINER_ID}` | 容納您要擷取之結構描述的容器： `global` 適用於Adobe建立的結構描述或 `tenant` 適用於貴組織擁有的結構描述。 |
+| `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要查閱的結構描述中。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求檢索其指定的架構 `meta:altId` 值。
+以下請求會擷取其指定的結構描述 `meta:altId` 路徑中的值。
 
 ```shell
 curl -X GET \
@@ -128,22 +128,22 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-響應格式取決於 `Accept` 請求中發送的標頭。 所有查找請求都需要 `version` 包括在 `Accept` 標題。 以下 `Accept` 標題可用：
+回應格式取決於 `Accept` 標頭已在請求中傳送。 所有查詢請求都需要 `version` 包含在 `Accept` 標頭。 下列專案 `Accept` 標頭可供使用：
 
-| `Accept` 標題 | 說明 |
+| `Accept` 頁首 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | 原始 `$ref` 和 `allOf`，包含標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 和 `allOf` 已解析，有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version=1` | 原始 `$ref` 和 `allOf`，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 和 `allOf` 已解析，沒有標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解析，包含描述符。 |
-| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 和 `allOf` 已解析，有標題和說明。 不建議使用的欄位 `meta:status` 屬性 `deprecated`。 |
+| `application/vnd.adobe.xed+json; version=1` | 原始 `$ref` 和 `allOf`，有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 和 `allOf` 已解決，具有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | 原始 `$ref` 和 `allOf`，無標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 和 `allOf` 已解決，無標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解決，包含描述項。 |
+| `application/vnd.adobe.xed-deprecatefield+json; version=1` | `$ref` 和 `allOf` 已解決，具有標題和說明。 已棄用的欄位會以 `meta:status` 屬性： `deprecated`. |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應返回架構的詳細資訊。 返回的欄位取決於 `Accept` 請求中發送的標頭。 不同實驗 `Accept` 標題：比較響應並確定哪個標題最適合您的使用案例。
+成功的回應會傳回結構描述的詳細資訊。 傳回的欄位取決於 `Accept` 標頭已在請求中傳送。 使用不同的實驗 `Accept` 標頭，用來比較回應及判斷哪個標頭最適合您的使用案例。
 
 ```json
 {
@@ -196,11 +196,11 @@ curl -X GET \
 
 ## 建立方案 {#create}
 
-架構合成過程從分配類開始。 該類定義資料（記錄或時間序列）的關鍵行為方面以及描述將要接收的資料所需的最小欄位。
+結構描述構成程式從指派類別開始。 類別會定義資料的主要行為方面（記錄或時間序列），以及描述將擷取之資料所需的最少欄位。
 
 >[!NOTE]
 >
->下面的示例調用只是有關如何在API中建立架構的基準示例，該架構具有類的最小合成要求且沒有欄位組。 有關如何在API中建立架構的完整步驟，包括如何使用欄位組和資料類型分配欄位，請參見 [架構建立教程](../tutorials/create-schema-api.md)。
+>以下範例呼叫只是如何在API中建立結構描述的基本範例，具有類別和無欄位群組的最低構成要求。 如需如何在API中建立結構的完整步驟，包括如何使用欄位群組和資料型別指派欄位，請參閱 [結構描述建立教學課程](../tutorials/create-schema-api.md).
 
 **API格式**
 
@@ -210,7 +210,7 @@ POST /tenant/schemas
 
 **要求**
 
-請求必須包括 `allOf` 引用的屬性 `$id` 班級的。 此屬性定義架構將實現的「基類」。 在本示例中，基類是以前建立的「屬性資訊」類。
+請求必須包含 `allOf` 參照 `$id` 類別的。 此屬性會定義結構描述將實作的「基底類別」。 在此範例中，基底類別是先前建立的「屬性資訊」類別。
 
 ```SHELL
 curl -X POST \
@@ -234,13 +234,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `allOf` | 對象陣列，每個對象引用其模式實現的欄位的類或欄位組。 每個對象都包含一個屬性(`$ref`)，其值表示 `$id` 新架構將實現的類或欄位組。 必須提供一個類，並且包含零個或多個附加欄位組。 在上例中， `allOf` array是架構的類。 |
+| `allOf` | 一個物件陣列，每個物件都參照結構描述實作其欄位的類別或欄位群組。 每個物件都包含單一屬性(`$ref`)，其值代表 `$id` 新結構描述將實作的類別或欄位群組的名稱。 必須提供一個類別，並附帶零個或多個額外的欄位群組。 在上述範例中， `allOf` array是結構描述的類別。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應返回HTTP狀態201（已建立）和包含新建立架構的詳細資訊的負載，包括 `$id`。 `meta:altId`, `version`。 這些值是只讀的，由 [!DNL Schema Registry]。
+成功的回應會傳回HTTP狀態201 （已建立）以及包含新建立之結構描述詳細資訊的裝載，包括 `$id`， `meta:altId`、和 `version`. 這些值是唯讀的，並由 [!DNL Schema Registry].
 
 ```JSON
 {
@@ -275,17 +275,17 @@ curl -X POST \
 }
 ```
 
-執行GET請求 [列出所有架構](#list) 現在，租戶容器中將包含新架構。 您可以執行 [查找(GET)請求](#lookup) 使用URL編碼 `$id` URI，用於直接查看新架構。
+執行GET要求至 [列出所有結構描述](#list) 在租使用者容器中，現在會包含新結構描述。 您可以執行 [查詢(GET)請求](#lookup) 使用URL編碼 `$id` URI直接檢視新結構描述。
 
-要向架構添加其他欄位，可以執行 [PATCH操作](#patch) 將欄位組添加到架構 `allOf` 和 `meta:extends` 陣列。
+若要將其他欄位新增到結構描述，您可以執行 [PATCH作業](#patch) 將欄位群組新增至結構描述的 `allOf` 和 `meta:extends` 陣列。
 
-## 更新架構 {#put}
+## 更新結構描述 {#put}
 
-您可以通過PUT操作替換整個架構，實際上就是重寫資源。 通過PUT請求更新架構時，主體必須包括在 [建立新架構](#create) POST。
+您可以透過PUT操作取代整個結構描述，基本上是重寫資源。 透過PUT請求更新結構描述時，本文必須包含以下情況所需的所有欄位： [建立新結構描述](#create) 在POST請求中。
 
 >[!NOTE]
 >
->如果只想更新部分架構而不是完全替換它，請參見上的 [更新模式的一部分](#patch)。
+>如果您只想更新部分結構描述，而不是完全取代，請參閱 [更新結構描述的一部分](#patch).
 
 **API格式**
 
@@ -295,13 +295,13 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 的 `meta:altId` 或URL編碼 `$id` 要重寫的架構。 |
+| `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` 重新寫入的結構描述中。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求替換現有架構，並更改其 `title`。 `description`, `allOf` 屬性。
+以下請求會取代現有結構描述，並變更其 `title`， `description`、和 `allOf` 屬性。
 
 ```SHELL
 curl -X PUT \
@@ -325,7 +325,7 @@ curl -X PUT \
 
 **回應**
 
-成功的響應返回更新的架構的詳細資訊。
+成功的回應會傳回更新後之結構的詳細資訊。
 
 ```JSON
 {
@@ -360,15 +360,15 @@ curl -X PUT \
 }
 ```
 
-## 更新架構的一部分 {#patch}
+## 更新結構描述的一部分 {#patch}
 
-可以使用PATCH請求更新方案的一部分。 的 [!DNL Schema Registry] 支援所有標準JSON修補程式操作，包括 `add`。 `remove`, `replace`。 有關JSON修補程式的詳細資訊，請參見 [API基礎指南](../../landing/api-fundamentals.md#json-patch)。
+您可以使用PATCH請求來更新結構描述的一部分。 此 [!DNL Schema Registry] 支援所有標準JSON修補程式操作，包括 `add`， `remove`、和 `replace`. 如需JSON修補程式的詳細資訊，請參閱 [API基礎指南](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->如果要用新值替換整個資源，而不是更新單個欄位，請參閱上的部分 [使用PUT操作替換模式](#put)。
+>如果您想使用新值取代整個資源，而不是更新個別欄位，請參閱 [使用PUT操作取代結構描述](#put).
 
-最常見的PATCH操作之一涉及將先前定義的欄位組添加到架構中，如下例所示。
+最常見的PATCH作業之一是將先前定義的欄位群組新增到結構描述，如以下範例所示。
 
 **API格式**
 
@@ -378,15 +378,15 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 要更新的架構。 |
+| `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 要更新的結構描述。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下面的示例請求通過添加該欄位組的 `$id` 值 `meta:extends` 和 `allOf` 陣列。
+以下範例請求會新增欄位群組，藉此將新的欄位群組新增至結構描述。 `$id` 值會同時變成 `meta:extends` 和 `allOf` 陣列。
 
-請求主體採用陣列的形式，每個列出的對象代表對單個欄位的特定更改。 每個對象都包括要執行的操作(`op`)，應對(執行的操作`path`)，以及該操作中應包含哪些資訊(`value`)。
+請求內文採用陣列形式，每個列出的物件都代表個別欄位的特定變更。 每個物件都包含要執行的操作(`op`)，操作應執行於哪個欄位(`path`)，以及該作業應包含哪些資訊(`value`)。
 
 ```SHELL
 curl -X PATCH\
@@ -414,7 +414,7 @@ curl -X PATCH\
 
 **回應**
 
-該響應顯示已成功執行兩個操作。 欄位組 `$id` 已添加到 `meta:extends` 陣列和引用(`$ref`)到欄位組 `$id` 的 `allOf` 陣列。
+回應顯示兩個操作都已成功執行。 欄位群組 `$id` 已新增至 `meta:extends` 陣列和參考(`$ref`)至欄位群組 `$id` 現在會顯示在 `allOf` 陣列。
 
 ```JSON
 {
@@ -453,13 +453,13 @@ curl -X PATCH\
 }
 ```
 
-## 啟用用於即時客戶配置檔案的方案 {#union}
+## 啟用結構描述以用於Real-Time Customer Profile {#union}
 
-為了讓架構參與 [即時客戶配置檔案](../../profile/home.md)，必須添加 `union` 標籤到架構 `meta:immutableTags` 陣列。 可以通過對有關的架構發出PATCH請求來完成此操作。
+為了讓結構描述參與 [即時客戶個人檔案](../../profile/home.md)，您必須新增 `union` 標籤到結構描述的 `meta:immutableTags` 陣列。 您可以對相關結構描述發出PATCH要求來達到此目的。
 
 >[!IMPORTANT]
 >
->不可變標籤是要設定但從未刪除的標籤。
+>不可變標籤是旨在設定但從未移除的標籤。
 
 **API格式**
 
@@ -469,13 +469,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 的子菜單。 |
+| `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 要啟用的結構描述。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下面的示例請求將 `meta:immutableTags` 陣列到現有架構，為陣列提供 `union` 啟用它以在配置檔案中使用。
+以下範例請求新增 `meta:immutableTags` 陣列轉換為現有結構描述，為陣列提供單一字串值 `union` 以啟用它以用於設定檔。
 
 ```SHELL
 curl -X PATCH\
@@ -496,7 +496,7 @@ curl -X PATCH\
 
 **回應**
 
-成功的響應將返回更新的架構的詳細資訊，顯示 `meta:immutableTags` 已添加陣列。
+成功回應會傳回更新後結構的詳細資料，指出 `meta:immutableTags` 已新增陣列。
 
 ```JSON
 {
@@ -538,11 +538,11 @@ curl -X PATCH\
 }
 ```
 
-現在，您可以查看此架構類的聯合，以確認已表示該架構的欄位。 查看 [聯合端點指南](./unions.md) 的子菜單。
+您現在可以檢視此結構描述類別的聯合，以確認結構描述的欄位已呈現。 請參閱 [聯合端點指南](./unions.md) 以取得詳細資訊。
 
-## 刪除架構 {#delete}
+## 刪除結構描述 {#delete}
 
-有時可能需要從架構註冊表中刪除架構。 這是通過執行DELETE請求來完成的，該請求的模式ID在路徑中提供。
+有時可能需要從結構描述登入中移除結構描述。 這是透過使用路徑中提供的結構描述ID執行DELETE請求來完成。
 
 **API格式**
 
@@ -552,7 +552,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 的子菜單。 |
+| `{SCHEMA_ID}` | URL編碼 `$id` URI或 `meta:altId` 要刪除的結構描述中。 |
 
 {style="table-layout:auto"}
 
@@ -569,6 +569,6 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應返回HTTP狀態204（無內容）和空白正文。
+成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
 
-您可以通過嘗試對架構進行查找(GET)請求來確認刪除。 您需要包括 `Accept` 請求中的標頭，但應接收HTTP狀態404（未找到），因為該架構已從架構註冊表中刪除。
+您可以嘗試對結構描述進行查詢(GET)請求以確認刪除。 您需要包含 `Accept` 標頭中，但應該會收到HTTP狀態404 （找不到），因為結構描述已從結構描述登入中移除。

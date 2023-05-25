@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；刪除帳戶
-description: Adobe Experience Platform的源連接器提供了定期接收外部源資料的能力。 本教程提供了從「源」工作區刪除帳戶的步驟。
+description: Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供從「來源」工作區刪除帳戶的步驟。
 solution: Experience Platform
-title: 刪除UI中的源連接帳戶
+title: 刪除UI中的來源連線帳戶
 type: Tutorial
 exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
@@ -12,55 +12,55 @@ ht-degree: 1%
 
 ---
 
-# 刪除源連接帳戶
+# 刪除來源連線帳戶
 
-Adobe Experience Platform的源連接器提供了定期接收外部源資料的能力。 本教程提供了從 **[!UICONTROL 源]** 工作區。
+Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供從刪除帳戶的步驟。 **[!UICONTROL 來源]** 工作區。
 
 ## 快速入門
 
-本教程需要對Adobe Experience Platform的以下部分進行有效的理解：
+本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-- [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md):標準化框架 [!DNL Experience Platform] 組織客戶體驗資料。
-   - [架構組合的基礎](../../../xdm/schema/composition.md):瞭解XDM架構的基本構建基塊，包括架構組成中的關鍵原則和最佳做法。
-   - [架構編輯器教程](../../../xdm/tutorials/create-schema-ui.md):瞭解如何使用架構編輯器UI建立自定義架構。
-- [[!DNL Real-Time Customer Profile]](../../../profile/home.md):基於來自多個源的聚合資料提供統一、即時的用戶配置檔案。
+- [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+   - [結構描述組合基本概念](../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
+   - [結構描述編輯器教學課程](../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器UI建立自訂結構描述。
+- [[!DNL Real-Time Customer Profile]](../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
 ## 使用UI刪除帳戶
 
 >[!TIP]
 >
->在刪除源帳戶之前，必須先刪除與源帳戶關聯的任何現有資料流。 要刪除現有資料流，請參閱上的教程 [刪除UI中的源資料流](./delete.md)。
+>在刪除來源帳戶之前，您必須先刪除與來源帳戶關聯的任何現有資料流。 若要刪除現有的資料流，請參閱上的教學課程 [在UI中刪除來源資料流](./delete.md).
 
-登錄到 [Adobe Experience Platform](https://platform.adobe.com) ，然後選擇 **[!UICONTROL 源]** 從左導航欄訪問 **[!UICONTROL 源]** 工作區。 的 **[!UICONTROL 目錄]** 螢幕顯示了各種源，您可以使用這些源建立帳戶和資料流。 每個源都顯示與它們關聯的現有帳戶和資料流的數量。
+登入 [Adobe Experience Platform](https://platform.adobe.com) 然後選取 **[!UICONTROL 來源]** 以存取 **[!UICONTROL 來源]** 工作區。 此 **[!UICONTROL 目錄]** 畫面會顯示各種來源，您可使用這些來源建立帳戶和資料流。 每個來源都會顯示與其相關聯的現有帳戶和資料流數量。
 
-選擇 **[!UICONTROL 帳戶]** 訪問 **[!UICONTROL 帳戶]** 的子菜單。
+選取 **[!UICONTROL 帳戶]** 存取 **[!UICONTROL 帳戶]** 頁面。
 
-![目錄帳戶](../../images/tutorials/delete-accounts/catalog.png)
+![catalog-accounts](../../images/tutorials/delete-accounts/catalog.png)
 
-此時將顯示現有帳戶的清單。 此頁上是現有帳戶（如源、用戶名、關聯資料流和建立日期）的可排序資訊清單。 選擇 **漏斗圖** 在左上角排序。
+現有帳號的清單隨即顯示。 本頁面提供現有帳戶（例如來源、使用者名稱、關聯的資料流和建立日期）的可排序資訊清單。 選取 **漏斗圖示** 以排序。
 
-![資料流清單](../../images/tutorials/delete-accounts/accounts.png)
+![資料流 — 清單](../../images/tutorials/delete-accounts/accounts.png)
 
-排序面板顯示在螢幕的左側，其中包含可用源的清單。 可以使用排序函式選擇多個源。
+排序面板會顯示在畫面左側，其中包含可用來源的清單。 您可以使用排序功能選取多個來源。
 
-選擇要訪問的源，並從主介面中的帳戶清單中查找要刪除的帳戶。 在示例中，所選源為 **[!DNL Azure Blob Storage]** 帳戶名是 **[!UICONTROL blobTestConnector]**。 從排序面板中選擇多個源時，最近建立的帳戶將首先顯示，因為清單按建立日期排序。
+選取您要存取的來源，並從主介面的帳戶清單中找出您要刪除的帳戶。 在此範例中，選取的來源為 **[!DNL Azure Blob Storage]** 且帳戶名稱為 **[!UICONTROL Blobtectconnector]**. 從排序面板選取多個來源時，您最近建立的帳戶會先出現，因為清單是依建立日期排序。
 
-選擇要刪除的帳戶。
+選取您要刪除的帳戶。
 
-![資料流排序](../../images/tutorials/delete-accounts/sort.png)
+![資料流 — 排序](../../images/tutorials/delete-accounts/sort.png)
 
-的 **[!UICONTROL 屬性]** 面板顯示在螢幕的右側，其中包含有關選定帳戶的資訊。
+此 **[!UICONTROL 屬性]** 面板會出現在畫面的右側，其中包含有關所選帳戶的資訊。
 
-選取橢圓(`...`)。 出現一個彈出面板，提供選項 **[!UICONTROL 添加資料]**。 **[!UICONTROL 編輯詳細資訊]**, **[!UICONTROL 刪除]**。 選擇 **[!UICONTROL 刪除]** 刪除帳戶。
+選取省略符號(`...`)的名稱旁。 快顯面板隨即出現，其中提供選項至 **[!UICONTROL 新增資料]**， **[!UICONTROL 編輯詳細資料]**、和 **[!UICONTROL 刪除]**. 選取 **[!UICONTROL 刪除]** 以刪除帳戶。
 
-![資料流排序](../../images/tutorials/delete-accounts/delete.png)
+![資料流 — 排序](../../images/tutorials/delete-accounts/delete.png)
 
-出現最終確認對話框，選擇 **[!UICONTROL 刪除]** 來完成此過程。
+最後確認對話方塊出現，選取 **[!UICONTROL 刪除]** 以完成程式。
 
 ![delete](../../images/tutorials/delete-accounts/confirm.png)
 
 ## 後續步驟
 
-按照本教程，您已成功使用 **[!UICONTROL 源]** 工作區以刪除現有帳戶。
+依照本教學課程，您已成功使用 **[!UICONTROL 來源]** 工作區以刪除現有帳戶。
 
-有關如何使用 [!DNL Flow Service] API，請參閱有關 [使用流服務API刪除連接](../../tutorials/api/delete.md)
+如需如何以程式設計方式執行這些操作的步驟，請使用 [!DNL Flow Service] API，請參考以下教學課程： [使用流量服務API刪除連線](../../tutorials/api/delete.md)

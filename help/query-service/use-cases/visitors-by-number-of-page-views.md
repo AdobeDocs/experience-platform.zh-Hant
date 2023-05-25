@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；體驗事件查詢；體驗事件查詢；體驗事件查詢；
-title: 按訪問者的頁面視圖數列出訪問者
-description: 瞭解如何編寫使用「體驗事件」來檢索按頁面視圖陣列織的訪問者清單的查詢。
+keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；experienceevent查詢；experienceevent查詢；體驗事件查詢；
+title: 依訪客的頁面檢視次數列出訪客
+description: 瞭解如何撰寫查詢，這些查詢使用體驗事件來擷取按頁面檢視次陣列織的訪客清單。
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -10,15 +10,15 @@ ht-degree: 1%
 
 ---
 
-# 按訪問者的頁面視圖數列出訪問者
+# 依訪客的頁面檢視次數列出訪客
 
-本文檔提供了檢索按頁面視圖陣列織的訪問者清單所需的SQL示例。 使用Adobe Experience Platform查詢服務，可以編寫使用 [!DNL Experience Events] 以捕獲各種使用案例。 體驗事件由體驗資料模型(XDM)ExperienceEvent類表示，該類在用戶與網站或服務交互時捕獲系統的不可改變和非聚合快照。 體驗事件甚至可用於時域分析。 查看 [後續步驟部分](#next-steps) 更多涉及 [!DNL Experience Events] 生成訪問者報告。
+本檔案提供擷取依頁面檢視次陣列織的訪客清單所需的SQL範例。 透過Adobe Experience Platform查詢服務，您可以編寫使用 [!DNL Experience Events] 以擷取各種使用案例。 體驗事件由Experience Data Model (XDM) ExperienceEvent類別表示，可在使用者與網站或服務互動時，擷取系統不可變且非彙總的快照。 體驗事件甚至可用於時間網域分析。 請參閱 [後續步驟區段](#next-steps) 有關更多使用案例，包括 [!DNL Experience Events] 以產生訪客報表。
 
-有關XDM和 [!DNL Experience Events] 在 [[!DNL XDM System] 概述](../../xdm/home.md)。 通過將Query Service與 [!DNL Experience Events]，您可以有效跟蹤用戶間的行為趨勢。 以下文檔提供了涉及 [!DNL Experience Events]。
+有關XDM和的更多資訊 [!DNL Experience Events] 您可在以下網址找到： [[!DNL XDM System] 概觀](../../xdm/home.md). 透過結合查詢服務與 [!DNL Experience Events]，您就能有效追蹤使用者之間的行為趨勢。 以下檔案提供涉及下列專案的查詢範例： [!DNL Experience Events].
 
 ## 目標
 
-以下示例建立一個報告，其中列出了已查看最多頁面的用戶的10個ID。
+下列範例會建立一份報表，列出檢視次數最多之使用者的10個ID。
 
 ```sql
 SELECT 
@@ -50,10 +50,10 @@ LIMIT 10;
 
 ## 後續步驟 {#next-steps}
 
-通過閱讀此文檔，您可以更好地瞭解如何使用查詢服務 [!DNL Experience Events] 列出已查看最多頁面的用戶。
+閱讀本檔案可讓您更瞭解如何使用查詢服務搭配 [!DNL Experience Events] 以列出檢視次數最多頁面的使用者。
 
-請參閱以下使用案例以瞭解其他基於訪問者的使用案例：
+請參閱下列使用案例，以瞭解其他以訪客為基礎的使用案例：
 
-- [列出訪問者以前的會話。](./list-visitor-sessions.md)
-- [查看訪問者的匯總報告。](./roll-up-report-of-a-visitor.md)
-- [按天建立事件趨勢報告。](./trended-report-of-events.md)
+- [列出訪客之前的工作階段。](./list-visitor-sessions.md)
+- [檢視訪客的統計報表。](./roll-up-report-of-a-visitor.md)
+- [依日期建立事件的趨勢報表。](./trended-report-of-events.md)

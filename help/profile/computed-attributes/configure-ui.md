@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；配置；即時客戶配置；故障排除；API
-title: 如何配置計算屬性欄位
+keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
+title: 如何設定計算屬性欄位
 type: Documentation
-description: 計算屬性是用於將事件級資料聚合到配置檔案級屬性中的函式。 要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用架構欄位組將該欄位添加到現有架構，或通過選擇已在架構中定義的欄位來建立此欄位。
+description: 計算屬性是用來將事件層級資料彙總到設定檔層級屬性的函式。 若要設定計算屬性，您必須先識別將儲存計算屬性值的欄位。 您可以使用結構描述欄位群組來建立此欄位，以將欄位新增至現有結構描述，或選取您已在結構描述中定義的欄位。
 hide: true
 hidefromtoc: true
 source-git-commit: 5ae7ddbcbc1bc4d7e585ca3e3d030630bfb53724
@@ -13,76 +13,76 @@ ht-degree: 1%
 ---
 
 
-# (Alpha)在UI中配置計算屬性欄位
+# (Alpha)在UI中設定計算屬性欄位
 
 >[!IMPORTANT]
 >
->計算屬性功能當前位於Alpha中，並且不適用於所有用戶。 文件和功能可能會有所變更。
+>計算屬性功能目前為Alpha版，並非所有使用者都可使用。 文件和功能可能會有所變更。
 
-要配置計算屬性，首先需要標識將保存計算屬性值的欄位。 可以使用架構欄位組將該欄位添加到現有架構，或通過選擇已在架構中定義的欄位來建立此欄位。
+若要設定計算屬性，您必須先識別將儲存計算屬性值的欄位。 您可以使用結構描述欄位群組來建立此欄位，以將欄位新增至現有結構描述，或選取您已在結構描述中定義的欄位。
 
 >[!NOTE]
 >
->無法將計算屬性添加到Adobe定義的欄位組中的欄位。 欄位必須位於 `tenant` 命名空間，表示它必須是定義並添加到架構的欄位。
+>運算屬性無法新增至Adobe定義的欄位群組中的欄位。 欄位必須位於 `tenant` 名稱空間，這表示它必須是您定義並新增到結構描述的欄位。
 
-要成功定義計算屬性欄位，必須為 [!DNL Profile] 並作為該模式所基於的類的聯合模式的一部分出現。 有關 [!DNL Profile]-enabled schemas and unions，請查看 [!DNL Schema Registry] 開發人員指南部分 [為配置檔案和查看聯合架構啟用架構](../../xdm/api/getting-started.md)。 此外，還建議對 [工會一節](../../xdm/schema/composition.md) 在架構組合基礎文檔中。
+為了成功定義計算屬性欄位，結構描述必須啟用 [!DNL Profile] 和會作為結構描述所依據之類別的聯合結構描述的一部分出現。 如需詳細資訊，請參閱 [!DNL Profile] — 啟用的結構描述和聯合，請檢閱 [!DNL Schema Registry] 開發人員指南章節於 [為設定檔啟用結構描述並檢視聯合結構描述](../../xdm/api/getting-started.md). 也建議檢閱 [關於聯合的區段](../../xdm/schema/composition.md) 結構描述組合基本資料檔案中。
 
-本教程中的工作流使用 [!DNL Profile]-enabled schema ，並遵循定義包含計算屬性欄位的新欄位組並確保其是正確命名空間的步驟。 如果啟用了Profile的架構中已有一個位於正確命名空間的欄位，則可以直接繼續執行 [建立計算屬性](#create-a-computed-attribute)。
+本教學課程中的工作流程使用 [!DNL Profile]-enabled結構描述，並遵循定義包含計算屬性欄位的新欄位群組，以及確保它是正確名稱空間的步驟。 如果您的欄位在啟用設定檔的結構描述中位於正確的名稱空間，您可以直接進入的步驟 [建立計算屬性](#create-a-computed-attribute).
 
-## 查看架構
+## 檢視結構描述
 
-後續步驟使用Adobe Experience Platform用戶介面查找架構、添加欄位組和定義欄位。 如果你想用 [!DNL Schema Registry] API，請參閱 [架構註冊表開發人員指南](../../xdm/api/getting-started.md) 有關如何建立欄位組、將欄位組添加到架構以及啟用用於的架構的步驟 [!DNL Real-Time Customer Profile]。
+後續步驟使用Adobe Experience Platform使用者介面來尋找結構、新增欄位群組和定義欄位。 如果您偏好使用 [!DNL Schema Registry] API，請參閱 [Schema Registry開發人員指南](../../xdm/api/getting-started.md) 如需如何建立欄位群組的步驟，請將欄位群組新增至結構描述，並啟用結構描述以用於 [!DNL Real-Time Customer Profile].
 
-在用戶介面中，按一下 **[!UICONTROL 架構]** 在左欄上，使用 **[!UICONTROL 瀏覽]** 頁籤，快速查找要更新的架構。
+在使用者介面中，按一下 **[!UICONTROL 結構描述]** 左側邊欄中使用「 」搜尋列 **[!UICONTROL 瀏覽]** 索引標籤來快速尋找您要更新的結構描述。
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-找到架構後，按一下其名稱以開啟 [!DNL Schema Editor] 可以在其中編輯架構。
+找到結構描述後，按一下其名稱以開啟 [!DNL Schema Editor] 您可以在其中編輯結構描述。
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
 ## 建立欄位群組
 
-要建立新欄位組，請按一下 **[!UICONTROL 添加]** 下 **[!UICONTROL 欄位組]** 的 **[!UICONTROL 組合]** 的上界。 開啟 **[!UICONTROL 添加欄位組]** 對話框，您可以在其中查看現有欄位組。 按一下的單選按鈕 **[!UICONTROL 建立新欄位組]** 來定義新欄位組。
+若要建立新的欄位群組，請按一下 **[!UICONTROL 新增]** 旁邊 **[!UICONTROL 欄位群組]** 在 **[!UICONTROL 組合]** 區段。 如此將可開啟 **[!UICONTROL 新增欄位群組]** 對話方塊，您可在其中檢視現有的欄位群組。 按一下選項按鈕 **[!UICONTROL 建立新欄位群組]** 以定義您的新欄位群組。
 
-為欄位組指定名稱和說明，然後按一下 **[!UICONTROL 添加欄位組]** 完成。
+為欄位群組提供名稱和說明，然後按一下 **[!UICONTROL 新增欄位群組]** 完成時。
 
 ![](../images/computed-attributes/Add-field-group.png)
 
-## 將計算屬性欄位添加到架構
+## 將計算屬性欄位新增至結構描述
 
-您的新欄位組現在應出現在「 」中[!UICONTROL 欄位組]「 」部分[!UICONTROL 組合]。 按一下欄位組和多個欄位組的名稱 **[!UICONTROL 添加欄位]** 按鈕將出現在 **[!UICONTROL 結構]** 的子菜單。
+您的新欄位群組現在應會顯示在「[!UICONTROL 欄位群組]「 」下的「 」區段[!UICONTROL 組合]「。 按一下欄位群組的名稱，然後按多個 **[!UICONTROL 新增欄位]** 按鈕將顯示在 **[!UICONTROL 結構]** 區段。
 
-選擇 **[!UICONTROL 添加欄位]** 在架構名稱旁邊添加頂級欄位，或選擇在您喜歡的架構內的任意位置添加該欄位。
+選取 **[!UICONTROL 新增欄位]** 在結構描述名稱旁邊，以新增頂層欄位，或者您可以選取將欄位新增到您偏好的結構描述內的任何位置。
 
-按一下後 **[!UICONTROL 添加欄位]** 將開啟一個新對象，該對象以您的租戶ID命名，顯示該欄位位於正確的命名空間中。 在該對象中， **[!UICONTROL 新建欄位]** 的子菜單。 如果要定義計算屬性的欄位，則顯示此欄位。
+按一下 **[!UICONTROL 新增欄位]** 新物件隨即開啟，以您的租使用者ID命名，表示欄位位於正確的名稱空間。 在該物件中， **[!UICONTROL 新欄位]** 出現。 如果您要在其中定義計算屬性的欄位，就會執行此動作。
 
 ![](../images/computed-attributes/New-field.png)
 
-## 配置欄位
+## 設定欄位
 
-使用 **[!UICONTROL 欄位屬性]** 編輯器右側的「 」部分，提供新欄位的必要資訊，包括其名稱、顯示名稱和類型。
+使用 **[!UICONTROL 欄位屬性]** 區段，提供新欄位的必要資訊，包括其名稱、顯示名稱和型別。
 
 >[!NOTE]
 >
->欄位的類型必須與計算的屬性值的類型相同。 例如，如果計算的屬性值是字串，則在架構中定義的欄位必須是字串。
+>欄位的型別必須與計算屬性值相同。 例如，如果計算的屬性值是一個字串，則結構描述中定義的欄位必須是字串。
 
-完成後，按一下 **[!UICONTROL 應用]** 欄位的名稱及其類型將出現在 **[!UICONTROL 結構]** 的子菜單。
+完成後，按一下 **[!UICONTROL 套用]** 和欄位的名稱及其型別將顯示在 **[!UICONTROL 結構]** 區段。
 
 ![](../images/computed-attributes/Apply.png)
 
-## 啟用架構 [!DNL Profile]
+## 為以下專案啟用結構描述 [!DNL Profile]
 
-在繼續之前，請確保已為 [!DNL Profile]。 按一下中的架構名稱 **[!UICONTROL 結構]** 的下界 **[!UICONTROL 架構屬性]** 按鈕 如果 **[!UICONTROL 配置檔案]** 滑塊為藍色，已為 [!DNL Profile]。
+在繼續之前，請確定結構描述已啟用 [!DNL Profile]. 按一下以下位置中的結構描述名稱： **[!UICONTROL 結構]** 區段，以便 **[!UICONTROL 結構描述屬性]** 標籤隨即顯示。 如果 **[!UICONTROL 設定檔]** 滑桿為藍色，表示結構描述已啟用 [!DNL Profile].
 
 >[!NOTE]
 >
->啟用架構 [!DNL Profile] 無法撤消，因此，如果在滑塊啟用後按一下它，則不必冒險禁用它。
+>啟用結構描述 [!DNL Profile] 無法復原，因此如果您在啟用後按一下滑桿，就不必冒險停用它。
 
 ![](../images/computed-attributes/Profile.png)
 
-您現在可以按一下 **[!UICONTROL 保存]** 保存更新的架構，然後使用API繼續教程的其餘部分。
+您現在可以按一下 **[!UICONTROL 儲存]** 以儲存更新的結構描述，並使用API繼續本教學課程的其餘部分。
 
 ## 後續步驟
 
-既然您已建立了一個欄位，計算屬性值將儲存到該欄位中，則可以使用 `/computedattributes` API終結點。 有關在API中建立計算屬性的詳細步驟，請按照中提供的步驟操作 [計算屬性API終結點指南](ca-api.md)。
+現在您已建立要儲存計算屬性值的欄位，您可以使用 `/computedattributes` api端點。 如需在API中建立計算屬性的詳細步驟，請依照以下提供的步驟操作： [計算屬性API端點指南](ca-api.md).

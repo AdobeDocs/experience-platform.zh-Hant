@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform發行說明2023年3月
-description: 2023年3月為Adobe Experience Platform發佈的說明。
+description: Adobe Experience Platform的2023年3月發行說明。
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 4%
 Adobe Experience Platform 現有功能更新：
 
 - [儀表板](#dashboards)
-- [資料收集](#data-collection)
+- [資料彙集](#data-collection)
 - [資料準備](#data-prep)
 - [目的地](#destinations)
 - [體驗資料模型](#xdm)
@@ -27,185 +27,185 @@ Adobe Experience Platform 現有功能更新：
 
 ## 儀表板 {#dashboards}
 
-Adobe Experience Platform提供了多個儀表板，您可以通過這些儀表板查看有關組織資料的重要見解，如在每日快照中捕獲的。
+Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板檢視有關您組織資料的重要深入分析，如每日快照期間所擷取。
 
-**新增或更新的功能** {#dashboards-new-updated-features}
+**新功能或更新功能** {#dashboards-new-updated-features}
 
 | 功能 | 說明 |
 | --- | --- |
-| 用戶定義的儀表板 | 你現在可以 **示例屬性值** 將屬性添加到用戶定義的儀表板小部件合成器中的小部件之前。 建立小部件時，該屬性列中的幾個示例值可用於單個屬性。<br>你現在可以 **交換X和Y軸** 在小部件上的交換軸按鈕。 這可節省時間，並在向小部件添加屬性時提供更符合人體工學的體驗。 這樣，需要從「屬性」面板中再次查找兩個屬性。<br> 你現在可以 **更改圖例的位置和標題** 在小部件里。 在小部件上出現圖例後，可以將圖例重新定位到圖表的任意位置，還可以重新命名圖例標題，就像使用軸標籤和小部件標題一樣。 |
+| 使用者定義儀表板 | 您現在可以 **範例屬性值** 將屬性新增至使用者定義儀表板widget撰寫器中的widget之前。 建立Widget時，該屬性欄中的幾個範例值可用於個別屬性。<br>您現在可以 **交換X和Y軸** 使用「交換軸」按鈕切換至您的Widget。 這可節省時間，並在將屬性新增至Widget時提供更符合人體工學的體驗。 此儲存需要再次從屬性面板尋找兩個屬性。<br> 您現在可以 **變更圖例的位置和標題** 在您的Widget中。 當圖例出現在Widget上後，您可以將該圖例重新放置到圖表周圍的任何位置，並且重新命名圖例標題，如同使用座標軸標籤和Widget標題一樣。 |
 
 {style="table-layout:auto"}
 
-有關儀表板的詳細資訊，包括如何授予訪問權限和建立自定義小部件，請從讀取 [儀表板概述](../../dashboards/home.md)。
+如需儀表板的詳細資訊，包括如何授予存取許可權及建立自訂Widget，請從閱讀 [儀表板概觀](../../dashboards/home.md).
 
-## 資料收集 {#data-collection}
+## 資料彙集 {#data-collection}
 
-Adobe Experience Platform公司提供了一套技術，使您能夠收集客戶端客戶體驗資料並將其發送到Adobe Experience Platform邊緣網路，在該網路中，資料可以得到豐富、轉換並分發到Adobe或非Adobe目的地。
+Adobe Experience Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將其傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將其分發到Adobe或非Adobe目的地。
 
-**新增或更新的功能**
+**新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 新的Meta Conversions API快速啟動工作流(Beta) | 從「資料收集」主螢幕訪問「入門」下的新快速啟動工作流！ 的 [元轉換API的快速啟動工作流](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) 使客戶能夠快速收集和轉發事件資料，從伺服器端到Meta，只需幾個簡單的步驟即可進行廣告轉換。 |
-| Mobile SDK（測試版）的新快速啟動工作流 | 從「資料收集」主螢幕訪問「入門」下的新快速啟動工作流！ 的 [移動SDK的快速啟動工作流](https://developer.adobe.com/client-sdks/documentation/) 使您能夠快速實施移動SDK，並只需幾個簡單的步驟即可驗證基本的移動事件。 |
-| [!DNL Braze] 事件轉發擴展 | 的 [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 事件轉發擴展允許您利用在Adobe Experience Platform邊緣網路中捕獲的資料並將其發送到 [!DNL Braze] 以伺服器端事件的形式使用 [!DNL Braze] 用戶跟蹤API。 |
-| [!DNL Epsilon] 事件轉發擴展 | 的 [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 擴展允許您利用事件轉發來捕獲Adobe Experience Platform邊緣網路中的事件資訊並將其發送到 [!DNL Epsilon] 使用 [!DNL Epsilon] 事件API。 |
-| [!DNL Mixpanel] 事件轉發擴展 | 的 [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 擴展使客戶能夠利用事件轉發來捕獲Adobe Experience Platform邊緣網路中的事件資訊，並使用跟蹤事件API將其發送到Mixpanel。 |
+| 中繼轉換API （測試版）的全新快速入門工作流程 | 從資料收集首頁畫面存取「快速入門」底下的全新快速入門工作流程！ 此 [中繼轉換API的快速入門工作流程](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start) 讓客戶能快速收集並轉送事件資料，從伺服器端轉送至Meta，以便透過幾個簡單的步驟進行廣告轉換。 |
+| 行動SDK全新快速入門工作流程（測試版） | 從資料收集首頁畫面存取「快速入門」底下的全新快速入門工作流程！ 此 [行動SDK快速入門工作流程](https://developer.adobe.com/client-sdks/documentation/) 可讓您快速實作Mobile SDK，並只需幾個簡單步驟即可驗證基本行動事件。 |
+| [!DNL Braze] 事件轉送擴充功能 | 此 [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 事件轉送擴充功能可讓您運用Adobe Experience Platform Edge Network中擷取的資料，並將其傳送至 [!DNL Braze] 以伺服器端事件的形式使用 [!DNL Braze] 使用者追蹤API。 |
+| [!DNL Epsilon] 事件轉送擴充功能 | 此 [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 擴充功能可讓您運用事件轉送，擷取Adobe Experience Platform Edge Network中的事件資訊，並將其傳送至 [!DNL Epsilon] 使用 [!DNL Epsilon] 事件API。 |
+| [!DNL Mixpanel] 事件轉送擴充功能 | 此 [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 擴充功能可讓客戶運用事件轉送功能，擷取Adobe Experience Platform Edge Network中的事件資訊，並使用「追蹤事件」API將其傳送至Mixpanel。 |
 
 {style="table-layout:auto"}
 
 ## 資料準備 {#data-prep}
 
-資料準備允許資料工程師將資料映射到體驗資料模型(XDM)並驗證資料。
+「資料準備」可讓資料工程師對應、轉換和驗證與Experience Data Model (XDM)之間的資料。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 對Adobe Analytics資料進行篩選的一般可用性 | 現在，您可以使用資料準備功能應用規則和條件來篩選分析資料，然後再將它們插入即時客戶配置檔案。 有關詳細資訊，請閱讀上的指南 [篩選分析資料以接收配置檔案](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile)。 |
-| 編碼和解碼URL字串的新函式 | <ul><li>的 `get_url_encoded` 函式以URL為輸入，用ASCII字元替換或編碼特殊字元。</li><li>的 `get_url_decoded` 函式將URL作為輸入，並將ASCII字元解碼為特殊字元。</li></ul> 有關詳細資訊，請閱讀 [資料準備功能指南](../../data-prep/functions.md)。 有關保留字元及其相應編碼字元的綜合清單，請閱讀上的指南 [特殊字元](../../data-prep/functions.md#special-characters)。 |
+| 篩選Adobe Analytics資料的一般可用性 | 您現在可以使用資料準備功能套用規則和條件，在將Analytics資料擷取到即時客戶設定檔中之前篩選這些資料。 如需詳細資訊，請閱讀以下指南： [篩選設定檔擷取的Analytics資料](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-profile). |
+| 用於編碼和解碼URL字串的新函式 | <ul><li>此 `get_url_encoded` 函式以URL作為輸入，並使用ASCII字元取代或編碼特殊字元。</li><li>此 `get_url_decoded` 函式以URL作為輸入，並將ASCII字元解碼為特殊字元。</li></ul> 如需詳細資訊，請閱讀 [資料準備函式指南](../../data-prep/functions.md). 如需保留字元及其對應編碼字元的完整清單，請閱讀以下指南： [特殊字元](../../data-prep/functions.md#special-characters). |
 
-有關資料準備的詳細資訊，請閱讀 [資料準備概述](../../data-prep/home.md)。
+如需「資料準備」的詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
 
 ## 目的地 {#destinations}
 
-[!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
+[!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
 
-**新目標** {#new-destinations}
+**新目的地** {#new-destinations}
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [[!DNL Adobe Commerce] 連接GA](../../destinations/catalog/personalization/adobe-commerce.md) | 的 [!DNL Adobe Commerce] 目標連接器（現在通常可用）允許您選擇一個或多個Real-Time CDP受眾以激活到您的 [!DNL Adobe Commerce] 為購物者提供動態個性化體驗。 |
-| [[!DNL Snap Inc] 連接GA](../../destinations/catalog/advertising/snap-inc.md) | 的 [!DNL Snap Inc] 目標連接器（現在通常可用）允許商家將在Experience Platform中建立的用戶段導入 [!DNL Snapchat Ads] 用它們來瞄準廣告。 |
-| [(API)OracleEloqua連接](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | 使用基於API的連接到 [!DNL Oracle Eloqua] 計畫和執行市場活動，同時為潛在客戶提供個性化的客戶體驗 [!DNL Oracle Eloqua]。 |
-| [(Beta) [!DNL Amazon Ads] 連接](../../destinations/catalog/advertising/amazon-ads.md) | 的 [!DNL Amazon Ads] 與Adobe Experience Platform的整合提供轉鍵整合， [!DNL Amazon Ads] 產品，包括 [!DNL Amazon DSP (ADSP)]。 使用 [!DNL Amazon Ads] 目的地在Adobe Experience Platform，用戶能夠定義廣告客戶群，以便在其上進行目標和激活 [!DNL Amazon DSP]。 |
-| [[!DNL Marketo Measure Ultimate] 連接](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] （前稱Bizbile）讓營銷人員瞭解哪些營銷努力在推動收入和最大化公司投資回報方面最有效。 目的地使業務對業務(B2B)資料從Adobe Experience Platform流到 [!DNL Marketo Measure]。 該卡僅可用於 [!DNL Marketo Measure Ultimate] 客戶。 |
-| [TikTok](../../destinations/catalog/social/tiktok.md) | 利用您的資料在TikTok建立自定義受眾，以針對您的廣告活動。 |
-| [Zendesk連接](../../destinations/catalog/crm/zendesk.md) | 使用此目標可建立和更新段內的標識作為段內的聯繫人 [!DNL Zendesk]。 |
+| [[!DNL Adobe Commerce] 連線GA](../../destinations/catalog/personalization/adobe-commerce.md) | 此 [!DNL Adobe Commerce] 目的地聯結器（現已正式推出）可讓您選取一或多個Real-Time CDP對象，以啟用至 [!DNL Adobe Commerce] 帳戶，為購物者提供動態的個人化體驗。 |
+| [[!DNL Snap Inc] 連線GA](../../destinations/catalog/advertising/snap-inc.md) | 此 [!DNL Snap Inc] 目的地聯結器（現已正式推出）可讓行銷人員將Experience Platform中建立的使用者區段匯入 [!DNL Snapchat Ads] 並使用它們來鎖定其廣告。 |
+| [(API) Oracle Eloqua連線](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | 使用API型連線來 [!DNL Oracle Eloqua] 規劃及執行行銷活動，同時為中的潛在客戶提供個人化的客戶體驗 [!DNL Oracle Eloqua]. |
+| [(Beta) [!DNL Amazon Ads] 連線](../../destinations/catalog/advertising/amazon-ads.md) | 此 [!DNL Amazon Ads] 與Adobe Experience Platform整合提供以下專案的統包整合： [!DNL Amazon Ads] 產品，包括 [!DNL Amazon DSP (ADSP)]. 使用 [!DNL Amazon Ads] 目的地：在Adobe Experience Platform中，使用者能定義廣告商對象，以在 [!DNL Amazon DSP]. |
+| [[!DNL Marketo Measure Ultimate] 連線](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] （前身為Bizible）可讓行銷人員深入瞭解哪些行銷手法最能有效提升公司收入，實現投資報酬最大化。 目的地可讓企業對企業(B2B)資料從Adobe Experience Platform傳輸至 [!DNL Marketo Measure]. 此卡僅適用於 [!DNL Marketo Measure Ultimate] 客戶。 |
+| [TikTok連線](../../destinations/catalog/social/tiktok.md) | 使用您的資料在TikTok上建立自訂對象，以使用您的廣告促銷活動進行目標定位。 |
+| [Zendesk連線](../../destinations/catalog/crm/zendesk.md) | 使用此目的地可在區段內建立身分識別並將其更新為內的聯絡人 [!DNL Zendesk]. |
 
 {style="table-layout:auto"}
 
-**新增或更新的功能** {#destinations-new-updated-functionality}
+**新功能或更新功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 目標的新訪問控制權限： [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | 新權限使用戶能夠激活到現有目標的段，而不顯示 [映射步驟](../../destinations/ui/activate-batch-profile-destinations.md#mapping)。 用戶可以在激活工作流中添加和刪除段，但不能添加或刪除映射的屬性或標識。 |
+| 目的地的新存取控制許可權： [[!DNL Activate Segments without Mapping]](../../access-control/home.md#permissions) | 新許可權可讓使用者啟用現有目的地的區段，而不會顯示 [對應步驟](../../destinations/ui/activate-batch-profile-destinations.md#mapping). 使用者可以在啟動工作流程中新增和移除區段，但無法新增或移除對應的屬性或身分。 |
 
 {style="table-layout:auto"}
 
-**修復和增強** {#destinations-fixes-and-enhancements}
+**修正和增強功能** {#destinations-fixes-and-enhancements}
 
-我們將在基於檔案的目標中發佈PGP/GPG加密的錯誤修復程式，用於即時CDP。 通過此更改，當前使用加密的現有基於檔案的目標將生成副檔名與以前不同的檔案名。
+我們正在針對Real-time CDP的檔案型目的地中PGP/GPG加密發行錯誤修正。 透過這項變更，目前使用加密的現有檔案型目的地將會產生副檔名與之前不同的檔案名稱。
 
-- 使用加密時的當前擴展： `filename.csv`
-- 將來使用加密時的擴展： `filename.csv.gpg`
+- 使用加密時目前的擴充功能： `filename.csv`
+- 未來使用加密時的擴充功能： `filename.csv.gpg`
 
-有關目標的更多一般資訊，請參閱 [目標概述](../../destinations/home.md)。
+如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
 
 ## 體驗資料模型(XDM) {#xdm}
 
-XDM是一種開源規範，它為傳入Adobe Experience Platform的資料提供通用結構和定義（架構）。 通過遵守XDM標準，所有客戶體驗資料都可以納入到共同的表示形式中，以更快、更整合的方式提供見解。 您可以從客戶操作中獲得有價值的見解，通過細分市場定義客戶受眾，並將客戶屬性用於個性化目的。
+XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提供通用結構和定義（結構描述）。 藉由遵守XDM標準，所有客戶體驗資料都可以整合到通用表示中，以更快、更整合的方式提供深入分析。 您可以從客戶動作獲得有價值的深入分析、透過區段定義客戶對象，以及使用客戶屬性進行個人化。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| CSV到架構建議 | 現在，您可以上載本地檔案以建立機器學習生成的架構，從而無需手動建立架構。 從 [!UICONTROL 源] 工作區、上載示例CSV檔案和Adobe機器學習算法將根據目標欄位為您建議一個模式。 查看 [文檔](../../ingestion/tutorials/map-csv/recommendations.md) 的子菜單。」 |
+| CSV至結構描述推薦 | 您現在可以上傳本機檔案，建立機器學習產生的結構描述，而無需手動建立結構描述。 從 [!UICONTROL 來源] 工作區、上傳範例CSV檔案，以及Adobe機器學習演演算法會根據目標欄位為您建議結構描述。 請參閱 [檔案](../../ingestion/tutorials/map-csv/recommendations.md) 以取得詳細資訊。」 |
 
 {style="table-layout:auto"}
 
-**新的XDM元件**
+**新XDM元件**
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 類別 | [[!UICONTROL 優惠項目]](https://github.com/adobe/xdm/pull/1678/files) | 表示優惠的類。 |
-| 類別 | [[!UICONTROL 決策項]](https://github.com/adobe/xdm/pull/1678/files) | 可進行判定的項目。 決策過程的輸出是一個或多個決策項。 |
-| 類別 | [[!UICONTROL 媒體會話伺服器超時]](https://github.com/adobe/xdm/pull/1676/files) | 這表示在用戶的上次已知交互和會話關閉時之間經過的時間（秒）。 |
-| 欄位組 | [[!UICONTROL XDM配置檔案計算屬性]](https://github.com/adobe/xdm/pull/1686/files) | 這會將內部Adobe服務的計算屬性添加到傳入的客戶資料。 客戶不應使用此功能來接收資料。 |
-| 資料類型 | [[!UICONTROL 退款項]](https://github.com/adobe/xdm/pull/1685/files) | 指示退款是否與訂單關聯並定義退款類型、金額和關聯幣種。 |
-| 資料類型 | [[!UICONTROL 類別資料]](https://github.com/adobe/xdm/pull/1677/files) | 此新資料類型表示產品的類別。 |
-| 方案 | [[!UICONTROL Adobe Target分類欄位]](https://github.com/adobe/xdm/pull/1682/files) | 為目標分類資料集建立了新的XDM架構。 它包含一組元資料欄位，用於對目標活動和體驗進行分類。 |
+| 類別 | [[!UICONTROL 選件專案]](https://github.com/adobe/xdm/pull/1678/files) | 代表選件的類別。 |
+| 類別 | [[!UICONTROL 決定專案]](https://github.com/adobe/xdm/pull/1678/files) | 可進行決策的專案。 決策程式的輸出是一或多個決策專案。 |
+| 類別 | [[!UICONTROL 媒體工作階段伺服器逾時]](https://github.com/adobe/xdm/pull/1676/files) | 這表示在使用者最後一次已知互動和工作階段關閉時刻之間經過的時間量（以秒為單位）。 |
+| 欄位群組 | [[!UICONTROL XDM設定檔計算屬性]](https://github.com/adobe/xdm/pull/1686/files) | 這會將內部Adobe服務的計算屬性新增至傳入的客戶資料。 客戶不應使用此項來擷取資料。 |
+| 資料類型 | [[!UICONTROL 退款專案]](https://github.com/adobe/xdm/pull/1685/files) | 指出退款是否與訂單相關聯，並定義退款型別、金額和相關聯的幣別。 |
+| 資料類型 | [[!UICONTROL 類別資料]](https://github.com/adobe/xdm/pull/1677/files) | 此新資料型別代表產品的類別。 |
+| 方案 | [[!UICONTROL Adobe Target分類欄位]](https://github.com/adobe/xdm/pull/1682/files) | 已為目標分類資料集建立新的XDM結構描述。 它包含一組中繼資料欄位，可分類Target活動和體驗。 |
 
 {style="table-layout:auto"}
 
-**更新的XDM元件**
+**已更新XDM元件**
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 欄位組 | [[!UICONTROL 內容元件詳細資訊]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` 已從 [!UICONTROL 內容元件詳細資訊] |
-| 欄位組 | [[!UICONTROL AJO實體標籤]](https://github.com/adobe/xdm/pull/1672/files) | 已將AJO實體標籤添加到 [!UICONTROL AJO實體欄位]，對應於Journey或Campaign |
-| 欄位組 | （多個） | 添加了幾個欄位 [[!UICONTROL Journey Orchestration步驟事件公用欄位]](https://github.com/adobe/xdm/pull/1671/files) |
-| 欄位組 | （多個） | [已為添加多個XDM事件類型 [!UICONTROL 媒體報告]](https://github.com/adobe/xdm/pull/1670/files)。 |
-| 欄位群組 | [!UICONTROL Workfront變革事件] | 的 `Full Record` 和 `Accessor Employee Ids` 已添加欄位組。 |
-| 資料類型 | [[!UICONTROL 產品清單項]](https://github.com/adobe/xdm/pull/1685/files) | 的 [!UICONTROL 退款金額] 增加，以指明該項目的退款額（如有）。 |
-| 資料類型 | [[!UICONTROL 訂單 ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL 退款清單] 已添加到此訂單的退款清單中。 |
-| 資料類型 | [[!UICONTROL 產品清單項 ]](https://github.com/adobe/xdm/pull/1677/files) | 產品類別已添加到此產品的類別資料清單中。 |
-| 資料類型 | [!UICONTROL 會話詳細資訊資訊] | 已添加 `pev3` 字串欄位 [指示用於報告的媒體流的類型](https://github.com/adobe/xdm/pull/1676/files)。 還添加了 `pccr` 屬性指示是否發生重定向。 |
-| 資料類型 | [!UICONTROL 申請清單] | 提供 [申請清單屬性](https://github.com/adobe/xdm/pull/1675/files)。 包括名稱、ID和說明。 |
-| 資料類型 | [!UICONTROL Commerce] | 的 [已更新商務資料類型](https://github.com/adobe/xdm/pull/1675/files) 包括 `requisitionListOpens`。 `requisitionListAdds`。 `requisitionListRemovals`, `requisitionList`。 |
+| 欄位群組 | [[!UICONTROL 內容元件詳細資料]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` 「 」已移除 [!UICONTROL 內容元件詳細資料] |
+| 欄位群組 | [[!UICONTROL AJO實體標籤]](https://github.com/adobe/xdm/pull/1672/files) | 已新增AJO實體標籤至 [!UICONTROL ajo實體欄位]，對應至歷程或行銷活動 |
+| 欄位群組 | （多個） | 已新增多個欄位 [[!UICONTROL Journey Orchestration步驟事件常見欄位]](https://github.com/adobe/xdm/pull/1671/files) |
+| 欄位群組 | （多個） | [已新增多個XDM事件型別 [!UICONTROL 媒體報告]](https://github.com/adobe/xdm/pull/1670/files). |
+| 欄位群組 | [!UICONTROL Workfront變更事件] | 此 `Full Record` 和 `Accessor Employee Ids` 欄位群組已新增。 |
+| 資料類型 | [[!UICONTROL 產品清單專案]](https://github.com/adobe/xdm/pull/1685/files) | 此 [!UICONTROL 退款金額] 已新增，以表示該料號的退款金額（若有的話）。 |
+| 資料類型 | [[!UICONTROL 訂購 ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL 退款清單] 已新增至此訂單的退款清單。 |
+| 資料類型 | [[!UICONTROL 產品清單專案 ]](https://github.com/adobe/xdm/pull/1677/files) | 已將產品類別新增到此產品的類別資料清單中。 |
+| 資料型別 | [!UICONTROL 工作階段詳細資訊] | 已新增 `pev3` 字串欄位， [表示用於報告的媒體資料流的型別](https://github.com/adobe/xdm/pull/1676/files). 另外新增 `pccr` 屬性指出是否發生重新導向。 |
+| 資料型別 | [!UICONTROL 請購單清單] | 提供 [請購單清單屬性](https://github.com/adobe/xdm/pull/1675/files). 包括名稱、ID和說明。 |
+| 資料型別 | [!UICONTROL Commerce] | 此 [Commerce資料型別已更新](https://github.com/adobe/xdm/pull/1675/files) 要包含 `requisitionListOpens`， `requisitionListAdds`， `requisitionListRemovals`、和 `requisitionList`. |
 
 {style="table-layout:auto"}
 
-有關平台中XDM的詳細資訊，請閱讀 [XDM系統概述](../../xdm/home.md)。
+如需Platform中XDM的詳細資訊，請閱讀 [XDM系統總覽](../../xdm/home.md).
 
 ## 查詢服務 {#query-service}
 
-查詢服務允許您使用標準SQL查詢Adobe Experience Platform的資料 [!DNL Data Lake]。 您可以加入資料湖中的任何資料集，並將查詢結果捕獲為新資料集，以用於報告、Data Science Workspace或接收到即時客戶配置檔案。
+查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以聯結Data Lake的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或內嵌到即時客戶個人檔案中。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 基於屬性的加速儲存訪問控制 | 使用基於屬性的訪問控制與資料Distiller來定義加速儲存上所有資料集的訪問控制。 這控制對用戶建立並儲存在加速儲存上的自定義資料模型的訪問，以便為自定義儀表板提供動力。 |
+| 加速存放區上以屬性為基礎的存取控制 | 使用屬性式存取控制搭配Data Distiller來定義對加速存放區上所有資料集的存取控制。 這可控制對由使用者建立並儲存在加速存放區的自訂資料模型的存取，以便支援自訂儀表板。 |
 
 {style="table-layout:auto"}
 
-有關查詢服務的詳細資訊，請參閱 [查詢服務概述](../../query-service/home.md)。
+如需查詢服務的詳細資訊，請參閱 [查詢服務總覽](../../query-service/home.md).
 
 ## Real-Time Customer Data Platform B2B 版本 {#b2b}
 
-Real-Time CDPB2B版本以Real-time Customer Data Platform(Real-Time CDP)為基礎，專門為以企業對企業服務模式運營的營銷人員而設計。 它將來自多個來源的資料匯集在一起，並將其合併到人員和帳戶配置檔案的單個視圖中。 此統一資料使營銷人員能夠精確地瞄準特定受眾，並跨所有可用渠道接觸這些受眾。
+Real-Time CDP B2B Edition以Real-time Customer Data Platform (Real-Time CDP)為基礎，專為以B2B服務模式運作的行銷人員所打造。 它會整合來自多個來源的資料，並將其合併為單一檢視的人員與帳戶設定檔。 此統一的資料可讓行銷人員精準鎖定特定對象，並透過所有可用管道吸引這些對象。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 錯誤修復 | 為了在系統中提供更準確的配置檔案表示，系統不再在Real-time Customer Data PlatformB2B版的配置檔案總數或可定址的受眾度量中包含內部配置檔案。 從今天開始，您可能會看到配置檔案總數/可定址受眾度量的一次性下降。 您的資料未被擦除，這只是對計數的更改。 請與您的Adobe主管聯繫，以瞭解您可能有的任何顧慮 |
+| Bugfix | 為了更準確地呈現您系統中的設定檔，系統不再將內部設定檔納入Real-time Customer Data Platform B2B版本的總設定檔計數或可定址對象量度中。 從今天開始，您可能會看到設定檔總數/可定址對象量度有一次性的下降。 未清除任何資料，這只是計數變更。 如有任何疑問，請聯絡您的Adobe主管 |
 
 {style="table-layout:auto"}
 
-要瞭解有關Real-Time CDPB2B版的更多資訊，請閱讀 [Real-Time CDPB2B版概述](../../rtcdp/overview.md)。
+若要進一步瞭解Real-Time CDP B2B版本，請閱讀 [Real-Time CDP B2B版本概觀](../../rtcdp/overview.md).
 
 ## 分段服務 {#segmentation}
 
-[!DNL Segmentation Service] 通過描述區分客戶群中可銷售人員組的標準來定義特定配置檔案子集。 段可以基於記錄資料（如人口統計資訊）或表示客戶與您品牌的交互的時間序列事件。
+[!DNL Segmentation Service] 透過描述可區分客戶群內可銷售人員群組的條件，來定義設定檔的特定子集。 區段能以記錄資料（例如人口資訊）或代表客戶與品牌互動的時間序列事件為基礎。
 
-**新增或更新的功能**
+**新功能或更新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 配置檔案度量 | 為了更準確地表示配置檔案度量，將合併成員資格細分和流失度量，現在將在24小時內計算。 有關詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#browse) |
+| 設定檔量度 | 為了讓您更準確地表示設定檔量度，會合併成員資格劃分和流失量度，而且計算期間為24小時。 如需詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#browse) |
 
 {style="table-layout:auto"}
 
-有關 [!DNL Segmentation Service]，請參閱 [分段概述](../../segmentation/home.md)。
+如需詳細資訊，請參閱 [!DNL Segmentation Service]，請參閱 [區段概觀](../../segmentation/home.md).
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可以從外部源接收資料，並允許您使用平台服務來構建、標籤和增強資料。 您可以從多種來源(如Adobe應用程式、基於雲的儲存、第三方軟體和您的CRM系統)接收資料。
+Adobe Experience Platform可從外部來源擷取資料，並允許您使用Platform服務來建構、加標籤及增強這些資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供REST風格的API和互動式UI，讓您能夠輕鬆地為各種資料提供程式設定源連接。 通過這些源連接，您可以驗證並連接到外部儲存系統和CRM服務，設定接收運行時間，並管理資料接收吞吐量。
+Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理資料擷取輸送量。
 
-**已更新功能**
+**更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| Beta可用性 [!DNL Chatlio] | 的 [!DNL Chatlio] 「源」現在在beta中可用。 使用 [!DNL Chatlio] 源流 [!DNL Chatlio] 事件資料到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Chatlio] 概述](../../sources/connectors/marketing-automation/chatlio-webhook.md)。 |
-| Beta可用性 [!DNL Customer.io] | 的 [!DNL Customer.io] 「源」現在在beta中可用。 使用 [!DNL Customer.io] 源，用於將客戶事件資料流化到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Customer.io] 概述](../../sources/connectors/marketing-automation/customerio-webhook.md)。 |
-| Beta可用性 [!DNL Pendo] | 的 [!DNL Pendo] 「源」現在在beta中可用。 使用 [!DNL Pendo] 源以將產品分析資料流化到Experience Platform。 有關詳細資訊，請閱讀 [[!DNL Pendo] 概述](../../sources/connectors/analytics/pendo-webhook.md)。 |
-| 支援草稿資料流 | 現在，您可以使用流服務API將資料流設定為草稿狀態。 起草的資料流稍後可以更新並發佈新資訊。 有關詳細資訊，請閱讀上的指南 [將源資料流設定為草稿](../../sources/tutorials/api/draft.md)。 |
+| 的Beta版可用性 [!DNL Chatlio] | 此 [!DNL Chatlio] 來源現在提供測試版。 使用 [!DNL Chatlio] 串流的來源 [!DNL Chatlio] 要Experience Platform的事件資料。 如需詳細資訊，請閱讀 [[!DNL Chatlio] 概觀](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
+| 的Beta版可用性 [!DNL Customer.io] | 此 [!DNL Customer.io] 來源現在提供測試版。 使用 [!DNL Customer.io] 將您的客戶事件資料串流到Experience Platform的來源。 如需詳細資訊，請閱讀 [[!DNL Customer.io] 概觀](../../sources/connectors/marketing-automation/customerio-webhook.md). |
+| 的Beta版可用性 [!DNL Pendo] | 此 [!DNL Pendo] 來源現在提供測試版。 使用 [!DNL Pendo] 將您的產品分析資料串流到Experience Platform的來源。 如需詳細資訊，請閱讀 [[!DNL Pendo] 概觀](../../sources/connectors/analytics/pendo-webhook.md). |
+| 支援草稿資料流 | 您現在可以使用流量服務API將資料流設定為草稿狀態。 草擬的資料流稍後可以更新並發佈新資訊。 如需詳細資訊，請閱讀以下指南： [將您的來源資料流設定為草稿](../../sources/tutorials/api/draft.md). |
 
 {style="table-layout:auto"}
 
-要瞭解有關源的詳細資訊，請閱讀 [源概述](../../sources/home.md)。
+若要進一步瞭解來源，請閱讀 [來源概觀](../../sources/home.md).

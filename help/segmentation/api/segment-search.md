@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；分段；分段服務；故障排除；API;seg;segment;Segment;search;segment search;segment search;
-title: 段搜索API終結點
-description: 在Adobe Experience Platform分段服務API中，段搜索用於搜索包含在各種資料源中的欄位，並以接近即時的方式返回這些欄位。 本指南提供資訊，幫助您更好地瞭解段搜索，並包括使用API執行基本操作的示例API調用。
+keywords: Experience Platform；細分；細分服務；疑難排解；API；seg；區段；區段；搜尋；區段搜尋；
+title: 區段搜尋API端點
+description: Adobe Experience Platform Segmentation Service API中，區段搜尋是用來搜尋各種資料來源包含的欄位，並近乎即時地傳回欄位。 本指南提供的資訊可協助您更清楚瞭解區段搜尋，並提供使用API執行基本動作的範例API呼叫。
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
@@ -10,23 +10,23 @@ ht-degree: 2%
 
 ---
 
-# 段搜索終結點
+# 區段搜尋端點
 
-段搜索用於搜索包含在各種資料源中的欄位，並以接近即時的方式返回這些欄位。
+區段搜尋可用來搜尋各種資料來源包含的欄位，並近乎即時地傳回這些欄位。
 
-本指南提供資訊，幫助您更好地瞭解段搜索，並包括使用API執行基本操作的示例API調用。
+本指南提供的資訊可協助您更清楚瞭解區段搜尋，並提供使用API執行基本動作的範例API呼叫。
 
 ## 快速入門
 
-本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API。 在繼續之前，請查看 [入門指南](./getting-started.md) 要成功調用API，您需要瞭解的重要資訊，包括必需的標頭以及如何讀取示例API調用。
+本指南中使用的端點是 [!DNL Adobe Experience Platform Segmentation Service] API。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標頭及如何讀取範例API呼叫。
 
-除了入門部分中概述的必需標頭外，所有對段搜索終結點的請求都需要以下附加標頭：
+除了快速入門一節中概述的必要標題外，對區段搜尋端點的所有請求都需要以下額外標題：
 
-- x-ups-search-version:&quot;1.0&quot;
+- x-ups-search-version： &quot;1.0&quot;
 
-### 跨多個命名空間搜索
+### 跨多個名稱空間搜尋
 
-此搜索終結點可用於跨各種命名空間搜索，返回搜索計數結果的清單。 可以使用多個參數，用和符號(&amp;)分隔。
+此搜尋端點可用於跨不同名稱空間搜尋，並傳回搜尋計數結果清單。 可使用多個引數，以&amp;分隔。
 
 **API格式**
 
@@ -37,8 +37,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | 參數 | 說明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必需）** 其中{SCHEMA}表示與搜索對象關聯的架構類值。 當前，僅 `_xdm.context.segmentdefinition` 支援。 |
-| `s={SEARCH_TERM}` | *（可選）* 其中{SEARCH_TERM}表示符合Microsoft的 [Lucene的搜索語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 如果未指定搜索術語，則與關聯的所有記錄 `schema.name` 的雙曲餘切值。 更詳細的解釋可在 [附錄](#appendix) 的子菜單。 |
+| `schema.name={SCHEMA}` | **（必要）** 其中{SCHEMA}代表與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
+| `s={SEARCH_TERM}` | *（可選）* 其中{SEARCH_TERM}代表符合Microsoft實施的查詢 [Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 如果未指定搜尋字詞，則所有與關聯的記錄 `schema.name` 將會傳回。 如需更詳細的說明，請參閱 [附錄](#appendix) 本檔案的所有檔案。 |
 
 **要求**
 
@@ -55,7 +55,7 @@ curl -X GET \
 
 **回應**
 
-成功響應返回HTTP狀態200，並返回以下資訊。
+成功的回應會傳回HTTP狀態200，並提供下列資訊。
 
 ```json
 {
@@ -83,9 +83,9 @@ curl -X GET \
 }
 ```
 
-### 搜索單個實體
+### 搜尋個別實體
 
-此搜索終結點可用於檢索指定命名空間中所有全文索引對象的清單。 可以使用多個參數，用和符號(&amp;)分隔。
+此搜尋端點可用於擷取指定名稱空間內所有全文檢索索引物件的清單。 可使用多個引數，以&amp;分隔。
 
 **API格式**
 
@@ -97,12 +97,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 參數 | 說明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必需）** 其中{SCHEMA}包含與搜索對象關聯的架構類值。 當前，僅 `_xdm.context.segmentdefinition` 支援。 |
-| `namespace={NAMESPACE}` | **（必需）** 其中{NAMESPACE}包含要在其中搜索的命名空間。 |
-| `s={SEARCH_TERM}` | *（可選）* 其中{SEARCH_TERM}包含符合Microsoft的 [Lucene的搜索語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 如果未指定搜索術語，則與關聯的所有記錄 `schema.name` 的雙曲餘切值。 更詳細的解釋可在 [附錄](#appendix) 的子菜單。 |
-| `entityId={ENTITY_ID}` | *（可選）* 將搜索限制為在指定的資料夾內（使用{ENTITY_ID}指定）。 |
-| `limit={LIMIT}` | *（可選）* 其中{LIMIT}表示要返回的搜索結果數。 預設值為 50。 |
-| `page={PAGE}` | *（可選）* 其中{PAGE}表示用於對搜索的查詢結果進行分頁的頁碼。 請注意，頁碼的開頭是 **0**。 |
+| `schema.name={SCHEMA}` | **（必要）** 其中{SCHEMA}包含與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
+| `namespace={NAMESPACE}` | **（必要）** 其中{NAMESPACE}包含您要搜尋的名稱空間。 |
+| `s={SEARCH_TERM}` | *（可選）* 其中{SEARCH_TERM}包含符合Microsoft實施的查詢 [Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 如果未指定搜尋字詞，則所有與關聯的記錄 `schema.name` 將會傳回。 如需更詳細的說明，請參閱 [附錄](#appendix) 本檔案的所有檔案。 |
+| `entityId={ENTITY_ID}` | *（可選）* 將搜尋限制在指定的資料夾內（以{ENTITY_ID}指定）。 |
+| `limit={LIMIT}` | *（可選）* 其中{LIMIT}代表要傳回的搜尋結果數目。 預設值為 50。 |
+| `page={PAGE}` | *（可選）* 其中{PAGE}代表用於分頁搜尋之查詢結果的頁碼。 請注意，頁碼的開頭為 **0**. |
 
 
 **要求**
@@ -120,7 +120,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回HTTP狀態200，結果與搜索查詢匹配。
+成功的回應會傳回HTTP狀態200，且結果符合搜尋查詢。
 
 ```json
 {
@@ -156,9 +156,9 @@ curl -X GET \
 }
 ```
 
-### 獲取有關搜索對象的結構資訊
+### 取得搜尋物件的結構資訊
 
-此搜索端點可用於獲取有關所請求搜索對象的結構資訊。
+此搜尋端點可用於取得請求搜尋物件的結構資訊。
 
 **API格式**
 
@@ -168,9 +168,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 參數 | 說明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必需）** 其中{SCHEMA}包含與搜索對象關聯的架構類值。 當前，僅 `_xdm.context.segmentdefinition` 支援。 |
-| `namespace={NAMESPACE}` | **（必需）** 其中{NAMESPACE}包含要在其中搜索的命名空間。 |
-| `entityId={ENTITY_ID}` | **（必需）** 要獲取有關的結構資訊的搜索對象的ID，使用{ENTITY_ID}指定。 |
+| `schema.name={SCHEMA}` | **（必要）** 其中{SCHEMA}包含與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
+| `namespace={NAMESPACE}` | **（必要）** 其中{NAMESPACE}包含您要搜尋的名稱空間。 |
+| `entityId={ENTITY_ID}` | **（必要）** 您想要取得結構資訊之搜尋物件的ID，以{ENTITY_ID}指定。 |
 
 **要求**
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回HTTP狀態200，其中包含有關所請求搜索對象的詳細結構資訊。
+成功的回應會傳回HTTP狀態200，其中包含請求搜尋物件的詳細結構資訊。
 
 ```json
 {
@@ -219,45 +219,45 @@ curl -X GET \
 
 ## 後續步驟
 
-閱讀本指南後，您現在可以更好地瞭解段搜索的工作方式。
+閱讀本指南後，您現在已能更清楚瞭解區段搜尋的運作方式。
 
 ## 附錄 {#appendix}
 
-以下各節提供了有關搜索詞如何工作的附加資訊。 搜索查詢的編寫方式如下： `s={FieldName}:{SearchExpression}`。 例如，要搜索名為或的AAM段 [!DNL Platform]，將使用以下搜索查詢： `s=segmentName:AAM%20OR%20Platform`。
+以下小節提供有關搜尋詞如何運作的其他資訊。 搜尋查詢的編寫方式如下： `s={FieldName}:{SearchExpression}`. 舉例來說，若要搜尋名為AAM的區段，或是 [!DNL Platform]，您會使用下列搜尋查詢： `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] 對於最佳做法，搜索表達式應像上面所示的示例那樣進行HTML編碼。
+> !![NOTE] 為達到最佳實務，搜尋運算式應使用HTML編碼，如上例所示。
 
-### 搜索欄位 {#search-fields}
+### 搜尋欄位 {#search-fields}
 
-下表列出了可在搜索查詢參數中搜索的欄位。
+下表列出可在搜尋查詢引數中搜尋的欄位。
 
 | 欄位名稱 | 說明 |
 | ---------- | ----------- |
-| 資料夾ID | 具有指定搜索的資料夾ID的資料夾或資料夾。 |
-| 資料夾位置 | 具有指定搜索的資料夾位置的位置或位置。 |
-| 父資料夾ID | 具有指定搜索的父資料夾ID的段或資料夾。 |
-| 段ID | 段與指定搜索的段ID匹配。 |
-| 段名稱 | 段與指定搜索的段名稱匹配。 |
-| segmentDescription | 該段與指定搜索的段說明匹配。 |
+| folderId | 具有您指定之搜尋的資料夾ID的資料夾。 |
+| folderLocation | 具有您指定之搜尋的資料夾位置的一個或多個位置。 |
+| parentFolderId | 具有指定搜尋之父資料夾ID的區段或資料夾。 |
+| segmentId | 區段符合您指定之搜尋的區段ID。 |
+| segmentName | 區段符合您指定搜尋的區段名稱。 |
+| segmentDescription | 區段符合您指定之搜尋的區段說明。 |
 
-### 搜索表達式 {#search-expression}
+### 搜尋運算式 {#search-expression}
 
-下表列出了使用段搜索API時搜索查詢的具體工作方式。
+下表列出使用區段搜尋API時，搜尋查詢運作方式的詳細資訊。
 
->!![NOTE] 以下示例以非HTML編碼格式顯示，以便更清晰。 為了獲得最佳實踐，HTML對搜索表達式進行編碼。
+>!![NOTE] 以下範例以非HTML編碼格式顯示，以提供更好的清晰度。 為求最佳實務，請HTML編碼您的搜尋運算式。
 
-| 示例搜索表達式 | 說明 |
+| 範例搜尋運算式 | 說明 |
 | ------------------------- | ----------- |
-| fook | 搜索任何單詞。 如果在任何可搜索欄位中都找到單詞&quot;foo&quot;，則此操作將返回結果。 |
-| foo和欄 | 布爾搜索。 如果 **兩者** 「foo」和「bar」字在任何可搜索欄位中找到。 |
-| foo OR欄 | 布爾搜索。 如果 **或** 在任何可搜索欄位中都可找到單詞&quot;foo&quot;或單詞&quot;bar&quot;。 |
-| foo NOT欄 | 布爾搜索。 如果在任何可搜索欄位中都找不到單詞&quot;foo&quot;，則返回結果。 |
-| 名稱：foo和欄 | 布爾搜索。 如果 **兩者** 「foo」和「bar」在「name」欄位中找到。 |
-| 運行 | 通配符搜索。 使用星號(*)匹配0個或更多字元，這意味著如果任何可搜索欄位的內容包含以「run」開頭的單詞，則返回結果。 例如，如果出現「runs」、「running」、「runner」或「runt」等字，則此操作將返回結果。 |
-| 小卡？ | 通配符搜索。 使用問號(?) 只匹配一個字元，這意味著如果任何可搜索欄位的內容以「cam」和附加字母開頭，則返回結果。 例如，如果出現&quot;camp&quot;或&quot;cams&quot;等字，則返回結果；如果出現&quot;camera&quot;或&quot;campfire&quot;等字，則不返回結果。 |
-| &quot;藍傘&quot; | 片語搜索。 如果任何可搜索欄位的內容包含全片語「藍色雨傘」，則將返回結果。 |
-| 藍色\~ | 模糊搜索。 或者，可以在顎化符(~)後加上一個介於0-2之間的數字來指定編輯距離。 例如，「blue\~1」將返回「blue」、「blues」或「gluse」。 模糊搜索 **僅** 應用於術語，而不是短語。 但是，可以在短語中將顎化符附加到每個單詞的末尾。 例如，&quot;camping\~ in\~ the\~ summer\~&quot;與&quot;camping in the summer\~&quot;相匹配。 |
-| &quot;酒店機場&quot;\~5 | 近距搜索。 此類搜索用於查找文檔中彼此接近的詞。 例如，短語 `"hotel airport"~5` 在檔案中找到5字以內的&quot;旅館&quot;和&quot;機場&quot;。 |
-| `/a[0-9]+b$/` | 規則運算式搜索。 此類搜索基於正斜槓「/」之間的內容查找匹配項，如RegExp類中所述。 例如，要查找包含&quot;motel&quot;或&quot;hotel&quot;的文檔，請指定 `/[mh]otel/`。 規則運算式搜索與單詞匹配。 |
+| foo | 搜尋任何字詞。 如果在任何可搜尋欄位中找到「foo」一詞，則會傳回結果。 |
+| Foo和BAR | 布林值搜尋。 這將傳回結果，如果 **兩者** 字詞「foo」和「bar」可在任何可搜尋欄位中找到。 |
+| foo或bar | 布林值搜尋。 這將傳回結果，如果 **兩者之一** 「foo」或「bar」字樣可在任何可搜尋欄位中找到。 |
+| foo NOT列 | 布林值搜尋。 如果找到「foo」一詞，但在任何可搜尋欄位中找不到「bar」一詞，則會傳回結果。 |
+| 名稱： foo AND列 | 布林值搜尋。 這將傳回結果，如果 **兩者** 在「名稱」欄位中可找到「foo」和「bar」這兩個字。 |
+| 執行* | 萬用字元搜尋。 使用星號(*)會符合0或更多字元，這表示如果任何可搜尋欄位的內容包含以「run」開頭的單字，則會傳回結果。 例如，如果出現「runs」、「running」、「runner」或「runt」等字，就會傳回結果。 |
+| 凸輪？ | 萬用字元搜尋。 使用問號(？) 只符合一個字元，這表示如果任何可搜尋欄位的內容以「cam」和其他字母開頭，則會傳回結果。 例如，如果出現&quot;camp&quot;或&quot;cams&quot;字詞，這將傳回結果，但如果&quot;camera&quot;或&quot;campfire&quot;字詞出現，將不會傳回結果。 |
+| &quot;藍色雨傘&quot; | 片語搜尋。 如果任何可搜尋欄位的內容包含完整的片語「藍色雨傘」，則會傳回結果。 |
+| 藍色\~ | 模糊搜尋。 或者，您也可以在波狀符號(~)後面加上一個介於0到2之間的數字，以指定編輯距離。 例如，「blue\~1」會傳回「blue」、「blues」或「glue」。 模糊搜尋可以 **僅限** 套用至辭彙，而非詞句。 不過，您可以在片語中每個字詞的結尾附加波狀符號。 舉例來說，「夏令營」與「夏令營」並不相符。 |
+| 「飯店機場」\~5 | 近似程度搜尋。 此搜尋型別用於尋找檔案中彼此接近的字詞。 例如，片語 `"hotel airport"~5` 會在檔案中找到5個字串內分別出現的「hotel」和「airport」字詞。 |
+| `/a[0-9]+b$/` | 規則運算式搜尋。 這類搜尋會根據正斜線「/」之間的內容尋找相符專案，如RegExp類別中所述。 例如，若要尋找包含「motel」或「hotel」的檔案，請指定 `/[mh]otel/`. 規則運算式搜尋會根據單一字詞進行比對。 |
 
-有關查詢語法的更詳細文檔，請閱讀 [Lucene查詢語法文檔](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。
+如需查詢語法的詳細檔案，請參閱 [Lucene查詢語法檔案](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).

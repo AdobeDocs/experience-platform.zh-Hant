@@ -1,6 +1,6 @@
 ---
-title: 醫療保健藥物方案欄位組
-description: 本文檔概述了醫療保健藥物方案欄位組。
+title: 醫療保健結構描述欄位群組
+description: 本檔案提供Healthcare Media方案欄位群組的概觀。
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
 source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL 一種保健藥物] 架構欄位組
+# [!UICONTROL 醫療保健] 結構描述欄位群組
 
-[!UICONTROL 一種保健藥物] 是標準架構欄位組 [[!UICONTROL 藥物] 類](../../classes/medication.md)。 它提供單個對象類型欄位 `medication` 它捕獲品牌名稱、批號和數量等詳細資訊。
+[!UICONTROL 醫療保健] 是的標準結構描述欄位群組 [[!UICONTROL 藥物] 類別](../../classes/medication.md). 它提供單一物件型別欄位 `medication` 擷取品牌名稱、批號及數量等細節。
 
 ![](../../images/field-groups/healthcare-medication.png)
 
-| 屬性 | 資料類型 | 說明 |
+| 屬性 | 資料型別 | 說明 |
 | --- | --- | --- |
-| `ingredients` | 對象陣列 | 列出藥物中的成分。 每個對象都包括以下屬性： <ul><li>`isActive`:（布爾值）指示此配料是否仍在此藥物中使用。</li><li>`name`:（字串）配料的名稱。</li><li>`quantity`:（字串）藥物中的成分數量。</li></ul> |
-| `brandName` | 字串 | 藥品的品牌。 |
-| `codes` | 字串陣列 | 識別這種藥物的密碼清單。 |
-| `dosageUnitNumber` | 雙倍 | 藥物的劑量單位號。 |
-| `dosageUnitOfMeasurement` | 字串 | 劑量號的測量單位。 |
-| `expiryDate` | 日期時間 | 藥物的到期日。 |
+| `ingredients` | 物件陣列 | 列出藥物中的成分。 每個物件包含下列屬性： <ul><li>`isActive`：（布林值）指出此成份是否仍用於此藥物中。</li><li>`name`：（字串）成份的名稱。</li><li>`quantity`：（字串）藥物中存在的配料數量。</li></ul> |
+| `brandName` | 字串 | 藥物的品牌名稱。 |
+| `codes` | 字串陣列 | 可識別此藥物的程式碼清單。 |
+| `dosageUnitNumber` | 雙倍 | 適用於藥物的劑量單位編號。 |
+| `dosageUnitOfMeasurement` | 字串 | 劑量數的測量單位。 |
+| `expiryDate` | 日期時間 | 藥物有效期。 |
 | `genericName` | 字串 | 藥物的通用名稱。 |
-| `lotNumber` | 字串 | 藥物批的唯一標識符。 |
-| `manufacturerName` | 字串 | 藥廠的名字。 |
-| `quantity` | 雙倍 | 包裝中的藥量。 |
-| `status` | 字串 | 指示藥物/藥物是否有效的一般狀態。 |
-| `volume` | 雙倍 | 藥量。 |
+| `lotNumber` | 字串 | 藥物批次的唯一識別碼。 |
+| `manufacturerName` | 字串 | 製藥商名稱。 |
+| `quantity` | 雙倍 | 包裝中的藥物量。 |
+| `status` | 字串 | 表示藥物/藥物是否有效的一般狀態。 |
+| `volume` | 雙倍 | 藥物的量。 |
 
 {style="table-layout:auto"}
 
-有關欄位組的詳細資訊，請參閱 [公共XDM儲存庫](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json)。
+如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

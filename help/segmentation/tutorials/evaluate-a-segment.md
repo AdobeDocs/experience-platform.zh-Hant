@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；主題；熱門主題；段評估；分段服務；分段；分段；評估段；訪問段結果；評估和訪問段；
+keywords: Experience Platform；首頁；熱門主題；區段評估；區段服務；區段；區段；評估區段；存取區段結果；評估和存取區段；
 solution: Experience Platform
-title: 評估和訪問段結果
+title: 評估並存取區段結果
 type: Tutorial
-description: 按照本教程學習如何使用Adobe Experience Platform分段服務API評估段和訪問段結果。
+description: 按照本教學課程瞭解如何使用Adobe Experience Platform Segmentation Service API評估區段和存取區段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
@@ -12,96 +12,96 @@ ht-degree: 0%
 
 ---
 
-# 評估和訪問段結果
+# 評估並存取區段結果
 
-本文檔提供了一個教程，用於評估段和使用 [[!DNL Segmentation API]](../api/getting-started.md)。
+本檔案提供評估區段及使用存取區段結果的教學課程。 [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## 快速入門
 
-本教程需要對各種 [!DNL Adobe Experience Platform] 服務。 在開始本教程之前，請查看以下服務的文檔：
+本教學課程需要深入瞭解各種 [!DNL Adobe Experience Platform] 建立受眾區段所涉及的服務。 在開始本教學課程之前，請檢閱下列服務的檔案：
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md):根據來自多個來源的聚合資料即時提供統一的客戶配置檔案。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):允許您從 [!DNL Real-Time Customer Profile] 資料。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):平台組織客戶體驗資料的標準化框架。 為最好地利用分段，請確保根據 [資料建模的最佳做法](../../xdm/schema/best-practices.md)。
-- [沙箱](../../sandboxes/home.md): [!DNL Experience Platform] 提供虛擬沙箱，將單個沙箱 [!DNL Platform] 實例到獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您從以下專案建立受眾區段： [!DNL Real-Time Customer Profile] 資料。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：Platform組織客戶體驗資料的標準化架構。 為了充分利用「分段」，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
 
-### 必需的標題
+### 必要的標頭
 
-本教程還要求您完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en) 以便成功撥打 [!DNL Platform] API。 完成身份驗證教程將提供所有中每個必需標頭的值 [!DNL Experience Platform] API調用，如下所示：
+本教學課程也要求您完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en) 以便成功呼叫 [!DNL Platform] API。 完成驗證教學課程後，會在所有標題中提供每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
 
-- 授權：持 `{ACCESS_TOKEN}`
+- 授權：持有人 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-中的所有資源 [!DNL Experience Platform] 與特定虛擬沙箱隔離。 請求 [!DNL Platform] API需要一個標頭，該標頭指定操作將在以下位置進行的沙盒的名稱：
+中的所有資源 [!DNL Experience Platform] 隔離至特定的虛擬沙箱。 以下專案的請求： [!DNL Platform] API需要標頭，用於指定將在其中執行操作的沙箱名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->有關中的沙箱的詳細資訊 [!DNL Platform]，請參見 [沙盒概述文檔](../../sandboxes/home.md)。
+>如需中沙箱的詳細資訊 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
-所有POST、PUT和PATCH請求都需要附加標頭：
+所有POST、PUT和PATCH請求都需要額外的標頭：
 
-- 內容類型：應用程式/json
+- Content-Type： application/json
 
-## 評估段 {#evaluate-a-segment}
+## 評估區段 {#evaluate-a-segment}
 
-開發、測試和保存段定義後，您就可以通過計畫評估或按需評估來評估段。
+開發、測試並儲存區段定義後，您就可以透過排定的評估或隨選評估來評估區段。
 
-[計畫評估](#scheduled-evaluation) （也稱為「計劃分段」）允許您建立在特定時間運行導出作業的循環計畫，但 [按需評估](#on-demand-evaluation) 包括建立段作業以立即構建受眾。 下面將介紹每個步驟。
+[已排程的評估](#scheduled-evaluation) （也稱為「已排程分段」）可讓您建立在特定時間執行匯出工作的週期性排程，而 [隨選評估](#on-demand-evaluation) 包括建立區段工作以立即建立對象。 各步驟概述如下。
 
-如果尚未完成 [使用分段API建立段](./create-a-segment.md) 教程或使用 [段生成器](../ui/overview.md)，請在繼續本教程之前執行此操作。
+如果您尚未完成 [使用分段API建立區段](./create-a-segment.md) 教學課程或建立區段定義，使用 [區段產生器](../ui/overview.md)，請在繼續本教學課程之前完成此操作。
 
-## 計畫評估 {#scheduled-evaluation}
+## 已排程的評估 {#scheduled-evaluation}
 
-通過計畫評估，您的組織可以建立定期計畫以自動運行導出作業。
+透過已排程的評估，您的組織可以建立週期性排程，以自動執行匯出作業。
 
 >[!NOTE]
 >
->可以為最多五(5)個合併策略的沙箱啟用計畫評估 [!DNL XDM Individual Profile]。 如果您的組織有五個以上的合併策略 [!DNL XDM Individual Profile] 在單個沙箱環境中，您將無法使用計畫的評估。
+>對於最多有五(5)個合併原則的沙箱，可啟用排程評估 [!DNL XDM Individual Profile]. 如果貴組織有五個以上的合併原則 [!DNL XDM Individual Profile] 在單一沙箱環境中，您將無法使用排程的評估。
 
-### 建立計畫
+### 建立排程
 
-通過向 `/config/schedules` 端點，您可以建立調度並包括應觸發調度的特定時間。
+藉由向發出POST請求 `/config/schedules` 端點，您可以建立排程並包含應觸發排程的特定時間。
 
-有關使用此終結點的詳細資訊，請參閱 [計畫終結點指南](../api/schedules.md#create)
+有關使用此端點的更多詳細資訊，請參閱 [排程端點指南](../api/schedules.md#create)
 
-### 啟用計畫
+### 啟用排程
 
-預設情況下，建立計畫時處於非活動狀態，除非 `state` 屬性設定為 `active` 在建立(POST)請求正文中。 您可以啟用計畫(設定 `state` 至 `active`)，向PATCH請求 `/config/schedules` 端點，並在路徑中包括調度的ID。
+依預設，排程在建立時為非使用中，除非 `state` 屬性已設定為 `active` (POST)要求內文中的。 您可以啟用排程(設定 `state` 至 `active`)向發出PATCH要求 `/config/schedules` 端點並在路徑中包含排程的ID。
 
-有關使用此終結點的詳細資訊，請參閱 [計畫終結點指南](../api/schedules.md#update-state)
+有關使用此端點的更多詳細資訊，請參閱 [排程端點指南](../api/schedules.md#update-state)
 
-### 更新計畫時間
+### 更新排程時間
 
-通過向Web站點發出PATCH請求，可以更新計畫時間 `/config/schedules` 端點，並在路徑中包括調度的ID。
+您可以透過向以下發出PATCH請求來更新排程計時： `/config/schedules` 端點並在路徑中包含排程的ID。
 
-有關使用此終結點的詳細資訊，請參閱 [計畫終結點指南](../api/schedules.md#update-schedule)
+有關使用此端點的更多詳細資訊，請參閱 [排程端點指南](../api/schedules.md#update-schedule)
 
-## 按需評估
+## 隨選評估
 
-按需評估允許您建立段作業，以便隨時生成受眾段。 與計畫評估不同，這隻在請求時才會發生，而不是重複。
+隨選評估可讓您建立區段工作，以便在您需要時產生對象區段。 與已排程的評估不同，這僅在請求時發生，而且不會重複發生。
 
-### 建立段任務
+### 建立區段工作
 
-段作業是一個非同步過程，可按需建立訪問群體段。 它引用段定義以及控制如何 [!DNL Real-Time Customer Profile] 合併配置檔案片段中重疊的屬性。 當網段作業成功完成時，您可以收集有關網段的各種資訊，如處理過程中可能發生的任何錯誤以及受眾的最終大小。 每次要刷新當前符合段定義的受眾時，都需要運行段作業。
+區段作業為非同步程式，可依需求建立對象區段。 它會參考區段定義，以及控制如何進行的任何合併原則 [!DNL Real-Time Customer Profile] 合併您的設定檔片段中的重疊屬性。 當區段工作成功完成時，您可以收集關於區段的各種資訊，例如處理期間可能發生的任何錯誤以及您的對象的最終規模。 每次想要重新整理目前符合區段定義資格的對象時，都需要執行區段工作。
 
-您可以通過向以下站點發出POST請求來建立新段任務 `/segment/jobs` 端點 [!DNL Real-Time Customer Profile] API。
+您可以透過向以下專案發出POST請求，以建立新的區段作業： `/segment/jobs` 中的端點 [!DNL Real-Time Customer Profile] API。
 
-有關使用此終結點的詳細資訊，請參閱 [段作業終結點指南](../api/segment-jobs.md#create)
+有關使用此端點的更多詳細資訊，請參閱 [區段作業端點指南](../api/segment-jobs.md#create)
 
-### 查找段作業狀態
+### 查詢區段工作狀態
 
-您可以使用 `id` 用於特定段作業以執行查找請求(GET)，以查看作業的當前狀態。
+您可以使用 `id` 針對特定區段工作，執行查詢請求(GET)，以檢視工作的目前狀態。
 
-有關使用此終結點的詳細資訊，請參閱 [段作業終結點指南](../api/segment-jobs.md#get)
+有關使用此端點的更多詳細資訊，請參閱 [區段作業端點指南](../api/segment-jobs.md#get)
 
-## 解釋段結果
+## 解讀區段結果
 
-成功運行段作業時， `segmentMembership` 將為段中包括的每個輪廓更新映射。 `segmentMembership` 還儲存所有被攝取到的預評估受眾片段 [!DNL Platform]，允許與其他解決方案整合，例如 [!DNL Adobe Audience Manager]。
+成功執行區段作業時， `segmentMembership` 會針對區段中包含的每個設定檔更新地圖。 `segmentMembership` 也會儲存任何擷取到的預先評估對象區段 [!DNL Platform]，允許與其他解決方案整合，例如 [!DNL Adobe Audience Manager].
 
-以下示例顯示 `segmentMembership` 屬性與每個單獨配置檔案記錄類似：
+以下範例說明 `segmentMembership` 屬性看起來像每個個別設定檔記錄：
 
 ```json
 {
@@ -128,46 +128,46 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `lastQualificationTime` | 斷言段成員身份和配置檔案輸入或退出段的時間戳。 |
-| `status` | 作為當前請求一部分的段參與狀態。 必須等於以下已知值之一： <ul><li>`realized`:實體符合段的條件。</li><li>`exited`:實體正在退出段。</li></ul> |
+| `lastQualificationTime` | 進行區段會籍判斷提示以及設定檔進入或退出區段時的時間戳記。 |
+| `status` | 目前請求中的區段參與狀態。 必須等於下列其中一個已知值： <ul><li>`realized`：實體符合區段的資格。</li><li>`exited`：實體正在退出區段。</li></ul> |
 
 >[!NOTE]
 >
->位於 `exited` 超過30天的狀態，根據 `lastQualificationTime`，將被刪除。
+>任何位於中的區段會籍 `exited` 超過30天的狀態，根據 `lastQualificationTime`，可能會刪除。
 
-## 訪問段結果
+## 存取區段結果
 
-可通過以下兩種方式之一訪問段作業的結果：您可以訪問單個配置檔案或將整個受眾導出到資料集。
+區段工作的結果可透過以下兩種方式之一存取：您可以存取個別設定檔，或匯出整個對象至資料集。
 
-以下各節將更詳細地概述這些選項。
+以下各節會更詳細地概述這些選項。
 
-## 查找配置檔案
+## 查詢設定檔
 
-如果您知道要訪問的特定配置檔案，則可以使用 [!DNL Real-Time Customer Profile] API。 有關訪問單個配置檔案的完整步驟，請參見 [使用配置檔案API訪問即時客戶配置檔案資料](../../profile/api/entities.md) 教程。
+如果您知道想要存取的特定設定檔，可以使用 [!DNL Real-Time Customer Profile] API。 存取個別設定檔的完整步驟可在以下網址取得： [使用設定檔API存取即時客戶設定檔資料](../../profile/api/entities.md) 教學課程。
 
-## 導出段 {#export}
+## 匯出區段 {#export}
 
-分段作業成功完成後( `status` 屬性為「成功」)，您可以將受眾導出到資料集，在該資料集中可以訪問並對其執行操作。
+成功完成分段工作後( `status` 屬性為「SUCCEEDED」)，您可以將對象匯出至資料集，在其中存取對象並對其採取行動。
 
-要導出受眾，需要執行以下步驟：
+匯出對象時，需要執行下列步驟：
 
-- [建立目標資料集](#create-a-target-dataset)  — 建立資料集以容納受眾成員。
-- [在資料集中生成受眾配置檔案](#generate-profiles)  — 根據段作業的結果，使用XDM個人配置檔案填充資料集。
-- [監視導出進度](#monitor-export-progress)  — 檢查導出過程的當前進度。
-- [讀取受眾資料](#next-steps)  — 檢索代表受眾成員的生成的XDM個人配置檔案。
+- [建立目標資料集](#create-a-target-dataset)  — 建立資料集以存放對象成員。
+- [在資料集中產生受眾設定檔](#generate-profiles)  — 根據區段作業的結果，以XDM個別設定檔填入資料集。
+- [監視匯出進度](#monitor-export-progress)  — 檢查匯出程式的目前進度。
+- [讀取對象資料](#next-steps)  — 擷取代表您對象之成員的XDM個別設定檔。
 
 ### 建立目標資料集 {#create-dataset}
 
-導出訪問群體時，必須先建立目標資料集。 必須正確配置資料集以確保導出成功。
+匯出對象時，必須先建立目標資料集。 請務必正確設定資料集，以確保匯出成功。
 
-關鍵注意事項之一是資料集所基於的架構(`schemaRef.id` 中)。 要導出段，資料集必須基於 [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`)。 聯合架構是系統生成的只讀架構，它聚合共用同一類的架構的欄位，在本例中是XDM Individual Profile類。 有關聯合視圖架構的詳細資訊，請參閱 [方案註冊開發人員指南的「即時客戶概要檔案」部分](../../xdm/api/getting-started.md)。
+主要考量事項之一是資料集所根據的結構描述(`schemaRef.id` （位於以下的API範例請求中）。 為了匯出區段，資料集必須以 [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`)。 聯合結構描述是系統產生的唯讀結構描述，其彙總共用相同類別的結構描述（在此例中為XDM個別設定檔類別）的欄位。 如需聯合檢視結構描述的詳細資訊，請參閱 [Schema Registry開發人員指南的Real-Time Customer Profile一節](../../xdm/api/getting-started.md).
 
-建立必要資料集有兩種方法：
+建立必要資料集的方法有兩種：
 
-- **使用API:** 本教程中接下來的步驟概述了如何建立引用 [!DNL XDM Individual Profile Union Schema] 使用 [!DNL Catalog] API。
-- **使用UI:** 使用 [!DNL Adobe Experience Platform] 用戶介面建立引用聯合模式的資料集，請按照 [UI教程](../ui/overview.md) 然後返回本教程，繼續執行 [生成觀眾配置檔案](#generate-profiles)。
+- **使用API：** 本教學課程後續步驟會概述如何建立參照 [!DNL XDM Individual Profile Union Schema] 使用 [!DNL Catalog] API。
+- **使用UI：** 若要使用 [!DNL Adobe Experience Platform] 使用者介面若要建立參考聯合結構的資料集，請依照以下步驟操作： [UI教學課程](../ui/overview.md) 然後返回本教學課程，繼續的步驟 [產生受眾設定檔](#generate-profiles).
 
-如果已有相容的資料集並知道其ID，則可以直接執行該步驟 [生成觀眾配置檔案](#generate-profiles)。
+如果您已有相容的資料集且知道其ID，您可以直接繼續進行以下步驟： [產生受眾設定檔](#generate-profiles).
 
 **API格式**
 
@@ -177,7 +177,7 @@ POST /dataSets
 
 **要求**
 
-以下請求建立新資料集，在負載中提供配置參數。
+以下請求會建立新資料集，在承載中提供設定引數。
 
 ```shell
 curl -X POST \
@@ -199,11 +199,11 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `name` | 資料集的描述性名稱。 |
-| `schemaRef.id` | 資料集將與之關聯的聯合視圖（架構）的ID。 |
+| `schemaRef.id` | 與資料集建立關聯的聯合檢視（結構描述）的ID。 |
 
 **回應**
 
-成功的響應返回包含新建立的資料集的只讀、系統生成的唯一ID的陣列。 要成功導出受眾成員，需要正確配置的資料集ID。
+成功的回應會傳回陣列，其中包含新建立資料集的唯讀、系統產生的唯一ID。 需要正確設定的資料集ID才能成功匯出受眾成員。
 
 ```json
 [
@@ -211,24 +211,24 @@ curl -X POST \
 ] 
 ```
 
-### 為受眾成員生成配置檔案 {#generate-profiles}
+### 產生對象成員的設定檔 {#generate-profiles}
 
-一旦您擁有了聯合持續資料集，就可以建立導出作業，通過向Web站點發出POST請求，將訪問群體成員持續到資料集 `/export/jobs` 端點 [!DNL Real-Time Customer Profile] API，並提供要導出的段的資料集ID和段資訊。
+擁有聯合持續資料集後，您可以透過向以下專案發出POST請求，建立匯出工作以將對象成員持續存在資料集： `/export/jobs` 中的端點 [!DNL Real-Time Customer Profile] API並為您要匯出的區段提供資料集ID和區段資訊。
 
-有關使用此終結點的詳細資訊，請參閱 [導出作業終結點指南](../api/export-jobs.md#create)
+有關使用此端點的更多詳細資訊，請參閱 [匯出作業端點指南](../api/export-jobs.md#create)
 
-### 監視導出進度
+### 監視匯出進度
 
-作為導出作業流程，您可以通過嚮導出GET請求 `/export/jobs` 端點和包括 `id` 的子菜單。 導出作業一旦完成 `status` 欄位返回值「SUCCEEDED」。
+匯出作業進行時，您可以透過向以下發出GET請求來監控其狀態： `/export/jobs` 端點，並包含 `id` 路徑中匯出作業的ID。 匯出作業於下列時間後完成： `status` 欄位會傳回「SUCCEEDED」值。
 
-有關使用此終結點的詳細資訊，請參閱 [導出作業終結點指南](../api/export-jobs.md#get)
+有關使用此端點的更多詳細資訊，請參閱 [匯出作業端點指南](../api/export-jobs.md#get)
 
 ## 後續步驟
 
-成功完成導出後，您的資料可在 [!DNL Data Lake] 在 [!DNL Experience Platform]。 然後，您可以使用 [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) 使用 `batchId` 與導出關聯。 根據段的大小，資料可能以塊為單位，批可能由幾個檔案組成。
+匯出成功完成後，您的資料可在 [!DNL Data Lake] 在 [!DNL Experience Platform]. 然後，您可以使用 [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) 以使用存取資料 `batchId` 與匯出相關聯。 視區段的大小而定，資料可能以區塊為單位，批次可能包含數個檔案。
 
-有關如何使用的逐步說明 [!DNL Data Access] 訪問和下載批處理檔案的API，請遵循 [資料存取教程](../../data-access/tutorials/dataset-data.md)。
+如需如何使用 [!DNL Data Access] 存取和下載批次檔案的API，請遵循 [資料存取教學課程](../../data-access/tutorials/dataset-data.md).
 
-您還可以使用 [!DNL Adobe Experience Platform Query Service]。 使用UI或REST風格的API, [!DNL Query Service] 允許您對內部資料寫入、驗證和運行查詢 [!DNL Data Lake]。
+您也可以使用存取成功匯出的區段資料 [!DNL Adobe Experience Platform Query Service]. 使用UI或RESTful API， [!DNL Query Service] 可讓您對中的資料寫入、驗證及執行查詢 [!DNL Data Lake].
 
-有關如何查詢受眾資料的詳細資訊，請查看 [[!DNL Query Service]](../../query-service/home.md)。
+如需如何查詢受眾資料的詳細資訊，請參閱以下說明檔案： [[!DNL Query Service]](../../query-service/home.md).

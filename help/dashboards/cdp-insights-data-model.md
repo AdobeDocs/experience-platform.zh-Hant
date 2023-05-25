@@ -1,6 +1,6 @@
 ---
-title: Real-time Customer Data Platform洞察資料模型
-description: 瞭解如何將SQL查詢與Real-time Customer Data Platform洞察資料模型一起使用，以自定義您自己的Real-Time CDP報告，以便您的市場營銷和KPI使用案例。
+title: Real-time Customer Data Platform Insights資料模型
+description: 瞭解如何搭配Real-time Customer Data Platform Insights資料模型使用SQL查詢，以根據您的行銷和KPI使用案例自訂您自己的Real-Time CDP報表。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 2%
 
 ---
 
-# Real-time Customer Data Platform洞察資料模型
+# Real-time Customer Data Platform Insights資料模型
 
-Real-time Customer Data Platform洞察力資料模型功能公開了資料模型和SQL，這些模型和SQL為各種配置檔案、目標和分段小部件提供了洞察力。 您可以自定義這些SQL查詢模板，以為您的市場營銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 然後，這些見解可以用作用戶定義的儀表板的自定義小部件。 請參閱查詢加速儲存報告見解文檔以瞭解 [如何通過Query Service構建reporting insights資料模型，以便與加速的儲存資料和用戶定義的儀表板一起使用](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md)。
+Real-time Customer Data Platform Insights資料模型功能可公開支援各種設定檔、目的地和分段Widget深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些見解然後可用作使用者定義儀表板的自訂Widget。 如需瞭解，請參閱query accelerated store reporting insights檔案 [如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## 先決條件
 
-本指南要求對 [用戶定義的儀表板功能](./user-defined-dashboards.md)。 請閱讀文檔，然後繼續閱讀本指南。
+本指南需要您對 [使用者定義儀表板功能](./user-defined-dashboards.md). 請先閱讀檔案，再繼續閱讀本指南。
 
-## Real-Time CDP洞察報告和使用案例
+## Real-Time CDP深入分析報表與使用案例
 
-Real-Time CDP報告可讓您深入瞭解您的個人資料資料及其與段和目的地的關係。 針對各種常見的營銷用例，開發了各種星型模式模型，每個資料模型都能支援多種使用例。
+Real-Time CDP報表可讓您深入瞭解設定檔資料，以及資料與區段和目的地的關係。 各種星形結構描述模型已開發來回答各種常見行銷使用案例，每個資料模型可支援多個使用案例。
 
 >[!IMPORTANT]
 >
->用於Real-Time CDP報告的資料對於所選合併策略和最近的每日快照是準確的。
+>用於Real-Time CDP報表的資料對於所選的合併原則和最近的每日快照而言是準確的。
 
-### 輪廓模型 {#profile-model}
+### 設定檔模型 {#profile-model}
 
-配置檔案模型由三個資料集組成：
+設定檔模型包含三個資料集：
 
 - `adwh_dim_date`
 - `adwh_fact_profile`
@@ -35,15 +35,15 @@ Real-Time CDP報告可讓您深入瞭解您的個人資料資料及其與段和�
 
 下圖包含每個資料集中的相關資料欄位。
 
-![配置檔案模型的ERD。](./images/cdp-insights/profile-model.png)
+![輪廓模型的ERD。](./images/cdp-insights/profile-model.png)
 
-#### 配置檔案計數使用案例
+#### 設定檔計數使用案例
 
-用於配置檔案計數構件的邏輯返回建立快照時配置檔案儲存中合併的配置檔案總數。 查看 [[!UICONTROL 配置檔案計數] 構件文檔](./guides/profiles.md#profile-count) 的子菜單。
+用於設定檔計數Widget的邏輯會傳回拍攝快照時設定檔存放區中合併的設定檔總數。 請參閱 [[!UICONTROL 設定檔計數] Widget檔案](./guides/profiles.md#profile-count) 以取得詳細資訊。
 
-生成 [!UICONTROL 配置檔案計數] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 設定檔計數] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT adwh_dim_merge_policies.merge_policy_name,
@@ -57,13 +57,13 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 +++
 
-#### 單一身份配置檔案使用案例
+#### 單一身分設定檔使用案例
 
-用於 [!UICONTROL 單個身份配置檔案] 小部件提供了組織的配置檔案計數，這些配置檔案只具有一種類型的ID類型，可建立其標識。 查看[[!UICONTROL 單個身份配置檔案] 構件文檔](./guides/profiles.md#single-identity-profiles) 的子菜單。
+用於的邏輯 [!UICONTROL 單一身分設定檔] widget會提供貴組織設定檔的計數，而這些設定檔只有一種建立其身分識別的ID型別。 請參閱[[!UICONTROL 單一身分設定檔] Widget檔案](./guides/profiles.md#single-identity-profiles) 以取得詳細資訊。
 
-生成 [!UICONTROL 單個身份配置檔案] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 單一身分設定檔] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT adwh_dim_merge_policies.merge_policy_name,
@@ -77,9 +77,9 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 +++
 
-### 命名空間模型 {#namespace-model}
+### 名稱空間模型 {#namespace-model}
 
-命名空間模型由以下資料集組成：
+名稱空間模型由下列資料集組成：
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_namespace`
@@ -88,15 +88,15 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 下圖包含每個資料集中的相關資料欄位。
 
-![命名空間模型的ERD。](./images/cdp-insights/namespace-model.png)
+![名稱空間模型的ERD。](./images/cdp-insights/namespace-model.png)
 
-#### 按標識用例分列的配置檔案
+#### 依身分使用案例區分的設定檔
 
-的 [!UICONTROL 按身份顯示的配置檔案] 小部件顯示配置檔案儲存中所有合併配置檔案的標識細分。 查看 [[!UICONTROL 按身份顯示的配置檔案] 構件文檔](./guides/profiles.md#profiles-by-identity) 的子菜單。
+此 [!UICONTROL 依身分割槽分的設定檔] widget會顯示您的個人資料存放區中所有合併個人資料的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](./guides/profiles.md#profiles-by-identity) 以取得詳細資訊。
 
-生成 [!UICONTROL 按身份顯示的配置檔案] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 依身分割槽分的設定檔] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT adwh_dim_namespaces.namespace_description,
@@ -115,13 +115,13 @@ LIMIT 5;
 
 +++
 
-#### 按身份用例劃分的單個身份配置檔案
+#### 依身分使用案例區分的單一身分設定檔
 
-用於 [!UICONTROL 單個身份配置檔案（按身份）] 構件說明了僅使用單個唯一標識符標識的配置檔案的總數。 查看 [按身份構件文檔劃分的單個身份配置檔案](./guides/profiles.md#single-identity-profiles-by-identity) 的子菜單。
+用於的邏輯 [!UICONTROL 依身分割槽分的單一身分設定檔] widget會說明僅以單一唯一識別碼識別的設定檔總數。 請參閱 [依身分Widget檔案的單一身分設定檔](./guides/profiles.md#single-identity-profiles-by-identity) 以取得詳細資訊。
 
-生成 [!UICONTROL 單個身份配置檔案（按身份）] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 依身分割槽分的單一身分設定檔] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### 段模型 {#segment-model}
+### 區段模型 {#segment-model}
 
-段模型由以下資料集組成：
+區段模型包含下列資料集：
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,15 +158,15 @@ GROUP BY
 
 下圖包含每個資料集中的相關資料欄位。
 
-![段模型的ERD。](./images/cdp-insights/segment-model.png)
+![區段模型的ERD。](./images/cdp-insights/segment-model.png)
 
-#### 受眾大小使用案例
+#### 對象人數使用案例
 
-用於 [!UICONTROL 受眾大小] 構件返回在最近快照時選定段內合併的配置檔案總數。 查看 [[!UICONTROL 受眾大小] 構件文檔](./guides/segments.md#audience-size) 的子菜單。
+用於的邏輯 [!UICONTROL 對象人數] widget會傳回在最近的快照集執行時所選區段內的合併設定檔總數。 請參閱 [[!UICONTROL 對象人數] Widget檔案](./guides/segments.md#audience-size) 以取得詳細資訊。
 
-生成 [!UICONTROL 受眾大小] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 對象人數] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT adwh_fact_profile_by_segment.date_key,
@@ -189,13 +189,13 @@ LIMIT 20;
 
 +++
 
-#### 受眾大小更改趨勢使用案例
+#### 對象人數變化趨勢使用案例
 
-用於 [!UICONTROL 受眾大小變化趨勢] 構件提供線形圖圖，說明在最近的每日快照之間限定給定段的配置檔案總數之間的差異。 查看 [[!UICONTROL 受眾大小變化趨勢] 構件文檔](./guides/segments.md#audience-size-change-trend) 的子菜單。
+用於的邏輯 [!UICONTROL 對象人數變化趨勢] Widget提供線圖，說明最近每日快照之間符合指定區段資格的設定檔總數差異。 請參閱 [[!UICONTROL 對象人數變化趨勢] Widget檔案](./guides/segments.md#audience-size-change-trend) 以取得詳細資訊。
 
-生成 [!UICONTROL 受眾大小變化趨勢] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 對象人數變化趨勢] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT DISTINCT cast(adwh_dim_segments.create_date AS Date) Date_key, adwh_dim_merge_policies.merge_policy_name,
@@ -210,13 +210,13 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 +++
 
-#### 最常用的目標使用案例
+#### 最常用的目的地使用案例
 
-中使用的邏輯 [!UICONTROL 最常用的目標] 小部件根據映射到的段數列出組織最常用的目標。 此排名可以深入瞭解哪些目標正被利用，同時可能還顯示那些可能未充分利用的目標。 請參閱 [[!UICONTROL 最常用的目標] 構件](./guides/destinations.md#most-used-destinations) 的子菜單。
+中使用的邏輯 [!UICONTROL 最常使用的目的地] Widget會根據對應至您組織最常用目的地的區段數，列出這些目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能還會顯示那些可能未充分利用的目的地。 請參閱以下說明檔案： [[!UICONTROL 最常使用的目的地] Widget](./guides/destinations.md#most-used-destinations) 以取得詳細資訊。
 
-生成 [!UICONTROL 最常用的目標] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 最常使用的目的地] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT
@@ -237,13 +237,13 @@ FROM
 
 +++
 
-#### 最近激活的段使用案例
+#### 最近啟用的區段使用案例
 
-邏輯 [!UICONTROL 最近激活的段] 構件提供最近映射到目標的段的清單。 此清單會提供系統中正在使用的區段和目的地的快照，能有助於對任何錯誤的對應進行移難排解。查看 [[!UICONTROL 最近激活的段] 構件文檔](./guides/destinations.md#recently-activated-segments) 的子菜單。
+的邏輯 [!UICONTROL 最近啟用的區段] Widget提供最近對應至目的地的區段清單。 此清單會提供系統中正在使用的區段和目的地的快照，能有助於對任何錯誤的對應進行移難排解。請參閱 [[!UICONTROL 最近啟用的區段] Widget檔案](./guides/destinations.md#recently-activated-segments) 以取得詳細資訊。
 
-生成 [!UICONTROL 最近激活的段] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 最近啟用的區段] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT segment_name, segment, destination_name, a.create_time create_time
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### 命名空間段模型
+### 名稱空間 — 區段模型
 
-命名空間段模型由以下資料集組成：
+namespace-segment模型由下列資料集組成：
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,15 +270,15 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 下圖包含每個資料集中的相關資料欄位。
 
-![命名空間段模型的ERD。](./images/cdp-insights/namespace-segment-model.png)
+![名稱空間 — 區段模型的ERD。](./images/cdp-insights/namespace-segment-model.png)
 
-#### 按段用例標識的配置檔案
+#### 區段使用案例的依身分割槽分的設定檔
 
-中使用的邏輯 [!UICONTROL 按身份顯示的配置檔案] 小部件提供給定段的配置檔案儲存中所有合併配置檔案的標識的細分。 查看 [[!UICONTROL 按身份顯示的配置檔案] 構件文檔](./guides/segments.md#profiles-by-identity) 的子菜單。
+中使用的邏輯 [!UICONTROL 依身分割槽分的設定檔] widget會針對指定區段，提供個人資料存放區中所有合併個人資料的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](./guides/segments.md#profiles-by-identity) 以取得詳細資訊。
 
-生成 [!UICONTROL 按身份顯示的配置檔案] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 依身分割槽分的設定檔] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT adwh_dim_namespaces.namespace_description,
@@ -295,9 +295,9 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 +++
 
-### 重疊命名空間模型
+### 重疊名稱空間模型
 
-重疊命名空間模型由以下資料集組成：
+重疊名稱空間模型由下列資料集組成：
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -306,15 +306,15 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 下圖包含每個資料集中的相關資料欄位。
 
-![重疊命名空間模型的ERD。](./images/cdp-insights/overlap-namespace-model.png)
+![重疊名稱空間模型的ERD。](./images/cdp-insights/overlap-namespace-model.png)
 
-#### 身份重疊（配置檔案）用例
+#### 身分重疊（設定檔）使用案例
 
-中使用的邏輯 [!UICONTROL 身份重疊] 小部件顯示您的配置檔案的重疊 **配置檔案儲存** 包含兩個選定身份。 有關詳細資訊，請參見 [[!UICONTROL 身份重疊] 小部件部分 [!UICONTROL 配置檔案] 儀表板文檔](./guides/profiles.md#identity-overlap)。
+中使用的邏輯 [!UICONTROL 身分重疊] Widget會顯示您的設定檔中的重疊專案 **設定檔存放區** 包含兩個選取的身分識別。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 設定檔] 儀表板檔案](./guides/profiles.md#identity-overlap).
 
-生成 [!UICONTROL 身份重疊] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 身分重疊] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### 按段模型的重疊命名空間
+### 依區段模型重疊名稱空間
 
-按段模型劃分的重疊命名空間由以下資料集組成：
+依區段模型的重疊名稱空間是由下列資料集組成：
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,15 +374,15 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 下圖包含每個資料集中的相關資料欄位。
 
-![按段模型顯示重疊命名空間的ERD。](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![依區段模型的重疊名稱空間ERD。](./images/cdp-insights/overlap-namespace-by-segment-model.png)
 
-#### 標識重疊（段）用例
+#### 身分重疊（區段）使用案例
 
-中使用的邏輯 [!UICONTROL 段] 儀表板 [!UICONTROL 身份重疊] 構件說明了包含特定段的兩個選定標識的配置檔案的重疊。 有關詳細資訊，請參見 [[!UICONTROL 身份重疊] 小部件部分 [!UICONTROL 分段] 儀表板文檔](./guides/segments.md#identity-overlap)。
+中使用的邏輯 [!UICONTROL 區段] 儀表板 [!UICONTROL 身分重疊] widget說明包含特定區段之兩個選定身分的設定檔重疊。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 細分] 儀表板檔案](./guides/segments.md#identity-overlap).
 
-生成 [!UICONTROL 身份重疊] 在下面的可折疊部分中可以看到小部件。
+產生「 」的SQL [!UICONTROL 身分重疊] 在以下可摺疊區段中可看到Widget。
 
-++SQL查詢
++++SQL查詢
 
 ```sql
 SELECT

@@ -1,6 +1,6 @@
 ---
-title: 內容安全策略(CSP)支援
-description: 瞭解如何在將您的網站與Adobe Experience Platform的標籤整合時處理內容安全策略(CSP)限制。
+title: 內容安全性原則(CSP)支援
+description: 瞭解將您的網站與Adobe Experience Platform中的標籤整合時，如何處理內容安全性原則(CSP)限制。
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 57%
 
 ---
 
-# 內容安全策略(CSP)支援
+# 內容安全性原則(CSP)支援
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-內容安全性原則 (CSP) 這項安全性功能有助於防止跨網站指令碼攻擊 (XSS)。當瀏覽器被誘騙運行惡意內容時，就會發生這種情況，這些內容似乎來自受信任的源，但確實來自其他地方。 CSP 能讓瀏覽器 (代表使用者) 驗證指令碼是否的確來自信任的來源。
+內容安全性原則 (CSP) 這項安全性功能有助於防止跨網站指令碼攻擊 (XSS)。當瀏覽器受到誘騙而執行似乎來自信任的來源但實際上來自其他位置的惡意內容時，就會發生這種情況。 CSP 能讓瀏覽器 (代表使用者) 驗證指令碼是否的確來自信任的來源。
 
 CSP 的實作方式為新增 `Content-Security-Policy` HTTP 標頭至您的伺服器回應，或在 HTML 檔案的 `<head>` 區段中新增已設定的 `<meta>` 元素。
 
@@ -23,18 +23,18 @@ CSP 的實作方式為新增 `Content-Security-Policy` HTTP 標頭至您的伺�
 >
 > 如需 CSP 的詳細資訊，請參閱 [MDN 網頁文件](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CSP)。
 
-Adobe Experience Platform的標籤是一個標籤管理系統，旨在動態載入您網站上的指令碼。 預設 CSP 會因潛在安全性問題而封鎖這些動態載入的指令碼。本文檔提供有關如何配置CSP以允許從標籤動態載入指令碼的指導。
+Adobe Experience Platform中的標籤是標籤管理系統，專為動態載入網站指令碼而設計。 預設 CSP 會因潛在安全性問題而封鎖這些動態載入的指令碼。本檔案提供如何設定CSP以允許從標籤動態載入指令碼的指引。
 
-如果希望標籤與CSP配合使用，需要克服兩個主要挑戰：
+如果您希望標籤能與CSP搭配使用，有兩個主要難題需要克服：
 
-* **必須信任標籤庫的源。** 如果不滿足此條件，則瀏覽器將阻止標籤庫和其他所需的JavaScript檔案，並且不會在頁面上載入。
+* **標籤程式庫的來源必須受信任。** 若不符合這項條件，瀏覽器就會封鎖標籤程式庫和其他必要的JavaScript檔案，使其無法在頁面上載入。
 * **須允許內嵌指令碼。**&#x200B;若不符合這項條件，頁面會封鎖自訂程式碼動作，使自訂程式碼動作無法正常執行。
 
-提高安全性需要為內容建立者增加工作量。 如果要使用標籤並安裝CSP，則必須解決這兩個問題，而不要錯誤地將其他指令碼標籤為安全。 本文件的其餘部分說明如何實現此一目標。
+提高安全性需要代表內容建立者增加工作量。 如果您想要使用標籤並部署CSP，請解決這兩項問題，並妥善將其他指令碼標示為安全指令碼。 本文件的其餘部分說明如何實現此一目標。
 
-## 將標籤添加為受信任的源
+## 將標籤新增為信任的來源
 
-使用 CSP 時，您必須在 `Content-Security-Policy` 標頭的值中加入所有信任的網域。您必須為標籤提供的值將因所使用的宿主類型而異。
+使用 CSP 時，您必須在 `Content-Security-Policy` 標頭的值中加入所有信任的網域。您必須為標籤提供的值會因您使用的託管型別而異。
 
 ### 自行託管
 
@@ -54,7 +54,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Adobe 管理託管
 
-如果您使用 [Adobe 管理主機](../publishing/hosts/managed-by-adobe-host.md)，則會在 `assets.adobedtm.com` 維護您的組建。應指定 `self` 作為安全域，這樣您就不會中斷任何已載入的指令碼，但您還需要 `assets.adobedtm.com` 列為安全，否則不會在頁面上載入標籤庫。 在這種情況下，請使用下列設定：
+如果您使用 [Adobe 管理主機](../publishing/hosts/managed-by-adobe-host.md)，則會在 `assets.adobedtm.com` 維護您的組建。您應指定 `self` 作為安全網域，這樣就不會破壞已載入的任何指令碼，但您也需要 `assets.adobedtm.com` 將列為安全，否則您的標籤庫不會載入頁面上。 在這種情況下，請使用下列設定：
 
 **HTTP 標頭**
 
@@ -65,7 +65,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` 標籤**
 
 
-有一個非常重要的先決條件：必須載入標籤庫 [非同步](./asynchronous-deployment.md)。 這不適用於同步載入標籤庫（這會導致控制台錯誤和規則無法正確執行）。
+有一個非常重要的先決條件：您必須載入標籤程式庫 [非同步](./asynchronous-deployment.md). 無法同步載入標籤程式庫（這會導致主控台錯誤和規則無法正確執行）。
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -82,7 +82,7 @@ CSP 預設不允許內嵌指令碼，因此必須手動設定以允許。您可�
 
 >[!NOTE]
 >
->CSP規範提供了第三個使用散列的選項的詳細資訊，但這種方法在標籤管理系統（如標籤）中是不可行的。 有關在平台中使用散列與標籤的限制的詳細資訊，請參見 [子資源完整性(SRI)指南](./sri.md)。
+>CSP規格有第三種方法，也就是使用雜湊的詳細資訊，但這種方法無法用於標籤等標籤管理系統。 如需搭配Platform中的標籤使用雜湊的限制詳細資訊，請參閱 [子資源完整性(SRI)指南](./sri.md).
 
 ### 透過 Nonce 允許 {#nonce}
 
@@ -106,7 +106,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'">
 ```
 
-配置標頭或HTML標籤後，在載入內聯指令碼時必須告訴標籤查找nonce的位置。 要使標籤在載入指令碼時使用nonce，必須：
+設定標頭或HTML標籤後，您必須告訴標籤在載入內嵌指令碼時要在哪裡找到Nonce。 若要讓標籤在載入指令碼時使用Nonce，您必須：
 
 1. 建立資料元素，以參照 Nonce 在資料層中的位置。
 1. 設定核心擴充功能，並指定要使用的資料元素。
@@ -114,7 +114,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c
 
 >[!NOTE]
 >
->以上程序僅處理自訂程式碼載入作業，而不會處理自訂程式碼用途。如果內嵌指令碼包含不符合 CSP 的自訂程式碼，則會以 CSP 優先。例如，如果使用自定義代碼通過將內聯指令碼附加到DOM來載入內聯指令碼，則標籤無法正確添加內聯指令碼，因此特定自定義代碼操作不會按預期方式工作。
+>以上程序僅處理自訂程式碼載入作業，而不會處理自訂程式碼用途。如果內嵌指令碼包含不符合 CSP 的自訂程式碼，則會以 CSP 優先。例如，如果您使用自訂程式碼，透過將內嵌指令碼附加至DOM來執行載入作業，標籤將無法正確新增Nonce，導致該特定自訂程式碼動作無法正常運作。
 
 ### 允許所有內嵌指令碼 {#unsafe-inline}
 
@@ -156,6 +156,6 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 ## 後續步驟
 
-通過閱讀本文檔，您現在應該瞭解如何配置CSP頭以接受標籤庫檔案和內嵌指令碼。
+閱讀本檔案後，您現在應瞭解如何設定CSP標頭，以接受標籤程式庫檔案和內嵌指令碼。
 
-您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。但是，此功能在與標籤等標籤管理系統一起使用時有一些主要限制。 請參閱上的指南 [平台中的SRI相容性](./sri.md) 的子菜單。
+您也可以選擇使用子資源完整性 (SRI) 當作額外的安全措施，驗證擷取的程式庫組建。不過，此功能與標籤等標籤管理系統搭配使用時有一些重大限制。 請參閱指南： [平台中的SRI相容性](./sri.md) 以取得詳細資訊。

@@ -1,7 +1,7 @@
 ---
-title: 使用Adobe Experience PlatformWeb SDK呈現個性化內容
-description: 瞭解如何使用Adobe Experience PlatformWeb SDK呈現個性化內容。
-keywords: 個性化；renderDecisions;sendEvent;decisionScopes；命題；
+title: 使用Adobe Experience Platform Web SDK演算個人化內容
+description: 瞭解如何使用Adobe Experience Platform Web SDK呈現個人化內容。
+keywords: 個人化；renderDecisions；sendEvent；decisionScopes；主張；
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
 source-git-commit: c75a8bdeaba67259b5f4b4ce025d5e128d763040
 workflow-type: tm+mt
@@ -10,17 +10,17 @@ ht-degree: 2%
 
 ---
 
-# 呈現個性化內容
+# 呈現個人化內容
 
-Adobe Experience PlatformWeb SDK支援從Adobe個性化解決方案檢索個性化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html)。 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant)。
+Adobe Experience Platform Web SDK支援從Adobe個人化解決方案擷取個人化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html)， [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant).
 
-此外，Web SDK還通過Adobe Experience Platform個性化目標(如 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自定義個性化連接](../../destinations/catalog/personalization/custom-personalization.md)。 要瞭解如何為同頁和下一頁個性化配置Experience Platform，請參閱 [專用指南](../../destinations/ui/configure-personalization-destinations.md)。
+此外，Web SDK也透過Adobe Experience Platform個人化目的地(例如 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何為同頁和下一頁個人化設定Experience Platform，請參閱 [專用指南](../../destinations/ui/configure-personalization-destinations.md).
 
-在Adobe Target內建立的內容 [視覺體驗作曲家](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 和Adobe Journey Optimizer [Web市場活動UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 可由SDK自動檢索和呈現。 在Adobe Target內建立的內容 [基於表單的體驗作曲家](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 或SDK無法自動呈現Offer decisioning。 相反，您必須使用SDK請求此內容，然後自行手動呈現該內容。
+在Adobe Target中建立的內容 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 以及Adobe Journey Optimizer [網站行銷活動UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 可由SDK自動擷取及轉譯。 在Adobe Target中建立的內容 [表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 或Offer decisioning無法由SDK自動轉譯。 相反地，您必須使用SDK請求此內容，然後自行手動轉譯內容。
 
 ## 自動呈現內容
 
-向伺服器發送事件時，可以設定 `renderDecisions` 選項 `true`。 這樣做會強制SDK自動呈現任何符合自動呈現條件的個性化內容。
+將事件傳送至伺服器時，您可以設定 `renderDecisions` 選項至 `true`. 這麼做會強制SDK自動轉譯任何符合自動轉譯資格的個人化內容。
 
 ```javascript
 alloy("sendEvent", {
@@ -38,11 +38,11 @@ alloy("sendEvent", {
 });
 ```
 
-呈現個性化內容是非同步的，因此您不應對特定內容何時完成呈現做出假設。
+個人化內容的呈現是非同步的，因此您不應就特定內容片段何時完成呈現做出假設。
 
 ## 手動呈現內容
 
-要訪問任何個性化內容，您可以提供回調函式，該函式將在SDK從伺服器收到成功響應後調用。 您的回叫已提供 `result` 對象，它可能包含 `propositions` 包含任何返回的個性化內容的屬性。 下面是在發送事件時如何提供回調函式的示例。
+若要存取任何個人化內容，您可以提供回呼函式，SDK收到來自伺服器的成功回應後，就會呼叫此函式。 您的回撥會獲得 `result` 物件，其中可能包含 `propositions` 包含任何傳回的個人化內容的屬性。 以下是在傳送事件時如何提供回呼函式的範例。
 
 ```javascript
 alloy("sendEvent", {
@@ -54,9 +54,9 @@ alloy("sendEvent", {
   });
 ```
 
-在本例中， `result.propositions`，如果存在，則是包含與事件相關的個性化建議的陣列。 預設情況下，它只包括符合自動渲染條件的主張。
+在此範例中， `result.propositions`，如果存在的話，是包含與事件相關之個人化主張的陣列。 依預設，它僅包含符合自動演算資格的主張。
 
-的 `propositions` array可能與此示例類似：
+此 `propositions` 陣列看起來可能類似於此範例：
 
 ```json
 [
@@ -103,11 +103,11 @@ alloy("sendEvent", {
 ]
 ```
 
-在示例中， `renderDecisions` 選項未設定為 `true` 當 `sendEvent` 命令已執行，因此SDK未嘗試自動呈現任何內容。 但是，SDK仍會自動檢索符合自動呈現條件的內容，並將此內容提供給您以便手動呈現（如果您願意）。 請注意，每個命題對象 `renderAttempted` 屬性設定為 `false`。
+在此範例中， `renderDecisions` 選項未設定為 `true` 當 `sendEvent` 命令已執行，因此SDK不會嘗試自動轉譯任何內容。 不過，SDK仍會自動擷取符合自動轉譯資格的內容，並會在您想要手動轉譯時提供給您使用。 請注意，每個主張物件都有其 `renderAttempted` 屬性設定為 `false`.
 
-如果您 `renderDecisions` 選項 `true` 在發送事件時，SDK會嘗試提供符合自動呈現條件的任何主張（如前所述）。 因此，每個命題對象都會 `renderAttempted` 屬性設定為 `true`。 在本例中，不需要手動提出這些建議。
+如果您改為設定 `renderDecisions` 選項至 `true` 傳送事件時，SDK會嘗試轉譯任何符合自動轉譯資格的主張（如先前所述）。 因此，每個主張物件都會有其 `renderAttempted` 屬性設定為 `true`. 在此情況下，不需要手動轉譯這些主張。
 
-到目前為止，我們只討論了符合自動呈現條件的個性化內容(即在Adobe Target的Visual Experience Composer或Adobe Journey Optimizer的Web Campaign UI中建立的任何內容)。 檢索任何個性化內容 _不_ 符合自動呈現條件，您需要通過填充內容來請求內容 `decisionScopes` 選項。 範圍是一個字串，用於標識要從伺服器中檢索的特定命題。
+到目前為止，我們僅討論可自動呈現的個人化內容(亦即在Adobe Target的視覺化體驗撰寫器中或Adobe Journey Optimizer的Web Campaign UI中建立的任何內容)。 擷取任何個人化內容 _not_ 符合自動呈現的條件，您需要透過填入 `decisionScopes` 選項傳送事件。 範圍是字串，可識別您要從伺服器擷取的特定主張。
 
 其範例如下：
 
@@ -122,7 +122,7 @@ alloy("sendEvent", {
   });
 ```
 
-在本示例中，如果在與 `salutation` 或 `discount` 範圍，返回並包含在 `result.propositions` 陣列。 請注意，符合自動渲染條件的主張將繼續包含在 `propositions` 陣列，無論您如何配置 `renderDecisions` 或 `decisionScopes` 頁籤 的 `propositions` 在本例中，array與以下示例類似：
+在此範例中，如果在伺服器上找到符合以下條件的建議： `salutation` 或 `discount` 範圍，它們會傳回並包含在 `result.propositions` 陣列。 請注意，符合自動轉譯資格的主張將繼續包含在 `propositions` 陣列，無論您如何設定 `renderDecisions` 或 `decisionScopes` 選項。 此 `propositions` 在此範例中，陣列看起來會類似於以下範例：
 
 ```json
 [
@@ -220,15 +220,15 @@ alloy("sendEvent", {
 ]
 ```
 
-此時，您可以根據您所認為的適合情況呈現命題內容。 在本例中，與 `discount` scope是使用Adobe Target基於表單的體驗作曲家構建的HTML命題。 假設您的頁面上有一個ID為 `daily-special` 並希望從 `discount` 建議 `daily-special` 元素，執行以下操作：
+此時，您可以視需要演算主張內容。 在此範例中，主張符合 `discount` scope是使用Adobe Target的表單式體驗撰寫器建立的HTML主張。 假設您的頁面上有一個元素，其ID為 `daily-special` 並希望從呈現內容 `discount` 中的主張 `daily-special` 元素，請執行下列動作：
 
-1. 從 `result` 的雙曲餘切值。
-1. 循環查看每個命題，查找包含 `discount`。
-1. 如果您找到一個建議，請循環查看建議中的每個項目，查找HTML內容的項目。 （檢查總比假設好。）
-1. 如果找到包含HTML內容的項目，請查找 `daily-special` 元素，並將其HTML替換為個性化內容。
-1. 在呈現內容後，發送 `display` 的子菜單。
+1. 從擷取主張 `result` 物件。
+1. 循環瀏覽每個主張，尋找具有下列範圍的主張 `discount`.
+1. 如果您找到主張，會在主張中的每個專案之間回圈，尋找是HTML內容的專案。 （檢查總比假設要好。）
+1. 如果您找到包含HTML內容的專案，請找到 `daily-special` 元素並以個人化內容取代其HTML。
+1. 呈現內容後，傳送 `display` 事件。
 
-您的代碼如下所示：
+您的程式碼如下所示：
 
 ```javascript
 alloy("sendEvent", {
@@ -291,27 +291,27 @@ alloy("sendEvent", {
 
 >[!TIP]
 >
->如果使用Adobe Target，作用域與伺服器上的框相對應，但它們都是一次性請求的，而不是單獨請求的。 全局框始終返回。
+>如果您使用Adobe Target，領域會對應至伺服器上的mbox，除了它們會一次要求而非個別要求。 一律會傳回全域mbox。
 
-### 管理閃爍
+### 管理忽隱忽現情形
 
-SDK提供了 [管理閃爍](../personalization/manage-flicker.md) 在個性化過程中。
+SDK提供的設施可供 [管理閃爍](../personalization/manage-flicker.md) 進行個人化程式期間。
 
-## 在單頁應用程式中呈現主張，而不增加度量 {#applypropositions}
+## 在單頁應用程式中轉譯主張而不增加量度 {#applypropositions}
 
-的 `applyPropositions` 命令允許您呈現或執行命題陣列 [!DNL Target] 到單頁應用程式，而不增加 [!DNL Analytics] 和 [!DNL Target] 度量。 這提高了報告的準確性。
+此 `applyPropositions` 命令可讓您從以下位置呈現或執行主張陣列： [!DNL Target] 至單頁應用程式，而不增加 [!DNL Analytics] 和 [!DNL Target] 量度。 這樣可提高報表的正確性。
 
 >[!IMPORTANT]
 >
->如果 `__view__` 範圍（或Web曲面）在頁面載入、其 `renderAttempted` 標誌將設定為 `true`。 的 `applyPropositions` 命令不會重新呈現 `__view__` 範圍（或Web曲面）命題 `renderAttempted: true` 。
+>如果 `__view__` 範圍（或網頁表面）已在頁面載入時呈現，其 `renderAttempted` 標幟將設為 `true`. 此 `applyPropositions` 命令不會重新呈現 `__view__` 範圍（或網頁表面）主張具有 `renderAttempted: true` 標幟。
 
-### 用例1:重新呈現單頁應用程式視圖主張
+### 使用案例1：重新呈現單頁應用程式檢視主張
 
-下面的示例中描述的使用案例將重新呈現先前提取和呈現的購物車視圖主張，而不發送顯示通知。
+下列範例中說明的使用案例會重新呈現先前擷取和轉譯的購物車檢視主張，而不會傳送顯示通知。
 
-在下面的示例中， `sendEvent` 命令在視圖更改時觸發，並將生成的對象保存為常數。
+在以下範例中， `sendEvent` 命令會在檢視變更時觸發，並將產生的物件儲存為常數。
 
-接下來，當視圖或元件更新時， `applyPropositions` 命令被調用，其命題來自 `sendEvent` 命令，以重新呈現視圖主題。
+接下來，當檢視或元件更新時， `applyPropositions` 系統會使用上一個命令中的主張來呼叫命令 `sendEvent` 命令，以重新呈現檢視主張。
 
 ```js
 var cartPropositions = alloy("sendEvent", {
@@ -336,11 +336,11 @@ alloy("applyPropositions", {
 });
 ```
 
-### 用例2:呈現沒有選擇器的命題
+### 使用案例2：沒有選擇器的演算主張
 
-此使用案例適用於使用 [!DNL Target Form-based Experience Composer]。
+此使用案例適用於透過編寫的活動選件 [!DNL Target Form-based Experience Composer].
 
-必須在 `applyPropositions` 呼叫。
+您必須在「 」中提供選擇器、動作和範圍 `applyPropositions` 呼叫。
 
 支援 `actionTypes` 為：
 
@@ -386,4 +386,4 @@ alloy("sendEvent", {
 });
 ```
 
-如果沒有為決策範圍提供元資料，則不會呈現相關建議。
+如果您沒有為決定範圍提供中繼資料，將不會轉譯關聯的建議。

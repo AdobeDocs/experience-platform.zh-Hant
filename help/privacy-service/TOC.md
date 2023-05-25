@@ -15,24 +15,24 @@ ht-degree: 52%
 # Adobe Experience Platform 隱私權服務 {#privacy}
 
 * [Privacy Service 概觀](./home.md)
-* [管理Privacy Service權限](./permissions.md)
+* [管理Privacy Service的許可權](./permissions.md)
 * [Privacy Service和Experience Cloud應用程式](./experience-cloud-apps.md)
-* [隱私請求的標識資料](./identity-data.md)
-* [隱私JS庫概述](./js-library.md)
-* Privacy ServiceAPI {#api}
+* [隱私權請求的身分資料](./identity-data.md)
+* [隱私權JS資料庫概述](./js-library.md)
+* PRIVACY SERVICEAPI {#api}
    * [總覽](./api/overview.md)
    * [快速入門](./api/getting-started.md)
-   * [隱私作業](./api/privacy-jobs.md)
+   * [隱私權工作](./api/privacy-jobs.md)
    * [同意](./api/consent.md)
    * [附錄](./api/appendix.md)
-* Privacy ServiceUI {#ui}
+* PRIVACY SERVICEUI {#ui}
    * [總覽](./ui/overview.md)
-   * [管理隱私作業](./ui/user-guide.md)
-* [訂閱隱私事件](./privacy-events.md)
+   * [管理隱私權工作](./ui/user-guide.md)
+* [訂閱隱私權事件](./privacy-events.md)
 * 隱私權法規 {#regulations}
    * [總覽](./regulations/overview.md)
    * [常見問題集](./regulations/faq.md)
    * [術語](./regulations/terminology.md)
-* [故障排除指南](./troubleshooting-guide.md)
+* [疑難排解指南](./troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [發行說明](./release-notes.md)

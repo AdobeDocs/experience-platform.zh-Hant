@@ -1,7 +1,7 @@
 ---
-title: Real-Time CDPB2B中的預測線索和帳戶評分
+title: Real-Time CDP B2B中的預測性銷售線索和帳戶評分
 type: Documentation
-description: 有關Experience PlatformCDP B2B中預測銷售線索和帳戶記分功能的概述和詳細資訊。
+description: 有關Experience PlatformCDP B2B中預測性銷售線索和帳戶評分功能的概述和詳細資訊。
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
 workflow-type: tm+mt
@@ -10,36 +10,36 @@ ht-degree: 2%
 
 ---
 
-# Real-Time CDPB2B中的預測線索和帳戶評分
+# Real-Time CDP B2B中的預測性銷售線索和帳戶評分
 
-B2B營銷人員在營銷渠道的頂端面臨著多重挑戰。 為了有效，B2B營銷人員需要一種自動化的方法來鑑定大量人員，以便他們能夠專注於高價值目標。 資格應與最終銷售結果一致，而不僅是營銷轉換。
+B2B行銷人員在行銷漏斗頂端面臨多項挑戰。 為了有效運作，B2B行銷人員需要自動化方式來確認大量人員的資格，以便他們能專注於高價值的目標。 資格應與最終銷售結果一致，而不僅僅是行銷轉換。
 
-客戶是購買B2B產品和服務的最終實體。 為了有效地營銷和銷售，B2B營銷人員不僅要瞭解個人的購買可能性，還要瞭解客戶的購買可能性。
+帳戶是購買B2B產品和服務的最終實體。 為了有效行銷和銷售，B2B行銷人員不僅需要知道個人的購買可能性，還需要知道帳戶購買的可能性。
 
-特別是基於客戶的市場營銷，將客戶作為市場營銷目標進行戰略規劃。 客戶購買傾向評分大大有助於B2B營銷人員在客戶中排定優先順序，以最大化其投資回報。
+以帳戶為基礎的行銷尤其會將帳戶策略化為行銷目標。 帳戶購買傾向分數可大幅協助B2B行銷人員排定帳戶優先順序，以實現投資報酬的最大化。
 
-預測性線索和帳戶評分服務通過學習機會階段轉換事件並對其進行預測，以及將人員活動聚合到帳戶級別以生成帳戶分數，從而解決上述挑戰。 這些分數可以作為個人配置檔案和帳戶配置檔案上的自定義欄位隨時可用，並且可以輕鬆地作為段標準包括在內，以優化您的受眾。 在總量和單位層面，也有最大的影響因素，幫助B2B營銷人員更好地理解是什麼因素驅動了分數。
+預測性銷售線索和帳戶評分服務可透過學習和預測機會階段轉換事件，並將個人活動彙總到帳戶層級以產生帳戶分數，從而解決上述挑戰。 這些分數可立即作為個人設定檔和帳戶設定檔的自訂欄位提供，並可輕鬆作為區段條件納入，以縮小您的受眾。 彙總和單位層級也提供主要影響因素，以協助B2B行銷人員更瞭解哪些元素驅動分數。
 
-## 瞭解預測線索和帳戶評分 {#how-it-works}
+## 瞭解預測性銷售線索和帳戶評分 {#how-it-works}
 
 >[!NOTE]
 >
->[!DNL Marketo] 資料源當前是必需的，因為它是唯一可以在人員配置檔案層提供轉換事件的資料源。
+>[!DNL Marketo] 資料來源目前為必要專案，因為它是唯一可在人員設定檔層級提供轉換事件的資料來源。
 
-預測線索和帳戶評分使用基於樹（隨機林/梯度提升）的機器學習方法來構建預測線索評分模型。
+預測性銷售線索和帳戶評分使用樹狀結構（隨機森林/漸層提升）機器學習方法，以建立預測性銷售線索評分模型。
 
-管理員可以配置多個配置檔案計分目標（也稱為模型），每個配置轉換事件都配置一個目標，允許為每個配置目標生成單獨的分數。
+管理員能夠設定多個設定檔評分目標（也稱為模型），每個設定的轉換事件各一個，從而為每個設定的目標產生個別的分數。
 
-預測銷售線索和帳戶記分支援以下轉換目標類型和欄位：
+預測性銷售線索和帳戶評分支援下列轉換目標型別和欄位：
 
-| 目標類型 | 欄位 |
+| 目標型別 | 欄位 |
 | --- | --- |
 | `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li></ul> |
-| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>示例： `opportunityEvent.dataValueChanges.attributeName` 等於 `Stage` 和 `opportunityEvent.dataValueChanges.newValue` 等於 `Contract`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>範例： `opportunityEvent.dataValueChanges.attributeName` 等於 `Stage` 和 `opportunityEvent.dataValueChanges.newValue` 等於 `Contract`</ul> |
 
-算法考慮了以下屬性和輸入資料：
+演演算法會考量下列屬性和輸入資料：
 
-* 人員配置檔案
+* 個人設定檔
 
 | XDM欄位 | 必填/選填 |
 | --- | --- |
@@ -50,9 +50,9 @@ B2B營銷人員在營銷渠道的頂端面臨著多重挑戰。 為了有效，B
 
 >[!NOTE]
 > 
->該算法僅檢查 `sourceAccountKey.sourceKey` 「人員：人員」欄位組中的欄位。
+>演演算法只會檢查 `sourceAccountKey.sourceKey` 「Person：personComponents」欄位群組中的欄位。
 
-* 帳戶配置檔案
+* 帳戶設定檔
 
 | XDM欄位 | 必填/選填 |
 | --- | --- |
@@ -71,55 +71,55 @@ B2B營銷人員在營銷渠道的頂端面臨著多重挑戰。 為了有效，B
 | `timestamp` | 必填 |
 | `eventType` | 必填 |
 
-支援多個型號，並設定了以下硬限制：
+支援多種機型，並設定下列硬性限制：
 
-* 每個生產沙箱都有5種型號。
+* 每個生產沙箱有權使用五個模型。
 * 每個開發沙箱都有權使用一種模型。
 
-資料質量要求如下：
+資料品質要求如下：
 
-* 理想情況下，有兩年的最新資料用於培訓目的。
-* 所需資料的最小長度為6個月加預測窗口。
-* 對於每個預測目標，至少需要10個合格轉換事件。
+* 理想情況下，應提供兩年的最新資料供訓練使用。
+* 所需的最小資料長度為六個月加上預測期間。
+* 對於每個預測目標，至少需要10個合格的轉換事件。
 
-記分作業每天運行，結果將保存為配置檔案屬性和帳戶屬性，然後可在段定義和個性化中使用。 在客戶概述儀表板上也提供了現成分析見解。
+評分工作每天都會執行，且結果會儲存為設定檔屬性和帳戶屬性，然後可用於區段定義和個人化。 現成可用的分析深入分析也可在帳戶概述控制面板上取得。
 
-有關如何執行以下操作的詳細資訊，請參閱文檔 [管理預測性銷售線索和帳戶記分](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) 服務。
+請參閱檔案，深入瞭解如何 [管理預測性銷售線索和帳戶評分](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) 服務。
 
-## 查看預測潛在顧客和帳戶評分結果 {#how-to-view}
+## 檢視預測性銷售線索和帳戶評分結果 {#how-to-view}
 
-作業運行後，結果將保存在名稱下每個模型的新系統資料集中 `LeadsAI.Scores` - ***分數名稱***。 每個得分欄位組可位於 `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`。
+工作執行後，結果會儲存在名稱下每個模型的新系統資料集中 `LeadsAI.Scores` - ***分數名稱***. 每個分數欄位群組都位於 `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | 屬性 | 說明 |
 | --- | --- |
-| 分數 | 在所定義的時間範圍內，輪廓實現預測目標的相對似然。 此值不應被視為概率百分比，而應被視為與總體人口相比的概率。 此分數範圍為0到100。 |
-| 百分點 | 此值提供有關配置檔案相對於其他類似得分的配置檔案的效能的資訊。 百分位數範圍從1到100。 |
-| 模型類型 | 選定的模型類型，指明這是人員還是帳戶分數。 |
-| 分數日期 | 發生計分的日期。 |
-| 影響因素 | 關於配置檔案可能轉換的原因的預測原因。 因素包括以下屬性：<ul><li>代碼：對配置檔案的預測得分產生積極影響的配置檔案或行為屬性。</li><li>值：配置檔案或行為屬性的值。</li><li>重要性：指示配置檔案或行為屬性對預測得分（低、中、高）的權重。</li></ul> |
+| 分數 | 設定檔在定義的時間範圍內達到預測目標的相對可能性。 此值不被視為機率百分比，而是個人資料相較於整體母體的可能性。 此分數介於0到100之間。 |
+| 百分位數 | 此值提供有關設定檔相對於其他類似評分的設定檔效能的資訊。 百分位數的範圍為1到100。 |
+| 模型型別 | 選取的模型型別會指出這是否為人員或帳戶分數。 |
+| 評分日期 | 評分發生的日期。 |
+| 影響因素 | 個人資料可能轉換的預測原因。 因子由下列屬性組成：<ul><li>程式碼：對設定檔的預測分數產生正面影響的設定檔或行為屬性。</li><li>值：設定檔或行為屬性的值。</li><li>重要性：指出設定檔或行為屬性對預測分數（低、中、高）的權重。</li></ul> |
 
-### 查看客戶配置檔案分數
+### 檢視客戶設定檔分數
 
-要查看人員配置檔案的預測分數，請選擇 **[!UICONTROL 配置檔案]** 在左側面板的customer部分下，然後輸入標識名稱空間和標識值。 完成後，選擇 **[!UICONTROL 視圖]**。
+若要檢視個人檔案的預測性分數，請選取「 」 **[!UICONTROL 設定檔]** 在左側面板的「客戶」區段下方，然後輸入身分名稱空間和身分值。 完成後，選取 **[!UICONTROL 檢視]**.
 
-接下來，從清單中選擇配置檔案。
+接下來，從清單中選取設定檔。
 
-![客戶配置檔案](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
+![客戶設定檔](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-的 **[!UICONTROL 詳細資訊]** 頁面現在包括預測分數。 按一下預測分數旁邊的圖表表徵圖。
+此 **[!UICONTROL 詳細資訊]** 頁面現在包含預測性分數。 按一下預測分數旁的圖表圖示。
 
-![客戶配置檔案預測得分](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![客戶設定檔預測性分數](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
-彈出對話框顯示得分、總得分分佈、此得分的最大影響因素以及得分目標定義。
+快顯對話方塊會顯示分數、整體分數分佈、此分數的主要影響因素，以及分數目標定義。
 
-![客戶配置檔案預測分數詳細資訊](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+![客戶設定檔預測性分數詳細資訊](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
 
-## 監視預測性線索和帳戶記分作業 {#monitoring-jobs}
+## 監控預測性銷售線索和帳戶評分工作 {#monitoring-jobs}
 
-您可以通過儀表板監視基本度量和日常作業運行狀態。 指標包括：
+您可以透過控制面板監控基本量度和每日工作執行狀態。 這些量度包括：
 
-* 個人/帳戶配置檔案總計
-* 下一計分作業（日期）
-* 下一個培訓作業（日期）
+* 已評分的個人/帳戶設定檔總數
+* 下一個評分工作（日期）
+* 下一個訓練工作（日期）
 
-有關詳細資訊，請參閱 [預測線索和帳戶記分的監視作業](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)。
+如需詳細資訊，請參閱以下檔案： [監控預測性銷售線索和帳戶評分的工作](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流服務；更新目標資料流
+keywords: Experience Platform；首頁；熱門主題；流程服務；更新目的地資料流程
 solution: Experience Platform
-title: 使用流服務API更新目標資料流
+title: 使用流程服務API更新目的地資料流程
 type: Tutorial
-description: 本教程介紹了更新目標資料流的步驟。 瞭解如何使用流服務API啟用或禁用資料流、更新其基本資訊或添加和刪除段和屬性。
+description: 本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用流量服務API來啟用或停用資料流、更新其基本資訊，或新增和移除區段和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
@@ -12,52 +12,52 @@ ht-degree: 1%
 
 ---
 
-# 使用流服務API更新目標資料流
+# 使用流程服務API更新目的地資料流程
 
-本教程介紹了更新目標資料流的步驟。 瞭解如何啟用或禁用資料流、更新其基本資訊，或使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)。 有關使用Experience PlatformUI編輯目標資料流的資訊，請閱讀 [編輯激活流](/help/destinations/ui/edit-activation.md)。
+本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用啟用或停用資料流、更新其基本資訊，或新增和移除區段和屬性。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). 如需使用Experience PlatformUI編輯目的地資料流的詳細資訊，請閱讀 [編輯啟用流程](/help/destinations/ui/edit-activation.md).
 
 ## 快速入門 {#get-started}
 
-本教程要求您具有有效的流ID。 如果沒有有效的流ID，請從 [目標目錄](../catalog/overview.md) 並按照 [連接到目標](../ui/connect-destination.md) 和 [激活資料](../ui/activation-overview.md) 在嘗試本教程之前。
+本教學課程要求您具備有效的流量ID。 如果您沒有有效的流量ID，請從「 」中選擇您選擇的目的地 [目的地目錄](../catalog/overview.md) 並依照下列步驟進行 [連線到目的地](../ui/connect-destination.md) 和 [啟用資料](../ui/activation-overview.md) 在嘗試本教學課程之前。
 
 >[!NOTE]
 >
-> 術語 *流* 和 *資料流* 在本教程中可互換使用。 在本教程的上下文中，其含義相同。
+> 條款 *流量* 和 *資料流* 在本教學課程中可互換使用。 在本教學課程的上下文中，有相同的意義。
 
-本教程還要求您對以下Adobe Experience Platform元件有一定的瞭解：
+本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
 
-* [目標](../home.md): [!DNL Destinations] 是預先構建的與目標平台的整合，允許無縫激活來自Adobe Experience Platform的資料。 您可以使用目標來激活跨渠道市場營銷活動、電子郵件活動、目標廣告和許多其他使用案例的已知和未知資料。
-* [沙箱](../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [目的地](../home.md)： [!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+* [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-以下各節提供了需要瞭解的其他資訊，以便使用 [!DNL Flow Service] API。
+以下小節提供您需要瞭解的其他資訊，以使用 [!DNL Flow Service] API。
 
-### 讀取示例API調用 {#reading-sample-api-calls}
+### 讀取範例API呼叫 {#reading-sample-api-calls}
 
-本教程提供了示例API調用，以演示如何格式化請求。 這些包括路徑、必需的標頭和正確格式化的請求負載。 還提供了API響應中返回的示例JSON。 有關示例API調用文檔中使用的約定的資訊，請參見上的 [如何讀取示例API調用](../../landing/troubleshooting.md#how-do-i-format-an-api-request) Experience Platform疑難解答指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭，以及正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在Experience Platform疑難排解指南中。
 
-### 收集所需標題的值 {#gather-values-for-required-headers}
+### 收集必要標題的值 {#gather-values-for-required-headers}
 
-要調用平台API，必須先完成 [驗證教程](https://www.adobe.com/go/platform-api-authentication-en)。 完成Experience Platform教程將提供所有驗證API調用中每個必需標頭的值，如下所示：
+若要對Platform API發出呼叫，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程後，會提供所有Experience PlatformAPI呼叫中每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Experience Platform內所有資源，包括屬於 [!DNL Flow Service]，與特定虛擬沙箱隔離。 所有對平台API的請求都需要一個標頭，該標頭指定操作將在以下位置進行的沙盒的名稱：
+Experience Platform中的所有資源，包括屬於下列專案的資源： [!DNL Flow Service]，會隔離至特定的虛擬沙箱。 對Platform API的所有請求都需要標頭，用於指定將在其中執行操作的沙箱名稱：
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如果 `x-sandbox-name` 未指定標頭，請求在 `prod` 沙盒。
+>如果 `x-sandbox-name` 標頭未指定，請求解析於 `prod` 沙箱。
 
-所有包含負載(POST、PUT、PATCH)的請求都需要附加的媒體類型報頭：
+包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
 * `Content-Type: application/json`
 
-## 查找資料流詳細資訊 {#look-up-dataflow-details}
+## 查詢資料流詳細資料 {#look-up-dataflow-details}
 
-更新目標資料流的第一步是使用流ID檢索資料流詳細資訊。 您可以通過向以下站點發出GET請求來查看現有資料流的當前詳細資訊 `/flows` 端點。
+更新目的地資料流程的第一步，是使用您的流程ID擷取資料流程詳細資料。 您可以透過向以下網站發出GET要求，檢視現有資料流的目前詳細資料： `/flows` 端點。
 
 **API格式**
 
@@ -67,11 +67,11 @@ GET /flows/{FLOW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 獨特 `id` 要檢索的目標資料流的值。 |
+| `{FLOW_ID}` | 唯一 `id` 您要擷取之目的地資料流的值。 |
 
 **要求**
 
-以下請求檢索有關流ID的資訊。
+以下請求會擷取有關您的流量ID的資訊。
 
 ```shell
 curl -X GET \
@@ -84,7 +84,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回資料流的當前詳細資訊，包括其版本、唯一標識符(`id`等相關資訊。
+成功回應會傳回資料流的目前詳細資料，包括其版本、唯一識別碼(`id`)，以及其他相關資訊。
 
 ```json
 {
@@ -345,11 +345,11 @@ curl -X GET \
 
 ## 更新資料流名稱和說明 {#update-dataflow}
 
-要更新資料流的名稱和說明，請向 [!DNL Flow Service] 提供流ID、版本和要使用的新值時的API。
+PATCH若要更新資料流的名稱和說明，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本以及您想要使用的新值。
 
 >[!IMPORTANT]
 >
->的 `If-Match` 發出PATCH請求時需要標頭。 此標題的值是要更新的資料流的唯一版本。 etag值會隨著資料流的每次成功更新而更新。
+>此 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是要更新的資料流的唯一版本。 每次成功更新資料流時，etag值都會隨之更新。
 
 **API格式**
 
@@ -359,7 +359,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求更新資料流的名稱和說明。
+以下請求會更新您的資料流名稱和說明。
 
 ```shell
 curl -X PATCH \
@@ -385,13 +385,13 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 |
-| `path` | 定義要更新的流的部分。 |
-| `value` | 要用更新參數的新值。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. |
+| `path` | 定義要更新的流程部分。 |
+| `value` | 您想要用來更新引數的新值。 |
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -400,11 +400,11 @@ curl -X PATCH \
 }
 ```
 
-## 啟用或禁用資料流 {#enable-disable-dataflow}
+## 啟用或停用資料流 {#enable-disable-dataflow}
 
-啟用後，資料流會將配置檔案導出到目標。 預設情況下會啟用資料流，但可以禁用資料流以暫停配置檔案導出。
+啟用後，資料流會將設定檔匯出至目的地。 資料流預設為啟用，但可以停用以暫停設定檔匯出。
 
-可以通過向Web站點發出POST請求來啟用或禁用現有目標資料流 [!DNL Flow Service] API和提供要將流更新到的狀態。
+您可以透過向以下專案發出POST要求，啟用或停用現有目的地資料流： [!DNL Flow Service] API並提供您要更新流程的目的地狀態。
 
 **API格式**
 
@@ -414,7 +414,7 @@ POST /flows/{FLOW_ID}/action?op=enable or disable
 
 **要求**
 
-以下請求將資料流的狀態更新為已啟用。
+以下請求會將您的資料流狀態更新為已啟用。
 
 ```shell
 curl -X POST \
@@ -425,7 +425,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-以下請求將資料流的狀態更新為禁用。
+以下請求會將您的資料流狀態更新為停用。
 
 ```shell
 curl -X POST \
@@ -438,7 +438,7 @@ curl -X POST \
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -447,9 +447,9 @@ curl -X POST \
 }
 ```
 
-## 將段添加到資料流 {#add-segment}
+## 新增區段至資料流 {#add-segment}
 
-要將段添加到目標資料流，請向 [!DNL Flow Service] 提供流ID、版本和要添加的段時使用的API。
+PATCH若要將區段新增至目的地資料流，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本以及您想要新增的區段。
 
 **API格式**
 
@@ -459,7 +459,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求將新段添加到現有目標資料流。
+以下請求會將新區段新增至現有的目的地資料流。
 
 ```shell
 curl -X PATCH \
@@ -494,22 +494,22 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 要將段添加到資料流，請使用 `add` 的下界。 |
-| `path` | 定義要更新的流的部分。 將段添加到資料流時，請使用示例中指定的路徑。 |
-| `value` | 要用更新參數的新值。 |
-| `id` | 指定要添加到目標資料流的段的ID。 |
-| `name` | **(可選)**. 指定要添加到目標資料流的段的名稱。 請注意，此欄位不是必需欄位，您可以在不提供段名稱的情況下成功將段添加到目標資料流。 |
-| `filenameTemplate` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 此欄位確定導出到目標的檔案的檔案名格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 導出的檔案包含目標名稱。</li><li>`%SEGMENT_ID%`: 必要. 導出的檔案包含導出段的ID。</li><li>`%SEGMENT_NAME%`: **(選用)**. 導出的檔案包含導出段的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`: **（可選）**。 為檔案選擇以下兩個選項之一，以包括通過Experience Platform生成檔案的時間。</li><li>`custom-text`: **(選用)**. 將此佔位符替換為要在檔案名末尾附加的任何自定義文本。</li></ul> <br> 有關配置檔案名的詳細資訊，請參閱 [配置檔案名](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 的子目錄。 |
-| `exportMode` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。有關兩個選項的詳細資訊，請參閱 [導出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [導出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在批處理目標激活教程中。 |
-| `startDate` | 選擇段應開始將配置檔案導出到目標的日期。 |
-| `frequency` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 導出模式，可以選擇 `ONCE` 或 `DAILY`。</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 導出模式，可以選擇 `"DAILY"`。 `"EVERY_3_HOURS"`。 `"EVERY_6_HOURS"`。 `"EVERY_8_HOURS"`。 `"EVERY_12_HOURS"`。</li></ul> |
-| `triggerType` | 對於 *批處理目標* 只是。 僅當選擇 `"DAILY_FULL_EXPORT"` 的 `frequency` 選擇器。 <br> 必要. <br> <ul><li>選擇 `"AFTER_SEGMENT_EVAL"` 使激活作業在每日平台批處理分段作業完成後立即運行。 這可確保在激活作業運行時，最新的配置檔案會導出到目標。</li><li>選擇 `"SCHEDULED"` 使激活作業在固定時間運行。 這可確保每天同時導出Experience Platform配置檔案資料，但導出的配置檔案可能不是最新的，具體取決於激活作業開始前批分段作業是否已完成。 選擇此選項時，還必須添加 `startTime` 以UTC表示日導出應在何時進行。</li></ul> |
-| `endDate` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 選擇時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`。 <br> 設定段成員停止導出到目標的日期。 |
-| `startTime` | 對於 *批處理目標* 只是。 僅當將段添加到批處理檔案導出目標(如AmazonS3、SFTP或Azure Blob)中的資料流時，才需要此欄位。 <br> 必要. 選擇生成包含段成員的檔案並將其導出到目標的時間。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將區段新增至資料流，請使用 `add` 作業。 |
+| `path` | 定義要更新的流程部分。 將區段新增至資料流時，請使用範例中指定的路徑。 |
+| `value` | 您想要用來更新引數的新值。 |
+| `id` | 指定您要新增至目的地資料流的區段ID。 |
+| `name` | **(可選)**. 指定您要新增至目的地資料流的區段名稱。 請注意，此欄位並非必填欄位，您可以成功將區段新增至目的地資料流，而不需要提供其名稱。 |
+| `filenameTemplate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出區段的ID。</li><li>`%SEGMENT_NAME%`: **(選用)**. 匯出的檔案包含匯出的區段名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`： **（可選）**. 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`: **(選用)**. 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br> 如需設定檔案名稱的詳細資訊，請參閱 [設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 批次目的地啟動教學課程中的區段。 |
+| `exportMode` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。如需有關這兩個選項的詳細資訊，請參閱 [匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在batch destinations activation教學課程中。 |
+| `startDate` | 選取區段應該開始將設定檔匯出至您的目的地的日期。 |
+| `frequency` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 匯出模式，您可以選取 `ONCE` 或 `DAILY`.</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 匯出模式，您可以選取 `"DAILY"`， `"EVERY_3_HOURS"`， `"EVERY_6_HOURS"`， `"EVERY_8_HOURS"`， `"EVERY_12_HOURS"`.</li></ul> |
+| `triggerType` | 對象 *批次目的地* 僅限。 只有在選取 `"DAILY_FULL_EXPORT"` 中的模式 `frequency` 選擇器。 <br> 必要. <br> <ul><li>選取 `"AFTER_SEGMENT_EVAL"` 讓啟動工作在每日Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取 `"SCHEDULED"` 讓啟動工作在固定時間執行。 這可確保Experience Platform設定檔資料在每天的同一時間匯出，但您匯出的設定檔可能不是最新的，這取決於批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增 `startTime` 以指出每日匯出應在UTC的哪個時間發生。</li></ul> |
+| `endDate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 選取時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`. <br> 設定區段成員停止匯出至目的地的日期。 |
+| `startTime` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. 選取應產生包含區段成員的檔案並將其匯出至目的地的時間。 |
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -518,9 +518,9 @@ curl -X PATCH \
 }
 ```
 
-## 從資料流中刪除段 {#remove-segment}
+## 從資料流移除區段 {#remove-segment}
 
-要從現有目標資料流中刪除段，請向 [!DNL Flow Service] 提供要刪除的段的流ID、版本和索引選擇器時的API。 索引起始於 `0`。 例如，下面的示例請求從資料流中刪除第一和第二段。
+PATCH若要從現有目的地資料流中移除區段，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本，以及您要移除之區段的索引選取器。 索引開始於 `0`. 例如，下面的範例要求會將第一個和第二個區段從資料流中移除。
 
 **API格式**
 
@@ -530,7 +530,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求從現有目標資料流中刪除兩個段。
+以下請求會從現有目的地資料流中移除兩個區段。
 
 ```shell
 curl -X PATCH \
@@ -564,13 +564,13 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 要從資料流中刪除段，請使用 `remove` 的下界。 |
-| `path` | 根據段選擇器的索引指定應從目標資料流中刪除哪些現有段。 要檢索資料流中段的順序，請對 `/flows` 端點並檢查 `transformations.segmentSelectors` 屬性。 要刪除資料流中的第一個段，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要從資料流中移除區段，請使用 `remove` 作業。 |
+| `path` | 根據區段選擇器的索引，指定應從目的地資料流中移除的現有區段。 GET若要擷取資料流中的區段順序，請對 `/flows` 端點並檢查 `transformations.segmentSelectors` 屬性。 若要刪除資料流中的第一個區段，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -579,9 +579,9 @@ curl -X PATCH \
 }
 ```
 
-## 更新資料流中段的元件 {#update-segment}
+## 更新資料流中區段的元件 {#update-segment}
 
-您可以更新現有目標資料流中段的元件。 例如，可以更改導出頻率或編輯檔案名模板。 為此，請執行PATCH請求 [!DNL Flow Service] 提供要更新的段的流ID、版本和索引選擇器時的API。 索引起始於 `0`。 例如，以下請求更新資料流中的第九個段。
+您可以更新現有目的地資料流中區段的元件。 例如，您可以變更匯出頻率或編輯檔案名稱範本。 PATCH若要這麼做，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本，以及要更新的區段的索引選取器。 索引開始於 `0`. 例如，以下請求會更新資料流中的第九個區段。
 
 **API格式**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-在更新現有目標資料流中的段時，應首先執行GET操作以檢索要更新的段的詳細資訊。 然後，提供負載中的所有段資訊，而不只是要更新的欄位。 在下面的示例中，在檔案名模板的末尾添加自定義文本，並將導出計畫頻率從6小時更新為12小時。
+更新現有目的地資料流中的區段時，您應該先執行GET操作，以擷取您要更新的區段的詳細資訊。 然後，在承載中提供所有區段資訊，而不僅僅是您要更新的欄位。 在以下範例中，自訂文字會新增到檔案名稱範本的結尾，而匯出排程頻率會從6小時更新為12小時。
 
 ```shell
 curl -X PATCH \
@@ -626,12 +626,12 @@ curl -X PATCH \
 ]'
 ```
 
-有關負載中屬性的說明，請參閱一節 [將段添加到資料流](#add-segment)。
+如需裝載中屬性的說明，請參閱區段 [新增區段至資料流](#add-segment).
 
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -640,13 +640,13 @@ curl -X PATCH \
 }
 ```
 
-有關可以在資料流中更新的段元件的更多示例，請參見以下示例。
+如需可在資料流中更新的區段元件更多範例，請參閱以下範例。
 
-## 將段的導出模式從計畫更新為段評估之後 {#update-export-mode}
+## 區段評估後，將區段的匯出模式從排程更新為 {#update-export-mode}
 
-+++ 按一下查看一個示例，其中段導出從在指定時間每天激活到在平台批處理分段作業完成後每天激活。
++++ 按一下以檢視區段匯出的範例，此範例會將區段匯出從每天在指定的時間啟動，更新為每天在Platform批次細分工作完成後啟動。
 
-該段每天在UTC 16:00導出。
+該區段會在每天16:00 UTC匯出。
 
 ```json
 {
@@ -669,7 +669,7 @@ curl -X PATCH \
 }
 ```
 
-每日批處理分段作業完成後，每天導出該段。
+每日批次細分工作完成後，每天都會匯出區段。
 
 ```json
 {
@@ -693,11 +693,11 @@ curl -X PATCH \
 
 +++
 
-## 更新檔案名模板以在檔案名中包括其他欄位 {#update-filename-template}
+## 更新檔案名稱範本以在檔案名稱中包含其他欄位 {#update-filename-template}
 
-+++ 按一下查看更新檔案名模板以在檔案名中包括附加欄位的示例
++++ 按一下以檢視檔案名稱範本更新以包含檔案名稱中其他欄位的範例
 
-導出的檔案包含目標名稱和Experience Platform段ID
+匯出的檔案包含目的地名稱和Experience Platform區段ID
 
 ```json
 {
@@ -720,7 +720,7 @@ curl -X PATCH \
 }
 ```
 
-導出的檔案包含目標名稱、Experience Platform段ID、Experience Platform生成檔案的日期和時間以及檔案末尾附加的自定義文本。
+匯出的檔案包含目的地名稱、Experience Platform區段ID、Experience Platform產生檔案的日期和時間，以及附加在檔案結尾的自訂文字。
 
 
 ```json
@@ -746,9 +746,9 @@ curl -X PATCH \
 
 +++
 
-## 將配置檔案屬性添加到資料流 {#add-profile-attribute}
+## 將設定檔屬性新增至資料流 {#add-profile-attribute}
 
-要將配置檔案屬性添加到目標資料流，請向 [!DNL Flow Service] 提供流ID、版本和要添加的配置檔案屬性時的API。
+PATCH若要將設定檔屬性新增至目的地資料流，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本以及您要新增的設定檔屬性。
 
 **API格式**
 
@@ -758,7 +758,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求將新配置檔案屬性添加到現有目標資料流。
+以下請求會將新的設定檔屬性新增至現有的目的地資料流。
 
 ```shell
 curl -X PATCH \
@@ -784,13 +784,13 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 要將配置檔案屬性添加到資料流，請使用 `add` 的下界。 |
-| `path` | 定義要更新的流的部分。 將配置檔案屬性添加到資料流時，請使用示例中指定的路徑。 |
-| `value.path` | 要添加到資料流的配置檔案屬性的值。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將設定檔屬性新增至資料流，請使用 `add` 作業。 |
+| `path` | 定義要更新的流程部分。 將設定檔屬性新增至資料流時，請使用範例中指定的路徑。 |
+| `value.path` | 要新增至資料流的設定檔屬性值。 |
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -799,9 +799,9 @@ curl -X PATCH \
 }
 ```
 
-## 從資料流中刪除配置檔案屬性 {#remove-profile-attribute}
+## 從資料流移除設定檔屬性 {#remove-profile-attribute}
 
-要從現有目標資料流中刪除配置檔案屬性，請向 [!DNL Flow Service] 提供要刪除的配置檔案屬性的流ID、版本和索引選擇器時的API。 索引起始於 `0`。 例如，下面的示例請求將從資料流中刪除第五個配置檔案屬性。
+PATCH若要從現有目的地資料流移除設定檔屬性，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本，以及您要移除之設定檔屬性的索引選取器。 索引開始於 `0`. 例如，下面的範例請求會從資料流中移除第五個設定檔屬性。
 
 
 **API格式**
@@ -812,7 +812,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求從現有目標資料流中刪除配置檔案屬性。
+以下請求會從現有目的地資料流中移除設定檔屬性。
 
 ```shell
 curl -X PATCH \
@@ -838,13 +838,13 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需操作的操作調用。 操作包括： `add`。 `replace`, `remove`。 要從資料流中刪除段，請使用 `remove` 的下界。 |
-| `path` | 根據段選擇器的索引指定應從目標資料流中刪除哪些現有配置檔案屬性。 要檢索資料流中配置檔案屬性的順序，請對 `/flows` 端點並檢查 `transformations.profileSelectors` 屬性。 要刪除資料流中的第一個段，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要從資料流中移除區段，請使用 `remove` 作業。 |
+| `path` | 根據區段選擇器的索引，指定應從目的地資料流移除的現有設定檔屬性。 GET若要擷取資料流中設定檔屬性的順序，請對 `/flows` 端點並檢查 `transformations.profileSelectors` 屬性。 若要刪除資料流中的第一個區段，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **回應**
 
-成功的響應將返回流ID和更新的etag。 您可以通過向Web站點發出GET請求來驗證更新 [!DNL Flow Service] API，同時提供流ID。
+成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
 
 ```json
 {
@@ -855,8 +855,8 @@ curl -X PATCH \
 
 ## API錯誤處理 {#api-error-handling}
 
-本教程中的API端點遵循一般Experience PlatformAPI錯誤消息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) 有關解釋錯誤響應的詳細資訊，請參閱「Platform troubleshooting guide（平台故障排除指南）」。
+本教學課程中的API端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) （位於Platform疑難排解指南中），以取得有關解釋錯誤回應的詳細資訊。
 
 ## 後續步驟 {#next-steps}
 
-通過本教程，您已學習了如何更新目標資料流的各個元件，如使用添加或刪除段或配置檔案屬性 [!DNL Flow Service] API。 有關目標的詳細資訊，請參閱 [目標概述](../home.md)。
+依照本教學課程，您已瞭解如何更新目的地資料流的各種元件，例如使用新增或移除區段或設定檔屬性 [!DNL Flow Service] API。 如需目的地的詳細資訊，請參閱 [目的地概觀](../home.md).

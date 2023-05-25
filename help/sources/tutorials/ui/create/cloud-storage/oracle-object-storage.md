@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Oracle對象儲存；oracle對象儲存
+keywords: Experience Platform；首頁；熱門主題；Oracle物件儲存；oracle物件儲存
 solution: Experience Platform
-title: 在UI中建立Oracle對象儲存源連接
+title: 在UI中建立Oracle物件儲存來源連線
 type: Tutorial
-description: 瞭解如何使用Adobe Experience PlatformUI建立Oracle對象儲存源連接。
+description: 瞭解如何使用Adobe Experience Platform UI建立Oracle物件儲存來源連線。
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
@@ -12,55 +12,55 @@ ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Oracle Object Storage] UI中的源連接
+# 建立 [!DNL Oracle Object Storage] UI中的來源連線
 
-本教程提供建立 [!DNL Oracle Object Storage] 源連接使用Adobe Experience PlatformUI。
+本教學課程提供建立 [!DNL Oracle Object Storage] 來源連線使用Adobe Experience Platform UI。
 
 ## 快速入門
 
-本教程需要對Adobe Experience Platform的以下部分進行有效的理解：
+本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [源](../../../../home.md):Experience Platform允許從各種源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。
-* [沙箱](../../../../../sandboxes/home.md):Experience Platform提供虛擬沙箱，將單個平台實例分區為獨立的虛擬環境，以幫助開發和發展數字型驗應用程式。
+* [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-### 收集所需憑據
+### 收集必要的認證
 
-連接到 [!DNL Oracle Object Storage]，必須為以下連接屬性提供值：
+在中以連線到 [!DNL Oracle Object Storage]，您必須提供下列連線屬性的值：
 
-| 憑據 | 說明 |
+| 認證 | 說明 |
 | ---------- | ----------- |
-| `serviceUrl` | 的 [!DNL Oracle Object Storage] 驗證所需的終結點。 終結點格式為： `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
-| `accessKey` | 的 [!DNL Oracle Object Storage] 驗證所需的訪問密鑰ID。 |
-| `secretKey` | 的 [!DNL Oracle Object Storage] 驗證所需的密碼。 |
-| `bucketName` | 如果用戶具有限制訪問權限，則需要允許的儲存段名稱。 儲存桶名稱必須長3到63個字元，它必須以字母或數字開頭和結尾，並且只能包含小寫字母、數字或連字元(`-`)。 儲存段名稱的格式不能與IP地址相同。 |
-| `folderPath` | 如果用戶具有限制訪問權限，則需要允許的資料夾路徑。 |
+| `serviceUrl` | 此 [!DNL Oracle Object Storage] 驗證所需的端點。 端點格式為： `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
+| `accessKey` | 此 [!DNL Oracle Object Storage] 驗證所需的存取金鑰ID。 |
+| `secretKey` | 此 [!DNL Oracle Object Storage] 驗證所需的密碼。 |
+| `bucketName` | 如果使用者擁有受限制的存取權，則需要允許的bucket名稱。 貯體名稱的長度必須介於3到63個字元之間，開頭和結尾必須是字母或數字，而且只能包含小寫字母、數字或連字型大小(`-`)。 儲存貯體名稱的格式不得類似於IP位址。 |
+| `folderPath` | 如果使用者擁有受限存取權，則需要允許的資料夾路徑。 |
 
-有關如何獲取這些值的詳細資訊，請參閱 [Oracle對象儲存身份驗證指南](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials)。
+如需如何取得這些值的詳細資訊，請參閱 [oracle物件儲存驗證指南](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-收集了所需的憑據後，您可以按照以下步驟建立新的Oracle對象儲存帳戶以連接到平台。
+收集完所需的認證後，您可以依照下列步驟建立新的Oracle物件儲存體帳戶以連線至平台。
 
-## 連接到Oracle對象儲存
+## 連線到Oracle物件儲存體
 
-在平台UI中，選擇 **[!UICONTROL 源]** 從左側導航 [!UICONTROL 源] 工作區。 的 [!UICONTROL 目錄] 螢幕顯示可建立帳戶的各種源。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以用來建立帳戶的各種來源。
 
-可以從螢幕左側的目錄中選擇相應的類別。 或者，您可以使用搜索欄找到要使用的特定源。
+您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋列來尋找您要使用的特定來源。
 
-在 [!UICONTROL 雲儲存] 類別，選擇 **[!UICONTROL Oracle對象儲存]** ，然後選擇 **[!UICONTROL 添加資料]**。
+在 [!UICONTROL 雲端儲存空間] 類別，選取 **[!UICONTROL oracle物件儲存]** 然後選取 **[!UICONTROL 新增資料]**.
 
 ![目錄](../../../../images/tutorials/create/oracle-object-storage/catalog.png)
 
 ### 現有帳戶
 
-要使用現有帳戶，請選擇 [!DNL Oracle Object Storage] 要使用建立新資料流的帳戶，然後選擇 **[!UICONTROL 下一個]** 繼續。
+若要使用現有帳戶，請選取 [!DNL Oracle Object Storage] 要用來建立新資料流的帳戶，然後選取 **[!UICONTROL 下一個]** 以繼續進行。
 
 ![現有](../../../../images/tutorials/create/oracle-object-storage/existing.png)
 
 ### 新帳戶
 
-如果要建立新帳戶，請選擇 **[!UICONTROL 新帳戶]**，然後提供名稱、可選說明，以及 [!DNL Oracle Object Storage] 憑據。 完成後，選擇 **[!UICONTROL 連接到源]** 然後再給新連接建立一段時間。
+如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後提供名稱、選擇性說明和您的 [!DNL Oracle Object Storage] 認證。 完成後，選取 **[!UICONTROL 連線到來源]** 然後等待一段時間以建立新連線。
 
 ![新](../../../../images/tutorials/create/oracle-object-storage/new.png)
 
 ## 後續步驟
 
-按照本教程，您已建立到 [!DNL Oracle Object Storage] 帳戶。 現在，您可以繼續下一個教程， [配置資料流以將雲儲存中的資料引入平台](../../dataflow/batch/cloud-storage.md)。
+依照本教學課程，您已建立與的連線， [!DNL Oracle Object Storage] 帳戶。 您現在可以繼續下一個教學課程： [設定資料流以將雲端儲存空間中的資料帶入Platform](../../dataflow/batch/cloud-storage.md).

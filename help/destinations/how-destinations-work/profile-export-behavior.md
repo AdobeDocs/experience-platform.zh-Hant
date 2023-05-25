@@ -1,6 +1,6 @@
 ---
-title: 配置檔案導出行為
-description: 瞭解配置檔案導出行為在Experience Platform目標中支援的不同整合模式之間如何變化。
+title: 設定檔匯出行為
+description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
 source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
 workflow-type: tm+mt
@@ -9,191 +9,191 @@ ht-degree: 0%
 
 ---
 
-# 不同目標類型的配置檔案導出行為
+# 不同目的地型別的設定檔匯出行為
 
-Experience Platform中有幾種目標類型，如下圖所示。 這些目標的導出模式與觸發目標導出的原因以及導出中包含的內容稍有不同，如下面的更多部分所述。
-
->[!IMPORTANT]
->
->本文檔頁僅描述圖底部突出顯示的連接的配置檔案導出行為。
-
-![目標圖的類型](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
-
-## 微批處理和聚合策略
-
-在根據目標類型深入到特定資訊之前，必須瞭解以下概念： *流目標*。
-
-Experience Platform目標將資料導出到基於API的整合，作為HTTPS調用。 一旦目標服務被其它上游服務通知，概要檔案已經由於批處理接收、流接收、批分段、流分段或身份圖改變而更新，資料就被導出併發送到流目的地。
-
-調用配置檔案在被調度到目標API終結點之前聚合到HTTPS消息的過程 *微批量*。
-
-獲取 [Facebook](/help/destinations/catalog/social/facebook.md) 帶 *[可配置聚合](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 策略示例 — 資料以聚合方式發送，其中目標服務將從配置檔案服務上游接收的所有傳入資料，並將其聚合，然後將其發送到Facebook:
-
-* 記錄數（最多10.000）或
-* 時間窗口間隔（30分鐘）
-
-無論上述閾值是否首次達到，都會引發對Facebook的出口。 所以，在 [!DNL Facebook Custom Audiences] 控制板，您可能會看到以10.000個記錄增量從Experience Platform進入觀眾。 您可能每10-15分鐘看到10.000條記錄，因為資料的處理和聚合速度比30分鐘導出間隔快，發送速度也快，因此大約每10-15分鐘一次，直到所有記錄都得到處理。 如果記錄不足，無法組成10.000批，則當前記錄數將按滿足時間窗口閾值時的方式發送，因此您也可能看到發送到Facebook的較小批。
-
-另外，請考慮 [HTTP API目標](/help/destinations/catalog/streaming/http-destination.md)，其中 *[最佳工作聚合](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 策略 `maxUsersPerRequest: 10`。 這意味著，在向此目的地觸發HTTP調用之前，最多將聚合十個配置檔案，但當目標服務從上游服務接收到更新的重新評估資訊時，Experience Platform會嘗試將配置檔案派送到目標。
-
-聚合策略是可配置的，目標開發人員可以決定如何配置聚合策略以最好地滿足下游API端點的速率限制。 閱讀有關 [聚合策略](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) Destination SDK文檔。
-
-## 流配置檔案導出（企業）目標 {#streaming-profile-destinations}
+Experience Platform中有數種目的地型別，如下圖所示。 關於會觸發目的地匯出的內容以及匯出中包含的內容，這些目的地的匯出模式稍有不同，如下節進一步所述。
 
 >[!IMPORTANT]
 >
-> 企業目標僅可用於 [Adobe Real-time Customer Data Platform旗艦](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+>本檔案頁面僅說明圖表底部反白之連線的設定檔匯出行為。
 
-的 [企業目標](/help/destinations/destination-types.md#streaming-profile-export) 在Experience Platform中是AmazonKinesis、Azure事件中心和HTTP API。
+![目的地圖表型別](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-Experience Platform可優化配置檔案導出行為到企業目標，以便僅在在段鑑定或其他重要事件之後對配置檔案進行相關更新時將資料導出到API終結點。 配置式在以下情況下導出到目標：
+## 微批次處理和彙總原則
 
-* 配置檔案更新由 [段成員](/help/xdm/field-groups/profile/segmentation.md) 至少一個映射到目標的段。 例如，配置檔案已限定映射到目標的段之一或已退出映射到目標的段之一。
-* 配置檔案更新由 [身份映射](/help/xdm/field-groups/profile/identitymap.md)。 例如，已為映射到目標的段之一限定的配置檔案已在標識映射屬性中添加了新標識。
-* 配置檔案更新由映射到目的地的至少一個屬性的屬性的改變確定。 例如，映射步驟中映射到目標的屬性之一被添加到配置檔案。
+在深入瞭解每個目的地型別的特定資訊之前，請務必瞭解以下用途的微批次處理和彙總原則的概念： *串流目的地*.
 
-在上述所有情況下，只將發生相關更新的配置檔案導出到目標。 例如，如果映射到目標流的段有100個成員，並且有5個新配置檔案符合該段的條件，則向目標的導出是增量的，並且只包括5個新配置檔案。
+Experience Platform目的地會以HTTPS呼叫的形式將資料匯出至API型整合。 一旦目標服務收到其他上游服務的通知，得知設定檔已因批次擷取、串流擷取、批次分段、串流細分或身分圖表變更而更新，資料就會匯出並傳送至串流目標。
 
-請注意，無論更改位於何處，都會為配置檔案導出所有映射的屬性。 因此，在上面的示例中，即使屬性本身沒有更改，也會導出這五個新配置檔案的所有映射屬性。
+呼叫將設定檔彙總至HTTPS訊息再分派至目的地API端點的程式 *微批次處理*.
 
-### 什麼決定資料導出以及導出中包含的內容
+取得 [facebook目的地](/help/destinations/catalog/social/facebook.md) 搭配 *[可設定的彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 原則為例 — 資料會以彙總方式傳送，其中目的地服務會擷取設定檔服務上游的所有傳入資料，並在將資料分派至Facebook之前，依下列其中一個專案彙總資料：
 
-對於為給定配置檔案導出的資料，瞭解以下兩個不同概念非常重要 *決定資料導出到企業目標的因素* 和 *資料包含在導出中*。
+* 記錄數（最多10.000條）或
+* 時間間隔（30分鐘）
 
-| 決定目標導出的因素 | 目標導出中包含的內容 |
+首次符合上述臨界值的任何一項，都會觸發匯出至Facebook的作業。 因此，在 [!DNL Facebook Custom Audiences] 儀表板，您可能會看到以10.000筆記錄增量從Experience Platform傳入受眾。 您可能會每10到15分鐘看到10,000筆記錄，因為資料的處理與彙總速度比30分鐘的匯出間隔還快，而且傳送速度也快，所以大約每10到15分鐘就會有記錄處理完畢。 如果沒有足夠的記錄來組成10.000批次，則當達到時間範圍臨界值時，將會傳送目前的記錄數，因此您也可能看到傳送到Facebook的較小批次。
+
+再舉一個例子，請考慮 [HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md)，具有 *[最大努力彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 原則，搭配 `maxUsersPerRequest: 10`. 這表示在為此目的地觸發HTTP呼叫之前，最多會彙總10個設定檔，但Experience Platform會在目的地服務收到來自上游服務的更新重新評估資訊後，嘗試將設定檔分派至目的地。
+
+可設定彙總原則，而目的地開發人員可決定如何設定彙總原則，以最符合下游API端點的速率限制。 深入瞭解 [彙總原則](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) 在Destination SDK檔案中。
+
+## 串流設定檔匯出（企業）目的地 {#streaming-profile-destinations}
+
+>[!IMPORTANT]
+>
+> 企業目的地僅適用於 [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) 客戶。
+
+此 [企業目的地](/help/destinations/destination-types.md#streaming-profile-export) Experience Platform中有Amazon Kinesis、Azure事件中樞和HTTP API。
+
+Experience Platform會最佳化將設定檔匯出至您企業目的地的行為，以便僅在符合區段資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的API端點。 設定檔會在下列情況下匯出至您的目的地：
+
+* 設定檔更新是由中的變更所決定 [區段會籍](/help/xdm/field-groups/profile/segmentation.md) 對應至目的地的至少一個區段。 例如，設定檔已符合其中一個對應至目的地的區段的資格，或已退出其中一個對應至目的地的區段。
+* 設定檔更新是由 [身分對應](/help/xdm/field-groups/profile/identitymap.md). 例如，已符合對應至目的地其中一個區段資格的設定檔，已在身分對應屬性中新增身分。
+* 設定檔更新是由至少一個對應至目的地的屬性變更所決定。 例如，會將對應步驟中對應至目的地的其中一個屬性新增至設定檔。
+
+在上述所有情況下，只會將已發生相關更新的設定檔匯出至您的目的地。 例如，如果對應至目的地流程的一個區段有一百個成員，且有五個新設定檔符合區段的資格，則匯出至您的目的地的程式為遞增式，且僅包含五個新設定檔。
+
+請注意，無論變更位於何處，所有對映屬性都會匯出為設定檔。 因此，在上述範例中，即使屬性本身並未變更，也將匯出這五個新設定檔的所有對應屬性。
+
+### 決定資料匯出的因素，以及匯出中包括的因素
+
+針對指定設定檔匯出的資料，請務必瞭解以下兩個不同的概念 *決定資料匯出至企業目的地的因素* 和 *匯出中包含哪些資料*.
+
+| 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>映射的屬性和段用作目標導出的提示。 這表示如果任何映射的段更改狀態(從 `null` 至 `realized` 或 `realized` 至 `exiting`)或更新任何映射屬性時，將啟動目標導出。</li><li>由於標識當前無法映射到企業目標，因此給定配置檔案上任何標識的更改也會決定目標導出。</li><li>屬性的更改定義為屬性上的任何更新，無論其值是否相同。 這意味著，即使值本身未更改，屬性上的覆蓋也被視為更改。</li></ul> | <ul><li>的 `segmentMembership` 對象包括在激活資料流中映射的段，在限定或段退出事件後配置檔案的狀態已更改。 請注意，如果配置檔案限定用於的其他未映射段屬於相同的段，則這些段可以是目標導出的一部分 [合併策略](/help/profile/merge-policies/overview.md) 激活資料流中映射的段。 </li><li>中的所有標識 `identityMap` 也包括對象(Experience Platform當前不支援企業目標中的標識映射)。</li><li>目標導出中只包含映射的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果任何對應的區段變更狀態(從 `null` 至 `realized` 或從 `realized` 至 `exiting`)或更新任何對應的屬性，就會開始匯出目的地。</li><li>由於身分目前無法對應到企業目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會被視為變更。</li></ul> | <ul><li>此 `segmentMembership` 物件包含啟動資料流中對應的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可以屬於目標匯出的一部分 [合併原則](/help/profile/merge-policies/overview.md) 區段在啟動資料流中對應時相同。 </li><li>中的所有身分 `identityMap` 也包括物件(Experience Platform目前不支援企業目的地中的身分對應)。</li><li>目的地匯出只會包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
->在將配置檔案激活到目標時，企業目標流回填資料。 這意味著在將激活工作流配置到目標之後的第一資料導出將包括在段映射到目標之前符合激活段條件的配置檔案。
+>將設定檔啟用至目的地時，企業目的地會串流回填資料。 這表示在設定啟動工作流程至目的地後的第一次資料匯出將包含符合啟動區段資格的設定檔，之後才會將區段對應至目的地。
 
 >[!BEGINSHADEBOX]
 
-例如，將此資料流視為HTTP目標，其中在資料流中選擇了三個段，並將四個屬性映射到目標。
+例如，將此資料流視為HTTP目的地，其中在資料流中選取了三個區段，且四個屬性對應至目的地。
 
-![企業目標資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![企業目的地資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-導出到目標的配置檔案可由符合或退出其中一個配置檔案來確定 *三個映射段*。 但是，在資料導出中，在 `segmentMembership` 對象，如果特定配置檔案是其成員，並且這些配置檔案與觸發導出的段共用相同的合併策略，則可能會出現其他未映射的段。 如果配置檔案符合 **DeLorean汽車的客戶** 部，但亦為 **觀看《回到未來》電影** 和 **科幻迷** 段，則這兩個段也將 `segmentMembership` 資料導出的對象，即使這些對象未在資料流中映射，如果它們與 **DeLorean汽車的客戶** 段。
+個人資料匯出至目的地可由符合或退出其中一個的個人資料決定。 *三個對應的區段*. 不過，在資料匯出中，在 `segmentMembership` 物件、其他未對應的區段可能會出現，前提是該特定設定檔是這些區段的成員，且這些區段與觸發匯出的區段共用相同的合併原則。 如果設定檔符合 **擁有DeLorean Cars的客戶** 區段，但同時也是 **觀看「回到未來」的電影** 和 **科幻愛好者** 區段，則其他這兩個區段也會出現在 `segmentMembership` 資料匯出的物件，即使這些物件未在資料流中對映，只要它們與共用相同的合併原則 **擁有DeLorean Cars的客戶** 區段。
 
-從配置檔案屬性的視點來看，對上述四個屬性的任何更改都將確定目標導出，並且配置檔案上存在的四個映射屬性中的任何一個都將出現在資料導出中。
+從設定檔屬性的角度來看，對上述四個對應屬性所做的任何變更都將決定目的地匯出，而且設定檔上存在的四個對應屬性中的任何一個都會出現在資料匯出中。
 
 >[!ENDSHADEBOX]
 
 >[!TIP]
 >
-> 您可以在中查看將資料導出到各種企業目標的示例 [AmazonKinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data)。 [Azure事件中心](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data), [HTTP API](/help/destinations/catalog/streaming/http-destination.md#exported-data) 目標文檔頁面。
+> 您可在以下連結中看到匯出至各種企業目的地的資料範例： [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data)， [Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data)、和 [HTTP API](/help/destinations/catalog/streaming/http-destination.md#exported-data) 目的地檔案頁面。
 
-## 基於流API的目標 {#streaming-api-based-destinations}
+## 串流API型目的地 {#streaming-api-based-destinations}
 
-流目標(如Facebook、貿易台和其他基於API的整合)的配置檔案導出行為與上述企業目標的行為非常相似。
+適用於串流目的地(例如Facebook、Trade Desk)和其他以API為基礎的整合的設定檔匯出行為，與上述適用於企業目的地的行為非常類似。
 
-流目標的示例是屬於 [社會和廣告類別](/help/destinations/destination-types.md#categories) 目錄中。
+串流目的地的範例為屬於 [社交和廣告類別](/help/destinations/destination-types.md#categories) 在目錄中。
 
-Experience Platform優化配置檔案導出到流式傳輸目標的行為，以便在經過段限定或其他重要事件之後對配置檔案進行相關更新時，才將資料導出到基於API的流式傳輸目標。 配置式在以下情況下導出到目標：
+Experience Platform會最佳化將設定檔匯出至串流目的地的行為，以便在區段資格或其他重大事件後發生設定檔的相關更新時，僅將資料匯出至串流API型目的地。 設定檔會在下列情況下匯出至您的目的地：
 
-* 配置檔案更新由 [段成員](/help/xdm/field-groups/profile/segmentation.md) 至少一個映射到目標的段。 例如，配置檔案已限定映射到目標的段之一或已退出映射到目標的段之一。
-* 配置檔案更新由 [身份映射](/help/xdm/field-groups/profile/identitymap.md) 標識名稱空間，該標識名稱空間標籤為用於導出此目標實例。 例如，已為映射到目標的段之一限定的配置檔案已在標識映射屬性中添加了新標識。
-* 配置檔案更新由映射到目的地的至少一個屬性的屬性的改變確定。 例如，映射步驟中映射到目標的屬性之一被添加到配置檔案。
-* 配置自動同意強制並選擇配置檔案時配置檔案的同意更改。 自動同意強制將受眾退出事件發送到目標，以便配置檔案不包括在目標位置的任何目標中。
+* 設定檔更新是由中的變更所決定 [區段會籍](/help/xdm/field-groups/profile/segmentation.md) 對應至目的地的至少一個區段。 例如，設定檔已符合其中一個對應至目的地的區段的資格，或已退出其中一個對應至目的地的區段。
+* 設定檔更新是由 [身分對應](/help/xdm/field-groups/profile/identitymap.md) 適用於已標示為要匯出給此目的地執行個體的身分名稱空間。 例如，已符合對應至目的地其中一個區段資格的設定檔，已在身分對應屬性中新增身分。
+* 設定檔更新是由至少一個對應至目的地的屬性變更所決定。 例如，會將對應步驟中對應至目的地的其中一個屬性新增至設定檔。
+* 設定自動同意執行且設定檔選擇退出時，設定檔的同意變更。 自動同意執行會將對象退出事件傳送到目的地，因此設定檔不會包含在目的地的任何目標定位中。
 
-在上述所有情況下，只將發生相關更新的配置檔案導出到目標。 例如，如果映射到目標流的段有100個成員，並且有5個新配置檔案符合該段的條件，則向目標的導出是增量的，並且只包括5個新配置檔案。
+在上述所有情況下，只會將已發生相關更新的設定檔匯出至您的目的地。 例如，如果對應至目的地流程的一個區段有一百個成員，且有五個新設定檔符合區段的資格，則匯出至您的目的地的程式為遞增式，且僅包含五個新設定檔。
 
-請注意，無論更改位於何處，都會為配置檔案導出所有映射的屬性。 因此，在上面的示例中，即使屬性本身沒有更改，也會導出這五個新配置檔案的所有映射屬性。
+請注意，無論變更位於何處，所有對映屬性都會匯出為設定檔。 因此，在上述範例中，即使屬性本身並未變更，也將匯出這五個新設定檔的所有對應屬性。
 
-### 什麼決定資料導出以及導出中包含的內容
+### 決定資料匯出的因素，以及匯出中包括的因素
 
-關於為給定配置檔案導出的資料，必須瞭解以下兩個不同的概念：決定資料導出到流API目標的是什麼以及導出中包括哪些資料。
+針對指定設定檔匯出的資料，請務必了解決定匯出至串流API目的地的資料以及匯出中包含哪些資料的兩個不同概念。
 
-| 決定目標導出的因素 | 目標導出中包含的內容 |
+| 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>映射的屬性和段用作目標導出的提示。 這表示如果任何映射的段更改狀態(從 `null` 至 `realized` 或 `realized` 至 `exiting`)或更新任何映射屬性時，將啟動目標導出。</li><li>標識映射中的更改定義為為 [身份圖](/help/identity-service/ui/identity-graph-viewer.md) 的子目錄。</li><li>屬性的更改定義為屬性上映射到目標的屬性的任何更新。</li></ul> | <ul><li>映射到目標且已更改的段將包括在 `segmentMembership` 的雙曲餘切值。 在某些情況下，它們可能會使用多個調用導出。 此外，在某些情況下，呼叫中可能還包含一些未更改的段。 無論如何，將只導出映射的段。</li><li>映射到中目標的命名空間中的所有標識 `identityMap` 也包括對象。</li><li>目標導出中只包含映射的屬性。</li></ul> |
+| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果任何對應的區段變更狀態(從 `null` 至 `realized` 或從 `realized` 至 `exiting`)或更新任何對應的屬性，就會開始匯出目的地。</li><li>身分對應中的變更定義為針對新增/移除的身分 [身分圖表](/help/identity-service/ui/identity-graph-viewer.md) ，用於對應以供匯出的身分名稱空間。</li><li>屬性的變更定義為對應至目的地的屬性之屬性上的任何更新。</li></ul> | <ul><li>對應至目的地且已變更的區段將包含在 `segmentMembership` 物件。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些尚未變更的區段可能也會包含在呼叫中。 無論如何，只會匯出對應的區段。</li><li>名稱空間中所有已對應至目的地身分的身分 `identityMap` 物件也包括在內。</li><li>目的地匯出只會包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
 >[!IMPORTANT]
 >
->在將配置檔案激活到目標時，流API目標流回填資料。 這意味著在將激活工作流配置到目標之後的第一資料導出將包括在段映射到目標之前符合激活段條件的配置檔案。
+>將設定檔啟用至目的地時，串流API目的地會串流回填資料。 這表示在設定啟動工作流程至目的地後的第一次資料匯出將包含符合啟動區段資格的設定檔，之後才會將區段對應至目的地。
 
 >[!BEGINSHADEBOX]
 
-例如，將此資料流視為在資料流中選擇三個段的流目標。
+例如，將此資料流視為在資料流中選取了三個區段的串流目的地。
 
-![流目標資料流](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
+![串流目的地資料流](/help/destinations/assets/how-destinations-work/streaming-destination-example-dataflow.png)
 
-通過限定或退出三個映射段之一的配置檔案，可以確定向目標導出的配置檔案。 如果配置檔案符合 **DeLorean汽車的客戶** 段，這將觸發導出。 其他分部(即&#x200B;**城市 — 達拉斯** 和 **基本站點活動**)可能也會導出，以防配置檔案的段具有可能的狀態之一(`realized` 或 `exited`)。 未映射的段(如 **科幻迷**)。
+個人資料是否可匯出至目的地，取決於其是否符合或退出三個對應區段之一的條件。 如果設定檔符合 **擁有DeLorean Cars的客戶** 區段，則會觸發匯出。 其他區段(**城市 — 達拉斯** 和 **基本網站使用中**)也可以匯出，以防設定檔中該區段顯示為其中一種可能狀態(`realized` 或 `exited`)。 未對應的區段(例如 **科幻愛好者**)將不會匯出。
 
-從配置檔案屬性的視點看，對上述三個屬性的任何更改都將決定目標導出。
+從設定檔屬性的角度來看，對上方對應的三個屬性所做的任何變更都會決定匯出目的地。
 
 >[!ENDSHADEBOX]
 
-## 批處理（基於檔案）目標 {#file-based-destinations}
+## 批次（以檔案為基礎）目的地 {#file-based-destinations}
 
-將配置檔案導出到 [基於檔案的目標](/help/destinations/destination-types.md#file-based) 在Experience Platform中，有三種類型的時間表（下面列出）和兩種檔案導出選項（完整或增量檔案）可供使用。 所有這些設定都在段級別上設定，即使多個段映射到單個目標資料流時也是如此。
+將設定檔匯出至 [檔案型目的地](/help/destinations/destination-types.md#file-based) 在Experience Platform中，有三種排程型別（如下所列）和兩種檔案匯出選項（完整或增量檔案）可供您使用。 所有這些設定都是在區段層級上設定，即使有多個區段對應至單一目的地資料流亦然。
 
-* 計畫導出：配置目標、添加一個或多個段、選擇是否要導出完整檔案或增量檔案，並選擇每天或每天應導出檔案的設定時間。 例如，5 PM導出時間意味著任何符合段條件的配置檔案都將在下午5點導出。
-* 分部評估後：在每日段評估作業運行後立即觸發導出。 這意味著檔案中導出的配置檔案編號與段的最新評估填充盡可能接近。
-* 按需出口([立即導出檔案](/help/destinations/ui/export-file-now.md)):基於最新段評估作業，在定期計畫導出之外一次性導出完整檔案。
+* 已排程的匯出：設定目的地、新增一或多個區段、選取您要匯出完整或增量檔案，以及選取每天設定時間或每天幾次應匯出檔案。 例如，下午5點的匯出時間表示所有符合區段資格的設定檔都將於下午5點匯出。
+* 區段評估後：每日區段評估工作執行後會立即觸發匯出。 這表示檔案中匯出的設定檔編號儘可能接近區段的最新評估母體。
+* 隨選匯出([立即匯出檔案](/help/destinations/ui/export-file-now.md))：根據最新的區段評估工作，會在定期排程的匯出專案基礎上，一次性匯出完整檔案。
 
-在上述任何導出情況下，導出的檔案包括限定用於導出的配置檔案以及您選擇作為XDM屬性進行導出的列。
+在上述任何匯出情況下，匯出的檔案都包含符合匯出條件的輪廓，以及您選取為匯出XDM屬性的欄。
 
 >[!TIP]
 >
->當流段映射到批處理目標時，導出檔案中配置檔案的數量與段中用戶的數量更接近的可能性更大。 這是因為，最新段評估更接近出口時間的可能性更大。
+>當串流區段對應至批次目的地時，匯出檔案中的設定檔數量更有可能接近區段中的使用者數量。 這是因為最新的區段評估較接近匯出時間的機率較高。
 
-### 增量檔案導出 {#incremental-file-exports}
+### 增量檔案匯出 {#incremental-file-exports}
 
-配置檔案上的所有更新都使配置檔案有資格包含在增量檔案導出中。 例如，如果某個屬性被添加到配置檔案或從配置檔案中刪除，則該屬性在導出中不包括配置檔案。 僅配置檔案 `segmentMembership` 屬性已更改將包含在導出的檔案中。 換句話說，僅當截面梁成為段的一部分或從段中移除時，它才包括在增量檔案導出中。
+並非所有設定檔更新都符合增量檔案匯出中包含的設定檔資格。 例如，如果將屬性新增至設定檔或從設定檔中移除，則匯出中不會包含設定檔。 僅限設定檔的 `segmentMembership` 屬性已變更將會包含在匯出的檔案中。 換言之，僅當輪廓成為區段的一部分或從區段中移除時，它才會包含在增量檔案匯出中。
 
-同樣，如果將新身份（新電子郵件地址、電話號碼、ECID等）添加到 [身份圖](/help/identity-service/ui/identity-graph-viewer.md)，這不表示將配置檔案包括在新增量檔案導出中的原因。
+同樣地，如果將新的身分識別（新的電子郵件地址、電話號碼、ECID等）新增至 [身分圖表](/help/identity-service/ui/identity-graph-viewer.md)，但這不表示有理由將該設定檔納入新的增量檔案匯出。
 
-如果將新段添加到目標映射，則不會影響另一個段的資格和導出。 導出計畫按段單獨配置，而檔案則針對每個段單獨導出，即使這些段已添加到同一目標資料流。
+如果將新區段新增至目的地對應，則不會影響其他區段的資格和匯出。 匯出排程是依每個區段個別設定，而檔案會依每個區段個別匯出，即使區段已新增至相同的目的地資料流亦然。
 
 >[!BEGINSHADEBOX]
 
-例如，在下面所示的導出設定中，如果段正在導出增量檔案更新，請注意以下情況：配置檔案是否包含在增量檔案導出中：
+例如，在下圖所示的匯出設定中，當區段匯出增量檔案更新時，請注意以下情況，其中是否有設定檔包含在增量檔案匯出中：
 
-![導出具有多個選定屬性的設定。](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
+![匯出具有數個選定屬性的設定。](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* 當配置檔案符合或不符合段的條件時，它將包括在增量檔案導出中。
-* 配置檔案是 *不* 將新電話號碼添加到標識圖形時包含在增量檔案導出中。
-* 配置檔案是 *不* 當任何映射的XDM欄位的值(如 `xdm: loyalty.points`。 `xdm: loyalty.tier`。 `xdm: personalEmail.address` 在配置檔案上更新。
-* 只要 `segmentMembership.status` XDM欄位在目標激活工作流中映射，退出段的配置檔案也包含在導出的增量檔案中， `exited` 狀態。
+* 當設定檔符合或不符合區段的資格時，該設定檔會包含在增量檔案匯出中。
+* 設定檔為 *not* 新增電話號碼至身分圖表時，包含在增量檔案匯出中。
+* 設定檔為 *not* 當任何對應的XDM欄位(例如 `xdm: loyalty.points`， `xdm: loyalty.tier`， `xdm: personalEmail.address` 已在設定檔上更新。
+* 每當 `segmentMembership.status` XDM欄位會在目的地啟用工作流程中進行對應，退出區段的設定檔也會包含在匯出的增量檔案中，並附有 `exited` 狀態。
 
 >[!ENDSHADEBOX]
 
-### 什麼決定資料導出以及導出中包含的內容
+### 決定資料匯出的因素，以及匯出中包括的因素
 
-根據上節中的資訊，可將配置檔案導出到基於檔案的目標的行為總結如下：
+根據上一節中的資訊，可將設定檔匯出行為摘要至檔案型目的地，如下所述：
 
-**完整檔案導出**
+**完整檔案匯出**
 
-每天導出該段的全部活動人口。
+每天都會匯出區段的完整作用中母體。
 
-| 決定目標導出的因素 | 導出檔案中包含的內容 |
+| 決定目的地匯出的因素 | 匯出的檔案包含的內容 |
 |---------|----------|
-| <ul><li>在UI或API和用戶操作中設定的導出計畫(選擇 [立即導出檔案](/help/destinations/ui/export-file-now.md) 或使用 [點對點激活API](/help/destinations/api/ad-hoc-activation-api.md))確定目標導出的開始。</li></ul> | 在完整檔案導出中，每個檔案導出都包括基於最新段評估的段的整個活動配置檔案填充。 為導出選擇的每個XDM屬性的最新值也作為列包含在每個檔案中。 請注意，檔案導出中不包含處於退出狀態的配置檔案。 |
+| <ul><li>在UI或API中設定的匯出排程和使用者動作(選取 [立即匯出檔案](/help/destinations/ui/export-file-now.md) 在UI中或使用 [臨機啟動API](/help/destinations/api/ad-hoc-activation-api.md))決定目的地匯出的開始時間。</li></ul> | 在完整檔案匯出中，每個檔案匯出都會包含根據最新區段評估而建立的整個區段作用中設定檔母體。 為匯出選取的每個XDM屬性的最新值也會作為欄包含在每個檔案中。 請注意，處於已退出狀態的設定檔不會包含在檔案匯出中。 |
 
 {style="table-layout:fixed"}
 
-**增量檔案導出**
+**增量檔案匯出**
 
-在設定激活工作流後的第一個檔案導出中，將導出段的全部填充。 在隨後的導出中，僅導出已修改的配置檔案。
+在設定啟動工作流程後的第一個檔案匯出中，會匯出區段的整個母體。 在後續的匯出作業中，只會匯出已修改的輪廓。
 
-| 決定目標導出的因素 | 導出檔案中包含的內容 |
+| 決定目的地匯出的因素 | 匯出的檔案包含的內容 |
 |---------|----------|
-| <ul><li>UI或API中設定的導出計畫確定目標導出的開始。</li><li>配置檔案的段成員資格的任何更改（無論其是否符合該段的條件）均可將配置檔案包括在增量導出中。 配置檔案的屬性或身份映射中的更改 *不* 限定要包括在增量導出中的配置檔案。</li></ul> | <p>段成員資格已更改的配置檔案，以及每個選定用於導出的XDM屬性的最新資訊。</p><p>目標導出中包括已退出狀態的配置檔案(如果 `segmentMembership.status` 在映射步驟中選擇XDM欄位。</p> |
+| <ul><li>UI或API中設定的匯出排程會決定目的地匯出的開始。</li><li>設定檔的區段成員資格的任何變更（無論是否符合區段的資格）都會讓設定檔符合納入增量匯出的資格。 設定檔的屬性或身分對應變更 *不要* 限定要包含在增量匯出中的設定檔。</li></ul> | <p>區段成員資格已變更的設定檔，以及每個選取匯出的XDM屬性的最新資訊。</p><p>具有退出狀態的設定檔會包含在目的地匯出中，如果 `segmentMembership.status` 在對應步驟中選取XDM欄位。</p> |
 
 {style="table-layout:fixed"}
 
 >[!TIP]
 >
->作為提醒，配置檔案的屬性值或標識映射中的更改不會限定配置檔案包含在增量檔案導出中。
+>提醒您，設定檔的屬性值或身分對應中的變更不符合納入增量檔案匯出的設定檔資格。
 
 ## 後續步驟 {#next-steps}
 
-讀完此文檔後，您現在知道在將配置檔案導出到流式、企業和基於檔案的目標時應該看到什麼。
+閱讀本檔案後，您現在瞭解將設定檔匯出至串流、企業和檔案型目的地的內容。
 
-接下來，你可以閱讀 [身份已處理](/help/destinations/how-destinations-work/identity-handling.md) 中。
+接下來，您可以閱讀如何進行 [身分已處理](/help/destinations/how-destinations-work/identity-handling.md) 啟動工作流程中。

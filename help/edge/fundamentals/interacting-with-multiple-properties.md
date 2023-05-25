@@ -1,7 +1,7 @@
 ---
-title: 在Adobe Experience PlatformWeb SDK中與多個屬性交互
-description: 瞭解如何與多個Experience PlatformWeb SDK屬性交互。
-keywords: 多個屬性；configure;sendEvent;edgeConfigId;orgId;
+title: 與Adobe Experience Platform Web SDK中的多個屬性互動
+description: 瞭解如何與多個Experience PlatformWeb SDK屬性互動。
+keywords: 多個屬性；設定；sendEvent；edgeConfigId；orgId；
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
 source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
@@ -10,15 +10,15 @@ ht-degree: 0%
 
 ---
 
-# 與多個屬性交互
+# 與多個屬性互動
 
-在某些情況下，您可能希望與同一頁面上的兩個不同屬性交互。 這些案例包括：
+在某些情況下，您可能會想要與相同頁面上的兩個不同屬性互動。 這些案例包括：
 
-* 已收購並正在致力於將網站整合到一起的公司
+* 已收購且正致力於整合其網站的公司
 * 多家公司之間的資料共用關係
-* 正在測試新Adobe解決方案且不想中斷其現有實施的客戶
+* 正在測試新Adobe解決方案且不想中斷現有實施的客戶
 
-SDK允許您通過在基本代碼中向陣列中添加另一個名稱來為每個屬性建立單獨的實例。 以下示例提供了兩個名稱， `mycustomname1` 和 `mycustomname2`。
+SDK可讓您藉由在基底程式碼中的陣列中新增其他名稱，為每個屬性建立個別的執行個體。 下列範例提供兩個名稱： `mycustomname1` 和 `mycustomname2`.
 
 ```markup
 <script>
@@ -30,11 +30,11 @@ SDK允許您通過在基本代碼中向陣列中添加另一個名稱來為每�
 <script src="alloy.js" async></script>
 ```
 
-因此，指令碼會建立兩個SDK實例。 用於與第一個實例交互的全局函式名為 `mycustomname1` 與第二個實例交互的全局函式被命名為 `mycustomname2`。
+因此，指令碼會建立兩個SDK例項。 與第一個執行個體互動的全域函式已命名 `mycustomname1` 而用來與第二個執行個體互動的全域函式已命名 `mycustomname2`.
 
-通過建立兩個單獨的實例，可以為不同的屬性配置每個實例。 由於與交互而發生的任何通信或資料持久性 `mycustomname1` 與 `mycustomname2`。
+藉由建立兩個個別的執行個體，每個執行個體都可以針對不同的屬性進行設定。 由於與互動而發生的任何通訊或資料持續性 `mycustomname1` 與隔離 `mycustomname2`.
 
-在上例中，您可以使用每個實例執行命令，如下所示：
+在上述範例之後，您可以使用每個例證執行命令，如下所示：
 
 ```javascript
 mycustomname1("configure", {
@@ -60,8 +60,8 @@ mycustomname2("sendEvent", {
 });
 ```
 
-確保執行 `configure` 命令，然後對同一實例執行其他命令。
+請務必執行 `configure` 命令之前，執行相同執行個體上的其他命令。
 
 ## 限制
 
-為避免與Cookie衝突，只有一個Adobe Experience Platform實例 [!DNL Web SDK] 在頁面中可以 `edgeConfigId`。 同樣，只有一個Adobe Experience Platform [!DNL Web SDK] 可以 `orgId`。
+為避免與Cookie衝突，請只使用一個Adobe Experience Platform例項 [!DNL Web SDK] 在頁面中可以有特定 `edgeConfigId`. 同樣地，只有一個Adobe Experience Platform例項 [!DNL Web SDK] 可以有特定 `orgId`.

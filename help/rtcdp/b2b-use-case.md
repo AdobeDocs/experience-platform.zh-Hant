@@ -1,6 +1,6 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform；即時客戶資料平台；即時cdp;cdp;rtcdp
-title: Real-time Customer Data PlatformB2B版示例用例
+keywords: RTCDP；CDP；Real-time Customer Data Platform；即時客戶資料平台；real time cdp；cdp；rtcdp
+title: Real-time Customer Data Platform B2B版本的範例使用案例
 description: 此範例情境提供您實作 Adobe Real-Time Customer Data Platform B2B Edition 設定的範例。
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
@@ -10,91 +10,91 @@ ht-degree: 2%
 
 ---
 
-# Real-time Customer Data PlatformB2B版示例用例
+# Real-time Customer Data Platform B2B版本的範例使用案例
 
-Real-time Customer Data PlatformB2B版擴展了現有的Real-Time CDP和Adobe Experience Platform產品，以支援B2B資料和工作流。 本文檔提供了一個示例使用案例，演示B2B版提供的附加優勢。 包括:
+Real-time Customer Data Platform B2B版本擴充了現有的Real-Time CDP和Adobe Experience Platform產品，以支援B2B資料和工作流程。 本檔案提供的範例使用案例會示範B2B版本提供的額外優點。 包括:
 
-- 將來自不同獨立資料源的人員和帳戶資料結合起來，可生成一個全面的視圖，使客戶能夠更好地瞭解客戶並更準確地進行細分。 請參閱 [建立XDM架構關係](./schemas/b2b.md) 供各種B2B源使用，以獲取更多資訊。
-- 根據相關實體的屬性對受眾進行分段。 這包括帳戶、機會、市場活動和市場營銷清單。 段不再僅限於人員屬性和體驗事件。 查看 [B2B分段文檔](./segmentation/b2b.md) 更多建立特定於B2B的受眾的示例。
-- 本機支援與多個帳戶相關的一個人的使用案例。
+- 結合來自不同獨立資料來源的個人和帳戶資料，以產生全面檢視，從而更好地瞭解客戶並更準確地分段。 請參閱以下說明檔案： [建立XDM結構描述關係](./schemas/b2b.md) 以取得詳細資訊，瞭解搭配各種B2B來源使用。
+- 根據相關實體的屬性來細分對象。 這包括客戶、商機、行銷活動和行銷清單。 區段不再侷限於個人屬性和體驗事件。 請參閱 [B2B細分檔案](./segmentation/b2b.md) 以取得建立B2B特定對象的更多範例。
+- 原生支援與多個帳戶相關之個人的使用案例。
 
 ## 使用案例
 
-科技公司Bodea有一款新產品，希望同時通過電子郵件和LinkedIn的廣告活動瞄準客戶。 為了最大限度地提高營銷活動的效率，Bodea還希望瞄準那些與現有客戶相關的人員，這些人以前在其產品上花費了100萬美元，AND公司在上個月訪問了新產品頁面。
+Bodea是一家技術公司，推出一項新產品，該公司想要透過電子郵件和LinkedIn廣告促銷活動同時鎖定客戶。 為了最大化行銷活動的效率，Bodea也想要將目標鎖定於與該現有帳戶相關聯的使用者，這些使用者先前在其產品上花費超過100萬美元，且上個月造訪過新產品頁面。
 
-然而，Bodea有兩項業務。 Bodea公司的第一條業務線&quot;1&quot;為汽車行業創造軟體。 第二行&quot;二號線&quot;銷售製造汽車零件的3D打印機。 由於Bodea的兩項業務，從Bodea的客戶帳戶生成的收入資料在單一視圖中不統一。
+不過，Bodea有兩個不同的業務領域。 Bodea的第一個業務線「第1行」為汽車產業建立軟體。 其第二項業務「Line 2」銷售製造汽車零件的3D印表機。 由於Bodea的兩項業務，從Bodea客戶帳戶產生的收入資料未在單一檢視中統一。
 
-每個業務部門都有自己的銷售系統：「CRM 1」和「CRM 2」。 該等CRM銷售系統均連接其自有之營銷自動化平台「Marketo1」及「Marketo2」。 來自CRM 1的資料僅同步到Marketo1，來自CRM2的資料僅同步到Marketo2。 最終，他們的資料被維護在不同的公司資訊庫中。
+每個業務線都有自己的銷售系統：「CRM 1」和「CRM 2」。 這兩個CRM銷售系統皆已連結至其自己的行銷自動化平台「Marketo 1」和「Marketo 2」。 來自CRM 1的資料只會同步至Marketo 1，而來自CRM2的資料只會同步至Marketo 2。 最終，他們的資料會儲存在不同的企業資訊孤島中。
 
-## 當前資料情況
+## 目前的資料狀況
 
-由於Bodea的兩項業務都出售給湯森公司，湯森公司的業務資料在每個銷售系統中記錄為兩個單獨的帳戶。
+由於Bodea的兩項業務都銷售給Townsend公司，因此Townsend的業務資料會記錄為每個銷售系統中的兩個獨立帳戶。
 
-在Marketo1，湯森德被記為帳戶1。 它有兩名相關人員(p1@townsend.com和p2@townsend.com)，在CRM 1中有一個價值20萬美元（「機會1」）的閉門銷售機會。 該資料從CRM 1同步到Marketo1。
+在Marketo 1中，Townsend會記錄為帳戶1。 在CRM 1中，有兩個相關人員(p1@townsend.com和p2@townsend.com)和一個成功機會（「機會1」），價值$20萬美元。 該資料會從CRM 1同步至Marketo 1。
 
-在Marketo2，湯森德被記錄為帳戶2。 客戶2還有兩個相關人員(p2@townsend.com和p3@townsend.com)，在CRM 2中有一個成交額為90萬美元（「機會2」）的機會。 該資料從CRM 2同步到Marketo2。
+在Marketo 2中，Townsend會記錄為「帳戶2」。 帳戶2在CRM 2中也有2個相關人員(p2@townsend.com和p3@townsend.com)和一個成功機會，價值$900,000（「機會2」）。 該資料會從CRM 2同步至Marketo 2。
 
-為了整合和其他公司控制目的，Bodea公司還有一個主資料管理(MDM)系統，在該系統中保存一個記錄，表明Marketo1的帳戶1（和CRM 1）和Marketo2的帳戶2（和CRM 2）是同一家公司。
+為了整合和其他企業控制目的，Bodea也有一個主要資料管理(MDM)系統，在此系統維護一筆記錄，指出Marketo 1中的帳戶1 （和CRM 1）和Marketo 2中的帳戶2 （和CRM 2）是同一公司。
 
-上個月， `p2@townsend.com` 訪問了新產品頁面，Marketo1號記錄了訪問內容。
+在上個月， `p2@townsend.com` 造訪新產品頁面，而Marketo 1記錄了網頁造訪。
 
 ![帳戶資訊圖表](./assets/account-info.png)
 
 ## 問題
 
-第1行剛剛發佈了一種新軟體產品，希望將其追加銷售給Bodea公司現有的頂級客戶群。 Bodea發起營銷活動時要考慮到特定目標受眾。
+第1行剛剛推出新的軟體產品，並希望將其追加銷售給Bodea現有的頂級客戶群。 Bodea會針對該特定目標受眾啟動行銷活動。
 
-由於相關湯森德資訊記錄為Marketo1的帳戶1和Marketo2的帳戶2,Bodea的營銷團隊無法有效地利用單獨的資訊。
+由於相關的Townsend資訊在Marketo 1中記錄為「帳戶1」，在Marketo 2中記錄為「帳戶2」，因此Bodea的行銷團隊無法有效利用孤立的資訊。
 
-這禁止Bodea的營銷團隊利用這一新機會有效地瞄準這些公司的特定商業聯繫人。
+這禁止Bodea的行銷團隊有效率地將目標鎖定在這些公司的特定業務聯絡人上，藉此新機會。
 
-迄今為止，湯森德在所有客戶的Bodea產品上累計支出超過100萬美元。 但是，使用舊系統建立的部門不包括來自湯森德的任何人，除非在一個銷售系統內的總支出超過100萬美元。 這是因為收入資料位於不同銷售系統下的帳戶中。
+到目前為止，Townsend在其所有帳戶中累積花費超過100萬美元購買Bodea產品。 不過，使用舊系統建立的區段不會包含來自Townsend的任何人，除非在單一銷售系統中花費的總額超過100萬美元。 這是因為收入資料是儲存在不同銷售系統下的帳戶中。
 
-由於湯森德的支出分為不同的銷售系統，且個人總支出不超過100萬，因此該部門找不到Marketo1或Marketo2的合格客戶。
+由於Townsend的支出分散於不同的銷售系統，且個別總支出不超過100萬，因此該區段找不到任何符合Marketo 1或Marketo 2資格的人員。
 
-### Real-Time CDPB2B版如何解決問題
+### Real-Time CDP B2B版本如何解決問題
 
-借助Real-Time CDPB2B版，Bodea的營銷團隊可以：
+透過Real-Time CDP B2B版本，Bodea的行銷團隊可以：
 
-- 將來自所有不同源(多個Marketo和CRM實例以及主資料管理)的資料合併到Real-Time CDPB2B版。
+- 將所有不同來源(多個Marketo和CRM執行個體以及主要資料管理)的資料合併到Real-Time CDP B2B版本中。
 
-借助RT-CDP B2B版，Bodea可以使用Marketo Engage源連接器將Marketo1和Marketo2的B2B資料引入Experience Platform，並使用平台連接的應用程式保持此資料的最新。 查看 [Marketo源連接器](../sources/connectors/adobe-applications/marketo/marketo.md) 的子菜單。
+透過RT-CDP B2B版本，Bodea可以使用Marketo Engage來源聯結器將來自Marketo 1和Marketo 2的B2B資料帶入Experience Platform，並使用平台連線的應用程式保持此資料為最新狀態。 請參閱 [Marketo來源聯結器](../sources/connectors/adobe-applications/marketo/marketo.md) 說明檔案以取得詳細資訊。
 
-CRM1中的B2B資料（人員、帳戶、機會和活動）同步到Marketo1。 同樣，CRM 2中的所有B2B資料都同步到Marketo2。 他們通過Marketo源連接器同步到Adobe Experience Platform。 但是，如果Bodea希望將CRM中的其他資料引入Experience Platform中，他們可以使用現有的CRM連接器。
+來自CRM1的B2B資料（人員、帳戶、機會和活動）會同步至Marketo 1。 同樣地，來自CRM 2的所有B2B資料都會同步至Marketo 2。 透過Adobe Experience Platform來源聯結器，這些檔案會同步至Marketo。 不過，如果Bodea想要從CRM將其他資料帶入Experience Platform，則可以使用現有的CRM聯結器。
 
-為了簡單起見，為了本例的目的，人們被他們的電子郵件識別出來。 此示例的合併帳戶資料如下所示：
+為了簡單起見，以及此範例的目的，系統會透過電子郵件識別使用者。 此範例的合併帳戶資料如下所示：
 
 | 人員 |
 |---|
 | p1@townsend.com |
-| p2@townsend.com（上個月訪問了新產品頁面） |
+| p2@townsend.com （上個月造訪過新產品頁面的訪客） |
 | p3@townsend.com |
 
-| 機會（閉門） |
+| 商機（成功） |
 |---|
-| 機會1,20萬美元 |
-| 機會2,90萬美元 |
+| 商機1，$20萬 |
+| 機會2，$900k |
 
-- 使用此聚合資料為不同的市場營銷計畫建立獨特的細分市場。 在此示例中，該段將查找以下所有人員：
+- 使用此彙總資料為各種行銷方案建立唯一區段。 在此範例中，區段會尋找符合以下條件的所有人員：
 
-   - 相關機會（跨所有客戶）的價值超過100萬美元
+   - （跨所有帳戶）的相關商機價值超過$100萬美元
    - 和
-   - 在上個月訪問過產品頁
+   - 上個月造訪過產品頁面
 
-- 建立受眾，他們是Bodea新營銷活動最有效的受眾。 在此示例中，RT-CDP B2B版將幫助營銷人員確定 `p2@townsend.com` 作為此市場營銷活動的正確目標。
+- 建立受眾，讓他們成為Bodea新行銷活動最有效的收件者。 在此範例中，RT-CDP、B2B版本將協助行銷人員識別 `p2@townsend.com` 作為此行銷活動的正確目標。
 
-通過使用Marketo Engage和LinkedIn目的地，Bodea為其營銷團隊提供了端到端客戶體驗管理(CXM)解決方案。 以Experience Platform建立的受眾將推送到Marketo目標，該目標顯示為靜態清單。 然後，這些受眾將自動被添加到Marketo市場營銷活動中。 同時，RT-CDP B2B版還可以將觀眾送到LinkedIn的營銷活動中。
+藉由使用Marketo Engage和LinkedIn目的地，Bodea的行銷團隊可獲得端對端客戶體驗管理(CXM)解決方案。 在Experience Platform中建立的對象會推送至Marketo目的地，並在其中顯示為靜態清單。 然後，此對象會自動新增至Marketo行銷活動。 同時，受眾也可以透過RT-CDP B2B版本傳送到LinkedIn行銷活動。
 
 ## 後續步驟
 
-通過閱讀本檔案，您現在已介紹了使用Real-Time CDPB2B版可解決的目標和問題的類型。
+閱讀本檔案後，您現在已瞭解可以使用Real-Time CDP B2B Edition解決的目標和問題型別。
 
-建議使用以下文檔來提高您對B2B特定功能的瞭解：
+建議您參閱下列檔案，以進一步瞭解B2B的特定功能：
 
-- [Real-time Customer Data PlatformB2B版端到端教程](./b2b-tutorial.md)
-- [Real-time Customer Data PlatformB2B版來源](./sources/b2b.md)
-- [Real-time Customer Data PlatformB2B版中的架構](./schemas/b2b.md)
-- [B2B分段示例](./segmentation/b2b.md)
-- [帳戶配置檔案概述](./accounts/account-profile-overview.md)
-- [Real-time Customer Data PlatformB2B版目的地](./destinations/b2b.md)
-- [配置LinkedIn匹配的受眾目標](../destinations/catalog/social/linkedin.md)
+- [Real-time Customer Data Platform B2B Edition端對端教學課程](./b2b-tutorial.md)
+- [Real-time Customer Data Platform B2B版本中的來源](./sources/b2b.md)
+- [Real-time Customer Data Platform B2B版本中的結構描述](./schemas/b2b.md)
+- [B2B分段範例](./segmentation/b2b.md)
+- [帳戶設定檔概述](./accounts/account-profile-overview.md)
+- [Real-time Customer Data Platform B2B版本中的目的地](./destinations/b2b.md)
+- [設定LinkedIn相符的受眾目的地](../destinations/catalog/social/linkedin.md)

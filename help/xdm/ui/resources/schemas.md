@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；api;API;XDM;XDM系統；經驗資料模型；資料模型；ui;workspace;schema;schemas;
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；資料模型；ui；工作區；結構；
 solution: Experience Platform
-title: 在UI中建立和編輯架構
-description: 瞭解如何在Experience Platform用戶介面中建立和編輯架構的基本知識。
+title: 在UI中建立和編輯結構描述
+description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述的基礎知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
 workflow-type: tm+mt
@@ -11,333 +11,333 @@ ht-degree: 1%
 
 ---
 
-# 在UI中建立和編輯架構
+# 在UI中建立和編輯結構描述
 
-本指南概述了如何在Adobe Experience PlatformUI中為您的組織建立、編輯和管理體驗資料模型(XDM)架構。
+本指南概述如何在Adobe Experience Platform UI中建立、編輯及管理貴組織的Experience Data Model (XDM)結構描述。
 
 >[!IMPORTANT]
 >
->XDM架構是極其可自定義的，因此建立架構時涉及的步驟可能因您希望架構捕獲的資料類型而異。 因此，本文檔僅涵蓋您可以與UI中的架構進行的基本交互，並排除了自定義類、架構欄位組、資料類型和欄位等相關步驟。
+>XDM結構描述是完全可自訂的，因此建立結構描述的相關步驟可能會因您希望結構描述擷取的資料型別而異。 因此，本檔案僅涵蓋您可以在UI中使用結構描述進行的基本互動，並排除自訂類別、結構描述欄位群組、資料型別和欄位等相關步驟。
 >
->有關架構建立過程的完整教程，請與 [架構建立教程](../../tutorials/create-schema-ui.md) 建立完整的示例架構並熟悉 [!DNL Schema Editor]。
+>如需結構描述建立流程的完整導覽，請隨附 [結構描述建立教學課程](../../tutorials/create-schema-ui.md) 以建立完整的範例結構描述，並熟悉 [!DNL Schema Editor].
 
 ## 先決條件
 
-本指南要求對XDM系統有正確的瞭解。 請參閱 [XDM概述](../../home.md) 介紹XDM在Experience Platform生態系統中的作用， [架構組合基礎](../../schema/composition.md) 的子菜單。
+本指南需要實際瞭解XDM系統。 請參閱 [XDM概觀](../../home.md) 介紹XDM在Experience Platform生態系統內的角色，以及 [結構描述組合基本概念](../../schema/composition.md) 以取得結構描述建構方式的概觀。
 
-## 建立新架構 {#create}
+## 建立新結構描述 {#create}
 
 >[!NOTE]
 >
->本節介紹如何在UI中手動建立新架構。 如果要將CSV資料插入平台，則可以選擇 [將資料映射到由AI生成的建議案建立的XDM模式](../../../ingestion/tutorials/map-csv/recommendations.md) （當前處於beta版），無需親自手動建立架構。
+>本節說明如何在UI中手動建立新結構描述。 如果您正在將CSV資料內嵌至平台，您可以選擇使用 [將該資料對應到AI產生的建議所建立的XDM結構描述](../../../ingestion/tutorials/map-csv/recommendations.md) （目前為測試版），不需自行手動建立結構描述。
 
-在 [!UICONTROL 架構] 工作區，選擇 **[!UICONTROL 建立架構]** 在右上角。 在顯示的下拉清單中，您可以選擇 **[!UICONTROL XDM個人配置檔案]** 和 **[!UICONTROL XDM體驗事件]** 作為架構的基類。 或者，可以選擇 **[!UICONTROL 瀏覽]** 從可用類的完整清單中進行選擇，或 [建立新的自定義類](./classes.md#create) 的雙曲餘切值。
+在 [!UICONTROL 結構描述] 工作區，選取 **[!UICONTROL 建立結構描述]** 右上角。 在出現的下拉式清單中，您可以選擇 **[!UICONTROL XDM個別設定檔]** 和 **[!UICONTROL XDM ExperienceEvent]** 作為結構描述的基底類別。 或者，您可以選取 **[!UICONTROL 瀏覽]** 從完整的可用類別清單中選取，或 [建立新的自訂類別](./classes.md#create) 而非。
 
 ![](../../images/ui/resources/schemas/create-schema.png)
 
-選擇類後， [!DNL Schema Editor] 框中顯示，並在畫布中顯示架構的基本結構（由類提供）。 在此處，您可以使用右滑軌添加 **[!UICONTROL 顯示名稱]** 和 **[!UICONTROL 說明]** 的子菜單。
+選取類別後， [!DNL Schema Editor] 隨即顯示，而結構描述的基本結構（由類別提供）會顯示在畫布中。 從這裡，您可以使用右邊欄新增 **[!UICONTROL 顯示名稱]** 和 **[!UICONTROL 說明]** 適用於此結構描述。
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-現在，可以開始通過 [添加架構欄位組](#add-field-groups)。
+您現在可以透過以下方式開始建立結構描述的結構 [新增結構描述欄位群組](#add-field-groups).
 
-## 編輯現有架構 {#edit}
+## 編輯現有結構描述 {#edit}
 
 >[!NOTE]
 >
->一旦保存了一個架構並將其用於資料接收，則只能對其進行附加更改。 查看 [模式演化規則](../../schema/composition.md#evolution) 的子菜單。
+>一旦結構描述已儲存並用於資料擷取中，就只能對其執行加總變更。 請參閱 [結構描述演化規則](../../schema/composition.md#evolution) 以取得詳細資訊。
 
-要編輯現有架構，請選擇 **[!UICONTROL 瀏覽]** 頁籤，然後選擇要編輯的架構的名稱。
+若要編輯現有綱要，請選取 **[!UICONTROL 瀏覽]** 索引標籤，然後選取您要編輯的結構描述名稱。
 
 ![](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
->可以使用工作區的搜索和篩選功能幫助更輕鬆地查找架構。 請參閱上的指南 [探索XDM資源](../explore.md) 的子菜單。
+>您可以使用工作區的搜尋和篩選功能來協助您更輕鬆地尋找結構。 請參閱指南： [探索XDM資源](../explore.md) 以取得詳細資訊。
 
-選擇架構後， [!DNL Schema Editor] 顯示，其中在畫布中顯示架構的結構。 你現在可以 [添加欄位組](#add-field-groups) 到架構(或 [添加單個欄位](#add-individual-fields) 從這些組中， [編輯欄位顯示名稱](#display-names)或 [編輯現有自定義域組](./field-groups.md#edit) 如果架構使用任何。
+選取結構描述後， [!DNL Schema Editor] 會以畫布中所顯示的結構顯示。 您現在可以 [新增欄位群組](#add-field-groups) 至結構描述(或 [新增個別欄位](#add-individual-fields) 來自這些群組)， [編輯欄位顯示名稱](#display-names)，或 [編輯現有的自訂欄位群組](./field-groups.md#edit) 如果結構描述採用任何。
 
 ## 顯示名稱切換 {#display-name-toggle}
 
-為方便起見，「架構編輯器」提供切換功能，以便在原始欄位名稱和更易人讀的顯示名稱之間進行更改。 這種靈活性允許改進欄位可發現性並編輯您的架構。 在「架構編輯器」視圖的右上角找到切換。
+為方便起見，結構描述編輯器在原始欄位名稱與更易懂的顯示名稱之間提供切換選項。 此靈活性可改善欄位可發現性和結構描述的編輯。 此切換位於結構描述編輯器檢視的右上角。
 
 >[!NOTE]
 >
->從欄位名稱更改為顯示名稱純粹是修飾性的，不會更改任何下游資源。
+>從欄位名稱到顯示名稱的變更純粹是裝飾性的，不會改變任何下游資源。
 
-![具有的架構編輯器 [!UICONTROL 顯示欄位的顯示名稱] 。](../../images/ui/resources/schemas/display-name-toggle.png)
+![架構編輯器，具有 [!UICONTROL 顯示欄位的顯示名稱] 反白顯示。](../../images/ui/resources/schemas/display-name-toggle.png)
 
-標準欄位組的顯示名稱是系統生成的，但可以自定義，如 [顯示名稱](#display-names) 的子菜單。 顯示名稱反映在多個UI視圖中，包括映射和資料集預覽。 預設設定為off，並按欄位名稱的原始值顯示欄位名稱。
+標準欄位群組的顯示名稱由系統產生，但可加以自訂，如 [顯示名稱](#display-names) 區段。 顯示名稱會反映在多個UI檢視中，包括對應和資料集預覽。 預設設定為關閉，且會依其原始值顯示欄位名稱。
 
-## 將欄位組添加到架構 {#add-field-groups}
+## 將欄位群組新增至結構描述 {#add-field-groups}
 
 >[!NOTE]
 >
->本節介紹如何將現有欄位組添加到架構。 如果要建立新的自定義欄位組，請參閱上的指南 [建立和編輯欄位組](./field-groups.md#create) 的雙曲餘切值。
+>本節說明如何將現有欄位群組新增至結構描述。 如果您想要建立新的自訂欄位群組，請參閱以下指南： [建立和編輯欄位群組](./field-groups.md#create) 而非。
 
-在中開啟架構後 [!DNL Schema Editor]，可以通過使用欄位組將欄位添加到架構。 要開始，請選擇 **[!UICONTROL 添加]** 下 **[!UICONTROL 欄位組]** 左欄。
+當您在中開啟結構描述後 [!DNL Schema Editor]，您可使用欄位群組來新增欄位至結構描述。 若要開始，請選取 **[!UICONTROL 新增]** 旁邊 **[!UICONTROL 欄位群組]** 在左側邊欄中。
 
-![具有的架構編輯器 [!UICONTROL 添加] 從 [!UICONTROL 欄位組] 的子菜單。](../../images/ui/resources/schemas/add-field-group-button.png)
+![結構描述編輯器，具有 [!UICONTROL 新增] 從 [!UICONTROL 欄位群組] 區段反白顯示。](../../images/ui/resources/schemas/add-field-group-button.png)
 
-此時將顯示一個對話框，其中顯示可為架構選擇的欄位組清單。 由於欄位組只與一個類相容，因此將只列出與架構的選定類關聯的那些欄位組。 預設情況下，列出的欄位組會根據其在您組織中的使用情況進行排序。
+此時會出現一個對話方塊，顯示您可以為結構描述選取的欄位群組清單。 由於欄位群組僅與一個類別相容，因此只會列出與結構描述所選類別相關聯的欄位群組。 依預設，列出的欄位群組是根據其在您組織內的使用人氣排序。
 
 ![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-如果您知道要添加的欄位的一般活動或業務區域，請在左滑軌中選擇一個或多個行業垂直類別，以過濾顯示的欄位組清單。
+如果您知道要新增欄位的一般活動或業務區域，請在左側邊欄中選取一或多個垂直產業類別，以篩選顯示的欄位群組清單。
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
 >[!NOTE]
 >
->有關XDM中特定於行業的資料建模的最佳做法的詳細資訊，請參閱 [行業資料模型](../../schema/industries/overview.md)。
+>如需XDM中特定產業資料模型化最佳實務的詳細資訊，請參閱以下檔案： [產業資料模型](../../schema/industries/overview.md).
 
-您還可以使用搜索欄幫助查找所需的欄位組。 名稱與查詢匹配的欄位組顯示在清單頂部。 下 **[!UICONTROL 標準欄位]**，將顯示包含描述所需資料屬性的欄位的欄位組。
+您也可以使用搜尋列來協助尋找所需的欄位群組。 名稱與查詢相符的欄位群組會出現在清單頂端。 下 **[!UICONTROL 標準欄位]**，包含描述所需資料屬性之欄位的欄位群組隨即顯示。
 
 ![](../../images/ui/resources/schemas/field-group-search.png)
 
-選中要添加到架構的欄位組名稱旁邊的複選框。 您可以從清單中選擇多個欄位組，每個選定的欄位組出現在右滑軌中。
+選取您要新增至結構描述的欄位群組名稱旁的核取方塊。 您可以從清單中選取多個欄位群組，每個選取的欄位群組都會顯示在右側邊欄中。
 
 ![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->對於任何列出的欄位組，可以懸停或聚焦於資訊表徵圖(![](../../images/ui/resources/schemas/info-icon.png))查看欄位組捕獲的資料類型的簡要說明。 也可以選擇預覽表徵圖(![](../../images/ui/resources/schemas/preview-icon.png))查看欄位組提供的欄位的結構，然後再決定將其添加到架構中。
+>對於任何列出的欄位群組，您可以將滑鼠懸停在資訊圖示(![](../../images/ui/resources/schemas/info-icon.png))以檢視欄位群組擷取的資料型別的簡短說明。 您也可以選取預覽圖示(![](../../images/ui/resources/schemas/preview-icon.png))，以檢視欄位群組提供的欄位結構，然後再決定將其新增至結構描述。
 
-選擇欄位組後，選擇 **[!UICONTROL 添加欄位組]** 將其添加到架構。
+選擇欄位群組後，選取 **[!UICONTROL 新增欄位群組]** 以將其新增至結構描述。
 
 ![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-的 [!DNL Schema Editor] 重新顯示，畫布中顯示了欄位組提供的欄位。
+此 [!DNL Schema Editor] 會以畫布中顯示的欄位群組提供的欄位重新出現。
 
 ![](../../images/ui/resources/schemas/field-groups-added.png)
 
-將欄位組添加到架構後，您可以選擇 [刪除現有欄位](#remove-fields) 或 [添加新自定義域](#add-fields) 根據你的需要。
+將欄位群組新增到結構描述後，您可以選擇性地進行 [移除現有欄位](#remove-fields) 或 [新增自訂欄位](#add-fields) 根據您的需求，提供給這些群組。
 
-### 刪除從欄位組添加的欄位 {#remove-fields}
+### 移除從欄位群組新增的欄位 {#remove-fields}
 
-將欄位組添加到架構後，可以刪除不需要的任何欄位。
+將欄位群組新增到結構描述後，您可以移除任何不需要的欄位。
 
 >[!NOTE]
 >
->從欄位組中刪除欄位只影響正在處理的架構，而不影響欄位組本身。 如果刪除一個方案中的欄位，則這些欄位在使用相同欄位組的所有其他方案中仍然可用。
+>從欄位群組中移除欄位只會影響正在處理的結構描述，不會影響欄位群組本身。 如果您移除一個結構描述中的欄位，這些欄位仍可在採用相同欄位群組的所有其他結構描述中使用。
 
-在以下示例中，標準欄位組 **[!UICONTROL 人口結構詳細資訊]** 已添加到架構。 刪除單個欄位，如 `taxId`，選擇畫布中的欄位，然後選擇 **[!UICONTROL 刪除]** 右欄。
+在以下範例中，標準欄位群組 **[!UICONTROL 人口統計細節]** 已新增至結構描述。 若要移除單一欄位，例如 `taxId`，選取畫布中的欄位，然後選取 **[!UICONTROL 移除]** 在右側邊欄中。
 
-![刪除單個欄位](../../images/ui/resources/schemas/remove-single-field.png)
+![移除單一欄位](../../images/ui/resources/schemas/remove-single-field.png)
 
-如果要刪除多個欄位，則可以將欄位組作為一個整體進行管理。 選擇畫布中屬於組的欄位，然後選擇 **[!UICONTROL 管理相關欄位]** 右欄。
+如果您想要移除多個欄位，可以整體管理欄位群組。 選取屬於畫布中群組的欄位，然後選取 **[!UICONTROL 管理相關欄位]** 在右側邊欄中。
 
 ![管理相關欄位](../../images/ui/resources/schemas/manage-related-fields.png)
 
-將出現一個對話框，顯示有關欄位組的結構。 在此處，您可以使用提供的複選框來選擇或取消選擇所需欄位。 滿足後，選擇 **[!UICONTROL 確認]**。
+會出現一個對話方塊，顯示相關欄位群組的結構。 在此，您可以使用提供的核取方塊來選取或取消選取所需的欄位。 滿意後，選取 **[!UICONTROL 確認]**.
 
-![從欄位組中選擇欄位](../../images/ui/resources/schemas/select-fields.png)
+![從欄位群組選取欄位](../../images/ui/resources/schemas/select-fields.png)
 
-畫布將重新顯示，只顯示架構結構中的選定欄位。
+畫布會重新出現，架構結構中只會顯示選取的欄位。
 
-![已添加欄位](../../images/ui/resources/schemas/fields-added.png)
+![欄位已新增](../../images/ui/resources/schemas/fields-added.png)
 
-### 將自定義欄位添加到欄位組 {#add-fields}
+### 新增自訂欄位至欄位群組 {#add-fields}
 
-在將欄位組添加到架構後，可以為該組定義其他欄位。 但是，添加到一個架構中的欄位組的任何欄位也會出現在使用該欄位組的所有其他方案中。
+將欄位群組新增到結構描述後，您可以為該群組定義其他欄位。 不過，在一個結構描述中新增到欄位群組的任何欄位，也會出現在使用該欄位群組的所有其他結構描述中。
 
-此外，如果將自定義欄位添加到標準欄位組，則該欄位組將轉換為自定義欄位組，並且原始標準欄位組將不再可用。
+此外，如果自訂欄位新增到標準欄位群組，該欄位群組將轉換為自訂欄位群組，並且原始標準欄位群組將不再可用。
 
-如果要將自定義欄位添加到標準欄位組，請參閱 [下面](#custom-fields-for-standard-groups) 的子菜單。 如果要將欄位添加到自定義欄位組，請參閱上的部分 [編輯自定義域組](./field-groups.md) 中。
+如果要將自訂欄位新增到標準欄位群組，請參閱 [以下區段](#custom-fields-for-standard-groups) 以取得特定指示。 如果您新增欄位至自訂欄位群組，請參閱以下章節： [編輯自訂欄位群組](./field-groups.md) 在欄位群組UI指南中。
 
-如果不想更改任何現有欄位組，則 [建立新的自定義欄位組](./field-groups.md#create) 來修改標籤元素的屬性。
+如果您不想變更任何現有的欄位群組，您可以 [建立新的自訂欄位群組](./field-groups.md#create) 以定義其他欄位。
 
-## 將單個欄位添加到架構 {#add-individual-fields}
+## 將個別欄位新增至結構描述 {#add-individual-fields}
 
-如果希望避免為特定用例添加整個欄位組，則「架構編輯器」允許將單個欄位直接添加到架構。 你可以 [從標準欄位組添加單個欄位](#add-standard-fields) 或 [添加自己的自定義域](#add-custom-fields) 的雙曲餘切值。
+如果您想要避免針對特定使用案例新增整個欄位群組，結構描述編輯器可讓您將個別欄位直接新增到結構描述。 您可以 [從標準欄位群組新增個別欄位](#add-standard-fields) 或 [新增您自己的自訂欄位](#add-custom-fields) 而非。
 
 >[!IMPORTANT]
 >
->即使模式編輯器在功能上允許您將單個欄位直接添加到模式，但這不會改變以下事實： XDM模式中的所有欄位都必須由其類或與該類相容的欄位組提供。 正如下面各節所說明的，在將各個欄位添加到架構時，仍將其作為關鍵步驟與類或欄位組相關聯。
+>即使結構描述編輯器在功能上允許您直接將個別欄位新增到結構描述，這不會變更XDM結構描述中的所有欄位都必須由其類別或與該類別相容的欄位群組提供。 如以下各節所說明，當所有個別欄位新增到結構描述中時，作為關鍵步驟，這些欄位仍會與類別或欄位群組相關聯。
 
-### 添加標準欄位 {#add-standard-fields}
+### 新增標準欄位 {#add-standard-fields}
 
-您可以直接將標準欄位組中的欄位添加到架構中，而無需事先知道相應的欄位組。 要向架構添加標準欄位，請選擇加號(**+**)表徵圖。 安 **[!UICONTROL 無標題欄位]** 佔位符顯示在架構結構中，右滑軌更新顯示用於配置欄位的控制項。
+您可以將標準欄位群組中的欄位直接新增到結構描述，而無需預先知道其對應的欄位群組。 若要將標準欄位新增到結構描述，請選取加號(**+**)圖示加以識別（位於畫布中的結構描述名稱旁）。 一個 **[!UICONTROL 未命名的欄位]** 結構描述結構中會顯示預留位置，而右側邊欄會更新，以顯示設定欄位的控制項。
 
-![欄位佔位符](../../images/ui/resources/schemas/root-custom-field.png)
+![欄位預留位置](../../images/ui/resources/schemas/root-custom-field.png)
 
-下 **[!UICONTROL 欄位名]**，開始鍵入要添加的欄位的名稱。 系統會自動搜索與查詢匹配的標準欄位，並將它們列在 **[!UICONTROL 建議的標準欄位]**，包括它們所屬的欄位組。
+下 **[!UICONTROL 欄位名稱]**，開始輸入您要新增的欄位名稱。 系統會自動搜尋符合查詢的標準欄位，並將其列在下 **[!UICONTROL 建議的標準欄位]**，包括所屬欄位群組。
 
 ![建議的標準欄位](../../images/ui/resources/schemas/standard-field-search.png)
 
-雖然某些標準欄位具有相同的名稱，但其結構可能會因其來源的欄位組而異。 如果標準欄位嵌套在欄位組結構中的父對象中，則如果添加子欄位，則父欄位也將包括在方案中。
+雖然某些標準欄位共用相同的名稱，但其結構可能會因來自的欄位群組而異。 如果標準欄位巢狀內嵌在欄位群組結構的父物件中，如果新增了子欄位，則父欄位也將包含在結構描述中。
 
-選擇預覽表徵圖(![預覽表徵圖](../../images/ui/resources/schemas/preview-icon.png))旁邊，查看其欄位組的結構，並更好地瞭解該欄位可能嵌套的方式。 要將標準欄位添加到方案，請選擇加號表徵圖(![加號表徵圖](../../images/ui/resources/schemas/add-icon.png))。
+選取預覽圖示(![預覽圖示](../../images/ui/resources/schemas/preview-icon.png))，檢視其欄位群組的結構，並更能瞭解其巢狀化方式。 若要將標準欄位新增至結構描述，請選取加號圖示(![加號圖示](../../images/ui/resources/schemas/add-icon.png))。
 
-![添加標準欄位](../../images/ui/resources/schemas/add-standard-field.png)
+![新增標準欄位](../../images/ui/resources/schemas/add-standard-field.png)
 
-畫布將更新，以顯示添加到架構的標準欄位，包括它嵌套在欄位組結構中的任何父欄位。 欄位組的名稱也列在 **[!UICONTROL 欄位組]** 左欄。 如果要從同一欄位組中添加更多欄位，請選擇 **[!UICONTROL 管理相關欄位]** 右欄。
+畫布會更新以顯示新增到結構描述的標準欄位，包括它巢狀內嵌在欄位群組結構下的任何父欄位。 欄位群組的名稱也會列在 **[!UICONTROL 欄位群組]** 在左側邊欄中。 如果您想從相同的欄位群組新增更多欄位，請選取 **[!UICONTROL 管理相關欄位]** 在右側邊欄中。
 
-![已添加標準欄位](../../images/ui/resources/schemas/standard-field-added.png)
+![已新增標準欄位](../../images/ui/resources/schemas/standard-field-added.png)
 
 ### 新增自訂欄位 {#add-custom-fields}
 
-與標準欄位的工作流類似，您也可以將您自己的自定義欄位直接添加到架構中。
+與標準欄位的工作流程類似，您也可以直接將自己的自訂欄位新增到結構描述。
 
-要將欄位添加到架構的根級別，請選擇加號(**+**)表徵圖。 安 **[!UICONTROL 無標題欄位]** 佔位符顯示在架構結構中，右滑軌更新顯示用於配置欄位的控制項。
+若要將欄位新增至結構的根層級，請選取加號(**+**)圖示加以識別（位於畫布中的結構描述名稱旁）。 一個 **[!UICONTROL 未命名的欄位]** 結構描述結構中會顯示預留位置，而右側邊欄會更新，以顯示設定欄位的控制項。
 
-![根自定義欄位](../../images/ui/resources/schemas/root-custom-field.png)
+![根自訂欄位](../../images/ui/resources/schemas/root-custom-field.png)
 
-開始鍵入要添加的欄位的名稱，系統將自動開始搜索匹配的標準欄位。 要改為建立新的自定義欄位，請選擇附加了 **([!UICONTROL 新建欄位])**。
+開始輸入您要新增的欄位名稱，系統就會自動開始搜尋相符的標準欄位。 若要建立新的自訂欄位，請選取最上方的附加選項 **([!UICONTROL 新增欄位])**.
 
-![新建欄位](../../images/ui/resources/schemas/custom-field-search.png)
+![新欄位](../../images/ui/resources/schemas/custom-field-search.png)
 
-為欄位提供顯示名稱和資料類型後，下一步是將欄位分配給父XDM資源。 如果您的架構使用自定義類，則可以選擇 [將欄位添加到分配的類](#add-to-class) 或 [欄位組](#add-to-field-group) 的雙曲餘切值。 但是，如果您的架構使用標準類，則只能將自定義欄位分配給欄位組。
+為欄位提供顯示名稱和資料型別後，下一步是將欄位指派給父XDM資源。 如果您的結構描述使用自訂類別，您可以選擇 [將欄位新增至指派的類別](#add-to-class) 或 [欄位群組](#add-to-field-group) 而非。 但是，如果您的結構描述使用標準類別，則只能將自訂欄位指派給欄位群組。
 
-#### 將欄位分配給自定義欄位組 {#add-to-field-group}
-
->[!NOTE]
->
->本節僅介紹如何將欄位分配給自定義欄位組。 如果希望用新自定義欄位擴展標準欄位組，請參閱上的部分 [將自定義欄位添加到標準欄位組](#custom-fields-for-standard-groups)。
-
-下 **[!UICONTROL 分配給]**&#x200B;選中 **[!UICONTROL 欄位組]**。 如果方案使用標準類，則此選項是唯一可用的選項，並且預設情況下處於選中狀態。
-
-接下來，必須為要關聯的新欄位選擇一個欄位組。 開始在提供的文本輸入中鍵入欄位組的名稱。 如果有任何與輸入匹配的現有自定義欄位組，它們將出現在下拉清單中。 或者，可鍵入唯一名稱以改為建立新欄位組。
-
-![選擇欄位組](../../images/ui/resources/schemas/select-field-group.png)
-
->[!WARNING]
->
->如果選擇現有的自定義欄位組，則使用該欄位組的任何其它方案也將在保存更改後繼承新添加的欄位。 因此，僅當要選擇此類型的傳播時，才選擇現有欄位組。 否則，應選擇建立新的自定義欄位組。
-
-從清單中選擇欄位組後，選擇 **[!UICONTROL 應用]**。
-
-![應用欄位](../../images/ui/resources/schemas/apply-field.png)
-
-新欄位將添加到畫布中，並在您的 [租戶ID](../../api/getting-started.md#know-your-tenant_id) 以避免與標準XDM欄位衝突。 與新欄位關聯的欄位組也顯示在 **[!UICONTROL 欄位組]** 左欄。
-
-![租戶ID](../../images/ui/resources/schemas/tenantId.png)
+#### 將欄位指派給自訂欄位群組 {#add-to-field-group}
 
 >[!NOTE]
 >
->預設情況下，所選自定義欄位組提供的其餘欄位將從架構中刪除。 如果要將其中的一些欄位添加到方案，請選擇屬於該組的欄位，然後選擇 **[!UICONTROL 管理相關欄位]** 右欄。
+>本節僅涵蓋如何將欄位指派給自訂欄位群組。 如果您想改用新自訂欄位來擴充標準欄位群組，請參閱 [新增自訂欄位至標準欄位群組](#custom-fields-for-standard-groups).
 
-#### 將欄位分配給自定義類 {#add-to-class}
+下 **[!UICONTROL 指派給]**，選取 **[!UICONTROL 欄位群組]**. 如果您的結構描述使用標準類別，這是唯一可用的選項，並且預設會選取此選項。
 
-下 **[!UICONTROL 分配給]**&#x200B;選中 **[!UICONTROL 類]**。 下面的輸入欄位將替換為當前架構的自定義類的名稱，這表示新欄位將分配給此類。
+接下來，您必須選取要與新欄位相關聯的欄位群組。 在提供的文字輸入中開始鍵入欄位群組的名稱。 如果您有任何符合輸入的現有自訂欄位群組，則會顯示在下拉式清單中。 或者，您可以鍵入唯一名稱來建立新的欄位群組。
 
-![的 [!UICONTROL 類] 的子菜單。](../../images/ui/resources/schemas/assign-field-to-class.png)
-
-繼續根據需要配置欄位並選擇 **[!UICONTROL 應用]** 的子菜單。
-
-![[!UICONTROL 應用] 為新欄位選擇。](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
-
-新欄位將添加到畫布中，並在您的 [租戶ID](../../api/getting-started.md#know-your-tenant_id) 以避免與標準XDM欄位衝突。 在左滑軌中選擇類名後，將顯示新欄位作為類結構的一部分。
-
-![應用於自定義類結構的新欄位，在畫布中表示。](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
-
-### 將自定義欄位添加到標準欄位組的結構 {#custom-fields-for-standard-groups}
-
-如果正在處理的方案具有由標準欄位組提供的對象類型欄位，則可以將您自己的自定義欄位添加到該標準對象。
+![選取欄位群組](../../images/ui/resources/schemas/select-field-group.png)
 
 >[!WARNING]
 >
->添加到一個架構中的欄位組的任何欄位也將出現在使用該欄位組的所有其他方案中。 此外，如果將自定義欄位添加到標準欄位組，則該欄位組將轉換為自定義欄位組，並且原始標準欄位組將不再可用。
+>如果您選取現有的自訂欄位群組，在您儲存變更後，採用該欄位群組的任何其他結構描述也將繼承新新增的欄位。 因此，如果您想要此型別的傳輸，請僅選取現有的欄位群組。 否則，您應該選擇建立新的自訂欄位群組。
+
+從清單中選取欄位群組後，選取 **[!UICONTROL 套用]**.
+
+![套用欄位](../../images/ui/resources/schemas/apply-field.png)
+
+新欄位會新增至畫布，並會以名稱空間位於 [租使用者ID](../../api/getting-started.md#know-your-tenant_id) 以避免與標準XDM欄位衝突。 您與新欄位相關聯的欄位群組也會顯示在 **[!UICONTROL 欄位群組]** 在左側邊欄中。
+
+![租使用者ID](../../images/ui/resources/schemas/tenantId.png)
+
+>[!NOTE]
 >
->如果您參與了此功能的測試版，您將收到一個對話框，通知您以前已自定義的標準欄位組。 一旦選擇 **[!UICONTROL 確認]**，列出的資源將轉換為自定義欄位組。
+>依預設，所選自訂欄位群組提供的其餘欄位會從結構描述中移除。 如果您想要將其中一些欄位新增至結構描述，請選取屬於群組的欄位，然後選取 **[!UICONTROL 管理相關欄位]** 在右側邊欄中。
+
+#### 將欄位指派給自訂類別 {#add-to-class}
+
+下 **[!UICONTROL 指派給]**，選取 **[!UICONTROL 類別]**. 以下輸入欄位會以目前結構描述的自訂類別名稱取代，表示新欄位將會指派給此類別。
+
+![此 [!UICONTROL 類別] 為新欄位指派選取的選項。](../../images/ui/resources/schemas/assign-field-to-class.png)
+
+繼續視需要設定欄位並選取 **[!UICONTROL 套用]** 完成後。
+
+![[!UICONTROL 套用] 已為新欄位選取。](../../images/ui/resources/schemas/assign-field-to-class-apply.png)
+
+新欄位會新增至畫布，並會以名稱空間位於 [租使用者ID](../../api/getting-started.md#know-your-tenant_id) 以避免與標準XDM欄位衝突。 在左側邊欄中選取類別名稱，會顯示新欄位作為類別結構的一部分。
+
+![套用至自訂類別結構的新欄位，以畫布表示。](../../images/ui/resources/schemas/assign-field-to-class-applied.png)
+
+### 將自訂欄位新增至標準欄位群組的結構 {#custom-fields-for-standard-groups}
+
+如果您使用的結構描述具有標準欄位群組提供的物件型別欄位，您可以將自己的自訂欄位新增到該標準物件。
+
+>[!WARNING]
 >
->![「確認」對話框，用於轉換標準欄位組](../../images/ui/resources/schemas/beta-extension-confirmation.png)
+>新增到一個結構描述中欄位群組的任何欄位也會出現在使用該欄位群組的所有其他結構描述中。 此外，如果自訂欄位新增到標準欄位群組，該欄位群組將轉換為自訂欄位群組，並且原始標準欄位群組將不再可用。
+>
+>如果您參與此功能的測試版，您將會收到一個對話方塊，通知您之前已自訂的標準欄位群組。 一旦您選取 **[!UICONTROL 認可]**，列出的資源會轉換為自訂欄位群組。
+>
+>![轉換標準欄位群組的確認對話方塊](../../images/ui/resources/schemas/beta-extension-confirmation.png)
 
-要開始，請選擇加號(**+**)表徵圖。
+若要開始，請選取加號(**+**)圖示（位於標準欄位群組提供的物件根目錄旁）。
 
-![將欄位添加到標準對象](../../images/ui/resources/schemas/add-field-to-standard-object.png)
+![新增欄位至標準物件](../../images/ui/resources/schemas/add-field-to-standard-object.png)
 
-出現警告消息，提示您確認是否要轉換標準欄位組。 選擇 **[!UICONTROL 繼續建立欄位組]** 繼續。
+出現警告訊息，提示您確認是否要轉換標準欄位群組。 選取 **[!UICONTROL 繼續建立欄位群組]** 以繼續進行。
 
-![確認欄位組轉換](../../images/ui/resources/schemas/confirm-field-group-conversion.png)
+![確認欄位群組轉換](../../images/ui/resources/schemas/confirm-field-group-conversion.png)
 
-畫布將重新顯示，並帶有新欄位的未命名佔位符。 請注意，標準欄位組的名稱已附加「([!UICONTROL 擴展])」，表示已從原始版本中修改。 在此處，使用右滑軌中的控制項定義欄位的屬性。
+畫布會重新出現，新欄位會有一個未命名的預留位置。 請注意，標準欄位群組的名稱已附加&quot;([!UICONTROL 延伸])」以表示它已從原始版本修改。 從這裡，使用右側邊欄中的控制項來定義欄位的屬性。
 
-![添加到標準對象的欄位](../../images/ui/resources/schemas/standard-field-group-converted.png)
+![新增至標準物件的欄位](../../images/ui/resources/schemas/standard-field-group-converted.png)
 
-應用更改後，新欄位將顯示在標準對象中的租戶ID命名空間下。 此嵌套命名空間可防止欄位組本身內的欄位名稱衝突，以避免中斷使用相同欄位組的其他架構中的更改。
+套用變更後，新欄位會顯示在標準物件的租使用者ID名稱空間下。 此巢狀名稱空間可防止欄位群組本身內的欄位名稱衝突，以避免使用相同欄位群組的其他結構描述發生重大變更。
 
-![添加到標準對象的欄位](../../images/ui/resources/schemas/added-to-standard-object.png)
+![新增至標準物件的欄位](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## 為即時客戶配置檔案啟用方案 {#profile}
+## 啟用即時客戶個人檔案的結構描述 {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="啟用設定檔的方案"
 >abstract="為設定檔啟用方案時，從此方案建立的任何資料集都會參與即時客戶設定檔，該設定檔會合併來自不同來源的資料以建構每個客戶的完整視圖。一旦將方案用於擷取資料至設定檔中，即無法停用。如需詳細資訊，請參閱文件。"
 
-[即時客戶配置檔案](../../../profile/home.md) 合併來自不同源的資料以構建每個客戶的完整視圖。 如果希望方案捕獲的資料參與此進程，則必須啟用該方案以供使用 [!DNL Profile]。
+[即時客戶個人檔案](../../../profile/home.md) 合併來自不同來源的資料，以建構每個個別客戶的完整檢視。 如果您希望結構描述擷取的資料參與此程式，您必須啟用此結構描述以便用於 [!DNL Profile].
 
 >[!IMPORTANT]
 >
->為了為 [!DNL Profile]，它必須定義主標識欄位。 請參閱上的指南 [定義標識欄位](../fields/identity.md) 的子菜單。
+>為了啟用結構描述 [!DNL Profile]，其中必須定義主要身分欄位。 請參閱指南： [定義身分欄位](../fields/identity.md) 以取得詳細資訊。
 
-要啟用架構，請從選擇左欄中架構的名稱開始，然後選擇 **[!UICONTROL 配置檔案]** 在右滑軌中切換。
+若要啟用結構，請從左側邊欄中選取結構的名稱開始，然後選取 **[!UICONTROL 設定檔]** 在右側邊欄中切換。
 
 ![](../../images/ui/resources/schemas/profile-toggle.png)
 
-出現一個跨距，警告您一旦啟用並保存了方案，就無法禁用它。 選擇 **[!UICONTROL 啟用]** 繼續。
+此時會出現彈出視窗，警告您一旦啟用並儲存結構描述後，就無法停用它。 選取 **[!UICONTROL 啟用]** 以繼續。
 
 ![](../../images/ui/resources/schemas/profile-confirm.png)
 
-畫布將用 [!UICONTROL 配置檔案] 啟用切換。
+畫布會重新出現，並附上 [!UICONTROL 設定檔] 切換已啟用。
 
 >[!IMPORTANT]
 >
->由於尚未保存架構，因此如果您改變主意，讓架構參與即時客戶配置檔案，則此點不會返回：一旦保存了啟用的架構，就不能再禁用它。 選擇 **[!UICONTROL 配置檔案]** 再次切換以禁用架構。
+>由於結構描述尚未儲存，如果您改變主意，要讓結構描述參與即時客戶設定檔，就沒有回訪機會：儲存啟用的結構描述後，就無法再停用它。 選取 **[!UICONTROL 設定檔]** 再次切換以停用結構描述。
 
-要完成該流程，請選擇 **[!UICONTROL 保存]** 的子菜單。
+若要完成程式，請選取 **[!UICONTROL 儲存]** 以儲存結構。
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-此架構現在已啟用，可在Real-Time Customer Profile中使用。 當平台基於此架構將資料插入資料集時，該資料將合併到合併的Profile資料中。
+結構描述現在已啟用以用於即時客戶個人檔案。 當Platform根據此結構描述將資料內嵌到資料集時，該資料將內嵌到您的合併設定檔資料中。
 
-## 編輯架構欄位的顯示名稱 {#display-names}
+## 編輯結構描述欄位的顯示名稱 {#display-names}
 
-一旦為架構分配了類並添加了欄位組，您就可以編輯該架構的任何欄位的顯示名稱，而不管這些欄位是由標準XDM資源還是由自定義XDM資源提供的。
+指派類別並將欄位群組新增至結構描述後，您可以編輯任何結構描述欄位的顯示名稱，無論這些欄位是由標準或自訂XDM資源提供。
 
 >[!NOTE]
 >
->請記住，屬於標準類或欄位組的欄位的顯示名稱只能在特定架構的上下文中編輯。 換句話說，更改一個方案中標準欄位的顯示名稱不會影響使用相同關聯類或欄位組的其他方案。
+>請記住，屬於標準類別或欄位群組的欄位顯示名稱只能在特定結構描述的內容中編輯。 換言之，變更一個結構描述中標準欄位的顯示名稱不會影響使用相同關聯類別或欄位群組的其他結構描述。
 >
->一旦更改了架構欄位的顯示名稱，這些更改將立即反映在基於該架構的任何現有資料集中。
+>一旦您變更了結構描述的欄位顯示名稱，這些變更就會立即反映在基於該結構描述的現有資料集中。
 
-要編輯架構欄位的顯示名稱，請在畫布中選擇該欄位。 在右欄中，在 **[!UICONTROL 顯示名稱]**。
+若要編輯結構描述欄位的顯示名稱，請選取畫布中的欄位。 在右側邊欄中，於下方提供新名稱 **[!UICONTROL 顯示名稱]**.
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
-選擇 **[!UICONTROL 應用]** 在右欄中，畫布將更新以顯示欄位的新顯示名稱。 選擇 **[!UICONTROL 保存]** 將更改應用到架構。
+選取 **[!UICONTROL 套用]** 而畫布會更新，顯示該欄位的新顯示名稱。 選取 **[!UICONTROL 儲存]** 以將變更套用至結構描述。
 
 ![](../../images/ui/resources/schemas/display-name-changed.png)
 
-## 更改架構的類 {#change-class}
+## 變更結構描述的類別 {#change-class}
 
-在保存架構之前，可以在初始合成過程中的任何時刻更改架構的類。
+您可以在儲存結構描述之前，在初始構成程式期間隨時變更結構描述的類別。
 
 >[!WARNING]
 >
->為架構重新指派類應非常謹慎。 欄位組僅與某些類相容，因此更改該類將重置畫布和添加的任何欄位。
+>為結構描述重新指派類別時應格外謹慎。 欄位群組僅與某些類別相容，因此變更類別將會重設畫布和您已新增的任何欄位。
 
-要重新指配類，請選擇 **[!UICONTROL 分配]** 畫布的左側。
+若要重新指派類別，請選取 **[!UICONTROL 指派]** 在畫布的左側。
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-此時將出現一個對話框，其中顯示所有可用類的清單，包括由您的組織定義的任何類(所有者為「」[!UICONTROL 客戶]&quot;)以及由Adobe定義的標準類。
+會出現一個對話方塊，顯示所有可用類別的清單，包括貴組織定義的任何類別(擁有者為&quot;[!UICONTROL 客戶]「)以及由Adobe定義的標準類別。
 
-從清單中選擇一個類，以在對話框的右側顯示其說明。 也可以選擇 **[!UICONTROL 預覽類結構]** 查看與類關聯的欄位和元資料。 選擇 **[!UICONTROL 分配類]** 繼續。
+從清單中選取類別，以在對話方塊的右側顯示其說明。 您也可以選取 **[!UICONTROL 預覽類別結構]** 檢視與類別相關聯的欄位和中繼資料。 選取 **[!UICONTROL 指派類別]** 以繼續。
 
 ![](../../images/ui/resources/schemas/assign-class.png)
 
-將開啟一個新對話框，要求您確認要分配新類。 選擇 **[!UICONTROL 分配]** 確認。
+隨即開啟新對話方塊，要求您確認要指派新類別。 選取 **[!UICONTROL 指派]** 以確認。
 
 ![](../../images/ui/resources/schemas/assign-confirm.png)
 
-確認類更改後，將重置畫布，並丟失所有合成進度。
+確認類別變更後，畫布將會重設，並且所有構成進度將會遺失。
 
 ## 後續步驟
 
-本文檔介紹了在平台UI中建立和編輯架構的基礎知識。 強烈建議您查看 [架構建立教程](../../tutorials/create-schema-ui.md) 用於在UI中構建完整架構的全面工作流，包括為唯一使用案例建立自定義欄位組和資料類型。
+本檔案說明在Platform UI中建立和編輯結構描述的基本知識。 強烈建議您檢閱 [結構描述建立教學課程](../../tutorials/create-schema-ui.md) 適用於在UI中建立完整結構的完整工作流程，包括建立自訂欄位群組，以及獨特使用案例的資料型別。
 
-有關功能的詳細資訊 [!UICONTROL 架構] 工作區，請參閱 [[!UICONTROL 架構] 工作區概述](../overview.md)。
+如需功能的詳細資訊， [!UICONTROL 結構描述] 工作區，請參閱 [[!UICONTROL 結構描述] 工作區概觀](../overview.md).
 
-瞭解如何管理中的架構 [!DNL Schema Registry] API，請參見 [架構終結點指南](../../api/schemas.md)。
+若要瞭解如何在中管理結構描述 [!DNL Schema Registry] API，請參閱 [結構描述端點指南](../../api/schemas.md).

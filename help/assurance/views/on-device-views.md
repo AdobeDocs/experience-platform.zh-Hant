@@ -1,6 +1,6 @@
 ---
-title: 設備上視圖
-description: 本指南顯示使用Adobe Experience Platform保障的設備上的不同視圖。
+title: 裝置上檢視
+description: 本指南說明使用Adobe Experience Platform Assurance的裝置上的不同檢視畫面。
 exl-id: aa0b09e6-88e0-4f06-be57-df7536a9fa2f
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -9,22 +9,22 @@ ht-degree: 0%
 
 ---
 
-# 設備上視圖
+# 裝置上檢視
 
-## 已連接
+## 已連線
 
-(紅色Adobe&quot;A&quot;表示)
+(以紅色Adobe「A」表示)
 
 ![](./images/on-device-views/connected.png)
 
-## 開啟日誌面板
+## 開啟記錄面板
 
 ![](./images/on-device-views/logs-panel.png)
 
-## 清除日誌面板
+## 清除記錄面板
 
 ![](./images/on-device-views/clear-logs-panel.png)
 
-## 已斷開
+## 已中斷連線
 
 ![](./images/on-device-views/disconnected.png)

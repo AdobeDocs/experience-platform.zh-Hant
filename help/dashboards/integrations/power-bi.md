@@ -1,6 +1,6 @@
 ---
-title: Power BI平台儀表板報表模板
-description: 使用報表模板使用Experience Platform資料Power BI。
+title: 平台儀表板的Power BI報表範本
+description: 使用報表範本來探索使用Power BI的Experience Platform資料。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
@@ -9,155 +9,155 @@ ht-degree: 0%
 
 ---
 
-# Power BI報表模板
+# 控制面板的Power BI報表範本
 
-Power BI報告模板功能允許您建立填有Adobe Experience Platform資料的引人注目的報告。 簡化的安裝過程會自動為即時客戶配置檔案、細分和目標安裝標準小部件。 此安裝還將Power BI連接到資料模型，以便您可以輕鬆自定義和擴展報告模板。 這些報告可以在整個組織中共用，而無需在平台上為您的組織提供憑據的收件人。
+Power BI報表範本功能可讓您建立填入Adobe Experience Platform資料且引人注目的報表。 簡化的安裝程式會自動安裝標準Widget，用於即時客戶個人檔案、細分和目的地。 此安裝也會將Power BI連線至您的資料模型，讓您能夠輕鬆自訂及擴充報表範本。 這些報告可在您的整個組織中共用，收件者不需在Platform上取得您組織的認證。
 
-本文檔提供有關如何將Adobe Experience Platform與Power BI應用程式連接以及使用報告模板與外部用戶共用平台資料關鍵見解的說明。
+本檔案說明如何連結Adobe Experience Platform與Power BI應用程式，並使用報表範本與外部使用者共用重要的Platform資料深入分析。
 
 ## 快速入門
 
-在繼續本教程之前，建議您充分瞭解 [架構組合](../../xdm/schema/composition.md) 在Experience Platform中，以及如何通過 [聯合架構](../../xdm/schema/composition.md#union)。
+在繼續本教學課程之前，建議您先充分瞭解 [結構描述組合](../../xdm/schema/composition.md) Experience Platform中的屬性，以及如何透過 [聯合結構描述](../../xdm/schema/composition.md#union).
 
-要安裝Power BI應用程式整合，用戶必須首先獲得以下平台權限：
+若要安裝Power BI應用程式整合，使用者必須先取得下列Platform許可權：
 
 - 管理查詢
 - 管理沙箱
 
-要瞭解如何分配這些權限，請閱讀 [訪問控制](../../access-control/home.md) 文檔。
+若要瞭解如何指派這些許可權，請參閱 [存取控制](../../access-control/home.md) 說明檔案。
 
-您還必須擁有一個Power BI帳戶才能學習本教程。 要建立帳戶，請導航到 [Power BI首頁](https://powerbi.microsoft.com/en-us/) 並遵循註冊過程。 此Power BI帳戶的用戶還必須啟用 **建立工作區** 設定Power BI。 在Power BI管理門戶的租戶設定中找到此設定。 如果您的帳戶是由您的租戶或雇主提供的，請與您各自的管理員聯繫以啟用此設定。
+您也必須擁有Power BI帳戶才能參閱本教學課程。 若要建立帳戶，請導覽至 [Power BI首頁](https://powerbi.microsoft.com/en-us/) 並依照註冊程式進行。 此Power BI帳戶的使用者也必須啟用 **建立工作區** 在其Power BI設定中設定。 此設定可在Power BI管理入口網站的租使用者設定中找到。 如果您的帳戶是由租使用者或僱主提供，請聯絡各自的管理員以啟用此設定。
 
-![Power BI管理門戶建立工作區設定。](../images/power-bi/create-workspace-settings.png)
+![Power BI管理入口網站建立工作區設定。](../images/power-bi/create-workspace-settings.png)
 
 >[!NOTE]
 >
->為了使「儀表板」頁籤顯示在平台UI的左導航中，並且「儀表板清單」視圖可見，您必須有權訪問作為平台許可證一部分的配置檔案、段或目標儀表板中的任何一個。
+>為了讓「儀表板」標籤顯示在Platform UI的左側導覽器中，並顯示「儀表板詳細目錄」檢視，您必須有權存取任一「設定檔」、「區段」或「目的地」儀表板，這是您平台授權的一部分。
 
 ## 安裝Power BI應用程式整合
 
-在平台UI中，選擇 **[!UICONTROL 儀表板]** 的下界 [!UICONTROL 儀表板] 工作區。 的 [!UICONTROL 瀏覽] 頁籤顯示當前可用儀表板視圖的清單。 要瞭解有關查看可用儀表板的詳細資訊，請參閱 [庫存文檔](../inventory.md)。
+在Platform UI中，選取 **[!UICONTROL 儀表板]** 在左側導覽以開啟 [!UICONTROL 儀表板] 工作區。 此 [!UICONTROL 瀏覽] 索引標籤會顯示目前可用的儀表板檢視清單。 若要進一步瞭解檢視可用儀表板，請參閱 [詳細目錄檔案](../inventory.md).
 
-接下來，選擇 **[!UICONTROL 整合]** 頁籤。 此時將顯示Power BI應用程式整合頁。 從此處，選擇 **[!UICONTROL 安裝]** 開始安裝。
+接下來，選取 **[!UICONTROL 整合]** 標籤。 便會顯示「Power BI應用程式整合」頁面。 從此處選取 **[!UICONTROL 安裝]** 以開始安裝。
 
 >[!NOTE]
 >
->的 [!UICONTROL 安裝] 按鈕被禁用，除非您同時具有「查詢服務管理」和「管理沙箱」權限。
+>此 [!UICONTROL 安裝] 按鈕已停用，除非您同時擁有查詢服務管理及管理沙箱許可權。
 
-![Power BI詳細資訊螢幕，「安裝」按鈕突出顯示。](../images/power-bi/details-screen.png)
+![「安裝」按鈕反白顯示的Power BI詳細資訊畫面。](../images/power-bi/details-screen.png)
 
-### 提供憑據
+### 提供認證
 
-安裝過程的第一步是為Power BI應用程式整合提供非過期憑據。 提供以下兩種選項： [[!UICONTROL 建立新憑據]](#create-new-credentials) 或 [[!UICONTROL 使用現有憑據]](#use-existing-credentials)。 選擇適當的切換以繼續。
+安裝程式的第一個步驟是為Power BI應用程式整合提供不會到期的認證。 有兩個選項可供提供： [[!UICONTROL 建立新認證]](#create-new-credentials) 或 [[!UICONTROL 使用現有的認證]](#use-existing-credentials). 選取適當的切換以繼續。
 
-#### 建立新憑據 {#create-new-credentials}
+#### 建立新認證 {#create-new-credentials}
 
-生成新憑據時有兩個必填欄位： [!UICONTROL 名稱] 和 [!UICONTROL 分配給]。 的 [!UICONTROL 分配給] 欄位與與您的Power BI帳戶關聯的電子郵件地址相關。
+產生新認證時，有兩個必填欄位： [!UICONTROL 名稱] 和 [!UICONTROL 指派給]. 此 [!UICONTROL 指派給] 欄位與您的Power BI帳戶相關之電子郵件地址有關。
 
-![Power BI生成新憑據螢幕。](../images/power-bi/generate-new-credentials.png)
-
->[!IMPORTANT]
->
->建立未過期的憑據需要您分配某些權限和角色。 必需的權限是「管理沙箱」和「管理查詢服務整合」。 所需角色是Adobe Experience Platform管理員和開發人員角色。 要瞭解如何分配這些權限，請閱讀 [訪問控制](../../access-control/home.md) 文檔。
-
-要瞭解有關生成未過期的查詢服務憑據的詳細資訊，請參閱 [非過期憑據指南](../../query-service/ui/credentials.md#non-expiring-credentials)。
-
-首次生成未過期的憑據後，JSON檔案將下載到該電腦。 此JSON檔案隨後可以作為憑據與其他用戶共用以完成安裝過程。
-
-#### 使用現有憑據 {#use-existing-credentials}
-
-還可以上載JSON憑據檔案以通過驗證。 這些包含非過期憑據值的JSON檔案將下載到建立非過期憑據時使用的本地電腦。
+![Power BI產生新認證畫面。](../images/power-bi/generate-new-credentials.png)
 
 >[!IMPORTANT]
 >
->要使用現有的非過期憑據，用戶必須已經分配了憑據。 如果用戶未分配憑據，並且無法使用Adobe Admin Console建立新憑據，則用戶無法繼續安裝過程。
+>建立不會到期的認證需要您指派特定的許可權和角色。 必要的許可權是管理沙箱和管理查詢服務整合。 所需的角色為Adobe Experience Platform管理員和開發人員角色。 若要瞭解如何指派這些許可權，請參閱 [存取控制](../../access-control/home.md) 說明檔案。
 
-選擇 **[!UICONTROL 上載憑據檔案]**，然後在顯示的對話框中選擇要上載的相應JSON檔案。
+若要進一步瞭解如何產生不會到期的查詢服務認證，請參閱 [不會到期的認證指南](../../query-service/ui/credentials.md#non-expiring-credentials).
 
-![「Power BI憑據」螢幕，「上載憑據檔案」按鈕突出顯示。](../images/power-bi/upload-credential-file.png)
+在第一次產生不會到期的認證後，會將JSON檔案下載至該電腦。 然後可以將此JSON檔案作為憑證與其他使用者共用，以完成安裝過程。
 
-在您提供未過期的憑據後，平台會自動驗證這些憑據。 驗證成功後，將顯示確認消息。 選擇 **[!UICONTROL 下一個]** 審閱Power BI申請的同意協定。
+#### 使用現有的認證 {#use-existing-credentials}
 
-![未過期的憑據已成功驗證螢幕，「下一步」按鈕突出顯示。](../images/power-bi/successfully-uploaded-credential-file.png)
+也可以上傳JSON認證檔案以通過驗證。 建立不會到期的認證時，會將儲存不會到期的認證值的JSON檔案下載到正在使用的本機電腦。
+
+>[!IMPORTANT]
+>
+>若要使用現有的不會到期的認證，使用者必須已被指派認證。 如果使用者未指派認證，且無法使用Adobe Admin Console建立新認證，則使用者無法繼續安裝程式。
+
+選取 **[!UICONTROL 上傳認證檔案]**，然後在出現的對話方塊中選取要上傳的適當JSON檔案。
+
+![「上傳認證檔案」按鈕反白顯示的「Power BI認證」畫面。](../images/power-bi/upload-credential-file.png)
+
+提供不會到期的認證後，Platform會自動驗證這些認證。 一旦驗證成功，就會顯示確認訊息。 選取 **[!UICONTROL 下一個]** 檢閱Power BI應用程式的同意協定。
+
+![未到期的認證已成功驗證熒幕，並反白顯示下一步按鈕。](../images/power-bi/successfully-uploaded-credential-file.png)
 
 ### 提供同意
 
-將顯示同意顯示。 選擇 **[!UICONTROL 審查同意]** 開啟一個新窗口，詳細列出Power BI根據服務條款和隱私聲明訪問和使用資料所需的權限。
+同意畫面隨即顯示。 選取 **[!UICONTROL 檢閱同意]** 開啟新視窗，詳述Power BI根據其服務條款及隱私權宣告存取及使用您的資料所需的許可權。
 
-![「Review consence（審查同意）」按鈕突出顯示「provide conness（提供同意）」。](../images/power-bi/provide-consent-display.png)
+![提供同意會顯示並反白檢閱同意按鈕。](../images/power-bi/provide-consent-display.png)
 
-選擇 **[!UICONTROL 接受]** 授予Power BI訪問和使用平台資料的權限。
+選取 **[!UICONTROL Accept]** 來授予Power BI存取及使用您的Platform資料的許可權。
 
-![對Power BI應用程式的權限請求。](../images/power-bi/permissions.png)
+![Power BI應用程式的許可權要求。](../images/power-bi/permissions.png)
 
 >[!NOTE]
 >
->如果您在提供許可之前在任何時間退出安裝過程，則Power BI應用程式整合將不會安裝到儀表板清單中。
+>如果您在提供同意之前在任何時候退出安裝程式，Power BI應用程式整合將不會安裝到儀表板詳細目錄。
 
-在提供同意後，報告模板將作為安裝過程的一部分自動安裝在Power BI環境中。 然後，Power BI使用非過期的憑據訪問平台，依次執行所有SQL查詢，並使用返回的資料填充報表模板。
+在提供同意後，報表範本會作為安裝程式的一部分，自動安裝在Power BI環境中。 然後Power BI會使用不會到期的認證來存取Platform、依序執行所有SQL查詢，並使用傳回的資料填入報表範本。
 
-選擇 **[!UICONTROL 完成]** 返回儀表板清單。
+選取 **[!UICONTROL 完成]** 以返回儀表板詳細目錄。
 
-![「Finish（完成）」按鈕突出顯示「provile conness（提供同意）」。](../images/power-bi/finish-consent-review.png)
+![提供同意會顯示並反白顯示「完成」按鈕。](../images/power-bi/finish-consent-review.png)
 
-現在，Power BI報告模板已安裝，它將出現在可用儀表板清單中 [!UICONTROL 瀏覽] 頁籤。 選擇 **[!UICONTROL Power BI]** 的子菜單。
+現在已安裝Power BI報告範本，它會出現在下的可用儀表板清單中 [!UICONTROL 瀏覽] 標籤。 選取 **[!UICONTROL Power BI]** 從清單中導覽至Power BI環境。
 
-![Power BI列在儀表板清單中。](../images/power-bi/power-bi-dashboard-inventory.png)
+![列在儀表板詳細目錄中的Power BI。](../images/power-bi/power-bi-dashboard-inventory.png)
 
 >[!IMPORTANT]
 >
->Power BI管理員需要確保用戶具有在Power BI環境中查看這些儀表板的適當訪問權限。
+>Power BI管理員需確保使用者擁有適當的存取許可權，才能在Power BI環境中檢視這些儀表板。
 
 ## Power BI工作區
 
-登錄後 [Power BI工作區](https://dxt.powerbi.com)，報告模板可用於您有權訪問的每個服務。 報表模板包括配置檔案、段和目標儀表板 **僅** 是否具有相應的視圖權限。
+登入之後 [Power BI工作區](https://dxt.powerbi.com)，報表範本適用於您有權存取的每個服務。 報表範本包含設定檔、區段和目的地控制面板 **僅限** 是否擁有對應的檢視許可權。
 
-預設情況下，配置檔案、段和目標的標準小部件在Power BI模板報告中可用。
-
->[!NOTE]
->
->必須為給定儀表板啟用編輯權限，才能在Power BI環境中安裝該儀表板。
-
-![Power BI使用標準平台配置檔案小部件的配置檔案模板報告。](../images/power-bi/profile-report-template.png)
-
-在Power BI中安裝儀表板後，預設情況下將向所有用戶顯示報表模板。 如果要限制對任何報表模板的訪問，請確保在Power BI環境中禁用有關用戶的訪問。
-
-## 自定義Power BI報表模板
-
-通過使用自定義小部件，您可以將自定義屬性添加到資料模型中，以豐富Power BI提供的報表模板。
+預設情況下，Power BI範本報表中會提供來自設定檔、區段和目的地的標準Widget。
 
 >[!NOTE]
 >
->可用於自定義小部件的屬性取決於聯合架構中的可用內容。 要瞭解如何查看和瀏覽聯合架構以使自定義小部件受益，請參見 [聯合架構UI指南](../../profile/ui/union-schema.md)。
+>您必須為指定的儀表板啟用編輯許可權，才能允許在Power BI環境中安裝該儀表板。
 
-### 建立自定義小部件
+![使用標準Platform Profile Widget的Power BI設定檔範本報告。](../images/power-bi/profile-report-template.png)
 
-通過小部件庫建立自定義小部件。 查看 [小部件庫概述](../customize/widget-library.md) 介紹功能和 [建立自定義小部件的教程](../customize/custom-widgets.md) 的子菜單。
+在Power BI中安裝儀表板後，預設情況下會向所有使用者顯示報表範本。 如果您想要限制對任何報告範本的存取權，請務必在Power BI環境中停用相關使用者的存取權。
+
+## 自訂Power BI報表範本
+
+透過使用自訂Widget，您可以將自訂屬性新增至資料模型，以豐富Power BI提供的報表範本。
+
+>[!NOTE]
+>
+>可用於自訂Widget的屬性取決於聯合結構描述中可用的屬性。 若要瞭解如何檢視和探索聯合結構描述以利於您的自訂Widget，請參閱 [聯合結構描述UI指南](../../profile/ui/union-schema.md).
+
+### 建立自訂Widget
+
+自訂Widget是透過Widget資料庫建立。 請參閱 [Widget程式庫概觀](../customize/widget-library.md) 瞭解功能和 [建立自訂Widget的教學課程](../customize/custom-widgets.md) 以取得特定指示。
 
 >[!IMPORTANT]
 >
->新建立的自定義小部件 **不** 在Adobe Experience Platform儀表板和Power BI報告模板之間自動同步。 必須在平台UI中建立的任何自定義小部件必須在Power BI環境中手動重新建立。
+>新建立的自訂Widget包括 **not** 自動在Adobe Experience Platform儀表板和Power BI報表範本之間同步。 在Platform UI中建立的任何自訂Widget都必須在Power BI環境中手動重新建立。
 
-### 在Power BI環境中重新建立自定義小部件
+### 在Power BI環境中重新建立自訂Widget
 
-一旦儀表板在自定義小部件中包含了相應的度量和屬性，您就可以修改從Power BI環境中顯示的報告模板。 查看 [Power BI文檔](https://docs.microsoft.com/zh-tw/power-bi/) 的子菜單。
+一旦您的儀表板具有包含於自訂Widget中的適當量度和屬性後，您就可以準備修改Power BI環境中顯示的報表範本。 請參閱 [Power BI檔案](https://docs.microsoft.com/zh-tw/power-bi/) 以取得有關如何透過其使用者介面編輯報告的資訊。
 
 ## 刪除Power BI應用程式整合
 
-要刪除儀表板，請導航到儀表板清單並選擇刪除表徵圖(![](../images/power-bi/delete-icon.png))。
+若要刪除控制面板，請導覽至控制面板詳細目錄，然後選取刪除圖示(![](../images/power-bi/delete-icon.png))。
 
 >[!NOTE]
 >
->只有安裝了Power BI儀表板的用戶才能從平台UI中刪除整合。
+>只有安裝Power BI控制面板的使用者才能從Platform UI刪除整合。
 
-![顯示「瀏覽」按鈕和「刪除」表徵圖的儀表板清單螢幕瀏覽頁籤突出顯示。](../images/power-bi/delete-power-bi-dashboard.png)
+![儀表板詳細目錄畫面瀏覽標籤顯示，其中瀏覽按鈕和刪除圖示會反白顯示。](../images/power-bi/delete-power-bi-dashboard.png)
 
-出現確認跨距。 選擇 **[!UICONTROL 刪除]** 確認進程。
+確認彈出視窗隨即顯示。 選取 **[!UICONTROL 刪除]** 以確認流程。
 
 >[!IMPORTANT]
 >
->從平台UI中刪除Power BI儀表板 **不** 刪除您的Power BI環境中可用的報表模板。 如果要完全刪除Power BI報告模板中保存的資訊，則需要登錄到Power BI帳戶並從該環境中刪除報告模板。 刪除後，用戶可以按照上面概述的相同安裝說明重新安裝Power BI板。
+>從Platform UI刪除Power BI儀表板會 **not** 刪除Power BI環境中可用的報表範本。 如果您想要完全刪除Power BI報表範本中保留的資訊，您必須登入您的Power BI帳戶，並從該環境中刪除報表範本。 刪除後，使用者可以依照上述相同的安裝指示重新安裝Power BI儀表板。
 
 ## 後續步驟
 
-通過閱讀此文檔，您可以更好地瞭解如何將Power BI報告模板整合到平台中，以便從您的配置檔案、段或目標控制板中共用令人信服的資料洞察力。 查看 [儀表板自定義概述](../customize/overview.md) 瞭解有關自定義儀表板的詳細資訊。
+閱讀本檔案後，您就能更瞭解Power BI報表範本如何整合至Platform，以分享您的設定檔、區段或目的地控制面板的精彩資料見解。 請參閱 [儀表板自訂概觀](../customize/overview.md) 以進一步瞭解如何自訂儀表板。

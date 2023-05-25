@@ -1,6 +1,6 @@
 ---
-title: 使用流服務API更新流SDK的流規範
-description: 以下文檔提供了如何使用自助源流服務API（流SDK）檢索和更新流規範的步驟。
+title: 使用流量服務API更新串流SDK的流量規格
+description: 以下檔案提供如何使用Flow Service API for Self-Serve Sources (Streaming SDK)擷取和更新流量規格的步驟。
 hide: true
 hidefromtoc: true
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
@@ -11,21 +11,21 @@ ht-degree: 1%
 
 ---
 
-# 使用 [!DNL Flow Service] API
+# 使用更新流程規格 [!DNL Flow Service] API
 
-生成新連接規範ID後，必須將此ID添加到流規範中才能建立資料流。
+產生新的連線規格ID後，您必須將此ID新增至流程規格，才能建立資料流。
 
-流規範包含定義流的資訊，包括它支援的源連接ID和目標連接ID、需要應用到資料的轉換規範以及生成流所需的調度參數。 可以使用 `/flowSpecs` 端點。
+流程規格包含定義流程的資訊，包括它支援的來源和目標連線ID、需要套用至資料的轉換規格，以及產生流程所需的排程引數。 您可以使用來編輯流程規格 `/flowSpecs` 端點。
 
-以下文檔提供了有關如何使用 [!DNL Flow Service] 自助源API（流SDK）。
+以下檔案提供了有關如何使用擷取和更新流程規格的步驟。 [!DNL Flow Service] 自助來源API （串流SDK）。
 
 ## 快速入門
 
-在繼續之前，請查看 [入門指南](./getting-started.md) 有關相關文檔的連結、閱讀本文檔中示例API調用的指南，以及有關成功調用任何Experience PlatformAPI所需標頭的重要資訊。
+在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-## 查找流規範 {#lookup}
+## 查詢流程規格 {#lookup}
 
-使用 `generic-streaming` 模板全部使用 `GenericStreamingAEP` 流規範。 可通過向Web伺服器發出GET請求來檢索此流規範 `/flowSpecs/` 端點，並提供 `flowSpec.id` 共 `e77fde5a-22a8-11ed-861d-0242ac120002`。
+使用建立的來源 `generic-streaming` 範本都使用 `GenericStreamingAEP` 流量規格。 您可以透過向以下發出GET請求來擷取此流量規格： `/flowSpecs/` 端點，並提供 `flowSpec.id` 之 `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **API格式**
 
@@ -35,7 +35,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **要求**
 
-以下請求將檢索 `e77fde5a-22a8-11ed-861d-0242ac120002` 流規範。
+以下請求會擷取 `e77fde5a-22a8-11ed-861d-0242ac120002` 流量規格。
 
 ```shell
 curl -X GET \
@@ -49,7 +49,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回查詢的流規範的詳細資訊。
+成功的回應會傳回查詢之流量規格的詳細資料。
 
 ```json
 {
@@ -145,13 +145,13 @@ curl -X GET \
 }
 ```
 
-## 更新流規範 {#update}
+## 更新流程規格 {#update}
 
-您可以通過PUT操作更新流規範的欄位。 通過PUT請求更新流規範時，主體必須包括在POST請求中建立新流規範時需要的所有欄位。
+您可以透過PUT作業更新流程規格的欄位。 透過PUT請求更新流量規格時，本文必須包含在POST請求中建立新流量規格時所需的所有欄位。
 
 >[!IMPORTANT]
 >
->為新源建立連接規範時，必須將其規範ID添加到 `sourceConnectionSpecIds` 與源對應的流規範的陣列。 這可確保現有流規範支援新源，從而允許您使用新源完成資料流建立過程。
+>當您建立新來源的連線規格時，必須將其規格ID新增至 `sourceConnectionSpecIds` 與您的來源對應的流程規格陣列。 這可確保現有流程規格支援您的新來源，從而允許您使用新來源完成資料流程建立流程。
 
 **API格式**
 
@@ -161,7 +161,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **要求**
 
-以下請求更新了 `e77fde5a-22a8-11ed-861d-0242ac120002` 要包括連接規範ID `bdb5b792-451b-42de-acf8-15f3195821de`。
+以下請求會更新流程規格 `e77fde5a-22a8-11ed-861d-0242ac120002` 以包含連線規格ID `bdb5b792-451b-42de-acf8-15f3195821de`.
 
 ```shell
 PUT -X GET \
@@ -263,7 +263,7 @@ PUT -X GET \
 
 **回應**
 
-成功的響應返回查詢的流規範的詳細資訊，包括其更新清單 `sourceConnectionSpecIds`。
+成功的回應會傳回查詢的流程規格的詳細資訊，包括其更新的清單 `sourceConnectionSpecIds`.
 
 ```json
 {
@@ -365,4 +365,4 @@ PUT -X GET \
 
 ## 後續步驟
 
-將新連接規範添加到相應的流規範後，您現在可以繼續測試和提交新源。 請參閱上的指南 [測試和提交新源](./submit.md) 的子菜單。
+將新的連線規格新增至適當的流量規格後，您現在可以繼續測試並提交新的來源。 請參閱指南： [測試和提交新來源](./submit.md) 以取得詳細資訊。

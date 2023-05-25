@@ -1,6 +1,6 @@
 ---
-title: 用戶定義的儀表板
-description: 瞭解如何構建和管理自定義儀表板，在此可以建立、添加和編輯定制小部件以可視化關鍵度量。
+title: 使用者定義儀表板
+description: 瞭解如何建立和管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，將關鍵量度視覺化。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 3%
 
 ---
 
-# 用戶定義的儀表板
+# 使用者定義儀表板
 
-Adobe Experience Platform儀表板通過用戶定義的儀表板功能幫助您加快洞察和自定義可視化。 此功能使您能夠構建和管理自定義儀表板，您可以在其中建立、添加和編輯定制小部件，以可視化與您的組織相關的關鍵度量。
+Adobe Experience Platform儀表板可協助您透過使用者定義的儀表板功能，加速深入分析和自訂視覺效果。 此功能可讓您建立和管理自訂儀表板，以便在其中建立、新增和編輯自訂的Widget，以視覺化方式呈現與您的組織相關的關鍵量度。
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -19,159 +19,159 @@ Adobe Experience Platform儀表板通過用戶定義的儀表板功能幫助您�
 
 To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
-## 建立自定義儀表板
+## 建立自訂儀表板
 
-要建立自定義儀表板，請首先導航至儀表板清單。 選擇 **[!UICONTROL 儀表板]** 從平台UI的左側導航，然後 **[!UICONTROL 建立儀表板]**。
+若要建立自訂儀表板，請先導覽至儀表板詳細目錄。 選取 **[!UICONTROL 儀表板]** 從Platform UI的左側導覽，接著是 **[!UICONTROL 建立儀表板]**.
 
-![左側導航中帶有儀表板的儀表板清單和突出顯示的「建立儀表板」。](./images/user-defined-dashboards/create-dashboard.png)
+![左側導覽中具有儀表板的儀表板詳細目錄，並反白顯示「建立儀表板」。](./images/user-defined-dashboards/create-dashboard.png)
 
-在添加自定義儀表板之前，儀表板清單為空並顯示「未找到儀表板」。 。 建立後，所有用戶定義的儀表板都會列在儀表板清單中。
+新增自訂儀表板之前，儀表板詳細目錄為空白，並顯示「找不到儀表板」。 訊息。 建立後，您的所有使用者定義控制面板都會列在控制面板詳細目錄中。
 
 >[!NOTE]
 >
->要編輯現有儀表板，請從清單清單中選擇儀表板名稱，然後選擇鉛筆表徵圖(![鉛筆表徵圖。](./images/user-defined-dashboards/edit-icon.png))
+>若要編輯現有儀表板，請從詳細目錄清單中選取儀表板名稱，然後選取鉛筆圖示(![鉛筆圖示。](./images/user-defined-dashboards/edit-icon.png))
 
-的 [!UICONTROL 建立儀表板] 對話框。 輸入要建立的小部件集合的人性化的描述性名稱，然後選擇 **[!UICONTROL 保存]**。
+此 [!UICONTROL 建立儀表板] 對話方塊隨即顯示。 輸入您想要建立之Widget集合的人性化描述性名稱，然後選取 **[!UICONTROL 儲存]**.
 
-![「建立儀表板」對話框。](./images/user-defined-dashboards/create-dashboard-dialog.png)
+![「建立儀表板」對話方塊。](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-新建立的空白儀表板將以您所選的名稱出現在視圖的左上角。
+新建立的空白圖示板會出現，而您選擇的名稱會出現在檢視的左上角。
 
-## 建立小部件 {#create-widget}
+## 建立Widget {#create-widget}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Widget 的最大數量"
 >abstract="使用者定義的儀表板最多支援十個 Widget。將十個 Widget 新增到儀表板後，[!UICONTROL 新增 Widget] 選項會停用並顯示為灰色。"
 
-從新儀表板視圖中，選擇 **[!UICONTROL 添加新小部件]** 開始構件建立過程。
+從您的新儀表板檢視中，選取 **[!UICONTROL 新增Widget]** 以開始Widget建立程式。
 
 >[!IMPORTANT]
 >
 >使用者定義的儀表板最多支援十個 Widget。將十個 Widget 新增到儀表板後，[!UICONTROL 新增 Widget] 選項會停用並顯示為灰色。
 
-![突出顯示了「添加新小部件」的新空儀表板。](./images/user-defined-dashboards/add-new-widget.png)
+![醒目提示新增Widget的新空白儀表板。](./images/user-defined-dashboards/add-new-widget.png)
 
-### 小部件編寫器
+### Widget撰寫器
 
-將顯示小部件編寫器工作區。 下一步，選擇 **[!UICONTROL 選擇資料]** 選擇向小部件添加屬性的資料模型。
+Widget Composer工作區隨即顯示。 接下來，選取 **[!UICONTROL 選取資料]** 以選擇要將屬性新增至Widget的資料模型。
 
-![小部件編寫器工作區。](./images/user-defined-dashboards/widget-composer.png)
+![Widget Composer工作區。](./images/user-defined-dashboards/widget-composer.png)
 
-#### 選擇資料模型 {#select-data-model}
+#### 選取資料模型 {#select-data-model}
 
-的 [!UICONTROL 選擇資料模型] 對話框。 從左列中選擇一個資料模型以顯示所有可用表的預覽清單。 預配置的Real-time Customer Data Platform資料模型名為 [!UICONTROL CDPInsights]。
+此 [!UICONTROL 選取資料模型] 對話方塊隨即顯示。 從左欄選取資料模型，以顯示所有可用表格的預覽清單。 預先設定的Real-time Customer Data Platform資料模型已命名為 [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
->選擇資訊表徵圖(![資訊表徵圖。](./images/user-defined-dashboards/info-icon.png))查看完整的資料模型名稱（如果在資料欄中顯示太長）。
+>選取資訊圖示(![資訊圖示。](./images/user-defined-dashboards/info-icon.png))，以便在資料欄中無法顯示太長時檢視完整資料模型名稱。
 
-![選擇資料對話框。](./images/user-defined-dashboards/select-data-model-dialog.png)
+![選取資料對話方塊。](./images/user-defined-dashboards/select-data-model-dialog.png)
 
-預覽清單提供有關資料模型中包含的表的詳細資訊。 下表提供了列欄位及其潛在值的說明。
+預覽清單提供有關資料模型中所含表格的詳細資訊。 下表提供欄欄位及其潛在值的說明。
 
-| 列欄位 | 說明 |
+| 欄欄位 | 說明 |
 |---|---|
-| [!UICONTROL 標題] | 表的名稱。 |
-| [!UICONTROL 表格類型] | 表的類型。 潛在類型包括： `fact`。 `dimension`, `none`。 |
-| [!UICONTROL 記錄] | 與所選表關聯的記錄數。 |
-| [!UICONTROL 查找] | 聯接到所選表的表數。 |
-| [!UICONTROL 屬性] | 所選表的屬性數。 |
+| [!UICONTROL 標題] | 表格的名稱。 |
+| [!UICONTROL 表格類型] | 表格的型別。 可能的型別包括： `fact`， `dimension`、和 `none`. |
+| [!UICONTROL 記錄] | 與所選表格相關聯的記錄數。 |
+| [!UICONTROL 查詢] | 連結至所選表格的表格數目。 |
+| [!UICONTROL 屬性] | 所選表格的屬性數目。 |
 
-選擇 **[!UICONTROL 下一個]** 確認您選擇的資料模型。 下一個視圖顯示左滑軌中可用表的清單。 選擇一個表，查看所選表中包含的資料的全面細分。
+選取 **[!UICONTROL 下一個]** 以確認您選擇的資料模型。 下一個檢視會在左側邊欄中顯示可用表格的清單。 選取表格以檢視所選表格中所包含資料的完整劃分。
 
-### 填充小部件 {#populate-widget}
+### 填入Widget {#populate-widget}
 
-的 [!UICONTROL 預覽] 面板包含頁籤 [!UICONTROL 示例記錄] 和 [!UICONTROL 屬性]。 的 [!UICONTROL 示例記錄] 頁籤提供清單視圖中選定表中記錄的子集。 的 [!UICONTROL 屬性] 頁籤為與所選表關聯的每個屬性提供屬性名稱、資料類型和源表。
+此 [!UICONTROL 預覽] 面板包含索引標籤 [!UICONTROL 範例記錄] 和 [!UICONTROL 屬性]. 此 [!UICONTROL 範例記錄] tab在表格檢視中提供所選表格中記錄的子集。 此 [!UICONTROL 屬性] tab為與所選表格相關聯的每個屬性提供屬性名稱、資料型別和來源表格。
 
-從左側滑軌中可用的清單中選擇一個表，以提供小部件的資料，然後選擇 **[!UICONTROL 選擇]** 返回到小部件作曲家。
+從左側邊欄的可用清單中選取一個表格，以提供Widget的資料，然後選取 **[!UICONTROL 選取]** 以返回widget撰寫器。
 
-![「選擇資料」對話框，其中「選擇」突出顯示。](./images/user-defined-dashboards/select-a-table.png)
+![選取資料對話方塊中反白顯示選取。](./images/user-defined-dashboards/select-a-table.png)
 
-現在，小部件編寫器將填充所選表中的資料。
+Widget撰寫器現在會填入來自您所選表格的資料。
 
-資料模型和當前選定的表顯示在左滑軌的頂部，可用於建立小部件的屬性列在 [!UICONTROL 屬性] 的雙曲餘切值。 您可以使用搜索欄來查找屬性，而不是滾動清單，或通過選擇鉛筆表徵圖(![鉛筆表徵圖。](./images/user-defined-dashboards/edit-icon.png))。
+資料模型和目前選取的表格會顯示在左側邊欄的頂端，而可用於建立Widget的屬性會列在 [!UICONTROL 屬性] 欄。 您可以使用搜尋列來尋找屬性，而不是捲動清單，或是透過選取鉛筆圖示(![鉛筆圖示。](./images/user-defined-dashboards/edit-icon.png))。
 
-![在小部件編寫器中填充資料的小部件。](./images/user-defined-dashboards/populated-widget-composer.png)
+![Widget撰寫器中填入資料的Widget。](./images/user-defined-dashboards/populated-widget-composer.png)
 
-#### 添加和篩選屬性 {#add-and-filter-attributes}
+#### 新增和篩選屬性 {#add-and-filter-attributes}
 
-選擇添加表徵圖(![添加表徵圖。](./images/user-defined-dashboards/add-icon.png))，以將屬性添加到小部件。 顯示的下拉菜單允許您將屬性添加為小部件的X軸、Y軸、顏色或濾鏡。 的 [!UICONTROL 顏色] 屬性允許您根據顏色來區分X和Y軸標籤的結果。 它通過根據結果對第三個屬性的合成將結果拆分為不同的顏色來實現這一點。
+選取新增圖示(![新增圖示。](./images/user-defined-dashboards/add-icon.png))來將屬性新增至您的Widget。 出現的下拉式選單可讓您為Widget將屬性新增為X軸、Y軸、顏色或濾鏡。 此 [!UICONTROL 顏色] attribute可讓您根據顏色來區分X軸和Y軸標籤的結果。 它根據第三個屬性的組成將結果分割成不同的顏色，從而達到此目的。
 
 >[!TIP]
 >
->如果要反向X和Y軸的排列，請選取上箭頭和下箭頭表徵圖(![上箭頭和下箭頭表徵圖。](./images/user-defined-dashboards/switch-axis-icon.png))來改變他們的安排。
+>如果要反轉X和Y軸的排列，請選取向上和向下箭頭圖示(![向上和向下箭頭圖示。](./images/user-defined-dashboards/switch-axis-icon.png))以切換其排列方式。
 
-![突出顯示了添加表徵圖下拉清單的小部件編寫器。](./images/user-defined-dashboards/attributes-dropdown.png)
+![Widget Composer中反白顯示了add-icon下拉式清單。](./images/user-defined-dashboards/attributes-dropdown.png)
 
-要更改小部件的圖形或圖表類型，請選擇 [!UICONTROL 標籤] 下拉清單，然後從可用選項中選擇。 選項包括條、點、刻度、線條或區域。 選定後，將生成小部件當前設定的預覽可視化。
+若要變更Widget的圖表型別，請選取 [!UICONTROL 標籤] 下拉式清單，然後從可用的選項中選擇。 選項包括長條、點、刻度、直線或區域。 選取後，會產生Widget目前設定的預覽視覺效果。
 
-![突出顯示標籤下拉的構件編寫器。](./images/user-defined-dashboards/marks-dropdown.png)
+![醒目提示「標籤」下拉式清單的Widget撰寫器。](./images/user-defined-dashboards/marks-dropdown.png)
 
-通過將屬性添加為篩選器，您可以選擇要包括或從構件中排除的值。 在從屬性清單中添加篩選器後， [!UICONTROL 篩選] 對話框，您可以在其中使用值複選框選擇或取消選擇值。
+透過新增屬性作為篩選器，您可以選取要包含或排除Widget的值。 從屬性清單新增篩選器後， [!UICONTROL 篩選] 會出現對話方塊，您可在其中使用核取方塊選取或取消選取值。
 
-![用於篩選小部件中值的篩選器對話框。](./images/user-defined-dashboards/filter-dialog.png)
+![篩選對話方塊，用於從您的Widget篩選值。](./images/user-defined-dashboards/filter-dialog.png)
 
-#### 篩選歷史資料 {#filter-historical-data}
+#### 篩選出歷史資料 {#filter-historical-data}
 
-要從小部件生成的透視中篩選歷史資料，請添加 `date_key` 屬性作為篩選器並選擇 **[!UICONTROL 最近日期]** 後跟 **[!UICONTROL 應用]**。 此篩選器確保用於獲取洞察力的資料是從最近的系統快照獲取的。
+若要從Widget產生的深入分析中篩選出歷史資料，請新增 `date_key` 屬性作為篩選條件並選取 **[!UICONTROL 最近日期]** 後面接著 **[!UICONTROL 套用]**. 此篩選器可確保用於衍生見解的資料是從最近的系統快照中取得。
 
-![的 [!UICONTROL 篩選器：日期鍵] 對話 [!UICONTROL 最近日期] 和 [!UICONTROL 應用] 。](./images/user-defined-dashboards/recent-date.png)
+![此 [!UICONTROL 篩選器：date_key] 對話方塊 [!UICONTROL 最近日期] 和 [!UICONTROL 套用] 反白顯示。](./images/user-defined-dashboards/recent-date.png)
 
-或者，您可以建立自定義期間以按篩選資料。 選擇 **[!UICONTROL 選擇日期]** 將對話框擴展為可用日期清單。 使用 **[!UICONTROL 全選]** 複選框以啟用或禁用所有可用選項，或單獨選中每天的複選框。 最後，選擇 **[!UICONTROL 應用]** 確認你的選擇。
+或者，您也可以建立自訂時段，依此篩選資料。 選取 **[!UICONTROL 選取日期]** 以使用可用日期清單來擴充對話方塊。 使用 **[!UICONTROL 全選]** 核取方塊以啟用或停用所有可用選項，或分別選取每天的核取方塊。 最後，選取 **[!UICONTROL 套用]** 以確認您的選擇。
 
 >[!NOTE]
 >
->如果 `date_key` 屬性已添加為篩選器，請選擇省略號後跟 **[!UICONTROL 編輯]** 的子菜單。
+>如果 `date_key` 屬性已新增為篩選器，請選取省略符號後接 **[!UICONTROL 編輯]** 以變更篩選期間。
 
-![的 [!UICONTROL 篩選器：日期鍵] 對話框，其中選中和取消選中各個日複選框。](./images/user-defined-dashboards/select-dates.png)
+![此 [!UICONTROL 篩選器：date_key] 對話方塊，其中個別日期核取方塊已核取及未核取。](./images/user-defined-dashboards/select-dates.png)
 
-### 小部件屬性
+### Widget屬性
 
-選擇屬性表徵圖(![屬性表徵圖。](./images/user-defined-dashboards/properties-icon.png))開啟屬性面板。 在 [!UICONTROL 屬性] 面板，在 [!UICONTROL 小部件標題] 的子菜單。
+選取屬性圖示(![屬性圖示。](./images/user-defined-dashboards/properties-icon.png))以開啟「屬性」面板。 在 [!UICONTROL 屬性] 面板中，輸入Widget的名稱 [!UICONTROL Widget標題] 文字欄位。
 
-![帶有屬性表徵圖的屬性面板和突出顯示的小部件標題欄位。](./images/user-defined-dashboards/properties-panel.png)
+![屬性面板中會顯示屬性圖示，且Widget標題欄位會反白顯示。](./images/user-defined-dashboards/properties-panel.png)
 
-在小部件屬性面板中，可以編輯小部件的幾個方面。 您可以完全控制編輯小部件圖例的位置。 要移動圖例，請選擇 [!UICONTROL 圖例放置] 下拉清單，然後從可用選項清單中選擇所需的位置。 也可以通過在圖例中輸入新名稱來更名與圖例、X或Y軸關聯的標籤 [!UICONTROL 圖例標題] 文本欄位，或 [!UICONTROL 軸標籤] 文本欄位。
+在Widget屬性面板中，您可以編輯Widget的多個層面。 您擁有編輯Widget圖例位置的完整控制權。 若要移動圖例，請選取 [!UICONTROL 圖例位置] 下拉式清單，並從可用選項清單中選擇所需的位置。 您也可以重新命名與圖例相關聯的標籤，以及在 [!UICONTROL 圖例標題] 文字欄位，或 [!UICONTROL 座標軸標籤] 文字欄位。
 
-#### 保存小部件 {#save-widget}
+#### 儲存您的Widget {#save-widget}
 
-在小部件編寫器中保存小部件時，會將該小部件本地保存到儀表板。 如果希望保存您的工作並稍後繼續，請選擇 **[!UICONTROL 保存]**。 小部件名稱下面的勾選表徵圖表示該小部件已保存。 或者，當您對小部件感到滿意時，選擇 **[!UICONTROL 保存並關閉]** 使該小部件可供有權訪問儀表板的所有其他用戶使用。 選擇 **[!UICONTROL 取消]** 放棄您的工作並返回到自定義儀表板。
+儲存在Widget Composer中，會在本機將Widget儲存至您的儀表板。 如果要儲存工作並在稍後繼續，請選取 **[!UICONTROL 儲存]**. Widget名稱下方的勾號圖示表示已儲存Widget。 或者，當您滿意您的Widget時，請選取 **[!UICONTROL 儲存並關閉]** 讓Widget可供其他所有可存取您控制面板的使用者使用。 選取 **[!UICONTROL 取消]** 以放棄您的工作並返回您的自訂儀表板。
 
-![新小部件保存確認。](./images/user-defined-dashboards/save-confirmation.png)
+![新Widget儲存確認。](./images/user-defined-dashboards/save-confirmation.png)
 
 >[!TIP]
 >
->選擇屬性表徵圖(![屬性表徵圖。](./images/user-defined-dashboards/properties-icon.png))，查看有關其建立的詳細資訊。 可在顯示的對話框中更改儀表板的名稱。
+>選取屬性圖示(![屬性圖示。](./images/user-defined-dashboards/properties-icon.png))，檢視關於其建立的詳細資訊。 您可以在出現的對話方塊中變更圖示板的名稱。
 
-在此工作區中可以重新排列小部件並調整小部件大小。 選擇 **[!UICONTROL 保存]** 以保留儀表板名稱和配置的佈局。
+在此工作區中，Widget可以重新排列和調整大小。 選取 **[!UICONTROL 儲存]** 以保留您的儀表板名稱和已設定的配置。
 
-![帶有自定義小部件的用戶定義的儀表板和突出顯示的保存按鈕。](./images/user-defined-dashboards/user-defined-dashboard.png)
+![使用者定義的儀表板，其中含有反白顯示的自訂Widget和儲存按鈕。](./images/user-defined-dashboards/user-defined-dashboard.png)
 
-為確保Adobe Real-time Customer Data Platform透視儀表板的每個查詢都有足夠的資源來高效執行，API通過為每個查詢分配併發槽來跟蹤資源使用情況。 系統最多可處理四個併發查詢，因此在任何給定時間都可使用四個併發查詢槽。 查詢將基於併發時隙被放入隊列中，然後在隊列中等待直到有足夠的併發時隙可用。
+為了確保Adobe Real-time Customer Data Platform見解儀表板的每個查詢都有足夠的資源來有效執行，API會透過為每個查詢指派並行位置來追蹤資源使用情況。 系統最多可以處理四個同時查詢，因此在任何給定時間都有四個同時查詢位置可用。 查詢會根據並行位置放入佇列中，然後在佇列中等待，直到有足夠的並行位置可用。
 
-### 複製小部件
+### 複製Widget
 
-建立小部件後，您可以複製整個小部件並自定義其屬性以建立唯一的小部件，而無需從頭開始。 要複製小部件，請首先導航到儀表板清單。 然後從清單清單中選擇儀表板名稱。 將顯示您的自定義儀表板。
+建立Widget後，您可以複製整個Widget並自訂其屬性以建立唯一的Widget，而不需要從頭開始。 若要複製Widget，請先導覽至控制面板詳細目錄。 然後，從庫存清單中選取儀表板名稱。 您的自訂儀表板隨即出現。
 
-![帶儀表板的平台UI和自定義儀表板名稱突出顯示。](./images/user-defined-dashboards/dashbaord-inventory.png)
+![強調顯示控制面板和自訂控制面板名稱的Platform UI。](./images/user-defined-dashboards/dashbaord-inventory.png)
 
-選擇鉛筆表徵圖(![鉛筆表徵圖。](./images/user-defined-dashboards/edit-icon.png))，進入編輯模式。
+選取鉛筆圖示(![鉛筆圖示。](./images/user-defined-dashboards/edit-icon.png))以進入編輯模式。
 
-![突出顯示鉛筆表徵圖的自定義儀表板。](./images/user-defined-dashboards/edit-mode.png)
+![反白顯示鉛筆圖示的自訂儀表板。](./images/user-defined-dashboards/edit-mode.png)
 
-接下來，選擇要複製的小部件右上角的橢圓，然後 **[!UICONTROL 重複]** 的子菜單。
+接著，選取您要複製之Widget右上角的省略符號，然後按一下 **[!UICONTROL 複製]** 從可用選項清單中選取。
 
-![在突出顯示橢圓和重複小部件的用戶定義的儀表板中的小部件。](./images/user-defined-dashboards/duplicate.png)
+![使用者定義儀表板中的Widget，其中反白了橢圓形和重複的Widget。](./images/user-defined-dashboards/duplicate.png)
 
-在用戶定義的儀表板中顯示重複的小部件。 選擇新小部件的省略號，然後 **[!UICONTROL 編輯]**，以自定義新小部件。
+重複的Widget會顯示在您使用者定義的儀表板中。 選取新Widget的省略符號，然後按一下 **[!UICONTROL 編輯]**，以自訂新的Widget。
 
 ## 後續步驟和其他資源
 
-通過閱讀此文檔，您可以更好地瞭解如何建立自定義儀表板以及如何為該儀表板建立、編輯和更新自定義小部件。
+閱讀本檔案後，您將會更瞭解如何建立自訂儀表板，以及如何建立、編輯和更新該儀表板的自訂Widget。
 
-查找可用的預配置度量和可視化 [配置檔案](./guides/profiles.md#standard-widgets)。 [段](./guides/segments.md#standard-widgets), [目的地](./guides/destinations.md#standard-widgets) 控制板，請參閱各自文檔中的標準小部件清單。
+探索適用於的可用預先設定量度和視覺效果 [設定檔](./guides/profiles.md#standard-widgets)， [區段](./guides/segments.md#standard-widgets)、和 [目的地](./guides/destinations.md#standard-widgets) 儀表板，請參閱各自檔案中的標準Widget清單。
 
-要增強您對Experience Platform中用戶定義的儀表板的瞭解，請觀看以下視頻：
+若要加深您對Experience Platform中使用者定義之控制面板的瞭解，請觀看下列影片：
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；策略實施；自動實施；基於API的實施；資料治理
+keywords: Experience Platform；首頁；熱門主題；原則執行；自動執行；API型執行；資料控管
 solution: Experience Platform
-title: 策略評估API終結點
-description: 建立市場營銷操作並定義策略後，您可以使用策略服務API評估某些操作是否違反了任何策略。 返回的約束採用一組策略的形式，這些策略將通過嘗試對包含資料使用標籤的指定資料執行市場營銷操作而受到違反。
+title: 原則評估API端點
+description: 建立行銷動作並定義原則後，您就可以使用原則服務API來評估某些動作是否違反了任何原則。 傳回的限制會採取一組原則的形式，嘗試對包含資料使用標籤的指定資料執行行銷動作時，違反這些原則。
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
 source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
 workflow-type: tm+mt
@@ -11,25 +11,25 @@ ht-degree: 1%
 
 ---
 
-# 策略評估終結點
+# 原則評估端點
 
-建立市場營銷操作並定義資料使用策略後，您可以使用 [!DNL Policy Service] 評估某些操作是否違反任何策略的API。 返回的約束採用一組策略的形式，這些策略將通過嘗試對包含資料使用標籤的指定資料執行市場營銷操作而受到違反。
+建立行銷動作並定義資料使用原則後，您可以使用 [!DNL Policy Service] 用於評估特定動作是否違反任何原則的API。 傳回的限制會採取一組原則的形式，嘗試對包含資料使用標籤的指定資料執行行銷動作時，違反這些原則。
 
-預設情況下，只有狀態設定為 `ENABLED` 參與評估。 但是，可以使用查詢參數 `?includeDraft=true` 包括 `DRAFT` 策略。
+依預設，只有狀態設定為的原則 `ENABLED` 參與評估。 不過，您可以使用查詢引數 `?includeDraft=true` 要包含 `DRAFT` 評估中的原則。
 
-評估請求可以通過以下三種方式之一進行：
+您可以透過下列三種方式之一提出評估請求：
 
-1. 給定市場營銷操作和一組資料使用標籤，該操作是否違反任何策略？
-1. 如果有市場營銷操作和一個或多個資料集，該操作是否違反任何策略？
-1. 如果給定市場營銷操作、一個或多個資料集以及每個資料集中一個或多個欄位的子集，該操作是否違反任何策略？
+1. 指定某個行銷動作和一組資料使用標籤，該動作是否會違反任何原則？
+1. 指定行銷動作和一個或多個資料集，該動作是否違反任何政策？
+1. 指定行銷動作、一個或多個資料集，以及這些資料集中一個或多個欄位的子集，該動作是否違反任何原則？
 
 ## 快速入門
 
-本指南中使用的API端點是 [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/)。 在繼續之前，請查看 [入門指南](./getting-started.md) 有關指向相關文檔的連結、閱讀本文檔中示例API調用的指南，以及成功調用任何文檔所需的標題的重要資訊 [!DNL Experience Platform] API。
+本指南中使用的API端點屬於 [[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功對任一檔案發出呼叫所需必要標題的重要資訊 [!DNL Experience Platform] API。
 
-## 使用資料使用標籤評估策略違規 {#labels}
+## 使用資料使用標籤評估原則違規 {#labels}
 
-您可以使用 `duleLabels` 查詢參數。
+您可以根據特定資料使用標籤集是否存在，評估原則違規，方法是使用 `duleLabels` GET請求中的查詢引數。
 
 **API格式**
 
@@ -40,16 +40,16 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 要針對一組資料用法標籤test的市場營銷操作的名稱。 通過建立 [GET對市場營銷操作終結點的請求](./marketing-actions.md#list)。 |
-| `{LABELS_LIST}` | 以逗號分隔的資料使用標籤名稱清單，用於test市場營銷操作。 例如： `duleLabels=C1,C2,C3`<br><br>請注意，標籤名稱區分大小寫。 確保在中列出時使用正確的案例 `duleLabels` 的下界。 |
+| `{MARKETING_ACTION_NAME}` | 根據一組資料使用標籤進行測試的行銷動作名稱。 您可以透過建立「 」 [行銷動作端點的GET請求](./marketing-actions.md#list). |
+| `{LABELS_LIST}` | 以逗號分隔的資料使用標簽名稱清單，可針對此清單測試行銷動作。 例如： `duleLabels=C1,C2,C3`<br><br>請注意，標簽名稱會區分大小寫。 確保您在下列專案中使用正確的大小寫： `duleLabels` 引數。 |
 
 **要求**
 
-下面的示例請求針對標籤C1和C3評估市場營銷操作。
+以下範例請求會針對標籤C1和C3評估行銷動作。
 
 >[!IMPORTANT]
 >
->注意 `AND` 和 `OR` 策略表達式中的運算子。 在下面的示例中，如果`C1` 或 `C3`)在請求中單獨出現，營銷操作不會違反此策略。 它需要兩個標籤(`C1` 和 `C3`)以返回違反的策略。 確保您仔細評估策略，並同等謹慎地定義策略表達式。
+>請注意 `AND` 和 `OR` 原則運算式中的運運算元。 在以下範例中，如果任一標籤(`C1` 或 `C3`)單獨出現在要求中，行銷動作不會違反此原則。 需要兩個標籤(`C1` 和 `C3`)以傳回違反的原則。 請務必謹慎評估原則，並謹慎定義原則運算式。
 
 ```shell
 curl -X GET \
@@ -62,7 +62,7 @@ curl -X GET \
 
 **回應**
 
-成功響應包括 `violatedPolicies` 陣列，其中包含因對提供的標籤執行市場營銷操作而違反的策略的詳細資訊。 如果未違反策略， `violatedPolicies` 陣列將為空。
+成功的回應包括 `violatedPolicies` 陣列，包含對提供的標籤執行行銷動作而違反之原則的詳細資訊。 如果沒有違反任何原則， `violatedPolicies` 陣列將是空的。
 
 ```JSON
 {
@@ -120,9 +120,9 @@ curl -X GET \
 }
 ```
 
-## 使用資料集評估策略違規 {#datasets}
+## 使用資料集評估原則違規 {#datasets}
 
-您可以基於一組一個或多個資料集評估策略違規情況，從這些資料集可以收集資料使用標籤。 這是通過對執行POST請求 `/constraints` 用於特定市場營銷操作的端點，並在請求正文中提供資料集ID的清單。
+您可以根據可從中收集資料使用標籤的一或多個資料集集合來評估原則違規。 這是透過對「 」執行POST請求來完成 `/constraints` 端點的特定行銷動作，並在請求內文中提供資料集ID的清單。
 
 **API格式**
 
@@ -133,11 +133,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對一個或多個資料集進行test的市場營銷操作的名稱。 通過建立 [GET對市場營銷操作終結點的請求](./marketing-actions.md#list)。 |
+| `{MARKETING_ACTION_NAME}` | 針對一或多個資料集進行測試的行銷動作名稱。 您可以透過建立「 」 [行銷動作端點的GET請求](./marketing-actions.md#list). |
 
 **要求**
 
-以下請求執行 `crossSiteTargeting` 針對三個資料集的市場營銷操作，以評估是否存在任何策略違規。
+以下請求會執行 `crossSiteTargeting` 針對一組三個資料集執行行銷動作，以評估任何原則違規。
 
 ```shell
 curl -X POST \
@@ -165,12 +165,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `entityType` | 其ID在同級中指示的實體類型 `entityId` 屬性。 當前，唯一接受的值是 `dataSet`。 |
-| `entityId` | 要test市場營銷操作的資料集的ID。 通過向該資料庫發出GET請求，可以獲得資料集清單及其相應ID `/dataSets` 端點 [!DNL Catalog Service] API。 請參閱上的指南 [上市 [!DNL Catalog] 對象](../../catalog/api/list-objects.md) 的子菜單。 |
+| `entityType` | 同級中指出其ID的實體型別 `entityId` 屬性。 目前唯一接受的值是 `dataSet`. |
+| `entityId` | 要用來測試行銷動作的資料集ID。 您可以向以下專案發出GET要求，以取得資料集清單及其對應的ID： `/dataSets` 中的端點 [!DNL Catalog Service] API。 請參閱指南： [清單 [!DNL Catalog] 物件](../../catalog/api/list-objects.md) 以取得詳細資訊。 |
 
 **回應**
 
-成功響應包括 `violatedPolicies` 陣列，其中包含由於對提供的資料集執行市場營銷操作而違反的策略的詳細資訊。 如果未違反策略， `violatedPolicies` 陣列將為空。
+成功的回應包括 `violatedPolicies` 陣列，其中包含對提供的資料集執行行銷動作而違反原則的詳細資訊。 如果沒有違反任何原則， `violatedPolicies` 陣列將是空的。
 
 ```JSON
 {
@@ -343,17 +343,17 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `duleLabels` | 響應對象包括 `duleLabels` 包含指定資料集中找到的所有標籤的統一清單的陣列。 此清單包括資料集內所有欄位上的資料集和欄位級別標籤。 |
-| `discoveredLabels` | 響應還包括 `discoveredLabels` 陣列包含每個資料集的對象，顯示 `datasetLabels` 細分為資料集和欄位級標籤。 每個欄位級標籤都顯示帶有該標籤的特定欄位的路徑。 |
+| `duleLabels` | 回應物件包含 `duleLabels` 陣列，包含在指定資料集中找到之所有標籤的整合清單。 此清單包含資料集內所有欄位上的資料集和欄位層級標籤。 |
+| `discoveredLabels` | 回應也包含 `discoveredLabels` 包含每個資料集之物件的陣列，顯示 `datasetLabels` 細分為資料集和欄位層級標籤。 每個欄位層級標籤都會顯示該標籤特定欄位的路徑。 |
 
-## 使用特定資料集欄位評估策略違規 {#fields}
+## 使用特定資料集欄位評估原則違規 {#fields}
 
-您可以根據一個或多個資料集內的欄位子集評估策略違規情況，以便只評估應用了這些欄位的資料使用標籤。
+您可以根據一或多個資料集中的欄位子集來評估原則違規，以便只評估套用這些欄位的資料使用標籤。
 
-使用資料集欄位評估策略時，請牢記以下事項：
+使用資料集欄位評估原則時，請記住以下事項：
 
-* **欄位名區分大小寫**:提供欄位時，必須與資料集中顯示的欄位完全相同(例如， `firstName` 與 `firstname`)。
-* **資料集標籤繼承**:資料集中的各個欄位繼承在資料集級別應用的所有標籤。 如果策略評估未按預期返回，請確保除了在欄位級別應用的標籤外，檢查從資料集級別繼承到欄位的任何標籤。
+* **欄位名稱區分大小寫**：提供欄位時，必須完全依照資料集中顯示的樣式來撰寫(例如， `firstName` 與 `firstname`)。
+* **資料集標籤繼承**：資料集中的個別欄位會繼承已在資料集層級套用的任何標籤。 如果您的原則評估未如預期傳回，除了在欄位層級套用的標籤之外，請務必檢查是否任何標籤已從資料集層級向下繼承至欄位。
 
 **API格式**
 
@@ -364,11 +364,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 針對資料集欄位子集進行test的市場營銷操作的名稱。 通過建立 [GET對市場營銷操作終結點的請求](./marketing-actions.md#list)。 |
+| `{MARKETING_ACTION_NAME}` | 根據資料集欄位子集進行測試的行銷動作名稱。 您可以透過建立「 」 [行銷動作端點的GET請求](./marketing-actions.md#list). |
 
 **要求**
 
-以下請求test市場營銷活動 `crossSiteTargeting` 屬於三個資料集的特定欄位集。 負載類似於 [評估請求僅涉及資料集](#datasets)，為每個資料集添加特定欄位以從中收集標籤。
+以下請求會測試行銷動作 `crossSiteTargeting` 屬於三個資料集的特定欄位集上。 裝載類似於 [僅涉及資料集的評估請求](#datasets)，為每個要從中收集標籤的資料集新增特定欄位。
 
 ```shell
 curl -X POST \
@@ -413,15 +413,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `entityType` | 其ID在同級中指示的實體類型 `entityId` 屬性。 當前，唯一接受的值是 `dataSet`。 |
-| `entityId` | 要根據市場營銷操作評估其欄位的資料集的ID。 通過向該資料庫發出GET請求，可以獲得資料集清單及其相應ID `/dataSets` 端點 [!DNL Catalog Service] API。 請參閱上的指南 [上市 [!DNL Catalog] 對象](../../catalog/api/list-objects.md) 的子菜單。 |
-| `entityMeta.fields` | 以JSON指針字串形式提供的資料集架構中特定欄位的路徑陣列。 請參閱 [JSON指針](../../landing/api-fundamentals.md#json-pointer) API基礎知識指南中，瞭解有關這些字串的接受語法的詳細資訊。 |
+| `entityType` | 同級中指出其ID的實體型別 `entityId` 屬性。 目前唯一接受的值是 `dataSet`. |
+| `entityId` | 資料集的ID，其欄位將根據行銷動作進行評估。 您可以向以下專案發出GET要求，以取得資料集清單及其對應的ID： `/dataSets` 中的端點 [!DNL Catalog Service] API。 請參閱指南： [清單 [!DNL Catalog] 物件](../../catalog/api/list-objects.md) 以取得詳細資訊。 |
+| `entityMeta.fields` | 資料集結構描述中特定欄位的路徑陣列，以JSON指標字串形式提供。 請參閱以下小節： [JSON指標](../../landing/api-fundamentals.md#json-pointer) API基礎指南中，瞭解這些字串可接受語法的詳細資訊。 |
 
 **回應**
 
-成功響應包括 `violatedPolicies` 陣列，其中包含由於對提供的資料集欄位執行市場營銷操作而違反的策略的詳細資訊。 如果未違反策略， `violatedPolicies` 陣列將為空。
+成功的回應包括 `violatedPolicies` 陣列，包含對提供的資料集欄位執行行銷動作而違反原則的詳細資訊。 如果沒有違反任何原則， `violatedPolicies` 陣列將是空的。
 
-將下面的示例響應與 [僅涉及資料集的響應](#datasets)，請注意收集的標籤清單較短。 的 `discoveredLabels` 對於每個資料集也已縮減，因為它們只包括請求正文中指定的欄位。 此外，以前違反的策略 `Targeting Ads or Content` 要求 `C4 AND C6` 將顯示的標籤，因此不再違反空 `violatedPolicies` 陣列。
+將下列範例回應與 [僅涉及資料集的回應](#datasets)，請注意，收集到的標籤清單較短。 此 `discoveredLabels` 也減少了每個資料集的數量，因為它們僅包含請求內文中指定的欄位。 此外，先前違反的原則 `Targeting Ads or Content` 需要兩者 `C4 AND C6` 標籤顯示，因此不再違反，如空白所示 `violatedPolicies` 陣列。
 
 ```JSON
 {
@@ -521,9 +521,9 @@ curl -X POST \
 }
 ```
 
-## 批量評估策略 {#bulk}
+## 大量評估原則 {#bulk}
 
-的 `/bulk-eval` 終結點允許您在單個API調用中運行多個評估作業。
+此 `/bulk-eval` 端點可讓您在單一API呼叫中執行多個評估工作。
 
 **API格式**
 
@@ -533,11 +533,11 @@ POST /bulk-eval
 
 **要求**
 
-批量評估請求的負載應為對象陣列；每個要執行的評估作業各執行一個。 對於基於資料集和欄位進行評估的作業， `entityList` 必須提供陣列。 對於基於資料使用標籤評估的作業， `labels` 必須提供陣列。
+大量評估請求的裝載應為物件陣列；每個要執行的評估工作各一個。 對於根據資料集和欄位進行評估的工作，請 `entityList` 必須提供陣列。 對於根據資料使用標籤進行評估的工作， `labels` 必須提供陣列。
 
 >[!WARNING]
 >
->如果任何列出的評估作業都包含 `entityList` 和 `labels` 陣列，將導致錯誤。 如果要根據資料集和標籤對同一市場營銷活動進行評估，則必須為該市場營銷活動包括單獨的評估作業。
+>如果列出的任何評估工作同時包含 `entityList` 和 `labels` 陣列，則會導致錯誤。 如果您想要根據資料集和標籤評估相同的行銷動作，則必須為該行銷動作納入個別評估工作。
 
 ```shell
 curl -X POST \
@@ -577,17 +577,17 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `evalRef` | 針對標籤或資料集test策略違規的市場營銷操作的URI。 |
-| `includeDraft` | 預設情況下，只有啟用的策略參與評估。 如果 `includeDraft` 設定為 `true`，策略 `DRAFT` 狀態也將參與。 |
-| `labels` | 一組資料使用標籤，用於test市場推廣操作。<br><br>**重要**:使用此屬性時， `entityList` 屬性不能包含在同一對象中。 要使用資料集和/或欄位評估相同的市場營銷操作，必須在請求負載中包含一個單獨的對象，該對象包含 `entityList` 陣列。 |
-| `entityList` | 這些資料集中的一組資料集和（可選）特定欄位，以test針對的營銷操作。<br><br>**重要**:使用此屬性時， `labels` 屬性不能包含在同一對象中。 要使用特定資料使用標籤評估同一市場營銷操作，必須在請求負載中包含一個單獨的對象，該對象包含 `labels` 陣列。 |
-| `entityType` | 要test市場營銷活動的實體類型。 當前，僅 `dataSet` 支援。 |
-| `entityId` | 要test市場營銷操作的資料集的ID。 |
-| `entityMeta.fields` | （可選）資料集中特定欄位的清單，以test市場營銷操作。 |
+| `evalRef` | 根據原則違規的標籤或資料集進行測試的行銷動作URI。 |
+| `includeDraft` | 依預設，只有啟用的原則會參與評估。 若 `includeDraft` 設為 `true`，中的原則 `DRAFT` 狀態也會參與。 |
+| `labels` | 用來測試行銷動作的一系列資料使用標籤。<br><br>**重要**：使用此屬性時， `entityList` 屬性不得包含在相同物件中。 若要使用資料集和/或欄位評估相同的行銷動作，您必須在請求裝載中包含個別的物件， `entityList` 陣列。 |
+| `entityList` | 資料集陣列，以及這些資料集內用來測試行銷動作的特定欄位（選擇性）。<br><br>**重要**：使用此屬性時， `labels` 屬性不得包含在相同物件中。 若要使用特定資料使用標籤來評估相同的行銷動作，您必須在請求裝載中包含一個單獨的物件， `labels` 陣列。 |
+| `entityType` | 要測試行銷動作的實體型別。 目前，僅限 `dataSet` 支援。 |
+| `entityId` | 要用來測試行銷動作的資料集ID。 |
+| `entityMeta.fields` | （選用）資料集中要用來測試行銷動作的特定欄位清單。 |
 
 **回應**
 
-成功的響應返回一系列評估結果；請求中發送的每個策略評估作業各一個。
+成功的回應會傳回評估結果的陣列；請求中傳送的每個原則評估工作各一個。
 
 ```json
 [
@@ -681,6 +681,6 @@ curl -X POST \
 ]
 ```
 
-## 策略評估 [!DNL Real-Time Customer Profile]
+## 的原則評估 [!DNL Real-Time Customer Profile]
 
-的 [!DNL Policy Service] API還可用於檢查是否存在與使用 [!DNL Real-Time Customer Profile] 段。 請參閱上的教程 [強制對受眾群實施資料使用合規性](../../segmentation/tutorials/governance.md) 的子菜單。
+此 [!DNL Policy Service] API也可用來檢查涉及使用的原則違規 [!DNL Real-Time Customer Profile] 區段。 請參閱教學課程，位置如下： [強制對象區段的資料使用合規性](../../segmentation/tutorials/governance.md) 以取得詳細資訊。

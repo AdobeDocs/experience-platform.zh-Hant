@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platform;api指南；平台API指南；平台簡介；開發人員指南
+keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platform；api指南；平台api指南；平台簡介；開發人員指南
 solution: Experience Platform
-title: PostmanAdobe Experience Platform
-description: 本文檔包含如何設定Postman環境、導入Postman集合以及每個平台服務可用集合清單的步驟。
+title: Adobe Experience Platform中的Postman
+description: 本檔案包含概述如何設定Postman環境、匯入Postman集合的步驟，以及每個Platform服務的可用集合清單。
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
@@ -11,52 +11,52 @@ ht-degree: 0%
 
 ---
 
-# PostmanAdobe Experience Platform
+# Adobe Experience Platform中的Postman
 
-Postman是API開發的協作平台，允許您設定具有預設變數的環境、共用API集合、簡化CRUD請求等。 大多數平台API服務都有Postman集合，這些集合可用於幫助進行API調用。
+Postman是API開發的共同作業平台，可讓您使用預設變數設定環境、共用API集合、簡化CRUD請求等。 大部分的Platform API服務都有Postman集合，可用來協助進行API呼叫。
 
-## 如何營造PostmanExperience Platform環境
+## 如何設定Postman環境以進行Experience Platform
 
-以下視頻指南概述了建立和設定您的Postman環境。 Postman環境包含對下面提供的各種集合進行API調用所需的所有標頭。 設定後，值隨時過期(如 `ACCESS_TOKEN`)可以更新環境中的當前值，並且此新值將用於所有集合。
+以下影片指南會概述如何建立和設定您的Postman環境。 Postman環境包含您需要對下面提供的各種集合進行API呼叫的所有必要標頭。 設定後，值隨時過期(例如 `ACCESS_TOKEN`)您可以更新環境中的目前值，此新值會用於所有集合。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Postman收藏 {#collections}
+## Postman集合 {#collections}
 
-通過訪問，可以找到包含所有可用Postman收藏的資料夾 [Experience PlatformPostman示例GitHub儲存庫](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)。 或者，Postman集合連結可在 [API參考文檔](https://www.adobe.com/go/platform-api-reference-en) Adobe I/O。
+若要找到包含所有可用Postman集合的資料夾，請造訪 [Experience PlatformPostman範例GitHub存放庫](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). 或者，您也可以在的每個個別swagger檔案中找到Postman集合連結： [API參考檔案](https://www.adobe.com/go/platform-api-reference-en) 在Adobe I/O上。
 
-要下載Postman收藏，請選擇 **[!DNL Raw]** 從GitHub頁載入原始JSON檔案，使其位於新頁籤中。 然後，按一下右鍵並選擇 **[!DNL Save as]** 將檔案保存到您選擇的本地目標。
+若要下載Postman集合，請選取「 」 **[!DNL Raw]** 從GitHub頁面，在新索引標籤中載入原始JSON檔案。 然後，按一下滑鼠右鍵並選取 **[!DNL Save as]** 以將檔案儲存至您選擇的本機目的地。
 
 ![原始JSON](./images/api-guide/raw-collection.PNG)
 
-## 導入Postman集合 {#import}
+## 匯入Postman集合 {#import}
 
-為了利用 [Postman收藏](#collections)您需要設定環境。 完成環境設定後，選擇 **[!DNL Manage Environments]** 的子菜單。
+為了利用 [Postman集合](#collections)，您必須設定環境。 完成環境設定後，請選取 **[!DNL Manage Environments]** 右上角的選取器。
 
 ![管理環境選擇器](./images/api-guide/environment-selector.png)
 
-出現一個跨距，並顯示所有當前環境。 要導入集合，請選擇 **[!DNL import]** 。
+彈出視窗隨即出現，並顯示您所有目前的環境。 若要匯入集合，請選取 **[!DNL import]** .
 
-![導入按鈕](./images/api-guide/import-collection.png)
+![匯入按鈕](./images/api-guide/import-collection.png)
 
-系統要求您選擇要導入的檔案。 選擇要導入的Postman集合檔案。 選定後，集合將填充到「集合」(Collections)頁籤下的左滑軌中。
+系統會要求您選擇要匯入的檔案。 選取您要匯入的Postman集合檔案。 選取後，集合會填入左側邊欄中的「集合」標籤下。
 
-![填充集合](./images/api-guide/imported-collection.png)
+![填入的集合](./images/api-guide/imported-collection.png)
 
-每個集合都有不同的鍵值對，執行成功的CRUD操作可能需要這些鍵值對。 請查看服務 [API開發人員指南](api-guide.md#api-guides) 瞭解所需值、提示，並參閱示例。
+每個集合都有不同的索引鍵/值組，這些索引鍵/值組可能需要用來執行成功的CRUD操作。 請檢閱服務的 [API開發人員指南](api-guide.md#api-guides) 以瞭解必要的值、秘訣並參閱範例。
 
-要瞭解有關PostmanUI及其可用功能的更多資訊，請訪問 [Postman文檔](https://learning.postman.com/docs/getting-started/navigating-postman/)。
+若要進一步瞭解Postman UI及其可用功能，請造訪 [Postman檔案](https://learning.postman.com/docs/getting-started/navigating-postman/).
 
-### 使用Postman生成訪問令牌以供非生產使用
+### 使用Postman產生存取權杖以用於非生產用途
 
 >[!WARNING]
 >
->如Identity Management服務(IMS)Postman集合中所述，表示的生成方法適合 **非生產用途**。 本地簽名從第三方主機載入JavaScript庫，遠程簽名將私鑰發送到由Adobe擁有和操作的Web服務。 雖然Adobe不儲存此私鑰，但生產密鑰不應與任何人共用。
+>如Identity Management Service (IMS) Postman集合中所述，所代表的產生方法適用於 **非生產使用**. 本機簽署會從協力廠商主機載入JavaScript程式庫，而遠端簽署會將私密金鑰傳送至Adobe所擁有和操作的Web服務。 雖然Adobe不會儲存此私密金鑰，但生產金鑰絕不可與任何人共用。
 
-以下視頻使用 [Identity Management服務(IMS)Postman](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 可從公共GitHub儲存庫下載。
+以下影片使用 [Identity Management服務(IMS) Postman集合](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Identity%20Management%20Service.postman_collection.json) 可從公共GitHub存放庫下載。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
 ## 後續步驟
 
-本文檔介紹了Postman環境、集合以及如何導入集合。 既然Postman準備好了，請 [平台入門指南](api-guide.md) 有關所需標題、示例和清單的資訊 [API指南](api-guide.md#api-guides) 可用於每個平台服務。
+本檔案介紹Postman環境、集合以及如何匯入集合。 Postman準備就緒後，請前往 [Platform快速入門手冊](api-guide.md) 以取得必要標題、範例和清單的相關資訊 [API指南](api-guide.md#api-guides) 適用於各平台服務。

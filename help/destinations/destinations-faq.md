@@ -1,7 +1,7 @@
 ---
-keywords: 目的地；問題；常問問題；常見問題目標常見問題
+keywords: 目的地；問題；常見問題；常見問題集；目的地常見問題集
 title: 常見問答
-description: 關於Adobe Experience Platform目的地最常問問題的解答
+description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
 source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
@@ -14,93 +14,93 @@ ht-degree: 4%
 
 ## 總覽 {#overview}
 
-本文檔提供有關Adobe Experience Platform目的地的常見問題解答。 有關與其他相關的問題和故障排除 [!DNL Platform] 服務，包括所有 [!DNL Platform] API，請參閱 [Experience Platform故障排除指南](../landing/troubleshooting.md)。
+本檔案提供有關Adobe Experience Platform目的地的常見問題解答。 關於其他相關問題和疑難排解 [!DNL Platform] 服務，包括在所有服務中遇到的服務 [!DNL Platform] API，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
 
-## 一般目標問題 {#general}
+## 一般目的地問題 {#general}
 
-**為什麼在Experience PlatformUI和導出的CSV檔案中看到不同的配置檔案計數？**
+**為什麼在Experience PlatformUI和匯出的CSV檔案中會看到不同的設定檔計數？**
 
-這是正常行為，因為Experience Platform執行分割的方式。
+由於Experience Platform執行分段的方式，這是正常行為。
 
-流分段在一天中更新流段的配置檔案計數，而批分段每24小時更新一次批段的配置檔案計數。
+串流細分會更新一整天串流區段的設定檔計數，而批次細分則會每24小時更新一次批次區段的設定檔計數。
 
-當段導出計畫與分段計畫不同時，UI和導出的配置檔案計數 [!DNL CSV] 檔案將不同，特別是在流段方面。
+當區段匯出排程與區段排程不同時，設定檔會在UI和匯出的區段之間計算 [!DNL CSV] 檔案將會不同，尤其是當涉及到串流區段時。
 
-查看 [分段服務文檔](../segmentation/home.md) 的子菜單。
+請參閱 [Segment Service檔案](../segmentation/home.md) 以取得更多詳細資料。
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
-**在激活觀眾之前，我需要做什麼 [!DNL Facebook Custom Audiences]?**
+**我需要做什麼才能在中啟用對象 [!DNL Facebook Custom Audiences]？**
 
-在將受眾段發送到 [!DNL Facebook]，確保滿足以下要求：
+將受眾區段傳送至之前 [!DNL Facebook]，確認您符合下列需求：
 
-* 您 [!DNL Facebook] 用戶帳戶必須具有 **[!DNL Manage campaigns]** 已為您計畫使用的Ad帳戶啟用權限。
-* 的 **Adobe Experience Cloud** 必須將業務帳戶添加為廣告合作夥伴 [!DNL Facebook Ad Account]。 使用 `business ID=206617933627973`. 請參閱 [將合作夥伴添加到您的業務經理](https://www.facebook.com/business/help/1717412048538897) 在Facebook文檔中。
+* 您的 [!DNL Facebook] 使用者帳戶必須具備 **[!DNL Manage campaigns]** 已為您計畫使用的廣告帳戶啟用許可權。
+* 此 **Adobe Experience Cloud** 必須將商業帳戶新增為中的廣告合作夥伴 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`. 另請參閱 [新增合作夥伴至您的業務經理](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
    >[!IMPORTANT]
    >
-   > 為Adobe Experience Cloud配置權限時，必須啟用 **管理市場活動** 權限。 這是進行 [!DNL Adobe Experience Platform] 整合的必要權限。
-* 閱讀並簽名 [!DNL Facebook Custom Audiences] 服務條款。 若要完成此操作，請前往 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中 `accountID` 是您的 [!DNL Facebook Ad Account ID]。
+   > 設定Adobe Experience Cloud的許可權時，您必須啟用 **管理行銷活動** 許可權。 這是進行 [!DNL Adobe Experience Platform] 整合的必要權限。
+* 閱讀並簽署 [!DNL Facebook Custom Audiences] 服務條款。 若要完成此操作，請前往 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中 `accountID` 是您的 [!DNL Facebook Ad Account ID]。
 
-**是否需要將任何應用或像素添加到我 [!DNL Facebook] 廣告客戶？**
+**我需要將任何應用程式或畫素新增到我的 [!DNL Facebook] 廣告商帳戶？**
 
-不可以。 由於這不是基於像素的整合，因此無需向您的廣告商帳戶添加任何像素。
+不可以。 由於這不是以畫素為基礎的整合，因此不需要將任何畫素新增至您的廣告商帳戶。
 
-**facebook要多久才能處理Adobe Experience Platform的資訊？**
+**facebook需要多久的時間來處理來自Adobe Experience Platform的資訊？**
 
-截至2021年3月， [!DNL Facebook Custom Audiences] 處理從 [!DNL Platform]。
+自2021年3月起， [!DNL Facebook Custom Audiences] 最多需要一小時來處理從收到的資訊 [!DNL Platform].
 
-**我能用 [!DNL Facebook Custom Audiences] 針對其他受眾 [!DNL Facebook] 應用，例如 [!DNL Instagram]?**
+**我可以使用 [!DNL Facebook Custom Audiences] 對於其他中的對象鎖定目標 [!DNL Facebook] 應用程式，例如 [!DNL Instagram]？**
 
-您可以使用 [!DNL Facebook Custom Audiences] 目的地，針對Facebook家族支援的應用程式 [!DNL Facebook Custom Audiences]，包括 [!DNL Facebook]。 [!DNL Instagram]。 [!DNL Audience Network], [!DNL Messenger]。 廣告商要在其上運行廣告的應用的選擇在中的放置級別上表示 [!DNL Facebook Ads Manager]。
+您可以使用 [!DNL Facebook Custom Audiences] facebook所支援應用程式系列中的受眾鎖定目標目的地 [!DNL Facebook Custom Audiences]，包括 [!DNL Facebook]， [!DNL Instagram]， [!DNL Audience Network]、和 [!DNL Messenger]. 在中的版位層級會指出廣告商選擇要在其中執行行銷活動的應用程式 [!DNL Facebook Ads Manager].
 
-**這和 [!DNL Facebook Custom Audiences] 連接和 [!DNL Facebook Pixel] 分機？**
+**兩者之間有何差異 [!DNL Facebook Custom Audiences] 連線和 [!DNL Facebook Pixel] 擴充功能？**
 
-的 [!DNL Facebook Custom Audiences] 連接使用 [!DNL Platform] 向觀眾發送時的身份 [!DNL Facebook]，也請參見Wiki頁。 [[!DNL Facebook Pixel] 連接](../destinations/catalog/advertising/facebook-pixel.md) 使用 [!DNL Facebook] 整合在網站中的像素。
+此 [!DNL Facebook Custom Audiences] 連線使用 [!DNL Platform] 將受眾傳送至時的身分 [!DNL Facebook]，而 [[!DNL Facebook Pixel] 連線](../destinations/catalog/advertising/facebook-pixel.md) 使用 [!DNL Facebook] 已整合至網站中的畫素。
 
-這兩項整合相輔相成，您可以同時使用兩者來確保受眾涵蓋範圍更廣。例如，您可以 [!DNL Facebook Pixel] 未建立帳戶的潛在客戶網站訪問者的擴展，而 [!DNL Facebook Custom Audiences] 可幫助您瞄準現有客戶，基於 [!DNL Platform] 身份。
+這兩項整合相輔相成，您可以同時使用兩者來確保受眾涵蓋範圍更廣。例如，您可以使用 [!DNL Facebook Pixel] 尚未建立帳戶的潛在網站訪客擴充功能，而 [!DNL Facebook Custom Audiences] 可協助您根據以下專案鎖定現有客戶： [!DNL Platform] 身分。
 
-**Adobe Experience Platform與 [!DNL Facebook Custom Audiences] 支援在用戶不再有資格訪問時取消其訪問對象資格？**
+**Adobe Experience Platform是否與整合 [!DNL Facebook Custom Audiences] 當使用者不再符合資格時，是否支援將他們從受眾中取消資格？**
 
-是，整合支援將用戶從 [!DNL Facebook Custom Audiences] 當他們不再合格時。
+是，整合支援將使用者從 [!DNL Facebook Custom Audiences] 當他們不再符合資格時。
 
-**在將受眾資料發送到之前，應如何對其進行散列 [!DNL Facebook]?**
+**在傳送對象資料到之前，我該如何先將對象資料雜湊化 [!DNL Facebook]？**
 
-[!DNL Facebook] 要求未清除發送個人身份資訊(PII)。 因此，觀眾被激活 [!DNL Facebook] 可以鎖住 *散* 標識符，如電子郵件地址或電話號碼。
+[!DNL Facebook] 要求不會明確傳送任何個人識別資訊(PII)。 因此，啟用的對象 [!DNL Facebook] 可以關閉 *雜湊* 識別碼，例如電子郵件地址或電話號碼。
 
-有關ID匹配要求的詳細說明，請參見 [ID匹配要求](catalog/social/facebook.md#id-matching-requirements)。
+如需ID比對需求的詳細說明，請參閱 [ID比對需求](catalog/social/facebook.md#id-matching-requirements).
 
-**我可以在 [!DNL Facebook Custom Audiences]?**
+**我可以在哪一種身分啟用 [!DNL Facebook Custom Audiences]？**
 
-[!DNL Facebook Custom Audiences] 支援激活以下標識：丟失的電子郵件，丟失的電話號碼， [!DNL GAID]。 [!DNL IDFA]和自定義外部ID。
+[!DNL Facebook Custom Audiences] 支援啟用下列身分：雜湊電子郵件、雜湊電話號碼、 [!DNL GAID]， [!DNL IDFA]，以及自訂外部ID。
 
-**我是否可以在平台UI中為單獨的Facebook帳戶建立多個Facebook目標？**
+**我可以為個別的Facebook帳戶在Platform UI中建立多個Facebook目的地嗎？**
 
-可以。facebook的Experience Platform目的地是Facebook的一個廣告賬戶。 您可以為公司中的每個Facebook廣告帳戶建立單獨的Facebook目標。 關注 [目標連接教程](/help/destinations/ui/connect-destination.md) 並連接到平台UI中每個新的Facebook目標的單獨Facebook帳戶。 您可以連接的Facebook廣告帳戶數沒有限制。
+可以。Experience Platform中的Facebook目的地與Facebook中的廣告帳戶之比是1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 請遵循 [目的地連線教學課程](/help/destinations/ui/connect-destination.md) 並為Platform UI中的每個新Facebook目的地連線至個別的Facebook帳戶。 您可以連線的Facebook廣告帳戶數量沒有限制。
 
 ## Google Customer Match {#google-customer-match}
 
-**將段導出到Google客戶匹配時，為什麼在Google介面的段名稱末尾附加了額外的數字？**
+**將區段匯出至Google Customer Match時，為什麼在Google介面的區段名稱結尾會附加額外的數字？**
 
-Google要求段名唯一。 你看到的數字 [UNIX時間戳](https://www.unixtimestamp.com/) 如果將同一段映射到多個Google目標，則會附加這些段名以保持段名唯一。
+Google要求區段名稱必須是唯一的。 您所看到的數字是 [UNIX時間戳記](https://www.unixtimestamp.com/) 如果您將相同區段對應至多個Google目的地，則會附加區段名稱，以保持區段名稱的唯一性。
 
-## linkedIn與觀眾 {#linkedin}
+## linkedIn相符的受眾 {#linkedin}
 
-**是否需要將任何應用或像素添加到我 [!DNL LinkedIn] 廣告客戶？**
+**我需要將任何應用程式或畫素新增到我的 [!DNL LinkedIn] 廣告商帳戶？**
 
-不可以。 由於這不是基於像素的整合，因此無需向您的廣告商帳戶添加任何像素。
+不可以。 由於這不是以畫素為基礎的整合，因此不需要將任何畫素新增至您的廣告商帳戶。
 
-**在激活觀眾之前，我需要做什麼 [!DNL LinkedIn Matched Audiences]?**
+**我需要做什麼才能在中啟用對象 [!DNL LinkedIn Matched Audiences]？**
 
-在使用 [!UICONTROL linkedIn對陣觀眾] 目標，確保 [!DNL LinkedIn Campaign Manager] 帳戶 [!DNL Creative Manager] 權限級別或更高。
+開始使用 [!UICONTROL linkedIn相符的受眾] 目的地，確認您的 [!DNL LinkedIn Campaign Manager] 帳戶具有 [!DNL Creative Manager] 許可權層級或以上。
 
-瞭解如何編輯 [!DNL LinkedIn Campaign Manager] 用戶權限，請參閱 [添加、編輯和刪除廣告帳戶上的用戶權限](https://www.linkedin.com/help/lms/answer/5753) 在LinkedIn檔案里。
+若要瞭解如何編輯您的 [!DNL LinkedIn Campaign Manager] 使用者許可權，請參閱 [新增、編輯和移除Advertising帳戶的使用者許可權](https://www.linkedin.com/help/lms/answer/5753) (位於LinkedIn檔案中)。
 
-**在將受眾資料發送到之前，應如何對其進行散列 [!DNL LinkedIn]?**
+**在傳送對象資料到之前，我該如何先將對象資料雜湊化 [!DNL LinkedIn]？**
 
-[!DNL LinkedIn] 要求未清除發送個人身份資訊(PII)。 因此，觀眾被激活 [!DNL LinkedIn] 可以鎖住 *散* 標識符，如電子郵件地址或電話號碼。
+[!DNL LinkedIn] 要求不會明確傳送任何個人識別資訊(PII)。 因此，啟用的對象 [!DNL LinkedIn] 可以關閉 *雜湊* 識別碼，例如電子郵件地址或電話號碼。
 
-有關ID匹配要求的詳細說明，請參見 [ID匹配要求](catalog/social/linkedin.md#id-matching-requirements)。
+如需ID比對需求的詳細說明，請參閱 [ID比對需求](catalog/social/linkedin.md#id-matching-requirements).
 
-**我可以在 [!DNL LinkedIn]?**
+**我可以在哪一種身分啟用 [!DNL LinkedIn]？**
 
-[!DNL LinkedIn Matched Audiences] 支援激活以下標識：大量郵件， [!DNL GAID], [!DNL IDFA]。
+[!DNL LinkedIn Matched Audiences] 支援啟用下列身分：雜湊電子郵件、 [!DNL GAID]、和 [!DNL IDFA].

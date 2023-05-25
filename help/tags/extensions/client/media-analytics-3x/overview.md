@@ -1,6 +1,6 @@
 ---
-title: Adobe Medium分析(3.x SDK)，用於音頻和視頻擴展概述
-description: 瞭解Adobe Experience Platform音頻和視頻標籤擴展的Adobe Medium分析(3.x SDK)。
+title: Adobe Medium Analytics (3.x SDK) for Audio and Video擴充功能概觀
+description: 瞭解Adobe Experience Platform中的Adobe Medium Analytics (3.x SDK) for Audio and Video標籤擴充功能。
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
@@ -9,33 +9,33 @@ ht-degree: 74%
 
 ---
 
-# Adobe Medium分析(3.x SDK)，用於音頻和視頻擴展概述
+# Adobe Medium Analytics (3.x SDK) for Audio and Video擴充功能概觀
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 本文件主要說明安裝、設定和實作 Adobe Media Analytics (3.x SDK) for Audio and Video 擴充功能 (Media Analytics 擴充功能) 的相關資訊，其中包含使用此擴充功能來建立規則時可用的選項，以及範例和範例連結。
 
-Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SDK)。此擴展提供了添加 `Media` 跟蹤器實例到啟用標籤的站點或項目。 MA 擴充功能需要額外的擴充功能：
+Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SDK)。此擴充功能提供新增 `Media` 追蹤器例項至啟用標籤的網站或專案。 MA 擴充功能需要額外的擴充功能：
 
 * [Analytics 擴充功能](../analytics/overview.md)
 * [Experience Cloud ID 擴充功能](../id-service/overview.md)
 
 >[!IMPORTANT]
 >
->此擴充功能會與 Media 3.x SDK 一併部署，且無法向下相容於 Media 2.x SDK。自2.x已棄用以來，請更新為3.x。
+>此擴充功能會與 Media 3.x SDK 一併部署，且無法向下相容於 Media 2.x SDK。自2.x版已棄用，請更新至3.x版。
 
-在啟用標籤的項目中包括了上述所有三個擴展後，可以通過以下兩種方式之一繼續：
+在啟用標籤的專案中納入上述的三個擴充功能後，您可以使用下列兩種方式之一繼續操作：
 
 * 從您的網頁應用程式使用 `Media` API
 * 納入或建立播放器特定的擴充功能，此模組會將特定的媒體播放器事件對應到 `Media` 追蹤器例項上的 API。此例項會透過 MA 擴充功能公開。
 
 ## 安裝並設定 MA 擴充功能
 
-* **安裝：** 要安裝MA擴展，請開啟擴展屬性，選擇 **[!UICONTROL 擴展>目錄]**，懸停在 **[!UICONTROL Adobe Medium分析(3.x SDK)，用於音頻和視頻]** 擴展，然後選擇 **[!UICONTROL 安裝]**。
+* **安裝：** 若要安裝MA擴充功能，請開啟您的擴充功能屬性，選取 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在 **[!UICONTROL 適用於音訊和視訊的Adobe Medium Analytics (3.x SDK)]** 擴充功能，並選取 **[!UICONTROL 安裝]**.
 
-* **配置：** 要配置MA擴展，請開啟 [!UICONTROL 擴展] 頁籤，懸停在擴展上，然後選擇 **[!UICONTROL 配置]**:
+* **設定：** 若要設定MA擴充功能，請開啟 [!UICONTROL 擴充功能] 索引標籤，將游標停留在擴充功能上，然後選取「 」 **[!UICONTROL 設定]**：
 
 ![MA 擴充功能設定](../../../images/ext-ma-config.png)
 
@@ -58,7 +58,7 @@ Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SD
 
 ### 從網頁/JS 應用程式使用
 
-MA擴展通過啟用「將API導出到窗口對象」設定來導出全局窗口對象中的媒體API [!UICONTROL 配置] 的子菜單。 這會以設定的變數名稱匯出 API。例如，如果變數名稱設為 `ADB`，則可使用 `window.ADB.Media` 來存取 Media API。
+MA擴充功能會啟用「 」中的「匯出視窗物件API」設定，匯出全域視窗物件中的Media API。 [!UICONTROL 設定] 頁面。 這會以設定的變數名稱匯出 API。例如，如果變數名稱設為 `ADB`，則可使用 `window.ADB.Media` 來存取 Media API。
 
 >[!IMPORTANT]
 >
@@ -85,7 +85,7 @@ MA擴展通過啟用「將API導出到窗口對象」設定來導出全局窗口
 
 ### 從其他擴充功能使用
 
-MA擴展顯示 `media` 作為共用模組到其他擴展。 (如需共用模組的其他資訊，請參閱[共用模組文件](../../../extension-dev/web/shared.md))。
+MA擴充功能會公開 `media` 作為其他擴充功能的共用模組。 (如需共用模組的其他資訊，請參閱[共用模組文件](../../../extension-dev/web/shared.md))。
 
 >[!IMPORTANT]
 >

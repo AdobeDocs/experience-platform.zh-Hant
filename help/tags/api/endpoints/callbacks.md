@@ -1,6 +1,6 @@
 ---
-title: 回調終結點
-description: 瞭解如何調用Repartor API中的/callbacks端點。
+title: 回呼端點
+description: 瞭解如何在Reactor API中呼叫/callbacks端點。
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 5%
 
 ---
 
-# 回調終結點
+# 回呼端點
 
-回調是Repartor API發送到特定URL（通常由您的組織承載）的消息。
+回呼是Reactor API傳送至特定URL （通常由您的組織託管）的訊息。
 
-回調將與 [審計事件](./audit-events.md) 跟蹤反應堆API中的活動。 每次生成某種類型的審計事件時，回調可以向指定URL發送匹配消息。
+回呼旨在與搭配使用 [稽核事件](./audit-events.md) 追蹤Reactor API中的活動。 每次產生特定型別的稽核事件時，回呼都會傳送相符訊息至指定的URL。
 
-回調中指定的URL後面的服務必須以HTTP狀態代碼200(OK)或201（已建立）響應。 如果服務未使用以下任一狀態代碼響應，則按以下間隔重試消息傳遞：
+在回撥中指定的URL背後的服務必須以HTTP狀態碼200 （確定）或201 （已建立）回應。 如果服務沒有回應這些狀態代碼中的任何一個，則會依下列間隔重試訊息傳送：
 
 * 1分鐘
 * 5 分鐘
@@ -27,19 +27,19 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->重試間隔與上一間隔相對。 例如，如果一分鐘的重試失敗，則在一分鐘的嘗試失敗後（在生成消息後六分鐘）安排下一次嘗試五分鐘。
+>重試間隔相對於上一個間隔。 例如，如果一分鐘重試失敗，則下次嘗試會在一分鐘嘗試失敗後（產生訊息後6分鐘）排程五分鐘。
 
-如果所有傳遞嘗試都未成功，則消息將被丟棄。
+如果所有傳送嘗試均不成功，則會捨棄訊息。
 
-回叫正好屬於 [屬性](./properties.md)。 一個屬性可以有許多回調。
+回呼只屬於一個 [屬性](./properties.md). 屬性可以有許多回呼。
 
 ## 快速入門
 
-本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
+本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
 
-## 清單回調 {#list}
+## 清單回呼 {#list}
 
-通過發出GET請求，可以列出屬性下的所有回調。
+您可以發出GET要求，列出屬性下的所有回呼。
 
 **API格式**
 
@@ -49,13 +49,13 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 的 `id` 的子目錄。 |
+| `{PROPERTY_ID}` | 此 `id` 要列出其回呼的屬性。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->使用查詢參數，可以根據以下屬性篩選列出的回調：<ul><li>`created_at`</li><li>`updated_at`</li></ul>請參閱上的指南 [過濾響應](../guides/filtering.md) 的子菜單。
+>您可以使用查詢引數，根據下列屬性篩選列出的回呼：<ul><li>`created_at`</li><li>`updated_at`</li></ul>請參閱指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
 
 **要求**
 
@@ -71,7 +71,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回指定屬性的回調清單。
+成功的回應會傳回指定屬性的回呼清單。
 
 ```json
 {
@@ -116,9 +116,9 @@ curl -X GET \
 }
 ```
 
-## 查找回調 {#lookup}
+## 查詢回撥 {#lookup}
 
-您可以通過在GET請求的路徑中提供回調的ID來查找回調。
+您可以在GET請求的路徑中提供回呼的ID以查詢回呼。
 
 **API格式**
 
@@ -128,7 +128,7 @@ GET /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 的 `id` 你想查的回電。 |
+| `CALLBACK_ID` | 此 `id` 要查閱的回撥的資料來源。 |
 
 {style="table-layout:auto"}
 
@@ -146,7 +146,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回回調的詳細資訊。
+成功的回應會傳回回回撥的詳細資料。
 
 ```json
 {
@@ -180,9 +180,9 @@ curl -X GET \
 }
 ```
 
-## 建立回調 {#create}
+## 建立回撥 {#create}
 
-可以通過發出POST請求建立新回調。
+您可以發出POST要求來建立新的回呼。
 
 **API格式**
 
@@ -192,7 +192,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 的 `id` 的 [屬性](./properties.md) 定義回叫。 |
+| `PROPERTY_ID` | 此 `id` 的 [屬性](./properties.md) 您正在定義底下的回呼。 |
 
 {style="table-layout:auto"}
 
@@ -220,14 +220,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `url` | 回調消息的URL目標。 URL必須使用HTTPS協定擴展。 |
-| `subscriptions` | 字串陣列，指示將觸發回調的審計事件類型。 查看 [審計事件終結點指南](./audit-events.md) 清單。 |
+| `url` | 回撥訊息的URL目的地。 URL必須使用HTTPS通訊協定副檔名。 |
+| `subscriptions` | 字串陣列，指出將觸發回撥的稽核事件型別。 請參閱 [稽核事件端點指南](./audit-events.md) 以取得可能的事件型別清單。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應將返回新建立的回調的詳細資訊。
+成功的回應會傳回新建立回撥的詳細資料。
 
 ```json
 {
@@ -261,9 +261,9 @@ curl -X POST \
 }
 ```
 
-## 更新回調
+## 更新回撥
 
-可以通過在回調請求的路徑中包含回調的ID來更新回調。
+您可以在PATCH請求的路徑中包含回呼的ID來更新回呼。
 
 **API格式**
 
@@ -273,13 +273,13 @@ PATCH /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 的 `id` 要更新的回調。 |
+| `CALLBACK_ID` | 此 `id` 要更新的回撥的預設值。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求更新 `subscriptions` 用於現有回調的陣列。
+以下請求會更新 `subscriptions` 陣列，供現有的回呼使用。
 
 ```shell
 curl -X PATCH \
@@ -306,15 +306,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 其屬性表示要為回調更新的屬性的對象。 每個鍵都表示要更新的特定回調屬性以及應更新到的相應值。<br><br>可以更新以下屬性以進行回調：<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | 的 `id` 要更新的回調。 這應與 `{CALLBACK_ID}` 請求路徑中提供的值。 |
-| `type` | 要更新的資源類型。 對於此終結點，值必須為 `callbacks`。 |
+| `attributes` | 一個物件，其屬性代表要針對回呼更新的屬性。 每個索引鍵代表要更新的特定回呼屬性，以及應更新到的對應值。<br><br>可針對回呼更新下列屬性：<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | 此 `id` 要更新的回撥。 這應該符合 `{CALLBACK_ID}` 請求路徑中提供的值。 |
+| `type` | 正在更新的資源型別。 此端點的值必須為 `callbacks`. |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應返回更新的回調的詳細資訊。
+成功的回應會傳回已更新回撥的詳細資料。
 
 ```json
 {
@@ -349,9 +349,9 @@ curl -X PATCH \
 }
 ```
 
-## 刪除回調
+## 刪除回撥
 
-通過將回調ID包含在DELETE請求的路徑中，可以刪除它。
+您可以在DELETE請求的路徑中包含回呼的ID以刪除回呼。
 
 **API格式**
 
@@ -361,7 +361,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 的 `id` 刪除的回調。 |
+| `CALLBACK_ID` | 此 `id` 要刪除的回撥的預設值。 |
 
 {style="table-layout:auto"}
 
@@ -379,4 +379,4 @@ curl -X DELETE \
 
 **回應**
 
-成功的響應返回HTTP狀態204（無內容），沒有響應正文，表示回調已被刪除。
+成功的回應會傳回HTTP狀態204 （無內容），且沒有回應內文，這表示回呼已被刪除。

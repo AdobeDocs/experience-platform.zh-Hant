@@ -1,6 +1,6 @@
 ---
-title: 擴展開發入門
-description: 開始在Adobe Experience Platform開發您自己的標籤擴展。
+title: 擴充功能開發快速入門
+description: 開始在Adobe Experience Platform中開發您自己的標籤擴充功能。
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
 為協助您著手展開擴充功能的建置，我們將使用 Adobe 工程師提供的開放原始碼架構工具，為您的擴充功能套件建立必要的檔案和檔案結構，您只需負責最重要的工作，也就是撰寫程式碼。
 
@@ -64,4 +64,4 @@ npx @adobe/reactor-scaffold
 
 ## 後續步驟
 
-* 關注 [提交流程概述](./submit/overview.md) 準備 [驗證](./submit/upload-and-test.md#validate) 和 [上載](./submit/upload-and-test.md#integration) 在Tag生態系統中測試的擴展。
+* 請遵循 [提交程式概觀](./submit/overview.md) 並準備 [驗證](./submit/upload-and-test.md#validate) 和 [上傳](./submit/upload-and-test.md#integration) 您在標籤生態系統中測試的擴充功能。

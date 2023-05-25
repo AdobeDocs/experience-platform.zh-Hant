@@ -1,6 +1,6 @@
 ---
 title: 受支援的瀏覽器
-description: 與Adobe Experience Platform標籤運行時相容的多個瀏覽器的清單。
+description: 與Adobe Experience Platform標籤執行階段相容的多個瀏覽器清單。
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
 source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 47%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
-Adobe Experience Platform的標籤運行時（交付給客戶端網站）與多個瀏覽器相容：
+Adobe Experience Platform中的標籤執行階段（提供給客戶的網站）與多個瀏覽器相容：
 
 - Chrome (最新)
 - Safari (最新)
@@ -26,11 +26,11 @@ Adobe Experience Platform的標籤運行時（交付給客戶端網站）與多�
 
 執行階段中包含的任何擴充功能程式碼也都應盡可能支援這些瀏覽器。
 
-資料收集UI設計為支援以下瀏覽器：
+資料收集UI的設計可支援下列瀏覽器：
 
 - Chrome (最新)
 - Safari (最新)
 - Firefox (最新)
 - Edge (最新)
 
-在資料收集UI中顯示的任何擴展代碼也應努力支援這些瀏覽器。
+資料收集UI中顯示的任何擴充功能程式碼也應儘可能支援這些瀏覽器。

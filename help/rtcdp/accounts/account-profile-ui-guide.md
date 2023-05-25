@@ -1,7 +1,7 @@
 ---
-keywords: rtcdp配置檔案；配置檔案rtcdp;rtcdp標識；rtcdp合併策略；即時客戶配置檔案
-title: 帳戶配置檔案UI指南
-description: 通過使用帳戶配置檔案，Adobe Real-time Customer Data PlatformB2B版使您能夠統一來自多個來源的帳戶資訊。 本指南提供了與Adobe Experience Platform用戶介面中的帳戶配置檔案交互的詳細資訊。
+keywords: rtcdp設定檔；設定檔rtcdp；rtcdp身分；rtcdp合併原則；即時客戶設定檔
+title: 帳戶設定檔UI指南
+description: 透過使用帳戶設定檔，Adobe Real-time Customer Data Platform B2B Edition可讓您統一來自多個來源的帳戶資訊。 本指南提供在Adobe Experience Platform使用者介面中與帳戶設定檔互動的詳細資訊。
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
@@ -10,150 +10,150 @@ ht-degree: 0%
 
 ---
 
-# 帳戶配置檔案UI指南
+# 帳戶設定檔UI指南
 
 >[!NOTE]
 >
->客戶配置檔案僅對Real-time Customer Data PlatformB2B版客戶可用。 要瞭解有關Real-Time CDP的更多資訊，包括每種許可證類型的功能和功能，請首先閱讀 [Real-Time CDP概述](../overview.md)。
+>帳戶設定檔僅供Real-time Customer Data Platform B2B Edition客戶使用。 若要進一步瞭解Real-Time CDP，包括每種授權型別可用的功能，請先閱讀 [Real-Time CDP概觀](../overview.md).
 
-帳戶配置檔案使您能夠統一來自多個來源的帳戶資訊。 此帳戶的統一視圖將來自您許多市場營銷渠道和您的組織當前用於儲存客戶帳戶資訊的各種系統的資料匯集在一起。 本文檔提供了使用Adobe Experience Platform用戶介面(UI)中提供的Real-Time CDPB2B版功能與帳戶配置檔案交互的指南。
+帳戶設定檔可讓您統一來自多個來源的帳戶資訊。 此統一的帳戶檢視彙集來自您多個行銷管道的資料，以及您的組織目前用來儲存客戶帳戶資訊的各種系統。 本檔案提供使用Adobe Experience Platform使用者介面(UI)中提供的Real-Time CDP、B2B版本功能與帳戶設定檔互動的指南。
 
-要瞭解有關如何作為B2B工作流的一部分建立帳戶配置檔案的詳細資訊，請參閱 [端到端教程](../b2b-tutorial.md)。
+若要進一步瞭解如何在B2B工作流程中建立帳戶設定檔，請參閱 [端到端教學課程](../b2b-tutorial.md).
 
-## 帳戶配置檔案概述 {#account-profiles-overview}
+## 帳戶設定檔概述 {#account-profiles-overview}
 
-選擇 **[!UICONTROL 配置檔案]** 在 [!UICONTROL 帳戶] 的子菜單。 在 [!UICONTROL 概述] 頁籤中，該面板顯示在單個入口點中顯示小部件的圖形或圖表。
+選取 **[!UICONTROL 設定檔]** 在 [!UICONTROL 帳戶] ，檢視帳戶設定檔的概觀。 在 [!UICONTROL 概觀] 索引標籤上，儀表板會在單一進入點中顯示圖形或圖表，其中會顯示Widget。
 
-![顯示小部件的概述頁籤](images/b2b-account-profile-overview.png)
+![概覽標籤顯示Widget](images/b2b-account-profile-overview.png)
 
-請參閱 [[!UICONTROL 帳戶配置檔案]](../../dashboards/guides/account-profiles.md) 以瞭解詳細資訊。
+請參閱以下說明檔案： [[!UICONTROL 帳戶設定檔]](../../dashboards/guides/account-profiles.md) 儀表板以深入瞭解。
 
-## 配置銷售線索到帳戶匹配 {#configure-lead-to-account-matching}
+## 設定銷售線索與帳戶的比對 {#configure-lead-to-account-matching}
 
 >[!IMPORTANT]
 >
-> 只有B2B AI管理員才能啟用、禁用和配置指向帳戶匹配服務的線索。 禁用服務後，匹配結果將在24小時內刪除。
+> 只有B2B AI管理員可以啟用、停用和設定銷售機會到帳戶比對服務。 停用服務後，將在24小時內刪除相符的結果。
 
-要配置銷售線索與帳戶匹配，請選擇 **[!UICONTROL 配置檔案]** 在 [!UICONTROL 帳戶] 的子菜單。 在 **[!UICONTROL 概述]** 頁籤 **[!UICONTROL 設定]** 右上角。
+若要設定銷售線索與帳戶的比對，請選取「 」 **[!UICONTROL 設定檔]** 在 [!UICONTROL 帳戶] 左側導覽列中。 於 **[!UICONTROL 概觀]** 索引標籤，選取 **[!UICONTROL 設定]** 右上角。
 
-![選擇設定](images/b2b-configuring-accounts-profile.png)
+![選取設定](images/b2b-configuring-accounts-profile.png)
 
-的 **[!UICONTROL 帳戶設定]** 對話框。 從此處選擇 **[!UICONTROL 啟用銷售線索到帳戶匹配]** 切換以啟用該功能。 使用下拉菜單選擇 **[!UICONTROL 每日]** 為 **[!UICONTROL 匹配節奏]** 的子菜單。 最後，選擇相關 **[!UICONTROL 匹配條件]** 選項後跟 **[!UICONTROL 保存]** 確認設定並返回 **[!UICONTROL 帳戶配置檔案]** 的上界。
-
->[!NOTE]
->
-> 地址不能用作唯一的匹配條件。 必須選擇一個或多個其他匹配條件。
-
-![配置帳戶設定](images/b2b-configuring-account-settings.png)
-
-要瞭解有關銷售線索到帳戶匹配的詳細資訊，請參閱 [在Real-Time CDPB2B概述中提前到帳戶匹配](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)。
-
-## 瀏覽帳戶配置檔案 {#browse-account-profiles}
-
-要瀏覽帳戶配置檔案，請首先選擇 **[!UICONTROL 配置檔案]** 在 [!UICONTROL 帳戶] 的上界。
-
-在 **[!UICONTROL 瀏覽]** 頁籤，您可以使用連接的企業來源的帳戶ID或直接輸入來源詳細資訊來瀏覽帳戶配置檔案。
-
-![使用帳戶ID瀏覽配置檔案](images/b2b-account-browse-by.png)
-
-### 瀏覽者 [!UICONTROL 連接的企業源] {#browse-by-connected-enterprise-source}
-
-要按連接的企業源瀏覽帳戶配置檔案，請選擇 **[!UICONTROL 連接的企業源]** 從 **[!UICONTROL 瀏覽者]** 下拉清單，然後使用旁邊的選擇器按鈕選擇連接的源 **[!UICONTROL 源]** 的子菜單。
-
-![按連接的企業源瀏覽帳戶配置檔案](images/b2b-account-browse.png)
-
-開啟 **[!UICONTROL 選擇源]** 對話框，您可以在其中根據您的組織已建立的連接選擇源。
+此 **[!UICONTROL 帳戶設定]** 對話方塊開啟。 從此處選取 **[!UICONTROL 啟用銷售線索與帳戶的比對]** 切換即可啟用此功能。 使用下拉式選單來選取 **[!UICONTROL 每日]** 的 **[!UICONTROL 相符的步調]** 設定。 最後，選取相關的 **[!UICONTROL 符合條件]** 選項後接 **[!UICONTROL 儲存]** 以確認您的設定並返回 **[!UICONTROL 帳戶設定檔]** 畫面。
 
 >[!NOTE]
 >
->您的組織可能為同一服務提供商(例如Marketo)配置了多個源，因此，必須查看連接名稱、源系統和源系統實例，以確保您按正確的源實例進行搜索。
+> 地址不能作為唯一的符合條件。 必須選取一或多個其他符合條件。
 
-要瞭解有關連接企業源的詳細資訊，請參閱 [源概述](../sources/sources-overview.md)。
+![設定帳戶設定](images/b2b-configuring-account-settings.png)
 
-通過選擇連接名稱旁邊的單選按鈕，可以選擇源，然後使用 **[!UICONTROL 選擇]** 返回 [!UICONTROL 瀏覽] 頁籤。
+若要進一步瞭解銷售線索與帳戶的比對，請參閱 [Real-Time CDP B2B概觀中的潛在客戶帳戶比對](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
-![選擇源工作流](images/b2b-account-select-source.png)
+## 瀏覽帳戶設定檔 {#browse-account-profiles}
 
-在選定源後，您現在必須輸入 **[!UICONTROL 帳戶ID]** 與源相關。 例如，選擇Salesforce來源將要求您從Salesforce實例中輸入帳戶ID，以便查看綁定到該ID的帳戶配置檔案。
+若要瀏覽帳戶設定檔，請從選取 **[!UICONTROL 設定檔]** 在 [!UICONTROL 帳戶] 左側導覽中的。
+
+於 **[!UICONTROL 瀏覽]** 索引標籤中，您可以使用連線企業來源的帳戶ID或直接輸入來源詳細資料來探索帳戶設定檔。
+
+![使用帳戶ID來探索設定檔](images/b2b-account-browse-by.png)
+
+### 瀏覽依據 [!UICONTROL 已連線的企業來源] {#browse-by-connected-enterprise-source}
+
+若要依連線的企業來源瀏覽帳戶設定檔，請選取 **[!UICONTROL 已連線的企業來源]** 從 **[!UICONTROL 瀏覽依據]** 下拉式清單，然後使用「 」旁邊的「 」選擇器按鈕選擇連線的來源 **[!UICONTROL 來源]** 欄位。
+
+![依連線的企業來源瀏覽帳戶設定檔](images/b2b-account-browse.png)
+
+如此將可開啟 **[!UICONTROL 選取來源]** 對話方塊，您可在其中根據貴組織建立的連線選取來源。
 
 >[!NOTE]
 >
->對於Marketo帳戶ID，有兩個可能的帳戶表可以被引用，因此您必須使用特定語法以確保查看正確的帳戶。
+>貴組織可能針對相同的服務提供者(例如Marketo)設定了多個來源，因此請務必檢閱連線名稱、來源系統和來源系統例項，以確保您搜尋的來源例項正確無誤。
+
+若要進一步瞭解如何連線企業來源，請參閱 [來源概觀](../sources/sources-overview.md).
+
+您可以選取連線名稱旁的單選按鈕來選擇來源，然後使用 **[!UICONTROL 選取]** 以返回 [!UICONTROL 瀏覽] 標籤。
+
+![選取來源工作流程](images/b2b-account-select-source.png)
+
+選取來源後，您現在必須輸入 **[!UICONTROL 帳戶ID]** 與來源相關。 例如，選取Salesforce來源會要求您輸入Salesforce例項中的帳戶ID，才能檢視與該ID相關聯的帳戶設定檔。
+
+>[!NOTE]
 >
->最常見的標準語法是附加的Marketo帳戶ID `.mkto_org` (例如， `1234567.mkto_org`)。 MarketoAccount-Based Marketing客戶可能具有附加值，這些值可以使用附加的Marketo帳戶ID找到 `.mkto_account`。 如果您不確定要使用哪種語法，請與您的Marketo管理員聯繫。
+>Marketo帳戶ID有兩個可能的帳戶表格可供參考，因此您必須使用特定語法，以確保您檢視的帳戶正確無誤。
+>
+>最常見的標準語法是Marketo帳戶ID，後面接著 `.mkto_org` (例如， `1234567.mkto_org`)。 Marketo Account-Based Marketing客戶可能有其他值，您可使用附加至以下專案的Marketo帳戶ID找到： `.mkto_account`. 如果您不確定要使用哪個語法，請洽詢您的Marketo管理員。
 
 ![帳戶ID選擇](images/b2b-account-browse-id.png)
 
-### 瀏覽者 [!UICONTROL 其他] {#browse-by-others}
+### 瀏覽依據 [!UICONTROL 其他] {#browse-by-others}
 
-Real-Time CDPB2B版支援通過輸入 **[!UICONTROL 源名稱]**。 **[!UICONTROL 源實例]**, **[!UICONTROL 帳戶ID]** 您想查看的帳戶。 通過直接輸入源名稱和實例，您可以提供Experience Platform搜索和顯示正確的帳戶配置檔案資料所需的上下文。
+Real-Time CDP， B2B Edition可讓您輸入 **[!UICONTROL 來源名稱]**， **[!UICONTROL 來源執行個體]**、和 **[!UICONTROL 帳戶ID]** ，以取得您要檢視的帳戶。 直接輸入來源名稱和例項，即可提供Experience Platform搜尋和顯示正確帳戶設定檔資料所需的內容。
 
-在無法直接與資料建立源連接的情況下，執行直接查找的能力非常有用。 例如，如果您的組織已制定了阻止直接連接到CRM的資料治理策略，則可以將該資料導出到雲儲存系統，然後將其導入Experience Platform。
+在無法直接連線到資料的來源的情況下，執行直接查閱的功能會很有用。 例如，如果您的組織制定了資料治理政策，阻止直接連線到CRM，您可以將該資料匯出到雲端儲存系統，然後將其擷取到Experience Platform。
 
-另一個示例可能是您正在對資料執行轉換，轉換時間為資料離開系統並進入平台之間。 您可以使用直接查找功能為資料提供上下文(例如，指定資料是Marketo資料，儘管它來自AmazonS3儲存桶)，以便系統知道查找位置以及如何正確呈現資料。
+另一個範例可能是您正在對離開系統並進入Platform之間的資料執行轉換。 您可以使用直接查詢功能來提供資料的內容(例如，指定資料為Marketo資料，即使資料來自Amazon S3貯體)，讓系統知道要在哪裡尋找以及如何正確呈現資料。
 
-要開始直接查找，請選擇 **[!UICONTROL 其他]** 從 **[!UICONTROL 瀏覽者]** 下拉清單，然後輸入 **[!UICONTROL 源名稱]**。 **[!UICONTROL 源實例]**, **[!UICONTROL 帳戶ID]** 您想查看的帳戶。
+若要開始直接查詢，請選取 **[!UICONTROL 其他]** 從 **[!UICONTROL 瀏覽依據]** 下拉式清單，然後輸入 **[!UICONTROL 來源名稱]**， **[!UICONTROL 來源執行個體]**、和 **[!UICONTROL 帳戶ID]** 用於您要檢視的帳戶。
 
-![其他人瀏覽](images/b2b-account-browse-adhoc.png)
+![由其他人瀏覽](images/b2b-account-browse-adhoc.png)
 
-## 查看帳戶配置檔案詳細資訊 {#view-account-profile-details}
+## 檢視帳戶設定檔詳細資料 {#view-account-profile-details}
 
-使用 **[!UICONTROL 瀏覽]** 頁籤，選擇 **[!UICONTROL 配置檔案ID]** 開啟 **[!UICONTROL 詳細資訊]** 頁籤。 顯示在 **[!UICONTROL 詳細資訊]** 已從多個配置檔案片段合併到一起，以形成單個帳戶的單個視圖。 這包括基本屬性和社交媒體資料等帳戶詳細資訊。
+使用後 **[!UICONTROL 瀏覽]** 索引標籤以尋找帳戶設定檔，選取 **[!UICONTROL 設定檔ID]** 開啟 **[!UICONTROL 詳細資訊]** 帳戶設定檔的標籤。 顯示在上的設定檔資訊 **[!UICONTROL 詳細資訊]** 索引標籤已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 這包括基本屬性和社群媒體資料等帳戶細節。
 
-在組織層也可以更改顯示的預設欄位以顯示首選帳戶配置檔案屬性。
-
->[!NOTE]
->
->客戶配置檔案也提供類似功能，並且已建立了分步指南，其中包含添加和刪除屬性、調整面板大小等說明。 請閱讀 [配置檔案詳細資訊定制指南](../../profile/ui/profile-customization.md) 來瞭解更多資訊。
-
-![查看帳戶配置檔案詳細資訊](images/b2b-account-details.png)
-
-通過選擇另一個可用頁籤，您可以查看與帳戶相關的附加詳細資訊。 這些標籤包括屬性、人員和機會標籤，這些標籤顯示了與整個企業系統的帳戶相關的開啟和關閉的機會。 有關每個頁籤的詳細資訊，請參閱以下各節。
-
-## 「屬性」頁籤 {#attributes-tab}
-
-的 **[!UICONTROL 屬性]** 頁籤列出與帳戶相關的所有記錄資訊。 這包括來自多個源的屬性資料，這些源已合併在一起，以形成帳戶的單個視圖。
-
-除了能夠查看清單中的資料外，您還可以使用搜索欄搜索特定屬性或以JSON形式查看記錄資料。
-
-![「屬性」頁籤](images/b2b-account-attributes.png)
-
-## 「人員」頁籤 {#people-tab}
-
-的 **[!UICONTROL 人物]** 頁籤提供與帳戶關聯的個人清單。 這些人員可能是來自不同企業系統的聯繫人和領導，由您組織內的不同團隊管理，但在Real-Time CDP,B2B版將作為單個清單一起顯示，使您能夠看到客戶聯繫人的更全面的視圖。
+顯示的預設欄位也可以在組織層級變更以顯示偏好的帳戶設定檔屬性。
 
 >[!NOTE]
 >
->的 [!UICONTROL 人物] 頁籤顯示與帳戶關聯的最多25人的清單。 對於擁有25名以上關聯人員的賬戶，系統會隨機抽樣25條記錄。
+>客戶設定檔可使用類似功能，並已建立逐步指南，其中包含新增和移除屬性、調整面板大小等指示。 請閱讀 [設定檔詳細資料自訂指南](../../profile/ui/profile-customization.md) 以深入瞭解。
 
-除向您顯示聯繫人資訊的快照外，列出的每個人還包括 **[!UICONTROL 配置檔案ID]**，此連結可按一下，允許您瀏覽該個人的即時客戶配置檔案。 要瞭解有關查看與您的帳戶相關的單個客戶配置檔案的詳細資訊，請訪問指南 [瀏覽Real-Time CDPB2B版配置檔案](../profile/profile-browse.md)。
+![檢視帳戶設定檔詳細資料](images/b2b-account-details.png)
 
-![「人員」頁籤](images/b2b-account-people.png)
+您可以選取其他可用的標籤，以檢視與帳戶相關的其他詳細資料。 這些頁標包含屬性、人員以及業務機會頁標，顯示與整個企業系統中的帳戶相關的未結與已結業務機會。 請參閱以下各節，瞭解每個索引標籤的詳細資訊。
 
-## 機會頁籤 {#opportunities-tab}
+## 屬性標籤 {#attributes-tab}
 
-的 **[!UICONTROL 機會]** 頁籤提供與帳戶相關的未結和已結業務機會的資訊。 這些機會可能會從多個來源被Experience Platform，但是，Real-Time CDPB2B版使營銷人員能夠輕鬆地在一個地方看到所有這些機會。
+此 **[!UICONTROL 屬性]** 索引標籤會列出與帳戶相關的所有記錄資訊。 這包括來自多個來源的屬性資料，這些資料已合併在一起，以形成帳戶的單一檢視。
 
->[!NOTE]
->
->的 [!UICONTROL 機會] 頁籤顯示與帳戶關聯的最多25個機會的清單。 對於具有25個以上關聯機會的客戶，系統顯示25條記錄的隨機抽樣。
+除了能夠檢視清單中的資料之外，您還可以使用搜尋列搜尋特定屬性，或以JSON格式檢視記錄資料。
 
-每個機會都包括諸如機會名稱、其金額、階段以及該機會是開啟、關閉、贏得還是丟失等資訊。
+![屬性標籤](images/b2b-account-attributes.png)
 
-![「客戶機會」頁籤](images/b2b-account-opportunities.png)
+## 「人員」索引標籤 {#people-tab}
 
-## 「相關帳戶」頁籤 {#related-accounts-tab}
-
-的 **[!UICONTROL 相關帳戶]** 頁籤提供有關可能與您正在瀏覽的帳戶相關的其他帳戶的資訊。 有關功能的詳細資訊，請閱讀 [相關帳戶概述](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)。
+此 **[!UICONTROL 人員]** 索引標籤提供與帳戶相關聯的個別人員清單。 這些人員可能是來自不同企業系統的聯絡人和銷售機會，由您組織內的不同團隊管理，但在Real-Time CDP B2B版本中，他們以單一清單的形式呈現，可讓您檢視帳戶聯絡人的更完整檢視。
 
 >[!NOTE]
 >
->* 相關帳戶組最多可以有30個帳戶配置檔案。 如果發現30個以上的帳戶配置檔案相關，則它們被任意拆分為多個組，每個組的成員不超過30個。 帳戶配置檔案的「相關帳戶」組始終包括其自身。
->* 的 [!UICONTROL 相關帳戶] 頁籤當前顯示與您正在瀏覽的帳戶關聯的最多25個相關帳戶的清單。 這是將來更新中要解決的限制。 儘管有此UI限制，但在段定義中使用相關帳戶時，對於30個相關帳戶配置檔案組，所有配置檔案都用於目標。
+>此 [!UICONTROL 人員] 索引標籤會顯示與帳戶相關聯的最多25人清單。 若帳戶擁有超過25名關聯人員，系統會顯示隨機抽樣25筆記錄。
+
+除了顯示連絡人的資訊快照之外，列出的每個人員也包含 **[!UICONTROL 設定檔ID]**，是可點按的連結，可讓您探索該個人的即時客戶個人檔案。 若要進一步瞭解如何檢視與您的帳戶相關的個別客戶設定檔，請瀏覽指南 [在Real-Time CDP， B2B Edition中瀏覽設定檔](../profile/profile-browse.md).
+
+![「人員」索引標籤](images/b2b-account-people.png)
+
+## 機會標籤 {#opportunities-tab}
+
+此 **[!UICONTROL 機會]** 頁標提供與帳戶相關的未結與已結業務機會的資訊。 這些機會可能會從多個來源引入Experience Platform，但Real-Time CDP， B2B版本讓行銷人員輕鬆地在一個位置一起看到所有這些機會。
+
+>[!NOTE]
+>
+>此 [!UICONTROL 機會] 頁標會顯示與帳戶相關的最多25個商機的清單。 若客戶的關聯業務機會超過25個，系統會顯示隨機抽樣25筆記錄。
+
+每個機會都包含一些資訊，例如機會的名稱、數量、階段，以及機會是否開啟、關閉、成功或失敗。
+
+![帳戶機會標籤](images/b2b-account-opportunities.png)
+
+## 相關帳戶標籤 {#related-accounts-tab}
+
+此 **[!UICONTROL 相關帳戶]** 索引標籤提供可能與您瀏覽的帳戶相關的其他帳戶資訊。 如需有關功能的深入資訊，請閱讀 [相關帳戶概觀](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+
+>[!NOTE]
+>
+>* 「相關」帳戶群組最多可以有30個帳戶設定檔。 如果發現超過30個帳戶設定檔相關，則會任意將其分割成多個群組，每個群組不超過30個成員。 帳戶設定檔的「相關帳戶」群組一律包含自身。
+>* 此 [!UICONTROL 相關帳戶] tab目前會顯示與您瀏覽的帳戶相關聯的最多25個相關帳戶清單。 此限制將在未來的更新中解決。 儘管有此UI限制，當您在區段定義中使用相關帳戶時，對於30個相關帳戶設定檔的群組，所有設定檔都用於定位。
 
 
-每個相關帳戶都包括諸如帳戶配置檔案ID和名稱、其帳戶源密鑰等資訊，以及與首頁、地址、父帳戶、電話、行業和年度收入相關的進一步資訊。
+每個相關帳戶都包含帳戶設定檔ID和名稱、帳戶來源金鑰等資訊，以及與首頁、地址、父帳戶、電話、產業和年度收入相關的進一步資訊。
 
-![「相關帳戶」頁籤](images/b2b-account-related-accounts.png)
+![相關帳戶標籤](images/b2b-account-related-accounts.png)
 
-您可以使用此清單中的相關帳戶進行細分。 查看 [分段示例](/help/rtcdp/segmentation/b2b.md#related-account) 瞭解如何使用相關帳戶來擴展您在段定義中的觸角。
+您可以使用此清單中的相關帳戶進行細分。 參閱 [分段範例](/help/rtcdp/segmentation/b2b.md#related-account) 以瞭解如何使用相關帳戶，以擴大您在區段定義中的觸及率。

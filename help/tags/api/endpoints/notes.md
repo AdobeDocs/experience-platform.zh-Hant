@@ -1,6 +1,6 @@
 ---
-title: Notes終結點
-description: 瞭解如何調用Repartor API中的/notes端點。
+title: 附註端點
+description: 瞭解如何在Reactor API中呼叫/notes端點。
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 5%
 
 ---
 
-# Notes終結點
+# 附註端點
 
-在Reactor API中，注釋是可添加到某些資源的文本注釋。 注釋實質上是對各自資源的評論。 注釋的內容對資源行為沒有影響，可用於包括以下內容在內的各種使用情形：
+在Reactor API中，附註是可新增至特定資源的文字註釋。 附注本質上是對其各自資源的評論。 附註的內容對資源行為沒有影響，可用於各種使用案例，包括：
 
 * 提供背景資訊
-* 作為待辦事項清單
+* 作為待辦事項清單使用
 * 傳遞資源使用建議
-* 向其他團隊成員提供說明
-* 記錄歷史上下文
+* 向其他團隊成員提供指示
+* 記錄歷史內容
 
-的 `/notes` Reactor API中的端點允許您以寫程式方式管理這些注釋。
+此 `/notes` Reactor API中的端點可讓您以程式設計方式管理這些備註。
 
-注釋可應用於以下資源：
+附註可套用下列資源：
 
 * [資料元素](./data-elements.md)
 * [擴充功能](./extensions.md)
@@ -31,21 +31,21 @@ ht-degree: 5%
 * [規則](./rules.md)
 * [秘密](./secrets.md)
 
-這六種資源統稱為&quot;顯著&quot;資源。 刪除顯著資源時，其關聯注釋也會被刪除。
+這六種型別統稱為「重要」資源。 刪除重要資源時，也會刪除其相關附註。
 
 >[!NOTE]
 >
->對於可以具有多個修訂的資源，必須在當前（頭）修訂上建立任何注釋。 它們可能不附於其他修訂。
+>對於可以有多個修訂版本的資源，必須在目前（標題）修訂版本上建立任何附註。 它們不能附加到其他修訂版本。
 >
->但是，注釋仍可從修訂中閱讀。 在這種情況下， API只返回在建立修訂之前存在的注釋。 它們提供了注釋的快照，與剪切修訂時的快照一樣。 相反，從當前(head)修訂中讀取注釋將返回其所有注釋。
+>不過，仍可從修訂版本讀取附註。 在這種情況下，API只會傳回建立修訂版本之前存在的附註。 它們提供與剪下修訂版本時相同的註釋快照。 相較之下，從目前（標題）修訂版本讀取附註會傳回其所有附註。
 
 ## 快速入門
 
-本指南中使用的端點是 [反應堆API](https://www.adobe.io/experience-platform-apis/references/reactor/)。 在繼續之前，請查看 [入門指南](../getting-started.md) 有關如何驗證到API的重要資訊。
+本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
 
-## 檢索注釋清單 {#list}
+## 擷取附註清單 {#list}
 
-可通過附加來檢索資源的注釋清單 `/notes` 到有關資源的GET請求的路徑。
+您可以藉由附加來擷取資源的附註清單 `/notes` 到相關資源的GET請求路徑。
 
 **API格式**
 
@@ -55,14 +55,14 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | 參數 | 說明 |
 | --- | --- |
-| `RESOURCE_TYPE` | 您為其提取注釋的資源類型。 必須是以下值之一： <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 的 `id` 要列出其注釋的特定資源。 |
+| `RESOURCE_TYPE` | 您要擷取備註的資源型別。 必須為下列其中一個值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | 此 `id` 要列出其附註的特定資源。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求列出了附加到庫的注釋。
+下列請求列出附加至程式庫的附註。
 
 ```shell
 curl -X GET \
@@ -76,7 +76,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應返回附加到指定資源的注釋清單。
+成功的回應會傳回附加至指定資源的附註清單。
 
 ```json
 {
@@ -119,9 +119,9 @@ curl -X GET \
 }
 ```
 
-## 查找便箋 {#lookup}
+## 查詢附註 {#lookup}
 
-可以通過在GET請求的路徑中提供注釋ID來查找注釋。
+您可以在GET請求的路徑中提供其ID來查詢附註。
 
 **API格式**
 
@@ -131,7 +131,7 @@ GET /notes/{NOTE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `NOTE_ID` | 的 `id` 你想查的便條。 |
+| `NOTE_ID` | 此 `id` 要查閱的附註中。 |
 
 {style="table-layout:auto"}
 
@@ -149,7 +149,7 @@ curl -X GET \
 
 **回應**
 
-成功的響應將返回注釋的詳細資訊。
+成功回應會傳回附註的詳細資料。
 
 ```json
 {
@@ -185,9 +185,9 @@ curl -X GET \
 
 >[!WARNING]
 >
->在建立新注釋之前，請記住注釋不可編輯，刪除它們的唯一方法是刪除它們的相應資源。
+>建立新註記之前，請記住，註記不可編輯，刪除註記的唯一方式是刪除其對應的資源。
 
-可通過附加建立新注釋 `/notes` 到有關資源的POST請求的路徑。
+您可以藉由附加來建立新的附註 `/notes` 到相關資源的POST請求路徑。
 
 **API格式**
 
@@ -197,14 +197,14 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | 參數 | 說明 |
 | --- | --- |
-| `RESOURCE_TYPE` | 要為其建立注釋的資源類型。 必須是以下值之一： <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | 的 `id` 要為其建立注釋的特定資源。 |
+| `RESOURCE_TYPE` | 您要建立註記的資源型別。 必須為下列其中一個值： <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | 此 `id` 要為其建立附註的特定資源。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求將為屬性建立新附註。
+以下請求會為屬性建立新的附註。
 
 ```shell
 curl -X POST \
@@ -225,14 +225,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `type` | **（必需）** 要更新的資源類型。 對於此終結點，值必須為 `notes`。 |
-| `attributes.text` | **（必需）** 包含注釋的文本。 每個注釋限制為512個Unicode字元。 |
+| `type` | **（必要）** 正在更新的資源型別。 此端點的值必須為 `notes`. |
+| `attributes.text` | **（必要）** 組成註記的文字。 每個附註限定為512個Unicode字元。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的響應將返回新建立的注釋的詳細資訊。
+成功的回應會傳回新建立附註的詳細資訊。
 
 ```json
 {

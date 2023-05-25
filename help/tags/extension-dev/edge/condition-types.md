@@ -1,6 +1,6 @@
 ---
-title: 邊擴展的條件類型
-description: 瞭解如何為Adobe Experience Platform的邊擴展定義條件類型庫模組。
+title: 邊緣擴充功能的條件型別
+description: 瞭解如何在Adobe Experience Platform中定義邊緣擴充功能的條件型別程式庫模組。
 exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
@@ -13,26 +13,26 @@ ht-degree: 50%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch已被改名為Adobe Experience Platform的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+> Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-在標籤規則中，在發生事件後評估條件。 所有條件都必須傳回 true，才會繼續處理規則。條件類型由擴展提供，並評估某個項是true還是false，返回布爾值。
+在標籤規則中，會在事件發生後評估條件。 所有條件都必須傳回 true，才會繼續處理規則。條件型別由擴充功能提供，會評估某條件是否成立，傳回布林值。
 
 例如，擴充功能可提供「檢視區包含」條件類型，讓 使用者可在其中指定 CSS 選擇器。在用戶端的網站上評估條件時，擴充功能將可尋找符合 CSS 選擇器的元素，並傳回結果指出其中是否有任何元素包含在使用者的檢視區中。
 
-本文檔介紹如何定義Adobe Experience Platform邊擴展的條件類型。
+本文介紹如何在Adobe Experience Platform中定義邊緣擴充功能的條件型別。
 
 >[!IMPORTANT]
 >
 >如果您正在開發 Web 擴充功能，請改為參閱 [Web 擴充功能的條件類型](../web/condition-types.md)指南。
 >
->本文檔還假定您熟悉庫模組以及它們如何整合到邊擴展中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
+>本檔案也假設您熟悉程式庫模組，以及如何將這些模組整合在Edge擴充功能中。 如果需要相關說明，請先參閱[程式庫模組格式化](./format.md)的概述文章，再返回閱讀本指南。
 
-條件類型通常由以下組成：
+條件型別通常包含下列專案：
 
-1. Experience PlatformUI和資料收集UI中顯示的視圖，允許用戶修改條件的設定。
-2. 在標籤運行時庫內發出的庫模組解釋設定並評估條件。
+1. Experience PlatformUI和資料收集UI中顯示的檢視，可讓使用者修改條件的設定。
+2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及評估條件。
 
-例如，如果要評估用戶是否在主機上 `example.com`，您的模組可能如下所示。
+例如，如果您想要評估使用者是否在主機上 `example.com`，您的模組可能如下所示。
 
 ```js
 module.exports = (context) => {
@@ -41,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-如果希望用戶可以配置主機名以允許輸入主機名並將其保存到設定對象，則該對象可能與此示例類似。
+如果您想要讓使用者能夠設定主機名稱，以允許輸入主機名稱並將其儲存到設定物件，該物件看起來可能類似於此範例。
 
 ```js
 {

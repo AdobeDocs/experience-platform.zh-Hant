@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；源連接器；源連接器；源；資料源；資料源；資料源；資料源；資料源；資料源連接
+keywords: Experience Platform；首頁；熱門主題；來源聯結器；來源聯結器；來源；資料來源；資料來源；資料來源連線
 solution: Experience Platform
-title: 源連接器概述
-description: Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種源(如Adobe應用程式、基於雲的儲存、資料庫和許多其他源)接收資料。
+title: 來源聯結器概述
+description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: feb05d5bddc4135c5fe14d3ec5d8fad62c5e2236
 workflow-type: tm+mt
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 ---
 
-# 源連接器概述
+# 來源聯結器概觀
 
-Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使用平台服務構建、標籤和增強傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型的儲存空間、資料庫和其他許多來源) 內嵌資料。 
+Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源 (如 Adobe 應用程式、雲端型的儲存空間、資料庫和其他許多來源) 內嵌資料。 
 
-[!DNL Flow Service] 用於收集和集中平台內不同來源的客戶資料。 該服務提供用戶介面和REST風格的API，使您可以輕鬆地設定到各種資料提供程式的源連接。 通過這些源連接，您可以驗證第三方系統，設定接收運行時間，並管理資料接收吞吐量。
+[!DNL Flow Service] 用於收集並集中來自Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，可讓您輕鬆設定與各種資料提供者的來源連線。 這些來源連線可讓您驗證協力廠商系統、設定擷取執行時間，以及管理資料擷取輸送量。
 
-通過Experience Platform，您可以集中從不同來源收集的資料，並利用從中獲得的洞察力做更多工作。
+透過Experience Platform，您可以集中從不同來源收集的資料，並使用從中獲得的見解做更多事情。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -26,46 +26,46 @@ Adobe Experience Platform允許從外部源接收資料，同時讓您能夠使�
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## 源類型
+## 來源型別
 
-Experience Platform中的源分為以下類別：
+Experience Platform中的來源會分組到下列類別中：
 
 ### Adobe應用程式 {#adobe-applications}
 
-Experience Platform允許從包括Adobe Analytics和Adobe Audience Manager在內的其他Adobe應用程式中接收資料。 有關詳細資訊，請參閱以下相關文檔：
+Experience Platform可讓您從其他Adobe應用程式(包括Adobe Analytics和Adobe Audience Manager)擷取資料。 如需詳細資訊，請參閱下列相關檔案：
 
-- [Adobe Audience Manager源概述](connectors/adobe-applications/audience-manager.md)
-   - [在UI中建立Adobe Audience Manager源連接](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics分類資料源概述](connectors/adobe-applications/classifications.md)
-   - [在UI中建立Adobe Analytics分類資料源連接](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics報告套件資料源概述](connectors/adobe-applications/analytics.md)
-   - [在UI中建立Adobe Analytics源連接](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Campaign Managed Cloud Services源概述](connectors/adobe-applications/campaign.md)
-   - [在UI中建立Adobe Campaign Managed Cloud Services源連接](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Adobe資料收集源概述](connectors/adobe-applications/data-collection.md)
-   - [在UI中建立客戶屬性源連接](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] 源概述](connectors/adobe-applications/marketo/marketo.md)
-   - [建立 [!DNL Marketo Engage] UI中的源連接](./tutorials/ui/create/adobe-applications/marketo.md)
-   - [建立 [!DNL Marketo Engage] 源連接和資料流，用於自定義活動資料](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-- [Adobe Workfront源概述](connectors/adobe-applications/workfront.md)
-   - [在UI中建立Workfront源連接](./tutorials/ui/create/adobe-applications/workfront.md)
+- [Adobe Audience Manager來源概觀](connectors/adobe-applications/audience-manager.md)
+   - [在使用者介面中建立Adobe Audience Manager來源連線](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics分類資料來源概觀](connectors/adobe-applications/classifications.md)
+   - [在UI中建立Adobe Analytics分類資料來源連線](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Adobe Analytics報表套裝資料來源概觀](connectors/adobe-applications/analytics.md)
+   - [在使用者介面中建立Adobe Analytics來源連線](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Adobe Campaign Managed Cloud Services來源概觀](connectors/adobe-applications/campaign.md)
+   - [在使用者介面中建立Adobe Campaign Managed Cloud Services來源連線](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Adobe資料收集來源概觀](connectors/adobe-applications/data-collection.md)
+   - [在使用者介面中建立客戶屬性來源連線](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] 來源概觀](connectors/adobe-applications/marketo/marketo.md)
+   - [建立 [!DNL Marketo Engage] ui中的來源連線](./tutorials/ui/create/adobe-applications/marketo.md)
+   - [建立 [!DNL Marketo Engage] 自訂活動資料的來源連線和資料流](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+- [Adobe Workfront來源概觀](connectors/adobe-applications/workfront.md)
+   - [在使用者介面中建立Workfront來源連線](./tutorials/ui/create/adobe-applications/workfront.md)
 
 ### Advertising {#advertising}
 
-Experience Platform支援從第三方廣告系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform提供從協力廠商廣告系統擷取資料的支援。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [Google廣告](connectors/advertising/ads.md)
+- [Google Ads](connectors/advertising/ads.md)
 
 ### Analytics {#analytics}
 
-Experience Platform支援從第三方分析平台接收資料。 有關詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從協力廠商analytics平台擷取資料。 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
 
-### 雲儲存 {#cloud-storage}
+### 雲端儲存空間 {#cloud-storage}
 
-雲儲存源可以將您自己的資料帶入平台，而無需下載、格式化或上載。 所攝取的資料可以格式化為XDM JSON、XDM Parke或分隔。 每個步驟都使用用戶介面整合到「源」工作流中。 有關詳細資訊，請參閱以下相關文檔：
+雲端儲存空間來源可將您自己的資料帶入Platform，而不需要下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會使用使用者介面整合至來源工作流程。 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md)
@@ -81,15 +81,15 @@ Experience Platform支援從第三方分析平台接收資料。 有關詳細資
 - [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP]](connectors/cloud-storage/sftp.md)
 
-### 同意和首選項 {#consent}
+### 同意和偏好設定 {#consent}
 
-Experience Platform支援從第三方同意和偏好管理平台接收資料。 有關詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從協力廠商同意和偏好設定管理平台擷取資料。 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
 
 ### 客戶關係管理(CRM) {#customer-relationship-management}
 
-CRM系統提供的資料可以幫助建立客戶關係，而這反過來又會創造忠誠度並推動客戶的保留。 Experience Platform支援從中插入CRM資料 [!DNL Microsoft Dynamics 365] 和 [!DNL Salesforce]。 有關詳細資訊，請參閱以下相關文檔：
+CRM系統提供的資料可協助建立客戶關係，進而建立忠誠度並提升客戶保留率。 Experience Platform提供從擷取CRM資料的支援 [!DNL Microsoft Dynamics 365] 和 [!DNL Salesforce]. 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce]](connectors/crm/salesforce.md)
@@ -99,7 +99,7 @@ CRM系統提供的資料可以幫助建立客戶關係，而這反過來又會�
 
 ### 客戶成功 {#customer-success}
 
-Experience Platform支援從第三方客戶成功應用程式接收資料。 有關詳細資訊，請參閱以下相關文檔：
+Experience Platform提供從協力廠商客戶成功應用程式擷取資料的支援。 如需詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md)
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
@@ -108,7 +108,7 @@ Experience Platform支援從第三方客戶成功應用程式接收資料。 有
 
 ### 資料庫 {#database}
 
-Experience Platform支援從第三方資料庫接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md)
@@ -132,20 +132,20 @@ Experience Platform支援從第三方資料庫接收資料。 有關特定源連
 
 ### 電子商務 {#ecommerce}
 
-Experience Platform支援從第三方電子商務系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從協力廠商電子商務系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 - [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
 
-### 本地系統 {#local-system}
+### 本機系統 {#local-system}
 
-Experience Platform支援從本地系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform提供從本機系統擷取資料的支援。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [本地檔案上載](connectors/local-system/local-file-upload.md)
+- [本機檔案上傳](connectors/local-system/local-file-upload.md)
 
-### 營銷自動化 {#marketing-automation}
+### 行銷自動化 {#marketing-automation}
 
-Experience Platform支援從第三方營銷自動化系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform提供從協力廠商行銷自動化系統擷取資料的支援。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md)
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md)
@@ -159,62 +159,62 @@ Experience Platform支援從第三方營銷自動化系統接收資料。 有關
 
 ### 付款 {#payments}
 
-Experience Platform支援從第三方支付系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從協力廠商付款系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL PayPal]](connectors/payments/paypal.md)
 - [[!DNL Square]](connectors/payments/square.md)
 
-### 流 {#streaming}
+### 串流 {#streaming}
 
-Experience Platform支援從流源接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從串流來源擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### 協定 {#protocols}
+### 通訊協定 {#protocols}
 
-Experience Platform支援從第三方協定系統接收資料。 有關特定源連接器的詳細資訊，請參閱以下相關文檔：
+Experience Platform支援從協力廠商通訊協定系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Generic OData]](connectors/protocols/odata.md)
 - [[!DNL Generic REST API]](connectors/protocols/generic-rest.md)
 
-## 資料接收中源的訪問控制
+## 資料擷取中來源的存取控制
 
-資料接收源的權限可在Adobe Admin Console內管理。 您可以通過 **[!UICONTROL 權限]** 的子菜單。 從 **[!UICONTROL 編輯權限]** 面板，您可以通過 **[!UICONTROL 資料攝取]** 的子菜單。 的 **[!UICONTROL 查看源]** 權限授予對可用源的只讀訪問權限 **[!UICONTROL 目錄]** 頁籤和經過驗證的源 **[!UICONTROL 瀏覽]** 的 **[!UICONTROL 管理源]** 權限授予對讀取、建立、編輯和禁用源的完全訪問權限。
+資料內嵌來源的許可權可在Adobe Admin Console中管理。 您可以透過以下方式存取許可權 **[!UICONTROL 許可權]** 標籤中指定產品的設定檔。 從 **[!UICONTROL 編輯許可權]** 面板中，您可以透過以下方式存取與來源相關的許可權： **[!UICONTROL 資料擷取]** 功能表專案。 此 **[!UICONTROL 檢視來源]** 許可權會授予「 」中可用來源的唯讀存取權 **[!UICONTROL 目錄]** 索引標籤和已驗證的來源 **[!UICONTROL 瀏覽]** 標籤，而 **[!UICONTROL 管理來源]** 許可權會授予讀取、建立、編輯和停用來源的完整存取權。
 
-下表概述了UI基於這些權限的不同組合的行為：
+下表概述UI根據這些許可權的不同組合時的行為方式：
 
-| 權限級別 | 說明 |
+| 許可權層級 | 說明 |
 | ---- | ----|
-| **[!UICONTROL 查看源]** 開 | 授予對「目錄」頁籤中每個源類型以及「瀏覽」、「帳戶」和「資料流」頁籤中源的只讀訪問權限。 |
-| **[!UICONTROL 管理源]** 開 | 除包括於 **[!UICONTROL 查看源]**，授予訪問權限 **[!UICONTROL 連接源]** 選項 **[!UICONTROL 目錄]** 和 **[!UICONTROL 選擇資料]** 選項 **[!UICONTROL 瀏覽]**。 **[!UICONTROL 管理源]** 也允許您啟用或禁用 **[!UICONTROL 資料流]** 並編輯他們的日程表。 |
-| **[!UICONTROL 查看源]** 關閉和 **[!UICONTROL 管理源]** 關閉 | 撤消對源的所有訪問權限。 |
+| **[!UICONTROL 檢視來源]** 開啟 | 授予「目錄」標籤中每個來源型別以及「瀏覽」、「帳戶」和「資料流」標籤的來源的唯讀存取權。 |
+| **[!UICONTROL 管理來源]** 開啟 | 除了包含的函式以外 **[!UICONTROL 檢視來源]**，授予存取權 **[!UICONTROL 連線來源]** 中的選項 **[!UICONTROL 目錄]** 和 **[!UICONTROL 選取資料]** 中的選項 **[!UICONTROL 瀏覽]**. **[!UICONTROL 管理來源]** 也可讓您啟用或停用 **[!UICONTROL DataFlows]** 並編輯其排程。 |
+| **[!UICONTROL 檢視來源]** 關閉和 **[!UICONTROL 管理來源]** 關閉 | 撤銷對來源的所有存取權。 |
 
-有關通過Adobe權限授予的可用權限的詳細資訊，請閱讀 [訪問控制概述](../access-control/home.md)。
+如需透過Adobe許可權授與的可用許可權的詳細資訊，請參閱 [存取控制總覽](../access-control/home.md).
 
 ### 以屬性為基礎的存取控制
 
-Adobe Experience Platform基於屬性的訪問控制允許管理員基於屬性控制對特定對象和/或權能的訪問。
+Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬性控制對特定物件和/或權能的存取。
 
-使用基於屬性的訪問控制，您可以將映射配置應用到您具有權限的欄位。 此外，如果您沒有訪問資料集中所有欄位的權限，則無法將資料接收到資料集。
+透過以屬性為基礎的存取控制，您可以將對應設定套用至您擁有許可權的欄位。 此外，如果您無權存取資料集中的所有欄位，則無法將資料內嵌至資料集。
 
-#### 在源中支援基於屬性的訪問控制
+#### 支援來源中的屬性型存取控制
 
 >[!TIP]
 >
->基於屬性的訪問控制工作如下： **角色** 建立這些屬性是為了對與平台實例交互的用戶類型進行分類。 **標籤** 應用於 **角色** 指定該給定角色的訪問權限。 **標籤** 也應用於架構欄位和段等資源。 為了使用戶能夠訪問某些架構欄位和段，必須將它們添加到 *具有分配給查詢資源的同一標籤的角色*。 有關詳細資訊，請閱讀 [基於屬性的訪問控制端到端指南](../access-control/abac/end-to-end-guide.md)。
+>屬性型存取控制的運作方式如下： **角色** 建立用來分類與您的Platform執行個體互動的使用者型別。 **標籤** 套用至 **角色** 以指定該指定角色的存取權。 **標籤** 也會套用至結構描述欄位和區段等資源。 為了讓使用者能存取某些結構描述欄位和區段，必須將其新增至 *具有指派給查詢資源的相同標籤的角色*. 如需詳細資訊，請閱讀 [屬性型存取控制端對端指南](../access-control/abac/end-to-end-guide.md).
 
-- 將標籤應用於架構欄位，以定義對組織中特定架構欄位的訪問。 一旦建立了對特定架構欄位的訪問權限，用戶將只能為他們有權訪問的欄位建立映射。
-- 沒有相應角色的用戶將無法建立或更新包含無法訪問的架構欄位的映射的資料流。 此外，未經授權的用戶不能使用無法訪問的架構欄位更新、刪除、啟用或禁用現有資料流。
-- 此外，資料流在其映射、目標資料集和目標連接中必須具有完全相同的模式ID和版本。
+- 將標籤套用至結構描述欄位，以定義對組織中特定結構描述欄位的存取權。 建立對特定結構描述欄位的存取權後，使用者將只能為他們有權存取的欄位建立對應。
+- 沒有適當角色的使用者將無法使用包含無法存取之結構描述欄位的對應建立或更新資料流程。 此外，未經授權的使用者無法更新、刪除、啟用或停用具有無法存取之結構描述欄位的現有資料流。
+- 此外，資料流在其對應、目標資料集和目標連線中，必須有完全相同的結構描述ID和版本。
 
-有關基於屬性的訪問控制的詳細資訊，請閱讀 [基於屬性的訪問控制概述](../access-control/abac/overview.md)。
+如需以屬性為基礎的存取控制的詳細資訊，請閱讀 [屬性型存取控制概觀](../access-control/abac/overview.md).
 
-## 條款和條件 {#terms-and-conditions}
+## 條款與條件 {#terms-and-conditions}
 
-通過使用標為beta(「beta」)的任何源，您特此確認提供了beta ***&quot;原樣&quot;，不提供任何保證***。
+使用任何標示為Beta版(「Beta」)的來源，即表示您確認已提供Beta版 ***「原樣」，不含任何保固***.
 
-Adobe沒有義務維護、更正、更新、更改、修改或以其他方式支援測試版。 建議您謹慎行事，切勿以任何方式依賴此類測試版和/或隨附材料的正確功能或效能。 Beta被視為Adobe的機密資訊。
+Adobe沒有義務維護、更正、更新、變更、修改或以其他方式支援Beta版。 建議您謹慎使用，不要依賴此類Beta版及/或隨附資料的正確功能或效能。 Beta版被視為Adobe的機密資訊。
 
-您向Adobe提供的任何「反饋」（有關測試版的資訊，包括但不限於您在使用測試版時遇到的問題或缺陷、建議、改進和建議）將分配給Adobe，包括您對此類反饋的所有權利、標題和興趣。
+任何「意見回饋」（有關Beta版資訊，包括但不限於您在使用Beta版時遇到的問題或缺陷、建議、改進和建議）一律指定給Adobe，包括此等意見回饋的所有權利、標題和興趣，以及Adobe。
 
-提交開啟反饋或建立支援票證以共用您的建議或報告錯誤，尋求功能增強。
+提交公開意見或建立支援票證以分享您的建議或報告錯誤，並尋求功能增強。

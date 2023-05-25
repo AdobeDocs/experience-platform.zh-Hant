@@ -1,6 +1,6 @@
 ---
-description: Experience PlatformDestination SDK使用Pebble模板，允許您將從Experience Platform導出的資料轉換為目標所需的格式。
-title: 支援的轉換函式在Destination SDK
+description: Experience PlatformDestination SDK使用Pebble範本，可讓您將從Experience Platform匯出的資料轉換為目的地所需的格式。
+title: Destination SDK中支援的轉換函式
 source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
 workflow-type: tm+mt
 source-wordcount: '579'
@@ -9,31 +9,31 @@ ht-degree: 3%
 ---
 
 
-# 支援的轉換函式在Destination SDK
+# Destination SDK中支援的轉換函式
 
-Experience PlatformDestination SDK使用 [[!DNL Pebble] 模板](https://pebbletemplates.io/)，允許您將從Experience Platform導出的資料轉換為目標所需的格式。
+Experience PlatformDestination SDK使用 [[!DNL Pebble] 範本](https://pebbletemplates.io/)，可將從Experience Platform匯出的資料轉換為目的地所需的格式。
 
-Experience Platform [!DNL Pebble] 與提供的現成版本相比，實現有一些更改 [!DNL Pebble]。 此外，除了提供的 [!DNL Pebble],Adobe已建立了一些可與Destination SDK一起使用的附加函式。
+Experience Platform [!DNL Pebble] 與提供的現成可用版本相比，實作有一些變更 [!DNL Pebble]. 此外，除了提供的現成可用功能外， [!DNL Pebble]，Adobe已建立一些可與Destination SDK搭配使用的其他函式。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有參數名和值均 **區分大小寫**。 為避免區分大小寫錯誤，請完全按文檔所示使用參數名稱和值。
+>Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
 
 ## 使用位置 {#where-to-use}
 
-使用本頁下面列出的支援的函式 [建立消息轉換模板](../../testing-api/streaming-destinations/create-template.md) 將資料從Experience Platform導出到目標。
+使用本頁面下方所列的支援函式，當 [建立訊息轉換範本](../../testing-api/streaming-destinations/create-template.md) 適用於從Experience Platform匯出至目的地的資料。
 
-消息轉換模板用於 [目標伺服器配置](templating-specs.md) 流目標。
+訊息轉換範本用於 [目的地伺服器設定](templating-specs.md) 適用於串流目的地。
 
 ## 先決條件 {#prerequisites}
 
-要瞭解此參考頁中的概念和功能，請閱讀 [消息格式](message-format.md) 的雙曲餘切值。 你得明白 [輪廓結構](message-format.md#profile-structure) 在Experience Platform中 [!DNL Pebble] 轉換和導出資料的模板。
+若要瞭解本參考頁面中的概念和函式，請閱讀 [訊息格式](message-format.md) 檔案優先。 您需要瞭解 [設定檔的結構](message-format.md#profile-structure) 在Experience Platform中，您才可以使用 [!DNL Pebble] 範本以轉換和匯出的資料。
 
-在前進到下面介紹的功能之前，請查看一節中的模板示例 [使用模板語言進行身份、屬性和段成員身份轉換](message-format.md#using-templating)。 這裡的例子開始非常簡單並且複雜性增加。
+在繼續使用下列功能之前，請檢閱區段中的範本範例 [使用範本語言進行身分、屬性和區段成員資格轉換](message-format.md#using-templating). 這裡的範例開頭非常簡單，複雜性也增加了。
 
 ## 支援 [!DNL Pebble] 函式 {#supported-functions}
 
-從 [!DNL Pebble] 標籤部分，Destination SDK僅支援：
+從 [!DNL Pebble] 標籤區段，Destination SDK僅支援：
 
 * [篩選](https://pebbletemplates.io/wiki/tag/filter/)
 * [for](https://pebbletemplates.io/wiki/tag/for/)
@@ -42,23 +42,23 @@ Experience Platform [!DNL Pebble] 與提供的現成版本相比，實現有一�
 
 >[!TIP]
 >
->使用 `for` 在循環時不同 *陣列* 或 *地圖* 中的元素。 在陣列中迭代時，可以直接獲取元素。 在遍歷映射時，將獲取每個具有鍵值對的映射項。
+>使用 `for` 反複處理時不同 *陣列* 或 *對應* 範本中的元素。 當您反複處理陣列時，可以直接取得元素。 當反複處理對應時，會取得每個對應專案，每個對應專案都有一個索引鍵/值組。
 >
-> * 對於陣列元素的示例，請考慮 [標識映射](message-format.md#identities) 命名空間，在此可以循環訪問元素 `identityMap.gaid`。 `identityMap.email`或類似。
-> * 對於映射元素的示例，請考慮 [segmentMembership](message-format.md#segment-membership)。
+> * 如需陣列元素的範例，請思考以下專案中的身分識別： [identityMap](message-format.md#identities) 名稱空間，您可以在此處循環檢視元素，例如 `identityMap.gaid`， `identityMap.email`或類似專案。
+> * 如需對應元素的範例，請考慮 [segmentMembership](message-format.md#segment-membership).
 
 
-從 [!DNL Pebble] filter部分，Destination SDK支援所有函式。 下面的示例說明 `date` 函式可在Destination SDK中使用。
+從 [!DNL Pebble] 篩選區段，Destination SDK支援所有函式。 以下範例進一步說明 `date` 函式可在Destination SDK中使用。
 
-從 [!DNL Pebble] 函式部分，Adobe *不* 支援 [範圍](https://pebbletemplates.io/wiki/function/range/) 的子菜單。
+從 [!DNL Pebble] 函式區段，Adobe會 *not* 支援 [範圍](https://pebbletemplates.io/wiki/function/range/) 函式。
 
-## 示例 `date` 函式 {#date-function}
+## 如何操作的範例 `date` 函式已使用 {#date-function}
 
-以示例 [!DNL Pebble] 函式在Destination SDK中使用，請參見下面日期函式([Pebble文檔中的連結](https://pebbletemplates.io/wiki/filter/date/))用於轉換時間戳的格式。
+示範如何進行 [!DNL Pebble] 函式用於Destination SDK，請參閱下面的日期函式([Pebble檔案中的連結](https://pebbletemplates.io/wiki/filter/date/))來轉換時間戳記的格式。
 
 ### 使用案例
 
-要更改 `lastQualificationTime` 預設時間戳 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) 該Experience Platform導出到目標首選的另一個值的值。
+您想要變更 `lastQualificationTime` 來自預設值的時間戳記 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) Experience Platform匯出至目的地偏好之其他值的值。
 
 ### 範例
 
@@ -84,15 +84,15 @@ Experience Platform [!DNL Pebble] 與提供的現成版本相比，實現有一�
 }
 ```
 
-## 通過Adobe添加的函式 {#functions-added-by-adobe}
+## Adobe新增的函式 {#functions-added-by-adobe}
 
-除了由 [!DNL Pebble]，請參閱下面的Adobe建立的其他函式，這些函式可用於資料導出。
+除了提供的現成可用功能外， [!DNL Pebble]，請參閱下方的Adobe建立的其他函式，這些函式可用於資料匯出。
 
 ### `addedSegments` 和 `removedSegments` 函式 {#addedsegments-removedsegments-functions}
 
 #### 使用案例
 
-可以使用這些函式來獲取添加到配置檔案或從配置檔案中刪除的段的清單。
+可使用這些函式來取得新增至設定檔或從設定檔中移除的區段清單。
 
 #### 範例
 
@@ -200,7 +200,7 @@ added: <111111><333333>;|removed: <222222>;
 
 ## 後續步驟 {#next-steps}
 
-你現在知道 [!DNL Pebble] Destination SDK中支援函式，以及如何使用這些函式來調整導出資料的格式以滿足您的需要。 接下來，您應查看以下頁面：
+您現在知道是哪一個 [!DNL Pebble] Destination SDK支援函式，以及如何使用它們調整匯出資料的格式以符合您的需求。 接下來，請檢閱下列頁面：
 
-* [建立和test消息轉換模板](../../testing-api/streaming-destinations/create-template.md)
-* [呈現模板API操作](../../testing-api/streaming-destinations/render-template-api.md)
+* [建立及測試訊息轉換範本](../../testing-api/streaming-destinations/create-template.md)
+* [演算範本API作業](../../testing-api/streaming-destinations/render-template-api.md)
