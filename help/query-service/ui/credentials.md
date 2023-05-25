@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取由您組織內的使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1462'
 ht-degree: 3%
 
 ---
@@ -48,6 +48,10 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 您可以使用不會到期的認證來設定與外部使用者端更永久的連線。
 
+>[!NOTE]
+>
+>不會到期的認證有下列限制：<br><ul><li>使用者登入時必須輸入由下列專案組成的使用者名稱和密碼： `{technicalAccountId}:{credential}`. 如需詳細資訊，請參閱 [產生認證](#generate-credentials) 區段。</li><li>建立即將到期的認證時，系統會建立具有一組基本許可權的新角色，讓使用者檢視結構描述和資料集。 「管理查詢」許可權也會指派給此角色，以搭配查詢服務使用。</li><li>列出查詢物件時，第三方使用者端可能會執行與預期不同的動作。 例如，某些協力廠商使用者端，例如 [!DNL DB Visualizer] 不會在左側面板中顯示檢視名稱。 不過，若在SELECT查詢中呼叫，則可存取檢視名稱。 同樣地， [!DNL PowerUI] 可能不會列出透過SQL建立的暫存檢視，以選取它來建立儀表板。</li></ul>
+
 ### 先決條件
 
 您必須先在Adobe Admin Console中完成下列步驟，才能產生不會到期的認證：
@@ -63,7 +67,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 現在，所有必要的許可權都已在Adobe Developer Console中設定，以便使用者使用即將到期的認證功能。
 
-### 產生認證
+### 產生認證 {#generate-credentials}
 
 若要建立一組不會到期的認證，請返回Platform UI並選擇 **[!UICONTROL 查詢]** 從左側導覽存取 [!UICONTROL 查詢] 工作區。 接下來，選取 **[!UICONTROL 認證]** 索引標籤後接 **[!UICONTROL 產生認證]**.
 
