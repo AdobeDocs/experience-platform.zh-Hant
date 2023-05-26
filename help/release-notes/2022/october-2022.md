@@ -34,7 +34,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料串流的敏感資料處理 | 資料串流現在運用數種平台技術，以適當方式處理健康保險流通與責任法案(HIPAA)等法規所強制執行的敏感資料。 請參閱以下小節： [處理資料串流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得詳細資訊。 |
+| 資料串流的敏感資料處理 | 資料串流現在運用數種平台技術，以適當方式處理由健康保險便利與責任法案(HIPAA)等法規強制執行的敏感資料。 請參閱以下小節： [處理資料串流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得詳細資訊。 |
 | [!DNL Splunk] 事件轉送的擴充功能 | 您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 副檔名。 請參閱 [[!DNL Splunk] 擴充功能概觀](../../tags/extensions/server/splunk/overview.md) 以取得詳細資訊。 |
 | [!DNL Zendesk] 事件轉送的擴充功能 | 您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 副檔名。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../../tags/extensions/server/zendesk/overview.md) 以取得詳細資訊。 |
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用API管理資料集的資料使用標籤
 description: 資料集服務API可讓您套用和編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的目錄服務API不同。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 1f7a1bcf5aaf694ca2d3416c9c98f37b66adc69f
+source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1151'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 >[!NOTE]
 >
->如果相關資料集目前已有標籤，則只能透過PUT請求新增新標籤，該請求需要 `If-Match` 標頭。 標籤新增至資料集後， `etag` 會指派值，以便稍後用來更新或移除標籤。
+>如果相關資料集目前已有標籤，則只能透過PUT請求新增新標籤，該請求需要 `If-Match` 標頭。 標籤新增至資料集後，最近一次 `etag` 稍後需要值才能更新或移除標籤。
 
 若要擷取最新版本的資料集 — 標籤實體，請建立 [GET要求](#look-up) 至 `/datasets/{DATASET_ID}/labels` 端點。 目前的值會傳回至下方的回應中 `etag` 標頭。 更新現有資料集標籤時，最佳實務是先執行資料集的查詢請求，以擷取其最新資料 `etag` 值之前，在下列位置使用該值： `If-Match` 後續PUT請求的標頭。
 

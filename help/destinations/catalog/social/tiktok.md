@@ -68,7 +68,7 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 若要驗證至目的地，系統會將您重新導向以登入 [!DNL TikTok Ads Manager] 帳戶並授權Adobe代表您管理對象。
 
-![TikTok許可權選擇](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "用於選取許可權的TikTok UI影像")
+![TikTok許可權選取](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "用於選取許可權的TikTok UI影像")
 
 ### 填寫目的地詳細資料 {#destination-details}
 

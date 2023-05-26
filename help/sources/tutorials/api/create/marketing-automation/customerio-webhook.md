@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >此 [!DNL Customer.io] 來源為測試版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
-以下教學課程將逐步引導您完成建立 [!DNL Customer.io] 要帶來的來源連線和資料流 [[!DNL Customer.io]](https://customer.io/) 使用將事件資料匯入Adobe Experience Platform [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+下列教學課程將逐步引導您完成建立 [!DNL Customer.io] 要帶來的來源連線和資料流 [[!DNL Customer.io]](https://customer.io/) 使用將事件資料匯入Adobe Experience Platform [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門 {#getting-started}
 

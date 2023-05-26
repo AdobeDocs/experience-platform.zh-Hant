@@ -239,7 +239,7 @@ Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 
 
 ### API錯誤代碼和特定於Ad Hoc Activation API的訊息 {#specific-error-messages}
 
-使用臨機啟動API時，您可能會遇到特定於此API端點的錯誤訊息。 請檢閱表格以瞭解如何在它們出現時解決它們。
+使用臨機啟動API時，您可能會遇到特定於此API端點的錯誤訊息。 請檢閱表格以瞭解如何在它們出現時加以處理。
 
 | 錯誤訊息 | 解決方法 |
 |---------|----------|

@@ -41,7 +41,7 @@ ht-degree: 1%
 
 ## Connect [!DNL Zendesk] 至平台，使用 [!DNL Flow Service] API
 
-以下教學課程將逐步引導您完成建立 [!DNL Zendesk] 來源連線並建立資料流以帶來 [!DNL Zendesk] 使用將資料傳送至Platform [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+下列教學課程將逐步引導您完成建立 [!DNL Zendesk] 來源連線並建立資料流以帶來 [!DNL Zendesk] 使用將資料傳送至Platform [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### 建立基礎連線 {#base-connection}
 

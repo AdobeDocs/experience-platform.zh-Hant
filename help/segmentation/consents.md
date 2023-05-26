@@ -58,7 +58,7 @@ ht-degree: 0%
 
 * **[!UICONTROL 否（選擇退出）]**
 * **[!UICONTROL 「否」（選擇退出）的預設值]**
-* **[!UICONTROL 未知]** （若另有不明情況，則會假設未獲得同意）
+* **[!UICONTROL 未知]** （若未提供其他資訊，則會假設未提供同意）
 
 ![](./images/opt-outs/collect.png)
 

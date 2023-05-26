@@ -70,7 +70,7 @@ Adobe Experience Platform Web SDK也可以直接將資料傳送至Adobe Experien
 * **Experience Edge：** 以所需的格式輕鬆將資料路由至Adobe Experience Platform和解決方案。
 * **Adobe Experience Platform和Adobe解決方案：** 啟用他們的價值主張。
 
-**控制：** 由於所有資料都使用單一且連線的資料流，因此在邏輯上，您可以追蹤並控制資料在往返應用程式的每個毫秒歷程中的外觀。
+**控制：** 由於所有資料都使用單一且連線的資料流，因此您可以在邏輯上追蹤並控制資料與其應用程式之間每毫秒歷程的外觀。
 
 **現代，為未來做好準備：** Web SDK及其與Experience Edge Network的連線讓Adobe得以大幅現代化Adobe處理資料收集、個人化、同意和未來第三方Cookie的方式。 (這會啟用第一方網域，由Adobe管理。)
 

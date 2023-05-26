@@ -15,7 +15,7 @@ ht-degree: 0%
 
 查詢加速存放區可讓您建立自訂資料模型和/或擴充現有的Adobe Real-time Customer Data Platform資料模型。 然後，您可以參與或將您的報告深入解析內嵌到您選擇的報表/視覺效果架構中。 請參閱Real-time Customer Data Platform Insights資料模型檔案以瞭解如何 [自訂SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../../dashboards/cdp-insights-data-model.md).
 
-Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、區段和目的地的深入分析，並啟用Real-Time CDP深入分析控制面板。 本檔案將引導您完成建立報表深入分析資料模型的程式，同時也會引導您視需要擴充Real-Time CDP資料模型。
+Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、區段和目的地的深入分析，並啟用Real-Time CDP深入分析控制面板。 本檔案將引導您完成建立報表深入分析資料模型的程式，以及根據需要如何擴充Real-Time CDP資料模型。
 
 ## 先決條件
 

@@ -82,7 +82,7 @@ Adobe Experience Platform [!DNL Identity Service] 在Adobe Experience Platform�
 
 >[!NOTE]
 >
->當請求中使用原生XID時，所有傳回的身分都將採用原生XID格式。 建議使用ID/名稱空間表單。 如需詳細資訊，請參閱以下章節： [取得身分的XID](./create-custom-namespace.md).
+>請求中使用原生XID時，所有傳回的身分都將採用原生XID格式。 建議使用ID/名稱空間表單。 如需詳細資訊，請參閱以下章節： [取得身分的XID](./create-custom-namespace.md).
 
 ## 後續步驟
 

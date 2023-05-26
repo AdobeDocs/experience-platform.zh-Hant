@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料控管概觀
 description: Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和原則。 它在各種層級的Experience Platform中發揮關鍵作用，包括編目、資料譜系、資料使用標籤、資料使用原則，以及控制行銷動作的資料使用
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1498'
 ht-degree: 1%
 
 ---
@@ -79,7 +79,7 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵�
 
 為了使資料使用標籤有效地支援資料合規性，必須實施資料使用原則。 資料使用原則是描述允許或限制您對內資料執行何種行銷動作的規則 [!DNL Experience Platform].
 
-行銷動作的範例可能是想要將資料集匯出至協力廠商服務。 如果制定原則宣告個人識別資訊(PII)無法匯出，且「I」標籤（身分資料）已套用至資料集， [!DNL Policy Service] 防止任何會將此資料集匯出至協力廠商目的地的動作。 如果其中一個動作嘗試發生，原則服務會傳送訊息告訴您資料使用原則已違反。
+行銷動作的範例可能是想要將資料集匯出至協力廠商服務。 如果制定原則宣告個人識別資訊(PII)無法匯出，且「I」標籤（身分資料）已套用至欄位層級或資料集， [!DNL Policy Service] 防止任何會將此資料集匯出至協力廠商目的地的動作。 如果其中一個動作嘗試發生，原則服務會傳送訊息告訴您資料使用原則已違反。
 
 有兩種可用的原則：
 

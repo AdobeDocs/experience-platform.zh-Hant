@@ -50,7 +50,7 @@ CMK僅支援來自 [!DNL Microsoft Azure] 金鑰儲存庫。 若要開始使用�
 
 >[!IMPORTANT]
 >
->只有高階和標準服務層級 [!DNL Azure] 支援金鑰儲存庫。 [!DNL Azure Managed HSM]， [!DNL Azure Dedicated HSM] 和 [!DNL Azure Payments HSM] 不受支援。 請參閱 [[!DNL Azure] 檔案](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) 以取得主要管理服務的詳細資訊。
+>只有高階和標準服務層級 [!DNL Azure] 支援金鑰儲存庫。 [!DNL Azure Managed HSM]， [!DNL Azure Dedicated HSM] 和 [!DNL Azure Payments HSM] 不受支援。 請參閱 [[!DNL Azure] 檔案](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) 以取得所提供之重要管理服務的詳細資訊。
 
 >[!NOTE]
 >

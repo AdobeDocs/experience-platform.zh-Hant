@@ -41,7 +41,7 @@ Experience PlatformUI中的左側導覽可使用鍵盤存取，並可在符合�
 
 ![Experience Platform左側導覽並選取來源。](images/left-navigation-sources.png)
 
-Platform中的某些功能並未針對所有使用者啟用。 這些專案會顯示在導覽中，但無法選取。 使用鍵盤導覽時，這些專案會在箭頭導覽期間略過，且無法透過以下方式選取 **輸入（退貨）**.
+Platform中的某些功能並未針對所有使用者啟用。 這些專案會顯示在導覽中，但無法選取。 使用鍵盤導覽時，這些專案會在箭頭導覽期間被跳過，且不能使用選取 **輸入（退貨）**.
 
 ![無法選取未對使用者啟用的Experience Platform左側導覽區段。](images/left-navigation-sections-disabled.png)
 

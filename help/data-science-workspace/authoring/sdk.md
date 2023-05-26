@@ -193,7 +193,7 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-DataSaver類別會封裝與儲存輸出資料相關的任何專案，包括來自評分或功能工程的資料。 資料儲存器會擴充抽象類別 `DataSaver` 和必須覆寫抽象方法 `save`.
+DataSaver類別會封裝與儲存輸出資料相關的任何專案，包括評分或功能工程產生的資料。 資料儲存器會擴充抽象類別 `DataSaver` 和必須覆寫抽象方法 `save`.
 
 **PySpark**
 

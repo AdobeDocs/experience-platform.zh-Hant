@@ -58,7 +58,7 @@ GET /authoring/destination-servers/{INSTANCE_ID}
 
 >[!TAB 擷取所有目的地伺服器設定]
 
-以下請求將依據以下內容，擷取您有權存取的目的地伺服器設定清單 [!DNL IMS Org ID] 和沙箱設定。
+下列要求會根據下列要求，擷取您有權存取的目的地伺服器設定清單 [!DNL IMS Org ID] 和沙箱設定。
 
 +++請求
 

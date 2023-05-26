@@ -164,7 +164,7 @@ ht-degree: 14%
 
 ![請求建立選項](../images/user-guide/create-options.png)
 
-此 **[!UICONTROL 上傳JSON]** 對話方塊隨即出現，提供您拖放JSON檔案的視窗。
+此 **[!UICONTROL 上傳JSON]** 對話方塊隨即出現，為您提供可將JSON檔案拖放到的視窗。
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 

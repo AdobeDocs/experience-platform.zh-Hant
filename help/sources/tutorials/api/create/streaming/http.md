@@ -290,7 +290,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
 
 ## 建立來源連線 {#source}
 
-POST若要建立來源連線，請向 `/sourceConnections` 端點並提供您的基本連線ID。
+POST若要建立來源連線，請向 `/sourceConnections` 端點，並提供您的基本連線ID。
 
 **API格式**
 

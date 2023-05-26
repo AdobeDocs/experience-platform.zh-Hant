@@ -75,7 +75,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 - [依位移和限制篩選資料](#filter-by-offset-and-limit)
 - [依日期篩選資料](#filter-by-date)
 - [依欄篩選資料](#filter-by-selected-columns)
-- [取得排序的結果](#get-sorted-results)
+- [取得排序結果](#get-sorted-results)
 
 >[!NOTE]
 >

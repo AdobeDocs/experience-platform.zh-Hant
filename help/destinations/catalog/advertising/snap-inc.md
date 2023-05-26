@@ -120,7 +120,7 @@ ht-degree: 1%
 
 ## 驗證資料匯出 {#exported-data}
 
-對啟用區段後 *Snap Inc* 目的地，您將能夠在「貼齊廣告管理員」的 [**受眾** 區段](https://businesshelp.snapchat.com/s/article/audience-sharing). 若要導覽至本區段，請依照下列步驟進行：
+對啟用區段後 *Snap Inc* 目的地，您將能夠在「貼齊廣告管理員」的 [**受眾** 區段](https://businesshelp.snapchat.com/s/article/audience-sharing). 若要導覽至此區段，請依照下列步驟進行：
 
 1. 登入 [貼齊廣告管理員](https://ads.snapchat.com/)
 2. 選取 **受眾** 從畫面左上角的下拉式功能表。 您會在對象庫中看到您在Adobe Experience Platform中啟用的區段：

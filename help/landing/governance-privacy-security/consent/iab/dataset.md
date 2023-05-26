@@ -80,7 +80,7 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
-接下來，尋找 **[!UICONTROL 身分對應]** 欄位群組，並加以選取。 兩個欄位群組都在右側欄中列出後，請選取「 」 **[!UICONTROL 新增欄位群組]**.
+接下來，尋找 **[!UICONTROL 身分對應]** 欄位群組，並加以選取。 將兩個欄位群組都列在右側邊欄中後，選取 **[!UICONTROL 新增欄位群組]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-identitymap.png)
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-接下來，尋找 **[!UICONTROL 身分對應]** 欄位群組，並加以選取。 兩個欄位群組都在右側欄中列出後，請選取「 」 **[!UICONTROL 新增欄位群組]**.
+接下來，尋找 **[!UICONTROL 身分對應]** 欄位群組，並加以選取。 將兩個欄位群組都列在右側邊欄中後，選取 **[!UICONTROL 新增欄位群組]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-identitymap.png)
 

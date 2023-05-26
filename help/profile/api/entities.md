@@ -495,7 +495,7 @@ curl -X GET \
 
 ## 依身分存取多個設定檔的時間序列事件
 
-您可以透過向發出POST請求，從多個關聯的設定檔存取時間序列事件 `/access/entities` 端點，並在裝載中提供設定檔身分。 這些身分分別包含一個ID值(`entityId`)和身分名稱空間(`entityIdNS`)。
+您可以透過向發出POST請求，從多個關聯的設定檔存取時間序列事件。 `/access/entities` 端點，並在裝載中提供設定檔身分。 這些身分分別包含一個ID值(`entityId`)和身分名稱空間(`entityIdNS`)。
 
 **API格式**
 

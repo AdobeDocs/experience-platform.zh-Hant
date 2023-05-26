@@ -4,9 +4,9 @@ title: 電子郵件行銷目的地概觀
 type: Tutorial
 description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 瞭解哪些ESP受支援作為Experience Platform目的地。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 29c02cf977863a348252f9a8b40b3b6ec8a83a9c
+source-git-commit: 152786e5e994a88b19ca7af8815b33be5a732852
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '374'
 ht-degree: 4%
 
 ---
@@ -23,6 +23,7 @@ Adobe Experience Platform支援下列電子郵件行銷目的地：
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
+* [Mailchimp興趣類別](mailchimp-interest-categories.md)
 * [(API)OracleEloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（檔案） Oracle Eloqua](oracle-eloqua.md)
