@@ -2,7 +2,7 @@
 title: 設定檔匯出行為
 description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: c54fa206b673868ca3d0ccfa5b0936b83cfd3ed4
 workflow-type: tm+mt
 source-wordcount: '2933'
 ht-degree: 0%
@@ -29,10 +29,10 @@ Experience Platform目的地會以HTTPS呼叫的形式將資料匯出至API型�
 
 取得 [facebook目的地](/help/destinations/catalog/social/facebook.md) 搭配 *[可設定的彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 原則為例 — 資料會以彙總方式傳送，其中目的地服務會擷取設定檔服務上游的所有傳入資料，並在將資料分派至Facebook之前，依下列其中一個專案彙總資料：
 
-* 記錄數（最多10.000條）或
+* 記錄數（最多10,000條）或
 * 時間間隔（30分鐘）
 
-首次符合上述臨界值的任何一項，都會觸發匯出至Facebook的作業。 因此，在 [!DNL Facebook Custom Audiences] 儀表板，您可能會看到以10.000筆記錄增量從Experience Platform傳入受眾。 您可能會每10到15分鐘看到10,000筆記錄，因為資料的處理與彙總速度比30分鐘的匯出間隔還快，而且傳送速度也快，所以大約每10到15分鐘就會有記錄處理完畢。 如果沒有足夠的記錄來組成10.000批次，則當達到時間範圍臨界值時，將會傳送目前的記錄數，因此您也可能看到傳送到Facebook的較小批次。
+首次符合上述臨界值的任何一項，都會觸發匯出至Facebook的作業。 因此，在 [!DNL Facebook Custom Audiences] 儀表板，您可能會看到以10,000筆記錄增量從Experience Platform傳入的受眾。 您可能會每10到15分鐘看到10,000筆記錄，因為資料的處理與彙總速度比30分鐘匯出間隔還快，而且傳送速度也快，所以大約每10到15分鐘就會有記錄處理完畢。 如果記錄不足以組成10,000個批次，則當達到時間範圍臨界值時，將會傳送目前的記錄數，因此您也可能看到傳送至Facebook的較小批次。
 
 再舉一個例子，請考慮 [HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md)，具有 *[最大努力彙總](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)* 原則，搭配 `maxUsersPerRequest: 10`. 這表示在為此目的地觸發HTTP呼叫之前，最多會彙總10個設定檔，但Experience Platform會在目的地服務收到來自上游服務的更新重新評估資訊後，嘗試將設定檔分派至目的地。
 
@@ -145,7 +145,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 ### 增量檔案匯出 {#incremental-file-exports}
 
-並非所有設定檔更新都符合增量檔案匯出中包含的設定檔資格。 例如，如果將屬性新增至設定檔或從設定檔中移除，則匯出中不會包含設定檔。 僅限設定檔的 `segmentMembership` 屬性已變更將會包含在匯出的檔案中。 換言之，僅當輪廓成為區段的一部分或從區段中移除時，它才會包含在增量檔案匯出中。
+並非所有設定檔更新都符合增量檔案匯出中包含的設定檔資格。 例如，如果將屬性新增至設定檔或從設定檔中移除，則匯出中不會包含設定檔。 僅限設定檔的 `segmentMembership` 屬性已變更將會包含在匯出的檔案中。 換言之，只有在輪廓成為區段的一部分或從區段中移除時，它才會包含在增量檔案匯出中。
 
 同樣地，如果將新的身分識別（新的電子郵件地址、電話號碼、ECID等）新增至 [身分圖表](/help/identity-service/ui/identity-graph-viewer.md)，但這不表示有理由將該設定檔納入新的增量檔案匯出。
 
