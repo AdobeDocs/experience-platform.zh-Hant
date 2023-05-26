@@ -4,19 +4,14 @@ solution: Experience Platform
 title: Marketo Engage來源的對應欄位
 description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的對應。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 7%
+source-wordcount: '889'
+ht-degree: 4%
 
 ---
 
 # [!DNL Marketo Engage] 欄位對應 {#marketo-engage-field-mappings}
-
->[!CONTEXTUALHELP]
->id="platform_sources_marketo_mapping"
->title="Marketo 來源欄位對應"
->abstract="若要在 Marketo 和平台之間建立來源連線，必須在將 Marketo 來源資料欄位擷取至平台之前將其對應到其適當的目標 XDM 欄位。"
 
 下表包含九個欄位之間的對應 [!DNL Marketo] 資料集與其對應的體驗資料模型(XDM)欄位。
 

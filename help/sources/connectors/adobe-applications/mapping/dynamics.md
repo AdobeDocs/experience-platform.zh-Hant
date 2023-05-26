@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Salesforce；Salesforce；欄位對應；欄位對應；對應；marketo；B2B；b2b
 title: Microsoft Dynamics對應欄位
 description: 下表包含Microsoft Dynamics來源欄位與其對應XDM欄位之間的對應。
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
-source-git-commit: a278f27223c9a5d0b97a0aa6b5d943caf5f6b10e
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '524'
 ht-degree: 9%
 
 ---

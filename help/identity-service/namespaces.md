@@ -2,9 +2,9 @@
 title: 身分名稱空間概觀
 description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。 例如，他們會將「name@email.com」的值視為電子郵件地址，或將「443522」的值視為數值CRM ID。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 58fefcc0a590341922f0769a416e27cd1f13a617
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1719'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 8%
 | 裝置ID | 裝置ID會識別硬體裝置，例如IDFA (iPhone和iPad)、GAID (Android)和RIDA (Roku)，而且可由家中的多個人共用。 |
 | 電子郵件地址 | 電子郵件地址通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 此型別的身分包含個人識別資訊(PII)。 此表示會 [!DNL Identity Service] 以敏感地處理值。 |
 | 非人員識別碼 | 非人員ID是用來儲存需要名稱空間但未連線至人員叢集的識別碼。 例如，產品SKU、與產品、組織或商店相關的資料。 |
-| 合作夥伴ID | 合作夥伴ID是資料合作夥伴用來代表人員的識別碼。 合作夥伴ID通常是以假名表示，以免揭露個人的真實身分，而且可能是機率。 在Real-time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充，而非用於建立確定性身分圖表連結。 |
+| 合作夥伴ID [!BADGE Beta]{type=Informative} | 合作夥伴ID是資料合作夥伴用來代表人員的識別碼。 合作夥伴ID通常是以假名表示，以免揭露個人的真實身分，而且可能是機率。 在Real-time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充，而非用於建立確定性身分圖表連結。 |
 | 電話號碼 | 電話號碼通常與單一人員相關聯，因此可用於跨不同頻道識別該人員。 此型別的身分識別包括PII。 此表示以下情況： [!DNL Identity Service] 以敏感地處理值。 |
 
 ### 標準名稱空間 {#standard}

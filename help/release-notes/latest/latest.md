@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年5月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e705d6c38bc1a81ee5d2c31a3097e1dba8f5cf7f
+source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 4%
 
 ---
@@ -117,7 +117,7 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 | 功能 | 說明 |
 | --- | --- |
-| 支援Adobe Experience Cloud應用程式中的合作夥伴ID | Identity Service現在提供合作夥伴ID。 合作夥伴ID是資料合作夥伴用來代表人員的識別碼。 在Real-time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充。 合作夥伴ID不會儲存在身分圖表中。 如需詳細資訊，請閱讀以下檔案： [身分型別](../../identity-service/namespaces.md#identity-types). |
+| 支援Adobe Experience Cloud應用程式中的合作夥伴ID [!BADGE Beta]{type=Informative} | Identity Service現在提供合作夥伴ID。 合作夥伴ID是資料合作夥伴用來代表人員的識別碼。 在Real-time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充。 合作夥伴ID不會儲存在身分圖表中。 如需詳細資訊，請閱讀以下檔案： [身分型別](../../identity-service/namespaces.md#identity-types). |
 
 若要進一步瞭解Identity Service，請閱讀 [Identity Service概觀](../../identity-service/home.md)
 

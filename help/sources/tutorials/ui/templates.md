@@ -3,14 +3,19 @@ description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加
 title: 在UI中使用範本建立來源資料流
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 91d6832231d75c9dd23e91a5f1152eac61558fc5
+source-git-commit: 41694a96272819652c7176793f94a2de620d1d7a
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 9%
+source-wordcount: '1601'
+ht-degree: 8%
 
 ---
 
-# 在UI中使用範本建立來源資料流
+# 在UI中使用範本建立來源資料流 {#create-a-sources-dataflow-using-templates-in-the-ui}
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_marketo_mapping"
+>title="Platform UI中來源的範本"
+>abstract="範本包括自動產生的資產，例如結構描述、資料集、身分、對應規則、身分名稱空間和資料流程，您可以從來源將資料帶入Experience Platform時使用這些資產。 您可以更新自動產生的資產以供自訂，以符合您的使用案例。"
 
 >[!IMPORTANT]
 >

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Salesforce；Salesforce；欄位對應；欄位對應；對應；marketo；B2B；b2b
 title: Salesforce對應欄位
 description: 下表包含Salesforce來源欄位與其對應XDM欄位之間的對應。
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 5e93a86d6bdbf66e6b4991e0e2bc4d3dfe90d2b5
+source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '462'
 ht-degree: 9%
 
 ---
