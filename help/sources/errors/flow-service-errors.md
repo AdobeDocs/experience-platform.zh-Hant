@@ -2,7 +2,7 @@
 title: 流程服務錯誤訊息
 description: 瞭解在針對來源使用流量服務時可能會遇到的錯誤訊息。
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: 7a9460498eaca54f8220edda8bce33ffdefaa037
+source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '1698'
 ht-degree: 1%
