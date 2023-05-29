@@ -3,7 +3,7 @@ title: 在使用者介面中建立Pendo來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Pendo來源連線。
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 1%

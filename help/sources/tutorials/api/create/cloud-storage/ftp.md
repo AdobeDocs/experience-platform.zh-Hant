@@ -5,7 +5,7 @@ title: 使用流量服務API建立FTP基本連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至FTP （檔案傳輸通訊協定）伺服器。
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 1%

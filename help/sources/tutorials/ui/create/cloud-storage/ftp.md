@@ -5,7 +5,7 @@ title: 在使用者介面中建立FTP來源連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立FTP來源連線。
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 1%

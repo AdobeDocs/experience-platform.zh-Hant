@@ -5,7 +5,7 @@ title: 使用流量服務API建立Apache HDFS基本連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將ApacheHadoop分散式檔案系統連線到Adobe Experience Platform。
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%

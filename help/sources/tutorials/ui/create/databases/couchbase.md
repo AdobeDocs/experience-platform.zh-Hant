@@ -5,7 +5,7 @@ title: 在使用者介面中建立Couchbase來源連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Couchbase來源連線。
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 1%

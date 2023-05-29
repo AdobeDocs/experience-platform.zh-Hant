@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；
 title: (Beta) Mixpanel來源聯結器概觀
 description: 瞭解如何使用API或使用者介面將Mixpanel連線至Adobe Experience Platform。
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%

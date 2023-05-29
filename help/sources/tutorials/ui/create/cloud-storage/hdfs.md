@@ -5,7 +5,7 @@ title: 在使用者介面中建立Apache HDFS來源連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立ApacheHadoop分散式檔案系統來源連線。
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 1%

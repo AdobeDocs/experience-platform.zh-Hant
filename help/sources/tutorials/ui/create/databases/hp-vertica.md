@@ -5,7 +5,7 @@ title: 在使用者介面中建立HP Vertica來源連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立HP Vertica來源連線。
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 1%

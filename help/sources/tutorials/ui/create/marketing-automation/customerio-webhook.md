@@ -3,7 +3,7 @@ title: 在UI中建立Customer.io來源連線和資料流
 description: 瞭解如何使用Adobe Experience Platform UI建立Customer.io來源連線。
 badge: Beta
 exl-id: 7655a34c-808a-46e3-94e3-022a433755a4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 1%

@@ -5,7 +5,7 @@ title: 在UI中建立Phoenix來源連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Phoenix來源連線。
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

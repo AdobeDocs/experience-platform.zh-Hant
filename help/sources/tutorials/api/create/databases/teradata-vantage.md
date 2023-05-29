@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；Teradata優勢
 title: 使用Flow Service API建立Teradata Vantage基本連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Teradata Vantage。
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%

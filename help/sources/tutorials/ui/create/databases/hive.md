@@ -5,7 +5,7 @@ title: 在UI中的Azure HDInsights來源連線上建立Apache Hive
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI在Azure HDInsights來源連線上建立Apache Hive。
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%

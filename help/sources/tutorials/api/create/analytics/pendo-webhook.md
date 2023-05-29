@@ -3,7 +3,7 @@ title: 使用Flow Service API為Pendo建立來源連線和資料流
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Pendo。
 badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '1459'
 ht-degree: 1%

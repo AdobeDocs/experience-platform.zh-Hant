@@ -2,7 +2,7 @@
 title: 使用Flow Service API建立Google Ads基本連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Google Ads。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 7c77b0dc658ad45a25f4ead4e14f5826701cf645
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '747'
 ht-degree: 1%

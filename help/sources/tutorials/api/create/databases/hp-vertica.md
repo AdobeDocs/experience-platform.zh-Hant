@@ -5,7 +5,7 @@ title: 使用Flow Service API建立HP Vertica基本連線
 type: Tutorial
 description: 瞭解如何使用Flow Service API將HP Vertica連線到Adobe Experience Platform。
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%

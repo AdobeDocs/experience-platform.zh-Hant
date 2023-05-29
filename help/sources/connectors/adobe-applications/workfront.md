@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；
 title: (Beta) Adobe Workfront來源
 description: Adobe Workfront是行銷工作管理應用程式，協助您在一個地方管理整個工作生命週期。 Workfront包含報告和分析工具，可用來更清楚瞭解並最佳化組織內的工作流程。
 exl-id: ea714278-d84d-4929-9a34-81fc5fb70871
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 1%

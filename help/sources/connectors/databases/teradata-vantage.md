@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；teradata；teradata優�
 title: teradata Vantage來源聯結器概述
 description: 瞭解如何使用API或使用者介面將Teradata Vantage連線至Adobe Experience Platform。
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
-source-git-commit: 322b9aa5b817276eb4b56daf6e410944591c1d51
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%

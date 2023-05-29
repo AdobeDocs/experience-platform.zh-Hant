@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；
 title: （測試版）在UI中建立Adobe Workfront來源連線
 description: 本教學課程提供建立Adobe Workfront來源連線的步驟，以使用使用者介面將Workfront資料帶入Adobe Experience Platform。
 exl-id: f82e852a-c9d1-4ecc-bc54-2b39d3b4cc1e
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '771'
 ht-degree: 1%

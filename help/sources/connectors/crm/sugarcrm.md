@@ -4,7 +4,7 @@ description: 瞭解如何使用API或使用者介面將SugarCRM連線至Adobe Ex
 badge: Beta
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 0cc4eab97dcd56d2b1d679cf5f35932976d22634
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%

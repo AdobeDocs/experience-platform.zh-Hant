@@ -5,7 +5,7 @@ title: 使用Flow Service API建立Phoenix基本連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將Phoenix資料庫連線至Adobe Experience Platform。
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
