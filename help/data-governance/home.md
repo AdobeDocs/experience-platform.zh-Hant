@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料控管概觀
 description: Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和原則。 它在各種層級的Experience Platform中發揮關鍵作用，包括編目、資料譜系、資料使用標籤、資料使用原則，以及控制行銷動作的資料使用
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: d45c813cf660d9bf738d09101536f1dfb41a1505
+source-git-commit: e6f003a058f50454a6fd4923510976973c6946fb
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1518'
 ht-degree: 1%
 
 ---
@@ -127,8 +127,6 @@ Adobe Experience Platform資料控管可讓您管理客戶資料，並確保遵�
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-<!-- A key section of the video is now outdated due to the deprecation of the dataset field level labelling feature.
+以下影片提供如何在Experience Platform中將資料使用標籤套用至結構描述和資料集的指南。
 
-The following video provides an introduction to various Data Governance features in Experience Platform.
-
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
