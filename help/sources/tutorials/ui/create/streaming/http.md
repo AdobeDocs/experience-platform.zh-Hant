@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；串流連線；建立串流連線；ui指南；教學課程；建立串流連線；串流擷取；擷取；
-solution: Experience Platform
 title: 使用UI建立HTTP API串流連線
-type: Tutorial
 description: 本UI指南將協助您使用Adobe Experience Platform建立串流連線。
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -71,7 +68,7 @@ ht-degree: 0%
 
 此 [!UICONTROL 對應] 步驟隨即顯示，提供將來源資料對應至Platform資料集的介面。
 
-Parquet檔案必須與XDM相容，並且不需要您手動設定對應，而CSV檔案則需要您明確設定對應，但允許您選取要對應的來源資料欄位。 若標示為XDM投訴，則JSON檔案不需要手動設定。 但是，如果它未標籤為XDM相容，則需要您明確設定對應。
+此 [!DNL HTTP API] 來源支援JSON檔案的擷取。 如果標示為XDM投訴，則JSON檔案不需要手動設定。 如果沒有，則必須明確設定對應。
 
 選擇要將傳入資料擷取的資料集。 您可以使用現有的資料集或建立新的資料集。
 
@@ -88,7 +85,6 @@ Parquet檔案必須與XDM相容，並且不需要您手動設定對應，而CSV�
 ![existing-data](../../../../images/tutorials/create/http/existing-dataset.png)
 
 ### 對應標準欄位
-
 
 您可以視需要選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算值或計算值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱 [資料準備UI指南](../../../../../data-prep/ui/mapping.md).
 
