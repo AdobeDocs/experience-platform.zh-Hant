@@ -2,10 +2,10 @@
 title: 事件轉送擴充功能參考
 description: 尋找Adobe Experience Platform中事件轉送擴充功能的檔案。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 2fdaa1921110b38c7e97ed4889a238d655ef88a1
+source-git-commit: 3c2ada6e5dec7cc95fbcca7e19d944ca06097edc
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 18%
+source-wordcount: '169'
+ht-degree: 17%
 
 ---
 
@@ -31,10 +31,12 @@ ht-degree: 18%
 * [Adobe Experience Platform雲端聯結器](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
+* [Google Analytics的Cloud Connector](https://exchange.adobe.com/apps/ec/106542)*
 * [核心](./core/overview.md)
 * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads增強型轉換](./google-ads-enhanced-conversions/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
+* [[!DNL Meta] 轉換API](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Pega客戶決策中心](https://exchange.adobe.com/apps/ec/107597)*
