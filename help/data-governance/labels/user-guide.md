@@ -7,7 +7,7 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
 workflow-type: tm+mt
 source-wordcount: '1380'
-ht-degree: 17%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 17%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
 >title="控管 Platform 中的資料使用情況"
->abstract="<h2>說明</h2><p>Experience Platform中的資料控管架構可讓您根據資料使用限制來標籤屬性和結構描述，並設定可識別及遵循特定行銷動作這些限制的原則。</p>"
+>abstract="<h2>說明</h2><p>Experience Platform 中的資料控管架構可讓您根據資料使用限制來標記屬性和方案，並設定原則來識別和執行特定行銷活動的這些限制。</p>"
 
 本使用手冊說明在中使用資料使用標籤的步驟。 [!DNL Experience Platform] 使用者介面。
 
@@ -59,7 +59,7 @@ ht-degree: 17%
 
 ![此 [!UICONTROL 資料控管] 的標籤 [!UICONTROL 資料集] 工作區中反白顯示編輯鉛筆圖示。](../images/labels/dataset-level-edit.png)
 
-此 **[!UICONTROL 編輯治理標籤]** 對話方塊開啟。 在對話方塊中，勾選您要套用至資料集的標籤旁的方塊。 請記住，這些標籤將由資料集中的所有欄位繼承。 此 **[!UICONTROL 套用的標籤]** 勾選每個方塊時，標題都會更新，並顯示您選擇的標籤。 選取所需標籤後，請選取 **[!UICONTROL 儲存變更]**.
+此 **[!UICONTROL 編輯治理標籤]** 對話方塊開啟。 在對話方塊中，勾選您要套用至資料集的標籤旁的方塊。 請記住，這些標籤將由資料集內的所有欄位繼承。 此 **[!UICONTROL 套用的標籤]** 勾選每個方塊時，標題都會更新，並顯示您選擇的標籤。 選取所需標籤後，請選取 **[!UICONTROL 儲存變更]**.
 
 ![「編輯治理標籤」對話方塊中會反白顯示標籤核取方塊和儲存變更。](../images/labels/apply-labels-dataset.png)
 
