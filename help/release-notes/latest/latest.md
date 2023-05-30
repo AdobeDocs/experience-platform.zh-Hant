@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年5月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc886dc0d7abb1df76c12edc423bc788b443a788
+source-git-commit: 43f505c6d3871e6ebc7d644aef6ec3b71f9fc2bc
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1559'
 ht-degree: 4%
 
 ---
@@ -33,9 +33,11 @@ Adobe Experience Platform 現有功能更新：
 - [資料治理](#data-governance)
 - [資料擷取](#data-ingestion)
 - [目的地](#destinations)
+- [體驗資料模型(XDM)](#xdm)
 - [身份識別服務](#identity-service)
 - [查詢服務](#query-service)
 - [來源](#sources)
+
 
 ## 資料彙集 {#data-collection}
 
@@ -108,6 +110,24 @@ Adobe Experience Platform提供豐富的功能，可擷取任何型別和任何�
 - 我們已修正（測試版） SFTP雲端儲存空間目的地中的限制，該限制導致使用者無法自訂連線埠引數的值。 現在當您透過設定（測試版） SFTP目的地連線時，可編輯此值 [API](/help/destinations/api/activate-segments-file-based-destinations.md) 或 [UI](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information).
 
 如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
+
+## 體驗資料模型(XDM) {#xdm}
+
+XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提供通用結構和定義（結構描述）。 藉由遵守XDM標準，所有客戶體驗資料都可以整合到通用表示中，以更快、更整合的方式提供深入分析。 您可以從客戶動作獲得有價值的深入分析、透過區段定義客戶對象，以及使用客戶屬性進行個人化。
+
+**已更新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 欄位群組 | （多個） | 的數個欄位 [選件專案](https://github.com/adobe/xdm/pull/1720/files) 更新以從結構描述中移除雙重階層。 |
+| 欄位群組 | [[!UICONTROL XDM個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1721/files) | 此 `partnerProspect` 中繼資料標籤的選項已新增至 [!UICONTROL XDM個別潛在客戶設定檔] 類別。 |
+| 資料類型 | （多個） | 已為「 」新增多個欄位 [!UICONTROL 媒體詳細資訊] 資料型別。 |
+| 資料類型 | [[!UICONTROL 工作階段詳細資訊]](https://github.com/adobe/xdm/pull/1716/files) | 已新增新欄位，以指出是否發生重新導向。 |
+| 欄位群組 | [[!UICONTROL MediaAnalytics互動細節]](https://github.com/adobe/xdm/pull/1716/files) | 已新增與媒體報告相關的新欄位。 |
+
+{style="table-layout:auto"}
+
+如需Platform中XDM的詳細資訊，請閱讀 [XDM系統總覽](../../xdm/home.md).
 
 ## 身份識別服務 {#identity-service}
 
