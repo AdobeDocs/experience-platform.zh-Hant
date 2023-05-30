@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在使用者介面中定義XDM欄位
 description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: bed627b945c5392858bcc2dce18e9bbabe8bcdb6
+source-git-commit: 765079f084dce316d321fbac5aee9e387373ba00
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1505'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ ht-degree: 4%
 
 | 欄位屬性 | 相容型別 | 說明 |
 | --- | --- | --- |
-| [!UICONTROL 預設值] | [!UICONTROL 字串]， [!UICONTROL 兩次]， [!UICONTROL 長]， [!UICONTROL 整數]， [!UICONTROL 短]， [!UICONTROL 位元組]， [!UICONTROL 布林值] | 如果在擷取期間沒有提供其他值，則會指派給此欄位的預設值。 此值必須符合欄位選取的型別。 |
+| [!UICONTROL 預設值] | [!UICONTROL 字串]， [!UICONTROL 兩次]， [!UICONTROL 長]， [!UICONTROL 整數]， [!UICONTROL 短]， [!UICONTROL 位元組]， [!UICONTROL 布林值] | 如果在擷取期間未提供其他值，則為指派給此欄位的預設值。 此值必須符合欄位選取的型別。<br><br>預設值不會在擷取時儲存在資料集中，因為它們會隨著時間變更。 從資料集讀取資料時，下游平台服務和應用程式會推斷結構描述中設定的預設值。 例如，在使用「查詢服務」查詢資料時，如果屬性具有NULL值，但預設值設定為 `5` 在結構描述層級，預期查詢服務將傳回 `5` 而非NULL。 請注意，目前並非所有AEP服務都有這種行為。 |
 | [!UICONTROL 模式] | [!UICONTROL 字串] | A [規則運算式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) 此欄位的值必須符合以便在擷取期間被接受。 |
 | [!UICONTROL 格式] | [!UICONTROL 字串] | 從預先定義的字串格式清單中選取值必須符合的格式。 可用的格式包括： <ul><li>[[!UICONTROL 日期時間]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 電子郵件]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL 主機名稱]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json指標]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 最小長度] | [!UICONTROL 字串] | 為了在內嵌期間接受值，字串必須包含的最小字元數。 |
