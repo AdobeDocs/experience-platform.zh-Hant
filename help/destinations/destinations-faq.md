@@ -3,10 +3,10 @@ keywords: 目的地；問題；常見問題；常見問題集；目的地常見�
 title: 常見問答
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: abb6b598a2ec1f7589cb99204b6ccc2d4b55b5ec
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 4%
+source-wordcount: '1364'
+ht-degree: 3%
 
 ---
 
@@ -104,3 +104,53 @@ Google要求區段名稱必須是唯一的。 您所看到的數字是 [UNIX時�
 **我可以在哪一種身分啟用 [!DNL LinkedIn]？**
 
 [!DNL LinkedIn Matched Audiences] 支援啟用下列身分：雜湊電子郵件、 [!DNL GAID]、和 [!DNL IDFA].
+
+## 透過Adobe Target和自訂個人化目的地實現相同頁面和下一頁個人化 {#same-next-page-personalization}
+
+**我是否需要使用Experience PlatformWeb SDK將對象和屬性傳送至Adobe Target？**
+
+否， [Web SDK](../edge/home.md) 不需要啟用對象至 [Adobe Target](catalog/personalization/adobe-target-connection.md).
+
+但是，如果 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) 已使用（而非Web SDK），僅支援下一次工作階段個人化。
+
+對象 [相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md) 使用案例，您必須使用 [Web SDK](../edge/home.md) 或 [Edge Network Server API](../server-api/overview.md). 請參閱以下說明檔案： [將對象啟用至邊緣目的地](ui/activate-edge-personalization-destinations.md) 以取得更多實作詳細資料。
+
+**我可以從Real-time Customer Data Platform傳送至Adobe Target或「自訂個人化」目的地的屬性數量是否有限制？**
+
+可以，在Adobe Target或自訂個人化目的地啟用受眾時，同頁和下一頁個人化使用案例支援每個沙箱最多30個屬性。 請參閱中有關啟動護欄的更多資訊 [護欄檔案](guardrails.md#edge-destinations-activation).
+
+**啟動支援哪些型別的屬性（例如陣列、地圖等）？**
+
+目前，僅支援葉級屬性啟動。
+
+<!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
+
+Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more information on activation guardrails, see the [default guardrails for activation](guardrails.md#edge-destinations-activation). -->
+
+**我在Experience Platform中建立受眾後，需要多久才能將該受眾用於邊緣細分使用案例？**
+
+對象定義會傳播至 [邊緣網路](../edge/home.md) 最多一小時。 但是，如果對象在這第一個小時內啟動，則可能會錯過一些符合對象資格的訪客。
+
+**我可以在哪裡檢視Adobe Target中已啟用的屬性？**
+
+屬性可用於Target中的 [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) 和 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=zh-Hant) 選件。
+
+**我可以建立沒有資料串流的目的地，然後在稍後將資料串流新增到相同目的地嗎？**
+
+目前不支援透過目的地UI執行此操作。 若您在此情況下需要協助，請洽詢您的Adobe代表。
+
+**如果我刪除Adobe Target目的地，會發生什麼事？**
+
+當您刪除目的地時，對應至目的地的所有對象和屬性都會從Adobe Target中刪除，同時也會從Edge Network中移除。
+
+**整合是否可以使用Edge Network Server API運作？**
+
+是，Edge Network Server API可與自訂個人化目的地搭配使用。 由於設定檔屬性可能包含敏感資料，為了保護此資料，「自訂個人化」目的地會要求您使用Edge Network Server API來收集資料。 此外，所有API呼叫都必須在 [已驗證的內容](../server-api/authentication.md).
+
+**我只能有一個邊緣主動的合併原則。 我可以建立使用不同合併原則的受眾，並且仍然將其以串流區段的形式傳送到Adobe Target嗎？**
+
+不可以。 您想要啟用至Adobe Target的所有對象都必須使用active-on-edge [合併原則](../profile/merge-policies/ui-guide.md).
+
+**資料使用標籤和執行(DULE)和同意原則是否會強制執行？**
+
+可以。此 [資料控管和同意原則](../data-governance/home.md) 已建立並與所選行銷動作相關聯的屬性，將控管所選屬性的啟動。
