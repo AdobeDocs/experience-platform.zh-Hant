@@ -4,9 +4,9 @@ title: 雲端儲存空間目的地的API移轉指南
 description: 瞭解工作流程中的變更，以在移轉至具有其他功能的新雲端儲存體目的地卡片時，啟用雲端儲存體目的地。
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 8ca63586855f2c62231662906646eb8abcfdcc0e
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1444'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -433,7 +433,6 @@ API使用者適用的回溯不相容變更已更新 `connection spec ID` 和 `fl
 除了上述更新的流程和連線規格，建立SFTP基本連線時所需的引數也會變更。
 
 * 以前，SFTP目的地的基本連線需要 `host` 引數。 此引數現已重新命名為 `domain`.
-* 對於使用SSH金鑰的驗證選項，基礎連線中的驗證引數需要 `port` 選項。 此引數現已棄用，不再需要。
 
 在下列標籤中檢視SFTP的完整舊版和新版基本連線和目標連線範例，並反白顯示變更的行。 為SFTP目的地建立目標連線所需的引數不會變更。
 
@@ -567,7 +566,8 @@ API使用者適用的回溯不相容變更已更新 `connection spec ID` 和 `fl
       "authorizedDate": "2022-06-02",
       "domain": "ftp-out.demdex.com",
       "username": "DPID12345",
-      "password": "<your-password>"
+      "password": "<your-password>",
+      "port": 22      
     }
   },
   "encryption": {

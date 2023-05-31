@@ -4,10 +4,10 @@ title: 使用流量服務API啟用檔案型目的地的區段
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目的地。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 5ab72c11a5fd73f10eef6b7bb3e0d3386098748e
 workflow-type: tm+mt
-source-wordcount: '4337'
-ht-degree: 2%
+source-wordcount: '4442'
+ht-degree: 3%
 
 ---
 
@@ -956,7 +956,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "password": "<Add password>"
+      "password": "<Add password>",
+      "port": "<Add port>"      
     }
   },
   "connectionSpec": {
@@ -965,6 +966,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| 屬性 | 說明 |
+| --------- | ----------- |
+| `specName` | 使用 `SFTP with Password`. |
+| `domain` | SFTP儲存位置的IP位址或網域名稱。 |
+| `username` | 用於登入您的SFTP儲存位置的使用者名稱。 |
+| `password` | 用於登入您的SFTP儲存位置的密碼。 |
+| `port` | 您的SFTP儲存位置使用的連線埠。 |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -991,7 +1002,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
       "domain": "<Add domain>",
       "username": "<Add username>",
-      "sshKey": "<Add SSH key>"
+      "sshKey": "<Add SSH key>",
+      "port": "<Add port>"
     }
   },
   "connectionSpec": {
@@ -1000,6 +1012,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
   }
 }'
 ```
+
+| 屬性 | 說明 |
+| --------- | ----------- |
+| `specName` | 使用 `SFTP with Password`. |
+| `domain` | SFTP儲存位置的IP位址或網域名稱。 |
+| `username` | 用於登入您的SFTP儲存位置的使用者名稱。 |
+| `sshKey` | 用來登入SFTP儲存位置的私人SSH金鑰。 私密 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。 |
+| `port` | 您的SFTP儲存位置使用的連線埠。 |
+
+{style="table-layout:auto"}
 
 +++
 

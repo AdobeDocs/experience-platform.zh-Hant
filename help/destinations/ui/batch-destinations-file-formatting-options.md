@@ -2,9 +2,9 @@
 description: 瞭解在啟用以檔案為基礎的目的地資料時，如何設定檔案格式選項
 title: （測試版）設定檔案型目的地的檔案格式選項
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: b1e9b781f3b78a22b8b977fe08712d2926254e8c
+source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1226'
 ht-degree: 19%
 
 ---
@@ -111,8 +111,8 @@ ht-degree: 19%
 
 使用此控制項可設定空值的字串表示法。 此選項會決定空值在匯出的CSV檔案中的表示方式。 可選擇下列選項：
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **雙引號(「」)中的空白字串**
 * **[!UICONTROL 空字串]**
 
 #### 範例
@@ -136,8 +136,8 @@ ht-degree: 19%
 
 使用此控制項在匯出的檔案中設定 Null 值的字串表示方式。此選項會決定Null值在匯出的CSV檔案中的表示方式。 可選擇下列選項：
 
-* **[!UICONTROL null]**
-* **&quot;&quot;**
+* **[!UICONTROL Null (null)]**
+* **雙引號(「」)中的空白字串**
 * **[!UICONTROL 空字串]**
 
 #### 範例
