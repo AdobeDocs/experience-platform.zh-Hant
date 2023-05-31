@@ -24,7 +24,7 @@ ht-degree: 3%
 >title="擷取率"
 >abstract="每秒成功處理的事件數。"
 >text="Learn more in the documentation"
->additional-url="http://www.adobe.com/go/monitor-dataflows_tw" text="監視 UI 中來源的資料流"
+>additional-url="http://www.adobe.com/go/monitor-dataflows-en" text="監視 UI 中來源的資料流"
 
 >[!TIP]
 >
