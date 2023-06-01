@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: oracleResponsys連線
 description: Responsys是Oracle提供的跨頻道行銷活動的企業電子郵件行銷工具，用於個人化跨電子郵件、行動裝置、顯示和社交的互動。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '642'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
 
-請參閱 [雲端儲存空間目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
+請參閱 [SFTP目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
 
 ## 連線到目的地 {#connect}
 

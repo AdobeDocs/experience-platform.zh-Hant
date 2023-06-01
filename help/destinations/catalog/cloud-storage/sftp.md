@@ -3,9 +3,9 @@ keywords: SFTP；sftp
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '908'
 ht-degree: 7%
 
 ---
@@ -127,4 +127,4 @@ ht-degree: 7%
 
 ## IP位址允許清單
 
-請參閱 [雲端儲存空間目的地的IP位址允許清單](ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
+請參閱 [SFTP目的地的IP位址允許清單](ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。

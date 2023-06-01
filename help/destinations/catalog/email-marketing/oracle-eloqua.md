@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: （檔案） Eloqua連線Oracle
 description: oracle Eloqua是Oracle所提供用於行銷自動化的軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動和銷售機會開發。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: e986fd9479ca2258fc9aab752e2d0376c608554b
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
 
-請參閱 [雲端儲存空間目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
+請參閱 [SFTP目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
 
 ## 連線到目的地 {#connect}
 

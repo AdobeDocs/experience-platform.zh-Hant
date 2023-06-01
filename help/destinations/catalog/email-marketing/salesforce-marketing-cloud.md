@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您建置和自訂訪客和客戶的歷程，以個人化其體驗。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: ba4090d95a4a476e76d946e36f8370202f26d23e
+source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '747'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
 
-請參閱 [雲端儲存空間目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
+請參閱 [SFTP目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
 
 ## 連線到目的地 {#connect}
 
