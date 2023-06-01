@@ -3,9 +3,9 @@ title: (Beta)Experience Cloud對象
 description: 瞭解如何將區段從Experience Platform分享至各種Experience Platform解決方案。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 017c8bbc19845c0f60040ba2995b5dd2b0299a8b
 workflow-type: tm+mt
-source-wordcount: '1509'
+source-wordcount: '1576'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,14 @@ Note: briefly talk about when to share segments to these destinations using the 
 * 連線到目的地時，您可以看到以下選項： [啟用資料流警報](#enable-alerts). 雖然可在UI中看見，但 **不支援啟用警示選項** （在測試版中）。
 * **不支援回填**. 首次匯出至Audience Manager或其他Experience Cloud解決方案時，不包含區段的歷史母體。
 * 在測試版中，您可以建立 **與Experience Cloud對象目的地的單一目的地連線**，針對屬於您Experience Platform組織的所有沙箱。
-* 有一個 **4小時延遲** 從Experience Platform中啟用資料的時間到資料準備好用於Audience Manager和其他Experience Cloud解決方案的時間。
+
+### 啟用對象時的延遲 {#audience-activation-latency}
+
+對象首次在Experience Platform中啟動的時間，和他們準備在某些使用案例中用於Audience Manager和其他Experience Cloud解決方案的時間之間，會延遲4小時。
+
+受眾需要24小時，才能在Audience Manager中完全可用於所有使用案例，而Experience Cloud受眾需要48小時，才能出現在Audience Manager報表中。
+
+設定匯出至「Experience Cloud對象」目的地後，幾分鐘內即可使用Audience Manager中繼資料，例如區段名稱。
 
 ## 支援的身分 {#supported-identities}
 
