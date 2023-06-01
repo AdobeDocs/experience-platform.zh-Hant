@@ -3,10 +3,10 @@ keywords: Amazon S3；S3目的地；s3；amazon s3
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 14%
+source-wordcount: '990'
+ht-degree: 13%
 
 ---
 
@@ -90,7 +90,7 @@ ht-degree: 14%
 * **[!UICONTROL 資料夾路徑]**：輸入存放匯出檔案的目標資料夾路徑。
 * **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 此選項僅適用於 **[!UICONTROL Amazon S3 Beta]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。 此選項僅適用於 **[!UICONTROL Amazon S3 Beta]** 目的地。
-
+* **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 此選項僅適用於 **[!UICONTROL Amazon S3 Beta]** 目的地。
 
 >[!TIP]
 >

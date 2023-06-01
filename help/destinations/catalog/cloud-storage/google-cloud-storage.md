@@ -2,9 +2,9 @@
 title: (Beta) Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用區段或匯出資料集。
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: a07557ec398631ece0c8af6ec7b32e0e8593e24b
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,8 @@ ht-degree: 0%
 * **[!UICONTROL 資料夾路徑]**：輸入存放匯出檔案的目標資料夾路徑。
 * **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
+* 
+   * **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。
 
 ### 啟用警示 {#enable-alerts}
 

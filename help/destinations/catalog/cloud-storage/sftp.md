@@ -3,10 +3,10 @@ keywords: SFTP；sftp
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: cb0b80f79a849d81216c5500c54b62ac5d85e2f6
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 8%
+source-wordcount: '909'
+ht-degree: 7%
 
 ---
 
@@ -106,6 +106,8 @@ ht-degree: 8%
 * **[!UICONTROL 資料夾路徑]**：輸入要匯出檔案之SFTP位置中的資料夾路徑。
 * **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。
+* 
+   * **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。
 
 ## 啟用此目的地的區段 {#activate}
 

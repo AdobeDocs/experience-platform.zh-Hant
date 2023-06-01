@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年5月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c2b9f01453ecbc3348675e59b75c81280eded5f8
+source-git-commit: 09d8014eea2d31649eed3814ad07172027b2c435
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 4%
+source-wordcount: '1776'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->為了因應Audience Portal功能的全面推出，Adobe Experience Platform正在更新系統和檔案內「對象」和「區段」的使用情況。
+>為了因應全面推出的 Audience Portal 功能，Adobe Experience Platform 正在更新系統和文件內「對象」和「區段」的使用情況。
 >
 >- **對象**：一組具有共同特徵和行為的人員、帳戶、家庭或其他實體。
 >
@@ -80,7 +80,7 @@ Adobe Experience Platform提供豐富的功能，可擷取任何型別和任何�
 
 若要進一步瞭解資料擷取，請閱讀 [資料擷取概觀](../../ingestion/home.md).
 
-## 目的地 {#destinations}
+## 目的地（5月31日更新） {#destinations}
 
 [!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
 
@@ -92,18 +92,15 @@ Adobe Experience Platform提供豐富的功能，可擷取任何型別和任何�
 
 {style="table-layout:auto"}
 
-<!--
+**新功能或更新功能** {#destinations-new-updated-functionality}
 
-**New or updated functionality** {#destinations-new-updated-functionality}
-
-| Functionality | Description |
+| 功能 | 說明 |
 | ----------- | ----------- |
-| General availability of attribute-based personalization through the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) destinations. | Leverage profile attributes in real-time to deliver one-to-one web and mobile personalization, via Adobe Target or other custom personalization destinations in Experience Platform. See the [dedicated documentation](../../destinations/ui/activate-edge-personalization-destinations.md) for more details. |
-| Destination SDK support for grouping exported audiences based on merge policy. | When building a file-based destination with Destination SDK, you can now configure the grouping of exported audiences into one or multiple files, based on merge policy. <br><br> Additionally, you can now include the merge policy ID and merge policy name in the exported file names, by using the dedicated template macros. <br><br>See the [batch configuration documentation](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) for more details on how to use the `segmentGroupingEnabled` parameter and the new file name template macros.|
+| 屬性型個人化的一般可用性，透過 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 目的地。 | 透過Adobe Target或Experience Platform中的其他自訂個人化目的地，即時運用設定檔屬性來提供一對一的網頁和行動個人化。 閱讀 [專屬檔案](../../destinations/ui/activate-edge-personalization-destinations.md) 和 [常見問題集](/help/destinations/destinations-faq.md#same-next-page-personalization) 以取得更多詳細資料。 |
+| Destination SDK支援根據合併原則來分組匯出的對象。 | 使用Destination SDK建立檔案型目的地時，您現在可以根據合併原則，將匯出的對象分組至一個或多個檔案。 <br><br> 此外，您現在可以使用專用的範本巨集，在匯出的檔案名稱中包含合併原則ID和合併原則名稱。 <br><br>請參閱 [批次設定檔案](../../destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md) 以取得有關如何使用 `segmentGroupingEnabled` 引數和新檔案名稱範本巨集。 |
+| 在匯出至測試版雲端儲存空間目的地時包含資訊清單檔案 | 您現在可以包含資訊清單JSON檔案，其中包含有關匯出位置、匯出大小等資訊，可將資料匯出至六個Cloud Storage測試版目的地 —  [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)， [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)， [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)， [(Beta)資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)， [(Beta) Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)， [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md). <br><br> 如需詳細資訊，請參閱 **[!UICONTROL 目的地詳細資料]** 上方連結頁面的區段。 |
 
 {style="table-layout:auto"}
-
--->
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 

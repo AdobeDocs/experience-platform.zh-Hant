@@ -2,9 +2,9 @@
 title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域以啟用區段和匯出資料集。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 6fbf1b87becebee76f583c6e44b1c42956e561ab
+source-git-commit: 55f72e4f229e18648e0e745a2a60e9add50455b0
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -137,6 +137,8 @@ curl -X GET \
 * **[!UICONTROL 資料夾路徑]**：輸入存放匯出檔案的目標資料夾路徑。
 * **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
+* 
+   * **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。
 
 ### 啟用警示 {#enable-alerts}
 
