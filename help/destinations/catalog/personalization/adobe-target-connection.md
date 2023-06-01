@@ -3,7 +3,7 @@ keywords: target個人化；目的地； experience platform target目的地； 
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
+source-git-commit: 6ac48762dc9ea1cb77b04651275a3846411449ea
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 8%
@@ -16,7 +16,7 @@ ht-degree: 8%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 4 月 | 功能和檔案更新 | 自2023年4月起， **[!UICONTROL Adobe Target]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
+| 2023 年 5 月 | 功能和檔案更新 | 截至2023年5月， **[!UICONTROL Adobe Target]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
 
 {style="table-layout:auto"}
 
