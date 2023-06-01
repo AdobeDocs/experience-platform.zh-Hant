@@ -3,33 +3,31 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取區段資訊。 此目的地會根據使用者設定檔區段成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 09e81093c2ed2703468693160939b3b6f62bc5b6
+source-git-commit: 1ffcbabe29994fb881ff622394d669c4340c94f1
 workflow-type: tm+mt
-source-wordcount: '1305'
-ht-degree: 6%
+source-wordcount: '879'
+ht-degree: 9%
 
 ---
+
 
 # 自訂個人化連線 {#custom-personalization-connection}
 
 ## 目的地變更記錄檔 {#changelog}
 
-透過增強功能的Beta版 **[!UICONTROL 自訂個人化]** 目的地聯結器，您可能會看到兩個 **[!UICONTROL 自訂個人化]** 目的地目錄中的卡片。
+| 發行月份 | 更新型別 | 說明 |
+|---|---|---|
+| 2023 年 5 月 | 功能和檔案更新 | 截至2023年5月， **[!UICONTROL 自訂個人化]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
 
-此 **[!UICONTROL 使用屬性自訂個人化]** 聯結器目前為測試版，僅供特定數量的客戶使用。 除了 **[!UICONTROL 自訂個人化]**，則 **[!UICONTROL 使用屬性自訂個人化]** 聯結器新增選購專案 [對應步驟](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 至啟用工作流程，可讓您將設定檔屬性對應至自訂個人化目的地，啟用以屬性為基礎的相同頁面和下一頁個人化。
+{style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 為了保護此資料， **[!UICONTROL 使用屬性自訂個人化]** 目的地要求您使用 [Edge Network Server API](/help/server-api/overview.md) 用於資料彙集。 此外，所有伺服器API呼叫都必須在 [已驗證的內容](../../../server-api/authentication.md).
+>設定檔屬性可能包含敏感資料。 為了保護此資料， **[!UICONTROL 自訂個人化]** 目的地要求您使用 [Edge Network Server API](/help/server-api/overview.md) 設定屬性型個人化的目的地時。 所有伺服器API呼叫都必須在 [已驗證的內容](../../../server-api/authentication.md).
 >
->如果您已在使用Web SDK或Mobile SDK進行整合，您可以透過兩種方式透過伺服器API擷取屬性：
+><br>如果您已在使用Web SDK或Mobile SDK進行整合，您可以透過新增伺服器端整合來透過伺服器API擷取屬性。
 >
-> * 新增透過伺服器API擷取屬性的伺服器端整合。
-> * 使用自訂Javascript程式碼更新您的使用者端設定，以透過伺服器API擷取屬性。
->
-> 如果您未遵循上述要求，個人化將僅以區段成員資格為基礎，與提供的體驗相同。 **[!UICONTROL 自訂個人化]** 聯結器。
-
-![並排檢視中兩張自訂個人化目的地卡的影像。](../../assets/catalog/personalization/custom-personalization/custom-personalization-side-by-side-view.png)
+><br>如果您未遵循上述要求，個人化將僅以區段成員資格為基礎。
 
 ## 總覽 {#overview}
 
@@ -41,35 +39,14 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->在建立自訂個人化連線之前，請閱讀以下操作指南： [設定相同頁面和下一頁個人化的個人化目的地](../../ui/configure-personalization-destinations.md). 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行必要的設定步驟。
+>在建立自訂個人化連線之前，請閱讀以下操作指南： [啟用邊緣個人化目的地的受眾資料](../../ui/activate-edge-personalization-destinations.md). 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行必要的設定步驟。
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-**設定檔請求**  — 您正在要求已對映於單一設定檔之自訂個人化目的地的所有區段。 可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../edge/datastreams/overview.md).
-
-## 使用案例 {#use-cases}
-
-此 [!DNL Custom Personalization Connection] 可讓您使用自己的個人化合作夥伴平台(例如 [!DNL Optimizely]， [!DNL Pega])以及專屬系統（例如內部CMS），同時運用Experience Platform邊緣網路資料收集和細分功能，提供更深入的客戶個人化體驗。
-
-以下說明的使用案例包含網站個人化和目標網站上的廣告。
-
-若要啟用這些使用案例，客戶需要一種快速且簡化的方式，從Experience Platform擷取區段資訊，並將此資訊傳送至其指定的系統，這些系統已在Experience PlatformUI中設定為自訂個人化連線。
-
-這些系統可以是外部個人化平台、內容管理系統、廣告伺服器，以及其他在客戶的網頁和行動屬性中執行的應用程式。
-
-### 同一頁面的個人化 {#same-page}
-
-使用者造訪您網站的某個頁面。 客戶可以使用目前頁面瀏覽資訊（例如，反向連結URL、瀏覽器語言、內嵌的產品資訊）來選取下一個動作/決定（例如，個人化），對非Adobe平台使用自訂個人化連線(例如， [!DNL Pega]， [!DNL Optimizely]、等)。
-
-### 下一頁個人化 {#next-page}
-
-使用者造訪您網站上的頁面A。 根據此互動，使用者已符合一組區段的資格。 然後，使用者按一下連結，該連結會將使用者從頁面A帶往頁面B。使用者在頁面A的上一個互動期間符合資格的區段，加上目前網站造訪決定的設定檔更新，將用來支援下一個動作/決定（例如，要向訪客顯示哪個廣告橫幅，或在A/B測試的情況下，要顯示哪個頁面版本）。
-
-### 下一個工作階段的個人化 {#next-session}
-
-使用者造訪您網站上的數個頁面。 根據這些互動，使用者已符合一組區段的資格。 然後，使用者會終止目前的瀏覽工作階段。
-
-第二天，使用者返回相同的客戶網站。 他們之前與所有造訪的網站頁面互動期間符合資格的區段，加上目前網站造訪決定的設定檔更新，將用於選取下一個動作/決定（例如，要向訪客顯示哪個廣告橫幅，或在A/B測試的情況下，要顯示哪個頁面版本）。
+| 項目 | 類型 | 附註 |
+---------|----------|---------|
+| 匯出型別 | **[!DNL Profile request]** | 您正在請求在單一設定檔的自訂個人化目的地中對應的所有區段。 可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../edge/datastreams/overview.md). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## 連線到目的地 {#connect}
 
@@ -106,7 +83,7 @@ ht-degree: 6%
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對設定檔請求目的地啟用設定檔和區段](../../ui/activate-profile-request-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [啟用設定檔和區段邊緣個人化目的地](../../ui/activate-edge-personalization-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
 ## 匯出的資料 {#exported-data}
 

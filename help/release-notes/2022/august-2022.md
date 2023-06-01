@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年8月
 description: Adobe Experience Platform的2022年8月發行說明。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
 workflow-type: tm+mt
 source-wordcount: '2082'
 ht-degree: 6%
@@ -94,7 +94,7 @@ Adobe Experience Platform提供多個 [!DNL dashboards] 您可以透過它檢視
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| （測試版）個人化目的地的屬性型個人化支援 | 隨著屬性型個人化測試版的推出，您將會在 [目的地目錄](../../destinations/catalog/overview.md)： <ul><li>**[!UICONTROL Adobe Target V2]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了Adobe Target V1卡提供的功能外，Target V2聯結器還新增了 [對應步驟](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 至啟用工作流程，可讓您將設定檔屬性對應至Adobe Target，啟用以屬性為基礎的相同頁面和下一頁個人化。</li><li>**[!UICONTROL 使用屬性自訂個人化]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了 **[!UICONTROL 自訂個人化]**，則 **[!UICONTROL 使用屬性自訂個人化]** 聯結器新增選購專案 [對應步驟](../../destinations/ui/activate-profile-request-destinations.md#map-attributes) 至啟用工作流程，可讓您將設定檔屬性對應至自訂個人化目的地，啟用以屬性為基礎的相同頁面和下一頁個人化。</li></ul> <br> 設定檔屬性可能包含敏感資料。 為了保護此資料， **[!UICONTROL 使用屬性自訂個人化]** 目的地要求您使用 [Edge Network Server API](../../server-api/overview.md) 用於資料彙集。 此外，所有伺服器API呼叫都必須在 [已驗證的內容](../../server-api/authentication.md). |
+| （測試版）個人化目的地的屬性型個人化支援 | 隨著屬性型個人化測試版的推出，您將會在 [目的地目錄](../../destinations/catalog/overview.md)： <ul><li>**[!UICONTROL Adobe Target V2]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了Adobe Target V1卡提供的功能外，Target V2聯結器還新增了 [對應步驟](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) 至啟用工作流程，可讓您將設定檔屬性對應至Adobe Target，啟用以屬性為基礎的相同頁面和下一頁個人化。</li><li>**[!UICONTROL 使用屬性自訂個人化]**：此聯結器目前為測試版，僅供特定數量的客戶使用。 除了 **[!UICONTROL 自訂個人化]**，則 **[!UICONTROL 使用屬性自訂個人化]** 聯結器新增選購專案 [對應步驟](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) 至啟用工作流程，可讓您將設定檔屬性對應至自訂個人化目的地，啟用以屬性為基礎的相同頁面和下一頁個人化。</li></ul> <br> 設定檔屬性可能包含敏感資料。 為了保護此資料， **[!UICONTROL 使用屬性自訂個人化]** 目的地要求您使用 [Edge Network Server API](../../server-api/overview.md) 用於資料彙集。 此外，所有伺服器API呼叫都必須在 [已驗證的內容](../../server-api/authentication.md). |
 
 {style="table-layout:auto"}
 

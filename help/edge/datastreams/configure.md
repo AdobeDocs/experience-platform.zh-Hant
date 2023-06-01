@@ -2,7 +2,7 @@
 title: 設定資料流
 description: 瞭解如何將您的使用者端Web SDK整合與其他Adobe產品和第三方目的地連線起來。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 209aa63717e05fabc8742ac591102b8fdb243ee4
+source-git-commit: dc70b6ec79c3d87c940794e1b9fd8029d2b13254
 workflow-type: tm+mt
 source-wordcount: '2115'
 ht-degree: 2%
@@ -123,8 +123,8 @@ ht-degree: 2%
 | [!UICONTROL 事件資料集] | **（必要）** 選取將串流至客戶事件資料的Platform資料集。 此結構描述必須使用 [XDM ExperienceEvent類別](../../xdm/classes/experienceevent.md). 若要新增其他資料集，請選取「 」 **[!UICONTROL 新增事件資料集]**. |
 | [!UICONTROL 設定檔資料集] | 選取將傳送客戶屬性資料的Platform資料集。 此結構描述必須使用 [XDM個別設定檔類別](../../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | 選取此核取方塊可啟用Platform Web SDK實作的Offer decisioning。 請參閱指南： [搭配Platform Web SDK使用Offer Decisioning](../personalization/offer-decisioning/offer-decisioning-overview.md) 以取得更多實作詳細資料。<br><br>如需Offer decisioning功能的詳細資訊，請參閱 [Adobe Journey Optimizer檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started/starting-offer-decisioning.html?lang=zh-Hant). |
-| [!UICONTROL 邊緣細分] | 選取此核取方塊以啟用 [邊緣細分](../../segmentation/ui/edge-segmentation.md) 此資料流的。 當SDK透過啟用Edge-Segmentation的資料流傳送資料時，有問題的設定檔的任何更新區段會籍都會在回應中傳回。<br><br>此選項可搭配使用 [!UICONTROL 個人化目的地] 的 [下一頁個人化使用案例](../../destinations/ui/configure-personalization-destinations.md). |
-| [!UICONTROL 個人化目的地] | 啟用後啟用此專案時 [!UICONTROL 邊緣細分] 核取方塊，此選項可讓資料流連線至個人化目的地，例如 [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md).<br><br>如需以下的特定步驟，請參閱目的地檔案： [設定個人化目的地](../../destinations/ui/configure-personalization-destinations.md). |
+| [!UICONTROL 邊緣細分] | 選取此核取方塊以啟用 [邊緣細分](../../segmentation/ui/edge-segmentation.md) 此資料流的。 當SDK透過啟用Edge-Segmentation的資料流傳送資料時，有問題的設定檔的任何更新區段會籍都會在回應中傳回。<br><br>此選項可搭配使用 [!UICONTROL 個人化目的地] 的 [下一頁個人化使用案例](../../destinations/ui/activate-edge-personalization-destinations.md). |
+| [!UICONTROL 個人化目的地] | 啟用後啟用此專案時 [!UICONTROL 邊緣細分] 核取方塊，此選項可讓資料流連線至個人化目的地，例如 [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md).<br><br>如需以下的特定步驟，請參閱目的地檔案： [設定個人化目的地](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | [!UICONTROL Adobe Journey Optimizer] | 選取此核取方塊以啟用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 此資料流的。 <br><br> 啟用此選項可讓資料流從的網頁和應用程式傳入行銷活動傳回個人化內容。 [!DNL Adobe Journey Optimizer]. 此選項需要 [!UICONTROL 邊緣細分] 以啟用。 若 [!UICONTROL 邊緣細分] 未勾選，此選項會呈現灰色。 |
 
 ### Adobe Target設定 {#target}

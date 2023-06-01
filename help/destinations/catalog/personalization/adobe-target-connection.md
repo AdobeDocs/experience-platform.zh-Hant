@@ -3,10 +3,10 @@ keywords: target個人化；目的地； experience platform target目的地； 
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: f97b667f8d4dc311683b018bb1c1792aae871648
+source-git-commit: bee1bf0ec9cbf35ea7303921059068c01cb9f54a
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 8%
 
 ---
 
@@ -14,18 +14,21 @@ ht-degree: 7%
 
 ## 目的地變更記錄檔 {#changelog}
 
->[!IMPORTANT]
->
->使用增強型Adobe Target V2目的地聯結器的測試版時，您可能會在目的地目錄中看到兩個Adobe Target卡。
->Adobe Target V2目的地聯結器目前為測試版，僅適用於特定數量的客戶。 除了AdobeV1卡提供的功能外，Target V2聯結器還新增了 [對應步驟](/help/destinations/ui/activate-profile-request-destinations.md#map-attributes) 至啟用工作流程，可讓您將設定檔屬性對應至Adobe Target，啟用以屬性為基礎的相同頁面和下一頁個人化。
+| 發行月份 | 更新型別 | 說明 |
+|---|---|---|
+| 2023 年 4 月 | 功能和檔案更新 | 自2023年4月起， **[!UICONTROL Adobe Target]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
 
-![並排檢視中的兩個Adobe Target目的地卡片影像。](/help/destinations/assets/catalog/personalization/adobe-target-connection/adobe-target-side-by-side-view.png)
+{style="table-layout:auto"}
 
 ## 總覽 {#overview}
 
 Adobe Target應用程式可在跨網站、行動應用程式等的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 
 Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
+
+如需如何在Experience Platform中設定Adobe Target連線的簡短概觀，請觀看以下影片。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## 先決條件 {#prerequisites}
 
@@ -37,7 +40,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 >[!IMPORTANT]
 >
->建立之前 [!DNL Adobe Target] connection，閱讀操作指南 [設定相同頁面和下一頁個人化的個人化目的地](../../ui/configure-personalization-destinations.md). 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行必要的設定步驟。 相同頁面和下一頁個人化功能會要求您在設定Adobe Target連線時使用資料串流ID。
+>建立之前 [!DNL Adobe Target] connection，閱讀操作指南 [設定相同頁面和下一頁個人化的個人化目的地](../../ui/activate-edge-personalization-destinations.md). 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行必要的設定步驟。 相同頁面和下一頁個人化功能會要求您在設定Adobe Target連線時使用資料串流ID。
 
 ### Adobe Target的必要條件 {#prerequisites-in-adobe-target}
 
@@ -58,12 +61,6 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
-
-## 使用案例 {#use-cases}
-
-**個人化首頁橫幅**
-
-一家家用租賃和銷售公司想要根據Adobe Experience Platform中的客戶區段資格，以橫幅來個人化他們的首頁。 公司可以選取應該讓哪些對象獲得個人化體驗，並將這些對象傳送到Adobe Target，作為其Target選件的鎖定目標條件。
 
 ## 連線到目的地 {#connect}
 
@@ -92,7 +89,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 | 未選取任何資料串流 | 已選取資料流 |
 |---|---|
-| <ul><li>[邊緣細分](../../../segmentation/ui/edge-segmentation.md) 不受支援。</li><li>[相同頁面和下一頁個人化](../../ui/configure-personalization-destinations.md) 不受支援。</li><li>您只能將區段共用至Adobe Target連線， *預設生產沙箱*.</li><li>若要在不使用資料流ID的情況下設定下一個工作階段個人化，請使用 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>邊緣細分如預期般運作。</li><li>[相同頁面和下一頁個人化](../../ui/configure-personalization-destinations.md) 支援。</li><li>其他沙箱支援區段共用。</li></ul> |
+| <ul><li>[邊緣細分](../../../segmentation/ui/edge-segmentation.md) 不受支援。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 不受支援。</li><li>您只能將區段共用至Adobe Target連線， *預設生產沙箱*.</li><li>若要在不使用資料流ID的情況下設定下一個工作階段個人化，請使用 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>邊緣細分如預期般運作。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 支援。</li><li>其他沙箱支援區段共用。</li></ul> |
 
 ### 啟用警示 {#enable-alerts}
 
@@ -106,7 +103,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對設定檔請求目的地啟用設定檔和區段](../../ui/activate-profile-request-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [對設定檔請求目的地啟用設定檔和區段](../../ui/activate-edge-personalization-destinations.md) 以取得啟用此目的地的受眾區段的指示。
 
 ## 匯出的資料 {#exported-data}
 

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年1月
 description: Adobe Experience Platform的2022年1月發行說明。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '1342'
 ht-degree: 3%
@@ -26,7 +26,7 @@ Adobe Experience Platform 現有功能更新：
 
 ## 警報 {#alerts}
 
-Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤中，並可選擇在UI本身或透過電子郵件通知接收警示訊息。
+Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤內的標籤，並可選擇在UI本身或透過電子郵件通知接收警示訊息。
 
 **更新的功能**
 
@@ -69,7 +69,7 @@ Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板�
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 相同頁面和下一頁個人化 | 此 [相同頁面和下一頁個人化功能](../../destinations/ui/configure-personalization-destinations.md) 為Experience Edge上的應用程式提供共用、可定位的使用者檢視，以確保行銷和客戶管道之間的一致性。 此個人化可透過 [Adobe Target連線](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要設定相同頁面或下一頁個人化行銷活動，請參閱 [專屬教學課程](../../destinations/ui/configure-personalization-destinations.md). |
+| 相同頁面和下一頁個人化 | 此 [相同頁面和下一頁個人化功能](../../destinations/ui/activate-edge-personalization-destinations.md) 為Experience Edge上的應用程式提供共用、可定位的使用者檢視，以確保行銷和客戶管道之間的一致性。 此個人化可透過 [Adobe Target連線](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要設定相同頁面或下一頁個人化行銷活動，請參閱 [專屬教學課程](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | 批次目的地監控和區段層級量度 | 目的地監控功能現已從串流目的地擴充至同時包含批次目的地和啟用資料流程的區段層級量度。 如需詳細資訊，請閱讀 [監視目的地儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)， [監控區段作業儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard)、和 [區段層級檢視](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | 排程在UI中編輯現有批次啟用資料流 | 此版本引進了將現有啟動資料流排程編輯到批次目的地的選項。 如需詳細資訊，請閱讀 [將設定檔資料啟用至批次設定檔目的地](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Marketo目的地增強功能 | 使用Marketo Engage的Experience Platform客戶可以透過將全新個人記錄從Experience Platform推送到Marketo Engage的新功能，將其Marketo資料庫發揮到極致。 [Marketo目的地聯結器](/help/destinations/catalog/adobe/marketo-engage.md). <br> 將受眾區段從Experience Platform傳送至Marketo Engage時，區段內尚未存在於Marketo Engage資料庫中的人員可以自動新增至該區段。 如需詳細資訊，請閱讀 [將Adobe Experience Platform區段推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (教學課程中的步驟9會說明如何將新進人員記錄推送至Marketo)。 |

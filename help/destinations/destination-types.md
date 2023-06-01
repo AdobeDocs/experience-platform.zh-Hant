@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 25f1b2197e5b10b04668d16bff3a6ce48cfad5fc
+source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -61,7 +61,7 @@ ht-degree: 0%
 
 Experience Platform中的邊緣個人化目的地包括 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化目的地](/help/destinations/catalog/personalization/custom-personalization.md). 透過使用這些目的地，您可以為客戶啟用相同頁面和下一頁個人化使用案例。
 
-深入瞭解如何 [設定相同頁面和下一頁個人化的個人化目的地](/help/destinations/ui/configure-personalization-destinations.md).
+深入瞭解如何 [設定相同頁面和下一頁個人化的個人化目的地](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
 ## 設定檔匯出和區段匯出目的地 — 影片概觀 {#video}
 
