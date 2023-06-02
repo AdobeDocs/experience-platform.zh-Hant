@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中管理資料使用標籤
 description: 本指南說明在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 19%
+source-wordcount: '1462'
+ht-degree: 18%
 
 ---
 
@@ -20,7 +20,15 @@ ht-degree: 19%
 
 本使用手冊說明在中使用資料使用標籤的步驟。 [!DNL Experience Platform] 使用者介面。
 
+## 管理標籤 {#manage-labels}
+
+若要將標籤套用至您的資料，您需要 **[!UICONTROL 管理使用標籤]** 生產沙箱的使用許可權。 若要建立自訂標籤，您也必須擁有產品設定檔的管理許可權。 每個組織只有一個適用的標籤清單，目前不支援刪除標籤。
+
+請參閱操作方法指南 [設定許可權](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) 或 [存取控制總覽](../../access-control/home.md) 有關如何指派許可權的詳細資訊。 如果您沒有貴組織Admin Console的存取權，請聯絡貴組織管理員。
+
 ## 管理結構層級的標籤
+
+您可以直接將標籤新增到該結構描述中的一個或多個欄位。 套用至結構描述層級的任何欄位都會傳播至以該結構描述為基礎的所有資料集。
 
 若要在方案層級管理資料使用標籤，您必須選取現有方案或建立新方案。 登入Adobe Experience Platform後，選取 **[!UICONTROL 結構描述]** 在左側導覽以開啟 **[!UICONTROL 結構描述]** 工作區。 此頁面列出屬於您組織的所有已建立方案，以及與每個方案相關的實用詳細資訊。
 
@@ -59,7 +67,7 @@ ht-degree: 19%
 
 ![此 [!UICONTROL 資料控管] 的標籤 [!UICONTROL 資料集] 工作區中反白顯示編輯鉛筆圖示。](../images/labels/dataset-level-edit.png)
 
-此 **[!UICONTROL 編輯治理標籤]** 對話方塊開啟。 在對話方塊中，勾選您要套用至資料集的標籤旁的方塊。 請記住，這些標籤將由資料集內的所有欄位繼承。 此 **[!UICONTROL 套用的標籤]** 勾選每個方塊時，標題都會更新，並顯示您選擇的標籤。 選取所需標籤後，請選取 **[!UICONTROL 儲存變更]**.
+此 **[!UICONTROL 編輯治理標籤]** 對話方塊開啟。 在對話方塊中，勾選您要套用至資料集的標籤旁的方塊。 請記住，這些標籤將由資料集中的所有欄位繼承。 此 **[!UICONTROL 套用的標籤]** 勾選每個方塊時，標題都會更新，並顯示您選擇的標籤。 選取所需標籤後，請選取 **[!UICONTROL 儲存變更]**.
 
 ![「編輯治理標籤」對話方塊中會反白顯示標籤核取方塊和儲存變更。](../images/labels/apply-labels-dataset.png)
 
@@ -98,12 +106,6 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >在資料集標籤功能遭取代之前套用的標籤，可以透過尋找相關資料集並選取標籤上的取消圖示從資料集中移除。
 >![反白顯示可刪除標籤之資料集工作區的「資料控管」索引標籤。](../images/labels/remove-governance-labels.png)
 >如需相關指示，請參閱檔案 [如何將先前套用的標籤從資料集移轉至結構描述層級](../e2e.md#migrate-labels).
-
-## 管理結構層級的標籤
-
-您可以直接將標籤新增到該結構描述中的一個或多個欄位。 套用至結構描述層級的任何欄位都會傳播至以該結構描述為基礎的所有資料集。
-
-請參閱教學課程，位置如下： [管理結構描述層級標籤](../../xdm/tutorials/labels.md) 以取得詳細資訊。
 
 ## 管理自訂標籤 {#manage-custom-labels}
 
