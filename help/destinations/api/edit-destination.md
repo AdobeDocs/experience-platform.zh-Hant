@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 使用Flow Service API編輯目的地連線
 type: Tutorial
 description: 瞭解如何使用流量服務API編輯目的地連線的各種元件。
-source-git-commit: 956ac5d210d54526e886e57b8ea37ab4b3fbab8a
+source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -329,11 +329,11 @@ curl -X PATCH \
 
 ## 編輯基本連線元件（驗證引數和其他元件） {#patch-base-connection}
 
-基礎連線的元件會依目的地而有所不同。 例如， [!DNL Amazon S3] 目的地，您可以將存取金鑰和秘密金鑰更新為 [!DNL Amazon S3] 位置。
+當您想要更新目的地的認證時，請編輯基本連線。 基礎連線的元件會依目的地而有所不同。 例如， [!DNL Amazon S3] 目的地，您可以將存取金鑰和秘密金鑰更新為 [!DNL Amazon S3] 位置。
 
 PATCH若要更新基本連線的元件，請對 `/connections` 端點，並提供您的基本連線ID、版本以及您想要使用的新值。
 
-請記住，您在上一步中檢查了到您所要目的地的現有資料流時，已經取得基本連線ID。
+請記住，您的基本連線ID位於 [上一步](#look-up-dataflow-details)，檢查到您需要的引數目的地之現有資料流時 `baseConnection`.
 
 >[!IMPORTANT]
 >
