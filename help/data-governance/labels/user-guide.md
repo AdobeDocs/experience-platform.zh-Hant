@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中管理資料使用標籤
 description: 本指南說明在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 1690a73cf709594b82469e95aba64231cf216d96
+source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1465'
 ht-degree: 18%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 18%
 
 ## 管理標籤 {#manage-labels}
 
-若要將標籤套用至您的資料，您需要 **[!UICONTROL 管理使用標籤]** 生產沙箱的使用許可權。 若要建立自訂標籤，您也必須擁有產品設定檔的管理許可權。 每個組織只有一個適用的標籤清單，目前不支援刪除標籤。
+若要將標籤套用至您的資料，您需要 **[!UICONTROL 管理使用標籤]** 對名為「prod」的預設生產沙箱的使用許可權。 若要建立自訂標籤，您也必須擁有產品設定檔的管理許可權。 每個組織只有一個適用的標籤清單，目前不支援刪除標籤。
 
 請參閱操作方法指南 [設定許可權](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) 或 [存取控制總覽](../../access-control/home.md) 有關如何指派許可權的詳細資訊。 如果您沒有貴組織Admin Console的存取權，請聯絡貴組織管理員。
 
