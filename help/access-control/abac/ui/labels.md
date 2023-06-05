@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理標籤
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面管理標籤的資訊
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+source-git-commit: 4069924b4c4000192dff1f89e5cf9a9412bcd95c
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 10%
+source-wordcount: '190'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->您必須具有管理許可權才能建立自訂標籤。 目前不支援刪除標籤。
+>整個組織只有一個標籤清單。 若要建立自訂標籤，您需要 **[!UICONTROL 管理使用標籤]** 生產沙箱的許可權。 目前不支援刪除標籤。
 
 若要建立新標籤，請選取 **[!UICONTROL 標籤]** 索引標籤並選取「 」 **[!UICONTROL 建立標籤]**.
 
