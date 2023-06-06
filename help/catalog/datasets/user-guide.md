@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 11d6cf09dede8c7c14bbbcd3c109e703a5d053de
 workflow-type: tm+mt
 source-wordcount: '1504'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
 >title="資料集有效期"
->abstract="此欄指出目標資料集自動過期前的剩餘天數。"
+>abstract="此欄表示目標資料集在自動到期之前剩餘的天數。"
 
 在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 資料集]** 在左側導覽中開啟 **[!UICONTROL 資料集]** 儀表板。 儀表板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資訊，包括其名稱、資料集所遵守的結構描述，以及最新擷取執行的狀態。
 

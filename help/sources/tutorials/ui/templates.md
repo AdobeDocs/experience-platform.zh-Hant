@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
 source-wordcount: '2258'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Platform UI中來源的範本"
->abstract="範本包括自動產生的資產，例如結構描述、資料集、身分、對應規則、身分名稱空間和資料流程，您可以從來源將資料帶入Experience Platform時使用這些資產。 您可以更新自動產生的資產以供自訂，以符合您的使用案例。"
+>title="Platform UI 中的來源範本"
+>abstract="範本包括多種自動產生的資產，例如結構描述、資料集、身分識別、對應規則、身分識別命名空間和資料流，您將資料從來源帶入 Experience Platform 時可以使用。您可以更新自動產生的資產，以針對您的使用案例進行自訂。"
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ ht-degree: 6%
 >
 >檔案和功能可能會有所變更。
 
-Adobe Experience Platform提供預先設定的範本，可用來加速資料擷取程式。 範本包括自動產生的資產，例如結構描述、資料集、身分、對應規則、身分名稱空間和資料流程，您可以從來源將資料帶入Experience Platform時使用這些資產。
+Adobe Experience Platform提供預先設定的範本，可用來加速資料擷取程式。 範本包括多種自動產生的資產，例如結構描述、資料集、身分識別、對應規則、身分識別命名空間和資料流，您將資料從來源帶入 Experience Platform 時可以使用。
 
 使用範本時，您可以：
 

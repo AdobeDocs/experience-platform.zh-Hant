@@ -8,7 +8,7 @@ exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="資料集有效期"
->abstract="此欄指出目標資料集自動過期前的剩餘天數。<br>如果目標資料集過期，資料流將會失敗。 若要防止資料流失敗，請確保目標資料集已設定為在正確的日期到期。 請參閱檔案以瞭解如何更新到期日。"
+>abstract="此欄表示目標資料集在自動到期之前剩餘的天數。<br>如果目標資料集過期，資料流將會失敗。為避免資料流失敗，請確保將目標資料集設定為在正確的日期到期。請參閱文件以了解如何更新到期日。"
 
 在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 選取 **[!UICONTROL 資料流]** 以檢視現有資料流的清單。
 
