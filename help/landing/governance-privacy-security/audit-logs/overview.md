@@ -2,10 +2,10 @@
 title: 稽核記錄概觀
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
 workflow-type: tm+mt
-source-wordcount: '1156'
-ht-degree: 48%
+source-wordcount: '1294'
+ht-degree: 43%
 
 ---
 
@@ -79,13 +79,13 @@ ht-degree: 48%
 
 您可以在中檢視不同Experience Platform功能的稽核記錄 **[!UICONTROL 稽核]** Platform UI中的工作區。 工作區會顯示記錄日誌的清單，預設情況下會從最近到最近排序。
 
-![稽核記錄儀表板](../../images/audit-logs/audits.png)
+![「稽核」控制面板在左側選單中醒目提示「稽核」。](../../images/audit-logs/audits.png)
 
 稽核記錄會保留365天，之後會從系統中刪除它們。 因此，您最多只能往回查看 365 天。如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
 
 從清單中選取一個事件以在右邊欄中查看其詳細資料。
 
-![事件詳細資料](../../images/audit-logs/select-event.png)
+![稽核控制面板「活動記錄」索引標籤，並反白顯示事件詳細資訊面板。](../../images/audit-logs/select-event.png)
 
 ### 篩選稽核記錄
 
@@ -95,31 +95,43 @@ ht-degree: 48%
 
 選取漏斗圖示(![篩選圖示](../../images/audit-logs/icon.png))來顯示篩選控制項清單，以協助縮小結果範圍。 僅顯示最後1000筆記錄，無論選擇的各種篩選器為何。
 
-![篩選器](../../images/audit-logs/filters.png)
+![反白顯示篩選活動記錄檔的「稽核」控制面板。](../../images/audit-logs/filters.png)
 
 以下篩選器可用於 UI 中的稽核事件：
 
 | 篩選 | 說明 |
 | --- | --- |
 | [!UICONTROL 類別] | 使用下拉式選單，依以下條件篩選顯示的結果 [類別](#category). |
-| [!UICONTROL 動作] | 依動作篩選。 目前僅適用 [!UICONTROL 建立] 和 [!UICONTROL 刪除] 可以篩選動作。 |
+| [!UICONTROL 動作] | 依動作篩選。 每項服務的可用動作可在上方資源表格中檢視。 |
 | [!UICONTROL 使用者] | 輸入完整的使用者ID (例如， `johndoe@acme.com`)，依使用者篩選。 |
 | [!UICONTROL 狀態] | 篩選條件為允許（完成）動作或因缺少動作而拒絕動作 [存取控制](../../../access-control/home.md) 許可權。 |
 | [!UICONTROL 日期] | 選取開始日期和/或結束日期，以定義篩選結果的日期範圍。 可匯出90天回顧期間的資料（例如，2021-12-15到2022-03-15）。 這可能因事件型別而異。 |
 
 若要移除篩選條件，請針對有問題的篩選條件，選取藥丸圖示上的「X」，或選取 **[!UICONTROL 全部清除]** 以移除所有篩選器。
 
-![清除篩選器](../../images/audit-logs/clear-filters.png)
+![反白顯示具有清除篩選器的稽核控制面板。](../../images/audit-logs/clear-filters.png)
+
+傳回的稽核記錄檔資料包含符合您所選篩選條件之所有查詢的下列資訊。
+
+| 資料行名稱 | 說明 |
+|---|---|
+| [!UICONTROL 時間戳記] | 在中執行動作的確切日期和時間 `month/day/year hour:minute AM/PM` 格式。 |
+| [!UICONTROL 資產名稱] | 的值 [!UICONTROL 資產名稱] 欄位取決於選擇作為篩選器的類別。 |
+| [!UICONTROL 類別] | 此欄位符合篩選下拉式清單中選取的類別。 |
+| [!UICONTROL 動作] | 可用的動作取決於選擇作為篩選器的類別。 |
+| [!UICONTROL 使用者] | 此欄位提供執行查詢的使用者ID。 |
+
+![反白顯示篩選活動記錄檔的「稽核」控制面板。](../../images/audit-logs/filtered.png)
 
 ### 匯出稽核記錄
 
 若要匯出目前的稽核記錄清單，請選取&#x200B;**[!UICONTROL 下載記錄]**。
 
-![下載記錄](../../images/audit-logs/download.png)
+![具有下列專案的稽核控制面板： [!UICONTROL 下載記錄] 反白顯示。](../../images/audit-logs/download.png)
 
 在出現的對話方塊中，選取您偏好的格式 **[!UICONTROL CSV]** 或 **[!UICONTROL JSON]**)，然後選取 **[!UICONTROL 下載]**. 瀏覽器會下載產生的檔案，並將其儲存到您的電腦。
 
-![選取下載格式](../../images/audit-logs/select-download-format.png)
+![檔案格式選取對話方塊，其中包含 [!UICONTROL 下載] 反白顯示。](../../images/audit-logs/select-download-format.png)
 
 ## 管理API中的稽核記錄
 
