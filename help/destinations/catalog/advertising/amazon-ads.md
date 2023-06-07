@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書廠商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的全方位整合。 使用者可以在Adobe Experience Platform中使用Amazon Ads目的地，定義廣告商對象，以在Amazon DSP上鎖定和啟用。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 9c1f3d5d5fc14941cb40adf02fd3d9acce5cf648
+source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 1%
@@ -81,9 +81,11 @@ Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括A
 * **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL Amazon Ads廣告商ID]**：選取用於目的地的目標Amazon Ads帳戶ID。
+
 >[!NOTE]
 >
 >儲存目的地設定後，您將無法變更Amazon Ads廣告商ID，即使您透過Amazon帳戶重新驗證亦然。 若要使用其他Amazon Ads廣告商ID，您必須建立新的目的地連線。
+
 * **[!UICONTROL 廣告商地區]**：選取託管廣告商的適當區域。 如需各個地區支援之市場的詳細資訊，請造訪 [Amazon Ads檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
 
@@ -136,7 +138,7 @@ Amazon Ads連線支援雜湊電子郵件地址和雜湊電話號碼，以進行�
 
 * [Amazon DSP說明中心](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
-### Changelog {#changelog}
+## Changelog {#changelog}
 
 本節擷取此目的地聯結器的功能和重要檔案更新。
 
@@ -144,7 +146,7 @@ Amazon Ads連線支援雜湊電子郵件地址和雜湊電話號碼，以進行�
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 5 月 | 功能和檔案更新 | <ul><li>在目標連線工作流程中新增對廣告商區域選擇的支援。</li><li>更新說明檔案，以反映新增廣告商地區選擇。 如需選取正確廣告商地區的詳細資訊，請參閱 [Amazon檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
+| 2023 年 5 月 | 功能和檔案更新 | <ul><li>在中新增對廣告商地區選取的支援 [目的地連線工作流程](#destination-details).</li><li>更新說明檔案，以反映新增廣告商地區選擇。 如需選取正確廣告商地區的詳細資訊，請參閱 [Amazon檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | 2023 年 3 月 | 首次發行 | 已發佈初始目的地版本和檔案。 |
 
 {style="table-layout:auto"}
