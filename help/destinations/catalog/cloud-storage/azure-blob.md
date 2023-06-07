@@ -2,10 +2,10 @@
 title: Azure Blob連線
 description: 建立與您的Azure Blob儲存體的即時輸出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 4%
+source-wordcount: '1029'
+ht-degree: 3%
 
 ---
 
@@ -32,6 +32,11 @@ ht-degree: 4%
 ## 總覽 {#overview}
 
 [!DNL Azure Blob] (以下稱 [!DNL Blob])是Microsoft的雲端物件儲存解決方案。 本教學課程提供建立 [!DNL Blob] 目的地使用 [!DNL Platform] 使用者介面。
+
+## 連線至您的 [!UICONTROL Azure Blob] 透過API或UI儲存 {#connect-api-or-ui}
+
+* 若要連線至您的 [!UICONTROL Azure Blob] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
+* 若要連線至您的 [!UICONTROL Azure Blob] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
 
 ## 快速入門
 
@@ -79,7 +84,7 @@ ht-degree: 4%
 若要驗證目的地，請填入必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
 * **[!UICONTROL 連線字串]**：需要連線字串才能存取Blob儲存空間中的資料。 此 [!DNL Blob] 連線字串模式開頭為： `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
-   * 如需有關設定的詳細資訊 [!DNL Blob] 連線字串，請參閱 [設定Azure儲存體帳戶的連線字串](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) (位於Microsoft檔案中)。
+   * 如需有關設定的詳細資訊 [!DNL Blob] 連線字串，請參閱 [設定Azure儲存體帳戶的連線字串](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) (位於Microsoft檔案中)。
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
    ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -112,7 +117,10 @@ ht-degree: 4%
 
 ## (Beta)匯出資料集 {#export-datasets}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請參閱 [匯出資料集教學課程](/help/destinations/ui/export-datasets.md).
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
 
 ## 匯出的資料 {#exported-data}
 

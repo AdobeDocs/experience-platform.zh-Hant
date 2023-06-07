@@ -2,9 +2,9 @@
 title: (Beta) Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用區段或匯出資料集。
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 0%
 ## 總覽 {#overview}
 
 建立與的即時輸出連線 [!DNL Google Cloud Storage] 以定期從Adobe Experience Platform將資料檔案匯出至您自己的貯體。
+
+## 連線至您的 [!DNL Google Cloud Storage] 透過API或UI儲存 {#connect-api-or-ui}
+
+* 若要連線至您的 [!DNL Google Cloud Storage] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
+* 若要連線至您的 [!DNL Google Cloud Storage] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -102,7 +107,10 @@ ht-degree: 0%
 
 ## (Beta)匯出資料集 {#export-datasets}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請參閱 [匯出資料集教學課程](/help/destinations/ui/export-datasets.md).
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
 
 ## 驗證資料匯出成功 {#exported-data}
 

@@ -2,9 +2,9 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '987'
 ht-degree: 7%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 7%
 >
 >隨著匯出資料集功能的Beta版和改良的檔案匯出功能，您現在可能會看到兩個 [!DNL SFTP] 目的地目錄中的卡片。
 >* 如果您已將檔案匯出至 **[!UICONTROL SFTP]** 目的地：請建立新的資料流到新的 **[!UICONTROL SFTP測試版]** 目的地。
->* 如果您尚未建立任何資料流至 **[!UICONTROL SFTP]** 目的地，請使用新的 **[!UICONTROL SFTP測試版]** 要匯出檔案的卡片 **[!UICONTROL SFTP]**.
+>* 如果您尚未建立任何資料流至 **[!UICONTROL SFTP]** 目的地，使用新的 **[!UICONTROL SFTP測試版]** 要匯出檔案的卡片 **[!UICONTROL SFTP]**.
 
 
 ![並排檢視中的兩個SFTP目的地卡片影像。](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
@@ -36,6 +36,11 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 > 雖然Experience Platform支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為 [!DNL Amazon S3] 和 [!DNL SFTP].
+
+## 透過API或UI連線至SFTP {#connect-api-or-ui}
+
+* 若要使用Platform使用者介面連線至您的SFTP儲存位置，請閱讀以下章節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
+* 若要以程式設計方式連線至您的SFTP儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -70,12 +75,13 @@ ht-degree: 7%
 >title="私密 SSH 金鑰"
 >abstract="私密 SSH 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。"
 
-如果您選取 **[!UICONTROL 基本驗證]** 輸入以連線至您的SFTP位置：
+如果您選取 **[!UICONTROL 使用密碼的SFTP]** 要連線至您的SFTP位置的驗證型別：
 
 ![SFTP目的地基本驗證](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
-* **[!UICONTROL 主機]**：您的SFTP儲存位置位址；
+* **[!UICONTROL 網域]**：您的SFTP儲存位置位址；
 * **[!UICONTROL 使用者名稱]**：登入SFTP儲存位置的使用者名稱；
+* **[!UICONTROL 連線埠]**：您的SFTP儲存位置使用的連線埠；
 * **[!UICONTROL 密碼]**：登入SFTP儲存位置的密碼。
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
@@ -100,7 +106,7 @@ ht-degree: 7%
 
 ![SFTP目的地的可用目的地詳細資料](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
-* **[!UICONTROL 名稱]**：輸入有助於您在Experience Platform使用者介面中識別此目的地的名稱；
+* **[!UICONTROL 名稱]**：輸入可協助您在Experience Platform使用者介面中識別此目的地的名稱；
 * **[!UICONTROL 說明]**：輸入此目的地的說明；
 * **[!UICONTROL 資料夾路徑]**：輸入要匯出檔案之SFTP位置中的資料夾路徑。
 * **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
@@ -117,12 +123,15 @@ ht-degree: 7%
 
 ## (Beta)匯出資料集 {#export-datasets}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請參閱 [匯出資料集教學課程](/help/destinations/ui/export-datasets.md).
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
 
 ## 匯出的資料 {#exported-data}
 
 對象 [!DNL SFTP] 目的地，平台會建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 區段啟動教學課程中的。
 
-## IP位址允許清單
+## IP位址允許清單 {#ip-address-allow-list}
 
 請參閱 [SFTP目的地的IP位址允許清單](ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。

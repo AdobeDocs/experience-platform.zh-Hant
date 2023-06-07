@@ -2,9 +2,9 @@
 title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域以啟用區段和匯出資料集。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,11 @@ ht-degree: 0%
 
 Platform會對上傳至的所有檔案執行嚴格的七天存留時間(TTL) [!DNL Data Landing Zone] 容器。 所有檔案會在七天後刪除。
 
+## 連線至您的 [!UICONTROL 資料登陸區域] 透過API或UI儲存 {#connect-api-or-ui}
+
+* 若要連線至您的 [!UICONTROL 資料登陸區域] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
+* 若要連線至您的 [!UICONTROL 資料登陸區域] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -43,7 +48,7 @@ Platform會對上傳至的所有檔案執行嚴格的七天存留時間(TTL) [!D
 
 ### 連線您的 [!DNL Data Landing Zone] 容器至 [!DNL Azure Storage Explorer]
 
-您可以使用 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 管理您的網站內容： [!DNL Data Landing Zone] 容器。 若要開始使用 [!DNL Data Landing Zone]，您首先需要擷取憑證，並在 [!DNL Azure Storage Explorer]，並連線您的 [!DNL Data Landing Zone] 容器至 [!DNL Azure Storage Explorer].
+您可以使用 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) 管理您的網站內容： [!DNL Data Landing Zone] 容器。 若要開始使用 [!DNL Data Landing Zone]，您必須先擷取憑證，然後輸入於 [!DNL Azure Storage Explorer]，並連線您的 [!DNL Data Landing Zone] 容器至 [!DNL Azure Storage Explorer].
 
 在 [!DNL Azure Storage Explorer] UI中，選取左側導覽列中的連線圖示。 此 **選取資源** 視窗隨即出現，為您提供可連線的選項。 選取 **[!DNL Blob container]** 以連線至您的 [!DNL Data Landing Zone] 儲存。
 
@@ -163,7 +168,10 @@ curl -X GET \
 
 ## (Beta)匯出資料集 {#export-datasets}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請參閱 [匯出資料集教學課程](/help/destinations/ui/export-datasets.md).
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
 
 ## 驗證資料匯出成功 {#exported-data}
 

@@ -2,9 +2,9 @@
 title: (Beta) Azure Data Lake Storage Gen2連線
 description: 瞭解如何連線至Azure Data Lake Storage Gen2以啟用區段和匯出資料集。
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: d30cd0729aa13044d8e7009fde5cae846e7a2864
+source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,11 @@ ht-degree: 0%
 ## 總覽 {#overview}
 
 閱讀本頁以瞭解如何建立與您的的即時輸出連線 [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2])資料湖，以定期從Experience Platform匯出資料檔案。
+
+## 連線至您的 [!DNL ADLS Gen2] 透過API或UI儲存 {#connect-api-or-ui}
+
+* 若要連線至您的 [!DNL ADLS Gen2] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
+* 若要連線至您的 [!DNL ADLS Gen2] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -87,7 +92,10 @@ ht-degree: 0%
 
 ## (Beta)匯出資料集 {#export-datasets}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請參閱 [匯出資料集教學課程](/help/destinations/ui/export-datasets.md).
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
 
 ## 驗證資料匯出成功 {#exported-data}
 
