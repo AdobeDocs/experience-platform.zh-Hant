@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料登陸區域來源
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: d57060ddeed64d3863f71ac1ea34ccc5c97265ea
+source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 - 不允許非法URL路徑字元。 程式碼點數類似 `\uE000`雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，還有一些ASCII或Unicode字元，例如控制字元(例如 `0x00` 至 `0x1F`， `\u0081`、等等)之外，也不可使用。 如需HTTP/1.1中Unicode字串的相關規則，請參閱 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - 不允許下列檔案名稱：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)，以及兩個點字元(...)。
 
-## 管理內容 [!DNL Data Landing Zone]
+## 管理資料登陸區域的內容{#manage-the-contents-of-your-data-landing-zone}
 
 您可以使用 [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) 管理您的網站內容： [!DNL Data Landing Zone] 容器。
 
@@ -162,3 +162,8 @@ azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 
 - [Connect [!DNL Data Landing Zone] 使用UI移至Platform](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [在UI中建立雲端儲存體連線的資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+
+>[!IMPORTANT]
+>
+>目前不支援使用連線到Experience Platform的私人連結 [!DNL Data Landing Zone]. 唯一支援的存取方法是下列方法 [此處](#manage-the-contents-of-your-data-landing-zone).
+
