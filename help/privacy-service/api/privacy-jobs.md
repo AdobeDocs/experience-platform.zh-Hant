@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權工作API端點
 description: 瞭解如何使用Privacy Service API管理Experience Cloud應用程式的隱私權工作。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 890294f087b4aae58ec9519ab3fcfff0cc4cc12d
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 1%
@@ -36,7 +36,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>請參閱以下文章的概觀： [支援的法規](../regulations/overview.md) 以取得上述值所代表之隱私權法規的詳細資訊。 |
+| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li><li>`cpa`</li><li>`ctdpa`</li></ul><br>請參閱以下文章的概觀： [支援的法規](../regulations/overview.md) 以取得上述值所代表之隱私權法規的詳細資訊。 |
 | `{PAGE}` | 要顯示的資料頁（使用0編號）。 預設值為 `0`。 |
 | `{SIZE}` | 要在每個頁面上顯示的結果數量。 預設值為 `1` 最大值為 `100`. 超過上限會導致API傳回400程式碼錯誤。 |
 

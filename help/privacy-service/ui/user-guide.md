@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在Privacy ServiceUI中管理隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面協調和監視各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: a1628df7d0eefc795d1eaeefce842a65c7133322
+source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1467'
 ht-degree: 14%
 
 ---
@@ -38,7 +38,9 @@ ht-degree: 14%
 
 | UI標籤 | 法規 |
 | --- | --- |
+| [!UICONTROL CPA] | 此 [!DNL Colorado Privacy Act] |
 | [!UICONTROL CCPA] | 此 [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CTDPA] | 此 [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL GDPR] | 歐盟的 [!DNL General Data Protection Regulation] |
 | [!UICONTROL PDPA_THA] | 泰國的 [!DNL Personal Data Protection Act] |
 | [!UICONTROL LGPD_BRA] | 巴西的 [!DNL Lei Geral de Proteção de Dados] |
@@ -164,7 +166,7 @@ ht-degree: 14%
 
 ![請求建立選項](../images/user-guide/create-options.png)
 
-此 **[!UICONTROL 上傳JSON]** 對話方塊隨即出現，為您提供可將JSON檔案拖放到的視窗。
+此 **[!UICONTROL 上傳JSON]** 對話方塊隨即出現，提供您拖放JSON檔案的視窗。
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
