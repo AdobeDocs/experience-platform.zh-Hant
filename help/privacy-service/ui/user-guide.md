@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在Privacy ServiceUI中管理隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面協調和監視各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 96434c83b3d8757872439b58b5c450955c0ed652
+source-git-commit: e5a1b57bc81b27d0e61c3c1ecc10156c10dd3f6e
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1473'
 ht-degree: 14%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 14%
 
 系統會分別追蹤每種規則型態的工單。 若要切換規則型別，請選取 **[!UICONTROL 法規型別]** 下拉式功能表，並從清單中選取所需的規則。
 
-![規則型別下拉式清單](../images/user-guide/regulation.png)
+![具有「規則型別」下拉式清單的Privacy Service主控台。](../images/user-guide/regulation.png)
 
 變更法規型別後，儀表板會更新以顯示適用於所選法規的所有操作、篩選器、Widget和工作建立對話方塊。
 
