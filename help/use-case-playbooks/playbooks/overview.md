@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: 教戰手冊總覽
+title: 使用案例教戰手冊概覽
 description: 瞭解如何在Experience Platform中使用使用案例教戰手冊功能，以開始使用各種行銷使用案例
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 63ea852ca9f9a45d1c071fd1033cbd44cbb427c6
+source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '398'
 ht-degree: 2%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 2%
 本檔案指南內容：
 
 * **[使用案例教戰手冊概觀](#overview)**
-* [檢視教戰手冊並產生資產](ui-guide.md#view-playbook-generate-assets)
-* [啟用、使用及重複使用教戰手冊的執行個體 ](ui-guide.md#enable-playbook)
+* [探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md)
+* [建立、共用和重複使用教戰手冊例項](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [疑難排解和已知限制](troubleshooting.md)
 
 >[!ENDSHADEBOX]
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 ## UI指南
 
-在您決定要使用的教戰手冊後，請從UI中選取它並開始使用。 閱讀以下內容的UI指南： [如何啟用和重複使用教戰手冊](/help/use-case-playbooks/playbooks/ui-guide.md) 有關如何建立執行個體並充分利用行動手冊的完整資訊。
+在您決定要使用的教戰手冊後，請從UI中選取它並開始使用。 閱讀以下內容的UI指南 [如何探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md) 為您和 [如何建立、共用及重複使用playbook例項](/help/use-case-playbooks/playbooks/create-share-reuse.md) 有關如何建立執行個體並充分利用行動手冊的完整資訊。
 
 ## 疑難排解和已知限制
 
