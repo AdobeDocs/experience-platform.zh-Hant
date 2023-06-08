@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用查詢引數篩選目錄資料
 description: 目錄服務API可讓您透過使用請求查詢引數來篩選回應資料。 「目錄」最佳實務的一部分是在所有API呼叫中使用篩選器，因為它們會減少API的負載，並有助於改善整體效能。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2099'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 整數，表示傳回的物件數目，範圍從1到100。 |
 
 **要求**
@@ -79,7 +79,7 @@ curl -X GET \
 
 此 `properties` 引數會篩選回應物件，以只傳回一組指定的屬性。 引數可以設定為傳回一或多個屬性。
 
-此 `properties` parameter僅接受頂層物件屬性，這表示對於下列範例物件，您可以套用濾鏡 `name`， `description`、和 `subItem`，但不適用於 `sampleKey`.
+此 `properties` 引數可以接受任何層級物件屬性。 `sampleKey` 可使用以下專案擷取 `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 要包含在回應本文中的屬性名稱。 |
 | `{OBJECT_ID}` | 特定專案的唯一識別碼 [!DNL Catalog] 正在擷取物件。 |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OFFSET}` | 整數，表示回應位移的物件數目。 |
 
 **要求**
@@ -228,17 +228,6 @@ curl -X GET \
         },
         "name": "Sample Dataset",
         "description": "Same dataset containing sample data.",
-        "dule": {
-            "identity": [
-                "I1"
-            ]
-        },
-        "statsCache": {},
-        "state": "DRAFT",
-        "lastBatchId": "ca12b29612bf4052872edad59573703c",
-        "lastBatchStatus": "success",
-        "lastSuccessfulBatch": "ca12b29612bf4052872edad59573703c",
-        "namespace": "{NAMESPACE}",
         "createdUser": "{CREATED_USER}",
         "createdClient": "{CREATED_CLIENT}",
         "updatedUser": "{UPDATED_USER}",
@@ -264,7 +253,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | 要作為篩選依據的標籤名稱。 |
 | `{TAG_VALUE}` | 要作為篩選依據的標籤值。 支援萬用字元(`*`)。 |
 
@@ -304,8 +293,6 @@ curl -X GET \
                     "Example tag value"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -327,8 +314,6 @@ curl -X GET \
                     "2.0"
                 ]
             },
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -375,8 +360,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
@@ -387,8 +370,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -412,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 排序結果所依據的屬性名稱。 |
 
 **要求**
@@ -443,8 +424,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -455,8 +434,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
@@ -467,8 +444,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -499,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 您要依據其值篩選的屬性名稱。 |
 | `{VALUE}` | 決定要包含（或排除，視查詢而定）之結果的屬性值。 |
 
@@ -531,8 +506,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
@@ -543,8 +516,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```
@@ -553,7 +524,7 @@ curl -X GET \
 
 此 `property` 查詢引數比簡單篩選器更能靈活地使用屬性型篩選。 除了依據屬性是否具有特定值進行篩選外， `property` 引數可使用其他比較運運算元(例如「大於」(`>`)和「小於」(`<`))以及規則運算式，以依據屬性值篩選。 它也可以依屬性是否存在來篩選，無論其值為何。
 
-此 `property` parameter僅接受最上層物件屬性，這表示對於下列範例物件，您可以依據以下專案的屬性來篩選： `name`， `description`、和 `subItem`，但不適用於 `sampleKey`.
+此 `property` 引數可以接受任何層級物件屬性。 `sampleKey` 可用於篩選，使用 `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -575,7 +546,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | 一個條件運算式，指出要查詢的屬性以及如何評估其值。 範例如下。 |
 
 的值 `property` 引數支援數種不同的條件運算式。 下表概述支援運算式的基本語法：
@@ -624,8 +595,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
@@ -636,8 +605,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
@@ -648,8 +615,6 @@ curl -X GET \
             "createdClient": "{API_KEY}",
             "createdUser": "{USER_ID}",
             "updatedUser": "{USER_ID}",
-            "dule": {},
-            "statsCache": {}
     }
 }
 ```

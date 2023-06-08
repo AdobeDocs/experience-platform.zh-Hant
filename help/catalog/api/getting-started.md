@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 目錄服務API指南
 description: 目錄服務API可讓開發人員管理Adobe Experience Platform中的資料集中繼資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 3%
 
 ---
@@ -63,6 +63,6 @@ ht-degree: 3%
 
 本檔案說明呼叫「 」所需的必要條件知識。 [!DNL Catalog] API。 您現在可以繼續本開發人員指南中提供的範例呼叫，並依照其指示操作。
 
-本指南中的大多數範例都使用 `/dataSets` 端點，但原則可套用至內的其他端點 [!DNL Catalog] (例如 `/batches` 和 `/accounts`)。 請參閱 [目錄服務API參考](https://www.adobe.io/experience-platform-apis/references/catalog/) 以取得每個端點所有可用呼叫和作業的完整清單。
+本指南中的大多數範例都使用 `/dataSets` 端點，但原則可套用至內的其他端點 [!DNL Catalog] (例如 `/batches`)。 請參閱 [目錄服務API參考](https://www.adobe.io/experience-platform-apis/references/catalog/) 以取得每個端點所有可用呼叫和作業的完整清單。
 
 如需逐步工作流程，說明如何 [!DNL Catalog] API與資料擷取有關，請參閱以下主題的相關教學課程： [建立資料集](../datasets/create.md).

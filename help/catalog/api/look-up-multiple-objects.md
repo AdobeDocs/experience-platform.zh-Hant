@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢多個目錄物件
 description: 如果您想要檢視數個特定物件，而不是針對每個物件提出一項要求，Catalog會提供簡單的捷徑，讓您請求相同型別的多個物件。 您可以使用單一GET要求，包含以逗號分隔的ID清單來傳回多個特定物件。
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | 您要擷取的特定物件之一的識別碼。 |
 
 **要求**

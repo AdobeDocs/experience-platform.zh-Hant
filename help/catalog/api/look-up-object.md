@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢目錄物件
 description: 如果您知道特定目錄物件的唯一識別碼，則可以執行GET要求來檢視該物件的詳細資訊。
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 2%
@@ -28,16 +28,16 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要擷取的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要擷取之特定物件的識別碼。 |
 
 **要求**
 
-以下請求會依其ID擷取資料集，並傳回其 `name`， `description`， `state`， `tags`、和 `files` 屬性。
+以下請求會依其ID擷取資料集，並傳回其 `name`， `description`， `tags`、和 `files` 屬性。
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,state,tags,files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a?properties=name,description,tags,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -53,7 +53,6 @@ curl -X GET \
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset",
         "description": "Sample dataset containing important data.",
-        "state": "DRAFT",
         "tags": {
             "adobe/pqs/table": [
                 "sample_dataset"

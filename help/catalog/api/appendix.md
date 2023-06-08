@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 目錄服務API指南附錄
 description: 本檔案包含協助您在Adobe Experience Platform中使用目錄API的其他資訊。
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '458'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 部分 [!DNL Catalog] 物件可以與其他物件相互關聯 [!DNL Catalog] 物件。 前置詞為的任何欄位 `@` 回應中裝載表示相關物件。 這些欄位的值採用URI的形式，可用於單獨的GET請求中，以檢索它們表示的相關物件。
 
-檔案傳回的範例資料集，於 [查詢特定資料集](look-up-object.md) 包含 `files` 具有下列URI值的欄位： `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. 的內容 `files` 欄位可透過使用此URI作為新GET請求的路徑來檢視。
+檔案傳回的範例資料集，於 [查詢特定資料集](look-up-object.md) 包含 `files` 具有下列URI值的欄位： `"@/datasetFiles?datasetId={DATASET_ID}"`. 的內容 `files` 欄位可透過使用此URI作為新GET請求的路徑來檢視。
 
 **API格式**
 
@@ -37,7 +37,7 @@ GET {OBJECT_URI}
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
+  'https://platform.adobe.io/data/foundation/catalog/dataSets/datasetFiles?datasetId={DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -88,90 +88,6 @@ curl -X GET \
     }
 }
 ```
-
-## 在單一呼叫中提出多個請求
-
-的根端點 [!DNL Catalog] API允許在單一呼叫中提出多個請求。 請求承載包含物件陣列，代表通常會依序執行的個別請求。
-
-如果這些請求是對的修改或新增 [!DNL Catalog] 而任何一項變更都會失敗，所有變更都會還原。
-
-**API格式**
-
-```http
-POST /
-```
-
-**要求**
-
-以下請求會建立新資料集，然後為該資料集建立相關檢視。 此範例示範如何使用範本語言來存取先前呼叫中傳回的值，以用於後續呼叫。
-
-例如，如果您想要參照從先前的子請求傳回的值，您可以以下列格式建立參照： `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (其中 `{REQUEST_ID}` 是子請求的使用者提供ID （如下所示）。 您可以使用這些範本，參照前一個子請求回應物件內文中的任何可用屬性。
-
->[!NOTE]
->
->當執行的子請求僅傳回物件的參考時(目錄API中大多數POST和PUT請求的預設值)，此參考將以值的別名顯示 `id` 和可以用作  `<<{OBJECT_ID}.id>>`.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '[
-    {
-      "id": "firstObjectId",
-      "resource": "/dataSets",
-      "method": "post",
-      "body": {
-        "type": "raw",
-        "name": "First Dataset"
-      }
-    }, 
-    {
-      "id": "secondObjectId",
-      "resource": "/datasetViews",
-      "method": "post",
-      "body": {
-        "status": "enabled",
-        "dataSetId": "<<firstObjectId.id>>"
-      }
-    }
-  ]'
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `id` | 附加至回應物件的使用者提供的ID，讓您可以將請求與回應比對。 [!DNL Catalog] 不會儲存此值，而只是將其傳回回應以供參考。 |
-| `resource` | 相對於根目錄的資源路徑 [!DNL Catalog] API。 通訊協定和網域不應包含在此值中，而且應加上前置詞「/」。 <br/><br/> 使用PATCH或DELETE作為子請求時 `method`，請在資源路徑中包含物件ID。 不要與使用者提供的混淆 `id`，則資源路徑會使用 [!DNL Catalog] 物件本身(例如， `resource: "/dataSets/1234567890"`)。 |
-| `method` | 和要求中發生的動作相關的方法名稱(GET、PUT、POST、PATCH或DELETE)。 |
-| `body` | 通常作為POST、PUT或PATCH請求中的裝載傳遞的JSON檔案。 GET或DELETE請求不需要此屬性。 |
-
-**回應**
-
-成功的回應會傳回一個物件陣列，其中包含 `id` 您指派給每個請求的HTTP狀態碼、個別請求和回應 `body`. 由於三個範例要求都是要建立新物件， `body` 每個物件的都是一個只包含新建立物件ID的陣列，此為中大多數成功POST回應的標準 [!DNL Catalog].
-
-```json
-[
-    {
-        "id": "firstObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSets/5be230aef5b02914cd52dbfa"
-        ]
-    },
-    {
-        "id": "secondObjectId",
-        "code": 200,
-        "body": [
-            "@/dataSetViews/5be230aef5b02914cd52dbfb"
-        ]
-    }
-]
-```
-
-檢查多重請求的回應時請務必謹慎，因為您需要驗證每個個別子請求的程式碼，而非僅依賴父POST請求的HTTP狀態程式碼。  單一子請求可能會傳回404 (例如對無效資源的GET請求)，而整體請求會傳回200。
 
 ## 其他請求標頭
 

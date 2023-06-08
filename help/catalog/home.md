@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 目錄服務概觀
 description: 目錄服務是Adobe Experience Platform中資料位置和譜系的記錄系統。 雖然所有內嵌至Experience Platform的資料都會以檔案和目錄的形式儲存在Data Lake中，但Catalog仍會儲存這些檔案和目錄的中繼資料和說明，以供查閱和監視。
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 5%
+source-wordcount: '694'
+ht-degree: 6%
 
 ---
 
@@ -53,10 +53,7 @@ ht-degree: 5%
 
 | 物件 | API端點 | 定義 |
 |---|---|---|
-| 帳戶 | `/accounts` | 建立來源連線時，必須提供驗證認證。 帳戶代表用來建立特定型別連線的驗證憑證集合。 每個連線都有一組唯一引數，這些引數會由儲存在 [!DNL Catalog] 並在以下位置提供保護： [!DNL Azure Key Vault]. |
 | 批次 | `/batches` | 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。中的批次物件 [!DNL Catalog] 概述批次的擷取量度（例如處理的記錄數或磁碟大小），並且可能包含資料集、檢視和其他受批次作業影響的資源的連結。 |
-| Connection | `/connections` | 連線是來源聯結器的單一執行個體，對您的組織而言是唯一的，並使用聯結器型別的適當驗證憑證進行設定。 |
-| 連接器 | `/connectors` | 聯結器會定義來源連線如何從其他Adobe應用程式(例如Adobe Analytics和Adobe Audience Manager)、協力廠商雲端儲存空間(例如 [!DNL Azure Blob]， [!DNL Amazon S3]、FTP伺服器和SFTP伺服器)以及協力廠商CRM系統(例如 [!DNL Microsoft Dynamics] 和 [!DNL Salesforce])。 |
 | 資料集 | `/dataSets` | 資料集是一種儲存和管理結構，用於收集包含方案（欄）和欄位（列）的資料（通常是表格）。 請參閱 [資料集總覽](./datasets/overview.md) 以取得詳細資訊。 |
 | 資料集檔案 | `/datasetFiles` | 資料集檔案代表已儲存的資料區塊 [!DNL Platform]. 作為常值檔案的記錄，您可以在這裡找到檔案的大小、檔案包含的記錄數，以及對擷取檔案之批次的參照。 |
 
