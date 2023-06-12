@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API快速入門
 exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '937'
 ht-degree: 7%
 
 ---
@@ -206,6 +206,8 @@ curl -X 'POST' \
 
 如需「緩衝開始」端點引數和範例的詳細資訊，請參閱Media Edge Swagger檔案。
 
+成功回應表示200狀態，不包含任何內容。
+
 ## 播放事件要求
 
 當媒體播放器將其狀態從其他狀態（例如「正在緩衝」、「已暫停」或「錯誤」）變更為「正在播放」時，就會傳送「播放」事件。 若要提出「播放」事件請求，請使用 `sessionId` 在呼叫的裝載中至下列端點：
@@ -236,6 +238,8 @@ curl -X 'POST' \
   ]
 }'
 ```
+
+成功回應表示200狀態，不包含任何內容。
 
 如需播放端點引數和範例的詳細資訊，請參閱Media Edge Swagger檔案。
 
@@ -270,7 +274,7 @@ curl -X 'POST' \
 }'
 ```
 
-如需「工作階段完成」端點引數和範例的詳細資訊，請參閱Media Edge Swagger檔案。
+成功回應表示200狀態，不包含任何內容。
 
 ## 回應代碼
 
