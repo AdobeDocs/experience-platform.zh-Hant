@@ -3,8 +3,7 @@ keywords: Experience Platform；media edge；熱門主題；日期範圍
 solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API可讓開發人員收集Media Edge Analytics和Customer Journey Analytics的資料。
-exl-id: null
-source-git-commit: f040ba6d1403da4212fe279e32316bac995905b2
+source-git-commit: b4687fa7f1a2eb8f206ad41eae0af759b0801b83
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
