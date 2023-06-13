@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API快速入門
 exl-id: null
-source-git-commit: 8592bcc7a6d6700ec9b689b98d07a15f0b9301b2
+source-git-commit: 696ddd93d87601f9f6dedfd651ee12573dc4990a
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '963'
 ht-degree: 7%
 
 ---
@@ -101,18 +101,18 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 在上述範例要求中， `eventType` 值包含前置詞 `media` 根據 [體驗資料模型(XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant) 用於指定網域。
 
-此外，資料型別對應 `eventType` 在上述範例中，如下所示（僅限報表的欄位不應出現在承載中）：
+此外，資料型別對應 `eventType` 在上述範例中，如下所示：
 
-| 事件型別 | 資料型別 | 僅限報表欄位（已忽略） |
-| -------- | ------ | ---------- |
-| mediaSessionStart | sessionDetails | ID、adCount、averageMinuteAudience、chapterCount、estimatedStreams、hasPauseImpactedStreams、hasProgress10、hasProgress25、hasProgress50、hasProgress75、hasProgress95、hasSegmentView、isCompleted、isDownloaded、isFederated、isPlayed、isViewed、pauseCount、pausePauseTimeTime、seconcall、segment、segment、segment 、pev3、pccr |
-| media.chapterStart | chapterDetails | id、isCompleted、isStarted、timePlayed |
-| media.adBreakStart | advertisingPodDetails | ID |
-| media.adStart | advertisingDetails | id、isCompleted、isStarted、timePlayed |
-| media.error | errorDetails | - |
-| media.statesUpdate | statesStart：陣列[playerStateData]，statesEnd：陣列[playerStateData] | playerStateData.isSet， playerStateData.count， playerStateData.time |
-| media.sessionStart， media.chapterStart， media.adStart | customMetadata | - |
-| 全部 | qoeDataDetails | bitrateAverage、bitrateAverageBucket、bitrateChangeCount、bufferCount、bufferTime、errorCount、externalErrors、hasBitrateChangeImpactedStreams、hasBufferImpactedStreams、hasErrorImpactedStreams、hasStallImpactedStreams、isDroppedBeforeStart、mediaErrors、plays、playerSdkErrors、plays、playsSdkErrors、playsErrors |
+| 事件型別 | 資料型別 |
+| -------- | ------ |
+| mediaSessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
+| media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
+| media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
+| media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
+| media.error | [errorDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/errordetails.schema.md) |
+| media.statesUpdate | [statesStart](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesstart)：陣列[playerStateData]， [statesEnd](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmstatesend)：陣列[playerStateData] |
+| media.sessionStart， media.chapterStart， media.adStart | [customMetadata](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmcustommetadata) |
+| 全部 | [qoeDataDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/qoedatadetails.schema.md) |
 
 ### 範例回應
 
