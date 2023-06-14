@@ -1,12 +1,12 @@
 ---
-title: (Beta)使用合作夥伴提供的屬性來補充第一方設定檔
-description: 瞭解如何使用來自受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎、獲得對客戶群的新洞察以及更好的受眾最佳化
+title: (Beta)使用合作夥伴提供的屬性來補充第一方記錄檔
+description: 瞭解如何使用來自受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎、獲得對客戶群的新洞察以及更好的受眾最佳化。
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 500475af5e7c80e670324a5c70ed18cc813199be
+source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 1. As a **客戶**，您可從中授權屬性， **資料合作夥伴**.
 2. As a **客戶**，您可擴充設定檔資料和管理模型，以適應 **合作夥伴**&#x200B;提供的屬性。
-3. As a **客戶**，即可載入要擴充至資料合作夥伴的受眾。 一般而言，這些對象不會輸入識別碼，例如個人識別資訊(PII)元素，例如電子郵件、姓名、地址或其他。
+3. As a **客戶**，即可瞭解您想要透過資料合作夥伴擴充的受眾。 一般而言，這些對象不會輸入識別碼，例如個人識別資訊(PII)元素，例如電子郵件、姓名、地址或其他。
 4. 此 **合作夥伴** 為可比對的設定檔附加授權屬性。 （可選）a [合作夥伴ID](/help/identity-service/namespaces.md) 可包含並內嵌至合作夥伴範圍ID名稱空間。
 5. As a **客戶**，即可將屬性從資料合作夥伴載入到Real-Time CDP中的客戶設定檔中。
 
@@ -50,15 +50,15 @@ ht-degree: 0%
 
 ### 來自合作夥伴的授權屬性 {#license-attributes-from-partner}
 
-先決條件和Adobe會說明此步驟，並假設您與受信任的資料廠商達成適當的合約協定，以擴充您的第一方設定檔。
+此步驟的說明請參閱 [必備條件](#prerequisites-and-planning) 而Adobe則假設您與受信任的資料廠商達成適當的合約協定，以擴充您的第一方設定檔。
 
 ### 擴充您的設定檔資料和治理模型，以配合合作夥伴提供的屬性。 {#extend-governance-model}
 
 此時，您需要在Real-Time CDP中擴充資料管理架構，以符合合作夥伴提供的屬性。
 
-您可以選擇建立 **[!UICONTROL XDM個別設定檔]** 類別，或擴充相同型別的現有結構描述以包含合作夥伴提供的屬性。 Adobe強烈建議使用最能代表資料供應商其他屬性的新欄位群組集來建立新結構描述。 這可確保您的資料結構描述乾淨並可彼此獨立演化。
+您可以選擇建立 **[!UICONTROL XDM個別設定檔]** 類別，或擴充相同型別的現有結構描述以包含合作夥伴提供的屬性。 Adobe強烈建議使用最能代表資料供應商其他屬性的新欄位群組集來建立新結構描述。 這可確保您的資料架構整潔且可彼此獨立演化。
 
-若要在結構描述中加入合作夥伴提供的屬性，您可以使用預期的屬性來建立新的欄位群組，也可以使用Adobe提供的其中一個現成的欄位群組。
+若要將合作夥伴提供的屬性納入結構描述中，您可以使用預期的屬性來建立新的欄位群組，也可以使用Adobe提供的其中一個預先設定的欄位群組。
 
 如需詳細資訊，請閱讀以下檔案頁面：
 
@@ -79,7 +79,7 @@ Commenting out links for now
 此外，在此步驟中，請思考當您將資料管理策略擴展至包含合作夥伴提供的第三方資料時，您的資料治理模式會如何變更。 探索以下檔案連結中的考量事項：
 
 * (**即將推出**)將協力廠商資料儲存在個別的資料集中，以便輕鬆刪除和還原整合。
-* (**即將推出**)對購買資料檢疫附加元件之客戶在資料集上使用存留時間(TTL)。
+* (**即將推出**)使用 [存留時間(TTL)](/help/hygiene/ui/dataset-expiration.md) 已購買資料衛生附加元件之客戶的資料集上。
 * (**即將推出**)建立提取協力廠商資料的衍生資料集時請務必小心，因為混合在一起後，移除協力廠商資料的唯一解決方案是刪除整個衍生資料集。
 
 >[!TIP]
@@ -87,10 +87,9 @@ Commenting out links for now
 >如果您選擇使用資料供應商提供的個人識別碼來補充您的客戶設定檔，則可以建立該型別的新身分型別 **[[!UICONTROL 合作夥伴ID]](/help/identity-service/namespaces.md)**.
 >
 >如需有關合作夥伴ID的詳細資訊，請參閱 [身分型別段落](/help/identity-service/namespaces.md).
-> 閱讀關於 [如何定義身分欄位](/help/xdm/ui/fields/identity.md) 在Experience Platform使用者介面中。
+>閱讀關於 [如何定義身分欄位](/help/xdm/ui/fields/identity.md) 在Experience Platform使用者介面中。
 
-
-### 匯出您想要從「個人識別資訊」(PII)或「雜湊識別資訊」(PII)輸入更多內容的對象 {#export-audiences}
+### 匯出您想在關閉個人識別資訊(PII)或雜湊PII鍵時擴充的受眾 {#export-audiences}
 
 匯出您希望合作夥伴擴充的對象。 使用Real-time CDP提供的雲端儲存空間目標，例如Amazon S3或SFTP。 請閱讀下列檔案頁面，以完成此步驟：
 
@@ -99,10 +98,9 @@ Commenting out links for now
 * 操作說明 [連線到目的地](/help/destinations/ui/connect-destination.md)
 * 操作說明 [將資料匯出至雲端儲存空間目的地](/help/destinations/ui/activate-batch-profile-destinations.md)
 
+### 您的資料合作夥伴會為能夠比對的設定檔附加授權屬性 {#partner-appends-attributes}
 
-### 合作夥伴會為能夠比對的設定檔附加授權屬性 {#partner-appends-attributes}
-
-在此步驟中，合作夥伴會為匯出的受眾附加授權屬性。 輸出通常能以平面檔案的形式提供，並可擷取回Real-Time CDP。
+在此步驟中，您的資料合作夥伴會為匯出的受眾附加授權屬性。 輸出通常能以平面檔案的形式提供，並可擷取回Real-Time CDP。 深入瞭解 [將檔案擷取至Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file).
 
 ### Real-Time CDP會將擴充的屬性附加至客戶設定檔 {#ingest-data}
 
@@ -117,7 +115,7 @@ Commenting out links for now
 
 探索本頁面上說明的使用案例時，請注意下列限制：
 
-如果您選取使用合作夥伴ID，請注意，建置您的合作夥伴ID時不會使用這些ID [身分圖表](/help/identity-service/ui/identity-graph-viewer.md).
+* 如果您選取使用合作夥伴ID，請注意，建置您的合作夥伴ID時不會使用這些ID [身分圖表](/help/identity-service/ui/identity-graph-viewer.md).
 
 ## 透過合作夥伴資料支援達成的其他使用案例 {#other-use-cases}
 

@@ -5,7 +5,7 @@ title: 將資料擷取至Experience Platform
 type: Tutorial
 description: Adobe Experience Platform可讓您輕鬆地將資料匯入Parquet檔案形式的批次檔案，或是符合已知Experience Data Model (XDM)結構的資料。
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
 workflow-type: tm+mt
 source-wordcount: '1320'
 ht-degree: 1%
@@ -110,7 +110,7 @@ Adobe Experience Platform可讓您輕鬆將資料匯入 [!DNL Platform] 作為�
 
 ![新增資料索引標籤](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
-## 上傳檔案
+## 上傳檔案 {#upload-file}
 
 拖放（或瀏覽並選取）您要上傳的Parquet或JSON檔案後， [!DNL Platform] 將立即開始處理檔案，並 **[!UICONTROL 正在上傳]** 對話方塊將顯示在 **[!UICONTROL 新增資料]** 標籤中顯示的檔案上傳進度。
 
