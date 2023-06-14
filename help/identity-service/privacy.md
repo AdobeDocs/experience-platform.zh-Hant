@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題
 title: Identity Service中的隱私權請求處理
 description: Adobe Experience Platform Privacy Service會處理客戶存取、選擇退出銷售或刪除其個人資料的請求，如多項隱私權法規所規定。 本文介紹與Identity Service隱私權請求處理相關的重要概念。
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 1930d235b57b59f9967f9f53c8c1faf25cea9051
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -110,10 +110,10 @@ curl -X POST \
 
 | 包含的產品 | 效果 |
 | --- | --- |
-| `identity` 僅限 | 當Platform傳送確認已收到刪除請求時，會立即刪除與提供的身分相關聯的身分圖表。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。 與設定檔相關聯的資料也會保留在資料湖中。 |
-| `identity` 和 `ProfileService` | 一旦Platform傳送確認已收到刪除請求，就會立即刪除身分圖表及其關聯的設定檔。 與設定檔相關聯的資料會保留在資料湖中。 |
-| `identity` 和 `aepDataLake` | 當Platform傳送確認已收到刪除請求時，會立即刪除與提供的身分相關聯的身分圖表。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。<br><br>當Data Lake產品回應收到請求且目前正在處理時，與設定檔相關聯的資料會軟刪除，因此任何人都無法存取 [!DNL Platform] 服務。 工作完成後，資料會從資料湖中完全移除。 |
-| `identity`, `ProfileService`, 和 `aepDataLake` | 一旦Platform傳送確認已收到刪除請求，就會立即刪除身分圖表及其關聯的設定檔。<br><br>當Data Lake產品回應收到請求且目前正在處理時，與設定檔相關聯的資料會軟刪除，因此任何人都無法存取 [!DNL Platform] 服務。 工作完成後，資料會從資料湖中完全移除。 |
+| `identity` 僅限 | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。 與設定檔相關聯的資料也會保留在資料湖中。 |
+| `identity` 和 `ProfileService` | 當Platform傳送確認已收到刪除請求時，就會刪除提供的身分。 與設定檔相關聯的資料會保留在資料湖中。 |
+| `identity` 和 `aepDataLake` | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。<br><br>當Data Lake產品回應收到請求且目前正在處理時，與設定檔相關聯的資料會軟刪除，因此任何人都無法存取 [!DNL Platform] 服務。 工作完成後，資料會從資料湖中完全移除。 |
+| `identity`, `ProfileService`, 和 `aepDataLake` | 當Platform傳送確認已收到刪除請求時，就會刪除提供的身分。<br><br>當Data Lake產品回應收到請求且目前正在處理時，與設定檔相關聯的資料會軟刪除，因此任何人都無法存取 [!DNL Platform] 服務。 工作完成後，資料會從資料湖中完全移除。 |
 
 請參閱 [[!DNL Privacy Service] 檔案](../privacy-service/home.md#monitor) 以取得追蹤工作狀態的詳細資訊。
 
