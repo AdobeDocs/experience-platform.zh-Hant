@@ -3,10 +3,10 @@ keywords: Experience Platform；media edge；熱門主題；日期範圍
 solution: Experience Platform
 title: Media Edge API
 description: Media Edge API概述。
-source-git-commit: 9d535c8d6524d61612581fbf82986bc5c5cf52de
+source-git-commit: 4f60b00026a226aa6465b2c21b3c2198962a1e3b
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Media Edge API建立在Adobe Experience Platform (AEP)上，可在的架構中�
 
 * 替換為 [Customer Journey Analytics(CJA)](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)，客戶可獲得持續時間、開始和停止的近乎即時、精細的詳細資訊，以評估和合併媒體量度。 從Adobe Analytics移轉的客戶可在CJA中使用所有報告量度。
 
-* 替換為 [Adobe Real-time Customer Data Platform (CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html)，客戶可使用媒體使用資料擴充其即時設定檔。
+* 替換為 [Adobe Real-time Customer Data Platform (RTCDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html)，客戶可使用媒體使用資料擴充其即時設定檔。
 
 * 替換為 [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=en)，客戶可最佳化全通路行銷活動，並透過媒體使用訊號將歷程自動化。
 
@@ -30,7 +30,7 @@ Media Edge API建立在Adobe Experience Platform (AEP)上，可在的架構中�
 
 * 呼叫會從媒體播放器直接導向至 [Experience Edge Platform Network](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=en).
 
-* 最有效率地追蹤媒體事件。
+* 它只要使用最少量的跨伺服器呼叫，就能有效率地追蹤媒體事件。
 
 下表顯示適用於各種媒體分析案例的可能Adobe API服務：
 
@@ -51,7 +51,7 @@ Media Edge API建立在Adobe Experience Platform (AEP)上，可在的架構中�
 ![Media Analytics資料流程](../assets/edge-api-dataflow.png)
 
 
-如需使用Media Edge API的詳細資訊，請參閱快速入門檔案。
+如需使用Media Edge API的詳細資訊，請參閱 [快速入門檔案](getting-started.md).
 
 如需使用Platform Edge的詳細資訊，請參閱 [使用Experience Platform邊緣安裝Media Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html?lang=en).
 
