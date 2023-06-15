@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 沙箱UI指南
 description: 本檔案提供如何在Adobe Experience Platform使用者介面中執行與沙箱相關的各種操作的步驟。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '816'
-ht-degree: 8%
+source-wordcount: '953'
+ht-degree: 7%
 
 ---
 
@@ -77,7 +77,30 @@ ht-degree: 8%
 
 >[!WARNING]
 >
->以下是可阻止您重設預設生產沙箱或使用者建立的生產沙箱的例外清單： <ul><li>如果Adobe Analytics也將沙箱中代管的身分圖表用於，則無法重設預設的生產沙箱 [跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 功能。</li><li>如果Adobe Audience Manager也將沙箱中代管的身分圖表用於，則無法重設預設的生產沙箱 [以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).</li><li>如果預設的生產沙箱包含CDA和PBD功能的資料，則無法重設。</li><li>在出現警告訊息後，可以重設使用者建立的、用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱。</li></ul>
+>以下是可阻止您重設預設生產沙箱或使用者建立的生產沙箱的例外清單：
+>* 如果Adobe Analytics也將沙箱中代管的身分圖表用於，則無法重設預設的生產沙箱 [跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 功能。
+>* 如果Adobe Audience Manager也將沙箱中代管的身分圖表用於，則無法重設預設的生產沙箱 [以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
+>* 如果預設的生產沙箱包含CDA和PBD功能的資料，則無法重設。
+>* 在出現警告訊息後，可以重設使用者建立的、用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱。
+>* 在起始沙箱重設之前，您將需要手動刪除您的組合，以確保正確清除關聯的受眾資料。
+
+### 刪除對象組合
+
+對象構成目前未與沙箱重設功能整合，因此在執行沙箱重設之前，需要手動刪除對象。
+
+選取 **[!UICONTROL 受眾]** 從左側導覽列中，然後選取 **[!UICONTROL 組合]**.
+
+![此 [!UICONTROL 組合] 索引標籤中的 [!UICONTROL 受眾] 工作區。](../images/ui/audiences.png)
+
+接著，選取省略符號(`...`)，然後選取「 」 **[!UICONTROL 刪除]**.
+
+![醒目提示的對象選單 [!UICONTROL 刪除] 選項。](../images/ui/delete-composition.png)
+
+系統會顯示成功刪除的確認，而您會返回 **[!UICONTROL 組合]** 標籤。
+
+對您的所有構成重複上述步驟。 這將會從對象詳細目錄中刪除所有對象。 移除所有對象後，您可以繼續重設沙箱。
+
+### 重設沙箱
 
 重設生產或開發沙箱會刪除與該沙箱關聯的所有資源（結構描述、資料集等），同時保留沙箱的名稱和關聯的許可權。 此「乾淨」沙箱可繼續供擁有存取權的使用者以相同名稱使用。
 
