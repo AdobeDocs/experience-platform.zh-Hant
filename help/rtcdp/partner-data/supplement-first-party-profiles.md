@@ -1,12 +1,12 @@
 ---
-title: (Beta)使用合作夥伴提供的屬性來補充第一方記錄檔
+title: (Beta)使用合作夥伴提供的屬性來補充第一方設定檔
 description: 瞭解如何使用來自受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎、獲得對客戶群的新洞察以及更好的受眾最佳化。
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 2a072ce9351a84263a50597967b994162de18d81
+source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Commenting out links for now
 此外，在此步驟中，請思考當您將資料管理策略擴展至包含合作夥伴提供的第三方資料時，您的資料治理模式會如何變更。 探索以下檔案連結中的考量事項：
 
 * (**即將推出**)將協力廠商資料儲存在個別的資料集中，以便輕鬆刪除和還原整合。
-* (**即將推出**)使用 [存留時間(TTL)](/help/hygiene/ui/dataset-expiration.md) 已購買資料衛生附加元件之客戶的資料集上。
+* (**即將推出**)使用 [資料集有效期](/help/hygiene/ui/dataset-expiration.md) 適用於已購買資料檢疫附加元件之客戶的資料集功能。
 * (**即將推出**)建立提取協力廠商資料的衍生資料集時請務必小心，因為混合在一起後，移除協力廠商資料的唯一解決方案是刪除整個衍生資料集。
 
 >[!TIP]
