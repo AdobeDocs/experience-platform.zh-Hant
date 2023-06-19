@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: f93ee2bc10135fee0c2d77629ee10901010b744b
+source-git-commit: 9866833bbc5fab789ec3ccb90422a3176aec84da
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '981'
 ht-degree: 11%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 11%
    - Analytics {#analytics}
       - [Mixpanel聯結器](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
+      - [Rainfocus](connectors/analytics/rainfocus.md)
    - 雲端儲存空間 {#cloud-storage}
       - [Amazon Kinesis聯結器](connectors/cloud-storage/kinesis.md)
       - [Amazon S3聯結器](connectors/cloud-storage/s3.md)
@@ -237,6 +238,7 @@ ht-degree: 11%
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
+         - [Rainfocus](tutorials/ui/create/analytics/rainfocus.md)
       - 雲端儲存空間 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
