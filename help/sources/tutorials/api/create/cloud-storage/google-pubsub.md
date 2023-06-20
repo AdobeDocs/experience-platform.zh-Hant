@@ -1,15 +1,20 @@
 ---
 title: 使用Flow Service API建立Google PubSub來源連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Google PubSub帳戶。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 371947cff518c16816692210054680367fd6504c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '979'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Google PubSub] 使用流量服務API的來源連線
+
+>[!IMPORTANT]
+>
+>此 [!DNL Google PubSub] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 本教學課程將逐步引導您完成連線的步驟 [!DNL Google PubSub] (以下稱&quot;[!DNL PubSub]&quot;)進行Experience Platform，使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 

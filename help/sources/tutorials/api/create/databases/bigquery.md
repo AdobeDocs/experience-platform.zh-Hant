@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；bigquery；Google；google；Google BigQuery
-solution: Experience Platform
 title: 使用流量服務API建立Google BigQuery基本連線
-type: Tutorial
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Google BigQuery。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 997423f7bf92469e29c567bd77ffde357413bf9e
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Google BigQuery] 基礎連線使用 [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>此 [!DNL Google BigQuery] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
 

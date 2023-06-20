@@ -1,17 +1,21 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Snowflake
 title: 在使用者介面中建立Snowflake來源連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Snowflake來源連線。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '457'
 ht-degree: 2%
 
 ---
 
 # 建立 [!DNL Snowflake] ui中的來源連線
+
+>[!IMPORTANT]
+>
+>此 [!DNL Snowflake] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 本教學課程提供建立 [!DNL Snowflake] 使用Adobe Experience Platform使用者介面的來源聯結器。
 

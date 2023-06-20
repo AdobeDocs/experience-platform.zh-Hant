@@ -1,15 +1,20 @@
 ---
 title: 在使用者介面中建立Google PubSub來源連線
 description: 瞭解如何使用Platform使用者介面建立Google PubSub來源聯結器。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 79149274c28507041ad89be9d7afdefaedb6aaa0
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
 
 # 建立 [!DNL Google PubSub] ui中的來源連線
+
+>[!IMPORTANT]
+>
+>此 [!DNL Google PubSub] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 本教學課程提供建立 [!DNL Google PubSub] (以下稱&quot;[!DNL PubSub]&quot;)使用Platform使用者介面。
 

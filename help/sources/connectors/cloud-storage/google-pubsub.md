@@ -1,15 +1,20 @@
 ---
 title: Google PubSub來源概觀
 description: 瞭解如何使用API或使用者介面將Google PubSub連線至Adobe Experience Platform。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 2b72d384e8edd91c662364dfac31ce4edff79172
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
 
-# [!DNL Google PubSub]
+# [!DNL Google PubSub] source
+
+>[!IMPORTANT]
+>
+>此 [!DNL Google PubSub] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 Adobe Experience Platform為雲端服務供應商提供原生連線，例如 [!DNL AWS]， [!DNL Google Cloud Platform]、和 [!DNL Azure]，可讓您將資料從這些系統帶入Platform以用於下游服務和目的地。
 

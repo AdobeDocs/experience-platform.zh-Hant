@@ -1,20 +1,22 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Azure synapse分析；Synapse；Synapse；azure synapse分析
-solution: Experience Platform
 title: 在UI中建立Azure synapse分析來源連線
-type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Azure synapse Analytics （以下稱為「Synapse」）來源連線。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '449'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Azure Synapse Analytics] ui中的來源連線
 
-Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供建立 [!DNL Azure Synapse Analytics] (以下稱&quot;[!DNL Synapse]&quot;)來源聯結器使用 [!DNL Platform] 使用者介面。
+>[!IMPORTANT]
+>
+>此 [!DNL Azure Synapse Analytics] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
+
+本教學課程提供建立 [!DNL Azure Synapse Analytics] (以下稱&quot;[!DNL Synapse]&quot;)來源聯結器使用 [!DNL Platform] 使用者介面。
 
 ## 快速入門
 

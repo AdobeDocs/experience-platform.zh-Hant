@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Amazon Kinesis；amazon kinesis；Kinesis；kinesis
-solution: Experience Platform
 title: 在使用者介面中建立Amazon Kinesis來源連線
-type: Tutorial
 description: 瞭解如何使用Amazon UI建立Adobe Experience Platform Kinesis來源連線。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Amazon Kinesis] ui中的來源連線
+
+>[!IMPORTANT]
+>
+>此 [!DNL Amazon Kinesis] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供驗證 [!DNL Amazon Kinesis] (以下稱 [!DNL "Kinesis"])來源聯結器使用 [!DNL Platform] 使用者介面。
 

@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Redshift；Redshift；Amazon Redshift；amazon redshift
-solution: Experience Platform
 title: 使用流量服務API建立Amazon Redshift基本連線
-type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Amazon Redshift。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '508'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Amazon Redshift] 基礎連線使用 [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>此 [!DNL Amazon Redshift] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
@@ -34,6 +36,7 @@ ht-degree: 1%
 | **認證** | **說明** |
 | -------------- | --------------- |
 | `server` | 與您的關聯的伺服器 [!DNL Amazon Redshift] 帳戶。 |
+| `port` | TCP連線埠 [!DNL Amazon Redshift] 伺服器使用來監聽使用者端連線。 |
 | `username` | 與您的相關聯的使用者名稱 [!DNL Amazon Redshift] 帳戶。 |
 | `password` | 與您的關聯的密碼 [!DNL Amazon Redshift] 帳戶。 |
 | `database` | 此 [!DNL Amazon Redshift] 您正在存取的資料庫。 |
@@ -67,34 +70,36 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "amazon-redshift base connection",
-        "description": "base connection for amazon-redshift,
-        "auth": {
-            "specName": "Basic Authentication",
-            "params": {
-                "server": "{SERVER}",
-                "database": "{DATABASE}",
-                "password": "{PASSWORD}",
-                "username": "{USERNAME}"
-            }
-        },
-        "connectionSpec": {
-            "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "amazon-redshift base connection",
+      "description": "base connection for amazon-redshift,
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "{PORT},
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "database": "{DATABASE}"
+          }
+      },
+      "connectionSpec": {
+          "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | 屬性 | 說明 |
 | ------------- | --------------- |
 | `auth.params.server` | 您的 [!DNL Amazon Redshift] 伺服器。 |
+| `auth.params.port` | TCP連線埠， [!DNL Amazon Redshift] 伺服器使用來監聽使用者端連線。 |
 | `auth.params.database` | 與您的關聯的資料庫 [!DNL Amazon Redshift] 帳戶。 |
 | `auth.params.password` | 與您的關聯的密碼 [!DNL Amazon Redshift] 帳戶。 |
 | `auth.params.username` | 與您的相關聯的使用者名稱 [!DNL Amazon Redshift] 帳戶。 |

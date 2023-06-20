@@ -1,18 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Snowflake；snowflake
-solution: Experience Platform
 title: 使用Flow Service API建立Snowflake基礎連線
-type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Snowflake。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 6b9e5da9e552d93ff174d1d65dabb0ffd3128c1a
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '543'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Snowflake] 基礎連線使用 [!DNL Flow Service] API
+
+>[!IMPORTANT]
+>
+>此 [!DNL Snowflake] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
 

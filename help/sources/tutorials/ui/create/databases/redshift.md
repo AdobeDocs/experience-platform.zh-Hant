@@ -1,26 +1,28 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Amazon Redshift；amazon Redshift；Redshift；Redshift
-solution: Experience Platform
 title: 在UI中建立Amazon Redshift來源連線
-type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Amazon Redshift來源連線。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '491'
 ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Amazon Redshift] ui中的來源連線
+# 連線您的 [!DNL Amazon Redshift] 使用來源工作區的帳戶
 
-Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供建立 [!DNL Amazon Redshift] (以下稱&quot;[!DNL Redshift]&quot;)來源聯結器使用 [!DNL Platform] 使用者介面。
+>[!IMPORTANT]
+>
+>此 [!DNL Amazon Redshift] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
+
+本教學課程提供如何連線至 [!DNL Amazon Redshift] (以下稱&quot;[!DNL Redshift]&quot;)使用使用者介面登入Adobe Experience Platform。
 
 ## 快速入門
 
-本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
+本教學課程需要您實際瞭解下列Experience Platform元件：
 
-- [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+- [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
    - [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
    - [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器UI建立自訂結構描述。
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
@@ -29,24 +31,25 @@ Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來�
 
 ### 收集必要的認證
 
-為了存取您的 [!DNL Redshift] 帳戶於 [!DNL Platform]，您必須提供下列值：
+為了存取您的 [!DNL Redshift] account onExperience Platform，您必須提供下列值：
 
 | **認證** | **說明** |
 | -------------- | --------------- |
-| `server` | 與您的關聯的伺服器 [!DNL Redshift] 帳戶。 |
-| `username` | 與您的相關聯的使用者名稱 [!DNL Redshift] 帳戶。 |
-| `password` | 與您的關聯的密碼 [!DNL Redshift] 帳戶。 |
-| `database` | 此 [!DNL Redshift] 您正在存取的資料庫。 |
+| 伺服器 | 與您的關聯的伺服器 [!DNL Redshift] 帳戶。 |
+| 連接埠 | TCP連線埠 [!DNL Redshift] 伺服器使用來監聽使用者端連線。 |
+| 使用者名稱 | 與您的相關聯的使用者名稱 [!DNL Redshift] 帳戶。 |
+| 密碼 | 與您的關聯的密碼 [!DNL Redshift] 帳戶。 |
+| 資料庫 | 此 [!DNL Redshift] 您正在存取的資料庫。 |
 
 如需入門的詳細資訊，請參閱 [此 [!DNL Redshift] 檔案](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+
+收集完所需的認證後，您可以依照下列步驟連結 [!DNL Redshift] 要Experience Platform的帳戶。
 
 ## 連線您的 [!DNL Redshift] 帳戶
 
 >[!NOTE]
 >
 >預設編碼標準 [!DNL Redshift] 是Unicode。 無法變更。
-
-收集完所需的認證後，您可以依照下列步驟連結 [!DNL Redshift] 帳戶至 [!DNL Platform].
 
 登入 [Adobe Experience Platform](https://platform.adobe.com) 然後選取 **[!UICONTROL 來源]** 以存取 **[!UICONTROL 來源]** 工作區。 此 **[!UICONTROL 目錄]** 畫面會顯示您可以用來建立帳戶的各種來源。
 
@@ -72,4 +75,4 @@ Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來�
 
 ## 後續步驟
 
-依照本教學課程，您已建立與的連線， [!DNL Redshift] 帳戶。 您現在可以繼續下一節教學課程和 [設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/databases.md).
+依照本教學課程，您已建立與的連線， [!DNL Redshift] 帳戶。 您現在可以繼續下一節教學課程和 [設定資料流以將資料帶入Experience Platform](../../dataflow/databases.md).

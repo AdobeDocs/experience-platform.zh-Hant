@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Azure synapse分析；azure synapse分析；Synapse；Synapse
-solution: Experience Platform
 title: azure synapseAnalytics來源聯結器總覽
 description: 瞭解如何使用API或使用者介面將Azure synapse Analytics連線至Adobe Experience Platform。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-# [!DNL Azure Synapse Analytics] 聯結器
+# [!DNL Azure Synapse Analytics] source
+
+>[!IMPORTANT]
+>
+>此 [!DNL Azure Synapse Analytics] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 Adobe Experience Platform可從外部來源擷取資料，同時讓您能夠使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

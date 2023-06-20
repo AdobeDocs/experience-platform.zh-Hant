@@ -4,9 +4,9 @@ description: 瞭解如何建立來源連線和資料流，以將您的Snowflake�
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '686'
 ht-degree: 1%
 
 ---
@@ -16,8 +16,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 >* 此 [!DNL Snowflake] 串流來源為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
->* 此 [!DNL Snowflake] 已購買Real-Time CDP Ultimate的客戶可在API中使用串流來源。
-
+>* 此 [!DNL Snowflake] 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用串流來源。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

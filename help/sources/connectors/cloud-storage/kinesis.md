@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Amazon Kinesis；amazon kinesis；Kinesis；kinesis
-solution: Experience Platform
 title: Amazon Kinesis來源聯結器總覽
 description: 瞭解如何使用API或使用者介面將Amazon Kinesis連結至Adobe Experience Platform。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
 
-# [!DNL Amazon Kinesis] 聯結器
+# [!DNL Amazon Kinesis] source
+
+>[!IMPORTANT]
+>
+>此 [!DNL Amazon Kinesis] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
 Adobe Experience Platform為AWS等雲端服務供應商提供原生連線， [!DNL Google Cloud Platform]、和 [!DNL Azure]. 您可以將來自這些系統的資料帶入 [!DNL Platform].
 
