@@ -3,9 +3,9 @@ title: 使用Flow Service API建立Snowflake基礎連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Snowflake。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '589'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
 
-本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL Snowflake] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL Snowflake] 使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## 快速入門
 
@@ -44,10 +44,15 @@ ht-degree: 1%
 | `database` | 此 [!DNL Snowflake] 資料庫包含您要帶入Platform的資料。 |
 | `username` | 的使用者名稱 [!DNL Snowflake] 帳戶。 |
 | `password` | 的密碼 [!DNL Snowflake] 使用者帳戶。 |
+| `role` | 要使用的預設存取控制角色 [!DNL Snowflake] 工作階段。 角色應為已指派給指定使用者的現有角色。 預設角色為 `PUBLIC`. |
 | `connectionString` | 用來連線至您的電腦的連線字串 [!DNL Snowflake] 執行個體。 的連線字串模式 [!DNL Snowflake] 是 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Snowflake] 是 `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 如需入門的詳細資訊，請參閱此 [[!DNL Snowflake] 檔案](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>您必須設定 `PREVENT_UNLOAD_TO_INLINE_URL` 標幟到 `FALSE` 允許從您的解除安裝資料 [!DNL Snowflake] 資料庫以Experience Platform。
 
 ## 建立基礎連線
 

@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Snowflake來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
@@ -37,9 +37,14 @@ ht-degree: 2%
 | 資料庫 | 此 [!DNL Snowflake] 資料庫包含您要帶入Platform的資料。 |
 | 使用者名稱 | 的使用者名稱 [!DNL Snowflake] 帳戶。 |
 | 密碼 | 的密碼 [!DNL Snowflake] 使用者帳戶。 |
+| 角色 | 要使用的預設存取控制角色 [!DNL Snowflake] 工作階段。 角色應為已指派給指定使用者的現有角色。 預設角色為 `PUBLIC`. |
 | 連線字串 | 用來連線至您的電腦的連線字串 [!DNL Snowflake] 執行個體。 的連線字串模式 [!DNL Snowflake] 是 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 如需這些值的詳細資訊，請參閱 [此Snowflake檔案](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!NOTE]
+>
+>您必須設定 `PREVENT_UNLOAD_TO_INLINE_URL` 標幟到 `FALSE` 允許從您的解除安裝資料 [!DNL Snowflake] 資料庫以Experience Platform。
 
 ## 連線您的Snowflake帳戶
 

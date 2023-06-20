@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；流程服務；流程服
 title: 使用Flow Service API篩選來源的列層級資料
 description: 本教學課程涵蓋如何使用Flow Service API在來源層級篩選資料的步驟
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 2%
+source-wordcount: '782'
+ht-degree: 3%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 2%
 >篩選列層級資料的支援目前僅適用於下列來源：
 >
 >* [Google BigQuery](../../connectors/databases/bigquery.md)
+>* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
-
 
 本教學課程提供如何使用來篩選來源的列層級資料的步驟。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
