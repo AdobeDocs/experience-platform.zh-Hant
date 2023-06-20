@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
+source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '991'
 ht-degree: 11%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 11%
       - [Analytics來源](connectors/adobe-applications/analytics.md)
       - [Audience Manager來源](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services來源](connectors/adobe-applications/campaign.md)
+      - [Adobe Commerce來源](connectors/adobe-applications/commerce.md)
       - [客戶屬性來源](connectors/adobe-applications/customer-attributes.md)
       - [資料收集來源](connectors/adobe-applications/data-collection.md)
       - [Workfront來源](connectors/adobe-applications/workfront.md)

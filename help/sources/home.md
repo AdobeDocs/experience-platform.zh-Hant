@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 來源聯結器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cfe5f34316e9db072f0a320143354f2771b4a3a9
+source-git-commit: 6e663e428eebcea92f94111708686d80cf63a988
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1324'
 ht-degree: 2%
 
 ---
@@ -42,6 +42,7 @@ Experience Platform可讓您從其他Adobe應用程式(包括Adobe Analytics和A
    - [在使用者介面中建立Adobe Analytics來源連線](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Adobe Campaign Managed Cloud Services來源概觀](connectors/adobe-applications/campaign.md)
    - [在使用者介面中建立Adobe Campaign Managed Cloud Services來源連線](./tutorials/ui/create/adobe-applications/campaign.md)
+- [Adobe Commerce來源概觀](connectors/adobe-applications/commerce.md)
 - [Adobe資料收集來源概觀](connectors/adobe-applications/data-collection.md)
    - [在使用者介面中建立客戶屬性來源連線](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] 來源概觀](connectors/adobe-applications/marketo/marketo.md)
