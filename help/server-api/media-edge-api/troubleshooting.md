@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；media edge；熱門主題；日期範圍
 solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API疑難排解指南
-source-git-commit: f723114eebc9eb6bfa2512b927c5055daf97188b
+source-git-commit: ff4bc64843e3d05277f56ab67b60400fb9e65c4f
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -22,7 +21,7 @@ ht-degree: 0%
 
 ## 驗證工作階段開始
 
-建立工作階段開始請求的大部分問題都會導致207多狀態回應。
+工作階段開始請求的大多數問題都會導致207多狀態回應。
 裝載類似於Experience Edge Network Server API的非嚴重錯誤。 所有Media Analytics錯誤都具有下列型別：  `https://ns.adobe.com/aep/errors/va-edge-0XXX-XXX`. 回應中顯示的數字與錯誤狀態對應。
 
 下列範例顯示「工作階段開始」要求的回應內文，其中缺少必要欄位，且欄位無效。
