@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '996'
 ht-degree: 30%
 
 ---
@@ -215,6 +215,7 @@ ht-degree: 30%
       * [!DNL Braze] {#braze}
          * [概述](./extensions/server/braze/overview.md)
       * [Google Analytics的Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
+      * [Google Analytics4的Cloud Connector](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * 核心 {#core}
          * [總覽](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
