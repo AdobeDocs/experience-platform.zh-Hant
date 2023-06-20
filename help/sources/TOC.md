@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 9866833bbc5fab789ec3ccb90422a3176aec84da
+source-git-commit: b5a6853c13b151a8754245cd4316a0de75e23e82
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '988'
 ht-degree: 11%
 
 ---
@@ -61,6 +61,7 @@ ht-degree: 11%
       - [OneTrust整合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
+      - [SAP Hybris聯結器](connectors/crm/sap-hybris.md)
       - [Salesforce聯結器](connectors/crm/salesforce.md)
       - [SugarCRM聯結器](connectors/crm/sugarcrm.md)
       - [Veeva CRM聯結器](connectors/crm/veeva.md)
@@ -138,6 +139,7 @@ ht-degree: 11%
          - [OneTrust整合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
+         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM帳戶與連絡人](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM事件](tutorials/api/create/crm/sugarcrm-events.md)
@@ -258,6 +260,7 @@ ht-degree: 11%
          - [OneTrust整合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
+         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM帳戶與連絡人](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM事件](tutorials/ui/create/crm/sugarcrm-events.md)
