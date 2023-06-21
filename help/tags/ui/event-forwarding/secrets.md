@@ -2,10 +2,10 @@
 title: 設定事件轉送中的秘密
 description: 瞭解如何在UI中設定秘密，以驗證事件轉送屬性中使用的端點。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: c314cba6b822e12aa0367e1377ceb4f6c9d07ac2
+source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
 workflow-type: tm+mt
-source-wordcount: '1763'
-ht-degree: 4%
+source-wordcount: '2182'
+ht-degree: 3%
 
 ---
 
@@ -13,14 +13,15 @@ ht-degree: 4%
 
 在事件轉送中，密碼是代表其他系統之驗證認證的資源，允許安全交換資料。 密碼只能在事件轉送屬性中建立。
 
-目前有三種支援的密碼型別：
+目前支援的密碼型別如下：
 
 | 密碼型別 | 說明 |
 | --- | --- |
-| [!UICONTROL Token] | 代表兩個系統已知且瞭解的驗證Token值的單一字元字串。 |
+| [!UICONTROL Google OAuth 2] | 包含數個屬性以支援 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格，用於 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 和 [發佈/訂閱API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 系統會要求您提供必要資訊，然後按照指定的間隔為您處理這些權杖的續約。 |
 | [!UICONTROL HTTP] | 包含使用者名稱和密碼的兩個字串屬性。 |
 | [!UICONTROL OAuth 2] | 包含數個屬性以支援 [使用者端憑證授權型別](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) 的 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格。 系統會要求您提供必要資訊，然後按照指定的間隔為您處理這些權杖的續約。 |
-| [!UICONTROL Google OAuth 2] | 包含數個屬性以支援 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格，用於 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 和 [發佈/訂閱API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 系統會要求您提供必要資訊，然後按照指定的間隔為您處理這些權杖的續約。 |
+| [!UICONTROL OAuth 2 JWT] | 包含數個屬性以支援的JSON Web權杖(JWT)設定檔 [OAuth 2.0授權](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 授權。 系統會要求您提供必要資訊，然後按照指定的間隔為您處理這些權杖的續約。 |
+| [!UICONTROL Token] | 代表兩個系統已知且瞭解的驗證Token值的單一字元字串。 |
 
 {style="table-layout:auto"}
 
@@ -73,6 +74,7 @@ ht-degree: 4%
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 
 ### [!UICONTROL Token] {#token}
@@ -116,6 +118,40 @@ ht-degree: 4%
 完成後，選取 **[!UICONTROL 建立密碼]** 以儲存密碼。
 
 ![儲存OAuth 2位移](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
+
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
+
+若要建立OAuth 2 JWT密碼，請選取 **[!UICONTROL OAuth 2 JWT]** 從 **[!UICONTROL 型別]** 下拉式清單。
+
+![此 [!UICONTROL 建立密碼] 索引標籤中反白顯示OAuth 2 JWT密碼 [!UICONTROL 型別] 下拉式清單。](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+
+>[!NOTE]
+>
+>唯一 [!UICONTROL 演演算法] 目前支援簽署JWT的為RS256。
+
+在下方顯示的欄位中，提供您的 [!UICONTROL 簽發者]， [!UICONTROL 主旨]， [!UICONTROL 對象]， [!UICONTROL 自訂宣告]， [!UICONTROL TTL]，然後選取 [!UICONTROL 演演算法] 下拉式清單中的。 接下來，輸入 [!UICONTROL 私密金鑰ID]，以及您的 [[!UICONTROL 權杖URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) ，用於您的OAuth整合。 此 [!UICONTROL 權杖URL] 欄位不是必填欄位。 如果提供值，則會以存取權杖交換JWT。 密碼將根據 `expires_in` 屬性來自回應和 [!UICONTROL 重新整理位移] 值。 如果未提供值，則推送到邊緣的秘密是JWT。 JWT將會根據 [!UICONTROL TTL] 和 [!UICONTROL 重新整理位移] 值。
+
+![此 [!UICONTROL 建立密碼] 索引標籤中反白選取的輸入欄位。](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+
+下 **[!UICONTROL 認證選項]**，您可以提供其他認證選項，例如 `jwt_param` 鍵值配對的形式。 若要新增更多索引鍵/值組，請選取 **[!UICONTROL 新增另一個]**.
+
+![此 [!UICONTROL 建立密碼] 標籤反白顯示 [!UICONTROL 認證選項] 欄位。](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+
+最後，您可以設定 **[!UICONTROL 重新整理位移]** 密碼的值。 這代表系統執行自動重新整理的權杖到期前的秒數。 以小時和分鐘為單位的等效時間會顯示在欄位右側，並在您輸入時自動更新。
+
+![此 [!UICONTROL 建立密碼] 標籤反白顯示 [!UICONTROL 重新整理位移] 欄位。](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+
+例如，如果重新整理位移設定為預設值 `1800` （30分鐘）且存取Token具有 `expires_in` 值 `3600` （一小時），系統會在一小時內自動重新整理密碼。
+
+>[!IMPORTANT]
+>
+>OAuth 2 JWT密碼在重新整理之間至少需要30分鐘，並且至少必須在一小時內有效。 此限制讓您最少有30分鐘的時間在產生的Token發生問題時進行干預。
+>
+>例如，如果位移設定為 `1800` （30分鐘）且存取Token具有 `expires_in` 之 `2700` （45分鐘），由於產生的差異不到30分鐘，交換將會失敗。
+
+完成後，選取 **[!UICONTROL 建立密碼]** 以儲存密碼。
+
+![此 [!UICONTROL 建立密碼] 標籤反白顯示 [!UICONTROL 建立密碼]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
