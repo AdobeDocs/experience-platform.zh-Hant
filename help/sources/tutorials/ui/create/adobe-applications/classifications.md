@@ -5,10 +5,10 @@ solution: Experience Platform
 title: 在UI中建立分類資料的Adobe Analytics來源連線
 type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 6%
+source-wordcount: '628'
+ht-degree: 2%
 
 ---
 
@@ -72,12 +72,7 @@ Analytics Classifications Data Connector需要將您的資料移轉至新的 [!D
 
 此 **[!UICONTROL 資料集活動]** 頁面會顯示您所選取目標資料集的資訊，包括其批次狀態、資料集ID和結構描述的詳細資訊。
 
->[!IMPORTANT]
->
->雖然對其他來源連接器而言，刪除資料集是可行的，但是目前 Analytics Classifications 資料連接器不支援此作業。 如果您誤刪了資料集，請聯絡 Adobe 客戶服務。
-
 ![](../../../../images/tutorials/create/classifications/dataset.png)
-
 
 ## 後續步驟
 
