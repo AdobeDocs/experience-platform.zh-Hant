@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 18%
+source-wordcount: '278'
+ht-degree: 17%
 
 ---
 
@@ -87,6 +87,7 @@ ht-degree: 18%
    - [使用巢狀資料結構](essential-concepts/nested-data-structures.md)
    - [平面化巢狀資料結構](essential-concepts/flatten-nested-data.md)
    - [匿名區塊](essential-concepts/anonymous-block.md)
+   - [內嵌範本](essential-concepts/inline-templates.md)
    - [增量載入](essential-concepts/incremental-load.md)
    - [重複資料刪除](essential-concepts/deduplication.md)
    - [資料集範例](essential-concepts/dataset-samples.md)
