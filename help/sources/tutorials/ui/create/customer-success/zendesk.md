@@ -1,20 +1,15 @@
 ---
-keywords: Experience Platform；Zendesk；來源；聯結器；來源聯結器；來源sdk；sdk；SDK；Zendesk；Zendesk
 title: 在使用者介面中建立Zendesk來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Zendesk來源連線。
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '764'
 ht-degree: 6%
 
 ---
 
-# (Beta)建立 [!DNL Zendesk] ui中的來源連線
-
->[!NOTE]
->
->此 [!DNL Zendesk] 來源為測試版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+# 建立 [!DNL Zendesk] ui中的來源連線
 
 本教學課程提供建立 [!DNL Zendesk] 使用Adobe Experience Platform使用者介面的來源連線。
 

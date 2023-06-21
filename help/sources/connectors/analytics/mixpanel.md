@@ -1,20 +1,16 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；
-title: (Beta) Mixpanel來源聯結器概觀
+title: Mixpanel來源聯結器概述
 description: 瞭解如何使用API或使用者介面將Mixpanel連線至Adobe Experience Platform。
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Mixpanel]
-
->[!NOTE]
->
->此 [!DNL Mixpanel] 來源為測試版。 請參閱 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+# [!DNL Mixpanel]
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
