@@ -5,7 +5,7 @@ description: Adobe Experience Platform Segmentation Service API中的受眾端�
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
 hide: true
 hidefromtoc: true
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: f75c2c7ff07974cd0f2a5a8cc3e990c7f3eaa0a3
 workflow-type: tm+mt
 source-wordcount: '1515'
 ht-degree: 4%
@@ -62,7 +62,7 @@ GET /audiences?{QUERY_PARAMETERS}
 以下請求會擷取貴組織中建立的最後5個對象。
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=5 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=5 \
  -H 'Authorization:  Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id:  {IMS_ORG}' \
  -H 'x-api-key:  {API_KEY}' \
@@ -684,7 +684,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | -------- | ----------- | 
 | `audienceId` | 對象的ID。 外部對象會使用此專案 |
 | `name` | 對象名稱。 |
-| `namespace` |  |
+| `namespace` | |
 | `description` | 對象說明。 |
 | `type` | 系統產生的欄位，顯示對象是平台產生的還是外部產生的對象。 可能的值包括 `SegmentDefinition` 和 `ExternalAudience`. A `SegmentDefinition` 指在Platform中產生的對象，而 `ExternalAudience` 指不是在Platform中產生的對象。 |
 | `lifecycle` | 對象的狀態。 可能的值包括 `draft`， `published`， `inactive`、和 `archived`. `draft` 代表建立對象的時間， `published` 發佈對象時， `inactive` 對象不再作用中時，以及 `archived` 是否刪除對象。 |
