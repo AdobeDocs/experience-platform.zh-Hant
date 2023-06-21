@@ -1,12 +1,12 @@
 ---
 title: 加密的資料擷取
-description: Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的檔案。
+description: 瞭解如何使用API透過雲端儲存批次來源內嵌加密的檔案。
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 8531459da97be648d0a63ffc2af77ce41124585d
+source-git-commit: f0e518459eca72d615b380d11cabee6c1593dd9a
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
@@ -40,6 +40,29 @@ Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的�
 ### 使用平台API
 
 如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../landing/api-guide.md).
+
+### 加密檔案支援的副檔名
+
+加密檔案支援的副檔名清單如下：
+
+* .csv
+* .tsv
+* .json
+* .parquet
+* .csv.gpg
+* .tsv.gpg
+* .json.gpg
+* .parquet.gpg
+* .csv.pgp
+* .tsv.pgp
+* .json.pgp
+* .parquet.pgp
+* .gpg
+* .pgp
+
+>[!NOTE]
+>
+>Adobe Experience Platform來源中的加密檔案擷取支援openPGP，而不支援任何特定的專有版本PGP。
 
 ## 建立加密金鑰組 {#create-encryption-key-pair}
 
@@ -112,11 +135,11 @@ curl -X POST \
 >[!NOTE]
 >
 >您必須具備下列條件，才能建立資料流以進行加密的資料擷取：
+>
 >* [公開金鑰ID](#create-encryption-key-pair)
 >* [來源連線ID](../api/collect/cloud-storage.md#source)
 >* [目標連線ID](../api/collect/cloud-storage.md#target)
 >* [對應 ID](../api/collect/cloud-storage.md#mapping)
-
 
 若要建立資料流，請向以下發出POST請求： `/flows` 的端點 [!DNL Flow Service] API。 若要內嵌加密的資料，您必須新增 `encryption` 區段至 `transformations` 屬性並包含 `publicKeyId` 之前步驟中建立的其他檔案。
 
