@@ -2,9 +2,7 @@
 title: 使用UI將您的RainFocus帳戶連結至Experience Platform
 description: 瞭解如何使用UI將您的RainFocus帳戶連結至Experience Platform。
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: e90f05c44943f55630bd02d3b8bf04b01d07f320
+source-git-commit: 81f157216546d65c00090059c13c85e8ae5878f1
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 1%

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 來源聯結器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 6e663e428eebcea92f94111708686d80cf63a988
+source-git-commit: f3d70e986148d39429f394a60d12686617e3fd3d
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 2%
@@ -63,6 +63,7 @@ Experience Platform支援從協力廠商analytics平台擷取資料。 如需詳
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md)
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md)
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md)
 
 ### 雲端儲存空間 {#cloud-storage}
 
@@ -128,7 +129,7 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 - [[!DNL Oracle]](connectors/databases/oracle.md)
 - [[!DNL Phoenix]](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md)
-- [[!DNL Snowflake Streaming]](connectors/databases//snowflake-streaming.md)
+- [[!DNL Snowflake (Streaming)]](connectors/databases//snowflake-streaming.md)
 - [[!DNL Snowflake]](connectors/databases/snowflake.md)
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md)
 
@@ -137,7 +138,7 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 Experience Platform支援從協力廠商電子商務系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
-- [[!DNL Shopify Streaming]](connectors/ecommerce/shopify-streaming.md)
+- [[!DNL Shopify (Streaming)]](connectors/ecommerce/shopify-streaming.md)
 
 ### 本機系統 {#local-system}
 

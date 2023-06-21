@@ -3,9 +3,9 @@ title: 使用流程服務API建立Azure事件中樞來源連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Azure事件中樞帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b76bc6ddb0d49bbd089627c8df8b31703d0e50b1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '773'
 ht-degree: 1%
 
 ---
@@ -104,6 +104,10 @@ curl -X POST \
 
 ## 建立來源連線
 
+>[!TIP]
+>
+>一個 [!DNL Event Hubs] 使用者群組只能用於指定時間的單一流量。
+
 來源連線會建立和管理與擷取資料之外部來源的連線。 來源連線包含資料來源、資料格式等資訊，以及建立資料流所需的來源連線ID。 租使用者和組織專屬的來源連線例項。
 
 POST若要建立來源連線，請向 `/sourceConnections` 的端點 [!DNL Flow Service] API。
@@ -154,7 +158,7 @@ curl -X POST \
 | `params.eventHubName` | 您的名稱 [!DNL Event Hubs] 來源。 |
 | `params.dataType` | 此引數會定義所擷取的資料型別。 支援的資料型別包括： `raw` 和 `xdm`. |
 | `params.reset` | 此引數會定義資料讀取的方式。 使用 `latest` 以開始讀取最新的資料，並使用 `earliest` 以開始讀取資料流中的第一個可用資料。 此引數為選用引數，預設值為 `earliest` 若未提供。 |
-| `params.consumerGroup` | 要使用的發佈或訂閱機制 [!DNL Event Hubs]. 此引數為選用引數，預設值為 `$Default` 若未提供。 請參閱此 [[!DNL Event Hubs] 活動消費者指南](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) 以取得詳細資訊。 |
+| `params.consumerGroup` | 要使用的發佈或訂閱機制 [!DNL Event Hubs]. 此引數為選用引數，預設值為 `$Default` 若未提供。 請參閱此 [[!DNL Event Hubs] 活動消費者指南](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) 以取得詳細資訊。 **注意**：一個 [!DNL Event Hubs] 使用者群組只能用於指定時間的單一流量。 |
 
 ## 後續步驟
 
