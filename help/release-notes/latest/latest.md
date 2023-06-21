@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年6月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 72a1ab9203d7cafac5d445f5ca3d2e65bcd1a45c
+source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '768'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 | 擴充功能 | [!DNL Google Cloud Platform] 事件轉送擴充功能 | 此 [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) 事件轉送擴充功能可讓您將事件資料轉送至Google，以便透過以下方式啟用： [!DNL Google Pub/Sub]. |
 | 擴充功能 | [!DNL Cloud connector for Google Analytics 4 (ga4)] 擴充功能 | 此 [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) 事件轉送擴充功能可讓您透過新的 [!DNL Google Analytics 4 (ga4)] 標準。 |
 | 密碼 | OAuth 2 JWT密碼 | 此 [OAuth 2 JWT密碼](../../tags/ui/event-forwarding/secrets.md) 可讓您使用Adobe和 [!DNL Google] 在事件轉送中支援伺服器 — 伺服器互動的服務Token。 |
-| 標籤和事件轉送 | 使用者歸因 | 使用者歸因提供跨網域的關鍵活動資料 [標籤](../../tags/home.md) 和 [事件轉送](../../tags/ui/event-forwarding/overview.md) UI。<br><br>資料包括變更人員和變更時間。 此資料會在下列畫面中的標籤和事件轉送UI中顯示：<br><br>*屬性概觀<br><br><ul><li> 屬性概述</li><li> 已安裝的擴充功能</li><li>規則比較和檢閱</li><li>資料元素比較評論</li><li>擴充功能比較評論</li><li>程式庫資源變更</li><li>程式庫上次建置和發佈時間</li></ul> |
+| 標籤和事件轉送 | 使用者歸因 | 使用者歸因提供跨網域的關鍵活動資料 [標籤](../../tags/home.md) 和 [事件轉送](../../tags/ui/event-forwarding/overview.md) UI。<br><br>資料包括變更人員和變更時間。 此資料會在下列畫面中的標籤和事件轉送UI中顯示：<br><ul><li> 屬性概述</li><li> 已安裝的擴充功能</li><li>規則比較和檢閱</li><li>資料元素比較評論</li><li>擴充功能比較評論</li><li>程式庫資源變更</li><li>程式庫上次建置和發佈時間</li></ul> |
 
 {style="table-layout:auto"}
 
