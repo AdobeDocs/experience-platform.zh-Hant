@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 建立、共用和重複使用教戰手冊例項
 description: 瞭解如何建立、共用及重複使用Playbook例項，以完成您的行銷使用案例。
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
 workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 1%
@@ -64,11 +64,11 @@ ht-degree: 1%
 >
 >產生物件後，您可以新增資料，繼續於開發沙箱中測試。 只要您想在開發沙箱中測試資產，就可以在準備就緒後，在生產沙箱中複製資產邏輯（區段定義、歷程、結構描述等）。
 
-### 重複使用教戰手冊 {#reuse-playbooks}
+## 重複使用教戰手冊 {#reuse-playbooks}
 
 透過建立同一行動手冊的多個執行個體，您可以稍後實施相同的使用案例，而不需修改先前實施使用案例的詳細資訊。
 
-### 與其他團隊成員共用行動手冊和產生的資產 {#share-playbook}
+## 與其他團隊成員共用行動手冊和產生的資產 {#share-playbook}
 
 您可以與其他團隊成員共用產生的執行個體和資產。 若要這麼做，請從瀏覽器複製URL連結，然後與您的團隊共用，讓他們大致瞭解產生的資產。
 

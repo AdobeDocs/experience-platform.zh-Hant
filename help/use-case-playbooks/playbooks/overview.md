@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 使用案例教戰手冊概覽
 description: 瞭解如何在Experience Platform中使用使用案例教戰手冊功能，以開始使用各種行銷使用案例
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
+source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 2%
+source-wordcount: '400'
+ht-degree: 3%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 2%
 本檔案指南內容：
 
 * **[使用案例教戰手冊概觀](#overview)**
+* [快速入門](/help/use-case-playbooks/playbooks/get-started.md)
 * [探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md)
 * [建立、共用和重複使用教戰手冊例項](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [疑難排解和已知限制](troubleshooting.md)
