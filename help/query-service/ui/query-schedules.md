@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,18 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > 由於您使用現有資料集或建立新資料集，因此您會 **not** 需要包含 `INSERT INTO` 或 `CREATE TABLE AS SELECT` 做為查詢的一部分，因為資料集已設定。 包括 `INSERT INTO` 或 `CREATE TABLE AS SELECT` 作為您排程查詢的一部分，將導致錯誤。
+
+如果您無權存取引數化查詢，請繼續前往 [刪除或停用排程](#delete-schedule) 區段。
+
+### 為排程的引數化查詢設定引數 {#set-parameters}
+
+>[!IMPORTANT]
+>
+>引數化查詢UI功能目前可在 **限量發行** 而且並非所有客戶都可使用。
+
+如果您要為引數化查詢建立排定的查詢，現在必須設定這些查詢執行的引數值。
+
+![排程建立工作流程的「排程詳細資料」區段會反白顯示「查詢引數」區段。](../images/ui/query-schedules/scheduled-query-parameter.png)
 
 確認所有這些詳細資料後，請選取 **[!UICONTROL 儲存]** 以建立排程。 您會回到顯示新建立之排程詳細資訊的排程工作區，包括排程ID、排程本身以及排程的輸出資料集。 您可以使用排程ID來查閱排程查詢本身執行的詳細資訊。 若要進一步瞭解，請閱讀 [已排程查詢執行端點指南](../api/runs-scheduled-queries.md).
 

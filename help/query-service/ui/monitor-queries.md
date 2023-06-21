@@ -2,7 +2,7 @@
 title: 監視排定的查詢
 description: 瞭解如何透過查詢服務UI監視查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 1b4554e204663d40c3a18da792614305abb7d296
+source-git-commit: 87b530c0ee509d9f24fc7af63507ff0567779d26
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -139,3 +139,9 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 選取 **[!UICONTROL 查詢]** 返回「排程詳細資料」畫面，或 **[!UICONTROL 排定的查詢]** 以返回 [!UICONTROL 排定的查詢] 標籤。
 
 ![反白顯示「查詢」的執行詳細資訊畫面。](../images/ui/monitor-queries/return-navigation.png)
+
+<!-- Details required to complete this section below:
+### Run details for queries with parameterized queries {#parameterized-queries}
+
+Queries that use parameterized values to make up the SQL statement are ... 
+-->
