@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 852e0a87b93e640298c38aef7b3f1c255bf18896
+source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1002'
 ht-degree: 30%
 
 ---
@@ -221,6 +221,8 @@ ht-degree: 30%
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
       * Google Ads增強型轉換 {#google-ads-enhanced-conversions}
          * [總覽](./extensions/server/google-ads-enhanced-conversions/overview.md)
+      * Google Cloud Platform {#google-cloud-platform}
+         * [總覽](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [概述](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
@@ -233,6 +235,8 @@ ht-degree: 30%
       * [!DNL Pinterest] {#pinterest}
          * [總覽](./extensions/server/pinterest/overview.md)
       * [快照轉換API](https://exchange.adobe.com/apps/ec/108550)
+      * [Snowflake] {#snowflake}
+         * [概述](./extensions/server/snowflake/overview.md)
       * [!DNL Splunk] {#splunk}
          * [概述](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
