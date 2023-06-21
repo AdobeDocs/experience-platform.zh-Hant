@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢編輯器UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及執行非互動式查詢來填入Experience Platform中的資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 90829713e85e930e4fd6a32b0dbd38aeb837b84e
+source-git-commit: ff4b528a0456f46d8c99e5921cfc99b197956ba6
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -113,11 +113,7 @@ ht-degree: 0%
 
 已儲存為範本的查詢可以從「查詢編輯器」排程。 這可讓您以自訂步調自動執行查詢。 您可以根據頻率、日期和時間排程查詢，並視需要選擇結果的輸出資料集。 您也可以透過UI停用或刪除查詢排程。
 
-排程是從「查詢編輯器」設定的。 以下是使用「查詢編輯器」時排程查詢的限制清單。 它們不適用於 [!DNL Query Service] API：
-
-- 您只能將排程新增至已建立、儲存和執行的查詢。
-- 您 **無法** 將排程新增至引數化查詢。
-- 排定的查詢 **無法** 包含匿名區塊。
+排程是在「查詢編輯器」中設定的。 使用「查詢編輯器」時，您只能將排程新增至已建立、儲存和執行的查詢。 這不會套用至 [!DNL Query Service] API：
 
 請參閱查詢排程檔案，瞭解如何 [在UI中建立查詢排程](./query-schedules.md). 或者，若要瞭解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
 

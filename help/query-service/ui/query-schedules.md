@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->以下是使用「查詢編輯器」時排程查詢的限制清單。 它們不適用於 [!DNL Query Service] API：<br/>您只能將排程新增至已建立、儲存和執行的查詢。<br/>您 **無法** 將排程新增至引數化查詢。<br/>排定的查詢 **無法** 包含匿名區塊。
+>您只能將排程新增至已建立、儲存和執行的查詢。
 
 任何已排程的查詢都會新增至 [!UICONTROL 排定的查詢] 標籤。 您可以從該工作區透過UI監控所有已排程查詢工作的狀態。 於 [!UICONTROL 排定的查詢] 索引標籤可讓您找到有關查詢執行的重要資訊，並訂閱警示。 可用的資訊包括狀態、排程詳細資料，以及執行失敗時的錯誤訊息/代碼。 請參閱 [監視排定的查詢檔案](./monitor-queries.md) 以取得詳細資訊。
 
@@ -69,7 +69,9 @@ ht-degree: 0%
 
 ## 刪除或停用排程 {#delete-schedule}
 
-您可以從排程工作區刪除或停用排程。 您必須從以下任一項中選取查詢範本： [!UICONTROL 範本] 標籤或 [!UICONTROL 排定的查詢] 索引標籤以導覽至「查詢編輯器」並選取 **[!UICONTROL 排程]** 以存取排程工作區。
+您可以從特定查詢的排程工作區刪除或停用排程，或從 [!UICONTROL 排定的查詢] 列出所有已排程查詢的工作區。
+
+若要存取 [!UICONTROL 時程表] 的標籤中，您必須從以下任一位置選取查詢範本的名稱： [!UICONTROL 範本] 標籤或 [!UICONTROL 排定的查詢] 標籤。 這會導覽至該查詢的查詢編輯器。 從查詢編輯器中，選取 **[!UICONTROL 時程表]** 以存取排程工作區。
 
 從可用排程的列選取排程。 您可以使用切換來停用或啟用排定的查詢。
 
@@ -80,3 +82,5 @@ ht-degree: 0%
 選取 **[!UICONTROL 刪除排程]** 刪除已停用的排程。
 
 ![反白顯示「停用排程」和「刪除」排程的排程工作區。](../images/ui/query-schedules/delete-schedule.png)
+
+或者， [!UICONTROL 排定的查詢] 索引標籤為每個排定的查詢提供內嵌動作的集合。 可用的內嵌動作包括 [!UICONTROL 停用排程] 或 [!UICONTROL 啟用排程]， [!UICONTROL 刪除排程]、和 [!UICONTROL 訂閱] 以警示排定的查詢。 如需有關如何透過已排程查詢索引標籤刪除或停用已排程查詢的完整指示，請參閱 [monitor scheduled queried指南](./monitor-queries.md#inline-actions).

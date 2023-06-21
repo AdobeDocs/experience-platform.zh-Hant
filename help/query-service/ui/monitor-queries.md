@@ -2,16 +2,16 @@
 title: 監視排定的查詢
 description: 瞭解如何透過查詢服務UI監視查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 87b530c0ee509d9f24fc7af63507ff0567779d26
+source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
 workflow-type: tm+mt
-source-wordcount: '1252'
+source-wordcount: '1812'
 ht-degree: 0%
 
 ---
 
 # 監視排定的查詢
 
-Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 從 [!UICONTROL 排定的查詢] 索引標籤您現在可以找到有關查詢執行的重要資訊，包括狀態、排程詳細資訊，以及失敗時的錯誤訊息/代碼。 您還可以透過UI訂閱基於查詢狀態的查詢警報，用於以下任何查詢： [!UICONTROL 排定的查詢] 標籤。
+Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 從 [!UICONTROL 排定的查詢] 索引標籤中，您現在可以找到有關查詢執行的重要資訊，包括狀態、排程詳細資訊，以及失敗時的錯誤訊息/代碼。 您還可以透過UI訂閱基於查詢狀態的查詢警報，用於以下任何查詢： [!UICONTROL 排定的查詢] 標籤。
 
 ## [!UICONTROL 排定的查詢]
 
@@ -29,24 +29,29 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 | 欄 | 說明 |
 |---|---|
-| **[!UICONTROL 名稱]** | 名稱欄位可以是範本名稱或SQL查詢的前幾個字元。 使用查詢編輯器透過UI建立的任何查詢最初都會命名。 如果查詢是透過API建立的，則其名稱會變成用來建立查詢的初始SQL的片段。 從「 」中選取任何專案 [!UICONTROL 名稱] 欄，以檢視與查詢相關聯的所有執行專案清單。 如需詳細資訊，請參閱 [查詢執行排程詳細資料](#query-runs) 區段。 |
+| **[!UICONTROL 名稱]** | 名稱欄位可以是範本名稱或SQL查詢的前幾個字元。 使用查詢編輯器透過UI建立的任何查詢最初都會命名。 如果查詢是透過API建立的，則其名稱會變成用來建立查詢的初始SQL的片段。 若要檢視與查詢相關聯的所有執行清單，請從以下專案選取專案： [!UICONTROL 名稱] 欄。 如需詳細資訊，請參閱 [查詢執行排程詳細資料](#query-runs) 區段。 |
 | **[!UICONTROL 範本]** | 查詢的範本名稱。 選取範本名稱以導覽至「查詢編輯器」。 為方便起見，查詢範本會顯示在查詢編輯器中。 如果沒有範本名稱，資料列會標示一個連字型大小，且無法重新導向至「查詢編輯器」來檢視查詢。 |
 | **[!UICONTROL SQL]** | SQL查詢的片段。 |
-| **[!UICONTROL 執行頻率]** | 這是設定查詢執行的步調。 可用的值包括 `Run once` 和 `Scheduled`. 可以根據查詢的執行頻率來篩選查詢。 |
+| **[!UICONTROL 執行頻率]** | 設定執行查詢的節奏。 可用的值包括 `Run once` 和 `Scheduled`. 可以根據查詢的執行頻率來篩選查詢。 |
 | **[!UICONTROL 建立者]** | 建立查詢的使用者名稱。 |
 | **[!UICONTROL 已建立]** | 建立查詢時的時間戳記（UTC格式）。 |
 | **[!UICONTROL 上次執行時間戳記]** | 執行查詢時的最新時間戳記。 此欄會根據查詢目前的排程來反白顯示查詢是否已執行。 |
 | **[!UICONTROL 上次執行狀態]** | 最近查詢執行的狀態。 狀態值為： `Success`， `Failed`， `In progress`、和 `No runs`. |
+| **[!UICONTROL 排程狀態]** | 排程查詢的目前狀態。 有五個可能的值， [!UICONTROL 正在註冊]， [!UICONTROL 作用中]， [!UICONTROL 非使用中]， [!UICONTROL 已刪除]和連字型大小。 <ul><li>連字型大小表示排定的查詢是一次性、非循環的查詢。</li><li>此 [!UICONTROL 正在註冊] status表示系統仍在處理建立查詢的新排程。 請注意，您不能在註冊時停用或刪除排定的查詢。</li><li>此 [!UICONTROL 作用中] status表示排定的查詢具有 **尚未通過** 其完成日期和時間。</li><li>此 [!UICONTROL 非使用中] status表示排定的查詢具有 **已通過** 其完成日期和時間。</li><li>此 [!UICONTROL 已刪除] status表示已刪除查詢排程。</li></ul> |
 
 >[!TIP]
 >
 >如果您導覽至「查詢編輯器」，可以選取 **[!UICONTROL 查詢]** 以返回 [!UICONTROL 範本] 標籤。
 
-### 自訂排程查詢的表格設定
+## 自訂排程查詢的表格設定 {#customize-table}
 
-您可以調整欄位 [!UICONTROL 排定的查詢] 定位鍵以符合您的需求。 選取設定圖示(![設定圖示。](../images/ui/monitor-queries/settings-icon.png))以開啟 [!UICONTROL 自訂表格] 設定對話方塊並編輯可用的欄。
+您可以調整欄位 [!UICONTROL 排定的查詢] 定位鍵以符合您的需求。 若要開啟 [!UICONTROL 自訂表格] 設定對話方塊並編輯可用的欄，選取設定圖示(![設定圖示。](../images/ui/monitor-queries/settings-icon.png))。
 
-![自訂表格設定圖示。](../images/ui/monitor-queries/customze-table-settings-icon.png)
+>[!NOTE]
+>
+>此 [!UICONTROL 已建立] 依照預設，會隱藏參考排程建立日期的欄。
+
+![反白顯示「自訂表格設定」圖示的「排程查詢」標籤。](../images/ui/monitor-queries/customze-table-settings-icon.png)
 
 切換相關的核取方塊以移除或新增表格欄。 接下來，選取 **[!UICONTROL 套用]** 以確認您的選擇。
 
@@ -56,21 +61,51 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ![自訂表格設定對話方塊。](../images/ui/monitor-queries/customize-table-dialog.png)
 
+## 使用內嵌動作管理排程的查詢 {#inline-actions}
+
+此 [!UICONTROL 排定的查詢] 「檢視」提供各種內嵌動作，讓您從一個位置管理所有排程的查詢。 每列都會以省略符號指出內嵌動作。 選取您要管理的已排程查詢的省略符號，以在快顯功能表中檢視可用選項。 可用的選項包括 [[!UICONTROL 停用排程]](#disable) 或 [!UICONTROL 啟用排程]， [[!UICONTROL 刪除排程]](#delete)、和 [[!UICONTROL 訂閱]](#alert-subscription) 以查詢警示。
+
+![內嵌動作省略符號和彈出式選單反白顯示的「已排程查詢」索引標籤。](../images/ui/monitor-queries/disable-inline.png)
+
+### 停用或啟用排定的查詢 {#disable}
+
+若要停用排定的查詢，請選取您要管理的排定查詢的省略符號，然後選取「 」 **[!UICONTROL 停用排程]** 從躍現式選單中的選項。 會出現一個對話方塊，確認您的動作。 選取 **[!UICONTROL 停用]** 以確認您的設定。
+
+停用排定的查詢後，您就可以透過相同的程式啟用排程。 選取省略符號，然後選取「 」 **[!UICONTROL 啟用排程]** 從可用選項中選取。
+
+### 刪除排定的查詢 {#delete}
+
+若要刪除排定的查詢，請選取您要管理的排定查詢的省略符號，然後選取「 」 **[!UICONTROL 刪除排程]** 從躍現式選單中的選項。 會出現一個對話方塊，確認您的動作。 選取 **[!UICONTROL 刪除]** 以確認您的設定。
+
+刪除排定的查詢後，它會 **not** 已從排程查詢清單中移除。 省略符號提供的內嵌動作會遭到移除，並由灰色的加入警示圖示取代。 您無法訂閱已刪除排程的警示。 該列會保留在UI中，以提供排程查詢過程中所執行的回合的相關資訊。
+
+![「已排程查詢」索引標籤中會反白顯示已刪除的已排程查詢和灰色的警示圖示。](../images/ui/monitor-queries/post-delete.png)
+
+如果您想要排程該查詢樣版的執行，請從適當的列選取樣版名稱，以切換作業選項至「查詢編輯器」，然後遵循下列步驟 [新增排程至查詢的說明](./query-schedules.md#create-schedule) 如檔案所述。
+
 ### 訂閱警示 {#alert-subscription}
 
-您可以訂閱以下專案的警示： [!UICONTROL 排定的查詢] 標籤。 選取警示通知圖示(![警示圖示。](../images/ui/monitor-queries/alerts-icon.png))以開啟 [!UICONTROL 警報] 對話方塊。 此 [!UICONTROL 警報] 對話方塊會訂閱UI通知和電子郵件警示。 警示是根據查詢的狀態。 有三個可用選項： `start`， `success`、和 `failure`. 核取適當的方塊並選取 **[!UICONTROL 儲存]** 以訂閱。
+若要訂閱排程查詢執行的警示，請選取您要管理的排程查詢的省略符號，然後選取「 」 **[!UICONTROL 訂閱]** 從躍現式選單中的選項。
+
+此 [!UICONTROL 警報] 對話方塊開啟。 此 [!UICONTROL 警報] 對話方塊會為您訂閱UI通知和電子郵件警示。 警示是根據查詢的狀態。 有三個可用選項： `start`， `success`、和 `failure`. 核取適當的方塊並選取 **[!UICONTROL 儲存]** 以訂閱。 您可以訂閱警示，只要它們沒有 [!UICONTROL 上次執行時間戳記] 值。
 
 ![警示訂閱對話方塊。](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
 請參閱 [警報訂閱API檔案](../api/alert-subscriptions.md) 以取得詳細資訊。
 
-### 篩選查詢 {#filter}
+### 檢視查詢詳細資料 {#query-details}
+
+選取資訊圖示(![資訊圖示。](../images/ui/monitor-queries/information-icon.png))，以檢視查詢的詳細資訊面板。 詳細資訊面板包含查詢的所有相關資訊，而不只是包含在排程查詢表格中的事實。 其他資訊包括查詢ID、上次修改日期、查詢的SQL、排程ID和目前設定的排程。
+
+![「已排程的查詢」索引標籤中會反白顯示資訊圖示和詳細資訊面板。](../images/ui/monitor-queries/details-panel.png)
+
+## 篩選查詢 {#filter}
 
 您可以根據執行頻率來篩選查詢。 從 [!UICONTROL 排定的查詢] 索引標籤中，選取篩選圖示(![篩選圖示](../images/ui/monitor-queries/filter-icon.png))以開啟篩選器側欄。
 
 ![已排程查詢索引標籤中反白了篩選圖示。](../images/ui/monitor-queries/filter-queries.png)
 
-選取 **[!UICONTROL 已排程]** 或 **[!UICONTROL 執行一次]** 執行頻率篩選核取方塊以篩選查詢清單。
+若要根據查詢的執行頻率來篩選查詢清單，請選取 **[!UICONTROL 已排程]** 或 **[!UICONTROL 執行一次]** 篩選核取方塊。
 
 >[!NOTE]
 >
@@ -82,7 +117,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ## 查詢執行排程詳細資料 {#query-runs}
 
-選取查詢名稱，以切換作業選項至排程詳細資訊頁面。 此檢視提供排程查詢中執行的所有執行清單。 提供的資訊包括開始和結束時間、狀態和使用的資料集。
+若要開啟「排程詳細資訊」頁面，請從 [!UICONTROL 排定的查詢] 標籤。 此檢視提供排程查詢中執行的所有執行清單。 提供的資訊包括開始和結束時間、狀態和使用的資料集。
 
 ![排程詳細資訊頁面。](../images/ui/monitor-queries/schedule-details.png)
 
@@ -91,8 +126,8 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 | 資料行名稱 | 說明 |
 |---|---|
 | **[!UICONTROL 查詢執行ID]** | 每日執行的查詢執行識別碼。 選取 **[!UICONTROL 查詢執行ID]** 導覽至 [!UICONTROL 查詢執行總覽]. |
-| **[!UICONTROL 查詢執行開始]** | 執行查詢時的時間戳記。 這是UTC格式。 |
-| **[!UICONTROL 查詢執行完成]** | 查詢完成時的時間戳記。 這是UTC格式。 |
+| **[!UICONTROL 查詢執行開始]** | 執行查詢時的時間戳記。 時間戳記為UTC格式。 |
+| **[!UICONTROL 查詢執行完成]** | 查詢完成時的時間戳記。 時間戳記為UTC格式。 |
 | **[!UICONTROL 狀態]** | 最近查詢執行的狀態。 三個狀態值包括： `successful` `failed` 或 `in progress`. |
 | **[!UICONTROL 資料集]** | 執行中涉及的資料集。 |
 
@@ -114,19 +149,19 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ![執行詳細資訊畫面中反白了錯誤區段。](../images/ui/monitor-queries/failed-query.png)
 
-您可以從此檢視將查詢SQL複製到剪貼簿。 選取SQL程式碼片段右上角的復製圖示，以複製查詢。 會出現快顯訊息，確認已復製程式碼。
+您可以從此檢視將查詢SQL複製到剪貼簿。 若要複製查詢，請選取SQL程式碼片段右上角的復製圖示。 會出現快顯訊息，確認已復製程式碼。
 
 ![執行詳細資訊畫面中反白顯示SQL復製圖示。](../images/ui/monitor-queries/copy-sql.png)
 
 ### 使用匿名區塊執行查詢的詳細資料 {#anonymous-block-queries}
 
-使用匿名區塊組成其SQL陳述式的查詢會分隔成其個別的子查詢。 這可讓您個別檢查每個查詢區塊的執行詳細資料。
+使用匿名區塊組成其SQL陳述式的查詢會分隔成其個別的子查詢。 子查詢的區隔可讓您個別檢查每個查詢區塊的執行詳細資訊。
 
 >[!NOTE]
 >
 >使用DROP命令的匿名區塊的執行詳細資料 **not** 將作為單獨的子查詢報告。 CTAS查詢、ITAS查詢和用作匿名區塊子查詢的COPY陳述式有獨立的執行詳細資訊。 目前不支援DROP命令的執行詳細資料。
 
-匿名區塊是透過使用來表示 `$$` 查詢前的前置詞。 請參閱 [匿名封鎖檔案](../essential-concepts/anonymous-block.md) 以進一步瞭解查詢服務中的匿名區塊。
+匿名區塊是透過使用來表示 `$$` 查詢前的前置詞。 若要進一步瞭解查詢服務中的匿名區塊，請參閱 [匿名封鎖檔案](../essential-concepts/anonymous-block.md).
 
 匿名區塊子查詢的執行狀態左側有標籤。 選取索引標籤以顯示執行詳細資料。
 
