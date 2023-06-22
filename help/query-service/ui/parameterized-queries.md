@@ -1,9 +1,9 @@
 ---
 title: 引數化查詢
 description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢。
-source-git-commit: a0f826a2e5fcdfc2f9e08221f30ba01470c9b3be
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 在繼續本指南之前，請先閱讀 [查詢編輯器UI指南](./user-guide.md). 查詢編輯器指南提供有關如何在Experience Platform使用者介面中編寫、驗證和執行客戶體驗資料查詢的詳細資訊。
 
+>[!NOTE]
 >
->
->在其直接父級以外的內嵌範本內不支援引數化查詢。 引數化查詢只有在原始範本或直接子內嵌範本中使用時才有效。
+>在Adobe Experience Platform UI中，僅內嵌範本的父層級支援引數化查詢。 這表示引數化查詢只有在用於原始範本時才有效。 子範本必須是靜態範本，而且不能有動態引數。 請參閱 [內嵌範本檔案](../essential-concepts/inline-templates.md) 以深入瞭解。
 
 ## 引數化查詢語法 {#syntax}
 

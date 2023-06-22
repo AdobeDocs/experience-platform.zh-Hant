@@ -1,9 +1,9 @@
 ---
 title: 內嵌範本
 description: 瞭解如何使用內嵌範本在多個查詢中重複使用多個條件。
-source-git-commit: f8ec94b4c93e3b36667bdb179ce12c10d20fa30f
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ UI和查詢服務API都支援內嵌範本。 在繼續使用本指南之前，�
 
 >
 >
->在Adobe Experience Platform UI中，僅在父層級支援引數化查詢形式的內嵌範本。 這表示引數化查詢只有在用於原始範本時才有效。 子範本必須是靜態範本，且不能有動態引數。
+>在Adobe Experience Platform UI中，僅在父層級支援引數化查詢形式的內嵌範本。 這表示引數化查詢只有在用於原始範本時才有效。 子範本必須是靜態範本，且不能有動態引數。 請參閱 [引數化查詢檔案](../ui/parameterized-queries.md) 以深入瞭解。
 
 ## 後續步驟
 

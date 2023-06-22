@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 常見問答
 description: 本檔案包含與查詢服務相關的常見問題與解答。 主題包括匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
 workflow-type: tm+mt
-source-wordcount: '4383'
+source-wordcount: '4309'
 ht-degree: 1%
 
 ---
@@ -85,7 +85,7 @@ SELECT * FROM customers LIMIT 0;
 
 ### 我可以使用保留關鍵字作為欄名稱嗎？
 
-+++回答有些保留關鍵字不能做為資料行名稱，例如， `ORDER`， `GROUP BY`， `WHERE`， `DISTINCT`. 如果要使用這些關鍵字，則必須逸出這些欄。
++++答案有些保留關鍵字不能做為資料行名稱，例如， `ORDER`， `GROUP BY`， `WHERE`， `DISTINCT`. 如果要使用這些關鍵字，則必須逸出這些欄。
 +++
 
 ### 如何從階層式資料集中找到欄名稱？
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 您也應該查閱檔案以瞭解如何執行的指南 [UI中已排程的查詢](./ui/user-guide.md#scheduled-queries) 和至 [API](./api/scheduled-queries.md).
 
-以下為使用時排程查詢的考量事項清單 [!DNL Query Editor]. 它們不適用於 [!DNL Query Service] API：<br/>您只能將排程新增至已建立、儲存和執行的查詢。<br/>您 **無法** 將排程新增至引數化查詢。<br/>排定的查詢 **無法** 包含匿名區塊。<br/>您只能排程 **一** 使用UI查詢範本。 如果您想要將其他排程新增至查詢範本，則需要使用API。 如果已使用API新增排程，您將無法使用UI新增其他排程。
+請注意，使用時 [!DNL Query Editor] 您只能將排程新增至已建立、儲存和執行的查詢。 這不會套用至 [!DNL Query Service] API。
 +++
 
 ### 「已達到工作階段限制」錯誤是什麼意思？
