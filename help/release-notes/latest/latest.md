@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年6月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9d78cd726430b0c7690fdb814d0888aaad832f6
+source-git-commit: 77c7fbfba2a1ccc6df31abc2f6b926ed90942c4c
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '988'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,19 @@ ht-degree: 5%
 
 Adobe Experience Platform 現有功能更新：
 
+- [驗證Experience Platform API](#authentication-platform-apis)
 - [資料彙集](#data-collection)
+- [目的地](#destinations)
 - [查詢服務](#query-service)
 - [來源](#sources)
+
+## 驗證Experience Platform API {#authentication-platform-apis}
+
+對於Experience Platform API使用者，取得驗證和呼叫API端點所需的存取權杖的方法現在已簡化。 取得存取權杖的JWT方法已過時，並取代為較簡單的OAuth伺服器對伺服器驗證方法。<p>![用於取得反白顯示存取權杖的新OAuth驗證方法。](/help/landing/images/api-authentication/oauth-authentication-method.png "用於取得反白顯示存取權杖的新OAuth驗證方法。"){width="100" zoomable="yes"}</p>
+
+雖然使用JWT驗證方法的現有API整合在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合移轉至新的OAuth伺服器對伺服器方法。 閱讀指南： [從服務帳戶(JWT)認證移轉至OAuth伺服器對伺服器認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+閱讀更新內容 [Experience Platform驗證教學課程](/help/landing/api-authentication.md) 以取得詳細資訊。
 
 ## 資料彙集 {#data-collection}
 
@@ -35,6 +45,40 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 {style="table-layout:auto"}
 
 若要進一步瞭解資料彙集，請閱讀 [資料彙集概觀](../../tags/home.md).
+
+## 目的地 {#destinations}
+
+[!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+
+**新的或更新目的地** {#new-updated-destinations}
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [[！BADGE Beta]{type=Informative} [!DNL Amazon Ads] 連線](../../destinations/catalog/advertising/amazon-ads.md) | 此 [!DNL Amazon Ads] 與Adobe Experience Platform整合現在支援區域路由，以連線各種 [!DNL Amazon Ads] marketplaces. 深入瞭解 [目的地變更記錄檔](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+
+{style="table-layout:auto"}
+
+<!-- 
+
+**New or updated functionality** {#destinations-new-updated-functionality}
+
+| Functionality | Description |
+| ----------- | ----------- |
+| Workspace support for [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) destinations. | You can now select the Adobe Target workspace that you want to share audiences to, when configuring a new Adobe Target destination connection. See the [connection parameters](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) section for more information. Additionally, see the tutorial on [configuring workspaces](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) in Adobe Target for more information about workspaces. |
+
+{style="table-layout:auto"}
+
+-->
+
+<!--
+
+**Fixes and enhancements** {#destinations-fixes-and-enhancements}
+
+- Placeholder for fixes and enhancements
+
+-->
+
+如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
 
 ## 查詢服務 {#query-service}
 
