@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理角色許可權
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面設定角色許可權的相關資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 9515527f5a2c250b0a9057aa37769431e3b6fa07
+source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 4%
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
 
-## 管理角色的API認證
+## 管理角色的API認證 {#manage-api-credentials-for-role}
 
 選取 **[!UICONTROL API認證]** 標籤以開啟「角色API認證」頁面，然後選取 **[!UICONTROL 新增API認證]** 以指派API認證給角色。
 
