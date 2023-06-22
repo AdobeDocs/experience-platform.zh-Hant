@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年6月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a03d0eeab5ca42225705fdeab692020b1641395d
+source-git-commit: e56a6c2bac46778afcc24db8d51e77ec3700dd96
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 5%
+source-wordcount: '1606'
+ht-degree: 4%
 
 ---
 
@@ -18,6 +18,7 @@ Adobe Experience Platform 現有功能更新：
 - [驗證Experience Platform API](#authentication-platform-apis)
 - [資料彙集](#data-collection)
 - [目的地](#destinations)
+- [體驗資料模型(XDM)](#xdm)
 - [查詢服務](#query-service)
 - [來源](#sources)
 
@@ -75,6 +76,45 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 -->
 
 如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
+
+## 體驗資料模型(XDM) {#xdm}
+
+XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提供通用結構和定義（結構描述）。 藉由遵守XDM標準，所有客戶體驗資料都可以整合到通用表示中，以更快、更整合的方式提供深入分析。 您可以從客戶動作獲得有價值的深入分析、透過區段定義客戶對象，以及使用客戶屬性進行個人化。
+
+**新XDM元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 擴充功能(Prospect-Profile) | [[!UICONTROL Adobe統一設定檔服務潛在客戶 — 設定檔聯合擴充功能]](https://github.com/adobe/xdm/pull/1735/files) | 新增潛在客戶設定檔聯合結構描述的必填欄位。 |
+| 擴充功能 | [[!UICONTROL 決策資產]](https://github.com/adobe/xdm/pull/1732/files) | 新增資料型別以代表決策中使用的資產。 [!UICONTROL 決策資產] 提供用於呈現 `decisionItems`. |
+| 資料型別 | [[!UICONTROL 商務]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 商務] 儲存與購買和銷售活動相關的記錄。 |
+| 欄位群組 | [[!UICONTROL 設定檔合作夥伴擴充（範例）]](https://github.com/adobe/xdm/pull/1747/files) | 已新增範例結構描述，以擴充設定檔合作夥伴。 |
+| 欄位群組 | [[!UICONTROL 合作夥伴潛在客戶詳細資訊（範例）]](https://github.com/adobe/xdm/pull/1747/files) | 已新增範例結構描述，用於資料供應商潛在客戶設定檔擴充功能。 |
+| 資料型別 | [[!UICONTROL 商務範圍]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 商務範圍] 會識別發生事件的位置。 例如，在商店檢視、商店或網站等。 |
+| 資料型別 | [[!UICONTROL 帳單]](https://github.com/adobe/xdm/pull/1734/files) | 已將一筆或多筆付款的帳單資訊新增至 [!UICONTROL 商務] 結構描述。 |
+
+{style="table-layout:auto"}
+
+**已更新XDM元件**
+
+| 元件類型 | 名稱 | 更新說明 |
+| --- | --- | --- |
+| 欄位群組 | [[!UICONTROL MediaAnalytics互動細節]](https://github.com/adobe/xdm/pull/1736/files) | 已變更 `bitrateAverageBucket` 從100到「800-899」。 |
+| 資料型別 | [[!UICONTROL Qoe資料詳細資訊]](https://github.com/adobe/xdm/pull/1736/files) | 已變更 `bitrateAverageBucket` 資料型別轉換為字串。 |
+| 欄位群組 | [[!UICONTROL 區段會籍細節]](https://github.com/adobe/xdm/pull/1735/files) | 新增至潛在客戶設定檔類別。 |
+| 方案 | [[!UICONTROL 計算屬性系統結構描述]](https://github.com/adobe/xdm/pull/1735/files) | 身分對應已新增至 [!UICONTROL 計算屬性系統結構描述]. |
+| 資料型別 | [[!UICONTROL 內容傳遞網路]](https://github.com/adobe/xdm/pull/1733/files) | 新增至的欄位 [!UICONTROL 工作階段詳細資訊] 說明所使用的內容傳遞網路。 |
+| 擴充功能 | [[!UICONTROL Adobe統一設定檔服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1731/files) | 身分對應已新增至 [!UICONTROL Adobe統一設定檔服務帳戶聯合擴充功能]. |
+| 資料型別 | [[!UICONTROL 訂購]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` 已新增至 [!UICONTROL 訂購]. 這會傳達一般訂單價格與特殊價格之間的差異。 它會套用至整個訂單，而非個別產品。 |
+| 方案 | [[!UICONTROL AEP衛生操作請求]](https://github.com/adobe/xdm/pull/1728/files) | 此 `targetServices` 欄位已新增，以提供處理資料檢疫操作的服務名稱。 |
+| 資料型別 | [[!UICONTROL 送貨]](https://github.com/adobe/xdm/pull/1727/files) | `currencyCode` 已新增至一或多個產品的送貨資訊。 這是用於為產品定價的ISO 4217字母貨幣代碼。 |
+| 資料型別 | [[!UICONTROL 應用程式]](https://github.com/adobe/xdm/pull/1726/files) | 此 `language` 已新增欄位，以提供使用者在應用程式的語言、地理或文化偏好設定。 |
+| 擴充功能 | [[!UICONTROL ajo實體欄位]](https://github.com/adobe/xdm/pull/1746/files) | [!UICONTROL AJO時間戳記實體] 已新增，以指出上次修改訊息的時間。 |
+| 資料型別 | （多個） | [已移除數個媒體詳細資料](https://github.com/adobe/xdm/pull/1739/files) 資料型別之間的一致性。 |
+
+{style="table-layout:auto"}
+
+如需有關Platform中XDM的詳細資訊，請參閱 [XDM系統總覽](../../xdm/home.md)
 
 ## 查詢服務 {#query-service}
 
