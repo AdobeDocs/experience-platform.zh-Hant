@@ -1,9 +1,9 @@
 ---
 title: 引數化查詢
 description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢。
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: d927f1f98c1f3a42907501921fcd2367241fa625
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,10 @@ SELECT
 
 如果您移除引數，並在查詢執行後再次嘗試執行查詢，則會在 [!UICONTROL 查詢引數] 區段來警示您。
 
+>[!NOTE]
+>
+>如果您的查詢未採用引數，您仍可在「查詢編輯器」中輸入不必要的引數。 查詢編輯器會忽略所有不必要的索引鍵值配對，而這對查詢的執行或結果沒有影響。
+
 ![查詢編輯器的空白值欄位和查詢引數錯誤會反白顯示。](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## 使用查詢記錄檔詳細資料檢查引數值 {#check-parameter-values}
@@ -77,4 +81,4 @@ SELECT
 
 閱讀本檔案後，您已瞭解如何在Adobe Experience Platform UI中將查詢引數化，並在排程的查詢執行中使用它們。 該檔案還突出顯示如何檢查日誌中用於查詢執行的引數值。
 
-如果您尚未閱讀指南，建議您閱讀 [監視排定的查詢](./monitor-queries.md) 以透過Platform UI更能瞭解所有查詢工作的狀態。
+接下來，建議您閱讀 [監視排定的查詢](./monitor-queries.md) 以透過Platform UI更能瞭解所有查詢工作的狀態。
