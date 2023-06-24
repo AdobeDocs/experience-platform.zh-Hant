@@ -118,9 +118,13 @@ XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提�
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準SQL在Adobe Experience Platform Data Lake中查詢資料。 您可以聯結Data Lake的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或內嵌到即時客戶個人檔案中。&#x200B;URL
+查詢服務可讓您使用標準SQL在Adobe Experience Platform Data Lake中查詢資料。 您可以聯結Data Lake的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或內嵌到即時客戶個人檔案中。
+
 **更新的功能**
-&#x200B;URL |功能 |說明 | | — | — | |內&#x200B;嵌範本 |查詢服務現在支援使用參照SQL中其他範本的範本。 運用查詢中的內嵌範本，減少您的工作量，並避免錯誤。 您可以重複使用敘述句或條件，並參考巢狀範本，以提高SQL的彈性。 可以儲存為範本的查詢大小沒有限制，或是可以從原始查詢中參考的範本數量。 如需詳細資訊，請閱讀 [內嵌範本指南](../../query-service/essential-concepts/inline-templates.md). | |排程的查詢UI更新 |使用「 」管理UI中某個位置的所有已排程查詢 [[!UICONTROL 排定的查詢索引標籤]](../../query-service/ui/monitor-queries.md#inline-actions). 此 [!UICONTROL 排定的查詢] 新增內嵌查詢動作和新的查詢狀態列，改善UI。 最近新增的功能包括啟用、停用和刪除排程，或訂閱即將從執行的查詢的警示 [!UICONTROL 排定的查詢] 檢視。 <p>![反白顯示的內嵌動作 [!UICONTROL 排定的查詢] 檢視。](../../query-service/images/ui/monitor-queries/disable-inline.png "反白顯示的內嵌動作 [!UICONTROL 排定的查詢] 檢視。"){width="100" zoomable="yes"}</p> |
+| 功能 | 說明 |
+| --- | --- |
+| 內&#x200B;嵌範本 | 查詢服務現在支援使用參照SQL中其他範本的範本。 運用查詢中的內嵌範本，減少您的工作量，並避免錯誤。 您可以重複使用敘述句或條件，並參考巢狀範本，以提高SQL的彈性。 可以儲存為範本的查詢大小沒有限制，或是可以從原始查詢中參考的範本數量。 如需詳細資訊，請閱讀 [內嵌範本指南](../../query-service/essential-concepts/inline-templates.md). |
+| 排程的查詢UI更新 |使用「 」管理UI中某個位置的所有已排程查詢 [[!UICONTROL 排定的查詢索引標籤]](../../query-service/ui/monitor-queries.md#inline-actions). 此 [!UICONTROL 排定的查詢] 新增內嵌查詢動作和新的查詢狀態列，改善UI。 最近新增的功能包括啟用、停用和刪除排程，或訂閱即將從執行的查詢的警示 [!UICONTROL 排定的查詢] 檢視。 <p>![反白顯示的內嵌動作 [!UICONTROL 排定的查詢] 檢視。](../../query-service/images/ui/monitor-queries/disable-inline.png "反白顯示的內嵌動作 [!UICONTROL 排定的查詢] 檢視。"){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 如需&#x200B;查詢服務的詳細資訊，請參閱 [查詢服務總覽](../../query-service/home.md).
