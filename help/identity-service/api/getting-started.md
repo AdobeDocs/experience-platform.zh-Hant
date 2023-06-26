@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identity Service API指南
 description: Identity Service API可讓開發人員使用Adobe Experience Platform中的身分圖表，管理跨裝置、跨頻道及幾乎即時的客戶身分識別。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 3%
