@@ -2,9 +2,9 @@
 title: 設定資料流覆寫
 description: 瞭解如何在資料串流UI中設定資料串流覆寫，並透過Web SDK啟用它們。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: d76d596818db67c99aca0606b6b6fb1a9aa977aa
+source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,7 @@ alloy("sendEvent", {
     /* ... */
   },
   edgeConfigOverrides: {
+    datastreamId: "{DATASTREAM_ID}"
     com_adobe_experience_platform: {
       datasets: {
         event: {
@@ -148,6 +149,10 @@ alloy("sendEvent", {
 });
 ```
 
+| 參數 | 說明 |
+|---|---|
+| `edgeConfigOverrides.datastreamId` | 使用此引數可允許單一請求進入與定義的資料流不同的資料流。 `configure` 命令。 |
+
 ### 透過傳送設定覆寫 `configure` 命令 {#send-configure}
 
 以下範例顯示設定覆寫在 `configure` 命令。
@@ -157,7 +162,7 @@ alloy("configure", {
   defaultConsent: "in",
   edgeDomain: "etc",
   edgeBasePath: "ee",
-  edgeConfigId: "etc",
+  datastreamId: "{DATASTREAM_ID}",
   orgId: "org",
   debugEnabled: true,
   edgeConfigOverrides: {
