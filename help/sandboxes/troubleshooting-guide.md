@@ -27,7 +27,7 @@ ht-degree: 9%
 >id="platform_sandboxes_sandboxtypes"
 >title="沙箱類型"
 >abstract="沙箱類型會說明這是生產沙箱或是開發沙箱。生產沙箱包括即時資料，而開發沙箱則用於測試和開發。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html#create" text="在 UI 中建立沙箱"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=zh-Hant#create" text="在 UI 中建立沙箱"
 
 Experience Platform中有兩種沙箱型別：
 

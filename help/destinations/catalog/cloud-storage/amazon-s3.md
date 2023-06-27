@@ -19,7 +19,6 @@ ht-degree: 13%
 >* 如果您已將檔案匯出至 **[!UICONTROL Amazon S3]** 目的地，請建立新的資料流到新的 **[!UICONTROL Amazon S3 Beta]** 目的地。
 >* 如果您尚未建立任何資料流至 **[!UICONTROL Amazon S3]** 目的地，請使用新的 **[!UICONTROL Amazon S3 Beta]** 要匯出檔案的卡片 **[!UICONTROL Amazon S3]**.
 
-
 ![並排檢視中的兩個Amazon S3目的地卡片影像。](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
 新功能中的改進 [!DNL Amazon S3] 目的地卡包括：
@@ -71,7 +70,7 @@ ht-degree: 13%
 * **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]秘密金鑰**：在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對以授予Platform存取權給您的 [!DNL Amazon S3] 帳戶。 進一步瞭解 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
-   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 填寫目的地詳細資料 {#destination-details}
 
@@ -84,7 +83,7 @@ ht-degree: 13%
 >id="platform_destinations_connect_s3_folderpath"
 >title="檔案夾路徑"
 >abstract="必須僅包含字元 A-Z、a-z、0-9，並且可以包含以下特殊字元：`/!-_.'()"^[]+$%.*"`。若要為每個區段檔案建立一個檔案夾，請將巨集 `/%SEGMENT_NAME%` 或 `/%SEGMENT_ID%` 或 `/%SEGMENT_NAME%/%SEGMENT_ID%` 插入文字欄位。只能將巨集插入檔案夾路徑的末尾。檢視文件中的巨集範例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=zh-Hant#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
 
 若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
 

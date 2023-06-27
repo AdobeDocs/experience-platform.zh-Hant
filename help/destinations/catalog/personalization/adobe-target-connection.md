@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: 3b2fedf4f7b17c4fb32afb5978bfac6f618f5bc3
 workflow-type: tm+mt
 source-wordcount: '1079'
-ht-degree: 7%
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 6 月 | 功能和檔案更新 | 自2023年6月起，當您設定新的Adobe Target目的地連線時，可以選取您要共用對象的Adobe Target工作區。 請參閱 [連線引數](#parameters) 區段以取得詳細資訊。 此外，請參閱以下教學課程： [設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) Adobe Target中取得工作區的詳細資訊。 |
+| 2023 年 6 月 | 功能和檔案更新 | 自2023年6月起，當您設定新的Adobe Target目的地連線時，可以選取您要共用對象的Adobe Target工作區。 如需詳細資訊，請參閱[連線參數](#parameters)一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en)的教學課程。 |
 | 2023 年 5 月 | 功能和檔案更新 | 截至2023年5月， **[!UICONTROL Adobe Target]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
 
 {style="table-layout:auto"}
@@ -69,7 +69,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 >id="platform_destinations_target_datastream"
 >title="關於資料流 ID"
 >abstract="此選項會確定哪個資料收集資料流中將包含區段。下拉式選單僅顯示已啟用目標設定的資料流。若要使用邊緣分段，您必須選取一個資料流 ID。選取不停用所有使用邊緣分段的使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="了解有關選取資料流的詳細資訊"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=zh-Hant#parameters" text="了解有關選取資料流的詳細資訊"
 
 >[!IMPORTANT]
 > 
@@ -83,9 +83,9 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
->title="關於Adobe Target工作區"
->abstract="選取將與其共用受眾的Adobe Target工作區。 您可以為每個Adobe Target連線選取單一工作區。 啟用後，對象會路由至選取的工作區，同時遵循適用的Experience Platform資料使用標籤。"
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="進一步瞭解Adobe Target工作區"
+>title="關於 Adobe Target 工作區"
+>abstract="選取將共用對象的 Adobe Target 工作區。您可以為每個 Adobe Target 連線選取一個工作區。啟動後，對象將被導向到選取的工作區，同時依循適用的 Experience Platform 資料使用標籤。"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="進一步了解 Adobe Target 工作區"
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊：
 
@@ -93,7 +93,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 * **說明**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
 * **資料串流ID**：這會決定要將區段納入哪個資料收集資料串流。 下拉式功能表只會顯示已啟用Target和Adobe Experience Platform服務的資料串流。 另請參閱 [設定資料串流](../../../edge/datastreams/configure.md#aep) 以取得如何設定Adobe Experience Platform和Adobe Target資料流的詳細資訊。
    * **[!UICONTROL 無]**：如果您需要設定Adobe Target個人化，但無法實作 [Experience PlatformWeb SDK](../../../edge/home.md). 使用此選項時，從Experience Platform匯出至Target的區段僅支援下一次工作階段個人化，且會停用邊緣區段。 如需詳細資訊，請參閱下表。
-* **Workspace**：選取Adobe Target [工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 將與其共用對象。 您可以為每個Adobe Target連線選取單一工作區。 啟用後，受眾會依循適用的規則，路由至選取的工作區 [Experience Platform資料使用標籤](../../../data-governance/labels/overview.md).
+* **Workspace**：選取Adobe Target [工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 將與其共用對象。 您可以為每個 Adobe Target 連線選取一個工作區。啟用後，受眾會依循適用的規則，路由至選取的工作區 [Experience Platform資料使用標籤](../../../data-governance/labels/overview.md).
 
 | 未選取任何資料串流 | 已選取資料流 |
 |---|---|

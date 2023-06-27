@@ -94,7 +94,7 @@ ht-degree: 10%
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 身分失敗]** 由於錯誤而未啟用到目的地的設定檔身分總數。
 - **[!UICONTROL 啟用率]**：已成功啟動或略過的已接收身分的百分比。 下列公式示範如何計算此值：
-   ![啟用率公式](../assets/ui/monitor-destinations/activation-rate-formula.png)
+  ![啟用率公式](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL 狀態]**：代表資料流所處的狀態：可以 [!UICONTROL 已完成] 或 [!UICONTROL 處理中]. [!UICONTROL 已完成] 表示對應資料流執行的所有身分識別已在一小時內匯出。 [!UICONTROL 處理中] 表示資料流執行尚未完成。
 
 若要檢視特定資料流執行的詳細資訊，請從清單中選取執行的開始時間。
@@ -113,7 +113,7 @@ ht-degree: 10%
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
 >abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -171,7 +171,6 @@ ht-degree: 10%
 >
 >- Experience Platform中目前所有目的地都支援目的地監視功能 *例外* 此 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md) 目的地。
 >- 對於 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)， [Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、和 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 會估計與已排除、失敗和已啟用的身分相關的量度。 較大量的啟用資料會導致量度的準確性較高。
-
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -261,7 +260,6 @@ ht-degree: 10%
 >請注意與區段層級量度相關的目前限制：
 >- 區段層級檢視目前僅適用於批次目的地。
 >- 目前僅針對成功的資料流執行記錄區段層級量度。 失敗的資料流執行和排除的記錄不會記錄它們。
-
 
 ![資料流面板中的區段](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 

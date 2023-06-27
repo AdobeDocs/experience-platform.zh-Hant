@@ -43,7 +43,7 @@ ht-degree: 3%
 >id="platform_eventforwarding_secrets_environments"
 >title="密碼環境"
 >abstract="為了讓密碼可供事件轉送使用，必須將其指派給現有環境。如果您沒有為事件轉送屬性建立任何環境，則必須進行設定才能繼續。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="環境概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant" text="環境概觀"
 
 若要建立密碼，請選取 **[!UICONTROL 事件轉送]** 在左側導覽中，然後開啟您要新增密碼的事件轉送屬性。 接下來，選取 **[!UICONTROL 秘密]** 在左側導覽列中，後面接著 **[!UICONTROL 建立新密碼]**.
 

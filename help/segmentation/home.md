@@ -56,7 +56,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 >id="platform_segments_evaluation_streaming"
 >title="串流評估"
 >abstract="串流分段是一種持續的資料選取流程，會根據使用者活動更新您的區段。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="使用串流分段近乎即時地評估事件"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=zh-Hant" text="使用串流分段近乎即時地評估事件"
 
 Platform 目前支援三種評估區段的方式：串流分段、批次分段以及邊緣分段。
 
@@ -83,7 +83,7 @@ Platform 目前支援三種評估區段的方式：串流分段、批次分段�
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
 >abstract="邊緣分段指在 Experience Edge 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="邊緣分段服務 UI 指南"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=zh-Hant" text="邊緣分段服務 UI 指南"
 
 邊緣區段是即時評估Platform中區段的能力 [在Experience Edge上](../edge/home.md)，啟用相同頁面和下一頁個人化使用案例。
 
