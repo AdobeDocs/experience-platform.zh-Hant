@@ -1,17 +1,17 @@
 ---
-title: Reactor API快速入門
+title: 驗證及存取Reactor API
 description: 瞭解如何開始使用Reactor API，包括產生所需存取憑證的步驟。
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 1%
+source-wordcount: '921'
+ht-degree: 0%
 
 ---
 
-# Reactor API快速入門
+# 驗證及存取Reactor API
 
-為了使用 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)，每個請求都必須包含下列驗證標頭：
+為了使用 [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/) 若要建立和管理Tags擴充功能，每個請求都必須包含下列驗證標題：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -19,11 +19,11 @@ ht-degree: 1%
 
 本指南說明如何使用Adobe Developer主控台收集這些標頭的值，以便您開始呼叫Reactor API。
 
-## 取得開發人員的Adobe Experience Platform存取權
+## 取得開發人員的Adobe Experience Platform存取權 {#gain-developer-access}
 
-您必須先擁有開發人員Experience Platform存取權，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請依照 [Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成「取得使用者存取權」步驟後，請返回本教學課程，產生Reactor API的特定認證。
+您必須先擁有開發人員Experience Platform存取權，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請依照 [Experience Platform驗證教學課程](/help/landing/api-authentication.md). 當您完成 [取得使用者存取權](/help/landing/api-authentication.md#gain-user-access) 步驟，返回本教學課程，產生Reactor API的特定認證。
 
-## 產生存取認證
+## 產生存取認證 {#generate-access-credentials}
 
 使用Adobe Developer Console時，您必須產生下列三個存取認證：
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 下文將詳細說明產生這些值的步驟。
 
-### 一次性設定
+### 一次性設定 {#one-time-setup}
 
 前往 [Adobe Developer主控台](https://www.adobe.com/go/devs_console_ui) 並使用您的Adobe ID登入。 接下來，請依照以下教學課程中概述的步驟操作： [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) 在開發人員控制檯檔案中。
 
@@ -43,128 +43,83 @@ ht-degree: 1%
 
 ![](../images/api/getting-started/add-api-button.png)
 
-此 **新增API** 畫面隨即顯示。 選取 **Experience Platform Reactor API** 從可用API清單中選取 **下一個**.
+此 **新增API** 畫面隨即顯示。 選取 **EXPERIENCE PLATFORM LAUNCHAPI** 從可用API清單中選取 **下一個**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-在下一個畫面中，系統提示您建立JSON Web權杖(JWT)認證，以便產生新的金鑰組或上傳您自己的公開金鑰。 在本教學課程中，選取 **產生金鑰組** 選項，然後選取 **產生金鑰組** 右下角。
+接下來，選取驗證型別以產生存取權杖並存取Experience PlatformAPI。
 
-![](../images/api/getting-started/create-jwt.png)
-
-下一個畫面會確認金鑰組已成功產生，而包含公開憑證和私密金鑰的壓縮資料夾會自動下載至您的電腦。 在後續步驟中需要此私密金鑰才能產生存取權杖。
+>[!IMPORTANT]
+>
+>選取 **[!UICONTROL OAuth伺服器對伺服器]** 方法，因為這將是日後唯一支援的方法。 此 **[!UICONTROL 服務帳戶(JWT)]** 方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在區段中取得詳細資訊 [!BADGE 已棄用]{type=negative}[產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt) 在Platform API驗證教學課程中。
 
 選取&#x200B;**「下一步」**&#x200B;以繼續。
 
-![](../images/api/getting-started/keypair-generated.png)
+![選取OAuth伺服器對伺服器驗證方法。](/help/tags/images/api/getting-started/oauth-authentication-method.png)
 
 下一個畫面會提示您選取一或多個產品設定檔，以與API整合建立關聯。
 
 >[!NOTE]
 >
->產品設定檔由您的組織透過Adobe Admin Console管理，並包含精細功能的特定許可權集。 產品設定檔及其許可權只能由組織內具有管理員許可權的使用者管理。 如果您不確定要為API選擇哪些產品設定檔，請聯絡您的管理員。
+產品設定檔由您的組織透過Adobe Admin Console管理，並包含精細功能的特定許可權集。 產品設定檔及其許可權只能由組織內具有管理員許可權的使用者管理。 如果您不確定要為API選擇哪些產品設定檔，請聯絡您的管理員。
 
 從清單中選取所需的產品設定檔，然後選取「 」 **儲存已設定的API** 以完成API註冊。
 
 ![](../images/api/getting-started/select-product-profile.png)
 
-將API新增至專案後，專案頁面會重新出現在Experience PlatformReactor API頁面上。 從這裡，向下捲動至 **服務帳戶(JWT)** 區段，提供所有呼叫Reactor API時所需的下列存取認證：
+### 收集認證 {#gather-credentials}
 
-* **使用者端ID**：使用者端ID為必要項 `{API_KEY}` 此專案必須提供於 `x-api-key` 標頭。
-* **組織ID**：組織ID `{ORG_ID}` 必須在下列專案中使用的值： `x-gw-ims-org-id` 標頭。
+將API新增至專案後， **[!UICONTROL EXPERIENCE PLATFORMAPI]** 專案的頁面會顯示所有Experience PlatformAPI呼叫所需的下列認證：
 
-![](../images/api/getting-started/access-creds.png)
+* `{API_KEY}` ([!UICONTROL 使用者端ID])
+* `{ORG_ID}` ([!UICONTROL 組織 ID])
 
-### 每個工作階段的驗證
+![在開發人員控制檯中新增API後的整合資訊。](/help/tags/images/api/getting-started/api-integration-information.png)
 
-現在您已擁有 `{API_KEY}` 和 `{ORG_ID}` 值，最後一個步驟是產生 `{ACCESS_TOKEN}` 值。
+### 產生存取權杖 {#generate-access-token}
 
->[!NOTE]
+下一步是產生 `{ACCESS_TOKEN}` 用於平台API呼叫的認證。 不像 `{API_KEY}` 和 `{ORG_ID}`，則必須每24小時產生新Token才能繼續使用Platform API。
+
+>[!TIP]
 >
->這些Token會在24小時後過期。 如果您在應用程式中使用此整合，最好以程式設計方式從應用程式中取得持有人權杖。
+這些Token會在24小時後過期。 如果您在應用程式中使用此整合，最好以程式設計方式從應用程式中取得持有人權杖。
 
 根據您的使用案例，您有兩個選項可產生存取權杖：
 
 * [手動產生代號](#manual)
-* [以程式設計方式產生代號](#program)
+* [自動化權杖產生](#auto-token)
 
 #### 手動產生存取權杖 {#manual}
 
-在文字編輯器或瀏覽器中開啟您先前下載的私密金鑰，並複製其內容。 然後，導覽回開發人員主控台，並將私密金鑰貼入 **產生存取權杖** 區段（位於專案的Reactor API頁面上），然後選取 **產生Token**.
+若要手動產生新的 `{ACCESS_TOKEN}`，導覽至 **[!UICONTROL 認證]** > **[!UICONTROL OAuth伺服器對伺服器]** 並選取 **[!UICONTROL 產生存取權杖]**，如下所示。
 
-![](../images/api/getting-started/paste-private-key.png)
+![在開發人員控制檯UI中如何產生和存取Token的熒幕記錄。](/help/tags/images/api/getting-started/generate-access-token.gif)
 
-會產生新的存取Token，並提供按鈕以將該Token複製到剪貼簿。 此值用於必要的 `Authorization` 標頭，且必須以格式提供 `Bearer {ACCESS_TOKEN}`.
+會產生新的存取Token，並提供按鈕以將該Token複製到剪貼簿。 此值用於所需的Authorization標頭，且必須以格式提供 `Bearer {ACCESS_TOKEN}`.
 
-![](../images/api/getting-started/token-generated.png)
+#### 自動化權杖產生 {#auto-token}
 
-#### 以程式設計方式產生存取權杖 {#program}
+您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀以下章節： [使用Postman驗證和測試API呼叫](/help/landing/api-authentication.md#use-postman) 在Experience Platform API驗證指南中。
 
-如果您針對應用程式使用整合，可以透過API請求以程式設計方式產生存取權杖。 若要完成此作業，您必須取得下列值：
+## 測試API認證 {#test-api-credentials}
 
-* 使用者端ID (`{API_KEY}`)
-* 使用者端密碼(`{SECRET}`)
-* JSON Web權杖(`{JWT}`)
-
-您可以從專案的首頁面取得您的使用者端ID和密碼，請參閱 [上一步](#one-time-setup).
-
-![](../images/api/getting-started/auto-access-creds.png)
-
-若要取得您的JWT認證，請導覽至 **服務帳戶(JWT)** 在左側導覽中，然後選取 **產生JWT** 標籤。 在此頁面上，在 **產生自訂JWT**，將私密金鑰的內容貼到提供的文字方塊中，然後選取 **產生Token**.
-
-![](../images/api/getting-started/generate-jwt.png)
-
-產生的JWT完成處理後會顯示在下方，並附有一個範例cURL命令，您可以視需要用來測試權杖。 使用 **複製** 按鈕以將Token複製到剪貼簿。
-
-![](../images/api/getting-started/jwt-generated.png)
-
-收集您的認證後，您可以將下列API呼叫整合到您的應用程式中，以便以程式設計方式產生存取權杖。
-
-**要求**
-
-要求必須傳送 `multipart/form-data` 裝載，提供您的驗證認證，如下所示：
-
-```shell
-curl -X POST \
-  https://ims-na1.adobelogin.com/ims/exchange/jwt/ \
-  -H 'Content-Type: multipart/form-data' \
-  -F 'client_id={API_KEY}' \
-  -F 'client_secret={SECRET}' \
-  -F 'jwt_token={JWT}'
-```
-
-**回應**
-
-成功的回應會傳回新的存取Token，以及到期前的秒數。
-
-```json
-{
-  "token_type": "bearer",
-  "access_token": "{ACCESS_TOKEN}",
-  "expires_in": 86399999
-}
-```
-
-| 屬性 | 說明 |
-| :-- | :-- |
-| `access_token` | 新產生的存取權杖值。 此值用於必要的 `Authorization` 標頭，且必須以格式提供 `Bearer {ACCESS_TOKEN}`. |
-| `expires_in` | Token到期前的剩餘時間（毫秒）。 權杖過期後，必須產生新的權杖。 |
-
-{style="table-layout:auto"}
-
-## 後續步驟
-
-依照本教學課程中的步驟進行，您應該要具備下列專案的有效值： `{ORG_ID}`， `{API_KEY}`、和 `{ACCESS_TOKEN}`. 您現在可以透過在Reactor API的簡單cURL請求中使用這些值來測試這些值。
+依照本教學課程中的步驟進行，您應該要具備以下的有效值： `{ORG_ID}`， `{API_KEY}`、和 `{ACCESS_TOKEN}`. 您現在可以透過在Reactor API的簡單cURL請求中使用這些值來測試這些值。
 
 首先嘗試對進行API呼叫 [列出所有公司](./endpoints/companies.md#list).
 
 >[!NOTE]
 >
->您的組織中可能沒有任何公司，在這種情況下，回應將為HTTP狀態404 （找不到）。 只要您沒有收到403 （禁止）錯誤，您的存取認證即有效且可運作。
+您的組織中可能沒有任何公司，在這種情況下，回應將為HTTP狀態404 （找不到）。 只要您沒有收到403 （禁止）錯誤，您的存取認證即有效且可運作。
 
 在您確認存取憑證正常運作後，請繼續探索其他API參考檔案，以瞭解API的多種功能。
 
-## 其他資源
+## 讀取範例API呼叫 {#read-sample-api-calls}
 
-JWT程式庫和SDK： [https://jwt.io/](https://jwt.io/)
+每個端點指南都提供範例API呼叫，以示範如何格式化您的請求。 這些包括路徑、必要的標頭，以及正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/api-guide.md#sample-api) （位於Platform API快速入門手冊）。
 
-Postman API開發： [https://www.postman.com/](https://www.postman.com/)
+## 後續步驟 {#next-steps}
+
+現在您瞭解要使用哪些標頭，就可以開始呼叫Reactor API了。 選取其中一個端點指南以開始：
+
+* [Reactor API參考檔案](https://developer.adobe.com/experience-platform-apis/references/reactor/)
+* [Reactor API指南概觀](/help/tags/api/overview.md)

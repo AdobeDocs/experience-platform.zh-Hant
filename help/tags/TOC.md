@@ -5,10 +5,10 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 6e569ca3f83b374f88ca46fd8f2c40bbed203527
+source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 30%
+source-wordcount: '1005'
+ht-degree: 31%
 
 ---
 
@@ -279,7 +279,7 @@ ht-degree: 30%
    * [回溯相容性標準](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
    * [總覽](./api/overview.md)
-   * [快速入門](./api/getting-started.md)
+   * [驗證及存取Reactor API](./api/getting-started.md)
    * 端點 {#endpoints}
       * [公司](./api/endpoints/companies.md)
       * [屬性](./api/endpoints/properties.md)
