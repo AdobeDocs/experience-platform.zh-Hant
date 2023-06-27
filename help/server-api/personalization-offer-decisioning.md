@@ -2,10 +2,10 @@
 title: 透過Offer decisioning個人化
 description: 瞭解如何使用伺服器API透過Offer decisioning傳遞和演算個人化體驗。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 2%
+source-wordcount: '580'
+ht-degree: 4%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 2%
 Edge Network Server API可以提供受管理的個人化體驗 [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) 至網路頻道。
 
 [!DNL Offer Decisioning] 支援非視覺化介面，以建立、啟用及傳遞您的活動和個人化體驗。
+
+## 先決條件 {#prerequisites}
+
+透過以下方式個人化： [!DNL Offer Decisioning] 需要您擁有 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant) 在設定整合之前。
 
 ## 設定您的資料串流 {#configure-your-datastream}
 
