@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Adobe Experience Platform 2023年6月發行說明。
+description: Adobe Experience Platform 2023 年 6 月的發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: a3faca5e0a711f0d4f6bafb22bf3c4770f58db8e
 workflow-type: tm+mt
 source-wordcount: '1538'
-ht-degree: 5%
+ht-degree: 60%
 
 ---
 
@@ -13,56 +13,56 @@ ht-degree: 5%
 
 **發行日期：2023 年 6 月 21 日**
 
-Adobe Experience Platform 現有功能更新：
+Adobe Experience Platform 現有功能的更新：
 
-- [驗證Experience Platform API](#authentication-platform-apis)
-- [資料彙集](#data-collection)
+- [Experience Platform API 的驗證](#authentication-platform-apis)
+- [資料收藏集](#data-collection)
 - [目的地](#destinations)
 - [體驗資料模型(XDM)](#xdm)
 - [查詢服務](#query-service)
 - [來源](#sources)
 
-## 驗證Experience Platform API {#authentication-platform-apis}
+## Experience Platform API 的驗證 {#authentication-platform-apis}
 
-對於Experience Platform API使用者，取得驗證和呼叫API端點所需的存取權杖的方法現在已簡化。 取得存取權杖的JWT方法已過時，並取代為較簡單的OAuth伺服器對伺服器驗證方法。<p>![用於取得反白顯示存取權杖的新OAuth驗證方法。](/help/landing/images/api-authentication/oauth-authentication-method.png "用於取得反白顯示存取權杖的新OAuth驗證方法。"){width="100" zoomable="yes"}</p>
+Experience Platform API 使用者獲取所需存取權杖以驗證並呼叫 API 端點的方法現在已經簡化。用於獲取存取權杖的 JWT 方法已淘汰，並由較簡單的 OAuth Server-to-Server 驗證方法所取代。<p>![已醒目提示取得存取權杖的全新 OAuth 驗證方法。](/help/landing/images/api-authentication/oauth-authentication-method.png "已醒目提示取得存取權杖的全新 OAuth 驗證方法。"){width="100" zoomable="yes"}</p>
 
-雖然使用JWT驗證方法的現有API整合在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合移轉至新的OAuth伺服器對伺服器方法。 閱讀指南： [從服務帳戶(JWT)認證移轉至OAuth伺服器對伺服器認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+儘管使用 JWT 驗證方法的現有 API 整合將持續運作至 2025 年 1 月 1 日為止，但 Adob&#x200B;&#x200B;e 強烈建議您在該日期之前將現有整合移轉至新的 OAuth Server-to-Server 方法。請至「[從服務帳戶 (JWT) 認證移轉至 OAuth Server-to-Server 認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)」詳閱指南。
 
-閱讀更新內容 [Experience Platform驗證教學課程](/help/landing/api-authentication.md) 以取得詳細資訊。
+如需詳細資訊，請閱讀更新版 [Experience Platform 驗證教學課程](/help/landing/api-authentication.md)。
 
-## 資料彙集 {#data-collection}
+## 資料收藏集 {#data-collection}
 
-Adobe Experience Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將其傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將其分發到Adobe或非Adobe目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
 
 **新功能或更新功能**
 
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
-| 擴充功能 | [!DNL Google Cloud Platform] 事件轉送擴充功能 | 此 [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) 事件轉送擴充功能可讓您將事件資料轉送至Google，以便透過以下方式啟用： [!DNL Google Pub/Sub]. |
-| 擴充功能 | [!DNL Cloud connector for Google Analytics 4 (ga4)] 擴充功能 | 此 [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) 事件轉送擴充功能可讓您透過新的 [!DNL Google Analytics 4 (ga4)] 標準。 |
-| 密碼 | OAuth 2 JWT密碼 | 此 [OAuth 2 JWT密碼](../../tags/ui/event-forwarding/secrets.md) 可讓您使用Adobe和 [!DNL Google] 在事件轉送中支援伺服器 — 伺服器互動的服務Token。 |
+| 擴充功能 | [!DNL Google Cloud Platform]事件轉送擴充功能 | 此[[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md)事件轉送擴充功能可讓您將事件資料轉送到 Google，以透過 [!DNL Google Pub/Sub] 啟動。 |
+| 擴充功能 | [!DNL Cloud connector for Google Analytics 4 (ga4)] 擴充功能 | 此[[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)事件轉送擴充功能可讓您透過新的 [!DNL Google Analytics 4 (ga4)] 標準追蹤分析。 |
+| Secret | OAuth 2 JWT Secret | 此 [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) 可讓您使用 Adob&#x200B;&#x200B;e 和 [!DNL Google] 服務權杖支援事件轉送中伺服器和伺服器的互動。 |
 
 {style="table-layout:auto"}
 
-若要進一步瞭解資料彙集，請閱讀 [資料彙集概觀](../../tags/home.md).
+若要了解有關資料收藏集的詳細資訊，請閱讀[資料收藏集概觀](../../tags/home.md)。
 
 ## 目的地 {#destinations}
 
-[!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
-**新的或更新目的地** {#new-updated-destinations}
+**新目的地或更新的目的地** {#new-updated-destinations}
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [[！BADGE Beta]{type=Informative} [!DNL Amazon Ads] 連線](../../destinations/catalog/advertising/amazon-ads.md) | 此 [!DNL Amazon Ads] 與Adobe Experience Platform整合現在支援區域路由，以連線各種 [!DNL Amazon Ads] marketplaces. 深入瞭解 [目的地變更記錄檔](../../destinations/catalog/advertising/amazon-ads.md#changelog). |
+| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] 連線](../../destinations/catalog/advertising/amazon-ads.md) | 和 Adob&#x200B;&#x200B;e Experience Platform 的 [!DNL Amazon Ads] 整合現在可支援至不同 [!DNL Amazon Ads] Marketplace 的區域路由。如需詳細資訊，請閱讀[目的地變更記錄](../../destinations/catalog/advertising/amazon-ads.md#changelog)。 |
 
 {style="table-layout:auto"}
 
-**新功能或更新功能** {#destinations-new-updated-functionality}
+**新功能或更新的功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 工作區支援 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 目的地。 | 設定新的Adobe Target目的地連線時，您現在可以選取要與其共用受眾的Adobe Target工作區。 請參閱 [連線引數](../../destinations/catalog/personalization/adobe-target-connection.md#parameters) 區段以取得詳細資訊。 此外，請參閱以下教學課程： [設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=zh-Hant) Adobe Target中取得工作區的詳細資訊。 |
+| [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 目的地的工作區支援。 | 您現在設定新的 Adob&#x200B;&#x200B;e Target 目的地連線時，可以選取要將對象共享到哪個 Adob&#x200B;&#x200B;e Target 工作區。如需詳細資訊，請參閱[連線參數](../../destinations/catalog/personalization/adobe-target-connection.md#parameters)一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en)的教學課程。 |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 
 -->
 
-如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
+如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
 ## 體驗資料模型(XDM) {#xdm}
 
@@ -84,7 +84,7 @@ XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提�
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 擴充功能(Prospect-Profile) | [[!UICONTROL Adobe統一設定檔服務潛在客戶 — 設定檔聯合擴充功能]](https://github.com/adobe/xdm/pull/1735/files) | 新增潛在客戶設定檔聯合結構描述的必填欄位。 |
+| 擴充功能 （潛在客戶 — 個人資料） | [[!UICONTROL Adobe統一設定檔服務潛在客戶 — 設定檔聯合擴充功能]](https://github.com/adobe/xdm/pull/1735/files) | 新增潛在客戶設定檔聯合結構描述的必填欄位。 |
 | 擴充功能 | [[!UICONTROL 決策資產]](https://github.com/adobe/xdm/pull/1732/files) | 新增資料型別以代表決策中使用的資產。 [!UICONTROL 決策資產] 提供用於呈現 `decisionItems`. |
 | 資料型別 | [[!UICONTROL 商務]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL 商務] 儲存與購買和銷售活動相關的記錄。 |
 | 欄位群組 | [[!UICONTROL 設定檔合作夥伴擴充（範例）]](https://github.com/adobe/xdm/pull/1747/files) | 已新增範例結構描述，以擴充設定檔合作夥伴。 |
@@ -117,14 +117,14 @@ XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提�
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準SQL在Adobe Experience Platform Data Lake中查詢資料。 您可以聯結Data Lake的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或內嵌到即時客戶個人檔案中。
+查詢服務可讓您使用標準的 SQL 查詢 Adob&#x200B;&#x200B;e Experience Platform 資料湖中的資料。您可以聯結Data Lake的任何資料集，並將查詢結果擷取為新資料集，以用於報表、Data Science Workspace或內嵌到即時客戶個人檔案中。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 內嵌範本 | Query Service現在支援使用參照SQL中其他範本的範本。 運用查詢中的內嵌範本，減少您的工作量，並避免錯誤。 您可以重複使用敘述句或條件，並參考巢狀範本，以提高SQL的彈性。 可以儲存為範本的查詢大小沒有限制，或是可以從原始查詢中參考的範本數量。 如需詳細資訊，請閱讀 [內嵌範本指南](../../query-service/essential-concepts/inline-templates.md). |
-| 排定的查詢UI更新 | 使用，從UI中的某個位置管理所有排程查詢 [[!UICONTROL 排定的查詢索引標籤]](../../query-service/ui/monitor-queries.md#inline-actions). 此 [!UICONTROL 排定的查詢] 新增內嵌查詢動作和新的查詢狀態列，改善UI。 最近新增的功能包括啟用、停用和刪除排程，或訂閱即將從執行的查詢的警示 [!UICONTROL 排定的查詢] 檢視。 <p>![反白顯示的內嵌動作 [!UICONTROL 排定的查詢] 檢視。](../../query-service/images/ui/monitor-queries/disable-inline.png "反白顯示的內嵌動作 [!UICONTROL 排定的查詢] 檢視。"){width="100" zoomable="yes"}</p> |
+| 內嵌範本 | Query Service現在支援使用參照SQL中其他範本的範本。 在您的查詢中利用內聯範本以減少工作負載並避免錯誤。您可以重複使用陳述式或條件，並參照巢狀範本，以提高 SQL 中的靈活性。可存儲為範本的查詢大小或可從原始查詢參照的範本數量並沒有限制。如需詳細資訊，請閱讀[內聯範本指南](../../query-service/essential-concepts/inline-templates.md)。 |
+| 排定的查詢UI更新 | 使用，從UI中的某個位置管理所有排程查詢 [[!UICONTROL 排定的查詢索引標籤]](../../query-service/ui/monitor-queries.md#inline-actions). 隨著新增內聯查詢動作和新查詢狀態欄，此[!UICONTROL 已排程查詢] UI 已經獲得改善。最近新增的項目包括啟用、停用和刪除排程的能力，或者直接從[!UICONTROL 已排程查詢]檢視中訂閱即將執行查詢的警示。 <p>![內聯動作已醒目提示於[!UICONTROL 已排程查詢]檢視中。](../../query-service/images/ui/monitor-queries/disable-inline.png "內聯動作已醒目提示於[!UICONTROL 已排程查詢]檢視中。"){width="100" zoomable="yes"}</p> |
 
 {style="table-layout:auto"}
 
@@ -132,21 +132,21 @@ XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提�
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，並允許您使用Platform服務來建構、加標籤及增強這些資料。 您可以從多種來源擷取資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe Analytics分類來源資料流刪除支援 | 您現在可以刪除使用Adobe Analytics分類作為來源的來源資料流。 下 **[!UICONTROL 來源]** > **[!UICONTROL 資料流]**，選取所需的資料流，然後選取「刪除」。 如需詳細資訊，請閱讀以下指南： [建立Adobe Analytics分類資料的來源連線](../../sources/tutorials/ui/create/adobe-applications/classifications.md). |
-| 篩選支援 [!DNL Microsoft Dynamics] 使用API | 使用邏輯和比較運運算元來篩選的列層級資料 [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) 來源。 如需詳細資訊，請閱讀以下指南： [使用API篩選來源的資料](../../sources/tutorials/api/filter.md). |
-| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | 您現在可以使用 [!DNL RainFocus] 來源整合，將事件管理及分析資料從您的 [!DNL RainFocus] 要Experience Platform的帳戶。 如需詳細資訊，請閱讀 [[!DNL RainFocus] 來源概觀](../../sources/connectors/analytics/rainfocus.md). |
-| 支援Adobe Commerce | 您現在可以使用Adobe Commerce來源整合，將來自Adobe Commerce帳戶的資料帶入Experience Platform。 如需詳細資訊，請閱讀 [Adobe Commerce來源概觀](../../sources/connectors/adobe-applications/commerce.md). |
-| 支援 [!DNL Mixpanel] | 您現在可以使用 [!DNL Mixpanel] 來源整合，將分析資料從您的 [!DNL Mixpanel] 使用API或使用者介面Experience Platform的帳戶。 如需詳細資訊，請閱讀 [[!DNL Mixpanel] 來源概觀](../../sources/connectors/analytics/mixpanel.md). |
-| 支援 [!DNL Zendesk] | 您現在可以使用 [!DNL Zendesk] 來源整合，從您的取得客戶成功資料 [!DNL Zendesk] 使用API或使用者介面Experience Platform的帳戶。 如需詳細資訊，請閱讀 [[!DNL Zendesk] 來源概觀](../../sources/connectors/customer-success/zendesk.md). |
+| Adobe Analytics 分類來源資料流刪除支援 | 您現在可以刪除將 Adob&#x200B;&#x200B;e Analytics 分類用為來源的來源資料流。在「**[!UICONTROL 來源]** > **[!UICONTROL 資料流]**」下，選取所需的資料流，然後選取「刪除」。如需詳細資訊，請至「[建立 Adob&#x200B;&#x200B;e Analytics 分類資料之來源連線](../../sources/tutorials/ui/create/adobe-applications/classifications.md)」詳閱指南。 |
+| 使用 API 篩選 [!DNL Microsoft Dynamics] 的支援 | 使用邏輯和比較運算子篩選 [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) 來源的列層級資料。如需詳細資訊，請至「[使用 API 篩選來源的資料](../../sources/tutorials/api/filter.md)」詳閱指南。 |
+| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | 您現在可以使用 [!DNL RainFocus] 來源整合，將事件管理和分析資料從您的 [!DNL RainFocus] 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [[!DNL RainFocus]  來源概觀](../../sources/connectors/analytics/rainfocus.md)。 |
+| Adobe Commerce 的支援 | 您現在可以使用 Adobe Commerce 來源整合，將資料從您的 Adobe Commerce 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [Adobe Commerce 來源概觀](../../sources/connectors/adobe-applications/commerce.md)。 |
+| 支援 [!DNL Mixpanel] | 您現在可以使用 [!DNL Mixpanel] 來源整合，將分析資料從您的 [!DNL Mixpanel] 帳戶帶到使用 API 或使用者介面的 Experience Platform。如需詳細資訊，請閱讀 [[!DNL Mixpanel]  來源概觀](../../sources/connectors/analytics/mixpanel.md)。 |
+| 支援 [!DNL Zendesk] | 您現在可以使用 [!DNL Zendesk] 來源整合，將客戶成功資料從您的 [!DNL Zendesk] 帳戶帶到使用 API 或使用者介面的 Experience Platform。如需詳細資訊，請閱讀 [[!DNL Zendesk]  來源概觀](../../sources/connectors/customer-success/zendesk.md)。 |
 
 {style="table-layout:auto"}
 
-若要進一步瞭解來源，請閱讀 [來源概觀](../../sources/home.md).
+如欲了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
