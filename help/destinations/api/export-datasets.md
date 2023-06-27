@@ -4,9 +4,9 @@ title: (Beta)使用流量服務API匯出資料集
 description: 瞭解如何使用流量服務API將資料集匯出到選定的目的地。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4873af44f623082375fe4b2caa82475e2ba5b808
 workflow-type: tm+mt
-source-wordcount: '3347'
+source-wordcount: '3524'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 4%
 >* 匯出資料集的功能目前為測試版，並非所有使用者都可使用。 文件和功能可能會有所變更。
 >* 此Beta版功能支援匯出第一代資料，如Real-time Customer Data Platform所定義 [產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* 已購買Real-Time CDP Prime或Ultimate套件的客戶可使用此功能。 如需詳細資訊，請聯絡您的Adobe代表。
-
 
 本文會說明使用 [!DNL Flow Service API] 匯出 [資料集](/help/catalog/datasets/overview.md) 從Adobe Experience Platform到您偏好的雲端儲存位置，例如 [!DNL Amazon S3]、 SFTP位置或 [!DNL Google Cloud Storage].
 
@@ -48,7 +47,7 @@ ht-degree: 4%
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md)：所有成功內嵌至Adobe Experience Platform的資料都會儲存在 [!DNL Data Lake] 作為資料集。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。 
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
 
-以下小節提供將資料集匯出至Platform中的雲端儲存空間目的地所需的其他資訊。
+以下小節提供您必須知道的其他資訊，才能將資料集匯出到Platform中的雲端儲存空間目標。
 
 ### 必要權限 {#permissions}
 
@@ -2315,6 +2314,29 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 >[!ENDSHADEBOX]
 
 您可以找到以下相關資訊： [資料流執行API傳回的各種引數](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) API參考檔案。
+
+## 驗證資料集匯出成功 {#verify}
+
+匯出資料集時，Experience Platform會建立 `.json` 或 `.parquet` 檔案的儲存位置。 預期會根據您提供的匯出排程，將新檔案儲存在您的儲存位置。 [建立資料流](#create-dataflow).
+
+Experience Platform會在您指定的儲存位置中建立資料夾結構，存放匯出的資料集檔案。 每次匯出時都會建立一個新資料夾，其模式如下：
+
+`folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
+
+預設檔案名稱是隨機產生的，並確保匯出的檔案名稱是唯一的。
+
+### 範例資料集檔案 {#sample-files}
+
+這些檔案出現在您的儲存位置即表示匯出成功。 若要瞭解匯出檔案的結構，您可以下載範例 [.parquet檔案](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) 或 [.json檔案](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+
+#### 壓縮的資料集檔案 {#compressed-dataset-files}
+
+在步驟至 [建立目標連線](#create-target-connection)，您可以選取要壓縮的匯出資料集檔案。
+
+請注意兩種檔案型別在壓縮時的檔案格式差異：
+
+* 匯出壓縮的JSON檔案時，匯出的檔案格式為 `json.gz`
+* 匯出壓縮的parquet檔案時，匯出的檔案格式為 `gz.parquet`
 
 ## API錯誤處理 {#api-error-handling}
 

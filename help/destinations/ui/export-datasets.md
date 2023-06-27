@@ -3,9 +3,9 @@ title: （測試版）將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d0de642eb6118e6597925c12c76917ffa98c3a5a
+source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1425'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 5%
 >* 匯出資料集的功能目前為測試版，並非所有使用者都可使用。 文件和功能可能會有所變更。
 >* 此Beta版功能支援匯出第一代資料，如Real-time Customer Data Platform所定義 [產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* 已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 如需詳細資訊，請聯絡您的Adobe代表。
-
 
 本文會說明匯出所需的工作流程 [資料集](/help/catalog/datasets/overview.md) 從Adobe Experience Platform到您偏好的雲端儲存位置，例如 [!DNL Amazon S3]、 SFTP位置或 [!DNL Google Cloud Storage] 使用Experience PlatformUI。
 
@@ -135,11 +134,22 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，存�
 
 這些檔案出現在您的儲存位置即表示匯出成功。 若要瞭解匯出檔案的結構，您可以下載範例 [.parquet檔案](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) 或 [.json檔案](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
+#### 壓縮的資料集檔案 {#compressed-dataset-files}
+
+在 [連線到目標工作流程](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options)，您可以選取要壓縮的匯出資料集檔案，如下所示：
+
+![連線到目的地以匯出資料集時，檔案型別和壓縮選取專案。](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
+
+請注意兩種檔案型別在壓縮時的檔案格式差異：
+
+* 匯出壓縮的JSON檔案時，匯出的檔案格式為 `json.gz`
+* 匯出壓縮的parquet檔案時，匯出的檔案格式為 `gz.parquet`
+
 ## 從目的地移除資料集 {#remove-dataset}
 
 若要從現有資料流中移除資料集，請遵循下列步驟：
 
-1. 登入 [EXPERIENCE PLATFORMUI](https://platform.adobe.com/) 並選取 **[!UICONTROL 目的地]** 左側導覽列中的。 選取 **[!UICONTROL 瀏覽]** 以檢視您現有的目的地資料流。
+1. 登入 [EXPERIENCE PLATFORMUI](https://experience.adobe.com/platform/) 並選取 **[!UICONTROL 目的地]** 左側導覽列中的。 選取 **[!UICONTROL 瀏覽]** 以檢視您現有的目的地資料流。
 
    ![目的地瀏覽檢視，其中顯示目的地連線，其餘則模糊化。](../assets/ui/export-datasets/browse-dataset-connections.png)
 
