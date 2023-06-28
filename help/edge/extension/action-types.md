@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: db7700d5c504e484f9571bbb82ff096497d0c96e
+source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 如果您想在頁面上重設事件合併ID，可以透過此動作來執行。 若要重設ID，請選取您要重設的合併ID，然後視需要觸發動作。
 
-## (Beta)更新變數 {#update-variable}
+## 更新變數 {#update-variable}
 
 >[!IMPORTANT]
 >
