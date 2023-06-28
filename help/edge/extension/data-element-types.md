@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能中的資料元素型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種資料元素型別。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 8%
+source-wordcount: '585'
+ht-degree: 5%
 
 ---
 
@@ -13,10 +13,6 @@ ht-degree: 8%
 # 資料元素類型
 
 在您設定您的 [動作型別](action-types.md) 在 [Adobe Experience Platform Web SDK標籤擴充功能](web-sdk-extension-configuration.md)，您必須設定資料元素型別。 此頁面說明可用的資料元素型別。
-
-## 事件合併ID {#event-merge-id}
-
-此資料元素能在使用時提供事件合併 ID，而且不需設定。在訪客離開頁面或 **[!UICONTROL 重設事件合併ID]** 動作型別已使用。
 
 ## 身分對應 {#identity-map}
 

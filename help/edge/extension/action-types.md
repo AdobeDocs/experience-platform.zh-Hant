@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 19430906e5e97732f88bfe13501c4a75f9338a07
+source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 2%
+source-wordcount: '778'
+ht-degree: 3%
 
 ---
 
@@ -34,10 +34,6 @@ ht-degree: 2%
 在您收到使用者的同意後，必須使用「設定同意」動作型別將此同意傳達給Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。另請參閱 [支援客戶同意偏好設定](../consent/supporting-consent.md). 使用Adobe版本2.0時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
 
 在此動作中，系統也會提供選填欄位，讓您加入「身分對應」，以便在收到同意後同步身分資料。 同意設為「待處理」或「退出」時，同步會很有用，因為同意呼叫可能是第一個要觸發的呼叫。
-
-## 重設事件合併ID {#reset-event-merge-id}
-
-如果您想在頁面上重設事件合併ID，可以透過此動作來執行。 若要重設ID，請選取您要重設的合併ID，然後視需要觸發動作。
 
 ## 更新變數 {#update-variable}
 
