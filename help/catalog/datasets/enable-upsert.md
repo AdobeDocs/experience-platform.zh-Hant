@@ -4,9 +4,9 @@ title: 使用API啟用設定檔更新的資料集
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform API來啟用具有「更新插入」功能的資料集，以更新即時客戶設定檔資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1069'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->更新插入工作流程僅適用於批次擷取。 串流擷取是 **not** 支援。
+>本教學課程中說明的工作流程僅適用於批次擷取。 如需串流擷取更新插入，請參閱上的指南 [使用「資料準備」傳送部分列更新到「即時客戶設定檔」](../../data-prep/upserts.md).
 
 ## 快速入門
 
