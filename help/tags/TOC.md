@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1027'
 ht-degree: 31%
 
 ---
@@ -96,8 +96,16 @@ ht-degree: 31%
          * [發行說明](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform示範 {#platform-demo}
          * [總覽](./extensions/client/platform-demo/overview.md)
-      * Adobe Experience Platform Web SDK {#sdk}
-         * [總覽](./extensions/client/sdk/overview.md)
+      * Adobe Experience Platform Web SDK {#web-sdk}
+         * [總覽](./extensions/client/web-sdk/overview.md)
+         * [設定Web SDK標籤擴充功能](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [事件類型](./extensions/client/web-sdk/event-types.md)
+         * [動作類型](./extensions/client/web-sdk/action-types.md)
+         * [資料元素類型](./extensions/client/web-sdk/data-element-types.md)
+         * [存取ECID](./extensions/client/web-sdk/accessing-the-ecid.md)
+         * [Web SDK外掛程式](./extensions/client/web-sdk/web-sdk-plugins.md)
+         * [Web SDK擴充功能發行說明](./extensions/client/web-sdk/web-sdk-ext-release-notes.md)
+         * [Web SDK外掛程式發行說明](./extensions/client/web-sdk/web-sdk-plugins-release-notes.md)
       * Adobe Experience Manager資產分析 {#asset-insights}
          * [總覽](./extensions/client/asset-insights/overview.md)
          * [發行說明](./extensions/client/asset-insights/release-notes.md)
@@ -138,9 +146,6 @@ ht-degree: 31%
       * 常見Analytics外掛程式 {#plugins}
          * [總覽](./extensions/client/plugins/overview.md)
          * [發行說明](./extensions/client/plugins/release-notes.md)
-      * 常見Web SDK外掛程式 {#web-sdk-plugins}
-         * [總覽](./extensions/client/web-sdk-plugins/overview.md)
-         * [發行說明](./extensions/client/web-sdk-plugins/release-notes.md)
       * [Concat](https://exchange.adobe.com/apps/ec/104690)
       * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)
       * [Usercentrics CMP v2的Cookie同意管理](https://exchange.adobe.com/apps/ec/107037)

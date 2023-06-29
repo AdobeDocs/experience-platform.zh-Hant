@@ -3,7 +3,7 @@ title: 搭配Platform Web SDK使用Adobe Journey Optimizer
 description: 瞭解如何使用Adobe Journey Optimizer以Experience Platform Web SDK呈現個人化內容
 keywords: ajo；ajo web；adobe journey optimizer；renderDecisions；表面；決定；主張；範圍；結構描述
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
    })
    ```
 
-3. 選擇性地在事件中指定其他介面。 根據預設，Web SDK會自動產生目前網頁的網頁表面，並將其加入對Edge Network的請求。 如有需要，可在下列位置指定其他曲面，將其包含在請求中： `personalization.surfaces` 的選項 `sendEvent` 指令，或在對應的 **[!UICONTROL 曲面]** [[!UICONTROL 傳送事件] 動作](../../extension/action-types.md#send-event) Web SDK擴充功能的設定。
+3. 選擇性地在事件中指定其他介面。 根據預設，Web SDK會自動產生目前網頁的網頁表面，並將其加入對Edge Network的請求。 如有需要，可在下列位置指定其他曲面，將其包含在請求中： `personalization.surfaces` 的選項 `sendEvent` 指令，或在對應的 **[!UICONTROL 曲面]** [[!UICONTROL 傳送事件] 動作](../../../tags/extensions/client/web-sdk/action-types.md#send-event) Web SDK擴充功能的設定。
 
    ```javascript
    alloy("sendEvent", {

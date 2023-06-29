@@ -2,10 +2,10 @@
 title: 標籤擴充功能參考
 description: 尋找Adobe Experience Platform中標籤擴充功能的檔案。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 9d9e02c2a4f628ebe04aaa63942e830f3354729f
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 8%
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
 * [Adobe Experience Cloud ID 服務](./id-service/overview.md)
 * [Adobe Experience Platform示範](./platform-demo/overview.md)
-* [Adobe Experience Platform Web SDK](./sdk/overview.md)
+* [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager資產分析](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
 * [適用於音訊和視訊的Adobe Medium Analytics](./media-analytics/overview.md)
@@ -65,7 +65,7 @@ ht-degree: 8%
 * [Cheetah體驗](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [常見Analytics外掛程式](./plugins/overview.md)
-* [常見Web SDK外掛程式](./web-sdk-plugins/overview.md)
+* [常見Web SDK外掛程式](./web-sdk/web-sdk-plugins.md)
 * [Concat](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Usercentrics CMP v2的Cookie同意管理](https://exchange.adobe.com/apps/ec/*107037)

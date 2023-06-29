@@ -3,7 +3,7 @@ title: 事件轉送快速入門
 description: 請依照此逐步教學課程，開始使用Adobe Experience Platform中的事件轉送。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 27%
@@ -18,7 +18,7 @@ ht-degree: 27%
 
 若要在Adobe Experience Platform中使用事件轉送，您必須使用下列一個或多個選項，將資料傳送至Adobe Experience Platform Edge Network：
 
-* [Adobe Experience Platform Web SDK](../../extensions/client/sdk/overview.md)
+* [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
 * [伺服器對伺服器API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
 
@@ -98,7 +98,7 @@ ht-degree: 27%
 
 在中建立您的屬性 **[!UICONTROL 標籤]** 工作區，然後導覽至 **[!UICONTROL 擴充功能]** 並從目錄中選取Experience PlatformWeb SDK擴充功能以進行設定和安裝。
 
-請參閱 [Web SDK擴充功能檔案](../../extensions/client/sdk/overview.md) 以取得組態選項的詳細資訊。
+請參閱 [Web SDK擴充功能檔案](../../extensions/client/web-sdk/overview.md) 以取得組態選項的詳細資訊。
 
 ## 建立標籤規則以將資料傳送至Platform Web SDK
 

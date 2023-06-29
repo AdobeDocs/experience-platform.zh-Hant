@@ -7,7 +7,7 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 5%
@@ -101,9 +101,9 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能�
 
 擴充功能現已安裝並設定為可在您的屬性中使用。
 
-## 資料彙集
+## 資料收藏集
 
-在中使用此擴充功能時 [規則](../../../ui/managing-resources/rules.md)，擴充功能會隨著每個事件傳送數個資料值至Mailchimp。 對於一般實作，您可以設定 [Adobe Experience Platform Web SDK擴充功能](../../client/sdk/overview.md) 以傳送該資料至 [!DNL Platform Edge Network] 供擴充功能在事件轉送屬性中使用。
+在中使用此擴充功能時 [規則](../../../ui/managing-resources/rules.md)，擴充功能會隨著每個事件傳送數個資料值至Mailchimp。 對於一般實作，您可以設定 [Adobe Experience Platform Web SDK擴充功能](../../client/web-sdk/overview.md) 以傳送該資料至 [!DNL Platform Edge Network] 供擴充功能在事件轉送屬性中使用。
 
 此擴充功能所需的資料可以作為XDM資料或非XDM資料從Web SDK傳送。 請參閱檔案以深入瞭解 [傳送XDM資料](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 

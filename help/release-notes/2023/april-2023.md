@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2023年4月
 description: Adobe Experience Platform的2023年4月發行說明。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 963fc5e31e1728a8a1a7e94bc0cc47d010347325
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 **發行日期：2023 年 4 月 26 日**
 
-Adobe Experience Platform 現有功能更新：
+Adobe Experience Platform 現有功能的更新：
 
 - [儀表板](#dashboards)
 - [資料準備](#data-prep)
@@ -60,22 +60,22 @@ Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板�
 
 ## 資料彙集 {#data-collection}
 
-Adobe Experience Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將其傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將其分發到Adobe或非Adobe目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
 | 資料串流的IP位址模糊化 | 您現在可以在中定義部分或完整資料流層級IP模糊化選項 [資料流設定UI](../../edge/datastreams/configure.md). <br><br>資料流層級IP模糊化設定的優先順序高於Adobe Target和Audience Manager中設定的任何IP模糊化。 <br><br>傳送至Adobe Analytics的資料不受資料流層級的影響 [!UICONTROL IP模糊化] 設定。 Adobe Analytics目前會接收未經過模糊處理的IP位址。 若要讓Analytics接收模糊化的IP位址，您必須在Adobe Analytics中個別設定IP模糊化。 此行為將在未來版本中更新。<br><br> 如需有關IP模糊化的詳細資訊和如何設定的說明，請參閱 [資料流設定檔案](../../edge/datastreams/configure.md#advanced-options). |
-| [資料流設定覆寫](../../edge/datastreams/overrides.md) | 您現在可以為資料串流定義其他設定選項，以便用來覆寫特定設定，例如事件資料集、Target屬性Token、ID同步容器和Analytics報表套裝。 <br><br>覆寫資料串流設定是兩個步驟的程式： <ol><li>首先，您必須在以下位置定義資料流設定覆寫： [資料流設定頁面](../../edge/datastreams/configure.md).</li><li>接著，您必須透過Web SDK命令或使用Web SDK將覆寫傳送至Edge Network [標籤延伸模組](../../edge/extension/web-sdk-extension-configuration.md).</li></ol> |
-| OAuth JWT密碼 | 此 [OAuth JWT密碼](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用Adobe和Google服務權杖，在事件轉送中支援伺服器對伺服器的互動。 |
+| [資料流設定覆寫](../../edge/datastreams/overrides.md) | 您現在可以為資料串流定義其他設定選項，以便用來覆寫特定設定，例如事件資料集、Target屬性Token、ID同步容器和Analytics報表套裝。 <br><br>覆寫資料串流設定是兩個步驟的程式： <ol><li>首先，您必須在以下位置定義資料流設定覆寫： [資料流設定頁面](../../edge/datastreams/configure.md).</li><li>接著，您必須透過Web SDK命令或使用Web SDK將覆寫傳送至Edge Network [標籤延伸模組](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
+| OAuth JWT Secret | 此 [OAuth JWT密碼](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用Adobe和Google服務權杖，在事件轉送中支援伺服器對伺服器的互動。 |
 | [!DNL Pinterest Conversions API] 擴充功能 | 此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 事件轉送擴充功能可讓您運用Adobe Experience Platform Edge Network中擷取的資料，並將其傳送至 [!DNL Pinterest] 以伺服器端事件的形式使用 [!DNL Pinterest Conversions API]. |
 
 {style="table-layout:auto"}
 
 ## 目的地 {#destinations}
 
-[!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目的地** {#new-destinations}
 
@@ -85,7 +85,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 
 {style="table-layout:auto"}
 
-**新功能或更新功能** {#destinations-new-updated-functionality}
+**新功能或更新的功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
@@ -105,7 +105,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 
 -->
 
-如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
+如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
 ## 體驗資料模型(XDM) {#xdm}
 
@@ -182,9 +182,9 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，並允許您使用Platform服務來建構、加標籤及增強這些資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
 
-Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 **更新的功能**
 
@@ -197,4 +197,4 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資
 
 {style="table-layout:auto"}
 
-若要進一步瞭解來源，請閱讀 [來源概觀](../../sources/home.md).
+如欲了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。

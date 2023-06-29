@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform Web SDK概觀
 description: 瞭解如何使用Adobe Experience Platform Web SDK將Platform功能整合至您的網站。
-keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；Edge；Visitor.js；AppMeasurement.js；AT.js；DIL.js；Web SDK；SDK；Web SDK；Launch；Launch
+keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；Edge；Visitor.js；AppMeasurement.js；AT.js；DIL.js；Web SDK；Web SDK；Launch；Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 00801465435133fce29002c8bd0f2256745ba2c2
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '803'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # Adobe Experience Platform Web SDK總覽 {#overview}
 
-Adobe Experience Platform Web SDK是使用者端的JavaScript程式庫，可讓Adobe Experience Cloud的客戶與 [!DNL Experience Cloud] 透過Adobe Experience Platform Edge Network。 除了JavaScript程式庫，還有 [標籤延伸模組](./extension/web-sdk-extension-configuration.md) 以協助進行Web SDK設定。
+Adobe Experience Platform Web SDK是使用者端的JavaScript程式庫，可讓Adobe Experience Cloud的客戶與 [!DNL Experience Cloud] 透過Adobe Experience Platform Edge Network。 除了JavaScript程式庫，還有 [標籤延伸模組](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 以協助進行Web SDK設定。
 
 如需使用標籤設定Web SDK並將資料傳送至解決方案的逐步指南，請參閱我們的 [使用Web SDK教學課程實作Adobe Experience Cloud](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en).
 
@@ -74,7 +74,7 @@ Web SDK會取代下列SDK：
 
 ### at.js移轉至Web SDK的考量事項 {#considerations}
 
-移轉使用下列專案的頁面之前： [!DNL at.js] 若要使用Web SDK，請務必啟用下列Web SDK設定選項。 這可確保從以下頁面導覽時保留訪客設定檔： [!DNL at.js ] 至使用Web SDK的頁面。
+移轉使用下列專案的頁面之前： [!DNL at.js] 若要使用Web SDK，請務必啟用下列Web SDK設定選項。 這可確保從以下頁面導覽時保留訪客設定檔： [!DNL at.js] 至使用Web SDK的頁面。
 
 * [&#39;idMigrationEnabled&#39;](fundamentals/configuring-the-sdk.md#id-migration-enabled)
 * [&#39;targetMigrationEnabled&#39;](fundamentals/configuring-the-sdk.md#targetMigrationEnabled)
@@ -85,7 +85,6 @@ Web SDK會取代下列SDK：
 >從at.js移轉至Web SDK時不支援下列Target功能：
 > * [重新導向選件](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en)
 > * [CNAME和跨網域支援](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/?lang=en)
-
 
 從at.js移轉至Web SDK後，您應移除 `targetMigrationEnabled` 選項。
 

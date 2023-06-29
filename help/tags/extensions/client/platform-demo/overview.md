@@ -2,7 +2,7 @@
 title: Adobe Experience Platform示範擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Experience Platform Demo擴充功能。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 72%
@@ -17,7 +17,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->此擴充功能已過時，傾向於 [Adobe Experience Platform Web SDK](../sdk/overview.md).
+>此擴充功能已過時，傾向於 [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
 
 此擴充功能的功能已移至新的擴充功能。以下快速比較目前功能。
 
@@ -26,11 +26,11 @@ ht-degree: 72%
 | 支援自訂客戶 ID | 支援自訂客戶 ID |
 | XDM的使用者端對應UI | 內建 ECID (不需 visitor.js) |
 | 能夠建立串流連線 | 選擇加入支援 |
-|  | XDM 支援為資料元素 |
-|  | 第一方網域支援 |
-|  | 內建偵錯工具 |
-|  | 自動收集瀏覽器內容 |
-|  | 完全開放原始碼 |
+| | XDM 支援為資料元素 |
+| | 第一方網域支援 |
+| | 內建偵錯工具 |
+| | 自動收集瀏覽器內容 |
+| | 完全開放原始碼 |
 
 
 ## 設定 Adobe Experience Platform 擴充功能

@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 5a64beb2f5826bda585111e9ce7f760b939bf9b9
+source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 33%
+source-wordcount: '190'
+ht-degree: 32%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 33%
    * [總覽](identity/overview.md)
    * [第一方裝置ID](identity/first-party-device-ids.md)
    * [行動裝置對網頁和跨網域ID共用](identity/id-sharing.md)
-* 資料彙集 {#data-collection}
+* 資料收藏集 {#data-collection}
    * [自動收集的資訊](data-collection/automatic-information.md)
    * [追蹤連結](data-collection/track-links.md)
    * [收集商業和產品資料](data-collection/collect-commerce-data.md)
@@ -72,13 +72,6 @@ ht-degree: 33%
       * [總覽](consent/iab-tcf/overview.md)
       * [與標籤整合](consent/iab-tcf/with-launch.md)
       * [整合（不含標籤）](consent/iab-tcf/without-launch.md)
-* Web SDK標籤擴充功能 {#extension}
-   * [Web SDK 擴充功能](extension/web-sdk-extension-configuration.md)
-   * [事件類型](extension/event-types.md)
-   * [動作類型](extension/action-types.md)
-   * [資料元素類型](extension/data-element-types.md)
-   * [存取ECID](extension/accessing-the-ecid.md)
-   * [Web SDK擴充功能發行說明](extension/web-sdk-ext-release-notes.md)
 * [發行說明](release-notes.md)
 * [常見問答](web-sdk-faq.md)
 * [資源](resources.md)

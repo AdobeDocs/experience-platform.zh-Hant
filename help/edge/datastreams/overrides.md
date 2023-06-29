@@ -2,7 +2,7 @@
 title: 設定資料流覆寫
 description: 瞭解如何在資料串流UI中設定資料串流覆寫，並透過Web SDK啟用它們。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 621dd1dbf99720604f797b97a5e31e090456cdf3
+source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 資料流設定覆寫是兩個步驟的程式：
 
 1. 首先，您必須在以下位置定義資料流設定覆寫： [資料流設定頁面](configure.md).
-2. 接著，您必須透過Web SDK命令或使用Web SDK將覆寫傳送至Edge Network [標籤延伸模組](../extension/web-sdk-extension-configuration.md).
+2. 接著，您必須透過Web SDK命令或使用Web SDK將覆寫傳送至Edge Network [標籤延伸模組](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 本文說明每種支援覆寫型別的端對端資料流設定覆寫程式。
 
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->除了透過Web SDK命令傳送設定覆寫之外，您也可以將設定覆寫新增至Web SDK [標籤延伸模組](../extension/web-sdk-extension-configuration.md).
+>除了透過Web SDK命令傳送設定覆寫之外，您也可以將設定覆寫新增至Web SDK [標籤延伸模組](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
 晚於 [設定資料流覆寫](#configure-overrides) 在資料收集UI中，您現在可以透過Web SDK將覆寫傳送至Edge Network。
 
