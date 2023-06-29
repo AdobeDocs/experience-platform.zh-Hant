@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能中的資料元素型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種資料元素型別。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 5%
+source-wordcount: '568'
+ht-degree: 6%
 
 ---
 
@@ -45,10 +45,6 @@ ht-degree: 5%
 >僅填入您想收集的資訊片段。 將資料傳送至解決方案時，會忽略未填寫的專案。
 
 ## 變數 {#variable}
-
->[!IMPORTANT]
->
->此為目前的Beta版功能，可能會有變動。 未來版本可能包含重大變更。
 
 建立XDM物件的另一種方法是使用 **[!UICONTROL 變數]** 資料元素。 而XDM物件資料元素是在參考時建立的，例如在 `sendEvent` 命令， **[!UICONTROL 變數]** 資料元素可以透過以下方式更新： [!UICONTROL 更新變數] 動作。 若要使用資料元素，請選取正確的Adobe Experience Platform沙箱和結構描述。
 

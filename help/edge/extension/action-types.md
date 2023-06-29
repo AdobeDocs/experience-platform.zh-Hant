@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 13912d8f5488aaa9ffa79021b67607fe5eec0732
+source-git-commit: eef0b50b12b0e3be34ad519f2d106392c23b7d69
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '761'
 ht-degree: 3%
 
 ---
@@ -36,10 +36,6 @@ ht-degree: 3%
 在此動作中，系統也會提供選填欄位，讓您加入「身分對應」，以便在收到同意後同步身分資料。 同意設為「待處理」或「退出」時，同步會很有用，因為同意呼叫可能是第一個要觸發的呼叫。
 
 ## 更新變數 {#update-variable}
-
->[!IMPORTANT]
->
->此為目前的Beta版功能，可能會有變動。 未來版本可能包含重大變更。
 
 使用此動作來修改作為事件結果的XDM物件。 此動作的目的是建立物件，以便稍後從 **[!UICONTROL 傳送事件]** 動作，記錄事件XDM物件。
 
