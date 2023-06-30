@@ -2,9 +2,9 @@
 title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域以啟用區段和匯出資料集。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1378'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 0%
 >
 >* 此目的地目前為測試版，僅供有限數量的客戶使用。 若要請求對的存取權 [!DNL Data Landing Zone] 連線，請聯絡您的Adobe代表，並提供您的 [!DNL Organization ID].
 >* 本檔案頁面主要說明 [!DNL Data Landing Zone] *目的地*. 此外， [!DNL Data Landing Zone] *source* 在來源目錄中。 如需詳細資訊，請閱讀 [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) 說明檔案。
-
 
 
 ## 總覽 {#overview}
@@ -72,6 +71,12 @@ Platform會對上傳至的所有檔案執行嚴格的七天存留時間(TTL) [!D
 GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination
 ```
 
+| 查詢引數 | 說明 |
+| --- | --- |
+| `dlz_destination` | 此 `dlz_destination` type可讓API將登陸區域目的地容器與您可以使用的其他型別容器區分開來。 |
+
+{style="table-layout:auto"}
+
 **要求**
 
 以下請求範例會擷取現有登陸區域的認證。
@@ -104,6 +109,52 @@ curl -X GET \
 | `containerName` | 您的登陸區域的名稱。 |
 | `SASToken` | 登陸區域的共用存取權簽章權杖。 此字串包含授權請求所需的所有資訊。 |
 | `SASUri` | 登陸區域的共用存取簽名URI。 此字串是URI的組合，包含您要驗證身分的登陸區域及其對應的SAS權杖。 |
+
+{style="table-layout:auto"}
+
+## 更新 [!DNL Data Landing Zone] 認證
+
+您也可以視需要重新整理您的認證。 您可以更新 `SASToken` 向發出POST要求 `/credentials` 的端點 [!DNL Connectors] API。
+
+**API格式**
+
+```http
+POST /data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh
+```
+
+| 查詢引數 | 說明 |
+| --- | --- |
+| `dlz_destination` | 此 `dlz_destination` type可讓API將登陸區域目的地容器與您可以使用的其他型別容器區分開來。 |
+| `refresh` | 此 `refresh` 動作可讓您重設登陸區域認證並自動產生新的 `SASToken`. |
+
+{style="table-layout:auto"}
+
+**要求**
+
+以下請求會更新您的登陸區域認證。
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
+**回應**
+
+以下回應會傳回您的的更新值 `SASToken` 和 `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
+}
+```
 
 >[!ENDSHADEBOX]
 
