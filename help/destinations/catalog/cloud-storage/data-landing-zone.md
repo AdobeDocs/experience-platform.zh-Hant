@@ -2,7 +2,7 @@
 title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域以啟用區段和匯出資料集。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cf89f40625bedda633ad26cf3e882983600f0d52
+source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
 workflow-type: tm+mt
 source-wordcount: '1378'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Platform會對上傳至的所有檔案執行嚴格的七天存留時間(TTL) [!D
 
 >[!BEGINSHADEBOX]
 
-### 擷取您的憑證 [!DNL Data Landing Zone]
+### 擷取您的憑證 [!DNL Data Landing Zone] {#retrieve-dlz-credentials}
 
 您必須使用Platform API來擷取 [!DNL Data Landing Zone] 認證。 擷取您認證的API呼叫說明如下。 如需有關取得標頭所需值的資訊，請參閱 [Adobe Experience Platform API快速入門](/help/landing/api-guide.md) 指南。
 
@@ -112,7 +112,7 @@ curl -X GET \
 
 {style="table-layout:auto"}
 
-## 更新 [!DNL Data Landing Zone] 認證
+### 更新 [!DNL Data Landing Zone] 認證 {#update-dlz-credentials}
 
 您也可以視需要重新整理您的認證。 您可以更新 `SASToken` 向發出POST要求 `/credentials` 的端點 [!DNL Connectors] API。
 
