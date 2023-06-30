@@ -4,7 +4,7 @@ title: 雲端儲存空間目的地的API移轉指南
 description: 瞭解工作流程中的變更，以在移轉至具有其他功能的新雲端儲存體目的地卡片時，啟用雲端儲存體目的地。
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: b651d15260adbcd37fa396fa0b325a9674a92133
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -16,7 +16,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >* 已購買Real-Time CDP Prime和Ultimate套件的客戶可以使用本頁所述的功能。 如需詳細資訊，請聯絡您的Adobe代表。
-
 
 ## 移轉內容 {#migration-context}
 
@@ -783,7 +782,7 @@ API使用者適用的回溯不相容變更已更新 `connection spec ID` 和 `fl
 
 ## 移轉時間表與動作專案 {#timeline-and-action-items}
 
-將舊式資料流移轉至的新目的地卡 [!DNL Amazon S3]， [!DNL Azure Blob]，而當您的組織準備好進行移轉時，SFTP目標就會立即發生，並且最晚不得晚於 **2023年6月30日**.
+將舊式資料流移轉至的新目的地卡 [!DNL Amazon S3]， [!DNL Azure Blob]，而當您的組織準備好進行移轉時，SFTP目標就會立即發生，並且最晚不得晚於 **2023年7月26日**.
 
 當移轉日期臨近時，您將會收到Adobe的提醒電子郵件。 在進行準備時，請閱讀下方的「行動專案」區段，為移轉做好準備。
 
@@ -791,11 +790,11 @@ API使用者適用的回溯不相容變更已更新 `connection spec ID` 和 `fl
 
 為移轉做準備 [!DNL Amazon S3]， [!DNL Azure Blob]，以及SFTP雲端儲存空間目的地到新卡片，請準備更新您的指令碼和自動化API呼叫，如下所示。
 
-1. 更新任何現有的指令碼或自動化API呼叫 [!DNL Amazon S3]， [!DNL Azure Blob]或SFTP雲端儲存目標。 任何運用舊版連線規格或流量規格的自動化API呼叫或指令碼，都必須更新至新的連線規格或流量規格。
-2. 當您的指令碼在6月30日之前更新時，請洽詢您的Adobe客戶代表。
+1. 更新任何現有的指令碼或自動化API呼叫 [!DNL Amazon S3]， [!DNL Azure Blob]或SFTP雲端儲存空間目的地（2023年7月26日前）。 任何運用舊版連線規格或流量規格的自動化API呼叫或指令碼，都必須更新至新的連線規格或流量規格。
+2. 當您的指令碼在7月26日之前更新時，請洽詢您的Adobe客戶代表。
 3. 例如， `targetConnectionSpecId` 可作為旗標，判斷資料流是否已移轉至新的目的地卡。 您可以使用以下更新指令碼 `if` 檢視舊版和更新後目標連線規格的條件 `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` 並判斷資料流是否已移轉。 您可以在此頁面的特定區段中，檢視每個目的地的舊有及新連線規格ID。
 4. 您的Adobe帳戶團隊將會取得資料流何時移轉的詳細資訊。
-5. 6月30日之後，所有資料流都將進行移轉。 所有現有資料流現在都會有新的流量實體（連線規格、流量規格、基本連線和目標連線）。 您這邊使用舊版流量實體的任何指令碼或API呼叫都將停止運作。
+5. 7月26日之後，所有資料流都將進行移轉。 所有現有資料流現在都會有新的流量實體（連線規格、流量規格、基本連線和目標連線）。 您這邊使用舊版流量實體的任何指令碼或API呼叫都將停止運作。
 
 ## 其他移轉考量事項 {#other-considerations}
 
