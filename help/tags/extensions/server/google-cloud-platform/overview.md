@@ -2,14 +2,14 @@
 title: Google Cloud Platform事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能會將Adobe Experience Edge Network事件傳送至Google Cloud Platform。
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: d1a34a98efd24a20dc53544eeb0d79490aaf31e7
+source-git-commit: 7e26ebe6d40796174ca48367f826c7c6f1512abf
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
 
-# [!DNL Google Cloud Platform] 事件轉送擴充功能
+# [!DNL Google Cloud Platform]事件轉送擴充功能
 
 [[!DNL Google Cloud Platform]](https://cloud.google.com/) 是雲端運算平台，提供各種服務，例如分散式運算、資料庫儲存、內容傳遞，以及客戶關係管理(CRM)和企業資源規劃(ERP)的軟體即服務(SaaS)整合服務。
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 先決條件
 
-若要使用此擴充功能，您必須具備一個 [!DNL Google Cloud Platform] 具有現有帳戶的帳戶 [!DNL Cloud Pub/Sub] 主題。 如果您沒有既有的資料流，請參閱 [!DNL AWS] 檔案： [使用建立新資料流 [!DNL AWS] 管理主控台](https://docs.aws.amazon.com/streams/latest/dev/how-do-i-create-a-stream.html).
+若要使用此擴充功能，您必須具備一個 [!DNL Google Cloud Platform] 具有現有帳戶的帳戶 [!DNL Cloud Pub/Sub] 主題。 如果您沒有既存的主題，請參閱 [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) 有關建立和管理主題的檔案。
 
 ### 建立密碼和資料元素
 
