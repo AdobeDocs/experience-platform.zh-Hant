@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 本檔案提供XDM ExperienceEvent類別的概觀，以及事件資料模型化的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: d648a2151060d1013a6bce7a8180378400337829
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1880'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_id`<br>**(必填)** | 事件的唯一字串識別碼。 此欄位用於追蹤個別事件的唯一性、防止資料重複，以及在下游服務中查詢該事件。 某些情況下， `_id` 可以是 [通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122) 或 [全域唯一識別碼(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>如果您要從來源連線串流資料，或直接從Parquet檔案擷取資料，應串連特定欄位組合（例如主要ID、時間戳記、事件型別等）以產生此值。 串連值必須是 `uri-reference` 格式化字串，表示必須移除任何冒號字元。 之後，應該使用SHA-256或您選擇的其他演演算法來雜湊串連值。<br><br>請務必區分 **此欄位不代表與個人相關的身分**&#x200B;而是資料本身的記錄。 與個人相關的身分資料應委派至 [身分欄位](../schema/composition.md#identity) 由相容的欄位群組所提供。 |
+| `_id`<br>**(必填)** | 體驗事件類別 `_id` 欄位可唯一識別擷取到Adobe Experience Platform的個別事件。 此欄位用於追蹤個別事件的唯一性、防止資料重複，以及在下游服務中查詢該事件。<br><br>在偵測到重複事件的地方，Platform應用程式和服務可能會以不同的方式處理重複事件。  例如，如果設定檔服務中的重複事件具有相同的值，則會捨棄該事件 `_id` 設定檔存放區中已存在。<br><br>某些情況下， `_id` 可以是 [通用唯一識別碼(UUID)](https://tools.ietf.org/html/rfc4122) 或 [全域唯一識別碼(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>如果您要從來源連線串流資料，或直接從Parquet檔案擷取資料，應串連特定欄位組合（例如主要ID、時間戳記、事件型別等）以產生此值。 串連值必須是 `uri-reference` 格式化字串，表示必須移除任何冒號字元。 之後，應該使用SHA-256或您選擇的其他演演算法來雜湊串連值。<br><br>請務必區分 **此欄位不代表與個人相關的身分**&#x200B;而是資料本身的記錄。 與個人相關的身分資料應委派至 [身分欄位](../schema/composition.md#identity) 由相容的欄位群組所提供。 |
 | `eventMergeId` | 若使用 [Adobe Experience Platform Web SDK](../../edge/home.md) 若要內嵌資料，這代表導致建立記錄之內嵌批次的ID。 此欄位會在資料擷取時自動由系統填入。 不支援在Web SDK實作的內容之外使用此欄位。 |
 | `eventType` | 指出事件型別或類別的字串。 如果您想要區分相同結構描述和資料集中的不同事件型別（例如區分零售公司的產品檢視事件和加入購物車的事件），則可以使用此欄位。<br><br>此屬性的標準值提供在 [附錄部分](#eventType)，包括預期使用案例的說明。 此欄位是可擴充的列舉，這表示您也可以使用自己的事件型別字串來分類您正在追蹤的事件。<br><br>`eventType` 限制您僅能針對應用程式的每個點選使用單一事件，因此您必須使用計算欄位，讓系統知道哪個事件最重要。 如需詳細資訊，請參閱以下章節： [計算欄位的最佳實務](#calculated). |
 | `producedBy` | 描述事件製作者或來源的字串值。 如果需要，可使用此欄位來篩選掉某些事件產生者，以用於細分目的。<br><br>此屬性的部分建議值提供在 [附錄部分](#producedBy). 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生器。 |
