@@ -3,16 +3,16 @@ keywords: 事件轉送擴充功能；twitter；twitter事件轉送擴充功能
 title: twitter事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能可讓您將事件擷取至Twitter，以滿足您的業務需求。
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: c5cc36d9530ff6fbb52a1995844f495b38e938b3
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1143'
 ht-degree: 3%
 
 ---
 
-# [!DNL Twitter] 事件轉送擴充功能
+# [!DNL Twitter]事件轉送擴充功能
 
-[[!DNL Twitter]](https://www.twitter.com) 是一種線上社群媒體和社交網路服務，使用者可在該服務上發佈和互動280個字元的訊息，稱為推文。 使用者可以使用瀏覽器、行動前端軟體，或以程式設計方式透過其與Twitter互動 [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) 是一種線上社群媒體和社交網路服務，使用者可在該服務上發佈和互動280個字元的訊息，稱為推文。 使用者可以使用瀏覽器、行動前端軟體，或以程式設計方式透過其與Twitter互動 [API](https://developer.twitter.com/en/docs/twitter-api)
 
 此 [!DNL Twitter] 網頁轉換API [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能可讓您運用Adobe Experience Platform Edge Network中擷取的資料，並將其傳送至 [!DNL Twitter]. 本檔案說明擴充功能的使用案例、安裝方式，以及如何將其功能整合至事件轉送中 [規則](../../../ui/managing-resources/rules.md).
 
@@ -32,7 +32,7 @@ ht-degree: 3%
 
 您必須具備有效的 [!DNL Twitter] 帳戶，以便使用此擴充功能。 前往 [[!DNL Twitter] 註冊頁面](https://help.twitter.com/en/using-twitter/create-twitter-account) 註冊並建立帳戶。
 
-您必須將帳戶設定為 [!DNL Twitter] 開發人員帳戶。 若要瞭解如何註冊為開發人員，請參閱 [[!DNL Twitter] 開發人員帳戶](https://developer.twitter.com/en/support/twitter-api/developer-account).
+您必須將帳戶設定為 [!DNL Twitter] 開發人員帳戶。 若要瞭解如何註冊為開發人員，請參閱 [[!DNL Twitter] 開發人員帳戶](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### API護欄 {#guardrails}
 
@@ -44,7 +44,7 @@ ht-degree: 3%
 
 | 金鑰型別 | 說明 |
 | --- | --- |
-| 使用者金鑰 | 應用程式&#x200B;的API金鑰可存取 [!DNL Twitter] API。 請參閱 [!DNL Twitter] 檔案： [api金鑰和秘密](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 以取得指引。 |  |
+| 使用者金鑰 | 應用程式&#x200B;的API金鑰可存取 [!DNL Twitter] API。 請參閱 [!DNL Twitter] 檔案： [api金鑰和秘密](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 以取得指引。 | |
 | 使用者密碼 | API密碼可讓您的應用程式存取 [!DNL Twitter] API。 請參閱 [!DNL Twitter] 檔案： [api金鑰和秘密](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) 以取得指引。 |
 | 權杖密碼 | 您應用程式的不會到期的Token密碼，用於驗證 [!DNL Twitter] 透過OAuth的API。 請參閱 [!DNL Twitter] 檔案： [取得使用存取權杖](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 以取得指引。 |
 | 存取Token | 應用程式不會到期的存取Token，用於驗證 [!DNL Twitter] 透過OAuth的API。 請參閱 [!DNL Twitter] 檔案： [取得使用存取權杖](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) 以取得指引。 |

@@ -4,9 +4,9 @@ title: Mixpanel追蹤事件API事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能會將Adobe Experience Edge Network事件傳送至Mixpanel。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '950'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 1%
 
 如需特定使用案例的詳細資訊，請參閱 [!DNL Mixpanel]，請參閱下列檔案：
 
-* [新到 [!DNL Mixpanel]](https://help.mixpanel.com/hc/en-us/sections/360008533532-New-to-Mixpanel)
+* [新到 [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [什麼是 [!DNL Mixpanel]？](https://developer.mixpanel.com/docs)
 * [12次必須嘗試 [!DNL Mixpanel] 功能](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/)
 
@@ -80,10 +80,10 @@ ht-degree: 1%
 | --- | --- | --- |
 | [!UICONTROL 專案權杖] | 此欄位應對應至與您的關聯的專案代號 [!DNL Mixpanel] 帳戶。 | 是 |
 | [!UICONTROL 事件類型] | 事件名稱。 | 是 |
-| [!UICONTROL 事件時間] | 事件時間。 |  |
-| [!UICONTROL Mixpanel相異ID] | 執行事件之使用者的唯一識別碼。 |  |
-| [!UICONTROL 插入ID] | 事件的唯一識別碼，用於重複資料刪除。 |  |
-| [!UICONTROL 事件屬性] | 包含事件的自訂屬性的JSON物件。 從提供原始JSON或使用一組簡化的鍵值輸入進行選取。 |  |
+| [!UICONTROL 事件時間] | 事件時間。 | |
+| [!UICONTROL Mixpanel相異ID] | 執行事件之使用者的唯一識別碼。 | |
+| [!UICONTROL 插入ID] | 事件的唯一識別碼，用於重複資料刪除。 | |
+| [!UICONTROL 事件屬性] | 包含事件的自訂屬性的JSON物件。 從提供原始JSON或使用一組簡化的鍵值輸入進行選取。 | |
 
 >[!NOTE]
 >

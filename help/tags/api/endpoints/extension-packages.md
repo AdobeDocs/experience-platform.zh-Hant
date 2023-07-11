@@ -2,7 +2,7 @@
 title: 擴充功能套件端點
 description: 瞭解如何在Reactor API中呼叫/extension_packages端點。
 exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
-source-git-commit: 8862a911f09d47c3a2260faba045f3c79826b52c
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 3%
@@ -944,7 +944,7 @@ curl -X PATCH \
 
 完成擴充功能套件的測試後，您就可以私下發行它。 這可讓您公司內的任何屬性使用。
 
-私下發行後，您可以透過填寫 [公開發行請求表單](https://experiencecloudpanel.adobe.com/c/r/DCExtensionReleaseRequest).
+私下發行後，您可以透過填寫 [公開發行請求表單](https://www.feedbackprogram.adobe.com/c/r/DCExtensionReleaseRequest).
 
 **API格式**
 

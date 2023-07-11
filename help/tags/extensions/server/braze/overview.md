@@ -4,14 +4,14 @@ title: Braze事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能會將Adobe Experience Edge Network事件傳送至Braze。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 4%
 
 ---
 
-# [!DNL Braze Track Events API] 事件轉送擴充功能
+# [!DNL Braze Track Events API]事件轉送擴充功能
 
 [[!DNL Braze]](https://www.braze.com) 是客戶參與平台，可即時促進消費者與品牌之間以客戶為中心的互動。 使用 [!DNL Braze]，您可以執行以下操作：
 
@@ -59,7 +59,7 @@ ht-degree: 4%
 
 | 金鑰型別 | 說明 | 範例 |
 | --- | --- | --- |
-| [!DNL Braze] 例項 | 與相關聯的REST端點 [!DNL Braze] 帳戶。 請參閱 [!DNL Braze] 檔案： [執行個體](https://www.braze.com/docs/user_guide/administrative/access_braze/braze_instances) 以取得指引。 | `https://rest.iad-03.braze.com` |
+| [!DNL Braze] 例項 | 與相關聯的REST端點 [!DNL Braze] 帳戶。 請參閱 [!DNL Braze] 檔案： [執行個體](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) 以取得指引。 | `https://rest.iad-03.braze.com` |
 | API 密鑰 | 此 [!DNL Braze] 與相關聯的API金鑰 [!DNL Braze] 帳戶。 <br/>請參閱 [!DNL Braze] 相關檔案： [REST API金鑰](https://www.braze.com/docs/api/basics/#rest-api-key) 以取得指引。 | `YOUR-BRAZE-REST-API-KEY` |
 
 ### 建立密碼
@@ -108,8 +108,8 @@ ht-degree: 4%
 | 輸入 | 說明 | 必填 |
 | --- | --- | --- |
 | [!UICONTROL 活動名稱 &#x200B;] | 事件名稱。 | 是 |
-| [!UICONTROL 事件時間 ] | 日期時間為ISO 8601或中的字串 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 格式。 | 是 |
-| [!UICONTROL 應用程式識別碼] | 應用程式識別碼或 <strong>app_id</strong> 是將活動與應用程式群組中特定應用程式建立關聯的引數。 它會指定您正在與應用程式群組互動的應用程式。 進一步瞭解 [API識別碼型別](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL 事件時間] | 日期時間為ISO 8601或中的字串 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 格式。 | 是 |
+| [!UICONTROL 應用程式識別碼] | 應用程式識別碼或 <strong>app_id</strong> 是將活動與應用程式群組中特定應用程式建立關聯的引數。 它會指定您正在與應用程式群組互動的應用程式。 進一步瞭解 [API識別碼型別](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL 事件屬&#x200B;性] | 包含事件的自訂屬性的JSON物件。 |  |
 
 {style="table-layout:auto"}
@@ -124,12 +124,12 @@ ht-degree: 4%
 
 | 使用者屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 名字] |  |
-| [!UICONTROL 姓氏] |  |
-| [!UICONTROL 電話] |  |
-| [!UICONTROL 電子郵件] |  |
+| [!UICONTROL 名字] | |
+| [!UICONTROL 姓氏] | |
+| [!UICONTROL 電話] | |
+| [!UICONTROL 電子郵件] | |
 | [!UICONTROL 性別] | 下列其中一個字串：「M」、「F」、「O」（其他）、「N」（不適用）、「P」（不想說）。 |
-| [!UICONTROL 城市] |  |
+| [!UICONTROL 城市] | |
 | [!UICONTROL 國家/地區] | 國家/地區作為字串 [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 格式。 |
 | [!UICONTROL 語言] | 中作為字串的語言 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 格式。 |
 | [!UICONTROL 出生日期] | 字串，格式為「YYYY-MM-DD」（如1980-12-21）。 |
@@ -164,11 +164,11 @@ ht-degree: 4%
 | 輸入 | 說明 | 必填 |
 | --- | --- | --- |
 | [!UICONTROL 產品 ID &#x200B;] | 購買的識別碼。 （例如產品名稱或產品類別） | 是 |
-| [!UICONTROL 購買時間 ] | 日期時間為ISO 8601或中的字串 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 格式。 | 是 |
+| [!UICONTROL 購買時間] | 日期時間為ISO 8601或中的字串 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 格式。 | 是 |
 | [!UICONTROL 貨幣 &#x200B;] | 貨幣作為字串，位於 [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) 字母貨幣代碼格式。 | 是 |
 | [!UICONTROL 價格 &#x200B;] | 價格. | 是 |
-| [!UICONTROL 數量 &#x200B;] | 若未提供，預設值將為1。 最大值必須小於100。 |  |
-| [!UICONTROL 應用程式識別碼] | 應用程式識別碼或 <strong>app_id</strong> 是將活動與應用程式群組中特定應用程式建立關聯的引數。 它會指定您正在與應用程式群組互動的應用程式。 進一步瞭解 [API識別碼型別](https://www.braze.com/docs/api/identifier_types/). |  |
+| [!UICONTROL 數量 &#x200B;] | 若未提供，預設值將為1。 最大值必須小於100。 | |
+| [!UICONTROL 應用程式識別碼] | 應用程式識別碼或 <strong>app_id</strong> 是將活動與應用程式群組中特定應用程式建立關聯的引數。 它會指定您正在與應用程式群組互動的應用程式。 進一步瞭解 [API識別碼型別](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL 購買屬&#x200B;性] | 包含購買的自訂屬性的JSON物件。 |  |
 
 {style="table-layout:auto"}
@@ -183,12 +183,12 @@ ht-degree: 4%
 
 | 使用者屬性 | 說明 |
 | --- | --- |
-| [!UICONTROL 名字] |  |
-| [!UICONTROL 姓氏] |  |
-| [!UICONTROL 電話] |  |
-| [!UICONTROL 電子郵件] |  |
+| [!UICONTROL 名字] | |
+| [!UICONTROL 姓氏] | |
+| [!UICONTROL 電話] | |
+| [!UICONTROL 電子郵件] | |
 | [!UICONTROL 性別] | 下列其中一個字串：「M」、「F」、「O」（其他）、「N」（不適用）、「P」（不想說）。 |
-| [!UICONTROL 城市] |  |
+| [!UICONTROL 城市] | |
 | [!UICONTROL 國家/地區] | 國家/地區作為字串 [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 格式。 |
 | [!UICONTROL 語言] | 中作為字串的語言 [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 格式。 |
 | [!UICONTROL 出生日期] | 字串，格式為「YYYY-MM-DD」（如1980-12-21）。 |
