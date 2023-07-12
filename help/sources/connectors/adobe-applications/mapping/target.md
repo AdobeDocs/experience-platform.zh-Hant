@@ -1,21 +1,18 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；目標對應；目標對應
 solution: Experience Platform
 title: 將Adobe Target事件資料對應至XDM
 description: 瞭解如何將Adobe Target事件欄位對應到體驗資料模型(XDM)結構描述，以便在Adobe Experience Platform中使用。
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
 
 # 目標對應欄位對應
 
-Adobe Experience Platform可讓您透過Target來源聯結器內嵌Adobe Target資料。 使用聯結器時，必須將Target欄位中的所有資料對應至 [體驗資料模型(XDM)](../../../../xdm/home.md) 與XDM ExperienceEvent類別相關聯的欄位。
-
-下表概述體驗事件結構描述的欄位(*xdm ExperienceEvent欄位*)以及它們應該對應的對應Target欄位(*Target請求欄位*)。 此外，也提供部分對應的其他附註。
+下表概述Experience Data Model (XDM) Experience Event結構的欄位，以及對應到Adobe Target的對應欄位。 此外，也提供部分對應的其他附註。
 
 >[!NOTE]
 >
@@ -24,7 +21,7 @@ Adobe Experience Platform可讓您透過Target來源聯結器內嵌Adobe Target�
 | xdm ExperienceEvent欄位 | Target請求欄位 | 附註 |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | 唯一請求識別碼 |
-| **`dataSource`** |  | 已設定為所有使用者端的「1」。 |
+| **`dataSource`** | | 已設定為所有使用者端的「1」。 |
 | `dataSource._id` | 系統產生的值，無法與要求一併傳入。 | 此資料來源的唯一識別碼。 這將由建立資料來源的個人或系統提供。 |
 | `dataSource.code` | 系統產生的值，無法與要求一併傳入。 | 完整@id的捷徑。 至少可以使用其中一個程式碼或@id。 有時候，此程式碼會稱為資料來源整合程式碼。 |
 | `dataSource.tags` | 系統產生的值，無法與要求一併傳入。 | 標籤可用來指出應用程式應如何使用這些別名來解譯指定資料來源所代表的別名。<br><br>範例：<br><ul><li>`isAVID`：代表Analytics訪客ID的資料來源。</li><li>`isCRSKey`：代表應在CRS中作為索引鍵使用的別名的資料來源。</li></ul>標籤會在建立資料來源時設定，但也會在參照特定資料來源時納入管道訊息中。 |
@@ -76,7 +73,7 @@ Adobe Experience Platform可讓您透過Target來源聯結器內嵌Adobe Target�
 | `placeContext.geo.postalCode` | 根據請求的IP位址解析的郵遞區號。 |
 | `placeContext.geo.stateProvince` | 根據請求的IP位址解決的州或省。 |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | 只有在請求中存在訂單詳細資料時才會設定。 |
+| **`commerce`** | | 只有在請求中存在訂單詳細資料時才會設定。 |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
