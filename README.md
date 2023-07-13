@@ -1,24 +1,23 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
 source-wordcount: '508'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
-# 提供內容
+# 貢獻內容
 
-歡迎說明文件編撰團隊以外的社群成員和 Adobe 員工貢獻相關內容。
+歡迎說明文件編撰團隊以外的社群成員和 Adobe 員工提供內容，貢獻一己之力。
 
 ## Adobe 開放原始碼行為準則
 
-此專案採行 [Adobe 開放原始碼行為準則](code-of-conduct.md)或 [.NET Foundation 行為準則](https://dotnetfoundation.org/code-of-conduct)。如需詳細資訊，請參閱[貢獻](contributing.md)文章。
+此專案採行 [Adobe 開放原始碼行為準則](code-of-conduct.md)或 [.NET Foundation 行為準則](https://dotnetfoundation.org/code-of-conduct)。如需詳細資訊，請參閱[貢獻](contributing.md)一文。
 
-## Adobe內容的貢獻方式
+## 貢獻 Adob&#x200B;&#x200B;e 內容的方法
 
 請參閱 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)。
 
-貢獻方式取決於您的身分和您要貢獻的變更類型：
+貢獻方式取決於您的身分和您要提交的變更類型：
 
 ### 微幅變更或請求
 
@@ -36,15 +35,15 @@ ht-degree: 79%
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Adobe Employees的重大變更或新文章
+### 由 Adobe 員工提出的重大變更或新文章
 
-若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。如需詳細資訊，請參閱[內部協作指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=zh-tw)。
+若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。如需詳細資訊，請參閱[內部共同作業指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=zh-tw)。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## 聯絡Experience Platform檔案團隊
+## 和 Experience Platform 文件團隊聯絡
 
-如上所述，Adobe社群成員可提交指派給適當撰寫者的問題。 如果您是Adobe員工，可以提交問題或直接聯絡Experience Platform檔案團隊。 若要尋找特定平台區域的主要寫入者，請參閱[Adobe Experience Platform Documentation Wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
+如上所述，Adobe 社群的成員可以提交問題，該問題會被指派給適當的撰寫人員。如果您是 Adob&#x200B;&#x200B;e 員工，您可以提交問題或直接和 Experience Platform 文件團隊聯絡。若要找到特定平台領域的主要撰寫人員，請參閱[Adobe Experience Platform 文件維基百科](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
 
 ## 工具和設定
 
@@ -52,7 +51,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 社群貢獻者可使用 GitHub UI 進行基本編輯或建立存放庫複本，提交重要貢獻。
 
-如需詳細資訊，請參閱 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)。
+如需詳細資訊，請參閱 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)。
 
 ### Markdown
 
@@ -61,9 +60,9 @@ If you submit a pull request with significant changes to documentation and code 
 * [Markdown 基本介紹](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [列印版 Markdown 速查表](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-### 標籤
+### 標記
 
-在公開存放庫中，系統會為提取請求指派自動化標籤，協助我們管理提取請求工作流程，同時協助您瞭解提取請求的最新狀況：
+在公開存放庫中，系統會為提取要求指派自動化標記，協助我們管理提取要求工作流程，同時協助您了解提取要求的最新狀況：
 
-* **變更已傳送給作者**：作者已收到處理提取請求的通知。
-* **準備合併**：一切準備就緒，可供提取請求審核團隊審核。
+* **變更已傳送給作者**：作者已收到處理提取要求的通知。
+* **準備合併**：一切準備就緒，可供提取要求審核團隊審核。
