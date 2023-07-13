@@ -176,7 +176,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 請參閱 [本檔案中關於合併原則的章節](#merge-policies) 以深入瞭解。
 
-此 **[!UICONTROL 設定檔計數變更趨勢]** Widget會在Widget的右上角顯示「註解」按鈕。 選取 **[!UICONTROL 註解]** 以開啟自動註解對話方塊。
+此 **[!UICONTROL 設定檔計數變更趨勢]** Widget會在Widget的右上角顯示「字幕」按鈕。 選取 **[!UICONTROL 註解]** 以開啟自動註解對話方塊。
 
 ![設定檔概述標籤會顯示設定檔計數變更趨勢Widget，並反白顯示註解按鈕。](../images/profiles/profiles-count-change-trend-captions.png)
 
