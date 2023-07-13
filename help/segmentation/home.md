@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；細分；區段；區段服務；區段；區段；區段
 solution: Experience Platform
 title: Segmentation Service概述
 description: 瞭解Adobe Experience Platform Segmentation Service及其在平台生態系統中所扮演的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1629'
 ht-degree: 11%
 
 ---
 
 # [!DNL Segmentation Service] 概覽
 
-Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您建立區段並從 [!DNL Real-Time Customer Profile] 資料。 這些區段會集中設定並維護於 [!DNL Platform]和可供任何Adobe解決方案輕鬆存取。
+Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您透過區段定義或其他來源，從 [!DNL Real-Time Customer Profile] 資料。 這些對象是在以下位置集中設定和維護的： [!DNL Platform]和可供任何Adobe解決方案輕鬆存取。
 
 本檔案提供下列專案的概觀： [!DNL Segmentation Service] 以及在Adobe Experience Platform中扮演的角色。
 
 ## 開始使用 [!DNL Segmentation Service]
 
-請務必瞭解本檔案中使用的下列重要術語：
+您應瞭解本檔案中使用的下列主要辭彙：
 
 - **細分**：將大量個人（例如客戶、潛在客戶、使用者或組織）劃分為具有類似特徵且對行銷策略有類似回應的較小群組。
-- **區段定義**：用來描述目標對象之關鍵特性或行為的規則集。 概念化後，區段定義中概述的規則可用於判斷區段的合格受眾成員。
-- **對象**：符合區段定義條件的結果設定檔集。
+- **對象**：具有類似行為和/或特徵的人集合。 此人員集合可由Adobe Experience Platform使用區段定義（平台產生的對象）產生，或由外部來源（外部產生的對象）產生。
+- **區段定義**：Adobe Experience Platform用來描述目標對象之關鍵特性或行為的規則集。
 
 ## 區段的運作方式
 
@@ -107,7 +106,7 @@ Platform 目前支援三種評估區段的方式：串流分段、批次分段�
 >
 >規劃區段時，請記住，區段可從任何其他區段參照並與其結合。 選取名稱時，請考量您的區段可能包含可重複使用的部分。
 
-### 合併原則
+### 合併政策
 
 合併原則是以下人員使用的規則： [!DNL Profile] 以決定在特定條件下，如何將資料優先排序並合併到統一檢視中。
 如果未定義合併原則，則預設值為 [!DNL Platform] 已使用合併原則。 若您想使用貴組織專屬的合併原則，您可以建立自己的原則，並將其標示為貴組織的預設值。

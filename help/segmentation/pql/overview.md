@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；PQL；pql；設定檔查詢語言
 solution: Experience Platform
 title: 設定檔查詢語言(PQL)概觀
 description: 本指南提供PQL的一般概述，涵蓋格式設定指南並提供範例PQL運算式。
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 2%
+source-wordcount: '706'
+ht-degree: 3%
 
 ---
 
@@ -67,7 +66,6 @@ PQL支援下列常值型別：
 | 陣列 | 組成其他常值群組的資料型別。 它使用方括弧將值分組，並使用逗號分隔不同的值。 <br> **注意：** 您無法直接存取陣列中專案的屬性。 因此，如果您需要存取陣列中的屬性，支援的方法為 `select X from array where X.item = ...`. <br> PQL會保留字詞 `xEvent` 以參考連結至設定檔的體驗事件陣列。 | `[1, 4, 7]`、`["US", "CA"]` |
 | 相對時間參照 | 可用來形成時間戳記和時間間隔參照的保留字。 <ul><li>現在、今天、昨天、明天</li><li>此、上一個、下一個</li><li>之前、之後、從</li><li>毫秒、秒、分鐘、小時、天、周、月、年、十年、世紀/世紀、千年/千年</li></ul> | `X.timestamp occurs before today`、`X.timestamp occurs last month`、`X.timestamp occurs <= 3 days before now` |
 
-
 ## PQL函式
 
 下表概述不同類別的支援PQL函式，包括進一步說明檔案的連結，以取得詳細資訊。
@@ -89,4 +87,4 @@ PQL支援下列常值型別：
 
 ## 後續步驟
 
-現在您已瞭解如何使用 [!DNL Profile Query Language]，您便可在建立和修改區段時使用PQL。 如需區段的詳細資訊，請參閱 [區段概述](../home.md).
+現在您已瞭解如何使用 [!DNL Profile Query Language]，您便可在建立和修改區段定義時使用PQL。 如需區段的詳細資訊，請參閱 [區段概述](../home.md).

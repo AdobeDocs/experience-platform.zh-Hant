@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；pql；PQL；設定檔查詢語言；彙總函式；彙總；
 solution: Experience Platform
 title: PQL彙總函式
 description: 彙總函式用於將設定檔查詢語言(PQL)陣列中的多個值群組在一起，以形成單一摘要值。
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 6%
+source-wordcount: '227'
+ht-degree: 7%
 
 ---
 

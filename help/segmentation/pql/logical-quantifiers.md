@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；pql；PQL；設定檔查詢語言；邏輯數量詞；邏輯數量詞；
 solution: Experience Platform
 title: PQL邏輯數量詞
 description: 邏輯數量詞可用於斷言設定檔查詢語言(PQL)中陣列的條件。
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '201'
 ht-degree: 4%
 
 ---

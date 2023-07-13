@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；區段定義；區段定義；API；API；
 solution: Experience Platform
 title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1209'
 ht-degree: 3%
 
 ---
 
 # 區段定義端點
 
-Adobe Experience Platform可讓您建立區段，從一組設定檔中定義一組特定屬性或行為。 區段定義是一個物件，可封裝寫入的查詢 [!DNL Profile Query Language] (PQL)。 此物件也稱為PQL述詞。 PQL述詞會根據與您提供至的任何記錄或時間序列資料相關的條件，定義區段的規則 [!DNL Real-Time Customer Profile]. 請參閱 [PQL指南](../pql/overview.md) 有關寫入PQL查詢的詳細資訊。
+Adobe Experience Platform可讓您建立區段定義，定義一組來自一組設定檔的特定屬性或行為。 區段定義是一個物件，可封裝寫入的查詢 [!DNL Profile Query Language] (PQL)。 區段定義會套用至設定檔，以建立對象。 此物件（區段定義）也稱為PQL述詞。 PQL述詞會根據與您提供至的任何記錄或時間序列資料相關的條件，定義區段定義的規則 [!DNL Real-Time Customer Profile]. 請參閱 [PQL指南](../pql/overview.md) 有關寫入PQL查詢的詳細資訊。
 
 本指南提供的資訊可協助您更清楚瞭解區段定義，並包含使用API執行基本動作的範例API呼叫。
 
@@ -199,15 +198,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `name` | **必填。** 用來參照區段的唯一名稱。 |
-| `description` | 您建立之區段定義的說明。 |
-| `evaluationInfo` | 您正在建立的區段型別。 如果要建立批次區段，請設定 `evaluationInfo.batch.enabled` 設為true。 如果您想要建立串流區段，請設定 `evaluationInfo.continuous.enabled` 設為true。 如果要建立邊緣區段，請設定 `evaluationInfo.synchronous.enabled` 設為true。 如果留空，區段將建立為 **批次** 區段。 |
-| `schema` | **必填。** 與區段中的實體相關聯的結構描述。 包含 `id` 或 `name` 欄位。 |
-| `expression` | **必填。** 包含區段定義相關欄位資訊的實體。 |
+| `name` | 用來參照區段定義的唯一名稱。 |
+| `description` | (選填.) 您建立之區段定義的說明。 |
+| `evaluationInfo` | (選填.) 您正在建立的區段定義型別。 如果要建立批次區段，請設定 `evaluationInfo.batch.enabled` 設為true。 如果您想要建立串流區段，請設定 `evaluationInfo.continuous.enabled` 設為true。 如果要建立邊緣區段，請設定 `evaluationInfo.synchronous.enabled` 設為true。 如果留空，區段定義將建立為 **批次** 區段。 |
+| `schema` | 與區段中的實體相關聯的結構描述。 包含 `id` 或 `name` 欄位。 |
+| `expression` | 包含區段定義相關欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
 | `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：根據已發佈的PQL文法，區段定義的文字表示。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
 | `expression.value` | 符合中指示的型別的運算式 `expression.format`. |
-| `description` | 可讀取的定義說明。 |
 
 <!-- >[!NOTE]
 >
@@ -339,7 +337,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 系統產生的區段定義唯讀ID。 |
-| `name` | 用來參照區段的唯一名稱。 |
+| `name` | 用來參照區段定義的唯一名稱。 |
 | `schema` | 與區段中的實體相關聯的結構描述。 包含 `id` 或 `name` 欄位。 |
 | `expression` | 包含區段定義相關欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
@@ -472,7 +470,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 系統產生的區段定義唯讀ID。 |
-| `name` | 用來參照區段的唯一名稱。 |
+| `name` | 用來參照區段定義的唯一名稱。 |
 | `schema` | 與區段中的實體相關聯的結構描述。 包含 `id` 或 `name` 欄位。 |
 | `expression` | 包含區段定義相關欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
@@ -487,7 +485,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 >[!NOTE]
 >
-> 您會 **not** 能夠刪除用於目的地啟用的區段。
+> 用於目的地啟用的區段定義 **無法** 被刪除。
 
 **API格式**
 

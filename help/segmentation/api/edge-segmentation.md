@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；細分；細分；細分服務；邊緣細分；邊緣細分；串流邊緣；
 solution: Experience Platform
 title: 使用API的邊緣細分
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用邊緣區段的範例。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1169'
 ht-degree: 0%
 
 ---
@@ -17,9 +16,9 @@ ht-degree: 0%
 >
 >以下檔案說明如何使用API執行邊緣細分。 如需使用UI執行邊緣區段的資訊，請參閱 [edge segmentation UI指南](../ui/edge-segmentation.md).
 >
->邊緣區段現在可供所有Platform使用者普遍使用。 如果您在Beta版期間建立邊緣區段，這些區段將繼續運作。
+>邊緣區段現在可供所有Platform使用者普遍使用。 如果您在Beta版期間建立了邊緣區段定義，這些區段定義將繼續運作。
 
-邊緣細分是即時在邊緣評估Adobe Experience Platform中的區段的能力，可啟用相同頁面和下一頁個人化使用案例。
+邊緣區段是即時在邊緣上評估Adobe Experience Platform中區段定義的能力，可啟用相同頁面和下一頁個人化使用案例。
 
 >[!IMPORTANT]
 >
@@ -32,7 +31,7 @@ ht-degree: 0%
 本開發人員指南需要深入瞭解各種 [!DNL Adobe Experience Platform] 邊緣細分涉及的服務。 在開始本教學課程之前，請檢閱下列服務的檔案：
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
-- [[!DNL Segmentation]](../home.md)：提供從以下專案建立區段和受眾的功能： [!DNL Real-Time Customer Profile] 資料。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您從以下專案建立對象： [!DNL Real-Time Customer Profile] 資料。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
 
 為了成功呼叫任何Experience PlatformAPI端點，請閱讀以下指南： [Platform API快速入門](../../landing/api-guide.md) 以瞭解必要的標頭以及如何讀取範例API呼叫。

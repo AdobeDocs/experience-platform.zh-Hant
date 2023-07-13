@@ -1,17 +1,20 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；選擇退出；分段；分段服務；榮譽選擇退出；選擇退出；選擇退出；同意；共用；收集；
 solution: Experience Platform
 title: 在區段中接受同意
 description: 瞭解如何在區段操作中遵循個人資料收集和分享的客戶同意偏好設定。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 # 在區段中接受同意
+
+>[!NOTE]
+>
+>本指南說明如何遵守以下範圍內的同意 **區段定義**.
 
 法律隱私權法規，例如 [!DNL California Consumer Privacy Act] (CCPA)給予消費者選擇退出收集其個人資料或與第三方分享的權利。 Adobe Experience Platform提供標準Experience Data Model (XDM)元件，旨在擷取即時客戶個人檔案資料中的這些客戶同意偏好設定。
 
@@ -23,7 +26,7 @@ ht-degree: 0%
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：Platform組織客戶體驗資料的標準化架構。
 * [[!DNL Real-Time Customer Profile]](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md)：可讓您從以下專案建立受眾區段： [!DNL Real-Time Customer Profile] 資料。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md)：可讓您從以下專案建立對象： [!DNL Real-Time Customer Profile] 資料。
 
 ## 同意結構描述欄位
 
@@ -35,7 +38,7 @@ ht-degree: 0%
 
 ## 處理分段中的同意
 
-為了確保選擇退出的設定檔不會包含在區段中，必須在建立任何新區段時向現有區段新增並包含特殊欄位。
+為了確保區段定義中不包含已選取退出的設定檔，必須在現有區段定義中新增特殊欄位，並在建立任何新區段定義時包含這些欄位。
 
 以下步驟示範如何為兩種型別的選擇退出標幟新增適當的欄位：
 
@@ -44,13 +47,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->雖然本指南著重於上述兩個選擇退出標幟，但您可以設定區段以一併納入其他同意訊號。 此 [同意和偏好設定參考指南](../xdm/field-groups/profile/consents.md) 提供上述每個選項及其預期使用案例的詳細資訊。
+>雖然本指南著重於上述兩個選擇退出標幟，但您可以設定區段定義，以一併納入其他同意訊號。 此 [同意和偏好設定參考指南](../xdm/field-groups/profile/consents.md) 提供上述每個選項及其預期使用案例的詳細資訊。
 
-在UI中建立區段時，在 **[!UICONTROL 屬性]**，導覽至 **[!UICONTROL XDM個別設定檔]**，然後選取 **[!UICONTROL 同意和偏好設定]**. 從這裡，您可以看到以下專案的選項 **[!UICONTROL 資料彙集]** 和 **[!UICONTROL 共用資料]**.
+在UI中建立區段定義時，位於 **[!UICONTROL 屬性]**，導覽至 **[!UICONTROL XDM個別設定檔]**，然後選取 **[!UICONTROL 同意和偏好設定]**. 從這裡，您可以看到以下專案的選項 **[!UICONTROL 資料彙集]** 和 **[!UICONTROL 共用資料]**.
 
 ![](./images/opt-outs/consents.png)
 
-從選取 **[!UICONTROL 資料彙集]** 類別，然後拖曳 **[!UICONTROL 選擇值]** 放入區段產生器中。 將屬性新增至區段時，您可以指定 [同意值](../xdm/field-groups/profile/consents.md#choice-values) 必須包含或排除的專案。
+從選取 **[!UICONTROL 資料彙集]** 類別，然後拖曳 **[!UICONTROL 選擇值]** 放入區段產生器中。 將屬性新增至區段定義時，您可以指定 [同意值](../xdm/field-groups/profile/consents.md#choice-values) 必須包含或排除的專案。
 
 ![](./images/opt-outs/consent-values.png)
 
@@ -58,7 +61,7 @@ ht-degree: 0%
 
 * **[!UICONTROL 否（選擇退出）]**
 * **[!UICONTROL 「否」（選擇退出）的預設值]**
-* **[!UICONTROL 未知]** （若未提供其他資訊，則會假設未提供同意）
+* **[!UICONTROL 未知]** （若另有不明情況，則會假設未獲得同意）
 
 ![](./images/opt-outs/collect.png)
 
@@ -66,11 +69,11 @@ ht-degree: 0%
 
 ![](./images/opt-outs/share.png)
 
-同時使用 **[!UICONTROL 資料彙集]** 和 **[!UICONTROL 共用資料]** 新增至區段的同意值，則會從產生的對象中排除選擇退出使用其資料的任何客戶。 從這裡，您可以繼續自訂區段定義，然後再選取 **[!UICONTROL 儲存]** 以完成程式。
+同時使用 **[!UICONTROL 資料彙集]** 和 **[!UICONTROL 共用資料]** 區段定義中新增的同意值，會從產生的對象中排除選擇退出使用其資料的任何客戶。 從這裡，您可以繼續自訂區段定義，然後再選取 **[!UICONTROL 儲存]** 以完成程式。
 
 ## 後續步驟
 
-依照本教學課程所述，您現在應該更瞭解在Experience Platform中建立區段時，如何遵循客戶同意和偏好設定。
+依照本教學課程所述，您現在應該更瞭解在Experience Platform中建立區段定義時，如何遵循客戶同意和偏好設定。
 
 如需在Platform中管理同意的詳細資訊，請參閱下列檔案：
 

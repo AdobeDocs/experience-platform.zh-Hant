@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；區段產生器；區段產生器
 solution: Experience Platform
 title: 重構分段時間限制UI指南
 description: 區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項來建置和編輯規則，例如用來表示資料屬性的拖放圖磚。
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---

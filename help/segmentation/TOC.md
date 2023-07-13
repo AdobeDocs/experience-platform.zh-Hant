@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
-user-guide-description: 從您的即時客戶設定檔資料建立區段並產生對象。
+user-guide-description: 使用Adobe Experience Platform產生的區段定義或外部來源，從您的即時客戶設定檔資料建立對象。
 feature: Segments
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 0a3dbb49948278f4fd12737938ad00f2f7abb681
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 30%
+source-wordcount: '176'
+ht-degree: 23%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 30%
 - [Segmentation Service概述](home.md)
 - [區段資料型別](data-types.md)
 - 分段API {#api}
-   - [總覽](api/overview.md)
+   - [概觀](api/overview.md)
    - [快速入門](api/getting-started.md)
    - [對象](api/audiences.md)
    - [邊緣細分](api/edge-segmentation.md)
@@ -29,8 +29,8 @@ ht-degree: 30%
    - [區段搜尋](api/segment-search.md)
    - [串流區段](api/streaming-segmentation.md)
 - 區段UI {#ui}
-   - [總覽](ui/overview.md)
-   - [Audience Builder](ui/audience-builder.md)
+   - [概觀](ui/overview.md)
+   - [對象構成](ui/audience-composition.md)
    - [區段控制面板](ui/segment-dashboard.md)
    - [區段產生器](ui/segment-builder.md)
    - [邊緣細分](ui/edge-segmentation.md)
@@ -43,7 +43,7 @@ ht-degree: 30%
 - [接受同意](consents.md)
 - [多實體分段](multi-entity-segmentation.md)
 - 設定檔查詢語言 {#pql}
-   - [總覽](pql/overview.md)
+   - [概觀](pql/overview.md)
    - [布林函式](pql/boolean-functions.md)
    - [比較函式](pql/comparison-functions.md)
    - [陣列、清單和設定函式](pql/array-functions.md)
@@ -65,5 +65,6 @@ ht-degree: 30%
    - [匯入和使用外部對象](tutorials/using-external-audiences.md)
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制區段遵守資料使用規範](tutorials/governance.md)
+- [常見問答](./faq.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)

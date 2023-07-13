@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；細分；細分；細分服務；排程；排程；API；API；
 solution: Experience Platform
 title: 排程API端點
 description: 排程是一種工具，可用來每天自動執行一次批次細分工作。
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '1996'
 ht-degree: 3%
 
 ---

@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料使用規範；強制執行；強制執行資料使用規範；細分服務；細分；細分；
 solution: Experience Platform
 title: 使用API強制執行受眾區段的資料使用合規性
 type: Tutorial
-description: 本教學課程涵蓋使用API對「即時客戶個人檔案」對象區段強制執行資料使用合規性的步驟。
+description: 本教學課程涵蓋使用API強制資料使用規範區段定義的步驟。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1355'
 ht-degree: 1%
 
 ---
 
-# 使用API對受眾區段強制執行資料使用合規性
+# 使用API強制區段定義的資料使用規範
 
-本教學課程涵蓋強制資料使用法規遵循的步驟 [!DNL Real-Time Customer Profile] 使用API的對象區段。
+本教學課程涵蓋使用API針對區段定義強制資料使用合規性的步驟。
 
 ## 快速入門
 
@@ -57,7 +56,7 @@ ht-degree: 1%
 
 ## 查詢區段定義的合併原則 {#merge-policy}
 
-此工作流程從存取已知受眾區段開始。 已啟用以用於中的區段 [!DNL Real-Time Customer Profile] 在其區段定義中包含合併原則ID。 此合併原則包含要將哪些資料集納入區段的相關資訊，而這些資料集又包含任何適用的資料使用標籤。
+此工作流程從存取已知的區段定義開始。 已啟用以用於中的區段定義 [!DNL Real-Time Customer Profile] 在其區段定義中包含合併原則ID。 此合併原則包含有關要將哪些資料集納入區段定義中的資訊，而這些資料集又包含任何適用的資料使用標籤。
 
 使用 [!DNL Segmentation] API的相關資訊，您可以透過區段的ID來查詢區段定義，以尋找與其關聯的合併原則。
 
@@ -367,20 +366,20 @@ curl -X POST \
 
 ## 篩選資料欄位
 
-如果您的受眾區段沒有通過評估，您可以透過下列兩種方法之一調整區段中包含的資料。
+如果您的區段定義未通過評估，則您可透過下列兩種方法之一調整區段定義中包含的資料。
 
 ### 更新區段定義的合併原則
 
 更新區段定義的合併原則將會調整資料集和執行區段作業時要包含的欄位。 請參閱以下小節： [更新現有的合併原則](../../profile/api/merge-policies.md#update) 在API合併原則教學課程中取得更多資訊。
 
-### 匯出區段時限制特定資料欄位
+### 匯出區段定義時限制特定資料欄位
 
-使用將區段匯出至資料集時 [!DNL Segmentation] API時，您可以使用 `fields` 引數。 新增至此引數的任何資料欄位都將包含在匯出中，而所有其他資料欄位則會被排除。
+使用將區段定義匯出至資料集時 [!DNL Segmentation] API時，您可以使用 `fields` 引數。 新增至此引數的任何資料欄位都將包含在匯出中，而所有其他資料欄位則會被排除。
 
-假設區段有名為「A」、「B」和「C」的資料欄位。 如果您只想匯出欄位「C」，則 `fields` 引數只會包含&quot;C&quot;欄位。 如此，匯出區段時就會排除「A」和「B」欄位。
+假設區段定義具有名為「A」、「B」和「C」的資料欄位。 如果您只想匯出欄位「C」，則 `fields` 引數只會包含&quot;C&quot;欄位。 如此，匯出區段定義時就會排除「A」和「B」欄位。
 
-請參閱以下小節： [匯出區段](./evaluate-a-segment.md#export) 如需詳細資訊，請參閱區段教學課程。
+請參閱以下小節： [匯出區段定義](./evaluate-a-segment.md#export) 如需詳細資訊，請參閱區段教學課程。
 
 ## 後續步驟
 
-依照本教學課程，您已查詢與對象區段相關聯的資料使用標籤，並測試這些標籤是否違反特定行銷動作的原則。 如需中資料控管的詳細資訊 [!DNL Experience Platform]，請閱讀 [資料控管](../../data-governance/home.md).
+依照本教學課程，您已查詢與區段定義相關聯的資料使用標籤，並測試這些標籤是否違反特定行銷動作的原則。 如需中資料控管的詳細資訊 [!DNL Experience Platform]，請閱讀 [資料控管](../../data-governance/home.md).

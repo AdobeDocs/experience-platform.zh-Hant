@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；pql；PQL；設定檔查詢語言；布林函式；布林值；
 solution: Experience Platform
 title: PQL布林函式
 description: 布林函式可用來針對設定檔查詢語言(PQL)中的不同元素執行布林邏輯。
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 5%
+source-wordcount: '237'
+ht-degree: 6%
 
 ---
 

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；細分；細分服務；疑難排解；API；seg；區段；區段；搜尋；區段搜尋；
 title: 區段搜尋API端點
 description: Adobe Experience Platform Segmentation Service API中，區段搜尋是用來搜尋各種資料來源包含的欄位，並近乎即時地傳回欄位。 本指南提供的資訊可協助您更清楚瞭解區段搜尋，並提供使用API執行基本動作的範例API呼叫。
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1196'
 ht-degree: 2%
 
 ---
@@ -37,8 +36,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | 參數 | 說明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必要）** 其中{SCHEMA}代表與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
-| `s={SEARCH_TERM}` | *（可選）* 其中{SEARCH_TERM}代表符合Microsoft實施的查詢 [Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 如果未指定搜尋字詞，則所有與關聯的記錄 `schema.name` 將會傳回。 如需更詳細的說明，請參閱 [附錄](#appendix) 本檔案的所有檔案。 |
+| `schema.name={SCHEMA}` | **（必要）** 位置 {SCHEMA} 代表與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
+| `s={SEARCH_TERM}` | *（可選）* 位置 {SEARCH_TERM} 代表符合Microsoft實作之的查詢 [Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 如果未指定搜尋字詞，則所有與關聯的記錄 `schema.name` 將會傳回。 如需更詳細的說明，請參閱 [附錄](#appendix) 本檔案的所有檔案。 |
 
 **要求**
 
@@ -97,12 +96,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 參數 | 說明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必要）** 其中{SCHEMA}包含與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
-| `namespace={NAMESPACE}` | **（必要）** 其中{NAMESPACE}包含您要搜尋的名稱空間。 |
-| `s={SEARCH_TERM}` | *（可選）* 其中{SEARCH_TERM}包含符合Microsoft實施的查詢 [Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 如果未指定搜尋字詞，則所有與關聯的記錄 `schema.name` 將會傳回。 如需更詳細的說明，請參閱 [附錄](#appendix) 本檔案的所有檔案。 |
-| `entityId={ENTITY_ID}` | *（可選）* 將搜尋限制在指定的資料夾內（以{ENTITY_ID}指定）。 |
-| `limit={LIMIT}` | *（可選）* 其中{LIMIT}代表要傳回的搜尋結果數目。 預設值為 50。 |
-| `page={PAGE}` | *（可選）* 其中{PAGE}代表用於分頁搜尋之查詢結果的頁碼。 請注意，頁碼的開頭為 **0**. |
+| `schema.name={SCHEMA}` | **（必要）** 位置 {SCHEMA} 包含與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
+| `namespace={NAMESPACE}` | **（必要）** 位置 {NAMESPACE} 包含您要搜尋的名稱空間。 |
+| `s={SEARCH_TERM}` | *（可選）* 位置 {SEARCH_TERM} 包含符合Microsoft實施的查詢 [Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). 如果未指定搜尋字詞，則所有與關聯的記錄 `schema.name` 將會傳回。 如需更詳細的說明，請參閱 [附錄](#appendix) 本檔案的所有檔案。 |
+| `entityId={ENTITY_ID}` | *（可選）* 將搜尋限制在指定的資料夾內，指定為 {ENTITY_ID}. |
+| `limit={LIMIT}` | *（可選）* 位置 {LIMIT} 代表要傳回的搜尋結果數目。 預設值為 50。 |
+| `page={PAGE}` | *（可選）* 位置 {PAGE} 代表用於分頁搜尋之查詢結果的頁碼。 請注意，頁碼的開頭為 **0**. |
 
 
 **要求**
@@ -168,9 +167,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | 參數 | 說明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必要）** 其中{SCHEMA}包含與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
-| `namespace={NAMESPACE}` | **（必要）** 其中{NAMESPACE}包含您要搜尋的名稱空間。 |
-| `entityId={ENTITY_ID}` | **（必要）** 您想要取得結構資訊之搜尋物件的ID，以{ENTITY_ID}指定。 |
+| `schema.name={SCHEMA}` | **（必要）** 位置 {SCHEMA} 包含與搜尋物件相關聯的結構描述類別值。 目前，僅限 `_xdm.context.segmentdefinition` 支援。 |
+| `namespace={NAMESPACE}` | **（必要）** 位置 {NAMESPACE} 包含您要搜尋的名稱空間。 |
+| `entityId={ENTITY_ID}` | **（必要）** 您要取得結構資訊之搜尋物件的ID，指定有 {ENTITY_ID}. |
 
 **要求**
 
@@ -223,9 +222,9 @@ curl -X GET \
 
 ## 附錄 {#appendix}
 
-以下小節提供有關搜尋詞如何運作的其他資訊。 搜尋查詢的編寫方式如下： `s={FieldName}:{SearchExpression}`. 舉例來說，若要搜尋名為AAM的區段，或是 [!DNL Platform]，您會使用下列搜尋查詢： `s=segmentName:AAM%20OR%20Platform`.
+以下小節提供有關搜尋詞如何運作的其他資訊。 搜尋查詢的編寫方式如下： `s={FieldName}:{SearchExpression}`. 舉例來說，若要搜尋名為AAM或的區段定義， [!DNL Platform]，您會使用下列搜尋查詢： `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] 為達到最佳實務，搜尋運算式應使用HTML編碼，如上例所示。
+>  為達到最佳實務，搜尋運算式應使用HTML編碼，如上例所示。
 
 ### 搜尋欄位 {#search-fields}
 
@@ -235,16 +234,16 @@ curl -X GET \
 | ---------- | ----------- |
 | folderId | 具有您指定之搜尋的資料夾ID的資料夾。 |
 | folderLocation | 具有您指定之搜尋的資料夾位置的一個或多個位置。 |
-| parentFolderId | 具有指定搜尋之父資料夾ID的區段或資料夾。 |
-| segmentId | 區段符合您指定之搜尋的區段ID。 |
-| segmentName | 區段符合您指定搜尋的區段名稱。 |
-| segmentDescription | 區段符合您指定之搜尋的區段說明。 |
+| parentFolderId | 具有指定搜尋之父資料夾ID的區段定義或資料夾。 |
+| segmentId | 符合指定搜尋的區段ID的區段定義。 |
+| segmentName | 符合指定搜尋的區段名稱的區段定義。 |
+| segmentDescription | 符合指定搜尋的區段說明的區段定義。 |
 
 ### 搜尋運算式 {#search-expression}
 
 下表列出使用區段搜尋API時，搜尋查詢運作方式的詳細資訊。
 
->!![NOTE] 以下範例以非HTML編碼格式顯示，以提供更好的清晰度。 為求最佳實務，請HTML編碼您的搜尋運算式。
+>  以下範例以非HTML編碼格式顯示，以提供更好的清晰度。 為求最佳實務，請HTML編碼您的搜尋運算式。
 
 | 範例搜尋運算式 | 說明 |
 | ------------------------- | ----------- |

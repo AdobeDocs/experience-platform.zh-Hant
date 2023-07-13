@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段服務；分段；分段服務；使用手冊；ui指南；分段ui指南；區段產生器；區段產生器；
 solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項來建置和編輯規則，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 28b9458d29ce69bcbfdff53c0cb6bd7f427e4a2e
+source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
-source-wordcount: '3258'
-ht-degree: 6%
+source-wordcount: '3308'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +21,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
->abstract="構成區段的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
+>abstract="構成區段定義的三種欄位型別為屬性、事件和受眾。 屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
 
 區段定義的基本建置區塊是屬性和事件。 此外，現有對象中包含的屬性和事件可作為新定義的元件。
 
@@ -38,7 +37,7 @@ ht-degree: 6%
 
 ### 活動
 
-此 **[!UICONTROL 事件]** 索引標籤可讓您根據使用發生的事件或動作建立對象 [!DNL XDM ExperienceEvent] 資料元素。 您也可以在以下網址找到事件型別： **[!UICONTROL 事件]** 索引標籤，這是常用事件的集合，可讓您更快速地建立區段。
+此 **[!UICONTROL 事件]** 索引標籤可讓您根據使用發生的事件或動作建立對象 [!DNL XDM ExperienceEvent] 資料元素。 您也可以在以下網址找到事件型別： **[!UICONTROL 事件]** 索引標籤，這是常用事件的集合，可讓您更快速地建立區段定義。
 
 除了能夠瀏覽 [!DNL ExperienceEvent] 元素，您也可以搜尋事件型別。 事件型別使用的編碼邏輯與相同 [!DNL ExperienceEvents]，不需您透過以下網址搜尋： [!DNL XDM ExperienceEvent] 尋找正確事件的類別。 例如，使用搜尋列搜尋「cart」會傳回事件型別[!UICONTROL AddCart]「和」[!UICONTROL RemoveCart]「」，這是建立區段定義時最常用的兩個購物車動作。
 
@@ -116,7 +115,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform的最新變更已更新的 `OR` 和 `AND` 事件之間的邏輯運運算元。 這些更新不會影響現有區段。 不過，這些變更會影響現有區段及新區段建立的所有後續更新。 請閱讀 [時間常數更新](./segment-refactoring.md) 以取得詳細資訊。
+>Adobe Experience Platform的最新變更已更新的 `OR` 和 `AND` 事件之間的邏輯運運算元。 這些更新不會影響現有的區段定義。 不過，這些變更會影響現有區段定義及新建立區段定義的所有後續更新。 請閱讀 [時間常數更新](./segment-refactoring.md) 以取得詳細資訊。
 
 選取屬性的值時，您會看到屬性可以成為的列舉值清單。
 
@@ -144,7 +143,7 @@ ht-degree: 6%
 
 ### 新增對象
 
-您可以從「 」拖放對象 **[!UICONTROL 對象]** 定位至規則產生器畫布，以參照新區段定義中的對象成員資格。 這可讓您在新的區段規則中，以屬性的形式包含或排除對象成員資格。
+您可以從「 」拖放對象 **[!UICONTROL 對象]** 定位至規則產生器畫布，以參照新區段定義中的對象成員資格。 這可讓您在新的區段定義規則中，以屬性的形式包含或排除對象成員資格。
 
 對象 [!DNL Platform] 使用建立的對象 [!DNL Segment Builder]，您可以選擇將受眾轉換為該受眾的區段定義中所使用的規則集。 此轉換會複製規則邏輯，然後修改而不會影響原始區段定義。 在將區段定義轉換為規則邏輯之前，請確定您已儲存對區段定義所做的任何最近變更。
 
@@ -158,11 +157,11 @@ ht-degree: 6%
 
 ### 程式碼檢視
 
-或者，您也可以檢視在中建立的規則之程式碼型版本。 [!DNL Segment Builder]. 在規則產生器畫布中建立規則後，您可以選取 **[!UICONTROL 程式碼檢視]** 以PQL形式檢視您的區段。
+或者，您也可以檢視在中建立的規則之程式碼型版本。 [!DNL Segment Builder]. 在規則產生器畫布中建立規則後，您可以選取 **[!UICONTROL 程式碼檢視]** 將區段定義視為PQL。
 
-![程式碼檢視按鈕會反白顯示，讓您以PQL檢視區段。](../images/ui/segment-builder/code-view.png)
+![程式碼檢視按鈕會反白顯示，讓您看到區段定義為PQL。](../images/ui/segment-builder/code-view.png)
 
-程式碼檢視提供了一個按鈕，可讓您複製要用於API呼叫中的區段值。 若要取得最新版本的區段，請確定您已儲存對區段進行的最新變更。
+程式碼檢視提供了一個按鈕，可讓您複製區段定義的值以用於API呼叫。 若要取得最新版本的區段定義，請確定您已儲存對區段定義進行的最新變更。
 
 ![系統會醒目提示「複製代碼」按鈕，讓您可以 ](../images/ui/segment-builder/copy-code.png)
 
@@ -178,7 +177,7 @@ ht-degree: 6%
 
 ![彙總文字會反白顯示。 選取此項可讓您選取彙總函式。](../images/ui/segment-builder/add-aggregation.png)
 
-現在已新增彙總。 您現在可以選取彙總函式、選擇要彙總的屬性、相等函式以及值。 在以下範例中，即使每次購買少於$100，此區段仍會限定購買值總和大於$100的任何設定檔。
+現在已新增彙總。 您現在可以選取彙總函式、選擇要彙總的屬性、相等函式以及值。 以下範例為例，即使每次購買少於$100，此區段定義仍會限定購買值總和大於$100的任何設定檔。
 
 ![事件規則，顯示彙總函式。](../images/ui/segment-builder/filled-aggregation.png)
 
@@ -220,7 +219,12 @@ ht-degree: 6%
 
 ![容器在展開後顯示。](../images/ui/segment-builder/unwrapped-container.png)
 
-## 合併原則
+## 合併政策
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
+>title="合併政策"
+>abstract="合併原則可讓您合併不同的資料集，以形成您的設定檔。 Platform已提供預設合併原則，或者您可以在設定檔中建立新的預設合併原則。 為此對象選擇符合您行銷目的的合併原則。"
 
 [!DNL Experience Platform] 可讓您彙集來自多個來源的資料並將其合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是指 [!DNL Platform] 使用來決定資料的優先順序以及將合併哪些資料以建立設定檔。
 
@@ -230,40 +234,40 @@ ht-degree: 6%
 
 ![合併原則選擇器會反白顯示。 這可讓您選擇要為區段定義選取的合併原則。](../images/ui/segment-builder/merge-policy-selector.png)
 
-## 區段屬性 {#segment-properties}
+## 區段定義屬性 {#segment-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="區段屬性"
->abstract="區段屬性部分會顯示產生的區段大小的估計值，以顯示合格設定檔數量和設定檔總數的比較。這可讓您在建置對象本身之前根據需要調整您的區段定義。"
+>title="區段定義屬性"
+>abstract="區段定義屬性區段會顯示結果區段定義的大小預估值，顯示合格的設定檔數與設定檔總數的比較。 這可讓您在建置對象本身之前根據需要調整您的區段定義。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
->abstract="您可以重新整理區段的預估值，以立即預覽有多少設定檔符合建議的區段。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
+>abstract="您可以重新整理區段定義的預估值，以立即預覽有多少設定檔符合建議的區段定義。 對象預估值會透過使用當天的樣本資料的樣本大小產生。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
 
-建立區段定義時， **[!UICONTROL 區段屬性]** 工作區右側的區段會顯示結果區段大小的預估值，可讓您在建立受眾本身之前根據需要調整區段定義。
+建立區段定義時， **[!UICONTROL 區段屬性]** 工作區右側的區段會顯示產生的區段定義預估大小，讓您在建立受眾本身之前，可視需要調整區段定義。
 
-此 **[!UICONTROL 區段屬性]** 區段也是您可以指定有關區段定義的重要資訊的地方，包括其名稱、說明和評估型別。 區段定義名稱是用來在組織所定義的區段中識別您的區段，因此應該是描述性、簡潔且唯一的。
+此 **[!UICONTROL 區段屬性]** 區段也是您可以指定有關區段定義的重要資訊的地方，包括其名稱、說明和評估型別。 區段定義名稱是用來在組織所定義的區段定義中識別您的區段定義，因此應該是描述性、簡潔且唯一的。
 
 在繼續建立區段定義時，您可以選取「 」，檢視分頁預覽對象 **[!UICONTROL 檢視設定檔]**.
 
-![區段定義屬性區段會反白顯示。 區段屬性包括但不限於區段名稱、說明和評估方法。](../images/ui/segment-builder/segment-properties.png)
+![區段定義屬性區段會反白顯示。 區段定義屬性包括但不限於區段定義名稱、說明和評估方法。](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->對象預估值會透過使用當天的樣本資料的樣本大小產生。如果您的個人資料存放區中的實體少於100萬個，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。 如需有關產生區段預估的詳細資訊，請參閱 [預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段建立教學課程的內容。
+>對象預估值會透過使用當天的樣本資料的樣本大小產生。如果您的個人資料存放區中的實體少於100萬個，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。 如需為區段定義產生預估的相關資訊，請參閱 [預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段定義建立教學課程的內容。
 
-您也可以選取評估方法。 如果您知道要使用的評估方法，可以使用下拉式清單選取所需的評估方法。 如果您想知道此區段符合哪些評估型別，可以選取瀏覽圖示 ![放大鏡的資料夾圖示](../images/ui/segment-builder/segment-evaluation-select-icon.png) 檢視可用區段評估方法的清單。
+您也可以選取評估方法。 如果您知道要使用的評估方法，可以使用下拉式清單選取所需的評估方法。 如果您想瞭解此區段定義符合哪些評估型別，可以選取瀏覽圖示 ![放大鏡的資料夾圖示](../images/ui/segment-builder/segment-evaluation-select-icon.png) 檢視可用區段定義評估方法的清單。
 
 此 [!UICONTROL 評估方法資格] 彈出視窗隨即顯示。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出視窗會顯示符合資格和不符合資格的評估方法。 根據您在區段定義中使用的引數，它可能不符合某些評估方法的資格。 如需每種評估方法需求的詳細資訊，請參閱 [串流細分](./streaming-segmentation.md#query-types) 或 [邊緣細分](./edge-segmentation.md#query-types) 概述。
 
-![評估方法適用性快顯視窗會出現。 這會顯示哪些區段評估方法適用於該區段，哪些方法不適用。](../images/ui/segment-builder/select-evaluation-method.png)
+![評估方法適用性快顯視窗會出現。 這會顯示哪些評估方法適用於或不適用於區段定義。](../images/ui/segment-builder/select-evaluation-method.png)
 
 如果您選取無效的評估方法，系統會提示您變更區段定義規則或變更評估方法。
 
-![評估方法隨即出現。 如果選取了不符合資格的區段評估方法，彈出式視窗會說明它不符合資格的原因。](../images/ui/segment-builder/ineligible-evaluation-method.png)
+![評估方法隨即出現。 如果選取了不符合資格的評估方法，快顯視窗會說明它不符合資格的原因。](../images/ui/segment-builder/ineligible-evaluation-method.png)
 
 如需不同區段定義評估方法的詳細資訊，請參閱 [區段概述](../home.md#evaluate-segments).
 

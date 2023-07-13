@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；分段；分段；分段服務；pql；PQL；設定檔查詢語言；算術函式；算術；
 solution: Experience Platform
 title: PAL算術函式
 description: 算術函式用於對設定檔查詢語言(PQL)中的值執行基本計算。
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 5%
+source-wordcount: '243'
+ht-degree: 6%
 
 ---
 

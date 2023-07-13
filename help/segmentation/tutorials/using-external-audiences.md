@@ -1,45 +1,50 @@
 ---
-keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 匯入和使用外部對象
 description: 請依照本教學課程瞭解如何搭配Adobe Experience Platform使用外部對象。
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-source-git-commit: 57586104f1119f5cda926faf286c1663fbb0b240
+hide: true
+hidefromtoc: true
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
 
 # 匯入和使用外部對象
 
-Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後可用作新區段定義的元件。 本檔案提供設定Experience Platform以匯入及使用外部對象的教學課程。
+>[!IMPORTANT]
+>
+>本檔案包含舊版Audiences檔案中的資訊，因此已過期。
+
+Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後可用作新對象的元件。 本檔案提供設定Experience Platform以匯入及使用外部對象的教學課程。
 
 ## 快速入門
 
-本教學課程需要深入瞭解各種 [!DNL Adobe Experience Platform] 建立受眾區段所涉及的服務。 在開始本教學課程之前，請檢閱下列服務的檔案：
+本教學課程需要深入瞭解各種 [!DNL Adobe Experience Platform] 與建立對象相關的服務。 在開始本教學課程之前，請檢閱下列服務的檔案：
 
-- [細分服務](../home.md)：可讓您從即時客戶個人檔案資料建立受眾區段。
+- [細分服務](../home.md)：可讓您從即時客戶個人檔案資料建立對象。
 - [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 - [體驗資料模型(XDM)](../../xdm/home.md)：Platform組織客戶體驗資料的標準化架構。 為了充分利用「分段」，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
 - [資料集](../../catalog/datasets/overview.md)：Experience Platform中資料持續存在的儲存和管理結構。
 - [串流擷取](../../ingestion/streaming-ingestion/overview.md)：Experience Platform如何即時從使用者端和伺服器端裝置擷取及儲存資料。
 
-### 區段資料與區段中繼資料
+### 對象與區段定義
 
-開始匯入和使用外部對象之前，請務必瞭解區段資料與區段中繼資料之間的差異。
+開始匯入和使用外部受眾之前，請務必瞭解受眾和區段定義之間的差異。
 
-區段資料是指符合區段資格條件的設定檔，因此也是對象的一部分。
+對象是指您嘗試篩選的設定檔群組。 使用區段定義時，您可以建立區段定義，將您的設定檔篩選為符合區段資格標準的子集，藉此建立對象。
 
-區段中繼資料是有關區段本身的資訊，包括名稱、說明、運算式（如果適用）、建立日期、上次修改日期和ID。 此ID會將區段中繼資料連結至符合區段資格的個別設定檔，且是所產生對象的一部分。
+區段定義包含名稱、說明、運算式（如果適用）、建立日期、上次修改日期及ID等資訊。 此ID會將區段中繼資料連結至符合區段資格的個別設定檔，且是所產生對象的一部分。
 
-| 區段資料 | 區段中繼資料 |
-| ------------ | ---------------- |
-| 符合區段資格的設定檔 | 區段本身的相關資訊 |
+| 對象 | 區段定義 |
+| --------- | ---------------- |
+| 您嘗試尋找的設定檔群組。 使用區段定義時，這表示這將是符合區段資格的設定檔群組。 | 用來區隔您所尋找對象的規則群組。 |
 
 ## 為外部對象建立身分名稱空間
 
-使用外部對象的第一個步驟是建立身分名稱空間。 身分名稱空間可讓Platform建立區段來源的關聯。
+使用外部對象的第一個步驟是建立身分名稱空間。 身分名稱空間可讓Platform建立對象來源的關聯。
 
 若要建立身分名稱空間，請依照 [身分名稱空間指南](../../identity-service/namespaces.md#manage-namespaces). 建立身分名稱空間時，請將來源詳細資料新增至身分名稱空間，並標籤其 [!UICONTROL 型別] as a **[!UICONTROL 非人員識別碼]**.
 

@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；細分；細分；細分服務；細分工作；細分工作；API；API；
 solution: Experience Platform
 title: 區段作業API端點
 description: Adobe Experience Platform Segmentation Service API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1505'
 ht-degree: 2%
 
 ---
@@ -56,11 +55,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **回應**
 
-成功回應會傳回HTTP狀態200，其中包含指定組織的區段作業清單(JSON)。 不過，回應會因區段作業內的區段數而異。
+成功回應會傳回HTTP狀態200，其中包含指定組織的區段作業清單(JSON)。 不過，回應會因區段作業中的區段定義數目而異。
 
-**區段作業中的區段數量少於或等於1500個**
+**區段作業中的區段定義少於或等於1500個**
 
-如果您的區段作業中執行的區段少於1500個，則所有區段的完整清單將顯示在 `children.segments` 屬性。
+如果您的區段作業中執行的區段定義少於1500個，則所有區段定義的完整清單將顯示在 `children.segments` 屬性。
 
 >[!NOTE]
 >
@@ -166,9 +165,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 }
 ```
 
-**超過1500個區段**
+**超過1500個區段定義**
 
-如果您的區段作業中執行的區段超過1500個，則 `children.segments` 屬性將會顯示 `*`，表示正在評估所有區段。
+如果您在區段工作中執行的區段定義超過1500個， `children.segments` 屬性將會顯示 `*`，表示正在評估所有區段定義。
 
 >[!NOTE]
 >
@@ -272,8 +271,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.totalTime` | 一個物件，包含分段工作開始和結束的時間以及花費的總時間的相關資訊。 |
 | `metrics.profileSegmentationTime` | 一個物件，包含區段評估開始和結束的時間以及花費的總時間的相關資訊。 |
 | `metrics.segmentProfileCounter` | 每個區段符合資格的設定檔數。 |
-| `metrics.segmentedProfileByNamespaceCounter` | 每個區段符合每個身分名稱空間資格的設定檔數。 |
-| `metrics.segmentProfileByStatusCounter` | 每個狀態的設定檔計數。 支援下列三種狀態： <ul><li>「已實現」 — 符合區段資格的設定檔數。</li><li>「已退出」 — 區段中不再存在的設定檔區段數。</li></ul> |
+| `metrics.segmentedProfileByNamespaceCounter` | 根據每個區段定義，每個身分名稱空間限定的設定檔數。 |
+| `metrics.segmentProfileByStatusCounter` | 每個狀態的設定檔計數。 支援下列三種狀態： <ul><li>「已實現」 — 符合區段定義的設定檔數。</li><li>「已退出」 — 區段定義中不再存在的設定檔數。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | 根據合併原則，合併的設定檔總數。 |
 
 ## 建立新的區段工作 {#create}
@@ -286,9 +285,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 POST /segment/jobs
 ```
 
-建立新區段作業時，請求和回應會因區段作業內的區段數而異。
+建立新區段作業時，請求和回應會因區段作業中的區段定義數目而異。
 
-**區段作業中的區段數量少於或等於1500個**
+**區段作業中的區段定義少於或等於1500個**
 
 **要求**
 
@@ -411,13 +410,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `segments.segment.id` | 您提供的區段定義ID。 |
 | `segments.segment.expression` | 一個物件，包含有關以PQL寫入的區段定義運算式的資訊。 |
 
-**超過1500個區段**
+**超過1500個區段定義**
 
 **要求**
 
 >[!NOTE]
 >
->雖然您可以建立包含超過1500個區段的區段作業，但這會 **強烈不建議**.
+>雖然您可以建立具有超過1500個區段定義的區段作業，但這是 **強烈不建議**.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -440,7 +439,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `schema.name` | 區段的結構描述名稱。 |
+| `schema.name` | 區段定義的結構描述名稱。 |
 | `segments.segmentId` | 執行含有超過1500個區段的區段工作時，您需要通過 `*` 作為區段ID，表示您要使用所有區段執行分段作業。 |
 
 **回應**
@@ -528,7 +527,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `id` | 系統產生的唯讀識別碼，用於新建立的區段作業。 |
 | `status` | 區段作業的目前狀態。 由於區段作業是新建立的，因此狀態將一律為 `NEW`. |
 | `segments` | 一個物件，其中包含執行此區段工作的區段定義相關資訊。 |
-| `segments.segment.id` | 此 `*` 表示此區段工作正在組織內的所有區段執行。 |
+| `segments.segment.id` | 此 `*` 表示此區段工作正在針對組織內的所有區段定義執行。 |
 
 ## 擷取特定區段工作 {#get}
 
@@ -556,11 +555,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定區段工作的詳細資訊。  不過，回應會因區段作業內的區段數而異。
+成功的回應會傳回HTTP狀態200，其中包含指定區段工作的詳細資訊。  不過，回應會因區段作業中的區段定義數目而異。
 
-**區段作業中的區段數量少於或等於1500個**
+**區段作業中的區段定義少於或等於1500個**
 
-如果您的區段作業中執行的區段少於1500個，則所有區段的完整清單將顯示在 `children.segments` 屬性。
+如果您的區段作業中執行的區段定義少於1500個，則所有區段定義的完整清單將顯示在 `children.segments` 屬性。
 
 ```json
 {
@@ -622,9 +621,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 }
 ```
 
-**超過1500個區段**
+**超過1500個區段定義**
 
-如果您的區段作業中執行的區段超過1500個，則 `children.segments` 屬性將會顯示 `*`，表示正在評估所有區段。
+如果您在區段工作中執行的區段定義超過1500個， `children.segments` 屬性將會顯示 `*`，表示正在評估所有區段定義。
 
 ```json
 {
@@ -744,7 +743,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **回應**
 
-成功的回應會傳回HTTP狀態207以及請求的區段作業。 然而，此 `children.segments` 屬性會因區段作業的執行是否超過1500個區段而有所不同。
+成功的回應會傳回HTTP狀態207以及請求的區段作業。 然而，此 `children.segments` 屬性會因區段作業的執行是否超過1500個區段定義而有所不同。
 
 >[!NOTE]
 >
