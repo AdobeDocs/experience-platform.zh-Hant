@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services連線
 description: Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: ef49bebb96afb9b25430fcc69f8ba91305ad6697
+source-git-commit: c4ead035202828a09c8c170e0a380fa49d186473
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1548'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 >
 >此整合適用於 [Adobe Campaign 8.4或更高版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=en#release-8-4-1).
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
@@ -33,18 +33,24 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 >* Azure Blob儲存體資料登陸區域(DLZ)上的資料保留：7天，
 >* 啟動頻率為最少3小時。
 
-
 ## 使用案例 {#use-cases}
 
 為協助您更清楚瞭解您應如何使用Adobe Campaign管理服務目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
 
-Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、來自analytics的行為資料、合併離線和線上資料等資訊。 透過這項整合，您可以使用Adobe Experience Platform支援的受眾來增強Adobe Campaign中已有的區段功能，從而在Campaign中啟用該資料。
+* Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、來自analytics的行為資料、合併離線和線上資料等資訊。 透過這項整合，您可以使用Adobe Experience Platform支援的受眾來增強Adobe Campaign中已有的區段功能，從而在Campaign中啟用該資料。
 
-例如，一家運動服裝公司想要運用Adobe Experience Platform支援的智慧型區段，並使用Adobe Campaign加以啟用，以便透過Adobe Campaign支援的不同管道聯絡其客戶群。
+  例如，一家運動服裝公司想要運用Adobe Experience Platform支援的智慧型區段，並使用Adobe Campaign加以啟用，以便透過Adobe Campaign支援的不同管道聯絡其客戶群。 傳送訊息後，他們想要使用Adobe Campaign的體驗資料（例如傳送、開啟和點按）來增強Adobe Experience Platform中的客戶設定檔。
 
-傳送訊息後，他們想要使用Adobe Campaign的體驗資料（例如傳送、開啟和點按）來增強Adobe Experience Platform中的客戶設定檔。
+  如此一來，跨管道的行銷活動在Adobe Experience Cloud生態系統中更為一致，而豐富的客戶個人資料能迅速適應和學習。
 
-如此一來，跨管道的行銷活動在Adobe Experience Cloud生態系統中更為一致，而豐富的客戶個人資料能迅速適應和學習。
+
+* 除了Campaign中的區段啟用外，您還可以運用Adobe Campaign Managed Services目標來引入其他設定檔屬性，這些屬性會繫結至Adobe Experience Platform上的設定檔，並設定同步程式，以便在Adobe Campaign資料庫中更新。
+
+  例如，假設您擷取Adobe Experience Platform中的選擇加入和選擇退出值。 透過此連線，您可以將這些值帶入Adobe Campaign並建立同步程式，以便定期更新。
+
+  >[!NOTE]
+  >
+  >設定檔屬性同步功能適用於Adobe Campaign資料庫中已存在的設定檔。
 
 [進一步瞭解Adobe Campaign與Adobe Experience Platform的整合](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
 
@@ -92,6 +98,10 @@ Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、�
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL 選取例項]**：您的 **[!DNL Campaign]** 行銷執行個體。
 * **[!UICONTROL 目標對應]**：選取您在中使用的目標對應 **[!DNL Adobe Campaign]** 以傳送傳遞。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)。
+* **[!UICONTROL 選取同步型別]**：
+
+   * **[!UICONTROL 對象同步]**：使用此選項可將Adobe Experience Platform對象傳送至Adobe Campaign。
+   * **[!UICONTROL 設定檔同步（僅更新）]**：使用此選項可將Adobe Experience Platform設定檔屬性帶入Adobe Campaign並建立同步程式，以便定期更新。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -111,7 +121,7 @@ Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、�
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [啟用對象資料以批次設定檔匯出目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) 以取得啟用此目的地的對象資料的相關指示。
+讀取 [啟用對象資料以批次設定檔匯出目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant) 以取得啟用此目的地的對象資料的相關指示。
 
 ### 對應屬性和身分 {#map}
 
@@ -122,6 +132,7 @@ Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、�
    * 選取 **識別碼** （例如：電子郵件欄位）當作來源身分，可唯一識別Adobe Experience Platform和Adobe Campaign中的設定檔。
 
    * 選取所有其他 **xdm來源設定檔屬性** 需要匯出至Adobe Campaign的區段。
+
    >[!NOTE]
    >
    >「segmentMembershipStatus」欄位是反映segmentMembership狀態的必要對應。 此欄位預設為新增，無法修改或移除。
@@ -133,9 +144,10 @@ Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、�
    * [必要屬性](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 確定所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址。 建議將身分欄位和用作重複資料刪除索引鍵的欄位都設為強制性。
    * [重複資料刪除索引鍵](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 是主要索引鍵，可決定使用者希望為其設定檔進行重複資料刪除的身分識別。
 
-      >[!IMPORTANT]
-      >
-      >請確定重複資料刪除索引鍵屬性的名稱符合所選目標對應的欄名稱。
+     >[!IMPORTANT]
+     >
+     >請確定重複資料刪除索引鍵屬性的名稱符合所選目標對應的欄名稱。
+
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
 1. 執行對應後，您可以檢閱並完成目的地設定，以開始將資料傳送至 **[!DNL Campaign]**.
@@ -153,9 +165,11 @@ Adobe Experience Platform會建立客戶設定檔，其中納入身分圖表、�
 
 ### 存取匯出的資料 {#data}
 
-導覽至 **[!UICONTROL 設定檔和目標]** > **[!UICONTROL 清單]** > **[!UICONTROL AEP對象]** 功能表，以存取在啟用目的地後建立的對象。
+對象 **[!UICONTROL 對象同步]**，您可以導覽至「 」以檢查匯出的對象 **[!UICONTROL 設定檔和目標]** > **[!UICONTROL 清單]** > **[!UICONTROL AEP對象]** 功能表。
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
+
+對象 **[!UICONTROL 設定檔同步（僅更新）]**，資料會自動更新至Campaign資料庫，針對目的地中啟用的區段所定位的每個設定檔。
 
 ## 資料使用與控管 {#data-usage-governance}
 
