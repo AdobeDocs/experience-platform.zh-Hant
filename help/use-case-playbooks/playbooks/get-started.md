@@ -1,45 +1,45 @@
 ---
 solution: Experience Platform
 title: 快速入門
-description: 瞭解如何開始使用使用使用案例教戰手冊功能。
+description: 了解如何開始使用「使用案例教戰手冊」功能。
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: 297dc9d6252d401f805fa5ebb5cf5111910286cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '315'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 
-# (Beta)開始使用
+# (Beta) 快速入門
 
 >[!AVAILABILITY]
 >
->此功能目前為測試版，並未開放所有使用者使用。 文件和功能可能會有所變更。
+>此功能目前為 Beta 版，尚未供所有使用者使用。文件和功能可能會有所變更。
 
 ## 建立開發沙箱 {#create-development-sandbox}
 
-若要開始使用並存取 [[!UICONTROL 使用案例教戰手冊]](/help/use-case-playbooks/playbooks/overview.md) 功能， [建立新的開發沙箱](/help/sandboxes/ui/user-guide.md#create) （請確定您沒有選取生產沙箱），其名稱（而非標題）包含 `-ucp` 或 `-UCP` 尾碼中的，如下所示。
+若要開始使用並存取[[!UICONTROL 使用案例教戰手冊]](/help/use-case-playbooks/playbooks/overview.md)功能，[可建立新的開發沙箱](/help/sandboxes/ui/user-guide.md#create) (確保您沒有選取生產沙箱) 並使用尾碼包含 `-ucp` 或 `-UCP` 的名稱 (非標題)，如下所示。
 
-![建立使用案例行動手冊的開發沙箱](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
+![建立使用案例教戰手冊的開發沙箱](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
-您現在應該看到 [!UICONTROL 教戰手冊] 在左側邊欄中的 [!UICONTROL 使用案例教戰手冊] 或低於 [!UICONTROL 行銷人員遊樂場].
+你現在應該會在左側邊欄中看到[!UICONTROL 教戰手冊] (在[!UICONTROL 使用案例教戰手冊]或[!UICONTROL 行銷人員遊樂場]下)。
 
-![建立沙箱後UI中的使用案例教戰手冊。](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
+![建立沙箱後，UI 中的使用案例教戰手冊。](/help/use-case-playbooks/assets/playbooks/get-started/ucp-sandbox-in-ui.png)
 
-如果您沒有看見 [!UICONTROL 教戰手冊] 在左側邊欄中（如上所示），使用此連結 `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates` 直接導覽至該處。 在連結中， `<YOUR_ORG>` 是貴組織的名稱，並 `<YOUR_SANDBOX_NAME>` 是您建立的開發沙箱名稱。
+如果您沒有如上面所顯示的在左側邊欄中看到[!UICONTROL 教戰手冊]，可使用此連結 `https://experience.adobe.com/#/@<YOUR_ORG>/sname:<YOUR_SANDBOX_NAME>/platform/mexp/templates` 直接瀏覽至該處。在連結中，`<YOUR_ORG>` 是您的組織名稱，而 `<YOUR_SANDBOX_NAME>` 則是您建立的開發沙箱的名稱。
 
-### Adobe Journey Optimizer使用者的沙箱設定 {#sandbox-configuration-journey-optimizer}
+### Adobe Journey Optimizer 使用者的沙箱設定 {#sandbox-configuration-journey-optimizer}
 
-如果貴組織獲得授權 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)，您需要在沙箱中設定管道預設集，這些預設集會定義訊息所需的技術引數。 [瞭解如何在Adobe Journey Optimizer中設定管道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=zh-Hant).
+如果您的組織取得授權可使用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)，您需要在沙箱中設定管道預設集，這會定義訊息所需的技術參數。[了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=zh-Hant)。
 
-## 授予您的團隊必要的存取許可權 {#grant-access-permissions}
+## 授予您的團隊所需的存取權限 {#grant-access-permissions}
 
-開始使用 [!UICONTROL 使用案例教戰手冊]時，行銷營運團隊的成員需要正確的許可權。 您可以依照下列方式授與您的團隊許可權：
+若要開始使用[!UICONTROL 使用案例教戰手冊]，您的行銷營運團隊成員需要有適當的權限。您可以依下列方式授予您的團隊權限：
 
-* 只想瀏覽教戰手冊的行銷營運團隊成員可以取得 **讀取** 許可權。
-* 想要從教戰手冊建立執行個體的行銷營運團隊成員可以取得 **讀取和寫入** 許可權。
+* 只要瀏覽教戰手冊的行銷營運團隊成員可獲得&#x200B;**讀取**&#x200B;權限。
+* 要從教戰手冊建立執行個體的行銷營運團隊成員可獲得&#x200B;**讀取和寫入**&#x200B;權限。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道如何開始使用 [!UICONTROL 使用案例教戰手冊]. 接下來，閱讀如何 [探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md) 為您，然後 [從中建立執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+閱讀完本文件後，您現在知道如何開始使用[!UICONTROL 使用案例教戰手冊]。接下來，請閱讀如何[探索適合您的教戰手冊](/help/use-case-playbooks/playbooks/discover.md)，然後[從中建立執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md)。
