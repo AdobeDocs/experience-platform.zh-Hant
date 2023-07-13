@@ -1,68 +1,68 @@
 ---
-title: Adobe Experience Platform保證疑難排解指南
-description: 本檔案概述使用Adobe Experience Platform保證時常見問題的解決方案。
+title: Adobe Experience Platform Assurance 疑難排解指南
+description: 本文件會概述使用 Adob​​e Experience Platform Assurance 時常見問題的解決方案。
 exl-id: 8078e6f6-ca18-4939-a417-40ebf5a52e24
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '526'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# 疑難排解Adobe Experience Platform保證
+# 對 Adobe Experience Platform Assurance 進行疑難排解
 
-如果您無法讓保證開始運作，請參閱下列問題主題下的建議，以解決常見的問題。
+如果您使用 Assurance 時發生問題，請查看下列問題主題項下的建議，即可解決會遇到的常見問題。
 
-若要啟用更順暢的實作並探索任何潛在問題，請確保您已根據以下設定開啟SDK記錄： [啟用偵錯記錄](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/) （位於快速入門區段）。
+為了實現更順暢的實作並探索任何可能的問題，請確保您已依照「快速入門」一節中的「[啟用偵錯記錄](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/)」開啟 SDK 記錄。
 
-您可以使用變更SDK記錄層級 [`setLogLevel`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#setloglevel) API。
+您可以使用 [`setLogLevel`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#setloglevel) API 變更 SDK 紀錄層級。
 
-## 裝置上、應用程式問題
+## 裝置上的應用程式問題
 
-### QR碼未開啟應用程式
+### QR 碼無法開啟應用程式
 
-* 直接存取連結。 複製連結來源 **工作階段詳細資訊**. 將其貼到裝置的瀏覽器位址列以開啟。 如果檔案未開啟，請參閱區段 [應用程式未開啟連結](#app-does-not-open-link).
-* 使用不同的QR閱讀器。 若是iOS 11或更新版本，請使用像片應用程式來讀取二維碼。
+* 直接存取連結。從&#x200B;**工作階段詳細資料**&#x200B;複製連結。將其貼到裝置的瀏覽器網址列中以將其開啟。如果無法開啟，請參閱「[應用程式無法開啟連結](#app-does-not-open-link)」一節。
+* 使用不同的 QR 助讀程式。若為 iOS 11 或更高版本，請使用 Photo 應用程式讀取 QR 碼。
 
-### 應用程式未開啟連結
+### 應用程式無法開啟連結
 
-* 確認應用程式中的深層連結實作已正確設定。
-   * **Android：** 深層連結（應用程式連結）
-      * [建立應用程式內容的深層連結](https://developer.android.com/training/app-links/deep-linking)
-   * **iOS：** 自訂URL配置或通用連結
-      * [為您的應用程式定義自訂URL配置](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
-      * [在您的應用程式中支援通用連結](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
+* 驗證應用程式中的深度連結設定是否正確。
+   * **Android：**&#x200B;深度連結 (應用程式連結)
+      * [建立應用程式內容的深度連結](https://developer.android.com/training/app-links/deep-linking)
+   * **iOS：**&#x200B;自訂 URL 綱要或通用連結
+      * [定義您的應用程式的自訂 URL 綱要](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app)
+      * [支援您的應用程式中的通用連結](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/supporting_universal_links_in_your_app)
 
 >[!INFO]
 >
->若為Android，則為 `startSession` API不需要明確呼叫。 若為iOS，請依照中的說明使用API [Adobe Experience Platform保證](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#register-aepassurance-with-mobile-core).
+>若為 Android，不需要明確呼叫 `startSession` API。若為 iOS，請依照 [Adobe Experience Platform Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#register-aepassurance-with-mobile-core) 中的說明使用 API。
 
-### 出現驗證覆蓋，但應用程式無法連線
+### 驗證覆蓋會隨即顯示，但應用程式無法連線
 
-* 確保裝置透過裝置網頁瀏覽器連線至網際網路。
-* 如果應用程式從未成功連線至Assurance服務，請確保已正確設定Assurance。 請參閱安裝說明 [Adobe Experience Platform保證](./tutorials/implement-assurance.md) SDK程式庫。
-* 驗證工作階段符合連結，且已針對預期的工作階段正確輸入。 另請參閱 [記錄訊息「無法使用OrgID資訊」](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) （只有當您擁有多個ORG例項的存取權時，才不常見且相關）。
+* 透過裝置 Web 瀏覽器確保裝置的網際網路連線能力。
+* 如果應用程式一直都無法和 Assurance 服務連線成功，請確保 Assurance 的設定正確。請參閱有關安裝 [Adobe Experience Platform Assurance](./tutorials/implement-assurance.md) SDK 資料庫的說明。
+* 驗證工作階段是否和連結相符，以及是否已正確輸入預期的工作階段。請參閱[紀錄訊息「無法取得 OrgID 資訊」](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/common-issues/#orgid-information-is-not-available) (這並非常見情況，而且只有在您有權存取多個 ORG 執行個體時才相關)。
 
-### Adobe Analytics除錯
+### Adobe Analytics 偵錯
 
-**後處理狀態 — 無偵錯旗標**
+**後續處理狀態 - 無偵錯標幟**
 
-在「Analytics事件」檢視中，如果事件失敗並顯示後續處理狀態「No Debug Flag」，表示您目前的Adobe Analytics或Assurance SDK版本可能不支援「Analytics偵錯」功能。
-請將Adobe Analytics和Assurance SDK擴充功能升級至最新版本，以解決此問題。
+在您的 Analytics 事件檢視中，如果事件失敗並顯示「無偵錯標幟」的後續處理狀態，則您目前的 Adob&#x200B;&#x200B;e Analytics 或 Assurance SDK 版本可能不支援 Analytics 偵錯功能。
+請將 Adob&#x200B;&#x200B;e Analytics 和 Assurance SDK 擴充功能升級為最新版本，即可解決此問題。
 
 | 最低版本需求 | iOS | Android |
 | --------------------------- | --- | ------- |
 | Adobe Analytics | > 2.4.0 | > 1.2.6 |
-| 保證 | > 1.0.0 | > 1.0.0 |
+| Assurance | > 1.0.0 | > 1.0.0 |
 
-### React Native MobileCore和AEPAssurance相容性
+### React Native MobileCore 和 AEPAssurance 的相容性
 
-| AEP保證版本 | 行動核心版本 | 安裝指示 |
+| AEP Assurance 版本 | Mobile Core 版本 | 安裝說明 |
 | --------------------- | ------------------- | ------------------- |
 | react-native-aepassurance v2.x.x | [react-native-acpcore](https://www.npmjs.com/package/@adobe/react-native-acpcore) | `npm install @adobe/react-native-aepassurance@^2.0.0` <br/>`npm install @adobe/react-native-acpcore` |
 | react-native-aepassurance v3.x.x | [react-native-aepcore](https://www.npmjs.com/package/@adobe/react-native-aepcore) | `npm install @adobe/react-native-aepassurance@^3.0.0` <br/>`npm install @adobe/react-native-aepcore` |
 
-如果您使用 `react-native-acpcore` 使用Assurance時，React原生應用程式可能會因下列錯誤訊息之一而無法建置：
+如果您正在使用具有 Assurance 的 `react-native-acpcore`，則出現下列其中一則錯誤訊息時，React Native 應用程式即可能無法建置：
 
 ```
 RCTAEPAssurance:  Fatal error: Module 'AEPAssurance' not found
@@ -74,12 +74,12 @@ RCTAEPAssurance:  Fatal error: Module 'AEPAssurance' not found
 AppDelegate: AEPAssurance.h file not found
 ```
 
-**解決方法**
+**解決方案**
 
-如果發生上述情況，請將您的 `react-native-aepassurance` 使用下列npm命令：
+如果發生這種情況，請使用以下 npm 命令將您的 `react-native-aepassurance` 降級：
 
 ```shell
 npm install @adobe/react-native-aepassurance@^2.0.0
 ```
 
-發生此錯誤是因為 `react-native-acpcore` 擴充功能為 **僅限** 相容於 `react-native-aepassurance` 版本2.x.x及更低版本。
+會出現此錯誤是因為 `react-native-acpcore` 擴充功能&#x200B;**只和** `react-native-aepassurance` 2.xx 及以下版本相容。
