@@ -1,32 +1,32 @@
 ---
 audience: user
 user-guide-title: Adobe Experience Platform Assurance
-breadcrumb-title: 保證指南
+breadcrumb-title: Assurance 指南
 user-guide-description: Adobe Experience Platform Assurance 讓您可以檢查、證明、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
 feature: Assurance
 source-git-commit: 5778d4db27d0f57281821dc8e042a31b69745514
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '65'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
 
 # Adobe Experience Platform Assurance {#assurance}
 
-- [保證總覽](./home.md)
+- [Assurance 概觀](./home.md)
 - [使用者存取權](./user-access.md)
 - 檢視 {#view}
-   - [事件交易](./views/event-transactions.md)
+   - [事件異動](./views/event-transactions.md)
    - [擴充功能版本](./views/extension-versions.md)
    - [應用程式內傳訊](./views/in-app-messaging.md)
-   - [在裝置上檢視](./views/on-device-views.md)
+   - [裝置上檢視](./views/on-device-views.md)
    - [Places Service](./views/places-service.md)
-   - [推送偵錯檢視](./views/push-debug-view.md)
+   - [推播偵錯檢視](./views/push-debug-view.md)
    - [驗證摘要](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
-   - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
+   - [Adobe Analytics 串流媒體](./views/adobe-analytics-streaming-media.md)
 - 教學課程 {#tutorials}
-   - [實作保證](./tutorials/implement-assurance.md)
-   - [使用保證](./tutorials/using-assurance.md)
+   - [實作 Assurance](./tutorials/implement-assurance.md)
+   - [使用 Assurance](./tutorials/using-assurance.md)
 - [疑難排解](./troubleshooting.md)
