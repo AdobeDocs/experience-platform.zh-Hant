@@ -3,9 +3,9 @@ keywords: Experience Platform；查詢服務；查詢服務；查詢
 title: Adobe Experience Platform查詢服務的範例使用案例
 description: 端對端範例，展示Adobe Experience Platform查詢服務的多功能性和優點。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
@@ -63,9 +63,9 @@ order by price desc)D;
 
 ## 的優點 [!DNL Query Service] {#benefits}
 
-所提供的功能 [!DNL Query Service] 用途眾多。 您可以使用它來適應分段的複雜邏輯、計算各種個人化屬性以供下游使用，或大幅簡化建立區段的方式。
+所提供的功能 [!DNL Query Service] 用途眾多。 您可以使用它來適應分段的複雜邏輯、計算各種個人化屬性以供下游使用，或大幅簡化建立受眾的方式。
 
-[!DNL Query Service] 可讓您在查詢中加入限制，以簡化區段建置流程。 這可確保適合您區段的資料資格，並有助於建立更準確的對象，進而改善資料品質。 維護查詢品質可產生準確受眾並有助於提高資料可靠性。 您也可以根據從查詢衍生的屬性建立結構描述和自訂表格，以儲存對象。 可以為設定檔啟用自訂表格，並且您可以使用這些資料點進行細分和個人化。 此功能可協助想要建立明確受眾人群的行銷人員。
+[!DNL Query Service] 可讓您在查詢中加入限制，以簡化對象建立流程。 這可確保適合您對象的資料資格，進而改善資料品質。 維護查詢品質可產生準確受眾並有助於提高資料可靠性。 您也可以根據從查詢衍生的屬性建立結構描述和自訂表格，以儲存對象。 可以為設定檔啟用自訂表格，並且您可以使用這些資料點進行細分和個人化。 此功能可協助想要建立明確受眾人群的行銷人員。
 
 此外，將滿足任何循環或靜態條件的邏輯包含到查詢中， [!DNL Query Service] 擷取複雜分段的重擔。
 

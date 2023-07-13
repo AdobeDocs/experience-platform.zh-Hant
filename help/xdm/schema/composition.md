@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 結構描述組合基本概念
 description: 本檔案介紹Experience Data Model (XDM)結構描述，以及構成要在Adobe Experience Platform中使用的結構描述的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: a3f38a18693e0ef4bc93765c090eafd56dcd15d3
+source-git-commit: 4ff003b8f4e98fa7af7f12271aa990c8e5f49f14
 workflow-type: tm+mt
 source-wordcount: '4140'
 ht-degree: 6%
@@ -218,7 +218,7 @@ Adobe提供幾個標準（「核心」） XDM類別。 這些類別中的兩個�
 
 如需可用標準XDM欄位群組的最新清單，請參閱 [官方XDM存放庫](https://github.com/adobe/xdm/tree/master/components/fieldgroups). 或者，您也可以參閱以下指南： [探索XDM元件](../ui/explore.md) 如果您偏好在UI中檢視資源。
 
-### 資料型別 {#data-type}
+### 資料類型 {#data-type}
 
 資料型別在類別或結構描述中作為參考欄位型別使用，其使用方式與基本常值欄位相同。 主要差異在於資料型別可以定義多個子欄位。 他們可以使用與欄位群組相同的方式定義多個子欄位，但主要差異在於資料型別可以包含在結構描述中的任何位置，方法是將其新增為欄位的「資料型別」。 雖然欄位群組只與某些類別相容，但資料型別可以包含在任何父類別或欄位群組中。
 
@@ -285,12 +285,12 @@ Adobe提供幾個標準（「核心」） XDM類別。 這些類別中的兩個�
 
 所有擷取的資料檔 [!DNL Experience Platform] 必須符合XDM結構描述的結構。 如需如何格式化資料檔以符合XDM階層的詳細資訊（包括範例檔案），請參閱以下檔案： [範例ETL轉換](../../etl/transformations.md). 如需擷取資料檔的一般資訊 [!DNL Experience Platform]，請參閱 [批次擷取概觀](../../ingestion/batch-ingestion/overview.md).
 
-## 外部區段的結構描述
+## 外部受眾的結構描述
 
-如果您要將外部系統的區段帶入Platform，您必須使用以下元件來在結構描述中擷取它們：
+如果您要將受眾從外部系統帶入Platform，您必須使用下列元件在結構描述中擷取它們：
 
 * [[!UICONTROL 區段定義] 類別](../classes/segment-definition.md)：此標準類別用於擷取外部區段定義的索引鍵屬性。
-* [[!UICONTROL 區段會籍細節] 欄位群組](../field-groups/profile/segmentation.md)：將此欄位群組新增至您的 [!UICONTROL XDM個別設定檔] 結構描述，以便將客戶設定檔與特定區段相關聯。
+* [[!UICONTROL 區段會籍細節] 欄位群組](../field-groups/profile/segmentation.md)：將此欄位群組新增至您的 [!UICONTROL XDM個別設定檔] 結構描述，以便將客戶設定檔與特定對象建立關聯。
 
 ## 後續步驟
 

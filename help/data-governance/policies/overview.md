@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料使用原則概觀
 description: 資料使用原則是描述允許或限制您在Adobe Experience Platform中對資料執行的行銷動作型別的規則。
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f292e87bb5f944a636521344b28cf02c746c0f6c
+source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 2%
@@ -55,7 +55,7 @@ ht-degree: 2%
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
+Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
 For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
@@ -99,5 +99,5 @@ For a reference on how specific Data Export Controls map to marketing actions in
 | 匯出至第三方 | 此動作會將資料匯出至與客戶沒有直接關係的處理器和實體。 許多資料提供者在合約中都有條款，禁止從最初收集資料的地方匯出資料。 例如，社交網路合約通常會限制您從合約中接收的資料傳輸。 |
 | 站上廣告 | 此動作會將資料用於站內廣告，包括在您組織的網站或應用程式上選擇和投放廣告，或衡量此類廣告的投放和有效性。 |
 | 站上個人化 | 此動作會將資料用於站上內容個人化。 網站上的個人化是用於推斷使用者興趣的任何資料，並用於根據這些推斷選擇提供哪些內容或廣告。 |
-| 區段比對 | 此動作會將資料用於Adobe Experience Platform區段比對，允許兩個或更多Platform使用者交換區段資料。 透過啟用參考此動作的原則，您可以限制用於區段比對的資料。 例如，如果啟用核心原則「限制資料共用」，則任何資料具有 [C11標籤](../labels/reference.md#c11) 無法用於區段比對。 |
+| 區段比對 | 此動作會將資料用於Adobe Experience Platform區段比對，允許兩個或更多Platform使用者交換受眾資料。 透過啟用參考此動作的原則，您可以限制用於區段比對的資料。 例如，如果啟用核心原則「限制資料共用」，則任何資料具有 [C11標籤](../labels/reference.md#c11) 無法用於區段比對。 |
 | 單一身分個人化 | 此動作會要求將單一身分用於個人化目的，而非拼接來自多個來源的身分。 |

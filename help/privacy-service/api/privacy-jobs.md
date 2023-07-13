@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權工作API端點
 description: 瞭解如何使用Privacy Service API管理Experience Cloud應用程式的隱私權工作。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 890294f087b4aae58ec9519ab3fcfff0cc4cc12d
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 1%
@@ -165,7 +165,7 @@ curl -X POST \
 | `expandIDs` | 選擇性屬性，設定為時 `true`，代表應用程式中ID處理的最佳化(目前僅支援 [!DNL Analytics])。 如果省略，此值會預設為 `false`. |
 | `priority` | Adobe Analytics使用的選用屬性，可設定處理請求的優先順序。 接受的值為 `normal` 和 `low`. 若 `priority` 省略，預設行為為 `normal`. |
 | `analyticsDeleteMethod` | 選擇性屬性，指定Adobe Analytics應如何處理個人資料。 這個屬性接受兩個可能的值： <ul><li>`anonymize`：特定使用者ID集合所參考的所有資料都會設為匿名。 若 `analyticsDeleteMethod` 省略，此為預設行為。</li><li>`purge`：所有資料都會完全移除。</li></ul> |
-| `mergePolicyId` | 向Real-Time Customer Profile提出隱私權請求時(`profileService`)，您可以選擇性地提供特定 [合併原則](../../profile/merge-policies/overview.md) ，以便用於ID拼接。 透過指定合併原則，隱私權請求可在傳回客戶資料時包含區段資訊。 每個請求只能指定一個合併原則。 如果未提供合併原則，則回應中不會包含分段資訊。 |
+| `mergePolicyId` | 向Real-Time Customer Profile提出隱私權請求時(`profileService`)，您可以選擇性地提供特定 [合併原則](../../profile/merge-policies/overview.md) ，以便用於ID拼接。 透過指定合併原則，隱私權請求可在傳回客戶資料時包含對象資訊。 每個請求只能指定一個合併原則。 如果未提供合併原則，則回應中不會包含分段資訊。 |
 | `regulation` **(必填)** | 隱私權工作的法規。 接受下列值： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>請參閱以下文章的概觀： [支援的法規](../regulations/overview.md) 以取得上述值所代表之隱私權法規的詳細資訊。 |
 
 {style="table-layout:auto"}

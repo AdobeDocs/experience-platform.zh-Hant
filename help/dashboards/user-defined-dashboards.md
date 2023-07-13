@@ -2,14 +2,14 @@
 title: 使用者定義儀表板
 description: 瞭解如何建立和管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，將關鍵量度視覺化。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 8507ecceca47fac3d321b89e4fed018ee9784777
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 3%
 
 ---
 
-# 使用者定義儀表板
+# 使用者定義的儀表板
 
 Adobe Experience Platform儀表板可協助您透過使用者定義的儀表板功能，加速深入分析和自訂視覺效果。 此功能可讓您建立和管理自訂儀表板，以便在其中建立、新增和編輯自訂的Widget，以視覺化方式呈現與您的組織相關的關鍵量度。
 
@@ -170,7 +170,7 @@ Widget撰寫器現在會填入來自您所選表格的資料。
 
 閱讀本檔案後，您將會更瞭解如何建立自訂儀表板，以及如何建立、編輯和更新該儀表板的自訂Widget。
 
-探索適用於的可用預先設定量度和視覺效果 [設定檔](./guides/profiles.md#standard-widgets)， [區段](./guides/segments.md#standard-widgets)、和 [目的地](./guides/destinations.md#standard-widgets) 儀表板，請參閱各自檔案中的標準Widget清單。
+探索適用於的可用預先設定量度和視覺效果 [設定檔](./guides/profiles.md#standard-widgets)， [區段](./guides/audiences.md#standard-widgets)、和 [目的地](./guides/destinations.md#standard-widgets) 儀表板，請參閱各自檔案中的標準Widget清單。
 
 若要加深您對Experience Platform中使用者定義之控制面板的瞭解，請觀看下列影片：
 

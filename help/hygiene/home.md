@@ -2,7 +2,7 @@
 title: 資料檢疫概觀
 description: Adobe Experience Platform資料檢疫可讓您透過更新或清除過時或不準確的記錄，來管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 2913e9e687843e566db4ebf2031e610d1891d4c9
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 1%
@@ -51,7 +51,7 @@ Adobe Experience Platform提供一套強大的工具，可管理大型複雜資�
 | 已提交請求 | 0 小時 | 資料管理員或隱私權分析人員會提交資料集請求，讓資料集在指定時間過期。 此請求會顯示在 [!UICONTROL 資料衛生UI] 在提交之後，且會維持擱置狀態，直到排定的到期時間（該時間過後）才會執行請求。 |
 | 資料集已捨棄 | 1 小時 | 資料集會從 [資料集詳細目錄頁面](../catalog/datasets/user-guide.md) 在UI中。 Data Lake中的資料只會軟性刪除，直到程式結束為止，之後會硬性刪除。 |
 | 設定檔計數已更新 | 30 小時 | 根據要刪除的資料集內容，如果某些設定檔的所有元件屬性都與該資料集相關聯，則可能會從系統中將其移除。 資料集刪除後30小時，整體設定檔計數的任何結果變更都會反映在 [儀表板Widget](../dashboards/guides/profiles.md#profile-count-trend) 和其他報表。 |
-| 區段已更新 | 48 小時 | 更新所有受影響的設定檔後，所有相關的 [區段](../segmentation/home.md) 會更新以反映其新大小。 根據已移除的資料集和您進行區段的屬性，每個區段的大小可能會因刪除而增加或減少。 |
+| 對象已更新 | 48 小時 | 更新所有受影響的設定檔後，所有相關的 [對象](../segmentation/home.md) 會更新以反映其新大小。 根據已移除的資料集和您進行區段的屬性，每個對象的大小可能會因刪除而增加或減少。 |
 | 歷程和目的地已更新 | 50 小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html)， [行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)、和 [目的地](../destinations/home.md) 會根據相關區段中的變更進行更新。 |
 | 硬刪除完成 | 14 天 | 所有與資料集相關的資料都會從資料湖中硬刪除。 此 [衛生工作的狀態](./ui/browse.md#view-details) 會更新已刪除的資料集以反映這一點。 |
 

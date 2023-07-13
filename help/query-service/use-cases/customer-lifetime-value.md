@@ -2,9 +2,9 @@
 title: 追蹤資料訊號以產生客戶期限值
 description: 本指南提供端對端示範，說明如何搭配Real-time Customer Data Platform使用Data Distiller和使用者定義儀表板，以測量及視覺化客戶期限值。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ![從觀察到分析再到行動的資料往返資訊圖。](../images/use-cases/infographic-use-case-cycle.png)
 
-此端對端使用案例示範如何擷取及修改資料訊號，以計算衍生自客戶期限值的屬性。 這些衍生屬性然後可套用至您的Real-Time CDP設定檔資料，並可用於使用者定義的儀表板，以建立用於深入分析的控制面板。 透過Data Distiller，您可以擴充Real-Time CDP見解資料模型，並使用CLV衍生的屬性和儀表板見解來建立新區段，並將其啟用至所需的目的地。 然後，這些區段可用於建立高效能受眾，以支援您的下一個行銷活動。
+此端對端使用案例示範如何擷取及修改資料訊號，以計算衍生自客戶期限值的屬性。 這些衍生屬性然後可套用至您的Real-Time CDP設定檔資料，並可用於使用者定義的儀表板，以建立用於深入分析的控制面板。 透過Data Distiller，您可以擴充Real-Time CDP見解資料模型，並使用CLV衍生的屬性和儀表板見解來建立新受眾，並將其啟用至所需的目的地。 然後，這些高效能受眾可用於支援您的下一個行銷活動。
 
 本指南旨在透過測量推動CLV的關鍵接觸點上的資料訊號，並在您的環境中實作類似的使用案例，協助您更好地瞭解您的客戶體驗。 下圖會概述整個程式。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 本指南需要您實際瞭解Adobe Experience Platform的下列元件：
 
 * [查詢服務](../home.md)：提供使用者介面和RESTful API，您可在其中使用SQL查詢來分析和擴充資料。
-* [細分服務](../../segmentation/home.md)：可讓您建立區段，並從即時客戶設定檔資料產生對象。
+* [細分服務](../../segmentation/home.md)：可讓您從即時客戶設定檔資料產生對象。
 
 ## 先決條件
 
@@ -71,23 +71,23 @@ ht-degree: 0%
 
 ![以十等分為基礎的自訂CLTV Widget集合。](../images/use-cases/deciles-user-defined-dashboard.png)
 
-## 建立和啟用區段以建立高效能對象 {#create-and-activate-segments}
+## 建立並啟用高效能對象 {#create-and-activate-audiences}
 
-下一步是建立區段，並從您的即時客戶設定檔資料產生對象。 請參閱區段產生器UI指南以瞭解如何 [在Platform中建立及啟用區段](../../segmentation/ui/segment-builder.md). 本指南提供幾個小節，說明如何：
+下一步是建立區段定義，並從您的即時客戶設定檔資料產生對象。 請參閱區段產生器UI指南以瞭解如何 [在Platform中建立和啟用對象](../../segmentation/ui/segment-builder.md). 本指南提供幾個小節，說明如何：
 
 * 使用屬性、事件和現有對象的組合作為建置組塊，以建立區段定義。
-* 使用規則產生器畫布和容器可控制區段規則的執行順序。
+* 使用規則產生器畫布和容器可控制分段規則的執行順序。
 * 檢視潛在對象的預估值，讓您視需要調整區段定義。
 * 啟用已排程區段的所有區段定義。
 * 啟用串流區段的指定區段定義。
 
-另外，也有 [區段產生器影片教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 以取得詳細資訊。
+另外，也有 [區段產生器影片教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) 以取得詳細資訊。
 
-## 為電子郵件行銷活動啟用區段 {#activate-segment-for-campaign}
+## 為電子郵件行銷活動啟用對象 {#activate-audience-for-campaign}
 
-建立區段後，您就可以將其啟動至目的地。 Platform支援各種電子郵件服務提供者(ESP)，可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。
+建立受眾後，您就可以將其啟用至目的地。 Platform支援各種電子郵件服務提供者(ESP)，可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。
 
-檢查 [電子郵件行銷目的地概觀](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/overview.html?lang=en#connect-destination) 以取得您要將資料匯出至的支援目的地清單(例如 [oracleEloqua](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/email-marketing/oracle-eloqua-api.html?lang=en) 頁面)。
+檢查 [電子郵件行銷目的地概觀](../../destinations/catalog/email-marketing/overview.md#connect-destination) 以取得您要將資料匯出至的支援目的地清單(例如 [oracleEloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) 頁面)。
 
 ## 檢視從行銷活動傳回的分析資料 {#post-campaign-data-analysis}
 
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 更新資料模型後，您的自訂儀表板Widget會提供有意義的訊號，讓您測量並視覺化客戶期限值。
 
-![自訂Widget，根據電子郵件區段和電子郵件促銷活動顯示已開啟的電子郵件數量。](../images/use-cases/post-activation-and-email-response-kpis.png)
+![自訂Widget，根據對象和電子郵件行銷活動顯示已開啟的電子郵件數量。](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 為您的自訂分析提供各種視覺效果選項。
 

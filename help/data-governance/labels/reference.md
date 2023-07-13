@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用標籤字彙表
 description: 本檔案概述Adobe Experience Platform目前支援的所有資料使用標籤。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2109'
 ht-degree: 3%
 
 ---
@@ -134,11 +134,11 @@ DAA：線上行為廣告不包含第一方活動、廣告交付或廣告報告�
 
 #### C10 {#c10}
 
-有些資料治理原則會限制將拼接的身分資料用於個人化。 如果區段的合併原則使用「私密圖表」選項，C10標籤會自動套用至區段。
+有些資料治理原則會限制將拼接的身分資料用於個人化。 如果對象的合併原則使用「私密圖表」選項，C10標籤會自動套用至對象。
 
 #### C11 {#c11}
 
-Adobe Experience Platform區段比對可讓您將第一方區段與隱私權和同意偏好設定進行比對，有助於進行更豐富的設定和下游分析。 C11標籤表示不應在下列位置使用的資料： [!DNL Segment Match] 程式。 在您確定要從「區段比對」排除哪些資料集和/或欄位，並相應地新增C11標籤後，「區段比對」工作流程會自動強制執行標籤。
+Adobe Experience Platform區段比對可讓您將Platform產生的對象與隱私權和同意偏好設定進行比對，有助於更豐富的設定檔分析和下游深入分析。 C11標籤表示不應在下列位置使用的資料： [!DNL Segment Match] 程式。 在您確定要從「區段比對」排除哪些資料集和/或欄位，並相應地新增C11標籤後，「區段比對」工作流程會自動強制執行標籤。
 
 #### C12 {#c12}
 

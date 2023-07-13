@@ -2,18 +2,18 @@
 solution: Experience Platform
 title: 使用查詢服務來探索、驗證及處理儀表板資料集
 type: Documentation
-description: 瞭解如何使用查詢服務來探索及處理原始資料集，以便在Experience Platform中支援設定檔、區段和目的地儀表板。
+description: 瞭解如何使用查詢服務來探索及處理原始資料集，以便在Experience Platform中支援設定檔、對象和目的地儀表板。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
 
 # 探索、驗證及處理儀表板資料集，使用 [!DNL Query Service]
 
-Adobe Experience Platform透過Experience PlatformUI中提供的控制面板，提供您組織設定檔、區段和目的地資料的重要資訊。 然後您可以使用Adobe Experience Platform [!DNL Query Service] 探索、驗證及處理原始資料集，以便在資料湖中支援這些儀表板。
+Adobe Experience Platform透過Experience PlatformUI中提供的控制面板，提供您組織設定檔、對象和目的地資料的重要資訊。 然後您可以使用Adobe Experience Platform [!DNL Query Service] 探索、驗證及處理原始資料集，以便在資料湖中支援這些儀表板。
 
 ## 開始使用 [!DNL Query Service]
 
@@ -23,7 +23,7 @@ Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake
 
 ## 存取可用的資料集
 
-您可以使用 [!DNL Query Service] 以查詢設定檔、區段和目的地儀表板的原始資料集。 若要檢視您的可用資料集，請在Experience PlatformUI中選取 **資料集** 在左側導覽中開啟「資料集」控制面板。 儀表板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資訊，包括其名稱、資料集所遵守的結構描述，以及最近一次擷取執行的狀態。
+您可以使用 [!DNL Query Service] 以查詢個人資料、對象和目的地儀表板的原始資料集。 若要檢視您的可用資料集，請在Experience PlatformUI中選取 **資料集** 在左側導覽中開啟「資料集」控制面板。 儀表板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資訊，包括其名稱、資料集所遵守的結構描述，以及最近一次擷取執行的狀態。
 
 ![左側導覽中反白顯示「資料集」索引標籤的「資料集瀏覽」控制面板。](./images/query/browse-datasets.png)
 
@@ -64,15 +64,13 @@ Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake
 
 您可以使用Experience Platform中的查詢編輯器UI探索此資料集。 若要進一步瞭解如何使用查詢編輯器，請參閱 [查詢編輯器UI指南](../query-service/ui/user-guide.md).
 
-### 區段中繼資料資料集
+### 對象中繼資料資料集
 
-資料湖中有可用的區段中繼資料資料集，其中包含您組織的每個區段的中繼資料。
+Data Lake中有一個可用的對象中繼資料資料集，其中包含貴組織每個對象的中繼資料。
 
 此資料集的命名慣例是 **Segmentdefinition-Snapshot-Export** 後面接著英數字元。 例如︰`Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
 若要瞭解每個區段定義快照匯出資料集的完整結構描述，您可以預覽和探索資料集 [使用資料集檢視器](../catalog/datasets/user-guide.md) 在Experience PlatformUI中。
-
-![Segmentdefinition-Snapshot-Export資料集的預覽。](images/query/segment-metadata.png)
 
 ### 目的地中繼資料資料集
 
@@ -92,7 +90,7 @@ Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake
 
 CDP見解資料模型功能會公開可為各種設定檔、目的地和分段Widget提供見解的SQL。 您可以自訂這些SQl查詢範本，為您的行銷和KPI使用案例建立CDP報表。
 
-CDP報告提供您設定檔資料及其區段和目的地關係的深入分析。 如需如何操作的詳細資訊，請參閱CDP見解資料模型檔案 [將CDP見解資料模型套用至您的特定KPI使用案例](./cdp-insights-data-model.md).
+CDP報告提供您個人資料及其對象和目的地關係的深入分析。 如需如何操作的詳細資訊，請參閱CDP見解資料模型檔案 [將CDP見解資料模型套用至您的特定KPI使用案例](./cdp-insights-data-model.md).
 
 ## 範例查詢
 
@@ -123,13 +121,13 @@ Select
         namespace;
 ```
 
-### 依區段的設定檔計數
+### 依對象的設定檔計數
 
-此對象分析提供資料集中每個區段內的合併設定檔總數。 此數字是將區段合併原則套用至設定檔資料的結果，以便將設定檔片段合併在一起，為區段中的每個人形成一個設定檔。
+此對象深入分析提供資料集中每個對象內的合併設定檔總數。 此數字是將對象合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，針對對象中的每個人形成單一設定檔。
 
 ```sql
 Select          
-        concat_ws('-', key, source_namespace) segment_id,
+        concat_ws('-', key, source_namespace) audience_id,
         count(1) count_of_profiles
       from
         (
@@ -139,17 +137,17 @@ Select
             from
               (
                   Select
-                    explode(Segmentmembership)
+                    explode(Audiencemembership)
                   from
                     Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
-      segment_id
+      audience_id
 ```
 
 ## 後續步驟
 
-閱讀本指南後，您現在可以使用 [!DNL Query Service] 執行數個查詢，以探索及處理原始資料集，為您的設定檔、區段和目的地儀表板提供強大的功能。
+閱讀本指南後，您現在可以使用 [!DNL Query Service] 執行數個查詢，以探索及處理原始資料集，為您的設定檔、對象和目的地儀表板提供強大動力。
 
 若要進一步瞭解每個儀表板及其量度，請從檔案導覽的可用儀表板清單中選取儀表板。

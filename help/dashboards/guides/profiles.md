@@ -4,10 +4,10 @@ title: 設定檔儀表板指南
 description: Adobe Experience Platform提供控制面板，讓您檢視有關貴組織即時客戶設定檔資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a28c1c00fd0b33af3b797ecf2b4d45154dedc823
+source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
-source-wordcount: '3385'
-ht-degree: 10%
+source-wordcount: '3393'
+ht-degree: 8%
 
 ---
 
@@ -49,7 +49,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ![醒目提示新增Widget的設定檔儀表板概觀。](../images/profiles/profiles-overview-add-widget.png)
 
-從Widget程式庫中，您可以瀏覽標準與自訂區段Widget的選取範圍。如需如何新增Widget的詳細資訊，請參閱Widget程式庫檔案，瞭解如何 [新增Widget](../customize/widget-library.md#add-widgets).
+從Widget資料庫中，您可以瀏覽標準與自訂對象Widget的選取專案。 如需如何新增Widget的詳細資訊，請參閱Widget程式庫檔案，瞭解如何 [新增Widget](../customize/widget-library.md#add-widgets).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -67,11 +67,11 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## 瀏覽設定檔 {#browse-profiles}
 
-此 [!UICONTROL 瀏覽] 索引標籤可讓您搜尋和檢視擷取到您組織的唯讀設定檔。 從這裡，您可以看到屬於設定檔的重要資訊，這些資訊有關於其偏好設定、過去事件、互動和區段
+此 [!UICONTROL 瀏覽] 索引標籤可讓您搜尋和檢視擷取到您組織的唯讀設定檔。 從這裡，您可以看到屬於設定檔的重要資訊，這些資訊有關於其偏好設定、過去事件、互動和對象。
 
 若要進一步瞭解Platform UI中提供的設定檔檢視功能，請參閱以下檔案： [在Adobe Real-time Customer Data Platform中瀏覽設定檔](../../rtcdp/profile/profile-browse.md).
 
-## 合併原則 {#merge-policies}
+## 合併政策 {#merge-policies}
 
 設定檔控制面板中顯示的量度，是根據套用至即時客戶設定檔資料的合併原則。 將來自多個來源的資料彙集在一起以建立客戶設定檔時，資料可能包含衝突的值。 例如，一個資料集可能將客戶列為「單身」，而另一個資料集可能將客戶列為「已婚」。 合併原則的工作是決定哪些資料要優先處理，並將其顯示為設定檔的一部分。
 
@@ -119,7 +119,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 無區段設定檔]](#unsegmented-profiles)
 * [[!UICONTROL 未分段的設定檔變化趨勢]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL 依身分識別劃分的無區段設定檔]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL 受眾]](#audiences)
+* [[!UICONTROL 對象]](#audiences)
 * [[!UICONTROL 對應到目的地狀態的對象]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 對象人數]](#audiences-size)
 * [[!UICONTROL 依合併原則區分的對象重疊]](#audience-overlap-by-merge-policy)
@@ -256,9 +256,9 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="無區段設定檔"
->abstract="此 Widget 會提供未附加到任何區段的所有設定檔總數，代表在整個組織中啟用設定檔的機會。"
+>abstract="此Widget提供未附加至任何對象的所有設定檔總數，並代表您組織內啟用設定檔的機會。"
 
-此 [!UICONTROL 未分段的設定檔] widget會提供未附加至任何區段的所有設定檔總數。 產生的數字自上次快照以來都是準確的，代表您組織內個人資料啟用的機會。 這也表示有機會淘汰未提供足夠ROI的個人檔案。
+此 [!UICONTROL 未分段的設定檔] widget會提供未附加至任何對象的所有設定檔總數。 產生的數字自上次快照以來都是準確的，代表您組織內個人資料啟用的機會。 這也表示有機會淘汰未提供足夠ROI的個人檔案。
 
 ![未分段的設定檔Widget。](../images/profiles/unsegmented-profiles.png)
 
@@ -267,9 +267,9 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="無區段設定檔趨勢"
->abstract="此 Widget 會提供折線圖，說明在特定時段內未附加到任何區段的所有設定檔數量。可以將 30 天、90 天和 12 個月時段內未附加到任何區段的設定檔趨勢視覺化。"
+>abstract="此Widget提供在指定期間內未附加至任何對象的設定檔數量的線圖插圖。 未附加至對象的設定檔趨勢可以在30天、90天和12個月期間進行視覺化。"
 
-此 [!UICONTROL 未分段的設定檔變化趨勢] Widget使用線圖來說明自上次每日快照以來新增的未附加至任何區段的設定檔數量。 未附加至任何區段的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 從Widget的下拉式選單中選擇時段。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
+此 [!UICONTROL 未分段的設定檔變化趨勢] Widget使用線圖來說明自上次每日快照以來新增的未附加至任何對象的設定檔數量。 未附加至任何對象的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 從Widget的下拉式選單中選擇時段。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
 
 ![未分段的設定檔會變更趨勢Widget。](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -290,9 +290,9 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
-### [!UICONTROL 受眾] {#audiences}
+### [!UICONTROL 對象] {#audiences}
 
-此Widget會根據套用至設定檔資料的所選合併原則，提供準備好要啟用的區段總數。
+此Widget會根據套用至您設定檔資料的所選合併原則，提供準備好啟用的對象總數。
 
 選取 **[!UICONTROL 受眾]** 導覽至 [!UICONTROL 區段] 儀表板 [!UICONTROL 瀏覽] 標籤。 您可以在此檢視組織的所有區段定義清單。
 
@@ -311,9 +311,9 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL 對象重疊報表] {#audience-overlap-report}
 
-此Widget會將受眾重疊資料以表格形式顯示在合併原則所篩選的所有可用區段中。 從畫面頂端的下拉式選單中選擇合併原則，系統會提供從最高重疊百分比到最低重疊百分比排名的五個對象清單。 下列兩個分析區段會列於 [!UICONTROL 區段A名稱] 和 [!UICONTROL 區段B名稱] 欄。 第三欄提供精確到十二位小數的重疊百分比。
+此Widget會將合併原則所篩選之所有可用受眾的資料重疊以表格方式排列。 從畫面頂端的下拉式選單中選擇合併原則，系統會提供從最高重疊百分比到最低重疊百分比排名的五個對象清單。 兩個已分析的對象會列於 [!UICONTROL 對象A名稱] 和 [!UICONTROL 對象B名稱] 欄。 第三欄提供精確到十二位小數的重疊百分比。
 
-對象重疊報表可協助您建立新的高效能區段。 觀察高百分比的重疊可讓您抑制受眾，並防止將相同的受眾傳送至不同的目的地。 它們也可協助您識別隱藏的深入分析，可能有助於更佳的分段。 低百分比重疊有助於找到要追蹤的不重複設定檔。
+對象重疊報表可協助您建立新的高效能對象。 觀察高百分比的重疊可讓您抑制受眾，並防止將相同的受眾傳送至不同的目的地。 它們也可協助您識別隱藏的深入分析，可能有助於更佳的分段。 低百分比重疊有助於找到要追蹤的不重複設定檔。
 
 選取 **[!UICONTROL 檢視更多]** 以開啟包含更多對象重疊資料的全熒幕對話方塊。
 
@@ -347,23 +347,23 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL 對象人數] {#audiences-size}
 
-此 [!UICONTROL 對象人數] widget提供兩欄表格，列出最多20個區段及每個區段中包含的對象總數。 清單會根據對象總數從高到低排序。 對象人數總計取決於套用的合併原則。
+此 [!UICONTROL 對象人數] widget提供兩欄表格，列出最多20個對象的名稱以及每個對象中包含的設定檔總數。 清單會根據對象中包含的設定檔總數從高到低排序。 對象人數總計取決於套用的合併原則。
 
 ![對象大小Widget。](../images/profiles/audiences-size.png)
 
-若要檢視區段的完整資訊，請從提供的清單中選取區段名稱，以導覽至 [!UICONTROL 區段] [!UICONTROL 詳細資訊] 頁面。 此外，透過選取 **[!UICONTROL 檢視所有區段]** 從Widget的結尾，您可以導覽至 [!UICONTROL 區段] [!UICONTROL 瀏覽] 標籤來尋找任何現有的區段。
+若要檢視對象的完整資訊，請從提供的清單中選取對象名稱，以導覽至 [!UICONTROL 受眾] [!UICONTROL 詳細資訊] 頁面。 此外，透過選取 **[!UICONTROL 檢視所有對象]** 從Widget的結尾，您可以導覽至 [!UICONTROL 受眾] [!UICONTROL 瀏覽] 索引標籤以尋找任何現有的對象。
 
-![具有區段名稱的「對象大小」Widget，可檢視反白顯示的所有區段文字。](../images/profiles/audiences-size-view-all-segments.png)
+![具有對象名稱的「對象大小」Widget以及反白的「檢視所有對象」文字。](../images/profiles/audiences-size-view-all-audiences.png)
 
-請參閱檔案以取得以下專案的詳細資訊： [[!UICONTROL 區段] [!UICONTROL  瀏覽] 標籤](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
+請參閱檔案以取得以下專案的詳細資訊： [[!UICONTROL 受眾] [!UICONTROL  瀏覽] 標籤](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
 
 ### [!UICONTROL 依合併原則區分的對象重疊] {#audience-overlap-by-merge-policy}
 
-此Widget使用文氏圖表來顯示兩個所選區段的重疊。 合併原則是從頁面頂端的概述下拉式清單中選取，而要分析的區段是從Widget內的兩個下拉式選單中選取。 將滑鼠懸停在圓形或交集上，可以看到相關區段定義中包含的輪廓總數。
+此Widget使用文氏圖表來顯示兩個所選對象之間的重疊。 合併原則是從頁面頂端的概述下拉式清單中選取，而要分析的對象是從介面工具內的兩個下拉式選單中選取。 將滑鼠懸停在圓形或交集上，可以看到相關區段定義中包含的輪廓總數。
 
 由於Widget會顯示區段定義的視覺交叉，您可以透過研究區段定義之間的相似性來最佳化分段策略。
 
-![Platform UI Profiles儀表板，其合併原則下拉式清單和Widget區段下拉式清單強調顯示。](../images/profiles/audience-overlap-by-merge-policy.png)
+![Platform UI Profiles儀表板，其合併原則下拉式清單和Widget受眾下拉式清單強調顯示。](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

@@ -2,7 +2,7 @@
 title: 帳戶詳細資料資料型別
 description: 本檔案提供Account Details Experience Data Model (XDM)資料型別的概述。
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 5%
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 ![資料型別結構](../images/data-types/account-details.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `annualRevenue` | [[!UICONTROL 貨幣]](./currency.md) | 預估的組織年收入金額。 |
 | `DUNSNumber` | 字串 | 組織的Dun &amp; Bradstreet D-U-N-S編號。 這是指派給Dun &amp; Bradstreet資料庫中每個商業地點的非指示性九位數數字，具有唯一、單獨和相異的操作，並完全由Dun &amp; Bradstreet維護。 |
@@ -29,7 +29,7 @@ ht-degree: 5%
 | `jigsaw` | 字串 | 組織的Data.com索引鍵。 |
 | `linkedinPageUrl` | 字串 | 指向組織LinkedIn帳戶的網站連結。 |
 | `logoUrl` | 字串 | 要與Salesforce執行個體的URL結合的路徑(例如， `https://yourInstance.salesforce.com/`)產生URL以請求與組織相關聯的社交網路設定檔影像。 產生的URL會傳回HTTP重新導向（代碼302）至組織的社交網路設定檔影像。 |
-| `marketSegment` | 字串 | 組織參與的已命名市場區段。 這是自由格式的欄位，建議在查詢中使用結構化值或使用 `xdm:identifier` 屬性。 |
+| `marketSegment` | 字串 | 組織參與的已命名市場對象。 這是自由格式的欄位，建議在查詢中使用結構化值或使用 `xdm:identifier` 屬性。 |
 | `numberOfEmployees` | 整數 | 組織的員工人數。 |
 | `organizationType` | 字串 | 說明組織型別的標籤。 |
 | `primaryEmailDomain` | 字串 | 組織用於其人員的主要電子郵件網域。 |

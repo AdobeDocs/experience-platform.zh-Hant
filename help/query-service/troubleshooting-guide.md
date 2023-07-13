@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 常見問答
 description: 本檔案包含與查詢服務相關的常見問題與解答。 主題包括匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e9deabe1e0514f44be085e558fd2fdbf54956f3e
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 1%
@@ -231,7 +231,7 @@ AS SELECT '1' as _id,
 
 ### 為什麼設定檔UI中顯示的數字與從設定檔匯出資料集計算出的數字存在差異？
 
-+++回答設定檔圖示板中顯示的數字自上次快照以來都是準確的。 在設定檔匯出表格中產生的數字完全取決於匯出查詢。 因此，查詢符合特定區段資格的設定檔數目，是造成這種差異的常見原因。
++++回答設定檔圖示板中顯示的數字自上次快照以來都是準確的。 在設定檔匯出表格中產生的數字完全取決於匯出查詢。 因此，查詢符合特定對象資格的設定檔數量是造成這種差異的常見原因。
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 聯合API端點
 description: 結構描述登入API中的/unions端點可讓您以程式設計方式管理體驗應用程式中的XDM聯合結構描述。
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '897'
 ht-degree: 1%
 
 ---
@@ -29,9 +29,9 @@ ht-degree: 1%
 
 此 `timeSeriesEvents` array是與聯集關聯的記錄結構描述相關的時間序列事件清單。 將設定檔資料匯出至資料集時，每個記錄都會包含此陣列。 這適用於各種使用案例，例如機器學習，其中模型需要設定檔的整個行為歷史記錄及其記錄屬性。
 
-### 區塊會籍對應
+### 區段會籍地圖
 
-此 `segmentMembership` map會儲存區段評估的結果。 使用成功執行區段作業時 [分段API](https://www.adobe.io/experience-platform-apis/references/segmentation/)，對應隨即更新。 `segmentMembership` 也會儲存擷取至Platform的任何預先評估對象區段，以允許與其他解決方案(例如Adobe Audience Manager)整合。 請參閱教學課程，位置如下： [使用API建立區段](../../segmentation/tutorials/create-a-segment.md) 以取得詳細資訊。
+此 `segmentMembership` map會儲存評估區段定義的結果。 使用成功執行區段作業時 [分段API](https://www.adobe.io/experience-platform-apis/references/segmentation/)，對應隨即更新。 `segmentMembership` 也會儲存擷取至Platform的任何預先評估對象，以允許與其他解決方案(例如Adobe Audience Manager)整合。 請參閱教學課程，位置如下： [使用API建立對象](../../segmentation/tutorials/create-a-segment.md) 以取得詳細資訊。
 
 ## 擷取聯合清單 {#list}
 

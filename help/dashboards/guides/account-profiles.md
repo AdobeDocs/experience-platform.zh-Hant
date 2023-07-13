@@ -2,7 +2,7 @@
 title: 帳戶設定檔儀表板指南
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: 79966442f5333363216da17342092a71335a14f0
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ## 瀏覽帳戶設定檔 {#browse-account-profiles}
 
-此 [!UICONTROL 瀏覽] 索引標籤可讓您使用來自已連線企業來源的帳戶ID或直接輸入來源詳細資訊，來搜尋及檢視擷取到您組織的唯讀帳戶設定檔。 從這裡，您可以檢視屬於帳戶設定檔的重要資訊，包括其名稱、產業、收入、區段等。
+此 [!UICONTROL 瀏覽] 索引標籤可讓您使用來自已連線企業來源的帳戶ID或直接輸入來源詳細資訊，來搜尋及檢視擷取到您組織的唯讀帳戶設定檔。 從這裡，您可以檢視屬於帳戶個人資料的重要資訊，包括其名稱、產業、收入和對象等。
 
 選取 [!UICONTROL 設定檔ID] 結果顯示在 [!UICONTROL 瀏覽] 標籤以開啟 [!UICONTROL 詳細資料] 帳戶設定檔的標籤。
 

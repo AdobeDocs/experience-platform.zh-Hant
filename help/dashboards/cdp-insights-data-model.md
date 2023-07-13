@@ -2,16 +2,16 @@
 title: Real-time Customer Data Platform Insights資料模型
 description: 瞭解如何搭配Real-time Customer Data Platform Insights資料模型使用SQL查詢，以根據您的行銷和KPI使用案例自訂您自己的Real-Time CDP報表。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platform Insights資料模型
 
-Real-time Customer Data Platform Insights資料模型功能可公開支援各種設定檔、目的地和分段Widget深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些見解然後可用作使用者定義儀表板的自訂Widget。 如需瞭解，請參閱query accelerated store reporting insights檔案 [如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+Real-time Customer Data Platform Insights資料模型功能可公開支援各種設定檔、目的地和分段Widget深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些見解然後可用作使用者定義儀表板的自訂Widget。 請參閱查詢加速商店報告見解檔案以瞭解 [如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## 先決條件
 
@@ -19,7 +19,7 @@ Real-time Customer Data Platform Insights資料模型功能可公開支援各種
 
 ## Real-Time CDP深入分析報表與使用案例
 
-Real-Time CDP報表可讓您深入瞭解設定檔資料，以及資料與區段和目的地的關係。 各種星形結構描述模型已開發來回答各種常見行銷使用案例，每個資料模型可支援多個使用案例。
+Real-Time CDP報表可讓您深入瞭解設定檔資料，以及資料與對象和目的地的關係。 各種星形結構描述模型已開發來回答各種常見行銷使用案例，每個資料模型可支援多個使用案例。
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ GROUP BY
 
 +++
 
-### 區段模型 {#segment-model}
+### 對象模型 {#audience-model}
 
-區段模型包含下列資料集：
+受眾模型包含下列資料集：
 
 - `adwh_dim_date`
 - `adwh_fact_profile_by_segment`
@@ -158,11 +158,11 @@ GROUP BY
 
 下圖包含每個資料集中的相關資料欄位。
 
-![區段模型的ERD。](./images/cdp-insights/segment-model.png)
+![對象模型的ERD。](./images/cdp-insights/audience-model.png)
 
 #### 對象人數使用案例
 
-用於的邏輯 [!UICONTROL 對象人數] widget會傳回在最近的快照集執行時所選區段內的合併設定檔總數。 請參閱 [[!UICONTROL 對象人數] Widget檔案](./guides/segments.md#audience-size) 以取得詳細資訊。
+用於的邏輯 [!UICONTROL 對象人數] widget會傳回在最近的快照集產生時，所選對象中合併的設定檔總數。 請參閱 [[!UICONTROL 對象人數] Widget檔案](./guides/audiences.md#audience-size) 以取得詳細資訊。
 
 產生「 」的SQL [!UICONTROL 對象人數] 在以下可摺疊區段中可看到Widget。
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### 對象人數變化趨勢使用案例
 
-用於的邏輯 [!UICONTROL 對象人數變化趨勢] Widget提供線圖，說明最近每日快照之間符合指定區段資格的設定檔總數差異。 請參閱 [[!UICONTROL 對象人數變化趨勢] Widget檔案](./guides/segments.md#audience-size-change-trend) 以取得詳細資訊。
+用於的邏輯 [!UICONTROL 對象人數變化趨勢] Widget提供線圖，說明最近每日快照之間符合指定對象資格的設定檔總數差異。 請參閱 [[!UICONTROL 對象人數變化趨勢] Widget檔案](./guides/audiences.md#audience-size-change-trend) 以取得詳細資訊。
 
 產生「 」的SQL [!UICONTROL 對象人數變化趨勢] 在以下可摺疊區段中可看到Widget。
 
@@ -212,7 +212,7 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 
 #### 最常用的目的地使用案例
 
-中使用的邏輯 [!UICONTROL 最常使用的目的地] Widget會根據對應至您組織最常用目的地的區段數，列出這些目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能還會顯示那些可能未充分利用的目的地。 請參閱以下說明檔案： [[!UICONTROL 最常使用的目的地] Widget](./guides/destinations.md#most-used-destinations) 以取得詳細資訊。
+中使用的邏輯 [!UICONTROL 最常使用的目的地] Widget會根據對應至您組織最常用目的地的受眾數量，列出這些受眾。 此排名可讓您深入瞭解正在使用的目的地，同時可能還會顯示那些可能未充分利用的目的地。 請參閱以下說明檔案： [[!UICONTROL 最常使用的目的地] Widget](./guides/destinations.md#most-used-destinations) 以取得詳細資訊。
 
 產生「 」的SQL [!UICONTROL 最常使用的目的地] 在以下可摺疊區段中可看到Widget。
 
@@ -237,11 +237,11 @@ FROM
 
 +++
 
-#### 最近啟用的區段使用案例
+#### 最近啟用的對象使用案例
 
-的邏輯 [!UICONTROL 最近啟用的區段] Widget提供最近對應至目的地的區段清單。 此清單會提供系統中正在使用的區段和目的地的快照，能有助於對任何錯誤的對應進行移難排解。請參閱 [[!UICONTROL 最近啟用的區段] Widget檔案](./guides/destinations.md#recently-activated-segments) 以取得詳細資訊。
+的邏輯 [!UICONTROL 最近啟用的對象] Widget提供最近對應至目的地的對象清單。 此清單提供系統中使用中的對象和目的地的快照，並有助於疑難排解任何錯誤對應。 請參閱 [[!UICONTROL 最近啟用的對象] Widget檔案](./guides/destinations.md#recently-activated-audiences) 以取得詳細資訊。
 
-產生「 」的SQL [!UICONTROL 最近啟用的區段] 在以下可摺疊區段中可看到Widget。
+產生「 」的SQL [!UICONTROL 最近啟用的對象] 在以下可摺疊區段中可看到Widget。
 
 +++SQL查詢
 
@@ -255,9 +255,9 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 +++
 
-### 名稱空間 — 區段模型
+### 名稱空間 — 對象模型
 
-namespace-segment模型由下列資料集組成：
+名稱空間 — 對象模型由以下資料集組成：
 
 - `adwh_dim_date`
 - `adwh_dim_namespaces`
@@ -270,11 +270,11 @@ namespace-segment模型由下列資料集組成：
 
 下圖包含每個資料集中的相關資料欄位。
 
-![名稱空間 — 區段模型的ERD。](./images/cdp-insights/namespace-segment-model.png)
+![名稱空間 — 對象模型的ERD。](./images/cdp-insights/namespace-audience-model.png)
 
-#### 區段使用案例的依身分割槽分的設定檔
+#### 依對象使用案例的身分割槽分的設定檔
 
-中使用的邏輯 [!UICONTROL 依身分割槽分的設定檔] widget會針對指定區段，提供個人資料存放區中所有合併個人資料的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](./guides/segments.md#profiles-by-identity) 以取得詳細資訊。
+中使用的邏輯 [!UICONTROL 依身分割槽分的設定檔] Widget會針對特定對象，在您的個人資料存放區中提供所有合併個人資料的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](./guides/audiences.md#profiles-by-identity) 以取得詳細資訊。
 
 產生「 」的SQL [!UICONTROL 依身分割槽分的設定檔] 在以下可摺疊區段中可看到Widget。
 
@@ -359,9 +359,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-### 依區段模型重疊名稱空間
+### 依對象模型重疊名稱空間
 
-依區段模型的重疊名稱空間是由下列資料集組成：
+依對象模型的重疊名稱空間是由以下資料集組成：
 
 - `adwh_dim_date`
 - `adwh_dim_overlap_namespaces`
@@ -374,11 +374,11 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 下圖包含每個資料集中的相關資料欄位。
 
-![依區段模型的重疊名稱空間ERD。](./images/cdp-insights/overlap-namespace-by-segment-model.png)
+![依對象模型的重疊名稱空間ERD。](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### 身分重疊（區段）使用案例
+#### 身分重疊（對象）使用案例
 
-中使用的邏輯 [!UICONTROL 區段] 儀表板 [!UICONTROL 身分重疊] widget說明包含特定區段之兩個選定身分的設定檔重疊。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 細分] 儀表板檔案](./guides/segments.md#identity-overlap).
+中使用的邏輯 [!UICONTROL 受眾] 儀表板 [!UICONTROL 身分重疊] widget說明包含特定對象之兩個選定身分的設定檔重疊。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 受眾] 儀表板檔案](./guides/audiences.md#identity-overlap).
 
 產生「 」的SQL [!UICONTROL 身分重疊] 在以下可摺疊區段中可看到Widget。
 

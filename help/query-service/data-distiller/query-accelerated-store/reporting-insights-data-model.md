@@ -2,7 +2,7 @@
 title: Query Accelerated Store Reporting Insights指南
 description: 瞭解如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 查詢加速存放區可讓您建立自訂資料模型和/或擴充現有的Adobe Real-time Customer Data Platform資料模型。 然後，您可以參與或將您的報告深入解析內嵌到您選擇的報表/視覺效果架構中。 請參閱Real-time Customer Data Platform Insights資料模型檔案以瞭解如何 [自訂SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../../dashboards/cdp-insights-data-model.md).
 
-Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、區段和目的地的深入分析，並啟用Real-Time CDP深入分析控制面板。 本檔案將引導您完成建立報表深入分析資料模型的程式，以及根據需要如何擴充Real-Time CDP資料模型。
+Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、對象和目標的深入分析，並啟用Real-Time CDP深入分析控制面板。 本檔案將引導您完成建立報表深入分析資料模型的程式，以及根據需要如何擴充Real-Time CDP資料模型。
 
 ## 先決條件
 
@@ -37,7 +37,7 @@ Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#
 
 ![對象分析使用者模型的實體關聯圖(ERD)。](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-在此範例中， `externalaudiencereach` 表格/資料集以ID為基礎，並追蹤相符計數的下限和上限。 此 `externalaudiencemapping` 維度表格/資料集將外部ID對應至Platform上的目的地和區段。
+在此範例中， `externalaudiencereach` 表格/資料集以ID為基礎，並追蹤相符計數的下限和上限。 此 `externalaudiencemapping` 維度表格/資料集將外部ID對應至Platform上的目的地和對象。
 
 ## 使用Data Distiller建立報告深入分析的模型
 
@@ -74,7 +74,7 @@ WITH ( DISTRIBUTION = REPLICATE ) AS
  
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencemapping
 WITH ( DISTRIBUTION = REPLICATE ) AS
-SELECT cast(null as int) segment_id,
+SELECT cast(null as int) audience_id,
        cast(null as int) destination_id,
        cast(null as int) ext_custom_audience_id
  WHERE false;
@@ -133,7 +133,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 ## 使用Real-Time CDP見解資料模型擴充您的資料模型
 
-您可以使用其他詳細資料擴充對象模型，以建立更豐富的維度表格。 例如，您可以將區段名稱和目的地名稱對應至外部對象識別碼。 若要這麼做，請使用查詢服務建立或重新整理新資料集，並將其新增至對象模型，此模型會將區段和目的地與外部身分識別結合。 下圖說明此資料模型擴充功能的概念。
+您可以使用其他詳細資料擴充對象模型，以建立更豐富的維度表格。 例如，您可以將對象名稱和目的地名稱對應至外部對象識別碼。 若要這麼做，請使用查詢服務來建立或重新整理新的資料集，並將其新增至對象模型，此模型會將對象和目的地與外部身分識別結合。 下圖說明此資料模型擴充功能的概念。
 
 ![連結Real-Time CDP分析資料模型和Query加速商店模型的ERD圖表。](../../images/query-accelerated-store/updatingAudienceInsightUserModel.png)
 
@@ -145,13 +145,13 @@ ext_custom_audience_id | approximate_count_upper_bound
 CREATE TABLE audienceinsight.audiencemodel.external_seg_dest_map AS
   SELECT ext_custom_audience_id,
          destination_name,
-         segment_name,
+         audience_name,
          destination_status,
          a.destination_id,
-         a.segment_id
+         a.audience_id
   FROM   externalaudiencemapping AS a
-         LEFT OUTER JOIN adwh_dim_segments AS b
-                      ON ( ( a.segment_id ) = ( b.segment_id ) )
+         LEFT OUTER JOIN adwh_dim_audiences AS b
+                      ON ( ( a.audience_id ) = ( b.audience_id ) )
          LEFT OUTER JOIN adwh_dim_destination AS c
                       ON ( ( a.destination_id ) = ( c.destination_id ) );
  
@@ -170,15 +170,15 @@ ALTER TABLE externalaudiencereach  ADD  CONSTRAINT FOREIGN KEY (ext_custom_audie
 
 ## 查詢您的擴充式加速存放區報告見解資料模型
 
-現在， `audienceinsight` 資料模型已增強，可隨時查詢。 下列SQL顯示對應的目的地和區段清單。
+現在， `audienceinsight` 資料模型已增強，可隨時查詢。 下列SQL顯示對應的目的地和對象清單。
 
 ```sql
 SELECT a.ext_custom_audience_id,
        b.destination_name,
-       b.segment_name,
+       b.audience_name,
        b.destination_status,
        b.destination_id,
-       b.segment_id
+       b.audience_id
 FROM   audiencemodel.externalaudiencereach1 AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
@@ -189,7 +189,7 @@ LIMIT  25;
 查詢會傳回查詢加速存放區上的所有資料集：
 
 ```console
-ext_custom_audience_id | destination_name |       segment_name        | destination_status | destination_id | segment_id 
+ext_custom_audience_id | destination_name |       audience_name        | destination_status | destination_id | audience_id 
 ------------------------+------------------+---------------------------+--------------------+----------------+-------------
  23850808595110554      | FCA_Test2        | United States             | enabled            |     -605911558 | -1357046572
  23850799115800554      | FCA_Test2        | Born in 1980s             | enabled            |     -605911558 | -1224554872
@@ -211,25 +211,25 @@ ext_custom_audience_id | destination_name |       segment_name        | destinat
 
 現在您已建立自訂資料模型，您可以利用自訂查詢和使用者定義儀表板將資料視覺化。
 
-下列SQL提供目的地中依對象區分的相符計數劃分，以及依區段區分的對象每個目的地。
+以下SQL提供目的地中依對象區分的相符計數劃分，以及依對象區分的每個目的地對象劃分。
 
 ```sql
 SELECT b.destination_name,
        a.approximate_count_upper_bound,
-       b.segment_name
+       b.audience_name
 FROM   audiencemodel.externalaudiencereach AS a
        LEFT OUTER JOIN audiencemodel.external_seg_dest_map AS b
                     ON ( ( a.ext_custom_audience_id ) = (
                          b.ext_custom_audience_id ) )
 GROUP  BY b.destination_name,
           a.approximate_count_upper_bound,
-          b.segment_name
+          b.audience_name
 ORDER BY b.destination_name
 LIMIT  5000
 ```
 
 下圖提供使用您的報表深入分析資料模型可能產生的自訂視覺效果範例。
 
-![根據根據新報告見解資料模型建立的目的地和區段Widget的相符計數。](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
+![根據根據新報表深入分析資料模型建立的目的地和受眾Widget的相符計數。](../../images/query-accelerated-store/user-defined-dashboard-widget.png)
 
 您的自訂資料模型可在使用者定義儀表板工作區中的可用資料模型清單中找到。 請參閱 [使用者定義儀表板指南](../../../dashboards/user-defined-dashboards.md) 取得有關如何使用自訂資料模型的指引。

@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform發行說明2022年1月
-description: Adobe Experience Platform的2022年1月發行說明。
+title: Adobe Experience Platform 發行說明 (2022 年 1 月)
+description: Adobe Experience Platform 2022 年 1 月版發行說明。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
 workflow-type: tm+mt
 source-wordcount: '1342'
-ht-degree: 3%
+ht-degree: 20%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 **發行日期：2022 年 1 月 26 日**
 
-Adobe Experience Platform 現有功能更新：
+Adobe Experience Platform 現有功能的更新：
 
 - [警報](#alerts)
 - [[!DNL Dashboards]](#dashboards)
@@ -21,12 +21,12 @@ Adobe Experience Platform 現有功能更新：
 - [[!DNL Destinations]](#destinations)
 - [查詢服務](#query-service)
 - [沙箱](#sandboxes)
-- [細分服務](#segmentation)
+- [Segmentation Service](#segmentation)
 - [來源](#sources)
 
 ## 警報 {#alerts}
 
-Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤內的標籤，並可選擇在UI本身或透過電子郵件通知接收警示訊息。
+Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤中，並可選擇在UI本身或透過電子郵件通知接收警示訊息。
 
 **更新的功能**
 
@@ -39,11 +39,11 @@ Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您�
 
 ## [!DNL Dashboards] {#dashboards}
 
-Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板檢視有關您組織資料的重要深入分析，如每日快照期間所擷取。
+Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要分析。
 
 | 功能 | 說明 |
 | --- | --- |
-| 智慧型註解 | 機器學習演演算法會自動提供您設定檔和受眾資料的深入分析，並說明30-90天或12個月期間的模式和趨勢。 註解包含的相關資訊 <ul><li>整體形狀和統計資料</li><li>趨勢和突然變化</li><li>季節性模式</li><li>未預期的異常</li></ul> 如需詳細資訊，請參閱 [設定檔控制面板](../../dashboards/guides/profiles.md#profiles-count-trend) 和 [區段控制面板](../../dashboards/guides/segments.md#audience-size-trend) 說明檔案。 |
+| 智慧型註解 | 機器學習演演算法會自動提供您設定檔和受眾資料的深入分析，並說明30-90天或12個月期間的模式和趨勢。 註解包含的相關資訊 <ul><li>整體形狀和統計資料</li><li>趨勢和突然變化</li><li>季節性模式</li><li>未預期的異常</li></ul> 如需詳細資訊，請參閱 [設定檔控制面板](../../dashboards/guides/profiles.md#profiles-count-trend) 和 [區段控制面板](../../dashboards/guides/audiences.md#audience-size-trend) 說明檔案。 |
 | 控制面板詳細目錄 | 在集中位置存取預先設定的設定檔、區段和目的地儀表板報表，包括任何已安裝的整合，例如PowerBI。 如需詳細資訊，請參閱 [[!DNL Dashboards] 詳細目錄檔案](../../dashboards/inventory.md). |
 | PowerBI報表範本 | 使用新的PowerBI圖表，從設定檔、區段和目的地報表資料模型建立、自訂或擴充量度。 自動化安裝工作流程可讓您在PowerBI環境中，跨組織分享行銷分析。 如需詳細資訊，請參閱 [PowerBI報表範本檔案](../../dashboards/integrations/power-bi.md). |
 
@@ -63,7 +63,7 @@ Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新功能或更新功能**
 
@@ -81,7 +81,7 @@ Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板�
 | [Adobe Target連線](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target應用程式可在跨網站、行動應用程式等的所有傳入客戶互動中提供即時的AI支援個人化和實驗。 Adobe Target是Adobe Experience Platform中的個人化連線。 |
 | [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md) | 此個人化連線提供一種方法，可讓您從Adobe Experience Platform將區段資訊擷取到外部個人化平台、內容管理系統、廣告伺服器，以及在客戶網站上執行的其他應用程式。 |
 
-如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
+如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
 ## 查詢服務 {#query-service}
 
@@ -108,9 +108,9 @@ Adobe Experience Platform的設計目的，是為了在全球範圍內豐富數�
 
 如需沙箱的詳細資訊，請參閱 [沙箱總覽](../../sandboxes/home.md).
 
-## 分段服務 {#segmentation}
+## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 透過描述可區分客戶群內可銷售人員群組的條件，來定義設定檔的特定子集。 區段能以記錄資料（例如人口資訊）或代表客戶與品牌互動的時間序列事件為基礎。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能**
 
@@ -118,13 +118,13 @@ Adobe Experience Platform的設計目的，是為了在全球範圍內豐富數�
 | --- | --- |
 | 區段比對 | 區段比對是一項資料共同作業服務，可讓兩名或以上Platform使用者根據通用識別碼，以安全、受管且隱私權友好的方式交換資料。 區段比對會使用Platform隱私權標準和個人識別碼，例如雜湊電子郵件、雜湊電話號碼，以及裝置識別碼，例如IDFA和GAID。 如需詳細資訊，請參閱 [區段比對概觀](../../segmentation/ui/segment-match/overview.md). |
 
-如需詳細資訊，請參閱 [!DNL Segmentation Service]，請參閱 [區段概觀](../../segmentation/home.md).
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 | 功能 | 說明 |
 | --- | --- |
