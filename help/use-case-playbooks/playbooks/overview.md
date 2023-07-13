@@ -1,56 +1,56 @@
 ---
 solution: Experience Platform
-title: 使用案例教戰手冊概覽
-description: 瞭解如何在Experience Platform中使用使用案例教戰手冊功能，以開始使用各種行銷使用案例
+title: 使用案例教戰手冊概觀
+description: 了解如何使用 Experience Platform 中的使用案例教戰手冊以開始使用各種行銷使用案例。
 badgeBeta: label="Beta" type="Informative"
 source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '400'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
-# （測試版）使用案例教戰手冊概覽
+# (Beta) 使用案例教戰手冊概觀
 
 >[!BEGINSHADEBOX]
 
-本檔案指南內容：
+本文件指南會提供以下內容：
 
-* **[使用案例教戰手冊概觀](#overview)**
+* **[使用案例教戰手冊的概觀](#overview)**
 * [快速入門](/help/use-case-playbooks/playbooks/get-started.md)
-* [探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md)
-* [建立、共用和重複使用教戰手冊例項](/help/use-case-playbooks/playbooks/create-share-reuse.md)
+* [探索正確的教戰手冊](/help/use-case-playbooks/playbooks/discover.md)
+* [建立、共用和重複使用教戰手冊執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [疑難排解和已知限制](troubleshooting.md)
 
 >[!ENDSHADEBOX]
 
 >[!AVAILABILITY]
 >
->此功能目前為測試版，並未開放所有使用者使用。 文件和功能可能會有所變更。
+>此功能目前為 Beta 版，尚未供所有使用者使用。文件和功能可能會有所變更。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-替換為 [!UICONTROL 使用案例教戰手冊]，受益於自動化工作流程，以幫助您的資料工程團隊更快實施使用案例。 瀏覽中可用的教戰手冊 **[!UICONTROL 使用案例教戰手冊]** 區段，以開始使用各種可加快您採用Experience Platform的使用案例。
+[!UICONTROL 使用案例教戰手冊]可讓您獲取自動化工作流程的優勢，有助於您的資料工程團隊更快速地實作使用案例。若要開始使用可加速您採用 Experience Platform 的各種使用案例，可瀏覽&#x200B;**[!UICONTROL 使用案例教戰手冊]**&#x200B;一節中可使用的教戰手冊。
 
 ![檢視所有教戰手冊](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 
-每個教戰手冊都包含它解決的特定使用案例的相關資訊。
+每個教戰手冊都包含有關該手冊解決的特定使用案例的資訊。
 
-如果您選取Real-Time CDP教戰手冊，您的目標可能是產生對象，然後您可以將其對應至目的地，以執行行銷活動。
+如果您選取 Real-Time CDP 教戰手冊，您的目標可能是產生您接著可對應至目的地的對象，以執行行銷活動。
 
-如果您選取Adobe Journey Optimizer Playbook，目標可能是於產品內建立客戶歷程，並向客戶傳送相關訊息。
+如果您選取 Adob&#x200B;&#x200B;e Journey Optimizer 教戰手冊，您的目標可能是在產品內部建構客戶歷程，並向客戶傳送相關訊息。
 
-建立Playbook的例項，以產生為您的使用案例量身打造且可在Experience Platform中重複使用的特定資產，例如結構描述、區段或歷程。 這些物件的目的是協助您瞭解實作特定使用案例所需的所有資源。 它們不包含任何資料，並在開發沙箱上建立。 開始使用這些資產或在使用這些資產之前對其進行編輯，並在Real-time CDP或Journey Optimizer中將其與您的團隊分享。
+建立教戰手冊的執行個體以產生特定資產，例如根據您的使用案例量身打造並可在 Experience Platform 中重複使用的綱要、區段或歷程。這些物件的目的是協助您了解實作特定使用案例所需的所有資源。它們不包含任何資料，並且是建立在開發沙箱上。開始使用這些資產或對其進行編輯，然後再使用它們並在 Real-time CDP 或 Journey Optimizer 中和您的團隊共用。
 
 ## 可用性
 
-部分 [!UICONTROL 使用案例教戰手冊] 專為Real-time CDP使用案例量身打造，其他則最適合使用Journey Optimizer的客戶。 瀏覽目錄以尋找最適合您的產品和使用案例的行動手冊。
+部分[!UICONTROL 使用案例教戰手冊]是根據 Real-time CDP 使用案例量身打造的，而其他則最適用使用 Journey Optimizer 的客戶。 瀏覽目錄以找到最適合您的產品和使用案例的教戰手冊。
 
-## UI指南
+## UI 指南
 
-在您決定要使用的教戰手冊後，請從UI中選取它並開始使用。 閱讀以下內容的UI指南 [如何探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md) 為您和 [如何建立、共用及重複使用playbook例項](/help/use-case-playbooks/playbooks/create-share-reuse.md) 有關如何建立執行個體並充分利用行動手冊的完整資訊。
+決定您要使用的教戰手冊後，請從 UI 中將其選取並開始使用。如需有關如何建立執行個體並善用教戰手冊的完整資訊，請至「[如何探索適合您的教戰手冊](/help/use-case-playbooks/playbooks/discover.md)以及[如何建立、共用和重複使用教戰手冊執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md)」詳閱 UI 指南。
 
 ## 疑難排解和已知限制
 
-若您在使用教戰手冊時可能遇到的任何問題，請參閱 [疑難排解和已知限制](/help/use-case-playbooks/playbooks/troubleshooting.md) 頁面。
+若要了解您在使用教戰手冊時可能遇到的任何問題，請參閱「[疑難排解和已知限制](/help/use-case-playbooks/playbooks/troubleshooting.md)」頁面。
