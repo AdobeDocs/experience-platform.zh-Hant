@@ -1,52 +1,52 @@
 ---
-title: 使用Adobe Experience Platform Assurance
-description: 本指南說明在安裝及實作後，如何使用Adobe Experience Platform Assurance。
+title: 使用 Adobe Experience Platform Assurance
+description: 本指南會說明在安裝並實作 Adob​​e Experience Platform Assurance 之後如何使用。
 exl-id: 872c83d1-82e8-40d8-9b66-3e51a91a955f
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '402'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# 使用Adobe Experience Platform Assurance
+# 使用 Adobe Experience Platform Assurance
 
-本教學課程說明如何使用Adobe Experience Platform保證。 如需如何安裝及實作Adobe Experience Platform Assurance擴充功能的說明，請閱讀以下教學課程： [實作Assurance擴充功能](./implement-assurance.md).
+本教學課程會說明如何使用 Adob&#x200B;&#x200B;e Experience Platform Assurance。如需有關如何安裝和實作 Adob&#x200B;&#x200B;e Experience Platform Assurance 擴充功能的說明，請閱讀有關[實作 Assurance 擴充功能](./implement-assurance.md)的教學課程。
 
 ## 建立工作階段
 
-登入之後 [保證UI](https://experience.adobe.com/assurance)，您可以選取 **[!UICONTROL 建立工作階段]** 以開始建立工作階段。
+登入 [Assurance UI](https://experience.adobe.com/assurance) 後，您可選取「**[!UICONTROL 建立工作階段]**」，即可開始建立工作階段。
 
-![建立工作階段按鈕會反白顯示，顯示您可以在何處建立工作階段。](./images/using-assurance/create-session.png)
+![建立工作階段按鈕會反白顯示，向您顯示可以在哪裡建立工作階段。](./images/using-assurance/create-session.png)
 
-此 **[!UICONTROL 建立新工作階段]** 對話方塊隨即顯示。 請檢閱指定的指示，然後繼續選取 **[!UICONTROL 開始]**.
+「**[!UICONTROL 建立新工作階段]**」對話框會隨即顯示。請檢閱規定的說明，然後選取「**[!UICONTROL 開始]**」以繼續進行。
 
-![「建立新工作階段」對話方塊隨即顯示，其中顯示如何使用「保證」的說明。](./images/using-assurance/create-new-session.png)
+![「建立新工作階段」對話框會隨即顯示，其中會顯示有關如何使用 Assurance 的說明。](./images/using-assurance/create-new-session.png)
 
-您現在可以輸入名稱來識別工作階段，然後提供 **[!UICONTROL 基本URL]** （應用程式的深層連結URL）。 提供這些詳細資料後，請選取 **[!UICONTROL 下一個]**.
+您現在可以輸入名稱以識別工作階段，然後提供&#x200B;**[!UICONTROL 基礎 URL]** (您的應用程式的深度連結 URL)。提供這些詳細資料後，請選取「**[!UICONTROL 下一步]**」。
 
 >[!INFO]
 >
->基礎URL是用來從URL啟動應用程式的根定義。 產生工作階段URL，您可以透過它啟動Assurance工作階段。 範例值可能如下所示： `myapp://default` 在 **[!UICONTROL 基本URL]** 欄位中，輸入應用程式的基本深層連結定義。
+>基礎 URL 是用於從 URL 啟動應用程式的根定義。會產生一個工作階段 URL，您可藉以啟動 Assurance 工作階段。範例值可能如下所示：`myapp://default`在&#x200B;**[!UICONTROL 基礎 URL]** 欄位中，輸入您的應用程式的基礎深度連結定義。
 
-![隨即顯示建立新工作階段的完整工作流程。](./images/using-assurance/create-session.gif)
+![建立新工作階段的完整工作流程即會顯示。](./images/using-assurance/create-session.gif)
 
-## 連線至工作階段
+## 連線到工作階段
 
-建立工作階段後，請確定您看到 **[!UICONTROL 建立新工作階段]** 對話方塊現在會顯示連結、QR碼和PIN。
+建立工作階段後，請確保您看到「**[!UICONTROL 建立新工作階段]**」對話框現在顯示一個連結、一個 QR 碼和一個 PIN。
 
-![會顯示一個對話方塊，顯示連線至您的保證工作階段的選項。](./images/using-assurance/create-new-session-pin.png)
+![顯示連線到 Assurance 工作階段的選項的對話框會隨即顯示。](./images/using-assurance/create-new-session-pin.png)
 
-如果出現此對話方塊，您可以使用裝置的相機應用程式來掃描二維碼並開啟應用程式，或複製連結並在應用程式中開啟。 應用程式啟動時，應該會看到PIN輸入畫面重疊。 輸入上一步驟的PIN並按下 **[!UICONTROL Connect]**.
+如果顯示此對話框，您可以使用裝置的相機應用程式掃描 QR 碼並開啟您的應用程式，或者將連結複製並在您的應用程式中開啟。您的應用程式啟動時，您應該會看到 PIN 登入畫面重疊。請輸入上一步中的 PIN，然後按下「**[!UICONTROL 連線]**」。
 
-當應用程式上顯示Adobe Experience Platform圖示(紅色Adobe「A」)時，您可驗證應用程式是否已連線至Assurance。
+您的應用程式上顯示 Adob&#x200B;&#x200B;e Experience Platform 圖示 (紅色的 Adob&#x200B;&#x200B;e「A」) 時，您可以驗證您的應用程式是否已和 Assurance 連線。
 
-![顯示將應用程式連線至保證工作階段的完整工作流程。](./images/using-assurance/connect-session.gif)
+![將您的應用程式和 Assurance 工作階段連線的完整工作流程會隨即顯示。](./images/using-assurance/connect-session.gif)
 
 ## 匯出工作階段
 
-若要匯出保證工作階段，請在應用程式的工作階段詳細資訊頁面上，選取 **[!UICONTROL 匯出至JSON]** 在工作階段中：
+若要匯出 Assurance 工作階段，請在應用程式的工作階段詳細資料頁面上，在工作階段中選取「**[!UICONTROL 匯出為 JSON]**」：
 
-![匯出工作階段](./images/using-assurance/export-session.png)
+![匯出一個工作階段](./images/using-assurance/export-session.png)
 
-匯出選項會遵從搜尋篩選結果，並只匯出事件檢視中顯示的事件。 例如，如果您搜尋&quot;track&quot;事件，然後選取 **[!UICONTROL 匯出至JSON]**，只會匯出「追蹤」事件結果。
+匯出選項會遵守搜尋篩選結果，並且只會匯出顯示在事件檢視中的事件。例如，如果您搜尋「追蹤」事件，然後選取「**[!UICONTROL 匯出為 JSON]**」，則只會匯出「追蹤」事件的結果。
