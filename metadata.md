@@ -15,9 +15,9 @@ type: Documentation
 index: true
 role: Architect, Developer, Data Architect, Data Engineer, User, Admin, Leader
 source-git-commit: 3dbf99bd25bb2e3983de2ca5f0e1f20e9020ba7e
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '111'
+ht-degree: 100%
 
 ---
 
