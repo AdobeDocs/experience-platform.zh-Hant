@@ -3,7 +3,7 @@ title: (Beta)Experience Cloud對象
 description: 瞭解如何將受眾從Experience Platform分享至各種Experience Platform解決方案。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 1288652ca3b18b4adb357b2d8884f408725cb0a2
 workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 2%
@@ -65,7 +65,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 ### 適用於使用舊版受眾共用解決方案的客戶
 
-如果您已透過，將受眾從Experience Platform分享到Audience Manager和其他Experience Cloud解決方案 [舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)，您必須聯絡客戶服務或您的Adobe客戶團隊，才能停用舊版整合。 客戶服務和Adobe帳戶團隊必須檔案Jira票證(請參閱範本票證AAM-52354)才能停用整合。
+如果您已透過，將受眾從Experience Platform分享到Audience Manager和其他Experience Cloud解決方案 [舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam)，您必須聯絡客戶服務或您的Adobe客戶團隊，才能停用舊版整合。 客戶服務和Adobe帳戶團隊必須檔案Jira票證(請參閱範本票證PLAT-160986)才能停用整合。
 
 解決測試版客戶取消布建票證的週轉時間為六個工作天或更短。 停用現有的舊版整合後，您可以繼續前往 [建立連線](#connect) 透過自助目的地卡。
 
