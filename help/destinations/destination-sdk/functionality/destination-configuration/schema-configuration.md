@@ -1,10 +1,10 @@
 ---
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 5%
+source-wordcount: '1892'
+ht-degree: 4%
 
 ---
 
@@ -91,7 +91,10 @@ Destination SDK支援多個結構描述設定：
       "useCustomerSchemaForAttributeMapping":false,
       "profileRequired":true,
       "segmentRequired":true,
-      "identityRequired":true
+      "identityRequired":true,
+      "segmentNamespaceAllowList": ["someNamespace"],
+      "segmentNamespaceDenyList": ["someOtherNamespace"]
+
 }
 ```
 
@@ -102,6 +105,8 @@ Destination SDK支援多個結構描述設定：
 | `profileRequired` | 布林值 | 選填 | 使用 `true` 使用者是否應該能夠將Experience Platform中的設定檔屬性對應至目的地平台上的自訂屬性。 |
 | `segmentRequired` | 布林值 | 必填 | Destination SDK需要此引數，且此引數應一律設為 `true`. |
 | `identityRequired` | 布林值 | 必填 | 設定為 `true` 如果使用者應該能夠 [身分型別](identity-namespace-configuration.md) 從Experience Platform到您在 `profileFields` 陣列。 |
+| `segmentNamespaceAllowList` | 陣列 | 選填 | 定義使用者可將對象對應至目的地的特定對象名稱空間。 使用此引數可限制Platform使用者僅從您在陣列中定義的對象名稱空間匯出對象。 此引數不能與搭配使用 `segmentNamespaceDenyList`.<br> <br> 範例： `"segmentNamespaceAllowList": ["AudienceManager"]` 將允許使用者僅對應來自 `AudienceManager` 名稱空間至此目的地。 <br> <br> 若要允許使用者將任何對象匯出至您的目的地，您可以忽略此引數。 <br> <br> 若兩者皆有 `segmentNamespaceAllowList` 和 `segmentNamespaceDenyList` 您的設定中缺少，使用者將只能匯出源自 [細分服務](../../../../segmentation/home.md). |
+| `segmentNamespaceDenyList` | 陣列 | 選填 | 限制從陣列中定義的對象名稱空間將對象對應到目的地的使用者。 不能與一起使用 `segmentNamespaceAllowed`. <br> <br> 範例： `"segmentNamespaceDenyList": ["AudienceManager"]` 會封鎖使用者，使其無法從以下對應對象： `AudienceManager` 名稱空間至此目的地。 <br> <br> 若要允許使用者將任何對象匯出至您的目的地，您可以忽略此引數。 <br> <br> 若兩者皆有 `segmentNamespaceAllowed` 和 `segmentNamespaceDenyList` 您的設定中缺少，使用者將只能匯出源自 [細分服務](../../../../segmentation/home.md). <br> <br> 若要允許匯出所有對象，無論其來源為何，請設定 `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
 
