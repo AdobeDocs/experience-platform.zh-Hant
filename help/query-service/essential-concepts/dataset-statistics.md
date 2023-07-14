@@ -1,9 +1,9 @@
 ---
 title: 資料集統計資料計算
 description: 本檔案說明如何使用SQL命令計算Azure Data Lake Storage (ADLS)資料集的欄層級統計資料。
-source-git-commit: c42a7cd46f79bb144176450eafb00c2f81409380
+source-git-commit: c7bc395038906e27449c82c518bd33ede05c5691
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -49,16 +49,37 @@ This second example, is a more real-world example as it uses an alias name. See 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS as <alias_name>;
 ``` -->
 
-主控台輸出不會顯示回應analyze table compute statistics命令的統計資料。 相反地，主控台將顯示單列欄， `Statistics ID` 具有通用唯一識別碼以參考結果。 成功完成 `COMPUTE STATISTICS` 查詢，結果顯示如下：
+主控台輸出不會顯示回應analyze table compute statistics命令的統計資料。 相反地，主控台將顯示單列欄， `Statistics ID` 具有通用唯一識別碼以參考結果。 您也可以選擇 **直接在`Statistics ID`**. 成功完成 `COMPUTE STATISTICS` 查詢，結果顯示如下：
 
 ```console
 | Statistics ID    | 
 | ---------------- |
-| QqMtDfHQOdYJpZlb |
+| adc_geometric_stats_1 |
 (1 row)
 ```
 
-若要檢視輸出，您必須使用 `SHOW STATISTICS` 命令。 指示 [如何顯示統計資料](#show-statistics) 稍後在檔案中提供。
+您可以參考 `Statistics ID` 如下所示：
+
+```sql
+SELECT * FROM adc_geometric_stats_1; 
+```
+
+此陳述式可讓您在搭配使用時，以類似於SHOW STATISTICS命令的方式檢視輸出 `Statistics ID`.
+
+您可以執行SHOW STATISTICS命令來檢視階段作業中所有已計算的統計值清單。 SHOW STATISTICS命令的範例輸出如下所示。
+
+```console
+statsId | tableName | columnSet | filterContext | timestamp
+-----------+---------------+-----------+---------------------------------------+---------------
+adc_geometric_stats_1 |adc_geometric | (age) | | 25/06/2023 09:22:26
+demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
+```
+
+<!-- Commented out until the <alias_name> feature is released.
+
+To see the output, you must use the `SHOW STATISTICS` command. Instructions on [how to show the statistics](#show-statistics) are provided later in the document. 
+
+-->
 
 ## 限制包含的欄 {#limit-included-columns}
 
@@ -90,7 +111,8 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:00:00') and timestamp <= to_timestamp('2023-04-05 00:00:00')) COMPUTE STATISTICS FOR columns (commerce, id, timestamp);
 ```
 
-<!-- ## Create an alias name {#alias-name}
+<!-- Commented out until the <alias_name> feature is released.
+## Create an alias name {#alias-name}
 
 Since the filter condition and the column list can target a large amount of data, it is unrealistic to remember the exact values. Instead, you can provide an `<alias_name>` to store this calculated information. If you do not provide an alias name for these calculations, Query Service generates a universally unique identifier for the alias ID. You can then use this alias ID to look up the computed statistics with the `SHOW STATISTICS` command. 
 
@@ -104,22 +126,24 @@ The example below stores the output computed statistics in the `alias_name` for 
 ANALYZE TABLE adc_geometric COMPUTE STATISTICS FOR ALL COLUMNS as alias_name;
 ```
 
-The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. -->
-
-## 顯示統計資料 {#show-statistics}
+The output for the above example is `SUCCESSFULLY COMPLETED, alias_name`. The console output does not display the statistics in the response of the analyze table compute statistics command. To see the output, you must use the `SHOW STATISTICS` command discussed below. 
+-->
 
 <!-- Commented out until the <alias_name> feature is released.
-The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  -->
 
-即使使用篩選條件和欄清單，計算仍可鎖定大量資料。 查詢服務會產生統計資料ID的通用唯一識別碼，以儲存此計算的資訊。 然後，您可以使用此統計資料ID來查詢運算出的統計資料，並附上 `SHOW STATISTICS` 命令。
+## Show the statistics {#show-statistics}
 
-產生的統計值ID和統計值只適用於此特定階段作業，無法跨不同的PSQL階段作業存取。 計算的統計資料目前不是永久性的。 若要顯示統計資料，請使用下列命令。
+The alias name used in the query is available as soon as the `ANALYZE TABLE` command has been run.  
+
+Even with a filter condition and a column list, the computation can target a large amount of data. Query Service generates a universally unique identifier for the statistics ID to store this calculated information. You can then use this statistics ID to look up the computed statistics with the `SHOW STATISTICS` command at any time within that session. 
+
+The statistics ID and the statistics generated are only valid for this particular session and cannot be accessed across different PSQL sessions. The computed statistics are not currently persistent. To display the statistics, use the command seen below.
 
 ```sql
 SHOW STATISTICS FOR <STATISTICS_ID>;
 ```
 
-輸出內容可能類似於以下範例。
+An output might look similar to the example below. 
 
 ```console
                          columnName                         |      mean      |      max       |      min       | standardDeviation | approxDistinctCount | nullCount | dataType  
@@ -138,6 +162,8 @@ SHOW STATISTICS FOR <STATISTICS_ID>;
  timestamp                                                  |            0.0 |            0.0 |            0.0 |               0.0 |                98.0 |         3 | Timestamp
 (12 rows)
 ```
+
+-->
 
 ## 後續步驟 {#next-steps}
 
