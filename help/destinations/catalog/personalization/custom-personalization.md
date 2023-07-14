@@ -1,12 +1,12 @@
 ---
 keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
-description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取區段資訊。 此目的地會根據使用者設定檔區段成員資格，提供即時個人化。
+description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者個人資料對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
-source-wordcount: '879'
-ht-degree: 9%
+source-wordcount: '935'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,11 @@ ht-degree: 9%
 >
 ><br>如果您已在使用Web SDK或Mobile SDK進行整合，您可以透過新增伺服器端整合來透過伺服器API擷取屬性。
 >
-><br>如果您未遵循上述要求，個人化將僅以區段成員資格為基礎。
+><br>如果您未遵循上述要求，個人化將僅以對象成員資格為基礎。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-此目的地提供從Adobe Experience Platform擷取區段資訊至外部個人化平台、內容管理系統、廣告伺服器和客戶網站上執行的其他應用程式的方法。
+此目的地提供從Adobe Experience Platform擷取對象資訊到外部個人化平台、內容管理系統、廣告伺服器和客戶網站上執行的其他應用程式的方法。
 
 ## 先決條件 {#prerequisites}
 
@@ -41,19 +41,33 @@ ht-degree: 9%
 >
 >在建立自訂個人化連線之前，請閱讀以下操作指南： [啟用邊緣個人化目的地的受眾資料](../../ui/activate-edge-personalization-destinations.md). 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行必要的設定步驟。
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!DNL Profile request]** | 您正在請求在單一設定檔的自訂個人化目的地中對應的所有區段。 可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../edge/datastreams/overview.md). |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../edge/datastreams/overview.md). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## 連線到目的地 {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流 ID"
->abstract="此選項會確定哪個資料收集資料流中會在頁面回應中包含區段。下拉式選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
+>abstract="此選項會決定要在頁面的回應中包含哪些資料收集資料串流。 下拉式選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=zh-Hant" text="了解如何設定資料流"
 
 >[!IMPORTANT]
@@ -69,7 +83,7 @@ ht-degree: 9%
 * **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL 說明]**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
 * **[!UICONTROL 整合別名]**：此值會以JSON物件名稱的形式傳送至Experience PlatformWeb SDK。
-* **[!UICONTROL 資料串流ID]**：這會決定區段會包含在頁面的回應中的資料收集資料串流。 下拉式選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../edge/datastreams/overview.md) 以取得更多詳細資料。
+* **[!UICONTROL 資料串流ID]**：這會決定要將對象包含在頁面的回應中的資料收集資料串流。 下拉式選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../edge/datastreams/overview.md) 以取得更多詳細資料。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -77,13 +91,13 @@ ht-degree: 9%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [啟用設定檔和區段邊緣個人化目的地](../../ui/activate-edge-personalization-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [啟用設定檔和受眾邊緣個人化目的地](../../ui/activate-edge-personalization-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 匯出的資料 {#exported-data}
 
@@ -111,7 +125,7 @@ ht-degree: 9%
 
 如果您沒有使用 [標籤](../../../tags/home.md) 若要部署Experience PlatformWeb SDK，請使用 [處理來自事件的回應](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 功能以檢視匯出的資料。
 
-來自Adobe Experience Platform的JSON回應可加以剖析，以找出您要與Adobe Experience Platform整合之應用程式的對應整合別名。 區段ID可作為定位引數傳遞至應用程式的程式碼中。 以下是目標回應專屬內容的範例。
+來自Adobe Experience Platform的JSON回應可加以剖析，以找出您要與Adobe Experience Platform整合之應用程式的對應整合別名。 對象ID可作為定位引數傳遞至應用程式的程式碼。 以下是目標回應專屬內容的範例。
 
 ```
 alloy("sendEvent", {
@@ -132,11 +146,11 @@ alloy("sendEvent", {
         // Get the destination with a particular alias
         var personalizationDestinations = result.destinations.filter(x => x.alias == "personalizationAlias")
         if(personalizationDestinations.length > 0) {
-             // Code to pass the segment IDs into the system that corresponds to personalizationAlias
+             // Code to pass the audience IDs into the system that corresponds to personalizationAlias
         }
         var adServerDestinations = result.destinations.filter(x => x.alias == "adServerAlias")
         if(adServerDestinations.length > 0) {
-            // Code to pass the segment ids into the system that corresponds to adServerAlias
+            // Code to pass the audience IDs into the system that corresponds to adServerAlias
         }
      }
    })

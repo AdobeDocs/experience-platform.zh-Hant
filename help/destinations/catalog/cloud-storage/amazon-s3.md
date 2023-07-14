@@ -2,10 +2,10 @@
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 13%
+source-wordcount: '1110'
+ht-degree: 11%
 
 ---
 
@@ -28,14 +28,28 @@ ht-degree: 13%
 * 可透過以下方式設定匯出檔案中的自訂檔案標頭： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 建立與您的的即時輸出連線 [!DNL Amazon S3] 儲存空間，定期將資料檔案從Adobe Experience Platform匯出至您自己的S3貯體。
 
 ## 連線至您的 [!DNL Amazon S3] 透過API或UI儲存 {#connect-api-or-ui}
 
-* 若要連線至您的 [!DNL Amazon S3] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
-* 若要連線至您的 [!DNL Amazon S3] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
+* 若要連線至您的 [!DNL Amazon S3] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 下方的。
+* 若要連線至您的 [!DNL Amazon S3] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -82,7 +96,7 @@ ht-degree: 13%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_folderpath"
 >title="檔案夾路徑"
->abstract="必須僅包含字元 A-Z、a-z、0-9，並且可以包含以下特殊字元：`/!-_.'()"^[]+$%.*"`。若要為每個區段檔案建立一個檔案夾，請將巨集 `/%SEGMENT_NAME%` 或 `/%SEGMENT_ID%` 或 `/%SEGMENT_NAME%/%SEGMENT_ID%` 插入文字欄位。只能將巨集插入檔案夾路徑的末尾。檢視文件中的巨集範例。"
+>abstract="必須僅包含字元 A-Z、a-z、0-9，並且可以包含以下特殊字元：`/!-_.'()"^[]+$%.*"`。若要為每個對象檔案建立資料夾，請插入巨集 `/%SEGMENT_NAME%` 或 `/%SEGMENT_ID%` 或 `/%SEGMENT_NAME%/%SEGMENT_ID%` 至文字欄位。 只能將巨集插入檔案夾路徑的末尾。檢視文件中的巨集範例。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=zh-Hant#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
 
 若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
@@ -97,7 +111,7 @@ ht-degree: 13%
 
 >[!TIP]
 >
->在連線目標工作流程中，您可以根據匯出的每個區段檔案，在Amazon S3儲存空間中建立自訂資料夾。 讀取 [使用巨集在您的儲存位置中建立資料夾](overview.md#use-macros) 以取得指示。
+>在連線目標工作流程中，您可以根據匯出的受眾檔案，在Amazon S3儲存空間中建立自訂資料夾。 讀取 [使用巨集在您的儲存位置中建立資料夾](overview.md#use-macros) 以取得指示。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -126,13 +140,13 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## (Beta)匯出資料集 {#export-datasets}
 
@@ -143,4 +157,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL Amazon S3] 目的地， [!DNL Platform] 會在您提供的儲存位置中建立資料檔案。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 區段啟動教學課程中的。
+對象 [!DNL Amazon S3] 目的地， [!DNL Platform] 會在您提供的儲存位置中建立資料檔案。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。

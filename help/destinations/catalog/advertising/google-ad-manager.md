@@ -3,16 +3,16 @@ keywords: google廣告管理員；google廣告；doubleclick；DoubleClick AdX�
 title: Google Ad Manager連線
 description: Google Ad Manager （舊稱為DoubleClick for Publishers或DoubleClick AdX）是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式管理其網站上廣告的顯示。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 5%
+source-wordcount: '992'
+ht-degree: 2%
 
 ---
 
 # [!DNL Google Ad Manager] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL Google Ad Manager]，先前稱為 [!DNL DoubleClick for Publishers] (DFP)或 [!DNL DoubleClick AdX]，是來自的廣告服務平台 [!DNL Google] 這可讓發佈商透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 
@@ -22,8 +22,8 @@ ht-degree: 5%
 
 * 啟用的對象是以程式設計方式建立於 [!DNL Google] 平台。
 * [!DNL Platform] 目前不包含用於驗證成功啟用的測量量度。 請參考Google中的對象計數，以驗證整合併瞭解對象鎖定目標大小。
-* 將區段對應至之後 [!DNL Google Ad Manager] 目的地，區段名稱會隨即出現在 [!DNL Google Ad Manager] 使用者介面。
-* 區段母體需要24到48小時才能顯示於 [!DNL Google Ad Manager]. 此外，區段必須有至少50個設定檔的對象大小，才能顯示在 [!DNL Google Ad Manager]. 對象規模小於50個設定檔的區段不會填入 [!DNL Google Ad Manager].
+* 將對象對應至之後 [!DNL Google Ad Manager] 目的地，對象名稱會立即出現在 [!DNL Google Ad Manager] 使用者介面。
+* 區段母體需要24到48小時才能顯示於 [!DNL Google Ad Manager]. 此外，受眾必須具有至少50個設定檔的受眾大小，才能顯示在 [!DNL Google Ad Manager]. 大小小於50個設定檔的對象將不會填入 [!DNL Google Ad Manager].
 
 ## 支援的身分 {#supported-identities}
 
@@ -41,14 +41,28 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在將區段（受眾）的所有成員匯出至Google目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至Google目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,8 +89,8 @@ ht-degree: 5%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="將區段 ID 附加到區段名稱"
->abstract="選取此選項可讓 Google Ad Manager 中的區段名稱包含來自 Experience Platform 的區段 ID，如下所示：`Segment Name (Segment ID)`"
+>title="將對象ID附加至對象名稱"
+>abstract="選取此選項，讓Google Ad Manager中的對象名稱包含Experience Platform中的對象ID，如下所示： `Audience Name (Audience ID)`"
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊：
 
@@ -86,7 +100,7 @@ ht-degree: 5%
 * **[!UICONTROL 帳戶型別]**：根據您使用Google的帳戶，選取選項：
    * 使用 `DFP by Google` 的 [!DNL DoubleClick] 適用於發佈商的
    * 使用 `AdX buyer` 的 [!DNL Google AdX]
-* **[!UICONTROL 將區段ID附加至區段名稱]**：選取此選項，讓Google Ad Manager中的區段名稱包含Experience Platform中的區段ID，如下所示： `Segment Name (Segment ID)`.
+* **[!UICONTROL 將對象ID附加至對象名稱]**：選取此選項，讓Google Ad Manager中的對象名稱包含Experience Platform中的對象ID，如下所示： `Audience Name (Audience ID)`.
 
 >[!NOTE]
 >
@@ -98,13 +112,13 @@ ht-degree: 5%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 匯出的資料 {#exported-data}
 

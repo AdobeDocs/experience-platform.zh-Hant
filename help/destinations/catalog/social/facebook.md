@@ -3,20 +3,20 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: facebook連線
 description: 為您的Facebook行銷活動啟用設定檔，以根據雜湊電子郵件進行對象目標定位、個人化和抑制。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1906'
 ht-degree: 6%
 
 ---
 
 # [!DNL Facebook] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 為您的啟動設定檔 [!DNL Facebook] 根據雜湊電子郵件進行對象目標定位、個人化和抑制的行銷活動。
 
-您可以使用此目的地來定位整個領域的對象 [!DNL Facebook’s] 支援的應用程式系列 [!DNL Custom Audiences]，包括 [!DNL Facebook]， [!DNL Instagram]， [!DNL Audience Network]、和 [!DNL Messenger]. 在 [!DNL Facebook Ads Manager] 中的廣告版位層級會指出您選擇針對哪個應用程式執行行銷活動。
+您可以使用此目的地來定位整個領域的對象 [!DNL Facebook's] 支援的應用程式系列 [!DNL Custom Audiences]，包括 [!DNL Facebook]， [!DNL Instagram]， [!DNL Audience Network]、和 [!DNL Messenger]. 在 [!DNL Facebook Ads Manager] 中的廣告版位層級會指出您選擇針對哪個應用程式執行行銷活動。
 
 ![Adobe Experience Platform UI中的Facebook目的地](../../assets/catalog/social/facebook/catalog.png)
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 ### 使用案例#1
 
-線上零售商想要透過社交平台觸及現有客戶，並根據他們先前的訂單向他們顯示個人化優惠。 線上零售商可以從其CRM擷取電子郵件地址至Adobe Experience Platform、從自己的離線資料建立區段，並將這些區段傳送至 [!DNL Facebook] 社交平台，最佳化廣告支出。
+線上零售商想要透過社交平台觸及現有客戶，並根據他們先前的訂單向他們顯示個人化優惠。 線上零售商可從其CRM擷取電子郵件地址至Adobe Experience Platform，從自己的離線資料建立對象，並將這些對象傳送至 [!DNL Facebook] 社交平台，最佳化廣告支出。
 
 ### 使用案例#2
 
@@ -34,7 +34,7 @@ ht-degree: 6%
 
 若要在社群媒體上鎖定他們，他們可以使用電子郵件地址作為識別碼，將客戶資料從其CRM載入Adobe Experience Platform。
 
-接著，他們可以使用離線資料（包括相關聯的會籍ID和客戶階層），建立新的受眾區段，並透過 [!DNL Facebook] 目的地。
+接著，他們可以使用離線資料（包括相關聯的會籍ID和客戶階層）建立新受眾，並透過 [!DNL Facebook] 目的地。
 
 ## 支援的身分 {#supported-identities}
 
@@ -48,30 +48,44 @@ ht-degree: 6%
 | email_lc_sha256 | 使用SHA256演演算法雜湊處理的電子郵件地址 | Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請依照 [ID比對需求](#id-matching-requirements-id-matching-requirements) 區段，並針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。 當來源欄位包含未雜湊屬性時，請檢查 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，選取此目標身分。 |
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，以及Facebook目的地中使用的識別碼（名稱、電話號碼或其他）。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正使用Facebook目的地中使用的識別碼（名稱、電話號碼或其他）匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## facebook帳戶必要條件 {#facebook-account-prerequisites}
 
-將受眾區段傳送至之前 [!DNL Facebook]，確認您符合下列需求：
+將受眾傳送至之前 [!DNL Facebook]，確認您符合下列需求：
 
 * 您的 [!DNL Facebook] 使用者帳戶必須具備 **[!DNL Manage campaigns]** 已為您計畫使用的廣告帳戶啟用許可權。
 * 此 **Adobe Experience Cloud** 必須將商業帳戶新增為中的廣告合作夥伴 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`. 另請參閱 [新增合作夥伴至您的業務經理](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
-   >[!IMPORTANT]
-   >
-   > 設定Adobe Experience Cloud的許可權時，您必須啟用 **管理行銷活動** 許可權。 以下專案需要許可權： [!DNL Adobe Experience Platform] 整合。
+  >[!IMPORTANT]
+  >
+  > 設定Adobe Experience Cloud的許可權時，您必須啟用 **管理行銷活動** 許可權。 以下專案需要許可權： [!DNL Adobe Experience Platform] 整合。
 * 閱讀並簽署 [!DNL Facebook Custom Audiences] 服務條款。 若要這麼做，請前往 `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中 `accountID` 是您的 [!DNL Facebook Ad Account ID].
-   >[!IMPORTANT]
-   >
-   >簽署時 [!DNL Facebook Custom Audiences] 服務條款，請務必使用您在Facebook API中驗證時所用的相同使用者帳戶。
+  >[!IMPORTANT]
+  >
+  >簽署時 [!DNL Facebook Custom Audiences] 服務條款，請務必使用您在Facebook API中驗證時所用的相同使用者帳戶。
 
 ## ID比對需求 {#id-matching-requirements}
 
@@ -125,7 +139,7 @@ ht-degree: 6%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-以下影片也會示範設定 [!DNL Facebook] 目的地和啟用區段。
+以下影片也會示範設定 [!DNL Facebook] 目的地和啟用對象。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
@@ -159,12 +173,12 @@ ht-degree: 6%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="對象來源"
->abstract="選擇最初如何在區段中收集客戶資料。當區段以使用者為目標時，資料會顯示在 Facebook 中"
+>abstract="選擇最初收集對象中客戶資料的方式。 當區段以使用者為目標時，資料會顯示在 Facebook 中"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -185,9 +199,9 @@ ht-degree: 6%
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
-在 **[!UICONTROL 區段排程]** 步驟，您必須提供 [!UICONTROL 對象來源] 將區段傳送至 [!DNL Facebook Custom Audiences].
+在 **[!UICONTROL 區段排程]** 步驟，您必須提供 [!UICONTROL 對象來源] 將對象傳送至 [!DNL Facebook Custom Audiences].
 
 ![facebook對象來源](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
@@ -222,11 +236,11 @@ ht-degree: 6%
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL Facebook]，成功啟用意味著 [!DNL Facebook] 自訂對象將以程式設計方式建立於 [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). 由於使用者符合或不符合啟用的區段的資格，因此將會新增及移除對象中的區段會籍。
+對象 [!DNL Facebook]，成功啟用意味著 [!DNL Facebook] 自訂對象將以程式設計方式建立於 [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). 當使用者符合或不符合啟用的受眾的資格時，將會新增及移除受眾成員資格。
 
 >[!TIP]
 >
->Adobe Experience Platform與的整合 [!DNL Facebook] 支援歷史受眾回填。 所有歷史區段資格都會傳送至 [!DNL Facebook] 當您對目的地啟用區段時。
+>Adobe Experience Platform與的整合 [!DNL Facebook] 支援歷史受眾回填。 所有歷史對象資格都會傳送至 [!DNL Facebook] 當您對目的地啟用對象時。
 
 ## 疑難排解 {#troubleshooting}
 

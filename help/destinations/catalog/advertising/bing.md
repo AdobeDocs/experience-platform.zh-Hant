@@ -3,16 +3,16 @@ keywords: 廣告；必應；
 title: Microsoft Bing連線
 description: 透過Microsoft Bing連線目的地，您可以在Microsoft顯示廣告中執行重新定位以及以受眾為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: aec9708680c2a4cb3c70af12f95c67ec37b2e129
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 8%
+source-wordcount: '670'
+ht-degree: 1%
 
 ---
 
 # [!DNL Microsoft Bing] 連線 {#bing-destination}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 [!DNL Microsoft Bing] 目的地可協助您將設定檔資料傳送至 [!DNL Microsoft Display Advertising].
 
@@ -20,7 +20,7 @@ ht-degree: 8%
 
 ## 使用案例 {#use-cases}
 
-身為行銷人員，我想能夠使用以下專案建立的區段： [!DNL Microsoft Advertising IDs] 透過顯示廣告定位使用者 [!DNL Microsoft Advertising] 管道。
+身為行銷人員，我想能夠使用由以下專案建立的對象： [!DNL Microsoft Advertising IDs] 透過顯示廣告定位使用者 [!DNL Microsoft Advertising] 管道。
 
 ## 支援的身分 {#supported-identities}
 
@@ -32,16 +32,30 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
-**[!DNL Segment Export]**  — 您正在將區段（對象）的所有成員匯出至 [!DNL Microsoft Bing] 目的地。
+**[!DNL Audience Export]**  — 您要將對象的所有成員匯出至 [!DNL Microsoft Bing] 目的地。
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在將區段（受眾）的所有成員匯出至 [!DNL Microsoft Bing] 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至 [!DNL Microsoft Bing] 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -77,22 +91,22 @@ ht-degree: 8%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="對應 ID"
->abstract="輸入要對應選取區段的數值 Bing 區段 ID。如果提供的[!UICONTROL 對應 ID] 未對應至 Bing 目的地中的區段 ID，您將不會在 Bing 帳戶中看到預期的對象資料。"
+>abstract="輸入您要對應所選區段的數值Bing對象ID。 若提供 [!UICONTROL 對應ID] 未對應至Bing目的地中的受眾ID，您不會在Bing帳戶中看到預期的受眾資料。"
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
-在 [區段排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動對應 [!UICONTROL 對應ID] 欄位。 這可確保區段中繼資料可正確傳遞至 [!DNL Bing].
+在 [對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動對應 [!UICONTROL 對應ID] 欄位。 這可確保對象中繼資料可正確傳遞至 [!DNL Bing].
 
-![顯示區段排程畫面的UI影像，其中包含如何將區段名稱對應至Bing對應ID的範例。](../../assets/catalog/advertising/bing/mapping-id.png)
+![顯示對象排程畫面的UI影像，其中包含如何將對象名稱對應至Bing對應ID的範例。](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## 匯出的資料 {#exported-data}
 

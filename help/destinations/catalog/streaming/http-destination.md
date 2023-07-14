@@ -3,16 +3,16 @@ keywords: 串流； HTTP目的地
 title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的Experience Platform，或針對從Analytics匯出的設定檔資料執行您可能需要的任何其他操作。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 4d1f9fa19bd35095e3ccbd8d83bcc33dcd4c45a8
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '2431'
-ht-degree: 8%
+source-wordcount: '2486'
+ht-degree: 5%
 
 ---
 
 # HTTP API連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 >[!IMPORTANT]
 >
@@ -24,9 +24,23 @@ HTTP API目的地是 [!DNL Adobe Experience Platform] 可協助您將設定檔�
 
 ## 使用案例 {#use-cases}
 
-HTTP API目的地可讓您將XDM設定檔資料和受眾區段匯出至一般HTTP端點。 在那裡，您可以對從Experience Platform匯出的設定檔資料執行自己的分析或執行任何其他您可能需要的操作。
+HTTP API目的地可讓您將XDM設定檔資料和對象匯出至一般HTTP端點。 在那裡，您可以對從Experience Platform匯出的設定檔資料執行自己的分析或執行任何其他您可能需要的操作。
 
 HTTP端點可以是客戶自己的系統或協力廠商解決方案。
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -35,7 +49,7 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如在對應畫面中所選擇。 [目的地啟用工作流程](../../ui/activate-segment-streaming-destinations.md#mapping). |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -153,12 +167,12 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="包括區段名稱"
->abstract="切換是否希望資料匯出包括您正在匯出的區段的名稱。檢視選取此選項時的資料匯出範例的文件。"
+>abstract="如果您希望資料匯出包含正在匯出的對象名稱，請切換此按鈕。 檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="包括區段時間戳記"
->abstract="切換是否希望資料匯出包括建立和更新區段時的 Unix 時間戳記，以及區段對應至啟動目的地時的 Unix 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
+>abstract="如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至要啟用的目的地時的UNIX時間戳記，請切換此按鈕。 檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
@@ -174,8 +188,8 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 標頭]**：依照此格式，輸入您要包含在目的地呼叫中的任何自訂標頭： `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP端點]**：要將設定檔資料傳送至的HTTP端點URL。
 * **[!UICONTROL 查詢引數]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。
-* **[!UICONTROL 包含區段名稱]**：如果您希望資料匯出包含要匯出的區段名稱，請切換按鈕。 如需選取此選項後匯出資料的範例，請參閱 [匯出的資料](#exported-data) 區段下方。
-* **[!UICONTROL 包含區段時間戳記]**：如果您希望資料匯出包含建立和更新區段時的UNIX時間戳記，以及區段對應至要啟用的目的地時的UNIX時間戳記，請切換此設定。 如需選取此選項後匯出資料的範例，請參閱 [匯出的資料](#exported-data) 區段下方。
+* **[!UICONTROL 包含區段名稱]**：如果您希望資料匯出包含正在匯出的對象名稱，請切換此設定。 如需選取此選項後匯出資料的範例，請參閱 [匯出的資料](#exported-data) 區段下方。
+* **[!UICONTROL 包含區段時間戳記]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至要啟用的目的地時的UNIX時間戳記，請切換此設定。 如需選取此選項後匯出資料的範例，請參閱 [匯出的資料](#exported-data) 區段下方。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -183,13 +197,13 @@ curl --location --request POST 'https://some-api.com/token' \
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [將受眾資料啟用至串流設定檔匯出目的地](../../ui/activate-streaming-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [將受眾資料啟用至串流設定檔匯出目的地](../../ui/activate-streaming-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 目的地屬性 {#attributes}
 
@@ -197,13 +211,13 @@ curl --location --request POST 'https://some-api.com/token' \
 
 ## 設定檔匯出行為 {#profile-export-behavior}
 
-Experience Platform會最佳化您HTTP API目的地的設定檔匯出行為，以便僅在符合區段資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的API端點。 設定檔會在下列情況下匯出至您的目的地：
+Experience Platform會最佳化將設定檔匯出到您HTTP API目的地的行為，以便僅在對象資格或其他重大事件後發生設定檔的相關更新時，將資料匯出到您的API端點。 設定檔會在下列情況下匯出至您的目的地：
 
-* 設定檔更新是由對應至目的地的至少一個區段的區段成員資格變更所決定。 例如，設定檔已符合其中一個對應至目的地的區段的資格，或已退出其中一個對應至目的地的區段。
-* 設定檔更新是由 [身分對應](/help/xdm/field-groups/profile/identitymap.md). 例如，已符合對應至目的地其中一個區段資格的設定檔，已在身分對應屬性中新增身分。
+* 設定檔更新是由對應至目的地的至少一個對象的對象成員資格變更所決定。 例如，設定檔已符合其中一個對應至目的地的對象資格，或已退出其中一個對應至目的地的對象。
+* 設定檔更新是由 [身分對應](/help/xdm/field-groups/profile/identitymap.md). 例如，已符合對應至目的地之其中一個對象資格的設定檔，已在身分對應屬性中新增了身分。
 * 設定檔更新是由至少一個對應至目的地的屬性變更所決定。 例如，會將對應步驟中對應至目的地的其中一個屬性新增至設定檔。
 
-在上述所有情況下，只會將已發生相關更新的設定檔匯出至您的目的地。 例如，如果對應至目的地流程的一個區段有一百個成員，且有五個新設定檔符合區段的資格，則匯出至您的目的地的程式為遞增式，且僅包含五個新設定檔。
+在上述所有情況下，只會將已發生相關更新的設定檔匯出至您的目的地。 例如，如果對應至目的地流程的受眾有一百個成員，且有五個新設定檔符合區段資格，則匯出至您的目的地的程式為漸進式，僅包含五個新設定檔。
 
 請注意，無論變更位於何處，所有對映屬性都會匯出為設定檔。 因此，在上述範例中，即使屬性本身並未變更，也將匯出這五個新設定檔的所有對應屬性。
 
@@ -213,21 +227,21 @@ Experience Platform會最佳化您HTTP API目的地的設定檔匯出行為，�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和區段可作為目的地匯出的提示。 這表示如果任何對應的區段變更狀態(從 `null` 至 `realized` 或從 `realized` 至 `exiting`)或更新任何對應的屬性，就會開始匯出目的地。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會被視為變更。</li></ul> | <ul><li>此 `segmentMembership` 物件包含啟動資料流中對應的區段，在資格或區段退出事件後，設定檔的狀態已針對該區段變更。 請注意，如果設定檔符合資格的其他未對應區段屬於相同區段，則這些區段可以屬於目標匯出的一部分 [合併原則](/help/profile/merge-policies/overview.md) 區段在啟動資料流中對應時相同。 </li><li>中的所有身分 `identityMap` 也包括物件(Experience Platform目前不支援在HTTP API目的地中識別對應)。</li><li>目的地匯出只會包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和對象可作為目的地匯出的提示。 這表示如果任何對應的對象變更狀態(從 `null` 至 `realized` 或從 `realized` 至 `exiting`)或更新任何對應的屬性，就會開始匯出目的地。</li><li>由於身分目前無法對應至HTTP API目的地，因此特定設定檔上任何身分的變更也會決定目的地匯出。</li><li>屬性的變更定義為屬性上的任何更新，無論其是否為相同的值。 這表示即使值本身並未變更，屬性上的覆寫也會被視為變更。</li></ul> | <ul><li>此 `segmentMembership` 物件包含啟動資料流中對應的對象，其設定檔的狀態已隨著資格或對象退出事件而變更。 請注意，如果設定檔符合資格的其他未對應對象屬於相同對象，則這些對象可以屬於目標匯出的一部分 [合併原則](/help/profile/merge-policies/overview.md) 對象在啟動資料流中的對應方式。 </li><li>中的所有身分 `identityMap` 也包括物件(Experience Platform目前不支援在HTTP API目的地中識別對應)。</li><li>目的地匯出只會包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
-例如，將此資料流視為HTTP目的地，其中在資料流中選取了三個區段，且四個屬性對應至目的地。
+例如，將此資料流視為一個HTTP目的地，其中在資料流中選取了三個對象，且四個屬性對應至該目的地。
 
 ![HTTP API目的地資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-個人資料匯出至目的地可由符合或退出其中一個的個人資料決定。 *三個對應的區段*. 不過，在資料匯出中，在 `segmentMembership` 物件(請參閱 [匯出的資料](#exported-data) 區段)，如果該特定設定檔為其他未對應區段的成員，且這些區段與觸發匯出的區段共用相同的合併原則，則可能會顯示其他未對應區段。 如果設定檔符合 **擁有DeLorean Cars的客戶** 區段，但同時也是 **觀看「回到未來」** 影片和 **科幻愛好者** 區段，則其他這兩個區段也會出現在 `segmentMembership` 資料匯出的物件，即使這些物件未在資料流中對映，只要它們與共用相同的合併原則 **擁有DeLorean Cars的客戶** 區段。
+個人資料匯出至目的地可由符合或退出其中一個的個人資料決定。 *三個對應的區段*. 不過，在資料匯出中，在 `segmentMembership` 物件(請參閱 [匯出的資料](#exported-data) 區段底下)，其他未對應的對象可能會出現，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合 **擁有DeLorean Cars的客戶** 區段，但同時也是 **觀看「回到未來」** 影片和 **科幻愛好者** 區段，則另外兩個對象也會出現在 `segmentMembership` 資料匯出的物件，即使這些物件未在資料流中對映，只要它們與共用相同的合併原則 **擁有DeLorean Cars的客戶** 區段。
 
 從設定檔屬性的角度來看，對上述四個對應屬性所做的任何變更都將決定目的地匯出，而且設定檔上存在的四個對應屬性中的任何一個都會出現在資料匯出中。
 
 ## 歷史資料回填 {#historical-data-backfill}
 
-當您新增區段至現有目的地，或當您建立新目的地並將區段對應至該目的地時，Experience Platform會將歷史區段資格資料匯出至該目的地。 符合區段資格的設定檔 *早於* 新增至目的地的區段會在約一小時內匯出至目的地。
+當您新增對象至現有目的地，或當您建立新目的地並將對象對應至該目的地時，Experience Platform會將歷史對象資格資料匯出至該目的地。 符合對象資格的設定檔 *早於* 新增至目的地的對象會在約一小時內匯出至目的地。
 
 ## 匯出的資料 {#exported-data}
 

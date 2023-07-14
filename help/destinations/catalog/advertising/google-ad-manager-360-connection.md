@@ -1,17 +1,17 @@
 ---
-title: (Beta) [!DNL Google Ad Manager 360] 連線
+title: (Beta)  [!DNL Google Ad Manager 360]  連線
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 5174c65970aa8df9bc3f2c8d612c26c72c20e81f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 4%
+source-wordcount: '1030'
+ht-degree: 1%
 
 ---
 
 # (Beta) [!DNL Google Ad Manager 360] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 [!DNL Google Ad Manager 360] 連線可批次上傳 [!DNL publisher provided identifiers] (PPID)至 [!DNL Google Ad Manager 360]，透過 [!DNL Google Cloud Storage].
 
@@ -36,6 +36,20 @@ ht-degree: 4%
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | PPID | [!DNL Publisher provided ID] | 選取此目標身分以傳送對象至 [!DNL Google Ad Manager 360] |
+
+{style="table-layout:auto"}
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -85,8 +99,8 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="將區段 ID 附加到區段名稱"
->abstract="選取此選項可讓 Google Ad Manager 360 中的區段名稱包含來自 Experience Platform 的區段 ID，如下所示：`Segment Name (Segment ID)`"
+>title="將對象ID附加至對象名稱"
+>abstract="選取此選項，讓Google Ad Manager 360中的對象名稱包含Experience Platform中的對象ID，如下所示： `Audience Name (Audience ID)`"
 
 若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
 
@@ -98,7 +112,7 @@ ht-degree: 4%
 * **[!UICONTROL 帳戶型別]**：選取一個選項，視您的 [!DNL Google] 帳戶：
    * 使用 `AdX buyer` 的 [!DNL Google AdX]
    * 使用 `DFP by Google` 的 [!DNL DoubleClick] 適用於發佈商的
-* **[!UICONTROL 將區段ID附加至區段名稱]**：選取此選項，讓Google Ad Manager 360中的區段名稱包含Experience Platform中的區段ID，如下所示： `Segment Name (Segment ID)`.
+* **[!UICONTROL 將對象ID附加至對象名稱]**：選取此選項，讓Google Ad Manager 360中的對象名稱包含Experience Platform中的對象ID，如下所示： `Audience Name (Audience ID)`.
 
 ### 啟用警示 {#enable-alerts}
 
@@ -106,20 +120,20 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 在身分對應步驟中，您可以看到下列預先填入的對應：
 
 | 預先填入的對應 | 說明 |
 |---------|----------|
 | `ECID` -> `ppid` | 這是使用者唯一可編輯的預先填入對應。 您可以從Platform選取任何屬性或身分識別名稱空間，並將其對應至 `ppid`. |
-| `metadata.segment.alias` -> `list_id` | 將Experience Platform區段名稱對應至Google平台中的區段ID。 |
+| `metadata.segment.alias` -> `list_id` | 將Experience Platform對象名稱對應至Google平台中的對象ID。 |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | 告訴Google平台何時要從區段移除不符合資格的使用者。 |
 
 以下專案需要這些對應： [!DNL Google Ad Manager 360] 和，由Adobe Experience Platform自動為所有使用者建立 [!DNL Google Ad Manager 360] 連線。
