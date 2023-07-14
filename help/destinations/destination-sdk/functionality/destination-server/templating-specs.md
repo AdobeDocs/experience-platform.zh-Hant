@@ -1,7 +1,7 @@
 ---
 description: 瞭解如何格式化傳送至您端點的HTTP請求。 使用/authoring/destination-servers端點在Adobe Experience Platform Destination SDK中設定目的地伺服器範本規格。
 title: 以Destination SDK建立的目的地的範本規格
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 4%
@@ -46,7 +46,7 @@ Adobe使用的範本語言類似於 [金家](https://jinja.palletsprojects.com/e
 如需轉換的詳細資訊，請瀏覽下列連結：
 
 * [訊息格式](message-format.md)
-* [使用範本語言進行身分、屬性和區段成員資格轉換 ](message-format.md#using-templating)
+* [使用範本語言進行身分、屬性和對象成員資格轉換](message-format.md#using-templating)
 
 >[!TIP]
 >

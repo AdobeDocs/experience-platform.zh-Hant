@@ -3,9 +3,9 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c96a156c6c9c63d9ae875ee3808168d94ee7aeca
+source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1833'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 啟用對象以邊緣個人化目的地
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmentation.md) 搭配edge目的地，讓客戶可即時大規模建立及鎖定對象。 此功能可協助您設定相同頁面和下一頁個人化使用案例。
 
@@ -130,6 +130,14 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 ## 選取您的對象 {#select-audiences}
 
 使用對象名稱左側的核取方塊來選取您要啟用至目的地的對象，然後選取「 」 **[!UICONTROL 下一個]**.
+
+若要選取您想要啟用至目的地的對象，請使用對象名稱左邊的核取方塊，然後選取 **[!UICONTROL 下一個]**.
+
+您可以根據對象的來源，從多種對象型別中進行選取：
+
+* **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 請參閱 [細分檔案](../../segmentation/ui/overview.md) 以取得更多詳細資料。
+* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要進一步瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
+* 其他型別的對象，源自其他Adobe解決方案，例如 [!DNL Audience Manager].
 
 ![選取對象](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 

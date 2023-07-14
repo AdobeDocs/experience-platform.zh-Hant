@@ -3,16 +3,16 @@ title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書廠商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的全方位整合。 使用者可以在Adobe Experience Platform中使用Amazon Ads目的地，定義廣告商對象，以在Amazon DSP上鎖定和啟用。
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 147499e0b736fac7aa27942790661236be68b0a4
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1401'
+source-wordcount: '1399'
 ht-degree: 1%
 
 ---
 
 # （測試版） Amazon Ads連線 {#amazon-ads}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書廠商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。
 
@@ -28,7 +28,7 @@ Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括A
 
 ### 啟用與定位 {#activation-and-targeting}
 
-此與Amazon DSP的整合可讓Amazon Ads廣告商將廣告商CDP區段從Adobe Experience Platform傳遞至Amazon的DSP，以針對廣告鎖定目標建立廣告商受眾。 可在Amazon DSP中選取正面目標定位和負面目標定位（隱藏）的對象。
+此與Amazon DSP的整合可讓Amazon Ads廣告商將廣告商CDP受眾從Adobe Experience Platform傳遞至Amazon的DSP，以針對廣告鎖定目標建立廣告商受眾。 可在Amazon DSP中選取正面目標定位和負面目標定位（隱藏）的對象。
 
 ## 先決條件 {#prerequisites}
 
@@ -53,8 +53,8 @@ Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括A
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *Amazon Ads* 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出對象的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *Amazon Ads* 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,13 +98,13 @@ Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括A
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#map}
 

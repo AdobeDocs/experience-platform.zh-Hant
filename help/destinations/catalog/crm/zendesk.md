@@ -1,10 +1,10 @@
 ---
-title: Zendesk連線
+title: Zendesk 連線
 description: Zendesk目的地可讓您匯出帳戶資料，並在Zendesk中加以啟用，以滿足您的業務需求。
 last-substantial-update: 2023-03-14T00:00:00Z
-source-git-commit: 55f1eafa68124b044d20f8f909f6238766076a7a
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 1%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 [[!DNL Zendesk]](https://www.zendesk.com) 是客戶服務解決方案和銷售工具。
 
-此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [[!DNL Zendesk] 連絡人API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/)，至 **建立和更新身分** 區段內的聯絡人 [!DNL Zendesk].
+此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [[!DNL Zendesk] 連絡人API](https://developer.zendesk.com/api-reference/sales-crm/resources/contacts/)，至 **建立和更新身分** 在對象中作為連絡人 [!DNL Zendesk].
 
 [!DNL Zendesk] 使用持有人權杖作為驗證機制，與 [!DNL Zendesk] 連絡人API。 向您的驗證身分的說明 [!DNL Zendesk] 執行個體的詳細資訊如下： [驗證至目的地](#authenticate) 區段。
 
 ## 使用案例 {#use-cases}
 
-多管道B2C平台的客戶服務部門想要確保其客戶獲得順暢的個人化體驗。 部門可以根據自己的離線資料建立區段，以建立新的使用者設定檔，或更新不同互動（例如購買、退貨等）的現有設定檔資訊。 並從Adobe Experience Platform將這些區段傳送至 [!DNL Zendesk]. 將更新的資訊存放在中 [!DNL Zendesk] 確保客戶服務代理程式能立即取得客戶的最新資訊，以便更快回應和解決問題。
+多管道B2C平台的客戶服務部門想要確保其客戶獲得順暢的個人化體驗。 部門可以利用自身的離線資料建立受眾，以建立新的使用者設定檔，或更新不同互動（例如購買、退貨等）的現有設定檔資訊。 並從Adobe Experience Platform將這些對象傳送至 [!DNL Zendesk]. 將更新的資訊存放在中 [!DNL Zendesk] 確保客戶服務代理程式能立即取得客戶的最新資訊，以便更快回應和解決問題。
 
 ## 先決條件 {#prerequisites}
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 在將資料啟用至 [!DNL Zendesk] 目的地，您必須擁有 [綱要](/help/xdm/schema/composition.md)， a [資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)、和 [區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 建立於 [!DNL Experience Platform].
 
-請參閱Experience Platform檔案，瞭解 [區段會籍詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md) 如果您需要區段狀態的指引。
+請參閱Experience Platform檔案，瞭解 [對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md) 如果您需要對象狀態的指引。
 
 ### [!DNL Zendesk] 必備條件 {#prerequisites-destination}
 
@@ -59,8 +59,8 @@ ht-degree: 1%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 中的每個區段狀態 [!DNL Zendesk] 會根據 **[!UICONTROL 對應ID]** 值期間提供 [區段排程](#schedule-segment-export-example) 步驟。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 中的每個區段狀態 [!DNL Zendesk] 會根據 **[!UICONTROL 對應ID]** 值期間提供 [對象排程](#schedule-segment-export-example) 步驟。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -98,13 +98,13 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 >
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
@@ -122,7 +122,7 @@ ht-degree: 1%
    * 重複這些步驟以新增以下強制對應，您也可以新增任何其他要在XDM設定檔結構描述和之間更新的屬性。 [!DNL Zendesk] 例項： |來源欄位|目標欄位|必要| |—|—|—| |`xdm: person.name.lastName`|`xdm: last_name`|是 | |`IdentityMap: Email`|`Identity: email`|是 | |`xdm: person.name.firstName`|`xdm: first_name`| |
 
    * 使用這些對應的範例如下所示：
-      ![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/mappings.png)
+     ![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -130,31 +130,31 @@ ht-degree: 1%
 
 當您完成提供目的地連線的對應時，請選取 **[!UICONTROL 下一個]**.
 
-### 排程區段匯出和範例 {#schedule-segment-export-example}
+### 排程對象匯出和範例 {#schedule-segment-export-example}
 
-在 [[!UICONTROL 排程區段匯出]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 啟動工作流程的步驟，您必須手動將Platform區段對應至中的自訂欄位屬性 [!DNL Zendesk].
+在 [[!UICONTROL 排程對象匯出]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) 啟動工作流程的步驟，您必須手動將Platform對象對應至中的自訂欄位屬性 [!DNL Zendesk].
 
 若要這麼做，請選取每個區段，然後輸入對應的自訂欄位屬性 [!DNL Zendesk] 在 **[!UICONTROL 對應ID]** 欄位。
 
 範例如下：
-![顯示「排程區段匯出」的Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![顯示「排程對象匯出」的Platform UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## 驗證資料匯出 {#exported-data}
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取 **[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]** 並導覽至目的地清單。
-1. 接下來，選取目的地並切換至 **[!UICONTROL 啟用資料]** 標籤，然後選取區段名稱。
+1. 接下來，選取目的地並切換至 **[!UICONTROL 啟用資料]** 標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的平台UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
-1. 監控區段摘要，並確保設定檔計數與區段內的計數相對應。
+1. 監控對象摘要，並確保設定檔計數對應至區段內的計數。
    ![顯示區段的平台UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/segment.png)
 
-1. 登入 [!DNL Zendesk] 網站，然後導覽至 **[!UICONTROL 連絡人]** 頁面，以檢查是否已新增區段中的設定檔。 此清單可設定為顯示使用區段建立之其他欄位的欄 **[!UICONTROL 對應ID]** 和區段狀態。
-   ![Zendesk UI熒幕擷圖顯示「連絡人」頁面，其中包含以區段名稱建立的其他欄位。](../../assets/catalog/crm/zendesk/contacts.png)
+1. 登入 [!DNL Zendesk] 網站，然後導覽至 **[!UICONTROL 連絡人]** 頁面，以檢查是否已新增對象中的設定檔。 此清單可設定為顯示與對象建立的其他欄位**[!UICONTROL 對應ID]使**者和受眾狀態。
+   ![Zendesk UI熒幕擷圖顯示「連絡人」頁面，其中包含以對象名稱建立的其他欄位。](../../assets/catalog/crm/zendesk/contacts.png)
 
-1. 或者，您也可以向下切入至個人 **[!UICONTROL 個人]** 頁面，並檢查 **[!UICONTROL 其他欄位]** 區段會顯示區段名稱和區段狀態。
-   ![Zendesk UI熒幕擷圖顯示「人員」頁面，而其他欄位區段顯示區段名稱和區段狀態。](../../assets/catalog/crm/zendesk/contact.png)
+1. 或者，您也可以向下切入至個人 **[!UICONTROL 個人]** 頁面，並檢查 **[!UICONTROL 其他欄位]** 顯示對象名稱和對象狀態的區段。
+   ![Zendesk UI熒幕擷圖顯示「人員」頁面，而其他欄位區段顯示對象名稱和對象狀態。](../../assets/catalog/crm/zendesk/contact.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 

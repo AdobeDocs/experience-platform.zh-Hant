@@ -1,20 +1,20 @@
 ---
-title: TikTok連線
-description: 使用您的資料在TikTok上建立自訂對象，以使用您的廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速且安全地從Adobe Experience Platform推送所需的區段至TikTok。
+title: TikTok 連線
+description: 使用您的資料在 TikTok 上建置自訂對象，以設定您的廣告行銷活動的目標定位。這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速且安全地把所需的對象從Adobe Experience Platform推送到TikTok。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '980'
-ht-degree: 2%
+source-wordcount: '978'
+ht-degree: 5%
 
 ---
 
-# TikTok連線
+# TikTok 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-使用您的資料在TikTok上建立自訂對象，以使用您的廣告促銷活動進行目標定位。 這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速且安全地從Adobe Experience Platform推送所需的區段至TikTok。 造訪 [TikTok的業務說明中心](https://ads.tiktok.com/help/article/audiences?lang=en) 以取得詳細資訊。
+使用您的資料在 TikTok 上建置自訂對象，以設定您的廣告行銷活動的目標定位。這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速且安全地把所需的對象從Adobe Experience Platform推送到TikTok。 造訪 [TikTok的業務說明中心](https://ads.tiktok.com/help/article/audiences?lang=en) 以取得詳細資訊。
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ### 使用案例 {#use-case-1}
 
-運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從自己的CRM擷取電子郵件地址至Adobe Experience Platform、從自己的離線資料建立區段，並將這些區段傳送至TikTok，以便在客戶的社群媒體摘要中顯示廣告。
+運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Adobe Experience Platform，從他們自己的離線資料建立受眾，並將這些受眾傳送到TikTok，以便在他們客戶的社群媒體摘要中顯示廣告。
 
 ## 先決條件 {#prerequisites}
 
@@ -51,8 +51,8 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，以及TikTok目的地中使用的識別碼（名稱、電話號碼或其他）。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正使用TikTok目的地中使用的識別碼（名稱、電話號碼或其他）匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 若要驗證至目的地，系統會將您重新導向以登入 [!DNL TikTok Ads Manager] 帳戶並授權Adobe代表您管理對象。
 
-![TikTok許可權選取](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "用於選取許可權的TikTok UI影像")
+![TikTok許可權選擇](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "用於選取許可權的TikTok UI影像")
 
 ### 填寫目的地詳細資料 {#destination-details}
 
@@ -88,17 +88,17 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應身分 {#map}
 
-以下是將區段匯出至TikTok Ads Manager時的正確身分對應範例。
+以下是將對象匯出至TikTok Ads Manager時的正確身分對應範例。
 
 選取來源欄位：
 
@@ -112,7 +112,7 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 ## 匯出的資料 {#exported-data}
 
-檢查您的 [!DNL TikTok Ads Manager] 帳戶(在 **「資產」>「對象」**)，驗證您的Experience Platform區段是否已成功匯出。 對象將會填入為對象型別： `Partner Audience`.
+檢查您的 [!DNL TikTok Ads Manager] 帳戶(在 **「資產」>「對象」**)驗證您的Experience Platform對象是否已成功匯出。 對象將會填入為對象型別： `Partner Audience`.
 
 ## 資料使用與控管 {#data-usage-governance}
 

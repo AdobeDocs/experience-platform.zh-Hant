@@ -2,16 +2,16 @@
 title: Medallia連線
 description: 針對鎖定目標Medallia調查和意見回饋收集啟用設定檔，以更好地瞭解客戶需求和期望。
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1095'
 ht-degree: 1%
 
 ---
 
 # Medallia連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 針對鎖定目標Medallia調查和意見回饋收集啟用設定檔，以更好地瞭解客戶需求和期望。
 
@@ -60,7 +60,7 @@ Medallia支援下表所述的身分啟用。 進一步瞭解 [身分](/help/iden
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有新合格成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如&lt;客戶名稱>的「選取設定檔屬性」畫面中所選。 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Medallia支援下表所述的身分啟用。 進一步瞭解 [身分](/help/iden
 * **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL API閘道URL]**：從您的Medallia傳送團隊取得。 通常採用https://instance-tenant.apis.medallia.com的形式。
-* **[!UICONTROL 匯入API名稱]**：從您的Medallia傳送團隊取得。 用於此連線的Medallia Import API （也稱為Web摘要）名稱。 您可以對不同的匯入API啟用不同的區段，以觸發不同的調查方案。
+* **[!UICONTROL 匯入API名稱]**：從您的Medallia傳送團隊取得。 用於此連線的Medallia Import API （也稱為Web摘要）名稱。 您可以對不同的匯入API啟用不同的對象，以觸發不同的調查計畫。
 
 ![顯示此目的地之目的地詳細資訊畫面的影像。](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -99,13 +99,13 @@ Medallia支援下表所述的身分啟用。 進一步瞭解 [身分](/help/iden
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#map}
 

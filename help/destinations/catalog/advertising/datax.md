@@ -2,16 +2,16 @@
 title: Verizon MediaYahoo DataX連線
 description: DataX是彙總的Verizon Media/Yahoo基礎架構，其中託管各種元件，讓Verizon Media/Yahoo能夠以安全、自動化及可擴充的方式與外部合作夥伴交換資料。
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 0580816c471400ba17eddcb6b1a9dfbf01797938
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '776'
 ht-degree: 2%
 
 ---
 
 # [!DNL Verizon Media/Yahoo DataX] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL DataX] 是彙總 [!DNL Verizon Media/Yahoo] 代管各種元件的基礎結構，這些元件可讓 [!DNL Verizon Media/Yahoo] 以安全、自動化及可擴充的方式與外部合作夥伴交換資料。
 
@@ -54,7 +54,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->啟用超過100個區段至 [!DNL Verizon Media/Yahoo DataX]，您可能會收到來自目的地的速率限制錯誤。 將區段啟用至此目的地時，請嘗試在一個啟用資料流中啟用少於100個區段。 如果您需要啟用更多區段，請在相同帳戶上建立新目的地。
+>將超過100個對象啟用至 [!DNL Verizon Media/Yahoo DataX]，您可能會收到來自目的地的速率限制錯誤。 將對象啟用至此目的地時，請嘗試在一個啟用資料流中啟用少於100個對象。 如果您需要啟用更多區段，請在相同帳戶上建立新目的地。
 
 [!DNL DataX] 是費率限制，依據以下文章中概述的分類法和受眾貼文配額限制： [DataX檔案](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
@@ -83,14 +83,14 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，其中包含Verizon Media目的地中使用的識別碼（電子郵件、GAID、IDFA）。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正使用Verizon Media目的地所使用的識別碼（電子郵件、GAID、IDFA）匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## 使用案例 {#use-cases}
 
-[!DNL DataX] API適用於廣告商，這些廣告商想要鎖定以中的電子郵件地址作為輸入的特定受眾群組 [!DNL Verizon Media] (VMG)可使用VMG的近乎即時API快速建立新區段並推送所需的對象群組。
+[!DNL DataX] API適用於廣告商，這些廣告商想要鎖定以中的電子郵件地址作為輸入的特定受眾群組 [!DNL Verizon Media] (VMG)可使用VMG的近乎即時API快速建立新受眾並推送所需的受眾群組。
 
 ## 連線到目的地 {#connect}
 
@@ -116,13 +116,13 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對目的地啟用設定檔和區段](../../ui/activate-segment-streaming-destinations.md) 以取得啟用目的地受眾區段的指示。
+讀取 [對目的地啟用設定檔和對象](../../ui/activate-segment-streaming-destinations.md) 以取得啟用目的地對象的指示。
 
 ## 資料使用與控管 {#data-usage-governance}
 

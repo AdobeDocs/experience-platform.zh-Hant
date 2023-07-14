@@ -4,7 +4,7 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 606038116391e75ba4ffc36bab11757f963a8346
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -18,10 +18,9 @@ ht-degree: 0%
 >* 若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 若要連線至支援資料集匯出的目的地，您需要 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
+## 概觀 {#overview}
 
-## 總覽 {#overview}
-
-您必須先設定與目的地平台的連線，才能將對象資料傳送至目的地。 本文說明如何設定新的目的地連線，然後您可以使用Adobe Experience Platform使用者介面啟用區段或匯出資料集。
+您必須先設定與目的地平台的連線，才能將對象資料傳送至目的地。 本文說明如何設定新的目的地連線，然後您可以使用Adobe Experience Platform使用者介面啟用對象或匯出資料集。
 
 ## 在目錄中尋找所需的目的地 {#setup}
 
@@ -29,23 +28,23 @@ ht-degree: 0%
 
    ![顯示目的地目錄頁面的Experience PlatformUI熒幕擷圖。](../assets/ui/connect-destinations/catalog.png)
 
-2. 目錄中的目的地卡片可能會有不同的動作控制項，具體取決於您是否有與目的地的現有連線，以及目的地是否支援啟用區段、匯出資料集或兩者。 您可能會看到目的地卡的下列任何控制項：
+2. 目錄中的目的地卡片可能會有不同的動作控制項，具體取決於您是否有與目的地的現有連線，以及目的地是否支援啟用受眾、匯出資料集或兩者。 您可能會看到目的地卡的下列任何控制項：
 
-   * **[!UICONTROL 設定]**. 在啟用區段或匯出資料集之前，必須先將連線設定到此目的地。
-   * **[!UICONTROL 啟動]**. 已設定連線至此目的地。 此目的地支援區段啟用和資料集匯出。
-   * **[!UICONTROL 啟用區段]**. 已設定連線至此目的地。 此目的地僅支援區段啟用。
+   * **[!UICONTROL 設定]**. 必須先設定與此目的地的連線，您才能啟用對象或匯出資料集。
+   * **[!UICONTROL 啟動]**. 已設定連線至此目的地。 此目的地支援對象啟用和資料集匯出。
+   * **[!UICONTROL 啟用對象]**. 已設定連線至此目的地。 此目的地僅支援對象啟用。
 
    如需這些控制項之間差異的詳細資訊，您也可以參閱 [目錄](../ui/destinations-workspace.md#catalog) 區段。
 
-   選取 **[!UICONTROL 設定]**， **[!UICONTROL 啟動]**，或 **[!UICONTROL 啟用區段]**，視您可用的控制項而定。
+   選取 **[!UICONTROL 設定]**， **[!UICONTROL 啟動]**，或 **[!UICONTROL 啟用對象]**，視您可用的控制項而定。
 
    ![Experience PlatformUI的熒幕擷圖，其中顯示反白顯示「設定」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/set-up.png)
 
-   ![Experience PlatformUI的熒幕擷圖，其中顯示反白顯示「啟用區段」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/activate-segments.png)
+   ![Experience PlatformUI的熒幕擷圖，其中顯示反白顯示「啟用對象」控制項的目的地目錄頁面。](../assets/ui/connect-destinations/activate-segments.png)
 
 3. 如果您已選取 **[!UICONTROL 設定]**，請跳至下一個步驟，即 [驗證](#authenticate) 到目的地。
 
-   如果您已選取 **[!UICONTROL 啟動]**， **[!UICONTROL 啟用區段]**，或 **[!UICONTROL 匯出資料集]**，您現在可以看到現有目的地連線的清單。
+   如果您已選取 **[!UICONTROL 啟動]**， **[!UICONTROL 啟用對象]**，或 **[!UICONTROL 匯出資料集]**，您現在可以看到現有目的地連線的清單。
 
    選取 **[!UICONTROL 設定新目的地]** 以建立與目的地的新連線。
 
@@ -85,11 +84,11 @@ ht-degree: 0%
 
 ![此影像顯示CSV檔案的檔案型別選取範圍及各種選項。](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### 設定區段啟動或資料集匯出的目的地連線 {#segment-activation-or-dataset-exports}
+### 設定對象啟動或資料集匯出的目的地連線 {#segment-activation-or-dataset-exports}
 
-有些檔案型目的地支援區段啟用和資料集匯出。 對於這些目的地，您可以選擇是否要建立連線，以啟用區段或匯出資料集。
+有些檔案型目的地支援對象啟用和資料集匯出。 對於這些目的地，您可以選擇是否建立連線，以啟用對象或匯出資料集。
 
-![此影像顯示資料型別選擇控制項，可讓使用者在區段啟用和資料集匯出之間選擇。](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
+![此影像顯示資料型別選擇控制項，可讓使用者在對象啟用和資料集匯出之間選擇。](/help/destinations/assets/ui/connect-destinations/data-type-selection.png)
 
 ### 啟用目的地警示 {#enable-alerts}
 
@@ -113,4 +112,4 @@ ht-degree: 0%
 
 閱讀本檔案後，您已瞭解如何使用Experience PlatformUI建立與目的地的連線。 提醒您，可用和必要的連線引數會因目的地而異。 您也應該參閱 [目的地目錄](/help/destinations/catalog/overview.md) 以取得每個目的地型別的必要輸入和可用選項的特定資訊。
 
-接下來，您可以繼續前往 [啟用區段](/help/destinations/ui/activation-overview.md) 或 [匯出資料集](/help/destinations/ui/export-datasets.md) 前往您的目的地。
+接下來，您可以繼續前往 [啟用對象](/help/destinations/ui/activation-overview.md) 或 [匯出資料集](/help/destinations/ui/export-datasets.md) 前往您的目的地。

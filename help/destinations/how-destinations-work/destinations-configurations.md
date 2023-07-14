@@ -1,15 +1,15 @@
 ---
-title: 目的地中可設定和常用的匯出設定
+title: 目的地中可設定的常用匯出設定
 description: 瞭解目的地中哪些匯出設定可在目的地層級上設定，哪些是固定的且無法編輯。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '845'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# 目的地中可設定和常用的匯出設定
+# 目的地中可設定的常用匯出設定
 
 在考慮匯出至Experience Platform目的地的行為時，您需要考慮針對哪些設定採取行動的三個單獨層級。
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 * [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md)
 * [將受眾資料啟用至企業目的地](/help/destinations/ui/activate-streaming-profile-destinations.md)
-* [啟用串流區段匯出目的地的受眾資料](/help/destinations/ui/activate-segment-streaming-destinations.md)
+* [啟用受眾資料至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [隨選匯出檔案至批次目的地](/help/destinations/ui/export-file-now.md)
 * [（測試版）將資料集匯出至雲端儲存空間目標](/help/destinations/ui/export-datasets.md)
 

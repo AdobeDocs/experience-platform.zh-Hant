@@ -5,9 +5,9 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '3402'
+source-wordcount: '3399'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 本教學課程使用 [!DNL Adobe Campaign] 目的地的所有範例，但步驟對於所有批次雲端儲存和電子郵件行銷目的地都相同。
 
-![概述 — 建立目的地和啟用區段的步驟](../assets/api/email-marketing/overview.png)
+![概覽 — 建立目的地和啟用對象的步驟](../assets/api/email-marketing/overview.png)
 
 如果您偏好使用平台使用者介面來連線至目的地並啟用資料，請參閱 [連線目的地](../ui/connect-destination.md) 和 [啟用對象資料以批次設定檔匯出目的地](../ui/activate-batch-profile-destinations.md) 教學課程。
 
@@ -35,14 +35,14 @@ ht-degree: 1%
 本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service] 可讓您在中建立區段及產生對象 [!DNL Adobe Experience Platform] 從您的 [!DNL Real-Time Customer Profile] 資料。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service] 可讓您在中建立對象 [!DNL Adobe Experience Platform] 從您的 [!DNL Real-Time Customer Profile] 資料。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
 
 以下小節提供您啟動資料至Platform中的批次目的地所需的其他資訊。
 
 ### 收集必要的認證 {#gather-required-credentials}
 
-若要完成本教學課程中的步驟，您應準備好下列憑證，端視您要連線及啟用區段的目的地型別而定。
+若要完成本教學課程中的步驟，您應準備好下列憑證，端視您要連線及啟用對象的目標型別而定。
 
 * 對象 [!DNL Amazon S3] 連線： `accessId`， `secretKey`
 * 對象 [!DNL Amazon S3] 連線至 [!DNL Adobe Campaign]： `accessId`， `secretKey`
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 ![目的地步驟概述步驟1](../assets/api/batch-destination/step1.png)
 
-首先，您應決定要將資料啟用至哪個目的地。 首先，請執行呼叫以請求您可以連線並啟用區段的可用目的地清單。 對執行以下GET要求 `connectionSpecs` 端點以傳回可用目的地的清單：
+首先，您應決定要將資料啟用至哪個目的地。 首先，請執行呼叫以請求您可以連線並啟用受眾的可用目的地清單。 對執行以下GET要求 `connectionSpecs` 端點以傳回可用目的地的清單：
 
 **API格式**
 
@@ -107,7 +107,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **回應**
 
-成功的回應包含可用目的地的清單及其唯一識別碼(`id`)。 儲存您計畫使用的目的地值，因為後續步驟會需要該值。 例如，如果您想要連線並傳送區段至 [!DNL Adobe Campaign]，在回應中尋找下列程式碼片段：
+成功的回應包含可用目的地的清單及其唯一識別碼(`id`)。 儲存您計畫使用的目的地值，因為後續步驟會需要該值。 例如，如果您想要連線並傳送對象至 [!DNL Adobe Campaign]，在回應中尋找下列程式碼片段：
 
 ```json
 {
@@ -886,8 +886,8 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d  '{
    
-        "name": "Activate segments to Adobe Campaign",
-        "description": "This operation creates a dataflow which we will later use to activate segments to Adobe Campaign",
+        "name": "activate audiences to Adobe Campaign",
+        "description": "This operation creates a dataflow which we will later use to activate audiences to Adobe Campaign",
         "flowSpec": {
             "id": "{FLOW_SPEC_ID}",
             "version": "1.0"
@@ -921,7 +921,7 @@ curl -X POST \
 | `flowSpec.Id` | 使用您要連線之批次目的地的流程規格ID。 GET若要擷取流量規格ID，請對 `flowspecs` 端點，如 [流程規格API參考檔案](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). 在回應中，尋找 `upsTo` 並複製您要連線的批次目的地對應ID。 例如，若為Adobe Campaign，請尋找 `upsToCampaign` 並複製 `id` 引數。 |
 | `sourceConnectionIds` | 使用您在步驟中取得的來源連線ID [連線至您的Experience Platform資料](#connect-to-your-experience-platform-data). |
 | `targetConnectionIds` | 使用您在步驟中取得的目標連線ID [連線到批次目的地](#connect-to-batch-destination). |
-| `transformations` | 在下一步中，您將使用要啟動的區段和設定檔屬性填入此區段。 |
+| `transformations` | 在下一步中，您會將要啟用的對象和設定檔屬性填入此區段中。 |
 
 下表包含常用批次目的地的流量規格ID，供您參考：
 
@@ -933,7 +933,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回ID (`id`)的資料流和 `etag`. 請記下這兩個值，因為您會在下一個步驟中需要它們，以啟動區段並匯出資料檔案。
+成功的回應會傳回ID (`id`)的資料流和 `etag`. 記下這兩個值，因為您會在下一個步驟中需要它們，以啟動對象並匯出資料檔案。
 
 ```json
 {
@@ -947,11 +947,11 @@ curl -X POST \
 
 ![目的地步驟概述步驟5](../assets/api/batch-destination/step5.png)
 
-建立所有連線和資料流後，您現在可以將設定檔資料啟動至目的地平台。 在此步驟中，您可以選取要匯出至目的地的區段和設定檔屬性。
+建立所有連線和資料流後，您現在可以將設定檔資料啟動至目的地平台。 在此步驟中，您可以選取要匯出至目的地的對象和設定檔屬性。
 
 您也可以決定匯出檔案的檔案命名格式，以及應該使用哪些屬性 [重複資料刪除索引鍵](../ui/activate-batch-profile-destinations.md#mandatory-keys) 或 [強制屬性](../ui/activate-batch-profile-destinations.md#mandatory-attributes). 在此步驟中，您也可以決定傳送資料至目的地的排程。
 
-若要啟用新目的地的區段，您必須執行JSONPATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個區段和設定檔屬性。 若要進一步瞭解JSONPATCH，請參閱 [RFC規格](https://tools.ietf.org/html/rfc6902).
+若要將對象啟用至您的新目的地，您必須執行JSONPATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個對象和設定檔屬性。 若要進一步瞭解JSONPATCH，請參閱 [RFC規格](https://tools.ietf.org/html/rfc6902).
 
 **API格式**
 
@@ -976,8 +976,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -995,8 +995,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "value": {
             "type": "PLATFORM_SEGMENT",
             "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
+                "name": "Name of the audience that you are activating",
+                "description": "Description of the audience that you are activating",
                 "id": "{SEGMENT_ID}",
                 "filenameTemplate": "%DESTINATION_NAME%_%SEGMENT_ID%_%DATETIME(YYYYMMdd_HHmmss)%",
                 "exportMode": "DAILY_FULL_EXPORT",
@@ -1026,26 +1026,26 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | 在URL中，使用您在上一步建立的資料流ID。 |
 | `{ETAG}` | 取得 `{ETAG}` 根據上一步驟的回應， [建立資料流](#create-dataflow). 上一步中的回應格式有逸出引號。 您必須在請求的標頭中使用未逸出的值。 請參閱下列範例： <br> <ul><li>回應範例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>要在您的請求中使用的值： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> 每次成功更新資料流時，etag值都會隨之更新。 |
-| `{SEGMENT_ID}` | 提供您要匯出至此目的地的區段ID。 若要擷取您要啟用的區段的區段ID，請參閱 [擷取區段定義](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) (在Experience Platform API參考中)。 |
+| `{SEGMENT_ID}` | 提供您要匯出至此目的地的對象ID。 若要擷取您要啟用之對象的對象ID，請參閱 [擷取對象定義](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) (在Experience Platform API參考中)。 |
 | `{PROFILE_ATTRIBUTE}` | 例如, `"person.lastName"` |
-| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將區段新增至資料流，請使用 `add` 作業。 |
-| `path` | 定義要更新的流程部分。 將區段新增至資料流時，請使用範例中指定的路徑。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將對象新增至資料流，請使用 `add` 作業。 |
+| `path` | 定義要更新的流程部分。 將對象新增至資料流時，請使用範例中指定的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
-| `id` | 指定您要新增至目的地資料流的區段ID。 |
-| `name` | *可選*. 指定您要新增至目的地資料流的區段名稱。 請注意，此欄位並非必填欄位，您可以成功將區段新增至目的地資料流，而不需要提供其名稱。 |
-| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出區段的ID。</li><li>`%SEGMENT_NAME%`: 選填. 匯出的檔案包含匯出的區段名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`：選擇性。 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`: 選填. 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br> 如需設定檔案名稱的詳細資訊，請參閱 [設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 批次目的地啟動教學課程中的區段。 |
+| `id` | 指定您要新增至目的地資料流的對象ID。 |
+| `name` | *可選*. 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必要欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
+| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`: 選填. 匯出的檔案包含匯出的對象名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`：選擇性。 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`: 選填. 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br> 如需設定檔案名稱的詳細資訊，請參閱 [設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 批次目的地啟動教學課程中的區段。 |
 | `exportMode` | 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。如需有關這兩個選項的詳細資訊，請參閱 [匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在batch destinations activation教學課程中。 |
-| `startDate` | 選取區段應該開始將設定檔匯出至您的目的地的日期。 |
+| `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
 | `frequency` | 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 匯出模式，您可以選取 `ONCE` 或 `DAILY`.</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 匯出模式，您可以選取 `"DAILY"`， `"EVERY_3_HOURS"`， `"EVERY_6_HOURS"`， `"EVERY_8_HOURS"`， `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | 對象 *批次目的地* 僅限。 只有在選取 `"DAILY_FULL_EXPORT"` 中的模式 `frequency` 選擇器。 <br> 必要. <br> <ul><li>選取 `"AFTER_SEGMENT_EVAL"` 讓啟動工作在每日Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取 `"SCHEDULED"` 讓啟動工作在固定時間執行。 這可確保Experience Platform設定檔資料在每天的同一時間匯出，但您匯出的設定檔可能不是最新的，這取決於批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增 `startTime` 以指出每日匯出應在UTC的哪個時間發生。</li></ul> |
-| `endDate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 選取時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`. <br> 設定區段成員停止匯出至目的地的日期。 |
-| `startTime` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. 選取應產生包含區段成員的檔案並將其匯出至目的地的時間。 |
+| `endDate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 選取時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`. <br> 設定受眾成員停止匯出至目的地的日期。 |
+| `startTime` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 必要. 選取應產生包含對象成員的檔案並匯出至您的目的地的時間。 |
 
 {style="table-layout:auto"}
 
 >[!TIP]
 >
-> 另請參閱 [更新資料流中區段的元件](/help/destinations/api/update-destination-dataflows.md#update-segment) 瞭解如何更新匯出區段的各種元件（檔案名稱範本、匯出時間等）。
+> 另請參閱 [更新資料流中對象的元件](/help/destinations/api/update-destination-dataflows.md#update-segment) 瞭解如何更新匯出對象的各種元件（檔案名稱範本、匯出時間等）。
 
 **回應**
 
@@ -1055,7 +1055,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![目的地步驟概述步驟6](../assets/api/batch-destination/step6.png)
 
-在教學課程的最後一步，您應驗證區段和設定檔屬性是否確實已正確對應至資料流。
+在教學課程的最後一步，您應該驗證對象和設定檔屬性是否確實已正確對應至資料流。
 
 若要驗證此正確性，請執行下列GET要求：
 
@@ -1082,7 +1082,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **回應**
 
-傳回的回應應包含在 `transformations` 引數您在上一步中提交的區段和設定檔屬性。 範例 `transformations` 回應中的引數可能如下所示：
+傳回的回應應包含在 `transformations` 引數為您在上一步中提交的對象和設定檔屬性。 範例 `transformations` 回應中的引數可能如下所示：
 
 ```json
 "transformations":[

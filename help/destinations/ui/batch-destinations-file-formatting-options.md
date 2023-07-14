@@ -2,7 +2,7 @@
 description: 瞭解在啟用以檔案為基礎的目的地資料時，如何設定檔案格式選項
 title: （測試版）設定檔案型目的地的檔案格式選項
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 07a91ef15075b6c438e85aecff12dfab704cc6a2
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 19%
@@ -37,7 +37,7 @@ ht-degree: 19%
 > 
 >新的雲端儲存空間目的地 —  [(Beta) Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)， [(Beta) Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md)， [(Beta) Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md)， [(Beta)資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)， [(Beta) Google雲端儲存空間](/help/destinations/catalog/cloud-storage/google-cloud-storage.md)， [(Beta) SFTP](/help/destinations/catalog/cloud-storage/sftp.md)  — 目前僅支援下面醒目提示的六個CSV選項。
 
-![顯示部分可用檔案格式選項的影像。](/help/destinations/assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
+![顯示部分可用檔案格式選項的影像。](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
 ### 分隔字元 {#delimiter}
 

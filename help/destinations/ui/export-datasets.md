@@ -3,7 +3,7 @@ title: （測試版）將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: d9b59b8a331511e87171f3b9d1163d452ba469be
+source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 5%
@@ -35,14 +35,14 @@ ht-degree: 5%
 * [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## 何時啟用區段或匯出資料集 {#when-to-activate-segments-or-activate-datasets}
+## 何時啟用對象或匯出資料集 {#when-to-activate-audiences-or-activate-datasets}
 
-Experience Platform目錄中的某些檔案型目的地同時支援區段啟用和資料集匯出。
+Experience Platform目錄中的某些檔案型目的地同時支援對象啟用和資料集匯出。
 
-* 當您想要將資料結構化為依對象興趣或資格分組的設定檔時，請考慮啟用區段。
+* 當您想要將資料結構化為依對象興趣或資格分組的設定檔時，請考慮啟用對象。
 * 或者，當您想要匯出未依對象興趣或資格進行分組或建構的原始資料集時，請考慮匯出資料集。 您可以將此資料用於報告、資料科學工作流程、滿足合規性要求以及許多其他使用案例。
 
-本檔案包含匯出資料集所需的所有資訊。 如果您想要對雲端儲存空間或電子郵件行銷目的地啟用區段，請閱讀 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md).
+本檔案包含匯出資料集所需的所有資訊。 如果您想要啟用雲端儲存空間或電子郵件行銷目的地的對象，請閱讀 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## 先決條件 {#prerequisites}
 

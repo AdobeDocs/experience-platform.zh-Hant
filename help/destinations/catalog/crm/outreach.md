@@ -3,26 +3,26 @@ keywords: crm；CRM；crm目的地；外聯；外聯crm目的地
 title: 外展連線
 description: 外聯目標可讓您匯出帳戶資料，並在外聯中啟用該資料，以滿足您的業務需求。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 4ef83c152c4649721c6a424f3ba47b7c6bbfef3f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1710'
 ht-degree: 1%
 
 ---
 
 # [!DNL Outreach] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [[!DNL Outreach]](https://www.outreach.io/) 是一個銷售執行平台，擁有全球最豐富的B2B買方與賣方互動資料，並在專有AI技術方面投入巨資，以將銷售資料轉換為情報。 [!DNL Outreach] 協助組織自動化銷售參與度並據以行動實現收入情報，以改善其效率、可預測性和成長。
 
-此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [外展更新資源API](https://api.outreach.io/api/v2/docs#update-an-existing-resource)，可讓您更新中對應潛在客戶之區段內的身分 [!DNL Outreach].
+此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [外展更新資源API](https://api.outreach.io/api/v2/docs#update-an-existing-resource)，可讓您更新中潛在客戶對應的對象身分 [!DNL Outreach].
 
 [!DNL Outreach] 使用具有授權授予的OAuth 2作為驗證機制，與 [!DNL Outreach] [!DNL Update Resource API]. 向您的驗證身分的說明 [!DNL Outreach] 執行個體會位於以下更遠的位置： [驗證至目的地](#authenticate) 區段。
 
 ## 使用案例 {#use-cases}
 
-作為行銷人員，您可以根據潛在客戶的Adobe Experience Platform設定檔屬性，為他們提供個人化體驗。 您可以從離線資料建立區段，並將這些區段傳送至 [!DNL Outreach]，會在Adobe Experience Platform中更新區段和設定檔後立即顯示在潛在客戶摘要中。
+作為行銷人員，您可以根據潛在客戶的Adobe Experience Platform設定檔屬性，為他們提供個人化體驗。 您可以從離線資料建立受眾，並將這些受眾傳送至 [!DNL Outreach]，以便在Adobe Experience Platform中更新對象和設定檔後立即顯示在潛在客戶摘要中。
 
 ## 先決條件 {#prerequisites}
 
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 在將資料啟用至 [!DNL Outreach] 目的地，您必須擁有 [綱要](/help/xdm/schema/composition.md)， a [資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)、和 [區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 建立於 [!DNL Experience Platform].
 
-請參閱Adobe的檔案以瞭解 [區段會籍詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md) 如果您需要區段狀態的指引。
+請參閱Adobe的檔案以瞭解 [對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md) 如果您需要對象狀態的指引。
 
 ### 外展必要條件 {#prerequisites-destination}
 
@@ -49,12 +49,12 @@ ht-degree: 1%
 
 #### 設定自訂欄位標籤 {#prerequisites-custom-fields}
 
-[!DNL Outreach] 支援的自訂欄位 [潛在客戶](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). 請參閱 [如何在延伸中新增自訂欄位](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) 以取得其他指引。 為方便識別，建議手動將標籤更新至其對應的區段名稱，而不是保留預設值。 例如：
+[!DNL Outreach] 支援的自訂欄位 [潛在客戶](https://support.outreach.io/hc/en-us/articles/360001557554-Outreach-Prospect-Profile-Overview). 請參閱 [如何在延伸中新增自訂欄位](https://support.outreach.io/hc/en-us/articles/219124908-How-To-Add-a-Custom-Field-in-Outreach) 以取得其他指引。 為方便識別，建議手動將標籤更新至其對應的對象名稱，而不是保留預設值。 例如：
 
 [!DNL Outreach] 潛在客戶顯示自訂欄位的設定頁面。
 ![顯示設定頁面上自訂欄位的外聯UI熒幕擷圖。](../../assets/catalog/crm/outreach/outreach-custom-fields.png)
 
-[!DNL Outreach] 潛在客戶顯示自訂欄位的設定頁面 *使用者易記* 和區段名稱相符的標籤。 您可以對照這些標籤在潛在客戶頁面上檢視區段狀態。
+[!DNL Outreach] 潛在客戶顯示自訂欄位的設定頁面 *使用者易記* 和對象名稱相符的標籤。 您可以對照這些標籤在潛在客戶頁面上檢視對象狀態。
 ![外展UI熒幕擷圖顯示設定頁面上具有相關標籤的自訂欄位。](../../assets/catalog/crm/outreach/outreach-custom-field-labels.png)
 
 >[!NOTE]
@@ -65,7 +65,7 @@ ht-degree: 1%
 
 此 [!DNL Outreach] API的速率限製為每位使用者每小時10,000個請求。 如果您達到此限制，您將收到 `429` 回應以下訊息： `You have exceeded your permitted rate limit of 10,000; please try again at 2017-01-01T00:00:00.`.
 
-如果您收到此訊息，則必須更新區段匯出排程以符合速率臨界值。
+如果您收到此訊息，您必須更新對象匯出排程以符合速率臨界值。
 
 請參閱 [[!DNL Outreach] 檔案](https://api.outreach.io/api/v2/docs#rate-limiting) 以取得其他詳細資訊。
 
@@ -83,8 +83,8 @@ ht-degree: 1%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li> 您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 中的每個區段狀態 [!DNL Outreach] 會根據 [!UICONTROL 對應ID] 值期間提供 [區段排程](#schedule-segment-export-example) 步驟。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li> 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li> 您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 中的每個區段狀態 [!DNL Outreach] 會根據 [!UICONTROL 對應ID] 值期間提供 [對象排程](#schedule-segment-export-example) 步驟。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li> 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -131,13 +131,13 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 > 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
@@ -151,39 +151,38 @@ ht-degree: 1%
 
 1. 在 [!UICONTROL 選取目標欄位] 視窗中，選取您要將來源欄位對應到的目標欄位型別。
    * **[!UICONTROL 選取身分名稱空間]**：選取此選項，從清單中將來源欄位對應到身分名稱空間。
-      ![平台UI熒幕擷取畫面顯示使用ExtendeoId的Target對應。](../../assets/catalog/crm/outreach/target-mapping.png)
+     ![平台UI熒幕擷取畫面顯示使用ExtendeoId的Target對應。](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * 在您的XDM設定檔結構描述與您的設定檔結構描述之間新增以下對應： [!DNL Outreach] 例項： |XDM設定檔結構描述|[!DNL Outreach] 例項|必要| |—|—|—| |`Oid`|`OutreachId`|是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項可將來源欄位對應至您在 [!UICONTROL 屬性名稱] 欄位。 請參閱 [[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect) 以取得支援屬性的完整清單。
-      ![平台UI熒幕擷圖顯示使用LastName的Target對應。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
+     ![平台UI熒幕擷圖顯示使用LastName的Target對應。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 例如，根據您要更新的值，在您的XDM設定檔結構描述與您的 [!DNL Outreach] 例項： |XDM設定檔結構描述|[!DNL Outreach] 例項| |—|—| |`person.name.firstName`|`firstName`| |`person.name.lastName`|`lastName`|
 
    * 使用這些對應的範例如下所示：
-      ![顯示Target對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/outreach/mappings.png)
+     ![顯示Target對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/outreach/mappings.png)
 
-### 排程區段匯出和範例 {#schedule-segment-export-example}
+### 排程對象匯出和範例 {#schedule-segment-export-example}
 
-* 執行 [排程區段匯出](../../ui/activate-segment-streaming-destinations.md) 您必須手動將Platform區段對應至中的自訂欄位屬性 [!DNL Outreach].
+* 執行 [排程對象匯出](../../ui/activate-segment-streaming-destinations.md) 步驟您必須手動將Platform對象對應至中的自訂欄位屬性 [!DNL Outreach].
 
 * 若要這麼做，請選取每個區段，然後輸入對應至 *自訂欄位 `N` 標籤* 起始欄位 [!DNL Outreach] 在 **[!UICONTROL 對應ID]** 欄位。
 
-   >[!IMPORTANT]
-   >
-   > * 數值 *(`N`)* 使用於 [!UICONTROL 對應ID] 應該符合尾碼為數字值的自訂屬性金鑰，在 [!DNL Outreach]. 範例： *自訂欄位 `N` 標籤*.
-   > * 您只需要指定數值，不需要指定整個自訂欄位標籤。
-   > * [!DNL Outreach] 支援最多150個自訂標籤欄位。
-   > * 請參閱 [[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect) 以取得詳細資訊。
-
+  >[!IMPORTANT]
+  >
+  > * 數值 *(`N`)* 使用於 [!UICONTROL 對應ID] 應該符合尾碼為數字值的自訂屬性金鑰，在 [!DNL Outreach]. 範例： *自訂欄位 `N` 標籤*.
+  > * 您只需要指定數值，不需要指定整個自訂欄位標籤。
+  > * [!DNL Outreach] 支援最多150個自訂標籤欄位。
+  > * 請參閱 [[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect) 以取得詳細資訊。
 
    * 例如：
 
-      | [!DNL Outreach] 欄位 | 平台對應ID |
-      |---|---|
-      | 自訂欄位 `4` 標籤 | `4` |
+     | [!DNL Outreach] 欄位 | 平台對應ID |
+     |---|---|
+     | 自訂欄位 `4` 標籤 | `4` |
 
-      ![Platform UI熒幕擷圖顯示排程區段匯出期間的對應ID範例。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
+     ![Platform UI熒幕擷圖顯示排程對象匯出期間的對應ID範例。](../../assets/catalog/crm/outreach/schedule-segment-export.png)
 
 ## 驗證資料匯出 {#exported-data}
 
@@ -195,15 +194,15 @@ ht-degree: 1%
 1. 選取目的地並驗證狀態是否為 **[!UICONTROL 已啟用]**.
    ![顯示所選目的地之目的地資料流執行的平台UI熒幕擷圖。](../../assets/catalog/crm/outreach/destination-dataflow-run.png)
 
-1. 切換至 **[!DNL Activation data]** 標籤，然後選取區段名稱。
+1. 切換至 **[!DNL Activation data]** 標籤，然後選取對象名稱。
    ![顯示「目的地啟用」資料的Platform UI熒幕擷圖。](../../assets/catalog/crm/outreach/destinations-activation-data.png)
 
-1. 監控區段摘要，並確保設定檔計數對應於在區段內建立的計數。
+1. 監控對象摘要，並確保設定檔計數對應於在區段內建立的計數。
    ![顯示區段摘要的平台UI熒幕擷圖。](../../assets/catalog/crm/outreach/segment.png)
 
-1. 登入 [!DNL Outreach] 網站，然後導覽至 [!DNL Apps] > [!DNL Contacts] 頁面，並檢查是否已新增區段中的設定檔。 您可以在中看到每個區段狀態 [!DNL Outreach] 已根據「 」更新Platform中的對應區段狀態 [!UICONTROL 對應ID] 值期間提供 [區段排程](#schedule-segment-export-example) 步驟。
+1. 登入 [!DNL Outreach] 網站，然後導覽至 [!DNL Apps] > [!DNL Contacts] 頁面，並檢查是否已新增對象中的設定檔。 您可以在中看到每個受眾狀態 [!DNL Outreach] 已根據「 」更新Platform的對應受眾狀態 [!UICONTROL 對應ID] 值期間提供 [對象排程](#schedule-segment-export-example) 步驟。
 
-![外聯UI熒幕擷圖顯示具有更新區段狀態的外聯潛在客戶頁面。](../../assets/catalog/crm/outreach/outreach-prospect.png)
+![外聯UI熒幕擷圖顯示具有更新對象狀態的外聯潛在客戶頁面。](../../assets/catalog/crm/outreach/outreach-prospect.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 
@@ -215,7 +214,7 @@ ht-degree: 1%
 
 ![顯示「錯誤請求錯誤」的Platform UI熒幕擷圖。](../../assets/catalog/crm/outreach/error.png)
 
-若要修正此錯誤，請確認 [!UICONTROL 對應ID] 您在Platform中提供的 [!DNL Outreach] 區段有效並存在於中 [!DNL Outreach].
+若要修正此錯誤，請確認 [!UICONTROL 對應ID] 您在Platform中提供的 [!DNL Outreach] 對象有效並存在於中 [!DNL Outreach].
 
 ## 其他資源 {#additional-resources}
 

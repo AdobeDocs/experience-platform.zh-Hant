@@ -1,10 +1,10 @@
 ---
 title: 資料登陸區域目的地
-description: 瞭解如何連線至資料登陸區域以啟用區段和匯出資料集。
+description: 瞭解如何連線至資料登陸區域以啟用受眾和匯出資料集。
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5daa92b2f488b4acb825215f4da92af51bcf7c61
+source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >* 本檔案頁面主要說明 [!DNL Data Landing Zone] *目的地*. 此外， [!DNL Data Landing Zone] *source* 在來源目錄中。 如需詳細資訊，請閱讀 [[!DNL Data Landing Zone] source](/help/sources/connectors/cloud-storage/data-landing-zone.md) 說明檔案。
 
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存體介面，可讓您存取安全的雲端型檔案儲存設施，以將檔案匯出至Platform。 您可以存取一個 [!DNL Data Landing Zone] 容器，以及所有容器的總資料量，皆以您的Platform產品和服務授權所提供的總資料為限。 Platform及其應用程式服務的所有客戶，例如 [!DNL Customer Journey Analytics]， [!DNL Journey Orchestration]， [!DNL Intelligent Services]、和 [!DNL Real-Time Customer Data Platform] 已布建一個 [!DNL Data Landing Zone] 每個沙箱的容器。 您可以透過以下方式讀取檔案並將檔案寫入容器 [!DNL Azure Storage Explorer] 或您的命令列介面。
 
@@ -27,8 +27,22 @@ Platform會對上傳至的所有檔案執行嚴格的七天存留時間(TTL) [!D
 
 ## 連線至您的 [!UICONTROL 資料登陸區域] 透過API或UI儲存 {#connect-api-or-ui}
 
-* 若要連線至您的 [!UICONTROL 資料登陸區域] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
-* 若要連線至您的 [!UICONTROL 資料登陸區域] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
+* 若要連線至您的 [!UICONTROL 資料登陸區域] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 下方的。
+* 若要連線至您的 [!UICONTROL 資料登陸區域] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -201,13 +215,13 @@ curl -X POST \
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 排程
 

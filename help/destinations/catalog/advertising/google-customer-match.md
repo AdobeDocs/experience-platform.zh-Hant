@@ -3,16 +3,16 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和經營的屬性(例如搜尋、購物、Gmail和YouTube)聯絡客戶並重新與其互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d6b34f3bd3a432e1cf7d3dcce242934391b65d78
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1818'
 ht-degree: 1%
 
 ---
 
 # [!DNL Google Customer Match] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) 可讓您使用線上和離線資料，透過Google所擁有和經營的屬性觸及客戶，並與客戶重新互動，例如： [!DNL Search]， [!DNL Shopping]， [!DNL Gmail]、和 [!DNL YouTube].
 
@@ -24,13 +24,13 @@ ht-degree: 1%
 
 ### 使用案例#1
 
-運動服裝品牌想要透過以下方式觸及現有客戶： [!DNL Google Search] 和 [!DNL Google Shopping] 根據優惠方案與專案的過去購買與瀏覽記錄，進行個人化。 服飾品牌可以從他們自己的CRM擷取電子郵件地址以Experience Platform，以及從他們自己的離線資料建立區段。 接著，他們便可將這些區段傳送至 [!DNL Google Customer Match] 使用範圍： [!DNL Search] 和 [!DNL Shopping]，將廣告支出最佳化。
+運動服裝品牌想要透過以下方式觸及現有客戶： [!DNL Google Search] 和 [!DNL Google Shopping] 根據優惠方案與專案的過去購買與瀏覽記錄，進行個人化。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Experience Platform，並從他們自己的離線資料中建立受眾。 接著，他們便可將這些對象傳送至 [!DNL Google Customer Match] 使用範圍： [!DNL Search] 和 [!DNL Shopping]，將廣告支出最佳化。
 
 ### 使用案例#2
 
 一家知名科技公司推出了一部新手機。 為了推廣此新款手機，他們想要提高擁有舊款手機的客戶對手機新功能和新功能的認識。
 
-為了提升此版本，他們會使用電子郵件地址作為識別碼，從CRM資料庫將電子郵件地址上傳到Experience Platform。 區段是根據擁有舊款手機型號的客戶所建立。 然後區段會傳送至 [!DNL Google Customer Match]，因此公司可將目標鎖定在目前的客戶、擁有舊款手機型號的客戶，以及 [!DNL YouTube].
+為了提升此版本，他們會使用電子郵件地址作為識別碼，從CRM資料庫將電子郵件地址上傳到Experience Platform。 受眾是根據擁有舊款手機型號的客戶所建立。 然後會將對象傳送到 [!DNL Google Customer Match]，因此公司可將目標鎖定在目前的客戶、擁有舊款手機型號的客戶，以及 [!DNL YouTube].
 
 ## 的資料控管 [!DNL Google Customer Match] 目的地 {#data-governance}
 
@@ -50,14 +50,28 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼及其他）。 [!DNL Google Customer Match] 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出對象的所有成員，其中包含用於 [!DNL Google Customer Match] 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -117,7 +131,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 <!-- ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
@@ -141,22 +155,21 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >
 > * 此 **[!UICONTROL 與PII結合]** 預設情況下會為以下專案選取行銷動作 [!DNL Google Customer Match] 目的地和無法移除。
 
-
 ### 啟用警示 {#enable-alerts}
 
 您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
-在 **[!UICONTROL 區段排程]** 步驟，您必須提供 [!UICONTROL 應用程式ID] 傳送時 [!DNL IDFA] 或 [!DNL GAID] 區段至 [!DNL Google Customer Match].
+在 **[!UICONTROL 區段排程]** 步驟，您必須提供 [!UICONTROL 應用程式ID] 傳送時 [!DNL IDFA] 或 [!DNL GAID] 對象至 [!DNL Google Customer Match].
 
 ![Google客戶比對應用程式ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
@@ -191,11 +204,11 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ![身分對應轉換](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
-## 驗證區段啟用是否成功 {#verify-activation}
+## 驗證對象啟用是否成功 {#verify-activation}
 
-完成啟動流程後，切換至 **[!UICONTROL Google Ads]** 帳戶。 啟用的區段會在您的Google帳戶中顯示為客戶清單。 請注意，根據您的區段大小，除非有100多位活躍使用者可服務，否則不會填入某些對象。
+完成啟動流程後，切換至 **[!UICONTROL Google Ads]** 帳戶。 啟用的對象會在您的Google帳戶中顯示為客戶清單。 請注意，根據您的對象規模，除非有100多名活躍使用者可服務，否則不會填入某些對象。
 
-將區段對應至兩者時 [!DNL IDFA] 和 [!DNL GAID] 行動ID、 [!DNL Google Customer Match] 會為每個ID對應建立個別的區段。 您的 [!DNL Google Ads] 帳戶會顯示兩個不同的區段，一個用於 [!DNL IDFA]，其中一個 [!DNL GAID] 對應。
+將對象對應至兩者時 [!DNL IDFA] 和 [!DNL GAID] 行動ID、 [!DNL Google Customer Match] 會為每個ID對應建立個別的對象。 您的 [!DNL Google Ads] 帳戶會顯示兩個不同的區段，一個用於 [!DNL IDFA]，其中一個 [!DNL GAID] 對應。
 
 ## 疑難排解 {#troubleshooting}
 

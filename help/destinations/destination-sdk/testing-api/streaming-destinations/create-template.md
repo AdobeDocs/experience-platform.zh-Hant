@@ -2,7 +2,7 @@
 description: 瞭解如何使用目的地測試API，在發佈目的地之前測試串流目的地訊息轉換範本。
 title: 建立及測試訊息轉換範本
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 建立及測試訊息轉換範本 {#create-template}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在Destination SDK過程中，Adobe會提供開發人員工具，協助您設定和測試目的地。 此頁面說明如何建立和測試訊息轉換範本。 如需如何測試目的地的詳細資訊，請閱讀 [測試您的目的地設定](streaming-destination-testing-overview.md).
 
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 為何需要建立和測試訊息轉換範本 {#why-create-message-transformation-template}
 
-在Destination SDK中建立目的地的首要步驟之一，就是思考將區段會籍、身分和設定檔屬性的資料格式從Adobe Experience Platform匯出至目的地時，如何進行轉換。 在中尋找有關AdobeXDM結構描述和您的目的地結構描述之間轉換的資訊 [訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating).
+在Destination SDK中建立目的地的首要步驟之一，就是思考將對象成員資格、身分和設定檔屬性的資料格式從Adobe Experience Platform匯出至目的地時，如何進行轉換。 在中尋找有關AdobeXDM結構描述和您的目的地結構描述之間轉換的資訊 [訊息格式檔案](../../functionality/destination-server/message-format.md#using-templating).
 
 若要轉換成功，您必須提供轉換範本，類似於以下範例： [建立可傳送區段、身分和設定檔屬性的範本](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -38,8 +38,8 @@ Adobe提供範本工具，可讓您建立並測試訊息範本，將資料從Ado
 在您準備好建立範本之前，請務必完成下列步驟：
 
 1. [建立目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 根據您為提供的值，將產生的範本會有所不同 `maxUsersPerRequest` 引數。
-   * 使用 `maxUsersPerRequest=1` 如果您希望目的地的API呼叫包含單一設定檔，以及其區段資格、身分和設定檔屬性。
-   * 使用 `maxUsersPerRequest` 大於一的值（如果您希望目的地的API呼叫包含多個設定檔，以及其區段資格、身分和設定檔屬性）。
+   * 使用 `maxUsersPerRequest=1` 如果您希望目的地的API呼叫包含單一設定檔，以及其對象資格、身分和設定檔屬性。
+   * 使用 `maxUsersPerRequest` 大於一的值（如果您希望目的地的API呼叫包含多個設定檔，以及其對象資格、身分和設定檔屬性）。
 2. [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md) 並將目的地伺服器設定的ID新增至 `destinationDelivery.destinationServerId`.
 3. [取得目的地設定的ID](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) 您剛剛建立的，所以您可以在範本建立工具中使用它。
 4. 瞭解 [您可以使用哪些函式和篩選器](../../functionality/destination-server/supported-functions.md) 在訊息轉換範本中。
@@ -100,7 +100,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
         {% endfor %}
         ],
         "remove": [
-        {#- Alternative syntax for filtering segments by status: -#}
+        {#- Alternative syntax for filtering audiences by status: -#}
         {% for segment in removedSegments(input.profile.segmentMembership.ups) %}
             "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
         {% endfor %}
@@ -136,7 +136,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
                 {% endfor %}
                 ],
                 "remove": [
-                {#- Alternative syntax for filtering segments by status: -#}
+                {#- Alternative syntax for filtering audiences by status: -#}
                 {% for segment in removedSegments(profile.segmentMembership.ups) %}
                     "{{ segment.key }}"{%- if not loop.last -%},{%- endif -%}
                 {% endfor %}

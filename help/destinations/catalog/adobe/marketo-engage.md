@@ -2,9 +2,9 @@
 title: Marketo Engage目的地
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理和客戶參與，到以帳戶為基礎的行銷和收入歸因。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: e68bbc07f7d2e4e05b725cbef37a1810a5825742
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 1%
 >* 如果您已將資料啟用至 **[!UICONTROL Marketo V1]** 目的地：請建立新的資料流至 **[!UICONTROL Marketo V2]** 目的地並刪除現有的資料流 **[!UICONTROL Marketo V1]** 2023年2月前抵達目的地。 截至該日期， **[!UICONTROL Marketo V1]** 目的地卡片將會移除。
 >* 如果您尚未建立任何資料流至 **[!UICONTROL Marketo V1]** 目的地，請使用新的 **[!UICONTROL Marketo V2]** 卡片，用來連線及匯出資料至Marketo。
 
-
 ![並排檢視中的兩個Marketo目的地卡片影像。](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
 Marketo V2目的地的改良專案包括：
@@ -27,11 +26,11 @@ Marketo V2目的地的改良專案包括：
 * 在 **[!UICONTROL 排程區段]** 啟動工作流程的步驟，在Marketo V1中，您需要手動新增 **對應ID** 以成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
 * 在 **[!UICONTROL 對應]** 啟動工作流程的步驟，在Marketo V1中，您僅能將XDM欄位對應到Marketo中的三個目標欄位： `firstName`， `lastName`、和 `companyName`. 透過Marketo V2版本，您現在可以將XDM欄位對應到Marketo中的更多欄位。 如需詳細資訊，請閱讀 [支援的屬性](#supported-attributes) 區段下方。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL Marketo Engage] 是唯一適用於行銷、廣告、分析和商務的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化和管理活動，從CRM銷售機會管理和客戶參與，到以帳戶為基礎的行銷和收入歸因。
 
-目的地可讓行銷人員將在Adobe Experience Platform中建立的區段推送至Marketo，並在其中顯示為靜態清單。
+目的地可讓行銷人員將在Adobe Experience Platform中建立的對象推送到Marketo，並在其中顯示為靜態清單。
 
 ## 支援的身分和屬性 {#supported-identities-attributes}
 
@@ -52,28 +51,39 @@ Marketo V2目的地的改良專案包括：
 
 您可以將屬性從Experience Platform對應至貴組織在Marketo中可以存取的任何屬性。 在Marketo中，您可以使用 [說明API要求](https://developers.marketo.com/rest-api/lead-database/leads/#describe) 以擷取貴組織有權存取的屬性欄位。
 
+## 外部對象支援 {#external-audiences-support}
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的外部對象。
+
+| 外部對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些區段包含的識別碼（電子郵件、ECID）用於 [!DNL Marketo Engage] 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正使用中使用的識別碼（電子郵件、ECID）匯出對象的所有成員 [!DNL Marketo Engage] 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## 設定目的地並啟用區段 {#set-up}
+## 設定目的地並啟用對象 {#set-up}
 
 >[!IMPORTANT]
 > 
 >* 若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions).
 >* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
+如需如何設定目的地和啟用對象的詳細指示，請閱讀 [將Adobe Experience Platform對象推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) (位於Marketo檔案中)。
 
-如需如何設定目的地及啟用區段的詳細指示，請閱讀 [將Adobe Experience Platform區段推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) (位於Marketo檔案中)。
-
-以下影片也會示範設定Marketo目的地和啟用區段的步驟。
+以下影片也會示範設定Marketo目的地和啟用對象的步驟。
 
 >[!IMPORTANT]
 >
@@ -81,9 +91,8 @@ Marketo V2目的地的改良專案包括：
 > 
 >* 您應在Experience PlatformUI中使用的目的地卡為 **[!UICONTROL Marketo V2]**.
 >* 影片未顯示新的 **[!UICONTROL 個人建立]** 連線至目標工作流程中的選取器欄位。
->* 影片中叫用的兩個限制不再適用。 除了錄製影片時支援的區段會籍資訊外，您現在可以對應許多其他設定檔屬性欄位。 您也可以將尚未存在於Marketo靜態清單中的區段成員匯出至Marketo，這些成員將會新增至清單中。
->* 在 **[!UICONTROL 排程區段步驟]** 在Marketo V1中，您需要手動新增 **[!UICONTROL 對應ID]** 以成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
-
+>* 影片中叫用的兩個限制不再適用。 除了錄製影片時支援的對象成員資格資訊外，您現在可以對應許多其他設定檔屬性欄位。 您也可以將尚未存在於Marketo靜態清單中的對象成員匯出至Marketo，這些成員將會新增至清單中。
+>* 在 **[!UICONTROL 排程對象步驟]** 在Marketo V1中，您需要手動新增 **[!UICONTROL 對應ID]** 以成功將資料匯出至Marketo。 Marketo V2不再需要此手動步驟。
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
@@ -101,8 +110,8 @@ To connect to this destination, follow the steps described in the [destination c
 
 <!--
 
-## Activate segments to this destination {#activate}
+## Activate audiences to this destination {#activate}
 
-See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+See [Activate audience data to streaming audience export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audiences to this destination.
 
 -->

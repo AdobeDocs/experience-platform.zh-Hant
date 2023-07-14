@@ -3,20 +3,34 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud是數位行銷套裝，先前稱為ExactTarget，可讓您建置和自訂訪客和客戶的歷程，以個人化其體驗。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '803'
 ht-degree: 2%
 
 ---
 
 # [!DNL (Files) Salesforce Marketing Cloud] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) 是先前稱為ExactTarget的數位行銷套裝，可讓您為訪客和客戶建置和自訂歷程，以個人化其體驗。
 
-若要傳送區段資料至 [!DNL Salesforce Marketing Cloud]，您必須先 [連線目的地](#connect-destination) 在Platform中，然後 [設定資料匯入](#import-data-into-salesforce) 從您的儲存位置移至 [!DNL Salesforce Marketing Cloud].
+若要將受眾資料傳送至 [!DNL Salesforce Marketing Cloud]，您必須先 [連線目的地](#connect-destination) 在Platform中，然後 [設定資料匯入](#import-data-into-salesforce) 從您的儲存位置移至 [!DNL Salesforce Marketing Cloud].
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -83,21 +97,21 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 目的地屬性 {#destination-attributes}
 
-啟用區段至此目的地時，Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。 如需詳細資訊，請參閱 [在電子郵件行銷目的地啟用對象時的最佳實務](overview.md#best-practices).
+將對象啟用至此目的地時，Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。 如需詳細資訊，請參閱 [在電子郵件行銷目的地啟用對象時的最佳實務](overview.md#best-practices).
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL Salesforce Marketing Cloud] 目的地，平台會建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證區段啟用](../../ui/activate-batch-profile-destinations.md#verify) 區段啟動教學課程中的。
+對象 [!DNL Salesforce Marketing Cloud] 目的地，平台會建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify) （在audience activation教學課程中）。
 
 ## 設定將資料匯入到 [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 

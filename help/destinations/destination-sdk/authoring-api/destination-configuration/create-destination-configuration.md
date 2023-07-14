@@ -1,7 +1,7 @@
 ---
 description: 瞭解如何建構API呼叫，以透過Adobe Experience Platform Destination SDK建立目的地設定。
 title: 建立目的地設定
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 3%
@@ -195,7 +195,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `description` | 字串 | 提供Adobe將用於目的地卡片Experience Platform目的地目錄的說明。 目標不超過4-5個句子。 ![顯示目的地說明的平台UI影像。](../../assets/authoring-api/destination-configuration/destination-description.png "目的地說明"){width="100" zoomable="yes"} |
 | `status` | 字串 | 表示目的地卡片的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 當您首次設定目的地時。 |
 | `customerAuthenticationConfigurations.authType` | 字串 | 表示用於向目的地伺服器驗證Experience Platform客戶的設定。 另請參閱 [客戶驗證設定](../../functionality/destination-configuration/customer-authentication.md) 以取得有關支援的驗證型別的詳細資訊。 |
-| `customerDataFields.name` | 字串 | 為您要介紹的自訂欄位命名。 <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 ![顯示客戶資料欄位的平台UI影像。](../../assets/authoring-api/destination-configuration/customer-data-fields.png "客戶資料欄位"){width="100" zoomable="yes"} |
+| `customerDataFields.name` | 字串 | 為您要引入的自訂欄位命名。 <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 ![顯示客戶資料欄位的平台UI影像。](../../assets/authoring-api/destination-configuration/customer-data-fields.png "客戶資料欄位"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | 字串 | 指出您要引入的自訂欄位型別。 接受的值為 `string`， `object`， `integer`. <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 |
 | `customerDataFields.title` | 字串 | 表示欄位名稱，如客戶在Experience Platform使用者介面中所見。 <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 |
 | `customerDataFields.description` | 字串 | 提供自訂欄位的說明。 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 |
@@ -213,10 +213,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 指示哪一個 [標準身分名稱空間](/help/identity-service/namespaces.md#standard) （例如，IDFA）客戶可以對應至您正在設定的身分。 <br> 當您使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 至小寫及雜湊電子郵件地址或電話號碼。 |
 | `destinationDelivery.authenticationRule` | 字串 | 指示如何進行 [!DNL Platform] 客戶連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`， `PLATFORM_AUTHENTICATION`， `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過使用者名稱和密碼、持有人權杖或其他驗證方法登入您的系統。 例如，如果您也選取了 `authType: OAUTH2` 或 `authType:BEARER` 在 `customerAuthenticationConfigurations`. </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe和您的目的地之間存在全域驗證系統，並且 [!DNL Platform] 客戶不需要提供任何驗證認證即可連線至您的目的地。 在此情況下，您必須使用 [認證API](../../credentials-api/create-credential-configuration.md) 設定。 </li><li>使用 `NONE` 如果不需要驗證即可將資料傳送至您的目的地平台。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 字串 | 此 `instanceId` 的 [目的地伺服器範本](../destination-server/create-destination-server.md) 用於此目的地。 |
-| `backfillHistoricalProfileData` | 布林值 | 控制將區段啟用至目的地時，是否匯出歷史設定檔資料。 一律設定為 `true`. |
-| `segmentMappingConfig.mapUserInput` | 布林值 | 控制使用者是否輸入目的地啟用工作流程中的區段對應ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目的地啟用工作流程中的區段對應ID是否為Experience Platform區段ID。 |
-| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目的地啟用工作流程中的區段對應ID是否為Experience Platform區段名稱。 |
+| `backfillHistoricalProfileData` | 布林值 | 控制當對象啟用至目的地時，是否匯出歷史設定檔資料。 一律設定為 `true`. |
+| `segmentMappingConfig.mapUserInput` | 布林值 | 控制使用者是否輸入目的地啟用工作流程中的對象對應ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目的地啟用工作流程中的對象對應ID是否為Experience Platform對象ID。 |
+| `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目的地啟用工作流程中的對象對應ID是否為Experience Platform的對象名稱。 |
 | `segmentMappingConfig.audienceTemplateId` | 布林值 | 此 `instanceId` 的 [對象中繼資料範本](../../metadata-api/create-audience-template.md) 用於此目的地。 |
 | `schemaConfig.profileFields` | 陣列 | 當您新增預先定義的 `profileFields` 如上述設定所示，使用者可以選擇將Experience Platform屬性對應至目的地側預先定義的屬性。 |
 | `schemaConfig.profileRequired` | 布林值 | 使用 `true` 使用者是否應該能夠將Experience Platform的設定檔屬性對應到您目的地一側的自訂屬性，如上面的設定範例所示。 |

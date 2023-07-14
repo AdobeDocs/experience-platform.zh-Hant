@@ -4,10 +4,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 5%
+source-wordcount: '1167'
+ht-degree: 9%
 
 ---
 
@@ -18,29 +18,29 @@ ht-degree: 5%
 * [目的地型別和類別](./destination-types.md)
 * [目的地（啟動）護欄](./guardrails.md)
 * 目的地如何運作 {#how-destinations-work}
-   * [目的地中可設定和常用的匯出設定](./how-destinations-work/destinations-configurations.md)
-   * [不同目的地型別的設定檔匯出行為](./how-destinations-work/profile-export-behavior.md)
-   * [目的地啟用工作流程中的身分處理](./how-destinations-work/identity-handling.md)
+   * [目的地中可設定的常用匯出設定](./how-destinations-work/destinations-configurations.md)
+   * [不同目的地類型的設定檔匯出行為](./how-destinations-work/profile-export-behavior.md)
+   * [目的地啟動工作流程中的身分處理](./how-destinations-work/identity-handling.md)
 * API教學課程 {#api}
    * [雲端儲存空間目的地的API移轉指南](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [使用流量服務API連線到串流目的地並啟用資料](./api/streaming-destinations.md)
    * [連線至批次雲端儲存空間及電子郵件行銷目的地，並使用Flow Service API啟用資料](./api/connect-activate-batch-destinations.md)
-   * [（測試版）透過臨機啟動API將受眾區段啟動至批次目的地](./api/ad-hoc-activation-api.md)
+   * [（Beta版）透過臨機啟動API將受眾啟動至批次目的地](./api/ad-hoc-activation-api.md)
    * [編輯目的地](./api/edit-destination.md)
    * [更新目的地資料流程](./api/update-destination-dataflows.md)
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
    * [（測試版）使用流量服務API，將資料啟用至檔案型目的地](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta)匯出資料集](/help/destinations/api/export-datasets.md)
-* UI指南 {#ui}
+* UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
    * 對目的地啟用受眾資料{#activate}
       * [Activation 總覽](./ui/activation-overview.md)
-      * [啟用串流區段匯出目的地的受眾資料](./ui/activate-segment-streaming-destinations.md)
-      * [將受眾資料啟用至串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md)
-      * [啟用對象資料以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md)
-      * [啟用邊緣個人化目的地的受眾資料](./ui/activate-edge-personalization-destinations.md)
+      * [啟用受眾至串流受眾匯出目的地](./ui/activate-segment-streaming-destinations.md)
+      * [啟用受眾至串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md)
+      * [啟用對象以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md)
+      * [啟用對象以邊緣個人化目的地](./ui/activate-edge-personalization-destinations.md)
       * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [（測試版）使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [（測試版）使用新Beta版雲端儲存目的地中的最後資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
@@ -59,7 +59,7 @@ ht-degree: 5%
       * [(Beta)Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform區段共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 廣告目的地{#advertising}
       * [Advertising目的地概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud連線](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -87,7 +87,7 @@ ht-degree: 5%
       * [pinterest客戶清單連線](./catalog/advertising/pinterest.md)
       * [Snapchat Ads連線](./catalog/advertising/snap-inc.md)
       * [交易台連線](./catalog/advertising/tradedesk.md)
-      * [(Beta)交易台CRM連線](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) The Trade Desk CRM 連線](./catalog/advertising/tradedesk-emails.md)
       * [twitter通用網站標籤擴充功能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX連線](./catalog/advertising/datax.md)
    * Analytics目的地 {#analytics}
@@ -126,7 +126,7 @@ ht-degree: 5%
       * [Salesforce CRM連線](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365連線](./catalog/crm/microsoft-dynamics-365.md)
       * [外展連線](catalog/crm/outreach.md)
-      * [Zendesk連線](catalog/crm/zendesk.md)
+      * [Zendesk 連線](catalog/crm/zendesk.md)
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL擴充功能](./catalog/data-management/aam-dil-extension.md)
@@ -139,8 +139,8 @@ ht-degree: 5%
       * [電子郵件行銷目的地概觀](./catalog/email-marketing/overview.md)
       * [Adobe Campaign連線](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services連線](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Mailchimp興趣類別](./catalog/email-marketing/mailchimp-interest-categories.md)
-      * [(API) Oracle Eloqua連線](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [Mailchimp 興趣類別](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [(API) Oracle Eloqua 連線](./catalog/email-marketing/oracle-eloqua-api.md)
       * [（檔案） Eloqua連線Oracle](./catalog/email-marketing/oracle-eloqua.md)
       * [oracleResponsys連線](./catalog/email-marketing/oracle-responsys.md)
       * [(API) SalesforceMarketing Cloud連線](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
@@ -169,13 +169,13 @@ ht-degree: 5%
       * [KickFire擴充功能](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization擴充功能](./catalog/personalization/marketo-web-personalization.md)
       * [Pega客戶決策中心連線](./catalog/personalization/pega.md)
-      * [Pega設定檔連線](./catalog/personalization/pega-profile.md)
+      * [Pega 設定檔連線](./catalog/personalization/pega-profile.md)
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
       * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [facebook連線](./catalog/social/facebook.md)
       * [linkedIn相符受眾連線](./catalog/social/linkedin.md)
-      * [TikTok連線](./catalog/social/tiktok.md)
+      * [TikTok 連線](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 連線](./catalog/social/twitter.md)
    * 串流目的地 {#streaming}
       * [HTTP API連線](./catalog/streaming/http-destination.md)
@@ -194,7 +194,7 @@ ht-degree: 5%
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [交談URL收件匣擴充功能](./catalog/voice/talkurl.md)
 * 目標 SDK {#destination-sdk}
-   * [總覽](./destination-sdk/overview.md)
+   * [概觀](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
    * [Destination SDK快速入門](./destination-sdk/getting-started.md)
    * 功能 {#functionality}
@@ -258,7 +258,7 @@ ht-degree: 5%
       * 串流目的地測試API {#streaming-destinations}
          * [串流目的地測試API概覽](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [根據來源結構描述產生範例設定檔](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
-         * [產生範例訊息轉換範本 ](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
+         * [產生範例訊息轉換範本](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
          * [驗證匯出的設定檔結構](./destination-sdk/testing-api/streaming-destinations/render-template-api.md)
          * [使用範例設定檔測試您的串流目的地](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [建立及測試訊息轉換範本](./destination-sdk/testing-api/streaming-destinations/create-template.md)

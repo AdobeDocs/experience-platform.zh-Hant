@@ -3,16 +3,16 @@ keywords: 廣告；標準；
 title: 標準連線
 description: 標準提供值得信賴且具影響力的廣告，讓開放網際網路上的每位消費者都能獲得更豐富的體驗。 Criteo擁有世界上最大的商業資料集和同級最佳的AI，可確保整個購物歷程的每個接觸點都經過個人化，以便在適當的時間透過適當的廣告觸及客戶。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 8211ca28462548e1c17675e504e6de6f5cc55e73
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1005'
 ht-degree: 3%
 
 ---
 
 # (Beta) Criteo連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 >[!IMPORTANT]
 >
@@ -48,8 +48,8 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 | --- | --- | --- |
-| 匯出型別 | 區段匯出 | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 [!DNL Criteo] 目的地。 |
-| 匯出頻率 | 串流 | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](../../destination-types.md#streaming-destinations). |
+| 匯出型別 | 對象匯出 | 您正在匯出對象的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 [!DNL Criteo] 目的地。 |
+| 匯出頻率 | 串流 | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](../../destination-types.md#streaming-destinations). |
 
 ## 使用案例 {#use-cases}
 
@@ -61,7 +61,7 @@ ht-degree: 3%
 
 ### 使用案例2 ：提高網站轉換率
 
-當訪客離開您的網站時，提醒他們缺少什麼，重新定位廣告可透過顯示特殊優惠和高度相關優惠方案來提高轉換率，無論他們接下來前往何處。 連線您的AdobeCDP區段，以重新吸引現有客戶或鎖定與您最忠誠的購物者類似的消費者。
+當訪客離開您的網站時，提醒他們缺少什麼，重新定位廣告可透過顯示特殊優惠和高度相關優惠方案來提高轉換率，無論他們接下來前往何處。 連線您的AdobeCDP受眾，以重新吸引現有客戶或鎖定與您最忠誠的購物者類似的消費者。
 
 ## 連線至標準 {#connect}
 
@@ -107,17 +107,17 @@ ht-degree: 3%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate-segments}
+## 啟用此目的地的對象 {#activate-segments}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 匯出的資料 {#exported-data}
 
-您可在以下位置檢視匯出的區段： [標準管理中心](https://marketing.criteo.com/audience-manager/dashboard).
+您可在以下位置檢視匯出的對象： [標準管理中心](https://marketing.criteo.com/audience-manager/dashboard).
 
 新增使用者個人資料的請求內文，接收者為 [!DNL Criteo] 連線看起來類似這樣：
 

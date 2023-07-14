@@ -1,9 +1,9 @@
 ---
 description: 使用對象中繼資料範本，以程式設計方式在您的目的地建立、更新或刪除對象。 Adobe提供可擴充的對象中繼資料範本，您可以根據行銷API的規格進行設定。 定義、測試及提交範本後，Adobe會使用範本來建構對目的地的API呼叫。
 title: 對象中繼資料管理
-source-git-commit: e69bd819fb8ef6c2384a2b843542d1ddcea0661f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -23,23 +23,23 @@ ht-degree: 0%
 
 ## 受眾中繼資料管理支援的使用案例 {#use-cases}
 
-透過Destination SDK中的受眾中繼資料支援，當您設定Experience Platform目的地時，可以為Platform使用者提供下列其中一個選項，讓他們將區段對應及啟用至您的目的地。 您可以透過中的引數控制使用者可用的選項 [對象中繼資料設定](../functionality/destination-configuration/audience-metadata-configuration.md) 目的地設定的區段。
+透過Destination SDK中的受眾中繼資料支援，當您設定Experience Platform目的地時，可以為Platform使用者提供下列其中一個選項，讓他們將受眾對應並啟用至您的目的地。 您可以透過中的引數控制使用者可用的選項 [對象中繼資料設定](../functionality/destination-configuration/audience-metadata-configuration.md) 目的地設定的區段。
 
 ### 使用案例1 — 您有第三方API，使用者不需要輸入對應ID
 
-如果您有建立/更新/刪除區段或受眾的API端點，則可以使用受眾中繼資料範本設定Destination SDK，以符合區段建立/更新/刪除端點的規格。 Experience Platform能以程式設計方式建立/更新/刪除區段，並將中繼資料同步回Experience Platform。
+如果您有API端點來建立/更新/刪除對象或對象，您可以使用對象中繼資料範本來設定Destination SDK，以符合對象建立/更新/刪除端點的規格。 Experience Platform能以程式設計方式建立/更新/刪除對象，並將中繼資料同步回Experience Platform。
 
-在Experience Platform使用者介面(UI)中將區段啟用至您的目的地時，使用者不需要手動填寫啟用工作流程中的區段對應ID欄位。
+在Experience Platform使用者介面(UI)中將受眾啟用至您的目的地時，使用者不需要手動填寫啟用工作流程中的受眾對應ID欄位。
 
-### 使用案例2 — 使用者需要先在您的目的地中建立區段，並需要手動輸入對應ID
+### 使用案例2 — 使用者需要先在您的目的地建立受眾，並需要手動輸入對應ID
 
-如果您的目的地需要合作夥伴或使用者手動建立區段和其他中繼資料，則使用者必須在啟動工作流程中手動填寫區段對應ID欄位，以在目的地和Experience Platform之間同步區段中繼資料。
+如果對象和其他中繼資料需要由合作夥伴或使用者在您的目的地手動建立，則使用者必須在啟動工作流程中手動填寫對象對應ID欄位，以在您的目的地和Experience Platform之間同步對象中繼資料。
 
 ![輸入對應ID](../assets/functionality/input-mapping-id.png)
 
-### 使用案例3 — 您的目的地接受Experience Platform區段ID，使用者不需要手動輸入對應ID
+### 使用案例3 — 您的目的地接受Experience Platform的受眾ID，使用者不需要手動輸入對應ID
 
-如果您的目的地系統接受Experience Platform區段ID，您可以在對象中繼資料範本中加以設定。 使用者啟用區段時，不必填入區段對應ID。
+如果您的目的地系統接受Experience Platform的受眾ID，您可以在受眾中繼資料範本中加以設定。 使用者在啟用區段時，不必填入對象對應ID。
 
 ## 通用且可擴充的對象範本 {#generic-and-extensible}
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ## 設定範例 {#configuration-examples}
 
-本節包含三個一般受眾中繼資料設定的範例，以供您參考，以及設定的主要區段說明。 請注意三個設定範例之間的URL、標頭、請求和回應內文差異。 這是因為三個範例平台行銷API的規格不同。
+本節包含三個一般對象中繼資料設定的範例，以供您參考，以及設定的主要區段說明。 請注意三個設定範例之間的URL、標頭、請求和回應內文差異。 這是因為三個範例平台行銷API的規格不同。
 
 請注意，在一些範例中，巨集欄位如 `{{authData.accessToken}}` 或 `{{segment.name}}` 用於URL，而在其他範例中，這些會用於標頭或請求內文。 這確實取決於您的行銷API規格。
 
@@ -525,13 +525,13 @@ ht-degree: 0%
 
 ## 對象中繼資料範本中使用的巨集
 
-若要在Experience Platform與API之間傳遞區段ID、存取權杖、錯誤訊息等資訊，受眾範本包含您可使用的巨集。 請閱讀以下本頁面三個設定範例中所使用的巨集說明：
+為了在Experience Platform和您的API之間傳遞對象ID、存取權杖、錯誤訊息等資訊，對象範本包含您可以使用的巨集。 請閱讀以下本頁面三個設定範例中所使用的巨集說明：
 
 | 巨集 | 說明 |
 |--- |--- |
-| `{{segment.alias}}` | 可讓您存取Experience Platform中的區段別名。 |
-| `{{segment.name}}` | 可讓您存取Experience Platform中的區段名稱。 |
-| `{{segment.id}}` | 可讓您存取Experience Platform中的區段ID。 |
+| `{{segment.alias}}` | 可讓您存取Experience Platform中的對象別名。 |
+| `{{segment.name}}` | 可讓您以Experience Platform存取對象名稱。 |
+| `{{segment.id}}` | 可讓您以Experience Platform存取對象ID。 |
 | `{{customerData.accountId}}` | 可讓您存取在目的地設定中設定的帳戶ID欄位。 |
 | `{{oauth2ServiceAccessToken}}` | 可讓您根據您的OAuth 2設定動態產生存取權杖。 |
 | `{{authData.accessToken}}` | 可讓您將存取Token傳遞至API端點。 使用 `{{authData.accessToken}}` 如果Experience Platform應使用不會到期的Token來連線至您的目的地，否則請使用 `{{oauth2ServiceAccessToken}}` 以產生存取Token。 |

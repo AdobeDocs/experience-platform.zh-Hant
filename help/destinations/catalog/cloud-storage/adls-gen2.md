@@ -1,10 +1,10 @@
 ---
 title: (Beta) Azure Data Lake Storage Gen2連線
-description: 瞭解如何連線至Azure Data Lake Storage Gen2以啟用區段和匯出資料集。
+description: 瞭解如何連線至Azure Data Lake Storage Gen2以啟用對象和匯出資料集。
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,28 @@ ht-degree: 0%
 >
 >此目的地目前為測試版，僅供有限數量的客戶使用。 若要請求對的存取權 [!DNL Azure Data Lake Storage Gen2] 連線，請聯絡您的Adobe代表，並提供您的 [!DNL Organization ID].
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 閱讀本頁以瞭解如何建立與您的的即時輸出連線 [[!DNL Azure Data Lake Storage Gen2]](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) ([!DNL ADLS Gen2])資料湖，以定期從Experience Platform匯出資料檔案。
 
 ## 連線至您的 [!DNL ADLS Gen2] 透過API或UI儲存 {#connect-api-or-ui}
 
-* 若要連線至您的 [!DNL ADLS Gen2] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
-* 若要連線至您的 [!DNL ADLS Gen2] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
+* 若要連線至您的 [!DNL ADLS Gen2] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 下方的。
+* 若要連線至您的 [!DNL ADLS Gen2] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -55,7 +69,7 @@ ht-degree: 0%
 * **[!UICONTROL 服務主體金鑰]**：應用程式的索引鍵。
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
-   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 填寫目的地詳細資料 {#destination-details}
 
@@ -74,13 +88,13 @@ ht-degree: 0%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 排程 {#scheduling}
 

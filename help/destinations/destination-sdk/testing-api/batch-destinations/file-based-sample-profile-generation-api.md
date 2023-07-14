@@ -2,7 +2,7 @@
 description: 此頁面說明如何使用Destination SDK中的/sample-profiles API端點，根據來源結構描述產生範例設定檔。 您可以使用這些範例設定檔來測試以檔案為基礎的目的地設定。
 title: 根據來源結構描述產生範例設定檔
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: adf75720f3e13c066b5c244d6749dd0939865a6f
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
 * 您已在Experience PlatformUI中為您目的地建立至少一個啟用流程。 此 `/sample-profiles` 端點會根據您在啟動流程中定義的來源結構描述建立設定檔。 請參閱 [啟動教學課程](../../../ui/activate-batch-profile-destinations.md) 以瞭解如何建立啟用流程。
 * 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
 
-   ![UI影像顯示如何從URL取得目的地執行個體ID。](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI影像顯示如何從URL取得目的地執行個體ID。](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 產生用於目的地測試的範例設定檔 {#generate-sample-profiles}
 
@@ -60,11 +60,11 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定數量的範例設定檔，以及與來源XDM結構描述相對應的區段會籍、身分和設定檔屬性。
+成功的回應會傳回HTTP狀態200，其中包含指定數量的範例設定檔，以及與來源XDM結構描述相對應的對象成員資格、身分和設定檔屬性。
 
 >[!NOTE]
 >
-> 回應只會傳回目的地執行個體中使用的區段會籍、身分和設定檔屬性。 即使您的來源結構描述有其他欄位，這些欄位也會被忽略。
+> 回應只會傳回目標執行個體中使用的對象成員資格、身分和設定檔屬性。 即使您的來源結構描述有其他欄位，這些欄位也會被忽略。
 
 ```json
 [
@@ -105,9 +105,9 @@ curl -X GET 'https://platform.adobe.io/data/core/activation/authoring/sample-pro
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentMembership` | 描述個人區段會籍的地圖物件。 如需詳細資訊，請參閱 `segmentMembership`，讀取 [區段會籍細節](../../../../xdm/field-groups/profile/segmentation.md). |
+| `segmentMembership` | 說明個人對象會籍的地圖物件。 如需詳細資訊，請參閱 `segmentMembership`，讀取 [對象成員資格詳細資料](../../../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | 此設定檔上次符合區段資格的時間戳記。 |
-| `status` | 字串欄位，指出是否已將區段會籍實現為目前請求的一部分。 接受下列值： <ul><li>`realized`：設定檔是區段的一部分。</li><li>`exited`：設定檔正在退出區段，做為目前請求的一部分。</li></ul> |
+| `status` | 字串欄位，指出受眾成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`realized`：設定檔是區段的一部分。</li><li>`exited`：設定檔會隨著目前請求退出對象。</li></ul> |
 | `identityMap` | 說明個人的各種身分值及其相關名稱空間的對應型別欄位。 如需詳細資訊，請參閱 `identityMap`，請參閱 [結構描述組合的基礎](../../../../xdm/schema/composition.md#identityMap). |
 
 {style="table-layout:auto"}

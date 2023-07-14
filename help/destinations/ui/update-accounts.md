@@ -4,7 +4,7 @@ title: 更新目的地帳戶
 type: Tutorial
 description: 本教學課程列出在Adobe Experience Platform UI中更新目的地帳戶的步驟
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: f31b54622c63f96fb8fa727f80dda295a926e2c7
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 更新目的地帳戶
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 **[!UICONTROL 帳戶]** 索引標籤會顯示您已建立與不同目的地的連線的詳細資訊。 請參閱 [帳戶總覽](../ui/destinations-workspace.md#accounts) 取得每個目的地帳戶的所有資訊。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
    ![篩選目的地帳戶](../assets/ui/update-accounts/filter-accounts.png)
 
-3. 選取省略符號(`...`)的名稱旁。 快顯面板隨即出現，其中提供選項至 **[!UICONTROL 啟用區段]**， **[!UICONTROL 編輯詳細資料]**、和 **[!UICONTROL 刪除]** 帳戶。 選取 ![編輯詳細資訊按鈕](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 編輯詳細資料]** 按鈕以編輯帳戶資訊。
+3. 選取省略符號(`...`)的名稱旁。 快顯面板隨即出現，其中提供選項至 **[!UICONTROL 啟用對象]**， **[!UICONTROL 編輯詳細資料]**、和 **[!UICONTROL 刪除]** 帳戶。 選取 ![編輯詳細資訊按鈕](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 編輯詳細資料]** 按鈕以編輯帳戶資訊。
 
    ![編輯帳戶](../assets/ui/update-accounts/accounts-edit.png)
 

@@ -2,7 +2,7 @@
 description: 本頁面列出並說明使用Destination SDK設定串流目的地的步驟。
 title: 使用Destination SDK設定串流目的地
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 使用Destination SDK設定串流目的地
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此頁面說明如何使用下列專案的資訊： [目的地SDK中的設定選項](../functionality/configuration-options.md) 以及在其他Destination SDK功能和API參考檔案中設定 [串流目的地](../../destination-types.md#streaming-destinations). 這些步驟會依序排列如下。
 
@@ -150,7 +150,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## 步驟3：建立訊息轉換範本 — 使用範本化語言指定訊息輸出格式 {#create-transformation-template}
 
-您必須根據目的地支援的裝載，建立範本，將匯出的資料格式從AdobeXDM格式轉換為目的地支援的格式。 請參閱區段中的範本範例 [使用範本語言進行身分、屬性和區段成員資格轉換](../functionality/destination-server/message-format.md#using-templating) 並使用 [範本製作工具](../testing-api/streaming-destinations/create-template.md) 由Adobe提供。
+您必須根據目的地支援的裝載，建立範本，將匯出的資料格式從AdobeXDM格式轉換為目的地支援的格式。 請參閱區段中的範本範例 [使用範本語言進行身分、屬性和對象成員資格轉換](../functionality/destination-server/message-format.md#using-templating) 並使用 [範本製作工具](../testing-api/streaming-destinations/create-template.md) 由Adobe提供。
 
 在您建立適合您的訊息轉換範本後，請將其新增至您在步驟1中建立的伺服器和範本設定。
 
@@ -273,10 +273,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 使用先前步驟中的設定端點設定目的地後，您可以使用 [目的地測試工具](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 測試Adobe Experience Platform與目的地之間的整合。
 
-在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，並啟用至目的地。 請參考以下兩個資源，瞭解如何在Experience Platform中建立區段的指示：
+在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，並啟用至目的地。 請參考以下兩個資源，瞭解如何在Experience Platform中建立對象的指示：
 
-* [建立區段檔案頁面](/help/segmentation/ui/overview.md#create-segment)
-* [建立區段影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [建立對象檔案頁面](/help/segmentation/ui/overview.md#create-segment)
+* [建立對象影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## 步驟7：發佈您的目的地 {#publish-destination}
 

@@ -1,25 +1,25 @@
 ---
-title: Mailchimp興趣類別
-description: Mailchimp （也稱為Intuit Mailchimp）是一種流行的行銷自動化平台和電子郵件行銷服務，企業使用它來管理與聯絡人（客戶、客戶或其他感興趣的團體）進行交談，使用郵寄清單和電子郵件行銷活動。 使用此聯結器可根據連絡人的興趣和偏好來排序連絡人。
+title: Mailchimp 興趣類別
+description: Mailchimp （也稱為Intuit Mailchimp）是一種流行的行銷自動化平台和電子郵件行銷服務，企業使用它來管理與聯絡人（客戶、客戶或其他感興趣的團體）進行交談，使用郵寄清單和電子郵件行銷活動。 可使用此連接器根據聯絡人的興趣和偏好將他們排序。
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: f8ccf9303fbcb010225881942de5e672b4111072
+source-git-commit: a293df660a9b959d12bdc170d1cb69f3543a30f1
 workflow-type: tm+mt
-source-wordcount: '2357'
-ht-degree: 0%
+source-wordcount: '2356'
+ht-degree: 2%
 
 ---
 
 # [!DNL Mailchimp Interest Categories] 連線
 
-[[!DNL Mailchimp]](https://mailchimp.com) 是熱門的行銷自動化平台及電子郵件行銷服務，企業可用來管理與連絡人交談 *（客戶、客戶或其他相關人士）* 使用郵寄清單和電子郵件行銷活動。 使用此聯結器可根據連絡人的興趣和偏好來排序連絡人。
+[[!DNL Mailchimp]](https://mailchimp.com) 是熱門的行銷自動化平台及電子郵件行銷服務，企業可用來管理與連絡人交談 *（客戶、客戶或其他相關人士）* 使用郵寄清單和電子郵件行銷活動。 可使用此連接器根據聯絡人的興趣和偏好將他們排序。
 
-[!DNL Mailchimp Interest Categories] 使用 [對象](https://mailchimp.com/help/getting-started-audience/)， [群組](https://mailchimp.com/help/getting-started-with-groups/)和興趣類別 *（也稱為群組名稱或群組標題）*. 每個 [!DNL Mailchimp] 群組是興趣類別的清單。 聯絡人透過您網站上的登錄檔單訂閱一或多個興趣類別時，就會與興趣類別相關聯。 在對象中，您也可以將聯絡人組織成群組，並將其與興趣類別建立關聯，然後可以使用這些群組來建立區段。 您可以使用這些區段，將目標行銷活動電子郵件廣播給已訂閱的聯絡人。
+[!DNL Mailchimp Interest Categories] 使用 [對象](https://mailchimp.com/help/getting-started-audience/)， [群組](https://mailchimp.com/help/getting-started-with-groups/)和興趣類別 *（也稱為群組名稱或群組標題）*. 每個 [!DNL Mailchimp] 群組是興趣類別的清單。 聯絡人透過您網站上的登錄檔單訂閱一或多個興趣類別時，就會與興趣類別相關聯。 在對象中，您也可以將聯絡人組織成群組，並將其與興趣類別建立關聯，然後可以使用這些群組來建立區段。 您可以使用這些受眾向訂閱的連絡人廣播目標行銷活動電子郵件。
 
 <!--
 Compared to [!DNL Mailchimp Tags] which you would use for internal classification, [!DNL Mailchimp Interest Categories] is meant to manage subscriptions to topics of interest that your contacts might be interested in. *Note, Experience Platform also has a connection for [!DNL Mailchimp Tags], you can check it out on the [[!DNL Mailchimp Tags]](/help/destinations/catalog/email-marketing/mailchimp-tags.md) page.*
 -->
 
-此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 使用 [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 要建立的API [興趣類別](https://mailchimp.com/developer/marketing/api/interest-categories/) 然後將每個選定Platform區段的連絡人新增至對應的興趣類別中。 您可以 **新增連絡人** 或 **更新現有專案的資訊 [!DNL Mailchimp] 連絡人**，則 **新增或移除其所需群組中的使用者** 在現有 [!DNL Mailchimp] 在新區段中啟用對象後的對象。 [!DNL Mailchimp Interest Groups] 使用從Platform中選取的區段名稱作為內的興趣類別 [!DNL Mailchimp].
+此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 使用 [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/) 要建立的API [興趣類別](https://mailchimp.com/developer/marketing/api/interest-categories/) 然後將每個選定平台受眾的聯絡人新增至對應的興趣類別中。 您可以 **新增連絡人** 或 **更新現有專案的資訊 [!DNL Mailchimp] 連絡人**，則 **新增或移除其所需群組中的使用者** 在現有 [!DNL Mailchimp] 在新區段中啟用對象後的對象。 [!DNL Mailchimp Interest Groups] 使用從Platform中選取的對象名稱作為內的興趣類別 [!DNL Mailchimp].
 
 ## 使用案例 {#use-cases}
 
@@ -27,7 +27,7 @@ Compared to [!DNL Mailchimp Tags] which you would use for internal classificatio
 
 ### 傳送電子郵件給行銷活動的聯絡人 {#use-case-send-emails}
 
-一家體育用品網站的銷售部門想要廣播電子郵件行銷活動，給自稱對足球感興趣的聯絡人清單。 聯絡人清單在從網站開發團隊接收的資料匯出中作為批次分隔，因此需要追蹤。 團隊會識別現有的 [!DNL Mailchimp] 對象並開始建立Experience Platform區段，每個清單中的聯絡人都會加入這些區段。 將這些區段傳送至後 [!DNL Mailchimp Interest Categories]，如果選取的連絡人中不存在任何連絡人 [!DNL Mailchimp] 對象會新增至具有聯絡人所屬區段名稱的群組。 如果有任何連絡人已存在於 [!DNL Mailchimp] 對象或群組，則會更新其資訊。 資料傳送至後 [!DNL Mailchimp Interest Categories]，銷售團隊可以選取行銷活動電子郵件，並傳送至內的足球興趣群組 [!DNL Mailchimp] 對象。
+一家體育用品網站的銷售部門想要廣播電子郵件行銷活動，給自稱對足球感興趣的聯絡人清單。 聯絡人清單在從網站開發團隊接收的資料匯出中作為批次分隔，因此需要追蹤。 團隊會識別現有的 [!DNL Mailchimp] 對象並開始建立Experience Platform對象，每個清單中的聯絡人都會加入這些對象。 將這些對象傳送至後 [!DNL Mailchimp Interest Categories]，如果選取的連絡人中不存在任何連絡人 [!DNL Mailchimp] 這些對象會新增至具有聯絡人所屬對象名稱的群組。 如果有任何連絡人已存在於 [!DNL Mailchimp] 對象或群組，則會更新其資訊。 資料傳送至後 [!DNL Mailchimp Interest Categories]，銷售團隊可以選取行銷活動電子郵件，並傳送至內的足球興趣群組 [!DNL Mailchimp] 對象。
 
 ## 先決條件 {#prerequisites}
 
@@ -91,8 +91,8 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中選取的每個區段，將 [!DNL Mailchimp Interest Categories] 區段狀態會從Platform更新其區段狀態。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據區段評估在Experience Platform中更新設定檔時，聯結器會將更新向下傳送至目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中每個選取的對象，對應至 [!DNL Mailchimp Interest Categories] 區段狀態會從Platform更新其對象狀態。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新向下傳送至目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -147,13 +147,13 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 >
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
@@ -195,8 +195,8 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 
 ![顯示「對象」群組頁面的Mailchimp UI熒幕擷圖。](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
-* 選取「群組」，並檢查所選區段是否已建立為類別，且類別名稱來自Platform，其後可能會接著自動產生的尾碼。
-   * 此目的地會使用所選區段的名稱，透過以下方式建立興趣類別： [[!DNL Mailchimp] 新增興趣類別API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). 如果您建立新目的地並再次啟用相同的區段， [!DNL Mailchimp] 新增尾碼以區分現有區段和新區段。
+* 選取群組，然後檢查選取的對象是否建立為類別，且具有Platform的對象名稱，後面可能會有自動產生的尾碼。
+   * 此目的地會使用所選區段的名稱，透過以下方式建立興趣類別： [[!DNL Mailchimp] 新增興趣類別API](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/). 如果您建立新目的地，然後再次啟用相同的對象， [!DNL Mailchimp] 新增尾碼以區分現有區段和新區段。
 * 群組中不存在其電子郵件的連絡人會新增至新建立的類別。
 * 對於群組中已存在的連絡人，會更新屬性欄位資料，並將連絡人新增至新建立的類別。
 

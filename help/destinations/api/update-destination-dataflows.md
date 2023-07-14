@@ -3,18 +3,18 @@ keywords: Experience Platform；首頁；熱門主題；流程服務；更新目
 solution: Experience Platform
 title: 使用流程服務API更新目的地資料流程
 type: Tutorial
-description: 本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用流量服務API來啟用或停用資料流、更新其基本資訊，或新增和移除區段和屬性。
+description: 本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用流量服務API來啟用或停用資料流、更新其基本資訊，或新增和移除對象和屬性。
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '2408'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 # 使用流程服務API更新目的地資料流程
 
-本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何使用啟用或停用資料流、更新其基本資訊，或新增和移除區段和屬性。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). 如需使用Experience PlatformUI編輯目的地資料流的詳細資訊，請閱讀 [編輯啟用流程](/help/destinations/ui/edit-activation.md).
+本教學課程涵蓋更新目的地資料流的步驟。 瞭解如何啟用或停用資料流、更新其基本資訊，或使用新增和移除對象和屬性。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). 如需使用Experience PlatformUI編輯目的地資料流的詳細資訊，請閱讀 [編輯啟用流程](/help/destinations/ui/edit-activation.md).
 
 ## 快速入門 {#get-started}
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
 
-* [目的地](../home.md)： [!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+* [目的地](../home.md)： [!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 * [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 以下小節提供您需要瞭解的其他資訊，以使用 [!DNL Flow Service] API。
@@ -447,9 +447,9 @@ curl -X POST \
 }
 ```
 
-## 新增區段至資料流 {#add-segment}
+## 將對象新增至資料流 {#add-segment}
 
-PATCH若要將區段新增至目的地資料流，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本以及您想要新增的區段。
+PATCH若要將對象新增至目的地資料流，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本以及您想要新增的對象。
 
 **API格式**
 
@@ -459,7 +459,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求會將新區段新增至現有的目的地資料流。
+以下請求會將新對象新增至現有的目的地資料流。
 
 ```shell
 curl -X PATCH \
@@ -494,18 +494,18 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將區段新增至資料流，請使用 `add` 作業。 |
-| `path` | 定義要更新的流程部分。 將區段新增至資料流時，請使用範例中指定的路徑。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將對象新增至資料流，請使用 `add` 作業。 |
+| `path` | 定義要更新的流程部分。 將對象新增至資料流時，請使用範例中指定的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
-| `id` | 指定您要新增至目的地資料流的區段ID。 |
-| `name` | **(可選)**. 指定您要新增至目的地資料流的區段名稱。 請注意，此欄位並非必填欄位，您可以成功將區段新增至目的地資料流，而不需要提供其名稱。 |
-| `filenameTemplate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出區段的ID。</li><li>`%SEGMENT_NAME%`: **(選用)**. 匯出的檔案包含匯出的區段名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`： **（可選）**. 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`: **(選用)**. 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br> 如需設定檔案名稱的詳細資訊，請參閱 [設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 批次目的地啟動教學課程中的區段。 |
-| `exportMode` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。如需有關這兩個選項的詳細資訊，請參閱 [匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在batch destinations activation教學課程中。 |
-| `startDate` | 選取區段應該開始將設定檔匯出至您的目的地的日期。 |
-| `frequency` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 匯出模式，您可以選取 `ONCE` 或 `DAILY`.</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 匯出模式，您可以選取 `"DAILY"`， `"EVERY_3_HOURS"`， `"EVERY_6_HOURS"`， `"EVERY_8_HOURS"`， `"EVERY_12_HOURS"`.</li></ul> |
+| `id` | 指定您要新增至目的地資料流的對象ID。 |
+| `name` | **(可選)**. 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必要欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
+| `filenameTemplate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`: **(選用)**. 匯出的檔案包含匯出的對象名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`： **（可選）**. 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`: **(選用)**. 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br> 如需設定檔案名稱的詳細資訊，請參閱 [設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 批次目的地啟動教學課程中的區段。 |
+| `exportMode` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。如需有關這兩個選項的詳細資訊，請參閱 [匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在batch destinations activation教學課程中。 |
+| `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
+| `frequency` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 匯出模式，您可以選取 `ONCE` 或 `DAILY`.</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 匯出模式，您可以選取 `"DAILY"`， `"EVERY_3_HOURS"`， `"EVERY_6_HOURS"`， `"EVERY_8_HOURS"`， `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | 對象 *批次目的地* 僅限。 只有在選取 `"DAILY_FULL_EXPORT"` 中的模式 `frequency` 選擇器。 <br> 必要. <br> <ul><li>選取 `"AFTER_SEGMENT_EVAL"` 讓啟動工作在每日Platform批次細分工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取 `"SCHEDULED"` 讓啟動工作在固定時間執行。 這可確保Experience Platform設定檔資料在每天的同一時間匯出，但您匯出的設定檔可能不是最新的，這取決於批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增 `startTime` 以指出每日匯出應在UTC的哪個時間發生。</li></ul> |
-| `endDate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 選取時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`. <br> 設定區段成員停止匯出至目的地的日期。 |
-| `startTime` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將區段新增至資料流時，才需要此欄位。 <br> 必要. 選取應產生包含區段成員的檔案並將其匯出至目的地的時間。 |
+| `endDate` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 選取時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`. <br> 設定受眾成員停止匯出至目的地的日期。 |
+| `startTime` | 對象 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 必要. 選取應產生包含對象成員的檔案並匯出至您的目的地的時間。 |
 
 **回應**
 
@@ -518,9 +518,9 @@ curl -X PATCH \
 }
 ```
 
-## 從資料流移除區段 {#remove-segment}
+## 從資料流中移除對象 {#remove-segment}
 
-PATCH若要從現有目的地資料流中移除區段，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本，以及您要移除之區段的索引選取器。 索引開始於 `0`. 例如，下面的範例要求會將第一個和第二個區段從資料流中移除。
+PATCH若要從現有目的地資料流中移除對象，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本，以及您要移除之對象的索引選取器。 索引開始於 `0`. 例如，下面的範例要求會將第一個和第二個對象從資料流中移除。
 
 **API格式**
 
@@ -530,7 +530,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-以下請求會從現有目的地資料流中移除兩個區段。
+以下請求會從現有的目的地資料流中移除兩個對象。
 
 ```shell
 curl -X PATCH \
@@ -564,8 +564,8 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要從資料流中移除區段，請使用 `remove` 作業。 |
-| `path` | 根據區段選擇器的索引，指定應從目的地資料流中移除的現有區段。 GET若要擷取資料流中的區段順序，請對 `/flows` 端點並檢查 `transformations.segmentSelectors` 屬性。 若要刪除資料流中的第一個區段，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要從資料流中移除對象，請使用 `remove` 作業。 |
+| `path` | 根據對象選擇器的索引，指定應該從目的地資料流中移除哪些現有對象。 GET若要擷取資料流中的對象順序，請對 `/flows` 端點並檢查 `transformations.segmentSelectors` 屬性。 若要刪除資料流中的第一個對象，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **回應**
@@ -579,9 +579,9 @@ curl -X PATCH \
 }
 ```
 
-## 更新資料流中區段的元件 {#update-segment}
+## 更新資料流中對象的元件 {#update-segment}
 
-您可以更新現有目的地資料流中區段的元件。 例如，您可以變更匯出頻率或編輯檔案名稱範本。 PATCH若要這麼做，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本，以及要更新的區段的索引選取器。 索引開始於 `0`. 例如，以下請求會更新資料流中的第九個區段。
+您可以更新現有目的地資料流中對象的元件。 例如，您可以變更匯出頻率或編輯檔案名稱範本。 PATCH若要這麼做，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本，以及您要更新對象的索引選取器。 索引開始於 `0`. 例如，以下請求會更新資料流中的第九個對象。
 
 **API格式**
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **要求**
 
-更新現有目的地資料流中的區段時，您應該先執行GET操作，以擷取您要更新的區段的詳細資訊。 然後，在承載中提供所有區段資訊，而不僅僅是您要更新的欄位。 在以下範例中，自訂文字會新增到檔案名稱範本的結尾，而匯出排程頻率會從6小時更新為12小時。
+更新現有目的地資料流中的對象時，您應該先執行GET操作，以擷取您要更新對象的詳細資訊。 然後，在承載中提供所有對象資訊，而不只是您要更新的欄位。 在以下範例中，自訂文字會新增到檔案名稱範本的結尾，而匯出排程頻率會從6小時更新為12小時。
 
 ```shell
 curl -X PATCH \
@@ -626,7 +626,7 @@ curl -X PATCH \
 ]'
 ```
 
-如需裝載中屬性的說明，請參閱區段 [新增區段至資料流](#add-segment).
+如需裝載中屬性的說明，請參閱區段 [將對象新增至資料流](#add-segment).
 
 
 **回應**
@@ -640,13 +640,13 @@ curl -X PATCH \
 }
 ```
 
-如需可在資料流中更新的區段元件更多範例，請參閱以下範例。
+如需可在資料流中更新的對象元件更多範例，請參閱以下範例。
 
-## 區段評估後，將區段的匯出模式從排程更新為 {#update-export-mode}
+## 在受眾評估後，將受眾的匯出模式從排程更新為 {#update-export-mode}
 
-+++ 按一下以檢視區段匯出的範例，此範例會將區段匯出從每天在指定的時間啟動，更新為每天在Platform批次細分工作完成後啟動。
++++ 按一下以檢視對象匯出的範例，瞭解對象匯出從每天在指定時間啟動，更新為在Platform批次細分工作完成後每天啟動。
 
-該區段會在每天16:00 UTC匯出。
+每日的16:00 UTC會匯出對象。
 
 ```json
 {
@@ -669,7 +669,7 @@ curl -X PATCH \
 }
 ```
 
-每日批次細分工作完成後，每天都會匯出區段。
+每日批次細分工作完成後，每日都會匯出對象。
 
 ```json
 {
@@ -697,7 +697,7 @@ curl -X PATCH \
 
 +++ 按一下以檢視檔案名稱範本更新以包含檔案名稱中其他欄位的範例
 
-匯出的檔案包含目的地名稱和Experience Platform區段ID
+匯出的檔案包含目的地名稱和Experience Platform對象ID
 
 ```json
 {
@@ -720,7 +720,7 @@ curl -X PATCH \
 }
 ```
 
-匯出的檔案包含目的地名稱、Experience Platform區段ID、Experience Platform產生檔案的日期和時間，以及附加在檔案結尾的自訂文字。
+匯出的檔案包含目的地名稱、Experience Platform對象ID、Experience Platform產生檔案的日期和時間，以及附加在檔案結尾的自訂文字。
 
 
 ```json
@@ -838,8 +838,8 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要從資料流中移除區段，請使用 `remove` 作業。 |
-| `path` | 根據區段選擇器的索引，指定應從目的地資料流移除的現有設定檔屬性。 GET若要擷取資料流中設定檔屬性的順序，請對 `/flows` 端點並檢查 `transformations.profileSelectors` 屬性。 若要刪除資料流中的第一個區段，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要從資料流中移除對象，請使用 `remove` 作業。 |
+| `path` | 根據對象選擇器的索引，指定應該從目的地資料流移除的現有設定檔屬性。 GET若要擷取資料流中設定檔屬性的順序，請對 `/flows` 端點並檢查 `transformations.profileSelectors` 屬性。 若要刪除資料流中的第一個對象，請使用 `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **回應**
@@ -859,4 +859,4 @@ curl -X PATCH \
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程，您已瞭解如何更新目的地資料流的各種元件，例如使用新增或移除區段或設定檔屬性 [!DNL Flow Service] API。 如需目的地的詳細資訊，請參閱 [目的地概觀](../home.md).
+依照本教學課程，您已瞭解如何更新目的地資料流的各種元件，例如使用新增或移除對象或設定檔屬性 [!DNL Flow Service] API。 如需目的地的詳細資訊，請參閱 [目的地概觀](../home.md).

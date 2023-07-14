@@ -1,7 +1,7 @@
 ---
 description: Experience PlatformDestination SDK使用Pebble範本，可讓您將從Experience Platform匯出的資料轉換為目的地所需的格式。
 title: Destination SDK中支援的轉換函式
-source-git-commit: ab87a2b7190a0365729ba7bad472fde7a489ec02
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 3%
@@ -29,7 +29,7 @@ Experience Platform [!DNL Pebble] 與提供的現成可用版本相比，實作�
 
 若要瞭解本參考頁面中的概念和函式，請閱讀 [訊息格式](message-format.md) 檔案優先。 您需要瞭解 [設定檔的結構](message-format.md#profile-structure) 在Experience Platform中，您才可以使用 [!DNL Pebble] 範本以轉換和匯出的資料。
 
-在繼續使用下列功能之前，請檢閱區段中的範本範例 [使用範本語言進行身分、屬性和區段成員資格轉換](message-format.md#using-templating). 這裡的範例開頭非常簡單，複雜性也增加了。
+在繼續使用下列功能之前，請檢閱區段中的範本範例 [使用範本語言進行身分、屬性和對象成員資格轉換](message-format.md#using-templating). 這裡的範例開頭非常簡單，複雜性也增加了。
 
 ## 支援 [!DNL Pebble] 函式 {#supported-functions}
 
@@ -46,7 +46,6 @@ Experience Platform [!DNL Pebble] 與提供的現成可用版本相比，實作�
 >
 > * 如需陣列元素的範例，請思考以下專案中的身分識別： [identityMap](message-format.md#identities) 名稱空間，您可以在此處循環檢視元素，例如 `identityMap.gaid`， `identityMap.email`或類似專案。
 > * 如需對應元素的範例，請考慮 [segmentMembership](message-format.md#segment-membership).
-
 
 從 [!DNL Pebble] 篩選區段，Destination SDK支援所有函式。 以下範例進一步說明 `date` 函式可在Destination SDK中使用。
 
@@ -92,7 +91,7 @@ Experience Platform [!DNL Pebble] 與提供的現成可用版本相比，實作�
 
 #### 使用案例
 
-可使用這些函式來取得新增至設定檔或從設定檔中移除的區段清單。
+可使用這些函式來取得在設定檔中新增或移除的對象清單。
 
 #### 範例
 
@@ -143,7 +142,7 @@ added: <111111><333333>; removed: <222222>
 
 <!--
 
-### Added and removed segments filters {#added-and-removed-segmnts-filters}
+### Added and removed audiences filters {#added-and-removed-segmnts-filters}
 
 #### Use case {#use-case}
 

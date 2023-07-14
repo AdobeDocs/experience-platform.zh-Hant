@@ -4,9 +4,9 @@ description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-time Cust
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: d7625018b7b36d8e9516f7884fc00b726d391103
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1736'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 3%
 >
 ><p>此目的地連線目前處於Alpha階段，僅供有限數量的客戶選擇。 功能和檔案可能會有所變更。</p>
 &gt;<p>此目的地連線的最終版本可能需要客戶移轉。</p>
-
 
 ## 使用案例 {#use-cases}
 
@@ -45,8 +44,8 @@ LiveRamp SFTP支援身分啟用，例如PII型識別碼、已知識別碼和自�
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 [!DNL LiveRamp SFTP] 目的地。 |
-| 匯出頻率 | **[!UICONTROL 每日批次]** | 由於設定檔會根據區段評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，以提供給目的地平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出對象的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 [!DNL LiveRamp SFTP] 目的地。 |
+| 匯出頻率 | **[!UICONTROL 每日批次]** | 由於設定檔會根據對象評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，然後流向目的地平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -70,7 +69,7 @@ LiveRamp SFTP支援身分啟用，例如PII型識別碼、已知識別碼和自�
 * **[!UICONTROL 密碼]**：您的密碼 [!DNL LiveRamp SFTP] 儲存位置。
 * **[!UICONTROL pgp/GPG加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。 如果您提供加密金鑰，也必須提供 **[!UICONTROL 加密子金鑰ID]** 在 [目的地詳細資料](#destination-details) 區段。
 
-   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 **具有SSH金鑰驗證的SFTP** {#sftp-ssh}
 
@@ -83,7 +82,7 @@ LiveRamp SFTP支援身分啟用，例如PII型識別碼、已知識別碼和自�
 
 * **[!UICONTROL pgp/GPG加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 如果您提供加密金鑰，也必須提供 **[!UICONTROL 加密子金鑰ID]** 在 [目的地詳細資料](#destination-details) 區段。 在下圖檢視格式正確的加密金鑰範例。
 
-   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/advertising/liveramp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/advertising/liveramp/pgp-key.png)
 
 ### 填寫目的地詳細資料 {#destination-details}
 
@@ -110,28 +109,28 @@ LiveRamp SFTP支援身分啟用，例如PII型識別碼、已知識別碼和自�
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 排程 {#scheduling}
 
-在 [!UICONTROL 排程] 步驟，使用下列設定為每個區段建立匯出排程。
+在 [!UICONTROL 排程] 步驟，使用下列設定為每個對象建立匯出排程。
 
 >[!IMPORTANT]
 >
->所有啟用至此目的地的區段都必須設定為完全相同的排程，如下所示。
+>所有啟用至此目的地的對象都必須設定為完全相同的排程，如下所示。
 
 * **[!UICONTROL 檔案匯出選項]**： [!UICONTROL 匯出完整檔案]. [增量檔案匯出](../../ui/activate-batch-profile-destinations.md#export-incremental-files) 目前不支援 [!DNL LiveRamp] 目的地。
 * **[!UICONTROL 頻率]**： [!UICONTROL 每日]
-* 將匯出時間設為 **[!UICONTROL 區段評估後]**. 已排程的區段匯出和 [隨選檔案匯出](../../ui/export-file-now.md) 目前不支援 [!DNL LiveRamp] 目的地。
+* 將匯出時間設為 **[!UICONTROL 區段評估後]**. 已排程的對象匯出和 [隨選檔案匯出](../../ui/export-file-now.md) 目前不支援 [!DNL LiveRamp] 目的地。
 * **[!UICONTROL 日期]**：視需要選取匯出開始和結束時間。
 
-![顯示區段排程步驟的平台UI熒幕擷圖。](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
+![顯示對象排程步驟的平台UI熒幕擷圖。](../../assets/catalog/advertising/liveramp/liveramp-segment-scheduling.png)
 
 匯出的檔案名稱目前無法由使用者設定。 所有匯出至 [!DNL LiveRamp SFTP] 目的地會根據下列範本自動命名：
 
@@ -179,28 +178,28 @@ Luma_LiveRamp_52137231-4a99-442d-804c-39a09ddd005d_20230330_153857.csv
 
 將檔案匯出至 [!DNL LiveRamp SFTP] 目的地，Platform會為每個目的地產生一個CSV檔案 [合併原則ID](../../../profile/merge-policies/overview.md).
 
-例如，我們考慮以下區段：
+例如，我們考慮以下對象：
 
-* 區段A （合併原則1）
-* 區段B （合併原則2）
-* 區段C （合併原則1）
-* 區段D （合併原則1）
+* 對象A （合併原則1）
+* 對象B （合併原則2）
+* 對象C （合併原則1）
+* 對象D （合併原則1）
 
 Platform會將兩個CSV檔案匯出至 [!DNL LiveRamp SFTP]：
 
-* 一個包含區段A、C和D的CSV檔案；
-* 一個包含區段B的CSV檔案。
+* 一個包含對象A、C和D的CSV檔案；
+* 一個包含對象B的CSV檔案。
 
-匯出的CSV檔案包含設定檔，該設定檔具有所選屬性和對應的區段狀態，位於單獨的欄上，並以屬性名稱和區段ID作為欄標題。
+匯出的CSV檔案包含具有所選屬性和對應對象狀態的設定檔，位於單獨的欄上，並以屬性名稱和對象ID作為欄標題。
 
-匯出檔案中包含的設定檔可符合下列其中一個區段資格狀態：
+匯出檔案中包含的設定檔可符合下列其中一個對象資格狀態：
 
-* `Active`：設定檔目前符合區段的資格。
-* `Expired`：設定檔不再符合區段的資格，但過去已符合資格。
-* `""`（空字串）：此設定檔從未符合該區段的資格。
+* `Active`：設定檔目前符合對象資格。
+* `Expired`：設定檔不再符合對象的資格，但過去曾經符合資格。
+* `""`（空字串）：設定檔從未符合對象的資格。
 
 
-例如，匯出的CSV檔案中有一個 `email` 屬性和3個區段看起來可能像這樣：
+例如，匯出的CSV檔案中有一個 `email` 屬性和3個對象看起來可能像這樣：
 
 ```csv
 email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -214,9 +213,9 @@ abc101@testemailabc.com,active,active,
 
 因為Platform會為每個CSV檔案產生一個 [合併原則ID](../../../profile/merge-policies/overview.md)，也會為每個合併原則ID產生個別的資料流執行。
 
-這表示 **[!UICONTROL 身分已啟用]** 和 **[!UICONTROL 已接收的設定檔]** 中的量度 [資料流執行](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 會針對使用相同合併原則的每個區段群組彙總頁面，而非針對每個區段顯示。
+這表示 **[!UICONTROL 身分已啟用]** 和 **[!UICONTROL 已接收的設定檔]** 中的量度 [資料流執行](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 會針對使用相同合併原則的每個對象群組彙總頁面，而非針對每個對象顯示。
 
-由於針對使用相同合併原則的一組區段產生資料流執行，區段名稱不會顯示在 [監視儀表板](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
+由於針對使用相同合併原則的一組對象產生了資料流執行，因此對象名稱不會顯示在 [監視儀表板](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
 ![顯示身分啟用量度的Experience PlatformUI熒幕。](../../assets/catalog/advertising/liveramp/liveramp-metrics.png)
 

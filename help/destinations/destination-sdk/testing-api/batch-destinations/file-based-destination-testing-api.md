@@ -2,7 +2,7 @@
 description: 此頁面說明如何使用/testing/destinationInstance API端點來測試檔案型目的地是否已正確設定，以及驗證資料流至您設定之目的地的完整性。
 title: 使用範例設定檔測試您的檔案型目的地
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # 使用範例設定檔測試您的檔案型目的地
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此頁面說明如何使用 `/testing/destinationInstance` API端點，用於測試您的檔案型目的地是否已正確設定，以及驗證流向您設定之目的地的資料流的完整性。
 
@@ -31,7 +31,7 @@ ht-degree: 2%
 * 您已在Experience PlatformUI中為您目的地建立至少一個啟用流程。
 * 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
 
-   ![UI影像顯示如何從URL取得目的地執行個體ID。](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI影像顯示如何從URL取得目的地執行個體ID。](../../assets/testing-api/get-destination-instance-id.png)
 * *可選*：如果您想要使用新增至API呼叫的範例設定檔測試目的地設定，請使用 [/sample-profiles](file-based-sample-profile-generation-api.md) 端點，以根據您現有的來源結構描述產生範例設定檔。 如果您未提供範例設定檔，API將會產生一個設定檔，並在回應中傳回。
 
 ## 測試您的目的地設定，而不將設定檔新增至呼叫 {#test-without-adding-profiles}
@@ -111,7 +111,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `activations` | 傳回每個已啟動區段的區段ID和流程執行ID。 啟用專案（以及關聯的產生檔案）的數量等於對應至目的地執行個體的區段數。 <br><br> 範例：如果您將兩個區段對應至目的地執行個體， `activations` 陣列將包含兩個專案。 每個已啟用的區段都會對應至一個匯出的檔案。 |
+| `activations` | 傳回每個已啟動對象的對象ID和流量執行ID。 啟用專案（以及關聯的產生檔案）數量等於對應至目的地執行個體的對象數量。 <br><br> 範例：如果您將兩個對象對應至目的地執行個體， `activations` 陣列將包含兩個專案。 每個啟用的對象都會對應至一個匯出的檔案。 |
 | `results` | 傳回目的地執行個體ID和可用於呼叫 [結果API](file-based-destination-results-api.md)，以進一步測試整合。 |
 | `inputProfiles` | 傳回API自動產生的範例設定檔。 |
 
@@ -232,7 +232,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/d
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `activations` | 傳回每個已啟動區段的區段ID和流程執行ID。 啟用專案（以及關聯的產生檔案）的數量等於對應至目的地執行個體的區段數。 <br><br> 範例：如果您將兩個區段對應至目的地執行個體， `activations` 陣列將包含兩個專案。 每個已啟用的區段都會對應至一個匯出的檔案。 |
+| `activations` | 傳回每個已啟動對象的對象ID和流量執行ID。 啟用專案（以及關聯的產生檔案）數量等於對應至目的地執行個體的對象數量。 <br><br> 範例：如果您將兩個對象對應至目的地執行個體， `activations` 陣列將包含兩個專案。 每個啟用的對象都會對應至一個匯出的檔案。 |
 | `results` | 傳回目的地執行個體ID和可用於呼叫 [結果API](file-based-destination-results-api.md)，以進一步測試整合。 |
 | `inputProfiles` | 傳回您在API請求中傳遞的自訂範例設定檔。 |
 

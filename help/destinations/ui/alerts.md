@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；警示；目的地
 description: 您可以在建立資料流時訂閱警示，以接收有關資料流執行狀態、成功或失敗的警示訊息。
 title: 訂閱內容感知目的地警示
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 3bb9858c236c91e1567fd8e78988f4049537ffe3
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '950'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 本檔案需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [目的地](../home.md)：預先建立與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+* [目的地](../home.md)：預先建立與目的地平台的整合，可順暢地從Adobe Experience Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 * [可觀察性](../../observability/home.md)： [!DNL Observability Insights] 可讓您透過使用統計量度和事件通知來監控Platform活動。
    * [警報](../../observability/alerts/overview.md)：當您的Platform作業達到特定條件集時（例如系統違反臨界值時會發生問題），Platform可以向您組織中訂閱警報訊息的任何使用者傳送警報訊息。
 
@@ -51,10 +51,10 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 
 | 警報 | 說明 |
 | --- | --- |
-| 目的地資料流執行延遲 | 此警報會在目的地流程執行耗時超過150分鐘啟動區段時通知您。 |
-| 目的地流程執行失敗 | 此警報會在啟用區段至目的地時發生錯誤時通知您。 |
-| 目的地流程執行成功 | 此警報會在區段成功啟用至目的地時通知您。 |
-| 目的地流程執行開始 | 此警報會在目的地流程執行開始啟用區段時通知您。 |
+| 目的地資料流執行延遲 | 此警報會在目的地流程執行耗時超過150分鐘啟動對象時通知您。 |
+| 目的地流程執行失敗 | 此警報會在將受眾啟用至目的地時發生錯誤時通知您。 |
+| 目的地流程執行成功 | 此警報會在對象成功啟用至目的地時通知您。 |
+| 目的地流程執行開始 | 此警報會在目的地流程執行開始啟用對象時通知您。 |
 | 超過啟用略過率 | 此警報會在啟用略過率超過啟用總數的1%時通知您。 當身分缺少屬性或違反同意時，會在啟用期間略過身分。 |
 
 ## 接收警示 {#receiving-alerts}

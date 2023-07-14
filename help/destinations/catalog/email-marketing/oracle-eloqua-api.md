@@ -1,11 +1,11 @@
 ---
-title: (API) Oracle Eloqua連線
+title: (API) Oracle Eloqua 連線
 description: (API) Oracle Eloqua目的地可讓您匯出帳戶資料，並在Oracle Eloqua中根據您的業務需求加以啟用。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 3d54b89ab5f956710ad595a0e8d3567e1e773d0a
+source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '2125'
+source-wordcount: '2124'
 ht-degree: 3%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) 可讓行銷人員規劃及執行行銷活動，同時為其潛在客戶提供個人化的客戶體驗。 透過整合式銷售機會管理及輕鬆建立行銷活動，可協助行銷人員在買家歷程中的適當時間，與適當的對象互動，並可優雅地擴充，以觸及各管道（包括電子郵件、顯示搜尋、視訊和行動裝置）的對象。 銷售團隊能以更快的速度完成更多交易，透過即時深入分析提高行銷ROI。
 
-此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [更新連絡人](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 作業 [!DNL Oracle Eloqua] REST API，可讓您 **更新身分** 區段內至 [!DNL Oracle Eloqua].
+此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [更新連絡人](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) 作業 [!DNL Oracle Eloqua] REST API，可讓您 **更新身分** 在對象中移至 [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] 使用 [基本驗證](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) 以與 [!DNL Oracle Eloqua] REST API。 向您的驗證身分的說明 [!DNL Oracle Eloqua] 執行個體的詳細資訊如下： [驗證至目的地](#authenticate) 區段。
 
 ## 使用案例 {#use-cases}
 
-線上平台的行銷部門想要將電子郵件行銷活動廣播給已組織的潛在客戶受眾。 平台的行銷團隊可以透過Adobe Experience Platform更新現有潛在客戶資訊、從自己的離線資料建立區段，並將這些區段傳送至 [!DNL Oracle Eloqua]，然後可用於傳送行銷活動電子郵件。
+線上平台的行銷部門想要將電子郵件行銷活動廣播給已組織的潛在客戶受眾。 平台的行銷團隊可以透過Adobe Experience Platform更新現有的潛在客戶資訊、從自己的離線資料建立受眾，並將這些受眾傳送至 [!DNL Oracle Eloqua]，然後可用於傳送行銷活動電子郵件。
 
 ## 先決條件 {#prerequisites}
 
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 在將資料啟用至 [!DNL Oracle Eloqua] 目的地，您必須擁有 [綱要](/help/xdm/schema/composition.md)， a [資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)、和 [區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 建立於 [!DNL Experience Platform].
 
-請參閱Experience Platform檔案以瞭解 [區段會籍詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md) 如果您需要區段狀態的指引。
+請參閱Experience Platform檔案以瞭解 [對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md) 如果您需要對象狀態的指引。
 
 ### [!DNL Oracle Eloqua] 必備條件 {#prerequisites-destination}
 
@@ -54,11 +54,10 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->* [!DNL Oracle Eloqua] 自訂連絡人欄位會使用於下列期間選取的區段名稱自動建立： **[!UICONTROL 選取區段]** 步驟。
-
+>* [!DNL Oracle Eloqua] 自訂聯絡欄位會使用期間選取的對象名稱自動建立 **[!UICONTROL 選取區段]** 步驟。
 
 * [!DNL Oracle Eloqua] 最多250個自訂聯絡人欄位。
-* 在匯出新區段之前，請確定以下範圍中的Platform區段數和現有區段數 [!DNL Oracle Eloqua] 請勿超過此限制。
+* 在匯出新受眾之前，請確定內的Platform受眾數量和現有受眾數量 [!DNL Oracle Eloqua] 請勿超過此限制。
 * 如果超過此限制，您將會在Experience Platform中遇到錯誤。 這是因為 [!DNL Oracle Eloqua] API無法驗證請求，並以 —  *400：發生驗證錯誤*  — 說明問題的錯誤訊息。
 * 如果您已達到上述指定的限制，則需要從目的地移除現有的對應，並刪除中對應的自訂聯絡人欄位。 [!DNL Oracle Eloqua] 帳戶，然後才能匯出更多區段。
 
@@ -78,8 +77,8 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中選取的每個區段，將 [!DNL Oracle Eloqua] 區段狀態會從Platform更新其區段狀態。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中每個選取的對象，對應至 [!DNL Oracle Eloqua] 區段狀態會從Platform更新其對象狀態。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -130,13 +129,13 @@ ht-degree: 3%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 >
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
@@ -150,7 +149,7 @@ ht-degree: 3%
    * 重複這些步驟，在XDM設定檔結構描述和之間新增必要和任何需要的屬性對應。 [!DNL Oracle Eloqua]： |來源欄位 |目標欄位 |強制 | |—|—|—| |`IdentityMap: Eid`|`Identity: EloquaId`|是 | |`xdm: personalEmail.address`|`Attribute: emailAddress`|是 | |`xdm: personName.firstName`|`Attribute: firstName`| | |`xdm: personName.lastName`|`Attribute: lastName`| | |`xdm: workAddress.street1`|`Attribute: address1`| | |`xdm: workAddress.street2`|`Attribute: address2`| | |`xdm: workAddress.street3`|`Attribute: address3`| | |`xdm: workAddress.postalCode`|`Attribute: postalCode`| | |`xdm: workAddress.country`|`Attribute: country`| | |`xdm: workAddress.city`|`Attribute: city`| |
 
    * 具有上述對應的範例如下所示：
-      ![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -178,22 +177,22 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->當傳送聯絡人欄位資訊到時，目的地會在每次執行時自動為所選區段名稱的唯一識別碼加上尾碼 [!DNL Oracle Eloqua]. 這可確保與區段名稱對應的聯絡人欄位名稱不會重疊。 請參閱 [驗證資料匯出](#exported-data) 區段熒幕擷圖範例 [!DNL Oracle Eloqua] 「連絡人詳細資料」頁面包含使用區段名稱建立的自訂連絡人欄位。
+>目標會在傳送聯絡人欄位資訊至時，自動為每次執行時選取的對象名稱加上唯一識別碼的尾碼 [!DNL Oracle Eloqua]. 這可確保與您的對象名稱對應的聯絡人欄位名稱不會重疊。 請參閱 [驗證資料匯出](#exported-data) 區段熒幕擷圖範例 [!DNL Oracle Eloqua] 「連絡人詳細資料」頁面包含使用對象名稱建立的自訂連絡人欄位。
 
 ## 驗證資料匯出 {#exported-data}
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 選取 **[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]** 並導覽至目的地清單。
-1. 接下來，選取目的地並切換至 **[!UICONTROL 啟用資料]** 標籤，然後選取區段名稱。
+1. 接下來，選取目的地並切換至 **[!UICONTROL 啟用資料]** 標籤，然後選取對象名稱。
    ![顯示目的地啟用資料的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
-1. 監控區段摘要，並確保設定檔計數與區段內的計數相對應。
+1. 監控對象摘要，並確保設定檔計數對應至區段內的計數。
    ![顯示區段的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. 登入 [!DNL Oracle Eloqua] 網站，然後導覽至 **[!UICONTROL 連絡人總覽]** 頁面，以檢查是否已新增區段中的設定檔。 若要檢視區段狀態，請向下展開至 **[!UICONTROL 連絡人詳細資料]** 頁面，並檢查是否已建立以所選區段名稱作為其首碼的聯絡人欄位。
+1. 登入 [!DNL Oracle Eloqua] 網站，然後導覽至 **[!UICONTROL 連絡人總覽]** 頁面，以檢查是否已新增對象中的設定檔。 若要檢視對象狀態，請向下展開至 **[!UICONTROL 連絡人詳細資料]** 頁面，並檢查聯絡人欄位是否已建立，且首碼為選取的對象名稱。
 
-![oracle Eloqua UI熒幕擷圖顯示「聯絡人詳細資料」頁面，其中包含以區段名稱建立的自訂聯絡人欄位。](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![oracle Eloqua UI熒幕擷圖顯示「聯絡人詳細資料」頁面，其中包含以對象名稱建立的自訂聯絡人欄位。](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 

@@ -3,7 +3,7 @@ keywords: contentsquare延伸模組；contentsquare目的地；contentsquare
 title: Contentsquare擴充功能
 description: Contentsquare擴充功能是Adobe Experience Platform中的分析目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe交換上的擴充功能頁面。
 exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 5%
@@ -12,9 +12,9 @@ ht-degree: 5%
 
 # [!DNL Contentsquare] 擴充功能 {#contentsquare-extension}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-將頁面內行為視覺化，瞭解客戶為什麼放棄以及您可以如何改進。 將收入歸因於每個Analytics區段和Target測試的UX和內容元素。 安裝 [!DNL Contentsquare] 標籤、設定自訂變數和事件。 只要按幾下，即可開始收集您的UX分析資料。
+將頁面內行為視覺化，瞭解客戶為什麼放棄以及您可以如何改進。 將收入歸因於每個Analytics受眾和Target測試的UX和內容元素。 安裝 [!DNL Contentsquare] 標籤、設定自訂變數和事件。 只要按幾下，即可開始收集您的UX分析資料。
 
 [!DNL Contentsquare] 是Adobe Experience Platform中的analytics擴充功能。 如需擴充功能的相關詳細資訊，請參閱擴充功能頁面，網址為 [Adobe交換](https://exchange.adobe.com/experiencecloud.details.100364.html).
 

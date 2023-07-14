@@ -3,16 +3,16 @@ keywords: 目的地；問題；常見問題；常見問題集；目的地常見�
 title: 常見問答
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 784c529691f2f550176080474f5091bfb1b84279
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
-source-wordcount: '1396'
-ht-degree: 3%
+source-wordcount: '1395'
+ht-degree: 4%
 
 ---
 
 # 常見問答 {#faq}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 本檔案提供有關Adobe Experience Platform目的地的常見問題解答。 關於其他相關問題和疑難排解 [!DNL Platform] 服務，包括在所有服務中遇到的服務 [!DNL Platform] API，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
 
@@ -22,9 +22,9 @@ ht-degree: 3%
 
 +++答案由於Experience Platform執行細分的方式，這是正常行為。
 
-串流細分會更新一整天串流區段的設定檔計數，而批次細分則會每24小時更新一次批次區段的設定檔計數。
+串流細分會更新一整天串流對象的設定檔計數，而批次細分則會每24小時更新一次批次對象的設定檔計數。
 
-當區段匯出排程與區段排程不同時，設定檔會在UI和匯出的區段之間計算 [!DNL CSV] 檔案將會不同，尤其是當涉及到串流區段時。
+當對象匯出排程與分段排程不同時，設定檔會在UI和匯出的之間計算 [!DNL CSV] 檔案會有所不同，尤其是針對串流受眾時。
 
 請參閱 [Segment Service檔案](../segmentation/home.md) 以取得更多詳細資料。
 +++
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 ### 我需要做什麼才能在中啟用對象 [!DNL Facebook Custom Audiences]？
 
-+++回答：將受眾區段傳送至之前 [!DNL Facebook]，確認您符合下列需求：
++++傳送對象前請先回答 [!DNL Facebook]，確認您符合下列需求：
 
 * 您的 [!DNL Facebook] 使用者帳戶必須具備 **[!DNL Manage campaigns]** 已為您計畫使用的廣告帳戶啟用許可權。
 * 此 **Adobe Experience Cloud** 必須將商業帳戶新增為中的廣告合作夥伴 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`. 另請參閱 [新增合作夥伴至您的業務經理](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
@@ -91,9 +91,9 @@ ht-degree: 3%
 
 ## Google Customer Match {#google-customer-match}
 
-### 將區段匯出至Google Customer Match時，為什麼在Google介面的區段名稱結尾會附加額外的數字？
+### 將受眾匯出至Google Customer Match時，為什麼在Google介面的受眾名稱結尾會附加額外的數字？
 
-+++回答Google需要區段名稱必須是唯一的。 您所看到的數字是 [UNIX時間戳記](https://www.unixtimestamp.com/) 如果您將相同區段對應至多個Google目的地，則會附加區段名稱，以保持區段名稱的唯一性。
++++回答Google需要對象名稱必須是唯一的。 您所看到的數字是 [UNIX時間戳記](https://www.unixtimestamp.com/) 如果您將相同的對象對應至多個Google目的地，則會附加這些對象，以保持對象名稱的唯一性。
 +++
 
 ## linkedIn相符的受眾 {#linkedin}
@@ -174,7 +174,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 +++回答是，Edge Network Server API可與自訂個人化目的地搭配使用。 由於設定檔屬性可能包含敏感資料，為了保護此資料，「自訂個人化」目的地會要求您使用Edge Network Server API來收集資料。 此外，所有API呼叫都必須在 [已驗證的內容](../server-api/authentication.md).
 +++
 
-### 我只能有一個邊緣主動的合併原則。 我可以建立使用不同合併原則的受眾，並且仍然將其以串流區段的形式傳送到Adobe Target嗎？
+### 我只能有一個邊緣主動的合併原則。 我可以建立使用不同合併原則的受眾，並且仍然以串流受眾的形式傳送給Adobe Target嗎？
 
 +++答案否。 您想要啟用至Adobe Target的所有對象都必須使用active-on-edge [合併原則](../profile/merge-policies/ui-guide.md).
 +++

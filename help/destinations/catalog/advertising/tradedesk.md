@@ -3,16 +3,16 @@ keywords: 廣告；交易台；廣告交易台
 title: 交易台連線
 description: Trade Desk是廣告購買者的自助服務平台，可跨顯示器、影片和行動詳細目錄來源執行重新定位和以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '725'
 ht-degree: 2%
 
 ---
 
 # [!DNL The Trade Desk] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL The Trade Desk] 目的地可協助您將設定檔資料傳送至 [!DNL The Trade Desk].
 
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## 使用案例 {#use-cases}
 
-身為行銷人員，我想能夠使用以下專案建立的區段： [!DNL Trade Desk IDs] 或裝置ID來建立重新定位或對象定位的數位行銷活動。
+身為行銷人員，我想能夠使用由以下專案建立的對象： [!DNL Trade Desk IDs] 或裝置ID來建立重新定位或對象定位的數位行銷活動。
 
 ## 支援的身分 {#supported-identities}
 
@@ -36,14 +36,28 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在將區段（受眾）的所有成員匯出至目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -82,17 +96,17 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
-在 [區段排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動將區段對應至目的地平台中其對應的ID或易記名稱。
+在 [對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動將對象對應至其目標平台中的對應ID或易記名稱。
 
-對應區段時，建議您使用Platform區段名稱或較短的形式，以方便使用。 不過，目的地中的區段ID或名稱不需要與您的Platform帳戶中的相符專案。 您在對應欄位中插入的任何值都會反映在目的地中。
+對應區段時，為方便使用，建議您使用Platform受眾名稱或較短的形式。 不過，您目的地中的對象ID或名稱不需要符合您Platform帳戶中的對象ID或名稱。 您在對應欄位中插入的任何值都會反映在目的地中。
 
 如果您使用多個裝置對應(Cookie ID、 [!DNL IDFA]， [!DNL GAID])，請確定所有這三個對應都使用相同的對應值。 [!DNL The Trade Desk] 會將其彙總至單一區段，並包含裝置層級的劃分。
 

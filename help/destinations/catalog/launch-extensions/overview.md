@@ -3,7 +3,7 @@ keywords: 標籤擴充功能；標籤擴充功能；Launch目的地；Platform�
 title: Adobe Experience Platform中的標籤擴充功能
 description: Adobe Experience Platform提供Adobe新一代的標籤管理功能。 Platform可讓您透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 1%
@@ -37,7 +37,7 @@ A [標籤延伸模組](../../../tags/home.md#extensions) 是程式碼套件，�
 
 Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
 
-**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export audiences and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
 
 ![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 現有的Experience Cloud客戶可免費使用Platform的標籤功能。 透過您可安裝、設定、更新和刪除的簡單易用擴充功能，此系統可簡化網站上的標籤部署作業。 標籤在您的網站上留下很小的空間，並可讓您保持頁面快速載入。
 
-雖然您無法啟用區段來標籤擴充功能，但您可以設定規則，只在某些情況下轉送事件資料。 這項強大的功能可讓您只在某些情況下轉送事件資料，而不是每次互動時都傳送事件資料。 如需詳細資訊，請閱讀 [標籤檔案](../../../tags/ui/managing-resources/rules.md).
+雖然您無法啟用受眾來標籤擴充功能，但您可以設定規則，只在某些情況下轉送事件資料。 這項強大的功能可讓您只在某些情況下轉送事件資料，而不是每次互動時都傳送事件資料。 如需詳細資訊，請閱讀 [標籤檔案](../../../tags/ui/managing-resources/rules.md).
 
 ## 擴充功能的範例使用案例 {#extensions-use-cases}
 

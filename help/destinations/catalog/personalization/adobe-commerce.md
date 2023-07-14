@@ -2,7 +2,7 @@
 title: Adobe Commerce目的地聯結器
 description: 瞭解Adobe Commerce和Real-Time CDP商家如何透過提供高度相關的網站內容和促銷活動，並根據Real-Time CDP內建立和管理之客戶對象進行自訂，來個人化購物體驗。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 276224303c7a65a53ff859bcbf47f64a6925bf77
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # Adobe Commerce連線 {#adobe-commerce}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 [!DNL Adobe Commerce] 目的地聯結器可讓您選取一或多個Real-Time CDP對象，以啟用至 [!DNL Adobe Commerce] 帳戶，為購物者提供動態的個人化體驗。 範圍 [!DNL Adobe Commerce]，然後您可以選取這些Real-Time CDP對象，以個人化購物車中的獨特選件，例如「購買2 get 1 free」。 您也可以顯示主圖橫幅，並透過促銷優惠修改產品定價，所有優惠方案都可根據Adobe Real-Time CDP受眾自訂。
 
@@ -67,7 +67,7 @@ ht-degree: 3%
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對設定檔請求目的地啟用設定檔和區段](../../ui/activate-edge-personalization-destinations.md) 以取得啟用對象至 [!DNL Commerce] 目的地。
+讀取 [啟用設定檔和對象以設定檔請求目的地](../../ui/activate-edge-personalization-destinations.md) 以取得啟用對象至 [!DNL Commerce] 目的地。
 
 ## 中的後續步驟 [!DNL Adobe Commerce]
 

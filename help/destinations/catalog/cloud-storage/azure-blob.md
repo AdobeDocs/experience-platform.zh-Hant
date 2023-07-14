@@ -2,9 +2,9 @@
 title: Azure Blob連線
 description: 建立與您的Azure Blob儲存體的即時輸出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8890fd137cfe6d35dcf6177b5516605e7753a75a
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1085'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,6 @@ ht-degree: 3%
 >* 如果您已將檔案匯出至 **[!UICONTROL Azure Blob]** 目的地：請建立新的資料流到新的 **[!UICONTROL Azure Blob測試版]** 目的地。
 >* 如果您尚未建立任何資料流至 **[!UICONTROL Azure Blob]** 目的地，請使用新的 **[!UICONTROL Azure Blob測試版]** 要匯出檔案的卡片 **[!UICONTROL Azure Blob]**.
 
-
 ![並排檢視中的兩個Azure Blob目的地卡片。](../../assets/catalog/cloud-storage/blob/two-azure-blob-destination-cards.png)
 
 新功能中的改進 [!DNL Azure Blob] 目的地卡包括：
@@ -29,14 +28,14 @@ ht-degree: 3%
 * 可透過以下方式設定匯出檔案中的自訂檔案標頭： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL Azure Blob] (以下稱 [!DNL Blob])是Microsoft的雲端物件儲存解決方案。 本教學課程提供建立 [!DNL Blob] 目的地使用 [!DNL Platform] 使用者介面。
 
 ## 連線至您的 [!UICONTROL Azure Blob] 透過API或UI儲存 {#connect-api-or-ui}
 
-* 若要連線至您的 [!UICONTROL Azure Blob] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
-* 若要連線至您的 [!UICONTROL Azure Blob] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
+* 若要連線至您的 [!UICONTROL Azure Blob] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 下方的。
+* 若要連線至您的 [!UICONTROL Azure Blob] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
 
 ## 快速入門
 
@@ -47,7 +46,21 @@ ht-degree: 3%
    * [結構描述編輯器教學課程](../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器UI建立自訂結構描述。
 * [[!DNL Real-Time Customer Profile]](../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-如果您已有有效的 [!DNL Blob] 目的地，您可以略過本檔案的其餘部分，並前往上的教學課程 [啟用區段至您的目的地](../../ui/activate-batch-profile-destinations.md).
+如果您已有有效的 [!DNL Blob] 目的地，您可以略過本檔案的其餘部分，並前往上的教學課程 [將對象啟用至您的目的地](../../ui/activate-batch-profile-destinations.md).
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -87,7 +100,7 @@ ht-degree: 3%
    * 如需有關設定的詳細資訊 [!DNL Blob] 連線字串，請參閱 [設定Azure儲存體帳戶的連線字串](https://learn.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) (位於Microsoft檔案中)。
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
-   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 填寫目的地詳細資料 {#destination-details}
 
@@ -107,13 +120,13 @@ ht-degree: 3%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## (Beta)匯出資料集 {#export-datasets}
 
@@ -124,4 +137,4 @@ ht-degree: 3%
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL Azure Blob Storage] 目的地， [!DNL Platform] 建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 區段啟動教學課程中的。
+對象 [!DNL Azure Blob Storage] 目的地， [!DNL Platform] 建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。

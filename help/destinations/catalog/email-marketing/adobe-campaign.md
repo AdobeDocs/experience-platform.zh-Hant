@@ -3,20 +3,34 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；a
 title: Adobe Campaign連線
 description: Adobe Campaign是一套解決方案，可協助您跨所有線上和離線管道個人化並傳遞行銷活動。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 47e0dfb59edca58e205cb478e9ee624659753ab9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '940'
 ht-degree: 2%
 
 ---
 
 # Adobe Campaign連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe Campaign是一套解決方案，可協助您跨所有線上和離線管道個人化並傳遞行銷活動。 另請參閱 [開始使用Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) 以取得詳細資訊。
 
-若要將區段資料傳送至Adobe Campaign，您必須先 [連線目的地](#connect-destination) 在Adobe Experience Platform中，然後 [設定資料匯入](#import-data-into-campaign) 從您的儲存位置移至Adobe Campaign。
+若要將受眾資料傳送至Adobe Campaign，您必須先 [連線目的地](#connect-destination) 在Adobe Experience Platform中，然後 [設定資料匯入](#import-data-into-campaign) 從您的儲存位置移至Adobe Campaign。
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -74,22 +88,22 @@ Adobe Campaign支援下列連線型別：
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 目的地屬性 {#destination-attributes}
 
-啟用區段至此目的地時，Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。 如需詳細資訊，請參閱 [在電子郵件行銷目的地啟用對象時的最佳實務](overview.md#best-practices).
+將對象啟用至此目的地時，Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。 如需詳細資訊，請參閱 [在電子郵件行銷目的地啟用對象時的最佳實務](overview.md#best-practices).
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL Adobe Campaign] 目的地， [!DNL Platform] 建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證區段啟用](../../ui/activate-batch-profile-destinations.md#verify) 區段啟動教學課程中的。
+對象 [!DNL Adobe Campaign] 目的地， [!DNL Platform] 建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify) （在audience activation教學課程中）。
 
 ## 設定將資料匯入Adobe Campaign中 {#import-data-into-campaign}
 
@@ -98,7 +112,6 @@ Adobe Campaign支援下列連線型別：
 >* 請記住 [!DNL SFTP] 在執行此整合時，根據Adobe Campaign合約中的儲存空間限制、資料庫儲存空間限制和作用中設定檔限制。
 >* 您需要使用排程、匯入及對應匯出的Adobe Campaign區段 [!DNL Campaign] 工作流程。 請參閱 [設定循環匯入](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) 在Adobe Campaign Classic檔案和 [關於資料管理活動](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) 在Adobe Campaign Standard檔案中。
 >* 將資料傳送至Adobe Campaign的偏好方法為透過 [!DNL Amazon S3] 或 [!DNL Azure Blob].
-
 
 連線之後 [!DNL Platform] 至您的 [!DNL Amazon S3] 或 [!DNL Azure Blob] 存放區時，您必須將資料從存放區位置匯入至Adobe Campaign。 若要瞭解如何完成此作業，請參閱下列Adobe Campaign檔案頁面：
 * [開始使用匯入和匯出資料](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=zh-Hant) 和 [資料載入（檔案）](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) (位於Adobe Campaign Classic檔案中)。

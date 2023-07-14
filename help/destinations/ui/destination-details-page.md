@@ -1,9 +1,9 @@
 ---
 keywords: 目的地；目的地；目的地詳細資訊頁面；目的地詳細資訊頁面
 title: 檢視目的地詳細資料
-description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的區段，以及用於編輯啟用、啟用和停用資料流程的控制項。
+description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及用於編輯啟用、啟用和停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: dcbc0c3ef87be0bc296992819c9b1bc3ba6317e4
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # 檢視目的地詳細資料
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在Adobe Experience Platform使用者介面中，您可以檢視和監控目的地的屬性和活動。 這些詳細資訊包括目的地的名稱和ID、啟用或停用目的地的控制項及其他。 詳細資訊也包含啟用的設定檔記錄、啟用的身分、失敗和排除的量度，以及資料流執行的歷史記錄。
 
@@ -50,8 +50,8 @@ ht-degree: 1%
 
 | 右側邊欄專案 | 說明 |
 | --- | --- |
-| [!UICONTROL 啟用區段] | 選取此控制項可編輯對應到目的地的區段、更新匯出排程，或新增和移除對應的屬性和身分。 請參閱以下指南： [啟用對象資料以區段串流目的地](./activate-segment-streaming-destinations.md)， [啟用受眾資料以批次設定檔為基礎的目的地](./activate-batch-profile-destinations.md)、和 [啟用以串流設定檔為基礎的目的地的受眾資料](./activate-streaming-profile-destinations.md) 以取得詳細資訊。 |
-| [!UICONTROL 刪除] | 可讓您刪除此資料流，並取消對應先前啟用的區段（如果存在）。 |
+| [!UICONTROL 啟用對象] | 選取此控制項可編輯哪些對象已對應至目的地、更新匯出排程，或新增及移除對應的屬性和身分。 請參閱以下指南： [啟用對象資料至對象串流目的地](./activate-segment-streaming-destinations.md)， [啟用受眾資料以批次設定檔為基礎的目的地](./activate-batch-profile-destinations.md)、和 [啟用以串流設定檔為基礎的目的地的受眾資料](./activate-streaming-profile-destinations.md) 以取得詳細資訊。 |
+| [!UICONTROL 刪除] | 可讓您刪除此資料流，並取消對應先前啟用的對象（如果存在）。 |
 | [!UICONTROL 目的地名稱] | 可編輯此欄位以更新目的地的名稱。 |
 | [!UICONTROL 說明] | 您可以編輯此欄位，以更新或新增選擇性說明至目的地。 |
 | [!UICONTROL 目標] | 代表傳送對象的目的地平台。 請參閱 [目的地目錄](../catalog/overview.md) 以取得詳細資訊。 |
@@ -81,7 +81,6 @@ ht-degree: 1%
 >* Experience Platform中目前所有目的地都支援目的地監視功能 *例外* 此 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)， [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md) 和 [Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md) 目的地。
 >* 對於 [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)， [Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)、和 [HTTP API](/help/destinations/catalog/streaming/http-destination.md) 會估計與已排除、失敗和已啟用的身分相關的量度。 較大量的啟用資料會導致量度的準確性較高。
 
-
 ![資料流執行檢視](../assets/ui/details-page/dataflow-runs.png)
 
 ### 資料流執行持續時間 {#dataflow-runs-duration}
@@ -98,7 +97,7 @@ ht-degree: 1%
 
 ### 以檔案為基礎的目的地 {#file-based}
 
-對於以檔案為基礎的目的地的資料流執行，請 **[!UICONTROL 處理持續時間]** 取決於要匯出的資料大小和系統載入。 另請注意，對檔案型目的地執行的資料流會依每個區段進行劃分。
+對於以檔案為基礎的目的地的資料流執行，請 **[!UICONTROL 處理持續時間]** 取決於要匯出的資料大小和系統載入。 另請注意，對檔案型目的地執行的資料流會依對象細分。
 
 ![針對以檔案為基礎的目的地，以「處理時間」欄反白顯示的「資料流」執行頁面的影像。](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
@@ -106,11 +105,11 @@ ht-degree: 1%
 
 ## [!UICONTROL 啟用資料] {#activation-data}
 
-此 [!UICONTROL 啟用資料] tab會顯示已對應至目的地的區段清單，包括其開始日期和結束日期（如果適用），以及資料匯出的其他相關資訊，例如匯出型別、排程和頻率。 若要檢視特定區段的詳細資訊，請從清單中選取其名稱。
+此 [!UICONTROL 啟用資料] 索引標籤會顯示已對應至目的地的對象清單，包括其開始日期和結束日期（如果適用），以及資料匯出的其他相關資訊，例如匯出型別、排程和頻率。 若要檢視特定對象的詳細資訊，請從清單中選取其名稱。
 
 >[!TIP]
 >
->若要檢視和編輯對應至目的地之屬性和身分的相關詳細資訊，請選取「 」 **[!UICONTROL 啟用區段]** 在 [右側邊欄](#right-rail).
+>若要檢視和編輯對應至目的地之屬性和身分的相關詳細資訊，請選取「 」 **[!UICONTROL 啟用對象]** 在 [右側邊欄](#right-rail).
 
 ![啟用資料檢視批次目的地](../assets/ui/details-page/activation-data-batch.png)
 
@@ -118,4 +117,4 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->如需探索區段詳細資訊頁面的詳細資訊，請參閱 [區段UI總覽](../../segmentation/ui/overview.md#segment-details).
+>如需探索對象詳細資訊頁面的詳細資訊，請參閱 [區段UI總覽](../../segmentation/ui/overview.md#segment-details).

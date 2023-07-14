@@ -5,7 +5,7 @@ title: 使用Adobe Experience Platform中的流量服務API連線到串流目的
 description: 本檔案說明如何使用Adobe Experience Platform API建立串流目的地
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 9aba3384b320b8c7d61a875ffd75217a5af04815
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 1%
@@ -26,9 +26,9 @@ ht-degree: 1%
 
 本教學課程使用 [!DNL Amazon Kinesis] 所有範例中的destination ，但步驟完全相同 [!DNL Azure Event Hubs].
 
-![概述 — 建立串流目的地和啟用區段的步驟](../assets/api/streaming-destination/overview.png)
+![概覽 — 建立串流目的地和啟用對象的步驟](../assets/api/streaming-destination/overview.png)
 
-如果您偏好使用Platform中的使用者介面來連線至目的地並啟用資料，請參閱 [連線目的地](../ui/connect-destination.md) 和 [啟用串流區段匯出目的地的受眾資料](../ui/activate-segment-streaming-destinations.md) 教學課程。
+如果您偏好使用Platform中的使用者介面來連線至目的地並啟用資料，請參閱 [連線目的地](../ui/connect-destination.md) 和 [啟用受眾資料至串流受眾匯出目的地](../ui/activate-segment-streaming-destinations.md) 教學課程。
 
 ## 快速入門
 
@@ -42,7 +42,7 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-若要完成本教學課程中的步驟，您應準備好下列憑證，端視您要連線及啟用區段的目的地型別而定。
+若要完成本教學課程中的步驟，您應準備好下列憑證，端視您要連線及啟用對象的目標型別而定。
 
 * 對象 [!DNL Amazon Kinesis] 連線： `accessKeyId`， `secretKey`， `region` 或 `connectionUrl`
 * 對象 [!DNL Azure Event Hubs] 連線： `sasKeyName`， `sasKey`， `namespace`
@@ -79,7 +79,7 @@ Experience Platform中的資源可隔離至特定的虛擬沙箱。 在對Platfo
 
 ![目的地步驟概述步驟1](../assets/api/streaming-destination/step1.png)
 
-首先，您應決定要將資料啟用的目標串流目的地。 首先，請執行呼叫以請求您可以連線並啟用區段的可用目的地清單。 對執行以下GET要求 `connectionSpecs` 端點以傳回可用目的地的清單：
+首先，您應決定要將資料啟用的目標串流目的地。 首先，請執行呼叫以請求您可以連線並啟用受眾的可用目的地清單。 對執行以下GET要求 `connectionSpecs` 端點以傳回可用目的地的清單：
 
 **API格式**
 
@@ -101,7 +101,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **回應**
 
-成功的回應包含可用目的地的清單及其唯一識別碼(`id`)。 儲存您計畫使用的目的地值，因為後續步驟會需要該值。 例如，如果您想要連線並傳送區段至 [!DNL Amazon Kinesis] 或 [!DNL Azure Event Hubs]，在回應中尋找下列程式碼片段：
+成功的回應包含可用目的地的清單及其唯一識別碼(`id`)。 儲存您計畫使用的目的地值，因為後續步驟會需要該值。 例如，如果您想要連線並傳送對象至 [!DNL Amazon Kinesis] 或 [!DNL Azure Event Hubs]，在回應中尋找下列程式碼片段：
 
 ```json
 {
@@ -409,7 +409,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回ID (`id`)的資料流和 `etag`. 記下這兩個值。 如同您在下一個步驟中會使用的方式，來啟動區段。
+成功的回應會傳回ID (`id`)的資料流和 `etag`. 記下這兩個值。 如同您在下一個步驟中會使用的一樣，以啟動對象。
 
 ```json
 {
@@ -423,9 +423,9 @@ curl -X POST \
 
 ![目的地步驟概述步驟5](../assets/api/streaming-destination/step5.png)
 
-建立所有連線和資料流程後，您現在可以將設定檔資料啟用至串流平台。 在此步驟中，您可以選取要傳送至目的地的區段和設定檔屬性，並且排程資料並將資料傳送至目的地。
+建立所有連線和資料流程後，您現在可以將設定檔資料啟用至串流平台。 在此步驟中，您可以選取要傳送至目的地的對象和設定檔屬性，並排程和傳送資料至目的地。
 
-若要啟用新目的地的區段，您必須執行JSONPATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個區段和設定檔屬性。 若要進一步瞭解JSONPATCH，請參閱 [RFC規格](https://tools.ietf.org/html/rfc6902).
+若要將對象啟用至您的新目的地，您必須執行JSONPATCH操作，類似於以下範例。 您可以在一次呼叫中啟用多個對象和設定檔屬性。 若要進一步瞭解JSONPATCH，請參閱 [RFC規格](https://tools.ietf.org/html/rfc6902).
 
 **API格式**
 
@@ -450,8 +450,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
     "value": {
       "type": "PLATFORM_SEGMENT",
       "value": {
-        "name": "Name of the segment that you are activating",
-        "description": "Description of the segment that you are activating",
+        "name": "Name of the audience that you are activating",
+        "description": "Description of the audience that you are activating",
         "id": "{SEGMENT_ID}"
       }
     }
@@ -474,13 +474,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | 在URL中，使用您在上一步建立的資料流ID。 |
 | `{ETAG}` | 取得 `{ETAG}` 根據上一步驟的回應， [建立資料流](#create-dataflow). 上一步中的回應格式有逸出引號。 您必須在請求的標頭中使用未逸出的值。 請參閱下列範例： <br> <ul><li>回應範例： `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>要在您的請求中使用的值： `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> 每次成功更新資料流時，etag值都會隨之更新。 |
-| `{SEGMENT_ID}` | 提供您要匯出至此目的地的區段ID。 若要擷取您要啟用的區段的區段ID，請參閱 [擷取區段定義](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) (在Experience Platform API參考中)。 |
+| `{SEGMENT_ID}` | 提供您要匯出至此目的地的對象ID。 若要擷取您要啟用之對象的對象ID，請參閱 [擷取對象定義](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) (在Experience Platform API參考中)。 |
 | `{PROFILE_ATTRIBUTE}` | 例如, `"person.lastName"` |
-| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將區段新增至資料流，請使用 `add` 作業。 |
-| `path` | 定義要更新的流程部分。 將區段新增至資料流時，請使用範例中指定的路徑。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. 若要將對象新增至資料流，請使用 `add` 作業。 |
+| `path` | 定義要更新的流程部分。 將對象新增至資料流時，請使用範例中指定的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
-| `id` | 指定您要新增至目的地資料流的區段ID。 |
-| `name` | *可選*. 指定您要新增至目的地資料流的區段名稱。 請注意，此欄位並非必填欄位，您可以成功將區段新增至目的地資料流，而不需要提供其名稱。 |
+| `id` | 指定您要新增至目的地資料流的對象ID。 |
+| `name` | *可選*. 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必要欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
 
 **回應**
 
@@ -490,7 +490,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![目的地步驟概述步驟6](../assets/api/streaming-destination/step6.png)
 
-在教學課程的最後一步，您應驗證區段和設定檔屬性是否確實已正確對應至資料流程。
+在教學課程的最後一步，您應該驗證對象和設定檔屬性是否確實已正確對應至資料流程。
 
 若要驗證此正確性，請執行下列GET要求：
 
@@ -517,7 +517,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **回應**
 
-傳回的回應應包含在 `transformations` 引數您在上一步中提交的區段和設定檔屬性。 範例 `transformations` 回應中的引數可能如下所示：
+傳回的回應應包含在 `transformations` 引數為您在上一步中提交的對象和設定檔屬性。 範例 `transformations` 回應中的引數可能如下所示：
 
 ```json
 "transformations": [
@@ -563,7 +563,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 除了設定檔屬性和步驟中的區段外 [將資料啟用至您的新目的地](#activate-data)，中匯出的資料 [!DNL AWS Kinesis] 和 [!DNL Azure Event Hubs] 也會包含身分對應的相關資訊。 這表示匯出的設定檔的身分(例如 [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱以下範例。
+> 除了設定檔屬性和步驟中的對象之外 [將資料啟用至您的新目的地](#activate-data)，中匯出的資料 [!DNL AWS Kinesis] 和 [!DNL Azure Event Hubs] 也會包含身分對應的相關資訊。 這表示匯出的設定檔的身分(例如 [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html)、行動ID、Google ID、電子郵件地址等)。 請參閱以下範例。
 
 ```json
 {

@@ -1,7 +1,7 @@
 ---
 description: 瞭解如何為使用Destination SDK建立的目的地設定檔案匯出設定。
 title: 批次設定
-source-git-commit: f2e04d6f96132aa5cee3602190375e0f3eb96c97
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 4%
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 當您透過Destination SDK建立以檔案為基礎的目的地時，可以設定預設檔案命名和匯出排程，也可以讓使用者選擇從Platform UI設定這些設定。 例如，您可以設定行為，例如：
 
-* 在檔案名稱中包含特定資訊，例如區段ID、目的地ID或自訂資訊。
+* 在檔案名稱中包含特定資訊，例如對象ID、目的地ID或自訂資訊。
 * 允許使用者從Platform UI自訂檔案命名。
 * 設定檔案匯出在設定的時間間隔發生。
 * 定義使用者可在Platform UI中看到的檔案命名和匯出排程自訂選項。
@@ -46,7 +46,7 @@ ht-degree: 4%
 
 ## 支援的引數 {#supported-parameters}
 
-您在此設定的值會顯示在 [排程區段匯出](../../../ui/activate-batch-profile-destinations.md#scheduling) 檔案型目的地啟用工作流程的步驟。
+您在此設定的值會顯示在 [排程對象匯出](../../../ui/activate-batch-profile-destinations.md#scheduling) 檔案型目的地啟用工作流程的步驟。
 
 ```json
 "batchConfig":{
@@ -95,7 +95,7 @@ ht-degree: 4%
 | `allowedScheduleFrequency` | 清單 | 定義可供客戶使用的檔案匯出頻率。 支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | 列舉 | 定義預設檔案匯出頻率。支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 預設值為 `DAILY`。 |
 | `defaultStartTime` | 字串 | 定義檔案匯出的預設開始時間。 使用24小時檔案格式。 預設值為「00:00」。 |
-| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必填*. 可供使用者選擇的可用檔案名稱巨集清單。 這會決定要將哪些專案附加至匯出的檔案名稱（區段ID、組織名稱、匯出的日期和時間等）。 設定時 `defaultFilename`，請務必避免複製巨集。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論定義巨集的順序為何，Experience PlatformUI一律會依此處顯示的順序顯示巨集。 <br><br> 若 `defaultFilename` 為空，則 `allowedFilenameAppendOptions` 清單必須至少包含一個巨集。 |
+| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必填*. 可供使用者選擇的可用檔案名稱巨集清單。 這會決定要將哪些專案附加至匯出的檔案名稱（對象ID、組織名稱、匯出的日期和時間等）。 設定時 `defaultFilename`，請務必避免複製巨集。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論定義巨集的順序為何，Experience PlatformUI一律會依此處顯示的順序顯示巨集。 <br><br> 若 `defaultFilename` 為空，則 `allowedFilenameAppendOptions` 清單必須至少包含一個巨集。 |
 | `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必填*. 預先選取的預設檔案名稱巨集，使用者可取消核取。<br><br> 此清單中的巨集是中定義巨集的子集 `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | 字串 | *可選*. 定義匯出檔案的預設檔案名稱巨集。 使用者無法覆寫這些專案。 <br><br>任何巨集定義者 `allowedFilenameAppendOptions` 將會附加在 `defaultFilename` 巨集。 <br><br>若 `defaultFilename` 空白，您必須在中至少定義一個巨集 `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | 布林值 | 根據對象，定義啟用的對象應匯出為單一檔案或多個檔案 [合併原則](../../../../profile/merge-policies/overview.md). 支援的值： <ul><li>`true`：每個合併原則匯出一個檔案。</li><li>`false`：無論合併原則為何，都會為每個對象匯出一個檔案。 這是預設行為。 您可以完全省略此引數來達到相同的結果。</li></ul> |
@@ -113,8 +113,8 @@ ht-degree: 4%
 | 巨集 | UI標籤 | 說明 | 範例 |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL 目標] | ui中的目的地名稱。 | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL 區段ID] | 平台產生的唯一區段ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL 區段名稱] | 使用者定義的區段名稱 | VIP訂閱者 |
+| `SEGMENT_ID` | [!UICONTROL 區段ID] | 平台產生的唯一受眾ID | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL 區段名稱] | 使用者定義的對象名稱 | VIP訂閱者 |
 | `DESTINATION_INSTANCE_ID` | [!UICONTROL 目的地ID] | 目的地執行個體的唯一Platform產生ID | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL 目的地名稱] | 目的地執行個體的使用者定義名稱。 | 我的2022年廣告目的地 |
 | `ORGANIZATION_NAME` | [!UICONTROL 組織名稱] | Adobe Experience Platform中的客戶組織名稱。 | 我的組織名稱 |
@@ -122,8 +122,8 @@ ht-degree: 4%
 | `DATETIME` / `TIMESTAMP` | [!UICONTROL 日期和時間] | `DATETIME` 和 `TIMESTAMP` 兩者都會定義產生檔案的時間，但格式不同。 <br><br><ul><li>`DATETIME` 會使用以下格式： YYYYMMDD_HHMMSS。</li><li>`TIMESTAMP` 使用10位數Unix格式。 </li></ul> `DATETIME` 和 `TIMESTAMP` 互斥，不能同時使用。 | <ul><li>`DATETIME`: 20220509_210543</li><li>`TIMESTAMP`: 1652131584</li></ul> |
 | `CUSTOM_TEXT` | [!UICONTROL 自訂文字] | 要包含在檔案名稱中的使用者定義自訂文字。 無法用於 `defaultFilename`. | My_Custom_Text |
 | `TIMESTAMP` | [!UICONTROL 日期和時間] | 檔案產生時間的10位數時間戳記，以Unix格式顯示。 | 1652131584 |
-| `MERGE_POLICY_ID` | [!UICONTROL 合併原則ID] | 的ID [合併原則](../../../../profile/merge-policies/overview.md) 用於產生匯出的對象。 當您根據合併原則將匯出的區段分組到檔案中時，請使用此巨集。 使用此巨集搭配 `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
-| `MERGE_POLICY_NAME` | [!UICONTROL 合併原則名稱] | 的名稱 [合併原則](../../../../profile/merge-policies/overview.md) 用於產生匯出的對象。 當您根據合併原則將匯出的區段分組到檔案中時，請使用此巨集。 使用此巨集搭配 `segmentGroupingEnabled:true`. | 我的自訂合併原則 |
+| `MERGE_POLICY_ID` | [!UICONTROL 合併原則ID] | 的ID [合併原則](../../../../profile/merge-policies/overview.md) 用於產生匯出的對象。 當您根據合併原則將匯出的對象分組到檔案中時，請使用此巨集。 使用此巨集搭配 `segmentGroupingEnabled:true`. | e8591fdb-2873-4b12-b63e-15275b1c1439 |
+| `MERGE_POLICY_NAME` | [!UICONTROL 合併原則名稱] | 的名稱 [合併原則](../../../../profile/merge-policies/overview.md) 用於產生匯出的對象。 當您根據合併原則將匯出的對象分組到檔案中時，請使用此巨集。 使用此巨集搭配 `segmentGroupingEnabled:true`. | 我的自訂合併原則 |
 
 {style="table-layout:auto"}
 

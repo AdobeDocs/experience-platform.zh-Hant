@@ -3,10 +3,10 @@ title: (Beta)交易平台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1078'
-ht-degree: 0%
+source-wordcount: '1076'
+ht-degree: 4%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 0%
 >
 >[!DNL The Trade Desk - CRM] Platform中的目的地目前為測試版。 檔案和功能可能會有所變更。
 >
->隨著EUID (European Unified ID)的推出，您現在可以看到兩個 [!DNL The Trade Desk - CRM] 中的目的地 [目的地目錄](/help/destinations/catalog/overview.md).
->* 若您的資料來源是歐盟，請使用 **[!DNL The Trade Desk - CRM (EU)]** 目的地。
->* 如果您在APAC或NAMER地區取得資料，請使用 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 目的地。
+>隨著 EUID (歐洲統一 ID) 的發行，您現在可以查看兩個 [!DNL The Trade Desk - CRM] 目的地 (從[目的地目錄](/help/destinations/catalog/overview.md))。
+>* 如果您要在歐盟獲取資料，請使用 **[!DNL The Trade Desk - CRM (EU)]** 目的地。
+>* 如果您要在亞太 (APAC) 或北美 (NAMER) 區域獲取資料，請使用 **[!DNL The Trade Desk - CRM (NAMER & APAC)]** 目的地。
 >
 >Experience Platform中的兩個目的地目前都處於測試階段。 此檔案頁面是由 *[!DNL Trade Desk]* 團隊。 如有任何查詢或更新請求，請聯絡您的 [!DNL Trade Desk] 代表，說明檔案和功能可能會有所變更。
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 本檔案旨在協助您啟用設定檔至 [!DNL Trade Desk] 根據CRM資料進行對象鎖定和隱藏的帳戶。
 
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-在您可以啟用區段至 [!DNL The Trade Desk]，您必須聯絡 [!DNL The Trade Desk] 帳戶管理員以簽署CRM入門合約。 [!DNL The Trade Desk] 然後會授予許可權並共用您的廣告商ID以設定您的目的地。
+在您可以啟用對象之前， [!DNL The Trade Desk]，您必須聯絡 [!DNL The Trade Desk] 帳戶管理員以簽署CRM入門合約。 [!DNL The Trade Desk] 然後會授予許可權並共用您的廣告商ID以設定您的目的地。
 
 ## ID比對需求 {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，其中包含交易台目的地使用的識別碼（電子郵件或雜湊電子郵件）。 |
-| 匯出頻率 | **[!UICONTROL 每日批次]** | 由於設定檔會根據區段評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，以流向目的地平台。 深入瞭解 [批次匯出](/help/destinations/destination-types.md#file-based). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正使用交易台目的地中使用的識別碼（電子郵件或雜湊電子郵件）匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 每日批次]** | 由於設定檔會根據對象評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，以流向目的地平台。 深入瞭解 [批次匯出](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -97,25 +97,25 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 
 連線到目的地時，設定資料治理原則是完全選用的。 請檢閱Experience Platform [資料控管概觀](/help/data-governance/policies/overview.md) 以取得更多詳細資料。
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
-讀取 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用目的地受眾區段的指示。
+讀取 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用目的地對象的指示。
 
-在 **[!UICONTROL 排程]** 頁面上，您可以為要匯出的每個區段設定排程和檔案名稱。 必須設定排程，但可選擇是否設定檔案名稱。
+在 **[!UICONTROL 排程]** 頁面上，您可以為要匯出的每個對象設定排程和檔案名稱。 必須設定排程，但可選擇是否設定檔案名稱。
 
-![用於排程區段啟用的平台UI熒幕擷圖。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
+![用於排程對象啟用的平台UI熒幕擷圖。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)
 
 >[!NOTE]
 >
->所有已啟用的區段 [!DNL The Trade Desk] CRM目的地會自動設定為每日頻率和完整檔案匯出。
+>所有對象啟用至 [!DNL The Trade Desk] CRM目的地會自動設定為每日頻率和完整檔案匯出。
 
-![用於排程區段啟用的平台UI熒幕擷圖。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
+![用於排程對象啟用的平台UI熒幕擷圖。](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)
 
 在 **[!UICONTROL 對應]** 頁面，您必須從來源資料欄選取屬性或身分識別名稱空間，並對應至目標資料欄。
 
-![對應區段啟用的平台UI熒幕擷圖。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
+![用於對應對象啟用的平台UI熒幕擷圖。](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)
 
-以下是啟用區段至時的正確身分對應範例 [!DNL The Trade Desk] CRM目的地。
+以下範例說明將受眾啟用至時正確的身分對應 [!DNL The Trade Desk] CRM目的地。
 
 >[!IMPORTANT]
 >
@@ -133,11 +133,11 @@ Adobe Experience Platform支援純文字和SHA256雜湊電子郵件地址。 請
 
 ## 驗證資料匯出 {#validate}
 
-驗證資料是否已正確從Experience Platform匯出並匯入 [!DNL The Trade Desk]，請在Adobe1PD資料拼貼下方找到區段， [!DNL The Trade Desk] 資料管理平台(DMP)。 以下是在中找到對應ID的步驟 [!DNL Trade Desk] UI：
+驗證資料是否已正確從Experience Platform匯出並匯入 [!DNL The Trade Desk]，請在「Adobe1PD」資料磚下找到對象，位置在： [!DNL The Trade Desk] 資料管理平台(DMP)。 以下是在中找到對應ID的步驟 [!DNL Trade Desk] UI：
 
 1. 首先，按一下 **[!UICONTROL 資料]** 索引標籤和檢閱 **[!UICONTROL 第一方]**.
 2. 向下捲動頁面，在底下 **[!UICONTROL 匯入的資料]**，您會找到 **[!UICONTROL Adobe1PD圖磚]**.
-3. 按一下**[!UICONTROL Adobe1PD]圖磚**會列出所有啟用至「 」的區段 [!DNL Trade Desk] 您的廣告商目的地。 您也可以使用搜尋功能。
+3. 按一下**[!UICONTROL Adobe1PD]**圖磚，會列出所有啟用至「 」的對象 [!DNL Trade Desk] 您的廣告商目的地。 您也可以使用搜尋功能。
 4. 來自Experience Platform的區段ID #將顯示為 [!DNL Trade Desk] UI。
 
 ## 資料使用與控管 {#data-usage-governance}

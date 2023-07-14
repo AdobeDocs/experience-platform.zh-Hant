@@ -3,18 +3,18 @@ keywords: Advertising Cloud；advertising cloud擴充功能；advertising cloud�
 title: Adobe Advertising Cloud擴充功能
 description: Adobe Advertising Cloud擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe交換上的擴充功能頁面。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '442'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 # Adobe Advertising Cloud擴充功能 {#adobe-advertising-cloud-extension}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-這是 [!DNL Advertising Cloud] 實作的擴充功能 [!DNL Advertising Cloud] DSP和搜尋（目前不支援DCO）的轉換和區段標籤。
+這是 [!DNL Advertising Cloud] 實作的擴充功能 [!DNL Advertising Cloud] DSP和搜尋（目前不支援DCO）的轉換和受眾標籤。
 
 Adobe Advertising Cloud是Adobe Experience Platform中的廣告擴充功能。
 

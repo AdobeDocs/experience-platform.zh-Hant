@@ -3,7 +3,7 @@ keywords: 目的地；experience cloud解決方案；target；target目的地；
 title: Adobe目的地概觀
 description: 將您在Platform中的資料連線到其他Adobe Experience Cloud解決方案，以用於廣告目標定位、個人化、行銷自動化等，藉此管理您的客戶體驗
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: e3039944fff96bbb060fd800d7bbb032084c5010
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 12%
@@ -12,7 +12,7 @@ ht-degree: 12%
 
 # Adobe目的地概觀 {#adobe-destinations}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 將您在Adobe Experience Platform中的資料連結至其他Adobe Experience Cloud解決方案，以用於廣告目標定位、個人化、行銷自動化等，藉此管理您的客戶體驗。
 
@@ -45,8 +45,8 @@ ht-degree: 12%
 * [Marketo Munchkin 擴充功能](../email/marketo-munchkin.md)
 * [Marketo Web Personalization擴充功能](../personalization/marketo-web-personalization.md)
 
-## Experience Platform區段共用
+## Experience Platform對象共用
 
-使用Experience Platform區段共用功能，將Experience Platform區段共用至其他Adobe目的地。 如需詳細資訊，請參閱以下頁面(在Audience Manager檔案入口網站中開啟)：
+使用Experience Platform受眾共用功能，將Experience Platform受眾共用至其他Adobe目的地。 如需詳細資訊，請參閱以下頁面(在Audience Manager檔案入口網站中開啟)：
 
-* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target共用Experience Platform區段](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [透過核心服務整合，Experience Platform與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target共用對象](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

@@ -1,19 +1,19 @@
 ---
 title: Adobe Advertising Cloud DSP連線
-description: Adobe Advertising Cloud DSP是Adobe Real-time Customer Data Platform的整合式目的地，可讓您與核准的廣告商和使用者共用已驗證的第一方區段，以啟用行銷活動。
+description: Adobe Advertising Cloud DSP是Adobe Real-time Customer Data Platform的整合式目的地，可讓您與核准的廣告商和使用者共用已驗證的第一方受眾，以啟用行銷活動。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: e67b3a6f9f57a3971a5bfa755db3b1043bebc96b
+source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 1%
+source-wordcount: '1047'
+ht-degree: 0%
 
 ---
 
 # Adobe Advertising Cloud DSP連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)目的地可讓您與核准的廣告商和使用者共用已驗證的第一方區段，以便透過DSP啟用行銷活動。 若要進一步瞭解Real-Time CDP與DSP的整合，請參閱 [關於從受眾來源啟用已驗證的區段](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)目的地可讓您與核准的廣告商和使用者共用已驗證的第一方對象，以便透過DSP啟用行銷活動。 若要進一步瞭解Real-Time CDP與DSP的整合，請參閱 [關於從受眾來源啟用已驗證受眾](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -25,17 +25,17 @@ Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)目的地可讓您與�
 
 ### 品牌廣告使用案例
 
-一家線上零售商想要透過展示行銷活動重新鎖定其高價值客戶，而不使用Cookie進行目標定位。 零售商會共用一個區段，該區段包含其高價值客戶從其Adobe Real-time Customer Data Platform (Real-Time CDP)帳戶至其DSP帳戶的雜湊電子郵件ID。 然後DSP會將雜湊電子郵件ID轉換為已驗證 [!DNL RampIDs] 透過DSP與LiveRamp之間的合作關係。 產生的結果 [!DNL RampIDs] 可用於顯示行銷活動，以鎖定對象。
+一家線上零售商想要透過展示行銷活動重新鎖定其高價值客戶，而不使用Cookie進行目標定位。 此零售商會與其DSP帳戶共用一個受眾，其中包含其Adobe Real-time Customer Data Platform (Real-Time CDP)帳戶中高價值客戶的雜湊電子郵件ID。 然後DSP會將雜湊電子郵件ID轉換為已驗證 [!DNL RampIDs] 透過DSP與LiveRamp之間的合作關係。 產生的結果 [!DNL RampIDs] 可用於顯示行銷活動，以鎖定對象。
 
 ### 機構使用案例
 
-擁有DSP帳戶的媒體代理商正代表其客戶（旅館業中的頂級品牌）執行重新目標定位行銷活動。 該品牌想要以新的促銷優惠重新鎖定去年所有訪客。 品牌代管所有來賓資訊 [!DNL Real-Time CDP]. 品牌可共用區段，該區段包含其來賓來自的雜湊電子郵件ID [!DNL Real-Time CDP] 帳號至媒體代理程式的DSP帳戶，以透過媒體促銷活動重新鎖定來賓。
+擁有DSP帳戶的媒體代理商正代表其客戶（旅館業中的頂級品牌）執行重新目標定位行銷活動。 該品牌想要以新的促銷優惠重新鎖定去年所有訪客。 品牌代管所有來賓資訊 [!DNL Real-Time CDP]. 品牌可共用一個受眾，其中包含來自其之來賓的雜湊電子郵件ID [!DNL Real-Time CDP] 帳號至媒體代理程式的DSP帳戶，以透過媒體促銷活動重新鎖定來賓。
 
 ## 先決條件 {#prerequisites}
 
-* 啟用區段共用的DSP帳戶層級和促銷活動層級設定 [!DNL LiveRamp RampID]，可將客戶資料轉譯為 [!DNL RampIDs] 以建立可定位的區段。 您的DSP帳戶團隊將執行此設定。 [!DNL RampID] 可透過DSP與之間的合作夥伴關係取得 [!DNL LiveRamp]，而且您不需要自己的 [!DNL LiveRamp] 使用它的成員資格。
+* DSP帳戶層級和促銷活動層級設定，以啟用對象共用： [!DNL LiveRamp RampID]，可將客戶資料轉譯為 [!DNL RampIDs] 以建立可定位的區段。 您的DSP帳戶團隊將執行此設定。 [!DNL RampID] 可透過DSP與之間的合作夥伴關係取得 [!DNL LiveRamp]，而且您不需要自己的 [!DNL LiveRamp] 使用它的成員資格。
 * Experience Platform帳戶的Experience Cloud組織ID。 您可以在以下網址找到您的ID： [!DNL Real-Time CDP] 使用者設定檔頁面。
-* A [[!DNL Real-Time CDP] DSP中的來源](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) 以接收促銷活動啟用的區段。 您的DSP帳戶團隊將使用您的Experience Cloud組織ID建立來源。
+* A [[!DNL Real-Time CDP] DSP中的來源](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) 以接收促銷活動啟用的對象。 您的DSP帳戶團隊將使用您的Experience Cloud組織ID建立來源。
 * DSP帳戶或廣告商的來源金鑰，產生條件為 [[!DNL Real-Time CDP] 來源是在DSP中建立](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). 您的DSP帳戶團隊將會與您共用此金鑰。 在Experience Platform中，您將使用此外掛程式來建立與Advertising Cloud DSP目的地的目的地連線，如下所示 [說明如下](#authenticate).
 * 由電子郵件或雜湊電子郵件組成的客戶資料。
 
@@ -55,8 +55,8 @@ Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一�
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些區段具有Advertising Cloud DSP目的地使用的識別碼（電子郵件或雜湊電子郵件）。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據區段評估在Experience Platform中更新設定檔時，聯結器會將更新向下傳送至目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正使用Advertising Cloud DSP目的地中使用的識別碼（電子郵件或雜湊電子郵件）匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新向下傳送至目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -91,23 +91,23 @@ Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一�
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 驗證資料匯出 {#exported-data}
 
-若要確認資料區段已與Advertising Cloud共用，請檢查下列專案：
+若要確認資料對象已與Advertising Cloud共用，請檢查下列專案：
 
 * 資料在您的 [!DNL Real-Time CDP] 目的地成功。
 
-* 在DSP中，當您從建立或編輯對象時，可使用區段 [!UICONTROL 受眾] > [!UICONTROL 所有對象] 或從 [!UICONTROL 對象目標定位] 位置設定的區段。 區段應會顯示在 [!UICONTROL Adobe區段] 標籤下的 [!UICONTROL Real-Time CDP] 資料夾。
+* 在DSP中，當您從建立或編輯對象時，可以使用對象 [!UICONTROL 受眾] > [!UICONTROL 所有對象] 或從 [!UICONTROL 對象目標定位] 位置設定的區段。 對象應會顯示在 [!UICONTROL Adobe區段] 標籤下的 [!UICONTROL Real-Time CDP] 資料夾。
 
-![DSP對象設定中的Real-Time CDP區段](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![DSP對象設定中的Real-Time CDP對象](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 

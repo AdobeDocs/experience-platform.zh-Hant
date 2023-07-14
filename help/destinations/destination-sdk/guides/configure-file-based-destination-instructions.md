@@ -2,7 +2,7 @@
 description: 此頁面列出並描述使用Destination SDK設定檔案型目的地的步驟。
 title: 使用Destination SDK設定檔案型目的地
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 使用Destination SDK設定檔案型目的地
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此頁面說明如何使用下列專案的資訊： [目的地SDK中的設定選項](../functionality/configuration-options.md) 以及在其他Destination SDK功能和API參考檔案中設定 [檔案型目的地](../../destination-types.md#file-based). 這些步驟會依序排列如下。
 
@@ -384,10 +384,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 使用先前步驟中的設定端點設定目的地後，您可以使用 [目的地測試工具](../testing-api/batch-destinations/file-based-destination-testing-overview.md) 測試Adobe Experience Platform與目的地之間的整合。
 
-在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，並啟用至目的地。 請參考以下兩個資源，瞭解如何在Experience Platform中建立區段的指示：
+在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，並啟用至目的地。 請參考以下兩個資源，瞭解如何在Experience Platform中建立對象的指示：
 
-* [建立區段檔案頁面](/help/segmentation/ui/overview.md#create-segment)
-* [建立區段影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [建立對象檔案頁面](/help/segmentation/ui/overview.md#create-segment)
+* [建立對象影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## 步驟6：發佈您的目的地 {#publish-destination}
 

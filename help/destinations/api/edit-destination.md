@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 使用Flow Service API編輯目的地連線
 type: Tutorial
 description: 瞭解如何使用流量服務API編輯目的地連線的各種元件。
-source-git-commit: 2afe330176c2b7734c38cf47be79960175060824
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
 
-* [目的地](../home.md)： [!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+* [目的地](../home.md)： [!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 * [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 以下小節提供您需要瞭解的其他資訊，以使用 [!DNL Flow Service] API。
@@ -245,7 +245,7 @@ curl -X PATCH \
 
 **要求**
 
-以下請求會更新 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 或 [[!DNL Google Ad Manager 360] 目的地](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 連線以新增新的 [**[!UICONTROL 將區段ID附加至區段名稱]**](/help/release-notes/2023/april-2023.md#destinations) 欄位。
+以下請求會更新 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) 或 [[!DNL Google Ad Manager 360] 目的地](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 連線以新增新的 [**[!UICONTROL 將對象ID附加至對象名稱]**](/help/release-notes/2023/april-2023.md#destinations) 欄位。
 
 ```shell
 curl -X PATCH \

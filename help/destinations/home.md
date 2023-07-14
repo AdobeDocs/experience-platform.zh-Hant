@@ -3,10 +3,10 @@ keywords: 目的地；adobe experience platform；平台；目的地概觀；啟
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 546758c419670746cf55de35cbb33131d4457cb9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ![目的地概觀橫幅](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+**[!DNL Destinations]** 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -30,7 +30,7 @@ Platform的核心功能之一，就是擷取您的第一方資料，並根據您
 ## 目的地步驟 {#steps}
 
 * 從 [自助服務目錄](./catalog/overview.md) Platform中可用的所有目的地。
-* 使用目的地將設定檔或區段傳送至行銷自動化平台、數位廣告平台等。
+* 使用目的地將設定檔或受眾傳送至行銷自動化平台、數位廣告平台等。
 * 排程資料定期匯出至您偏好的目的地。
 
 ## 控制項 {#controls}
@@ -40,8 +40,8 @@ Platform的核心功能之一，就是擷取您的第一方資料，並根據您
 * 瀏覽可啟用資料的目的地平台目錄；
 * 建立、編輯、啟用和停用資料流到目錄中的目的地；
 * 在儲存位置中建立帳戶，或將Platform連結至目的地平台中的帳戶；
-* 選取應該對目的地啟用的區段；
-* 選擇哪一個 [體驗資料模型(XDM)欄位](../xdm/home.md) 以於啟用區段至電子郵件行銷目的地時匯出。
+* 選取應將哪些對象啟動至目的地；
+* 選擇哪一個 [體驗資料模型(XDM)欄位](../xdm/home.md) ，以在啟用對象至電子郵件行銷目的地時匯出。
 
 ## 目的地型別和類別 {#types-and-categories}
 
@@ -56,8 +56,8 @@ Platform中的目標功能可搭配Adobe Experience Platform存取控制許可�
 | 許可權層級 | 說明 |
 | ---- | ----|
 | **[!UICONTROL 管理目的地]** | 若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** | 若要啟用目的地的區段並啟用 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 的工作流程中，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). |
-| **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 啟用區段而不進行對應]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** | 若要對目的地啟用區段並隱藏 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 的工作流程中，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 啟用區段而不進行對應]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** | 若要啟用目的地的對象並啟用 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 的工作流程中，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 啟用區段而不進行對應]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** | 若要啟用目的地的對象並隱藏 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 的工作流程中，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 啟用區段而不進行對應]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). |
 
 {style="table-layout:auto"}
 
@@ -88,15 +88,15 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 如需在建立目標工作流程中選取行銷動作的詳細資訊，請參閱Platform中不同目標型別的下列頁面：
 
-* [廣告目的地 — Google廣告管理員 ](./catalog/advertising/google-ad-manager.md)
+* [廣告目的地 — Google廣告管理員](./catalog/advertising/google-ad-manager.md)
 * [Advertising目的地 — Google Ads](./catalog/advertising/google-ads-destination.md)
-* [廣告目的地 — Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
+* [廣告目的地 — Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
 * [雲端儲存空間目的地](./catalog/cloud-storage/overview.md)
 * [電子郵件行銷目的地](./catalog/email-marketing/overview.md)
 * [社交目的地](./catalog/social/overview.md)
 
-如需區段啟用工作流程中資料原則違規的詳細資訊，請參閱 **[!UICONTROL 檢閱]** 請逐步執行下列指南：
+如需對象啟動工作流程中資料原則違規的詳細資訊，請參閱 **[!UICONTROL 檢閱]** 請逐步執行下列指南：
 
-* [啟用串流區段匯出目的地的受眾資料](./ui/activate-segment-streaming-destinations.md#review)
+* [將受眾資料啟用至串流受眾匯出目的地](./ui/activate-segment-streaming-destinations.md#review)
 * [將受眾資料啟用至串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md#review)
 * [啟用對象資料以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md#review)

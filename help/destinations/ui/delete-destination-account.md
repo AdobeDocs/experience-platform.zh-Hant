@@ -4,7 +4,7 @@ title: 刪除目的地帳戶
 type: Tutorial
 description: 本教學課程列出在Adobe Experience Platform UI中刪除目的地帳戶的步驟
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: 2ea56957e122140fbc68c727e36666f8f9a71dd8
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 刪除目的地帳戶
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 **[!UICONTROL 帳戶]** 索引標籤會顯示您已建立與不同目的地的連線的詳細資訊。 請參閱 [帳戶總覽](../ui/destinations-workspace.md#accounts) 取得每個目的地帳戶的所有資訊。
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
    ![篩選目的地](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. 選取省略符號(`...`)的名稱旁。 快顯面板隨即出現，其中提供選項至 **[!UICONTROL 啟用區段]**， **[!UICONTROL 編輯詳細資料]**、和 **[!UICONTROL 刪除]** 帳戶。 選取 ![刪除按鈕](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 刪除]** 按鈕來刪除所需的帳戶。
+3. 選取省略符號(`...`)的名稱旁。 快顯面板隨即出現，其中提供選項至 **[!UICONTROL 啟用對象]**， **[!UICONTROL 編輯詳細資料]**、和 **[!UICONTROL 刪除]** 帳戶。 選取 ![刪除按鈕](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 刪除]** 按鈕來刪除所需的帳戶。
 
    ![刪除目的地帳戶](../assets/ui/delete-accounts/delete-accounts.png)
 

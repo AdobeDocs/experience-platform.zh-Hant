@@ -1,21 +1,21 @@
 ---
 title: Pega客戶決策中心連線
-description: 使用Adobe Experience Platform中的Pega客戶決策中心目的地，將設定檔屬性和區段會籍資料傳送至Pega客戶決策中心，以做出次佳決策。
+description: 使用Adobe Experience Platform中的Pega客戶決策中心目的地，將設定檔屬性和受眾成員資格資料傳送至Pega客戶決策中心，以做出次佳決策。
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ae00b113308354e98f4448d2544e2a6e475c384e
+source-git-commit: 9ccfbeb6ef36b10b8ecbfc25797c26980e7d1dcd
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
 
 # Pega客戶決策中心連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-使用 [!DNL Pega Customer Decision Hub] Adobe Experience Platform中要將設定檔屬性和區段會籍資料傳送到的目的地 [!DNL Pega Customer Decision Hub] 進行次佳動作決策。
+使用 [!DNL Pega Customer Decision Hub] Adobe Experience Platform中要將設定檔屬性和對象成員資格資料傳送到的目的地 [!DNL Pega Customer Decision Hub] 進行次佳動作決策。
 
-從Adobe Experience Platform載入時的設定檔區段會籍 [!DNL Pega Customer Decision Hub]，可作為最適化模型中的預測因子，且有助於提供正確的情境和行為資料，以達到次佳行動決策的目的。
+從Adobe Experience Platform設定檔對象會籍，載入到時 [!DNL Pega Customer Decision Hub]，可作為最適化模型中的預測因子，且有助於提供正確的情境和行為資料，以達到次佳行動決策的目的。
 
 >[!IMPORTANT]
 >
@@ -31,15 +31,15 @@ ht-degree: 0%
 
 ### 金融服務
 
-行銷人員想要為已訂閱或取消訂閱退休金計畫或退休計畫電子報的客戶最佳化優惠方案。 金融服務公司可從其CRM將多個客戶ID擷取至Adobe Experience Platform，從自己的離線資料建立區段，並將進入和退出區段的設定檔傳送至 [!DNL Pega Customer Decision Hub] 適用於傳出頻道中的次佳動作(NBA)決策。
+行銷人員想要為已訂閱或取消訂閱退休金計畫或退休計畫電子報的客戶最佳化優惠方案。 金融服務公司可從其CRM將多個客戶ID擷取至Adobe Experience Platform，從自己的離線資料建立受眾，並將進入和退出受眾的設定檔傳送至 [!DNL Pega Customer Decision Hub] 適用於傳出頻道中的次佳動作(NBA)決策。
 
 ## 先決條件 {#prerequisites}
 
 使用此目的地將資料匯出Adobe Experience Platform之前，請務必完成下列必要條件： [!DNL Pega Customer Decision Hub]：
 
-* 設定 [Adobe Experience Platform設定檔和區段會籍整合元件](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) 在您的 [!DNL Pega Customer Decision Hub] 執行個體。
+* 設定 [Adobe Experience Platform設定檔與受眾成員資格整合元件](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) 在您的 [!DNL Pega Customer Decision Hub] 執行個體。
 * 設定OAuth 2.0 [使用使用者端憑證進行使用者端註冊](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) 授與型別 [!DNL Pega Customer Decision Hub] 執行個體。
-* 設定 [即時執行資料流程](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) 適用於您的Adobe區段會籍資料流程 [!DNL Pega Customer Decision Hub] 執行個體。
+* 設定 [即時執行資料流程](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) 用於Adobe您的中的對象會籍資料流程 [!DNL Pega Customer Decision Hub] 執行個體。
 
 ## 支援的身分 {#supported-identities}
 
@@ -57,8 +57,8 @@ ht-degree: 0%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 匯出具有識別碼(*客戶ID*)、屬性（姓氏、名字、位置等） 和區段會籍資料。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地永遠是以API為基礎的連線。 一旦設定檔在Experience Platform中更新，聯結器就會根據區段評估，將更新傳送至下游的目標平台。 如需詳細資訊，請參閱 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 匯出具有識別碼(*客戶ID*)、屬性（姓氏、名字、位置等） 和對象成員資格資料。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地永遠是以API為基礎的連線。 在Experience Platform中更新設定檔後，根據對象評估，聯結器會立即將更新傳送至下游的目標平台。 如需詳細資訊，請參閱 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -90,13 +90,13 @@ ht-degree: 0%
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL 主機名稱]**：設定檔匯出為JSON資料的Pega客戶決策中心主機名稱。
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [將受眾資料啟用至串流設定檔匯出目的地](../../ui/activate-streaming-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [將受眾資料啟用至串流設定檔匯出目的地](../../ui/activate-streaming-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 目的地屬性 {#attributes}
 
@@ -120,14 +120,14 @@ ht-degree: 0%
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-成功更新設定檔的區段會籍會將區段識別碼、名稱和狀態插入Pega行銷區段會籍資料存放區。 成員資格資料與使用客戶設定檔設計工具的客戶相關聯 [!DNL Pega Customer Decision Hub]，如下所示。
-![UI畫面影像，您可在其中使用Customer Profile Designer將Adobe區段會籍資料與客戶建立關聯](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+成功更新設定檔的對象成員資格後，對象識別碼、名稱和狀態就會插入Pega行銷對象成員資格資料存放區。 成員資格資料與使用客戶設定檔設計工具的客戶相關聯 [!DNL Pega Customer Decision Hub]，如下所示。
+![UI畫面影像，您可在其中使用Customer Profile Designer將Adobe對象成員資格資料與客戶建立關聯](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-區段會籍資料會用於Pega次佳動作設計人員參與政策，以供次佳動作決策使用，如下所示。
-![UI畫面影像，您可以在其中新增區段會籍欄位，作為Pega下一個最佳動作設計工具的參與原則條件](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+受眾會籍資料會用於Pega次佳動作設計工具參與政策，以做出次佳動作決策，如下所示。
+![UI畫面影像，您可以在其中新增對象成員資格欄位，作為Pega下一個最佳動作設計工具的參與原則條件](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
 
-客戶區段會籍資料欄位會新增為最適化模型中的預測值，如下所示。
-![您可以使用Prediction Studio將區段會籍欄位新增為最適化模型中的預測值的UI畫面影像](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+客戶受眾會籍資料欄位會新增為最適化模型中的預測值，如下所示。
+![UI畫面影像，您可在其中使用Prediction Studio將對象會籍欄位新增為最適化模型中的述詞](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## 其他資源 {#additional-resources}
 

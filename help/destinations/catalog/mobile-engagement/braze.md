@@ -3,16 +3,16 @@ keywords: 行動；炫耀；傳訊；
 title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛的品牌之間提供相關且令人難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1041'
 ht-degree: 1%
 
 ---
 
 # [!DNL Braze] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此 [!DNL Braze] 目的地可協助您將設定檔資料傳送至 [!DNL Braze].
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 請注意以下專屬於 [!DNL Braze] 目的地：
 
-* [!DNL Adobe Experience Platform] 區段會匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。
+* [!DNL Adobe Experience Platform] 對象已匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ ht-degree: 1%
 
 ## 使用案例 {#use-cases}
 
-身為行銷人員，我想要在行動參與目的地中鎖定使用者，並內建區段 [!DNL Adobe Experience Platform]. 此外，我想要根據客戶自己的屬性，為他們提供個人化體驗 [!DNL Adobe Experience Platform] 設定檔，一旦區段和設定檔在 [!DNL Adobe Experience Platform].
+身為行銷人員，我想要在行動參與目的地中鎖定使用者，並內建受眾 [!DNL Adobe Experience Platform]. 此外，我想要根據客戶自己的屬性，為他們提供個人化體驗 [!DNL Adobe Experience Platform] 設定檔，當對象和設定檔在 [!DNL Adobe Experience Platform].
 
 ## 支援的身分 {#supported-identities}
 
@@ -44,14 +44,26 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
+## 外部對象支援 {#external-audiences-support}
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的外部對象。
+
+| 外部對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分（根據您的欄位對應）。[!DNL Adobe Experience Platform] 區段會匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分（根據您的欄位對應）。[!DNL Adobe Experience Platform] 對象已匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -83,13 +95,13 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 對應考量事項 {#mapping-considerations}
 
@@ -142,8 +154,8 @@ ht-degree: 1%
 
 |  | XDM設定檔結構描述 | [!DNL Braze] 例項 |
 |---|---|---|
-| 屬性 | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>名字</code></li><li>姓氏</code></li><li>電話號碼</code></li></ul> |
-| 身分 | <ul><li>電子郵件</code></li><li>Google Ad ID (GAID)</code></li><li>廣告商適用的Apple ID (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| 屬性 | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>名字</code></li><li><code>姓氏</code></li><li><code>電話號碼</code></li></ul> |
+| 身分 | <ul><li><code>電子郵件</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>廣告商適用的Apple ID (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 正確的對應如下所示：
 
@@ -151,7 +163,7 @@ ht-degree: 1%
 
 ## 匯出的資料 {#exported-data}
 
-驗證資料是否已成功匯出至 [!DNL Braze] 目的地，檢查您的 [!DNL Braze] 帳戶。 [!DNL Adobe Experience Platform] 區段會匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。
+驗證資料是否已成功匯出至 [!DNL Braze] 目的地，檢查您的 [!DNL Braze] 帳戶。 [!DNL Adobe Experience Platform] 對象已匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。
 
 ## 資料使用與控管 {#data-usage-governance}
 

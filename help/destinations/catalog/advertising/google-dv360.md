@@ -3,16 +3,16 @@ keywords: DoubleClick Bid Manager；DoubleClick Bid Manager；DoubleClick；顯�
 title: Google顯示和視訊360連線
 description: Display & Video 360 （先前稱為DoubleClick Bid Manager）工具用於在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 326127996a27df41383ef67da765f7b0818f17f2
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 2%
+source-wordcount: '1042'
+ht-degree: 4%
 
 ---
 
 # [!DNL Google Display & Video 360] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL Display & Video 360]，先前稱為 [!DNL DoubleClick Bid Manager]，是跨顯示器、影片和行動詳細目錄來源執行重新定位和以對象為目標的數位行銷活動的工具。
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 請注意以下專屬於的詳細資訊 [!DNL Google Display & Video 360] 目的地：
 
 * 啟用的對象是在Google平台中以程式設計方式建立的。
-* 啟用對象回填至 [!DNL Google Display & Video 360] 目的地會排定在區段首次對應至目的地連線的24-48小時後發生。 此更新是為了回應Google等待24小時直到擷取資料的原則，並旨在提高Real-time CDP和之間的匹配率 [!DNL Google Display & Video 360]. 請注意，這是隻適用於此目的地的後端設定，與UI中任何可由客戶設定的排程選項無關。
+* 啟用對象回填至 [!DNL Google Display & Video 360] 目的地會排程在對象首次對應至目的地連線的24-48小時後發生。 此更新是為了回應Google等待24小時直到擷取資料的原則，並旨在提高Real-time CDP和之間的匹配率 [!DNL Google Display & Video 360]. 請注意，這是僅適用於此目的地的後端設定，並且和 UI 中任何客戶可設定的排程選項不相關。
 
 >[!IMPORTANT]
 >
@@ -41,14 +41,28 @@ ht-degree: 2%
 | MAID | Microsoft Advertising ID。 此ID可唯一識別執行Windows 10的裝置。 |  |
 | Amazon Fire TV ID | 此ID可唯一識別Amazon Fire電視。 |  |
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在將區段（受眾）的所有成員匯出至Google目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至Google目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## 先決條件 {#prerequisites}
 
@@ -94,13 +108,13 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 匯出的資料
 

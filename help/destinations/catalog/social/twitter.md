@@ -2,16 +2,16 @@
 title: twitter自訂對象連線
 description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用Adobe Experience Platform中建立的對象來建立相關的再行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '860'
 ht-degree: 4%
 
 ---
 
 # [!DNL Twitter Custom Audiences] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用Adobe Experience Platform中建立的對象來建立相關的再行銷活動。
 
@@ -33,14 +33,28 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正使用Twitter自訂對象目的地中使用的識別碼匯出區段（對象）的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正使用Twitter自訂對象目的地中使用的識別碼匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -86,13 +100,13 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 資料使用與控管 {#data-usage-governance}
 
@@ -100,9 +114,9 @@ ht-degree: 4%
 
 ## 其他資源 {#additional-resources}
 
-將受眾區段對應至Twitter時，請確定符合下列區段命名需求：
+將對象對應至Twitter時，請確定符合以下對象命名需求：
 
-1. 提供人類看得懂的區段對應名稱。 建議您使用與Experience Platform區段相同的名稱。
-2. 請勿使用特殊字元(+ &amp; ， % ： ； @ / = ？ $)在區段和區段對應名稱中。 如果您的Experience Platform區段名稱包含這些字元，請在將區段對應至Twitter目的地之前移除這些字元。
+1. 提供人類可讀的對象對應名稱。 建議您使用與Experience Platform區段相同的名稱。
+2. 請勿使用特殊字元(+ &amp; ， % ： ； @ / = ？ $)在對象和對象對應名稱中。 如果您的Experience Platform對象名稱包含這些字元，請先移除這些字元，然後再將對象對應至Twitter目的地。
 
 更多關於的資訊 [!DNL List Custom Audiences] 在Twitter中，您可以在下文中找到： [twitter檔案](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

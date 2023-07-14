@@ -3,7 +3,7 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 69e1f065cb3b302c4b144f39c84179075379f648
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 2%
@@ -41,13 +41,13 @@ ht-degree: 2%
 
 ![目的地目錄，顯示一些廣告和雲端儲存空間目的地。](../assets/ui/workspace/catalog.png)
 
-目的地卡片包含主要和次要控制選項。 主要控制項包括 [!UICONTROL 設定]， [!UICONTROL 啟動]， [!UICONTROL 啟用區段]，或 [!UICONTROL 匯出資料集]. 次要控制項允許檢視選項。 這些控制項說明如下：
+目的地卡片包含主要和次要控制選項。 主要控制項包括 [!UICONTROL 設定]， [!UICONTROL 啟動]， [!UICONTROL 啟用對象]，或 [!UICONTROL 匯出資料集]. 次要控制項允許檢視選項。 這些控制項說明如下：
 
 | 控制 | 說明 |
 |---------|----------|
 | [!UICONTROL 設定] | 可讓您建立與目的地的連線。 |
-| [!UICONTROL 啟動] | 建立與目的地的連線後，您可以啟用區段或匯出資料集到此目的地。 |
-| [!UICONTROL 啟用區段] | 建立與目的地的連線後，即可啟用此目的地的區段。 |
+| [!UICONTROL 啟動] | 建立與目的地的連線後，您可以啟用對象或匯出資料集到此目的地。 |
+| [!UICONTROL 啟用對象] | 建立與目的地的連線後，您就可以啟用此目的地的對象。 |
 | [!UICONTROL 匯出資料集] | 建立與目的地的連線後，您可以將資料集匯出至此目的地。 |
 | [!UICONTROL 檢視帳戶] | 檢視您為目的地連線的帳戶。 |
 | [!UICONTROL 檢視資料流] | 檢視目的地存在的資料啟用流程。 |
@@ -69,10 +69,9 @@ ht-degree: 2%
 
 >[!TIP]
 >
-> * 選取省略符號(`...`)中 [!UICONTROL Platform] 欄並使用 ![啟用控制項](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 啟動&#x200B;]**/**[!UICONTROL &#x200B;啟用區段&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制將區段或資料集匯出至該目的地。
+> * 選取省略符號(`...`)中 [!UICONTROL Platform] 欄並使用 ![啟用控制項](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 啟動&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制將對象或資料集匯出至該目的地。
 > * 選取省略符號(`...`)中 [!UICONTROL Platform] 欄並使用 ![編輯詳細資訊控制項](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 編輯詳細資料&#x200B;]**控制對象 [更新](update-accounts.md) 現有目的地帳戶的詳細資料。
 > * 選取省略符號(`...`)中 [!UICONTROL Platform] 欄並使用 ![刪除控制項](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 刪除&#x200B;]**控制對象 [刪除](delete-destination-account.md) 現有的目的地帳戶。
-
 
 ![帳戶標籤](../assets/ui/workspace/destination-account-options.png)
 
@@ -88,27 +87,26 @@ ht-degree: 2%
 
 ## [!UICONTROL 瀏覽] {#browse}
 
-此 **[!UICONTROL 瀏覽]** 索引標籤會顯示您已建立連線的目的地。 具有的目的地 **[!UICONTROL 已啟用/已停用]** 切換功能已開啟，並分別將目的地設定為「作用中」或「非作用中」。 您也可以選取「 」，檢視資料流動的目的地 **[!UICONTROL 區段]** > **[!UICONTROL 瀏覽]** 並選取要檢查的區段。 請參閱下表，瞭解中為每個目的地提供的所有資訊 [!UICONTROL 瀏覽] 標籤：
+此 **[!UICONTROL 瀏覽]** 索引標籤會顯示您已建立連線的目的地。 具有的目的地 **[!UICONTROL 已啟用/已停用]** 切換功能已開啟，並分別將目的地設定為「作用中」或「非作用中」。 您也可以選取「 」，檢視資料流動的目的地 **[!UICONTROL 受眾]** > **[!UICONTROL 瀏覽]** 並選取要檢查的對象。 請參閱下表，瞭解中為每個目的地提供的所有資訊 [!UICONTROL 瀏覽] 標籤：
 
 >[!TIP]
 >
-> * 選取省略符號(`...`)中 [!UICONTROL 名稱] 欄並使用 ![啟用區段控制項](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 啟動&#x200B;]**控制將區段或資料集匯出至該目的地。
+> * 選取省略符號(`...`)中 [!UICONTROL 名稱] 欄並使用 ![啟用對象控制](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 啟動&#x200B;]**控制將對象或資料集匯出至該目的地。
 > * 選取省略符號(`...`)中 [!UICONTROL 名稱] 欄並使用 ![刪除控制項](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 刪除&#x200B;]**控制對象 [移除](delete-destinations.md) 與目的地的現有連線。
 > * 選取省略符號(`...`)中 [!UICONTROL 名稱] 欄並使用 ![在監控控制中檢視](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 在監視中檢視&#x200B;]**控制項以檢視此目的地的啟用資訊，在 [監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 > * 選取省略符號(`...`)中 [!UICONTROL 名稱] 欄並使用 ![訂閱警示 ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL 訂閱警示&#x200B;]**控制以訂閱目的地資料流警示。 您可以訂閱警示，以接收有關流程執行的狀態、成功或失敗的訊息。 另請參閱 [訂閱內容感知目的地警示](alerts.md) 以取得目的地資料流警示的詳細資訊。
-
 
 ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 
 | 元素 | 說明 |
 |---------|----------|
-| 名稱 | 您為此目的地的啟用流程提供的名稱。 同一欄包含兩個控制項： [!UICONTROL 啟動 ] 和 [!UICONTROL 刪除目的地]. |
+| 名稱 | 您為此目的地的啟用流程提供的名稱。 同一欄包含兩個控制項： [!UICONTROL 啟動] 和 [!UICONTROL 刪除目的地]. |
 | [!UICONTROL 上次資料流執行狀態] | 上次資料流執行的狀態。 另請參閱 [檢視目的地詳細資料](destination-details-page.md) 以取得資料流執行的詳細資訊。 |
 | [!UICONTROL 上次資料流執行日期] | 上次資料流執行的時間和日期。 另請參閱 [檢視目的地詳細資料](destination-details-page.md) 以取得資料流執行的詳細資訊。 |
 | [!UICONTROL 目標] | 您為啟用流程選取的目的地平台。 |
 | [!UICONTROL 連線類型] | 代表儲存貯體或目的地的連線型別。 <ul><li>針對電子郵件行銷目的地：可以是S3、FTP或 [!DNL Azure Blob].</li><li>對於即時廣告目的地：伺服器對伺服器。</li><li>對於串流目的地：可以是 [!DNL Azure Event Hubs] 或 [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL 使用者名稱] | 您為目的地流程選取的帳戶認證。 |
-| [!UICONTROL 啟用資料] | 表示正在啟用至此目的地的區段數。 選取此控制項可進一步瞭解已啟用的區段。 請參閱 [啟用資料](/help/destinations/ui/destination-details-page.md#activation-data) 「目的地詳細資料」頁面取得已啟動區段的詳細資訊。 |
+| [!UICONTROL 啟用資料] | 表示正在啟用至此目的地的對象數量。 選取此控制項可進一步瞭解已啟用的對象。 請參閱 [啟用資料](/help/destinations/ui/destination-details-page.md#activation-data) 「目的地詳細資料」頁面檢視啟用對象的詳細資訊。 |
 | [!UICONTROL 已建立] | 至目的地的啟動流程建立日期和UTC時間。 選取向上/向下箭頭符號，依最新先或最舊先排序啟動流程。 |
 | [!UICONTROL 狀態] | `Enabled` 或 `Disabled`. 指出資料是否正在啟用至此目的地。 |
 
@@ -116,7 +114,7 @@ ht-degree: 2%
 
 ![按一下目的地列](../assets/ui/workspace/click-destination-row.png)
 
-選取目的地名稱，以檢視啟用至此目的地的區段相關資訊。 按一下 **[!UICONTROL 編輯啟動]** 修改或新增至傳送至此目的地的區段。
+選取目的地名稱，以檢視啟用至此目的地的對象相關資訊。 按一下 **[!UICONTROL 編輯啟動]** 修改或新增至傳送至此目的地的對象。
 
 ## [!UICONTROL 系統檢視] {#system-view}
 

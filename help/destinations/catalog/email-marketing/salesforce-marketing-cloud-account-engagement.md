@@ -3,16 +3,16 @@ title: SalesforceMarketing Cloud帳戶參與度
 description: 瞭解如何使用SalesforceMarketing Cloud帳戶參與（前身為Pardot）目的地匯出您的帳戶資料，並在SalesforceMarketing Cloud帳戶參與中加以啟用，以滿足您的業務需求。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 86feee5981aaa81d4c1f97ff8aaf303b2aacd977
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1588'
 ht-degree: 1%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud Account Engagement] 連線
 
-使用 [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(先前稱為 [!DNL Pardot])* 擷取、追蹤、評分和評估潛在客戶的目的地。 您也可以透過電子郵件滴漏行銷活動，以及透過培養、評分和行銷活動細分的銷售機會管理，為目標市場細分和客戶群組設計管道所有階段的銷售機會追蹤。
+使用 [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(先前稱為 [!DNL Pardot])* 擷取、追蹤、評分和評估潛在客戶的目的地。 您還可以透過電子郵件滴漏促銷活動，以及透過培養、評分和促銷活動細分的銷售機會管理，為目標市場對象和客戶群組設計管道所有階段的銷售機會追蹤。
 
 比較對象 [!DNL Salesforce Marketing Cloud Engagement] 更傾向於 **B2C** 行銷， [!DNL Marketing Cloud Account Engagement] 非常適合 **B2B** 涉及多個部門與決策者的使用案例，這些使用案例需要較長的銷售和決策週期。 此外，您也可以與CRM維持更密切的鄰近關係及整合，以做出適當的銷售和行銷決策。 *請注意，Experience Platform也有以下專案的連線： [!DNL Salesforce Marketing Cloud Engagement]，您可在 [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) 和 [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) 頁面。*
 
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ### 傳送電子郵件給行銷活動的聯絡人 {#use-case-send-emails}
 
-線上平台的行銷部門想要將電子郵件行銷活動廣播給B2B潛在客戶的精選對象。 平台的行銷團隊可以透過Adobe Experience Platform新增潛在客戶或更新現有潛在客戶資訊、從自己的離線資料建立區段，並將這些區段傳送至 [!DNL Marketing Cloud Account Engagement]，然後可用於傳送行銷活動電子郵件。
+線上平台的行銷部門想要將電子郵件行銷活動廣播給B2B潛在客戶的精選對象。 平台的行銷團隊可以透過Adobe Experience Platform新增潛在客戶或更新現有潛在客戶資訊、從自己的離線資料建立受眾，並將這些受眾傳送至 [!DNL Marketing Cloud Account Engagement]，然後可用於傳送行銷活動電子郵件。
 
 ## 先決條件 {#prerequisites}
 
@@ -86,8 +86,8 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱「 」的帳戶 [Marketing Cl
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中選取的每個區段，將 [!DNL Salesforce Marketing Cloud Account Engagement] 區段狀態會從Platform更新其區段狀態。</li></ul> |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中每個選取的對象，對應至 [!DNL Salesforce Marketing Cloud Account Engagement] 區段狀態會從Platform更新其對象狀態。</li></ul> |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -133,13 +133,13 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱「 」的帳戶 [Marketing Cl
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 >
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應考量事項和範例 {#mapping-considerations-example}
 
@@ -154,7 +154,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱「 」的帳戶 [Marketing Cl
    * 重複這些步驟以在XDM設定檔結構描述和之間新增任何對應 [!DNL Marketing Cloud Account Engagement]： |來源欄位 |目標欄位 |強制 | | — | — | — | |`IdentityMap: Email`|`Identity: email`|是 | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * 具有上述對應的範例如下所示：
-      ![顯示Target對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![顯示Target對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 當您完成提供目的地連線的對應時，請選取 **[!UICONTROL 下一個]**.
 
@@ -162,14 +162,14 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱「 」的帳戶 [Marketing Cl
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
-1. 導覽至您選取的其中一個區段。 選取 **[!DNL Activation data]** 索引標籤。此 **[!UICONTROL 對應ID]** 欄顯示自訂欄位的名稱，該欄位是在 [!DNL Marketing Cloud Account Engagement Prospects] 頁面。
+1. 導覽至您選取的其中一個對象。 選取 **[!DNL Activation data]** 索引標籤。此 **[!UICONTROL 對應ID]** 欄顯示自訂欄位的名稱，該欄位是在 [!DNL Marketing Cloud Account Engagement Prospects] 頁面。
    ![顯示所選區段之對應ID的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
-1. 登入 [[!DNL Salesforce]](https://login.salesforce.com/) 網站。 然後導覽至 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** 頁面，並檢查區段中的潛在客戶是否已新增/更新。 或者，您也可以存取 [[!DNL Salesforce Pardot]](https://pi.pardot.com/) 並存取 **[!DNL Prospects]** 頁面。
+1. 登入 [[!DNL Salesforce]](https://login.salesforce.com/) 網站。 然後導覽至 **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** 頁面，並檢查是否已新增/更新對象中的潛在客戶。 或者，您也可以存取 [[!DNL Salesforce Pardot]](https://pi.pardot.com/) 並存取 **[!DNL Prospects]** 頁面。
    ![顯示「潛在客戶」頁面的Salesforce UI熒幕擷圖。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
-1. 若要檢查潛在客戶是否已更新，請選取潛在客戶並驗證自訂潛在客戶欄位是否已使用Experience Platform區段狀態更新。
-   ![Salesforce UI熒幕擷圖顯示選取的潛在客戶頁面，自訂潛在客戶欄位會以區段狀態更新。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
+1. 若要檢查潛在客戶是否已更新，請選取潛在客戶並驗證自訂潛在客戶欄位是否已使用Experience Platform對象狀態進行更新。
+   ![Salesforce UI熒幕擷圖顯示選取的潛在客戶頁面，自訂潛在客戶欄位會以對象狀態更新。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## 資料使用與控管 {#data-usage-governance}
 

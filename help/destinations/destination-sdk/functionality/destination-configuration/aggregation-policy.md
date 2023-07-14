@@ -1,7 +1,7 @@
 ---
 description: 瞭解如何設定彙總原則，以判斷應如何分組和批次處理目的地的HTTP請求。
 title: 彙總原則
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 2%
@@ -112,8 +112,8 @@ ht-degree: 2%
 | `configurableAggregation.maxBatchAgeInSecs` | 整數 | 搭配使用 `maxNumEventsInBatch`，此引數會決定Experience Platform應該等候多久才傳送API呼叫至您的端點。 <ul><li>最小值（秒）：1800</li><li>最大值（秒）：3600</li></ul> 例如，如果您使用這兩個引數的最大值，Experience Platform會等待3600秒或直到10000有合格的設定檔為止，然後再進行API呼叫（以先發生者為準）。 |
 | `configurableAggregation.maxNumEventsInBatch` | 整數 | 搭配使用 `maxBatchAgeInSecs`，此引數會決定API呼叫中應彙總多少個合格設定檔。 <ul><li>最小值： 1000</li><li>最大值： 10000</li></ul> 例如，如果您使用這兩個引數的最大值，Experience Platform會等待3600秒或直到10000有合格的設定檔為止，然後再進行API呼叫（以先發生者為準）。 |
 | `configurableAggregation.aggregationKey` | - | 可讓您根據以下所述的引數，彙總對應至目的地的匯出設定檔。 |
-| `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 將此引數設為 `true` 如果您想要依區段ID將匯出至目的地的設定檔分組。 |
-| `configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 設定此引數和 `includeSegmentId` 至 `true`，即可依區段ID和區段狀態將匯出至目的地的設定檔分組。 |
+| `configurableAggregation.aggregationKey.includeSegmentId` | 布林值 | 將此引數設為 `true` 如果您想要依對象ID將匯出至目的地的設定檔分組。 |
+| `configurableAggregation.aggregationKey.includeSegmentStatus` | 布林值 | 設定此引數和 `includeSegmentId` 至 `true`，即可依對象ID和對象狀態將匯出至目的地的設定檔分組。 |
 | `configurableAggregation.aggregationKey.includeIdentity` | 布林值 | 將此引數設為 `true` 如果您想要依身分名稱空間將匯出至目的地的設定檔分組。 |
 | `configurableAggregation.aggregationKey.oneIdentityPerGroup` | 布林值 | 將此引數設為 `true` 如果您希望將匯出的設定檔根據單一身分歸入群組（GAID、IDFA、電話號碼、電子郵件等）。 |
 | `configurableAggregation.aggregationKey.groups` | 陣列 | 如果您想要依身分名稱空間群組將匯出至目的地的設定檔分組，請建立身分群組清單。 例如，您可以使用上述範例中顯示的設定，將包含IDFA和GAID行動識別碼的設定檔合併為對目的地的一次呼叫，並將電子郵件合併為另一個呼叫。 |

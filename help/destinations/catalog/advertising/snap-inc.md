@@ -1,17 +1,17 @@
 ---
 title: Snap Inc連線
-description: 瞭解如何連線至Snapchat Ads平台，並從Experience Platform匯出您的對象區段。
+description: 瞭解如何連線至Snapchat Ads平台並從Experience Platform匯出您的對象。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 988ecbed3084ef162453c9f1124998c6e9ae2e45
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
 
 # Snap Inc連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [Snapchat廣告](https://forbusiness.snapchat.com/) 適用於所有企業，無論規模或產業規模為何。 全熒幕數位廣告可激發對您業務最重要的人員採取行動，成為Snapchaters日常對話的一部分。
 
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 ## 使用案例 {#use-cases}
 
-此目的地可讓行銷人員將Experience Platform中建立的使用者區段匯入Snapchat廣告，並使用這些區段來鎖定其廣告。
+此目的地可讓行銷人員將Experience Platform中建立的使用者對象匯入Snapchat廣告，並使用這些對象來鎖定其廣告。
 
 ## 先決條件 {#prerequisites}
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 * Snap Inc不支援特定對象區段的多個身分。 啟用區段時，請僅對應一個身分。
 * Snap Inc不支援重新命名區段。 若要重新命名區段，您必須先停用、重新命名區段，然後再加以啟用。
-* 無法定義對象區段成員的保留期間。 所有成員都具有期限保留期，而且會一直保留在區段中，直到將其移除為止。
+* 無法定義對象區段成員的保留期間。 所有成員都有期限保留期，在被移除之前都會留在受眾中。
 
 ## 支援的身分 {#supported-identities}
 
@@ -65,8 +65,8 @@ ht-degree: 1%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *您的目的地* 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出對象的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *您的目的地* 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -98,11 +98,11 @@ ht-degree: 1%
 
 * **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL 帳戶ID]**：與您要匯入區段的廣告帳戶相關聯的廣告帳戶ID。 如需如何找到此專案的詳細資訊，請參閱 [此檔案位於Snapchat商務說明中心](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL 帳戶ID]**：與您要匯入對象之廣告帳戶相關聯的廣告帳戶ID。 如需如何找到此專案的詳細資訊，請參閱 [此檔案位於Snapchat商務說明中心](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
 
 >[!IMPORTANT]
 > 
->輸入不正確或無效的Snapchat廣告帳戶ID將導致區段啟用失敗。 請仔細檢查您是否已輸入正確的廣告帳戶ID。
+>輸入不正確或無效的Snapchat廣告帳戶ID將導致對象啟用失敗。 請仔細檢查您是否已輸入正確的廣告帳戶ID。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -110,24 +110,24 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 驗證資料匯出 {#exported-data}
 
-對啟用區段後 *Snap Inc* 目的地，您將能夠在「貼齊廣告管理員」的 [**受眾** 區段](https://businesshelp.snapchat.com/s/article/audience-sharing). 若要導覽至此區段，請依照下列步驟進行：
+將對象啟用至 *Snap Inc* 目的地，您將能夠在「快照廣告管理員」的 [**受眾** 區段](https://businesshelp.snapchat.com/s/article/audience-sharing). 若要導覽至此區段，請依照下列步驟進行：
 
 1. 登入 [貼齊廣告管理員](https://ads.snapchat.com/)
-2. 選取 **受眾** 從畫面左上角的下拉式功能表。 您會在對象庫中看到您在Adobe Experience Platform中啟用的區段：
+2. 選取 **受眾** 從畫面左上角的下拉式功能表。 您會在對象庫中看到您在Adobe Experience Platform中啟用的對象：
 
-![受眾](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
+![對象](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-請注意，當Adobe區段首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估區段之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估區段的詳細資訊，請參閱 [Segmentation Service概述](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱 [Segmentation Service概述](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
 
 ## 資料使用與控管 {#data-usage-governance}
 

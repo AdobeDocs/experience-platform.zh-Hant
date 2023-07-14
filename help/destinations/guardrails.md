@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
 workflow-type: tm+mt
 source-wordcount: '1177'
 ht-degree: 1%
@@ -22,7 +22,6 @@ ht-degree: 1%
 >* 大多數客戶不會超過這些預設限制。 如果您想瞭解自訂限制，請聯絡客戶服務代表。
 >* 本檔案中概述的限制正在不斷改進。 請定期回來檢視更新。
 >* 根據個別下游限制，某些目的地的護欄可能會比本頁面上記錄的護欄更嚴格。 也請務必檢查 [目錄](/help/destinations/catalog/overview.md) 您連線並啟用資料的目的地頁面。
-
 
 ## 限制型別 {#limit-types}
 
@@ -42,7 +41,7 @@ ht-degree: 1%
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| 單一目的地的最大區段數 | 250 | 柔和 | 建議將最多250個區段對應至資料流中的單一目的地。 <br><br> 如果您需要啟用一個目的地超過250個區段，您可以： <ul><li> 取消對應您不想再啟用的區段，或</li><li>建立新資料流到所需的目的地，並將區段對應到這個新資料流。</li></ul> <br> 請注意，在某些情況下，您對應至目的地的區段可能限制在250個以下。 這些目標會在頁面下方各自的區段中進一步說明。 |
+| 單一目的地的受眾數量上限 | 250 | 柔和 | 建議將最多250個對象對應至資料流中的單一目的地。 <br><br> 如果您需要啟用一個目的地超過250個對象，您可以： <ul><li> 取消對應您不想再啟用的對象，或</li><li>建立新資料流到所需的目的地，並將對象對應到這個新資料流。</li></ul> <br> 請注意，在某些情況下，您對應至目的地的對象可能限制在250個以下。 這些目標會在頁面下方各自的區段中進一步說明。 |
 | 目的地數量上限 | 100 | 柔和 | 建議最多建立100個目的地，供您連線並啟用資料至 *每個沙箱*. [Edge個人化目的地（自訂個人化）](#edge-destinations-activation) 在100個建議目的地中，最多可組成10個。 |
 | 對應至目的地的屬性數目上限 | 50 | 柔和 | 如果有多種目的地和目的地型別，您可以選取要對應的設定檔屬性和身分來匯出。 為獲得最佳效能，資料流中最多應將50個屬性對應至目的地。 |
 | 啟用至目的地的資料型別 | 設定檔資料，包括身分和身分對應 | 硬 | 目前只能匯出 *設定檔記錄屬性* 至目的地。 描述事件資料的XDM屬性目前不支援匯出。 |
@@ -67,7 +66,7 @@ ht-degree: 1%
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
 | 啟用頻率 | 每3、6、8或12小時進行一次每日完整匯出或更頻繁的增量匯出。 | 硬 | 閱讀 [匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 檔案區段，以取得批次匯出頻率遞增的詳細資訊。 |
-| 在指定小時內可匯出的區段數上限 | 100 | 柔和 | 建議最多新增100個區段至批次目的地資料流。 |
+| 在指定小時內可匯出的受眾數目上限 | 100 | 柔和 | 建議您將最多100個對象新增到批次目的地資料流。 |
 | 要啟用的每個檔案的最大列數（記錄） | 500萬 | 硬 | Adobe Experience Platform會自動將匯出的檔案分割為每個檔案500萬筆記錄（列）。 每一列代表一個設定檔。 分割檔案名稱會附加一個數字，指示檔案是較大匯出的一部分，例如： `filename.csv`， `filename_2.csv`， `filename_3.csv`. 如需詳細資訊，請閱讀 [排程區段](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) 「啟用批次目的地」教學課程的內容。 |
 
 {style="table-layout:auto"}
@@ -78,8 +77,8 @@ ht-degree: 1%
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| 根據隨選啟用工作啟用的區段 | 80 | 硬 | 目前，每個隨選啟動工作最多可啟動80個區段。 嘗試為每個工作啟動超過80個區段會導致工作失敗。 未來版本可能會對此行為有所變更。 |
-| 每個區段的同時臨機啟動工作 | 1 | 硬 | 每個區段請勿執行多個同時臨機啟動工作。 |
+| 根據隨選啟用工作啟用的對象 | 80 | 硬 | 目前，每個隨選啟動工作最多可啟動80個對象。 嘗試啟動每個工作超過80個對象將導致工作失敗。 未來版本可能會對此行為有所變更。 |
+| 每個對象的同時臨機啟動工作 | 1 | 硬 | 請勿對每個對象同時執行多個隨選啟用工作。 |
 
 {style="table-layout:auto"}
 
@@ -91,7 +90,7 @@ ht-degree: 1%
 | --- | --- | --- | --- |
 | 最大數量 [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md) 目的地 | 10 | 柔和 | 您可以將資料流設定為每個沙箱10個自訂個人化目的地。 |
 | 每個沙箱對應至個人化目的地的屬性數量上限 | 30 | 硬 | 每個沙箱在資料流中最多可以將30個屬性對應到個人化目的地。 |
-| 對應至單一的最大區段數 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 目的地 | 50 | 柔和 | 您最多可以在至單一Adobe Target目的地的啟用流程中啟用50個區段。 |
+| 對應至單一的最大受眾數量 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 目的地 | 50 | 柔和 | 您最多可以在對單一Adobe Target目的地的啟用流程中啟用50個對象。 |
 
 {style="table-layout:auto"}
 

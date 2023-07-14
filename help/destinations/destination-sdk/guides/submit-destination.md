@@ -2,7 +2,7 @@
 description: 此頁面提供您需要提交以複查使用Destination SDK製作的生產目的地的所有資訊。
 title: 送出供檢閱以Destination SDK撰寫的生產目的地
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 8c8026b1180775dddd9517fc88727749678a5613
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 送出供檢閱以Destination SDK撰寫的生產目的地
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 >[!IMPORTANT]
 >
@@ -22,7 +22,6 @@ ht-degree: 0%
 >* 如果Adobe團隊要求您在初次提交後對設定進行任何更新，則您必須在進行更新後提交另一個目的地發佈請求。
 >
 >* 即使您的目的地在Experience Platform目錄中上線後，如果您需要對設定進行任何更新，則必須提交新的目的地發佈請求，才能將更新反映在設定中。
-
 
 將目的地發佈至之前 [Experience Platform目的地目錄](/help/destinations/catalog/overview.md)，您必須向Adobe提供有關目的地和您執行之測試的某些資訊，以確保使用者在啟用您平台的資料時，享有最佳體驗。
 
@@ -46,7 +45,7 @@ ht-degree: 0%
 提供目的地為Experience Platform客戶解決的使用案例說明。 您的說明可能類似於現有合作夥伴的使用案例：
 
 * [pinterest](/help/destinations/catalog/advertising/pinterest.md)：從您的客戶清單、造訪過您網站的人或已在Pinterest上與您的內容互動的人中建立對象。
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)：DataX API適用於廣告商，如果廣告商想要鎖定在Verizon Media (VMG)中電子郵件地址作為輸入的特定受眾群組，則可以使用VMG的近乎即時API快速建立新區段並推送所需的受眾群組。
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)：DataX API適用於廣告商，廣告商如果想要鎖定在Verizon Media (VMG)中電子郵件地址作為輸入的特定受眾群組，則可以使用VMG的近乎即時API快速建立新受眾並推送所需的受眾群組。
 
 ## 更新原因 {#reason-for-update}
 
@@ -58,7 +57,7 @@ ht-degree: 0%
 
 ## 使用測試目的地API後的測試結果 {#testing-api-response}
 
-使用後提供測試結果 [測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 端點，以對您的目的地執行HTTP呼叫。 其中包括:
+使用後提供測試結果 [測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 端點，以對您的目的地執行HTTP呼叫。 其中包括：
 
 * 使用測試API向目的地端點提出完整API請求（標頭和內文）。
 * 從您的目的地端點接收的API回應。

@@ -4,7 +4,7 @@ title: 刪除目的地
 type: Tutorial
 description: 本教學課程列出刪除Adobe Experience Platform UI中現有目的地的步驟
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 1ef6430b6661a2b8b5aef196b75cfaf3f6220aab
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # 刪除目的地 {#delete-destinations}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 在Adobe Experience Platform使用者介面中，您可以刪除與目的地的現有連線。
 
-刪除目的地會移除該目的地的所有現有資料流。 在刪除資料流之前，系統會取消對應在您刪除之目的地啟用的所有區段。
+刪除目的地會移除該目的地的所有現有資料流。 在刪除資料流之前，系統會取消對應在您刪除之目的地啟用的所有對象。
 
 您可透過下列兩種方式刪除目的地： [!DNL Platform] [!DNL UI]. 您可以：
 
@@ -61,11 +61,11 @@ ht-degree: 0%
 
    * 如果目的地有現有的資料流，您會被帶到 [!UICONTROL 資料流執行] 標籤。
 
-      ![資料流執行標籤](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![資料流執行標籤](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * 如果目的地沒有現有的資料流，您會進入一個空白頁面，您可以在該頁面開始啟用對象。
 
-      ![目的地詳細資料](../assets/ui/delete-destinations/destination-details-empty.png)
+     ![目的地詳細資料](../assets/ui/delete-destinations/destination-details-empty.png)
 
 4. 選取 **[!UICONTROL 刪除]** 在右側邊欄中。
 

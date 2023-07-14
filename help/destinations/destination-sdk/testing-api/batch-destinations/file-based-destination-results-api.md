@@ -2,7 +2,7 @@
 description: 此頁面說明如何使用/testing/destinationInstance API端點檢視測試結果的完整詳細資訊。 此API端點傳回的結果與使用流量服務API監視資料流時獲得的結果相同。
 title: 檢視詳細的啟用結果
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: ffd87573b93d642202e51e5299250a05112b6058
+source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # 檢視詳細的啟用結果 {#view-test-results}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此頁面說明如何使用 `/testing/destinationInstance` API端點可檢視檔案式目的地測試結果的完整詳細資料。
 
@@ -35,12 +35,12 @@ ht-degree: 2%
 * 您已在Experience PlatformUI中為您目的地建立至少一個啟用流程。
 * 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
 
-   ![UI影像顯示如何從URL取得目的地執行個體ID。](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI影像顯示如何從URL取得目的地執行個體ID。](../../assets/testing-api/get-destination-instance-id.png)
 * 您先前曾經 [已測試您的目的地設定](file-based-destination-testing-api.md)，並收到有效的API回應，包括 `results` 屬性。 您將使用此 `results` 值，進一步測試您的目的地。
 
 ## 檢視詳細的目的地測試結果 {#test-activation-results}
 
-一旦您擁有 [已驗證您的目的地設定](file-based-destination-testing-api.md)，您可以向發出GET請求來檢視詳細的啟用結果 `authoring/testing/destinationInstance/` 端點，並提供您正在測試之目的地的目的地例項ID，以及已啟動區段的流程執行ID。
+一旦您擁有 [已驗證您的目的地設定](file-based-destination-testing-api.md)，您可以向發出GET請求來檢視詳細的啟用結果 `authoring/testing/destinationInstance/` 端點，並提供您正在測試之目的地的目的地執行個體ID，以及啟用的對象的流量執行ID。
 
 您可以在以下位置找到您需要使用的完整API URL： `results` 屬性傳回 [目的地測試呼叫的回應](file-based-destination-testing-api.md).
 
@@ -56,7 +56,7 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 
 | 查詢字串參數 | 說明 |
 | -------- | ----------- |
-| `flowRunIds` | 與已啟動區段對應的流程執行ID。 您可以在以下位置找到流程執行ID： `results` 屬性傳回 [目的地測試呼叫的回應](file-based-destination-testing-api.md). |
+| `flowRunIds` | 與啟用的對象對應的流量執行ID。 您可以在以下位置找到流程執行ID： `results` 屬性傳回 [目的地測試呼叫的回應](file-based-destination-testing-api.md). |
 
 **要求**
 

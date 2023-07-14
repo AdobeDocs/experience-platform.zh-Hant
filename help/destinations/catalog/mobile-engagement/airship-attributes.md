@@ -3,16 +3,16 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定目標的對象屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 # [!DNL Airship Attributes] 連線 {#airship-attributes-destination}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [!DNL Airship] 是領先的客戶參與平台，可在客戶生命週期的每個階段，協助您為使用者提供有意義、個人化的全通路訊息。
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-將受眾區段傳送至之前 [!DNL Airship]，您必須：
+將受眾傳送至之前 [!DNL Airship]，您必須：
 
 * 在中啟用屬性 [!DNL Airship] 專案。
 * 產生持有人權杖以進行驗證。
@@ -35,6 +35,18 @@ ht-degree: 0%
 >
 >建立 [!DNL Airship] 帳戶透過 [此註冊連結](https://go.airship.eu/accounts/register/plan/starter/) 如果您尚未這樣做。
 
+## 外部對象支援 {#external-audiences-support}
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的外部對象。
+
+| 外部對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
@@ -42,7 +54,7 @@ ht-degree: 0%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分（根據您的欄位對應）。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -72,7 +84,7 @@ Adobe Experience Platform設定檔屬性類似於 [!DNL Airship] 屬性，並可
 
 ### 使用案例#2
 
-運用Adobe Experience Platform的屬性進一步豐富 [!DNL Airship] 設定檔並將其與SDK或 [!DNL Airship] 預測性資料。 例如，零售商可建立具有忠誠度狀態和位置資料（來自Platform的屬性）的區段，並 [!DNL Airship] 預測會流失資料，以傳送高針對性訊息給居住在內華達州拉斯維加斯且具有高流失機率的金級忠誠度使用者。
+運用Adobe Experience Platform的屬性進一步豐富 [!DNL Airship] 設定檔並將其與SDK或 [!DNL Airship] 預測性資料。 例如，零售商可建立具有忠誠度狀態和位置資料（來自Platform的屬性）的受眾，並且 [!DNL Airship] 預測會流失資料，以傳送高針對性訊息給居住在內華達州拉斯維加斯且具有高流失機率的金級忠誠度使用者。
 
 ## 連線到目的地 {#connect}
 
@@ -102,13 +114,13 @@ Adobe Experience Platform設定檔屬性類似於 [!DNL Airship] 屬性，並可
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 對應考量事項 {#mapping-considerations}
 

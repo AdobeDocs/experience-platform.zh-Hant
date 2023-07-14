@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## 連線 {#connections}
 
-**[!UICONTROL 設定檔匯出]**， **[!UICONTROL 串流區段匯出]**、和 **[!DNL Edge Personalization]** Adobe Experience Platform中的目的地會擷取事件資料，並將其與其他資料來源結合，以形成 [即時客戶個人檔案](../profile/home.md)，套用區段，並將區段和合格的設定檔匯出至目的地。
+**[!UICONTROL 設定檔匯出]**， **[!UICONTROL 串流對象匯出]**、和 **[!DNL Edge Personalization]** Adobe Experience Platform中的目的地會擷取事件資料，並將其與其他資料來源結合，以形成 [即時客戶個人檔案](../profile/home.md)，套用細分，並將對象和合格的設定檔匯出至目的地。
 
 ## 設定檔匯出目的地 {#profile-export}
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 使用企業目的地資料聯結器，以近乎即時的方式將Adobe Real-time Customer Data Platform設定檔傳送至內部系統或其他協力廠商系統，以進行資料同步、分析和進一步擴充設定檔使用案例。
 
-這些目的地會接收區段和設定檔資料當作Experience Platform資料串流。
+這些目的地會以Experience Platform資料串流的形式接收對象和設定檔資料。
 
 企業目的地包括：
 
@@ -53,9 +53,9 @@ ht-degree: 0%
 
 以檔案為基礎的目的地會收到 `.csv` 包含設定檔和/或屬性的檔案。 [Amazon S3](catalog/cloud-storage/amazon-s3.md) 是匯出包含設定檔匯出之檔案的目的地範例。
 
-## 串流區段匯出目的地 {#streaming-destinations}
+## 串流受眾匯出目的地 {#streaming-destinations}
 
-區段匯出目的地會接收Experience Platform區段資料。 這些目的地會使用區段ID或使用者ID。 廣告和社交目的地，例如 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)， [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)，或 [facebook](catalog/social/facebook.md) 都是這類目的地的範例。
+對象匯出目的地會接收Experience Platform的對象資料。 這些目的地會使用對象ID或使用者ID。 廣告和社交目的地，例如 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md)， [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)，或 [facebook](catalog/social/facebook.md) 都是這類目的地的範例。
 
 ## Edge個人化目的地 {#edge-personalization-destinations}
 
@@ -63,7 +63,7 @@ Experience Platform中的邊緣個人化目的地包括 [Adobe Target](/help/des
 
 深入瞭解如何 [設定相同頁面和下一頁個人化的個人化目的地](/help/destinations/ui/activate-edge-personalization-destinations.md).
 
-## 設定檔匯出和區段匯出目的地 — 影片概觀 {#video}
+## 設定檔匯出和受眾匯出目標 — 影片概觀 {#video}
 
 以下影片會帶您瞭解這兩種目的地型別的特性：
 
@@ -91,7 +91,7 @@ Platform運用標籤管理的強大功能和彈性，讓您能夠在UI中設定�
 
 行銷人員可結合使用連線和擴充功能，妥善處理使用案例。
 
-當需要利用完整的集中式客戶設定檔或客戶區段來啟用時，連線會很有用。 例如，如果您要將來自分析系統的行為資料與上傳的CRM資料結合，以便在將個人化訊息傳遞給使用者之前，先讓使用者符合指定區段的資格，則可使用連線。
+當需要利用完整的集中式客戶設定檔或客戶對象來啟用時，連線會很有用。 例如，如果您要將來自分析系統的行為資料與上傳的CRM資料聯結，以便在將個人化訊息傳遞給使用者之前，讓使用者符合指定對象的資格，則需使用連線。
 
 當使用事件資料來觸發動作，或在外部環境中進行細分時，擴充功能會很有幫助。 例如，如果行為資料需要轉送至外部系統，而不需要加入指定使用者檔案上的其他資料來源。
 

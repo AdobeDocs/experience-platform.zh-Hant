@@ -3,20 +3,20 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 無縫地將Adobe對象資料傳遞至Airship，作為Airship中用於鎖定目標的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
 
 # [!DNL Airship Tags] 連線 {#airship-tags-destination}
 
-## 總覽
+## 概觀
 
 [!DNL Airship] 是領先的客戶參與平台，可在客戶生命週期的每個階段，協助您為使用者提供有意義、個人化的全通路訊息。
 
-這項整合可將Adobe Experience Platform區段資料傳遞至 [!DNL Airship] 作為 [標籤](https://docs.airship.com/guides/audience/tags/) 目標定位或觸發時。
+此整合可將Adobe Experience Platform受眾資料傳遞至 [!DNL Airship] 作為 [標籤](https://docs.airship.com/guides/audience/tags/) 目標定位或觸發時。
 
 若要深入瞭解 [!DNL Airship]，請參閱 [飛艇檔案](https://docs.airship.com).
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-將Adobe Experience Platform區段傳送至之前 [!DNL Airship]，您必須：
+將Adobe Experience Platform對象傳送至之前 [!DNL Airship]，您必須：
 
 * 在您的中建立標籤群組 [!DNL Airship] 專案。
 * 產生持有人權杖以進行驗證。
@@ -36,20 +36,32 @@ ht-degree: 0%
 > 
 >建立 [!DNL Airship] 帳戶透過 [此註冊連結](https://go.airship.eu/accounts/register/plan/starter/) 如果您尚未這樣做。
 
+## 外部對象支援 {#external-audiences-support}
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的外部對象。
+
+| 外部對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
+
 ## 匯出型別和頻率 {#export-type-frequency}
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，其中包含在Airship標籤目的地中使用的識別碼。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正以Airship標籤目的地中使用的識別碼匯出對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## 標籤群組
 
-Adobe Experience Platform中的區段概念類似 [標籤](https://docs.airship.com/guides/audience/tags/) 在Airship中，實施上有細微差異。 此整合對映使用者的 [Experience Platform區段中的成員資格](../../../xdm/field-groups/profile/segmentation.md) 是否存在 [!DNL Airship] 標籤之間。 例如，在Platform區段中， `xdm:status` 變更為 `realized`，則標籤會新增至 [!DNL Airship] 此設定檔對應的頻道或具名使用者。 如果 `xdm:status` 變更為 `exited`，則會移除標籤。
+Adobe Experience Platform中的受眾概念類似於 [標籤](https://docs.airship.com/guides/audience/tags/) 在Airship中，實施上有細微差異。 此整合對映使用者的 [Experience Platform區段中的成員資格](../../../xdm/field-groups/profile/segmentation.md) 是否存在 [!DNL Airship] 標籤之間。 例如，在Platform受眾中， `xdm:status` 變更為 `realized`，則標籤會新增至 [!DNL Airship] 此設定檔對應的頻道或具名使用者。 如果 `xdm:status` 變更為 `exited`，則會移除標籤。
 
 若要啟用此整合，請建立 *標籤群組* 在 [!DNL Airship] 已命名 `adobe-segments`.
 
@@ -75,13 +87,13 @@ Adobe Experience Platform中的區段概念類似 [標籤](https://docs.airship.
 
 ### 使用案例#1
 
-零售商或娛樂平台可建立忠誠度客戶的使用者設定檔，並將這些區段傳遞至 [!DNL Airship] 適用於行動裝置行銷活動上的訊息目標定位。
+零售商或娛樂平台可建立忠誠度客戶的使用者設定檔，並將這些受眾傳遞至 [!DNL Airship] 適用於行動裝置行銷活動上的訊息目標定位。
 
 ### 使用案例#2
 
-當使用者進入或退出Adobe Experience Platform中的特定區段時，即時觸發一對一訊息。
+當使用者掉入Adobe Experience Platform中的特定對象或離開特定對象時，即時觸發一對一訊息。
 
-例如，零售商在Platform中設定牛仔褲品牌專屬區段。 當某人將其牛仔褲偏好設定為特定品牌時，該零售商現在可以立即觸發行動訊息。
+例如，零售商在Platform中設定牛仔褲品牌特定對象。 當某人將其牛仔褲偏好設定為特定品牌時，該零售商現在可以立即觸發行動訊息。
 
 ## 連線到目的地 {#connect}
 
@@ -111,13 +123,13 @@ Adobe Experience Platform中的區段概念類似 [標籤](https://docs.airship.
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用串流區段匯出目的地的受眾資料](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## 對應考量事項 {#mapping-considerations}
 

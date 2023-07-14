@@ -2,9 +2,9 @@
 title: 檔案自助範本//取代為您的目的地名稱
 description: 使用此範本為Adobe Experience Platform目錄中的目的地建立公開檔案。//以總覽區段中的段落取代
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1773edff56059cf5bc57ebaaa133216423fcfe10
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1525'
 ht-degree: 1%
 
 ---
@@ -20,8 +20,7 @@ ht-degree: 1%
 >* 依照範本中列出的順序，填入此範本中的所有區段。
 >* 此範本很少根據合作夥伴意見更新。 開始編寫目的地的檔案之前，請確定您已下載 [範本的最新版本](../assets/docs-framework/yourdestination-template.zip).
 
-
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 *提供貴公司的簡短概觀，包括其對客戶的價值。 加入產品檔案首頁的連結，以供進一步閱讀。*
 
@@ -43,7 +42,7 @@ ht-degree: 1%
 
 *若為社交網路平台：*
 
-*運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服飾品牌可以從他們自己的CRM擷取電子郵件地址到Adobe Experience Platform，從他們自己的離線資料建立區段，並將這些區段傳送到YourDestination，以便在他們客戶的社群媒體摘要中顯示廣告。*
+*運動服裝品牌想要透過其社群媒體帳戶觸及現有客戶。 服裝品牌可從其CRM擷取電子郵件地址至Adobe Experience Platform、從其離線資料建立受眾，並將這些受眾傳送至YourDestination，以在其客戶的社群媒體摘要中顯示廣告。*
 
 ## 先決條件 {#prerequisites}
 
@@ -81,10 +80,10 @@ ht-degree: 1%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *您的目的地* 目的地。 |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出對象的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 *您的目的地* 目的地。 |
 | 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如&lt;客戶名稱>的「選取設定檔屬性」畫面中所選。 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出型別 | **[!UICONTROL 資料集匯出]** | 您正在匯出未依對象興趣或資格進行分組或建構的原始資料集。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -125,7 +124,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -133,9 +132,9 @@ ht-degree: 1%
 
 *適當刪除 — 如果您要記錄新的串流目的地，請保留下方第一段。 如果您要記錄新的檔案型目的地，請保留第二段。 如果您要記錄匯出資料集的目的地，請保留第三段。*
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
-讀取 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 讀取 [(Beta)匯出資料集](/help/destinations/ui/export-datasets.md) 以取得將資料集匯出至此目的地的詳細指示。
 
@@ -148,7 +147,7 @@ ht-degree: 1%
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
-*新增段落以說明如何將資料匯出至目的地。 這可協助客戶確保已正確與您的目的地整合。 例如，您可以提供類似以下的JSON範例。 或者，您也可以提供目的地介面的熒幕擷取畫面和資訊，顯示客戶應如何預期區段填入目的地平台。*
+*新增段落以說明如何將資料匯出至目的地。 這可協助客戶確保已正確與您的目的地整合。 例如，您可以提供類似以下的JSON範例。 或者，您也可以從目的地的介面提供熒幕擷取畫面和資訊，顯示客戶應如何預期目標平台中的受眾填入。*
 
 ```
 {

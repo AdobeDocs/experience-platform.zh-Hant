@@ -1,7 +1,7 @@
 ---
 description: 瞭解如何為使用Destination SDK建立的目的地設定對象中繼資料設定。
 title: 對象中繼資料設定
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 2%
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 # 對象中繼資料設定
 
-將資料從Experience Platform匯出至目的地時，您可能需要在Experience Platform和目的地之間共用特定的對象中繼資料，例如區段名稱或區段ID。
+將資料從Experience Platform匯出至目的地時，您可能需要在Experience Platform和目的地之間共用特定的對象中繼資料，例如對象名稱或對象ID。
 
 Destination SDK提供的工具可讓您以程式設計方式在目的地平台中建立、更新或刪除對象。
 
 若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或參閱操作說明指南 [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-您可以透過以下方式設定對象中繼資料範本： `/authoring/audience-templates` 端點。 建立對象中繼資料設定後，您可以使用 `/authoring/destinations` 端點以設定 `audienceMetadataConfig` 區段。 本節說明目的地應將哪些區段中繼資料對應至您的對象範本。
+您可以透過以下方式設定對象中繼資料範本： `/authoring/audience-templates` 端點。 建立對象中繼資料設定後，您可以使用 `/authoring/destinations` 端點以設定 `audienceMetadataConfig` 區段。 本節說明目的地應將哪些對象中繼資料對應至您的對象範本。
 
 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面所示的元件。
 
@@ -41,7 +41,7 @@ Destination SDK提供的工具可讓您以程式設計方式在目的地平台�
 
 ## 支援的引數 {#supported-parameters}
 
-建立對象中繼資料設定時，您可以使用下表所述的引數來設定區段對應設定。
+建立對象中繼資料設定時，您可以使用下表所述的引數來設定對象對應設定。
 
 ```json
   "audienceMetadataConfig":{
@@ -54,8 +54,8 @@ Destination SDK提供的工具可讓您以程式設計方式在目的地平台�
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | 布林值 | 指示是否 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目的地啟用工作流程中的值應為Experience Platform區段名稱。 |
-| `mapExperiencePlatformSegmentId` | 布林值 | 指示是否 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目的地啟用工作流程中的值應為Experience Platform區段ID。 |
+| `mapExperiencePlatformSegmentName` | 布林值 | 指示是否 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目的地啟用工作流程中的值應為Experience Platform的對象名稱。 |
+| `mapExperiencePlatformSegmentId` | 布林值 | 指示是否 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目的地啟用工作流程中的值應為Experience Platform的受眾ID。 |
 | `mapUserInput` | 布林值 | 啟用或停用使用者輸入的 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目標啟用工作流程中的值。 若設為 `true`， `audienceTemplateId` 不存在。 |
 | `audienceTemplateId` | 布林值 | 此 `instanceId` 的 [對象中繼資料範本](../../metadata-api/create-audience-template.md) 用於您的目的地。 |
 

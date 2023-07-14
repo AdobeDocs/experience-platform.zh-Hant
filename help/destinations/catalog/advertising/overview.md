@@ -3,16 +3,16 @@ keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
 description: 將Adobe Experience Platform連線至第三方廣告平台(例如DSP、廣告網路、SSP)，並共用這些平台的假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 732e6d3d53d983f3390941f4694d2c542d882004
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '258'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
 # Advertising目的地概觀 {#advertising-destinations}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 將Adobe Experience Platform連線到廣告平台，例如需求端平台(DSP)、供應端平台(SSP)和廣告網路，以在這些平台上共用已知和匿名的受眾。
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 * [pinterest客戶清單連線](pinterest.md)
 * [(Beta) Snapchat廣告連線](snap-inc.md)
 * [交易台連線](tradedesk.md)
-* [(Beta)交易台CRM連線](tradedesk-emails.md)
+* [(Beta) The Trade Desk CRM 連線](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### 擴充功能
@@ -59,4 +59,4 @@ ht-degree: 1%
 
 ## 連線到新的廣告目的地 {#connect-destination}
 
-若要將區段傳送至行銷活動的廣告目的地，平台必須先連線至目的地。 請參閱 [目的地建立教學課程](../../ui/connect-destination.md) 以取得設定新目的地的詳細資訊。
+若要將對象傳送至行銷活動的廣告目的地，Platform必須先連線至目的地。 請參閱 [目的地建立教學課程](../../ui/connect-destination.md) 以取得設定新目的地的詳細資訊。

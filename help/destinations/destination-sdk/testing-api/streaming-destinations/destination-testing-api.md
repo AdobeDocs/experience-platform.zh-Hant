@@ -2,7 +2,7 @@
 description: 瞭解如何使用目的地測試API來測試您的串流目的地是否正確設定，以及驗證流向您設定之目的地的資料流的完整性。
 title: 使用範例設定檔測試您的串流目的地
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 1%
@@ -26,10 +26,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 讀取 [連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 和 [對目的地啟用設定檔和區段](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 以取得詳細資訊。
+>* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 讀取 [連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 和 [對目的地啟用設定檔和對象](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 以取得詳細資訊。
 > * 建立與目的地的連線後，請在以下情況下取得您應用於此端點的API呼叫中的目的地執行個體ID： [瀏覽與目的地的連線](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
-   >![UI影像如何取得目的地執行個體ID](../../assets/testing-api/get-destination-instance-id.png)
-
+>![UI影像如何取得目的地執行個體ID](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 目的地測試API操作快速入門 {#get-started}
 

@@ -1,29 +1,29 @@
 ---
 keywords: 行動；行動參與目的地；LINE；LINE行動參與目的地
 title: LINE連線
-description: LINE目的地可讓您新增設定檔至平台區段，並為已連線的使用者提供個人化體驗。
+description: LINE目的地可讓您新增設定檔至平台對象，並為已連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 83778bc5d643f69e0393c0a7767fef8a4e8f66e9
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 0%
+source-wordcount: '1178'
+ht-degree: 1%
 
 ---
 
 # [!DNL LINE] 連線
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 [[!DNL LINE]](https://line.me/en/) 是一個連線人物、服務和資訊的常用通訊平台，並且已從聊天應用程式成長為娛樂、社交和日常活動的中樞。
 
-此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [[!DNL LINE] 傳訊API](https://developers.line.biz/en/reference/messaging-api/). 您可以從您的Experience Platform區段中啟用設定檔，作為內的連線 [!DNL LINE] 滿足您的業務需求。
+此 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [[!DNL LINE] 傳訊API](https://developers.line.biz/en/reference/messaging-api/). 您可以從您的Experience Platform對象中啟用設定檔，作為內的連線 [!DNL LINE] 滿足您的業務需求。
 
 [!DNL LINE] 使用持有人權杖作為驗證機制，以與 [!DNL LINE] 傳訊API。 向您的驗證身分的說明 [!DNL LINE] 執行個體會位於以下更遠的位置： [驗證至目的地](#authenticate) 區段。
 
 ## 使用案例 {#use-cases}
 
-行銷人員可以內建區段，鎖定行動參與目的地中的使用者 [!DNL Adobe Experience Platform]. 此外，您也可以根據客戶自己的屬性，為他們提供個人化體驗 [!DNL Adobe Experience Platform] 設定檔，一旦區段和設定檔在 [!DNL Adobe Experience Platform].
+行銷人員可以鎖定行動參與目的地中的使用者，並內建對象 [!DNL Adobe Experience Platform]. 此外，您也可以根據客戶自己的屬性，為他們提供個人化體驗 [!DNL Adobe Experience Platform] 設定檔，當對象和設定檔在 [!DNL Adobe Experience Platform].
 
 ## 先決條件 {#prerequisites}
 
@@ -67,8 +67,8 @@ ht-degree: 0%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段（受眾）的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 [!DNL LINE] 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據區段評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出對象的所有成員，而這些成員具有「 」中使用的識別碼（名稱、電話號碼或其他）。 [!DNL LINE] 目的地。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -107,13 +107,13 @@ ht-degree: 0%
 
 當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 >
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-讀取 [對串流區段匯出目的地啟用設定檔和區段](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+讀取 [將設定檔和受眾啟用至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 對應屬性和身分 {#map}
 
@@ -129,13 +129,13 @@ ht-degree: 0%
 
 ## 驗證資料匯出 {#exported-data}
 
-成功將資料匯出Experience Platform後， [!DNL LINE] 目的地會在內建立新對象 [!DNL LINE] 使用選取的區段名稱。
+成功將資料匯出Experience Platform後， [!DNL LINE] 目的地會在內建立新對象 [!DNL LINE] 使用選取的對象名稱。
 
 若要驗證您是否已正確設定目的地，請遵循下列步驟：
 
 1. 在 [!DNL LINE]，登入 [管理員主控台](https://manager.line.biz/).
 
-1. 接下來，導覽至 **[!UICONTROL 資料控制項]** > **[!UICONTROL 受眾]** ，並勾選內與所選區段相符的名稱 **[!UICONTROL 對象名稱]** 欄。
+1. 接下來，導覽至 **[!UICONTROL 資料控制項]** > **[!UICONTROL 受眾]** ，並檢查名稱是否符合內所選取的對象 **[!UICONTROL 對象名稱]** 欄。
 
 1. 更新的磁碟區會符合區段內的計數。
 

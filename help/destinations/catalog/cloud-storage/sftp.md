@@ -2,10 +2,10 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 5af201858e00f5ccdee4d68f04d37bc5f69caf9c
+source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 7%
+source-wordcount: '1043'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,6 @@ ht-degree: 7%
 >* 如果您已將檔案匯出至 **[!UICONTROL SFTP]** 目的地：請建立新的資料流到新的 **[!UICONTROL SFTP測試版]** 目的地。
 >* 如果您尚未建立任何資料流至 **[!UICONTROL SFTP]** 目的地，使用新的 **[!UICONTROL SFTP測試版]** 要匯出檔案的卡片 **[!UICONTROL SFTP]**.
 
-
 ![並排檢視中的兩個SFTP目的地卡片影像。](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
 
 新功能中的改進 [!DNL SFTP] 目的地卡包括：
@@ -29,7 +28,7 @@ ht-degree: 7%
 * 可透過以下方式設定匯出檔案中的自訂檔案標頭： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 
@@ -39,8 +38,22 @@ ht-degree: 7%
 
 ## 透過API或UI連線至SFTP {#connect-api-or-ui}
 
-* 若要使用Platform使用者介面連線至您的SFTP儲存位置，請閱讀以下章節 [連線到目的地](#connect) 和 [啟用此目的地的區段](#activate) 下方的。
-* 若要以程式設計方式連線至您的SFTP儲存位置，請閱讀 [使用流量服務API教學課程，啟用檔案型目的地的區段](../../api/activate-segments-file-based-destinations.md).
+* 若要使用Platform使用者介面連線至您的SFTP儲存位置，請閱讀以下章節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 下方的。
+* 若要以程式設計方式連線至您的SFTP儲存位置，請閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -85,7 +98,7 @@ ht-degree: 7%
 * **[!UICONTROL 密碼]**：登入SFTP儲存位置的密碼。
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
-   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 如果您選取 **[!UICONTROL 使用SSH金鑰的SFTP]** 要連線至您的SFTP位置的驗證型別：
@@ -98,7 +111,7 @@ ht-degree: 7%
 * **[!UICONTROL SSH金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
-   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 目的地詳細資料 {#destination-details}
 
@@ -113,13 +126,13 @@ ht-degree: 7%
 * **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。
 * **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。
 
-## 啟用此目的地的區段 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地的受眾區段的指示。
+另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## (Beta)匯出資料集 {#export-datasets}
 
@@ -130,7 +143,7 @@ ht-degree: 7%
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL SFTP] 目的地，平台會建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 區段啟動教學課程中的。
+對象 [!DNL SFTP] 目的地，平台會建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。
 
 ## IP位址允許清單 {#ip-address-allow-list}
 
