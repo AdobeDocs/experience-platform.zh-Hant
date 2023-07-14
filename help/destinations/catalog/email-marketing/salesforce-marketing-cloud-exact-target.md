@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: (API) SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud（先前稱為ExactTarget）目的地可讓您匯出帳戶資料，並在SalesforceMarketing Cloud中根據您的業務需求加以啟用。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: d1bfd85bf7a318692fb6ae87e163dca105d531c6
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2924'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ A [!DNL Salesforce Marketing Cloud] 訂閱「 」的帳戶 [[!DNL Marketing Clou
 
 [!DNL Salesforce] 需要此值才能正確讀取和解讀來自Experience Platform的受眾，並在中更新其受眾狀態 [!DNL Salesforce Marketing Cloud]. 請參閱Experience Platform檔案以瞭解 [對象成員資格詳細資料結構描述欄位群組](/help/xdm/field-groups/profile/segmentation.md) 如果您需要對象狀態的指引。
 
-針對您從Platform啟用的每個對象 [!DNL Salesforce Marketing Cloud]，您需要建立型別的屬性 `Text` 範圍 [!DNL Salesforce]. 使用 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] 以建立屬性。 屬性欄位名稱用於 [!DNL (API) Salesforce Marketing Cloud] 目的地欄位，且應建立在 `[!DNL Email Demographics system attribute-set]`. 您可以根據您的業務需求，定義最多4000個字元的欄位字元。 請參閱 [!DNL Salesforce Marketing Cloud] [資料擴充功能資料型別](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) 說明檔案頁面，以取得屬性型別的詳細資訊。
+針對您從Platform啟用的每個對象 [!DNL Salesforce Marketing Cloud]，您需要建立型別的屬性 `Text` 範圍 [!DNL Salesforce]. 使用 [!DNL Salesforce Marketing Cloud] [!DNL Contact Builder] 以建立屬性。 屬性欄位名稱用於 [!DNL (API) Salesforce Marketing Cloud] 目標欄位於 **[!UICONTROL 對應]** 步驟。 您可以根據您的業務需求，定義最多4000個字元的欄位字元。 請參閱 [!DNL Salesforce Marketing Cloud] [資料擴充功能資料型別](https://help.salesforce.com/s/articleView?id=sf.mc_es_data_extension_data_types.htm&amp;type=5) 說明檔案頁面，以取得屬性型別的詳細資訊。
 
 請參閱 [!DNL Salesforce Marketing Cloud] 檔案至 [建立屬性](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US) 如果您需要有關建立屬性的指引。
 
@@ -68,7 +68,7 @@ A [!DNL Salesforce Marketing Cloud] 訂閱「 」的帳戶 [[!DNL Marketing Clou
 
 此 [!DNL (API) Salesforce Marketing Cloud] 目的地使用 [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 以動態擷取在中定義的屬性及其屬性集 [!DNL Salesforce Marketing Cloud].
 
-這些標籤會顯示在 **[!UICONTROL 目標欄位]** 選取視窗 [對應](#mapping-considerations-example) 在工作流程中至 [將對象啟用至目的地](#activate). 請注意，只有在中定義的屬性的對應 [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` 屬性集受到支援。
+這些標籤會顯示在 **[!UICONTROL 目標欄位]** 選取視窗 [對應](#mapping-considerations-example) 在工作流程中至 [將對象啟用至目的地](#activate).
 
 >[!IMPORTANT]
 >
@@ -90,7 +90,8 @@ A [!DNL Salesforce Marketing Cloud] 訂閱「 」的帳戶 [[!DNL Marketing Clou
 
 視您的角色而定 [!DNL Salesforce Marketing Cloud] 使用者已指派，您也需要指派許可權給 [!DNL Salesforce Marketing Cloud] 屬性集，其中包含您要更新的欄位。
 
-由於此目的地需要存取 `[!DNL Email Demographics system attribute-set]`，您需要允許 `Email` 如下所示：
+由於此目的地需要存取 `[!DNL attribute-set]`，您需要允許這些事件。 例如： `Email` [!DNL attribute-set] 您需要允許，如下所示：
+
 ![SalesforceMarketing CloudUI顯示具有允許許可權的電子郵件屬性集。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
 若要限制存取層級，您也可以使用精細許可權覆寫個別存取。
@@ -196,16 +197,22 @@ A [!DNL Salesforce Marketing Cloud] 訂閱「 」的帳戶 [[!DNL Marketing Clou
 
 >[!IMPORTANT]
 >
->雖然您的屬性名稱會根據 [!DNL Salesforce Marketing Cloud] 帳戶，兩者的對應 `contactKey` 和 `personalEmail.address` 為必填欄位。 對應屬性時，僅來自Experience Platform的屬性 `Email Demographics` attribute-set應該用於目標欄位中。
+>* 雖然您的屬性名稱會根據 [!DNL Salesforce Marketing Cloud] 帳戶，兩者的對應 `contactKey` 和 `personalEmail.address` 為必填欄位。
+>
+>* 與整合 [!DNL Salesforce Marketing Cloud] API受到Experience Platform可從Salesforce中擷取多少屬性的分頁限制。 這表示在 **[!UICONTROL 對應]** 步驟，目標欄位結構描述可以從您的Salesforce帳戶顯示最多2000個屬性。
 
 1. 在 **[!UICONTROL 對應]** 步驟，選取 **[!UICONTROL 新增對應]**. 您會在畫面上看到新的對應列。
    ![「新增對應」的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
 1. 在 **[!UICONTROL 選取來源欄位]** 視窗，選擇 **[!UICONTROL 選取屬性]** 類別並選取XDM屬性，或選擇 **[!UICONTROL 選取身分名稱空間]** 並選取身分。
-1. 在 **[!UICONTROL 選取目標欄位]** 視窗，選擇 **[!UICONTROL 選取身分名稱空間]** 並選取身分或選擇 **[!UICONTROL 選取自訂屬性]** 類別並選取屬性，從 `Email Demographics` 屬性會視需要顯示。 此 [!DNL (API) Salesforce Marketing Cloud] 目的地使用 [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 以動態擷取在中定義的屬性及其屬性集 [!DNL Salesforce Marketing Cloud]. 這些標籤會顯示在 **[!UICONTROL 目標欄位]** 設定時顯示的快顯視窗 [對應](#mapping-considerations-example) 在 [啟用受眾工作流程](#activate). 注意，僅對映在中定義的屬性。 [!DNL Salesforce Marketing Cloud] `[!DNL Email Demographics]` 屬性集受到支援。
+1. 在 **[!UICONTROL 選取目標欄位]** 視窗，選擇 **[!UICONTROL 選取身分名稱空間]** 並選取身分或選擇 **[!UICONTROL 選取屬性]** 分類，並視需要從顯示的屬性集中選取屬性。 此 [!DNL (API) Salesforce Marketing Cloud] 目的地使用 [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) 以動態擷取在中定義的屬性及其屬性集 [!DNL Salesforce Marketing Cloud]. 這些標籤會顯示在 **[!UICONTROL 目標欄位]** 設定時顯示的快顯視窗 [對應](#mapping-considerations-example) 在 [啟用受眾工作流程](#activate).
 
-   * 重複這些步驟，在您的XDM設定檔結構描述和之間新增以下對應 [!DNL (API) Salesforce Marketing Cloud]： |來源欄位|目標欄位|必要| |—|—|—| |`IdentityMap: contactKey`|`Identity: salesforceContactKey`| `Mandatory` |\
-     |`xdm: person.name.firstName`|`Attribute: Email Demographics.First Name`| - |
-|`xdm: personalEmail.address`|`Attribute: Email Addresses.Email Address`| - |
+   * 重複這些步驟，在您的XDM設定檔結構描述和之間新增以下對應 [!DNL (API) Salesforce Marketing Cloud]：
+
+     | 來源欄位 | 目標欄位 | 必要 |
+     |---|---|---|
+     | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
+     | `xdm: person.name.firstName` | `Attribute: First Name` 來自您所需的屬性集。 | - |
+     | `xdm: personalEmail.address` | `Attribute: Email Address` 來自您所需的屬性集。 | - |
 
    * 使用這些對應的範例如下所示：
      ![顯示Target對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)

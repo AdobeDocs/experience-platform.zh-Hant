@@ -4,9 +4,9 @@ title: Microsoft Dynamics 365連線
 description: Microsoft Dynamics 365目的地可讓您匯出帳戶資料，並在Microsoft Dynamics 365中根據您的業務需求加以啟用。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 416f4ff28ae5ca7ee3235f020ce012352d6002c7
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1927'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,10 @@ ht-degree: 0%
 | `Client ID` | 此 [!DNL Dynamics 365] 您的使用者端識別碼 [!DNL Azure Active Directory] 應用程式。 請參閱 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) 以取得指引。 | `ababbaba-abab-baba-acac-acacacacacac` |
 | `Client Secret` | 此 [!DNL Dynamics 365] 您的使用者端密碼 [!DNL Azure Active Directory] 應用程式。 您可能會使用「 」中的「 」選項#2 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#authentication-two-options). | `abcde~abcdefghijklmnopqrstuvwxyz12345678` 以取得指引。 |
 | `Tenant ID` | 此 [!DNL Dynamics 365] 您的租使用者ID [!DNL Azure Active Directory] 應用程式。 請參閱 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) 以取得指引。 | `1234567-aaaa-12ab-ba21-1234567890` |
+| `Region` | 與環境URL相關聯的Microsoft區域。<br> 請參閱 [[!DNL Dynamics 365] 檔案](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) 以取得指引。 | 如果您的網域如下所示，在對進行驗證時，您需要在下拉式選擇器中為CRM欄位提供醒目提示的值 [目的地](#authenticate).<br> *org57771b33。`crm`.dynamics.com*<br>  例如：如果您的公司布建在北美(NAM)區域，則您的URL會是 `crm.dynamics.com` 而且您需要選取 `crm`. 如果您的公司布建在加拿大(CAN)地區，則您的URL會是 `crm3.dynamics.com` 而且您需要選取 `crm3`. |
 | `Environment URL` | 請參閱 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/org-service/discover-url-organization-organization-service?view=op-9-1) 以取得指引。 | 若您的 [!DNL Dynamics 365] 網域如下所示，您需要反白顯示的值。<br> *`org57771b33`.crm.dynamics.com* |
+
+{style="table-layout:auto"}
 
 ## 護欄 {#guardrails}
 
@@ -80,6 +83,8 @@ ht-degree: 0%
 | 目標身分 | 範例 | 說明 | 考量事項 |
 |---|---|---|---|
 | `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 連絡人的唯一識別碼。 | **必要**. 請參閱 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) 以取得更多詳細資料。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -111,6 +116,7 @@ ht-degree: 0%
 * **[!UICONTROL 使用者端ID]**：此 [!DNL Dynamics 365] 您的使用者端識別碼 [!DNL Azure Active Directory] 應用程式。
 * **[!UICONTROL 租使用者ID]**：此 [!DNL Dynamics 365] 您的租使用者ID [!DNL Azure Active Directory] 應用程式。
 * **[!UICONTROL 使用者端密碼]**：此 [!DNL Dynamics 365] 您的使用者端密碼 [!DNL Azure Active Directory] 應用程式。
+* **[!UICONTROL 地區]**：您的 [[!DNL Dynamics 365]](https://learn.microsoft.com/en-us/power-platform/admin/new-datacenter-regions) 地區。 例如：如果您的公司布建在北美(NAM)區域，則您的URL會是 `crm.dynamics.com` 而且您需要選取 `crm`. 如果您的公司布建在加拿大(CAN)地區，則您的URL會是 `crm3.dynamics.com` 而且您需要選取 `crm3`.
 * **[!UICONTROL 環境URL]**：您的 [!DNL Dynamics 365] 環境URL
 
 如果提供的詳細資料有效，UI會顯示 **[!UICONTROL 已連線]** 帶有綠色核取記號的狀態。 然後您可以繼續下一步驟。
