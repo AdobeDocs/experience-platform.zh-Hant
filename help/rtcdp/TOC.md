@@ -67,5 +67,5 @@ ht-degree: 100%
 * 使用案例 {#use-cases}
    * 合作夥伴資料使用案例 {#partner-data}
       * [補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Experience Platform 發行說明](https://www.adobe.com/go/platform-release-notes_tw)。
+* [Experience Platform 發行說明](https://www.adobe.com/go/platform-release-notes_tw)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary_tw)
