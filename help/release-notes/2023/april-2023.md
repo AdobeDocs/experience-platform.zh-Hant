@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform發行說明2023年4月
-description: Adobe Experience Platform的2023年4月發行說明。
+title: Adobe Experience Platform 發行說明 (2023 年 4 月)
+description: Adobe Experience Platform 2023 年 4 月版發行說明。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2084'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 >
->自2023年5月15日起， `Existing` 為了移除區段會籍生命週期中的備援，狀態將從區段會籍對應中淘汰。 進行此變更後，區段中符合資格的設定檔將呈現為 `Realized` 而不符合資格的設定檔將繼續顯示為 `Exited`. 如需此變更的詳細資訊，請參閱 [區段服務區段](#segmentation).
+>從 2023 年 5 月 15 日起，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。如需有關此變更的更多詳細資料，請詳閱[「Segmentation Service」一節](#segmentation)。
 
 **發行日期：2023 年 4 月 26 日**
 
@@ -21,44 +21,44 @@ Adobe Experience Platform 現有功能的更新：
 
 - [儀表板](#dashboards)
 - [資料準備](#data-prep)
-- [資料彙集](#data-collection)
+- [資料集合](#data-collection)
 - [目的地](#destinations)
-- [體驗資料模型](#xdm)
+- [體驗資料模式](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [即時客戶設定檔](#profile)
-- [細分服務](#segmentation)
+- [Segmentation Service](#segmentation)
 - [來源](#sources)
 
 ## 儀表板 {#dashboards}
 
-Adobe Experience Platform提供多個儀表板，您可以透過這些儀表板檢視有關您組織資料的重要深入分析，如每日快照期間所擷取。
+Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要分析。
 
 **新功能或更新功能** {#dashboards-new-updated-features}
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用者定義儀表板 | 您現在可以 **篩選歷史資料** 從Widget深入分析中，使用最近的資料或自訂分析期間。 請參閱 [使用者定義儀表板指南](../../dashboards/user-defined-dashboards.md#filter-historical-data) 以取得詳細資訊。<br>您現在也可以 **複製您現有的Widget**. 透過自訂重複專案並編輯其屬性，您可以避免在建立新的唯一Widget時從頭重新啟動。 閱讀 [widget複製指南](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) 以深入瞭解。 |
+| 使用者定義的儀表板 | 您現在可以在您的 Widget 分析中&#x200B;**篩選歷史資料**，並使用最近的資料或自訂分析期間。如需詳細資訊，請參閱[使用者定義的儀表板指南](../../dashboards/user-defined-dashboards.md#filter-historical-data)。<br>您現在也可以&#x200B;**複製您現有的 Widget**。藉由自訂複本並編輯其屬性，您可以避免在建立新的唯一 Widget 時從頭開始重新啟動。若要了解詳細資訊，請詳閱 [Widget 複本指南](../../dashboards/user-defined-dashboards.md#duplicate-a-widget)。 |
 
 {style="table-layout:auto"}
 
-如需儀表板的詳細資訊，包括如何授予存取許可權及建立自訂Widget，請從閱讀 [儀表板概觀](../../dashboards/home.md).
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料準備 {#data-prep}
 
-「資料準備」可讓資料工程師對應、轉換和驗證與Experience Data Model (XDM)之間的資料。
+「資料準備」讓資料工程師可在體驗資料模式 (XDM) 之間對應、轉換和驗證資料。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 更新非生產沙箱中Adobe Analytics的回填期間 | 非生產沙箱中Adobe Analytics的回填期間已縮短至三個月。 生產沙箱的回填在13個月時保持不變。 此變更僅適用於新流程，不會影響現有流程。 如需詳細資訊，請閱讀 [Adobe Analytics概觀](../../sources/connectors/adobe-applications/analytics.md). |
-| 新對應程式函式，可將FPID字串轉換為ECID | 使用 `fpid_to_ecid` 函式將FPID字串轉換為ECID，以用於Experience Platform和Experience Cloud應用程式。 如需詳細資訊，請閱讀 [資料準備函式指南](../../data-prep/functions.md). |
+| 非生產沙箱中 Adob&#x200B;&#x200B;e Analytics 回填期間的更新 | 非生產沙箱中 Adob&#x200B;&#x200B;e Analytics 的回填期間已縮短至三個月。生產沙箱的回填將維持為 13 個月。此變更僅適用於新流程，不會影響現有流程。如需詳細資訊，請詳閱 [Adobe Analytics 概觀](../../sources/connectors/adobe-applications/analytics.md)。 |
+| 新的對應工具功能可將 FPID 字串轉換為 ECID | 使用 `fpid_to_ecid` 功能將 FPID 字串轉換為 ECID，以用於 Experience Platform 和 Experience Cloud 應用程式。如需詳細資訊，請詳閱[「資料準備」功能指南](../../data-prep/functions.md)。 |
 
 {style="table-layout:auto"}
 
-如需「資料準備」的詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
+如需有關「資料準備」的詳細資訊，請詳閱[「資料準備」概觀](../../data-prep/home.md)。
 
-## 資料彙集 {#data-collection}
+## 資料集合 {#data-collection}
 
 Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
 
@@ -66,10 +66,10 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料串流的IP位址模糊化 | 您現在可以在中定義部分或完整資料流層級IP模糊化選項 [資料流設定UI](../../edge/datastreams/configure.md). <br><br>資料流層級IP模糊化設定的優先順序高於Adobe Target和Audience Manager中設定的任何IP模糊化。 <br><br>傳送至Adobe Analytics的資料不受資料流層級的影響 [!UICONTROL IP模糊化] 設定。 Adobe Analytics目前會接收未經過模糊處理的IP位址。 若要讓Analytics接收模糊化的IP位址，您必須在Adobe Analytics中個別設定IP模糊化。 此行為將在未來版本中更新。<br><br> 如需有關IP模糊化的詳細資訊和如何設定的說明，請參閱 [資料流設定檔案](../../edge/datastreams/configure.md#advanced-options). |
-| [資料流設定覆寫](../../edge/datastreams/overrides.md) | 您現在可以為資料串流定義其他設定選項，以便用來覆寫特定設定，例如事件資料集、Target屬性Token、ID同步容器和Analytics報表套裝。 <br><br>覆寫資料串流設定是兩個步驟的程式： <ol><li>首先，您必須在以下位置定義資料流設定覆寫： [資料流設定頁面](../../edge/datastreams/configure.md).</li><li>接著，您必須透過Web SDK命令或使用Web SDK將覆寫傳送至Edge Network [標籤延伸模組](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
-| OAuth JWT Secret | 此 [OAuth JWT密碼](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用Adobe和Google服務權杖，在事件轉送中支援伺服器對伺服器的互動。 |
-| [!DNL Pinterest Conversions API] 擴充功能 | 此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) 事件轉送擴充功能可讓您運用Adobe Experience Platform Edge Network中擷取的資料，並將其傳送至 [!DNL Pinterest] 以伺服器端事件的形式使用 [!DNL Pinterest Conversions API]. |
+| 資料流的 IP 位址模糊化 | 您現在可以在[資料流設定 UI](../../edge/datastreams/configure.md) 中定義部分或完整的資料流層級 IP 模糊化選項。<br><br>該資料流層級 IP 模糊化設定會優先於在 Adob&#x200B;&#x200B;e Target 和 Audience Manager 中設定的任何 IP 模糊化。<br><br>傳送到 Adob&#x200B;&#x200B;e Analytics 的資料不會受資料流層級 [!UICONTROL IP 模糊化]設定的影響。Adobe Analytics 目前會接收未模糊化的 IP 位址。若要讓 Analytics 接收模糊化的 IP 位址，您必須在 Adob&#x200B;&#x200B;e Analytics 中單獨設定 IP 模糊化。此行為會在未來版本中更新。<br><br>如需有關 IP 模糊化的更多詳細資料以及如何進行設定的說明，請參閱[資料流設定文件](../../edge/datastreams/configure.md#advanced-options)。 |
+| [資料流設定覆寫](../../edge/datastreams/overrides.md) | 您現在可以定義資料流的其他設定選項，您可將這些選項用於覆寫特定的設定，例如事件資料集、Target 屬性權杖、ID 同步容器以及 Analytics 報表套裝。<br><br>覆寫資料流設定的流程包含兩個步驟： <ol><li>首先，您必須在[資料流設定頁面](../../edge/datastreams/configure.md)中定義您的資料流設定覆寫。</li><li>接著，您必須透過 Web SDK 命令或使用 Web SDK [標記擴充功能](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)將覆寫傳送至 Edge Network。</li></ol> |
+| OAuth JWT Secret | 此 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用 Adob&#x200B;&#x200B;e 和 Google 服務權杖支援「事件轉送」中伺服器和伺服器的互動。 |
+| [!DNL Pinterest Conversions API] 擴充功能 | 此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html)  事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Pinterest] (使用 [!DNL Pinterest Conversions API] 並以伺服器端事件的形式)。 |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [[!DNL Salesforce Marketing Cloud Account Engagement] 連線](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | 使用SalesforceMarketing Cloud帳戶參與（前身為Pardot）目的地來擷取、追蹤、評分和評等潛在客戶。 針對涉及多個部門及決策者（需要較長的銷售和決策週期）的B2B使用案例，請使用此目的地。 |
+| [[!DNL Salesforce Marketing Cloud Account Engagement] 連線](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | 使用 Salesforce Marketing Cloud Account Engagement (之前稱之為 Pardot) 目的地以擷取、追蹤銷售機會並對其進行評分和分級。將此目的地用於包含多個部門和決策者且需要較長銷售和決策週期的 B2B 使用案例。 |
 
 {style="table-layout:auto"}
 
@@ -89,16 +89,16 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 的資料流監視 [!DNL Custom Personalization] 和 [!DNL Adobe Commerce] 目的地 | <p> 您現在可以看到以下專案的啟用量度 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md)， [自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 和 [使用屬性自訂個人化](../../destinations/catalog/personalization/custom-personalization.md) 連線。 </p> <p>![Adobe Commerce圖片](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce度量"){width="100" zoomable="yes"}</p>  另請參閱 [監視目的地工作區中的資料流](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) 以取得更多詳細資料。 |
-| 新增 **[!UICONTROL 將區段ID附加至區段名稱]** 的欄位 [!DNL Google Ad Manager] 和 [!DNL Google Ad Manager 360] 目的地 | <p>您現在可以在以下位置取得區段名稱： [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 和 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 納入Experience Platform的區段ID，如下所示： `Segment Name (Segment ID)`.</p><p>![附加區段ID影像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新增將區段ID附加至區段名稱欄位 "){width="100" zoomable="yes"}</p> |
-| 已排程的對象回填 | <p>對於 [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 目的地，在區段首次對應至目的地連線後24到48小時，會排程啟用對象回填至目的地。 此更新是為了回應Google等待24小時直到擷取資料的原則，並將提高Real-time CDP和之間的匹配率 [!DNL Google Display & Video 360].</p> <p>請注意，這是隻適用於此目的地的後端設定，與UI中任何可由客戶設定的排程選項無關。</p> |
+| [!DNL Custom Personalization] 和 [!DNL Adobe Commerce] 目的地的資料流監控 | <p> 您現在可以查看 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md) 的啟動量度、[自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)和[具有屬性的自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)連線。 </p> <p>![Adobe Commerce 影像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce 量度"){width="100" zoomable="yes"}</p>  如需更多詳細資料，請參閱[監控目的地工作區中的資料流](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace)。 |
+| 新的&#x200B;**[!UICONTROL 附加區段 ID 至區段名稱]**&#x200B;欄位適用於 [!DNL Google Ad Manager] 和 [!DNL Google Ad Manager 360] 目的地 | <p>現在您可讓 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 和 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 中的區段名稱包括來自 Experience Platform 的區段 ID，例如：`Segment Name (Segment ID)`。</p><p>![附加區段 ID 影像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新的附加區段 ID 至區段名稱欄位 "){width="100" zoomable="yes"}</p> |
+| 已排程的對象回填 | <p>對於 [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 目的地，對象回填至目的地的啟動會排程在首次將區段對應至目的地連線後的 24 至 48 小時。此更新是為了回應 Google 的政策，即需等待 24 小時直到擷取資料為止，並可提高 Real-time CDP 和 [!DNL Google Display & Video 360] 之間的匹配率。</p> <p>請注意，這是僅適用於此目的地的後端設定，並且和 UI 中任何客戶可設定的排程選項不相關。</p> |
 
 {style="table-layout:auto"}
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 
-- 我們已修正 **身分已排除** 檔案型目的地匯出的報告量度。 客戶正如預期從啟用的匯出中接收所有匯出的ID。 不過， **身分已排除** 由於不正確計算絕不應該匯出的身分，UI中的報告量度錯誤地顯示大量排除的身分。 (PLAT-149774)
-- 我們已修正 **排程** 啟動工作流程的步驟。 對於需要對應ID的目的地，客戶無法為新增到現有目的地連線的區段新增對應ID。 (PLAT-148808)
+- 我們已經解決了用於檔案型目的地匯出的&#x200B;**排除的身分**&#x200B;報表量度中出現的問題。客戶依預期收到了來自已啟動的匯出的所有已匯出 ID。但是，UI 中的&#x200B;**排除的身分**&#x200B;報表量度由於錯誤地計入決不應匯出的身分，而錯誤地顯示了大量已排除的身分。(PLAT-149774)
+- 我們已經解決了啟動工作流程的&#x200B;**排程**&#x200B;步驟中的問題。對於需要對應 ID 的目的地，客戶無法為新增到現有目的地連線的區段新增對應 ID。(PLAT-148808)
 
 <!--
 - We have fixed an issue with the beta SFTP destination where the port number was previously hardcoded to 22. The port is now configurable for this destination. 
@@ -107,82 +107,82 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
-## 體驗資料模型(XDM) {#xdm}
+## 體驗資料模式 (XDM) {#xdm}
 
-XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提供通用結構和定義（結構描述）。 藉由遵守XDM標準，所有客戶體驗資料都可以整合到通用表示中，以更快、更整合的方式提供深入分析。 您可以從客戶動作獲得有價值的深入分析、透過區段定義客戶對象，以及使用客戶屬性進行個人化。
+XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 顯示名稱切換 | 結構描述編輯器現在提供切換功能，以在原始欄位名稱與較容易讀取的顯示名稱之間變更。<br>![反白顯示名稱切換的結構描述編輯器。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "結構描述編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>此靈活性可改善欄位可發現性和結構描述的編輯。 標準欄位群組的顯示名稱由系統產生，但如有需要，也可以透過UI自訂。 請閱讀 [顯示名稱切換檔案](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) 以深入瞭解。 |
+| 顯示名稱切換 | 綱要編輯器現在可提供切換功能，在原始欄位名稱和人類更易於理解的顯示名稱之間進行變更。<br>![顯示名稱切換反白顯示的綱要編輯器。](../../xdm/images/ui/resources/schemas/display-name-toggle.png "綱要編輯器顯示名稱切換"){width="100" zoomable="yes"}<br>這種靈活性可提高欄位易尋性和綱要的編輯。標準欄位群組的顯示名稱由系統產生，但如有必要，也可透過 UI 自訂。若要了解詳細資訊，請閱讀[顯示名稱切換文件](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle)。 |
 
 {style="table-layout:auto"}
 
-**新XDM元件**
+**新的 XDM 元件**
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 方案 | [[!UICONTROL Adobe Target分類欄位]](https://github.com/adobe/xdm/pull/1719/files) | 目標分類資料集的新XDM結構描述包含一組中繼資料欄位，可用於分類Target活動和體驗。 |
+| 綱要 | [[!UICONTROL Adobe Target 分類欄位]](https://github.com/adobe/xdm/pull/1719/files) | Target 分類資料集的新 XDM 綱要包含一組中繼資料欄位，用於將 Target 活動和體驗進行分類。 |
 
 {style="table-layout:auto"}
 
-**已更新XDM元件**
+**已更新的 XDM 元件**
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 欄位群組 | [[!UICONTROL Adobe統一設定檔服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1696/files) | 新增即時客戶設定檔的帳戶延伸欄位群組，讓使用者可在帳戶聯合上新增區段成員資格。 |
-| 方案 | [[!UICONTROL 計算屬性系統結構描述]](https://github.com/adobe/xdm/pull/1696/files) | 即時客戶設定檔使用的計算屬性欄位群組已更新為系統唯讀全域結構描述。 |
-| 欄位群組 | 多個 | 新增多個事件作為的欄位 [[!UICONTROL 時間序列結構描述]](https://github.com/adobe/xdm/pull/1718/files). |
-| 欄位群組 | 設定檔熟客方案細節 | [已修正標題](https://github.com/adobe/xdm/pull/1717/files) 的 `xdm:upgradeDate` 從「計畫名稱」到「升級日期」。 |
-| 欄位群組 | 多個 | 中的多個欄位 [[!UICONTROL 決定專案]](https://github.com/adobe/xdm/pull/1714/files) 已更新以移除雙重巢狀階層。 |
+| 欄位群組 | [[!UICONTROL Adobe 統一設定檔服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1696/files) | 新增即時客戶設定檔的帳戶擴充功能欄位群組，讓使用者可在帳戶聯合上新增區段會籍。 |
+| 綱要 | [[!UICONTROL 已計算的屬性系統綱要]](https://github.com/adobe/xdm/pull/1696/files) | 即時客戶設定檔所使用的已計算的屬性欄位群組已更新為系統唯讀全域綱要。 |
+| 欄位群組 | 多個 | 已將幾個事件新增為[[!UICONTROL 時間序列綱要]](https://github.com/adobe/xdm/pull/1718/files)的欄位。 |
+| 欄位群組 | 設定檔忠誠度詳細資料 | [已修正 ](https://github.com/adobe/xdm/pull/1717/files)`xdm:upgradeDate` 的標題，從「方案名稱」變成「升級日期」。 |
+| 欄位群組 | 多個 | [[!UICONTROL 決策項目]](https://github.com/adobe/xdm/pull/1714/files)中有幾個欄位已更新，移除了雙重巢狀階層。 |
 
 {style="table-layout:auto"}
 
-如需Platform中XDM的詳細資訊，請閱讀 [XDM系統總覽](../../xdm/home.md).
+如需有關 Platform 中 XDM 的詳細資訊，請閱讀 [XDM 系統概觀](../../xdm/home.md)。
 
 ## Real-Time Customer Data Platform
 
-以Experience Platform為基礎，Real-time Customer Data Platform ([!DNL Real-Time CDP])可協助公司整合已知和未知的資料，透過整個客戶歷程的智慧型決策來啟用客戶設定檔。 [!DNL Real-Time CDP] 結合多個企業資料來源，即時建立客戶設定檔。 然後，根據這些設定檔建立的區段可傳送至下游目的地，以跨所有管道和裝置提供一對一的個人化客戶體驗。
+建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶設定檔。[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶設定檔。然後，根據這些設定檔建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 增強型Real-Time CDP首頁 | 此 [Real-Time CDP首頁](https://experience.adobe.com) 已透過重新整理的外觀和改善的效能來增強。 首頁現在具有許可權感知功能，並顯示與您有權存取的功能相關的Widget。 如需詳細資訊，請閱讀 [Real-Time CDP首頁控制面板概觀](../../rtcdp/home-page-dashboards.md). |
-| 自我識別調查 | 自我識別問卷是提供在Adobe Experience Platform UI首頁的簡短問卷。 使用自我識別調查來建立您的Experience Platform個人設定檔，並根據您的選擇接收量身打造的指引。 如需詳細資訊，請閱讀 [自我識別調查概觀](../../landing/self-identification.md). |
+| 經過美化的 Real-Time CDP 首頁 | 此 [Real-Time CDP 首頁](https://experience.adobe.com)已經過美化，具有煥然一新的外觀和提升的效能。此主頁現在具有權限感知功能，並會顯示和您有權存取的功能相關的 Widget。如需詳細資訊，請閱讀 [Real-Time CDP 首頁儀表板概觀](../../rtcdp/home-page-dashboards.md)。 |
+| 自我識別調查 | 自我識別調查是 Adob&#x200B;&#x200B;e Experience Platform UI 首頁中提供的簡短問卷。可使用此自我識別調查建置您的 Experience Platform 個人設定檔，並根據您的選擇接收訂製的準則。如需詳細資訊，請閱讀[自我識別調查概觀](../../landing/self-identification.md)。 |
 
-如需詳細資訊，請參閱 [!DNL Real-Time CDP]，請參閱 [[!DNL Real-Time CDP] 概觀](../../rtcdp/overview.md).
+如需有關 [!DNL Real-Time CDP] 的詳細資訊，請參閱 [[!DNL Real-Time CDP]  概觀](../../rtcdp/overview.md)。
 
 ## 即時客戶設定檔 {#profile}
 
-Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，無論客戶在哪裡或何時與您的品牌互動。 透過即時客戶個人檔案，您可以檢視結合來自多個管道（包括線上、離線、CRM和第三方資料）之資料的每個個別客戶的整體檢視。 設定檔可讓您將客戶資料整合到統一的檢視中，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 假名設定檔資料到期日 | 假名設定檔資料到期現在可普遍使用！ 此版本會在啟用後，持續從Experience Platform執行個體中移除過時的假名設定檔。 若要進一步瞭解此功能及假名設定檔，請閱讀 [假名設定檔資料到期指南](../../profile/pseudonymous-profiles.md). |
+| 匿名設定檔資料到期 | 匿名設定檔資料到期現在正式推出！啟用後，此版本會從您的 Experience Platform 執行個體中持續移除過期的匿名設定檔。若要了解有關此功能和匿名設定檔的詳細資訊，請閱讀[匿名設定檔資料到期指南](../../profile/pseudonymous-profiles.md)。 |
 
 {style="table-layout:auto"}
 
-## 分段服務 {#segmentation}
+## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 透過描述可區分客戶群內可銷售人員群組的條件，來定義設定檔的特定子集。 區段能以記錄資料（例如人口資訊）或代表客戶與品牌互動的時間序列事件為基礎。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 區塊會籍對應 | 之前於2023年2月15日所發佈公告的後續內容， `Existing` 為了移除區段會籍生命週期中的備援，狀態將從區段會籍對應中淘汰。 進行此變更後，區段中符合資格的設定檔將呈現為 `Realized` 而不符合資格的設定檔將繼續顯示為 `Exited`.<br/><br/> 此變更可能會影響您，如果您使用 [企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure事件中樞、HTTP API)，而且可能根據 `Existing` 狀態。 若您有此需要，請檢閱您的下游整合。 如果您想要在超過特定時間後識別新合格的設定檔，請考慮使用以下組合 `Realized` 狀態和 `lastQualificationTime` 區段會籍對映中的。 如需詳細資訊，請洽詢您的Adobe代表。 |
+| 區段會籍地圖 | 作為之前在 2 月份的公告的後續措施，在 2023 年 5 月 15 日，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。<br/><br/>如果您正在使用[企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格設定檔，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請參閱 [!DNL Segmentation Service]，請參閱 [區段概觀](../../segmentation/home.md).
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
-Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
 Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
@@ -190,11 +190,11 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| API支援篩選Salesforce CRM來源的列層級資料。 | 使用邏輯和比較運運算元來篩選Salesforce CRM來源的列層級資料。 閱讀指南： [使用API篩選來源的資料](../../sources/tutorials/api/filter.md) 以取得詳細資訊。 |
-| Shopify Streaming的Beta版 | 此 [Shopify串流來源](../../sources/connectors/ecommerce/shopify-streaming.md) 現已推出測試版。 使用Shopify串流來源，從您的Shopify合作夥伴帳戶串流資料以進行Experience Platform。 |
-| OneTrust整合正式發行 | 此 [OneTrust整合來源](../../sources/connectors/consent-and-preferences/onetrust.md) 現在為GA。 使用OneTrust整合來源，將您OneTrust整合帳戶的同意和偏好設定資料帶入Experience Platform。 |
-| oracle Service Cloud正式發行 | 此 [oracle服務雲端來源](../../sources/connectors/customer-success/oracle-service-cloud.md) 現在為GA。 使用Oracle服務雲端來源，將您的Oracle服務雲端資料帶入Experience Platform。 |
+| 用於篩選 Salesforce CRM 來源之列層級資料的 API 支援。 | 使用邏輯和比較運算子篩選 Salesforce CRM 來源的列層級資料。如需詳細資訊，請至「[使用 API 篩選來源的資料](../../sources/tutorials/api/filter.md)」詳閱指南。 |
+| Shopify Streaming 推出 Beta 版 | 此 [Shopify Streaming 來源](../../sources/connectors/ecommerce/shopify-streaming.md)現在推出 Beta 版。使用 Shopify Streaming 來源將資料從您的 Shopify 合作夥伴帳戶串流至 Experience Platform。 |
+| OneTrust Integration 正式推出 | 此 [OneTrust Integration 來源](../../sources/connectors/consent-and-preferences/onetrust.md)現在正式推出。使用 OneTrust Integration 來源將同意和偏好資料從您的 OneTrust Integration 帳戶帶到 Experience Platform。 |
+| Oracle Service Cloud 正式推出 | 此 [Oracle Service Cloud 來源](../../sources/connectors/customer-success/oracle-service-cloud.md)現在正式推出。使用 Oracle Service Cloud 來源將您的 Oracle Service Cloud 資料帶到 Experience Platform。 |
 
 {style="table-layout:auto"}
 
-如欲了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+若要了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
