@@ -1,36 +1,36 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform 隱私權服務說明
-breadcrumb-title: 隱私權服務指南
+user-guide-title: Adobe Experience Platform Privacy Service 說明
+breadcrumb-title: Privacy Service 指南
 user-guide-description: 管理客戶資料要求，以符合 GDPR 和 CCPA 等法律隱私權法規。
 feature: Privacy
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '93'
-ht-degree: 47%
+ht-degree: 92%
 
 ---
 
 
-# Adobe Experience Platform 隱私權服務 {#privacy}
+# Adobe Experience Platform Privacy Service {#privacy}
 
 * [Privacy Service 概觀](./home.md)
-* [管理Privacy Service的許可權](./permissions.md)
-* [Privacy Service和Experience Cloud應用程式](./experience-cloud-apps.md)
-* [隱私權請求的身分資料](./identity-data.md)
-* [隱私權JS資料庫概述](./js-library.md)
-* PRIVACY SERVICEAPI {#api}
-   * [總覽](./api/overview.md)
+* [管理「Privacy Service」的權限](./permissions.md)
+* [Privacy Service 和 Experience Cloud 應用程式](./experience-cloud-apps.md)
+* [隱私權要求的身分識別資料](./identity-data.md)
+* [隱私權 JS 資料庫概觀](./js-library.md)
+* Privacy Service API {#api}
+   * [概觀](./api/overview.md)
    * [驗證及存取Privacy ServiceAPI](./api/getting-started.md)
-   * [隱私權工作](./api/privacy-jobs.md)
+   * [隱私權職位](./api/privacy-jobs.md)
    * [同意](./api/consent.md)
    * [附錄](./api/appendix.md)
-* PRIVACY SERVICEUI {#ui}
-   * [總覽](./ui/overview.md)
-   * [管理隱私權工作](./ui/user-guide.md)
+* Privacy Service UI {#ui}
+   * [概觀](./ui/overview.md)
+   * [管理隱私權職位](./ui/user-guide.md)
 * [訂閱隱私權事件](./privacy-events.md)
 * 隱私權法規 {#regulations}
-   * [總覽](./regulations/overview.md)
+   * [概觀](./regulations/overview.md)
    * [常見問題集](./regulations/faq.md)
    * [術語](./regulations/terminology.md)
 * [疑難排解指南](./troubleshooting-guide.md)
