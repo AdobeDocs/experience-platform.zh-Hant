@@ -2,7 +2,7 @@
 title: 透過Adobe Target個人化
 description: 瞭解如何使用伺服器API來傳遞和轉譯在Adobe Target中建立的個人化體驗。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 091d5440d7346861b7c882fa0a17bd03d528e438
+source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 1%
@@ -11,13 +11,13 @@ ht-degree: 1%
 
 # 透過Adobe Target個人化
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Edge Network Server API可協助提供和轉譯在Adobe Target中建立的個人化體驗。 [表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
 
 >[!IMPORTANT]
 >
->透過建立的個人化體驗 [Target視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 伺服器API尚未完全支援。 伺服器API可以 **retrieve** 由VEC建立的活動，但伺服器API無法 **轉譯** VEC建立的活動。 如果您想要轉譯VEC建立的活動，請實作 [混合個人化](../edge/personalization/hybrid-personalization.md) 使用Web SDK和Edge Network Server API。
+>透過建立的個人化體驗 [Target視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 伺服器API不完全支援。 伺服器API可以 **retrieve** 由VEC建立的活動，但伺服器API無法 **轉譯** VEC建立的活動。 如果您想要轉譯VEC建立的活動，請實作 [混合個人化](../edge/personalization/hybrid-personalization.md) 使用Web SDK和Edge Network Server API。
 
 ## 設定您的資料串流 {#configure-your-datastream}
 
@@ -51,9 +51,9 @@ Edge Network Server API可協助提供和轉譯在Adobe Target中建立的個人
 
 在Target中建立受眾時，下列值將可作為自訂引數使用：
 
-* `xdm.marketing.campaignGroup`
-* `xdm.marketing.campaignName`
-* `xdm.marketing.trackingCode`
+* `marketing.campaignGroup`
+* `marketing.campaignName`
+* `marketing.trackingCode`
 
 ## Target設定檔更新 {#profile-update}
 
