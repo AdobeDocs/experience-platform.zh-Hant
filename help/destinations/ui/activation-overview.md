@@ -4,9 +4,9 @@ title: Activation 總覽
 type: Tutorial
 description: 瞭解如何針對各種型別的目的地啟用您在Adobe Experience Platform中的對象。
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 771801b52b7df7029e1c6e7496dcfb563463d06e
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 1%
 
 ---
@@ -49,9 +49,9 @@ Adobe Experience Platform支援廣泛的目的地。 受眾啟用工作流程因
    * [將受眾資料啟用至串流設定檔匯出目的地](activate-streaming-profile-destinations.md)
    * [啟用對象資料以批次設定檔匯出目的地](activate-batch-profile-destinations.md)
 
-### 從audiencedetails頁面啟用對象 {#activate-segment-details}
+### 從對象詳細資訊頁面啟用對象 {#activate-audience-details}
 
-您可以從audiencedetails頁面啟用目的地的對象。 另請參閱 [區段詳細資料](../../segmentation/ui/overview.md#segment-details) 以取得詳細資訊。
+您可以從對象詳細資訊頁面啟用目的地的對象。 另請參閱 [對象詳細資料](../../segmentation/ui/overview.md#audience-details) 以取得詳細資訊。
 
 根據選取的目的地，請依照下列文章中所述的步驟完成啟動工作流程：
 
