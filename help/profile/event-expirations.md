@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 體驗事件有效期
 description: 本檔案提供在Adobe Experience Platform資料集中設定個別體驗事件到期時間的一般指引。
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: bb2d0075b234ec750046e1f28cac07a58a9d7e72
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## 對區段的影響
 
-您必須確保區段的回顧期間在其相依資料集的到期界限內，才能保持結果的準確性。 例如，如果您套用30天的到期值，且有區段嘗試檢視最多45天前的資料，則產生的對象可能不準確。
+您必須確保對象的回顧期間在其相依資料集的到期界限內，才能保持結果的準確性。 例如，如果您套用30天的到期值，且對象嘗試從最多45天前檢視資料，則產生的對象可能不準確。
 
 因此，您應儘可能為所有資料集保留相同的體驗事件到期值，以避免分段邏輯中不同資料集之間的不同到期值的影響。
 

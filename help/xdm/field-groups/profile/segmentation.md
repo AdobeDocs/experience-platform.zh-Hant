@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構描述；結構描述；XDM；個人設定檔；欄位；結構描述；結構描述；區段；segmentMembership；區段會籍；結構描述設計；對應；對應；
 solution: Experience Platform
 title: 區段會籍詳細資料結構欄位群組
 description: 本檔案提供「區段成員資格詳細資訊」結構描述欄位群組的概觀。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 229dd08bc5d5dfab068db3be84ad20d10992fd31
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -26,7 +25,7 @@ ht-degree: 1%
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `segmentMembership` | 地圖 | 描述個人區段會籍的地圖物件。 此物件的結構將於下文詳細說明。 |
 

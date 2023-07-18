@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: Real-Time Customer Profile API指南
 description: 即時客戶設定檔API可讓開發人員探索和使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或錯誤新增的設定檔資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 3b4e1e793a610c9391b3718584a19bd11959e3be
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '961'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 計算屬性是用來將事件層級資料彙總到設定檔層級屬性的函式。 這些函式會自動計算，以便用於區段、啟用和個人化。
 
-每個計算屬性都包含一個運算式（或「規則」），該運算式會評估傳入的資料並將產生的值儲存在設定檔屬性中。 這些計算可協助您輕鬆回答與期限購買值、購買間隔時間或應用程式開啟次數相關的問題，而不需要您每次都需要資訊時手動執行複雜的計算。 然後可以在設定檔中檢視這些計算的屬性值、用來建立區段，或透過許多不同的存取模式進行存取。
+每個計算屬性都包含一個運算式（或「規則」），該運算式會評估傳入的資料並將產生的值儲存在設定檔屬性中。 這些計算可協助您輕鬆回答與期限購買值、購買間隔時間或應用程式開啟次數相關的問題，而不需要您每次都需要資訊時手動執行複雜的計算。 然後可以在設定檔中檢視這些計算的屬性值、用來建立對象，或透過許多不同的存取模式進行存取。
 
 您可以使用建立、檢視、編輯和刪除計算屬性 `ca/attributes/` 端點。 若要瞭解如何使用計算屬性，請參閱 [計算屬性概觀](../computed-attributes/overview.md). 如需API作業的相關資訊，請造訪 [計算屬性API端點指南](../computed-attributes/api.md).
 
@@ -42,9 +42,9 @@ Adobe Experience Platform可讓位於策略性位置（稱為「邊緣」）的�
 
 ## 匯出工作([!DNL Profile] export) {#profile-export}
 
-[!DNL Real-Time Customer Profile] 資料可匯出至資料集以供進一步處理，例如匯出受眾區段以供啟用，或匯出設定檔屬性以供報告。 匯出對象區段的工作是 [!DNL Adobe Experience Platform Segmentation Service] API，請閱讀 [分段匯出作業端點指南](../../profile/api/export-jobs.md) 以深入瞭解。 如需如何建立和管理設定檔屬性的匯出工作的逐步指示，請造訪 [匯出作業端點指南](export-jobs.md).
+[!DNL Real-Time Customer Profile] 資料可匯出至資料集以供進一步處理，例如匯出對象以供啟動或匯出設定檔屬性以供報告。 匯出受眾的工作是 [!DNL Adobe Experience Platform Segmentation Service] API，請閱讀 [分段匯出作業端點指南](../../profile/api/export-jobs.md) 以深入瞭解。 如需如何建立和管理設定檔屬性的匯出工作的逐步指示，請造訪 [匯出作業端點指南](export-jobs.md).
 
-## 合併原則 {#merge-policies}
+## 合併政策 {#merge-policies}
 
 將來自多個來源的資料彙集在一起時 [!DNL Experience Platform]，合併原則是指 [!DNL Platform] 使用來決定資料的優先順序以及將合併哪些資料以建立個別客戶設定檔。 使用 [!DNL Real-Time Customer Profile] API後，您可以建立新的合併原則、管理現有原則，並為您的組織設定預設合併原則。 若要使用API合併原則，請造訪 [合併原則端點指南](merge-policies.md).
 

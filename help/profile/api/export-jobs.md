@@ -4,16 +4,16 @@ title: 設定檔匯出作業API端點
 type: Documentation
 description: 即時客戶個人檔案可讓您透過彙集來自多個來源的資料（包括屬性資料和行為資料），在Adobe Experience Platform中建立個別客戶的單一檢視。 然後可將設定檔資料匯出至資料集，以供進一步處理。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 2%
 
 ---
 
 # 設定檔匯出作業端點
 
-[!DNL Real-Time Customer Profile] 可讓您彙集來自多個來源的資料（包括屬性資料和行為資料），以建立個別客戶的單一檢視。 然後可將設定檔資料匯出至資料集，以供進一步處理。 例如，來自以下專案的受眾區段： [!DNL Profile] 資料可匯出以供啟動，而設定檔屬性則可匯出以供報告。
+[!DNL Real-Time Customer Profile] 可讓您彙集來自多個來源的資料（包括屬性資料和行為資料），以建立個別客戶的單一檢視。 然後可將設定檔資料匯出至資料集，以供進一步處理。 例如， [!DNL Profile] 可透過建立對象來匯出資料以供啟用，且可匯出設定檔屬性以供報告。
 
 本檔案提供逐步指示，說明如何使用建立和管理匯出作業。 [設定檔API](https://www.adobe.com/go/profile-apis-en).
 
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 主要考量事項之一是資料集所根據的結構描述(`schemaRef.id` （位於以下的API範例請求中）。 為了匯出設定檔資料，資料集必須以 [!DNL XDM Individual Profile] 聯合結構描述(`https://ns.adobe.com/xdm/context/profile__union`)。 聯合結構描述是系統產生的唯讀結構描述，可彙總共用相同類別的結構描述欄位。 在此案例中，這是 [!DNL XDM Individual Profile] 類別。 如需聯合檢視結構描述的詳細資訊，請參閱 [結構描述組合基本知識指南中的聯合區段](../../xdm/schema/composition.md#union).
 
-本教學課程後續步驟會概述如何建立參照 [!DNL XDM Individual Profile] 使用聯合結構描述 [!DNL Catalog] API。 您也可以使用 [!DNL Platform] 使用者介面來建立參考聯合結構描述的資料集。 以下列出使用UI的步驟： [此用於匯出區段的UI教學課程](../../segmentation/tutorials/create-dataset-export-segment.md) 但也適用於此處。 完成後，您可以返回本教學課程，繼續的步驟 [起始新的匯出工作](#initiate).
+本教學課程後續步驟會概述如何建立參照 [!DNL XDM Individual Profile] 使用聯合結構描述 [!DNL Catalog] API。 您也可以使用 [!DNL Platform] 使用者介面來建立參考聯合結構描述的資料集。 以下列出使用UI的步驟： [此用於匯出受眾的UI教學課程](../../segmentation/tutorials/create-dataset-export-segment.md) 但也適用於此處。 完成後，您可以返回本教學課程，繼續的步驟 [起始新的匯出工作](#initiate).
 
 如果您已有相容的資料集且知道其ID，您可以直接繼續進行以下步驟： [起始新的匯出工作](#initiate).
 
@@ -132,11 +132,11 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `fields` | *（可選）* 將匯出中要包含的資料欄位限製為僅在此引數中提供的欄位。 省略此值將導致所有欄位都包含在匯出的資料中。 |
-| `mergePolicy` | *（可選）* 指定合併原則以控管匯出的資料。 匯出多個區段時包含此引數。 |
+| `mergePolicy` | *（可選）* 指定合併原則以控管匯出的資料。 匯出多個受眾時，請包含此引數。 |
 | `mergePolicy.id` | 合併原則的ID。 |
 | `mergePolicy.version` | 要使用的合併原則的特定版本。 省略此值將預設為最新版本。 |
 | `additionalFields.eventList` | *（可選）* 提供下列一或多個設定，控制為子或關聯物件匯出的時間序列事件欄位：<ul><li>`eventList.fields`：控制要匯出的欄位。</li><li>`eventList.filter`：指定限制從關聯物件包含之結果的條件。 需要匯出所需的最小值，通常為日期。</li><li>`eventList.filter.fromIngestTimestamp`：將時間序列事件篩選為提供的時間戳記之後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
-| `destination` | **（必要）** 匯出資料的目的地資訊：<ul><li>`destination.datasetId`： **（必要）** 要匯出資料的資料集ID。</li><li>`destination.segmentPerBatch`： *（可選）* Boolean值；若未提供，預設為 `false`. 值 `false` 會將所有區段ID匯出至單一批次ID。 值 `true` 將一個區段ID匯出至一個批次ID。 請注意，將值設定為 `true` 可能會影響批次匯出效能。</li></ul> |
+| `destination` | **（必要）** 匯出資料的目的地資訊：<ul><li>`destination.datasetId`： **（必要）** 要匯出資料的資料集ID。</li><li>`destination.segmentPerBatch`： *（可選）* Boolean值；若未提供，預設為 `false`. 值 `false` 會將所有區段定義ID匯出至單一批次ID。 值 `true` 將一個區段定義ID匯出至一個批次ID。 請注意，將值設定為 `true` 可能會影響批次匯出效能。</li></ul> |
 | `schema.name` | **（必要）** 與要匯出資料的資料集相關聯的結構描述名稱。 |
 
 >[!NOTE]
@@ -494,6 +494,6 @@ curl -X POST \
   }
 ```
 
-### 匯出區段
+### 匯出對象
 
-您也可以使用匯出作業端點來匯出受眾區段，而不是 [!DNL Profile] 資料。 請參閱指南： [匯出分段API中的工作](../../segmentation/api/export-jobs.md) 以取得詳細資訊。
+您也可以使用匯出作業端點來匯出對象，而不是 [!DNL Profile] 資料。 請參閱指南： [匯出分段API中的工作](../../segmentation/api/export-jobs.md) 以取得詳細資訊。

@@ -4,7 +4,7 @@ title: 即時客戶個人檔案疑難排解指南
 type: Documentation
 description: 本檔案提供即時客戶設定檔相關常見問題的解答，以及使用Adobe Experience Platform處理設定檔資料時常見錯誤的疑難排解指南。
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -47,13 +47,13 @@ Real-Time Customer Profile會維護其本身的資料存放區（稱為「設定
 
 如果您知道要存取之設定檔實體的ID，則可以使用 `/entities` （設定檔存取）設定檔API中的端點以查詢這些實體。 請參閱以下小節： [實體](./api/entities.md) 詳細資訊，請參閱開發人員指南。
 
-您也可以使用Adobe Experience Platform Segmentation Service API來存取符合區段會籍資格的客戶的個人設定檔。 請參閱 [Segmentation Service概述](../segmentation/home.md) 以取得詳細資訊。
+您也可以使用Adobe Experience Platform Segmentation Service API來存取已符合受眾會籍資格的客戶的個人設定檔。 請參閱 [Segmentation Service概述](../segmentation/home.md) 以取得詳細資訊。
 
 #### 使用UI
 
 在Experience PlatformUI中， **[!UICONTROL 瀏覽]** 索引標籤中的 **[!UICONTROL 設定檔]** 工作區可讓您檢視設定檔總數，並按其身分值搜尋個別設定檔。 請參閱 [設定檔使用手冊](./ui/user-guide.md) 以取得詳細資訊。
 
-您也可以在「 」下檢視區段清單 **[!UICONTROL 瀏覽]** 索引標籤中的 **[!UICONTROL 區段]** 工作區。 選取區段後，會顯示符合該區段資格的設定檔範例。 然後，您可以選取任何列出的設定檔來檢視其詳細資訊。 請參閱 [區段UI總覽](../segmentation/ui/overview.md) 以取得詳細資訊。
+您也可以在「 」下方檢視對象清單 **[!UICONTROL 瀏覽]** 索引標籤中的 **[!UICONTROL 受眾]** 工作區。 選取對象後，系統會顯示符合該對象資格的設定檔範例。 然後，您可以選取任何列出的設定檔來檢視其詳細資訊。 請參閱 [區段UI總覽](../segmentation/ui/overview.md) 以取得詳細資訊。
 
 ## 錯誤代碼
 

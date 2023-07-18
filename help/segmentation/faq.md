@@ -1,9 +1,9 @@
 ---
 title: 對象常見問題
 description: 瞭解有關受眾的常見問題解答。
-source-git-commit: 562af647e21e8f9b9af495849f085e10f258952a
+source-git-commit: 4dbd20dd3ac596052a3390eb6d3731fac7095c0d
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,9 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 1. 您 **一律** 開始於 [!UICONTROL 對象] 區塊以選取您的開始活動。 您最多可以擁有 **一** [!UICONTROL 對象] 區塊。
 2. 您可以選擇新增 [!UICONTROL 排除] 遵循以下內容的區塊： [!UICONTROL 對象] 區塊。
-3. 您可以選擇新增 [!UICONTROL 排名] 或 [!UICONTROL Split] 區塊。 您可以 **僅限** 每個構成都具有這些區塊之一。
-4. 您 **一律** 結尾為 [!UICONTROL 儲存] 封鎖以儲存您的對象。
+3. 您可以選擇新增 [!UICONTROL 擴充] 遵循以下內容的區塊： [!UICONTROL 排除] 區塊。
+4. 您可以選擇新增 [!UICONTROL 排名] 或 [!UICONTROL Split] 區塊。 您可以 **僅限** 每個構成都具有這些區塊之一。
+5. 您 **一律** 結尾為 [!UICONTROL 儲存] 封鎖以儲存您的對象。
 
 如需有關使用對象構成的詳細資訊，請參閱 [對象組合UI指南](./ui/audience-composition.md).
 
@@ -91,7 +92,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ## 我是否可以在對象構成工作流程中使用所有細分型別？
 
-是，對象構成工作流程支援所有細分型別（批次細分、串流細分和邊緣細分）。 不過，由於構成目前每天僅執行一次，即使包含串流或邊緣評估的對象，結果將取決於執行構成時的對象成員資格。
+是，所有分段型別([批次細分、串流細分和邊緣細分](./home.md#evaluate-segments))在對象構成工作流程中受到支援。 不過，由於構成目前每天僅執行一次，即使包含串流或邊緣評估的對象，結果將取決於執行構成時的對象成員資格。
 
 ## 如何確認設定檔在對象中的成員資格？
 

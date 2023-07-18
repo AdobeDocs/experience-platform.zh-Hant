@@ -3,7 +3,7 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: Real-Time Customer Profile UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可作為在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 98854811e57c621a1c8de9146231f54c96e37a5d
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '2008'
 ht-degree: 0%
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 ![詳細資訊標籤會反白顯示。 設定檔詳細資訊隨即顯示。](../images/user-guide/profile-detail.png)
 
-您可以選取其他可用的標籤，以檢視與個別客戶設定檔相關的額外資訊。 這些標籤包括屬性、事件和區段成員資格標籤，顯示設定檔目前符合資格的區段。
+您可以選取其他可用的標籤，以檢視與個別客戶設定檔相關的額外資訊。 這些標籤包括屬性、事件和對象成員資格標籤，顯示設定檔目前符合資格的對象。
 
 ### 屬性標籤
 
@@ -152,15 +152,15 @@ ht-degree: 0%
 
 ![「事件」標籤會反白顯示。 設定檔事件隨即顯示。](../images/user-guide/events.png)
 
-### 區段會籍標籤
+### 對象會籍標籤
 
-此 **[!UICONTROL 區段會籍]** 索引標籤會顯示清單，其中包含個別客戶設定檔目前所屬的區段的名稱和說明。 當設定檔符合區段的資格或過期時，此清單會自動更新。 設定檔目前符合資格的區段總數會顯示在標籤的右側。
+此 **[!UICONTROL 對象會籍]** 索引標籤會顯示清單，其中包含個別客戶設定檔目前所屬的受眾名稱和說明。 當設定檔符合對象資格或過期時，此清單會自動更新。 設定檔目前符合資格的受眾總數會顯示在索引標籤的右側。
 
 如需Experience Platform分段的詳細資訊，請參閱 [AdobeExperience Platform細分服務檔案](../../segmentation/home.md).
 
-![「區段會籍」標籤會反白顯示。 設定檔區段會籍詳細資訊隨即顯示。](../images/user-guide/segment-membership.png)
+![「對象成員資格」索引標籤會反白顯示。 設定檔的對象成員資格詳細資訊隨即顯示。](../images/user-guide/segment-membership.png)
 
-## 合併原則
+## 合併政策
 
 從主要 **[!UICONTROL 設定檔]** 功能表，選取 **[!UICONTROL 合併原則]** 標籤來檢視屬於您組織的合併原則清單。 每個列出的原則都會顯示其名稱（無論是否為預設的合併原則）及其套用的結構描述類別。
 

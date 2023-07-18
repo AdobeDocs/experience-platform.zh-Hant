@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 預覽範例狀態（設定檔預覽） API端點
 description: Real-Time Customer Profile API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分佈，並產生顯示資料集重疊、身分重疊和未拼接設定檔的報告。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2873'
+source-wordcount: '2868'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform可讓您從多個來源擷取客戶資料，以便為�
 
 >[!NOTE]
 >
->Adobe Experience Platform Segmentation Service API提供預估和預覽端點，可讓您檢視關於區段定義的摘要層級資訊，以協助確保您隔離預期對象。 若要尋找使用區段預覽和估計端點的詳細步驟，請造訪 [預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)，的一部分 [!DNL Segmentation] API開發人員指南。
+>Adobe Experience Platform Segmentation Service API提供預估和預覽端點，可讓您檢視關於區段定義的摘要層級資訊，以協助確保您隔離預期對象。 若要尋找使用預覽和估計端點的詳細步驟，請造訪 [預覽和估計端點指南](../../segmentation/api/previews-and-estimates.md)，的一部分 [!DNL Segmentation] API開發人員指南。
 
 ## 快速入門
 
@@ -592,5 +592,5 @@ curl -X GET \
 
 ## 後續步驟
 
-現在您知道如何在設定檔存放區中預覽範例資料，並對資料執行多個報告，您也可以使用Segmentation Service API的估計和預覽端點，檢視有關區段定義的摘要層級資訊。 此資訊可協助您確保區段中的預期對象已隔離。 若要進一步瞭解如何使用分段API進行區段預覽和預估，請造訪 [預覽和估算端點指南](../../segmentation/api/previews-and-estimates.md).
+現在您知道如何在設定檔存放區中預覽範例資料，並對資料執行多個報告，您也可以使用Segmentation Service API的估計和預覽端點，檢視有關區段定義的摘要層級資訊。 此資訊可協助您確保隔離預期的對象。 若要進一步瞭解如何使用分段API來處理預覽和估算，請造訪 [預覽和估算端點指南](../../segmentation/api/previews-and-estimates.md).
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 13492b90552d16334030792323956ea18ca928dc
+source-git-commit: b7da6f00426f8cd8e219bf6f8c8275ab3f6942ef
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1737'
 ht-degree: 0%
 
 ---
@@ -108,6 +108,64 @@ ht-degree: 0%
 
 ![隨即顯示屬性清單。](../images/ui/audience-composition/select-attribute-exclude.png)
 
+## [!UICONTROL 擴充] {#enrich-block}
+
+>[!IMPORTANT]
+>
+>此時，擴充屬性可以 **僅限** 用於下游Adobe Journey Optimizer情境。
+
+此 **[!UICONTROL 擴充]** 區塊型別可讓您使用資料集中的其他屬性來擴充對象。 您可以在個人化使用案例中使用這些屬性。
+
+若要新增 **[!UICONTROL 擴充]** 區塊，選取 **+** 圖示，後面接著 **[!UICONTROL 擴充]**.
+
+![此 [!UICONTROL 擴充] 選項時才會選擇此選項。](../images/ui/audience-composition/add-enrich-block.png)
+
+此 **[!UICONTROL 擴充]** 區塊。 選取此區塊時，擴充的詳細資訊會顯示在右側邊欄中。 這包括區塊的標籤和擴充資料集。
+
+若要選取要擴充對象的資料集，請選取 ![篩選](../images/ui/audience-composition/filter-attribute.png) 圖示。
+
+![篩選按鈕會反白顯示。 選取此專案會帶您前往 [!UICONTROL 選取資料集] 彈出視窗。](../images/ui/audience-composition/enrich-select-dataset.png)
+
+此 **[!UICONTROL 選取資料集]** 彈出視窗隨即顯示。 選取您要新增以擴充的資料集，然後按一下 **[!UICONTROL 選取]** 以新增資料集以進行擴充。
+
+![已選取所選的資料集。](../images/ui/audience-composition/enrich-dataset-selected.png)
+
+>[!IMPORTANT]
+>
+>選取的資料集 **必須** 符合下列條件：
+>
+>- 資料集 **必須** 屬於記錄型別。
+>   - 資料集 **無法** 屬於事件型別、由系統產生，或標示為設定檔。
+>- 資料集 **必須** 為1 GB或更小。
+
+此 **[!UICONTROL 擴充條件]** 區段現在顯示在右側邊欄上。 在此區段中，您可以選取 **[!UICONTROL 來源聯結金鑰]** 和 **[!UICONTROL 擴充資料集加入金鑰]**，可讓您將擴充資料集連結至您嘗試建立的對象。
+
+![此 [!UICONTROL 擴充條件] 區域會反白顯示。](../images/ui/audience-composition/enrichment-criteria.png)
+
+若要選取 **[!UICONTROL 來源聯結金鑰]**，選取 ![篩選](../images/ui/audience-composition/filter-attribute.png) 圖示。
+
+![的篩選圖示 [!UICONTROL 來源聯結金鑰] 會反白顯示。](../images/ui/audience-composition/enrich-select-source-join-key.png)
+
+此 **[!UICONTROL 選取設定檔屬性]** 彈出視窗隨即顯示。 選取您要用作來源聯結索引鍵的設定檔屬性，然後按一下 **[!UICONTROL 選取]** 以選擇該屬性作為您的來源聯結金鑰。
+
+![您要用作來源聯結索引鍵的屬性會反白顯示。](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+
+若要選取 **[!UICONTROL 擴充資料集加入金鑰]**，選取 ![篩選](../images/ui/audience-composition/filter-attribute.png) 圖示。
+
+![的篩選圖示 [!UICONTROL 擴充資料集加入金鑰] 會反白顯示。](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
+
+此 **[!UICONTROL 擴充屬性]** 彈出視窗隨即顯示。 選取您要用作擴充資料集聯結索引鍵的屬性，然後按一下 **[!UICONTROL 選取]** 以選擇該屬性作為擴充資料集加入金鑰。
+
+![要作為擴充資料集加入索引鍵使用的屬性會反白顯示。](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+
+現在您已新增兩個加入金鑰， **[!UICONTROL 擴充屬性]** 區段隨即顯示。 您現在可以新增要用來增強對象的屬性。 若要新增這些屬性，請選取 **[!UICONTROL 新增屬性]**.
+
+![此 [!UICONTROL 新增屬性] 按鈕會反白顯示。](../images/ui/audience-composition/enrich-select-add-attribute.png)
+
+此 **[!UICONTROL 擴充屬性]** 彈出視窗隨即顯示。 您可以從資料集中選取屬性，以擴充您的對象，接著進行 **[!UICONTROL 選取]** 將屬性新增至您的對象。
+
+![您要新增的擴充屬性會反白顯示。](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+
 <!-- ## [!UICONTROL Join] {#join-block}
 
 The **[!UICONTROL Join]** block type allows you to add in external audiences from datasets that have not yet been processed by Adobe Experience Platform.
@@ -161,6 +219,8 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 若要新增 **[!UICONTROL Split]** 區塊，選取 **+** 圖示，後面接著 **[!UICONTROL Split]**.
 
 ![已選取「分割」選項。](../images/ui/audience-composition/add-split-block.png)
+
+分割對象時，您可以依百分比分割對象或依屬性分割。
 
 ### 依百分比分割 {#split-percentage}
 

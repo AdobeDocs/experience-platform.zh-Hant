@@ -4,9 +4,9 @@ title: 合併原則UI指南
 type: Documentation
 description: 將來自多個來源的資料放在Experience Platform中一起時，合併原則是Platform用來決定資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。 本指南提供使用Adobe Experience Platform使用者介面來使用合併原則的逐步指示。
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2321'
+source-wordcount: '2320'
 ht-degree: 0%
 
 ---
@@ -58,8 +58,8 @@ Adobe Experience Platform可讓您將多個來源的資料片段集合在一起�
    * **[!UICONTROL 無]**：不執行身分拼接。
    * **[!UICONTROL 私人圖表]**：根據您的私人身分圖表執行身分拼接。
 * **[!UICONTROL 預設合併原則]**：可讓您選取此合併原則是否為貴組織預設值的切換按鈕。 如果選取器已開啟，會出現警告要求您確認是否要變更組織的預設合併原則。 請參閱 [合併原則概觀](overview.md) 以進一步瞭解預設合併原則。
-   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Active-On-Edge合併原則]**：可讓您選取此合併原則是否在Edge上啟用的切換按鈕。 為確保所有設定檔消費者在邊緣上使用相同的檢視，可將合併原則標籤為邊緣上的作用中。 為了在邊緣上啟用區段（標籤為邊緣區段），該區段必須繫結至在邊緣上標籤為有效的合併原則。 如果區段為 **not** 繫結至在edge上標示為「作用中」的合併原則，該區段不會在edge上標示為「作用中」，而會標示為串流區段。 此外，組織中的每個沙箱只能具有 **一** 在edge上作用中的合併原則。
+  ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Active-On-Edge合併原則]**：可讓您選取此合併原則是否在Edge上啟用的切換按鈕。 為確保所有設定檔消費者在邊緣上使用相同的檢視，可將合併原則標籤為邊緣上的作用中。 為了在Edge上啟用對象（標示為Edge對象），該對象必須繫結至在Edge上標示為Active的合併原則。 如果對象為 **not** 繫結至在edge上標示為「作用中」的合併原則，對象不會在edge上標示為「作用中」，而會標示為串流對象。 此外，組織中的每個沙箱只能具有 **一** 在edge上作用中的合併原則。
 
 必填欄位完成後，您可以選擇 **[!UICONTROL 下一個]** 以繼續執行工作流程。
 
@@ -193,7 +193,7 @@ ExperienceEvent資料集無法手動排序，如果ExperienceEvent資料集中�
 
 ## 資料治理原則違規
 
-建立或更新合併原則時，會執行檢查以判斷合併原則是否違反貴組織定義的任何資料使用原則。 資料使用原則是Adobe Experience Platform資料控管的一部分，也是描述您允許或限制在特定上執行的行銷動作型別的規則 [!DNL Platform] 資料。 例如，如果使用合併原則來建立啟用至協力廠商目的地的區段，且您的組織有資料使用原則來防止將特定資料匯出至協力廠商，您將會收到 **[!UICONTROL 偵測到資料治理原則違規]** 通知。
+建立或更新合併原則時，會執行檢查以判斷合併原則是否違反貴組織定義的任何資料使用原則。 資料使用原則是Adobe Experience Platform資料控管的一部分，也是描述您允許或限制在特定上執行的行銷動作型別的規則 [!DNL Platform] 資料。 例如，如果使用合併原則來建立啟用至協力廠商目的地的對象，而您的組織有資料使用原則來防止將特定資料匯出至協力廠商，您將會收到 **[!UICONTROL 偵測到資料治理原則違規]** 通知。
 
 此通知包含已違反的資料使用原則清單，可讓您從清單中選取原則，檢視違規的詳細資訊。 選取違反的原則時， **[!UICONTROL 資料譜系]** tab提供違規的原因和受影響的啟用，每個選項都提供如何違反資料使用原則的詳細資訊。
 
@@ -203,4 +203,4 @@ ExperienceEvent資料集無法手動排序，如果ExperienceEvent資料集中�
 
 ## 後續步驟
 
-現在您已為組織建立並設定合併原則，您可以使用這些原則來調整Platform中客戶設定檔的檢視，以及從您的設定檔資料建立對象區段。 請參閱 [區段概述](../../segmentation/home.md) 如需有關如何使用建立和使用區段的詳細資訊， [!DNL Experience Platform] UI和API。
+現在您已為組織建立並設定合併原則，您可以使用這些原則來調整Platform中客戶設定檔的檢視，以及從您的設定檔資料建立對象。 請參閱 [區段概述](../../segmentation/home.md) 有關如何使用「 」建立和使用對象的詳細資訊 [!DNL Experience Platform] UI和API。

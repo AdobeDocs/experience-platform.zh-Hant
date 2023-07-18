@@ -3,16 +3,16 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶個人檔案概述
 description: Real-Time Customer Profile可合併來自各種來源的資料，並以個別客戶設定檔和相關時間序列事件的形式提供對該資料的存取權。 此功能可讓行銷人員跨多個管道與其受眾推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 0%
+source-wordcount: '1990'
+ht-degree: 1%
 
 ---
 
 # [!DNL Real-Time Customer Profile] 概覽
 
-Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體驗，無論客戶在哪裡或何時與您的品牌互動。 替換為 [!DNL Real-Time Customer Profile]，您可以透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，檢視每個個別客戶的整體檢視。 [!DNL Profile] 可讓您將客戶資料合併成統一的檢視，針對每個客戶互動提供可採取行動且附有時間戳記的說明。 此概覽可協助您瞭解的角色和使用 [!DNL Real-Time Customer Profile] 在 [!DNL Experience Platform].
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。替換為 [!DNL Real-Time Customer Profile]，您可以透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，檢視每個個別客戶的整體檢視。 [!DNL Profile] 可讓您將客戶資料合併成統一的檢視，針對每個客戶互動提供可採取行動且附有時間戳記的說明。 此概覽可協助您瞭解的角色和使用 [!DNL Real-Time Customer Profile] 在 [!DNL Experience Platform].
 
 ## [!DNL Profile] 在Experience Platform中
 
@@ -26,7 +26,7 @@ Adobe Experience Platform可讓您為客戶推動協調、一致且相關的體�
 
 ### 設定檔實體組合
 
-即時客戶個人檔案由一個主要實體組成，稱為 **主要實體**&#x200B;和各種支援實體。 在Experience Platform內容中，主要實體通常是 **設定檔實體**，由個人特徵、行為和區段會籍組成。 其他實體可讓細分引擎利用設定檔主要實體以外的資料，並包括下列專案：
+即時客戶個人檔案由一個主要實體組成，稱為 **主要實體**&#x200B;和各種支援實體。 在Experience Platform內容中，主要實體通常是 **設定檔實體**，由個人特徵、行為和對象會籍組成。 其他實體可讓細分引擎利用設定檔主要實體以外的資料，並包括下列專案：
 
 - **維度實體**：用於簡化跨事件或設定檔記錄共用資訊的資料模型化程式的實體。 這也稱為查詢實體或分類實體。
 - **B2B實體**：說明設定檔與企業對企業帳戶和商機關係的實體。
@@ -76,7 +76,7 @@ Experience PlatformUI提供一個儀表板，您可以透過它檢視關於即�
 
 每個企業都希望以個人化的方式與客戶溝通。 然而，為客戶提供相關數位體驗的挑戰之一，就是瞭解如何將分散在平板電腦、行動電話和筆記型電腦等不同數位頻道中的中斷連線資料連結在一起。 [!DNL Identity Service] 可讓您連結來自多個頻道的身分，並為每個客戶建立身分圖表，藉此拼合客戶的完整面貌。 造訪 [Identity Service概觀](../identity-service/home.md) 以取得詳細資訊。
 
-### 合併原則
+### 合併政策
 
 將多個來源的資料片段彙整在一起並加以合併，以便檢視每個個別客戶的完整檢視時，合併原則是指 [!DNL Platform] 使用來決定資料的優先順序以及將使用哪些資料來建立客戶設定檔。
 
@@ -98,13 +98,13 @@ Experience PlatformUI提供一個儀表板，您可以透過它檢視關於即�
 
 Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
 
-## 設定檔和區段
+## 設定檔與對象
 
-Adobe Experience Platform [!DNL Segmentation Service] 會產生支援個別客戶體驗所需的對象。 建立受眾區段時，該區段的ID會新增至所有合格設定檔的區段會籍清單中。 區段規則建立並套用至 [!DNL Real-Time Customer Profile] 使用RESTful API和區段產生器使用者介面的資料。 若要深入瞭解細分，請先閱讀 [Segmentation Service概述](../segmentation/home.md).
+Adobe Experience Platform [!DNL Segmentation Service] 會產生支援個別客戶體驗所需的對象。 建立受眾後，該受眾的ID會新增至所有合格設定檔的受眾成員資格清單中。 區段規則建立並套用至 [!DNL Real-Time Customer Profile] 使用RESTful API和區段產生器使用者介面的資料。 若要深入瞭解細分，請先閱讀 [Segmentation Service概述](../segmentation/home.md).
 
 ### 串流擷取和串流細分
 
-即時輸入可透過稱為串流擷取的程式實現。 擷取設定檔和時間序列資料時， [!DNL Real-Time Customer Profile] 在將區段與現有資料合併並更新聯合檢視之前，會透過稱為串流區段的持續程式自動決定從區段包含或排除該資料。 因此，您可以即時執行計算並作出決定，在客戶與您的品牌互動時，向客戶傳遞增強、個人化的體驗。 擷取資料時，也會進行驗證，以確保資料可正確擷取，並符合資料集所依據的結構描述。 如需有關內嵌期間所完成驗證的詳細資訊，請先閱讀 [資料擷取品質概觀](../ingestion/quality/overview.md).
+即時輸入可透過稱為串流擷取的程式實現。 擷取設定檔和時間序列資料時， [!DNL Real-Time Customer Profile] 在將對象資料與現有資料合併並更新聯合檢視之前，會透過稱為串流區段的持續程式自動決定包含或排除對象資料。 因此，您可以即時執行計算並作出決定，在客戶與您的品牌互動時，向客戶傳遞增強、個人化的體驗。 擷取資料時，也會進行驗證，以確保資料可正確擷取，並符合資料集所依據的結構描述。 如需有關內嵌期間所完成驗證的詳細資訊，請先閱讀 [資料擷取品質概觀](../ingestion/quality/overview.md).
 
 ## 邊緣投影
 

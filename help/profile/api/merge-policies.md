@@ -4,9 +4,9 @@ title: 合併原則API端點
 type: Documentation
 description: Adobe Experience Platform可讓您將多個來源的資料片段集合在一起，並加以合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是Platform用來判斷資料優先順序的方式以及將合併哪些資料以建立統一檢視的規則。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2468'
+source-wordcount: '2467'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段集合在一起�
 >
 >當您設定新的合併原則為預設值時，先前設為預設值的任何現有合併原則會自動更新為不再使用作為預設值。
 
-為確保所有設定檔消費者在邊緣上使用相同的檢視，可將合併原則標籤為邊緣上的作用中。 為了在邊緣上啟用區段（標籤為邊緣區段），該區段必須繫結至在邊緣上標籤為有效的合併原則。 如果區段為 **not** 繫結至在edge上標示為「作用中」的合併原則，該區段不會在edge上標示為「作用中」，而會標示為串流區段。
+為確保所有設定檔消費者在邊緣上使用相同的檢視，可將合併原則標籤為邊緣上的作用中。 為了在Edge上啟用對象（標示為Edge對象），該對象必須繫結至在Edge上標示為Active的合併原則。 如果對象為 **not** 繫結至在edge上標示為「作用中」的合併原則，對象不會在edge上標示為「作用中」，而會標示為串流對象。
 
 此外，每個組織只能擁有 **一** 在edge上作用中的合併原則。 如果合併原則在Edge上為作用中，則可將其用於Edge上的其他系統，例如Edge Profile、Edge Segmentation和Destinations on Edge。
 
@@ -167,7 +167,7 @@ Adobe Experience Platform可讓您將多個來源的資料片段集合在一起�
     }
 ```
 
-### 方案 {#schema}
+### 綱要 {#schema}
 
 結構描述物件會指定為其建立此合併原則的Experience Data Model (XDM)結構描述類別。
 
@@ -761,6 +761,6 @@ curl -X DELETE \
 
 ## 後續步驟
 
-現在您知道如何為組織建立和設定合併原則，就可以使用它們來調整Platform中客戶設定檔的檢視，以及從建立受眾區段 [!DNL Real-Time Customer Profile] 資料。
+現在您知道如何為組織建立和設定合併原則，就可以使用它們來調整Platform中客戶設定檔的檢視，以及從建立受眾 [!DNL Real-Time Customer Profile] 資料。
 
-請參閱 [Adobe Experience Platform Segmentation Service檔案](../../segmentation/home.md) 以開始定義和使用區段。
+請參閱 [Adobe Experience Platform Segmentation Service檔案](../../segmentation/home.md) 以開始定義和使用對象。
