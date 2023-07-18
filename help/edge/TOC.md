@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 32%
+source-wordcount: '194'
+ht-degree: 31%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 32%
    * [與多個屬性互動](fundamentals/interacting-with-multiple-properties.md)
    * [使用者代理使用者端提示](fundamentals/user-agent-client-hints.md)
 * 資料串流 {#datastreams}
-   * [總覽](./datastreams/overview.md)
+   * [概觀](./datastreams/overview.md)
    * [設定資料流](./datastreams/configure.md)
    * [設定資料流覆寫](./datastreams/overrides.md)
    * [資料收集的資料準備](./datastreams/data-prep.md)
@@ -36,10 +36,10 @@ ht-degree: 32%
       * [依天氣管道的天氣資料](./datastreams/data-enrichment/weather.md)
       * [天氣資料欄位對應](./datastreams/data-enrichment/weather-reference.md)
 * 身分 {#identity}
-   * [總覽](identity/overview.md)
+   * [概觀](identity/overview.md)
    * [第一方裝置ID](identity/first-party-device-ids.md)
    * [行動裝置對網頁和跨網域ID共用](identity/id-sharing.md)
-* 資料收藏集 {#data-collection}
+* 資料集合 {#data-collection}
    * [自動收集的資訊](data-collection/automatic-information.md)
    * [追蹤連結](data-collection/track-links.md)
    * [收集商業和產品資料](data-collection/collect-commerce-data.md)
@@ -53,7 +53,7 @@ ht-degree: 32%
    * [透過混合實作實現個人化](personalization/hybrid-personalization.md)
    * [管理忽隱忽現情形](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
-      * [總覽](personalization/adobe-target/target-overview.md)
+      * [概觀](personalization/adobe-target/target-overview.md)
       * [實作單頁應用程式](personalization/adobe-target/spa-implementation.md)
       * [存取回應Token](personalization/adobe-target/accessing-response-tokens.md)
       * [使用mbox第三方ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
@@ -63,15 +63,16 @@ ht-degree: 32%
          * [用戶端 記錄](personalization/adobe-target/analytics-logging/client-side.md)
          * [伺服器端記錄](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
-      * [總覽](personalization/offer-decisioning/offer-decisioning-overview.md)
+      * [概觀](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
-      * [總覽](personalization/ajo/overview.md)
+      * [概觀](personalization/ajo/overview.md)
 * 同意 {#consent}
    * [支援同意](consent/supporting-consent.md)
    * IAB透明與同意架構2.0 {#iab-tcf}
-      * [總覽](consent/iab-tcf/overview.md)
+      * [概觀](consent/iab-tcf/overview.md)
       * [與標籤整合](consent/iab-tcf/with-launch.md)
       * [整合（不含標籤）](consent/iab-tcf/without-launch.md)
+* [Web SDK標籤擴充功能](web-sdk-tag-extension-overview.md)
 * [發行說明](release-notes.md)
 * [常見問答](web-sdk-faq.md)
 * [資源](resources.md)
