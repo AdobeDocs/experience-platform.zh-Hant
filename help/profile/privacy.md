@@ -5,7 +5,7 @@ title: 即時客戶個人檔案中的隱私權請求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service會處理客戶存取、選擇退出銷售或刪除其個人資料的請求，如多項隱私權法規所規定。 本檔案說明與處理即時客戶個人檔案的隱私權請求相關的重要概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 42e59ba1c7b1980d6633ced264673afcf8d80810
+source-git-commit: fb2686eb44bbf7581120f40b241bead0e61baee9
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 0%
@@ -189,7 +189,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->隱私權刪除請求並非立即提出，而且可能會因所涉及的服務及其他影響因素（例如地理位置）而有所不同。 完成隱私權工作的時間範圍可能介於15到45天之間，但並不保證一定會完成。
+>隱私權刪除請求並非立即提出，而且可能會因所涉及的服務及其他影響因素（例如地理位置）而有所不同。 完成隱私權工作的時間範圍可以是15至45天，但不保證一定會完成。
 
 視您是否同時包含Identity Service (`identity`)和資料湖(`aepDataLake`)作為設定檔隱私權請求中的產品(`ProfileService`)，則與設定檔相關的不同資料集會在不同的時間從系統中移除：
 
@@ -213,7 +213,8 @@ curl -X POST \
 ### 合併原則限制 {#merge-policy-limitations}
 
 Privacy Service只能處理 [!DNL Profile] 使用不執行身分拼接的合併原則的資料。 如果您使用UI來確認您的隱私權請求是否正在處理中，請確定您使用的政策具有 **[!DNL None]** 作為其 [!UICONTROL ID拼接] 型別。 換言之，您不能在下列情況下使用合併原則 [!UICONTROL ID拼接] 設為 [!UICONTROL 私密圖表].
->![合併原則的ID拼接已設定為None](./images/privacy/no-id-stitch.png)
+>>
+![合併原則的ID拼接已設定為None](./images/privacy/no-id-stitch.png)
 >
 ## 後續步驟
 
