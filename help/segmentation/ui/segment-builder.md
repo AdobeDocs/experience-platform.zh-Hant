@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6d33c1bd3921a754edfab227fad236caf60ac960
 workflow-type: tm+mt
 source-wordcount: '3308'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
->abstract="構成區段定義的三種欄位型別為屬性、事件和受眾。 屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
+>abstract="構成區段定義的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
 
 區段定義的基本建置區塊是屬性和事件。 此外，現有對象中包含的屬性和事件可作為新定義的元件。
 
@@ -224,7 +224,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="合併政策"
->abstract="合併原則可讓您合併不同的資料集，以形成您的設定檔。 Platform已提供預設合併原則，或者您可以在設定檔中建立新的預設合併原則。 為此對象選擇符合您行銷目的的合併原則。"
+>abstract="合併政策可讓不同的資料集合併，形成您的設定檔。平台已提供預設的合併政策，不然您也可以在設定檔中建立新的預設合併政策。針對此對象選擇和您的行銷目的相符的合併政策。"
 
 [!DNL Experience Platform] 可讓您彙集來自多個來源的資料並將其合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是指 [!DNL Platform] 使用來決定資料的優先順序以及將合併哪些資料以建立設定檔。
 
@@ -239,12 +239,12 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="區段定義屬性"
->abstract="區段定義屬性區段會顯示結果區段定義的大小預估值，顯示合格的設定檔數與設定檔總數的比較。 這可讓您在建置對象本身之前根據需要調整您的區段定義。"
+>abstract="區段定義屬性部分會顯示產生的區段定義大小的估計值，以顯示合格設定檔數量和設定檔總數的比較。這可讓您在建置對象本身之前根據需要調整您的區段定義。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
->abstract="您可以重新整理區段定義的預估值，以立即預覽有多少設定檔符合建議的區段定義。 對象預估值會透過使用當天的樣本資料的樣本大小產生。"
+>abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合建議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 建立區段定義時， **[!UICONTROL 區段屬性]** 工作區右側的區段會顯示產生的區段定義預估大小，讓您在建立受眾本身之前，可視需要調整區段定義。

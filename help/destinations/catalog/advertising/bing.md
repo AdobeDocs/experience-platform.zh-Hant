@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="對應 ID"
->abstract="輸入您要對應所選區段的數值Bing對象ID。 若提供 [!UICONTROL 對應ID] 未對應至Bing目的地中的受眾ID，您不會在Bing帳戶中看到預期的受眾資料。"
+>abstract="輸入要對應選取區段的數值 Bing 對象 ID。如果提供的[!UICONTROL 已對應 ID] 未對應至 Bing 目的地中的對象 ID，您將不會在 Bing 帳戶中看到預期的對象資料。"
 
 >[!IMPORTANT]
 > 

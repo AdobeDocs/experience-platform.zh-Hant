@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -95,7 +95,7 @@ Adobe提供多個標準Widget，您可用來視覺化與對象相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="對象規模"
->abstract="此Widget會顯示所選對象中合併的設定檔總數。 此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
+>abstract="此 Widget 會顯示選取對象內合併設定檔的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
 
 此 **[!UICONTROL 對象人數]** widget會顯示拍攝快照時所選對象中合併的設定檔總數。 此數字是將對象合併原則套用至您的設定檔資料，以將設定檔片段合併在一起，並為對象中的每個人形成單一設定檔的結果。
 
@@ -181,7 +181,7 @@ Adobe提供多個標準Widget，您可用來視覺化與對象相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="身分識別覆蓋"
->abstract="此Widget會顯示您的對象中同時包含兩個所選身分的設定檔重疊。 圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的設定檔的數量由圓圈之間的覆蓋表示。"
+>abstract="此 Widget 會顯示包含兩個所選身分識別的對象中設定檔的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的設定檔的數量由圓圈之間的覆蓋表示。"
 
 此 **[!UICONTROL 身分重疊]** Widget會顯示文氏圖表或集合圖表，顯示您的對象中包含多個身分的設定檔重疊。
 
@@ -198,7 +198,7 @@ Adobe提供多個標準Widget，您可用來視覺化與對象相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="依身分識別劃分的設定檔"
->abstract="此Widget會顯示您所選對象中每個合併設定檔的身分劃分。"
+>abstract="此 Widget 會顯示選取對象中每個合併設定檔身分識別的劃分。"
 
 此 **[!UICONTROL 依身分割槽分的設定檔]** widget會顯示您所選對象中每個合併設定檔的身分劃分。 依身分割槽分的設定檔總數可能會高於對象中的設定檔總數，因為一個設定檔可能會有多個相關聯的身分。 換言之，將每個身分顯示的值相加，總數可能會超過對象總人數。 這是因為如果客戶透過多個管道與您的品牌互動，則可能有多個身分與該個別客戶相關聯。
 

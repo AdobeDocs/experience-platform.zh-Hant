@@ -7,7 +7,7 @@ exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '1029'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -103,7 +103,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="結束日期"
->abstract="無法新增對象排程的結束日期。"
+>abstract="無法使用新增對象排程的結束日期。"
 
 根據預設， **[!UICONTROL 對象排程]** 頁面僅顯示您在目前啟用流程中選擇的新選取對象。
 

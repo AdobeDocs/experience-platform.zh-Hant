@@ -6,7 +6,7 @@ exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 source-git-commit: 04c0b19bf4ffbc0719a89f710570cc667ca5e482
 workflow-type: tm+mt
 source-wordcount: '3606'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -50,17 +50,17 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="流失"
->abstract="流失率代表與上次執行區段作業相比，對象內發生變更的設定檔百分比。"
+>abstract="流失代表和上次執行區段作業時相比，對象內正在變更的設定檔的百分比。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="評估方式"
->abstract="對象的評估方法包括批次、串流和邊緣。"
+>abstract="對象的評估方式包括批次、串流和邊緣。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="新增所有對象至排程"
->abstract="啟用後可在每日排程更新中包含所有使用批次細分評估的對象。 停用以從排程更新中移除所有對象。"
+>title="將所有對象新增到排程"
+>abstract="啟用以在每日排程更新中包含所有使用批次分段評估的對象。停用以從排程更新中移除所有對象。"
 
 選取 **[!UICONTROL 瀏覽]** 索引標籤檢視貴組織的所有對象清單。
 
@@ -139,7 +139,7 @@ ht-degree: 2%
 
 如需有關的詳細資訊 [!DNL Unified Search]，包括支援的功能，請閱讀 [整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
-**標籤** {#tags}
+**標記** {#tags}
 
 您可以新增使用者定義的標籤，以更好地說明、尋找和管理您的對象。
 

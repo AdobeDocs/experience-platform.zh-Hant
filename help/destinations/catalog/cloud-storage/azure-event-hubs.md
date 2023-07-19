@@ -6,7 +6,7 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
 workflow-type: tm+mt
 source-wordcount: '2118'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -99,12 +99,12 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
 >title="包括區段名稱"
->abstract="如果您希望資料匯出包含正在匯出的對象名稱，請切換此按鈕。 檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括您正在匯出的對象的名稱。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
 >title="包括區段時間戳記"
->abstract="如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至要啟用的目的地時的UNIX時間戳記，請切換此按鈕。 檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括建立和更新對象時的 UNIX 時間戳記，以及對象對應至啟動目的地時的 UNIX 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
 
 若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
 

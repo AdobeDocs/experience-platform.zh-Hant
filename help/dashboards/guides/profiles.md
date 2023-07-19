@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
 workflow-type: tm+mt
 source-wordcount: '3393'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -176,7 +176,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 請參閱 [本檔案中關於合併原則的章節](#merge-policies) 以深入瞭解。
 
-此 **[!UICONTROL 設定檔計數變更趨勢]** Widget會在Widget的右上角顯示「字幕」按鈕。 選取 **[!UICONTROL 註解]** 以開啟自動註解對話方塊。
+此 **[!UICONTROL 設定檔計數變更趨勢]** Widget會在Widget的右上角顯示「註解」按鈕。 選取 **[!UICONTROL 註解]** 以開啟自動註解對話方塊。
 
 ![設定檔概述標籤會顯示設定檔計數變更趨勢Widget，並反白顯示註解按鈕。](../images/profiles/profiles-count-change-trend-captions.png)
 
@@ -256,7 +256,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="無區段設定檔"
->abstract="此Widget提供未附加至任何對象的所有設定檔總數，並代表您組織內啟用設定檔的機會。"
+>abstract="此 Widget 會提供未附加到任何對象的所有設定檔總數，代表在整個組織中啟用設定檔的機會。"
 
 此 [!UICONTROL 未分段的設定檔] widget會提供未附加至任何對象的所有設定檔總數。 產生的數字自上次快照以來都是準確的，代表您組織內個人資料啟用的機會。 這也表示有機會淘汰未提供足夠ROI的個人檔案。
 
@@ -267,7 +267,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="無區段設定檔趨勢"
->abstract="此Widget提供在指定期間內未附加至任何對象的設定檔數量的線圖插圖。 未附加至對象的設定檔趨勢可以在30天、90天和12個月期間進行視覺化。"
+>abstract="此 Widget 會提供一個折線圖，說明在特定時段內未附加到任何對象的所有設定檔數量。可以將 30 天、90 天和 12 個月時段內未附加到任何對象的設定檔趨勢視覺化。"
 
 此 [!UICONTROL 未分段的設定檔變化趨勢] Widget使用線圖來說明自上次每日快照以來新增的未附加至任何對象的設定檔數量。 未附加至任何對象的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 從Widget的下拉式選單中選擇時段。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
 

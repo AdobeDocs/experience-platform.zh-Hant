@@ -6,7 +6,7 @@ exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
 workflow-type: tm+mt
 source-wordcount: '935'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流 ID"
->abstract="此選項會決定要在頁面的回應中包含哪些資料收集資料串流。 下拉式選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
+>abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=zh-Hant" text="了解如何設定資料流"
 
 >[!IMPORTANT]
@@ -83,7 +83,7 @@ ht-degree: 6%
 * **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL 說明]**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
 * **[!UICONTROL 整合別名]**：此值會以JSON物件名稱的形式傳送至Experience PlatformWeb SDK。
-* **[!UICONTROL 資料串流ID]**：這會決定要將對象包含在頁面的回應中的資料收集資料串流。 下拉式選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../edge/datastreams/overview.md) 以取得更多詳細資料。
+* **[!UICONTROL 資料串流ID]**：這會決定要將對象包含在頁面的回應中的資料收集資料串流。 下拉選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../edge/datastreams/overview.md) 以取得更多詳細資料。
 
 ### 啟用警示 {#enable-alerts}
 

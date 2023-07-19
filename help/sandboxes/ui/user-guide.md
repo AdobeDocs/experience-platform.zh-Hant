@@ -45,7 +45,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
 >title="沙箱標題"
->abstract="沙箱標題指在整個 Experience Platform UI 的選單和下拉式清單中代表沙箱的顯示名稱。"
+>abstract="沙箱標題指在整個 Experience Platform UI 的選單和下拉選單中代表沙箱的顯示名稱。"
 
 >[!NOTE]
 >

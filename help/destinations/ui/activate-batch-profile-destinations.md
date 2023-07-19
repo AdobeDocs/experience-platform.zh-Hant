@@ -7,7 +7,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '3961'
-ht-degree: 7%
+ht-degree: 10%
 
 ---
 
@@ -87,12 +87,12 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="檔案匯出選項 "
->abstract="選取 **匯出完整檔案** 匯出符合對象資格之所有設定檔的完整快照。 選取 **匯出增量檔案** 僅匯出自上次匯出以來符合對象資格的設定檔。 <br> 第一個增量檔案匯出包含符合對象資格的所有設定檔，以作為回填。 未來的增量檔案僅包含自第一次增量檔案匯出以來符合對象資格的設定檔。"
+>abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的設定檔。<br> 第一個增量檔案匯出包括符合對象資格的所有設定檔，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="在對象評估後啟動"
+>title="對象評估後啟動"
 >abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。"
 
 >[!CONTEXTUALHELP]
@@ -170,7 +170,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="設定檔案名稱"
->abstract="針對以檔案為基礎的目的地，系統會為每個對象產生唯一的檔案名稱。 使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 對於大多數目的地，預設檔案名稱包含目的地名稱、對象ID以及日期和時間指示器。 例如，您可以編輯匯出的檔案名稱，以區分不同的促銷活動，或將資料匯出時間附加至檔案。 請注意，某些目的地開發人員可能會選擇為其目的地顯示不同的預設檔案名稱附加選項。
 
@@ -247,7 +247,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="關於強制屬性"
->abstract="選取所有匯出的設定檔應包含的 XDM 方案屬性。沒有強制金鑰的設定檔不會匯出到目的地。若未選取強制索引鍵，則會匯出所有合格的設定檔，無論其屬性為何。"
+>abstract="選取所有匯出的設定檔應包含的 XDM 方案屬性。沒有強制金鑰的設定檔不會匯出到目的地。若未選取強制金鑰，則會匯出所有合格的設定檔，無論其屬性如何。"
 
 強制屬性是使用者啟用的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
 
@@ -477,8 +477,8 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="排除擴充屬性"
->abstract="啟用此選項可將設定檔從選取的自訂上傳對象匯出至您的目的地，同時排除其所有屬性。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="了解文件的詳細資訊"
+>abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="如需了解詳細資訊，請參閱文件"
 
 >[!IMPORTANT]
 >

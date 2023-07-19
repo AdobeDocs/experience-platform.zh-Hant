@@ -6,7 +6,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '2486'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -167,12 +167,12 @@ curl --location --request POST 'https://some-api.com/token' \
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="包括區段名稱"
->abstract="如果您希望資料匯出包含正在匯出的對象名稱，請切換此按鈕。 檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括您正在匯出的對象的名稱。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="包括區段時間戳記"
->abstract="如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至要啟用的目的地時的UNIX時間戳記，請切換此按鈕。 檢視選取此選項時的資料匯出範例的文件。"
+>abstract="切換是否希望資料匯出包括建立和更新對象時的 UNIX 時間戳記，以及對象對應至啟動目的地時的 UNIX 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"

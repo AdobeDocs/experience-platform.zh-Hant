@@ -14,7 +14,7 @@ ht-degree: 37%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="資料檢疫要求狀態"
->abstract="此 Widget 會顯示已建立、失敗和完成的資料檢疫記錄刪除作業的總計數。如需有關資料檢疫流程的詳細資訊，請在左側導覽中選取&#x200B;**資料檢疫**。"
+>abstract="此 Widget 會顯示已建立、失敗和完成的資料檢疫記錄刪除作業的總計數。如需有關資料檢疫流程的詳細資訊，請在左側導覽中選取 **資料檢疫** 。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"

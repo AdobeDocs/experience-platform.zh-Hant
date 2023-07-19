@@ -178,7 +178,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="對象來源"
->abstract="選擇最初收集對象中客戶資料的方式。 當區段以使用者為目標時，資料會顯示在 Facebook 中"
+>abstract="選擇最初如何在對象中收集客戶資料。當區段以使用者為目標時，資料會顯示在 Facebook 中"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

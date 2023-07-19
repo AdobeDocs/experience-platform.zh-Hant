@@ -5,7 +5,7 @@ exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '1030'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -99,8 +99,8 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="將對象ID附加至對象名稱"
->abstract="選取此選項，讓Google Ad Manager 360中的對象名稱包含Experience Platform中的對象ID，如下所示： `Audience Name (Audience ID)`"
+>title="將對象 ID 附加到對象名稱"
+>abstract="選取此選項可讓 Google Ad Manager 360 中的對象名稱包含來自 Experience Platform 的對象 ID，如下所示：`Audience Name (Audience ID)`"
 
 若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
 
