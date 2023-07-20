@@ -1,10 +1,10 @@
 ---
 product: adobe experience platform
-solution: Real-time Customer Data Platform
+solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 1dea63c4efc4d8effed56c0cf97a35594f92a8d0
+source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 96%

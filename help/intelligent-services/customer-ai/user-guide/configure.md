@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；使用手冊；customer ai；熱門主題；設定執行個體；建立執行個體；
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: 設定Customer AI執行個體
 description: AI/ML服務提供Customer AI作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下小節提供設定Customer AI執行個體的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 3bc750b5e1cf47cbca6b037d099936c80c926cf8
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2828'
 ht-degree: 0%
@@ -227,7 +227,7 @@ Customer AI會自動套用功能產生（例如「間隔天數」或「計數」
 
 ### 預測排除 *（選擇性）*
 
-如果您的資料集包含任何新增為測試資料的欄，您可以選取「 」，將該欄或事件新增至排除清單 **[!UICONTROL 新增排除專案]** 然後輸入您要排除的欄位。 這可防止在產生分數時評估符合特定條件的事件。 此功能可用來篩選掉不相關的資料輸入或促銷。
+如果您的資料集包含任何新增為測試資料的欄，您可以選取「 」，將該欄或事件新增至排除清單 **[!UICONTROL 新增排除專案]** 然後輸入您要排除的欄位。 這可防止在產生分數時，評估符合特定條件的事件。 此功能可用來篩選掉不相關的資料輸入或促銷。
 
 若要排除事件，請選取「 」 **[!UICONTROL 新增排除專案]** 和定義事件。 若要移除排除專案，請選取省略符號(**[!UICONTROL ...]**)，然後選取「 」 **[!UICONTROL 移除容器]**.
 

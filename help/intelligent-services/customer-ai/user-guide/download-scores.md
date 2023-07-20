@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；下載分數；customer ai；熱門主題；匯出；匯出；customer ai下載；customer ai分數
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: 在Customer AI中下載分數
 description: Customer AI可讓您以Parquet檔案格式下載分數。
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%

@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；快速入門；customer ai；熱門主題；customer ai輸入；customer ai輸出；資料要求
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Customer AI的資料需求
 topic-legacy: Getting started
 description: 進一步瞭解Customer AI使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 5f7b602b68f5cbf4b1f4b08603757b0956e36408
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2484'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -62,11 +62,11 @@ Customer AI的運作方式是分析以下資料集來預測流失率（客戶何
 
 | 詞語 | 定義 |
 | --- | --- |
-| [體驗資料模型(XDM)](../../xdm/home.md) | XDM是基礎架構，可讓Adobe Experience Platform支援的Adobe Experience Cloud在正確的時間透過正確的管道將正確的訊息傳遞給正確的人。 Platform使用XDM系統以特定方式組織資料，以更方便用於Platform服務。 |
+| [體驗資料模式 (XDM)](../../xdm/home.md) | XDM是基礎架構，可讓Adobe Experience Platform支援的Adobe Experience Cloud在正確的時間透過正確的管道將正確的訊息傳遞給正確的人。 Platform使用XDM系統以特定方式組織資料，以更方便用於Platform服務。 |
 | [XDM 結構](../../xdm/schema/composition.md) | Experience Platform 會使用結構，以一致且可重複使用的方式說明資料結構。藉由定義跨系統的一致資料，將可輕易保留意義，而發揮資料應有的價值。在將資料內嵌至Platform之前，必須組成結構描述來說明資料結構，並對可包含在每個欄位中的資料型別提供限制。 結構描述包含一個基本XDM類別和零個或多個結構描述欄位群組。 |
 | [XDM類別](../../xdm/schema/field-constraints.md) | 所有XDM結構描述都說明可分類為 `Experience Event`. 結構描述的資料行為由結構描述的類別定義，該類別在首次建立時指派給結構描述。 XDM類別說明結構描述必須包含的最小屬性數量，才能代表特定的資料行為。 |
 | [欄位群組](../../xdm/schema/composition.md) | 定義結構描述中一或多個欄位的元件。 欄位群組會強制實施其欄位在結構描述階層中的顯示方式，因此會在其包含的每個結構描述中顯示相同的結構。 欄位群組僅與特定類別相容，由識別專案群組 `meta:intendedToExtend` 屬性。 |
-| [資料型別](../../xdm/schema/composition.md) | 也可以為結構描述提供一個或多個欄位的元件。 不過，與欄位群組不同，資料型別不受限於特定類別。 這讓資料型別成為描述通用資料結構的更具彈性的選項，這些資料結構可重複用於具有不同類別的多個結構描述。 CEE和Adobe Analytics架構均支援本檔案中概述的資料型別。 |
+| [資料類型](../../xdm/schema/composition.md) | 也可以為結構描述提供一個或多個欄位的元件。 不過，與欄位群組不同，資料型別不受限於特定類別。 這讓資料型別成為描述通用資料結構的更具彈性的選項，這些資料結構可重複用於具有不同類別的多個結構描述。 CEE和Adobe Analytics架構均支援本檔案中概述的資料型別。 |
 | [即時客戶個人檔案](../../profile/home.md) | Real-time Customer Profile提供集中式消費者設定檔，用於針對性和個人化的體驗管理。 每個設定檔都包含彙總所有系統的資料，以及在您用於Experience Platform的任何系統中發生的涉及個人之事件的可操作時間戳記帳戶。 |
 
 ## Customer AI輸入資料 {#customer-ai-input-data}

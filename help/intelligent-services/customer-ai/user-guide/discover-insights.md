@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；深入分析；customer ai；熱門主題；customer ai深入分析
-solution: Experience Platform, Real-time Customer Data Platform
+solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: 探索Customer AI的深入分析
 description: 本檔案可作為在Intelligent Services Customer AI使用者介面中與服務執行個體見解互動的指南。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: e4e30fb80be43d811921214094cf94331cbc0d38
+source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 1%
