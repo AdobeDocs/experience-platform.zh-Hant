@@ -7,7 +7,7 @@ feature: Privacy
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '93'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 92%
 * [隱私權 JS 資料庫概觀](./js-library.md)
 * Privacy Service API {#api}
    * [概觀](./api/overview.md)
-   * [驗證及存取Privacy ServiceAPI](./api/getting-started.md)
+   * [驗證並存取 Privacy Service API](./api/getting-started.md)
    * [隱私權職位](./api/privacy-jobs.md)
    * [同意](./api/consent.md)
    * [附錄](./api/appendix.md)
