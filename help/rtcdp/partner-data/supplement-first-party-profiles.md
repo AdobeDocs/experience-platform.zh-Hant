@@ -4,9 +4,9 @@ description: 了解如何使用受信任資料合作夥伴的屬性來補充第�
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 019ebe0c1cf11a7fb30dced1e10b511bab9b5100
-workflow-type: ht
-source-wordcount: '1082'
+source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
+workflow-type: tm+mt
+source-wordcount: '1083'
 ht-degree: 100%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。
 
-![使用合作夥伴提供的屬性使用案例高層級視覺化概觀擴充設定檔。](/help/rtcdp/assets/partner-data/enrichment-use-case-overview.png)
+![使用合作夥伴提供的屬性使用案例高層級視覺化概觀擴充設定檔。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
 ## 必要條件和規劃 {#prerequisites-and-planning}
 
@@ -36,7 +36,7 @@ ht-degree: 100%
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 
-![使用合作夥伴提供的屬性使用案例高層級視覺化概觀擴充設定檔。](/help/rtcdp/assets/partner-data/enrichment-use-case-steps.png)
+![使用合作夥伴提供的屬性使用案例高層級視覺化概觀擴充設定檔。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-steps.png)
 
 1. 身為&#x200B;**客戶**，您會向&#x200B;**資料合作夥伴**&#x200B;取得授權。
 2. 身為&#x200B;**客戶**，您會擴充您的設定檔資料和治理模式以和&#x200B;**合作夥伴**&#x200B;提供的屬性相符。
