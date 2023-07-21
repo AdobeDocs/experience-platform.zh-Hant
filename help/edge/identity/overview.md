@@ -3,10 +3,10 @@ title: 平台Web SDK中的身分資料
 description: 瞭解如何使用Adobe Experience Platform Web SDK擷取和管理Adobe Experience Cloud ID (ECID)。
 keywords: 身分；第一方身分；身分服務；第三方身分；ID移轉；訪客ID；第三方身分；thirdPartyCookiesEnabled；idMigrationEnabled；getIdentity；同步身分；syncIdentity；sendEvent；identityMap；主要；ecid；身分名稱空間；名稱空間id；authenticationState；hashEnabled；
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 0edd9422d6ea1b8e3aeaba1b24bc38b42ca809d8
+source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
 workflow-type: tm+mt
-source-wordcount: '1404'
-ht-degree: 0%
+source-wordcount: '1418'
+ht-degree: 1%
 
 ---
 
@@ -91,7 +91,7 @@ alloy("sendEvent", {
       "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
         {
           "id": "1234",
-          "authenticatedState": "ambiguous",
+          "authenticatedState": "authenticated",
           "primary": true
         }
       ]
@@ -99,6 +99,11 @@ alloy("sendEvent", {
   }
 });
 ```
+
+>[!NOTE]
+>
+>Adobe建議傳送代表個人的名稱空間，例如 `CRMID`，作為主要身分。
+
 
 內的每個屬性 `identityMap` 代表屬於特定身分識別 [身分名稱空間](../../identity-service/namespaces.md). 屬性名稱應為身分名稱空間符號，您可以在「 」下方的Adobe Experience Platform使用者介面中找到該符號[!UICONTROL 身分]「。 屬性值應該是與該身分名稱空間相關的身分陣列。
 
@@ -108,7 +113,7 @@ alloy("sendEvent", {
 
 身分陣列中的每個身分物件包含下列屬性：
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `id` | 字串 | **（必要）** 您要為指定的名稱空間設定的ID。 |
 | `authenticationState` | 字串 | **（必要）** ID的驗證狀態。 可能的值包括 `ambiguous`， `authenticated`、和 `loggedOut`. |
