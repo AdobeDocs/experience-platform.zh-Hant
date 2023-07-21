@@ -2,10 +2,10 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 6%
+source-wordcount: '1041'
+ht-degree: 3%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="私密 SSH 金鑰"
->abstract="私密 SSH 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。"
+>abstract="私人SSH金鑰必須是RSA格式的Base64編碼字串，而且不能有密碼保護。"
 
 如果您選取 **[!UICONTROL 使用密碼的SFTP]** 要連線至您的SFTP位置的驗證型別：
 
@@ -108,7 +108,7 @@ ht-degree: 6%
 * **[!UICONTROL 網域]**：填入SFTP帳戶的IP位址或網域名稱
 * **[!UICONTROL 連線埠]**：您的SFTP儲存位置使用的連線埠；
 * **[!UICONTROL 使用者名稱]**：登入SFTP儲存位置的使用者名稱；
-* **[!UICONTROL SSH金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。
+* **[!UICONTROL SSH金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密金鑰必須是RSA格式的Base64編碼字串，且不得受密碼保護。
 * **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
 
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
