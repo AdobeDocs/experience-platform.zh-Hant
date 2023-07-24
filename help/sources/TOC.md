@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 68c6d579d43b4137e3107d3ab102300dc8304c90
+source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '990'
 ht-degree: 11%
 
 ---
@@ -62,7 +62,6 @@ ht-degree: 11%
       - [OneTrust整合](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics 連接器](connectors/crm/ms-dynamics.md)
-      - [SAP Hybris聯結器](connectors/crm/sap-hybris.md)
       - [Salesforce聯結器](connectors/crm/salesforce.md)
       - [SugarCRM聯結器](connectors/crm/sugarcrm.md)
       - [Veeva CRM聯結器](connectors/crm/veeva.md)
@@ -94,6 +93,7 @@ ht-degree: 11%
       - [Snowflake聯結器](connectors/databases/snowflake.md)
       - [teradata Vantage聯結器](connectors/databases/teradata-vantage.md)
    - 電子商務 {#ecommerce}
+      - [SAP商務](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - 本機系統 {#local-system}
@@ -140,7 +140,6 @@ ht-degree: 11%
          - [OneTrust整合](tutorials/api/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
-         - [SAP Hybris](tutorials/api/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM帳戶與連絡人](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM事件](tutorials/api/create/crm/sugarcrm-events.md)
@@ -173,6 +172,7 @@ ht-degree: 11%
          - [teradata優勢](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
+         - [SAP商務](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
       - 行銷自動化 {#marketing-automation}
@@ -261,7 +261,6 @@ ht-degree: 11%
          - [OneTrust整合](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
-         - [SAP Hybris](tutorials/ui/create/crm/sap-hybris.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [SugarCRM帳戶與連絡人](tutorials/ui/create/crm/sugarcrm-accounts-contacts.md)
          - [SugarCRM事件](tutorials/ui/create/crm/sugarcrm-events.md)
@@ -293,6 +292,7 @@ ht-degree: 11%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [teradata優勢](tutorials/ui/create/databases/teradata-vantage.md)
       - 電子商務 {#ecommerce}
+         - [SAP商務](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - 本機系統 {#local-system}
@@ -336,7 +336,7 @@ ht-degree: 11%
    - [訂閱來源警示](tutorials/ui/alerts.md)
    - [將資料流儲存為草稿](tutorials/ui/draft.md)
 - 自助來源（批次SDK） {#sdk}
-   - [總覽](sources-sdk/overview.md)
+   - [概觀](sources-sdk/overview.md)
    - 設定您的連線規格 {#config}
       - [設定選項](sources-sdk/config/config.md)
       - [設定驗證規格](sources-sdk/config/authspec.md)
