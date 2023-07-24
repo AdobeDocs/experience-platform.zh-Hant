@@ -2,7 +2,7 @@
 title: 透過Offer decisioning個人化
 description: 瞭解如何使用伺服器API透過Offer decisioning傳遞和演算個人化體驗。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3047a03e7a911c48a6d4e4c07117af45fa78f678
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 4%
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # 透過Offer decisioning個人化
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Edge Network Server API可以提供受管理的個人化體驗 [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) 至網路頻道。
 
@@ -25,7 +25,7 @@ Edge Network Server API可以提供受管理的個人化體驗 [offer decisionin
 
 您必須先在資料流設定上啟用Adobe Experience Platform個人化，然後啟用「伺服器API與Offer Decisioning」，您才能使用 **[!UICONTROL offer decisioning]** 選項。
 
-請參閱 [新增服務至資料流的指南](../edge/datastreams/overview.md#adobe-experience-platform-settings)，以取得如何啟用Offer Decisioning的詳細資訊。
+請參閱 [新增服務至資料流的指南](../datastreams/overview.md#adobe-experience-platform-settings)，以取得如何啟用Offer Decisioning的詳細資訊。
 
 ![顯示資料流服務設定畫面的UI影像，其中選取Offer decisioning](assets/aep-od-datastream.png)
 

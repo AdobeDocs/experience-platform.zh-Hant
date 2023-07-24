@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年9月
 description: Adobe Experience Platform 2022年9月版本注意事項。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2940'
 ht-degree: 19%
@@ -112,7 +112,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | [[!DNL Snap Conversions API] 擴充功能](https://exchange.adobe.com/apps/ec/108550) 用於事件轉送 | 您現在可以將資料傳送至 [!DNL Snapchat Conversions API] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 副檔名。 有關如何驗證和使用API的詳細資訊，請參閱 [[!DNL Snapchat Marketing API] 檔案](https://marketingapi.snapchat.com/docs/conversion.html). |
 | [[!DNL User-Agent Client Hints] 在Web SDK中](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK現在支援 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 使用者端提示可讓網站擁有者存取 [!DNL User-Agent] 字串，但採用更能保護隱私的方式。 |
 | [Web SDK逐頁移轉](../../edge/home.md#migrating-to-web-sdk) | 您現在可以從其他Experience Cloud程式庫移轉現有的Web屬性，例如 [!DNL at.js]，一次一個頁面。 如此可分階段移轉Web SDK，而不需要一次移轉所有頁面。 |
-| [[!DNL Adobe Journey Optimizer] 支援資料串流](../../edge/datastreams/overview.md#aep) | 適用於資料串流的Adobe Experience Platform服務現在支援 [!DNL Adobe Journey Optimizer]. 此選項可讓您在中使用網頁和應用程式型傳入頻道 [!DNL Adobe Journey Optimizer]. |
+| [[!DNL Adobe Journey Optimizer] 支援資料串流](../../datastreams/overview.md#aep) | 適用於資料串流的Adobe Experience Platform服務現在支援 [!DNL Adobe Journey Optimizer]. 此選項可讓您在中使用網頁和應用程式型傳入頻道 [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
 

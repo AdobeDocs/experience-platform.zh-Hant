@@ -2,10 +2,10 @@
 solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API快速入門
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '960'
-ht-degree: 6%
+source-wordcount: '959'
+ht-degree: 5%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 6%
 
 提出工作階段開始要求之前，您需要具備下列條件：
 
-* 此 `datastreamId`—POST工作階段開始要求的必要引數。 擷取 `datastreamId`，請參閱 [設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=zh-Hant).
+* 此 `datastreamId`—POST工作階段開始要求的必要引數。 擷取 `datastreamId`，請參閱 [設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant).
 
 * 請求承載的JSON物件，包含最低要求資料（如以下請求範例所示）。
 

@@ -3,7 +3,7 @@ title: 事件轉送概觀
 description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 7%
@@ -81,7 +81,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 
 ### 規則 {#rules}
 
-在事件轉送屬性中建立規則的運作方式與標籤類似，主要差異在於您無法選取事件作為規則元件。 事件轉送規則會處理所有從接收的事件。 [資料串流](../../../edge/datastreams/overview.md) 並在符合特定條件時將事件轉送至目的地。
+在事件轉送屬性中建立規則的運作方式與標籤類似，主要差異在於您無法選取事件作為規則元件。 事件轉送規則會處理所有從接收的事件。 [資料串流](../../../datastreams/overview.md) 並在符合特定條件時將事件轉送至目的地。
 
 此外，有一個30秒的逾時，會套用至單一事件，因為單一事件會在事件轉送屬性內的所有規則（以及因此產生的所有動作）中處理。 這表示單一事件的所有規則和所有動作都必須在此時間範圍內完成。
 

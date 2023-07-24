@@ -3,7 +3,7 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 2%
@@ -80,7 +80,7 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 ![資料流設定](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-如需如何設定資料串流的詳細資訊，請依照 [Platform Web SDK檔案](../../edge/datastreams/configure.md#aep).
+如需如何設定資料串流的詳細資訊，請依照 [Platform Web SDK檔案](../../datastreams/configure.md#aep).
 
 ### 建立 [!DNL Active-On-Edge] 合併原則 {#create-merge-policy}
 

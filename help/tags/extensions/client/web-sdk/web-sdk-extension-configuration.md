@@ -2,10 +2,10 @@
 title: 設定Adobe Experience Platform Web SDK擴充功能
 description: 如何在UI中設定Adobe Experience Platform Web SDK標籤擴充功能。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1185'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -52,7 +52,7 @@ Adobe Experience Platform Web SDK擴充功能支援頁面上的多個執行個�
 
 當請求傳送至Adobe Experience Platform Edge Network時，會使用資料串流ID來參考伺服器端設定。 您可以更新設定，而無須在您的網站上變更程式碼。
 
-請參閱指南： [資料串流](../../../../edge/datastreams/overview.md) 以取得詳細資訊。
+請參閱指南： [資料串流](../../../../datastreams/overview.md) 以取得詳細資訊。
 
 
 ## [!UICONTROL 隱私]
@@ -112,12 +112,12 @@ SDK可以自動收集您的連結點選資訊。 此功能預設為啟用，但�
 
 資料流設定覆寫是兩個步驟的程式：
 
-1. 首先，您必須在以下位置定義資料流設定覆寫： [資料流設定頁面](../../../../edge/datastreams/configure.md).
-2. 然後，您必須透過Web SDK命令或使用Web SDK標籤擴充功能，將覆寫傳送至Edge Network。
+1. 首先，您必須在[資料流設定頁面](../../../../datastreams/configure.md)中定義您的資料流設定覆寫。
+2. 接著，您必須透過 Web SDK 命令或使用 Web SDK 標記擴充功能將覆寫傳送至 Edge Network。
 
-檢視資料流 [設定覆寫檔案](../../../../edge/datastreams/overrides.md) 以取得有關如何覆寫資料流設定的詳細說明。
+檢視資料流 [設定覆寫檔案](../../../../datastreams/overrides.md) 以取得有關如何覆寫資料流設定的詳細說明。
 
-除了透過Web SDK命令傳遞覆寫之外，您也可以在下面顯示的標籤擴充功能畫面中設定覆寫。
+除了透過Web SDK命令傳遞覆寫外，您也可以在下面顯示的標籤擴充功能畫面中設定覆寫。
 
 ![此影像顯示Web SDK標籤擴充功能頁面中的資料流設定覆寫。](assets/datastream-overrides.png)
 

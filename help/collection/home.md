@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料彙集概觀
 description: 瞭解在Adobe Experience Platform中收集客戶體驗資料的相關各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 13c02dd5930905e3851ff147c0ea4d914e3dc6c7
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -25,12 +25,12 @@ Adobe Experience Platform提供了一套技術，可讓您從使用者端來源�
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [標記](../tags/home.md)
-* [資料串流](../edge/datastreams/overview.md)
+* [資料串流](../datastreams/overview.md)
 * [事件轉送](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
-* [體驗資料模型(XDM)](../xdm/home.md)
+* [體驗資料模式 (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
 本指南提供資料收集的高層級簡介，並說明如何透過Platform Edge Network將資料傳送至Adobe Experience Cloud產品和非Adobe應用程式。
@@ -45,9 +45,9 @@ Platform Web SDK和Platform Mobile SDK可分別收合所有Adobe產品程式庫�
 
 ## Platform Edge Network和資料串流 {#edge}
 
-Platform Edge Network是分散於全球且快速可靠的伺服器網路，可接收及處理超大規模資料。 使用標籤，您可以設定 [資料串流](../edge/datastreams/overview.md) 適用於Adobe Target、Adobe Audience Manager和Adobe Analytics等產品，可讓您在伺服器端啟用這些產品，而不需變更使用者端代碼。
+Platform Edge Network是分散於全球且快速可靠的伺服器網路，可接收及處理超大規模資料。 使用標籤，您可以設定 [資料串流](../datastreams/overview.md) 適用於Adobe Target、Adobe Audience Manager和Adobe Analytics等產品，可讓您在伺服器端啟用這些產品，而不需變更使用者端代碼。
 
-此外，資料串流還與數項平台功能整合，有助於確保您傳送的任何敏感資料都會根據組織政策和法規受到適當處理。 請參閱以下小節： [處理敏感資料](../edge/datastreams/overview.md#sensitive) 如需詳細資訊，請參閱資料串流檔案。
+此外，資料串流還與數項平台功能整合，有助於確保您傳送的任何敏感資料都會根據組織政策和法規受到適當處理。 請參閱以下小節： [處理敏感資料](../datastreams/overview.md#sensitive) 如需詳細資訊，請參閱資料串流檔案。
 
 ![資料串流和Adobe解決方案](./images/home/adobe-solutions.png)
 

@@ -2,7 +2,7 @@
 title: Adobe Commerce目的地聯結器
 description: 瞭解Adobe Commerce和Real-Time CDP商家如何透過提供高度相關的網站內容和促銷活動，並根據Real-Time CDP內建立和管理之客戶對象進行自訂，來個人化購物體驗。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 3%
@@ -29,7 +29,7 @@ ht-degree: 3%
 
 - [方案](../../../xdm/schema/composition.md). 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [瞭解更多](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html) 有關如何建立包含Commerce特定欄位群組的結構描述。
 - [資料集](../../../catalog/datasets/user-guide.md#create). 資料集是資料集合的儲存和管理結構。 您會使用先前建立的結構描述建立此資料集。
-- [資料流](../../../edge/datastreams/overview.md#create). 可讓資料從Adobe Experience Platform流向其他AdobeDX產品的ID。 此ID必須與您特定Adobe Commerce執行個體中的特定網站相關聯。 當您建立此資料流時，請指定您在上面建立的XDM結構描述。
+- [資料流](../../../datastreams/overview.md#create). 可讓資料從Adobe Experience Platform流向其他AdobeDX產品的ID。 此ID必須與您特定Adobe Commerce執行個體中的特定網站相關聯。 當您建立此資料流時，請指定您在上面建立的XDM結構描述。
 
 完成先決條件後，請連線至 [!DNL Commerce] 目的地。
 
@@ -53,7 +53,7 @@ ht-degree: 3%
 - **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 - **[!UICONTROL 說明]**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
 - **[!UICONTROL 整合別名]**：此值會以JSON物件名稱的形式傳送至Experience PlatformWeb SDK。
-- **[!UICONTROL 資料串流ID]**：這會決定哪些資料收集資料串流包含頁面回應中所包含的對象。 下拉式選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../edge/datastreams/overview.md) 以取得更多詳細資料。
+- **[!UICONTROL 資料串流ID]**：這會決定哪些資料收集資料串流包含頁面回應中所包含的對象。 下拉選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../datastreams/overview.md) 以取得更多詳細資料。
 
 ### 啟用警示 {#enable-alerts}
 

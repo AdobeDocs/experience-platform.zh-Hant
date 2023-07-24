@@ -2,7 +2,7 @@
 title: 驗證
 description: 瞭解如何設定Adobe Experience Platform Edge Network Server API的驗證。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 2%
@@ -11,13 +11,13 @@ ht-degree: 2%
 
 # 驗證 {#authentication}
 
-## 總覽
+## 概觀
 
 此 [!DNL Edge Network Server API] 根據事件來源和API收集網域，處理已驗證和未驗證的資料收集。
 
 對於每個請求， [!DNL Server API] 驗證資料流 [!DNL access type] 設定。 使用此設定，客戶可以設定資料串流以接受已驗證的資料，或同時接受已驗證和未驗證的資料。 預設情況下，接受兩種型別的資料。
 
-如需設定資料流存取型別的詳細資訊，請參閱如何設定的檔案。 [建立及設定資料串流](../edge/datastreams/overview.md#create).
+如需設定資料流存取型別的詳細資訊，請參閱如何設定的檔案。 [建立及設定資料串流](../datastreams/overview.md#create).
 
 以下是根據資料流的行為摘要 [!DNL Access Type] 設定和接收請求的端點。
 

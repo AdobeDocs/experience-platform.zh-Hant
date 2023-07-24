@@ -2,7 +2,7 @@
 title: 稽核記錄概觀
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7bb81a103c6b2a7d0baec22c927f575764bc3730
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
 ht-degree: 43%
@@ -46,7 +46,7 @@ ht-degree: 43%
 | 計算屬性 | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [Customer AI執行個體](../../../intelligent-services/customer-ai/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li></ul> |
 | [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用對象 [即時客戶個人檔案](../../../profile/home.md)</li><li>為設定檔停用</li><li>新增資料</li><li>刪除批次</li></ul> |
-| [資料流](../../../edge/datastreams/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>[編輯對應](../../../edge/datastreams/data-prep.md)</li></ul> |
+| [資料流](../../../datastreams/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>[編輯對應](../../../datastreams/data-prep.md)</li></ul> |
 | [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟動</li><li>資料集移除</li><li>設定檔啟動</li><li>設定檔移除</li></ul> |
 | [欄位群組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |

@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform發行說明2022年2月
-description: Adobe Experience Platform的2022年2月發行說明。
+title: Adobe Experience Platform 發行說明 (2022 年 2 月)
+description: Adobe Experience Platform 2022 年 2 月版發行說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e2342a8a7d03074ac26fbd129a2e7fd520ccb0c3
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1019'
-ht-degree: 9%
+ht-degree: 26%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 9%
 >
 >此版本已從原始日期2月23日改為3月7日。
 
-Adobe Experience Platform 現有功能更新：
+Adobe Experience Platform 現有功能的更新：
 
 - [[!DNL Dashboards]](#dashboards)
 - [[!DNL Data collection]](#data-collection)
@@ -37,23 +37,23 @@ Adobe Experience Platform提供多個 [!DNL dashboards] 您可以透過它檢視
 
 如需詳細資訊，請參閱 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概觀](../../dashboards/home.md).
 
-## 資料彙集 {#data-collection}
+## 資料集合 {#data-collection}
 
-Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將其傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將其分發到Adobe或非Adobe目的地。
+ Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
 
 **新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 改善資料流設定的UI工作流程 | 更新在資料收集UI中建立新資料流的工作流程。 將服務新增至資料流時，只有您有權存取的服務會包含在選項清單中。 請參閱指南： [設定資料串流](../../edge/datastreams/overview.md) 以取得詳細資訊。 |
-| 資料收集的資料準備 | 如果您使用Adobe Experience Platform Web SDK，您現在可以運用資料準備功能，將您的資料對應至伺服器端的Experience Data Model (XDM)。 請參閱以下小節： [資料收集的資料準備](../../edge/datastreams/data-prep.md) 如需詳細資訊，請參閱資料串流指南。 |
+| 改善資料流設定的UI工作流程 | 更新在資料收集UI中建立新資料流的工作流程。 將服務新增至資料流時，只有您有權存取的服務會包含在選項清單中。 請參閱指南： [設定資料串流](../../datastreams/overview.md) 以取得詳細資訊。 |
+| 資料收集的資料準備 | 如果您使用Adobe Experience Platform Web SDK，您現在可以運用資料準備功能，將您的資料對應至伺服器端的Experience Data Model (XDM)。 請參閱以下小節： [資料收集的資料準備](../../datastreams/data-prep.md) 如需詳細資訊，請參閱資料串流指南。 |
 | 第一方裝置ID | 使用Platform Web SDK收集客戶資料時，您現在可以將自己的裝置ID傳送至Adobe Experience Platform Edge Network，針對第三方Cookie有效期限的最新瀏覽器限制提供因應措施。 請參閱指南： [第一方裝置ID](../../edge/identity/first-party-device-ids.md) 以取得詳細資訊。 |
 
 如需Platform資料收集的詳細資訊，請參閱 [資料彙集概觀](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新功能或更新功能**
 
@@ -77,9 +77,9 @@ Adobe Experience Platform [!DNL Identity Service] 透過跨裝置和系統橋接
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 **更新的功能**
 

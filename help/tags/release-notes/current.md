@@ -2,10 +2,10 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 626330395c2d6b813d5d2157e92ada77ab4f96b1
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 **Quick Stark工作流程（測試版）**
 
-從資料收集首頁畫面存取「快速入門」底下的全新快速入門工作流程！ 以下工作流程現在可作為公開測試版提供給客戶。
+從「資料集合」首頁畫面存取「快速入門」下全新的快速入門工作流程！以下工作流程現在可作為公開測試版提供給客戶。
 * **[中繼轉換API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**：事件轉送客戶可以快速收集並轉送事件資料，從伺服器端到中繼只要幾個簡單步驟就能進行廣告轉換。
 * **[行動SDK](https://developer.adobe.com/client-sdks/documentation/)**：客戶只需幾個簡單步驟，即可快速實作Mobile SDK並驗證基本行動事件。
 
@@ -39,11 +39,11 @@ ht-degree: 3%
 
 ## 2023 年 1 月 25 日
 
-* **新主畫面**：資料收集UI首頁已更新，加入實用的入門資訊和連結，以簡化生產力。 其中包括:
-   1. 開始使用的檔案和建議工作流程
-   1. 最近使用的屬性、規則和資料元素
-   1. 熱門擴充功能
-   1. 包含快速安裝功能的新擴充功能更新
+* **新主畫面**：資料收集UI首頁已更新，加入實用的入門資訊和連結，以簡化生產力。 其中包括：
+   1. 入門的文件和推薦的工作流程
+   1. 最近的屬性、規則和資料元素
+   1. 熱門的擴充功能
+   1. 附帶快速安裝功能的新擴充功能更新
 * **傳送資料至 [!DNL Google Ads] 使用事件轉送**：您現在可以使用 [[!DNL Google Ads Enhanced Conversions] API擴充功能](../extensions/server/google-ads-enhanced-conversions/overview.md) 用於事件轉送，結合 [Google Oauth 2秘密](../ui/event-forwarding/secrets.md#google-oauth2)，以安全地傳送伺服器端資料至 [!DNL Google Ads] 即時。
 
 ## 2022 年 11 月 23 日
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 ## 2022 年 10 月 26 日
 
-* **資料串流的敏感資料處理**：資料串流現在運用數種平台技術，可適當處理由健康保險便利與責任法案(HIPAA)等法規強制執行的敏感資料。 請參閱以下小節： [處理資料串流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得詳細資訊。
+* **資料串流的敏感資料處理**：資料串流現在運用數種平台技術，可適當處理由健康保險便利與責任法案(HIPAA)等法規強制執行的敏感資料。 請參閱以下小節： [處理資料串流中的敏感資料](../../datastreams/overview.md#sensitive) 以取得詳細資訊。
 * **[!DNL Splunk]事件轉送的擴充功能**：您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 副檔名。 請參閱 [[!DNL Splunk] 擴充功能概觀](../extensions/server/splunk/overview.md) 以取得詳細資訊。
 * **[!DNL Zendesk]事件轉送的擴充功能**：您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../ui/event-forwarding/overview.md) 副檔名。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../extensions/server/zendesk/overview.md) 以取得詳細資訊。
 

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2022年10月
 description: Adobe Experience Platform的2022年10月發行說明。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 8bbac729324ad5bd701f8609c443092ddb045b96
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1328'
-ht-degree: 2%
+ht-degree: 29%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 2%
 **發行日期：2022 年 10 月 26 日**
 
 - [客戶管理的金鑰](#cmk)
-- [資料彙集](#data-collection)
+- [資料集合](#data-collection)
 - [目的地](#destinations)
-- [體驗資料模型](#xdm)
+- [體驗資料模式](#xdm)
 - [查詢服務](#query-service)
 - [來源](#sources-sources)
 
@@ -26,15 +26,15 @@ ht-degree: 2%
 
 請參閱以下文章的概觀： [客戶自控金鑰](../../landing/governance-privacy-security/customer-managed-keys.md) 以取得功能的詳細資訊。
 
-## 資料彙集 {#data-collection}
+## 資料集合 {#data-collection}
 
-Adobe Experience Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將其傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將其分發到Adobe或非Adobe目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料串流的敏感資料處理 | 資料串流現在運用數種平台技術，以適當方式處理由健康保險便利與責任法案(HIPAA)等法規強制執行的敏感資料。 請參閱以下小節： [處理資料串流中的敏感資料](../../edge/datastreams/overview.md#sensitive) 以取得詳細資訊。 |
+| 資料串流的敏感資料處理 | 資料串流現在運用數種平台技術，以適當方式處理健康保險流通與責任法案(HIPAA)等法規所強制執行的敏感資料。 請參閱以下小節： [處理資料串流中的敏感資料](../../datastreams/overview.md#sensitive) 以取得詳細資訊。 |
 | [!DNL Splunk] 事件轉送的擴充功能 | 您現在可以將資料傳送至 [!DNL Splunk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 副檔名。 請參閱 [[!DNL Splunk] 擴充功能概觀](../../tags/extensions/server/splunk/overview.md) 以取得詳細資訊。 |
 | [!DNL Zendesk] 事件轉送的擴充功能 | 您現在可以將資料傳送至 [!DNL Zendesk] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 副檔名。 請參閱 [[!DNL Zendesk] 擴充功能概觀](../../tags/extensions/server/zendesk/overview.md) 以取得詳細資訊。 |
 
@@ -42,7 +42,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的與目標平台的整合，可無縫啟用Adobe Experience Platform的資料。 您可以使用目的地，針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告和許多其他使用案例，啟用已知和未知的資料。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新功能或更新功能**
 
@@ -53,7 +53,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 
 {style="table-layout:auto"}
 
-**新的或更新目的地** {#new-or-updated-destinations}
+**新目的地或更新的目的地** {#new-or-updated-destinations}
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
@@ -69,33 +69,33 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 
 {style="table-layout:auto"}
 
-**新增或更新後的檔案**
+**新文件或更新的文件**
 
 | 文件 | 說明 |
 | ----------- | ----------- |
 | [目的地護欄](../../destinations/guardrails.md) | 此頁面提供與啟用行為相關的預設使用量和速率限制。 |
 
-如需有關目的地的詳細一般資訊，請參閱 [目的地概觀](../../destinations/home.md).
+如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
-## 體驗資料模型(XDM) {#xdm}
+## 體驗資料模式 (XDM) {#xdm}
 
-XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提供通用結構和定義（結構描述）。 藉由遵守XDM標準，所有客戶體驗資料都可以整合到通用表示中，以更快、更整合的方式提供深入分析。 您可以從客戶動作獲得有價值的深入分析、透過區段定義客戶對象，以及使用客戶屬性進行個人化。
+XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
-**已更新XDM元件**
+**已更新的 XDM 元件**
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 資料型別 | [[!UICONTROL 工作階段詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 已更新 `authorized` 欄位（從布林值型別轉換為字串）。 `season` 和 `episode` 已由整數變更為字串。 |
-| 資料型別 | [[!UICONTROL 廣告詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 已重新命名為 `friendlyName`、和 `ID` 已重新命名為 `name`. |
-| 資料型別 | [[!UICONTROL 錯誤詳細資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 已重新命名為 `name`。 |
+| 資料類型 | [[!UICONTROL 工作階段細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 已更新 `authorized` 欄位（從布林值型別轉換為字串）。 `season` 和 `episode` 已由整數變更為字串。 |
+| 資料類型 | [[!UICONTROL 廣告細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 已重新命名為 `friendlyName`、和 `ID` 已重新命名為 `name`. |
+| 資料類型 | [[!UICONTROL 錯誤細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 已重新命名為 `name`。 |
 
 {style="table-layout:auto"}
 
-如需有關Platform中XDM的詳細資訊，請參閱 [XDM系統總覽](../../xdm/home.md).
+如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準SQL在Adobe Experience Platform中查詢資料 [!DNL Data Lake]. 您可以從以下位置聯結任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或內嵌至即時客戶個人檔案。
+查詢服務可讓您使用標準的 SQL 查詢 Adob&#x200B;&#x200B;e Experience Platform 中的資料[!DNL Data Lake]。您可以從以下位置聯結任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或內嵌至即時客戶個人檔案。
 
 **更新的功能**
 
@@ -106,14 +106,13 @@ XDM是開放原始碼規格，針對帶入Adobe Experience Platform的資料提�
 
 {style="table-layout:auto"}
 
-如需查詢服務的詳細資訊，請參閱 [查詢服務總覽](../../query-service/home.md).
-Adobe Experience Platform中的新功能：
+如需有關查詢服務的詳細資訊，請參閱[查詢服務概觀](../../query-service/home.md)。Adobe Experience Platform中的新功能：
 
 ## 來源 {#sources}
 
-Adobe Experience Platform可從外部來源擷取資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以內嵌來自各種來源的資料，例如Adobe應用程式、雲端儲存、協力廠商軟體和您的CRM系統。
+Adobe Experience Platform可從外部來源擷取資料，同時允許您使用Platform服務來建構、加標籤及增強該資料。 您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
 
-Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資料提供者的來源連線。 這些來源連線可讓您驗證並連線至外部儲存系統和CRM服務、設定擷取執行的時間，以及管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 **更新的功能**
 
@@ -121,4 +120,4 @@ Experience Platform提供RESTful API和互動式UI，讓您輕鬆設定各種資
 | --- | --- | 
 | Adobe Workfront來源的測試版可用性 | 使用 [Adobe Workfront來源](../../sources/connectors/adobe-applications/workfront.md) 將您的Workfront資料帶入Experience Platform並執行使用案例，例如將您的工作記錄與協力廠商資料結合、對工作記錄套用歷史與時間序列分析，以及使用標準SQL查詢工作資料。 如需詳細資訊，請閱讀以下指南： [在使用者介面中建立Workfront來源連線](../../sources/tutorials/ui/create/adobe-applications/workfront.md). |
 
-若要進一步瞭解來源，請閱讀 [來源概觀](../../sources/home.md).
+若要了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。

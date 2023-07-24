@@ -2,7 +2,7 @@
 title: 存取ECID
 description: 瞭解如何從「資料準備」或「標籤」存取Experience CloudID
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 此 [!DNL Experience Cloud Identity (ECID)] 是使用者造訪您的網站時指派給使用者的永久識別碼。 在某些情況下，您可能會偏好存取 [!DNL ECID] （例如，傳送給協力廠商）。 另一個使用案例是設定 [!DNL ECID] 在自訂XDM欄位中，身分對應中也會有。
 
-您可以透過以下方式存取ECID： [資料收集的資料準備](../../../../edge/datastreams/data-prep.md) （建議使用）或透過標籤。
+您可以透過以下方式存取ECID： [資料收集的資料準備](../../../../datastreams/data-prep.md) （建議使用）或透過標籤。
 
 ## 透過資料準備存取ECID （偏好方法） {#accessing-ecid-data-prep}
 

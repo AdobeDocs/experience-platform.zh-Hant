@@ -2,9 +2,9 @@
 title: Adobe Commerce來源聯結器
 description: 瞭解如何使用Adobe Commerce來源，將您的商務資料帶入Experience Platform。
 last-substantial-update: 2023-06-21T00:00:00Z
-source-git-commit: 49098cd11249a44ad7780857e85d054ece864046
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '542'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,6 @@ Adobe Experience Platform來源支援Adobe Commerce的整合，允許商家將�
 * 成功安裝聯結器擴充功能後，請在Experience Cloud中登入您的Adobe帳戶並 [確認您的組織ID](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html?lang=en#concept_EA8AEE5B02CF46ACBDAD6A8508646255). 此ID與您布建的Experience Cloud公司相關聯。 其格式為24個字元的英數字串，並包含必要字串 `@AdobeOrg`.
 * 接下來，使用商務特定欄位群組建立或更新您的Experience Data Model (XDM)結構描述。 如需有關如何將Commerce特定欄位群組新增到XDM結構描述的詳細步驟，請閱讀以下指南： [將欄位群組新增至XDM結構描述](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html).
 * 設定結構描述後，您必須根據新結構描述建立資料集。 然後，此資料集將包含 [!DNL Commerce] 您傳送的資料。 如需如何為建立資料集的詳細步驟 [!DNL Commerce] 資料，請閱讀以下內容中的指南： [傳送資料至Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html?lang=en#create-a-dataset).
-* 接下來，建立資料串流，並選取包含您的Commerce特定欄位群組的XDM結構描述。 如需資料串流的詳細資訊，請參閱 [資料串流概觀](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html).
+* 接下來，建立資料串流，並選取包含您的Commerce特定欄位群組的XDM結構描述。 如需資料串流的詳細資訊，請參閱 [資料串流概觀](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=zh-Hant).
 * 接著，您必須將Adobe Commerce執行個體連結至 [商務服務聯結器](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html). 這可讓您的Commerce執行個體部署為SaaS （軟體即服務）。
 * 完成上述所有設定後，您現在可以使用設定Commerce Services Connector和Experience Platform Connector來連線到Experience Platform [!DNL Commerce Admin]. 如需此最終步驟的詳細資訊，請閱讀以下指南： [將Commerce資料連結至Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/connect-data.html).

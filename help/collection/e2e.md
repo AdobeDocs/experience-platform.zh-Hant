@@ -2,7 +2,7 @@
 title: 資料收集端對端總覽
 description: 有關如何使用Adobe Experience Platform的資料收集功能將事件資料傳送至Adobe Experience Cloud解決方案的高層級概觀。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: f619bbf2c8d313eabc6444b4bd8c09615a00cc42
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '2621'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Experience Platform會收集您的資料並傳輸至其他Adobe產品和�
 >
 >如果您不想使用標籤，也可以選擇手動安裝及設定SDK，但周圍的步驟仍必須完成，如下所示。
 >
->所有涉及資料收集UI的步驟也可以在Experience PlatformUI中執行。
+>所有涉及資料收集UI的步驟也可在Experience PlatformUI中執行。
 
 ## 先決條件
 
@@ -103,7 +103,7 @@ Adobe Experience Platform會收集您的資料並傳輸至其他Adobe產品和�
 
 ![資料串流](./images/e2e/datastreams.png)
 
-資料串流的設定需求取決於您要將資料傳送至哪些產品和功能。 如需每個產品組態選項的詳細資訊，請參閱 [資料串流概觀](../edge/datastreams/overview.md).
+資料串流的設定需求取決於您要將資料傳送至哪些產品和功能。 如需每個產品組態選項的詳細資訊，請參閱 [資料串流概觀](../datastreams/overview.md).
 
 ## 安裝及設定Web SDK {#install}
 

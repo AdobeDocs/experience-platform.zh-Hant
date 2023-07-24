@@ -2,7 +2,7 @@
 title: 透過Adobe Target個人化
 description: 瞭解如何使用伺服器API來傳遞和轉譯在Adobe Target中建立的個人化體驗。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 47cd73e45ac618a8a84aa3c47b91d5e2a107e7f4
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 1%
@@ -17,13 +17,13 @@ Edge Network Server API可協助提供和轉譯在Adobe Target中建立的個人
 
 >[!IMPORTANT]
 >
->透過建立的個人化體驗 [Target視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 伺服器API不完全支援。 伺服器API可以 **retrieve** 由VEC建立的活動，但伺服器API無法 **轉譯** VEC建立的活動。 如果您想要轉譯VEC建立的活動，請實作 [混合個人化](../edge/personalization/hybrid-personalization.md) 使用Web SDK和Edge Network Server API。
+>透過建立的個人化體驗 [Target視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=en) 伺服器API尚未完全支援。 伺服器API可以 **retrieve** 由VEC建立的活動，但伺服器API無法 **轉譯** VEC建立的活動。 如果您想要轉譯VEC建立的活動，請實作 [混合個人化](../edge/personalization/hybrid-personalization.md) 使用Web SDK和Edge Network Server API。
 
 ## 設定您的資料串流 {#configure-your-datastream}
 
 您必須先在資料流設定上啟用Adobe Target個人化，才能將伺服器API與Adobe Target搭配使用。
 
-請參閱 [新增服務至資料流的指南](../edge/datastreams/overview.md#adobe-target-settings)，以取得如何啟用Adobe Target的詳細資訊。
+請參閱 [新增服務至資料流的指南](../datastreams/overview.md#adobe-target-settings)，以取得如何啟用Adobe Target的詳細資訊。
 
 設定資料流時，您可以（選擇性）提供以下專案的值： [!DNL Property Token]， [!DNL Target Environment ID]、和 [!DNL Target Third Party ID Namespace].
 

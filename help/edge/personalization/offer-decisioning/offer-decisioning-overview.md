@@ -3,7 +3,7 @@ title: 搭配Platform Web SDK使用Offer Decisioning
 description: Adobe Experience Platform Web SDK可以提供並轉譯Offer Decisioning管理的個人化優惠。 您可以使用Offer decisioningUI或API建立您的優惠方案與其他相關物件。
 keywords: offer decisioning；決策；Web SDK；平台Web SDK；個人化優惠；提供優惠；優惠傳遞；優惠個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 5%
@@ -32,28 +32,28 @@ Adobe Experience Platform [!DNL Web SDK] 可以傳遞和轉譯受Offer Decisioni
 
 * **決定範圍：** 對於Offer decisioning，決定範圍是JSON的Base64編碼字串，包含您希望offer decisioning服務用來建議優惠的活動和位置ID。
 
-   *決定範圍JSON：*
+  *決定範圍JSON：*
 
-   ```json
-   {
-     "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-     "placementId":"xcore:offer-placement:1175009612b0100c"
-   }
-   ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-   *決定範圍Base64編碼字串：*
+  *決定範圍Base64編碼字串：*
 
-   ```json
-   "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-   ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-   >[!TIP]
-   >
-   >您可以從以下位置複製決定範圍值： **活動概覽** UI中的頁面。
+  >[!TIP]
+  >
+  >您可以從以下位置複製決定範圍值： **活動概覽** UI中的頁面。
 
-   ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
-* **資料串流：** 如需詳細資訊，請閱讀 [資料串流](../../datastreams/overview.md) 說明檔案。
+* **資料串流：** 如需詳細資訊，請閱讀 [資料串流](../../../datastreams/overview.md) 說明檔案。
 
 * **身分**：如需詳細資訊，請閱讀本檔案並概述如何 [Platform Web SDK使用Identity Service](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Adobe Experience Platform [!DNL Web SDK] 可以傳遞和轉譯受Offer Decisioni
 
 若要啟用Offer Decisioning，請執行下列步驟：
 
-1. 在您的中啟用Adobe Experience Platform [資料串流](../../datastreams/overview.md) 並勾選「Offer decisioning」方塊
+1. 在您的中啟用Adobe Experience Platform [資料串流](../../../datastreams/overview.md) 並勾選「Offer decisioning」方塊
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -81,6 +81,7 @@ Adobe Experience Platform [!DNL Web SDK] 可以傳遞和轉譯受Offer Decisioni
              ]
           })
          ```
+
    * 透過標籤安裝SDK
 
       1. [建立標籤屬性](../../../tags/ui/administration/companies-and-properties.md)
@@ -101,10 +102,9 @@ Adobe Experience Platform [!DNL Web SDK] 可以傳遞和轉譯受Offer Decisioni
 
          * 新增Platform Web SDK傳送事件動作並新增相關的 `decisionScopes` 至該動作的設定
 
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+
       1. [建立及發佈程式庫](../../../tags/ui/publishing/libraries.md) 包含所有已設定的相關規則、資料元素和擴充功能
-
-
 
 ## 範例請求和回應
 

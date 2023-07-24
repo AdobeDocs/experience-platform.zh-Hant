@@ -3,7 +3,7 @@ title: 使用Web SDK和Edge Network Server API的混合個人化
 description: 本文示範如何搭配使用Web SDK與伺服器API，在Web屬性上部署混合式個人化。
 keywords: 個人化；混合；伺服器api；伺服器端；混合實作；
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: a9887535b12b8c4aeb39bb5a6646da88db4f0308
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 3%
@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # 使用Web SDK和Edge Network Server API的混合個人化
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Hybdrid個人化會說明在伺服器端擷取個人化內容的程式，使用 [Edge Network Server API](../..//server-api/overview.md)，並在使用者端轉譯，使用 [Web SDK](../home.md).
 
@@ -65,7 +65,7 @@ Cookie可用來儲存使用者身分和叢集資訊。  使用混合實作時，
 
 實作混合個人化時，您必須特別注意，才不會在Analytics中多次計算頁面點選。
 
-當您 [設定資料串流](../datastreams/overview.md) 對於Analytics，會自動轉送事件，以便擷取頁面點選。
+當您 [設定資料串流](../../datastreams/overview.md) 對於Analytics，會自動轉送事件，以便擷取頁面點選。
 
 此實作的範例使用兩個不同的資料串流：
 
@@ -162,7 +162,7 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | 參數 | 類型 | 必填 | 說明 |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | 可以。 | 用來傳遞互動至Edge Network的資料串流的ID。 請參閱 [資料串流概觀](../datastreams/overview.md) 以瞭解如何設定資料串流。 |
+| `dataStreamId` | `String` | 可以。 | 用來傳遞互動至Edge Network的資料串流的ID。 請參閱 [資料串流概觀](../../datastreams/overview.md) 以瞭解如何設定資料串流。 |
 | `requestId` | `String` | 無 | 用於關聯內部伺服器請求的隨機ID。 如果未提供，Edge Network將會產生一個，並在回應中傳回。 |
 
 ### 伺服器端回應 {#server-response}

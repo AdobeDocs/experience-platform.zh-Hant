@@ -3,7 +3,7 @@ title: 搭配Platform Web SDK使用Adobe Target
 description: 瞭解如何使用Adobe Target以Experience Platform Web SDK呈現個人化內容
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5a048505be139b58dbb3bf85120df5e3cc46881e
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1318'
 ht-degree: 6%
@@ -52,7 +52,7 @@ ht-degree: 6%
 
 若要啟用 [!DNL Target]，請執行下列動作：
 
-1. 啟用 [!DNL Target] 在您的 [資料串流](../../datastreams/overview.md) 並附上適當的使用者端代碼。
+1. 啟用 [!DNL Target] 在您的 [資料串流](../../../datastreams/overview.md) 並附上適當的使用者端代碼。
 1. 新增 `renderDecisions` 選項新增至您的事件。
 
 然後，您也可選擇新增下列選項：
@@ -175,7 +175,7 @@ alloy("sendEvent",
 * 在 `"__adobe.target"` 底下。
 * 前置詞 `"profile."` 例如，如下所示
 
-| 代碼 | 類型 | 說明 |
+| 索引鍵 | 類型 | 說明 |
 | --- | --- | --- |
 | `renderDecisions` | 布林值 | 指示個人化元件是否應解譯DOM動作 |
 | `decisionScopes` | 陣列 `<String>` | 要擷取決定的範圍清單 |

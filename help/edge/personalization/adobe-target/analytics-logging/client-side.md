@@ -5,7 +5,7 @@ seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: target；a4t；記錄；web sdk；體驗；平台；
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: de420d3bbf35968fdff59b403a0f2b18110f3c17
+source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Platform Web SDK中A4T資料的使用者端記錄
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 Adobe Experience Platform Web SDK可讓您收集 [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 網頁應用程式使用者端的資料。
 
@@ -40,7 +40,7 @@ Adobe Experience Platform Web SDK可讓您收集 [Adobe Analytics for Target (A4
 
 ### 啟用Analytics使用者端記錄 {#enable-analytics-client-side-logging}
 
-若要考慮為實作啟用Analytics使用者端記錄，您必須在以下專案中停用Adobe Analytics設定： [資料串流](../../../datastreams/overview.md).
+若要考慮為實作啟用Analytics使用者端記錄，您必須在以下專案中停用Adobe Analytics設定： [資料串流](../../../../datastreams/overview.md).
 
 ![Analytics資料流設定已停用](../assets/disable-analytics-datastream.png)
 
@@ -212,8 +212,7 @@ Target Edge計算主張回應時，會檢查是否啟用Analytics使用者端記
 >
 >在下節提供的實施範例中，會反複收集多個Analytics Token。 若要串連Analytics權杖陣列，請使用類似下列的函式：
 >
->
-```javascript
+>```javascript
 >var concatenateAnalyticsPayloads = function concatenateAnalyticsPayloads(analyticsPayloads) {
 >   if (analyticsPayloads.size > 1) {
 >       return [].concat(analyticsPayloads).join(',');

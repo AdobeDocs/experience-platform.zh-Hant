@@ -3,7 +3,7 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者個人資料對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 8%
@@ -59,7 +59,7 @@ ht-degree: 8%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../edge/datastreams/overview.md). |
+| 匯出型別 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../datastreams/overview.md). |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## 連線到目的地 {#connect}
@@ -83,7 +83,7 @@ ht-degree: 8%
 * **[!UICONTROL 名稱]**：填寫此目的地的偏好名稱。
 * **[!UICONTROL 說明]**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
 * **[!UICONTROL 整合別名]**：此值會以JSON物件名稱的形式傳送至Experience PlatformWeb SDK。
-* **[!UICONTROL 資料串流ID]**：這會決定要將對象包含在頁面的回應中的資料收集資料串流。 下拉選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../edge/datastreams/overview.md) 以取得更多詳細資料。
+* **[!UICONTROL 資料串流ID]**：這會決定要將對象包含在頁面的回應中的資料收集資料串流。 下拉選單僅顯示已啟用目的地設定的資料流。另請參閱 [設定資料串流](../../../datastreams/overview.md) 以取得更多詳細資料。
 
 ### 啟用警示 {#enable-alerts}
 

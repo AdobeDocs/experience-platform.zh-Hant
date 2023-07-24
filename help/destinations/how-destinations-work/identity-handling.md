@@ -1,15 +1,15 @@
 ---
-title: 目的地啟用工作流程中的身分處理
+title: 目的地啟動工作流程中的身分處理
 description: 瞭解在啟用工作流程中如何根據目的地型別處理身分匯出
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1186'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# 目的地啟用工作流程中的身分處理
+# 目的地啟動工作流程中的身分處理
 
 此頁面說明身分識別如何匯出至不同目的地型別的特殊性，並教導您如何根據目的地找到哪些身分識別可供匯出。
 
@@ -82,7 +82,7 @@ ht-degree: 1%
 
 這些目的地需要透過以下任一方式進行ID同步： [!UICONTROL Experience CloudID服務] 或透過 [!UICONTROL Experience PlatformWeb SDK].
 
-如果您使用 [!UICONTROL Experience PlatformWeb SDK] 和舊版 [!UICONTROL Experience CloudID服務] 未在頁面上實作，則您需要確保相關網站的資料流已啟用，以允許同步協力廠商ID，如 [設定資料流檔案](/help/edge/datastreams/configure.md#create).
+如果您使用 [!UICONTROL Experience PlatformWeb SDK] 和舊版 [!UICONTROL Experience CloudID服務] 未在頁面上實作，則您需要確保相關網站的資料流已啟用，以允許同步協力廠商ID，如 [設定資料流檔案](/help/datastreams/configure.md#create).
 
 如上方連結的檔案所述，在設定資料串流時，您需要確保 **[!UICONTROL 協力廠商ID同步]** 滑桿已啟用。 大部分客戶都會離開 `container_id` 欄位空白（預設為0）。 如果您的舊版Audience Manager實作使用特定容器ID，您才需要變更此值（但請注意，這將為極少數客戶）。
 

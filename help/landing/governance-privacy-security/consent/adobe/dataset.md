@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 設定資料集以擷取同意和偏好設定資料
 description: 瞭解如何設定Experience Data Model (XDM)結構描述和資料集，以擷取Adobe Experience Platform中的同意和偏好設定資料。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%
@@ -26,7 +26,6 @@ ht-degree: 0%
 >* 標準化的同意欄位群組
 >* 由您的組織建立的自訂同意欄位群組
 >* 標準化同意欄位群組和自訂同意欄位群組提供之其他欄位的組合
-
 
 ## 先決條件
 
@@ -160,7 +159,7 @@ ht-degree: 0%
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-資料集現在已儲存並啟用，以供使用 [!DNL Profile]. 如果您打算使用Platform Web SDK將同意資料傳送至設定檔，您必須選取此資料集作為 [!UICONTROL 設定檔資料集] 設定您的 [資料串流](../../../../edge/datastreams/overview.md).
+資料集現在已儲存並啟用，以供使用 [!DNL Profile]. 如果您打算使用Platform Web SDK將同意資料傳送至設定檔，您必須選取此資料集作為 [!UICONTROL 設定檔資料集] 設定您的 [資料串流](../../../../datastreams/overview.md).
 
 ## 後續步驟
 
