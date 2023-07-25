@@ -1,9 +1,9 @@
 ---
 description: 此頁面是透過Adobe Experience Platform Destination SDK建立目的地伺服器所使用的API呼叫的範例。
 title: 建立目的地伺服器設定
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1696'
 ht-degree: 9%
 
 ---
@@ -44,7 +44,11 @@ ht-degree: 9%
 POST /authoring/destination-servers
 ```
 
-根據您建立的目的地型別，您需要設定稍微不同的目的地伺服器型別。 請參閱下方標籤中目標伺服器的範例，瞭解Destination SDK支援的每個目標型別。
+根據您建立的目的地型別，您需要設定稍微不同的目的地伺服器型別。
+
+### 建立靜態結構描述目的地伺服器 {#static-destination-servers}
+
+請參閱下方標籤中的目的地伺服器範例，瞭解使用的目的地 [靜態結構描述](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
 以下範例裝載包含每個目的地伺服器型別支援的所有引數。 您不需要在請求中包含所有引數。 可根據您的需求自訂裝載。
 
@@ -770,6 +774,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
+>[!ENDTABS]
+
+### 建立動態結構描述目的地伺服器 {#dynamic-schema-servers}
+
+動態方案可讓您動態擷取支援的目標屬性，並根據您自己的API產生方案。 您必須先設定動態結構描述的目的地伺服器，才能設定結構描述。
+
+請參閱下方標籤中的目的地伺服器範例，瞭解使用的目的地 [動態結構描述](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+
+以下範例裝載包含動態結構描述伺服器所需的所有引數。
+
+>[!BEGINTABS]
+
 >[!TAB 動態結構描述伺服器]
 
 **建立動態結構描述伺服器**
@@ -827,6 +843,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 成功的回應會傳回HTTP狀態200以及您新建立的目的地伺服器組態的詳細資料。
 
 +++
+
 
 >[!ENDTABS]
 

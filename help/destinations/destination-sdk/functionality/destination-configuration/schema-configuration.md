@@ -1,9 +1,9 @@
 ---
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
-source-git-commit: 20dc7b31f75e88badac17faa542e046598632690
+source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
 workflow-type: tm+mt
-source-wordcount: '1892'
+source-wordcount: '1898'
 ht-degree: 4%
 
 ---
@@ -48,7 +48,7 @@ Experience Platform 會使用結構，以一致且可重複使用的方式說明
 Destination SDK支援多個結構描述設定：
 
 * 靜態結構描述是透過 `profileFields` 中的陣列 `schemaConfig` 區段。 在靜態結構描述中，您會定義應顯示在Experience PlatformUI中的每個目標屬性 `profileFields` 陣列。 如果您需要更新結構描述，必須 [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md).
-* 動態結構描述會使用其他目的地伺服器型別，稱為 [動態結構描述伺服器](../../authoring-api/destination-server/create-destination-server.md)，以根據您自己的API動態產生結構描述。 動態結構描述不會使用 `profileFields` 陣列。 如果您需要更新結構描述，則無需 [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md). 而是由動態結構描述伺服器從您的API擷取更新的結構描述。
+* 動態結構描述會使用其他目的地伺服器型別，稱為 [動態結構描述伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers)，以動態擷取支援的目標屬性，並根據您自己的API產生結構描述。 動態結構描述不會使用 `profileFields` 陣列。 如果您需要更新結構描述，則無需 [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md). 而是由動態結構描述伺服器從您的API擷取更新的結構描述。
 * 在架構設定中，您可以選擇新增必要（或預先定義）的對應。 這些是使用者可以在Platform UI中檢視的對應，但在設定與目的地的連線時無法加以修改。 例如，您可以強制電子郵件位址列位一律傳送至目的地。
 
 此 `schemaConfig` 區段會根據您需要的結構描述型別，使用多個設定引數，如下節所示。
@@ -126,7 +126,7 @@ Destination SDK支援建立動態合作夥伴結構描述。 相對於靜態結�
 
 >[!IMPORTANT]
 >
->在建立動態結構描述之前，您必須 [建立動態結構描述伺服器](../../authoring-api/destination-server/create-destination-server.md).
+>在建立動態結構描述之前，您必須 [建立動態結構描述伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers).
 
 在動態結構描述設定中， `profileFields` 陣列由 `dynamicSchemaConfig` 區段，如下所示。
 
