@@ -1,7 +1,7 @@
 ---
 description: 瞭解如何格式化API呼叫，以透過Adobe Experience Platform Destination SDK提交目的地發佈請求。
 title: 建立目的地發佈請求
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+source-git-commit: 8ec5d450d2856b9a12457e1b1b0b46baf930253a
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%
@@ -69,9 +69,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 {style="table-layout:auto"}
 
++++
+
 +++回應
 
 成功的回應會傳回HTTP狀態201以及目的地發佈請求的詳細資料。
+
++++
 
 ## API錯誤處理
 
