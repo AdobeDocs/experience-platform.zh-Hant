@@ -4,9 +4,9 @@ description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-time Cust
 hidefromtoc: true
 hide: true
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 8c9d736c8d2c45909a2915f0f1d845a7ba4d876d
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1834'
 ht-degree: 3%
 
 ---
@@ -37,6 +37,20 @@ ht-degree: 3%
 LiveRamp SFTP支援身分啟用，例如PII型識別碼、已知識別碼和自訂ID，如官方檔案所述 [LiveRamp檔案](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers).
 
 在 [對應步驟](#map) 在啟動工作流程中，您必須將目標對應定義為自訂屬性。
+
+## 支援的對象 {#supported-audiences}
+
+本節說明您可以匯出至此目的地的所有對象。
+
+所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+
+此外，此目的地也支援啟用下表所述的對象。
+
+| 對象型別 | 說明 |
+---------|----------|
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#importing-an-audience) 從CSV檔案進入Experience Platform。 |
+
+{style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -190,7 +204,9 @@ Platform會將兩個CSV檔案匯出至 [!DNL LiveRamp SFTP]：
 * 一個包含對象A、C和D的CSV檔案；
 * 一個包含對象B的CSV檔案。
 
-匯出的CSV檔案包含具有所選屬性和對應對象狀態的設定檔，位於單獨的欄上，並以屬性名稱和對象ID作為欄標題。
+匯出的CSV檔案包含具有所選屬性和對應對象狀態的設定檔，位於獨立的欄中，並具有屬性名稱，以及 `audience_namespace:audience_ID` 做為欄標題配對，如下列範例所示：
+
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
 
 匯出檔案中包含的設定檔可符合下列其中一個對象資格狀態：
 
@@ -198,11 +214,10 @@ Platform會將兩個CSV檔案匯出至 [!DNL LiveRamp SFTP]：
 * `Expired`：設定檔不再符合對象的資格，但過去曾經符合資格。
 * `""`（空字串）：設定檔從未符合對象的資格。
 
-
-例如，匯出的CSV檔案中有一個 `email` 屬性和3個對象看起來可能像這樣：
+例如，匯出的CSV檔案中有一個 `email` 屬性，兩個來自Experience Platform的對象 [細分服務](../../../segmentation/home.md)，和一個 [已匯入](../../../segmentation/ui/overview.md#importing-an-audience) 外部對象，看起來可能像這樣：
 
 ```csv
-email,aa2e3d98-974b-4f8b-9507-59f65b6442df,45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -210,6 +225,8 @@ abc116@testemailabc.com,active,,
 abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
+
+在上述範例中， `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` 和 `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 區段會說明源自Segmentation Service的對象，而 `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` 說明匯入Platform作為 [自訂上傳](../../../segmentation/ui/overview.md#importing-an-audience).
 
 因為Platform會為每個CSV檔案產生一個 [合併原則ID](../../../profile/merge-policies/overview.md)，也會為每個合併原則ID產生個別的資料流執行。
 
