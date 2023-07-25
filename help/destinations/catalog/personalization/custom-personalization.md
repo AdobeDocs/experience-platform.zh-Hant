@@ -3,10 +3,10 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者個人資料對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d8c1e41b90b5b81dd8475bd697f31ba27551e7fa
+source-git-commit: c12a48686997ff69aea24f41bf5cbd9b89fcc57a
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 7%
+source-wordcount: '934'
+ht-degree: 8%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 7%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流 ID"
 >abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含對象。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream.html" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 > 
