@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 source-git-commit: 7dfbf7c1d9d12e8e1fb654cf357d31a91611a18e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '231'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -67,6 +67,6 @@ ht-degree: 96%
 * 使用案例 {#use-cases}
    * 合作夥伴資料使用案例 {#partner-data}
       * [補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [透過潛在客戶支援來吸引和贏取新客戶](/help/rtcdp/partner-data/prospecting.md)
+      * [透過挖掘潛在客戶支援吸引並獲取新客戶](/help/rtcdp/partner-data/prospecting.md)
 * [Experience Platform 發行說明](https://www.adobe.com/go/platform-release-notes_tw)。
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary_tw)
