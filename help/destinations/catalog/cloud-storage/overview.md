@@ -1,12 +1,12 @@
 ---
 keywords: 雲端儲存空間目的地；雲端儲存空間
 title: 雲端儲存空間目的地概觀
-description: Adobe Experience Platform可將您的對象以資料檔案形式傳送至您的Amazon S3、AWS Kinesis、Azure事件中樞或SFTP雲端儲存位置。
+description: Adobe Experience Platform可將您的對象以資料檔案的形式傳送至您的Amazon S3、AWS Kinesis、Azure事件中樞或SFTP雲端儲存位置。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 3f31a54c0cf329d374808dacce3fac597a72aa11
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 3%
+source-wordcount: '385'
+ht-degree: 4%
 
 ---
 
@@ -14,26 +14,26 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-Adobe Experience Platform可將您的對象以資料檔案的形式傳送至雲端儲存位置。 這可讓您透過以下專案的CSV檔案將對象及其設定檔屬性傳送至您的內部系統： [!DNL Amazon S3]， [!DNL Azure Blob]， [!DNL Azure Data Lake Storage Gen2]， [!DNL Data Landing Zone]， [!DNL Google Cloud Storage]和SFTP。 對象 [!DNL Amazon Kinesis] 和 [!DNL Azure Event Hubs] 目的地，資料會以串流方式從Experience Platform傳出 [!DNL JSON] 格式。
+Adobe Experience Platform能以資料檔案的形式將您的對象傳送至您的雲端儲存位置。 這可讓您透過的CSV檔案將對象及其設定檔屬性傳送至您的內部系統 [!DNL Amazon S3]， [!DNL Azure Blob]， [!DNL Azure Data Lake Storage Gen2]， [!DNL Data Landing Zone]， [!DNL Google Cloud Storage]和SFTP。 的 [!DNL Amazon Kinesis] 和 [!DNL Azure Event Hubs] 目的地，資料會串流處理出Experience Platform於 [!DNL JSON] 格式。
 
 ![Adobe雲端儲存空間目的地](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## 支援的雲端儲存空間目的地 {#supported-destinations}
 
-Adobe Experience Platform支援下列雲端儲存空間目的地：
+Adobe Experience Platform支援將資料匯出至下列雲端儲存空間目的地：
 
 * [Amazon Kinesis連線](amazon-kinesis.md)
 * [Amazon S3連線](amazon-s3.md)
 * [Azure Blob連線](azure-blob.md)
-* [(Beta) Azure Data Lake Storage Gen2](adls-gen2.md)
+* [Azure Data Lake Storage Gen2](adls-gen2.md)
 * [Azure事件中樞連線](azure-event-hubs.md)
-* [(Beta)資料登陸區域](data-landing-zone.md)
-* [(Beta) Google雲端儲存空間](google-cloud-storage.md)
+* [Data Landing Zone](data-landing-zone.md)
+* [Google雲端儲存空間](google-cloud-storage.md)
 * [sftp連線](sftp.md)
 
 ## 連線到新的雲端儲存空間目的地 {#connect-destination}
 
-若要將對象傳送至您行銷活動的雲端儲存體目的地，Platform必須先連線至目的地。 請參閱 [目的地建立教學課程](../../ui/connect-destination.md) 以取得設定新目的地的詳細資訊。
+若要將對象傳送至行銷活動的雲端儲存空間目的地，平台必須先連線至目的地。 請參閱 [目的地建立教學課程](../../ui/connect-destination.md) 以取得關於設定新目的地的詳細資訊。
 
 
 ## 使用巨集在您的儲存位置建立檔案夾 {#use-macros}
@@ -46,7 +46,7 @@ Adobe Experience Platform支援下列雲端儲存空間目的地：
 
 ![如何使用巨集在儲存空間中建立資料夾](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-下列範例會參考範例對象 `Luxury Audience` 包含ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+以下範例引用了範例對象 `Luxury Audience` 具有ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **巨集1：`%SEGMENT_NAME%`**
 
@@ -65,4 +65,10 @@ Adobe Experience Platform支援下列雲端儲存空間目的地：
 
 ## 資料匯出型別 {#export-type}
 
-雲端儲存空間目的地支援 **以設定檔為基礎的匯出**. 這表示您正在匯出對象中個人的詳細資訊。 個人化需要這些詳細資訊，可能包括屬性、事件、對象會籍等。
+雲端儲存空間目的地支援下列匯出型別：
+* **以設定檔為基礎的匯出**. 這表示您正在匯出對象中個人的詳細資訊。 這些是個人化所需的詳細資料，可包含屬性、事件、對象會籍等。
+* [!BADGE Beta]{type=Informative}**資料集匯出**. 此功能可讓您將整個資料集匯出至雲端儲存目的地。 [閱讀全文](/help/destinations/ui/export-datasets.md) 關於功能。
+
+## 後續步驟 {#next-steps}
+
+選取下列專案之一 [支援的雲端目的地](#supported-destinations) 若要使用，請閱讀 [連線到目的地教學課程](/help/destinations/ui/connect-destination.md) 以瞭解如何建立與目的地的連線。 然後，閱讀檔案型目的地的啟動教學課程，以瞭解如何開始 [匯出](/help/destinations/ui/activate-batch-profile-destinations.md) 資料至您的雲端儲存空間目的地。

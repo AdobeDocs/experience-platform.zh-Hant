@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1164'
 ht-degree: 9%
 
 ---
@@ -24,30 +24,30 @@ ht-degree: 9%
 * API教學課程 {#api}
    * [雲端儲存空間目的地的API移轉指南](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
    * [使用流量服務API連線到串流目的地並啟用資料](./api/streaming-destinations.md)
-   * [連線至批次雲端儲存空間及電子郵件行銷目的地，並使用Flow Service API啟用資料](./api/connect-activate-batch-destinations.md)
-   * [（Beta版）透過臨機啟動API將受眾啟動至批次目的地](./api/ad-hoc-activation-api.md)
+   * [連線至批次雲端儲存空間及電子郵件行銷目標，並使用流量服務API啟用資料](./api/connect-activate-batch-destinations.md)
+   * [（測試版）透過臨機啟動API將受眾啟動至批次目的地](./api/ad-hoc-activation-api.md)
    * [編輯目的地](./api/edit-destination.md)
-   * [更新目的地資料流程](./api/update-destination-dataflows.md)
+   * [更新目的地資料流](./api/update-destination-dataflows.md)
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
-   * [（測試版）使用流量服務API，將資料啟用至檔案型目的地](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [（測試版）使用流量服務API啟用檔案型目的地的資料](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta)匯出資料集](/help/destinations/api/export-datasets.md)
 * UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
    * 對目的地啟用受眾資料{#activate}
       * [Activation 總覽](./ui/activation-overview.md)
-      * [啟用受眾至串流受眾匯出目的地](./ui/activate-segment-streaming-destinations.md)
-      * [啟用受眾至串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md)
+      * [啟用受眾以串流受眾匯出目標](./ui/activate-segment-streaming-destinations.md)
+      * [啟用受眾以串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md)
       * [啟用對象以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md)
       * [啟用對象以邊緣個人化目的地](./ui/activate-edge-personalization-destinations.md)
       * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [（測試版）使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
-      * [（測試版）使用新Beta版雲端儲存目的地中的最後資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
+      * [（測試版）在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
    * [刪除目的地帳戶](./ui/delete-destination-account.md)
-   * [編輯啟動資料流程](./ui/edit-activation.md)
+   * [編輯啟動資料流](./ui/edit-activation.md)
    * [刪除目的地](./ui/delete-destinations.md)
    * [監視資料流](./ui/monitor-dataflows.md)
    * [（測試版）設定檔案型目的地的檔案格式選項](./ui/batch-destinations-file-formatting-options.md)
@@ -59,7 +59,7 @@ ht-degree: 9%
       * [(Beta)Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platform受眾共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 廣告目的地{#advertising}
       * [Advertising目的地概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud連線](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -71,16 +71,16 @@ ht-degree: 9%
       * [分支擴充功能](./catalog/advertising/branch.md)
       * [(Beta) Criteo連線](./catalog/advertising/criteo.md)
       * [DoubleClick Floodlight (Beta)擴充功能](./catalog/advertising/doubleclick-floodlight.md)
-      * [facebook Pixel擴充功能](./catalog/advertising/facebook-pixel.md)
+      * [facebook畫素擴充功能](./catalog/advertising/facebook-pixel.md)
       * [Flashtalking OneTag擴充功能](./catalog/advertising/flashtalking.md)
       * [Google Ads連線](./catalog/advertising/google-ads-destination.md)
       * [Google Ads擴充功能](./catalog/advertising/google-ads-extension.md)
-      * [Google Ad Manager連線](./catalog/advertising/google-ad-manager.md)
-      * [（測試版） Google Ad Manager 360連線](./catalog/advertising/google-ad-manager-360-connection.md)
+      * [Google廣告管理員連線](./catalog/advertising/google-ad-manager.md)
+      * [(Beta) Google Ad Manager 360連線](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match連線](./catalog/advertising/google-customer-match.md)
       * [Google顯示和視訊360連線](./catalog/advertising/google-dv360.md)
       * [Google gtag擴充功能](./catalog/advertising/gtag-advertising.md)
-      * [linkedIn Insight Tag擴充功能](./catalog/advertising/linkedin.md)
+      * [linkedIn Insight標籤擴充功能](./catalog/advertising/linkedin.md)
       * [(Alpha) LiveRamp - SFTP連線](./catalog/advertising/liveramp.md)
       * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
@@ -96,8 +96,8 @@ ht-degree: 9%
       * [Adobe Analytics 擴充功能](./catalog/analytics/adobe-analytics.md)
       * [Adobe Media Analytics for Audio and Video 擴充功能](./catalog/analytics/adobe-video-analytics.md)
       * [Clicktale擴充功能](./catalog/analytics/clicktale.md)
-      * [Contentsquare擴充功能](./catalog/analytics/contentsquare.md)
-      * [分貝延伸](./catalog/analytics/decibel.md)
+      * [Contentsquare副檔名](./catalog/analytics/contentsquare.md)
+      * [Decibel副檔名](./catalog/analytics/decibel.md)
       * [Demandbase擴充功能](./catalog/analytics/demandbase.md)
       * [DialogTech擴充功能](./catalog/analytics/dialogtech.md)
       * [Google全域網站標籤擴充功能](./catalog/analytics/gtag-analytics.md)
@@ -107,7 +107,7 @@ ht-degree: 9%
       * [Nielsen IMA處理常式擴充功能](./catalog/analytics/nielsen-ima.md)
       * [Nielsen VideoJS播放器處理常式擴充功能](./catalog/analytics/nielsen-videojs.md)
       * [Parse.ly Analytics擴充功能](./catalog/analytics/parsely.md)
-      * [Quantum Metric擴充功能](./catalog/analytics/quantum-metric.md)
+      * [Quantum Metric延伸模組](./catalog/analytics/quantum-metric.md)
       * [SessionCam延伸](./catalog/analytics/sessioncam.md)
       * [TMMData延伸模組](./catalog/analytics/tmmdata.md)
       * [Yext轉換追蹤擴充功能](./catalog/analytics/yext.md)
@@ -116,10 +116,10 @@ ht-degree: 9%
       * [Amazon Kinesis連線](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3連線](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob連線](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
+      * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure事件中樞連線](./catalog/cloud-storage/azure-event-hubs.md)
-      * [(Beta)資料登陸區域](./catalog/cloud-storage/data-landing-zone.md)
-      * [(Beta) Google雲端儲存空間](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [Google雲端儲存空間](./catalog/cloud-storage/google-cloud-storage.md)
       * [sftp連線](./catalog/cloud-storage/sftp.md)
       * [SFTP目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 客戶關係管理(CRM)目的地 {#crm}
@@ -129,7 +129,7 @@ ht-degree: 9%
       * [Zendesk 連線](catalog/crm/zendesk.md)
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
-      * [Audience ManagerDIL擴充功能](./catalog/data-management/aam-dil-extension.md)
+      * [Audience ManagerDIL延伸模組](./catalog/data-management/aam-dil-extension.md)
    * 電子郵件目的地 {#email}
       * [Bizible擴充功能](./catalog/email/bizible.md)
       * [Marketo擴充功能](./catalog/email/marketo.md)
@@ -161,7 +161,7 @@ ht-degree: 9%
       * [Adobe Target連線](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 擴充功能](./catalog/personalization/adobe-target-v2.md)
-      * [Beemray擴充功能](./catalog/personalization/beemray.md)
+      * [Beemray延伸模組](./catalog/personalization/beemray.md)
       * [自訂個人化連線](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence擴充功能](./catalog/personalization/dnb.md)
       * [Experience Cloud ID 服務擴充功能](./catalog/personalization/adobe-ecid.md)
@@ -172,9 +172,9 @@ ht-degree: 9%
       * [Pega 設定檔連線](./catalog/personalization/pega-profile.md)
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
-      * [AdobeLivefyre擴充功能](./catalog/social/adobe-livefyre.md)
+      * [Adobe Livefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [facebook連線](./catalog/social/facebook.md)
-      * [linkedIn相符受眾連線](./catalog/social/linkedin.md)
+      * [linkedIn比對受眾連線](./catalog/social/linkedin.md)
       * [TikTok 連線](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 連線](./catalog/social/twitter.md)
    * 串流目的地 {#streaming}
@@ -183,13 +183,13 @@ ht-degree: 9%
    * 調查目的地 {#survey}
       * [調查目的地概觀](./catalog/survey/overview.md)
       * [Foresee擴充功能目的地](./catalog/survey/foresee.md)
-      * [InMoment擴充功能](./catalog/survey/inmoment.md)
+      * [InMoment延伸模組](./catalog/survey/inmoment.md)
       * [Qualtrics網站意見回饋擴充功能](./catalog/survey/qualtrics.md)
-      * [QuestionPro Intercept Surveings擴充功能](./catalog/survey/web-intercept-surveys.md)
+      * [QuestionPro攔截調查擴充功能](./catalog/survey/web-intercept-surveys.md)
    * 客戶目的地的聲音 {#voice}
       * [客戶心聲目的地概觀](./catalog/voice/overview.md)
-      * [確認數位意見反應延伸](./catalog/voice/confirmit-digital-feedback.md)
-      * [Invoca標籤擴充功能](./catalog/voice/invoca.md)
+      * [確認數位意見延伸](./catalog/voice/confirmit-digital-feedback.md)
+      * [叫用標籤擴充功能](./catalog/voice/invoca.md)
       * [Medallia連線](./catalog/voice/medallia-connector.md)
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [交談URL收件匣擴充功能](./catalog/voice/talkurl.md)
@@ -222,24 +222,24 @@ ht-degree: 9%
       * [對象中繼資料管理](./destination-sdk/functionality/audience-metadata-management.md)
    * 指南 {#guides}
       * [使用Destination SDK設定串流目的地](./destination-sdk/guides/configure-destination-instructions.md)
-      * [使用Destination SDK設定檔案型目的地](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+      * [使用Destination SDK來設定以檔案為基礎的目的地](./destination-sdk/guides/configure-file-based-destination-instructions.md)
       * [提交以Destination SDK撰寫的目的地，以供複查](./destination-sdk/guides/submit-destination.md)
       * 設定以檔案為基礎的目的地 {#configure-file-based-destinations}
          * [設定檔案格式選項](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [使用預先定義的檔案格式選項和自訂檔案名稱設定來設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
-         * [使用自訂檔案名稱和格式設定選項設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
+         * [使用自訂檔案名稱和格式選項設定Amazon S3目的地](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-custom-file-formatting.md)
          * [使用自訂檔案格式選項和自訂檔案名稱設定來設定Azure Blob儲存體目的地](../destinations/destination-sdk/guides/batch/configure-blob-destination-with-custom-file-formatting.md)
          * [使用自訂檔案格式選項和自訂檔案名稱設定來設定Azure Data Lake儲存體目的地](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [使用自訂檔案格式選項和自訂檔案名稱設定來設定資料登陸區域(DLZ)目的地](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
    * 目的地製作API參考 {#authoring-api}
-      * [Destination SDK（目的地製作） API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Destination SDK （目的地製作） API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * 目的地伺服器作業 {#server-operations}
-         * [建立目的地伺服器設定](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
+         * [建立目的地伺服器組態](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [擷取目的地伺服器設定](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
          * [更新目的地伺服器設定](./destination-sdk/authoring-api/destination-server/update-destination-server.md)
          * [刪除目的地伺服器設定](./destination-sdk/authoring-api/destination-server/delete-destination-server.md)
-      * 目的地設定作業 {#destination-operations}
+      * 目的地設定操作 {#destination-operations}
          * [建立目的地設定](./destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md)
          * [擷取目的地設定](./destination-sdk/authoring-api/destination-configuration/retrieve-destination-configuration.md)
          * [更新目的地設定](./destination-sdk/authoring-api/destination-configuration/update-destination-configuration.md)
@@ -263,18 +263,18 @@ ht-degree: 9%
          * [使用範例設定檔測試您的串流目的地](./destination-sdk/testing-api/streaming-destinations/destination-testing-api.md)
          * [建立及測試訊息轉換範本](./destination-sdk/testing-api/streaming-destinations/create-template.md)
       * 檔案型目的地測試API {#batch-destinations}
-         * [檔案型目的地測試API概觀](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
+         * [檔案型目的地測試API概覽](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)
          * [根據來源結構描述產生範例設定檔](./destination-sdk/testing-api/batch-destinations/file-based-sample-profile-generation-api.md)
          * [使用範例設定檔測試您的檔案型目的地](./destination-sdk/testing-api/batch-destinations/file-based-destination-testing-api.md)
          * [檢視詳細的啟用結果](./destination-sdk/testing-api/batch-destinations/file-based-destination-results-api.md)
          * [驗證範本化客戶欄位](./destination-sdk/testing-api/batch-destinations/file-based-render-template-api.md)
-   * 目的地發佈API參考 {#publishing-api}
+   * Destination publishing API參考 {#publishing-api}
       * [建立目的地發佈請求](./destination-sdk/publishing-api/create-publishing-request.md)
       * [擷取目的地發佈請求](./destination-sdk/publishing-api/retrieve-publishing-request.md)
    * 記錄您的目的地 {#document-destination}
       * [在Adobe Experience Platform中記錄您的目的地](./destination-sdk/docs-framework/documentation-instructions.md)
       * [使用GitHub網頁介面建立目的地檔案頁面](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
-      * [在本機環境中使用文字編輯器來建立目的地檔案頁面](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [在本機環境中使用文字編輯器建立目的地檔案頁面](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [檔案自助服務範本](./destination-sdk/docs-framework/self-service-template.md)
       * [製作最佳實務](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [常見問答](./destinations-faq.md)

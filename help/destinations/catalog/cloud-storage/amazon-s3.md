@@ -2,10 +2,10 @@
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 5d318d8fa4207ece26a8b0a291d81907af029aed
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 12%
+source-wordcount: '975'
+ht-degree: 14%
 
 ---
 
@@ -13,37 +13,25 @@ ht-degree: 12%
 
 ## 目的地變更記錄檔 {#changelog}
 
->[!IMPORTANT]
->
->隨著匯出資料集功能的Beta版和改良的檔案匯出功能，您現在可能會看到兩個 [!DNL Amazon S3] 目的地目錄中的卡片。
->* 如果您已將檔案匯出至 **[!UICONTROL Amazon S3]** 目的地，請建立新的資料流到新的 **[!UICONTROL Amazon S3 Beta]** 目的地。
->* 如果您尚未建立任何資料流至 **[!UICONTROL Amazon S3]** 目的地，請使用新的 **[!UICONTROL Amazon S3 Beta]** 要匯出檔案的卡片 **[!UICONTROL Amazon S3]**.
+2023年7月Experience Platform發行版本中， [!DNL Amazon S3] 目的地提供新功能，如下所示：
 
-![並排檢視中的兩個Amazon S3目的地卡片影像。](../../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
-
-新功能中的改進 [!DNL Amazon S3] 目的地卡包括：
-
-* [資料集匯出支援](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[資料集匯出支援](/help/destinations/ui/export-datasets.md).
 * 其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
-* 可透過以下方式設定匯出檔案中的自訂檔案標頭： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* 可透過以下方式設定匯出檔案中的自訂檔案標題： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
-
-## 概觀 {#overview}
-
-建立與您的的即時輸出連線 [!DNL Amazon S3] 儲存空間，定期將資料檔案從Adobe Experience Platform匯出至您自己的S3貯體。
 
 ## 連線至您的 [!DNL Amazon S3] 透過API或UI儲存 {#connect-api-or-ui}
 
-* 若要連線至您的 [!DNL Amazon S3] 使用Platform使用者介面的儲存位置，請閱讀小節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 下方的。
-* 若要連線至您的 [!DNL Amazon S3] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
+* 若要連線至您的 [!DNL Amazon S3] 使用Platform使用者介面的儲存位置，請閱讀章節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 底下。
+* 若要連線至您的 [!DNL Amazon S3] 以程式設計方式儲存位置，閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
 
 ## 支援的對象 {#supported-audiences}
 
 本節說明您可以匯出至此目的地的所有對象。
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+所有目的地都支援啟用透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援啟用下表所述的對象。
+此外，此目的地也支援下表所述的對象啟用。
 
 | 對象型別 | 說明 |
 ---------|----------|
@@ -57,12 +45,12 @@ ht-degree: 12%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如&lt;客戶名稱>的「選取設定檔屬性」畫面中所選。 [目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如 [目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
-![Amazon S3設定檔型匯出型別](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Amazon S3設定檔匯出型別](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## 連線到目的地 {#connect}
 
@@ -72,17 +60,17 @@ ht-degree: 12%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證至目的地 {#authenticate}
+### 驗證到目的地 {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
 >title="RSA 公開金鑰"
 >abstract="或者，您可以附加 RSA 格式的公開金鑰以對匯出的檔案進行加密。透過下面的文件連結檢視格式正確的金鑰範例。"
 
-若要驗證目的地，請填入必填欄位並選取 **[!UICONTROL 連線到目的地]**.
+若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
-* **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]秘密金鑰**：在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對以授予Platform存取權給您的 [!DNL Amazon S3] 帳戶。 進一步瞭解 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL 加密金鑰]**：您可以附加您的RSA格式公開金鑰，以將加密新增至匯出的檔案（選擇性）。 在下圖檢視格式正確的加密金鑰範例。
+* **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]秘密金鑰**：在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對，授予Platform存取權給您的 [!DNL Amazon S3] 帳戶。 進一步瞭解 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。
 
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
@@ -99,15 +87,15 @@ ht-degree: 12%
 >abstract="必須僅包含字元 A-Z、a-z、0-9，並且可以包含以下特殊字元：`/!-_.'()"^[]+$%.*"`。若要為每個對象檔案建立一個檔案夾，請將巨集 `/%SEGMENT_NAME%` 或 `/%SEGMENT_ID%` 或 `/%SEGMENT_NAME%/%SEGMENT_ID%` 插入文字欄位。只能將巨集插入檔案夾路徑的末尾。檢視文件中的巨集範例。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=zh-Hant#use-macros" text="使用巨集在您的儲存位置建立檔案夾"
 
-若要設定目的地的詳細資訊，請填寫下列必要和選用欄位。 UI中欄位旁的星號表示該欄位為必填。
+若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
 * **[!UICONTROL 名稱]**：輸入有助於您識別此目的地的名稱。
 * **[!UICONTROL 說明]**：輸入此目的地的說明。
 * **[!UICONTROL 貯體名稱]**：輸入 [!DNL Amazon S3] 要由此目的地使用的貯體。
-* **[!UICONTROL 資料夾路徑]**：輸入存放匯出檔案的目標資料夾路徑。
-* **[!UICONTROL 檔案型別]**：選取匯出檔案應使用的格式Experience Platform。 此選項僅適用於 **[!UICONTROL Amazon S3 Beta]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。 此選項僅適用於 **[!UICONTROL Amazon S3 Beta]** 目的地。
-* **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 此選項僅適用於 **[!UICONTROL Amazon S3 Beta]** 目的地。
+* **[!UICONTROL 資料夾路徑]**：輸入存放已匯出檔案之目的地資料夾的路徑。
+* **[!UICONTROL 檔案型別]**：選取用於匯出檔案的Experience Platform格式。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
+* **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。
 
 >[!TIP]
 >
@@ -115,13 +103,13 @@ ht-degree: 12%
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
 
-當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
 ### 必填 [!DNL Amazon S3] 許可權 {#required-s3-permission}
 
-若要成功連線並匯出資料至 [!DNL Amazon S3] 儲存位置，建立「識別與存取管理」(IAM)使用者 [!DNL Platform] 在 [!DNL Amazon S3] 並為下列動作指派許可權：
+若要成功連線並匯出資料至 [!DNL Amazon S3] 儲存位置，建立「識別與存取管理」(IAM)使用者 [!DNL Platform] 在 [!DNL Amazon S3] 並為以下動作指派許可權：
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -146,7 +134,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
+另請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ## (Beta)匯出資料集 {#export-datasets}
 
@@ -157,4 +145,4 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL Amazon S3] 目的地， [!DNL Platform] 會在您提供的儲存位置中建立資料檔案。 如需檔案的詳細資訊，請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。
+的 [!DNL Amazon S3] 目的地， [!DNL Platform] 會在您提供的儲存位置中建立資料檔案。 如需檔案的詳細資訊，請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。

@@ -2,10 +2,10 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f05f8cb47a1f65e8931500d7064fdce48aa53347
+source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 3%
+source-wordcount: '940'
+ht-degree: 4%
 
 ---
 
@@ -13,17 +13,9 @@ ht-degree: 3%
 
 ## 目的地變更記錄檔 {#changelog}
 
->[!IMPORTANT]
->
->有了匯出資料集功能的測試版和改良的檔案匯出功能，您現在可能會看到兩個 [!DNL SFTP] 目的地目錄中的卡片。
->* 如果您已將檔案匯出至 **[!UICONTROL SFTP]** 目的地：請建立新的資料流到新的 **[!UICONTROL SFTP測試版]** 目的地。
->* 如果您尚未建立任何資料流至 **[!UICONTROL SFTP]** 目的地，使用新的 **[!UICONTROL SFTP測試版]** 要匯出檔案的卡片 **[!UICONTROL SFTP]**.
+2023年7月Experience Platform發行版本中，SFTP目的地會提供新功能，如下所示：
 
-![並排檢視中的兩個SFTP目的地卡片影像。](../../assets/catalog/cloud-storage/sftp/two-sftp-destination-cards.png)
-
-新功能中的改進 [!DNL SFTP] 目的地卡包括：
-
-* [資料集匯出支援](/help/destinations/ui/export-datasets.md).
+* [!BADGE Beta]{type=Informative}[資料集匯出支援](/help/destinations/ui/export-datasets.md).
 * 其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 * 可透過以下方式設定匯出檔案中的自訂檔案標題： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -122,9 +114,9 @@ ht-degree: 3%
 * **[!UICONTROL 名稱]**：輸入可協助您在Experience Platform使用者介面中識別此目的地的名稱；
 * **[!UICONTROL 說明]**：輸入此目的地的說明；
 * **[!UICONTROL 資料夾路徑]**：輸入要匯出檔案之SFTP位置中的資料夾路徑。
-* **[!UICONTROL 檔案型別]**：選取用於匯出檔案的Experience Platform格式。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。
-* **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 此選項僅適用於 **[!UICONTROL SFTP測試版]** 目的地。
+* **[!UICONTROL 檔案型別]**：選取用於匯出檔案的Experience Platform格式。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
+* **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。
 
 ## 啟用此目的地的對象 {#activate}
 
