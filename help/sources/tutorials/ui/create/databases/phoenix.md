@@ -1,77 +1,82 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Phoenix；phoenix
-solution: Experience Platform
-title: 在UI中建立Phoenix來源連線
-type: Tutorial
-description: 瞭解如何使用Adobe Experience Platform UI建立Phoenix來源連線。
+title: 使用Experience Platform使用者介面連線您的Phoenix帳戶
+description: 瞭解如何使用使用者介面連線您的Phoenix帳戶，並將Phoenix資料庫中的資料帶入Experience Platform。
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b7e42eb180b8f16344afedadf763c33bcf22fa35
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 0%
+source-wordcount: '604'
+ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Phoenix] ui中的來源連線
+# 連線您的 [!DNL Phoenix] 要使用UIExperience Platform的帳戶
 
->[!NOTE]
->
-> 此 [!DNL Phoenix] 聯結器為測試版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得使用Beta標籤聯結器的詳細資訊。
-
-Adobe Experience Platform中的來源聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供建立 [!DNL Phoenix] 來源聯結器使用 [!DNL Platform] 使用者介面。
+本教學課程提供如何連線至 [!DNL Phoenix] 帳戶並從以下來源取得資料： [!DNL Phoenix] 要Experience Platform的資料庫
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
-   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器UI建立自訂結構描述。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
+   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
+   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構編輯器UI建立自訂結構描述。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 
-如果您已有有效的 [!DNL Phoenix] 連線時，您可以略過本檔案的其餘部分，並繼續進行上的教學課程 [設定資料流](../../dataflow/databases.md)
+如果您已經驗證 [!DNL Phoenix] 帳戶，然後您可以略過本檔案的其餘部分，並前往上的教學課程 [為資料庫設定資料流](../../dataflow/databases.md).
 
 ### 收集必要的認證
 
-為了存取您的 [!DNL Phoenix] 帳戶於 [!DNL Platform]，您必須提供下列值：
+為了存取您的 [!DNL Phoenix] account onExperience Platform，您必須提供下列值：
 
 | 認證 | 說明 |
-| ---------- | ----------- |
-| `host` | IP位址或主機名稱 [!DNL Phoenix] 伺服器。 |
-| `port` | TCP連線埠， [!DNL Phoenix] 伺服器使用來監聽使用者端連線。 如果您連線至 [!DNL Azure HDInsights]，將連線埠指定為443。 |
-| `httpPath` | 對應至的部份URL [!DNL Phoenix] 伺服器。 如果您使用，請指定/hbasephoenix0 [!DNL Azure HDInsights] 叢集。 |
-| `username` | 您用來存取 [!DNL Phoenix] 伺服器。 |
-| `password` | 與使用者對應的密碼。 |
-| `enableSsl` | 指定是否使用SSL加密伺服器連線的切換按鈕。 |
+| --- | --- |
+| Host | IP位址或主機名稱 [!DNL Phoenix] 伺服器。 |
+| 連接埠 | TCP連線埠， [!DNL Phoenix] 伺服器使用來監聽使用者端連線。 如果您要連線到 [!DNL Azure HDInsights]，然後將連線埠指定為443。 如果未提供此引數，則值預設為8765。 |
+| HTTP路徑 | 與對應的部分URL [!DNL Phoenix] 伺服器。 如果您使用 [!DNL Azure HDInsights] 叢集。 |
+| 使用者名稱 | 您用來存取 [!DNL Phoenix] 伺服器。 |
+| 密碼 | 與使用者對應的密碼。 |
+| Enable SSL | 指定是否使用SSL加密伺服器連線的切換按鈕。 |
 
-如需入門的詳細資訊，請參閱 [此 [!DNL Phoenix] 檔案](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
+如需開始使用的詳細資訊，請參閱 [此 [!DNL Phoenix] 檔案](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
+
+收集必要的認證後，您可以依照下列步驟連線 [!DNL Phoenix] 要Experience Platform的帳戶。
 
 ## 連線您的 [!DNL Phoenix] 帳戶
 
-收集完所需的認證後，您可以依照下列步驟連結 [!DNL Phoenix] 要連線的帳戶 [!DNL Platform].
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取來源工作區。 此 *[!UICONTROL 目錄]* 畫面會顯示Experience Platform來源目錄中的各種可用來源。
 
-登入 [Adobe Experience Platform](https://platform.adobe.com) 然後選取 **[!UICONTROL 來源]** 以存取 **[!UICONTROL 來源]** 工作區。 此 **[!UICONTROL 目錄]** 畫面會顯示您可以用來建立帳戶的各種來源。
+您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找特定來源。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項來尋找您要使用的特定來源。
+選取 **[!UICONTROL 資料庫]** 從來源類別清單中，然後選取 **[!UICONTROL 新增資料]** 從 [!DNL Phoenix] 卡片。
 
-在 **[!UICONTROL 資料庫]** 類別，選取 **[!UICONTROL Phoenix]**. 如果您是第一次使用此聯結器，請選取 **[!UICONTROL 設定]**. 否則，請選取 **[!UICONTROL 新增資料]** 以建立新的 [!DNL Phoenix] 帳戶。
+>[!TIP]
+>
+>來源目錄中的來源可能會根據來源的狀態顯示不同的提示。
+> 
+>* **[!UICONTROL 新增資料]** 表示現有驗證帳戶與您選取的來源相關聯。
+>
+>* **[!UICONTROL 設定]** 表示您必須提供認證並驗證新帳戶，才能使用您選取的來源。
 
-![目錄](../../../../images/tutorials/create/phoenix/catalog.png)
+![已選取Phoenix來源卡的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/phoenix/catalog.png)
 
-此 **[!UICONTROL 連線至Phoenix]** 頁面便會顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+此 **[!UICONTROL 連線到Phoenix]** 頁面便會顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
-### 新帳戶
+>[!BEGINTABS]
 
-如果您使用新認證，請選取 **[!UICONTROL 新帳戶]**. 在出現的輸入表單上，提供名稱、選擇性說明，以及 [!DNL Phoenix] 認證。 完成後，選取 **[!UICONTROL Connect]** 然後等待一段時間以建立新連線。
+>[!TAB 使用現有的Phoenix帳戶]
 
-![connect](../../../../images/tutorials/create/phoenix/new.png)
+若要使用現有帳戶，請選取 [!UICONTROL 現有帳戶] 然後從顯示的清單中選取您要使用的帳戶。 完成後，選取 [!UICONTROL 下一個] 以繼續進行。
 
-### 現有帳戶
+![貴組織中已經存在的已驗證Phoenix資料庫帳戶清單。](../../../../images/tutorials/create/phoenix/existing.png)
 
-若要連線現有帳戶，請選取 [!DNL Phoenix] 您要連線的帳戶，然後選取 **[!UICONTROL 下一個]** 以繼續進行。
+>[!TAB 建立新的Phoenix帳戶]
 
-![現有](../../../../images/tutorials/create/phoenix/existing.png)
+若要使用新帳戶，請選取 [!UICONTROL 新帳戶] 並提供名稱、說明，以及 [!DNL Phoenix] 驗證認證。 完成後，選取 [!UICONTROL 連線到來源] 並等待幾秒鐘，以便建立新連線。
+
+![新的帳戶介面，您可以在其中提供驗證憑證並建立Phoenix帳戶。](../../../../images/tutorials/create/phoenix/new.png)
+
+>[!ENDTABS]
 
 ## 後續步驟
 
-依照本教學課程，您已建立與的連線， [!DNL Phoenix] 帳戶。 您現在可以繼續下一節教學課程和 [設定資料流以將資料帶入 [!DNL Platform]](../../dataflow/databases.md).
+依照本教學課程中的指示，您已建立與的連線， [!DNL Phoenix] 帳戶。 您現在可以繼續進行下一個教學課程及 [設定資料流以將資料帶入Experience Platform](../../dataflow/databases.md).
