@@ -3,28 +3,28 @@ title: （測試版）將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 6627953aba4f1cd665c3d5c4bc8711c48064374f
+source-git-commit: fadc1f5f3842c9c2e39b6204dd455621ec84ad68
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1421'
 ht-degree: 5%
 
 ---
 
-# （測試版）將資料集匯出至雲端儲存空間目標
+# (Beta)將資料集匯出至雲端儲存目標
 
 >[!IMPORTANT]
 >
->* 匯出資料集的功能目前為測試版，並非所有使用者都可使用。 文件和功能可能會有所變更。
->* 此Beta版功能支援匯出第一代資料，如Real-time Customer Data Platform所定義 [產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>* 匯出資料集的功能目前還處於測試階段，並非所有使用者都可使用。 文件和功能可能會有所變更。
+>* 此測試版功能支援匯出第一代資料，如Real-time Customer Data Platform中所定義 [產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 >* 已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 如需詳細資訊，請聯絡您的Adobe代表。
 
-本文會說明匯出所需的工作流程 [資料集](/help/catalog/datasets/overview.md) 從Adobe Experience Platform到您偏好的雲端儲存位置，例如 [!DNL Amazon S3]、 SFTP位置或 [!DNL Google Cloud Storage] 使用Experience PlatformUI。
+本文會說明匯出所需的工作流程 [資料集](/help/catalog/datasets/overview.md) 從Adobe Experience Platform到您偏好的雲端儲存位置，例如 [!DNL Amazon S3]、 SFTP位置或 [!DNL Google Cloud Storage] 藉由使用Experience Platform UI。
 
 您也可以使用Experience Platform API來匯出資料集。 閱讀 [匯出資料集API教學課程](/help/destinations/api/export-datasets.md) 以取得詳細資訊。
 
 ## 支援的目的地 {#supported-destinations}
 
-目前，您可以將資料集匯出至熒幕擷取畫面中反白顯示及以下列出的雲端儲存空間目的地。
+目前，您可以將資料集匯出至熒幕擷取畫面中強調並列於下方的雲端儲存空間目的地。
 
 ![支援資料集匯出的目的地](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
@@ -40,19 +40,19 @@ ht-degree: 5%
 Experience Platform目錄中的某些檔案型目的地同時支援對象啟用和資料集匯出。
 
 * 當您想要將資料結構化為依對象興趣或資格分組的設定檔時，請考慮啟用對象。
-* 或者，當您想要匯出未依對象興趣或資格進行分組或建構的原始資料集時，請考慮匯出資料集。 您可以將此資料用於報告、資料科學工作流程、滿足合規性要求以及許多其他使用案例。
+* 或者，當您想要匯出原始資料集時，也可以考慮匯出資料集，這些資料集未根據對象興趣或資格進行分組或結構化。 您可以將此資料用於報表、資料科學工作流程、滿足合規性要求以及許多其他使用案例。
 
-本檔案包含匯出資料集所需的所有資訊。 如果您想要啟用雲端儲存空間或電子郵件行銷目的地的對象，請閱讀 [啟用對象資料以批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md).
+本檔案包含匯出資料集所需的所有資訊。 如果您想要啟用雲端儲存空間或電子郵件行銷目的地的對象，請閱讀 [啟用對象資料至批次設定檔匯出目的地](/help/destinations/ui/activate-batch-profile-destinations.md).
 
 ## 先決條件 {#prerequisites}
 
-若要將資料集匯出至雲端儲存體目的地，您必須已成功 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地並設定您要使用的目的地。
+若要將資料集匯出至雲端儲存空間目的地，您必須已成功完成 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
 
 ### 必要權限 {#permissions}
 
-若要匯出資料集，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**、和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+若要匯出資料集，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-為確保您擁有匯出資料集的必要許可權，且目的地支援匯出資料集，請瀏覽目的地目錄。 如果目的地有 **[!UICONTROL 啟動]** 或 **[!UICONTROL 匯出資料集]** 控制項，則表示您擁有適當的許可權。
+為確保您擁有匯出資料集的必要許可權以及目的地支援匯出資料集，請瀏覽目的地目錄。 如果目的地有 **[!UICONTROL 啟動]** 或 **[!UICONTROL 匯出資料集]** 控制項，則表示您擁有適當的許可權。
 
 ## 選取您的目的地 {#select-destination}
 
@@ -62,25 +62,25 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
    ![反白顯示目錄控制項的目的地目錄標籤。](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. 選取 **[!UICONTROL 啟動]** 或 **[!UICONTROL 匯出資料集]** 對應至要將資料集匯出至之目的地的卡片上。
+1. 選取 **[!UICONTROL 啟動]** 或 **[!UICONTROL 匯出資料集]** 位於對應您要匯出資料集之目的地的卡片上。
 
    ![反白顯示「啟動」控制項的目的地目錄標籤。](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. 選取 **[!UICONTROL 資料型別資料集]** 並選取您要匯出資料集的目的地連線，然後選取 **[!UICONTROL 下一個]**.
+1. 選取 **[!UICONTROL 資料型別資料集]** 並選取您要匯出資料集的目的地連線，然後選取「 」 **[!UICONTROL 下一個]**.
 
 >[!TIP]
 > 
 >如果要設定匯出資料集的新目的地，請選取「 」 **[!UICONTROL 設定新目的地]** 以觸發 [連線到目的地](/help/destinations/ui/connect-destination.md) 工作流程。
 
-![強調顯示具有資料集控制項的目的地啟用工作流程。](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
+![強調資料集控制項的目的地啟用工作流程。](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-1. 此 **[!UICONTROL 選取資料集]** 檢視隨即顯示。 繼續下一節至 [選取您的資料集](#select-datasets) 以匯出。
+1. 此 **[!UICONTROL 選取資料集]** 檢視出現。 繼續下一節至 [選取您的資料集](#select-datasets) 以匯出。
 
 ## 選取您的資料集 {#select-datasets}
 
-使用資料集名稱左側的核取方塊，選取您要匯出至目的地的資料集，然後選取 **[!UICONTROL 下一個]**.
+使用資料集名稱左側的核取方塊來選取您要匯出至目的地的資料集，然後選取「 」 **[!UICONTROL 下一個]**.
 
-![資料集匯出工作流程顯示「選取資料集」步驟，您可在此選取要匯出的資料集。](/help/destinations/assets/ui/export-datasets/select-datasets.png)
+![資料集匯出工作流程會顯示選取資料集步驟，您可在此選取要匯出的資料集。](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
 ## 排程資料集匯出 {#scheduling}
 
@@ -89,7 +89,7 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >title="資料集的檔案匯出選項"
 >abstract="選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後新增至資料集的資料。<br>第一個增量檔案匯出包括資料集中的所有資料，充當回填。未來的增量檔案僅包括第一次匯出後新增至資料集的資料。"
 
-在 **[!UICONTROL 排程]** 步驟，您可以設定資料集匯出的開始日期和匯出節奏。
+在 **[!UICONTROL 正在排程]** 步驟，您可以設定資料集匯出的開始日期和匯出步調。
 
 此 **[!UICONTROL 匯出增量檔案]** 選項會自動選取。 這會觸發匯出，其中第一個檔案是資料集的完整快照，後續檔案是自上次匯出以來資料集的增量新增。
 
@@ -99,12 +99,12 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ![顯示排程步驟的資料集匯出工作流程。](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. 使用 **[!UICONTROL 頻率]** 選取器以選取匯出頻率：
+1. 使用 **[!UICONTROL 頻率]** 選擇器以選取匯出頻率：
 
    * **[!UICONTROL 每日]**：排程增量檔案每天於您指定的時間匯出一次。
    * **[!UICONTROL 每小時]**：排程每3、6、8或12小時匯出一次增量檔案。
 
-2. 使用 **[!UICONTROL 時間]** 選擇器以選擇一天中的時間，在 [!DNL UTC] 格式，應何時進行匯出。
+2. 使用 **[!UICONTROL 時間]** 選擇器來選擇一天中的時間，在 [!DNL UTC] 格式，應何時進行匯出。
 
 3. 使用 **[!UICONTROL 日期]** 選擇器來選擇應進行匯出的間隔。 請注意，在此功能的測試版中，無法設定匯出的結束日期。 如需詳細資訊，請檢視 [已知限制](#known-limitations) 區段。
 
@@ -116,15 +116,15 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ## 請檢閱 {#review}
 
-於 **[!UICONTROL 檢閱]** 頁面中，您可以看到選取範圍的摘要。 選取 **[!UICONTROL 取消]** 若要分解流量， **[!UICONTROL 返回]** 修改您的設定，或 **[!UICONTROL 完成]** 以確認您的選取範圍並開始將資料集匯出至目的地。
+在 **[!UICONTROL 檢閱]** 頁面中，您可以看到選取範圍的摘要。 選取 **[!UICONTROL 取消]** 若要分解流量， **[!UICONTROL 返回]** 以修改您的設定，或 **[!UICONTROL 完成]** 以確認您的選取範圍並開始將資料集匯出至目的地。
 
-![顯示稽核步驟的資料集匯出工作流程。](/help/destinations/assets/ui/export-datasets/review.png)
+![顯示檢閱步驟的資料集匯出工作流程。](/help/destinations/assets/ui/export-datasets/review.png)
 
 ## 驗證資料集匯出成功 {#verify}
 
-匯出資料集時，Experience Platform會建立 `.json` 或 `.parquet` 檔案的儲存位置。 預期會根據您提供的匯出排程，將新檔案儲存在您的儲存位置。
+匯出資料集時，Experience Platform會建立 `.json` 或 `.parquet` 檔案中所指定的儲存位置。 預期會根據您提供的匯出排程，將新檔案儲存在您的儲存位置。
 
-Experience Platform會在您指定的儲存位置中建立資料夾結構，存放匯出的資料集檔案。 每次匯出時都會建立一個新資料夾，其模式如下：
+Experience Platform會在您指定的儲存位置中建立資料夾結構，並存放匯出的資料集檔案。 每次匯出時都會建立一個新資料夾，其模式如下：
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -132,7 +132,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，存�
 
 ### 範例資料集檔案 {#sample-files}
 
-這些檔案出現在您的儲存位置即表示匯出成功。 若要瞭解匯出檔案的結構，您可以下載範例 [.parquet檔案](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) 或 [.json檔案](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
+這些檔案存在於您的儲存位置即表示匯出成功。 若要瞭解匯出檔案的結構，您可以下載範例 [.parquet檔案](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) 或 [.json檔案](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
 #### 壓縮的資料集檔案 {#compressed-dataset-files}
 
@@ -147,34 +147,34 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，存�
 
 ## 從目的地移除資料集 {#remove-dataset}
 
-若要從現有資料流中移除資料集，請遵循下列步驟：
+若要從現有資料流移除資料集，請遵循下列步驟：
 
-1. 登入 [EXPERIENCE PLATFORMUI](https://experience.adobe.com/platform/) 並選取 **[!UICONTROL 目的地]** 左側導覽列中的。 選取 **[!UICONTROL 瀏覽]** 以檢視您現有的目的地資料流。
+1. 登入 [EXPERIENCE PLATFORMUI](https://experience.adobe.com/platform/) 並選取 **[!UICONTROL 目的地]** 從左側導覽列。 選取 **[!UICONTROL 瀏覽]** 以檢視您現有的目的地資料流。
 
    ![目的地瀏覽檢視，其中顯示目的地連線，其餘則模糊化。](../assets/ui/export-datasets/browse-dataset-connections.png)
 
    >[!TIP]
    > 
-   >選取篩選圖示 ![篩選圖示](../assets/ui/edit-activation/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
+   >選取篩選器圖示 ![Filter-icon](../assets/ui/edit-activation/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
 
 1. 從 **[!UICONTROL 啟用資料]** 欄，選取資料集控制項以檢視對應至此匯出資料流的所有資料集。
 
-   ![可用的資料集導覽選項會在「啟動資料」欄中反白顯示。](../assets/ui/export-datasets/go-to-datasets-data.png)
+   ![可用的資料集導覽選項在「啟動資料」欄中反白顯示。](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. 此 **[!UICONTROL 啟用資料]** 目的地頁面隨即顯示。 選取 **[!UICONTROL 移除資料集]** 右側欄中觸發「移除資料集」確認對話方塊。
+1. 此 **[!UICONTROL 啟用資料]** 目的地頁面隨即顯示。 選取 **[!UICONTROL 移除資料集]** 在右側邊欄中，以觸發移除資料集確認對話方塊。
 
-   ![移除資料集對話方塊在右側欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/remove-dataset-control.png)
+   ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/remove-dataset-control.png)
 
 1. 在確認對話方塊中，選取 **[!UICONTROL 移除]** 立即將資料集從匯出至目的地時移除。
 
-   ![對話方塊顯示確認從資料流移除資料集選項。](../assets/ui/export-datasets/remove-dataset-confirm.png)
+   ![對話方塊，其中顯示確認從資料流移除資料集選項。](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 ## 已知限制 {#known-limitations}
 
-針對資料集匯出的Beta版，請牢記以下限制：
+針對資料集匯出的Beta版牢記下列限制：
 
 * 目前只有單一許可權(**[!UICONTROL 管理和啟用資料集目的地]**)，包括資料集目的地的管理和啟用許可權。 這些控制項在未來將分割為更精細的許可權。 檢閱 [必要許可權](#permissions) 區段，以取得匯出資料集所需的完整許可權清單。
-* 目前，您只能匯出增量檔案，而且無法為資料集匯出選取結束日期。
+* 目前，您只能匯出增量檔案，並且無法為資料集匯出選取結束日期。
 * 匯出的檔案名稱目前無法自訂。
-* UI目前不會阻止您刪除匯出至目的地的資料集。 請勿刪除任何正匯出至目的地的資料集。 [移除資料集](#remove-dataset) 從目的地資料流中刪除之前。
-* 資料集匯出的監控量度目前與設定檔匯出的數字混雜在一起，因此無法反映真正的匯出數字。
+* UI目前不會阻止您刪除匯出至目的地的資料集。 請勿刪除匯出至目的地的資料集。 [移除資料集](#remove-dataset) 從目的地資料流中刪除之前。
+* 資料集匯出的監控量度目前與設定檔匯出的數字混合在一起，因此不能反映真正的匯出數字。
