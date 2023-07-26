@@ -3,7 +3,7 @@ title: Adobe Experience Platform 發行說明 (2023 年 4 月)
 description: Adobe Experience Platform 2023 年 4 月版發行說明。
 exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2084'
 ht-degree: 100%
 
