@@ -1,34 +1,24 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Adobe Experience Platform 2023 年 6 月的發行說明。
+description: Adobe Experience Platform 2023年7月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
+source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 100%
+source-wordcount: '659'
+ht-degree: 33%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2023 年 6 月 21 日**
+**發行日期：2023 年 7 月 26 日**
 
 Adobe Experience Platform 現有功能的更新：
 
-- [Experience Platform API 的驗證](#authentication-platform-apis)
 - [資料集合](#data-collection)
-- [目的地](#destinations)
-- [體驗資料模式 (XDM)](#xdm)
-- [查詢服務](#query-service)
+- [資料準備](#data-prep)
+- [Segmentation Service](#segmentation)
 - [來源](#sources)
-
-## Experience Platform API 的驗證 {#authentication-platform-apis}
-
-Experience Platform API 使用者獲取所需存取權杖以驗證並呼叫 API 端點的方法現在已經簡化。用於獲取存取權杖的 JWT 方法已淘汰，並由較簡單的 OAuth Server-to-Server 驗證方法所取代。<p>![已反白顯示取得存取權杖的全新 OAuth 驗證方法。](/help/landing/images/api-authentication/oauth-authentication-method.png "已反白顯示取得存取權杖的全新 OAuth 驗證方法。"){width="100" zoomable="yes"}</p>
-
-儘管使用 JWT 驗證方法的現有 API 整合將持續運作至 2025 年 1 月 1 日為止，但 Adob&#x200B;&#x200B;e 強烈建議您在該日期之前將現有整合移轉至新的 OAuth Server-to-Server 方法。請至「[從服務帳戶 (JWT) 認證移轉至 OAuth Server-to-Server 認證](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)」詳閱指南。
-
-如需詳細資訊，請閱讀更新版 [Experience Platform 驗證教學課程](/help/landing/api-authentication.md)。
 
 ## 資料集合 {#data-collection}
 
@@ -38,115 +28,52 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
-| 擴充功能 | [!DNL Google Cloud Platform] 事件轉送擴充功能 | 此 [[!DNL Google Cloud Platform]](../../tags/extensions/server/google-cloud-platform/overview.md) 事件轉送擴充功能可讓您將事件資料轉送到 Google，以透過 [!DNL Google Pub/Sub] 啟動。 |
-| 擴充功能 | [!DNL Cloud connector for Google Analytics 4 (ga4)] 擴充功能 | 此 [[!DNL Cloud connector for Google Analytics 4 (ga4)]](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html) 事件轉送擴充功能可讓您透過新的 [!DNL Google Analytics 4 (ga4)] 標準追蹤分析。 |
-| Secret | OAuth 2 JWT Secret | 此 [OAuth 2 JWT Secret](../../tags/ui/event-forwarding/secrets.md) 可讓您使用 Adob&#x200B;&#x200B;e 和 [!DNL Google] 服務權杖支援事件轉送中伺服器和伺服器的互動。 |
+| 標記和事件轉送 | 資料收集稽核記錄 | 您現在可以看到動作何時執行，以及誰在標籤和事件轉送中執行此動作。 這有助於產品疑難排解、正確治理和內部稽核活動。 此稽核資料會透過內容中的滑出功能表顯示，其中也包含快速動作和資源狀態更新。 此資料會在下列畫面中的標記和事件轉送 UI 中顯示：<br><ul><li>[屬性概述](../../tags/ui/event-forwarding/overview.md#properties)</li><li>[規則](../../tags/ui/event-forwarding/overview.md#rules)</li><li>[資料元素](../../tags/ui/event-forwarding/overview.md#data-elements)</li><li>[擴充功能](../../tags/ui/event-forwarding/overview.md#extensions)</li><li>[程式庫檢閱](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li><li>[資料庫的上一個建置和發佈時間](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-and-publish-a-library.html)</li></ul> |
+| 資料流 | [地理查閱](../../datastreams/configure.md#advanced-options) | 您現在可以設定資料串流的地理位置和網路查閱，以包含下列資訊： <ul><li>國家/地區</li><li>郵遞區號</li><li>州/省</li><li>DMA</li><li>城市</li><li>緯度 </li><li>經度</li><li>電信業者</li><li>網域</li><li>ISP</li></ul> 您有責任確保已取得適用法律與法規所規定的一切必要許可權、同意、許可與授權，以收集、處理及傳輸個人資料，包括精確的地理位置資訊。 <br> 您的IP位址模糊化選取不會影響將從IP位址衍生並傳送至您設定之Adobe解決方案的地理位置資訊等級。 地理位置查詢必須另外限制或停用。 <br> 請參閱 [資料串流檔案](../../datastreams/configure.md#advanced-options) 以取得更多詳細資料。 |
 
 {style="table-layout:auto"}
 
-若要了解有關資料集合的詳細資訊，請閱讀[資料集合概觀](../../tags/home.md)。
+如需資料收集的詳細資訊，請參閱 [資料集合概觀](../../tags/home.md).
 
-## 目的地 {#destinations}
+## 資料準備 {#data-prep}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+「資料準備」讓資料工程師可在體驗資料模式 (XDM) 之間對應、轉換和驗證資料。
 
-**新目的地或更新的目的地** {#new-updated-destinations}
-
-| 目的地 | 說明 |
-| ----------- | ----------- |
-| [[!BADGE Beta]{type=Informative} [!DNL Amazon Ads] 連線](../../destinations/catalog/advertising/amazon-ads.md) | 和 Adob&#x200B;&#x200B;e Experience Platform 的 [!DNL Amazon Ads] 整合現在可支援至不同 [!DNL Amazon Ads] Marketplace 的區域路由。如需詳細資訊，請閱讀[目的地變更記錄](../../destinations/catalog/advertising/amazon-ads.md#changelog)。 |
-
-{style="table-layout:auto"}
-
-**新功能或更新的功能** {#destinations-new-updated-functionality}
-
-| 功能 | 說明 |
-| ----------- | ----------- |
-| [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 目的地的工作區支援。 | 您現在設定新的 Adob&#x200B;&#x200B;e Target 目的地連線時，可以選取要將對象共享到哪個 Adob&#x200B;&#x200B;e Target 工作區。如需詳細資訊，請參閱「[連線參數](../../destinations/catalog/personalization/adobe-target-connection.md#parameters)」一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en)的教學課程。 |
-
-{style="table-layout:auto"}
-
-<!--
-
-**Fixes and enhancements** {#destinations-fixes-and-enhancements}
-
-- Placeholder for fixes and enhancements
-
--->
-
-如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
-
-## 體驗資料模式 (XDM) {#xdm}
-
-XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
-
-**新的 XDM 元件**
-
-| 元件類型 | 名稱 | 說明 |
-| --- | --- | --- |
-| 擴充功能 (潛在客戶設定檔) | [[!UICONTROL Adobe 統一設定檔服務潛在客戶設定檔聯合擴充功能]](https://github.com/adobe/xdm/pull/1735/files) | 已新增潛在客戶設定檔聯合結構的必填欄位。 |
-| 擴充功能 | [[!UICONTROL 決策資產]](https://github.com/adobe/xdm/pull/1732/files) | 新增資料類型以表示決策中使用的資產。[!UICONTROL 決策資產]可提供對用於轉譯 `decisionItems` 的資產的參照。 |
-| 資料類型 | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce] 會儲存和買賣活動相關的記錄。 |
-| 欄位群組 | [[!UICONTROL 設定檔合作夥伴擴充 (範例)]](https://github.com/adobe/xdm/pull/1747/files) | 已新增設定檔合作夥伴擴充的範例綱要。 |
-| 欄位群組 | [[!UICONTROL 合作夥伴前景的詳細資料 (範例)]](https://github.com/adobe/xdm/pull/1747/files) | 已新增資料廠商前景設定檔擴充功能的範例綱要。 |
-| 資料類型 | [[!UICONTROL Commerce 範圍]](https://github.com/adobe/xdm/pull/1747/files) | [!UICONTROL Commerce 範圍]會識別事件在何處發生。例如，在商店檢視、商店或網站等。 |
-| 資料類型 | [[!UICONTROL 帳單]](https://github.com/adobe/xdm/pull/1734/files) | 已將一筆或多筆付款的帳單資訊新增到 [!UICONTROL Commerce] 綱要中。 |
-
-{style="table-layout:auto"}
-
-**已更新的 XDM 元件**
-
-| 元件類型 | 名稱 | 更新說明 |
-| --- | --- | --- |
-| 欄位群組 | [[!UICONTROL MediaAnalytics 互動的詳細資料]](https://github.com/adobe/xdm/pull/1736/files) | 已將 `bitrateAverageBucket` 從 100 變更為「800-899」。 |
-| 資料類型 | [[!UICONTROL Qoe 資料細節資訊]](https://github.com/adobe/xdm/pull/1736/files) | 已將 `bitrateAverageBucket` 資料類型變更為字串。 |
-| 欄位群組 | [[!UICONTROL 區段會籍詳細資料]](https://github.com/adobe/xdm/pull/1735/files) | 已新增至潛在客戶設定檔類別。 |
-| 綱要 | [[!UICONTROL 已計算的屬性系統綱要]](https://github.com/adobe/xdm/pull/1735/files) | 身分對應已新增至[!UICONTROL 已計算的屬性系統綱要]。 |
-| 資料類型 | [[!UICONTROL 內容傳遞網路]](https://github.com/adobe/xdm/pull/1733/files) | 欄位已新增至[!UICONTROL 工作階段詳細資料]，以說明所使用的內容傳遞網路。 |
-| 擴充功能 | [[!UICONTROL Adobe 統一設定檔服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1731/files) | 身分對應已新增至 [!UICONTROL Adobe 統一設定檔服務帳戶聯合擴充功能]。 |
-| 資料類型 | [[!UICONTROL 訂單]](https://github.com/adobe/xdm/pull/1730/files) | `discountAmount` 已新增至[!UICONTROL 訂單]中。這可表達正常訂購價格和特價之間的差異。這會套用在整筆訂單而不是個別產品。 |
-| 綱要 | [[!UICONTROL AEP 清理作業要求]](https://github.com/adobe/xdm/pull/1728/files) | 已新增 `targetServices` 欄位，用以提供處理資料清理作業的服務的名稱。 |
-| 資料類型 | [[!UICONTROL 運送]](https://github.com/adobe/xdm/pull/1727/files) | 已將 `currencyCode` 新增至一種或多種產品的運送資訊中。這是 ISO 4217 字母貨幣代碼，用於產品定價。 |
-| 資料類型 | [[!UICONTROL 應用程式]](https://github.com/adobe/xdm/pull/1726/files) | 已新增 `language` 欄位，用以提供使用者的語言、地理位置或文化偏好給應用程式。 |
-| 擴充功能 | [[!UICONTROL AJO 實體欄位]](https://github.com/adobe/xdm/pull/1746/files) | 已新增 [!UICONTROL AJO 時間戳記實體]，以顯示最後一次修改訊息的時間。 |
-| 資料類型 | (多個) | 已在好幾個資料類型中[移除數個媒體詳細資料](https://github.com/adobe/xdm/pull/1739/files)，以維持一致性。 |
-
-{style="table-layout:auto"}
-
-如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
-
-## 查詢服務 {#query-service}
-
-查詢服務可讓您使用標準的 SQL 查詢 Adob&#x200B;&#x200B;e Experience Platform 資料湖中的資料。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶設定檔。
-
-**更新的功能**
+**新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 內聯範本 | 查詢服務現在支援使用參照您的 SQL 中其他範本的範本。 在您的查詢中利用內聯範本以減少工作負載並避免錯誤。您可以重複使用陳述式或條件，並參照巢狀範本，以提高 SQL 中的靈活性。可存儲為範本的查詢大小或可從原始查詢參照的範本數量並沒有限制。如需詳細資訊，請閱讀[內聯範本指南](../../query-service/essential-concepts/inline-templates.md)。 |
-| 已排程的查詢 UI 更新 | 使用[[!UICONTROL 已排程查詢索引標籤]](../../query-service/ui/monitor-queries.md#inline-actions)從 UI 中的一個位置即可管理所有已排程的查詢。隨著新增內聯查詢動作和新查詢狀態欄，此[!UICONTROL 已排程查詢] UI 已經獲得改善。最近新增的項目包括啟用、停用和刪除排程的能力，或者直接從[!UICONTROL 已排程查詢]檢視中訂閱即將執行查詢的警示。 <p>![內聯動作已反白顯示於[!UICONTROL 已排程查詢]檢視中。](../../query-service/images/ui/monitor-queries/disable-inline.png "內聯動作已反白顯示於[!UICONTROL 已排程查詢]檢視中。"){width="100" zoomable="yes"}</p> |
+| 新對應工具函式 | 現在當您在「資料準備」中對應物件時，可以使用以下函式： <ul><li>`map_get_values`</li><li>`map_has_keys`</li><li>`add_to_map`</li></ul> 如需這些函式的詳細資訊，請閱讀 [資料準備函式指南](../../data-prep/functions.md#hierarchies---objects). |
 
 {style="table-layout:auto"}
 
-如需有關查詢服務的詳細資訊，請參考[查詢服務概觀](../../query-service/home.md)。
+如需有關「資料準備」的詳細資訊，請詳閱[「資料準備」概觀](../../data-prep/home.md)。
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] 可讓您對儲存在中的資料進行分段 [!DNL Experience Platform] 和進入受眾的個人（例如客戶、潛在客戶、使用者或組織）相關的資訊。 您可以透過區段定義或其他來源，從 [!DNL Real-Time Customer Profile] 資料。 這些對象是在上集中設定和維護 [!DNL Platform]和可供任何Adobe解決方案輕鬆存取。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 對象入口網站 | Audience Portal提供全新的瀏覽體驗，讓您在Adobe Experience Platform中存取、建立和管理對象。 在Audience Portal中，您可以檢視Platform產生和外部產生的對象；透過篩選、資料夾和標籤改善您的工作效率；建立Platform產生的對象；以及透過CSV檔案匯入外部產生的對象。 如需對象入口網站的詳細資訊，請參閱 [Segmentation Service UI指南](../../segmentation/ui/overview.md). |
+| 對象構成 | 對象構成會使用用來代表不同動作的區塊，提供易於使用的工作區來建立和編輯對象。 如需對象構成的詳細資訊，請參閱 [對象構成UI指南](../../segmentation/ui/audience-composition.md). |
+
+如需詳細資訊，請參閱 [!DNL Segmentation Service]，請閱讀 [區段概觀](../../segmentation/home.md).
 
 ## 來源 {#sources}
 
-Adobe Experience Platform 可從外部來源擷取資料，並讓您使用 Platform 服務建構、標示和強化該資料。您可以從各種來源擷取資料，例如 Adob&#x200B;&#x200B;e 應用程式、雲端型儲存空間、協力廠商軟體和 CRM 系統。
-
 Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
-**更新的功能**
+**新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe Analytics 分類來源資料流刪除支援 | 您現在可以刪除將 Adob&#x200B;&#x200B;e Analytics 分類用為來源的來源資料流。在「**[!UICONTROL 來源]** > **[!UICONTROL 資料流]**」下，選取所需的資料流，然後選取「刪除」。如需詳細資訊，請至「[建立 Adob&#x200B;&#x200B;e Analytics 分類資料之來源連線](../../sources/tutorials/ui/create/adobe-applications/classifications.md)」詳閱指南。 |
-| 使用 API 篩選 [!DNL Microsoft Dynamics] 的支援 | 使用邏輯和比較運算子篩選 [[!DNL Microsoft Dynamics]](../../sources/connectors/crm/ms-dynamics.md) 來源的列層級資料。如需詳細資訊，請至「[使用 API 篩選來源的資料](../../sources/tutorials/api/filter.md)」詳閱指南。 |
-| [!BADGE Beta]{type=Informative}[!DNL RainFocus] | 您現在可以使用 [!DNL RainFocus] 來源整合，將事件管理和分析資料從您的 [!DNL RainFocus] 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [[!DNL RainFocus]  來源概觀](../../sources/connectors/analytics/rainfocus.md)。 |
-| Adobe Commerce 的支援 | 您現在可以使用 Adobe Commerce 來源整合，將資料從您的 Adobe Commerce 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [Adobe Commerce 來源概觀](../../sources/connectors/adobe-applications/commerce.md)。 |
-| 支援 [!DNL Mixpanel] | 您現在可以使用 [!DNL Mixpanel] 來源整合，將分析資料從您的 [!DNL Mixpanel] 帳戶帶到使用 API 或使用者介面的 Experience Platform。如需詳細資訊，請閱讀 [[!DNL Mixpanel]  來源概觀](../../sources/connectors/analytics/mixpanel.md)。 |
-| 支援 [!DNL Zendesk] | 您現在可以使用 [!DNL Zendesk] 來源整合，將客戶成功資料從您的 [!DNL Zendesk] 帳戶帶到使用 API 或使用者介面的 Experience Platform。如需詳細資訊，請閱讀 [[!DNL Zendesk]  來源概觀](../../sources/connectors/customer-success/zendesk.md)。 |
+| [!BADGE Beta]{type=Informative}[!DNL SAP Commerce] | 您現在可以使用 [[!DNL SAP Commerce] 來源](../../sources/connectors/ecommerce/sap-commerce.md) 將訂閱帳單資料帶入 [!DNL SAP Commerce] 要Experience Platform的帳戶。 |
+| 支援 [!DNL Phoenix] | 您現在可以使用 [[!DNL Phoenix] 來源](../../sources/connectors/databases/phoenix.md) 將您的資料帶入 [!DNL Phoenix] 要Experience Platform的資料庫 |
+| 驗證更新至 [!DNL Salesforce] 和 [!DNL Salesforce Service Cloud] | 您現在可以指定的API版本 [[!DNL Salesforce]](../../sources/connectors/crm/salesforce.md) 和 [[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md) 使用Experience PlatformUI或驗證新帳戶時的來源 [!DNL Flow Service] API。 |
 
 {style="table-layout:auto"}
 
-若要了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+如需有關來源的詳細資訊，請參閱 [來源概觀](../../sources/home.md).

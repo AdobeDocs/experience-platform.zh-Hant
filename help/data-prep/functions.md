@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 61247a5cac0f00a4163007fd693d3a0b0efc23ab
+source-git-commit: 4064c4a7f855fa065c711df5d02d6b7982cc7627
 workflow-type: tm+mt
-source-wordcount: '4916'
+source-wordcount: '5221'
 ht-degree: 3%
 
 ---
@@ -148,9 +148,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 無效 | 將屬性的值設為 `null`. 當您不想將欄位複製到目標結構描述時，就應該使用此專案。 | | nullify() | nullify() | `null` |
 | get_keys | 剖析索引鍵/值配對並傳回所有索引鍵。 | <ul><li>物件： **必填** 從中擷取金鑰的物件。</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;： &quot;Pride and Impance&quot;， &quot;book2&quot;： &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | 根據指定的索引鍵，剖析索引鍵/值配對並傳回字串的值。 | <ul><li>字串： **必填** 您要剖析的字串。</li><li>索引鍵： **必填** 必須為其擷取值的索引鍵。</li><li>VALUE_DELIMITER： **必填** 分隔欄位和值的分隔字元。 若為 `null` 或提供了空字串，則此值為 `:`.</li><li>FIELD_DELIMITER： *可選* 分隔欄位和值配對的分隔字元。 若為 `null` 或提供了空字串，則此值為 `,`.</li></ul> | get_values(STRING， KEY， VALUE_DELIMITER， FIELD_DELIMITER) | get_values(\&quot;firstName - John ， lastName - Cena ， phone - 555 420 8692\&quot;， \&quot;firstName\&quot;， \&quot;-\&quot;， \&quot;，\&quot;) | John |
-<!-- | map_get_values | Takes a map and a key input. If the input is a single key, then the function returns the value associated with that key. If the input is a string array, then the function returns all values corresponding to the keys provided. If the incoming map has duplicate keys, the return value must de-duplicate the keys and return unique values. | <ul><li>MAP: **Required** The input map data.</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | get_values(MAP, KEY) | Please see the [appendix](#map_get_values) for a code sample. | |
-| map_has_keys | If one or more input keys are provided, then the function returns true. If a string array is provided as input, then the function returns true on the first key that is found. | <ul><li>MAP:  **Required** The input map data</li><li>KEY:  **Required** The key can be a single string or a string array. If any other primitive type (data / number) is provided, then it is treated as a string.</li></ul> | map_has_keys(MAP, KEY) | Please see the [appendix](#map_has_keys) for a code sample. | |
-| add_to_map | Accepts at least two inputs. Any number of maps can be provided as inputs. Data Prep returns a single map that has all key-value pairs from all the inputs. If one or more keys are repeated (in the same map or across maps), Data Prep de-duplicates the keys so that the first key-value pair persists in the order that they were passed in the input. | MAP: **Required** The input map data. | add_to_map(MAP 1, MAP 2, MAP 3, ...) | Please see the [appendix](#add_to_map) for a code sample. | | -->
+| map_get_values | 接受地圖和按鍵輸入。 如果輸入是單一索引鍵，則函式會傳回與該索引鍵相關聯的值。 如果輸入為字串陣列，則函式會傳回與所提供索引鍵對應的所有值。 如果傳入的對應有重複的索引鍵，則傳回值必須刪除重複的索引鍵並傳回唯一值。 | <ul><li>對應： **必填** 輸入地圖資料。</li><li>索引鍵：  **必填** 索引鍵可以是單一字串或字串陣列。 如果提供任何其他基本型別（資料/數字），則會將其視為字串。</li></ul> | get_values(MAP， KEY) | 請參閱 [附錄](#map_get_values) 以取得程式碼範例。 | |
+| map_has_keys | 如果提供一個或多個輸入鍵，則函式傳回true。 如果提供字串陣列作為輸入，則函式在找到的第一個鍵上傳回true。 | <ul><li>對應：  **必填** 輸入地圖資料</li><li>索引鍵：  **必填** 索引鍵可以是單一字串或字串陣列。 如果提供任何其他基本型別（資料/數字），則會將其視為字串。</li></ul> | map_has_keys(MAP， KEY) | 請參閱 [附錄](#map_has_keys) 以取得程式碼範例。 | |
+| add_to_map | 接受至少兩個輸入。 可提供任意數量的地圖作為輸入。 「資料準備」會傳回單一對應，其中包含來自所有輸入的所有索引鍵/值組。 如果一個或多個索引鍵重複（在相同對應中或跨對應），資料準備會去除重複的索引鍵，因此第一個索引鍵/值組會按照它們在輸入中傳遞的順序持續存在。 | 對應： **必填** 輸入地圖資料。 | add_to_map(MAP 1， MAP 2， MAP 3， ...) | 請參閱 [附錄](#add_to_map) 以取得程式碼範例。 | |
 
 {style="table-layout:auto"}
 
@@ -381,12 +381,12 @@ address.line1 -> addr.addrLine1
 | 駭客 | 若在中偵測到指令碼，則會使用此裝置值。 `useragent` 字串。 |
 
 {style="table-layout:auto"}
-<!-- 
-### Code samples {#code-samples}
+
+### 程式碼範例 {#code-samples}
 
 #### map_get_values {#map-get-values}
 
-+++Select to view example
++++選取以檢視範例
 
 ```json
  example = "map_get_values(book_details,\"author\") where input is : {\n" +
@@ -404,7 +404,7 @@ address.line1 -> addr.addrLine1
 
 #### map_has_keys {#map_has_keys}
 
-+++Select to view example
++++選取以檢視範例
 
 ```json
  example = "map_has_keys(book_details,\"author\")where input is : {\n" +
@@ -422,7 +422,7 @@ address.line1 -> addr.addrLine1
 
 #### add_to_map {#add_to_map}
 
-+++Select to view example
++++選取以檢視範例
 
 ```json
 example = "add_to_map(book_details, book_details2) where input is {\n" +
@@ -454,4 +454,4 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
       returns = "A new map with all elements from map and addends"
 ```
 
-+++ -->
++++
