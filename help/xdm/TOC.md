@@ -4,10 +4,10 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 使用體驗資料模型 (XDM) 類別和結構描述欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: 81b53d2bd84eacb32999b957bee9b5e9aa77d5f7
+source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 19%
+source-wordcount: '519'
+ht-degree: 21%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 19%
 * 綱要 {#schema}
    * [結構描述組合基本概念](schema/composition.md)
    * [資料模式的最佳做法](schema/best-practices.md)
-   * [敏感和個人資料](./schema/sensitive-and-personal-data.md)
+   * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
    * [XDM中的名稱空間](./schema/namespaces.md)
    * 產業資料模型 {#industries}
-      * [總覽](./schema/industries/overview.md)
+      * [概觀](./schema/industries/overview.md)
       * [零售](./schema/industries/retail.md)
       * [金融服務](./schema/industries/financial.md)
       * [醫療保健](./schema/industries/healthcare.md)
@@ -37,6 +37,7 @@ ht-degree: 19%
    * [計劃](./classes/plan.md)
    * [政策](./classes/policy.md)
    * [產品](./classes/product.md)
+   * [潛在客戶](./classes/prospect.md)
    * [提供者](./classes/provider.md)
    * [區段定義](./classes/segment-definition.md)
    * B2B類別 {#b2b}
@@ -57,11 +58,11 @@ ht-degree: 19%
       * [醫療保健會員詳細資訊](./field-groups/profile/healthcare-member-details.md)
       * [熟客方案細節](./field-groups/profile/loyalty-details.md)
       * [個人聯絡詳細資訊](./field-groups/profile/personal-contact-details.md)
-      * [區段會籍細節](./field-groups/profile/segmentation.md)
+      * [區段會籍詳細資料](./field-groups/profile/segmentation.md)
       * [電信訂閱](./field-groups/profile/telecom-subscription.md)
       * [工作聯絡詳細資訊](./field-groups/profile/work-contact-details.md)
       * [XDM商業人士要素](./field-groups/profile/business-person-components.md)
-      * [XDM商業人士詳細資料](./field-groups/profile/business-person-details.md)
+      * [XDM商業人士細節](./field-groups/profile/business-person-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics完整擴充功能](./field-groups/event/analytics-full-extension.md)
       * [廣告詳細資料](./field-groups/event/advertising-details.md)
@@ -70,7 +71,7 @@ ht-degree: 19%
       * [行銷活動行銷細節](./field-groups/event/campaign-marketing-details.md)
       * [卡片動作](./field-groups/event/card-actions.md)
       * [管道詳細資料](./field-groups/event/channel-details.md)
-      * [商務詳細資料](./field-groups/event/commerce-details.md)
+      * [商業細節](./field-groups/event/commerce-details.md)
       * [存款細節](./field-groups/event/deposit-details.md)
       * [裝置折舊換新細節](./field-groups/event/device-trade-in-details.md)
       * [餐飲預訂](./field-groups/event/dining-reservation.md)
@@ -91,7 +92,7 @@ ht-degree: 19%
    * XDM商業活動會員 {#b2b-campaign-members}
       * [XDM商業活動會員細節](./field-groups/b2b-campaign-members/details.md)
    * 藥物 {#medication}
-      * [醫療保健](./field-groups/medication/healthcare-medication.md)
+      * [醫療保健藥物](./field-groups/medication/healthcare-medication.md)
    * 計劃 {#plan}
       * [醫療保健計畫詳細資料](./field-groups/plan/healthcare-plan-details.md)
    * 產品 {#product}
@@ -104,7 +105,7 @@ ht-degree: 19%
    * [帳戶詳細資料](./data-types/account-details.md)
    * [廣告插播](./data-types/ad-break.md)
    * [應用程式](./data-types/application.md)
-   * [Beacon](./data-types/beacon.md)
+   * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資料](./data-types/browser-details.md)
    * [B2B來源](./data-types/b2b-source.md)
    * [Commerce](./data-types/commerce.md)
@@ -118,11 +119,11 @@ ht-degree: 19%
    * [外部來源系統稽核屬性](./data-types/external-source-system-audit-attributes.md)
    * [財務帳戶](./data-types/financial-account.md)
    * [一般同意欄位](./data-types/consent-field.md)
-   * [通用行銷偏好設定欄位](./data-types/marketing-field.md)
-   * [具有訂閱的一般行銷偏好設定欄位](./data-types/marketing-field-subscriptions.md)
+   * [通用的行銷偏好設定欄位](./data-types/marketing-field.md)
+   * [訂閱通用的行銷偏好設定欄位](./data-types/marketing-field-subscriptions.md)
    * [通用個人化偏好設定欄位](./data-types/personalization-field.md)
    * [地理](./data-types/geo.md)
-   * [地理圈](./data-types/geo-circle.md)
+   * [地理圓形](./data-types/geo-circle.md)
    * [地理座標](./data-types/geo-coordinates.md)
    * [地理互動細節](./data-types/geo-interaction-details.md)
    * [地理形狀](./data-types/geo-shape.md)
@@ -130,7 +131,7 @@ ht-degree: 19%
    * [曝光數](./data-types/impressions.md)
    * [實作詳細資料](./data-types/implementation-details.md)
    * [內部網站搜尋](./data-types/internal-site-search.md)
-   * [金鑰值組](./data-types/key-value-pair.md)
+   * [索引鍵值配對](./data-types/key-value-pair.md)
    * [行銷](./data-types/marketing.md)
    * [測量](./data-types/measure.md)
    * [訂購](./data-types/order.md)
@@ -142,7 +143,7 @@ ht-degree: 19%
    * [POI詳細資料](./data-types/poi-details.md)
    * [POI互動](./data-types/poi-interaction.md)
    * [郵寄地址](./data-types/postal-address.md)
-   * [產品清單專案](./data-types/product-list-item.md)
+   * [產品清單項目](./data-types/product-list-item.md)
    * [搜尋](./data-types/search.md)
    * [訂閱](./data-types/subscription.md)
    * [電信訂閱](./data-types/telecom-subscription.md)
@@ -150,16 +151,16 @@ ht-degree: 19%
    * [網頁資訊](./data-types/web-information.md)
    * [網路互動](./data-types/web-interaction.md)
    * [網頁詳細資料](./data-types/webpage-details.md)
-* [!UICONTROL 結構描述] UI {#ui}
-   * [總覽](./ui/overview.md)
+* [!UICONTROL 方案] UI {#ui}
+   * [概觀](./ui/overview.md)
    * [探索 XDM 資源](./ui/explore.md)
    * 建立和編輯資源 {#resources}
-      * [綱要](./ui/resources/schemas.md)
+      * [結構描述](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
    * 定義欄位 {#fields}
-      * [總覽](./ui/fields/overview.md)
+      * [概觀](./ui/fields/overview.md)
       * [必填欄位](./ui/fields/required.md)
       * [物件欄位](./ui/fields/object.md)
       * [陣列欄位](./ui/fields/array.md)
@@ -170,16 +171,16 @@ ht-degree: 19%
    * [產生範例XDM資料](./ui/sample.md)
    * [匯出XDM結構描述](./ui/export.md)
 * 結構描述登入API {#api}
-   * [總覽](api/overview.md)
+   * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [綱要](api/schemas.md)
+   * [結構描述](api/schemas.md)
    * [行為](api/behaviors.md)
    * [類別](api/classes.md)
    * [結構描述欄位群組](api/field-groups.md)
    * [資料類型](api/data-types.md)
    * [描述項](api/descriptors.md)
    * [聯合](api/unions.md)
-   * [CSV至結構描述轉換](api/csv-to-schema.md)
+   * [CSV到結構描述轉換](api/csv-to-schema.md)
    * [轉存](api/export.md)
    * [讀入](api/import.md)
    * [範例資料](api/sample-data.md)
