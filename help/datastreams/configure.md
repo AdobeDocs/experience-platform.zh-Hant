@@ -2,9 +2,9 @@
 title: 設定資料流
 description: 瞭解如何將您的使用者端Web SDK整合與其他Adobe產品和第三方目的地連線起來。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: ac0d92938332f04d0b2813172d0d4a75cacdcd1d
+source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
 workflow-type: tm+mt
-source-wordcount: '2247'
+source-wordcount: '2275'
 ht-degree: 3%
 
 ---
@@ -50,8 +50,8 @@ ht-degree: 3%
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL 地理查閱] | 根據訪客IP位址啟用所選選項的地理位置查閱。 可用選項： <ul><li>國家/地區</li><li>郵遞區號</li><li>州/省</li><li>DMA</li><li>城市</li><li>緯度 </li><li>經度</li></ul>選取 **[!UICONTROL 城市]**， **[!UICONTROL 緯度]**，或 **[!UICONTROL 經度]** 無論選取其他什麼選項，最多提供兩個小數點的座標。 這將視為城市層級的詳細程度。 <br> <br>未選取任何選項會停用任何地理位置查閱。 地理位置發生於 [!UICONTROL IP模糊化] 且不會受  [!UICONTROL IP模糊化] 設定。 |
-| [!UICONTROL 網路查詢] | 根據訪客IP位址啟用所選選項的網路查詢。 可用選項： <ul><li>電信業者</li><li>網域</li><li>ISP</li></ul>使用這些選項可向其他服務提供有關請求源自的特定網路的詳細資訊。 |
+| [!UICONTROL 地理查閱] | 根據訪客IP位址啟用所選選項的地理位置查閱。 地理位置查詢需要您包含 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) Web SDK設定中的欄位群組。 <br> 可用選項： <ul><li>國家/地區</li><li>郵遞區號</li><li>州/省</li><li>DMA</li><li>城市</li><li>緯度 </li><li>經度</li></ul>選取 **[!UICONTROL 城市]**， **[!UICONTROL 緯度]**，或 **[!UICONTROL 經度]** 無論選取其他什麼選項，最多提供兩個小數點的座標。 這將視為城市層級的詳細程度。 <br> <br>未選取任何選項會停用任何地理位置查閱。 地理位置發生於 [!UICONTROL IP模糊化] 且不會受  [!UICONTROL IP模糊化] 設定。 |
+| [!UICONTROL 網路查詢] | 根據訪客IP位址啟用所選選項的網路查詢。 網路查詢需要您包含 [`Environment`](../edge/data-collection/automatic-information.md#environment) Web SDK設定中的欄位群組。 <br> 可用選項： <ul><li>電信業者</li><li>網域</li><li>ISP</li></ul>使用這些選項可向其他服務提供有關請求源自的特定網路的詳細資訊。 |
 | [!UICONTROL IP 模糊化] | 指示要套用至資料流的IP模糊化型別。 任何根據客戶IP的處理作業都會受到IP模糊化設定的影響。 這包括從您的資料流接收資料的所有Experience Cloud服務。 <p>可用選項：</p> <ul><li>**[!UICONTROL 無]**：停用IP模糊化功能。 完整的使用者IP位址將透過資料流傳送。</li><li>**[!UICONTROL 部分]**：針對IPv4位址，將使用者IP位址的最後八位元模糊化。 針對IPv6位址，會模糊化位址的後80個位元。 <p>範例：</p> <ul><li>IPv4： `1.2.3.4` -> `1.2.3.0`</li><li>IPv6： `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 完整]**：模糊化整個IP位址。 <p>範例：</p> <ul><li>IPv4： `1.2.3.4` -> `0.0.0.0`</li><li>IPv6： `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP模糊化對其他Adobe產品的影響： <ul><li>**Adobe Target**：資料流層級 [!UICONTROL IP模糊化] 設定的優先順序高於Adobe Target中設定的任何IP模糊化選項。 例如，如果資料流層級 [!UICONTROL IP模糊化] 選項已設為 **[!UICONTROL 完整]** 且Adobe Target IP模糊化選項設為 **[!UICONTROL 最後一個八位元模糊化]**，Adobe Target會收到完全模糊化的IP。 請參閱Adobe Target檔案於 [IP模糊化](https://developer.adobe.com/target/before-implement/privacy/privacy/) 和 [地理位置](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=en) 以取得更多詳細資料。</li><li>**Audience Manager**：資料流層級IP模糊化設定的優先順序高於Audience Manager中設定的任何IP模糊化選項，且會套用至所有IP位址。 Audience Manager執行的任何地理位置查詢都會受到資料流層級的影響 [!UICONTROL IP模糊化] 選項。 在Audience Manager中，根據完全模糊化的IP進行地理位置查詢，將會產生未知區域，而且將不會實現任何根據結果地理位置資料的區段。 請參閱Audience Manager檔案於 [IP模糊化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=en) 以取得更多詳細資料。</li><li>**Adobe Analytics**：如果選取「無」以外的任何IP模糊化選項，Adobe Analytics目前會收到部分模糊化的IP位址。 若要讓Analytics接收完全模糊化的IP位址，您必須在Adobe Analytics中個別設定IP模糊化。 此行為會在未來版本中更新。請參閱Adobe Analytics [檔案](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html) 以取得有關如何在Analytics中啟用IP模糊化的詳細資訊。</li></ul> |
 | [!UICONTROL 第一方ID Cookie] | 啟用時，此設定會在查詢時通知Edge Network參考指定的Cookie。 [第一方裝置ID](../edge/identity/first-party-device-ids.md)，而不要在「身分對應」中查詢此值。<br><br>啟用此設定時，您必須提供預期儲存ID的Cookie名稱。 |
 | [!UICONTROL 協力廠商ID同步] | ID同步可分組到容器中，以便在不同時間執行不同的ID同步。 啟用時，此設定可讓您指定針對此資料流執行的ID同步容器。 |
