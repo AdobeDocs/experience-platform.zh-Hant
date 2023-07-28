@@ -3,10 +3,10 @@ audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
-source-git-commit: 52836892736a075981ee06f28fbdf178f4492e09
+source-git-commit: 5fb8edd9dd664f9a0ed036d1340b5f8fcd4ba0c4
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 27%
+source-wordcount: '141'
+ht-degree: 28%
 
 ---
 
@@ -20,23 +20,24 @@ ht-degree: 27%
 * [體驗事件有效期](event-expirations.md)
 * [假名設定檔有效期](pseudonymous-profiles.md)
 * [!DNL Profile] API {#api}
-   * [總覽](api/overview.md)
+   * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [邊緣投影](api/edge-projections.md)
    * [實體([!DNL Profile] access)](api/entities.md)
    * [匯出工作([!DNL Profile] export)](api/export-jobs.md)
-   * [預覽範例狀態([!DNL Profile] 預覽)](api/preview-sample-status.md)
-   * [[!DNL Profile] 系統工作（刪除請求）](api/profile-system-jobs.md)
+   * [預覽樣本狀態([!DNL Profile] 預覽)](api/preview-sample-status.md)
+   * [[!DNL Profile] 系統作業（刪除請求）](api/profile-system-jobs.md)
 * 設定檔UI {#ui}
    * [[!DNL Profile] UI指南](ui/user-guide.md)
    * [[!DNL Profile] 詳細資料自訂](ui/profile-customization.md)
+   * [潛在客戶設定檔](ui/prospect-profile.md)
 * (Beta)計算屬性 {#computed-attributes}
-   * [總覽](computed-attributes/overview.md)
-   * [Computed attributes API指南](computed-attributes/api.md)
+   * [概觀](computed-attributes/overview.md)
+   * [計算屬性API指南](computed-attributes/api.md)
    * [計算屬性UI指南](computed-attributes/ui.md)
    * [常見問答](computed-attributes/faq.md)
-* 合併原則 {#merge-policies}
-   * [總覽](merge-policies/overview.md)
+* 合併政策 {#merge-policies}
+   * [概觀](merge-policies/overview.md)
    * [合併原則API](api/merge-policies.md)
    * [合併原則UI指南](merge-policies/ui-guide.md)
    * [建立合併原則（影片）](video/create-merge-policies.md)

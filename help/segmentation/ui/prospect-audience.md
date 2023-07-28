@@ -4,9 +4,9 @@ description: 瞭解如何使用協力廠商資訊建立和使用潛在客戶受�
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 6a24e2fc29c8e020c7fe4ac1c1c5f9640cefb971
+source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '399'
 ht-degree: 1%
 
 ---
@@ -64,4 +64,4 @@ Adobe Experience Platform可讓您將行銷人員友善的細分體驗完整地�
 
 ## 後續步驟
 
-<!-- After reading this guide, you now know how to create and manage your prospect audiences in Adobe Experience Platform. To learn how to activate a prospect audience to other downstream services, please read the guide on [activating prospect audiences](../../destinations/ui/activate-prospect-audiences.md). -->
+閱讀本指南後，您現在瞭解如何在Adobe Experience Platform中建立和管理潛在客戶對象。 若要瞭解如何啟用其他下游服務的潛在客戶對象，請閱讀以下指南： [啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md).
