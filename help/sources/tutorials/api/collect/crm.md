@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；crm；CRM
+keywords: Experience Platform；首頁；熱門主題；CRM；CRM
 solution: Experience Platform
 title: 使用流量服務API建立CRM來源的資料流
 type: Tutorial
-description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，以及使用來源聯結器和API將資料帶入Platform的步驟。
+description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，以及使用來源聯結器和API將資料引進Platform的步驟。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1374'
 ht-degree: 1%
 
 ---
@@ -18,26 +18,26 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有具有CRM來源的有效基本連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#customer-relationship-management) 以取得可建立基礎連線的CRM來源清單。
+>為了建立資料流，您必須擁有具有CRM來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#customer-relationship-management) 以取得可建立基礎連線的CRM來源清單。
 
 ## 快速入門
 
-本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
+本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
-   * [結構描述組合基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [Schema Registry開發人員指南](../../../../xdm/api/getting-started.md)：包含成功執行對Schema Registry API的呼叫所需瞭解的重要資訊。 這包括您的 `{TENANT_ID}`、「容器」的概念，以及發出請求所需的標頭（特別注意「接受」標頭及其可能的值）。
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
+   * [結構描述組合基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
+   * [Schema Registry開發人員指南](../../../../xdm/api/getting-started.md)：包含您需瞭解的重要資訊，才能成功執行對Schema Registry API的呼叫。 這包括您的 `{TENANT_ID}`、「容器」的概念，以及發出請求所需的標頭（請特別注意Accept標頭及其可能的值）。
 * [[!DNL Catalog Service]](../../../../catalog/home.md)：目錄是Experience Platform中資料位置和譜系的記錄系統。
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md)：批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform中。
 * [沙箱](../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../landing/api-guide.md).
 
 ## 建立來源連線 {#source}
 
-您可以向以下發出POST要求來建立來源連線： [!DNL Flow Service] API。 來源連線由連線ID、來源資料檔案的路徑和連線規格ID組成。
+您可以透過向以下發出POST請求來建立來源連線： [!DNL Flow Service] API。 來源連線由連線ID、來源資料檔案的路徑以及連線規格ID組成。
 
 若要建立來源連線，您也必須定義資料格式屬性的列舉值。
 
@@ -109,13 +109,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `baseConnectionId` | 您所存取的協力廠商CRM系統的唯一連線ID。 |
+| `baseConnectionId` | 您存取的協力廠商CRM系統的唯一連線ID。 |
 | `params.path` | 來源檔案的路徑。 |
 | `connectionSpec.id` | 與您特定的協力廠商CRM系統相關聯的連線規格ID。 請參閱 [附錄](#appendix) 以取得連線規格ID的清單。 |
 
 **回應**
 
-成功的回應會傳回唯一識別碼(`id`)。 此ID在後續步驟中是建立資料流的必要專案。
+成功的回應會傳回唯一識別碼(`id`)。 在後續步驟中需要此ID才能建立資料流。
 
 ```json
 {
@@ -126,23 +126,23 @@ curl -X POST \
 
 ## 建立目標XDM結構描述 {#target-schema}
 
-為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後，目標結構描述會用於建立包含來源資料的Platform資料集。
+為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後目標結構描述會用來建立包含來源資料的Platform資料集。
 
-可透過對以下專案執行POST請求來建立目標XDM結構描述： [結構描述登入API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+您可以透過對以下對象執行POST請求來建立目標XDM結構描述： [結構描述登入API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-如需建立目標XDM結構的詳細步驟，請參閱以下教學課程： [使用API建立結構描述](../../../../xdm/api/schemas.md).
+如需如何建立目標XDM結構的詳細步驟，請參閱以下教學課程： [使用API建立結構描述](../../../../xdm/api/schemas.md).
 
 ## 建立目標資料集 {#target-dataset}
 
-您可以透過對「 」執行POST請求來建立目標資料集 [目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，在裝載中提供目標結構描述的ID。
+您可以透過對執行POST請求來建立目標資料集 [目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，在裝載中提供目標結構描述的ID。
 
-如需建立目標資料集的詳細步驟，請參閱以下教學課程： [使用API建立資料集](../../../../catalog/api/create-dataset.md).
+如需如何建立目標資料集的詳細步驟，請參閱教學課程，位於 [使用API建立資料集](../../../../catalog/api/create-dataset.md).
 
 ## 建立目標連線
 
-目標連線代表所擷取資料登陸目的地之間的連線。 若要建立目標連線，您必須提供與Data Lake相關聯的固定連線規格ID。 此連線規格ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+目標連線代表與擷取資料著陸目的地之間的連線。 若要建立目標連線，您必須提供與Data Lake相關聯的固定連線規格ID。 此連線規格ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-您現在擁有目標結構描述、目標資料集和與Data Lake的連線規格ID的唯一識別碼。 使用 [!DNL Flow Service] API後，您可以指定這些識別碼以及將包含傳入來源資料的資料集，藉此建立目標連線。
+您現在具有目標結構描述、目標資料集和到資料湖的連線規格ID的唯一識別碼。 使用 [!DNL Flow Service] API後，您可以指定這些識別碼，並將包含傳入來源資料的資料集，藉此建立目標連線。
 
 **API格式**
 
@@ -183,7 +183,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | 此 `$id` 目標XDM結構描述的。 |
 | `data.schema.version` | 結構描述的版本。 此值必須設定 `application/vnd.adobe.xed-full+json;version=1`，會傳回結構描述的最新次要版本。 |
-| `params.dataSetId` | 目標資料集的識別碼。 |
+| `params.dataSetId` | 上一步中產生的目標資料集的ID。 **注意**：建立目標連線時，您必須提供有效的資料集ID。 無效的資料集ID將會導致錯誤。 |
 | `connectionSpec.id` | 用來連線至Data Lake的連線規格ID。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
@@ -195,9 +195,9 @@ curl -X POST \
 
 ## 建立對應 {#mapping}
 
-為了將來源資料內嵌到目標資料集中，必須先將其對應到目標資料集所遵守的目標結構描述。
+為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請向以下發出POST請求： `mappingSets` 的端點 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) 提供您的目標XDM結構描述時 `$id` 以及要建立的對應集的詳細資訊。
+若要建立對應集，請向以下發出POST請求： `mappingSets` 的端點 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) 提供您的目標XDM結構描述時 `$id` 以及要建立的對應集詳細資訊。
 
 **API格式**
 
@@ -255,7 +255,7 @@ curl -X POST \
 
 **回應**
 
-成功回應會傳回新建立對應的詳細資料，包括其唯一識別碼(`id`)。 在後續步驟中需要此值，才能建立資料流。
+成功的回應會傳回新建立的對應詳細資訊，包括其唯一識別碼(`id`)。 在後續步驟中需要此值，才能建立資料流。
 
 ```json
 {
@@ -270,7 +270,7 @@ curl -X POST \
 
 ## 擷取資料流規格 {#specs}
 
-資料流負責從來源收集資料，並將資料匯入Platform。 若要建立資料流，您必須先取得負責收集CRM資料的資料流規格。
+資料流負責從來源收集資料，並將這些資料匯入Platform。 為了建立資料流，您必須先取得負責收集CRM資料的資料流規格。
 
 **API格式**
 
@@ -290,11 +290,11 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回負責將資料從來源帶入Platform的資料流規格的詳細資訊。 回應包含唯一的流量規格 `id` 建立新資料流時需要。
+成功的回應會傳回負責將資料從來源帶入Platform的資料流規格的詳細資料。 回應包含唯一的流量規格 `id` 建立新資料流時需要。
 
 >[!NOTE]
 >
->為了簡單起見，以下JSON回應裝載已隱藏。 選取「裝載」以檢視回應裝載。
+>為了簡單起見，會隱藏下列JSON回應裝載。 選取「裝載」以檢視回應裝載。
 
 +++ 檢視裝載
 
@@ -590,9 +590,9 @@ curl -X GET \
 * [對應 ID](#mapping)
 * [資料流規格ID](#specs)
 
-資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提及的值，藉此建立資料流。
+資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提到的值，藉此建立資料流。
 
-若要排程內嵌，您必須先將開始時間值設為以秒為單位的epoch時間。 然後，您必須將頻率值設定為下列五個選項之一： `once`， `minute`， `hour`， `day`，或 `week`. 間隔值會指定兩個連續內嵌之間的期間，而建立一次性內嵌不需要設定間隔。 對於所有其他頻率，間隔值必須設定為等於或大於 `15`.
+若要排程內嵌，您必須先將開始時間值設為以秒為單位的epoch時間。 然後，您必須將頻率值設為五個選項之一： `once`， `minute`， `hour`， `day`，或 `week`. 間隔值會指定兩個連續擷取之間的期間，而建立一次性擷取不需要設定間隔。 對於所有其他頻率，間隔值必須設定為等於或大於 `15`.
 
 **API格式**
 
@@ -651,7 +651,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `flowSpec.id` | 此 [流量規格ID](#specs) 已在上一步中擷取。 |
+| `flowSpec.id` | 此 [流程規格ID](#specs) 已在上一步驟中擷取。 |
 | `sourceConnectionIds` | 此 [來源連線ID](#source) 已在先前步驟中擷取。 |
 | `targetConnectionIds` | 此 [目標連線ID](#target-connection) 已在先前步驟中擷取。 |
 | `transformations.params.mappingId` | 此 [對應ID](#mapping) 已在先前步驟中擷取。 |
@@ -659,7 +659,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 與資料庫關聯的對應ID。 |
 | `scheduleParams.startTime` | 資料流的開始時間（以Epoch時間計）。 |
 | `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`， `minute`， `hour`， `day`，或 `week`. |
-| `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 間隔值應為非零整數。 當頻率設定為時，不需要間隔 `once` 和應大於或等於 `15` （其他頻率值）。 |
+| `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 間隔的值應為非零整數。 當頻率設定為 `once` 且應大於或等於 `15` 其他頻率值。 |
 
 **回應**
 
@@ -675,11 +675,11 @@ curl -X POST \
 
 ## 監視資料流
 
-建立資料流後，您可以監視透過它擷取的資料，以檢視有關資料流執行、完成狀態和錯誤的資訊。 如需如何監視資料流的詳細資訊，請參閱以下教學課程： [監視API中的資料流 ](../monitor.md)
+建立資料流後，您可以監視透過該資料流擷取的資料，以檢視有關資料流執行、完成狀態和錯誤的資訊。 如需如何監視資料流的詳細資訊，請參閱以下教學課程： [監視API中的資料流](../monitor.md)
 
 ## 後續步驟
 
-依照本教學課程所述，您已建立來源聯結器，以依排程從CRM系統收集資料。 傳入資料現在可供下游平台服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
+按照本教學課程，您已建立來源聯結器，以依排程從CRM系統收集資料。 傳入資料現在可供下游Platform服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
 
 * [即時客戶個人檔案總覽](../../../../profile/home.md)
 * [資料科學工作區概觀](../../../../data-science-workspace/home.md)

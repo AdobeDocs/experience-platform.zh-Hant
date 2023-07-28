@@ -3,11 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；雲端儲存資料；串
 solution: Experience Platform
 title: 使用流量服務API為原始資料建立串流資料流
 type: Tutorial
-description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將資料帶入Platform的步驟。
+description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將其帶入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 2%
 
 ---
@@ -18,18 +18,18 @@ ht-degree: 2%
 
 ## 快速入門
 
-本教學課程需要您實際瞭解Adobe Experience Platform的下列元件：
+本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
-   - [結構描述組合基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
-   - [Schema Registry開發人員指南](../../../../xdm/api/getting-started.md)：包含成功執行對Schema Registry API的呼叫所需瞭解的重要資訊。 這包括您的 `{TENANT_ID}`、「容器」的概念，以及發出請求所需的標頭（特別注意「接受」標頭及其可能的值）。
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
+   - [結構描述組合基本概念](../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
+   - [Schema Registry開發人員指南](../../../../xdm/api/getting-started.md)：包含您需瞭解的重要資訊，才能成功執行對Schema Registry API的呼叫。 這包括您的 `{TENANT_ID}`、「容器」的概念，以及發出請求所需的標頭（請特別注意Accept標頭及其可能的值）。
 - [[!DNL Catalog Service]](../../../../catalog/home.md)：目錄是Experience Platform中資料位置和譜系的記錄系統。
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md)：Platform的串流擷取為使用者提供一種方法，可即時從使用者端和伺服器端裝置傳送資料至Experience Platform。
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md)：Platform的串流擷取為使用者提供從使用者端和伺服器端裝置傳送資料以即時Experience Platform的方法。
 - [沙箱](../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../landing/api-guide.md).
 
 ### 建立來源連線 {#source}
 
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 ## 建立目標XDM結構描述 {#target-schema}
 
-為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後，目標結構描述會用於建立包含來源資料的Platform資料集。 此目標XDM結構描述也會擴充XDM [!DNL Individual Profile] 類別。
+為了在Platform中使用來源資料，必須建立目標結構描述，以根據您的需求來建構來源資料。 然後目標結構描述會用來建立包含來源資料的Platform資料集。 此目標XDM結構描述也會擴充XDM [!DNL Individual Profile] 類別。
 
 POST若要建立目標XDM結構描述，請對 `/schemas` 的端點 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -87,7 +87,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立之綱要的詳細資料，包括其唯一識別碼(`$id`)。 在稍後的步驟中，建立目標資料集、對應和資料流時需要此ID。
+成功的回應會傳回新建立之綱要的詳細資料，包括其唯一識別碼(`$id`)。 在後續步驟中，建立目標資料集、對應和資料流時需要此ID。
 
 ```json
 {
@@ -151,7 +151,7 @@ curl -X POST \
 
 ## 建立目標資料集
 
-建立目標XDM結構描述並賦予其唯一性 `$id` 您現在可以建立目標資料集以包含來源資料。 若要建立目標資料集，請向以下發出POST請求： `dataSets` 的端點 [目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)，同時在裝載中提供目標結構描述的ID。
+建立目標XDM結構描述並成為其唯一的 `$id` 您現在可以建立目標資料集以包含來源資料。 POST若要建立目標資料集，請向 `dataSets` 的端點 [目錄服務API](https://www.adobe.io/experience-platform-apis/references/catalog/)，同時在承載中提供目標結構描述的ID。
 
 **API格式**
 
@@ -190,11 +190,11 @@ curl -X POST \
 | --- | --- |
 | `name` | 要建立的資料集名稱。 |
 | `schemaRef.id` | URI `$id` 資料集將以此為基礎的XDM結構描述。 |
-| `schemaRef.contentType` | 結構描述的版本。 此值必須設定為 `application/vnd.adobe.xed-full-notext+json;version=1`，會傳回結構描述的最新次要版本。 請參閱以下小節： [結構描述版本設定](../../../../xdm/api/getting-started.md#versioning) XDM API指南中取得更多資訊。 |
+| `schemaRef.contentType` | 結構描述的版本。 此值必須設定為 `application/vnd.adobe.xed-full-notext+json;version=1`，會傳回結構描述的最新次要版本。 請參閱以下小節： [方案版本設定](../../../../xdm/api/getting-started.md#versioning) XDM API指南以瞭解詳細資訊。 |
 
 **回應**
 
-成功的回應會傳回陣列，其中包含以格式建立的新資料集的ID `"@/datasets/{DATASET_ID}"`. 資料集ID是系統產生的唯讀字串，用來參考API呼叫中的資料集。 在後續步驟中，建立目標連線和資料流時需要目標資料集ID。
+成功的回應會傳回陣列，其中包含以格式建立之新資料集的ID `"@/datasets/{DATASET_ID}"`. 資料集ID是系統產生的唯讀字串，用來參考API呼叫中的資料集。 在後續步驟中，需要目標資料集ID才能建立目標連線和資料流。
 
 ```json
 [
@@ -204,9 +204,9 @@ curl -X POST \
 
 ## 建立目標連線 {#target-connection}
 
-Target連線會建立並管理與Platform或任何已傳輸資料著陸位置的目的地連線。 目標連線包含與建立資料流所需的資料目的地、資料格式和目標連線ID相關的資訊。 Target連線例項是租使用者和組織專屬的。
+Target連線會建立並管理與Platform或任何已傳輸資料著陸位置的目的地連線。 目標連線包含有關資料目的地、資料格式以及建立資料流所需的目標連線ID的資訊。 Target連線例項是租使用者和組織專屬的。
 
-POST若要建立Target連線，請向 `/targetConnections` 的端點 [!DNL Flow Service] API。 在請求過程中，您必須提供資料格式 `dataSetId` 於上一步驟中擷取，且繫結至的固定連線規格ID [!DNL Data Lake]. 此ID為 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+POST若要建立Target連線，請向 `/targetConnections` 的端點 [!DNL Flow Service] API。 在請求過程中，您必須提供資料格式 `dataSetId` 於上一步驟中擷取，且與關聯的固定連線規格ID [!DNL Data Lake]. 此ID為 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API格式**
 
@@ -246,9 +246,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `connectionSpec.id` | 用來連線至 [!DNL Data Lake]. 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | 您要帶入的指定資料格式 [!DNL Data Lake]. |
-| `params.dataSetId` | 在上一步中擷取的目標資料集ID。 |
+| `data.format` | 您要帶到Data Lake的資料指定格式。 |
+| `params.dataSetId` | 上一步中產生的目標資料集的ID。 **注意**：建立目標連線時，您必須提供有效的資料集ID。 無效的資料集ID將會導致錯誤。 |
+| `connectionSpec.id` | 用來連線至Data Lake的連線規格ID。 此ID為： `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **回應**
 
@@ -263,9 +263,9 @@ curl -X POST \
 
 ## 建立對應 {#mapping}
 
-為了將來源資料內嵌到目標資料集中，必須先將其對應到目標資料集所遵守的目標結構描述。
+為了將來源資料擷取到目標資料集中，必須首先將其對應到目標資料集所堅持的目標結構描述。
 
-若要建立對應集，請向以下發出POST請求： `mappingSets` 的端點 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) 提供您的目標XDM結構描述時 `$id` 以及要建立的對應集的詳細資訊。
+若要建立對應集，請向以下發出POST請求： `mappingSets` 的端點 [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) 提供您的目標XDM結構描述時 `$id` 以及要建立的對應集詳細資訊。
 
 **API格式**
 
@@ -310,7 +310,7 @@ curl -X POST \
 
 **回應**
 
-成功回應會傳回新建立對應的詳細資料，包括其唯一識別碼(`id`)。 此ID在後續步驟中是建立資料流的必要專案。
+成功的回應會傳回新建立的對應詳細資訊，包括其唯一識別碼(`id`)。 在後續步驟中需要此ID才能建立資料流。
 
 ```json
 {
@@ -325,7 +325,7 @@ curl -X POST \
 
 ## 擷取資料流規格清單 {#specs}
 
-資料流負責從來源收集資料，並將資料匯入Platform。 若要建立資料流，您必須先透過對以下專案執行GET要求來取得資料流規格： [!DNL Flow Service] API。
+資料流負責從來源收集資料，並將這些資料匯入Platform。 若要建立資料流，您必須先透過對以下專案執行GET要求來取得資料流規格： [!DNL Flow Service] API。
 
 **API格式**
 
@@ -345,7 +345,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回資料流規格的清單。 您需要擷取的資料流規格ID，才能使用任何 [!DNL Amazon Kinesis]， [!DNL Azure Event Hubs]，或  [!DNL Google PubSub]，是 `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+成功的回應會傳回資料流規格的清單。 您需要擷取的資料流規格ID，才能使用任一 [!DNL Amazon Kinesis]， [!DNL Azure Event Hubs]，或  [!DNL Google PubSub]，是 `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
@@ -422,7 +422,7 @@ curl -X GET \
 - [對應 ID](#mapping)
 - [資料流規格ID](#specs)
 
-資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提及的值，藉此建立資料流。
+資料流負責從來源排程及收集資料。 您可以執行POST要求，同時在裝載中提供先前提到的值，藉此建立資料流。
 
 **API格式**
 
@@ -466,7 +466,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `flowSpec.id` | 此 [流量規格ID](#specs) 已在上一步中擷取。 |
+| `flowSpec.id` | 此 [流程規格ID](#specs) 已在上一步驟中擷取。 |
 | `sourceConnectionIds` | 此 [來源連線ID](#source) 已在先前步驟中擷取。 |
 | `targetConnectionIds` | 此 [目標連線ID](#target-connection) 已在先前步驟中擷取。 |
 | `transformations.params.mappingId` | 此 [對應ID](#mapping) 已在先前步驟中擷取。 |
@@ -484,7 +484,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程所述，您已建立資料流，以從串流聯結器收集串流資料。 傳入資料現在可供下游平台服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
+依照本教學課程指示，您已建立資料流以從串流聯結器收集串流資料。 傳入資料現在可供下游Platform服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
 
 - [即時客戶個人檔案總覽](../../../../profile/home.md)
 - [資料科學工作區概觀](../../../../data-science-workspace/home.md)
