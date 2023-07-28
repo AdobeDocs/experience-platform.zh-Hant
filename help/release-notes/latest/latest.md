@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年7月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cc7d43f6424ff91bd237235b278bf13a0add45d
+source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 25%
+source-wordcount: '1297'
+ht-degree: 26%
 
 ---
 
@@ -15,10 +15,24 @@ ht-degree: 25%
 
 Adobe Experience Platform 現有功能的更新：
 
+- [目錄服務](#catalog-service)
 - [資料集合](#data-collection)
 - [目的地](#data-prep)
+- [查詢服務](#query-service)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
+
+## 目錄服務 {#catalog-service}
+
+目錄服務是Adobe Experience Platform中資料位置和譜系的記錄系統。 雖然所有內嵌至Experience Platform的資料都會以檔案和目錄的形式儲存在Data Lake中，但Catalog仍保有這些檔案和目錄的中繼資料和說明，以供查閱和監控之用。
+
+| 功能 | 說明 |
+| --- | --- |
+| 資料集詳細目錄管理 | 資料集UI現在提供一系列內嵌動作，以便更妥善地管理您的資料集。 進階資料集管理可建立資料夾和標籤，並指派給資料集以進行篩選及改善可發現性，進而提高您的工作效率。 如需有關的詳細資訊，請參閱檔案 [內嵌動作](../../catalog/datasets/user-guide.md#inline-actions)，如何 [搜尋和篩選資料集](../../catalog/datasets/user-guide.md#search-and-filter)、和 [將資料集移至資料夾](../../catalog/datasets/user-guide.md#move-to-folders). |
+
+{style="table-layout:auto"}
+
+如需目錄服務的詳細資訊，請參閱 [目錄服務總覽](../../catalog/home.md).
 
 ## 資料集合 {#data-collection}
 
@@ -84,6 +98,21 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 - 我們已修正Microsoft Dynamics 365目的地的問題。 目的地現在支援透過的區域資料路由 [區域選擇器](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)，因此您可以根據貴公司在Microsoft生態系統中布建的地區，路由資料匯出。 ![反白顯示新的「區域」選取器。](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "反白顯示新的「區域」選取器。"){width="100" zoomable="yes"}
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
+
+## 查詢服務 {#query-service}
+
+查詢服務可讓您使用標準的 SQL 查詢 Adob&#x200B;&#x200B;e Experience Platform 資料湖中的資料。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶設定檔。
+
+**更新的功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 增強型查詢編輯器切換 | 增強的查詢編輯器切換可提供更好的協助工具和多主題支援。 增強的編輯器設定可讓您啟用深色或淺色主題。 如需詳細資訊，請參閱[文件](../../query-service/ui/user-guide.md#enhanced-editor-toggle)。 |
+| 已計算統計資料的別名 | 您現在可以提供別名，在SQL查詢的計算統計資料中描述性地參考您的結果。 請參閱檔案，以取得有關COMPUTE STATISTICS命令的此項更新和其他更新的資訊。 如需詳細資訊，請參閱[文件](../../query-service/essential-concepts/dataset-statistics.md#alias-name)。 |
+
+{style="table-layout:auto"}
+
+如需有關查詢服務的詳細資訊，請參考[查詢服務概觀](../../query-service/home.md)。
 
 ## Segmentation Service {#segmentation}
 
