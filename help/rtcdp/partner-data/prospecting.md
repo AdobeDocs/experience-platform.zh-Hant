@@ -4,8 +4,8 @@ description: 了解如何透過 Real-Time CDP 中合作夥伴資料支援所帶�
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="informative" before-title="true"
-source-git-commit: 486e1390dfa0602bef15d196d4a1a5befdc9ff23
-workflow-type: ht
+source-git-commit: d0227dd8dc3d79674d954899e2724d2893e16b73
+workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 100%
 
@@ -204,7 +204,7 @@ ht-degree: 100%
 
 ### 將潛在客戶設定檔啟動到目的地 {#activate-to-destinations}
 
-透過將潛在客戶對象匯出到目的地來使用它們。目前，只有特定目的地，例如 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) 或 [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp.md) 目的地支援啟動潛在客戶設定檔。
+透過將潛在客戶對象匯出到目的地來使用它們。目前，只有特定目的地，例如 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) 或 [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) 目的地支援啟動潛在客戶設定檔。
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 

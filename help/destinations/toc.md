@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
+source-git-commit: 002eea44dd719871d3ff1b4f1548b74efbbc7d3b
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1163'
 ht-degree: 9%
 
 ---
@@ -81,7 +81,7 @@ ht-degree: 9%
       * [Google顯示和視訊360連線](./catalog/advertising/google-dv360.md)
       * [Google gtag擴充功能](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight標籤擴充功能](./catalog/advertising/linkedin.md)
-      * [(Alpha) LiveRamp - SFTP連線](./catalog/advertising/liveramp.md)
+      * [LiveRamp — 入門連線](./catalog/advertising/liveramp-onboarding.md)
       * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
       * [pinterest客戶清單連線](./catalog/advertising/pinterest.md)
