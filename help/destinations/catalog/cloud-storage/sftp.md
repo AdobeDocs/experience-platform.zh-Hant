@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
 workflow-type: tm+mt
 source-wordcount: '940'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -78,7 +78,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="私密 SSH 金鑰"
->abstract="私人SSH金鑰必須是RSA格式、Base64編碼的字串，且不得受密碼保護。"
+>abstract="私密 SSH 金鑰必須為 RSA 格式、Base64 編碼的字串，並且不得受密碼保護。"
 
 如果您選取 **[!UICONTROL 使用密碼的SFTP]** 驗證型別以連線至您的SFTP位置：
 
@@ -100,7 +100,7 @@ ht-degree: 4%
 * **[!UICONTROL 網域]**：填寫SFTP帳戶的IP位址或網域名稱
 * **[!UICONTROL 連線埠]**：您的SFTP儲存位置使用的連線埠；
 * **[!UICONTROL 使用者名稱]**：登入您的SFTP儲存位置的使用者名稱；
-* **[!UICONTROL ssh金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密金鑰必須是RSA格式的Base64編碼字串，且不得受密碼保護。
+* **[!UICONTROL ssh金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密 金鑰必須為 RSA 格式、Base64 編碼的字串，並且不得受密碼保護。
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。
 
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
