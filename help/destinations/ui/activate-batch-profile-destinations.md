@@ -4,15 +4,19 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 1e6cdbaa12c89dc678232245a9544bdfa81aebcf
+source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
 workflow-type: tm+mt
-source-wordcount: '3759'
+source-wordcount: '3673'
 ht-degree: 11%
 
 ---
 
 
 # 啟用對象以批次設定檔匯出目的地
+
+>[!IMPORTANT]
+> 
+> 客戶尚未普遍使用頁面上說明的功能。 本頁目前適用於Adobe內部團隊，作為未來功能的預先閱讀。 移除此附註前，請勿在Adobe外部共用。
 
 >[!IMPORTANT]
 > 
@@ -122,10 +126,6 @@ ht-degree: 11%
 
    ![影像會醒目顯示批次目的地啟動流程中的「已排程」選項，並顯示時間選擇器。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >由於內部Experience Platform程式的設定方式，第一個增量或完整檔案匯出可能不會包含所有回填資料。 <br> <br> 為確保完整檔案和增量檔案的回填資料匯出完整且最新，Adobe建議設定第二天下午12:00 GMT後的第一個檔案匯出時間。 此限制將在未來版本中解決。
-
 1. 使用 **[!UICONTROL 日期]** 選擇器來選擇應執行匯出的日期或間隔。 對於每日匯出，最佳實務是設定您的開始和結束日期，以符合下游平台中行銷活動的持續時間。
 
    >[!IMPORTANT]
@@ -150,10 +150,6 @@ ht-degree: 11%
    * **[!UICONTROL 每小時]**：排程每3、6、8或12小時匯出一次增量檔案。
 
 1. 使用 **[!UICONTROL 時間]** 選擇器來選擇一天中的時間，在 [!DNL UTC] 格式，應何時進行匯出。
-
-   >[!IMPORTANT]
-   >
-   >由於內部Experience Platform程式的設定方式，第一個增量或完整檔案匯出可能不會包含所有回填資料。 <br> <br> 為確保完整檔案和增量檔案的回填資料匯出完整且最新，Adobe建議設定第二天下午12:00 GMT後的第一個檔案匯出時間。 此限制將在未來版本中解決。
 
 1. 使用 **[!UICONTROL 日期]** 選擇器來選擇應進行匯出的間隔。 最佳實務建議將您的開始和結束日期設定為您在下游平台中的行銷活動持續時間。
 
