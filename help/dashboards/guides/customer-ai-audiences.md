@@ -3,10 +3,10 @@ title: Audiences控制面板Customer AI Widget
 description: 瞭解Customer AI如何提供關於您組織即時客戶個人檔案對象流失或傾向的重要深入分析。
 hide: true
 hidefromtoc: true
-source-git-commit: 162ef470751b9fb252658cff4b43595ddb7fe5d5
+source-git-commit: 74dcb35b389a962a5238c1fd5ef1370a76bdd57e
 workflow-type: tm+mt
 source-wordcount: '838'
-ht-degree: 2%
+ht-degree: 13%
 
 ---
 
@@ -23,9 +23,9 @@ THe links when required
 ## [!UICONTROL 分數的Customer AI分佈] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_distributionOfScores"
->title="分數的分佈"
->abstract="此Widget會依個人檔案總數的傾向分數，以5%的增量將其分佈視覺化。 設定檔計數的分佈由AI模型和所選的合併原則決定。 您可以從Widget標題下方的下拉式選單中變更AI模型。"
+>id="platform_dashboards_segments_distributionOfScores"
+>title="分數分佈"
+>abstract="此 Widget 會依傾向分數 (以 5% 的增量) 將設定檔總數的分佈視覺化。設定檔計數的分佈由 AI 模型和所選合併原則決定。您可以從 Widget 標題下的下拉選單中變更 AI 模型。"
 
 此 [!UICONTROL 分數的Customer AI分佈] Widget會依傾向分數分類設定檔總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
 
@@ -52,9 +52,9 @@ THe links when required
 ## [!UICONTROL Customer AI評分摘要] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_audiences_scoringSummary"
->title="評分摘要"
->abstract="此Widget顯示已評分設定檔的總數，並將其分類為包含高、中和低傾向性的貯體。 環形圖可說明高、中及低傾向性中總設定檔的成比例。"
+>id="platform_dashboards_segments_scoringSummary"
+>title="分數摘要"
+>abstract="此 Widget 會顯示已評分之設定檔的總數，並將其分類到包含高、中、低傾向的貯體。圓環圖說明了高、中、低傾向之設定檔總數的比例組成。"
 
 此Widget顯示已評分的個人檔案總數，並將其分類為分別包含高、中及低傾向的綠色、黃色及紅色貯體。 環形圖用於說明高、中和低傾向性之間總設定檔的成比例，分別表示為綠色、黃色和紅色。 設定檔符合75歲以上的高傾向、25到74歲之間的中傾向，以及24歲以下的低傾向。 圖例會指出色彩代碼和傾向性臨界值。 當游標暫留在環圈圖的個別區段上時，高、中和低傾向性的設定檔計數會顯示在對話方塊中。
 

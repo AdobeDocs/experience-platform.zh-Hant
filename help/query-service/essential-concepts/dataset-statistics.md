@@ -1,7 +1,7 @@
 ---
 title: 資料集統計資料計算
 description: 本檔案說明如何使用SQL命令計算Azure Data Lake Storage (ADLS)資料集的欄層級統計資料。
-source-git-commit: 66354932ee42137ca98e7033d942556f13c64de1
+source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
 workflow-type: tm+mt
 source-wordcount: '1087'
 ht-degree: 0%
@@ -61,8 +61,8 @@ ANALYZE TABLE adc_geometric COMPUTE STATISTICS AS alias_name;
 範例輸出 `COMPUTE STATISTICS` 查詢如下：
 
 ```console
-| Statistics ID    | 
-| ---------------- |
+| Statistics ID         | 
+| --------------------- |
 | adc_geometric_stats_1 |
 (1 row)
 ```
@@ -100,11 +100,11 @@ SELECT * FROM adc_geometric_stats_1;
 範例輸出 `SHOW STATISTICS` 如下所示。
 
 ```console
-statsId | tableName | columnSet | filterContext | timestamp
---------+-----------+-----------+---------------+---------------
-adc_geometric_stats_1 | adc_geometric | (age) |  | 25/06/2023 09:22:26
-demo_table_stats_1 | demo_table | (*) | ((age > 25)) | 25/06/2023 12:50:26
-age_stats | castedtitanic | (age) | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
+      statsId         |   tableName   | columnSet |         filterContext       |      timestamp
+----------------------+---------------+-----------+-----------------------------+--------------------
+adc_geometric_stats_1 | adc_geometric |   (age)   |                             | 25/06/2023 09:22:26
+demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          | 25/06/2023 12:50:26
+age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
 以下提供中繼資料欄名稱的說明。
