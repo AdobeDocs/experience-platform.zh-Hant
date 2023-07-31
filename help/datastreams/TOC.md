@@ -1,14 +1,14 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Adobe Experience Platform資料串流說明
-breadcrumb-title: Datastreams指南
-user-guide-description: 瞭解如何在Adobe Experience Platform中設定資料串流。
+user-guide-title: Adobe Experience Platform 資料流說明
+breadcrumb-title: 資料流指南
+user-guide-description: 了解如何在 Adobe Experience Platform 中設定資料流。
 feature: Datastreams
 source-git-commit: 57867a7c78ae7f8100ead278cf901fed63780caa
 workflow-type: tm+mt
 source-wordcount: '45'
-ht-degree: 17%
+ht-degree: 53%
 
 ---
 
