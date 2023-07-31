@@ -1,39 +1,35 @@
 ---
 solution: Experience Platform
-title: 使用流量服務API將受眾啟用至檔案型目的地
-description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目的地。
+title: 使用流程服務API將對象啟用至檔案型目的地
+description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 3b5f4abd516259402e9b3c4cfbcc17e32f18b6f5
 workflow-type: tm+mt
-source-wordcount: '4442'
+source-wordcount: '4415'
 ht-degree: 3%
 
 ---
 
-# 使用流量服務API將受眾啟用至檔案型目的地
+# 使用流程服務API將對象啟用至檔案型目的地
 
->[!IMPORTANT]
->
->* 購買Real-Time CDP Prime和Ultimate套件的客戶可使用此測試版功能。 如需詳細資訊，請聯絡您的Adobe代表。
-
-匯出不Experience Platform的檔案時，請使用增強型檔案匯出功能（目前為測試版）來存取增強的自訂功能：
+匯出不Experience Platform的檔案時，請使用增強型檔案匯出功能（目前為測試版）來存取增強型自訂功能：
 
 * 其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
-* 可透過以下方式設定匯出檔案中的自訂檔案標頭： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* 能夠選取 [檔案型別](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) 匯出檔案的URL。
+* 可透過以下方式設定匯出檔案中的自訂檔案標題： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
+* 能夠選取 [檔案型別](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) 匯出檔案的。
 * [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-以下列出的6個新Beta版雲端儲存卡支援此功能：
+以下列出的六個雲端儲存卡支援此功能：
 
-* [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
-* [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
-* [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
-* [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
-* [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
-* [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
+* [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
+* [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
+* [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md)
+* [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog)
+* [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
+* [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-本文會說明使用 [流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 將合格的設定檔從Adobe Experience Platform匯出至上述連結的其中一個雲端儲存位置。
+本文會說明使用 [流程服務API](https://developer.adobe.com/experience-platform-apis/references/destinations/) 將合格的設定檔從Adobe Experience Platform匯出至上方連結的其中一個雲端儲存位置。
 
 >[!TIP]
 >
@@ -41,19 +37,19 @@ ht-degree: 3%
 
 ## API使用者移轉 {#api-migration}
 
-如果您已使用流量服務API將設定檔匯出至Amazon S3、Azure Blob或SFTP雲端儲存空間目的地，請閱讀 [API移轉指南](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) Adobe將使用者從舊版目的地轉移至新目的地時所需的移轉步驟。
+如果您已使用流量服務API將設定檔匯出至Amazon S3、Azure Blob或SFTP雲端儲存空間目標，請閱讀 [API移轉指南](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md) 提供當Adobe將使用者從舊版目的地轉移至新目的地時的必要移轉步驟。
 
 ## 快速入門 {#get-started}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-本指南需要您實際瞭解下列Adobe Experience Platform元件：
+本指南需要您深入瞭解下列Adobe Experience Platform元件：
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service] 可讓您在中建立對象及產生對象 [!DNL Adobe Experience Platform] 從您的 [!DNL Real-Time Customer Profile] 資料。
-* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service] 可讓您在中建立對象並產生對象 [!DNL Adobe Experience Platform] 從您的 [!DNL Real-Time Customer Profile] 資料。
+* [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
 
-以下小節提供您啟動資料至Platform中以檔案為基礎的目的地所需瞭解的其他資訊。
+以下章節提供在Platform中以檔案為基礎的目的地啟用資料所需瞭解的其他資訊。
 
 ### 必要權限 {#permissions}
 
@@ -61,17 +57,17 @@ ht-degree: 3%
 
 ### 讀取範例API呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭，以及正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標題和正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-為了呼叫 [!DNL Platform] API，您必須先完成 [Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程後，會在所有標題中提供每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有中每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
 
 * 授權：持有人 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-中的資源 [!DNL Experience Platform] 可隔離至特定的虛擬沙箱。 在請求中 [!DNL Platform] API中，您可以指定在其中執行作業的沙箱名稱和ID。 這些是選用引數。
+中的資源 [!DNL Experience Platform] 可隔離至特定的虛擬沙箱。 在要求給 [!DNL Platform] API中，您可以指定要執行作業的沙箱名稱和ID。 這些是選用引數。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -85,30 +81,30 @@ ht-degree: 3%
 
 ### API參考檔案 {#api-reference-documentation}
 
-在本教學課程中，您可以找到所有API操作的隨附參考檔案。 請參閱 [Adobe Developer網站上的「流程服務 — 目的地API」檔案](https://developer.adobe.com/experience-platform-apis/references/destinations/). 建議您同時使用本教學課程和API參考檔案。
+在本教學課程中，您可以找到所有API作業的隨附參考檔案。 請參閱 [Adobe Developer網站上的「流程服務 — 目的地API」檔案](https://developer.adobe.com/experience-platform-apis/references/destinations/). 我們建議您同時使用本教學課程和API參考檔案。
 
 ### 字彙 {#glossary}
 
-如需在此API教學課程中會遇到的辭彙說明，請參閱 [字彙表區段](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) API參考檔案的底稿。
+如需在此API教學課程中遇到的術語說明，請參閱 [字彙表區段](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) API參考檔案的底稿。
 
 ## 選取匯出受眾的目的地 {#select-destination}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step1.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step1.png)
 
-在開始匯出設定檔的工作流程之前，請先識別您要將對象匯出至的目的地之連線規格和流量規格ID。 請參考下表。
+在開始匯出設定檔的工作流程之前，請先識別您要將對象匯出至的目的地之連線規格和流程規格ID。 請參考下表。
 
 | 目的地 | 連線規格 | 流量規格 |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Azure Blob 儲存體 | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
-| Azure Data Lake Gen 2 (ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
+| Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | 資料登陸區(DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google雲端儲存空間 | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
 | SFTP | `36965a81-b1c6-401b-99f8-22508f1e6a26` | `fd36aaa4-bf2b-43fb-9387-43785eeeb799` |
 
 {style="table-layout:auto"}
 
-在本教學課程的後續步驟中，您需要這些ID來建構各種流量服務實體。 您也需要參照連線規格的零件來設定特定圖元，以便從「流程服務API」擷取「連線規格」。 請參閱以下範例，擷取表格中所有目的地的連線規格：
+在本教學課程的後續步驟中，您需要這些ID來建構各種流量服務實體。 您還需要參照連線規格本身的零件來設定特定圖元，以便從「流程服務API」擷取「連線規格」。 請參閱以下範例，擷取表格中所有目的地的連線規格：
 
 >[!BEGINTABS]
 
@@ -180,7 +176,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **要求**
 
@@ -318,13 +314,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-請依照下列步驟，設定對象匯出資料流至雲端儲存空間目的地。 對於某些步驟，不同雲端儲存目的地的請求和回應會有所不同。 在這些情況下，請使用頁面上的索引標籤，擷取您要連線並匯出受眾的特定目的地的請求和回應。 請務必使用正確的 `connection spec` 和 `flow spec` ，以取得您正在設定的目的地。
+請依照下列步驟，設定將對象匯出資料流至雲端儲存空間目的地。 對於某些步驟，請求和回應會因不同的雲端儲存空間目的地而異。 在這些情況下，請使用頁面上的索引標籤，擷取您想要連線並匯出受眾的目標的特定請求和回應。 請務必使用正確的 `connection spec` 和 `flow spec` ，以取得您正在設定的目的地。
 
 ## 建立來源連線 {#create-source-connection}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step2.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-決定要將對象匯出至哪個目的地後，您需要建立來源連線。 此 [來源連線](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 代表與內部的連線 [Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store).
+決定要將對象匯出到哪個目的地後，您需要建立來源連線。 此 [來源連線](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 代表與內部的連線 [Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -332,7 +328,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++建立來源連線 — 請求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上至您選擇的終端機時，請移除內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除內嵌註解。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
@@ -372,7 +368,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## 建立基礎連線 {#create-base-connection}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step3.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step3.png)
 
 A [基礎連線](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 安全地儲存認證至您的目的地。 根據目的地型別，針對該目的地進行驗證所需的認證可能會有所不同。 若要尋找這些驗證引數，請先擷取 `connection spec` 區段中說明的所需目的地 [選取匯出受眾的目的地](#select-destination) 然後檢視 `authSpec` 回應。 請參考下列標籤 `authSpec` 所有支援目的地的屬性。
 
@@ -382,7 +378,7 @@ A [基礎連線](https://developer.adobe.com/experience-platform-apis/references
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 顯示 [!DNL auth spec]
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例提供「 」中驗證引數的位置的其他資訊 [!DNL connection spec].
+請注意醒目提示的行，其中含有內嵌註釋 [!DNL connection spec] 以下範例提供有關在何處尋找驗證引數的其他資訊 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -429,7 +425,7 @@ A [基礎連線](https://developer.adobe.com/experience-platform-apis/references
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 顯示 [!DNL auth spec]
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例提供「 」中驗證引數的位置的其他資訊 [!DNL connection spec].
+請注意醒目提示的行，其中含有內嵌註釋 [!DNL connection spec] 以下範例提供有關在何處尋找驗證引數的其他資訊 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -466,11 +462,11 @@ A [基礎連線](https://developer.adobe.com/experience-platform-apis/references
 +++
 
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 顯示 [!DNL auth spec]
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例提供「 」中驗證引數的位置的其他資訊 [!DNL connection spec].
+請注意醒目提示的行，其中含有內嵌註釋 [!DNL connection spec] 以下範例提供有關在何處尋找驗證引數的其他資訊 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -548,7 +544,7 @@ A [基礎連線](https://developer.adobe.com/experience-platform-apis/references
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] 顯示 [!DNL auth spec]
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例提供「 」中驗證引數的位置的其他資訊 [!DNL connection spec].
+請注意醒目提示的行，其中含有內嵌註釋 [!DNL connection spec] 以下範例提供有關在何處尋找驗證引數的其他資訊 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -595,9 +591,9 @@ A [基礎連線](https://developer.adobe.com/experience-platform-apis/references
 
 >[!NOTE]
 >
->SFTP目的地在 [!DNL auth spec]，因為它同時支援密碼和SSH金鑰驗證。
+>SFTP目的地包含兩個獨立專案，分別位在 [!DNL auth spec]，因為它同時支援密碼和SSH金鑰驗證。
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例提供「 」中驗證引數的位置的其他資訊 [!DNL connection spec].
+請注意醒目提示的行，其中含有內嵌註釋 [!DNL connection spec] 以下範例提供有關在何處尋找驗證引數的其他資訊 [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -681,7 +677,7 @@ A [基礎連線](https://developer.adobe.com/experience-platform-apis/references
 
 >[!ENDTABS]
 
-使用驗證規格中指定的屬性(即 `authSpec` （從回應），您可以使用每個目的地型別特有的必要認證來建立基本連線，如下列範例所示：
+使用驗證規格中指定的屬性(即 `authSpec` （從回應），您可以使用每個目的地型別特有的必要認證來建立基礎連線，如下列範例所示：
 
 >[!BEGINTABS]
 
@@ -693,9 +689,9 @@ A [基礎連線](https://developer.adobe.com/experience-platform-apis/references
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱 [驗證至目的地](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) Amazon S3目的地檔案頁面的區段。
+>如需有關如何取得所需驗證認證的資訊，請參閱 [驗證到目的地](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) Amazon S3目的地檔案頁面的區段。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -744,9 +740,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱 [驗證至目的地](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) Azure Blob儲存體目的地檔案頁面的區段。
+>如需有關如何取得所需驗證認證的資訊，請參閱 [驗證到目的地](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) Azure Blob儲存體目的地檔案頁面的區段。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="17"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -786,7 +782,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **要求**
 
@@ -794,9 +790,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱 [驗證至目的地](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) Azure Data Lake Gen 2 (ADLS Gen2)目的地檔案頁面的區段。
+>如需有關如何取得所需驗證認證的資訊，請參閱 [驗證到目的地](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) Azure Data Lake Gen 2(ADLS Gen2)目的地檔案頁面的區段。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="20"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -847,7 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->資料登陸區域目的地不需要驗證認證。 如需詳細資訊，請參閱 [驗證至目的地](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) 資料登陸區目的地檔案頁面的區段。
+>資料登陸區域目的地不需要驗證認證。 如需詳細資訊，請參閱 [驗證到目的地](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) 資料登陸區域目的地檔案頁面的區段。
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -885,9 +881,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱 [驗證至目的地](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) Google雲端儲存空間目的地檔案頁面的區段。
+>如需有關如何取得所需驗證認證的資訊，請參閱 [驗證到目的地](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) Google雲端儲存空間目的地檔案頁面的區段。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -936,9 +932,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱 [驗證至目的地](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) SFTP目的地檔案頁面的區段。
+>如需有關如何取得所需驗證認證的資訊，請參閱 [驗證到目的地](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) SFTP目的地檔案頁面的區段。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -970,9 +966,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `specName` | 使用 `SFTP with Password`. |
 | `domain` | SFTP儲存位置的IP位址或網域名稱。 |
-| `username` | 用於登入您的SFTP儲存位置的使用者名稱。 |
-| `password` | 用於登入您的SFTP儲存位置的密碼。 |
-| `port` | 您的SFTP儲存位置使用的連線埠。 |
+| `username` | 用來登入您的SFTP儲存位置的使用者名稱。 |
+| `password` | 用來登入您的SFTP儲存位置的密碼。 |
+| `port` | 您的SFTP儲存位置所使用的連線埠。 |
 
 {style="table-layout:auto"}
 
@@ -982,9 +978,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需驗證認證的資訊，請參閱 [驗證至目的地](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) SFTP目的地檔案頁面的區段。
+>如需有關如何取得所需驗證認證的資訊，請參閱 [驗證到目的地](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) SFTP目的地檔案頁面的區段。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1016,9 +1012,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `specName` | 使用 `SFTP with Password`. |
 | `domain` | SFTP儲存位置的IP位址或網域名稱。 |
-| `username` | 用於登入您的SFTP儲存位置的使用者名稱。 |
-| `sshKey` | 用來登入SFTP儲存位置的私人SSH金鑰。 私密 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。 |
-| `port` | 您的SFTP儲存位置使用的連線埠。 |
+| `username` | 用來登入您的SFTP儲存位置的使用者名稱。 |
+| `sshKey` | 用來登入您的SFTP儲存位置的私人SSH金鑰。 私密 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。 |
+| `port` | 您的SFTP儲存位置所使用的連線埠。 |
 
 {style="table-layout:auto"}
 
@@ -1041,12 +1037,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ### 新增加密至匯出的檔案
 
-或者，您也可以將加密新增至匯出的檔案。 若要這麼做，您需要從以下專案新增專案： `encryptionSpecs`. 請參閱以下要求範例，並反白顯示強制引數：
+您可以選擇將加密新增至匯出的檔案。 若要這麼做，您需要從以下專案新增專案： `encryptionSpecs`. 請參閱以下請求範例，並將強制引數反白顯示：
 
 
 >[!BEGINSHADEBOX]
 
-+++ 檢視雲端儲存目的地的加密規格
++++ 檢視雲端儲存空間目的地的加密規格
 
 ```json {line-numbers="true" start-line="1" highlight="26-27"}
            "encryptionSpecs": [
@@ -1088,7 +1084,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++將加密新增至基本連線 — 要求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上至您選擇的終端機時，請移除內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1139,15 +1135,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-記下回應中的連線ID。 建立目標連線時，下個步驟將需要此ID。
+記下回應中的連線ID。 建立目標連線時，下個步驟需要此ID。
 
 ## 建立目標連線 {#create-target-connection}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step4.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step4.png)
 
 接下來，您需要建立目標連線。 [目標連線](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 儲存匯出對象的匯出引數。 匯出引數包括匯出位置、檔案格式、壓縮和其他細節。 例如，對於CSV檔案，您可以選取多個匯出選項。 取得「 」中所有支援的CSV匯出選項的詳細資訊 [檔案格式設定組態頁面](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
-請參閱 `targetSpec` 在目的地的 `connection spec` 以瞭解每種目的地型別的支援屬性。 請參考下列標籤 `targetSpec` 所有支援目的地的屬性。
+請參閱 `targetSpec` 目的地中提供的屬性 `connection spec` 以瞭解每種目的地型別的支援屬性。 請參考下列標籤 `targetSpec` 所有支援目的地的屬性。
 
 >[!BEGINTABS]
 
@@ -1155,7 +1151,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Amazon S3] - [!DNL Connection spec] 顯示目標連線引數
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例中，提供在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在以下範例中看到目標引數為 *not* 適用於對象匯出目的地。
+請注意反白的行，這些行具有內嵌註解 [!DNL connection spec] 以下範例提供有關在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在下列範例中看到目標引數為 *非* 適用於對象匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,56"}
 {
@@ -1366,7 +1362,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] 顯示目標連線引數
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例中，提供在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在以下範例中看到目標引數為 *not* 適用於對象匯出目的地。
+請注意反白的行，這些行具有內嵌註解 [!DNL connection spec] 以下範例提供有關在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在下列範例中看到目標引數為 *非* 適用於對象匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -1562,11 +1558,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 +++
 
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 +++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] 顯示目標連線引數
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例中，提供在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在以下範例中看到目標引數為 *not* 適用於對象匯出目的地。
+請注意反白的行，這些行具有內嵌註解 [!DNL connection spec] 以下範例提供有關在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在下列範例中看到目標引數為 *非* 適用於對象匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1757,7 +1753,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] 顯示目標連線引數
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例中，提供在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在以下範例中看到目標引數為 *not* 適用於對象匯出目的地。
+請注意反白的行，這些行具有內嵌註解 [!DNL connection spec] 以下範例提供有關在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在下列範例中看到目標引數為 *非* 適用於對象匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="9,36"}
 "items": [
@@ -1947,7 +1943,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++[!DNL Google Cloud Storage] - [!DNL Connection spec] 顯示目標連線引數
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例中，提供在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在以下範例中看到目標引數為 *not* 適用於對象匯出目的地。
+請注意反白的行，這些行具有內嵌註解 [!DNL connection spec] 以下範例提供有關在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在下列範例中看到目標引數為 *非* 適用於對象匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,44"}
 {
@@ -2146,7 +2142,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++SFTP - [!DNL Connection spec] 顯示目標連線引數
 
-請注意醒目提示的行，其中含有內嵌註解 [!DNL connection spec] 以下範例中，提供在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在以下範例中看到目標引數為 *not* 適用於對象匯出目的地。
+請注意反白的行，這些行具有內嵌註解 [!DNL connection spec] 以下範例提供有關在何處尋找 [!DNL target spec] 連線規格中的引數。 您也可以在下列範例中看到目標引數為 *非* 適用於對象匯出目的地。
 
 ```json {line-numbers="true" start-line="1" highlight="10,37"}
 {
@@ -2335,7 +2331,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-透過使用上述規格，您可以建構特定於您所需雲端儲存空間目的地的目標連線請求，如下方標籤所示。
+透過使用上述規格，您可以建構專屬於您所需雲端儲存空間目的地的目標連線要求，如下方標籤所示。
 
 >[!BEGINTABS]
 
@@ -2347,9 +2343,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 部分 [!DNL Amazon S3] 目的地檔案頁面。
+>有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) 的區段 [!DNL Amazon S3] 目的地檔案頁面。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2378,7 +2374,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Amazon S3]  — 具有CSV選項的目標連線要求
++++[!DNL Amazon S3]  — 具有CSV選項的Target連線要求
 
 >[!TIP]
 >
@@ -2439,9 +2435,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) 部分 [!DNL Azure Blob Storage] 目的地檔案頁面。
+>有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) 的區段 [!DNL Azure Blob Storage] 目的地檔案頁面。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2470,7 +2466,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Azure Blob Storage]  — 具有CSV選項的目標連線要求
++++[!DNL Azure Blob Storage]  — 具有CSV選項的Target連線要求
 
 >[!TIP]
 >
@@ -2523,7 +2519,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **要求**
 
@@ -2533,7 +2529,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) Azure的部分 [!DNL Data Lake Gen 2(ADLS Gen2)] 目的地檔案頁面。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2561,7 +2557,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)]  — 具有CSV選項的目標連線要求
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)]  — 具有CSV選項的Target連線要求
 
 >[!TIP]
 >
@@ -2622,9 +2618,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) 部分 [!DNL Data Landing Zone] 目的地檔案頁面。
+>有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) 的區段 [!DNL Data Landing Zone] 目的地檔案頁面。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2652,7 +2648,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Data Landing Zone]  — 具有CSV選項的目標連線要求
++++[!DNL Data Landing Zone]  — 具有CSV選項的Target連線要求
 
 >[!TIP]
 >
@@ -2713,9 +2709,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 部分 [!DNL Google Cloud Storage] 目的地檔案頁面。
+>有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) 的區段 [!DNL Google Cloud Storage] 目的地檔案頁面。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2744,7 +2740,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++[!DNL Google Cloud Storage]  — 具有CSV選項的目標連線要求
++++[!DNL Google Cloud Storage]  — 具有CSV選項的Target連線要求
 
 >[!TIP]
 >
@@ -2807,7 +2803,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >有關如何取得所需目標引數的資訊，請參閱 [填寫目的地詳細資料](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) SFTP目的地檔案頁面的區段。
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -2890,13 +2886,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-請注意 `target connection ID` 從回應。 建立資料流以匯出受眾時，下個步驟將需要此ID。
+請注意 `target connection ID` 從回應。 建立資料流以匯出對象時，下個步驟將需要此ID。
 
 成功的回應會傳回ID (`id`)的來源連線，以及 `etag`. 記下目標連線ID，因為稍後建立資料流時會需要它。
 
 ## 建立資料流 {#create-dataflow}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step5.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step5.png)
 
 目的地設定的下一個步驟是建立資料流。 A [資料流](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) 會將先前建立的實體繫結在一起，並提供設定對象匯出排程的選項。 若要建立資料流，請根據您所需的雲端儲存空間目的地，使用下列裝載，並取代先前步驟中的流程實體ID。 請注意，在此步驟中，您不會將任何與屬性或身分對應相關的資訊新增至資料流。 這將在下一個步驟中進行。
 
@@ -2908,7 +2904,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++建立對象匯出資料流至 [!DNL Amazon S3] 目的地 — 要求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2956,7 +2952,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++建立對象匯出資料流至 [!DNL Azure Blob Storage] 目的地 — 要求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -3010,13 +3006,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
 
 **要求**
 
 +++建立對象匯出資料流至 [!DNL Azure Data Lake Gen 2(ADLS Gen2)] 目的地 — 要求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -3064,7 +3060,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++建立對象匯出資料流至 [!DNL Data Landing Zone] 目的地 — 要求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -3112,7 +3108,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++建立對象匯出資料流至 [!DNL Google Cloud Storage] 目的地 — 要求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -3160,7 +3156,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++建立將受眾匯出資料流至SFTP目的地 — 請求
 
-請注意請求範例中反白的行，其中包含內嵌註解，可提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
+請注意請求範例中反白顯示內嵌註解的行，這些註解會提供額外資訊。 將請求複製貼上您選擇的終端機時，移除請求中的內嵌註解。
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -3213,31 +3209,31 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## 設定屬性和身分對應 {#attribute-and-identity-mapping}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step6.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step6.png)
 
-建立資料流後，您需要為要匯出的屬性和身分設定對應。 這包含下列三個步驟：
+建立資料流後，您需要為要匯出的屬性和身分設定對應。 此程式包含下列三個步驟：
 
 1. 建立輸入結構描述
 2. 建立輸出結構描述
-3. 設定對應集以連線已建立的結構描述
+3. 設定對應集以連線建立的方案
 
 例如，若要取得UI中顯示的以下對應，您需要完成以上列出的三個步驟，並在下一個標題中詳細說明。
 
-![對應步驟範例](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
+![對應步驟的範例](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
 ### 建立輸入結構描述
 
-若要建立輸入結構描述，您首先需要擷取 [聯合結構描述](/help/profile/ui/union-schema.md) 以及可匯出至目的地的身分。 這是屬性和身分的結構描述，您可以選取它作為來源對應。
+若要建立輸入結構描述，您必須先擷取 [聯合結構描述](/help/profile/ui/union-schema.md) 以及可匯出至目的地的身分。 這是屬性和身分的結構描述，您可以選取它作為來源對應。
 
 ![在選取來源欄位檢視中顯示屬性和身分選項的記錄](/help/destinations/assets/api/file-based-segment-export/select-source-field.gif)
 
-檢視以下擷取屬性和身分的請求和回應範例。
+檢視以下要求與回應範例，以擷取屬性和身分。
 
 >[!BEGINSHADEBOX]
 
 **要求取得屬性**
 
-+++從聯合結構描述取得可用屬性 — 請求
++++從您的聯合結構描述取得可用的屬性 — 請求
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/entityTypes/_xdm.context.profile?property=fullSchema==true&property=includeRelationshipDescriptors==true' \ 
@@ -3251,9 +3247,9 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
 
 **回應**
 
-+++從聯合結構描述取得可用屬性 — 回應
++++從您的聯合結構描述取得可用屬性 — 回應
 
-為簡短起見，下列回應已縮短。
+以下回應已縮短，以求簡潔。
 
 ```json
        "person": {
@@ -3406,7 +3402,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/en
 
 **要求取得身分**
 
-+++取得您可在對應步驟中使用的可用身分識別
++++取得您可在對應步驟中使用的可用身分
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/identities' \ 
@@ -3422,7 +3418,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 檢視要在輸入結構描述中使用的可用身分
 
-回應會傳回您在建立輸入結構描述時可使用的身分識別。 請注意，此回應會傳回兩者 [標準](/help/identity-service/namespaces.md#standard) 和 [自訂](/help/identity-service/namespaces.md#manage-namespaces) 您在Experience Platform中設定的身分名稱空間。
+回應會傳回您在建立輸入結構描述時可使用的身分。 請注意，此回應會傳回兩者 [標準](/help/identity-service/namespaces.md#standard) 和 [自訂](/help/identity-service/namespaces.md#manage-namespaces) 您在Experience Platform中設定的身分名稱空間。
 
 ```json
 [
@@ -3616,7 +3612,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 >[!ENDSHADEBOX]
 
-接下來，您需要複製上面的回應，並使用它來建立您的輸入結構描述。 您可以複製上述回應的完整JSON回應，並將其放入 `jsonSchema` 物件。
+接下來，您需要複製上方的回應，並使用它建立您的輸入結構描述。 您可以複製上方回應的完整JSON回應，並將其放入 `jsonSchema` 物件。
 
 >[!BEGINSHADEBOX]
 
@@ -3661,11 +3657,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-回應中的ID代表您已建立的輸入結構描述的唯一識別碼。 從回應中複製ID，因為您將在稍後的步驟中重複使用它。
+回應中的ID代表您已建立的輸入結構描述的唯一識別碼。 從回應中複製ID，因為您將在稍後步驟中重複使用它。
 
 ### 建立輸出結構描述
 
-接下來，您必須設定匯出的輸出結構描述。 首先，您需要尋找並檢查現有的合作夥伴結構描述。
+接下來，您必須為匯出設定輸出結構描述。 首先，您需要尋找並檢查現有的合作夥伴結構描述。
 
 >[!BEGINSHADEBOX]
 
@@ -3687,7 +3683,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **包含範例結構描述的回應**
 
-Inspect您執行上述呼叫時獲得的回應。 您必須深入瞭解回應以尋找物件 `targetSpec.attributes.partnerSchema.jsonSchema`
+Inspect會回應您執行上述呼叫時所取得的回應。 您必須深入探究回應以尋找物件 `targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ 取得輸出結構描述之合作夥伴結構描述的回應
 
@@ -4303,7 +4299,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 }
 ```
 
-回應中的ID代表您已建立的輸入結構描述的唯一識別碼。 從回應中複製ID，因為您將在稍後的步驟中重複使用它。
+回應中的ID代表您已建立的輸入結構描述的唯一識別碼。 從回應中複製ID，因為您將在稍後步驟中重複使用它。
 
 >[!ENDSHADEBOX]
 
@@ -4319,8 +4315,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!IMPORTANT]
 >
->* 在下方顯示的對應物件中， `destination` 引數不接受點 `"."`. 例如，您需要使用personalEmail_address或segmentMembership_status ，如設定範例中反白顯示的那樣。
->* 在某些情況下，來源屬性是身分屬性且包含點。 在此情況下，屬性需要逸出 `//`，如下方醒目提示。
+>* 在下方顯示的對應物件中， `destination` 引數不接受點 `"."`. 例如，您需要使用personalEmail_address或segmentMembership_status ，如設定範例中反白顯示的。
+>* 當來源屬性是身分屬性且包含點時，有一個特殊情況。 在此情況下，屬性需要逸出 `//`，如下方醒目提示之處。
 >* 另請注意，即使以下設定範例包含 `Email` 和 `Phone_E.164`，則每個資料流只能匯出一個identity屬性。
 
 ```shell {line-numbers="true" start-line="1" highlight="16-38"}
@@ -4389,9 +4385,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-記下對應集的ID，因為您會在下一個步驟中使用對應集ID更新現有資料流時需要它。
+記下對應集的ID，因為您會在使用對應集ID更新現有資料流的下一個步驟中需要它。
 
-接下來，取得您要更新的資料流ID。
+接下來，取得您要更新之資料流的ID。
 
 >[!BEGINSHADEBOX]
 
@@ -4399,7 +4395,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-最後，您需要使用您剛建立的對應集資訊PATCH資料流。
+最後，您需要將資料流PATCH為您剛剛建立的對應集資訊。
 
 >[!BEGINSHADEBOX]
 
@@ -4447,19 +4443,19 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 進行其他資料流更新 {#other-dataflow-updates}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step7.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-若要對資料流進行任何更新，請使用 `PATCH` operation。例如，您可以更新資料流，以選取欄位作為必要索引鍵或重複資料刪除索引鍵。
+若要對資料流進行任何更新，請使用 `PATCH` 操作。例如，您可以更新資料流，以選取欄位作為必要索引鍵或重複資料刪除索引鍵。
 
 ### 新增必要索引鍵 {#add-mandatory-key}
 
-若要新增 [必要索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)，請參閱以下的請求和回應範例
+若要新增 [強制索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)，請參閱以下的請求和回應範例
 
 >[!BEGINSHADEBOX]
 
 **要求**
 
-+++將身分新增為必填欄位 — 請求
++++將身分新增為強制欄位 — 請求
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4482,7 +4478,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-+++將XDM屬性新增為必填欄位 — 請求
++++將XDM屬性新增為強制欄位 — 請求
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4597,7 +4593,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 驗證資料流（取得資料流執行） {#get-dataflow-runs}
 
-![醒目提示使用者目前所在步驟的啟用受眾步驟](/help/destinations/assets/api/file-based-segment-export/step8.png)
+![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step8.png)
 
 若要檢查資料流的執行，請使用資料流執行API：
 
@@ -4605,7 +4601,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **要求**
 
-+++取得資料流執行 — 請求
++++取得資料流執行 — 要求
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4669,15 +4665,15 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-您可以找到以下相關資訊： [資料流執行API傳回的各種引數](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) API參考檔案。
+您可在此找到關於 [資料流執行API傳回的各種引數](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) API參考檔案中。
 
 ## API錯誤處理 {#api-error-handling}
 
-本教學課程中的API端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) （位於Platform疑難排解指南中），以取得有關解釋錯誤回應的詳細資訊。
+本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](/help/landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中），以取得有關解譯錯誤回應的詳細資訊。
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程所述，您已成功將Platform連線至您其中一個慣用的雲端儲存空間目的地，並設定資料流至個別目的地，以匯出受眾。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
+依照本教學課程中的指示，您已成功將Platform連線至其中一個慣用的雲端儲存空間目的地，並設定資料流至個別目的地以匯出對象。 如需詳細資訊，請參閱下列頁面，例如如何使用流量服務API編輯現有資料流：
 
 * [目的地概觀](../home.md)
 * [目的地目錄概觀](../catalog/overview.md)

@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年7月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 819c4e8b4ab24d364cf6d26d3ce38d0bc372e603
+source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 26%
@@ -17,7 +17,7 @@ Adobe Experience Platform 現有功能的更新：
 
 - [目錄服務](#catalog-service)
 - [資料集合](#data-collection)
-- [目的地](#data-prep)
+- [目的地](#destinations)
 - [查詢服務](#query-service)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
@@ -95,7 +95,7 @@ For more information on Data Prep, please read the [Data Prep overview](../../da
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 
 - 我們修正了(API) SalesforceMarketing Cloud目的地的問題，其中在對應步驟中並未從Salesforce傳回所有可用的目標屬性。 現在有一個 [2000個目標屬性的上限](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md#mapping-considerations-example) 從Salesforce中開啟的視窗。
-- 我們已修正Microsoft Dynamics 365目的地的問題。 目的地現在支援透過的區域資料路由 [區域選擇器](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)，因此您可以根據貴公司在Microsoft生態系統中布建的地區，路由資料匯出。 ![反白顯示新的「區域」選取器。](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "反白顯示新的「區域」選取器。"){width="100" zoomable="yes"}
+- 我們已修正Microsoft Dynamics 365目的地的問題。 目的地現在支援透過的區域資料路由 [區域選擇器](/help/destinations/catalog/crm/microsoft-dynamics-365.md#authenticate)，因此您可以根據貴公司在Microsoft生態系統中布建的地區，路由資料匯出。 <br> ![反白顯示新的「區域」選取器。](/help/release-notes/2023/assets/region-parameter-microsoft-dynamics-365.png "反白顯示新的「區域」選取器。"){width="100" zoomable="yes"}
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
