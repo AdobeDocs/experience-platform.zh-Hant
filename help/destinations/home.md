@@ -3,10 +3,10 @@ keywords: 目的地；adobe experience platform；平台；目的地概觀；啟
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的「目的地」，針對跨頻道行銷活動、電子郵件行銷活動、鎖定特定目標的廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 54165264364d7d53da2ff822b9ceb32157900b6a
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 5%
+source-wordcount: '925'
+ht-degree: 4%
 
 ---
 
@@ -46,6 +46,12 @@ Platform的核心功能之一，就是擷取您的第一方資料，並根據您
 ## 目的地型別和類別 {#types-and-categories}
 
 透過Experience Platform，您可以對各種型別的目的地啟用資料，以滿足您的啟用使用案例。 目標範圍從API式整合，到與檔案接收系統、設定檔查詢目的地等的整合。 如需所有可用目的地的詳細資訊，請參閱 [目的地型別和類別概觀](./destination-types.md).
+
+## Adobe建置和合作夥伴建置目的地 {#adobe-and-partner-built-destinations}
+
+Experience Platform目標目錄中的一些聯結器是由Adobe建立和維護的，而其他聯結器是由合作夥伴公司透過以下專案建立和維護的： [Destination SDK](/help/destinations/destination-sdk/overview.md). 若合作夥伴已建立並維護目的地，檔案頁面頂端的備註會指出每個合作夥伴建立的聯結器。 例如， [Amazon S3聯結器](/help/destinations/catalog/cloud-storage/amazon-s3.md) 由Adobe建立，而 [TikTok聯結器](/help/destinations/catalog/social/tiktok.md) 是由TikTok團隊建立及維護。
+
+對於合作夥伴編寫和維護的聯結器，這表示聯結器的問題可能需要由合作夥伴團隊解決（聯絡方法提供在檔案頁面的附註中）。 如需Adobe編寫和維護的聯結器發生問題，請聯絡您的Adobe代表或客戶服務。
 
 ## 目的地和存取控制 {#access-controls}
 

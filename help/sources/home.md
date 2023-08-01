@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 來源聯結器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 2%
+source-wordcount: '1449'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,12 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
+
+## Adobe建置和合作夥伴建置的來源 {#adobe-and-partner-built-sources}
+
+Experience Platform來源目錄中的部分聯結器是由Adobe建立和維護的，其他則是由合作夥伴公司透過使用建立和維護的 [來源SDK](/help/sources/sources-sdk/overview.md). 若合作夥伴已建立並維護來源，檔案頁面頂端的備註會指出每個合作夥伴建立的聯結器。 例如， [Amazon S3聯結器](/help/sources/connectors/cloud-storage/s3.md) 由Adobe建立，而 [RainFocus聯結器](/help/sources/connectors/analytics/rainfocus.md) 是由RainFocus團隊建立和維護的。
+
+對於合作夥伴編寫和維護的聯結器，這表示聯結器的問題可能需要由合作夥伴團隊解決（聯絡方法提供在檔案頁面的附註中）。 如需Adobe編寫和維護的聯結器發生問題，請聯絡您的Adobe代表或客戶服務。
 
 ## 來源型別
 
