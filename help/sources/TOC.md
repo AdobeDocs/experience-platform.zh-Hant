@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: cb8fd7a7e3803c356adbdf0c20cde869c1de602c
+source-git-commit: 732693b34bf4425cd3a44fba5647d337588abfa0
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '987'
 ht-degree: 11%
 
 ---
@@ -24,9 +24,8 @@ ht-degree: 11%
       - [Adobe Commerce來源](connectors/adobe-applications/commerce.md)
       - [客戶屬性來源](connectors/adobe-applications/customer-attributes.md)
       - [資料收集來源](connectors/adobe-applications/data-collection.md)
-      - [Workfront來源](connectors/adobe-applications/workfront.md)
       - 欄位對應 {#mapping}
-         - [Analytics欄位對映](connectors/adobe-applications/mapping/analytics.md)
+         - [Analytics欄位對應](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager欄位對應](connectors/adobe-applications/mapping/audience-manager.md)
          - [目標欄位對應](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage欄位對應](connectors/adobe-applications/mapping/marketo.md)
@@ -42,7 +41,7 @@ ht-degree: 11%
    - Analytics {#analytics}
       - [Mixpanel聯結器](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
-      - [Rainfocus](connectors/analytics/rainfocus.md)
+      - [RainFocus](connectors/analytics/rainfocus.md)
    - 雲端儲存空間 {#cloud-storage}
       - [Amazon Kinesis聯結器](connectors/cloud-storage/kinesis.md)
       - [Amazon S3聯結器](connectors/cloud-storage/s3.md)
@@ -68,7 +67,7 @@ ht-degree: 11%
       - [Zoho CRM聯結器](connectors/crm/zoho.md)
    - 客戶成功 {#customer-success}
       - [oracle服務雲端](connectors/customer-success/oracle-service-cloud.md)
-      - [Salesforce Service Cloud聯結器](connectors/customer-success/salesforce-service-cloud.md)
+      - [Salesforce服務雲端聯結器](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow聯結器](connectors/customer-success/servicenow.md)
       - [Zendesk聯結器](connectors/customer-success/zendesk.md)
    - 資料庫 {#databases}
@@ -99,7 +98,7 @@ ht-degree: 11%
    - 本機系統 {#local-system}
       - [本機檔案上傳聯結器](connectors/local-system/local-file-upload.md)
    - 行銷自動化 {#marketing-automation}
-      - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
+      - [查特利奧](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [HubSpot聯結器](connectors/marketing-automation/hubspot.md)
       - [Mailchimp聯結器](connectors/marketing-automation/mailchimp.md)
@@ -169,14 +168,14 @@ ht-degree: 11%
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake串流](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
-         - [teradata優勢](tutorials/api/create/databases/teradata-vantage.md)
+         - [teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
          - [SAP商務](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
       - 行銷自動化 {#marketing-automation}
-         - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
+         - [查特利奧](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
          - [MailChimp行銷活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
@@ -186,7 +185,7 @@ ht-degree: 11%
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
-         - [方形](tutorials/api/create/payments/square.md)
+         - [正方形](tutorials/api/create/payments/square.md)
       - 通訊協定 {#protocols}
          - [通用OData](tutorials/api/create/protocols/odata.md)
          - [一般REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -234,14 +233,13 @@ ht-degree: 11%
          - [客戶屬性](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
          - [Marketo自訂活動](tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
-         - [Workfront](tutorials/ui/create/adobe-applications/workfront.md)
       - Advertising {#advertising}
          - [Google Ads](tutorials/ui/create/advertising/ads.md)
          - [pinterest Ads](tutorials/ui/create/advertising/pinterest-ads.md)
       - Analytics {#analytics}
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
-         - [Rainfocus](tutorials/ui/create/analytics/rainfocus.md)
+         - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
       - 雲端儲存空間 {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -290,7 +288,7 @@ ht-degree: 11%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
-         - [teradata優勢](tutorials/ui/create/databases/teradata-vantage.md)
+         - [teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - 電子商務 {#ecommerce}
          - [SAP商務](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
@@ -298,7 +296,7 @@ ht-degree: 11%
       - 本機系統 {#local-system}
          - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
       - 行銷自動化 {#marketing-automation}
-         - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
+         - [查特利奧](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Mailchimp行銷活動](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
@@ -308,7 +306,7 @@ ht-degree: 11%
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
-         - [方形](tutorials/ui/create/payments/square.md)
+         - [正方形](tutorials/ui/create/payments/square.md)
       - 通訊協定 {#protocols}
          - [通用OData](tutorials/ui/create/protocols/odata.md)
       - 串流 {#streaming}
@@ -316,7 +314,7 @@ ht-degree: 11%
    - 設定資料流 {#dataflow}
       - [Advertising連線資料流](tutorials/ui/dataflow/advertising.md)
       - [Analytics連線資料流](tutorials/ui/dataflow/analytics.md)
-      - [批次雲端儲存連線資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [批次雲端儲存空間連線資料流](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [串流雲端儲存空間連線資料流](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [同意和偏好設定連線資料流](tutorials/ui/dataflow/consent-and-preferences.md)
       - [CRM連線資料流](tutorials/ui/dataflow/crm.md)
@@ -341,9 +339,9 @@ ht-degree: 11%
       - [設定選項](sources-sdk/config/config.md)
       - [設定驗證規格](sources-sdk/config/authspec.md)
       - [設定來源規格](sources-sdk/config/sourcespec.md)
-      - [設定探索規格](sources-sdk/config/explorespec.md)
+      - [設定瀏覽規格](sources-sdk/config/explorespec.md)
    - 自助來源（批次SDK） API指南 {#self-serve-api}
-      - [自助來源(Batch SDK) API概覽](sources-sdk/api/api-overview.md)
+      - [自助來源（批次SDK） API總覽](sources-sdk/api/api-overview.md)
       - [快速入門](sources-sdk/api/getting-started.md)
       - [建立連線規格](sources-sdk/api/create.md)
       - [更新連線規格](sources-sdk/api/update-connection-specs.md)
@@ -352,9 +350,9 @@ ht-degree: 11%
    - 檔案指南 {#documentation}
       - [在Adobe Experience Platform中記錄您的來源](sources-sdk/documentation/doc-overview.md)
       - [使用GitHub網頁介面建立來原始檔頁面](sources-sdk/documentation/github.md)
-      - [在本機環境中使用文字編輯器來建立來原始檔頁面](sources-sdk/documentation/text-editor.md)
+      - [在本機環境中使用文字編輯器建立來原始檔頁面](sources-sdk/documentation/text-editor.md)
       - [檔案自助服務API範本](sources-sdk/documentation/template.md)
-      - [檔案自助式UI範本](sources-sdk/documentation/ui-template.md)
+      - [檔案自助服務UI範本](sources-sdk/documentation/ui-template.md)
    - 串流SDK {#streaming-sdk}
       - [開始使用自助來源（串流SDK）](sources-sdk/streaming/getting-started.md)
       - [建立串流來源的連線規格](sources-sdk/streaming/create.md)
@@ -362,12 +360,12 @@ ht-degree: 11%
       - [更新串流流程規格](sources-sdk/streaming/update-flow-specs.md)
       - [測試並提交您的連線規格以進行驗證](sources-sdk/streaming/submit.md)
       - [記錄您的來源（串流SDK）](sources-sdk/streaming/document-streaming.md)
-      - [說明檔案自助式API串流範本](sources-sdk/streaming/streaming-template-api.md)
+      - [檔案自助式API串流範本](sources-sdk/streaming/streaming-template-api.md)
       - [檔案自助式UI串流範本](sources-sdk/streaming/streaming-template-ui.md)
 - 錯誤訊息 {#errors}
    - [來源中的錯誤訊息](./errors/sources-errors.md)
    - [流程服務中的錯誤訊息](./errors/flow-service-errors.md)
-- [流程執行通知](notifications.md)
+- [資料流執行通知](notifications.md)
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/flow-service/)
