@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 1314b2742af5cd281acb5f9db81eec0ccf885f77
+source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
 workflow-type: tm+mt
-source-wordcount: '3607'
+source-wordcount: '3610'
 ht-degree: 3%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 3%
 | [!UICONTROL 標記] | 屬於對象的使用者定義標籤。 有關這些標籤的更多資訊可在以下連結中找到： [標籤區段](#tags). |
 | [!UICONTROL 劃分] | 對象的設定檔狀態劃分。 此設定檔狀態劃分的更詳細說明可在下方找到。 |
 | [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Published`、和 `Archived`. |
-| [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括 `On Demand`， `Scheduled`、和 `Continuous`. |
+| [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括 `On Demand` （批次）， `Scheduled` （串流），以及 `Continuous` （邊緣）。 |
 | [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
 | [!UICONTROL 說明] | 對象的說明。 |
 | [!UICONTROL 建立者] | 建立對象的人員名稱。 |
