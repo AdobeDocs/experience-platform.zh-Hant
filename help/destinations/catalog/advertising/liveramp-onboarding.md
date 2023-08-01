@@ -3,9 +3,9 @@ title: LiveRamp — 入門連線
 description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-time Customer Data Platform上線到LiveRamp Connect。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1830'
 ht-degree: 3%
 
 ---
@@ -36,9 +36,9 @@ ht-degree: 3%
 
 本節說明您可以匯出至此目的地的所有對象。
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md).
+此目的地支援啟用透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援下表所述的對象啟用。
+此外，此目的地也支援啟用下表所述的其他對象。
 
 | 對象型別 | 說明 |
 ---------|----------|
@@ -129,13 +129,8 @@ ht-degree: 3%
 
 在 [!UICONTROL 正在排程] 步驟，使用下列設定，為每個對象建立匯出排程。
 
->[!IMPORTANT]
->
->所有啟用至此目的地的對象都必須使用完全相同的排程進行設定，如下所示。
-
 * **[!UICONTROL 檔案匯出選項]**： [!UICONTROL 匯出完整檔案]. [增量檔案匯出](../../ui/activate-batch-profile-destinations.md#export-incremental-files) 目前不支援 [!DNL LiveRamp] 目的地。
 * **[!UICONTROL 頻率]**： [!UICONTROL 每日]
-* 將匯出時間設為 **[!UICONTROL 區段評估後]**. 已排程的對象匯出和 [隨選檔案匯出](../../ui/export-file-now.md) 目前不支援 [!DNL LiveRamp] 目的地。
 * **[!UICONTROL 日期]**：視需要選取匯出開始和結束時間。
 
 ![顯示對象排程步驟的平台UI熒幕擷圖。](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
