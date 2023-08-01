@@ -2,17 +2,28 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
 workflow-type: tm+mt
-source-wordcount: '1688'
-ht-degree: 38%
+source-wordcount: '1723'
+ht-degree: 37%
 
 ---
 
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
-本檔案涵蓋Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 2.20.0版 — 2023年7月31日
+
+**新功能**
+
+* 新增的支援 [每個命令會覆寫資料串流ID](../../../../datastreams/overrides.md).
+
+**修正和改良**
+
+* 已棄用 `edgeConfigId` 贊成 `datastreamId` 在SDK設定中。
+* 資料流設定的多個使用者體驗增強功能會覆寫使用者介面。
 
 ## 2.19.0版 — 2023年6月21日
 
@@ -27,7 +38,7 @@ ht-degree: 38%
 **新功能**
 
 * 包含2.16.0版的Adobe Experience Platform Web SDK。
-* 新增支援 [資料流設定覆寫](../../../../datastreams/overrides.md).
+* 新增的支援 [資料流設定覆寫](../../../../datastreams/overrides.md).
 * 將淘汰通知新增至 `datasetId` 上的選項 `sendEvent` 命令。
 
 
@@ -37,18 +48,18 @@ ht-degree: 38%
 
 ## 2.16.1版 — 2023年4月14日
 
-* 修正XDM物件和變數資料元素無法從非預設沙箱選取結構描述的問題。
+* 修正XDM物件及變數資料元素無法從非預設沙箱選取結構描述的問題。
 
 ## 2.16.0版 — 2023年3月30日
 
 **新功能**
 
 * （測試版）已新增 **[!UICONTROL 更新變數]** 動作和 **[!UICONTROL 變數]** 資料元素。
-* 已新增的設定 [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) 回呼函式。
+* 已新增以下專案的設定： [`onBeforeLinkClickSend`](../../../../edge/fundamentals/configuring-the-sdk.md#onBeforeLinkClickSend) 回呼函式。
 
 **修正和改良**
 
-* 修正在錨點標籤內點選元素時無法運作的問題。 **[!UICONTROL 使用身分重新導向]** 已使用動作。
+* 修正在錨點標籤內按一下元素時無法運作的問題。 **[!UICONTROL 使用身分重新導向]** 已使用動作。
 * 修正只有一個結構描述時，XDM物件資料元素無法運作的問題。
 * 包含2.15.0版的Adobe Experience Platform Web SDK。
 
@@ -58,18 +69,18 @@ ht-degree: 38%
 * 修正無權存取資料串流的使用者無法編輯擴充功能設定的問題。
 * 新增對中的曲面的支援 `sendEvent` 動作。
 
-包含2.14.0版Adobe Experience Platform Web SDK。
+包含2.14.0版的Adobe Experience Platform Web SDK。
 
 
 ## 2.14.1版 — 2022年10月13日
 
-* 修正Web SDK未採用來自Experience CloudID服務的ID的問題。
+* 修正Web SDK未接受來自Experience CloudID服務的ID的問題。
 
 包含2.13.1版的Adobe Experience Platform Web SDK程式庫。
 
 ## 2.14.0版 — 2022年9月28日
 
-* 已新增 `targetMigrationEnabled` 可逐頁完整移轉的設定。
+* 已新增 `targetMigrationEnabled` 可啟用逐頁完整移轉的設定。
 * 新增套用回應動作，以啟用混合式伺服器 — 使用者端實作。
 * 新增高平均資訊量使用者代理程式使用者端提示內容選項。
 
@@ -77,14 +88,14 @@ ht-degree: 38%
 
 ## 2.13.0版 — 2022年6月29日
 
-* 修正XDM物件資料元素（例如eVars）中數值屬性的排序順序。
+* 修正XDM物件資料元素（例如eVar）中數值屬性的排序順序。
 
 包含2.12.0版的Adobe Experience Platform Web SDK程式庫。
 
 ## 2.12.0版 — 2022年6月13日
 
 * 已更新 `identityMap` 資料元素，以根據擴充功能設定所定義的沙箱填入名稱空間選項。
-* 已新增 **[!UICONTROL 使用身分重新導向]** 動作以允許跨網域身分共用。
+* 已新增 **[!UICONTROL 使用身分重新導向]** 允許跨網域身分共用的動作。
 * 新增檔案連結至 `sendEvent` 動作。
 * 升級React Spectrum UI程式庫。
 * 多項使用者介面增強功能。
@@ -97,7 +108,7 @@ ht-degree: 38%
 
 ## 2.11.1版 — 2022年4月22日
 
-* 修正2.11.0版中的設定命令錯誤。
+* 已修正2.11.0版的設定命令錯誤。
 
 包含2.10.0版的Adobe Experience Platform Web SDK程式庫。
 
@@ -110,7 +121,7 @@ ht-degree: 38%
 
 ## 2.10.0版 — 2022年3月10日
 
-* 更新可在設定頁面上複製的預先隱藏程式碼片段，以搭配更新的Adobe Target VEC編輯器使用。
+* 更新可在設定頁面上複製的預先隱藏程式碼片段，以與更新的Adobe Target VEC編輯器搭配使用。
 
 包含 2.9.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
@@ -122,20 +133,20 @@ ht-degree: 38%
 
 包含 2.7.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 「傳送事件完成」事件中提供Experience Edge的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。 如需詳細資訊，請參閱 [追蹤事件。](../../../../edge/fundamentals/tracking-events.md)
+* 在「傳送事件完成」事件中可取得來自Experience Edge的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。 如需詳細資訊，請參閱 [追蹤事件。](../../../../edge/fundamentals/tracking-events.md)
 
 ## 2.7.3版 — 2021年9月7日
 
 包含 2.6.4 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 「 」不再出現「淘汰」警告 `container.buildInfo.environment.`
+* 「 」不再有「淘汰」警告 `container.buildInfo.environment.`
 
 ## 2.7.0版 — 2021年8月16日
 
 包含 2.6.3 版的 Adobe Experience Platform Web SDK 程式庫。
 
 * 使用「身分對應」資料元素型別時，其ID解析為未填入字串之值的識別碼現在會自動從身分對應中移除。
-* 修正嘗試使用XDM物件資料元素型別儲存資料元素時，若未選取任何結構描述時發生的錯誤。
+* 修正嘗試使用XDM物件資料元素型別儲存資料元素時，在未選取任何結構描述時發生的錯誤。
 * 改善使用者介面印刷樣式。
 
 ## 2.6.2版 — 2021年8月4日
@@ -150,10 +161,10 @@ ht-degree: 38%
 
 包含 2.6.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 使用術語「邊緣設定」的標籤、說明和錯誤訊息已變更為使用術語「資料流」，以符合最新的Adobe Experience Platform術語。
-* 在擴充功能設定檢視中，新增了處理大量資料串流和資料串流環境的支援。
-* 在XDM物件資料元素檢視中，新增了處理大量結構描述的支援。
-* 已新增「傳送事件完成」事件型別，可用於在事件已傳送至伺服器並收到回應後執行規則。 近期將提供更多檔案。
+* 使用術語「邊緣組態」的標籤、說明和錯誤訊息已變更為使用術語「資料流」，以符合最新的Adobe Experience Platform術語。
+* 在擴充功能組態檢視中，新增了處理大量資料串流和資料串流環境的支援。
+* 在XDM物件資料元素檢視中，已新增處理大量結構描述的支援。
+* 已新增「傳送事件完成」事件型別，可用於在事件已傳送至伺服器並收到回應後執行規則。 即將提供更多檔案。
 * 已棄用「收到的決定」事件型別。 請改用傳送事件完成事件型別。
 * 使用者介面和錯誤處理已普遍改善。
 
@@ -162,7 +173,7 @@ ht-degree: 38%
 包含 2.5.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
 * 已新增 `data` 「傳送事件」動作的欄位。 即將推出的檔案將說明如何在特定情況下使用此功能。
-* 在XDM物件資料元素檢視上，已修正如果使用者有權存取Adobe Experience Platform沙箱，但無權存取設定為組織預設的沙箱，則會擲回錯誤的問題。
+* 在XDM物件資料元素檢視上，已修正如果使用者有權存取Adobe Experience Platform沙箱，但沒有存取設定為組織預設的沙箱，則會擲回錯誤的問題。
 * 在XDM物件資料元素檢視上，即使父物件不包含任何值，必要結構描述欄位仍會被視為無效的問題，已獲得修正。
 
 ## 2.4.0版 — 2021年3月9日
@@ -170,11 +181,11 @@ ht-degree: 38%
 包含 2.4.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
 * 已新增 [&quot;document unloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 核取方塊以傳送事件動作UI。
-* 新增對的支援 `out` 選項時機 [設定預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 會捨棄所有事件，直到收到同意為止(現有 `pending` 選項會將事件排入佇列，並在收到同意後傳送事件)。
+* 新增對的支援 `out` 選項條件 [設定預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 會在收到同意前捨棄所有事件(現有 `pending` 選項會將事件排入佇列，並在收到同意後傳送事件)。
 * 新增工具提示至預設同意欄位。
-* 新增支援 [Adobe的Consent 2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* 新增的支援 [Adobe同意2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
 * 如果使用者的存取權杖無效或布建不正確，XDM物件資料元素UI中現在會顯示更好的錯誤。
-* 修正檢視XDM物件資料元素時，瀏覽器開發人員主控台顯示的跨來源錯誤（不會影響擴充功能的操作）。
+* 修正檢視XDM物件資料元素時，瀏覽器開發人員主控台顯示的跨來源錯誤（不會影響擴充功能的作業）。
 
 ## 2.3.0版 — 2020年11月4日
 
@@ -221,7 +232,7 @@ ht-degree: 38%
 * 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。
 * 將 `setCustomerIds` 動作重新命名為 `syncIdentity`。
 * 新增 `getIdentity` 命令。目前僅能透過自訂程式碼使用。
-* 啟用偵錯，使用 `_satellite` 現在會在Adobe Experience Platform Web SDK中啟用除錯功能。
+* 使用啟用偵錯 `_satellite` 現在會在Adobe Experience Platform Web SDK中啟用除錯功能。
 * 新增在 XDM 物件中輸入值的相關支援：布林值、數字和小數。
 
 ## 0.0.10版 — 2020年3月16日
@@ -236,13 +247,13 @@ ht-degree: 38%
 * ID 移轉期間提出的要求會傳送至 demdex 端點，以便在未設定 demdex Cookie 時提升跨網域識別能力
 * ID 移轉期間提出的要求一律會要求回應，以確保身分識別 Cookie 正確設定
 * 執行無效命令時，控制台中會記錄有效命令名稱清單
-* 在標籤擴充功能中新增切換第三方Cookie支援的核取方塊。 這會停用對 demdex.net 的呼叫
+* 新增核取方塊，可將第三方Cookie支援切換至標籤擴充功能。 這會停用對 demdex.net 的呼叫
 
 ## 0.0.5版 — 2019年12月20日
 
 * 將活動追蹤器設定新增至標籤擴充功能
 * 在事件命令上公開 EventType 和 EventMergeId
-* 將onBeforeEventSend設定新增至標籤延伸模組
+* 將onBeforeEventSend設定新增至標籤擴充功能
 * 將edgeBasePath設定新增至標籤延伸模組
 
 ## 0.0.3版 — 2019年11月25日
