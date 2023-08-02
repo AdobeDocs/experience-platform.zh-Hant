@@ -2,10 +2,10 @@
 title: 設定資料流覆寫
 description: 了解如何在資料流 UI 中設定資料流覆寫並透過 Web SDK 啟動它們。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
+source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 97%
+source-wordcount: '1231'
+ht-degree: 79%
 
 ---
 
@@ -25,6 +25,26 @@ ht-degree: 97%
 >[!IMPORTANT]
 >
 >僅支援資料流覆寫 [Web SDK](../edge/home.md) 整合。 [行動SDK](https://developer.adobe.com/client-sdks/documentation/) 和 [伺服器API](../server-api/overview.md) 整合目前不支援資料流覆寫。
+><br><br>
+>當您需要傳送不同資料至不同資料流時，應使用資料流覆寫。 您不應該針對個人化使用案例或同意資料使用資料流覆寫。
+
+## 使用案例 {#use-cases}
+
+為協助您更清楚瞭解如何使用及何時使用資料流覆寫，以下是Adobe Experience Platform客戶可以使用此功能解決的一些使用案例。
+
+**多區域資料收集**
+
+公司針對其營運所在的不同國家/地區擁有不同的網站或子網域。 他們有 [已設定](configure.md) 使用對應的analytics特定報表套裝、國家/地區特定的Adobe Target屬性Token、國家/地區特定的結構描述、資料集、Journey Optimizer設定等來分隔資料串流。 該公司也有全球性的組態集，其中會彙總所有國家/地區的特定資料。
+
+透過使用資料流覆寫，公司可以動態地將資料流切換至不同的資料流，而不是將資料傳送到單一資料流的預設行為。
+
+常見的使用案例可能是將資料傳送至特定國家/地區的資料流，也可能是將資料傳送至客戶執行重要動作（例如下訂單或更新其使用者設定檔）的全球資料流。
+
+**區分不同業務單位的設定檔和身分**
+
+擁有多個業務單位的公司想要使用多個Experience Platform沙箱來儲存每個業務單位的特定資料。
+
+該公司可以使用資料流覆寫，而不是將資料傳送至預設資料流，以確保每個業務單位都有各自的資料流可透過接收資料。
 
 ## 在資料流 UI 中設定資料流覆寫 {#configure-overrides}
 
