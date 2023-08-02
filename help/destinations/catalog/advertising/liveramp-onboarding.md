@@ -3,9 +3,9 @@ title: LiveRamp — 入門連線
 description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-time Customer Data Platform上線到LiveRamp Connect。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 5da570aaa0c6a8972d1c3d2c5b3bec9e733c1851
+source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1814'
 ht-degree: 3%
 
 ---
@@ -75,9 +75,9 @@ ht-degree: 3%
 
 * **[!UICONTROL 使用者名稱]**：您的使用者名稱 [!DNL LiveRamp - Onboarding] 儲存位置。
 * **[!UICONTROL 密碼]**：您的密碼 [!DNL LiveRamp - Onboarding] 儲存位置。
-* **[!UICONTROL pgp/GPG加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。 如果您提供加密金鑰，您也必須提供 **[!UICONTROL 加密子金鑰ID]** 在 [目的地詳細資料](#destination-details) 區段。
-
+* **[!UICONTROL pgp/GPG加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL 子索引鍵ID]**：如果您提供加密金鑰，也必須提供加密 **[!UICONTROL 子索引鍵ID]**. 請參閱 [!DNL LiveRamp] [加密檔案](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) 以瞭解如何取得子索引鍵ID。
 
 **使用SSH金鑰驗證的SFTP** {#sftp-ssh}
 
@@ -88,9 +88,9 @@ ht-degree: 3%
 
    * 連線您的 [!DNL SSH] 索引鍵 [!DNL LiveRamp - Onboarding] 伺服器，您必須透過提交票證 [!DNL LiveRamp]的技術支援入口網站，並提供您的公開金鑰。 如需詳細資訊，請參閱 [LiveRamp檔案](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html#upload-with-an-sftp-client).
 
-* **[!UICONTROL pgp/GPG加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 如果您提供加密金鑰，您也必須提供 **[!UICONTROL 加密子金鑰ID]** 在 [目的地詳細資料](#destination-details) 區段。 在下圖中檢視格式正確的加密金鑰範例。
-
+* **[!UICONTROL pgp/GPG加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
+* **[!UICONTROL 子索引鍵ID]**：如果您提供加密金鑰，也必須提供加密 **[!UICONTROL 子索引鍵ID]**. 請參閱 [!DNL LiveRamp] [加密檔案](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) 以瞭解如何取得子索引鍵ID。
 
 ### 填寫目的地詳細資料 {#destination-details}
 
@@ -109,7 +109,6 @@ ht-degree: 3%
 * **[!UICONTROL 資料夾路徑]**：的路徑 [!DNL LiveRamp] `uploads` 將託管匯出檔案的子資料夾。 此 `uploads` 字首會自動新增至資料夾路徑。 [!DNL LiveRamp] 建議您為Adobe Real-Time CDP的傳送建立專用的子資料夾，以便將這些檔案與其他任何現有的摘要分開，並確保所有自動化作業順暢執行。
    * 例如，如果要將檔案匯出至 `uploads/my_export_folder`，輸入 `my_export_folder` 在 **[!UICONTROL 資料夾路徑]** 欄位。
 * **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。 可用的選項包括 **[!UICONTROL GZIP]** 或 **[!UICONTROL 無]**.
-* **[!UICONTROL 加密子金鑰ID]**：用於加密的子金鑰，根據 [!DNL LiveRamp] 公開加密金鑰。 如果您在「 」中提供加密金鑰， [authentication](#authenticate) 步驟。 請參閱 [!DNL LiveRamp] [加密檔案](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) 以瞭解如何取得子索引鍵ID。
 
 ### 啟用警示 {#enable-alerts}
 
