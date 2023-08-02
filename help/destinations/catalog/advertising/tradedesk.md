@@ -1,11 +1,11 @@
 ---
-keywords: 廣告；交易台；廣告交易台
+keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
-description: Trade Desk是廣告購買者的自助服務平台，可跨顯示器、影片和行動詳細目錄來源執行重新定位和以對象為目標的數位行銷活動。
+description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '726'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-[!DNL The Trade Desk] 目的地可協助您將設定檔資料傳送至 [!DNL The Trade Desk].
+[!DNL The Trade Desk] 目的地可幫助您傳送設定檔資料至 [!DNL The Trade Desk].
 
-[!DNL The Trade Desk] 是一個自助式平台，供廣告購買者跨顯示器、影片和行動詳細目錄來源執行重新定位和以對象為目標的數位行銷活動。
+[!DNL The Trade Desk] 是一個自助式平台，可供廣告購買者跨顯示器、影片和行動詳細目錄來源執行重新定位以及以對象為目標的數位行銷活動。
 
-若要將設定檔資料傳送至 [!DNL Trade Desk]，您必須先連線至目的地。
+若要傳送設定檔資料至 [!DNL Trade Desk]，您必須先連線至目的地。
 
 ## 使用案例 {#use-cases}
 
-身為行銷人員，我想能夠使用由以下專案建立的對象： [!DNL Trade Desk IDs] 或裝置ID來建立重新定位或對象定位的數位行銷活動。
+身為行銷人員，我想要能夠使用由下列專案建立的對象： [!DNL Trade Desk IDs] 或裝置ID來建立重新定位或以對象為目標的數位行銷活動。
 
 ## 支援的身分 {#supported-identities}
 
@@ -40,13 +40,13 @@ ht-degree: 2%
 
 本節說明您可以匯出至此目的地的所有對象。
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援啟用下表所述的對象。
+*此外*，此目的地也支援下表所述的對象啟用。
 
 | 對象型別 | 說明 |
 ---------|----------|
-| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -57,7 +57,7 @@ ht-degree: 2%
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->如果您想要使用建立您的第一個目的地 [!DNL The Trade Desk] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL The Trade Desk] Audience Manager中的整合，您所設定的ID同步會結轉到Platform。
+>如果您打算使用建立您的第一個目的地 [!DNL The Trade Desk] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL The Trade Desk] Audience Manager中的整合，也就是您設定的ID同步會移轉到Platform。
 
 ## 連線到目的地 {#connect}
 
@@ -77,24 +77,24 @@ ht-degree: 2%
 
 ### 連線引數 {#parameters}
 
-當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊：
+當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
-* **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
+* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL 帳戶ID]**：您的 [!DNL Trade Desk] [!UICONTROL 帳戶ID].
-* **[!UICONTROL 伺服器位置]**：詢問您的 [!DNL Trade Desk] 代表您應使用的地區伺服器。 這些是您可選擇使用的地區伺服器：
+* **[!UICONTROL 伺服器位置]**：詢問您的 [!DNL Trade Desk] 代表您應使用的地區伺服器。 您可選擇的區域伺服器包括：
    * **[!UICONTROL 歐洲]**
    * **[!UICONTROL 新加坡]**
    * **[!UICONTROL 東京]**
-   * **[!UICONTROL 北美東部]**
+   * **[!UICONTROL 北美洲東部]**
    * **[!UICONTROL 北美西部]**
    * **[!UICONTROL 拉丁美洲]**
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
 
-當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
 ## 啟用此目的地的對象 {#activate}
 
@@ -104,14 +104,14 @@ ht-degree: 2%
 
 另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
-在 [對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動將對象對應至其目標平台中的對應ID或易記名稱。
+在 [對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動將對象對應至其在目的地平台中的對應ID或好記名稱。
 
-對應區段時，為方便使用，建議您使用Platform受眾名稱或較短的形式。 不過，您目的地中的對象ID或名稱不需要符合您Platform帳戶中的對象ID或名稱。 您在對應欄位中插入的任何值都會反映在目的地中。
+對應區段時，建議您使用Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合您Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
 
-如果您使用多個裝置對應(Cookie ID、 [!DNL IDFA]， [!DNL GAID])，請確定所有這三個對應都使用相同的對應值。 [!DNL The Trade Desk] 會將其彙總至單一區段，並包含裝置層級的劃分。
+如果您使用多個裝置對應(Cookie ID、 [!DNL IDFA]， [!DNL GAID])，請確定所有這三個對應都使用相同的對應值。 [!DNL The Trade Desk] 會將其彙總成單一區段，並具備裝置層級的劃分。
 
 ![區段對應ID](../../assets/common/segment-mapping-id.png)
 
 ## 匯出的資料 {#exported-data}
 
-驗證資料是否已成功匯出至 [!DNL The Trade Desk] 目的地，檢查您的 [!DNL Trade Desk] 帳戶。 如果成功啟用，系統會將對象填入您的帳戶。
+驗證資料是否已成功匯出到 [!DNL The Trade Desk] 目的地，請檢視您的 [!DNL Trade Desk] 帳戶。 如果成功啟用，系統會將對象填入您的帳戶。

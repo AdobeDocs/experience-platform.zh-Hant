@@ -1,11 +1,11 @@
 ---
-keywords: 廣告；必應；
+keywords: 廣告；bing；
 title: Microsoft Bing連線
-description: 透過Microsoft Bing連線目的地，您可以在Microsoft顯示廣告中執行重新定位以及以受眾為目標的數位行銷活動。
+description: 透過Microsoft Bing連線目的地，您可以在Microsoft顯示廣告中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1c9725c108d55aea5d46b086fbe010ab4ba6cf45
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '671'
 ht-degree: 8%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 8%
 
 ## 概觀 {#overview}
 
-此 [!DNL Microsoft Bing] 目的地可協助您將設定檔資料傳送至 [!DNL Microsoft Display Advertising].
+此 [!DNL Microsoft Bing] 目的地可幫助您傳送設定檔資料至 [!DNL Microsoft Display Advertising].
 
-若要將設定檔資料傳送至 [!DNL Microsoft Bing]，您必須先連線至目的地。
+若要傳送設定檔資料至 [!DNL Microsoft Bing]，您必須先連線至目的地。
 
 ## 使用案例 {#use-cases}
 
-身為行銷人員，我想能夠使用由以下專案建立的對象： [!DNL Microsoft Advertising IDs] 透過顯示廣告定位使用者 [!DNL Microsoft Advertising] 管道。
+身為行銷人員，我想要能夠使用由下列專案建立的對象： [!DNL Microsoft Advertising IDs] 透過「 」中的顯示廣告鎖定使用者 [!DNL Microsoft Advertising] 管道。
 
 ## 支援的身分 {#supported-identities}
 
@@ -36,26 +36,26 @@ ht-degree: 8%
 
 本節說明您可以匯出至此目的地的所有對象。
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援啟用下表所述的對象。
+*此外*，此目的地也支援下表所述的對象啟用。
 
 | 對象型別 | 說明 |
 ---------|----------|
-| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
-**[!DNL Audience Export]**  — 您要將對象的所有成員匯出至 [!DNL Microsoft Bing] 目的地。
+**[!DNL Audience Export]**  — 您正在將對象的所有成員匯出至 [!DNL Microsoft Bing] 目的地。
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至 [!DNL Microsoft Bing] 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦設定檔根據對象評估在Experience Platform中更新，聯結器就會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->如果您想要使用建立您的第一個目的地 [!DNL Microsoft Bing] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL Microsoft Bing] Audience Manager中的整合，您所設定的ID同步會結轉到Platform。
+>如果您打算使用建立您的第一個目的地 [!DNL Microsoft Bing] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL Microsoft Bing] Audience Manager中的整合，也就是您設定的ID同步會移轉到Platform。
 
 設定目的地時，您必須提供下列資訊：
 
@@ -79,17 +79,17 @@ ht-degree: 8%
 
 ### 連線引數 {#parameters}
 
-當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊：
+當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
-* **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
+* **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL 帳戶ID]**：您的 [!DNL Bing Ads Customer ID] (CID)。 您的CID是整數，在您登入時可在URL中找到 [!DNL Microsoft Advertising].
+* **[!UICONTROL 帳戶ID]**：您的 [!DNL Bing Ads Customer ID] (CID)。 您的CID是整數，可在您登入時於URL中找到 [!DNL Microsoft Advertising].
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
 
-當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
 ## 啟用此目的地的對象 {#activate}
 
@@ -104,10 +104,10 @@ ht-degree: 8%
 
 另請參閱 [啟用受眾資料至串流受眾匯出目的地](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
-在 [對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動對應 [!UICONTROL 對應ID] 欄位。 這可確保對象中繼資料可正確傳遞至 [!DNL Bing].
+在 [對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling) 步驟，您必須手動將對象名稱對應 [!UICONTROL 對應ID] 欄位。 這可確保對象中繼資料可正確傳遞至 [!DNL Bing].
 
 ![顯示對象排程畫面的UI影像，其中包含如何將對象名稱對應至Bing對應ID的範例。](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## 匯出的資料 {#exported-data}
 
-驗證資料是否已成功匯出至 [!DNL Microsoft Bing] 目的地，檢查您的 [!DNL Microsoft Bing Ads] 帳戶。 如果成功啟用，系統會將對象填入您的帳戶。
+驗證資料是否已成功匯出至 [!DNL Microsoft Bing] 目的地，請檢視您的 [!DNL Microsoft Bing Ads] 帳戶。 如果成功啟用，系統會將對象填入您的帳戶。

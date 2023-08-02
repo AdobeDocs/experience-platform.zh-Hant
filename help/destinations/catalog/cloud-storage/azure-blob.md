@@ -2,9 +2,9 @@
 title: Azure Blob連線
 description: 建立與您的Azure Blob儲存體的即時輸出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: f069f97e82955fbb3a02c5d6cb73420069fa5403
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '974'
 ht-degree: 4%
 
 ---
@@ -44,13 +44,13 @@ ht-degree: 4%
 
 本節說明您可以匯出至此目的地的所有對象。
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md).
+此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援下表所述的對象啟用。
+*此外*，此目的地也支援下表所述的對象啟用。
 
 | 對象型別 | 說明 |
 ---------|----------|
-| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域，以啟用受眾及匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 3090b8a8eade564190dc32142c3fc71701007337
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -34,13 +34,13 @@ Platform會對上傳至的所有檔案強制實施嚴格的七天存留時間(TT
 
 本節說明您可以匯出至此目的地的所有對象。
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md).
+此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援下表所述的對象啟用。
+*此外*，此目的地也支援下表所述的對象啟用。
 
 | 對象型別 | 說明 |
 ---------|----------|
-| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

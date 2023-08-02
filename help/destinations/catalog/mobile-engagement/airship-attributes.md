@@ -3,9 +3,9 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連線
 description: 將Adobe對象資料順暢地傳遞給Airship，作為Airship中用於鎖定的對象屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -35,15 +35,15 @@ ht-degree: 0%
 >
 >建立 [!DNL Airship] 帳戶透過 [此註冊連結](https://go.airship.eu/accounts/register/plan/starter/) 如果您尚未這樣做。
 
-## 外部對象支援 {#external-audiences-support}
+## 支援的對象 {#supported-audiences}
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md).
+此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援啟用下表所述的外部對象。
+*此外*，此目的地也支援下表所述的對象啟用。
 
 | 外部對象型別 | 說明 |
 ---------|----------|
-| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

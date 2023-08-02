@@ -1,11 +1,11 @@
 ---
 keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；oracleresponsys目的地
 title: oracleResponsys連線
-description: Responsys是Oracle提供的跨頻道行銷活動的企業電子郵件行銷工具，用於個人化跨電子郵件、行動裝置、顯示和社交的互動。
+description: Responsys是Oracle提供的跨頻道行銷活動的企業電子郵件行銷工具，可將電子郵件、行動裝置、顯示和社交的互動個人化。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '699'
 ht-degree: 1%
 
 ---
@@ -14,21 +14,21 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) 是企業電子郵件行銷工具，用於提供跨頻道行銷活動，由 [!DNL Oracle] 跨電子郵件、行動裝置、顯示和社交個人化互動。
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) 是企業電子郵件行銷工具，用於提供的跨頻道行銷活動 [!DNL Oracle] 個人化電子郵件、行動裝置、顯示和社交的互動。
 
-若要將受眾資料傳送至 [!DNL Oracle Responsys]，您必須先 [連線到目的地](#connect-destination) 在Adobe Experience Platform中，然後 [設定資料匯入](#import-data-into-responsys) 從您的儲存位置移至 [!DNL Oracle Responsys].
+若要傳送受眾資料至 [!DNL Oracle Responsys]，您必須先 [連線到目的地](#connect-destination) 在Adobe Experience Platform中，然後 [設定資料匯入](#import-data-into-responsys) 從您的儲存位置移至 [!DNL Oracle Responsys].
 
 ## 支援的對象 {#supported-audiences}
 
 本節說明您可以匯出至此目的地的所有對象。
 
-所有目的地都支援啟用透過Experience Platform產生的對象 [細分服務](../../../segmentation/home.md).
+此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
 
-此外，此目的地也支援啟用下表所述的對象。
+*此外*，此目的地也支援下表所述的對象啟用。
 
 | 對象型別 | 說明 |
 ---------|----------|
-| 自訂上傳 | 對象從CSV檔案擷取到Experience Platform。 |
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如&lt;客戶名稱>的「選取設定檔屬性」畫面中所選。 [目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如 [目的地啟用工作流程](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -64,22 +64,22 @@ ht-degree: 1%
 
 ### 連線引數 {#parameters}
 
-當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊：
+當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
-* 對象 **[!UICONTROL 使用密碼的SFTP]** 連線，您必須提供：
+* 的 **[!UICONTROL 使用密碼的SFTP]** 連線，您必須提供：
    * [!UICONTROL 網域]
    * [!UICONTROL 連接埠]
    * [!UICONTROL 使用者名稱]
    * [!UICONTROL 密碼]
-* 對象 **[!UICONTROL 使用SSH金鑰的SFTP]** 連線，您必須提供：
+* 的 **[!UICONTROL 使用SSH金鑰的SFTP]** 連線，您必須提供：
    * [!UICONTROL 網域]
    * [!UICONTROL 連接埠]
    * [!UICONTROL 使用者名稱]
-   * [!UICONTROL SSH金鑰]
-* 或者，您可以附加RSA格式的公開金鑰，將PGP/GPG的加密新增至匯出的檔案，位於 **[!UICONTROL 金鑰]** 區段。 您的公開金鑰必須寫成 [!DNL Base64] 編碼字串。
+   * [!UICONTROL ssh金鑰]
+* 或者，您可以附加RSA格式的公開金鑰，將PGP/GPG的加密新增至匯出的檔案，位於 **[!UICONTROL 索引鍵]** 區段。 您的公開金鑰必須寫成 [!DNL Base64] 編碼字串。
 * **[!UICONTROL 名稱]**：為您的目的地選擇相關名稱。
 * **[!UICONTROL 說明]**：輸入目的地的說明。
-* **[!UICONTROL 資料夾路徑]**：提供Platform會將匯出資料儲存為CSV檔案的儲存位置路徑。
+* **[!UICONTROL 資料夾路徑]**：在您的儲存位置中提供路徑，Platform會將您的匯出資料儲存為CSV檔案。
 * **[!UICONTROL 檔案格式]**：選取 **CSV** 以將CSV檔案匯出至您的儲存位置。
 
 <!--
@@ -92,9 +92,9 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報，以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警示](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
 
-當您完成提供目的地連線的詳細資訊後，請選取 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
 ## 啟用此目的地的對象 {#activate}
 
@@ -102,16 +102,16 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 > 
 >若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-另請參閱 [啟用對象資料以批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
+另請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
 ### 目的地屬性 {#destination-attributes}
 
-將對象啟用至此目的地時，Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。 如需詳細資訊，請參閱 [在電子郵件行銷目的地啟用對象時的最佳實務](overview.md#best-practices).
+將受眾啟用至此目的地時，Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas). 選取唯一識別碼以及您要匯出至目的地的任何其他XDM欄位。 如需詳細資訊，請參閱 [將對象啟用至電子郵件行銷目的地的最佳實務](overview.md#best-practices).
 
 ## 匯出的資料 {#exported-data}
 
-對象 [!DNL Oracle Responsys] 目的地，平台會建立 `.csv` 檔案的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify) （在audience activation教學課程中）。
+的 [!DNL Oracle Responsys] 目的地，平台會建立 `.csv` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify) （在audience activation教學課程中）。
 
-## 設定將資料匯入到 [!DNL Oracle Responsys] {#import-data-into-responsys}
+## 設定將資料匯入 [!DNL Oracle Responsys] {#import-data-into-responsys}
 
 連線之後 [!DNL Platform] 至您的 [!DNL SFTP] 儲存，您必須設定從儲存位置匯入到中的資料 [!DNL Oracle Responsys]. 若要瞭解如何完成此作業，請參閱 [匯入連絡人或帳戶](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) 在 [!DNL Oracle Responsys Help Center].
