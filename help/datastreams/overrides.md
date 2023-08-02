@@ -1,119 +1,123 @@
 ---
 title: 設定資料流覆寫
-description: 瞭解如何在資料串流UI中設定資料串流覆寫，並透過Web SDK啟用它們。
+description: 了解如何在資料流 UI 中設定資料流覆寫並透過 Web SDK 啟動它們。
 exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 32f36d96e3aa6beb72121adcc74f2da0bd2c9473
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 4%
+source-wordcount: '997'
+ht-degree: 97%
 
 ---
 
 # 設定資料流覆寫
 
-資料串流覆寫可讓您為資料串流定義其他設定，這些設定會透過Web SDK傳遞到Edge Network。
+資料流覆寫可讓您定義資料流的額外設定，這些設定會透過 Web SDK 傳遞到 Edge Network。
 
-這有助於您觸發與預設資料流行為不同的資料流行為，而不會建立新的資料流或修改現有的設定。
+這可協助您觸發和預設行為不同的資料流行為，且無須建立新的資料流或修改現有設定。
 
-資料流設定覆寫是兩個步驟的程式：
+資料流設定覆寫的流程包含兩個步驟：
 
 1. 首先，您必須在[資料流設定頁面](configure.md)中定義您的資料流設定覆寫。
 2. 接著，您必須透過 Web SDK 命令或使用 Web SDK [標記擴充功能](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)將覆寫傳送至 Edge Network。
 
-本文說明每種支援覆寫型別的端對端資料流設定覆寫程式。
-
-## 在資料流UI中設定資料流覆寫 {#configure-overrides}
-
-資料流設定覆寫可讓您修改下列資料流設定：
-
-* Experience Platform事件資料集
-* Adobe Target屬性Token
-* Audience ManagerID同步容器
-* Adobe Analytics報表套裝
-
-### Adobe Target的資料流覆寫 {#target-overrides}
-
-若要設定Adobe Target資料流的資料流覆寫，您必須先建立Adobe Target資料流。 依照指示進行 [設定資料串流](configure.md) 使用 [Adobe Target](configure.md#target) 服務。
-
-建立資料流後，請編輯 [Adobe Target](configure.md#target) 您所新增並使用的 **[!UICONTROL 屬性Token覆寫]** 區段來新增所需的資料流覆寫，如下圖所示。 每行新增一個屬性Token。
-
-![資料串流UI熒幕擷圖顯示Adobe Target服務設定，並反白顯示屬性Token覆寫。](assets/overrides/override-target.png)
-
-新增所需的覆寫後，請儲存資料流設定。
-
-您現在應該已設定Adobe Target資料流覆寫。 現在您可以 [透過Web SDK將覆寫傳送至Edge Network](#send-overrides).
-
-### Adobe Analytics的資料流覆寫 {#analytics-overrides}
-
-若要設定Adobe Analytics資料串流的資料串流覆寫，您必須先設定 [Adobe Analytics](configure.md#analytics) 已建立資料流。 依照指示進行 [設定資料串流](configure.md) 使用 [Adobe Analytics](configure.md#analytics) 服務。
-
-建立資料流後，請編輯 [Adobe Analytics](configure.md#target) 您所新增並使用的 **[!UICONTROL 報表套裝覆寫]** 區段來新增所需的資料流覆寫，如下圖所示。
-
-選取 **[!UICONTROL 顯示批次模式]** 以啟用報表套裝覆寫的批次編輯。 您可以複製並貼上報表套裝覆寫清單，每行輸入一個報表套裝。
-
-![資料串流UI熒幕擷圖顯示Adobe Analytics服務設定，並反白顯示報表套裝覆寫。](assets/overrides/override-analytics.png)
-
-新增所需的覆寫後，請儲存資料流設定。
-
-您現在應該已設定Adobe Analytics資料流覆寫。 現在您可以 [透過Web SDK將覆寫傳送至Edge Network](#send-overrides).
-
-### Experience Platform事件資料集的資料流覆寫 {#event-dataset-overrides}
-
-若要設定Experience Platform事件資料集的資料流覆寫，您必須先設定 [Adobe Experience Platform](configure.md#aep) 已建立資料流。 依照指示進行 [設定資料串流](configure.md) 使用 [Adobe Experience Platform](configure.md#aep) 服務。
-
-建立資料流後，請編輯 [Adobe Experience Platform](configure.md#aep) 您新增的服務，並選取 **[!UICONTROL 新增事件資料集]** 新增一或多個覆寫事件資料集的選項，如下圖所示。
-
-![資料串流UI熒幕擷圖顯示Adobe Experience Platform服務設定，並反白顯示事件資料集覆寫。](assets/overrides/override-aep.png)
-
-新增所需的覆寫後，請儲存資料流設定。
-
-您現在應該已設定Adobe Experience Platform資料流覆寫。 現在您可以 [透過Web SDK將覆寫傳送至Edge Network](#send-overrides).
-
-### 第三方ID同步容器的資料流覆寫 {#container-overrides}
-
-若要設定第三方ID同步容器的資料流覆寫，您必須先建立資料流。 依照指示進行 [設定資料串流](configure.md) 以建立一個。
-
-建立資料流後，請前往 **[!UICONTROL 進階選項]** 並啟用 **[!UICONTROL 協力廠商ID同步]** 選項。
-
-然後，使用 **[!UICONTROL 容器ID覆蓋]** 區段，新增您要覆寫預設設定的容器ID，如下圖所示。
+本文會介紹每種受支援的覆寫類型的端對端資料流設定覆寫流程。
 
 >[!IMPORTANT]
 >
->容器ID必須是數值，例如 `1234567`，而非字串，例如 `"1234567"`. 如果您透過Web SDK傳送字串值做為容器ID覆寫，則會收到錯誤。
+>僅支援資料流覆寫 [Web SDK](../edge/home.md) 整合。 [行動SDK](https://developer.adobe.com/client-sdks/documentation/) 和 [伺服器API](../server-api/overview.md) 整合目前不支援資料流覆寫。
 
-![顯示資料流設定的Datastreams UI熒幕擷取畫面，反白顯示協力廠商ID同步容器覆寫。](assets/overrides/override-container.png)
+## 在資料流 UI 中設定資料流覆寫 {#configure-overrides}
+
+資料流設定覆寫可讓您修改下列資料流設定：
+
+* Experience Platform 事件資料集
+* Adobe Target 屬性權杖
+* Audience Manager ID 同步容器
+* Adobe Analytics 報告套裝
+
+### Adobe Target 的資料流覆寫 {#target-overrides}
+
+若要設定 Adob&#x200B;&#x200B;e Target 資料流的資料流覆寫，您首先必須建立 Adob&#x200B;&#x200B;e Target 資料流。請依照說明[設定資料流](configure.md)和 [Adobe Target](configure.md#target) 服務。
+
+建立資料流後，請編輯已新增的 [Adobe Target](configure.md#target) 服務，並在&#x200B;**[!UICONTROL 屬性權杖覆寫]**&#x200B;區段中新增所需的資料流覆寫，如下圖所示。每行新增一個屬性權杖。
+
+![顯示 Adob&#x200B;&#x200B;e Target 服務設定的資料流 UI 螢幕擷圖，並醒目顯示屬性權杖覆寫。](assets/overrides/override-target.png)
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該已設定ID同步容器覆寫。 現在您可以 [透過Web SDK將覆寫傳送至Edge Network](#send-overrides).
+您現在應該設定了 Adob&#x200B;&#x200B;e Target 資料流覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
 
-## 透過Web SDK將覆寫傳送至Edge Network {#send-overrides}
+### 適用於 Adobe Analytics 的資料流覆寫 {#analytics-overrides}
+
+若要設定 Adob&#x200B;&#x200B;e Analytics 資料流的資料流覆寫，您首先必須建立 [Adobe Analytics](configure.md#analytics)。請依照說明[設定資料流](configure.md)和 [Adobe Analytics](configure.md#analytics) 服務。
+
+建立資料流後，請編輯已新增的 [Adobe Target](configure.md#target) 服務，並在&#x200B;**[!UICONTROL 報告套裝覆寫]**&#x200B;區段中新增所需的資料流覆寫，如下圖所示。
+
+若要啟用報告套裝覆寫的批次編輯，請選取&#x200B;**[!UICONTROL 顯示批次模式]**。您可以複製並貼上報告套裝覆寫的清單，每行輸入一個報告套裝。
+
+![顯示 Adob&#x200B;&#x200B;e Analytics 服務設定的資料流 UI 螢幕擷圖，並醒目顯示報告套裝覆寫。](assets/overrides/override-analytics.png)
+
+新增所需的覆寫後，請儲存資料流設定。
+
+您現在應該設定了 Adob&#x200B;&#x200B;e Analytics 資料流覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
+
+### 適用於 Experience Platform 事件資料集的資料流覆寫 {#event-dataset-overrides}
+
+若要設定 Experience Platform 事件資料集的資料流覆寫，您首先必須建立 [Adobe Experience Platform](configure.md#aep)。請依照說明[設定資料流](configure.md)和 [Adobe Experience Platform](configure.md#aep) 服務。
+
+建立資料流後，請編輯已新增的 [Adobe Experience Platform](configure.md#aep) 服務，並選取&#x200B;**[!UICONTROL 新增事件資料集]**&#x200B;選項，以新增一或多個覆寫事件資料集，如下圖所示。
+
+![顯示 Adobe Experience Platform 服務設定的資料流 UI 螢幕擷圖，並醒目顯示事件資料集覆寫。](assets/overrides/override-aep.png)
+
+新增所需的覆寫後，請儲存資料流設定。
+
+您現在應該設定了 Adobe Experience Platform 資料流覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
+
+### 適用於協力廠商 ID 同步容器的資料流覆寫 {#container-overrides}
+
+若要設定協力廠商 ID 同步容器的資料流覆寫，您首先必須建立資料流。請依照說明[設定資料流](configure.md)，以建立一個。
+
+建立資料流後，請前往&#x200B;**[!UICONTROL 進階選項]**，並啟用&#x200B;**[!UICONTROL 協力廠商 ID 同步]**&#x200B;選項。
+
+然後，在&#x200B;**[!UICONTROL 容器 ID 覆寫]**&#x200B;區段中新增要覆寫預設設定的容器 ID，如下圖所示。
+
+>[!IMPORTANT]
+>
+>容器 ID 必須為數值，例如 `1234567`，而不是字串，例如 `"1234567"`。如果您以容器 ID 覆寫透過 Web SDK 傳送字串值，您將收到錯誤訊息。
+
+![顯示資料流設定的資料流 UI 螢幕擷圖，並醒目顯示協力廠商 ID 同步容器覆寫。](assets/overrides/override-container.png)
+
+新增所需的覆寫後，請儲存資料流設定。
+
+您現在應該設定了 ID 同步容器覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
+
+## 透過 Web SDK 將覆寫傳送至 Edge Network {#send-overrides}
 
 >[!NOTE]
 >
->除了透過Web SDK命令傳送設定覆寫之外，您也可以將設定覆寫新增至Web SDK [標籤延伸模組](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+>如果不透過 Web SDK 命令傳送設定覆寫，也可選擇將設定覆寫新增到 Web SDK [標記擴充功能](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。
 
-晚於 [設定資料流覆寫](#configure-overrides) 在資料收集UI中，您現在可以透過Web SDK將覆寫傳送至Edge Network。
+在資料集合 UI 中[設定資料流覆寫](#configure-overrides)後，現在即可透過 Web SDK 將覆寫傳送到 Edge Network。
 
-透過Web SDK將覆寫傳送至Edge Network是啟動資料流設定覆寫的第二個也是最後一個步驟。
+透過 Web SDK 將覆寫傳送到 Edge Network 是啟動資料流設定覆寫的第二個步驟也是最後步驟。
 
-資料流設定覆寫會透過 `edgeConfigOverrides` Web SDK命令。 這個命令會建立傳遞至的資料流覆寫 [!DNL Edge Network] 下一個指令，或者，如果是 `configure` 命令，適用於每個要求。
+透過 `edgeConfigOverrides`Web SDK 命令傳送資料流設定覆寫到 Edge Network。此命令會建立資料流覆寫並在下一個命令時傳遞給 [!DNL Edge Network]，或者，如果是 `configure` 命令，則適用於每個要求。
 
-此 `edgeConfigOverrides` 命令會建立傳遞至的資料流覆寫 [!DNL Edge Network] 下一個指令，或者，如果是 `configure`，以取得每個要求。
+`edgeConfigOverrides` 命令會建立資料流覆寫並在下一個命令時傳遞給 [!DNL Edge Network]，或者，如果是 `configure`，則適用於每個要求。
 
-當設定覆寫隨以下專案傳送時： `configure` 命令，它包含在以下Web SDK命令中。
+設定覆寫和 `configure` 命令一起傳送時，會隨附在下列 Web SDK 命令中。
 
 * [sendEvent](../edge/fundamentals/tracking-events.md)
 * [setConsent](../edge/consent/iab-tcf/overview.md)
 * [getIdentity](../edge/identity/overview.md)
 * [appendIdentityToUrl](../edge/identity/id-sharing.md#cross-domain-sharing)
-* [設定](../edge/fundamentals/configuring-the-sdk.md)
+* [configure](../edge/fundamentals/configuring-the-sdk.md)
 
-個別命令上的組態選項可覆寫全域指定的選項。
+個別命令的設定選項可能會覆寫全域指定的選項。
 
-### 透過傳送設定覆寫 `sendEvent` 命令 {#send-event}
+### 透過 `sendEvent` 命令傳送設定覆寫 {#send-event}
 
-以下範例顯示設定覆寫在 `sendEvent` 命令。
+下面的範例會顯示在 `sendEvent` 命令時設定覆寫可能的情況。
 
 ```js {line-numbers="true" highlight="5-25"}
 alloy("sendEvent", {
@@ -151,11 +155,11 @@ alloy("sendEvent", {
 
 | 參數 | 說明 |
 |---|---|
-| `edgeConfigOverrides.datastreamId` | 使用此引數可允許單一請求進入與定義的資料流不同的資料流。 `configure` 命令。 |
+| `edgeConfigOverrides.datastreamId` | 使用此參數讓單一要求可前往和 `configure` 命令所定義的資料流不同的資料流。 |
 
-### 透過傳送設定覆寫 `configure` 命令 {#send-configure}
+### 透過 `configure` 命令傳送設定覆寫 {#send-configure}
 
-以下範例顯示設定覆寫在 `configure` 命令。
+下面的範例會顯示在 `configure` 命令時設定覆寫可能的情況。
 
 ```js {line-numbers="true" highlight="8-30"}
 alloy("configure", {
@@ -196,7 +200,7 @@ alloy("configure", {
 
 ### 裝載範例 {#payload-example}
 
-上述範例會產生 [!DNL Edge Network] 裝載看起來像這樣：
+上述範例產生的 [!DNL Edge Network] 裝載看起來如下所示：
 
 ```json
 {
