@@ -7,7 +7,7 @@ exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
 workflow-type: tm+mt
 source-wordcount: '1901'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -45,10 +45,10 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
->title="增強型編輯器切換"
->abstract="在舊版和增強版的查詢編輯器之間切換。 舊版預設為啟用，但增強型版本提供更優異的協助工具和多主題支援。 若要深入瞭解這些變更，請參閱檔案。"
+>title="增強的編輯器切換"
+>abstract="在舊版和增強版的查詢編輯器之間切換。雖然增強版提供更好的可存取性和多主題支援，但預設是啟用舊版本。若要深入了解關於這些變更的資訊，請參閱本文件。"
 
-UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 舊版預設為啟用，但增強型版本提供更優異的協助工具和多主題支援。 啟用增強型版本以存取查詢編輯器設定。
+UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然增強版提供更好的可存取性和多主題支援，但預設是啟用舊版本。啟用增強型版本以存取查詢編輯器設定。
 
 ![反白顯示具有增強型查詢編輯器切換的查詢編輯器。](../images/ui/query-editor/enhanced-query-editor-toggle.png)
 
