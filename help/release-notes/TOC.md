@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform 發行說明
 breadcrumb-title: Platform 發行說明
 user-guide-description: 尋找 Adobe Experience Platform 的每月發行說明。
 source-git-commit: 4e0df3b62837e925954b221bfcb1f18483c4ded2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '77'
 ht-degree: 100%
 
