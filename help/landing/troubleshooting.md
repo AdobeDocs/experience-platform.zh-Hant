@@ -7,7 +7,7 @@ landing-page-description: 尋找常見問題的解答，以及針對 Experience 
 short-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 035fee1c3be69ff56b515251afcffaf1dff00f0d
+source-git-commit: 096b844246d194a822e4ba1811aef05e494c92be
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 4%
@@ -90,7 +90,7 @@ GET /batches?createdAfter=1559775880000&orderBy=desc:created
 |--- | --- | ---|
 | 400 | 錯誤請求 | 請求建構不正確、遺漏關鍵資訊和/或包含不正確的語法。 |
 | 401 | 驗證失敗 | 請求未通過驗證檢查。 您的存取權杖可能遺失或無效。 請參閱 [Oauth權杖錯誤](#oauth-token-is-missing) 區段，以瞭解更多詳細資訊。 |
-| 403 | 禁止 | <p>已找到資源，但您沒有正確的認證可檢視該資源。</p><p> 此錯誤的可能原因是您可能沒有所需的 [存取控制許可權](/help/access-control/home.md) 以存取或編輯資源。 閱讀如何 [取得必要的屬性型存取控制許可權](/help/landing/api-authentication.md#get-abac-permissions) 以使用Platform API。 </p> |
+| 403 | 禁止 | 已找到資源，但您沒有正確的認證可檢視該資源。 <br> 此錯誤的可能原因是您可能沒有所需的 [存取控制許可權](/help/access-control/home.md) 以存取或編輯資源。 閱讀如何 [取得必要的屬性型存取控制許可權](/help/landing/api-authentication.md#get-abac-permissions) 以使用Platform API。 </p> |
 | 404 | 找不到 | 在伺服器上找不到要求的資源。 資源可能已被刪除，或輸入的路徑不正確。 |
 | 500 | 內部伺服器錯誤 | 這是伺服器端錯誤。 如果您同時進行多個呼叫，可能會達到API限制，且需要篩選結果。 (請參閱 [!DNL Catalog Service] 上的API開發人員指南子指南 [篩選資料](../catalog/api/filter-data.md) 以進一步瞭解。) 請稍候片刻，然後再嘗試您的請求，如果問題仍然存在，請聯絡您的管理員。 |
 
