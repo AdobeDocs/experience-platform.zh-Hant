@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: f360df6273986be35340432c72d8f8620f339b67
+source-git-commit: 51f65799a45229fc810a1d41f8b40b215d3666da
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 1%
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## [!BADGE 測試版]{type=Informative}資料集匯出 {#dataset-exports}
+### [!BADGE 測試版]{type=Informative}資料集匯出 {#dataset-exports}
 
 目前支援的資料集匯出功能有 **[!UICONTROL 先完整再增量]** [圖樣](/help/destinations/ui/export-datasets.md#scheduling). 本節所述的護欄適用於資料集匯出工作流程設定後發生的首次完整匯出。
 
