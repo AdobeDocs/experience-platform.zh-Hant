@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: 驗證和存取Experience PlatformAPI
+title: 驗證及存取Experience PlatformAPI
 type: Tutorial
 description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 361f409c7aeee2e3e789bb263eca7c59b73db8ec
+source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 6%
+source-wordcount: '2205'
+ht-degree: 7%
 
 ---
 
@@ -22,11 +22,11 @@ ht-degree: 6%
 
 >[!TIP]
 >
->除了上述三個憑證外，許多Platform API也需要有效的 `{SANDBOX_NAME}` 會以標頭形式提供。 請參閱 [沙箱總覽](../sandboxes/home.md) 以取得沙箱和 [沙箱管理端點](/help/sandboxes/api/sandboxes.md#list) 說明檔案以取得貴組織可用沙箱清單的相關資訊。
+>除了上述三個憑證外，許多Platform API也需要有效的 `{SANDBOX_NAME}` 提供為標題。 請參閱 [沙箱總覽](../sandboxes/home.md) 以取得有關沙箱和 [沙箱管理端點](/help/sandboxes/api/sandboxes.md#list) 說明檔案，以取得貴組織可用的沙箱清單相關資訊。
 
-為了維護應用程式和使用者的安全性，對Experience PlatformAPI的所有請求都必須使用OAuth等標準進行驗證和授權。
+為了維護應用程式和使用者的安全性，對Experience Platform API的所有請求都必須使用OAuth等標準進行驗證和授權。
 
-本教學課程涵蓋如何收集驗證Platform API呼叫所需的認證，如下方流程圖所述。 您可以在初始的一次性設定中收集大多數必要的認證。 然而，存取權杖必須每24小時重新整理一次。
+本教學課程涵蓋如何收集驗證Platform API呼叫所需的認證，如下方流程圖所述。 您可以在初始的一次性設定中收集大部分必要的認證。 然而，存取權杖必須每24小時重新整理一次。
 
 ![](./images/api-authentication/authentication-flowchart.png)
 
@@ -36,10 +36,11 @@ ht-degree: 6%
 
 * 有權存取Adobe Experience Platform的組織。
 * 能夠新增您為產品設定檔的開發人員和使用者的Admin Console管理員。
+* Experience Platform系統管理員，可授予您必要的屬性型存取控制項，以透過API在Experience Platform的不同部分執行讀取或寫入作業。
 
 您也必須有Adobe ID才能完成本教學課程。 如果您沒有Adobe ID，可以使用下列步驟建立一個：
 
-1. 前往 [Adobe Developer主控台](https://console.adobe.io).
+1. 前往 [Adobe Developer Console](https://console.adobe.io).
 2. 選取 **[!UICONTROL 建立新帳戶]**.
 3. 完成註冊程式。
 
@@ -49,41 +50,47 @@ ht-degree: 6%
 
 ### 取得開發人員存取權 {#gain-developer-access}
 
-聯絡 [!DNL Admin Console] 組織中的管理員，以使用將您作為開發人員新增到Experience Platform產品設定檔 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 請參閱 [!DNL Admin Console] 說明檔案，瞭解如何 [管理產品設定檔的開發人員存取權](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+聯絡 [!DNL Admin Console] 管理員的許可權，使用將您作為開發人員新增至Experience Platform產品設定檔 [[!DNL Admin Console]](https://adminconsole.adobe.com/). 請參閱 [!DNL Admin Console] 檔案，以取得關於如何 [管理產品設定檔的開發人員存取權](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-一旦指派您為開發人員，您就可以開始在中建立整合 [Adobe Developer主控台](https://www.adobe.com/go/devs_console_ui). 這些整合是從外部應用程式和服務到Adobe API的管道。
+一旦指派您為開發人員，您就可以開始在中建立整合 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). 這些整合是從外部應用程式和服務到Adobe API的管道。
 
 ### 取得使用者存取權 {#gain-user-access}
 
-您的 [!DNL Admin Console] 管理員還必須將您作為使用者新增至相同的產品設定檔。 請參閱指南： [管理使用者群組 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 以取得詳細資訊。
+您的 [!DNL Admin Console] 管理員必須將您作為使用者新增到相同的產品設定檔。 透過使用者存取權，您可以在UI中檢視您執行的API作業的結果。
+
+請參閱以下指南： [管理使用者群組 [!DNL Admin Console]](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) 以取得詳細資訊。
 
 ## 產生API金鑰（使用者端ID）和組織ID {#generate-credentials}
 
 >[!NOTE]
 >
->如果您要從 [Privacy Service API指南](../privacy-service/api/getting-started.md)，您現在可以返回該指南以產生 [!DNL Privacy Service].
+>如果您要遵循此檔案，從 [Privacy Service API指南](../privacy-service/api/getting-started.md)，您現在可以返回該指南以產生 [!DNL Privacy Service].
 
-在您透過取得開發人員和使用者的Platform存取權後 [!DNL Admin Console]，下一步是產生 `{ORG_ID}` 和 `{API_KEY}` Adobe Developer Console中的認證。 這些認證只需要產生一次，並可在未來平台API呼叫中重複使用。
+在您透過取得開發人員和使用者的Platform存取權後 [!DNL Admin Console]，下一步是產生 `{ORG_ID}` 和 `{API_KEY}` Adobe Developer Console中的認證。 這些認證只需產生一次，並可在未來平台API呼叫中重複使用。
 
 ### 將Experience Platform新增至專案 {#add-platform-to-project}
 
-前往 [Adobe Developer主控台](https://www.adobe.com/go/devs_console_ui) 並使用您的Adobe ID登入。 接下來，請依照以下教學課程中概述的步驟操作： [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) 在Adobe Developer Console檔案中。
+前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並使用您的Adobe ID登入。 接下來，請依照教學課程中概述的步驟進行 [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) 在Adobe Developer Console檔案中。
 
 建立新專案後，選取 **[!UICONTROL 新增API]** 於 **[!UICONTROL 專案概述]** 畫面。
 
-![](./images/api-authentication/add-api.png)
+>[!TIP]
+>
+>如果您已布建多個組織，請使用介面右上角的組織選擇器，以確保您位於所需的組織中。
 
-此 **[!UICONTROL 新增API]** 畫面隨即顯示。 選取Adobe Experience Platform的產品圖示，然後選擇 **[!UICONTROL EXPERIENCE PLATFORMAPI]** 選取之前 **[!UICONTROL 下一個]**.
+![醒目提示新增API選項的開發人員控制檯畫面。](./images/api-authentication/add-api.png)
+
+此 **[!UICONTROL 新增API]** 畫面隨即顯示。 選取Adobe Experience Platform的產品圖示，然後選擇 **[!UICONTROL EXPERIENCE PLATFORM API]** 在選取之前 **[!UICONTROL 下一個]**.
 
 ![選取「Experience PlatformAPI」。](./images/api-authentication/platform-api.png)
 
 >[!TIP]
 >
->選取 **[!UICONTROL 檢視檔案]** 可在個別瀏覽器視窗中導覽至完成的選項 [Experience Platform API參考檔案](https://developer.adobe.com/experience-platform-apis/).
+>選取 **[!UICONTROL 檢視檔案]** 可在個別瀏覽器視窗中導覽以完成 [Experience Platform API參考檔案](https://developer.adobe.com/experience-platform-apis/).
 
 ### 選取OAuth伺服器對伺服器驗證型別 {#select-oauth-server-to-server}
 
-接下來，選取驗證型別以產生存取權杖並存取Experience PlatformAPI。
+接著，選取驗證型別以產生存取權杖並存取Experience PlatformAPI。
 
 >[!IMPORTANT]
 >
@@ -93,26 +100,28 @@ ht-degree: 6%
 
 ### 選取要整合的產品設定檔 {#select-product-profiles}
 
-接下來，選取應套用至整合的產品設定檔。
-您整合的服務帳戶可透過這裡選取的產品設定檔存取精細功能。
+在 **[!UICONTROL 設定API]** 熒幕，選取 **[!UICONTROL AEP-Default-All-Users]**.
 
-請注意，若要存取Platform中的某些功能，您還需要系統管理員授予您必要的屬性型存取控制許可權。 閱讀本小節中的詳細資訊 [取得必要的屬性型存取控制許可權](#get-abac-permissions).
+<!--
+Your integration's service account will gain access to granular features through the product profiles selected here.
 
->[!TIP]
+-->
+
+>[!IMPORTANT]
 >
-如果您預期會在這裡看到特定產品設定檔，請聯絡您的系統管理員。 系統管理員可以在「許可權」檢視中檢視和管理API認證。 如需詳細資訊，請參閱區段 [將開發人員新增至產品設定檔](#add-developers-to-product-profile).
+若要存取Platform中的特定功能，您還需要系統管理員授予您必要的屬性型存取控制許可權。 閱讀本小節中的詳細資訊 [取得必要的屬性型存取控制許可權](#get-abac-permissions).
 
 ![選取要整合的產品設定檔。](./images/api-authentication/select-product-profiles.png)
 
 選取 **[!UICONTROL 儲存已設定的API]** 當您準備好時。
 
-以下影片教學課程也提供上述步驟的逐步解說，以設定與Experience Platform API的整合：
+以下的影片教學課程也提供上述步驟的逐步解說，以設定與Experience Platform API的整合：
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
 ### 收集認證 {#gather-credentials}
 
-將API新增至專案後， **[!UICONTROL EXPERIENCE PLATFORMAPI]** 專案的頁面會顯示所有Experience PlatformAPI呼叫所需的下列認證：
+將API新增至專案後， **[!UICONTROL EXPERIENCE PLATFORM API]** 專案的頁面會顯示所有Experience PlatformAPI呼叫所需的下列認證：
 
 ![在Developer Console中新增API後的整合資訊。](./images/api-authentication/api-integration-information.png)
 
@@ -133,23 +142,23 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 ## 產生存取權杖 {#generate-access-token}
 
-下一步是產生 `{ACCESS_TOKEN}` 用於平台API呼叫的認證。 不像 `{API_KEY}` 和 `{ORG_ID}`，則必須每24小時產生新Token才能繼續使用Platform API。 選取 **[!UICONTROL 產生存取權杖]**，如下所示。
+下一步是產生 `{ACCESS_TOKEN}` 用於平台API呼叫的認證。 不像 `{API_KEY}` 和 `{ORG_ID}`，必須每24小時產生一個新Token才能繼續使用Platform API。 選取 **[!UICONTROL 產生存取權杖]**，如下所示。
 
 ![顯示如何產生存取權杖](././images/api-authentication/generate-access-token.gif)
 
 >[!TIP]
 >
-您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀以下章節： [使用Postman驗證和測試API呼叫](#use-postman).
+您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀以下章節： [使用Postman驗證及測試API呼叫](#use-postman).
 
 ## [!BADGE 已棄用]{type=negative}產生JSON Web權杖(JWT) {#jwt}
 
 >[!WARNING]
 >
-不建議使用產生存取權杖的JWT方法。 所有新的整合必須使用 [OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server). Adobe也建議您將現有的整合移轉至OAuth方法。 請閱讀下列重要檔案：
+不建議使用產生存取權杖的JWT方法。 所有新的整合必須使用 [OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server). Adobe 也建議您將現有的整合移轉至 OAuth 方法。 請參閱下列重要檔案：
 > 
-* [您的應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [使用OAuth的新舊應用程式實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [使用OAuth伺服器對伺服器憑證方法的優點](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+* [應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+* [OAuth 新舊應用程式的實施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+* [使用OAuth伺服器對伺服器憑證方法的優勢](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 檢視已棄用的資訊
 
@@ -157,15 +166,15 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 >[!IMPORTANT]
 >
-在本教學課程中，以下步驟會概述如何在開發人員控制檯中產生JWT。 不過，此產生方法僅能用於測試和評估目的。
+在本教學課程中，以下步驟會概述如何在Developer Console中產生JWT。 不過，此產生方法只應用於測試和評估目的。
 >
-若要正常使用，必須自動產生JWT。 如需如何以程式設計方式產生JWT的詳細資訊，請參閱 [服務帳戶驗證指南](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) 在Adobe Developer上。
+如要正常使用，必須自動產生JWT。 如需如何以程式設計方式產生JWT的詳細資訊，請參閱 [服務帳戶驗證指南](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) 在Adobe Developer上。
 
 選取 **[!UICONTROL 服務帳戶(JWT)]** 在左側導覽中，然後選取 **[!UICONTROL 產生JWT]**.
 
 ![](././images/api-authentication/generate-jwt.png)
 
-在「 」底下提供的文字方塊中 **[!UICONTROL 產生自訂JWT]**，貼上您先前在將Platform API新增至服務帳戶時產生的私密金鑰內容。 然後，選取 **[!UICONTROL 產生Token]**.
+於下方提供的文字方塊中 **[!UICONTROL 產生自訂JWT]**，貼上您先前在將Platform API新增至服務帳戶時產生的私密金鑰內容。 然後，選取 **[!UICONTROL 產生Token]**.
 
 ![](././images/api-authentication/paste-key.png)
 
@@ -175,11 +184,11 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 **產生存取權杖**
 
-產生JWT後，您可以在API呼叫中使用它來產生 `{ACCESS_TOKEN}`. 不像 `{API_KEY}` 和 `{ORG_ID}`，則必須每24小時產生新Token才能繼續使用Platform API。
+產生JWT後，您可以在API呼叫中使用它來產生您的 `{ACCESS_TOKEN}`. 不像 `{API_KEY}` 和 `{ORG_ID}`，必須每24小時產生一個新Token才能繼續使用Platform API。
 
 **要求**
 
-以下請求會產生新的 `{ACCESS_TOKEN}` 根據裝載中提供的認證。 此端點僅接受表單資料作為其裝載，因此必須給予它 `Content-Type` 頁首 `multipart/form-data`.
+以下請求會產生新的 `{ACCESS_TOKEN}` 根據承載中提供的認證。 此端點僅接受表單資料作為其裝載，因此必須給予它 `Content-Type` 頁首 `multipart/form-data`.
 
 ```shell
 curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
@@ -191,7 +200,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `{API_KEY}` | 此 `{API_KEY}` ([!UICONTROL 使用者端ID])中擷取的區段 [上一步](#api-ims-secret). |
+| `{API_KEY}` | 此 `{API_KEY}` ([!UICONTROL 使用者端ID])中擷取到的值 [上一步](#api-ims-secret). |
 | `{SECRET}` | 您在中擷取的使用者端密碼 [上一步](#api-ims-secret). |
 | `{JWT}` | 您在中產生的JWT [上一步](#jwt). |
 
@@ -211,8 +220,8 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `token_type` | 傳回的Token型別。 若為存取權杖，此值一律為 `bearer`. |
-| `access_token` | 產生的 `{ACCESS_TOKEN}`. 此值（以字為前置詞） `Bearer`，必須做為 `Authentication` 所有Platform API呼叫的標題。 |
+| `token_type` | 傳回的權杖型別。 若為存取權杖，此值一律為 `bearer`. |
+| `access_token` | 產生的 `{ACCESS_TOKEN}`. 此值(前置詞為 `Bearer`，為必要項 `Authentication` 所有Platform API呼叫的標題。 |
 | `expires_in` | 存取Token過期前的剩餘毫秒數。 此值達到0後，必須產生新的存取權杖才能繼續使用Platform API。 |
 
 +++
@@ -235,7 +244,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 **回應**
 
-如果您的回應類似於下面顯示的回應，則您的認證有效且運作正常。 （此回應已因空格而截斷。）
+如果您的回應與下方所示的回應類似，表示您的認證有效且運作正常。 （此回應已因空間而遭截斷。）
 
 ```JSON
 {
@@ -260,29 +269,29 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 >[!IMPORTANT]
 >
-雖然上述呼叫足以測試您的存取認證，但請注意，如果沒有正確的屬性型存取控制許可權，您將無法存取或修改數個資源。 深入瞭解 [取得必要的屬性型存取控制許可權](#get-abac-permissions) 區段。
+雖然上述呼叫足以測試您的存取認證，但請注意，您若沒有正確的屬性型存取控制許可權，將無法存取或修改數個資源。 請閱讀以下內容： **取得必要的屬性型存取控制許可權** 一節。
 
 ## 取得必要的屬性型存取控制許可權 {#get-abac-permissions}
 
 若要存取或修改Experience Platform中的數個資源，您必須擁有適當的存取控制許可權。 系統管理員可授與您下列許可權： [您需要的許可權](/help/access-control/ui/permissions.md). 在本節中取得更多關於 [管理角色的API認證](/help/access-control/abac/ui/permissions.md#manage-api-credentials-for-role).
 
-有關系統管理員如何授與所需許可權以透過API存取平台資源的詳細資訊，也可在以下影片教學課程中取得：
+有關系統管理員如何授與所需許可權以透過API存取Platform資源的詳細資訊，也可在以下教學影片中取得：
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
 
-## 使用Postman驗證和測試API呼叫 {#use-postman}
+## 使用Postman驗證及測試API呼叫 {#use-postman}
 
-[Postman](https://www.postman.com/) 是常用的工具，可讓開發人員探索和測試RESTful API。 您可以使用Experience Platform Postman集合和環境來加速使用Experience Platform API。 深入瞭解 [在Experience Platform中使用Postman](/help/landing/postman.md) 以及開始使用集合和環境。
+[Postman](https://www.postman.com/) 是常見的工具，可讓開發人員探索和測試RESTful API。 您可以使用Experience Platform Postman集合和環境來加速使用Experience Platform API。 深入瞭解 [在Experience Platform中使用Postman](/help/landing/postman.md) 以及開始使用集合和環境。
 
-以下影片教學課程也提供有關將Postman與Experience Platform集合和環境搭配使用的詳細資訊：
+有關將Postman與Experience Platform集合和環境一起使用的詳細資訊，也可在以下影片教學課程中取得：
 
 **下載並匯入Postman環境以搭配Experience Platform API使用**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
-**使用Postman集合產生存取權杖**
+**使用Postman集合來產生存取權杖**
 
-下載 [Identity Management服務Postman集合](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) 並觀看以下影片，瞭解如何產生存取Token。
+下載 [Identity Management服務Postman集合](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) 並觀看以下影片，瞭解如何產生存取權杖。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
@@ -306,11 +315,11 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 移至 [[!DNL Admin Console]](https://adminconsole.adobe.com/) 並使用您的 Adobe ID 登入。
 
-選取 **[!UICONTROL 產品]**，然後選取 **[!UICONTROL Adobe Experience Platform]** 從產品清單。
+選取 **[!UICONTROL 產品]**，然後選取 **[!UICONTROL Adobe Experience Platform]** 從產品清單中。
 
 ![Admin Console上的產品清單](././images/api-authentication/products.png)
 
-從 **[!UICONTROL 產品設定檔]** 索引標籤，選取 **[!UICONTROL AEP-Default-All-Users]**. 或者，使用搜尋列，輸入名稱以搜尋產品描述檔。
+從 **[!UICONTROL 產品設定檔]** 索引標籤，選取 **[!UICONTROL AEP-Default-All-Users]**. 或者，使用搜尋列透過輸入名稱來搜尋產品描述檔。
 
 ![搜尋產品設定檔](././images/api-authentication/select-product-profile.png)
 
@@ -326,25 +335,31 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ![「開發人員」標籤上列出的開發人員](././images/api-authentication/developer-added.png)
 
-### 設定API
+<!--
 
-開發人員可以在Adobe Developer Console的專案中新增和設定API。
+Commenting out this part since it duplicates information from the section Add Experience Platform to a project
 
-選取您的專案，然後選取 **[!UICONTROL 新增API]**.
+### Set up an API
 
-![將API新增至專案](././images/api-authentication/add-api-project.png)
+A developer can add and configure an API within a project in the Adobe Developer Console.
 
-在 **[!UICONTROL 新增API]** 對話方塊選取 **[!UICONTROL Adobe Experience Platform]**，然後選取 **[!UICONTROL EXPERIENCE PLATFORMAPI]**.
+Select your project, then select **[!UICONTROL Add API]**.
 
-![在Experience Platform中新增API](././images/api-authentication/add-api-platform.png)
+![Add API to a project](././images/api-authentication/add-api-project.png)
 
-在 **[!UICONTROL 設定API]** 畫面，選取 **[!UICONTROL AEP-Default-All-Users]**.
+In the **[!UICONTROL Add an API]** dialog box select **[!UICONTROL Adobe Experience Platform]**, then select **[!UICONTROL Experience Platform API]**.
+
+![Add an API in Experience Platform](././images/api-authentication/add-api-platform.png)
+
+In the **[!UICONTROL Configure API]** screen, select **[!UICONTROL AEP-Default-All-Users]**.
+
+-->
 
 ### 將API指派給角色
 
-系統管理員可以在Experience PlatformUI中將API指派給角色。
+系統管理員可以將API指派給Experience PlatformUI中的角色。
 
-選取 **[!UICONTROL 許可權]** 以及您想要將API新增至的角色。 選取 **[!UICONTROL API認證]** 索引標籤，然後選取 **[!UICONTROL 新增API認證]**.
+選取 **[!UICONTROL 許可權]** 以及您想要新增API的角色。 選取 **[!UICONTROL API認證]** 索引標籤，然後選取 **[!UICONTROL 新增API認證]**.
 
 ![所選角色中的API認證索引標籤](././images/api-authentication/api-credentials.png)
 
@@ -352,7 +367,7 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ![可供選擇的API清單](././images/api-authentication/select-api.png)
 
-您會返回 [!UICONTROL API認證] 索引標籤，其中列出新新增的API。
+您將返回 [!UICONTROL API認證] 索引標籤，其中列出新新增的API。
 
 ![使用新增API的API憑證標籤](././images/api-authentication/api-credentials-with-added-api.png)
 
@@ -360,12 +375,12 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 請參閱以下連結的其他資源，以取得開始使用Experience PlatformAPI的更多說明
 
-* [驗證和存取Experience PlatformAPI](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hant) 影片教學課程頁面
+* [驗證及存取Experience PlatformAPI](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=zh-Hant) 視訊教學課程頁面
 * [Identity Management服務Postman集合](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) 用於產生存取權杖
 * [Experience PlatformAPI Postman集合](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您已收集並成功測試您的Platform API存取認證。 您現在可以依照在整個中提供的範例API呼叫進行 [檔案](../landing/documentation/overview.md).
+閱讀本檔案後，您已收集並成功測試您的Platform API存取認證。 您現在可以跟隨在整個中提供的範例API呼叫 [檔案](../landing/documentation/overview.md).
 
-除了您在本教學課程中收集的驗證值之外，許多Platform API也需要有效的 `{SANDBOX_NAME}` 會以標頭形式提供。 如需詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。
+除了您在本教學課程中收集的驗證值之外，許多Platform API也需要有效的 `{SANDBOX_NAME}` 提供為標題。 如需詳細資訊，請參閱[沙箱概觀](../sandboxes/home.md)。
