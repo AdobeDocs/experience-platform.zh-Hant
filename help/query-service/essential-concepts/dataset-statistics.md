@@ -1,16 +1,16 @@
 ---
 title: 資料集統計資料計算
 description: 本檔案說明如何使用SQL命令計算Azure Data Lake Storage (ADLS)資料集的欄層級統計資料。
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
 
 # 資料集統計資料計算
 
-您現在可以在以下位置計算欄層級統計資料： [!DNL Azure Data Lake Storage] (ADLS)資料集與 `COMPUTE STATISTICS` 和 `SHOW STATISTICS` SQL命令。 計算資料集統計資料的SQL命令是 `ANALYZE TABLE` 命令。 的完整詳細資料 `ANALYZE TABLE` 命令位於 [SQL參考檔案](../sql/syntax.md#analyze-table).
+您現在可以在以下位置計算欄層級統計資料： [!DNL Azure Data Lake Storage] (ADLS)資料集與 `COMPUTE STATISTICS` SQL命令。 計算資料集統計資料的SQL命令是 `ANALYZE TABLE` 命令。 的完整詳細資料 `ANALYZE TABLE` 命令位於 [SQL參考檔案](../sql/syntax.md#analyze-table).
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此 `COMPUTE STATISTICS`， `FILTERCONTEXT`， `FOR COLUMNS`、和 `SHOW STATISTICS` 加速存放區資料表不支援命令。 這些擴充功能適用於 `ANALYZE TABLE` 目前只有ADLS表格支援命令。 如需詳細資訊，請參閱 [分析表格段落](../sql/syntax.md#analyze-table) SQL語法指南中的。
+>此 `COMPUTE STATISTICS`， `FILTERCONTEXT`、和 `FOR COLUMNS` 加速存放區資料表不支援命令。 這些擴充功能適用於 `ANALYZE TABLE` 目前只有ADLS表格支援命令。 如需詳細資訊，請參閱 [分析表格段落](../sql/syntax.md#analyze-table) SQL語法指南中的。
 
 本指南可協助您建構查詢，以便您計算ADLS資料集的欄統計資料。 使用這些命令，您可以透過PSQL使用者端使用SQL查詢來檢視階段作業中產生的統計資料。
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
 workflow-type: tm+mt
-source-wordcount: '3860'
+source-wordcount: '3863'
 ht-degree: 2%
 
 ---
@@ -597,9 +597,9 @@ ANALYZE TABLE <original_table_name>
 
 #### 資料湖上的計算統計資料 {#compute-statistics-data-lake}
 
-您現在可以在以下位置計算欄層級統計資料： [!DNL Azure Data Lake Storage] (ADLS)資料集與 `COMPUTE STATISTICS` 和 `SHOW STATISTICS` SQL命令。 計算整個資料集、資料集子集、所有欄或欄子集上的欄統計資料。
+您現在可以在以下位置計算欄層級統計資料： [!DNL Azure Data Lake Storage] (ADLS)資料集與 `COMPUTE STATISTICS` SQL命令。 計算整個資料集、資料集子集、所有欄或欄子集上的欄統計資料。
 
-`COMPUTE STATISTICS` 擴充 `ANALYZE TABLE` 命令。 然而， `COMPUTE STATISTICS`， `FILTERCONTEXT`， `FOR COLUMNS`、和 `SHOW STATISTICS` 加速存放區資料表不支援命令。 這些擴充功能適用於 `ANALYZE TABLE` 目前只有ADLS表格支援命令。
+`COMPUTE STATISTICS` 擴充 `ANALYZE TABLE` 命令。 然而， `COMPUTE STATISTICS`， `FILTERCONTEXT`、和 `FOR COLUMNS` 加速存放區資料表不支援命令。 這些擴充功能適用於 `ANALYZE TABLE` 目前只有ADLS表格支援命令。
 
 **範例**
 
@@ -611,7 +611,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 >[!NOTE]
 >
->此 `Statistics ID` 和產生的統計資料只適用於每個階段作業，而且無法在不同的PSQL階段作業間存取。<br><br>限制:<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>不會儲存計算的統計資料</li></ul><br><br>選項:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟會設為true。 因此，當對不受支援的資料型別請求統計資料時，它不會出錯但會無訊息地失敗。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`.
+>此 `Statistics ID` 和產生的統計資料只適用於每個階段作業，而且無法在不同的PSQL階段作業間存取。<br><br>限制:<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>計算的統計資料為 **非** 跨工作階段持續存在。</li></ul><br><br>選項:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟會設為true。 因此，在不支援的資料型別上請求統計資料時，不會出錯但會無訊息地略過具有不支援資料型別的欄位。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`.
 
 主控台輸出會顯示如下。
 
@@ -629,7 +629,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 SELECT * FROM adc_geometric_stats_1;
 ```
 
-使用 `SHOW STATISTICS` 命令來顯示工作階段中產生之所有暫時統計資料表的中繼資料。 這個指令可以協助您縮小統計分析的範圍。
+使用 `SHOW STATISTICS` 命令來顯示工作階段中產生之所有暫時統計資料的中繼資料。 這個指令可以協助您縮小統計分析的範圍。
 
 ```sql
 SHOW STATISTICS;
