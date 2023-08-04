@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 27bff79c38395e2c2366f9bd89101eb03fcd5608
+source-git-commit: 1de2776fbdfc7b32a1660a01ca6df21eb0cb9104
 workflow-type: tm+mt
-source-wordcount: '1723'
+source-wordcount: '1736'
 ht-degree: 37%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 37%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 2.20.1版 — 2023年8月3日
+
+**修正和改良**
+
+* 改善已儲存資料流覆寫設定的驗證。
 
 ## 2.20.0版 — 2023年7月31日
 
