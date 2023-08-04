@@ -2,9 +2,9 @@
 title: 查詢服務中的資料治理
 description: 此概觀涵蓋Experience Platform查詢服務中資料治理的主要元素。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
+source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '3132'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ Adobe Experience Platform將來自多個企業系統的資料整合在一起，�
 1. 稽核
 1. 資料使用情況
 1. 隱私權
-<!-- 1. Data hygiene -->
+1. 資料檢疫
 
 本檔案會檢視每個不同的控管領域，並示範如何在使用「查詢服務」時促進資料法規遵循。 請參閱 [治理、隱私和安全性概述](../../landing/governance-privacy-security/overview.md) 以進一步瞭解Experience Platform如何讓您管理客戶資料並確保法規遵循。
 
-## 安全性
+## 安全性 {#security}
 
 資料安全性是保護資料免於未經授權存取的程式，並確保資料在整個生命週期中的安全存取。 在Experience Platform中，透過角色和許可權的應用功能（例如角色型存取控制和屬性型存取控制）來維護安全存取。 憑證、SSL和資料加密也可用來確保跨平台的資料保護。
 
@@ -35,8 +35,7 @@ Adobe Experience Platform將來自多個企業系統的資料整合在一起，�
 
 * [存取控制](#access-control)：存取權可透過角色和許可權控制，包括資料集和欄層級的許可權。
 * 透過以下方式保護資料 [連線能力](#connectivity)：透過Platform和外部使用者端，利用即將到期的憑證或不即將到期的憑證實現有限的連線，進而保護資料的安全。
-* 透過以下方式保護資料 [加密和系統層級的金鑰](#encryption)：資料閒置時，可透過加密確保資料安全性。
-<!-- * Securing data through [encryption and customer-managed keys (CMK)](#encryption-and-customer-managed-keys): Access controlled through encryption when data is at rest. -->
+* 透過以下方式保護資料 [加密和客戶管理的金鑰(CMK)](#encryption-and-customer-managed-keys)：當資料處於靜止狀態時，可透過加密控制存取。
 
 ### 存取控制 {#access-control}
 
@@ -132,17 +131,14 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 請參閱指南中的可用內容 [協力廠商使用者端連線至查詢服務的SSL選項](../clients/ssl-modes.md) 以取得詳細資訊，包括如何使用 `verify-full` ssl引數值。
 
-### 加密 {#encryption}
-
-<!-- Commented out lines to be included when customer-managed keys is released. Link out to the new document. -->
-
-<!-- ### Encryption and customer-managed keys (CMK) {#encryption-and-customer-managed-keys} -->
+### 加密和客戶管理金鑰(CMK) {#encryption-and-customer-managed-keys}
 
 加密是使用演演算法程式，將資料轉換為已編碼及無法讀取的文字，以確保資訊受到保護且無法存取，而不需要使用解密金鑰。
 
 查詢服務資料規範可確保資料一律加密。 傳輸中的資料一律符合HTTPS標準，靜態資料會使用系統層級的金鑰在Azure Data Lake存放區中加密。 請參閱以下檔案： [如何在Adobe Experience Platform中加密資料](../../landing/governance-privacy-security/encryption.md) 以取得詳細資訊。 如需如何在Azure Data Lake儲存體中對閒置資料進行加密的詳細資訊，請參閱 [Azure官方檔案](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-<!-- Data-in-transit is always HTTPS compliant and similarly when the data is at rest in the data lake, the encryption is done with Customer Management Key (CMK), which is already supported by Data Lake Management. The currently supported version is TLS1.2. -->
+傳輸中的資料一律符合HTTPS標準，同樣地，當資料在資料湖中靜止時，會使用客戶管理金鑰(CMK)進行加密，而資料湖管理已支援該金鑰。 目前支援的版本為TLS1.2。請參閱 [客戶自控金鑰(CMK)檔案](../../landing/governance-privacy-security/customer-managed-keys.md) 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
+
 
 ## 稽核 {#audit}
 
@@ -206,14 +202,14 @@ Platform的資料控管架構可讓您以統一方式，負責地使用所有Ado
 
 透過Platform UI將結構描述資料欄位設定為身分欄位，並且查詢服務也可讓您 [使用SQL命令&#39;ALTER TABLE&#39;標籤主要身分](../sql/syntax.md#alter-table). 使用設定身分 `ALTER TABLE` 當資料集是使用SQL建立的，而非直接透過平台UI從結構描述建立時，命令特別有用。 請參閱檔案以瞭解如何 [在UI中定義身分欄位](../../xdm/ui/fields/identity.md) 使用標準結構描述時。
 
-<!-- COMMENTING OUT DATA HYGEINE SECTION TEMPORARILY UNTIL IT IS GA. currently it is in Beta only.
+## 資料檢疫 {#data-hygiene}
 
-## Data hygiene 
+「資料衛生」是指修復或移除過時、不準確、格式不正確、重複或不完整資料的程式。 這些程式可確保資料集在所有系統中都正確且一致。 請務必確保在資料歷程的每個步驟中，甚至從初始資料儲存位置開始，都有足夠的資料衛生。 在Experience Platform查詢服務中，這是資料湖或加速存放區。
 
-"Data hygiene" refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. It is important to ensure adequate data hygiene along every step of the data's journey and even from the initial data storage location. 
+您可以將身分指派給衍生的資料集，以便依照Platform的集中式資料衛生服務管理其資料。
 
-It is necessary to assign an identity to a derived dataset to allow their management by the [!DNL Data Hygiene] service. Conversely, when you create aggregated data on an accelerated data store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated. == THIS APPEARS TO BE A PRIVACY USE CASE NAD NOT DATA HYGEINE ++  this is confusing.
+相反地，當您在加速存放區上建立彙總資料集時，彙總資料無法用於衍生原始資料。 經過此資料彙總後，就不需要提出資料衛生要求。
 
-An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any new derived dataset queries using the same dataset source. 
+此情況的例外是刪除。 如果資料集要求資料衛生刪除，且在刪除完成之前，會執行另一個衍生的資料集查詢，則衍生的資料集將會從原始資料集中擷取資訊。 在此情況下，您必須注意，如果已傳送刪除資料集的請求，您不得使用相同的資料集來源執行任何新衍生的資料集查詢。
 
-See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform. -->
+請參閱 [資料衛生概觀](../../hygiene/home.md) 以進一步瞭解Adobe Experience Platform中的資料衛生。
