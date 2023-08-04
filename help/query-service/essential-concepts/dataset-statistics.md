@@ -1,9 +1,9 @@
 ---
 title: 資料集統計資料計算
 description: 本檔案說明如何使用SQL命令計算Azure Data Lake Storage (ADLS)資料集的欄層級統計資料。
-source-git-commit: 02b0939ee8fe92580402a78c7ebb5a250902d01c
+source-git-commit: c05df76976e58da1f96c6e8c030c919ff5b1eb19
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此 `COMPUTE STATISTICS`， `FILTERCONTEXT`， `FOR COLUMNS`、和 `SHOW STATISTICS` Data Warehouse表格不支援命令。 這些擴充功能適用於 `ANALYZE TABLE` 目前只有ADLS表格支援命令。 如需詳細資訊，請參閱 [分析表格段落](../sql/syntax.md#analyze-table) SQL語法指南中的。
+>此 `COMPUTE STATISTICS`， `FILTERCONTEXT`， `FOR COLUMNS`、和 `SHOW STATISTICS` 加速存放區資料表不支援命令。 這些擴充功能適用於 `ANALYZE TABLE` 目前只有ADLS表格支援命令。 如需詳細資訊，請參閱 [分析表格段落](../sql/syntax.md#analyze-table) SQL語法指南中的。
 
 本指南可協助您建構查詢，以便您計算ADLS資料集的欄統計資料。 使用這些命令，您可以透過PSQL使用者端使用SQL查詢來檢視階段作業中產生的統計資料。
 
@@ -95,7 +95,7 @@ SELECT * FROM adc_geometric_stats_1;
 
 ## 顯示統計分析中繼資料 {#show-statistics}
 
-您可以使用 `SHOW STATISTICS` 命令來顯示工作階段中產生之所有暫時統計資料表的中繼資料。 這個指令可以協助您縮小統計分析的範圍。
+您可以使用 `SHOW STATISTICS` 命令來顯示工作階段中產生之所有暫時統計資料的中繼資料。 這個指令可以協助您縮小統計分析的範圍。
 
 範例輸出 `SHOW STATISTICS` 如下所示。
 
