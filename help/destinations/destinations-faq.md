@@ -3,10 +3,10 @@ keywords: 目的地；問題；常見問題；faq；目的地常見問題
 title: 常見問答
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 810bcd011fd6e172c79f4482e047aa6e715c3918
+source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 4%
+source-wordcount: '1638'
+ht-degree: 3%
 
 ---
 
@@ -143,6 +143,7 @@ ht-degree: 4%
 
 +++回答
 [!DNL LinkedIn Matched Audiences] 支援啟用下列身分：雜湊電子郵件、 [!DNL GAID]、和 [!DNL IDFA].
+
 +++
 
 ## 透過Adobe Target和自訂個人化目的地實現相同頁面和下一頁個人化 {#same-next-page-personalization}
@@ -204,3 +205,20 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 +++回答是。 此 [資料控管和同意原則](../data-governance/home.md) 已建立並與所選行銷動作相關聯的屬性，將控管所選屬性的啟動。
 +++
+
+### 為 [!DNL Adobe Target] 和 [!DNL Custom Personalization] 目的地 [!DNL HIPAA]是否符合？
+
++++回答
+[!DNL Adobe Target] 不是 [!DNL HIPPA] — 相容於 [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). 客戶應就以下事項與自己的法律團隊確認 [!DNL HIPPA] — 在透過使用邊緣個人化之前對自訂最佳化通道整備 [!DNL Adobe Target] 或 [!DNL Custom Personalization] 目的地。
+
+若是需要大規模套用同意原則管理的使用案例，客戶必須購買 [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] 功能是以進階功能套件形式出售，不得另行購買。
+
+此服務包括客戶管理的金鑰和提升的臨界值，以管理客戶資料生命週期。
+
+此 [!DNL Adobe Target] 和 [!DNL Custom Personalization] 目的地會與整合 [Experience Platform資料使用標籤](../data-governance/labels/overview.md) 和 [同意原則執行服務](../data-governance/enforcement/overview.md). 這些功能可供所有客戶使用。
+
+
+
+
++++
+
