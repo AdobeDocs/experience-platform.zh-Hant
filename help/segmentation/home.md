@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
 workflow-type: tm+mt
 source-wordcount: '1633'
-ht-degree: 9%
+ht-degree: 12%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="評估方式"
->abstract="Platform目前支援三種評估受眾的方法：串流分段、批次分段和邊緣分段。"
+>abstract="Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -65,7 +65,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 >abstract="串流細分是持續進行的資料選擇流程，其會根據使用者活動來更新對象。 "
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=zh-Hant" text="使用串流分段近乎即時地評估事件"
 
-Platform目前支援三種評估受眾的方法：串流分段、批次分段和邊緣分段。
+Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。
 
 ### 串流區段 {#streaming}
 
@@ -78,7 +78,7 @@ Platform目前支援三種評估受眾的方法：串流分段、批次分段和
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="批次評估"
->abstract="批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立對象後，會儲存並儲存對象，以便您匯出以供使用。"
+>abstract="批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，系統會儲存並存放該對象，以便您可以將對象匯出使用。"
 
 批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，會儲存並儲存產生的對象，以便您將其匯出以供使用。
 
