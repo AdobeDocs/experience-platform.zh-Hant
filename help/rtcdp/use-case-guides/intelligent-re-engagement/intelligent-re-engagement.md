@@ -3,9 +3,9 @@ title: 智慧型重新參與
 description: 在關鍵轉換時刻提供引人入勝且連線的體驗，聰明地重新與不常使用的客戶互動。
 hide: true
 hidefromtoc: true
-source-git-commit: 4f0902b874d5e8179c009ad3b603e008b9a22bb4
+source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
 workflow-type: tm+mt
-source-wordcount: '3496'
+source-wordcount: '3482'
 ht-degree: 12%
 
 ---
@@ -110,9 +110,7 @@ Experience Data Model (XDM)資源是在以下管理： [!UICONTROL 方案] Adobe
 
 如需建立綱要的詳細資訊，請參閱 [建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md)
 
-有4個結構描述設計用於重新參與歷程。
-
-每個結構描述都需要設定特定欄位，以及一些強烈建議的欄位。
+有4個結構描述設計用於重新參與歷程。 每個結構描述都需要設定特定欄位，以及一些強烈建議的欄位。
 
 #### 客戶屬性結構的欄位群組需求
 
@@ -315,8 +313,6 @@ Experience Data Model (XDM)資源是在以下管理： [!UICONTROL 方案] Adobe
 
 AdobeWeb聯結器結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包含下列欄位群組：
 
-Adobe Analytics資料摘要的體驗事件結構描述所需的欄位群組包括：
-
 +++Adobe Analytics ExperienceEvent範本（欄位群組）
 
 | 欄位 | 需求 | 說明 |
@@ -382,8 +378,6 @@ Adobe Analytics資料摘要的體驗事件結構描述所需的欄位群組包�
 +++
 
 ![AdobeWeb聯結器結構描述，醒目提示欄位群組清單。](../intelligent-re-engagement/images/adobe-web-connector.png)
-
->[!ENDTABS]
 
 ### 從結構描述建立資料集
 
