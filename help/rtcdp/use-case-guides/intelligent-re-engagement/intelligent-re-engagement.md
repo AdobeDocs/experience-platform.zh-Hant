@@ -3,10 +3,10 @@ title: 智慧型重新參與
 description: 在關鍵轉換時刻提供引人入勝且連線的體驗，聰明地重新與不常使用的客戶互動。
 hide: true
 hidefromtoc: true
-source-git-commit: 290c914216c1af070e065a38f726e2028c2cea8c
+source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
 workflow-type: tm+mt
-source-wordcount: '3482'
-ht-degree: 12%
+source-wordcount: '3259'
+ht-degree: 8%
 
 ---
 
@@ -20,28 +20,30 @@ ht-degree: 12%
 
 當您完成實作使用案例的步驟時，您將使用以下 Real-Time CDP 功能和 UI 元素 (按使用順序列出)。確保您擁有所有這些區域所需的屬性型存取控制權限，或要求系統管理員授予您必要的權限。
 
-* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)  — 跨資料來源彙總資料以利行銷活動。 然後會使用此資料來建立行銷活動對象，並呈現用於電子郵件和網頁促銷活動的個人化資料元素（例如，名稱或帳戶相關資訊）。 CDP也可用來透過電子郵件和網路(透過Adobe Target)啟用對象。
-   * [結構描述](/help/xdm/home.md)
+* [Adobe Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)  — 跨資料來源彙總資料以利行銷活動。 然後會使用此資料來建立行銷活動對象，並呈現用於電子郵件和網頁促銷活動的個人化資料元素（例如名稱或帳戶相關資訊）。 CDP也可用來透過電子郵件和網路(透過Adobe Target)啟用對象。
+   * [架構](/help/xdm/home.md)
    * [設定檔](/help/profile/home.md)
+   * [資料集](/help/catalog/datasets/overview.md)
    * [對象](/help/segmentation/home.md)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [目的地](/help/destinations/home.md)
    * [事件或對象觸發器](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [受眾/事件](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [歷程動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ### 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 
-有三個重新參與歷程已建立。
+目前已開發三個不同的重新參與歷程。
 
 >[!BEGINTABS]
 
 >[!TAB 重新參與歷程]
 
-重新參與歷程會鎖定網站和應用程式上放棄的產品瀏覽。 瀏覽產品時，如果沒有購買產品或加入購物車，則會觸發此歷程。 如果在過去24小時內沒有清單新增，則會在三天後觸發品牌參與度。
+重新參與歷程會鎖定網站和應用程式上放棄的產品瀏覽。 當已檢視產品但未購買或未新增到購物車時，就會觸發此歷程。 如果在過去24小時內沒有清單新增，則會在三天後觸發品牌參與度。
 
 ![客戶智慧型重新參與歷程高階視覺化概觀。](../intelligent-re-engagement/images/re-engagement-journey.png)
 
-1. 資料會透過Edge Network （偏好方法）彙總至Web SDK/Mobile SDK/Edge Network API擷取中。
+1. 資料會透過Edge Network （偏好方法）彙總至Web SDK、Mobile SDK或Edge Network API擷取中。
 2. 作為 **客戶**，即可建立標示為 [!UICONTROL 個人資料].
 3. 作為 **客戶**，您可將設定檔載入到Real-Time CDP中，並建立治理政策以確保負責任地使用。
 4. 作為 **客戶**，您可從設定檔清單建立焦點對象，以檢查 **使用者** 在過去三天中建立了品牌參與度。
@@ -51,11 +53,11 @@ ht-degree: 12%
 
 >[!TAB 捨棄的購物車歷程]
 
-這個捨棄的購物車歷程鎖定已放入購物車但並未在網站和應用程式上購買的產品。 用於啟動和停止付費媒體行銷活動
+捨棄的購物車歷程鎖定已放入購物車但尚未在網站和應用程式上購買的產品。 此外，付費媒體行銷活動也會使用此方法啟動和停止。
 
 ![客戶放棄購物車歷程高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png)
 
-1. 資料會透過Edge Network （偏好方法）彙總至Web SDK/Mobile SDK/Edge Network API擷取中。
+1. 資料會透過Edge Network （偏好方法）彙總至Web SDK、Mobile SDK或Edge Network API擷取中。
 2. 作為 **客戶**，即可建立標示為 [!UICONTROL 個人資料].
 3. 作為 **客戶**，您可將設定檔載入到Real-Time CDP中，並建立治理政策以確保負責任地使用。
 4. 作為 **客戶**，您可從設定檔清單建立焦點對象，以檢查 **使用者** 已將專案放入購物車，但尚未完成購買。 此 **[!UICONTROL 加入購物車]** 事件會啟動等待30分鐘的計時器，然後檢查是否購買。 如果尚未購買，則 **使用者** 新增至 **[!UICONTROL 捨棄購物車]** 對象。
@@ -65,11 +67,11 @@ ht-degree: 12%
 
 >[!TAB 訂單確認歷程]
 
-此訂單確認歷程會鎖定網站和應用程式上的產品購買。
+訂單確認歷程專注於透過網站和行動應用程式進行的產品購買。
 
 ![客戶訂單確認歷程高階視覺化概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png)
 
-1. 資料會透過Edge Network （偏好方法）彙總至Web SDK/Mobile SDK/Edge Network API擷取中。
+1. 資料會透過Edge Network （偏好方法）彙總至Web SDK、Mobile SDK或Edge Network API擷取中。
 2. 作為 **客戶**，即可建立標示為 [!UICONTROL 個人資料].
 3. 作為 **客戶**，您可將設定檔載入到Real-Time CDP中，並建立治理政策以確保負責任地使用。
 4. 作為 **客戶**，您可從設定檔清單建立焦點對象，以檢查 **使用者** 已進行購買。
@@ -80,41 +82,36 @@ ht-degree: 12%
 
 ## 如何實現使用案例：逐步說明 {#step-by-step-instructions}
 
-請閱讀以下章節，其中包含進一步檔案的連結，以完成上述高階概覽中的每個步驟。
+若要完成上述高階概覽中的每個步驟，請閱讀以下章節，其中提供詳細資訊和詳細指示的連結。
 
 ### 您將使用的 UI 功能和元素 {#ui-functionality-and-elements}
 
-當您完成實作使用案例的步驟時，您將使用以下 Real-Time CDP 功能和 UI 元素 (按使用順序列出)。確保您擁有所有這些區域所需的屬性型存取控制權限，或要求系統管理員授予您必要的權限。
-
-* [結構描述](/help/xdm/home.md)
-* [設定檔](/help/profile/home.md)
-* [資料集](/help/catalog/datasets/overview.md)
-* [對象](/help/segmentation/home.md)
-* [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-* [目的地](/help/destinations/home.md)
+當您完成實施使用案例的步驟時，您將使用本檔案開頭列出的Real-Time CDP功能和UI元素。 確保您擁有所有這些區域所需的屬性型存取控制權限，或要求系統管理員授予您必要的權限。
 
 ### 建立結構描述設計並指定欄位群組
 
-Experience Data Model (XDM)資源是在以下管理： [!UICONTROL 方案] Adobe Experience Platform中的工作區。 您可以檢視並探索 Adobe 提供的核心資源，並為貴組織建立自訂資源和結構描述。
+Experience Data Model (XDM)資源是在以下管理： [!UICONTROL 方案] Adobe Experience Platform中的工作區。 您可以檢視和探索Adobe提供的核心資源，並為您的組織建立自訂資源和結構描述。
 
-若要建立方案，請完成以下步驟：
+<!--
+To create a schema, complete the steps below:
 
-1. 瀏覽至 **[!UICONTROL 資料管理]** > **[!UICONTROL 方案]** 並選取 **[!UICONTROL 建立結構描述]**.
-2. 選取 **[!UICONTROL XDM個別設定檔]/[!UICONTROL XDM ExperienceEvent]**.
-3. 瀏覽至 **[!UICONTROL 欄位群組]** 並選取 **[!UICONTROL 新增]**.
-4. 使用搜尋方塊來尋找及選取欄位群組，然後選取 **[!UICONTROL 新增欄位群組]**.
-5. 為結構描述命名並選擇性地提供說明。
-6. 選取「**[!UICONTROL 儲存]**」。
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Schemas]** and select **[!UICONTROL Create schema]**.
+2. Select **[!UICONTROL XDM Individual Profile]/[!UICONTROL XDM ExperienceEvent]**.
+3. Navigate to **[!UICONTROL Field groups]** and select **[!UICONTROL Add]**.
+4. Use the search box to find and select the field group, then select **[!UICONTROL Add field groups]**.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![建立結構描述之步驟的記錄。](../intelligent-re-engagement/images/create-a-schema.gif)
+![A recording of the steps to create a schema.](../intelligent-re-engagement/images/create-a-schema.gif) 
+-->
 
 如需建立綱要的詳細資訊，請參閱 [建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md)
 
-有4個結構描述設計用於重新參與歷程。 每個結構描述都需要設定特定欄位，以及一些強烈建議的欄位。
+有四個結構描述設計用於重新參與歷程。 每個結構描述都需要設定特定欄位，以及一些強烈建議的欄位。
 
-#### 客戶屬性結構的欄位群組需求
+#### 客戶屬性結構
 
-客戶屬性結構為 [!UICONTROL XDM個別設定檔] 架構，包含下列欄位群組：
+客戶屬性結構由 [!UICONTROL XDM個別設定檔] 類別，包括下列欄位群組：
 
 +++個人聯絡詳細資訊（欄位群組）
 
@@ -165,11 +162,13 @@ Experience Data Model (XDM)資源是在以下管理： [!UICONTROL 方案] Adobe
 
 +++
 
-![突顯欄位群組清單的客戶屬性結構。](../intelligent-re-engagement/images/customer-attributes.png)
+<!--
+![Customer attributes schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-attributes.png) 
+-->
 
-#### 客戶數位交易綱要的欄位群組需求
+#### 客戶數位交易綱要
 
-客戶數位交易結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包含下列欄位群組：
+客戶數位交易結構描述由 [!UICONTROL XDM ExperienceEvent] 類別，包括下列欄位群組：
 
 +++Adobe Experience Platform Web SDK ExperienceEvent （欄位群組）
 
@@ -260,11 +259,13 @@ Experience Data Model (XDM)資源是在以下管理： [!UICONTROL 方案] Adobe
 
 +++
 
-![強調欄位群組清單的客戶數位交易結構描述。](../intelligent-re-engagement/images/customer-digital-transactions.png)
+<!--
+![Customer digital transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-digital-transactions.png) 
+-->
 
-#### 客戶離線交易結構描述的欄位群組需求
+#### 客戶離線交易結構描述
 
-客戶離線交易結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包含下列欄位群組：
+客戶離線交易結構描述是由 [!UICONTROL XDM ExperienceEvent] 類別，包括下列欄位群組：
 
 +++商務詳細資料（欄位群組）
 
@@ -307,11 +308,13 @@ Experience Data Model (XDM)資源是在以下管理： [!UICONTROL 方案] Adobe
 
 +++
 
-![醒目提示欄位群組清單的客戶離線交易結構描述。](../intelligent-re-engagement/images/customer-offline-transactions.png)
+<!--
+![Customer offline transactions schema highlighting the list of field groups.](../intelligent-re-engagement/images/customer-offline-transactions.png) 
+-->
 
-#### AdobeWeb聯結器結構描述的欄位群組需求
+#### Adobe的Web聯結器結構描述
 
-AdobeWeb聯結器結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包含下列欄位群組：
+AdobeWeb聯結器結構描述是由 [!UICONTROL XDM ExperienceEvent] 類別，包括下列欄位群組：
 
 +++Adobe Analytics ExperienceEvent範本（欄位群組）
 
@@ -377,25 +380,34 @@ AdobeWeb聯結器結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包�
 
 +++
 
-![AdobeWeb聯結器結構描述，醒目提示欄位群組清單。](../intelligent-re-engagement/images/adobe-web-connector.png)
+<!--
+![Adobe web connector schema highlighting the list of field groups.](../intelligent-re-engagement/images/adobe-web-connector.png) 
+-->
 
 ### 從結構描述建立資料集
 
-資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 對於智慧型重新參與歷程，每個結構描述都將有一個資料集。
+資料集是一組資料的儲存和管理結構，通常是包含欄位（列）和結構（欄）的表格。 智慧型重新參與歷程的每個結構描述都會有一個資料集。
 
-若要從結構描述建立資料集，請完成以下步驟：
+如需如何從結構描述建立資料集的詳細資訊，請參閱 [資料集UI指南](/help/catalog/datasets/user-guide.md).
+<!-- 
+To create a dataset from a schema, complete the steps below:
 
-1. 瀏覽至「**[!UICONTROL 資料管理]** > **[!UICONTROL 資料集]**」並選取「**[!UICONTROL 建立資料集]**」。
-2. 選取&#x200B;**[!UICONTROL 「從結構建立資料集」]**。
-3. 選取您建立的相關重新參與綱要。
-4. 為資料集命名，並提供說明 (非必填)。
-5. 選取「**[!UICONTROL 完成]**」。
+1. Navigate to **[!UICONTROL Data Management]** > **[!UICONTROL Datasets]** and select **[!UICONTROL Create dataset]**.
+2. Select **[!UICONTROL Create dataset from schema]**.
+3. Select the relevant re-engagement schema you created.
+4. Give your dataset a name and optionally a description.
+5. Select **[!UICONTROL Finish]**.
 
-![從結構描述建立資料集的步驟記錄。](../intelligent-re-engagement/images/dataset-from-schema.gif)
+![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
+-->
 
-請注意，與結構描述建立步驟類似，您需要啟用資料集以包含在即時客戶設定檔中。如需進一步了解如何啟用資料集以用於即時客戶設定檔，請閱讀[建立結構描述教學課程](/help/xdm/tutorials/create-schema-ui.md#profile)。
+>注意
+>
+>與建立結構的步驟類似，您需要啟用包含在Real-Time Customer Profile中的資料集。 如需啟用資料集以用於即時客戶個人檔案的詳細資訊，請參閱 [建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md#profile).
 
-![啟用設定檔資料集](../intelligent-re-engagement/images/enable-dataset-for-profile.png)。
+<!-- 
+![Enable dataset for profile.](../intelligent-re-engagement/images/enable-dataset-for-profile.png)
+-->
 
 ### 隱私權、同意與資料控管
 
@@ -405,7 +417,7 @@ AdobeWeb聯結器結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包�
 >
 >法律要求為客戶提供取消訂閱來自品牌之通訊的功能，同時確保遵守此選擇。 進一步瞭解 [Experience Platform 文件](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)中的適用法規。
 
-設定重新參與歷程時，需要考慮並使用以下同意原則：
+建立重新參與路徑時，必須考慮並使用以下同意政策：
 
 * 如果consents.marketing.email.val = &quot;Y&quot; ，則可以使用電子郵件
 * 如果consents.marketing.sms.val = &quot;Y&quot; ，則可以SMS
@@ -415,15 +427,14 @@ AdobeWeb聯結器結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包�
 
 #### DULE標籤和強制執行
 
-個人電子郵件地址會用作直接可識別的資料，可用於識別或聯絡特定人員，而不是裝置。
+個人電子郵件地址會用作直接可識別的資料，用於識別或聯絡特定個人而非裝置。
 
 * personalEmail.address = I1
 
 #### 行銷政策
 
-重新參與歷程沒有其他行銷政策，但您可視需要考量下列事項：
+重新參與歷程不需要其他行銷政策，但可視需要考量下列事項：
 
-* 視需要考慮
 * 限制敏感資料
 * 限制網站上的廣告
 * 限制電子郵件目標定位
@@ -432,22 +443,26 @@ AdobeWeb聯結器結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包�
 
 ### 建立對象
 
-若要建立對象，請完成以下步驟：
+<!--
+To create an audience, complete the steps below:
 
-1. 瀏覽至 **[!UICONTROL 客戶]** > **[!UICONTROL 受眾]** 並選取 **[!UICONTROL 建立對象]**.
-2. 選取 **[!UICONTROL 建置規則]** 並選取 **[!UICONTROL 建立]**.
-3. 瀏覽至 **[!UICONTROL 欄位]** 並選取 **[!UICONTROL 活動]** 標籤。
-4. 導覽或使用搜尋方塊來尋找事件型別，然後將其拖曳至產生器。 最後，拖曳事件型別以新增事件規則。
-5. 為結構描述命名並選擇性地提供說明。
-6. 選取「**[!UICONTROL 儲存]**」。
+1. Navigate to **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** and select **[!UICONTROL Create audience]**.
+2. Select **[!UICONTROL Build rule]** and select **[!UICONTROL Create]**.
+3. Navigate to **[!UICONTROL Field]** and select **[!UICONTROL Events]** tab.
+4. Navigate or use the search box to find the event type, then drag this to the builder. Finally add event rules by dragging event types.
+5. Give your schema a name and optionally a description.
+6. Select **[!UICONTROL Save]**.
 
-![建立受眾之步驟的記錄。](../intelligent-re-engagement/images/create-an-audience.gif)
-
-如需如何建立受眾的詳細資訊，請參閱 [Audience Builder UI指南](/help/segmentation/ui/segment-builder.md).
+![A recording of the steps to create an audience.](../intelligent-re-engagement/images/create-an-audience.gif)
+-->
 
 #### 品牌重新參與歷程的對象建立
 
-每個重新參與歷程的對象需要設定特定事件，以進行區段資格。 這些細節可在每個歷程的對應標籤下找到。
+重新參與歷程使用受眾來定義由您的個人資料存放區中的個人資料子集共用的特定屬性或行為，以區分可行銷的人員群組與您的客戶群。 您可以在Adobe Experience Platform上以兩種不同的方式建立對象：直接構成對象或透過Platform衍生的區段定義。
+
+如需如何直接撰寫對象的詳細資訊，請參閱 [對象構成UI指南](/help/segmentation/ui/audience-composition.md).
+
+如需如何透過Platform衍生的區段定義建立閱聽眾的詳細資訊，請參閱 [Audience Builder UI指南](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -457,20 +472,22 @@ AdobeWeb聯結器結構描述是 [!UICONTROL XDM ExperienceEvent] 架構，包�
 
 包含具有至少1個EventType = ProductViews事件的對象，接著具有至少1個任何事件，其中（EventType不等於commerce.productListAdds）且發生在過去24小時內，然後3天後，不具有任何任何事件，其中（EventType = application.launch或web.webpagedetails.pageViews或commerce.purchases）且發生在過去2天。
 
-![顯示規則集的重新參與對象熒幕擷圖。](../intelligent-re-engagement/images/re-engagement-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/re-engagement-audience.png) 
+-->
 
 >[!TAB 捨棄的購物車歷程]
 
 以下事件適用於將產品新增至購物車，但未在過去24小時內完成購買或清除購物車的設定檔。
 
-include EventType = commerce.productListAdds介於30分鐘和1440分鐘之間。
+Include EventType = commerce.productListAdds介於30分鐘和1440分鐘之間。
 排除EventType = commerce.purchases現在之前30分鐘，或EventType = commerce.productListRemovals且購物車ID等於產品清單Adds1購物車ID （包含事件）。
 
-![顯示規則集的重新參與對象熒幕擷圖。](../intelligent-re-engagement/images/abandoned-cart-audience.png)
+<!--
+![A screenshot of the re-engagement audience showing the set of rules.](../intelligent-re-engagement/images/abandoned-cart-audience.png) 
+-->
 
 >[!ENDTABS]
-
-如需建立受眾的詳細資訊，請參閱 [Audience Builder UI指南](/help/segmentation/ui/segment-builder.md).
 
 ### Adobe Journey Optimizer中的歷程設定
 
@@ -478,13 +495,15 @@ include EventType = commerce.productListAdds介於30分鐘和1440分鐘之間。
 >
 >Adobe Journey Optimizer並未涵蓋此頁面頂端圖表顯示的所有內容。 所有付費媒體廣告皆建立於 [!UICONTROL 目的地].
 
-每個使用案例可以擁有的多個歷程需要特定資訊。 各歷程分支所需的特定資料可在下方對應標籤上找到。
+Adobe Journey Optimizer可協助您為客戶提供連結、情境式和個人化的體驗。 客戶歷程是客戶與品牌互動的整個過程。 每個使用案例可以有各種不同的歷程，每個歷程都需要特定資訊。 以下列出每個Journey分支所需的精確資料。
 
 >[!BEGINTABS]
 
 >[!TAB 重新參與歷程]
 
-![Adobe Journey Optimizer中的客戶重新參與歷程概覽](../intelligent-re-engagement/images/re-engagement-ajo.png)
+<!--
+![Customer re-engagemnt journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/re-engagement-ajo.png) 
+-->
 
 +++活動
 
@@ -612,7 +631,9 @@ include EventType = commerce.productListAdds介於30分鐘和1440分鐘之間。
 
 >[!TAB 捨棄的購物車歷程]
 
-![Adobe Journey Optimizer概觀中的客戶放棄購物車歷程](../intelligent-re-engagement/images/abandoned-cart-ajo.png)
+<!--
+![Customer abandoned cart journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/abandoned-cart-ajo.png) 
+-->
 
 +++活動
 
@@ -741,7 +762,9 @@ include EventType = commerce.productListAdds介於30分鐘和1440分鐘之間。
 
 >[!TAB 訂單確認歷程]
 
-![Adobe Journey Optimizer中的客戶訂單確認歷程概覽](../intelligent-re-engagement/images/order-confirmation-ajo.png)
+<!--
+![Customer order confirmation journey in Adobe Journey Optimizer overview](../intelligent-re-engagement/images/order-confirmation-ajo.png) 
+-->
 
 +++活動
 
