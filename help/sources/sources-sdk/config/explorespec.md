@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
-title: 設定自助式來源的探索規格（批次SDK）
-description: 本檔案提供使用Self-Serve Sources (Batch SDK)所需準備的設定概觀。
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+title: 設定自助式來源（批次SDK）的探索規格
+description: 本檔案提供使用自助式來源（批次SDK）所需準備的設定概觀。
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '254'
 ht-degree: 1%
 
 ---
 
-# 設定自助式來源的探索規格（批次SDK）
+# 設定自助式來源（批次SDK）的探索規格
 
-瀏覽規格定義瀏覽和檢查來源中所包含物件所需的引數。 探索規格也會定義探索及檢查物件時傳回的回應格式。
+瀏覽規格定義瀏覽和檢查來源中所含物件所需的引數。 探索規格也會定義探索及檢查物件時傳回的回應格式。
 
 >[!TIP]
 >
->探索規格採用硬式編碼，您只需將下列裝載複製並貼到您的連線規格即可。
+>探索規格採用硬式編碼，您只需將下方的裝載複製並貼到您的連線規格即可。
 
 ```json
 "exploreSpec": {
@@ -69,14 +69,14 @@ ht-degree: 1%
 | `type` | 定義瀏覽規格的型別。 | `Resource` |
 | `requestSpec` | 包含探索連線中物件所需的引數。 |
 | `requestSpec.type` | 定義要求規格的資料型別。 | `object` |
-| `responseSpec` | 包含定義回應訊息（針對探索呼叫傳回）的格式的引數。 |
+| `responseSpec` | 包含定義回應訊息（針對探索呼叫傳回）格式的引數。 |
 | `responseSpec.type` | 定義回應規格的資料型別。 | `object` |
-| `responseSpec.properties` | 包含與回應訊息的格式相關之資訊。 |
-| `responseSpec.properties.format` | 定義回應結構描述的格式。 | `object` |
+| `responseSpec.properties` | 包含與回應訊息格式相關之資訊。 |
+| `responseSpec.properties.format` | 定義回應結構的格式。 | `object` |
 | `responseSpec.properties.format.type` | 定義屬性的資料型別。 | `string` |
-| `responseSpec.schema` | 包含有關回應結構描述格式化的資訊。 |
+| `responseSpec.schema` | 包含與回應結構描述格式相關之資訊。 |
 | `responseSpec.schema.type` | 定義結構描述的資料型別。 | `object` |
-| `responseSpec.schema.properties` | 包含有關資料行、型別和結構描述中保留之專案的資訊。 |
+| `responseSpec.schema.properties` | 包含有關資料行、型別和結構描述內儲存專案的資訊。 |
 | `responseSpec.schema.properties.columns.items.properties.name` | 顯示檔案的名稱。 |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | 定義檔案名稱的資料型別。 | `string` |
 

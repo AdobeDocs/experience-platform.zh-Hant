@@ -1,9 +1,9 @@
 ---
 description: 瞭解如何格式化傳送至您端點的HTTP請求。 使用/authoring/destination-servers端點在Adobe Experience Platform Destination SDK中設定目的地伺服器範本規格。
-title: 以Destination SDK建立的目的地的範本規格
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+title: 使用Destination SDK建立之目的地的範本規格
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '523'
 ht-degree: 4%
 
 ---
@@ -11,26 +11,26 @@ ht-degree: 4%
 
 # 以Destination SDK建立之目的地的範本規格
 
-使用目的地伺服器設定的範本規格部分，設定如何格式化傳送到目的地的HTTP請求。
+使用目的地伺服器設定的範本規格部分來設定如何格式化傳送到目的地的HTTP要求。
 
 在範本規格中，您可以定義如何在XDM結構描述和平台支援的格式之間轉換設定檔屬性欄位。
 
 範本規格是即時（串流）目的地的目的地伺服器設定的一部分。
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或參閱操作說明指南 [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或請參閱操作說明指南 [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
-您可以透過以下方式設定目的地的範本規格 `/authoring/destination-servers` 端點。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面所示的元件。
+您可以透過 `/authoring/destination-servers` 端點。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
 
-* [建立目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md)
+* [建立目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)
 * [更新目的地伺服器設定](../../authoring-api/destination-server/update-destination-server.md)
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
-請參閱下表，以取得關於哪些型別的整合支援本頁面所述功能的詳細資訊。
+如需瞭解哪些型別的整合支援本頁面所述功能的詳細資訊，請參閱下表。
 
 | 整合型別 | 支援功能 |
 |---|---|
@@ -39,11 +39,11 @@ ht-degree: 4%
 
 ## 設定範本規格 {#configure-template-spec}
 
-Adobe使用的範本語言類似於 [金家](https://jinja.palletsprojects.com/en/2.11.x/) 將欄位從XDM結構描述轉換為目的地支援的格式。
+Adobe使用類似以下的範本化語言 [金家](https://jinja.palletsprojects.com/en/2.11.x/) 將欄位從XDM結構描述轉換為目的地支援的格式。
 
 ![醒目提示的範本設定](../../assets/functionality/destination-server/template-configuration.png)
 
-如需轉換的詳細資訊，請瀏覽下列連結：
+如需轉換的詳細資訊，請造訪下列連結：
 
 * [訊息格式](message-format.md)
 * [使用範本語言進行身分、屬性和對象成員資格轉換](message-format.md#using-templating)
@@ -71,14 +71,14 @@ Adobe使用的範本語言類似於 [金家](https://jinja.palletsprojects.com/e
 |---|---|---|
 | `httpMethod` | 字串 | *必填。* Adobe將在對伺服器呼叫中使用的方法。 支援的方法： `GET`， `PUT`， `POST`， `DELETE`， `PATCH`. |
 | `templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `value` | 字串 | *必填。* 此字串是範本的字元逸出版本，可將Platform傳送的HTTP請求格式化為目的地預期的格式。 <br> 如需如何寫入範本的詳細資訊，請閱讀以下章節： [使用範本](message-format.md#using-templating). <br> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). <br> 如需簡單轉換的範例，請參閱 [設定檔屬性](message-format.md#attributes) 轉換。 |
+| `value` | 字串 | *必填。* 此字串是範本的字元逸出版本，可將Platform傳送的HTTP要求格式化為目的地預期的格式。 <br> 如需如何撰寫範本的詳細資訊，請閱讀以下章節： [使用範本](message-format.md#using-templating). <br> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). <br> 如需簡單轉換的範例，請參閱 [設定檔屬性](message-format.md#attributes) 轉換。 |
 | `contentType` | 字串 | *必填。* 您的伺服器接受的內容型別。 根據轉換範本產生的輸出型別，這可以是任何支援的 [HTTP應用程式內容型別](https://www.iana.org/assignments/media-types/media-types.xhtml#application). 在大多數情況下，此值應設為 `application/json`. |
 
 {style="table-layout:auto"}
 
 ## 後續步驟 {#next-steps}
 
-閱讀本文章後，您應該對範本規格的含義以及如何進行設定有更深入的瞭解。
+閱讀本文後，您應該更瞭解什麼是範本規格，以及如何進行設定。
 
 若要深入瞭解其他目的地伺服器元件，請參閱下列文章：
 

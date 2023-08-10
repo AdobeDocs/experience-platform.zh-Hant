@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的客戶自控金鑰
 description: 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: 04ed092d4514d1668068ed73a1be4400c6cd4d8e
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1773'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ CMK僅支援來自 [!DNL Microsoft Azure] 金鑰儲存庫。 若要開始使用�
 
 ![產生金鑰](../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-使用提供的表單提供索引鍵的名稱，然後選取 **RSA** 鍵型別。 至少， **[!DNL RSA key size]** 至少必須是 **3072** 位元（視需求） [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] 也與RSA 3027相容。
+使用提供的表單提供索引鍵的名稱，然後選取 **RSA** 鍵型別。 至少 **[!DNL RSA key size]** 至少必須是 **3072** 位元（視需求） [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] 也與RSA 3027相容。
 
 >[!NOTE]
 >

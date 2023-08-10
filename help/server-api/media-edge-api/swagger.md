@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API可讓開發人員收集Media Edge Analytics和Customer Journey Analytics的資料。
-source-git-commit: 6570149298defe1aeb0c3e35cb71e166aeb7a3f7
+source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 使用Media Edge API的Open API規格檔案
 
-本檔案包含JSON Open API規格(OAS)或「Swagger」參考。 您可以複製此規格並貼到轉譯工具（例如editor.swagger.io）中，以檢視Media Edge API資訊。 此規格包含每個端點的引數、範例和結構描述。
+本檔案包含JSON Open API規格(OAS)或「Swagger」參考。 您可以將此規格複製並貼到轉譯工具（例如editor.swagger.io）中，以檢視Media Edge API資訊。 此規格包含每個端點的引數、範例和結構描述。
 
 +++ 選取以檢視及複製「開啟API規格」
 
@@ -3227,7 +3227,7 @@ ht-degree: 0%
     },
     "/sessionStart": {
       "post": {
-        "description": "Signals the the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
+        "description": "Signals the start of a new session. When the response returns, the \"sessionId\" must be extracted and sent for all subsequent event calls to the Edge API server.",
         "parameters": [
           {
             "name": "configId",

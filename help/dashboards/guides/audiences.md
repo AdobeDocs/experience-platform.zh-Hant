@@ -4,9 +4,9 @@ title: Audiences控制面板指南
 description: Adobe Experience Platform提供一個控制面板，您可以透過它檢視有關您組織已建立之對象的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2232'
+source-wordcount: '2231'
 ht-degree: 7%
 
 ---

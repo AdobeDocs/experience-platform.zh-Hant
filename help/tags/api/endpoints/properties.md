@@ -2,16 +2,16 @@
 title: 屬性端點
 description: 瞭解如何在Reactor API中呼叫/properties端點。
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
-source-git-commit: e602f78470fe4eeb2a42e6333ba52096d8a9fe8a
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 6%
 
 ---
 
 # 屬性端點
 
-屬性是一種容器建構，可保留Reactor API中大部分的其他可用資源。 您可以使用以下程式設計方式管理屬性： `/properties` 端點。
+屬性是一種容器建構，可保留Reactor API中大部分的其他可用資源。 您可以使用以程式設計方式管理屬性 `/properties` 端點。
 
 在資源階層中，屬性是下列專案的擁有者：
 
@@ -27,15 +27,15 @@ ht-degree: 6%
 
 屬性只屬於一個 [公司](./companies.md). 公司可以有許多屬性。
 
-如需有關屬性及其在Tag Management中角色的一般資訊，請參閱以下主題的概觀： [公司和屬性](../../ui/administration/companies-and-properties.md).
+如需有關屬性及其在Tag Management中角色的一般資訊，請參閱以下主題的總覽： [公司和屬性](../../ui/administration/companies-and-properties.md).
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
+本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
 
 ## 擷取屬性清單 {#list}
 
-您可以將公司ID包含在GET請求的路徑中，藉此擷取屬於公司的屬性清單。
+您可以在GET請求的路徑中包含公司ID，以擷取屬於公司的屬性清單。
 
 **API格式**
 
@@ -45,13 +45,13 @@ GET /companies/{COMPANY_ID}/properties
 
 | 參數 | 說明 |
 | --- | --- |
-| `COMPANY_ID` | 此 `id` 擁有您要列出之屬性的公司名稱。 |
+| `COMPANY_ID` | 此 `id` 擁有您要列出之屬性的公司。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->使用查詢引數，可根據下列屬性篩選列出的屬性：<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
+>使用查詢引數，可以根據以下屬性篩選列出的屬性：<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱以下指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
 
 **要求**
 
@@ -259,7 +259,7 @@ curl -X GET \
 
 ## 查詢屬性 {#lookup}
 
-您可以在GET請求的路徑中提供屬性ID以查詢屬性。
+您可以在GET請求的路徑中提供屬性的ID，以查詢屬性。
 
 **API格式**
 
@@ -392,13 +392,13 @@ POST /company/{COMPANY_ID}/properties
 
 | 參數 | 說明 |
 | --- | --- |
-| `COMPANY_ID` | 此 `id` ，位於您正在定義其屬性的公司底下。 |
+| `COMPANY_ID` | 此 `id` 要定義其屬性之公司的名稱。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列要求會為指定的屬性建立新屬性。 此呼叫也會透過，將屬性與現有擴充功能建立關聯， `relationships` 屬性。 請參閱指南： [關係](../guides/relationships.md) 以取得詳細資訊。
+下列要求會為指定的屬性建立新屬性。 呼叫也會透過將屬性與現有擴充功能建立關聯 `relationships` 屬性。 請參閱以下指南： [關係](../guides/relationships.md) 以取得詳細資訊。
 
 ```shell
 curl -X POST \
@@ -427,13 +427,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必要）** 可讀取的屬性名稱。 |
-| `attributes.platform` | **（必要）** 屬性的平台。 可以是 `web` 針對Web屬性，或 `mobile` 或 `edge` 適用於行動屬性。 |
+| `attributes.name` | **（必要）** 人類看得懂的屬性名稱。 |
+| `attributes.platform` | **（必要）** 屬性的平台。 可以是 `web` 針對Web屬性，或 `mobile` 或 `edge` 用於行動屬性。 |
 | `attributes.domains` | **（Web屬性的必要專案）** 屬性的URL網域陣列。 |
 | `attributes.development` | 表示這是否為開發屬性的布林值。 |
 | `attributes.privacy` | 字串；可用來參考屬性的隱私權相關考量事項。 |
 | `attributes.rule_component_sequencing_enabled` | 此屬性的布林值表示是否應啟用規則元件排序。 |
-| `attributes.ssl_enabled` | 此屬性的布林值表示是否應該啟用安全通訊端層(SSL)。 |
+| `attributes.ssl_enabled` | 此屬性的布林值表示是否應啟用安全通訊端層(SSL)。 |
 | `attributes.undefined_vars_return_empty` | 此屬性的布林值表示未定義的變數是否應傳回為空白。 |
 | `type` | 正在更新的資源型別。 此端點的值必須為 `properties`. |
 
@@ -577,7 +577,7 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 物件，其屬性代表要針對屬性更新的屬性。 可更新屬性的下列屬性： <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
+| `attributes` | 物件，其屬性代表要針對屬性更新的屬性。 您可以為屬性更新下列屬性： <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
 | `id` | 此 `id` 要更新的屬性。 這應該符合 `{PROPERTY_ID}` 請求路徑中提供的值。 |
 | `type` | 正在更新的資源型別。 此端點的值必須為 `properties`. |
 
@@ -680,7 +680,7 @@ curl -X PATCH \
 
 ## 刪除屬性
 
-您可以在DELETE請求的路徑中包含屬性ID來刪除屬性。
+您可以在DELETE請求的路徑中包含屬性的ID來刪除屬性。
 
 **API格式**
 
@@ -706,21 +706,21 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204 （無內容），且沒有回應內文，這表示屬性已被刪除。
+成功的回應會傳回HTTP狀態204 （無內容），但沒有回應內文，這表示屬性已被刪除。
 
 ## 管理屬性的附註 {#notes}
 
-屬性是「重要」資源，這表示您可以為每個個別資源建立和擷取文字型附註。 請參閱 [附註端點指南](./notes.md) 有關如何管理屬性和其他相容資源附註的詳細資訊。
+屬性是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 請參閱 [附註端點指南](./notes.md) 有關如何管理屬性和其他相容資源的附註的詳細資訊。
 
 ## 擷取屬性的相關資源 {#related}
 
-下列呼叫示範如何擷取屬性的相關資源。 時間 [查詢屬性](#lookup)，這些關係會列在 `relationships` 屬性。
+以下呼叫示範如何擷取屬性的相關資源。 時間 [查詢屬性](#lookup)，這些關係會列在 `relationships` 屬性。
 
-請參閱 [關係指南](../guides/relationships.md) 以取得有關Reactor API中關係的詳細資訊。
+請參閱 [關係指南](../guides/relationships.md) 以進一步瞭解Reactor API中的關係。
 
 ### 列出屬性的相關回呼 {#callbacks}
 
-您可以列出 [回呼](./callbacks.md) 透過附加以下內容在屬性上註冊的 `/callbacks` 至查閱請求的路徑。
+您可以列出 [回呼](./callbacks.md) 透過附加在屬性上註冊的 `/callbacks` 至查閱請求的路徑。
 
 **API格式**
 
@@ -805,7 +805,7 @@ GET  /properties/{PROPERTY_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 此 `id` 要列出其資料元素的屬性。 |
+| `{PROPERTY_ID}` | 此 `id` 要列出其資料元素的屬性的ID。 |
 
 {style="table-layout:auto"}
 
@@ -946,7 +946,7 @@ GET  /properties/{PROPERTY_ID}/environments
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 此 `id` 要列出其環境的屬性的。 |
+| `{PROPERTY_ID}` | 此 `id` ，屬於您要列出其環境的屬性。 |
 
 {style="table-layout:auto"}
 
@@ -1066,7 +1066,7 @@ GET  /properties/{PROPERTY_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 此 `id` 要列出其副檔名的屬性。 |
+| `{PROPERTY_ID}` | 此 `id` 要列出其副檔名的屬性的。 |
 
 {style="table-layout:auto"}
 
@@ -1388,7 +1388,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 此 `id` 要查詢其公司的屬性。 |
+| `{PROPERTY_ID}` | 此 `id` ，屬於您要查詢其公司的屬性。 |
 
 {style="table-layout:auto"}
 

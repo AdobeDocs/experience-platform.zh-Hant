@@ -1,21 +1,21 @@
 ---
-description: 此頁面提供您需要提交以複查使用Destination SDK製作的生產目的地的所有資訊。
-title: 送出供檢閱以Destination SDK撰寫的生產目的地
+description: 此頁面提供您需要提交以檢閱使用Destination SDK撰寫的生產目的地的所有資訊。
+title: 提交以Destination SDK撰寫的生產目的地，以供複查
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1013'
 ht-degree: 0%
 
 ---
 
-# 送出供檢閱以Destination SDK撰寫的生產目的地
+# 提交以Destination SDK撰寫的生產目的地，以供複查
 
 ## 概觀 {#overview}
 
 >[!IMPORTANT]
 >
->* 此處記錄的程式僅適用於提交生產（公用）目的地的合作夥伴。 如果您要建立私人目的地供自己使用，則不需要製作這些材料並與Adobe分享。
+>* 此處記錄的程式僅適用於提交生產（公用）目的地的合作夥伴。 如果您要建立私人目的地供您自用，則不需要製作這些資料並與Adobe分享。
 >
 >* Adobe審閱目的地發佈要求的標準回應時間為5個工作日。
 >
@@ -23,29 +23,29 @@ ht-degree: 0%
 >
 >* 即使您的目的地在Experience Platform目錄中上線後，如果您需要對設定進行任何更新，則必須提交新的目的地發佈請求，才能將更新反映在設定中。
 
-將目的地發佈至之前 [Experience Platform目的地目錄](/help/destinations/catalog/overview.md)，您必須向Adobe提供有關目的地和您執行之測試的某些資訊，以確保使用者在啟用您平台的資料時，享有最佳體驗。
+將目的地發佈至之前 [Experience Platform目的地目錄](/help/destinations/catalog/overview.md)，您必須向Adobe提供有關目的地和所執行測試的特定資訊，以確保使用者在啟用您平台的資料時，享有最佳體驗。
 
-此頁面列出提交或更新您使用Adobe Experience Platform Destination SDK編寫的目的地時，所需提供的所有資訊。 若要在Adobe Experience Platform中成功提交目的地，請傳送電子郵件至 <aepdestsdk@adobe.com> 其中包括：
+此頁面列出提交或更新您使用Adobe Experience Platform Destination SDK編寫的目的地時，所需的所有資訊。 若要在Adobe Experience Platform中成功提交目的地，請傳送電子郵件至 <aepdestsdk@adobe.com> 其中包括：
 
-* 目的地解決的使用案例說明。 只有當您提交新的目的地設定時，才需要執行此操作。
-* 目的地提交原因的說明。 只有在更新現有的目的地設定時，才需要此設定。
+* 目的地解決的使用案例說明。 只有在您提交新的目的地設定時，才需要執行此作業。
+* 目的地提交原因的說明。 只有在更新現有的目的地設定時，才需要此專案。
 * 使用測試目的地API端點對您的目的地執行HTTP呼叫後的測試結果。 請與Adobe共用對您的目的地端點發出的API呼叫，以及從您的目的地端點接收的API回應。
 * 檔案型目的地的其他需求：
    * 使用測試API將請求和回應範例共用至 [使用範例設定檔測試您的檔案型目的地](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * 附加目的地產生的範例檔案，並匯出至儲存位置。
-   * 提交您已成功將匯出的檔案從儲存位置擷取到系統中的某些形式證明。
+   * 提交一些形式的證明，證明您已成功將匯出的檔案從儲存位置擷取到系統中。
 * 證明您已使用針對您的目的地提交目的地發佈請求 [目的地發佈API](../publishing-api/create-publishing-request.md).
 * 檔案PR （提取請求），遵循 [自助服務檔案程式](../docs-framework/documentation-instructions.md).
-* 影像檔案，會在Experience Platform目的地目錄中顯示為目的地卡片的標誌。
+* 影像檔，會顯示為Experience Platform目的地目錄中目的地卡片的標誌。
 
 您可以在下列各節中找到有關每個專案的詳細資訊：
 
 ## 使用案例說明 {#use-case-description}
 
-提供目的地為Experience Platform客戶解決的使用案例說明。 您的說明可能類似於現有合作夥伴的使用案例：
+提供目的地為Experience Platform客戶解決的使用案例說明。 您的說明可與現有合作夥伴的使用案例類似：
 
 * [pinterest](/help/destinations/catalog/advertising/pinterest.md)：從您的客戶清單、造訪過您網站的人或已在Pinterest上與您的內容互動的人中建立對象。
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)：DataX API適用於廣告商，廣告商如果想要鎖定在Verizon Media (VMG)中電子郵件地址作為輸入的特定受眾群組，則可以使用VMG的近乎即時API快速建立新受眾並推送所需的受眾群組。
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)：DataX API適用於廣告商，如果廣告商想要鎖定在Verizon Media (VMG)中電子郵件地址以外的特定受眾群組，則可以使用VMG的近乎即時API快速建立新受眾並推送所需的受眾群組。
 
 ## 更新原因 {#reason-for-update}
 
@@ -53,16 +53,16 @@ ht-degree: 0%
 >
 >只有在更新現有設定時，才需要此區段。
 
-提供您提交解決現有目的地問題的簡短說明。 例如，當您從Beta版移至一般可用性時，提交內容可能會更新目的地的名稱、說明和標誌。 或者，您的提交可能會修正目的地設定中發現的錯誤。
+提供您提交解決現有目的地問題的簡短說明。 例如，當您從Beta版移至一般可用性時，您提交的內容可能會更新目的地的名稱、說明和標誌。 或者，您的提交可能會修正目的地設定中發現的錯誤。
 
 ## 使用測試目的地API後的測試結果 {#testing-api-response}
 
-使用後提供測試結果 [測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 端點，以對您的目的地執行HTTP呼叫。 其中包括：
+使用後提供測試結果 [測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 端點來對您的目的地執行HTTP呼叫。 其中包括：
 
-* 使用測試API向目的地端點提出完整API請求（標頭和內文）。
+* 使用測試API對您的目的地端點提出完整API請求（標頭和內文）。
 * 從您的目的地端點接收的API回應。
 
-例如，您的請求和回應看起來可能類似於以下範例：
+例如，您的請求和回應可能會如以下範例所示：
 
 **要求**
 
@@ -231,25 +231,25 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ### 測試API回應 {#testing-api-response-file-based}
 
-使用測試API將請求和回應範例納入 [使用範例設定檔測試您的檔案型目的地](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+使用測試API將請求和回應範例納入其中 [使用範例設定檔測試您的檔案型目的地](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### 附加匯出的檔案 {#attach-exported-file}
 
-在您的 [提交電子郵件](#download-sample-email)，附加您設定之目的地匯出至儲存位置的CSV檔案。
+在您的 [提交電子郵件](#download-sample-email)，附加您設定之目的地匯出至您儲存位置的CSV檔案。
 
 ### 成功擷取的證明 {#proof-of-successful-ingestion}
 
-最後，您必須提供某種形式的證明，證明資料匯出至您提供的儲存位置後，已成功內嵌至您的系統。 請提供以下任何專案：
+最後，您必須提供某種形式的證明，證明資料匯出至您提供的儲存位置後，已成功擷取至您的系統。 請提供以下任何專案：
 
-* 熒幕擷取畫面或簡短的熒幕擷取視訊，讓您從儲存位置手動擷取檔案，並將其擷取到您的系統中。
+* 熒幕擷取畫面或簡短的熒幕擷取視訊，讓您從儲存位置手動擷取檔案，並將其擷取至您的系統中。
 * 熒幕擷取畫面或簡短的熒幕擷取視訊，其中系統的UI會確認Experience Platform產生的檔案名稱已成功擷取至系統中。
-* 您系統中的記錄行，這些Adobe可以與檔案名稱或從Experience Platform產生的資料相關聯。
+* 來自您系統的記錄行，該Adobe可以與檔案名稱或從Experience Platform產生的資料相關聯。
 
 ## 證明您已提交目的地發佈請求 {#destination-publishing-request-proof}
 
 成功測試目的地後，您必須使用 [目的地發佈API](../publishing-api/create-publishing-request.md) 將目的地提交至Adobe以供檢閱和發佈。
 
-提供您目的地之發佈要求的ID。 如需如何擷取發佈請求ID的詳細資訊，請閱讀如何 [擷取目的地發佈請求](../publishing-api/retrieve-publishing-request.md).
+提供目的地之發佈要求的ID。 如需如何擷取發佈請求ID的詳細資訊，請閱讀本文 [擷取目的地發佈請求](../publishing-api/retrieve-publishing-request.md).
 
 ## 適用於產品化整合的目的地檔案PR （提取請求） {#documentation-pr}
 
@@ -257,12 +257,12 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 您目的地的標誌 {#logo}
 
-目的地目錄包含每個目的地卡的標誌。 在您的提交電子郵件中，加入含有目的地標誌的影像。
+目的地目錄包含每個目的地卡片的標誌。 在您的提交電子郵件中，加入含有目的地標誌的影像。
 
-影像需求為：
+影像需求如下：
 * **格式**: `SVG`
 * **大小**：小於2MB
 
 ## 下載範例電子郵件 {#download-sample-email}
 
-[下載](../assets/guides/sample-email-submit-destination.rtf) 包含您需要提供以供Adobe之所有資訊的範例電子郵件。
+[下載](../assets/guides/sample-email-submit-destination.rtf) 包含您需要提供以進行Adobe的所有資訊的範例電子郵件。

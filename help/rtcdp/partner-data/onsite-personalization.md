@@ -3,9 +3,9 @@ title: 使用合作夥伴協助的訪客辨識，提供個人化的站上體驗
 description: 瞭解如何使用合作夥伴協助的訪客辨識，為訪客提供個人化的現場體驗。
 hide: true
 hidefromtoc: true
-source-git-commit: f63cddc1158e739ce26e0ce1d3d54b491bd80c06
+source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '2493'
+source-wordcount: '2492'
 ht-degree: 7%
 
 ---
@@ -191,7 +191,7 @@ ht-degree: 7%
 
 若要設定第二個資料元素，請命名新變數 `pageVisit`，設定 **[!UICONTROL 副檔名]** 至 **[!UICONTROL Adobe Experience Platform]** 並選擇 **[!UICONTROL xdm物件]** 作為資料型別。
 
-![反白顯示選取專案，以正確設定pageVisit資料元素。](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![醒目提示用於正確設定pageVisit資料元素的選取專案。](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 從結構描述中，選取與您預期來自資料合作夥伴的值對應的第三方屬性。 然後，選取標題為的選項按鈕 **[!UICONTROL 提供整個物件]**. 選取看起來像資料庫的圖示，然後選擇 `partnerData` 您先前建立的資料元素。
 
