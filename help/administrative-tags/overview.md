@@ -1,20 +1,16 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；統一編記；標記；
-title: 統一標記概觀 (Beta)
+title: 統一標籤總覽
 description: 本文件會提供有關如何在 Adob​​e Experience Platform 中管理統一標記的資訊
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '607'
-ht-degree: 100%
+source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 98%
 
 ---
 
-# 統一標記概觀 (Beta)
-
->[!IMPORTANT]
->
->統一標記目前為 Beta 版。 如果您想留下回饋意見，請選取標記管理頁面頂端的按鈕即可進行。
+# 統一標籤總覽
 
 標記是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，讓管理員能夠管理中繼資料分類法，以便將商業物件進行分類，使得探索和分類更輕鬆。標記是可視為關鍵字的中繼資料，可將其附加到區段、資料集、歷程或其他物件上，讓搜尋能找到該物件和相關物件。標記分成兩種類型：已分類和未分類。
 
