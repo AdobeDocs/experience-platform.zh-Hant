@@ -3,9 +3,9 @@ title: 智慧型重新參與
 description: 在關鍵轉換時刻提供引人入勝且連線的體驗，聰明地重新與不常使用的客戶互動。
 hide: true
 hidefromtoc: true
-source-git-commit: 7ff623626b557cbf67ad6164157d1a5ef4820cb1
+source-git-commit: 8b38114e600986979728e1c4e36245ff0aa3be65
 workflow-type: tm+mt
-source-wordcount: '3259'
+source-wordcount: '3258'
 ht-degree: 8%
 
 ---
@@ -401,7 +401,7 @@ To create a dataset from a schema, complete the steps below:
 ![A recording of the steps to create a dataset from a schema.](../intelligent-re-engagement/images/dataset-from-schema.gif)
 -->
 
->注意
+>[!NOTE]
 >
 >與建立結構的步驟類似，您需要啟用包含在Real-Time Customer Profile中的資料集。 如需啟用資料集以用於即時客戶個人檔案的詳細資訊，請參閱 [建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md#profile).
 
