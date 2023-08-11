@@ -5,9 +5,9 @@ description: 瞭解如何使用相似受眾在Adobe Experience Platform中鎖定
 badgeLimitedAvailability: label="可用性限制" type=Caution
 hide: true
 hidefromtoc: true
-source-git-commit: d0b839dfc35ff9f8b4db34c61d2cdd820bfd448b
+source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '2123'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 所有這些資料點都會轉換為索引鍵值配對，並傳入相似模型。 只會保留具有相當大比例設定檔相符的鍵值值組。
 
-相似模型會經常執行，為基本對象建立並重新建立影響因素和相似圖表。 相似對象的評分也會經常執行。
+此時，相似模型每24小時執行一次，為基本對象建立並重新建立影響因素和相似性圖表。 相似對象的評分也會經常執行。
 
 ## 權益 {#entitlements}
 
@@ -52,11 +52,26 @@ ht-degree: 0%
 - Real-Time CDP Ultimate客戶有權使用 **20** 生產沙箱中的作用中相似對象
 - 開發沙箱僅限於 **5** 所有Real-Time CDP客戶的相似受眾
 
-附加元件套件可供使用，可將生產沙箱的權利增加每個套件20個相似受眾。
+附加元件套件將在稍後推出，將每個套件的生產沙箱權益增加20個相似受眾。
 
 若要確認您是否有相似對象的存取權，請聯絡您的Adobe代表。
 
 ## 檢視相似見解 {#view}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_notEligible"
+>title="不適用"
+>abstract="此對象目前不符合相似深入分析的資格，因為其擁有的設定檔數量可能少於培訓所需的最低設定檔數量，或尚未觸發設定檔匯出。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_processing"
+>title="正在處理"
+>abstract="此對象目前正在處理中。 模型最多可能需要24小時才能完成處理。 請稍後再檢視。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_lookAlike_error"
+>title="錯誤"
+>abstract="處理此模型時發生錯誤。 請刪除並重新建立此模型，或稍後再試。"
 
 相似的深入分析內建有對象詳細資訊頁面。 若要檢視對象的相似見解，請選取「 」 **[!UICONTROL 受眾]** 在左側導覽列中，後面接著 **[!UICONTROL 瀏覽]**，以及您要檢視其深入分析的對象。
 
@@ -68,10 +83,10 @@ ht-degree: 0%
 
 ### 相似性和觸及 {#similarity-and-reach}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="Similarity and reach"
->abstract="" -->
+>title="相似性和觸及"
+>abstract="相似性和觸及圖繪製由超過指定相似度分數的設定檔所組成的相似對象預期觸及率。 您可以將滑鼠停留在圖表中的特定點，以顯示目前反白點的相似度百分比和預期的設定檔計數。"
 
 相似性和觸及區段會顯示圖形，其中繪製類似對象的預期觸及率，其中包含高於指定相似度分數的設定檔。 相似度分數代表 **距離** 基礎對象設定檔與相似見解設定檔之間的相似度。
 
@@ -93,11 +108,11 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 ### 影響因素 {#influential-factors}
 
-<!-- >[!CONTEXTUALHELP]
+>[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
->title="Influential factors"
->abstract="Influential factors are attributes, events and audience memberships that are important in explaining similarity of a profile to members of the base audience. Data usage labels and policies can be used to exclude certain data from being considered as influential factors in look-alike models."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="Exclude data" -->
+>title="影響因素"
+>abstract="影響因子是屬性、事件和受眾會籍，這對於說明個人資料與基本受眾成員的相似度很重要。 資料使用標籤和原則可用來排除某些資料，以免在相似模型中將其視為影響因素。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="排除資料"
 
 影響因素區段會顯示影響所選基本對象相似模型的前100個因素。 這些影響因子是個人資料屬性、體驗事件和對象會籍，在說明基本對象的相似之處時是最重要的。 瞭解主要影響因素，可讓您針對此對象以及您從中建立的任何相似對象，更妥善地個人化您的行銷內容。 請注意，不會顯示影響相似模型的所有影響因素。
 
