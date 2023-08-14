@@ -7,7 +7,7 @@ user-guide-description: 將來自多個企業來源的已知和匿名資料放�
 source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -70,6 +70,6 @@ ht-degree: 91%
    * 合作夥伴資料使用案例 {#partner-data}
       * [透過挖掘潛在客戶支援吸引並獲取新客戶](/help/rtcdp/partner-data/prospecting.md)
       * [使用合作夥伴提供的屬性補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [使用合作夥伴協助的訪客辨識，提供個人化的站上體驗](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [使用合作夥伴輔助的訪客識別來個人化現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform 發行說明](https://www.adobe.com/go/platform-release-notes_tw)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary_tw)

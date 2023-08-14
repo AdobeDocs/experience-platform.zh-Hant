@@ -5,7 +5,7 @@ exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
 source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
 workflow-type: tm+mt
 source-wordcount: '1231'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -24,62 +24,62 @@ ht-degree: 79%
 
 >[!IMPORTANT]
 >
->僅支援資料流覆寫 [Web SDK](../edge/home.md) 整合。 [行動SDK](https://developer.adobe.com/client-sdks/documentation/) 和 [伺服器API](../server-api/overview.md) 整合目前不支援資料流覆寫。
+>只有 [Web SDK](../edge/home.md) 整合支援資料流覆寫。[Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) 和[伺服器 API](../server-api/overview.md)整合目前不支持資料流覆蓋。
 ><br><br>
->當您需要傳送不同資料至不同資料流時，應使用資料流覆寫。 您不應該針對個人化使用案例或同意資料使用資料流覆寫。
+>當您需要將不同的資料發送到不同的資料流時，應使用資料流覆寫。您不應該將資料流覆寫用於個人化使用案例或同意資料。
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解如何使用及何時使用資料流覆寫，以下是Adobe Experience Platform客戶可以使用此功能解決的一些使用案例。
+為了幫助您更加了解如何以及何時使用資料流覆寫，以下是 Adobe Experience Platform 客戶可以使用此功能解決的一些使用案例。
 
 **多區域資料收集**
 
-公司針對其營運所在的不同國家/地區擁有不同的網站或子網域。 他們有 [已設定](configure.md) 使用對應的analytics特定報表套裝、國家/地區特定的Adobe Target屬性Token、國家/地區特定的結構描述、資料集、Journey Optimizer設定等來分隔資料串流。 該公司也有全球性的組態集，其中會彙總所有國家/地區的特定資料。
+一家公司在營運所在各個國家/地區擁有不同的網站或子網域。他們已透過對應的分析特定報告套裝、國家/地區特定的 Adobe Target 屬性語彙基元、國家/地區特定的架構、資料集、Journey Optimizer 設定等來[設定](configure.md)各別的資料流。該公司還擁有一套全球設定，彙總所有國家/地區特定的資料。
 
-透過使用資料流覆寫，公司可以動態地將資料流切換至不同的資料流，而不是將資料傳送到單一資料流的預設行為。
+透過使用資料流覆寫，該公司可採用機動方式將資料流切換到不同的資料流，而不是向一個資料流發送資料的預設行為。
 
-常見的使用案例可能是將資料傳送至特定國家/地區的資料流，也可能是將資料傳送至客戶執行重要動作（例如下訂單或更新其使用者設定檔）的全球資料流。
+常見使用案例可能是將資料發送到國家/地區特定的資料流，並將資料發送到全球資料流，客戶可在其中執行重要動作，例如下訂單或更新其用戶個人資料。
 
-**區分不同業務單位的設定檔和身分**
+**區分不同業務部門的個人資料檔和身分識別**
 
-擁有多個業務單位的公司想要使用多個Experience Platform沙箱來儲存每個業務單位的特定資料。
+一家公司擁有多個業務部門，他們希望使用多個 Experience Platform 沙箱來儲存每個業務部門的特定資料。
 
-該公司可以使用資料流覆寫，而不是將資料傳送至預設資料流，以確保每個業務單位都有各自的資料流可透過接收資料。
+該公司可以採用資料流覆寫來確保每個業務部門都有自己的資料流來接收資料，而不是將資料發送到預設資料流。
 
 ## 在資料流 UI 中設定資料流覆寫 {#configure-overrides}
 
 資料流設定覆寫可讓您修改下列資料流設定：
 
 * Experience Platform 事件資料集
-* Adobe Target 屬性權杖
+* Adobe Target 屬性語彙基元
 * Audience Manager ID 同步容器
 * Adobe Analytics 報告套裝
 
 ### Adobe Target 的資料流覆寫 {#target-overrides}
 
-若要設定 Adob&#x200B;&#x200B;e Target 資料流的資料流覆寫，您首先必須建立 Adob&#x200B;&#x200B;e Target 資料流。請依照說明[設定資料流](configure.md)和 [Adobe Target](configure.md#target) 服務。
+若要設定 Adobe Target 資料流的資料流覆寫，您首先必須建立 Adobe Target 資料流。請依照說明[設定資料流](configure.md)和 [Adobe Target](configure.md#target) 服務。
 
-建立資料流後，請編輯已新增的 [Adobe Target](configure.md#target) 服務，並在&#x200B;**[!UICONTROL 屬性權杖覆寫]**&#x200B;區段中新增所需的資料流覆寫，如下圖所示。每行新增一個屬性權杖。
+建立資料流後，請編輯已新增的 [Adobe Target](configure.md#target) 服務，並在&#x200B;**[!UICONTROL 屬性語彙基元覆寫]**&#x200B;區段中新增所需的資料流覆寫，如下圖所示。每行新增一個屬性語彙基元。
 
-![顯示 Adob&#x200B;&#x200B;e Target 服務設定的資料流 UI 螢幕擷圖，並醒目顯示屬性權杖覆寫。](assets/overrides/override-target.png)
+![顯示 Adobe Target 服務設定的資料流 UI 螢幕擷圖，並醒目顯示屬性語彙基元覆寫。](assets/overrides/override-target.png)
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該設定了 Adob&#x200B;&#x200B;e Target 資料流覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
+您現在應該設定了 Adobe Target 資料流覆寫。現在您可以[透過 Web SDK 將覆寫發送到 Edge Network](#send-overrides)。
 
 ### 適用於 Adobe Analytics 的資料流覆寫 {#analytics-overrides}
 
-若要設定 Adob&#x200B;&#x200B;e Analytics 資料流的資料流覆寫，您首先必須建立 [Adobe Analytics](configure.md#analytics)。請依照說明[設定資料流](configure.md)和 [Adobe Analytics](configure.md#analytics) 服務。
+若要設定 Adobe Analytics 資料流的資料流覆寫，您首先必須建立 [Adobe Analytics](configure.md#analytics)。請依照說明[設定資料流](configure.md)和 [Adobe Analytics](configure.md#analytics) 服務。
 
 建立資料流後，請編輯已新增的 [Adobe Target](configure.md#target) 服務，並在&#x200B;**[!UICONTROL 報告套裝覆寫]**&#x200B;區段中新增所需的資料流覆寫，如下圖所示。
 
 若要啟用報告套裝覆寫的批次編輯，請選取&#x200B;**[!UICONTROL 顯示批次模式]**。您可以複製並貼上報告套裝覆寫的清單，每行輸入一個報告套裝。
 
-![顯示 Adob&#x200B;&#x200B;e Analytics 服務設定的資料流 UI 螢幕擷圖，並醒目顯示報告套裝覆寫。](assets/overrides/override-analytics.png)
+![顯示 Adobe Analytics 服務設定的資料流 UI 螢幕擷圖，並醒目顯示報告套裝覆寫。](assets/overrides/override-analytics.png)
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該設定了 Adob&#x200B;&#x200B;e Analytics 資料流覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
+您現在應該設定了 Adobe Analytics 資料流覆寫。現在您可以[透過 Web SDK 將覆寫發送到 Edge Network](#send-overrides)。
 
 ### 適用於 Experience Platform 事件資料集的資料流覆寫 {#event-dataset-overrides}
 
@@ -91,7 +91,7 @@ ht-degree: 79%
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該設定了 Adobe Experience Platform 資料流覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
+您現在應該設定了 Adobe Experience Platform 資料流覆寫。現在您可以[透過 Web SDK 將覆寫發送到 Edge Network](#send-overrides)。
 
 ### 適用於協力廠商 ID 同步容器的資料流覆寫 {#container-overrides}
 
@@ -117,7 +117,7 @@ ht-degree: 79%
 >
 >如果不透過 Web SDK 命令傳送設定覆寫，也可選擇將設定覆寫新增到 Web SDK [標記擴充功能](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。
 
-在資料集合 UI 中[設定資料流覆寫](#configure-overrides)後，現在即可透過 Web SDK 將覆寫傳送到 Edge Network。
+在資料收集 UI 中[設定資料流覆寫](#configure-overrides)後，現在即可透過 Web SDK 將覆寫傳送到 Edge Network。
 
 透過 Web SDK 將覆寫傳送到 Edge Network 是啟動資料流設定覆寫的第二個步驟也是最後步驟。
 
