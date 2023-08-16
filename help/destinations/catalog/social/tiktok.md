@@ -3,9 +3,9 @@ title: TikTok 連線
 description: 使用您的資料在 TikTok 上建置自訂對象，以設定您的廣告行銷活動的目標定位。這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: d9d31013d93e0e9e4e291a63840869e73d30ef01
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1010'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,9 @@ ht-degree: 5%
 
 ## 先決條件 {#prerequisites}
 
-將資料傳送至您的之前 [!DNL TikTok Ads Manager] 帳戶，您必須授予Adobe Experience Platform許可權才能存取您的廣告帳戶 `Audience Management`. 請在Experience Platform中輸入您的廣告商ID，並依照重新導向以授予許可權，即可提供此許可權。 如需詳細指示，請參閱 [TikTok API檔案](https://ads.tiktok.com/marketing_api/docs?id=1738373141733378).
+您必須擁有 [!DNL Admin] 或 [!DNL Operator] 存取您要傳送對象的TikTok Ads Manager帳戶。 如需詳細指示，請參閱 [TikTok說明中心](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+
+將資料傳送至您的TikTok Ads Manager帳戶之前，您需要先授予Adobe Experience Platform存取您廣告帳戶的許可權 `Audience Management`. 此許可權可由以下人員提供： [輸入您的Ads Manager ID](#authenticate) 重新導向至您的TikTok Ads管理員帳戶後，在Experience PlatformUI中授予許可權。
 
 ## 支援的身分 {#supported-identities}
 
