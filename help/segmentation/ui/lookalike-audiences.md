@@ -8,7 +8,7 @@ hidefromtoc: true
 source-git-commit: c4a888768015542e37290cb3c919cb60fca4e548
 workflow-type: tm+mt
 source-wordcount: '2123'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -60,18 +60,18 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"
->title="不適用"
->abstract="此對象目前不符合相似深入分析的資格，因為其擁有的設定檔數量可能少於培訓所需的最低設定檔數量，或尚未觸發設定檔匯出。"
+>title="條件不符"
+>abstract="此對象目前不符合相似深入分析的條件，因為其擁有的設定檔數量低於訓練所需的最低數量，或是尚未觸發設定檔匯出。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_processing"
 >title="正在處理"
->abstract="此對象目前正在處理中。 模型最多可能需要24小時才能完成處理。 請稍後再檢視。"
+>abstract="目前正在處理此對象。該模型可能需要長達 24 小時才能完成處理。請稍後再查看。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_error"
 >title="錯誤"
->abstract="處理此模型時發生錯誤。 請刪除並重新建立此模型，或稍後再試。"
+>abstract="處理此模型時發生錯誤。請刪除並重新建置此模型，或稍後再試一次。"
 
 相似的深入分析內建有對象詳細資訊頁面。 若要檢視對象的相似見解，請選取「 」 **[!UICONTROL 受眾]** 在左側導覽列中，後面接著 **[!UICONTROL 瀏覽]**，以及您要檢視其深入分析的對象。
 
@@ -81,12 +81,12 @@ ht-degree: 0%
 
 ![相似見解索引標籤會醒目顯示，並顯示基本對象的相似見解。](../images/ui/lookalike-audiences/look-alike-insights.png)
 
-### 相似性和觸及 {#similarity-and-reach}
+### 相似度與觸及 {#similarity-and-reach}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_similarityAndReach"
->title="相似性和觸及"
->abstract="相似性和觸及圖繪製由超過指定相似度分數的設定檔所組成的相似對象預期觸及率。 您可以將滑鼠停留在圖表中的特定點，以顯示目前反白點的相似度百分比和預期的設定檔計數。"
+>title="相似度與觸及"
+>abstract="相似度與觸及圖表會繪製相似對象 (由超過指定相似度分數的設定檔組成) 的預期觸及範圍。您可以將游標停留在圖表中的特定一點上方，以顯示目前醒目標示的點之相似度百分比和預期的設定檔數量。"
 
 相似性和觸及區段會顯示圖形，其中繪製類似對象的預期觸及率，其中包含高於指定相似度分數的設定檔。 相似度分數代表 **距離** 基礎對象設定檔與相似見解設定檔之間的相似度。
 
@@ -98,7 +98,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 請注意，圖表為 **累積** 由右至左。 這表示在圖形的任何點，y軸的值是具有相似性的設定檔數目 **以上** 相似度臨界值。 例如，如果x軸為60%，而y軸為1,000萬，這表示有1,000萬個設定檔與基本受眾的相似性達到或超過60%。
 
-您可以將滑鼠停留在圖表中的特定點，以顯示目前反白點的相似度百分比和預期的設定檔計數。
+您可以將游標停留在圖表中的特定一點上方，以顯示目前醒目標示的點之相似度百分比和預期的設定檔數量。
 
 ### 相似的對象 {#list}
 
@@ -111,7 +111,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響因素"
->abstract="影響因子是屬性、事件和受眾會籍，這對於說明個人資料與基本受眾成員的相似度很重要。 資料使用標籤和原則可用來排除某些資料，以免在相似模型中將其視為影響因素。"
+>abstract="影響因素包括屬性、事件和對象會籍；這些因素是說明設定檔與基礎對象成員之相似度的重要依據。資料使用標籤和原則可用來排除某些資料，使其不被視為相似對象模型中的影響因素。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=en#exclude" text="排除資料"
 
 影響因素區段會顯示影響所選基本對象相似模型的前100個因素。 這些影響因子是個人資料屬性、體驗事件和對象會籍，在說明基本對象的相似之處時是最重要的。 瞭解主要影響因素，可讓您針對此對象以及您從中建立的任何相似對象，更妥善地個人化您的行銷內容。 請注意，不會顯示影響相似模型的所有影響因素。
