@@ -1,14 +1,19 @@
 ---
 title: 引數化查詢
 description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢。
-source-git-commit: d8845e080489af12e98badc892bb60cb9749bd47
+source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
 
-# 引數化查詢（限量發行）
+# 引數化查詢（限量發行） {#parameterized-queries}
+
+>[!CONTEXTUALHELP]
+>id="platform_queryService_queryEditor_parameterizedQueries"
+>title="引數化查詢"
+>abstract="使用引數化查詢在執行時新增引數值。 這可讓您使用動態資料，並針對不同使用案例重複使用查詢。 使用 `'$'` 在文字編輯器中將查詢引數輸入到查詢中的前置詞。 接著，在編輯器下方的查詢引數區段中新增索引鍵的值。"
 
 >[!IMPORTANT]
 >
