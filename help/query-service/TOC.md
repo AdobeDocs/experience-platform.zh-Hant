@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 9fe547e6270b4ede3151158e3b474f8c3dfd2297
+source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 17%
+source-wordcount: '280'
+ht-degree: 19%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 17%
 - 開始使用 {#get-started}
    - [先決條件](get-started/prerequisites.md)
 - 資料Distiller {#data-distiller}
-   - [總覽](data-distiller/overview.md)
+   - [概觀](data-distiller/overview.md)
    - [授權使用情況](data-distiller/license-usage.md)
    - 查詢加速存放區 {#query-accelerated-store}
       - [傳送加速的查詢](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [報表深入分析資料模型指南](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
    - 衍生屬性 {#derived-attributes}
-      - [總覽](data-distiller/derived-attributes/overview.md)
+      - [概觀](data-distiller/derived-attributes/overview.md)
       - [順暢的SQL流程](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [建立十等分衍生屬性](data-distiller/derived-attributes/decile-based-derived-attributes.md)
 - 使用案例 {#use-cases}
@@ -34,23 +34,24 @@ ht-degree: 17%
    - [歸因分析](use-cases/attribution-analysis.md)
    - [機器人篩選](use-cases/bot-filtering.md)
    - [建立事件的趨勢報表](use-cases/trended-report-of-events.md)
+   - [同意分析](use-cases/consent-analysis.md)
    - [客戶期限值](use-cases/customer-lifetime-value.md)
-   - [十等分衍生屬性](use-cases/deciles-use-case.md)
+   - [十等位衍生屬性](use-cases/deciles-use-case.md)
    - [模糊比對](use-cases/fuzzy-match.md)
    - [列出使用者的頁面檢視](use-cases/list-visitor-sessions.md)
-   - [依訪客的頁面檢視列出訪客](use-cases/visitors-by-number-of-page-views.md)
+   - [依頁面檢視列出訪客](use-cases/visitors-by-number-of-page-views.md)
    - [傾向分數](use-cases/propensity-score.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [從Analytics資料傳回並使用銷售變數](use-cases/merchandising-variables.md)
    - [檢視訪客的統計報表](use-cases/roll-up-report-of-a-visitor.md)
-   - [網頁和行動分析深入分析](use-cases/analytics-insights.md)
+   - [網站和行動分析深入分析](use-cases/analytics-insights.md)
 - 將使用者端連線至查詢服務 {#clients}
    - [使用者端連線概觀](clients/overview.md)
    - [SSL模式](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
-   - [Looker](clients/looker.md)
+   - [檢視器](clients/looker.md)
    - [Postico](clients/postico.md)
    - [Power BI](clients/power-bi.md)
    - [PSQL](clients/psql.md)
@@ -63,7 +64,7 @@ ht-degree: 17%
    - [引數化查詢（受限）](ui/parameterized-queries.md)
    - [查詢排程](ui/query-schedules.md)
    - [查詢記錄](ui/query-logs.md)
-   - [監視排定的查詢](ui/monitor-queries.md)
+   - [監視已排程查詢](ui/monitor-queries.md)
    - [認證指南](ui/credentials.md)
    - [從查詢結果產生輸出資料集](ui/create-datasets.md)
 - 查詢服務API端點 {#api}
@@ -71,12 +72,12 @@ ht-degree: 17%
    - [查詢](api/queries.md)
    - [連線引數](api/connection-parameters.md)
    - [時程表](api/scheduled-queries.md)
-   - [針對排定的查詢執行](api/runs-scheduled-queries.md)
+   - [已排程查詢的執行](api/runs-scheduled-queries.md)
    - [查詢範本](api/query-templates.md)
    - [加速的查詢](api/accelerated-queries.md)
    - [警報訂閱](api/alert-subscriptions.md)
 - 資料治理 {#data-governance}
-   - [總覽](data-governance/overview.md)
+   - [概觀](data-governance/overview.md)
    - [稽核記錄指南](data-governance/audit-log-guide.md)
    - [臨時結構描述資料集中的身分](data-governance/ad-hoc-schema-identities.md)
    - [針對臨時結構描述的屬性型存取控制支援](./data-governance/ad-hoc-schema-labels.md)

@@ -1,20 +1,15 @@
 ---
 title: 在UI中建立Chatlio來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Chatlio來源連線。
-badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1149'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Chatlio] ui中的來源連線
-
->[!NOTE]
->
->此 [!DNL Chatlio] 來源為測試版。 請閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 本教學課程提供建立 [!DNL Chatlio] 使用Adobe Experience Platform使用者介面的來源連線。
 
