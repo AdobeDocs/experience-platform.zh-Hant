@@ -1,9 +1,7 @@
 ---
 title: UI中來源資料流程的隨選擷取
 description: 瞭解如何使用Experience Platform使用者介面，依需求為來源連線建立資料流程。
-hide: true
-hidefromtoc: true
-source-git-commit: 812aa0bb0ec9199ef575ac972038115afc2fa647
+source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
