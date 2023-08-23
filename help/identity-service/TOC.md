@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: 平台 Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分，以提供個人化的數位體驗。
 feature: Identities
-source-git-commit: b5214301f48418a0d00575143caa2937b8beed62
+source-git-commit: 2617d913d73dcd7dd877fe877a7b2b4d79396a5f
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 30%
+source-wordcount: '112'
+ht-degree: 32%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 30%
 - [Identity Service總覽](home.md)
 - [身分名稱空間總覽](namespaces.md)
 - [身分資料的護欄](guardrails.md)
-- [使用刪除邏輯的身分資料護欄](guardrails-beta.md)
 - 身分識別服務API {#api}
    - [快速入門](api/getting-started.md)
    - [將欄位標示為身分](api/label-identities.md)
