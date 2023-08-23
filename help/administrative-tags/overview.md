@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；統一編記；標記；
-title: 統一標籤總覽
-description: 本文件會提供有關如何在 Adob​​e Experience Platform 中管理統一標記的資訊
+title: 統一標記概觀
+description: 本文件會提供有關如何在 Adobe Experience Platform 中管理統一標記的資訊
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
 source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '578'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
-# 統一標籤總覽
+# 統一標記概觀
 
-標記是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，讓管理員能夠管理中繼資料分類法，以便將商業物件進行分類，使得探索和分類更輕鬆。標記是可視為關鍵字的中繼資料，可將其附加到區段、資料集、歷程或其他物件上，讓搜尋能找到該物件和相關物件。標記分成兩種類型：已分類和未分類。
+標記是 Adobe Experience Platform 的一項功能，讓管理員能夠管理中繼資料分類法，以便將商業物件進行分類，使得探索和分類更輕鬆。標記是可視為關鍵字的中繼資料，可將其附加到區段、資料集、歷程或其他物件上，讓搜尋能找到該物件和相關物件。標記分成兩種類型：已分類和未分類。
 
 為了提供更多內容並定義標記的用途，類別將標記整理成了有用的集合。管理員會定義哪些分類標記可供使用者新增到物件上。在套用標記的工作流程中，也能以內聯方式建立不包含類別的新標記。這些標記會顯示在標記詳細目錄的未分類區段中。無論建立者是誰，管理員和使用者都可以套用標記。在指派給物件、搜尋或篩選時，所有類型的標記都可供選取。
 
@@ -48,7 +48,7 @@ Experience Platform 和 Journey Optimizer 導覽中會提供使用標記詳細�
 
 >[!NOTE]
 >
->您必須是貴組織的 Adob&#x200B;&#x200B;e Experience Platform 的系統管理員或產品管理員，才能管理 Experience Cloud 的標記，貴組織必須訂閱了 Experience Cloud。
+>您必須是貴組織的 Adobe Experience Platform 的系統管理員或產品管理員，才能管理 Experience Cloud 的標記，貴組織必須訂閱了 Experience Cloud。
 
 您可以在類別 (或預設的「未分類」群組) 內部建立和管理標記。管理標記時可進行下列動作：
 
