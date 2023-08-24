@@ -4,7 +4,7 @@ title: 授權使用儀表板指南
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 6ff198d1b4b567667eb3c74a2c6393ee3dc9ee7d
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 相同型別的所有沙箱的沙箱消耗報告都是累積的。 換言之，選取 [!UICONTROL 生產] 或 [!UICONTROL 開發] 分別提供所有生產或開發沙箱的使用量報表。
 
-![授權使用儀表板的「總覽」索引標籤中反白顯示沙箱選擇器。](../images/license-usage/select-sandbox.png)
+![授權使用儀表板的「總覽」索引標籤中反白顯示沙箱選擇器。](../images/license-usage/select-sandbox-old.png)
 
 >[!WARNING]
 >
@@ -55,11 +55,11 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 選取沙箱後，您可以使用日期範圍下拉式清單來選取要在控制面板中顯示的時段。 有多個可用選項，包括過去30天的預設值。
 
-![授權使用儀表板概觀索引標籤，日期範圍下拉式清單會醒目提示。](../images/license-usage/select-date-range.png)
+![授權使用儀表板概觀索引標籤，日期範圍下拉式清單會醒目提示。](../images/license-usage/select-date-range-old.png)
 
 您也可以選取 **[!UICONTROL 自訂日期]** 以選擇顯示的時段。
 
-![授權使用儀表板的「總覽」索引標籤中會醒目提示自訂日期範圍選項。](../images/license-usage/select-custom-date.png)
+![授權使用儀表板的「總覽」索引標籤中會醒目提示自訂日期範圍選項。](../images/license-usage/select-custom-date-old.png)
 
 ## Widget
 
@@ -67,7 +67,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 每個Widget都會顯示折線圖，將貴組織的實際數量與貴組織授權的總可用數量進行比較，並提供使用總數的百分比。
 
-![「授權使用量度」控制面板的「概觀」索引標籤，醒目提示範例授權使用量度Widget的線圖。](../images/license-usage/widgets.png)
+![「授權使用量度」控制面板的「概觀」索引標籤，醒目提示範例授權使用量度Widget的線圖。](../images/license-usage/widgets-old.png)
 
 ## 可用量度
 
