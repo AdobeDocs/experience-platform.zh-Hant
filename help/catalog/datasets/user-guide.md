@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 141037fd844c78e98785ea2246026ac120961dd5
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '2745'
 ht-degree: 4%
@@ -207,7 +207,7 @@ ht-degree: 4%
 
 資料使用標籤（套用至結構描述層級）可讓您根據套用至該資料的使用原則來分類資料集和欄位。 請參閱 [資料控管概觀](../../data-governance/home.md) 以進一步瞭解標籤，或參閱 [資料使用標籤使用手冊](../../data-governance/labels/overview.md) 以取得如何套用標籤至結構描述，以傳播至資料集的指示。
 
-### 移至資料夾 {#move-to-folders}
+## 移至資料夾 {#move-to-folders}
 
 您可以將資料集放在資料夾中，以改善資料集管理。 若要將資料集移至資料夾，請選取您要管理的資料集名稱旁的省略符號(...)，然後選取 **[!UICONTROL 移至資料夾]** 下拉式選單中的。
 
@@ -217,7 +217,7 @@ ht-degree: 4%
 
 ![此 [!UICONTROL 移動] 資料集對話方塊，使用 [!UICONTROL 移動] 反白顯示。](../images/datasets/user-guide/move-dialog.png)
 
->
+>[!TIP]
 >
 >您也可以直接從「行動資料集」對話方塊建立資料夾。 若要建立資料夾，請選取建立資料夾圖示(![建立資料夾圖示。](../images/datasets/user-guide/create-folder-icon.png))。
 >

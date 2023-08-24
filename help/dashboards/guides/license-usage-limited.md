@@ -5,7 +5,7 @@ description: Adobe Experience Platform提供一個儀表板，您可以透過它
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
 workflow-type: tm+mt
 source-wordcount: '1495'
 ht-degree: 1%
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 所有可用的量度都會顯示在 [!UICONTROL 摘要] 標籤。 可用的量度取決於授權產品。 此檢視提供 **跨所有生產或開發沙箱的所有量度的整合檢視**. 生產沙箱和開發沙箱會提供相同等級的分析。
 
-![顯示該產品所有可用量度的平台產品摘要檢視。]()
+![顯示該產品所有可用量度的平台產品摘要檢視。](../images/license-usage/summary-tab.png)
 
 在摘要標籤上，表格包括 [!UICONTROL 量度] 欄。 這些人類看得懂的說明會指出用於該型別沙箱的所有量度。
 
@@ -78,7 +78,7 @@ ht-degree: 1%
 
 相同型別的所有沙箱的沙箱消耗報告都是累積的。 換言之，選取 [!UICONTROL 生產] 或 [!UICONTROL 開發] 分別提供所有生產或開發沙箱的使用量報表。
 
-![Platform產品的摘要檢視，其中的生產沙箱和開發沙箱會醒目提示。](../images/license-usage/summary-tab.png)
+![Platform產品的摘要檢視，其中的生產沙箱和開發沙箱會醒目提示。](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
