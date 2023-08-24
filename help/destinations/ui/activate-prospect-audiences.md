@@ -1,13 +1,11 @@
 ---
 title: 對目的地啟用潛在客戶對象
 type: Tutorial
-hide: true
-hidefromtoc: true
 description: 瞭解如何對目的地啟用潛在客戶對象
-source-git-commit: e04d7a3cd75f4e61329a2de8ca5ddcc4d9518a57
+source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '619'
+ht-degree: 12%
 
 ---
 
@@ -82,3 +80,11 @@ ht-degree: 0%
 Note that we will need to add links to other destination types here as more destinations become supported 
 
 -->
+
+## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
+
+探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
+
+* [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+* 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
+* [利用合作夥伴協助的認可，實現站上體驗的個人化](/help/rtcdp/partner-data/onsite-personalization.md) 造訪期間，使用者未經驗證，或先前沒有您品牌的記錄。
