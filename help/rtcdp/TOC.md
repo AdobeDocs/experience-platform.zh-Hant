@@ -7,7 +7,7 @@ user-guide-description: 將來自多個企業來源的已知和匿名資料放�
 source-git-commit: 7a977f92a81dd27c99ebe8bdf7be1a7d0425ad2a
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -65,8 +65,8 @@ ht-degree: 96%
    * [來源概觀](sources/sources-overview.md)
    * [Real-Time CDP B2B 版本中的來源](sources/b2b.md)
 * 使用案例 {#use-cases}
-   * 智慧型重新參與使用案例 {#intelligent-re-engagement}
-      * [聰明地重新與客戶互動](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+   * 智慧型重新吸引使用案例 {#intelligent-re-engagement}
+      * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * 合作夥伴資料使用案例 {#partner-data}
       * [透過挖掘潛在客戶支援吸引並獲取新客戶](/help/rtcdp/partner-data/prospecting.md)
       * [使用合作夥伴提供的屬性補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)

@@ -1,16 +1,18 @@
 ---
 title: 使用合作夥伴輔助的訪客識別來個人化現場體驗
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
-hide: true
-hidefromtoc: true
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
-source-wordcount: '2492'
+source-wordcount: '2530'
 ht-degree: 99%
 
 ---
 
 # 使用合作夥伴輔助的訪客識別來個人化現場體驗
+
+>[!AVAILABILITY]
+>
+>此 功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 了解如何使用合作夥伴輔助的訪客識別為您的 Web 屬性訪客提供個人化的現場體驗。使用本教學課程了解 Experience Platform 和其他 Experience Cloud 解決方案中各種元素的實施順序，以便向經過身份驗證和未經身份驗證的訪客顯示個人化體驗。
 
@@ -52,8 +54,8 @@ ht-degree: 99%
 
 ![資訊圖：說明如何使用合作夥伴提供的屬性為訪客供個人化體驗。](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
-1. 身為&#x200B;**客戶**，您可授權&#x200B;**資料合作夥伴**&#x200B;有能力即時擷取對其他匿名網站訪客的分析。
-2. 身為&#x200B;**訪客**，您可在自己的屬性上部署用戶端資料庫，以呼叫&#x200B;**合作夥伴** API，且您可設定 Web SDK 或行動 SDK 並將合作夥伴提供的訊號發送到 Real-Time CDP。
+1. 作為&#x200B;**客戶**，您可授權&#x200B;**資料合作夥伴**&#x200B;有能力即時擷取對其他匿名網站訪客的分析。
+2. 作為&#x200B;**訪客**，您可在自己的屬性上部署用戶端資料庫，以呼叫&#x200B;**合作夥伴** API，且您可設定 Web SDK 或行動 SDK 並將合作夥伴提供的訊號發送到 Real-Time CDP。
 3. 瀏覽您的網站或應用程式時，**訪客**&#x200B;是由&#x200B;**合作夥伴**&#x200B;進行概率識別；合作夥伴會傳回屬性和 ID。
 4. Real-Time CDP 會執行邊緣分段來評估導入事件點擊，並持續從 [ECID 識別碼](https://experienceleague.adobe.com/docs/id-service/using/home.html)得到結果。
 5. Adobe Target 使用邊緣分段輸出將體驗回供給&#x200B;**訪客**，讓他們的工作階段得到個人化體驗。
@@ -191,7 +193,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 若要設定第二個資料元素，請為新變數 `pageVisit` 命名，設定&#x200B;**[!UICONTROL 擴充功能]**&#x200B;至 **[!UICONTROL Adobe Experience Platform]**，並選擇&#x200B;**[!UICONTROL XDM 物件]**&#x200B;作為資料類型。
 
-![醒目提示用於正確設定pageVisit資料元素的選取專案。](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![醒目顯示正確設定 pageVisit 資料元素的選擇。](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 從架構中，依據您期望從資料合作夥伴獲得的值，選取與其相對應的協力廠商屬性。然後，選擇標題為「**[!UICONTROL 提供整個物件]**」的選項按鈕。選擇看起來像資料庫的圖示，然後選擇您之前建立的 `partnerData` 資料元素。
 
@@ -265,4 +267,4 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 * [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
-* (**即將推出**) [!BADGE Beta]{type=Informative}**擴大的啟動範圍**&#x200B;使用合作夥伴 ID 發佈不接受 PII 或雜湊 PII 的生態系統。
+* [擴大潛在客戶設定檔和潛在客戶對象的啟用](/help/destinations/ui/activate-prospect-audiences.md) 以選取目的地。
