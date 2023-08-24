@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年8月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c7cd33c5d3d18095fc525b7a8b36a06cad681200
+source-git-commit: 8a313587a339ea775adc5422519841b1e679be7a
 workflow-type: tm+mt
 source-wordcount: '1592'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -64,10 +64,14 @@ Adobe Experience Platform 現有功能的更新：
 Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要分析。
 
 **新功能或更新功能**
-&#x200B;URL |功能 |說明 | | — | — | |同意分析和追蹤使用案例 |瞭解如何針對Real-Time CDP資料的各種行銷使用案例建立同意儀表板，使用 [同意分析和追蹤檔案](../../dashboards/insights-use-cases/consent-analysis.md). 它詳細說明如何根據您的業務需求建立具有適當屬性的受眾，然後透過Adobe Experience Platform UI中使用預先設定的Widget來使用深入分析。 它還提供有關如何使用使用者定義儀表板功能建置您自己的自訂Widget的說明。 本檔案涵蓋同意趨勢和同意重疊使用案例。 |
+
+| 功能 | 說明 |
+| --- | --- |
+| 同意分析和追蹤使用案例 | 瞭解如何針對各種行銷使用案例，使用建立Real-Time CDP資料的同意儀表板 [同意分析和追蹤檔案](../../dashboards/insights-use-cases/consent-analysis.md). 它詳細說明如何根據您的業務需求建立具有適當屬性的受眾，然後透過Adobe Experience Platform UI中使用預先設定的Widget來使用深入分析。 它還提供有關如何使用使用者定義儀表板功能建置您自己的自訂Widget的說明。 本檔案涵蓋同意趨勢和同意重疊使用案例。 |
 
 {style="table-layout:auto"}
-如需&#x200B;儀表板的詳細資訊，包括如何授與存取許可權及建立自訂Widget，請從閱讀 [控制面板概觀](../../dashboards/home.md).
+
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料收集 {#data-collection}
 
