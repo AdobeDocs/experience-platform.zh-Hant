@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年8月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b7812acf7c250621d40b152b391142050ac70e18
+source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 37%
 
 ---
@@ -37,7 +37,7 @@ Adobe Experience Platform 現有功能的更新：
 | 功能 | 說明 |
 | --- | --- |
 | 智慧型重新參與使用案例指南 | 此 [智慧型重新參與](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 使用案例指南提供詳細資訊，說明如何與已放棄轉換的客戶重新互動，然後以聰明負責的方式完成轉換。 本指南使用下列範例歷程來重新吸引客戶： <ul><li>重新參與歷程 — 將目標定位為放棄產品瀏覽的客戶。</li><li>捨棄的購物車歷程 — 鎖定已將產品放入購物車但尚未完成購買的客戶。</li><li>訂單確認歷程 — 著重於產品購買</li></ul> 請使用底部的詳細意見選項連結 [智慧型重新參與使用案例指南](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 以提供意見回饋。 |
-| 潛在客戶設定檔 | 在Real-Time CDP中使用合作夥伴來源的潛在客戶設定檔和合作夥伴ID來執行上層漏斗行銷，以觸及新客戶並豐富您的第一方資料： <ul><li>客戶贏取與定址能力：運用資料合作夥伴選用的無Cookie識別碼和雜湊PII，觸及淨新客戶，並降低第三方Cookie相依性。</li><li>單一系統中的完整漏斗行銷：為單一系統中的潛在和已知客戶自助式細分、對象管理和原生啟用。</li><li>信任基礎：透過專利資料使用、標籤、存取控制及其他向市場銷售的資訊，以負責任的方式控管合作夥伴資料和設定檔。 如需詳細資訊，請參閱下列使用案例指南：現在提供潛在客戶使用案例指南。 閱讀潛在客戶使用案例指南，瞭解如何透過潛在客戶使用案例來吸引和贏取新客戶：<ul><li>[潛在客戶](../../rtcdp/partner-data/prospecting.md)</li><li>[站上個人化](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[補充第一方設定檔](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| 合作夥伴資料支援 | 在Real-Time CDP中使用合作夥伴來源的潛在客戶設定檔和合作夥伴ID來執行上層漏斗行銷，以觸及新客戶並豐富您的第一方資料： <ul><li>客戶贏取與定址能力：運用資料合作夥伴選用的無Cookie識別碼和雜湊PII，觸及淨新客戶，並降低第三方Cookie相依性。</li><li>單一系統中的完整漏斗行銷：為單一系統中的潛在和已知客戶自助式細分、對象管理和原生啟用。</li><li>信任基礎：透過專利資料使用、標籤、存取控制及其他向市場銷售的資訊，以負責任的方式控管合作夥伴資料和設定檔。 如需詳細資訊，請參閱下列使用案例指南：現在提供潛在客戶使用案例指南。 閱讀潛在客戶使用案例指南，瞭解如何透過潛在客戶使用案例來吸引和贏取新客戶：<ul><li>[潛在客戶](../../rtcdp/partner-data/prospecting.md)</li><li>[站上個人化](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[補充第一方設定檔](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
