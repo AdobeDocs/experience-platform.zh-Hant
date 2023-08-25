@@ -2,10 +2,10 @@
 title: Adobe Analytics擴充功能發行說明
 description: Adobe Experience Platform中Adobe Analytics標籤擴充功能的最新發行說明。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
 workflow-type: tm+mt
-source-wordcount: '1333'
-ht-degree: 84%
+source-wordcount: '1394'
+ht-degree: 82%
 
 ---
 
@@ -15,7 +15,20 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Analytics標籤擴充功能(如果經常更新以回應 [AppMeasurement JavaScript程式庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant). 請參閱 [AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant) 以取得以下提及之特定版本的詳細資訊。
+>Analytics標籤擴充功能（如果經常更新）以回應 [AppMeasurementJavaScript程式庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant). 請參閱 [AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 以下提及的特定版本的詳細資訊。
+
+## 2023 年 7 月 19 日
+
+**Adobe Analytics 擴充功能 1.9.2 版**
+
+**功能**:
+
+* 已升級至AppMeasurementv2.24.0。
+* 新增選用設定(`decodeLinkParameters` 預設 `false`)會解碼包含雙位元組編碼字元之連結URL的。
+
+**錯誤修正**:
+* 新增具有錯誤高平均資訊量的瀏覽器的其他錯誤處理 [使用者代理使用者端提示](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=zh-Hant) API的。
+* 已變更 [POST](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods/POST) 要使用的內容型別標頭 `x-www-form-urlencoded` 依預設。
 
 ## 2022 年 9 月 23 日
 
@@ -23,8 +36,8 @@ ht-degree: 84%
 
 **功能**:
 
-* 已升級至AppMeasurement v2.23.0。
-* 擴充功能現在可以收集高平均資訊量 [使用者代理使用者端提示](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新版的AppMeasurement所支援。
+* 已升級至AppMeasurementv2.23.0。
+* 擴充功能現在可以收集高平均資訊量 [使用者代理使用者端提示](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新版本的AppMeasurement所支援。
 
 ## 2022 年 2 月 28 日
 
@@ -32,7 +45,7 @@ ht-degree: 84%
 
 **錯誤修正**:
 
-* 移除AppMeasurement中的一些除錯陳述式。
+* 移除了AppMeasurement中的一些偵錯陳述式。
 
 ## 2021 年 11 月 29 日
 
@@ -40,7 +53,7 @@ ht-degree: 84%
 
 **錯誤修正**:
 
-* 將AppMeasurement升級至v2.22.3。
+* AppMeasurement已升級至v2.22.3。
 
 ## 2021 年 9 月 16 日
 
@@ -48,7 +61,7 @@ ht-degree: 84%
 
 **錯誤修正**:
 
-* 將AppMeasurement升級至v2.22.2。
+* AppMeasurement已升級至v2.22.2。
 * 移除已過時的buildInfo.environment
 
 ## 2021 年 8 月 24 日
@@ -57,8 +70,8 @@ ht-degree: 84%
 
 **錯誤修正**:
 
-* 已升級 [AppMeasurement至v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant).
-* 更新備援linkName以映象Activity Map邏輯，而不使用innerHTML。
+* 已升級 [AppMeasurement至v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* 更新遞補linkName以映象Activity Map邏輯，而非使用innerHTML。
 
 ## 2020 年 8 月 6 日
 
@@ -70,7 +83,7 @@ ht-degree: 84%
 
 **功能**:
 
-* [AppMeasurement 已更新為 2.22.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)。
+* [AppMeasurement 已更新為 2.22.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)。
 * UI 些微變動，現在其他設定會以選單收合的形式顯示，而非核取方塊。
 
 ## 2020 年 6 月 2 日
@@ -98,7 +111,7 @@ ht-degree: 84%
 
 **功能**:
 
-* [將 AppMeasurement 更新至 2.20.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)
+* [將 AppMeasurement 更新至 2.20.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 
 ## 2020 年 3 月 2 日
 
@@ -110,7 +123,7 @@ ht-degree: 84%
 
 **功能**:
 
-* [將 AppMeasurement 更新至 2.18.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)
+* [將 AppMeasurement 更新至 2.18.0 版](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html)
 * 將 Audience Manager 模組中的 DIL 資料庫更新至 9.4 版
 * 增加擴充功能中輸入欄位的長度
 * 擴充功能和動作設定中的 eVar 和 prop 現在會顯示 Analytics 的好記名稱
@@ -172,7 +185,7 @@ ht-degree: 84%
 * 更新 Adobe Analytics 擴充功能，以支援 Audience Manager 的 DIL 9.2
 
 * 更新擴充功能以支援 [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
-* 移除下列核取方塊，因為已不再支援：「不要將目的地發佈IFRAME附加至DOM或引發目的地」
+* 移除下列核取方塊，這是因為不再支援：「不要將目的地發佈IFRAME附加至DOM或引發目的地」
 
 ## 2019 年 6 月 4 日
 
