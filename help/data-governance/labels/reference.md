@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料使用標籤字彙表
 description: 本檔案概述Adobe Experience Platform目前支援的所有資料使用標籤。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: d1d817646fdc943428ca13f3dd8b52725bce4921
+source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2185'
 ht-degree: 3%
 
 ---
@@ -64,11 +64,7 @@ ht-degree: 3%
 | **PSPD** | 允許的敏感個人資料(PSPD)是指Adobe合約允許您上傳視為「敏感」、「資料的特殊類別」或適用法律所使用的類似詞語的資料。 這明確不包括受保護的健康資訊(PHI)和其他受規管的健康資料。 |
 | **RHD** | 參考Protected Health Information (PHI)或Adobe合約准許您上傳之病人相關資訊的資料。 |
 
-## (Beta)合作夥伴生態系統標籤 {#partner}
-
->[!IMPORTANT]
->
->第三方資料標籤為測試版。 並非所有使用者都可使用，檔案可能會有所變更。
+## 合作夥伴生態系統標籤 {#partner}
 
 合作夥伴生態系統標籤可用來對從組織外部來源取得的資料進行分類。
 

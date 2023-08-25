@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年8月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
+source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
 workflow-type: tm+mt
-source-wordcount: '1650'
-ht-degree: 37%
+source-wordcount: '1664'
+ht-degree: 36%
 
 ---
 
@@ -121,7 +121,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 類別 | [[!UICONTROL XDM 個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1758/files) | 使用此類別引入來自資料供應商的漏斗頂部客戶贏取使用案例的潛在客戶資料。 |
+| 類別 | [[!UICONTROL XDM 個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1758/files) | 使用此類別引入來自資料供應商的漏斗頂部客戶贏取使用案例的潛在客戶資料。請參閱 [[!UICONTROL XDM個別潛在客戶設定檔]](../../xdm/classes/prospect.md) 請參閱檔案以檢視範例並深入瞭解。 |
 
 {style="table-layout:auto"}
 

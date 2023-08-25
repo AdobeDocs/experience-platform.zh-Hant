@@ -1,21 +1,14 @@
 ---
 title: XDM個別潛在客戶設定檔類別
 description: 本檔案提供Experience Data Model (XDM)中XDM個別潛在客戶設定檔類別的概觀。
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 83f01c58e21bc42a53e2e7a08bd7a60ef90b41e6
+source-git-commit: 437bd602462330a96f356b83d7afe922b5315d9f
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 5%
+source-wordcount: '348'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL XDM個別潛在客戶設定檔] 類別
-
->[!IMPORTANT]
->
->此 [!UICONTROL XDM個別潛在客戶設定檔] 類別為測試版，並未提供給所有使用者使用。 文件和功能可能會有所變更。
 
 在Experience Data Model (XDM)中， [!UICONTROL XDM個別潛在客戶設定檔] class會擷取潛在客戶設定檔，這些設定檔通常來自漏斗頂端客戶贏取使用案例的資料合作夥伴。
 
