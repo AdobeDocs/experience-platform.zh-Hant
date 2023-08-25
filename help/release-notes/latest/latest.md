@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年8月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5c1566bac20f7fb83a0ce48c4fe7a22e15dbeb37
+source-git-commit: bf4c4186ed9196e547620a91826f86aa09d683fd
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 37%
@@ -108,7 +108,6 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 | 功能 | 說明 |
 | --- | --- |
 | 支援篩選次要身分 | 您現在可以使用「資料準備」來篩選來自Adobe Analytics的身分，例如AAID和AACUSTOMID。 如果篩選掉，這些身分不會擷取到即時客戶個人檔案中。 未篩選的資料將繼續內嵌至Data Lake。 |
-| 支援新功能 `correlationID` Adobe Analytics的欄位 | 此 `_experience.decisioning.propositions.scopeDetails.correlationID` 欄位現在可在Adobe Analytics來源聯結器結構描述中使用。 此欄位用於支援A4T分類，並將從2023年9月起填入。 |
 
 {style="table-layout:auto"}
 
@@ -173,6 +172,7 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 | --- | --- |
 | 正式發行 [!DNL SugarCRM] | [!DNL SugarCRM] 來源現已可用。 使用 [!DNL SugarCRM Accounts & Contacts] 和 [!DNL SugarCRM Events] 來源將資料從您的 [!DNL SugarCRM] 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [[!DNL SugarCRM]  概觀](../../sources/connectors/crm/sugarcrm.md)。 |
 | 支援UI中來源資料流的隨選擷取 | 您現在可以在UI中依需求建立現有來源資料流程的流程執行。 如需詳細資訊，請閱讀以下指南： [使用UI建立來源的隨選流程執行](../../sources/tutorials/ui/on-demand-ingestion.md). |
+| 支援新功能 `correlationID` Adobe Analytics的欄位 | 此 `_experience.decisioning.propositions.scopeDetails.correlationID` 欄位現在可在Adobe Analytics來源聯結器結構描述中使用。 此欄位用於支援A4T分類，並將從2023年9月起填入。 |
 
 {style="table-layout:auto"}
 
