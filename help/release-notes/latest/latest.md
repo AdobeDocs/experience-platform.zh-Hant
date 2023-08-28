@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年8月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4211a19bfd511c495d9efac898467230678aeb96
+source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 36%
+source-wordcount: '1749'
+ht-degree: 38%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform 現有功能的更新：
 - [資料收集](#data-collection)
 - [資料擷取](#data-ingestion)
 - [資料準備](#data-prep)
+- [目的地](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
 - [Segmentation Service](#segmentation)
@@ -112,6 +113,17 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 {style="table-layout:auto"}
 
 如需詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
+
+## 目的地 {#destinations}
+
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+
+**新功能或更新的功能** {#destinations-new-updated-functionality}
+
+- 您現在可以 [啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md) 至檔案型目的地。
+- 一般 [啟動護欄](../../destinations/guardrails.md#general-activation-guardrails) 每個沙箱最多100個目的地的數量已更新為 _硬限制_.
+
+如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
 ## 體驗資料模式 (XDM) {#xdm}
 
