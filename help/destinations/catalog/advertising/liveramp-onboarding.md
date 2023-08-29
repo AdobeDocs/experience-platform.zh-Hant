@@ -3,7 +3,7 @@ title: LiveRamp — 入門連線
 description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-time Customer Data Platform上線到LiveRamp Connect。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 804cc13d9f672e87ad56b328bae73216500e07dd
+source-git-commit: 7ea411c9543230f254f2a0565c04f277fed2b17b
 workflow-type: tm+mt
 source-wordcount: '1814'
 ht-degree: 3%
@@ -209,7 +209,7 @@ Platform會將兩個CSV檔案匯出至 [!DNL LiveRamp - Onboarding]：
 例如，轉存的CSV檔案包含一個 `email` 屬性，源自Experience Platform的兩個對象 [分段服務](../../../segmentation/home.md)，和一個 [已匯入](../../../segmentation/ui/overview.md#importing-an-audience) 外部對象，看起來可能像這樣：
 
 ```csv
-email,ups:aa2e3d98-974b-4f8b-9507-59f65b6442df,ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e
+email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
 abc117@testemailabc.com,active,,
 abc111@testemailabc.com,,,active
 abc102@testemailabc.com,,,active
@@ -218,7 +218,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-在上述範例中， `ups:aa2e3d98-974b-4f8b-9507-59f65b6442df` 和 `ups:45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 區段會說明源自細分服務的對象，而 `CustomerAudienceUpload:7729e537-4e42-418e-be3b-dce5e47aaa1e` 說明匯入Platform的對象為 [自訂上傳](../../../segmentation/ui/overview.md#importing-an-audience).
+在上述範例中， `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 和 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 區段會說明源自細分服務的對象，而 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` 說明匯入Platform的對象為 [自訂上傳](../../../segmentation/ui/overview.md#importing-an-audience).
 
 因為Platform會為每個產生一個CSV檔案 [合併原則ID](../../../profile/merge-policies/overview.md)，也會為每個合併原則ID產生個別的資料流執行。
 
