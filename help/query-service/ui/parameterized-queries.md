@@ -4,7 +4,7 @@ description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢
 source-git-commit: 4fc94fc39fa09756a440b5e532330cd310dd96d2
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
@@ -12,8 +12,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
->title="引數化查詢"
->abstract="使用引數化查詢在執行時新增引數值。 這可讓您使用動態資料，並針對不同使用案例重複使用查詢。 使用 `'$'` 在文字編輯器中將查詢引數輸入到查詢中的前置詞。 接著，在編輯器下方的查詢引數區段中新增索引鍵的值。"
+>title="參數化查詢"
+>abstract="使用參數化查詢，可在執行時新增參數值。這樣做可讓您處理動態資料，並為不同的使用案例重新使用查詢。使用 `'$'` 前置詞，在文本編輯器中將查詢參數輸入到查詢中。接下來，在編輯器下方的查詢參數部分中新增機碼的值。"
 
 >[!IMPORTANT]
 >
@@ -50,7 +50,7 @@ SELECT
 
 若要在UI中建立引數化查詢，請導覽至「查詢編輯器」。 請參閱以下小節： [存取查詢編輯器](./user-guide.md#accessing-query-editor) 以取得更多指示。
 
-使用 `'$'` 在文字編輯器中將查詢引數輸入到查詢中的前置詞。 接下來，將索引鍵的缺少值新增至 [!UICONTROL 查詢引數] 區段。 如果您忽略將值新增到任何必要的索引鍵，則無法執行查詢。 警示圖示(![警示圖示。](../images/ui/parameterized-queries/alert-icon.png))會出現在任何空白專案旁的「查詢引數」區段 [!UICONTROL 值] 輸入欄位。
+使用 `'$'` 前置詞，在文本編輯器中將查詢參數輸入到查詢中。接下來，將索引鍵的缺少值新增至 [!UICONTROL 查詢引數] 區段。 如果您忽略將值新增到任何必要的索引鍵，則無法執行查詢。 警示圖示(![警示圖示。](../images/ui/parameterized-queries/alert-icon.png))會出現在任何空白專案旁的「查詢引數」區段 [!UICONTROL 值] 輸入欄位。
 
 ![具有引數化查詢的查詢編輯器和「查詢引數」區段會反白顯示。](../images/ui/parameterized-queries/parameterized-query.png)
 
