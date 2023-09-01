@@ -4,7 +4,7 @@ description: 了解如何透過 Real-Time CDP 中合作夥伴資料支援所帶�
 source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 >[!AVAILABILITY]
 >
->* 此 功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>* 此功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。
 
@@ -50,7 +50,7 @@ ht-degree: 97%
 當您完成實作使用案例的步驟時，您將使用以下 Real-Time CDP 功能和 UI 元素 (按使用順序列出)。確保您擁有所有這些區域所需的屬性型存取控制權限，或要求系統管理員授予您必要的權限。
 
 * [身分](/help/identity-service/namespaces.md)
-* [架構](/help/xdm/home.md)
+* [結構描述](/help/xdm/home.md)
 * [資料使用情況標籤](/help/data-governance/labels/overview.md)
 * [資料集](/help/catalog/datasets/overview.md)
 * [來源](/help/sources/home.md)
@@ -181,7 +181,7 @@ ht-degree: 97%
 
 ![如何檢查潛在客戶設定檔的檢視](/help/rtcdp/assets/partner-data/prospecting/inspect-prospect-profile.gif)。
 
-深入瞭解 [潛在客戶設定檔](/help/profile/ui/prospect-profile.md).
+閱讀更多有關[潛在客戶設定檔](/help/profile/ui/prospect-profile.md)。
 
 ### 建立潛在客戶對象 {#create-prospect-audiences}
 
@@ -197,7 +197,7 @@ ht-degree: 97%
 * 僅限批次設定檔評估。
 * 不支援根據時間序列事件建立對象。
 
-深入瞭解 [潛在客戶對象](/help/segmentation/ui/prospect-audience.md).
+閱讀更多有關[潛在客戶對象](/help/segmentation/ui/prospect-audience.md)。
 
 ### 將潛在客戶設定檔啟動到目的地 {#activate-to-destinations}
 
@@ -208,5 +208,5 @@ ht-degree: 97%
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
 * [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [利用合作夥伴協助的認可，實現站上體驗的個人化](/help/rtcdp/partner-data/onsite-personalization.md) 造訪期間，使用者未經驗證，或先前沒有您品牌的記錄。
-* [擴大潛在客戶設定檔和潛在客戶對象的啟用](/help/destinations/ui/activate-prospect-audiences.md) 以選取目的地。
+* [利用合作夥伴輔助識別，不需要使用者驗證或之前使用您的品牌的紀錄，即可在造訪期間提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)。
+* [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

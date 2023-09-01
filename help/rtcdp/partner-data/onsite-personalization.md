@@ -4,7 +4,7 @@ description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供�
 source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
 workflow-type: tm+mt
 source-wordcount: '2530'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -12,25 +12,25 @@ ht-degree: 99%
 
 >[!AVAILABILITY]
 >
->此 功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>此功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
-了解如何使用合作夥伴輔助的訪客識別為您的 Web 屬性訪客提供個人化的現場體驗。使用本教學課程了解 Experience Platform 和其他 Experience Cloud 解決方案中各種元素的實施順序，以便向經過身份驗證和未經身份驗證的訪客顯示個人化體驗。
+了解如何使用合作夥伴輔助的訪客識別為您的 Web 屬性訪客提供個人化的現場體驗。使用本教學課程了解 Experience Platform 和其他 Experience Cloud 解決方案中各種元素的實施順序，以便向經過身分驗證和未經身分驗證的訪客顯示個人化體驗。
 
 ![資訊圖：說明如何使用合作夥伴提供的屬性為訪客供個人化體驗。](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
 ## 行業範例 {#industry-example}
 
-舉個例子，考慮一個認證率較低的家居修繕品牌。該品牌希望為首次訪客提供個人化體驗，無需以前的歷史記錄或事先身份驗證，也不會逐漸依賴協力廠商 cookie。
+舉個例子，考慮一個認證率較低的家居修繕品牌。該品牌希望為首次訪客提供個人化體驗，無需以前的歷史記錄或事先身分驗證，也不會逐漸依賴協力廠商 cookie。
 
 該品牌選擇運用合作夥伴識別技術，以概率方式來識別訪客並提供更加個人化的體驗。當訪客順著行銷漏斗向下移動時，這有助於提高考慮度。例如，該品牌可能會使用合作夥伴提供的人口統計訊號來製作吸引最近搬家者的現場內容，並針對受歡迎 DIY 產品提供折扣優惠。
 
 ## 必要條件和規劃 {#prerequisites-and-planning}
 
-當計劃使用合作夥伴提供的屬性向經過身份驗證和未經身份驗證的訪客提供個人化體驗時，請在規劃過程中考慮以下先決條件：
+當計劃使用合作夥伴提供的屬性向經過身分驗證和未經身分驗證的訪客提供個人化體驗時，請在規劃過程中考慮以下先決條件：
 
 * 您合作夥伴的識別技術需要輸入哪些資料，以便他們能夠疊加其他屬性？
 * 對於根據概率派生屬性 (而不是確定性確認屬性) 在不同頻道和不同使用案例中提供個人化服務，您的滿意程度如何？
-* 預先經過身份驗證但已經過識別的訪客在進行身份驗證時，他們的體驗應該如何改變？
+* 預先經過身分驗證但已經過識別的訪客在進行身分驗證時，他們的體驗應該如何改變？
 
 ### 您將使用的 UI 功能、平台元件和 Experience Cloud 產品 {#ui-functionality-and-elements}
 
@@ -42,7 +42,7 @@ ht-degree: 99%
    * [資料流](/help/datastreams/overview.md)
 * Real-Time CDP 中的資料管理
    * [身分](/help/identity-service/namespaces.md)
-   * [架構](/help/xdm/home.md)
+   * [結構描述](/help/xdm/home.md)
    * [資料使用情況標籤](/help/data-governance/labels/overview.md)
    * [資料集](/help/catalog/datasets/overview.md)
 *  Web 屬性個人化
@@ -65,9 +65,9 @@ ht-degree: 99%
 
 詳閱以下章節，其中包含指向更多文件的連結，以完成上述高層級概觀中的每個步驟。
 
-### 資料管理 - 建立身分識別命名空間、架構和資料集，以便管理資料屬性 {#data-management}
+### 資料管理 - 建立身分識別命名空間、結構描述和資料集，以便管理資料屬性 {#data-management}
 
-在準備為實現使用案例以便為未經身份驗證訪客的體驗進行個人化時，您必須首先在 Real-Time CDP 中設定資料管理結構，以接收傳入的即時事件和對象資格資料。
+在準備為實現使用案例以便為未經身分驗證訪客的體驗進行個人化時，您必須首先在 Real-Time CDP 中設定資料管理結構，以接收傳入的即時事件和對象資格資料。
 
 #### 建立合作夥伴 ID 身分識別命名空間
 
@@ -77,25 +77,25 @@ ht-degree: 99%
 
 閱讀更多關於如何[建立合作夥伴 ID 的身分識別命名空間](/help/rtcdp/partner-data/prospecting.md#create-partner-id-namespace)。
 
-#### 建立架構
+#### 建立結構描述
 
-接下來，建立一個[!UICONTROL 體驗事件]架構，用來保存您稍後將從 Web 屬性收集的時間序列資料，並確保使用 [!UICONTROL XDM ExperienceEvent] 作為架構的基礎類別。閱讀有關如何[使用 Experience Platform UI 建立架構](/help/xdm/ui/resources/schemas.md#create)。
+接下來，建立一個[!UICONTROL 體驗事件]結構描述，用來保存您稍後將從 Web 屬性收集的時間序列資料，並確保使用 [!UICONTROL XDM ExperienceEvent] 作為結構描述的基礎類別。閱讀有關如何[使用 Experience Platform UI 建立結構描述](/help/xdm/ui/resources/schemas.md#create)。
 
-![具備「建立」架構的架構工作區，且 XDM Experience 事件以醒目顯示。](/help/rtcdp/assets/partner-data/onsite-personalization/create-experience-event-schema.png)
+![具備「建立」結構描述的結構描述工作區，且 XDM Experience 事件以醒目顯示。](/help/rtcdp/assets/partner-data/onsite-personalization/create-experience-event-schema.png)
 
-當您建立架構並[將欄位新增至您的架構](/help/xdm/ui/resources/schemas.md#add-field-groups)，考慮新增「[造訪 Web 頁面](/help/xdm/field-groups/event/web-details.md)」和「[身分識別地圖](/help/xdm/field-groups/profile/identitymap.md)」欄位群組。這是適用於您數位資產和資料收集方法的其他新增欄位群組。
+當您建立結構描述並[將欄位新增至您的結構描述](/help/xdm/ui/resources/schemas.md#add-field-groups)，考慮新增「[造訪 Web 頁面](/help/xdm/field-groups/event/web-details.md)」和「[身分識別地圖](/help/xdm/field-groups/profile/identitymap.md)」欄位群組。這是適用於您數位資產和資料收集方法的其他新增欄位群組。
 
-此外，您可以建立或重複使用現有欄位群組並將其新增至您的架構，以擷取作夥伴提供關於訪客的見解。閱讀如何[建立欄位群組](/help/xdm/ui/resources/field-groups.md)以及如何[新增欄位](/help/xdm/ui/resources/field-groups.md)至欄位群組。例如，如果您希望針對合作夥伴所提供的分析 (例如年齡範圍、就業狀況、每月消費能力或購買行為) 進行個人化，請將您的欄位群組加入有關的欄位。
+此外，您可以建立或重複使用現有欄位群組並將其新增至您的結構描述，以擷取作夥伴提供關於訪客的見解。閱讀如何[建立欄位群組](/help/xdm/ui/resources/field-groups.md)以及如何[新增欄位](/help/xdm/ui/resources/field-groups.md)至欄位群組。例如，如果您希望針對合作夥伴所提供的分析 (例如年齡範圍、就業狀況、每月消費能力或購買行為) 進行個人化，請將您的欄位群組加入有關的欄位。
 
-假設資料合作夥伴為訪客提供了穩定的識別碼，並且您希望將其引入 Real-Time CDP，請務必在自訂欄位群組中為識別碼提供適當命名的欄位。您應該還要在之前建立的身分識別命名空間中將該欄位標示為身分識別。記得還要[讓架構包含在設定檔中](/help/xdm/ui/resources/schemas.md#profile)。
+假設資料合作夥伴為訪客提供了穩定的識別碼，並且您希望將其引入 Real-Time CDP，請務必在自訂欄位群組中為識別碼提供適當命名的欄位。您應該還要在之前建立的身分識別命名空間中將該欄位標示為身分識別。記得還要[讓結構描述包含在設定檔中](/help/xdm/ui/resources/schemas.md#profile)。
 
 #### 建立資料集
 
 接下來，您必須建立一個資料集來保存您從 Web 屬性訪客收集的時間序列資料，以及保存您將用於現場個人化的時間序列資料。
 
-閱讀有關[如何建立資料集](/help/catalog/datasets/user-guide.md#create)的教學課程，並記得要選取從架構建立資料集的選項。根據您在上一步建立的架構來建立資料集。
+閱讀有關[如何建立資料集](/help/catalog/datasets/user-guide.md#create)的教學課程，並記得要選取從結構描述建立資料集的選項。根據您在上一步建立的結構描述來建立資料集。
 
-與建立架構的步驟類似，您需要讓資料集包含在[!UICONTROL 即時客戶設定檔]中。如需進一步了解關於啟用資料集以用於[!UICONTROL 即時客戶設定檔]，請閱讀[建立架構教學課程](/help/xdm/tutorials/create-schema-ui.md#profile)。
+與建立結構描述的步驟類似，您需要讓資料集包含在[!UICONTROL 即時客戶設定檔]中。如需進一步了解關於啟用資料集以用於[!UICONTROL 即時客戶設定檔]，請閱讀[建立結構描述教學課程](/help/xdm/tutorials/create-schema-ui.md#profile)。
 
 ### 在您的 Web 屬性上實施事件資料收集 {#implement-data-collection}
 
@@ -121,9 +121,9 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 資料收集部分的第一步，[建立一個新的資料流](/help/datastreams/configure.md)。資料流是如何收集資料並將資料以正確路由發送到正確 Adobe 應用程式 (在本例中為 Experience Platform) 的基礎。
 
-當您建立資料流時，在&#x200B;**[!UICONTROL 事件架構]**&#x200B;欄位中，選取您之前建立的架構。
+當您建立資料流時，在&#x200B;**[!UICONTROL 事件結構描述]**&#x200B;欄位中，選取您之前建立的結構描述。
 
-![設定新資料流時醒目顯示的事件架構選擇器。](/help/rtcdp/assets/partner-data/onsite-personalization/event-schema-selector-datastream.png)
+![設定新資料流時醒目顯示的事件結構描述選擇器。](/help/rtcdp/assets/partner-data/onsite-personalization/event-schema-selector-datastream.png)
 
 [選取事件資料集](/help/datastreams/configure.md#aep) (您之前從下拉式選單建立)，勾選&#x200B;**[!UICONTROL 邊緣分割]**&#x200B;和&#x200B;**[!UICONTROL 個人化目的地]**&#x200B;旁邊的方格，然後選取「**[!UICONTROL 儲存]**」。
 
@@ -195,7 +195,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 ![醒目顯示正確設定 pageVisit 資料元素的選擇。](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
-從架構中，依據您期望從資料合作夥伴獲得的值，選取與其相對應的協力廠商屬性。然後，選擇標題為「**[!UICONTROL 提供整個物件]**」的選項按鈕。選擇看起來像資料庫的圖示，然後選擇您之前建立的 `partnerData` 資料元素。
+從結構描述中，依據您期望從資料合作夥伴獲得的值，選取與其相對應的協力廠商屬性。然後，選擇標題為「**[!UICONTROL 提供整個物件]**」的選項按鈕。選擇看起來像資料庫的圖示，然後選擇您之前建立的 `partnerData` 資料元素。
 
 #### 設定規則
 
@@ -267,4 +267,4 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 * [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
-* [擴大潛在客戶設定檔和潛在客戶對象的啟用](/help/destinations/ui/activate-prospect-audiences.md) 以選取目的地。
+* [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。
