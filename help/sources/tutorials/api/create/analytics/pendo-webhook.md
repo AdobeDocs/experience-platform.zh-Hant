@@ -1,15 +1,20 @@
 ---
 title: 使用Flow Service API為Pendo建立來源連線和資料流
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Pendo。
+badge: Beta
 exl-id: 12b0295d-4b26-4eb7-a02a-a01d825d2a1e
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1459'
 ht-degree: 1%
 
 ---
 
 # 為以下專案建立來源連線和資料流： [!DNL Pendo] 使用流量服務API
+
+>[!NOTE]
+>
+>此 [!DNL Pendo] 來源為測試版。 請閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 以下教學課程將逐步引導您完成建立來源連線和資料流的步驟，以便 [[!DNL Pendo]](https://Pendo.com/) 使用將事件資料匯入Adobe Experience Platform [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

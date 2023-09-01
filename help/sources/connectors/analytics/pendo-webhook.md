@@ -1,16 +1,20 @@
 ---
 title: Pendo來源概觀
 description: 瞭解如何使用API或使用者介面利用Webhook將Pendo連線至Adobe Experience Platform
-last-substantial-update: 2023-08-23T00:00:00Z
+badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
 # [!DNL Pendo]
+
+>[!NOTE]
+>
+>此 [!DNL Pendo] 來源為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

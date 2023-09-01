@@ -1,15 +1,20 @@
 ---
 title: 在使用者介面中建立Pendo來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Pendo來源連線。
+badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1212'
 ht-degree: 1%
 
 ---
 
 # 建立 [!DNL Pendo] 來源連線資料流和UI中
+
+>[!NOTE]
+>
+>此 [!DNL Pendo] 來源為測試版。 請閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 本教學課程提供建立 [!DNL Pendo] 使用Adobe Experience Platform使用者介面的來源連線和資料流。
 
