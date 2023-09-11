@@ -3,10 +3,10 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2f226ae1356733b89b10e73ef1a371c42da05295
+source-git-commit: 87138cbf041e40bfc6b42edffb16f5b8a8f5b365
 workflow-type: tm+mt
-source-wordcount: '999'
-ht-degree: 1%
+source-wordcount: '1112'
+ht-degree: 3%
 
 ---
 
@@ -66,11 +66,12 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->以下刪除邏輯是Identity Service即將推出的行為。 如果您的生產沙箱包含：
+>以下刪除邏輯是Identity Service即將推出的行為。 如果您的生產沙箱包含以下內容，請聯絡您的客戶代表以要求變更身分識別類型：
 >
 > * 將人員識別碼（例如CRM ID）設定為Cookie/裝置身分型別的自訂名稱空間。
 > * 將Cookie/裝置識別碼設定為跨裝置識別型別的自訂名稱空間。
-
+>
+>此功能可用後，超過50個身分限制的圖表將減少到最多50個身分。 對於Real-time CDP B2C Edition，這可能會導致符合對象資格的設定檔數量增加到最低限度，因為這些設定檔先前在細分和啟動中被忽略。
 
 更新完整的身分圖表時，Identity Service會先刪除圖表中最舊的身分，然後再新增最新的身分。 這是為了維持身分資料的正確性和關聯性。 此刪除程式會遵循兩個主要規則：
 
@@ -108,3 +109,8 @@ ht-degree: 1%
 * 在極少數情況下，會有兩個具有相同時間戳記和身分型別的身分，Identity Service會根據此ID排序 [XID](./api/list-native-id.md) 並執行刪除。
 
 >[!ENDSHADEBOX]
+
+刪除僅發生在Identity Service中的資料，不會發生在即時客戶個人檔案中。
+
+* 因此，此行為可能會使用單一ECID建立更多設定檔，因為ECID不再是身分圖表的一部分。
+* 為了讓您保持在可定址對象權益數量內，建議您啟用 [假名設定檔資料有效期](../profile/pseudonymous-profiles.md) 以刪除您的舊設定檔。

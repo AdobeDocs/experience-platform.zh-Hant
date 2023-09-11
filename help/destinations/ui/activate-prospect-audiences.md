@@ -2,10 +2,10 @@
 title: 對目的地啟用潛在客戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用潛在客戶對象
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 12%
+source-wordcount: '620'
+ht-degree: 16%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 ## 支援的目的地 {#supported-destinations}
 
-前往 **[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取 **[!UICONTROL 目錄]** 標籤。 使用 **[!UICONTROL 資料型別]** 篩選並選取 **[!UICONTROL 潛在客戶]** 檢視支援啟動潛在客戶對象的目的地。 目前，匯出潛在客戶對象僅適用於 [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) 目的地。
+前往 **[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取 **[!UICONTROL 目錄]** 標籤。 使用 **[!UICONTROL 資料型別]** 篩選並選取 **[!UICONTROL 潛在客戶]** 檢視支援啟動潛在客戶對象的目的地。 目前，匯出潛在客戶對象僅適用於雲端儲存目的地。
 
 ![支援資料集匯出的目的地](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
@@ -87,4 +87,4 @@ Note that we will need to add links to other destination types here as more dest
 
 * [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
 * 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
-* [利用合作夥伴協助的認可，實現站上體驗的個人化](/help/rtcdp/partner-data/onsite-personalization.md) 造訪期間，使用者未經驗證，或先前沒有您品牌的記錄。
+* [利用合作夥伴輔助識別，不需要使用者驗證或之前使用您的品牌的紀錄，即可在造訪期間提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)。

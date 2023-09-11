@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: （檔案） Eloqua連線Oracle
 description: oracle Eloqua是Oracle提供的行銷自動化軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動與銷售機會開發。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '695'
 ht-degree: 1%
 
 ---
@@ -18,15 +18,12 @@ ht-degree: 1%
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以匯出至此目的地的所有對象。
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
-
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

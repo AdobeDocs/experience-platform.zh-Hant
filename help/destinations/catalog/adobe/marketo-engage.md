@@ -2,9 +2,9 @@
 title: Marketo Engage目的地
 description: Marketo Engage是唯一適用於行銷、廣告、分析和商業的端對端客戶體驗管理(CXM)解決方案。 它可讓您自動化並管理從CRM銷售機會管理和客戶參與到帳戶式行銷和收入歸因的活動。
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 0507fd3596246bc2ead5c212c228822bf25f94e5
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
@@ -53,13 +53,12 @@ Marketo V2目的地的改良專案包括：
 
 ## 支援的對象 {#supported-audiences}
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-此外，此目的地也支援下表所述的對象啟用。
-
-| 外部對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1798'
 ht-degree: 1%
 
 ---
@@ -52,15 +52,12 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以匯出至此目的地的所有對象。
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
-
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

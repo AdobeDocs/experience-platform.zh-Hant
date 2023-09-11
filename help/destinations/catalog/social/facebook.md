@@ -3,9 +3,9 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: facebook連線
 description: 為您的Facebook行銷活動啟用設定檔，以根據雜湊電子郵件進行對象目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 37e8d36d89bf984673345743b371c31b4bb1f94d
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1905'
 ht-degree: 6%
 
 ---
@@ -50,15 +50,12 @@ ht-degree: 6%
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以匯出至此目的地的所有對象。
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
-
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

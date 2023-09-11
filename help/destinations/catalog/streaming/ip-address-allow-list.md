@@ -2,11 +2,11 @@
 keywords: IP位址、IP範圍、允許清單目的地、允許清單、允許清單串流目的地
 title: 串流目的地的IP位址允許清單
 type: Documentation
-description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至您的HTTP REST API端點、Amazon Kinesis或Azure事件中樞執行個體。
+description: 此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP REST API端點、Amazon Kinesis或Azure事件中樞執行個體。
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 4d71e246c8ce92cbdae4d248568cf32ab44ac82a
+source-git-commit: ca3c9ed87f2365cc1d9e4ef5e4a6145266a11bba
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,10 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> * Adobe建議您將此頁面加入書籤，每三個月重新造訪一次，以檢查最新的IP位址。 Adobe不提供新IP範圍的通知。
-> * 此處記錄的IP清單 *不會* 套用至您使用建立的任何目的地 [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * Adobe建議您將此頁面加入書籤，每三個月重新造訪一次，以檢查最新IP位址。 Adobe不提供新IP範圍的通知。
+> * 此處記錄的IP清單 *不會* 套用至您使用建置的任何目的地 [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
 
-
-## 總覽 {#overview}
+## 概觀 {#overview}
 
 此處記錄的IP範圍適用於以下目的地：
 
@@ -27,13 +26,13 @@ ht-degree: 0%
 * [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 
-從Experience Platform到這些目的地的傳出流量一律會經過此頁面上列出的IP。
+從Experience Platform到這些目的地的傳出流量一律會通過此頁面上列出的IP。
 
-此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP端點。 [!DNL Amazon Kinesis]，或 [!DNL Azure Event Hubs] 執行個體。 如果您的HTTP端點位於企業防火牆之後，或您的公司安全性與合規性標準需要將IP範圍清單加入允許清單，則此功能特別有用。
+此頁面提供您可新增至允許清單的IP範圍，以便安全地從Experience Platform匯出資料至HTTP端點， [!DNL Amazon Kinesis]，或 [!DNL Azure Event Hubs] 執行個體。 如果您的HTTP端點位於企業防火牆之後，或您的公司安全和法規遵循標準需要將IP範圍清單加入允許清單，則此功能特別實用。
 
 您可以透過網路防火牆定義網路存取控制。 透過指定適當的IP範圍，您可以允許資料傳輸服務的流量。
 
-Adobe建議您在使用此頁面上提及的目的地之前，先將下列IP範圍新增至允許清單。 使用這些串流目的地時，如果無法將您所在區域的IP範圍新增至允許清單，可能會導致錯誤或效能不佳。
+Adobe建議您先將下列IP範圍新增至允許清單，然後再使用本頁所述目的地。 使用這些串流目的地時，如果無法將您專屬區域的IP範圍新增到允許清單，可能會導致錯誤或效能不佳。
 
 ## VA7：美國和美洲客戶 {#us-americas}
 
@@ -57,6 +56,7 @@ Adobe建議您在使用此頁面上提及的目的地之前，先將下列IP範�
 `52.254.106.240/28`
 `52.254.107.0/28`
 `52.254.107.144/28`
+`20.22.83.112`
 
 ## NLD2：EMEA客戶 {#emea}
 
@@ -84,7 +84,7 @@ Adobe建議您在使用此頁面上提及的目的地之前，先將下列IP範�
 `51.105.144.81`
 `51.124.70.4`
 
-## 澳洲5：APAC客戶 {#apac}
+## AUS5：APAC客戶 {#apac}
 
 `20.43.104.80/28`
 `20.43.104.16/28`
@@ -109,3 +109,33 @@ Adobe建議您在使用此頁面上提及的目的地之前，先將下列IP範�
 `20.40.191.96/28`
 `20.43.104.32/28`
 `20.43.104.64/28`
+`20.53.206.128`
+`20.227.35.177`
+
+## CAN2：加拿大客戶 {#can}
+
+`20.104.46.128/28`
+`20.104.46.160/28`
+`20.104.46.64/28`
+`20.104.46.80/28`
+`20.116.145.94`
+`20.116.147.168`
+`20.200.70.192/28`
+`20.200.70.208/28`
+`20.200.70.224/28`
+`20.200.70.240/28`
+`20.200.71.0/28`
+`20.200.71.112/28`
+`20.200.71.128/28`
+`20.200.71.144/28`
+`20.200.71.16/28`
+`20.200.71.160/28`
+`20.200.71.176/28`
+`20.200.71.32/28`
+`20.200.71.48/28`
+`20.200.71.64/28`
+`20.200.71.80/28`
+`20.200.71.96/28`
+`20.200.93.180`
+`20.200.94.116`
+`20.200.94.83`

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的客戶自控金鑰
 description: 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2564c0cc817362536f1a8291e1c733d9efbf5a78
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1855'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 1%
 本文介紹在Platform中啟用客戶自控金鑰(CMK)功能的程式。
 
 ## 先決條件
+
+若要存取CMK API，您必須指派 [!UICONTROL 管理客戶自控金鑰] 與API認證相關的新角色或現有角色的許可權和生產沙箱的存取權。 如果您只想提供具有CMK存取權的API認證，建議您使用先前提及的必要許可權，建立新的CMK管理員角色。
+
+有關在Experience Platform中指派角色和許可權的詳細資訊，請參閱 [設定許可權檔案](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 為了啟用CMK，您的 [!DNL Azure] 金鑰儲存庫必須設定以下設定：
 

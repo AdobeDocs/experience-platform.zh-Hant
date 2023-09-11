@@ -1,10 +1,10 @@
 ---
 title: twitter自訂對象連線
-description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的對象來建立相關的再次行銷活動
+description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的受眾來建立相關的再次行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '840'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 ## 先決條件 {#prerequisites}
 
-設定前 [!DNL Twitter Custom Audiences] 目的地，請務必檢閱下列您需要符合的Twitter必要條件。
+設定前 [!DNL Twitter Custom Audiences] 目的地，請務必檢閱下列您需要符合的Twitter先決條件。
 
 1. 您的 [!DNL Twitter Ads] 帳戶必須符合廣告資格。 新增 [!DNL Twitter Ads] 帳戶在建立後的前2週內不符合廣告資格。
 2. 您在中授權存取的Twitter使用者帳戶 [!DNL Twitter Audience Manager] 必須具有 *[!DNL Partner Audience Manager]* 許可權已啟用。
@@ -35,15 +35,12 @@ ht-degree: 4%
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以匯出至此目的地的所有對象。
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
-
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -53,7 +50,7 @@ ht-degree: 4%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有在Twitter自訂對象目的地中使用的識別碼。 |
+| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有Twitter自訂對象目的地中使用的識別碼。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -119,4 +116,4 @@ ht-degree: 4%
 1. 提供人類可讀的對象對應名稱。 建議您使用與Experience Platform區段相同的名稱。
 2. 請勿使用特殊字元(+ &amp; ， % ： ； @ / = ？ $) （在對象和對象對應名稱中）。 如果您的Experience Platform對象名稱包含這些字元，請先移除這些字元，然後再將對象對應至Twitter目的地。
 
-更多關於 [!DNL List Custom Audiences] 在Twitter中，可於以下網址找到： [twitter檔案](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).
+更多關於 [!DNL List Custom Audiences] 中的Twitter可在以下網址找到： [twitter檔案](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html).

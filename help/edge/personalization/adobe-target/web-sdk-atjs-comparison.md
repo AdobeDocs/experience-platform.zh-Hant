@@ -3,16 +3,16 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 5065d76ad8008988c843c88e33a25731fb5284d0
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2286'
+source-wordcount: '2281'
 ht-degree: 6%
 
 ---
 
 # 比較at.js程式庫與Web SDK
 
-## 總覽
+## 概觀
 
 本文概述兩者之間的差異 `at.js` 程式庫和Experience Platform Web SDK。
 
@@ -20,11 +20,11 @@ ht-degree: 6%
 
 ### 安裝at.js
 
-我們允許客戶直接從Adobe Experience Cloud的「實作」標籤下載程式庫。 使用客戶的下列設定自訂at.js資料庫： clientCode、imsOrgId等。
+我們允許客戶直接從Adobe Experience Cloud的「實作」標籤下載程式庫。 at.js程式庫已根據客戶的下列設定加以自訂： clientCode、imsOrgId等。
 
 ### 安裝Web SDK
 
-預先建立的版本可在CDN上取得。 您可以直接在頁面上的CDN上參考程式庫，也可以下載並在您自己的基礎架構上代管程式庫。 它提供縮制和未縮制的格式。 未縮制的版本對於除錯用途很有幫助。
+預先建立的版本可在CDN上取得。 您可以直接在頁面上在CDN上參考程式庫，或將其下載並託管在您自己的基礎架構上。 它提供縮制和未縮制的格式。 未縮制的版本對於除錯而言相當實用。
 
 URL結構： https://cdn1.adoberesources.net/alloy/[版本]/alloy.min.js或alloy.js （非縮製版本）。
 
@@ -39,7 +39,7 @@ URL結構： https://cdn1.adoberesources.net/alloy/[版本]/alloy.min.js或alloy
 
 ### 設定at.js
 
-在每個at.js檔案的結尾，您會找到我們會例項化並傳遞設定物件的區段。 這是可自訂的，下載時，我們會將目前的客戶設定填入該區段。
+在每個at.js檔案的結尾，您會找到我們會例項化並傳遞設定物件的區段。 這是可自訂的，下載時，我們會將該區段填入目前的客戶設定。
 
 ```javascript
 window.adobe.target.init(window, document, {
@@ -84,7 +84,7 @@ SDK的設定已完成 `configure` 命令。
 
 >[!IMPORTANT]
 >
->`configure` 是 *一律* 第一個命令稱為。
+>`configure` 是 *一直* 第一個命令稱為。
 
 範例：
 
@@ -95,22 +95,22 @@ alloy("configure", {
 });
 ```
 
-設定期間可設定許多選項。 所有選項都可在下方找到，並按類別分組。
+設定期間可設定許多選項。 所有選項都可在下方找到，依類別分組。
 
 [更多詳情](../../fundamentals/configuring-the-sdk.md)
 
 
-## 如何請求和自動轉譯頁面載入Target選件
+## 如何請求並自動轉譯頁面載入Target選件
 
 ### 使用at.js
 
-使用at.js 2.x （如果您啟用設定） `pageLoadEnabled`，程式庫會透過以下動作觸發對Target Edge的呼叫： `execute -> pageLoad`. 如果所有設定都設定為預設值，則不需要自訂編碼。一旦at.js新增至頁面並由瀏覽器載入，就會執行Target Edge呼叫。
+使用at.js 2.x，如果您啟用設定 `pageLoadEnabled`，程式庫會透過以下動作觸發對Target Edge的呼叫： `execute -> pageLoad`. 如果所有設定都設為預設值，則不需要進行自訂編碼。將at.js新增至頁面並由瀏覽器載入後，就會執行Target Edge呼叫。
 
 ### 使用Web SDK
 
 在Adobe Target中建立的內容 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 可由SDK自動擷取及轉譯。
 
-若要請求並自動轉譯Target選件，請使用 `sendEvent` 命令並設定 `renderDecisions` 選項至 `true`. 這麼做會強制SDK自動轉譯任何符合自動轉譯資格的個人化內容。
+若要請求並自動轉譯Target選件，請使用 `sendEvent` 命令並設定 `renderDecisions` 選項至 `true`. 這麼做會強制SDK自動轉譯任何符合自動轉譯條件的個人化內容。
 
 範例：
 
@@ -244,9 +244,9 @@ adobe.target.getOffers({
 
 ### 使用Web SDK
 
-執行 `sendEvent` 下有特殊範圍的指令 `decisionScopes`： `__view__`. 我們使用此範圍當作訊號，從Target擷取所有頁面載入活動，並預先擷取所有檢視。 Web SDK也會嘗試評估所有VEC檢視型活動。 Web SDK目前不支援停用檢視預先擷取。
+執行 `sendEvent` 下具有特殊範圍的指令 `decisionScopes`： `__view__`. 我們使用此範圍當作訊號，從Target擷取所有頁面載入活動，並預先擷取所有檢視。 Web SDK也會嘗試評估所有VEC檢視型活動。 Web SDK目前不支援停用檢視預先擷取。
 
-若要存取任何個人化內容，您可以提供回呼函式，SDK收到來自伺服器的成功回應後，就會呼叫此函式。 您的回呼會提供結果物件，其中可能包含包含任何傳回之個人化內容的建議屬性。
+若要存取任何個人化內容，您可以提供回呼函式，SDK從伺服器收到成功回應後，就會呼叫此函式。 系統會為您的回呼提供結果物件，其中可能包含包含任何傳回之個人化內容的建議屬性。
 
 範例：
 
@@ -290,7 +290,7 @@ alloy("sendEvent", {
 [更多詳情](../rendering-personalization-content.md#manually-rendering-content)
 
 
-## 如何請求特定表單式Target mbox
+## 如何請求特定的表單式Target mbox
 
 
 ### 使用at.js
@@ -330,7 +330,7 @@ adobe.target.getOffers({
 
 ### 使用Web SDK
 
-您可以使用擷取表單式撰寫器型活動 `sendEvent` 命令並將mbox名稱傳遞至 `decisionScopes` 選項。 此 `sendEvent` 命令將傳回以包含請求活動/主張的物件解析的Promise：這就是 `propositions` 陣列看起來像這樣：
+您可以使用擷取表單式撰寫器型活動 `sendEvent` 命令並將mbox名稱傳遞至 `decisionScopes` 選項。 此 `sendEvent` 命令會傳回以包含請求之活動/主張的物件解析的Promise：這就是 `propositions` 陣列看起來像這樣：
 
 ```javascript
 [
@@ -485,7 +485,7 @@ alloy("applyPropositions", {
 
 您可以使用 `trackEvent` 函式或使用 `sendNotifications`.
 
-此函式會觸發要求來報告使用者動作，例如點按和轉換。 它不會在回應中傳遞活動。
+此函式會引發要求來報告使用者動作，例如點按和轉換。 它不會在回應中傳遞活動。
 
 
 **範例 1**
@@ -518,9 +518,9 @@ adobe.target.sendNotifications({
 
 ### 使用Web SDK
 
-您可以呼叫 `sendEvent` 命令，填入 `_experience.decisioning.propositions` XDM欄位群組，並設定 `eventType` 變更為下列2個值之一：
+您可以呼叫「 」，追蹤事件和使用者動作 `sendEvent` 命令，填入 `_experience.decisioning.propositions` XDM欄位群組，並設定 `eventType` 為2個值之一：
 
-* `decisioning.propositionDisplay`：代表Target活動的呈現。
+* `decisioning.propositionDisplay`：代表Target活動轉譯。
 * `decisioning.propositionInteract`：代表使用者與活動的互動，例如滑鼠點按。
 
 此 `_experience.decisioning.propositions` XDM欄位群組是物件的陣列。 每個物件的屬性衍生自 `result.propositions` 在中傳回的專案 `sendEvent` 命令： `{ id, scope, scopeDetails }`
@@ -637,7 +637,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用 `adobe.target.triggerView` 函式。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函數。應針對單頁應用程式(SPA)實作adobe.target.triggerView()，以便使用視覺化體驗撰寫器(VEC)來建立A/B測試和體驗鎖定目標(XT)活動。 如果未在網站上實作adobe.target.triggerView()，則VEC無法用於SPA。
+使用 `adobe.target.triggerView` 函式。 每當新頁面載入或頁面上的元件重新呈現時，就可呼叫此函數。應該為單頁應用程式(SPA)實作adobe.target.triggerView()，以便使用視覺化體驗撰寫器(VEC)來建立A/B測試和體驗鎖定目標(XT)活動。 如果網站上未實作adobe.target.triggerView()，VEC就無法用於SPA。
 
 **範例**
 
@@ -671,7 +671,7 @@ alloy("sendEvent", {
 
 ## 如何運用回應Token
 
-Adobe Target傳回的個人化內容包括 [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，此為有關活動、選件、體驗、使用者設定檔、地理資訊等專案的詳細資訊。 這些詳細資料可與協力廠商工具共用，或用於偵錯。 可在Adobe Target使用者介面中設定回應Token。
+Adobe Target傳回的個人化內容包括 [回應Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)，此為活動、選件、體驗、使用者設定檔、地理資訊等的詳細資訊。 這些詳細資料可與協力廠商工具共用或用於偵錯。 回應Token可在Adobe Target使用者介面中設定。
 
 ### 使用at.js
 
@@ -692,9 +692,9 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 >[!IMPORTANT]
 >
->確保您使用的是Platform Web SDK 2.6.0版或更新版本。
+>確保您使用Platform Web SDK 2.6.0版或更新版本。
 
-回應Token會作為 `propositions` 在結果中公開的 `sendEvent` 命令。 每個主張都包含一系列 `items`，則每個專案都會有 `meta` 回應Token （若已在Target管理員UI中啟用）已填入物件。 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
+回應Token會作為 `propositions` 在結果中公開的 `sendEvent` 命令。 每個主張都包含一系列 `items`，則每個專案都會有 `meta` 已在Target管理UI中啟用回應Token的物件。 [了解更多](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=en)
 
 **範例**
 
@@ -739,12 +739,12 @@ alloy("sendEvent", {
 
 使用at.js，您可以透過設定來管理忽隱忽現的情形 `bodyHidingEnabled: true` 因此，at.js會在擷取並套用DOM變更之前，負責預先隱藏個人化容器。
 可以透過覆寫at.js預先隱藏包含個人化內容的頁面區段 `bodyHiddenStyle`.
-依預設 `bodyHiddenStyle` 隱藏整個HTML `body`.
-這兩個設定都可以使用覆寫 `window.targetGlobalSettings`. `window.targetGlobalSettings` 應放置在載入at.js之前。
+預設 `bodyHiddenStyle` 隱藏整個HTML `body`.
+這兩個設定都可以覆寫使用 `window.targetGlobalSettings`. `window.targetGlobalSettings` 應放置在載入at.js之前。
 
 ### 使用Web SDK
 
-客戶可以使用Web SDK在configure命令中設定其預先隱藏樣式，如下列範例所示：
+客戶可以使用Web SDK，在configure命令中設定其預先隱藏樣式，如下列範例所示：
 
 ```javascript
 alloy("configure", {
@@ -773,7 +773,7 @@ alloy("configure", {
 
 ### 使用at.js
 
-使用at.js支援兩種A4T記錄型別：
+使用at.js支援兩種A4T記錄：
 
 * Analytics使用者端記錄
 * Analytics伺服器端記錄
@@ -782,7 +782,7 @@ alloy("configure", {
 
 **範例1：使用Target全域設定**
 
-可透過設定來啟用Analytics使用者端記錄 `analyticsLogging: client_side` ，或是覆寫 `window.targetglobalSettings` 物件。
+可透過設定啟用Analytics使用者端記錄 `analyticsLogging: client_side` ，或是覆寫 `window.targetglobalSettings` 物件。
 設定此選項時，傳回的裝載格式如下所示：
 
 ```json
@@ -798,7 +798,7 @@ alloy("configure", {
 
 接著，裝載可透過資料插入API轉送至Analytics。
 
-範例2：設定間隔 `getOffers` 函式：
+範例2：在中設定，每 `getOffers` 函式：
 
 ```javascript
 adobe.target.getOffers({
@@ -854,8 +854,8 @@ Analytics裝載(`tnta` token)應該包含在使用以下專案的Analytics點選
 
 #### Analytics伺服器端記錄
 
-可透過設定來啟用Analytics伺服器端記錄 `analyticsLogging: server_side` ，或是覆寫 `window.targetglobalSettings` 物件。
-然後資料會依照下列方式流動：
+可透過設定啟用Analytics伺服器端記錄 `analyticsLogging: server_side` ，或是覆寫 `window.targetglobalSettings` 物件。
+然後資料會以下列方式流動：
 
 ![](assets/a4t-server-side-atjs.png)
 
@@ -874,7 +874,7 @@ Web SDK也支援：
 
 ![](assets/analytics-disabled-datastream-config.png)
 
-客戶可以存取Analytics權杖(`tnta`)需與Analytics共用的使用者： [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
+客戶有權存取Analytics權杖(`tnta`)需與Analytics共用的使用者 [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 透過鏈結 `sendEvent` 指令，並逐一檢視產生的主張陣列。
 
 **範例**
@@ -914,11 +914,11 @@ alloy("sendEvent", {
 
 #### Analytics伺服器端記錄
 
-Analytics針對該DataStream設定啟用時，會啟用Analytics伺服器端記錄。
+為該DataStream設定啟用Analytics時，便會啟用Analytics伺服器端記錄。
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-啟用伺服器端Analytics記錄時，需要與Analytics共用A4T裝載，如此Analytics報告才會顯示正確的曝光次數，而轉換會在Experience Edge層級共用，因此客戶不必進行任何額外處理。
+啟用伺服器端Analytics記錄時，A4T裝載需要與Analytics共用，以便Analytics報告顯示正確的曝光次數和轉換，並在Experience Edge層級共用，讓客戶不必執行任何其他處理。
 
 以下是啟用伺服器端Analytics記錄時，資料如何流入我們的系統：
 
@@ -930,7 +930,7 @@ Analytics針對該DataStream設定啟用時，會啟用Analytics伺服器端記�
 
 您可以使用 `window.targetGlobalSettings` 覆寫 at.js 資料庫中的設定，而非在 Target Standard/Premium UI 中或使用 REST API 進行設定。
 
-覆寫應在載入at.js之前定義，或在「管理>實作>編輯at.js設定>程式碼設定>資料庫標題」中定義。
+覆寫應在載入at.js之前或在「管理>實作>編輯at.js設定>程式碼設定>資料庫標題」中定義。
 
 範例：
 
@@ -1101,10 +1101,10 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-或者，您也可以設定 `mbox3rdPartyId` 在 `targetPageParams` 或 `targetPageParamsAll`.
-在中設定時 `targetPageParams`，此資訊會以的請求傳送 `target-global-mbox` 也稱為 `pag-lLoad`.
-建議設定方式： `targetPageParamsAll` 因為它會在每個目標要求中傳送。
-使用的優點 `targetPageParamsAll` 表示您可以定義 `mbox3rdPartyId` 一次，即可確保所有target請求都擁有權利 `mbox3rdPartyId`.
+或者，您可以透過其他方式設定 `mbox3rdPartyId` 位於 `targetPageParams` 或 `targetPageParamsAll`.
+在中設定時 `targetPageParams`，它會以的請求傳送 `target-global-mbox` 也稱為 `pag-lLoad`.
+建議應使用進行設定 `targetPageParamsAll` 因為它會在每個目標請求中傳送。
+使用的優點 `targetPageParamsAll` 表示您可以定義 `mbox3rdPartyId` 一次，即可確保所有target請求都正確無誤 `mbox3rdPartyId`.
 
 ```javascript
 window.targetPageParamsAll = function() {
@@ -1156,7 +1156,7 @@ alloy("sendEvent", {
 
 ### 使用at.js
 
-使用at.js設定屬性Token有2種方式，您可使用 `targetPageParams` 或 `targetPageParamsAll`. 使用 `targetPageParams` 將屬性代號新增至 `target-global-mbox` 呼叫，但使用 `targetPageParamsAll` 將token新增至所有target呼叫：
+使用at.js設定屬性代號有2種方式，分別是 `targetPageParams` 或 `targetPageParamsAll`. 使用 `targetPageParams` 將屬性代號新增至 `target-global-mbox` 呼叫，但使用 `targetPageParamsAll` 將權杖新增至所有target呼叫：
 
 **範例 1**
 
@@ -1180,9 +1180,9 @@ window.targetPageParams = function() {
 
 ### 使用Web SDK
 
-客戶透過Web SDK在Adobe Target名稱空間下設定資料串流設定時，可以在較高層級設定屬性：
+使用Web SDK，客戶在設定Adobe Target名稱空間下的資料串流設定時，可以在更高層級設定屬性：
 ![](assets/at-property-setup.png)
-這表示該特定資料流設定的每個Target呼叫都將包含該屬性代號。
+這表示該特定資料流設定的每個Target呼叫都將包含該屬性Token。
 
 ## 如何預先擷取mbox
 
@@ -1211,7 +1211,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-注意：強烈建議確保 `mbox` 在 `mboxes` 陣列有自己的索引。 通常第一個mbox會 `index=0`，下一個專案 `index=1`等。
+注意：強烈建議確保 `mbox` 在 `mboxes` 陣列有自己的索引。 通常第一個mbox會 `index=0`，下一個 `index=1`等
 
 ### 使用Web SDK
 
@@ -1223,18 +1223,18 @@ Web SDK目前不支援此功能。
 
 At.js會公開這些偵錯功能：
 
-* Mbox停用 — 停用Target擷取和轉譯功能，以檢查頁面是否在不與Target互動的情況下損毀
+* Mbox停用 — 停用Target的擷取和轉譯功能，以檢查頁面是否損毀，而不進行Target互動
 * Mbox除錯 — at.js會記錄每個動作
 * 目標追蹤 — 在靶心中產生mbox追蹤權杖時，具有參與決策程式之詳細資訊的追蹤物件可在下找到 `window.___target_trace` 物件
 
-注意：所有這些偵錯功能都可透過下列的增強功能使用： [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+注意：所有這些偵錯功能都可在的增強功能中使用 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 ### 使用Web SDK
 
-使用Web SDK時，您有多項偵錯功能：
+使用Web SDK時，您擁有多項偵錯功能：
 
-* 使用 [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
+* 使用 [保證](../../../assurance/home.md)
 * [Web SDK偵錯已啟用](../../../edge/fundamentals/debugging.md)
-* 使用 [Web SDK監控鉤點](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* 使用 [Web SDK監視鉤點](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * 使用 [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * 目標追蹤

@@ -3,9 +3,9 @@ keywords: 行動；炫耀；傳訊；
 title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1031'
 ht-degree: 1%
 
 ---
@@ -46,13 +46,12 @@ ht-degree: 1%
 
 ## 支援的對象 {#supported-audiences}
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 外部對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

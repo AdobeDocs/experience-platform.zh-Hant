@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: cc864e091f5e3f338f025238572158f555c3ede9
+source-git-commit: 95d7b16efb638c37d8db3f56b0f3fbf6aa9d15df
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 30%
 
 ---
@@ -31,10 +31,10 @@ ht-degree: 30%
    * [概觀](identity/overview.md)
    * [第一方裝置ID](identity/first-party-device-ids.md)
    * [行動裝置對網頁和跨網域ID共用](identity/id-sharing.md)
-* 資料集合 {#data-collection}
+* 資料收集 {#data-collection}
    * [自動收集的資訊](data-collection/automatic-information.md)
    * [追蹤連結](data-collection/track-links.md)
-   * [收集商業和產品資料](data-collection/collect-commerce-data.md)
+   * [收集商務、產品和訂單資料](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [搭配Platform Web SDK使用Adobe Analytics](data-collection/adobe-analytics/analytics-overview.md)
       * [對應Analytics變數](data-collection/adobe-analytics/manually-mapping-variables.md)
@@ -42,7 +42,7 @@ ht-degree: 30%
       * [傳送資料至Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
 * 個人化 {#personalization}
    * [呈現個人化內容](personalization/rendering-personalization-content.md)
-   * [透過混合實作實現個人化](personalization/hybrid-personalization.md)
+   * [透過混合實施進行個人化](personalization/hybrid-personalization.md)
    * [管理忽隱忽現情形](personalization/manage-flicker.md)
    * Adobe Target {#adobe-target}
       * [概觀](personalization/adobe-target/target-overview.md)

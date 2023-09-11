@@ -2,10 +2,10 @@
 title: 事件轉送擴充功能參考
 description: 尋找Adobe Experience Platform中事件轉送擴充功能的檔案。
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 0d931c90b6321d93eec9da16f360a3ecd2fd8f14
+source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 17%
+source-wordcount: '191'
+ht-degree: 20%
 
 ---
 
@@ -22,17 +22,17 @@ ht-degree: 17%
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-以下是伺服器端事件轉送擴充功能的檔案清單。 如需可用使用者端擴充功能的清單，請參閱 [標籤延伸功能參考](../client/overview.md) 而非。
+以下是伺服器端事件轉送擴充功能的檔案清單。 如需可用使用者端擴充功能的清單，請參閱 [標籤擴充功能參考](../client/overview.md) 而非。
 
 >[!NOTE]
 >
->任何擴充功能名稱，後面加上星號(*)，可連結至Adobe交換上的擴充功能清單，其中包含安裝和使用指示。 所有其他連結會指向Adobe Experience League上的擴充功能檔案。
+>任何後面有星號(*)的擴充功能名稱，都會連結至Adobe交換上的擴充功能清單，其中包含安裝和使用指示。 所有其他連結會指向Adobe Experience League上的擴充功能檔案。
 
 * [Adobe Experience Platform雲端聯結器](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
 * [Google Analytics的Cloud Connector](https://exchange.adobe.com/apps/ec/106542)*
-* [Google Analytics4的Cloud Connector](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
+* [Google Analytics 4的Cloud Connector](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)*
 * [核心](./core/overview.md)
 * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)*
 * [Google Ads增強型轉換](./google-ads-enhanced-conversions/overview.md)
@@ -43,8 +43,9 @@ ht-degree: 17%
 * [[!DNL Mixpanel]](./mixpanel/overview.md)
 * [Pega客戶決策中心](https://exchange.adobe.com/apps/ec/107597)*
 * [[!DNL Pinterest]](./pinterest/overview.md)
-* [快照轉換API](https://exchange.adobe.com/apps/ec/108550)*
+* [擷取轉換API](https://exchange.adobe.com/apps/ec/108550)*
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
+* [[!DNL Tiktok] 網頁事件API](https://exchange.adobe.com/apps/ec/109834)*
 * [[!DNL Zendesk] 事件API](./zendesk/overview.md)

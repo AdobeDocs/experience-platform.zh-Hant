@@ -1,9 +1,9 @@
 ---
 description: 瞭解如何透過「/destination-servers」端點為以Adobe Experience Platform Destination SDK建立的檔案型目的地設定檔案格式選項。
 title: 檔案格式設定
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1004'
 ht-degree: 4%
 
 ---
@@ -175,10 +175,10 @@ Destination SDK支援一組彈性的功能，您可以根據整合需求進行�
 
 | 欄位 | 必填/選填 | 說明 | 預設值 | 範例輸出1 | 範例輸出2 |
 |---|---|---|---|---|---|
-| `templatingStrategy` | 必填 | 對於您設定的每個檔案格式選項，您必須新增引數 `templatingStrategy`，其中可以有兩個值： <br><ul><li>`NONE`：如果您不打算允許使用者在設定的不同值之間選取，請使用此值。 另請參閱 [此設定](#file-configuration-templating-none) 例如，檔案格式選項固定的範例。</li><li>`PEBBLE_V1`：如果您希望允許使用者在設定的不同值之間選取，請使用此值。 在此情況下，您還必須在以下欄位中設定對應的客戶資料欄位： `/destination` 端點設定，在UI中向使用者呈現各種選項。 另請參閱 [此設定](#file-configuration-templating-pebble) 例如，使用者可以在不同的檔案格式選項值之間選取。</li></ul> | - | - | - |
+| `templatingStrategy` | 必要 | 對於您設定的每個檔案格式選項，您必須新增引數 `templatingStrategy`，其中可以有兩個值： <br><ul><li>`NONE`：如果您不打算允許使用者在設定的不同值之間選取，請使用此值。 另請參閱 [此設定](#file-configuration-templating-none) 例如，檔案格式選項固定的範例。</li><li>`PEBBLE_V1`：如果您希望允許使用者在設定的不同值之間選取，請使用此值。 在此情況下，您還必須在以下欄位中設定對應的客戶資料欄位： `/destination` 端點設定，在UI中向使用者呈現各種選項。 另請參閱 [此設定](#file-configuration-templating-pebble) 例如，使用者可以在不同的檔案格式選項值之間選取。</li></ul> | - | - | - |
 | `compression.value` | 選填 | 將資料儲存至檔案時使用的壓縮轉碼器。 支援的值： `none`， `bzip2`， `gzip`， `lz4`、和 `snappy`. | `none` | - | - |
 | `fileType.value` | 選填 | 指定輸出檔案格式。 支援的值： `csv`， `parquet`、和 `json`. | `csv` | - | - |
-| `csvOptions.quote.value` | 選填 | *僅用於`"fileType.value": "csv"`*. 設定用於逸出引號值的單一字元，其中分隔符號可以是值的一部分。 | `null` | - | - |
+| `csvOptions.quote.value` | 選填 | *僅用於`"fileType.value": "csv"`*. 設定用於逸出引號值的單一字元，其中分隔符號可以是值的一部分。 | `null` | 預設值範例： `quote.value: "u0000"` —> `male,NULJohn,LastNameNUL` | 自訂範例： `quote.value: "\""` —> `male,"John,LastName"` |
 | `csvOptions.quoteAll.value` | 選填 | *僅用於`"fileType.value": "csv"`*. 指示是否所有值都一律以引號括住。 預設為僅逸出包含引號字元的值。 | `false` | `quoteAll`：`false` —> `male,John,"TestLastName"` | `quoteAll`:`true` -->`"male","John","TestLastName"` |
 | `csvOptions.delimiter.value` | 選填 | *僅用於`"fileType.value": "csv"`*. 為每個欄位和值設定分隔符號。 此分隔符號可為一或多個字元。 | `,` | `delimiter`:`,` --> `comma-separated values"` | `delimiter`:`\t` --> `tab-separated values` |
 | `csvOptions.escape.value` | 選填 | *僅用於`"fileType.value": "csv"`*. 在已引用的值中設定用於逸出引號的單一字元。 | `\` | `"escape"`:`"\\"` --> `male,John,"Test,\"LastName5"` | `"escape"`:`"'"` --> `male,John,"Test,'''"LastName5"` |

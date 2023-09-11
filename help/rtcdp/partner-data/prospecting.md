@@ -1,10 +1,10 @@
 ---
 title: 透過挖掘潛在客戶使用案例吸引並獲取新客戶
 description: 了解如何透過 Real-Time CDP 中合作夥伴資料支援所帶來的挖掘潛在客戶使用案例，來吸引和獲取新客戶。
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 100%
+source-wordcount: '1935'
+ht-degree: 99%
 
 ---
 
@@ -108,7 +108,7 @@ ht-degree: 100%
 
 #### 將協力廠商資料治理標籤新增到結構描述的所有欄位
 
-考慮將協力廠商資料標籤新增到組成結構描述的所有欄位。這對於確保負責任地使用協力廠商資料並將資料洩漏風險降至最低而言非常重要。尋找協力廠商資料治理標籤的更多資訊 (新增 Jordan 文件的連結)
+考慮將協力廠商資料標籤新增到組成結構描述的所有欄位。這對於確保負責任地使用協力廠商資料並將資料洩漏風險降至最低而言非常重要。尋找更多關於以下內容的資訊： [第三方資料控管標籤](../../data-governance/labels/reference.md#partner-ecosystem-labels).
 
 請依照下列步驟執行此操作：
 

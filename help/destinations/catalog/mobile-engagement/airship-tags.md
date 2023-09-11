@@ -3,10 +3,10 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 將Adobe對象資料順暢地傳遞給Airship，作為Airship中用於鎖定目標的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 0%
+source-wordcount: '984'
+ht-degree: 1%
 
 ---
 
@@ -38,13 +38,12 @@ ht-degree: 0%
 
 ## 支援的對象 {#supported-audiences}
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 外部對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

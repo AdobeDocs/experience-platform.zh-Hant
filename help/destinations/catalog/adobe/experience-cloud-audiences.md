@@ -3,9 +3,9 @@ title: (Beta)Experience Cloud對象
 description: 瞭解如何將Experience Platform的受眾分享至各種Experience Platform解決方案。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
-source-wordcount: '1632'
+source-wordcount: '1611'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 透過Experience Cloud Audiences目的地使用新的自助受眾共用整合，以選取要匯出至Audience Manager及其他地方的受眾。 這可讓您決定要與其他Experience Cloud解決方案共用的受眾，以及要專門保留在Experience Platform中的受眾。
 
-舊版對象共用整合無法精確控制要將哪些對象匯出至Audience Manager及其後。
+舊版對象共用整合無法精確控制應將哪些對象匯出至Audience Manager及其後。
 
 ### 與其他Experience Platform解決方案共用Experience Cloud對象 {#share-segments-with-other-solutions}
 
@@ -99,21 +99,18 @@ Note: briefly talk about when to share audiences to these destinations using the
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](/help/identity-service/ecid.md) 以取得詳細資訊。 |
 | GAID | Google廣告ID | 擷取至Experience Platform且主要身分為Google Advertising ID (GAID)的設定檔可匯出至此目的地。 |
 | IDFA | 廣告商適用的Apple ID | 廣告商(IDFA)之主要身分識別為Apple ID的設定檔擷取至Experience Platform，可匯出至此目的地。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | 擷取至Experience Platform的設定檔，其主要識別碼為雜湊電子郵件地址，可匯出至此目的地。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | 以雜湊電子郵件地址為主要身分擷取至Experience Platform的設定檔，可匯出至此目的地。 |
 
 {style="table-layout:auto"}
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以匯出至此目的地的所有對象。
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
-
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

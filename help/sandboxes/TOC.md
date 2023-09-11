@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 中的沙盒說明
 breadcrumb-title: 沙箱指南
 user-guide-description: 將平台執行個體分割至虛擬環境，以進行開發、測試和應用程式部署。
 feature: Sandboxes
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 5675aa0980465b0b1aab18c2ed5869dd5cd64819
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 53%
+source-wordcount: '62'
+ht-degree: 54%
 
 ---
 
@@ -18,8 +18,9 @@ ht-degree: 53%
 * 沙箱UI {#ui}
    * [沙箱UI總覽](ui/overview.md)
    * [沙箱使用手冊](ui/user-guide.md)
+   * [沙箱工具](ui/sandbox-tooling.md)
 * Sandbox API {#api}
-   * [總覽](api/overview.md)
+   * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
    * [可用的沙箱](api/available.md)
    * [沙箱管理](api/sandboxes.md)

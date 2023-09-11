@@ -2,9 +2,9 @@
 title: 設定資料流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: e3f507e010ea2a32042b53d46795d87e82e3fb72
+source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 100%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 100%
 | [!UICONTROL 協力廠商 ID 同步] | 將 ID 同步分組至不同的容器中，即可讓不同的 ID 同步在不同時間執行。啟用後，此設定會讓您指定為此資料流執行哪個 ID 同步的容器。 |
 | [!UICONTROL 協力廠商 ID 同步容器 ID] | 用於協力廠商 ID 同步之容器的數值 ID。 |
 | [!UICONTROL 容器 ID 覆寫] | 在本區段中，您可以定義其他協力廠商 ID 同步容器 ID，以用於覆寫預設的 ID。 |
-| [!UICONTROL 存取類型] | 定義 Edge Network 接受資料流的驗證類型。 <ul><li>**[!UICONTROL 混合驗證]**：選取此選項時，Edge Network 會同時接受已驗證和未驗證的要求。當您計劃使用 Web SDK 或 [Mobile SDK](https://aep-sdks.gitbook.io/docs/) 以及[伺服器 API](../server-api/overview.md) 時，請選取此選項。 </li><li>**[!UICONTROL 僅限已驗證]**：選取此選項時，Edge Network 只接受已驗證的要求。當您計劃只使用伺服器 API 並希望防止 Edge Network 處理任何未驗證的要求時，請選取此選項。</li></ul> |
+| [!UICONTROL 存取類型] | 定義 Edge Network 接受資料流的驗證類型。 <ul><li>**[!UICONTROL 混合驗證]**：選取此選項時，Edge Network 會同時接受已驗證和未驗證的要求。當您計劃使用 Web SDK 或 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) 以及[伺服器 API](../server-api/overview.md) 時，請選取此選項。 </li><li>**[!UICONTROL 僅限已驗證]**：選取此選項時，Edge Network 只接受已驗證的要求。當您計劃只使用伺服器 API 並希望防止 Edge Network 處理任何未驗證的要求時，請選取此選項。</li></ul> |
 
 在這裡，如果您要設定 Experience Platform 的資料流，請依照[資料收集的資料準備](./data-prep.md)教學課程的說明，將資料對應至 Platform 事件綱要，然後才返回本指南。否則，請選取「**[!UICONTROL 儲存]**」，並繼續進行下一區段。
 

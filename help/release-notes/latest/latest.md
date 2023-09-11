@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Adobe Experience Platform 2023年8月版本注意事項。
+description: Adobe Experience Platform 2023 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5181d39e92fbf957f154c3b1dcf4f9af90cfeae9
+source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
 workflow-type: tm+mt
-source-wordcount: '1749'
-ht-degree: 38%
+source-wordcount: '1750'
+ht-degree: 93%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 38%
 Adobe Experience Platform 現有功能的更新：
 
 - [Real-Time Customer Data Platform](#rtcdp)
-- [以屬性為基礎的存取控制](#abac)
+- [屬性型存取控制](#abac)
 - [儀表板](#dashboards)
 - [資料收集](#data-collection)
 - [資料擷取](#data-ingestion)
@@ -37,28 +37,28 @@ Adobe Experience Platform 現有功能的更新：
 
 | 功能 | 說明 |
 | --- | --- |
-| 智慧型重新參與使用案例指南 | 此 [智慧型重新參與](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 使用案例指南提供詳細資訊，說明如何與已放棄轉換的客戶重新互動，然後以聰明負責的方式完成轉換。 本指南使用下列範例歷程來重新吸引客戶： <ul><li>重新參與歷程 — 將目標定位為放棄產品瀏覽的客戶。</li><li>捨棄的購物車歷程 — 鎖定已將產品放入購物車但尚未完成購買的客戶。</li><li>訂單確認歷程 — 著重於產品購買</li></ul> 請使用底部的詳細意見選項連結 [智慧型重新參與使用案例指南](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 以提供意見回饋。 |
-| 合作夥伴資料支援 | 在Real-Time CDP中使用合作夥伴來源的潛在客戶設定檔和合作夥伴ID來執行上層漏斗行銷，以觸及新客戶並豐富您的第一方資料： <ul><li>客戶贏取與定址能力：運用資料合作夥伴選用的無Cookie識別碼和雜湊PII，觸及淨新客戶，並降低第三方Cookie相依性。</li><li>單一系統中的完整漏斗行銷：為單一系統中的潛在和已知客戶自助式細分、對象管理和原生啟用。</li><li>信任基礎：透過專利資料使用、標籤、存取控制及其他向市場銷售的資訊，以負責任的方式控管合作夥伴資料和設定檔。 如需詳細資訊，請參閱下列使用案例指南：現在提供潛在客戶使用案例指南。 閱讀潛在客戶使用案例指南，瞭解如何透過潛在客戶使用案例來吸引和贏取新客戶：<ul><li>[潛在客戶](../../rtcdp/partner-data/prospecting.md)</li><li>[站上個人化](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[補充第一方設定檔](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
+| 智慧型重新吸引使用案例指南 | [智慧型重新吸引](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)使用案例指南會提供有關以智慧且可靠方式重新吸引在完成轉換之前放棄轉換的客戶之詳細資訊。本指南使用以下範例歷程來重新吸引客戶： <ul><li>重新吸引歷程 - 針對有捨棄產品瀏覽的客戶。</li><li>捨棄購物車歷程 - 針對已將產品放入購物車但尚未完成購買的客戶。</li><li>訂單確認歷程 - 著重產品購買</li></ul> 請使用[智慧型重新吸引使用案例指南](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)底部的詳細意見反饋選項連結來提供反饋。 |
+| 合作夥伴資料支援 | 在 Real-Time CDP 中執行漏斗上層行銷，利用合作夥伴提供的潛在客戶資料和合作夥伴 ID 來吸引新客戶並擴充您的第一方資料： <ul><li>客戶贏取和可尋址性：利用所選資料合作夥伴的無 cookie 識別碼和雜湊 PII 來吸引新客戶並減少第三方 cookie 相依性。</li><li>單一系統中的完整漏斗行銷：在單一系統中對潛在客戶和已知客戶進行自助分段、對象管理和原生啟用。</li><li>信任基礎：透過專利資料用量、標籤、存取控制等，以負責方式管理合作夥伴資料和設定檔。請閱讀以下使用案例指南，了解更多資訊：尋找潛在客戶使用案例指南現已推出。閱讀尋找潛在客戶使用案例指南，了解如何透過尋找潛在客戶使用案例吸引和贏得新客戶：<ul><li>[尋找潛在客戶](../../rtcdp/partner-data/prospecting.md)</li><li>[現場個人化](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[補充第一方設定檔](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀 [Real-Time CDP概觀](../../rtcdp/overview.md).
+若要了解更多資訊，請詳閱[Real-Time CDP 概觀](../../rtcdp/overview.md)。
 
-## 以屬性為基礎的存取控制 {#abac}
+## 屬性型存取控制 {#abac}
 
-以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓注重隱私權的品牌在管理使用者存取許可權時擁有更大的彈性。 可以將個別物件（例如綱要欄位和區段）指派給使用者角色。 此功能可讓您為貴組織中的特定Platform使用者，授予或撤銷個別物件的存取權。
+屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別對象指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
 
-透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Platform工作流程與資源的敏感個人資料(SPD)、個人識別資訊(PII)及其他自訂型別資料的存取。 管理員可以定義僅能存取特定欄位的使用者角色，以及對應至這些欄位的資料。
+透過屬性型存取控制，組織的管理員可以控制使用者對所有平台工作流程和資源的存取權限，包括其中的敏感個人資料 (SPD)、個人身分資訊 (PII) 和其他自訂類型資料。管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 許可權原則沙箱設定 | 新的 [許可權原則沙箱設定](../../access-control/abac/ui/policies.md) 功能可讓您根據您的需求和需求，對所有或所選數量的沙箱強制執行以屬性為基礎的存取控制原則。 |
+| 權限原則沙箱設定 | 此項新的[權限原則沙箱設定](../../access-control/abac/ui/policies.md)功能允許您根據本身需要和要求，對所有或特定數量的沙箱實施屬性型存取控制原則。 |
 
 {style="table-layout:auto"}
 
-如需以屬性為基礎的存取控制的詳細資訊，請參閱 [屬性型存取控制概觀](../../access-control/abac/overview.md). 如需以屬性為基礎的存取控制工作流程的完整指南，請參閱 [屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md).
+若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](../../access-control/abac/overview.md)。關於屬性型存取控制工作流程的綜合指南，請閱讀[屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md)。
 
 ## 儀表板 {#dashboards}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 同意分析和追蹤使用案例 | 瞭解如何針對各種行銷使用案例，使用建立Real-Time CDP資料的同意儀表板 [同意分析和追蹤檔案](../../dashboards/insights-use-cases/consent-analysis.md). 它詳細說明如何根據您的業務需求建立具有適當屬性的受眾，然後透過Adobe Experience Platform UI中使用預先設定的Widget來使用深入分析。 它還提供有關如何使用使用者定義儀表板功能建置您自己的自訂Widget的說明。 本檔案涵蓋同意趨勢和同意重疊使用案例。 |
+| 同意分析和追蹤使用案例 | 瞭解如何針對各種行銷使用案例，使用建立Real-Time CDP資料的同意儀表板 [同意分析和追蹤檔案](../../dashboards/insights-use-cases/consent-analysis.md). 此文件會詳細介紹如何建立具備符合您業務需求屬性為主的對象，然後透過使用 Adob&#x200B;&#x200B;e Experience Platform UI 中的預設小工具來獲取深入的分析和見解。此文件還會說明如何使用使用者定義的儀表板功能來構建您自己的自訂小工具。本檔案涵蓋同意趨勢和同意重疊使用案例。 |
 
 {style="table-layout:auto"}
 
@@ -82,11 +82,11 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
-| 標記和事件轉送 | [Experience Platform標籤（中國）](/help/tags/ui/publishing/premium-cdn.md) | 新的Experience Platform標籤（中國）功能改善了網站可靠性和延遲，讓在中國網站上部署標籤的客戶可加快回應時間。 客戶現在可在中國實作網站時，使用標籤資料庫中的JavaScript程式碼。 此功能也已新增至統一布建通訊協定(UPP)，以便在購買後自動部署產品。 |
+| 標記和事件轉送 | [Experience Platform 標籤 (中國)](/help/tags/ui/publishing/premium-cdn.md) | 全新 Experience Platform 標題 (中國) 功能會提高網站可靠性和延遲，進而為中國網站上部署標籤的客戶提供更快的回應時間。現在，客戶在中國實施網站時可以使用標籤庫中的 JavaScript 代碼。此功能也已新增至統一佈建置協定 (Unified Provisioning Protocol，UPP) 中，允許在購買後自動進行產品部署。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀 [資料集合概觀](../../tags/home.md).
+若要了解更多資訊，請詳閱[資料集合概觀](../../tags/home.md)。
 
 ## 資料擷取 {#data-ingestion}
 
@@ -96,9 +96,9 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料擷取工作流程的變更 | 包含大於指定資料型別（例如，以整數資料型別傳遞的長資料）的資料列現在將會遭到拒絕，並會報告錯誤訊息。 以前，這些列會在沒有警告的情況下被拒絕。 |
+| 資料擷取工作流程的變更 | 現在，包含數值大於指定資料類型 (例如，作為整數資料類型傳遞的長資料) 的資料行將被拒絕，且系統會報告錯誤訊息。以前，這些資料行會在沒有警告的情況下被拒絕。 |
 
-如需詳細資訊，請閱讀 [資料擷取概觀](../../ingestion/home.md).
+若要了解更多資訊，請詳閱[資料擷取概觀](../../ingestion/home.md)。
 
 ## 資料準備 {#data-prep}
 
@@ -108,11 +108,11 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 
 | 功能 | 說明 |
 | --- | --- |
-| 支援篩選次要身分 | 您現在可以使用「資料準備」來篩選來自Adobe Analytics的身分，例如AAID和AACUSTOMID。 如果篩選掉，這些身分不會擷取到即時客戶個人檔案中。 未篩選的資料將繼續內嵌至Data Lake。 |
+| 支持篩選次要身分識別 | 您現在可以使用資料準備來篩選來自 Adob&#x200B;&#x200B;e Analytics 的身分識別，例如 AAID 和 AACUSTOMID。若經過篩選去除，這些身分識別將不會被擷取至即時客戶設定檔中。未被篩選去除的資料將繼續被擷取至資料湖。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
+若要了解更多資訊，請詳閱[資料準備概觀](../../data-prep/home.md)。
 
 ## 目的地 {#destinations}
 
@@ -120,14 +120,14 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 
 **新功能或更新的功能** {#destinations-new-updated-functionality}
 
-- 您現在可以 [啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md) 至檔案型目的地。
+- 您現在可以 [啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md) 至雲端儲存空間目的地。
 - 一般 [啟動護欄](../../destinations/guardrails.md#general-activation-guardrails) 每個沙箱最多100個目的地的數量已更新為 _硬限制_.
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (架構)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
 **新的 XDM 元件**
 
@@ -146,7 +146,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀 [XDM系統概覽](../../xdm/home.md).
+若要了更多資訊，請閱讀 [XDM 系統概觀](../../xdm/home.md)。
 
 ## 身分識別服務 {#identity-service}
 
@@ -156,9 +156,9 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 功能 | 說明 |
 | --- | --- |
-| 身分圖表限制的變更 | 在9月底前，身分圖表將變更為每個圖表50個身分，並將擷取最新身分。 因此，系統會根據擷取時間戳記和身分型別刪除最舊的身分，並會先刪除Cookie身分型別。 今天，身分圖表限制每個圖表有150個身分，一旦達到此限制，圖表將不再更新。 如果您的生產沙箱包含： <ul><li>將人員識別碼（例如CRM ID）設定為Cookie/裝置身分型別的自訂名稱空間。</li><li>將cookie/裝置識別碼設定為跨裝置識別型別的自訂名稱空間。</li></ul> Adobe工程將手動處理這些請求。 如需詳細資訊，請閱讀 [Identity Service資料的護欄](../../identity-service/guardrails.md). |
+| 身分識別圖譜限制的變更 | 到了 9 月底，身分識別圖譜將變更為每個圖譜 50 個身分識別，並且最後一個身分識別會被擷取。因此，系統將根據擷取時間戳和身分類型刪除最舊的身分識別，並最先會刪除 cookie 身分識別類型。現在，身分識別圖譜的每個圖譜有 150 個身分識別的限制，一旦達到上限，圖譜就不再更新。如果您的生產沙箱包含以下內容，請聯絡您的客戶代表以要求變更身分識別類型： <ul><li>個人識別碼 (例如 CRM ID) 設定為 cookie/裝置身分識別類型的自訂命名空間。</li><li>cookie/裝置識別碼被設定為跨裝置身分識別類型的自訂命名空間。</li></ul> Adobe 工程部門將手動處理這些要求。若要了解更多資訊，請閱讀[身分識別服務資料的護欄](../../identity-service/guardrails.md)。 |
 
-如需詳細資訊，請閱讀 [Identity Service總覽](../../identity-service/home.md).
+若要了解更多資訊，請詳閱[身分識別服務概觀](../../identity-service/home.md)。
 
 ## Segmentation Service {#segmentation}
 
@@ -168,11 +168,11 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 功能 | 說明 |
 | --- | --- |
-| 相似的對象（可用性限制） | 相似的對象會針對您的每個對象提供智慧型深入分析，運用機器學習式的深入分析，透過您的行銷活動識別及鎖定高價值客戶。 透過相似受眾，您可以建立擴充受眾，將目標鎖定於與您表現優異的受眾類似的客戶，或將目標鎖定於與先前轉換的受眾類似的客戶。 如需相似對象的詳細資訊，請參閱 [相似受眾概述](../../segmentation/ui/lookalike-audiences.md). |
+| 相似的對象 (數量有限) | 相似對象可以為您的每個對象提供智慧型分析見解，運用機器學習型的分析見解來透過行銷活動識別和定位高價值客戶。透過相似對象功能，您可以建立範圍擴大的對象，目標是針對類似高績效對象的客戶或類似先前轉換對象的客戶。若要了解更多相似對象，請閱讀[相似對象概觀](../../segmentation/ui/lookalike-audiences.md)。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀 [區段概觀](../../segmentation/home.md).
+若要了解更多資訊，請詳閱[分段概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
@@ -182,10 +182,10 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| 正式發行 [!DNL SugarCRM] | [!DNL SugarCRM] 來源現已可用。 使用 [!DNL SugarCRM Accounts & Contacts] 和 [!DNL SugarCRM Events] 來源將資料從您的 [!DNL SugarCRM] 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [[!DNL SugarCRM]  概觀](../../sources/connectors/crm/sugarcrm.md)。 |
-| 支援UI中來源資料流的隨選擷取 | 您現在可以在UI中依需求建立現有來源資料流程的流程執行。 如需詳細資訊，請閱讀以下指南： [使用UI建立來源的隨選流程執行](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| 支援新功能 `correlationID` Adobe Analytics的欄位 | 此 `_experience.decisioning.propositions.scopeDetails.correlationID` 欄位現在可在Adobe Analytics來源聯結器結構描述中使用。 此欄位用於支援A4T分類，並將從2023年9月起填入。 |
+| 正式推出 [!DNL SugarCRM] | [!DNL SugarCRM] 來源現已推出。使用 [!DNL SugarCRM Accounts & Contacts] 和 [!DNL SugarCRM Events] 來源將資料從您的 [!DNL SugarCRM] 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [[!DNL SugarCRM]  概觀](../../sources/connectors/crm/sugarcrm.md)。 |
+| 支持 UI 中來源資料流的隨選擷取 | 現在，您可以根據需要為 UI 中的現有來源資料流建立流量執行。若要了解更多資訊，請閱讀[為使用 UI 的來源建立隨選的流量執行](../../sources/tutorials/ui/on-demand-ingestion.md)。 |
+| 支持 Adobe Analytics 新的 `correlationID` 欄位 | `_experience.decisioning.propositions.scopeDetails.correlationID` 欄位現在適用於 Adob&#x200B;&#x200B;e Analytics 來源連接器的結構描述中。此欄位是用來支持 A4T 分類，並將於 2023 年 9 月開始填入。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀 [來源概觀](../../sources/home.md).
+若要了解更多資訊，請詳閱[來源概觀](../../sources/home.md)。
