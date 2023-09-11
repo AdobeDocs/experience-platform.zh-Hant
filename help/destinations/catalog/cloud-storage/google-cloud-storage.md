@@ -3,10 +3,10 @@ title: Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用對象或匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 16365865e349f8805b8346ec98cdab89cd027363
+source-git-commit: 950370683f648771d91689e84c3d782824fb01f4
 workflow-type: tm+mt
-source-wordcount: '1031'
-ht-degree: 0%
+source-wordcount: '1072'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-建立與的即時輸出連線 [!DNL Google Cloud Storage] 以定期從Adobe Experience Platform將資料檔案匯出至您自己的貯體。
+建立與 [!DNL Google Cloud Storage] 的即時輸出連線，定期將資料檔案從 Adobe Experience Platform 匯出至您自己的貯體。
 
 ## 連線至您的 [!DNL Google Cloud Storage] 透過API或UI儲存 {#connect-api-or-ui}
 
@@ -23,15 +23,12 @@ ht-degree: 0%
 
 ## 支援的對象 {#supported-audiences}
 
-本節說明您可以匯出至此目的地的所有對象。
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
-此目的地支援啟用透過Experience Platform產生的所有對象 [分段服務](../../../segmentation/home.md).
-
-*此外*，此目的地也支援下表所述的對象啟用。
-
-| 對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 對象來源 | 支援 | 說明 |
+---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
+| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -90,9 +87,14 @@ ht-degree: 0%
 * **[!UICONTROL 說明]**：選填。 例如，您可以提及要將此目的地用於哪個行銷活動。
 * **[!UICONTROL 貯體名稱]**：輸入 [!DNL Google Cloud Storage] 要由此目的地使用的貯體。
 * **[!UICONTROL 資料夾路徑]**：輸入將託管已匯出檔案之目的地資料夾的路徑。
-* **[!UICONTROL 檔案型別]**：選取用於匯出檔案的Experience Platform格式。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL 檔案型別]**：選取Experience Platform應用於匯出檔案的格式。 選取 [!UICONTROL CSV] 選項，您也可以 [設定檔案格式選項](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL 壓縮格式]**：選取Experience Platform應用於匯出檔案的壓縮型別。
-* **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。
+* **[!UICONTROL 包含資訊清單檔案]**：如果您希望匯出專案包含資訊清單JSON檔案，且檔案中包含有關匯出位置、匯出大小等資訊，請開啟此選項。 資訊清單的命名格式為 `manifest-<<destinationId>>-<<dataflowRunId>>.json`. 檢視 [範例資訊清單檔案](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). 資訊清單檔案包含下列欄位：
+   * `flowRunId`：此 [資料流執行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 產生匯出的檔案。
+   * `scheduledTime`：檔案匯出的時間(UTC)。
+   * `exportResults.sinkPath`：儲存已匯出檔案所在儲存位置的路徑。
+   * `exportResults.name`：匯出的檔案名稱。
+   * `size`：匯出的檔案大小，以位元組為單位。
 
 ### 啟用警示 {#enable-alerts}
 
