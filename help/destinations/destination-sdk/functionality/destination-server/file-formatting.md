@@ -1,9 +1,9 @@
 ---
 description: 瞭解如何透過「/destination-servers」端點為以Adobe Experience Platform Destination SDK建立的檔案型目的地設定檔案格式選項。
 title: 檔案格式設定
-source-git-commit: 511e02f92b7016a7f07dd3808b39594da9438d15
+source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1093'
 ht-degree: 4%
 
 ---
@@ -119,7 +119,11 @@ Destination SDK支援一組彈性的功能，您可以根據整合需求進行�
                 "value": ""
             }
         },
-        "maxFileRowCount":5000000
+        "maxFileRowCount":5000000,
+        "includeFileManifest": {
+            "templatingStrategy":"PEBBLE_V1",
+            "value":"{{ customerData.includeFileManifest }}"
+      }
     }
 ```
 
@@ -160,7 +164,11 @@ Destination SDK支援一組彈性的功能，您可以根據整合需求進行�
             "value":"{% if customerData contains 'csvOptions' and customerData.csvOptions contains 'emptyValue' %}{{customerData.csvOptions.emptyValue}}{% else %}{% endif %}"
          }
       },
-      "maxFileRowCount":5000000
+      "maxFileRowCount":5000000,
+      "includeFileManifest": {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{ customerData.includeFileManifest }}"
+      }
    }
 }
 ```
@@ -192,6 +200,7 @@ Destination SDK支援一組彈性的功能，您可以根據整合需求進行�
 | `csvOptions.charToEscapeQuoteEscaping.value` | 選填 | *僅用於`"fileType.value": "csv"`*. 設定用於逸出引號字元的單一字元。 | `\` 當逸出和引號字元不同時。 `\0` 當逸出和引號字元相同時。 | - | - |
 | `csvOptions.emptyValue.value` | 選填 | *僅用於`"fileType.value": "csv"`*. 設定空值的字串表示。 | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
 | `maxFileRowCount` | 選填 | 表示每個匯出檔案的最大列數，介於1,000,000到10,000,000列之間。 | 5,000,000 |
+| `includeFileManifest` | 選填 | 啟用匯出檔案資訊清單與檔案匯出的支援。 資訊清單JSON檔案包含有關匯出位置、匯出大小等的資訊。 資訊清單的命名格式為 `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | 檢視 [範例資訊清單檔案](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). 資訊清單檔案包含下列欄位： <ul><li>`flowRunId`：此 [資料流執行](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) 產生匯出的檔案。</li><li>`scheduledTime`：檔案匯出的時間(UTC)。 </li><li>`exportResults.sinkPath`：儲存已匯出檔案所在儲存位置的路徑。 </li><li>`exportResults.name`：匯出的檔案名稱。</li><li>`size`：匯出的檔案大小，以位元組為單位。</li></ul> |
 
 {style="table-layout:auto"}
 
