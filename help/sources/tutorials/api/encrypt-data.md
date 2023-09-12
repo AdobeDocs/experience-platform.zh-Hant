@@ -4,9 +4,9 @@ description: 瞭解如何使用API透過雲端儲存批次來源內嵌加密的�
 hide: true
 hidefromtoc: true
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: cd8844121fef79205d57fa979ca8630fc1b1ece4
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1473'
 ht-degree: 2%
 
 ---
@@ -262,7 +262,7 @@ curl -X POST \
 | --- | --- |
 | `flowSpec.id` | 與雲端儲存空間來源對應的流量規格ID。 |
 | `sourceConnectionIds` | 來源連線ID。 此ID代表資料從來源傳輸至Platform的過程。 |
-| `targetConnectionIds` | 目標連線ID。 此ID代表資料在傳入Platform後登陸的位置。 |
+| `targetConnectionIds` | 目標連線ID。 此ID代表資料傳入Platform後著陸的位置。 |
 | `transformations[x].params.mappingId` | 對應ID。 |
 | `transformations.name` | 擷取加密檔案時，您必須提供 `Encryption` 作為資料流的其他轉換引數。 |
 | `transformations[x].params.publicKeyId` | 您建立的公開金鑰ID。 此ID是用來加密雲端儲存體資料的加密金鑰組的一半。 |
@@ -332,6 +332,40 @@ curl -X POST \
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+
+>[!BEGINSHADEBOX]
+
+**週期性內嵌的限制**
+
+加密的資料擷取不支援在來源中擷取循環或多層資料夾。 所有加密的檔案都必須包含在單一資料夾中。 也不支援在單一來源路徑中包含多個資料夾的萬用字元。
+
+以下是支援的資料夾結構範例，來源路徑為 `/ACME-customers/*.csv.gpg`.
+
+在此案例中，粗體的檔案會擷取到Experience Platform中。
+
+* ACME — 客戶
+   * **檔案1.csv.gpg**
+   * File2.json.gpg
+   * **檔案3.csv.gpg**
+   * File4.json
+   * **檔案5.csv.gpg**
+
+以下是不受支援的資料夾結構範例，其中來源路徑為 `/ACME-customers/*`.
+
+在此案例中，流程執行將失敗，並傳回錯誤訊息，指出無法從來源複製資料。
+
+* ACME — 客戶
+   * File1.csv.gpg
+   * File2.json.gpg
+   * Subfolder1
+      * File3.csv.gpg
+      * File4.json.gpg
+      * File5.csv.gpg
+* ACME忠誠度
+   * File6.csv.gpg
+
+>[!ENDSHADEBOX]
 
 ## 後續步驟
 
