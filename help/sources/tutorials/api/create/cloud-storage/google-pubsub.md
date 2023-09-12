@@ -1,11 +1,11 @@
 ---
-title: 使用Flow Service API建立Google PubSub來源連線
-description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至Google PubSub帳戶。
+title: 使用流量服務API建立Google PubSub來源連線
+description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Google PubSub帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '996'
 ht-degree: 1%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 1%
 >
 >此 [!DNL Google PubSub] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
-本教學課程將逐步引導您完成連線的步驟 [!DNL Google PubSub] (以下稱&quot;[!DNL PubSub]&quot;)進行Experience Platform，使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+本教學課程將逐步引導您完成連線的步驟 [!DNL Google PubSub] (以下稱「[!DNL PubSub]&quot;)至Experience Platform，使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Adobe Experience Platform元件：
+本指南需要您深入瞭解下列Adobe Experience Platform元件：
 
 * [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
 * [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
@@ -34,32 +34,32 @@ ht-degree: 1%
 | 認證 | 說明 |
 | ---------- | ----------- |
 | `projectId` | 驗證所需的專案ID [!DNL PubSub]. |
-| `credentials` | 驗證所需的認證或金鑰 [!DNL PubSub]. |
-| `topicName` | 代表訊息摘要的資源名稱。 如果您想要提供對以下專案中的特定資料流的存取權，則必須指定主題名稱： [!DNL PubSub] 來源。 主題名稱格式為： `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
-| `subscriptionName` | 您的名稱 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您透過訂閱訊息已發佈到的主題來接收訊息。 **注意**：單一 [!DNL PubSub] 訂閱只能用於一個資料流。 若要建立多個資料流，您必須有多個訂閱。 訂閱名稱格式為： `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎和來源目標連線相關的驗證規格。 此 [!DNL PubSub] 連線規格ID為： `70116022-a743-464a-bbfe-e226a7f8210c`. |
+| `credentials` | 驗證所需的認證 [!DNL PubSub]. 您必須確保在移除認證的空格後，放入完整的JSON檔案。 |
+| `topicName` | 代表訊息摘要的資源名稱。 如果您想要提供存取許可權以存取中的特定資料流，則必須指定主題名稱。 [!DNL PubSub] 來源。 主題名稱格式為： `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
+| `subscriptionName` | 您的名稱 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您訂閱訊息發佈至的主題，以接收訊息。 **注意**：單一 [!DNL PubSub] 訂閱只能用於一個資料流。 若要建立多個資料流，您必須有多個訂閱。 訂閱名稱格式為： `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器特性，包括與建立基礎和來源目標連線相關的驗證規格。 此 [!DNL PubSub] 連線規格ID為： `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-如需這些值的詳細資訊，請參閱此 [[!DNL PubSub] 驗證](https://cloud.google.com/pubsub/docs/authentication) 檔案。 若要使用以服務帳戶為基礎的驗證，請參閱此 [[!DNL PubSub] 建立服務帳戶的指南](https://cloud.google.com/docs/authentication/production#create_service_account) 瞭解如何產生認證的步驟。
+如需這些值的詳細資訊，請參閱此 [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) 檔案。 若要使用以服務帳戶為基礎的驗證，請參閱此 [[!DNL PubSub] 建立服務帳戶指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生認證的步驟。
 
 >[!TIP]
 >
->如果您使用以服務帳戶為基礎的驗證，在複製和貼上您的認證時，請確保您已授予足夠的使用者存取權給您的服務帳戶，並且JSON中沒有額外的空格。
+>如果您使用以服務帳戶為基礎的驗證，在複製和貼上認證時，請確保您已授予足夠的使用者存取權給您的服務帳戶，並且JSON中沒有額外的空格。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../../landing/api-guide.md).
 
 ## 建立基礎連線
 
-建立來源連線的第一個步驟是驗證您的 [!DNL PubSub] 來源並產生基本連線ID。 基礎連線ID可讓您瀏覽和瀏覽來源內的檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+建立來源連線的第一個步驟是驗證您的 [!DNL PubSub] 來源並產生基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-POST若要建立基本連線ID，請向 `/connections` 端點，同時提供 [!DNL PubSub] 要求引數中的驗證認證。
+若要建立基本連線ID，請向以下連線ID發出POST請求： `/connections` 端點，同時提供 [!DNL PubSub] 要求引數中的驗證認證。
 
 此 [!DNL PubSub] 來源可讓您指定在驗證期間允許使用的存取型別。 您可以將帳戶設定為擁有根存取權，或限制特定專案的存取權 [!DNL PubSub] 主題和訂閱。
 
 >[!NOTE]
 >
->指派給使用者的主體（角色） [!DNL PubSub] 專案會繼承內建立的所有主題和訂閱 [!DNL PubSub] 專案。 如果您希望主參與者（角色）有權存取特定主題，則也必須將該主參與者（角色）新增至主題的對應訂閱。 如需詳細資訊，請閱讀 [[!DNL PubSub] 存取控制檔案](<https://cloud.google.com/pubsub/docs/access-control>).
+>指派給的主體（角色） [!DNL PubSub] 專案會繼承內建立的所有主題和訂閱中 [!DNL PubSub] 專案。 如果您希望主參與者（角色）能夠存取特定主題，則也必須將該主參與者（角色）新增到主題的對應訂閱中。 如需詳細資訊，請閱讀 [[!DNL PubSub] 存取控制檔案](<https://cloud.google.com/pubsub/docs/access-control>).
 
 **API格式**
 
@@ -135,15 +135,15 @@ curl -X POST \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `auth.params.credentials` | 驗證所需的認證或金鑰 [!DNL PubSub]. |
-| `auth.params.topicName` | 的專案ID和主題ID配對 [!DNL PubSub] 您想要提供存取權的來源。 |
-| `auth.params.subscriptionName` | 的專案ID和訂閱ID配對 [!DNL PubSub] 您想要提供存取權的來源。 |
+| `auth.params.topicName` | 專案ID和主題ID配對 [!DNL PubSub] 要提供存取權的來源。 |
+| `auth.params.subscriptionName` | 的專案ID和訂閱ID配對 [!DNL PubSub] 要提供存取權的來源。 |
 | `connectionSpec.id` | 此 [!DNL PubSub] 連線規格ID： `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
 >[!ENDTABS]
 
 **回應**
 
-成功回應會傳回新建立連線的詳細資料，包括其唯一識別碼(`id`)。 建立來源連線的下一個步驟需要此基本連線ID。
+成功的回應會傳回新建立連線的詳細資料，包括其唯一識別碼(`id`)。 建立來源連線的下一個步驟需要此基本連線ID。
 
 ```json
 {
@@ -154,7 +154,7 @@ curl -X POST \
 
 ## 建立來源連線 {#source}
 
-來源連線會建立和管理與擷取資料之外部來源的連線。 來源連線包含資料來源、資料格式等資訊，以及建立資料流所需的來源連線ID。 租使用者和組織專屬的來源連線例項。
+來源連線會建立和管理與擷取資料的外部來源的連線。 來源連線包含資料來源、資料格式等資訊，以及建立資料流所需的來源連線ID。 租使用者和組織專屬的來源連線例項。
 
 POST若要建立來源連線，請向 `/sourceConnections` 的端點 [!DNL Flow Service] API。
 
@@ -195,18 +195,18 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 來源連線的名稱。 確保來源連線的名稱是描述性的，因為您可以使用此名稱來查閱來源連線的資訊。 |
-| `description` | 您可以提供的選用值，包含來源連線的更多資訊。 |
-| `baseConnectionId` | 您的的基本連線ID [!DNL PubSub] 上一步驟中產生的來源。 |
+| `name` | 來源連線的名稱。 確保來源連線的名稱是描述性的，因為您可以使用此名稱來查詢來源連線的資訊。 |
+| `description` | 您可以提供的選用值，包含來源連線的詳細資訊。 |
+| `baseConnectionId` | 您的基本連線ID [!DNL PubSub] 上一步驟中產生的來源。 |
 | `connectionSpec.id` | 的固定連線規格ID [!DNL PubSub]. 此ID為： `70116022-a743-464a-bbfe-e226a7f8210c` |
 | `data.format` | 的格式 [!DNL PubSub] 您要擷取的資料。 目前唯一支援的資料格式為 `json`. |
-| `params.topicName` | 您的名稱 [!DNL PubSub] 主題。 在 [!DNL PubSub]，主題是代表訊息摘要的已命名資源。 |
-| `params.subscriptionName` | 與指定主題對應的訂閱名稱。 在 [!DNL PubSub]，訂閱可讓您從主題讀取訊息。 可以將一個或多個訂閱指派給單一主題。 |
+| `params.topicName` | 您的名稱 [!DNL PubSub] 主題。 在 [!DNL PubSub]，主題是具名資源，代表訊息摘要。 |
+| `params.subscriptionName` | 與指定主題對應的訂閱名稱。 在 [!DNL PubSub]，訂閱可讓您讀取主題的訊息。 可以將一個或多個訂閱指派給單一主題。 |
 | `params.dataType` | 此引數會定義所擷取的資料型別。 支援的資料型別包括： `raw` 和 `xdm`. |
 
 **回應**
 
-成功的回應會傳回唯一識別碼(`id`)。 在下個教學課程中，需要此ID才能建立資料流。
+成功的回應會傳回唯一識別碼(`id`)。 在下一個教學課程中，需要此ID才能建立資料流。
 
 ```json
 {
@@ -217,4 +217,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立 [!DNL PubSub] 來源連線使用 [!DNL Flow Service] API。 您可以在下一個教學課程中使用此來源連線ID來 [使用建立串流資料流 [!DNL Flow Service] API](../../collect/streaming.md).
+依照本教學課程，您已建立 [!DNL PubSub] 來源連線使用 [!DNL Flow Service] API。 您可以在下一個教學課程中使用此來源連線ID： [使用建立串流資料流 [!DNL Flow Service] API](../../collect/streaming.md).
