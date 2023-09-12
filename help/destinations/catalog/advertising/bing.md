@@ -1,11 +1,11 @@
 ---
 keywords: 廣告；bing；
 title: Microsoft Bing連線
-description: 透過Microsoft Bing連線目的地，您可以在Microsoft顯示廣告中執行重新定位以及以對象為目標的數位行銷活動。
+description: 透過Microsoft Bing連線目的地，您可以在整個Microsoft Advertising網路（包括顯示廣告、搜尋和原生）中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '690'
 ht-degree: 8%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 8%
 
 ## 概觀 {#overview}
 
-此 [!DNL Microsoft Bing] 目的地可幫助您傳送設定檔資料至 [!DNL Microsoft Display Advertising].
+使用 [!DNL Microsoft Bing] 將設定檔資料傳送至整個的目的地 [!DNL Microsoft Advertising Network]，包括 [!DNL Display Advertising]， [!DNL Search]、和 [!DNL Native].
+
+此 [!DNL Microsoft Bing] 目的地建立 *[!DNL Custom Audiences]* 在Microsoft中。 這些選項都可在 [!DNL Microsoft Search Network] 和 [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic])中所列的) [Microsoft Advertising檔案](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 若要傳送設定檔資料至 [!DNL Microsoft Bing]，您必須先連線至目的地。
 
 ## 使用案例 {#use-cases}
 
-身為行銷人員，我想要能夠使用由下列專案建立的對象： [!DNL Microsoft Advertising IDs] 透過「 」中的顯示廣告鎖定使用者 [!DNL Microsoft Advertising] 管道。
+身為行銷人員，我想要能夠使用由下列專案建立的對象： [!DNL Microsoft Advertising IDs] 若要透過顯示或搜尋廣告鎖定使用者，請 [!DNL Microsoft Advertising] 管道。
 
 ## 支援的身分 {#supported-identities}
 
@@ -74,7 +76,7 @@ ht-degree: 8%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 連線引數 {#parameters}
+### 填寫目的地詳細資料 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
