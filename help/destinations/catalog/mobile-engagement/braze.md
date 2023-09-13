@@ -3,9 +3,9 @@ keywords: 行動；炫耀；傳訊；
 title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e2317201ae4810734714cea6c5d172ea6a542f5b
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -163,6 +163,14 @@ ht-degree: 1%
 ## 匯出的資料 {#exported-data}
 
 驗證資料是否已成功匯出至 [!DNL Braze] 目的地，請檢視您的 [!DNL Braze] 帳戶。 [!DNL Adobe Experience Platform] 對象已匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。
+
+## 疑難排解 {#troubleshooting}
+
+**將我的對象啟用至此目的地時，我收到逾時錯誤。 我應該怎麼做？**
+
+有時，此目的地的對象啟用可能會導致逾時錯誤。 此錯誤並不表示有啟用問題。
+
+如果您收到逾時錯誤，請檢查目的地平台中的對象人數。 如果對象人數正確，則整合可如預期運作。
 
 ## 資料使用與控管 {#data-usage-governance}
 
