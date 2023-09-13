@@ -4,19 +4,15 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7264d94a03f0ba19da90559b156ecaace0d8f95
+source-git-commit: 823f781e59fe7f5f15620a2b99f9c0c1e7144666
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3633'
 ht-degree: 11%
 
 ---
 
 
 # 啟用對象以批次設定檔匯出目的地
-
->[!IMPORTANT]
-> 
-> 客戶尚未普遍使用頁面上說明的功能。 本頁目前適用於Adobe內部團隊，作為未來功能的預先閱讀。 移除此附註前，請勿在Adobe外部共用。
 
 >[!IMPORTANT]
 > 
@@ -202,7 +198,7 @@ ht-degree: 11%
 
 設定完所有對象後，選取「 」 **[!UICONTROL 下一個]** 以繼續。
 
-## 映射 {#mapping}
+## 對應 {#mapping}
 
 在此步驟中，您必須選取要新增至匯出至目標目的地之檔案的設定檔屬性。 若要選取要匯出的設定檔屬性和身分：
 
