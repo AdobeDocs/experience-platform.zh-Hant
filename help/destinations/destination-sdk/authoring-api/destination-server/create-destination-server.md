@@ -1,7 +1,7 @@
 ---
-description: 此頁面是透過Adobe Experience Platform Destination SDK建立目的地伺服器所使用的API呼叫的範例。
-title: 建立目的地伺服器設定
-source-git-commit: ca4fb2dce097197aa1a97e0716e6294546bfee38
+description: 此頁面是用來透過Adobe Experience Platform Destination SDK建立目的地伺服器的API呼叫的範例。
+title: 建立目的地伺服器組態
+source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 9%
@@ -9,30 +9,30 @@ ht-degree: 9%
 ---
 
 
-# 建立目的地伺服器設定
+# 建立目的地伺服器組態
 
-使用Destination SDK建立自己的目的地時，第一步是建立目的地伺服器。 目的地伺服器包含 [伺服器](../../functionality/destination-server/server-specs.md) 和 [範本](../../functionality/destination-server/templating-specs.md) 規格， [訊息格式](../../functionality/destination-server/message-format.md)，以及 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 選項（適用於檔案型目的地）。
+使用Destination SDK建立自己的目的地時，第一步是建立目的地伺服器。 目的地伺服器包含下列專案的組態選項： [伺服器](../../functionality/destination-server/server-specs.md) 和 [範本](../../functionality/destination-server/templating-specs.md) 規格， [訊息格式](../../functionality/destination-server/message-format.md)，以及 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 選項（適用於以檔案為基礎的目的地）。
 
-此頁面以範例說明API請求和裝載，您可使用這些API請求和裝載來建立自己的目的地伺服器。 `/authoring/destination-servers` api端點。
+此頁面以範例說明API請求和裝載，您可使用這些API請求和裝載使用建立自己的目的地伺服器。 `/authoring/destination-servers` api端點。
 
-如需可透過此端點設定的功能的詳細說明，請閱讀以下文章：
+如需可透過此端點設定的功能的詳細說明，請參閱以下文章：
 
 * [以Destination SDK建立的目的地的伺服器規格](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [以Destination SDK建立的目的地的範本規格](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [使用Destination SDK建立之目的地的範本規格](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [訊息格式](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [檔案格式設定](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
-## 建立目的地伺服器設定 {#create}
+## 建立目的地伺服器組態 {#create}
 
-您可以建立新的目的地伺服器組態，方法是 `POST` 向以下專案提出的請求： `/authoring/destination-servers` 端點。
+您可以建立新的目的地伺服器組態，方法是 `POST` 要求給 `/authoring/destination-servers` 端點。
 
 >[!TIP]
 >
@@ -44,15 +44,15 @@ ht-degree: 9%
 POST /authoring/destination-servers
 ```
 
-根據您建立的目的地型別，您需要設定稍微不同的目的地伺服器型別。
+視您建立的目的地型別而定，您需要設定稍有不同的目的地伺服器型別。
 
-### 建立靜態結構描述目的地伺服器 {#static-destination-servers}
+### 建立靜態綱要目的地伺服器 {#static-destination-servers}
 
-請參閱下方標籤中的目的地伺服器範例，瞭解使用的目的地 [靜態結構描述](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
+請參閱下方標籤中目標伺服器範例，瞭解使用的目的地 [靜態結構描述](../../functionality/destination-configuration/schema-configuration.md#attributes-schema).
 
-以下範例裝載包含每個目的地伺服器型別支援的所有引數。 您不需要在請求中包含所有引數。 可根據您的需求自訂裝載。
+以下範例裝載包含每種目的地伺服器型別支援的所有引數。 您不需要在請求中包含所有引數。 可根據您的需求自訂裝載。
 
-選取下方的每個標籤，以檢視對應的API請求。
+選取底下的每個標籤以檢視對應的API請求。
 
 >[!BEGINTABS]
 
@@ -60,7 +60,7 @@ POST /authoring/destination-servers
 
 **建立即時（串流）目的地伺服器**
 
-您需要建立即時（串流）目的地伺服器，類似於當您設定即時（串流） API型整合時顯示的伺服器。
+您需要建立類似於以下所示的即時（串流）目的地伺服器，以設定即時（串流） API型整合。
 
 +++請求
 
@@ -94,14 +94,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | *必填。* 代表伺服器的易記名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
-| `destinationServerType` | 字串 | *必填。* 設定為 `URL_BASED` 適用於即時（串流）目的地。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 欄位。 如果您擁有類似以下的端點，請使用此選項 `https://api.moviestar.com/data/{{customerData.region}}/items`，其中 `region` 部分可能會因客戶而異。 在此情況下，您也需要設定 `region` as a [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 在 [目的地設定](../destination-configuration/create-destination-configuration.md. </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有如下端點： `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | 字串 | *必填。* 填入Experience Platform應連線的API端點位址。 |
-| `httpTemplate.httpMethod` | 字串 | *必填。* Adobe將在對伺服器呼叫中使用的方法。 選項包括 `GET`， `PUT`， `POST`， `DELETE`， `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | 字串 | *必填。* 此字串是字元逸出版本，可將Platform客戶的資料轉換為您的服務預期格式。 <br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀 [使用範本區段](../../functionality/destination-server/message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 如需簡單轉換的範例，請參閱 [設定檔屬性](../../functionality/destination-server/message-format.md#attributes) 轉換。 </li></ul> |
-| `httpTemplate.contentType` | 字串 | *必填。* 您的伺服器接受的內容型別。 此值很有可能 `application/json`. |
+| `name` | 字串 | *必要.* 代表伺服器的易記名稱，僅對Adobe可見。 合作夥伴或客戶看不到此名稱。 範例 `Moviestar destination server`. |
+| `destinationServerType` | 字串 | *必要.* 將設為 `URL_BASED` 適用於即時（串流）目的地。 |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 下方的欄位。 如果您有類似以下的端點，請使用此選項 `https://api.moviestar.com/data/{{customerData.region}}/items`，其中 `region` 部分可能會因客戶而異。 在此情況下，您也需要設定 `region` as a [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 在 [目的地設定](../destination-configuration/create-destination-configuration.md. </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有類似以下的端點： `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | 字串 | *必要.* 填寫Experience Platform應連線的API端點位址。 |
+| `httpTemplate.httpMethod` | 字串 | *必要.* Adobe將在對伺服器呼叫中使用的方法。 選項包括 `GET`， `PUT`， `POST`， `DELETE`， `PATCH`. |
+| `httpTemplate.requestBody.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | 字串 | *必要.* 此字串是字元逸出版本，可將Platform客戶的資料轉換為您的服務預期格式。 <br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀 [使用範本區段](../../functionality/destination-server/message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 如需簡單轉換的範例，請參閱 [設定檔屬性](../../functionality/destination-server/message-format.md#attributes) 轉換。 </li></ul> |
+| `httpTemplate.contentType` | 字串 | *必要.* 您的伺服器接受的內容型別。 此值極有可能 `application/json`. |
 
 {style="table-layout:auto"}
 
@@ -117,7 +117,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **建立Amazon S3目的地伺服器**
 
-您需要建立 [!DNL Amazon S3] 目的地伺服器，類似於當您設定檔案型伺服器時顯示的伺服器 [!DNL Amazon S3] 目的地。
+您需要建立 [!DNL Amazon S3] 目的地伺服器，類似於當您設定檔案型伺服器時所顯示的伺服器 [!DNL Amazon S3] 目的地。
 
 +++請求
 
@@ -208,11 +208,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 對象 [!DNL Amazon S3]，將此專案設為 `FILE_BASED_S3`. |
-| `fileBasedS3Destination.bucket.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
+| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 的 [!DNL Amazon S3]，將此設為 `FILE_BASED_S3`. |
+| `fileBasedS3Destination.bucket.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
 | `fileBasedS3Destination.bucket.value` | 字串 | 的名稱 [!DNL Amazon S3] 要由此目的地使用的貯體。 |
-| `fileBasedS3Destination.path.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `fileBasedS3Destination.path.value` | 字串 | 存放匯出檔案的目標資料夾路徑。 |
+| `fileBasedS3Destination.path.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `fileBasedS3Destination.path.value` | 字串 | 目的地資料夾的路徑，此資料夾將裝載匯出的檔案。 |
 | `fileConfigurations` | 不適用 | 另請參閱 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 以取得如何設定這些設定的詳細資訊。 |
 
 {style="table-layout:auto"}
@@ -229,7 +229,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **建立 [!DNL SFTP] 目的地伺服器**
 
-您需要建立 [!DNL SFTP] 目的地伺服器，類似於當您設定檔案型伺服器時顯示的伺服器 [!DNL SFTP] 目的地。
+您需要建立 [!DNL SFTP] 目的地伺服器，類似於當您設定檔案型伺服器時所顯示的伺服器 [!DNL SFTP] 目的地。
 
 +++請求
 
@@ -244,7 +244,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 {
    "name":"File-based SFTP destination server",
    "destinationServerType":"FILE_BASED_SFTP",
-   "fileBasedSftpDestination":{
+   "fileBasedSFTPDestination":{
       "rootDirectory":{
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.rootDirectory}}"
@@ -318,11 +318,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 對象 [!DNL SFTP] 目的地，設定為 `FILE_BASED_SFTP`. |
-| `fileBasedSftpDestination.rootDirectory.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `fileBasedSftpDestination.rootDirectory.value` | 字串 | 目的地儲存體的根目錄。 |
-| `fileBasedSftpDestination.hostName.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `fileBasedSftpDestination.hostName.value` | 字串 | 目的地儲存體的主機名稱。 |
+| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 的 [!DNL SFTP] 目的地，將此專案設為 `FILE_BASED_SFTP`. |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.rootDirectory.value` | 字串 | 目的地儲存體的根目錄。 |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `fileBasedSFTPDestination.hostName.value` | 字串 | 目的地儲存體的主機名稱。 |
 | `port` | 整數 | SFTP檔案伺服器連線埠。 |
 | `encryptionMode` | 字串 | 指示是否使用檔案加密。 支援的值： <ul><li>PGP</li><li>None</li></ul> |
 | `fileConfigurations` | 不適用 | 另請參閱 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 以取得如何設定這些設定的詳細資訊。 |
@@ -341,7 +341,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **建立 [!DNL Azure Data Lake Storage] 目的地伺服器**
 
-您需要建立 [!DNL Azure Data Lake Storage] 目的地伺服器，類似於當您設定檔案型伺服器時顯示的伺服器 [!DNL Azure Data Lake Storage] 目的地。
+您需要建立 [!DNL Azure Data Lake Storage] 目的地伺服器，類似於當您設定檔案型伺服器時所顯示的伺服器 [!DNL Azure Data Lake Storage] 目的地。
 
 +++請求
 
@@ -428,9 +428,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 對象 [!DNL Azure Data Lake Storage] 目的地，設定為 `FILE_BASED_ADLS_GEN2`. |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `fileBasedAdlsGen2Destination.path.value` | 字串 | 存放匯出檔案的目標資料夾路徑。 |
+| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 的 [!DNL Azure Data Lake Storage] 目的地，將此專案設為 `FILE_BASED_ADLS_GEN2`. |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `fileBasedAdlsGen2Destination.path.value` | 字串 | 目的地資料夾的路徑，此資料夾將裝載匯出的檔案。 |
 | `fileConfigurations` | 不適用 | 另請參閱 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 以取得如何設定這些設定的詳細資訊。 |
 
 {style="table-layout:auto"}
@@ -447,7 +447,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **建立 [!DNL Azure Blob Storage] 目的地伺服器**
 
-您需要建立 [!DNL Azure Blob Storage] 目的地伺服器，類似於當您設定檔案型伺服器時顯示的伺服器 [!DNL Azure Blob Storage] 目的地。
+您需要建立 [!DNL Azure Blob Storage] 目的地伺服器，類似於當您設定檔案型伺服器時所顯示的伺服器 [!DNL Azure Blob Storage] 目的地。
 
 +++請求
 
@@ -538,10 +538,10 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 對象 [!DNL Azure Blob Storage] 目的地，設定為 `FILE_BASED_AZURE_BLOB`. |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `fileBasedAzureBlobDestination.path.value` | 字串 | 存放匯出檔案的目標資料夾路徑。 |
-| `fileBasedAzureBlobDestination.container.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
+| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 的 [!DNL Azure Blob Storage] 目的地，將此專案設為 `FILE_BASED_AZURE_BLOB`. |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `fileBasedAzureBlobDestination.path.value` | 字串 | 目的地資料夾的路徑，此資料夾將裝載匯出的檔案。 |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.container.value` | 字串 | 的名稱 [!DNL Azure Blob Storage] 此目的地要使用的容器。 |
 | `fileConfigurations` | 不適用 | 另請參閱 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 以取得如何設定這些設定的詳細資訊。 |
 
@@ -559,7 +559,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **建立 [!DNL Data Landing Zone (DLZ)] 目的地伺服器**
 
-您需要建立 [!DNL Data Landing Zone (DLZ)] 目的地伺服器，類似於當您設定檔案型伺服器時顯示的伺服器 [!DNL Data Landing Zone (DLZ)] 目的地。
+您需要建立 [!DNL Data Landing Zone (DLZ)] 目的地伺服器，類似於當您設定檔案型伺服器時所顯示的伺服器 [!DNL Data Landing Zone (DLZ)] 目的地。
 
 +++請求
 
@@ -647,9 +647,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 對象 [!DNL Data Landing Zone] 目的地，設定為 `FILE_BASED_DLZ`. |
-| `fileBasedDlzDestination.path.templatingStrategy` | 字串 | *必填。*  使用 `PEBBLE_V1`. |
-| `fileBasedDlzDestination.path.value` | 字串 | 存放匯出檔案的目標資料夾路徑。 |
+| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 的 [!DNL Data Landing Zone] 目的地，將此專案設為 `FILE_BASED_DLZ`. |
+| `fileBasedDlzDestination.path.templatingStrategy` | 字串 | *必要.*  使用 `PEBBLE_V1`. |
+| `fileBasedDlzDestination.path.value` | 字串 | 目的地資料夾的路徑，此資料夾將裝載匯出的檔案。 |
 | `fileConfigurations` | 不適用 | 另請參閱 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 以取得如何設定這些設定的詳細資訊。 |
 
 {style="table-layout:auto"}
@@ -666,7 +666,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **建立 [!DNL Google Cloud Storage] 目的地伺服器**
 
-您需要建立 [!DNL Google Cloud Storage] 目的地伺服器，類似於當您設定檔案型伺服器時顯示的伺服器 [!DNL Google Cloud Storage] 目的地。
+您需要建立 [!DNL Google Cloud Storage] 目的地伺服器，類似於當您設定檔案型伺服器時所顯示的伺服器 [!DNL Google Cloud Storage] 目的地。
 
 +++請求
 
@@ -757,11 +757,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | 參數 | 類型 | 說明 |
 |---|---|---|
 | `name` | 字串 | 目的地連線的名稱。 |
-| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 對象 [!DNL Google Cloud Storage] 目的地，設定為 `FILE_BASED_GOOGLE_CLOUD`. |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 字串 | *必填。*  使用 `PEBBLE_V1`. |
+| `destinationServerType` | 字串 | 根據您的目的地平台設定此值。 的 [!DNL Google Cloud Storage] 目的地，將此專案設為 `FILE_BASED_GOOGLE_CLOUD`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | 字串 | *必要.*  使用 `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.bucket.value` | 字串 | 的名稱 [!DNL Google Cloud Storage] 要由此目的地使用的貯體。 |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `fileBasedGoogleCloudStorageDestination.path.value` | 字串 | 存放匯出檔案的目標資料夾路徑。 |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.path.value` | 字串 | 目的地資料夾的路徑，此資料夾將裝載匯出的檔案。 |
 | `fileConfigurations` | 不適用 | 另請參閱 [檔案格式設定](../../functionality/destination-server/file-formatting.md) 以取得如何設定這些設定的詳細資訊。 |
 
 {style="table-layout:auto"}
@@ -778,9 +778,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ### 建立動態結構描述目的地伺服器 {#dynamic-schema-servers}
 
-動態方案可讓您動態擷取支援的目標屬性，並根據您自己的API產生方案。 您必須先設定動態結構描述的目的地伺服器，才能設定結構描述。
+動態方案可讓您動態擷取支援的目標屬性，並根據您自己的API產生方案。 您必須先設定動態綱要的目的地伺服器，才能設定綱要。
 
-請參閱下方標籤中的目的地伺服器範例，瞭解使用的目的地 [動態結構描述](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
+在底下的標籤中，檢視使用的目的地的目的地伺服器範例 [動態結構描述](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 
 以下範例裝載包含動態結構描述伺服器所需的所有引數。
 
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **建立動態結構描述伺服器**
 
-設定從您自己的API端點擷取其設定檔結構描述的目的地時，您需要建立類似於以下顯示的動態結構描述伺服器。 相對於靜態結構描述，動態結構描述不會使用 `profileFields` 陣列。 動態結構描述會改用動態結構描述伺服器，該伺服器會從其中擷取結構描述設定，連線到您自己的API。
+設定從您自己的API端點擷取設定檔方案的目的地時，您需要建立類似於以下顯示的動態方案伺服器。 相對於靜態結構描述，動態結構描述不會使用 `profileFields` 陣列。 動態方案會改用動態方案伺服器，此伺服器會連線至您自己的API，從其中擷取方案設定。
 
 +++請求
 
@@ -826,13 +826,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `name` | 字串 | *必填。* 代表動態結構描述伺服器的易記名稱，僅對Adobe可見。 |
-| `destinationServerType` | 字串 | *必填。* 設定為 `URL_BASED` 適用於動態結構描述伺服器。 |
-| `urlBasedDestination.url.templatingStrategy` | 字串 | *必填.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 欄位。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有如下端點： `https://api.moviestar.com/data/items`.</li></ul> |
-| `urlBasedDestination.url.value` | 字串 | *必填。* 填寫Experience Platform應連線的API端點位址，並擷取結構描述欄位，以填入為啟動工作流程對應步驟中的目標欄位。 |
-| `httpTemplate.httpMethod` | 字串 | *必填。* Adobe將在對伺服器呼叫中使用的方法。 對於動態結構描述伺服器，請使用 `GET`. |
-| `responseFields.templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `responseFields.value` | 字串 | *必填。* 此字串是字元逸出轉換範本，可將從合作夥伴API收到的回應轉換為將顯示在平台UI中的合作夥伴結構描述。 <br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀 [使用範本區段](../../functionality/destination-server/message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 如需簡單轉換的範例，請參閱 [設定檔屬性](../../functionality/destination-server/message-format.md#attributes) 轉換。 </li></ul> |
+| `name` | 字串 | *必要.* 代表動態結構描述伺服器的易記名稱，僅對Adobe可見。 |
+| `destinationServerType` | 字串 | *必要.* 將設為 `URL_BASED` 用於動態結構描述伺服器。 |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 下方的欄位。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有類似以下的端點： `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | 字串 | *必要.* 填寫Experience Platform應連線的API端點位址，並擷取結構描述欄位，以填入為啟動工作流程對應步驟中的目標欄位。 |
+| `httpTemplate.httpMethod` | 字串 | *必要.* Adobe將在對伺服器呼叫中使用的方法。 對於動態結構描述伺服器，請使用 `GET`. |
+| `responseFields.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `responseFields.value` | 字串 | *必要.* 此字串是字元逸出轉換範本，可將從合作夥伴API收到的回應轉換為將顯示在平台UI中的合作夥伴結構描述。 <br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀 [使用範本區段](../../functionality/destination-server/message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). </li><li> 如需簡單轉換的範例，請參閱 [設定檔屬性](../../functionality/destination-server/message-format.md#attributes) 轉換。 </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -849,19 +849,19 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟 {#next-steps}
 
 閱讀本檔案後，您現在知道如何透過Destination SDK建立新的目的地伺服器 `/authoring/destination-servers` api端點。
 
-若要進一步瞭解您可以使用此端點做什麼，請參閱下列文章：
+若要深入瞭解您可以使用此端點的功能，請參閱下列文章：
 
 * [擷取目的地伺服器設定](retrieve-destination-server.md)
 * [更新目的地伺服器設定](update-destination-server.md)
 * [刪除目的地伺服器設定](delete-destination-server.md)
 
-若要瞭解此端點適用於目的地撰寫程式的位置，請參閱下列文章：
+若要瞭解此端點適用於目標製作程式的位置，請參閱下列文章：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-server-template-configuration)
-* [使用Destination SDK設定檔案型目的地](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
+* [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
