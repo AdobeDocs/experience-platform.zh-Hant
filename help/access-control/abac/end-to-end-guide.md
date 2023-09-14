@@ -3,16 +3,16 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 屬性型存取控制端對端指南
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的端對端指南
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: cf10eb11773320d10ece53f192beacc8da83e980
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 19%
+source-wordcount: '1748'
+ht-degree: 21%
 
 ---
 
 # 以屬性為基礎的存取控制端對端指南
 
-以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓重視隱私權的多品牌客戶在管理使用者存取許可權時擁有更大的彈性。 個別物件（例如綱要欄位和區段）的存取權可根據物件的屬性和角色以原則授予/拒絕。 此功能可讓您為貴組織中的特定Platform使用者，授予或撤銷個別物件的存取權。
+以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓重視隱私權的多品牌客戶在管理使用者存取許可權時擁有更大的彈性。 個別物件（例如綱要欄位和區段）的存取權可根據物件的屬性和角色以原則授予/拒絕。 此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
 
 此功能可讓您使用定義組織或資料使用範圍的標籤，將結構描述欄位、區段等分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義有關Experience Data Model (XDM)結構描述欄位的存取原則，並更好地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
 
@@ -29,7 +29,7 @@ ht-degree: 19%
    * [結構描述編輯器教學課程](../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構編輯器UI建立自訂結構描述。
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)：內的分段引擎 [!DNL Platform] 用於根據客戶行為和屬性，從您的客戶設定檔建立對象區段。
 
-### 使用案例概述
+### 使用案例概觀
 
 您將透過以屬性為基礎的存取控制工作流程範例，在此範例中，您將建立並指派角色、標籤和原則，以設定使用者是否可以存取組織中的特定資源。 本指南以限制存取敏感資料為例，示範工作流程。 此使用案例概述如下：
 
@@ -254,4 +254,8 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 您已完成將標籤套用至角色、結構描述欄位和區段。 指派給這些角色的外部機構無法檢視這些標籤，及其在結構描述、資料集和設定檔檢視中的值。 使用區段產生器時，這些欄位也限制用於區段定義。
 
-如需以屬性為基礎的存取控制的詳細資訊，請參閱 [屬性型存取控制概觀](./overview.md).
+若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](./overview.md)。
+
+以下影片旨在協助您瞭解屬性型存取控制，並概述如何設定角色、資源和原則。
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)

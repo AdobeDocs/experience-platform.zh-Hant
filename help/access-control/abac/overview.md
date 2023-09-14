@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制概述
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的相關資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
 workflow-type: tm+mt
-source-wordcount: '1825'
-ht-degree: 16%
+source-wordcount: '1847'
+ht-degree: 18%
 
 ---
 
@@ -20,7 +20,11 @@ ht-degree: 16%
 >
 >以屬性為基礎的存取控制不應與Experience Platform的資料控管功能混淆，後者可讓您使用標籤和原則來控制資料在Platform中的使用方式，而非組織中的哪些使用者有權存取資料。 請參閱 [資料治理總覽](../../data-governance/home.md) 以取得詳細資訊。
 
-透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Platform工作流程和資源的敏感個人資料(SPD)、個人識別資訊(PII)和自訂資料型別的存取。 管理員可以定義僅能存取特定欄位的使用者角色，以及對應至這些欄位的資料。
+透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Platform工作流程和資源的敏感個人資料(SPD)、個人識別資訊(PII)和自訂資料型別的存取。 管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
+
+以下影片旨在協助您瞭解屬性型存取控制，並概述如何設定角色、資源和原則。
+
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## 以屬性為基礎的存取控制術語
 
@@ -76,7 +80,7 @@ ht-degree: 16%
 
 ### 目的地 {#destinations}
 
-[!DNL Destinations] 是預先建立的與目標平台的整合，可順暢地從Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 身為管理員，您可以使用基於屬性的存取控制功能來：
 
