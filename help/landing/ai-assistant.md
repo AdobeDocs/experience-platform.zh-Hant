@@ -4,7 +4,7 @@ description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和R
 badge: Alpha
 hide: true
 hidefromtoc: true
-source-git-commit: 55d2518cdded50bcc8d6f7cc36f29581c5e64dab
+source-git-commit: 704d47b0e37825508705402ab2401636f46ef23f
 workflow-type: tm+mt
 source-wordcount: '2369'
 ht-degree: 0%
@@ -286,5 +286,3 @@ AI Assistant可能會提供其功能的錯誤印象。 它可能會錯誤地回�
 | 我最大的區段是什麼？ | 我最大的區段是什麼？ 使用資料。 | 明確告知AI助理，您希望答案以資料為基礎。 |
 | 我最大的區段是什麼？ | 列出我最大的區段。 | 在某些情況下，「什麼……」問題可能會被誤認為檔案型問題。 使用類似「list」的命令是較強化的指標，表示您對上下文中的資料存有疑問。 |
 | 我有多少資料集？ | 計算我的資料集。 | 原始問題適用於區段，但可能不適用於資料集。 |
-
-
