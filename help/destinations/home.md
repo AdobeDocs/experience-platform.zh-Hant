@@ -1,11 +1,10 @@
 ---
-keywords: 目的地；adobe experience platform；平台；目的地概觀；啟用資料；啟用；
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的「目的地」，針對跨頻道行銷活動、電子郵件行銷活動、鎖定特定目標的廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: ce1aec87b827b6e8626018846bc6f438834fff54
+source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '956'
 ht-degree: 4%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 4%
 
 ![目的地概觀橫幅](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+**[!DNL Destinations]** 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -64,6 +63,7 @@ Platform中的目標功能可搭配Adobe Experience Platform存取控制許可�
 | **[!UICONTROL 管理目的地]** | 若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). |
 | **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** | 若要對目的地啟用對象，並啟用 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 的工作流程中，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). |
 | **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用沒有對應的區段]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** | 若要對目的地啟用對象並隱藏 [對應步驟](ui/activate-batch-profile-destinations.md#mapping) 的工作流程中，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用沒有對應的區段]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). |
+| **[!UICONTROL 檢視身分圖表]** | 要匯出 *身分* 若要前往目的地，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
