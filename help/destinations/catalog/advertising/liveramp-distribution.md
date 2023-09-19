@@ -3,9 +3,9 @@ title: LiveRamp — 散發連線
 description: 瞭解如何使用LiveRamp - Distribution聯結器將先前上線到LiveRamp的受眾啟用到其他廣告目的地。
 hide: true
 hidefromtoc: true
-source-git-commit: c04c7ff4f1ab45d944f4ab516d7842df536fae40
+source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1469'
 ht-degree: 40%
 
 ---
@@ -140,7 +140,9 @@ ht-degree: 40%
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="廣告商資料目標條款合約"
 >abstract="輸入 `I AGREE` 確認 Disney 廣告商資料條款的認可與合約。"
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="閱讀合約"
+
+<!-- 
+>additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
