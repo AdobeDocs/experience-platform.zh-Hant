@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 333f98a74e69f50ae356231733924d1c6793ddf1
+source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1159'
 ht-degree: 9%
 
 ---
@@ -22,15 +22,14 @@ ht-degree: 9%
    * [不同目的地類型的設定檔匯出行為](./how-destinations-work/profile-export-behavior.md)
    * [目的地啟動工作流程中的身分處理](./how-destinations-work/identity-handling.md)
 * API教學課程 {#api}
-   * [雲端儲存空間目的地的API移轉指南](/help/destinations/api/api-migration-guide-cloud-storage-destinations.md)
+   * [使用流程服務API啟用檔案型目的地的資料](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [使用流量服務API連線到串流目的地並啟用資料](./api/streaming-destinations.md)
-   * [連線至批次雲端儲存空間及電子郵件行銷目標，並使用流量服務API啟用資料](./api/connect-activate-batch-destinations.md)
+   * [連線至檔案式電子郵件行銷目的地，並使用流量服務API啟用資料](./api/connect-activate-batch-destinations.md)
    * [（測試版）透過臨機啟動API將受眾啟動至批次目的地](./api/ad-hoc-activation-api.md)
    * [編輯目的地](./api/edit-destination.md)
    * [更新目的地資料流](./api/update-destination-dataflows.md)
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
-   * [（測試版）使用流量服務API啟用檔案型目的地的資料](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [(Beta)匯出資料集](/help/destinations/api/export-datasets.md)
 * UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
