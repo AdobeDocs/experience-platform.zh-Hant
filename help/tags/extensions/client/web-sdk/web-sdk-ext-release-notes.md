@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ba75669eeaef9fc023e7c33265ec1e5dbada9534
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1758'
 ht-degree: 37%
 
 ---
@@ -145,7 +145,7 @@ ht-degree: 37%
 
 包含 2.7.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 在「傳送事件完成」事件中可取得來自Experience Edge的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。 如需詳細資訊，請參閱 [追蹤事件。](../../../../edge/fundamentals/tracking-events.md)
+* 在「傳送事件完成」事件中可取得來自Edge Network的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。 如需詳細資訊，請參閱 [追蹤事件。](../../../../edge/fundamentals/tracking-events.md)
 
 ## 2.7.3版 — 2021年9月7日
 

@@ -2,17 +2,17 @@
 solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API快速入門
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 5%
+source-wordcount: '958'
+ht-degree: 6%
 
 ---
 
 
 # Media Edge API快速入門
 
-本指南提供成功與Media Edge API服務進行初始互動的說明。 這包括開始媒體工作階段，然後追蹤傳送至Adobe Experience Platform解決方案(例如Customer Journey Analytics (CJA))的事件。 Media Edge API服務是以工作階段開始端點啟動。 工作階段開始後，即可追蹤下列一或多個事件：
+本指南提供成功與Media Edge API服務進行初始互動的說明。 這包括啟動媒體工作階段，然後追蹤傳送至Adobe Experience Platform解決方案(例如Customer Journey Analytics (CJA))的事件。 Media Edge API服務是以工作階段開始端點啟動。 工作階段開始後，即可追蹤下列一或多個事件：
 
 * `play`
 * `ping`
@@ -32,7 +32,7 @@ ht-degree: 5%
 * `sessionComplete`
 * `statesUpdate`
 
-每個事件都有自己的端點。 所有Media Edge API端點都是POST方法，事件資料都有JSON要求內文。 如需Media Edge API端點、引數和範例的詳細資訊，請參閱 [Media Edge Swagger檔案](swagger.md).
+每個事件都有自己的端點。 所有Media Edge API端點皆為POST方法，事件資料皆有JSON要求內文。 如需Media Edge API端點、引數和範例的詳細資訊，請參閱 [Media Edge Swagger檔案](swagger.md).
 
 本指南說明如何在啟動工作階段後追蹤下列事件：
 
@@ -42,7 +42,7 @@ ht-degree: 5%
 
 ## 實作 API {#implement-api}
 
-除了在模型和路徑上呼叫的細微差異以外，Media Edge API與有相同的實作 [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). Media Collection的實作詳細資訊對Media Edge API仍然有效，如下列檔案所述：
+除了在模型和路徑上呼叫的細微差異，Media Edge API的實作與相同 [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). Media Collection的實作詳細資訊對Media Edge API而言仍然有效，如下列檔案所述：
 
 * [在播放器中設定 HTTP 要求類型](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
 * [傳送 Ping 事件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
@@ -51,7 +51,7 @@ ht-degree: 5%
 
 ## Authorization {#authorization}
 
-目前，Media Edge API的請求不需要授權標頭。
+目前，Media Edge API的請求中不需要授權標頭。
 
 
 ## 啟動工作階段 {#start-session}
@@ -62,9 +62,9 @@ ht-degree: 5%
 
 * 此 `datastreamId`—POST工作階段開始要求的必要引數。 擷取 `datastreamId`，請參閱 [設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant).
 
-* 請求承載的JSON物件，包含最低要求資料（如以下請求範例所示）。
+* 要求裝載的JSON物件包含最低要求資料（如以下範例要求所示）。
 
-取得此資訊後，請提供 `datastreamId` 在以下呼叫中：
+取得此資訊後，請提供 `datastreamId` 在下列呼叫中：
 
 **POST**  `https://edge.adobedc.net/ee-pre-prd/va/v1/sessionStart?configId={datastream ID} \`
 
@@ -97,14 +97,14 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 }'
 ```
 
-在上述範例要求中， `eventType` 值包含前置詞 `media.` 根據 [體驗資料模型(XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant) 用於指定網域。
+在上述範例請求中， `eventType` 值包含前置詞 `media.` 根據 [體驗資料模型(XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant) 用於指定網域。
 
 此外，資料型別對應 `eventType` 在上述範例中，如下所示：
 
-| 事件型別 | 資料型別 |
+| eventType | 資料型別 |
 | -------- | ------ |
 | media.SessionStart | [sessionDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/sessiondetails.schema.md) |
-| media.chapterStart | [chapterDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
+| media.chapterStart | [chapterdetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/chapterdetails.schema.md) |
 | media.adBreakStart | [advertisingPodDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingpoddetails.schema.md) |
 | media.adStart | [advertisingDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/advertisingdetails.schema.md) |
 | media.error | [errorDetails](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/errordetails.schema.md) |
@@ -114,7 +114,7 @@ curl -i --request POST '{uri}/ee/va/v1/sessionStart?configId={dataStreamId}' \
 
 ### 範例回應
 
-下列範例顯示工作階段開始請求的成功回應：
+下列範例顯示階段作業開始請求的成功回應：
 
 ```
 HTTP/2 200
@@ -162,16 +162,16 @@ x-content-type-options: nosniff
 }
 ```
 
-在上述範例回應中， `sessionId` 顯示為 `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. 您將在後續事件請求中使用此ID作為必要引數。
+在上述範例回應中， `sessionId` 顯示為 `af8bb22766e458fa0eef98c48ea42c9e351c463318230e851a19946862020333`. 您將在後續事件要求中使用此ID作為必要引數。
 
-如需工作階段開始端點引數和範例的詳細資訊，請參閱 [Media Edge Swagger](swagger.md) 檔案。
+如需有關「工作階段開始」端點引數和範例的詳細資訊，請參閱 [Media Edge Swagger](swagger.md) 檔案。
 
 如需XDM媒體資料引數的詳細資訊，請參閱 [媒體詳細資訊結構描述](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/mediadetails.schema.md#xdmplayhead).
 
 
 ## 緩衝開始事件要求 {#buffer-start}
 
-緩衝在媒體播放器上開始時，緩衝開始事件會發出訊號。 「緩衝繼續」不是API服務中的事件；而是在緩衝開始後傳送播放事件時推斷。 若要提出「緩衝開始」事件要求，請使用 `sessionId` 在呼叫的裝載中至下列端點：
+「緩衝開始」事件會在媒體播放器上緩衝開始時發出訊號。 緩衝恢復不是API服務中的事件；而是在緩衝開始後傳送播放事件時推斷。 若要提出「緩衝開始」事件要求，請使用 `sessionId` 在呼叫的裝載中，呼叫下列端點：
 
 **POST**  `https://edge.adobedc.net/ee-pre-prd/va/v1/bufferStart \`
 
@@ -200,22 +200,22 @@ curl -X 'POST' \
 }'
 ```
 
-在上述範例要求中，相同的 `sessionId` 先前呼叫中傳回的引數，會作為緩衝開始請求中的必要引數使用。
+在上述範例請求中，相同的 `sessionId` 先前呼叫中傳回的引數，會作為緩衝開始要求中的必要引數使用。
 
-成功回應表示200狀態，不包含任何內容。
+成功的回應指出狀態為200，不包含任何內容。
 
-如需「緩衝開始」端點引數和範例的詳細資訊，請參閱 [Media Edge Swagger](swagger.md) 檔案。
+如需有關「緩衝開始」端點引數和範例的詳細資訊，請參閱 [Media Edge Swagger](swagger.md) 檔案。
 
 
 ## 播放事件要求 {#play-event}
 
-當媒體播放器將其狀態從其他狀態（例如「正在緩衝」、「已暫停」或「錯誤」）變更為「正在播放」時，就會傳送「播放」事件。 若要提出「播放」事件請求，請使用 `sessionId` 在呼叫的裝載中至下列端點：
+當媒體播放器將其狀態從其他狀態（例如「正在緩衝」、「已暫停」或「錯誤」）變更為「正在播放」時，就會傳送「播放」事件。 若要提出「播放」事件要求，請使用 `sessionId` 在呼叫的裝載中，呼叫下列端點：
 
 **POST**  `https://edge.adobedc.net/ee-pre-prd/va/v1/play \`
 
 ### 範例請求
 
-以下範例顯示Play cURL要求：
+下列範例顯示Play cURL要求：
 
 ```
 curl -X 'POST' \
@@ -238,13 +238,13 @@ curl -X 'POST' \
 }'
 ```
 
-成功回應表示200狀態，不包含任何內容。
+成功的回應指出狀態為200，不包含任何內容。
 
 如需「播放」端點引數和範例的詳細資訊，請參閱 [Media Edge Swagger](swagger.md) 檔案。
 
 ## 工作階段完成事件要求 {#session-complete}
 
-到達主要內容的結尾時，會傳送「工作階段完成」事件。 若要提出「工作階段完成」事件請求，請使用 `sessionId` 在呼叫的裝載中至下列端點：
+到達主要內容的結尾時，會傳送「工作階段完成」事件。 若要提出「工作階段完成」事件要求，請使用 `sessionId` 在呼叫的裝載中，呼叫下列端點：
 
 **POST**  `https://edge.adobedc.net/ee-pre-prd/va/v1/sessionComplete \`
 
@@ -273,9 +273,9 @@ curl -X 'POST' \
 }'
 ```
 
-成功回應表示200狀態，不包含任何內容。
+成功的回應指出狀態為200，不包含任何內容。
 
-如需「工作階段完成」端點引數和範例的詳細資訊，請參閱 [Media Edge Swagger](swagger.md) 檔案。
+如需有關「工作階段完成」端點引數和範例的詳細資訊，請參閱 [Media Edge Swagger](swagger.md) 檔案。
 
 ## 回應代碼
 
@@ -284,8 +284,8 @@ curl -X 'POST' \
 | 狀態 | 說明 |
 | ---------- | --------- |
 | 200 | 工作階段已成功建立 |
-| 207 | 連線至Experience Edge Network的其中一個服務發生問題(請參閱 [疑難排解指南](troubleshooting.md)) |
-| 400級 | 錯誤請求 |
+| 207 | 連線至Edge Network的其中一個服務發生問題(請參閱 [疑難排解指南](troubleshooting.md)) |
+| 400層級 | 錯誤請求 |
 | 500層級 | Server error |
 
 ## 更多有關此功能的說明

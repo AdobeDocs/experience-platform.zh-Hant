@@ -4,7 +4,7 @@ description: 瞭解Adobe Experience Platform Edge Network Server API如何識別
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
 keywords: 邊緣網路；閘道；API；訪客；識別
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 5%
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Edge Network Server API支援 [透過第一方ID識別訪客([!DNL FPID])](visitor-identification-fpid.md).
 
-所有使用者身分識別應提供於 `identityMap` 欄位群組。 此欄位群組包含在AEP Web SDK中 `ExperienceEvent` mixin.
+所有使用者身分都必須在 `identityMap` 欄位群組。 此欄位群組包含在AEP Web SDK中 `ExperienceEvent` mixin。
 
 ```json
 {
@@ -38,11 +38,11 @@ Edge Network Server API支援 [透過第一方ID識別訪客([!DNL FPID])](visit
 
 ## 裝置識別碼 {#identifiers}
 
-在Edge Network中識別裝置有多種方式。 請參閱下表，瞭解支援的ID概述。
+在Edge Network中識別裝置的方法有很多種。 請參閱下表，瞭解支援的ID概述。
 
 | ID名稱空間 | 管理者 | 說明 |
 | --- | --- | --- |
-| `FPID` | Customer | `FPID` 將自動編碼為 `ECID` 因此，需要具備以下條件的解決方案： `ECID` 也會運作。  <br><br> 為了取得一致的裝置識別，這些ID必須儲存在裝置上，並在每個請求時提供。 針對網頁互動，這涉及將其儲存為瀏覽器Cookie。 |
+| `FPID` | Customer | `FPID` 將會自動編碼成 `ECID` 由Edge Network提供，因此需要 `ECID` 也會運作。  <br><br> 為了取得一致的裝置識別，這些ID必須保留在裝置上並在每個請求中提供。 針對網頁互動，這涉及將其儲存為瀏覽器Cookie。 |
 | `IDFA`/`GAID` | Experience Platform | 可以跨應用程式識別使用者，因此這些ID不會編碼為 `ECID` 由Edge Network提供。 |
 
 <!--
@@ -50,7 +50,7 @@ Edge Network Server API支援 [透過第一方ID識別訪客([!DNL FPID])](visit
 -->
 
 <!--
-## Experience Edge Identity Protocol {#experience-edge-identity-protocol}
+## Edge Network Identity Protocol {#experience-edge-identity-protocol}
 
 Device identities like `ECID` must be persisted on the client device and supplied on each request in the session and across sessions. Having stable device identities across multiple sessions improves the accuracy levels in your reports and allows delivering a consistent experience to the visitors.
 
@@ -157,6 +157,6 @@ The caller must explicitly activate this functionality via the `meta.state.cooki
 
 >[!NOTE]
 >
->The `meta.state.domain` is an optional value which a caller could supply, specifying the exact domain on which the cookies should be stored. When this is missing, Experience Edge can automatically infer the top-level domain from the request. Automatic client state management via browser cookies **should never be used** in a `server` interaction.
+>The `meta.state.domain` is an optional value which a caller could supply, specifying the exact domain on which the cookies should be stored. When this is missing, the Edge Network can automatically infer the top-level domain from the request. Automatic client state management via browser cookies **should never be used** in a `server` interaction.
 
 -->

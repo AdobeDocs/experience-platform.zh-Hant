@@ -3,7 +3,7 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '2281'
 ht-degree: 6%
@@ -918,7 +918,7 @@ alloy("sendEvent", {
 
 ![](assets/analytics-enabled-datastream-config.png)
 
-啟用伺服器端Analytics記錄時，A4T裝載需要與Analytics共用，以便Analytics報告顯示正確的曝光次數和轉換，並在Experience Edge層級共用，讓客戶不必執行任何其他處理。
+啟用伺服器端Analytics記錄時，A4T裝載需要與Analytics共用，好讓Analytics報告顯示正確的曝光次數和轉換，才能在Edge Network層級共用，讓客戶不需要執行任何其他處理。
 
 以下是啟用伺服器端Analytics記錄時，資料如何流入我們的系統：
 

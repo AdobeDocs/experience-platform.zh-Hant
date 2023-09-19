@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；開發人員指南；Data Science Workspace；熱門主題；即時機器學習；
+keywords: Experience Platform；開發人員指南；資料科學工作區；熱門主題；即時機器學習；
 solution: Experience Platform
 title: Real-time Machine Learning快速入門
-description: 以下檔案概述在Adobe Experience Platform中建立Real-time Machine Learning模型所需的步驟。
+description: 以下檔案概述在Adobe Experience Platform中建立即時機器學習模型所需的步驟。
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -15,26 +15,26 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->即時機器學習尚未開放所有使用者使用。 此功能目前處於Alpha測試階段，仍在測試中。 此檔案可能會有變動。
+>即時機器學習尚未開放所有使用者使用。 此功能目前處於Alpha測試階段，仍在測試中。 本檔案可能會有所變更。
 
-若要使用即時機器學習，您必須具備已布建Adobe Experience Platform的組織的存取權，並且 [!DNL Data Science Workspace]. 此外，您還需要完整資料集，才能用於訓練和評分。
+若要利用即時機器學習，您需要存取已布建Adobe Experience Platform的組織，並 [!DNL Data Science Workspace]. 此外，您還需要完整資料集，才能用於訓練和評分。
 
 即時機器學習指南需要實際瞭解Python 3， [Jupyter Notebooks](../jupyterlab/overview.md)、資料科學和機器學習。
 
 **主要條款：**
 
 - **DSL：** 網域特定語言。
-- **Edge：** Real-time Machine Learning評分服務可在距離您啟動和應用程式較近的邊緣叢集上執行。
-- **集線器：** 目前的Alpha在Adobe Experience Platform Hub上執行Real-time Machine Learning評分服務，而Experience Edge Network正在開發中。
-- **節點：** 節點是形成圖形的基本單位。 每個節點會執行特定工作，而且它們可以使用連結連結連結在一起，以形成代表ML管道的圖形。 節點所執行的任務代表對輸入資料的操作，例如資料或結構描述的轉換，或機器學習推斷。 節點會將轉換或推斷的值輸出到下一個節點。
+- **Edge：** 即時機器學習評分服務可在離您的啟用和應用程式較近的邊緣叢集上執行。
+- **中心：** 目前Alpha正在Adobe Experience Platform中心執行Real-time Machine Learning評分服務，而Edge Network正在開發中。
+- **節點：** 節點是形成圖形的基本單位。 每個節點會執行特定工作，而且它們可以使用連結連結連結在一起，以形成代表ML管道的圖形。 節點所執行的作業代表對輸入資料的操作，例如資料或結構描述的轉換，或機器學習推斷。 節點會將轉換或推斷的值輸出到下一個節點。
 
 ## Adobe Experience Platform中的資料集
 
-若要開始使用Real-time Machine Learning，您必須擁有資料集的存取權。 您可以選擇使用外部資料集並將其上傳至 [!DNL JupyterLab] 環境或在Platform中建立新資料集（如果尚未這麼做的話）。
+若要開始使用Real-time Machine Learning，您必須有權存取資料集。 您可以選擇使用外部資料集並將其上傳至 [!DNL JupyterLab] 環境或在Platform中建立新資料集（如果尚未這麼做的話）。
 
 >[!NOTE]
 >
->如果您已有資料集要使用，可以跳至 [後續步驟](#next-steps).
+>如果您已有資料集要使用，可跳至 [後續步驟](#next-steps).
 
 ### 使用外部資料集
 
@@ -42,10 +42,10 @@ ht-degree: 0%
 
 ### 建立新的資料集
 
-若要建立新資料集以用於Real-time Machine Learning，您的資料集需要資料結構描述。 接下來，您需要使用您建立的結構描述擷取資料。 使用下列教學課程來建立和填入資料集 [!DNL Platform]：
+若要建立用於即時機器學習的新資料集，您需要資料集的資料結構描述。 接下來，您需要使用您建立的結構描述內嵌資料。 使用下列教學課程來建立和填入資料集 [!DNL Platform]：
 
 - [在API中建立並填入資料集](../../catalog/datasets/create.md)
-- [在UI中建立並填入資料集](../../ingestion/tutorials/ingest-batch-data.md)
+- [在UI中建立及填入資料集](../../ingestion/tutorials/ingest-batch-data.md)
 
 ## 後續步驟 {#next-steps}
 

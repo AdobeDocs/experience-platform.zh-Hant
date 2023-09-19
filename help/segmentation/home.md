@@ -3,16 +3,16 @@ solution: Experience Platform
 title: 分段服務總覽
 description: 瞭解Adobe Experience Platform區段服務，以及此服務在平台生態系統中所扮演的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 44c92e2163e2b6c0c140c64bba41dfbcc15d5d7f
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1633'
+source-wordcount: '1635'
 ht-degree: 12%
 
 ---
 
 # [!DNL Segmentation Service] 概覽
 
-Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您透過區段定義或其他來源，從 [!DNL Real-Time Customer Profile] 資料。 這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adob&#x200B;&#x200B;e 解決方案輕鬆存取。
+Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您透過區段定義或其他來源，從 [!DNL Real-Time Customer Profile] 資料。 這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 本檔案提供以下專案的概觀： [!DNL Segmentation Service] 以及它在Adobe Experience Platform中扮演的角色。
 
@@ -32,7 +32,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ## 建立對象
 
-您可以在Adobe Experience Platform上以兩種不同的方式建立對象：直接構成對象或透過Platform衍生的區段定義。
+可以在 Adobe Experience Platform 以兩種不同方式建立對象 - 直接組成對象或透過平台衍生的區段定義。
 
 ### 對象構成
 
@@ -84,15 +84,15 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 
 每24小時自動評估批次對象。 如果您想要依需求評估批次對象，則可以使用區段工作。 若要深入瞭解區段工作，請參閱 [區段作業檔案](./api/segment-jobs.md).
 
-### 邊緣細分 {#edge}
+### 邊緣分段 {#edge}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="邊緣評估"
->abstract="邊緣分段指在 Experience Edge 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
+>abstract="邊緣區段能在Edge Network上即時評估Platform中的區段，啟用相同頁面和下一頁個人化使用案例。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=zh-Hant" text="邊緣分段服務 UI 指南"
 
-邊緣區段是即時評估Platform中區段的能力 [在Experience Edge上](../edge/home.md)，啟用相同頁面和下一頁個人化使用案例。
+邊緣區段是即時評估Platform中區段的能力 [在Edge Network](../edge/home.md)，啟用相同頁面和下一頁個人化使用案例。
 
 若要深入瞭解邊緣細分，請閱讀 [API檔案](./api/edge-segmentation.md) 或 [UI檔案](./ui/edge-segmentation.md).
 

@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 49624d51d6868fa951fe70b29715142b3cbad55b
+source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1589'
 ht-degree: 3%
@@ -118,7 +118,7 @@ ht-degree: 3%
 * 已針對單頁應用程式最佳化檢視 — 變更事件。 呈現個人化體驗時，顯示通知現在會包含在檢視 — 變更事件中。
 * 沒有時移除主控台警告 `eventType` 存在。
 * 修正的問題： `propositions` 屬性只從 `sendEvent` 要求或從快取中擷取體驗時的命令。 此 `propositions` 屬性現在一律會定義為陣列。
-* 修正從Adobe Experience Edge傳回錯誤時，未顯示隱藏容器的問題。
+* 修正從Edge Network傳回錯誤時，未顯示隱藏容器的問題。
 * 修正Adobe Target中未計算Interact事件的問題。 已透過在web.webPageDetails.viewName將檢視名稱新增至XDM來修正此問題。
 * 修正主控台訊息中的中斷檔案連結。
 
@@ -130,7 +130,7 @@ ht-degree: 3%
 
 ## 2.7.0版 — 2021年10月26日
 
-* 在來自的傳回值中公開Experience Edge的其他資訊 `sendEvent`，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。 如需詳細資訊，請參閱 [追蹤事件。](fundamentals/tracking-events.md)
+* 在來自的傳回值中公開來自Edge Network的其他資訊 `sendEvent`，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。 如需詳細資訊，請參閱 [追蹤事件。](fundamentals/tracking-events.md)
 
 ## 2.6.4版 — 2021年9月7日
 
