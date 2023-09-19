@@ -1,9 +1,9 @@
 ---
 title: 計算屬性常見問題
 description: 瞭解關於使用計算屬性的常見問題解答。
-source-git-commit: fb5d3088b9fb330153bf64125df2f739eee80518
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # 常見問答
 
 在Adobe Experience Platform中，計算屬性是用來將事件層級資料彙總至設定檔層級屬性的函式。 這些函式會自動計算，以便用於區段、啟用和個人化。 以下是有關計算屬性的常見問題清單。
+
+## 如何取得計算屬性的存取權？
+
+若要存取計算屬性，您必須具備適當的許可權(**檢視計算屬性** 和 **管理計算屬性**)。 如需有關所需許可權的詳細資訊，請參閱 [存取控制檔案](../../access-control/home.md). 若要瞭解如何套用這些許可權，請參閱 [managing permissions指南](../../access-control/ui/permissions.md).
 
 ## 哪些資料集有助於計算屬性計算？
 
@@ -76,10 +80,6 @@ ht-degree: 0%
 ## 如何在運算屬性上套用資料使用標籤？
 
 計算屬性會自動從用來定義計算屬性的來源欄位和資料集衍生資料使用標籤。 這可確保適當地使用您的行為資料。
-
-## 如何取得存取權運算屬性？
-
-若要存取計算屬性，您必須有適當的許可權。 如需有關所需許可權的詳細資訊，請參閱 [存取控制檔案](../../access-control/home.md).
 
 ## 如何將運算屬性用於Adobe Journey Optimizer？
 

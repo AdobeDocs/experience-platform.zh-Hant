@@ -1,15 +1,19 @@
 ---
 title: 計算屬性UI指南
 description: 瞭解如何使用Adobe Experience Platform UI建立、檢視和更新計算屬性。
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
 
 
 # 計算屬性UI指南
+
+>[!NOTE]
+>
+>若要存取計算屬性，您必須具備適當的許可權(**檢視計算屬性** 和 **管理計算屬性**)。 如需有關所需許可權的詳細資訊，請參閱 [存取控制檔案](../../access-control/home.md). 若要瞭解如何套用這些許可權，請參閱 [managing permissions指南](../../access-control/ui/permissions.md).
 
 在Adobe Experience Platform中，計算屬性是用來將事件層級資料彙總至設定檔層級屬性的函式。 這些函式會自動計算，以便用於區段、啟用和個人化。
 
