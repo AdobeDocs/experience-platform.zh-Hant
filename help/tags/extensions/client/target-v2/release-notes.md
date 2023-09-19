@@ -2,10 +2,10 @@
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: ffbb68c9c84b834984e1adb2640d8806ce9f9962
+source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 24%
+source-wordcount: '691'
+ht-degree: 22%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 24%
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
+## v0.19.3 （2023年9月18日）
+
+- 更新以支援at.js v2.10.3。
+- 修正在未呈現任何選件時，錯誤觸發at-content-rendering-succeeded自訂事件的問題。 現在會觸發正確的事件at-content-rendering-no-offers 。
+- 已針對at-content-rendering-failed自訂事件將eventToken和responseToken新增至錯誤物件。
+
 ## v0.19.2 （2023年2月14日）
 
 - 修正允許將逾時設為資料元素的問題。
@@ -22,7 +28,7 @@ ht-degree: 24%
 ## v0.19.1 （2023年2月3日）
 
 - 更新以支援 `at.js` v2.10.1
-- 使用者端自訂Mbox引數現在可正確支援點標籤法
+- 使用者端自訂Mbox引數現在可以正確支援點標籤法
 - VEC中不再進行傳遞呼叫
 
 ## v0.19.0 （2022年9月19日）
@@ -38,9 +44,9 @@ ht-degree: 24%
 ## v0.17.1 （2022年1月28日）
 
 - 更新以支援 `at.js` v2.8.1
-- 固定 `pageLoad` 未對應到 `target-global-mbox` 在ODD混合執行模式下
-- 已修正的分析詳細資料問題 `mbox` 請求
-- 升級開發相依性以修正安全性弱點
+- 固定 `pageLoad` 未對應到 `target-global-mbox` 在ODD混合執行模式中
+- 修正分析詳細資料的問題 `mbox` 請求
+- 升級開發相依性以修正安全漏洞
 
 ## v0.17.0 （2022年1月7日）
 
@@ -52,25 +58,25 @@ ht-degree: 24%
 
 ## v0.15.1 （2021年7月20日）
 
-- 已修正的問題 `stringify` 函式名稱衝突，導致產生的UUID值不正確 `sessionId`， `requestId`、等等。
+- 已修正的問題 `stringify` 函式名稱衝突，導致為產生錯誤的UUID值 `sessionId`， `requestId`、等等。
 
 ## v0.15.0 （2021年7月16日）
 
 - 每當發生以下情況時，為Cookie新增安全屬性： `at.js` 設定secureOnly設為true
-- 回應Token現在可使用於 `triggerView()`
-- 修正與相關的錯誤 `CONTENT_RENDERING_NO_OFFERS` 事件。 現在只要沒有從Target傳回內容，就會正確觸發
+- 現在可以在使用時使用回應Token `triggerView()`
+- 修正與相關的錯誤 `CONTENT_RENDERING_NO_OFFERS` 事件。 現在，只要沒有從Target傳回內容，就會正確觸發它
 - 使用預先擷取請求時，會正確傳回A4T點選量度詳細資料
-- UUID產生不再使用 `Math.random()`，但須仰賴 `window.crypto`
+- UUID產生不再使用 `Math.random()`，但仰賴 `window.crypto`
 - `sessionId` Cookie過期在每次網路呼叫時會正確延長
-- SPA檢視快取初始化現在可以正確處理並遵循 `viewsEnable` 設定
+- SPA檢視快取初始化現在可以正確處理並遵守 `viewsEnable` 設定
 
 ## v0.14.2 （2021年6月2日）
 
-- 修正最終套件組合包含兩個的錯誤 `at.js` 版本，一個包含「裝置上決策」，另一個不包含。
+- 修正最終套件組合包含兩個的錯誤 `at.js` 一個版本具有「裝置上決策」功能，另一個則沒有。
 
 ## v0.14.1 （2021年5月19日）
 
-- v0.14版本中推出的修正回歸，其中Load Target動作會引發全域mbox呼叫
+- 修正v0.14發行版本匯入的回歸，該版本中Load Target動作會引發全域mbox呼叫
 
 ## v0.14 （2021年5月14日）
 
@@ -80,8 +86,8 @@ ht-degree: 24%
 
 ## v0.13.7 （2021年3月25日）
 
-- 已修正 `targetPageParams` 包含在 mbox 要求中的問題。 `targetPageParams` 僅應包含在 `pageLoad` 要求。
-- 已修正標籤擴充功能中的檔案和視窗全域物件的問題，方法是用全域物件的直接參照來取代全域物件相依性。
+- 已修正 `targetPageParams` 包含在 mbox 要求中的問題。 `targetPageParams` 應該僅包含在 `pageLoad` 要求。
+- 已修正標籤擴充功能中的檔案和視窗全域物件的問題，修正方式為將全域物件相依性取代為該相依性的直接參照。
 - 已更新 `at.js` 至2.4.1。
 
 ## v0.13.6 （2021年1月25日）
@@ -89,7 +95,7 @@ ht-degree: 24%
 - 新增可支援交付 API 客戶 ID 的統一設定檔/平台 ID
 - 修正無效的樣式標籤插入作業
 - 將at.s更新至2.4.0
-- 未定義的引數可能導致錯誤傳送請求的問題，已解決
+- 未定義的引數可能導致錯誤傳送請求的問題
 
 ## v0.13.4 （2020年11月25日）
 
@@ -116,9 +122,9 @@ ht-degree: 24%
 
 ## v0.12.0 (2019 年 10 月 10 日)
 
-- 已更新 `at.js` 升級至v2.2。
-- 改善Experience CloudID程式庫(ECID) v4.4和之間整合的效能 `at.js` 2.2.
-- 之前，ECID程式庫曾進行兩次封鎖呼叫 `at.js` 可擷取體驗。 這已簡化為單一呼叫，可大幅提升效能。
+- 已更新 `at.js` 至v2.2。
+- 改善Experience CloudID程式庫(ECID) v4.4與之間整合的效能 `at.js` 2.2.
+- 之前，ECID程式庫曾進行兩次封鎖呼叫 `at.js` 可以擷取體驗。 這已簡化為單一呼叫，可大幅提升效能。
 
 >[!NOTE]
 >請將您的ECID標籤擴充功能升級至v4.4.1，以運用此效能增強功能。
@@ -130,4 +136,4 @@ ht-degree: 24%
 
 ## v0.11.0 （2019年6月3日）
 
-- 要支援的新標籤延伸模組 `at.js` 2.1
+- 要支援的新標籤延伸 `at.js` 2.1
