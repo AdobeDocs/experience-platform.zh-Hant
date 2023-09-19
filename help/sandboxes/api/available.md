@@ -2,9 +2,9 @@
 keywords: Experience Platform；首頁；熱門主題；列出可用沙箱；列出沙箱
 solution: Experience Platform
 title: 可用的沙箱API端點
-description: 您可以透過向可用的沙箱端點發出GET請求來列出可供目前使用者使用的沙箱。
+description: 您可以透過向可用的沙箱端點發出GET請求來列出目前使用者可用的沙箱。
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 2%
@@ -17,7 +17,7 @@ ht-degree: 2%
 >
 >與沙箱API中提供的其他端點不同，此端點適用於所有使用者，包括沒有沙箱管理存取許可權的使用者。
 
-您可以透過向可用的沙箱端點發出GET請求來列出可供目前使用者使用的沙箱。
+您可以透過向可用的沙箱端點發出GET請求來列出目前使用者可用的沙箱。
 
 **API格式**
 
@@ -33,7 +33,7 @@ GET /{QUERY_PARAMS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
+  https://platform.adobe.io/data/foundation/sandbox-management/?limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -41,7 +41,7 @@ curl -X GET \
 
 **回應**
 
-成功回應會傳回目前使用者可用的沙箱清單，包括詳細資訊，例如 `name`， `title`， `state`、和 `type`.
+成功的回應會傳回目前使用者可用的沙箱清單，包括詳細資訊，例如 `name`， `title`， `state`、和 `type`.
 
 ```json
 {
@@ -101,9 +101,9 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 沙箱的名稱。 用於API呼叫中的查閱目的。 |
+| `name` | 沙箱的名稱。 用於API呼叫中的查閱用途。 |
 | `title` | 沙箱的顯示名稱。 |
-| `state` | 沙箱目前的處理狀態。 沙箱的狀態可以是下列任一專案： <ul><li>`creating`：沙箱已建立，但系統仍在布建中。</li><li>`active`：沙箱已建立且作用中。</li><li>`failed`：由於發生錯誤，沙箱無法由系統布建，因此已停用。</li><li>`deleted`：沙箱已手動停用。</li></ul> |
+| `state` | 沙箱的目前處理狀態。 沙箱的狀態可以是下列任一專案： <ul><li>`creating`：沙箱已建立，但系統仍在布建中。</li><li>`active`：沙箱已建立且作用中。</li><li>`failed`：由於錯誤，沙箱無法由系統布建，因此已停用。</li><li>`deleted`：沙箱已手動停用。</li></ul> |
 | `type` | 沙箱型別：「開發」或「生產」。 |
-| `isDefault` | 布林值屬性，指出此沙箱是否為組織的預設生產沙箱。 |
+| `isDefault` | 表示此沙箱是否為組織的預設生產沙箱的布林值屬性。 |
 | `eTag` | 特定版本沙箱的識別碼。 用於版本控制和快取效率，每次對沙箱進行變更時都會更新此值。 |
