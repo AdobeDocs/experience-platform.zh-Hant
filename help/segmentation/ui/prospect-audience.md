@@ -2,9 +2,7 @@
 title: 潛在客戶對象
 description: 瞭解如何使用協力廠商資訊建立和使用潛在客戶受眾，以鎖定未知的客戶。
 type: Documentation
-hide: true
-hidefromtoc: true
-source-git-commit: fff6279472607bd6e1ace21a3003ef839208d7a4
+source-git-commit: cb70eca22633ee08b260903e38f4538a21f3a56c
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 1%
