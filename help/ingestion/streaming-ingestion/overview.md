@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 串流擷取概觀
 description: Adobe Experience Platform的串流擷取為使用者提供從使用者端和伺服器端裝置傳送資料以即時Experience Platform的方法。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 5adcdf3108fbbaee9e81dc737ae67b563e4dbf1d
 workflow-type: tm+mt
 source-wordcount: '348'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -39,7 +39,7 @@ Adobe Experience Platform可讓您透過產生 [!DNL Real-Time Customer Profile]
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
-| 即時客戶設定檔 | &lt; 1分鐘 |
+| 即時客戶設定檔 | &lt; 15 分鐘 |
 | 資料湖 | &lt; 60 分鐘 |
 
 ## 串流擷取的每秒要求(RPS)指引
