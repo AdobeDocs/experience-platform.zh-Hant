@@ -5,14 +5,19 @@ description: Adobe Experience Platform提供一個儀表板，您可以透過它
 type: Documentation
 hide: true
 hidefromtoc: true
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 6a69ecebe67a156d67a324581e5b96699b96d2e6
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1553'
 ht-degree: 1%
 
 ---
 
 # 授權使用情況儀表板（限量發行） {#license-usage-dashboard-limited-release}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage"
+>title="授權使用情況儀表板"
+>abstract="授權使用情況儀表板可讓您深入分析已購買的Adobe Experience Platform產品。 儀表板概覽會顯示您產品的主要量度，包括您每個主要量度的使用情況，以及您簽約的授權金額。 詳細資訊工作區會顯示特定沙箱中每個產品的量度劃分。"
 
 >[!IMPORTANT]
 >
