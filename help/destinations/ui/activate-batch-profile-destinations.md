@@ -4,9 +4,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3707'
 ht-degree: 11%
 
 ---
@@ -27,6 +27,11 @@ ht-degree: 11%
 本文說明在Adobe Experience Platform批次設定檔型目的地（例如雲端儲存空間與電子郵件行銷目的地）中啟用對象所需的工作流程。
 
 ## 先決條件 {#prerequisites}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_flat_files"
+>title="(Beta)匯出陣列支援"
+>abstract="（Beta版）將原始值的陣列從Experience Platform匯出至您想要的雲端儲存空間目的地。 此文字將更新更多資訊。 <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">了解更多</a>。 "
 
 若要對目的地啟用對象，您必須已成功 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
 
@@ -468,7 +473,7 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="排除擴充屬性"
 >abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="如需了解詳細資訊，請參閱文件"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#select-enrichment-attributes" text="如需了解詳細資訊，請參閱文件"
 
 >[!IMPORTANT]
 >
