@@ -2,10 +2,10 @@
 title: 設定資料流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 705b1645eb8ca69169350c57cd28d3a1061f4928
 workflow-type: tm+mt
-source-wordcount: '2276'
-ht-degree: 100%
+source-wordcount: '2629'
+ht-degree: 86%
 
 ---
 
@@ -38,9 +38,42 @@ ht-degree: 100%
 
 ![資料流的基本設定](assets/configure/configure.png)
 
-選取&#x200B;**[!UICONTROL 進階選項]**，可顯示設定資料流的其他控制項。
+### 設定地理位置與網路查閱 {#geolocation-network-lookup}
 
-![進階設定選項](assets/configure/advanced-options.png){#advanced-options}
+地理位置和網路查詢設定可協助您定義要收集的地理和網路層級資料的詳細程度。
+
+展開 **[!UICONTROL 地理位置與網路查詢]** 區段來設定底下所述的設定。
+
+![Platform UI熒幕擷取畫面會顯示資料流設定畫面，且地理位置和網路查詢設定會反白顯示。](assets/configure/geolookup.png)
+
+| 設定 | 說明 |
+| --- | --- |
+| [!UICONTROL 地理查詢] | 根據訪客 IP 位址啟用選取選項的地理位置查詢。地理位置查詢會要求您將 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 欄位群組包含在 Web SDK 設定中。<br>可使用的選項： <ul><li>國家/地區</li><li>郵遞區號</li><li>州/省</li><li>DMA</li><li>城市</li><li>緯度 </li><li>經度</li></ul>無論選取其他什麼選項，選取&#x200B;**[!UICONTROL 城市]**、**[!UICONTROL 緯度]**&#x200B;或&#x200B;**[!UICONTROL 經度]**&#x200B;都會提供最多兩個小數點的座標。這被認為是城市級精細度。<br> <br>不選取任何選項會停用任何地理位置查詢。地理位置在 [!UICONTROL IP 模糊化]之前即存在，並且不受 [!UICONTROL IP 模糊化]設定的影響。 |
+| [!UICONTROL 網路查詢] | 根據訪客 IP 位址啟用選取選項的網路查詢。網絡查詢會要求您將 [`Environment`](../edge/data-collection/automatic-information.md#environment) 欄位群組包含在 Web SDK 設定中。<br>可使用的選項： <ul><li>電信業者</li><li>網域</li><li>ISP</li></ul>使用這些選項可提供其他服務有關要求來源地點之特定網路的詳細資訊。 |
+
+### 設定裝置查詢 {#geolocation-device-lookup}
+
+此 **[!UICONTROL 裝置查詢]** 設定可讓您選取您要收集之裝置特定資訊的詳細程度。
+
+展開 **[!UICONTROL 裝置查詢]** 區段來設定底下所述的設定。
+
+![Platform UI熒幕擷取畫面會顯示醒目提示裝置查詢設定的資料流設定畫面。](assets/configure/device-lookup.png)
+
+>[!IMPORTANT]
+>
+>下表所述的設定是互斥的。 您無法同時選取使用者代理程式資訊和裝置查詢資料。
+
+| 設定 | 說明 |
+| --- | --- |
+| **[!UICONTROL 保留使用者代理和使用者端提示標題]** | 選取此選項可僅收集儲存在使用者代理字串中的資訊。 這是預設設定。 |
+| **[!UICONTROL 使用裝置查詢功能來收集下列資訊]** | 如果要收集下列一或多個裝置特定資訊，請選取此選項： <ul><li>**[!UICONTROL 裝置]** 資訊：<ul><li>裝置製造商</li><li>裝置型號</li><li>行銷名稱</li></ul></li><li>**[!UICONTROL 硬體]** 資訊： <ul><li>裝置類型</li><li>顯示高度</li><li>顯示寬度</li><li>顯示色彩深度</li></ul></li><li>**[!UICONTROL 瀏覽器]** 資訊： <ul><li>瀏覽器供應商</li><li>瀏覽器名稱</li><li>瀏覽器版本</li></ul></li><li>**[!UICONTROL 作業系統]** 資訊： <ul><li>作業系統供應商</li><li>作業系統名稱</li><li>作業系統版本</li></ul></li></ul> <br>  裝置查詢資訊無法與使用者代理程式和使用者端提示一起收集。 選擇收集裝置資訊將會停用收集使用者代理程式和使用者端提示，反之亦然。 所有裝置查詢資訊都儲存在 `xdm:device` 欄位群組。 |
+| **[!UICONTROL 不要收集任何裝置資訊]** | 如果您不想收集任何型別的查閱資訊，請選取此選項。 不會收集任何裝置、硬體、瀏覽器或作業系統資訊，包括使用者代理程式或使用者端提示標頭。 |
+
+### 設定進階選項 {#@advanced-options}
+
+選取 **[!UICONTROL 進階選項]** 以顯示其他控制項來設定資料串流，例如IP模糊化、第一方ID Cookie等。
+
+![進階設定選項](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -50,14 +83,13 @@ ht-degree: 100%
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL 地理查詢] | 根據訪客 IP 位址啟用選取選項的地理位置查詢。地理位置查詢會要求您將 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 欄位群組包含在 Web SDK 設定中。<br>可使用的選項： <ul><li>國家/地區</li><li>郵遞區號</li><li>州/省</li><li>DMA</li><li>城市</li><li>緯度 </li><li>經度</li></ul>無論選取其他什麼選項，選取&#x200B;**[!UICONTROL 城市]**、**[!UICONTROL 緯度]**&#x200B;或&#x200B;**[!UICONTROL 經度]**&#x200B;都會提供最多兩個小數點的座標。這被認為是城市級精細度。<br> <br>不選取任何選項會停用任何地理位置查詢。地理位置在 [!UICONTROL IP 模糊化]之前即存在，並且不受 [!UICONTROL IP 模糊化]設定的影響。 |
-| [!UICONTROL 網路查詢] | 根據訪客 IP 位址啟用選取選項的網路查詢。網絡查詢會要求您將 [`Environment`](../edge/data-collection/automatic-information.md#environment) 欄位群組包含在 Web SDK 設定中。<br>可使用的選項： <ul><li>電信業者</li><li>網域</li><li>ISP</li></ul>使用這些選項可提供其他服務有關要求來源地點之特定網路的詳細資訊。 |
 | [!UICONTROL IP 模糊化] | 說明要套用於資料流的 IP 模糊化的類型。任何根據客戶 IP 進行的處理都會受到 IP 模糊化設定的影響。這包括從資料流接收資料的所有 Experience Cloud 服務。 <p>可使用的選項：</p> <ul><li>**[!UICONTROL 無]**：停用 IP 模糊化。完整的使用者 IP 位址會透過資料流傳送。</li><li>**[!UICONTROL 部分]**：若為 IPv4 位址，模糊化使用者 IP 位址的最後八位元。若為 IPv6 位址，模糊化位址的最後 80 個位元。 <p>範例：</p> <ul><li>IPv4：`1.2.3.4` -> `1.2.3.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL 全部]**：模糊化整個 IP 位址。 <p>範例：</p> <ul><li>IPv4：`1.2.3.4` -> `0.0.0.0`</li><li>IPv6：`2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> IP 模糊化會對其他 Adobe 產品造成影響： <ul><li>**Adobe Target**：資料流層級 [!UICONTROL IP 模糊化]設定會優先於在 Adobe Target 中設定的任何 IP 模糊化選項。例如，如果資料流層級 [!UICONTROL IP 模糊化]選項設定為「**[!UICONTROL 全部]**」，而 Adobe Target IP 模糊化選項設定為&#x200B;**[!UICONTROL 最後八位元模糊化]**，則 Adobe Target 會接收到完全模糊化的 IP。如需更多詳細資料，請至 [IP 模糊化](https://developer.adobe.com/target/before-implement/privacy/privacy/)和[地理位置](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=zh-Hant)，參閱 Adobe Target 文件。</li><li>**Audience Manager**：資料流層級 IP 模糊化設定會優先於在 Audience Manager 中設定的任何 IP 模糊化選項，而且會套用於所有 IP 位址。Audience Manager 完成的任何地理位置查詢都會受到資料流層級 [!UICONTROL IP 模糊化]選項的影響。Audience Manager 中根據完全模糊化 IP 進行的地理位置查詢會導致未知區域，而根據所產生的地理位置資料無法實現任何區段。如需更多詳細資料，請至 [IP 模糊化](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=zh-Hant)，參閱 Audience Manager 文件。</li><li>**Adobe Analytics**：如果選取任何 IP 模糊化選項而非選取「無」，Adobe Analytics 目前會接收到部分模糊化的 IP 位址。若要讓 Analytics 接收完全模糊化的 IP 位址，您必須在 Adobe Analytics 中單獨設定 IP 模糊化。此行為會在未來版本中更新。如需有關如何在 Analytics 中啟用 IP 模糊化的詳細資料，請參閱 Adobe Analytics [文件](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html)。</li></ul> |
 | [!UICONTROL 第一方 ID Cookie] | 啟用後，在查詢[第一方裝置 ID](../edge/identity/first-party-device-ids.md) 時，此設定會告知 Edge Network 參照指定的 cookie，而不是在身分對應中查詢這個值。<br><br>啟用此設定時，您必須提供預期會儲存 ID 的 cookie 的名稱。 |
 | [!UICONTROL 協力廠商 ID 同步] | 將 ID 同步分組至不同的容器中，即可讓不同的 ID 同步在不同時間執行。啟用後，此設定會讓您指定為此資料流執行哪個 ID 同步的容器。 |
 | [!UICONTROL 協力廠商 ID 同步容器 ID] | 用於協力廠商 ID 同步之容器的數值 ID。 |
 | [!UICONTROL 容器 ID 覆寫] | 在本區段中，您可以定義其他協力廠商 ID 同步容器 ID，以用於覆寫預設的 ID。 |
 | [!UICONTROL 存取類型] | 定義 Edge Network 接受資料流的驗證類型。 <ul><li>**[!UICONTROL 混合驗證]**：選取此選項時，Edge Network 會同時接受已驗證和未驗證的要求。當您計劃使用 Web SDK 或 [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) 以及[伺服器 API](../server-api/overview.md) 時，請選取此選項。 </li><li>**[!UICONTROL 僅限已驗證]**：選取此選項時，Edge Network 只接受已驗證的要求。當您計劃只使用伺服器 API 並希望防止 Edge Network 處理任何未驗證的要求時，請選取此選項。</li></ul> |
+| [!UICONTROL Media Analytics] | 選取此選項即可啟用透過Experience Platform SDK或Media Edge API處理Edge Network整合的串流追蹤資料。 若要瞭解Media Analytics，請參閱 [檔案](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant). |
 
 在這裡，如果您要設定 Experience Platform 的資料流，請依照[資料收集的資料準備](./data-prep.md)教學課程的說明，將資料對應至 Platform 事件綱要，然後才返回本指南。否則，請選取「**[!UICONTROL 儲存]**」，並繼續進行下一區段。
 
