@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 378b51b13547af994bd258a42d1068118d099eb4
+source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
 workflow-type: tm+mt
-source-wordcount: '3610'
+source-wordcount: '3781'
 ht-degree: 3%
 
 ---
@@ -62,37 +62,9 @@ ht-degree: 3%
 >title="將所有對象新增到排程"
 >abstract="啟用以在每日排程更新中包含所有使用批次分段評估的對象。停用以從排程更新中移除所有對象。"
 
-選取 **[!UICONTROL 瀏覽]** 標籤檢視貴組織的所有對象清單。
+選取 **[!UICONTROL 瀏覽]** 標籤檢視貴組織的所有對象清單。 此檢視會列出對象的相關資訊，包括設定檔計數、來源、建立日期、上次修改日期、標籤和劃分。
 
 ![隨即顯示瀏覽畫面。 隨即顯示屬於組織之所有對象的清單。](../images/ui/overview/audience-browse.png)
-
-此檢視會列出對象的相關資訊，包括設定檔計數、來源、建立日期、上次修改日期、標籤和劃分。
-
-您可以新增其他欄位到此顯示，方法是選取 ![篩選器屬性圖示](../images/ui/overview/filter-attribute.png). 這些額外的欄位包含生命週期狀態、更新頻率、上次更新者、說明、建立者和存取標籤。
-
-| 欄位 | 說明 |
-| ----- | ----------- |
-| [!UICONTROL 名稱] | 對象名稱。 |
-| [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
-| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括細分服務、自訂上傳、對象構成和Audience Manager。 |
-| [!UICONTROL 已建立] | 建立對象的日期和時間(UTC)。 |
-| [!UICONTROL 上次更新時間] | 上次更新對象的日期和時間(UTC)。 |
-| [!UICONTROL 標記] | 屬於對象的使用者定義標籤。 有關這些標籤的更多資訊可在以下連結中找到： [標籤區段](#tags). |
-| [!UICONTROL 劃分] | 對象的設定檔狀態劃分。 此設定檔狀態劃分的更詳細說明可在下方找到。 |
-| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Published`、和 `Archived`. |
-| [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括 `On Demand` （批次）， `Scheduled` （串流），以及 `Continuous` （邊緣）。 |
-| [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
-| [!UICONTROL 說明] | 對象的說明。 |
-| [!UICONTROL 建立者] | 建立對象的人員名稱。 |
-| [!UICONTROL 存取標籤] | 對象的存取權標籤。 存取標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 這些標籤可隨時套用，提供您選擇控管資料方式的靈活性。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
-
-如果選取劃分，畫面會顯示長條圖，概述屬於下列每個已計算設定檔狀態的設定檔百分比： [!UICONTROL 已實現]， [!UICONTROL 現有]、和 [!UICONTROL 正在退出]. 此外，此劃分會顯示在 [!UICONTROL 瀏覽] 索引標籤是區段定義狀態最精確的劃分。 如果此數字與 [!UICONTROL 概觀] 標籤上，您應該使用編號 [!UICONTROL 瀏覽] 標籤作為正確的資訊來源，因為 [!UICONTROL 概觀] 索引標籤編號每天只會更新一次。
-
-| 狀態 | 說明 |
-| ------ | ----------- |
-| [!UICONTROL 已實現] | 符合以下條件的設定檔計數： **合格** 用於自上次批次區段作業執行後過去24小時內的區段。 |
-| [!UICONTROL 現有] | 設定檔計數，其中 **剩餘** 區段中上次執行批次區段作業以來的24小時內。 |
-| [!UICONTROL 正在退出] | 設定檔計數，其中 **已退出** 自上次執行批次區段作業以來的最後24小時內的區段。 |
 
 每個對象旁都會顯示一個省略符號圖示。 選取此專案會顯示對象可用的快速動作清單。 此動作清單會因對象來源而異。
 
@@ -110,8 +82,13 @@ ht-degree: 3%
 | 套用存取權標籤 | 對象構成、自訂上傳、細分服務 | 可讓您管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
 | 封存 | 自訂上傳 | 封存選取的對象。 |
 | 刪除 | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 |
+| 新增到封裝 | 對象構成、自訂上傳、細分服務 | 可讓您在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
 
-頁面頂端有選項，可新增所有對象至排程、匯入對象和建立新對象。
+>[!NOTE]
+>
+> 您將會 **非** 能夠刪除用於目的地啟用的對象。
+
+頁面頂端有選項，可新增所有對象至排程、匯入對象、建立新對象和檢視更新頻率的劃分。
 
 切換 **[!UICONTROL 排程所有對象]** 將啟用排程分段。 有關已排程分段的詳細資訊，請參閱 [本使用手冊的已排程分段區段](#scheduled-segmentation).
 
@@ -121,9 +98,45 @@ ht-degree: 3%
 
 ![對象瀏覽頁面上的頂端導覽列會醒目提示。 此列包含建立對象的按鈕和匯入對象的按鈕。](../images/ui/overview/browse-audiences-top.png)
 
->[!NOTE]
->
-> 您將會 **非** 能夠刪除用於目的地啟用的對象。
+您可以選取 **[!UICONTROL 更新頻率摘要]** 以顯示顯示更新頻率的圓餅圖。
+
+![更新頻率摘要按鈕會醒目提示。](../images/ui/overview/browse-audience-update-frequency-summary.png)
+
+圓形圖會出現，顯示依更新頻率劃分的對象劃分。 圖表會在中間顯示對象總數。 如果您將滑鼠游標停留在對象的不同部分，它會顯示屬於每個更新頻率型別的對象數量。
+
+![顯示更新頻率圓餅圖。](../images/ui/overview/update-frequency-chart.png)
+
+### 自訂 {#customize}
+
+您可以將其他欄位新增至 [!UICONTROL 瀏覽] 頁面，選擇 ![篩選器屬性圖示](../images/ui/overview/filter-attribute.png). 這些額外的欄位包含生命週期狀態、更新頻率、上次更新者、說明、建立者和存取標籤。
+
+| 欄位 | 說明 |
+| ----- | ----------- |
+| [!UICONTROL 名稱] | 對象名稱。 |
+| [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
+| [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括細分服務、自訂上傳、對象構成和Audience Manager。 |
+| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Published`、和 `Archived`. |
+| [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括 [!UICONTROL 批次]， [!UICONTROL 串流]， [!UICONTROL Edge]、和 [!UICONTROL 未排程]. |
+| [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
+| [!UICONTROL 已建立] | 建立對象的日期和時間(UTC)。 |
+| [!UICONTROL 上次更新時間] | 上次更新對象的日期和時間(UTC)。 |
+| [!UICONTROL 標記] | 屬於對象的使用者定義標籤。 有關這些標籤的更多資訊可在以下連結中找到： [標籤區段](#tags). |
+| [!UICONTROL 說明] | 對象的說明。 |
+| [!UICONTROL 建立者] | 建立對象的人員名稱。 |
+| [!UICONTROL 存取標籤] | 對象的存取權標籤。 存取標籤可讓您根據套用至該資料的使用原則來分類資料集和欄位。 這些標籤可隨時套用，提供您選擇控管資料方式的靈活性。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL 劃分] | 對象的設定檔狀態劃分。 此設定檔狀態劃分的更詳細說明可在下方找到。 |
+
+如果選取劃分，畫面會顯示長條圖，概述屬於下列每個已計算設定檔狀態的設定檔百分比： [!UICONTROL 已實現]， [!UICONTROL 現有]、和 [!UICONTROL 正在退出]. 此外，此劃分會顯示在 [!UICONTROL 瀏覽] 索引標籤是區段定義狀態最精確的劃分。 如果此數字與 [!UICONTROL 概觀] 標籤上，您應該使用編號 [!UICONTROL 瀏覽] 標籤作為正確的資訊來源，因為 [!UICONTROL 概觀] 索引標籤編號每天只會更新一次。
+
+| 狀態 | 說明 |
+| ------ | ----------- |
+| [!UICONTROL 已實現] | 符合以下條件的設定檔計數： **合格** 用於自上次批次區段作業執行後過去24小時內的區段。 |
+| [!UICONTROL 現有] | 設定檔計數，其中 **剩餘** 區段中上次執行批次區段作業以來的24小時內。 |
+| [!UICONTROL 正在退出] | 設定檔計數，其中 **已退出** 自上次執行批次區段作業以來的最後24小時內的區段。 |
+
+選取要顯示的欄位後，您也可以重新調整顯示欄的寬度。 您可以拖曳欄之間的區域或選取 ![箭頭圖示](../images/ui/overview/arrow-icon.png) 要重新調整大小的欄位中，後面接著 **[!UICONTROL 調整欄大小]**.
+
+![「調整欄大小」按鈕會反白顯示。](../images/ui/overview/browse-audience-resize-column.png)
 
 ### 篩選、資料夾和標籤 {#manage-audiences}
 
@@ -395,7 +408,7 @@ ht-degree: 3%
 >
 >為了讓串流細分發揮作用，您需要為組織啟用已排程的分段。 如需啟用已排程分段的詳細資訊，請參閱 [本使用手冊中的串流細分割槽段](#scheduled-segmentation).
 
-## 邊緣細分 {#edge-segmentation}
+## 邊緣分段 {#edge-segmentation}
 
 邊緣區隔是即時評估Platform邊緣受眾的能力，可啟用相同頁面和下一頁個人化使用案例。
 
