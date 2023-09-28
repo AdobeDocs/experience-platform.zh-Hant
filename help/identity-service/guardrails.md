@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: a9b5ab28d00941b7531729653eb630a61b5446fc
+source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1073'
 ht-degree: 1%
 
 ---
@@ -31,8 +31,7 @@ ht-degree: 1%
 
 | 護欄 | 限制 | 附註 |
 | --- | --- | --- |
-| （目前行為）圖表中的身分數量 | 150 | 此限制會套用至沙箱層級。 當身分數量達到150個或更多時，不會新增任何身分，且不會更新身分圖表。 由於連結了一或多個具有少於150個身分的圖表，圖表可能會顯示大於150個身分。 **注意**：身分圖表中的身分數量上限 **適用於個別合併的設定檔** 為50。 根據具有超過50個身分的身分圖表合併的設定檔會從即時客戶設定檔中排除。 如需詳細資訊，請閱讀以下指南： [設定檔資料的護欄](../profile/guardrails.md). |
-| （近期行為）圖表中的身分數量 [!BADGE 測試版]{type=Informative} | 50 | 更新具有50個連結身分的圖形時，Identity Service將套用「先進先出」機制，並刪除最舊的身分，為最新的身分騰出空間。 刪除是根據身分型別和時間戳記。 此限制會套用至沙箱層級。 如需詳細資訊，請閱讀以下章節： [瞭解刪除邏輯](#deletion-logic). |
+| 圖表中的身分數量 | 50 | 更新具有50個連結身分的圖形時，Identity Service將套用「先進先出」機制，並刪除最舊的身分，為最新的身分騰出空間。 刪除是根據身分型別和時間戳記。 此限制會套用至沙箱層級。 如需詳細資訊，請閱讀以下章節： [瞭解刪除邏輯](#deletion-logic). |
 | XDM記錄中的身分數量 | 20 | 需要的XDM記錄數量下限為2。 |
 | 自訂名稱空間數量 | None | 您可以建立的自訂名稱空間數量沒有限制。 |
 | 名稱空間顯示名稱或身分符號的字元數 | None | 名稱空間顯示名稱或身分符號的字元數沒有限制。 |
@@ -50,7 +49,7 @@ ht-degree: 1%
 
 自2023年3月31日起，Identity Service將封鎖新客戶的Adobe Analytics ID (AAID)擷取。 此身分通常透過 [Adobe Analytics來源](../sources/connectors/adobe-applications/analytics.md) 和 [Adobe Audience Manager來源](../sources//connectors/adobe-applications/audience-manager.md) 和是多餘的，因為ECID代表相同的網頁瀏覽器。 如果您想要變更此預設設定，請聯絡您的Adobe客戶團隊。
 
-## [!BADGE 測試版]{type=Informational}瞭解當容量中的身分圖表更新時的刪除邏輯 {#deletion-logic}
+## 瞭解當容量中的身分圖表更新時的刪除邏輯 {#deletion-logic}
 
 更新完整的身分圖表時，Identity Service會先刪除圖表中最舊的身分，然後再新增最新的身分。 這是為了維持身分資料的正確性和關聯性。 此刪除程式會遵循兩個主要規則：
 
