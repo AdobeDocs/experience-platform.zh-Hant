@@ -1,78 +1,47 @@
 ---
 title: Adobe Experience Platform 發行說明
-description: Adobe Experience Platform 2023 年 8 月版發行說明。
+description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+source-git-commit: 2492651fb03e0bfc5c9f68a9b063689a1b9001a3
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 93%
+source-wordcount: '907'
+ht-degree: 32%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2023 年 23 月 8 日**
+**發行日期：2023 年 9 月 28 日**
 
-Adobe Experience Platform 現有功能的更新：
+Adobe Experience Platform中的新功能：
 
-- [Real-Time Customer Data Platform](#rtcdp)
-- [屬性型存取控制](#abac)
-- [儀表板](#dashboards)
+- [計算的屬性](#computed-attributes)
+
+ Experience Platform 現有功能的更新：
+
+- [警報](#alerts)
 - [資料收集](#data-collection)
-- [資料擷取](#data-ingestion)
-- [資料準備](#data-prep)
-- [目的地](#destinations)
-- [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
-## Real-Time Customer Data Platform {#rtcdp}
+## 計算的屬性 {#computed-attributes}
 
-建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶設定檔。
+計算屬性可讓您透過直覺式UI輕鬆將事件資料摘要為設定檔屬性，以強化行為型細分、個人化和啟用。 透過此功能，您可以自助建立計算屬性、管理這些屬性，並用於區段、Real-Time CDP目的地或Adobe Journey Optimizer。 此外，計算屬性可簡化細分和歷程工作流程，協助您順暢地提供相關體驗。 若要深入瞭解計算屬性，請參閱 [計算屬性概述](../../profile/computed-attributes/overview.md).
 
-[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶設定檔。然後，根據這些設定檔建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
+## 警報 {#alerts}
 
-**新功能或更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 智慧型重新吸引使用案例指南 | [智慧型重新吸引](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)使用案例指南會提供有關以智慧且可靠方式重新吸引在完成轉換之前放棄轉換的客戶之詳細資訊。本指南使用以下範例歷程來重新吸引客戶： <ul><li>重新吸引歷程 - 針對有捨棄產品瀏覽的客戶。</li><li>捨棄購物車歷程 - 針對已將產品放入購物車但尚未完成購買的客戶。</li><li>訂單確認歷程 - 著重產品購買</li></ul> 請使用[智慧型重新吸引使用案例指南](../../rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)底部的詳細意見反饋選項連結來提供反饋。 |
-| 合作夥伴資料支援 | 在 Real-Time CDP 中執行漏斗上層行銷，利用合作夥伴提供的潛在客戶資料和合作夥伴 ID 來吸引新客戶並擴充您的第一方資料： <ul><li>客戶贏取和可尋址性：利用所選資料合作夥伴的無 cookie 識別碼和雜湊 PII 來吸引新客戶並減少第三方 cookie 相依性。</li><li>單一系統中的完整漏斗行銷：在單一系統中對潛在客戶和已知客戶進行自助分段、對象管理和原生啟用。</li><li>信任基礎：透過專利資料用量、標籤、存取控制等，以負責方式管理合作夥伴資料和設定檔。請閱讀以下使用案例指南，了解更多資訊：尋找潛在客戶使用案例指南現已推出。閱讀尋找潛在客戶使用案例指南，了解如何透過尋找潛在客戶使用案例吸引和贏得新客戶：<ul><li>[尋找潛在客戶](../../rtcdp/partner-data/prospecting.md)</li><li>[現場個人化](../../rtcdp/partner-data/onsite-personalization.md)</li><li>[補充第一方設定檔](../../rtcdp/partner-data/supplement-first-party-profiles.md)</li><li>[啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md)</li></ul> |
-
-{style="table-layout:auto"}
-
-若要了解更多資訊，請詳閱[Real-Time CDP 概觀](../../rtcdp/overview.md)。
-
-## 屬性型存取控制 {#abac}
-
-屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別對象指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
-
-透過屬性型存取控制，組織的管理員可以控制使用者對所有平台工作流程和資源的存取權限，包括其中的敏感個人資料 (SPD)、個人身分資訊 (PII) 和其他自訂類型資料。管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
+Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤顯示，並可選擇在UI本身或透過電子郵件通知接收警報訊息。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 權限原則沙箱設定 | 此項新的[權限原則沙箱設定](../../access-control/abac/ui/policies.md)功能允許您根據本身需要和要求，對所有或特定數量的沙箱實施屬性型存取控制原則。 |
+| 警示歷史記錄標籤 | 警示 [!UICONTROL 歷史記錄] 索引標籤現在將包含所有事件，包括延遲、開始、成功和失敗。 閱讀 [警報UI檔案](../../observability/alerts/ui.md) 以取得有關「歷史記錄」標籤的詳細資訊。 |
 
 {style="table-layout:auto"}
 
-若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](../../access-control/abac/overview.md)。關於屬性型存取控制工作流程的綜合指南，請閱讀[屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md)。
-
-## 儀表板 {#dashboards}
-
-Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要分析。
-
-**新功能或更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 同意分析和追蹤使用案例 | 瞭解如何針對各種行銷使用案例，使用建立Real-Time CDP資料的同意儀表板 [同意分析和追蹤檔案](../../dashboards/insights-use-cases/consent-analysis.md). 此文件會詳細介紹如何建立具備符合您業務需求屬性為主的對象，然後透過使用 Adob&#x200B;&#x200B;e Experience Platform UI 中的預設小工具來獲取深入的分析和見解。此文件還會說明如何使用使用者定義的儀表板功能來構建您自己的自訂小工具。本檔案涵蓋同意趨勢和同意重疊使用案例。 |
-
-{style="table-layout:auto"}
-
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
+若要進一步瞭解警示，請閱讀 [[!DNL Observability Insights] 概述](../../observability/home.md).
 
 ## 資料收集 {#data-collection}
 
@@ -82,71 +51,12 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
-| 標記和事件轉送 | [Experience Platform 標籤 (中國)](/help/tags/ui/publishing/premium-cdn.md) | 全新 Experience Platform 標題 (中國) 功能會提高網站可靠性和延遲，進而為中國網站上部署標籤的客戶提供更快的回應時間。現在，客戶在中國實施網站時可以使用標籤庫中的 JavaScript 代碼。此功能也已新增至統一佈建置協定 (Unified Provisioning Protocol，UPP) 中，允許在購買後自動進行產品部署。 |
+| 資料流 | 裝置查詢支援 | 設定資料流時，您現在可以選取要收集的裝置查詢資訊層級。 裝置查詢資訊包括裝置、硬體、作業系統以及用來與頁面互動的瀏覽器的相關資料。 <br>  裝置查詢資訊無法與使用者代理程式和使用者端提示一起收集。 選擇收集裝置資訊將會停用收集使用者代理程式和使用者端提示，反之亦然。 所有裝置查詢資訊都儲存在 `xdm:device` 欄位群組。 從以下檔案瞭解更多資訊： [設定資料串流](../../datastreams/configure.md#geolocation-device-lookup). |
+| 擴充功能 | [!DNL TikTok] 網站事件API擴充功能 | 此 [[!DNL TikTok] 網頁事件API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) 擴充功能可讓您善用Adobe Experience Platform Edge Network中擷取的資料，並將其傳送至 [!DNL TikTok] 以伺服器端事件的形式使用 [!DNL TikTok] 網頁事件API。 |
 
 {style="table-layout:auto"}
 
-若要了解更多資訊，請詳閱[資料集合概觀](../../tags/home.md)。
-
-## 資料擷取 {#data-ingestion}
-
-Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類型和任何延遲的資料。您可以使用批次或串流 API (使用 Adobe 建置的來源、資料整合合作夥伴或 Adobe Experience Platform UI) 進行擷取。
-
-**新功能或更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 資料擷取工作流程的變更 | 現在，包含數值大於指定資料類型 (例如，作為整數資料類型傳遞的長資料) 的資料行將被拒絕，且系統會報告錯誤訊息。以前，這些資料行會在沒有警告的情況下被拒絕。 |
-
-若要了解更多資訊，請詳閱[資料擷取概觀](../../ingestion/home.md)。
-
-## 資料準備 {#data-prep}
-
-「資料準備」讓資料工程師可在體驗資料模式 (XDM) 之間對應、轉換和驗證資料。
-
-**新功能或更新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 支持篩選次要身分識別 | 您現在可以使用資料準備來篩選來自 Adob&#x200B;&#x200B;e Analytics 的身分識別，例如 AAID 和 AACUSTOMID。若經過篩選去除，這些身分識別將不會被擷取至即時客戶設定檔中。未被篩選去除的資料將繼續被擷取至資料湖。 |
-
-{style="table-layout:auto"}
-
-若要了解更多資訊，請詳閱[資料準備概觀](../../data-prep/home.md)。
-
-## 目的地 {#destinations}
-
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
-
-**新功能或更新的功能** {#destinations-new-updated-functionality}
-
-- 您現在可以 [啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md) 至雲端儲存空間目的地。
-- 一般 [啟動護欄](../../destinations/guardrails.md#general-activation-guardrails) 每個沙箱最多100個目的地的數量已更新為 _硬限制_.
-
-如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
-
-## 體驗資料模式 (XDM) {#xdm}
-
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
-
-**新的 XDM 元件**
-
-| 元件類型 | 名稱 | 說明 |
-| --- | --- | --- |
-| 類別 | [[!UICONTROL XDM 個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1758/files) | 使用此類別引入來自資料供應商的漏斗頂部客戶贏取使用案例的潛在客戶資料。請參閱 [[!UICONTROL XDM個別潛在客戶設定檔]](../../xdm/classes/prospect.md) 請參閱檔案以檢視範例並深入瞭解。 |
-
-{style="table-layout:auto"}
-
-**已更新的 XDM 元件**
-
-| 元件類型 | 名稱 | 更新說明 |
-| --- | --- | --- |
-| 副檔名([!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]) | [[!UICONTROL 內容資料]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL 內容資料] 將對應物件新增至 [!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能] 以提供Adobe Analytics的內容資料。 |
-| 欄位群組 | 多個 | 多個欄位已新增至 [[!UICONTROL 擴充事件區段詳細資訊]](https://github.com/adobe/xdm/pull/1760/files). |
-
-{style="table-layout:auto"}
-
-若要了更多資訊，請閱讀 [XDM 系統概觀](../../xdm/home.md)。
+若要進一步瞭解資料彙集，請參閱 [資料收集概觀](../../tags/home.md).
 
 ## 身分識別服務 {#identity-service}
 
@@ -156,9 +66,12 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 功能 | 說明 |
 | --- | --- |
-| 身分識別圖譜限制的變更 | 到了 9 月底，身分識別圖譜將變更為每個圖譜 50 個身分識別，並且最後一個身分識別會被擷取。因此，系統將根據擷取時間戳和身分類型刪除最舊的身分識別，並最先會刪除 cookie 身分識別類型。現在，身分識別圖譜的每個圖譜有 150 個身分識別的限制，一旦達到上限，圖譜就不再更新。如果您的生產沙箱包含以下內容，請聯絡您的客戶代表以要求變更身分識別類型： <ul><li>個人識別碼 (例如 CRM ID) 設定為 cookie/裝置身分識別類型的自訂命名空間。</li><li>cookie/裝置識別碼被設定為跨裝置身分識別類型的自訂命名空間。</li></ul> Adobe 工程部門將手動處理這些要求。若要了解更多資訊，請閱讀[身分識別服務資料的護欄](../../identity-service/guardrails.md)。 |
+| Identity Service UI增強功能 | 在Experience Platform UI中使用改良的自訂名稱空間建立工具，以便更妥善地管理您的自訂名稱空間及其對應的身分型別。 增強的Identity Service UI提供您以下功能： <ul><li>關聯式體驗：視覺提示、清晰度，以及身分名稱空間和身分型別的關聯式。</li><li>準確性：處理錯誤的能力更強，不再有重複的身分名稱。</li><li>可發現性：從產品內對話方塊存取檔案。</li></ul> 如需詳細資訊，請閱讀以下指南： [建立自訂名稱空間](../../identity-service/namespaces.md#create-namespaces). |
+| 身分識別圖譜限制的變更 | 身分圖表限制已從150個身分變更為50個身分。 將新身分擷取到完整圖表時，會刪除根據擷取時間戳記和身分型別的最舊身分。 Cookie身分型別會優先刪除。 Adobe如果您的生產沙箱包含： <ul><li>個人識別碼 (例如 CRM ID) 設定為 cookie/裝置身分識別類型的自訂命名空間。</li><li>cookie/裝置識別碼被設定為跨裝置身分識別類型的自訂命名空間。</li></ul> Adobe 工程部門將手動處理這些要求。若要了解更多資訊，請閱讀[身分識別服務資料的護欄](../../identity-service/guardrails.md)。 |
 
-若要了解更多資訊，請詳閱[身分識別服務概觀](../../identity-service/home.md)。
+{style="table-layout:auto"}
+
+若要進一步瞭解Identity Service，請參閱 [Identity Service總覽](../../identity-service/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -167,12 +80,13 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 **新功能或更新功能**
 
 | 功能 | 說明 |
-| --- | --- |
-| 相似的對象 (數量有限) | 相似對象可以為您的每個對象提供智慧型分析見解，運用機器學習型的分析見解來透過行銷活動識別和定位高價值客戶。透過相似對象功能，您可以建立範圍擴大的對象，目標是針對類似高績效對象的客戶或類似先前轉換對象的客戶。若要了解更多相似對象，請閱讀[相似對象概觀](../../segmentation/ui/lookalike-audiences.md)。 |
+| ------- | ----------- |
+| 可自訂欄 | 您現在可以使用可重新調整大小的欄來自訂對象入口網站的版面。 如需有關此功能的詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#customize). |
+| 更新頻率劃分 | 您現在可以檢視組織中對象更新頻率的劃分。 如需有關此功能的詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#browse). |
 
-{style="table-layout:auto"}
+若要深入瞭解來源，請參閱 [來源概觀](../../sources/home.md).
 
-若要了解更多資訊，請詳閱[分段概觀](../../segmentation/home.md)。
+若要深入瞭解分段服務，請參閱 [Segmentation Service概述](../../segmentation/home.md).
 
 ## 來源 {#sources}
 
@@ -182,10 +96,8 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| 正式推出 [!DNL SugarCRM] | [!DNL SugarCRM] 來源現已推出。使用 [!DNL SugarCRM Accounts & Contacts] 和 [!DNL SugarCRM Events] 來源將資料從您的 [!DNL SugarCRM] 帳戶帶到 Experience Platform。如需詳細資訊，請閱讀 [[!DNL SugarCRM]  概觀](../../sources/connectors/crm/sugarcrm.md)。 |
-| 支持 UI 中來源資料流的隨選擷取 | 現在，您可以根據需要為 UI 中的現有來源資料流建立流量執行。若要了解更多資訊，請閱讀[為使用 UI 的來源建立隨選的流量執行](../../sources/tutorials/ui/on-demand-ingestion.md)。 |
-| 支持 Adobe Analytics 新的 `correlationID` 欄位 | `_experience.decisioning.propositions.scopeDetails.correlationID` 欄位現在適用於 Adob&#x200B;&#x200B;e Analytics 來源連接器的結構描述中。此欄位是用來支持 A4T 分類，並將於 2023 年 9 月開始填入。 |
+| 的新引數 `offset` 自助式來源中的分頁（批次SDK） | 您現在可以指定 `endConditionName` 和 `endConditionValue` 使用時用於您的來源 `offset` 分頁。 這些引數可讓您指定將在下一個HTTP請求中結束分頁回圈的條件。 如需詳細資訊，請閱讀 [自助來源分頁指南（批次SDK）](../../sources/sources-sdk/config/sourcespec.md#pagination). |
 
 {style="table-layout:auto"}
 
-若要了解更多資訊，請詳閱[來源概觀](../../sources/home.md)。
+若要深入瞭解來源，請參閱 [來源概觀](../../sources/home.md).
