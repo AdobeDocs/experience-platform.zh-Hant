@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e30942aec6c66aeed8375d6221b454725f5a958d
+source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '2288'
 ht-degree: 3%
 
 ---
@@ -17,13 +17,23 @@ ht-degree: 3%
 
 有關概念和功能的詳細資訊 [!DNL Query Service]，請參閱 [查詢服務總覽](../home.md). 若要進一步瞭解如何導覽查詢服務使用者介面，請前往 [!DNL Platform]，請參閱 [查詢服務UI總覽](./overview.md).
 
+>[!NOTE]
+>
+>舊版查詢編輯器未提供某些查詢服務功能。 除非另有說明，否則本檔案所用的熒幕擷取畫面是使用Query Editor的增強版擷取。 請參閱以下小節： [增強型查詢編輯器](#enhanced-editor-toggle) 以取得更多詳細資料。
+
 ## 快速入門 {#getting-started}
 
 [!DNL Query Editor] 透過連線至 [!DNL Query Service]和查詢只會在此連線作用中時執行。
 
+## 存取 [!DNL Query Editor] {#accessing-query-editor}
+
+在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 查詢]** 在左側導覽功能表中開啟 [!DNL Query Service] 工作區。 接下來，若要開始寫入查詢，請選取 **[!UICONTROL 建立查詢]** 在熒幕的右上方。 此連結可從以下連結的任何頁面取得： [!DNL Query Service] 工作區。
+
+![將建立查詢反白顯示的查詢工作區概觀索引標籤。](../images/ui/query-editor/create-query.png)
+
 ### 正在連線到 [!DNL Query Service] {#connecting-to-query-service}
 
-[!DNL Query Editor] 需要幾秒鐘的時間來初始化並連線到 [!DNL Query Service] 開啟時。 主控台會告訴您何時連線，如下所示。 如果您嘗試在編輯器連線之前執行查詢，則會延遲執行，直到連線完成。
+查詢編輯器需要幾秒鐘的時間來初始化，並在它開啟時連線到查詢服務。 主控台會告訴您何時連線，如下所示。 如果您嘗試在編輯器連線之前執行查詢，則會延遲執行，直到連線完成。
 
 ![初次連線時查詢編輯器的主控台輸出。](../images/ui/query-editor/connect.png)
 
@@ -31,17 +41,13 @@ ht-degree: 3%
 
 查詢執行自 [!DNL Query Editor] 以互動方式執行，這表示如果您關閉瀏覽器或離開瀏覽器，則會取消查詢。 從查詢輸出產生資料集的查詢也是如此。
 
+Enhanced Editor可讓您在Query Editor中寫入多個查詢，並依序執行所有查詢。 請參閱以下小節： [執行多個循序查詢](#execute-multiple-sequential-queries) 以取得詳細資訊。
+
 ## 查詢製作，使用 [!DNL Query Editor] {#query-authoring}
 
 使用 [!DNL Query Editor]，您可以編寫、執行和儲存客戶體驗資料的查詢。 所有已執行或儲存的查詢 [!DNL Query Editor] 可供貴組織內所有可存取許可權的使用者使用 [!DNL Query Service].
 
-### 存取 [!DNL Query Editor] {#accessing-query-editor}
-
-在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 查詢]** 在左側導覽功能表中開啟 [!DNL Query Service] 工作區。 接下來，若要開始寫入查詢，請選取 **[!UICONTROL 建立查詢]** 在熒幕的右上方。 此連結可從以下連結的任何頁面取得： [!DNL Query Service] 工作區。
-
-![將建立查詢反白顯示的查詢工作區概觀索引標籤。](../images/ui/query-editor/create-query.png)
-
-### 增強型查詢編輯器切換 {#enhanced-editor-toggle}
+## 增強的查詢編輯器切換 {#enhanced-editor-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_enhancedEditorToggle"
@@ -62,7 +68,30 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 ![查詢編輯器會醒目顯示設定圖示和啟用深色主題下拉式選單選項。](../images/ui/query-editor/query-editor-settings.png)
 
-### 正在寫入查詢 {#writing-queries}
+### 執行多個循序查詢 {#execute-multiple-sequential-queries}
+
+查詢編輯器的增強版可讓您在查詢編輯器中寫入多個查詢，並以循序方式執行所有查詢。
+
+依序執行多個查詢時，每個查詢都會產生記錄專案。 但是，只有第一個查詢的結果會顯示在查詢編輯器主控台中。 如果您需要疑難排解或確認已執行的查詢，請檢查查詢記錄。 請參閱 [查詢記錄檔案](./query-logs.md) 以取得詳細資訊。
+
+>[!NOTE]
+> 
+>如果CTAS查詢是在查詢編輯器中的第一個查詢之後執行，則仍會建立表格，但查詢編輯器控制檯上沒有輸出。
+
+### 執行選取的查詢 {#execute-selected-query}
+
+如果您已撰寫多個查詢，但只需要執行一個查詢，您可以反白標示所選的查詢並選取
+[!UICONTROL 執行選取的查詢] 圖示。 除非您在編輯器中選取查詢，否則此圖示預設為停用。
+
+![查詢編輯器具有 [!UICONTROL 執行選取的查詢] 圖示醒目提示。](../images/ui/query-editor/run-selected-query.png)
+
+### 結果計數 {#result-count}
+
+「查詢編輯器」有最多50,000列的輸出。 但是，在查詢編輯器主控台中一次只顯示50列。 若要變更主控台中顯示的列數，請選取 **[!UICONTROL 結果計數]** 下拉式清單，然後從50、100、150、300和500值中選擇。
+
+![結果計數下拉式清單反白顯示的查詢編輯器。](../images/ui/query-editor/result-count.png)
+
+## 正在寫入查詢 {#writing-queries}
 
 [!UICONTROL 查詢編輯器] 已妥善整理，以便儘可能輕鬆編寫查詢。 以下熒幕擷圖顯示編輯器在UI中的顯示方式，其中包含SQL輸入欄位和 **播放** 反白顯示。
 
@@ -70,7 +99,7 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 若要將開發時間縮到最短，建議您使用傳回列的限制來開發查詢。 例如 `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`。確認查詢產生預期的輸出後，請移除限制並使用執行查詢 `CREATE TABLE tablename AS SELECT` 以使用輸出產生資料集。
 
-### 寫入工具 [!DNL Query Editor] {#writing-tools}
+## 寫入工具 [!DNL Query Editor] {#writing-tools}
 
 - **自動語法反白顯示：** 讓閱讀及組織SQL更容易。
 
@@ -83,6 +112,18 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 - **表格和欄位自動完成：** 開始輸入您想要的表格名稱 `SELECT` 從，然後使用方向鍵導覽至您要尋找的表格，然後按下 **輸入**. 選取表格後，自動完成會辨識該表格中的欄位。
 
 ![顯示下拉式表格名稱建議的「查詢編輯器」輸入。](../images/ui/query-editor/tables-auto.png)
+
+### 設定文字格式 {#format-text}
+
+此 [!UICONTROL 設定文字格式] 功能可新增標準化的語法樣式，讓您的查詢更易讀取。 選取 **[!UICONTROL 設定文字格式]** 標準化查詢編輯器中的所有文字。
+
+![查詢編輯器 [!UICONTROL 設定文字格式] 和醒目提示的SQL敘述句。](../images/ui/query-editor/format-text.png)
+
+### 複製SQL {#copy-sql}
+
+選取復製圖示，將SQL從查詢編輯器複製到剪貼簿。 此複製功能可用於查詢範本和查詢編輯器中新建立的查詢。
+
+![「查詢」工作區有一個範例查詢範本，其復製圖示會反白顯示。](../images/ui/query-editor/copy-sql.png)
 
 ### 自動完成UI設定切換 {#auto-complete}
 
@@ -160,7 +201,7 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 ## 使用查詢編輯器執行查詢 {#executing-queries}
 
-若要在中執行查詢 [!DNL Query Editor]，您可以在編輯器中輸入SQL，或從以下位置載入先前的查詢： **[!UICONTROL 記錄]** 或 **[!UICONTROL 範本]** 標籤，然後選取 **播放**. 查詢執行的狀態會顯示在 **[!UICONTROL 主控台]** 標籤，而輸出資料則顯示在 **[!UICONTROL 結果]** 標籤。
+若要在中執行查詢 [!DNL Query Editor]，您可以在編輯器中輸入SQL，或從以下位置載入先前的查詢： **[!UICONTROL 記錄]** 或 **[!UICONTROL 範本]** 標籤，然後選取 **播放**. 查詢執行的狀態會顯示在 **[!UICONTROL 主控台]** 標籤，而輸出資料會顯示在 **[!UICONTROL 結果]** 標籤。
 
 ### 主控台 {#console}
 
