@@ -4,9 +4,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
+source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
 workflow-type: tm+mt
-source-wordcount: '3669'
+source-wordcount: '3710'
 ht-degree: 11%
 
 ---
@@ -397,6 +397,10 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 >* 這些欄位會設定為目標目的地的投影屬性。
 >
 > 例如，如果欄位 `person.name.firstName` 具有與目的地的行銷動作衝突的特定資料使用標籤，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱 [Adobe Experience Platform中的資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations).
+
+### [!BADGE 測試版]{type=Informative}透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
+
+部分測試版客戶可將陣列物件從Experience Platform匯出至雲端儲存目的地。 深入瞭解 [匯出陣列和計算欄位](/help/destinations/ui/export-arrays-calculated-fields.md) 並聯絡您的Adobe代表以取得功能的存取權。
 
 ### 已知限制 {#known-limitations}
 
