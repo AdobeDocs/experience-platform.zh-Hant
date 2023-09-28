@@ -1,45 +1,59 @@
 ---
 title: 身分名稱空間總覽
-description: 身分識別命名空間是 Identity Service 的元件，用途是作為身分識別相關內容的指標。 例如，他們會將「name@email.com」的值做為電子郵件地址，或將「443522」的值做為數值CRM ID。
+description: 瞭解Identity Service中的身分識別名稱空間。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: ac53678ca9ef51cb638590138a16a3506c6a1fc0
+source-git-commit: 36a42a7c3722828776495359762289d0028b6ddc
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 10%
+source-wordcount: '1699'
+ht-degree: 6%
 
 ---
 
 # 身分名稱空間總覽
 
-身分識別命名空間是 [[!DNL Identity Service]](./home.md)   的元件，用途是做為身分識別相關內容的量度。例如，它們區分「name」的值<span>@email.com」作為電子郵件地址，或「443522」作為數值CRM ID。
+請閱讀以下檔案，深入瞭解您可以在Adobe Experience Platform Identity Service中處理身分識別名稱空間的動作。
 
 ## 快速入門
 
-使用身分命名空間需先了解所涉及的各種 Adobe Experience Platform 服務。開始使用命名空間之前，請先檢閱下列服務文件：
+身分名稱空間需要瞭解各種Adobe Experience Platform服務。 開始使用命名空間之前，請先檢閱下列服務文件：
 
-- [[!DNL Real-Time Customer Profile]](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
-- [[!DNL Identity Service]](./home.md)：透過跨裝置和系統橋接身分，更能瞭解個別客戶及其行為。
-- [[!DNL Privacy Service]](../privacy-service/home.md)：身分名稱空間用於一般資料保護規範(GDPR)等法律隱私權法規的合規性請求中。 每個隱私權請求都是相對於名稱空間提出，以識別哪些消費者的資料應該受到影響。
+* [[!DNL Real-Time Customer Profile]](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
+* [[!DNL Identity Service]](./home.md)：透過跨裝置和系統橋接身分，更能瞭解個別客戶及其行為。
+* [[!DNL Privacy Service]](../privacy-service/home.md)：身分名稱空間用於一般資料保護規範(GDPR)等法律隱私權法規的合規性請求中。 每個隱私權請求都是相對於名稱空間提出，以識別哪些消費者的資料應該受到影響。
 
 ## 瞭解身分名稱空間
 
-完整身分包含ID值和名稱空間。 跨設定檔片段比對記錄資料時，例如 [!DNL Real-Time Customer Profile] 會合併設定檔資料，身分值和名稱空間必須相符。
+完整身分包含兩個元件： **身分值** 和 **身分名稱空間**. 例如，如果身分的值是 `scott@acme.com`，則名稱空間會將此值識別為電子郵件地址，以提供其內容。 同樣地，名稱空間可以區分 `555-123-456` 作為電話號碼，以及 `3126ABC` 作為CRM ID。 基本上， **名稱空間會提供指定身分的上下文**. 跨設定檔片段比對記錄資料時，例如 [!DNL Real-Time Customer Profile] 會合併設定檔資料，身分值和名稱空間必須相符。
 
-例如，兩個設定檔片段可能包含不同的主要ID，但兩者的「電子郵件」名稱空間值相同 [!DNL Platform] 能夠看到這些片段實際上是同一個人，並為個人將資料彙整在身分圖表中。
+例如，兩個設定檔片段可能包含不同的主要ID，但兩者的「電子郵件」名稱空間值相同，因此Experience Platform能看到這些片段實際上是同一個人，並將個人資料一起匯入身分圖表中。
 
 ![](images/identity-service-stitching.png)
 
-### 身分型別 {#identity-types}
+### 名稱空間的元件
+
+名稱空間包含下列元件：
+
+* **顯示名稱**：指定名稱空間的好記名稱。
+* **身分符號**：身分服務內部用來代表名稱空間的程式碼。
+* **身分型別**：指定名稱空間的分類。
+* **說明**：（選用）您可以提供的有關指定名稱空間的任何補充資訊。
+
+### 身分型別 {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="指定身分識別類型"
->abstract="身分識別類型控制資料是否儲存到身分識別圖中。非人識別碼不會儲存，所有其他身分識別類型都會儲存。"
+>abstract="身分識別類型控制資料是否儲存到身分識別圖中。不會為下列身分型別產生身分圖表：非人員識別碼和合作夥伴ID。"
 >text="Learn more in documentation"
 
-資料可由數種不同的身分型別識別。 身分型別是在建立身分名稱空間時指定的，並控制資料是否持續存在身分圖表中，以及應該如何處理該資料的任何特殊指示。 除外的所有身分型別 **非人員識別碼** 請遵循相同的行為，將名稱空間及其對應的ID值拼接到身分圖表叢集。 使用時，資料不會彙整在一起 **非人員識別碼**.
+身分名稱空間的一個元素是 **身分型別**. 身分型別會判斷：
 
-下列身分型別可在 [!DNL Platform]：
+* 是否要產生身分圖表：
+   * 不會為下列身分型別產生身分圖表：非人員識別碼和合作夥伴ID。
+   * 會針對所有其他身分型別產生身分圖表。
+* 達到系統限制時，會從身分圖表移除哪些身分。 如需詳細資訊，請閱讀 [身分資料的護欄](guardrails.md).
+
+Experience Platform中有以下身分型別：
 
 | 身分型別 | 說明 |
 | --- | --- |
@@ -88,43 +102,33 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 
 若要在UI中檢視身分識別名稱空間，請選取 **[!UICONTROL 身分]** 在左側導覽中，然後選取 **[!UICONTROL 瀏覽]**.
 
-![瀏覽](./images/browse.png)
+您組織中的名稱空間目錄隨即出現，顯示其名稱、身分符號、上次更新日期、對應身分型別和說明的相關資訊。
 
-身分名稱空間清單會顯示在頁面的主要介面中，顯示有關其名稱、身分符號、上次更新日期以及是否為標準或自訂名稱空間的資訊。 右側欄包含的相關資訊 [!UICONTROL 身分圖表強度].
+![貴組織中的自訂身分名稱空間目錄。](./images/namespace/browse.png)
 
-![身分](./images/identities.png)
-
-Platform也提供名稱空間以進行整合。 預設會隱藏這些名稱空間，因為它們是用來連線其他系統，而不是用來拼接身分。 若要檢視整合名稱空間，請選取 **[!UICONTROL 檢視整合身分]**.
-
-![view-integration-identities](./images/view-integration-identities.png)
-
-從清單中選取身分名稱空間，以檢視特定名稱空間的資訊。 選取身分名稱空間會更新右側邊欄的顯示內容，以顯示與您選取的身分名稱空間有關的中繼資料，包括擷取的身分數目，以及失敗和略過的記錄數目。
-
-![select-namespace](./images/select-namespace.png)
-
-## 管理自訂名稱空間 {#manage-namespaces}
+## 建立自訂名稱空間 {#create-namespaces}
 
 根據您的組織資料和使用案例，您可能需要自訂名稱空間。 自訂名稱空間可透過以下方式建立： [[!DNL Identity Service]](./api/create-custom-namespace.md) API或透過UI。
 
-若要使用UI建立自訂名稱空間，請導覽至 **[!UICONTROL 身分]** 工作區，選取 **[!UICONTROL 瀏覽]**，然後選取 **[!UICONTROL 建立身分名稱空間]**.
+若要建立自訂名稱空間，請選取 **[!UICONTROL 建立身分名稱空間]**.
 
-![select-create](./images/select-create.png)
+![在身分工作區中建立身分名稱空間按鈕。](./images/namespace/create-identity-namespace.png)
 
-此 **[!UICONTROL 建立身分名稱空間]** 對話方塊隨即顯示。 提供唯一 **[!UICONTROL 顯示名稱]** 和 **[!UICONTROL 身分符號]** 然後選取您要建立的身分型別。 您也可以新增選擇性說明，以新增有關名稱空間的進一步資訊。 除外的所有身分型別 **非人員識別碼** 會遵循相同的拼接行為。 如果您選取 **非人員識別碼** 作為建立名稱空間時的身分型別，不會發生彙整。 如需有關每種身分型別的特定資訊，請參閱以下表格： [身分型別](#identity-types).
+此 [!UICONTROL 建立身分名稱空間] 視窗會出現。 首先，您必須為要建立的自訂名稱空間提供顯示名稱和身分符號。 您也可以選擇提供說明，在您正在建立的自訂名稱空間上新增更多內容。
 
-完成後，選取 **[!UICONTROL 建立]**.
+![一個快顯視窗，您可以在其中輸入有關自訂身分名稱空間的資訊。](./images/namespace/name-and-symbol.png)
+
+接著，選取您要指派給自訂名稱空間的身分型別。 完成後，選取 **[!UICONTROL 建立]**.
+
+![身份型別選擇，您可以選擇並指派給自訂身份名稱空間。](./images/namespace/select-identity-type.png)
 
 >[!IMPORTANT]
 >
->您定義的名稱空間是組織所私有，而且需要唯一的身分符號才能成功建立。
-
-![create-identity-namespace](./images/create-identity-namespace.png)
-
-與標準名稱空間類似，您也可以從以下位置選取自訂名稱空間： **[!UICONTROL 瀏覽]** 標籤以檢視其詳細資訊。 不過，有了自訂名稱空間，您還可以從詳細資訊區域編輯其顯示名稱和說明。
-
->[!NOTE]
+>* 您定義的名稱空間是組織所私有，而且需要唯一的身分符號才能成功建立。
 >
->建立名稱空間後，便無法刪除該名稱空間，也無法變更其身分符號和型別。
+>* 建立名稱空間後，便無法刪除該名稱空間，也無法變更其身分符號和型別。
+>
+>* 不支援重複的名稱空間。 建立新名稱空間時，不能使用現有的顯示名稱和身分符號。
 
 ## 身分資料中的名稱空間
 
