@@ -1,9 +1,9 @@
 ---
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK建立目的地伺服器的API呼叫的範例。
 title: 建立目的地伺服器組態
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '2039'
 ht-degree: 9%
 
 ---
@@ -844,6 +844,103 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 +++
 
+
+>[!ENDTABS]
+
+
+### 建立動態下拉式清單目的地伺服器 {#dynamic-dropdown-servers}
+
+使用 [動態下拉選單](../../functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) 以根據您自己的API動態擷取及填入下拉式客戶資料欄位。 例如，您可以擷取要用於目的地連線的現有使用者帳戶清單。
+
+您必須先設定動態下拉式清單的目的地伺服器，才能設定動態下拉式清單客戶資料欄位。
+
+請參閱下方標籤中的目的地伺服器範例，此範例是用來從API動態擷取要在下拉式選取器中顯示的值。
+
+以下範例裝載包含動態結構描述伺服器所需的所有引數。
+
+>[!BEGINTABS]
+
+>[!TAB 動態下拉式伺服器]
+
+**建立動態下拉式伺服器**
+
+設定從您自己的API端點擷取下拉式客戶資料欄位值的目的地時，您需要建立類似於以下顯示的動態下拉式清單伺服器。
+
++++請求
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
+{
+   "name":"Server for dynamic dropdown",
+   "destinationServerType":"URL_BASED",
+   "urlBasedDestination":{
+      "url":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"https://api.moviestar.com/data/{{customerData.users}}/items"
+      }
+   },
+   "httpTemplate":{
+      "httpMethod":"GET",
+      "headers":[
+         {
+            "header":"Authorization",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"My Bearer Token"
+            }
+         },
+         {
+            "header":"x-integration",
+            "value":{
+               "templatingStrategy":"PEBBLE_V1",
+               "value":"{{customerData.integrationId}}"
+            }
+         },
+         {
+            "header":"Accept",
+            "value":{
+               "templatingStrategy":"NONE",
+               "value":"application/json"
+            }
+         }
+      ]
+   },
+   "responseFields":[
+      {
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{% set list = [] %} {% for record in response.body %} {% set list = list|merge([{'name' : record.name, 'value' : record.id }]) %} {% endfor %}{{ {'list': list} | toJson | raw }}",
+         "name":"list"
+      }
+   ]
+}
+```
+
+| 參數 | 類型 | 說明 |
+| -------- | ----------- | ----------- |
+| `name` | 字串 | *必要.* 代表動態下拉式伺服器的易記名稱，僅對Adobe可見。 |
+| `destinationServerType` | 字串 | *必要.* 將設為 `URL_BASED` 用於動態下拉式伺服器。 |
+| `urlBasedDestination.url.templatingStrategy` | 字串 | *必要.* <ul><li>使用 `PEBBLE_V1` 如果Adobe需要轉換 `value` 下方的欄位。 如果您有類似以下的端點，請使用此選項： `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> 使用 `NONE` 如果Adobe端不需要轉換，例如，如果您有類似以下的端點： `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.value` | 字串 | *必要.* 填寫Experience Platform應連線的API端點位址，並擷取下拉式清單值。 |
+| `httpTemplate.httpMethod` | 字串 | *必要.* Adobe將在對伺服器呼叫中使用的方法。 對於動態下拉式伺服器，請使用 `GET`. |
+| `httpTemplate.headers` | 物件 | *Optiona.l* 包含連線至動態下拉式伺服器所需的任何標頭。 |
+| `responseFields.templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `responseFields.value` | 字串 | *必要.* 此字串是字元逸出轉換範本，可將從API收到的回應轉換為將顯示在Platform UI中的值。 <br> <ul><li> 如需如何寫入範本的詳細資訊，請閱讀 [使用範本區段](../../functionality/destination-server/message-format.md#using-templating). </li><li> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). |
+
+{style="table-layout:auto"}
+
++++
+
++++回應
+
+成功的回應會傳回HTTP狀態200以及您新建立的目的地伺服器組態的詳細資料。
+
++++
 
 >[!ENDTABS]
 
