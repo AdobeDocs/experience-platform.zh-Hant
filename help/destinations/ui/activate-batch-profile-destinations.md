@@ -4,9 +4,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 99ab9ed562d1959dc2bc801d563cb61d89bbde75
+source-git-commit: 47ca76c5a4129882917e96a32721b4103bb6afa3
 workflow-type: tm+mt
-source-wordcount: '3707'
+source-wordcount: '3669'
 ht-degree: 11%
 
 ---
@@ -27,11 +27,6 @@ ht-degree: 11%
 本文說明在Adobe Experience Platform批次設定檔型目的地（例如雲端儲存空間與電子郵件行銷目的地）中啟用對象所需的工作流程。
 
 ## 先決條件 {#prerequisites}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_flat_files"
->title="(Beta)匯出陣列支援"
->abstract="（Beta版）將原始值的陣列從Experience Platform匯出至您想要的雲端儲存空間目的地。 此文字將更新更多資訊。 <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/license-usage-limited.html?lang=en#available-metrics">了解更多</a>。 "
 
 若要對目的地啟用對象，您必須已成功 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
 
