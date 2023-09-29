@@ -1,48 +1,46 @@
 ---
 title: LiveRamp — 散發連線
-description: 瞭解如何使用LiveRamp - Distribution聯結器將先前上線到LiveRamp的受眾啟用到其他廣告目的地。
-hide: true
-hidefromtoc: true
-source-git-commit: 324f662dcc9718df6c81c47874c6b30235a74601
+description: 瞭解如何使用LiveRamp - Distribution聯結器來編排及啟用先前上線到LiveRamp的受眾，以及下游廣告目的地。
+source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
 workflow-type: tm+mt
-source-wordcount: '1469'
-ht-degree: 40%
+source-wordcount: '2716'
+ht-degree: 23%
 
 ---
 
 
-# [!DNL LiveRamp - Distribution] 連線 {#liveramp-onboarding}
+# [!DNL LiveRamp - Distribution] 連線
 
 此 [!DNL LiveRamp - Distribution] 連線可讓您在行動裝置、網路、顯示和連線的電視媒體中，啟用從Experience Platform到高階發佈者的對象。
 
 >[!IMPORTANT]
 >
->此目的地聯結器和檔案頁面是由LiveRamp建立和維護。 如有任何查詢或更新要求，請直接連絡LiveRamp [此處](mailto:example@email.com).
+>此目的地聯結器和檔案頁面是由LiveRamp建立和維護。 如有任何查詢或更新要求，請直接連絡LiveRamp [此處](mailto:adobertcdp@liveramp.com).
 
 ## 支援的目的地 {#supported-destinations}
 
 [!DNL LiveRamp - Distribution] 目前支援對下列平台進行對象啟用：
 
-* [!DNL 4C Insights]
-* [!DNL Acast]
-* [!DNL Amobee]
-* [!DNL Ampersand.tv]
-* [!DNL Captify]
-* [!DNL Cardlytics]
+* [[!DNL 4C Insights]](#insights)
+* [[!DNL Acast]](#acast)
+* [[!DNL Nexxen]](#nexxen)
+* [[!DNL Ampersand.tv]](#ampersand-tv)
+* [[!DNL Captify]](#captify)
+* [[!DNL Cardlytics]](#cardlytics)
 * [[!DNL Disney (Hulu/ESPN/ABC)]](#disney)
-* [!DNL iHeartMedia]
-* [!DNL Index Exchange]
-* [!DNL Magnite CTV Platform]
-* [!DNL Magnite DV+ (Rubicon Project)]
-* [!DNL One Fox]
-* [!DNL Pandora]
-* [!DNL Reddit]
+* [[!DNL iHeartMedia]](#iheartmedia)
+* [[!DNL Index Exchange]](#index-exchange)
+* [[!DNL Magnite CTV Platform]](#magnite)
+* [[!DNL Magnite DV+ (Rubicon Project)]](#magnite-dv)
+* [[!DNL One Fox]](#fox)
+* [[!DNL Pandora]](#pandora)
+* [[!DNL Reddit]](#reddit)
 * [[!DNL Roku]](#roku)
-* [!DNL Spotify]
-* [!DNL Taboola]
-* [!DNL TargetSpot]
-* [!DNL Teads]
-* [!DNL WB Discovery]
+* [[!DNL Spotify]](#spotify)
+* [[!DNL Taboola]](#taboola)
+* [[!DNL TargetSpot]](#targetspot)
+* [[!DNL Teads]](#teads)
+* [[!DNL WB Discovery]](#wb-discovery)
 
 ## 使用案例 {#use-cases}
 
@@ -50,13 +48,13 @@ ht-degree: 40%
 
 運動服裝零售商的行銷團隊使用 [LiveRamp — 入門](liveramp-onboarding.md) 將對象從Experience Platform傳送至其LiveRamp帳戶的連線。
 
-透過 [!DNL LiveRamp - Distribution] 連線他們現在可以觸發將已上線對象啟動至本頁面頂端提及的目的地，因此可將目標定位為行動裝置、開放網頁、社交和網路上的使用者， [!DNL CTV] 平台。
+透過 [!DNL LiveRamp - Distribution] 連線他們現在可以觸發啟動已上線對象至 [支援的目的地](#supported-destinations). 接著，他們便可將目標鎖定在行動、開啟網頁、社交和網路上的使用者 [!DNL CTV] 平台。
 
 ## 將對象上線到LiveRamp {#onboarding}
 
 在透過啟用對象之前 [!DNL LiveRamp - Distribution] 連線，使用 [LiveRamp — 入門](liveramp-onboarding.md) 將您的Experience Platform對象匯出至LiveRamp的連線。
 
-將對象上線至LiveRamp後，請從繼續啟動工作流程。 [連線到目的地](#connect) 步驟。
+將對象上線至LiveRamp後，請從繼續啟動工作流程。 [連線到目的地](#connect) 選取並設定資料啟用的目標目的地平台的步驟。
 
 ## 連線到目的地 {#connect}
 
@@ -77,10 +75,10 @@ ht-degree: 40%
 
 ![顯示目的地連線畫面的Platform UI影像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
+* **[!UICONTROL LiveRamp組織ID]**：您的LiveRamp帳戶的組織ID (列為 _owner_org_ （以您的LiveRamp提供的憑證表示）。
+* **[!UICONTROL 密碼]**：您的LiveRamp帳戶密碼(列為 _secret_key_ （以您的LiveRamp提供的憑證表示）。
 * **[!UICONTROL 權杖URL]**：您的LiveRamp權杖URL。
-* **[!UICONTROL LiveRamp組織ID]**：您的LiveRamp帳戶的組織ID。
-* **[!UICONTROL 使用者名稱]**：您的LiveRamp帳戶使用者名稱。
-* **[!UICONTROL 密碼]**：您的LiveRamp帳戶密碼。
+* **[!UICONTROL 使用者名稱]**：您的LiveRamp帳戶使用者名稱(列為 _account_id_ （以您的LiveRamp提供的憑證表示）。
 
 ### 設定目的地詳細資料 {#destination-details}
 
@@ -89,6 +87,13 @@ ht-degree: 40%
 ![顯示目的地詳細資訊畫面的Platform UI影像。l](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
 
 * **[!UICONTROL 名稱]**：填寫目的地連線的偏好名稱。
+
+>[!NOTE]
+>
+>為目的地命名時，Adobe建議遵循此格式： `LiveRamp - Downstream Destination Name`. 此命名模式可協助您快速識別 [瀏覽](../../ui/destinations-workspace.md#browse) 目的地工作區的索引標籤。
+><br>
+>範例：`LiveRamp - Roku`。
+
 * **[!UICONTROL 說明]**：輸入目的地的說明。 使用說明來協助您輕鬆識別此目的地的用途。
 * **[!UICONTROL 目的地]**：使用下拉式功能表選取您要啟用對象的目的地。 您在這裡選取的目的地，會直接影響您在 [目的地特定設定](#destination-settings) 畫面。
 * **[!UICONTROL 整合]**：選取您要用於目的地的整合帳戶。
@@ -96,7 +101,7 @@ ht-degree: 40%
 
 ## 目的地特定設定 {#destination-settings}
 
-每個目的地 [支援](#supported-destinations) 作者： [!DNL LiveRamp - Onboarding] 需要您填寫特定的組態選項。
+每個目的地 [支援](#supported-destinations) 作者： [!DNL LiveRamp - Distribution] 需要您填寫特定的組態選項。
 
 如需如何設定每個目的地的詳細指引，請參閱以下各節。
 
@@ -105,9 +110,13 @@ ht-degree: 40%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="4C 品牌設定檔 ID"
->abstract="輸入與您的 4C 品牌設定檔相關的數值 ID。如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。"
+>abstract="輸入與您的 4C 品牌設定檔相關的數值 ID。如果您沒有此ID，請聯絡您的4C使用者端服務代表。"
 
-若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示4C Insights目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
+
+* **[!UICONTROL 4C品牌設定檔ID]**：輸入與您的4C品牌設定檔相關聯的數值ID。 如果您沒有此ID，請聯絡您的4C使用者端服務代表。
 
 ### [!DNL Acast] {#acast}
 
@@ -116,9 +125,24 @@ ht-degree: 40%
 >title="用戶端名稱"
 >abstract="依您希望對目標合作夥伴顯示的廣告商帳戶名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
-### [!DNL Amobee] {#amobee}
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Acast目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
+
+* **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
 ### [!DNL Ampersand.tv] {#ampersand-tv}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_ampersand_company_name"
+>title="您的公司名稱"
+>abstract="您希望向目的地合作夥伴顯示的公司名稱。 請勿使用空格或特殊字元。"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示「&amp;」目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
+
+* **[!UICONTROL 您的公司名稱]**：您的公司名稱，您希望向目的地合作夥伴顯示的名稱。 請勿使用空格或特殊字元。
 
 ### [!DNL Captify] {#captify}
 
@@ -127,6 +151,12 @@ ht-degree: 40%
 >title="用戶端名稱"
 >abstract="依您希望對目標合作夥伴顯示的廣告商帳戶名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Captify目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
+
+* **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
+
 ### [!DNL Cardlytics] {#cardlytics}
 
 >[!CONTEXTUALHELP]
@@ -134,15 +164,20 @@ ht-degree: 40%
 >title="用戶端名稱"
 >abstract="依您希望對目標合作夥伴顯示的廣告商帳戶名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Cardlytics目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
+
+* **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
+
 ### [!DNL Disney (Hulu/ESPN/ABC)] {#disney}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="廣告商資料目標條款合約"
->abstract="輸入 `I AGREE` 確認 Disney 廣告商資料條款的認可與合約。"
+>abstract="輸入 `I AGREE` 確認迪士尼廣告商資料條款的認可與同意。"
 
-<!-- 
->additional-url="https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/" text="Read the agreement" -->
+<!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
@@ -152,13 +187,13 @@ ht-degree: 40%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="您的電子郵件地址"
->abstract="輸入與個人相連結的電子郵件地址。該電子郵件地址做為廣告商資料條款合約的簽名。必要時，也會使用該電子郵件地址與您聯絡。"
+>abstract="輸入與個人相連結的電子郵件地址。該電子郵件地址做為廣告商資料條款合約的簽名。如有需要，此電子郵件地址也可用來聯絡您。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
 ![平台UI影像，其中顯示Disney目的地的客戶資料欄位。](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
-* **[!UICONTROL 廣告商資料目的地條款合約]**：輸入 `I AGREE` 確認對迪士尼廣告商資料條款的認可與同意。
+* **[!UICONTROL 廣告商資料目的地條款合約]**：輸入 `I AGREE` 確認迪士尼廣告商資料條款的認可與同意。
 * **[!UICONTROL 使用者端名稱]**：輸入您要向目的地合作夥伴顯示的公司名稱。
 * **[!UICONTROL 電子郵件地址]**：輸入繫結至個人的電子郵件地址。 該電子郵件地址做為廣告商資料條款合約的簽名。
 
@@ -169,35 +204,113 @@ ht-degree: 40%
 >title="用戶端名稱"
 >abstract="依您希望對目標合作夥伴顯示的廣告商帳戶名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示iHeartMedia目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
+
+* **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
+
 ### [!DNL Index Exchange] {#index-exchange}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
+>title="帳戶名稱"
+>abstract="您的Index Exchange使用者端帳戶名稱。 請勿使用空格或特殊字元。"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Index Exchange目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+
+* **[!UICONTROL 帳戶名稱]**：您的Index Exchange使用者端帳戶名稱。 請勿使用空格或特殊字元。
 
 ### [!DNL Magnite CTV Platform] {#magnite}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitectv_client"
+>title="用戶端"
+>abstract="您想要顯示給目的地合作夥伴的使用者端名稱。 使用您的公司名稱。請勿使用空格或特殊字元。"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Magnite CTV目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+
+* **[!UICONTROL 使用者端]**：您的使用者端名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
+
 ### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
+>title="合作夥伴ID"
+>abstract="與擁有區段/資料的發佈者相關聯的Rubicon專案合作夥伴ID。 如果您不確定應使用的值，請聯絡您的Rubicon專案客戶代表。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
+>title="名額ID"
+>abstract="Magnite客戶經理提供的Magnite DV+名額ID"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Magnite DV+目的地客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
+
+* **[!UICONTROL 合作夥伴ID]**：與擁有區段/資料的發佈者相關聯的Rubicon專案合作夥伴ID。 如果您不確定應使用的值，請聯絡您的Rubicon專案客戶代表。
+* **[!UICONTROL 名額ID]**：菱形DV+座位ID，由您的菱形客戶經理提供
+
+### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_ratetype"
+>title="費率型別"
+>abstract="費率型別代表資料使用應計費的方式。 所有$0.00的費率應為固定費用。 如果您不確定要使用哪種費率型別，請洽詢您的Nexen代表。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_marketid"
+>title="市場ID"
+>abstract="輸入應在其中建立Nexen資料合約的數值「市場ID」。 如果您正在Nexen平台的所有市場進行「AlwaysOn」整合，請輸入–1。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
+>title="廣告商ID"
+>abstract="如果您要傳送資料給Nexen平台的單一廣告商，請輸入數值的Amobe廣告商ID。 如果您想要讓資料可供市場中的所有廣告商使用，或這些區段為「一律開啟」，請輸入–1。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_nexxen_contactemail"
+>title="連絡人電子郵件"
+>abstract="輸入Nexen用來傳送資料合約詳細資料的電子郵件地址。 這很可能是您自己的電子郵件地址，但也可能是電子郵件別名。 如果有多個收件者，請使用逗號(`email1@domain.com`，`email2@domain.com`，以此類推。)"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Nexen目的地客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
+
+* **[!UICONTROL 費率型別]**：費率型別代表資料使用應計費的方式。 所有$0.00的費率應為固定費用。 如果您不確定要使用哪種費率型別，請洽詢您的Nexen代表。
+* **[!UICONTROL 市場ID]**：輸入應在其中建立Nexen資料合約的數值市場ID。 如果您正在Nexen平台的所有市場進行「AlwaysOn」整合，請輸入–1。
+* **[!UICONTROL 廣告商ID]**：如果您要傳送資料至Nexen平台的單一廣告商，請輸入數值Nexen廣告商ID。 如果您想要讓資料可供市場中的所有廣告商使用，或如果這些區段是「一律開啟」，請輸入–1。
+* **[!UICONTROL 連絡人電子郵件]**：輸入Nexen用來傳送資料合約詳細資料的電子郵件地址。 這很可能是您自己的電子郵件地址，但也可能是電子郵件別名。 如果有多個收件者，請使用逗號( `email1@domain.com`， `email2@domain.com`)。
 
 ### [!DNL One Fox] {#fox}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_fox_client"
+>title="用戶端"
+>abstract="您希望向合作夥伴顯示的公司/分送帳戶名稱。 如果您不確定要使用哪個名稱，請聯絡您的合作夥伴客戶代表。 請勿使用空格或特殊字元。"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示One Fox目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+
+* **[!UICONTROL 使用者端]**：您希望向合作夥伴顯示的公司/分送帳戶名稱。 預設使用您的公司名稱。 如果您不確定要使用哪個名稱，請聯絡您的合作夥伴客戶代表。 請勿使用空格或特殊字元。
+
 ### [!DNL Pandora] {#pandora}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_pandora_data_provider_name"
->title="資料提供者名稱"
->abstract="您希望對 Pandora 顯示的公司名稱。該名稱最多可以包含 40 個小寫字母和英數字元 (例如 My_Company)。"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_pandora_rep_email"
->title="客戶代表電子郵件地址"
->abstract="Pandora 客戶代表的電子郵件地址。該地址用於傳送類型更新。若要輸入多個地址，請用逗號分隔。"
-
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_email"
->title="電子郵件地址"
->abstract="該地址用於傳送類型更新。若要輸入多個地址，請用逗號分隔。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_pandora_account_name"
 >title="帳戶名稱"
 >abstract="您的 Pandora 帳戶名稱。如果不確定您的帳戶名稱是什麼，請聯絡您的 Pandora 客戶代表。請勿使用空格或特殊字元。"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Pandora目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
+
+* **[!UICONTROL 帳戶名稱]**：您的Pandora帳戶名稱。 如果不確定您的帳戶名稱是什麼，請聯絡您的 Pandora 客戶代表。請勿使用空格或特殊字元。
 
 ### [!DNL Reddit] {#reddit}
 
@@ -211,7 +324,14 @@ ht-degree: 40%
 >title="Reddit 廣告商名稱"
 >abstract="您的 Reddit 廣告商名稱。請勿使用空格或特殊字元。"
 
-### Roku {#roku}
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Reddit目的地客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+
+* **[!UICONTROL Reddit廣告商ID]**：您的Reddit廣告商ID。 必須以「t2_」或「a2_」開頭。如果您不知道自己的廣告商 ID，請聯絡您的 Reddit 代表。
+* **[!UICONTROL Reddit廣告商名稱]**：您的Reddit廣告商名稱。 請勿使用空格或特殊字元。
+
+### [!DNL Roku] {#roku}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_roku_email"
@@ -237,10 +357,11 @@ ht-degree: 40%
 >title="用戶端名稱"
 >abstract="依您希望對目標合作夥伴顯示的廣告商帳戶名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_liveramp_distribution_spotify_account_token"
->title="帳戶語彙基元"
->abstract="通知 Spotify 連結資料之處，以及通過驗證可使用此工作流程的一個英數標別碼。請聯絡您的 Spotify 客戶經理以取得此語彙基元。"
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Spotify目的地支援的識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
+
+* **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
 
 ### [!DNL Taboola] {#taboola}
 
@@ -249,6 +370,18 @@ ht-degree: 40%
 >title="客戶經理電子郵件地址"
 >abstract="您的 Taboola 客戶經理的電子郵件地址。"
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_taboola_seg_type"
+>title="區段類型"
+>abstract="區段型別。 目前僅支援第一方區段。"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示Taboola目的地支援的識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
+
+* **[!UICONTROL 客戶經理電子郵件地址]**：您的Taboola客戶經理的電子郵件地址。
+* **[!UICONTROL 區段型別]**：區段型別。 目前僅支援第一方區段。
+
 ### [!DNL TargetSpot] {#targetspot}
 
 >[!CONTEXTUALHELP]
@@ -256,7 +389,24 @@ ht-degree: 40%
 >title="用戶端名稱"
 >abstract="依您希望對目標合作夥伴顯示的廣告商帳戶名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示TargetSpot目的地支援之識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+
+* **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
+
 ### [!DNL Teads] {#teads}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_liveramp_distribution_teads_teadsid"
+>title="團隊ID"
+>abstract="您的團隊ID"
+
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示TargetSpot目的地支援之識別碼的Platform UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
+
+* **[!UICONTROL 團隊ID]**：您的團隊ID
 
 ### [!DNL WB Discovery] {#wb-discovery}
 
@@ -265,9 +415,15 @@ ht-degree: 40%
 >title="用戶端名稱"
 >abstract="依您希望對目標合作夥伴顯示的廣告商帳戶名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
+若要設定目的地的詳細資料，請填寫下列欄位。
+
+![顯示WB探索目的地支援之識別碼的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
+
+* **[!UICONTROL 使用者端名稱]**：您的廣告商帳戶名稱，您希望向目的地合作夥伴顯示的名稱。 使用您的公司名稱。請勿使用空格或特殊字元。
+
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需有關警示的詳細資訊，請閱讀以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 若要接收有關資料流狀態的通知，請從清單中選取警報。 如需有關警示的詳細資訊，請閱讀以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
@@ -279,11 +435,11 @@ ht-degree: 40%
 
 此 [!DNL LiveRamp - Distribution] 連線會啟用已透過上線至您LiveRamp帳戶的對象。 [LiveRamp — 入門](liveramp-onboarding.md) 連線。
 
-若要成功啟用您的對象，在此步驟中，您必須選取 **相同對象** 您之前已上線到LiveRamp的檔案。
+若要成功啟用您的對象，您必須選取 **相同對象** 您擁有 [先前已上線](liveramp-onboarding.md) 到LiveRamp。
 
 >[!IMPORTANT]
 >
->選取先前未上線至LiveRamp的受眾，不會觸發新受眾的上線。
+>選取先前未透過上線的對象 [LiveRamp — 入門](liveramp-onboarding.md) 連線不會觸發新對象的上線。
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
@@ -297,4 +453,4 @@ ht-degree: 40%
 
 ## 其他資源 {#additional-resources}
 
-如需如何設定 [!DNL LiveRamp - Onboarding] 儲存，請參閱 [正式檔案](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+如需如何設定 [!DNL LiveRamp - Onboarding] 目的地，請參閱 [LiveRamp — 入門檔案](liveramp-onboarding.md).
