@@ -1,10 +1,10 @@
 ---
 title: UI中來源資料流程的隨選擷取
 description: 瞭解如何使用Experience Platform使用者介面，依需求為來源連線建立資料流程。
-source-git-commit: ce1e6c08d1e53346c11f9746cea524689f402031
+source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 0%
+source-wordcount: '499'
+ht-degree: 1%
 
 ---
 
@@ -44,9 +44,9 @@ ht-degree: 0%
 
 | 正在排程設定 | 說明 |
 | --- | --- |
-| [!UICONTROL 擷取開始時間] | 排程的開始時間（以UTC表示），表示隨選資料流將開始的時間。 |
-| [!UICONTROL 日期範圍開始時間] | 開始提取資料的日期和時間。 |
-| [!UICONTROL 日期範圍結束時間] | 提取資料的結束日期和時間，直到為止。 |
+| [!UICONTROL 擷取開始時間] | 隨選資料流執行的排定時間。 |
+| [!UICONTROL 日期範圍開始時間] | 將會從中擷取資料的最早日期和時間。 |
+| [!UICONTROL 日期範圍結束時間] | 擷取資料的日期和時間，截止日期為。 |
 
 選取 **[!UICONTROL 排程]** 並提供一些時間，讓您的隨選資料流觸發。
 
