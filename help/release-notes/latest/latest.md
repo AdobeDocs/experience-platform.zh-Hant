@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c57845ab2bd9ce16fb34b6babfa90a393b101409
+source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 28%
+source-wordcount: '2149'
+ht-degree: 26%
 
 ---
 
@@ -20,9 +20,14 @@ Adobe Experience Platform中的新功能：
  Experience Platform 現有功能的更新：
 
 - [警報](#alerts)
+- [儀表板](#dashboards)
 - [資料集合](#data-collection)
+- [資料控管](#data-governance)
+- [資料檢疫](#hygiene)
 - [目的地](#destinations)
+- [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
+- [查詢服務](#query-service)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
@@ -44,6 +49,18 @@ Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您�
 
 若要進一步瞭解警示，請閱讀 [[!DNL Observability Insights] 概述](../../observability/home.md).
 
+## 儀表板 {#dashboards}
+
+Adobe Experience Platform提供多個 [!DNL dashboards] 您可以透過它檢視有關您組織資料的重要資訊，如每日快照期間所擷取。
+
+| 功能 | 說明 |
+| --- | --- |
+| [授權使用情況儀表板改善](../../dashboards/guides/license-usage.md) | 透過改善的關於您組織授權使用的報告和關鍵量度視覺化，維護對您的授權協定的控制。 這些改善功能可針對您購買的所有Experience Platform產品，提供比授權使用量度更高的精細度。 |
+
+{style="table-layout:auto"}
+
+若要深入瞭解授權使用儀表板，請參閱 [授權使用情況儀表板總覽](../../dashboards/guides/destinations.md).
+
 ## 資料收集 {#data-collection}
 
 Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
@@ -58,6 +75,35 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 {style="table-layout:auto"}
 
 若要進一步瞭解資料彙集，請參閱 [資料收集概觀](../../tags/home.md).
+
+## 資料治理 {#data-governance}
+
+Adobe Experience Platform 資料治理是一系列的策略和技術，用於管理客戶資料並確保符合適用於資料使用方式的法規、限制和政策。它在 Experience Platform 的不同階層都發揮關鍵作用，包括編目、資料譜系、資料使用標籤、資料存取政策以及對行銷動作資料的存取控制。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 適用於協力廠商資料的新合作夥伴生態系統標籤 | 提供適用於協力廠商擴充和潛在客戶的新資料使用標籤。 請參閱 [合作夥伴生態系統標籤檔案](../../data-governance/labels/reference.md#partner) 以取得詳細資訊。 |
+
+{style="table-layout:auto"}
+
+若要了解有關資料治理的詳細資訊，請閱讀[資料治理概觀](../../data-governance/home.md)。
+
+## 資料檢疫 {#hygiene}
+
+Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪除消費者記錄和資料集，以管理儲存的資料。 使用 [!UICONTROL 資料生命週期] 在UI中或透過呼叫資料衛生API，您能夠有效地管理您的資料存放區。 使用這些功能可確保資訊如預期使用、在不正確的資料需要修正時更新，並在組織原則認為必要時刪除。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} | 透過Adobe Experience Platform中的進階資料生命週期管理功能，跨所有資料存放區管理您的資料生命週期，以符合客戶承諾和授權協定：自動化資料集到期日和記錄刪除。<br>有了自動化資料集有效期，您可以刪除整個資料集，並設定要刪除資料集的日期和時間。<br>記錄刪除可讓您透過定位個別消費者設定檔的主要身分，來刪除個別消費者設定檔。 您可以透過UI或透過CSV/JSON檔案上傳個別提供主要身分。 請參閱 [記錄刪除檔案](../../hygiene/ui/record-delete.md) 以取得詳細資訊 |
+| 資料集有效期 | 藉由自動化資料集到期功能，將您的資料減至最少，並控制您的授權協定。 刪除整個資料集並設定要刪除資料集的日期和時間，以減少資料量。 請參閱 [資料集有效期限檔案](../../hygiene/ui/dataset-expiration.md) 以取得詳細資訊。 |
+
+{style="table-layout:auto"}
+
+如需平台資料衛生功能的詳細資訊，請參閱 [資料衛生概觀](../../hygiene/home.md).
 
 ## 目的地 {#destinations}
 
@@ -98,6 +144,23 @@ Add these to release notes as they go out
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
+## 體驗資料模式 (XDM) {#xdm}
+
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 結構描述編輯器中新增的快速動作 | 結構編輯器已在畫布中新增快速動作。 您現在可以直接從編輯器中複製JSON結構或刪除結構。<br>![結構編輯器中的快速動作。](../2023/assets/schema-editor-copy-json.png "含有更多和複製到JSON的結構描述編輯器會醒目提示。"){width="100" zoomable="yes"} |
+| 依自訂或標準建立者篩選XDM資源 | 可用的結構描述、欄位群組、資料型別和類別的清單現在會根據其建立方法來預先篩選。 這可讓您根據資源是自訂建立還是由Adobe建立來篩選資源。<br>![結構描述工作區中的標準和自訂篩選器。](../2023/assets/standard-and-custom-classes.png "包含反白顯示的標準和自訂篩選器的結構描述工作區。"){width="100" zoomable="yes"} <br> 請參閱 [建立和編輯資原始檔](../../xdm/ui/resources/classes.md#filter.md) 以取得詳細資訊。 |
+
+**更新的功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 已更新結構描述建立工作流程 | 已實作新的結構描述建立工作流程，以簡化程式。 <br> ![新的結構描述建立UI。](../2023/assets/schema-class-options.png "新的結構描述詳細資料選擇器已強調顯示。"){width="100" zoomable="yes"} <br> 請參閱 [結構描述建立檔案](../../xdm/ui/resources/schemas.md#create) 以取得詳細資訊。 |
+
 ## 身分識別服務 {#identity-service}
 
 Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分，為您提供客戶及其行為的全方位檢視，讓您可即時實現有影響力的個人數位體驗。
@@ -112,6 +175,21 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 {style="table-layout:auto"}
 
 若要進一步瞭解Identity Service，請參閱 [Identity Service總覽](../../identity-service/home.md).
+
+## 查詢服務 {#query-service}
+
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以從以下位置加入任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或內嵌到即時客戶個人檔案中。
+
+**更新的功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 記錄篩選UI更新 | 改善的查詢記錄篩選可改善使用者產生的記錄的可見性，以便監控、管理和疑難排解。 您可以根據各種設定來篩選查詢記錄清單。 <br> ![查詢記錄篩選設定。](../2023/assets/log-filter-settings.png "新查詢記錄篩選器會醒目提示。"){width="100" zoomable="yes"}  <br> 請參閱 [查詢記錄檔案](../../query-service/ui/query-logs.md#filter-logs) 以取得詳細資訊。 |
+| 多個查詢編輯器UI更新 | 您現在可以在查詢編輯器中執行多個循序查詢，或寫入多個查詢並按順序執行所有查詢。 若要增加查詢執行的彈性，您可以反白選取的查詢，並選取要獨立於其他查詢執行的特定查詢。 請參閱 [查詢編輯器UI指南](../../query-service/ui/user-guide.md#execute-multiple-sequential-queries) 以取得詳細資訊。 |
+
+{style="table-layout:auto"}
+
+如需有關查詢服務的詳細資訊，請參閱[查詢服務概觀](../../query-service/home.md)。
 
 ## Segmentation Service {#segmentation}
 
