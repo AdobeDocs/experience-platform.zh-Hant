@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 儀表板說明
 breadcrumb-title: 儀表板指南
 user-guide-description: 了解如何透過可自訂的儀表板在 Experience Platform 視覺化資料。
 feature: Dashboards
-source-git-commit: c1ad20def39ef58253e8486ca4dcfcce2501510b
+source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 34%
+source-wordcount: '85'
+ht-degree: 36%
 
 ---
 
@@ -25,7 +25,6 @@ ht-degree: 34%
    * [對象](guides/audiences.md)
    * [目的地](guides/destinations.md)
    * [授權使用情況](guides/license-usage.md)
-   * [授權使用情況（限量發行）](guides/license-usage-limited.md)
 * 自訂儀表板 {#customize}
    * [自訂概述](customize/overview.md)
    * [修改儀表板](customize/modify.md)
