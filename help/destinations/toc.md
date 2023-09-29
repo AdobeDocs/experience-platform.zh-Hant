@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
+source-git-commit: 0ef33fda8fab14de1676fc1d8a11029439b967ad
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1164'
 ht-degree: 9%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 9%
    * [目的地目錄概觀](./catalog/overview.md)
    * Adobe目的地{#adobe}
       * [Adobe目的地概觀](./catalog/adobe/overview.md)
-      * [(Beta)Experience Cloud對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Experience Cloud 對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform受眾共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

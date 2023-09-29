@@ -3,7 +3,7 @@ keywords: 目的地；問題；常見問題；faq；目的地常見問題
 title: 常見問答
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 75b9cc3e2c9a18ec8c08c9c3ca774accae31eb7e
+source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 3%
@@ -48,7 +48,32 @@ ht-degree: 3%
 為確保所有設定檔都傳送至您的目的地，您必須使用新設定建立新的對象，然後將其啟用至您的目的地。
 
 +++
+<!--
+## [!DNL Experience Cloud Audiences] {#eca-faq}
 
+### What are the differences between the Experience Cloud Audiences and Adobe Target destinations?
+
++++Answer
+
+See the table below for a feature comparison between the Experience Cloud Audiences and Adobe Target destinations.
+
+||Experience Cloud Audiences|Adobe Target|
+|---|---|---|
+| **Supported Experience Cloud apps** | Supports audience activation to Audience Manager, Adobe Target, Adobe Analytics, Advertising Cloud, Marketo, Adobe Campaign | Supports audience activation only to Adobe Target |
+| **Supports audience activation** | ✓ | ✓ |
+| **Supports attribute activation** | X | ✓ |
+| **Latency** | Profiles begin activating in 6 hours. Full population is visible in 48 hours​. |Depends on implementation​ type. <ul><li>Web SDK enables same-page/next-page​ personalization.</li><li>AT.js enables next-session personalization.</li></ul> |
+| **DULE support** | ✓ | ✓ |
+| **Marketing actions support** | ✓ | ✓ |
+| **Supported IDs** | [!DNL ECID], [!DNL GAID], [!DNL IDFA], [!DNL email_lc_sha256] | Any ID type |
+| **Sandbox support** | One sandbox | Multiple sandboxes |
+| **Consent support** | X | Yes. Requires Privacy & Security Shield. |
+| **Edge segmentation support** | Supports activation of edge audiences. Does not support edge segmentation. | Supports edge segmentation and activation of edge audiences. |
+| **Supported audiences** | All types of audiences  | Edge merge policy required for activation.|
+
++++
+
+-->
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
@@ -58,6 +83,7 @@ ht-degree: 3%
 
 * 您的 [!DNL Facebook] 使用者帳戶必須具有 **[!DNL Manage campaigns]** 已為您計畫使用的廣告帳戶啟用許可權。
 * 此 **Adobe Experience Cloud** 企業帳戶必須新增為廣告合作夥伴，才能在您的 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`. 另請參閱 [新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
+
   >[!IMPORTANT]
   >
   > 設定Adobe Experience Cloud的許可權時，您必須啟用 **管理行銷活動** 許可權。 這是進行 [!DNL Adobe Experience Platform] 整合的必要權限。
@@ -110,7 +136,7 @@ ht-degree: 3%
 +++回答是。 Experience Platform中的Facebook目的地與Facebook中的廣告帳戶之比是1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 請遵循 [目的地連線教學課程](/help/destinations/ui/connect-destination.md) 並在Platform UI中為每個新Facebook目的地連線至個別的Facebook帳戶。 您可以連線的Facebook廣告帳戶數量沒有限制。
 +++
 
-## Google Customer Match {#google-customer-match}
+## Google 目標客戶比對 {#google-customer-match}
 
 ### 將對象匯出至Google Customer Match時，為什麼在Google介面的對象名稱結尾會附加額外的數字？
 
