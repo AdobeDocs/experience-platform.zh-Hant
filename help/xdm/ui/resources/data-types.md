@@ -5,10 +5,10 @@ title: 使用UI建立及編輯資料型別
 type: Tutorial
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯資料型別。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 0%
+source-wordcount: '1354'
+ht-degree: 5%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_datatype_filter"
->title="標準或自訂資料型別篩選器"
->abstract="系統會根據可用資料型別的建立方式，預先篩選這些資料型別。 選取選項按鈕以在「標準」和「自訂」選項之間選擇。 「標準」選項顯示由Adobe建立的實體，而「自訂」選項顯示組織內建立的實體。 請參閱檔案以深入瞭解如何建立和編輯資料型別。"
+>title="標準或自訂資料類型篩選器"
+>abstract="可用資料類型清單已根據其建立方式預先進行篩選。 選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。 標準選項顯示由 Adobe 建立的實體，而自訂選項顯示在您的組織內建立的實體。 請參閱文件以了解更多有關建立和編輯資料類型的資訊。"
 
 在體驗資料模型(XDM)中，資料型別是包含多個子欄位的可重複使用欄位。 雖然資料型別與結構描述欄位群組類似，因為其允許一致地使用多欄位結構，但資料型別更靈活，因為它們可以包含在結構描述結構中的任意位置，而欄位群組只能新增到根層級。
 
@@ -33,20 +33,21 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 ## 開啟 [!DNL Schema Editor] （針對資料型別） {#data-type}
 
-在Platform UI中選取 **[!UICONTROL 方案]** 在左側導覽以開啟 [!UICONTROL 方案] 工作區，然後選取 **[!UICONTROL 資料型別]** 標籤。 隨即顯示可用資料型別清單，包括由Adobe定義的資料型別以及貴組織建立的資料型別。
+在Platform UI中選取 **[!UICONTROL 方案]** 在左側導覽以開啟 [!UICONTROL 方案] 工作區，然後選取 **[!UICONTROL 資料型別]** 標籤。 畫面隨即顯示可用資料型別清單。 系統會根據資料型別的建立方式自動篩選資料型別清單。 預設設定會顯示Adobe定義的資料型別。 您還可以篩選清單以顯示您的組織建立的清單。
 
-![](../../images/ui/resources/data-types/data-types-tab.png)
+![此 [!UICONTROL 方案] 工作區，使用 [!UICONTROL 方案] 左側導覽和 [!UICONTROL 資料型別] 反白顯示。](../../images/ui/resources/data-types/data-types-tab.png)
 
-從這裡，您有兩個選項：
+從這裡，您有以下選項：
 
 - [建立新的資料型別](#create)
+- [篩選資料型別](#filter)
 - [選取要編輯的現有資料型別](#edit)
 
 ### 建立新的資料型別 {#create}
 
 從 **[!UICONTROL 資料型別]** 索引標籤，選取 **[!UICONTROL 建立資料型別]**.
 
-![](../../images/ui/resources/data-types/create.png)
+![此 [!UICONTROL 方案] 工作區 [!UICONTROL 資料型別] 定位方式 [!UICONTROL 建立資料型別] 反白顯示。](../../images/ui/resources/data-types/create.png)
 
 此 [!DNL Schema Editor] 會出現，在畫布中顯示新資料型別的目前結構。 在編輯器的右側，您可以為資料型別提供顯示名稱和可選說明。 請確定您為您的資料型別提供唯一且簡潔的名稱，因為這是將資料型別新增至結構描述時識別資料型別的方式。
 
@@ -56,17 +57,25 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 從這裡，您可以直接跳至 [下一節](#add-fields) 以開始將欄位新增至新資料型別。
 
+### 篩選資料型別 {#filter}
+
+可用資料類型清單已根據其建立方式預先進行篩選。 選取選項按鈕以選擇 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 選項。 此 [!UICONTROL 標準] 選項會顯示由Adobe建立的實體，以及 [!UICONTROL 自訂] 選項會顯示在您組織內建立的實體。
+
+![此 [!UICONTROL 資料型別] 的標籤 [!UICONTROL 方案] 工作區，使用 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 反白顯示。](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
+
 ### 編輯現有的資料型別 {#edit}
 
 >[!NOTE]
 >
 >在已啟用用於即時客戶個人檔案的結構描述中使用現有資料型別後，此後只能對該資料型別進行非破壞性變更。 請參閱 [結構描述演化的規則](../../schema/composition.md#evolution) 以取得詳細資訊。
 
-只能編輯您的組織定義的自訂資料型別。 若要縮小顯示的清單，請選取篩選圖示(![篩選圖示](../../images/ui/resources/data-types/filter.png))以顯示根據以下條件篩選的控制項： [!UICONTROL 所有者]. 選取 **[!UICONTROL 客戶]** 以僅顯示貴組織擁有的自訂資料型別。
+只能編輯您的組織定義的自訂資料型別。 選取 **[!UICONTROL 自訂]** 以僅顯示貴組織擁有的自訂資料型別。
 
-從清單中選取您要編輯的資料型別，以開啟右側邊欄，顯示資料型別的詳細資訊。 在右側邊欄中選取資料型別的名稱，以在以下位置開啟其結構： [!DNL Schema Editor].
+從清單中選取您要編輯的資料型別，以開啟右側邊欄，顯示資料型別的詳細資訊。 您還可以從詳細資料面板下載範例檔案、複製JSON結構或將資料型別新增到套件中。
 
-![](../../images/ui/resources/data-types/edit.png)
+在右側邊欄中選取資料型別的名稱，以在以下位置開啟其結構： [!DNL Schema Editor].
+
+![此 [!UICONTROL 資料型別] 的標籤 [!UICONTROL 方案] 工作區，透過資料型別 [!UICONTROL 自訂] 和資料型別 [!UICONTROL 名稱] 反白顯示。](../../images/ui/resources/data-types/edit.png)
 
 ## 新增欄位至資料型別 {#add-fields}
 

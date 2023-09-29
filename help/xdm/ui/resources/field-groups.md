@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立和編輯結構描述欄位群組
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述欄位群組。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 51ef116ad125b0d699bf4808e3d26d3b00b743e2
+source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 1%
+source-wordcount: '985'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
 >title="標準或自訂欄位群組篩選器"
->abstract="系統會根據可用欄位群組的建立方式，預先篩選這些群組清單。 選取選項按鈕以在「標準」和「自訂」選項之間選擇。 「標準」選項顯示由Adobe建立的實體，而「自訂」選項顯示組織內建立的實體。 請參閱檔案以深入瞭解如何建立和編輯欄位群組。"
+>abstract="可用欄位群組清單已根據其建立方式預先進行篩選。 選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。 標準選項顯示由 Adobe 建立的實體，而自訂選項顯示在您的組織內建立的實體。 請參閱文件以了解更多有關建立和編輯欄位群組的資訊。"
 
 在Experience Data Model (XDM)中，結構描述欄位群組是可重複使用的元件，可定義一或多個實作特定功能的欄位，例如個人詳細資料、飯店偏好設定或地址。 欄位群組是要包含在實作相容類別的結構描述中。
 
@@ -45,6 +45,12 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 此 [!DNL Schema Editor] 會重新出現，新欄位群組會列在左側邊欄中。 由於這是全新的欄位群組，目前未提供任何欄位給結構描述，因此畫布保持不變。 您現在可以開始 [新增欄位至欄位群組](#add-fields).
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
+
+## 篩選欄位群組 {#filter}
+
+可用欄位群組清單已根據其建立方式預先進行篩選。 預設設定會顯示由Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以選擇 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 選項。 此 [!UICONTROL 標準] 選項會顯示由Adobe建立的實體，以及 [!UICONTROL 自訂] 選項會顯示在您組織內建立的實體。
+
+![此 [!UICONTROL 欄位群組] 的標籤 [!UICONTROL 方案] 工作區，使用 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 反白顯示。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 編輯現有欄位群組 {#edit}
 

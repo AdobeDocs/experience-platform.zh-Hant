@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料使用標籤字彙表
 description: 本檔案概述Adobe Experience Platform目前支援的所有資料使用標籤。
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 538c5e2c7ff3c684edf6db12087fdf0a58e40199
+source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
 workflow-type: tm+mt
-source-wordcount: '2185'
-ht-degree: 3%
+source-wordcount: '2250'
+ht-degree: 2%
 
 ---
 
@@ -73,6 +73,8 @@ ht-degree: 3%
 | 標籤 | 定義 |
 | --- | --- |
 | **協力廠商** | 第三方資料是由第三方資料供應商提供給您的資料。 協力廠商資料供應商是與貴組織簽訂合約的實體，該合約授權您與Platform搭配存取、使用、顯示及傳輸協力廠商資料。 |
+| **第三方擴充** | 第三方組織收集且與資料主體無直接關聯的資料。 標籤應套用至用於擴充第一方設定檔的第三方資料。 |
+| **協力廠商勘探** | 第三方組織收集且與資料主體無直接關聯的資料。 標籤應套用至用於漏斗頂端的第三方資料，以尋找新的淨客戶。 |
 
 ## 附錄
 
