@@ -1,10 +1,10 @@
 ---
 title: 使用合作夥伴輔助的訪客識別來個人化現場體驗
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
-source-git-commit: 9d7e8ef99a42e804896f5c9befcf98bb1c010606
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '2530'
-ht-degree: 100%
+source-wordcount: '2548'
+ht-degree: 99%
 
 ---
 
@@ -49,6 +49,12 @@ ht-degree: 100%
    * [邊緣分段](/help/segmentation/ui/edge-segmentation.md)
    * [邊緣個人化目的地](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) (或您選擇的個人化平台。本使用案例教學課程旨在重點介紹以 Adobe Target 作為個人化引擎)
+
+## 影片逐步解說 {#video-walkthrough}
+
+觀看下方的影片教學課程，逐步瞭解如何為未知訪客個人化網站上的體驗：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 

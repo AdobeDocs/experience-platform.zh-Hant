@@ -3,9 +3,9 @@ title: （測試版）使用計算欄位匯出平面結構描述檔案中的陣�
 type: Tutorial
 description: 瞭解如何使用計算欄位，將平面結構描述檔案中的陣列從Real-Time CDP匯出至雲端儲存空間目的地。
 badge: "Beta"
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1278'
 ht-degree: 2%
 
 ---
@@ -124,6 +124,19 @@ Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解 [�
 John,Doe,"Marketing_Sales_Finance"
 ```
 
+### `iif` 匯出陣列的函式 {#iif-function-export-arrays}
+
+使用 `iif` 函式以匯出特定條件下的陣列元素。 例如，繼續使用 `organzations` 陣列物件，您可以撰寫簡單的條件式函式，例如 `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")`.
+
+![對應第一個和最後一個函式的熒幕擷圖](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
+
+在此情況下，您的輸出檔案看起來如下所示。 在此案例中，陣列的第一個元素為行銷，因此該人員為行銷部門的成員。
+
+```
+`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
+John,Doe, johndoe@acme.org, "isMarketing"
+```
+
 ### `coalesce` 匯出陣列的函式 {#coalesce-function-export-arrays}
 
 使用 `coalesce` 函式，可存取陣列中的第一個非null元素並將其匯出至字串。
@@ -188,14 +201,6 @@ johndoe@acme.org,"1538097126"
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```
-
-<!--
-
-### `iif` function to export arrays {#iif-function-export-arrays}
-
-Here are some examples of how you could use the `iif` function to access and export arrays and other fields: (STILL TO DO)
-
--->
 
 ### `md5` 和 `sha256` 雜湊函式 {#hashing-functions}
 

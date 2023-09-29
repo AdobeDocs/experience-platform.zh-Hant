@@ -1,10 +1,10 @@
 ---
 title: 使用合作夥伴提供的屬性補充第一方設定檔
 description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的對象最佳化。
-source-git-commit: 9dd305be4dcb45c290a2b8ee0476191949369adc
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1091'
-ht-degree: 100%
+source-wordcount: '1110'
+ht-degree: 98%
 
 ---
 
@@ -30,6 +30,12 @@ ht-degree: 100%
 >[!WARNING]
 >
 >擷取至 Real-Time CDP 的合作夥伴提供之額外屬性會影響您的&#x200B;*平均設定檔豐富度*。如需有關設定檔豐富度的詳細資訊，請閱讀 [Real-Time Customer Data Platform 產品說明](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)。
+
+## 影片逐步解說 {#video-walkthrough}
+
+觀看下方的影片教學課程，逐步瞭解如何使用合作夥伴提供的屬性來補充第一方對象：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 

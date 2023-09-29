@@ -1,10 +1,10 @@
 ---
 title: 透過挖掘潛在客戶使用案例吸引並獲取新客戶
 description: 了解如何透過 Real-Time CDP 中合作夥伴資料支援所帶來的挖掘潛在客戶使用案例，來吸引和獲取新客戶。
-source-git-commit: 5352b461be3684ac4fe1703c916b9ec59bd14af1
+source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 99%
+source-wordcount: '1953'
+ht-degree: 98%
 
 ---
 
@@ -40,6 +40,12 @@ ht-degree: 99%
 4. 作為&#x200B;**客戶**，您從潛在客戶設定檔清單建立重點對象。
 5. 作為&#x200B;**客戶**，您將潛在客戶對象啟動到接受您潛在客戶清單之身分的目的地。
 6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將對象啟動到所需付費媒體目的地的最後一里路完成。
+
+## 影片逐步解說 {#video-walkthrough}
+
+觀看以下影片教學課程，逐步瞭解如何觸及及吸引潛在客戶受眾：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)
 
 ## 如何實現使用案例：逐步說明 {#step-by-step-instructions}
 
