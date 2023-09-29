@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f729c54e490afb954bb627d150e499c98d51a53d
+source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
 workflow-type: tm+mt
-source-wordcount: '3923'
+source-wordcount: '4006'
 ht-degree: 2%
 
 ---
@@ -262,7 +262,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## 建立資料庫
 
-此 `CREATE DATABASE` 命令會建立ADLS資料庫。
+此 `CREATE DATABASE` 命令會建立Azure Data Lake Storage (ADLS)資料庫。
 
 ```sql
 CREATE DATABASE [IF NOT EXISTS] db_name
@@ -296,7 +296,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 ## 建立檢視
 
-下列語法會定義 `CREATE VIEW` 查詢：
+下列語法會定義 `CREATE VIEW` 查詢資料集。 此資料集可以是ADLS或加速存放區資料集。
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -313,6 +313,46 @@ CREATE VIEW view_name AS select_query
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
+```
+
+下列語法會定義 `CREATE VIEW` 在資料庫和結構描述的內容中建立檢視的查詢。
+
+**範例**
+
+```sql
+CREATE VIEW db_name.schema_name.view_name AS select_query
+CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
+```
+
+| 參數 | 說明 |
+| ------ | ------ |
+| `db_name` | 資料庫的名稱。 |
+| `schema_name` | 結構描述的名稱。 |
+| `view_name` | 要建立之檢視的名稱。 |
+| `select_query` | A `SELECT` 陳述式。 的語法 `SELECT` 查詢可在以下網址找到： [選取查詢區段](#select-queries). |
+
+**範例**
+
+```sql
+CREATE VIEW <dbV1 AS SELECT color, type FROM Inventory;
+
+CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory;
+```
+
+## 顯示檢視
+
+下列查詢顯示檢視清單。
+
+```sql
+SHOW VIEWS;
+```
+
+```console
+ Db Name  | Schema Name | Name  | Id       |  Dataset Dependencies | Views Dependencies | TYPE
+----------------------------------------------------------------------------------------------
+ qsaccel  | profile_agg | view1 | view_id1 | dwh_dataset1          |                    | DWH
+          |             | view2 | view_id2 | adls_dataset          | adls_views         | ADLS
+(2 rows)
 ```
 
 ## 放置檢視
@@ -611,7 +651,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 >[!NOTE]
 >
->此 `Statistics ID` 和產生的統計資料只適用於每個階段作業，而且無法在不同的PSQL階段作業間存取。<br><br>限制:<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>計算的統計資料為 **非** 跨工作階段持續存在。</li></ul><br><br>選項:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟會設為true。 因此，在不支援的資料型別上請求統計資料時，不會出錯但會無訊息地略過具有不支援資料型別的欄位。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`.
+>此 `Statistics ID` 和產生的統計資料只適用於每個階段作業，而且無法在不同的PSQL階段作業間存取。<br><br>限制:<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>計算的統計資料為 **非** 跨工作階段持續存在。</li></ul><br><br>選項:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟會設為true。 因此，在不支援的資料型別上請求統計資料時，它不會出錯但會無訊息地略過具有不支援的資料型別的欄位。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`.
 
 主控台輸出會顯示如下。
 
