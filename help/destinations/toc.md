@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 6725e28238c7be76613c7455fadce078b17aa71b
+source-git-commit: a34d2823383b2954ebd824a7197b1b64dc80e219
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1165'
 ht-degree: 9%
 
 ---
@@ -30,11 +30,11 @@ ht-degree: 9%
    * [更新目的地資料流](./api/update-destination-dataflows.md)
    * [刪除目的地帳戶](./api/delete-destination-account.md)
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
-   * [(Beta)匯出資料集](/help/destinations/api/export-datasets.md)
+   * [匯出資料集](/help/destinations/api/export-datasets.md)
 * UI 指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
-   * 對目的地啟用受眾資料{#activate}
+   * 啟用目的地的資料{#activate}
       * [Activation 總覽](./ui/activation-overview.md)
       * [啟用受眾以串流受眾匯出目標](./ui/activate-segment-streaming-destinations.md)
       * [啟用受眾以串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md)
@@ -42,7 +42,7 @@ ht-degree: 9%
       * [啟用對象以邊緣個人化目的地](./ui/activate-edge-personalization-destinations.md)
       * [對目的地啟用潛在客戶對象](./ui/activate-prospect-audiences.md)
       * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
-      * [（測試版）使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
+      * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [（測試版）在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
       * [將陣列欄位匯出至雲端儲存目標](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)

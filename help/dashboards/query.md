@@ -4,7 +4,7 @@ title: 使用查詢服務來探索、驗證及處理控制面板資料集
 type: Documentation
 description: 瞭解如何使用查詢服務來探索及處理原始資料集，以便在Experience Platform中強化設定檔、受眾和目的地儀表板。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: c431973100cc65d99d9466553fe6624ac2653d4b
+source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake
 
 ![「資料集瀏覽」控制面板的「資料集」索引標籤會在左側導覽中反白顯示。](./images/query/browse-datasets.png)
 
-### 系統產生的資料集
+### 系統產生的資料集 {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
@@ -41,7 +41,7 @@ Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake
 
 ![具有顯示系統資料集切換開關的資料集瀏覽標籤會反白顯示。](./images/query/show-system-datasets.png)
 
-### 設定檔屬性資料集
+### 設定檔屬性資料集 {#profile-attribute-datasets}
 
 設定檔儀表板分析會繫結至貴組織所定義的合併原則。 對於每個使用中的合併原則，資料湖中都會有一個可用的設定檔屬性資料集。
 
