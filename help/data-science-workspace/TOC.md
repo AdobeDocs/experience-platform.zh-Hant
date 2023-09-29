@@ -8,7 +8,7 @@ solution: Experience Platform
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '236'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 18%
 
 * [資料科學工作區概觀](home.md)
 * [資料科學工作區存取與功能](access-features-dsw.md)
-* [資料科學工作區逐步解說](walkthrough.md)
+* [資料科學工作區逐步說明](walkthrough.md)
 * JupyterLab筆記型電腦 {#jupyterlab}
-   * [總覽](jupyterlab/overview.md)
+   * [概觀](jupyterlab/overview.md)
    * [資料存取](jupyterlab/access-notebook-data.md)
    * [分析您的資料](jupyterlab/analyze-your-data.md)
    * [查詢服務](jupyterlab/query-service.md)
-   * [探索性資料分析(EDA)](jupyterlab/eda-notebook.md)
+   * [探索資料分析(EDA)](jupyterlab/eda-notebook.md)
    * [使用配方產生器建立模型](jupyterlab/create-a-model.md)
    * [使用Git在JupyterLab中共同作業](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
@@ -42,11 +42,11 @@ ht-degree: 18%
 * 模型製作 {#authoring}
    * [模型製作SDK](authoring/sdk.md)
    * [建立特徵管線](authoring/feature-pipeline.md)
-   * [使用Platform SDK (Python)編寫模型](authoring/platform-sdk.md)
+   * [使用Platform SDK (Python)進行模型製作](authoring/platform-sdk.md)
    * [Python資料存取](authoring/python.md)
    * [Spark資料存取](authoring/spark.md)
 * 模型與配方教學課程 {#models-recipes}
-   * [建立並發佈機器學習模型](models-recipes/create-publish-model.md)
+   * [建立及發佈機器學習模型](models-recipes/create-publish-model.md)
    * [建立示範Luma結構描述和資料集](models-recipes/create-luma-data.md)
    * [建立零售銷售結構描述和資料集](models-recipes/create-retails-sales-dataset.md)
    * [預覽結構描述和資料集](models-recipes/preview-schema-data.md)
@@ -58,7 +58,7 @@ ht-degree: 18%
    * [為模型(UI)評分](models-recipes/score-model-ui.md)
    * [為模型(API)評分](models-recipes/score-model-api.md)
    * [最佳化模型](models-recipes/optimize-model.md)
-   * [透過機器學習深入分析豐富即時客戶個人檔案](models-recipes/enrich-profile.md)
+   * [透過機器學習見解豐富即時客戶個人檔案](models-recipes/enrich-profile.md)
    * [將模型發佈為服務(UI)](models-recipes/publish-model-service-ui.md)
    * [將模型發佈為服務(API)](models-recipes/publish-model-service-api.md)
    * [排程服務的自動化訓練和評分(UI)](models-recipes/schedule-models-ui.md)

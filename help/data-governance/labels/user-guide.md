@@ -11,7 +11,7 @@ ht-degree: 18%
 
 ---
 
-# 在UI中管理資料使用標籤 {#user-guide}
+# 管理UI中的資料使用標籤 {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
@@ -22,31 +22,31 @@ ht-degree: 18%
 
 ## 管理標籤 {#manage-labels}
 
-若要將標籤套用至您的資料，您需要 **[!UICONTROL 管理使用標籤]** 對名為「prod」的預設生產沙箱的使用許可權。 若要建立自訂標籤，您也必須擁有產品設定檔的管理許可權。 每個組織只有一個適用的標籤清單，目前不支援刪除標籤。
+若要將標籤套用至您的資料，您需要 **[!UICONTROL 管理使用標籤]** 在名為「prod」的預設生產沙箱上使用的許可權。 若要建立自訂標籤，您也必須擁有產品設定檔的管理許可權。 每個組織只有一個適用標籤清單，目前不支援刪除標籤。
 
-請參閱操作方法指南 [設定許可權](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) 或 [存取控制總覽](../../access-control/home.md) 有關如何指派許可權的詳細資訊。 如果您沒有貴組織Admin Console的存取權，請聯絡貴組織管理員。
+請參閱操作方法指南 [設定許可權](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) 或 [存取控制總覽](../../access-control/home.md) 以取得如何指派許可權的詳細資訊。 如果您無法存取貴組織的Admin Console，請聯絡組織管理員。
 
 ## 管理結構層級的標籤
 
-您可以直接將標籤新增到該結構描述中的一個或多個欄位。 套用至結構描述層級的任何欄位都會傳播至以該結構描述為基礎的所有資料集。
+您可以直接將標籤新增至結構描述或該結構描述中的欄位。 套用至結構描述層級的任何欄位都會傳播至以該結構描述為基礎的所有資料集。
 
-若要在方案層級管理資料使用標籤，您必須選取現有方案或建立新方案。 登入Adobe Experience Platform後，選取 **[!UICONTROL 結構描述]** 在左側導覽以開啟 **[!UICONTROL 結構描述]** 工作區。 此頁面列出屬於您組織的所有已建立方案，以及與每個方案相關的實用詳細資訊。
+若要在結構描述層級管理資料使用標籤，您必須選取現有結構描述或建立新結構描述。 登入Adobe Experience Platform後，選取 **[!UICONTROL 方案]** ，以開啟 **[!UICONTROL 方案]** 工作區。 此頁面列出屬於您組織的所有已建立綱要，以及與每個綱要相關的有用詳細資訊。
 
-![反白顯示「結構」索引標籤的Adobe Experience Platform UI。](../images/labels/schema-tab.png)
+![反白顯示Schema索引標籤的Adobe Experience Platform UI。](../images/labels/schema-tab.png)
 
-下一節提供建立新結構描述以套用標籤的步驟。 如果您想要編輯現有結構描述的標籤，請從清單中選取結構描述，然後跳至 [將資料使用標籤新增至結構描述](#add-labels).
+下一節提供建立新結構描述以套用標籤的步驟。 如果您想要編輯現有結構描述的標籤，請從清單中選取結構描述，並跳至 [將資料使用標籤新增到結構描述](#add-labels).
 
 ### 建立新結構描述
 
-若要建立新結構描述，請選取 **[!UICONTROL 建立結構描述]** 右上角 **[!UICONTROL 結構描述]** 工作區。 請參閱指南： [如何使用結構編輯器建立結構描述](../../xdm/tutorials/create-schema-ui.md#create) 以取得完整的指示。 或者，您可以 [使用結構描述登入API建立結構描述](../../xdm/tutorials/create-schema-api.md) 如有需要。
+若要建立新綱要，請選取 **[!UICONTROL 建立結構描述]** 位於的右上角 **[!UICONTROL 方案]** 工作區。 請參閱以下指南： [如何使用結構編輯器建立結構](../../xdm/tutorials/create-schema-ui.md#create) 以取得完整的指示。 或者，您可以 [使用結構描述登入API建立結構描述](../../xdm/tutorials/create-schema-api.md) 若有需要。
 
 ### 將資料使用標籤新增到結構描述 {#add-labels-to-schema}
 
-建立新結構描述後，或從的清單中選取現有結構描述後 [!UICONTROL 瀏覽] 的標籤 [!UICONTROL 結構描述] 在工作區中，從結構描述編輯器中選取一個欄位。 在 [!UICONTROL 欄位屬性] 側欄，選取 **[!UICONTROL 套用存取權和資料控管標籤]**.
+建立新結構描述後，或從的清單中選取現有結構描述後 [!UICONTROL 瀏覽] 的標籤 [!UICONTROL 方案] 在工作區中，從結構描述編輯器中選取一個欄位。 在 [!UICONTROL 欄位屬性] 側欄，選取 **[!UICONTROL 套用存取權和資料治理標籤]**.
 
-![「結構描述」工作區「結構」索引標籤會顯示結構描述的視覺效果，並反白顯示「套用存取」和「資料控管」標籤。](../images/labels/schema-label-governance.png)
+![結構描述工作區結構索引標籤會顯示結構描述的視覺效果，並反白顯示套用存取權和資料治理標籤。](../images/labels/schema-label-governance.png)
 
-會出現一個對話方塊，可讓您在結構描述層級和欄位層級套用和管理資料使用標籤。 請參閱XDM教學課程，取得以下專案的完整指示： [如何新增或編輯XDM結構描述的資料使用標籤](../../xdm/tutorials/labels.md#select-schema-field).
+會出現一個對話方塊，可讓您在結構描述層級和欄位層級套用和管理資料使用標籤。 請參閱XDM教學課程，瞭解有關的完整指示 [如何新增或編輯XDM結構描述的資料使用標籤](../../xdm/tutorials/labels.md#select-schema-field).
 
 ### 將資料使用標籤新增至特定資料集 {#add-labels-to-dataset}
 
@@ -57,27 +57,27 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->標籤無法再套用至資料集層級的欄位。 此工作流程已過時，改為在結構描述層級套用標籤。 在2024年5月31日之前，先前在資料集物件層級套用的任何標籤仍可透過Platform UI取得支援。 為確保您的標籤在所有結構描述中保持一致，您必須在來年將之前附加至資料集層級欄位的任何標籤移轉至結構描述層級。 如需相關指示，請參閱檔案 [如何將先前套用的標籤從資料集移轉至結構描述層級](../e2e.md#migrate-labels).
+>標籤無法再套用至資料集層級的欄位。 此工作流程已淘汰，而改為在結構描述層級套用標籤。 在2024年5月31日之前，先前在資料集物件層級套用的任何標籤仍會透過Platform UI受到支援。 為確保您的標籤在所有結構描述中保持一致，您必須在未來一年將之前附加至資料集層級欄位的任何標籤移轉至結構描述層級。 如需相關指示，請參閱檔案 [如何將先前套用的標籤從資料集移轉至結構描述層級](../e2e.md#migrate-labels).
 
-標籤可套用至的整個資料集 **[!UICONTROL 資料控管]** 的標籤 **[!UICONTROL 資料集]** 工作區。 工作區可讓您在資料集層級管理資料使用標籤。
+標籤可從套用至的整個資料集 **[!UICONTROL 資料控管]** 的標籤 **[!UICONTROL 資料集]** 工作區。 工作區可讓您在資料集層級管理資料使用標籤。
 
 ![此 [!UICONTROL 資料控管] 的標籤 [!UICONTROL 資料集] 強調資料控管的工作區。](../images/labels/dataset-governance.png)
 
-若要編輯資料集層級的資料使用標籤，請從選取鉛筆圖示(![鉛筆圖示。](../images/labels/edit-icon.png))時，以免該資料集名稱重複計算反向連結。
+若要編輯資料集層級的資料使用標籤，請從選取鉛筆圖示(![鉛筆圖示。](../images/labels/edit-icon.png))的資料集名稱。
 
 ![此 [!UICONTROL 資料控管] 的標籤 [!UICONTROL 資料集] 工作區中反白顯示編輯鉛筆圖示。](../images/labels/dataset-level-edit.png)
 
-此 **[!UICONTROL 編輯治理標籤]** 對話方塊開啟。 在對話方塊中，勾選您要套用至資料集的標籤旁的方塊。 請記住，這些標籤將由資料集內的所有欄位繼承。 此 **[!UICONTROL 套用的標籤]** 勾選每個方塊時，標題都會更新，並顯示您選擇的標籤。 選取所需標籤後，請選取 **[!UICONTROL 儲存變更]**.
+此 **[!UICONTROL 編輯治理標籤]** 對話方塊開啟。 在對話方塊中，勾選您要套用至資料集的標籤旁的方塊。 請記住，這些標籤將由資料集內的所有欄位繼承。 此 **[!UICONTROL 套用的標籤]** 當您勾選每個方塊時，標題都會更新，並顯示您選擇的標籤。 選取想要的標籤後，選取 **[!UICONTROL 儲存變更]**.
 
-![「編輯治理標籤」對話方塊中會反白顯示標籤核取方塊和儲存變更。](../images/labels/apply-labels-dataset.png)
+![[編輯治理標籤]對話方塊，其標籤核取方塊和[儲存變更]會反白顯示。](../images/labels/apply-labels-dataset.png)
 
-此 **[!UICONTROL 資料控管]** 工作區會重新出現，顯示您在資料集層級套用的標籤（在表格的初始列中）。 您也可以看到標籤（以個別卡片表示），這些標籤會繼承至資料集中的每個欄位。
+此 **[!UICONTROL 資料控管]** 工作區會重新出現，顯示您已在表格初始列中的資料集層級套用的標籤。 您也可以看到標籤（以個別卡片表示），這些標籤會繼承至資料集中的每個欄位。
 
-![此 [!UICONTROL 資料控管] 的標籤 [!UICONTROL 資料集] 工作區已套用資料集層級標籤，且繼承的資料集欄位標籤會反白顯示。](../images/labels/applied-dataset-labels.png)
+![此 [!UICONTROL 資料控管] 的標籤 [!UICONTROL 資料集] 工作區已套用資料集層級標籤，並醒目提示繼承的資料集欄位標籤。](../images/labels/applied-dataset-labels.png)
 
 ### 從資料集中移除標籤 {#remove-labels-from-a-dataset}
 
-在資料集層級新增的標籤卡片旁會有&quot;x&quot;。 這可讓您從整個資料集中移除標籤。 每個欄位旁邊的繼承標籤旁邊沒有「x」，並且顯示「灰顯」。 這些 **繼承的標籤為唯讀**，這表示它們無法在欄位層級移除或編輯。
+在資料集層級新增的標籤，其卡片旁會有「x」。 這可讓您從整個資料集中移除標籤。 每個欄位旁的繼承標籤旁邊沒有「x」，且顯示「灰色」。 這些 **繼承的標籤是唯讀的**，表示無法在欄位層級移除或編輯縮圖。
 
 <!-- ## View labels at the dataset field level {#view-labels-at-dataset-field-level} -->
 
@@ -93,7 +93,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 <!--Beleive can cut above here  -->
 
-此 **[!UICONTROL 顯示繼承的標籤]** 切換預設為開啟，可讓您檢視從結構描述繼承到其欄位的任何標籤。 關閉切換會隱藏資料集內任何繼承的標籤。
+此 **[!UICONTROL 顯示繼承的標籤]** 切換預設為開啟，可讓您檢視從結構描述繼承到其欄位的任何標籤。 切換為關閉會隱藏資料集中任何繼承的標籤。
 
 ![反白顯示繼承標籤資料集工作區的「資料控管」索引標籤。](../images/labels/inherited-labels.png)
 
@@ -104,7 +104,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >[!NOTE]
 >
 >在資料集標籤功能遭取代之前套用的標籤，可以透過尋找相關資料集並選取標籤上的取消圖示從資料集中移除。
->![反白顯示可刪除標籤之資料集工作區的「資料控管」索引標籤。](../images/labels/remove-governance-labels.png)
+>![以可刪除標籤反白顯示的資料集工作區的「資料控管」標籤。](../images/labels/remove-governance-labels.png)
 >如需相關指示，請參閱檔案 [如何將先前套用的標籤從資料集移轉至結構描述層級](../e2e.md#migrate-labels).
 
 ## 管理自訂標籤 {#manage-custom-labels}
@@ -114,7 +114,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 >title="建立標籤"
 >abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。平台提供了一組標準標籤供您使用，但您也可以建立您組織專用的自訂標籤。"
 
-您可以在「 」中建立自己的自訂使用標籤 **[!UICONTROL 原則]** 工作區在 [!DNL Experience Platform] UI。 選取 **[!UICONTROL 原則]** 在左側導覽列中，然後選取 **[!UICONTROL 標籤]** 以檢視現有標籤的清單。 從此處選取 **[!UICONTROL 建立標籤]**.
+您可以在「 」中建立自己的自訂使用標籤 **[!UICONTROL 原則]** 中的工作區 [!DNL Experience Platform] UI。 選取 **[!UICONTROL 原則]** 在左側導覽列中，然後選取 **[!UICONTROL 標籤]** 以檢視現有標籤的清單。 從這裡，選擇 **[!UICONTROL 建立標籤]**.
 
 ![已反白建立原則的原則工作區。](../images/labels/create-label-btn.png)
 
@@ -128,19 +128,19 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 ![「原則」工作區中的「建立標籤」對話方塊會反白顯示「建立」。](../images/labels/create-label-dialog.png)
 
-對話方塊隨即關閉，新建立的自訂標籤會顯示在 **[!UICONTROL 標籤]** 標籤。
+對話方塊會關閉，而新建立的自訂標籤會顯示在 **[!UICONTROL 標籤]** 標籤。
 
 ![「原則」工作區的「標籤」索引標籤中會反白顯示新的自訂標籤。](../images/labels/label-created.png)
 
-現在可以在下方選取標籤 **[!UICONTROL 自訂標籤]** 編輯資料集和欄位的使用標籤時，或建立資料使用原則時。
+現在可以在下方選取標籤 **[!UICONTROL 自訂標籤]** 編輯資料集和欄位的使用標籤，或建立資料使用原則時。
 
-![反白顯示具有自訂標籤的「套用存取權和資料控管標籤」對話方塊。](../images/labels/add-custom-label.png)
+![套用存取權和資料控管標籤對話方塊會反白顯示自訂標籤。](../images/labels/add-custom-label.png)
 
 ## 後續步驟
 
-現在您已在資料集和欄位層級新增資料使用標籤，您可以開始將資料擷取到 [!DNL Experience Platform]. 若要深入瞭解，請先閱讀 [資料擷取檔案](../../ingestion/home.md).
+現在您已在資料集和欄位層級新增資料使用標籤，您可以開始將資料擷取到 [!DNL Experience Platform]. 若要進一步瞭解，請先閱讀 [資料擷取檔案](../../ingestion/home.md).
 
-您現在也可以根據已套用的標籤來定義資料使用原則。 如需詳細資訊，請參閱 [資料使用原則概觀](../policies/overview.md).
+您現在還可以根據已套用的標籤來定義資料使用原則。 如需詳細資訊，請參閱 [資料使用原則概觀](../policies/overview.md).
 
 <!-- The workflow of this video is now outdated. This can be enabled once the video has been updated
 

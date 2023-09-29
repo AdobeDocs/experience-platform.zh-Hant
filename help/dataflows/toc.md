@@ -6,7 +6,7 @@ feature: Dataflows
 source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 22%
+ht-degree: 25%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 22%
 - API指南 {#api}
    - [監視資料流](./api/monitor.md)
    - [排序和篩選API回應](./api/sort-and-filter.md)
-- UI指南 {#ui}
+- UI 指南 {#ui}
    - [監視來源中的資料流](./ui/monitor-sources.md)
    - [監視身分中的資料流](./ui/monitor-identities.md)
    - [監視設定檔中的資料流](./ui/monitor-profiles.md)

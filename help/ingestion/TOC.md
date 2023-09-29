@@ -16,7 +16,7 @@ ht-degree: 26%
 
 - [資料擷取概觀](home.md)
 - 串流擷取 {#streaming}
-   - [總覽](streaming-ingestion/overview.md)
+   - [概觀](streaming-ingestion/overview.md)
    - [Kafka聯結器](streaming-ingestion/kafka.md)
    - [疑難排解](streaming-ingestion/troubleshooting.md)
 - 批次擷取{#batch}
@@ -27,7 +27,7 @@ ht-degree: 26%
    - [疑難排解](batch-ingestion/troubleshooting.md)
 - 教學課程 {#tutorials}
    - 將CSV檔案對應至XDM {#map-csv}
-      - [總覽](./tutorials/map-csv/overview.md)
+      - [概觀](./tutorials/map-csv/overview.md)
       - [將CSV檔案對應到現有結構描述](./tutorials/map-csv/existing-schema.md)
       - [使用AI產生的建議對應CSV檔案](./tutorials/map-csv/recommendations.md)
    - [使用UI內嵌批次資料](tutorials/ingest-batch-data.md)
@@ -38,7 +38,7 @@ ht-degree: 26%
    - [串流時間序列資料](tutorials/streaming-time-series-data.md)
    - [串流多則訊息](tutorials/streaming-multiple-messages.md)
 - 資料品質與監控{#quality}
-   - [總覽](quality/overview.md)
+   - [概觀](quality/overview.md)
    - [監視資料內嵌](quality/monitor-data-ingestion.md)
    - [擷取錯誤診斷](quality/error-diagnostics.md)
    - [擷取失敗的批次](quality/retrieve-failed-batches.md)
@@ -46,6 +46,6 @@ ht-degree: 26%
    - [資料擷取通知](quality/subscribe-events.md)
 - [資料擷取的護欄](guardrails.md)
 - [來源連接器](source-connectors.md)
-- [批次擷取API參考](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [批次擷取API參考資料](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [串流擷取API參考](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 - [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)

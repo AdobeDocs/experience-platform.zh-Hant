@@ -126,7 +126,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 從Widget上顯示的清單中選取目的地的名稱，可帶您前往目的地詳細資料，其連結來自 **[!UICONTROL 瀏覽]** 標籤。 您也可以選取 **[!UICONTROL 檢視全部]** 導覽至 **[!UICONTROL 瀏覽]** 標籤，然後選取目的地名稱以檢視其詳細資訊。
 
-若要進一步瞭解如何設定特定型別的目的地，請瀏覽 [目的地檔案](../../destinations/home.md).
+若要進一步瞭解如何設定特定型別的目的地，請造訪 [目的地檔案](../../destinations/home.md).
 
 ![「目標」儀表板的「總覽」索引標籤，會醒目顯示最近建立的目標Widget。](../images/destinations/recently-created-destinations.png)
 

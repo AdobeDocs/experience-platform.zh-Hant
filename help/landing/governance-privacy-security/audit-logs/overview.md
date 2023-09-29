@@ -26,7 +26,7 @@ ht-degree: 43%
 >title="監控 Platform 中的使用者活動"
 >abstract="<h2>說明</h2><p>您可以採用「稽核記錄」的方式監控各種 Platform 服務和功能的使用者活動。這些記錄會形成稽核軌跡，其中會記錄<b>什麼人</b>在<b>什麼時間</b>執行了<b>什麼動作</b>。稽核記錄可以幫助解決 Platform 上的問題，並幫助您的企業有效地遵守公司資料管理原則和監管要求。</p>"
 
-為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成稽核軌跡，可協助疑難排解Platform上的問題，並幫助您的企業有效遵守公司資料管理政策和法規要求。
+為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成了稽核軌跡，可以幫助對Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和法規要求。
 
 就基本概念而言，稽核記錄說明了&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**何時**&#x200B;執行。稽核記錄中所記錄的每個動作都包含中繼資料，其指出動作類型、日期和時間、執行動作之使用者的電子郵件 ID，以及與動作類型相關的其他屬性。
 
@@ -48,7 +48,7 @@ ht-degree: 43%
 | [資料集](../../../catalog/datasets/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用對象 [即時客戶個人檔案](../../../profile/home.md)</li><li>為設定檔停用</li><li>新增資料</li><li>刪除批次</li></ul> |
 | [資料流](../../../datastreams/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>[編輯對應](../../../datastreams/data-prep.md)</li></ul> |
 | [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟動</li><li>資料集移除</li><li>設定檔啟動</li><li>設定檔移除</li></ul> |
+| [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟用</li><li>資料集移除</li><li>設定檔啟動</li><li>設定檔移除</li></ul> |
 | [欄位群組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [識別圖](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
 | [身分名稱空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>建立</li><li>更新</li></ul> |
@@ -77,11 +77,11 @@ ht-degree: 43%
 >title="說明"
 >abstract="<ul><li>在左側導覽中選取<b>稽核</b>。「稽核」工作區會顯示已記錄的記錄清單，依預設會從時間最近的開始排序。</li>   <li> 注意：稽核記錄會保留 365 天，超過此天數將從系統中刪除。因此，您最多只能往回查看 365 天。如果您需要查看超過 365 天的資料，您應該定期匯出記錄以符合您的內部政策要求。 </li><li>從清單中選取一個事件以在右邊欄中查看其詳細資料。 </li><li>選取漏斗圖示以顯示篩選控制項清單，可協助縮小結果範圍。僅顯示最後 1,000 條記錄，無論選取的篩選器為何。 </li><li>若要匯出目前的稽核記錄清單，請選取&#x200B;**下載記錄**。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=zh-Hant">稽核記錄概觀</a>。</li></ul>"
 
-您可以在中檢視不同Experience Platform功能的稽核記錄 **[!UICONTROL 稽核]** Platform UI中的工作區。 工作區會顯示記錄日誌的清單，預設情況下會從最近到最近排序。
+您可以檢視內不同Experience Platform功能的稽核記錄 **[!UICONTROL 稽核]** Platform UI中的工作區。 工作區會顯示記錄日誌的清單，預設情況下會從最近排序為最近排序。
 
-![「稽核」控制面板在左側選單中醒目提示「稽核」。](../../images/audit-logs/audits.png)
+![在左側功能表中反白稽核的稽核儀表板。](../../images/audit-logs/audits.png)
 
-稽核記錄會保留365天，之後會從系統中刪除它們。 因此，您最多只能往回查看 365 天。如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
+稽核記錄會保留365天，之後會從系統中刪除。 因此，您最多只能往回查看 365 天。如果您需要超過365天的資料，您應定期匯出記錄檔，以符合內部原則需求。
 
 從清單中選取一個事件以在右邊欄中查看其詳細資料。
 
@@ -91,48 +91,48 @@ ht-degree: 43%
 
 >[!NOTE]
 >
-由於這是一項新功能，顯示的資料僅追溯至2022年3月。 根據選取的資源，從2022年1月起，可能會提供舊版資料。
+由於這是一項新功能，因此顯示的資料僅追溯至2022年3月。 視選取的資源而定，2022年1月起可能會提供舊版資料。
 
 
-選取漏斗圖示(![篩選圖示](../../images/audit-logs/icon.png))來顯示篩選控制項清單，以協助縮小結果範圍。 僅顯示最後1000筆記錄，無論選擇的各種篩選器為何。
+選取漏斗圖示(![篩選圖示](../../images/audit-logs/icon.png))來顯示篩選控制項清單，協助縮小結果範圍。 僅顯示最後1000筆記錄，無論選擇的各種篩選器為何。
 
-![反白顯示篩選活動記錄檔的「稽核」控制面板。](../../images/audit-logs/filters.png)
+![反白顯示篩選活動記錄的稽核控制面板。](../../images/audit-logs/filters.png)
 
 以下篩選器可用於 UI 中的稽核事件：
 
 | 篩選 | 說明 |
 | --- | --- |
-| [!UICONTROL 類別] | 使用下拉式選單，依以下條件篩選顯示的結果 [類別](#category). |
-| [!UICONTROL 動作] | 依動作篩選。 每項服務的可用動作可在上方資源表格中檢視。 |
-| [!UICONTROL 使用者] | 輸入完整的使用者ID (例如， `johndoe@acme.com`)，依使用者篩選。 |
-| [!UICONTROL 狀態] | 篩選條件為允許（完成）動作或因缺少動作而拒絕動作 [存取控制](../../../access-control/home.md) 許可權。 |
-| [!UICONTROL 日期] | 選取開始日期和/或結束日期，以定義篩選結果的日期範圍。 可匯出90天回顧期間的資料（例如，2021-12-15到2022-03-15）。 這可能因事件型別而異。 |
+| [!UICONTROL 類別] | 使用下拉式選單來篩選顯示的結果 [類別](#category). |
+| [!UICONTROL 動作] | 依動作篩選。 每項服務的可用動作會顯示在資源表格中。 |
+| [!UICONTROL 使用者] | 輸入完整的使用者ID (例如 `johndoe@acme.com`)，依使用者篩選。 |
+| [!UICONTROL 狀態] | 依動作是否允許（完成）或因為缺少而拒絕進行篩選 [存取控制](../../../access-control/home.md) 許可權。 |
+| [!UICONTROL 日期] | 選取開始日期和/或結束日期，以定義篩選結果的日期範圍。 可匯出回顧期間為90天的資料（例如，2021-12-15至2022-03-15）。 這可能因事件型別而異。 |
 
 若要移除篩選條件，請針對有問題的篩選條件，選取藥丸圖示上的「X」，或選取 **[!UICONTROL 全部清除]** 以移除所有篩選器。
 
-![反白顯示具有清除篩選器的稽核控制面板。](../../images/audit-logs/clear-filters.png)
+![含有反白顯示之清除篩選器的稽核控制面板。](../../images/audit-logs/clear-filters.png)
 
-傳回的稽核記錄檔資料包含符合您所選篩選條件之所有查詢的下列資訊。
+傳回的稽核記錄檔資料包含符合所選篩選條件之所有查詢的下列資訊。
 
 | 資料行名稱 | 說明 |
 |---|---|
 | [!UICONTROL 時間戳記] | 在中執行動作的確切日期和時間 `month/day/year hour:minute AM/PM` 格式。 |
 | [!UICONTROL 資產名稱] | 的值 [!UICONTROL 資產名稱] 欄位取決於選擇作為篩選器的類別。 |
-| [!UICONTROL 類別] | 此欄位符合篩選下拉式清單中選取的類別。 |
+| [!UICONTROL 類別] | 此欄位符合在篩選下拉式清單中選取的類別。 |
 | [!UICONTROL 動作] | 可用的動作取決於選擇作為篩選器的類別。 |
 | [!UICONTROL 使用者] | 此欄位提供執行查詢的使用者ID。 |
 
-![反白顯示篩選活動記錄檔的「稽核」控制面板。](../../images/audit-logs/filtered.png)
+![反白顯示篩選活動記錄的稽核控制面板。](../../images/audit-logs/filtered.png)
 
 ### 匯出稽核記錄
 
 若要匯出目前的稽核記錄清單，請選取&#x200B;**[!UICONTROL 下載記錄]**。
 
-![具有下列專案的稽核控制面板： [!UICONTROL 下載記錄] 反白顯示。](../../images/audit-logs/download.png)
+![具有下列專案的稽核控制面板 [!UICONTROL 下載記錄] 反白顯示。](../../images/audit-logs/download.png)
 
 在出現的對話方塊中，選取您偏好的格式 **[!UICONTROL CSV]** 或 **[!UICONTROL JSON]**)，然後選取 **[!UICONTROL 下載]**. 瀏覽器會下載產生的檔案，並將其儲存到您的電腦。
 
-![檔案格式選取對話方塊，其中包含 [!UICONTROL 下載] 反白顯示。](../../images/audit-logs/select-download-format.png)
+![檔案格式選取對話方塊 [!UICONTROL 下載] 反白顯示。](../../images/audit-logs/select-download-format.png)
 
 ## 管理API中的稽核記錄
 
@@ -140,11 +140,11 @@ ht-degree: 43%
 
 ## 管理Adobe Admin Console的稽核記錄
 
-若要瞭解如何管理Adobe Admin Console活動的稽核記錄，請參閱下列內容 [檔案](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+要瞭解如何管理Adobe Admin Console中的活動的稽核記錄，請參閱以下內容 [檔案](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## 後續步驟和其他資源
 
-本指南說明如何管理Experience Platform稽核記錄。 如需如何監視Platform活動的詳細資訊，請參閱以下檔案： [可觀察性深入分析](../../../observability/home.md) 和 [監控資料擷取](../../../ingestion/quality/monitor-data-ingestion.md).
+本指南說明如何管理Experience Platform中的稽核記錄。 如需如何監視Platform活動的詳細資訊，請參閱以下檔案： [可觀察性深入分析](../../../observability/home.md) 和 [監視資料擷取](../../../ingestion/quality/monitor-data-ingestion.md).
 
 若要加深您對Experience Platform稽核記錄的瞭解，請觀看以下影片：
 

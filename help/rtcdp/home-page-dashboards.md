@@ -16,18 +16,18 @@ Adobe Real-time Customer Data Platform (Real-Time CDP)首頁是登入Real-Time C
 
 Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同功能，以及顯示組織內資料最新資訊的量度區段。
 
-本檔案提供Real-Time CDP首頁和量度控制面板的概觀。
+本檔案提供Real-Time CDP首頁概觀和量度控制面板。
 
 ![平台UI首頁。](assets/platform-home/home.png)
 
-## 快速入門Widget
+## 快速入門widget
 
 此 [!UICONTROL 開始使用即時客戶個人檔案] Widget分為四個部分：
 
 * **將資料內嵌至Platform**：此Widget會將您導向來源目錄。 使用來源目錄來選取來源，並擷取您的資料以Experience Platform。 如需詳細資訊，請閱讀 [來源概觀](../sources/home.md)
-* **模型資料結構**：此Widget會將您導向結構描述概觀。 使用結構描述概觀來瀏覽現有結構描述或建立描述資料結構的建置區塊。 如需詳細資訊，請閱讀 [結構描述概觀](../xdm/home.md).
-* **區段對象**：此Widget會將您導向 [!DNL Segment Builder] 在UI中。 使用 [!DNL Segment Builder] 以與設定檔資料元素互動，並定義區段的規則。 如需詳細資訊，請閱讀 [Segmentation Service概述](../segmentation/home.md).
-* **將資料傳送至目的地**：此Widget會將您導向目的地目錄。 使用目的地目錄來選取目的地，然後您可以連線至目的地並將區段傳送至該目的地。 如需詳細資訊，請閱讀 [目的地概觀](../destinations/home.md)
+* **模型資料結構**：此Widget會將您導向結構概觀。 使用方案概觀來瀏覽現有方案或建立說明資料結構的建置區塊。 如需詳細資訊，請閱讀 [結構概觀](../xdm/home.md).
+* **區隔對象**：此Widget會將您導向 [!DNL Segment Builder] 在UI中。 使用 [!DNL Segment Builder] 以與設定檔資料元素互動，並定義區段的規則。 如需詳細資訊，請閱讀 [Segmentation Service概述](../segmentation/home.md).
+* **將資料傳送至目的地**：此Widget會將您導向目標目錄。 使用目的地目錄來選取目的地，然後您可以連線並傳送區段到該目的地。 如需詳細資訊，請閱讀 [目的地概觀](../destinations/home.md)
 
 ![Platform UI首頁會顯示快速入門Widget](assets/platform-home/getting-started-widget.png)
 
@@ -37,25 +37,25 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 ### 排行榜
 
-排行榜顯示貴組織中目前的結構描述、資料集、設定檔和區段總數，以及最近更新日期。
+排行榜顯示貴組織中目前的結構描述、資料集、設定檔和區段總數，及其最近更新日期。
 
 ![Platform UI首頁中的排行榜區段。](assets/platform-home/leaderboard.png)
 
-* **結構描述總數**：此 **結構描述總數** 計數器顯示系統中的結構描述數目。 建立結構描述時會更新此計數器。 如需詳細資訊，請閱讀 [結構描述概觀](../xdm/home.md).
+* **結構描述總數**：此 **結構描述總數** 計數器顯示系統中的結構描述數目。 建立結構描述時會更新此計數器。 如需詳細資訊，請閱讀 [結構概觀](../xdm/home.md).
 * **資料集總數**：此 **資料集總數** 計數器顯示系統中的資料集數量和資料量 [!DNL Platform]. 建立資料集時會更新此計數器。 如需資料集的詳細資訊，請參閱 [資料集總覽](../catalog/datasets/overview.md).
-* **設定檔總數**：此 **設定檔** count顯示擁有設定檔的總人數 [!DNL Real-Time Customer Profile]. 其中不包含設定檔片段。 這是您的可定址對象總數。 此計數使用預設值 [合併原則](profile/merge-policies.md) 在統一設定檔的合併原則設定中設定。 設定檔的數量每24小時更新一次。 如需設定檔的詳細資訊，請閱讀 [即時客戶個人檔案總覽](../profile/home.md).
+* **設定檔總數**：此 **設定檔** count顯示擁有設定檔的總人數 [!DNL Real-Time Customer Profile]. 其中不包含設定檔片段。 這是您的總計可定址對象。 此計數使用預設值 [合併原則](profile/merge-policies.md) 在統一設定檔的合併原則設定中設定。 設定檔的數量每24小時更新一次。 如需設定檔的詳細資訊，請參閱 [即時客戶個人檔案總覽](../profile/home.md).
 * **區段總數**： **區段** 顯示為組織建立的區段總數。 此數字會在建立新區段時更新。 如需區段的詳細資訊，請參閱 [Segmentation Service概述](../segmentation/home.md).
 
 ### 最近專案
 
-最近專案會列出組織中最近的變更。 在以下範例中，最近的變更與資料集、來源、區段和目的地有關。
+最近專案會列出組織中最近的變更。 在以下範例中，最新變更與資料集、來源、區段和目的地有關。
 
 ![Platform UI首頁的「最近使用的專案」區段。](assets/platform-home/recent-items.png)
 
 * **最近的資料集**：此 **[!UICONTROL 最近的資料集]** 卡片會顯示在組織內建立的五個最新資料集。 建立新資料集時會更新此清單。 選取資料集以檢視該專案的詳細資訊，或選取 **[!UICONTROL 檢視全部]** 以取得資料集清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需資料集的詳細資訊，請參閱 [資料集總覽](../catalog/datasets/overview.md).
-* **最近的來源**：此 **[!UICONTROL 最近的來源]** 量度卡片會顯示組織中最近建立的五個來源。 此清單會在建立新來源時更新。 選取來源以檢視該專案的詳細資訊，或選取 **[!UICONTROL 檢視全部]** 以取得來源清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需來源的詳細資訊，請參閱 [來源概觀](../sources/home.md).
+* **最近的來源**：此 **[!UICONTROL 最近的來源]** 量度卡會顯示組織內建立的五個最近來源。 此清單會在建立新來源時更新。 選取來源以檢視該專案的詳細資訊，或選取 **[!UICONTROL 檢視全部]** 以取得來源清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需有關來源的詳細資訊，請參閱 [來源概觀](../sources/home.md).
 * **最近的區段**：此 **[!UICONTROL 最近的區段]** 量度卡片會顯示組織中最近建立的五個區段。 此清單會在建立新區段時更新。 選取區段以檢視該專案的詳細資訊，或選取 **[!UICONTROL 檢視全部]** 以取得區段清單。 如需區段的詳細資訊，請參閱 [Segmentation Service概述](../segmentation/home.md).
-* **最近的目的地**：此 **[!UICONTROL 最近的目的地]** 量度卡會顯示組織中最近建立的五個目的地。 此清單會在建立新目的地時更新。 選取目的地以檢視該專案的詳細資訊，或選取 **[!UICONTROL 檢視全部]** 以取得目的地清單。 如需詳細資訊，請閱讀 [目的地概觀](../destinations/home.md).
+* **最近的目的地**：此 **[!UICONTROL 最近的目的地]** 量度卡片會顯示組織內建立的五個最近目的地。 此清單會在建立新目的地時更新。 選取目的地以檢視該專案的詳細資訊，或選取 **[!UICONTROL 檢視全部]** 以取得目的地清單。 如需詳細資訊，請閱讀 [目的地概觀](../destinations/home.md).
 
 ## 資源
 
@@ -64,8 +64,8 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 ![Platform UI首頁中的資源區段。](assets/platform-home/resources.png)
 
 * [瞭解結構描述](../xdm/schema/composition.md)
-* [連線來源](../sources/home.md)
-* [如何填入您的Real-Time Customer Profile](../profile/home.md)
+* [正在連線來源](../sources/home.md)
+* [如何填寫您的Real-Time Customer Profile](../profile/home.md)
 * [正在連線目的地](../destinations/home.md)
 * [管理存取權](../access-control/abac/overview.md)
 

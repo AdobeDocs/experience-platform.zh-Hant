@@ -4,7 +4,7 @@ description: 瞭解如何使用Adobe Experience Platform UI建立、檢視和更
 source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
@@ -106,13 +106,13 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_profile_computedAttributes_fastRefresh"
 >title="快速重新整理"
->abstract="快速重新整理可讓您的屬性保持最新狀態。 啟用此選項可讓您每天重新整理計算屬性，甚至更長的回顧期間，讓您快速回應使用者活動。 此值僅適用於回顧期間大於每週的計算屬性。"
+>abstract="快速重新整理可讓您的屬性保持為最新狀態。啟用此選項可讓您每天重新整理計算屬性，即使回顧期較長，也能讓您快速對使用者活動做出反應。此值僅適用於回顧期間大於每週的計算屬性。"
 
 套用彙總函式時，如果回顧期間大於一週，您可以啟用快速重新整理。
 
 ![此 [!UICONTROL 快速重新整理] 核取方塊會醒目提示。](./images/ui/enable-fast-refresh.png)
 
-快速重新整理可讓您的屬性保持最新狀態。 啟用此選項可讓您每天重新整理計算屬性，甚至更長的回顧期間，讓您快速回應使用者活動。
+快速重新整理可讓您的屬性保持為最新狀態。啟用此選項可讓您每天重新整理計算屬性，即使回顧期較長，也能讓您快速對使用者活動做出反應。
 
 如需快速重新整理的詳細資訊，請參閱 [快速重新整理區段](./overview.md#fast-refresh) 「 」的「計算屬性概觀」。
 

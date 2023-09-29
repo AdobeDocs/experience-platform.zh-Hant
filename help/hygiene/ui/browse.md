@@ -1,6 +1,6 @@
 ---
 title: 瀏覽資料衛生工單
-description: 瞭解如何在Adobe Experience Platform使用者介面中檢視和管理現有的資料衛生工單。
+description: 瞭解如何在Adobe Experience Platform使用者介面中檢視及管理現有的資料衛生工單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
 workflow-type: tm+mt
@@ -19,11 +19,11 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform中的資料檢疫功能目前僅適用於已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全性盾牌**.
+>Adobe Experience Platform中的資料衛生功能目前僅適用於已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板**.
 
-將資料檢疫要求傳送到系統時，會建立工單以執行要求的任務。工單代表特定的資料檢疫程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
+將資料檢疫要求傳送到系統時，會建立工單以執行要求的任務。工單代表特定的資料衛生程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
 
-本指南說明如何在Adobe Experience Platform UI中檢視和管理現有工單。
+本指南說明如何在Adobe Experience Platform UI中檢視及管理現有工單。
 
 ## 列出及篩選現有工單
 
@@ -31,24 +31,24 @@ ht-degree: 25%
 
 ![影像顯示 [!UICONTROL 資料衛生] Platform UI中的工作區](../images/ui/browse/work-order-list.png)
 
-清單一次只會顯示一個類別的工作訂單。 選取 **[!UICONTROL 消費者]** 若要檢視記錄刪除工作清單，以及 **[!UICONTROL 資料集]** 以檢視已排程資料集有效期的清單。
+清單一次只會顯示一個類別的工作訂單。 選取 **[!UICONTROL 消費者]** 若要檢視記錄刪除任務清單，以及 **[!UICONTROL 資料集]** 以檢視排程的資料集到期清單。
 
 ![影像顯示 [!UICONTROL 資料集] 標籤](../images/ui/browse/dataset-tab.png)
 
-選取漏斗圖示(![漏斗圖示的影像](../images/ui/browse/funnel-icon.png))以檢視所顯示工單的篩選器清單。
+選取漏斗圖示(![漏斗圖示的影像](../images/ui/browse/funnel-icon.png))，以檢視所顯示工單的篩選清單。
 
-![顯示的工作單篩選器影像](../images/ui/browse/filters.png)
+![所顯示工單篩選器的影像](../images/ui/browse/filters.png)
 
-根據您檢視的工作單型別，可使用不同的篩選選項。
+根據您檢視的工作單型別，有不同的篩選選項可供使用。
 
 ### 記錄刪除的篩選器
 
-以下篩選器適用於記錄刪除請求：
+下列篩選條件適用於記錄刪除請求：
 
 | 篩選 | 說明 |
 | --- | --- |
-| [!UICONTROL 狀態] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL 已完成]**：工作已完成。</li><li>**[!UICONTROL 已失敗]**：工作發生錯誤，無法完成。</li><li>**[!UICONTROL 處理中]**：請求已開始，目前正在處理中。</li></ul> |
-| [!UICONTROL 建立日期] | 根據工單建立時間進行篩選。 |
+| [!UICONTROL 狀態] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL 已完成]**：工作已完成。</li><li>**[!UICONTROL 已失敗]**：作業發生錯誤，因此無法完成。</li><li>**[!UICONTROL 處理中]**：要求已開始，目前正在處理中。</li></ul> |
+| [!UICONTROL 建立日期] | 根據產生工單的時間進行篩選。 |
 | [!UICONTROL 更新日期] | 根據上次更新工單的時間進行篩選。 建立即計為更新。 |
 
 ### 資料集有效期的篩選器
@@ -57,9 +57,9 @@ ht-degree: 25%
 
 | 篩選 | 說明 |
 | --- | --- |
-| [!UICONTROL 狀態] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL 已完成]**：工作已完成。</li><li>**[!UICONTROL 擱置中]**：工作已建立但尚未執行。 A [資料集到期要求](./dataset-expiration.md) 在排定的刪除日期之前假設此狀態。 刪除日期到達後，狀態會更新為 [!UICONTROL 執行中] 除非事先取消工作。</li><li>**[!UICONTROL 執行中]**：資料集到期要求已開始，目前正在處理中。</li><li>**[!UICONTROL 已取消]**：工作已取消，因為是手動使用者請求的一部分。</li></ul> |
-| [!UICONTROL 建立日期] | 根據工單建立時間進行篩選。 |
-| [!UICONTROL 到期日] | 根據相關資料集的排程刪除日期篩選資料集到期請求。 |
+| [!UICONTROL 狀態] | 根據工單的目前狀態進行篩選：<ul><li>**[!UICONTROL 已完成]**：工作已完成。</li><li>**[!UICONTROL 擱置中]**：工作已建立但尚未執行。 A [資料集到期要求](./dataset-expiration.md) 在排定的刪除日期之前採用此狀態。 刪除日期到達後，狀態會更新為 [!UICONTROL 執行中] 除非事先取消工作。</li><li>**[!UICONTROL 執行中]**：資料集到期要求已開始，目前正在處理中。</li><li>**[!UICONTROL 已取消]**：工作已取消，因為這是手動使用者請求的一部分。</li></ul> |
+| [!UICONTROL 建立日期] | 根據產生工單的時間進行篩選。 |
+| [!UICONTROL 到期日] | 根據排程的刪除日期篩選有問題的資料集的資料集到期請求。 |
 | [!UICONTROL 更新日期] | 根據上次更新工單的時間進行篩選。 建立及過期均會計為更新。 |
 
 {style="table-layout:auto"}
@@ -81,7 +81,7 @@ ht-degree: 25%
 >title="記錄刪除回應"
 >abstract="當記錄刪除流程收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;區段下。如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要了解詳細資訊，請查看資料檢疫 UI 指南。"
 
-選取所列工單的ID以檢視其詳細資訊。
+選取已列出工單的ID以檢視其詳細資料。
 
 ![顯示所選取工單ID的影像](../images/ui/browse/select-work-order.png)
 
@@ -89,19 +89,19 @@ ht-degree: 25%
 
 ### 記錄刪除詳細資料 {#record-delete}
 
-記錄刪除請求的詳細資訊包括其目前狀態以及自提出請求以來經過的時間。 每個請求也包含 **[!UICONTROL 依服務的狀態]** 區段，提供刪除所涉及每個下游服務的個別狀態詳細資訊。 在右側邊欄上，您可以使用控制項來更新工單的名稱和說明。
+記錄刪除請求的詳細資訊包括其目前狀態以及自提出請求以來經過的時間。 每個請求也包含 **[!UICONTROL 依服務的狀態]** 區段，提供刪除所涉及之每個下游服務的個別狀態詳細資訊。 在右邊欄中，您可以使用控制項來更新工單的名稱與描述。
 
 ![顯示記錄刪除工單之詳細資訊頁面的影像](../images/ui/browse/record-delete-details.png)
 
 ### 資料集到期日詳細資料 {#dataset-expiration}
 
-資料集到期的詳細資訊頁面提供其基本屬性的資訊，包括排程的到期日（即刪除前的剩餘天數）。 在右側邊欄中，您可以使用控制項來編輯或取消有效期。
+資料集到期的詳細資訊頁面提供其基本屬性的相關資訊，包括排程的到期日（即刪除前的剩餘天數）。 在右邊欄中，您可以使用控制項來編輯或取消有效期。
 
-![顯示資料集到期工作單的詳細資訊頁面的影像](../images/ui/browse/ttl-details.png)
+![顯示資料集到期工作單之詳細資訊頁面的影像](../images/ui/browse/ttl-details.png)
 
 ## 後續步驟
 
-本指南說明如何在Platform UI中檢視及管理現有資料檢疫工單。 如需建立您自己的工單的相關資訊，請參閱下列檔案：
+本指南說明如何在Platform UI中檢視及管理現有資料衛生工單。 有關建立您自己的工單的資訊，請參閱下列檔案：
 
 * [管理資料集有效期](./dataset-expiration.md)
 <!-- * [Manage record deletes](./record-delete.md) -->

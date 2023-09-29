@@ -3,7 +3,7 @@ title: 即時客戶設定檔資料的預設護欄
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
+description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: d409c3f61824e77bfc26af577999d90d391f8a1b
 workflow-type: tm+mt

@@ -6,17 +6,17 @@ feature: Data Prep
 source-git-commit: e96263847f53ea2c884c273fd7986855d4c478c1
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 46%
+ht-degree: 56%
 
 ---
 
 
 # 資料準備 {#data-prep}
 
-- [資料準備總覽](home.md)
+- [資料準備概觀](home.md)
 - [資料準備函式](functions.md)
 - 對應服務API {#api}
-   - [總覽](./api/overview.md)
+   - [概觀](./api/overview.md)
    - [快速入門](./api/getting-started.md)
    - [函式](./api/functions.md)
    - [對應集](./api/mapping-set.md)

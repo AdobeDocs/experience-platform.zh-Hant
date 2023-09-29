@@ -7,7 +7,7 @@ feature: Access Control
 source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 50%
 # 存取控制 {#access-control}
 
 * [存取控制概覽](home.md)
-* 以屬性為基礎的存取控制 {#abac}
-   * [總覽](abac/overview.md)
+* 屬性型存取控制 {#abac}
+   * [概觀](abac/overview.md)
    * [端對端指南](abac/end-to-end-guide.md)
    * 權限 {#permissions-ui}
       * [瀏覽](abac/ui/browse.md)
@@ -26,14 +26,14 @@ ht-degree: 50%
       * [角色](abac/ui/roles.md)
       * [沙箱](abac/ui/sandboxes.md)
       * [使用者](abac/ui/users.md)
-   * 屬性型存取控制API {#abac-api}
-      * [總覽](abac/api/overview.md)
+   * 以屬性為基礎的存取控制API {#abac-api}
+      * [概觀](abac/api/overview.md)
       * [快速入門](abac/api/getting-started.md)
       * [角色](abac/api/roles.md)
       * [原則](abac/api/policies.md)
       * [產品](abac/api/products.md)
 * 存取控制UI {#ui}
-   * [總覽](ui/overview.md)
+   * [概觀](ui/overview.md)
    * [選取產品設定檔](ui/browse.md)
    * [管理產品設定檔的許可權](ui/permissions.md)
    * [管理產品設定檔的詳細資訊和其他服務](ui/details-and-services.md)

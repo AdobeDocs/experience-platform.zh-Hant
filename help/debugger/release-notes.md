@@ -30,23 +30,23 @@ ht-degree: 4%
 ## 1.3.2版 — 2022年6月9日
 
 * 新增使用者登入時的預設頭像。
-* 新增語法醒目提示至記錄檔中的JSON物件。
+* 為記錄中的JSON物件新增語法醒目提示。
 
 ## 1.3.1版 — 2022年5月24日
 
 * 更新相依性。
 * 修正無法啟用處理後點選的Analytics問題。
-* 修正偵錯工具附加至Adobe登入視窗的問題。
-* 修正AT.js中記錄訊息未在Debugger中顯示的問題。
+* 修正除錯工具附加至Adobe登入視窗的問題。
+* 修正AT.js中記錄訊息無法在Debugger中顯示的問題。
 
 ## 1.3.0版 — 2022年1月28日
 
-* 新增「關於」連結以顯示最新版本和說明。
+* 新增「關於」連結以顯示最新發行版本和說明。
 * 新增切換功能，可檢視Analytics請求的處理後點選。 Analytics區段提供此切換選項。
 * 修正在偵錯工具外部關閉工作階段時的遠端偵錯工作階段問題。
 * 修正Web SDK Edge Transactions索引標籤中顯示的錯誤通知。
 * 修正偵錯工具存取_satellite物件時，頁面出現棄用警告的Adobe標籤。
-* 修正在頁面上找不到AppMeasurement例項的一些情況。
+* 修正在頁面上找不到AppMeasurement執行個體的某些情況。
 * 修正第一次開啟偵錯工具視窗時發生的頁面連線問題。
 
 ## 1.2.0版 — 2021年10月26日
@@ -56,11 +56,11 @@ ht-degree: 4%
 
 ## 1.1.0版 — 2021年10月5日
 
-* 遠端偵錯視覺效果 — 在「Adobe Experience Platform Web SDK >邊緣交易」區段中，將遠端偵錯事件組織成視覺流程圖。
-* 啟動新的遠端偵錯工作階段時，需要頁面上使用的Adobe Experience Platform Web SDK組織符合登入組織。
-* 僅顯示已連線標籤的邊緣交易。 Target追蹤記錄仍可在「記錄> Edge」區段中取得。
-* 允許頁面上每個Adobe Experience Platform Web SDK執行個體的個別資料串流ID設定覆寫。 新增偵錯已啟用切換。
-* 修正Adobe Target追蹤權杖不一定會與Adobe Experience Platform Web SDK的遠端偵錯工作階段一起傳送的問題。
+* 遠端偵錯視覺效果 — 將遠端偵錯事件組織成Adobe Experience Platform Web SDK > Edge Transactions區段中的視覺流程圖。
+* 啟動新的遠端偵錯工作階段時，需要頁面上使用的Adobe Experience Platform Web SDK組織與登入的組織相符。
+* 僅顯示已連線標籤的邊緣交易。 仍可在「記錄> Edge」區段中取得Target追蹤記錄。
+* 允許頁面上每個Adobe Experience Platform Web SDK執行個體的個別資料流ID設定覆寫。 新增偵錯功能切換。
+* 修正Adobe Target追蹤權杖不一定會與Adobe Experience Platform Web SDK的遠端偵錯工作階段一併傳送的問題。
 
 ## 1.0.0版（2021年5月5日）
 

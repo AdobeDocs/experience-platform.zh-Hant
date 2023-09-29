@@ -17,7 +17,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_datatype_filter"
 >title="標準或自訂資料類型篩選器"
->abstract="可用資料類型清單已根據其建立方式預先進行篩選。 選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。 標準選項顯示由 Adobe 建立的實體，而自訂選項顯示在您的組織內建立的實體。 請參閱文件以了解更多有關建立和編輯資料類型的資訊。"
+>abstract="可用資料類型清單已根據其建立方式預先進行篩選。選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。標準選項顯示由 Adobe 建立的實體，而自訂選項顯示在您的組織內建立的實體。請參閱文件以了解更多有關建立和編輯資料類型的資訊。"
 
 在體驗資料模型(XDM)中，資料型別是包含多個子欄位的可重複使用欄位。 雖然資料型別與結構描述欄位群組類似，因為其允許一致地使用多欄位結構，但資料型別更靈活，因為它們可以包含在結構描述結構中的任意位置，而欄位群組只能新增到根層級。
 
@@ -59,7 +59,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 ### 篩選資料型別 {#filter}
 
-可用資料類型清單已根據其建立方式預先進行篩選。 選取選項按鈕以選擇 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 選項。 此 [!UICONTROL 標準] 選項會顯示由Adobe建立的實體，以及 [!UICONTROL 自訂] 選項會顯示在您組織內建立的實體。
+可用資料類型清單已根據其建立方式預先進行篩選。選取選項按鈕以選擇 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 選項。 此 [!UICONTROL 標準] 選項會顯示由Adobe建立的實體，以及 [!UICONTROL 自訂] 選項會顯示在您組織內建立的實體。
 
 ![此 [!UICONTROL 資料型別] 的標籤 [!UICONTROL 方案] 工作區，使用 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 反白顯示。](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 

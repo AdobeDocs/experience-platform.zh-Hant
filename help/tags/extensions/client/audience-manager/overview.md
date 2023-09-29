@@ -15,13 +15,13 @@ ht-degree: 71%
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-透過Audience Manager標籤擴充功能，您可以整合Audience Manager所使用的DIL程式碼與Adobe Experience Platform中的屬性。
+透過Audience Manager標籤擴充功能，您可以整合Audience Manager所使用的DIL程式碼和Adobe Experience Platform中的屬性。
 
 您可參閱此參考文件，了解使用此擴充功能建立規則時可使用哪些選項。
 
 >[!NOTE]
 >
->此擴充功能不適用於Adobe Analytics資料的事件轉送。 若要進行事件轉送，請使用 [Adobe Analytics擴充功能](../analytics/overview.md).
+>本擴充功能不適用於Adobe Analytics資料的事件轉送。 若要轉送事件，請使用 [Adobe Analytics擴充功能](../analytics/overview.md).
 
 ## 設定 Adobe Audience Manager 擴充功能
 
@@ -69,7 +69,7 @@ ht-degree: 71%
 
 將游標停留在「i」圖示上，即可了解每個屬性的用途。您可以在 [Audience Manager DIL 文件](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html)中找到屬性的詳細資訊。
 
-選取 **[!UICONTROL 儲存]** 完成擴充功能設定後。
+選取 **[!UICONTROL 儲存]** 當您完成擴充功能設定時。
 
 ## Adobe Audience Manager 擴充功能動作類型
 

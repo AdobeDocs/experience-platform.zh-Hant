@@ -15,11 +15,11 @@ ht-degree: 52%
 
 * [可觀察性深入分析概觀](./home.md)
 * 可觀察性深入分析API {#api}
-   * [總覽](./api/overview.md)
+   * [概觀](./api/overview.md)
    * [快速入門](./api/getting-started.md)
    * [量度](./api/metrics.md)
 * 警報 {#alerts}
-   * [總覽](./alerts/overview.md)
+   * [概觀](./alerts/overview.md)
    * [標準警報規則](./alerts/rules.md)
    * [UI指南](./alerts/ui.md)
    * [訂閱I/O事件通知](./alerts/subscribe.md)

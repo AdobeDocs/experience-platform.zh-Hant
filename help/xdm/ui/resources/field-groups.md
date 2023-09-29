@@ -16,7 +16,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
 >title="標準或自訂欄位群組篩選器"
->abstract="可用欄位群組清單已根據其建立方式預先進行篩選。 選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。 標準選項顯示由 Adobe 建立的實體，而自訂選項顯示在您的組織內建立的實體。 請參閱文件以了解更多有關建立和編輯欄位群組的資訊。"
+>abstract="可用欄位群組清單已根據其建立方式預先進行篩選。選取選項按鈕，在「標準」和「自訂」選項之間進行選擇。標準選項顯示由 Adobe 建立的實體，而自訂選項顯示在您的組織內建立的實體。請參閱文件以了解更多有關建立和編輯欄位群組的資訊。"
 
 在Experience Data Model (XDM)中，結構描述欄位群組是可重複使用的元件，可定義一或多個實作特定功能的欄位，例如個人詳細資料、飯店偏好設定或地址。 欄位群組是要包含在實作相容類別的結構描述中。
 
@@ -48,7 +48,7 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ## 篩選欄位群組 {#filter}
 
-可用欄位群組清單已根據其建立方式預先進行篩選。 預設設定會顯示由Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以選擇 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 選項。 此 [!UICONTROL 標準] 選項會顯示由Adobe建立的實體，以及 [!UICONTROL 自訂] 選項會顯示在您組織內建立的實體。
+可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示由Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以選擇 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 選項。 此 [!UICONTROL 標準] 選項會顯示由Adobe建立的實體，以及 [!UICONTROL 自訂] 選項會顯示在您組織內建立的實體。
 
 ![此 [!UICONTROL 欄位群組] 的標籤 [!UICONTROL 方案] 工作區，使用 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 反白顯示。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
