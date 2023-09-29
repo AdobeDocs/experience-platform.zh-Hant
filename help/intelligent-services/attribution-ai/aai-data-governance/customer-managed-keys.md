@@ -1,23 +1,23 @@
 ---
-keywords: Insights；Attribution Ai；Attribution Ai深入分析；AAI查詢服務；歸因查詢；歸因分數；AAI中客戶自控金鑰
-title: 客戶自控金鑰
+keywords: 深入分析；歸因人工智慧；歸因人工智慧深入分析；AAI查詢服務；歸因查詢；歸因分數；AAI中客戶自控金鑰
+title: 客戶託管金鑰
 description: 瞭解如何設定客戶自控金鑰以進行Attribution AI。
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 24%
 
 ---
 
-# 客戶自控金鑰
+# 客戶託管金鑰
 
-Attribution AI提供以下專案的選項： [Healthcare Shield](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) 和Privacy &amp; Security Shield客戶將Azure客戶自控金鑰(CMK)套用至您的Attribution AI資料。 設定程式與 [Adobe Experience Platform CMK設定](../../../landing/governance-privacy-security/customer-managed-keys.md) 而且您可以依照其中概述的步驟操作。
+Attribution AI提供以下選項 [Health Shield](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) 以及Privacy &amp; Security Shield客戶，將Azure客戶自控金鑰(CMK)套用至您的Attribution AI資料。 設定程式與 [Adobe Experience Platform CMK設定](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) 您可以依照其中概述的步驟操作。
 
-您可以在以下位置閱讀檔案： [Adobe Experience Platform中的客戶自控金鑰](../../../landing/governance-privacy-security/encryption.md) 並依照概述的步驟進行設定程式。
+您可以閱讀以下說明檔案： [Adobe Experience Platform中的客戶自控金鑰](../../../landing/governance-privacy-security/encryption.md) 並依照概述的步驟進行設定程式。
 
 >[!NOTE]
 >
 >[!DNL Customer Managed Keys] 目前僅適用於已購買 [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=zh-Hant%3Flang%3Den) 附加元件產品。
 
-Platform 使用的所有資料在傳輸和待用時都經過加密，以確保您的資料安全，無論是否使用 CMK。如需Adobe Experience Platform加密的詳細資訊，請閱讀以下檔案： [資料加密](../../../landing/governance-privacy-security/encryption.md).
+Platform 使用的所有資料在傳輸和待用時都經過加密，以確保您的資料安全，無論是否使用 CMK。如需Adobe Experience Platform加密的詳細資訊，請參閱以下檔案： [資料加密](../../../landing/governance-privacy-security/encryption.md).

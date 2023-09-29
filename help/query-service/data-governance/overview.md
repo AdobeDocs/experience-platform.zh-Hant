@@ -2,7 +2,7 @@
 title: 查詢服務中的資料治理
 description: 此概觀涵蓋Experience Platform查詢服務中資料治理的主要元素。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: c3ce6548e18078e604ecd5db276eb162935f6181
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 1%
@@ -137,7 +137,7 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 查詢服務資料規範可確保資料一律加密。 傳輸中的資料一律符合HTTPS標準，靜態資料會使用系統層級的金鑰在Azure Data Lake存放區中加密。 請參閱以下檔案： [如何在Adobe Experience Platform中加密資料](../../landing/governance-privacy-security/encryption.md) 以取得詳細資訊。 如需如何在Azure Data Lake儲存體中對閒置資料進行加密的詳細資訊，請參閱 [Azure官方檔案](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
-傳輸中的資料一律符合HTTPS標準，同樣地，當資料在資料湖中靜止時，會使用客戶管理金鑰(CMK)進行加密，而資料湖管理已支援該金鑰。 目前支援的版本為TLS1.2。請參閱 [客戶自控金鑰(CMK)檔案](../../landing/governance-privacy-security/customer-managed-keys.md) 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
+傳輸中的資料一律符合HTTPS標準，同樣地，當資料在資料湖中靜止時，會使用客戶管理金鑰(CMK)進行加密，而資料湖管理已支援該金鑰。 目前支援的版本為TLS1.2。請參閱 [客戶自控金鑰(CMK)檔案](../../landing/governance-privacy-security/customer-managed-keys/overview.md) 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
 
 
 ## 稽核 {#audit}

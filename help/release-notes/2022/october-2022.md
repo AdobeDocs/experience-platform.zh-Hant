@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2022年10月
 description: Adobe Experience Platform 2022年10月版本注意事項。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: e1deeadb98240f885e9dc95ecbc58ae48049a190
+source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 26%
+ht-degree: 34%
 
 ---
 
@@ -23,11 +23,11 @@ ht-degree: 26%
 
 所有儲存在Adobe Experience Platform的資料都會使用系統層級的金鑰進行靜態加密。 如果您使用以Platform為基礎建立的應用程式，現在可以選擇改用您自己的加密金鑰，讓您更能掌控資料安全性。
 
-請參閱以下主題的概觀： [客戶自控金鑰](../../landing/governance-privacy-security/customer-managed-keys.md) 以取得功能的詳細資訊。
+請參閱以下主題的概觀： [客戶自控金鑰](../../landing/governance-privacy-security/customer-managed-keys/overview.md) 以取得功能的詳細資訊。
 
-## 資料集合 {#data-collection}
+## 資料收集 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
 
 **新功能或更新功能**
 
@@ -41,14 +41,14 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
 | (Beta)資料集匯出 | 此 [資料集匯出Beta版功能](/help/destinations/ui/export-datasets.md) 可讓您匯出第一代資料(如 [Real-time Customer Data Platform產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html))經由目標使用者介面，從Adobe Experience Platform前往您自己的外部客戶系統。 這可讓您利用無程式碼/低程式碼工作流程，將資料從Experience Platform中帶到6個雲端儲存目標（如下表所列），以用於分析和法規遵循使用案例。 |
-| (Beta)增強的檔案匯出功能 | 現在，將檔案匯出出Experience Platform時，您可以受益於增強的自訂功能： <br><ul><li>其他 [檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).</li><li>可透過以下方式設定匯出檔案中的自訂檔案標題： [改善對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> 下表列出的六個新Beta版雲端儲存空間卡支援此功能。 |
+| (Beta)增強的檔案匯出功能 | 現在，將檔案匯出出Experience Platform時，您可以受益於增強的自訂功能： <br><ul><li>其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。</li><li>能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。</li><li>[能夠自訂匯出 CSV 資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> <br> 下表列出的六個新Beta版雲端儲存空間卡支援此功能。 |
 
 {style="table-layout:auto"}
 
@@ -59,9 +59,9 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | [[!DNL Line]](../../destinations/catalog/mobile-engagement/line.md) | Line是連線人員、服務和資訊的常用通訊平台，已從聊天應用程式成長為娛樂、社交和日常活動的中樞。 |
 | [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md) | Microsoft Dynamics 365是以雲端為基礎的業務應用程式平台，結合企業資源規劃(ERP)、客戶關係管理(CRM)以及生產力應用程式和AI工具，以實現端對端更順暢、控制更嚴的作業、更佳的增長潛力以及更低的成本。 |
 | [[!DNL (Beta) Adobe Commerce]](../../destinations/catalog/personalization/adobe-commerce.md) | 此 [!DNL (Beta) Adobe Commerce] 目的地聯結器可讓您選取一或多個Real-Time CDP區段，以啟用至 [!DNL Adobe Commerce] 帳戶，為購物者提供動態的個人化體驗。 範圍 [!DNL Adobe Commerce]，接著您可以選取這些Real-Time CDP區段，以個人化購物車中的獨特優惠方案，例如「購買2 get 1 free」。 您也可以顯示主圖橫幅，並透過促銷優惠修改產品定價，所有優惠都根據Adobe Real-Time CDP區段自訂。 |
-| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | 建立與的即時輸出連線 [!DNL Azure Data Lake Storage Gen2] 以定期從Adobe Experience Platform將資料檔案匯出至您自己的儲存位置。 這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
-| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存體介面，可讓您存取安全的雲端型檔案儲存設施，以將檔案匯出至Platform。 這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
-| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | 建立與的即時輸出連線 [!DNL Google Cloud Storage] 以定期從Adobe Experience Platform將資料檔案匯出至您自己的貯體。 這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
+| [[!DNL (Beta) Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md) | 建立與 [!DNL Azure Data Lake Storage Gen2] 的即時輸出連線，定期將資料檔案從 Adobe Experience Platform 匯出至您自己的儲存位置。這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
+| [[!DNL (Beta) Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) | [!DNL Data Landing Zone] 是一個由 Adobe Experience Platform 提供所需的 [!DNL Azure Blob] 儲存介面，可授權您存取安全、雲端式檔案儲存設施，並讓您將檔案匯出至平台之外。這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
+| [[!DNL (Beta) Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md) | 建立與 [!DNL Google Cloud Storage] 的即時輸出連線，定期將資料檔案從 Adobe Experience Platform 匯出至您自己的貯體。這個新的測試版目的地提供增強的檔案匯出功能，並支援資料集匯出。 |
 | [[!DNL (Beta) Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md#changelog) | Beta版參與者現在看到兩個 [!DNL Amazon S3] 目的地卡片在目的地目錄中並排顯示。 新的測試版目的地提供增強型檔案匯出功能，並支援資料集匯出。 |
 | [[!DNL (Beta) Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog) | Beta版參與者現在看到兩個 [!DNL Azure Blob] 目的地卡片在目的地目錄中並排顯示。 新的測試版目的地提供增強型檔案匯出功能，並支援資料集匯出。 |
 | [[!DNL (Beta) SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog) | Beta版參與者現在看到兩個 [!DNL SFTP] 目的地卡片在目的地目錄中並排顯示。 新的測試版目的地提供增強型檔案匯出功能，並支援資料集匯出。 |
@@ -78,7 +78,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
 **已更新的 XDM 元件**
 
@@ -94,7 +94,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Exper
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adob&#x200B;&#x200B;e Experience Platform 中的資料[!DNL Data Lake]。您可以從以下位置加入任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或內嵌到即時客戶個人檔案中。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以從以下位置加入任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或內嵌到即時客戶個人檔案中。
 
 **更新的功能**
 
