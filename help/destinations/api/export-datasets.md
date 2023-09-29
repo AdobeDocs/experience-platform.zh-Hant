@@ -4,9 +4,9 @@ title: 使用流量服務API匯出資料集
 description: 瞭解如何使用流量服務API將資料集匯出至所選目的地。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 28e07c464eb05ba7c20b132d430fccac15d8806e
+source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
-source-wordcount: '3526'
+source-wordcount: '3550'
 ht-degree: 4%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 4%
 
 ### 必要權限 {#permissions}
 
-若要匯出資料集，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+若要匯出資料集，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 檢視資料集]**、和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 為確保您擁有匯出資料集的必要許可權以及目的地支援匯出資料集，請瀏覽目的地目錄。 如果目的地有 **[!UICONTROL 啟動]** 或 **[!UICONTROL 匯出資料集]** 控制項，則表示您擁有適當的許可權。
 
@@ -1149,6 +1149,10 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ![顯示匯出資料集工作流程步驟4的圖表](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 接下來，您需要建立目標連線，以儲存資料集的匯出引數。 匯出引數包括位置、檔案格式、壓縮和其他細節。 請參閱 `targetSpec` 目的地的連線規格中提供的屬性，用於瞭解每個目的地型別的支援屬性。 請參考下列標籤 `targetSpec` 所有支援目的地的屬性。
+
+>[!WARNING]
+>
+>僅壓縮模式支援匯出至JSON檔案。 匯出至 [!DNL Parquet] 檔案支援壓縮和非壓縮模式。
 
 >[!BEGINTABS]
 

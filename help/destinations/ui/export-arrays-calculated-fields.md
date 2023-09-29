@@ -1,11 +1,11 @@
 ---
-title: （Beta版）使用計算欄位匯出平面檔案中的陣列
+title: （測試版）使用計算欄位匯出平面結構描述檔案中的陣列
 type: Tutorial
-description: 瞭解如何從Real-Time CDP將陣列和計算欄位匯出到批次設定檔型目的地。
+description: 瞭解如何使用計算欄位，將平面結構描述檔案中的陣列從Real-Time CDP匯出至雲端儲存空間目的地。
 badge: "Beta"
-source-git-commit: 79924b9a7d5114c94a004f99fb194102845b2127
+source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1207'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,8 @@ ht-degree: 2%
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Beta)匯出陣列支援"
 >abstract="從Experience Platform將簡單的int、字串或布林值陣列匯出至您所需的雲端儲存空間目的地。 部分限制適用。 檢視檔案以取得廣泛的範例和支援的函式。"
-
-<!--
-
-additional links for contextualhelp:
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="範例"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="已知限制"
 
 >[!AVAILABILITY]
 >
