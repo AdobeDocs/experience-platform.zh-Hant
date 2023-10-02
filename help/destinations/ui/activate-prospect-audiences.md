@@ -2,13 +2,13 @@
 title: 對目的地啟用潛在客戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用潛在客戶對象
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
+source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 16%
 
 ---
-
 
 # 啟用潛在客戶對象
 
@@ -22,7 +22,7 @@ ht-degree: 16%
 
 前往 **[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取 **[!UICONTROL 目錄]** 標籤。 使用 **[!UICONTROL 資料型別]** 篩選並選取 **[!UICONTROL 潛在客戶]** 檢視支援啟動潛在客戶對象的目的地。 目前，匯出潛在客戶對象僅適用於雲端儲存目的地。
 
-![支援資料集匯出的目的地](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+![支援潛在客戶對象的目的地。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
 ## 先決條件 {#prerequisites}
 

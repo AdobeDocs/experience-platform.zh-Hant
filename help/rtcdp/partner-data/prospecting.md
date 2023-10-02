@@ -1,10 +1,11 @@
 ---
 title: 透過挖掘潛在客戶使用案例吸引並獲取新客戶
 description: 了解如何透過 Real-Time CDP 中合作夥伴資料支援所帶來的挖掘潛在客戶使用案例，來吸引和獲取新客戶。
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
+source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
 workflow-type: tm+mt
-source-wordcount: '1953'
-ht-degree: 98%
+source-wordcount: '1960'
+ht-degree: 97%
 
 ---
 
@@ -207,7 +208,11 @@ ht-degree: 98%
 
 ### 將潛在客戶設定檔啟動到目的地 {#activate-to-destinations}
 
-透過將潛在客戶對象匯出到目的地來使用它們。目前，只有特定目的地，例如 [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md) 或 [!BADGE Alpha]{type=Informative}[LiveRamp](/help/destinations/catalog/advertising/liveramp-onboarding.md) 目的地支援啟動潛在客戶設定檔。
+透過將潛在客戶對象匯出到目的地來使用它們。目前，只有某些雲端儲存空間目的地支援啟用潛在客戶設定檔。
+
+![支援潛在客戶對象的目的地。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
+
+[閱讀全文](/help/destinations/ui/activate-prospect-audiences.md) 關於啟用潛在客戶至雲端儲存空間目的地。
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 
