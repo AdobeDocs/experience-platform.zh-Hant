@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 探索正確的教戰手冊
 description: 了解如何探索適合您的使用案例的教戰手冊，並啟用教戰手冊。
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 51e4a77472ccb560dbfa5f56011ce50932d87b64
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '741'
+ht-degree: 96%
 
 ---
-
 
 # (Beta) 探索正確的教戰手冊
 
@@ -23,7 +23,7 @@ ht-degree: 100%
 
 使用頁面上可用的搜尋視窗和篩選器找尋適合您的使用案例的教戰手冊。
 
-例如，您可以根據您想要設為目標的行銷漏斗中的階段篩選可以使用的教戰手冊 (轉換、參與度或保留)。您還可以依據您所在的產業或您有權存取的產品權益 (Adobe Journey Optimizer 或 Real-time CDP) 篩選顯示的教戰手冊。
+例如，您可以根據您想要設為目標的行銷漏斗中的階段篩選可以使用的教戰手冊 (轉換、參與度或保留)。您也可以依您所在的產業或您可存取的產品權利(Adobe Journey Optimizer或Real-Time CDP)來篩選顯示的教戰手冊。
 
 ![依據行銷漏斗、產業或產品篩選教戰手冊](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 

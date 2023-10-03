@@ -1,13 +1,13 @@
 ---
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
-source-git-commit: 9a72d85bfb592012b36826135e24d28983f92e40
+exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 1%
 
 ---
-
 
 # 常見問答
 
@@ -140,7 +140,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ### 我可以將對象從對象構成傳送至所有下游目的地和管道嗎？
 
-目前不適用。 目前，您可以在Adobe Journey Optimizer Campaigns和Real-time CDP目的地中使用來自對象構成的對象。 未來版本將支援Adobe Journey Optimizer歷程。
+目前不適用。 目前，您可以在Adobe Journey Optimizer行銷活動和Real-Time CDP目的地中使用來自對象構成的對象。 未來版本將支援Adobe Journey Optimizer歷程。
 
 ### 構成的數目是否有任何護欄？
 

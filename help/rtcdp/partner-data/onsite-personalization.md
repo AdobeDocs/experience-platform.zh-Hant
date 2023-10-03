@@ -1,10 +1,11 @@
 ---
 title: 使用合作夥伴輔助的訪客識別來個人化現場體驗
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '2548'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 99%
 
 >[!AVAILABILITY]
 >
->此功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 了解如何使用合作夥伴輔助的訪客識別為您的 Web 屬性訪客提供個人化的現場體驗。使用本教學課程了解 Experience Platform 和其他 Experience Cloud 解決方案中各種元素的實施順序，以便向經過身分驗證和未經身分驗證的訪客顯示個人化體驗。
 

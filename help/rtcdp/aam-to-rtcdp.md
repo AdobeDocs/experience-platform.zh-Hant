@@ -1,13 +1,13 @@
 ---
 title: 從 Audience Manager 到 Real-Time CDP 的進化
 description: 在規劃從 Audience Manager 移轉到 Real-Time CDP 之前，請注意需考量的事項。
-source-git-commit: 147e95cce203933d591fc807d9d20bcbc06e68e3
-workflow-type: ht
+exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
-
 
 # 從 Audience Manager 到 Real-Time CDP 的進化
 
@@ -23,9 +23,9 @@ ht-degree: 100%
 
 Adobe 建議您依照下列方式將區段分類：
 
-* 可透過 [[!UICONTROL Audience Manager 來源連接器]](/help/sources/connectors/adobe-applications/audience-manager.md)傳送至 Experience Platform 的區段，由於這些區段沒有資料相依性、沒有目的地或啟動挑戰，且其分段規則可之後再透過 Real-time CDP [區段產生器](/help/segmentation/ui/segment-builder.md)建立。
+* 可透過傳送至Experience Platform的區段 [[!UICONTROL Audience Manager來源聯結器]](/help/sources/connectors/adobe-applications/audience-manager.md)，由於它們沒有資料相依性，沒有目的地或啟用挑戰，而且可透過Real-Time CDP建立其區段規則 [區段產生器](/help/segmentation/ui/segment-builder.md) 稍後。
 * 區段具有可受支援的規則但可能包含無法在 Real-Time CDP 中取得的資料。
-* 區段無法在 Real-Time CDP 中建立且缺少功能。
+* 無法在Real-Time CDP中建立且缺少功能的區段。
 
 >[!TIP]
 >

@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 使用案例教戰手冊概觀
 description: 了解如何使用 Experience Platform 中的使用案例教戰手冊以開始使用各種行銷使用案例。
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 896ca002b34e79bd464467011875a54acd5c187c
-workflow-type: ht
-source-wordcount: '400'
-ht-degree: 100%
+exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
+source-wordcount: '401'
+ht-degree: 88%
 
 ---
-
 
 # (Beta) 使用案例教戰手冊概觀
 
@@ -41,11 +41,11 @@ ht-degree: 100%
 
 如果您選取 Adob&#x200B;&#x200B;e Journey Optimizer 教戰手冊，您的目標可能是在產品內部建構客戶歷程，並向客戶傳送相關訊息。
 
-建立教戰手冊的執行個體以產生特定資產，例如根據您的使用案例量身打造並可在 Experience Platform 中重複使用的綱要、區段或歷程。這些物件的目的是協助您了解實作特定使用案例所需的所有資源。它們不包含任何資料，並且是建立在開發沙箱上。開始使用這些資產或對其進行編輯，然後再使用它們並在 Real-time CDP 或 Journey Optimizer 中和您的團隊共用。
+建立教戰手冊的執行個體以產生特定資產，例如根據您的使用案例量身打造並可在 Experience Platform 中重複使用的綱要、區段或歷程。這些物件的目的是協助您了解實作特定使用案例所需的所有資源。它們不包含任何資料，並且是建立在開發沙箱上。開始使用這些資產或在使用這些資產之前對其進行編輯，並在Real-Time CDP或Journey Optimizer中與您的團隊共用這些資產。
 
 ## 可用性
 
-部分[!UICONTROL 使用案例教戰手冊]是根據 Real-time CDP 使用案例量身打造的，而其他則最適用使用 Journey Optimizer 的客戶。 瀏覽目錄以找到最適合您的產品和使用案例的教戰手冊。
+部分 [!UICONTROL 使用案例教戰手冊] 專為Real-Time CDP使用案例量身打造，其他則最適合使用Journey Optimizer的客戶。 瀏覽目錄以找到最適合您的產品和使用案例的教戰手冊。
 
 ## UI 指南
 

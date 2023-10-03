@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 3 月)
 description: Adobe Experience Platform 2023 年 3 月的發行說明。
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2206'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -39,9 +39,9 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
-## 資料集合 {#data-collection}
+## 資料收集 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
 
 **新功能或更新功能**
 
@@ -70,7 +70,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 目的地 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目的地** {#new-destinations}
 
@@ -96,7 +96,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 
-我們將會在 Real-time CDP 的檔案型目的地中發行 PGP/GPG 加密的錯誤修正。透過此變更，目前使用加密的現有檔案型目的地會產生具有與以往不同之擴充功能的檔案名稱。
+我們正在針對Real-Time CDP的檔案型目的地中發行PGP/GPG加密的錯誤修正。 透過此變更，目前使用加密的現有檔案型目的地會產生具有與以往不同之擴充功能的檔案名稱。
 
 - 使用加密時的現行擴充功能：`filename.csv`
 - 使用加密時的未來擴充功能：`filename.csv.gpg`
@@ -105,7 +105,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
 **更新的功能**
 
@@ -151,7 +151,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Exper
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adob&#x200B;&#x200B;e Experience Platform 中的資料[!DNL Data Lake]。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶設定檔。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶設定檔。
 
 **更新的功能**
 

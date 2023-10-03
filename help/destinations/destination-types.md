@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: d0a9ac77346bea585691feee958e8d3b27f3f746
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 在Adobe Experience Platform中，我們會區分不同的目的地型別 — 連線、資料集匯出和擴充功能。 有數種型別的連線目的地，可讓您將資料匯出至API型目的地。
 
-最後，也可以區分目的地目錄中所有組織可用的公用目的地，以及Real-time CDP Ultimate客戶為滿足其特定匯出使用案例而建立的私人目的地。
+最後，也可以區分目的地目錄中所有組織可用的公用目的地，以及Real-Time CDP Ultimate客戶為滿足其特定匯出使用案例而建立的私人目的地。
 
 ![目的地圖表的型別。](./assets/destination-types/types-of-destinations-no-highlight.png)
 

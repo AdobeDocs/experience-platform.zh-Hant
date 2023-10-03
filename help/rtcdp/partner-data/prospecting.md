@@ -2,10 +2,10 @@
 title: 透過挖掘潛在客戶使用案例吸引並獲取新客戶
 description: 了解如何透過 Real-Time CDP 中合作夥伴資料支援所帶來的挖掘潛在客戶使用案例，來吸引和獲取新客戶。
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: da7a53c1e4accdacfa55e4022c1b499f70aab8fa
+source-git-commit: ec6375a025833027fda01c412124321132aefd65
 workflow-type: tm+mt
 source-wordcount: '1960'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!AVAILABILITY]
 >
->* 此功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>* 已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。
 

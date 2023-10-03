@@ -1,10 +1,11 @@
 ---
 title: 使用合作夥伴提供的屬性補充第一方設定檔
 description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的對象最佳化。
-source-git-commit: b4a18cdf434055be81dacbf19de4dd3e3f229d19
+exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '1110'
-ht-degree: 98%
+ht-degree: 93%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 98%
 
 >[!AVAILABILITY]
 >
->* 此功能可供已獲得 Real-Time CDP (應用程式服務)、Adobe Experience Platform Activation、Real-time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate 授權的客戶使用。如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
+>* 已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
 使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。
 
@@ -24,7 +25,7 @@ ht-degree: 98%
 
 * 考慮從 Real-Time CDP 匯出對象清單的位置，以便和資料廠商共用。該位置需要能支援檔案匯出。
 * 資料廠商期望有哪些識別碼，以便他們可在額外屬性上分層堆放？
-* 如何將包含合作夥伴提供之屬性的檔案擷取回 Real-time CDP？例如，可透過雲端儲存空間來源連接器 (如 [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) 或 [SFTP](/help/sources/connectors/cloud-storage/sftp.md)) 擷取檔案。
+* 如何將包含合作夥伴提供的屬性的檔案擷取回Real-Time CDP？ 例如，可透過雲端儲存空間來源連接器 (如 [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) 或 [SFTP](/help/sources/connectors/cloud-storage/sftp.md)) 擷取檔案。
 * 您期望將合作夥伴提供之屬性帶回 Real-Time CDP 並重新整理的節奏為何？
 
 >[!WARNING]
@@ -94,7 +95,7 @@ Commenting out links for now
 
 ### 匯出您在刪去個人可識別資訊 (PII) 或雜湊 PII 時要擴充的對象 {#export-audiences}
 
-匯出您要合作夥伴擴充的對象。使用 Real-time CDP 提供的雲端儲存空間目的地，例如 Amazon S3 或 SFTP。閱讀以下文件頁面以完成此步驟：
+匯出您要合作夥伴擴充的對象。使用Real-Time CDP提供的雲端儲存空間目的地，例如Amazon S3或SFTP。 閱讀以下文件頁面以完成此步驟：
 
 * [Amazon S3 目的地](/help/destinations/catalog/cloud-storage/amazon-s3.md)文件頁面
 * [SFTP 目的地](/help/destinations/catalog/cloud-storage/sftp.md)文件頁面

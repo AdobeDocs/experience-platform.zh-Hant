@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform 發行說明 (2023 年 4 月)
 description: Adobe Experience Platform 2023 年 4 月版發行說明。
-exl-id: 8b8fa810-d301-43c1-98df-10d3903f3147
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
+exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
+source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+workflow-type: tm+mt
 source-wordcount: '2084'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -60,7 +60,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 ## 資料集合 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
 
 **新功能或更新功能**
 
@@ -75,7 +75,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 目的地 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目的地** {#new-destinations}
 
@@ -91,7 +91,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | ----------- | ----------- |
 | [!DNL Custom Personalization] 和 [!DNL Adobe Commerce] 目的地的資料流監控 | <p> 您現在可以查看 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md) 的啟動量度、[自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)和[具有屬性的自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)連線。 </p> <p>![Adobe Commerce 影像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce 量度"){width="100" zoomable="yes"}</p>  如需更多詳細資料，請參閱[監控目的地工作區中的資料流](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace)。 |
 | 新的&#x200B;**[!UICONTROL 附加區段 ID 至區段名稱]**&#x200B;欄位適用於 [!DNL Google Ad Manager] 和 [!DNL Google Ad Manager 360] 目的地 | <p>現在您可讓 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 和 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 中的區段名稱包括來自 Experience Platform 的區段 ID，例如：`Segment Name (Segment ID)`。</p><p>![附加區段 ID 影像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新的附加區段 ID 至區段名稱欄位 "){width="100" zoomable="yes"}</p> |
-| 已排程的對象回填 | <p>對於 [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 目的地，對象回填至目的地的啟動會排程在首次將區段對應至目的地連線後的 24 至 48 小時。此更新是為了回應 Google 的政策，即需等待 24 小時直到擷取資料為止，並可提高 Real-time CDP 和 [!DNL Google Display & Video 360] 之間的匹配率。</p> <p>請注意，這是僅適用於此目的地的後端設定，並且和 UI 中任何客戶可設定的排程選項不相關。</p> |
+| 已排程的對象回填 | <p>對於 [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 目的地，對象回填至目的地的啟動會排程在首次將區段對應至目的地連線後的 24 至 48 小時。此更新是為了回應Google等待24小時擷取資料的原則，並將改善Real-Time CDP與之間的匹配率。 [!DNL Google Display & Video 360].</p> <p>請注意，這是僅適用於此目的地的後端設定，並且和 UI 中任何客戶可設定的排程選項不相關。</p> |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
 **更新的功能**
 
