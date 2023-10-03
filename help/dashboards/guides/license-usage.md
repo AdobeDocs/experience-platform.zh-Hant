@@ -3,10 +3,11 @@ keywords: Experience Platform；使用者介面；UI；自訂；授權使用儀�
 title: 授權使用儀表板指南
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
-source-git-commit: 5b3ec9aca773cf4a1ba0d4c7e432949769b942c1
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
+source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
 workflow-type: tm+mt
 source-wordcount: '1987'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 1%
 
 您可以透過Adobe Experience Platform檢視貴組織授權使用情況的重要資訊 [!UICONTROL 授權使用情況] 儀表板。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
-授權使用報告提供授權使用量度之高度精細度。 控制面板提供每個已購買產品的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 以下是可透過使用量度追蹤的Experience Platform應用程式：即時客戶資料設定檔、Adobe Journey Optimizer和Customer Journey Analytics。
+授權使用報告提供授權使用量度之高度精細度。 控制面板提供每個已購買產品的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 以下Experience Platform應用程式可透過使用量度進行追蹤：Real-time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
 
 本指南概述如何存取和使用UI中的授權使用儀表板，並提供有關儀表板中顯示的視覺效果的更多資訊。
 
@@ -59,7 +60,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->「 」的新增 [!UICONTROL 授權金額] 因此，將附加元件新增至 [!UICONTROL 授權金額] 基礎產品，例如即時客戶資料設定檔、Adobe Journey Optimizer和Customer Journey Analytics。 系統會透過基本產品追蹤授權數量（附加元件後）的使用情況。 例如，若您購買一包5個沙箱，則基礎產品的數量會增加5個。在此情況下，附加元件會顯示 [!UICONTROL 授權金額] 其中之一，且該附加元件的使用量為「空白」，因為透過基本產品追蹤使用量。
+>「 」的新增 [!UICONTROL 授權金額] 因此，將附加元件新增至 [!UICONTROL 授權金額] 基礎產品，例如Real-time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。 系統會透過基本產品追蹤授權數量（附加元件後）的使用情況。 例如，若您購買一包5個沙箱，則基礎產品的數量會增加5個。在此情況下，附加元件會顯示 [!UICONTROL 授權金額] 其中之一，且該附加元件的使用量為「空白」，因為透過基本產品追蹤使用量。
 
 此表格指出每個產品的主要量度，因為每個產品都可以追蹤大量量度。
 
