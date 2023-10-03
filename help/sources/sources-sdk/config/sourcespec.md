@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來
 title: 設定自助式來源的來源規格（批次SDK）
 description: 本檔案提供使用自助式來源（批次SDK）所需準備的設定概觀。
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
 workflow-type: tm+mt
-source-wordcount: '1846'
-ht-degree: 0%
+source-wordcount: '2078'
+ht-degree: 1%
 
 ---
 
@@ -381,7 +381,53 @@ ht-degree: 0%
 
 以下是自助來源（批次SDK）支援的其他分頁型別範例：
 
-#### `CONTINUATION_TOKEN`
+>[!BEGINTABS]
+
+>[!TAB 位移]
+
+此分頁型別可讓您透過指定從何處開始產生陣列的索引以及傳回結果數的限制，來剖析結果。 例如：
+
+```json
+"paginationParams": {
+        "type": "OFFSET",
+        "limitName": "limit",
+        "limitValue": "4",
+        "offSetName": "offset",
+        "endConditionName": "$.hasMore",
+        "endConditionValue": "Const:false"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `type` | 用來傳回資料的分頁型別。 |
+| `limitName` | 限制的名稱，API可透過該名稱指定要在頁面中擷取的記錄數。 |
+| `limitValue` | 頁面中要擷取的記錄數。 |
+| `offSetName` | 位移屬性名稱。 如果分頁型別設為，則需要此專案 `offset`. |
+| `endConditionName` | 使用者定義的值，指出將在下一個HTTP要求中結束分頁回圈的條件。 您必須提供要放置結束條件的屬性名稱。 |
+| `endConditionValue` | 您要放置結束條件的屬性值。 |
+
+>[!TAB 指標]
+
+此分頁型別可讓您使用 `pointer` 變數，指向需要隨請求傳送的特定專案。 指標型別分頁需要在裝載中指向下一頁的路徑。 例如：
+
+```json
+{
+ "type": "POINTER",
+ "limitName": "limit",
+ "limitValue": 1,
+ "pointerPath": "paging.next"
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `type` | 用來傳回資料的分頁型別。 |
+| `limitName` | 限制的名稱，API可透過該名稱指定要在頁面中擷取的記錄數。 |
+| `limitValue` | 頁面中要擷取的記錄數。 |
+| `pointerPath` | 指標屬性名稱。 這需要屬性的json路徑來指向下一個頁面。 |
+
+>[!TAB 繼續權杖]
 
 分頁的繼續權杖型別會傳回字串權杖，表示由於單一回應中可傳回的專案數量已預先設定上限，因此存在更多無法傳回的專案。
 
@@ -432,7 +478,7 @@ ht-degree: 0%
 }
 ```
 
-#### `PAGE`
+>[!TAB 頁面]
 
 此 `PAGE` 分頁型別可讓您依照從零開始的頁數遍歷傳回資料。 使用時 `PAGE` 型別分頁，您必須提供單一頁面中指定的記錄數。
 
@@ -461,7 +507,7 @@ ht-degree: 0%
 {style="table-layout:auto"}
 
 
-#### `NONE`
+>[!TAB None]
 
 此 `NONE` 分頁型別可用於不支援任何可用分頁型別的來源。 使用下列分頁型別的來源： `NONE` 提出GET要求時，只需傳回所有可擷取的記錄即可。
 
@@ -470,6 +516,8 @@ ht-degree: 0%
   "type": "NONE"
 }
 ```
+
+>[!ENDTABS]
 
 ### 自助式來源的進階排程（批次SDK）
 
