@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service和Experience Cloud應用程式
 description: 本檔案提供如何為隱私權相關作業設定不同Experience Cloud應用程式的參考資料。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: ed3089a86d6ef25f23e4d69eee7da800d7242545
+source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -38,7 +38,7 @@ Adobe Experience Platform [!DNL Privacy Service] 是專為支援數個Adobe Expe
 | Adobe Campaign Standard | ✓ | ✓ | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=zh-Hant)</li><li>[選擇退出檔案](../segmentation/consents.md)</li></ul> |
 | Adobe客戶屬性(CRS) | ✓ | 不適用 | 資料主體的屬性會從系統中刪除。 | <ul><li>[存取/刪除GDPR檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[存取/刪除CCPA檔案](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>客戶屬性無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | 當Experience Platform收到來自Privacy Service的刪除請求時，平台會傳送確認給Privacy Service，確認已收到請求且受影響的資料已標示為刪除。 隱私權工作完成後，記錄會從資料湖或設定檔存放區中移除。 在工作完成之前，資料會軟刪除，因此任何平台服務都無法存取。 | <ul><li>[存取/刪除Data Lake的檔案](../catalog/privacy.md)</li><li>[存取/刪除Identity Service的檔案](../identity-service/privacy.md)</li><li>[存取/刪除Real-time Customer Profile的檔案](../profile/privacy.md)</li><li>[!DNL Experience Platform] 榮譽 [對象區段的選擇退出請求](../segmentation/consents.md).</li></ul> |
-| Adobe Primetime驗證 | ✓ | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
+| Adobe Pass 驗證 | ✓ | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Pass沒有傳輸資料的功能，因此選擇退出銷售請求並不適用。</li></ul> |
 | Adobe Target | ✓ | 不適用 | 所有與資料主體ID相關的資料都會從訪客資料中刪除。 無法識別個人或無關聯的彙總或匿名資料（例如內容資料），不適用於刪除請求。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 | Marketo Engage | ✓ | 不適用 | 資料主體的儲存資料會從系統刪除。 | <ul><li>[存取/刪除檔案](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] 無法傳輸資料，因此選擇退出銷售請求不適用。</li></ul> |
 
