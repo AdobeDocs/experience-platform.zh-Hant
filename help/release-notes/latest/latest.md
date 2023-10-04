@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b20e5e52b9d7568f4e20b94064819d0bebe4c236
+source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 26%
+source-wordcount: '2284'
+ht-degree: 28%
 
 ---
 
@@ -160,6 +160,27 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | 功能 | 說明 |
 | --- | --- |
 | 已更新結構描述建立工作流程 | 已實作新的結構描述建立工作流程，以簡化程式。 <br> ![新的結構描述建立UI。](../2023/assets/schema-class-options.png "新的結構描述詳細資料選擇器已強調顯示。"){width="100" zoomable="yes"} <br> 請參閱 [結構描述建立檔案](../../xdm/ui/resources/schemas.md#create) 以取得詳細資訊。 |
+
+**新的 XDM 元件**
+
+| 元件類型 | 名稱 | 說明 |
+| --- | --- | --- |
+| 資料類型 | [[!UICONTROL 傳回]](https://github.com/adobe/xdm/pull/1773/files) | RMA （退貨授權）簽發。 |
+| 資料類型 | [[!UICONTROL 傳回專案]](https://github.com/adobe/xdm/pull/1773/files) | RMA （退貨授權）中退回的料號資訊。 |
+
+{style="table-layout:auto"}
+
+**已更新的 XDM 元件**
+
+| 元件類型 | 名稱 | 更新說明 |
+| --- | --- | --- |
+| 擴充功能 | [!UICONTROL AJO 實體欄位] | 此 [[!UICONTROL 多變體的標幟]](https://github.com/adobe/xdm/pull/1774/files) 已新增至 [!UICONTROL ajo實體欄位] 以識別變體是否為多變體。 |
+| 資料類型 | [!UICONTROL 產品清單項目] | [[!UICONTROL 傳回專案]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含退貨授權資訊。 |
+| 資料類型 | 訂購 | [[!UICONTROL 傳回資訊]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含RMA （退貨授權）。 |
+
+{style="table-layout:auto"}
+
+如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
 
 ## 身分識別服務 {#identity-service}
 
