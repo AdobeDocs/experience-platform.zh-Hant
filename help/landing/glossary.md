@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform字彙表
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 6327f5e6cb64a46c502613dd6074d84ed1fdd32b
+source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
 workflow-type: tm+mt
-source-wordcount: '7929'
+source-wordcount: '7979'
 ht-degree: 0%
 
 ---
@@ -538,6 +538,8 @@ ht-degree: 0%
 **Token**：權杖是一種雙因素驗證安全性型別，可用於授權使用電腦服務並具有 [!DNL Query Service].
 
 ## U
+
+**UCPA**：此 [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) 建立消費者瞭解企業收集哪些個人資料、企業如何使用其個人資料，以及企業是否銷售其個人資料的權利。 消費者可以要求企業刪除或停止銷售其個人資料。
 
 **聯合結構描述**：聯合結構描述是共用相同類別並已啟用的結構描述的合併 [!DNL Real-Time Customer Profile]. 一個組織可以存在多個聯合結構描述，但每個類別只能有一個聯合結構描述。
 
