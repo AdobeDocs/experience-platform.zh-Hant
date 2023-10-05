@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 943d1360e80caef58d09b8502507a3ad72edda03
+source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
-source-wordcount: '3571'
+source-wordcount: '3670'
 ht-degree: 1%
 
 ---
@@ -45,11 +45,9 @@ ht-degree: 1%
 
 ![此 [!UICONTROL 名稱和評論] 的區段 [!UICONTROL 建立結構描述] 使用的工作流程 [!UICONTROL 結構描述顯示名稱]， [!UICONTROL 說明]、和 [!UICONTROL 完成] 反白顯示。](../../images/ui/resources/schemas/name-and-review.png)
 
-此 [!UICONTROL 結構描述] [!UICONTROL 瀏覽] 標籤隨即顯示。 您最近建立的結構描述現在可在以下位置編輯： [!DNL Schema Editor] 和會顯示在可用綱要清單中。
+此 [!UICONTROL 結構描述] [!UICONTROL 瀏覽] 標籤隨即顯示。 您最近建立的結構描述現在會列在「結構描述資料庫」中，並可在 [!DNL Schema Editor].
 
-![顯示您最近建立之結構描述的結構描述編輯器。](../../images/ui/resources/schemas/schema-details.png)
-
-您現在可以透過以下方式開始建立結構描述的結構 [新增結構欄位群組](#add-field-groups) 在 [!DNL Schema Editor].
+![結構描述工作區瀏覽標籤會顯示您最近建立的結構描述。](../../images/ui/resources/schemas/example-schema.png)
 
 ## 編輯現有結構描述 {#edit}
 
@@ -66,6 +64,14 @@ ht-degree: 1%
 >您可以使用工作區的搜尋和篩選功能來協助您更輕鬆地尋找結構。 請參閱以下指南： [探索XDM資源](../explore.md) 以取得詳細資訊。
 
 選取結構描述後， [!DNL Schema Editor] 會在畫布中顯示結構描述的結構。 您現在可以 [新增欄位群組](#add-field-groups) 至結構描述(或 [新增個別欄位](#add-individual-fields) 來自這些群組)， [編輯欄位顯示名稱](#display-names)，或 [編輯現有的自訂欄位群組](./field-groups.md#edit) 如果結構描述採用任何。
+
+## 更多動作 {#more}
+
+在結構編輯器中，您還可以執行快速動作以複製結構描述的JSON結構，或刪除結構（如果尚未為即時客戶個人檔案啟用或具有關聯的資料集）。 選取 [!UICONTROL 更多] 在檢視頂端，顯示包含快速動作的下拉式清單。
+
+複製JSON結構功能可讓您檢視當您仍在建置結構描述和資料管道時，範例裝載的外觀。 在架構中有複雜的物件對應結構（例如身分對應）的情況下，此功能特別實用。
+
+![結構描述編輯器，其反白顯示更多按鈕，並顯示下拉式選項。](../../images/tutorials/create-schema/more-actions.png)
 
 ## 顯示名稱切換 {#display-name-toggle}
 

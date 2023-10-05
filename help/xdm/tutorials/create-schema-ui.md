@@ -5,7 +5,7 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 28d9a53371beea37b5c61b3bc4b111816f6e63e0
+source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
 workflow-type: tm+mt
 source-wordcount: '4619'
 ht-degree: 0%
@@ -345,7 +345,7 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 
 選取 **[!UICONTROL 啟用]** 以確認您的選擇。 您可以選取 **[!UICONTROL 個人資料]** 如果您希望停用綱要，但儲存綱要時，請再次切換以停用綱要 [!DNL Profile] 已啟用，無法再停用。
 
-## 更多動作
+## 更多動作 {#more}
 
 在結構編輯器中，您還可以執行快速動作以複製結構描述的JSON結構，或刪除結構（如果尚未為即時客戶個人檔案啟用或具有關聯的資料集）。 選取 [!UICONTROL 更多] 在檢視頂端，顯示包含快速動作的下拉式清單。
 
