@@ -1,15 +1,15 @@
 ---
-title: 管理資料集有效期
+title: 自動化資料集有效期
 description: 瞭解如何在Adobe Experience Platform UI中排程資料集有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 7931c8fe4a1ca5d255a80e7e6b0deb976d53c3de
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '828'
 ht-degree: 20%
 
 ---
 
-# 管理資料集有效期 {#dataset-expiration}
+# 自動化資料集有效期 {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -22,7 +22,7 @@ ht-degree: 20%
 >
 >如果資料集設為過期，您必須手動變更任何可能會將資料擷取至該資料集的資料流程，讓您的下游工作流程不會受到負面影響。
 
-本文介紹如何在Platform UI中排程及管理資料集有效期。
+本文介紹如何在Platform UI中排程及自動化資料集有效期。
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
-您最多可以有20個同時排程的資料集有效期。 這表示您可以同時排程刪除20個資料集。 這些過期的設定時間或年份沒有限制。 例如，如果您有20個排程的資料集有效期，而其中一個資料集將於明天刪除，則在刪除該資料集之前，您無法設定任何其他有效期。
+Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics使用者有20個擱置中的排程資料集到期工作單。 Healthcare Shield和Privacy and Security Shield使用者有50個擱置中的排程資料集到期工作單。 這表示您可以同時排程刪除20或50個資料集。<br>例如，如果您有20個排程的資料集有效期，而其中一個資料集將於明天刪除，則在刪除該資料集之前，您無法設定任何其他有效期。
 
 ![此 [!UICONTROL 資料生命週期] 工作區，使用 [!UICONTROL 建立請求] 反白顯示。](../images/ui/ttl/create-request-button.png)
 

@@ -1,35 +1,31 @@
 ---
-title: 瀏覽資料衛生工單
-description: 瞭解如何在Adobe Experience Platform使用者介面中檢視及管理現有的資料衛生工單。
+title: 瀏覽資料生命週期工單
+description: 瞭解如何在Adobe Experience Platform使用者介面中檢視及管理現有資料生命週期工單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: a20afcd95d47e38ccdec9fba9e772032e212d7a4
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 25%
+source-wordcount: '841'
+ht-degree: 14%
 
 ---
 
-# 瀏覽資料衛生工單 {#browse-work-orders}
+# 瀏覽資料生命週期工單 {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="工單 ID"
->abstract="將資料檢疫要求傳送到系統時，會建立工單以執行要求的任務。換句話說，工單代表特定的資料檢疫流程，包括其目前的狀態和其他相關的詳細資訊。每個工單在建立時都會被自動指派自己的唯一 ID。"
->text="See the data hygiene UI guide to learn more."
+>abstract="當資料生命週期請求傳送至系統時，會建立工作單以執行請求的任務。 換言之，工單代表特定資料生命週期處理，包括其目前狀態與其他相關明細。 每個工單在建立時都會被自動指派自己的唯一 ID。"
+>text="See the data lifecycle UI guide to learn more."
 
->[!IMPORTANT]
->
->Adobe Experience Platform中的資料衛生功能目前僅適用於已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板**.
-
-將資料檢疫要求傳送到系統時，會建立工單以執行要求的任務。工單代表特定的資料衛生程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
+當資料生命週期請求傳送至系統時，會建立工作單以執行請求的任務。 工單代表特定資料生命週期程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
 
 本指南說明如何在Adobe Experience Platform UI中檢視及管理現有工單。
 
 ## 列出及篩選現有工單
 
-當您第一次存取 **[!UICONTROL 資料衛生]** 工作區在UI中，會顯示現有工單清單及其基本詳細資訊。
+當您第一次存取 **[!UICONTROL 資料生命週期]** 工作區在UI中，會顯示現有工單清單及其基本詳細資訊。
 
-![影像顯示 [!UICONTROL 資料衛生] Platform UI中的工作區](../images/ui/browse/work-order-list.png)
+![影像顯示 [!UICONTROL 資料生命週期] Platform UI中的工作區](../images/ui/browse/work-order-list.png)
 
 清單一次只會顯示一個類別的工作訂單。 選取 **[!UICONTROL 消費者]** 若要檢視記錄刪除任務清單，以及 **[!UICONTROL 資料集]** 以檢視排程的資料集到期清單。
 
@@ -69,17 +65,17 @@ ht-degree: 25%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="服務狀態"
->abstract="資料檢疫要求會由多個 Experience Platform 服務獨立處理。本區段會針對各個服務概述要求目前的處理狀態。若要了解詳細資訊，請參閱資料檢疫 UI 指南。"
+>abstract="資料生命週期請求由多個Experience Platform服務獨立處理。 本區段會針對各個服務概述要求目前的處理狀態。若要瞭解詳細資訊，請參閱資料生命週期UI指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="身分識別的數量"
->abstract="作為此工單的一部分，其記錄被要求更新或刪除的身分識別的數量。計數中包含的身分識別不一定存在於受影響的資料集中。若要了解詳細資訊，請參閱資料檢疫 UI 指南。"
+>abstract="作為此工單的一部分，其記錄被要求更新或刪除的身分識別的數量。計數中包含的身分識別不一定存在於受影響的資料集中。若要瞭解詳細資訊，請參閱資料生命週期UI指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="記錄刪除回應"
->abstract="當記錄刪除流程收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;區段下。如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要了解詳細資訊，請查看資料檢疫 UI 指南。"
+>abstract="當記錄刪除流程收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;區段下。如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要深入瞭解，請參閱資料生命週期UI指南。"
 
 選取已列出工單的ID以檢視其詳細資料。
 
@@ -101,7 +97,7 @@ ht-degree: 25%
 
 ## 後續步驟
 
-本指南說明如何在Platform UI中檢視及管理現有資料衛生工單。 有關建立您自己的工單的資訊，請參閱下列檔案：
+本指南說明如何在Platform UI中檢視及管理現有資料生命週期工單。 有關建立您自己的工單的資訊，請參閱下列檔案：
 
 * [管理資料集有效期](./dataset-expiration.md)
-<!-- * [Manage record deletes](./record-delete.md) -->
+* [管理記錄刪除](./record-delete.md)

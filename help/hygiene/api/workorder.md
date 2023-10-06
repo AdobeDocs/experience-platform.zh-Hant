@@ -4,9 +4,9 @@ description: 資料衛生API中的/workorder端點可讓您以程式設計方式
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
-source-git-commit: 54f92257d21f918b5d60c982670f96d30e879c60
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '997'
 ht-degree: 3%
 
 ---
@@ -17,18 +17,15 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->記錄刪除請求僅適用於已購買的組織 **AdobeHealthcare Shield**.
->
->
->記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們是 **not** 根據一般資料保護規範(GDPR)等隱私權法規用於資料主體權利請求（法規遵循）。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 而非。
+>記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們是 **非** 用於資料主體權利要求（法規遵循），如一般資料保護規範(GDPR)等隱私權法規。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 而非。
 
 ## 快速入門
 
-本指南中使用的端點屬於資料衛生API。 在繼續之前，請檢閱 [概觀](./overview.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的端點屬於資料衛生API。 在繼續之前，請檢閱 [概述](./overview.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
 
 ## 建立記錄刪除請求 {#create}
 
-您可以透過向以下專案發出POST請求，從單一資料集或所有資料集中刪除一個或多個身分： `/workorder` 端點。
+您可以透過向發出POST請求，從單一資料集或所有資料集中刪除一或多個身分 `/workorder` 端點。
 
 **API格式**
 
@@ -78,11 +75,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `action` | 要執行的動作。 值必須設定為 `delete_identity` 記錄刪除。 |
-| `datasetId` | 如果您要從單一資料集中刪除，此值必須是相關資料集的ID。 如果您要從所有資料集中刪除，請將值設定為 `ALL`.<br><br>如果您指定單一資料集，資料集的相關Experience Data Model (XDM)結構描述必須定義主要身分。 |
+| `action` | 要執行的動作。 值必須設定為 `delete_identity` 用於記錄刪除。 |
+| `datasetId` | 如果您要從單一資料集中刪除，此值必須是相關資料集的ID。 如果您要從所有資料集中刪除，請將值設為 `ALL`.<br><br>如果您指定單一資料集，該資料集的相關聯Experience Data Model (XDM)結構描述必須定義主要身分。 |
 | `displayName` | 記錄刪除請求的顯示名稱。 |
 | `description` | 記錄刪除請求的說明。 |
-| `identities` | 一個陣列，包含您要刪除其資訊之至少一個使用者的身分。 每個身分識別都由 [身分名稱空間](../../identity-service/namespaces.md) 和一個值：<ul><li>`namespace`：包含單一字串屬性， `code`，代表身分名稱空間。 </li><li>`id`：身分值。</ul>若 `datasetId` 會指定單一資料集，每個實體位於 `identities` 必須使用與結構描述的主要身分相同的身分名稱空間。<br><br>若 `datasetId` 設為 `ALL`，則 `identities` 陣列不受限於任何單一名稱空間，因為每個資料集可能不同。 不過，您的請求仍受限於貴組織可用的名稱空間，如報告所述 [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | 陣列，包含您要刪除其資訊之至少一個使用者的身分識別。 每個身分都由 [身分名稱空間](../../identity-service/namespaces.md) 和一個值：<ul><li>`namespace`：包含單一字串屬性， `code`，代表身分名稱空間。 </li><li>`id`：身分值。</ul>如果 `datasetId` 會指定單一資料集，底下的每個實體 `identities` 必須使用與結構描述的主要身分相同的身分名稱空間。<br><br>如果 `datasetId` 設為 `ALL`，則 `identities` 陣列不受限於任何單一名稱空間，因為每個資料集可能不同。 不過，您的請求仍受限於貴組織可用的名稱空間，如報告所述 [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 {style="table-layout:auto"}
 
@@ -108,11 +105,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `workorderId` | 刪除訂單的ID。 這可用於稍後查詢刪除狀態。 |
+| `workorderId` | 刪除順序的ID。 這可用於稍後查詢刪除狀態。 |
 | `orgId` | 您的組織 ID。 |
 | `bundleId` | 與此刪除順序相關聯的套件組合ID，用於偵錯。 多個刪除訂單會整合在一起，由下游服務處理。 |
 | `action` | 工單正在執行的動作。 對於記錄刪除，值為 `identity-delete`. |
-| `createdAt` | 建立刪除順序的時間戳記。 |
+| `createdAt` | 建立刪除順序時的時間戳記。 |
 | `updatedAt` | 上次更新刪除順序的時間戳記。 |
 | `status` | 刪除順序的目前狀態。 |
 | `createdBy` | 建立刪除訂單的使用者。 |
@@ -122,7 +119,7 @@ curl -X POST \
 
 ## 擷取記錄刪除的狀態(#lookup)
 
-晚於 [建立記錄刪除請求](#create)，您可以使用GET要求來檢查其狀態。
+晚於 [建立記錄刪除請求](#create)，您可使用GET要求來檢查其狀態。
 
 **API格式**
 
@@ -186,20 +183,20 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `workorderId` | 刪除訂單的ID。 這可用於稍後查詢刪除狀態。 |
+| `workorderId` | 刪除順序的ID。 這可用於稍後查詢刪除狀態。 |
 | `orgId` | 您的組織 ID。 |
 | `bundleId` | 與此刪除順序相關聯的套件組合ID，用於偵錯。 多個刪除訂單會整合在一起，由下游服務處理。 |
 | `action` | 工單正在執行的動作。 對於記錄刪除，值為 `identity-delete`. |
-| `createdAt` | 建立刪除順序的時間戳記。 |
+| `createdAt` | 建立刪除順序時的時間戳記。 |
 | `updatedAt` | 上次更新刪除順序的時間戳記。 |
 | `status` | 刪除順序的目前狀態。 |
 | `createdBy` | 建立刪除訂單的使用者。 |
 | `datasetId` | 受限於請求的資料集的ID。 如果請求是針對所有資料集，則值將設為 `ALL`. |
-| `productStatusDetails` | 一個陣列，列出與請求相關的下游處理序的目前狀態。 每個陣列物件都包含以下屬性：<ul><li>`productName`：下游服務的名稱。</li><li>`productStatus`：來自下游服務的請求的目前處理狀態。</li><li>`createdAt`：服務發佈最新狀態的時間戳記。</li></ul> |
+| `productStatusDetails` | 一個陣列，列出與請求相關的下游處理序的目前狀態。 每個陣列物件包含下列屬性：<ul><li>`productName`：下游服務的名稱。</li><li>`productStatus`：下游服務請求的目前處理狀態。</li><li>`createdAt`：服務發佈最新狀態的時間戳記。</li></ul> |
 
 ## 更新記錄刪除請求
 
-您可以更新 `displayName` 和 `description` 請求刪除PUT記錄。
+您可以更新 `displayName` 和 `description` 刪除記錄(透過提出PUT請求)。
 
 **API格式**
 
@@ -274,15 +271,15 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `workorderId` | 刪除訂單的ID。 這可用於稍後查詢刪除狀態。 |
+| `workorderId` | 刪除順序的ID。 這可用於稍後查詢刪除狀態。 |
 | `orgId` | 您的組織 ID。 |
 | `bundleId` | 與此刪除順序相關聯的套件組合ID，用於偵錯。 多個刪除訂單會整合在一起，由下游服務處理。 |
 | `action` | 工單正在執行的動作。 對於記錄刪除，值為 `identity-delete`. |
-| `createdAt` | 建立刪除順序的時間戳記。 |
+| `createdAt` | 建立刪除順序時的時間戳記。 |
 | `updatedAt` | 上次更新刪除順序的時間戳記。 |
 | `status` | 刪除順序的目前狀態。 |
 | `createdBy` | 建立刪除訂單的使用者。 |
 | `datasetId` | 受限於請求的資料集的ID。 如果請求是針對所有資料集，則值將設為 `ALL`. |
-| `productStatusDetails` | 一個陣列，列出與請求相關的下游處理序的目前狀態。 每個陣列物件都包含以下屬性：<ul><li>`productName`：下游服務的名稱。</li><li>`productStatus`：來自下游服務的請求的目前處理狀態。</li><li>`createdAt`：服務發佈最新狀態的時間戳記。</li></ul> |
+| `productStatusDetails` | 一個陣列，列出與請求相關的下游處理序的目前狀態。 每個陣列物件包含下列屬性：<ul><li>`productName`：下游服務的名稱。</li><li>`productStatus`：下游服務請求的目前處理狀態。</li><li>`createdAt`：服務發佈最新狀態的時間戳記。</li></ul> |
 
 {style="table-layout:auto"}

@@ -1,13 +1,11 @@
 ---
 title: 刪除記錄
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
-hide: true
-hidefromtoc: true
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 3bd1424c9a01733acf38f52879606596c7aeca50
+source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '1533'
-ht-degree: 8%
+ht-degree: 7%
 
 ---
 
@@ -69,12 +67,12 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="主要身分識別"
->abstract="主要身分識別指將記錄和 Experience Platform 中的消費者設定檔繫結的屬性。資料集的主要身分識別欄位由資料集建立基礎的方案定義。在此欄中，您必須提供記錄的主要身分識別的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看資料檢疫 UI 指南。"
+>abstract="主要身分識別指將記錄和 Experience Platform 中的消費者設定檔繫結的屬性。資料集的主要身分識別欄位由資料集建立基礎的方案定義。在此欄中，您必須提供記錄的主要身分識別的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要深入瞭解，請參閱資料生命週期UI指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="身分識別值"
->abstract="在此欄中，您必須提供記錄的主要身分識別的值，該值必須和左欄中提供的身分識別類型相對應。如果主要身分識別類型是 `email`，則該值應該是記錄的電子郵件地址。若要了解詳細資訊，請查看資料檢疫 UI 指南。"
+>abstract="在此欄中，您必須提供記錄的主要身分識別的值，該值必須和左欄中提供的身分識別類型相對應。如果主要身分識別類型是 `email`，則該值應該是記錄的電子郵件地址。若要深入瞭解，請參閱資料生命週期UI指南。"
 
 刪除記錄時，您必須提供身分資訊，讓系統能夠決定要刪除哪些記錄。 對於Platform中的任何資料集，記錄會根據 **主要身分** 由資料集結構描述定義的欄位。
 
