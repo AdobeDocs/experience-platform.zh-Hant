@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權法規概述
 description: 本檔案概述Adobe Experience Cloud支援的各種隱私權法規。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 0%
@@ -33,6 +33,10 @@ ht-degree: 0%
 | VCDPA （維吉尼亞州） | 此 [[!DNL Virginia Consumer Data Protection Act (VCDPA)]](https://lis.virginia.gov/cgi-bin/legp604.exe?212+sum+HB2307) 為維吉尼亞州居民（「消費者」）提供新的資料隱私權，包括存取、刪除和更正個人資料的權利。 消費者也有權選擇退出個人資料銷售、根據個人資料選擇退出個人資料分析，以及處理個人廣告目的。 |
 
 {style="table-layout:auto"}
+
+<!-- Not yet released:
+ | PDPD (Vietnam) | The [[!DNL Personal Data Protection Decree (PDPD)]]() .... | 
+ -->
 
 ## 後續步驟
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權法規術語
 description: 本檔案提供Adobe Experience Cloud支援之隱私權法規相關關鍵辭彙的定義。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: a19f37d40b52ce41975bfc303339d2b85e12080e
+source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1796'
 ht-degree: 2%
@@ -108,6 +108,10 @@ ht-degree: 2%
 ## P
 
 **PDPA**：此 [!DNL Personal Data Protection Act] 引入了PDPA，以保護泰國的資料擁有者不會非法收集、使用或公開其個人資料。 受歐盟GDPR啟發，該法規授予泰國公民請求存取或刪除其儲存的個人資料的權利。
+
+<!-- Not yet released:
+**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
+-->
 
 **個人資料**：與自然人或「資料主體」相關的任何資訊，可用於直接或間接識別使用者的身分。
 
