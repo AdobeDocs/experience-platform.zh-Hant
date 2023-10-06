@@ -1,13 +1,13 @@
 ---
 title: LiveRamp — 散發連線
 description: 瞭解如何使用LiveRamp - Distribution聯結器來編排及啟用先前上線到LiveRamp的受眾，以及下游廣告目的地。
-source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2716'
-ht-degree: 23%
+ht-degree: 38%
 
 ---
-
 
 # [!DNL LiveRamp - Distribution] 連線
 
@@ -110,13 +110,13 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="4C 品牌設定檔 ID"
->abstract="輸入與您的 4C 品牌設定檔相關的數值 ID。如果您沒有此ID，請聯絡您的4C使用者端服務代表。"
+>abstract="輸入與您的 4C 品牌設定檔相關的數值 ID。如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
 ![顯示4C Insights目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL 4C品牌設定檔ID]**：輸入與您的4C品牌設定檔相關聯的數值ID。 如果您沒有此ID，請聯絡您的4C使用者端服務代表。
+* **[!UICONTROL 4C品牌設定檔ID]**：輸入與您的4C品牌設定檔相關聯的數值ID。 如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。
 
 ### [!DNL Acast] {#acast}
 
@@ -136,7 +136,7 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
 >title="您的公司名稱"
->abstract="您希望向目的地合作夥伴顯示的公司名稱。 請勿使用空格或特殊字元。"
+>abstract="依您希望對目標合作夥伴顯示的公司名稱。請勿使用空格或特殊字元。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
@@ -175,7 +175,7 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="廣告商資料目標條款合約"
->abstract="輸入 `I AGREE` 確認迪士尼廣告商資料條款的認可與同意。"
+>abstract="輸入 `I AGREE` 確認 Disney 廣告商資料條款的認可與合約。"
 
 <!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
@@ -187,7 +187,7 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="您的電子郵件地址"
->abstract="輸入與個人相連結的電子郵件地址。該電子郵件地址做為廣告商資料條款合約的簽名。如有需要，此電子郵件地址也可用來聯絡您。"
+>abstract="輸入與個人相連結的電子郵件地址。該電子郵件地址做為廣告商資料條款合約的簽名。必要時，也會使用該電子郵件地址與您聯絡。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
@@ -215,7 +215,7 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
 >title="帳戶名稱"
->abstract="您的Index Exchange使用者端帳戶名稱。 請勿使用空格或特殊字元。"
+>abstract="您的索引 Exchange 用戶端帳戶名稱。請勿使用空格或特殊字元。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
@@ -228,7 +228,7 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="用戶端"
->abstract="您想要顯示給目的地合作夥伴的使用者端名稱。 使用您的公司名稱。請勿使用空格或特殊字元。"
+>abstract="依您希望對目標合作夥伴顯示的用戶端名稱。使用您的公司名稱。請勿使用空格或特殊字元。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
@@ -240,64 +240,64 @@ ht-degree: 23%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
->title="合作夥伴ID"
->abstract="與擁有區段/資料的發佈者相關聯的Rubicon專案合作夥伴ID。 如果您不確定應使用的值，請聯絡您的Rubicon專案客戶代表。"
+>title="合作夥伴 ID"
+>abstract="與擁有區段/資料的發佈者關聯的 Rubicon Project 合作夥伴 ID。如果不確定您應該使用的值，請聯絡您的 Rubicon Project 帳戶代表。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
->title="名額ID"
->abstract="Magnite客戶經理提供的Magnite DV+名額ID"
+>title="座位 ID"
+>abstract="由您的 Magnite 帳戶經理提供的 Magnite DV+ 席位 ID"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
 ![顯示Magnite DV+目的地客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL 合作夥伴ID]**：與擁有區段/資料的發佈者相關聯的Rubicon專案合作夥伴ID。 如果您不確定應使用的值，請聯絡您的Rubicon專案客戶代表。
+* **[!UICONTROL 合作夥伴ID]**：與擁有區段/資料的發佈者相關聯的Rubicon專案合作夥伴ID。 如果不確定您應該使用的值，請聯絡您的 Rubicon Project 帳戶代表。
 * **[!UICONTROL 名額ID]**：菱形DV+座位ID，由您的菱形客戶經理提供
 
 ### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_ratetype"
->title="費率型別"
->abstract="費率型別代表資料使用應計費的方式。 所有$0.00的費率應為固定費用。 如果您不確定要使用哪種費率型別，請洽詢您的Nexen代表。"
+>title="費率類型"
+>abstract="費率類型表示資料使用量的計費方式。所有 $0.00 的費率應為固定費用。如果您不確定要使用哪種費率類型，請與您的 Nexxen 代表確認。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
->title="市場ID"
->abstract="輸入應在其中建立Nexen資料合約的數值「市場ID」。 如果您正在Nexen平台的所有市場進行「AlwaysOn」整合，請輸入–1。"
+>title="市場 ID"
+>abstract="輸入市場 ID 數值，其為 Nexxen 資料合約建立所在。如果您在 Nexxen 平台的每個市場上進行「AlwaysOn」整合，請輸入 -1。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
->title="廣告商ID"
->abstract="如果您要傳送資料給Nexen平台的單一廣告商，請輸入數值的Amobe廣告商ID。 如果您想要讓資料可供市場中的所有廣告商使用，或這些區段為「一律開啟」，請輸入–1。"
+>title="廣告商 ID"
+>abstract="如果您要向 Nexxen 平台中的單一廣告商傳送資料，請輸入 Amobee 廣告商 ID 數值。如果您希望市場中的所有廣告商都可以使用這些資料，或者這些區段為「AlwaysOn」，請輸入 -1。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
 >title="連絡人電子郵件"
->abstract="輸入Nexen用來傳送資料合約詳細資料的電子郵件地址。 這很可能是您自己的電子郵件地址，但也可能是電子郵件別名。 如果有多個收件者，請使用逗號(`email1@domain.com`，`email2@domain.com`，以此類推。)"
+>abstract="輸入 Nexxen 用於傳送資料合約詳細資訊的電子郵件地址。這很可能是您自己的電子郵件地址，但也可以是電子郵件別名。如果是多個收件者，請使用逗號 (`email1@domain.com`, `email2@domain.com`, 等等)。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
 ![顯示Nexen目的地客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL 費率型別]**：費率型別代表資料使用應計費的方式。 所有$0.00的費率應為固定費用。 如果您不確定要使用哪種費率型別，請洽詢您的Nexen代表。
-* **[!UICONTROL 市場ID]**：輸入應在其中建立Nexen資料合約的數值市場ID。 如果您正在Nexen平台的所有市場進行「AlwaysOn」整合，請輸入–1。
+* **[!UICONTROL 費率型別]**：費率型別代表資料使用應計費的方式。 所有 $0.00 的費率應為固定費用。如果您不確定要使用哪種費率類型，請與您的 Nexxen 代表確認。
+* **[!UICONTROL 市場ID]**：輸入應在其中建立Nexen資料合約的數值市場ID。 如果您在 Nexxen 平台的每個市場上進行「AlwaysOn」整合，請輸入 -1。
 * **[!UICONTROL 廣告商ID]**：如果您要傳送資料至Nexen平台的單一廣告商，請輸入數值Nexen廣告商ID。 如果您想要讓資料可供市場中的所有廣告商使用，或如果這些區段是「一律開啟」，請輸入–1。
-* **[!UICONTROL 連絡人電子郵件]**：輸入Nexen用來傳送資料合約詳細資料的電子郵件地址。 這很可能是您自己的電子郵件地址，但也可能是電子郵件別名。 如果有多個收件者，請使用逗號( `email1@domain.com`， `email2@domain.com`)。
+* **[!UICONTROL 連絡人電子郵件]**：輸入Nexen用來傳送資料合約詳細資料的電子郵件地址。 這很可能是您自己的電子郵件地址，但也可以是電子郵件別名。如果有多個收件者，請使用逗號( `email1@domain.com`， `email2@domain.com`)。
 
 ### [!DNL One Fox] {#fox}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="用戶端"
->abstract="您希望向合作夥伴顯示的公司/分送帳戶名稱。 如果您不確定要使用哪個名稱，請聯絡您的合作夥伴客戶代表。 請勿使用空格或特殊字元。"
+>abstract="您想要向合作夥伴顯示的您公司/經銷帳戶名稱。如果不確定要使用什麼名稱，請聯絡您的合作夥伴帳戶代表。請勿使用空格或特殊字元。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
 ![顯示One Fox目的地之客戶資料欄位的平台UI影像。](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL 使用者端]**：您希望向合作夥伴顯示的公司/分送帳戶名稱。 預設使用您的公司名稱。 如果您不確定要使用哪個名稱，請聯絡您的合作夥伴客戶代表。 請勿使用空格或特殊字元。
+* **[!UICONTROL 使用者端]**：您希望向合作夥伴顯示的公司/分送帳戶名稱。 預設使用您的公司名稱。 如果不確定要使用什麼名稱，請聯絡您的合作夥伴帳戶代表。請勿使用空格或特殊字元。
 
 ### [!DNL Pandora] {#pandora}
 
@@ -373,7 +373,7 @@ ht-degree: 23%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_taboola_seg_type"
 >title="區段類型"
->abstract="區段型別。 目前僅支援第一方區段。"
+>abstract="區段類型。目前僅支援第一方區段。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
@@ -399,8 +399,8 @@ ht-degree: 23%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_teads_teadsid"
->title="團隊ID"
->abstract="您的團隊ID"
+>title="Teads ID"
+>abstract="您的 Teads ID"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 

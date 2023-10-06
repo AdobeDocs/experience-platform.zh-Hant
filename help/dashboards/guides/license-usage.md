@@ -11,12 +11,12 @@ ht-degree: 4%
 
 ---
 
-# 授權使用情況儀表板 {#license-usage-dashboard}
+# 授權使用量儀表板 {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
->title="授權使用情況儀表板"
->abstract="授權使用情況儀表板可讓您深入分析已購買的Adobe Experience Platform產品。 控制面板概觀會顯示您產品的主要量度，包括每個主要量度的使用量，以及您簽約的授權金額。 詳細資訊工作區會顯示特定沙箱中每個產品的量度劃分。"
+>title="授權使用量儀表板"
+>abstract="授權使用量儀表板可讓您深入了解您已購買的 Adobe Experience Platform 產品。儀表板概述顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
 
 您可以透過Adobe Experience Platform檢視貴組織授權使用情況的重要資訊 [!UICONTROL 授權使用情況] 儀表板。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
