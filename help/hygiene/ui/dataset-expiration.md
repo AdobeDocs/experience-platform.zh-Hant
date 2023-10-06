@@ -2,7 +2,7 @@
 title: 自動化資料集有效期
 description: 瞭解如何在Adobe Experience Platform UI中排程資料集有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 20%
@@ -26,7 +26,7 @@ ht-degree: 20%
 
 >[!NOTE]
 >
->資料集到期目前不會從Adobe Experience Platform Edge Network刪除資料。 不過，資料集設為過期後，資料不可能保留在Edge Network內。 這是因為資料集到期的14天服務授權合約與14天資料存在於Edge Network中的期間重合，之後才捨棄資料。
+>資料集到期目前不會從Adobe Experience Platform Edge Network刪除資料。 不過，資料集設為過期後，資料不可能保留在Edge Network內。 這是因為資料集到期的15天服務授權合約與Edge Network中存在資料的14天期間重疊，之後才捨棄資料。
 
 ## 排程資料集到期日 {#schedule-dataset-expiration}
 

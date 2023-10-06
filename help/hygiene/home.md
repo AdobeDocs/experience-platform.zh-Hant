@@ -2,7 +2,7 @@
 title: 進階資料生命週期管理概觀
 description: 進階資料生命週期管理可讓您透過更新或清除過時或不準確的記錄，來管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Adobe Experience Platform提供一套強大的工具，可管理大型複雜資�
 | 設定檔計數已更新 | 30 小時 | 根據要刪除的資料集內容，如果某些設定檔的所有元件屬性都繫結到該資料集，則可能會從系統中將其移除。 資料集刪除後30小時，整體設定檔計數中的任何變更都會反映在 [儀表板Widget](../dashboards/guides/profiles.md#profile-count-trend) 和其他報表。 |
 | 已更新對象 | 48 小時 | 更新所有受影響的設定檔後，所有相關的 [對象](../segmentation/home.md) 會更新以反映其新大小。 根據移除的資料集和您進行區段的屬性，每個對象的大小可能會因刪除而增加或減少。 |
 | 歷程和目的地已更新 | 50 小時 | [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html)， [行銷活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html)、和 [目的地](../destinations/home.md) 會根據相關區段中的變更進行更新。 |
-| 硬刪除完成 | 14 天 | 與資料集相關的所有資料都會從資料湖中硬刪除。 此 [資料生命週期工作的狀態](./ui/browse.md#view-details) 會更新已刪除的資料集以反映此情形。 |
+| 硬刪除完成 | 15 天 | 與資料集相關的所有資料都會從資料湖中硬刪除。 此 [資料生命週期工作的狀態](./ui/browse.md#view-details) 會更新已刪除的資料集以反映此情形。 |
 
 {style="table-layout:auto"}
 
