@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權工作API端點
 description: 瞭解如何使用Privacy Service API管理Experience Cloud應用程式的隱私權工作。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1546'
 ht-degree: 1%
 
 ---
@@ -164,7 +164,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `companyContexts` **（必要）** | 包含貴組織驗證資訊的陣列。 每個列出的識別碼都包含下列屬性： <ul><li>`namespace`：識別碼的名稱空間。</li><li>`value`：識別碼的值。</li></ul>它是 **必填** 其中一個識別碼使用 `imsOrgId` 作為 `namespace`，及其 `value` 包含貴組織的唯一ID。 <br/><br/>其他識別碼可以是產品特定的公司限定詞(例如， `Campaign`)，可識別與屬於您組織的Adobe應用程式的整合。 可能的值包括帳戶名稱、使用者端代碼、租使用者ID或其他應用程式識別碼。 |
-| `users` **（必要）** | 一個陣列，其中包含您要存取或刪除其資訊的至少一個使用者的集合。 單一請求中最多可提供1000個使用者ID。 每個使用者物件包含下列資訊： <ul><li>`key`：使用者的識別碼，用於限定回應資料中的個別作業ID。 為此值選擇唯一且易於識別的字串是最佳做法，以便日後可以輕鬆參考或查詢。</li><li>`action`：列出要對使用者資料採取的所需動作的陣列。 根據您要採取的動作，此陣列必須包括 `access`， `delete`，或兩者。</li><li>`userIDs`：使用者的身分識別集合。 單一使用者可擁有的身分數量限製為九個。 每個身分都包含 `namespace`， a `value`和名稱空間限定詞(`type`)。 請參閱 [附錄](appendix.md) 以取得這些必要屬性的詳細資訊。</li></ul> 如需的詳細說明，請參閱： `users` 和 `userIDs`，請參閱 [疑難排解指南](../troubleshooting-guide.md#user-ids). |
+| `users` **（必要）** | 一個陣列，其中包含您要存取或刪除其資訊的至少一個使用者的集合。 單一請求中最多可提供1000位使用者。 每個使用者物件包含下列資訊： <ul><li>`key`：使用者的識別碼，用於限定回應資料中的個別作業ID。 為此值選擇唯一且易於識別的字串是最佳做法，以便日後可以輕鬆參考或查詢。</li><li>`action`：列出要對使用者資料採取的所需動作的陣列。 根據您要採取的動作，此陣列必須包括 `access`， `delete`，或兩者。</li><li>`userIDs`：使用者的身分識別集合。 單一使用者可擁有的身分數量限製為九個。 每個身分都包含 `namespace`， a `value`和名稱空間限定詞(`type`)。 請參閱 [附錄](appendix.md) 以取得這些必要屬性的詳細資訊。</li></ul> 如需的詳細說明，請參閱： `users` 和 `userIDs`，請參閱 [疑難排解指南](../troubleshooting-guide.md#user-ids). |
 | `include` **（必要）** | 要包含在處理中的一系列Adobe產品。 如果此值遺失或空白，將會拒絕要求。 僅包含貴組織已整合的產品。 請參閱以下小節： [接受的產品值](appendix.md) 詳細資訊。 |
 | `expandIDs` | 選擇性屬性，設定為時 `true`，代表應用程式中ID處理的最佳化(目前僅支援 [!DNL Analytics])。 如果省略，此值會預設為 `false`. |
 | `priority` | Adobe Analytics使用的選用屬性，可設定處理請求的優先順序。 接受的值為 `normal` 和 `low`. 如果 `priority` 會省略，預設行為為 `normal`. |

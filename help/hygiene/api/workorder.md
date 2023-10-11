@@ -2,20 +2,20 @@
 title: 工單API端點
 description: 資料衛生API中的/workorder端點可讓您以程式設計方式管理身分的刪除任務。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1034'
 ht-degree: 3%
 
 ---
 
-# 工單端點
+# [!BADGE 測試版]{type=Informative}工單端點 {#work-order-endpoint}
 
 此 `/workorder` 資料衛生API中的端點可讓您以程式設計方式管理Adobe Experience Platform中的記錄刪除請求。
 
 >[!IMPORTANT]
+> 
+>記錄刪除功能目前在Beta版中提供，且僅適用於 **限量發行**. 並非所有客戶都可使用。 記錄刪除請求僅適用於有限版本中的組織。
 >
 >記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們是 **非** 用於資料主體權利要求（法規遵循），如一般資料保護規範(GDPR)等隱私權法規。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 而非。
 
