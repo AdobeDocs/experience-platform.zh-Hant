@@ -2,10 +2,10 @@
 title: 設定資料流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 1233d9dcfefa71685e457815cb5b9d7a768b7d6e
+source-git-commit: db75771d09caef00db58073333909f730a303975
 workflow-type: tm+mt
-source-wordcount: '2681'
-ht-degree: 82%
+source-wordcount: '2777'
+ht-degree: 75%
 
 ---
 
@@ -48,12 +48,18 @@ ht-degree: 82%
 
 | 設定 | 說明 |
 | --- | --- |
-| [!UICONTROL 地理查詢] | 根據訪客 IP 位址啟用選取選項的地理位置查詢。地理位置查詢會要求您將 [`placeContext`](../edge/data-collection/automatic-information.md#place-context) 欄位群組包含在 Web SDK 設定中。<br>可使用的選項： <ul><li>國家/地區</li><li>郵遞區號</li><li>州/省</li><li>DMA</li><li>城市</li><li>緯度 </li><li>經度</li></ul>無論選取其他什麼選項，選取&#x200B;**[!UICONTROL 城市]**、**[!UICONTROL 緯度]**&#x200B;或&#x200B;**[!UICONTROL 經度]**&#x200B;都會提供最多兩個小數點的座標。這被認為是城市級精細度。<br> <br>不選取任何選項會停用任何地理位置查詢。地理位置在 [!UICONTROL IP 模糊化]之前即存在，並且不受 [!UICONTROL IP 模糊化]設定的影響。 |
-| [!UICONTROL 網路查詢] | 根據訪客 IP 位址啟用選取選項的網路查詢。網絡查詢會要求您將 [`Environment`](../edge/data-collection/automatic-information.md#environment) 欄位群組包含在 Web SDK 設定中。<br>可使用的選項： <ul><li>電信業者</li><li>網域</li><li>ISP</li></ul>使用這些選項可提供其他服務有關要求來源地點之特定網路的詳細資訊。 |
+| [!UICONTROL 地理查詢] | 根據訪客的IP位址啟用所選選項的地理位置查閱。 可用的選項包括： <ul><li>**國家**：填入 `xdm.placeContext.geo.countryCode`</li><li>**郵遞區號**：填入 `xdm.placeContext.geo.postalCode`</li><li>**州/省**：填入 `xdm.placeContext.geo.stateProvince`</li><li>**DMA**：填入 `xdm.placeContext.geo.dmaID`</li><li>**城市**：填入 `xdm.placeContext.geo.city`</li><li>**緯度**：填入 `xdm.placeContext.geo._schema.latitude`</li><li>**經度**：填入 `xdm.placeContext.geo._schema.longitude`</li></ul>無論選取其他什麼選項，選取&#x200B;**[!UICONTROL 城市]**、**[!UICONTROL 緯度]**&#x200B;或&#x200B;**[!UICONTROL 經度]**&#x200B;都會提供最多兩個小數點的座標。這被認為是城市級精細度。<br> <br>未選取任何選項會停用地理位置查詢。 地理位置發生在之前 [!UICONTROL IP模糊化]，表示它不受此程式庫的 [!UICONTROL IP模糊化] 設定。 |
+| [!UICONTROL 網路查詢] | 根據訪客的IP位址啟用所選選項的網路查閱。 可用的選項包括： <ul><li>**電信業者**：填入 `xdm.environment.carrier`</li><li>**網域**：填入 `xdm.environment.domain`</li><li>**ISP**：填入 `xdm.environment.ISP`</li></ul> |
+
+如果您為資料收集啟用上述任何欄位，請確定您已正確設定 [`context`](../edge/data-collection/automatic-information.md) 陣列屬性，當 [設定Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+地理位置查詢欄位使用 `context` 陣列字串 `"placeContext"`，而網路查詢欄位則使用 `context` 陣列字串 `"environment"`.
+
+此外，請確定您的結構描述中存在每個所需的XDM欄位。 如果不適用，您可以新增Adobe提供的專案 `Environment Details` 欄位群組至您的結構描述。
 
 ### 設定裝置查詢 {#geolocation-device-lookup}
 
-此 **[!UICONTROL 裝置查詢]** 設定可讓您選取您要收集之裝置特定資訊的詳細程度。
+此 **[!UICONTROL 裝置查詢]** 設定可讓您選取要收集的裝置特定資訊。
 
 展開 **[!UICONTROL 裝置查詢]** 區段來設定底下所述的設定。
 
@@ -65,9 +71,15 @@ ht-degree: 82%
 
 | 設定 | 說明 |
 | --- | --- |
-| **[!UICONTROL 保留使用者代理和使用者端提示標題]** | 選取此選項可僅收集儲存在使用者代理字串中的資訊。 這是預設設定。 |
-| **[!UICONTROL 使用裝置查詢功能來收集下列資訊]** | 如果要收集下列一或多個裝置特定資訊，請選取此選項： <ul><li>**[!UICONTROL 裝置]** 資訊：<ul><li>裝置製造商</li><li>裝置型號</li><li>行銷名稱</li></ul></li><li>**[!UICONTROL 硬體]** 資訊： <ul><li>裝置類型</li><li>顯示高度</li><li>顯示寬度</li><li>顯示色彩深度</li></ul></li><li>**[!UICONTROL 瀏覽器]** 資訊： <ul><li>瀏覽器供應商</li><li>瀏覽器名稱</li><li>瀏覽器版本</li></ul></li><li>**[!UICONTROL 作業系統]** 資訊： <ul><li>作業系統供應商</li><li>作業系統名稱</li><li>作業系統版本</li></ul></li></ul> <br>  裝置查詢資訊無法與使用者代理程式和使用者端提示一起收集。 選擇收集裝置資訊將會停用收集使用者代理程式和使用者端提示，反之亦然。 所有裝置查詢資訊都儲存在 `xdm:device` 欄位群組。 |
-| **[!UICONTROL 不要收集任何裝置資訊]** | 如果您不想收集任何型別的查閱資訊，請選取此選項。 不會收集任何裝置、硬體、瀏覽器或作業系統資訊，包括使用者代理程式或使用者端提示標頭。 |
+| **[!UICONTROL 保留使用者代理和使用者端提示標題]** | 選取此選項可僅收集儲存在使用者代理字串中的資訊。 此設定預設為選取。 填入 `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL 使用裝置查詢功能來收集下列資訊]** | 如果要收集下列一或多個裝置特定資訊，請選取此選項： <ul><li>**[!UICONTROL 裝置]** 資訊：<ul><li>**裝置製造商**：填入 `xdm.device.manufacturer`</li><li>**裝置型號**：填入 `xdm.device.modelNumber`</li><li>**行銷名稱**：填入 `xdm.device.model`</li></ul></li><li>**[!UICONTROL 硬體]** 資訊： <ul><li>**硬體型別**：填入 `xdm.device.type`</li><li>**顯示高度**：填入 `xdm.device.screenHeight`</li><li>**顯示寬度**：填入 `xdm.device.screenWidth`</li><li>**顯示色彩深度**：填入 `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL 瀏覽器]** 資訊： <ul><li>**瀏覽器供應商**：填入 `xdm.environment.browserDetails.vendor`</li><li>**瀏覽器名稱**：填入 `xdm.environment.browserDetails.name`</li><li>**瀏覽器版本**：填入 `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL 作業系統]** 資訊： <ul><li>**作業系統供應商**：填入 `xdm.environment.operatingSystemVendor`</li><li>**作業系統名稱**：填入 `xdm.environment.operatingSystem`</li><li>**作業系統版本**：填入 `xdm.environment.operatingSystemVersion`</li></ul></li></ul>裝置查詢資訊無法與使用者代理程式和使用者端提示一起收集。 選擇收集裝置資訊會停用收集使用者代理程式和使用者端提示，反之亦然。 |
+| **[!UICONTROL 不要收集任何裝置資訊]** | 如果您不想收集任何裝置查詢資訊，請選取此選項。 未收集任何裝置、硬體、瀏覽器、作業系統、使用者代理程式或使用者端提示資料。 |
+
+如果您為資料收集啟用上述任何欄位，請確定您已正確設定 [`context`](../edge/data-collection/automatic-information.md) 陣列屬性，當 [設定Web SDK](../edge/fundamentals/configuring-the-sdk.md).
+
+裝置和硬體資訊使用 `context` 陣列字串 `"device"`，而瀏覽器和作業系統資訊會使用 `context` 陣列字串 `"environment"`.
+
+此外，請確定您的結構描述中存在每個所需的XDM欄位。 如果不適用，您可以新增Adobe提供的專案 `Environment Details` 欄位群組至您的結構描述。
 
 ### 設定進階選項 {#@advanced-options}
 
