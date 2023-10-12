@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 77fd0ace252bae66478f73a1dc4b7d4a3ccb867d
+source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1170'
 ht-degree: 9%
 
 ---
@@ -158,6 +158,7 @@ ht-degree: 9%
       * [飛艇標籤連線](./catalog/mobile-engagement/airship-tags.md)
       * [硬式連線](./catalog/mobile-engagement/braze.md)
       * [線路連線](./catalog/mobile-engagement/line.md)
+      * [Moengage連線](./catalog/mobile-engagement/moengage.md)
    * 個人化目的地 {#personalization}
       * [個人化目的地概觀](./catalog/personalization/overview.md)
       * [Adobe Commerce連線](./catalog/personalization/adobe-commerce.md)
