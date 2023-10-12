@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3822'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 - [[!DNL Segmentation Service]](../home.md)： [!DNL Segmentation Service] 可讓您對儲存在中的資料進行分段 [!DNL Experience Platform] 和歸入較小群組的個人（例如客戶、潛在客戶、使用者或組織）相關的資訊。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：可透過橋接正在被擷取到的不同資料來源的身分，以建立客戶設定檔 [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。 為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
 
 您也應該瞭解在本檔案中使用的兩個關鍵辭彙，並瞭解它們之間的差異：
 
@@ -92,7 +92,7 @@ ht-degree: 3%
 
 切換 **[!UICONTROL 排程所有對象]** 將啟用排程分段。 有關已排程分段的詳細資訊，請參閱 [本使用手冊的已排程分段區段](#scheduled-segmentation).
 
-選取 **[!UICONTROL 匯入對象]** 可讓您匯入外部產生的對象。 若要瞭解更多匯入對象，請閱讀以下章節： [在使用手冊中匯入對象](#import-audience).
+選取 **[!UICONTROL 匯入對象]** 可讓您匯入外部產生的對象。 若要深入瞭解如何匯入對象，請參閱本節： [在使用手冊中匯入對象](#import-audience).
 
 選取 **[!UICONTROL 建立對象]** 可讓您建立對象。 若要深入瞭解如何建立對象，請閱讀以下章節： [在使用手冊中建立對象](#create-audience).
 
@@ -350,6 +350,10 @@ ht-degree: 3%
 ![此 [!UICONTROL 檢閱] 頁面隨即顯示，顯示您新匯入外部產生對象的詳細資料。](../images/ui/overview/import-audience-review-details.png)
 
 確認詳細資料正確後，選取「 」 **[!UICONTROL 完成]** 將外部產生的對象匯入Adobe Experience Platform。
+
+>[!IMPORTANT]
+>
+>如果您的外部產生的對象包含敏感和/或醫療保健相關資訊，您可以 **必須** 將資料啟用至任何目的地之前，請先套用必要的資料使用標籤。 如需套用資料使用標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md).
 
 ## 已排程的分段 {#scheduled-segmentation}
 
