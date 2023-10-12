@@ -2,12 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；API指南；查詢；查詢；查詢服務；
 solution: Experience Platform
 title: 查詢API端點
-description: 以下小節會逐步說明您可以使用/queries端點（在查詢服務API中）進行的呼叫。
+description: 以下小節會逐步解說您可以在查詢服務API中使用/queries端點進行的呼叫。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 2%
+source-wordcount: '943'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## API呼叫範例
 
-以下小節會逐步引導您透過以下工具呼叫： `/queries` 中的端點 [!DNL Query Service] API。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
+以下小節會逐步解說您可以使用以下小節進行的呼叫： `/queries` 中的端點 [!DNL Query Service] API。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
 ### 擷取查詢清單
 
@@ -28,7 +28,7 @@ GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`： (*可選*)將引數新增至要求路徑，以設定回應中傳回的結果。 可包含多個引數，以&amp;符號(`&`)。 可用的引數列示如下。
+- `{QUERY_PARAMETERS}`： (*可選*)將引數新增至請求路徑，以設定回應中傳回的結果。 可包含多個引數，以&amp;符號(`&`)。 可用的引數列示如下。
 
 **查詢引數**
 
@@ -36,13 +36,13 @@ GET /queries?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位包括 `created` 和 `updated`. 例如， `orderby=created` 將依建立的結果遞增順序來排序結果。 新增 `-` 建立前(`orderby=-created`)會依建立的順序遞減排序專案。 |
+| `orderby` | 指定排序結果時所依據的欄位。 支援的欄位包括 `created` 和 `updated`. 例如， `orderby=created` 將依建立的順序遞增排序結果。 新增 `-` 建立之前(`orderby=-created`)會依建立的遞減順序來排序專案。 |
 | `limit` | 指定頁面大小限制，以控制頁面中包含的結果數量。 (*預設值： 20*) |
-| `start` | 使用以零為基準的編號來位移回應清單。 例如， `start=2` 會傳回從第三個查詢開始的清單。 (*預設值： 0*) |
-| `property` | 根據欄位篩選結果。 篩選器 **必須** 已逸出HTML。 逗號可用來組合多組篩選器。 支援的欄位包括 `created`， `updated`， `state`、和 `id`. 支援的運運算元清單包括 `>` （大於）， `<` （小於）， `>=` （大於或等於）， `<=` （小於或等於）， `==` （等於）， `!=` （不等於），以及 `~` （包含）。 例如， `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 將傳回具有指定ID的所有查詢。 |
-| `excludeSoftDeleted` | 指示是否應包含已軟刪除的查詢。 例如， `excludeSoftDeleted=false` 將 **包括** 軟刪除的查詢。 (*布林值，預設值： true*) |
-| `excludeHidden` | 指示是否應顯示非使用者導向的查詢。 將此值設為false會 **包括** 非使用者導向的查詢，例如CURSOR定義、FETCH或中繼資料查詢。 (*布林值，預設值： true*) |
-| `isPrevLink` | 此 `isPrevLink` 查詢引數用於分頁。 API呼叫的結果會使用它們的 `created` 時間戳記和 `orderby` 屬性。 導覽結果頁面時， `isPrevLink` 向後分頁時設為true。 這會反轉查詢的順序。 請參閱「下一個」和「上一個」連結作為範例。 |
+| `start` | 指定ISO格式時間戳記來排序結果。 如果未指定開始日期，API呼叫會先傳回最舊建立的查詢，然後繼續列出最近的結果。<br> ISO時間戳記允許在日期和時間有不同的詳細程度等級。 基本ISO時間戳記採用以下格式： `2020-09-07` 以表示日期2020年9月7日。 更複雜的範例將寫為 `2022-11-05T08:15:30-05:00` 和對應2022年11月5日、8:15:美國東部標準時間上午30點。 時區可以提供UTC時差，並以「Z」字尾表示(`2020-01-01T01:01:01Z`)。 如果未提供時區，則預設為零。 |
+| `property` | 根據欄位篩選結果。 篩選器 **必須** 已逸出HTML。 逗號可用來組合多組篩選器。 支援的欄位包括 `created`， `updated`， `state`、和 `id`. 支援的運運算元清單包括 `>` （大於）， `<` （小於）， `>=` （大於或等於）， `<=` （小於或等於）， `==` （等於）， `!=` （不等於），和 `~` （包含）。 例如， `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` 將傳回所有具有指定ID的查詢。 |
+| `excludeSoftDeleted` | 指示是否應包含已軟刪除的查詢。 例如， `excludeSoftDeleted=false` 將 **包含** 軟刪除的查詢。 (*布林值，預設值： true*) |
+| `excludeHidden` | 指示是否應顯示非使用者導向的查詢。 將此值設為false將會 **包含** 非使用者驅動查詢，例如CURSOR定義、FETCH或中繼資料查詢。 (*布林值，預設值： true*) |
+| `isPrevLink` | 此 `isPrevLink` 查詢引數用於分頁。 API呼叫的結果會使用下列專案排序： `created` 時間戳記和 `orderby` 屬性。 導覽結果頁面時， `isPrevLink` 向後分頁時設為true。 這會反轉查詢的順序。 請參閱「下一個」和「上一個」連結作為範例。 |
 
 **要求**
 
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定組織的查詢清單，其形式為JSON。 下列回應會傳回為您的組織建立的最新查詢。
+成功的回應會傳回HTTP狀態200，並包含指定組織的查詢清單，其形式為JSON。 下列回應會傳回為您組織建立的最新查詢。
 
 ```json
 {
@@ -119,7 +119,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 ### 建立查詢
 
-您可以透過向以下專案發出POST請求來建立新查詢： `/queries` 端點。
+您可以透過向以下網址發出POST請求來建立新查詢： `/queries` 端點。
 
 **API格式**
 
@@ -129,7 +129,7 @@ POST /queries
 
 **要求**
 
-下列要求會建立新查詢，並在裝載中提供SQL陳述式：
+以下請求會建立新查詢，並在承載中提供SQL陳述式：
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -172,14 +172,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | 您要建立的SQL查詢。 |
 | `name` | SQL查詢的名稱。 |
 | `description` | SQL查詢的說明。 |
-| `queryParameters` | 用來取代SQL陳述式中任何引數化值的索引鍵值配對。 此為必要專案 **如果** 您正在提供的SQL中使用引數取代。 不會對這些索引鍵值配對執行任何值型別檢查。 |
-| `templateId` | 預先存在的查詢的唯一識別碼。 您可以提供此陳述式，而不是SQL陳述式。 |
+| `queryParameters` | 鍵值配對，取代SQL陳述式中的任何引數化值。 此為必要欄位 **如果** 您正在提供的SQL中使用引數取代。 將不會對這些索引鍵值配對執行任何值型別檢查。 |
+| `templateId` | 既有查詢的唯一識別碼。 您可以提供此項而不是SQL陳述式。 |
 | `insertIntoParameters` | （選擇性）如果此屬性已定義，則此查詢將轉換為INSERT INTO查詢。 |
-| `ctasParameters` | （選用）如果定義了此屬性，此查詢將轉換為CTAS查詢。 |
+| `ctasParameters` | （選擇性）如果此屬性已定義，此查詢將轉換為CTAS查詢。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態202 （已接受）以及您新建立查詢的詳細資訊。 一旦查詢完成啟動並成功執行， `state` 將變更自 `SUBMITTED` 至 `SUCCESS`.
+成功的回應會傳回HTTP狀態202 （已接受）以及您新建立查詢的詳細資料。 一旦查詢完成啟動並成功執行， `state` 將變更自 `SUBMITTED` 至 `SUCCESS`.
 
 ```json
 {
@@ -222,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 >[!NOTE]
 >
->您可以使用以下專案的值： `_links.cancel` 至 [取消您建立的查詢](#cancel-a-query).
+>您可以使用下列專案的值： `_links.cancel` 至 [取消您建立的查詢](#cancel-a-query).
 
 ### 依ID擷取查詢
 
@@ -293,7 +293,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 >[!NOTE]
 >
->您可以使用以下專案的值： `_links.cancel` 至 [取消您建立的查詢](#cancel-a-query).
+>您可以使用下列專案的值： `_links.cancel` 至 [取消您建立的查詢](#cancel-a-query).
 
 ### 取消或軟刪除查詢
 
@@ -307,7 +307,7 @@ PATCH /queries/{QUERY_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{QUERY_ID}` | 此 `id` 您要執行作業的查詢值。 |
+| `{QUERY_ID}` | 此 `id` 您要執行作業之查詢的值。 |
 
 
 **要求**
