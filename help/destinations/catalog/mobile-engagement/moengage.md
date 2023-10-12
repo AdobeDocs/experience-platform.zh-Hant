@@ -2,7 +2,7 @@
 title: Moengage連線
 description: Moengage是客戶參與平台，可即時促進消費者與品牌之間以客戶為中心的互動。
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 3d5a3ce18e7f1c0e06246faf8ec4403871e1a1a9
+source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此目的地聯結器和檔案頁面是由 *Moengage* 團隊。 如有任何查詢或更新要求，請直接聯絡他們： *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
+>此目的地聯結器和檔案頁面是由 *Moengage* 團隊。 如有任何查詢或更新要求，請直接聯絡他們： *`https://help.moengage.com/hc/en-us`.*
 
 ## 使用案例 {#use-cases}
 
