@@ -1,9 +1,10 @@
 ---
 title: 設定Azure金鑰儲存庫
 description: 瞭解如何使用Azure建立新的企業帳戶，或使用現有的企業帳戶並建立金鑰儲存庫。
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -41,6 +42,12 @@ ht-degree: 0%
 一旦您到達 **[!DNL Review + create]** 步驟，您可以在金鑰儲存庫進行驗證時檢閱其詳細資訊。 驗證通過後，選取 **[!DNL Create]** 以完成程式。
 
 ![Microsoft Azure Key儲存庫檢閱和建立頁面時，反白顯示「建立」。](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## 設定存取權 {#configure-access}
+
+接下來，為您的金鑰儲存庫啟用Azure角色型存取控制。 選取 **[!DNL Access configuration]** 在 [!DNL Settings] 區段，然後選取 **[!DNL Azure role-based access control]** 以啟用設定。 此步驟至關重要，因為稍後必須將CMK應用程式與Azure角色相關聯。 指派角色在這兩處中均有紀錄 [API](./api-set-up.md#assign-to-role) 和 [UI](./ui-set-up.md#assign-to-role) 工作流程。
+
+![此 [!DNL Microsoft Azure] 儀表板，具有 [!DNL Access configuration] 和 [!DNL Azure role-based access control] 反白顯示。](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## 設定網路選項 {#configure-network-options}
 
