@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35d72969946dd79c356212ce53ee75b8c84f036c
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '2284'
+source-wordcount: '2293'
 ht-degree: 28%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 28%
 
 Adobe Experience Platform中的新功能：
 
-- [計算的屬性](#computed-attributes)
+- [計算屬性](#computed-attributes)
 
  Experience Platform 現有功能的更新：
 
@@ -31,7 +31,7 @@ Adobe Experience Platform中的新功能：
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
-## 計算的屬性 {#computed-attributes}
+## 計算屬性 {#computed-attributes}
 
 計算屬性可讓您透過直覺式UI輕鬆將事件資料摘要為設定檔屬性，以強化行為型細分、個人化和啟用。 透過此功能，您可以自助建立計算屬性、管理這些屬性，並用於區段、Real-Time CDP目的地或Adobe Journey Optimizer。 此外，計算屬性可簡化細分和歷程工作流程，協助您順暢地提供相關體驗。 若要深入瞭解計算屬性，請參閱 [計算屬性概述](../../profile/computed-attributes/overview.md).
 
@@ -191,7 +191,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 | 功能 | 說明 |
 | --- | --- |
 | Identity Service UI增強功能 | 在Experience Platform UI中使用改良的自訂名稱空間建立工具，以便更妥善地管理您的自訂名稱空間及其對應的身分型別。 增強的Identity Service UI提供您以下功能： <ul><li>關聯式體驗：視覺提示、清晰度，以及身分名稱空間和身分型別的關聯式。</li><li>準確性：處理錯誤的能力更強，不再有重複的身分名稱。</li><li>可發現性：從產品內對話方塊存取檔案。</li></ul> 如需詳細資訊，請閱讀以下指南： [建立自訂名稱空間](../../identity-service/namespaces.md#create-namespaces). |
-| 身分識別圖譜限制的變更 | 身分圖表限制已從150個身分變更為50個身分。 將新身分擷取到完整圖表時，會刪除根據擷取時間戳記和身分型別的最舊身分。 Cookie身分型別會優先刪除。 Adobe如果您的生產沙箱包含： <ul><li>個人識別碼 (例如 CRM ID) 設定為 cookie/裝置身分識別類型的自訂命名空間。</li><li>cookie/裝置識別碼被設定為跨裝置身分識別類型的自訂命名空間。</li></ul> Adobe 工程部門將手動處理這些要求。若要了解更多資訊，請閱讀[身分識別服務資料的護欄](../../identity-service/guardrails.md)。 |
+| 身分識別圖譜限制的變更 | 身分圖表限制已從150個身分變更為50個身分。 將新身分擷取到完整圖表時，會刪除根據擷取時間戳記和身分型別的最舊身分。 Cookie身分型別會優先刪除。 Adobe如果您的生產沙箱包含： <ul><li>個人識別碼 (例如 CRM ID) 設定為 cookie/裝置身分識別類型的自訂命名空間。</li><li>cookie/裝置識別碼被設定為跨裝置身分識別類型的自訂命名空間。</li></ul> Adobe 工程部門將手動處理這些要求。如需詳細資訊，請閱讀 [Identity Service資料的護欄](../../identity-service/guardrails.md) 及指南 [資料管理授權權益最佳實務](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: 資料管理授權權益最佳實務
 description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 5f21d988d7947e64378dc6f35993f2a465ad1df6
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2287'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Experience Platform主要由兩個資料存放庫組成： [!DNL data lake] 和�
 
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。
 
-## 授權使用情況儀表板
+## 授權使用量儀表板
 
 Adobe Experience Platform UI提供控制面板，讓您檢視貴組織適用於Platform的授權相關資料快照。 儀表板中的資料與快照拍攝時的特定時間點顯示的資料完全相同。 快照既不是近似值，也不是資料範例，而且儀表板不會即時更新。
 
@@ -94,6 +94,12 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 * [內嵌篩選器](#ingestion-filters)
 * [設定檔存放區](#profile-service)
 
+### 身分識別服務和可定址的受眾 {#identity-service}
+
+身分圖表不會計入可定址對象權利總數，因為可定址對象會參照客戶設定檔總數。
+
+不過，身分圖表限制可能會因為分割身分而影響可定址的受眾。 例如，如果從圖表移除最舊的ECID，ECID將以假名設定檔的形式繼續存在於即時客戶設定檔中。 您可以設定 [假名設定檔資料有效期](../../profile/pseudonymous-profiles.md) 以規避此行為。 若要了解更多資訊，請閱讀[身分識別服務資料的護欄](../../identity-service/guardrails.md)。
+
 ### 內嵌篩選器 {#ingestion-filters}
 
 內嵌篩選器可讓您僅匯入使用案例所需的資料，並篩選掉所有不需要的事件。
@@ -104,7 +110,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 | Adobe Analytics資料準備 | 您可以使用 [!DNL Data Prep] 功能性，方便您建立Analytics來源連線，篩選掉使用案例不需要的資料。 到 [!DNL Data Prep]，您可以定義哪些屬性/欄需要發佈至設定檔。 您也可以提供條件陳述式，告知Platform資料應該發佈至設定檔，還是僅發佈至 [!DNL data lake]. 請參閱以下指南： [建立Analytics來源連線](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 以取得詳細資訊。 |
 | 支援為設定檔啟用/停用資料集 | 若要將資料擷取至即時客戶個人檔案，您必須啟用資料集以用於個人檔案存放區。 如此一來，會將新增至 [!DNL Addressable Audience] 和 [!DNL Profile Richness] 權益。 客戶設定檔使用案例不再需要資料集後，您可以停用該資料集與設定檔的整合，以確保您的資料符合授權規範。 請參閱以下指南： [為設定檔啟用和停用資料集](../../catalog/datasets/enable-for-profile.md) 以取得詳細資訊。 |
 | Web SDK和Mobile SDK資料排除 | Web和Mobile SDK收集的資料有兩種型別：自動收集的資料以及開發人員明確收集的資料。 若要更妥善地管理授權法規遵循，您可以透過內容設定，在SDK的組態中停用自動資料收集。 您的開發人員也可以移除或設定自訂資料。 請參閱以下指南： [設定SDK基礎知識](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) 以取得詳細資訊。 |
-| 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Platform，您可以移除規則動作中的對應以在所有事件中排除資料，或是將條件新增至規則，讓資料僅針對特定事件引發，藉此排除傳送的資料。 請參閱以下檔案： [事件和條件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) 以取得詳細資訊。 |
+| 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Platform，您可以移除規則動作中的對應以在所有事件中排除資料，或是將條件新增至規則，讓資料僅針對特定事件引發，藉此排除傳送的資料。 請參閱以下檔案： [事件和條件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)以取得詳細資訊。 |
 | 在來源層級篩選資料 | 您可以使用邏輯和比較運運算元，在建立連線並將資料擷取到Experience Platform之前，先篩選來源中的列層級資料。 如需詳細資訊，請閱讀以下指南： [篩選來源的資料列層級資料，使用 [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}

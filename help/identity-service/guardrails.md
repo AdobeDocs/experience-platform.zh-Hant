@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: b78d1d00a42df8a703a4dd15959cf15b058e0b7a
+source-git-commit: 30e927ec78a953aae8ac90829ec8b3b0475c5db4
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1074'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ Adobe如果您的生產沙箱包含：
 
 此功能可用後，超過50個身分限制的圖表將減少到最多50個身分。 對於Real-Time CDP B2C Edition，這可能會導致符合對象資格的設定檔數量增加到最低限度，因為這些設定檔先前在細分和啟動中被忽略。
 
-#### 即時客戶設定檔：假名設定檔設定
+#### 即時客戶個人檔案：對可定址對象的影響
 
 刪除僅發生在Identity Service中的資料，不會發生在即時客戶個人檔案中。
 
