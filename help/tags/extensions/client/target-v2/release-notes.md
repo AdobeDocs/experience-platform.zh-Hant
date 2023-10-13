@@ -2,10 +2,10 @@
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 4b87141e94681d9a9f51d4d9b2f2276ca065d6ce
+source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 22%
+source-wordcount: '729'
+ht-degree: 21%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 22%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## v0.20.0 （2023年10月9日）
+
+- 更新以支援at.js 2.11.0。
+- 新增在targetGlobalSettings中設定自訂Adobe Experience Platform sandboxId和sandboxName的支援，這些將傳遞至getOffer/getOffers呼叫的傳送API。
+- 選取器中鏈結的：eq()陰影DOM修正。
 
 ## v0.19.3 （2023年9月18日）
 
