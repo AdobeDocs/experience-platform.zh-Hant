@@ -2,9 +2,9 @@
 title: 中繼轉換API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Meta Conversions API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 選取或建立所需的屬性後，選取 **[!UICONTROL 擴充功能]** 在左側導覽中，然後選取 **[!UICONTROL 目錄]** 標籤。 搜尋 [!UICONTROL 中繼轉換API] 卡片，然後選取 **[!UICONTROL 安裝]**.
 
-![此 [!UICONTROL 安裝] 按鈕已選取用於 [!UICONTROL 中繼轉換API] 資料收集UI中的擴充功能。](../../../images/extensions/server/meta/install.png)
+![此 [!UICONTROL 安裝] 為選取的選項 [!UICONTROL 中繼轉換API] 資料收集UI中的擴充功能。](../../../images/extensions/server/meta/install.png)
 
 在出現的組態檢視中，您必須提供 [!DNL Pixel] 您先前複製的ID可將擴充功能連結至您的帳戶。 您可以直接將ID貼入輸入中，也可以改用資料元素。
 
@@ -46,6 +46,30 @@ ht-degree: 0%
 ![此 [!DNL Pixel] 在擴充功能組態檢視中作為資料元素提供的ID。](../../../images/extensions/server/meta/configure.png)
 
 擴充功能已安裝，您現在可以在事件轉送規則中運用其功能。
+
+## 與中繼業務擴充功能(MBE)整合 {#mbe}
+
+與中繼業務擴充功能(MBE)增強功能的整合可讓您快速驗證中繼業務帳戶。 接著會自動填入 [!UICONTROL 畫素ID] 和中繼轉換API [!UICONTROL 存取權杖]，更易於安裝和設定中繼轉換API。
+
+安裝時，會出現在MBE中進行驗證的對話方塊提示 [!UICONTROL 中繼轉換API] 副檔名。
+
+![此 [!UICONTROL 中繼轉換API擴充功能] 安裝頁面醒目提示 [!UICONTROL 連線至中繼].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+在MBE中驗證的對話方塊提示也會顯示在事件轉送的快速啟動工作流程UI中。
+
+![快速入門工作流程UI醒目提示 [!UICONTROL 連線至中繼].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## 與事件品質比對分數(EMQ)整合 {#emq}
+
+與事件品質比對分數(EMQ)的整合可讓您藉由顯示EMQ分數，輕鬆檢視實作的成效。 此整合可儘量減少上下文切換，並幫助您提高中繼轉換API實施的成功率。 這些事件分數會顯示在 [!UICONTROL 中繼轉換API擴充功能] 設定畫面。
+
+![此 [!UICONTROL 中繼轉換API擴充功能] 設定頁面醒目提示 [!UICONTROL 檢視EMQ分數].](../../../images/extensions/server/meta/emq-score.png)
+
+## 與LiveRamp (Alpha)整合 {#alpha}
+
+與LiveRamp的整合在Meta Conversions API規則設定中新增欄位，讓客戶更輕鬆地與LiveRamp Conversions API整合。 此整合消除了您直接與合作夥伴或中繼共用PII的需求。 由於LiveRamp的健全身分圖表，因此納入 [!UICONTROL 合作夥伴ID (alpha)] 可透過提高使用者符合率來改善整合品質。
+
+![中繼事件轉送 [!UICONTROL 規則] 設定頁面醒目提示 [!UICONTROL 合作夥伴名稱(Alpha)] 和 [!UICONTROL 合作夥伴ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## 設定事件轉送規則 {#rule}
 

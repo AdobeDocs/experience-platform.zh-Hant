@@ -2,32 +2,28 @@
 title: 外部來源系統稽核屬性資料型別
 description: 本檔案提供外部來源系統稽核屬性Experience Data Model (XDM)資料型別的概述。
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 2%
+source-wordcount: '192'
+ht-degree: 15%
 
 ---
 
 # [!UICONTROL 外部來源系統稽核屬性] 資料型別
 
->[!NOTE]
->
->此資料型別僅適用於可存取Adobe Real-time Customer Data Platform B2B版本的組織。
-
-[!UICONTROL 外部來源系統稽核屬性] 是標準的體驗資料模型(XDM)資料型別，可擷取有關外部來源系統的稽核細節。
+[!UICONTROL 外部來源系統稽核屬性]是一種標準的體驗資料模式 (XDM) 資料類型，用於擷取外部來源系統的稽核詳細資料。
 
 ![](../images/data-types/external-source-system-audit-attributes.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `externalKey` | [[!UICONTROL B2B來源]](./b2b-source.md) | 用於稽核之來源的複合識別碼。 |
 | `createdBy` | 字串 | 建立此記錄的使用者名稱。 |
 | `createdDate` | 日期時間 | 建立此記錄的日期。 |
-| `externalID` | 字串 | 來源的外部唯一識別碼。 如有需要，可使用此值來協助識別和重複資料刪除。 |
+| `externalID` | 字串 | 來源的外部唯一識別碼。 如有需要，此值可用於協助識別和刪除重複專案。 |
 | `lastActivityDate` | 日期時間 | 來源系統的上次活動日期。 |
 | `lastReferencedDate` | 日期時間 | 來源系統的最後參考日期。 |
-| `lastUpdatedBy` | 字串 | 上次更新此記錄的人員姓名。 |
+| `lastUpdatedBy` | 字串 | 上次更新此紀錄的人員名稱。 |
 | `lastUpdatedDate` | 日期時間 | 來源系統的上次更新日期。 |
 | `lastViewedDate` | 日期時間 | 來源系統的上次檢視日期。 |
 
