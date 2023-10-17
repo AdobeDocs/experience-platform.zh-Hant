@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 30%
+source-wordcount: '174'
+ht-degree: 29%
 
 ---
 
@@ -58,6 +58,7 @@ ht-degree: 30%
       * [概觀](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [概觀](personalization/ajo/overview.md)
+      * [實作單頁應用程式](personalization/ajo/web-spa-implementation.md)
 * 同意 {#consent}
    * [支援同意](consent/supporting-consent.md)
    * IAB透明與同意架構2.0 {#iab-tcf}
