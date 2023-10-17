@@ -1,13 +1,13 @@
 ---
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
-source-git-commit: 900cb35f6cb758f145904666c709c60dc760eff2
+exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
+source-git-commit: 0aaba1d1ae47908ea92e402b284438accb4b4731
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 9%
+source-wordcount: '1821'
+ht-degree: 7%
 
 ---
-
 
 # [!BADGE 測試版] 沙箱工具
 
@@ -21,38 +21,55 @@ ht-degree: 9%
 
 提高沙箱之間的設定準確性，並利用沙箱工具功能順暢地匯出和匯入沙箱之間的沙箱設定。 使用沙箱工具來減少實作程式的價值實現時間，並跨沙箱移動成功的設定。
 
-您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。 套件可以包含單一物件、多個物件或整個沙箱。 套件中包含的任何物件都必須來自相同沙箱。
+您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。 封裝可以包含單一物件或多個物件。 <!--or an entire sandbox.-->套件中包含的任何物件都必須來自相同沙箱。
 
 ## 沙箱工具支援的物件 {#supported-objects}
 
-下表列出目前沙箱工具支援的物件：
+沙箱工具功能可讓您匯出 [!DNL Adobe Real-Time Customer Data Platform] 和 [!DNL Adobe Journey Optimizer] 物件放入封裝。
 
-| 平台 | 物件 |
-| --- | --- |
-| [!DNL Adobe Journey Optimizer] | 歷程 |
-| 客戶資料平台 | 來源 |
-| 客戶資料平台 | 區段 |
-| 客戶資料平台 | 身分 |
-| 客戶資料平台 | 原則 |
-| 客戶資料平台 | 結構描述 |
-| 客戶資料平台 | 資料集 |
+### Real-time Customer Data Platform物件 {#real-time-cdp-objects}
 
-已匯入下列物件，但處於草稿或已停用的狀態：
+下表列出 [!DNL Adobe Real-Time Customer Data Platform] 目前支援沙箱工具的物件：
+
+| 平台 | 物件 | 詳細資料 |
+| --- | --- | --- |
+| 客戶資料平台 | 來源 | 出於安全原因，不會將來源帳戶認證復寫到目標沙箱中，而是需要手動更新。 依照預設，來源資料流會以草稿狀態複製。 |
+| 客戶資料平台 | 對象 | 僅限 **[!UICONTROL 客戶對象]** type **[!UICONTROL 分段服務]** 支援。 用於同意和管理的現有標籤將複製到相同的匯入工作中。 |
+| 客戶資料平台 | 身分 | 在Adobe沙箱中建立時，系統會自動刪除重複的Target標準身分名稱空間。 對象規則中的所有屬性都已在聯合結構描述中啟用時，才能複製對象。 必須先移動並啟用統一設定檔的必要結構描述。 |
+| 客戶資料平台 | 結構描述 | 用於同意和管理的現有標籤將複製到相同的匯入工作中。 將依原樣從來源沙箱複製結構描述統一設定檔狀態。 如果為來源沙箱中的統一設定檔啟用了結構描述，則所有屬性都會移至聯合結構描述。 封裝中不包含結構描述關聯邊緣案例。 |
+| 客戶資料平台 | 資料集 | 資料集複製時會預設停用整合設定檔設定。 |
+
+下列物件已匯入，但處於草稿或已停用的狀態：
 
 | 功能 | 物件 | 狀態 |
 | --- | --- | --- |
 | 匯入狀態 | 來源資料流 | 草稿 |
 | 匯入狀態 | 歷程 | 草稿 |
-| 整合式設定檔 | 綱要 | 停用 |
-| 整合式設定檔 | 資料集 | 停用 |
-| 原則 | 同意原則 | 停用 |
+| 整合式設定檔 | 資料集 | 已停用整合式設定檔 |
 | 原則 | 資料治理原則 | 停用 |
 
-下列邊緣案例不包含在套件中：
+### Adobe Journey Optimizer物件 {#abobe-journey-optimizer-objects}
 
-* 方案關係
+下表列出 [!DNL Adobe Journey Optimizer] 目前沙箱工具支援的物件和限制：
+
+| 平台 | 物件 | 詳細資料 |
+| --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | 對象 | 對象可以復製為歷程物件的相依物件。 您可以選取建立新受眾或重複使用目標沙箱中的現有受眾。 |
+| [!DNL Adobe Journey Optimizer] | 綱要 | 歷程中使用的結構描述可以復製為相依物件。 您可以選取建立新結構描述，或重複使用目標沙箱中的現有結構描述。 |
+| [!DNL Adobe Journey Optimizer] | 訊息 | 歷程中使用的訊息可以復製為相依物件。 用於訊息個人化的歷程欄位中使用的管道動作活動不會檢查完整性。 不會複製內容區塊。 |
+| [!DNL Adobe Journey Optimizer] | 歷程 — 畫布詳細資料 | 畫布上的歷程呈現方式包含歷程中的物件，例如條件、動作、事件、讀取對象等，這些物件均已複製。 跳轉活動會從複製中排除。 |
+| [!DNL Adobe Journey Optimizer] | 活動 | 將會複製歷程中使用的事件和事件詳細資訊。 它一律會在目標沙箱中建立新版本。 |
+| [!DNL Adobe Journey Optimizer] | 動作 | 將會複製歷程中使用的動作和動作詳細資訊。 它一律會在目標沙箱中建立新版本。 |
+
+不會複製曲面（例如預設集）。 系統會根據訊息型別和表面名稱，自動選取目標沙箱上最接近的相符專案。 如果在目標沙箱上找不到表面，則表面複製將失敗，導致訊息複製失敗，因為訊息需要表面才能用於設定。 在這種情況下，至少需要為訊息的正確通道建立一個表面，副本才能運作。
+
+匯出歷程時，不支援將自訂身分型別當做相依物件使用。
 
 ## 將物件匯出至封裝 {#export-objects}
+
+>[!NOTE]
+>
+>所有匯出動作都會記錄在稽核記錄中。
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_exit_package"
@@ -120,6 +137,10 @@ ht-degree: 9%
 
 ## 將套件匯入目標沙箱 {#import-package-to-target-sandbox}
 
+>[!NOTE]
+>
+>所有匯入動作都會記錄在稽核記錄中。
+
 若要將套件匯入目標沙箱，請導覽至「沙箱」 **[!UICONTROL 瀏覽]** 索引標籤並選取沙箱名稱旁邊的加號(+)選項。
 
 ![沙箱 **[!UICONTROL 瀏覽]** 索引標籤中反白匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-sandboxes.png)
@@ -148,41 +169,47 @@ ht-degree: 9%
 
 ![此 [!UICONTROL 套件物件與相依性] 頁面顯示套件中包含的資產清單，醒目提示 [!UICONTROL 完成].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
-## 匯出和匯入整個沙箱
-
-### 匯出整個沙箱 {#export-entire-sandbox}
-
-若要匯出整個沙箱，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 封裝]** 標籤並選取 **[!UICONTROL 建立封裝]**.
-
-![此 [!UICONTROL 沙箱] **[!UICONTROL 封裝]** 標籤反白顯示 [!UICONTROL 建立封裝].](../images/ui/sandbox-tooling/create-sandbox-package.png)
-
-選取 **[!UICONTROL 整個沙箱]** 中的封裝型別 [!UICONTROL 建立封裝] 對話方塊。 提供 [!UICONTROL 封裝名稱] ，並選取 **[!UICONTROL Sandbox]** 下拉式清單中的。 最後，選取 **[!UICONTROL 建立]** 以確認您的輸入。
-
-![此 [!UICONTROL 建立封裝] 顯示已完成欄位和醒目提示的對話方塊 [!UICONTROL 建立].](../images/ui/sandbox-tooling/create-package-dialog.png)
-
-已成功建立封裝，請選取 **[!UICONTROL 發佈]** 以發佈套件。
-
-![強調新發佈套件的沙箱套件清單。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
-
-您將返回 **[!UICONTROL 封裝]** 索引標籤中的 [!UICONTROL 沙箱] 環境，您可在其中檢視新發佈的套件。
-
-### 匯入整個沙箱套件 {#import-entire-sandbox-package}
-
-若要將套件匯入目標沙箱，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 瀏覽]** 索引標籤並選取沙箱名稱旁邊的加號(+)選項。
-
-![沙箱 **[!UICONTROL 瀏覽]** 索引標籤中反白匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
-
-使用下拉式選單，使用 **[!UICONTROL 封裝名稱]** 下拉式清單。 新增選用專案 **[!UICONTROL 工作名稱]**，將用於日後的監視，然後選取 **[!UICONTROL 下一個]**.
-
-![匯入詳細資訊頁面顯示 [!UICONTROL 封裝名稱] 下拉式清單選取專案](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+<!--
+## Export and import an entire sandbox 
 
 >[!NOTE]
 >
->匯入整個沙箱時，所有物件都會從套件建立為新物件。 物件並未列於 [!UICONTROL 套件物件與相依性] 頁面，因為可以有倍數。 此時會顯示內嵌訊息，告知不支援的物件型別。
+>All export and import actions are recorded in the audit logs.
 
-您被帶到 [!UICONTROL 套件物件與相依性] 您可以在此頁面檢視匯入和排除物件的物件數目和相依性。 從這裡，選擇 **[!UICONTROL 匯入]** 以完成套件匯入。
+### Export an entire sandbox {#export-entire-sandbox}
 
-![此 [!UICONTROL 套件物件與相依性] 頁面顯示不支援之物件型別的內嵌訊息，強調顯示 [!UICONTROL 匯入].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
+
+![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Select **[!UICONTROL Entire sandbox]** for the Type of package in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
+
+![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
+
+![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
+
+### Import the entire sandbox package {#import-entire-sandbox-package}
+
+To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
+
+![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
+
+![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>All objects are created as new from the package when importing an entire sandbox. The objects are not listed in the [!UICONTROL Package object and dependencies] page, as there can be multiples. An inline message is displayed, advising of object types that are not supported.
+
+You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
+
+ ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+-->
 
 ## 監視匯入工作並檢視匯入物件詳細資訊
 
