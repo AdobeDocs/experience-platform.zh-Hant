@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1167'
 ht-degree: 9%
 
 ---
@@ -176,7 +176,6 @@ ht-degree: 9%
       * [Pega 設定檔連線](./catalog/personalization/pega-profile.md)
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
-      * [Adobe Livefyre擴充功能](./catalog/social/adobe-livefyre.md)
       * [facebook連線](./catalog/social/facebook.md)
       * [linkedIn比對受眾連線](./catalog/social/linkedin.md)
       * [TikTok 連線](./catalog/social/tiktok.md)
