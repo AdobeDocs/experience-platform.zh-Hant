@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4632'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 
 此教學課程需要您實際瞭解架構建立中Adobe Experience Platform的各個層面。 在開始本教學課程之前，請檢閱檔案以瞭解下列概念：
 
-* [[!DNL Experience Data Model (XDM)]](../home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
+* [[!DNL Experience Data Model (XDM)]](../home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。
    * [結構描述組合基本概念](../schema/composition.md)：XDM結構描述及其建置區塊的概觀，包括類別、結構描述欄位群組、資料型別和個別欄位。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 
@@ -201,7 +201,7 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 * **[!UICONTROL 型別]：** 欄位的資料型別。 這包括基本純量型別和 [!DNL Schema Registry]. 範例： [!UICONTROL 字串]， [!UICONTROL 整數]， [!UICONTROL 布林值]， [!UICONTROL 個人]， [!UICONTROL 地址]， [!UICONTROL 電話號碼]等
 * **[!UICONTROL 說明]：** 欄位的可選說明應包含最多200個字元。
 
-的第一個欄位 `loyaltyTier` 物件會是一個字串，稱為 `id`，代表忠誠會員目前層級的ID。 每個忠誠會員的層級ID將是唯一的，因為該公司會根據不同因素為每個客戶設定不同的忠誠度層級臨界值。 將新欄位的型別設為&quot;[!UICONTROL 字串]「，以及 **[!UICONTROL 欄位屬性]** 區段會填入多個套用限制的選項，包括預設值、格式和最大長度。
+的第一個欄位 `loyaltyTier` 物件會是一個字串，稱為 `id`，代表忠誠會員目前層級的ID。 每個忠誠會員的層級ID將是唯一的，因為該公司會根據不同因素為每個客戶設定不同的忠誠度層級臨界值。 將新欄位的型別設為&quot;[!UICONTROL 字串]「，以及 **[!UICONTROL 欄位屬性]** 區段會填入多個套用限制的選項，包括預設值、格式和最大長度。 請參閱以下檔案： [資料驗證欄位的最佳實務](../schema/best-practices.md#data-validation-fields) 以進一步瞭解。
 
 ![結構描述編輯器，醒目顯示新ID欄位的欄位屬性值。](../images/tutorials/create-schema/string-constraints.png)
 
