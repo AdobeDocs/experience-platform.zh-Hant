@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Identity Service
 breadcrumb-title: 平台 Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分，以提供個人化的數位體驗。
 feature: Identities
-source-git-commit: 2617d913d73dcd7dd877fe877a7b2b4d79396a5f
+source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 32%
+source-wordcount: '129'
+ht-degree: 27%
 
 ---
 
@@ -30,6 +30,11 @@ ht-degree: 32%
    - [身分圖表檢視器](ui/identity-graph-viewer.md)
    - [共用裝置偵測](ui/shared-device-detection.md)
    - [在UI中定義身分欄位](ui/label-identities.md)
+- [身分圖表連結規則] {#identity-graph-linking-rules}
+   - [功能概觀](./identity-graph-linking-rules/overview.md)
+   - [範例情境](./identity-graph-linking-rules/example-scenarios.md)
+   - [Identity Service和即時客戶個人檔案](./identity-graph-linking-rules/identity-and-profile.md)
+   - [身分連結邏輯](./identity-graph-linking-rules/identity-linking-logic.md)
 - [ECID概觀](ecid.md)
 - [Identity Service中的刪除](deletion.md)
 - [隱私權請求處理](privacy.md)
