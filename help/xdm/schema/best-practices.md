@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料模型化的最佳實務
 description: 本檔案介紹Experience Data Model (XDM)結構描述，以及構成要在Adobe Experience Platform中使用的結構描述的建置組塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
 source-wordcount: '3044'
 ht-degree: 1%
@@ -231,7 +231,7 @@ Adobe應用程式欄位群組可透過使用 `identityMap` 欄位，這是系統
 
 ## 資料驗證欄位 {#data-validation-fields}
 
-若要防止將不必要的資料擷取到Platform中，建議您在建立結構描述時，定義欄位層級驗證的條件。 若要設定特定欄位的限制，請從結構編輯器選取欄位以開啟 [!UICONTROL 欄位屬性] 側欄。 請參閱以下檔案： [型別特定欄位屬性](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) 以取得可用欄位的確切說明。
+若要防止將錯誤的資料擷取到Platform中，建議您在建立結構描述時，定義欄位層級驗證的條件。 若要設定特定欄位的限制，請從結構編輯器選取欄位以開啟 [!UICONTROL 欄位屬性] 側欄。 請參閱以下檔案： [型別特定欄位屬性](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) 以取得可用欄位的確切說明。
 
 ![結構描述編輯器，其限制欄位在 [!UICONTROL 欄位屬性] 側欄。](../images/best-practices/data-validation-fields.png)
 
