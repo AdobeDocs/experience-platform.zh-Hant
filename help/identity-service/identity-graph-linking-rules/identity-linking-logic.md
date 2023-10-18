@@ -3,14 +3,19 @@ title: Identity Service連結邏輯
 description: 瞭解Identity Service如何連結不同的身分，以建立客戶的完整檢視。
 hide: true
 hidefromtoc: true
-source-git-commit: 03228eef47100096e98666966c4e5065eb7f478a
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
 # Identity Service連結邏輯
+
+>[!IMPORTANT]
+>
+>身分圖表連結規則目前Alpha。 功能和檔案可能會有所變更。
 
 當身分名稱空間和身分值相符時，就會建立兩個身分之間的連結。
 

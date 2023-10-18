@@ -3,17 +3,21 @@ title: 設定身分設定的範例情境
 description: 瞭解設定身分設定的範例情境。
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '433'
 ht-degree: 1%
 
 ---
 
 # 設定身分圖表連結規則的範例案例
 
-本檔案概述設定身分圖表連結規則時可考慮的範例情境。
+>[!IMPORTANT]
+>
+>身分圖表連結規則目前Alpha。 功能和檔案可能會有所變更。
 
+本檔案概述設定身分圖表連結規則時可考慮的範例情境。
 
 ## 共用裝置
 

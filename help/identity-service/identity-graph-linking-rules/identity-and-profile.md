@@ -3,9 +3,10 @@ title: Identity Service和即時客戶個人檔案
 description: 瞭解Identity Service和即時客戶個人檔案之間的關係
 hide: true
 hidefromtoc: true
-source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '705'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->此頁面假設合併原則正在使用身分圖表。 如需即時客戶個人檔案中合併原則的詳細資訊，請參閱以下檔案： [合併原則與身分拼接](../../profile/merge-policies/overview.md#identity-stitching).
+>* 身分圖表連結規則目前Alpha。 功能和檔案可能會有所變更。
+>
+>* 此頁面假設合併原則正在使用身分圖表。 如需即時客戶個人檔案中合併原則的詳細資訊，請參閱以下檔案： [合併原則與身分拼接](../../profile/merge-policies/overview.md#identity-stitching).
 
 雖然您可以同時使用Identity Service和即時客戶個人檔案，但Adobe Experience Platform的這兩項功能本身並不相同。
 
