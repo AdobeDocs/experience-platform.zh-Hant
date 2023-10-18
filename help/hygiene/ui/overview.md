@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 0%
+ht-degree: 35%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="資料生命週期請求狀態"
->abstract="此Widget顯示已建立、失敗和已完成的資料生命週期記錄刪除工作的總數。 如需資料生命週期流程的詳細資訊，請選取 **資料生命週期** ，位於左側導覽器中。"
+>title="資料生命週期要求狀態"
+>abstract="此介面工具顯示已建立、執行失敗和執行完成的資料生命週期記錄刪除作業的總計數。如需有關資料生命週期流程的詳細資訊，請在左側導覽中選取「**資料生命週期**」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="最近的資料生命週期工單"
->abstract="此Widget會根據您於右上角選取的選項，顯示最近建立或更新的5個資料生命週期工作單。 如需資料生命週期流程的詳細資訊，請選取 **資料生命週期** ，位於左側導覽器中。"
+>abstract="此介面工具顯示五個最近建立或更新的資料生命週期工單，依據你在右上角選取的選項而定。如需有關資料生命週期流程的詳細資訊，請在左側導覽中選取「**資料生命週期**」。"
 
 此 **[!UICONTROL 資料生命週期]** Adobe Experience Platform UI中的工作區可讓您建立及監控各種資料生命週期管理任務，包括刪除記錄及排程資料集有效期。
 

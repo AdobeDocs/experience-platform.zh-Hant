@@ -101,7 +101,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="最常用的目的地"
->abstract="此 Widget 會依據對應的對象數顯示貴組織最活躍的目的地。這些數字在上次快照時是準確的。此排名會提供對目前使用最多的目的地的分析，同時會強調可能未受到充分利用的目的地。"
+>abstract="此介面工具會依據對應的對象數顯示貴組織最活躍的目的地。這些數字在上次快照時是準確的。此排名會提供對目前使用最多的目的地的分析，同時會強調可能未受到充分利用的目的地。"
 
 此 **[!UICONTROL 最常使用的目的地]** Widget會依對應對象數目（截至上次快照為止）顯示您組織的熱門目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能會顯示可能未充分利用的目的地。
 
@@ -118,7 +118,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlycreateddestinations"
 >title="最近建立的目的地"
->abstract="此 Widget 會顯示您組織內最近設定的目的地清單。"
+>abstract="此介面工具會顯示您組織內最近設定的目的地清單。"
 
 此 **[!UICONTROL 最近建立的目的地]** widget可讓您檢視貴組織最近設定之目的地的清單。
 
@@ -135,7 +135,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
 >title="最近啟動的對象"
->abstract="此 Widget 會提供最近對應至目的地的對象清單。此清單會提供系統中正積極使用的對象和目的地的快照，能有助於對任何錯誤的對應進行移難排解。"
+>abstract="此介面工具會提供最近對應至目的地的對象清單。此清單會提供系統中正積極使用的對象和目的地的快照，能有助於對任何錯誤的對應進行移難排解。"
 
 此 **[!UICONTROL 最近啟用的對象]** widget提供最近對應至目的地的對象清單。 此清單會提供系統中正積極使用的對象和目的地的快照，能有助於對任何錯誤的對應進行移難排解。
 
@@ -152,7 +152,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
 >title="最近啟動的對象 (依目的地)"
->abstract="此 Widget 會根據在概觀下拉選單中選擇的目的地以遞減順序顯示最近啟動的前五個對象。"
+>abstract="此介面工具會根據在概觀下拉選單中選擇的目的地以遞減順序顯示最近啟動的前五個對象。"
 
 此 **[!UICONTROL 目的地最近啟用的對象]** widget會根據在概述下拉式清單中選取的目的地，以遞減順序顯示最近啟用的前五個對象。 它類似於 [!UICONTROL 最近啟用的對象] Widget，但顯示的資料 **僅限** 套用至選取的目的地。
 
@@ -169,7 +169,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
 >title="對象規模趨勢"
->abstract="此 Widget 會說明對象中包含的設定檔數量，這會每天傳送到目的地帳戶。第一個下拉選單會調整對象趨勢的時段。第二個 Widget 下拉選單會選取要分析的對象。可從概觀的下拉選單中選擇目的地。"
+>abstract="此介面工具會說明對象中包含的設定檔數量，這會每天傳送到目的地帳戶。第一個下拉選單會調整對象趨勢的時段。第二個介面工具下拉選單會選取要分析的對象。可從概觀的下拉選單中選擇目的地。"
 
 此 **[!UICONTROL 對象人數趨勢]** Widget針對已對應至目的地帳戶的對象，描述一段時間內設定檔計數的關係。 Widget使用折線圖來說明對象中包含且每日傳送至目的地帳戶的設定檔數量。
 
@@ -188,7 +188,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
 >title="未對應對象 (依身分識別)"
->abstract="此 Widget 會針對特定目的地和身分識別列出依遞減的身分識別計數排名的前五個&#x200B;**未對應**&#x200B;對象。Widget 下拉選單中列出的篩選器 ID 會根據在概觀頁面頂端選取的目的地帳戶而變更。"
+>abstract="此介面工具會針對特定目的地和身分識別列出依遞減的身分識別計數排名的前五個&#x200B;**未對應**&#x200B;對象。介面工具下拉選單中列出的篩選器 ID 會根據在概觀頁面頂端選取的目的地帳戶而變更。"
 
 此 **[!UICONTROL 依身分割槽分的未對應對象]** widget列出前五名 **未對應** 依指定目的地和身分的遞減身分計數排名的對象。 它會根據所選的ID反白標示對對應至所選目的地帳戶最有利的受眾。
 
@@ -205,9 +205,9 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
 >title="已對應對象 (依身分識別)"
->abstract="此 Widget 會提供前五個&#x200B;**已對應**&#x200B;對象的清單。該清單會根據對象中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從 Widget 標題下方的下拉選單中選取。此 Widget 下拉選單中可用的目的地 ID 會依據在概觀儀表板頂部選擇的目的地而定。"
+>abstract="此介面工具會提供前五個&#x200B;**已對應**&#x200B;對象的清單。該清單會根據對象中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從介面工具標題下方的下拉選單中選取。此介面工具下拉選單中可用的目的地 ID 會依據在概觀儀表板頂部選擇的目的地而定。"
 
-此 Widget 會提供前五個&#x200B;**已對應**&#x200B;對象的清單。該清單會根據對象中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從 Widget 標題下方的下拉選單中選取。Widget中下拉式清單可用的目的地ID會根據在總覽儀表板頂端選取的目的地帳戶篩選器而變更。
+此介面工具會提供前五個&#x200B;**已對應**&#x200B;對象的清單。該清單會根據對象中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從介面工具標題下方的下拉選單中選取。Widget中下拉式清單可用的目的地ID會根據在總覽儀表板頂端選取的目的地帳戶篩選器而變更。
 
 ![依身分識別的Widget對應的對象。](../images/destinations/mapped-audiences-by-identity.png)
 
@@ -218,7 +218,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
 >title="常見對象"
->abstract="此 Widget 會提供在頁面頂端選擇的目的地帳戶中啟動的前五個對象的清單，以及在 Widget 下拉選單中選取的目的地。對象清單會根據啟動的時間排序。啟動時間最近的對象會顯示在頂端。"
+>abstract="此介面工具會提供在頁面頂端選擇的目的地帳戶中啟動的前五個對象的清單，以及在介面工具下拉選單中選取的目的地。對象清單會根據啟動的時間排序。啟動時間最近的對象會顯示在頂端。"
 
 此 **[!UICONTROL 通用對象]** widget提供在頁面頂端所選目的地帳戶中啟用的前五個對象的清單，以及在介面工具下拉式清單中選取的目的地。 對象清單會根據啟動的時間排序。啟動時間最近的對象會顯示在頂端。
 
@@ -239,7 +239,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
 >title="已對應對象的健康情況"
->abstract="此 Widget 會提供最多包含 20 個已對應對象的清單，這些對象的總設定檔計數和對應至該目的地的 30 天平均對象規模至少有一個標準差的因素偏差。這會為過去 30 天內對象規模和平均值的差異提供計算量度。對象規模的排序為由高至低。"
+>abstract="此介面工具會提供最多包含 20 個已對應對象的清單，這些對象的總設定檔計數和對應至該目的地的 30 天平均對象規模至少有一個標準差的因素偏差。這會為過去 30 天內對象規模和平均值的差異提供計算量度。對象規模的排序為由高至低。"
 
 Widget提供最多20個對應對象的清單，這些對應對象截至上次每日快照的設定檔總數與對應至該目的地的30天平均對象人數至少有一個標準差。
 
@@ -262,7 +262,7 @@ Widget提供最多20個對應對象的清單，這些對應對象截至上次每
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_destinationscount"
 >title="目的地計數"
->abstract="此 Widget 會提供可以在系統內啟動和傳遞對象的可用端點總數。此數字包括使用中和非使用中的目的地。"
+>abstract="此介面工具會提供可以在系統內啟動和傳遞對象的可用端點總數。此數字包括使用中和非使用中的目的地。"
 
 此 [!UICONTROL 目的地計數] widget提供可在系統中啟用及傳遞對象的可用端點總數。 此數字包括使用中和非使用中的目的地。
 

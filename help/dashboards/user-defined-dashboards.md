@@ -41,14 +41,14 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
->title="Widget 的最大數量"
->abstract="使用者定義的儀表板最多支援十個 Widget。將十個 Widget 新增到儀表板後，[!UICONTROL 新增 Widget] 選項會停用並顯示為灰色。"
+>title="介面工具的最大數量"
+>abstract="使用者定義的儀表板最多支援十個介面工具。將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。"
 
 從您的新儀表板檢視中，選取 **[!UICONTROL 新增Widget]** 以開始建立Widget的程式。
 
 >[!IMPORTANT]
 >
->使用者定義的儀表板最多支援十個 Widget。將十個 Widget 新增到儀表板後，[!UICONTROL 新增 Widget] 選項會停用並顯示為灰色。
+>使用者定義的儀表板最多支援十個介面工具。將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。
 
 ![醒目提示新增Widget的新空白儀表板。](./images/user-defined-dashboards/add-new-widget.png)
 

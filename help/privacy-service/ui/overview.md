@@ -16,7 +16,7 @@ ht-degree: 19%
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
 >title="資料主體要求"
->abstract="此 Widget 會顯示 Privacy Service 在特定日期處理的已提交和已完成資料主體要求的數量。如需有關您的 Privacy Service 流程的詳細資訊，請在左側導覽中選取&#x200B;**要求**。"
+>abstract="此介面工具會顯示 Privacy Service 在特定日期處理的已提交和已完成資料主體要求的數量。如需有關您的 Privacy Service 流程的詳細資訊，請在左側導覽中選取&#x200B;**要求**。"
 
 PRIVACY SERVICEUI [!DNL Privacy Service] 可讓您協調各種Adobe Experience Cloud應用程式的隱私權與合規要求。
 

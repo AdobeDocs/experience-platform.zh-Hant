@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 14%
+ht-degree: 26%
 
 ---
 
@@ -14,10 +14,10 @@ ht-degree: 14%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="工單 ID"
->abstract="當資料生命週期請求傳送至系統時，會建立工作單以執行請求的任務。 換言之，工單代表特定資料生命週期處理，包括其目前狀態與其他相關明細。 每個工單在建立時都會被自動指派自己的唯一 ID。"
+>abstract="將資料生命週期要求傳送到系統時，便會建立執行所要求任務的工單。換句話說，工單代表特定的資料生命週期流程，包括其目前狀態和其他相關的詳細資訊。每個工單在建立時都會被自動指派自己的唯一 ID。"
 >text="See the data lifecycle UI guide to learn more."
 
-當資料生命週期請求傳送至系統時，會建立工作單以執行請求的任務。 工單代表特定資料生命週期程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
+將資料生命週期要求傳送到系統時，便會建立執行所要求任務的工單。工單代表特定資料生命週期程式，例如排程的資料集到期日，其中包括其目前狀態和其他相關詳細資訊。
 
 本指南說明如何在Adobe Experience Platform UI中檢視及管理現有工單。
 
@@ -65,17 +65,17 @@ ht-degree: 14%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="服務狀態"
->abstract="資料生命週期請求由多個Experience Platform服務獨立處理。 本區段會針對各個服務概述要求目前的處理狀態。若要瞭解詳細資訊，請參閱資料生命週期UI指南。"
+>abstract="資料生命週期要求會由多個 Experience Platform 服務獨立處理。本區段會概述各個服務之要求目前的處理狀態。若要了解詳細資訊，請參閱「資料生命週期 UI 指南」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="身分識別的數量"
->abstract="作為此工單的一部分，其記錄被要求更新或刪除的身分識別的數量。計數中包含的身分識別不一定存在於受影響的資料集中。若要瞭解詳細資訊，請參閱資料生命週期UI指南。"
+>abstract="作為此工單的一部分，其記錄被要求更新或刪除的身分識別的數量。計數中包含的身分識別不一定存在於受影響的資料集中。若要了解詳細資訊，請參閱「資料生命週期 UI 指南」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="記錄刪除回應"
->abstract="當記錄刪除流程收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;區段下。如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要深入瞭解，請參閱資料生命週期UI指南。"
+>abstract="當記錄刪除流程收到來自系統的回應時，這些訊息會顯示在&#x200B;**[!UICONTROL 結果]**&#x200B;區段下。如果在處理工單時出現問題，任何相關的錯誤訊息都會出現在本區段以協助您對該問題進行疑難排解。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 選取已列出工單的ID以檢視其詳細資料。
 
