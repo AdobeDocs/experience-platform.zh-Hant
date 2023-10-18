@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 20%
+source-wordcount: '311'
+ht-degree: 18%
 
 ---
 
@@ -29,6 +29,13 @@ ht-degree: 20%
       - [概觀](data-distiller/derived-attributes/overview.md)
       - [順暢的SQL流程](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [建立十等分衍生屬性](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - AI/ML功能管道 {#ml-feature-pipelines}
+      - [AI/ML功能管道](data-distiller/ml-feature-pipelines/overview.md)
+      - [連線到Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [探索資料分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [ML的工程師功能](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [將資料匯出至ML環境](data-distiller/ml-feature-pipelines/export-data.md)
+      - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - 使用案例 {#use-cases}
    - [捨棄的瀏覽](use-cases/abandoned-browse.md)
    - [歸因分析](use-cases/attribution-analysis.md)
@@ -81,7 +88,7 @@ ht-degree: 20%
    - [稽核記錄指南](data-governance/audit-log-guide.md)
    - [臨時結構描述資料集中的身分](data-governance/ad-hoc-schema-identities.md)
    - [針對臨時結構描述的屬性型存取控制支援](./data-governance/ad-hoc-schema-labels.md)
-- 最佳做法 {#best-practices}
+- 最佳作法 {#best-practices}
    - [查詢執行](best-practices/writing-queries.md)
    - [資料資產組織](./best-practices/organize-data-assets.md)
 - 基本概念 {#essential-concepts}
