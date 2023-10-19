@@ -4,14 +4,34 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '526'
 ht-degree: 4%
 
 ---
 
 # Adobe Experience Platform Debugger發行說明
+
+## 1.5.0版 — 2023年10月19日
+
+### 新功能
+
+* 在標籤摘要和記錄中顯示屬性、環境和規則的連結。
+
+### 修正和改良
+
+* 修正未傳送標籤摘要資料的問題。
+* 修正保證工作階段會產生CORS錯誤的問題
+* 修正無法顯示Target追蹤的問題。
+* 修正「傳送意見回饋」按鈕。
+* 修正≥2.18.0版Web SDK摘要中缺少「資料串流ID」的問題。
+* 修正無法搜尋Edge記錄檔的問題。
+* 新增特定帳戶型別其他設定檔的相關備註。
+
+## 1.4.1版 — 2022年11月1日
+
+* 已改進具有許多Adobe Experience Platform保證事件的頁面效能。
 
 ## 1.4.0版 — 2022年10月3日
 
