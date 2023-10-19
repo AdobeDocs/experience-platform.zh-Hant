@@ -2,9 +2,9 @@
 title: 工單API端點
 description: 資料衛生API中的/workorder端點可讓您以程式設計方式管理身分的刪除任務。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1181'
 ht-degree: 3%
 
 ---
@@ -26,6 +26,10 @@ ht-degree: 3%
 ## 建立記錄刪除請求 {#create}
 
 您可以透過向發出POST請求，從單一資料集或所有資料集中刪除一或多個身分 `/workorder` 端點。
+
+>[!IMPORTANT]
+> 
+>每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板** 每月最多可提交600,000筆身分記錄刪除。<br>單一 [透過UI記錄刪除請求](../ui/record-delete.md) 可讓您一次提交10,000個ID。 用於刪除記錄的API方法允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為上限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
 
 **API格式**
 

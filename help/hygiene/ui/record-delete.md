@@ -2,9 +2,9 @@
 title: 刪除記錄
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1564'
 ht-degree: 8%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 > 
->為了提高效率並降低資料集作業成本，進行中的變更包括，已移至Delta格式的組織可從Identity Service、即時客戶設定檔和資料湖中刪除資料。 此型別的使用者稱為差異移轉使用者。 已進行差異移轉的組織之使用者，可選擇從單一或所有資料集中刪除記錄。 來自尚未進行差異移轉之組織的使用者，無法選擇從單一或所有資料集中刪除記錄，如下圖所示。 在此情況下，請繼續瀏覽 [提供身分](#provide-identities) 部分。
+>為了提高效率並降低資料集作業成本，進行中的變更包括，已移至Delta格式的組織可從Identity Service、即時客戶設定檔和資料湖中刪除資料。 此型別的使用者稱為差異移轉使用者。 已進行差異移轉的組織之使用者，可選擇從單一或所有資料集中刪除記錄。 來自尚未進行差異移轉之組織的使用者，無法選擇從單一或所有資料集中刪除記錄，如下圖所示。 在此情況下，請繼續執行 [提供身分](#provide-identities) 部分。
 
 ![使用的請求建立工作流程 [!UICONTROL 刪除記錄] 選項已選取並反白顯示。](../images/ui/record-delete/delete-record.png)
 
@@ -139,7 +139,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 >[!IMPORTANT]
 > 
->每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板** 每月最多可提交600,000筆身分記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 此 [刪除記錄的API方法](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) 允許一次提交100,000個ID。
+>每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板** 每月最多可提交600,000筆身分記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 此 [刪除記錄的API方法](../api/workorder.md#create) 允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為上限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
 
 ![請求設定的 [!UICONTROL 名稱] 和 [!UICONTROL 說明] 欄位和 [!UICONTROL 提交] 反白顯示。](../images/ui/record-delete/submit.png)
 
