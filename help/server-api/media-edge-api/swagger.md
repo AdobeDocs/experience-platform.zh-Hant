@@ -1,18 +1,17 @@
 ---
 solution: Experience Platform
-title: Media Edge API快速入門
-description: Media Edge API可讓開發人員收集Media Edge Analytics和Customer Journey Analytics的資料。
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
+title: Media Edge Open API規格
+description: 本檔案包含YAML Open API Specification (OAS)或「Swagger」參考。 您可以將此規格複製並貼到轉譯工具（例如editor.swagger.io）中，以檢視Media Edge API資訊。 此規格包含每個端點的引數、範例和結構描述。
+source-git-commit: 11a9dc980b7a63549cdd9a8c9522e001faceeb56
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
-
 # 使用Media Edge API的Open API規格檔案
 
-本檔案包含JSON Open API規格(OAS)或「Swagger」參考。 您可以將此規格複製並貼到轉譯工具（例如editor.swagger.io）中，以檢視Media Edge API資訊。 此規格包含每個端點的引數、範例和結構描述。
+本檔案包含YAML Open API Specification (OAS)或「Swagger」參考。 您可以將此規格複製並貼到轉譯工具（例如editor.swagger.io）中，以檢視Media Edge API資訊。 此規格包含每個端點的引數、範例和結構描述。
 
 +++ 選取以檢視及複製「開啟API規格」
 
@@ -2660,7 +2659,7 @@ ht-degree: 0%
     },
     "/play": {
       "post": {
-        "description": "Sent when the player changes state to "playing" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to "playing" include "buffering", when the user resumes from "paused", when the player recovers from an error, and during autoplay."
+        "description": "Sent when the player changes state to \"playing\" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to \"playing\" include \"buffering\", when the user resumes from \"paused\", when the player recovers from an error, and during autoplay.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3332,11 +3331,11 @@ ht-degree: 0%
                                     },
                                     "contentType": {
                                       "type": "string",
-                                      "description": "Available values per Stream Type: Audio - "song", "podcast", "audiobook", "radio"; Video: "VoD", "Live", "Linear", "UGC", "DVoD" Customers can provide custom values for this parameter"
+                                      "description": "Available values per Stream Type: Audio - \"song\", \"podcast\", \"audiobook\", \"radio\"; Video: \"VoD\", \"Live\", \"Linear\", \"UGC\", \"DVoD\" Customers can provide custom values for this parameter",
                                     },
                                     "friendlyName": {
                                       "type": "string",
-                                      "description": "This is the "friendly" (human-readable) name of the content"
+                                      "description": "This is the \"friendly\" (human-readable) name of the content"
                                     },
                                     "playerName": {
                                       "type": "string",
