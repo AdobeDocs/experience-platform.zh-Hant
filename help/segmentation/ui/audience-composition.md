@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ ht-degree: 0%
 將對象新增至「對象」區塊。 選取 **[!UICONTROL 新增對象]**.
 
 ![「新增對象」按鈕會醒目提示。](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>請注意 **僅限** 使用預設合併原則定義的對象將會出現。
 
 對象清單隨即顯示。 選取您要包含的對象，接著 **[!UICONTROL 新增]** 以將它們附加至您的對象區塊。
 
