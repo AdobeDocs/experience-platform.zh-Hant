@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1185'
 ht-degree: 9%
 
 ---
@@ -186,6 +186,7 @@ ht-degree: 9%
       * [串流目的地的IP位址允許清單](./catalog/streaming/ip-address-allow-list.md)
    * 調查目的地 {#survey}
       * [調查目的地概觀](./catalog/survey/overview.md)
+      * [Qualtrics Automations目的地](./catalog/survey/qualtrics-automations.md)
       * [Foresee擴充功能目的地](./catalog/survey/foresee.md)
       * [InMoment延伸模組](./catalog/survey/inmoment.md)
       * [Qualtrics網站意見回饋擴充功能](./catalog/survey/qualtrics.md)
