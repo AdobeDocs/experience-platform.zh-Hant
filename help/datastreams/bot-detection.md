@@ -1,11 +1,11 @@
 ---
-title: 設定機器人偵測
-description: 瞭解如何設定資料串流的機器人偵測。
+title: 設定資料串流的機器人偵測
+description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
