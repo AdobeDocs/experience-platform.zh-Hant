@@ -1,16 +1,16 @@
 ---
-title: 設定資料流
+title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2779'
 ht-degree: 75%
 
 ---
 
 
-# 設定資料流
+# 建立和設定資料串流
 
 本文件會介紹在 UI 中設定[資料流](./overview.md)的步驟。
 
