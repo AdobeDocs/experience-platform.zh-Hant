@@ -3,10 +3,10 @@ title: 在使用者介面中建立Google PubSub來源連線
 description: 瞭解如何使用Platform使用者介面建立Google PubSub來源聯結器。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 0%
+source-wordcount: '1099'
+ht-degree: 1%
 
 ---
 
@@ -31,12 +31,24 @@ ht-degree: 0%
 
 為了連線 [!DNL PubSub] 對於Platform，您必須提供下列認證的有效值：
 
+>[!BEGINTABS]
+
+>[!TAB 專案型驗證]
+
 | 認證 | 說明 |
-| ---------- | ----------- |
+| --- | --- |
 | 專案 ID | 驗證所需的專案ID [!DNL PubSub]. |
+| 認證 | 驗證所需的認證 [!DNL PubSub]. 您必須確保在移除認證的空格後，放入完整的JSON檔案。 |
+
+>[!TAB 主題和訂閱型驗證]
+
+| 認證 | 說明 |
+| --- | --- |
 | 認證 | 驗證所需的認證 [!DNL PubSub]. 您必須確保在移除認證的空格後，放入完整的JSON檔案。 |
 | 主題名稱 | 您的名稱 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您訂閱訊息發佈至的主題，以接收訊息。 **注意**：單一 [!DNL PubSub] 訂閱只能用於一個資料流。 若要建立多個資料流，您必須有多個訂閱。 |
 | 訂閱名稱 | 您的名稱 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您訂閱訊息發佈至的主題，以接收訊息。 |
+
+>[!ENDTABS]
 
 如需這些值的詳細資訊，請參閱下列內容 [PubSub驗證](https://cloud.google.com/pubsub/docs/authentication) 檔案。 如果您使用以服務帳戶為基礎的驗證，請參閱下列內容 [PubSub指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生認證的步驟。
 
@@ -68,7 +80,8 @@ ht-degree: 0%
 
 >[!TIP]
 >
->建立存取受限的帳戶時，您必須至少提供一個主題名稱或訂閱名稱。 如果缺少這兩個值，驗證將會失敗。
+>* 建立存取受限的帳戶時，您必須至少提供一個主題名稱或訂閱名稱。 如果缺少這兩個值，驗證將會失敗。
+>* 建立後，您就無法變更的驗證型別 [!DNL Google PubSub] 基礎連線。 若要變更驗證型別，您必須建立新的基礎連線。
 
 如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**，然後為您的新專案提供名稱和說明（選用） [!DNL PubSub] 帳戶。
 

@@ -3,10 +3,10 @@ title: 使用流量服務API建立Google PubSub來源連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Google PubSub帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 1%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要您深入瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 * [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
 * [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
@@ -31,13 +31,26 @@ ht-degree: 1%
 
 為了 [!DNL Flow Service] 以連線到 [!DNL PubSub]，您必須提供下列連線屬性的值：
 
+>[!BEGINTABS]
+
+>[!TAB 專案型驗證]
+
 | 認證 | 說明 |
-| ---------- | ----------- |
+| --- | --- |
 | `projectId` | 驗證所需的專案ID [!DNL PubSub]. |
+| `credentials` | 驗證所需的認證 [!DNL PubSub]. 您必須確保在移除認證的空格後，放入完整的JSON檔案。 |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器特性，包括與建立基礎和來源目標連線相關的驗證規格。 此 [!DNL PubSub] 連線規格ID為： `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB 主題和訂閱型驗證]
+
+| 認證 | 說明 |
+| --- | --- |
 | `credentials` | 驗證所需的認證 [!DNL PubSub]. 您必須確保在移除認證的空格後，放入完整的JSON檔案。 |
 | `topicName` | 代表訊息摘要的資源名稱。 如果您想要提供存取許可權以存取中的特定資料流，則必須指定主題名稱。 [!DNL PubSub] 來源。 主題名稱格式為： `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | 您的名稱 [!DNL PubSub] 訂閱。 在 [!DNL PubSub]，訂閱可讓您訂閱訊息發佈至的主題，以接收訊息。 **注意**：單一 [!DNL PubSub] 訂閱只能用於一個資料流。 若要建立多個資料流，您必須有多個訂閱。 訂閱名稱格式為： `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器特性，包括與建立基礎和來源目標連線相關的驗證規格。 此 [!DNL PubSub] 連線規格ID為： `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 如需這些值的詳細資訊，請參閱此 [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) 檔案。 若要使用以服務帳戶為基礎的驗證，請參閱此 [[!DNL PubSub] 建立服務帳戶指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生認證的步驟。
 
@@ -50,6 +63,10 @@ ht-degree: 1%
 如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../../landing/api-guide.md).
 
 ## 建立基礎連線
+
+>[!TIP]
+>
+>建立後，您就無法變更的驗證型別 [!DNL Google PubSub] 基礎連線。 若要變更驗證型別，您必須建立新的基礎連線。
 
 建立來源連線的第一個步驟是驗證您的 [!DNL PubSub] 來源並產生基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
@@ -67,11 +84,13 @@ ht-degree: 1%
 POST /connections
 ```
 
-**要求**
-
 >[!BEGINTABS]
 
 >[!TAB 專案型驗證]
+
+若要使用專案型驗證建立基礎連線，請向以下發出POST請求： `/connections` 端點，並提供您的 `projectId` 和 `credentials` 在要求內文中。
+
++++請求
 
 ```shell
 curl -X POST \
@@ -104,7 +123,26 @@ curl -X POST \
 | `auth.params.credentials` | 驗證所需的認證或金鑰 [!DNL PubSub]. |
 | `connectionSpec.id` | 此 [!DNL PubSub] 連線規格ID： `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
+++++
+
++++回應
+
+成功的回應會傳回新建立連線的詳細資料，包括其唯一識別碼(`id`)。 建立來源連線的下一個步驟需要此基本連線ID。
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+++++
+
 >[!TAB 主題和訂閱型驗證]
+
+POST若要使用主題和訂閱式驗證建立基礎連線，請向 `/connections` 端點，並提供您的 `credentials`， `topicName`、和 `subscriptionName` 在要求內文中。
+
++++請求
 
 ```shell
 curl -X POST \
@@ -139,9 +177,9 @@ curl -X POST \
 | `auth.params.subscriptionName` | 的專案ID和訂閱ID配對 [!DNL PubSub] 要提供存取權的來源。 |
 | `connectionSpec.id` | 此 [!DNL PubSub] 連線規格ID： `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!ENDTABS]
++++
 
-**回應**
++++回應
 
 成功的回應會傳回新建立連線的詳細資料，包括其唯一識別碼(`id`)。 建立來源連線的下一個步驟需要此基本連線ID。
 
@@ -151,6 +189,11 @@ curl -X POST \
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
+++++
+
+>[!ENDTABS]
+
 
 ## 建立來源連線 {#source}
 
