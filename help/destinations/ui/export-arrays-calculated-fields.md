@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何使用計算欄位，將平面結構描述檔案中的陣列從Real-Time CDP匯出至雲端儲存空間目的地。
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1497'
 ht-degree: 5%
 
 ---
@@ -216,8 +216,21 @@ johndoe@acme.org,"1538097126"
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` 和 `sha256` 雜湊函式 {#hashing-functions}
+### 雜湊函式 {#hashing-functions}
 
-除了專用於從陣列匯出陣列或元素的函式之外，您還可以使用雜湊函式來雜湊屬性。 例如，如果您在屬性中有任何個人識別資訊，可在匯出這些欄位時將其雜湊化。
+除了專用於從陣列匯出陣列或元素的函式之外，您還可以使用雜湊函式在匯出的檔案中雜湊屬性。 例如，如果您在屬性中有任何個人識別資訊，可在匯出這些欄位時將其雜湊化。
 
-例如，您可以直接雜湊字串值 `md5(personalEmail.address)`. 如有需要，您也可以將陣列欄位的個別元素進行雜湊處理，如下所示： `md5(purchaseTime[0])`
+例如，您可以直接雜湊字串值 `md5(personalEmail.address)`. 如有需要，您也可以雜湊陣列欄位的個別元素，假設陣列中的元素是字串，如下所示： `md5(purchaseTime[0])`
+
+支援的雜湊函式有：
+
+| 函數 | 範例運算式 |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` | `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}
