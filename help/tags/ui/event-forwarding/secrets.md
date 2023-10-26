@@ -2,10 +2,10 @@
 title: 在事件轉送中設定秘密
 description: 瞭解如何在UI中設定秘密，以驗證用於事件轉送屬性中的端點。
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 4%
+source-wordcount: '2458'
+ht-degree: 3%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 4%
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | 包含數個屬性以支援 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格，用於 [Google Ads API](https://developers.google.com/google-ads/api/docs/oauth/overview) 和 [發佈/訂閱API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL HTTP] | 包含使用者名稱和密碼的兩個字串屬性。 |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL OAuth 2] | 包含數個屬性以支援 [使用者端憑證授權型別](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) 針對 [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) 驗證規格。 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL OAuth 2 JWT] | 包含數個屬性以支援的JSON Web權杖(JWT)設定檔 [OAuth 2.0授權](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) 授權。 系統會要求您提供必要資訊，然後在指定的間隔內處理這些權杖的續約。 |
 | [!UICONTROL Token] | 代表兩個系統已知且瞭解的驗證Token值的單一字元字串。 |
@@ -76,6 +77,7 @@ ht-degree: 4%
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[！UICONTROL [!DNL LinkedIn] Oauth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -175,6 +177,38 @@ ht-degree: 4%
 >如果您的組織有為Google Cloud應用程式設定的重新驗證原則，則建立的密碼在驗證過期後不會成功重新整理（1到24小時之間，取決於原則設定）。
 >
 >若要解決此問題，請登入Google Admin Console並導覽至 **[!DNL App access control]** 頁面，以便將事件轉送應用程式(Adobe Real-Time CDP事件轉送)標示為 [!DNL Trusted]. 請參閱Google檔案，網址為 [設定Google Cloud Services的工作階段長度](https://support.google.com/a/answer/9368756) 以取得詳細資訊。
+
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
+
+若要建立 [!DNL LinkedIn] OAuth 2密碼，選取 **[!UICONTROL [!DNL LinkedIn]OAuth 2]** 從 **[!UICONTROL 型別]** 下拉式清單。 接下來，選取 **[!UICONTROL 建立密碼]**.
+
+![此 [!UICONTROL 建立密碼] 以Tab鍵定位 [!UICONTROL 型別] 醒目提示的欄位。](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+此時會出現一個彈出視窗，通知您需要透過手動授權密碼 [!DNL LinkedIn]. 選取 **[!UICONTROL 使用建立並授權機密[!DNL LinkedIn]]** 以繼續。
+
+![[!DNL LinkedIn] 授權彈出視窗醒目提示 [!UICONTROL 使用建立並授權機密 [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+會出現一個對話方塊，提示您輸入 [!DNL LinkedIn] 認證。 依照提示操作，授予資料的事件轉送存取權。
+
+授權程式完成後，您將返回 **[!UICONTROL 秘密]** 標籤，您可在其中檢視新建立的密碼。 您可以在此處檢視密碼的狀態和到期日。
+
+![此 [!UICONTROL 密碼] 索引標籤會醒目顯示新建立的密碼。](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### 重新授權 [!UICONTROL [!DNL LinkedIn] OAuth 2] 密碼
+
+>重要
+>
+>您需要使用重新授權 [!DNL LinkedIn] 憑證每365天一次。 如果您沒有在適當時間重新授權，您的秘密將不會重新整理，並且 [!DNL LinkedIn] 轉換請求將失敗。
+
+在需要重新授權的機密之前三個月，當您導覽屬性的任何頁面時，將會開始顯示快顯視窗。 選取 **[!UICONTROL 按一下這裡以前往您的秘密]**.
+
+![此 [!UICONTROL 屬性概述] 索引標籤醒目提示密碼重新授權快顯視窗。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+系統會將您重新導向至 [!UICONTROL 秘密] 標籤。 此頁面上列出的秘密會經過篩選，僅顯示需要重新授權的秘密。 選取 **[!UICONTROL 需要驗證]** 秘密需要重新授權。
+
+![此 [!UICONTROL 密碼] 標籤反白顯示 [!UICONTROL 需要驗證]針對 [!DNL LinkedIn] 密碼。](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+會出現一個對話方塊，提示您輸入 [!DNL LinkedIn] 認證。 依照提示重新授權您的密碼。
 
 ## 編輯密碼
 
