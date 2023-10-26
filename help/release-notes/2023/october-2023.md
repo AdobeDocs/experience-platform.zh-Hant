@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的2023年10月發行說明。
-source-git-commit: d024596c7d85139721ef370f9e081911a217d9ba
+source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 43%
+source-wordcount: '577'
+ht-degree: 35%
 
 ---
 
@@ -14,7 +14,46 @@ ht-degree: 43%
 
  Experience Platform 現有功能的更新：
 
+- [資料收集](#data-collection)
+- [沙箱](#sandboxes)
+- [Segmentation Service](#segmentation)
 - [來源](#sources)
+
+## 資料集合 {#data-collection}
+
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+
+**新功能或更新功能**
+
+| 類型 | 功能 | 說明 |
+| --- | --- | --- |
+| 擴充功能 | [!DNL Meta] 轉換API增強功能 | 有三項增強功能： [中繼轉換API](/help/tags/extensions/server/meta/overview.md) 副檔名： <ul><li>與整合 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)：可讓您共用pixelID並存取Conversions API與Adobe整合的代號，建立順暢的登入體驗。</li><li>與整合 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)：可讓您傳送廣告給更有可能完成所需動作的使用者，並將動作連結回傳送的廣告。</li><li>與整合 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha)：可讓您在CIP欄位中傳遞LiveRamp的RampID，而不需直接與合作夥伴或Meta共用PII。 </li></ul> |
+
+如需有關資料收集的詳細資訊，請詳閱[資料收集概觀](../../tags/home.md)。
+
+## 沙箱 {#sandboxes}
+
+Adobe Experience Platform的建置可豐富全球的數位體驗應用程式。 公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。 為了滿足此需求，Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 沙箱工具 | 沙箱工具功能可讓您提高沙箱之間的設定準確性，以及順暢地匯出和匯入沙箱之間的沙箱設定。 您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。 如需詳細資訊，請參閱 [沙箱工具介面指南](../../sandboxes/ui/sandbox-tooling.md). |
+
+如需沙箱的詳細資訊，請參閱 [沙箱總覽](../../sandboxes/home.md).
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的對象。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立對象。這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+
+**新功能**
+
+| 功能 | 說明 |
+| ------- | ----------- |
+| 帳戶對象（有限GA） | 在Real-time Customer Data Platform B2B Edition中，您現在可以使用帳戶細分，讓行銷細分體驗（從以人物為基礎的對象到以帳戶為基礎的對象）更趨簡單明瞭。 如需有關此功能的詳細資訊，請參閱 [帳戶對象總覽](../../segmentation/ui/account-audiences.md). |
+
+若要深入瞭解分段服務，請參閱 [Segmentation Service概述](../../segmentation/home.md).
 
 ## 來源 {#sources}
 

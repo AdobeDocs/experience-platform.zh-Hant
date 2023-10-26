@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 94651b8035677eb65f6ca9e93001b4149f8bdbd4
+source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
 workflow-type: tm+mt
-source-wordcount: '2293'
+source-wordcount: '2283'
 ht-degree: 28%
 
 ---
@@ -222,8 +222,6 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 | ------- | ----------- |
 | 可自訂欄 | 您現在可以使用可重新調整大小的欄來自訂對象入口網站的版面。 如需有關此功能的詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#customize). |
 | 更新頻率劃分 | 您現在可以檢視組織中對象更新頻率的劃分。 如需有關此功能的詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#browse). |
-
-若要深入瞭解來源，請參閱 [來源概觀](../../sources/home.md).
 
 若要深入瞭解分段服務，請參閱 [Segmentation Service概述](../../segmentation/home.md).
 
