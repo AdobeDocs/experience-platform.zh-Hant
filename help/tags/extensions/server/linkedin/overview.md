@@ -2,7 +2,7 @@
 title: Linkedin轉換API事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能可讓您測量Linkedin行銷活動的效能。
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 ### 建立密碼和資料元素
 
-建立新的 `LinkedIn` [事件轉送密碼](../../../ui/event-forwarding/secrets.md) 並為它提供唯一名稱，以表示驗證成員。 這將用於驗證與您的帳戶的連線，同時保持值的安全。
+建立新的 [!DNL LinkedIn] [事件轉送密碼](../../../ui/event-forwarding/secrets.md) 並為它提供唯一名稱，以表示驗證成員。 這將用於驗證與您的帳戶的連線，同時保持值的安全。
 
 下一個， [建立資料元素](../../../ui/managing-resources/data-elements.md#create-a-data-element) 使用 [!UICONTROL 核心] 擴充功能和 [!UICONTROL 密碼] 資料元素型別以參照 `LinkedIn` 您剛才建立的密碼。
 
