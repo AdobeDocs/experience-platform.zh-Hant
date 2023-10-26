@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的2023年10月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 35%
+source-wordcount: '766'
+ht-degree: 36%
 
 ---
 
@@ -15,7 +15,8 @@ ht-degree: 35%
 
  Experience Platform 現有功能的更新：
 
-- [資料收集](#data-collection)
+- [資料集合](#data-collection)
+- [目的地](#destinations)
 - [沙箱](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
@@ -31,6 +32,31 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | 擴充功能 | [!DNL Meta] 轉換API增強功能 | 有三項增強功能： [中繼轉換API](/help/tags/extensions/server/meta/overview.md) 副檔名： <ul><li>與整合 [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe)：可讓您共用pixelID並存取Conversions API與Adobe整合的代號，建立順暢的登入體驗。</li><li>與整合 [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq)：可讓您傳送廣告給更有可能完成所需動作的使用者，並將動作連結回傳送的廣告。</li><li>與整合 [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha)：可讓您在CIP欄位中傳遞LiveRamp的RampID，而不需直接與合作夥伴或Meta共用PII。 </li></ul> |
 
 如需有關資料收集的詳細資訊，請詳閱[資料收集概觀](../../tags/home.md)。
+
+## 目的地 {#destinations}
+
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+
+**新目的地或更新的目的地** {#new-updated-destinations}
+
+| 目的地 | 全新或更新 | 說明 |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | 新增 | 使用Moengage目的地，即時連線您的Adobe資料（使用者屬性、區段和事件）並將其對應至MoEngage。 然後，客戶可以對這些資料採取行動，提供個人化、鎖定目標的體驗。 |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | 新增 | 在Adobe Experience Platform中彙總多個營運資料來源，作為Qualtrics Experience ID中的輸入專案，以更好地瞭解您的客戶，並實現目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。 |
+
+{style="table-layout:auto"}
+
+**新功能或更新的功能** {#destinations-new-updated-functionality}
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| 支援計算欄位中的雜湊函式 | 除了的特定功能以外 [匯出陣列](../../destinations/ui/export-arrays-calculated-fields.md) 或陣列中的元素，您現在可以使用額外的 [雜湊函式](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 在匯出的檔案中雜湊屬性。 支援的雜湊函式有： `sha`， `sha256`， `sha512`， `hash`， `md5`， `crc32`. |
+
+{style="table-layout:auto"}
+
+**修正和增強功能** {#destinations-fixes-and-enhancements}
+
+如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
 ## 沙箱 {#sandboxes}
 
