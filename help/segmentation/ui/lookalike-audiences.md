@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 相似的對象
 description: 瞭解如何使用Adobe Experience Platform中的相似受眾鎖定新的高價值受眾。
 badgeLimitedAvailability: label="可用性限制" type=Caution
-source-git-commit: a44b1a1f6028e54ca23149249697dea9407bf60a
+exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2123'
 ht-degree: 11%
 
 ---
-
 
 # 相似受眾指南
 

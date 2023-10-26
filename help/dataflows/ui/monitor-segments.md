@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## 快速入門 {#getting-started}
 
-本指南需要您深入瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 - [資料流](../home.md)：資料流能呈現資料處理作業在Platform上行動資料的情形。 資料流可跨不同服務進行設定，有助於將資料從來源聯結器移至目標資料集，以及 [!DNL Identity] 和 [!DNL Profile]，並至 [!DNL Destinations].
    - [資料流執行](../../sources/notifications.md)：資料流執行是根據所選資料流的頻率設定而定期排程的工作。

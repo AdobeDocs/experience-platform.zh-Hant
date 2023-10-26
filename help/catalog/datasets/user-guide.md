@@ -20,7 +20,7 @@ ht-degree: 4%
 本使用手冊需要您實際瞭解下列Adobe Experience Platform元件：
 
 * [資料集](overview.md)：中資料持續性的儲存和管理結構 [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] 據以組織客戶體驗資料的標準化框架。
    * [結構描述組合基本概念](../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器](../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用建置您自己的自訂XDM結構描述 [!DNL Schema Editor] 在 [!DNL Platform] 使用者介面。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。

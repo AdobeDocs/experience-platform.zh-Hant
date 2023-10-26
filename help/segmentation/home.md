@@ -133,13 +133,13 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 ## 進階分段功能
 
 區段定義可設定為透過合併以持續產生對象 [串流資料擷取](../ingestion/streaming-ingestion/overview.md) 並具備下列任一進階分段功能：
-- [循序分段](#sequential)
+- [順序分段](#sequential)
 - [動態細分](#dynamic)
 - [多實體分段](#multi-entity)
 
 以下各節將更詳細地討論這些進階功能。
 
-### 循序分段 {#sequential}
+### 順序分段 {#sequential}
 
 標準使用者歷程本質上為循序性質。 Adobe Experience Platform可讓您定義一系列有序的對象來反映此歷程，因此能擷取事件發生的順序。 您可以使用中的視覺事件時間軸，將事件依所需順序排列 [!DNL Segment Builder].
 

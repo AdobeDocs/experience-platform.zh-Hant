@@ -2,18 +2,14 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
+source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1820'
 ht-degree: 7%
 
 ---
 
-# [!BADGE 測試版] 沙箱工具
-
->[!IMPORTANT]
->
->此 **沙箱工具** 以下所述功能僅適用於部分Beta版客戶。
+# 沙箱工具
 
 >[!NOTE]
 >

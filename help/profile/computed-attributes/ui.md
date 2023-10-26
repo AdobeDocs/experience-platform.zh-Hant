@@ -1,13 +1,13 @@
 ---
 title: 計算屬性UI指南
 description: 瞭解如何使用Adobe Experience Platform UI建立、檢視和更新計算屬性。
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
-
 
 # 計算屬性UI指南
 
@@ -24,7 +24,7 @@ ht-degree: 8%
 本UI指南需要瞭解各種 [!DNL Experience Platform] 與管理相關的服務 [!DNL Real-Time Customer Profiles]. 在閱讀本指南或使用UI之前，請檢視以下服務的檔案：
 
 - [[!DNL Real-Time Customer Profile]](../home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] 據以組織客戶體驗資料的標準化框架。
 
 ## 檢視計算屬性 {#view}
 

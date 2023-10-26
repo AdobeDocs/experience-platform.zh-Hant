@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Experience Platform元件：
+本指南需要您深入了解下列 Experience Platform 元件：
 
 * [來源](../../../../home.md)：Platform可讓您從各種來源擷取資料，同時可以使用Platform服務來建構、加標籤及增強傳入資料。
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
