@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform的2023年10月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a307f21ad9c72fd413c90cff1c92af8535d9b17b
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '954'
 ht-degree: 34%
 
 ---
@@ -15,13 +15,28 @@ ht-degree: 34%
 
  Experience Platform 現有功能的更新：
 
+- [儀表板](#dashboards)
 - [資料集合](#data-collection)
 - [目的地](#destinations)
 - [沙箱](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
-## 資料集合 {#data-collection}
+## 儀表板 {#dashboards}
+
+Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要分析。
+
+**新功能或更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 目的地使用量度 | 新的計量量度已新增到授權使用儀表板。 此 **[!UICONTROL Audience Activation大小]** 和 **[!UICONTROL 資料匯出大小]** 量度提供一種便利的方法，以追蹤您從Platform匯出多少與授權使用權益相關的資料。 請參閱 [可用量度](../../dashboards/guides/license-usage.md#available-metrics) 這些和其他授權使用量度說明的檔案。 |
+
+{style="table-layout:auto"}
+
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
+
+## 資料收集 {#data-collection}
 
 Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
 
@@ -52,7 +67,8 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 支援計算欄位中的雜湊函式 | 除了的特定功能以外 [匯出陣列](../../destinations/ui/export-arrays-calculated-fields.md) 或陣列中的元素，您現在可以使用額外的 [雜湊函式](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 在匯出的檔案中雜湊屬性。 支援的雜湊函式有： `sha`， `sha256`， `sha512`， `hash`， `md5`， `crc32`. |
+| (Beta)計算欄位支援雜湊函式 | 除了的特定功能以外 [匯出陣列](../../destinations/ui/export-arrays-calculated-fields.md) 或陣列中的元素，您現在可以使用額外的 [雜湊函式](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) 在匯出的檔案中雜湊屬性。 支援的雜湊函式有： `sha`， `sha256`， `sha512`， `hash`， `md5`， `crc32`. |
+| （有限GA）在特定目的地啟用帳戶對象 | Real-Time CDP B2B客戶現在可以啟用 [帳戶對象](../../segmentation/ui/account-audiences.md) 至特定目的地。 如需有關此功能的詳細資訊，請參閱 [啟用帳戶對象教學課程](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 

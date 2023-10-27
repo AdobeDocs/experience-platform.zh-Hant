@@ -4,9 +4,9 @@ title: 授權使用儀表板指南
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: e9c4068419b36da6ffaec67f0d1c39fe87c2bc4c
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '1987'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -119,27 +119,29 @@ ht-degree: 4%
 
 ![授權使用儀表板的「總覽」索引標籤中會醒目提示自訂日期範圍選項。](../images/license-usage/custom-date-range.png)
 
-## 可用量度
+## 可用量度 {#available-metrics}
 
 授權使用儀表板會報告適用於組織中多個產品的多個不重複量度。 可用的量度包括：
 
 | 量度 | 說明 |
 |---|---|
-| [!UICONTROL 資料匯出] | 一年內可匯出至任何非Adobe解決方案（直接或間接）的資料集總大小。 |
-| [!UICONTROL AMM模型數目] | 機器學習模型(內建Adobe Mix Modeler)的計數，用於根據您的投資測量和/或預測指定的結果。 |
-| [!UICONTROL 資料湖儲存] | Adobe Experience Platform中分析資料存放區的使用數量。 |
-| [!UICONTROL 計算屬性] | 彙總的個人資料行為資料的總數。 彙總的個人資料行為資料是根據體驗事件，這些事件會轉換為個人資料屬性，並可包含在個人資料或企業個人資料中。 |
-| [!UICONTROL 類似的對象] | 將現有消費者對象模型化，以識別與現有消費者對象類似之個人設定檔所產生的對象計數。 |
+| [!UICONTROL Audience Activation大小] | 一年內任何以檔案為基礎的目的地啟用的設定檔總大小。 注意：這不包括透過串流目的地傳送的設定檔。 |
 | [!UICONTROL 可定址的受眾] | 您的業務受眾權益與消費者受眾權益的總和。 消費者受眾的定義是銷售訂單上識別為「消費者受眾」的個人檔案數。 業務對象定義為銷售訂單上識別為「業務對象」的業務人員個人檔案數。 |
-| [!UICONTROL 沙箱數] | 存取Adobe Experience Platform隔離資料和作業的任何Adobe隨選服務例項中的邏輯分隔計數。 |
-| [!UICONTROL 平均設定檔豐富度] | 在任何時間點儲存在Hub Profile Service中的所有生產資料的總和，除以授權企業人員設定檔數量的五倍。 [!UICONTROL 平均設定檔豐富度] 是共用功能。 |
-| [!UICONTROL 串流區段數(Pack)] | 當新資料透過串流流進入「細分服務」時，套件會更新個人設定檔的區段會籍。 評估區段會籍時會根據目前人員設定檔屬性和目前事件的值，而不考慮歷史行為。 串流區段是一項共用功能。 |
-| [!UICONTROL 消費者對象] | 銷售訂單上識別為「消費者對象」的個人設定檔數目。 |
-| [!UICONTROL 可用的CJA列] | 可在Analysis中分析的每日平均資料列Customer Journey Analytics。 |
-| [!UICONTROL 套件中的設定檔豐富度] | 每個額外設定檔豐富度套件可將您的授權平均設定檔豐富度增加25 KB。 |
 | [!UICONTROL Adhoc Query Service使用者套件] | 一個附加元件，可讓您的授權並行查詢服務使用者權益增加5個額外的並行查詢服務使用者，以及每個套件一個額外的並行執行特定查詢。 可以授權多個其他Ad Hoc Query使用者套件。 |
+| [!UICONTROL 平均設定檔豐富度] | 在任何時間點儲存在Hub Profile Service中的所有生產資料的總和，除以授權企業人員設定檔數量的五倍。 [!UICONTROL 平均設定檔豐富度] 是共用功能。 |
+| [!UICONTROL 可用的CJA列] | 可在Analysis中分析的每日平均資料列Customer Journey Analytics。 |
+| [!UICONTROL 計算屬性] | 彙總的個人資料行為資料的總數。 彙總的個人資料行為資料是根據體驗事件，這些事件會轉換為個人資料屬性，並可包含在個人資料或企業個人資料中。 |
+| [!UICONTROL 消費者對象] | 銷售訂單上識別為「消費者對象」的個人設定檔數目。 |
+| [!UICONTROL 資料匯出大小] | 一年內透過資料集啟用傳送的資料量。 |
+| [!UICONTROL 資料匯出] | 一年內可匯出至任何非Adobe解決方案（直接或間接）的資料集總大小。 |
+| [!UICONTROL Data Lake儲存] | Adobe Experience Platform中分析資料存放區的使用數量。 |
 | [!UICONTROL 參與對象] | 此量度代表可參與設定檔的對象。 可參與的設定檔是代表個人的資訊記錄，並顯示在「設定檔服務」中。 這些記錄是您在過去12個月中，嘗試使用Journey Optimizer的編寫、決策、傳送、實驗或協調功能所使用的設定檔。 |
+| [!UICONTROL 類似的對象] | 將現有消費者對象模型化，以識別與現有消費者對象類似之個人設定檔所產生的對象計數。 |
+| [!UICONTROL AMM模型數目] | 機器學習模型(內建Adobe Mix Modeler)的計數，用於根據您的投資測量和/或預測指定的結果。 |
+| [!UICONTROL 沙箱數量] | 存取Adobe Experience Platform隔離資料和作業的任何Adobe隨選服務例項中的邏輯分隔計數。 |
+| [!UICONTROL 套件中的設定檔豐富度] | 每個額外設定檔豐富度套件可將您的授權平均設定檔豐富度增加25 KB。 |
 | [!UICONTROL 查詢服務計算時數] | 測量執行批次查詢時，查詢服務引擎讀取、處理和將資料寫入資料湖所花費的時間。 |
+| [!UICONTROL 串流區段數(Pack)] | 當新資料透過串流流進入「細分服務」時，套件會更新個人設定檔的區段會籍。 評估區段會籍時會根據目前人員設定檔屬性和目前事件的值，而不考慮歷史行為。 串流區段是一項共用功能。 |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
