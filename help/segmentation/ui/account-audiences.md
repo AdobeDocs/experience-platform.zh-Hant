@@ -2,20 +2,20 @@
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
 badgeLimitedAvailability: label="可用性限制" type="Caution"
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 1%
+source-wordcount: '603'
+ht-degree: 0%
 
 ---
 
 
 # 帳戶對象
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->請注意，帳戶對象僅適用於 [Real-time Customer Data Platform的B2B版本](../../rtcdp/b2b-overview.md). 此外，帳戶對象功能目前正在 **可用性限制**.
+>帳戶對象僅適用於 [Real-time Customer Data Platform的B2B版本](../../rtcdp/b2b-overview.md). 此外，帳戶對象功能目前正在 **可用性限制**. 請聯絡Adobe客戶服務或您的Adobe代表，以要求存取此功能。
 
 透過帳戶細分，Adobe Experience Platform可讓您從以人物為基礎的受眾到以帳戶為基礎的受眾，使用完整且精密的行銷細分體驗。
 
@@ -69,7 +69,7 @@ ht-degree: 1%
 
 ![此 [!UICONTROL 啟用到目的地] 在所選對象的「快速動作」功能表中，按鈕會反白顯示。](../images/ui/account-audiences/activate.png)
 
-此 [!UICONTROL 啟用目的地] 頁面便會顯示。 如需啟用程式的詳細資訊，包括欄位對應的詳細資訊，請參閱 [啟用概述](../../destinations/ui/activation-overview.md).
+此 [!UICONTROL 啟用目的地] 頁面便會顯示。 如需啟用程式的詳細資訊，包括支援的目的地和欄位對應的詳細資訊，請參閱 [啟用帳戶對象](/help/destinations/ui/activate-account-audiences.md) 教學課程。
 
 ## 後續步驟 {#next-steps}
 

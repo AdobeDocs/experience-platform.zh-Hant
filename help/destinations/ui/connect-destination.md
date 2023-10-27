@@ -4,9 +4,9 @@ title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
@@ -84,9 +84,9 @@ ht-degree: 0%
 
 ![顯示CSV檔案的檔案型別選取範圍與各種選項的影像。](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### 設定對象啟用、潛在客戶啟用或資料集匯出的目的地連線 {#segment-activation-or-dataset-exports}
+### 設定目的地連線，用於對象啟用、帳戶啟用、潛在客戶啟用或資料集匯出 {#segment-activation-or-dataset-exports}
 
-有些檔案型目的地支援對已知客戶或潛在客戶進行受眾啟用，以及資料集匯出。 對於這些目的地，您可以選擇是否建立連線，讓您 [啟用對象](/help/destinations/ui/activate-batch-profile-destinations.md)， [潛在客戶](/help/destinations/ui/activate-prospect-audiences.md)，或 [匯出資料集](/help/destinations/ui/export-datasets.md).
+有些檔案型目的地支援對已知客戶、帳戶客戶或潛在客戶進行受眾啟用，也支援資料集匯出。 對於這些目的地，您可以選擇是否建立連線，讓您 [啟用對象](/help/destinations/ui/activate-batch-profile-destinations.md)， [帳戶](/help/destinations/ui/activate-account-audiences.md)， [潛在客戶](/help/destinations/ui/activate-prospect-audiences.md)，或 [匯出資料集](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >
