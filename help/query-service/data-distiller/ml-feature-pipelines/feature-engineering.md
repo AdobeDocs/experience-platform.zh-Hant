@@ -1,9 +1,9 @@
 ---
 title: 機器學習的工程師功能
 description: 瞭解如何將Adobe Experience Platform中的資料轉換為機器學習模型可以使用的功能或變數。 使用Data Distiller來大規模計算ML功能，並與您的機器學習環境共用這些功能。
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1161'
 ht-degree: 13%
 
 ---
@@ -67,7 +67,7 @@ df_labels.head()
 
 ### 為機器學習定義功能的彙總事件 {#define-features}
 
-下列查詢會將資料集中的事件彙總為有意義的、可用於訓練傾向性模型的數字功能：
+透過適當的查詢，您可以將資料集中的事件收集到有意義的、數值的功能中，以便用於訓練傾向模型。 範例事件顯示如下：
 
 - **電子郵件數量** 傳送以供行銷之用，且使用者會收到的。
 - 這些電子郵件中屬於 **已開啟**.
@@ -83,6 +83,8 @@ df_labels.head()
 - 與兩個建議互動的分鐘數。
 - 兩個被駁回的建議之間的分鐘數。
 - 選取的兩個連結之間的分鐘數。
+
+下列查詢會彙總這些事件：
 
 +++選取以檢視範例查詢
 

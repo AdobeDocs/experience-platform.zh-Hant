@@ -1,22 +1,22 @@
 ---
 title: AI/ML功能管道
-description: 瞭解如何使用Data Distiller，透過Adobe Experience Platform資料衍生的功能讓您的機器學習管道更為豐富。 將原始資料轉換為功能並提供功能資料，以訓練或評分支援行銷使用案例的模型。
-source-git-commit: f8bba17df9673973cb2792658282c8db972d30d6
+description: 瞭解如何使用Data Distiller，透過Adobe Experience Platform資料衍生的功能豐富您的機器學習管道。 將原始資料轉換為功能並提供功能資料，以訓練或評分支援行銷使用案例的模型。
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '453'
 ht-degree: 1%
 
 ---
 
 # AI/ML功能管道
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
 <!--  -->
 
-資料Distiller讓資料科學家和工程師能利用Adobe Experience Platform中收集和整理的高價值客戶體驗資料，讓他們的機器學習管道更為豐富。 在任何環境中，您可以透過Python筆記型電腦以互動方式探索Experience Platform中的客戶資料、從資料定義及計算功能，並將計算功能讀取至您的機器學習環境中以進行模型製作。
+資料Distiller讓資料科學家和工程師能利用Adobe Experience Platform中收集和整理的高價值客戶體驗資料，讓他們的機器學習管道更為豐富。 從 [!DNL Python] notebook在任何環境中，您都可以以互動方式探索Experience Platform中的客戶資料、從資料定義及計算功能，並將計算功能讀入您的機器學習環境中以進行模型製作。
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 此工作流程需要您實際瞭解Adobe Experience Platform的各個層面。 在開始本教學課程之前，請檢閱檔案以瞭解下列概念：
 
-- 操作說明 [驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md)
+- 操作說明 [驗證及存取Experience PlatformAPI](../../../landing/api-authentication.md).
 - 沙箱： [以屬性為基礎的存取控制許可權](../../../access-control/abac/overview.md) 以及如何建立和管理角色，並為這些角色指派所需的資源許可權。
 - 資料控管：做法 [將資料使用標籤套用至資料集和欄位，並為每個欄位分類](../../../data-governance/labels/overview.md) 根據相關的資料治理原則和存取控制原則。
 
@@ -40,16 +40,16 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 閱讀本檔案後，您已經瞭解使用您偏好的機器學習工具來建立自訂模型以支援行銷使用案例背後的重要概念。
 
-本系列指南包含的檔案說明在Experience Platform中建立功能管道，以饋送機器學習環境中的自訂模型的基本步驟。 您現在已準備好在Data Distiller與Jupyter筆記型電腦之間建立連線。
+本系列指南包含的檔案說明在Experience Platform中建立功能管道，以饋送機器學習環境中的自訂模型的基本步驟。 您現在已準備好在Data Distiller與您的 [!DNL Jupyter Notebook].
 
-- [從Python筆記本連線至Data Distiller](./establish-connection.md)
+- [從連線到Data Distiller [!DNL Python] notebook](./establish-connection.md)
 - [探索和分析資料集](./exploratory-analysis.md)
 - [機器學習的工程師功能](./feature-engineering.md)
 - [匯出功能資料集](./export-data.md)
 
 ## 其他資源
 
-- [aepp](https://github.com/adobe/aepp)：由Adobe管理的開放原始碼Python程式庫，可向Python程式碼的Data Distiller和其他Experience Platform服務發出請求。
+- [aepp](https://github.com/adobe/aepp)：Adobe管理的開放原始碼 [!DNL Python] 請求資料Distiller和其他Experience Platform服務的資料庫，來自 [!DNL Python] 程式碼。
 
 <!-- Old content below -->
 
