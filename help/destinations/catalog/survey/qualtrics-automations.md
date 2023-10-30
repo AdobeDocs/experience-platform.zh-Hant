@@ -3,13 +3,13 @@ keywords: 串流， Qualtrics目的地
 title: Qualtrics自動化
 description: 同步體驗和營運客戶資料，以大規模解除個人化鎖定。 在Adobe Experience Platform中彙總多個營運資料來源，作為Qualtrics Experience Id中的輸入專案，以更好地瞭解您的客戶，並實現目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 1%
 
 ---
-
 
 # Qualtrics自動化
 

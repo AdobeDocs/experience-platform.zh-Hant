@@ -3,13 +3,13 @@ title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
 badgeLimitedAvailability: label="可用性限制" type="Caution"
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
+exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
 
 ---
-
 
 # 帳戶對象
 

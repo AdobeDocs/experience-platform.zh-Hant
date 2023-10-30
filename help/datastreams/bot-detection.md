@@ -3,13 +3,13 @@ title: 設定資料串流的機器人偵測
 description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # 設定資料串流的機器人偵測
 
@@ -176,4 +176,3 @@ ht-degree: 0%
 該請求源自兩個IP位址中的一個， `referer` 標題開頭為 `www.adobe.com`，以及 `sec-ch-ua-mobile` 標題會將請求識別為源自於案頭瀏覽器。
 
 ![根據多個條件的機器人偵測規則影像。](assets/bot-detection/bot-detection-multiple.png)
-

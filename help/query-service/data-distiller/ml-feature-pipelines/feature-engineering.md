@@ -1,7 +1,8 @@
 ---
 title: 機器學習的工程師功能
 description: 瞭解如何將Adobe Experience Platform中的資料轉換為機器學習模型可以使用的功能或變數。 使用Data Distiller來大規模計算ML功能，並與您的機器學習環境共用這些功能。
-source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
+exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1161'
 ht-degree: 13%

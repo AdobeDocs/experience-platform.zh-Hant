@@ -1,7 +1,8 @@
 ---
 title: 將資料匯出至外部ML環境
 description: 瞭解如何將使用Data Distiller建立的已準備好的訓練資料集共用到雲端儲存位置，讓ML環境可讀取該位置來訓練和評分您的模型。
-source-git-commit: a23100e8fbca93f14490e639f05991f06c113b93
+exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 3%

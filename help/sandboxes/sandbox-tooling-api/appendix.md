@@ -1,13 +1,13 @@
 ---
 title: 沙箱工具API指南附錄
 description: 本檔案提供與使用沙箱工具API相關的補充資訊。
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 1%
 
 ---
-
 
 # Sandbox API指南附錄
 
