@@ -2,7 +2,7 @@
 title: 使用流量服務API建立SFTP基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至SFTP （安全檔案傳輸通訊協定）伺服器。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 2%
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->建立後，您就無法變更的驗證型別 [!DNL Dynamics] 基礎連線。 若要變更驗證型別，您必須建立新的基礎連線。
+>建立後，您就無法變更的驗證型別 [!DNL SFTP] 基礎連線。 若要變更驗證型別，您必須建立新的基礎連線。
 
 基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
