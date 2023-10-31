@@ -2,7 +2,7 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 10%
@@ -26,7 +26,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
-> 雖然Experience Platform支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為 [!DNL Amazon S3] 和 [!DNL SFTP].
+> 雖然Experience Platform支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為 [!DNL Amazon S3] 和 [!DNL Azure Blob].
 
 ## 透過API或UI連線至SFTP {#connect-api-or-ui}
 
