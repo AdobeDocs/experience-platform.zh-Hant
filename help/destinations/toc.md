@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: e4c2fc3cc2ef1f6731c81becdd6a6e4149b769dd
+source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1201'
 ht-degree: 9%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 9%
       * [啟用受眾以串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md)
       * [啟用對象以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md)
       * [啟用對象以邊緣個人化目的地](./ui/activate-edge-personalization-destinations.md)
+      * [根據LiveRamp識別碼將受眾啟用至已組織的目的地](./ui/activate-curated-destinations.md)
       * [對目的地啟用潛在客戶對象](./ui/activate-prospect-audiences.md)
       * [（可用性限制）對目的地啟用帳戶對象](./ui/activate-account-audiences.md)
       * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
