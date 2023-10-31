@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的客戶自控金鑰
 description: 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '763'
 ht-degree: 2%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 2%
 >Adobe Experience Platform Data Lake和設定檔存放區中的資料是使用CMK加密。 這些會視為您的主要資料存放區。
 
 本檔案提供在Platform中啟用客戶自控金鑰(CMK)功能的程式概覽，以及完成這些步驟所需的先決條件資訊。
+
+>[!NOTE]
+>
+>若為Customer Journey Analytics客戶，請依照 [Customer Journey Analytics檔案](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## 先決條件
 
