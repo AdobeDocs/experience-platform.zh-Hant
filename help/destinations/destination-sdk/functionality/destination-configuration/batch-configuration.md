@@ -1,13 +1,13 @@
 ---
 description: 瞭解如何為使用Destination SDK建立的目的地設定檔案匯出設定。
 title: 批次設定
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 4%
 
 ---
-
 
 # 批次設定 {#batch-configuration}
 
@@ -95,8 +95,8 @@ ht-degree: 4%
 | `allowedScheduleFrequency` | 清單 | 定義客戶可用的檔案匯出頻率。 支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | 列舉 | 定義預設檔案匯出頻率。支援的值：<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> 預設值為 `DAILY`。 |
 | `defaultStartTime` | 字串 | 定義檔案匯出的預設開始時間。 使用24小時檔案格式。 預設值為「00:00」。 |
-| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必填*. 可供使用者選擇的可用檔案名稱巨集清單。 這會決定要將哪些專案附加至匯出的檔案名稱（對象ID、組織名稱、匯出的日期和時間等）。 設定時 `defaultFilename`，請務必避免重複巨集。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論定義巨集的順序為何，Experience PlatformUI一律會依此處呈現的順序顯示巨集。 <br><br> 如果 `defaultFilename` 空白，則 `allowedFilenameAppendOptions` 清單必須至少包含一個巨集。 |
-| `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必填*. 預先選取的預設檔案名稱巨集，使用者可取消核取。<br><br> 此清單中的巨集是中定義巨集的子集 `allowedFilenameAppendOptions`. |
+| `filenameConfig.allowedFilenameAppendOptions` | 字串 | *必要*. 可供使用者選擇的可用檔案名稱巨集清單。 這會決定要將哪些專案附加至匯出的檔案名稱（對象ID、組織名稱、匯出的日期和時間等）。 設定時 `defaultFilename`，請務必避免重複巨集。 <br><br>支援的值： <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>無論定義巨集的順序為何，Experience PlatformUI一律會依此處呈現的順序顯示巨集。 <br><br> 如果 `defaultFilename` 空白，則 `allowedFilenameAppendOptions` 清單必須至少包含一個巨集。 |
+| `filenameConfig.defaultFilenameAppendOptions` | 字串 | *必要*. 預先選取的預設檔案名稱巨集，使用者可取消核取。<br><br> 此清單中的巨集是中定義巨集的子集 `allowedFilenameAppendOptions`. |
 | `filenameConfig.defaultFilename` | 字串 | *可選*. 定義匯出檔案的預設檔案名稱巨集。 使用者無法覆寫這些專案。 <br><br>任何由定義的巨集 `allowedFilenameAppendOptions` 將會附加在 `defaultFilename` 巨集。 <br><br>如果 `defaultFilename` 空白，您必須在中定義至少一個巨集 `allowedFilenameAppendOptions`. |
 | `segmentGroupingEnabled` | 布林值 | 根據對象來定義啟用的對象應該匯出為單一檔案或多個檔案 [合併原則](../../../../profile/merge-policies/overview.md). 支援的值： <ul><li>`true`：每個合併原則匯出一個檔案。</li><li>`false`：無論合併原則為何，會針對每個對象匯出單一檔案。 這是預設行為。 完全忽略此引數也能達到相同的結果。</li></ul> |
 

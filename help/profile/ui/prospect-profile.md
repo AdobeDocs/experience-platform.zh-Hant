@@ -2,13 +2,13 @@
 title: 潛在客戶設定檔
 description: 瞭解如何建立和使用潛在客戶設定檔，以使用第三方資訊收集有關未知客戶的資訊。
 type: Documentation
-source-git-commit: 1973fbe858fc0a266936faf6060e467c108fedf6
+exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 7%
 
 ---
-
 
 # 潛在客戶設定檔
 

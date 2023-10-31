@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
+source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
 workflow-type: tm+mt
-source-wordcount: '3822'
+source-wordcount: '3910'
 ht-degree: 3%
 
 ---
@@ -72,17 +72,17 @@ ht-degree: 3%
 
 | 動作 | 來源 | 說明 |
 | ------ | ------- | ----------- |
-| 編輯 | Segmentation Service | 可讓您開啟「區段產生器」來編輯您的對象。 如需使用「區段產生器」的詳細資訊，請參閱 [區段產生器UI指南](./segment-builder.md). |
-| 開啟構成 | 對象構成 | 可讓您開啟對象構成來檢視您的對象。 如需對象構成的詳細資訊，請參閱 [對象構成UI指南](./audience-composition.md). |
-| 啟用到目的地 | Segmentation Service | 可讓您將對象啟用至目的地。 如需將受眾啟用至目的地的詳細資訊，請參閱 [啟用概述](../../destinations/ui/activation-overview.md). |
-| 與合作夥伴分享 | 對象構成、自訂上傳、細分服務 | 可讓您與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請參閱 [區段比對概觀](./segment-match/overview.md). |
-| 管理標籤 | 對象構成、自訂上傳、細分服務 | 可讓您管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
-| 移至資料夾 | 對象構成、自訂上傳、細分服務 | 可讓您管理受眾所屬的資料夾。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
-| 複製 | 對象構成、自訂上傳、細分服務 | 複製選取的對象。 |
-| 套用存取權標籤 | 對象構成、自訂上傳、細分服務 | 可讓您管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
-| 封存 | 自訂上傳 | 封存選取的對象。 |
-| 刪除 | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 |
-| 新增到封裝 | 對象構成、自訂上傳、細分服務 | 可讓您在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL 編輯] | Segmentation Service | 可讓您開啟「區段產生器」來編輯您的對象。 如需使用「區段產生器」的詳細資訊，請參閱 [區段產生器UI指南](./segment-builder.md). |
+| [!UICONTROL 開啟構成] | 對象構成 | 可讓您開啟對象構成來檢視您的對象。 如需對象構成的詳細資訊，請參閱 [對象構成UI指南](./audience-composition.md). |
+| [!UICONTROL 啟用到目的地] | Segmentation Service | 可讓您將對象啟用至目的地。 如需將受眾啟用至目的地的詳細資訊，請參閱 [啟用概述](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL 與合作夥伴分享] | 對象構成、自訂上傳、細分服務 | 可讓您與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請參閱 [區段比對概觀](./segment-match/overview.md). |
+| [!UICONTROL 管理標籤] | 對象構成、自訂上傳、細分服務 | 可讓您管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
+| [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 可讓您管理受眾所屬的資料夾。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
+| [!UICONTROL 副本] | 對象構成、自訂上傳、細分服務 | 複製選取的對象。 |
+| [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 可讓您管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL 封存] | 自訂上傳 | 封存選取的對象。 |
+| [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 |
+| [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 可讓您在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -339,6 +339,8 @@ ht-degree: 3%
 
 此 **[!UICONTROL 對象詳細資料]** 頁面便會顯示。 您可以新增對象的相關資訊，包括其名稱、說明、主要身分和身分名稱空間值。
 
+匯入外部產生的對象時，您必須選取其中一個欄位作為主要身分欄位，並指定名稱空間值。 請注意，其餘所有欄位都將列入考量 **裝載屬性**. 這些屬性會被視為 **非耐用**，因為它們只會為了個人化目的與此對象相關聯，而且 **非** 已連線至設定檔。
+
 ![此 [!UICONTROL 對象詳細資料] 頁面隨即顯示。](../images/ui/overview/import-audience-audience-details.png)
 
 填寫對象詳細資料後，選擇 **[!UICONTROL 下一個]**.
@@ -353,7 +355,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->如果您的外部產生的對象包含敏感和/或醫療保健相關資訊，您可以 **必須** 將資料啟用至任何目的地之前，請先套用必要的資料使用標籤。 如需套用資料使用標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md).
+>依預設，外部產生的對象資料的有效期限為30天。 如果以任何方式更新或修改對象，則會重設資料有效期。
+>
+>此外，如果您的外部產生的對象包含敏感及/或健康相關資訊，您可以 **必須** 將資料啟用至任何目的地之前，請先套用必要的資料使用標籤。 如需套用資料使用標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md).
 
 ## 已排程的分段 {#scheduled-segmentation}
 

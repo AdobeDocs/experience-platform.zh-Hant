@@ -1,13 +1,13 @@
 ---
 description: 瞭解如何格式化傳送至您端點的HTTP請求。 使用/authoring/destination-servers端點在Adobe Experience Platform Destination SDK中設定目的地伺服器範本規格。
 title: 使用Destination SDK建立之目的地的範本規格
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 4%
 
 ---
-
 
 # 以Destination SDK建立之目的地的範本規格
 
@@ -69,10 +69,10 @@ Adobe使用類似以下的範本化語言 [金家](https://jinja.palletsprojects
 
 | 參數 | 類型 | 說明 |
 |---|---|---|
-| `httpMethod` | 字串 | *必填。* Adobe將在對伺服器呼叫中使用的方法。 支援的方法： `GET`， `PUT`， `POST`， `DELETE`， `PATCH`. |
-| `templatingStrategy` | 字串 | *必填。* 使用 `PEBBLE_V1`. |
-| `value` | 字串 | *必填。* 此字串是範本的字元逸出版本，可將Platform傳送的HTTP要求格式化為目的地預期的格式。 <br> 如需如何撰寫範本的詳細資訊，請閱讀以下章節： [使用範本](message-format.md#using-templating). <br> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). <br> 如需簡單轉換的範例，請參閱 [設定檔屬性](message-format.md#attributes) 轉換。 |
-| `contentType` | 字串 | *必填。* 您的伺服器接受的內容型別。 根據轉換範本產生的輸出型別，這可以是任何支援的 [HTTP應用程式內容型別](https://www.iana.org/assignments/media-types/media-types.xhtml#application). 在大多數情況下，此值應設為 `application/json`. |
+| `httpMethod` | 字串 | *必要.* Adobe將在對伺服器呼叫中使用的方法。 支援的方法： `GET`， `PUT`， `POST`， `DELETE`， `PATCH`. |
+| `templatingStrategy` | 字串 | *必要.* 使用 `PEBBLE_V1`. |
+| `value` | 字串 | *必要.* 此字串是範本的字元逸出版本，可將Platform傳送的HTTP要求格式化為目的地預期的格式。 <br> 如需如何撰寫範本的詳細資訊，請閱讀以下章節： [使用範本](message-format.md#using-templating). <br> 如需字元逸出的詳細資訊，請參閱 [RFC JSON標準，第七節](https://tools.ietf.org/html/rfc8259#section-7). <br> 如需簡單轉換的範例，請參閱 [設定檔屬性](message-format.md#attributes) 轉換。 |
+| `contentType` | 字串 | *必要.* 您的伺服器接受的內容型別。 根據轉換範本產生的輸出型別，這可以是任何支援的 [HTTP應用程式內容型別](https://www.iana.org/assignments/media-types/media-types.xhtml#application). 在大多數情況下，此值應設為 `application/json`. |
 
 {style="table-layout:auto"}
 

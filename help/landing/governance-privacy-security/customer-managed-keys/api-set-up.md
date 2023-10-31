@@ -1,7 +1,8 @@
 ---
 title: 使用API設定及設定客戶自控金鑰
 description: 瞭解如何使用您的Azure租使用者設定您的CMK應用程式，並將您的加密金鑰ID傳送至Adobe Experience Platform。
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 2%

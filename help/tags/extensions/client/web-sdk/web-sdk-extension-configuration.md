@@ -1,13 +1,13 @@
 ---
 title: 設定 Web SDK 標籤延伸模組
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
-source-git-commit: ec0aa64c466a8228d49a776d27040253b5a1b196
+exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 10%
 
 ---
-
 
 # 設定Web SDK標籤擴充功能
 

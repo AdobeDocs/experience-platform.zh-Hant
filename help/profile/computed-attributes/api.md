@@ -1,13 +1,13 @@
 ---
 title: 計算屬性API端點
 description: 瞭解如何使用即時客戶設定檔API建立、檢視、更新和刪除運算屬性。
-source-git-commit: e1c7d097f7ab39d05674c3dad620bea29f08092b
+exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 2%
 
 ---
-
 
 # 計算屬性API端點
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 此外，請檢閱以下服務的檔案：
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] 據以組織客戶體驗資料的標準化框架。
    - [結構描述登入快速入門手冊](../../xdm/api/getting-started.md#know-your-tenant_id)：您的相關資訊 `{TENANT_ID}`（會顯示在本指南的回應中）。
 
 ## 擷取計算屬性清單 {#list}

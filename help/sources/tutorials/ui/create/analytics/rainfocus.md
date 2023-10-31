@@ -2,7 +2,8 @@
 title: 使用UI連線您的RainFocus帳戶以Experience Platform
 description: 瞭解如何使用UI將RainFocus帳戶連結至Experience Platform。
 badge: Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 1%
@@ -77,7 +78,7 @@ ht-degree: 1%
 
 ![來源工作流程的資料流詳細資料步驟。](/help/sources/images/tutorials/create/rainfocus/rainfocus_source-dataflow-setup.png)
 
-## 映射 {#mapping}
+## 對應 {#mapping}
 
 「對應」步驟隨即顯示，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 

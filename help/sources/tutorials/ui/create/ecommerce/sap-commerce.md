@@ -2,7 +2,8 @@
 title: 在使用者介面中建立SAP Commerce來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立SAP Commerce來源連線。
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 1%
@@ -197,7 +198,7 @@ ht-degree: 1%
 
 以下各節提供您在使用時，可參考的其他資源 [!DNL SAP Commerce] 來源。
 
-### 映射 {#mapping}
+### 對應 {#mapping}
 
 Platform會根據您選取的目標結構或資料集，為自動對應的欄位提供智慧型建議。 您可以手動調整對應規則以符合您的使用案例。 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應程式介面和計算欄位的完整步驟，請參閱 [資料準備UI指南](../../../../../data-prep/ui/mapping.md).
 
@@ -249,4 +250,3 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 ![來源工作流程的對應步驟。](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
 
 >[!ENDTABS]
-

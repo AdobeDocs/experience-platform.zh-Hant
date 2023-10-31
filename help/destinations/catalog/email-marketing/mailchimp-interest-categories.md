@@ -2,7 +2,8 @@
 title: Mailchimp 興趣類別
 description: Mailchimp （也稱為Intuit Mailchimp）是一種流行的行銷自動化平台和電子郵件行銷服務，企業使用它來管理與聯絡人（客戶、客戶或其他感興趣的當事方）使用郵寄清單和電子郵件行銷活動。 可使用此連接器根據聯絡人的興趣和偏好將他們排序。
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 2%

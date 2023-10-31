@@ -1,13 +1,13 @@
 ---
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新現有目的地伺服器設定的API呼叫的範例。
 title: 更新目的地伺服器設定
-source-git-commit: 03ec0e919304c9d46ef88d606eed9e12d1824856
+exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 12%
 
 ---
-
 
 # 更新目的地伺服器設定
 

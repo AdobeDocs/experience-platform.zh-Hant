@@ -6,8 +6,8 @@ description: 本檔案包含使用Privacy Service API的其他資訊。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '476'
+ht-degree: 6%
 
 ---
 

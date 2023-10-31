@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web軟體開發套件(SDK)概覽
 description: 瞭解如何使用Adobe Experience Platform Web SDK將Platform功能整合至您的網站。
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 2%
 
 ---
-
 
 # Adobe Experience Platform Web SDK總覽 {#overview}
 

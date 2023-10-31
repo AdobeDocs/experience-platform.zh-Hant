@@ -6,7 +6,7 @@ user-guide-description: 了解 Experience Platform 如何即時將個人化體�
 source-git-commit: 73f10455233be9cc3f9f15a0fe5f0398ed987be9
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 27%
       * [使用UI設定CMK](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
 * 授權使用和護欄 {#license}
    * [資料管理授權權益最佳實務](./license-usage-and-guardrails/data-management-best-practices.md)
-   * [授權使用情況儀表板](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [授權使用量儀表板](./license-usage-and-guardrails/license-usage-dashboard.md)
 * [疑難排解指南](troubleshooting.md)
 * [Gen2資料湖移轉](adls2-gen2-migration.md)
 * [字彙](glossary.md)

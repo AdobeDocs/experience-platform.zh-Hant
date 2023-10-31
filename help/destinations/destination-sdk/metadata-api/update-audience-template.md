@@ -1,13 +1,13 @@
 ---
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新對象範本的API呼叫的範例。
 title: 更新對象範本
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 8185a015-256d-46a7-af33-8475832fb6c1
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 1%
 
 ---
-
 
 # 更新對象範本
 
@@ -21,17 +21,17 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
-## 開始使用對象範本API作業 {#get-started}
+## 對象範本API操作快速入門 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 更新對象範本 {#create}
 
-您可以更新 [現有](create-audience-template.md) 對象範本，做法是建立 `PUT` 向以下專案提出的請求： `/authoring/audience-templates` 具有已更新裝載的端點。
+您可以更新 [現有](create-audience-template.md) 對象範本，做法是 `PUT` 要求給 `/authoring/audience-templates` 具有已更新裝載的端點。
 
-若要取得現有的對象範本及其對應的 `{INSTANCE_ID}`，請參閱這篇文章，瞭解 [擷取對象範本](retrieve-audience-template.md).
+若要取得現有的對象範本及其對應的 `{INSTANCE_ID}`，請參閱「 」一文，瞭解 [擷取對象範本](retrieve-audience-template.md).
 
 **API格式**
 
@@ -41,9 +41,9 @@ PUT /authoring/audience-templates/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 您要更新的對象範本ID。 若要取得現有的對象範本及其對應的 `{INSTANCE_ID}`，請參閱 [擷取對象範本](retrieve-audience-template.md). |
+| `{INSTANCE_ID}` | 您要更新之對象範本的ID。 若要取得現有的對象範本及其對應的 `{INSTANCE_ID}`，請參閱 [擷取對象範本](retrieve-audience-template.md). |
 
-以下請求會更新現有的受眾中繼資料範本，此範本已由承載中提供的引數設定。
+以下請求會更新現有的對象中繼資料範本，此範本已根據承載中提供的引數設定。
 
 +++請求
 
@@ -147,14 +147,14 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++回應
 
-成功的回應會傳回HTTP狀態200以及您更新後對象範本的詳細資料。
+成功的回應會傳回HTTP狀態200以及您更新對象範本的詳細資料。
 
 +++
 
 ## API錯誤處理
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道何時該使用對象範本，以及如何使用更新對象範本 `/authoring/audience-templates` api端點。 讀取 [如何使用Destination SDK設定您的目的地](../guides/configure-destination-instructions.md) 以瞭解此步驟在設定目的地的程式中的適用位置。
+閱讀本檔案後，您現在知道何時該使用對象範本，以及如何使用更新對象範本 `/authoring/audience-templates` api端點。 讀取 [如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md) 以瞭解此步驟在設定目的地的程式中的適用位置。

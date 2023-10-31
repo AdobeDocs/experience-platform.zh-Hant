@@ -1,13 +1,13 @@
 ---
 description: 瞭解如何為使用Destination SDK建立的目的地設定支援的目標身分。
 title: 身分名稱空間設定
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 4%
 
 ---
-
 
 # 身分名稱空間設定
 

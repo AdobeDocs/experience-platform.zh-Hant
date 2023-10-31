@@ -4,7 +4,8 @@ description: 瞭解如何建立來源連線和資料流，以將您的Snowflake�
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
+exl-id: ed937689-e844-487e-85fb-e3536c851fe5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 1%
@@ -82,4 +83,3 @@ Experience Platform支援從串流處理資料 [!DNL Snowflake] 資料庫。
 下列教學課程提供如何連線至 [!DNL Snowflake] 要使用APIExperience Platform的串流來源：
 
 * [從串流資料 [!DNL Snowflake] 要使用流程服務APIExperience Platform的資料庫](../../tutorials/api/create/databases/snowflake-streaming.md)
-

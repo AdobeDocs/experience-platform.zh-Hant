@@ -7,7 +7,7 @@ exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
 source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
 workflow-type: tm+mt
 source-wordcount: '3550'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 4%
 
 ![概述 — 建立目的地和匯出資料集的步驟](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-本指南需要您深入瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md)：所有成功內嵌至Adobe Experience Platform的資料都會儲存在 [!DNL Data Lake] 作為資料集。 資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 資料集也包含中繼資料，可說明其儲存資料的各個層面。 
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
@@ -59,13 +59,13 @@ ht-degree: 4%
 
 為確保您擁有匯出資料集的必要許可權以及目的地支援匯出資料集，請瀏覽目的地目錄。 如果目的地有 **[!UICONTROL 啟動]** 或 **[!UICONTROL 匯出資料集]** 控制項，則表示您擁有適當的許可權。
 
-### 讀取範例API呼叫 {#reading-sample-api-calls}
+### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標題和正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-為了呼叫 [!DNL Platform] API，您必須先完成 [Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有中每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [Experience Platform驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

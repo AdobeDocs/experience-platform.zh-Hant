@@ -1,13 +1,13 @@
 ---
 description: 瞭解如何在Experience PlatformUI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
 title: 客戶資料欄位
-source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
+exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 4%
 
 ---
-
 
 # 透過客戶資料欄位設定使用者輸入
 

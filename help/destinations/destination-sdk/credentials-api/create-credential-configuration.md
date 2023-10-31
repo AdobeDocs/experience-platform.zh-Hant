@@ -1,13 +1,13 @@
 ---
 description: 此頁面是用來建立認證設定Adobe Experience Platform Destination SDK的API呼叫的範例。
 title: 建立認證設定
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 7%
 
 ---
-
 
 # 建立認證設定
 
@@ -15,7 +15,7 @@ ht-degree: 7%
 >
 >**API端點**： `platform.adobe.io/data/core/activation/authoring/credentials`
 
-此頁面是您用來建立認證設定的API要求與裝載的範例，使用 `/authoring/credentials` api端點。
+此頁面以範例說明API要求與裝載，您可使用這些API要求與裝載來建立認證組態。 `/authoring/credentials` api端點。
 
 ## 何時使用 `/credentials` API端點 {#when-to-use}
 
@@ -31,15 +31,15 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值皆為 **區分大小寫**. 為避免區分大小寫錯誤，請完全按照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 認證API操作快速入門 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 建立認證設定 {#create}
 
-您可以透過以下方式建立新的認證設定： `POST` 向以下專案提出的請求： `/authoring/credentials` 端點。
+您可以透過建立 `POST` 要求給 `/authoring/credentials` 端點。
 
 **API格式**
 
@@ -79,7 +79,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
 | `url` | 字串 | 授權提供者的URL |
-| `username` | 字串 | 認證設定登入使用者名稱 |
+| `username` | 字串 | 認證組態登入使用者名稱 |
 | `password` | 字串 | 認證組態登入密碼 |
 
 {style="table-layout:auto"}
@@ -88,7 +88,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立的認證組態的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您新建立的認證組態的詳細資料。
 
 +++
 
@@ -125,7 +125,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立的認證組態的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您新建立的認證組態的詳細資料。
 
 +++
 
@@ -153,7 +153,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
-| `username` | 字串 | 認證設定登入使用者名稱 |
+| `username` | 字串 | 認證組態登入使用者名稱 |
 | `sshKey` | 字串 | 使用SSH驗證的SFTP的SSH金鑰 |
 
 {style="table-layout:auto"}
@@ -162,7 +162,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立的認證組態的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您新建立的認證組態的詳細資料。
 
 +++
 
@@ -193,9 +193,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | 參數 | 類型 | 說明 |
 | -------- | ----------- | ----------- |
 | `url` | 字串 | 授權提供者的URL |
-| `tenant` | 字串 | Azure Data Lake儲存體租使用者 |
+| `tenant` | 字串 | Azure Data Lake Storage租使用者 |
 | `servicePrincipalId` | 字串 | Azure資料湖儲存體的Azure服務主體ID |
-| `servicePrincipalKey` | 字串 | Azure Data Lake儲存體的Azure服務主體金鑰 |
+| `servicePrincipalKey` | 字串 | Azure Data Lake儲存體的Azure服務主要金鑰 |
 
 {style="table-layout:auto"}
 
@@ -203,7 +203,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立的認證組態的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您新建立的認證組態的詳細資料。
 
 +++
 
@@ -238,7 +238,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立的認證組態的詳細資訊。
+成功的回應會傳回HTTP狀態200以及您新建立的認證組態的詳細資料。
 
 +++
 
@@ -246,8 +246,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道何時該使用認證端點，以及如何使用設定認證設定 `/authoring/credentials` API端點讀取 [如何使用Destination SDK設定您的目的地](../guides/configure-destination-instructions.md) 以瞭解此步驟在設定目的地的程式中的適用位置。
+閱讀本檔案後，您現在知道何時該使用認證端點，以及如何使用設定認證設定。 `/authoring/credentials` 已讀取API端點 [如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md) 以瞭解此步驟在設定目的地的程式中的適用位置。

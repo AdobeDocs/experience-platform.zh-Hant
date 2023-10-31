@@ -1,13 +1,13 @@
 ---
 description: 瞭解如何透過「/destination-servers」端點為以Adobe Experience Platform Destination SDK建立的檔案型目的地設定檔案格式選項。
 title: 檔案格式設定
-source-git-commit: 4f4ffc7fc6a895e529193431aba77d6f3dcafb6f
+exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1093'
 ht-degree: 4%
 
 ---
-
 
 # 檔案格式設定
 

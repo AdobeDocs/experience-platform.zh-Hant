@@ -3,10 +3,11 @@ title: 將您的Snowflake串流帳戶連線至Adobe Experience Platform
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Snowflake串流。
 badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
+exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '867'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -21,7 +22,7 @@ ht-degree: 3%
 
 ## 快速入門
 
-本指南需要您深入瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 * [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用以下專案來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
 * [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。

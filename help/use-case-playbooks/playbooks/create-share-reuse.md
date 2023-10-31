@@ -3,13 +3,13 @@ solution: Experience Platform
 title: 建立、共用和重複使用教戰手冊執行個體
 description: 了解如何建立、共用和重複使用教戰手冊執行個體以完成您的行銷使用案例。
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
-workflow-type: ht
-source-wordcount: '724'
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '725'
 ht-degree: 100%
 
 ---
-
 
 # (Beta) 建立、共用和重複使用教戰手冊執行個體
 

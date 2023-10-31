@@ -5,9 +5,9 @@ description: 瞭解如何對目的地啟用帳戶對象
 badgeLimitedAvailability: label="可用性限制" type="Caution"
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: bf4a34a0fbf59571eaea3ccbc619f9fe17d5c218
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -90,11 +90,11 @@ ht-degree: 0%
 | 來源欄位 | 目標欄位 |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (在「 」中選取此欄位 **[!UICONTROL 選取身分名稱空間]** 檢視) |
+| `accountKey.sourceKey` | `primaryId` (在「 」中選取此欄位 **[!UICONTROL 選取身分名稱空間]** 檢視，選取 **[!UICONTROL 目標欄位]**)。 <br> ![選取工作流程中反白顯示的身分名稱空間，以將帳戶對象啟用至目的地。](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "選取工作流程中反白顯示的身分名稱空間，以將帳戶對象啟用至目的地。"){width="100" zoomable="yes"} |
 
 ### 資料治理實施 {#data-governance-enforcement}
 
-[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 目前不支援將帳戶對象啟用到目的地。 在啟動工作流程的稽核步驟中，您可以看到控制項呈現灰色 **[!UICONTROL 檢視適用的同意政策]**.
+在人員或設定檔層級強制同意 *客戶和潛在客戶受眾*. 因此，  [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 目前不支援將帳戶對象啟用到目的地。 在啟動工作流程的稽核步驟中，您可以看到控制項呈現灰色 **[!UICONTROL 檢視適用的同意政策]**.
 
 ![啟用帳戶對象工作流程的稽核步驟，同意執行控制項顯示為灰色。](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

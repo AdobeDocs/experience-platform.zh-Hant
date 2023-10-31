@@ -3,7 +3,8 @@ title: RainFocus來源概述
 description: 瞭解如何將RainFocus帳戶中的事件管理和分析資料帶入Experience Platform
 last-substantial-update: 2023-06-21T00:00:00Z
 badge: Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: 88e333e3-2b93-4d66-8412-efadea58ac46
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 5%
@@ -81,7 +82,7 @@ ht-degree: 5%
 | `session.externalId` | 字串 | 1666809456617001wyPj | 使用者端系統中工作階段的識別碼。 |
 | `session.code` | 字串 | GS3 | 工作階段的程式碼。 |
 | `session.title` | 字串 | Inspiration主題演講 | 工作階段的標題。 |
-| `session.length` | 整數 | 90 | 工作階段長度。 |
+| `session.length` | 整數 | 90 | 作業階段長度。 |
 | `sessiontime.sessiontimeId` | 字串 | 1673033149739001OJLZ | 此 [!DNL RainFocus] 工作階段時間的識別碼。 |
 | `sessiontime.startTime` | 字串 | 2023-03-22 10:00:00 | 工作階段的開始時間。 |
 | `sessiontime.endTime` | 字串 | 2023-03-22 10:00:00 | 工作階段的結束時間。 |

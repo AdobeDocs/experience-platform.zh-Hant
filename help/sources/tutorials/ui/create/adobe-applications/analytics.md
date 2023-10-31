@@ -2,9 +2,9 @@
 title: 在UI中建立Adobe Analytics來源連線
 description: 瞭解如何在UI中建立Adobe Analytics來源連線，以將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
+source-wordcount: '2481'
 ht-degree: 6%
 
 ---
@@ -264,33 +264,53 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![評論](../../../../images/tutorials/create/analytics/review.png)
 
-### 監視資料流
+## 監視資料流 {#monitor-your-dataflow}
 
-建立資料流後，您可以監視透過它擷取的資料。 從 [!UICONTROL 目錄] 熒幕，選取 **[!UICONTROL 資料流]** 以檢視與您的Analytics帳戶相關聯的已建立流程清單。
+資料流完成後，請選取 **[!UICONTROL 資料流]** 在來源目錄中，以監視資料的活動和狀態。
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![已選取資料流索引標籤的來源目錄。](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-此 **資料流** 畫面隨即顯示。 在此頁面是一對資料集流程，包括有關其名稱、來源資料、建立時間和狀態的資訊。
+貴組織中現有的Analytics資料流清單隨即顯示。 從這裡，選取目標資料集以檢視其個別的擷取活動。
 
-聯結器會將兩個資料集流程例項化。 一個流程代表回填資料，另一個流程代表即時資料。 回填資料未針對設定檔進行設定，而是會傳送到資料湖，以用於分析和資料科學的使用案例。
+![貴組織中現有的Adobe Analytics資料流清單。](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-如需回填、即時資料及其各自延遲的詳細資訊，請參閱 [Analytics資料聯結器總覽](../../../../connectors/adobe-applications/analytics.md).
+此 [!UICONTROL 資料集活動] 頁面會提供從Analytics傳送到Experience Platform的資料進度資訊。 介面會顯示量度，例如擷取的記錄數、擷取的批次數，以及失敗的批次數。
 
-從清單中選取您要檢視的資料集流程。
+來源會將兩個資料集流程例項化。 一個流程代表回填資料，另一個流程代表即時資料。 回填資料未設定為擷取至即時客戶個人檔案，而是傳送至資料湖，以用於分析和資料科學的使用案例。
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+如需回填、即時資料及其各自延遲的詳細資訊，請參閱 [Analytics來源概觀](../../../../connectors/adobe-applications/analytics.md).
 
-此 **[!UICONTROL 資料集活動]** 頁面便會顯示。 此頁面會以圖表形式顯示使用訊息的速率。 選取 **[!UICONTROL 資料控管]** 以存取標籤欄位。
+![Adobe Analytics資料的指定目標資料集的資料集活動頁面。](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![資料集 — 活動](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++使用舊版監控介面檢視個別批次
 
-您可以檢視資料集流程的繼承標籤，從 [!UICONTROL 資料控管] 畫面。 如需如何為來自Analytics的資料加上標籤的詳細資訊，請造訪 [資料使用標籤指南](../../../../../data-governance/labels/user-guide.md).
+資料集活動頁面不會顯示個別批次的清單。 若要檢視個別批次的清單，請在資料集活動介面中選取圖表。
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![已選取圖表的資料集活動頁面。](../../../../images/tutorials/create/analytics/select-chart.png)
 
-若要刪除資料流，請前往 [!UICONTROL 資料流] 頁面，然後選取省略符號(`...`)，然後選取「 」 [!UICONTROL 刪除].
+系統會將您帶往「監視」控制面板。 接下來，選取 **[!UICONTROL 僅擷取失敗：是]** 以清除篩選器並檢視個別批次的清單。
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![已選取失敗篩選器的監視儀表板。](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+介面會更新為個別批次的清單，包括有關其個別量度的資訊。
+
+![批次資料的舊版監視頁面。](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| 量度 | 說明 |
+| --- | --- |
+| 批次 ID  | 指定批次的ID。 此值是在內部產生。 |
+| 資料集名稱 | 用於Analytics資料的指定資料集名稱。 |
+| 來源 | 內嵌資料的來源。 |
+| 已更新 | 最近的流量執行反複專案的日期。 |
+| 資料集中的記錄 | 資料集中的記錄總數。 **注意**：此引數偶爾會顯示狀態 `in-progress`. 此狀態代表記錄擷取程式尚未完成。 |
+| 新設定檔片段 | 已擷取的新設定檔片段總數。 |
+| 現有的設定檔片段 | 現有設定檔片段的總數。 |
+| 已拼接身分記錄 | 擷取後拼接在一起的身分記錄總數。 |
+| 設定檔中的記錄 | 擷取到即時客戶個人檔案的記錄總數。 |
+
+{style="table-layout:auto"}
+
++++
 
 ## 後續步驟和其他資源
 

@@ -3,7 +3,8 @@ title: SAP Commerce來源概觀
 description: 瞭解如何使用API或使用者介面將SAP Commerce連線至Adobe Experience Platform。
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 2%

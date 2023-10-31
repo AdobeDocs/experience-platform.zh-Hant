@@ -1,13 +1,13 @@
 ---
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%
 
 ---
-
 
 # 合作夥伴結構描述設定
 
@@ -103,8 +103,8 @@ Destination SDK支援多種結構描述設定：
 | `profileFields` | 陣列 | 選填 | 定義目的地平台接受的目標屬性陣列，客戶可將其設定檔屬性對應至該陣列。 使用 `profileFields` 陣列，您可以省略 `useCustomerSchemaForAttributeMapping` 引數。 |
 | `useCustomerSchemaForAttributeMapping` | 布林值 | 選填 | 啟用或停用從客戶結構描述到您在 `profileFields` 陣列。 <ul><li>如果設為 `true`，使用者只會在對應欄位中看到來源欄。 `profileFields` 不適用於此情況。</li><li>如果設為 `false`，使用者可以將來源屬性從他們的結構描述對應到您在 `profileFields` 陣列。</li></ul> 預設值為 `false`。 |
 | `profileRequired` | 布林值 | 選填 | 使用 `true` 使用者是否應該能夠將Experience Platform中的設定檔屬性對應至目的地平台上的自訂屬性。 |
-| `segmentRequired` | 布林值 | 必填 | Destination SDK需要此引數，且應一律設為 `true`. |
-| `identityRequired` | 布林值 | 必填 | 將設為 `true` 如果使用者應該能夠 [身分型別](identity-namespace-configuration.md) 從Experience Platform到您在 `profileFields` 陣列。 |
+| `segmentRequired` | 布林值 | 必要 | Destination SDK需要此引數，且應一律設為 `true`. |
+| `identityRequired` | 布林值 | 必要 | 將設為 `true` 如果使用者應該能夠 [身分型別](identity-namespace-configuration.md) 從Experience Platform到您在 `profileFields` 陣列。 |
 | `segmentNamespaceAllowList` | 陣列 | 選填 | 定義使用者可將受眾對應至目的地的特定受眾名稱空間。 使用此引數可限制Platform使用者僅從您在陣列中定義的對象名稱空間匯出對象。 此引數不能與搭配使用 `segmentNamespaceDenyList`.<br> <br> 範例： `"segmentNamespaceAllowList": ["AudienceManager"]` 將允許使用者僅對應來自 `AudienceManager` 名稱空間至此目的地。 <br> <br> 若要允許使用者將任何對象匯出至您的目的地，您可以忽略此引數。 <br> <br> 如果兩者 `segmentNamespaceAllowList` 和 `segmentNamespaceDenyList` 您的設定中缺少，使用者將只能匯出源自 [分段服務](../../../../segmentation/home.md). |
 | `segmentNamespaceDenyList` | 陣列 | 選填 | 從陣列中定義的對象名稱空間，限制將對象對應到目的地的使用者。 不能與一起使用 `segmentNamespaceAllowed`. <br> <br> 範例： `"segmentNamespaceDenyList": ["AudienceManager"]` 將會封鎖使用者，使其無法從 `AudienceManager` 名稱空間至此目的地。 <br> <br> 若要允許使用者將任何對象匯出至您的目的地，您可以忽略此引數。 <br> <br> 如果兩者 `segmentNamespaceAllowed` 和 `segmentNamespaceDenyList` 您的設定中缺少，使用者將只能匯出源自 [分段服務](../../../../segmentation/home.md). <br> <br> 若要允許匯出所有對象，無論來源為何，請設定 `"segmentNamespaceDenyList":[]`. |
 
@@ -148,13 +148,13 @@ Destination SDK支援建立動態合作夥伴結構。 相對於靜態結構描�
 
 | 參數 | 類型 | 必填/選填 | 說明 |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | 字串 | 必填 | 指示方式 [!DNL Platform] 客戶連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`， `PLATFORM_AUTHENTICATION`， `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過上述任何驗證方法登入您的系統 [此處](customer-authentication.md). </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與您的目的地之間有全域驗證系統，而且 [!DNL Platform] 客戶不需要提供任何驗證認證即可連線至您的目的地。 在此情況下，您必須 [建立認證物件](../../credentials-api/create-credential-configuration.md) 使用認證API。 </li><li>使用 `NONE` 如果不需要驗證即可將資料傳送至您的目的地平台。 </li></ul> |
-| `dynamicEnum.destinationServerId` | 字串 | 必填 | 此 `instanceId` （屬於您的動態結構描述伺服器）。 此目的地伺服器包含API端點，Experience Platform會呼叫該API端點來擷取動態結構描述。 |
-| `dynamicEnum.value` | 字串 | 必填 | 動態架構的名稱，如動態架構伺服器設定中所定義。 |
-| `dynamicEnum.responseFormat` | 字串 | 必填 | 一律設為 `SCHEMA` 定義動態結構描述時。 |
+| `dynamicEnum.authenticationRule` | 字串 | 必要 | 指示方式 [!DNL Platform] 客戶連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`， `PLATFORM_AUTHENTICATION`， `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過上述任何驗證方法登入您的系統 [此處](customer-authentication.md). </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與您的目的地之間有全域驗證系統，而且 [!DNL Platform] 客戶不需要提供任何驗證認證即可連線至您的目的地。 在此情況下，您必須 [建立認證物件](../../credentials-api/create-credential-configuration.md) 使用認證API。 </li><li>使用 `NONE` 如果不需要驗證即可將資料傳送至您的目的地平台。 </li></ul> |
+| `dynamicEnum.destinationServerId` | 字串 | 必要 | 此 `instanceId` （屬於您的動態結構描述伺服器）。 此目的地伺服器包含API端點，Experience Platform會呼叫該API端點來擷取動態結構描述。 |
+| `dynamicEnum.value` | 字串 | 必要 | 動態架構的名稱，如動態架構伺服器設定中所定義。 |
+| `dynamicEnum.responseFormat` | 字串 | 必要 | 一律設為 `SCHEMA` 定義動態結構描述時。 |
 | `profileRequired` | 布林值 | 選填 | 使用 `true` 使用者是否應該能夠將Experience Platform中的設定檔屬性對應至目的地平台上的自訂屬性。 |
-| `segmentRequired` | 布林值 | 必填 | Destination SDK需要此引數，且應一律設為 `true`. |
-| `identityRequired` | 布林值 | 必填 | 將設為 `true` 如果使用者應該能夠 [身分型別](identity-namespace-configuration.md) 從Experience Platform到您在 `profileFields` 陣列。 |
+| `segmentRequired` | 布林值 | 必要 | Destination SDK需要此引數，且應一律設為 `true`. |
+| `identityRequired` | 布林值 | 必要 | 將設為 `true` 如果使用者應該能夠 [身分型別](identity-namespace-configuration.md) 從Experience Platform到您在 `profileFields` 陣列。 |
 
 {style="table-layout:auto"}
 
@@ -197,9 +197,9 @@ Destination SDK支援建立動態合作夥伴結構。 相對於靜態結構描�
 | 參數 | 類型 | 必填/選填 | 說明 |
 |---|---|---|---|
 | `requiredMappingsOnly` | 布林值 | 選填 | 當此設定為true時，除了您在中定義的必要對應之外，使用者無法對應啟動流程中的其他屬性和身分 `requiredMappings` 陣列。 |
-| `requiredMappings.sourceType` | 字串 | 必填 | 指示 `source` 欄位。 支援的值： <ul><li>`text/x.schema-path`：此值用於 `source` 欄位是XDM結構描述中的設定檔屬性。</li><li>`text/x.aep-xl`：請在以下情況下使用此值： `source` 欄位是由規則運算式定義。 範例：`iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`</li><li>`text/plain`：請在以下情況下使用此值： `source` 欄位由巨集範本定義。 目前唯一支援的巨集範本是 `metadata.segment.alias`.</li></ul> |
-| `requiredMappings.source` | 字串 | 必填 | 表示來源欄位的值。 支援的值型別： <ul><li>xdm設定檔屬性。 範例: `personalEmail.address`. 當來源屬性為XDM設定檔屬性時，設定 `sourceType` 引數至 `text/x.schema-path`.</li><li>規則運算式. 範例: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. 當您的來源屬性是規則運算式時，設定 `sourceType` 引數至 `text/x.aep-xl`.</li><li>巨集範本。 範例:`metadata.segment.alias`. 當您的來源屬性是巨集範本時，請設定 `sourceType` 引數至 `text/plain`. 目前唯一支援的巨集範本是 `metadata.segment.alias`.</li></ul> |
-| `requiredMappings.destination` | 字串 | 必填 | 表示目標欄位的值。 當來源欄位和目的地欄位都指定為必要對應時，使用者無法選取或編輯這兩個欄位中的任何一個，且只能檢視選取專案。 |
+| `requiredMappings.sourceType` | 字串 | 必要 | 指示 `source` 欄位。 支援的值： <ul><li>`text/x.schema-path`：此值用於 `source` 欄位是XDM結構描述中的設定檔屬性。</li><li>`text/x.aep-xl`：請在以下情況下使用此值： `source` 欄位是由規則運算式定義。 範例：`iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`</li><li>`text/plain`：請在以下情況下使用此值： `source` 欄位由巨集範本定義。 目前唯一支援的巨集範本是 `metadata.segment.alias`.</li></ul> |
+| `requiredMappings.source` | 字串 | 必要 | 表示來源欄位的值。 支援的值型別： <ul><li>xdm設定檔屬性。 範例: `personalEmail.address`. 當來源屬性為XDM設定檔屬性時，設定 `sourceType` 引數至 `text/x.schema-path`.</li><li>規則運算式. 範例: `iif(segmentMembership.ups.aep_seg_id.status==\"exited\", \"1\", \"0\")`. 當您的來源屬性是規則運算式時，設定 `sourceType` 引數至 `text/x.aep-xl`.</li><li>巨集範本。 範例:`metadata.segment.alias`. 當您的來源屬性是巨集範本時，請設定 `sourceType` 引數至 `text/plain`. 目前唯一支援的巨集範本是 `metadata.segment.alias`.</li></ul> |
+| `requiredMappings.destination` | 字串 | 必要 | 表示目標欄位的值。 當來源欄位和目的地欄位都指定為必要對應時，使用者無法選取或編輯這兩個欄位中的任何一個，且只能檢視選取專案。 |
 
 {style="table-layout:auto"}
 
@@ -227,7 +227,7 @@ Destination SDK支援建立動態合作夥伴結構。 相對於靜態結構描�
 | 參數 | 類型 | 必填/選填 | 說明 |
 |---|---|---|---|
 | `requiredMappingsOnly` | 布林值 | 選填 | 當此設定為true時，除了您在中定義的必要對應之外，使用者無法對應啟動流程中的其他屬性和身分 `requiredMappings` 陣列。 |
-| `requiredMappings.destination` | 字串 | 必填 | 表示目標欄位的值。 當僅指定目的地欄位時，使用者可以選取來源欄位以對應至目的地。 |
+| `requiredMappings.destination` | 字串 | 必要 | 表示目標欄位的值。 當僅指定目的地欄位時，使用者可以選取來源欄位以對應至目的地。 |
 | `mandatoryRequired` | 布林值 | 選填 | 指示對應是否應標示為 [強制屬性](../../../ui/activate-batch-profile-destinations.md#mandatory-attributes). |
 | `primaryKeyRequired` | 布林值 | 選填 | 指示對應是否應標示為 [重複資料刪除索引鍵](../../../ui/activate-batch-profile-destinations.md#deduplication-keys). |
 

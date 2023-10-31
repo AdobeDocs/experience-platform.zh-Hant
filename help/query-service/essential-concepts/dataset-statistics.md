@@ -1,7 +1,8 @@
 ---
 title: 資料集統計資料計算
 description: 本檔案說明如何使用SQL命令計算Azure Data Lake Storage (ADLS)資料集的欄層級統計資料。
-source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
+exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 0%
@@ -113,7 +114,7 @@ age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) 
 |---|---|
 | `statsId` | 此ID會參照產生的臨時統計資料表。 `COMPUTE STATISTICS` 命令。 |
 | `tableName` | 用於分析的原始表格。 |
-| `columnSet` | 特別選擇用於分析的任何欄的清單。 空值表示已分析所有欄。 請參閱以下小節： [限制欄](#limit-included-columns) 以取得詳細資訊。 |
+| `columnSet` | 特別選擇用於分析的任何欄的清單。 空白值表示已分析所有欄。 請參閱以下小節： [限制欄](#limit-included-columns) 以取得詳細資訊。 |
 | `filterContext` | 套用至分析的任何篩選器清單。 |
 | `timestamp` | 套用至您的資料分析的任何時間順序篩選器，以聚焦於特定時段。 請參閱 [時間戳記篩選條件區段](#filter-condition) 以取得更多詳細資料。 |
 

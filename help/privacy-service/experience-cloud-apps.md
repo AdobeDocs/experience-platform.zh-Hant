@@ -6,8 +6,8 @@ description: 本檔案提供如何為隱私權相關作業設定不同Experience
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 source-git-commit: b0b49badd46601571be59afba84fad874ca1b368
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '927'
+ht-degree: 13%
 
 ---
 
