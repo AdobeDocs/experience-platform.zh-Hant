@@ -4,9 +4,9 @@ description: 瞭解如何使用流量服務API，將來源中的串流資料匯�
 hide: true
 hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1700'
 ht-degree: 1%
 
 ---
@@ -114,13 +114,13 @@ curl -X POST \
 
 您可以透過對以下對象執行POST請求來建立目標XDM結構描述： [結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-如需如何建立目標XDM結構的詳細步驟，請參閱以下教學課程： [使用API建立結構描述](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+如需如何建立目標XDM結構的詳細步驟，請參閱以下教學課程： [使用API建立結構描述](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### 建立目標資料集 {#target-dataset}
 
 您可以透過對執行POST請求來建立目標資料集 [目錄服務API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)，在裝載中提供目標結構描述的ID。
 
-如需如何建立目標資料集的詳細步驟，請參閱教學課程，位於 [使用API建立資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+如需如何建立目標資料集的詳細步驟，請參閱教學課程，位於 [使用API建立資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### 建立目標連線 {#target-connection}
 

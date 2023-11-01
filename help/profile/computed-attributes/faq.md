@@ -2,9 +2,9 @@
 title: 計算屬性常見問題
 description: 瞭解關於使用計算屬性的常見問題解答。
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
@@ -99,4 +99,4 @@ ht-degree: 0%
 
 ## 如何將運算屬性用於Adobe Journey Optimizer？
 
-若要在歷程中使用計算屬性，您必須新增 `SystemComputedAttributes` 欄位群組至Experience Platform資料來源。 如需設定Experience Platform資料來源的詳細資訊，請參閱 [Adobe Experience Platform資料來源指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+若要在歷程中使用計算屬性，您必須新增 `SystemComputedAttributes` 欄位群組至Experience Platform資料來源。 如需設定Experience Platform資料來源的詳細資訊，請參閱 [Adobe Experience Platform資料來源指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

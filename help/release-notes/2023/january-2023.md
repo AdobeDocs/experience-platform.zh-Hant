@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 1 月)
 description: Adobe Experience Platform 2023 年 1 月版發行說明。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: a0400ab255b3b6a7edb4dcfd5c33a0f9e18b5157
-workflow-type: ht
-source-wordcount: '2414'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '2408'
+ht-degree: 99%
 
 ---
 
@@ -73,7 +73,7 @@ Adobe Assurance 可讓您檢查、證明、模擬和驗證您在行動應用程�
 
 ## 資料集合 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
 
 **新功能或更新功能**
 
@@ -86,7 +86,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 目的地 (於 2 月 2 日更新) {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新目的地**
 
@@ -113,11 +113,11 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
     </tr>
     <tr>
         <td>已更新至檔案型目的地的匯出行為 (PLAT-123316)</td>
-        <td>我們解決了匯出資料檔案至批次目的地時<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mandatory-attributes">強制屬性</a>行為中出現的問題。<br>之前，輸出檔案中的每筆記錄都會經過驗證以包含以下兩者： <ol><li><code>mandatoryField</code> 欄的非 Null 值以及</li><li>在其他至少一個非必填欄位的非 Null 值。</li></ol> 第二個條件已被移除。結果，您可能會在匯出的資料檔案中看到更多輸出行，如以下範例所示：<br><b>2023 年 1 月版之前的範例行為</b><br>必填欄位：<code>emailAddress</code><br><b>輸入要啟動的資料</b><br><table><thead><tr><th>名字</th><th>電子郵件地址</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>Null</td><td>diana@acme.com</td></tr></tbody></table> <br><b>啟動輸出</b><br><table><thead><tr><th>名字</th><th>電子郵件地址</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br><b>2023 年 1 月版之後的範例行為</b><br><b>啟動輸出</b><br> <table><thead><tr><th>名字</th><th>電子郵件地址</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>Null</td><td>diana@acme.com</td></tr></tbody></table> </td>
+        <td>我們解決了匯出資料檔案至批次目的地時<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mandatory-attributes">強制屬性</a>行為中出現的問題。<br>之前，輸出檔案中的每筆記錄都會經過驗證以包含以下兩者： <ol><li><code>mandatoryField</code> 欄的非 Null 值以及</li><li>在其他至少一個非必填欄位的非 Null 值。</li></ol> 第二個條件已被移除。結果，您可能會在匯出的資料檔案中看到更多輸出行，如以下範例所示：<br><b>2023 年 1 月版之前的範例行為</b><br>必填欄位：<code>emailAddress</code><br><b>輸入要啟動的資料</b><br><table><thead><tr><th>名字</th><th>電子郵件地址</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>Null</td><td>diana@acme.com</td></tr></tbody></table> <br><b>啟動輸出</b><br><table><thead><tr><th>名字</th><th>電子郵件地址</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr></tbody></table> <br><b>2023 年 1 月版之後的範例行為</b><br><b>啟動輸出</b><br> <table><thead><tr><th>名字</th><th>電子郵件地址</th></tr></thead><tbody><tr><td>John</td><td>john@acme.com</td></tr><tr><td>Null</td><td>peter@acme.com</td></tr><tr><td>Jenifer</td><td>jennifer@acme.com</td></tr><tr><td>Null</td><td>diana@acme.com</td></tr></tbody></table> </td>
     </tr>
     <tr>
         <td>用於必要對應和重複對應的 UI 和 API 驗證 (PLAT-123316)</td>
-        <td>現在當<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#mapping">對應欄位</a>在啟動目的地工作流程中時，會在 UI 和 API 中強制執行驗證，如下所示：<ul><li><b>必要對應</b>：如果目的地開發人員已使用必要對應設定了目的地 (例如，<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html?lang=en"> Google Ad Manager 360</a> 目的地)，則啟動資料至目的地時，這些必要對應需要由使用者新增。 </li><li><b>重複對應</b>：在啟動工作流程的對應步驟中，您可以在來源欄位中新增重複值，但不能在目標欄位中這麼做。請參閱以下表格，了解允許和禁止的對應組合範例。 <br><table><thead><tr><th>允許/禁止</th><th>來源欄位</th><th>目標欄位</th></tr></thead><tbody><tr><td>允許</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email   alias2</li></ul></td></tr><tr><td>禁止</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
+        <td>現在當<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#mapping">對應欄位</a>在啟動目的地工作流程中時，會在 UI 和 API 中強制執行驗證，如下所示：<ul><li><b>必要對應</b>：如果目的地開發人員已使用必要對應設定了目的地 (例如，<a href="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-ad-manager-360-connection.html"> Google Ad Manager 360</a> 目的地)，則啟動資料至目的地時，這些必要對應需要由使用者新增。 </li><li><b>重複對應</b>：在啟動工作流程的對應步驟中，您可以在來源欄位中新增重複值，但不能在目標欄位中這麼做。請參閱以下表格，了解允許和禁止的對應組合範例。 <br><table><thead><tr><th>允許/禁止</th><th>來源欄位</th><th>目標欄位</th></tr></thead><tbody><tr><td>允許</td><td><ul><li>email.address</li><li>email.address</li></ul></td><td><ul><li>emailalias1</li><li>email   alias2</li></ul></td></tr><tr><td>禁止</td><td><ul><li>email.address</li><li>hashed.emails</li></ul></td><td><ul><li>emailalias1</li><li>emailalias1</li></ul></td></tr></tbody></table> </li></ul></td>
     </tr>    
 </table>
 
@@ -125,7 +125,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
 **新功能或更新功能**
 

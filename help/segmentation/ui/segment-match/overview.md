@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 區段比對概觀
 description: 「區段比對」是Adobe Experience Platform中的區段共用服務，可讓兩位或以上的Platform使用者以安全、受規管且有利於隱私權的方式交換區段資料。
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1994'
 ht-degree: 2%
 
 ---
@@ -44,7 +44,7 @@ Adobe Experience Platform區段比對是一項區段共用服務，可讓兩位�
 
 | 命名空間 | 說明 |
 | --------- | ----------- |
-| 電子郵件（SHA256，小寫） | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Platform提供兩種支援資料收集雜湊的方法，透過 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) 和至 [資料準備](../../../data-prep/functions.md#hashing). |
+| 電子郵件（SHA256，小寫） | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 Platform提供兩種支援資料收集雜湊的方法，透過 [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 和至 [資料準備](../../../data-prep/functions.md#hashing). |
 | 電話(SHA256_E.164) | 代表需要使用SHA256和E.164格式雜湊的原始電話號碼的名稱空間。 |
 | ECID | 代表Experience CloudID (ECID)值的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱 [ECID概觀](../../../identity-service/ecid.md) 以取得詳細資訊。 |
 | Apple IDFA （廣告商的ID） | 代表廣告商Apple ID的名稱空間。 請參閱以下檔案： [興趣型廣告](https://support.apple.com/en-us/HT202074) 以取得詳細資訊。 |

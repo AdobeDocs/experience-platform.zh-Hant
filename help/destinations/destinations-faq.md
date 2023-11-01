@@ -3,9 +3,9 @@ keywords: 目的地；問題；常見問題；faq；目的地常見問題
 title: 常見問答
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: b41335ba5fd6dca422b0c19517bc32b320f1e733
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1634'
 ht-degree: 3%
 
 ---
@@ -178,7 +178,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 +++答案否， [Web SDK](../edge/home.md) 不一定要啟用對象，才可以 [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-但是，如果 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en) 已使用（而非Web SDK），僅支援下一次工作階段個人化。
+但是，如果 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) 已使用（而非Web SDK），僅支援下一次工作階段個人化。
 
 的 [相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md) 使用案例，您必須使用 [Web SDK](../edge/home.md) 或 [Edge Network伺服器API](../server-api/overview.md). 請參閱以下檔案： [啟用對象至邊緣目的地](ui/activate-edge-personalization-destinations.md) 以取得更多實作詳細資訊。
 +++
@@ -204,7 +204,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### 我可以在哪裡檢視Adobe Target中已啟用的屬性？
 
-+++回應屬性可用於Target中，位置如下： [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) 和 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=zh-Hant) 選件。
++++回應屬性可用於Target中，位置如下： [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) 和 [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) 選件。
 +++
 
 ### 我可以建立沒有資料串流的目的地，然後在稍後將資料串流新增到相同目的地嗎？

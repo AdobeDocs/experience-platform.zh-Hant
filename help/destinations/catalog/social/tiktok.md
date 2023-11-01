@@ -3,10 +3,10 @@ title: TikTok 連線
 description: 使用您的資料在 TikTok 上建置自訂對象，以設定您的廣告行銷活動的目標定位。這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 4%
+source-wordcount: '1040'
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-使用您的資料在 TikTok 上建置自訂對象，以設定您的廣告行銷活動的目標定位。這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。 造訪 [TikTok的業務說明中心](https://ads.tiktok.com/help/article/audiences?lang=en) 以取得詳細資訊。
+使用您的資料在 TikTok 上建置自訂對象，以設定您的廣告行銷活動的目標定位。這些對象可能是造訪過您的網站或與您的內容互動的人。 使用Adobe與TikTok Ads Manager的即時整合，快速安全地將所需的對象從Adobe Experience Platform推送到TikTok。 造訪 [TikTok的業務說明中心](https://ads.tiktok.com/help/article/audiences) 以取得詳細資訊。
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ ht-degree: 4%
 
 ## 先決條件 {#prerequisites}
 
-您必須擁有 [!DNL Admin] 或 [!DNL Operator] 存取您要傳送對象的TikTok Ads Manager帳戶。 如需詳細指示，請參閱 [TikTok說明中心](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+您必須擁有 [!DNL Admin] 或 [!DNL Operator] 存取您要傳送對象的TikTok Ads Manager帳戶。 如需詳細指示，請參閱 [TikTok說明中心](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 將資料傳送至您的TikTok Ads Manager帳戶之前，您需要先授予Adobe Experience Platform存取您廣告帳戶的許可權 `Audience Management`. 此許可權可由以下人員提供： [輸入您的Ads Manager ID](#authenticate) 重新導向至您的TikTok Ads管理員帳戶後，在Experience PlatformUI中授予許可權。
 
@@ -123,4 +123,4 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 ## 其他資源 {#additional-resources}
 
-請參閱 [TikTok說明中心頁面](https://ads.tiktok.com/help/article/audiences?lang=en) 以取得其他資訊。
+請參閱 [TikTok說明中心頁面](https://ads.tiktok.com/help/article/audiences) 以取得其他資訊。

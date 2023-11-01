@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2022 年 1 月)
 description: Adobe Experience Platform 2022 年 1 月版發行說明。
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1340'
 ht-degree: 20%
 
 ---
@@ -72,7 +72,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 | 相同頁面和下一頁個人化 | 此 [相同頁面和下一頁個人化功能](../../destinations/ui/activate-edge-personalization-destinations.md) 針對Edge Network上的應用程式，提供共用、可定位的使用者檢視，以維持行銷和客戶管道之間的一致性。 此個人化是透過 [Adobe Target連線](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要設定相同頁面或下一頁個人化行銷活動，請參閱 [專屬教學課程](../../destinations/ui/activate-edge-personalization-destinations.md). |
 | 批次目的地監控和區段層級量度 | 目的地監視功能現已從串流目的地擴充，並包括批次目的地和啟用資料流程的區段層級量度。 如需詳細資訊，請閱讀 [監視目的地控制面板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)， [監視區段作業儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard)、和 [區段層級檢視](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | 排程在UI中編輯現有批次啟用資料流 | 此版本引進了編輯批次目的地現有啟動資料流排程的選項。 如需詳細資訊，請閱讀 [對批次設定檔目的地啟用設定檔資料](/help/destinations/ui/activate-batch-profile-destinations.md). |
-| Marketo目的地增強功能 | 使用Marketo Engage的Experience Platform客戶可以透過以下新功能，將全新人員記錄從Experience Platform推送到Marketo Engage，將其Marketo資料庫發揮到極致 [Marketo目的地聯結器](/help/destinations/catalog/adobe/marketo-engage.md). <br> 從Experience Platform傳送受眾區段至Marketo Engage時，區段內尚未存在於Marketo Engage資料庫中的人員可自動新增至該區段。 如需詳細資訊，請閱讀 [將Adobe Experience Platform區段推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (教學課程中的步驟9會指示如何將全新人員記錄推送到Marketo)。 |
+| Marketo目的地增強功能 | 使用Marketo Engage的Experience Platform客戶可以透過以下新功能，將全新人員記錄從Experience Platform推送到Marketo Engage，將其Marketo資料庫發揮到極致 [Marketo目的地聯結器](/help/destinations/catalog/adobe/marketo-engage.md). <br> 從Experience Platform傳送受眾區段至Marketo Engage時，區段內尚未存在於Marketo Engage資料庫中的人員可自動新增至該區段。 如需詳細資訊，請閱讀 [將Adobe Experience Platform區段推送至Marketo靜態清單](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html) (教學課程中的步驟9會指示如何將全新人員記錄推送到Marketo)。 |
 
 **新目的地**
 

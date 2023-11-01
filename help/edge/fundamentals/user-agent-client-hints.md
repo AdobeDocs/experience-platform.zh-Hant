@@ -3,10 +3,10 @@ title: 使用者代理使用者端提示
 description: 瞭解使用者代理程式使用者端提示在Web SDK中的運作方式。 使用者端提示可讓網站擁有者存取使用者代理字串中提供的大部分相同資訊，但採用更能保護隱私的方式來存取這些資訊。
 keywords: 使用者代理；使用者端提示；字串；使用者代理字串；低平均資訊量；高平均資訊量
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 6%
+source-wordcount: '1192'
+ht-degree: 7%
 
 ---
 
@@ -120,9 +120,9 @@ Web SDK預設會停用高平均資訊量使用者端提示。 若要啟用它們
 
 ### 依賴高平均資訊量使用者端提示的Audience Manager特徵 {#aam}
 
-[!DNL Google] 已更新 [!DNL Chrome] 瀏覽器功能，將透過收集的資訊減至最少 `User-Agent` 標頭。 因此，Audience Manager客戶使用 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en) 將不會再收到以下分類之特徵的可靠資訊： [平台層級索引鍵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=zh-Hant).
+[!DNL Google] 已更新 [!DNL Chrome] 瀏覽器功能，將透過收集的資訊減至最少 `User-Agent` 標頭。 因此，Audience Manager客戶使用 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant) 將不會再收到以下分類之特徵的可靠資訊： [平台層級索引鍵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-使用平台層級索引鍵進行目標定位的Audience Manager客戶必須切換至 [Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=zh-Hant) 而非 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=en)，並啟用 [高平均資訊量使用者端提示](#enabling-high-entropy-client-hints) 以繼續接收可靠的特徵資料。
+使用平台層級索引鍵進行目標定位的Audience Manager客戶必須切換至 [Experience PlatformWeb SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=zh-Hant) 而非 [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=zh-Hant)，並啟用 [高平均資訊量使用者端提示](#enabling-high-entropy-client-hints) 以繼續接收可靠的特徵資料。
 
 ## 啟用高平均資訊量使用者端提示 {#enabling-high-entropy-client-hints}
 

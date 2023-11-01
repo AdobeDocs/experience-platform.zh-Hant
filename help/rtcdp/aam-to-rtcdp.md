@@ -2,10 +2,10 @@
 title: 從 Audience Manager 到 Real-Time CDP 的進化
 description: 在規劃從 Audience Manager 移轉到 Real-Time CDP 之前，請注意需考量的事項。
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 90%
+source-wordcount: '528'
+ht-degree: 84%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 90%
 
 ## 1. 考慮 Audience Manager 中的資料架構
 
-由於您考慮從 Audience Manager 進化到 Real-Time CDP，現在是分析您的 [Audience Manager 區段](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=en)並確定構成這些區段的是哪些[訊號](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=en)、[特徵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=en)和[規則](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=en#segment-builder-section)的關鍵性時刻。
+由於您考慮從 Audience Manager 進化到 Real-Time CDP，現在是分析您的 [Audience Manager 區段](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html)並確定構成這些區段的是哪些[訊號](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html)、[特徵](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html)和[規則](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section)的關鍵性時刻。
 
 此外，需考慮您目前在 Audience Manager 中使用的資料來源。
 
@@ -41,7 +41,7 @@ Adobe 建議您依照下列方式將區段分類：
 
 ## 4. 現在您在 Audience Manager 中已有哪些目的地可以開始移動到 Real-Time CDP？
 
-Adobe 強烈建議應將在 Audience Manager 中啟動至[以人物為基礎的目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=en)的區段透過 [!UICONTROL  Audience Manager 來源連接器]推送至 Real-Time CDP，然後再透過 Real-Time CDP 啟動。
+Adobe 強烈建議應將在 Audience Manager 中啟動至[以人物為基礎的目標](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)的區段透過 [!UICONTROL  Audience Manager 來源連接器]推送至 Real-Time CDP，然後再透過 Real-Time CDP 啟動。
 
 Audience Manager 中提供的所有以人物為基礎的目標 - [Facebook](/help/destinations/catalog/social/facebook.md)、[[!UICONTROL Google 目標客戶比對]](/help/destinations/catalog/advertising/google-customer-match.md)、[LinkedIn](/help/destinations/catalog/social/linkedin.md) - 也可在 Real-Time CDP 中使用。
 

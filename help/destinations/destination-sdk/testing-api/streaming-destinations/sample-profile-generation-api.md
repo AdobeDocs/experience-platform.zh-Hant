@@ -2,9 +2,9 @@
 description: 瞭解如何使用目的地測試API為您的串流目的地產生範例設定檔，以用於目的地測試。
 title: 根據來源結構描述產生範例設定檔
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1010'
 ht-degree: 1%
 
 ---
@@ -24,15 +24,15 @@ ht-degree: 1%
 >
 >使用此API端點可針對兩個不同的使用案例產生範例設定檔。 您可以：
 >* 產生設定檔以用於 [製作和測試訊息轉換範本](create-template.md)  — 使用 *目的地ID* 作為查詢引數。
->* 產生設定檔以在對進行呼叫時使用 [測試您的目的地是否已正確設定](streaming-destination-testing-overview.md)  — 使用 *目的地執行個體識別碼* 作為查詢引數。
+>* 產生設定檔，以在對進行呼叫時使用 [測試您的目的地是否已正確設定](streaming-destination-testing-overview.md)  — 使用 *目的地執行個體識別碼* 作為查詢引數。
 
-您可以根據AdobeXDM來源結構描述（在測試目的地時使用）或目的地支援的目標結構描述（在製作範本時使用）來產生範例設定檔。 若要瞭解AdobeXDM來源結構描述和目標結構描述之間的差異，請閱讀 [訊息格式](../../functionality/destination-server/message-format.md) 文章。
+您可以根據AdobeXDM來源結構描述（用於測試您的目的地）或目的地支援的目標結構描述（用於製作範本）來產生範例設定檔。 若要瞭解AdobeXDM來源結構描述和目標結構描述之間的差異，請閱讀 [訊息格式](../../functionality/destination-server/message-format.md) 文章。
 
-請注意，範例設定檔的使用目的不可互換。 根據以下專案產生的設定檔： *目的地ID* 僅可用於製作訊息轉換範本及根據 *目的地執行個體識別碼* 只能用於測試您的目的地端點。
+請注意，範例設定檔的使用目的不可互換。 根據以下專案產生的設定檔： *目的地ID* 只能用於製作您的訊息轉換範本，以及根據 *目的地執行個體識別碼* 僅可用於測試您的目的地端點。
 
 ## 範例設定檔產生API操作快速入門 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 根據測試目的地時使用的來源結構描述產生範例設定檔 {#generate-sample-profiles-source-schema}
 
@@ -40,14 +40,14 @@ ht-degree: 1%
 >
 >新增在此產生的範例設定檔至HTTP呼叫，當 [測試您的目的地](streaming-destination-testing-overview.md).
 
-您可以向以下發出GET要求，根據來源結構描述產生範例設定檔： `authoring/sample-profiles/` 端點，並提供您根據要測試的目的地設定而建立的目的地執行個體的ID。
+您可以向以下發出GET請求，根據來源結構描述產生範例設定檔： `authoring/sample-profiles/` 端點，並提供您根據要測試的目的地設定而建立的目的地執行個體的ID。
 
-若要取得目的地執行個體的ID，您必須先在Experience PlatformUI中建立與目的地的連線，才能嘗試測試您的目的地。 閱讀 [啟用目的地教學課程](../../../ui/activation-overview.md) 以及如何取得要用於此API的目的地執行個體ID，請參閱以下秘訣。
+若要取得目的地執行個體的ID，您必須先在Experience PlatformUI中建立與目的地的連線，才能嘗試測試您的目的地。 閱讀 [啟用目的地教學課程](../../../ui/activation-overview.md) 以及如何取得要用於此API的目的地例項ID，請參閱以下秘訣。
 
 >[!IMPORTANT]
 >
->* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 讀取 [連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 和 [對目的地啟用設定檔和對象](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) 以取得詳細資訊。
-> * 建立與目的地的連線後，請在以下情況下取得您應用於此端點的API呼叫中的目的地執行個體ID： [瀏覽與目的地的連線](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* 若要使用此API，您在Experience PlatformUI中必須有與目的地的現有連線。 讀取 [連線到目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 和 [對目的地啟用設定檔和對象](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) 以取得詳細資訊。
+> * 建立與目的地的連線後，請在以下情況下取得您應在對此端點的API呼叫中使用的目的地執行個體ID： [瀏覽與目的地的連線](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >![UI影像如何取得目的地執行個體ID](../../assets/testing-api/get-destination-instance-id.png)
 
 **API格式**
@@ -58,15 +58,15 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 
 | 查詢引數 | 說明 |
 | -------- | ----------- |
-| `{DESTINATION_INSTANCE_ID}` | 您產生範例設定檔時所依據的目的地執行個體的ID。 |
-| `{COUNT}` | *可選*. 您正在產生的範例設定檔數目。 引數可取的值介於 `1 - 1000`. <br> 如果未指定count引數，則產生的設定檔的預設數量由 `maxUsersPerRequest` 中的值 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如果此屬性未定義，則Adobe將產生一個範例設定檔。 |
+| `{DESTINATION_INSTANCE_ID}` | 要根據目的地執行個體的ID產生範例設定檔。 |
+| `{COUNT}` | *可選*. 您正在產生的範例設定檔數目。 引數可取的值介於 `1 - 1000`. <br> 如果未指定count引數，則產生的設定檔預設數量會由 `maxUsersPerRequest` 中的值 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如果此屬性未定義，則Adobe將產生一個範例設定檔。 |
 
 {style="table-layout:auto"}
 
 
 **要求**
 
-以下請求會產生範例設定檔，設定者為 `{DESTINATION_INSTANCE_ID}` 和 `{COUNT}` 查詢引數。
+以下請求會產生範例設定檔，由 `{DESTINATION_INSTANCE_ID}` 和 `{COUNT}` 查詢引數。
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -80,11 +80,11 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定數量的範例設定檔，以及與來源XDM結構描述相對應的對象成員資格、身分和設定檔屬性。
+成功的回應會傳回HTTP狀態200，其中包含指定數量的範例設定檔，以及與來源XDM結構描述對應的對象成員資格、身分和設定檔屬性。
 
 >[!TIP]
 >
-> 回應只會傳回目標執行個體中使用的對象成員資格、身分和設定檔屬性。 即使您的來源結構描述有其他欄位，這些欄位也會被忽略。
+> 回應只會傳回目標例項中使用的對象成員資格、身分和設定檔屬性。 即使您的來源結構描述有其他欄位，這些欄位仍會被忽略。
 
 ```json
 [
@@ -182,22 +182,22 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 | -------- | ----------- |
 | `segmentMembership` | 說明個人對象會籍的地圖物件。 如需詳細資訊，請參閱 `segmentMembership`，讀取 [對象成員資格詳細資料](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | 此設定檔上次符合區段資格的時間戳記。 |
-| `xdm:status` | 字串欄位，指出受眾成員資格是否已在目前請求中實現。 接受下列值： <ul><li>`realized`：設定檔是區段的一部分。</li><li>`exited`：設定檔會隨著目前請求退出對象。</li></ul> |
-| `identityMap` | 說明個人的各種身分值及其相關名稱空間的對應型別欄位。 如需詳細資訊，請參閱 `identityMap`，讀取 [結構描述組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `xdm:status` | 字串欄位，指出是否已在目前請求中實現對象成員資格。 接受下列值： <ul><li>`realized`：設定檔是區段的一部分。</li><li>`exited`：設定檔會隨著目前請求退出對象。</li></ul> |
+| `identityMap` | 描述個人各種身分值及其相關名稱空間的對應型別欄位。 如需詳細資訊，請參閱 `identityMap`，讀取 [結構描述組合的基礎](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
-## 根據建立訊息轉換範本時要使用的目標結構描述產生範例設定檔 {#generate-sample-profiles-target-schema}
+## 根據建立訊息轉換範本時使用的目標結構描述產生範例設定檔 {#generate-sample-profiles-target-schema}
 
 >[!IMPORTANT]
 >
->在中，使用製作範本時此處產生的範例設定檔 [演算範本步驟](render-template-api.md#multiple-profiles-with-body).
+>在中，使用製作範本時此處產生的範例設定檔 [轉譯範本步驟](render-template-api.md#multiple-profiles-with-body).
 
-您可以根據向「 」發出GET請求的目標結構描述來產生範例設定檔 `authoring/sample-profiles/` 端點，並提供您建立範本時依據之目的地設定的目的地ID。
+GET您可以根據目標結構描述產生範例設定檔，向 `authoring/sample-profiles/` 端點，並提供您建立範本時根據之目的地設定的目的地ID。
 
 >[!TIP]
 >
->* 您應在此使用的目的地ID為 `instanceId` 對應至目的地組態，建立目的地組態時，使用 `/destinations` 端點。 請參閱 [擷取目的地設定](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) 以取得更多詳細資料。
+>* 您應在此使用的目的地ID為 `instanceId` 對應至目的地組態，建立目的地組態時所用的是 `/destinations` 端點。 請參閱 [擷取目的地設定](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) 以取得更多詳細資料。
 
 **API格式**
 
@@ -208,14 +208,14 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 
 | 查詢引數 | 說明 |
 | -------- | ----------- |
-| `{DESTINATION_ID}` | 目的地設定的ID，系統會根據此ID產生範例設定檔。 |
-| `{COUNT}` | *可選*. 您正在產生的範例設定檔數目。 引數可取的值介於 `1 - 1000`. <br> 如果未指定count引數，則產生的設定檔的預設數量由 `maxUsersPerRequest` 中的值 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如果此屬性未定義，則Adobe將產生一個範例設定檔。 |
+| `{DESTINATION_ID}` | 要根據目的地組態的ID產生範例設定檔。 |
+| `{COUNT}` | *可選*. 您正在產生的範例設定檔數目。 引數可取的值介於 `1 - 1000`. <br> 如果未指定count引數，則產生的設定檔預設數量會由 `maxUsersPerRequest` 中的值 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如果此屬性未定義，則Adobe將產生一個範例設定檔。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會產生範例設定檔，設定者為 `{DESTINATION_ID}` 和 `{COUNT}` 查詢引數。
+以下請求會產生範例設定檔，由 `{DESTINATION_ID}` 和 `{COUNT}` 查詢引數。
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -229,7 +229,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含指定數量的範例設定檔，以及目標XDM結構描述對應的對象成員資格、身分和設定檔屬性。
+成功的回應會傳回HTTP狀態200，其中包含指定數量的範例設定檔，以及與目標XDM結構描述相對應的對象成員資格、身分和設定檔屬性。
 
 ```json
 [
@@ -373,8 +373,8 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在瞭解如何產生範例設定檔，以便 [測試訊息轉換範本](create-template.md) 或 [測試您的目的地是否已正確設定](streaming-destination-testing-overview.md).
+閱讀本檔案後，您現在知道如何產生範例設定檔，以便 [測試訊息轉換範本](create-template.md) 或 [測試您的目的地是否已正確設定](streaming-destination-testing-overview.md).

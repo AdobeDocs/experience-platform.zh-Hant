@@ -2,9 +2,9 @@
 description: 瞭解如何建構API呼叫，以透過Adobe Experience Platform Destination SDK建立目的地設定。
 title: 建立目的地設定
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1205'
 ht-degree: 3%
 
 ---
@@ -203,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | 字串 | 將自訂欄位呈現為下拉式功能表，並列出使用者可用的選項。 <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 |
 | `customerDataFields.default` | 字串 | 從「 」定義預設值 `enum` 清單。 |
 | `customerDataFields.pattern` | 字串 | 如有需要，強制自訂欄位使用模式。 使用規則運算式強制執行模式。 例如，如果您的客戶ID不包含數字或底線，請輸入 `^[A-Za-z]+$` 在此欄位中。 <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 |
-| `uiAttributes.documentationLink` | 字串 | 請參閱 [目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) 以取得您的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中 `YOURDESTINATION` 是您目的地的名稱。 針對名為Moviestar的目的地，您可以使用 `https://www.adobe.com/go/destinations-moviestar-en`. 請注意，此連結只有在Adobe將您的目的地設定為上線並發佈檔案後才有效。 <br/><br/> 另請參閱 [UI屬性](../../functionality/destination-configuration/ui-attributes.md) 以取得這些設定的詳細資訊。 ![顯示檔案連結的平台UI影像。](../../assets/authoring-api/destination-configuration/documentation-url.png "檔案URL"){width="100" zoomable="yes"} |
-| `uiAttributes.category` | 字串 | 是指在Adobe Experience Platform中指派給您的目的地的類別。 如需詳細資訊，請閱讀 [目的地類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> 另請參閱 [UI屬性](../../functionality/destination-configuration/ui-attributes.md) 以取得這些設定的詳細資訊。 |
+| `uiAttributes.documentationLink` | 字串 | 請參閱 [目的地目錄](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) 以取得您的目的地。 使用 `https://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中 `YOURDESTINATION` 是您目的地的名稱。 針對名為Moviestar的目的地，您可以使用 `https://www.adobe.com/go/destinations-moviestar-en`. 請注意，此連結只有在Adobe將您的目的地設定為上線並發佈檔案後才有效。 <br/><br/> 另請參閱 [UI屬性](../../functionality/destination-configuration/ui-attributes.md) 以取得這些設定的詳細資訊。 ![顯示檔案連結的平台UI影像。](../../assets/authoring-api/destination-configuration/documentation-url.png "檔案URL"){width="100" zoomable="yes"} |
+| `uiAttributes.category` | 字串 | 是指在Adobe Experience Platform中指派給您的目的地的類別。 如需詳細資訊，請閱讀 [目的地類別](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> 另請參閱 [UI屬性](../../functionality/destination-configuration/ui-attributes.md) 以取得這些設定的詳細資訊。 |
 | `uiAttributes.connectionType` | 字串 | 連線的型別（視目的地而定）。 支援的值： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | 字串 | 是指目的地支援的資料匯出型別。 將設為 `Streaming` 針對API型整合，或 `Batch` 將檔案匯出至目的地時。 |
 | `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出客戶是否可將標準設定檔屬性對應至您正在設定的身分。 |

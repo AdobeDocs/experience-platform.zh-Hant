@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明 (2023 年 3 月)
 description: Adobe Experience Platform 2023 年 3 月的發行說明。
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2206'
-ht-degree: 99%
+source-wordcount: '2204'
+ht-degree: 98%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | --- | --- |
-| 適用於 Meta Conversions API (Beta) 的全新快速入門工作流程 | 從「資料集合」首頁畫面存取「快速入門」下全新的快速入門工作流程！[適用於 Meta Conversions API 的快速入門工作流程](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)讓客戶可快速收集事件資料並將其從伺服器端轉送到 Meta，僅需幾個簡單步驟即可實現廣告轉換。 |
+| 適用於 Meta Conversions API (Beta) 的全新快速入門工作流程 | 從「資料集合」首頁畫面存取「快速入門」下全新的快速入門工作流程！[適用於 Meta Conversions API 的快速入門工作流程](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)讓客戶可快速收集事件資料並將其從伺服器端轉送到 Meta，僅需幾個簡單步驟即可實現廣告轉換。 |
 | 適用於 Mobile SDK (Beta) 的全新快速入門工作流程 | 從「資料集合」首頁畫面存取「快速入門」下全新的快速入門工作流程！[適用於 Mobile SDK (Beta) 的全新快速入門工作流程](https://developer.adobe.com/client-sdks/documentation/)讓您僅需幾個簡單步驟即可快速實作 Mobile SDK 並驗證基本的行動事件。 |
 | [!DNL Braze] 事件轉送擴充功能 | 此 [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) 事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Braze] (使用 [!DNL Braze] User Track API 並以伺服器端事件的形式)。 |
 | [!DNL Epsilon] 事件轉送擴充功能 | 此 [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) 事件轉送擴充功能可讓您利用事件轉送在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取事件資訊並將其傳送到 [!DNL Epsilon] (使用 [!DNL Epsilon] Event API)。 |

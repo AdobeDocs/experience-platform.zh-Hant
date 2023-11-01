@@ -3,10 +3,10 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 16%
+source-wordcount: '1202'
+ht-degree: 14%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 16%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2023 年 6 月 | 功能和檔案更新 | 自2023年6月起，當您設定新的Adobe Target目的地連線時，可以選取您要共用對象的Adobe Target工作區。 如需詳細資訊，請參閱「[連線參數](#parameters)」一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en)的教學課程。 |
+| 2023 年 6 月 | 功能和檔案更新 | 自2023年6月起，當您設定新的Adobe Target目的地連線時，可以選取您要共用對象的Adobe Target工作區。 如需詳細資訊，請參閱「[連線參數](#parameters)」一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)的教學課程。 |
 | 2023 年 5 月 | 功能和檔案更新 | 截至2023年5月， **[!UICONTROL Adobe Target]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
 
 {style="table-layout:auto"}
@@ -47,10 +47,10 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 在Adobe Target中，確定您的使用者具有：
 
-* 存取 [預設工作區](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#default-workspace)；
-* 此 **核准者** [角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en#roles-and-permissions).
+* 存取 [預設工作區](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace)；
+* 此 **核准者** [角色](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-閱讀更多有關授與許可權的資訊 [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=en#section_8C425E43E5DD4111BBFC734A2B7ABC80) 和 [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=en#roles-permissions).
+閱讀更多有關授與許可權的資訊 [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) 和 [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## 支援的對象 {#supported-audiences}
 
@@ -96,7 +96,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 >id="platform_destinations_target_workspace"
 >title="關於 Adobe Target 工作區"
 >abstract="選取將共用對象的 Adobe Target 工作區。您可以為每個 Adobe Target 連線選取一個工作區。啟動後，對象將被導向到選取的工作區，同時依循適用的 Experience Platform 資料使用標籤。"
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en" text="進一步了解 Adobe Target 工作區"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="進一步了解 Adobe Target 工作區"
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -107,9 +107,9 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
   | Adobe Target實施（不含Web SDK） | Web SDK實作 |
   |---|---|
-  | <ul><li>資料流不是必要專案。 Adobe Target可透過以下方式部署： [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=en)， [伺服器端](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#server-side-implementation)，或 [混合式](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=en#hybrid-implementation) 實作方法。</li><li>[邊緣細分](../../../segmentation/ui/edge-segmentation.md) 不受支援。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 不受支援。</li><li>您只能對以下專案將受眾和設定檔屬性共用至Adobe Target連線 *預設生產沙箱*.</li><li>若要在不使用資料流ID的情況下設定下一個工作階段個人化，請使用 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=en).</li></ul> | <ul><li>需要具有Adobe Target和Experience Platform設定為服務的資料流。</li><li>邊緣細分如預期運作。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 支援。</li><li>支援從其他沙箱共用對象和設定檔屬性。</li></ul> |
+  | <ul><li>資料流不是必要專案。 Adobe Target可透過以下方式部署： [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)， [伺服器端](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation)，或 [混合式](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 實作方法。</li><li>[邊緣細分](../../../segmentation/ui/edge-segmentation.md) 不受支援。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 不受支援。</li><li>您只能對以下專案將受眾和設定檔屬性共用至Adobe Target連線 *預設生產沙箱*.</li><li>若要在不使用資料流ID的情況下設定下一個工作階段個人化，請使用 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>需要具有Adobe Target和Experience Platform設定為服務的資料流。</li><li>邊緣細分如預期運作。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 支援。</li><li>支援從其他沙箱共用對象和設定檔屬性。</li></ul> |
 
-* **工作區**：選取Adobe Target [工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=en) 對象將共用的目標。 您可以為每個 Adobe Target 連線選取一個工作區。啟用後，在遵循適用的同時，會將對象路由到選取的工作區 [Experience Platform資料使用標籤](../../../data-governance/labels/overview.md).
+* **工作區**：選取Adobe Target [工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) 對象將共用的目標。 您可以為每個 Adobe Target 連線選取一個工作區。啟用後，在遵循適用的同時，會將對象路由到選取的工作區 [Experience Platform資料使用標籤](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >

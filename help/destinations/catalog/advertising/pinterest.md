@@ -2,9 +2,9 @@
 title: pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人，或已在Pinterest上與您的內容互動的人中建立對象。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '727'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 支援的身分 {#supported-identities}
 
-此 [!DNL Pinterest Customer List] 目的地支援下表所述的身分啟用。 進一步瞭解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+此 [!DNL Pinterest Customer List] 目的地支援下表所述的身分啟用。 進一步瞭解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 在 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 在目標啟用工作流程中，將所需的身分對應到目標欄位 *pinterest_audience*. 身分識別會在資料擷取至Pinterest時區分和解析。
 
@@ -34,7 +34,7 @@ ht-degree: 2%
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | 對應 *GAID* 將來源身分名稱空間新增至目標身分欄位 *pinterest_audience*. 身分識別會在資料擷取至Pinterest時區分和解析。 |
 | IDFA | [!DNL Apple ID for Advertisers] | 對應 *IDFA* 將來源身分名稱空間新增至目標身分欄位 *pinterest_audience*. 身分識別會在資料擷取至Pinterest時區分和解析。 |
-| 電子郵件 | 電子郵件地址（純文字或使用SHA256演演算法雜湊） | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 <br> 對應 *電子郵件* 或 *Email_LC_SHA256* 將來源身分名稱空間新增至目標身分欄位 *pinterest_audience*. |
+| EMAIL | 電子郵件地址（純文字或使用SHA256演演算法雜湊） | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 <br> 對應 *電子郵件* 或 *Email_LC_SHA256* 將來源身分名稱空間新增至目標身分欄位 *pinterest_audience*. |
 
 {style="table-layout:auto"}
 

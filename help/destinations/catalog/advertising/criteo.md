@@ -3,9 +3,9 @@ keywords: 廣告；標準；
 title: 標準連線
 description: Criteo提供值得信賴且有影響力的廣告，讓開放網際網路上的每位消費者都能獲得更豐富的體驗。 Criteo擁有世界上最大的商業資料集和同級最佳的AI，可確保整個購物歷程的每個接觸點都經過個人化，以在適當的時間透過適當的廣告觸及客戶。
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Criteo提供值得信賴且有影響力的廣告，讓開放網際網路上的�
 
 ## 支援的身分 {#supported-identities}
 
-標準支援下表所述的身分啟用。 進一步瞭解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
+標準支援下表所述的身分啟用。 進一步瞭解 [身分](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | 目標身分 | 說明 | 考量事項 |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ Criteo提供值得信賴且有影響力的廣告，讓開放網際網路上的�
 | --- | --- | --- |
 | 名稱 | 可協助您日後辨識此目的地的名稱。 您在此選擇的名稱將是 [!DNL Audience] Criteo Management Center中的名稱，且無法在稍後階段修改。 | 是 |
 | 說明 | 有助於您日後識別此目的地的說明。 | 無 |
-| 廣告商ID | 貴組織的條件廣告商ID。 請連絡您的Criteo客戶經理，以取得此資訊。 | 是 |
+| 廣告商 ID | 貴組織的條件廣告商ID。 請連絡您的Criteo客戶經理，以取得此資訊。 | 是 |
 | 條件 [!DNL GUM caller ID] | [!DNL GUM Caller ID] 您的組織名稱。 請聯絡您的Criteo帳戶團隊以取得適當的 [!DNL GUM Caller ID] 或以取得此專案的詳細資訊 [!DNL GUM] 同步（如有需要）。 | 是，只要 [!DNL GUM ID] 以識別碼形式提供 |
 
 ### 啟用警示 {#enable-alerts}

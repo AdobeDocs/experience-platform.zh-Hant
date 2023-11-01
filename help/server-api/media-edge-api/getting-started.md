@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Media Edge API快速入門
 description: Media Edge API快速入門
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 6%
+source-wordcount: '946'
+ht-degree: 5%
 
 ---
 
@@ -42,12 +42,12 @@ ht-degree: 6%
 
 ## 實作 API {#implement-api}
 
-除了在模型和路徑上呼叫的細微差異，Media Edge API的實作與相同 [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=en). Media Collection的實作詳細資訊對Media Edge API而言仍然有效，如下列檔案所述：
+除了在模型和路徑上呼叫的細微差異，Media Edge API的實作與相同 [Media Collection API](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html). Media Collection的實作詳細資訊對Media Edge API而言仍然有效，如下列檔案所述：
 
-* [在播放器中設定 HTTP 要求類型](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [傳送 Ping 事件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=en)
-* [逾時條件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=en)
-* [控制事件順序](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=en)
+* [在播放器中設定 HTTP 要求類型](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [傳送 Ping 事件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [逾時條件](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [控制事件順序](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Authorization {#authorization}
 
@@ -60,7 +60,7 @@ ht-degree: 6%
 
 提出工作階段開始要求之前，您需要具備下列條件：
 
-* 此 `datastreamId`—POST工作階段開始要求的必要引數。 擷取 `datastreamId`，請參閱 [設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant).
+* 此 `datastreamId`—POST工作階段開始要求的必要引數。 擷取 `datastreamId`，請參閱 [設定資料串流](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html).
 
 * 要求裝載的JSON物件包含最低要求資料（如以下範例要求所示）。
 

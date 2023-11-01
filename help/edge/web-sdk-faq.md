@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得有關Adobe Experience Platform Web SDK常見問題的解答。
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2098'
 ht-degree: 2%
 
 ---
@@ -84,7 +84,7 @@ Alloy是Adobe Experience Platform Web SDK的程式碼名稱。 它會用在SDK�
 
 不可以。 任何Adobe Digital Experience客戶都可以免費使用Adobe Experience Platform Web SDK。 希望使用 [!DNL Web SDK] 將需要設定適當的許可權，才能在資料收集UI或Experience Platform UI中建立結構描述、資料集、身分名稱空間和資料串流。
 
-如需設定這些許可權的詳細資訊，請參閱我們的以下檔案： [資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
+如需設定這些許可權的詳細資訊，請參閱我們的以下檔案： [資料彙集許可權管理](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## 哪些人應該使用Web SDK？
 
@@ -119,7 +119,7 @@ Web SDK正在迅速發展。 正在處理更多使用案例。 您可找到 [此
 
 ## 我可以在開始使用Alloy時移轉ECID，讓我的網站訪客不會開始顯示為新訪客嗎？
 
-是，Adobe Experience Platform Web SDK提供身分移轉功能。 請依照以下說明進行ID移轉： [Platform Web SDK身分檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) 以取得更多詳細資料。
+是，Adobe Experience Platform Web SDK提供身分移轉功能。 請依照以下說明進行ID移轉： [Platform Web SDK身分檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#id-migration) 以取得更多詳細資料。
 
 ## Web SDK與標籤有何不同？
 
@@ -161,7 +161,7 @@ Web SDK正在迅速發展。 正在處理更多使用案例。 您可找到 [此
 | **kndctr_orgid_cluster** | 1800 | 30 分鐘 | 此Cookie會儲存為目前使用者請求提供服務的Edge Network區域。 URL路徑會使用地區，這樣Edge Network就能將要求路由至正確的地區。 此Cookie具有30分鐘的存留期，因此如果使用者以不同的IP位址連線，則請求可以路由傳送到最接近的區域。 |
 | **mbox** | 63072000 | 2 年 | 當Target移轉設定設為true時，就會顯示此Cookie。 這將允許Target [mbox Cookie](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) 將由Web SDK設定。 |
 | **mboxEdgeCluster** | 1800 | 30 分鐘 | 當Target移轉設定設為true時，就會顯示此Cookie。 此Cookie可讓Web SDK將正確的邊緣叢集通訊至at.js，以便當使用者在網站上導覽時，Target設定檔可以保持同步。 |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 天 | 只有在Adobe Experience Platform Web SDK上啟用ID移轉功能時，此Cookie才會出現。 在網站的某些部分仍在使用visitor.js時，此Cookie有助於轉換至Web SDK。 請參閱 [idMigrationEnabled檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) 以進一步瞭解此設定。 |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 天 | 只有在Adobe Experience Platform Web SDK上啟用ID移轉功能時，此Cookie才會出現。 在網站的某些部分仍在使用visitor.js時，此Cookie有助於轉換至Web SDK。 請參閱 [idMigrationEnabled檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#identity-options) 以進一步瞭解此設定。 |
 
 使用Web SDK時，Edge Network會設定上方的一或多個Cookie。 Edge Network會使用 `secure` 和 `sameSite="none"` 屬性。
 

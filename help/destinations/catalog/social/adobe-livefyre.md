@@ -1,32 +1,32 @@
 ---
 keywords: livefyre；livefyre擴充功能
-title: AdobeLivefyre擴充功能
-description: AdobeLivefyre擴充功能是Adobe Experience Platform中的社交目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe交換上的擴充功能頁面。
+title: Adobe Livefyre擴充功能
+description: Adobe Livefyre擴充功能是Adobe Experience Platform中的社交目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe交換上的擴充功能頁面。
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 5%
+source-wordcount: '450'
+ht-degree: 4%
 
 ---
 
-# AdobeLivefyre擴充功能 {#adobe-livefyre-extension}
+# Adobe Livefyre擴充功能 {#adobe-livefyre-extension}
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-AdobeLivefyre可讓您探索、整理並發佈使用者產生的內容持續流向您的網站，以建立真實且高度個人化的體驗。
+AdobeLivefyre可讓您探索、整理並發佈使用者產生的內容流到您的網站，以建立真實且高度個人化的體驗。
 
-Adobe Livefyre是Adobe Experience Platform中的社交擴充功能。 如需AdobeLivefyre的詳細資訊，請閱讀 [Livefyre實作指南](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
+Adobe Livefyre是Adobe Experience Platform中的社交擴充功能。 如需AdobeLivefyre的詳細資訊，請參閱 [Livefyre實作指南](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
-此目的地是標籤延伸模組。 如需標籤擴充功能在Platform中如何運作的詳細資訊，請參閱 [標籤擴充功能概觀](../launch-extensions/overview.md).
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱 [標籤擴充功能概觀](../launch-extensions/overview.md).
 
-![AdobeLivefyre擴充功能](../../assets/catalog/social/adobe-livefyre/catalog.png)
+![Adobe Livefyre擴充功能](../../assets/catalog/social/adobe-livefyre/catalog.png)
 
 ## 先決條件 {#prerequisites}
 
 此擴充功能適用於 [!DNL Destinations] 已購買Platform之所有客戶的目錄。
 
-若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤是以隨附的加值功能形式提供給Adobe Experience Cloud客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授予您 **[!UICONTROL manage_properties]** 許可權，方便您安裝擴充功能。
+若要使用此擴充功能，您需要存取Adobe Experience Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請聯絡您的組織管理員以取得標籤的存取權，並要求他們授予您 **[!UICONTROL manage_properties]** 許可權，讓您能夠安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
@@ -34,19 +34,19 @@ Adobe Livefyre是Adobe Experience Platform中的社交擴充功能。 如需Adob
 
 在 [平台介面](https://platform.adobe.com/)，前往 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**.
 
-從目錄選取擴充功能或使用搜尋列。
+從目錄中選取擴充功能或使用搜尋列。
 
-按一下目的地以反白顯示，然後選取 **[!UICONTROL 設定]** 在右側邊欄中。 如果 **[!UICONTROL 設定]** 控制項呈現灰色，表示您遺漏 **[!UICONTROL manage_properties]** 許可權。 另請參閱 [必要條件](#prerequisites).
+按一下目的地以反白顯示，然後選取 **[!UICONTROL 設定]** 在右側邊欄中。 如果 **[!UICONTROL 設定]** 控制項呈現灰色，您缺少 **[!UICONTROL manage_properties]** 許可權。 另請參閱 [必要條件](#prerequisites).
 
 選取您要安裝擴充功能的標籤屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解中的屬性 [標籤檔案](../../../tags/ui/administration/companies-and-properties.md).
 
-工作流程會將您帶到資料收集UI以完成安裝。
+工作流程會帶您前往資料收集UI以完成安裝。
 
-您也可以直接在中安裝擴充功能 [資料彙集UI](https://experience.adobe.com/#/data-collection/). 請參閱指南： [新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) 以取得詳細資訊。
+您也可以直接在中安裝擴充功能 [資料收集UI](https://experience.adobe.com/#/data-collection/). 請參閱以下指南： [新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) 以取得詳細資訊。
 
 ## 如何使用擴充功能 {#how-to-use}
 
-安裝擴充功能後，您就可以開始設定規則。 在資料收集UI中，您可以為已安裝的擴充功能設定規則，以只在某些情況下將事件資料傳送至擴充功能目的地。 如需為擴充功能設定規則的詳細資訊，請參閱以下主題的概觀： [規則](../../../tags/ui/managing-resources/rules.md) 標籤檔案中。
+安裝擴充功能後，您就可以開始設定規則。 在資料收集UI中，您可以為已安裝的擴充功能設定規則，以只在某些情況下將事件資料傳送至擴充功能目的地。 如需為擴充功能設定規則的詳細資訊，請參閱以下主題的總覽： [規則](../../../tags/ui/managing-resources/rules.md) 標籤檔案中。
 
 ## 設定、升級和刪除擴充功能 {#configure-upgrade-delete}
 

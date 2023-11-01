@@ -4,10 +4,10 @@ title: 相似的對象
 description: 瞭解如何使用Adobe Experience Platform中的相似受眾鎖定新的高價值受眾。
 badgeLimitedAvailability: label="可用性限制" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2123'
-ht-degree: 11%
+source-wordcount: '2121'
+ht-degree: 10%
 
 ---
 
@@ -110,7 +110,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="影響因素"
 >abstract="影響因素包括屬性、事件和對象會籍；這些因素是說明設定檔與基礎對象成員之相似度的重要依據。資料使用標籤和原則可用來排除某些資料，使其不被視為相似對象模型中的影響因素。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html?lang=zh-Hant#exclude" text="排除資料"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/lookalike-audiences.html#exclude" text="排除資料"
 
 影響因素區段會顯示影響所選基本對象相似模型的前100個因素。 這些影響因子是個人資料屬性、體驗事件和對象會籍，在說明基本對象的相似之處時是最重要的。 瞭解主要影響因素，可讓您針對此對象以及您從中建立的任何相似對象，更妥善地個人化您的行銷內容。 請注意，不會顯示影響相似模型的所有影響因素。
 

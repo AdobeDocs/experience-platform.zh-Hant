@@ -2,9 +2,9 @@
 title: 同意分析和追蹤
 description: 瞭解如何建立同意分析儀表板，以追蹤使用者同意在一段時間內的趨勢。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1919'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->建議您建立的對象數量存在軟性限制。 如需詳細資訊，請參閱 [分段護欄檔案](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>建議您建立的對象數量存在軟性限制。 如需詳細資訊，請參閱 [分段護欄檔案](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
 
 ![此 [!UICONTROL 選擇值] 屬性和 [!UICONTROL 是（選擇加入）] 區段產生器中醒目提示的值。 對象的名稱和說明也會反白顯示。](../images/insights-use-cases/consent-analysis/choice-value.png)
 

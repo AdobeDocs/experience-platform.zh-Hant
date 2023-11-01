@@ -2,31 +2,31 @@
 title: 個人化概覽
 description: 瞭解如何使用Adobe Experience Platform Edge Network Server API從Adobe個人化解決方案擷取個人化內容。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 9%
+source-wordcount: '739'
+ht-degree: 10%
 
 ---
 
 # 個人化概覽
 
-使用 [!DNL Server API]，您可以從Adobe個人化解決方案擷取個人化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 和 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
+使用 [!DNL Server API]，您可以從Adobe個人化解決方案擷取個人化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 和 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant).
 
-此外， [!DNL Server API] 透過Adobe Experience Platform個人化目的地，提供相同頁面和下一頁個人化功能，例如 [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何為同頁和下一頁個人化設定Experience Platform，請參閱 [專用指南](../destinations/ui/activate-edge-personalization-destinations.md).
+此外， [!DNL Server API] 透過Adobe Experience Platform個人化目的地提供相同頁面和下一頁個人化功能，例如 [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱 [專用指南](../destinations/ui/activate-edge-personalization-destinations.md).
 
-使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站上內容的邏輯。 不喜歡 [Web SDK](../edge/home.md)，則 [!DNL Server API] 沒有自動套用傳回內容的機制 [!DNL Adobe Target] 和 [!DNL Offer Decisioning].
+使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站內容的邏輯。 不喜歡 [Web SDK](../edge/home.md)，則 [!DNL Server API] 沒有機制可自動套用傳回的內容 [!DNL Adobe Target] 和 [!DNL Offer Decisioning].
 
 ## 術語 {#terminology}
 
-在使用Adobe個人化解決方案之前，請務必瞭解以下概念：
+在使用Adobe個人化解決方案之前，請務必瞭解下列概念：
 
 * **優惠方案**：優惠方案是行銷訊息，其中可能包含與其關聯的規則，以指定誰有資格檢視選件。
 * **決定**：決定（先前稱為優惠活動）會通知優惠選擇。
 * **結構描述**：決定的結構描述會通知傳回的優惠型別。
 * **範圍**：決定的範圍。
    * 在Adobe Target中，這是 [!DNL mbox]. 此 [!DNL global mbox] 是 `__view__` 範圍
-   * 對象 [!DNL Offer Decisioning]，這些是JSON的Base64編碼字串，包含您希望offer decisioning服務用來建議選件的活動和位置ID。
+   * 的 [!DNL Offer Decisioning]，這些是JSON的Base64編碼字串，包含您希望offer decisioning服務用來建議選件的活動和位置ID。
 
 ## 此 `query` 物件 {#query-object}
 
@@ -55,12 +55,12 @@ ht-degree: 9%
 
 | 屬性 | 類型 | 必填/選填 | 說明 |
 | --- | --- | --- | ---|
-| `schemas` | `String[]` | Target個人化的必要專案。 選填Offer decisioning。 | 用於決定中的結構描述清單，以選取傳回的優惠型別。 |
+| `schemas` | `String[]` | Target個人化的必要專案。 offer decisioning的選用專案。 | 決定中使用的結構描述清單，用於選取傳回的優惠型別。 |
 | `scopes` | `String[]` | 選填 | 決定範圍清單。 每個請求最多30個。 |
 
 ## 控制代碼物件 {#handle}
 
-從個人化解決方案中擷取的個人化內容會顯示在 `personalization:decisions` 控點，其裝載格式如下：
+從個人化解決方案中擷取的個人化內容會顯示在 `personalization:decisions` 控制代碼，其裝載格式如下：
 
 ```json
 {
@@ -115,17 +115,17 @@ ht-degree: 9%
 | --- | --- | --- |
 | `payload.id` | 字串 | 決定ID。 |
 | `payload.scope` | 字串 | 導致建議優惠方案的決定範圍。 |
-| `payload.scopeDetails.decisionProvider` | 字串 | 設定為 `TGT` 使用Adobe Target時。 |
+| `payload.scopeDetails.decisionProvider` | 字串 | 將設為 `TGT` 使用Adobe Target時。 |
 | `payload.scopeDetails.activity.id` | 字串 | 優惠活動的唯一ID。 |
 | `payload.scopeDetails.experience.id` | 字串 | 優惠方案位置的唯一ID。 |
 | `items[].id` | 字串 | 優惠方案位置的唯一ID。 |
-| `items[].data.id` | 字串 | 建議優惠方案的ID。 |
-| `items[].data.schema` | 字串 | 與建議選件相關聯的內容結構描述。 |
+| `items[].data.id` | 字串 | 建議優惠的ID。 |
+| `items[].data.schema` | 字串 | 與建議選件相關之內容的結構描述。 |
 | `items[].data.format` | 字串 | 與建議選件相關聯的內容格式。 |
-| `items[].data.language` | 字串 | 與建議選件內容相關的一系列語言。 |
+| `items[].data.language` | 字串 | 與建議選件內容關聯的一系列語言。 |
 | `items[].data.content` | 字串 | 以字串格式與建議選件相關聯的內容。 |
 | `items[].data.selector` | 字串 | HTML選取器用來識別DOM動作選件的目標DOM元素。 |
-| `items[].data.prehidingSelector` | 字串 | HTML選擇器，用於識別在處理DOM動作選件時要隱藏的DOM元素。 |
+| `items[].data.prehidingSelector` | 字串 | HTML選取器，用於識別在處理DOM動作選件時要隱藏的DOM元素。 |
 | `items[].data.deliveryUrl` | 字串 | 以URL格式呈現與建議選件相關聯的影像內容。 |
 | `items[].data.characteristics` | 字串 | 與JSON物件格式的建議選件相關聯的特性。 |
 
@@ -183,7 +183,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 }'
 ```
 
-| 參數 | 類型 | 必填 | 說明 |
+| 參數 | 類型 | 必要 | 說明 |
 | --- | --- | --- | --- |
 | `configId` | 字串 | 是 | 資料串流ID。 |
 | `requestId` | 字串 | 無 | 提供外部要求追蹤ID。 如果未提供，Edge Network會為您產生回應，並將其傳回至回應內文/標頭。 |
@@ -248,9 +248,9 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ## 通知 {#notifications}
 
-當使用者造訪或呈現預先擷取的內容或檢視時，應觸發通知。 為了在正確的範圍內引發通知，請務必追蹤對應的 `id` 用於每個範圍。
+當使用者造訪或呈現預先擷取的內容或檢視時，應觸發通知。 若要在正確的範圍內引發通知，請務必追蹤對應的 `id` 用於每個範圍。
 
-具有右側的通知 `id` 必須引發對應範圍的「 」，才能正確反映報表。
+具有右側的通知 `id` 的範圍中定義報表的欄位)時需觸發，報表才能正確反映。
 
 **API格式**
 
@@ -307,15 +307,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 }'
 ```
 
-| 參數 | 類型 | 必填 | 說明 |
+| 參數 | 類型 | 必要 | 說明 |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | 是 | 資料收集端點使用的資料串流的ID。 |
+| `dataStreamId` | `String` | 是 | 資料收集端點所使用的資料串流的ID。 |
 | `requestId` | `String` | 無 | 外部外部請求追蹤ID。 如果未提供，Edge Network會為您產生回應，並將其傳回至回應內文/標頭。 |
-| `silent` | `Boolean` | 無 | 選用的布林值引數，指出Edge Network是否應該傳回 `204 No Content` 以空白承載回應。 系統會使用對應的HTTP狀態代碼和裝載來報告嚴重錯誤。 |
+| `silent` | `Boolean` | 無 | 選用的布林值引數，指出Edge Network是否應傳回 `204 No Content` 包含空承載的回應。 使用對應的HTTP狀態代碼和承載來報告嚴重錯誤。 |
 
 ### 回應 {#notifications-response}
 
-成功回應會傳回下列其中一種狀態，以及 `requestID` 請求中未提供任何請求時。
+成功的回應會傳回下列其中一種狀態，以及 `requestID` 若請求中未提供任何專案。
 
 * `202 Accepted` 成功處理要求時；
 * `204 No Content` 成功處理要求時，且 `silent` 引數已設為 `true`；

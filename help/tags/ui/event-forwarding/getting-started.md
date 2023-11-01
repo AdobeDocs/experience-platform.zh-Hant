@@ -1,11 +1,11 @@
 ---
 title: 事件轉送快速入門
-description: 請依照此逐步教學課程，開始使用Adobe Experience Platform中的事件轉送。
+description: 請依照此逐步教學課程，開始在Adobe Experience Platform中使用事件轉送。
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: efe88b582b4539a14f32c6e2c80a8b35cde1626e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 27%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 27%
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [伺服器對伺服器API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [伺服器對伺服器API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html)
 
 >[!NOTE]
 >Platform Web SDK和Platform Mobile SDK不需要透過Adobe Experience Platform中的標籤進行部署。 不過，建議使用標籤來部署這些SDK。
@@ -29,7 +29,7 @@ ht-degree: 27%
 
 ## 先決條件
 
-* Adobe Real-Time CDP Connections、Prime或Ultimate (如需定價，請聯絡您的Adobe客戶團隊)
+* Adobe Real-Time CDP Connections、Prime或Ultimate (請聯絡您的Adobe客戶團隊以取得定價)
 * Adobe Experience Platform中的事件轉送
 * 設定 Adobe Experience Platform Web 或 Mobile SDK，將資料傳送至 Edge Network
 * 將資料對應至Experience Data Model (XDM) （此對應可使用標籤完成）
@@ -38,7 +38,7 @@ ht-degree: 27%
 
 在 Adobe Experience Platform 中建立結構描述。
 
-1. 選取以下專案建立結構描述： **[!UICONTROL 結構描述]**>**[!UICONTROL 建立結構描述]** 並選取 **[!UICONTROL XDM ExperienceEvent]** 選項。
+1. 透過選取「 」建立結構描述 **[!UICONTROL 方案]**>**[!UICONTROL 建立結構描述]** 並選取 **[!UICONTROL XDM ExperienceEvent]** 選項。
 
 1. 為結構描述命名並提供簡短說明。
 
@@ -46,15 +46,15 @@ ht-degree: 27%
 
    >[!NOTE]
    >
-   >如有需要，可新增多個欄位群組。
+   >如果需要，可以新增多個欄位群組。
 
-1. 儲存結構描述並記下您命名的名稱。
+1. 儲存結構描述，並記下您命名的名稱。
 
 如需結構描述的詳細資訊，請參閱 [Experience Data Model (XDM) 系統說明](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant)。
 
 ## 建立事件轉送屬性
 
-在 **[!UICONTROL 標籤]** workspace，建立型別的屬性 **[!UICONTROL Edge]**.
+在 **[!UICONTROL 標籤]** 工作區，建立型別的屬性 **[!UICONTROL Edge]**.
 
 1. 選取&#x200B;**[!UICONTROL 「新屬性」]**。
 
@@ -64,13 +64,13 @@ ht-degree: 27%
 
 1. 選取「**[!UICONTROL 儲存]**」。
 
-建立屬性後，前往 **[!UICONTROL 環境]** 索引標籤中的專案並記下環境ID。 如果資料流中使用的Adobe組織與事件轉送中使用的Adobe組織不同，您可以從 **[!UICONTROL 環境]** 建立資料流時按Tab鍵並貼上。 或者，您也可以從下拉式選單中選取環境。
+建立屬性後，請前往 **[!UICONTROL 環境]** 索引標籤中的專案並記下環境ID。 如果資料流中使用的Adobe組織與事件轉送中使用的Adobe組織不同，您可以從以下位置複製環境ID： **[!UICONTROL 環境]** 按Tab鍵並在建立資料流時貼上。 或者，您也可以從下拉式選單中選取環境。
 
 ## 建立資料串流
 
 若要在Adobe Experience Platform中建立資料串流，請使用建立事件轉送屬性時產生的環境ID。
 
-1. 選取 **[!UICONTROL 資料串流]** 左側導覽列中。
+1. 選取 **[!UICONTROL 資料串流]** ，位於左側導覽器中。
 
 1. 為組態命名並選擇是否填寫相關說明。說明可協助您在組態清單中識別各個組態。
 
@@ -78,13 +78,13 @@ ht-degree: 27%
 
 ## 啟用事件轉送
 
-接下來，設定Edge Network將資料傳送至事件轉送和其他Adobe產品。
+接下來，設定Edge Network，將資料傳送至事件轉送及其他Adobe產品。
 
 1. 在 **[!UICONTROL 資料串流]** 工作區中，選取您建立的屬性。
 
 1. 選取「開發」、「生產」或「預備」環境。
 
-   或者，若要將資料傳送至Adobe組織外部的事件轉送環境，請選取 **[!UICONTROL 切換到進階模式]** 並貼入ID。 ID是在您建立事件轉送屬性時提供。
+   若要將資料傳送至Adobe組織外部的事件轉送環境，請選取「 」 **[!UICONTROL 切換到進階模式]** 並貼入ID。 ID是在您建立事件轉送屬性時提供。
 
 1. 開啟必要工具並依需求設定。
 
@@ -102,7 +102,7 @@ ht-degree: 27%
 
 ## 建立標籤規則以將資料傳送至Platform Web SDK
 
-完成上述設定後，即可建立使用事件轉送和標籤，但只需要從頁面提出單一請求的資料定義、規則等。
+完成上述設定後，即可建立使用事件轉送和標籤，但只需要來自頁面的單一請求的資料定義、規則等。
 
 使用Platform Web SDK擴充功能和「傳送事件」動作型別，建立頁面載入規則：
 
@@ -112,7 +112,7 @@ ht-degree: 27%
 
 1. 選取 **[!UICONTROL 事件新增]**.
 
-1. 選擇擴充功能及該擴充功能提供的任一事件類型以新增事件，然後設定事件相關設定，例如，選取 **[!UICONTROL 核心 — 視窗已載入]**.
+1. 選擇擴充功能及該擴充功能提供的任一事件類型以新增事件，然後設定事件相關設定，例如，選取 **[!UICONTROL 核心 — 已載入視窗]**.
 
 1. 使用 Platform Web SDK 擴充功能新增動作。選取 **[!UICONTROL 傳送事件]** 從 **[!UICONTROL 動作型別]** 清單中，選取所需的執行個體（之前設定的Alloy執行個體），然後選取要新增至Alloy點選內XDM資料區塊的資料元素。
 
@@ -122,9 +122,9 @@ ht-degree: 27%
 
 ## 摘要
 
-設定好下列專案後，您現在可以建立事件轉送規則，將資料轉送至非Adobe目的地。
+設定好下列專案，您就可以建立事件轉送規則，將資料轉送至非Adobe目的地。
 
 * Experience Data Model結構描述（記下您命名的名稱）
 * 事件轉送屬性（追蹤屬性ID和環境ID）。
-* 資料串流（記下環境ID，切勿與事件轉送的環境ID混淆）。
+* 資料串流（記下環境ID，別與事件轉送的環境ID混淆）
 * 標籤屬性

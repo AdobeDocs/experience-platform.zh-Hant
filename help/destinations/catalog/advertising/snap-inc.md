@@ -2,9 +2,9 @@
 title: Snap Inc連線
 description: 瞭解如何連線至Snapchat Ads平台以及從Experience Platform匯出您的對象。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 1%
 
 ![對象](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱 [Segmentation Service概述](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱 [Segmentation Service概述](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## 資料使用與控管 {#data-usage-governance}
 

@@ -3,9 +3,9 @@ title: (Beta)交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1148'
 ht-degree: 4%
 
 ---
@@ -86,7 +86,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 ### 填寫目的地詳細資料 {#fill-in-details}
 
-您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 當 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 您必須提供下列資訊給此目的地：
+您必須先設定與您自己的目的地平台的連線，才能將對象資料傳送或啟用至目的地。 當 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 您必須提供下列資訊給此目的地：
 
 * **[!UICONTROL 帳戶型別]**：請選擇 **[!UICONTROL 現有帳戶]** 選項。
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2023 年 4 月)
 description: Adobe Experience Platform 2023 年 4 月版發行說明。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2082'
 ht-degree: 98%
 
 ---
@@ -68,7 +68,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | --- | --- |
 | 資料流的 IP 位址模糊化 | 您現在可以在[資料流設定 UI](../../datastreams/configure.md) 中定義部分或完整的資料流層級 IP 模糊化選項。<br><br>該資料流層級 IP 模糊化設定會優先於在 Adob&#x200B;&#x200B;e Target 和 Audience Manager 中設定的任何 IP 模糊化。<br><br>傳送到 Adob&#x200B;&#x200B;e Analytics 的資料不會受資料流層級 [!UICONTROL IP 模糊化]設定的影響。Adobe Analytics 目前會接收未模糊化的 IP 位址。若要讓 Analytics 接收模糊化的 IP 位址，您必須在 Adob&#x200B;&#x200B;e Analytics 中單獨設定 IP 模糊化。此行為會在未來版本中更新。<br><br>如需有關 IP 模糊化的更多詳細資料以及如何進行設定的說明，請參閱[資料流設定文件](../../datastreams/configure.md#advanced-options)。 |
 | [資料流設定覆寫](../../datastreams/overrides.md) | 您現在可以定義資料流的其他設定選項，您可將這些選項用於覆寫特定的設定，例如事件資料集、Target 屬性權杖、ID 同步容器以及 Analytics 報表套裝。<br><br>覆寫資料流設定的流程包含兩個步驟： <ol><li>首先，您必須在[資料流設定頁面](../../datastreams/configure.md)中定義您的資料流設定覆寫。</li><li>接著，您必須透過 Web SDK 命令或使用 Web SDK [標記擴充功能](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)將覆寫傳送至 Edge Network。</li></ol> |
-| OAuth JWT Secret | 此 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用 Adob&#x200B;&#x200B;e 和 Google 服務權杖支援「事件轉送」中伺服器和伺服器的互動。 |
+| OAuth JWT Secret | 此 [OAuth JWT Secret](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) 可讓客戶使用 Adob&#x200B;&#x200B;e 和 Google 服務權杖支援「事件轉送」中伺服器和伺服器的互動。 |
 | [!DNL Pinterest Conversions API] 擴充功能 | 此 [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html)  事件轉送擴充功能可讓您利用在 Adob&#x200B;&#x200B;e Experience Platform Edge Network 中擷取的資料並將其傳送到 [!DNL Pinterest] (使用 [!DNL Pinterest Conversions API] 並以伺服器端事件的形式)。 |
 
 {style="table-layout:auto"}

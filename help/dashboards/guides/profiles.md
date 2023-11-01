@@ -4,9 +4,9 @@ title: 設定檔儀表板指南
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織即時客戶設定檔資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '4331'
+source-wordcount: '4329'
 ht-degree: 10%
 
 ---
@@ -213,7 +213,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >
 >此 [!UICONTROL 設定檔計數] Widget可能會顯示與上所示設定檔計數不同的數字 [!UICONTROL 瀏覽] 索引標籤中的 [!UICONTROL 設定檔] 部分UI，原因有多種。 造成此差異的最常見原因為 [!UICONTROL 瀏覽] 索引標籤會根據您組織的預設合併原則參考合併的設定檔總數，而 [!UICONTROL 設定檔計數] widget會根據您選取在控制面板中檢視的合併原則，參考合併的設定檔總數。
 >
->另一個常見的原因是，擷取儀表板快照的時間與針對執行範例作業的時間不同 [!UICONTROL 瀏覽] 標籤。 您會看到 [!UICONTROL 設定檔計數] Widget上次更新是透過檢視Widget上的時間戳記完成的。 若要進一步瞭解範例作業如何在上觸發： [!UICONTROL 瀏覽] 索引標籤中，請參閱 [即時客戶個人檔案UI指南中的個人檔案計數區段](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
+>另一個常見的原因是，擷取儀表板快照的時間與針對執行範例作業的時間不同 [!UICONTROL 瀏覽] 標籤。 您會看到 [!UICONTROL 設定檔計數] Widget上次更新是透過檢視Widget上的時間戳記完成的。 若要進一步瞭解範例作業如何在上觸發： [!UICONTROL 瀏覽] 索引標籤中，請參閱 [即時客戶個人檔案UI指南中的個人檔案計數區段](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count).
 
 ![設定檔計數Widget反白顯示的Experience Platform設定檔儀表板。](../images/profiles/profile-count.png)
 

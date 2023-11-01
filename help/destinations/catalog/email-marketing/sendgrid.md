@@ -3,9 +3,9 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；s
 title: SendGrid連線
 description: SendGrid目的地可讓您匯出第一方資料，並在SendGrid中根據您的業務需求加以啟用。
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1571'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ SendGrid使用API持有人權杖作為驗證機制，與SendGrid API通訊。
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-啟用資料至SendGrid目的地之前，您必須擁有 [綱要](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)， a [資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en)、和 [區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) 建立於 [!DNL Experience Platform]. 另請參閱 [限制](#limits) 一節。
+啟用資料至SendGrid目的地之前，您必須擁有 [綱要](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=zh-Hant)， a [資料集](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)、和 [區段](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) 建立於 [!DNL Experience Platform]. 另請參閱 [限制](#limits) 一節。
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ SendGrid支援如下表所述的身分啟用。 進一步瞭解 [身分](/help/i
 
 ### 填寫目的地詳細資料 {#destination-details}
 
-當 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) 您必須提供下列資訊給此目的地：
+當 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 您必須提供下列資訊給此目的地：
 
 * **[!UICONTROL 名稱]**：您日後用來辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：此說明選填，可協助您日後識別此目的地。

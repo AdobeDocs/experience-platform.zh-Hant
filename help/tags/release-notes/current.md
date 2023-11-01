@@ -2,10 +2,10 @@
 title: 標籤和事件轉送的發行說明
 description: Adobe Experience Platform 中標記和事件轉送的最新發行說明。
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 15%
+source-wordcount: '835'
+ht-degree: 12%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 15%
 
 >[!IMPORTANT]
 >
->往前看，本頁將不再提供標籤和事件轉送發行說明。 請參閱最新的 [Adobe Experience Platform發行說明](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=en#data-collection) 以取得詳細的標籤和事件轉送更新。
+>往前看，本頁將不再提供標籤和事件轉送發行說明。 請參閱最新的 [Adobe Experience Platform發行說明](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) 以取得詳細的標籤和事件轉送更新。
 
 ## 2023 年 4 月 26 日
 
-* **OAuth JWT密碼**：此 [OAuth JWT密碼](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=en) 可讓客戶使用Adobe和Google服務權杖，在事件轉送中支援伺服器對伺服器互動。
+* **OAuth JWT密碼**：此 [OAuth JWT密碼](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) 可讓客戶使用Adobe和Google服務權杖，在事件轉送中支援伺服器對伺服器互動。
 
 下列新擴充功能已發行：
 
@@ -28,7 +28,7 @@ ht-degree: 15%
 **Quick Stark工作流程(Beta)**
 
 從「資料集合」首頁畫面存取「快速入門」下全新的快速入門工作流程！以下工作流程現在可作為公開測試版提供給客戶。
-* **[中繼轉換API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=en#quick-start)**：事件轉送客戶可以快速收集並轉送事件資料，從伺服器端轉送到Meta進行廣告轉換，只需幾個簡單的步驟即可完成。
+* **[中繼轉換API](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)**：事件轉送客戶可以快速收集並轉送事件資料，從伺服器端轉送到Meta進行廣告轉換，只需幾個簡單的步驟即可完成。
 * **[行動SDK](https://developer.adobe.com/client-sdks/documentation/)**：客戶只需幾個簡單的步驟，就能快速實作行動SDK及驗證基本行動事件。
 
 已發行新的擴充功能：

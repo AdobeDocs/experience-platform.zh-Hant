@@ -2,9 +2,9 @@
 title: Adobe Analytics擴充功能發行說明
 description: Adobe Experience Platform中Adobe Analytics標籤擴充功能的最新發行說明。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1392'
 ht-degree: 82%
 
 ---
@@ -193,7 +193,7 @@ ht-degree: 82%
 
 **功能**:
 
-* 將 Adobe Analytics 擴充功能更新為 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=en#version-2.14.0)，其中包括已知的 clearVars 問題的修正。
+* 將 Adobe Analytics 擴充功能更新為 [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0)，其中包括已知的 clearVars 問題的修正。
 * 新增 Exchange 連結至擴充功能。選取下拉式選單並選擇「擴充功能資訊」，即可取得 Exchange 清單
 
 **錯誤修正**:

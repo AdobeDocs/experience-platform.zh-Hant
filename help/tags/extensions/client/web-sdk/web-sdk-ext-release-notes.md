@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1756'
 ht-degree: 37%
 
 ---
@@ -192,7 +192,7 @@ ht-degree: 37%
 
 包含 2.4.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 已新增 [&quot;document unloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) 核取方塊以傳送事件動作UI。
+* 已新增 [&quot;document unloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) 核取方塊以傳送事件動作UI。
 * 新增對的支援 `out` 選項條件 [設定預設同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) 會在收到同意前捨棄所有事件(現有 `pending` 選項會將事件排入佇列，並在收到同意後傳送事件)。
 * 新增工具提示至預設同意欄位。
 * 新增的支援 [Adobe同意2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

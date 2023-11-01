@@ -4,9 +4,9 @@ title: 快速入門
 description: 了解如何開始使用「使用案例教戰手冊」功能。
 badgeBeta: label="Beta" type="Informative"
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '314'
 ht-degree: 100%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 100%
 
 ### Adobe Journey Optimizer 使用者的沙箱設定 {#sandbox-configuration-journey-optimizer}
 
-如果您的組織取得授權可使用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)，您需要在沙箱中設定管道預設集，這會定義訊息所需的技術參數。[了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=zh-Hant)。
+如果您的組織取得授權可使用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html)，您需要在沙箱中設定管道預設集，這會定義訊息所需的技術參數。[了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=zh-Hant)。
 
 ## 授予您的團隊所需的存取權限 {#grant-access-permissions}
 

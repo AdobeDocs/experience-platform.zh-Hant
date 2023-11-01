@@ -2,9 +2,9 @@
 title: 目的地中可設定的常用匯出設定
 description: 瞭解目的地中哪些匯出設定可在目的地層級設定，哪些是固定的且無法編輯。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 各種目的地型別通用的匯出設定 {#common-settings-across-destination-types}
 
-在屬於相關目的地型別的各個目的地中，目的地匯出行為都是一致的 *觸發目的地匯出的專案* 和 *目的地匯出包含的內容*. 目的地匯出是由目的地服務從 [上游即時客戶個人檔案服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=en#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+在屬於相關目的地型別的各個目的地中，目的地匯出行為都是一致的 *觸發目的地匯出的專案* 和 *目的地匯出包含的內容*. 目的地匯出是由目的地服務從 [上游即時客戶個人檔案服務](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 目的地匯出中包含的內容會因目的地型別而略有不同。 深入瞭解 [每個目的地型別的常見匯出行為模式](/help/destinations/how-destinations-work/profile-export-behavior.md). 目的地開發人員或Real-Time CDP使用者無法編輯這些設定。
 

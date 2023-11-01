@@ -2,16 +2,16 @@
 title: Platform Web SDK中的第一方裝置ID
 description: 瞭解如何為Adobe Experience Platform Web SDK設定第一方裝置識別碼(FPID)。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 1%
+source-wordcount: '1772'
+ht-degree: 2%
 
 ---
 
 # Platform Web SDK中的第一方裝置ID
 
-Adobe Experience Platform Web SDK指派 [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) 透過Cookie對網站訪客進行追蹤，以追蹤使用者行為。 若要說明瀏覽器對Cookie有效期的限制，您可以選擇設定並管理您自己的裝置識別碼。 這些被稱為第一方裝置 ID (FPID)。 
+Adobe Experience Platform Web SDK指派 [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 透過Cookie對網站訪客進行追蹤，以追蹤使用者行為。 若要說明瀏覽器對Cookie有效期的限制，您可以選擇設定並管理您自己的裝置識別碼。 這些被稱為第一方裝置 ID (FPID)。 
 
 >[!NOTE]
 >

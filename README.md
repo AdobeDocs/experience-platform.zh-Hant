@@ -1,8 +1,8 @@
 ---
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: ht
-source-wordcount: '508'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 98%
 
 ---
 # 貢獻內容
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 ## 貢獻 Adob&#x200B;&#x200B;e 內容的方法
 
-請參閱 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)。
+請參閱 [Adobe Docs 貢獻者指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=zh-Hant)。
 
 貢獻方式取決於您的身分和您要提交的變更類型：
 
@@ -37,7 +37,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### 由 Adobe 員工提出的重大變更或新文章
 
-若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。如需詳細資訊，請參閱[內部共同作業指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=zh-tw)。
+若您是 Adobe Experience Cloud 解決方案產品團隊的技術撰寫人員、專案經理或開發人員，且您的工作正是貢獻或撰寫技術文章，請使用 `https://git.corp.adobe.com/AdobeDocs` 的私人存放庫。如需詳細資訊，請參閱[內部共同作業指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html)。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
