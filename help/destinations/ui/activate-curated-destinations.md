@@ -2,7 +2,7 @@
 title: 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 type: Tutorial
 description: 瞭解如何使用LiveRamp RampID從Adobe Experience Platform啟用對象至連線的電視和音訊目的地，以及其他整合。
-source-git-commit: adc7e66fa17484ccb9527650f197acc29ef4d0f1
+source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 
 透過進行兩個步驟的程式並使用 [LiveRamp — 入門](../catalog/advertising/liveramp-onboarding.md) 和 [LiveRamp — 分佈](../catalog/advertising/liveramp-distribution.md) 目的地，如下圖所示。
 
-![此圖表顯示透過LiveRamp將受眾從Real-Time CDP啟用至已組織目的地的工作流程。](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![此圖表顯示透過LiveRamp將受眾從Real-Time CDP啟用至已組織目的地的工作流程。](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 首先，您將對象從Real-Time CDP匯出至 [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) 目的地（以CSV檔案形式）。
 
