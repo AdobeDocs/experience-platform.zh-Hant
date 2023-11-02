@@ -2,16 +2,16 @@
 title: 將資料匯出至外部ML環境
 description: 瞭解如何將使用Data Distiller建立的已準備好的訓練資料集共用到雲端儲存位置，讓ML環境可讀取該位置來訓練和評分您的模型。
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '537'
 ht-degree: 3%
 
 ---
 
 # 將資料匯出至外部ML環境
 
-本檔案會示範如何將使用Data Distiller建立的已準備好的訓練資料集共用至雲端儲存位置，讓ML環境可讀取該位置來訓練和評分您的模型。 此處的範例將訓練資料集匯出至 [資料登陸區(DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). 您可以視需要變更儲存目的地，以搭配機器學習環境使用。
+本檔案會示範如何將使用Data Distiller建立的已準備好的訓練資料集共用至雲端儲存位置，讓ML環境可讀取該位置來訓練和評分您的模型。 此處的範例將訓練資料集匯出至 [資料登陸區(DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). 您可以視需要變更儲存目的地，以搭配機器學習環境使用。
 
 此 [目的地的流量服務](https://developer.adobe.com/experience-platform-apis/references/destinations/) 用於將已計算功能的資料集著陸至適當的雲端儲存位置，以完成功能管道。
 
