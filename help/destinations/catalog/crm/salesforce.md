@@ -6,7 +6,7 @@ exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '3117'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 >
@@ -150,7 +150,7 @@ ht-degree: 0%
 
 範圍 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 搜尋 [!DNL Salesforce CRM]. 或者，您可以在 **[!UICONTROL CRM]** 類別。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫以下必填欄位並選取 **[!UICONTROL 連線到目的地]**. 請參閱 [彙總 [!DNL Salesforce CRM] 認證](#gather-credentials) 區段以取得任何指引。
 |認證 |說明 | | — | — | | **[!UICONTROL 使用者名稱]** |您的 [!DNL Salesforce] 帳戶使用者名稱。 | | **[!UICONTROL 密碼]** |由下列專案組成的串連字串 [!DNL Salesforce] 帳戶密碼已附加您的 [!DNL Salesforce] 安全性Token。<br>串連值採用以下形式 `{PASSWORD}{TOKEN}`.<br> 請注意，請勿使用任何大括弧或空格。<br>例如，若您的 [!DNL Salesforce] 密碼為 `MyPa$$w0rd123` 和 [!DNL Salesforce] 安全性權杖是 `TOKEN12345....0000`，即您在中使用的串連值 **[!UICONTROL 密碼]** 欄位為 `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL 自訂網域]** |您的 [!DNL Salesforce] 網域前置詞。 <br>例如，如果您的網域為 *`d5i000000isb4eak-dev-ed`.my.salesforce.com*，您必須提供 `d5i000000isb4eak-dev-ed` 做為值。 | | **[!UICONTROL 使用者端ID]** |您的 [!DNL Salesforce] 已連線的應用程式 `Consumer Key`. | | **[!UICONTROL 使用者端密碼]** |您的 [!DNL Salesforce] 已連線的應用程式 `Consumer Secret`. |
@@ -159,7 +159,7 @@ ht-degree: 0%
 
 如果提供的詳細資料有效，UI會顯示 **[!UICONTROL 已連線]** 狀態，並顯示綠色核取記號，您就可以繼續進行下一個步驟。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
@@ -176,7 +176,7 @@ ht-degree: 0%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

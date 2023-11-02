@@ -5,7 +5,7 @@ exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1028'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 > 
 >若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要驗證目的地，請遵循下列步驟：
 
@@ -90,7 +90,7 @@ ht-degree: 1%
 
 選取「繼續」後，請等候系統重新將您導向Adobe Experience Platform。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 ![目的地詳細資料](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
@@ -110,7 +110,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

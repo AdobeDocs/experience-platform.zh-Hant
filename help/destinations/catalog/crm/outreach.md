@@ -6,7 +6,7 @@ exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1742'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -88,7 +88,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -98,7 +98,7 @@ ht-degree: 1%
 
 範圍 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 搜尋 [!DNL Outreach]. 或者，您可以在CRM類別下找到它。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要驗證目的地，請選取 **[!UICONTROL 連線到目的地]**.
 
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 如果提供的詳細資料有效，UI會顯示 **已連線** 帶有綠色勾號的狀態。 然後您可以繼續下一步驟。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![平台UI熒幕擷圖顯示如何填寫外展目的地的詳細資料。](../../assets/catalog/crm/outreach/destination-details.png)
@@ -131,7 +131,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

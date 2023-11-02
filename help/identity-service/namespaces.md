@@ -38,7 +38,7 @@ ht-degree: 8%
 * **身分型別**：指定名稱空間的分類。
 * **說明**：（選用）您可以提供的有關指定名稱空間的任何補充資訊。
 
-### 身分型別 {#identity-type}
+### 身分類型 {#identity-type}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
@@ -55,7 +55,7 @@ ht-degree: 8%
 
 Experience Platform中有以下身分型別：
 
-| 身分型別 | 說明 |
+| 身分類型 | 說明 |
 | --- | --- |
 | Cookie ID | Cookie ID可識別網頁瀏覽器。 這些身分對於擴充至關重要，並構成身分圖表的大多數。 然而，自然而然地，它們會迅速衰落，並隨著時間而失去價值。 |
 | 跨裝置ID | 跨裝置ID會識別個人，通常會將其他ID連結在一起。 範例包括登入ID、CRM ID和熟客ID。 此表示會 [!DNL Identity Service] 以敏感地處理值。 |
@@ -93,7 +93,7 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 | TNTID | 代表Adobe Target的名稱空間。 請參閱以下檔案： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) 以取得詳細資訊。 |
 | Windows AID | 代表Windows Advertising ID的名稱空間。 請參閱以下檔案： [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) 以取得詳細資訊。 |
 
-### 檢視身分名稱空間 {#view-identity-namespaces}
+### 檢視身分命名空間 {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"

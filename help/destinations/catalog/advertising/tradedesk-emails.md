@@ -6,7 +6,7 @@ exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1148'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 ### 驗證至目的地 {#authenticate}
 
@@ -97,7 +97,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 連線到目的地時，設定資料治理原則是完全選用的。 請檢閱Experience Platform [資料治理總覽](/help/data-governance/policies/overview.md) 以取得更多詳細資料。
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

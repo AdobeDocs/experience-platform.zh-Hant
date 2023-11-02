@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 37%
+source-wordcount: '1806'
+ht-degree: 36%
 
 ---
 
@@ -13,6 +13,20 @@ ht-degree: 37%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 2.21.0版 — 2023年11月1日
+
+**新功能**
+
+* 已新增 `Request default personalization` 用於傳送事件動作的選項。
+* 在「傳送事件」動作中新增頁面頂端和底部事件的支援。
+* 已新增 `Apply propositions` 動作。
+* 已新增 `Evaluate rulesets` 動作和 `Subscribe ruleset items` 應用程式內訊息的事件。
+* 已新增 `Decision context` 以傳送事件動作。
+
+**修正和改良**
+
+* 包含2.19.0版的Adobe Experience Platform Web SDK。
 
 ## 2.20.3版 — 2023年8月8日
 

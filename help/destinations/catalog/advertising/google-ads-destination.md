@@ -6,7 +6,7 @@ exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '972'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -87,7 +87,7 @@ ht-degree: 1%
 * 您的帳戶型別： **AdWords**
 * **Google AdWords ID**：這是您的ID，包含 [!DNL Google]. ID格式通常為123-456-7890。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -95,7 +95,7 @@ ht-degree: 1%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -110,7 +110,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

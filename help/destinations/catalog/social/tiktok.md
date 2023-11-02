@@ -6,7 +6,7 @@ exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1040'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -58,7 +58,7 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -66,13 +66,13 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要驗證到目的地，系統會將您重新導向以登入 [!DNL TikTok Ads Manager] 帳戶並授權Adobe代表您管理對象。
 
 ![TikTok許可權選取](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "用於選取許可權的TikTok UI影像")
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -90,7 +90,7 @@ TikTok支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identi
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

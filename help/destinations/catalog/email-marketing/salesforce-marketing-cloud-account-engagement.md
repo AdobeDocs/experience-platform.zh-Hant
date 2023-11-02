@@ -6,7 +6,7 @@ exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1620'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -91,7 +91,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 
 範圍 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**，搜尋 [!DNL Salesforce Marketing Cloud Account Engagement]. 或者，您可以在 **[!UICONTROL 電子郵件行銷]** 類別。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要驗證目的地，請選取 **[!UICONTROL 連線到目的地]**. 您將會被導覽至 [!DNL Salesforce] 登入頁面。 輸入您的 [!DNL Marketing Cloud Account Engagement] 帳戶認證並選取 [!DNL Log In].
 
@@ -113,7 +113,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 
 如果提供的詳細資料有效，UI會顯示訊息： *您已成功連線到SalesforceMarketing Cloud帳戶參與帳戶* 訊息和 **[!UICONTROL 已連線]** 狀態，並顯示綠色核取記號，您就可以繼續進行下一個步驟。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。 請參閱 [彙總 [!DNL Marketing Cloud Account Engagement] 認證](#gather-credentials) 區段以取得任何指引。
 
@@ -133,7 +133,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

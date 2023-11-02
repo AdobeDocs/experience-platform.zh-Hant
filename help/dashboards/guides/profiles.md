@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
 source-wordcount: '4313'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -119,10 +119,10 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 
 Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 Customer AI通過分析現有的消費者體驗事件資料來預測這一點 **流失或轉換傾向分數**. 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 此 [分數的分佈](#customer-ai-distribution-of-scores) 和 [評分摘要](#customer-ai-scoring-summary) 深入分析會示範您對象中的劃分。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
 
-* [[!UICONTROL Customer AI評分摘要]](#customer-ai-scoring-summary)
-* [[!UICONTROL 分數的Customer AI分佈]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Customer AI 評分摘要]](#customer-ai-scoring-summary)
+* [[!UICONTROL Customer AI 分數的分佈]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL 分數的Customer AI分佈] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Customer AI 分數的分佈] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
@@ -151,7 +151,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 
 有關Customer AI的更多資訊可在以下網址找到： [探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Customer AI評分摘要] {#customer-ai-scoring-summary}
+### [!UICONTROL Customer AI 評分摘要] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"

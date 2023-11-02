@@ -7,7 +7,7 @@ exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2121'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 10%
 - **相似的對象**：相似對象是指將具有所選相似度臨界值的相似模型套用至基本對象時，所建立的對象。 您可以使用相同的相似模型，建立多個相似對象。 相似對象即是獲得評分的對象。
 - **可定址對象總人數**：可定址對象總人數是過去30天的設定檔總數減去過去30天內的基礎對象母體。 例如，如果客戶在過去30天內有1,000萬個設定檔，而基本對象在過去30天內有1,000,000個設定檔，則總可定址對象人數為9,000,000個設定檔。
 
-## 相似模型詳細資料 {#details}
+## 相似模型詳細資訊 {#details}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_lookAlike_notEligible"

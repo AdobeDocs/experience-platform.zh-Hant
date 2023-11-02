@@ -2,10 +2,10 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
+source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 7%
+source-wordcount: '1849'
+ht-degree: 8%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 7%
 
 匯出歷程時，不支援將自訂身分型別當做相依物件使用。
 
-## 將物件匯出至封裝 {#export-objects}
+## 將物件匯出到套件中 {#export-objects}
 
 >[!NOTE]
 >
@@ -237,6 +237,12 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
 >[!NOTE]
 >
 >匯入完成後，您會在Platform UI中收到通知。 您可以從警示圖示存取這些通知。 如果工作失敗，您可以從這裡導覽至疑難排解。
+
+## 教學課程影片
+
+以下影片旨在協助您瞭解沙箱工具，並概述如何建立新套件、發佈套件和匯入套件。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## 後續步驟
 

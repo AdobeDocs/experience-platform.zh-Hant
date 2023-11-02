@@ -6,7 +6,7 @@ exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '652'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ Marketo Measure （前身為Bizible）可協助行銷人員深入瞭解哪些行
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -53,7 +53,7 @@ Marketo Measure （前身為Bizible）可協助行銷人員深入瞭解哪些行
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下區段列出的欄位。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 

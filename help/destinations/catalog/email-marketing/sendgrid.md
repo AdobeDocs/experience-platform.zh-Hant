@@ -6,7 +6,7 @@ exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1571'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -79,7 +79,7 @@ SendGrid支援如下表所述的身分啟用。 進一步瞭解 [身分](/help/i
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 1. 在 [!DNL Adobe Experience Platform] 主控台，導覽至 **目的地**.
 
@@ -96,7 +96,7 @@ SendGrid支援如下表所述的身分啟用。 進一步瞭解 [身分](/help/i
 
 ![](../../assets/catalog/email-marketing/sendgrid/05.jpg)
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 當 [設定](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) 您必須提供下列資訊給此目的地：
 
@@ -111,7 +111,7 @@ SendGrid支援如下表所述的身分啟用。 進一步瞭解 [身分](/help/i
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

@@ -20,7 +20,7 @@ ht-degree: 7%
 
 ![接著會顯示區段產生器UI。](../images/ui/segment-builder/segment-builder.png)
 
-## 區段定義建置區塊 {#building-blocks}
+## 分段定義建置區塊 {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"

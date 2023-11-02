@@ -7,7 +7,7 @@ exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '2154'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -107,7 +107,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 >
@@ -117,7 +117,7 @@ ht-degree: 1%
 
 範圍 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 搜尋 [!DNL Dynamics 365]. 或者，您可以在 **[!UICONTROL CRM]** 類別。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要驗證目的地，請選取 **[!UICONTROL 連線到目的地]**.
 ![顯示如何驗證的平台UI熒幕擷圖。](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
@@ -131,7 +131,7 @@ ht-degree: 1%
 
 如果提供的詳細資料有效，UI會顯示 **[!UICONTROL 已連線]** 帶有綠色勾號的狀態。 然後您可以繼續下一步驟。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![顯示目的地詳細資訊的平台UI熒幕擷圖。](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
@@ -146,7 +146,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

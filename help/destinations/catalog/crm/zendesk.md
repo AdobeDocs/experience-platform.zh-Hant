@@ -6,7 +6,7 @@ exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1502'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ ht-degree: 1%
 
 範圍 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 搜尋 [!DNL Zendesk]. 或者，您可以在 **[!UICONTROL CRM]** 類別。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 填寫以下必填欄位。 請參閱 [彙總 [!DNL Zendesk] 認證](#gather-credentials) 區段以取得任何指引。
 * **[!UICONTROL 持有人權杖]**：您在中產生的存取Token。 [!DNL Zendesk] 帳戶。
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 如果提供的詳細資料有效，UI會顯示 **[!UICONTROL 已連線]** 帶有綠色勾號的狀態。 然後您可以繼續下一步驟。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![顯示目的地詳細資訊的平台UI熒幕擷圖。](../../assets/catalog/crm/zendesk/destination-details.png)
@@ -99,7 +99,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

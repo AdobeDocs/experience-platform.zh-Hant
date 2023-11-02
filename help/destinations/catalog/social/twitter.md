@@ -5,7 +5,7 @@ exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '874'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -71,14 +71,14 @@ ht-degree: 4%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 1. 尋找 [!DNL Twitter Custom Audiences] 目的地目錄中的目的地，然後選取 **[!UICONTROL 設定]**.
 2. 選取 **[!UICONTROL 連線到目的地]**.
    ![向LinkedIn進行驗證](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
 3. 輸入您的Twitter認證，然後選取 **登入**.
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"
@@ -97,7 +97,7 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

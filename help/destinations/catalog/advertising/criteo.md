@@ -6,7 +6,7 @@ exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1042'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -88,11 +88,11 @@ Criteo提供值得信賴且有影響力的廣告，讓開放網際網路上的�
    ![標準登入](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
-### 連線引數 {#connection-parameters}
+### 連線參數 {#connection-parameters}
 
 在對目的地進行驗證之後，請填寫以下連線引數。
 
-![連線引數](../../assets/catalog/advertising/criteo/connection-parameters.png)
+![連線參數](../../assets/catalog/advertising/criteo/connection-parameters.png)
 
 | 欄位 | 說明 | 必填 |
 | --- | --- | --- |
@@ -107,7 +107,7 @@ Criteo提供值得信賴且有影響力的廣告，讓開放網際網路上的�
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate-segments}
+## 啟動此目標的對象 {#activate-segments}
 
 >[!IMPORTANT]
 > 

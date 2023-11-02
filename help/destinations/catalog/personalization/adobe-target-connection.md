@@ -6,7 +6,7 @@ exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1202'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -74,7 +74,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
@@ -90,7 +90,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體。 不需要驗證。
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
@@ -123,7 +123,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

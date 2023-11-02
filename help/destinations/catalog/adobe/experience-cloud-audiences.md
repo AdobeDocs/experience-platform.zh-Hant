@@ -6,7 +6,7 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1683'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -131,7 +131,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -139,13 +139,13 @@ Note: briefly talk about when to share audiences to these destinations using the
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要驗證目的地，請選取 **[!UICONTROL 設定]** 在目錄中的目的地卡片檢視中，然後選取 **[!UICONTROL 連線到目的地]**.
 
 ![「Experience Cloud對象」目的地的「連線至目的地」選項檢視。](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-authenticate-to-destination.png)
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -154,7 +154,7 @@ Note: briefly talk about when to share audiences to these destinations using the
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
