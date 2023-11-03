@@ -1,15 +1,15 @@
 ---
-title: 透過挖掘潛在客戶使用案例吸引並獲取新客戶
-description: 了解如何透過 Real-Time CDP 中合作夥伴資料支援所帶來的挖掘潛在客戶使用案例，來吸引和獲取新客戶。
+title: 不依賴第三方Cookie即可吸引和贏取新客戶
+description: 瞭解如何透過潛在使用案例吸引和贏取新客戶，而不需依賴第三方Cookie。
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1960'
-ht-degree: 96%
+source-wordcount: '2077'
+ht-degree: 86%
 
 ---
 
-# 透過挖掘潛在客戶使用案例吸引並獲取新客戶
+# 不依賴第三方Cookie即可吸引和贏取新客戶
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ ht-degree: 96%
 
 ![挖掘潛在客戶使用案例高層級視覺化概觀。](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## 為何考慮此使用案例 {#why-this-use-case}
+
+品牌同時面臨艱鉅的挑戰，需要負責地執行最上層漏斗式客戶贏取使用案例，而不需要依賴第三方Cookie、有限的預算，以及更高的透明度和廣告支出報酬要求。
+
+Adobe Real-time Customer Data Platform可協助品牌安全地將其支援的資料管理平台(DMP)使用案例轉換為免Cookie的替代方案，其方式可將自助式細分、對象管理和啟用的完整複雜度和功能整合到單一系統中。 Adobe透過專利的資料控管和同意架構，專注負責任地使用資料，絲毫不受影響。
+
+例如，當您需要執行行銷活動以吸引潛在客戶成為使用者或已知客戶時，請遵循此使用案例中所述的步驟。
+
 ## 必要條件和規劃 {#prerequisites-and-planning}
 
-當您考慮使用 Real-Time CDP 的合作夥伴資料支援來接觸和獲取新客戶時，請在計劃過程中考慮以下必要條件：
+當您考慮聯絡及爭取新客戶時，請在計畫處理中考慮下列必要條件：
 
 * 您期望多久一次在 Real-Time CDP 擷取和重新整理合作夥伴提供的設定檔？
 * 您的下游目的地需要什麼身分？
@@ -219,5 +227,5 @@ ht-degree: 96%
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
 * [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [利用合作夥伴輔助識別，不需要使用者驗證或之前使用您的品牌的紀錄，即可在造訪期間提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)。
+* [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md) 造訪期間，使用者未經驗證，或先前沒有您品牌的記錄。
 * [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

@@ -1,15 +1,15 @@
 ---
-title: 使用合作夥伴輔助的訪客識別來個人化現場體驗
+title: 使用合作夥伴輔助的訪客識別，為未知的訪客提供個人化的現場體驗
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: de8aeb553066405424711e75480204f6136b52ff
+source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 96%
+source-wordcount: '2696'
+ht-degree: 92%
 
 ---
 
-# 使用合作夥伴輔助的訪客識別來個人化現場體驗
+# 使用合作夥伴輔助的訪客識別，為未知的訪客提供個人化的現場體驗
 
 >[!AVAILABILITY]
 >
@@ -17,7 +17,15 @@ ht-degree: 96%
 
 了解如何使用合作夥伴輔助的訪客識別為您的 Web 屬性訪客提供個人化的現場體驗。使用本教學課程了解 Experience Platform 和其他 Experience Cloud 解決方案中各種元素的實施順序，以便向經過身分驗證和未經身分驗證的訪客顯示個人化體驗。
 
-![資訊圖：說明如何使用合作夥伴提供的屬性為訪客供個人化體驗。](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![資訊圖：說明如何使用合作夥伴提供的屬性為訪客供個人化體驗。](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## 為何考慮此使用案例 {#why-this-use-case}
+
+消費者以各種方式與品牌互動時，數位體驗呈現片段化是很真實的，而且越來越難以解決。 針對凝聚式體驗、鎖定目標的建議和量身打造的互動的最佳客戶參與策略，全都受到使用者認知度的限制。
+
+這是合作夥伴協助的即時辨識可帶來有意義的差異之處。 Adobe可讓身分識別合作夥伴瞭解我們複雜的使用者端資料收集和領先市場的體驗最佳化產品，有效提升體驗傳送的標準（從第一次造訪開始），無需先前的記錄或驗證。
+
+這對於驗證率低的垂直市場尤其有用，例如消費性包裝商品、線上零售等。
 
 ## 行業範例 {#industry-example}
 

@@ -2,10 +2,10 @@
 title: 使用合作夥伴提供的屬性補充第一方設定檔
 description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的對象最佳化。
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 93%
+source-wordcount: '1263'
+ht-degree: 80%
 
 ---
 
@@ -18,6 +18,16 @@ ht-degree: 93%
 使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。
 
 ![使用合作夥伴提供的屬性使用案例高層級視覺化概觀擴充設定檔。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## 為何考慮此使用案例 {#why-this-use-case}
+
+大部分品牌（即使是擁有豐富第一方資料的品牌）都能從簡化資料及更細緻地瞭解客戶、其行為、模式和偏好而獲益。
+
+Adobe Real-time Customer Data Platform可協助品牌透過一或多個信任合作夥伴的重要深入分析、識別碼和屬性，以負責任的方式補充其第一方資料。
+
+Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密互通，在客戶生命週期的各個階段促進個人化及深思熟慮的互動。 這些功能由值得信賴的資料控管架構所支援，可讓您對使用合作夥伴資料的位置和方式進行精細控制。 例如，您可能想要使用合作夥伴提供的分析進行細分，但不要用於個人化。
+
+例如，當您需要使用人口統計和意圖訊號豐富您的客戶記錄時，請遵循此使用案例中所述的步驟。
 
 ## 必要條件和規劃 {#prerequisites-and-planning}
 
@@ -126,5 +136,5 @@ Commenting out links for now
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
 * 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
-* [利用合作夥伴輔助識別，不需要使用者驗證或之前使用您的品牌的紀錄，即可在造訪期間提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)。
+* [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md) 造訪期間，使用者未經驗證，或先前沒有您品牌的記錄。
 * [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

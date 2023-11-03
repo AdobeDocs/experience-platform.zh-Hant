@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 98%
+source-wordcount: '254'
+ht-degree: 92%
 
 ---
 
@@ -67,9 +67,10 @@ ht-degree: 98%
 * 使用案例 {#use-cases}
    * 智慧型重新吸引使用案例 {#intelligent-re-engagement}
       * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-   * 合作夥伴資料使用案例 {#partner-data}
-      * [透過挖掘潛在客戶支援吸引並獲取新客戶](/help/rtcdp/partner-data/prospecting.md)
+   * 客戶贏取 {#customer-acquisition}
+      * [不依賴第三方Cookie即可吸引和贏取新客戶](/help/rtcdp/partner-data/prospecting.md)
+      * [使用合作夥伴輔助的訪客識別，為未知的訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
+   * 設定檔擴充 {#profile-enrichment}
       * [使用合作夥伴提供的屬性補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [使用合作夥伴輔助的訪客識別來個人化現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Experience Platform 發行說明](https://www.adobe.com/go/platform-release-notes_tw)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary_tw)
