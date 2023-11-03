@@ -2,9 +2,9 @@
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '776'
 ht-degree: 20%
 
 ---
@@ -17,18 +17,18 @@ ht-degree: 20%
 
 ## v0.20.1 （2023年11月3日）
 
-- 更新以支援at.js 2.11.2。
+- 更新以支援 `at.js` 2.11.2.
 - 修正自訂事件所傳送之回應Token不一致的問題。
 
 ## v0.20.0 （2023年10月9日）
 
-- 更新以支援at.js 2.11.0。
+- 更新以支援 `at.js` 2.11.0。
 - 新增在targetGlobalSettings中設定自訂Adobe Experience Platform sandboxId和sandboxName的支援，這些將傳遞至getOffer/getOffers呼叫的傳送API。
 - 選取器中鏈結的：eq()陰影DOM修正。
 
 ## v0.19.3 （2023年9月18日）
 
-- 更新以支援at.js v2.10.3。
+- 更新以支援 `at.js` v2.10.3。
 - 修正在未呈現任何選件時，錯誤觸發at-content-rendering-succeeded自訂事件的問題。 現在會觸發正確的事件at-content-rendering-no-offers 。
 - 已針對at-content-rendering-failed自訂事件將eventToken和responseToken新增至錯誤物件。
 
@@ -66,6 +66,12 @@ ht-degree: 20%
 ## v0.16.0 （2021年10月28日）
 
 - 更新以支援 `at.js` v2.7.0，現可透過Adobe Target下載。
+
+## v0.15.2 （2021年8月16日）
+
+- 更新以支援 `at.js` 2.6.1。
+- 在啟動時初始化裝置上決策，而不依賴頁面載入事件。
+- 裝置上決策現在可用於成品下載後的首次造訪。
 
 ## v0.15.1 （2021年7月20日）
 
