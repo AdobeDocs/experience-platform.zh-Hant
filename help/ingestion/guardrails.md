@@ -3,9 +3,9 @@ keywords: Experience Platform；疑難排解；護欄；指南；
 title: 資料擷取的護欄
 description: 本文提供Adobe Experience Platform中資料擷取護欄的相關指示
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,10 @@ ht-degree: 1%
 
 ## 後續步驟
 
-請參閱下列檔案，以取得有關Experience Platform中的資料和處理護欄的詳細資訊：
+請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
-* [即時客戶設定檔資料的護欄](../profile/guardrails.md)
-* [Identity Service資料的護欄](../identity-service/guardrails.md)
+* [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
+* [端對端延遲圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 用於各種Experience Platform服務。
+* [Real-time Customer Data Platform （B2C版本 — Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2P - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2B - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
