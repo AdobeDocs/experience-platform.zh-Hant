@@ -2,10 +2,10 @@
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
+source-git-commit: f235d210682feba7617b720e514361c2862512f9
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 21%
+source-wordcount: '749'
+ht-degree: 20%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 21%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## v0.20.1 （2023年11月3日）
+
+- 更新以支援at.js 2.11.2。
+- 修正自訂事件所傳送之回應Token不一致的問題。
 
 ## v0.20.0 （2023年10月9日）
 
