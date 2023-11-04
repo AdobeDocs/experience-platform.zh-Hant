@@ -6,7 +6,7 @@ exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '1048'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -85,7 +85,7 @@ Adobe Experience Platform設定檔屬性類似於 [!DNL Airship] 屬性之間對
 
 運用Adobe Experience Platform的屬性進一步豐富 [!DNL Airship] 設定檔並將其與SDK或 [!DNL Airship] 預測資料。 例如，零售商可建立具有忠誠度狀態和位置資料（來自Platform的屬性）的受眾，並且 [!DNL Airship] 預測會流失資料，以傳送高針對性訊息給住在內華達州拉斯維加斯的金級忠誠度使用者，且流失率很高。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -93,13 +93,13 @@ Adobe Experience Platform設定檔屬性類似於 [!DNL Airship] 屬性之間對
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
 * **[!UICONTROL 持有人權杖]**：您從產生的持有人權杖 [!DNL Airship] 儀表板。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -113,7 +113,7 @@ Adobe Experience Platform設定檔屬性類似於 [!DNL Airship] 屬性之間對
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

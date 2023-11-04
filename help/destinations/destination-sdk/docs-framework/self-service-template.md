@@ -5,7 +5,7 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
 workflow-type: tm+mt
 source-wordcount: '1640'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -109,7 +109,7 @@ ht-degree: 1%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 *新增客戶在對您的目的地進行驗證時必須填寫的欄位。 這些欄位會因目的地而異，視您在Destination SDK中的設定而定。 目的地的欄位可能與下方所列的欄位不同。 請一併加入類似下列範例熒幕擷圖的熒幕擷圖。*
 
@@ -119,7 +119,7 @@ ht-degree: 1%
 
 * **[!UICONTROL 持有人權杖]**：填寫持有人權杖以對目的地進行驗證。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 *新增客戶在設定新目的地時必須填寫的欄位。 這些欄位會因目的地而異，視您在Destination SDK中的設定而定。 目的地的欄位可能與下方所列的欄位不同。 請一併加入類似下列範例熒幕擷圖的熒幕擷圖。*
 
@@ -137,7 +137,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

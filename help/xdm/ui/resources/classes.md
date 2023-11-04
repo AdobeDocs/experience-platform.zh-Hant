@@ -11,7 +11,7 @@ ht-degree: 5%
 
 ---
 
-# 在UI中建立和編輯類別 {#ui-create-and-edit}
+# 在 UI 中建立和編輯類別 {#ui-create-and-edit}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"

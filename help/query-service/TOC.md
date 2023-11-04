@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 113e74b3a4783a11bc88dc2d16134b68638604e5
 workflow-type: tm+mt
 source-wordcount: '311'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 
@@ -65,7 +65,7 @@ ht-degree: 18%
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
 - 查詢服務UI {#ui}
-   - [UI總覽](ui/overview.md)
+   - [UI 概觀](ui/overview.md)
    - [查詢編輯器使用手冊](ui/user-guide.md)
    - [查詢範本](ui/query-templates.md)
    - [引數化查詢（受限）](ui/parameterized-queries.md)
@@ -77,7 +77,7 @@ ht-degree: 18%
 - 查詢服務API端點 {#api}
    - [快速入門](api/getting-started.md)
    - [查詢](api/queries.md)
-   - [連線引數](api/connection-parameters.md)
+   - [連線參數](api/connection-parameters.md)
    - [時程表](api/scheduled-queries.md)
    - [已排程查詢的執行](api/runs-scheduled-queries.md)
    - [查詢範本](api/query-templates.md)

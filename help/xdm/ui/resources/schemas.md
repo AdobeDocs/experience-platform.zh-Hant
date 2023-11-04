@@ -7,7 +7,7 @@ exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
 workflow-type: tm+mt
 source-wordcount: '3670'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -275,7 +275,7 @@ ht-degree: 1%
 
 ![新增至標準物件的欄位](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## 為即時客戶個人檔案啟用結構 {#profile}
+## 啟用即時客戶設定檔的方案 {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"

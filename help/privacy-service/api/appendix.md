@@ -21,7 +21,7 @@ ht-degree: 6%
 
 下表概述由提供的幾種常用的預先定義身分型別 [!DNL Experience Platform]，以及其相關聯的 `namespace` 值：
 
-| 身分型別 | `namespace` | `namespaceId` |
+| 身分類型 | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | 電子郵件 | `Email` | `6` |
 | 電話 | `Phone` | `7` |

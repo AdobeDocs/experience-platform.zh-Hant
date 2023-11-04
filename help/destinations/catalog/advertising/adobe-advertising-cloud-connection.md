@@ -5,7 +5,7 @@ exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
 source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -60,7 +60,7 @@ Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一�
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -68,7 +68,7 @@ Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一�
 
 若要連線到目的地，請依照指示執行 [建立目的地連線](/help/destinations/ui/connect-destination.md) 使用Experience Platform使用者介面。 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要連線到目的地，請在 [!UICONTROL 連線型別] 部分，然後選取 **[!UICONTROL 連線到目的地]**.：
 
@@ -76,7 +76,7 @@ Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一�
 
 ![連線型別欄位](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -91,7 +91,7 @@ Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一�
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

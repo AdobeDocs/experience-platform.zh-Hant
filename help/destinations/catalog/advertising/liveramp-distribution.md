@@ -56,7 +56,7 @@ ht-degree: 38%
 
 將對象上線至LiveRamp後，請從繼續啟動工作流程。 [連線到目的地](#connect) 選取並設定資料啟用的目標目的地平台的步驟。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_identifier_settings"
@@ -427,7 +427,7 @@ ht-degree: 38%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

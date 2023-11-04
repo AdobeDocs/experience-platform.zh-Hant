@@ -6,7 +6,7 @@ exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1132'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -74,13 +74,13 @@ ht-degree: 1%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
 * **[!UICONTROL 硬碟帳戶權杖]**：這是您的 [!DNL Braze] [!DNL API] 機碼。 您可以找到有關如何取得 [!DNL API] 在此輸入： [REST API金鑰總覽](https://www.braze.com/docs/api/api_key/).
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -94,7 +94,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

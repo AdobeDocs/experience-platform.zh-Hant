@@ -7,11 +7,11 @@ exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
 source-wordcount: '1475'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
-# 管理Privacy Service UI中的隱私權工作 {#user-guide}
+# 管理 Privacy Service UI 中的隱私權作業 {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
@@ -111,7 +111,7 @@ ht-degree: 14%
 
 若要將完整的工作資料下載為CSV檔案，請選取 **[!UICONTROL 匯出至CSV]** 位於對話方塊的右上角。
 
-## 建立新的隱私權工作請求 {#create-a-new-privacy-job-request}
+## 建立新的隱私權作業要求 {#create-a-new-privacy-job-request}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"

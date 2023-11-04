@@ -6,7 +6,7 @@ exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
 source-wordcount: '2098'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 4%
 
 為了滿足客戶的安全性和合規性要求，Experience Platform提供您可以允許清單中的靜態IP [!DNL Azure Event Hubs] 目的地。 請參閱 [串流目的地的IP位址允許清單](/help/destinations/catalog/streaming/ip-address-allow-list.md) 以取得加入允許清單的IP完整清單。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -91,7 +91,7 @@ ht-degree: 4%
 * **[!UICONTROL 名稱空間]**：填入 [!DNL Azure Event Hubs] 名稱空間。 瞭解 [!DNL Azure Event Hubs] 中的名稱空間 [Microsoft檔案](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 * **[!UICONTROL 事件中心名稱]**：填入 [!DNL Azure Event Hub] 名稱。 瞭解 [!DNL Azure Event Hubs] 中的名稱 [Microsoft檔案](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_eventhubs_includesegmentnames"
@@ -119,7 +119,7 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

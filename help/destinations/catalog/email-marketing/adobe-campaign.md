@@ -6,7 +6,7 @@ exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '956'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -46,7 +46,7 @@ Adobe Campaign這一組解決方案可協助您針對所有線上和離線管道
 
 請參閱 [SFTP目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -63,7 +63,7 @@ Adobe Campaign支援下列連線型別：
 
 將資料傳送至Adobe Campaign的偏好方式為透過 [!DNL Amazon S3] 或 [!DNL Azure Blob].
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -85,7 +85,7 @@ Adobe Campaign支援下列連線型別：
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

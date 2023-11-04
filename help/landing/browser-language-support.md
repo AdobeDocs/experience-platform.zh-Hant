@@ -6,7 +6,7 @@ exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -41,8 +41,8 @@ Platform UI的設計可在以下環境中以最佳方式運作： **最新版本
 * 日文
 * 義大利文
 * 韓文
-* 中文（簡體）
-* 中文（繁體）
+* 中文 (簡體)
+* 中文 (繁體)
 * 巴西葡萄牙文
 
 ### 變更預設語言

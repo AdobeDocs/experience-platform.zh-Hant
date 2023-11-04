@@ -6,7 +6,7 @@ exl-id: f422f21b-174a-4b93-b05d-084b42623314
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1120'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -72,13 +72,13 @@ ht-degree: 2%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
 * **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]秘密金鑰**：在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對以授予Adobe Experience Platform存取權給您的 [!DNL Amazon S3] 帳戶。 進一步瞭解 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 在建立與的驗證連線之後 [!DNL Amazon S3]，提供目的地的下列資訊：
 
@@ -102,7 +102,7 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

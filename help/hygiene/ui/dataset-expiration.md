@@ -5,11 +5,11 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
-# 自動化資料集有效期 {#dataset-expiration}
+# 自動化資料集到期 {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
@@ -28,7 +28,7 @@ ht-degree: 20%
 >
 >資料集到期目前不會從Adobe Experience Platform Edge Network刪除資料。 不過，資料集設為過期後，資料不可能保留在Edge Network內。 這是因為資料集到期的15天服務授權合約與Edge Network中存在資料的14天期間重疊，之後才捨棄資料。
 
-## 排程資料集到期日 {#schedule-dataset-expiration}
+## 排程資料集到期 {#schedule-dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"

@@ -6,7 +6,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
 source-wordcount: '1980'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 4%
 
 如需控制存取許可權的詳細資訊， [!DNL Kinesis] 資料串流，請閱讀下列內容 [[!DNL Kinesis] 檔案](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -118,7 +118,7 @@ ht-degree: 4%
 * **[!DNL Amazon Web Services]存取金鑰與秘密金鑰**：在 [!DNL Amazon Web Services]，產生 `access key - secret access key` 配對，授予Platform存取權給您的 [!DNL Amazon Kinesis] 帳戶。 進一步瞭解 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 地區]**：指示哪個 [!DNL Amazon Web Services] 串流資料的目標區域。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_kinesis_includesegmentnames"
@@ -154,7 +154,7 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

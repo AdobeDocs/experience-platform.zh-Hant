@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1517'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,11 @@ ht-degree: 3%
 
 Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您可以使用即將到期的認證或不即將到期的認證來連線到這些外部使用者端。
 
-## 即將到期的認證 {#expiring-credentials}
+>[!NOTE]
+>
+>認證面板不會自動供所有使用者使用。 請聯絡您的Adobe客戶團隊以要求 [!UICONTROL 認證] 索引標籤，以在您需要時包含在查詢服務工作區中。 如有要求，此變更會涵蓋整個組織，並由Adobe的工程團隊執行。 這不是由使用者控制的設定。
+
+## 到期的認證 {#expiring-credentials}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryservice_credentials_expiringcredentials"

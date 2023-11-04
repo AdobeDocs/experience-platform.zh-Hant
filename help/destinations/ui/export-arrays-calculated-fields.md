@@ -1,5 +1,5 @@
 ---
-title: （測試版）使用計算欄位匯出平面結構描述檔案中的陣列
+title: (Beta 版) 使用計算欄位匯出平面方案檔案中的陣列
 type: Tutorial
 description: 瞭解如何使用計算欄位，將平面結構描述檔案中的陣列從Real-Time CDP匯出至雲端儲存空間目的地。
 badge: Beta
@@ -7,11 +7,11 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# （測試版）使用計算欄位匯出平面結構描述檔案中的陣列 {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# (Beta 版) 使用計算欄位匯出平面方案檔案中的陣列 {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

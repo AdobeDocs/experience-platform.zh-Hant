@@ -5,7 +5,7 @@ exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 source-git-commit: 93b1c26e85ddd0fa232b26712f88faa824f19f30
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -57,7 +57,7 @@ ht-degree: 10%
 
 ![SFTP設定檔匯出型別](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -120,7 +120,7 @@ ht-degree: 10%
    * `exportResults.name`：匯出的檔案名稱。
    * `size`：匯出的檔案大小，以位元組為單位。
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

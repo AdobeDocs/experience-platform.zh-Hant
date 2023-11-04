@@ -50,7 +50,7 @@ ht-degree: 0%
 
    ![Experience PlatformUI的熒幕擷圖，顯示可用目的地的清單，並反白顯示「設定新目的地」控制項。](../assets/ui/connect-destinations/configure-new-destination.png)
 
-## 驗證到目的地 {#authenticate}
+## 驗證目標 {#authenticate}
 
 連線到目的地的第一個步驟是驗證到目的地平台。
 

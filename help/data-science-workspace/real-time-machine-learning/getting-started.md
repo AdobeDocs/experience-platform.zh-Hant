@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Real-time Machine Learning (Alpha)快速入門
+# Real-time Machine Learning快速入門(Alpha)
 
 >[!IMPORTANT]
 >

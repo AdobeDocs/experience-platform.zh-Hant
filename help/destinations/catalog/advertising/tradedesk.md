@@ -6,7 +6,7 @@ exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
 source-wordcount: '741'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 2%
 >
 >如果您打算使用建立您的第一個目的地 [!DNL The Trade Desk] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL The Trade Desk] Audience Manager中的整合，也就是您設定的ID同步會移轉到Platform。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -72,7 +72,7 @@ ht-degree: 2%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -93,7 +93,7 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

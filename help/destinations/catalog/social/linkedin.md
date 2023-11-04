@@ -6,7 +6,7 @@ exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1103'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -96,7 +96,7 @@ ht-degree: 2%
 
 ![身分對應轉換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -112,14 +112,14 @@ ht-degree: 2%
 >
 >Experience Platform使用者介面經常更新，自從錄製此影片後，該介面可能已經變更。 如需最新資訊，請參閱 [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 1. 尋找 [!DNL LinkedIn Matched Audiences] 目的地目錄中的目的地，然後選取 **[!UICONTROL 設定]**.
 2. 選取 **[!UICONTROL 連線到目的地]**.
    ![向LinkedIn進行驗證](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. 輸入您的LinkedIn認證，然後選取 **登入**.
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_linkedin_accountid"
@@ -138,7 +138,7 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

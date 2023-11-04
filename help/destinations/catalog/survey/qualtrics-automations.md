@@ -7,7 +7,7 @@ exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -77,7 +77,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -85,13 +85,13 @@ ht-degree: 1%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 在驗證過程中，您需要提供 **使用者名稱** 和 **密碼**. 使用者名稱是您的Qualtrics使用者名稱，密碼是您的Qualtrics帳戶的API權杖。 若要擷取API Token，請依照 **必要條件** 一節。
 
 ![驗證](/help/destinations/assets/catalog/survey/qualtrics/authentication.png)
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -107,7 +107,7 @@ ht-degree: 1%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -140,7 +140,7 @@ ht-degree: 1%
 
 如需範例，請參閱下方的熒幕擷圖。
 
-![身分名稱空間](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
+![身分命名空間](/help/destinations/assets/catalog/survey/qualtrics/identity-namespace.png)
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 

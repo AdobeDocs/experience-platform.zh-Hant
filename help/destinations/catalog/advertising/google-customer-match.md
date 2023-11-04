@@ -132,7 +132,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -140,7 +140,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -158,7 +158,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

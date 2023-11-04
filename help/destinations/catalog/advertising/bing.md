@@ -6,7 +6,7 @@ exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -68,7 +68,7 @@ ht-degree: 8%
 
 * [!UICONTROL 帳戶ID]：這是您的 [!DNL Bing Ads CID]，以整數格式顯示。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -76,7 +76,7 @@ ht-degree: 8%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 填寫目的地詳細資料 {#parameters}
+### 填寫目標詳細資訊 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -90,7 +90,7 @@ ht-degree: 8%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"

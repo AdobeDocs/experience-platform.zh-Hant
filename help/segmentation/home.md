@@ -73,7 +73,7 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 
 若要進一步瞭解串流區段，請參閱 [串流區段檔案](./api/streaming-segmentation.md).
 
-### 批次細分 {#batch}
+### 批次分段 {#batch}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"

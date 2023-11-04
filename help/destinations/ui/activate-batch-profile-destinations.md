@@ -253,7 +253,7 @@ ht-degree: 11%
 
 建議其中一個屬性為 [唯一識別碼](../../destinations/catalog/email-marketing/overview.md#identity) 從您的結構描述。 如需強制屬性的詳細資訊，請參閱 [電子郵件行銷目的地](../../destinations/catalog/email-marketing/overview.md#identity) 檔案。
 
-### 重複資料刪除索引鍵 {#deduplication-keys}
+### 去重複化索引鍵 {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
@@ -432,9 +432,9 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 
 >[!IMPORTANT]
 > 
->目錄中的所有雲端儲存空間目的地都可以檢視改良功能 [[!UICONTROL 對應] 步驟](#mapping) 會取代 **[!UICONTROL 選取屬性]** 本節中說明的步驟。
+目錄中的所有雲端儲存空間目的地都可以檢視改良功能 [[!UICONTROL 對應] 步驟](#mapping) 會取代 **[!UICONTROL 選取屬性]** 本節中說明的步驟。
 >
->這個 **[!UICONTROL 選取屬性]** 仍會顯示Adobe Campaign、Oracle Responsys、Oracle Eloqua和SalesforceMarketing Cloud電子郵件行銷目標的步驟。
+這個 **[!UICONTROL 選取屬性]** 仍會顯示Adobe Campaign、Oracle Responsys、Oracle Eloqua和SalesforceMarketing Cloud電子郵件行銷目標的步驟。
 
 針對以設定檔為基礎的目的地，您必須選取要傳送至目標目的地的設定檔屬性。
 
@@ -454,15 +454,15 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 
 >[!NOTE]
 >
-> Adobe Experience Platform會使用結構描述中四個建議且常用的屬性來預先填入您的選擇： `person.name.firstName`， `person.name.lastName`， `personalEmail.address`， `segmentMembership.status`.
+Adobe Experience Platform會使用結構描述中四個建議且常用的屬性來預先填入您的選擇： `person.name.firstName`， `person.name.lastName`， `personalEmail.address`， `segmentMembership.status`.
 
 ![此影像顯示在對象啟動工作流程的對應步驟中預先填入的建議屬性。](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->由於已知限制，您目前無法使用 **[!UICONTROL 選取欄位]** 新增視窗 `segmentMembership.status` 至您的檔案匯出。 您必須手動貼上值 `xdm: segmentMembership.status` 放入結構欄位中，如下所示。
+由於已知限制，您目前無法使用 **[!UICONTROL 選取欄位]** 新增視窗 `segmentMembership.status` 至您的檔案匯出。 您必須手動貼上值 `xdm: segmentMembership.status` 放入結構欄位中，如下所示。
 >
->![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 檔案匯出會依下列方式而異 `segmentMembership.status` 已選取：
 * 如果 `segmentMembership.status` 欄位已選取，匯出的檔案包括 **[!UICONTROL 作用中]** 初始完整快照和中的成員 **[!UICONTROL 作用中]** 和 **[!UICONTROL 已過期]** 後續增量匯出中的成員。
@@ -470,15 +470,15 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 
 ## 選取擴充屬性 {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="排除擴充屬性"
->abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#select-enrichment-attributes" text="如需了解詳細資訊，請參閱文件"
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="排除擴充屬性"
+abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#select-enrichment-attributes" text="如需了解詳細資訊，請參閱文件"
 
 >[!IMPORTANT]
 >
->此步驟僅在您選取時顯示 **[!UICONTROL 自訂上傳]** 期間的對象 [對象選擇](#select-audiences) 步驟。
+此步驟僅在您選取時顯示 **[!UICONTROL 自訂上傳]** 期間的對象 [對象選擇](#select-audiences) 步驟。
 
 擴充屬性對應至在Experience Platform中擷取的自訂上傳對象 **[!UICONTROL 自訂上傳]**. 在此步驟中，您可以為每個選取的外部對象選取要匯出至目的地的屬性。
 
@@ -509,10 +509,10 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="檢視適用的同意原則"
->abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如果您的公司無權存取上述 SKU，則會停用此控制項。"
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="檢視適用的同意原則"
+abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如果您的公司無權存取上述 SKU，則會停用此控制項。"
 
 如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀關於 [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得詳細資訊。
 

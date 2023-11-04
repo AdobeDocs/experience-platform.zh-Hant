@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 47%
+ht-degree: 60%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 47%
 * [進階資料生命週期管理概觀](./home.md)
 * 資料生命週期UI {#ui}
    * [概觀](./ui/overview.md)
-   * [自動化資料集有效期](./ui/dataset-expiration.md)
+   * [自動化資料集到期](./ui/dataset-expiration.md)
    * [(Beta)刪除記錄](./ui/record-delete.md)
    * [瀏覽資料生命週期工單](./ui/browse.md)
 * 資料衛生API {#api}

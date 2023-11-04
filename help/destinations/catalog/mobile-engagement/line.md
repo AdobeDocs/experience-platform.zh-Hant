@@ -7,7 +7,7 @@ exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1214'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 >
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 範圍 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 搜尋 [!DNL LINE]. 或者，您可以在 **[!UICONTROL 行動參與]** 類別。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要驗證目的地，請選取 **[!UICONTROL 連線到目的地]**.
 ![顯示如何驗證的平台UI熒幕擷圖。](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 如果提供的詳細資料有效，UI會顯示 **[!UICONTROL 已連線]** 帶有綠色勾號的狀態。 然後您可以繼續下一步驟。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![顯示目的地詳細資訊的平台UI熒幕擷圖。](../../assets/catalog/mobile-engagement/line/destination-details.png)
@@ -107,7 +107,7 @@ ht-degree: 0%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

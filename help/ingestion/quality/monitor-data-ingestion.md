@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 本使用手冊提供如何在Adobe Experience Platform使用者介面中監視資料的步驟。 本指南會要求您擁有Adobe ID並存取Adobe Experience Platform。
 
-## 監控串流端對端資料擷取 {#monitor-streaming-end-to-end-data-ingestion}
+## 監視串流端對端資料擷取 {#monitor-streaming-end-to-end-data-ingestion}
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"

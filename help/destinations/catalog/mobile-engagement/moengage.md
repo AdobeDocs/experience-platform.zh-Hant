@@ -6,7 +6,7 @@ exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1002'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -63,13 +63,13 @@ ht-degree: 0%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
 ![Moengage目的地驗證](../../assets/catalog/mobile-engagement/moengage/authentication.png)
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![Moengage目的地驗證](../../assets/catalog/mobile-engagement/moengage/settings.png)

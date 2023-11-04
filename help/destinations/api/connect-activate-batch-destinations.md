@@ -8,7 +8,7 @@ exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
 workflow-type: tm+mt
 source-wordcount: '3446'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -38,9 +38,9 @@ ht-degree: 1%
 
 ## 快速入門 {#get-started}
 
-本指南需要您深入瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] 據以組織客戶體驗資料的標準化框架。
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service] 可讓您在中建立對象 [!DNL Adobe Experience Platform] 從您的 [!DNL Real-Time Customer Profile] 資料。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
 
@@ -59,13 +59,13 @@ ht-degree: 1%
 >
 >認證 `accessId`， `secretKey` 的 [!DNL Amazon S3] 連線和 `accessId`， `secretKey` 的 [!DNL Amazon S3] 連線到 [!DNL Adobe Campaign] 相同。
 
-### 讀取範例API呼叫 {#reading-sample-api-calls}
+### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標題和正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有中每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
+為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

@@ -6,7 +6,7 @@ exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
 source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 1%
 
 請參閱 [SFTP目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -59,7 +59,7 @@ ht-degree: 1%
 * **[!UICONTROL 使用密碼的SFTP]**
 * **[!UICONTROL 使用SSH金鑰的SFTP]**
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -93,7 +93,7 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

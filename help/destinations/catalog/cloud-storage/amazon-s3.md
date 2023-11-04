@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 16%
 
 ![Amazon S3設定檔匯出型別](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -57,7 +57,7 @@ ht-degree: 16%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
@@ -71,7 +71,7 @@ ht-degree: 16%
 
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_bucket"
@@ -130,7 +130,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

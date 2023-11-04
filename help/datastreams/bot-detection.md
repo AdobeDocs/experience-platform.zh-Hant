@@ -4,9 +4,9 @@ description: 瞭解如何為資料串流設定機器人偵測，以區分人類�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ ht-degree: 0%
 
 ![根據IP位址和請求標題的機器人偵測規則影像。](assets/bot-detection/bot-detection-header-ip.png)
 
-### 以多個條件為基礎的機器人偵測 {#multiple-conditions}
+### 根據多個條件的機器人偵測 {#multiple-conditions}
 
 您可以根據以下專案建立機器人偵測規則：
 

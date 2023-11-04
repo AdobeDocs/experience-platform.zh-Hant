@@ -6,7 +6,7 @@ exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
 source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
 workflow-type: tm+mt
 source-wordcount: '883'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](/help/destinations/ui/connect-destination.md). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
@@ -65,7 +65,7 @@ ht-degree: 0%
 
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

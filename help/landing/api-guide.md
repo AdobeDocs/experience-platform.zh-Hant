@@ -49,7 +49,7 @@ Postman是API開發的共同作業平台，可讓您使用預設變數設定環�
 
 若要深入瞭解Postman，包括如何設定環境、可用集合清單以及如何匯入集合，請造訪 [Platform Postman檔案](postman.md).
 
-## 讀取範例API呼叫 {#sample-api}
+## 讀取範例 API 呼叫 {#sample-api}
 
 請求格式會因使用的平台API而異。 要瞭解如何架構API呼叫，最好的方式是遵循檔案中針對您使用的特定平台服務提供的範例。
 

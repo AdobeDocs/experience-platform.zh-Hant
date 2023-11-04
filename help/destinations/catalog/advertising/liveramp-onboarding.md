@@ -6,7 +6,7 @@ exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
 source-git-commit: 9122159b3facf7952e6072d0b9e6f8d8d7d7c99c
 workflow-type: tm+mt
 source-wordcount: '1793'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
@@ -89,7 +89,7 @@ ht-degree: 3%
   ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/advertising/liveramp-onboarding/pgp-key.png)
 * **[!UICONTROL 子索引鍵ID]**：如果您提供加密金鑰，也必須提供加密 **[!UICONTROL 子索引鍵ID]**. 請參閱 [!DNL LiveRamp] [加密檔案](https://docs.liveramp.com/connect/en/encrypting-files-for-uploading.html#downloading-the-current-encryption-key) 以瞭解如何取得子索引鍵ID。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_subkey"
@@ -113,7 +113,7 @@ ht-degree: 3%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

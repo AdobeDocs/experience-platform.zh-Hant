@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
 workflow-type: tm+mt
 source-wordcount: '1201'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 9%
       * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [（測試版）在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
-      * [（測試版）使用計算欄位匯出平面結構描述檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta 版) 使用計算欄位匯出平面方案檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
    * [刪除目的地帳戶](./ui/delete-destination-account.md)

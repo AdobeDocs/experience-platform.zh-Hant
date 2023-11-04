@@ -5,7 +5,7 @@ exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
 source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
 workflow-type: tm+mt
 source-wordcount: '720'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 3%
 
 完成先決條件後，請連線至 [!DNL Commerce] 目的地。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -46,7 +46,7 @@ ht-degree: 3%
 1. 選取Adobe Commerce目標以反白顯示，然後選取「 」 **[!UICONTROL 設定]**.
 1. 請依照中所述的步驟操作。 [目的地設定教學課程](../../ui/connect-destination.md).
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 

@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
+source-git-commit: 2e47f12cde0f4c4dca89deddbf612ad3840628f0
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 29%
+source-wordcount: '181'
+ht-degree: 28%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 29%
    * [設定SDK](fundamentals/configuring-the-sdk.md)
    * [執行命令](fundamentals/executing-commands.md)
    * [追蹤事件](fundamentals/tracking-events.md)
+   * [設定頁面事件的頂端和底部](fundamentals/top-bottom-page-events.md)
    * [為  除錯](fundamentals/debugging.md)
    * [設定CSP](fundamentals/configuring-a-csp.md)
    * [與多個屬性互動](fundamentals/interacting-with-multiple-properties.md)

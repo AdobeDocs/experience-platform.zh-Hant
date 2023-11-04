@@ -6,7 +6,7 @@ exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
 workflow-type: tm+mt
 source-wordcount: '984'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -94,7 +94,7 @@ Adobe Experience Platform中的受眾概念類似 [標籤](https://docs.airship.
 
 例如，零售商在Platform中設定牛仔褲品牌特定對象。 只要某人將其牛仔褲偏好設定為特定品牌，該零售商現在就能觸發行動裝置訊息。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -102,13 +102,13 @@ Adobe Experience Platform中的受眾概念類似 [標籤](https://docs.airship.
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
 * **[!UICONTROL 持有人權杖]**：您從產生的持有人權杖 [!DNL Airship] 儀表板。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -122,7 +122,7 @@ Adobe Experience Platform中的受眾概念類似 [標籤](https://docs.airship.
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

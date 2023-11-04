@@ -16,7 +16,7 @@ ht-degree: 1%
 若要瞭解Adobe端的訊息格式及設定檔設定和轉換程式，請熟悉下列Experience Platform概念：
 
 * **體驗資料模式 (XDM)**. [XDM概覽](../../../../xdm/home.md) 和  [如何在Adobe Experience Platform中建立XDM結構描述](../../../../xdm/tutorials/create-schema-ui.md).
-* **類別**. [在UI中建立和編輯類別](../../../../xdm/ui/resources/classes.md).
+* **類別**. [在 UI 中建立和編輯類別](../../../../xdm/ui/resources/classes.md).
 * **身分對應**. 身分對應代表Adobe Experience Platform中所有一般使用者身分的對應。 請參閱 `xdm:identityMap` 在 [XDM欄位字典](../../../../xdm/schema/field-dictionary.md).
 * **SegmentMembership**. 此 [區段會籍](../../../../xdm/schema/field-dictionary.md) XDM屬性會通知設定檔所屬的對象。 針對中的三個不同值 `status` 欄位，請閱讀以下檔案： [對象成員資格詳細資料結構欄位群組](../../../../xdm/field-groups/profile/segmentation.md).
 

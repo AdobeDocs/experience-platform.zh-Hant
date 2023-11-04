@@ -93,7 +93,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 * [OAuth 2.0密碼授予](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
-## 連線到目的地 {#connect-destination}
+## 連線到目標 {#connect-destination}
 
 >[!IMPORTANT]
 > 
@@ -149,7 +149,7 @@ curl --location --request POST 'https://some-api.com/token' \
    * **[!UICONTROL 內文表單已編碼]**：在此案例中， [!DNL client ID] 和 [!DNL client secret] 包含 *在要求內文中* 已傳送至您的目的地。 如需範例，請參閱 [支援的驗證型別](#supported-authentication-types) 區段。
    * **[!UICONTROL 基本授權]**：在此案例中， [!DNL client ID] 和 [!DNL client secret] 包含 *在 `Authorization` 頁首* 進行base64編碼並傳送至您的目的地之後。 如需範例，請參閱 [支援的驗證型別](#supported-authentication-types) 區段。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -194,7 +194,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

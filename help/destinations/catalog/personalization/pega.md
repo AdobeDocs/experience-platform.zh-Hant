@@ -5,7 +5,7 @@ exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
 source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
 workflow-type: tm+mt
 source-wordcount: '1047'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -62,11 +62,11 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 #### OAuth 2使用者端憑證驗證 {#oauth-2-client-credentials-authentication}
 
@@ -78,7 +78,7 @@ ht-degree: 0%
 * **[!UICONTROL 使用者端ID]**：OAuth 2 [!DNL client ID] 您在中產生的 [!DNL Pega Customer Decision Hub] 執行個體。
 * **[!UICONTROL 使用者端密碼]**：OAuth 2 [!DNL client secret] 您在中產生的 [!DNL Pega Customer Decision Hub] 執行個體。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 在建立與的驗證連線之後 [!DNL Pega Customer Decision Hub]，提供目的地的下列資訊：
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
 * **[!UICONTROL 主機名稱]**：設定檔會匯出為JSON資料的Pega客戶決策中心主機名稱。
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
