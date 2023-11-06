@@ -2,9 +2,9 @@
 title: 中繼轉換API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Meta Conversions API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 ## 與LiveRamp (Alpha)整合 {#alpha}
 
-與LiveRamp的整合在Meta Conversions API規則設定中新增欄位，讓客戶更輕鬆地與LiveRamp Conversions API整合。 此整合消除了您直接與合作夥伴或中繼共用PII的需求。 由於LiveRamp的健全身分圖表，因此納入 [!UICONTROL 合作夥伴ID (alpha)] 可透過提高使用者符合率來改善整合品質。
+[!DNL LiveRamp] 客戶具有 [!DNL LiveRamp]其網站上部署的已驗證流量解決方案(ATS)可能會選擇共用RampIDs作為客戶資訊引數。 請使用您的 [!DNL Meta] 帳戶團隊，以加入此功能的Alpha計畫。
 
 ![中繼事件轉送 [!UICONTROL 規則] 設定頁面醒目提示 [!UICONTROL 合作夥伴名稱(Alpha)] 和 [!UICONTROL 合作夥伴ID (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
