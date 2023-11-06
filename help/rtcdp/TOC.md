@@ -4,7 +4,7 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 76%
@@ -38,7 +38,7 @@ ht-degree: 76%
    * [目的地概觀](destinations/overview.md)
    * [Real-Time CDP B2B 版本中的目的地](destinations/b2b.md)
 * 護欄 {#guardrails}
-   * [Real-Time CDP護欄概觀](/help/rtcdp/guardrails/overview.md){target="_blank"}
+   * [Real-Time CDP護欄概觀](guardrails/overview.md)
    * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [的護欄 [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [護欄 [!DNL Real-Time Customer Profile] 資料與細分](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
