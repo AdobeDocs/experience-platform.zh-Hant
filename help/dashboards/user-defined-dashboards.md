@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
 workflow-type: tm+mt
 source-wordcount: '1608'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -37,7 +37,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 新建立的空白圖示板會出現，而您選擇的名稱會顯示在檢視的左上角。
 
-## 建立Widget {#create-widget}
+## 建立 Widget {#create-widget}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"

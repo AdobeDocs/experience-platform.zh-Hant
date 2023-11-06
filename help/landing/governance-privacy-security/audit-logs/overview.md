@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '1294'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 43%
 | [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟用</li><li>資料集移除</li><li>設定檔啟動</li><li>設定檔移除</li></ul> |
 | [欄位群組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [識別圖](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
-| [身分名稱空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>建立</li><li>更新</li></ul> |
+| [身分命名空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>建立</li><li>更新</li></ul> |
 | [合併原則](../../../profile/merge-policies/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [產品描述檔](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [查詢](../../../query-service/ui/overview.md) | <ul><li>執行</li></ul> |
@@ -70,7 +70,7 @@ ht-degree: 43%
 
 若要檢視和匯出稽核記錄，您必須擁有 **[!UICONTROL 檢視使用者活動記錄]** 已授予存取控制許可權(可在 [!UICONTROL 資料控管] 類別)。 若要瞭解如何管理Platform功能的個別許可權，請參閱 [存取控制檔案](../../../access-control/home.md).
 
-## 在UI中管理稽核記錄 {#managing-audit-logs-in-the-ui}
+## 在 UI 中管理稽核記錄 {#managing-audit-logs-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"

@@ -7,11 +7,11 @@ exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
-# 管理UI中的資料使用標籤 {#user-guide}
+# 管理 UI 中的資料使用標籤 {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
@@ -48,7 +48,7 @@ ht-degree: 18%
 
 會出現一個對話方塊，可讓您在結構描述層級和欄位層級套用和管理資料使用標籤。 請參閱XDM教學課程，瞭解有關的完整指示 [如何新增或編輯XDM結構描述的資料使用標籤](../../xdm/tutorials/labels.md#select-schema-field).
 
-### 將資料使用標籤新增至特定資料集 {#add-labels-to-dataset}
+### 將資料使用標籤新增到特定資料集 {#add-labels-to-dataset}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"

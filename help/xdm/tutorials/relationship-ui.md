@@ -8,11 +8,11 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
 source-wordcount: '1161'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
-# 使用定義兩個結構描述之間的一對一關係 [!DNL Schema Editor] {#relationship-ui}
+# 使用 [!DNL Schema Editor] 定義兩個方案之間的一對一關係 {#relationship-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
@@ -103,7 +103,7 @@ ht-degree: 9%
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## 定義來源結構描述的關係欄位 {#relationship-field}
+## 為來源方案定義關係欄位 {#relationship-field}
 
 一旦您的來源結構描述定義了專用參考欄位後，您就可以將其指定為關係欄位。
 

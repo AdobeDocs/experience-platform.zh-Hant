@@ -35,7 +35,7 @@ ht-degree: 8%
 * [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 * [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 彙總的監視檢視 {#aggregated-monitoring-view}
+## 彙總監視視圖 {#aggregated-monitoring-view}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"

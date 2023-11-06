@@ -5,11 +5,11 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
 source-wordcount: '1391'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
-# 在Real-time Customer Data Platform B2B Edition中定義兩個結構描述之間的多對一關係 {#relationship-b2b}
+# 在 Real-Time Customer Data Platform B2B 版本中定義兩個方案之間的多對一關係 {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -46,7 +46,7 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 
 結構描述關係由 **來源結構描述** 會參照的主要身分欄位 **參考結構描述**. 在接下來的步驟中， 」[!DNL Opportunities]「做為來源結構描述，而「[!DNL Accounts]」會做為參考結構描述。
 
-### 瞭解B2B關係中的身分
+### 了解 B2B 關係中的身分
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
@@ -79,7 +79,7 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 
 ![帳戶結構描述](../images/tutorials/relationship-b2b/accounts.png)
 
-## 定義來源結構描述的關係欄位 {#relationship-field}
+## 為來源方案定義關係欄位 {#relationship-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"

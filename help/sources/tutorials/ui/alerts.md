@@ -6,7 +6,7 @@ exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: 9120377f5f2048579d7e2a4740cfcbc56d49d61a
 workflow-type: tm+mt
 source-wordcount: '846'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的
 * [可觀察性](../../../observability/home.md)： [!DNL Observability Insights] 可讓您透過使用統計量度和事件通知來監控Platform活動。
    * [警報](../../../observability/alerts/overview.md)：當您的Platform作業達到特定條件集時（例如系統違反臨界值時會發生問題），Platform可以向您組織中訂閱警報訊息的任何使用者傳送警報訊息。
 
-## 在UI中訂閱警報 {#subscribe-sources-alerts}
+## 訂閱 UI 中的警示 {#subscribe-sources-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"

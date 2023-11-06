@@ -1,16 +1,16 @@
 ---
 description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加速B2B資料的資料擷取程式。
-title: 在UI中使用範本建立來源資料流
+title: 使用 UI 中的範本建立來源資料流
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2258'
-ht-degree: 10%
+source-wordcount: '2259'
+ht-degree: 11%
 
 ---
 
-# 在UI中使用範本建立來源資料流 {#create-a-sources-dataflow-using-templates-in-the-ui}
+# 使用 UI 中的範本建立來源資料流 {#create-a-sources-dataflow-using-templates-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
@@ -45,7 +45,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 * [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
 * [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 在Platform UI中使用範本 {#use-templates-in-the-platform-ui}
+## 在 Platform UI 中使用範本 {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"

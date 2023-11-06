@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個沙箱都會維護其獨立的Platform資源資料庫（包括結構描述、資料集、設定檔等）。 在沙箱內採取的所有內容和動作都僅限於該沙箱，不會影響任何其他沙箱。 如需詳細資訊，請參閱[沙箱概觀](home.md)。
 
-## 有哪些型別的沙箱可供使用，以及兩者有何差異？ {#sandbox-types}
+## 有哪些類型的沙箱可用，它們有何區別? {#sandbox-types}
 
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtypes"

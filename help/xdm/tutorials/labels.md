@@ -5,7 +5,7 @@ exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
 source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 8%
    * [結構描述編輯器](../ui/overview.md)：瞭解如何在Platform UI中建立和管理結構描述和其他資源。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md)：提供基礎架構，以強制對Platform作業執行資料使用限制，並使用原則來定義哪些行銷動作可以（或無法）對標籤資料執行。
 
-## 選取要新增標籤的結構描述或欄位 {#select-schema-field}
+## 選取要新增標籤的方案或欄位 {#select-schema-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_editgovernancelabels"

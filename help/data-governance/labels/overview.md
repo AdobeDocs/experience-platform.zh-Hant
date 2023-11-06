@@ -7,7 +7,7 @@ exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
 workflow-type: tm+mt
 source-wordcount: '802'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -46,7 +46,7 @@ Adobe Experience Platform可讓您將資料使用標籤套用至資料集和欄�
 
 如需瞭解特定資料匯出控制項如何對應至中的資料使用標籤，請參閱 [!DNL Platform]，請參閱 [Audience Manager檔案](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
-## 管理中的資料使用標籤 [!DNL Experience Platform] {#manage-labels}
+## 管理 [!DNL Experience Platform] 中的資料使用標籤 {#manage-labels}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_instructions"

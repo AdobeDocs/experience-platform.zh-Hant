@@ -107,7 +107,7 @@ ht-degree: 11%
 
 ![串流目的地的資料流記錄](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### 批次目的地的資料流執行 {#dataflow-runs-for-batch-destinations}
+### 用於批次目標的資料流執行 {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
@@ -165,7 +165,7 @@ ht-degree: 11%
 
 ![批次目的地的資料流記錄](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## 監控目的地控制面板 {#monitoring-destinations-dashboard}
+## 監視目標儀表板 {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >

@@ -61,7 +61,7 @@ ht-degree: 10%
 
 ![資料流 — 執行](../../images/tutorials/monitor-streaming/dataflow-run.png)
 
-### 資料流執行量度 {#dataflow-run-metrics}
+### 資料流執行指標 {#dataflow-run-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflow_records_received"

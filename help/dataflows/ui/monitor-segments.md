@@ -7,7 +7,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 4%
    - [匯出工作](../../segmentation/api/export-jobs.md)：匯出作業是用來將對象區段成員保留至資料集的非同步程式。
 - [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
 
-## 監控區段控制面板 {#monitoring-segments-dashboard}
+## 監視區段儀表板 {#monitoring-segments-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
