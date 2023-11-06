@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2304'
 ht-degree: 3%
 
 ---
@@ -46,6 +46,10 @@ Enhanced Editor可讓您在Query Editor中寫入多個查詢，並依序執行�
 ## 查詢製作，使用 [!DNL Query Editor] {#query-authoring}
 
 使用 [!DNL Query Editor]，您可以編寫、執行和儲存客戶體驗資料的查詢。 所有已執行或儲存的查詢 [!DNL Query Editor] 可供貴組織內所有可存取許可權的使用者使用 [!DNL Query Service].
+
+>[!IMPORTANT]
+>
+>舊版編輯器將於2024年4月1日淘汰，將不再提供使用。
 
 ## 增強的查詢編輯器切換 {#enhanced-editor-toggle}
 

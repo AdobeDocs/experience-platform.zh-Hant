@@ -2,23 +2,19 @@
 title: 引數化查詢
 description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '734'
 ht-degree: 10%
 
 ---
 
-# 引數化查詢（限量發行） {#parameterized-queries}
+# 參數化查詢 {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="參數化查詢"
 >abstract="使用參數化查詢，可在執行時新增參數值。這樣做可讓您處理動態資料，並為不同的使用案例重新使用查詢。使用 `'$'` 前置詞，在文本編輯器中將查詢參數輸入到查詢中。接下來，在編輯器下方的查詢參數部分中新增機碼的值。"
-
->[!IMPORTANT]
->
->引數化的查詢UI功能可在 **僅限限量發行** 而且並非所有客戶都可使用。
 
 查詢服務支援在查詢編輯器中使用引數化查詢。 透過引數化查詢，您現在可以使用引數的預留位置，並在執行時新增引數值。 預留位置可讓您使用動態資料，但您不知道在執行陳述式前將會有哪些值。 您也可以提前準備查詢，並重複使用它們以達到類似的目的。 重複使用查詢可節省大量時間，因為您可以避免為每個使用案例建立不同的SQL查詢。
 
