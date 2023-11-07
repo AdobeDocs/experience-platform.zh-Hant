@@ -2,7 +2,7 @@
 description: Adobe Experience Platform中的目的地服務使用數個元件的設定端點，這些元件會建置目的地功能。 瞭解這些元件如何組合讓Experience Platform可連結到目的地合作夥伴、傳送自訂訊息，並在整個數位生態系統中啟用設定檔資料。
 title: Destination SDK中的設定選項
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Adobe Experience Platform中的目的地服務使用數個元件的設定端點�
 如需每個目的地設定元件的詳細資訊，請參閱以下檔案。 您可以透過 [目的地端點](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 * [客戶驗證設定](destination-configuration/customer-authentication.md)：選取Experience Platform用來連線至目的地的驗證機制。 此設定會產生 [設定新目的地](../../ui/connect-destination.md) 頁面，使用者可在此頁面將Experience Platform連線至目的地的Experience Platform帳戶。
-* [OAuth2驗證](destination-configuration/oauth2-authentication.md)：瞭解所有 [!DNL OAuth2] Destination SDK支援的驗證流程，並取得設定指示 [!DNL OAuth2] 驗證您的目的地……
+* [OAuth2驗證](destination-configuration/oauth2-authorization.md)：瞭解所有 [!DNL OAuth2] Destination SDK支援的驗證流程，並取得設定指示 [!DNL OAuth2] 驗證您的目的地……
 * [客戶資料欄位](destination-configuration/customer-data-fields.md)：瞭解如何在Experience PlatformUI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
 * [UI屬性](destination-configuration/ui-attributes.md)：瞭解如何為使用Destination SDK建立的目的地設定UI屬性，例如檔案連結、目的地卡片類別以及目的地連線型別和頻率。
 * [結構描述設定](destination-configuration/schema-configuration.md)：瞭解如何定義使用者的目標結構描述，以便將其對應到設定檔屬性和身分。

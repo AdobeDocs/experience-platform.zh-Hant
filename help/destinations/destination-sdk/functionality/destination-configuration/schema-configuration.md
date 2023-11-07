@@ -2,7 +2,7 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定合作夥伴結構。
 title: 合作夥伴結構描述設定
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 4%
@@ -246,7 +246,7 @@ Destination SDK支援建立動態合作夥伴結構。 相對於靜態結構描�
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證](customer-authentication.md)
-* [OAuth2驗證](oauth2-authentication.md)
+* [OAuth2驗證](oauth2-authorization.md)
 * [UI屬性](ui-attributes.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)

@@ -2,7 +2,7 @@
 title: AI/ML功能管道
 description: 瞭解如何使用Data Distiller，透過Adobe Experience Platform資料衍生的功能豐富您的機器學習管道。 將原始資料轉換為功能並提供功能資料，以訓練或評分支援行銷使用案例的模型。
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 1%
@@ -97,7 +97,7 @@ You are recommended to create an [!DNL Oauth2] API credential specifically for C
 
 <!-- 
 Is this the correct doc to link to about creating an Oauth2 API credential?:
-../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
+../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md
  -->
 
 <!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->

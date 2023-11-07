@@ -2,7 +2,7 @@
 description: 瞭解如何為目的地設定驗證機制，並深入瞭解根據您選取的驗證方法使用者會在UI中看到的內容。
 title: 客戶驗證設定
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 ## OAuth 2驗證 {#oauth2}
 
-使用者選取 **[!UICONTROL 連線到目的地]** 以觸發前往您目的地的OAuth 2驗證流程，如以下針對「Twitter自訂對象」目的地的範例所示。 如需有關設定目的地端點的OAuth 2驗證的詳細資訊，請閱讀專用的 [Destination SDKOAuth 2驗證頁面](oauth2-authentication.md).
+使用者選取 **[!UICONTROL 連線到目的地]** 以觸發前往您目的地的OAuth 2驗證流程，如以下針對「Twitter自訂對象」目的地的範例所示。 如需有關設定目的地端點的OAuth 2驗證的詳細資訊，請閱讀專用的 [Destination SDKOAuth 2驗證頁面](oauth2-authorization.md).
 
 ![使用OAuth 2驗證的UI轉譯](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -233,7 +233,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
-* [OAuth2驗證](oauth2-authentication.md)
+* [OAuth2驗證](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
 * [綱要設定](schema-configuration.md)

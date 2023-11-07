@@ -2,7 +2,7 @@
 description: 瞭解如何在Experience PlatformUI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
 title: 客戶資料欄位
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 4%
@@ -568,7 +568,7 @@ ht-degree: 4%
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證](customer-authentication.md)
-* [OAuth2驗證](oauth2-authentication.md)
+* [OAuth2驗證](oauth2-authorization.md)
 * [UI屬性](ui-attributes.md)
 * [綱要設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)

@@ -2,7 +2,7 @@
 description: 瞭解如何建構API呼叫，以透過Adobe Experience Platform Destination SDK建立目的地設定。
 title: 建立目的地設定
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 3%
@@ -16,7 +16,7 @@ ht-degree: 3%
 如需可透過此端點設定的功能的詳細說明，請參閱以下文章：
 
 * [客戶驗證設定](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2驗證](../../functionality/destination-configuration/oauth2-authentication.md)
+* [OAuth2驗證](../../functionality/destination-configuration/oauth2-authorization.md)
 * [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI屬性](../../functionality/destination-configuration/ui-attributes.md)
 * [綱要設定](../../functionality/destination-configuration/schema-configuration.md)

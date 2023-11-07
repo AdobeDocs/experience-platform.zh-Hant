@@ -4,7 +4,7 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 10%
@@ -214,7 +214,7 @@ ht-degree: 10%
          * [檔案格式設定](./destination-sdk/functionality/destination-server/file-formatting.md)
       * 目的地設定元件 {#destination-configuration}
          * [客戶驗證設定](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-         * [OAuth2驗證](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [OAuth2授權](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [客戶資料欄位](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
          * [UI屬性](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
          * [合作夥伴結構描述設定](./destination-sdk/functionality/destination-configuration/schema-configuration.md)
