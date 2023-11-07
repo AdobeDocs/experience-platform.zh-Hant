@@ -5,13 +5,13 @@ exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 2%
+ht-degree: 19%
 
 ---
 
 # 工具端點
 
-沙箱工具可讓您選取不同的成品並將其匯出至套件。 封裝可以包含單一物件或多個物件。 套件中包含的任何物件都必須來自相同沙箱。
+沙箱工具可讓您選取不同的成品並將其匯出至套件。 套件可以包含單一物件或多個物件。 套件中包含的任何物件都必須來自相同沙箱。
 
 此 `/tools` 沙箱工具API中的端點可讓您列出和擷取作業JSON資料。
 

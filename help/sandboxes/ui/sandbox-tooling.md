@@ -5,7 +5,7 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
 source-wordcount: '1849'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 提高沙箱之間的設定準確性，並利用沙箱工具功能順暢地匯出和匯入沙箱之間的沙箱設定。 使用沙箱工具來減少實作程式的價值實現時間，並跨沙箱移動成功的設定。
 
-您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。 封裝可以包含單一物件或多個物件。 <!--or an entire sandbox.-->套件中包含的任何物件都必須來自相同沙箱。
+您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。 套件可以包含單一物件或多個物件。 <!--or an entire sandbox.-->套件中包含的任何物件都必須來自相同沙箱。
 
 ## 沙箱工具支援的物件 {#supported-objects}
 
