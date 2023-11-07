@@ -89,7 +89,7 @@ curl -X POST \
 | `description` | 記錄刪除請求的說明。 |
 | `identities` | 陣列，包含您要刪除其資訊之至少一個使用者的身分識別。 每個身分都由 [身分名稱空間](../../identity-service/namespaces.md) 和一個值：<ul><li>`namespace`：包含單一字串屬性， `code`，代表身分名稱空間。 </li><li>`id`：身分值。</ul>如果 `datasetId` 會指定單一資料集，底下的每個實體 `identities` 必須使用與結構描述的主要身分相同的身分名稱空間。<br><br>如果 `datasetId` 設為 `ALL`，則 `identities` 陣列不受限於任何單一名稱空間，因為每個資料集可能不同。 不過，您的請求仍受限於貴組織可用的名稱空間，如報告所述 [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style="table-layout：自動"}
+{style="table-layout:auto"}
 
 **回應**
 
