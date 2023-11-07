@@ -2,7 +2,7 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定檔案匯出設定。
 title: 批次設定
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 4%
@@ -155,7 +155,7 @@ ht-degree: 4%
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證設定](customer-authentication.md)
-* [OAuth2驗證](oauth2-authorization.md)
+* [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
 * [綱要設定](schema-configuration.md)

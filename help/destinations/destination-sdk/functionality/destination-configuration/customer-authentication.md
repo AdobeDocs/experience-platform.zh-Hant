@@ -2,7 +2,7 @@
 description: 瞭解如何為目的地設定驗證機制，並深入瞭解根據您選取的驗證方法使用者會在UI中看到的內容。
 title: 客戶驗證設定
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Experience Platform客戶在將資料從Platform匯出至您的目的地之前�
 
 * 針對使用的目的地 [基本驗證](#basic)，使用者必須直接在Experience PlatformUI驗證頁面中提供使用者名稱和密碼。
 * 針對使用的目的地 [持有人驗證](#bearer)，使用者必須提供持有人權杖。
-* 針對使用的目的地 [OAuth2驗證](#oauth2)，系統會將使用者重新導向至您目的地的登入頁面，讓他們能使用認證登入。
+* 針對使用的目的地 [OAuth2授權](#oauth2)，系統會將使用者重新導向至您目的地的登入頁面，讓他們能使用認證登入。
 * 的 [Amazon S3](#s3) 目的地，使用者必須提供 [!DNL Amazon S3] 存取金鑰與秘密金鑰。
 * 的 [Azure Blob](#blob) 目的地，使用者必須提供 [!DNL Azure Blob] 連線字串。
 
@@ -233,7 +233,7 @@ Experience Platform中的即時（串流）整合支援基本驗證。
 
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
-* [OAuth2驗證](oauth2-authorization.md)
+* [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
 * [綱要設定](schema-configuration.md)

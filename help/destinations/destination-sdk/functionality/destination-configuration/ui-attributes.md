@@ -2,7 +2,7 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定UI屬性，例如檔案連結、目的地卡片類別以及目的地連線型別和頻率。
 title: UI屬性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Users can see the icon on your destination card, as shown in the image below.
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證](customer-authentication.md)
-* [OAuth2驗證](oauth2-authorization.md)
+* [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [綱要設定](schema-configuration.md)
 * [身分名稱空間設定](identity-namespace-configuration.md)

@@ -2,7 +2,7 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定對象中繼資料設定。
 title: 對象中繼資料設定
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 3%
@@ -68,7 +68,7 @@ Destination SDK提供的工具，可用於以程式設計方式建立、更新�
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證設定](customer-authentication.md)
-* [OAuth2驗證](oauth2-authorization.md)
+* [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
 * [綱要設定](schema-configuration.md)

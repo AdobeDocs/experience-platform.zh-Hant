@@ -2,7 +2,7 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定目的地傳送設定，以指出匯出的資料前往何處，以及在資料著陸位置使用什麼驗證規則。
 title: 目的地傳遞
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 2%
@@ -108,7 +108,7 @@ ht-degree: 2%
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證](customer-authentication.md)
-* [OAuth2驗證](oauth2-authorization.md)
+* [OAuth2授權](oauth2-authorization.md)
 * [UI屬性](ui-attributes.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [綱要設定](schema-configuration.md)

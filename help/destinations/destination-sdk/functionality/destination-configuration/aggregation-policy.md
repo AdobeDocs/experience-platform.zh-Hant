@@ -2,7 +2,7 @@
 description: 瞭解如何設定彙總原則，以判斷應如何分組和批次傳送目的地的HTTP請求。
 title: 彙總原則
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 2%
@@ -127,7 +127,7 @@ ht-degree: 2%
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
 * [客戶驗證設定](customer-authentication.md)
-* [OAuth2驗證](oauth2-authorization.md)
+* [OAuth2授權](oauth2-authorization.md)
 * [客戶資料欄位](customer-data-fields.md)
 * [UI屬性](ui-attributes.md)
 * [綱要設定](schema-configuration.md)

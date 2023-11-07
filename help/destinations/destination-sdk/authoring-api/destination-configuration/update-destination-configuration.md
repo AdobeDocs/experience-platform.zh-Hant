@@ -2,7 +2,7 @@
 description: 此頁面是用來透過Adobe Experience Platform Destination SDK更新現有目的地設定的API呼叫的範例。
 title: 更新目的地設定
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 如需目的地組態功能的詳細說明，請參閱下列文章：
 
 * [客戶驗證設定](../../functionality/destination-configuration/customer-authentication.md)
-* [OAuth2驗證](../../functionality/destination-configuration/oauth2-authorization.md)
+* [OAuth2授權](../../functionality/destination-configuration/oauth2-authorization.md)
 * [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)
 * [UI屬性](../../functionality/destination-configuration/ui-attributes.md)
 * [綱要設定](../../functionality/destination-configuration/schema-configuration.md)
