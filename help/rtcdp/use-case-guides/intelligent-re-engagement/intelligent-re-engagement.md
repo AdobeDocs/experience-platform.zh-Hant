@@ -2,7 +2,7 @@
 title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
+source-git-commit: df82431f87f725a12cbc5b8f88fff6d4cc065450
 workflow-type: tm+mt
 source-wordcount: '3594'
 ht-degree: 54%
@@ -150,6 +150,8 @@ ht-degree: 54%
 
 +++XDM ExperienceEvent （類別）
 
+此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
+
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
 | `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
@@ -157,8 +159,6 @@ ht-degree: 54%
 | `eventType` | 必要 | 指出事件類別型別的字串。 |
 
 +++
-
-此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
 +++一般使用者 ID 詳細資料 (欄位群組)
 
@@ -189,6 +189,8 @@ ht-degree: 54%
 
 +++XDM ExperienceEvent （類別）
 
+此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
+
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
 | `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
@@ -196,8 +198,6 @@ ht-degree: 54%
 | `eventType` | 必要 | 指出事件類別型別的字串。 |
 
 +++
-
-此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
 +++商務詳細資料 (欄位群組)
 
@@ -247,6 +247,8 @@ ht-degree: 54%
 
 +++XDM ExperienceEvent （類別）
 
+此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
+
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
 | `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
@@ -254,8 +256,6 @@ ht-degree: 54%
 | `eventType` | 必要 | 指出事件類別型別的字串。 |
 
 +++
-
-此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
 +++Adobe Analytics ExperienceEvent 範本 (欄位群組)
 
