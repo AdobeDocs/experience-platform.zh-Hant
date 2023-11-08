@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: 檢視範圍指南
-user-guide-description: 使用統計量度和事件通知來監控 Experience Platform 活動。
+user-guide-description: 瞭解如何使用Adobe Experience Platform Observability Insights中的統計量度和事件通知來監控Platform活動。
 feature: Observability
-source-git-commit: 5aa2be236d35f761a1e4d34fbe0bb28fd9087935
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 52%
+source-wordcount: '62'
+ht-degree: 27%
 
 ---
 

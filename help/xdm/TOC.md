@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
-user-guide-description: 使用體驗資料模型 (XDM) 類別和結構描述欄位群組，將體驗資料標準化。
+user-guide-description: 探索Experience Platform中Experience Data Model (XDM)系統的總覽，並瞭解如何使用類別和結構描述欄位群組將體驗資料標準化。
 feature: Schemas
-source-git-commit: b181a6af8cb3f6ae6db28f0475b8999de2e9d8b5
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 21%
+source-wordcount: '532'
+ht-degree: 18%
 
 ---
 

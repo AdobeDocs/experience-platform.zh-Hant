@@ -3,11 +3,12 @@ keywords: Experience Platform；首頁；熱門主題；資料位置；資料位
 solution: Experience Platform
 title: 資料集概述
 description: 本文件提供 Experience Platform 資料集的高層級總覽。
+user-guide-description: 透過本指南取得Experience Platform資料集的高層級概觀。 在此處瞭解如何建立資料集、強制執行資料限制，以及將資料擷取到資料集中。
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 8%
+source-wordcount: '870'
+ht-degree: 7%
 
 ---
 

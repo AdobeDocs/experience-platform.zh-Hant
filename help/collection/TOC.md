@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: 資料收集
 breadcrumb-title: 資料收集
-user-guide-description: 啟動 Adobe Experience Platform Edge Network 的客戶端資料彙集功能。
+user-guide-description: 瞭解如何啟用Adobe Experience Platform Edge Network的使用者端資料收集，並深入瞭解所使用的資料收集技術。
 feature: Data Collection
-source-git-commit: b7607907f811c22a7977598f63317ae974f2c4e3
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '33'
-ht-degree: 66%
+source-wordcount: '46'
+ht-degree: 26%
 
 ---
 
