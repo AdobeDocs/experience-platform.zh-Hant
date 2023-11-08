@@ -2,9 +2,9 @@
 description: 此頁面說明從Adobe Experience Platform匯出至目的地的資料中的訊息格式和設定檔轉換。
 title: 訊息格式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
 workflow-type: tm+mt
-source-wordcount: '2237'
+source-wordcount: '2502'
 ht-degree: 1%
 
 ---
@@ -1203,13 +1203,18 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 下表提供上述範例中函式的說明。
 
-| 函數 | 說明 |
-|---------|----------|
+| 函數 | 說明 | 範例 |
+|---------|----------|----------|
 | `input.profile` | 設定檔，表示為 [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). 依照此頁面中進一步提及的合作夥伴XDM結構描述。 |
-| `destination.segmentAliases` | 從Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 |
-| `destination.segmentNames` | 從Adobe Experience Platform名稱空間中的對象名稱對應至合作夥伴系統中的對象名稱。 |
-| `addedSegments(listOfSegments)` | 僅傳回具有狀態的對象 `realized`. |
-| `removedSegments(listOfSegments)` | 僅傳回具有狀態的對象 `exited`. |
+| `hasSegments` | 此函式以名稱空間對象ID的地圖作為引數。 函式傳回 `true` 如果地圖中至少有一個對象（無論其狀態為何），以及 `false` 否則。 您可以使用此函式來決定是否要在對象地圖上反複運算。 | `hasSegments(input.profile.segmentMembership)` |
+| `destination.namespaceSegmentAliases` | 從特定Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | 從特定Adobe Experience Platform名稱空間中的對象名稱對應至合作夥伴系統中的對象名稱。 | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentTimestamps` | 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`：傳回含有ID的區段時的時間 `seg-id-1`，來自 `ups` 名稱空間是以UNIX時間戳記格式建立的。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`：傳回具有ID的對象的時間 `seg-id-1`，來自 `ups` 名稱空間已更新，採用UNIX時間戳記格式。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`：傳回具有ID的對象的時間 `seg-id-1`，來自 `ups` 以UNIX時間戳記格式啟用至目的地。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：傳回目標上對象啟動更新的時間（UNIX時間戳記格式）。</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | 僅傳回具有狀態的對象 `realized`，橫跨所有名稱空間。 | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | 僅傳回具有狀態的對象 `exited`，橫跨所有名稱空間。 | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **已過時. 取代為`destination.namespaceSegmentAliases`** <br><br> 從Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **已過時. 取代為`destination.namespaceSegmentNames`** <br><br>  從Adobe Experience Platform名稱空間中的對象名稱對應至合作夥伴系統中的對象名稱。 | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **已過時. 取代為`destination.namespaceSegmentTimestamps`** <br><br> 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`：傳回具有ID的對象的時間 `seg-id-1` 建立的UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已更新，採用UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已以UNIX時間戳記格式啟用至目的地。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：傳回目標上對象啟動更新的時間（UNIX時間戳記格式）。</li></ul> |
 
 {style="table-layout:auto"}
 
