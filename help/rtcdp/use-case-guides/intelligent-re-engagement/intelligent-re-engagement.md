@@ -2,32 +2,36 @@
 title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: d47ddc474fcaf19eaff8ddcd67139dec5c417720
 workflow-type: tm+mt
-source-wordcount: '3424'
-ht-degree: 100%
+source-wordcount: '3594'
+ht-degree: 54%
 
 ---
 
 # 以智慧方式重新吸引您的客戶回訪
 
-以智慧且可靠方式重新吸引在完成轉換之前放棄轉換的客戶。不要採用提醒方式，而是要透過體驗方式來吸引流失的客戶，以提高轉化率並推動客戶期限值的增長。
+>[!NOTE]
+>
+>此為實作範例，本頁上的範例（例如區段語法）僅為範例。 由於實作方法可能有所差異，您應參考這些範例。
+
+以聰明負責的方式重新吸引放棄轉換的客戶。 透過體驗與失效的客戶互動，以提高轉換率並增加使用者端期限值。
 
 採用即時考慮方式、將所有消費者的品質和行為納入考量，並根據線上和線下事件提供更快的重新資格認證。
 
-![逐步智慧型重新吸引的高層次視覺概觀。](../intelligent-re-engagement/images/step-by-step.png)
+![智慧型重新參與高階視覺化概觀。](../intelligent-re-engagement/images/step-by-step.png)
 
-## 使用案例概觀
+## 使用案例概觀 {#overview}
 
-當您使用重新吸引歷程的範例時，您將構建結構描述、資料集和對象。您還將探索在 [!DNL Adobe Journey Optimizer] 設定範例歷程所需的功能，以及探索在目的地中製作付費媒體廣告所需的功能。本指南使用在下面所述使用案例中重新吸引客戶的範例：
+當您透過重新參與案例的範例工作時，將建構結構描述、資料集和對象。 您還將探索在 [!DNL Adobe Journey Optimizer] 設定範例歷程所需的功能，以及探索在目的地中製作付費媒體廣告所需的功能。本指南使用在下面所述使用案例中重新吸引客戶的範例：
 
-* **重新吸引歷程** - 針對在網站和行動應用程式上有捨棄產品瀏覽的客戶。
-* **捨棄購物車歷程** - 針對在網站和行動應用程式上已將產品放入購物車但尚未購買的客戶。
-* **訂購確認歷程** - 著重已透過網站和行動應用程式購買的產品。
+* **放棄的產品瀏覽案例**  — 鎖定已放棄在網站和行動應用程式上瀏覽產品的客戶。
+* **捨棄的購物車案例**  — 將產品放入購物車但尚未在網站和行動應用程式上購買的目標客戶。
+* **訂單確認案例**  — 著重於透過網站和行動應用程式進行的產品購買。
 
 ## 必要條件和規劃 {#prerequisites-and-planning}
 
-當您完成實作使用案例的步驟時，您將使用以下 Real-Time CDP 功能和 UI 元素 (按使用順序列出)。確保您擁有所有這些區域所需的屬性型存取控制權限，或要求系統管理員授予您必要的權限。
+完成實施使用案例的步驟後，您將運用下列Real-Time CDP和Adobe Journey Optimizer功能（依使用順序列出）。 確保您擁有所有這些區域所需的[屬性型存取控制權限](/help/access-control/home.md)，或要求系統管理員授予您必要的權限。
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)- 整合跨資料來源的資料，以推動行銷活動。然後，使用此資料來建立行銷活動對象，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。CDP 也用於跨電子郵件和網頁啟動對象 (透過 [!DNL Adobe Target]).
    * [結構描述](/help/xdm/home.md)
@@ -36,73 +40,69 @@ ht-degree: 100%
    * [對象](/help/segmentation/home.md)
    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [目的地](/help/destinations/home.md)
+
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=zh-Hant)  — 協助您為客戶提供連結、情境式和個人化的體驗。
    * [事件或對象觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [對象/事件](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [歷程動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
-### 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
+## 如何實現使用案例 {#achieve-use-case-instruction}
 
-以下是三個重新吸引歷程範例的高層次概觀。
+以下是3個重新參與範例情景的高層級概觀。
 
 >[!BEGINTABS]
 
->[!TAB 重新吸引歷程]
+>[!TAB 放棄的產品瀏覽情境]
 
-重新吸引歷程是針對在網站和行動應用程式上的捨棄產品瀏覽。當產品被檢視但未被購買或新增到購物車時，會觸發此歷程。如果過去 24 小時內沒有新增清單，則三天後會觸發品牌吸引。<p>![客戶智慧型重新吸引歷程的高層次視覺概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶智慧型重新吸引歷程的高層次視覺概觀。"){width="2560" zoomable="yes"}</p>
+放棄的產品瀏覽情境會鎖定網站和行動應用程式上放棄的產品瀏覽。 當已檢視產品但未購買或未新增到購物車時，就會觸發此情境。 在此範例中，如果過去24小時內沒有清單新增，則會在3天後觸發品牌參與度。<p>![客戶智慧型放棄的產品瀏覽情境高階視覺化概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶智慧型放棄的產品瀏覽情境高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-1. 您建立結構描述和資料集，然後標記[!UICONTROL 設定檔]。
-2. 資料透過 Web SDK、Mobile Edge SDK 或 API 整合至 Experience Platform。也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
-3. 您將設定檔載入到 Real-Time CDP 並建立控管原則，以確保以負責方式使用資料。
+1. 您可以建立方案和資料集，然後啟用 [!UICONTROL 個人資料].
+2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
+3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和/或行動應用程式訪客。
 4. 您從設定檔清單建立重點對象，以檢查&#x200B;**使用者**&#x200B;在過去三天是否有進行參與行動。
-5. 您在 [!DNL Adobe Journey Optimizer] 中建立一個重新吸引歷程。
+5. 您會在中建立放棄的產品瀏覽歷程 [!DNL Adobe Journey Optimizer].
 6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將對象啟動到所需付費媒體目的地。
 7. [!DNL Adobe Journey Optimizer] 檢查是否同意並發送設定的各種動作。
 
->[!TAB 捨棄購物車歷程]
+>[!TAB 捨棄的購物車情境]
 
-捨棄購物車歷程是針對網站和行動應用程式上已放入購物車但尚未購買的產品。此外，付費媒體行銷活動可以使用此方法開始和停止。<p>![客戶捨棄購物車歷程的高層次視覺概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶捨棄購物車歷程的高層次視覺概觀。"){width="2560" zoomable="yes"}</p>
+放棄購物車情況適用於產品已放入購物車但尚未在網站和行動應用程式上購買的情況。 此外，付費媒體行銷活動可以使用此方法開始和停止。<p>![客戶放棄購物車案例高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶放棄購物車案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-1. 您建立結構描述和資料集，然後標記[!UICONTROL 設定檔]。
-2. 資料透過 Web SDK、Mobile Edge SDK 或 API 整合至 Experience Platform。也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
-3. 您將設定檔載入到 Real-Time CDP 並建立控管原則，以確保以負責方式使用資料。
+1. 您可以建立結構描述和資料集，並為以下專案啟用 [!UICONTROL 個人資料].
+2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
+3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和/或行動應用程式訪客。
 4. 您從設定檔清單建立重點對象，以檢查&#x200B;**客戶**&#x200B;是否已將商品放入購物車但尚未完成購買。**[!UICONTROL 新增到購物車]**&#x200B;事件會啟動計時器；計時器會等待 30 分鐘，然後檢查是否有購買。如果沒有購買，那麼會將&#x200B;**客戶**&#x200B;新增到&#x200B;**[!UICONTROL 捨棄購物車]**&#x200B;對象。
 5. 您在 [!DNL Adobe Journey Optimizer] 中建立一個廢棄購物車歷程。
 6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將對象啟動到所需付費媒體目的地。
 7. [!DNL Adobe Journey Optimizer] 檢查是否同意並發送設定的各種動作。
 
->[!TAB 訂購確認歷程]
+>[!TAB 訂單確認案例]
 
-訂購確認歷程著重在透過網站和行動應用程式購買的產品。<p>![客戶訂購確認歷程的高層次視覺概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂購確認歷程的高層次視覺概觀。"){width="2560" zoomable="yes"}</p>
+訂購確認案例聚焦於透過網站和行動應用程式進行的產品購買。<p>![客戶訂單確認案例高階視覺化概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂單確認案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
-1. 您建立結構描述和資料集，然後標記[!UICONTROL 設定檔]。
-2. 資料透過 Web SDK、Mobile Edge SDK 或 API 整合至 Experience Platform。也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
-3. 您將設定檔載入到 Real-Time CDP 並建立控管原則，以確保以負責方式使用資料。
+1. 您可以建立方案和資料集，然後啟用 [!UICONTROL 個人資料].
+2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
+3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和/或行動應用程式訪客。
 4. 您在 [!DNL Adobe Journey Optimizer] 中建立一個確認歷程。
 5. [!DNL Adobe Journey Optimizer] 使用偏好管道發送訂購確認訊息。
 
 >[!ENDTABS]
 
-## 如何實現使用案例 {#achieve-use-case-instruction}
-
 要完成上述高層次概觀中的每個步驟，請閱讀以下各節中更多資訊和更詳細說明的連結。
 
-### 您將使用的 UI 功能和元素 {#ui-functionality-and-elements}
+### 建立方案並指定欄位群組 {#schema-design}
 
-當您完成實作使用案例的步驟時，您將使用 Real-Time CDP 功能和 UI 元素 (本文件開頭所列)。確保您擁有所有這些區域所需的屬性型存取控制權限，或要求系統管理員授予您必要的權限。
+體驗資料模型 (XDM) 資源是在 [!DNL Adobe Experience Platform] 內的[!UICONTROL 結構描述] 工作區中接受管理。您可以檢視並探索所提供的核心資源： [!DNL Adobe] （例如，欄位群組）並為您的組織建立自訂資源和結構描述。
 
-### 建立結構描述設計並指定欄位群組 {#schema-design}
+如需關於建立的詳細資訊 [結構描述](/help/xdm/home.md)，請參閱 [建立結構描述教學課程。](/help/xdm/tutorials/create-schema-ui.md) 和 [使用XDM為您的客戶體驗資料建立模型](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
-體驗資料模型 (XDM) 資源是在 [!DNL Adobe Experience Platform] 內的[!UICONTROL 結構描述] 工作區中接受管理。您可以檢視並探索 [!DNL Adobe] 提供的核心資源 (例如，[!UICONTROL 欄位群組])，並為貴組織建立自訂資源和結構描述。
-
-如需深入了解如何建立[結構描述](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant)，請參閱[建立結構描述教學課程](/help/xdm/tutorials/create-schema-ui.md)。
-
-有四種用於重新吸引使用案例的結構描述設計。每一種結構描述都需要設定特定欄位，以及一些強烈建議使用的欄位。
+有四種用於重新吸引使用案例的結構描述設計。每個結構描述都需要設定特定欄位。 您需要啟用要包含在即時客戶個人檔案中的結構描述。 如需啟用結構以用於Real-Time Customer Profile的詳細資訊，請參閱 [為即時客戶個人檔案啟用結構](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
 
 #### 客戶屬性結構描述
 
-此結構描述是用來安排和參考構成客戶資訊的設定檔資料。該資料通常會透過您的 CRM 或類似系統被擷取至 [!DNL Adobe Experience Platform]，並且有必要參考用來個人化、行銷同意和加強分段功能的客戶詳細資訊。
+此結構描述是用來安排和參考構成客戶資訊的設定檔資料。此資料通常會內嵌至 [!DNL Adobe Experience Platform] 透過CRM或類似系統，且為參考用於個人化、行銷同意和增強受眾功能的客戶詳細資料所必需。
 
-客戶屬性結構描述以 [!UICONTROL XDM 個人設定檔]類別表示，其中包括以下欄位群組：
+客戶屬性結構描述以 [[!UICONTROL XDM 個人設定檔]](/help/xdm/classes/individual-profile.md)類別表示，其中包括以下欄位群組：
 
 +++個人聯絡詳細資料 (欄位群組)
 
@@ -115,17 +115,6 @@ ht-degree: 100%
 
 +++
 
-+++人口統計詳細資料 (欄位群組)
-
-[人口統計詳細資料](/help/xdm/field-groups/profile/demographic-details.md)是 XDM 個人設定檔類別的標準結構描述欄位群組。此欄位群組提供根層級個人物件，其子欄位在描述個人的資訊。
-
-| 欄位 | 需求 |
-| --- | --- |
-| `person.name.firstName` | 建議 |
-| `person.name.lastName` | 建議 |
-
-+++
-
 +++外部來源系統稽核詳細資料 (欄位群組)
 
 [外部來源系統稽核屬性](/help/xdm/data-types/external-source-system-audit-attributes.md)是一種標準的體驗資料模式 (XDM) 資料類型，用於擷取外部來源系統的稽核詳細資料。
@@ -134,7 +123,7 @@ ht-degree: 100%
 
 +++同意和偏好設定欄位群組 (欄位群組)
 
-[同意和偏好設定](/help/xdm/field-groups//profile/consents.md)欄位群組提供單一物件類型的欄位、同意，以擷取同意和偏好設定資訊。
+此 [同意和偏好設定](/help/xdm/field-groups//profile/consents.md) 欄位群組提供單一物件型別欄位「同意」，以擷取同意和偏好設定資訊。
 
 | 欄位 | 需求 |
 | --- | --- |
@@ -155,72 +144,25 @@ ht-degree: 100%
 
 #### 客戶數位交易結構描述
 
-此結構描述是用來安排和引用構成發生在您網站和/或關聯數位平台上客戶活動的事件資料。該資料通常會透過 Web SDK 被擷取至[!DNL Adobe Experience Platform]，並且需要引用用來觸發歷程、詳細線上客戶分析和加強分段功能的各種瀏覽和轉換事件。
+此結構描述是用來安排和引用構成發生在您網站和/或關聯數位平台上客戶活動的事件資料。此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) 且是參考各種用於觸發歷程、詳細線上客戶分析和增強受眾功能的瀏覽和轉換事件所必需的。
 
-客戶數位交易結構描述是以 [!UICONTROL XDM ExperienceEvent] 類別表示，其中包括以下欄位群組：
+客戶數位交易結構描述是由 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 
-+++Adobe Experience Platform Web SDK ExperienceEvent (欄位群組)
-
-| 欄位 | 需求 |
-| --- | --- |
-| `device.model` | 建議 |
-| `environment.browserDetails.userAgent` | 建議 |
-
-+++
-
-+++Web 詳細資料 (欄位群組)
-
-Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組，用於描述 Web 詳細資料事件的相關資訊，例如互動、頁面詳細資料和反向連結。
++++XDM ExperienceEvent （類別）
 
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
-| `web.webInteraction.linkClicks.id` | 建議 | 對應於互動之網頁連結或 URL 的 ID。 |
-| `web.webInteraction.linkClicks.value` | 建議 | 對應於互動之網頁連結或 URL 的點擊次數。 |
-| `web.webInteraction.name` | 建議 | 網頁的名稱。 |
-| `web.webInteraction.URL` | 建議 | 網頁的 URL。 |
-| `web.webPageDetails.name` | 建議 | 發生網頁互動的網頁名稱。 |
-| `web.webPageDetails.URL` | 建議 | 發生網頁互動的網頁 URL。 |
-| `web.webReferrer.URL` | 建議 | 描述網頁互動的反向連結，即訪客在目前網頁互動記錄之前所瀏覽的上一個 URL。 |
+| `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
+| `timestamp` | 必要 | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
+| `eventType` | 必要 | 指出事件類別型別的字串。 |
 
 +++
 
-+++消費者體驗事件 (欄位群組)
-
-| 欄位 | 需求 |
-| --- | --- |
-| `commerce.cart.cartID` | 建議 |
-| `commerce.cart.cartSource` | 建議 |
-| `commerce.cartAbandons.id` | 建議 |
-| `commerce.cartAbandons.value` | 建議 |
-| `commerce.order.orderType` | 建議 |
-| `commerce.order.payments.paymentAmount` | 建議 |
-| `commerce.order.payments.paymentType` | 建議 |
-| `commerce.order.payments.transactionID` | 建議 |
-| `commerce.order.priceTotal` | 建議 |
-| `commerce.order.purchaseID` | 建議 |
-| `commerce.productListAdds.id` | 建議 |
-| `commerce.productListAdds.value` | 建議 |
-| `commerce.productListOpens.id` | 建議 |
-| `commerce.productListOpens.value` | 建議 |
-| `commerce.productListRemoval.id` | 建議 |
-| `commerce.productListRemoval.value` | 建議 |
-| `commerce.productListViews.id` | 建議 |
-| `commerce.productListViews.value` | 建議 |
-| `commerce.productViews.id` | 建議 |
-| `commerce.productViews.value` | 建議 |
-| `commerce.purchases.id` | 建議 |
-| `commerce.purchases.value` | 建議 |
-| `marketing.campaignGroup` | 建議 |
-| `marketing.campaignName` | 建議 |
-| `marketing.trackingCode` | 建議 |
-| `productListItems.name` | 建議 |
-| `productListItems.priceTotal` | 建議 |
-| `productListItems.product` | 建議 |
-| `productListItems.quantity` | 建議 |
-
-+++
+此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
 +++一般使用者 ID 詳細資料 (欄位群組)
+
+此 [一般使用者ID詳細資訊](/help/xdm/field-groups/event/enduserids.md) 欄位群組是用來說明個人在多個Adobe應用程式中的身分資訊。
 
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
@@ -241,11 +183,25 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 #### 客戶離線交易結構描述
 
-此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。該資料通常是從 POS (或類似系統) 被擷取至 [!DNL Adobe Experience Platform]，且大部份通常會透過 API 連線串流至平台。其目的是引用用來觸發歷程、深度的線上和離線客戶分析以及加強分段功能的各種離線轉換事件。
+此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。該資料通常是從 POS (或類似系統) 被擷取至 [!DNL Adobe Experience Platform]，且大部份通常會透過 API 連線串流至平台。其目的是參考各種離線轉換事件，這些事件用於觸發歷程、深層線上和離線客戶分析，以及增強受眾功能。
 
-客戶離線交易結構描述以 [!UICONTROL XDM ExperienceEvent] 類別示，其中包括以下欄位群組：
+客戶離線交易結構描述會以 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
+
++++XDM ExperienceEvent （類別）
+
+| 欄位 | 需求 | 說明 |
+| --- | --- | --- |
+| `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
+| `timestamp` | 必要 | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
+| `eventType` | 必要 | 指出事件類別型別的字串。 |
+
++++
+
+此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
 +++商務詳細資料 (欄位群組)
+
+此 [商業細節](/help/xdm/field-groups/event/commerce-details.md) 欄位群組用於說明商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
 
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
@@ -264,6 +220,8 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 +++個人聯絡詳細資料 (欄位群組)
 
+[個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人設定檔類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
+
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
 | `mobilePhone.number` | 必要 | 個人手機號碼，用來發送 SMS。 |
@@ -281,52 +239,30 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 >[!NOTE]
 >
->如果您使用 [!DNL Adobe Analytics Data Connector]，這是一個實施選項。
+>如果您使用 [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md)，這是一個實施選項。
 
-此結構描述是用來安排和引用構成發生在您網站和/或關聯數位平台上客戶活動的事件資料。此結構描述類似於客戶數位交易的結構描述，但不同之處在於，此結構描述目的是在 Web SDK 不是資料收集選項時使用；因此，當您使用 [!DNL Adobe Analytics Data Connector] 將您的線上資料發送至 [!DNL Adobe Experience Platform] 作為主要或次要資料流時，您需要此結構描述。
+此結構描述是用來安排和引用構成發生在您網站和/或關聯數位平台上客戶活動的事件資料。此結構描述類似於「客戶數位交易」結構描述，但不同之處在於其適用時機 [Web SDK](/help/edge/home.md) 不是資料收集的選項；因此，當您使用 [!DNL Adobe Analytics Source Connector] 將您的線上資料傳送到 [!DNL Adobe Experience Platform] 作為主要或次要資料流。
 
-[!DNL Adobe] Web 連接器結構描述以 [!UICONTROL XDM ExperienceEvent] 類別表示，其中包括以下欄位群組：
+此 [!DNL Adobe] Web聯結器結構描述是由 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 
-+++Adobe Analytics ExperienceEvent 範本 (欄位群組)
++++XDM ExperienceEvent （類別）
 
 | 欄位 | 需求 | 說明 |
 | --- | --- | --- |
-| `web.webInteraction.linkClicks.id` | 建議 | 對應於互動之網頁連結或 URL 的 ID。 |
-| `web.webInteraction.linkClicks.value` | 建議 | 對應於互動之網頁連結或 URL 的點擊次數。 |
-| `web.webInteraction.name` | 建議 | 網頁的名稱。 |
-| `web.webInteraction.URL` | 建議 | 網頁的 URL。 |
-| `web.webPageDetails.name` | 建議 | 發生網頁互動的網頁名稱。 |
-| `web.webPageDetails.URL` | 建議 | 發生網頁互動的網頁 URL。 |
-| `web.webReferrer.URL` | 建議 | 描述網頁互動的反向連結，即訪客在目前網頁互動記錄之前所瀏覽的上一個 URL。 |
-| `commerce.cart.cartID` | 建議 | |
-| `commerce.cart.cartSource` | 建議 | |
-| `commerce.cartAbandons.id` | 建議 | |
-| `commerce.cartAbandons.value` | 建議 | |
-| `commerce.order.orderType` | 建議 | |
-| `commerce.order.payments.paymentAmount` | 建議 | |
-| `commerce.order.payments.paymentType` | 建議 | |
-| `commerce.order.payments.transactionID` | 建議 | |
-| `commerce.order.priceTotal` | 建議 | |
-| `commerce.order.purchaseID` | 建議 | |
-| `commerce.productListAdds.id` | 建議 | |
-| `commerce.productListAdds.value` | 建議 | |
-| `commerce.productListOpens.id` | 建議 | |
-| `commerce.productListOpens.value` | 建議 | |
-| `commerce.productListRemoval.id` | 建議 | |
-| `commerce.productListRemoval.value` | 建議 | |
-| `commerce.productListViews.id` | 建議 | |
-| `commerce.productListViews.value` | 建議 | |
-| `commerce.productViews.id` | 建議 | |
-| `commerce.productViews.value` | 建議 | |
-| `commerce.purchases.id` | 建議 | |
-| `commerce.purchases.value` | 建議 | |
-| `marketing.campaignGroup` | 建議 | |
-| `marketing.campaignName` | 建議 | |
-| `marketing.trackingCode` | 建議 | |
-| `productListItems.name` | 建議 | |
-| `productListItems.priceTotal` | 建議 | |
-| `productListItems.product` | 建議 | |
-| `productListItems.quantity` | 建議 | |
+| `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
+| `timestamp` | 必要 | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
+| `eventType` | 必要 | 指出事件類別型別的字串。 |
+
++++
+
+此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
+
++++Adobe Analytics ExperienceEvent 範本 (欄位群組)
+
+此 [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) 欄位群組會擷取Adobe Analytics所收集的一般量度。
+
+| 欄位 | 需求 | 說明 |
+| --- | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | 必要 | 一般使用者電子郵件地址 ID 驗證狀態。 |
 | `endUserIDs._experience.emailid.id` | 必要 | 一般使用者電子郵件地址 ID。 |
 | `endUserIDs._experience.emailid.namespace.code` | 必要 | 一般使用者電子郵件地址 ID 命名空間代碼。 |
@@ -342,25 +278,25 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 +++
 
-### 從結構描述建立資料集 {#dataset-from-schema}
+### 從結構描述建立資料集 {#create-datasets}
 
-資料集是一組資料的儲存和管理結構。智慧型重新吸引歷程的每個結構描述都有單一資料集。
+資料集是一組資料的儲存和管理結構。智慧型重新參與情境的每個結構描述都應該有自己的資料集。
 
 如需深入了解如何從結構描述建立[資料集](/help/catalog/datasets/overview.md)，請參閱[資料集 UI 指南](/help/catalog/datasets/user-guide.md)。
 
 >[!NOTE]
 >
->與結構描述建立步驟類似，您需要啟用資料集以包含在即時客戶設定檔中。如需深入了解關於啟用資料集以用於即時客戶設定檔，請閱讀[建立結構描述教學課程](/help/xdm/tutorials/create-schema-ui.md#profile)。
+>與結構描述建立步驟類似，您需要啟用資料集以包含在即時客戶設定檔中。如需啟用資料集以用於即時客戶個人檔案的詳細資訊，請參閱以下教學課程： [將資料帶入即時客戶個人檔案](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html?lang=zh-Hant).
 
-### 隱私權、同意和資料治理 {#privacy-consent}
-
-#### 同意原則
+### 同意與資料控管 {#privacy-consent}
 
 >[!IMPORTANT]
 >
->向客戶提供從品牌接收通訊的取消訂閱功能是法律要求，同時可確保提供此選擇。在[隱私權法規概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)中，了解更多有關適用法律。
+>法律規定必須讓客戶能夠取消訂閱來自品牌的通訊，以及確保遵循此選擇。 在[隱私權法規概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)中，了解更多有關適用法律。
 
-建立重新吸引路徑時，應該考以下[同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)：
+#### 同意原則
+
+建立重新參與路徑時，請考慮新增下列專案 [同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)：
 
 * 如果為 `consents.marketing.email.val = "Y"`，則可以發送電子郵件
 * 如果為 `consents.marketing.sms.val = "Y"`，則可以發送 SMS
@@ -369,14 +305,14 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 #### 資料控管標籤和執行
 
-建立重新吸引路徑時，應考慮以下[資料控管標籤](/help/data-governance/labels/overview.md)：
+建立重新參與路徑時，請考慮新增下列專案 [資料控管標籤](/help/data-governance/labels/overview.md)：
 
 * 個人電子郵件地址可作直接可識別資料供運用，可識別或聯絡特定個人而非裝置。
    * `personalEmail.address = I1`
 
-#### 行銷原則
+#### 資料使用原則
 
-重新吸引歷程不需要[行銷原則](/help/data-governance/policies/overview.md)，但是，應視需要考慮以下內容：
+沒有 [資料使用原則](/help/data-governance/policies/overview.md) 放棄的產品瀏覽情境的必要專案。 不過，您應考量下列事項：
 
 * 限制敏感資料
 * 限制現場廣告
@@ -386,57 +322,84 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 ### 建立對象 {#create-audience}
 
-#### 建立品牌重新吸引歷程的對象
+重新參與案例使用受眾來定義由個人資料存放區中的個人資料子集共用的特定屬性或行為，以將可行銷的人員群組與您的客戶群區分開來。 您可以在中以多種方式建立對象 [!DNL Adobe Experience Platform].
 
-重新吸引歷程使用對象來定義設定檔儲存區中設定檔子集共用的特定屬性或行為，以從您的客戶群中區隔出可行銷的一群人。對象可以在 [!DNL Adobe Experience Platform] 上以多種方式建立。
-
-如需有關如何建立對象的詳細資訊，請詳閱[對象服務 UI 指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)。
+如需如何建立受眾的詳細資訊，請參閱 [audience service UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 如需深入了解如何直接組成[對象](/help/segmentation/home.md)，請參閱[對象組成 UI 指南](/help/segmentation/ui/audience-composition.md)。
 
-如需深入了解如何透過平台衍生的區段定義來建立對象，請參閱[對象建立器 UI 指南](/help/segmentation/ui/segment-builder.md)。
+如需如何透過平台衍生的對象定義來建立對象的詳細資訊，請參閱 [Audience Builder UI指南](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
->[!TAB 重新吸引歷程]
+>[!TAB 放棄的產品瀏覽情境]
 
 建立此對象是為了加強經典的「購物車放棄」情境。雖然購物車放棄通常是著重在購物車新增但在特定時間內未接著購買的情形，但此類對象尋求較早參與，特別是在特定時間內於您網站上可能瀏覽過特定產品但未加入購物車且沒有後續活動的人。此對象有助於讓符合此納入標準的客戶「優先考慮」您的品牌，也可運用在數位屬性可能不同於傳統電子商務模式的客戶。
 
-以下事件用於重新吸引歷程，其中使用者線上檢視產品，並且在接下來的 24 小時內沒有將產品新增到購物車，隨後的 3 天內沒有參與品牌。
++++放棄的產品檢視，過去三天無參與
+
+以下事件適用於放棄的產品瀏覽情境，即使用者於線上檢視產品，且未在接下來的3天內參與（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
 
 設定此對象時需要以下欄位和條件：
 
-* `EventType: commerce.productViews`
-   * `Timestamp: <= 24 hours before now`
-* `EventType is not: commerce.procuctListAdds`
-   * `Timestamp: <= 24 hours before now, GAP(>= 3 days)`
-* `EventType: application.launch or web.webpagedetails.pageViews or commerce.purchases`
-   * `Timestamp: <= 2 days before now`
+* `eventType: commerce.productViews`
+* 與 `THEN` （循序事件）排除 `eventType: commerce.procuctListAdds` 或 `application.launch` 或 `web.webpagedetails.pageViews` 或 `commerce.purchases` （包括線上和離線）
+   * `Timestamp: > 3 days after productView`
 
-重新吸引歷程的描述項顯示為：
++++
 
-`Include audience who have at least 1 EventType = ProductViews event THEN have at least 1 Any event where (EventType does not equal commerce.productListAdds) and occurs in last 24 hour(s) then after 3 days do not have any Any event where (EventType = application.launch or web.webpagedetails.pageViews or commerce.purchases) and occurs in last 2 day(s).`
++++過去三天有參與的產品檢視
 
->[!TAB 捨棄購物車歷程]
+以下事件適用於放棄的產品瀏覽情境，即使用者於線上檢視產品，並在隨後3天內參與（網站造訪、應用程式造訪、線上購買、離線購買及新增至購物車事件）。
+
+設定此對象時需要以下欄位和條件：
+
+* `eventType: commerce.productViews`
+* 與 `THEN` （循序事件）包括 `eventType: commerce.procuctListAdds` 或 `application.launch` 或 `web.webpagedetails.pageViews` 或 `commerce.purchases` （包括線上和離線）
+   * `Timestamp: > 3 days after productView`
+
++++過去一天內的參與串流
+
+以下事件適用於放棄的產品瀏覽情境，即使用者在過去1天內參與其中（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
+
+設定此對象時需要以下欄位和條件：
+
+* `eventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+   * `Timestamp: in last 1 day` （串流）
+
++++
+
++++過去三天的參與批次
+
+以下事件適用於放棄的產品瀏覽情境，即使用者在過去3天內參與其中（網站造訪、應用程式造訪、線上購買、離線購買及加入購物車事件）。
+
+設定此對象時需要以下欄位和條件：
+
+* `EventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+   * `Timestamp: in last 3 days` （批次）
+
++++
+
+>[!TAB 捨棄的購物車情境]
 
 建立此對象是為了支持一般「購物車放棄」情境。其目的是找到將產品加入購物車但最後未購買的客戶。此對象不僅有助於您的客戶「最先想到」您的品牌，而且還有助於他們保留被遺棄而未繼續購買的產品。
 
-以下事件用於使用者已將產品新增至購物車但過去 24 小時內未完成購買或清除購物車的捨棄購物車歷程。
+下列事件適用於放棄購物車的情況，即使用者在1至4天前將產品新增至購物車，但未完成購買或清除購物車。
 
 設定此對象時需要以下欄位和條件：
 
-* `EventType: commerce.productListAdds`
+* `eventType: commerce.productListAdds`
    * `Timestamp: >= 1 days before now and <= 4 days before now `
-* `EventType: commerce.purchases`
+* `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
-* `EventType: commerce.productListRemovals`
+* `eventType: commerce.productListRemovals`
    * `Timestamp: <= 4 days before now`
 
-捨棄購物車歷程的描述項顯示為：
+放棄的購物車情境的描述項顯示為：
 
-`Include EventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude EventType = commerce.purchases 30 minutes before now OR EventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
+`Include eventType = commerce.productListAdds between 30 min and 1440 minutes before now. exclude eventType = commerce.purchases 30 minutes before now OR eventType = commerce.productListRemovals AND Cart ID equals Product List Adds1 Cart ID (the inclusion event).`
 
->[!TAB 訂購確認歷程]
+>[!TAB 訂單確認案例]
 
 此歷程不需要建立任何對象。
 
@@ -448,25 +411,25 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 >
 >[!DNL Adobe Journey Optimizer] 並不涵蓋圖中顯示的所有內容。所有[付費媒體廣告](/help/destinations/catalog/social/overview.md)均在[!UICONTROL 目的地]中建立。
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 協助您向其客戶傳送連結的、情境式和個人化體驗。客戶歷程是客戶與品牌互動的整個過程。每個使用案例歷程需要特定的資訊。下面列出的是每個歷程分支所需的精確資料。
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 協助您向其客戶傳送連結的、情境式和個人化體驗。客戶歷程是客戶與品牌互動的整個過程。每個使用案例歷程需要特定的資訊。以下列出每個歷程所需的精確資料。
 
 >[!BEGINTABS]
 
->[!TAB 重新吸引歷程]
+>[!TAB 放棄的產品瀏覽情境]
 
-重新吸引歷程是針對在網站和行動應用程式上的捨棄產品瀏覽。<p>![客戶智慧型重新吸引歷程的高層次視覺概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶智慧型重新吸引歷程的高層次視覺概觀。"){width="2560" zoomable="yes"}</p>
+放棄的產品瀏覽情境會鎖定網站和行動應用程式上放棄的產品瀏覽。<p>![客戶放棄的產品瀏覽案例高階視覺化概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶放棄的產品瀏覽案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 +++事件
 
 * 事件 1：產品檢視
    * 結構描述：客戶數位交易
    * 欄位：
-      * `EventType`
+      * `eventType`
    * 條件：
-      * `EventType = commerce.productViews`
+      * `eventType = commerce.productViews`
       * 欄位：
-         * `Commerce.productViews.id`
-         * `Commerce.productViews.value`
+         * `commerce.productViews.id`
+         * `commerce.productViews.value`
          * `eventType`
          * `identityMap.authenticatedState`
          * `identityMap.id`
@@ -487,12 +450,12 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 * 事件 2：加入購物車
    * 結構描述：客戶數位交易
    * 欄位：
-      * `EventType`
+      * `eventType`
    * 條件：
-      * `EventType = commerce.productListAdds`
+      * `eventType = commerce.productListAdds`
       * 欄位：
-         * `Commerce.productListAdds.id`
-         * `Commerce.productListAdds.value`
+         * `commerce.productListAdds.id`
+         * `commerce.productListAdds.value`
          * `eventType`
          * `identityMap.authenticatedState`
          * `identityMap.id`
@@ -514,9 +477,9 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 * 事件 3：品牌參與度
    * 結構描述：客戶數位交易
    * 欄位：
-      * `EventType`
+      * `eventType`
    * 條件：
-      * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
+      * `eventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
       * 欄位：
          * `eventType`
          * `identityMap.authenticatedState`
@@ -537,8 +500,8 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
          * `endUserIDs._experience.emailid.id`
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
-         * `Commerce.purchases.id`
-         * `Commerce.purchases.value`
+         * `commerce.purchases.id`
+         * `commerce.purchases.value`
          * `shipping.address.city`
          * `shipping.address.countryCode`
          * `shipping.address.postalCode`
@@ -580,21 +543,21 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 +++
 
->[!TAB 捨棄購物車歷程]
+>[!TAB 捨棄的購物車情境]
 
-捨棄購物車歷程是針對網站和行動應用程式上已放入購物車但尚未購買的產品。<p>![客戶捨棄購物車歷程的高層次視覺概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶捨棄購物車歷程的高層次視覺概觀。"){width="2560" zoomable="yes"}</p>
+捨棄的購物車案例會鎖定已放入購物車但尚未在網站和行動應用程式上購買的產品。<p>![客戶放棄購物車案例高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶放棄購物車案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 +++事件
 
 * 事件 2：加入購物車
    * 結構描述：客戶數位交易
    * 欄位：
-      * `EventType`
+      * `eventType`
    * 條件：
-      * `EventType = commerce.productListAdds`
+      * `eventType = commerce.productListAdds`
       * 欄位：
-         * `Commerce.productListAdds.id`
-         * `Commerce.productListAdds.value`
+         * `commerce.productListAdds.id`
+         * `commerce.productListAdds.value`
          * `eventType`
          * `identityMap.authenticatedState`
          * `identityMap.id`
@@ -616,12 +579,12 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 * 事件 4：網上購買
    * 結構描述：客戶數位交易
    * 欄位：
-      * `EventType`
+      * `eventType`
    * 條件：
-      * `EventType = commerce.purchases`
+      * `eventType = commerce.purchases`
       * 欄位：
-         * `Commerce.purchases.id`
-         * `Commerce.purchases.value`
+         * `commerce.purchases.id`
+         * `commerce.purchases.value`
          * `eventType`
          * `identityMap.authenticatedState`
          * `identityMap.id`
@@ -642,9 +605,9 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 * 事件 3：品牌參與度
    * 結構描述：客戶數位交易
    * 欄位：
-      * `EventType`
+      * `eventType`
    * 條件：
-      * `EventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
+      * `eventType in application.launch, commerce.purchases, web.webpagedetails.pageViews`
       * 欄位：
          * `eventType`
          * `identityMap.authenticatedState`
@@ -665,8 +628,8 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
          * `endUserIDs._experience.emailid.id`
          * `endUserIDs._experience.emailid.namespace.code`
          * `_id`
-         * `Commerce.purchases.id`
-         * `Commerce.purchases.value`
+         * `commerce.purchases.id`
+         * `commerce.purchases.value`
          * `shipping.address.city`
          * `shipping.address.countryCode`
          * `shipping.address.postalCode`
@@ -709,21 +672,21 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 +++
 
->[!TAB 訂購確認歷程]
+>[!TAB 訂單確認案例]
 
-訂購確認歷程著重在透過網站和行動應用程式購買的產品。<p>![客戶訂購確認歷程的高層次視覺概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂購確認歷程的高層次視覺概觀。"){width="2560" zoomable="yes"}</p>
+訂購確認案例聚焦於透過網站和行動應用程式進行的產品購買。<p>![客戶訂單確認案例高階視覺化概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂單確認案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 +++事件
 
 * 事件 4：網上購買
    * 結構描述：客戶數位交易
    * 欄位：
-      * `EventType`
+      * `eventType`
    * 條件：
-      * `EventType = commerce.purchases`
+      * `eventType = commerce.purchases`
       * 欄位：
-         * `Commerce.purchases.id`
-         * `Commerce.purchases.value`
+         * `commerce.purchases.id`
+         * `commerce.purchases.value`
          * `eventType`
          * `identityMap.authenticatedState`
          * `identityMap.id`
@@ -770,16 +733,16 @@ Web 詳細資料是 XDM ExperienceEvent 類別的標準結構描述欄位群組�
 
 #### 目的地所需資料
 
-串流區段匯出目的地 (例如 Facebook、Google 目標客戶比對、Google DV360) 支援來自客戶資料的各種身分：
+串流受眾匯出目標(例如Facebook、Google Customer Match、Google DV360)支援客戶資料中的各種身分：
 
 * `personalEmail.address`
 * `ECID`
 * `mobilePhone.number`
 
-捨棄購物車區段是採串流傳輸，因此可由目的地框架用於此使用案例。
+捨棄購物車對象會評估為串流對象，因此可用於此使用案例的目的地架構。
 
 * 串流/已觸發
    * [廣告](/help/destinations/catalog/advertising/overview.md)/[付費媒體和社交](/help/destinations/catalog/social/overview.md)
    * [行動](/help/destinations/catalog/mobile-engagement/overview.md)
    * [串流目的地](/help/destinations/catalog/streaming/http-destination.md)
-   * [自訂 Destination SDK](/help/destinations/destination-sdk/overview.md)
+   * [使用Destination SDK建立的自訂目的地。](/help/destinations/destination-sdk/overview.md)。如果您是Real-Time CDP Ultimate客戶，也可以建立私人帳戶 [使用Destination SDK的自訂目的地](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
