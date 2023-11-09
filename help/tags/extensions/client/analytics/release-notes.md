@@ -2,10 +2,10 @@
 title: Adobe Analytics擴充功能發行說明
 description: Adobe Experience Platform中Adobe Analytics標籤擴充功能的最新發行說明。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 82%
+source-wordcount: '1416'
+ht-degree: 81%
 
 ---
 
@@ -17,13 +17,22 @@ ht-degree: 82%
 >
 >Analytics標籤擴充功能（如果經常更新）以回應 [AppMeasurementJavaScript程式庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant). 請參閱 [AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) 以下提及的特定版本的詳細資訊。
 
+## 2023 年 9 月 15 日
+
+**Adobe Analytics 擴充功能 1.9.3 版**
+
+**功能**:
+
+* 已升級至 [AppMeasurement至v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 2023 年 7 月 19 日
 
 **Adobe Analytics 擴充功能 1.9.2 版**
 
 **功能**:
 
-* 已升級至AppMeasurementv2.24.0。
+* 已升級至 [AppMeasurementv2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * 新增選用設定(`decodeLinkParameters` 預設 `false`)會解碼包含雙位元組編碼字元之連結URL的。
 
 **錯誤修正**:
