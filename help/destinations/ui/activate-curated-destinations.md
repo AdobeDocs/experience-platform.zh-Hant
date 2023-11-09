@@ -2,9 +2,9 @@
 title: 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 type: Tutorial
 description: 瞭解如何使用LiveRamp RampID從Adobe Experience Platform啟用對象至連線的電視和音訊目的地，以及其他整合。
-source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
+source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,12 @@ ht-degree: 0%
 >[!TIP]
 >
 >此程式可讓您對目的地（例如）啟用對象。 [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku)， [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney)，以及更多功能，直接從Real-Time CDP UI存取，而不需登入 [!DNL LiveRamp] 啟用帳戶。
+
+### 教學課程影片 {#video}
+
+觀看以下影片，瞭解本頁面所述工作流程的端對端說明。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### 步驟1：透過，將您的對象從Experience Platform傳送至LiveRamp。 [!DNL LiveRamp - Onboarding] 目的地 {#onboarding}
 
