@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 533de54a0e4a48f1f95e732d8ea9b4fbe46dd241
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 20%
@@ -15,7 +15,7 @@ ht-degree: 20%
 # Adobe Experience Platform查詢服務 {#query}
 
 - [查詢服務總覽](home.md)
-- [查詢服務封裝](packages.md)
+- [查詢服務套件](packages.md)
 - [查詢服務護欄](guardrails.md)
 - 開始使用 {#get-started}
    - [先決條件](get-started/prerequisites.md)

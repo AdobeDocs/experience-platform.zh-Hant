@@ -2,39 +2,56 @@
 title: 查詢服務套件
 description: 以下檔案概述可用於查詢服務的功能和產品套件，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: 4fb755d8936a6c2019421a064e29ab403092cf77
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 3%
+source-wordcount: '1119'
+ht-degree: 2%
 
 ---
 
 # 查詢服務套件
 
-本檔案概述查詢服務中可用的不同型別的封裝和查詢執行功能。
+本檔案概述查詢服務中可用的不同型別封裝和查詢執行功能。
 
-根據可以執行的查詢模式，Adobe Experience Platform Query Service可以分為兩種功能：
+根據可以執行的查詢模式，Adobe Experience Platform查詢服務可以分成兩個功能：
 
-- **臨時查詢** 是用於探索用於驗證、驗證、實驗等擷取資料集的SQL查詢。 這些查詢不會將資料寫回Platform Data Lake。
-- **批次查詢** 是用於執行擷取資料集的擷取後處理的SQL查詢。 這些查詢會清除、塑形、操控及擴充資料，而結果會回寫至Platform Data Lake。 這些查詢可作為批次作業進行排程、管理和監視。
+- **臨時查詢** SQL查詢是用於探索用於驗證、驗證、實驗等擷取資料集的。 這些查詢不會將資料寫回Platform資料湖。
+- **批次查詢** SQL查詢是否用於執行擷取資料集的擷取後處理。 這些查詢會清除、調整、操縱及擴充資料，且結果會回寫至Platform Data Lake。 這些查詢可以作為批次作業進行排程、管理和監視。
 
 查詢服務功能會與下列產品和附加元件一起封裝：
 
-- **平台式應用程式** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics和Adobe Journey Optimizer)：查詢服務執行隨選查詢的存取權，從一開始就有提供平台型應用程式的每個變數和階層。
-- **[!DNL Data Distiller]** (可與Adobe Real-Time CDP、Customer Journey Analytics和Adobe Journey Optimizer一起購買的附加元件套件)：提供執行批次查詢的查詢服務存取權 [!DNL Data Distiller].
+- **平台式應用程式** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics和Adobe Journey Optimizer)：查詢服務存取權從一開始就會針對平台式應用程式的每個變數和層級提供，以執行臨時查詢。
+- **[!DNL Data Distiller]** (可與Adobe Real-Time CDP、Customer Journey Analytics和Adobe Journey Optimizer一起購買的附加套件)：提供執行批次查詢的查詢服務存取權 [!DNL Data Distiller].
+
+## 術語 {#terminology}
+
+下節提供與「查詢服務」套件相關之重要術語的定義：
+
+- **資料湖儲存**：資料湖主要用途如下：
+   - 充當將資料上線到Experience Platform中的中繼區域；
+   - 充當所有Experience Platform資料的長期資料儲存體；
+   - 啟用資料分析和資料科學等使用案例。
+- **資料匯出**：此 [資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=zh-Hant) 根據您的應用程式、產品層級和購買的任何附加元件，您可以匯出型別。 衍生資料集可透過查詢服務資料Distiller附加元件建立，且可以 [已從Adobe Experience Platform匯出](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activation-overview.html) 至多種目的地，包括 [雲端儲存空間目的地](/help/destinations/ui/export-datasets.md).
+- **加速的查詢**：加速查詢會傳回以彙總資料為基礎的結果，以減少結果的等待時間，並提供更具互動性的資訊交換。 對加速存放區進行的無狀態查詢只能當作Data Distiller附加元件的一部分提供。
+- **計算時數**：計算時數是量度，用於使用查詢服務API透過批次查詢追蹤資料的掃描和寫入。 它是以每年時數計算，並在所有沙箱中測量。 提供給貴組織的計算時數會在交易範圍處理程式中定義。
+
+## 權益 {#entitlements}
 
 下表根據封裝方式概述主要查詢服務權益：
 
-| 查詢服務權益 | 與平台型應用程式封裝 | 已封裝 [!DNL Data Distiller] |
+| 查詢服務權益 | 與平台式應用程式封裝 | 已封裝 [!DNL Data Distiller] |
 |---|---|---|
 | 支援的查詢模式 | 僅限特定查詢 | 批次查詢 |
-| 支援的使用案例 | <ul><li>探索&#x200B;</li><li>資料探索&#x200B;</li><li>資料驗證</li><li>實驗</li></ul> | <ul><li>清理</li><li>Shaping</li><li>操控</li><li>豐富</li></ul> |
+| 支援的使用案例 | <ul><li>探索&#x200B;</li><li>資料探索&#x200B;</li><li>資料驗證</li><li>實驗</li></ul> | <ul><li>清潔</li><li>塑形</li><li>操控</li><li>充實</li></ul> |
 | 支援的語意 | <ul><li>選取查詢</li></ul> | <ul><li>CTAS和ITAS查詢</li></ul> |
 | 最長執行時間 | 10 分鐘 | 24 小時 |
-| 授權量度 | **查詢使用者並行**： <ul><li>1位同時使用者(Real-Time CDP、Adobe Journey Optimizer&#x200B;)</li><li>5個同時使用者(Customer Journey Analytics)&#x200B;</li></ul> **查詢並行**： <ul><li>1個並行執行查詢(所有應用程式&#x200B;)</li></ul> **其他Ad Hoc Query使用者套件附加元件** 可購買以增加客戶的授權特定查詢權益。 <ul><li>每包+5個額外的同時使用者</li><li>每個套件增加1個額外的並行執行查詢</li></ul> | **計算時數**： <ul><li>變數（根據客戶的應用程式許可權設定範圍）</li></ul> **計算時數** 是當執行批次查詢時，查詢服務引擎讀取、處理資料以及將資料寫入資料湖所花費的時間量度。 |
-| 查詢執行介面 | <ul><li>查詢服務UI</li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li></ul> | <ul><li>查詢UI </li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li><li>REST API</li></ul> |
-| 透過傳回的查詢結果 | 使用者端UI | 衍生資料集儲存在Data Lake中 |
-| 結果限制 | <ul><li>查詢UI - 100列</li><li>協力廠商使用者端 — 50,000</li><li>[!DNL PostgresSQL] 使用者端 — 50,000</li></ul> | <ul><li>查詢UI （沒有列數上限）</li><li>協力廠商使用者端（列數沒有上限）</li><li>[!DNL PostgresSQL] 使用者端（列數沒有上限）</li><li>REST API （列數沒有上限）</li></ul> |
+| 授權量度 | **查詢使用者並行**： <ul><li>1位同時使用者(Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5位同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢並行**： <ul><li>1個並行執行查詢(所有應用程式&#x200B;)</li></ul> **其他Ad Hoc Query使用者套件附加元件** 可購買以增加客戶的授權特定查詢權益。 <ul><li>每包+5個額外的同時使用者</li><li>每包+1個額外的並行執行查詢</li></ul> | **計算時數**： <ul><li>變數（根據客戶的應用程式權益設定範圍）</li></ul> **計算時數** 是測量執行批次查詢時，查詢服務引擎讀取、處理資料以及將資料寫入資料湖所花費的時間。 |
+| 加速查詢和報告使用 | 無 | 是 — 並行加速查詢可讓您從加速存放區讀取資料，並在您的儀表板中顯示。 也提供在加速存放區中儲存報告模型和資料集的專用權益。 |
+| 資料湖儲存容量 | 是 — 您的總儲存權利取決於您的平台應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的儲存權益，好讓您的資料Distiller使用案例原始和衍生資料集在七天資料到期日之後繼續儲存。<br>您的資料湖儲存容量是以TB為單位，取決於您購買的計算時數數量。 |
+| 資料匯出允許 | 是 — 您的總匯出許可權取決於您的平台式應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供其他匯出權益，以允許匯出使用Data Distiller建立的衍生資料集。<br>您每年的資料匯出容量是以TB為單位，並且取決於您購買的計算時數數量。 |
+| 查詢執行介面 | <ul><li>查詢服務UI</li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li></ul> | <ul><li>查詢服務UI </li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li><li>REST API</li></ul> |
+| 查詢結果傳回，透過 | 使用者端UI | 衍生資料集儲存在Data Lake中 |
+| 結果限制 | <ul><li>查詢服務UI - 100列</li><li>協力廠商使用者端 — 50,000</li><li>[!DNL PostgresSQL] 使用者端 — 50,000</li></ul> | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。</li><li>協力廠商使用者端（列數沒有上限）</li><li>[!DNL PostgresSQL] 使用者端（列數沒有上限）</li><li>REST API （列數沒有上限）</li></ul> |
 | 讀取資料集容量 | 是 | 是 |
 | 寫入資料集容量 | 無 | 是 |
 | 排程容量 | 無 | 是 |
@@ -43,15 +60,15 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-## 存取控制
+## 存取控制 {#access-control}
 
-Experience Platform的存取控制需透過 [Adobe Admin Console](https://adminconsole.adobe.com/) 產品設定檔會將使用者與許可權和沙箱連結。 請參閱 [存取控制總覽](../access-control/home.md) 以取得詳細資訊。
+Experience Platform的存取控制會透過 [Adobe Admin Console](https://adminconsole.adobe.com/) 產品設定檔將使用者與許可權和沙箱連結在一起。 請參閱 [存取控制總覽](../access-control/home.md) 以取得詳細資訊。
 
-為了使用查詢服務， [!DNL Manage Queries] 必須在admin console中啟用許可權。 此許可權可讓使用者執行隨機和批次查詢。 請求存取產品設定檔的詳細指示 [!DNL Manage Queries] 已在下列章節中概述許可權： [管理產品設定檔的許可權](../access-control/ui/permissions.md) 和 [管理產品設定檔的使用者](../access-control/ui/users.md) 檔案。
+為了使用查詢服務， [!DNL Manage Queries] 必須在Admin Console中啟用許可權。 此許可權可讓使用者執行臨時和批次查詢。 請求存取產品設定檔的詳細說明 [!DNL Manage Queries] 已在中概述許可權 [管理產品設定檔的許可權](../access-control/ui/permissions.md) 和 [管理產品設定檔的使用者](../access-control/ui/users.md) 檔案。
 
-購買後 [!DNL Data Distiller] 附加元件， [!DNL Write Dataset] 必須授予許可權。 此許可權允許 [!DNL Data Distiller] 執行批次查詢的使用者。
+購買後 [!DNL Data Distiller] 附加元件， [!DNL Write Dataset] 必須授與許可權。 此許可權允許 [!DNL Data Distiller] 執行批次查詢的使用者。
 
-下表概述了 [!DNL Manage Queries] 許可權：
+下表概述 [!DNL Manage Queries] 許可權：
 
 | 權限 | 函數 |
 |---|---|
@@ -60,10 +77,10 @@ Experience Platform的存取控制需透過 [Adobe Admin Console](https://adminc
 
 {style="table-layout:auto"}
 
-## 沙箱支援
+## 沙箱支援 {#sandbox-support}
 
-沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個Platform例項都支援多個生產和非生產沙箱，每個沙箱都維護自己的Platform資源庫。 非生產沙箱可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱 [沙箱總覽](../sandboxes/home.md). 所有查詢服務權益會在所有沙箱之間共用
+沙箱是單一Experience Platform執行個體中的虛擬分割區。 每個Platform執行個體支援多個生產和非生產沙箱，每個沙箱都維護自己的Platform資源庫。 非生產沙箱可讓您測試功能、執行實驗並進行自訂設定，而不會影響您的生產沙箱。 如需沙箱的詳細資訊，請參閱 [沙箱總覽](../sandboxes/home.md). 所有查詢服務許可權會在所有沙箱之間共用。
 
 ## 後續步驟
 
-閱讀本檔案後，您應該能更清楚瞭解查詢服務中可用的不同封裝型別和查詢執行功能。 若要進一步瞭解查詢服務（例如知名的產業使用案例），請閱讀 [使用案例檔案](./use-cases/abandoned-browse.md). 如需一般資訊，請瀏覽 [查詢服務總覽](./home.md).
+閱讀本檔案後，您應該能更清楚瞭解查詢服務中可用的不同封裝型別和查詢執行功能。 若要進一步瞭解查詢服務，例如知名的業界使用案例，請閱讀 [使用案例檔案](./use-cases/abandoned-browse.md). 如需一般資訊，請瀏覽 [查詢服務總覽](./home.md).
