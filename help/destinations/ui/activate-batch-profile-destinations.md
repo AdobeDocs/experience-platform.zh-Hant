@@ -4,7 +4,7 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
 workflow-type: tm+mt
 source-wordcount: '3781'
 ht-degree: 11%
@@ -30,7 +30,7 @@ ht-degree: 11%
 
 若要對目的地啟用對象，您必須已成功 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
 
-### 支援的匯出檔案格式 {#supported-file-formats-export}
+## 支援的匯出檔案格式 {#supported-file-formats-export}
 
 匯出對象時，支援下列檔案格式：
 
