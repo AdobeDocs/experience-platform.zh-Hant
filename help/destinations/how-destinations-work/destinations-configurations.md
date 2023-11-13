@@ -2,9 +2,9 @@
 title: 目的地中可設定的常用匯出設定
 description: 瞭解目的地中哪些匯出設定可在目的地層級設定，哪些是固定的且無法編輯。
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '842'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 1%
 * [將受眾資料啟用至企業目的地](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [啟用受眾資料至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [隨選將檔案匯出至批次目的地](/help/destinations/ui/export-file-now.md)
-* [(Beta)將資料集匯出至雲端儲存目標](/help/destinations/ui/export-datasets.md)
+* [將資料集匯出至雲端儲存空間目的地](/help/destinations/ui/export-datasets.md)
 
 ## 後續步驟 {#next-steps}
 

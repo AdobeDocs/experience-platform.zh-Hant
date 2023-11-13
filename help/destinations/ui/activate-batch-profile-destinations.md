@@ -4,9 +4,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
+source-wordcount: '3781'
 ht-degree: 11%
 
 ---
@@ -29,6 +29,18 @@ ht-degree: 11%
 ## 先決條件 {#prerequisites}
 
 若要對目的地啟用對象，您必須已成功 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
+
+### 支援的匯出檔案格式 {#supported-file-formats-export}
+
+匯出對象時，支援下列檔案格式：
+
+* CSV
+* JSON
+* Parquet
+
+請注意，匯出CSV檔案可讓您在要如何建構匯出的檔案方面擁有更大的彈性。 深入瞭解 [CSV檔案的檔案格式設定](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+選擇您需要的檔案格式，以便在下列情況下匯出： [建立以檔案為基礎的目的地的連線](/help/destinations/ui/connect-destination.md).
 
 ## 選取您的目的地 {#select-destination}
 
@@ -532,7 +544,7 @@ abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Pr
 
 ## 驗證受眾啟用 {#verify}
 
-對於電子郵件行銷目的地和雲端儲存目的地，Adobe Experience Platform會建立 `.csv` 檔案中所指定的儲存位置。 預期會根據您在工作流程中設定的排程，在您的儲存位置中建立新檔案。 預設檔案格式如下所示，但您可以 [編輯檔案名稱的元件](#file-names)：
+將受眾匯出至雲端儲存空間目的地時，Adobe Experience Platform會建立 `.csv`， `.json`，或 `.parquet` 檔案中所指定的儲存位置。 預期會根據您在工作流程中設定的排程，在您的儲存位置中建立新檔案。 預設檔案格式如下所示，但您可以 [編輯檔案名稱的元件](#file-names)：
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 例如，如果您選取每日匯出頻率，您連續三天收到的檔案可能會如下所示：
