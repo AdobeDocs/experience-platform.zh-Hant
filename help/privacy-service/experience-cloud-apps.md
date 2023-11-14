@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service和Experience Cloud應用程式
 description: 本檔案提供如何為隱私權相關作業設定不同Experience Cloud應用程式的參考資料。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b73b6f1005dc8a9e647f706a1e98259131b17478
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '912'
 ht-degree: 13%
 
 ---
@@ -54,7 +54,6 @@ Adobe Experience Platform [!DNL Privacy Service] 是專為支援數個Adobe Expe
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 概述客戶隱私權管理員或AEM管理員如何處理GDPR請求。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | 使用Livefyre發出GDPR存取和刪除請求的步驟。 |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | 確保您的Magento Commerce安裝符合特定隱私權法規的要求。 |
-| [Marketo](https://www.marketo.com/company/trust/gdpr/) | 瞭解隱私權法規如何適用於Marketo。 |
 | [Adobe Experience Platform 中的標記](../tags/ui/client-side/consent.md) | 開發人員可如何使用擴充功能及規則建立器，以定義加入和退出解決方案。 |
 | [Workfront](https://www.workfront.com/privacy-notice) | 瞭解Workfront如何收集個人資料，以及資料主體如何透過表單提交隱私權請求。 |
 

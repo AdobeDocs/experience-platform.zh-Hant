@@ -2,9 +2,9 @@
 title: 監視批次查詢授權使用情況
 description: Adobe Experience Platform UI提供控制面板，讓您檢視有關組織Data Distiller授權使用情況的重要資訊。
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: a3a2377a873c0e54ba43a60e28f922e0cb9e9d01
+source-git-commit: f33629d73e9bc7273e6ee5170294618f3e9731a8
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->**資料可供使用，但有限制**：資料從2023年10月1日開始，沒有趨勢。<br>此 **回填** 您合約開始日期中的資料為進行中的工作。 預計在日曆年年底之前可用。
+>**此 [!UICONTROL 計算時數] 資料有可用的限制**：資料從2023年10月1日開始，沒有趨勢。<br>此 **回填** 您合約開始日期中的資料為進行中的工作。 預計在日曆年年底之前可用。
 
 ![強調顯示計算時數量度的授權使用儀表板。](../images/data-distiller/compute-hours.png)
 
