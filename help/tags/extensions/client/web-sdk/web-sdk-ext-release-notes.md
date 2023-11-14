@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
+source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1833'
 ht-degree: 36%
 
 ---
@@ -14,7 +14,15 @@ ht-degree: 36%
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 2.21.0版 — 2023年11月1日
+## 2.21.3版 — 2023年11月10日
+
+包含2.19.1版的Adobe Experience Platform Web SDK。
+
+**修正和改良**
+
+* 修正中可用的主張陣列問題 `Send event complete` 事件一律為空白。
+
+## 2.21.2版 — 2023年11月1日
 
 **新功能**
 
