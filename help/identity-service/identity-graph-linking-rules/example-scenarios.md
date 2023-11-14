@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '436'
 ht-degree: 1%
 
 ---
@@ -69,5 +69,6 @@ ht-degree: 1%
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
 * [身分圖表連結規則概觀](./overview.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [Identity Service和即時客戶個人檔案](identity-and-profile.md)
 * [身分連結邏輯](./identity-linking-logic.md)

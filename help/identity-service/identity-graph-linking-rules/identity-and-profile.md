@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '708'
 ht-degree: 1%
 
 ---
@@ -74,5 +74,6 @@ Identity Service只會擷取指定為身分的欄位。 Identity Service不會�
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
 * [身分圖表連結規則概觀](./overview.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [設定身分圖表連結規則的範例案例](./example-scenarios.md)
 * [身分連結邏輯](./identity-linking-logic.md)

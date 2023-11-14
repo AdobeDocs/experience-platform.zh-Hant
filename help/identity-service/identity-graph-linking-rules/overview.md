@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 0%
 ## 目錄
 
 * [概觀](./overview.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [範例情境](./example-scenarios.md)
 * [Identity Service和即時客戶個人檔案](identity-and-profile.md)
 * [身分連結邏輯](./identity-linking-logic.md)
@@ -39,13 +40,12 @@ ht-degree: 0%
 
 使用身分圖表連結規則，您可以：
 
-* 設定限制以防止兩個不同的個人識別碼合併為一個身分圖表，讓單一身分圖表僅代表一個人。
-   * 接著您設定的限制會由身分最佳化演演算法強制執行。
-* 設定優先順序，將已驗證個人執行的線上事件與指定使用者建立關聯。
+* 透過設定唯一的名稱空間（限制），為每個使用者建立單一身分圖表/合併的設定檔，以防止兩個不同的個人識別碼合併到一個身分圖表中。
+* 透過設定優先順序來關聯線上、已驗證的事件與人員
 
 ### 限制
 
-您可以使用名稱空間限制，根據指定的名稱空間，定義圖表可以存在的最大身分數量。 例如，您可以將圖表設定為最多只有一個身分與CRM ID名稱空間的身分，藉此防止在同一個圖表內合併兩個不同的人員識別碼。
+唯一的名稱空間是代表個人的識別碼，例如CRM ID、登入ID和雜湊電子郵件。 如果名稱空間指定為唯一，則圖表只能有一個與該名稱空間相同的身分(`limit=1`)。 這可以防止將兩個不同的人員識別碼合併到同一個圖表中。
 
 * 如果未設定限制，則可能會導致不想要的圖表合併，例如圖表中有兩個具有CRM ID名稱空間的身分。
 * 如果未設定限制，只要圖表在護欄內（50個身分/圖表），圖表就可以視需要新增任意數量的名稱空間。
@@ -60,6 +60,8 @@ ht-degree: 0%
 * 如果符合下列條件，ECID將會與上次驗證的使用者相關聯：
    * 若CRM ID是由ECID （共用裝置）合併。
    * 如果限制僅設定為一個CRM ID。
+
+如需詳細資訊，請閱讀以下檔案： [身分最佳化演演算法](./identity-optimization-algorithm.md).
 
 ### 優先等級
 
@@ -106,6 +108,7 @@ ht-degree: 0%
 
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [設定身分圖表連結規則的範例案例](./example-scenarios.md)
 * [Identity Service和即時客戶個人檔案](identity-and-profile.md)
 * [身分連結邏輯](./identity-linking-logic.md)
