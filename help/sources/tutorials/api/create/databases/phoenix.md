@@ -5,7 +5,7 @@ exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
 source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Experience Platform元件：
+本指南需要您深入了解下列 Experience Platform 元件：
 
 * [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Experience Platform服務來建構、加標籤及增強傳入資料。
 * [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Experience Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。

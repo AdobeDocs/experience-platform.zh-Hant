@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
-title: 在使用者介面中建立Pinterest Ads來源連線
-description: 瞭解如何使用Adobe Experience Platform UI建立Pinterest Ads來源連線。
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
+title: 在UI中建立Pinterest Ads來源連線
+description: 瞭解如何使用Pinterest UI建立Adobe Experience Platform Ads來源連線。
 badge: Beta
 hide: true
 hidefromtoc: true
@@ -19,16 +19,16 @@ ht-degree: 2%
 >
 >此 [!DNL Pinterest Ads] 來源為測試版。 閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
-本教學課程提供建立 [!DNL Pinterest Ads] 使用Adobe Experience Platform使用者介面的來源聯結器。
+本教學課程提供建立 [!DNL Pinterest Ads] 來源聯結器，使用Adobe Experience Platform使用者介面。
 
 ## 快速入門 {#getting-started}
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
-   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器UI建立自訂結構描述。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
+   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
+   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構編輯器UI建立自訂結構描述。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 
 ## 先決條件 {#prerequisites}
 
@@ -38,23 +38,23 @@ ht-degree: 2%
 * 此 [!DNL Pinterest] 廣告帳戶ID。
 * 其中之一 [!DNL Pinterest] 視需要提供行銷活動、廣告群組或廣告ID。
 
-如需這些連線屬性的詳細資訊，請閱讀 [[!DNL Pinterest Ads] 概觀](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
+如需有關這些連線屬性的詳細資訊，請參閱 [[!DNL Pinterest Ads] 概述](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
 ### 建立Platform結構描述 {#create-platform-schema}
 
-您也必須確保先建立Platform結構描述以用於您的 [!DNL Pinterst Ads] 來源。 閱讀教學課程日期： [建立平台結構描述](../../../../../xdm/schema/composition.md) 有關如何建立方案的完整步驟。
+您也必須確保先建立用於的Platform結構 [!DNL Pinterst Ads] 來源。 閱讀有關教學課程 [建立平台結構描述](../../../../../xdm/schema/composition.md) 以取得如何建立綱要的完整步驟。
 
 ![pinterest Ads的平台結構描述範例](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
-如需「 」支援的欄位清單 [!DNL Pinterest] 促銷活動、廣告群組和廣告API，請參閱 [[!DNL Pinterest] 欄位](#pinterest-fields) 區段。
+如需支援的欄位清單， [!DNL Pinterest] 促銷活動、廣告群組和廣告API，請參閱 [[!DNL Pinterest] 欄位](#pinterest-fields) 區段。
 
 ## 連線您的 [!DNL Pinterest Ads] 帳戶 {#connect-account}
 
-在Platform UI中選取 **[!UICONTROL 來源]** 以存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以用來建立帳戶的各種來源。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示各種來源，供您建立帳戶。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項來尋找您要使用的特定來源。
+您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在 *廣告* 類別，選取 **[!UICONTROL pinterest Ads]**，然後選取 **[!UICONTROL 新增資料]**.
+在 *Advertising* 類別，選取 **[!UICONTROL pinterest Ads]**，然後選取 **[!UICONTROL 新增資料]**.
 
 ![Experience Platform上的來源目錄。](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
@@ -80,13 +80,13 @@ ht-degree: 2%
 
 | 欄位 | 說明 |
 | --- | --- |
-| [!UICONTROL ad_account_id] | 您的 [!DNL Pinterest Ads] 廣告帳戶ID。 請參閱 [[!DNL Pinterest] 在廣告管理員中尋找ID的指南](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) 如果您需要任何指引。 |
-| [!UICONTROL object_type] | 選取其中一項 **行銷活動**， **廣告群組** 或 **廣告** 視下列專案而定 [!DNL Pinterest] 您想要從中取得資訊的Analytics API。 |
+| [!UICONTROL ad_account_id] | 您的 [!DNL Pinterest Ads] 廣告帳戶ID。 請參閱 [[!DNL Pinterest] 在Ads Manager中尋找ID指南](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) 如果您需要任何指引。 |
+| [!UICONTROL object_type] | 選取其中一項 **行銷活動**， **廣告群組** 或 **廣告** 視哪些 [!DNL Pinterest] 您想從中取得資訊的Analytics API。 |
 | [!UICONTROL object_ids] | 所選物件的ID。 導覽至 [!DNL Pinterest] 第頁 —  **pinterest商業中心** > **廣告帳戶摘要** > **行銷活動** / **廣告群組** / **廣告** 並複製其每個名稱正下方提及的必要ID。 |
 
 >[!TIP]
 >
->您可以提供多個 `object_ids` 以逗號分隔值。 您可在單一請求中傳遞的ID數量上限為100。 如果傳遞的值不正確，Platform會顯示下列訊息： `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>您可以提供多個 `object_ids` 以逗號分隔值。 您可以在單一請求中傳遞的ID數量上限為100。 如果傳遞的值不正確，Platform會顯示下列訊息： `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 提供值後，選取 **[!UICONTROL 選取]**. 如果提供的值有效，將會填入介面的正確部分（預覽資料）。
 
@@ -94,22 +94,22 @@ ht-degree: 2%
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程，您已建立與的連線， [!DNL Pinterest Ads] 帳戶。 您現在可以繼續下一節教學課程和 [設定資料流以將廣告資料帶入Platform](../../dataflow/advertising.md).
+依照本教學課程中的指示，您已建立與的連線， [!DNL Pinterest Ads] 帳戶。 您現在可以繼續進行下一個教學課程及 [設定資料流以將廣告資料帶入Platform](../../dataflow/advertising.md).
 
 ## 其他資源 {#additional-resources}
 
-以下各節提供其他資源，您可在使用時參照 [!DNL Pinterest Ads] 來源。
+以下各節提供您在使用時，可參考的其他資源 [!DNL Pinterest Ads] 來源。
 
-## 排程 {#scheduling}
+## 正在排程 {#scheduling}
 
-排程您的 [!DNL Pinterest Ads] 資料流進行內嵌時，您必須選取下列其中一個頻率和間隔設定：
+排程您的 [!DNL Pinterest Ads] 針對內嵌的資料流，您必須選取下列其中一個頻率和間隔設定：
 
 | 頻率 | 間隔 |
 | --- | --- |
 | `Day` | 1 |
 | `Hour` | 24 |
 
-如需排程的詳細資訊，請參閱： [!DNL Pinterest Ads] 資料流，請閱讀 [護欄部分 [!DNL Pinterest Ads] 概觀](../../../../connectors/advertising/pinterest-ads.md#guardrails).
+如需排程的詳細資訊， [!DNL Pinterest Ads] 資料流，請閱讀 [護欄部分 [!DNL Pinterest Ads] 概述](../../../../connectors/advertising/pinterest-ads.md#guardrails).
 
 提供排程的值後，請選取 **[!UICONTROL 下一個]**.
 
@@ -119,7 +119,7 @@ ht-degree: 2%
 
 驗證您是否已正確設定來源及 [!DNL Pinterest Ads] 正在擷取資料，請遵循下列步驟：
 
-在Platform UI中選取 **[!UICONTROL 檢視資料流]** 旁邊 [!DNL Pinterest Ads] 目錄頁面上的卡片功能表。 然後，您可以選取 [!UICONTROL 預覽資料集] 驗證已擷取的資料。
+在Platform UI中選取 **[!UICONTROL 檢視資料流]** 在 [!DNL Pinterest Ads] 目錄頁面上的卡片功能表。 然後您可以選取 [!UICONTROL 預覽資料集] 以驗證所擷取的資料。
 
 ![pinterest Ads預覽資料集的Platform UI熒幕擷圖。](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 

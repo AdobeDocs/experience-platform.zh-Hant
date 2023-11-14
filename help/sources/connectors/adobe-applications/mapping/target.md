@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 將Adobe Target事件資料對應至XDM
-description: 瞭解如何將Adobe Target事件欄位對應到體驗資料模型(XDM)結構描述，以便在Adobe Experience Platform中使用。
+description: 瞭解如何將Adobe Target事件欄位對應到體驗資料模型(XDM)結構描述，以便在Adobe Experience Platform使用。
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
@@ -12,21 +12,21 @@ ht-degree: 0%
 
 # 目標對應欄位對應
 
-下表概述Experience Data Model (XDM) Experience Event結構的欄位，以及對應到Adobe Target的對應欄位。 此外，也提供部分對應的其他附註。
+下表概述Experience Data Model (XDM) Experience Event結構描述的欄位，以及對應到Adobe Target中的對應欄位。 此外，也提供部分對應的其他附註。
 
 >[!NOTE]
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| xdm ExperienceEvent欄位 | Target請求欄位 | 附註 |
+| XDM ExperienceEvent欄位 | Target要求欄位 | 附註 |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | 唯一請求識別碼 |
-| **`dataSource`** | | 已設定為所有使用者端的「1」。 |
-| `dataSource._id` | 系統產生的值，無法與要求一併傳入。 | 此資料來源的唯一識別碼。 這將由建立資料來源的個人或系統提供。 |
-| `dataSource.code` | 系統產生的值，無法與要求一併傳入。 | 完整@id的捷徑。 至少可以使用其中一個程式碼或@id。 有時候，此程式碼會稱為資料來源整合程式碼。 |
+| **`dataSource`** | | 設定為所有使用者端的「1」。 |
+| `dataSource._id` | 系統產生的值，無法與要求一併傳入。 | 此資料來源的唯一ID。 這將由個人或建立資料來源的系統來提供。 |
+| `dataSource.code` | 系統產生的值，無法與要求一併傳入。 | 完整@id的捷徑。 至少可以使用其中一個程式碼或@id。 有時候，此程式碼稱為資料來源整合程式碼。 |
 | `dataSource.tags` | 系統產生的值，無法與要求一併傳入。 | 標籤可用來指出應用程式應如何使用這些別名來解譯指定資料來源所代表的別名。<br><br>範例：<br><ul><li>`isAVID`：代表Analytics訪客ID的資料來源。</li><li>`isCRSKey`：代表應在CRS中作為索引鍵使用的別名的資料來源。</li></ul>標籤會在建立資料來源時設定，但也會在參照特定資料來源時納入管道訊息中。 |
 | **`timestamp`** | 事件時間戳記 |
-| **`channel`** | `context.channel` | 僅適用於檢視傳遞。 選項為「Web」和「mobile」，預設值為「Web」。 |
+| **`channel`** | `context.channel` | 僅適用於檢視傳遞。 選項包括「網頁」和「行動裝置」，預設值為「網頁」。 |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
 | `endUserIds.experience.mcId` | `marketingCloudVisitorId` | Experience CloudID (ECID)也稱為MCID，並將繼續用於名稱空間。 |
@@ -52,8 +52,8 @@ ht-degree: 0%
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
 | `experience.target.activities` | 訪客已符合資格的活動清單（陣列） |
-| `experience.target.activities[i].activityID` | 訪客符合資格的任何給定活動的ID |
-| `experience.target.activities[i].version` | 訪客符合資格的任何給定活動的版本 |
+| `experience.target.activities[i].activityID` | 訪客符合資格的任何指定活動的ID |
+| `experience.target.activities[i].version` | 訪客符合資格的任何特定活動的版本 |
 | `experience.target.activities[i].activityEvents` | 包含使用者透過此事件點選的活動事件的詳細資料。 |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
@@ -69,9 +69,9 @@ ht-degree: 0%
 | `placeContext.geo.id` | 隨機UUID （必要） |
 | `placeContext.geo.city` | 根據請求的IP位址解析的城市名稱。 |
 | `placeContext.geo.countryCode` | 根據請求的IP位址解析的國家代碼。 |
-| `placeContext.geo.dmaId` | 根據請求的IP位址解析指定的市場區碼。 |
+| `placeContext.geo.dmaId` | 已根據請求的IP位址解析指定的市場區碼。 |
 | `placeContext.geo.postalCode` | 根據請求的IP位址解析的郵遞區號。 |
-| `placeContext.geo.stateProvince` | 根據請求的IP位址解決的州或省。 |
+| `placeContext.geo.stateProvince` | 根據請求的IP位址解析的州或省。 |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
 | **`commerce`** | | 只有在請求中存在訂單詳細資料時才會設定。 |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |

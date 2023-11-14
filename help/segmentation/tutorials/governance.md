@@ -1,48 +1,48 @@
 ---
 solution: Experience Platform
-title: 使用API強制執行受眾區段的資料使用合規性
+title: 使用API強制對象區段遵守資料使用規範
 type: Tutorial
-description: 本教學課程涵蓋使用API強制資料使用規範區段定義的步驟。
+description: 本教學課程涵蓋使用API強制資料使用法規遵循區段定義的步驟。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '1355'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
 
-# 使用API強制區段定義的資料使用規範
+# 使用API強制區段定義的資料使用合規性
 
-本教學課程涵蓋使用API針對區段定義強制資料使用合規性的步驟。
+本教學課程涵蓋使用API強制區段定義符合資料使用規範的步驟。
 
 ## 快速入門
 
-本教學課程需要您深入瞭解下列元件 [!DNL Adobe Experience Platform]：
+本教學課程需要您實際瞭解下列元件 [!DNL Adobe Experience Platform]：
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md)： [!DNL Real-Time Customer Profile] 是一般查詢實體存放區，用於管理 [!DNL Experience Data Model (XDM)] 資料範圍 [!DNL Platform]. 設定檔可合併各種企業資料資產中的資料，並在統一的簡報中提供該資料的存取權。
-   - [合併原則](../../profile/api/merge-policies.md)：使用的規則 [!DNL Real-Time Customer Profile] 以判斷在特定條件下可以將哪些資料合併到統一檢視中。 可針對資料控管目的設定合併原則。
-- [[!DNL Segmentation]](../home.md)：如何 [!DNL Real-Time Customer Profile] 會將設定檔存放區中包含的大量個人群組劃分為具有類似特徵且對行銷策略有類似回應的較小群組。
-- [資料控管](../../data-governance/home.md)：資料控管使用下列元件，為資料使用標籤和強制執行提供基礎架構：
-   - [資料使用標籤](../../data-governance/labels/user-guide.md)：用來根據處理資料集和欄位各自資料的敏感度層級描述資料集和欄位的標籤。
-   - [資料使用原則](../../data-governance/policies/overview.md)：指出對依特定資料使用標籤分類的資料允許哪些行銷動作的設定。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)： [!DNL Real-Time Customer Profile] 是一般查詢實體存放區，用於管理 [!DNL Experience Data Model (XDM)] 資料範圍 [!DNL Platform]. 設定檔會合併各種企業資料資產的資料，並在統一的簡報中提供該資料的存取權。
+   - [合併原則](../../profile/api/merge-policies.md)：使用的規則 [!DNL Real-Time Customer Profile] 以判斷在特定條件下可以將哪些資料合併到統一檢視中。 您可以針對資料控管目的設定合併原則。
+- [[!DNL Segmentation]](../home.md)：如何 [!DNL Real-Time Customer Profile] 會將設定檔存放區中包含的大量個人群組分割為較小的群組，這些群組具有類似的特徵，且對行銷策略的回應也會類似。
+- [資料控管](../../data-governance/home.md)：資料控管使用下列元件，提供資料使用標籤和執行的基礎結構：
+   - [資料使用情況標籤](../../data-governance/labels/user-guide.md)：根據處理資料集和欄位個別資料的敏感度等級，用來說明資料集和欄位。
+   - [資料使用原則](../../data-governance/policies/overview.md)：指出在特定資料使用標籤分類的資料上允許哪些行銷動作的設定。
    - [原則執行](../../data-governance/enforcement/overview.md)：可讓您強制執行資料使用原則，並防止構成原則違規的資料作業。
-- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
+- [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
 
 以下小節提供您需瞭解的其他資訊，才能成功對 [!DNL Platform] API。
 
-### 讀取範例API呼叫
+### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭，以及正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
 
-### 收集必要標題的值
+### 收集所需標頭的值
 
-為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程後，會在所有標題中提供每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
+為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-中的所有資源 [!DNL Experience Platform] 隔離至特定的虛擬沙箱。 的所有要求 [!DNL Platform] API需要標頭，用於指定將在其中執行操作的沙箱名稱：
+中的所有資源 [!DNL Experience Platform] 會隔離至特定的虛擬沙箱。 所有要求至 [!DNL Platform] API需要標頭，用以指定將進行作業的沙箱名稱：
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -50,15 +50,15 @@ ht-degree: 1%
 >
 >如需中沙箱的詳細資訊 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
-包含裝載(POST、PUT、PATCH)的所有請求都需要額外的標頭：
+所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 
 - Content-Type： application/json
 
 ## 查詢區段定義的合併原則 {#merge-policy}
 
-此工作流程從存取已知的區段定義開始。 已啟用以用於中的區段定義 [!DNL Real-Time Customer Profile] 在其區段定義中包含合併原則ID。 此合併原則包含有關要將哪些資料集納入區段定義中的資訊，而這些資料集又包含任何適用的資料使用標籤。
+此工作流程從存取已知的區段定義開始。 已啟用以用於中的區段定義 [!DNL Real-Time Customer Profile] 在其區段定義中包含合併原則ID。 此合併原則包含要將哪些資料集納入區段定義的資訊，而這些資料集又包含任何適用的資料使用標籤。
 
-使用 [!DNL Segmentation] API的相關資訊，您可以透過區段的ID來查詢區段定義，以尋找與其關聯的合併原則。
+使用 [!DNL Segmentation] API時，您可以利用其ID來查詢區段定義，以尋找其相關聯的合併原則。
 
 **API格式**
 
@@ -68,7 +68,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | 您要查閱的區段定義ID。 |
+| `{SEGMENT_DEFINITION_ID}` | 您要查詢之區段定義的ID。 |
 
 **要求**
 
@@ -125,7 +125,7 @@ curl -X GET \
 
 ## 從合併原則尋找來源資料集 {#datasets}
 
-合併原則包含其來源資料集的相關資訊，而這些資料集又包含資料使用標籤。 您可以在GET要求中提供合併原則ID，查詢合併原則的詳細資料 [!DNL Profile] API。 有關合併原則的更多資訊可在以下網址找到： [合併原則端點指南](../../profile/api/merge-policies.md).
+合併原則包含其來源資料集的相關資訊，而來源資料集又包含資料使用標籤。 您可以在GET要求中提供合併原則ID，查詢合併原則的詳細資料 [!DNL Profile] API。 有關合併原則的更多資訊可在以下網址找到： [合併原則端點指南](../../profile/api/merge-policies.md).
 
 **API格式**
 
@@ -135,7 +135,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | 在中取得的合併原則ID [上一步](#merge-policy). |
+| `{MERGE_POLICY_ID}` | 在中取得的合併原則識別碼 [上一步](#merge-policy). |
 
 **要求**
 
@@ -150,7 +150,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回合併原則的詳細資訊。
+成功的回應會傳回合併原則的詳細資料。
 
 ```json
 {
@@ -177,16 +177,16 @@ curl -X GET \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `schema.name` | 與合併原則關聯的結構描述名稱。 |
-| `attributeMerge.type` | 合併原則的資料優先順序設定型別。 如果值為 `dataSetPrecedence`，與此合併原則關聯的資料集會列在 `attributeMerge > data > order`. 如果值為 `timestampOrdered`，然後是與中參考的結構描述相關聯的所有資料集 `schema.name` 由合併原則使用。 |
+| `attributeMerge.type` | 合併原則的資料優先順序設定型別。 如果值為 `dataSetPrecedence`，與此合併原則關聯的資料集會列在 `attributeMerge > data > order`. 如果值為 `timestampOrdered`，然後與中參照之結構描述關聯的所有資料集 `schema.name` 由合併原則使用。 |
 | `attributeMerge.data.order` | 如果 `attributeMerge.type` 是 `dataSetPrecedence`，此屬性會是陣列，包含此合併原則所使用的資料集ID。 這些ID會用於下一個步驟。 |
 
 ## 評估原則違規的資料集
 
 >[!NOTE]
 >
-> 此步驟假設您至少有一個有效資料使用原則，可防止對包含特定標籤的資料執行特定行銷動作。 如果您沒有任何適用的使用原則適用於正在評估的資料集，請遵循 [原則建立教學課程](../../data-governance/policies/create.md) 以建立一個，然後再繼續此步驟。
+> 此步驟假設您至少有一個有效資料使用原則，可防止在包含特定標籤的資料上執行特定行銷動作。 如果您沒有任何適用的使用原則適用於要評估的資料集，請遵循 [原則建立教學課程](../../data-governance/policies/create.md) 以建立一個，然後再繼續此步驟。
 
-取得合併原則的來源資料集的ID後，您可以使用 [原則服務API](https://www.adobe.io/experience-platform-apis/references/policy-service/) 根據特定行銷動作評估這些資料集，以檢查資料使用原則違規。
+取得合併原則的來源資料集的ID後，您就可以使用 [原則服務API](https://www.adobe.io/experience-platform-apis/references/policy-service/) 根據特定行銷動作評估這些資料集，以檢查資料使用原則違規。
 
 若要評估資料集，您必須在POST請求的路徑中提供行銷動作的名稱，同時在請求內文中提供資料集ID，如下列範例所示。
 
@@ -199,7 +199,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | 參數 | 說明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 與您評估資料集的資料使用原則相關聯的行銷動作名稱。 視原則是由Adobe定義還是您的組織定義而定，您必須使用 `/marketingActions/core` 或 `/marketingActions/custom`（分別）。 |
+| `{MARKETING_ACTION_NAME}` | 與您正在評估資料集的資料使用原則關聯的行銷動作名稱。 視原則是由Adobe還是您的組織定義而定，您必須使用 `/marketingActions/core` 或 `/marketingActions/custom`，依序輸入。 |
 
 **要求**
 
@@ -227,12 +227,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `entityType` | 承載陣列中的每個專案都必須指出所定義的實體型別。 對於此使用案例，值將一律為「dataSet」。 |
+| `entityType` | 承載陣列中的每個專案都必須指出正在定義的實體型別。 對於此使用案例，值將一律為「dataSet」。 |
 | `entityID` | 承載陣列中的每個專案都必須提供資料集的唯一ID。 |
 
 **回應**
 
-成功回應會傳回行銷動作的URI、從所提供資料集收集的資料使用標籤，以及針對這些標籤測試動作所違反的任何資料使用原則清單。 在此範例中，「將資料匯出至第三方」原則顯示在 `violatedPolicies` 陣列，指出行銷動作已觸發原則違規。
+成功的回應會傳回行銷動作的URI、從提供的資料集收集的資料使用標籤，以及針對這些標籤測試動作所違反的任何資料使用原則清單。 在此範例中，「將資料匯出至第三方」原則顯示在 `violatedPolicies` 陣列，指出行銷動作已觸發原則違規。
 
 ```json
 {
@@ -359,8 +359,8 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `duleLabels` | 從提供的資料集中擷取的資料使用標籤清單。 |
-| `discoveredLabels` | 請求承載中提供的資料集清單，顯示可在每個資料集中找到之資料集層級和欄位層級標籤。 |
-| `violatedPolicies` | 陣列會列出測試行銷動作所違反的任何資料使用原則(指定於 `marketingActionRef`)與提供的 `duleLabels`. |
+| `discoveredLabels` | 請求承載中提供的資料集清單，顯示可在每個資料集找到之資料集層級和欄位層級標籤。 |
+| `violatedPolicies` | 陣列，列出測試行銷動作所違反的任何資料使用原則(指定於 `marketingActionRef`)與提供的 `duleLabels`. |
 
 您可以使用API回應中傳回的資料，在體驗應用程式中設定通訊協定，以便在發生原則違規時適當地強制執行。
 
@@ -370,16 +370,16 @@ curl -X POST \
 
 ### 更新區段定義的合併原則
 
-更新區段定義的合併原則將會調整資料集和執行區段作業時要包含的欄位。 請參閱以下小節： [更新現有的合併原則](../../profile/api/merge-policies.md#update) 在API合併原則教學課程中取得更多資訊。
+更新區段定義的合併原則將調整資料集和執行區段作業時要包含的欄位。 請參閱以下小節： [更新現有的合併原則](../../profile/api/merge-policies.md#update) API合併原則教學課程中的詳細資訊。
 
 ### 匯出區段定義時限制特定資料欄位
 
-使用將區段定義匯出至資料集時 [!DNL Segmentation] API時，您可以使用 `fields` 引數。 新增至此引數的任何資料欄位都將包含在匯出中，而所有其他資料欄位則會被排除。
+使用將區段定義匯出至資料集時 [!DNL Segmentation] API時，您可以使用 `fields` 引數。 所有新增至此引數的資料欄位都會包含在匯出中，而所有其他資料欄位則會被排除。
 
-假設區段定義具有名為「A」、「B」和「C」的資料欄位。 如果您只想匯出欄位「C」，則 `fields` 引數只會包含&quot;C&quot;欄位。 如此，匯出區段定義時就會排除「A」和「B」欄位。
+假設區段定義有名為「A」、「B」和「C」的資料欄位。 如果您只想匯出欄位「C」，則 `fields` 引數會單獨包含「C」欄位。 如此一來，匯出區段定義時就會排除「A」和「B」欄位。
 
 請參閱以下小節： [匯出區段定義](./evaluate-a-segment.md#export) 如需詳細資訊，請參閱區段教學課程。
 
 ## 後續步驟
 
-依照本教學課程，您已查詢與區段定義相關聯的資料使用標籤，並測試這些標籤是否違反特定行銷動作的原則。 如需中資料控管的詳細資訊 [!DNL Experience Platform]，請閱讀 [資料控管](../../data-governance/home.md).
+依照本教學課程，您已查詢與區段定義相關聯的資料使用標籤，並測試它們是否違反特定行銷動作的原則。 如需中資料控管的詳細資訊 [!DNL Experience Platform]，請閱讀 [資料控管](../../data-governance/home.md).

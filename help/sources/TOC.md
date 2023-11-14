@@ -7,7 +7,7 @@ feature: Sources
 source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
 workflow-type: tm+mt
 source-wordcount: '989'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -324,7 +324,7 @@ ht-degree: 11%
       - [行銷自動化連線資料流](tutorials/ui/dataflow/marketing-automation.md)
       - [付款連線資料流](tutorials/ui/dataflow/payments.md)
       - [通訊協定連線資料流](tutorials/ui/dataflow/protocols.md)
-   - [在UI中使用範本建立來源資料流](tutorials/ui/templates.md)
+   - [使用 UI 中的範本建立來源資料流](tutorials/ui/templates.md)
    - [隨選擷取](tutorials/ui/on-demand-ingestion.md)
    - [監視批次資料流](tutorials/ui/monitor.md)
    - [監視串流資料流](tutorials/ui/monitor-streaming.md)

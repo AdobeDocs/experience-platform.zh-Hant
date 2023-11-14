@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；目錄；api；取代物件
 solution: Experience Platform
 title: 取代目錄物件
-description: 您可以使用PUT要求來覆寫目錄物件的內容，其中要求裝載會取代整個資源。
+description: 您可以使用PUT要求覆寫目錄物件的內容，其中要求裝載會取代整個資源。
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # 取代目錄物件
 
-您可以覆寫的 [!DNL Catalog] 使用PUT請求的物件，其中整個資源被替換為請求裝載。
+您可以覆寫 [!DNL Catalog] 使用PUT請求的物件，其中整個資源已替換為請求承載。
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要取代的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要取代的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新之特定物件的識別碼。 |
 
 **要求**
@@ -56,7 +56,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回包含被覆寫物件ID的陣列。 此ID應與PUT請求中傳送的ID相符。 執行此物件的GET要求時，現在會顯示其詳細資訊已被取代為先前PUT要求之裝載中提供的詳細資訊。
+成功的回應會傳回包含覆寫物件之識別碼的陣列。 此ID應符合PUT請求中傳送的ID。 執行此物件的GET要求時，現在會顯示其詳細資料已取代為先前PUT要求之裝載中提供的詳細資料。
 
 ```json
 [

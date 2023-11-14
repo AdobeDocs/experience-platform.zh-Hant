@@ -12,7 +12,7 @@ ht-degree: 6%
 
 # 算術函式
 
-算術函式用於對中的值進行基本計算 [!DNL Profile Query Language] (PQL)。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
+算術函式用於對中的值執行基本計算 [!DNL Profile Query Language] (PQL)。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
 
 ## 新增
 
@@ -50,9 +50,9 @@ product1.price + product2.price
 product.inventory * product.price
 ```
 
-## 減法
+## 減
 
-此 `-` （減法）函式可用來找出兩個引數運算式的差異。
+此 `-` （減法）函式用於找出兩個引數運算式的差異。
 
 **格式**
 
@@ -80,7 +80,7 @@ product1.price - product2.price
 
 **範例**
 
-下列PQL查詢會找出已售出產品總數與已賺取金額總數之間的商數，以檢視每個專案的平均成本。
+下列PQL查詢會找出產品銷售總計與收入總計之間的商，以檢視每個專案的平均成本。
 
 ```sql
 totalProduct.price / totalProduct.sold
@@ -98,7 +98,7 @@ totalProduct.price / totalProduct.sold
 
 **範例**
 
-以下PQL查詢會檢查個人的年齡是否可被5歲整除。
+以下PQL查詢檢查個人的年齡是否可被5整除。
 
 ```sql
 person.age % 5 = 0
@@ -106,4 +106,4 @@ person.age % 5 = 0
 
 ## 後續步驟
 
-現在您已了解算術函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已了解算術函式，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

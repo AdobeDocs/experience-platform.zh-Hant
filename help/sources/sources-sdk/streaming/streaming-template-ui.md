@@ -91,7 +91,7 @@ ht-degree: 1%
 
 ![來源工作流程的資料流詳細資料步驟。](../assets/streaming/dataflow-detail.png)
 
-## 映射
+## 對應
 
 此 [!UICONTROL 對應] 步驟隨即顯示，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: PQL比較函式
-description: 比較函式可用來比較不同運算式和值之間的差異，並據此傳回「true」或「false」。
+description: 比較函式是用來比較不同運算式和值之間的差異，並傳回「true」或「false」。
 exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 10%
 
 # 比較函式
 
-比較函式可用來比較不同運算式和值之間的差異，並傳回 `true` 或 `false` 因此， 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
+比較函式是用來比較不同運算式和值之間的差異，傳回 `true` 或 `false` 視情況而定。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
 
 ## 等於
 
@@ -26,7 +26,7 @@ ht-degree: 10%
 
 **範例**
 
-下列PQL查詢會檢查住家地址所在的國家/地區是否位於加拿大。
+下列PQL查詢會檢查住家地址國家/地區是否位於加拿大。
 
 ```sql
 homeAddress.countryISO = "CA"
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA"
 
 ## 不等於
 
-此 `!=` （不等於）函式檢查一個值或運算式是否為 **not** 等於另一個值或運算式。
+此 `!=` （不等於）函式檢查一個值或運算式是否為 **非** 等於另一個值或運算式。
 
 **格式**
 
@@ -44,7 +44,7 @@ homeAddress.countryISO = "CA"
 
 **範例**
 
-下列PQL查詢會檢查住家地址所在的國家/地區是否不在加拿大。
+下列PQL查詢會檢查住家地址國家/地區是否不在加拿大。
 
 ```sql
 homeAddress.countryISO != "CA"
@@ -62,7 +62,7 @@ homeAddress.countryISO != "CA"
 
 **範例**
 
-以下PQL查詢定義生日未在1月或2月的人。
+以下PQL查詢定義生日在1月或2月以下的人。
 
 ```sql
 person.birthMonth > 2
@@ -80,7 +80,7 @@ person.birthMonth > 2
 
 **範例**
 
-以下PQL查詢定義生日未在1月或2月的人。
+以下PQL查詢定義生日在1月或2月以下的人。
 
 ```sql
 person.birthMonth >= 3
@@ -124,4 +124,4 @@ person.birthMonth <= 2
 
 ## 後續步驟
 
-現在您已瞭解比較函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已瞭解比較函式，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

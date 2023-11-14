@@ -6,7 +6,7 @@ description: 本文件逐步說明如何存取 Adobe Experience Platform 開發�
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2205'
+source-wordcount: '2204'
 ht-degree: 7%
 
 ---
@@ -220,7 +220,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `token_type` | 傳回的權杖型別。 若為存取權杖，此值一律為 `bearer`. |
+| `token_type` | 型別 of 正在傳回權杖。 若為存取權杖，此值一律為 `bearer`. |
 | `access_token` | 產生的 `{ACCESS_TOKEN}`. 此值(前置詞為 `Bearer`，為必要項 `Authentication` 所有Platform API呼叫的標題。 |
 | `expires_in` | 存取Token過期前的剩餘毫秒數。 此值達到0後，必須產生新的存取權杖才能繼續使用Platform API。 |
 

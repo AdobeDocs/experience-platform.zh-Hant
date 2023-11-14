@@ -18,9 +18,9 @@ ht-degree: 6%
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
-   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置組塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器UI建立自訂結構描述。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
+   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
+   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構編輯器UI建立自訂結構描述。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 
 ### 收集必要的認證
 
@@ -28,26 +28,26 @@ ht-degree: 6%
 
 | 認證 | 說明 | 範例 |
 | --- | --- | --- |
-| 子網域 | 您在註冊過程中建立之帳戶的特定唯一網域。 | `yoursubdomain` |
+| 子網域 | 您在註冊過程中所建立帳戶的特定唯一網域。 | `yoursubdomain` |
 | 存取權杖 | Zendesk API權杖。 | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
-如需驗證您的憑證的詳細資訊 [!DNL Zendesk] 來源，請參閱 [[!DNL Zendesk] 來源概觀](../../../../connectors/customer-success/zendesk.md).
+如需驗證 [!DNL Zendesk] 來源，請參閱 [[!DNL Zendesk] 來源概觀](../../../../connectors/customer-success/zendesk.md).
 
 ![Zendesk API權杖](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### 建立平台結構描述 [!DNL Zendesk]
+### 建立Platform結構描述 [!DNL Zendesk]
 
-建立之前 [!DNL Zendesk] 來源連線時，您必須先建立平台結構描述以用於您的來源。 請參閱教學課程，位置如下： [建立平台結構描述](../../../../../xdm/schema/composition.md) 有關如何建立方案的完整步驟。
+建立之前 [!DNL Zendesk] 來源連線中，您必須先建立用於來源的Platform結構。 請參閱上的教學課程 [建立平台結構描述](../../../../../xdm/schema/composition.md) 以取得如何建立綱要的完整步驟。
 
-如需更多有關您的電腦的指引， [!DNL Zendesk] 結構描述是 [!DNL Zendesk Search API]，請參閱 [限制](#limits) 區段底下。
+有關您的詳細資訊 [!DNL Zendesk] 架構須用於 [!DNL Zendesk Search API]，請參閱 [限制](#limits) 一節。
 
 ![建立結構描述](../../../../images/tutorials/create/zendesk/schema.png)
 
 ## 連線您的 [!DNL Zendesk] 帳戶
 
-在Platform UI中選取 **[!UICONTROL 來源]** 以存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示您可以用來建立帳戶的各種來源。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示各種來源，供您建立帳戶。
 
-您可以從畫面左側的目錄中選取適當的類別。 或者，您也可以使用搜尋選項來尋找您要使用的特定來源。
+您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
 在 *客戶成功* 類別，選取 **[!UICONTROL Zendesk]**，然後選取 **[!UICONTROL 新增資料]**.
 
@@ -75,7 +75,7 @@ ht-degree: 6%
 
 ## 後續步驟
 
-依照本教學課程所述，您已驗證並建立您與 [!DNL Zendesk] 帳戶和平台。 您現在可以繼續下一節教學課程和 [建立資料流，將客戶成功資料匯入Platform](../../dataflow/customer-success.md).
+依照本教學課程所述，您已驗證並建立您與 [!DNL Zendesk] 帳戶和平台。 您現在可以繼續進行下一個教學課程及 [建立資料流，將客戶成功資料匯入Platform](../../dataflow/customer-success.md).
 
 ## 其他資源
 
@@ -89,7 +89,7 @@ ht-degree: 6%
 
 ![活動頁面](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
-接著，選取您要檢視之資料流的資料流執行ID，以檢視有關該資料流執行的特定詳細資訊。
+接著，選取您要檢視之資料流程的資料流程執行ID，以檢視有關該資料流程執行的特定詳細資訊。
 
 ![資料流頁面](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
@@ -97,7 +97,7 @@ ht-degree: 6%
 
 ![Zendesk資料集](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-您也可以根據您網站上的資料，驗證Platform資料。 [!DNL Zendesk] > [!DNL Customers] 頁面。
+您也可以根據您網站上的資料，驗證Platform資料 [!DNL Zendesk] > [!DNL Customers] 頁面。
 
 ![zendesk-customers](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 
@@ -154,6 +154,6 @@ ht-degree: 6%
 
 * 此 [Zendesk Search API >匯出搜尋結果](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) 每頁最多傳回1000筆記錄。
    * 的值 ``filter[type]`` 引數已設為 ``user`` 因此，Zendesk連線只會傳回使用者。
-   * 每頁的結果數量由 ``page[size]`` 引數。 值設為 ``100``. 這麼做是為了減少Zendesk設定的減速限制的影響。
+   * 每頁的結果數量由管理 ``page[size]`` 引數。 值設為 ``100``. 這麼做是為了減少Zendesk所設定的減速限制的影響。
    * 另請參閱 [限制](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) 和 [分頁](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).
    * 您也可以參閱 [使用游標分頁來分頁清單](https://developer.zendesk.com/documentation/developer-tools/pagination/paginating-through-lists-using-cursor-pagination/).

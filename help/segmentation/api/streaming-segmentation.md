@@ -6,7 +6,7 @@ exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
 source-wordcount: '1956'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -32,17 +32,17 @@ ht-degree: 1%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
 - [[!DNL Segmentation]](../home.md)：提供使用區段定義和其他外部來源建立對象的功能，來源為 [!DNL Real-Time Customer Profile] 資料。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。
 
 以下小節提供您需瞭解的其他資訊，才能成功對進行呼叫 [!DNL Platform] API。
 
-### 讀取範例API呼叫
+### 讀取範例 API 呼叫
 
-本開發人員指南提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標題和正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本開發人員指南提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
 
-### 收集所需標題的值
+### 收集所需標頭的值
 
-為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有中每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
+為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -56,7 +56,7 @@ ht-degree: 1%
 >
 >如需中沙箱的詳細資訊 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
-包含裝載(POST、PUT、PATCH)的所有請求都需要額外的標頭：
+所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 
 - Content-Type： application/json
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 
 為了使用串流區段來評估區段定義，查詢必須符合以下准則。
 
-| 查詢型別 | 詳細資訊 |
+| 查詢型別 | 詳細資料 |
 | ---------- | ------- |
 | 單一事件 | 任何會參照沒有時間限制的單一傳入事件的區段定義。 |
 | 相對時間範圍內的單一事件 | 任何參考單一傳入事件的區段定義。 |

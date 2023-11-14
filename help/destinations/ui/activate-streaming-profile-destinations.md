@@ -1,6 +1,6 @@
 ---
 keywords: 啟用設定檔目的地；啟用目的地；啟用資料；啟用電子郵件行銷目的地；啟用雲端儲存空間目的地
-title: 啟用受眾至串流設定檔匯出目的地
+title: 啟用受眾以串流設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將受眾傳送至串流設定檔型目的地，以啟用您在Adobe Experience Platform中的受眾資料。
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
@@ -12,7 +12,7 @@ ht-degree: 5%
 ---
 
 
-# 啟用受眾至串流設定檔匯出目的地
+# 啟用受眾以串流設定檔匯出目的地
 
 >[!IMPORTANT]
 > 
@@ -27,7 +27,7 @@ ht-degree: 5%
 
 ## 先決條件 {#prerequisites}
 
-若要啟用目的地的資料，您必須已成功 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地並設定您要使用的目的地。
+若要啟用目的地的資料，您必須已成功 [已連線至目的地](./connect-destination.md). 如果您尚未這麼做，請前往 [目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
 
 ## 選取您的目的地 {#select-destination}
 
@@ -35,27 +35,27 @@ ht-degree: 5%
 
    ![顯示目的地目錄索引標籤的影像。](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. 選取 **[!UICONTROL 啟用對象]** 位於對應您要啟用對象之目的地的卡片上，如下圖所示。
+1. 選取 **[!UICONTROL 啟用對象]** 位於您要啟用對象之目的地的對應卡片上，如下圖所示。
 
    ![在目的地目錄標籤中反白啟用對象控制項的影像。](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. 選取您要用來啟用對象的目的地連線，然後選取 **[!UICONTROL 下一個]**.
+1. 選取您要用來啟用對象的目的地連線，然後選取「 」 **[!UICONTROL 下一個]**.
 
-   ![此影像顯示兩個您可連線之目的地的選取範圍。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![此影像顯示您可以連線到的兩個目的地的選取範圍。](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. 移至下一區段至 [選取您的對象](#select-audiences).
+1. 移至下一個區段至 [選取您的對象](#select-audiences).
 
 ## 選取您的對象 {#select-audiences}
 
-若要選取您想要啟用至目的地的對象，請使用對象名稱左邊的核取方塊，然後選取 **[!UICONTROL 下一個]**.
+若要選取您要啟用至目的地的對象，請使用對象名稱左邊的核取方塊，然後選取「 」 **[!UICONTROL 下一個]**.
 
 您可以根據對象的來源，從多種對象型別中進行選取：
 
-* **[!UICONTROL 細分服務]**：細分服務在Experience Platform中產生的對象。 請參閱 [細分檔案](../../segmentation/ui/overview.md) 以取得更多詳細資料。
-* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要進一步瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL 分段服務]**：細分服務在Experience Platform中產生的對象。 請參閱 [細分檔案](../../segmentation/ui/overview.md) 以取得更多詳細資料。
+* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
 * 其他型別的對象，源自其他Adobe解決方案，例如 [!DNL Audience Manager].
 
-![反白啟用工作流程選取對象步驟中核取方塊選取範圍的影像。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
+![在啟動工作流程的「選取對象」步驟中，反白核取方塊選取範圍的影像。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## 選取設定檔屬性 {#select-attributes}
 
@@ -63,7 +63,7 @@ ht-degree: 5%
 
 1. 在 **[!UICONTROL 選取屬性]** 頁面，選取 **[!UICONTROL 新增欄位]**.
 
-   ![在對應步驟中反白顯示「新增欄位」控制項的影像。](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![在對應步驟中反白新增欄位控制項的影像。](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. 選取右側的箭頭 **[!UICONTROL 結構描述欄位]** 登入點。
 
@@ -73,13 +73,13 @@ ht-degree: 5%
 
    ![顯示可選取作為來源欄位的一系列XDM欄位的影像。](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-1. 若要新增更多欄位，請重複步驟1至3，然後選取 **[!UICONTROL 下一個]**.
+1. 若要新增更多欄位，請重複步驟1至3，然後選取「 」 **[!UICONTROL 下一個]**.
 
 ## 請檢閱 {#review}
 
-於 **[!UICONTROL 檢閱]** 頁面中，您可以看到選取範圍的摘要。 選取 **[!UICONTROL 取消]** 若要分解流量， **[!UICONTROL 返回]** 修改您的設定，或 **[!UICONTROL 完成]** 以確認您的選擇並開始傳送資料至目的地。
+在 **[!UICONTROL 檢閱]** 頁面中，您可以看到選取範圍的摘要。 選取 **[!UICONTROL 取消]** 若要分解流量， **[!UICONTROL 返回]** 以修改您的設定，或 **[!UICONTROL 完成]** 以確認您的選取範圍並開始傳送資料至目的地。
 
-![稽核步驟中的選取專案摘要。](../assets/ui/activate-streaming-profile-destinations/review.png)
+![稽核步驟中的選取範圍摘要。](../assets/ui/activate-streaming-profile-destinations/review.png)
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
@@ -87,7 +87,7 @@ ht-degree: 5%
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 
-在 **[!UICONTROL 檢閱]** 步驟，Experience Platform也會檢查是否有任何資料使用原則違規。 以下是違反原則的範例。 在解決違規之前，您無法完成對象啟用工作流程。 如需有關如何解決原則違規的資訊，請閱讀關於 [資料使用原則違規](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) （位於資料控管檔案區段）。
+在 **[!UICONTROL 檢閱]** 步驟，Experience Platform也會檢查是否有任何資料使用原則違規。 以下是違反原則的範例。 在解決違規之前，您無法完成對象啟用工作流程。 如需有關如何解決原則違規的資訊，請參閱 [資料使用原則違規](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) 資料控管檔案區段中的。
 
 ![資料原則違規](../assets/common/data-policy-violation.png)
 
@@ -97,11 +97,11 @@ ht-degree: 5%
 
 ![熒幕錄製，顯示稽核步驟中可用的對象篩選器。](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
-如果您對您的選擇感到滿意，並且未偵測到任何原則違規，請選取 **[!UICONTROL 完成]** 以確認您的選擇並開始傳送資料至目的地。
+如果您對您的選取感到滿意，並且未偵測到任何原則違規，請選取 **[!UICONTROL 完成]** 以確認您的選取範圍並開始傳送資料至目的地。
 
 ## 驗證受眾啟用 {#verify}
 
-您的匯出 [!DNL Experience Platform] 資料以JSON格式登陸您的目標目的地。 例如，下列事件包含符合特定對象資格並退出其他對象之設定檔的電子郵件地址屬性。 此潛在客戶的身分是 `ECID` 和 `email_lc_sha256`.
+您的匯出 [!DNL Experience Platform] 資料會以JSON格式登陸至您的目標目的地。 例如，下列事件包含符合特定對象資格並退出其他對象之設定檔的電子郵件地址屬性。 此潛在客戶的身分是 `ECID` 和 `email_lc_sha256`.
 
 ```json
 {

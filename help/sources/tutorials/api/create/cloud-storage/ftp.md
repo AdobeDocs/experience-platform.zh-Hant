@@ -8,7 +8,7 @@ exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
 source-wordcount: '476'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -16,18 +16,18 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->FTP聯結器為Beta版。 功能和檔案可能會有所變更。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得使用Beta標籤聯結器的詳細資訊。
+>FTP聯結器為Beta版。 功能和檔案可能會有所變更。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用Beta標籤聯結器的詳細資訊。
 
-基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
+基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
 本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL FTP] （檔案傳輸通訊協定）使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用以下專案來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
 
 以下小節提供成功連線至所需的其他資訊 [!DNL FTP] 伺服器使用 [!DNL Flow Service] API。
 
@@ -37,20 +37,20 @@ ht-degree: 1%
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `host` | 與您的關聯的名稱或IP位址 [!DNL FTP] 伺服器。 |
-| `username` | 您擁有存取許可權的使用者名稱 [!DNL FTP] 伺服器。 |
+| `host` | 與您的裝置相關聯的名稱或IP位址 [!DNL FTP] 伺服器。 |
+| `username` | 可存取您的使用者名稱 [!DNL FTP] 伺服器。 |
 | `password` | 您的密碼 [!DNL FTP] 伺服器。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL FTP] 為： `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../../landing/api-guide.md).
 
 ## 建立基礎連線
 
-基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基本連線ID可讓您瀏覽和瀏覽來源內的檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-POST若要建立基本連線ID，請向 `/connections` 端點，同時提供 [!DNL FTP] 要求引數中的驗證認證。
+若要建立基本連線ID，請向以下連線ID發出POST請求： `/connections` 端點，同時提供 [!DNL FTP] 要求引數中的驗證認證。
 
 **API格式**
 
@@ -108,4 +108,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已使用建立FTP連線： [!DNL Flow Service] API中，且已取得連線的唯一ID值。 您可以使用此連線ID來 [使用流量服務API探索雲端儲存空間](../../explore/cloud-storage.md).
+依照本教學課程，您已使用建立FTP連線， [!DNL Flow Service] API，並已取得連線的唯一ID值。 您可以使用此連線ID [使用流量服務API探索雲端儲存空間](../../explore/cloud-storage.md).

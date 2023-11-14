@@ -13,11 +13,11 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-Adobe Analytics資料彙集的運作方式是將XDM資料轉譯成Adobe Analytics可以理解的格式。 多個XDM欄位包括 [自動對應](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) 至Analytics變數。
+Adobe Analytics資料收集的運作方式是將XDM資料轉譯成Adobe Analytics可以理解的格式。 多個XDM欄位包括 [自動對應](../edge/data-collection/adobe-analytics/automatically-mapped-vars.md) 至Analytics變數。
 
 您也可以 [手動對應XDM值](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) 至舊版Analytics變數。
 
-若要讓Adobe Analytics接收來自伺服器API的資料，您需要 [設定您的資料串流](../datastreams/overview.md#adobe-analytics-settings) 若要將事件轉送至Adobe Analytics，請在資料流設定頁面中輸入報表套裝ID。
+若要讓Adobe Analytics能夠接收來自伺服器API的資料，您必須 [設定您的資料串流](../datastreams/overview.md#adobe-analytics-settings) 若要將事件轉送至Adobe Analytics，請在資料流設定頁面中輸入報表套裝ID。
 
 ![Adobe Analytics資料流設定](assets/analytics-datastream.png)
 
@@ -31,9 +31,9 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### 請求 {#request}
 
-以下範例包含下列專案中的數個自動對應值： `_experience.analytics` 欄位群組。 它也包括以JSON為基礎的資料層。 雖然這些資料層無法自動對應，但您可以使用 [資料收集的資料準備](../datastreams/data-prep.md) 將這些值對應到包含上述欄位群組的結構描述。
+以下範例包含數個自動對映的值，來自 `_experience.analytics` 欄位群組。 它也包括以JSON為基礎的資料層。 雖然這些資料層無法自動對應，但您可以使用 [資料收集的資料準備](../datastreams/data-prep.md) 將這些值對應到包含上述欄位群組的結構描述。
 
-使用者對應至這些欄位的所有值都會自動對應至適當的Analytics值，就好像這些值包含在API請求中一樣。
+使用者對應到這些欄位的所有值都會自動對應到適當的Analytics值，就像這些值包含在API請求中一樣。
 
 ```shell
 curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \

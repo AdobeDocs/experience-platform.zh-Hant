@@ -19,12 +19,12 @@ ht-degree: 0%
 
 ## 無法無痕存取Chrome中的Attribution AI
 
-由於Google Chrome無痕模式安全性設定有所更新，導致Google Chrome無痕模式中發生載入錯誤。 這個問題正在積極與Chrome合作，使experience.adobe.com成為受信任的網域。
+由於Google Chrome無痕模式安全性設定有所更新，導致Google Chrome無痕模式中的載入錯誤出現。 這個問題正由Chrome積極處理，以讓experience.adobe.com成為信任的網域。
 
 <img src="./images/faq/error.PNG" width="500" /><br />
 
 ### 建議的修正
 
-若要解決此問題，您需要將experience.adobe.com新增為可隨時使用Cookie的網站。 首先，請瀏覽至 **chrome://settings/cookies**. 接下來，向下捲動至 **自訂行為** 區段，然後選取 **新增** 按鈕（在「可隨時使用Cookie的網站」旁）。 在出現的彈出視窗中，複製並貼上 `[*.]experience.adobe.com` 然後選取 **包含第三方Cookie** 「在此網站上」核取方塊。 完成後，選取 **新增** 和以無痕方式重新載入Attribution AI。
+若要解決此問題，您需要將experience.adobe.com新增為可隨時使用Cookie的網站。 首先，瀏覽至 **chrome://settings/cookies**. 接下來，向下捲動至 **自訂行為** 區段，然後選取 **新增** 按鈕（在「可隨時使用Cookie的網站」旁）。 在出現的彈出視窗中，複製並貼上 `[*.]experience.adobe.com` 然後選取 **包含第三方Cookie** [在此網站上]核取方塊。 完成後，選取 **新增** 和以無痕方式重新載入Attribution AI。
 
 ![建議的修正](./images/faq/cookies2.gif)

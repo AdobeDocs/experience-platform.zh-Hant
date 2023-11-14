@@ -1,16 +1,16 @@
 ---
-title: Amazon Redshift來源聯結器總覽
+title: Amazon Redshift來源聯結器概述
 description: 瞭解如何使用API或使用者介面將Amazon Redshift連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-# [!DNL Amazon Redshift] source
+# [!DNL Amazon Redshift] 來源
 
 >[!IMPORTANT]
 >
@@ -22,17 +22,17 @@ Experience Platform支援從協力廠商資料庫擷取資料。 Platform可以�
 
 ## IP位址允許清單
 
-在使用來源聯結器之前，必須將IP位址清單新增至允許清單。 使用來源時，若未將您地區專屬的IP位址新增至允許清單，可能會導致錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
 
-以下檔案提供有關如何連線的資訊 [!DNL Amazon Redshift] 使用API或使用者介面的to Platform：
+以下檔案提供有關如何連線的資訊 [!DNL Amazon Redshift] 使用API或使用者介面至Platform：
 
-## Connect [!DNL Amazon Redshift] 使用API移至Platform
+## 連線 [!DNL Amazon Redshift] 使用API移至Platform
 
-- [使用Flow Service API建立Amazon Redshift基本連線](../../tutorials/api/create/databases/redshift.md)
-- [使用Flow Service API探索資料表](../../tutorials/api/explore/tabular.md)
+- [使用流量服務API建立Amazon Redshift基本連線](../../tutorials/api/create/databases/redshift.md)
+- [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 - [使用流程服務API為資料庫來源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL Amazon Redshift] 使用UI移至Platform
+## 連線 [!DNL Amazon Redshift] 使用UI移至Platform
 
 - [在UI中建立Amazon Redshift來源連線](../../tutorials/ui/create/databases/redshift.md)
 - [在UI中建立資料庫來源連線的資料流](../../tutorials/ui/dataflow/databases.md)

@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->刪除物件時請格外留意，因為此動作無法復原，且可能在的其他位置產生重大變更。 [!DNL Experience Platform].
+>刪除物件時請格外小心，因為此動作無法復原，且可能在的其他位置產生重大變更。 [!DNL Experience Platform].
 
 **API格式**
 
@@ -31,7 +31,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要刪除的物件。 有效物件包括： <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新之特定物件的識別碼。 |
 
 **要求**
@@ -49,7 +49,7 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200 （確定）以及包含已刪除資料集ID的陣列。 此ID應與DELETE請求中傳送的ID相符。 對已刪除的物件執行GET要求會傳回HTTP狀態404 （找不到），確認資料集已成功刪除。
+成功的回應會傳回HTTP狀態200 （確定）以及包含已刪除資料集ID的陣列。 此ID應符合DELETE請求中傳送的ID。 對已刪除的物件執行GET要求時，會傳回HTTP狀態404 （找不到），確認資料集已成功刪除。
 
 ```json
 [
@@ -59,4 +59,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->若否 [!DNL Catalog] 物件符合請求中提供的ID，您仍可能會收到HTTP狀態碼200，但回應陣列將是空的。
+>若否 [!DNL Catalog] 物件符合請求中提供的ID，您仍可能會收到HTTP狀態代碼200，但回應陣列將是空的。

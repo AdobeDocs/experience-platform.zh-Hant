@@ -5,7 +5,7 @@ exl-id: 4640afdd-b012-4768-8586-32f1b8232879
 source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -83,7 +83,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 如果您要為該查詢範本排定執行，請從適當的資料列選取範本名稱，以切換作業選項至「查詢編輯器」，然後遵循下列步驟 [新增排程至查詢的指示](./query-schedules.md#create-schedule) 如檔案所述。
 
-### 訂閱警示 {#alert-subscription}
+### 訂閱警報 {#alert-subscription}
 
 若要訂閱排程查詢執行的警示，請選取您要管理的排程查詢的省略符號，然後選取 **[!UICONTROL 訂閱]** 從躍現式選單中的選項。
 

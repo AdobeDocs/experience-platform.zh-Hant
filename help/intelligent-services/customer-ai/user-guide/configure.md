@@ -155,7 +155,7 @@ Customer AI在設計上會使用Adobe Analytics、Adobe Audience Manager、一�
 
 ![任何範例](../images/user-guide/any-of.png)
 
-### 合格的母體 *（選擇性）*
+### 符合資格的母體 *（選擇性）*
 
 依預設，除非指定合格的母體，否則所有設定檔都會產生傾向分數。 您可以定義條件，以根據事件包含或排除設定檔，藉此指定合格的母體。
 

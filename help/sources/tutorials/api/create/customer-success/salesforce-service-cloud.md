@@ -8,7 +8,7 @@ exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
 workflow-type: tm+mt
 source-wordcount: '501'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南需要您深入瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
 * [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用以下專案來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
 * [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。

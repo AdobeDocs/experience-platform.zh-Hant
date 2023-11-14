@@ -2,7 +2,7 @@
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API
 title: 設定檔匯出作業API端點
 type: Documentation
-description: 即時客戶個人檔案可讓您透過彙集來自多個來源的資料（包括屬性資料和行為資料），在Adobe Experience Platform中建立個別客戶的單一檢視。 然後可將設定檔資料匯出至資料集，以供進一步處理。
+description: 即時客戶個人檔案可讓您結合來自多個來源的資料（包括屬性資料和行為資料），在Adobe Experience Platform中建立個別客戶的單一檢視。 然後，可將設定檔資料匯出至資料集，以供進一步處理。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
@@ -13,33 +13,33 @@ ht-degree: 2%
 
 # 設定檔匯出作業端點
 
-[!DNL Real-Time Customer Profile] 可讓您彙集來自多個來源的資料（包括屬性資料和行為資料），以建立個別客戶的單一檢視。 然後可將設定檔資料匯出至資料集，以供進一步處理。 例如， [!DNL Profile] 可透過建立對象來匯出資料以供啟用，且可匯出設定檔屬性以供報告。
+[!DNL Real-Time Customer Profile] 可讓您彙集來自多個來源的資料（包括屬性資料和行為資料），以建立個別客戶的單一檢視。 然後，可將設定檔資料匯出至資料集，以供進一步處理。 例如， [!DNL Profile] 可透過建立受眾來匯出資料以供啟用，且可匯出設定檔屬性以供報告。
 
-本檔案提供逐步指示，說明如何使用建立和管理匯出作業。 [設定檔API](https://www.adobe.com/go/profile-apis-en).
+本檔案提供逐步指示，說明如何使用 [設定檔API](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
->本指南說明中匯出工作的使用 [!DNL Profile API]. 如需如何管理Adobe Experience Platform Segmentation Service匯出作業的詳細資訊，請參閱以下指南： [匯出分段API中的工作](../../profile/api/export-jobs.md).
+>本指南說明中匯出作業的使用情況。 [!DNL Profile API]. 如需如何管理Adobe Experience Platform Segmentation Service匯出作業的詳細資訊，請參閱以下指南： [匯出分段API中的作業](../../profile/api/export-jobs.md).
 
-除了建立匯出作業之外，您也可以存取 [!DNL Profile] 資料使用 `/entities` 端點，也稱為&quot;[!DNL Profile Access]「。 請參閱 [實體端點指南](./entities.md) 以取得詳細資訊。 如需如何存取的步驟 [!DNL Profile] 使用UI的資料，請參閱 [使用手冊](../ui/user-guide.md).
+除了建立匯出作業之外，您也可以存取 [!DNL Profile] 資料使用 `/entities` 端點，也稱為&quot;[!DNL Profile Access]「。 請參閱 [entities端點指南](./entities.md) 以取得詳細資訊。 如需如何存取的步驟 [!DNL Profile] 資料使用UI，請參閱 [使用手冊](../ui/user-guide.md).
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [!DNL Real-Time Customer Profile] API。 在繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功對任一檔案發出呼叫所需必要標題的重要資訊 [!DNL Experience Platform] API。
+本指南中使用的API端點屬於 [!DNL Real-Time Customer Profile] API。 在繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何專案所需標題的重要資訊 [!DNL Experience Platform] API。
 
-## 建立匯出工作
+## 建立匯出作業
 
-匯出 [!DNL Profile] 資料需要先建立資料將匯出到的資料集，然後起始新的匯出工作。 這兩個步驟都可以使用Experience PlatformAPI來完成，前者使用目錄服務API，後者使用即時客戶設定檔API。 完成每個步驟的詳細指示在以下各節中概述。
+匯出 [!DNL Profile] 資料需要先建立資料匯出到的資料集，然後起始新的匯出工作。 這兩個步驟都可以使用Experience PlatformAPI來完成，前者使用目錄服務API，後者使用即時客戶設定檔API。 完成每個步驟的詳細指示在以下各節中概述。
 
 ### 建立目標資料集
 
 匯出時 [!DNL Profile] 資料，必須先建立目標資料集。 請務必正確設定資料集，以確保匯出成功。
 
-主要考量事項之一是資料集所根據的結構描述(`schemaRef.id` （位於以下的API範例請求中）。 為了匯出設定檔資料，資料集必須以 [!DNL XDM Individual Profile] 聯合結構描述(`https://ns.adobe.com/xdm/context/profile__union`)。 聯合結構描述是系統產生的唯讀結構描述，可彙總共用相同類別的結構描述欄位。 在此案例中，這是 [!DNL XDM Individual Profile] 類別。 如需聯合檢視結構描述的詳細資訊，請參閱 [結構描述組合基本知識指南中的聯合區段](../../xdm/schema/composition.md#union).
+重要考量事項之一是資料集所根據的結構描述(`schemaRef.id` （位於以下的API範例請求中）。 為了匯出設定檔資料，資料集必須以 [!DNL XDM Individual Profile] 聯合結構描述(`https://ns.adobe.com/xdm/context/profile__union`)。 聯合結構描述是系統產生的唯讀結構描述，可彙總共用相同類別的結構描述欄位。 在此案例中，這就是 [!DNL XDM Individual Profile] 類別。 如需聯合檢視結構描述的詳細資訊，請參閱 [結構描述組合基礎指南中的聯合區段](../../xdm/schema/composition.md#union).
 
-本教學課程後續步驟會概述如何建立參照 [!DNL XDM Individual Profile] 使用聯合結構描述 [!DNL Catalog] API。 您也可以使用 [!DNL Platform] 使用者介面來建立參考聯合結構描述的資料集。 以下列出使用UI的步驟： [此用於匯出受眾的UI教學課程](../../segmentation/tutorials/create-dataset-export-segment.md) 但也適用於此處。 完成後，您可以返回本教學課程，繼續的步驟 [起始新的匯出工作](#initiate).
+本教學課程後續步驟將概述如何建立參照 [!DNL XDM Individual Profile] 使用聯合結構描述 [!DNL Catalog] API。 您也可以使用 [!DNL Platform] 使用者介面來建立參考聯合結構的資料集。 有關使用UI的步驟，請參閱 [此用於匯出對象的UI教學課程](../../segmentation/tutorials/create-dataset-export-segment.md) 但也適用於此處。 完成後，您可以返回本教學課程以繼續的步驟 [起始新的匯出工作](#initiate).
 
-如果您已有相容的資料集且知道其ID，您可以直接繼續進行以下步驟： [起始新的匯出工作](#initiate).
+如果您已經有相容的資料集並知道其ID，您可以直接進行步驟 [起始新的匯出工作](#initiate).
 
 **API格式**
 
@@ -85,7 +85,7 @@ curl -X POST \
 
 ### 啟動匯出工作 {#initiate}
 
-擁有聯合儲存資料集後，您可以透過向以下專案發出POST請求，建立匯出工作以將設定檔資料儲存至資料集： `/export/jobs` Real-Time Customer Profile API中的端點，並在請求內文中提供您要匯出的資料的詳細資訊。
+擁有聯合儲存資料集後，您可以透過向以下專案發出POST請求，建立匯出作業以將設定檔資料儲存至資料集： `/export/jobs` Real-time Customer Profile API中的端點，並在請求內文中提供您要匯出的資料詳細資訊。
 
 **API格式**
 
@@ -131,12 +131,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `fields` | *（可選）* 將匯出中要包含的資料欄位限製為僅在此引數中提供的欄位。 省略此值將導致所有欄位都包含在匯出的資料中。 |
-| `mergePolicy` | *（可選）* 指定合併原則以控管匯出的資料。 匯出多個受眾時，請包含此引數。 |
+| `fields` | *（可選）* 限制要包含在匯出中的資料欄位，使其僅包含在此引數中提供的欄位。 省略此值將導致所有欄位包含在匯出的資料中。 |
+| `mergePolicy` | *（可選）* 指定合併原則以控管匯出的資料。 如果有多個要匯出的對象，請包含此引數。 |
 | `mergePolicy.id` | 合併原則的ID。 |
 | `mergePolicy.version` | 要使用的合併原則的特定版本。 省略此值將預設為最新版本。 |
-| `additionalFields.eventList` | *（可選）* 提供下列一或多個設定，控制為子或關聯物件匯出的時間序列事件欄位：<ul><li>`eventList.fields`：控制要匯出的欄位。</li><li>`eventList.filter`：指定限制從關聯物件包含之結果的條件。 需要匯出所需的最小值，通常為日期。</li><li>`eventList.filter.fromIngestTimestamp`：將時間序列事件篩選為提供的時間戳記之後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
-| `destination` | **（必要）** 匯出資料的目的地資訊：<ul><li>`destination.datasetId`： **（必要）** 要匯出資料的資料集ID。</li><li>`destination.segmentPerBatch`： *（可選）* Boolean值；若未提供，預設為 `false`. 值 `false` 會將所有區段定義ID匯出至單一批次ID。 值 `true` 將一個區段定義ID匯出至一個批次ID。 請注意，將值設定為 `true` 可能會影響批次匯出效能。</li></ul> |
+| `additionalFields.eventList` | *（可選）* 提供下列一或多個設定，控制為子或關聯物件匯出的時間序列事件欄位：<ul><li>`eventList.fields`：控制要匯出的欄位。</li><li>`eventList.filter`：指定限制關聯物件所含結果的條件。 需要匯出所需的最小值，通常是日期。</li><li>`eventList.filter.fromIngestTimestamp`：將時間序列事件篩選為提供的時間戳記之後所擷取的事件。 這不是事件時間本身，而是事件的擷取時間。</li></ul> |
+| `destination` | **（必要）** 已匯出資料的目的地資訊：<ul><li>`destination.datasetId`： **（必要）** 要匯出資料之資料集的識別碼。</li><li>`destination.segmentPerBatch`： *（可選）* Boolean值；若未提供，預設值為 `false`. 值 `false` 會將所有區段定義ID匯出至單一批次ID。 值 `true` 將一個區段定義ID匯出至一個批次ID。 請注意，將值設為 `true` 可能會影響批次匯出效能。</li></ul> |
 | `schema.name` | **（必要）** 與要匯出資料的資料集相關聯的結構描述名稱。 |
 
 >[!NOTE]
@@ -180,7 +180,7 @@ curl -X POST \
 
 ## 列出所有匯出工作
 
-您可以透過對「 」執行GET請求，傳回特定組織的所有匯出工作清單。 `export/jobs` 端點。 此請求也支援查詢引數 `limit` 和 `offset`，如下所示。
+您可以透過對下列專案執行GET請求，傳回特定組織的所有匯出工作清單： `export/jobs` 端點。 此請求也支援查詢引數 `limit` 和 `offset`，如下所示。
 
 **API格式**
 
@@ -191,10 +191,10 @@ GET /export/jobs?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `start` | 根據請求的建立時間，位移傳回的結果頁面。 範例：`start=4` |
+| `start` | 根據請求的建立時間，位移傳回結果的頁面。 範例：`start=4` |
 | `limit` | 限制傳回的結果數。 範例：`limit=10` |
 | `page` | 根據請求的建立時間，傳回結果的特定頁面。 範例：`page=2` |
-| `sort` | 依特定欄位以升序排序結果( **`asc`** )或降序( **`desc`** )順序。 傳回多個結果頁面時，排序引數無法運作。 範例：`sort=updateTime:asc` |
+| `sort` | 依特定欄位遞增排序結果( **`asc`** )或降序( **`desc`** )順序。 傳回多個結果頁面時，排序引數無法運作。 範例：`sort=updateTime:asc` |
 
 **要求**
 
@@ -326,7 +326,7 @@ curl -X GET \
 
 ## 監視匯出進度
 
-若要檢視特定匯出工作的詳細資訊，或監控其處理狀態，您可以向以下發出GET請求： `/export/jobs` 端點並包含 `id` 路徑中匯出作業的ID。 匯出作業於下列時間後完成： `status` 欄位會傳回「SUCCEEDED」值。
+GET若要檢視特定匯出作業的詳細資訊，或監視其處理狀態，您可以向匯出作業的 `/export/jobs` 端點並包括 `id` 路徑中匯出作業的ID。 匯出作業於下列作業完成後完成： `status` 欄位會傳回「SUCCEEDED」值。
 
 **API格式**
 
@@ -336,7 +336,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | 此 `id` 要存取之匯出作業的檔案。 |
+| `{EXPORT_JOB_ID}` | 此 `id` 要存取之匯出作業的摘要。 |
 
 **要求**
 
@@ -403,7 +403,7 @@ curl -X GET \
 
 ## 取消匯出工作
 
-Experience Platform可讓您取消現有的匯出作業，這可能因許多原因而有用，包括匯出作業未完成或卡在處理階段中。 DELETE若要取消匯出作業，您可以對 `/export/jobs` 端點並包含 `id` 請求路徑中取消的匯出作業。
+Experience Platform可讓您取消現有的匯出作業，這可能是由於許多原因所造成，包括匯出作業未完成或卡在處理階段中。 若要取消匯出作業，您可以執行DELETE請求至 `/export/jobs` 端點並包括 `id` 要取消的匯出作業匯出到請求路徑。
 
 **API格式**
 
@@ -413,7 +413,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | 此 `id` 要存取之匯出作業的檔案。 |
+| `{EXPORT_JOB_ID}` | 此 `id` 要存取之匯出作業的摘要。 |
 
 **要求**
 
@@ -432,11 +432,11 @@ curl -X POST \
 
 ## 後續步驟
 
-匯出成功完成後，您的資料即可在Experience Platform的Data Lake中使用。 然後，您可以使用 [資料存取API](https://www.adobe.io/experience-platform-apis/references/data-access/) 以使用存取資料 `batchId` 與匯出相關聯。 根據匯出的大小，資料可能以區塊為單位，批次可能包含多個檔案。
+成功完成匯出後，您的資料就可以在Experience Platform的資料湖中使用。 然後，您可以使用 [資料存取API](https://www.adobe.io/experience-platform-apis/references/data-access/) 以使用存取資料 `batchId` 與匯出相關聯。 視匯出大小而定，資料可能會以區塊為單位，而批次可能包含數個檔案。
 
-如需有關如何使用資料存取API來存取和下載批次檔案的逐步指示，請遵循 [資料存取教學課程](../../data-access/tutorials/dataset-data.md).
+如需有關如何使用資料存取API來存取及下載批次檔案的逐步指示，請遵循 [資料存取教學課程](../../data-access/tutorials/dataset-data.md).
 
-您也可以使用Adobe Experience Platform查詢服務存取成功匯出的即時客戶設定檔資料。 查詢服務可讓您使用UI或RESTful API對Data Lake內的資料進行寫入、驗證及執行查詢。
+您也可以使用Adobe Experience Platform查詢服務存取成功匯出的即時客戶設定檔資料。 查詢服務可讓您使用UI或RESTful API，針對Data Lake內的資料寫入、驗證及執行查詢。
 
 如需如何查詢受眾資料的詳細資訊，請參閱 [查詢服務檔案](../../query-service/home.md).
 
@@ -446,7 +446,7 @@ curl -X POST \
 
 ### 其他匯出裝載範例
 
-的區段中顯示的範例API呼叫 [起始匯出工作](#initiate) 建立同時包含設定檔（記錄）和事件（時間序列）資料的工作。 本節提供其他請求裝載範例，將匯出限製為包含一種資料型別。
+的章節中顯示的API呼叫範例： [起始匯出工作](#initiate) 建立同時包含設定檔（記錄）和事件（時間序列）資料的工作。 本節提供其他請求裝載範例，將匯出限製為包含一種資料型別或另一種資料型別。
 
 以下裝載會建立僅包含設定檔資料（無事件）的匯出作業：
 
@@ -467,7 +467,7 @@ curl -X POST \
   }
 ```
 
-若要建立僅包含事件資料（無設定檔屬性）的匯出作業，裝載看起來可能會類似下列：
+若要建立僅包含事件資料（無設定檔屬性）的匯出作業，裝載可能會如下所示：
 
 ```json
 {
@@ -496,4 +496,4 @@ curl -X POST \
 
 ### 匯出對象
 
-您也可以使用匯出作業端點來匯出對象，而不是 [!DNL Profile] 資料。 請參閱指南： [匯出分段API中的工作](../../segmentation/api/export-jobs.md) 以取得詳細資訊。
+您也可以使用匯出作業端點來匯出對象，而不是 [!DNL Profile] 資料。 請參閱以下指南： [匯出分段API中的作業](../../segmentation/api/export-jobs.md) 以取得詳細資訊。

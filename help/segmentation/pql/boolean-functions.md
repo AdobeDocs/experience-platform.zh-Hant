@@ -12,9 +12,9 @@ ht-degree: 6%
 
 # 布林函式
 
-布林函式是用來對中的不同元素執行布林邏輯 [!DNL Profile Query Language] (PQL)。  如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
+布林值函式可用來針對中的不同元素執行布林值邏輯 [!DNL Profile Query Language] (PQL)。  如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
 
-## 和
+## 與
 
 此 `and` 函式用來建立邏輯結合。
 
@@ -26,7 +26,7 @@ ht-degree: 6%
 
 **範例**
 
-以下PQL查詢將傳回所有以加拿大為母國且出生年份為1985年的人。
+下列PQL查詢將傳回所有具有加拿大國籍和1985年出生年份的人。
 
 ```sql
 homeAddress.countryISO = "CA" and person.birthYear = 1985
@@ -44,7 +44,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 **範例**
 
-以下PQL查詢將傳回所有以加拿大為母國或1985年出生年份為出生地的人。
+下列PQL查詢將傳回所有具有加拿大國籍或1985年出生年份的人。
 
 ```sql
 homeAddress.countryISO = "CA" or person.birthYear = 1985
@@ -63,7 +63,7 @@ not ({QUERY})
 
 **範例**
 
-以下PQL查詢將傳回所有沒有其母國為加拿大的人。
+以下PQL查詢將傳回所有沒有祖國為加拿大的人。
 
 ```sql
 not (homeAddress.countryISO = "CA")
@@ -82,8 +82,8 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 | 引數 | 說明 |
 | --------- | ----------- |
 | `{TEST_EXPRESSION}` | 正在測試的布林運算式。 |
-| `{TRUE_EXPRESSION}` | 其值將用於下列情況的運算式： `{TEST_EXPRESSION}` 為true。 |
-| `{FALSE_EXPRESSION}` | 其值將用於下列情況的運算式： `{TEST_EXPRESSION}` 為false。 |
+| `{TRUE_EXPRESSION}` | 如果符合下列條件，則會使用其值的運算式： `{TEST_EXPRESSION}` 為true。 |
+| `{FALSE_EXPRESSION}` | 如果符合下列條件，則會使用其值的運算式： `{TEST_EXPRESSION}` 為false。 |
 
 **範例**
 
@@ -95,4 +95,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## 後續步驟
 
-現在您已瞭解布林函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已瞭解布林函式，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

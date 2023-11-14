@@ -4,7 +4,7 @@ title: 統一標記概觀
 description: 本文件會提供有關如何在 Adobe Experience Platform 中管理統一標記的資訊
 exl-id: a19e37c3-697a-4000-9cb8-d67478b47dc6
 source-git-commit: 6977438d57dc8e1390812e58bf039ebc60cb830d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；目錄；api；更新物件
 solution: Experience Platform
 title: 更新目錄物件
-description: 您可以在PATCH請求的路徑中包含目錄物件的ID來更新其一部分。 本文介紹如何使用欄位和使用JSON修補程式標籤法，對目錄物件執行PATCH作業。
+description: 您可以在PATCH請求的路徑中包含目錄物件的ID，以更新其一部分。 本文介紹如何使用欄位和使用JSON修補程式標籤法，對目錄物件執行PATCH作業。
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
 workflow-type: tm+mt
@@ -24,7 +24,7 @@ ht-degree: 3%
 
 ## 使用欄位更新
 
-以下呼叫範例示範如何使用欄位和值更新物件。
+下列範例呼叫示範如何使用欄位和值更新物件。
 
 **API格式**
 
@@ -34,12 +34,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新之特定物件的識別碼。 |
 
 **要求**
 
-以下請求會更新 `name` 和 `description` 資料集的欄位轉換為有效負載中提供的值。 您可從承載中排除不更新的物件欄位。
+以下請求會更新 `name` 和 `description` 資料集的欄位對應到承載中提供的值。 您可從承載中排除不需要更新的物件欄位。
 
 ```shell
 curl -X PATCH \
@@ -57,7 +57,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回包含已更新資料集ID的陣列。 此ID應與PATCH請求中傳送的ID相符。 針對此資料集執行GET要求時，現在只會顯示 `name` 和 `description` 已更新，而所有其他值維持不變。
+成功的回應會傳回陣列，其中包含已更新資料集的ID。 此ID應符合PATCH請求中傳送的ID。 為此資料集執行GET要求現在只會顯示 `name` 和 `description` 已更新，而所有其他值維持不變。
 
 ```json
 [
@@ -67,7 +67,7 @@ curl -X PATCH \
 
 ## 使用JSON修補程式標籤法更新
 
-以下範例呼叫示範如何使用JSON修補程式更新物件，如中所述 [RFC-6902](https://tools.ietf.org/html/rfc6902).
+下列範例呼叫示範如何使用JSON修補程式更新物件，如中所述 [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
 <!-- (Include once API fundamentals guide is published) 
 
@@ -83,12 +83,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 您要更新之特定物件的識別碼。 |
 
 **要求**
 
-以下請求會更新 `name` 和 `description` 資料集的欄位對應到每個JSON修補程式物件中提供的值。 使用JSON修補程式時，您也必須將Content-Type標頭設為 `application/json-patch+json`.
+以下請求會更新 `name` 和 `description` 資料集的欄位對應到每個JSON修補程式物件中提供的值。 使用JSON修補程式時，您還必須將Content-Type標頭設為 `application/json-patch+json`.
 
 ```shell
 curl -X PATCH \
@@ -106,7 +106,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回包含更新物件ID的陣列。 此ID應與PATCH請求中傳送的ID相符。 執行此物件的GET要求現在只會顯示 `name` 和 `description` 已更新，而所有其他值維持不變。
+成功的回應會傳回包含已更新物件ID的陣列。 此ID應符合PATCH請求中傳送的ID。 執行此物件的GET要求現在只會顯示 `name` 和 `description` 已更新，而所有其他值維持不變。
 
 ```json
 [

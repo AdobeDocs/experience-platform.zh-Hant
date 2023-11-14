@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: PQL邏輯數量詞
-description: 邏輯數量詞可用於斷言設定檔查詢語言(PQL)中陣列的條件。
+description: 邏輯數量詞可用於在設定檔查詢語言(PQL)中判斷陣列的條件。
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 # 邏輯數量詞函式
 
-邏輯數量詞可用於判斷陣列的條件 [!DNL Profile Query Language] (PQL)。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
+邏輯數量詞可用於判斷陣列的情況 [!DNL Profile Query Language] (PQL)。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
 
 ## 存在
 
@@ -66,4 +66,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## 後續步驟
 
-現在您已瞭解邏輯數量詞，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已瞭解邏輯數量詞，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

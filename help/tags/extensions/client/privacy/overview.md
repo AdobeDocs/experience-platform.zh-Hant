@@ -45,7 +45,7 @@ Adobe隱私權標籤擴充功能可讓您收集使用者端裝置上Adobe解決�
 
 ![必要屬性](../../../images/extensions/client/privacy/required-properties.png)
 
-使用下面的下拉式選單，您還可以將其他解決方案特定引數新增到設定。
+使用下面的下拉式選單，您還可以將其他解決方案特定的引數新增到設定。
 
 ![選擇性屬性](../../../images/extensions/client/privacy/optional-properties.png)
 

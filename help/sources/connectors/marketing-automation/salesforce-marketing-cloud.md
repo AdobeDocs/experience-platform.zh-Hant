@@ -19,34 +19,34 @@ Experience Platform提供從協力廠商行銷自動化系統擷取資料的支�
 
 ## 先決條件
 
-連線之前 [!DNL Salesforce Marketing Cloud] platform的來源，您必須確保以下各項 **許可權範圍** 已布建至您的 [!DNL Salesforce Marketing Cloud] 使用者端ID和使用者端密碼組合：
+連線之前 [!DNL Salesforce Marketing Cloud] 來源至平台，您必須確保以下事項 **許可權範圍** 已布建至您的 [!DNL Salesforce Marketing Cloud] 使用者端ID和使用者端密碼組合：
 
 * `campaign_read`
 * `list_and_subscribers_read`
 
-您可以呼叫 `v2/userinfo` 的資源 [!DNL Salesforce Marketing Cloud] API。 請參閱 [[!DNL Salesforce Marketing Cloud] API整合許可權範圍檔案](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) 以取得如何請求和比較範圍的指引。
+您可以呼叫 `v2/userinfo` 的資源 [!DNL Salesforce Marketing Cloud] API。 請參閱 [[!DNL Salesforce Marketing Cloud] API整合許可權範圍檔案](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) 以取得如何請求及比較範圍的指引。
 
 如需有關範圍的詳細資訊，包括其相關許可權和行為清單，請參閱此 [[!DNL Salesforce Marketing Cloud] REST API檔案](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 
 >[!IMPORTANT]
 >
->自訂物件擷取目前不支援 [!DNL Salesforce Marketing Cloud] 來源整合。
+>自訂物件擷取目前不受 [!DNL Salesforce Marketing Cloud] 來源整合。
 
 ## IP位址允許清單
 
-在使用來源聯結器之前，必須將IP位址清單新增至允許清單。 使用來源時，若未將您地區專屬的IP位址新增至允許清單，可能會導致錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
 
-## Connect [!DNL Salesforce Marketing Cloud] 使用API移至Platform
+## 連線 [!DNL Salesforce Marketing Cloud] 使用API移至Platform
 
 以下檔案提供有關如何連線的資訊 [!DNL Salesforce Marketing Cloud] 使用API移至Platform：
 
 * [使用Flow Service API建立SalesforceMarketing Cloud基本連線](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
-* [使用Flow Service API探索資料表](../../tutorials/api/explore/tabular.md)
+* [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 * [使用流量服務API為行銷自動化來源建立資料流](../../tutorials/api/collect/marketing-automation.md)
 
-## Connect [!DNL Salesforce Marketing Cloud] 使用UI移至Platform
+## 連線 [!DNL Salesforce Marketing Cloud] 使用UI移至Platform
 
-以下檔案提供有關如何連線的資訊 [!DNL Salesforce Marketing Cloud] 至使用使用者介面的Platform：
+以下檔案提供有關如何連線的資訊 [!DNL Salesforce Marketing Cloud] 使用使用者介面至Platform：
 
-* [在使用者介面中建立SalesforceMarketing Cloud來源連線](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+* [在UI中建立SalesforceMarketing Cloud來源連線](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [在UI中建立行銷自動化來源連線的資料流](../../tutorials/ui/dataflow/marketing-automation.md)

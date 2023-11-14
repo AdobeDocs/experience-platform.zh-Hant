@@ -3,7 +3,7 @@ title: Adobe Experience Platform Assurance 使用者存取權
 description: 本指南會說明如何透過 Admin Console 進行管理以保持使用者對 Adob​​e Experience Platform Assurance 的存取權。
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 100%
 

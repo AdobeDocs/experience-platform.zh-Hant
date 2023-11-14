@@ -11,7 +11,7 @@ ht-degree: 3%
 
 ---
 
-# 資料準備對應函式
+# 資料準備對應函數
 
 「資料準備」函式可用於根據來源欄位中輸入的內容計算值。
 
@@ -43,7 +43,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 串連指定的字串。 | <ul><li>STRING：要串連的字串。</li></ul> | concat(STRING_1， STRING_2) | concat(&quot;Hi， &quot;， &quot;there&quot;， &quot;！&quot;) | `"Hi, there!"` |
 | 爆炸 | 根據規則運算式分割字串並傳回部分陣列。 可選擇加入規則運算式以分割字串。 依預設，分割會解析為「，」。 下列分隔符號 **需要** 將逸出 `\`： `+, ?, ^, \|, ., [, (, {, ), *, $, \` 如果您包含多個字元做為分隔字元，則會將分隔字元視為多字元分隔字元。 | <ul><li>字串： **必填** 需要分割的字串。</li><li>規則運算式： *可選* 可用來分割字串的規則運算式。</li></ul> | explode(STRING， REGEX) | explode(&quot;Hi， there！&quot;， &quot;) | `["Hi,", "there"]` |
@@ -68,7 +68,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 規則運算式函式
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | 根據規則運算式，從輸入字串中擷取群組。 | <ul><li>字串： **必填** 您從中擷取群組的字串。</li><li>規則運算式： **必填** 您希望群組比對的規則運算式。</li></ul> | extract_regex(STRING， REGEX) | extract_regex&#x200B;(&quot;E259，E259B_009,1_1&quot;&#x200B;， &quot;([^，]+)，[^，]*，([^，]+)」) | [「E259，E259B_009,1_1」、「E259」、「1_1」] |
 | matches_regex | 檢查字串是否符合輸入的規則運算式。 | <ul><li>字串： **必填** 您正在檢查的字串符合規則運算式。</li><li>規則運算式： **必填** 您要比較的規則運算式。</li></ul> | matches_regex(STRING， REGEX) | matches_regex(&quot;E259，E259B_009,1_1&quot;， &quot;([^，]+)，[^，]*，([^，]+)」) | true |
@@ -81,7 +81,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | 接受輸入並使用安全雜湊演演算法1 (SHA-1)產生雜湊值。 | <ul><li>輸入： **必填** 要雜湊的純文字。</li><li>字元集： *可選* 字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha1(INPUT， CHARSET) | sha1（「我的文字」、「UTF-8」） | c3599c11e47719df18a24&#x200B;48690840c5dfcce3c80 |
 | sha256 | 接受輸入並使用安全雜湊演演算法256 (SHA-256)產生雜湊值。 | <ul><li>輸入： **必填** 要雜湊的純文字。</li><li>字元集： *可選* 字元集的名稱。 可能的值包括UTF-8、UTF-16、ISO-8859-1和US-ASCII。</li></ul> | sha256（輸入，字元集） | sha256（「我的文字」、「UTF-8」） | 7330d2b39ca35eaf4cb95fc846c21&#x200B;ee6a39af698154a83a586ee270a0d372104 |
@@ -97,7 +97,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | 從指定的URL傳回通訊協定。 如果輸入無效，則會傳回null。 | <ul><li>URL： **必填** 需要從中擷取通訊協定的URL。</li></ul> | get_url_protocol&#x200B;(URL) | get_url_protocol(&quot;https://platform&#x200B;.adobe.com/home&quot;) | https |
 | get_url_host | 傳回指定URL的主機。 如果輸入無效，則會傳回null。 | <ul><li>URL： **必填** 需要從中擷取主機的URL。</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform&#x200B;.adobe.com/home&quot;) | platform.adobe.com |
@@ -115,10 +115,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。 關於的更多資訊 `date` 函式的dates區段中 [資料格式處理指南](./data-handling.md#dates).
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 擷取目前時間。 | | now() | now() | `2021-10-26T10:10:24Z` |
-| timestamp | 擷取目前的Unix時間。 | | timestamp() | timestamp() | 1571850624571 |
+| 時間戳記 | 擷取目前的Unix時間。 | | 時間戳記() | 時間戳記() | 1571850624571 |
 | 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期： **必填** 要格式化的輸入日期（ZonedDateTime物件）。</li><li>格式： **必填** 您希望將日期變更為的格式。</li></ul> | format（日期，格式） | format(2019-10-23T11:24:00+00:00， &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | 根據指定格式將時間戳記轉換為日期字串。 | <ul><li>時間戳記： **必填** 您要格式化的時間戳記。 這是以毫秒為單位寫入。</li><li>格式： **必填** 您希望時間戳記變為的格式。</li></ul> | dformat(TIMESTAMP， FORMAT) | dformat(1571829875000， &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 這可以 **非** 代表您要將日期字串轉換為的格式。 </li><li>預設日期： **必填** 如果提供的日期為空，則傳回預設日期。</li></ul> | date(DATE， FORMAT， DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;， now()) | `2019-10-23T11:24:00Z` |
@@ -138,7 +138,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | is_empty | 檢查物件是否為空白。 | <ul><li>輸入： **必填** 您嘗試檢查的物件是空的。</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | arrays_to_object | 建立物件清單。 | <ul><li>輸入： **必填** 索引鍵和陣列配對的分組。</li></ul> | arrays_to_object(INPUT) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
@@ -162,7 +162,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 合併 | 傳回給定陣列中的第一個非null物件。 | <ul><li>輸入： **必填** 您要尋找的第一個非null物件的陣列。</li></ul> | coalesce(INPUT) | coalesce(null， null， null， first， null， second) | &quot;first&quot; |
 | 第一 | 擷取給定陣列的第一個元素。 | <ul><li>輸入： **必填** 您要尋找其第一個元素的陣列。</li></ul> | first(INPUT) | first(&quot;1&quot;， &quot;2&quot;， &quot;3&quot;) | &quot;1&quot; |
@@ -182,7 +182,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 解碼 | 指定將索引鍵和索引鍵值配對清單平面化為陣列時，若找到索引鍵，此函式會傳回值，若陣列中存在索引鍵，則會傳回預設值。 | <ul><li>索引鍵： **必填** 要比對的金鑰。</li><li>OPTIONS： **必填** 鍵/值組的平面化陣列。 您可以選擇將預設值放在結尾。</li></ul> | decode(KEY， OPTIONS) | decode(stateCode， &quot;ca&quot;， &quot;California&quot;， &quot;pa&quot;， &quot;Pennsylvania&quot;， &quot;N/A&quot;) | 如果指定的stateCode為&quot;ca&quot;、&quot;California&quot;。<br>如果指定的stateCode為「pa」，「Pennsylvania」。<br>如果stateCode不符合下列內容，「不適用」。 |
 | iif | 評估給定的布林運算式，並根據結果傳回指定的值。 | <ul><li>運算式： **必填** 正在評估的布林運算式。</li><li>TRUE_VALUE： **必填** 如果運算式的運算結果為true，則傳回的值。</li><li>FALSE_VALUE： **必填** 運算式評估為false時會傳回的值。</li></ul> | iif（運算式， TRUE_VALUE， FALSE_VALUE） | iif(&quot;s&quot;。equalsIgnoreCase(&quot;S&quot;)， &quot;True&quot;， &quot;False&quot;) | &quot;True&quot; |
@@ -195,7 +195,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | 傳回給定引數的最小值。 使用自然排序。 | <ul><li>OPTIONS： **必填** 可以相互比較的一或多個物件。</li></ul> | min(OPTIONS) | min(3， 1， 4) | 1 |
 | max | 傳回給定引數的最大值。 使用自然排序。 | <ul><li>OPTIONS： **必填** 可以相互比較的一或多個物件。</li></ul> | 最大(OPTIONS) | max(3， 1， 4) | 4 |
@@ -208,7 +208,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | 將字串轉換為BigInteger。 | <ul><li>字串： **必填** 要轉換為BigInteger的字串。</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
 | to_decimal | 將字串轉換為雙精度浮點數。 | <ul><li>字串： **必填** 要轉換為Double的字串。</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
@@ -223,7 +223,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 從給定的字串將JSON內容還原序列化。 | <ul><li>字串： **必填** 要還原序列化的JSON字串。</li></ul> | json_to_object&#x200B;(STRING) | &#x200B; json_to_object({&quot;info&quot;：{&quot;firstName&quot;：&quot;John&quot;，&quot;lastName&quot;： &quot;Doe&quot;}}) | 代表JSON的物件。 |
 
@@ -235,7 +235,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 產生偽隨機識別碼。 | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 | `fpid_to_ecid ` | 此函式接受FPID字串並將其轉換為ECID，以便用於Adobe Experience Platform和Adobe Experience Cloud應用程式。 | <ul><li>字串： **必填** 要轉換為ECID的FPID字串。</li></ul> | `fpid_to_ecid(STRING)` | `fpid_to_ecid("4ed70bee-b654-420a-a3fd-b58b6b65e991")` | `"28880788470263023831040523038280731744"` |
@@ -255,7 +255,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >
 >請向左/向右捲動以檢視表格的完整內容。
 
-| 功能 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | 從使用者代理字串中擷取作業系統名稱。 | <ul><li>USER_AGENT： **必填** 使用者代理字串。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | 從使用者代理程式字串中擷取作業系統的主要版本。 | <ul><li>USER_AGENT： **必填** 使用者代理字串。</li></ul> | ua_os_version_major&#x200B;(USER_AGENT) | ua_os_version_major&#x200B;s(&quot;Mozilla/5.0 (iPhone；CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML like Gecko)版本/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |

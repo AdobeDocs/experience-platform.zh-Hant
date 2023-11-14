@@ -1,15 +1,15 @@
 ---
-title: Experience Platform標籤（中國）
+title: Experience Platform 標籤 (中國)
 description: 瞭解用於標籤的Experience Platform標籤（中國）功能，以及如何將其用於在多個地理區域傳遞您的內容。
 exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
 source-git-commit: 9c39fd5d0353cc171230818d79ac213ce200dc1e
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-# Experience Platform標籤（中國）
+# Experience Platform 標籤 (中國)
 
 當您使用 [Adobe管理主機](./hosts/managed-by-adobe-host.md) 為了在您的網站上傳遞Adobe Experience Platform標籤資產，這些資產會分散到全球各地的各種內容傳遞網路(CDN)中，以提供最快的下載速度。 不過，有些地區會要求將所有網站資產複製並託管於該地區的伺服器。
 

@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Teradata Vantage] source
+# (Beta) [!DNL Teradata Vantage] 來源
 
 >[!NOTE]
 >
@@ -22,17 +22,17 @@ Experience Platform支援從協力廠商資料庫擷取資料。 Platform可以�
 
 ## IP位址允許清單
 
-在使用來源聯結器之前，必須將IP位址清單新增至允許清單。 使用來源時，若未將您地區專屬的IP位址新增至允許清單，可能會導致錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
 
-以下檔案提供有關如何連線的資訊 [!DNL Teradata Vantage] 使用API或使用者介面的to Platform：
+以下檔案提供有關如何連線的資訊 [!DNL Teradata Vantage] 使用API或使用者介面至Platform：
 
-## Connect [!DNL Teradata Vantage] 使用API移至Platform
+## 連線 [!DNL Teradata Vantage] 使用API移至Platform
 
 - [使用Flow Service API建立Teradata Vantage基本連線](../../tutorials/api/create/databases/teradata-vantage.md)
-- [使用Flow Service API探索資料表](../../tutorials/api/explore/tabular.md)
+- [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 - [使用流程服務API為資料庫來源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
-## Connect [!DNL Teradata Vantage] 使用UI移至Platform
+## 連線 [!DNL Teradata Vantage] 使用UI移至Platform
 
 - [在UI中建立Teradata Vantage來源連線](../../tutorials/ui/create/databases/teradata-vantage.md)
 - [在UI中建立資料庫來源連線的資料流](../../tutorials/ui/dataflow/databases.md)

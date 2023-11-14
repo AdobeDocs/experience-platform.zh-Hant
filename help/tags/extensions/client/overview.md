@@ -19,10 +19,10 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->任何擴充功能名稱，後面加上星號(*)，可連結至Adobe交換上的擴充功能清單，其中包含安裝和使用指示。 所有其他連結會指向Adobe Experience League上的擴充功能檔案。
+>任何後面有星號(*)的擴充功能名稱，都會連結至Adobe交換上的擴充功能清單，其中包含安裝和使用指示。 所有其他連結會指向Adobe Experience League上的擴充功能檔案。
 
 * [可存取的網站速度量度](https://exchange.adobe.com/apps/ec/103053)*
-* [Activity Map自訂器](https://exchange.adobe.com/apps/ec/101531)*
+* [Activity Map自訂者](https://exchange.adobe.com/apps/ec/101531)*
 * [動作頁面重新整理](https://exchange.adobe.com/apps/ec/102848)*
 * [Adform網站追蹤](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
@@ -40,9 +40,9 @@ ht-degree: 9%
 * [Adobe Experience Cloud ID 服務](./id-service/overview.md)
 * [Adobe Experience Platform示範](./platform-demo/overview.md)
 * [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
-* [Adobe Experience Manager資產分析](./asset-insights/overview.md)
+* [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
-* [適用於音訊和視訊的Adobe Medium Analytics](./media-analytics/overview.md)
+* [Adobe Medium Analytics for Audio and Video](./media-analytics/overview.md)
 * [Adobe Medium Analytics (3.x SDK)](./media-analytics-3x/overview.md)
 * [Adobe隱私權](./privacy/overview.md)
 * [Adobe報表套裝選擇器](https://exchange.adobe.com/apps/ec/100640)*
@@ -50,11 +50,11 @@ ht-degree: 9%
 * [Adobe Target v2](./target-v2/overview.md)
 * [Adobe Target Toolkit](https://exchange.adobe.com/apps/ec/100640)*
 * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
-* [AEM資產分析](https://exchange.adobe.com/apps/ec/103406)*
+* [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Airbrake JS通知程式](https://exchange.adobe.com/apps/ec/103342)*
 * [幅度](https://exchange.adobe.com/apps/ec/108010)*
 * [阿波羅QAX](https://exchange.adobe.com/apps/ec/105068)*
-* [Awin Advertiser MasterTag](https://exchange.adobe.com/apps/ec/103176)*
+* [Awin廣告商主標籤](https://exchange.adobe.com/apps/ec/103176)*
 * [Awin轉換標籤](https://exchange.adobe.com/apps/ec/103240)*
 * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)*
 * [Bing Ads通用事件追蹤](https://exchange.adobe.com/apps/ec/100154)*
@@ -92,15 +92,15 @@ ht-degree: 9%
 * [對應表格](https://exchange.adobe.com/apps/ec/103136)*
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [主屬性管理員](https://exchange.adobe.com/apps/ec/102992)*
-* [監視](https://exchange.adobe.com/apps/ec/106544)*
+* [Monita](https://exchange.adobe.com/apps/ec/106544)*
 * [Nielsen Digital SDK](https://exchange.adobe.com/apps/ec/101361)*
 * [Cookie的OneTrust同意管理](https://exchange.adobe.com/apps/ec/100340)*
-* [辣椒醬](https://exchange.adobe.com/apps/ec/103587)*
+* [胡椒醬](https://exchange.adobe.com/apps/ec/103587)*
 * [Persado Connect](https://exchange.adobe.com/apps/ec/103745)*
 * [pinterest轉換追蹤](https://exchange.adobe.com/apps/ec/100523)*
 * [畫素載入器](https://exchange.adobe.com/apps/ec/100152)*
-* [Qualtrics網站意見反應](https://exchange.adobe.com/apps/ec/101569)*
-* [量度度量](https://exchange.adobe.com/apps/ec/101535)*
+* [Qualtrics網站意見](https://exchange.adobe.com/apps/ec/101569)*
+* [量子量度](https://exchange.adobe.com/apps/ec/101535)*
 * [解決動量](https://exchange.adobe.com/apps/ec/108352)*
 * [洛克](https://exchange.adobe.com/apps/ec/107591)*
 * [SDI調查](https://exchange.adobe.com/apps/ec/102991)*
@@ -114,7 +114,7 @@ ht-degree: 9%
 * [TMMData基礎平台](https://exchange.adobe.com/apps/ec/100148)*
 * [TrustArc Cookie同意管理員](https://exchange.adobe.com/apps/ec/107037)*
 * [Vimeo Playback](https://exchange.adobe.com/apps/ec/108937)*
-* [Web Vitals](https://exchange.adobe.com/apps/ec/106769)*
+* [Web虛擬](https://exchange.adobe.com/apps/ec/106769)*
 * [XDM撰寫器](https://exchange.adobe.com/apps/ec/106062)*
 * [Yahoo Dot](https://exchange.adobe.com/apps/ec/106062)*
 * [Yext轉換追蹤](https://exchange.adobe.com/apps/ec/103174)*

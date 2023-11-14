@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform示範擴充功能概觀
-description: 瞭解Adobe Experience Platform中的Adobe Experience Platform Demo擴充功能。
+description: 瞭解Adobe Experience Platform中的Adobe Experience Platform示範擴充功能。
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
@@ -17,11 +17,11 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->此擴充功能已過時，傾向於 [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
+>此擴充功能已遭取代，取代 [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
 
 此擴充功能的功能已移至新的擴充功能。以下快速比較目前功能。
 
-| Platform示範擴充功能 | 平台Web SDK |
+| Platform示範擴充功能 | Platform Web SDK |
 | ------------------ | ----------- |
 | 支援自訂客戶 ID | 支援自訂客戶 ID |
 | XDM的使用者端對應UI | 內建 ECID (不需 visitor.js) |
@@ -47,7 +47,7 @@ ht-degree: 72%
 
 選擇串流連線是您開始將資料串流至 Adobe Experience Platform 的第一步。您可以從串流連線下拉式方塊中選取連線。串流連線是必填欄位。如果您尚未建立任何串流連線，可以選取 **[!UICONTROL 建立串流連線]** 按鈕。
 
-如果您選取 **[!UICONTROL 建立串流連線]** 將會出現強制回應視窗。
+如果您選取 **[!UICONTROL 建立串流連線]** 將會顯示強制回應視窗。
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
@@ -81,7 +81,7 @@ ht-degree: 72%
 
 來源值欄位接受值或資料元素。您可以按一下來源值欄位旁的資料元素按鈕，以新增資料元素。
 
-目標結構描述欄位包含資料集結構描述中定義的XDM欄位路徑。 對於在更深層架構階層定義的欄位，您可以在路徑各部之間使用點(例如： timeSeriesEvents.eventType) 作為分隔符號。
+目標結構描述欄位包含資料集結構描述中定義之XDM欄位的路徑。 對於在更深層架構階層定義的欄位，您可以在路徑各部之間使用點(例如： timeSeriesEvents.eventType) 作為分隔符號。
 
 ### 結構描述欄位選擇器
 

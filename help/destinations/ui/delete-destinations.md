@@ -24,15 +24,15 @@ ht-degree: 0%
 * [從刪除目的地 [!UICONTROL 瀏覽] 標籤](#delete-browse-tab)
 * [從目的地詳細資訊頁面刪除目的地](#delete-destination-details-page)
 
-## 從「瀏覽」索引標籤刪除目的地{#delete-browse-tab}
+## 從瀏覽標籤刪除目的地{#delete-browse-tab}
 
 請依照下列步驟，從 [!UICONTROL 瀏覽] 標籤。
 
-1. 登入 [EXPERIENCE PLATFORMUI](https://platform.adobe.com/) 並選取 **[!UICONTROL 目的地]** 左側導覽列中的。 若要檢視您現有的目的地，請選取 **[!UICONTROL 瀏覽]** 從頂端標題。
+1. 登入 [EXPERIENCE PLATFORMUI](https://platform.adobe.com/) 並選取 **[!UICONTROL 目的地]** 從左側導覽列。 若要檢視您現有的目的地，請選取 **[!UICONTROL 瀏覽]** 從頂端標題。
 
    ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. 選取篩選圖示 ![篩選圖示](../assets/ui/delete-destinations/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
+2. 選取篩選器圖示 ![Filter-icon](../assets/ui/delete-destinations/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
 
    ![篩選目的地](../assets/ui/delete-destinations/filter-destinations.png)
 
@@ -47,21 +47,21 @@ ht-degree: 0%
 
 請依照下列步驟，從目的地詳細資訊頁面中刪除目的地。
 
-1. 登入 [EXPERIENCE PLATFORMUI](https://platform.adobe.com/) 並選取 **[!UICONTROL 目的地]** 左側導覽列中的。 若要檢視您現有的目的地，請選取 **[!UICONTROL 瀏覽]** 從頂端標題。
+1. 登入 [EXPERIENCE PLATFORMUI](https://platform.adobe.com/) 並選取 **[!UICONTROL 目的地]** 從左側導覽列。 若要檢視您現有的目的地，請選取 **[!UICONTROL 瀏覽]** 從頂端標題。
 
    ![瀏覽目的地](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. 選取篩選圖示 ![篩選圖示](../assets/ui/delete-destinations/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
+2. 選取篩選器圖示 ![Filter-icon](../assets/ui/delete-destinations/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
 
    ![篩選目的地](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 選取您要刪除的目的地名稱。
+3. 選取要刪除的目的地名稱。
 
    ![選取目的地](../assets/ui/delete-destinations/delete-destination-select.png)
 
-   * 如果目的地有現有的資料流，您會被帶到 [!UICONTROL 資料流執行] 標籤。
+   * 如果目的地有現有的資料流，系統會將您帶至 [!UICONTROL 資料流執行] 標籤。
 
-     ![資料流執行標籤](../assets/ui/delete-destinations/destination-details-dataflows.png)
+     ![資料流執行索引標籤](../assets/ui/delete-destinations/destination-details-dataflows.png)
 
    * 如果目的地沒有現有的資料流，您會進入一個空白頁面，您可以在該頁面開始啟用對象。
 
@@ -77,4 +77,4 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >視伺服器負載而定，可能需要幾分鐘的時間 [!DNL Platform] 以刪除目的地。
+   >視伺服器負載而定，可能需要幾分鐘的時間來 [!DNL Platform] 以刪除目的地。

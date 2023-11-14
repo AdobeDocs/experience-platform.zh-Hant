@@ -83,7 +83,7 @@ ht-degree: 4%
 
 ![Platform UI首頁，其中包含已選取的設定檔圖示和偏好設定按鈕。](./images/survey/preferences.png)
 
-接下來，在 [!UICONTROL 一般] 在您的設定檔偏好設定選單中，選取 **[!UICONTROL 更新您的工作職能和目標]**.
+接下來，在 [!UICONTROL 一般] 在您的設定檔偏好設定功能表部分，選取 **[!UICONTROL 更新您的工作職能和目標]**.
 
 ![Platform UI設定檔偏好設定頁面的一般區段](./images/survey/update.png)
 

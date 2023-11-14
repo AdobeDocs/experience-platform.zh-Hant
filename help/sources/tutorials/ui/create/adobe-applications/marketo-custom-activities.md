@@ -65,7 +65,7 @@ ht-degree: 0%
 
 ![標籤和建立新欄位群組的視窗。](../../../../images/tutorials/create/marketo-custom-activities/create-new-field-group.png)
 
-建立後，您自訂活動的新欄位群組會出現在 [!UICONTROL 欄位群組] 目錄。
+建立後，您用於自訂活動的新欄位群組會出現在 [!UICONTROL 欄位群組] 目錄。
 
 ![結構描述結構，在欄位群組面板下新增了新欄位群組。](../../../../images/tutorials/create/marketo-custom-activities/new-field-group-created.png)
 

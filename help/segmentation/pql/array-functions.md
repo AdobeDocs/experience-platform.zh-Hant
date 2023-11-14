@@ -12,11 +12,11 @@ ht-degree: 5%
 
 # 陣列、清單和設定函式
 
-[!DNL Profile Query Language] (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
+[!DNL Profile Query Language] (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
 
 ## 在
 
-此 `in` 函式用來判斷專案是否為陣列或清單的成員。
+此 `in` 函式是用來決定專案是陣列或清單的成員。
 
 **格式**
 
@@ -32,13 +32,13 @@ ht-degree: 5%
 person.birthMonth in [3, 6, 9]
 ```
 
-## 不在……之內
+## 不在
 
-此 `notIn` 函式用來判斷專案是否不是陣列或清單的成員。
+此 `notIn` 函式是用來判斷專案是否不是陣列或清單的成員。
 
 >[!NOTE]
 >
->此 `notIn` 函式 *另外* 確保這兩個值都不等於null。 因此，結果並非完全否定 `in` 函式。
+>此 `notIn` 函式 *另外* 可確保這兩個值都不等於null。 因此，結果並非完全否定 `in` 函式。
 
 **格式**
 
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## 相交
 
-此 `intersects` 函式用來判斷兩個陣列或清單是否至少有一個通用成員。
+此 `intersects` 函式是用來判斷兩個陣列或清單是否至少有一個通用成員。
 
 **格式**
 
@@ -66,7 +66,7 @@ person.birthMonth notIn [3, 6, 9]
 
 **範例**
 
-以下PQL查詢定義其最愛顏色至少包含紅色、藍色或綠色其中一種的人員。
+以下PQL查詢定義哪些人最喜愛的顏色至少包括紅色、藍色或綠色之一。
 
 ```sql
 person.favoriteColors.intersects(["red", "blue", "green"])
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## 交集
 
-此 `intersection` 函式用來決定兩個陣列或清單的一般成員。
+此 `intersection` 函式用來決定兩個陣列或清單的共同成員。
 
 **格式**
 
@@ -84,7 +84,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 **範例**
 
-以下PQL查詢定義人員1和人員2是否都有最喜愛的紅色、藍色和綠色。
+以下PQL查詢定義人員1和人員2是否都有最喜愛的紅色、藍色和綠色顏色。
 
 ```sql
 person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "green"]
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## 子集：
 
-此 `subsetOf` 函式來判斷特定陣列（陣列A）是否為另一個陣列（陣列B）的子集。 換句話說，陣列A中的所有元素都是陣列B的元素。
+此 `subsetOf` 函式來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的子集。 換句話說，陣列A中的所有元素都是陣列B的元素。
 
 **格式**
 
@@ -102,7 +102,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 **範例**
 
-以下PQL查詢會定義造訪過其所有最喜愛城市的人。
+以下PQL查詢會定義已造訪過其所有最喜愛城市的人。
 
 ```sql
 person.favoriteCities.subsetOf(person.visitedCities)
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## 超集
 
-此 `supersetOf` 函式來判斷特定陣列（陣列A）是否為另一個陣列（陣列B）的超集。 換句話說，陣列A包含陣列B中的所有元素。
+此 `supersetOf` 函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的超集。 換句話說，該陣列A包含陣列B中的所有元素。
 
 **格式**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## 包含
 
-此 `includes` 函式用於確定陣列或清單是否包含給定專案。
+此 `includes` 函式是用來決定陣列或清單是否包含指定專案。
 
 **格式**
 
@@ -138,15 +138,15 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 **範例**
 
-以下PQL查詢定義其最愛顏色包含紅色的人。
+以下PQL查詢定義哪些人最喜歡的顏色包括紅色。
 
 ```sql
 person.favoriteColors.includes("red")
 ```
 
-## 相異
+## Distinct
 
-此 `distinct` 函式用於從陣列或清單中移除重複值。
+此 `distinct` 函式可用來從陣列或清單中移除重複值。
 
 **格式**
 
@@ -175,11 +175,11 @@ person.orders.storeId.distinct().count() > 1
 | 引數 | 說明 |
 | --------- | ----------- |
 | `{ARRAY}` | 要分組的陣列或清單。 |
-| `{EXPRESSION}` | 對應陣列或傳回清單中每個專案的運算式。 |
+| `{EXPRESSION}` | 對應傳回陣列或清單中每個專案的運算式。 |
 
 **範例**
 
-下列PQL查詢會將下訂單的存放庫所依據的所有訂單分組。
+下列PQL查詢會將放置訂單的所有訂單分組。
 
 ```sql
 orders.groupBy(storeId)
@@ -226,9 +226,9 @@ array.map(expression)
 numbers.map(square)
 ```
 
-## 第一個 `n` 在陣列中 {#first-n}
+## 第一 `n` 在陣列中 {#first-n}
 
-此 `topN` 函式用於傳回第一個 `N` 陣列中的專案（當根據給定的數值運算式依遞增順序排序時）。
+此 `topN` 函式用於傳回第一個 `N` 在陣列中的專案，當根據給定的數值運算式依遞增順序排序時。
 
 **格式**
 
@@ -239,7 +239,7 @@ numbers.map(square)
 | 引數 | 說明 |
 | --------- | ----------- |
 | `{ARRAY}` | 要排序的陣列或清單。 |
-| `{VALUE}` | 排序陣列或清單的屬性。 |
+| `{VALUE}` | 要排序陣列或清單的屬性。 |
 | `{AMOUNT}` | 要傳回的專案數。 |
 
 **範例**
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## 上次 `n` 在陣列中
 
-此 `bottomN` 函式用於傳回最後 `N` 陣列中的專案（當根據給定的數值運算式依遞增順序排序時）。
+此 `bottomN` 函式用於傳回最後 `N` 在陣列中的專案，當根據給定的數值運算式依遞增順序排序時。
 
 **格式**
 
@@ -263,7 +263,7 @@ orders.topN(price, 5)
 | 引數 | 說明 |
 | --------- | ----------- | 
 | `{ARRAY}` | 要排序的陣列或清單。 |
-| `{VALUE}` | 排序陣列或清單的屬性。 |
+| `{VALUE}` | 要排序陣列或清單的屬性。 |
 | `{AMOUNT}` | 要傳回的專案數。 |
 
 **範例**
@@ -286,7 +286,7 @@ orders.bottomN(price, 5)
 
 **範例**
 
-下列PQL查詢會傳回價格最高的前五個訂單中的第一個。 更多關於「 」的資訊 `topN` 函式位於 [第一個 `n` 在陣列中](#first-n) 區段。
+下列PQL查詢會傳回價格最高的前五個訂單中的第一個。 關於的更多資訊 `topN` 函式位於 [第一 `n` 在陣列中](#first-n) 區段。
 
 ```sql
 orders.topN(price, 5).head()
@@ -294,4 +294,4 @@ orders.topN(price, 5).head()
 
 ## 後續步驟
 
-現在您已瞭解陣列、清單和設定函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已瞭解陣列、清單和設定函式，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

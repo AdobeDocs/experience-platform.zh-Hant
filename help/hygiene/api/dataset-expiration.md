@@ -2,9 +2,9 @@
 title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: a954059155857e6dde7884cf413561cd5214d9bb
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1714'
 ht-degree: 2%
 
 ---
@@ -29,11 +29,15 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南中使用的端點屬於資料衛生API。 在繼續之前，請檢閱 [概述](./overview.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的端點屬於資料衛生API。 在繼續之前，請檢閱 [API指南](./overview.md) 以瞭解CRUD作業所需的標頭、錯誤訊息、Postman集合，以及如何讀取範例API呼叫的相關資訊。
+
+>[!IMPORTANT]
+>
+>呼叫資料衛生API時，您必須使用 — H `x-sandbox-name: {SANDBOX_NAME}` 標頭。
 
 ## 列出資料集有效期 {#list}
 
-您可以發出GET要求，列出貴組織的所有資料集有效期。
+您可以發出GET要求，列出貴組織的所有資料集有效期。 查詢引數可用來篩選適當結果的回應。
 
 **API格式**
 
@@ -43,7 +47,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | 選擇性查詢引數清單，多個引數由下列專案分隔： `&` 個字元。 常見引數包括 `size` 和 `page` 以作分頁之用。 如需支援的查詢引數完整清單，請參閱 [附錄部分](#query-params). |
+| `{QUERY_PARAMETERS}` | 選擇性查詢引數清單，多個引數由下列專案分隔： `&` 個字元。 常見引數包括 `limit` 和 `page` 以作分頁之用。 如需支援的查詢引數完整清單，請參閱 [附錄部分](#query-params). |
 
 {style="table-layout:auto"}
 
@@ -64,36 +68,22 @@ curl -X GET \
 
 ```json
 {
-  "totalRecords": 3,
-  "ttlDetails": [
+  "results": [
     {
-      "status": "completed",
-      "workorderId": "SDc17a9501345c4997878c1383c475a77b",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "f440ac301c414bf1b6ba419162866346",
-      "expiry": "2021-07-07T13:14:15Z",
-      "updatedAt": "2021-07-07T13:14:15Z",
-      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
-    },
-    {
+      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
+      "datasetId": "629bd9125b31471b2da7645c",
+      "datasetName": "Sample Acme dataset",
+      "sandboxName": "hygiene-beta",
+      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
       "status": "pending",
-      "workorderId": "SD8ef60b33dbed444fb81861cced5da10b",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "80f0d38820a74879a2c5be82e38b1a94",
-      "expiry": "2099-02-02T00:00:00Z",
-      "updatedAt": "2021-02-02T13:00:00Z",
-      "updatedBy": "John Q. Public <jqp@example.com> 93220281bad34ed0@AdobeId"
-    },
-    {
-      "status": "pending",
-      "workorderId": "SD2140ad4eaf1f47a1b24c05cce53e303e",
-      "imsOrgId": "885737B25DC460C50A49411B@AdobeOrg",
-      "datasetId": "9e63f9b25896416ba811657678b4fcb7",
-      "expiry": "2099-01-01T00:00:00Z",
-      "updatedAt": "2021-01-01T13:00:00Z",
-      "updatedBy": "Jane Doe <jane.doe@example.com> d741b5b877bf47cf@AdobeId"
+      "expiry": "2050-01-01T00:00:00Z",
+      "updatedAt": "2023-06-09T16:52:44.136028Z",
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     }
-  ]
+  ],
+  "current_page": 0,
+  "total_pages": 1,
+  "total_count": 1
 }
 ```
 
@@ -106,17 +96,19 @@ curl -X GET \
 
 ## 查詢資料集有效期 {#lookup}
 
-您可以透過GET請求查詢資料集到期日。
+若要查詢資料集有效期，請使用以下任一專案發出GET請求： `datasetId` 或 `ttlId`.
 
 **API格式**
 
 ```http
-GET /ttl/{DATASET_ID}
+GET /ttl/{DATASET_ID}?include=history
+GET /ttl/{TTL_ID}
 ```
 
 | 參數 | 說明 |
 | --- | --- |
 | `{DATASET_ID}` | 您要查詢其有效期的資料集ID。 |
+| `{TTL_ID}` | 資料集過期時間的ID。 |
 
 {style="table-layout:auto"}
 
@@ -137,24 +129,30 @@ curl -X GET \
 
 成功的回應會傳回資料集到期日的詳細資料。
 
+<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
+
 ```json
 {
-    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
     "datasetId": "62759f2ede9e601b63a2ee14",
-    "imsOrg": "{ORG_ID}",
+    "datasetName": "XtVRwq9-38734",
+    "sandboxName": "prod",
+    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
     "status": "pending",
-    "expiry": "2023-12-31T23:59:59Z",
-    "updatedAt": "2022-05-11T15:12:40.393115Z",
-    "updatedBy": "{USER_ID}",
-    "displayName": "Example Dataset Expiration Request",
-    "description": "A dataset expiration request that will execute at the end of 2023"
+    "expiry": "2024-12-31T23:59:59Z",
+    "updatedAt": "2024-05-11T15:12:40.393115Z",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+    "displayName": "Delete Acme Data before 2025",
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `workorderId` | 資料集過期時間的ID。 |
+| `ttlId` | 資料集過期時間的ID。 |
 | `datasetId` | 此到期適用於的資料集ID。 |
+| `datasetName` | 此到期適用於的資料集的顯示名稱。 |
+| `sandboxName` | 目標資料集所在之沙箱的名稱。 |
 | `imsOrg` | 您組織的ID。 |
 | `status` | 資料集到期的目前狀態。 |
 | `expiry` | 刪除資料集的預定日期和時間。 |
@@ -189,17 +187,19 @@ curl -X GET \
 
 ## 建立或更新資料集有效期 {#create-or-update}
 
-您可以透過PUT請求建立或更新資料集的到期日。
+透過PUT請求建立或更新資料集的到期日。 PUT請求會使用 `datasetId` 或 `ttlId`.
 
 **API格式**
 
 ```http
 PUT /ttl/{DATASET_ID}
+PUT /ttl/{TTL_ID}
 ```
 
 | 參數 | 說明 |
 | --- | --- |
 | `{DATASET_ID}` | 您要為其排程到期的資料集ID。 |
+| `{TTL_ID}` | 資料集過期時間的ID。 |
 
 **要求**
 
@@ -214,15 +214,15 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2022-12-31T23:59:59Z",
-        "displayName": "Example Expiration Request",
-        "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
+        "expiry": "2024-12-31T23:59:59Z",
+        "displayName": "Delete Acme Data before 2025",
+        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
       }'
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `expiry` | 要刪除資料集的時間的ISO 8601時間戳記。 |
+| `expiry` | ISO 8601格式的日期和時間。 如果字串沒有明確的時區位移，則會假設時區為UTC。 系統內的資料有效期限是根據提供的到期值所設定。 相同資料集的任何先前到期時間戳記都會取代為您提供的新到期值。 |
 | `displayName` | 到期要求的顯示名稱。 |
 | `description` | 到期要求的選擇性說明。 |
 
@@ -234,21 +234,21 @@ curl -X PUT \
 
 ```json
 {
-    "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
     "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "{ORG_ID}",
+    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
     "status": "pending",
-    "expiry": "2032-12-31T23:59:59Z",
+    "expiry": "2024-12-31T23:59:59Z",
     "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "{USER_ID}",
-    "displayName": "Example Expiration Request",
-    "description": "Cleanup identities required by JIRA request 12345 across all datasets in the prod sandbox."
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+    "displayName": "Delete Acme Data before 2025",
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `workorderId` | 資料集過期時間的ID。 |
+| `ttlId` | 資料集過期時間的ID。 |
 | `datasetId` | 此到期適用於的資料集ID。 |
 | `imsOrg` | 您組織的ID。 |
 | `status` | 資料集到期的目前狀態。 |
@@ -274,17 +274,17 @@ DELETE /ttl/{EXPIRATION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXPIRATION_ID}` | 此 `workorderId` 要取消的資料集到期日。 |
+| `{EXPIRATION_ID}` | 此 `ttlId` 要取消的資料集到期日。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會取消ID為的資料集有效期 `SD5cfd7a11b25543a9bcd9ef647db3d8df`：
+以下請求會取消ID為的資料集有效期 `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`：
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD5cfd7a11b25543a9bcd9ef647db3d8df \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -295,19 +295,21 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204 （無內容），以及過期時間 `status` 屬性已設定為 `cancelled`.
 
-## 擷取資料集的到期狀態歷史記錄
+## 擷取資料集的到期狀態歷史記錄 {#retrieve-expiration-history}
 
-您可以使用查詢引數查詢特定資料集的到期狀態歷史記錄 `include=history` 在查詢請求中。 結果包括關於建立資料集有效期、已套用的任何更新，及其取消或執行（如果適用）的資訊。
+您可以使用查詢引數查詢特定資料集的到期狀態歷史記錄 `include=history` 在查詢請求中。 結果包括關於建立資料集有效期、已套用的任何更新，及其取消或執行（如果適用）的資訊。 您也可以使用 `ttlId` 資料集有效期限的。
 
 **API格式**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
+GET /ttl/{TTL_ID}
 ```
 
 | 參數 | 說明 |
 | --- | --- |
 | `{DATASET_ID}` | 您要查詢其到期歷程記錄的資料集ID。 |
+| `{TTL_ID}` | 資料集過期時間的ID。 |
 
 {style="table-layout:auto"}
 
@@ -328,35 +330,35 @@ curl -X GET \
 
 ```json
 {
-  "workorderId": "SD5cfd7a11b25543a9bcd9ef647db3d8df",
+  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
   "datasetId": "62759f2ede9e601b63a2ee14",
   "datasetName": "Example Dataset",
   "sandboxName": "prod",
   "displayName": "Expiration Request 123",
   "description": "Expiration Request 123 Description",
-  "imsOrg": "{ORG_ID}",
+  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
   "status": "cancelled",
   "expiry": "2022-05-09T23:47:30.071186Z",
   "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "{USER_ID}",
+  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
   "history": [
     {
       "status": "created",
       "expiry": "2032-12-31T23:59:59Z",
       "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     },
     {
       "status": "updated",
       "expiry": "2032-12-31T23:59:59Z",
       "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     },
     {
       "status": "cancelled",
       "expiry": "2022-05-09T23:47:30.071186Z",
       "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "{USER_ID}"
+      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
     }
   ]
 }
@@ -364,7 +366,7 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `workorderId` | 資料集過期時間的ID。 |
+| `ttlId` | 資料集過期時間的ID。 |
 | `datasetId` | 此到期適用於的資料集ID。 |
 | `datasetName` | 此到期適用於的資料集的顯示名稱。 |
 | `sandboxName` | 目標資料集所在之沙箱的名稱。 |
@@ -381,21 +383,32 @@ curl -X GET \
 
 下表概述在下列情況下可用的查詢引數： [列出資料集有效期](#list)：
 
+>[!NOTE]
+>
+>此 `description`， `displayName`、和 `datasetName` 引數都包含依據LIKE值搜尋的能力。 這表示您可以搜尋字串「Name1」，以尋找名為「Name123」、「Name183」、「DisplayName1234」的排程資料集有效期。
+
 | 參數 | 說明 | 範例 |
 | --- | --- | --- |
-| `size` | 介於1到100之間的整數，表示要傳回的最大到期次數。 預設為25。 | `size=50` |
-| `page` | 整數，指出要傳回的過期頁面。 | `page=3` |
-| `orgId` | 比對組織ID與引數相符的資料集有效期。 此值預設為 `x-gw-ims-org-id` 標頭，並會忽略，除非請求提供服務權杖。 | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
-| `status` | 以逗號分隔的狀態清單。 包含後，回應會比對資料集有效期，其目前狀態在所列資料集有效期中。 | `status=pending,cancelled` |
-| `author` | 比對下列專案的有效期 `created_by` 是搜尋字串的相符專案。 如果搜尋字串的開頭為 `LIKE` 或 `NOT LIKE`，其餘會視為SQL搜尋模式。 否則，整個搜尋字串會被視為必須完全符合的整個內容的常值字串。 `created_by` 欄位。 | `author=LIKE %john%` |
-| `sandboxName` | 符合沙箱名稱與引數完全相符的資料集有效期。 在請求的 `x-sandbox-name` 標頭。 使用 `sandboxName=*` 以納入所有沙箱的資料集有效期。 | `sandboxName=dev1` |
-| `datasetId` | 符合套用至特定資料集的到期日。 | `datasetId=62b3925ff20f8e1b990a7434` |
+| `author` | 比對下列專案的有效期 `created_by` 是搜尋字串的相符專案。 如果搜尋字串的開頭為 `LIKE` 或 `NOT LIKE`，其餘會視為SQL搜尋模式。 否則，整個搜尋字串會被視為必須完全符合的整個內容的常值字串。 `created_by` 欄位。 | `author=LIKE %john%`、`author=John Q. Public` |
+| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | 符合在指定間隔內任何時間取消的到期日。 即使稍後重新開啟到期日（為相同資料集設定新的到期日），這亦適用。 | `updatedDate=2022-01-01` |
+| `completedDate` / `completedToDate` / `completedFromDate` | 符合在指定間隔內完成的到期日。 | `completedToDate=2021-11-11-06:00` |
 | `createdDate` | 符合在指定時間開始的24小時視窗中建立的到期日。<br><br>請注意，沒有時間的日期(例如 `2021-12-07`)代表當天開始的日期時間。 因此， `createdDate=2021-12-07` 是指任何在2021年12月7日建立的到期日，來自 `00:00:00` 到 `23:59:59.999999999` (UTC)。 | `createdDate=2021-12-07` |
 | `createdFromDate` | 比對在指定時間或之後建立的到期日。 | `createdFromDate=2021-12-07T00:00:00Z` |
 | `createdToDate` | 比對在指定時間或之前建立的到期日。 | `createdToDate=2021-12-07T23:59:59.999999999Z` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | 按讚 `createdDate` / `createdFromDate` / `createdToDate`，但符合資料集到期日的更新時間，而不是建立時間。<br><br>每次編輯時都會視為更新到期日，包括建立、取消或執行的時間。 | `updatedDate=2022-01-01` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | 符合在指定間隔內任何時間取消的到期日。 即使稍後重新開啟到期日（為相同資料集設定新的到期日），這亦適用。 | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | 符合在指定間隔內完成的到期日。 | `completedToDate=2021-11-11-06:00` |
+| `datasetId` | 符合套用至特定資料集的到期日。 | `datasetId=62b3925ff20f8e1b990a7434` |
+| `datasetName` | 符合資料集名稱包含所提供搜尋字串的到期日。 相符專案不區分大小寫。 | `datasetName=Acme` |
+| `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
+| `displayName` | 符合顯示名稱包含所提供搜尋字串的到期日。 相符專案不區分大小寫。 | `displayName=License Expiry` |
+| `executedDate` / `executedFromDate` / `executedToDate` | 根據確切的執行日期、執行的結束日期或執行的開始日期來篩選結果。 它們可用來擷取與特定日期、特定日期之前或特定日期之後執行作業相關聯的資料或記錄。 | `executedDate=2023-02-05T19:34:40.383615Z` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | 符合指定間隔內即將執行或已執行的到期日。 | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `limit` | 介於1到100之間的整數，表示要傳回的最大到期次數。 預設為25。 | `limit=50` |
+| `orderBy` | 此 `orderBy` 查詢引數指定API傳回結果的排序順序。 使用它可根據一或多個欄位來排列資料，以遞增(ASC)或遞減(DESC)順序排列。 使用+或 — 首碼分別表示ASC、DESC。 接受下列值： `displayName`， `description`， `datasetName`， `id`， `updatedBy`， `updatedAt`， `expiry`， `status`. | `-datasetName` |
+| `orgId` | 比對組織ID與引數相符的資料集有效期。 此值預設為 `x-gw-ims-org-id` 標頭，並會忽略，除非請求提供服務權杖。 | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
+| `page` | 整數，指出要傳回的過期頁面。 | `page=3` |
+| `sandboxName` | 符合沙箱名稱與引數完全相符的資料集有效期。 在請求的 `x-sandbox-name` 標頭。 使用 `sandboxName=*` 以納入所有沙箱的資料集有效期。 | `sandboxName=dev1` |
+| `search` | 符合指定字串與到期ID完全相符或為的到期 **包含** 在下列任一欄位中：<br><ul><li>作者</li><li>顯示名稱</li><li>說明</li><li>顯示名稱</li><li>資料集名稱</li></ul> | `search=TESTING` |
+| `status` | 以逗號分隔的狀態清單。 包含後，回應會比對資料集有效期，其目前狀態在所列資料集有效期中。 | `status=pending,cancelled` |
+| `ttlId` | 符合具有特定ID的到期要求。 | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
+| `updatedDate` / `updatedToDate` / `updatedFromDate` | 按讚 `createdDate` / `createdFromDate` / `createdToDate`，但符合資料集到期日的更新時間，而不是建立時間。<br><br>每次編輯時都會視為更新到期日，包括建立、取消或執行的時間。 | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}

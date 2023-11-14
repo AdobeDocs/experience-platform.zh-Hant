@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-此 **[!UICONTROL 帳戶]** 索引標籤會顯示您已建立與不同目的地的連線的詳細資訊。 請參閱 [帳戶總覽](../ui/destinations-workspace.md#accounts) 取得每個目的地帳戶的所有資訊。
+此 **[!UICONTROL 帳戶]** 標籤會顯示您已建立與不同目的地的連線的詳細資訊。 請參閱 [帳戶總覽](../ui/destinations-workspace.md#accounts) 取得每個目的地帳戶的所有資訊。
 
 本教學課程涵蓋使用Experience PlatformUI刪除不再需要的目的地帳戶的步驟。
 
@@ -29,15 +29,15 @@ ht-degree: 0%
 
 請依照下列步驟刪除現有的目的地帳戶。
 
-1. 登入 [EXPERIENCE PLATFORMUI](https://platform.adobe.com/) 並選取 **[!UICONTROL 目的地]** 左側導覽列中的。 選取 **[!UICONTROL 帳戶]** 以檢視您現有的帳戶。
+1. 登入 [EXPERIENCE PLATFORMUI](https://platform.adobe.com/) 並選取 **[!UICONTROL 目的地]** 從左側導覽列。 選取 **[!UICONTROL 帳戶]** 以檢視您現有的帳戶。
 
    ![帳戶標籤](../assets/ui/delete-accounts/accounts-tab.png)
 
-2. 選取篩選圖示 ![篩選圖示](../assets/ui/update-accounts/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的已篩選帳戶選擇。
+2. 選取篩選器圖示 ![Filter-icon](../assets/ui/update-accounts/filter.png) 以啟動「排序」面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的已篩選帳戶選擇。
 
    ![篩選目的地](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. 選取省略符號(`...`)的名稱旁。 快顯面板隨即出現，其中提供選項至 **[!UICONTROL 啟用對象]**， **[!UICONTROL 編輯詳細資料]**、和 **[!UICONTROL 刪除]** 帳戶。 選取 ![刪除按鈕](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 刪除]** 按鈕來刪除所需的帳戶。
+3. 選取省略符號(`...`)。 隨即顯示快顯面板，提供選項給 **[!UICONTROL 啟用對象]**， **[!UICONTROL 編輯詳細資料]**、和 **[!UICONTROL 刪除]** 帳戶。 選取 ![刪除按鈕](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL 刪除]** 按鈕來刪除所需的帳戶。
 
    ![刪除目的地帳戶](../assets/ui/delete-accounts/delete-accounts.png)
 
@@ -47,6 +47,6 @@ ht-degree: 0%
 
 ## 後續步驟
 
-依照本教學課程所述，您已成功使用目的地工作區來刪除現有帳戶。
+按照本教學課程，您已成功使用目的地工作區刪除現有帳戶。
 
-如需如何以程式設計方式執行這些操作的步驟，請使用 [!DNL Flow Service] API，請參考以下教學課程： [使用流量服務API刪除連線](../api/delete-destination-account.md)
+如需有關如何使用以程式設計方式執行這些操作的步驟， [!DNL Flow Service] API，請參考上的教學課程： [使用流量服務API刪除連線](../api/delete-destination-account.md)

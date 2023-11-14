@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: PQL字串函式
-description: 設定檔查詢語言(PQL)提供函式，讓使用者更輕鬆地與字串互動。
+description: 設定檔查詢語言(PQL)提供的函式可讓您更輕鬆地與字串互動。
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
@@ -12,11 +12,11 @@ ht-degree: 6%
 
 # 字串函式
 
-[!DNL Profile Query Language] (PQL)提供可讓您更輕鬆與字串互動的函式。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概觀](./overview.md).
+[!DNL Profile Query Language] (PQL)提供函式，讓與字串的互動更簡單。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
 
 ## 按讚
 
-此 `like` 函式來判斷字串是否符合指定的模式。
+此 `like` 函式來決定字串是否符合指定的模式。
 
 **格式**
 
@@ -51,11 +51,11 @@ city like "%es%"
 | --------- | ----------- |
 | `{STRING_1}` | 執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串中搜尋的字串。 |
-| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 預設情況下，此項設為true。 |
+| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 依預設，此設定為true。 |
 
 **範例**
 
-下列PQL查詢會區分大小寫，判斷個人的名稱是否以「Joe」開頭。
+下列PQL查詢會區分大小寫，判斷個人名稱是否以「Joe」開頭。
 
 ```sql
 person.name.startsWith("Joe")
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## 開頭不是
 
-此 `doesNotStartWith` 函式來決定字串的開頭是否不是指定的子字串。
+此 `doesNotStartWith` 函式來決定字串的開頭是否為指定的子字串。
 
 **格式**
 
@@ -75,7 +75,7 @@ person.name.startsWith("Joe")
 | --------- | ----------- |
 | `{STRING_1}` | 執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串中搜尋的字串。 |
-| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 預設情況下，此項設為true。 |
+| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 依預設，此設定為true。 |
 
 **範例**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## 終止於
 
-此 `endsWith` 函式用來決定字串的結尾是否為指定的子字串。
+此 `endsWith` 函式來決定字串的結尾是否為指定的子字串。
 
 **格式**
 
@@ -99,11 +99,11 @@ person.name.doesNotStartWith("Joe")
 | --------- | ----------- |
 | `{STRING_1}` | 執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串中搜尋的字串。 |
-| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 預設情況下，此項設為true。 |
+| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 依預設，此設定為true。 |
 
 **範例**
 
-下列PQL查詢會區分大小寫，判斷個人的電子郵件地址是否以「.com」結尾。
+下列PQL查詢會區分大小寫，判斷此人的電子郵件地址是否以「.com」結尾。
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -123,11 +123,11 @@ person.emailAddress.endsWith(".com")
 | --------- | ----------- |
 | `{STRING_1}` | 執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串中搜尋的字串。 |
-| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 預設情況下，此項設為true。 |
+| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 依預設，此設定為true。 |
 
 **範例**
 
-下列PQL查詢會區分大小寫，判斷個人的電子郵件地址是否不是以「.com」結尾。
+下列PQL查詢會區分大小寫，判斷個人的電子郵件地址是否不以「.com」結尾。
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -147,7 +147,7 @@ person.emailAddress.doesNotEndWith(".com")
 | --------- | ----------- |
 | `{STRING_1}` | 執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串中搜尋的字串。 |
-| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 預設情況下，此項設為true。 |
+| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 依預設，此設定為true。 |
 
 **範例**
 
@@ -171,7 +171,7 @@ person.emailAddress.contains("2010@gm")
 | --------- | ----------- |
 | `{STRING_1}` | 執行檢查的字串。 |
 | `{STRING_2}` | 要在第一個字串中搜尋的字串。 |
-| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 預設情況下，此項設為true。 |
+| `{BOOLEAN}` | 選擇性引數，用來判斷檢查是否區分大小寫。 依預設，此設定為true。 |
 
 **範例**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## 等於
 
-此 `equals` 函式來判斷字串是否等於指定的字串。
+此 `equals` 函式來決定字串是否等於指定的字串。
 
 **格式**
 
@@ -198,7 +198,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 **範例**
 
-下列PQL查詢會區分大小寫來判斷個人的姓名是否為「John」。
+下列PQL查詢會區分大小寫，判斷人員是否為「John」。
 
 ```sql
 person.name.equals("John")
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## 不等於
 
-此 `notEqualTo` 函式來判斷字串是否不等於指定的字串。
+此 `notEqualTo` 函式來決定字串是否不等於指定的字串。
 
 **格式**
 
@@ -221,7 +221,7 @@ person.name.equals("John")
 
 **範例**
 
-下列PQL查詢會區分大小寫來判斷個人的姓名是否為「John」。
+下列PQL查詢會區分大小寫，判斷人員是否為「John」。
 
 ```sql
 person.name.notEqualTo("John")
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## 符合
 
-此 `matches` 函式來判斷字串是否符合特定的規則運算式。 請參閱 [本檔案](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) 以取得規則運算式中比對模式的詳細資訊。
+此 `matches` 函式是用來決定字串是否符合特定的規則運算式。 請參閱 [本檔案](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) 以取得規則運算式中比對模式的詳細資訊。
 
 **格式**
 
@@ -239,7 +239,7 @@ person.name.notEqualTo("John")
 
 **範例**
 
-下列PQL查詢會在不區分大小寫的情況下，判斷個人的名字是否以「John」開頭。
+下列PQL查詢會在不區分大小寫的情況下，判斷個人的名稱是否以「John」開頭。
 
 ```sql
 person.name.matches("(?i)^John")
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## 規則運算式群組
 
-此 `regexGroup` 函式是根據提供的規則運算式來擷取特定資訊。
+此 `regexGroup` 函式是用來根據提供的規則運算式擷取特定資訊。
 
 **格式**
 
@@ -273,4 +273,4 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 ## 後續步驟
 
-現在您已瞭解字串函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已瞭解字串函式，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).

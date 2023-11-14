@@ -32,7 +32,7 @@ ht-degree: 0%
 
 如果查詢符合以下任何條件，則會自動使用串流區段來評估：
 
-| 查詢型別 | 詳細資訊 | 範例 |
+| 查詢型別 | 詳細資料 | 範例 |
 | ---------- | ------- | ------- |
 | 單一事件 | 任何會參照沒有時間限制的單一傳入事件的區段定義。 | ![以下是單一事件的範例。](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 相對時間範圍內的單一事件 | 任何參考單一傳入事件的區段定義。 | ![在相對時間範圍內顯示單一事件的範例。](../images/ui/streaming-segmentation/relative-hit-success.png) |
