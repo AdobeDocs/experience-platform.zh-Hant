@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy ServiceUI總覽
 description: 開始使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 20%
+source-wordcount: '227'
+ht-degree: 18%
 
 ---
 
@@ -22,23 +22,24 @@ PRIVACY SERVICEUI [!DNL Privacy Service] 可讓您協調各種Adobe Experience C
 
 >[!NOTE]
 >
->如需有關使用Privacy Service API以程式設計方式管理合規性請求的資訊，請參閱 [Privacy Service API指南](../api/overview.md).
+>如需有關使用Privacy Service API以程式設計方式管理合規性請求的資訊，請參閱 [Privacy Service API指南](../api/overview.md). 檢視檔案編號 [管理Privacy Service許可權](../permissions.md) 以取得詳細資訊。
 
 ## 登入 [!DNL Privacy Service] UI
 
 >[!IMPORTANT]
 >
->您必須有Adobe ID才能驗證 [!DNL Privacy Service] UI。 此外，您必須在組織內擁有系統管理員許可權。
+>您必須有Adobe ID才能驗證 [!DNL Privacy Service] UI。
 
 若要存取UI，請登入 [Adobe Experience Cloud](https://experience.adobe.com/) 並選取 **[!UICONTROL Privacy UI]** 在「快速存取」功能表下。
 
-![](../images/ui-overview/quick-access.png)
+![反白顯示隱私權UI的Experience Cloud控制面板。](../images/ui-overview/quick-access.png)
+
 
 ### 登入來源 [!DNL Experience Platform]
 
 如果您擁有Adobe Experience Platform UI的存取權，也可以存取 [!DNL Privacy Service] UI透過 **[!UICONTROL 請求]** 索引標籤進行編輯。
 
-![](../images/ui-overview/platform.png)
+![左側導覽列中反白顯示請求的Adobe Experience Platform UI。](../images/ui-overview/platform.png)
 
 ## 後續步驟
 

@@ -2,20 +2,14 @@
 title: 管理「Privacy Service」的權限
 description: 了解如何使用 Adob​​e Admin Console 管理 Adobe Experience Platform Privacy Service 的使用者權限。
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
-workflow-type: ht
-source-wordcount: '1634'
-ht-degree: 100%
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
+workflow-type: tm+mt
+source-wordcount: '1504'
+ht-degree: 95%
 
 ---
 
 # 管理「Privacy Service」的權限
-
->[!IMPORTANT]
->
->Adobe Experience Platform Privacy Service 的權限已提升，以提高其精細度層級。這些變更使得組織管理員能夠授予更多使用者所需角色和權限層級的存取權。技術帳戶使用者必須更新其 Privacy Service 的權限，因為此即將發生的更新會對他們造成重大變更。此權限變更的強制執行於 **2023 年 4 月 13 日**&#x200B;發生。如需有關解決此問題的指引，請參閱有關[移轉舊版 API 認證](#migrate-tech-accounts)的文件。
->
->技術帳戶可供企業客戶使用，並會透過 Adobe Developers Console 建立。技術帳戶持有者的 Adob&#x200B;&#x200B;e ID 末尾為 `@techacct.adobe.com`。如果您不確定自己是否為技術帳戶持有者，請和您的組織管理員聯絡。
 
 對 [Adobe Experience Platform Privacy Service](./home.md) 的存取權會透過 Adob&#x200B;&#x200B;e Admin Console 中的精細角色型權限控制。若能建立指派權限給使用者群組的產品設定檔，您即可決定誰擁有對於 Privacy Service [UI](./ui/overview.md) 和 [API](./api/overview.md) 中哪些功能的存取權。
 
@@ -53,17 +47,17 @@ ht-degree: 100%
 
 若要管理 Privacy Service 的權限，請登入 [Admin Console](https://adminconsole.adobe.com/)，並在頂端導覽區域選取&#x200B;**[!UICONTROL 產品]**。從這裡選取 **[!UICONTROL Adobe Experience Platform Privacy Service]**。
 
-![顯示 Admin Console 中 Privacy Service 產品卡的影像](./images/permissions/privacy-service-card.png)
+![反白顯示Privacy Service產品卡的Admin Console。](./images/permissions/privacy-service-card.png)
 
 ### 選取或建立產品設定檔
 
 下一個畫面會顯示貴組織的 Privacy Service 可使用之產品設定檔的清單。如果不存在任何產品設定檔，請選取&#x200B;**[!UICONTROL 新的設定檔]**&#x200B;建立一個。如果您在貴組織中有多個角色或使用者群組，而這些需要不同層級的存取權限，則應為每個角色或使用者建立單獨的產品設定檔。
 
-![顯示 Admin Console 中 Privacy Service 的產品設定檔的影像](./images/permissions/select-or-create-profile.png)
+![反白顯示Privacy Service產品設定檔的Admin Console。](./images/permissions/select-or-create-profile.png)
 
 選取產品設定檔後，您可以使用「**[!UICONTROL 權限]**」索引標籤開始針對設定檔[編輯權限](#edit-permissions)，或選取「**[!UICONTROL 使用者]**」索引標籤，開始對設定檔[指派使用者](#assign-users)。
 
-![顯示產品設定檔 Admin Console 的權限索引標籤的影像](./images/permissions/users-permissions-tabs.png)
+![產品設定檔Admin Console的許可權索引標籤。](./images/permissions/users-permissions-tabs.png)
 
 ### 編輯設定檔的權限 {#edit-permissions}
 
@@ -71,25 +65,25 @@ ht-degree: 100%
 
 編輯設定檔的權限時，可用權限會顯示在左欄的清單中，而設定檔中包含的權限則會顯示在右欄的清單中。選取清單中的權限在任一欄之間移動。
 
-![顯示可用和包含的權限欄的影像](./images/permissions/edit-permissions.png)
+![可用和包含的許可權欄。](./images/permissions/edit-permissions.png)
 
 將權限歸類到不同類別。若要在類別之間切換，請從左側導覽中選取所需的類別。
 
-![顯示權限下[!UICONTROL 選擇退出銷售]章節的影像](./images/permissions/switch-category.png)
+![此 [!UICONTROL 選擇退出銷售] 區段。](./images/permissions/switch-category.png)
 
 完成設定權限後，即可選取「**[!UICONTROL 儲存]**」。
 
-![顯示已儲存的產品設定檔權限設定的影像](./images/permissions/save-permissions.png)
+![反白顯示「儲存」之產品設定檔的許可權設定。](./images/permissions/save-permissions.png)
 
 產品設定檔檢視會重新顯示，並新增所反映的權限。
 
-![顯示產品設定檔新增權限的影像](./images/permissions/permissions-added.png)
+![為產品設定檔新增的許可權。](./images/permissions/permissions-added.png)
 
 ### 將使用者指派至設定檔 {#assign-users}
 
 若要將使用者指派至產品設定檔 (並授予他們設定檔的設定權限)，請選取「**[!UICONTROL 使用者]**」索引標籤，接著選取「**[!UICONTROL 新增使用者]**」。
 
-![顯示 Admin Console 中產品設定檔的使用者索引標籤的影像](./images/permissions/manage-users.png)
+![Admin Console中產品設定檔的「使用者」索引標籤。](./images/permissions/manage-users.png)
 
 如需有關如何管理產品設定檔的使用者的詳細資訊，請參閱 [Admin Console 文件](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html)。
 
