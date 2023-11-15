@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1204'
 ht-degree: 10%
 
 ---
@@ -90,6 +90,7 @@ ht-degree: 10%
       * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
       * [pinterest客戶清單連線](./catalog/advertising/pinterest.md)
+      * [pinterest連線升級](./catalog/advertising/pinterest-upgrade.md)
       * [Snapchat Ads連線](./catalog/advertising/snap-inc.md)
       * [交易台連線](./catalog/advertising/tradedesk.md)
       * [(Beta) The Trade Desk CRM 連線](./catalog/advertising/tradedesk-emails.md)

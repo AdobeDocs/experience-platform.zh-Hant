@@ -1,6 +1,6 @@
 ---
 title: 資料管理授權權益最佳實務
-description: 了解可用來更好地管理 Adobe Experience Platform 授權權益的最佳實務及工具。
+description: 了解可以更有效管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt

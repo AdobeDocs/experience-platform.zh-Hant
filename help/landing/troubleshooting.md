@@ -2,15 +2,15 @@
 keywords: Experience Platform；首頁；熱門主題；API錯誤代碼；API錯誤代碼；錯誤代碼API；錯誤代碼API；API請求錯誤；API疑難排解；API錯誤
 solution: Experience Platform
 title: Adobe Experience Platform常見問題集和疑難排解指南
-description: 尋找常見問題的解答，以及針對Adobe Experience Platform中的常見錯誤進行疑難排解的指南。
-landing-page-description: 尋找常見問題的解答，以及針對Adobe Experience Platform中的常見錯誤進行疑難排解的指南。
+description: 尋找常見問題的解答，以及針對 Adobe Experience Platform 中的常見錯誤進行疑難排解的指南。
+landing-page-description: 尋找常見問題的解答，以及針對 Adobe Experience Platform 中的常見錯誤進行疑難排解的指南。
 short-description: 尋找常見問題的解答，以及針對 Experience Platform 中的常見錯誤進行疑難排解的指南。
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '1906'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 

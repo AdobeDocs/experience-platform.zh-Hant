@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: 資料準備指南
-user-guide-description: 準備您的資料以擷取至Adobe Experience Platform，並瞭解「資料準備」如何協助您立即對應、轉換和驗證資料。
+user-guide-description: 準備您的資料以擷取至 Adobe Experience Platform，並了解「資料準備」如何協助您對應、轉換和驗證資料。
 feature: Data Prep
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 29%
+ht-degree: 65%
 
 ---
 

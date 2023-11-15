@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform Debugger 說明
 breadcrumb-title: Adobe Experience Platform Debugger 指南
-user-guide-description: 使用適用於Chrome和Firefox的Adobe Experience Platform Debugger檢查您的網頁是否有Experience Platform實施的問題。
+user-guide-description: 使用 Chrome 和 Firefox 的 Adobe Experience Platform Debugger 檢查您的網頁是否有 Experience Platform 實作問題。
 feature: Debugger
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '72'
-ht-degree: 26%
+ht-degree: 55%
 
 ---
 
