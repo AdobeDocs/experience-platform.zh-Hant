@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 09d17f6dad7bd7b1eda491e4fbd92e298243f3c3
+source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2571'
 ht-degree: 0%
 
 ---
@@ -63,19 +63,19 @@ Adobe Experience Platform的助理是UI功能，可用於導覽並瞭解Experien
 
 ![已選取「助理員」圖示的Experience Platform UI首頁。](./images/ai-assistant/ai-assistant.png)
 
-+++使用沈浸式模式
+<!-- +++Use immersive mode
 
-使用 [!DNL Immersive mode] 選取「助理員」標題導覽中的焦點圖示。
+To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
-![選擇沈浸式](./images/ai-assistant/select-immersive.png)
+![select-immersive](./images/ai-assistant/select-immersive.png)
 
-「助理員」專用的快顯視窗介面會出現在熒幕中央。
+A dedicated pop-up interface for Assistant appears at the center of your screen.
 
-![沈浸式模式](./images/ai-assistant/immersive-mode.png)
+![immersive-mode](./images/ai-assistant/immersive-mode.png)
 
 +++
 
-從這裡，您可以在文字方塊中輸入問題，並查詢Assistant以瞭解有關資料或對象的概念。 您也可以詢問有關資料物件的問題，以更加瞭解如何針對個別使用案例使用這些物件。
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### 使用案例範例：使用「小幫手」加速您的綱要建立程式
 
@@ -97,25 +97,45 @@ Adobe Experience Platform的助理是UI功能，可用於導覽並瞭解Experien
 
 助理可以檢視其來源，讓您驗證答案。 說明檔案的連結可用於概念問題，而資料使用問題則可使用示範如何計算答案的SQL查詢來驗證。
 
-![傳回答案後助理提供的選項。](./images/ai-assistant/options-post-answer.png)
-
-#### 相關建議
-
-您也可以選取「助理員」提供的其中一個相關建議，以更深入地瞭解您的查詢主題。
-
-![相關建議。](./images/ai-assistant/related-suggestions.png)
+![傳回答案後助理提供的選項。](./images/ai-assistant/options.png)
 
 #### 後續追蹤問題
 
++++選取以檢視後續問題的範例
+
 您可以透過提出後續問題，進一步瞭解特定主題的更多資訊。 在下一個範例中，系統會詢問助理員如何在細分中使用eventType。
 
-![「助理」上顯示的後續問題與答案，以進行Experience Platform。](./images/ai-assistant/follow-up-answer.png)
+![「助理」上顯示的後續問題與答案，以進行Experience Platform。](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### 資料使用問題
 
++++選取此選項可檢視資料使用問題的範例
+
 您也可以向「小幫手」詢問有關資料使用的問題。 查詢資料使用情況時，您必須處於作用中沙箱中，小幫手才能回答您的查詢。
 
+對於涉及資料使用資訊的回應，「助理員」會提供相關實體的連結。 此外，「小幫手」會提供您如何計算其答案的說明。
+
 ![一個資料使用問題，詢問使用者擁有多少區段。](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### 使用自動完成
+
++++選取以檢視自動完成的範例
+
+您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：區段、結構描述、資料集、來源和目的地。
+
+若要使用自動完成，請輸入加號(**`+`**)作為問題的一部分。 或者，您也可以選取加號(**`+`**)。 接著會出現一個視窗，內含存在於沙箱中的建議資料物件清單。
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+接著，選取您要查詢的資料物件以完成問題，然後提交問題。
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## 範圍
 
@@ -168,13 +188,9 @@ Adobe Experience Platform的助理是UI功能，可用於導覽並瞭解Experien
 
 每次回應時，「小幫手」都會提供引文，供您參考以取得驗證或詳細資訊。
 
-選取 **[!UICONTROL 顯示來源]** 取得「助理」參考以計算其回應的檔案連結清單。
+選取 **[!UICONTROL 顯示來源]** 取得「助理」參考以計算其回應的檔案連結清單。 當您選取參照檔案的連結時，會前往該特定頁面的相關區段，並反白顯示特定資訊。
 
-![「助理員」中顯示的來源連結。](./images/ai-assistant/sources.png)
-
-對於涉及資料使用資訊的回應，「助理員」會提供相關實體的連結。 此外，「小幫手」會提供您如何計算其答案的說明。
-
-![說明](./images/ai-assistant/explanation.png)
+![「助理員」中顯示的來源連結。](./images/ai-assistant/show-sources.png)
 
 ## 提供意見反應
 
@@ -208,7 +224,7 @@ Adobe Experience Platform的助理是UI功能，可用於導覽並瞭解Experien
 
 選取旗標圖示，即可提供進一步的使用助理員體驗報告。
 
-![報表結果視窗。](./images/ai-assistant/report-results.png)
+![報表結果視窗。](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 
