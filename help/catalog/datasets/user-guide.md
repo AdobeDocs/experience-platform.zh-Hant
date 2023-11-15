@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2769'
 ht-degree: 4%
 
 ---
@@ -264,6 +264,10 @@ ht-degree: 4%
 ![所選批次的詳細資訊隨即顯示。 這包括擷取的記錄數、失敗的記錄數、批次狀態、檔案大小、擷取開始和結束時間、資料集和批次ID、組織ID、資料集名稱和存取資訊。](../images/datasets/user-guide/batch-overview.png)
 
 如果要刪除批次，請選取 **[!UICONTROL 刪除批次]** 靠近控制面板右上角。 刪除批次也會從批次最初擷取的資料集中移除其記錄。
+
+>[!NOTE]
+>
+>如果已為設定檔啟用並處理內嵌資料，則刪除批次不會從設定檔存放區中刪除該資料。
 
 ![資料集詳細資訊頁面會醒目顯示「刪除批次」按鈕。](../images/datasets/user-guide/delete-batch.png)
 
