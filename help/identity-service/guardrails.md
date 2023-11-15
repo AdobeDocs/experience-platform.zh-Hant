@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1233'
 ht-degree: 1%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 1%
 | 護欄 | 限制 | 附註 |
 | --- | --- | --- |
 | 圖表中的身分數量 | 50 | 更新具有50個連結身分的圖形時，Identity Service將套用「先進先出」機制，並刪除最舊的身分，為最新的身分騰出空間。 刪除是根據身分型別和時間戳記。 此限制會套用至沙箱層級。 如需詳細資訊，請閱讀以下章節： [瞭解刪除邏輯](#deletion-logic). |
+| 單一批次擷取的身分連結數 | 50 | 單一批次可能包含異常身分，這些身分會造成不想要的圖表合併。 為防止此情況，Identity Service將不會擷取已連結至50個或更多身分的身分。 |
 | XDM記錄中的身分數量 | 20 | 需要的XDM記錄數量下限為2。 |
 | 自訂名稱空間數量 | None | 您可以建立的自訂名稱空間數量沒有限制。 |
 | 名稱空間顯示名稱或身分符號的字元數 | None | 名稱空間顯示名稱或身分符號的字元數沒有限制。 |
@@ -42,7 +43,7 @@ ht-degree: 1%
 
 | 命名空間 | 驗證規則 | 違反規則時的系統行為 |
 | --- | --- | --- |
-| ECID | <ul><li>ECID的身分值必須剛好38個字元。</li><li>ECID的身分值必須僅由數字組成。</li></ul> | <ul><li>如果ECID的身分值不完全是38個字元，則會略過記錄。</li><li>如果ECID的身分值包含非數字字元，則會略過記錄。</li></ul> |
+| ECID | <ul><li>ECID的身分值必須剛好38個字元。</li><li>ECID的身分值必須僅由數字組成。</li><li>身分值不可以是「null」、「anonymous」、「invalid」或空字串（例如：「 」、「」、「 」）。</li></ul> | <ul><li>如果ECID的身分值不完全是38個字元，則會略過記錄。</li><li>如果ECID的身分值包含非數字字元，則會略過記錄。</li><li>此身分將會遭到封鎖，無法內嵌。</li></ul> |
 | 非ECID | 身分值不可超過1024個字元。 | 如果身分值超過1024個字元，則會略過記錄。 |
 
 ### 身分名稱空間擷取
@@ -114,6 +115,8 @@ Adobe如果您的生產沙箱包含：
 
 * [設定Experience Platform標籤的身分對應](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience Platform Web SDK中的身分資料](../edge/identity/overview.md#using-identitymap)
+
+
 
 ## 後續步驟
 
