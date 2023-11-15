@@ -5,9 +5,9 @@ title: 即時客戶個人檔案中的隱私權請求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service會根據多項隱私權法規的規定，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 本檔案說明與處理即時客戶個人檔案的隱私權請求相關的重要概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f0179bacc55134241bed8de240ee632d0f38e4b6
+source-git-commit: 6d9f8eceeb8fbe550b4e1e7e0964f2fff0cd3c70
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1739'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,14 @@ Identity Service維護全域定義（標準）和使用者定義（自訂）的�
 
 ## 提交請求 {#submit}
 
-以下各節概述如何針對以下專案提出隱私權請求： [!DNL Real-Time Customer Profile] 使用 [!DNL Privacy Service] API或UI。 在閱讀這些章節之前，強烈建議您檢閱 [PRIVACY SERVICE API](../privacy-service/api/getting-started.md) 或 [PRIVACY SERVICEUI](../privacy-service/ui/overview.md) 有關如何提交隱私權工作的完整步驟的檔案，包括如何在請求裝載中正確格式化提交的使用者身分資料。
+以下各節概述如何針對以下專案提出隱私權請求： [!DNL Real-Time Customer Profile] 使用 [!DNL Privacy Service] API或UI。 在閱讀這些章節之前，您應先檢閱或瞭解 [PRIVACY SERVICE API](../privacy-service/api/getting-started.md) 或 [PRIVACY SERVICEUI](../privacy-service/ui/overview.md) 檔案。 這些檔案提供如何提交隱私權工作的完整步驟，包括如何在請求裝載中正確格式化提交的使用者身分資料。
 
 >[!IMPORTANT]
 >
 >Privacy Service只能處理 [!DNL Profile] 使用不執行身分拼接的合併原則的資料。 請參閱以下小節： [合併原則限制](#merge-policy-limitations) 以取得詳細資訊。
 >
->請注意，隱私權請求可能需要多久才能完成 **無法** 有保證。 若您的電腦發生變更 [!DNL Profile] 請求仍在處理時的資料，也無法保證這些記錄是否也經過處理。
+>請注意，隱私權請求是根據法規要求以非同步方式處理，完成所需時間會有所不同。 若您的電腦發生變更 [!DNL Profile] 當要求仍在處理時，並不保證這些傳入記錄也會在該要求中處理。 系統保證只會刪除請求隱私權工作時，Data Lake或「設定檔存放區」中保留的設定檔。 如果您在刪除工作期間擷取與刪除請求主題相關的設定檔資料，並不保證會刪除所有設定檔片段。
+>您有責任在刪除請求時，留意Platform或Profile Service中的任何傳入資料，因為該資料將會插入記錄存放區。 您必須審慎擷取已刪除或正在刪除的資料。
 
 ### 使用 API
 
