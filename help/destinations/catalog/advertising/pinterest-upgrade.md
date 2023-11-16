@@ -3,9 +3,9 @@ title: pinterest目的地移轉至新API。 需要客戶動作。
 description: pinterest即將淘汰Real-Time CDP中Pinterest目的地目前使用的v4廣告商API。 瞭解您的行動專案，以便順暢地轉換至新的API，而不會中斷您的Pinterest行銷活動。
 hide: true
 hidefromtoc: true
-source-git-commit: 10bf63677c66366c226d647b1174093c1704a8b9
+source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe即將發行新的Pinterest目的地卡，此卡會利用Pinterest API v5�
 
 ## 我是否需要做任何事來維持我啟用的對象正常運作？
 
-是，一旦Adobe完成升級（目標為11月16日），您需要使用Adobe Experience Platform中的Pinterest廣告商帳戶重新驗證Pinterest。 請參閱以下的詳細說明。
+是，當Adobe完成升級並發行新的Pinterest目的地後，您需要在Real-Time CDP中使用Pinterest廣告商帳戶重新驗證Pinterest。 請參閱以下的詳細說明。
 
 ### 向Pinterest重新驗證 {#reauthenticate}
 
@@ -36,21 +36,19 @@ Adobe即將發行新的Pinterest目的地卡，此卡會利用Pinterest API v5�
    ![選取編輯詳細資訊](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
 3. 選取 **[!UICONTROL 重新連線OAuth]** 並登入您的Pinterest帳戶。
    ![選取重新連線OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
-4. 告知Adobe您已重新驗證 **[!UICONTROL （新） Pinterest]** 目的地。
+4. 移至下節中的行動專案
 
 ### 停用現有流向舊目的地並啟用流向新目的地的流量 {#disable-old-enable-new-flows}
 
-然後，您需要手動停用舊卡片的現有資料流，並啟用新卡片的資料流。
-
->[!IMPORTANT]
->
->重新驗證之後，您可以聯絡Adobe，我們將會為您執行這第二個步驟。 如果您偏好手動執行此步驟，請遵循下列步驟：
+然後，您需要手動停用傳送到舊目的地卡的現有資料流 **[!UICONTROL （淘汰） Pinterest]** 並啟用新卡片的流程 **[!UICONTROL （新） Pinterest]**.
 
 1. 前往 **[!UICONTROL 目的地>瀏覽]** 並使用熒幕上的篩選器來篩選 **[!UICONTROL （新） Pinterest]** 和 **[!UICONTROL （淘汰） Pinterest]** 僅限目的地。
    ![僅在「瀏覽」索引標籤中篩選Pinterest資料流程](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. 選取超連結的連線名稱（以上熒幕擷圖範例中的忠誠度促銷活動），然後切換 **[!UICONTROL 啟用]** 切換至 **關閉** 用於舊連線和 **於** 用於新連線。
-   ![針對新連線切換開啟，針對舊連線切換關閉](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle.png)
-3. 比較舊資料流和新資料流中已啟用的對象清單，並確保舊流程中沒有新流程中缺少的任何新對象。
+2. 選取超連結的連線名稱（以上熒幕擷圖範例中的忠誠度行銷活動）至 **[!UICONTROL （淘汰） Pinterest]** 目的地並切換 **[!UICONTROL 啟用]** 切換至 **關閉**.
+   ![針對新連線切換開啟，針對舊連線切換關閉](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-old-destination.png)
+3. 選取超連結的連線名稱（以上熒幕擷圖範例中的忠誠度行銷活動）至 **[!UICONTROL （新） Pinterest]** 目的地並切換 **[!UICONTROL 啟用]** 切換至 **於**.
+   ![針對新連線切換開啟，針對舊連線切換關閉](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+4. 比較舊資料流和新資料流中已啟用的對象清單，並確保舊流程中沒有新流程中缺少的任何新對象。
 
 雖然行銷活動不會如預期般中斷，但請記得存取Pinterest UI，確認一切都如預期般運作。
 
@@ -58,18 +56,22 @@ Adobe即將發行新的Pinterest目的地卡，此卡會利用Pinterest API v5�
 
 是，請參閱下文：
 
-**最遲於11月16日**：新目的地已準備就緒，您應該會在目錄中看到兩張Pinterest卡片並排，而且流向目前Pinterest卡片的所有現有資料流都會複製到新目的地。
+**2023年11月16日前**：新目的地已準備就緒，您應該會在目錄中看到兩張Pinterest卡片並排，而且流向目前Pinterest卡片的所有現有資料流都會複製到新目的地。
 
 ![新舊的Pinterest目的地並排](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
 >[!IMPORTANT]
 >
->11月16日之後，系統會標籤舊版Pinterest目的地 **[!UICONTROL 棄用]**. <span class="preview">您在11月16日之後對（淘汰） Pinterest目的地的資料流所做的任何變更都將 *非* 會自動轉至新的Pinterest目的地。 </span>
+>在2023年11月16日之後，系統會標籤舊版Pinterest目的地 **[!UICONTROL 棄用]**. <span class="preview">您在11月16日之後對（淘汰） Pinterest目的地的資料流所做的任何變更都將 *非* 會自動轉至新的Pinterest目的地。 </span>
 >例如，我們 *不推薦* 您在11月16日之後對舊目的地啟用新對象。 若您這麼做，您將必須遵循 [一般啟動步驟](/help/destinations/ui/activate-segment-streaming-destinations.md) 在採取客戶動作後，將對象新增至新目的地。
 
-**最遲於12月15日**： <span class="preview">客戶動作</span>. 您需要重新向Pinterest進行驗證，以便新卡片連線到Pinterest （如上進一步的說明）。 完成此操作後，請聯絡我們。
+**最遲於2023年12月15日**： <span class="preview">客戶動作1</span>. 您需要重新向Pinterest進行驗證，以便新卡片連線到Pinterest。 在中檢視完整指示 [本節](#reauthenticate).
 
-需要停用舊卡片中Pinterest的資料流，並且需要啟用新卡片中的資料流。 您可以在UI中手動執行此操作，或聯絡Adobe，我們將會為您執行此操作。
+<span class="preview">客戶動作2</span>然後，您需要停用舊卡片中Pinterest的資料流，並啟用新卡片中的資料流。 在中檢視完整指示 [本節](#disable-old-enable-new-flows).
+
+>[!IMPORTANT]
+>
+>2023年12月15日之後，Adobe不保證資料流與舊資料流的完整性 **[!UICONTROL （淘汰） Pinterest]** 目的地。
 
 ## 其他要注意的專案
 
