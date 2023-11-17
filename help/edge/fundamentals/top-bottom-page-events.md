@@ -1,7 +1,7 @@
 ---
 title: 使用頁面事件的頂端和底部
 description: 本文說明如何在Web SDK中使用頁面事件的頂端和底部。
-source-git-commit: 5322156774388a19788529aee554424b2fb5d91b
+source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 ## 頁面頂端事件範例 {#top-of-page}
 
-以下程式碼範例示範頁面事件設定的頂端，該設定要求個人化，但不會針對自動轉譯的建議傳送顯示通知。 顯示通知將作為頁面底部事件的一部分傳送。
+以下程式碼範例示範頁面事件設定的頂端，該設定要求個人化但不要求 [傳送顯示事件](../personalization/display-events.md#send-sendEvent-calls) 自動呈現的主張。 此 [顯示事件](../personalization/display-events.md#send-sendEvent-calls) 將作為頁面底部事件的一部分傳送。
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 |---|---|---|
 | `type` | 必填 | 將此引數設為 `decisioning.propositionFetch`. 此特殊事件型別會告知Adobe Analytics刪除此事件。 使用Customer Journey Analytics時，您也可以設定篩選器以放置這些事件。 |
 | `renderDecisions` | 必要 | 將此引數設為 `true`. 此引數會告知Web SDK轉譯Edge Network傳回的決策。 |
-| `personalization.sendDisplayEvent` | 必要 | 將此引數設為 `false`. 這會停止傳送顯示通知。 |
+| `personalization.sendDisplayEvent` | 必要 | 將此引數設為 `false`. 這會停止傳送顯示事件。 |
 
 >[!ENDTABS]
 
@@ -62,7 +62,7 @@ alloy("sendEvent", {
 
 >[!TAB 自動呈現的主張]
 
-以下程式碼範例示範頁面事件設定的底部，該設定會針對在頁面上自動轉譯但在中隱藏顯示通知的主張傳送顯示通知 [頁面頂端](#top-of-page) 事件。
+以下程式碼範例示範頁面事件設定的底部，該設定會針對在頁面上自動呈現，但在中抑制顯示事件的主張，傳送顯示事件 [頁面頂端](#top-of-page) 事件。
 
 >[!NOTE]
 >
@@ -79,12 +79,12 @@ alloy("sendEvent", {
 
 | 引數 | 必填/選填 | 說明 |
 |---|---|---|
-| `personalization.includeRenderedPropositions` | 必填 | 將此引數設為 `true`. 這樣會啟用顯示通知的傳送，這些通知已在頁面事件頂端隱藏。 |
+| `personalization.includeRenderedPropositions` | 必填 | 將此引數設為 `true`. 如此可傳送已在頁面事件頂端隱藏的顯示事件。 |
 | `xdm` | 選填 | 使用此區段來包含頁面底部事件所需的所有資料。 |
 
 >[!TAB 手動呈現的主張]
 
-以下程式碼範例是頁面底部事件設定的範例，該設定會針對頁面上手動轉譯的主張（亦即自訂決策範圍或表面）傳送顯示通知。
+以下程式碼範例示範頁面底部事件設定，該設定會針對頁面上手動轉譯的主張（亦即自訂決策範圍或表面）傳送顯示事件。
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ alloy("sendEvent", {
 
 | 引數 | 必填/選填 | 說明 |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | 必填 | 本節定義手動呈現的主張。 您必須包含主張 `ID`， `scope`、和 `scopeDetails`. 請參閱檔案，瞭解如何 [手動呈現個人化](../personalization/rendering-personalization-content.md#manually) 有關如何記錄手動呈現內容的顯示通知的詳細資訊。 手動呈現的個人化內容必須包含在頁面點選的底部。 |
+| `xdm._experience.decisioning.propositions` | 必填 | 本節定義手動呈現的主張。 您必須包含主張 `ID`， `scope`、和 `scopeDetails`. 請參閱檔案，瞭解如何 [手動呈現個人化](../personalization/rendering-personalization-content.md#manually) 有關如何記錄手動呈現內容的顯示事件的詳細資訊。 手動呈現的個人化內容必須包含在頁面點選的底部。 |
 | `xdm._experience.decisioning.propositionEventType` | 必要 | 將此引數設為 `display: 1`. |
 | `xdm` | 選填 | 使用此區段來包含頁面底部事件所需的所有資料。 |
 
@@ -149,7 +149,7 @@ alloy("sendEvent", {
     }
 });
 
-// Bottom of page, send display notifications for the items that were rendered.
+// Bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
@@ -198,7 +198,7 @@ alloy("applyPropositions", {
     viewName: "cart"
 });
 
-// bottom of page, send display notifications for the items that were rendered.
+// bottom of page, send display events for the items that were rendered.
 // Note: You need to include the viewName in both top and bottom of page so that the
 // correct view is rendered at the top of the page, and the correct view is recorded
 // at the bottom of the page.
