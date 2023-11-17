@@ -2,14 +2,19 @@
 title: pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人，或已在Pinterest上與您的內容互動的人中建立對象。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '844'
 ht-degree: 3%
 
 ---
 
 # [!DNL Pinterest Customer List] 連線
+
+>[!IMPORTANT]
+>
+>* 自2023年11月16日起，您可以在目的地目錄中看到兩張Pinterest卡並排。 這是因為用來將資料匯出至Pinterest的Pinterest廣告商API已升級。 現有的Pinterest目的地聯結器已重新命名為 **[!UICONTROL （淘汰） Pinterest]** 和一張新卡片 **[!UICONTROL （新） Pinterest]** 現在可供您使用。
+>* 使用 **[!UICONTROL （新） Pinterest]** 目錄中與Pinterest的任何行銷活動的連線。 如果您有任何使用中的資料流至 **[!UICONTROL （淘汰） Pinterest]** 目的地，請閱讀 [升級檔案](/help/destinations/catalog/advertising/pinterest-upgrade.md) 以瞭解您的行動專案，確保不會中斷您的行銷活動。
 
 ## 概觀 {#overview}
 
@@ -71,7 +76,7 @@ ht-degree: 3%
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL 廣告商ID]**：您的Pinterest廣告商ID。
+* **[!UICONTROL 廣告帳戶ID]**：您的Pinterest廣告商ID。
 
 ### 啟用警示 {#enable-alerts}
 
@@ -95,3 +100,15 @@ ht-degree: 3%
 ## 其他資源 {#additional-resources}
 
 請參閱 [pinterest說明中心頁面](https://help.pinterest.com/en/business/article/audience-targeting) 以取得其他資訊。
+
++++ 檢視變更記錄檔
+
+
+| 發行月份 | 更新型別 | 說明 |
+|---|---|---|
+| 2023 年 11 月 | 功能和檔案更新 | Real-Time CDP中的Pinterest目的地現在使用v5廣告商API。 |
+
+{style="table-layout:auto"}
+
+
++++
