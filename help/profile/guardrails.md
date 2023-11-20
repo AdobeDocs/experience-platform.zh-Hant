@@ -1,18 +1,18 @@
 ---
-title: 即時客戶設定檔資料的預設護欄
+title: 即時客戶設定檔資料和細分的預設護欄
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。本文件提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。
+description: 瞭解設定檔資料和分段的效能和系統強制的護欄，以確保最佳化地使用Real-Time CDP功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 4%
+source-wordcount: '2202'
+ht-degree: 2%
 
 ---
 
-# 預設護欄 [!DNL Real-Time Customer Profile] 資料
+# 預設護欄 [!DNL Real-Time Customer Profile] 資料與細分
 
 Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以即時客戶設定檔的形式提供個人化的跨管道體驗。 為了支援這種處理設定檔的新方法，Experience Platform使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。
 
@@ -108,16 +108,17 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 {style="table-layout:auto"}
 
-## 分段護欄
+## 分段護欄 {#segmentation-guardrails}
 
 本節中概述的護欄是指組織可在Experience Platform中建立的對象數量和性質，以及對應及啟用對象至目的地。
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| 每個沙箱的受眾 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個對象，但前提是每個個別沙箱中的對象少於4000個。 嘗試建立其他對象可能會影響系統效能。 |
-| 每個沙箱的Edge對象 | 150 | 效能護欄 | 只要每個個別沙箱中的邊緣對象少於150個，組織就可以總共擁有超過150個邊緣對象。 嘗試建立其他邊緣對象可能會影響系統效能。 |
-| 每個沙箱的串流受眾 | 500 | 效能護欄 | 只要每個個別沙箱中的串流對象少於500個，組織就可以總共超過500個串流對象。 嘗試建立其他串流對象可能會影響系統效能。 |
+| 每個沙箱的受眾 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個對象，但前提是每個個別沙箱中的對象少於4000個。 嘗試建立其他對象可能會影響系統效能。 深入瞭解 [建立對象](/help/segmentation/ui/segment-builder.md) 區段產生器的連結。 |
+| 每個沙箱的Edge對象 | 150 | 效能護欄 | 只要每個個別沙箱中的邊緣對象少於150個，組織就可以總共擁有超過150個邊緣對象。 嘗試建立其他邊緣對象可能會影響系統效能。 深入瞭解 [邊緣對象](/help/segmentation/ui/edge-segmentation.md). |
+| 每個沙箱的串流受眾 | 500 | 效能護欄 | 只要每個個別沙箱中的串流對象少於500個，組織就可以總共超過500個串流對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解 [串流對象](/help/segmentation/ui/streaming-segmentation.md). |
 | 每個沙箱的批次對象 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個批次對象，只要每個個別沙箱中有少於4000個批次對象即可。 嘗試建立其他批次對象可能會影響系統效能。 |
+| 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您無法在沙箱中建立超過50個帳戶對象。 當您在沙箱中達到50個對象後， **[!UICONTROL 建立對象]** 嘗試建立新帳戶對象時，控制項會停用。 深入瞭解 [帳戶對象](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 
