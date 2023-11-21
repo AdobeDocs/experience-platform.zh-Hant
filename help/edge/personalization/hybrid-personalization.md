@@ -3,10 +3,10 @@ title: 使用Web SDK和Edge Network Server API的混合個人化
 description: 本文會示範如何使用Web SDK搭配伺服器API，在Web屬性上部署混合式個人化。
 keywords: 個人化；混合；伺服器api；伺服器端；混合實作；
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 3%
+source-wordcount: '846'
+ht-degree: 2%
 
 ---
 
@@ -70,7 +70,7 @@ Cookie可用來儲存使用者身分和叢集資訊。  使用混合實作時，
 此實作的範例使用兩個不同的資料串流：
 
 * 為Analytics設定的資料串流。 此資料流用於Web SDK互動。
-* 沒有Analytics設定的第二個資料串流。 此資料流用於伺服器API請求。
+* 沒有Analytics設定的第二個資料串流。 此資料流用於伺服器API請求。 您必須使用與您為Analytics設定的資料流相同的目的地設定來設定此資料流。
 
 如此一來，伺服器端要求不會註冊任何Analytics事件，但使用者端要求會註冊。 如此一來，Analytics請求就會被精確計算。
 
