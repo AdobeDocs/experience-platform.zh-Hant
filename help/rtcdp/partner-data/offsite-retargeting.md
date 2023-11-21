@@ -1,7 +1,8 @@
 ---
 title: 未驗證訪客的離站重新目標定位
 description: 瞭解如何使用潛在客戶ID建立計算屬性，用來建立未驗證使用者的對象，以重新鎖定未驗證使用者。
-source-git-commit: 99516d0923e61c8c81f1933076f2d3e73b55544c
+feature: Use Cases, Customer Acquisition
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 2%

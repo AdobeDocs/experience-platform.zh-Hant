@@ -2,8 +2,9 @@
 keywords: 檢視設定檔rtcdp；rtcdp設定檔檢視；rtcdp設定檔
 title: 在Real-time Customer Data Platform中瀏覽設定檔
 description: Adobe Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面瀏覽即時客戶個人檔案資料。
+feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 0%

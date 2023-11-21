@@ -1,7 +1,8 @@
 ---
 title: Real-Time CDP護欄
 description: 瞭解Real-Time CDP各種服務和領域的資料護欄。
-source-git-commit: c6daa645743331ba6fdf8f79e432ae150ee1ff9e
+feature: Guardrails, Data Management, Data Ingestion, Data Export
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 3%
