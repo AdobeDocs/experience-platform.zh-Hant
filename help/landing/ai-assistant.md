@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
+source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2183'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,22 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
+#### 多圈
+
++++選取以檢視多圈範例
+
+您可以使用「小幫手」的多圈功能，在體驗期間進行更自然的交談。 助理可以回答後續的問題，因為上下文可以從先前的互動中推斷。
+
+在下列範例中，系統會要求「助理」列出組織中現有的區段，作為先前有關區段總數的查詢的後續作業。
+
+![](./images/ai-assistant/multi-turn-one.png)
+
+接著，助理會收到另一個後續追蹤要求。 此時，「助理員」會列出依其各自大小排序的現有區段，以進行回應。
+
+![](./images/ai-assistant/multi-turn-two.png)
+
++++
+
 #### 使用自動完成
 
 +++選取以檢視自動完成的範例
@@ -174,9 +190,9 @@ From here, you can input your question in the text box and query Assistant for c
 
 | 問題型別 | 說明 | 範例 |
 | --- | --- | --- | 
-| 資料譜系 | 追蹤其他Experience Platform物件中一或多個物件的使用情況 | <ul><li>使用哪些資料集 {SCHEMA_NAME} 綱要？</li><li>使用相同結構描述擷取了多少資料集？</li><li>已啟用區段中已使用哪些資料集？</li><li>列出具有用於已啟動區段之屬性的結構描述。</li><li>顯示啟用的區段 {DESTINATION_ACCOUNT_NAME} 和超過1000個設定檔。</li><li>顯示已啟動區段（在2023年1月之後已修改）中使用的屬性。</li><li>列出與已啟動區段相關且建立於過去1年的結構描述。</li></ul> |
-| 分佈與彙總 | 關於Experience Platform物件使用情況的摘要式問題 | <ul><li>已啟動區段的百分比為何？</li><li>區段中使用了多少欄位？</li><li>啟用至最多目的地的區段有哪些？</li><li>列出重複的區段。</li><li>顯示啟用的區段 {DESTINATION_ACCOUNT_NAME} 並按設定檔大小排名。</li><li>尚未啟動但設定檔超過100個的區段百分比為何？ 顯示他們的姓名。</li><li>根據已啟動區段中的出現次數，列出前5個用於已啟動區段的屬性。</li></ul> |
-| 物件查詢 | 擷取或存取Experience Platform物件或其屬性。 | <ul><li>哪些資料集沒有任何相關聯的結構描述</li><li>列出用於以下專案的屬性： {SEGMENT_NAME}？</li><li>給我已啟用設定檔但自建立以來未修改的結構描述清單。</li><li>上週修改了哪些區段？</li><li>列出具有相同區段定義的區段及其建立日期。</li><li>哪些資料集已啟用設定檔，並且包括已從每個資料集建立多少區段。</li><li>顯示區段定義和修改日期 {SEGMENT_NAME}.</li></ul> |
+| 資料譜系 | 追蹤其他Experience Platform物件中一或多個物件的使用情況 | <ul><li>使用哪些資料集 {SCHEMA_NAME} 綱要？</li><li>使用相同結構描述擷取了多少資料集？</li><li>已啟用區段中已使用哪些資料集？</li><li>列出具有用於已啟動區段之屬性的結構描述。</li><li>顯示啟用的區段 {DESTINATION_ACCOUNT_NAME} 和超過1000個設定檔。</li><li>顯示已啟動區段（在2023年1月之後已修改）中使用的屬性。</li><li>什麼是資料集透過擷取 {SOURCE_NAME}？</li><li>哪些資料流相關聯 {DATAFLOW_NAME}</li><li>列出與已啟動區段相關且建立於過去1年的結構描述。</li></ul> |
+| 分佈與彙總 | 關於Experience Platform物件使用情況的摘要式問題 | <ul><li>已啟動區段的百分比為何？</li><li>區段中使用了多少欄位？</li><li>啟用至最多目的地的區段有哪些？</li><li>列出重複的區段。</li><li>顯示啟用的區段 {DESTINATION_ACCOUNT_NAME} 並按設定檔大小排名。</li><li>尚未啟動但設定檔超過100個的區段百分比為何？ 顯示他們的姓名。</li><li>列出將資料擷取到我的資料集中的3個來源聯結器。</li><li>根據已啟動區段中的出現次數，列出前5個用於已啟動區段的屬性。</li></ul> |
+| 物件查詢 | 擷取或存取Experience Platform物件或其屬性。 | <ul><li>哪些資料集沒有任何相關聯的結構描述</li><li>列出用於以下專案的屬性： {SEGMENT_NAME}？</li><li>給我已啟用設定檔但自建立以來未修改的結構描述清單。</li><li>上週修改了哪些區段？</li><li>列出具有相同區段定義的區段及其建立日期。</li><li>哪些資料集已啟用設定檔，並且包括已從每個資料集建立多少區段。</li><li>哪些來源帳戶與資料集XYZ相關聯？</li><li>顯示區段定義和修改日期 {SEGMENT_NAME}.</li></ul> |
 
 +++
 
@@ -237,56 +253,56 @@ From here, you can input your question in the text box and query Assistant for c
 ### 警告和限制
 
 下節概述使用「小幫手」時應考量的目前注意事項和限制。
+<!-- 
+#### Conversational experience
 
-#### 對話體驗
-
-查詢助理時，您必須考慮有關對話體驗的幾個細微差別。
+You must consider several nuances regarding the conversational experience when querying the Assistant.
 
 >[!NOTE]
 >
->這些限制是暫時性的，並在整個Alpha過程中持續改進。
+>These limitations are temporary and are being improved upon throughout the course of the alpha.
 
 >[!BEGINTABS]
 
->[!TAB 無法從先前的討論推斷內容]
+>[!TAB Unable to infer context from prior discussion]
 
-「助理員」目前無法將先前的討論參照為特定問題的內容。 如需範例，請參閱下表：
+The Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
 
-| 不明確的問題 | 清除問題 | 注意 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| <ul><li>第一個問題：「什麼是區段？」</li><li>後續追蹤問題：「它們是否有不同的型別？」</li></ul> | <ul><li>第一個問題：「什麼是區段？」</li><li>後續追蹤問題：「是否有不同型別的 **區段**？」</li></ul> | 助理無法推斷「他們」的意思。 |
-| <ul><li>第一個問題：「什麼是區段？」</li><li>後續問題：「您可以進一步說明嗎？」</li></ul> | <ul><li>第一個問題：「什麼是區段？」</li><li>後續追蹤問題：「說明什麼是深入區段」</li></ul> | 助理無法聰明地參照「更多」說明檔案。 |
-| <ul><li>第一個問題：「什麼是區段？」</li><li>後續問題：「可以提供其中一個範例嗎？」</li></ul> | <ul><li>第一個問題：「什麼是區段？」</li><li>後續追蹤問題：「可以提供區段的範例嗎？」</li></ul> | 「助理員」無法推斷您想要的範例。 |
-| <ul><li>第一個問題：「什麼是批次區段？」</li><li>後續追蹤問題：「和串流區段有何不同？」</li></ul> | <ul><li>第一個問題：「什麼是批次區段？」</li><li>後續問題：「您可將串流區段與批次區段進行比較嗎？」</li></ul> | 「小幫手」無法推斷其指的是什麼，因此無法比較串流區段。 |
-| <ul><li>第一個問題：「我有多少區段？」</li><li>後續追蹤問題：「其中有多少人使用Facebook作為目的地？」</li></ul> | <ul><li>第一個問題：「我有多少區段？」</li><li>後續問題：「我有多少區段正在使用Facebook作為目的地？」</li></ul> | 助理無法推斷「他們」指的是什麼。 |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The Assistant cannot infer what "them" means. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The Assistant cannot intelligently reference documentation based on "more". |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The Assistant cannot infer what you want an example of.|
+| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
+| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The Assistant is cannot infer what "them" is referring to. |
 
 {style="table-layout:auto"}
 
->[!TAB 無法從頁面推斷內容]
+>[!TAB Unable to infer context from a page]
 
-詢問助理員有關您所在的Experience PlatformUI頁面的特定元素時，您必須清楚定義問題中的特定元素。
+When asking the Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
 
-| 不明確的問題 | 清除問題 | 注意 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| 「這會有什麼作用？」 | 「什麼是 {PAGE_NAME} 可以？ | 小幫手無法推斷「這個」指的是什麼。 您必須提供要查詢的特定頁面元素。 |
-| 「為何無法儲存？」 | 「為什麼無法儲存名為的新沙箱 {NAME}？」 | 助理無法推斷「它」指的是什麼，且無法得知您有關於實體的問題。 |
+| "What does this do?" | "What does {PAGE_NAME} do? | The Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
+| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
 
 {style="table-layout:auto"}
 
-此外，助理員只能回答有關錯誤訊息的問題，因為錯誤會記錄在Experience League中。
+Furthermore, the Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
 
->[!TAB 模稜兩可]
+>[!TAB Ambiguity]
 
-您必須清楚地表達您的問題，並將問題範圍限定在產品、應用程式或網域中，因為「助理員」目前無法消除歧義。
+You must phrase your questions clearly and scope them within a product, application, or domain, as the Assistant currently cannot disambiguate questions.
 
-| 不明確的問題 | 清除問題 | 注意 |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| 「如何建立篩選器？ | 如何以設定檔查詢語言建立篩選器？ | 您必須指定您正在篩選的功能，因為各種Experience Platform功能都支援篩選。 |
-| 「如何開始使用？ | 如何開始使用目的地？ | 您必須提供目標和使用案例的明確說明，因為過於寬泛的概念可能會導致通用或不必要的具體答案。 |
+| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
+| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
 #### 有限的閒聊
 
