@@ -56,7 +56,7 @@ ht-degree: 81%
 
 * 移除了AppMeasurement中的一些偵錯陳述式。
 
-## 2021 年 11 月 29 日
+## 2021年11月29日
 
 **Adobe Analytics 擴充功能 1.8.8 版**
 
