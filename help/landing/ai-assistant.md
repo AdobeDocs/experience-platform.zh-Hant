@@ -5,7 +5,7 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
+source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
 workflow-type: tm+mt
 source-wordcount: '2183'
 ht-degree: 0%
@@ -77,7 +77,7 @@ A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
-### 使用案例範例：使用「小幫手」加速您的綱要建立程式
+### 使用案例範例：使用「小幫手」加速您的綱要建立程式 {#example-use-case}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 ![傳回答案後助理提供的選項。](./images/ai-assistant/options.png)
 
-#### 後續追蹤問題
+### 後續追蹤問題 {#follow-up-question}
 
 +++選取以檢視後續問題的範例
 
@@ -109,7 +109,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-#### 資料使用問題
+### 資料使用問題 {#data-usage-question}
 
 +++選取此選項可檢視資料使用問題的範例
 
@@ -121,7 +121,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-#### 多圈
+### 多圈 {#multi-turn}
 
 +++選取以檢視多圈範例
 
@@ -137,7 +137,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-#### 使用自動完成
+### 使用自動完成 {#use-auto-complete}
 
 +++選取以檢視自動完成的範例
 
@@ -153,7 +153,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-## 範圍
+## 範圍 {#scope}
 
 助理可以回答有關Real-Time CDP和Experience Platform概念的問題，以及您的使用者帳戶特有的資料使用問題。 助理也可以根據您所在的UI頁面推斷內容。 它可以識別：
 
@@ -163,13 +163,13 @@ From here, you can input your question in the text box and query Assistant for c
 * 您在畫面上檢視的資源（包括型別和ID）。
 * 假設您正在處理特定Experience Platform或Real-Time CDP工作流程，助理可以推斷您的意圖。
 
-### 文件
+### 文件 {#documentation}
 
 目前，檔案索引涵蓋Adobe Experience Platform (Real-Time CDP和受眾)。 索引會定期更新。
 
 說明檔案擷取模型已針對Experience Platform(Real-Time CDP和受眾)接受訓練。 Adobe Experience Platform範圍以外的問題，例如，關於其他Adobe產品(如Adobe Target)和Creative Cloud套裝的問題，無法回答。
 
-### 資料使用情況
+### 資料使用情況 {#data-usage}
 
 您也可以向「小幫手」詢問下列網域中資料使用的相關問題：
 
@@ -184,7 +184,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 您需要登入沙箱，查詢與物件（例如結構描述、資料集、屬性、目的地和區段）相關的特定資料。
 
-### 範例資料使用問題
+### 範例資料使用問題 {#example-data-usage-questions}
 
 +++選取以檢視範例資料使用問題清單
 
@@ -196,11 +196,11 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-## 驗證回應
+## 驗證回應 {#verify-the-response}
 
 您可以使用多種不同方式來驗證「小幫手」傳回的回應。
 
-### 檔案引文
+### 檔案引文 {#citations}
 
 每次回應時，「小幫手」都會提供引文，供您參考以取得驗證或詳細資訊。
 
@@ -208,7 +208,7 @@ From here, you can input your question in the text box and query Assistant for c
 
 ![「助理員」中顯示的來源連結。](./images/ai-assistant/show-sources.png)
 
-## 提供意見反應
+## 提供意見反應 {#feedback}
 
 >[!BEGINSHADEBOX]
 
@@ -246,11 +246,11 @@ From here, you can input your question in the text box and query Assistant for c
 
 +++
 
-## 其他資訊
+## 其他資訊 {#additional-information}
 
 請參閱本節以取得有關「Experience Platform助理」的其他資訊。
 
-### 警告和限制
+### 警告和限制 {#caveats-and-limitations}
 
 下節概述使用「小幫手」時應考量的目前注意事項和限制。
 <!-- 
@@ -318,7 +318,7 @@ You must phrase your questions clearly and scope them within a product, applicat
 | 「您知道嗎 **x** 語言？」 | 助理目前僅支援英文，但因為基礎模型能夠支援它，所以可能會回答「是」。 |
 | 「您可以……？」 | 助理可能會回答「是」，即使它無法回答。 |
 
-### 提示
+### 提示 {#tips}
 
 以下章節概述使用「小幫手」時應考慮的一些秘訣和解決方法。
 
