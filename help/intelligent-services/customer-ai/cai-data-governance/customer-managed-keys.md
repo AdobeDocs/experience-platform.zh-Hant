@@ -3,14 +3,14 @@ keywords: 深入分析；customer ai；customer ai insights；AAI查詢服務；
 title: Customer AI中的客戶自控金鑰。
 description: 瞭解如何為Customer AI設定客戶自控金鑰。
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 21%
+source-wordcount: '176'
+ht-degree: 19%
 
 ---
 
-# 客戶託管金鑰
+# Customer AI中的客戶自控金鑰
 
 Customer AI提供的選項適用於 [Health Shield](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) 以及Privacy &amp; Security Shield客戶，將Azure客戶自控金鑰(CMK)套用至您的Customer AI資料。 設定程式與 [Adobe Experience Platform CMK設定](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) 您可以依照其中概述的步驟操作。
 

@@ -3,14 +3,14 @@ keywords: 深入分析；歸因人工智慧；歸因人工智慧深入分析；A
 title: 客戶託管金鑰
 description: 瞭解如何設定客戶自控金鑰以進行Attribution AI。
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 24%
+source-wordcount: '171'
+ht-degree: 22%
 
 ---
 
-# 客戶託管金鑰
+# Attribution AI中的客戶自控金鑰
 
 Attribution AI提供以下選項 [Health Shield](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html) 以及Privacy &amp; Security Shield客戶，將Azure客戶自控金鑰(CMK)套用至您的Attribution AI資料。 設定程式與 [Adobe Experience Platform CMK設定](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) 您可以依照其中概述的步驟操作。
 

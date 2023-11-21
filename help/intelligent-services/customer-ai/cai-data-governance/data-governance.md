@@ -5,14 +5,14 @@ feature: Customer AI
 title: Customer AI中的資料控管
 description: Adobe Experience Platform提供數種服務和工具，可讓您安心控制所收集的體驗資料，以符合您的業務實務、法律義務和開發程式。
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '303'
 ht-degree: 11%
 
 ---
 
-# Customer AI和資料控管
+# Customer AI和Customer AI中的資料控管
 
 Customer AI中的任何資料控管相關設定都是從Adobe Experience Platform繼承。
 
