@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 3%
 
 ---
@@ -85,8 +85,8 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Alerts] | [!UICONTROL 管理警報] | 讀取、建立、編輯和刪除警示歷程記錄的存取權。 |
 | [!DNL Computed Attributes] | [!UICONTROL 檢視計算屬性] | 計算屬性標籤、詳細目錄和詳細資料的唯讀存取權。 |
 | [!DNL Computed Attributes] | [!UICONTROL 管理計算屬性] | 讀取、建立、刪除草稿及停用計算屬性的存取權。 |
-| [!DNL Data Hygiene] | [!UICONTROL 檢視資料衛生] | 資料衛生的唯讀存取。 |
-| [!DNL Data Hygiene] | [!UICONTROL 管理資料衛生] | 存取讀取、建立、編輯和刪除資料衛生。 |
+| [!DNL Data Lifecycle] | [!UICONTROL 檢視資料生命週期] | 資料生命週期的唯讀存取。 |
+| [!DNL Data Lifecycle] | [!UICONTROL 管理資料生命週期] | 讀取、建立、編輯和刪除資料生命週期的存取權。 |
 | [!DNL Data Modeling] | [!UICONTROL 管理結構描述] | 讀取、建立、編輯和刪除結構描述和相關資源的存取權。 |
 | [!DNL Data Modeling] | [!UICONTROL 檢視結構描述] | 對結構描述和相關資源的唯讀存取權。 |
 | [!DNL Data Modeling] | [!UICONTROL 管理關係] | 讀取、建立、編輯和刪除綱要關係的存取權。 |
@@ -123,7 +123,7 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 存取建立、接受和拒絕合作夥伴握手以連線兩個組織並啟用 [!DNL Segment Match] 流程。 |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 讀取、建立、編輯和發佈的存取權 [!DNL Segment Match] 與作用中合作夥伴的摘要。 |
 | [!DNL Data Science Workspace] | [!UICONTROL 管理資料科學工作區] | 在中讀取、建立、編輯和刪除的存取權 [!DNL Data Science Workspace]. |
-| 資料治理 | [!UICONTROL 套用資料使用標籤] | 存取讀取、建立和刪除使用標籤。 |
+| 資料治理 | [!UICONTROL 管理使用標籤] | 存取讀取、建立和刪除使用標籤。 |
 | 資料治理 | [!UICONTROL 管理資料使用原則] | 讀取、建立、編輯和刪除資料使用原則的存取權。 |
 | 資料治理 | [!UICONTROL 檢視資料使用原則] | 屬於您組織的資料使用原則的唯讀存取權。 |
 | 資料治理 | [!UICONTROL 檢視使用者活動記錄] | 唯讀存取權，可檢視錄製的影片 [稽核記錄](../landing/governance-privacy-security/audit-logs/overview.md) 平台活動的資訊來源。 |

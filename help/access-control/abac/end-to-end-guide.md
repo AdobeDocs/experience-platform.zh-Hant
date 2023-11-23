@@ -3,16 +3,16 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 屬性型存取控制端對端指南
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的端對端指南
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1739'
 ht-degree: 21%
 
 ---
 
 # 以屬性為基礎的存取控制端對端指南
 
-以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓重視隱私權的多品牌客戶在管理使用者存取許可權時擁有更大的彈性。 個別物件（例如綱要欄位和區段）的存取權可根據物件的屬性和角色以原則授予/拒絕。 此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
+在Adobe Experience Platform上使用以屬性為基礎的存取控制，為您自己和其他重視隱私權的多品牌客戶提供更大的彈性，以管理使用者存取許可權。 個別物件（例如綱要欄位和區段）的存取權可根據物件的屬性和角色以原則授予。 此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
 
 此功能可讓您使用定義組織或資料使用範圍的標籤，將結構描述欄位、區段等分類。 您可以將這些相同的標籤套用至Adobe Journey Optimizer中的歷程、選件和其他物件。 同時，管理員可以定義有關Experience Data Model (XDM)結構描述欄位的存取原則，並更好地管理哪些使用者或群組（內部、外部或第三方使用者）可以存取這些欄位。
 
