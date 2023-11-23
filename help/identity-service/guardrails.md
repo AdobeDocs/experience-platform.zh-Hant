@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1509'
 ht-degree: 1%
 
 ---
@@ -72,23 +72,6 @@ ht-degree: 1%
 >
 >如果要刪除的身分已連結到圖表中的多個其他身分，則連線該身分的連結也會被刪除。
 
->[!BEGINSHADEBOX]
-
-**刪除邏輯的視覺化表示法**
-
-![刪除最舊身分以容納最新身分的範例](./images/graph-limits-v3.png)
-
-*圖表附註：*
-
-* `t` = 時間戳記.
-* 時間戳記的值對應至指定身分的造訪間隔。 例如， `t1` 代表第一個連結的身分（最舊）和 `t51` 將代表最新的連結身分。
-
-在此範例中，Identity Service會先刪除具有最舊時間戳記的現有身分，之後才能使用新身分更新左側的圖形。 但是，由於最舊的身分識別是裝置ID，Identity Service會略過該身分識別，直到它到達刪除優先順序清單中型別較高的名稱空間(在此例中為 `ecid-3`. 一旦移除具有更高刪除優先順序型別的最舊身分識別，圖表就會更新為新連結。 `ecid-51`.
-
-* 在極少數情況下，會有兩個具有相同時間戳記和身分型別的身分，Identity Service會根據此ID排序 [XID](./api/list-native-id.md) 並執行刪除。
-
->[!ENDSHADEBOX]
-
 ### 對實作的影響
 
 以下章節概述刪除邏輯對Identity Service、即時客戶個人檔案和WebSDK的影響。
@@ -116,7 +99,83 @@ Adobe如果您的生產沙箱包含：
 * [設定Experience Platform標籤的身分對應](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Experience Platform Web SDK中的身分資料](../edge/identity/overview.md#using-identitymap)
 
+### 範例情境
 
+#### 範例一：典型的大型圖表
+
+*圖表附註：*
+
+* `t` = 時間戳記.
+* 時間戳記的值對應至指定身分的造訪間隔。 例如， `t1` 代表第一個連結的身分（最舊）和 `t51` 將代表最新的連結身分。
+
+在此範例中，Identity Service會先刪除具有最舊時間戳記的現有身分，之後才能使用新身分更新左側的圖形。 但是，由於最舊的身分識別是裝置ID，Identity Service會略過該身分識別，直到它到達刪除優先順序清單中型別較高的名稱空間(在此例中為 `ecid-3`. 一旦移除具有更高刪除優先順序型別的最舊身分識別，圖表就會更新為新連結。 `ecid-51`.
+
+* 在極少數情況下，會有兩個具有相同時間戳記和身分型別的身分，Identity Service會根據此ID排序 [XID](./api/list-native-id.md) 並執行刪除。
+
+![刪除最舊身分以容納最新身分的範例](./images/graph-limits-v3.png)
+
+#### 範例二：「圖表分割」
+
+>[!BEGINTABS]
+
+>[!TAB 傳入事件]
+
+*圖表附註：*
+
+* 下圖假設在 `timestamp=50`，身分圖表中有50個身分。
+* `(...)` 表示已在圖形內連結的其他身分。
+
+在此範例中，會擷取ECID：32110並連結至位於的大型圖形 `timestamp=51`，因此超過50個身分的限制。
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB 刪除程式]
+
+因此，Identity Service會根據時間戳記和身分型別刪除最舊的身分。 在此情況下，會刪除ECID：35577。
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB 圖表輸出]
+
+刪除ECID：35577後，連結CRM ID：60013和CRM ID：25212與現在已刪除之ECID：35577的邊緣也會被刪除。 此刪除程式會導致圖表被分割成兩個較小的圖表。
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### 範例三：「軸輻式」
+
+>[!BEGINTABS]
+
+>[!TAB 傳入事件]
+
+*圖表附註：*
+
+* 下圖假設在 `timestamp=50`，身分圖表中有50個身分。
+* `(...)` 表示已在圖形內連結的其他身分。
+
+透過刪除邏輯，某些「中樞」身分也可能會被刪除。 這些中心身分識別是指連結到多個單獨身分識別的節點，否則這些身分識別會解除連結。
+
+在以下範例中，ECID：21011已擷取並連結至的圖形 `timestamp=51`，因此超過50個身分的限制。
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB 刪除程式]
+
+因此，Identity Service會刪除最舊的身分，在此案例中為ECID：35577。 刪除ECID：35577也會導致以下刪除：
+
+* CRM ID：60013和現已刪除的ECID：35577之間的連結，因此會產生圖表分割情況。
+* IDFA： 32110、IDFA： 02383以及所代表的其餘身分 `(...)`. 這些身分會遭到刪除，因為個別身分不會連結至任何其他身分，因此無法在圖形中顯示。
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB 圖表輸出]
+
+最後，刪除程式會產生兩個較小的圖表。
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## 後續步驟
 

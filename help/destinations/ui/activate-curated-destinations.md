@@ -2,13 +2,13 @@
 title: 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 type: Tutorial
 description: 瞭解如何使用LiveRamp RampID從Adobe Experience Platform啟用對象至連線的電視和音訊目的地，以及其他整合。
-source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
+exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
+source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
 
 ---
-
 
 # 根據LiveRamp識別碼將受眾啟用至已組織的目的地
 
