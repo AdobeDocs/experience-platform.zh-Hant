@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 設定資料集以擷取同意和偏好設定資料
 description: 瞭解如何設定Experience Data Model (XDM)結構描述和資料集，以擷取Adobe Experience Platform中的同意和偏好設定資料。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 1%
@@ -96,8 +96,8 @@ ht-degree: 1%
 
 為了使用Adobe標準收集同意資料，您必須具備已啟用設定檔的結構描述，包含下列兩個欄位群組：
 
-* [!UICONTROL 同意和偏好設定詳細資料]
-* [!UICONTROL 身分對應] （若使用Platform Web或Mobile SDK傳送同意訊號則為必要）
+* [[!UICONTROL 同意和偏好設定詳細資料]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL 身分對應]](../../../../xdm/field-groups/profile/identitymap.md) （若使用Platform Web或Mobile SDK傳送同意訊號則為必要）
 
 在Platform UI中選取 **[!UICONTROL 方案]** 在左側導覽中，然後選取 **[!UICONTROL 瀏覽]** 標籤以顯示現有方案清單。 從這裡，選取 [!DNL Profile] — 您想要新增同意欄位的已啟用結構描述。 本節中的熒幕擷取畫面使用中內建的「忠誠會員」方案 [結構描述建立教學課程](../../../../xdm/tutorials/create-schema-ui.md) 以為例。
 

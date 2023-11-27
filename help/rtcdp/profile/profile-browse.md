@@ -4,9 +4,9 @@ title: 在Real-time Customer Data Platform中瀏覽設定檔
 description: Adobe Real-time Customer Data Platform可讓您使用Adobe Experience Platform使用者介面瀏覽即時客戶個人檔案資料。
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,8 @@ Real-Time CDP， B2B Edition也可讓您瀏覽 [!UICONTROL 帳戶]， [!UICONTRO
 設定檔詳細資料包括存取以下專案： [!UICONTROL 帳戶]， [!UICONTROL 機會]、和 [!UICONTROL 來源記錄] 索引標籤是除了客戶設定檔中提供的標準資訊之外，也增強了B2B事件和屬性。
 
 ![](images/b2b-profile-detail.png)
+
+若要進一步瞭解Platform UI中提供的設定檔詳細資料，請參閱 [設定檔控制面板檔案的詳細資訊區段](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### 帳戶標籤
 

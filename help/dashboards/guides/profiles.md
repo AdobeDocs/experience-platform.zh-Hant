@@ -4,10 +4,10 @@ title: 設定檔儀表板指南
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織即時客戶設定檔資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
 workflow-type: tm+mt
-source-wordcount: '4313'
-ht-degree: 11%
+source-wordcount: '4900'
+ht-degree: 10%
 
 ---
 
@@ -69,7 +69,81 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 此 [!UICONTROL 瀏覽] 索引標籤可讓您搜尋和檢視擷取到您組織中的唯讀設定檔。 從這裡，您可以看到屬於設定檔的重要資訊，其中包含其偏好設定、過去事件、互動和對象。
 
-若要進一步瞭解Platform UI中提供的設定檔檢視功能，請參閱以下檔案： [在Adobe Real-time Customer Data Platform中瀏覽設定檔](../../rtcdp/profile/profile-browse.md).
+## 設定檔詳細資料 {#profile-details}
+
+若要開啟 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區，選取 [!UICONTROL 設定檔ID] 從清單中。
+
+![設定檔ID反白顯示的「設定檔瀏覽」標籤。](../images/profiles/profile-id.png)
+
+此 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區會顯示數個預先設定的Widget，傳達該設定檔的特定資訊。 此資訊可讓您一眼瞭解設定檔的關鍵屬性。 您也可以自訂 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 建立您自己的Widget來工作區。 請參閱以下小節： [如何新增Widget](#add-widgets) 以取得更多詳細資料。
+
+![此 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區與 [!UICONTROL 詳細資料] 索引標籤反白顯示。](../images/profiles/profile-details-workspace.png)
+
+### 設定檔詳細資訊Widget {#widgets}
+
+預先設定的設定檔詳細資訊Widget如下：
+
+#### 客戶設定檔 {#customer-profile}
+
+此 [!UICONTROL 客戶設定檔] Widget會顯示與設定檔相關聯之使用者的名字和姓氏，以及其 [!UICONTROL 設定檔ID]. 設定檔ID是與身分型別相關聯的自動產生識別碼，代表設定檔。 若要深入瞭解身分識別與身分識別名稱空間，請參閱 [身分概述](../../rtcdp/profile/identities-overview.md).
+
+![客戶設定檔Widget。](../images/profiles/customer-profile.png)
+
+#### 基本屬性 {#basic-attributes}
+
+此 [!UICONTROL 基本屬性] widget會顯示最常用於定義個別設定檔的屬性。
+
+![基本屬性Widget。](../images/profiles/basic-attributes.png)
+
+#### 連結的身分 {#linked-identities}
+
+此 [!UICONTROL 連結的身分] widget會顯示與設定檔相關聯的任何其他身分。
+
+若要更深入檢視設定檔的身分詳細資訊，請導覽至 [!UICONTROL 身分] 工作區，選取 **[!UICONTROL 檢視身分圖表]**.
+
+![連結的身分識別Widget。](../images/profiles/linked-identities.png)
+
+#### 頻道偏好設定 {#channel-preferences}
+
+此 [!UICONTROL 頻道偏好設定] widget會顯示使用者同意接收通訊的通訊管道。 核取記號表示使用者已同意接收通訊的每個管道。
+
+<!-- image needs a blue tick added below -->
+
+![管道偏好設定Widget。](../images/profiles/channel-preferences.png)
+
+客戶同意和聯絡人偏好設定是複雜的主題。 若要瞭解如何在Experience Platform中收集、處理和篩選同意和內容偏好設定，建議您閱讀以下檔案：
+
+* 若要瞭解所需的結構描述欄位群組 [根據Adobe標準收集同意資料](../../landing/governance-privacy-security/consent/adobe/overview.md)，請參閱這些已啟用設定檔的結構描述欄位群組的相關檔案。
+   * [[!UICONTROL 同意和偏好設定詳細資料]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL 身分對應]](../../xdm/field-groups/profile/identitymap.md) （若使用Platform Web或Mobile SDK傳送同意訊號則為必要）
+* 若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱以下概觀： [Experience Platform中的同意處理](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* 合併的資料治理和同意原則可用於根據其同意偏好設定和您建立的組織規則篩選要分段的設定檔。 若要瞭解如何建立和使用這些合併原則，請參閱以下內容的使用手冊： [管理資料使用原則](../../data-governance/policies/user-guide.md#combine-policies).
+
+### 新增Widget {#add-widgets}
+
+若要將自訂的Widget新增至 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區，選取 **[!UICONTROL 自訂設定檔詳細資料]**.
+
+![具有的設定檔詳細資料工作區 [!UICONTROL 自訂設定檔詳細資料] 反白顯示。](../images/profiles/customize-profile-details.png)
+
+您現在可以透過調整大小或重新定位Widget來編輯工作區。 選取 **[!UICONTROL 新增Widget]** 以建立具有自訂屬性的Widget。
+
+![設定檔 [!UICONTROL 詳細資料] 工作區，使用 [!UICONTROL 新增Widget] 反白顯示。](../images/profiles/add-widget.png)
+
+Widget建立器隨即出現。 在「 」中輸入您Widget的描述性名稱 [!UICONTROL 卡片標題] 文字欄位並選取 **[!UICONTROL 新增屬性]**.
+
+![Widget建立器畫布包含 [!UICONTROL 卡片標題] 欄位和 [!UICONTROL 新增屬性] 反白顯示。](../images/profiles/widget-creator.png)
+
+隨即出現一個對話方塊，其中包含設定檔聯合結構的視覺效果。 使用搜尋欄位或捲動來尋找您要以您的Widget報告的屬性。 選取您要包含的任何屬性的核取方塊。 選取 **[!UICONTROL 選取]** 以繼續建立工作流程。
+
+>[!TIP]
+>
+>選取頂層核取方塊時，會包含任何子元素。
+
+![具有忠誠度屬性的聯合結構描述圖表核取方塊和 [!UICONTROL 選取] 反白顯示。](../images/profiles/union-schema-attributes.png)
+
+畫布上會顯示已完成的Widget預覽。 在您滿意所選的屬性後，請選取 **[!UICONTROL 儲存]** 以確認您的選擇並返回 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區。 新建立的Widget現在會顯示在工作區中。
+
+![「儲存」反白並顯示Widget預覽的Widget建立器畫布。](../images/profiles/widget-preview.png)
 
 ## 合併政策 {#merge-policies}
 
