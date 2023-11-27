@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 瞭解設定檔資料和分段的效能和系統強制的護欄，以確保最佳化地使用Real-Time CDP功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
+source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2228'
 ht-degree: 2%
 
 ---
@@ -119,6 +119,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 | 每個沙箱的串流受眾 | 500 | 效能護欄 | 只要每個個別沙箱中的串流對象少於500個，組織就可以總共超過500個串流對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解 [串流對象](/help/segmentation/ui/streaming-segmentation.md). |
 | 每個沙箱的批次對象 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個批次對象，只要每個個別沙箱中有少於4000個批次對象即可。 嘗試建立其他批次對象可能會影響系統效能。 |
 | 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您無法在沙箱中建立超過50個帳戶對象。 當您在沙箱中達到50個對象後， **[!UICONTROL 建立對象]** 嘗試建立新帳戶對象時，控制項會停用。 深入瞭解 [帳戶對象](/help/segmentation/ui/account-audiences.md). |
+| 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中不能有超過10個已發佈的組合。 深入瞭解 [UI指南中的對象構成](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 
