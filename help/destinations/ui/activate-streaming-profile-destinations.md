@@ -1,13 +1,13 @@
 ---
-keywords: 啟用設定檔目的地；啟用目的地；啟用資料；啟用電子郵件行銷目的地；啟用雲端儲存空間目的地
 title: 啟用受眾以串流設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將受眾傳送至串流設定檔型目的地，以啟用您在Adobe Experience Platform中的受眾資料。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 5%
+source-wordcount: '761'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,13 @@ ht-degree: 5%
 
 ## 概觀 {#overview}
 
-本文說明在Adobe Experience Platform串流設定檔型目的地(例如Amazon Kinesis)中啟用受眾資料所需的工作流程。
+本文說明在Adobe Experience Platform中啟用受眾資料至串流設定檔目的地所需的工作流程(也稱為 [企業目的地](/help/destinations/destination-types.md#streaming-profile-export))。
+
+本文適用於下列三個目的地：
+
+* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md).
 
 ## 先決條件 {#prerequisites}
 
@@ -83,7 +89,15 @@ ht-degree: 5%
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀關於 [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得詳細資訊。
+[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 目前不支援匯出至三個企業目的地：Amazon Kinesis、Azure事件中樞和HTTP API。
+
+這表示未同意成為目標的設定檔 *包含* 匯出至這三個目的地的資料中。
+
+<!--
+
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+-->
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 

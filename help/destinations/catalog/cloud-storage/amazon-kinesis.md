@@ -2,10 +2,11 @@
 keywords: Amazon Kinesis；kinesis目的地；kinesis
 title: Amazon Kinesis連線
 description: 建立與您的Amazon Kinesis儲存空間的即時輸出連線，以從Adobe Experience Platform串流資料。
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1997'
 ht-degree: 5%
 
 ---
@@ -158,7 +159,8 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 目前不支援匯出至Amazon Kinesis目的地。 [閱讀全文](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation)。
 
 另請參閱 [啟用受眾資料至串流設定檔匯出目的地](../../ui/activate-streaming-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
