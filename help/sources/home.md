@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 來源聯結器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a0616410da5cef51fdac928ecfb02f0b05a4cdb1
+source-git-commit: 4c61cd575fe3fb1583900315030dd59579dd5206
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 1%
@@ -59,91 +59,91 @@ Experience Platform可從其他Adobe應用程式(包括Adobe Analytics和Adobe A
 
 Experience Platform支援從協力廠商廣告系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [Google Ads](connectors/advertising/ads.md) [!BADGE 批次]{type=Neutral}
+- [Google Ads](connectors/advertising/ads.md) [!BADGE 批次]{type=Informative}
 
 ### Analytics {#analytics}
 
 Experience Platform支援從協力廠商分析平台擷取資料。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE 串流]{type=Caution}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE 串流]{type=Caution}
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE 串流]{type=Positive}
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE 串流]{type=Positive}
 
 ### 雲端儲存空間 {#cloud-storage}
 
 雲端儲存空間來源可將您自己的資料帶入Platform，無需下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會使用使用者介面整合到來源工作流程中。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Caution}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 串流]{type=Caution}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 串流]{type=Caution}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE 批次]{type=Informative}
+- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE 批次]{type=Informative}
+- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE 批次]{type=Informative}
 
 ### 同意與偏好設定 {#consent}
 
 Experience Platform支援從第三方同意和偏好設定管理平台擷取資料。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE 批次]{type=Informative}
 
 ### 客戶關係管理(CRM) {#customer-relationship-management}
 
 CRM系統提供的資料可協助建立客戶關係，進而建立忠誠度並提升客戶保留率。 Experience Platform提供從擷取CRM資料的支援 [!DNL Microsoft Dynamics 365] 和 [!DNL Salesforce]. 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE 批次]{type=Informative}
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE 批次]{type=Informative}
 
 ### 客戶成功 {#customer-success}
 
 Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 如需詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE 批次]{type=Informative}
+- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE 批次]{type=Informative}
 
 ### 資料庫 {#database}
 
 Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 串流]{type=Caution}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 批次]{type=Informative}
+- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 批次]{type=Informative}
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 批次]{type=Informative}
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 批次]{type=Informative}
+- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE 批次]{type=Informative}
+- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE 批次]{type=Informative}
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 批次]{type=Informative}
 
 ### 電子商務 {#ecommerce}
 
 Experience Platform支援從協力廠商電子商務系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE 串流]{type=Caution}
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE 串流]{type=Positive}
 
 ### 本機系統 {#local-system}
 
@@ -155,12 +155,12 @@ Experience Platform提供從本機系統擷取資料的支援。 如需特定來
 
 Experience Platform提供從協力廠商行銷自動化系統擷取資料的支援。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE 串流]{type=Caution}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE 串流]{type=Caution}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE 串流]{type=Positive}
+- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE 批次]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 -->
@@ -169,21 +169,21 @@ Experience Platform提供從協力廠商行銷自動化系統擷取資料的支�
 
 Experience Platform支援從協力廠商支付系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Square]](connectors/payments/square.md) [!BADGE 批次]{type=Informative}
 
 ### 串流 {#streaming}
 
 Experience Platform支援從串流來源擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE 串流]{type=Caution}
+- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE 串流]{type=Positive}
 
 ### 通訊協定 {#protocols}
 
 Experience Platform支援從協力廠商通訊協定系統擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE 批次]{type=Neutral}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE 批次]{type=Neutral}
+- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE 批次]{type=Informative}
 
 ## 資料擷取中來源的存取控制
 
@@ -221,7 +221,7 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 使用任何標示為Beta版(「Beta」)的來源，即表示您在此確認已提供Beta版 ***「原樣」，不含任何保固***.
 
-Adobe沒有義務維護、更正、更新、變更、修改或以其他方式支援Beta版。 建議您謹慎使用，切勿依賴此類Beta版及/或隨附資料的正確功能或效能。 Beta版視為Adobe的機密資訊。
+Adobe沒有義務維護、更正、更新、變更、修改或以其他方式支援Beta版。 建議您使用資訊性，切勿依賴此類Beta版及/或隨附資料的正確功能或效能。 Beta版視為Adobe的機密資訊。
 
 任何「意見回饋」（有關Beta的資訊，包括但不限於您在使用Beta版時遇到的問題或缺陷、建議、改進和建議）由您提供給Adobe，包括此等意見回饋的所有權利、標題和興趣，均分配給Adobe。
 
