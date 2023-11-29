@@ -2,8 +2,8 @@
 title: Adobe Experience Platform 發行說明 (2023 年 2 月)
 description: Adobe Experience Platform 2023 年 2 月版發行說明。
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 100%
 
@@ -24,7 +24,7 @@ Adobe Experience Platform 現有功能的更新：
 
 ## 資料集合 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adob&#x200B;&#x200B;e Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adob&#x200B;&#x200B;e 或非 Adob&#x200B;&#x200B;e 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
 
 ### Assurance {#assurance}
 
@@ -42,7 +42,7 @@ Adobe Assurance 可讓您檢查、證明、模擬和驗證您在行動應用程�
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adob&#x200B;&#x200B;e Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新功能或更新功能** {#destinations-new-updated-features}
 
@@ -62,7 +62,7 @@ Adobe Assurance 可讓您檢查、證明、模擬和驗證您在行動應用程�
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Experience Platform 中的資料提供通用結構和定義 (綱要)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
 
 **更新的功能**
 
@@ -96,7 +96,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Exper
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adob&#x200B;&#x200B;e Experience Platform 中的資料[!DNL Data Lake]。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶設定檔。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入任何資料湖的資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或擷取至即時客戶設定檔。
 
 **更新的功能**
 
@@ -105,7 +105,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adob&#x200B;&#x200B;e Exper
 | 使用 SQL 啟用設定檔的資料集 | [在 CTAS 查詢中使用 LABEL 使資料集「啟用設定檔」](../../query-service/sql/syntax.md#create-table-as-select)，或使用 ALTER 以更新要為設定檔啟用的現有資料集。您可以使用此延伸的 SQL 結構為即時客戶設定檔商業使用案例的衍生屬性提供無縫支援。如需更多詳細資料，請參閱[「衍生屬性的無縫 SQL 流程」文件](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md)。 |
 | 監視已排程查詢 | 使用[「已排程查詢」索引標籤](../../query-service/ui/monitor-queries.md)找到有關查詢執行的重要資訊並訂閱警示。監視查詢以獲取排程詳細資料、狀態，並在萬一查詢失敗時獲取錯誤訊息/代碼。 |
 | 切換自動完成功能 | 消除特定的中繼資料命令並[切換查詢編輯器自動完成功能](../../query-service/ui/user-guide.md#auto-complete)以縮短處理時間。本功能會在您編寫查詢時自動建議可能的 SQL 關鍵字和表格的詳細資料。 |
-| 資料集範例 | 指定查詢中的抽樣率並[使用資料集範例建立統一的隨機採樣](../../query-service/essential-concepts/dataset-samples.md)，或根據特定標準建立條件式範例。 |
+| 資料集範例 | 指定查詢中的抽樣率並[使用資料集範例建立統一的隨機採樣](../../query-service/key-concepts/dataset-samples.md)，或根據特定標準建立條件式範例。 |
 
 {style="table-layout:auto"}
 

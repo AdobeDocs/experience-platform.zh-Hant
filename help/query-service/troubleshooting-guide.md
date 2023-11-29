@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 常見問答
 description: 本檔案包含和查詢服務相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 1%
@@ -105,7 +105,7 @@ SELECT * FROM customers LIMIT 0;
 
 ![平面化資料的XDM結構描述和表格檢視。 巢狀資料集的欄名稱會在UI中反白顯示。](./images/troubleshooting/column-name.png)
 
-如需下列專案的完整指引，請參閱檔案： [如何使用巢狀資料結構](./essential-concepts/nested-data-structures.md) 使用查詢編輯器或第三方使用者端。
+如需下列專案的完整指引，請參閱檔案： [如何使用巢狀資料結構](./key-concepts/nested-data-structures.md) 使用查詢編輯器或第三方使用者端。
 +++
 
 ### 如何在包含陣列的資料集上加快查詢速度？
@@ -142,7 +142,7 @@ SELECT * FROM customers LIMIT 0;
 
 +++回應匿名區塊功能可讓您連結一或多個依序執行的SQL敘述句。 它們也允許例外狀況處理的選項。
 
-請參閱 [匿名區塊檔案](./essential-concepts/anonymous-block.md) 以取得更多詳細資料。
+請參閱 [匿名區塊檔案](./key-concepts/anonymous-block.md) 以取得更多詳細資料。
 +++
 
 ### 如何在查詢服務中實作自訂歸因？
@@ -226,7 +226,7 @@ AS SELECT '1' as _id,
 
 ### 如何快速處理每天傳入系統的新資料？
 
-+++回答 [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 子句可用於根據快照ID逐步讀取資料表上的資料。 這非常適合搭配使用 [增量載入](./essential-concepts/incremental-load.md) 設計模式，僅處理資料集中自上次載入執行以來已建立或修改的資訊。 因此，它提高了處理效率，並且可同時用於串流和批次資料處理。
++++回答 [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) 子句可用於根據快照ID逐步讀取資料表上的資料。 這非常適合搭配使用 [增量載入](./key-concepts/incremental-load.md) 設計模式，僅處理資料集中自上次載入執行以來已建立或修改的資訊。 因此，它提高了處理效率，並且可同時用於串流和批次資料處理。
 +++
 
 ### 為什麼設定檔UI中顯示的數字與從設定檔匯出資料集計算出的數字存在差異？

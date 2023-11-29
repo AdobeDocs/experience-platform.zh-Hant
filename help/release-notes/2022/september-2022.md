@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年9月
 description: Adobe Experience Platform 2022年9月版本注意事項。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 24%
@@ -215,7 +215,7 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | 功能 | 說明 |
 | --- | --- |
 | 警示訂閱API | Adobe Experience Platform查詢服務可讓您針對臨時和已排程的查詢訂閱警報。 警報可透過電子郵件、Platform UI內或兩者來接收。 目前，查詢警報只能使用 [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| 資料集範例 | 查詢服務資料集範例可讓您對巨量資料執行探索性查詢，大幅縮短處理時間，但代價是查詢準確性。 請參閱 [資料集範例指南](../../query-service/essential-concepts/dataset-samples.md) 以進一步瞭解。 |
+| 資料集範例 | 查詢服務資料集範例可讓您對巨量資料執行探索性查詢，大幅縮短處理時間，但代價是查詢準確性。 請參閱 [資料集範例指南](../../query-service/key-concepts/dataset-samples.md) 以進一步瞭解。 |
 
 如需詳細資訊，請參閱 [!DNL Query Service]，請參閱 [[!DNL Query Service] 概述](../../query-service/home.md).
 

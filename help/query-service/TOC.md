@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -52,6 +52,15 @@ ht-degree: 20%
    - [從Analytics資料傳回並使用銷售變數](use-cases/merchandising-variables.md)
    - [檢視訪客的統計報表](use-cases/roll-up-report-of-a-visitor.md)
    - [網站和行動分析深入分析](use-cases/analytics-insights.md)
+- 重要概念{#key-concepts}
+   - [使用巢狀資料結構](key-concepts/nested-data-structures.md)
+   - [平面化巢狀資料結構](key-concepts/flatten-nested-data.md)
+   - [匿名區塊](key-concepts/anonymous-block.md)
+   - [內嵌範本](key-concepts/inline-templates.md)
+   - [增量載入](key-concepts/incremental-load.md)
+   - [重複資料刪除](key-concepts/deduplication.md)
+   - [資料集範例](key-concepts/dataset-samples.md)
+   - [資料集統計資料計算](key-concepts/dataset-statistics.md)
 - 將使用者端連線至查詢服務 {#clients}
    - [使用者端連線概觀](clients/overview.md)
    - [SSL模式](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 20%
 - 最佳作法 {#best-practices}
    - [查詢執行](best-practices/writing-queries.md)
    - [資料資產組織](./best-practices/organize-data-assets.md)
-- 基本概念 {#essential-concepts}
-   - [使用巢狀資料結構](essential-concepts/nested-data-structures.md)
-   - [平面化巢狀資料結構](essential-concepts/flatten-nested-data.md)
-   - [匿名區塊](essential-concepts/anonymous-block.md)
-   - [內嵌範本](essential-concepts/inline-templates.md)
-   - [增量載入](essential-concepts/incremental-load.md)
-   - [重複資料刪除](essential-concepts/deduplication.md)
-   - [資料集範例](essential-concepts/dataset-samples.md)
-   - [資料集統計資料計算](essential-concepts/dataset-statistics.md)
 - SQL參考 {#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)

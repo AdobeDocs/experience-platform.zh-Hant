@@ -2,7 +2,7 @@
 title: 探索資料分析
 description: 瞭解如何使用Data Distiller來探索和分析Python筆記型電腦的資料。
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 15%
@@ -42,7 +42,7 @@ df
 
 ## 建立大型資料集的取樣版本 {#create-dataset-sample}
 
-如果您要查詢的資料集非常大，或不需要探索查詢的精確結果，請使用 [抽樣功能](../../essential-concepts/dataset-samples.md) 可用於資料Distiller查詢。 此程式分為兩個步驟：
+如果您要查詢的資料集非常大，或不需要探索查詢的精確結果，請使用 [抽樣功能](../../key-concepts/dataset-samples.md) 可用於資料Distiller查詢。 此程式分為兩個步驟：
 
 - 首先， **分析** 要以指定取樣比率建立取樣版本的資料集
 - 接下來，查詢資料集的抽樣版本。 根據您套用至樣本資料集的函式，您可能想要將輸出縮放為數字以取得完整資料集

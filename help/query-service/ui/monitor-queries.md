@@ -2,7 +2,7 @@
 title: 監視排定的查詢
 description: 瞭解如何透過查詢服務UI監視查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
+source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 1%
@@ -161,7 +161,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 >
 >使用DROP命令的匿名區塊的執行詳細資料 **非** 將作為單獨的子查詢報告。 CTAS查詢、ITAS查詢和用作匿名區塊子查詢的COPY陳述式有個別的執行詳細資訊。 目前不支援DROP命令的執行詳細資料。
 
-匿名區塊會使用 `$$` 查詢前的字首。 若要進一步瞭解查詢服務中的匿名區塊，請參閱 [匿名區塊檔案](../essential-concepts/anonymous-block.md).
+匿名區塊會使用 `$$` 查詢前的字首。 若要進一步瞭解查詢服務中的匿名區塊，請參閱 [匿名區塊檔案](../key-concepts/anonymous-block.md).
 
 匿名區塊子查詢的執行狀態左側有標籤。 選取索引標籤以顯示執行詳細資料。
 

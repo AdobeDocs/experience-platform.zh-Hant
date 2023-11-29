@@ -2,7 +2,7 @@
 title: 追蹤資料訊號以產生客戶期限值
 description: 本指南提供端對端示範，說明如何搭配使用Data Distiller和使用者定義的儀表板與Real-time Customer Data Platform，以測量及視覺化客戶期限值。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -91,7 +91,7 @@ ht-degree: 0%
 
 ## 檢視從行銷活動傳回的分析資料 {#post-campaign-data-analysis}
 
-來源中的資料現在可以是 [逐步處理](../essential-concepts/incremental-load.md) 在加速的資料存放區中，作為排程資料模型重新整理的一部分。 客戶的任何回應事件都可在發生時或批次中擷取到Adobe Experience Platform。 您的資料模型可能會重新整理一次，或一天重新整理多次，視您的設定或來源聯結器而定。 請參閱 [批次擷取API總覽](../../ingestion/batch-ingestion/api-overview.md) 或 [串流擷取概觀](../../ingestion/streaming-ingestion/overview.md) 以取得詳細資訊。
+來源中的資料現在可以是 [逐步處理](../key-concepts/incremental-load.md) 在加速的資料存放區中，作為排程資料模型重新整理的一部分。 客戶的任何回應事件都可在發生時或批次中擷取到Adobe Experience Platform。 您的資料模型可能會重新整理一次，或一天重新整理多次，視您的設定或來源聯結器而定。 請參閱 [批次擷取API總覽](../../ingestion/batch-ingestion/api-overview.md) 或 [串流擷取概觀](../../ingestion/streaming-ingestion/overview.md) 以取得詳細資訊。
 
 更新資料模型後，您的自訂儀表板Widget就會提供有意義的訊號，讓您測量並視覺化客戶期限值。
 

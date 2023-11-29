@@ -2,7 +2,7 @@
 title: 查詢服務中資料資產組織的最佳實務
 description: 本檔案概述整理資料的邏輯方法，以方便使用查詢服務。
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 6e2be299e3c1c0dfa2832ead22cdeaea0ca83591
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -170,4 +170,4 @@ DROP SCHEMA databaseA.schema2;
 
 ## 後續步驟
 
-閱讀本檔案後，您現在就能更妥善地瞭解搭配Adobe Experience Platform查詢服務使用之資料資產的組織和結構相關最佳實務。 建議您閱讀關於，以繼續瞭解查詢服務的最佳實務 [重複資料刪除檔案](../essential-concepts/deduplication.md).
+閱讀本檔案後，您現在就能更妥善地瞭解搭配Adobe Experience Platform查詢服務使用之資料資產的組織和結構相關最佳實務。 建議您閱讀關於，以繼續瞭解查詢服務的最佳實務 [重複資料刪除檔案](../key-concepts/deduplication.md).
