@@ -3,9 +3,9 @@ keywords: PebblePost；pebblepost；PebblePost程式化直接郵件；pebblepost
 title: PebblePost擴充功能
 description: PebblePost擴充功能是Adobe Experience Platform中的電子郵件目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe交換上的擴充功能頁面。
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: baa0ea072c80e141974bb595dfff149aa5de6270
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '453'
 ht-degree: 4%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail®] 解決方案可協助數位行銷人員將線上興趣和意圖連結至可轉換的離線實體媒體。 行銷人員現在可以利用他們在Adobe中建立的自訂資料對象，透過相關、持續更久的家庭媒體曝光來鎖定消費者。 根據回應路徑活動和網站上的轉換即時分析效能。
+[!DNL PebblePost's Programmatic Direct Mail] 解決方案可協助數位行銷人員將線上興趣和意圖連結至可轉換的離線實體媒體。 行銷人員現在可以利用他們在Adobe中建立的自訂資料對象，透過相關、持續更久的家庭媒體曝光來鎖定消費者。 根據回應路徑活動和網站上的轉換即時分析效能。
 
-[!DNL PebblePost] 是Adobe Experience Platform中的電子郵件擴充功能。 如需PebblePost的詳細資訊，請參閱 [整合部落格貼文](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
+[!DNL PebblePost] 是Adobe Experience Platform中的電子郵件擴充功能。
 
 此目的地是標籤延伸模組。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱 [標籤擴充功能概觀](../launch-extensions/overview.md).
 
