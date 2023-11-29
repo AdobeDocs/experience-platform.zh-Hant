@@ -4,12 +4,13 @@ title: 對教戰手冊的問題進行疑難排解
 description: 了解教戰手冊的常見問題以及如何對這些問題進行疑難排解
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 5226a3f9a6da22c2c199f8efffd71360af034dcc
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 100%
 
 ---
+
 
 # (Beta) 疑難排解和已知限制
 
