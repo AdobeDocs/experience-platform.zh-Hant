@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 常見問答
 description: 本檔案包含和查詢服務相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4309'
+source-wordcount: '4384'
 ht-degree: 1%
 
 ---
@@ -535,6 +535,16 @@ WHERE T2.ID IS NULL
 ### 查詢服務是否支援「插入覆寫到」命令？
 
 +++答案否，查詢服務不支援「插入覆寫到」命令。
++++
+
+### 授權使用量儀表板上的使用量資料多久更新一次，以符合Distiller計算時數的資料？
+
++++回答資料Distiller電腦時間的授權使用儀表板每天更新四次，每六小時。
++++
+
+### 我可以在沒有Data Distiller存取權的情況下使用「建立檢視」命令嗎？
+
++++回答是，您可以使用 `CREATE VIEW` 命令而無Data Distiller存取權。 此命令提供資料的邏輯檢視，但不會將其寫回資料湖。
 +++
 
 ## 匯出資料 {#exporting-data}

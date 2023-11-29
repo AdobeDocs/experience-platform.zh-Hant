@@ -3,9 +3,9 @@ keywords: Experience Platform；使用者介面；UI；儀表板；儀表板；�
 title: 標準儀表板Widget
 description: 本指南提供將標準Widget新增至Adobe Experience Platform儀表板的逐步指示。
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,13 @@ ht-degree: 0%
 
 在Adobe Experience Platform中，您可以使用多個儀表板檢視組織的資料並與之互動。 您也可以將新的Widget新增至儀表板檢視，以更新某些儀表板。 Adobe提供一系列標準Widget，您可以選擇將其新增到您的儀表板。
 
-此 [!UICONTROL 設定檔]， [!UICONTROL 受眾]、和 [!UICONTROL 目的地] 建立新Platform執行個體時，每個控制面板都有預設的Widget載入。 本指南提供新增標準Widget以自訂 [!UICONTROL 設定檔]， [!UICONTROL 受眾]、和 [!UICONTROL 目的地] 平台UI中的儀表板。
+此 [[!UICONTROL 設定檔]](../guides/profiles.md#default-widgets)， [[!UICONTROL 受眾]](../guides/audiences.md#default-widgets)、和 [[!UICONTROL 目的地]](../guides/destinations.md#default-widgets) 建立新Platform執行個體時，每個控制面板都有預設的Widget載入。 本指南提供新增標準Widget以自訂 [!UICONTROL 設定檔]， [!UICONTROL 受眾]、和 [!UICONTROL 目的地] 平台UI中的儀表板。
 
 >[!NOTE]
 >
->截至2023年7月26日， [!UICONTROL 設定檔]， [!UICONTROL 受眾]、和 [!UICONTROL 目的地] 對於所有在前六個月未修改檢視的使用者，概述儀表板已重設為新的預設Widget載出。
->請參閱以下檔案： [設定檔](../guides/profiles.md#default-widgets)， [受眾](../guides/audiences.md#default-widgets)、和 [目的地](../guides/destinations.md#default-widgets) 預設Widget區段，以取得關於哪些小工具屬於預設Widget載入一部分的詳細資訊。
+>控制面板的任何更新都是根據組織和沙箱進行。
 
 若要進一步瞭解自訂Widget，請參閱以下專案的指南： [建立自訂Widget](custom-widgets.md).
-
->[!NOTE]
->
->中顯示的Widget [!UICONTROL 授權使用情況] 無法自訂儀表板。 若要深入瞭解此獨特儀表板，請參閱 [授權使用情況儀表板檔案](../guides/license-usage.md).
 
 ## Widget資料庫 {#widget-library}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience Platform中的IAB TCF 2.0支援
 description: 瞭解如何設定您的資料作業和結構描述，以在對Adobe Experience Platform中的目的地啟用區段時傳達客戶同意選擇。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 2a0ebe1e92ea21ff45051096d5a6969839c2f947
 workflow-type: tm+mt
 source-wordcount: '2558'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 >
 >有關TCF 2.0的詳細資訊，請參閱 [IAB歐洲網站](https://iabeurope.eu/tcf-2-0/)，包括支援資料與技術規格。
 
-Adobe Experience Platform是已註冊的 [IAB TCF 2.0廠商清單](https://iabeurope.eu/vendor-list-tcf-v2-0/)，在ID下 **565**. 為符合TCF 2.0要求，Platform可讓您收集客戶同意資料，並將其整合至您儲存的客戶設定檔中。 之後，可根據使用者檔案的使用案例，將此同意資料納入是否將使用者檔案納入匯出的受眾區段中。
+Adobe Experience Platform是已註冊的 [IAB TCF 2.0廠商清單](https://iabeurope.eu/vendor-list-tcf/)，在ID下 **565**. 為符合TCF 2.0要求，Platform可讓您收集客戶同意資料，並將其整合至您儲存的客戶設定檔中。 之後，可根據使用者檔案的使用案例，將此同意資料納入是否將使用者檔案納入匯出的受眾區段中。
 
 >[!IMPORTANT]
 >
