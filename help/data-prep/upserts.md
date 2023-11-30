@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用「資料準備」將部分列更新傳送到「即時客戶個人檔案」
 description: 瞭解如何使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -15,6 +15,10 @@ ht-degree: 1%
 串流更新插入 [!DNL Data Prep] 可讓您將部分列更新傳送至 [!DNL Real-Time Customer Profile] 同時透過單一API請求建立和建立新的身分連結。
 
 透過串流更新插入，您可以保留資料的格式，同時將該資料轉譯為 [!DNL Real-Time Customer Profile] 在內嵌期間PATCH請求。 根據您提供的輸入， [!DNL Data Prep] 可讓您傳送單一API裝載，並將資料轉譯為兩者 [!DNL Real-Time Customer Profile] PATCH和 [!DNL Identity Service] 建立請求。
+
+>[!WARNING]
+>
+>已棄用透過DCS入口針對設定檔更新擷取的Experience Data Model (XDM)實體更新訊息(含JSONPATCH作業)。 或者，您可以 [將原始資料擷取至DCS入口](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) 並指定必要的資料對應，以將您的資料轉換為符合XDM的訊息以進行設定檔更新。
 
 本檔案提供如何在中串流更新外掛的資訊 [!DNL Data Prep].
 
