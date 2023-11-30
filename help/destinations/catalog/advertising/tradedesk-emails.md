@@ -3,9 +3,9 @@ title: (Beta)交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1130'
 ht-degree: 5%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | 電子郵件 | 電子郵件地址（純文字） | 輸入 `email` 當您的來源身分是電子郵件名稱空間或屬性時，作為目標身分。 |
-| Email_LC_SHA256 | 電子郵件地址需要使用SHA256和小寫進行雜湊處理。 請務必遵循下列任一項 [電子郵件標準化](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) 需要規則。 您稍後將無法變更此設定。 | 輸入 `hashed_email` 當您的來源身分是Email_LC_SHA256名稱空間或屬性時，作為目標身分。 |
+| Email_LC_SHA256 | 電子郵件地址需要使用SHA256和小寫進行雜湊處理。 您稍後將無法變更此設定。 | 輸入 `hashed_email` 當您的來源身分是Email_LC_SHA256名稱空間或屬性時，作為目標身分。 |
 
 {style="table-layout:auto"}
 
