@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 使用案例教戰手冊中的資料感知概觀
 description: 瞭解如何透過將最終啟髮型沙箱中產生的資產複製到其他沙箱，以加快實現價值的時間。
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 5b6b69d69a088f58d10f41debde859294285360d
+source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 使用案例教戰手冊中的資料感知概觀
 
-使用案例教戰手冊是行銷範本，設計用於產生資產，例如常見行銷使用案例的對象、結構或歷程。 在Adobe Experience Platform中，這些範本會參考數個標準欄位和欄位群組。 但是，在某些情況下，您可能已經設定自己的結構描述、欄位和欄位群組。 這可能會使使用案例範本產生的部分資產（例如歷程）與您的資料不相容。 閱讀本教學課程，瞭解如何使用資料感知功能，讓產生的資產與現有資產更妥善地配對和互補。
+使用案例教戰手冊是行銷範本，設計用於產生資產，例如常見行銷使用案例的對象、結構或歷程。 在Adobe Experience Platform中，這些範本會參考數個標準欄位和欄位群組。 但是，在某些情況下，您可能已經設定自己的結構描述、欄位和欄位群組。 這可能會使使用案例範本產生的部分資產（例如歷程）與您的資料不相容。 若要瞭解如何使用資料感知功能，以便讓產生的資產更符合併完善您的現有資產，請閱讀本教學課程。
 
 ## 先決條件 {#prerequisites}
 
@@ -31,7 +31,7 @@ ht-degree: 0%
 
    ![建立套件的強制回應視窗](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. 導覽至 **沙箱** 頁面左側導覽並選取 **封裝** 索引標籤中，尋找您的封裝並發佈。 若要發佈處於草稿狀態的套件，請依照 [沙箱工具](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) 檔案。
+3. 導覽至 **沙箱** 頁面左側導覽並選取 **封裝** 標籤，尋找您的套件並發佈。 若要發佈處於草稿狀態的套件，請依照 [沙箱工具](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) 檔案。
 
    ![處於草稿或未發佈狀態的套件](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
@@ -45,7 +45,7 @@ ht-degree: 0%
    >
    > 當套件仍處於草稿模式時無法匯入它，因此請開啟套件詳細資訊頁面並發佈套件。
 
-5. 選取 **+** 啟動工作流程的控制項，以將使用案例行動手冊產生的資產匯入 **[!UICONTROL Target沙箱]**. 選取目標沙箱，並使用下拉式清單確認您要匯入的套件名稱。 在繼續下一步之前，新增工作詳細資訊，例如工作名稱和工作說明。
+5. 選取 **+** 控制並啟動工作流程，以將使用案例行動手冊產生的資產匯入 **[!UICONTROL Target沙箱]**. 選取目標沙箱，並使用下拉式清單確認您要匯入的套件名稱。 在繼續下一步之前，新增工作詳細資訊，例如工作名稱和工作說明。
 
    ![啟動匯入工作流程、選取目標、確認封裝、新增工作詳細資料。](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ### 對應結構描述 {#map-schemas}
 
-1. 對應第一個結構描述。 綱要對應對話方塊會顯示一個下拉式清單，用來選取目標綱要。 如果來源結構描述是設定檔結構描述，則除了 [個別聯合設定檔結構描述](/help/xdm/classes/individual-profile.md). 第一次顯示頁面時，您可以看到來源資料與目標欄位之間自動產生的對應建議。 您可以選取目標欄位，然後選取新欄位來編輯對應。 如果您對建議的對映進行變更，請使用 **驗證** 按鈕以驗證新對應並顯示任何可能連結至新對應的錯誤。 選取 **儲存** 當對應完成後。
+1. 對應第一個結構描述。 綱要對應對話方塊會顯示一個下拉式清單，用來選取目標綱要。 如果來源結構描述是設定檔結構描述，則除了 [個別聯合設定檔結構描述](/help/xdm/classes/individual-profile.md). 第一次顯示頁面時，您可以看到來源資料與目標欄位之間自動產生的對應建議。 您可以選取目標欄位，然後選取新欄位來編輯對應。 如果您修改建議的對應，請使用 **驗證** 按鈕以驗證新對應並顯示任何可能連結至新對應的錯誤。 選取 **儲存** 當對應完成後。
 
    ![結構描述對應對話方塊，內含可選取目標結構描述的下拉式清單。](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   > 您無法對結構描述以外的任何資產執行動作，因為這是啟發性的沙箱，但因其為套件的相依性而顯示。
+   > 您無法修改任何資產，除了結構描述，因為這是啟發性的沙箱，但它們確實顯示，因為它們是套件的相依性。
 
 ### 匯入狀態 {#import-status}
 
@@ -89,7 +89,7 @@ ht-degree: 0%
 
    ![顯示匯入進度的頁面](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. 匯入套件時，會在目標沙箱中建立套件的資產。 完成後，它們將會參考您剛在匯入程式中對應的欄位。 此程式現已完成，而來自勵志沙箱的資產現在也出現在您的目標沙箱中，供您測試。
+2. 匯入套件時，會在目標沙箱中建立套件的資產。 完成後，它們會參照您在匯入過程中對應的欄位。 此程式現已完成，而來自勵志沙箱的資產現在也出現在您的目標沙箱中，供您測試。
 
    ![在目標沙箱中產生的資產](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
