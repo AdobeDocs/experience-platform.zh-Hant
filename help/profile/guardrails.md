@@ -3,12 +3,12 @@ title: 即時客戶設定檔資料和細分的預設護欄
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 瞭解設定檔資料和分段的效能和系統強制的護欄，以確保最佳化地使用Real-Time CDP功能。
+description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
 workflow-type: tm+mt
 source-wordcount: '2230'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
