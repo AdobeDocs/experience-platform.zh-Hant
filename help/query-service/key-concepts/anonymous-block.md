@@ -2,9 +2,9 @@
 title: 查詢服務中的匿名區塊
 description: 匿名區塊是Adobe Experience Platform查詢服務支援的SQL語法，可讓您有效執行一系列查詢
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## 與協力廠商使用者端的匿名區塊 {#third-party-clients}
+
+某些協力廠商使用者端在SQL區塊前後可能需要個別的識別碼，以表示指令碼的一部分應該以單一陳述式處理。 如果您在搭配第三方使用者端使用查詢服務時收到錯誤訊息，您應該參閱第三方使用者端關於SQL區塊使用的檔案。
+
+例如， **DbVisualizer** 要求分隔符號必須是行上的唯一文字。 在DbVisualizer中，「開始識別碼」的預設值為 `--/` 而結束識別碼則是 `/`. DbVisualizer中的匿名區塊範例如下：
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+特別是對於DbVisualizer，UI中還有一個選項可選擇&quot;[!DNL Execute the complete buffer as one SQL statement]「。 請參閱 [DbVisualizer檔案](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) 以取得詳細資訊。
+
 ## 後續步驟
 
-閱讀本檔案後，您現在已清楚瞭解匿名區塊及其結構。 [有關查詢執行的詳細資訊](../best-practices/writing-queries.md)，請參閱查詢服務中的查詢執行指南。
+閱讀本檔案後，您現在已清楚瞭解匿名區塊及其結構。 請閱讀 [查詢執行指南](../best-practices/writing-queries.md) 以取得寫入查詢的詳細資訊。
 
 您也應該閱讀 [如何使用匿名區塊搭配增量載入設計模式](./incremental-load.md) 以提高查詢效率。

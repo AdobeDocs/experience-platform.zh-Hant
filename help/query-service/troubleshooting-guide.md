@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 常見問答
 description: 本檔案包含和查詢服務相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
+source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
 workflow-type: tm+mt
-source-wordcount: '4384'
+source-wordcount: '4450'
 ht-degree: 1%
 
 ---
@@ -545,6 +545,11 @@ WHERE T2.ID IS NULL
 ### 我可以在沒有Data Distiller存取權的情況下使用「建立檢視」命令嗎？
 
 +++回答是，您可以使用 `CREATE VIEW` 命令而無Data Distiller存取權。 此命令提供資料的邏輯檢視，但不會將其寫回資料湖。
++++
+
+### 我可以在DbVisualizer中使用匿名區塊嗎？
+
++++回答是。 不過，某些協力廠商使用者端（例如DbVisualizer）在SQL區塊之前和之後可能需要個別的識別碼，以表示指令碼的部分應作為單一陳述式處理。 如需詳細資訊，請參閱 [匿名區塊檔案](./key-concepts/anonymous-block.md) 或 [官方DbVisualizer檔案](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## 匯出資料 {#exporting-data}
