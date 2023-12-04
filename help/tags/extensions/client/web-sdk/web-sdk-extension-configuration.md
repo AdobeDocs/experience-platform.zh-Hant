@@ -2,10 +2,10 @@
 title: 設定Web SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 10%
+source-wordcount: '1546'
+ht-degree: 6%
 
 ---
 
@@ -39,7 +39,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 
 ![此影像顯示標籤UI中Web SDK標籤擴充功能的一般設定](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL 名稱]**：Adobe Experience Platform Web SDK擴充功能支援頁面上的多個例項。 此名稱可用來透過標籤設定，將資料傳送至多個組織。 執行個體名稱預設為 `alloy`. 不過您可將例項名稱變更為任何有效的 JavaScript 物件名稱。
+* **[!UICONTROL 名稱]**：Adobe Experience Platform Web SDK擴充功能支援頁面上的多個例項。 此名稱可用來透過標籤設定，將資料傳送至多個組織。 執行個體名稱預設為 `alloy`. 不過，您可以將執行個體名稱變更為任何有效的JavaScript物件名稱。
 * **[!UICONTROL IMS組織ID]**：您要在Adobe傳送資料的組織ID。 大部分時間都會使用自動填入的預設值。 頁面上有多個例項時，請找到您要傳送資料的第二個組織，以該組織的值填入此欄位。
 * **[!UICONTROL 邊緣網域]**：擴充功能傳送及接收資料的網域。 Adobe建議對此擴充功能使用第一方網域(CNAME)。 預設的第三方網域適用於開發環境，但不適用於生產環境。若需設定第一方 CNAME 的相關說明，請參閱[此處](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
 
@@ -85,13 +85,25 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 
 ## 設定個人化設定 {#personalization}
 
-此區段可讓您設定在載入個人化內容時如何隱藏頁面的某些部分。
-
-您可以在預先隱藏樣式編輯器中指定要隱藏的元素。 接著，您可以複製提供的預設預先隱藏程式碼片段，並將其貼到中 `<head>` 您網站的 [!DNL HTML] 程式碼。
+此區段可讓您設定在載入個人化內容時如何隱藏頁面的某些部分。 這可確保您的訪客只會看到個人化頁面。
 
 ![此影像顯示標籤UI中Web SDK標籤擴充功能的個人化設定](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL 將Target從at.js移轉至Web SDK]**：使用此選項來啟用 [!DNL Web SDK] 以讀取及寫入舊版 `mbox` 和 `mboxEdgeCluster` at.js使用的Cookie `1.x` 或 `2.x` 程式庫。 這可協助您在從使用Web SDK的頁面移至使用at.js的頁面時，保留訪客設定檔 `1.x` 或 `2.x` 資料庫或反之。
+
+### 預先隱藏樣式 {#prehiding-style}
+
+預先隱藏樣式編輯器可讓您定義自訂CSS規則，以隱藏頁面的特定區段。 載入頁面時，Web SDK會使用此樣式來隱藏需要個人化的區段，擷取個人化，然後取消隱藏個人化的頁面區段。 如此一來，您的訪客便能看見已個人化的頁面，而不需看見個人化擷取程式。
+
+### 預先隱藏程式碼片段 {#prehiding-snippet}
+
+非同步載入Web SDK程式庫時，預先隱藏程式碼片段相當實用。 在此情況下，為避免忽隱忽現的情形，我們建議在載入Web SDK程式庫之前隱藏內容。
+
+若要使用預先隱藏程式碼片段，請複製該程式碼片段，並貼到 `<head>` 個頁面元素。
+
+>[!IMPORTANT]
+>
+>使用預先隱藏程式碼片段時，Adobe建議使用 [!DNL CSS] 規則做為使用的規則 [預先隱藏樣式](#prehiding-style).
 
 ## 設定資料收集設定 {#data-collection}
 
@@ -110,7 +122,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 資料流設定覆寫的流程包含兩個步驟：
 
 1. 首先，您必須在[資料流設定頁面](../../../../datastreams/configure.md)中定義您的資料流設定覆寫。
-2. 接著，您必須透過 Web SDK 命令或使用 Web SDK 標記擴充功能將覆寫傳送至 Edge Network。
+2. 然後，您必須透過Web SDK命令或使用Web SDK標籤擴充功能，將覆寫傳送至Edge Network。
 
 檢視資料流 [設定覆寫檔案](../../../../datastreams/overrides.md) 以取得有關如何覆寫資料流設定的詳細說明。
 
