@@ -3,10 +3,10 @@ title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
 workflow-type: tm+mt
-source-wordcount: '3594'
-ht-degree: 54%
+source-wordcount: '3772'
+ht-degree: 49%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 54%
 以聰明負責的方式重新吸引放棄轉換的客戶。 透過體驗與失效的客戶互動，以提高轉換率並增加使用者端期限值。
 
 採用即時考慮方式、將所有消費者的品質和行為納入考量，並根據線上和線下事件提供更快的重新資格認證。
+
+以下是Real-Time CDP和Journey Optimizer各種元件的高階架構檢視。 此圖表顯示資料如何流經兩個Experience Platform應用程式，從資料收集一直到透過歷程或促銷活動啟用它到目的地的時間，以達到本頁面上描述的使用案例。
 
 ![智慧型重新參與高階視覺化概觀。](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -59,7 +61,7 @@ ht-degree: 54%
 
 1. 您可以建立方案和資料集，然後啟用 [!UICONTROL 個人資料].
 2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
-3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和/或行動應用程式訪客。
+3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您從設定檔清單建立重點對象，以檢查&#x200B;**使用者**&#x200B;在過去三天是否有進行參與行動。
 5. 您會在中建立放棄的產品瀏覽歷程 [!DNL Adobe Journey Optimizer].
 6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將對象啟動到所需付費媒體目的地。
@@ -71,7 +73,7 @@ ht-degree: 54%
 
 1. 您可以建立結構描述和資料集，並為以下專案啟用 [!UICONTROL 個人資料].
 2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
-3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和/或行動應用程式訪客。
+3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您從設定檔清單建立重點對象，以檢查&#x200B;**客戶**&#x200B;是否已將商品放入購物車但尚未完成購買。**[!UICONTROL 新增到購物車]**&#x200B;事件會啟動計時器；計時器會等待 30 分鐘，然後檢查是否有購買。如果沒有購買，那麼會將&#x200B;**客戶**&#x200B;新增到&#x200B;**[!UICONTROL 捨棄購物車]**&#x200B;對象。
 5. 您在 [!DNL Adobe Journey Optimizer] 中建立一個廢棄購物車歷程。
 6. 如有需要，與&#x200B;**資料合作夥伴**&#x200B;協作，將對象啟動到所需付費媒體目的地。
@@ -83,7 +85,7 @@ ht-degree: 54%
 
 1. 您可以建立方案和資料集，然後啟用 [!UICONTROL 個人資料].
 2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
-3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和/或行動應用程式訪客。
+3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您在 [!DNL Adobe Journey Optimizer] 中建立一個確認歷程。
 5. [!DNL Adobe Journey Optimizer] 使用偏好管道發送訂購確認訊息。
 
@@ -109,10 +111,10 @@ ht-degree: 54%
 
 [個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人設定檔類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `mobilePhone.number` | 必要 | 個人手機號碼，用來發送 SMS。 |
-| `personalEmail.address` | 必要 | 個人電子郵件地址。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `mobilePhone.number` | 個人手機號碼，用來發送簡訊。 |
+| `personalEmail.address` | 個人電子郵件地址。 |
 
 +++
 
@@ -139,13 +141,13 @@ ht-degree: 54%
 
 +++設定檔測試詳細資料 (欄位群組)
 
-此欄位群組用於最佳做法。
+此欄位群組可讓您使用測試設定檔，在發佈歷程之前測試歷程。 如需建立測試設定檔的詳細資訊，請參閱 [建立測試設定檔教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) 和 [測試歷程教學課程](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
 #### 客戶數位交易結構描述
 
-此結構描述是用來安排和引用構成發生在您網站和/或關聯數位平台上客戶活動的事件資料。此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) 且是參考各種用於觸發歷程、詳細線上客戶分析和增強受眾功能的瀏覽和轉換事件所必需的。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) 且是參考各種用於觸發歷程、詳細線上客戶分析和增強受眾功能的瀏覽和轉換事件所必需的。
 
 客戶數位交易結構描述是由 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 
@@ -153,11 +155,11 @@ ht-degree: 54%
 
 此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
-| `timestamp` | 必要 | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
-| `eventType` | 必要 | 指出事件類別型別的字串。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `_id` | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
+| `timestamp` | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
+| `eventType` | 指出事件類別型別的字串。 |
 
 +++
 
@@ -165,14 +167,14 @@ ht-degree: 54%
 
 此 [一般使用者ID詳細資訊](/help/xdm/field-groups/event/enduserids.md) 欄位群組是用來說明個人在多個Adobe應用程式中的身分資訊。
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | 必要 | 一般使用者電子郵件地址 ID 驗證狀態。 |
-| `endUserIDs._experience.emailid.id` | 必要 | 一般使用者電子郵件地址 ID。 |
-| `endUserIDs._experience.emailid.namespace.code` | 必要 | 一般使用者電子郵件地址 ID 命名空間代碼。 |
-| `endUserIDs._experience.mcid.authenticatedState` | 必要 | [!DNL Adobe] Marketing Cloud ID (MCID) 驗證狀態。MCID 現在稱為 Experience Cloud ID (ECID)。 |
-| `endUserIDs._experience.mcid.id` | 必要 | [!DNL Adobe] Marketing Cloud ID (MCID)。MCID 現在稱為 Experience Cloud ID (ECID)。 |
-| `endUserIDs._experience.mcid.namespace.code` | 必要 | [!DNL Adobe] Marketing Cloud ID (MCID) 命名空間代碼。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | 一般使用者電子郵件地址 ID 驗證狀態。 |
+| `endUserIDs._experience.emailid.id` | 一般使用者電子郵件地址 ID。 |
+| `endUserIDs._experience.emailid.namespace.code` | 一般使用者電子郵件地址 ID 命名空間代碼。 |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) 驗證狀態。MCID 現在稱為 Experience Cloud ID (ECID)。 |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID)。MCID 現在稱為 Experience Cloud ID (ECID)。 |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID) 命名空間代碼。 |
 
 +++
 
@@ -192,11 +194,11 @@ ht-degree: 54%
 
 此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
-| `timestamp` | 必要 | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
-| `eventType` | 必要 | 指出事件類別型別的字串。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `_id` | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
+| `timestamp` | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
+| `eventType` | 指出事件類別型別的字串。 |
 
 +++
 
@@ -204,18 +206,18 @@ ht-degree: 54%
 
 此 [商業細節](/help/xdm/field-groups/event/commerce-details.md) 欄位群組用於說明商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `commerce.cart.cartID` | 必要 | 購物車的 ID。 |
-| `commerce.order.orderType` | 必要 | 描述產品訂購類型的物件。 |
-| `commerce.order.payments.paymentAmount` | 必要 | 描述產品訂購付款金額的物件。 |
-| `commerce.order.payments.paymentType` | 必要 | 描述產品訂購付款類型的物件。 |
-| `commerce.order.payments.transactionID` | 必要 | 物件產品訂購交易 ID。 |
-| `commerce.order.purchaseID` | 必要 | 物件產品訂單購買 ID。 |
-| `productListItems.name` | 必要 | 代表客戶所選產品的項目名稱清單。 |
-| `productListItems.priceTotal` | 必要 | 代表客戶所選產品的項目清單總價。 |
-| `productListItems.product` | 必要 | 選取的產品。 |
-| `productListItems.quantity` | 必要 | 代表客戶所選產品的項目清單數量。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `commerce.cart.cartID` | 購物車的 ID。 |
+| `commerce.order.orderType` | 描述產品訂購類型的物件。 |
+| `commerce.order.payments.paymentAmount` | 描述產品訂購付款金額的物件。 |
+| `commerce.order.payments.paymentType` | 描述產品訂購付款類型的物件。 |
+| `commerce.order.payments.transactionID` | 物件產品訂購交易 ID。 |
+| `commerce.order.purchaseID` | 物件產品訂單購買 ID。 |
+| `productListItems.name` | 代表客戶所選產品的項目名稱清單。 |
+| `productListItems.priceTotal` | 代表客戶所選產品的項目清單總價。 |
+| `productListItems.product` | 選取的產品。 |
+| `productListItems.quantity` | 代表客戶所選產品的項目清單數量。 |
 
 +++
 
@@ -223,10 +225,10 @@ ht-degree: 54%
 
 [個人聯絡詳細資料](/help/xdm/field-groups/profile/personal-contact-details.md)是 XDM 個人設定檔類別的標準結構描述欄位群組，主要在描述個人的聯絡資訊。
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `mobilePhone.number` | 必要 | 個人手機號碼，用來發送 SMS。 |
-| `personalEmail.address` | 必要 | 個人電子郵件地址。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `mobilePhone.number` | 個人手機號碼，用來發送簡訊。 |
+| `personalEmail.address` | 個人電子郵件地址。 |
 
 +++
 
@@ -242,7 +244,7 @@ ht-degree: 54%
 >
 >如果您使用 [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md)，這是一個實施選項。
 
-此結構描述是用來安排和引用構成發生在您網站和/或關聯數位平台上客戶活動的事件資料。此結構描述類似於「客戶數位交易」結構描述，但不同之處在於其適用時機 [Web SDK](/help/edge/home.md) 不是資料收集的選項；因此，當您使用 [!DNL Adobe Analytics Source Connector] 將您的線上資料傳送到 [!DNL Adobe Experience Platform] 作為主要或次要資料流。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此結構描述類似於「客戶數位交易」結構描述，但不同之處在於其適用時機 [Web SDK](/help/edge/home.md) 不是資料收集的選項；因此，當您使用 [!DNL Adobe Analytics Source Connector] 將您的線上資料傳送到 [!DNL Adobe Experience Platform] 作為主要或次要資料流。
 
 此 [!DNL Adobe] Web聯結器結構描述是由 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 
@@ -250,11 +252,11 @@ ht-degree: 54%
 
 此 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別包括下列欄位群組：
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `_id` | 必填 | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
-| `timestamp` | 必要 | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
-| `eventType` | 必要 | 指出事件類別型別的字串。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `_id` | 唯一識別內嵌至的個別事件 [!DNL Adobe Experience Platform]. |
+| `timestamp` | 事件發生時間的ISO 8601時間戳記，格式如RFC 3339第5.6節所述。此時間戳記必須發生在過去。 |
+| `eventType` | 指出事件類別型別的字串。 |
 
 +++
 
@@ -262,14 +264,14 @@ ht-degree: 54%
 
 此 [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event/analytics-full-extension.md) 欄位群組會擷取Adobe Analytics所收集的一般量度。
 
-| 欄位 | 需求 | 說明 |
-| --- | --- | --- |
-| `endUserIDs._experience.emailid.authenticatedState` | 必要 | 一般使用者電子郵件地址 ID 驗證狀態。 |
-| `endUserIDs._experience.emailid.id` | 必要 | 一般使用者電子郵件地址 ID。 |
-| `endUserIDs._experience.emailid.namespace.code` | 必要 | 一般使用者電子郵件地址 ID 命名空間代碼。 |
-| `endUserIDs._experience.mcid.authenticatedState` | 必要 | [!DNL Adobe] Marketing Cloud ID (MCID) 驗證狀態。MCID 現在稱為 Experience Cloud ID (ECID)。 |
-| `endUserIDs._experience.mcid.id` | 必要 | [!DNL Adobe] Marketing Cloud ID (MCID)。MCID 現在稱為 Experience Cloud ID (ECID)。 |
-| `endUserIDs._experience.mcid.namespace.code` | 必要 | [!DNL Adobe] Marketing Cloud ID (MCID) 命名空間代碼。 |
+| 欄位 | 說明 |
+| --- | --- |
+| `endUserIDs._experience.emailid.authenticatedState` | 一般使用者電子郵件地址 ID 驗證狀態。 |
+| `endUserIDs._experience.emailid.id` | 一般使用者電子郵件地址 ID。 |
+| `endUserIDs._experience.emailid.namespace.code` | 一般使用者電子郵件地址 ID 命名空間代碼。 |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Marketing Cloud ID (MCID) 驗證狀態。MCID 現在稱為 Experience Cloud ID (ECID)。 |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID)。MCID 現在稱為 Experience Cloud ID (ECID)。 |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID) 命名空間代碼。 |
 
 +++
 
@@ -300,7 +302,7 @@ ht-degree: 54%
 建立重新參與路徑時，請考慮新增下列專案 [同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)：
 
 * 如果為 `consents.marketing.email.val = "Y"`，則可以發送電子郵件
-* 如果為 `consents.marketing.sms.val = "Y"`，則可以發送 SMS
+* 如果為 `consents.marketing.sms.val = "Y"`，則可以發送簡訊
 * 如果為 `consents.marketing.push.val = "Y"`，則可以推播
 * 如果為 `consents.share.val = "Y"`，則可以進行廣告
 
@@ -344,8 +346,9 @@ ht-degree: 54%
 設定此對象時需要以下欄位和條件：
 
 * `eventType: commerce.productViews`
-* 與 `THEN` （循序事件）排除 `eventType: commerce.procuctListAdds` 或 `application.launch` 或 `web.webpagedetails.pageViews` 或 `commerce.purchases` （包括線上和離線）
+* 與 `THEN` （循序事件）排除 `eventType: commerce.productListAdds` 或 `application.launch` 或 `web.webpagedetails.pageViews` 或 `commerce.purchases` （包括線上和離線）
    * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
 
 +++
 
@@ -356,8 +359,10 @@ ht-degree: 54%
 設定此對象時需要以下欄位和條件：
 
 * `eventType: commerce.productViews`
-* 與 `THEN` （循序事件）包括 `eventType: commerce.procuctListAdds` 或 `application.launch` 或 `web.webpagedetails.pageViews` 或 `commerce.purchases` （包括線上和離線）
+* 與 `THEN` （循序事件）包括 `eventType: commerce.productListAdds` 或 `application.launch` 或 `web.webpagedetails.pageViews` 或 `commerce.purchases` （包括線上和離線）
    * `Timestamp: > 3 days after productView`
+* `Timestamp: > 4 days`
++++
 
 +++過去一天內的參與串流
 
@@ -365,7 +370,7 @@ ht-degree: 54%
 
 設定此對象時需要以下欄位和條件：
 
-* `eventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: in last 1 day` （串流）
 
 +++
@@ -376,7 +381,7 @@ ht-degree: 54%
 
 設定此對象時需要以下欄位和條件：
 
-* `EventType: commerce.procuctListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
    * `Timestamp: in last 3 days` （批次）
 
 +++
@@ -422,6 +427,8 @@ ht-degree: 54%
 
 +++事件
 
+事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * 事件 1：產品檢視
    * 結構描述：客戶數位交易
    * 欄位：
@@ -429,14 +436,7 @@ ht-degree: 54%
    * 條件：
       * `eventType = commerce.productViews`
       * 欄位：
-         * `commerce.productViews.id`
-         * `commerce.productViews.value`
          * `eventType`
-         * `identityMap.authenticatedState`
-         * `identityMap.id`
-         * `identityMap.primary`
-         * `productListItems.SKU`
-         * `productListItems.currencyCode`
          * `productListItems.name`
          * `productListItems.priceTotal`
          * `productListItems.product`
@@ -515,7 +515,9 @@ ht-degree: 54%
 
 +++
 
-+++關鍵歷程邏輯
++++Journey Canvas金鑰邏輯
+
+歷程畫布關鍵邏輯需要您識別特定事件，並設定要在事件發生後發生的動作。
 
 * 歷程登入邏輯
    * 產品檢視事件
@@ -549,6 +551,8 @@ ht-degree: 54%
 捨棄的購物車案例會鎖定已放入購物車但尚未在網站和行動應用程式上購買的產品。<p>![客戶放棄購物車案例高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶放棄購物車案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 +++事件
+
+事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * 事件 2：加入購物車
    * 結構描述：客戶數位交易
@@ -643,7 +647,9 @@ ht-degree: 54%
 
 +++
 
-+++關鍵歷程邏輯
++++Journey Canvas金鑰邏輯
+
+歷程畫布關鍵邏輯需要您識別特定事件，並設定要在事件發生後發生的動作。
 
 * 歷程登入邏輯
    * `AddToCart` 活動
@@ -679,6 +685,8 @@ ht-degree: 54%
 
 +++事件
 
+事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+
 * 事件 4：網上購買
    * 結構描述：客戶數位交易
    * 欄位：
@@ -707,7 +715,9 @@ ht-degree: 54%
 
 +++
 
-+++關鍵歷程邏輯
++++Journey Canvas金鑰邏輯
+
+歷程畫布關鍵邏輯需要您識別特定事件，並設定要在事件發生後發生的動作。
 
 * 歷程登入邏輯
    * 訂購事件
@@ -740,10 +750,16 @@ ht-degree: 54%
 * `ECID`
 * `mobilePhone.number`
 
-捨棄購物車對象會評估為串流對象，因此可用於此使用案例的目的地架構。
+您可以啟用放棄的產品瀏覽，並將購物車對象捨棄於付費媒體廣告。
 
 * 串流/已觸發
    * [廣告](/help/destinations/catalog/advertising/overview.md)/[付費媒體和社交](/help/destinations/catalog/social/overview.md)
    * [行動](/help/destinations/catalog/mobile-engagement/overview.md)
    * [串流目的地](/help/destinations/catalog/streaming/http-destination.md)
    * [使用Destination SDK建立的自訂目的地。](/help/destinations/destination-sdk/overview.md)。如果您是Real-Time CDP Ultimate客戶，也可以建立私人帳戶 [使用Destination SDK的自訂目的地](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+
+## 後續步驟 {#next-steps}
+
+透過以智慧和負責的方式重新吸引放棄轉換的客戶，您有望提高轉換率並增加使用者端期限值。
+
+接下來，您可以探索Real-Time CDP支援的其他使用案例，例如 [向未經驗證的使用者顯示個人化內容](/help/rtcdp/partner-data/onsite-personalization.md) 在您的Web屬性上。
