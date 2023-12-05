@@ -2,10 +2,10 @@
 title: 身分名稱空間總覽
 description: 瞭解Identity Service中的身分識別名稱空間。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 8%
+source-wordcount: '1787'
+ht-degree: 7%
 
 ---
 
@@ -23,11 +23,24 @@ ht-degree: 8%
 
 ## 瞭解身分名稱空間
 
+![使用Identity Service的資料工作流程圖例。](images/identity-service-stitching.png)
+
 完整身分包含兩個元件： **身分值** 和 **身分名稱空間**. 例如，如果身分的值是 `scott@acme.com`，則名稱空間會將此值識別為電子郵件地址，以提供其內容。 同樣地，名稱空間可以區分 `555-123-456` 作為電話號碼，以及 `3126ABC` 作為CRM ID。 基本上， **名稱空間會提供指定身分的上下文**. 跨設定檔片段比對記錄資料時，例如 [!DNL Real-Time Customer Profile] 會合併設定檔資料，身分值和名稱空間必須相符。
 
 例如，兩個設定檔片段可能包含不同的主要ID，但兩者的「電子郵件」名稱空間值相同，因此Experience Platform能看到這些片段實際上是同一個人，並將個人資料一起匯入身分圖表中。
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**身分名稱空間說明**
+
+要更清楚瞭解名稱空間的另一個方法是考量現實世界的範例，例如城市及其對應的州。 例如，緬因州的波特蘭和奧勒岡州的波特蘭是美國兩個不同的地方。 雖然城市有相同的名稱，但國家是以名稱空間的方式運作，並提供區分這兩個城市的必要內容。
+
+將相同的邏輯套用至Identity Service：
+
+* 身分值總覽： `1-234-567-8900` 看起來可能像電話號碼。 但是，從系統的角度來看，此值可能設定為CRM ID。 如果沒有對應的名稱空間，Identity Service無法將必要的內容套用至此身分值。
+* 另一個範例是身分值： `john@gmail.com`. 雖然您可輕鬆將此身分值假設為電子郵件，但完全有可能將其設定為自訂名稱空間CRM ID。 使用名稱空間，您可以區分 `Email:john@gmail.com` 從 `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### 名稱空間的元件
 
@@ -87,7 +100,7 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 | Google廣告ID (GAID) | 代表Google Advertising ID的名稱空間。 請參閱以下檔案： [Google廣告ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) 以取得詳細資訊。 |
 | Google點按ID | 代表Google點選ID的名稱空間。 請參閱以下檔案： [Google Ads中的點選追蹤](https://developers.google.com/adwords/api/docs/guides/click-tracking) 以取得詳細資訊。 |
 | 電話 | 代表電話號碼的名稱空間。 這種型別的名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
-| 電話(E.164) | 代表需要以E.164格式雜湊的原始電話號碼的名稱空間。 E.164格式包含加號(`+`)、國際國家/地區撥號代碼、當地區號和電話號碼。 例如: `(+)(country code)(area code)(phone number)`. |
+| 電話(E.164) | 代表需要以E.164格式雜湊的原始電話號碼的名稱空間。 E.164格式包含加號(`+`)、國際國家/地區撥號代碼、當地區號和電話號碼。 例如: `(+)(country code)(area code)(phone number)`。 |
 | 電話(SHA256) | 代表需使用SHA256雜湊處理之電話號碼的名稱空間。 您必須移除符號、字母及任何前導零。 您也必須新增國家/地區呼叫代碼作為前置詞。 |
 | 電話(SHA256_E.164) | 代表需要使用SHA256和E.164格式雜湊的原始電話號碼的名稱空間。 |
 | TNTID | 代表Adobe Target的名稱空間。 請參閱以下檔案： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) 以取得詳細資訊。 |
