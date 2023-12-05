@@ -2,10 +2,10 @@
 title: Adobe Medium Analytics for Audio and Video擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Medium Analytics for Audio and Video標籤擴充功能。
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 82%
+source-wordcount: '949'
+ht-degree: 80%
 
 ---
 
@@ -33,7 +33,7 @@ Media Analytics (MA) 擴充功能新增核心的 JavaScript Media SDK (Media 2.x
 
 ## 安裝並設定 MA 擴充功能
 
-* **安裝 —** 若要安裝MA擴充功能，請開啟您的擴充功能屬性，選取 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在 **[!UICONTROL 適用於音訊和視訊的Adobe Medium Analytics]** 擴充功能，並選取 **[!UICONTROL 安裝]**.
+* **安裝 —** 若要安裝MA擴充功能，請開啟您的擴充功能屬性，然後選取「 」 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在 **[!UICONTROL Adobe Medium Analytics for Audio and Video]** 擴充功能，然後選取 **[!UICONTROL 安裝]**.
 
 * **設定 —** 若要設定MA擴充功能，請開啟 [!UICONTROL 擴充功能] 索引標籤，將游標停留在擴充功能上，然後選取「 」 **[!UICONTROL 設定]**：
 
@@ -59,7 +59,7 @@ Media Analytics (MA) 擴充功能新增核心的 JavaScript Media SDK (Media 2.x
 
 ### 從網頁/JS 應用程式使用
 
-MA擴充功能會啟用「 」中的「匯出視窗物件API」設定，將MediaHeartbeat API匯出至全域視窗物件中。 [!UICONTROL 設定] 頁面。 這會以設定的變數名稱匯出 API。例如，如果變數名稱設定為 `ADB`，則可使用 `window.ADB.MediaHeartbeat` 來存取 MediaHeartbeat。
+MA擴充功能會啟用「 」中的「匯出視窗物件API」設定，以將MediaHeartbeat API匯出至全域視窗物件中。 [!UICONTROL 設定] 頁面。 這會以設定的變數名稱匯出 API。例如，如果變數名稱設定為 `ADB`，則可使用 `window.ADB.MediaHeartbeat` 來存取 MediaHeartbeat。
 
 >[!IMPORTANT]
 >
@@ -121,18 +121,19 @@ MA 擴充功能會將 `get-instance` 模組和 `media-heartbeat` 共用模組公
 
    * 有效的委派物件會顯示以下函數：
 
-      | 方法 |  說明 |
-      | :--- | :--- |
-      | `getQoSObject()` | 傳回包含目前 QoS 資訊的 `MediaObject` 例項。將在播放工作階段期間呼叫此方法多次。播放器實作必須一律傳回最新的可用 QoS 資料。 |
-      | `getCurrentPlaybackTime()` | 傳回播放點的目前位置。對於 VOD 追蹤，該值是從媒體項目的開頭開始以秒為單位指定的。對於 LIVE/LIVE 追蹤，該值是從節目的開頭開始以秒為單位指定的。 |
+     | 方法 |  說明 |
+     | :--- | :--- |
+     | `getQoSObject()` | 傳回包含目前 QoS 資訊的 `MediaObject` 例項。將在播放工作階段期間呼叫此方法多次。播放器實作必須一律傳回最新的可用 QoS 資料。 |
+     | `getCurrentPlaybackTime()` | 傳回播放點的目前位置。對於 VOD 追蹤，該值是從媒體項目的開頭開始以秒為單位指定的。對於 LIVE/LIVE 追蹤，該值是從節目的開頭開始以秒為單位指定的。 |
 
    * 選用的設定物件會顯示這些屬性：
 
-      | 屬性 | 說明 | 必填 |
-      | :--- | :--- | :--- |
-      | Online Video Provider | 線上視訊平台的名稱，透過該平台來分送內容。 | 否。如果存在，則會在擴充功能設定期間覆寫定義的值。 |
-      | Player Name | 使用的媒體播放器名稱 (例如：「AVPlayer」、「HTML5 播放器」、「我的自訂視訊播放器」) | 否。如果存在，則會在擴充功能設定期間覆寫定義的值。 |
-      | Channel | 管道名稱屬性 | 否。如果存在，則會在擴充功能設定期間覆寫定義的值。 |
+     | 屬性 | 說明 | 必填 |
+     | :--- | :--- | :--- |
+     | Online Video Provider | 線上視訊平台的名稱，透過該平台來分送內容。 | 否。如果存在，則會在擴充功能設定期間覆寫定義的值。 |
+     | Player Name | 使用的媒體播放器名稱 (例如：「AVPlayer」、「HTML5 播放器」、「我的自訂視訊播放器」) | 否。如果存在，則會在擴充功能設定期間覆寫定義的值。 |
+     | Channel | 管道名稱屬性 | 否。如果存在，則會在擴充功能設定期間覆寫定義的值。 |
+
    **傳回值：**&#x200B;一種 Promise，使用 `MediaHeartbeat` 例項解析，或拒絕並提供錯誤訊息。
 
 1. **存取 MediaHeartbeat 常數：**`media-heartbeat`共用模組
@@ -173,11 +174,11 @@ MA 擴充功能會將 `get-instance` 模組和 `media-heartbeat` 共用模組公
    ...
    ```
 
-1. 使用 Media Heartbeat 例項，並按照 [Media SDK JS 文件](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html)和 [JS API 文件](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) 中的說明來實作媒體追蹤功能。
+1. 使用 Media Heartbeat 例項，並按照 [Media SDK JS 文件](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html)和 [JS API 文件](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) 中的說明來實作媒體追蹤功能。
 
 >[!NOTE]
 >
->**測試：**&#x200B;若要在這個版本中測試擴充功能，您必須將其上傳至 [ Platform ](../../../extension-dev/submit/upload-and-test.md)以便在其中存取所有相依的擴充功能。
+>**測試：** 若要在這個版本中測試擴充功能，您必須將其上傳至 [Platform](../../../extension-dev/submit/upload-and-test.md)，您可在此存取所有相依的擴充功能。
 
 
 <!--

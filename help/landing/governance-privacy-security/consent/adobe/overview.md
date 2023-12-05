@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform中的同意處理
 description: 瞭解如何使用Adobe 2.0標準在Adobe Experience Platform中處理客戶同意訊號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Experience Platform除了CMP同意變更掛接所觸發的SDK命令外，同意�
 
 如果您的行動應用程式需要客戶同意偏好設定，您可以整合Experience PlatformMobile SDK以擷取及更新同意設定，並在呼叫同意API時將其傳送至Platform。
 
-請參閱行動SDK檔案以瞭解 [設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) 和 [使用同意API](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). 如需如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱區段 [隱私權與GDPR](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+請參閱行動SDK檔案以瞭解 [設定同意行動擴充功能](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) 和 [使用同意API](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). 如需如何使用Mobile SDK處理隱私權問題的詳細資訊，請參閱區段 [隱私權與GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### 直接擷取XDM相容的同意資料 {#batch}
 
