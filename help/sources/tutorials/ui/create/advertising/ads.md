@@ -2,9 +2,9 @@
 title: 在UI中建立Google Ads來源連線
 description: 瞭解如何使用Google UI建立Adobe Experience Platform Ads來源連線。
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 0%
 | 認證 | 說明 |
 | ---------- | ----------- |
 | 使用者端客戶ID | 使用者端客戶ID為對應至您要使用Google Ads API管理的Google Ads使用者端帳戶的帳號。 此ID遵循的範本 `123-456-7890`. |
-| 登入客戶ID | 登入客戶ID是與您的Google Ads管理員帳戶對應的帳號，用於擷取特定營運客戶的報表資料。 如需登入客戶ID的詳細資訊，請參閱 [Google Ads API檔案](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| 登入客戶ID | 登入客戶ID是與您的Google Ads管理員帳戶對應的帳號，用於擷取特定營運客戶的報表資料。 如需登入客戶ID的詳細資訊，請參閱 [Google Ads API檔案](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | 開發人員權杖 | 開發人員Token可讓您存取Google Ads API。 您可以使用相同的開發人員Token，對所有Google Ads帳戶提出要求。 擷取您的開發人員Token，方法是 [登入您的管理員帳戶](https://ads.google.com/home/tools/manager-accounts/) 然後導覽至API中心頁面。 |
 | 重新整理Token | 重新整理權杖屬於 [!DNL OAuth2] 驗證。 此權杖可讓您在存取權杖過期後重新產生存取權杖。 |
 | 使用者端ID | 使用者端ID可與使用者端密碼搭配使用，作為的一部分 [!DNL OAuth2] 驗證。 使用者端ID和使用者端密碼可讓您的應用程式藉由在Google中識別您的應用程式，以代表您的帳戶運作。 |

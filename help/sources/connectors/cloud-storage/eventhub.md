@@ -3,9 +3,9 @@ title: Azure事件中樞來源聯結器總覽
 description: 瞭解如何使用API或使用者介面將Azure事件中樞連線至Adobe Experience Platform。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platform為AWS等雲端服務供應商提供原生連線， [!D
 
 ## 使用虛擬網路連線到 [!DNL Event Hubs] 至平台
 
-您可以設定要連線的虛擬網路 [!DNL Event Hubs] 至Platform，同時啟用防火牆測量。 若要設定虛擬網路，請前往此 [[!DNL Event Hubs] 網路規則集檔案](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) 並遵循下列步驟：
+您可以設定要連線的虛擬網路 [!DNL Event Hubs] 至Platform，同時啟用防火牆測量。 若要設定虛擬網路，請前往此 [[!DNL Event Hubs] 網路規則集檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) 並遵循下列步驟：
 
 * 選取 **試試看** 從REST API面板；
 * 驗證您的 [!DNL Azure] 在相同瀏覽器中使用您憑證的帳戶；
@@ -117,7 +117,7 @@ Adobe Experience Platform為AWS等雲端服務供應商提供原生連線， [!D
 }
 ```
 
-請參閱下列內容 [[!DNL Event Hubs] 檔案](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) 以取得網路規則集的詳細資訊。
+請參閱下列內容 [[!DNL Event Hubs] 檔案](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) 以取得網路規則集的詳細資訊。
 
 ## 連線 [!DNL Event Hubs] 至平台
 
