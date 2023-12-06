@@ -1,19 +1,17 @@
 ---
 title: 資料流概觀
-description: 連接您的用戶端 Experience Platform SDK 與 Adobe 產品和協力廠商目標的整合。
-keywords: 設定；資料流；datastreamId；邊緣；資料流 id；環境設定；edgeConfigId；身分識別；啟用 id 同步；ID 同步容器 ID；沙箱；串流入口；事件資料集；目標；用戶端代碼；屬性權杖；目標環境 ID；Cookie 目的地；url 目的地；分析設定 Blockreport 套件 id；資料集合的資料準備；資料準備；對應工具；XDM 對應工具；邊緣對應工具；
-exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
-workflow-type: ht
-source-wordcount: '780'
-ht-degree: 100%
+description: 瞭解資料串流如何協助您將使用者端Experience PlatformSDK整合與Adobe產品和第三方目的地連線起來。
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+workflow-type: tm+mt
+source-wordcount: '728'
+ht-degree: 77%
 
 ---
 
 
 # 資料流概觀
 
-資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。SDK 中的[設定命令](../edge/fundamentals/configuring-the-sdk.md)控制必須在用戶端處理的事情 (例如`edgeDomain`) 時，資料流則處理 SDK 的所有其他設定。當傳送請求到 Adob&#x200B;&#x200B;e Experience Platform Edge Network 時，`edgeConfigId` 會用於參照資料流。這讓您無須在網站上進行程式碼變更即可更新伺服器端設定。
+資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。當 [設定](../edge/fundamentals/configuring-the-sdk.md) SDK中的命令可控制使用者端上必須處理的專案(例如 `edgeDomain`)，資料串流會處理SDK的所有其他設定。 當傳送請求到 Adob&#x200B;&#x200B;e Experience Platform Edge Network 時，`edgeConfigId` 會用於參照資料流。這讓您無須在網站上進行程式碼變更即可更新伺服器端設定。
 
 在 Adob&#x200B;&#x200B;e Experience Platform UI 或資料集合 UI 的左側導覽中選取&#x200B;**[!UICONTROL 資料流]**，即可建立並管理資料流。
 
@@ -25,7 +23,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->本文件的內容並非法律建議，其用意並非取代專業的法律建議。如需有關處理敏感資料的建議，請和貴公司的法律部門商議。
+>本文件的內容並非法律建議，其用意並非取代專業的法律建議。請洽詢貴公司的法律部門，以取得處理敏感資料的相關建議。
 
 企業資料盡責管理政策和監管要求對於能夠收集、處理和使用敏感客戶資料的方式施加了越來越多的限制。這包括對於受保護的健康資料 (PHI) 的收集、處理和使用，這類資料受到《健康保險可攜與責任法案》(HIPAA) 等法規的規範。
 
@@ -41,7 +39,7 @@ ht-degree: 100%
 
 ### 資料控管 {#governance}
 
-資料流會利用 Experience Platform 的內建資料控管功能來防止敏感資料傳送到未符合 HIPAA 標準的服務。在資料流綱要中標記包含敏感資料的特定欄位，即可對於哪些資料欄位可用於特定目的採取精細的控制。
+資料串流使用Experience Platform內建的資料控管功能，以防止將敏感資料傳送至不符合HIPAA標準的服務。 在資料流綱要中標記包含敏感資料的特定欄位，即可對於哪些資料欄位可用於特定目的採取精細的控制。
 
 以下影片會針對如何在 UI 中設定資料流的資料使用限制並執行提供簡要概觀：
 
@@ -53,13 +51,13 @@ ht-degree: 100%
 >
 >如需有關如何在 Experience Platform UI 或資料集合 UI 中的[!UICONTROL 綱要]索引標籤內套用資料使用標籤，請參閱[綱要標示教學課程](../xdm/tutorials/labels.md)。
 
-建立新資料流時，如果選取的綱要包含敏感資料使用標籤，則只能將資料流設定為將該資料傳送至符合 HIPAA 標準的目的地。目前，資料流支援的唯一符合 HIPAA 標準的目的地為 Adob&#x200B;&#x200B;e Experience Platform。針對包含敏感資料使用標籤的資料流，停用其他目的地服務，包括 Adob&#x200B;&#x200B;e Target、Adobe Analytics、Adobe Audience Manager、事件轉送和邊緣目的地。
+當您建立資料流時，如果選取的結構描述包含敏感資料使用標籤，您只能將資料流設定為將該資料傳送至符合HIPAA要求的目的地。 目前，資料流支援的唯一符合 HIPAA 標準的目的地為 Adob&#x200B;&#x200B;e Experience Platform。針對包含敏感資料使用標籤的資料流，停用其他目的地服務，包括 Adob&#x200B;&#x200B;e Target、Adobe Analytics、Adobe Audience Manager、事件轉送和邊緣目的地。
 
-如果有綱要正用於具有不符合 HIPAA 標準的服務的現有資料流中，則嘗試向該綱要新增敏感資料使用標籤會導致出現政策違規訊息，且該動作會受到制止。該訊息會明確說明哪個資料流觸發了違規，並建議從資料流中移除任何不符合 HIPAA 標準的服務以解決問題。
+如果有綱要正用於具有不符合 HIPAA 標準的服務的現有資料流中，則嘗試向該綱要新增敏感資料使用標籤會導致出現政策違規訊息，且該動作會受到制止。此訊息會指定哪個資料流觸發違規，並建議從資料流中移除任何非HIPAA就緒的服務以解決問題。
 
 ### 稽核記錄
 
-在 Experience Platform 中，可使用稽核記錄的形式監視資料流活動。稽核記錄可告知我們&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**什麼時候**，還有其他可協助您針對和資料流相關的問題進行疑難排解的內容資料，以協助您的企業符合企業資料盡責管理政策和監管要求。
+在 Experience Platform 中，可使用稽核記錄的形式監視資料流活動。稽核記錄指出 **誰** 已執行 **什麼** 動作，以及 **當**，以及其他內容資料，可協助您疑難排解資料串流的相關問題，協助您的企業遵守公司資料管理原則和法規要求。
 
 每當使用者建立、更新或刪除資料流時，都會建立稽核記錄以記錄動作。每當使用者透過[資料集合的資料準備](./data-prep.md)建立、更新或刪除對應時，同樣的情況就會發生。無論更新的是資料流或是對應，都會將產生的稽核記錄分類為[!UICONTROL 資料流]資源類型。
 

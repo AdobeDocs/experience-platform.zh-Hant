@@ -1,18 +1,17 @@
 ---
 title: 安裝Adobe Experience Platform Web SDK
 description: 瞭解如何安裝Experience PlatformWeb SDK。
-keywords: web sdk安裝；安裝web sdk；internet explorer；promise；npm套件
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 2%
+source-wordcount: '864'
+ht-degree: 0%
 
 ---
 
-# 安裝SDK {#installing-the-sdk}
 
-使用Adobe Experience Platform Web SDK有三種支援的方法：
+# 安裝Web SDK {#installing-the-sdk}
+
+有三種支援的安裝Adobe Experience Platform Web SDK方式：
 
 1. 使用Adobe Experience Platform Web SDK的偏好方式是透過資料收集UI或Experience PlatformUI。
 1. Adobe Experience Platform Web SDK也可在內容傳遞網路(CDN)上使用。
@@ -29,7 +28,6 @@ ht-degree: 2%
 URL結構： https://cdn1.adoberesources.net/alloy/[版本]/alloy.min.js或alloy.js （非縮製版本）。
 
 例如：
-
 
 * 縮制： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
 * 未縮制： [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
@@ -77,7 +75,7 @@ URL結構： https://cdn1.adoberesources.net/alloy/[版本]/alloy.min.js或alloy
 
 1. 在中開啟您的網站 [!DNL Internet Explorer].
 1. 開啟瀏覽器的偵錯主控台。
-1. 型別 `window.Promise` 進入主控台，然後按Enter。
+1. 型別 `window.Promise` 進入主控台並按Enter。
 
 如果是 `undefined` 出現，表示您可能已經填滿 `window.Promise`. 另一種判斷是否需要 `window.Promise` 是在完成上述安裝指示後，載入您的網站以進行polyfilled。 如果SDK擲回錯誤，提及Promise相關內容，表示您可能沒有填滿 `window.Promise`.
 
@@ -97,7 +95,7 @@ URL結構： https://cdn1.adoberesources.net/alloy/[版本]/alloy.min.js或alloy
 
 如一節中所述 [新增程式碼](#adding-the-code)，您複製並貼至網站HTML的基礎程式碼會載入外部檔案。 外部檔案包含SDK的核心功能。 您嘗試在此檔案載入時執行的任何命令都會排入佇列，然後在檔案載入後處理。 以非同步方式載入檔案是效能最佳的安裝方法。
 
-但在特定情況下，您可能會想要同步載入檔案\（稍後將記錄這些情況的更多詳細資料\）。 如此一來，瀏覽器就無法剖析及轉譯HTML檔案的其餘部分，直到載入及執行外部檔案為止。 一般不建議在顯示主要內容給使用者之前再延遲一次，但可視情況而定。
+但在特定情況下，您可能會想要同步載入檔案。 如此一來，瀏覽器就無法剖析及轉譯HTML檔案的其餘部分，直到載入及執行外部檔案為止。 一般不建議在顯示主要內容給使用者之前再延遲一次，但可視情況而定。
 
 若要以同步方式而非非同步方式載入檔案，請移除 `async` 屬性來自第二個 `script` 標籤如下所示：
 

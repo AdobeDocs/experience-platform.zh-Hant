@@ -1,11 +1,10 @@
 ---
 title: 設定資料流覆寫
 description: 了解如何在資料流 UI 中設定資料流覆寫並透過 Web SDK 啟動它們。
-exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 252bda1395a2a31cd7e2e2789e5c2508fbd3fd5e
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 77%
+source-wordcount: '1450'
+ht-degree: 60%
 
 ---
 
@@ -13,23 +12,23 @@ ht-degree: 77%
 
 資料流覆寫可讓您定義資料流的額外設定，這些設定會透過 Web SDK 傳遞到 Edge Network。
 
-這可協助您觸發和預設行為不同的資料流行為，且無須建立新的資料流或修改現有設定。
+這可幫助您觸發與預設資料流不同的資料流行為，而無需建立資料流或修改現有設定。
 
-資料流設定覆寫的流程包含兩個步驟：
+資料流設定覆寫分為兩個步驟：
 
-1. 首先，您必須在[資料流設定頁面](configure.md)中定義您的資料流設定覆寫。
+1. 首先，您必須在以下位置定義資料流設定覆蓋： [資料流設定頁面](configure.md).
 2. 然後，您必須以下列其中一種方式將覆寫傳送至Edge Network：
    * 透過 `sendEvent` 或 `configure` [Web SDK](#send-overrides-web-sdk) 命令。
    * 透過Web SDK [標籤延伸模組](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
-   * 透過行動SDK [sendEvent API](#send-overrides-mobile-sdk) 呼叫。
+   * 透過行動SDK [sendEvent](#send-overrides-mobile-sdk) 命令。
 
 本文會介紹每種受支援的覆寫類型的端對端資料流設定覆寫流程。
 
 >[!IMPORTANT]
 >
->僅支援資料流覆寫 [Web SDK](../edge/home.md) 和 [行動SDK](https://developer.adobe.com/client-sdks/documentation/) 整合。 [伺服器API](../server-api/overview.md) 整合目前不支援資料流覆寫。
+>僅支援資料流覆寫 [Web SDK](../edge/home.md) 和 [行動SDK](https://developer.adobe.com/client-sdks/home/) 整合。 [伺服器API](../server-api/overview.md) 整合目前不支援資料流覆寫。
 ><br>
->當您需要將不同的資料發送到不同的資料流時，應使用資料流覆寫。您不應該將資料流覆寫用於個人化使用案例或同意資料。
+>當您需要將不同的資料發送到不同的資料流時，應使用資料流覆寫。請勿對個人化使用案例或同意資料使用資料流覆寫。
 
 ## 使用案例 {#use-cases}
 
@@ -41,11 +40,11 @@ ht-degree: 77%
 
 透過使用資料流覆寫，該公司可採用機動方式將資料流切換到不同的資料流，而不是向一個資料流發送資料的預設行為。
 
-常見使用案例可能是將資料發送到國家/地區特定的資料流，並將資料發送到全球資料流，客戶可在其中執行重要動作，例如下訂單或更新其用戶個人資料。
+常見的使用案例可能是將資料傳送到特定國家/地區的資料流，以及傳送到客戶執行重要動作（例如下訂單或更新其使用者設定檔）的全球資料流。
 
 **區分不同業務部門的個人資料檔和身分識別**
 
-一家公司擁有多個業務部門，他們希望使用多個 Experience Platform 沙箱來儲存每個業務部門的特定資料。
+擁有多個業務單位的公司想要使用多個Experience Platform沙箱，以儲存每個業務單位的特定資料。
 
 該公司可以採用資料流覆寫來確保每個業務部門都有自己的資料流來接收資料，而不是將資料發送到預設資料流。
 
@@ -62,7 +61,7 @@ ht-degree: 77%
 
 若要設定 Adobe Target 資料流的資料流覆寫，您首先必須建立 Adobe Target 資料流。請依照說明[設定資料流](configure.md)和 [Adobe Target](configure.md#target) 服務。
 
-建立資料流後，請編輯已新增的 [Adobe Target](configure.md#target) 服務，並在&#x200B;**[!UICONTROL 屬性語彙基元覆寫]**&#x200B;區段中新增所需的資料流覆寫，如下圖所示。每行新增一個屬性語彙基元。
+建立資料流後，請編輯 [Adobe Target](configure.md#target) 您已新增並使用的 **[!UICONTROL 屬性代號覆寫]** 區段來新增所需的資料流覆寫，如下圖所示。 每行新增一個屬性語彙基元。
 
 ![顯示 Adobe Target 服務設定的資料流 UI 螢幕擷圖，並醒目顯示屬性語彙基元覆寫。](assets/overrides/override-target.png)
 
@@ -74,7 +73,7 @@ ht-degree: 77%
 
 若要設定 Adobe Analytics 資料流的資料流覆寫，您首先必須建立 [Adobe Analytics](configure.md#analytics)。請依照說明[設定資料流](configure.md)和 [Adobe Analytics](configure.md#analytics) 服務。
 
-建立資料流後，請編輯已新增的 [Adobe Target](configure.md#target) 服務，並在&#x200B;**[!UICONTROL 報告套裝覆寫]**&#x200B;區段中新增所需的資料流覆寫，如下圖所示。
+建立資料流後，請編輯 [Adobe Analytics](configure.md#target) 您已新增並使用的 **[!UICONTROL 報表套裝覆寫]** 區段來新增所需的資料流覆寫，如下圖所示。
 
 若要啟用報告套裝覆寫的批次編輯，請選取&#x200B;**[!UICONTROL 顯示批次模式]**。您可以複製並貼上報告套裝覆寫的清單，每行輸入一個報告套裝。
 
@@ -88,7 +87,7 @@ ht-degree: 77%
 
 若要設定 Experience Platform 事件資料集的資料流覆寫，您首先必須建立 [Adobe Experience Platform](configure.md#aep)。請依照說明[設定資料流](configure.md)和 [Adobe Experience Platform](configure.md#aep) 服務。
 
-建立資料流後，請編輯已新增的 [Adobe Experience Platform](configure.md#aep) 服務，並選取&#x200B;**[!UICONTROL 新增事件資料集]**&#x200B;選項，以新增一或多個覆寫事件資料集，如下圖所示。
+建立資料流後，請編輯 [Adobe Experience Platform](configure.md#aep) 您已新增的服務，並選取 **[!UICONTROL 新增事件資料集]** 用於新增一或多個覆寫事件資料集的選項，如下圖所示。
 
 ![顯示 Adobe Experience Platform 服務設定的資料流 UI 螢幕擷圖，並醒目顯示事件資料集覆寫。](assets/overrides/override-aep.png)
 
@@ -124,9 +123,9 @@ ht-degree: 77%
 
 如果您使用Web SDK，請透過將覆寫傳送至Edge Network `edgeConfigOverrides` command是啟動資料流設定覆寫的第二個也是最後一個步驟。
 
-透過 `edgeConfigOverrides`Web SDK 命令傳送資料流設定覆寫到 Edge Network。此命令會建立資料流覆寫並在下一個命令時傳遞給 [!DNL Edge Network]，或者，如果是 `configure` 命令，則適用於每個要求。
+透過 `edgeConfigOverrides`Web SDK 命令傳送資料流設定覆寫到 Edge Network。這個命令會建立傳遞至的資料流覆寫 [!DNL Edge Network] 在下一個指令上。 如果您使用 `configure` 命令，則會針對每個請求傳遞覆寫。
 
-`edgeConfigOverrides` 命令會建立資料流覆寫並在下一個命令時傳遞給 [!DNL Edge Network]，或者，如果是 `configure`，則適用於每個要求。
+此 `edgeConfigOverrides` 命令會建立資料流覆寫，這些覆寫會傳遞至 [!DNL Edge Network] 在下一個指令上。
 
 設定覆寫和 `configure` 命令一起傳送時，會隨附在下列 Web SDK 命令中。
 
@@ -246,7 +245,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
->[!TAB Android (Kotlin)]
+>[!TAB Android™ (Kotlin)]
 
 此範例顯示資料串流ID覆寫在Mobile SDK中的外觀 [!DNL Android] 整合。
 
