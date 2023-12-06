@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 21%
+source-wordcount: '309'
+ht-degree: 19%
 
 ---
 
@@ -48,8 +48,9 @@ ht-degree: 21%
    - [列出使用者的頁面檢視](use-cases/list-visitor-sessions.md)
    - [依頁面檢視列出訪客](use-cases/visitors-by-number-of-page-views.md)
    - [傾向分數](use-cases/propensity-score.md)
-   - [SQLAlchemy](use-cases/sqlalchemy.md)
+   - [Lambda函式範例：擷取類似的記錄](use-cases/retrieve-similar-records.md)
    - [從Analytics資料傳回並使用銷售變數](use-cases/merchandising-variables.md)
+   - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [檢視訪客的統計報表](use-cases/roll-up-report-of-a-visitor.md)
    - [網站和行動分析深入分析](use-cases/analytics-insights.md)
 - 重要概念{#key-concepts}
@@ -74,7 +75,7 @@ ht-degree: 21%
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
 - 查詢服務UI {#ui}
-   - [UI 概觀](ui/overview.md)
+   - [UI總覽](ui/overview.md)
    - [查詢編輯器使用手冊](ui/user-guide.md)
    - [查詢範本](ui/query-templates.md)
    - [參數化查詢](ui/parameterized-queries.md)
@@ -92,12 +93,12 @@ ht-degree: 21%
    - [查詢範本](api/query-templates.md)
    - [加速的查詢](api/accelerated-queries.md)
    - [警報訂閱](api/alert-subscriptions.md)
-- 資料治理 {#data-governance}
+- 資料控管 {#data-governance}
    - [概觀](data-governance/overview.md)
    - [稽核記錄指南](data-governance/audit-log-guide.md)
    - [臨時結構描述資料集中的身分](data-governance/ad-hoc-schema-identities.md)
    - [針對臨時結構描述的屬性型存取控制支援](./data-governance/ad-hoc-schema-labels.md)
-- 最佳作法 {#best-practices}
+- 最佳實務{#best-practices}
    - [查詢執行](best-practices/writing-queries.md)
    - [資料資產組織](./best-practices/organize-data-assets.md)
 - SQL參考 {#sql}
