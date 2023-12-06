@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
+source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1735'
 ht-degree: 4%
 
 ---
@@ -136,11 +136,11 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 在 **[!UICONTROL 正在排程]** 步驟，您可以設定資料集匯出的開始日期和匯出步調。
 
-此 **[!UICONTROL 匯出增量檔案]** 選項會自動選取。 這會觸發匯出，其中第一個檔案是資料集的完整快照，後續檔案是自上次匯出以來資料集的增量新增。
+此 **[!UICONTROL 匯出增量檔案]** 選項會自動選取。 這會觸發一或多個檔案的匯出，這些檔案代表資料集的完整快照。 後續檔案是自上次匯出以來的資料集增量新增。
 
 >[!IMPORTANT]
 >
->第一個匯出的增量檔案包含資料集中的所有現有資料，可作為回填。
+>第一個增量檔案匯出會包含資料集中的所有現有資料，以作為回填功能。 匯出可包含一或多個檔案。
 
 ![顯示排程步驟的資料集匯出工作流程。](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -159,7 +159,7 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 > 
 >對於資料集匯出，檔案名稱具有無法修改的預設集預設格式。 請參閱區段 [驗證資料集匯出成功](#verify) 以取得詳細資訊和匯出檔案的範例。
 
-## 請檢閱 {#review}
+## 檢閱 {#review}
 
 在 **[!UICONTROL 檢閱]** 頁面中，您可以看到選取範圍的摘要。 選取 **[!UICONTROL 取消]** 若要分解流量， **[!UICONTROL 返回]** 以修改您的設定，或 **[!UICONTROL 完成]** 以確認您的選取範圍並開始將資料集匯出至目的地。
 
@@ -167,7 +167,7 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 ## 驗證資料集匯出成功 {#verify}
 
-匯出資料集時，Experience Platform會建立 `.json` 或 `.parquet` 檔案中所指定的儲存位置。 預期會根據您提供的匯出排程，將新檔案儲存在您的儲存位置。
+匯出資料集時，Experience Platform會建立一或多個 `.json` 或 `.parquet` 檔案的儲存位置。 預期會根據您提供的匯出排程，將新檔案儲存在您的儲存位置。
 
 Experience Platform會在您指定的儲存位置中建立資料夾結構，並存放匯出的資料集檔案。 每次匯出時都會建立一個新資料夾，其模式如下：
 
