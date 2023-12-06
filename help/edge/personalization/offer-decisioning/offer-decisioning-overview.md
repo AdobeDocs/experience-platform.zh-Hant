@@ -3,10 +3,10 @@ title: 搭配Platform Web SDK使用Offer Decisioning
 description: Adobe Experience Platform Web SDK可以提供並轉譯Offer Decisioning管理的個人化服務。 您可以使用Offer Decisioning UI或API建立您的優惠方案與其他相關物件。
 keywords: offer decisioning；決策；Web SDK；Platform Web SDK；個人化優惠；提供優惠；優惠傳遞；優惠個人化；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 5%
+source-wordcount: '849'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 5%
 >
 >特定使用者可提早存取Adobe Experience Platform Web SDK中的Offer decisioning。 此功能並非適用於所有組織。
 
-Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning管理的個人化優惠。 您可以使用 Offer Decisioning 使用者介面 (UI) 或 API 建立您的優惠方案與其他相關物件。 
+Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning管理的個人化優惠。 您可以使用Offer decisioning使用者介面(UI)或API建立您的優惠方案與其他相關物件。
 
 ## 先決條件
 
@@ -51,7 +51,7 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
   >
   >您可以從以下位置複製決定範圍值： **活動概覽** UI中的頁面。
 
-  ![](assets/decision-scope-copy.png)
+  ![決定複製設定。](assets/decision-scope-copy.png)
 
 * **資料串流：** 如需詳細資訊，請閱讀 [資料串流](../../../datastreams/overview.md) 檔案。
 

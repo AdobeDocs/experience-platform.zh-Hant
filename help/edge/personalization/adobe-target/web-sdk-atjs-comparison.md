@@ -3,10 +3,10 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 6%
+source-wordcount: '2167'
+ht-degree: 5%
 
 ---
 
@@ -216,7 +216,7 @@ Experience Platform Web SDK會自動傳送包含WEB SDK所執行選件的通知�
 
 有兩種方法可以觸發對Target Edge的呼叫，該呼叫會擷取選件以供頁面載入。
 
-範例 1:
+範例1：
 
 ```javascript
 adobe.target.getOffer({
@@ -226,7 +226,7 @@ adobe.target.getOffer({
 });
 ```
 
-範例 2:
+範例2：
 
 ```javascript
 adobe.target.getOffers({
@@ -297,7 +297,7 @@ alloy("sendEvent", {
 
 您可以使用擷取表單式撰寫器活動 `getOffer` 函式：
 
-範例 1:
+範例1：
 
 ```javascript
 adobe.target.getOffer({
@@ -307,7 +307,7 @@ adobe.target.getOffer({
 });
 ```
 
-範例 2:
+範例2：
 
 ```javascript
 adobe.target.getOffers({
@@ -857,7 +857,7 @@ Analytics裝載(`tnta` token)應該包含在使用以下專案的Analytics點選
 可透過設定啟用Analytics伺服器端記錄 `analyticsLogging: server_side` ，或是覆寫 `window.targetglobalSettings` 物件。
 然後資料會以下列方式流動：
 
-![](assets/a4t-server-side-atjs.png)
+![顯示Analytics伺服器端記錄工作流程的圖表](assets/a4t-server-side-atjs.png)
 
 [了解更多](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -872,7 +872,7 @@ Web SDK也支援：
 
 在該DataStream設定中停用Adobe Analytics時，會啟用Analytics使用者端記錄。
 
-![](assets/analytics-disabled-datastream-config.png)
+![顯示Analytics使用者端記錄工作流程的圖表](assets/analytics-disabled-datastream-config.png)
 
 客戶有權存取Analytics權杖(`tnta`)需與Analytics共用的使用者 [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 透過鏈結 `sendEvent` 指令，並逐一檢視產生的主張陣列。
@@ -910,19 +910,19 @@ alloy("sendEvent", {
 
 下圖顯示啟用Analytics Client Side時資料的流程：
 
-![](assets/analytics-client-side-logging.png)
+![Analytics使用者端記錄中的資料流程圖](assets/analytics-client-side-logging.png)
 
 #### Analytics伺服器端記錄
 
 為該DataStream設定啟用Analytics時，便會啟用Analytics伺服器端記錄。
 
-![](assets/analytics-enabled-datastream-config.png)
+![顯示Analytics設定的資料串流UI。](assets/analytics-enabled-datastream-config.png)
 
 啟用伺服器端Analytics記錄時，A4T裝載需要與Analytics共用，好讓Analytics報告顯示正確的曝光次數和轉換，才能在Edge Network層級共用，讓客戶不需要執行任何其他處理。
 
 以下是啟用伺服器端Analytics記錄時，資料如何流入我們的系統：
 
-![](assets/analytics-server-side-logging.png)
+![顯示伺服器端Analytics記錄資料流程的圖表](assets/analytics-server-side-logging.png)
 
 ## 如何設定Target全域設定
 
@@ -1130,9 +1130,9 @@ Web SDK支援Target協力廠商ID。 不過，還需要執行幾個步驟。 在
 身分對應可讓客戶傳送多個身分。 所有身分識別都已設定名稱空間。 每個名稱空間可以有一或多個身分。 特定身分可以標示為主要身分。
 有了這些知識，我們就可以瞭解設定Web sdk以使用Target第三方ID的必要步驟。
 
-1. 設定在資料流設定檢視中包含Target第三方ID的名稱空間：
+1. 設定在資料流設定頁面中包含Target第三方ID的名稱空間：
 
-![](assets/mbox-3-party-id-setup.png)
+![顯示Target第三方ID名稱空間欄位的資料串流UI](assets/mbox-3-party-id-setup.png)
 
 1. 在每個sendEvent命令中傳送該身分名稱空間，如下所示：
 
@@ -1180,8 +1180,8 @@ window.targetPageParams = function() {
 
 ### 使用Web SDK
 
-使用Web SDK，客戶在設定Adobe Target名稱空間下的資料串流設定時，可以在更高層級設定屬性：
-![](assets/at-property-setup.png)
+使用Web SDK，客戶在設定Adobe Target名稱空間下的資料流設定時，可以在更高層級設定屬性：
+![顯示Adobe Target設定的資料串流UI。](assets/at-property-setup.png)
 這表示該特定資料流設定的每個Target呼叫都將包含該屬性Token。
 
 ## 如何預先擷取mbox

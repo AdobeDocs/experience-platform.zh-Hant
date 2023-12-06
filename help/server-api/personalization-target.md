@@ -2,9 +2,9 @@
 title: 透過Adobe Target實現個人化
 description: 瞭解如何使用伺服器API來傳遞和轉譯在Adobe Target中建立的個人化體驗。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '591'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,6 @@ Edge Network Server API可協助提供和轉譯在Adobe Target中建立的個人
 設定資料流時，您可以（選擇性）提供下列專案的值 [!DNL Property Token]， [!DNL Target Environment ID]、和 [!DNL Target Third Party ID Namespace].
 
 ![顯示資料流服務設定畫面的UI影像，其中選取Adobe Target](assets/target-datastream.png)
-
 
 ## 自訂參數 {#custom-parameters}
 

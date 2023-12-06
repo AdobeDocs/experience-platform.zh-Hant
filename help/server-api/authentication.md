@@ -2,10 +2,10 @@
 title: 驗證
 description: 瞭解如何設定Adobe Experience Platform Edge Network Server API的驗證。
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 2%
+source-wordcount: '633'
+ht-degree: 1%
 
 ---
 
@@ -41,12 +41,12 @@ ht-degree: 2%
 若要呼叫Platform API，您必須先完成 [驗證教學課程](../landing/api-authentication.md). 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * 授權：持有人 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{ORG_ID}`
+* x-api-key： `{API_KEY}`
+* x-gw-ims-org-id： `{ORG_ID}`
 
 Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Platform API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Pla
 
 包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
-* Content-Type: `application/json`
+* Content-Type： `application/json`
 
 ## 設定資料集寫入許可權 {#dataset-write-permissions}
 

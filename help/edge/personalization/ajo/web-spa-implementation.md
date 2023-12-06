@@ -2,9 +2,9 @@
 title: 實作單頁應用程式
 description: 瞭解如何在Adobe Journey Optimizer中實施SPA檢視
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '866'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Journey Optimizer網頁編輯器善用以下概念： _檢視_.
 
 行銷團隊想要在整個首頁上執行A/B測試。
 
-![](assets/web-spa-home.png)
+![單頁應用程式範例頁面。](assets/web-spa-home.png)
 
 若要在整個主網站上執行A/B測試， `sendEvent()` 必須透過XDM叫用 `viewName` 設為 `home`：
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 行銷團隊想要個人化第二列產品，讓使用者在點按以檢視所有「男性」產品後，將價格標籤顏色變更為紅色。
 
-![](assets/web-spa-men-products.png)
+![包含個人化產品的單頁應用程式範例頁面。](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {
