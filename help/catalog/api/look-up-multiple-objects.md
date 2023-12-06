@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢多個目錄物件
 description: 如果您想要檢視數個特定物件，而不是針對每個物件發出一個要求，Catalog會提供簡單的捷徑，讓您要求相同型別的多個物件。 您可以使用單一GET要求，包含以逗號分隔的ID清單，以傳回多個特定物件。
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 99837f7aa803f3f992dce2127089bff6279c7008
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 1%
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | 您要擷取的特定物件之一的識別碼。 |
 
 **要求**
@@ -57,24 +57,24 @@ curl -X GET \
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
     },
     "5bda3a4228babc0000126377": {
         "name": "Sample Dataset 4",
-        "files": "@/dataSets/5bda3a4228babc0000126377/views/5bda3a4228babc0000126378/files"
+        "files": "@/dataSetFiles?dataSetId=5bda3a4228babc0000126377"
     },
     "5bde21511dd27b0000d24e95": {
         "name": "Sample Dataset 5",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bde21511dd27b0000d24e95/views/5bde21511dd27b0000d24e96/files"
+        "files": "@/dataSetFiles?dataSetId=5bde21511dd27b0000d24e95"
     }
 }
 ```

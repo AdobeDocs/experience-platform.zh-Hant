@@ -4,10 +4,10 @@ title: 使用API啟用設定檔更新的資料集
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform API來啟用具有「更新插入」功能的資料集，以更新即時客戶設定檔資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 6985ebf8705130636abdc50b5c3f50299a60f2aa
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 10%
+source-wordcount: '1067'
+ht-degree: 6%
 
 ---
 
@@ -25,18 +25,18 @@ ht-degree: 10%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 - [[!DNL Catalog Service]](../../catalog/home.md)：此RESTful API可讓您建立資料集並加以設定，用於 [!DNL Real-Time Customer Profile] 和 [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
 - [批次擷取](../../ingestion/batch-ingestion/overview.md)：批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform中。
 
 以下章節提供您需瞭解的其他資訊，才能成功呼叫Platform API。
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集所需標頭的值
 
-為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -165,7 +165,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "{VIEW_ID}",
-        "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
+        "files": "@/dataSetFiles?dataSetId=5b020a27e7040801dedbf46e",
         "schema": "{SCHEMA}",
         "schemaRef": {
             "id": "https://ns.adobe.com/xdm/context/experienceevent",

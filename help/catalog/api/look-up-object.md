@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢目錄物件
 description: 如果您知道特定目錄物件的唯一識別碼，則可以執行GET要求來檢視該物件的詳細資訊。
 exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 0331b6bbd22255cab92c93070dda1ffaed5bbbcb
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 2%
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 您要擷取之特定物件的識別碼。 |
 
 **要求**
@@ -58,7 +58,7 @@ curl -X GET \
                 "sample_dataset"
             ]
         },
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     }
 }
 ```

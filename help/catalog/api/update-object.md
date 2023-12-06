@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 更新目錄物件
 description: 您可以在PATCH請求的路徑中包含目錄物件的ID，以更新其一部分。 本文介紹如何使用欄位和使用JSON修補程式標籤法，對目錄物件執行PATCH作業。
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 2226b1878ef3398554b6cf96ff400cc1767a9e4c
+source-git-commit: 296a988a67871933723ad0474c113cb93fdbf255
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 3%
+source-wordcount: '371'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 您要更新之特定物件的識別碼。 |
 
 **要求**
@@ -69,11 +69,7 @@ curl -X PATCH \
 
 下列範例呼叫示範如何使用JSON修補程式更新物件，如中所述 [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
-<!-- (Include once API fundamentals guide is published) 
-
-For more information on JSON Patch syntax, see the [API fundamentals guide](). 
-
--->
+如需JSON修補程式語法的詳細資訊，請參閱 [API基礎指南](../../landing/api-fundamentals.md#json-patch).
 
 **API格式**
 
@@ -83,7 +79,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要更新的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 您要更新之特定物件的識別碼。 |
 
 **要求**

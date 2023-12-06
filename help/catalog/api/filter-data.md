@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用查詢引數篩選目錄資料
 description: 目錄服務API可讓您透過使用請求查詢引數來篩選回應資料。 「目錄」最佳實務的一部分是在所有API呼叫中使用篩選器，因為它們會降低API的負載，並有助於改善整體效能。
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
+source-git-commit: 75099d39fbdb9488105a9254bbbcca9b12349238
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2117'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{LIMIT}` | 整數，表示傳回的物件數目，範圍從1到100。 |
 
 **要求**
@@ -60,12 +60,12 @@ curl -X GET \
     "5ba9452f7de80400007fc52a": {
         "name": "Sample Dataset 1",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"
+        "files": "@/dataSetFiles?dataSetId=5ba9452f7de80400007fc52a"
     },
     "5bb276b03a14440000971552": {
         "name": "Sample Dataset 2",
         "description": "Description of dataset.",
-        "files": "@/dataSets/5bb276b03a14440000971552/views/5bb276b01250b012f9acc75b/files"
+        "files": "@/dataSetFiles?dataSetId=5bb276b03a14440000971552"
     },
     "5bceaa4c26c115000039b24b": {
         "name": "Sample Dataset 3"
@@ -103,7 +103,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | 要包含在回應本文中的屬性名稱。 |
 | `{OBJECT_ID}` | 特定專案的唯一識別碼 [!DNL Catalog] 正在擷取的物件。 |
 
@@ -172,7 +172,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OFFSET}` | 整數，表示要位移回應的物件數目。 |
 
 **要求**
@@ -393,7 +393,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的目錄物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | 排序結果所依據的屬性名稱。 |
 
 **要求**
@@ -474,7 +474,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | 您要用來篩選其值的屬性名稱。 |
 | `{VALUE}` | 決定要包含（或排除，視查詢而定）之結果的屬性值。 |
 
@@ -546,14 +546,14 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | 指示要查詢的屬性以及如何評估其值的條件運算式。 範例如下。 |
 
 的值 `property` 引數支援數種不同的條件運算式。 下表概述支援運算式的基本語法：
 
 | 符號 | 說明 | 範例 |
 | --- | --- | --- |
-| (None) | 若不含運運算元而陳述屬性名稱，則只會傳回屬性存在的物件，無論其值為何。 | `property=name` |
+| （無） | 若不含運運算元而陳述屬性名稱，則只會傳回屬性存在的物件，無論其值為何。 | `property=name` |
 | ！ | 加上「`!`」至的值 `property` 引數只會傳回屬性執行的物件 **非** 存在。 | `property=!name` |
 | ~ | 只傳回屬性值（字串）符合波狀符號(`~`)符號。 | `property=name~^example` |
 | == | 只傳回屬性值完全符合雙等符號(`==`)。 | `property=name==exampleName` |
