@@ -3,9 +3,9 @@ keywords: 廣告；bing；
 title: Microsoft Bing連線
 description: 透過Microsoft Bing連線目的地，您可以在整個Microsoft Advertising網路（包括顯示廣告、搜尋和原生）中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '684'
 ht-degree: 10%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 10%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Microsoft Bing] 支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] 支援根據下表所示的身分來啟用對象。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
 
-| 目標身分 | 說明 |
+| 身分 | 說明 |
 |---|---|
 | MAID | Microsoft廣告ID |
 

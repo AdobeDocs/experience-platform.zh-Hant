@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '739'
 ht-degree: 3%
 
 ---
@@ -26,9 +26,9 @@ ht-degree: 3%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL The Trade Desk] 支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] 支援根據下表所示的身分來啟用對象。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
 
-| 目標身分 | 說明 |
+| 身分 | 說明 |
 |---|---|
 | GAID | [!DNL Google Advertising ID] |
 | IDFA | [!DNL Apple ID for Advertisers] |
