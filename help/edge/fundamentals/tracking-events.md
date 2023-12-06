@@ -1,9 +1,9 @@
 ---
 title: 使用Adobe Experience Platform Web SDK追蹤事件
 description: 瞭解如何追蹤Adobe Experience Platform Web SDK事件。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,9 @@ dataLayer.commerce = null;
 
 ## 傳送非XDM資料
 
-不符合XDM結構描述的資料應使用 `data` 的選項 `sendEvent` 命令。 Web SDK 2.5.0版及更新版本支援此功能。
+不符合XDM結構描述的資料應使用 `data` 的選項 `sendEvent` 命令。 Web SDK 2.5.0版及更新版本支援此功能。 使用此選項時，需要透過將資料對應到支援的XDM結構描述伺服器端 [資料收集的資料準備](../../datastreams/data-prep.md#create-mapping).
 
-如果您必須更新Adobe Target設定檔或傳送Target Recommendations屬性，這將很有用。 [深入瞭解這些Target功能。](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-未來，您將能夠在以下位置傳送完整資料層 `data` 選項並將其對應至XDM伺服器端。
+如果您需要更新Adobe Target設定檔或傳送Target Recommendations屬性，此功能也相當實用。 深入瞭解 [Target個人化](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **如何將設定檔和Recommendations屬性傳送至Adobe Target：**
 
