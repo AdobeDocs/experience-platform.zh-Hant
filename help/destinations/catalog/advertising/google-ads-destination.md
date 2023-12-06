@@ -1,12 +1,11 @@
 ---
-keywords: Google ads；google ads；google adwords；Google AdWords；Google Adwords
 title: Google Ads連線
 description: Google Ads (先前稱為Google AdWords)是一項線上廣告服務，可讓企業在各種文字搜尋、圖形顯示、YouTube影片和應用程式內行動顯示中按一下付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 3%
+source-wordcount: '950'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +28,7 @@ ht-degree: 3%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Google Ad Manager] 支援下表所述的身分啟用。
+[!DNL Google Ads] 支援下表所述的身分啟用。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
