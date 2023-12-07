@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
+source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 13%
+source-wordcount: '993'
+ht-degree: 10%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 13%
       - [Azure Blob聯結器](connectors/cloud-storage/blob.md)
       - [Azure事件中樞聯結器](connectors/cloud-storage/eventhub.md)
       - [Azure檔案儲存聯結器](connectors/cloud-storage/azure-file-storage.md)
-      - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
+      - [資料登陸區域](connectors/cloud-storage/data-landing-zone.md)
       - [FTP聯結器](connectors/cloud-storage/ftp.md)
       - [Google雲端儲存空間聯結器](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -91,6 +91,8 @@ ht-degree: 13%
       - [Snowflake串流聯結器](connectors/databases/snowflake-streaming.md)
       - [Snowflake聯結器](connectors/databases/snowflake.md)
       - [teradata Vantage聯結器](connectors/databases/teradata-vantage.md)
+   - 資料合作夥伴 {#data-partner}
+      - [Merkury Enterprise身分解析](connectors/data-partners/merkury.md)
    - 電子商務 {#ecommerce}
       - [SAP商務](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -129,7 +131,7 @@ ht-degree: 13%
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azure事件中樞](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure檔案儲存體](tutorials/api/create/cloud-storage/azure-file-storage.md)
-         - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
+         - [資料登陸區域](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -248,7 +250,7 @@ ht-degree: 13%
          - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
          - [Azure事件中樞](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure檔案儲存體](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
+         - [資料登陸區域](tutorials/ui/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google雲端儲存空間](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
@@ -289,6 +291,8 @@ ht-degree: 13%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
+      - 資料合作夥伴 {#data-partner}
+         - [Merkury Enterprise身分解析](tutorials/ui/create/data-partners/merkury.md)
       - 電子商務 {#ecommerce}
          - [SAP商務](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
