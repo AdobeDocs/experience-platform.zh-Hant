@@ -1,12 +1,11 @@
 ---
-keywords: 啟用設定檔目的地；啟用目的地；啟用資料；啟用電子郵件行銷目的地；啟用雲端儲存空間目的地
 title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '3781'
+source-wordcount: '3765'
 ht-degree: 11%
 
 ---
@@ -24,7 +23,7 @@ ht-degree: 11%
 
 ## 概觀 {#overview}
 
-本文說明在Adobe Experience Platform批次設定檔型目的地（例如雲端儲存空間與電子郵件行銷目的地）中啟用對象所需的工作流程。
+本文說明在Adobe Experience Platform中啟用受眾以批次設定檔為基礎的目的地（例如雲端儲存空間與電子郵件行銷目的地）所需的工作流程。
 
 ## 先決條件 {#prerequisites}
 
@@ -46,15 +45,15 @@ ht-degree: 11%
 
 1. 前往 **[!UICONTROL 連線>目的地]**，然後選取 **[!UICONTROL 目錄]** 標籤。
 
-   ![醒目提示如何前往目的地目錄索引標籤的影像](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![醒目提示如何前往目的地目錄索引標籤的影像。](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. 選取 **[!UICONTROL 啟用對象]** 位於您要啟用對象之目的地的對應卡片上，如下圖所示。
 
-   ![反白顯示「啟用對象」按鈕的影像](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
+   ![啟用目錄頁面中反白顯示的對象控制項。](../assets/ui/activate-batch-profile-destinations/activate-audiences-button.png)
 
 1. 選取您要用來啟用對象的目的地連線，然後選取「 」 **[!UICONTROL 下一個]**.
 
-   ![影像醒目提示如何選取一或多個目的地，以啟用對象至](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![醒目提示的核取方塊可選取一或多個目的地，以啟用對象至。](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 移至下一個區段至 [選取您的對象](#select-audiences).
 
@@ -68,7 +67,7 @@ ht-degree: 11%
 * **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
 * 其他型別的對象，源自其他Adobe解決方案，例如 [!DNL Audience Manager].
 
-![影像醒目提示如何選取一或多個要啟用的對象](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
+![選取一或多個要啟用的對象時顯示的核取方塊。](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
@@ -81,7 +80,7 @@ ht-degree: 11%
 >title="排程"
 >abstract="使用鉛筆圖示設定檔案匯出類型 (完整檔案或增量檔案) 和匯出頻率。"
 
-[!DNL Adobe Experience Platform] 以下列形式匯出電子郵件行銷和雲端儲存目的地的資料： [!DNL CSV] 檔案。 在 **[!UICONTROL 正在排程]** 頁面，您可以為要匯出的每個對象設定排程和檔案名稱。 必須設定排程，但可選擇是否設定檔案名稱。
+[!DNL Adobe Experience Platform] 將電子郵件行銷和雲端儲存目的地的資料匯出為 [不同的檔案型別](#supported-file-formats-export). 在 **[!UICONTROL 正在排程]** 頁面，您可以為要匯出的每個對象設定排程和檔案名稱。 必須設定排程，但可選擇是否設定檔案名稱。
 
 >[!IMPORTANT]
 >
@@ -89,9 +88,9 @@ ht-degree: 11%
 >
 >分割檔案名稱會附加一個數字，指示檔案是較大匯出的一部分，例如： `filename.csv`， `filename_2.csv`， `filename_3.csv`.
 
-選取 **[!UICONTROL 建立排程]** 與您要傳送至目的地之對象對應的按鈕。
+選取 **[!UICONTROL 建立排程]** 與您要傳送至目的地之對象相對應的控制。
 
-![反白顯示建立排程按鈕的影像](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![建立在「排程」步驟中反白顯示的排程控制項。](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 匯出完整檔案 {#export-full-files}
 
@@ -113,14 +112,14 @@ ht-degree: 11%
 
 選取 **[!UICONTROL 匯出完整檔案]** 以觸發檔案的匯出，該檔案包含所選對象的所有設定檔資格的完整快照。
 
-![已選取匯出完整檔案切換的UI影像。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![匯出完整檔案切換已選取。](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. 使用 **[!UICONTROL 頻率]** 選擇器以選取匯出頻率：
 
    * **[!UICONTROL 一次]**：排程一次性的隨選完整檔案匯出。
    * **[!UICONTROL 每日]**：排程每天在指定時間匯出一次完整檔案。
 
-1. 使用 **[!UICONTROL 時間]** 切換即可選取在對象評估後立即匯出，還是在指定時間依排程匯出。 選取 **[!UICONTROL 已排程]** 選項時，您可以使用選取器來選取一天中的時間，在 [!DNL UTC] 格式，應何時進行匯出。
+2. 使用 **[!UICONTROL 時間]** 切換即可選取在對象評估後立即匯出，還是在指定時間依排程匯出。 選取 **[!UICONTROL 已排程]** 選項時，您可以使用選取器來選取一天中的時間，在 [!DNL UTC] 格式，應何時進行匯出。
 
    >[!NOTE]
    >
@@ -135,13 +134,13 @@ ht-degree: 11%
 
    ![影像會醒目顯示批次目的地啟動流程中的「已排程」選項，並顯示時間選擇器。](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-1. 使用 **[!UICONTROL 日期]** 選擇器來選擇應執行匯出的日期或間隔。 對於每日匯出，最佳實務是設定您的開始和結束日期，以符合下游平台中行銷活動的持續時間。
+3. 使用 **[!UICONTROL 日期]** 選擇器來選擇應執行匯出的日期或間隔。 對於每日匯出，最佳實務是設定您的開始和結束日期，以符合下游平台中行銷活動的持續時間。
 
    >[!IMPORTANT]
    >
    > 選取匯出間隔時，間隔的最後一天不包含在匯出中。 例如，如果您選取1月4日至11日的間隔，則最後的檔案匯出將於1月10日進行。
 
-1. 選取 **[!UICONTROL 建立]** 以儲存排程。
+4. 選取 **[!UICONTROL 建立]** 以儲存排程。
 
 ### 匯出增量檔案 {#export-incremental-files}
 
@@ -151,22 +150,22 @@ ht-degree: 11%
 >
 >第一個匯出的增量檔案包含符合對象資格的所有設定檔，可作為回填。
 
-![已選取匯出增量檔案切換的UI影像。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![匯出增量檔案切換已選取。](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. 使用 **[!UICONTROL 頻率]** 選擇器以選取匯出頻率：
 
    * **[!UICONTROL 每日]**：排程增量檔案每天於您指定的時間匯出一次。
    * **[!UICONTROL 每小時]**：排程每3、6、8或12小時匯出一次增量檔案。
 
-1. 使用 **[!UICONTROL 時間]** 選擇器來選擇一天中的時間，在 [!DNL UTC] 格式，應何時進行匯出。
+2. 使用 **[!UICONTROL 時間]** 選擇器來選擇一天中的時間，在 [!DNL UTC] 格式，應何時進行匯出。
 
-1. 使用 **[!UICONTROL 日期]** 選擇器來選擇應進行匯出的間隔。 最佳實務建議將您的開始和結束日期設定為您在下游平台中的行銷活動持續時間。
+3. 使用 **[!UICONTROL 日期]** 選擇器來選擇應進行匯出的間隔。 最佳實務建議將您的開始和結束日期設定為您在下游平台中的行銷活動持續時間。
 
    >[!IMPORTANT]
    >
    >間隔的最後一天不包含在匯出中。 例如，如果您選取1月4日至11日的間隔，則最後的檔案匯出將於1月10日進行。
 
-1. 選取 **[!UICONTROL 建立]** 以儲存排程。
+4. 選取 **[!UICONTROL 建立]** 以儲存排程。
 
 ### 設定檔案名稱 {#file-names}
 
@@ -211,11 +210,11 @@ ht-degree: 11%
 
 設定完所有對象後，選取「 」 **[!UICONTROL 下一個]** 以繼續。
 
-## 對應 {#mapping}
+## 映射 {#mapping}
 
 在此步驟中，您必須選取要新增至匯出至目標目的地之檔案的設定檔屬性。 若要選取要匯出的設定檔屬性和身分：
 
-1. 在 **[!UICONTROL 對應]** 頁面，選取 **[!UICONTROL 新增欄位]**.
+1. 在 **[!UICONTROL 對應]** 頁面，選取 **[!UICONTROL 新增對應]**.
 
    ![新增對應工作流程中反白顯示的新欄位控制項。](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -434,7 +433,7 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 
 目前不支援選取要匯出的身分名稱空間（如下圖所示）。 選取要匯出的任何身分名稱空間都會導致 **[!UICONTROL 檢閱]** 步驟。
 
-![顯示身分匯出的不支援對應](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
+![顯示身分匯出的對應不受支援。](../assets/ui/activate-batch-profile-destinations/unsupported-identity-mapping.png)
 
 作為臨時解決方法，如果您在Beta版期間需要將身分識別名稱空間新增到匯出的檔案，您可以：
 * 針對您要在匯出中包含身分名稱空間的資料流，使用舊版雲端儲存空間目的地
@@ -513,11 +512,11 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 選取 **[!UICONTROL 下一個]** 以移至 [檢閱](#review) 步驟。
 
-## 請檢閱 {#review}
+## 檢閱 {#review}
 
 在 **[!UICONTROL 檢閱]** 頁面中，您可以看到選取範圍的摘要。 選取 **[!UICONTROL 取消]** 若要分解流量， **[!UICONTROL 返回]** 以修改您的設定，或 **[!UICONTROL 完成]** 以確認您的選取範圍並開始傳送資料至目的地。
 
-![稽核步驟中的選取範圍摘要。](../assets/ui/activate-batch-profile-destinations/review.png)
+![檢閱步驟中顯示的選取專案摘要。](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
@@ -532,7 +531,7 @@ abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Pr
 
 在 **[!UICONTROL 檢閱]** 步驟，Experience Platform也會檢查是否有任何資料使用原則違規。 以下是違反原則的範例。 在解決違規之前，您無法完成對象啟用工作流程。 如需有關如何解決原則違規的資訊，請參閱 [資料使用原則違規](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) 資料控管檔案區段中的。
 
-![資料原則違規](../assets/common/data-policy-violation.png)
+![啟動工作流程中顯示的資料原則違規範例。](../assets/common/data-policy-violation.png)
 
 ### 篩選對象 {#filter-audiences}
 

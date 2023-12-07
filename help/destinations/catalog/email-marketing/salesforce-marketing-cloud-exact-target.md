@@ -1,11 +1,10 @@
 ---
-keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；salesforce；api salesforce marketing cloud目的地
 title: (API) SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud（先前稱為ExactTarget）目的地可讓您匯出帳戶資料，並在SalesforceMarketing Cloud中根據您的業務需求加以啟用。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3075'
+source-wordcount: '2895'
 ht-degree: 1%
 
 ---
@@ -22,7 +21,7 @@ ht-degree: 1%
 
 比較 [!DNL Salesforce Marketing Cloud Account Engagement] 更傾向於 **B2B** 行銷， [!DNL (API) Salesforce Marketing Cloud] 目的地適合 **B2C** 具有較短異動決策週期的使用案例。 您可以合併代表目標受眾行為的較大資料集，以調整及改善行銷活動，方法是優先順序並劃分聯絡人（尤其是來自外部資料集的聯絡人） [!DNL Salesforce]. *請注意，Experience Platform也有 [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-這個 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 可運用 [!DNL Salesforce Marketing Cloud] [更新連絡人](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API，可讓您 **新增聯絡人並更新聯絡人資料** 在新的網站中啟用後，即可滿足您的業務需求 [!DNL Salesforce Marketing Cloud] 區段。
+這個 [!DNL Adobe Experience Platform] [目的地](/help/destinations/home.md) 使用 [!DNL Salesforce Marketing Cloud] [更新連絡人](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) API，可讓您 **新增聯絡人並更新聯絡人資料** 在新的網站中啟用後，即可滿足您的業務需求 [!DNL Salesforce Marketing Cloud] 區段。
 
 [!DNL Salesforce Marketing Cloud] 使用具有使用者端憑證的OAuth 2作為驗證機制，與 [!DNL Salesforce Marketing Cloud] API。 向您的驗證指示 [!DNL Salesforce Marketing Cloud] 執行個體的詳細資訊如下： [驗證到目的地](#authenticate) 區段。
 
@@ -94,7 +93,7 @@ A [!DNL Salesforce Marketing Cloud] 訂閱的帳戶 [[!DNL Marketing Cloud Engag
 
 ![SalesforceMarketing CloudUI顯示具有允許許可權的電子郵件資料延伸模組。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-permisions-list.png)
 
-若要限制存取層級，您也可以使用精細的許可權覆寫個別存取。
+若要限制存取層級，您也可以使用精細的許可權覆寫個別存取權。
 ![SalesforceMarketing CloudUI顯示具有精細許可權的電子郵件資料延伸模組。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/sales-email-attribute-set-permission.png)
 
 請參閱 [[!DNL Marketing Cloud Roles]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_marketing_cloud_roles.htm&amp;type=5) 和 [[!DNL Marketing Cloud Roles and Permissions]](https://help.salesforce.com/s/articleView?language=en_US&amp;id=sf.mc_overview_roles.htm&amp;type=5) 詳細指引頁面。
@@ -130,7 +129,7 @@ A [!DNL Salesforce Marketing Cloud] 訂閱的帳戶 [[!DNL Marketing Cloud Engag
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| contactKey | [!DNL Salesforce Marketing Cloud] 連絡人金鑰。 請參閱 [!DNL Salesforce Marketing Cloud] [檔案](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5) 如果您需要其他指引。 | 必要 |
+| contactKey | [!DNL Salesforce Marketing Cloud] 連絡人金鑰。 請參閱 [!DNL Salesforce Marketing Cloud] [檔案](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&amp;type=5) 如果您需要其他指引。 | 強制 |
 
 ## 支援的對象 {#supported-audiences}
 
@@ -220,7 +219,7 @@ A [!DNL Salesforce Marketing Cloud] 訂閱的帳戶 [[!DNL Marketing Cloud Engag
 
    * 重複這些步驟，在您的XDM設定檔結構描述之間新增下列對應，並 [!DNL (API) Salesforce Marketing Cloud]：
 
-     | 來源欄位 | 目標欄位 | 必要 |
+     | 來源欄位 | 目標欄位 | 強制 |
      |---|---|---|
      | `IdentityMap: contactKey` | `Identity: salesforceContactKey` | `Mandatory` |
      | `xdm: personalEmail.address` | `Attribute: Email Address` 從 [!DNL Salesforce Marketing Cloud] [!DNL Email Addresses] 資料延伸。 | `Mandatory`，新增連絡人時。 |

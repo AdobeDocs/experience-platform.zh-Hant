@@ -3,9 +3,9 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 將Adobe對象資料順暢地傳遞給Airship，作為Airship中用於鎖定目標的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '967'
 ht-degree: 2%
 
 ---

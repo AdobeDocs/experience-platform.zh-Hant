@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1662'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 >[!NOTE]
 >
 >* 大多數客戶不會超過這些預設限制。 如果您想瞭解自訂限制，請聯絡客戶服務代表。
->* 本檔案中所概述的限制會持續改善。 請定期回來檢視更新。
+>* 本檔案中所概述的限制會持續改善。 請定期回訪以取得更新內容。
 >* 根據個別下游限制，某些目的地的護欄可能會比此頁面上記錄的護欄更嚴格。 也請務必檢查 [目錄](/help/destinations/catalog/overview.md) 您連線並啟用資料的目標頁面。
 
 ## 護欄型別 {#limit-types}
@@ -138,7 +138,7 @@ ht-degree: 1%
 >
 >僅壓縮模式支援匯出至JSON檔案。
 
-| 資料集類型 | 護欄 | 護欄型別 | 說明 |
+| 資料集型別 | 護欄 | 護欄型別 | 說明 |
 ---------|----------|---------|-------|
 | 資料集根據 **XDM體驗事件結構描述** | 過去365天的資料 | 系統強制的護欄 | 系統會匯出上一個日曆年的資料。 |
 | 資料集根據 **XDM個別設定檔結構描述** | 在資料流中所有匯出的檔案有100億筆記錄 | 系統強制的護欄 | 壓縮的JSON或Parquet檔案的資料集記錄計數必須少於十億，未壓縮的Parquet檔案的資料集記錄計數必須少於一百萬個，否則匯出會失敗。 如果資料集大於允許的臨界值，請縮小您嘗試匯出的資料集大小。 |

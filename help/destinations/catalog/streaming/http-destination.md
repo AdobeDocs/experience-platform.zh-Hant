@@ -4,9 +4,9 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的Experience Platform，或針對從Analytics匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2480'
 ht-degree: 8%
 
 ---
@@ -73,7 +73,7 @@ HTTP API目的地支援多種對HTTP端點的驗證型別：
 
 * 沒有驗證的HTTP端點；
 * 持有人權杖驗證；
-* [OAuth 2.0使用者端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 使用主體表單進行驗證，使用 [!DNL client ID]， [!DNL client secret] 和 [!DNL grant type] HTTP要求內文中，如下列範例所示。
+* [OAuth 2.0使用者端認證](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) 使用主體表單進行驗證，使用 [!DNL client ID]， [!DNL client secret]、和 [!DNL grant type] HTTP要求內文中，如下列範例所示。
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -113,7 +113,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 如果您選取 **[!UICONTROL 持有人權杖]** 驗證型別以連線至您的HTTP端點，輸入以下欄位並選取 **[!UICONTROL 連線到目的地]**：
 
-![UI畫面影像，您可在其中使用持有人權杖驗證連線至HTTP API目的地](../../assets/catalog/http/http-api-authentication-bearer.png)
+![UI畫面影像，您可在其中使用持有人權杖驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL 持有人權杖]**：插入持有人權杖以驗證您的HTTP位置。
 
@@ -121,7 +121,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 如果您選取 **[!UICONTROL 無]** 要連線至您的HTTP端點的驗證型別：
 
-![UI畫面影像，您可在其中使用驗證連線至HTTP API目的地](../../assets/catalog/http/http-api-authentication-none.png)
+![UI畫面影像，您可在其中使用驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-none.png)
 
 當您選取此驗證開啟時，您只需要選取 **[!UICONTROL 連線到目的地]** 而且已建立與端點的連線。
 
@@ -129,7 +129,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 如果您選取 **[!UICONTROL OAuth 2密碼]** 驗證型別以連線至您的HTTP端點，輸入以下欄位並選取 **[!UICONTROL 連線到目的地]**：
 
-![UI畫面影像，您可在其中使用OAuth 2搭配密碼驗證連線至HTTP API目的地](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![UI畫面影像，您可在其中使用OAuth 2搭配密碼驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL 存取記號URL]**：您發行存取權杖和（可選）重新整理權杖的URL。
 * **[!UICONTROL 使用者端ID]**：此 [!DNL client ID] 系統指派給Adobe Experience Platform的專案。
@@ -141,7 +141,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 如果您選取 **[!UICONTROL OAuth 2使用者端認證]** 驗證型別以連線至您的HTTP端點，輸入以下欄位並選取 **[!UICONTROL 連線到目的地]**：
 
-![UI畫面影像，您可在其中使用OAuth 2搭配使用者端憑證驗證連線至HTTP API目的地](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![UI畫面影像，您可在其中使用OAuth 2搭配使用者端憑證驗證連線至HTTP API目的地。](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL 存取記號URL]**：您發行存取權杖和（可選）重新整理權杖的URL。
 * **[!UICONTROL 使用者端ID]**：此 [!DNL client ID] 系統指派給Adobe Experience Platform的專案。
@@ -179,7 +179,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
-![顯示HTTP目的地詳細資訊的已完成欄位的UI畫面影像](../../assets/catalog/http/http-api-destination-details.png)
+![顯示HTTP目的地詳細資訊的已完成欄位的UI畫面影像。](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL 名稱]**：輸入您日後用來辨識此目的地的名稱。
 * **[!UICONTROL 說明]**：輸入有助於您日後識別此目的地的說明。
@@ -232,7 +232,7 @@ Experience Platform會最佳化HTTP API目的地的設定檔匯出行為，僅�
 
 例如，將此資料流視為HTTP目的地，其中在資料流中選取了三個對象，且四個屬性對應至目的地。
 
-![HTTP API目的地資料流](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![HTTP API目的地資料流的範例。](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 要判斷匯出至目的地的設定檔是否符合「 」或「 」其中之一， *三個對應的區段*. 不過，在資料匯出中，在 `segmentMembership` 物件(請參閱 [匯出的資料](#exported-data) 區段底下)，其他未對應的對象可能會出現，如果該特定設定檔為其成員，且這些對象與觸發匯出的對象共用相同的合併原則。 如果設定檔符合 **擁有DeLorean Cars的客戶** 區段，但同時也是 **觀看「回到未來」** 影片和 **科幻迷** 區段，則其他這兩個對象也會出現在 `segmentMembership` 匯出的物件，即使這些物件未在資料流中對映，只要它們與共用相同的合併原則 **擁有DeLorean Cars的客戶** 區段。
 

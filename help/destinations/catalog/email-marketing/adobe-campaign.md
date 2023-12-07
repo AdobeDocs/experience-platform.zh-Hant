@@ -3,10 +3,10 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；a
 title: Adobe Campaign連線
 description: Adobe Campaign這一組解決方案可協助您針對所有線上和離線管道來實現個人化並提供行銷活動。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 3%
+source-wordcount: '906'
+ht-degree: 2%
 
 ---
 
@@ -42,7 +42,7 @@ Adobe Campaign這一組解決方案可協助您針對所有線上和離線管道
 
 ## IP位址允許清單 {#allow-list}
 
-使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
+使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將某些IP範圍新增到允許清單。
 
 請參閱 [SFTP目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
 
@@ -101,14 +101,14 @@ Adobe Campaign支援下列連線型別：
 
 ## 匯出的資料 {#exported-data}
 
-的 [!DNL Adobe Campaign] 目的地， [!DNL Platform] 建立 `.csv` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify) （在audience activation教學課程中）。
+的 [!DNL Adobe Campaign] 目的地， [!DNL Platform] 建立 `.csv` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證對象啟用](../../ui/activate-batch-profile-destinations.md#verify) 區段建立模型。
 
 ## 設定資料匯入Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
 >* 請記住 [!DNL SFTP] 在執行此整合時，根據您的Adobe Campaign合約，儲存空間限制、資料庫儲存空間限制和作用中設定檔限制。
->* 您需要使用排程、匯入及對應匯出的Adobe Campaign區段 [!DNL Campaign] 工作流程。 請參閱 [設定循環匯入](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) (在Adobe Campaign Classic檔案和 [關於資料管理活動](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) (在Adobe Campaign Standard檔案中)。
+>* 您需要使用排程、匯入及對應您匯出的Adobe Campaign區段 [!DNL Campaign] 工作流程。 請參閱 [設定循環匯入](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) (在Adobe Campaign Classic檔案和 [關於資料管理活動](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) (在Adobe Campaign Standard檔案中)。
 >* 將資料傳送至Adobe Campaign的偏好方式為透過 [!DNL Amazon S3] 或 [!DNL Azure Blob].
 
 連線之後 [!DNL Platform] 至您的 [!DNL Amazon S3] 或 [!DNL Azure Blob] 儲存，您必須設定從儲存位置將資料匯入Adobe Campaign的程式。 若要瞭解如何完成此作業，請參閱下列Adobe Campaign檔案頁面：

@@ -2,10 +2,10 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 11%
+source-wordcount: '1022'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 11%
 * [資料集匯出支援](/help/destinations/ui/export-datasets.md)。
 * 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
 * 能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。
-* [能夠自訂匯出 CSV 資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
+* [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## 概觀 {#overview}
 
@@ -55,7 +55,7 @@ ht-degree: 11%
 
 {style="table-layout:auto"}
 
-![SFTP設定檔匯出型別](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![目的地目錄中醒目提示的SFTP設定檔型匯出型別。](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
 ## 連線到目標 {#connect}
 
@@ -79,7 +79,7 @@ ht-degree: 11%
 
 如果您選取 **[!UICONTROL 使用密碼的SFTP]** 驗證型別以連線至您的SFTP位置：
 
-![SFTP目的地基本驗證](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![SFTP目的地使用密碼的基本驗證。](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL 網域]**：您的SFTP儲存位置位址；
 * **[!UICONTROL 使用者名稱]**：登入您的SFTP儲存位置的使用者名稱；
@@ -87,26 +87,26 @@ ht-degree: 11%
 * **[!UICONTROL 密碼]**：登入SFTP儲存位置的密碼。
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。
 
-  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 
 如果您選取 **[!UICONTROL 使用SSH金鑰的SFTP]** 驗證型別以連線至您的SFTP位置：
 
-![SFTP目的地SSH金鑰驗證](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+![SFTP目的地SSH金鑰驗證。](../../assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
 
 * **[!UICONTROL 網域]**：填寫SFTP帳戶的IP位址或網域名稱
 * **[!UICONTROL 連線埠]**：您的SFTP儲存位置使用的連線埠；
 * **[!UICONTROL 使用者名稱]**：登入您的SFTP儲存位置的使用者名稱；
-* **[!UICONTROL ssh金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密 金鑰必須為 RSA 格式、Base64 編碼的字串，並且不得受密碼保護。
+* **[!UICONTROL ssh金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密金鑰必須是RSA格式的Base64編碼字串，且不得受密碼保護。
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。
 
-  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 目的地詳細資料 {#destination-details}
 
 在建立與SFTP位置的驗證連線後，請提供目標的下列資訊：
 
-![SFTP目的地的可用目的地詳細資料](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+![SFTP目的地的目的地詳細資料欄位。](../../assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
 
 * **[!UICONTROL 名稱]**：輸入可協助您在Experience Platform使用者介面中識別此目的地的名稱；
 * **[!UICONTROL 說明]**：輸入此目的地的說明；

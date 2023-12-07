@@ -3,10 +3,10 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 10%
+source-wordcount: '907'
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 為了保護這些資料， **[!UICONTROL 自訂個人化]** 目的地要求您使用 [Edge Network伺服器API](/help/server-api/overview.md) 設定以屬性為基礎的個人化目的地時。 所有伺服器API呼叫都必須在 [已驗證的內容](../../../server-api/authentication.md).
+>設定檔屬性可能包含敏感資料。 若要保護此資料，您必須使用 [Edge Network伺服器API](/help/server-api/overview.md) 設定時 **[!UICONTROL 自訂個人化]** 屬性型個人化的目的地。 所有伺服器API呼叫都必須在 [已驗證的內容](../../../server-api/authentication.md).
 >
 ><br>如果您已在使用Web SDK或Mobile SDK進行整合，您可以透過新增伺服器端整合來透過伺服器API擷取屬性。
 >
@@ -31,7 +31,7 @@ ht-degree: 10%
 
 ## 概觀 {#overview}
 
-此目的地提供從Adobe Experience Platform擷取對象資訊到外部個人化平台、內容管理系統、廣告伺服器和其他在客戶網站上執行之應用程式的方法。
+設定此目的地，以允許客戶網站上執行的外部個人化平台、內容管理系統、廣告伺服器及其他應用程式，從Adobe Experience Platform擷取對象資訊。
 
 ## 先決條件 {#prerequisites}
 

@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 目的地型別 {#destination-types}
 
-在Adobe Experience Platform中，我們會區分不同的目的地型別 — 連線、資料集匯出和擴充功能。 有數種型別的連線目的地，可讓您將資料匯出至API型目的地。
+在Adobe Experience Platform中，我們會區分不同的目的地型別 — 連線、資料集匯出和擴充功能。 有數種型別的連線目的地，可讓您將資料匯出至API型目的地、社交目的地、CRM平台等等。
 
 最後，也可以區分目的地目錄中所有組織可用的公用目的地，以及Real-Time CDP Ultimate客戶為滿足其特定匯出使用案例而建立的私人目的地。
 
@@ -68,6 +68,21 @@ Experience Platform中的邊緣個人化目的地包括 [Adobe Target](/help/des
 以下影片會說明這兩種型別目的地的特性：
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## 匯出的對象型別 {#exported-audiences-types}
+
+您可以將三種型別的對象從Experience Platform匯出至各種目的地：
+
+* People對象
+* 帳戶對象
+* 潛在客戶對象
+
+進一步瞭解 [各種受眾型別](/help/segmentation/ui/account-audiences.md#terminology).
+
+目的地卡上的符號會顯示您可以匯出至每個目的地的對象型別。
+
+![附有符號的範例目的地卡片，顯示可匯出的對象型別。](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## 資料集匯出目的地 {#dataset-export-destinations}
 

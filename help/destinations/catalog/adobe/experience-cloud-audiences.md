@@ -3,10 +3,10 @@ title: Experience Cloud 對象
 description: 瞭解如何從Real-time Customer Data Platform將受眾分享至各種Experience Cloud應用程式。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 23c4bce542bba76ea4badba43a7ce3e6f7fe9e49
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 3%
+source-wordcount: '1675'
+ht-degree: 2%
 
 ---
 
@@ -40,12 +40,12 @@ ht-degree: 3%
 在Audience Manager中，您可以針對資料管理平台使用案例使用Real-Time CDP對象，例如：
 
 * 新增 [第三方資料](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) 至您的區段；
-* [演算法塑型](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
+* [演演算法建模](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html)；
 * 將您的對象啟用至Real-Time CDP目的地目錄尚未支援的Cookie型目的地。
 
 ### 對匯出對象的精細控制 {#segments-control}
 
-若要選取要匯出至Audience Manager及以外的受眾，請透過Experience Cloud受眾目的地使用新的自助受眾共用整合。  這可讓您決定要與其他Experience Cloud解決方案共用的受眾，以及只想保留在Real-Time CDP中的受眾。
+若要選取要匯出至Audience Manager及其他專案的受眾，請透過Experience Cloud受眾目的地使用新的自助受眾共用整合。  這可讓您決定要與其他Experience Cloud解決方案共用的受眾，以及只想保留在Real-Time CDP中的受眾。
 
 舊版對象共用整合無法精確控制應將哪些對象匯出至Audience Manager及其後。
 

@@ -3,10 +3,10 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: （檔案） Eloqua連線Oracle
 description: oracle Eloqua是Oracle提供的行銷自動化軟體即服務(SaaS)平台，旨在協助B2B行銷人員和組織管理行銷活動與銷售機會開發。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 3%
+source-wordcount: '717'
+ht-degree: 2%
 
 ---
 
@@ -63,12 +63,12 @@ ht-degree: 3%
 
 * 的 **[!UICONTROL 使用密碼的SFTP]** 連線，您必須提供：
    * [!UICONTROL 網域]
-   * [!UICONTROL 連接埠]
+   * [!UICONTROL 連線埠]
    * [!UICONTROL 使用者名稱]
    * [!UICONTROL 密碼]
 * 的 **[!UICONTROL 使用SSH金鑰的SFTP]** 連線，您必須提供：
    * [!UICONTROL 網域]
-   * [!UICONTROL 連接埠]
+   * [!UICONTROL 連線埠]
    * [!UICONTROL 使用者名稱]
    * [!UICONTROL ssh金鑰]
 

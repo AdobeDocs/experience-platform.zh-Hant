@@ -3,10 +3,10 @@ keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；o
 title: oracleResponsys連線
 description: Responsys是Oracle提供的跨頻道行銷活動的企業電子郵件行銷工具，可將電子郵件、行動裝置、顯示和社交的互動個人化。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 3%
+source-wordcount: '704'
+ht-degree: 2%
 
 ---
 
@@ -65,12 +65,12 @@ ht-degree: 3%
 
 * 的 **[!UICONTROL 使用密碼的SFTP]** 連線，您必須提供：
    * [!UICONTROL 網域]
-   * [!UICONTROL 連接埠]
+   * [!UICONTROL 連線埠]
    * [!UICONTROL 使用者名稱]
    * [!UICONTROL 密碼]
 * 的 **[!UICONTROL 使用SSH金鑰的SFTP]** 連線，您必須提供：
    * [!UICONTROL 網域]
-   * [!UICONTROL 連接埠]
+   * [!UICONTROL 連線埠]
    * [!UICONTROL 使用者名稱]
    * [!UICONTROL ssh金鑰]
 * 或者，您可以附加RSA格式的公開金鑰，將PGP/GPG的加密新增至匯出的檔案，位於 **[!UICONTROL 索引鍵]** 區段。 您的公開金鑰必須寫成 [!DNL Base64] 編碼字串。

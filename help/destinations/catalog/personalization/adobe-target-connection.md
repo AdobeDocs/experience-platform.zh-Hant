@@ -3,10 +3,10 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1202'
-ht-degree: 16%
+source-wordcount: '1109'
+ht-degree: 15%
 
 ---
 
@@ -27,6 +27,8 @@ Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳�
 
 Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
+## 影片概述 {#video-overview}
+
 如需如何在Experience Platform中設定Adobe Target連線的簡短概觀，請觀看下方的影片。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
@@ -41,7 +43,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 >[!IMPORTANT]
 >
->建立之前 [!DNL Adobe Target] connection，閱讀操作指南 [設定相同頁面和下一頁個人化的個人化目的地](../../ui/activate-edge-personalization-destinations.md). 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行所需設定步驟。 相同頁面和下一頁個人化會在設定Adobe Target連線時，要求您使用資料串流ID。
+>建立之前 [!DNL Adobe Target] connection，閱讀操作指南 [設定相同頁面和下一頁個人化的個人化目的地](../../ui/activate-edge-personalization-destinations.md). 本指南會針對跨多個Experience Platform元件的相同頁面和下一頁個人化使用案例，引導您進行所需設定步驟。 若要實現相同頁面和下一頁個人化使用案例，在設定Adobe Target連線時，您必須使用資料串流ID。
 
 ### Adobe Target的必要條件 {#prerequisites-in-adobe-target}
 
@@ -133,7 +135,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 ## 匯出的資料 {#exported-data}
 
-Adobe Target會從Adobe Experience Platform Edge Network讀取設定檔資料，因此不會匯出任何資料。
+Adobe Target *讀取* 來自Adobe Experience Platform Edge Network的設定檔資料，因此不會匯出任何資料。
 
 ## 資料使用與控管 {#data-usage-governance}
 

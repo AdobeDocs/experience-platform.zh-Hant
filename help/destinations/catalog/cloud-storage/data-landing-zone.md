@@ -3,9 +3,9 @@ title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域，以啟用受眾及匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1509'
 ht-degree: 3%
 
 ---
@@ -62,11 +62,11 @@ Platform會對上傳至的所有檔案強制實施嚴格的七天存留時間(TT
 
 在 [!DNL Azure Storage Explorer] UI，請在左側導覽列中選取連線圖示。 此 **選取資源** 視窗隨即出現，為您提供可連線的選項。 選取 **[!DNL Blob container]** 以連線至您的 [!DNL Data Landing Zone] 儲存。
 
-![select-resource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![選取Azure UI中反白顯示的資源。](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 接下來，選取 **共用存取簽章URL (SAS)** 作為您的連線方法，然後選取 **下一個**.
 
-![select-connection-method](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![選取Azure UI中醒目提示的連線方法。](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 選取連線方法後，您必須提供 **顯示名稱** 和 **[!DNL Blob]容器SAS URL** 與您的 [!DNL Data Landing Zone] 容器。
 
@@ -171,15 +171,15 @@ curl -X POST \
 
 提供您的顯示名稱(`containerName`)和 [!DNL Data Landing Zone] SAS URL，如上所述API呼叫中所傳回，然後選取「 **下一個**.
 
-![enter-connection-info](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![輸入在Azure UI中反白顯示的連線資訊。](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 此 **摘要** 視窗會出現，為您提供設定的概觀，包括有關您的設定的 [!DNL Blob] 端點與許可權。 準備就緒後，選擇 **連線**.
 
-![摘要](/help/sources/images/tutorials/create/dlz/summary.png)
+![Azure UI中顯示的設定摘要。](/help/sources/images/tutorials/create/dlz/summary.png)
 
 成功的連線會更新您的 [!DNL Azure Storage Explorer] 含您的UI [!DNL Data Landing Zone] 容器。
 
-![dlz-user-container](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Azure UI中醒目提示的DLZ使用者容器摘要。](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 使用您的 [!DNL Data Landing Zone] 容器已連線至 [!DNL Azure Storage Explorer]，您現在可以開始從Experience Platform將檔案匯出至 [!DNL Data Landing Zone] 容器。 若要匯出檔案，您必須建立與 [!DNL Data Landing Zone] Experience Platform UI中的目的地，如下節所述。
 

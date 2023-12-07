@@ -3,10 +3,10 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: facebook連線
 description: 為您的Facebook行銷活動啟用設定檔，以根據雜湊電子郵件進行對象目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 7%
+source-wordcount: '1949'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 您可以使用此目的地來針對以下各項設定對象目標： [!DNL Facebook's] 所支援的應用程式系列 [!DNL Custom Audiences]，包括 [!DNL Facebook]， [!DNL Instagram]， [!DNL Audience Network]、和 [!DNL Messenger]. 在 [!DNL Facebook Ads Manager] 中的廣告版位層級會指出您選擇針對哪個應用程式執行行銷活動。
 
-![Adobe Experience Platform UI中的Facebook目的地](../../assets/catalog/social/facebook/catalog.png)
+![Adobe Experience Platform UI中的Facebook目的地。](../../assets/catalog/social/facebook/catalog.png)
 
 ## 使用案例
 
@@ -74,9 +74,9 @@ ht-degree: 7%
 
 將受眾傳送至之前 [!DNL Facebook]，確定您符合下列需求：
 
-* 您的 [!DNL Facebook] 使用者帳戶必須擁有 [!DNL Facebook Business Account] 擁有您將使用的廣告帳戶。
+* 您的 [!DNL Facebook] 使用者帳戶必須擁有 [!DNL Facebook Business Account] 擁有您正在使用的廣告帳戶。
 * 您的 [!DNL Facebook] 使用者帳戶必須具有 **[!DNL Manage campaigns]** 已為您計畫使用的廣告帳戶啟用許可權。
-* 此 **Adobe Experience Cloud** 企業帳戶必須新增為廣告合作夥伴，才能在您的 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`. 另請參閱 [新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
+* 此 **Adobe Experience Cloud** 企業帳戶必須新增為廣告合作夥伴，才能在您的 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`。另請參閱 [新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
   >[!IMPORTANT]
   >
   > 設定Adobe Experience Cloud的許可權時，您必須啟用 **管理行銷活動** 許可權。 以下專案需要許可權： [!DNL Adobe Experience Platform] 整合。
@@ -123,7 +123,7 @@ ht-degree: 7%
 > 屬性來源資料不會自動雜湊。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。
 > 此 **[!UICONTROL 套用轉換]** 選項只有在您選取屬性作為來源欄位時才會顯示。 選擇名稱空間時不會顯示。
 
-![身分對應轉換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## 使用自訂名稱空間 {#custom-namespaces}
 
@@ -149,7 +149,7 @@ ht-degree: 7%
 
 1. 在目標目錄中尋找Facebook目標，然後選取 **[!UICONTROL 設定]**.
 2. 選取 **[!UICONTROL 連線到目的地]**.
-   ![向Facebook進行驗證](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![驗證啟動工作流程中顯示的Facebook步驟。](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. 輸入您的Facebook認證，然後選取 **登入**.
 
 ### 填寫目標詳細資訊 {#destination-details}
@@ -176,7 +176,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="對象來源"
->abstract="選擇最初如何在對象中收集客戶資料。當區段以使用者為目標時，資料會顯示在 Facebook 中"
+>abstract="選擇最初如何在對象中收集客戶資料。當使用者成為此區段的目標時，資料會顯示在Facebook中"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ ht-degree: 7%
 
 在 **[!UICONTROL 區段排程]** 步驟，您必須提供 [!UICONTROL 對象來源] 將受眾傳送至 [!DNL Facebook Custom Audiences].
 
-![facebook對象來源](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![facebook啟動步驟中顯示的對象來源下拉式清單。](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### 對應範例：啟用對象資料於 [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ ht-degree: 7%
 > 
 >屬性來源資料不會自動雜湊。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。
 
-![身分對應](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![套用對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 匯出的資料 {#exported-data}
 

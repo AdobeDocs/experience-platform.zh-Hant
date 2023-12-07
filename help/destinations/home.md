@@ -2,16 +2,16 @@
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的「目的地」，針對跨頻道行銷活動、電子郵件行銷活動、鎖定特定目標的廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1001'
 ht-degree: 4%
 
 ---
 
 # [!DNL Destinations] 概覽 {#overview}
 
-![目的地概觀橫幅](./assets/overview/destinations-overview-banner.png)
+![目的地概觀橫幅。](./assets/overview/destinations-overview-banner.png)
 
 **[!DNL Destinations]** 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
@@ -29,7 +29,7 @@ Platform的核心功能之一，就是擷取您的第一方資料，並根據您
 ## 目的地步驟 {#steps}
 
 * 從 [自助服務目錄](./catalog/overview.md) Platform中所有可用的目的地。
-* 使用目的地將設定檔或對象傳送至行銷自動化平台、數位廣告平台等。
+* 使用目的地將受眾或資料集傳送至行銷自動化平台、數位廣告平台等。
 * 排程定期將資料匯出至您偏好的目的地。
 
 ## 控制項 {#controls}
@@ -39,8 +39,9 @@ Platform的核心功能之一，就是擷取您的第一方資料，並根據您
 * 瀏覽可啟用資料的目的地平台目錄；
 * 建立、編輯、啟用和停用流向目錄中的目的地的資料流；
 * 在儲存位置中建立帳戶，或將Platform連結至目的地平台中的帳戶；
-* 選取應該對目的地啟用的對象；
-* 選擇哪個 [體驗資料模型(XDM)欄位](../xdm/home.md) 將對象啟用至電子郵件行銷目的地時匯出的方式。
+* 選取應該對目的地啟用的對象或資料集；
+* 選擇哪個 [體驗資料模型(XDM)欄位](../xdm/home.md) 將對象啟用至特定目的地（例如電子郵件行銷目的地、CRM平台、雲端儲存位置等）時，匯出的動作。
+* 對目的地啟用不同型別的設定檔和對象 — 人員、帳戶和潛在客戶。
 
 ## 目的地型別和類別 {#types-and-categories}
 
@@ -54,7 +55,7 @@ Experience Platform目標目錄中的一些聯結器是由Adobe建立和維護�
 
 ## 目的地和存取控制 {#access-controls}
 
-Platform中的目標功能可搭配Adobe Experience Platform存取控制許可權使用。 您可以檢視、管理和啟用目的地，實際取決於您的使用者許可權等級。 如需個別許可權的相關資訊，請參閱 [Adobe Experience Platform中的存取控制](../access-control/home.md) 並向下捲動至頁面底部。
+Platform中的目標功能可搭配Adobe Experience Platform存取控制許可權使用。 您可以檢視、管理和啟用目的地，實際取決於您的使用者許可權等級。 如需個別許可權的相關資訊，請前往 [Adobe Experience Platform中的存取控制](../access-control/home.md) 並向下捲動至頁面底部的表格。
 
 下表概述對目的地執行特定動作所需的許可權和許可權組合：
 
@@ -81,9 +82,11 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 
 在建立與目的地的連線並完成啟動工作流程後，您可以監視匯出至接收系統的資料。 閱讀 [在UI中監控資料流到目的地的指南](/help/dataflows/ui/monitor-destinations.md) 以取得詳細資訊。
 
-您也可以驗證資料是否成功到達您的目的地。 目錄中的大多數目的地檔案頁面都有 *驗證資料匯出區段*，會指示您如何從目的地平台簽入資料是否已成功從Experience Platform匯入。
+![目的地監視頁面範例。](./assets/overview/monitoring-page-example.png)
 
-## 啟用目的地資料的資料控管限制 {#data-governance}
+您也可以驗證資料是否成功到達您的目的地。 目錄中的大多數目的地檔案頁面都有 *驗證資料匯出區段*，會指示您如何從目的地平台簽入資料是否已成功從Experience Platform匯入。 檢視此區段的範例，瞭解 [Amazon Ads目的地](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+
+## 啟用目的地的資料治理限制 {#data-governance}
 
 透過以下方式強制執行Platform目的地的資料控管：
 

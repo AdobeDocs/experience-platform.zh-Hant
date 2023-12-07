@@ -3,9 +3,9 @@ title: Azure Data Lake Storage Gen2連線
 description: 瞭解如何連線至Azure Data Lake Storage Gen2以啟用對象和匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '878'
 ht-degree: 2%
 
 ---

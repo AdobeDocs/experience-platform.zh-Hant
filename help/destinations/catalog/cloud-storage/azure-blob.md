@@ -2,10 +2,10 @@
 title: Azure Blob連線
 description: 建立與您的Azure Blob儲存體的即時輸出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 8%
+source-wordcount: '1045'
+ht-degree: 7%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 * [資料集匯出支援](/help/destinations/ui/export-datasets.md)。
 * 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
 * 能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。
-* [能夠自訂匯出 CSV 資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
+* [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## 概觀 {#overview}
 

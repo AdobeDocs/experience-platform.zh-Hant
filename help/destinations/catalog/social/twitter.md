@@ -2,9 +2,9 @@
 title: twitter自訂對象連線
 description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的受眾來建立相關的再次行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '859'
 ht-degree: 5%
 
 ---

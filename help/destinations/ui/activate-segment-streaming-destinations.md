@@ -1,13 +1,12 @@
 ---
-keywords: 啟用對象串流目的地；啟用對象串流目的地；啟用資料
 title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 8%
+source-wordcount: '1121'
+ht-degree: 7%
 
 ---
 
@@ -34,15 +33,15 @@ ht-degree: 8%
 
 1. 前往 **[!UICONTROL 連線>目的地]**，然後選取 **[!UICONTROL 目錄]** 標籤。
 
-   ![目的地目錄標籤](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![目的地目錄標籤會顯示各種串流目的地。](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. 選取 **[!UICONTROL 啟用對象]** 位於您要啟用對象之目的地的對應卡片上，如下圖所示。
 
-   ![啟動按鈕](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![啟用目的地目錄中醒目提示的控制項。](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. 選取您要用來啟用對象的目的地連線，然後選取「 」 **[!UICONTROL 下一個]**.
 
-   ![選取目的地](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![在「選取目的地」步驟中反白顯示的目的地連線。](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. 移至下一個區段至 [選取您的對象](#select-audiences).
 
@@ -56,7 +55,7 @@ ht-degree: 8%
 * **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
 * 其他型別的對象，源自其他Adobe解決方案，例如 [!DNL Audience Manager].
 
-![選取對象](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![選取對象步驟中反白顯示的多個對象。](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## 對應屬性和身分 {#mapping}
 
@@ -68,23 +67,23 @@ ht-degree: 8%
 
 1. 在 **[!UICONTROL 對應]** 頁面，選取 **[!UICONTROL 新增對應]**.
 
-   ![新增對應](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![新增反白顯示的新對應控制項。](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. 選取右側的箭頭 **[!UICONTROL 來源欄位]** 登入點。
 
-   ![選取來源欄位](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![選取醒目提示的原始碼欄位控制項。](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. 在 **[!UICONTROL 選取來源欄位]** 頁面，使用 **[!UICONTROL 選取屬性]** 或 **[!UICONTROL 選取身分名稱空間]** 在兩個可用來源欄位類別之間切換的選項。 從可用的 [!DNL XDM] 設定檔屬性和身分名稱空間，選取要對應至目的地的設定檔屬性，然後選擇 **[!UICONTROL 選取]**.
 
-   ![選取來源欄位頁面](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![選取來源欄位頁面，其中顯示數個可用的來源欄位。](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. 選取右側的按鈕 **[!UICONTROL 目標欄位]** 登入點。
 
-   ![選取目標欄位](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![選取醒目提示的目標欄位。](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. 在 **[!UICONTROL 選取目標欄位]** 頁面，選取您要對應來源欄位的目標身分名稱空間，然後選擇 **[!UICONTROL 選取]**.
 
-   ![選取目標欄位頁面](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![選取目標欄位頁面，顯示目標欄位對應的可用選項。](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
 1. 若要新增更多對應，請重複步驟1至5。
 
@@ -97,7 +96,7 @@ ht-degree: 8%
 
 將未雜湊的來源屬性對應到目的地預期會雜湊的目標屬性時(例如： `email_lc_sha256` 或 `phone_sha256`)，檢查 **套用轉換** 讓Adobe Experience Platform在啟動時自動雜湊來源屬性的選項。
 
-![身分對應](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![套用在「身分對應」步驟中反白顯示的轉換控制項。](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## 排程對象匯出 {#scheduling}
 
@@ -114,23 +113,23 @@ ht-degree: 8%
 
 1. 在 **[!UICONTROL 對象排程]** 頁面，選取每個對象，然後使用 **[!UICONTROL 開始日期]** 和 **[!UICONTROL 結束日期]** 選取器，設定傳送資料至目的地的時間間隔。
 
-   ![對象排程](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![醒目提示的對象排程篩選器。](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * 有些目的地會要求您選取 **[!UICONTROL 對象來源]** 針對每個對象，使用行事曆選擇器下方的下拉式功能表。 如果您的目的地不包含此選擇器，請略過此步驟。
 
-     ![對應 ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![反白顯示對應ID下拉式清單。](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * 有些目的地需要您手動對應 [!DNL Platform] 對象與目標目的地中的對應對象。 若要這麼做，請選取每個對象，然後在中輸入目的地平台中對應的對象ID **[!UICONTROL 對應ID]** 欄位。 如果您的目的地不包含此欄位，請略過此步驟。
 
-     ![對應 ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![醒目提示的受眾來源下拉式清單。](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * 有些目的地會要求您輸入 **[!UICONTROL 應用程式ID]** 啟用時 [!DNL IDFA] 或 [!DNL GAID] 對象。 如果您的目的地不包含此欄位，請略過此步驟。
 
-     ![應用程式 ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![強調顯示「應用程式ID」下拉式清單。](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. 選取 **[!UICONTROL 下一個]** 前往 [!UICONTROL 檢閱] 頁面。
 
-## 請檢閱 {#review}
+## 檢閱 {#review}
 
 在 **[!UICONTROL 檢閱]** 頁面中，您可以看到選取範圍的摘要。 選取 **[!UICONTROL 取消]** 若要分解流量， **[!UICONTROL 返回]** 以修改您的設定，或 **[!UICONTROL 完成]** 以確認您的選取範圍並開始傳送資料至目的地。
 
@@ -144,7 +143,7 @@ ht-degree: 8%
 
 在 **[!UICONTROL 檢閱]** 步驟，Experience Platform也會檢查是否有任何資料使用原則違規。 以下是違反原則的範例。 在解決違規之前，您無法完成對象啟用工作流程。 如需有關如何解決原則違規的資訊，請參閱 [資料使用原則違規](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) 資料控管檔案區段中的。
 
-![資料原則違規](../assets/common/data-policy-violation.png)
+![啟動工作流程中顯示的資料原則違規範例。](../assets/common/data-policy-violation.png)
 
 ### 篩選對象 {#filter-audiences}
 

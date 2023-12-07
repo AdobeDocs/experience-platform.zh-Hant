@@ -2,10 +2,10 @@
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 17%
+source-wordcount: '1052'
+ht-degree: 16%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 17%
 * [資料集匯出支援](/help/destinations/ui/export-datasets.md)。
 * 其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling)。
 * 能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。
-* [能夠自訂匯出 CSV 資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。
+* [能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).
 
 ## 連線至您的 [!DNL Amazon S3] 透過API或UI儲存 {#connect-api-or-ui}
 
 * 若要連線至您的 [!DNL Amazon S3] 使用Platform使用者介面的儲存位置，請閱讀章節 [連線到目的地](#connect) 和 [啟用此目的地的對象](#activate) 底下。
-* 若要連線至您的 [!DNL Amazon S3] 以程式設計方式儲存位置，閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
+* 若要連線至您的 [!DNL Amazon S3] 以程式設計方式儲存位置，請閱讀 [使用流量服務API教學課程，將對象啟用至檔案型目的地](../../api/activate-segments-file-based-destinations.md).
 
 ## 支援的對象 {#supported-audiences}
 
@@ -47,7 +47,7 @@ ht-degree: 17%
 
 {style="table-layout:auto"}
 
-![Amazon S3設定檔匯出型別](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Amazon S3以設定檔為基礎的匯出型別，在UU中強調顯示。](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## 連線到目標 {#connect}
 
@@ -69,7 +69,7 @@ ht-degree: 17%
 * **[!DNL Amazon S3]存取金鑰** 和 **[!DNL Amazon S3]秘密金鑰**：在 [!DNL Amazon S3]，產生 `access key - secret access key` 配對，授予Platform存取權給您的 [!DNL Amazon S3] 帳戶。 進一步瞭解 [Amazon Web Services檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，為匯出的檔案新增加密。 在下圖中檢視格式正確的加密金鑰範例。
 
-  ![此影像顯示UI中格式正確的PGP金鑰範例](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![此影像顯示UI中格式正確的PGP金鑰範例。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 ### 填寫目標詳細資訊 {#destination-details}
 

@@ -2,9 +2,9 @@
 title: Google Ads連線
 description: Google Ads (先前稱為Google AdWords)是一項線上廣告服務，可讓企業在各種文字搜尋、圖形顯示、YouTube影片和應用程式內行動顯示中按一下付費廣告。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 1ec9559e762b44dd8d7639aba0a54af7ce221666
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '946'
 ht-degree: 2%
 
 ---
@@ -70,13 +70,13 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
-> [!DNL Google] 已棄用新的 [!DNL Google Ads] Cookie與協力廠商的整合。 若要執行下一節中的允許清單步驟，您必須將與現有整合 [!DNL Google Ads]. 因此，建議使用 [!DNL Google Ads] 正在設定 [!DNL Google Customer Match] 整合。 有關建立 [!DNL Google Customer Match] 整合，請閱讀有關建立 [[!DNL Google Customer Match]](./google-customer-match.md) 連線。
+> [!DNL Google] 已棄用新的 [!DNL Google Ads] Cookie與協力廠商的整合。 若要執行下一節中的允許清單步驟，您必須將與現有整合 [!DNL Google Ads]. 因此，建議使用 [!DNL Google Ads] 正在設定 [!DNL Google Customer Match] 整合。 有關建立 [!DNL Google Customer Match] 整合，請閱讀建立應用程式的相關教學課程 [[!DNL Google Customer Match]](./google-customer-match.md) 連線。
 
 ### 允許清單 {#allow-listing}
 
 >[!NOTE]
 >
->必須先將列入允許清單，才能設定您的第一個 [!DNL Google Ads] Platform中的目的地。 請確定以下說明的允許清單程式已由完成 [!DNL Google] 建立目的地之前。
+>必須先將列入允許清單，才能設定您的第一個 [!DNL Google Ads] Platform中的目的地。 請確定下述允許清單程式已由完成 [!DNL Google] 建立目的地之前。
 >此規則的例外情況是 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
 
 建立之前 [!DNL Google Ads] Platform中的目的地，您必須聯絡 [!DNL Google] 讓Adobe加入允許資料提供者清單，以及將您的帳戶新增至允許清單。 連絡人 [!DNL Google] 並提供下列資訊：

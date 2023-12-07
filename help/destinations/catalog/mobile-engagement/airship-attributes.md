@@ -3,9 +3,9 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連線
 description: 將Adobe對象資料順暢地傳遞給Airship，作為Airship中用於鎖定的對象屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1036'
 ht-degree: 2%
 
 ---

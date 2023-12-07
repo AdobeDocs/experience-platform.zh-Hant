@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK是一組設定API，可讓您根據您選擇的資料和驗證格式，設定用於Experience Platform的目的地整合模式，以將對象和設定檔資料傳送至您的端點或儲存位置。 設定儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 4%
+source-wordcount: '808'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform Destination SDK是一套設定API，可讓您根據您
 
 Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Destination SDK來設定、測試和發行與Adobe Experience Platform的生產化目的地整合，並讓您的目的地成為不斷成長的目的地目錄的一部分。 透過使用Destination SDK，您也可以建立自己的自訂私人目的地，以匯出符合您需求的資料。
 
-![Experience Platform UI的熒幕擷圖，顯示目的地目錄](assets/destinations-catalog-overview.png)
+![Experience Platform UI的熒幕擷圖，顯示目的地目錄。](assets/destinations-catalog-overview.png)
 
 ## 產品化和自訂整合 {#productized-custom-integrations}
 
@@ -61,7 +61,7 @@ Destination SDK存取權會因您身為合作夥伴或Experience Platform、Real
 | 合作夥伴或客戶型別 | 如何存取Destination SDK |
 ---------|----------|
 | 獨立軟體廠商(ISV) | 加入 [Adobe技術合作夥伴計畫](https://partners.adobe.com/technologyprogram/experiencecloud.html) 並要求布建Experience Platform沙箱以存取Destination SDK。 |
-| 系統整合商(SI) | 您需要在 [Adobe解決方案合作夥伴計畫](https://solutionpartners.adobe.com/home.html)，您將會布建Experience Platform沙箱並存取Destination SDK。 |
+| 系統整合商(SI) | 您需要在 [Adobe解決方案合作夥伴計畫](https://solutionpartners.adobe.com/home.html) 以布建Experience Platform沙箱並存取Destination SDK。 |
 | Experience Platform客戶於 [Real-Time CDP Ultimate套件](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) | 依預設，您可以存取Experience Platform沙箱和Destination SDK，讓您為組織建立私人目的地。 |
 
 {style="table-layout:auto"}

@@ -3,10 +3,10 @@ title: Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用對象或匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 3%
+source-wordcount: '1102'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-建立與 [!DNL Google Cloud Storage] 的即時輸出連線，定期將資料檔案從 Adobe Experience Platform 匯出至您自己的貯體。
+建立與的即時輸出連線 [!DNL Google Cloud Storage] 以定期從Adobe Experience Platform將資料檔案匯出至您自己的貯體。
 
 ## 連線至您的 [!DNL Google Cloud Storage] 透過API或UI儲存 {#connect-api-or-ui}
 

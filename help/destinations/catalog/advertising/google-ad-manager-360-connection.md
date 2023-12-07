@@ -1,11 +1,11 @@
 ---
-title: (Beta)  [!DNL Google Ad Manager 360]  連線
+title: (Beta) [!DNL Google Ad Manager 360] 連線
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 6%
+source-wordcount: '1027'
+ht-degree: 5%
 
 ---
 

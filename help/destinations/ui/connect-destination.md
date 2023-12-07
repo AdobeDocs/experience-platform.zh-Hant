@@ -1,12 +1,11 @@
 ---
-keywords: 連線目的地；目的地連線；如何連線目的地
 title: 建立新的目的地連線
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中連線至目的地、啟用警示，以及為已連線的目的地設定行銷動作。
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---

@@ -3,9 +3,9 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1788'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Experience Platform中的某些目的地對於傳送到目的地平台或從目�
 
 建立之前 [!DNL Google Customer Match] 目的地位於Experience Platform，請確定您的 [!DNL Google Ads] 帳戶符合 [[!DNL Google Customer Match] 原則](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Google會自動允許具有合規帳戶的客戶列出。
+Google會自動將擁有合規帳戶的客戶加入允許清單。
 
 ## ID比對要求 {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## 影片概述 {#video-overview}
+
+觀看以下影片，瞭解優點以及如何對Google Customer Match啟用資料。
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## 連線到目標 {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 在 **[!UICONTROL 區段排程]** 步驟，您必須提供 [!UICONTROL 應用程式ID] 傳送時 [!DNL IDFA] 或 [!DNL GAID] 對象至 [!DNL Google Customer Match].
 
-![Google客戶比對應用程式ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![在啟用工作流程的「區段排程」步驟中反白標示的「Google客戶比對應用程式ID」欄位。](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-如需如何尋找 [!DNL App ID]，請參閱 [Google正式檔案](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+如需如何尋找 [!DNL App ID]，請參閱 [Google正式檔案](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) 或洽詢您的Google代表。
 
 ### 對應範例：啟用對象資料於 [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,17 +200,17 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 * 選取 `IDFA` 或 `GAID` 當來源名稱空間為 `IDFA` 或 `GAID`.
 * 選取 `User_ID` 當來源名稱空間是自訂名稱空間時，將名稱空間作為目標身分。
 
-![身分對應](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![在啟動工作流程的「對應」步驟中顯示的來源和目標欄位之間的身分對應。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 非雜湊名稱空間中的資料會自動透過雜湊處理 [!DNL Platform] 啟用時。
 
 屬性來源資料不會自動雜湊。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。
 
-![身分對應轉換](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![套用啟動工作流程對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## 驗證對象啟用是否成功 {#verify-activation}
 
-完成啟動流程後，切換至您的 **[!UICONTROL Google Ads]** 帳戶。 啟用的對象會在您的Google帳戶中顯示為客戶清單。 請注意，根據您的對象規模，除非有100多位活躍使用者可服務，否則不會填入某些對象。
+完成啟動流程後，切換至您的 **[!UICONTROL Google Ads]** 帳戶。 啟用的對象會在您的Google帳戶中顯示為客戶清單。 根據您的對象規模，除非有100多位活躍使用者可服務，否則部分對象不會填入。
 
 將對象對應至兩者時 [!DNL IDFA] 和 [!DNL GAID] 行動ID、 [!DNL Google Customer Match] 會為每個ID對應建立個別的對象。 您的 [!DNL Google Ads] 帳戶會顯示兩個不同的區段，一個用於 [!DNL IDFA]，另一個用於 [!DNL GAID] 對應。
 
@@ -216,9 +222,4 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-當客戶帳戶不符合 [必備條件](#google-account-prerequisites). 若要修正此問題，請聯絡Google並確認您的帳戶已加入允許清單並設定為 [!DNL Standard] 或更高許可權層級。 請參閱 [Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) 以取得詳細資訊。
-
-## 其他資源 {#additional-resources}
-
-* [整合 [!DNL Google Customer Match]  — 教學課程影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
-
+當客戶帳戶不符合 [必備條件](#google-account-prerequisites). 若要修正此問題，請聯絡Google，確認您的帳戶已加入允許清單並設定為 [!DNL Standard] 或更高許可權層級。 請參閱 [Google Ads檔案](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) 以取得詳細資訊。

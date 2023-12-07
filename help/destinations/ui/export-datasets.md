@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1739'
 ht-degree: 4%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 4%
 
 目前，您可以將資料集匯出至熒幕擷取畫面中強調並列於下方的雲端儲存空間目的地。
 
-![支援資料集匯出的目的地](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![顯示哪些目的地支援資料集匯出的目的地目錄頁面。](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -221,7 +221,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 請注意，不同應用程式的資料匯出許可權並非累加。 例如，這表示如果您購買Real-Time CDP Ultimate和Adobe Journey Optimizer Ultimate，則根據產品說明，設定檔匯出許可權將是兩個許可權中較大者。 您的容量權益的計算方式為：取用您的授權設定檔總數，再乘以Real-Time CDP Prime的500 KB或Real-Time CDP Ultimate的700 KB，以判斷您有權取得的資料量。
 
-另一方面，如果您購買Data Distiller等附加元件，您有權取得的資料匯出限制則代表產品層級和附加元件的總和。
+另一方面，如果您購買了Data Distiller等附加元件，您有權取得的資料匯出限制則代表產品層級和附加元件的總和。
 
 您可以在授權儀表板中，根據合約限制檢視及追蹤您的設定檔匯出。
 

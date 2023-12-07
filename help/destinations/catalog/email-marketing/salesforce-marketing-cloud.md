@@ -1,12 +1,11 @@
 ---
-keywords: 電子郵件；電子郵件；電子郵件；電子郵件目的地；salesforce；salesforce目的地
 title: SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud是數位行銷套件，先前稱為ExactTarget，可讓您為訪客和客戶建置和自訂歷程，以個人化其體驗。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 4%
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
@@ -42,7 +41,7 @@ ht-degree: 4%
 
 ## IP位址允許清單 {#allow-list}
 
-使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將特定IP範圍新增至允許清單。
+使用SFTP儲存設定電子郵件行銷目的地時，Adobe建議您將某些IP範圍新增到允許清單。
 
 請參閱 [SFTP目的地的IP位址允許清單](../cloud-storage/ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
 
@@ -72,7 +71,7 @@ ht-degree: 4%
    * **[!UICONTROL 網域]**：SFTP帳戶的IP位址或網域名稱；
    * **[!UICONTROL 連線埠]**：您的SFTP儲存位置使用的連線埠；
    * **[!UICONTROL 使用者名稱]**：登入您的SFTP儲存位置的使用者名稱；
-   * **[!UICONTROL ssh金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密 金鑰的格式必須為 Base64 編碼的字串，並且不得受密碼保護。
+   * **[!UICONTROL ssh金鑰]**：用來登入SFTP儲存位置的私人SSH金鑰。 私密金鑰必須格式化為Base64編碼的字串，且不得受密碼保護。
 
 * 或者，您可以附加RSA格式的公開金鑰，將PGP/GPG的加密新增至匯出的檔案，位於 **[!UICONTROL 索引鍵]** 區段。 您的公開金鑰必須寫成 [!DNL Base64] 編碼字串。
 * **[!UICONTROL 名稱]**：為您的目的地選擇相關名稱。

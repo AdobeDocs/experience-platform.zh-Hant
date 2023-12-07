@@ -2,7 +2,7 @@
 title: 檔案自助範本//將取代為您的目的地名稱
 description: 使用此範本為Adobe Experience Platform目錄中的目的地建立公開檔案。//以總覽區段中的段落取代
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1640'
 ht-degree: 2%

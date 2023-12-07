@@ -1,12 +1,11 @@
 ---
-keywords: DoubleClick競標管理員；DoubleClick競標管理員；DoubleClick；顯示和視訊360；顯示器360；視訊360；視訊360；顯示器360；顯示和視訊
 title: Google顯示和視訊360連線
-description: Display & Video 360 （先前稱為DoubleClick Bid Manager）是一種工具，用於在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
+description: Display & Video 360 （先前稱為DoubleClick Bid Manager）工具可用來跨顯示器、影片和行動庫存來源執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 4%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +20,7 @@ ht-degree: 4%
 請注意以下專屬於您的詳細資訊 [!DNL Google Display & Video 360] 目的地：
 
 * 啟用的對象是在Google平台中以程式設計方式建立的。
-* 將受眾回填啟用至 [!DNL Google Display & Video 360] 目的地會排程在對象首次對應至目的地連線的24到48小時後發生。 此更新是為了因應Google等候24小時擷取資料的原則，並旨在改善Real-Time CDP與之間的匹配率。 [!DNL Google Display & Video 360]. 請注意，這是僅適用於此目的地的後端設定，並且和 UI 中任何客戶可設定的排程選項不相關。
+* 將受眾回填啟用至 [!DNL Google Display & Video 360] 目的地會排程在對象首次對應至目的地連線的24到48小時後發生。 此更新是為了因應Google等候24小時擷取資料的原則，並旨在改善Real-Time CDP與之間的匹配率。 [!DNL Google Display & Video 360]. 這是隻適用於此目的地的後端設定，與UI中任何可由客戶設定的排程選項無關。
 
 >[!IMPORTANT]
 >
@@ -67,10 +66,10 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->必須先將列入允許清單，才能設定您的第一個 [!DNL Google Display & Video 360] Platform中的目的地。 請確定以下說明的允許清單程式已由完成 [!DNL Google] 建立目的地之前。
+>必須先將列入允許清單，才能設定您的第一個 [!DNL Google Display & Video 360] Platform中的目的地。 請確定下列說明的允許清單程式已由完成 [!DNL Google] 建立目的地之前。
 >此規則的例外情況是 [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) 客戶。 如果您已經在Audience Manager中建立了與此Google目的地的連線，則不需要再次進行允許清單程式，您可以繼續後續步驟。
 
-建立之前 [!DNL Google Display & Video 360] 在Platform中的目的地，您必須聯絡Google以要求Adobe加入允許資料提供者清單，並將您的帳戶新增至允許清單。 請聯絡Google並提供下列資訊：
+建立之前 [!DNL Google Display & Video 360] 在Platform中的目的地，您必須聯絡Google以要求Adobe加入允許的資料提供者清單，並將您的帳戶新增至允許清單。 請聯絡Google並提供下列資訊：
 
 * **帳戶ID**：Adobe的帳戶ID與Google。 帳戶ID：87933855。
 * **客戶ID**：Adobe的客戶帳戶ID與Google。 客戶ID：89690775。
@@ -97,7 +96,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->設定時 [!DNL Google Display & Video 360] 目的地，請使用您的 [!DNL Google Account Manager] 或Adobe代表以瞭解您的帳戶型別。
+>設定時 [!DNL Google Display & Video 360] 目的地，使用您的 [!DNL Google Account Manager] 或Adobe代表以瞭解您的帳戶型別。
 
 ### 啟用警示 {#enable-alerts}
 

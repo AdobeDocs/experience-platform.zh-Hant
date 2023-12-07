@@ -3,9 +3,9 @@ keywords: crm；CRM；crm目的地；salesforce crm；salesforce crm目的地
 title: Salesforce CRM連線
 description: Salesforce CRM目的地可讓您匯出帳戶資料，並在Salesforce CRM中根據您的業務需求加以啟用。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) 是熱門的客戶關係管理(CRM)平台，並支援下列專案：
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) 是熱門的客戶關係管理(CRM)平台，並支援底下所述的設定檔型別：
 
 * [銷售機會](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm)  — 潛在客戶是可能對您銷售的產品或服務感興趣（或不感興趣）的個人或公司名稱。
 * [連絡人](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm)  — 聯絡人是指您的代表已建立關係且已取得潛在客戶資格的個人。
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 ## 使用案例 {#use-cases}
 
-行銷人員可以根據使用者Adobe Experience Platform設定檔中的屬性，將個人化體驗提供給使用者。 您可以從您的離線資料建立對象，並將這些對象傳送至Salesforce CRM，以便在Adobe Experience Platform中更新對象和設定檔後，立即顯示在使用者的摘要中。
+行銷人員可以根據使用者Adobe Experience Platform設定檔中的屬性，將個人化體驗提供給使用者。 您可以從您的離線資料建立受眾，並將這些受眾傳送至Salesforce CRM，以便在Adobe Experience Platform中更新受眾和設定檔後立即更新CRM會籍。
 
 ## 先決條件 {#prerequisites}
 
@@ -127,7 +127,7 @@ ht-degree: 1%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| `SalesforceId` | 此 [!DNL Salesforce CRM] 您透過區段匯出或更新之聯絡人或潛在客戶身分的識別碼。 | 必要 |
+| `SalesforceId` | 此 [!DNL Salesforce CRM] 您透過區段匯出或更新之聯絡人或潛在客戶身分的識別碼。 | 強制 |
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
