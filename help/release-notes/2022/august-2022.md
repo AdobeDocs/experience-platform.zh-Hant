@@ -2,16 +2,16 @@
 title: Adobe Experience Platform發行說明2022年8月
 description: Adobe Experience Platform 2022 年 8 月版發行說明。
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 7f5a1d8e50ff030b2abe04b5155f28b8c8b6fbf9
+source-git-commit: 3069bdb3592ac1cd3fd7fe4f7f9234d5be56547d
 workflow-type: tm+mt
-source-wordcount: '2082'
-ht-degree: 28%
+source-wordcount: '1999'
+ht-degree: 27%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 24 月 8 日**
+**發行日期： 2022年8月24日**
 
 Adobe Experience Platform 現有功能的更新：
 
@@ -116,7 +116,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 類別 | [[!UICONTROL AJO實體類別]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity.schema.json) | 以記錄為基礎的類別，可建立Adobe Journey Optimizer的查詢結構。 |
+| 類別 | [[!UICONTROL AJO實體類別]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | 以記錄為基礎的類別，可建立Adobe Journey Optimizer的查詢結構。 |
 | 欄位群組 | [[!UICONTROL Workfront工作物件]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | 參考Adobe Workfront所有較低層級物件特定欄位群組的包裝函式欄位群組。 |
 
 {style="table-layout:auto"}
@@ -133,7 +133,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | 資料類型 | [[!UICONTROL Qoe 資料細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | 新屬性 `framesPerSecond` 已新增。 |
 | 資料類型 | [[!UICONTROL 工作階段細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | `sdkVersion` 已重新命名為 `appVersion`。`meta:enum` 和 `description` 欄位也已更新。 |
 | 資料型別和欄位群組 | (多個) | 數個媒體資料型別和欄位群組有新欄位和更新的說明。 請參閱下列內容 [提取請求](https://github.com/adobe/xdm/pull/1582/files) 以取得詳細資訊。 |
-| (全部) | (多個) | 所有包含 `enum` 欄位現在也包含對應的 `meta:enum` 表示每個限制之顯示值的欄位。 請參閱下列內容 [提取請求](https://github.com/adobe/xdm/pull/1601/files) 以取得詳細資訊。 |
+| （全部） | (多個) | 所有包含 `enum` 欄位現在也包含對應的 `meta:enum` 表示每個限制之顯示值的欄位。 請參閱下列內容 [提取請求](https://github.com/adobe/xdm/pull/1601/files) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}
 

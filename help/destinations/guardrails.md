@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；啟動；疑難排解；護欄；指引；限制
-title: 啟用資料的預設護欄
+title: 資料啟用的預設護欄
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 1%
 
 ---
 
-# 啟用資料的護欄
+# 資料啟用的護欄
 
 此頁面提供啟動行為的預設使用量和速率限制。 檢閱下列護欄時，系統假設您已正確設定 [已連線至目的地](/help/destinations/ui/connect-destination.md).
 
