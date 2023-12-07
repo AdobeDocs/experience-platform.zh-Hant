@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
 workflow-type: tm+mt
-source-wordcount: '5221'
-ht-degree: 3%
+source-wordcount: '5080'
+ht-degree: 2%
 
 ---
 
-# 資料準備對應函數
+# 資料準備對應函式
 
 「資料準備」函式可用於根據來源欄位中輸入的內容計算值。
 
@@ -52,7 +52,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | substr | 傳回指定長度的子字串。 | <ul><li>輸入： **必填** 輸入字串。</li><li>START_INDEX： **必填** 子字串開始的輸入字串索引。</li><li>長度： **必填** 子字串的長度。</li></ul> | substr(INPUT， START_INDEX， LENGTH) | substr（「這是子字串測試」，7、8） | 「一個子集」 |
 | lower /<br>lcase | 將字串轉換為小寫。 | <ul><li>輸入： **必填** 將轉換為小寫的字串。</li></ul> | lower(INPUT) | lower(&quot;HeLow&quot;)<br>lcase(「HeLo」) | &quot;hello&quot; |
 | upper /<br>ucase | 將字串轉換為大寫。 | <ul><li>輸入： **必填** 將轉換為大寫的字串。</li></ul> | upper(INPUT) | upper(「HeLor」)<br>Ucase(「HeLlO」) | &quot;HELLO&quot; |
-| split | 在分隔符號上分割輸入字串。 下列分隔符號 **需要** 將逸出 `\`： `\`. 如果您包含多個分隔字元，該字串將會分割為 **任何** 字串中存在的分隔字元數量。 | <ul><li>輸入： **必填** 要分割的輸入字串。</li><li>分隔符號： **必填** 用來分割輸入的字串。</li></ul> | split(INPUT， SEPARATOR) | split(「Hello world」，「 」) | `["Hello", "world"]` |
+| split | 在分隔符號上分割輸入字串。 下列分隔符號 **需要** 將逸出 `\`： `\`. 如果您包含多個分隔字元，該字串將會分割為 **任何** 字串中存在的分隔字元數量。 **注意：** 此函式只會從字串傳回非Null的索引，無論是否有分隔符號。 如果產生的陣列中需要所有索引（包括null），請改用「爆炸」函式。 | <ul><li>輸入： **必填** 要分割的輸入字串。</li><li>分隔符號： **必填** 用來分割輸入的字串。</li></ul> | split(INPUT， SEPARATOR) | split(「Hello world」，「 」) | `["Hello", "world"]` |
 | 加入 | 使用分隔符號聯結物件清單。 | <ul><li>分隔符號： **必填** 用來加入物件的字串。</li><li>物件： **必填** 要聯結的字串陣列。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | 「Hello world」 |
 | lpad | 將字串的左側與其他指定字串貼齊。 | <ul><li>輸入： **必填** 即將填補的字串。 此字串可以是Null。</li><li>計數： **必填** 要填補的字串大小。</li><li>內距： **必填** 用來填補輸入的字串。 如果為Null或空白，則會視為單一空格。</li></ul> | lpad(INPUT， COUNT， PADDING) | lpad(&quot;bat&quot;， 8， &quot;yz&quot;) | &quot;yzybat&quot; |
 | rpad | 將字串的右側與其他指定字串貼齊。 | <ul><li>輸入： **必填** 即將填補的字串。 此字串可以是Null。</li><li>計數： **必填** 要填補的字串大小。</li><li>內距： **必填** 用來填補輸入的字串。 如果為Null或空白，則會視為單一空格。</li></ul> | rpad（輸入、計數、內距） | rpad(&quot;bat&quot;， 8， &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -118,7 +118,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 擷取目前時間。 | | now() | now() | `2021-10-26T10:10:24Z` |
-| 時間戳記 | 擷取目前的Unix時間。 | | 時間戳記() | 時間戳記() | 1571850624571 |
+| 時間戳記 | 擷取目前的Unix時間。 | | timestamp() | timestamp() | 1571850624571 |
 | 格式 | 根據指定的格式設定輸入日期的格式。 | <ul><li>日期： **必填** 要格式化的輸入日期（ZonedDateTime物件）。</li><li>格式： **必填** 您希望將日期變更為的格式。</li></ul> | format（日期，格式） | format(2019-10-23T11:24:00+00:00， &quot;yyyy-MM-dd HH:mm:ss&quot;) | `2019-10-23 11:24:35` |
 | dformat | 根據指定格式將時間戳記轉換為日期字串。 | <ul><li>時間戳記： **必填** 您要格式化的時間戳記。 這是以毫秒為單位寫入。</li><li>格式： **必填** 您希望時間戳記變為的格式。</li></ul> | dformat(TIMESTAMP， FORMAT) | dformat(1571829875000， &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | `2019-10-23T11:24:35.000Z` |
 | 日期 | 將日期字串轉換為ZonedDateTime物件（ISO 8601格式）。 | <ul><li>日期： **必填** 代表日期的字串。</li><li>格式： **必填** 代表來源日期格式的字串。**注意：** 這可以 **非** 代表您要將日期字串轉換為的格式。 </li><li>預設日期： **必填** 如果提供的日期為空，則傳回預設日期。</li></ul> | date(DATE， FORMAT， DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;， &quot;yyyy-MM-dd HH：mm&quot;， now()) | `2019-10-23T11:24:00Z` |
@@ -166,13 +166,13 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | 合併 | 傳回給定陣列中的第一個非null物件。 | <ul><li>輸入： **必填** 您要尋找的第一個非null物件的陣列。</li></ul> | coalesce(INPUT) | coalesce(null， null， null， first， null， second) | &quot;first&quot; |
 | 第一 | 擷取給定陣列的第一個元素。 | <ul><li>輸入： **必填** 您要尋找其第一個元素的陣列。</li></ul> | first(INPUT) | first(&quot;1&quot;， &quot;2&quot;， &quot;3&quot;) | &quot;1&quot; |
-| 上次 | 擷取給定陣列的最後一個元素。 | <ul><li>輸入： **必填** 您要尋找其最後一個元素的陣列。</li></ul> | last(INPUT) | last(&quot;1&quot;， &quot;2&quot;， &quot;3&quot;) | &quot;3&quot; |
+| 上次 | 擷取給定陣列的最後一個元素。 | <ul><li>輸入： **必填** 您要尋找其最後一個元素的陣列。</li></ul> | last(INPUT) | last(&quot;1&quot;， &quot;2&quot;， &quot;3&quot;) | 「3」 |
 | add_to_array | 將元素新增至陣列結尾。 | <ul><li>陣列： **必填** 您要新增元素的陣列。</li><li>VALUES：您要附加至陣列的元素。</li></ul> | add_to_array&#x200B;(ARRAY， VALUES) | add_to_array&#x200B;([&#39;a&#39;， &#39;b&#39;]， &#39;c&#39;， &#39;d&#39;) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;] |
 | join_array | 將陣列彼此結合。 | <ul><li>陣列： **必填** 您要新增元素的陣列。</li><li>VALUES：您要附加至父陣列的陣列。</li></ul> | join_arrays&#x200B;(ARRAY， VALUES) | join_arrays&#x200B;([&#39;a&#39;， &#39;b&#39;]， [&#39;c&#39;]， [&#39;d&#39;， &#39;e&#39;]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;] |
 | to_array | 採用輸入清單並將其轉換為陣列。 | <ul><li>INCLUDE_NULLS： **必填** 表示是否要在回應陣列中包含null的布林值。</li><li>值： **必填** 要轉換為陣列的元素。</li></ul> | to_array&#x200B;(INCLUDE_NULLS， VALUES) | to_array(false， 1， null， 2， 3) | `[1, 2, 3]` |
 | 大小_of | 傳回輸入的大小。 | <ul><li>輸入： **必填** 您嘗試尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | 此函式用於將整個輸入陣列中的所有元素附加到Profile中陣列的結尾。 此函式為 **僅限** 適用於更新期間。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必填** 在設定檔中附加陣列的陣列。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | 此函式用於取代陣列中的元素。 此函式為 **僅限** 適用於更新期間。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必填** 用來取代設定檔中陣列的陣列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| upsert_array_append | 此函式用於將整個輸入陣列中的所有元素附加到Profile中陣列的結尾。 此函式為 **僅限** 適用於更新期間。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必填** 在設定檔中附加陣列的陣列。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123， 456] |
+| upsert_array_replace | 此函式用於取代陣列中的元素。 此函式為 **僅限** 適用於更新期間。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必填** 用來取代設定檔中陣列的陣列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123， 456] |
 
 {style="table-layout:auto"}
 
@@ -328,15 +328,15 @@ address.line1 -> addr.addrLine1
 | $ | %24 |
 | % | %25 |
 | &amp; | %26 |
-| &#39; | %27 |
+| 『 | %27 |
 | ( | %28 |
 | ) | %29 |
 | * | %2A |
 | + | %2B |
-| , | %2C |
+| ， | %2C |
 | / | %2F |
 | ： | %3A |
-| ; | %3B |
+| ； | %3B |
 | &lt; | %3C |
 | = | %3D |
 | > | %3E |
@@ -346,7 +346,7 @@ address.line1 -> addr.addrLine1
 | | | %5C |
 | ] | %5D |
 | ^ | %5E |
-| ` | %60 |
+| 『 | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}
@@ -377,7 +377,7 @@ address.line1 -> addr.addrLine1
 | 自動機制 | 造訪網站的機器人。 |
 | 機器人行動裝置 | 造訪網站但表示希望被視為行動訪客的機器人。 |
 | 自動機制模擬器 | 造訪網站的機器人，假扮成機器人 [!DNL Google]，但事實並非如此。 **注意**：在大多數情況下，機器人模仿者確實是機器人。 |
-| Cloud | 雲端型應用程式。 這些不是機器人或駭客，而是需要連線的應用程式。 其中包括 [!DNL Mastodon] 伺服器。 |
+| 雲端 | 雲端型應用程式。 這些不是機器人或駭客，而是需要連線的應用程式。 其中包括 [!DNL Mastodon] 伺服器。 |
 | 駭客 | 若在中偵測到指令碼，則會使用此裝置值。 `useragent` 字串。 |
 
 {style="table-layout:auto"}
