@@ -3,9 +3,9 @@ title: 在Adobe Experience Platform Web SDK中進行偵錯
 description: 瞭解如何在Experience Platform Web SDK中切換偵錯功能。
 keywords: 偵錯web sdk；偵錯；設定；設定命令；偵錯命令；edgeConfigId；setDebug；debugEnabled；偵錯；
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 * `configure` 命令
 * `setDebug` 命令
 * 查詢字串引數
-* 切換在Adobe Experience Platform Debugger中啟用偵錯。 Adobe Experience Platform是一款功能強大的工具，可檢查您的網頁，並協助您偵錯Experience Cloud產品的實施問題。 Adobe Experience Platform Debugger可同時作為 [鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 和 [Firefox](https://addons.mozilla.org/zh-TW/firefox/addon/adobe-experience-platform-dbg/) 副檔名。 您可以從AEP Web SDK區段的設定標籤啟用偵錯。
+* 切換在Adobe Experience Platform Debugger中啟用偵錯。 Adobe Experience Platform是一款功能強大的工具，可檢查您的網頁，並協助您偵錯Experience Cloud產品的實施問題。 Adobe Experience Platform Debugger的可用形式為 [鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 副檔名。 您可以從AEP Web SDK區段的設定標籤啟用偵錯。
 
 ![顯示設定畫面的Experience PlatformDebugger UI影像。](../assets/enable-debugging.png)
 

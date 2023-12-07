@@ -2,7 +2,7 @@
 title: Zendesk事件轉送擴充功能
 description: Adobe Experience Platform的Zendesk事件轉送擴充功能。
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 4%
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 # [!DNL Zendesk] Events API擴充功能概述
 
-[Zendesk](https://www.zendesk.com) 是客戶服務解決方案與銷售工具。 Zendesk [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能可運用 [[!DNL Zendesk Events API]](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) 將事件從Adobe Experience Platform Edge Network傳送到Zendesk進行進一步處理。 您可以使用擴充功能來收集客戶設定檔互動，以用於下游分析和動作。
+[Zendesk](https://www.zendesk.com) 是客戶服務解決方案與銷售工具。 Zendesk [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能可運用 [[!DNL Zendesk Events API]](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) 將事件從Adobe Experience Platform Edge Network傳送到Zendesk進行進一步處理。 您可以使用擴充功能來收集客戶設定檔互動，以用於下游分析和動作。
 
 本文介紹如何在UI中安裝和設定擴充功能。
 
@@ -66,7 +66,7 @@ ht-degree: 4%
 
 ### `event` 金鑰
 
-`event` 是JSON物件，代表使用者觸發的事件。 請參閱Zendesk檔案，位於 [事件剖析](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/) 以取得擷取之屬性的詳細資訊， `event` 物件。
+`event` 是JSON物件，代表使用者觸發的事件。 請參閱Zendesk檔案，位於 [事件剖析](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/) 以取得擷取之屬性的詳細資訊， `event` 物件。
 
 下列索引鍵可在 `event` 物件對應至資料元素時：
 
@@ -82,7 +82,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->請參閱 [[!DNL Zendesk Events API] 檔案](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/) 以取得事件屬性的其他指引。
+>請參閱 [[!DNL Zendesk Events API] 檔案](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) 以取得事件屬性的其他指引。
 
 ### `profile` 金鑰
 
@@ -147,10 +147,10 @@ ht-degree: 4%
 
 本檔案說明如何在UI中安裝和設定Zendesk事件轉送擴充功能。 如需在Zendesk中收集事件資料的詳細資訊，請參閱官方檔案：
 
-* [事件快速入門](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
+* [事件快速入門](https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events/)
 * [Zendesk Events API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
-* [關於事件API](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
-* [事件剖析](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
+* [關於事件API](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/)
+* [事件剖析](https://developer.zendesk.com/documentation/ticketing/events/anatomy-of-an-event/)
 * [Zendesk設定檔API](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
 * [關於設定檔API](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
 * [個人資料剖析](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

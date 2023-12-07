@@ -1,11 +1,11 @@
 ---
 title: Turbine自由變數
-description: 瞭解Turbine物件，這是一個自由變數，提供Adobe Experience Platform標籤執行階段專用的資訊和公用程式。
+description: 瞭解Turbine物件，這是一個自由變數，提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式。
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 49%
+source-wordcount: '606'
+ht-degree: 48%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 49%
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
 
-`turbine` 物件是您擴充功能的程式庫模組範圍內的「自由變數」。它提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式，且程式庫模組隨時都可加以使用（無需使用） `require()`.
+`turbine` 物件是您擴充功能的程式庫模組範圍內的「自由變數」。此變數提供Adobe Experience Platform標籤執行階段的特定資訊和公用程式，且程式庫模組隨時都可加以使用（無需使用） `require()`.
 
 ## `buildInfo`
 
@@ -67,7 +67,7 @@ console.log(turbine.environment.stage);
 
 表示標籤偵錯目前是否啟用的布林值。
 
-如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用下列方式記錄訊息： `turbine.logger` 以確保在啟用標籤偵錯功能時，您的訊息只會列印至主控台。
+如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用來記錄訊息 `turbine.logger` 以確保在啟用標籤偵錯功能時，您的訊息只會列印至主控台。
 
 ## `getDataElementValue`
 
@@ -85,7 +85,7 @@ var extensionSettings = turbine.getExtensionSettings();
 
 傳回上次從[擴充功能組態](./configuration.md)檢視儲存的設定物件。
 
-請注意，傳回的設定物件中包含的值可能來自資料元素。因此，如果資料元素的值已變更，則在不同時間呼叫 `getExtensionSettings()` 可能會產生不同的結果。若要取得最新的值，請儘可能久地等候後再呼叫 `getExtensionSettings()`.
+請注意，傳回的設定物件中包含的值可能來自資料元素。因此，如果資料元素的值已變更，則在不同時間呼叫 `getExtensionSettings()` 可能會產生不同的結果。若要取得最新的值，請儘可能久地等候一段時間，然後再呼叫 `getExtensionSettings()`.
 
 ## `getHostedLibFileUrl` {#get-hosted-lib-file}
 
@@ -112,7 +112,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-記錄公用程式用於將訊息記錄到主控台。 只有在使用者開啟除錯功能時，訊息才會顯示在主控台中。開啟偵錯功能的建議方式，是使用 [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). 或者，使用者可以執行以下命令 `_satellite.setDebug(true)` 瀏覽器開發人員控制檯內。 記錄器具有下列方法：
+記錄公用程式用於將訊息記錄到主控台。 只有在使用者開啟除錯功能時，訊息才會顯示在主控台中。開啟偵錯功能的建議方式，是使用 [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). 作為替代方法，使用者可以執行以下命令 `_satellite.setDebug(true)` 在瀏覽器開發人員控制檯內。 記錄器具有下列方法：
 
 * `logger.log(message: string)`：將訊息記錄到主控台。
 * `logger.info(message: string)`：將資訊性訊息記錄到主控台。
@@ -123,9 +123,9 @@ turbine.logger.error('Error!');
 
 ## `onDebugChanged`
 
-將回呼函式傳入 `turbine.onDebugChanged`，標籤會在切換偵錯時呼叫您的回呼。 標籤會將布林值傳至回呼函式，如果啟用偵錯，則值為true；如果禁用偵錯，則值為false。
+將回呼函式傳入 `turbine.onDebugChanged`，標籤會在切換偵錯時呼叫您的回呼。 標籤會將布林值傳至回呼函式，若已啟用偵錯，則值為true；若停用偵錯，則值為false。
 
-如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用下列方式記錄訊息： `turbine.logger` 和標籤可確保在啟用標籤偵錯功能時，訊息只會列印至主控台。
+如果您只是要記錄訊息，則不太可能需要使用此功能。請一律使用來記錄訊息 `turbine.logger` 和標籤可確保在啟用標籤偵錯功能時，訊息只會列印至主控台。
 
 ## `propertySettings` {#property-settings}
 
@@ -137,8 +137,8 @@ console.log(turbine.propertySettings.domains);
 
 * `propertySettings.domains: Array<String>`
 
-   屬性涵蓋的網域陣列。
+  屬性涵蓋的網域陣列。
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   擴充功能開發人員不應介入這項設定。
+  擴充功能開發人員不應介入這項設定。
