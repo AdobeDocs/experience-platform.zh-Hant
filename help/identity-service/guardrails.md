@@ -3,10 +3,10 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 1%
+source-wordcount: '1507'
+ht-degree: 0%
 
 ---
 
@@ -37,14 +37,18 @@ ht-degree: 1%
 | 自訂名稱空間數量 | None | 您可以建立的自訂名稱空間數量沒有限制。 |
 | 名稱空間顯示名稱或身分符號的字元數 | None | 名稱空間顯示名稱或身分符號的字元數沒有限制。 |
 
+{style="table-layout:auto"}
+
 ### 身分值驗證
 
 下表概述您必須遵循的現有規則，以確保身分值成功驗證。
 
 | 命名空間 | 驗證規則 | 違反規則時的系統行為 |
 | --- | --- | --- |
-| ECID | <ul><li>ECID的身分值必須剛好38個字元。</li><li>ECID的身分值必須僅由數字組成。</li><li>身分值不可以是「null」、「anonymous」、「invalid」或空字串（例如：「 」、「」、「 」）。</li></ul> | <ul><li>如果ECID的身分值不完全是38個字元，則會略過記錄。</li><li>如果ECID的身分值包含非數字字元，則會略過記錄。</li><li>此身分將會遭到封鎖，無法內嵌。</li></ul> |
-| 非ECID | 身分值不可超過1024個字元。 | 如果身分值超過1024個字元，則會略過記錄。 |
+| ECID | <ul><li>ECID的身分值必須剛好38個字元。</li><li>ECID的身分值必須僅由數字組成。</li></ul> | <ul><li>如果ECID的身分值不完全是38個字元，則會略過記錄。</li><li>如果ECID的身分值包含非數字字元，則會略過記錄。</li></ul> |
+| 非ECID | <ul><li>身分值不可超過1024個字元。</li><li>身分值不可以是「null」、「anonymous」、「invalid」或空字串（例如：「 」、「」、「 」）。</li></ul> | <ul><li>如果身分值超過1024個字元，則會略過記錄。</li><li>此身分將會遭到封鎖，無法內嵌。</li></ul> |
+
+{style="table-layout:auto"}
 
 ### 身分名稱空間擷取
 
@@ -105,7 +109,7 @@ Adobe如果您的生產沙箱包含：
 
 *圖表附註：*
 
-* `t` = 時間戳記.
+* `t` =時間戳記。
 * 時間戳記的值對應至指定身分的造訪間隔。 例如， `t1` 代表第一個連結的身分（最舊）和 `t51` 將代表最新的連結身分。
 
 在此範例中，Identity Service會先刪除具有最舊時間戳記的現有身分，之後才能使用新身分更新左側的圖形。 但是，由於最舊的身分識別是裝置ID，Identity Service會略過該身分識別，直到它到達刪除優先順序清單中型別較高的名稱空間(在此例中為 `ecid-3`. 一旦移除具有更高刪除優先順序型別的最舊身分識別，圖表就會更新為新連結。 `ecid-51`.
