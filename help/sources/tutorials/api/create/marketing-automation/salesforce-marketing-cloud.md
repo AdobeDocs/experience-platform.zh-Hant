@@ -2,9 +2,9 @@
 title: 使用流量服務API建立SalesforceMarketing Cloud基礎連線
 description: 瞭解如何使用流量服務API，針對Experience Platform驗證您的SalesforceMarketing Cloud帳戶。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '491'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 4%
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `host` | 應用程式的主機伺服器。 這通常是您的子網域。 **注意：** 輸入您的 `host` 值，您只需要指定子網域而非整個URL。 例如，如果您的主機URL為 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`，則您只需輸入 `acme-ab12c3d4e5fg6hijk7lmnop8qrst` 作為您的主機值。 |
+| `host` | 應用程式的主機伺服器。 這通常是您的子網域。 **注意：** 輸入您的 `host` 值，您必須指定 `{subdomain}.rest.marketingcloudapis.com`. 例如，如果您的主機URL為 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`，則您只需輸入 `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` 作為您的主機值。 |
 | `clientId` | 與您的關聯的使用者端ID [!DNL Salesforce Marketing Cloud] 應用程式。 |
 | `clientSecret` | 與您的關聯的使用者端密碼 [!DNL Salesforce Marketing Cloud] 應用程式。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Salesforce Marketing Cloud] 為： `ea1c2a08-b722-11eb-8529-0242ac130003`. |
