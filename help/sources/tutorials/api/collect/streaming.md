@@ -5,9 +5,9 @@ title: 使用流量服務API為原始資料建立串流資料流
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將其帶入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1138'
 ht-degree: 2%
 
 ---
@@ -481,6 +481,86 @@ curl -X POST \
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## 發佈資料以供擷取
+
+檢視下列裝載範例，以取得您可傳送以進行內嵌的原始或XDM相容JSON範例。
+
+>[!TIP]
+>
+>以下範例適用於所有三項：
+>
+>- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+>- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+>- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB 原始資料]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB XDM資料]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
 
 ## 後續步驟
 
