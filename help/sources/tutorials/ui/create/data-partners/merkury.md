@@ -1,8 +1,9 @@
 ---
 title: 在UI中建立Merkury Enterprise身分解析來源連線和資料流
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury企業身分識別來源連線。
+last-substantial-update: 2023-12=12
 badge: Beta
-source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
+source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
 workflow-type: tm+mt
 source-wordcount: '2015'
 ht-degree: 0%
