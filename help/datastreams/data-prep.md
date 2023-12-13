@@ -1,13 +1,13 @@
 ---
 title: 資料收集的資料準備
 description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件綱要。
-source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 64%
+source-wordcount: '1192'
+ht-degree: 59%
 
 ---
-
 
 # 資料收集的資料準備
 
@@ -154,7 +154,7 @@ ht-degree: 64%
 
 您可以選取將物件以檔案形式上傳的選項，或選擇將原始物件貼到所提供的文字方塊中。如果 JSON 有效，則會在右側面板中顯示預覽綱要。選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
-![預期傳入資料的 JSON 範例](assets/data-prep/select-data.png)
+![預期傳入資料的JSON範例。](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -171,25 +171,25 @@ ht-degree: 64%
 
 若要建立對應規則，請選取 **[!UICONTROL 新增對應]**.
 
-![新增對應](assets/data-prep/add-new-mapping.png)
+![新增對應。](assets/data-prep/add-new-mapping.png)
 
 選取來源圖示 (![來源圖示](assets/data-prep/source-icon.png))，然後在顯示的對話框中選取要在所提供的畫布中對應的來源欄位。選擇欄位後，請使用「**[!UICONTROL 選取]**」按鈕以繼續進行。
 
-![選取要在來源綱要中對應的欄位](assets/data-prep/source-mapping.png)
+![選取要在來源結構描述中對應的欄位。](assets/data-prep/source-mapping.png)
 
 接下來，選取綱要圖示 (![綱要圖示](assets/data-prep/schema-icon.png))，開啟目標事件綱要的類似對話框。選擇要將資料對應到的欄位，然後再確認「**[!UICONTROL 選取]**」。
 
-![選取要在目標綱要中對應的欄位](assets/data-prep/target-mapping.png)
+![選取要在目標結構描述中對應的欄位。](assets/data-prep/target-mapping.png)
 
 對應頁面會隨即重新顯示，並顯示已完成的欄位對應。**[!UICONTROL 對應流程]**&#x200B;區段會更新，以反映已成功對應的欄位總數。
 
-![已成功對應的欄位和反映的進度](assets/data-prep/field-mapped.png)
+![欄位已成功對應，進度已反映。](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >如果要將物件陣列 (在來源欄位中) 對應到不同物件的陣列 (在目標欄位中)，請在來源和目的地欄位路徑中的陣列名稱後新增 `[*]`，如下所示。
 >
->![陣列物件對應](assets/data-prep/array-object-mapping.png)
+>![陣列物件對應。](assets/data-prep/array-object-mapping.png)
 
 ### 匯入現有對應規則 {#import-mapping}
 
@@ -201,11 +201,11 @@ ht-degree: 64%
 
 若要開始，請選取&#x200B;**[!UICONTROL 匯入對應]**。
 
-![影像顯示已選取的[!UICONTROL 匯入對應]按鈕](assets/data-prep/import-mapping-button.png)
+![正在選取匯入對應按鈕。](assets/data-prep/import-mapping-button.png)
 
 在顯示的對話框中，選取要匯入其對應規則的資料流。選擇資料流後，請選取&#x200B;**[!UICONTROL 預覽]**。
 
-![影像顯示已選取的現有資料流](assets/data-prep/select-mapping-rules.png)
+![選取現有的資料流。](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ ht-degree: 64%
 
 下一個畫面會顯示選取的資料流已儲存之對應規則的預覽。請確保顯示的對應符合您的預期，然後選取&#x200B;**[!UICONTROL 匯入]**，以確認對應並將其新增到新資料流。
 
-![影像顯示要匯入的對應規則](assets/data-prep/import-mapping-rules.png)
+![要匯入的對映規則。](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >

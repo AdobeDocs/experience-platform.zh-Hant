@@ -4,9 +4,9 @@ description: 瞭解如何為資料串流設定機器人偵測，以區分人類�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -47,24 +47,22 @@ ht-degree: 0%
 
 您可以在建立資料流設定後設定機器人偵測。 請參閱檔案，瞭解如何 [建立和設定資料串流](configure.md)，然後依照下列指示，將機器人偵測功能新增至資料流。
 
-
 移至資料串流清單，並選取您要新增機器人偵測的資料串流。
 
-![資料串流UI的影像](assets/bot-detection/datastream-list.png)
+![顯示資料流清單的資料流使用者介面。](assets/bot-detection/datastream-list.png)
 
 在資料流詳細資訊頁面中，選取 **[!UICONTROL 機器人偵測]** 選項。
 
-![反白顯示「機器人偵測」選項的「資料串流」UI影像](assets/bot-detection/bot-detection.png)
+![在資料串流使用者介面中反白顯示的機器人偵測選項。](assets/bot-detection/bot-detection.png)
 
 此 **[!UICONTROL 機器人偵測規則]** 頁面隨即顯示。
 
-![反白顯示「機器人偵測」選項的「資料串流」UI影像](assets/bot-detection/bot-detection-page.png)
+![資料流設定頁面中的機器人偵測設定。](assets/bot-detection/bot-detection-page.png)
 
 在「機器人偵測規則」頁面中，您可以使用下列功能來設定機器人偵測：
 
 * 使用 [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * 建立您自己的機器人偵測規則。
-
 
 ### 使用IAB/ABC國際編目程式與機器人清單 {#iab-list}
 
@@ -72,8 +70,7 @@ ht-degree: 0%
 
 若要設定您的資料串流以使用 [!DNL IAB/ABC International Spiders and Bots List]，切換 **[!UICONTROL 在此資料流中使用IAB/ABC國際編目程式和機器人清單進行機器人偵測]** 選項，然後選取「儲存」以將機器人偵測設定套用至資料流。
 
-![啟用IAB編目程式和機器人清單的機器人偵測設定畫面影像。](assets/bot-detection/bot-detection-list.png)
-
+![IAB編目程式和機器人清單已啟用。](assets/bot-detection/bot-detection-list.png)
 
 ### 建立機器人偵測規則 {#rules}
 
@@ -83,7 +80,7 @@ ht-degree: 0%
 
 如果您需要更精細的機器人偵測規則，可將IP條件與請求標頭條件結合。 機器人偵測規則可以使用以下標頭：
 
-| HTTP 標頭 | 說明 |
+| HTTP 標題 | 說明 |
 | --- | --- |
 | `user-agent` | 標頭，可讓伺服器和網路對等識別請求使用者代理程式的應用程式、作業系統、廠商和/或版本。 |
 | `content-type` | 表示資源的原始媒體型別（在套用用於傳送的任何內容編碼之前）。 |
@@ -97,25 +94,21 @@ ht-degree: 0%
 | `sec-ch-ua-bitness` | 提供使用者代理程式基礎CPU架構的「位元」。 這是整數或記憶體位址的位元大小，通常是64或32位元。 |
 | `sec-ch-ua-wow64` | 指出使用者代理程式二進位檔是否在64位元Windows上以32位元模式執行。 |
 
-
-
-
-
 若要建立機器人偵測規則，請遵循下列步驟：
 
 1. 選取 **[!UICONTROL 新增規則]**.
 
-   ![反白顯示「新增規則」按鈕的機器人偵測設定畫面影像。](assets/bot-detection/bot-detection-new-rule.png)
+   ![機器人偵測設定畫面會醒目顯示「新增規則」按鈕。](assets/bot-detection/bot-detection-new-rule.png)
 
 2. 在「 」中輸入規則的名稱 **[!UICONTROL 規則名稱]** 欄位。
 
-   ![反白顯示規則名稱的機器人偵測規則畫面影像。](assets/bot-detection/rule-name.png)
+   ![反白顯示規則名稱的機器人偵測規則畫面。](assets/bot-detection/rule-name.png)
 
 3. 選取 **[!UICONTROL 新增IP條件]** 以新增以IP為基礎的規則。 您可以依IP位址或IP位址範圍定義規則。
 
-   ![IP位址欄位反白顯示的機器人偵測規則畫面影像。](assets/bot-detection/ip-address-rule.png)
+   ![機器人偵測規則畫面，其中的IP位址欄位會反白顯示。](assets/bot-detection/ip-address-rule.png)
 
-   ![IP範圍欄位反白顯示的機器人偵測規則畫面影像。](assets/bot-detection/ip-range-rule.png)
+   ![機器人偵測規則畫面，其中的IP範圍欄位會反白顯示。](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
@@ -123,15 +116,15 @@ ht-degree: 0%
 
 4. 如果您想要將標題條件新增至規則，請選取 **[!UICONTROL 新增標頭條件群組]**，然後選取您要規則使用的標頭。
 
-   ![反白標頭條件的機器人偵測規則畫面影像。](assets/bot-detection/header-conditions.png)
+   ![反白標頭條件的機器人偵測規則畫面。](assets/bot-detection/header-conditions.png)
 
    然後，新增用於所選標頭的條件。
 
-   ![反白標頭條件的機器人偵測規則畫面影像。](assets/bot-detection/header-condition-rule.png)
+   ![反白標頭條件的機器人偵測規則畫面。](assets/bot-detection/header-condition-rule.png)
 
 5. 設定所需的機器人偵測規則後，選取 **[!UICONTROL 儲存]** 將規則套用至資料流。
 
-   ![反白標頭條件的機器人偵測規則畫面影像。](assets/bot-detection/bot-detection-save.png)
+   ![反白標頭條件的機器人偵測規則畫面。](assets/bot-detection/bot-detection-save.png)
 
 
 ## 機器人偵測規則範例 {#examples}
@@ -142,19 +135,19 @@ ht-degree: 0%
 
 若要將所有來自特定IP位址的請求標示為機器人流量，請建立新的機器人偵測規則，以評估單一IP位址，如下圖所示。
 
-![根據一個IP位址的機器人偵測規則影像。](assets/bot-detection/bot-detection-one-ip.png)
+![根據一個IP位址的機器人偵測規則。](assets/bot-detection/bot-detection-one-ip.png)
 
 ### 根據兩個IP位址進行機器人偵測 {#two-ip}
 
 若要將所有來自兩個特定IP位址其中一個的請求標示為機器人流量，請建立新的機器人偵測規則，以評估兩個IP位址，如下圖所示。
 
-![根據兩個IP位址的機器人偵測規則影像。](assets/bot-detection/bot-detection-two-ips.png)
+![根據兩個IP位址的機器人偵測規則。](assets/bot-detection/bot-detection-two-ips.png)
 
 ### 根據IP位址範圍的機器人偵測 {#range}
 
 若要將源自特定範圍內任何IP位址的所有要求標示為機器人流量，請建立新的機器人偵測規則，以評估整個IP位址範圍，如下圖所示。
 
-![根據IP範圍的機器人偵測規則影像。](assets/bot-detection/bot-detection-range.png)
+![機器人偵測規則以IP範圍為基礎。](assets/bot-detection/bot-detection-range.png)
 
 ### 根據IP位址和請求標題進行機器人偵測 {#ip-header}
 
@@ -162,7 +155,7 @@ ht-degree: 0%
 
 此規則會檢查要求是否源自特定IP位址，以及 `referer` 請求標頭開頭為 `www.adobe.com`.
 
-![根據IP位址和請求標題的機器人偵測規則影像。](assets/bot-detection/bot-detection-header-ip.png)
+![根據IP位址和請求標題的機器人偵測規則。](assets/bot-detection/bot-detection-header-ip.png)
 
 ### 根據多個條件的機器人偵測 {#multiple-conditions}
 
@@ -175,4 +168,4 @@ ht-degree: 0%
 
 該請求源自兩個IP位址中的一個， `referer` 標題開頭為 `www.adobe.com`，以及 `sec-ch-ua-mobile` 標題會將請求識別為源自於案頭瀏覽器。
 
-![根據多個條件的機器人偵測規則影像。](assets/bot-detection/bot-detection-multiple.png)
+![機器人偵測規則是根據多個條件。](assets/bot-detection/bot-detection-multiple.png)

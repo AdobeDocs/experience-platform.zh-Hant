@@ -2,10 +2,10 @@
 title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 55%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 58%
 
 展開 **[!UICONTROL 地理位置與網路查詢]** 區段來設定底下所述的設定。
 
-![Platform UI熒幕擷取畫面會顯示資料流設定畫面，且地理位置和網路查詢設定會反白顯示。](assets/configure/geolookup.png)
+![資料流設定畫面會醒目顯示地理位置和網路查詢設定。](assets/configure/geolookup.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -63,7 +63,7 @@ ht-degree: 58%
 
 展開 **[!UICONTROL 裝置查詢]** 區段來設定底下所述的設定。
 
-![Platform UI熒幕擷取畫面會顯示醒目提示裝置查詢設定的資料流設定畫面。](assets/configure/device-lookup.png)
+![資料流設定畫面中反白顯示裝置查詢設定。](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ ht-degree: 58%
 
 設定新資料流或選取要檢視的現有資料流後，該資料流的詳細資料頁面會隨即顯示。您可以在此處找到有關資料流的進一步資訊，包括其 ID。
 
-![已建立的資料流的詳細資料頁面](assets/configure/view-details.png)
+![資料流詳細資訊頁面。](assets/configure/view-details.png)
 
 在資料流詳細資料畫面中，您可以[新增服務](#add-services)，以啟用您有權存取的 Adobe Experience Cloud 產品的功能。您還可以編輯資料流的[基本設定](#create)、更新其[對應規則](./data-prep.md)、[複製資料流](#copy)，或將其完全刪除。
 
@@ -117,11 +117,11 @@ ht-degree: 58%
 
 在資料流的詳細資料頁面上，選取&#x200B;**[!UICONTROL 新增服務]**，即可開始為該資料流新增可用的服務。
 
-![選取「新增服務」以繼續](assets/configure/add-service.png)
+![選取「新增服務」以繼續。](assets/configure/add-service.png)
 
 在下一個畫面上，使用下拉選單選取要為此資料流設定的服務。此清單中只會顯示您有權存取的服務。
 
-![從清單中選取服務](assets/configure/service-selection.png)
+![從清單中選取服務。](assets/configure/service-selection.png)
 
 選取所需的服務，填寫顯示的設定選項，然後選取「**[!UICONTROL 儲存]**」，即可將服務新增至資料流。所有已新增的服務都會顯示在資料流的詳細資料檢視中。
 
@@ -137,7 +137,7 @@ ht-degree: 58%
 
 此服務會控制是否將資料傳送到 Adobe Analytics 以及傳送方式。如需其他詳細資料，可前往[將資料傳送到 Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md)，查看指南。
 
-![Adobe Analytics 設定區塊](assets/configure/analytics-config.png)
+![Adobe Analytics資料流設定。](assets/configure/analytics-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -148,7 +148,7 @@ ht-degree: 58%
 
 此服務會控制是否將資料傳送到 Adobe Audience Manager 以及傳送方式。若要將資料傳送到 Audience Manager，需要做的就是啟用本區段。其他設定為選用，但建議使用。
 
-![Adobe Audience Manager 設定區塊](assets/configure/audience-manager-config.png)
+![Adobe對象管理資料流設定。](assets/configure/audience-manager-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -167,7 +167,7 @@ ht-degree: 58%
 
 此服務會控制是否將資料傳送到 Adobe Experience Platform 以及傳送方式。
 
-![Adobe Experience Platform 設定區塊](assets/configure/platform-config.png)
+![Adobe Experience Platform資料流設定。](assets/configure/platform-config.png)
 
 | 設定 | 說明 |
 |---| --- |
@@ -182,7 +182,7 @@ ht-degree: 58%
 
 此服務會控制是否將資料傳送到 Adobe Target 以及傳送方式。
 
-![Adobe Target 設定區塊](assets/configure/target-config.png)
+![Adobe Target資料流設定。](assets/configure/target-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -195,7 +195,7 @@ ht-degree: 58%
 
 此服務會控制是否將資料傳送到[事件轉送](../tags/ui/event-forwarding/overview.md)以及傳送方式。
 
-![設定 UI 的事件轉送區段](assets/configure/event-forwarding-config.png)
+![資料流設定畫面的「事件轉送」區段。](assets/configure/event-forwarding-config.png)
 
 | 設定 | 說明 |
 | --- | --- |
@@ -216,15 +216,15 @@ ht-degree: 58%
 
 在[!UICONTROL 資料流]工作區中的主要頁面，選取要複製之資料流的省略符號 (**....**)，然後選取「**[!UICONTROL 複製]**」。
 
-![影像顯示[!UICONTROL 複製]選項已在資料流清單檢視中選取](assets/configure/copy-datastream-list.png)
+![此影像顯示從資料流清單檢視中選取的「複製」選項。](assets/configure/copy-datastream-list.png)
 
 或者，您可以從特定資料流的詳細資料檢視中選取&#x200B;**[!UICONTROL 複製資料流]**。
 
-![影像顯示[!UICONTROL 複製]選項已在資料流詳細資料檢視中選取](assets/configure/copy-datastream-details.png)
+![從資料流詳細資料檢視中選取的複製選項。](assets/configure/copy-datastream-details.png)
 
 確認對話框隨即顯示，提示您為要將建立的新資料流提供唯一名稱，以及有關將複製的設定選項的詳細資料。就緒後，請選取&#x200B;**[!UICONTROL 複製]**。
 
-![複製資料流的確認對話框的圖示](assets/configure/copy-datastream-confirm.png)
+![複製資料串流的確認對話方塊。](assets/configure/copy-datastream-confirm.png)
 
 [!UICONTROL 資料流]工作區的主要頁面會隨即重新顯示，並列出新的資料流。
 
