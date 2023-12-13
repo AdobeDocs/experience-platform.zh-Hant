@@ -3,10 +3,10 @@ title: 使用Adobe Experience Platform Web SDK呈現個人化內容
 description: 瞭解如何使用Adobe Experience Platform Web SDK呈現個人化內容。
 keywords: 個人化；renderDecisions；sendEvent；decisionScopes；主張；
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5f205792a03c3c7dd9074827ce4a989fae2e45d9
+source-git-commit: eb505b800994a484afb9dd3eee3b9b00cc02fdf6
 workflow-type: tm+mt
-source-wordcount: '962'
-ht-degree: 2%
+source-wordcount: '929'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Adobe Experience Platform Web SDK支援從Adobe個人化解決方案擷取個人化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html)， [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant).
 
-此外，Web SDK也透過Adobe Experience Platform個人化目的地(例如 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱 [專用指南](../../destinations/ui/activate-edge-personalization-destinations.md).
+此外，Web SDK透過Adobe Experience Platform個人化目的地，提供相同頁面和下一頁個人化功能，例如 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱 [專用指南](../../destinations/ui/activate-edge-personalization-destinations.md).
 
 在Adobe Target中建立的內容 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 以及Adobe Journey Optimizer的 [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 可由SDK自動擷取及轉譯。 在Adobe Target中建立的內容 [表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 或Offer decisioning無法由SDK自動轉譯。 相反地，您必須使用SDK請求此內容，然後自行手動轉譯內容。
 
