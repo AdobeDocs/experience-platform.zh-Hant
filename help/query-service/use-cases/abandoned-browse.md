@@ -3,10 +3,10 @@ keywords: Experience Platform；查詢服務；查詢服務；查詢
 title: Adobe Experience Platform查詢服務的範例使用案例
 description: 以端對端範例示範Adobe Experience Platform查詢服務的多功能性和優點。
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 2%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 * 根據您現有的資料架構建置查詢的方式。
 * 確保資料品質符合您的需求，並設法彌補不足。
 * 排程查詢以設定頻率執行，以用於下游的區段和個人化的目的地的程式。
-* 行銷人員可透過以下功能的強大功能，輕鬆將衍生屬性納入其受眾： [!DNL Query Service].
+* 行銷人員可輕鬆透過 [!DNL Query Service].
 
 ## 目標 {#objectives}
 

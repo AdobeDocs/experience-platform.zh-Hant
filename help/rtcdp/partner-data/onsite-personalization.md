@@ -1,16 +1,16 @@
 ---
-title: 使用合作夥伴輔助的訪客識別，為未知的訪客提供個人化的現場體驗
+title: 使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 92%
+source-wordcount: '2673'
+ht-degree: 90%
 
 ---
 
-# 使用合作夥伴輔助的訪客識別，為未知的訪客提供個人化的現場體驗
+# 使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗
 
 >[!AVAILABILITY]
 >
@@ -39,7 +39,7 @@ ht-degree: 92%
 當計劃使用合作夥伴提供的屬性向經過身分驗證和未經身分驗證的訪客提供個人化體驗時，請在規劃過程中考慮以下先決條件：
 
 * 您合作夥伴的識別技術需要輸入哪些資料，以便他們能夠疊加其他屬性？
-* 對於根據概率派生屬性 (而不是確定性確認屬性) 在不同頻道和不同使用案例中提供個人化服務，您的滿意程度如何？
+* 根據機率衍生的資料集和決定確認的屬性，您在多大程度上可以輕鬆地在不同頻道中並針對不同使用案例提供個人化？
 * 預先經過身分驗證但已經過識別的訪客在進行身分驗證時，他們的體驗應該如何改變？
 
 ### 您將使用的 UI 功能、平台元件和 Experience Cloud 產品 {#ui-functionality-and-elements}
