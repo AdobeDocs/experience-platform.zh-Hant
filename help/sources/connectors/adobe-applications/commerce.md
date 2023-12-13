@@ -1,12 +1,12 @@
 ---
 title: Adobe Commerce來源聯結器
 description: 瞭解如何使用Adobe Commerce來源將您的商務資料帶入Experience Platform。
-last-substantial-update: 2023-06-21T00:00:00Z
+last-substantial-update: 2023-12-13T00:00:00Z
 exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
-source-git-commit: 8249de4c78810a4cee245fa9c48b91c210aeb0a4
+source-git-commit: 506f33e03dea5d5879808bccb82948209714926a
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
@@ -36,10 +36,10 @@ Adobe Experience Platform來源支援Adobe Commerce的整合，可讓商家將�
 
 若要讓Adobe Commerce來源帳戶完全上線，請依照下列步驟以及其對應檔案操作。
 
-* [安裝Experience Platform聯結器擴充功能](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/install.html) 適用於Adobe Commerce。 您可以從以下位置下載聯結器擴充功能： [Adobe市集](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
+* [安裝 [!DNL Data Connection] 副檔名](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/install.html) 適用於Adobe Commerce。 您可以從以下位置下載聯結器擴充功能： [Adobe市集](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
 * 成功安裝聯結器擴充功能後，請在Experience Cloud中登入您的Adobe帳戶並 [確認您的組織ID](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html#concept_EA8AEE5B02CF46ACBDAD6A8508646255). 此ID與您布建的Experience Cloud公司相關聯。 其格式為24個字元的英數字串，並包含必要字串 `@AdobeOrg`.
-* 接下來，使用商務特定欄位群組建立或更新您的Experience Data Model (XDM)結構描述。 如需將Commerce專用欄位群組新增至XDM結構的詳細步驟，請閱讀以下指南： [將欄位群組新增至XDM結構描述](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html).
+* 接下來，使用商務特定欄位群組建立或更新您的Experience Data Model (XDM)結構描述。 如需將Commerce專用欄位群組新增至XDM結構的詳細步驟，請閱讀以下指南： [將欄位群組新增至XDM結構描述](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html).
 * 設定結構描述後，您必須根據新結構描述建立資料集。 然後，此資料集將包含 [!DNL Commerce] 您傳送的資料。 如需如何建立資料集的詳細步驟， [!DNL Commerce] 資料，請閱讀指南： [傳送資料給Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html#create-a-dataset).
-* 接下來，建立資料串流並選取包含您的Commerce特定欄位群組的XDM結構描述。 如需資料串流的詳細資訊，請參閱 [資料串流概觀](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=zh-Hant).
+* 接下來，建立資料串流並選取包含您的Commerce特定欄位群組的XDM結構描述。 如需資料串流的詳細資訊，請參閱 [資料串流概觀](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html).
 * 接著，您必須將Adobe Commerce執行個體連結至 [Commerce服務聯結器](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html). 這可讓您的Commerce執行個體部署為SaaS （軟體即服務）。
-* 完成上述所有設定後，您現在可以使用設定Commerce Services聯結器和Experience Platform聯結器來連線到Experience Platform。 [!DNL Commerce Admin]. 如需此最終步驟的詳細資訊，請閱讀以下指南： [將Commerce資料連線到Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/connect-data.html).
+* Experience Platform完成上述所有設定後，您現在可以透過設定Commerce Services聯結器和 [!DNL Data Connection] 擴充功能使用 [!DNL Commerce Admin]. 如需此最終步驟的詳細資訊，請閱讀以下指南： [將Commerce資料連線到Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/connect-data.html).
