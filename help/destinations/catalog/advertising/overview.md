@@ -3,10 +3,10 @@ keywords: 廣告目的地；目的地；平台目的地
 title: Advertising目的地概觀
 description: 將Adobe Experience Platform連線至第三方廣告平台(例如DSP、廣告網路、SSP)，並在這些平台上共用假名對象。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 3%
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -36,9 +36,10 @@ ht-degree: 3%
 * [Google Customer Match連線](google-customer-match.md)
 * [Microsoft Bing連線](bing.md)
 * [pinterest客戶清單連線](pinterest.md)
+* [PubMatic Connect目的地](pubmatic.md)
 * [(Beta) Snapchat廣告連線](snap-inc.md)
 * [交易台連線](tradedesk.md)
-* [(Beta) The Trade Desk CRM 連線](tradedesk-emails.md)
+* [（測試版）交易台CRM連線](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### 擴充功能

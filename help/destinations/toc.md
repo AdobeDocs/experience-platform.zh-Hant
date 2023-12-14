@@ -4,23 +4,23 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 10%
+source-wordcount: '1188'
+ht-degree: 5%
 
 ---
 
 
 # 目的地 {#destinations}
 
-* [目的地概述](./home.md)
+* [目的地概觀](./home.md)
 * [目的地型別和類別](./destination-types.md)
 * [目的地（啟動）護欄](./guardrails.md)
 * 目的地如何運作 {#how-destinations-work}
-   * [目的地中可設定的常用匯出設定](./how-destinations-work/destinations-configurations.md)
-   * [不同目的地類型的設定檔匯出行為](./how-destinations-work/profile-export-behavior.md)
-   * [目的地啟動工作流程中的身分處理](./how-destinations-work/identity-handling.md)
+   * [目的地中可設定的和常用的匯出設定](./how-destinations-work/destinations-configurations.md)
+   * [不同目的地型別的設定檔匯出行為](./how-destinations-work/profile-export-behavior.md)
+   * [目的地啟用工作流程中的身分處理](./how-destinations-work/identity-handling.md)
 * API教學課程 {#api}
    * [使用流程服務API啟用檔案型目的地的資料](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [使用流量服務API連線到串流目的地並啟用資料](./api/streaming-destinations.md)
@@ -32,7 +32,7 @@ ht-degree: 10%
    * [刪除目的地資料流](./api/delete-destination-dataflow.md)
    * [匯出資料集](/help/destinations/api/export-datasets.md)
    * [排序和篩選目的地的API回應](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
-* UI 指南 {#ui}
+* UI指南 {#ui}
    * [目的地工作區](./ui/destinations-workspace.md)
    * [建立新的目的地連線](./ui/connect-destination.md)
    * 啟用目的地的資料{#activate}
@@ -91,16 +91,17 @@ ht-degree: 10%
       * [pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
       * [pinterest客戶清單連線](./catalog/advertising/pinterest.md)
       * [pinterest連線升級](./catalog/advertising/pinterest-upgrade.md)
+      * [Pubmatic Connect連線](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads連線](./catalog/advertising/snap-inc.md)
       * [交易台連線](./catalog/advertising/tradedesk.md)
-      * [(Beta) The Trade Desk CRM 連線](./catalog/advertising/tradedesk-emails.md)
+      * [（測試版）交易台CRM連線](./catalog/advertising/tradedesk-emails.md)
       * [twitter通用網站標籤擴充功能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX連線](./catalog/advertising/datax.md)
    * Analytics目的地 {#analytics}
       * [Analytics目的地概觀](./catalog/analytics/overview.md)
       * [Adform網站追蹤擴充功能](./catalog/analytics/adform.md)
       * [Adobe Analytics 擴充功能](./catalog/analytics/adobe-analytics.md)
-      * [Adobe Media Analytics for Audio and Video 擴充功能](./catalog/analytics/adobe-video-analytics.md)
+      * [Adobe Medium Analytics for Audio and Video擴充功能](./catalog/analytics/adobe-video-analytics.md)
       * [Clicktale擴充功能](./catalog/analytics/clicktale.md)
       * [Contentsquare副檔名](./catalog/analytics/contentsquare.md)
       * [Decibel副檔名](./catalog/analytics/decibel.md)
@@ -124,7 +125,7 @@ ht-degree: 10%
       * [Azure Blob連線](./catalog/cloud-storage/azure-blob.md)
       * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure事件中樞連線](./catalog/cloud-storage/azure-event-hubs.md)
-      * [Data Landing Zone](./catalog/cloud-storage/data-landing-zone.md)
+      * [資料登陸區域](./catalog/cloud-storage/data-landing-zone.md)
       * [Google雲端儲存空間](./catalog/cloud-storage/google-cloud-storage.md)
       * [sftp連線](./catalog/cloud-storage/sftp.md)
       * [SFTP目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
@@ -133,7 +134,7 @@ ht-degree: 10%
       * [Salesforce CRM連線](./catalog/crm/salesforce.md)
       * [Microsoft Dynamics 365連線](./catalog/crm/microsoft-dynamics-365.md)
       * [外展連線](catalog/crm/outreach.md)
-      * [Zendesk 連線](catalog/crm/zendesk.md)
+      * [Zendesk連線](catalog/crm/zendesk.md)
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL延伸模組](./catalog/data-management/aam-dil-extension.md)
@@ -146,8 +147,8 @@ ht-degree: 10%
       * [電子郵件行銷目的地概觀](./catalog/email-marketing/overview.md)
       * [Adobe Campaign連線](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services連線](./catalog/email-marketing/adobe-campaign-managed-services.md)
-      * [Mailchimp 興趣類別](./catalog/email-marketing/mailchimp-interest-categories.md)
-      * [(API) Oracle Eloqua 連線](./catalog/email-marketing/oracle-eloqua-api.md)
+      * [Mailchimp興趣類別](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [(API) Oracle Eloqua連線](./catalog/email-marketing/oracle-eloqua-api.md)
       * [（檔案） Eloqua連線Oracle](./catalog/email-marketing/oracle-eloqua.md)
       * [oracleResponsys連線](./catalog/email-marketing/oracle-responsys.md)
       * [(API) SalesforceMarketing Cloud連線](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
@@ -168,7 +169,7 @@ ht-degree: 10%
       * [Adobe Commerce連線](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target連線](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target 擴充功能](./catalog/personalization/adobe-target.md)
-      * [Adobe Target v2 擴充功能](./catalog/personalization/adobe-target-v2.md)
+      * [Adobe Target v2擴充功能](./catalog/personalization/adobe-target-v2.md)
       * [Beemray延伸模組](./catalog/personalization/beemray.md)
       * [自訂個人化連線](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence擴充功能](./catalog/personalization/dnb.md)
@@ -177,12 +178,12 @@ ht-degree: 10%
       * [KickFire擴充功能](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization擴充功能](./catalog/personalization/marketo-web-personalization.md)
       * [Pega客戶決策中心連線](./catalog/personalization/pega.md)
-      * [Pega 設定檔連線](./catalog/personalization/pega-profile.md)
+      * [Pega設定檔連線](./catalog/personalization/pega-profile.md)
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
       * [facebook連線](./catalog/social/facebook.md)
       * [linkedIn比對受眾連線](./catalog/social/linkedin.md)
-      * [TikTok 連線](./catalog/social/tiktok.md)
+      * [TikTok連線](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] 連線](./catalog/social/twitter.md)
    * 串流目的地 {#streaming}
       * [HTTP API連線](./catalog/streaming/http-destination.md)
@@ -201,7 +202,7 @@ ht-degree: 10%
       * [Medallia連線](./catalog/voice/medallia-connector.md)
       * [Medallia擴充功能](./catalog/voice/medallia.md)
       * [交談URL收件匣擴充功能](./catalog/voice/talkurl.md)
-* 目標 SDK {#destination-sdk}
+* Destination SDK {#destination-sdk}
    * [概觀](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
    * [Destination SDK快速入門](./destination-sdk/getting-started.md)
