@@ -2,14 +2,14 @@
 title: 報告套裝資料的Adobe Analytics來源聯結器
 description: 本檔案提供Analytics概觀及說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 6%
+source-wordcount: '1110'
+ht-degree: 2%
 
 ---
 
-# 用於報告套裝資料的 Adobe Analytics 來源連接器
+# 報告套裝資料的Adobe Analytics來源聯結器
 
 Adobe Experience Platform可讓您透過Adobe Analytics來源聯結器擷取Analytics資料。 此 [!DNL Analytics] 來源聯結器串流資料收集者： [!DNL Analytics] 即時轉換至Platform，轉換SCD格式 [!DNL Analytics] 資料到 [!DNL Experience Data Model] (XDM)由平台使用的欄位。
 
@@ -21,7 +21,7 @@ Adobe Experience Platform可讓您透過Adobe Analytics來源聯結器擷取Anal
 
 ![此圖形說明來自不同Adobe應用程式(包括Adobe Analytics)的資料歷程。](./images/analytics-data-experience-platform.png)
 
-在高層面上， [!DNL Analytics] 從全球各地的各種數位頻道和多個資料中心收集資料。 收集到資料後，會套用訪客識別、細分和轉換架構(VISTA)規則和處理規則來塑造傳入的資料。 原始資料經過此輕量級處理之後，即可由以下人員使用 [!DNL Real-Time Customer Profile]. 在上述平行處理程式中，相同的已處理資料會經過微批次處理，並內嵌至Platform資料集，由以下人員消耗 [!DNL Data Science Workspace]， [!DNL Query Service]和其他資料探索應用程式。
+在高層面上， [!DNL Analytics] 從全球各地的各種數位頻道和多個資料中心收集資料。 收集到資料後，會套用訪客識別、細分和轉換架構(VISTA)規則和處理規則來塑造傳入的資料。 原始資料經過此輕量級處理之後，即可由以下人員使用 [!DNL Real-Time Customer Profile]. 在上述平行處理程式中，相同的已處理資料會經過微批次處理，並內嵌至Platform資料集，由以下人員消耗 [!DNL Query Service]和其他資料探索應用程式。
 
 請參閱 [處理規則概觀](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) 以取得處理規則的詳細資訊。
 
@@ -49,10 +49,10 @@ XDM是公開記錄的規格，為應用程式提供通用結構和定義，用�
 
 | Analytics 資料 | 預期延遲 |
 | -------------- | ---------------- |
-| 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **非** 已啟用) | &lt; 2 分鐘 |
+| 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **非** 已啟用) | &lt; 2分鐘 |
 | 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **是** 已啟用) | 長達30分鐘 |
-| 資料湖的新資料 | &lt; 90 分鐘 |
-| 少於100億個事件的回填 | &lt; 4 週 |
+| 資料湖的新資料 | &lt; 90分鐘 |
+| 少於100億個事件的回填 | &lt; 4週 |
 
 生產沙箱的Analytics回填預設為13個月。 對於非生產沙箱中的Analytics資料，回填會設定為三個月。 上表提及的100億個事件上限嚴格與預期延遲有關。
 
@@ -91,7 +91,7 @@ XDM是公開記錄的規格，為應用程式提供通用結構和定義，用�
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
-在身分對應中，如果ECID存在，則會標示為事件的主要身分。 在此情況下，AAID可能以ECID為基礎，因為 [Identity Service寬限期](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 否則，AAID 將標記為事件的主要身分識別。AACUSTOMID 永遠不會標記為事件的主要 ID。不過，如果AACUSTOMID存在，則AAID會因為作業順序Experience Cloud而以AACUSTOMID為基礎。
+在身分對應中，如果ECID存在，則會標示為事件的主要身分。 在此情況下，AAID可能以ECID為基礎，因為 [Identity Service寬限期](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 否則，AAID會標示為事件的主要身分識別。 AACUSTOMID 永遠不會標記為事件的主要 ID。不過，如果AACUSTOMID存在，則AAID會因為作業順序Experience Cloud而以AACUSTOMID為基礎。
 
 >[!NOTE]
 >
