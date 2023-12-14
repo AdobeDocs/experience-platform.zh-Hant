@@ -3,10 +3,10 @@ keywords: 深入分析；customer ai；customer ai insights；AAI查詢服務；
 title: Customer AI中的客戶自控金鑰。
 description: 瞭解如何為Customer AI設定客戶自控金鑰。
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 19%
+source-wordcount: '163'
+ht-degree: 13%
 
 ---
 
@@ -18,6 +18,6 @@ Customer AI提供的選項適用於 [Health Shield](https://www.adobe.com/tw/tru
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] 目前僅適用於已購買 [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=zh-Hant%3Flang%3Den) 附加元件產品。
+>[!DNL Customer Managed Keys] 目前僅適用於已購買 [!DNL Healthcare Shield or Privacy & Security Shield] 附加元件產品。
 
 Platform 使用的所有資料在傳輸和待用時都經過加密，以確保您的資料安全，無論是否使用 CMK。如需Adobe Experience Platform加密的詳細資訊，請參閱以下檔案： [資料加密](../../../landing/governance-privacy-security/encryption.md).

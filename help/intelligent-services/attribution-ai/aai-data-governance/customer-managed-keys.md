@@ -3,10 +3,10 @@ keywords: 深入分析；歸因人工智慧；歸因人工智慧深入分析；A
 title: 客戶託管金鑰
 description: 瞭解如何設定客戶自控金鑰以進行Attribution AI。
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: a59c86d1f1d426d4954071032ddaff1bbc9f2781
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 22%
+source-wordcount: '158'
+ht-degree: 15%
 
 ---
 
@@ -18,6 +18,6 @@ Attribution AI提供以下選項 [Health Shield](https://www.adobe.com/tw/trust/
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] 目前僅適用於已購買 [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=zh-Hant%3Flang%3Den) 附加元件產品。
+>[!DNL Customer Managed Keys] 目前僅適用於已購買 [!DNL Healthcare Shield or Privacy & Security Shield] 附加元件產品。
 
 Platform 使用的所有資料在傳輸和待用時都經過加密，以確保您的資料安全，無論是否使用 CMK。如需Adobe Experience Platform加密的詳細資訊，請參閱以下檔案： [資料加密](../../../landing/governance-privacy-security/encryption.md).
