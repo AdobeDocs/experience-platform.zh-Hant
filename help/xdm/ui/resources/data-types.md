@@ -5,9 +5,9 @@ title: 使用UI建立及編輯資料型別
 type: Tutorial
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯資料型別。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 4214339c4a661c6bca2cd571919ae205dcb47da1
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1384'
 ht-degree: 6%
 
 ---
@@ -22,6 +22,10 @@ ht-degree: 6%
 在體驗資料模型(XDM)中，資料型別是包含多個子欄位的可重複使用欄位。 雖然資料型別與結構描述欄位群組類似，因為其允許一致地使用多欄位結構，但資料型別更靈活，因為它們可以包含在結構描述結構中的任意位置，而欄位群組只能新增到根層級。
 
 Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種常見的體驗管理使用案例。 不過，您也可以定義自己的自訂資料型別，以滿足獨特的業務需求。
+
+>[!NOTE]
+>
+>如果欄位定義為特定資料型別，則無法在另一個結構描述中以不同的資料型別建立相同的欄位。 此限制適用於您組織的租使用者。
 
 本教學課程涵蓋在Platform使用者介面中建立和編輯自訂資料型別的步驟。
 

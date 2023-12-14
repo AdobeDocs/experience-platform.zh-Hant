@@ -1,31 +1,35 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；體驗資料模型；資料模型；資料模型；資料型別登入；Schema登入；資料型別；資料型別；資料型別；資料型別；建立
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；資料型別登入；架構登入；資料型別；資料型別；資料型別；資料型別；建立
 solution: Experience Platform
 title: 資料型別API端點
 description: 結構描述登入API中的/datatypes端點可讓您以程式設計方式管理體驗應用程式中的XDM資料型別。
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 342da62b83d0d804b31744a580bcd3e38412ea51
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1247'
 ht-degree: 2%
 
 ---
 
 # 資料型別端點
 
-資料型別在類別或結構描述欄位群組中的參考型別欄位使用方式與基本常值欄位相同，主要差異在於資料型別可以定義多個子欄位。 雖然資料型別與欄位群組類似，因為它們允許一致地使用多欄位結構，但資料型別更靈活，因為它們可以包含在結構描述結構中的任何位置，而欄位群組只能新增到根層級。 此 `/datatypes` 中的端點 [!DNL Schema Registry] API可讓您以程式設計方式管理體驗應用程式中的資料型別。
-
-## 快速入門
-
-本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
-
-## 擷取資料型別清單 {#list}
-
-您可以在「 」下方列出所有資料型別 `global` 或 `tenant` 向發出GET請求來建立容器 `/global/datatypes` 或 `/tenant/datatypes`（分別）。
+資料型別在類別或結構描述欄位群組中的參考型別欄位使用方式，與基本常值欄位相同，主要差異在於資料型別可以定義多個子欄位。 雖然資料型別與欄位群組類似，因為其允許一致地使用多欄位結構，但資料型別較靈活，因為它們可以包含在架構結構中的任意位置，而欄位群組只能新增到根層級。 此 `/datatypes` 中的端點 [!DNL Schema Registry] API可讓您以程式設計方式管理體驗應用程式中的資料型別。
 
 >[!NOTE]
 >
->列出資源時，結構描述登入將結果集限製為300個專案。 若要傳回超出此限制的資源，您必須使用分頁引數。 也建議您使用其他查詢引數來篩選結果並減少傳回的資源數量。 請參閱以下小節： [查詢引數](./appendix.md#query) 詳細資訊。
+>如果欄位定義為特定資料型別，則無法在另一個結構描述中以不同的資料型別建立相同的欄位。 此限制適用於您組織的租使用者。
+
+## 快速入門
+
+本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+
+## 擷取資料型別清單 {#list}
+
+您可以列出底下的所有資料型別 `global` 或 `tenant` 向發出GET請求以建立容器 `/global/datatypes` 或 `/tenant/datatypes`，依序輸入。
+
+>[!NOTE]
+>
+>列出資源時，結構描述登入將結果集限製為300個專案。 為了傳回超過此限制的資源，您必須使用分頁引數。 也建議您使用其他查詢引數來篩選結果並減少傳回的資源數量。 請參閱以下小節： [查詢引數](./appendix.md#query) 詳細資訊。
 
 **API格式**
 
@@ -35,14 +39,14 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 您要從中擷取資料型別的容器： `global` Adobe建立的資料型別或 `tenant` 適用於貴組織擁有的資料型別。 |
+| `{CONTAINER_ID}` | 您要從中擷取資料型別的容器： `global` (適用於Adobe建立的資料型別或 `tenant` 適用於貴組織擁有的資料型別。 |
 | `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用引數的清單。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會從擷取資料型別清單 `tenant` 容器，使用 `orderby` 查詢引數，依其資料型別排序 `title` 屬性。
+以下請求會從擷取資料型別清單 `tenant` 容器，使用 `orderby` 查詢引數，依其排序資料型別 `title` 屬性。
 
 ```shell
 curl -X GET \
@@ -54,18 +58,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於 `Accept` 標頭已在請求中傳送。 下列專案 `Accept` 標頭可用於列出資料型別：
+回應格式取決於 `Accept` 標頭已在請求中傳送。 下列專案 `Accept` 標題可用於列出資料型別：
 
 | `Accept` 頁首 | 說明 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標頭。 （上限： 300） |
-| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON資料型別，包含原始檔案 `$ref` 和 `allOf` 包含。 （上限： 300） |
+| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON資料型別，具有原始值 `$ref` 和 `allOf` 包含。 （上限： 300） |
 
 {style="table-layout:auto"}
 
 **回應**
 
-上述請求使用的是 `application/vnd.adobe.xed-id+json` `Accept` 標題，因此回應僅包含 `title`， `$id`， `meta:altId`、和 `version` 每個資料型別的屬性。 使用另一個 `Accept` 頁首(`application/vnd.adobe.xed+json`)會傳回每種資料型別的所有屬性。 選取適當的 `Accept` 標題依您在回應中所需的資訊而定。
+上述要求使用 `application/vnd.adobe.xed-id+json` `Accept` 標題，因此回應僅包含 `title`， `$id`， `meta:altId`、和 `version` 每種資料型別的屬性。 使用另一個 `Accept` 頁首(`application/vnd.adobe.xed+json`)會傳回每種資料型別的所有屬性。 選取適當的 `Accept` 標題依您在回應中所需的資訊而定。
 
 ```json
 {
@@ -109,14 +113,14 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 存放您要擷取之資料型別的容器： `global` (對於Adobe建立的資料型別)或 `tenant` 屬於您組織的資料型別。 |
+| `{CONTAINER_ID}` | 容納您要擷取之資料型別的容器： `global` 針對Adobe建立的資料型別或 `tenant` 針對貴組織擁有的資料型別。 |
 | `{DATA_TYPE_ID}` | 此 `meta:altId` 或URL編碼 `$id` ，屬於您要查閱的資料型別。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會透過其擷取資料型別 `meta:altId` 路徑中提供的值。
+以下請求會依照其擷取資料型別 `meta:altId` 路徑中提供的值。
 
 ```shell
 curl -X GET \
@@ -132,17 +136,17 @@ curl -X GET \
 
 | `Accept` 頁首 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | 原始 `$ref` 和 `allOf`，有標題和說明。 |
+| `application/vnd.adobe.xed+json; version=1` | 原始為 `$ref` 和 `allOf`，有標題和說明。 |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` 和 `allOf` 已解決，具有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version=1` | 原始 `$ref` 和 `allOf`，無標題或說明。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | 原始為 `$ref` 和 `allOf`，無標題或說明。 |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 和 `allOf` 已解決，無標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解決，包含描述項。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 和 `allOf` 已解決，包含描述元。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回資料型別的詳細資料。 傳回的欄位取決於 `Accept` 標頭已在請求中傳送。 使用不同的實驗 `Accept` 標頭，用來比較回應及判斷哪個標頭最適合您的使用案例。
+成功的回應會傳回資料型別的詳細資料。 傳回的欄位取決於 `Accept` 標頭已在請求中傳送。 使用不同的實驗 `Accept` 標頭，用以比較回應並判斷哪個標頭最適合您的使用案例。
 
 ```json
 {
@@ -235,7 +239,7 @@ POST /tenant/datatypes
 
 與欄位群組不同，定義資料型別不需要 `meta:extends` 或 `meta:intendedToExtend` 欄位，也不需要巢狀化欄位來避免衝突。
 
-定義資料型別本身的欄位結構時，您可以使用基本型別(例如 `string` 或 `object`)或參考其他現有資料型別，方法如下： `$ref` 屬性。 請參閱指南： [在API中定義自訂XDM欄位](../tutorials/custom-fields-api.md) 以取得不同XDM欄位型別之預期格式的詳細指引。
+定義資料型別本身的欄位結構時，您可以使用基本型別(例如 `string` 或 `object`)或參考其他現有資料型別，方法如下： `$ref` 屬性。 請參閱以下指南： [在API中定義自訂XDM欄位](../tutorials/custom-fields-api.md) 以取得不同XDM欄位型別之預期格式的詳細指引。
 
 以下請求會建立具有子屬性的「屬性建構」物件資料型別 `yearBuilt`， `propertyType`、和 `location`：
 
@@ -349,15 +353,15 @@ curl -X POST \
 }
 ```
 
-執行GET要求至 [列出所有資料型別](#list) 租使用者容器中的屬性詳細資料資料資料型別，或者您可以 [執行查詢(GET)請求](#lookup) 使用URL編碼 `$id` URI直接檢視新的資料型別。
+執行GET要求至 [列出所有資料型別](#list) 在租使用者容器中，現在將包含屬性詳細資料資料資料型別，或者您可以 [執行查詢(GET)請求](#lookup) 使用URL編碼 `$id` URI以直接檢視新的資料型別。
 
 ## 更新資料型別 {#put}
 
-您可以透過PUT操作取代整個資料型別，基本上是重新寫入資源。 透過PUT請求更新資料型別時，本文必須包含以下情況所需的所有欄位： [建立新資料型別](#create) 在POST請求中。
+您可以透過PUT作業取代整個資料型別，基本上就是重新寫入資源。 透過PUT請求更新資料型別時，本文必須包含以下情況所需的所有欄位： [建立新資料型別](#create) 在POST要求中。
 
 >[!NOTE]
 >
->如果您只想更新部分資料型別而不是完全取代它，請參閱以下小節： [更新資料型別的一部分](#patch).
+>如果您只想更新資料型別的一部分，而不是完全取代，請參閱 [更新資料型別的一部分](#patch).
 
 **API格式**
 
@@ -488,7 +492,7 @@ curl -X PUT \
 
 >[!NOTE]
 >
->如果您想使用新值取代整個資源，而不是更新個別欄位，請參閱 [使用PUT操作取代資料型別](#put).
+>如果您想使用新值取代整個資源，而不是更新個別欄位，請參閱 [使用PUT作業取代資料型別](#put).
 
 **API格式**
 
@@ -504,9 +508,9 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 **要求**
 
-以下範例請求會更新 `description` 的變數，並新增新的 `floorSize` 欄位。
+以下範例請求會更新 `description` 和新增新的資料型別 `floorSize` 欄位。
 
-請求內文採用陣列形式，每個列出的物件都代表個別欄位的特定變更。 每個物件都包含要執行的操作(`op`)，操作應執行於哪個欄位(`path`)，以及該作業應包含哪些資訊(`value`)。
+請求內文採用陣列形式，每個列出的物件代表個別欄位的特定變更。 每個物件都包含要執行的作業(`op`)，操作應該執行在哪個欄位上(`path`)，以及該作業應包含哪些資訊(`value`)。
 
 ```SHELL
 curl -X PATCH \
@@ -536,7 +540,7 @@ curl -X PATCH \
 
 **回應**
 
-回應顯示兩個操作都已成功執行。 此 `description` 已更新，並且 `floorSize` 已新增至 `definitions`.
+回應顯示兩個作業都已成功執行。 此 `description` 已更新，並且 `floorSize` 已新增至 `definitions`.
 
 ```JSON
 {
@@ -627,7 +631,7 @@ curl -X PATCH \
 
 ## 刪除資料型別 {#delete}
 
-有時可能需要從結構描述登入中移除資料型別。 若要這麼做，請使用路徑中提供的資料型別ID執行DELETE要求。
+有時可能需要從結構描述登入中移除資料型別。 若要這麼做，請使用路徑中提供的資料型別ID執行DELETE請求。
 
 **API格式**
 
@@ -637,7 +641,7 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_TYPE_ID}` | URL編碼 `$id` URI或 `meta:altId` 要刪除的資料型別。 |
+| `{DATA_TYPE_ID}` | URL編碼 `$id` URI或 `meta:altId` 資料型別的所有變數。 |
 
 {style="table-layout:auto"}
 
@@ -656,4 +660,4 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
 
-您可以嘗試 [查詢(GET)請求](#lookup) 至資料型別。 您需要包含 `Accept` 標頭中，但應該會收到HTTP狀態404 （找不到），因為資料型別已從Schema Registry中移除。
+您可以嘗試確認刪除 [查詢(GET)請求](#lookup) 至資料型別。 您需要包含 `Accept` 標頭中，但應該會收到HTTP狀態404 （找不到），因為資料型別已從Schema Registry中移除。
