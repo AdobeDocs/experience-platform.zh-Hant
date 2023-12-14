@@ -5,9 +5,9 @@ title: 使用流量服務API為原始資料建立串流資料流
 type: Tutorial
 description: 本教學課程涵蓋擷取串流資料，以及使用來源聯結器和API將其帶入Platform的步驟。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1169'
 ht-degree: 2%
 
 ---
@@ -486,13 +486,15 @@ curl -X POST \
 
 檢視下列裝載範例，以取得您可傳送以進行內嵌的原始或XDM相容JSON範例。
 
->[!TIP]
+>[!NOTE]
 >
->以下範例適用於所有三項：
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>在建立資料流與擷取任何串流資料之間，您必須增加至少約5分鐘的延遲。 這可讓資料流在擷取任何資料之前完全啟用。
+
+下列範例適用於所有：
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 
