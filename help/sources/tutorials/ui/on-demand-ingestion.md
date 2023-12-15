@@ -2,10 +2,10 @@
 title: UI中來源資料流程的隨選擷取
 description: 瞭解如何使用Experience Platform使用者介面，依需求為來源連線建立資料流程。
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 1%
+source-wordcount: '522'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +24,10 @@ ht-degree: 1%
 >[!ENDSHADEBOX]
 
 ## 快速入門
+
+>[!NOTE]
+>
+>為了建立資料流執行，您必須先擁有排程為單次擷取的資料流的資料流ID。
 
 本檔案需要您實際瞭解下列Experience Platform元件：
 
