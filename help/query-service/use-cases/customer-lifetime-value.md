@@ -2,7 +2,7 @@
 title: 追蹤資料訊號以產生客戶期限值
 description: 本指南提供端對端示範，說明如何搭配使用Data Distiller和使用者定義的儀表板與Real-time Customer Data Platform，以測量及視覺化客戶期限值。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 擴充見解資料模型和排程更新 {#extend-data-model-and-set-refresh-schedule}
 
-接下來，您必須建立自訂資料模型或擴充現有的Adobe Real-Time CDP資料模型，以參與您的CLV報表深入分析。 請參閱檔案以瞭解如何 [透過Query Service建立報告見解資料模型，以與加速商店資料和使用者定義的儀表板搭配使用](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). 本教學課程涵蓋下列步驟：
+接下來，您必須建立自訂資料模型或擴充現有的Adobe Real-Time CDP資料模型，以參與您的CLV報表深入分析。 請參閱檔案以瞭解如何 [透過Query Service建立報告見解資料模型，以與加速商店資料和使用者定義的儀表板搭配使用](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). 本教學課程涵蓋下列步驟：
 
 * 使用Data Distiller建立模型以報告深入分析。
 * 建立表格、關係及填入資料。

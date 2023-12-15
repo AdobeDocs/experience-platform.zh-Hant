@@ -2,9 +2,9 @@
 title: 查詢服務中的資料治理
 description: 此概觀涵蓋Experience Platform查詢服務中資料治理的主要元素。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3129'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform將來自多個企業系統的資料整合在一起，�
 1. 稽核
 1. 資料使用情況
 1. 隱私權
-1. 資料檢疫
+1. 資料衛生
 
 本檔案會檢視每個不同的控管領域，並示範如何在使用「查詢服務」時促進資料法規遵循。 請參閱 [治理、隱私和安全性概述](../../landing/governance-privacy-security/overview.md) 以進一步瞭解Experience Platform如何讓您管理客戶資料並確保法規遵循。
 
@@ -93,7 +93,7 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 #### 對加速的資料集建立欄位式存取限制 {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-使用 [以屬性為基礎的存取控制功能](../../access-control/abac/overview.md) 您可以在下列位置定義事實和維度資料集的組織或資料使用範圍： [加速存放區](../data-distiller/query-accelerated-store/send-accelerated-queries.md). 這可讓管理員管理特定區段的存取權，並更好地管理授予使用者或使用者群組的存取權。
+使用 [以屬性為基礎的存取控制功能](../../access-control/abac/overview.md) 您可以在下列位置定義事實和維度資料集的組織或資料使用範圍： [加速存放區](../data-distiller/customizable-insights/send-accelerated-queries.md). 這可讓管理員管理特定區段的存取權，並更好地管理授予使用者或使用者群組的存取權。
 
 若要針對加速資料集建立欄位式存取限制，您可以使用查詢服務CTAS查詢來建立加速資料集，並根據現有的XDM結構描述或臨時結構描述來建構這些資料集。 然後，管理員可以 [新增和編輯結構描述的資料使用標籤](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) 或 [臨時結構描述](./ad-hoc-schema-labels.md#edit-governance-labels). 您可以從以下位置套用、建立及編輯方案標籤： [!UICONTROL 標籤] 中的工作區 [!UICONTROL 方案] UI。
 
@@ -202,7 +202,7 @@ Platform的資料控管架構可讓您以統一方式，負責地使用所有Ado
 
 透過Platform UI將結構描述資料欄位設定為身分欄位，並且查詢服務也可讓您 [使用SQL命令&#39;ALTER TABLE&#39;標籤主要身分](../sql/syntax.md#alter-table). 使用設定身分 `ALTER TABLE` 當資料集是使用SQL建立的，而非直接透過平台UI從結構描述建立時，命令特別有用。 請參閱檔案以瞭解如何 [在UI中定義身分欄位](../../xdm/ui/fields/identity.md) 使用標準結構描述時。
 
-## 資料檢疫 {#data-hygiene}
+## 資料衛生 {#data-hygiene}
 
 「資料衛生」是指修復或移除過時、不準確、格式不正確、重複或不完整資料的程式。 這些程式可確保資料集在所有系統中都正確且一致。 請務必確保在資料歷程的每個步驟中，甚至從初始資料儲存位置開始，都有足夠的資料衛生。 在Experience Platform查詢服務中，這是資料湖或加速存放區。
 

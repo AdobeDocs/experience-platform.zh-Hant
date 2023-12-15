@@ -2,16 +2,16 @@
 title: Real-time Customer Data Platform Insights資料模型
 description: 瞭解如何搭配Real-time Customer Data Platform前瞻分析資料模型使用SQL查詢，以自訂您自己的行銷和KPI使用案例的Real-Time CDP報表。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Real-time Customer Data Platform Insights資料模型
 
-Real-time Customer Data Platform見解資料模型功能會公開資料模型和SQL，為各種設定檔、目的地和分段Widget的見解提供支援。 您可以自訂這些SQL查詢範本，以針對行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 請參閱查詢加速商店報告見解檔案以瞭解 [如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+Real-time Customer Data Platform見解資料模型功能會公開資料模型和SQL，為各種設定檔、目的地和分段Widget的見解提供支援。 您可以自訂這些SQL查詢範本，以針對行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 請參閱查詢加速商店報告見解檔案以瞭解 [如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
 
 ## 先決條件
 
@@ -239,7 +239,7 @@ FROM
 
 #### 最近啟用的對象使用案例
 
-的邏輯 [!UICONTROL 最近啟用的對象] widget提供最近對應至目的地的對象清單。 此清單會提供系統中正積極使用的對象和目的地的快照，能有助於對任何錯誤的對應進行移難排解。請參閱 [[!UICONTROL 最近啟用的對象] Widget檔案](./guides/destinations.md#recently-activated-audiences) 以取得詳細資訊。
+的邏輯 [!UICONTROL 最近啟用的對象] widget提供最近對應至目的地的對象清單。 此清單提供系統中目前使用中的對象和目的地的快照，可協助疑難排解任何錯誤的對應。 請參閱 [[!UICONTROL 最近啟用的對象] Widget檔案](./guides/destinations.md#recently-activated-audiences) 以取得詳細資訊。
 
 產生 [!UICONTROL 最近啟用的對象] 可以在下方的可摺疊區段中看到Widget。
 

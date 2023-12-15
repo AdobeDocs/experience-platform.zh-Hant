@@ -2,16 +2,16 @@
 title: Adobe Experience Platform發行說明2022年10月
 description: Adobe Experience Platform 2022年10月版本注意事項。
 exl-id: 61ef2472-5e79-433f-9f60-b1245f619b42
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 34%
+source-wordcount: '1135'
+ht-degree: 29%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 10 月 26 日**
+**發行日期： 2022年10月26日**
 
 - [客戶自控金鑰](#cmk)
 - [資料集合](#data-collection)
@@ -48,7 +48,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | 功能 | 說明 |
 | --- | --- |
 | (Beta)資料集匯出 | 此 [資料集匯出Beta版功能](/help/destinations/ui/export-datasets.md) 可讓您匯出第一代資料(如 [Real-time Customer Data Platform產品說明](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html))經由目標使用者介面，從Adobe Experience Platform前往您自己的外部客戶系統。 這可讓您利用無程式碼/低程式碼工作流程，將資料從Experience Platform中帶到6個雲端儲存目標（如下表所列），以用於分析和法規遵循使用案例。 |
-| (Beta)增強的檔案匯出功能 | 現在，將檔案匯出出Experience Platform時，您可以受益於增強的自訂功能： <br><ul><li>其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。</li><li>能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。</li><li>[能夠自訂匯出 CSV 資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md)。</li></ul> <br> 下表列出的六個新Beta版雲端儲存空間卡支援此功能。 |
+| (Beta)增強的檔案匯出功能 | 現在，將檔案匯出出Experience Platform時，您可以受益於增強的自訂功能： <br><ul><li>其他[檔案命名選項](/help/destinations/ui/activate-batch-profile-destinations.md#file-names)。</li><li>能夠透過[改善的對應步驟](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)，在您匯出的檔案內設定自訂檔案標頭。</li><li>[能夠自訂匯出的CSV資料檔案的格式](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> <br> 下表列出的六個新Beta版雲端儲存空間卡支援此功能。 |
 
 {style="table-layout:auto"}
 
@@ -68,7 +68,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 {style="table-layout:auto"}
 
-**新文件或更新的文件**
+**新檔案或更新檔案**
 
 | 文件 | 說明 |
 | ----------- | ----------- |
@@ -86,7 +86,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | --- | --- | --- |
 | 資料類型 | [[!UICONTROL 工作階段細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | 已更新 `authorized` 欄位從布林值型別轉換為字串。 `season` 和 `episode` 已由整數變更為字串。 |
 | 資料類型 | [[!UICONTROL 廣告細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | `name` 已重新命名為 `friendlyName`、和 `ID` 已重新命名為 `name`. |
-| 資料類型 | [[!UICONTROL 錯誤細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 已重新命名為 `name`。 |
+| 資料類型 | [[!UICONTROL 錯誤細節資訊]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | `ID` 已重新命名為 `name`. |
 
 {style="table-layout:auto"}
 
@@ -101,9 +101,10 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | 功能 | 說明 |
 | --- | --- |
 | 透過Platform UI監視查詢 | 查詢服務 [!UICONTROL 排定的查詢] 索引標籤透過UI提供所有查詢作業狀態的可見性改進。 您現在可以找到有關查詢執行狀態的重要資訊，包括失敗時的錯誤訊息和代碼，來自 [!UICONTROL 排定的查詢] 標籤。 您也可以透過UI針對這些查詢根據其狀態訂閱警報。 請參閱 [監視查詢檔案](../../query-service/ui/monitor-queries.md) 以進一步瞭解此功能。 |
-| 查詢加速報告見解資料模型 | 作為Data Distiller SKU的一部分，查詢加速存放區可讓您減少從資料獲得重要深入分析所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型和/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改進您的報告見解及其視覺效果。 請參閱 [查詢加速商店報告見解檔案](../../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md) 以進一步瞭解此功能。 |
+| 查詢加速報告見解資料模型 | 作為Data Distiller SKU的一部分，查詢加速存放區可讓您減少從資料獲得重要深入分析所需的時間和處理能力。 透過查詢加速存放區，您可以建立自訂資料模型和/或擴充現有的Adobe Real-time Customer Data Platform資料模型，以改進您的報告見解及其視覺效果。 請參閱 [查詢加速商店報告見解檔案](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md) 以進一步瞭解此功能。 |
 
 {style="table-layout:auto"}
 
-如需有關查詢服務的詳細資訊，請參閱[查詢服務概觀](../../query-service/home.md)。Adobe Experience Platform中的新功能：
+如需查詢服務的詳細資訊，請參閱 [查詢服務總覽](../../query-service/home.md).
+Adobe Experience Platform中的新功能：
 

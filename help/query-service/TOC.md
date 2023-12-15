@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
+source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '313'
 ht-degree: 19%
 
 ---
@@ -26,9 +26,10 @@ ht-degree: 19%
       - [概觀](data-distiller/derived-datasets/overview.md)
       - [順暢的SQL流程](data-distiller/derived-datasets/seamless-sql-flow.md)
       - [建立十等分衍生資料集](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 查詢加速存放區 {#query-accelerated-store}
-      - [傳送加速的查詢](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-      - [報表深入分析資料模型指南](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - 延伸應用程式報表的可自訂分析 {#customizable-insights}
+      - [概觀](data-distiller/customizable-insights/overview.md)
+      - [傳送加速的查詢](data-distiller/customizable-insights/send-accelerated-queries.md)
+      - [報表深入分析資料模型指南](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI/ML功能管道 {#ml-feature-pipelines}
       - [概觀](data-distiller/ml-feature-pipelines/overview.md)
       - [連線到Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
