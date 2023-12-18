@@ -1,25 +1,25 @@
 ---
 title: 餘額轉帳結構描述欄位群組
-description: 本檔案提供「餘額拋轉」結構描述欄位群組的概觀。
+description: 瞭解餘額轉移結構欄位群組。
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '101'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL 餘額轉帳] 結構描述欄位群組
 
-[!UICONTROL 餘額轉帳] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 欄位群組提供單一 `personalFinances.balanceTransfers` 物件至結構描述，擷取帳戶間財務餘額轉移的詳細資訊。
+[!UICONTROL 餘額轉帳] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 欄位群組提供單一 `personalFinances.balanceTransfers` 物件至結構描述，擷取帳戶間財務餘額轉帳的詳細資料。
 
 ![](../../images/field-groups/balance-transfers.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `accountFrom` | [[!UICONTROL 財務帳戶]](../../data-types/financial-account.md) | 說明餘額轉移來源的財務帳戶。 |
-| `accountTo` | [[!UICONTROL 財務帳戶]](../../data-types/financial-account.md) | 說明餘額將轉移到的財務帳戶。 |
-| `transaction` | [[!UICONTROL 交易]](../../data-types/transaction.md) | 說明與餘額拋轉相關聯的財務交易。 |
+| `accountTo` | [[!UICONTROL 財務帳戶]](../../data-types/financial-account.md) | 描述餘額將轉移到的財務帳戶。 |
+| `transaction` | [[!UICONTROL 交易]](../../data-types/transaction.md) | 描述與餘額拋轉相關的財務交易。 |
 
 {style="table-layout:auto"}
 

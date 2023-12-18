@@ -1,10 +1,10 @@
 ---
 title: 帳戶詳細資料資料型別
-description: 本檔案提供帳戶詳細資訊Experience Data Model (XDM)資料型別的概觀。
+description: 瞭解帳戶詳細資料體驗資料模型(XDM)資料型別。
 exl-id: 17254393-263e-4000-9bd2-815a9e842533
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '409'
 ht-degree: 5%
 
 ---

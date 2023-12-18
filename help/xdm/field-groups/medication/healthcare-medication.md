@@ -1,23 +1,23 @@
 ---
-title: 醫療保健結構描述欄位群組
-description: 本檔案提供Healthcare Media方案欄位群組的概觀。
+title: 醫療保健藥物結構欄位群組
+description: 瞭解Healthcare藥物方案欄位群組。
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 5%
+source-wordcount: '197'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL 醫療保健] 結構描述欄位群組
+# [!UICONTROL 醫療保健藥物] 結構描述欄位群組
 
-[!UICONTROL 醫療保健] 是的標準結構描述欄位群組 [[!UICONTROL 藥物] 類別](../../classes/medication.md). 它提供單一物件型別欄位 `medication` 擷取品牌名稱、批號及數量等細節。
+[!UICONTROL 醫療保健藥物] 是的標準結構描述欄位群組 [[!UICONTROL 藥物] 類別](../../classes/medication.md). 它提供單一物件型別欄位 `medication` 擷取品牌名稱、批號及數量等細節。
 
 ![](../../images/field-groups/healthcare-medication.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `ingredients` | 物件陣列 | 列出藥物中的成分。 每個物件包含下列屬性： <ul><li>`isActive`：（布林值）指出此成份是否仍用於此藥物中。</li><li>`name`：（字串）成份的名稱。</li><li>`quantity`：（字串）藥物中存在的配料數量。</li></ul> |
+| `ingredients` | 物件陣列 | 列出藥物中的成分。 每個物件包含下列屬性： <ul><li>`isActive`：（布林值）指出此成份是否仍用於此藥物中。</li><li>`name`：（字串）成分的名稱。</li><li>`quantity`：（字串）藥物中存在的配料數量。</li></ul> |
 | `brandName` | 字串 | 藥物的品牌名稱。 |
 | `codes` | 字串陣列 | 可識別此藥物的程式碼清單。 |
 | `dosageUnitNumber` | 雙倍 | 適用於藥物的劑量單位編號。 |
@@ -25,10 +25,10 @@ ht-degree: 5%
 | `expiryDate` | 日期時間 | 藥物有效期。 |
 | `genericName` | 字串 | 藥物的通用名稱。 |
 | `lotNumber` | 字串 | 藥物批次的唯一識別碼。 |
-| `manufacturerName` | 字串 | 製藥商名稱。 |
+| `manufacturerName` | 字串 | 藥品製造商的名稱。 |
 | `quantity` | 雙倍 | 包裝中的藥物量。 |
 | `status` | 字串 | 表示藥物/藥物是否有效的一般狀態。 |
-| `volume` | 雙倍 | 藥物的量。 |
+| `volume` | 雙倍 | 藥物的體積。 |
 
 {style="table-layout:auto"}
 

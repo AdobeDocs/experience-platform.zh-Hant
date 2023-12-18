@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；裝置；資料型別；資料型別；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；裝置；資料型別；資料型別；
 solution: Experience Platform
 title: 裝置資料型別
-description: 本檔案提供裝置XDM資料型別的概觀。
+description: 瞭解裝置XDM資料型別。
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 4%
+source-wordcount: '305'
+ht-degree: 5%
 
 ---
 
@@ -17,17 +17,17 @@ ht-degree: 4%
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `colorDepth` | 整數 | 顯示器能夠表示的顏色數量。 |
-| `manufacturer` | 字串 | 擁有裝置設計和建立的組織名稱。 |
-| `model` | 字串 | 裝置的型號名稱。 這是裝置常見、可讀取或行銷的名稱。 例如，「iPhone 6S」是行動電話的一種特定型號。 |
+| `manufacturer` | 字串 | 擁有裝置的設計和建立的組織名稱。 |
+| `model` | 字串 | 裝置的型號名稱。 這是裝置的通用、可讀取或行銷名稱。 例如，「iPhone 6S」是行動電話的一種特定型號。 |
 | `modelNumber` | 字串 | 製造商為此裝置指定的唯一型號編號。 型號不是版本，而是識別特定型號設定的唯一識別碼。 |
 | `screenHeight` | 整數 | 裝置的活動顯示（以預設方向）的垂直畫素數。 |
 | `screenOrientation` | 字串 | 目前的熒幕方向。 接受的值包括 `portrait` 和 `landscape`. |
 | `screenWidth` | 字串 | 裝置的活動顯示（以預設方向）的水準畫素數。 |
 | `type` | 字串 | 被追蹤的裝置型別。 接受的值包括： <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
-| `typeID` | 字串 | 裝置的識別碼。 這可能是來自DeviceAtlas或其他服務的識別碼，可識別正在使用的硬體。 |
+| `typeID` | 字串 | 裝置的識別碼。 這可能是來自DeviceAtlas或其他服務的識別碼，用於識別正在使用的硬體。 |
 | `typeIDService` | 字串 | 用於識別裝置型別的服務的名稱空間。 請參閱 [附錄](#typeIDService) 以取得接受值的詳細資訊。 |
 
 {style="table-layout:auto"}
@@ -39,11 +39,11 @@ ht-degree: 4%
 
 ## 附錄
 
-以下小節包含更多關於 [!UICONTROL 裝置] 資料型別。
+下節包含更多關於 [!UICONTROL 裝置] 資料型別。
 
-## typeIDService的接受值 {#typeIDService}
+## typeIDService接受的值 {#typeIDService}
 
-下表概述下列專案的可接受值 `typeIDService` 及其相關涵義：
+下表概述下列專案可接受的值 `typeIDService` 及其相關意義：
 
 | 值 | 說明 |
 | --- | --- |

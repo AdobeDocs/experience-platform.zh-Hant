@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；網頁詳細資訊；資料型別；資料型別；資料型別；網頁
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；網頁詳細資訊；資料型別；資料型別；網頁
 solution: Experience Platform
-title: 網頁資訊資料型別
-description: 本檔案提供網頁資訊Experience Data Model (XDM)資料型別的概觀。
+title: Web資訊資料型別
+description: 瞭解網頁資訊Experience Data Model (XDM)資料型別。
 exl-id: bfb00835-5908-4baf-af2a-6d845710e340
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 1%
+source-wordcount: '166'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ![](../images/data-types/web-information.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `webInteraction` | [[!UICONTROL 網路互動]](./web-interaction.md) | 說明與互動對應的網頁連結或URL的詳細資訊。 |
 | `webPageDetails` | [[!UICONTROL 網頁詳細資料]](./webpage-details.md) | 說明發生網路互動之網頁的詳細資料。 |

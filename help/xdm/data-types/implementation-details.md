@@ -1,21 +1,21 @@
 ---
-title: 實作詳細資料資料型別
-description: 本檔案提供實作詳細資料Experience Data Model (XDM)資料型別的概觀。
+title: 實作詳細資料型別
+description: 瞭解實作詳細資料Experience Data Model (XDM)資料型別。
 exl-id: d3d16bae-196b-489d-8590-fd22150eedf1
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 4%
+source-wordcount: '101'
+ht-degree: 6%
 
 ---
 
 # [!UICONTROL 實作詳細資料] 資料型別
 
-[!UICONTROL 實作詳細資料] 是標準Experience Data Model (XDM)資料型別，可說明技術實作，例如API或SDK。
+[!UICONTROL 實作詳細資料] 是標準的體驗資料模型(XDM)資料型別，可描述技術實作，例如API或SDK。
 
 ![資料型別結構](../images/data-types/implementation-details.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `environment` | 字串 | 實作的環境。 |
 | `name` | 字串 | SDK或端點的識別碼。 所有SDK或端點會透過URI識別，包括擴充功能。 |

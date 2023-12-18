@@ -1,11 +1,11 @@
 ---
 title: 廣告插播資料型別
-description: 本檔案提供廣告插播Experience Data Model (XDM)資料型別的概觀。
+description: 瞭解廣告插播體驗資料模型(XDM)資料型別。
 exl-id: dfe0c386-8459-440d-95b5-b2139fac0fc3
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 4%
+source-wordcount: '102'
+ht-degree: 6%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 ![資料型別結構](../images/data-types/ad-break.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `_dc.title` | 字串 | 廣告插播的易記名稱。 |
 | `_id` | 字串 | 廣告插播的唯一識別碼。 |

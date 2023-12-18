@@ -1,26 +1,26 @@
 ---
 title: 曝光數資料型別
-description: 本檔案提供「曝光數」XDM資料型別的概觀。
+description: 瞭解曝光數XDM資料型別。
 exl-id: 1e758043-a41e-45f7-ae8b-514990d0649e
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 4%
+source-wordcount: '115'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL 曝光次數] 資料型別
+# [!UICONTROL 曝光數] 資料型別
 
-[!UICONTROL 曝光次數] 是描述行銷印象的標準XDM資料型別，這是用於量化一段內容（例如廣告、數位貼文或網頁）的數位檢視或參與次數的量度。
+[!UICONTROL 曝光數] 是描述行銷印象的標準XDM資料型別，這是用於量化一段內容（例如廣告、數位貼文或網頁）的數位檢視或參與次數的量度。
 
 ![](../images/data-types/impressions.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `ID` | 字串 | 閱聽的唯一ID。 |
 | `displays` | 整數 | 閱聽專案已向客戶顯示的次數。 |
-| `selected` | 整數 | 已選取或點按曝光專案的次數。 |
-| `type` | 字串 | 曝光型別。 |
+| `selected` | 整數 | 已選取或點選曝光專案的次數。 |
+| `type` | 字串 | 閱聽型別。 |
 
 {style="table-layout:auto"}
 

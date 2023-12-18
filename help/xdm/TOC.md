@@ -4,9 +4,9 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
+source-git-commit: f0d437743b33818c27de94eb522227bb950e60cb
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '589'
 ht-degree: 15%
 
 ---
@@ -58,16 +58,20 @@ ht-degree: 15%
       * [醫療保健會員詳細資訊](./field-groups/profile/healthcare-member-details.md)
       * [熟客方案細節](./field-groups/profile/loyalty-details.md)
       * [個人聯絡詳細資訊](./field-groups/profile/personal-contact-details.md)
+      * [設定檔合作夥伴擴充（範例）](./field-groups/profile/profile-partner-enrichment.md)
       * [區塊會籍細節](./field-groups/profile/segmentation.md)
       * [電信訂閱](./field-groups/profile/telecom-subscription.md)
       * [工作聯絡詳細資訊](./field-groups/profile/work-contact-details.md)
       * [XDM商業人士要素](./field-groups/profile/business-person-components.md)
       * [XDM商業人士細節](./field-groups/profile/business-person-details.md)
+   * XDM個別潛在客戶設定檔 {#prospect-profile}
+      * [合作夥伴潛在客戶詳細資訊（範例）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics完整擴充功能](./field-groups/event/analytics-full-extension.md)
       * [廣告詳細資料](./field-groups/event/advertising-details.md)
       * [應用程式詳細資料](./field-groups/event/application-details.md)
       * [餘額轉帳](./field-groups/event/balance-transfers.md)
+      * [機器人偵測](./field-groups/event/bot-detection-information.md)
       * [行銷活動行銷細節](./field-groups/event/campaign-marketing-details.md)
       * [卡片動作](./field-groups/event/card-actions.md)
       * [管道詳細資料](./field-groups/event/channel-details.md)
@@ -105,14 +109,18 @@ ht-degree: 15%
 * 資料型別 {#data-types}
    * [帳戶詳細資料](./data-types/account-details.md)
    * [廣告插播](./data-types/ad-break.md)
+   * [位址](./data-types/address.md)
    * [廣告詳細資訊](./data-types/advertising-details-information.md)
    * [廣告Pod詳細資訊](./data-types/advertising-pod-details-information.md)
    * [應用程式](./data-types/application.md)
    * [信標](./data-types/beacon.md)
    * [瀏覽器詳細資料](./data-types/browser-details.md)
    * [B2B來源](./data-types/b2b-source.md)
+   * [購物車](./data-types/cart.md)
+   * [類別資料](./data-types/category-data.md)
    * [章節詳細資訊](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
+   * [商業範圍](./data-types/commerce-scope.md)
    * [同意字串](./data-types/consent-string.md)
    * [同意和偏好設定](./data-types/consents.md)
    * [貨幣](./data-types/currency.md)
@@ -153,9 +161,14 @@ ht-degree: 15%
    * [POI互動](./data-types/poi-interaction.md)
    * [郵寄地址](./data-types/postal-address.md)
    * [產品清單專案](./data-types/product-list-item.md)
+   * [退款專案](./data-types/refund-item.md)
+   * [請購單清單](./data-types/requisition-list.md)
+   * [傳回](./data-types/return.md)
+   * [傳回專案](./data-types/return-item.md)
    * [QoE資料詳細資訊](./data-types/qoe-data-details-information.md)
    * [搜尋](./data-types/search.md)
    * [工作階段詳細資訊](./data-types/session-details-information.md)
+   * [送貨](./data-types/shipping.md)
    * [訂閱](./data-types/subscription.md)
    * [電信訂閱](./data-types/telecom-subscription.md)
    * [交易](./data-types/transaction.md)

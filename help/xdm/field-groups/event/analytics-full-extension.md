@@ -1,11 +1,11 @@
 ---
 title: Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組
-description: 本檔案提供Adobe Analytics ExperienceEvent Full Extension結構描述欄位群組的概觀。
+description: 瞭解Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組。
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 10%
+source-wordcount: '811'
+ht-degree: 5%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 10%
 | `eVars` | 物件 | 可擷取最多250個轉換變數的物件([eVar](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=zh-Hant))。 此物件的屬性會加上金鑰 `eVar1` 至 `eVar250` 並且僅接受字串作為其資料型別。 |
 | `hierarchies` | 物件 | 可擷取最多五個自訂階層變數的物件([hiers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html))。 此物件的屬性會加上金鑰 `hier1` 至 `hier5`，這些物件本身便具有下列子屬性：<ul><li>`delimiter`：用來產生底下所提供清單的原始分隔符號 `values`.</li><li>`values`：階層層級名稱的分隔清單，以字串表示。</li></ul> |
 | `listProps` | 物件 | 可擷取多達75個的物件 [清單屬性](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props). 此物件的屬性會加上金鑰 `prop1` 至 `prop75`，這些物件本身便具有下列子屬性：<ul><li>`delimiter`：用來產生底下所提供清單的原始分隔符號 `values`.</li><li>`values`：Prop的分隔值清單，以字串表示。</li></ul> |
-| `lists` | 物件 | 可擷取最多三個的物件 [清單](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=zh-Hant). 此物件的屬性會加上金鑰 `list1` 至 `list3`. 這些屬性各自包含一個 `list` 陣列 [[!UICONTROL 索引鍵值配對]](../../data-types/key-value-pair.md) 資料型別。 |
+| `lists` | 物件 | 可擷取最多三個的物件 [清單](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html). 此物件的屬性會加上金鑰 `list1` 至 `list3`. 這些屬性各自包含一個 `list` 陣列 [[!UICONTROL 索引鍵值配對]](../../data-types/key-value-pair.md) 資料型別。 |
 | `props` | 物件 | 可擷取多達75個的物件 [prop](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html). 此物件的屬性會加上金鑰 `prop1` 至 `prop75` 並且僅接受字串作為其資料型別。 |
 | `postalCode` | 字串 | 使用者端提供的郵遞區號。 |
 | `stateProvince` | 字串 | 使用者端提供的州或省位置。 |

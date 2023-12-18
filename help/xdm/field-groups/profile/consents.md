@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: 同意和偏好設定結構描述欄位群組
-description: 本檔案提供同意和偏好設定結構欄位群組的概觀。
+description: 瞭解同意和偏好設定結構描述欄位群組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---

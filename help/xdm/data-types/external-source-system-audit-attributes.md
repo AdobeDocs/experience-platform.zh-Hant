@@ -1,11 +1,11 @@
 ---
 title: 外部來源系統稽核屬性資料型別
-description: 本檔案提供外部來源系統稽核屬性Experience Data Model (XDM)資料型別的概述。
+description: 瞭解外部來源系統稽核屬性Experience Data Model (XDM)資料型別。
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 15%
+source-wordcount: '168'
+ht-degree: 17%
 
 ---
 

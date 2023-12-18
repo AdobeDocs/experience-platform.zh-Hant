@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；綱要；綱要；XDM；個別設定檔；欄位；綱要；綱要；身分對應；身分對應；綱要設計；對應；聯合綱要；聯合
 title: IdentityMap結構描述欄位群組
-description: 本檔案提供XDM個別設定檔類別的概觀。
+description: 瞭解XDM個別設定檔類別。
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---

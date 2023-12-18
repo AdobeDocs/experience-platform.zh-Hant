@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
 title: 區段會籍詳細資料結構欄位群組
-description: 本檔案提供「區段成員資格詳細資訊」結構欄位群組的概觀。
+description: 瞭解區段會籍詳細資料結構欄位群組。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '398'
 ht-degree: 1%
 
 ---

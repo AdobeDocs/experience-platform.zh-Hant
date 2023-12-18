@@ -2,27 +2,27 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；poi；poi詳細資訊；地標；興趣點詳細資訊；資料型別；資料型別；
 solution: Experience Platform
 title: 興趣點詳細資料資料型別
-description: 本檔案提供Point Of Interest詳細資訊XDM資料型別的概觀。
+description: 瞭解興趣點詳情XDM資料型別。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 3%
+source-wordcount: '180'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL 興趣點細節] 資料型別
 
-[!UICONTROL 興趣點細節] 是標準XDM資料型別，可描述觀察到事件的地理相關資料。
+[!UICONTROL 興趣點細節] 是標準的XDM資料型別，可說明觀察到事件的地理相關資料。
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | 說明POI互動作用中的信標詳細資訊。 |
-| `geoInteractionDetails` | [[!UICONTROL 地理互動細節]](./geo-interaction-details.md) | 說明進行POI互動的有效地理位置細節。 |
-| `category` | 字串 | 由POI定義的系統管理員指派來組織POI的一般類別。 |
-| `distanceToPOICenter` | 雙倍 | 與POI中心的預估距離（公尺）。 |
+| `beaconInteractionDetails` | [[!UICONTROL 信標]](./beacon.md) | 說明適用於POI互動的信標詳細資訊。 |
+| `geoInteractionDetails` | [[!UICONTROL 地理互動細節]](./geo-interaction-details.md) | 說明適用於POI互動的地理位置細節。 |
+| `category` | 字串 | 指派以供POI定義的系統管理員組織POI的一般類別。 |
+| `distanceToPOICenter` | 雙倍 | 和POI中心的預估距離（公尺）。 |
 | `locatingType` | 字串 | 用來判斷位置的機制。 接受的值包括： <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
 | `name` | 字串 | 指定給POI的名稱。 |
 | `poiID` | 字串 | POI的唯一識別碼。 |

@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；poi；互動；興趣點；興趣點；資料型別；資料型別；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；POI；互動；興趣點；興趣點；資料型別；資料型別；
 solution: Experience Platform
 title: 興趣點互動資料型別
-description: 本檔案提供興趣點互動XDM資料型別的概觀。
+description: 瞭解興趣點互動XDM資料型別。
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 2%
+source-wordcount: '162'
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL 興趣點互動] 資料型別
 
-[!UICONTROL 興趣點互動] 是標準的XDM資料型別，說明在行動裝置進入範圍內時，將身分資訊傳遞給行動應用程式的無線裝置。
+[!UICONTROL 興趣點互動] 是標準的XDM資料型別，說明在行動裝置進入範圍內時，可將身分資訊傳遞給行動應用程式的無線裝置。
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL 興趣點細節]](./poi-details.md) | 說明導致事件的POI的詳細資料。 |
+| `poiDetail` | [[!UICONTROL 興趣點細節]](./poi-details.md) | 說明造成事件之POI的詳細資料。 |
 | `poiEntries` | 物件 | 說明個人已進入POI的次數。 包含兩個屬性： <ul><li>`id`：測量的唯一識別碼。</li><li>`value`：測量的可量化值。</li></ul> |
 | `poiExits` | 物件 | 說明個人已退出POI的次數。 包含兩個屬性： <ul><li>`id`：測量的唯一識別碼。</li><li>`value`：測量的可量化值。</li></ul> |
 

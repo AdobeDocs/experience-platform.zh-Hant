@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；身分；資料型別；資料型別；
 solution: Experience Platform
 title: 身分資料型別
-description: 本檔案提供身分XDM資料型別的概述。
+description: 瞭解身分XDM資料型別。
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '262'
 ht-degree: 4%
 
 ---

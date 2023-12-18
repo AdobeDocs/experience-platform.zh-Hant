@@ -1,10 +1,10 @@
 ---
 title: XDM個別潛在客戶設定檔類別
-description: 本檔案提供Experience Data Model (XDM)中XDM個別潛在客戶設定檔類別的概觀。
+description: 瞭解Experience Data Model (XDM)中的XDM個別潛在客戶設定檔類別。
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '356'
 ht-degree: 3%
 
 ---

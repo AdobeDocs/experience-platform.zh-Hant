@@ -1,11 +1,11 @@
 ---
 title: 產品類別結構描述欄位群組
-description: 本檔案提供「產品類別」結構描述欄位群組的概觀。
+description: 瞭解產品類別結構描述欄位群組。
 exl-id: 80825bcf-e646-426b-a3d6-f6759f6cd5cf
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 6%
+source-wordcount: '86'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 ![](../../images/field-groups/product/product-category.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `productCategoryDescription` | 字串 | 產品類別的說明。 |
 | `productCategoryName` | 字串 | 產品類別的名稱。 |

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；個人設定檔；欄位；結構；結構；個人詳細資訊；結構描述設計；欄位群組；欄位群組；
+keywords: Experience Platform；首頁；熱門主題；綱要；綱要；XDM；個人設定檔；欄位；綱要；個人詳細資訊；綱要設計；欄位群組；欄位群組；
 solution: Experience Platform
 title: 個人聯絡詳細資料結構描述欄位群組
-description: 本檔案提供「個人連絡人詳細資訊」結構描述欄位群組的概觀。
+description: 瞭解個人聯絡詳細資料結構欄位群組。
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 6%
+source-wordcount: '143'
+ht-degree: 2%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 6%
 
 ![](../../images/field-groups/personal-contact-details.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `faxPhone` | [電話號碼](../../data-types/phone-number.md) | 說明人員的傳真號碼。 |
-| `homeAddress` | [郵寄地址](../../data-types/postal-address.md) | 說明個人的住址。 |
+| `faxPhone` | [電話號碼](../../data-types/phone-number.md) | 描述人員的傳真號碼。 |
+| `homeAddress` | [郵寄地址](../../data-types/postal-address.md) | 說明人員的住址。 |
 | `homePhone` | [電話號碼](../../data-types/phone-number.md) | 說明個人的住家電話號碼。 |
 | `mobilePhone` | [電話號碼](../../data-types/phone-number.md) | 說明個人的行動電話號碼。 |
 | `personalEmail` | [電子郵件地址](../../data-types/email-address.md) | 說明個人的電子郵件地址。 |

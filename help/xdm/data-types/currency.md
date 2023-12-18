@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；結構；裝置；資料型別；資料型別；貨幣；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；裝置；資料型別；資料型別；貨幣；
 solution: Experience Platform
 title: 貨幣資料型別
-description: 本檔案提供貨幣XDM資料型別的概觀。
+description: 瞭解貨幣XDM資料型別。
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 3%
+source-wordcount: '104'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL 貨幣] 資料型別
 
-[!UICONTROL 貨幣] 是標準的XDM資料型別，說明貨幣金額，包括貨幣型別和轉換日期。
+[!UICONTROL 貨幣] 是說明貨幣金額的標準XDM資料型別，包括貨幣型別和轉換日期。
 
 ![](../images/data-types/currency.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `amount` | 雙倍 | 由定義的貨幣金額 `currencyCode`. |
 | `conversionDate` | 日期時間 | 進行貨幣轉換的時間戳記。 |
-| `currencyCode` | 字串 | ISO 4217代碼，指示貨幣型別 `amount` 表示。 |
+| `currencyCode` | 字串 | ISO 4217代碼，表示貨幣型別， `amount` 表示。 |
 
 {style="table-layout:auto"}
 

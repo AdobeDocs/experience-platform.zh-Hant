@@ -1,11 +1,11 @@
 ---
 title: Sitetool詳細資料結構欄位群組
-description: 本檔案提供「Sitetool詳細資訊」結構描述欄位群組的概觀。
+description: 瞭解Sitetool詳細資料結構欄位群組。
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 4%
+source-wordcount: '181'
+ht-degree: 5%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 4%
 
 ![欄位群組結構](../../images/field-groups/sitetool-details.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `dataGatheringEvent` | 物件 | 指出此事件是否與其他相關詳細資料一起屬於資料收集事件。 包含以下屬性：<ul><li>`data`：（對應）包含所收集的JSON資料，這些資料會隨著測驗、調查或輪詢提交事件而提交。</li><li>`isTrue`：（布林值）指出此事件是否為測驗、調查或輪詢等資料收集事件。</li><li>`score`：（整數）執行者根據事件回應保護的分數。</li></ul> |
+| `dataGatheringEvent` | 物件 | 指出此事件是否為資料收集事件以及其他相關詳細資訊。 包含下列屬性：<ul><li>`data`：（對應）包含所收集並隨著測驗、調查或輪詢提交事件而提交的JSON資料。</li><li>`isTrue`：（布林值）指出此事件是否為測驗、調查或輪詢等資料收集事件。</li><li>`score`：（整數）由執行者根據事件回應保護的分數。</li></ul> |
 | `actor` | 字串 | 執行此動作的人員/成員。 |
 | `actorID` | 字串 | 執行此動作之人員/成員的唯一識別碼。 |
 | `isKeyEvent` | 布林值 | 指出此事件是否為關鍵事件。 |

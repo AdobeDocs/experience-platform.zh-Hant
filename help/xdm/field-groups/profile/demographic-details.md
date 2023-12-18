@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構描述；結構描述；XDM；個人設定檔；欄位；結構描述；結構描述設計；欄位群組；欄位群組；人員；個人詳細資訊；個人資料個人詳細資訊；人員；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；個人設定檔；欄位；結構；結構描述；結構描述設計；欄位群組；欄位群組；人員；個人詳細資訊；個人資料個人詳細資訊；人員；
 solution: Experience Platform
 title: 人口統計詳細資料結構欄位群組
-description: 本檔案提供「人口統計詳細資訊」結構描述欄位群組的概觀。
+description: 瞭解人口統計詳細資料結構欄位群組。
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 3%
+source-wordcount: '261'
+ht-degree: 4%
 
 ---
 
@@ -22,16 +22,16 @@ ht-degree: 3%
 
 ![](../../images/field-groups/demographic-details.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `person.name` | [個人名稱](../../data-types/person-name.md) | 此物件的子欄位可描述個人名稱的各種元素。 |
+| `person.name` | [個人名稱](../../data-types/person-name.md) | 物件，其子欄位描述個人名稱的各種元素。 |
 | `person.birthDate` | 日期 | 個人出生的完整日期，採用ISO 8601時間戳記的形式。 |
-| `person.birthDayAndMonth` | 字串 | 個人出生的日期和月份（MM-DD格式）。 若只知道個人出生的日期和月份，但不知道出生年份，應使用此欄位。 |
-| `person.birthYear` | 整數 | 個人出生的年份，包括世紀（例如1989）。 只知道個人的年齡而不知道完整的出生日期時，應使用此欄位。 |
+| `person.birthDayAndMonth` | 字串 | 個人出生的日期和月份（MM-DD格式）。 若只知道一個人出生的日期和月份，但不知道出生年時，應使用此欄位。 |
+| `person.birthYear` | 整數 | 個人出生年，包括世紀（如1989）。 若只知道個人的年齡而不知道完整的出生日期時，應使用此欄位。 |
 | `person.gender` | 字串 | 個人的性別識別。 |
-| `person.martialStatus` | 字串 | 說明個人與另一個重要的人的關係。 |
-| `person.nationality` | 字串 | 個人與其使用ISO 3166-1 Alpha-2代碼表示的狀態之間的法律關係。 |
-| `person.taxId` | 字串 | 個人的稅務/財政ID，例如美國的TIN或西班牙的CIF/NIF。 |
+| `person.martialStatus` | 字串 | 描述個人與另一個重要人物的關係。 |
+| `person.nationality` | 字串 | 個人與其使用ISO 3166-1Alpha2代碼代表的州之間的法律關係。 |
+| `person.taxId` | 字串 | 個人的稅務/會計ID，例如，在美國為TIN或在西班牙為CIF/NIF。 |
 
 {style="table-layout:auto"}
 

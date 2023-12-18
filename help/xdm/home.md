@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統概覽
 description: 標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)由Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2083'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ XDM是公開記錄的規格，旨在改善數位體驗的效能。 它提供通�
 
 XDM是基礎架構，可讓Adobe Experience Cloud在Experience Platform的支援下，於正確的時間在正確的頻道將正確的訊息傳遞給正確的人。 建置Experience Platform所根據的方法XDM系統可運作 [!DNL Experience Data Model] 供平台服務使用的結構描述。
 
-本檔案概述XDM系統在Experience Platform中的角色。
+瞭解XDM系統在Experience Platform中的角色。
 
 ## XDM結構描述
 

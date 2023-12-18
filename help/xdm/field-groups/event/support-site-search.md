@@ -1,21 +1,21 @@
 ---
 title: 支援網站搜尋結構描述欄位群組
-description: 本檔案提供「支援網站搜尋」結構描述欄位群組的概觀。
+description: 瞭解支援網站搜尋結構描述欄位群組。
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '77'
 ht-degree: 5%
 
 ---
 
 # [!UICONTROL 支援網站搜尋] 結構描述欄位群組
 
-[!UICONTROL 支援網站搜尋] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 它提供單一 `siteKnowledge.supportSiteSearch` 擷取支援網站搜尋相關資訊的結構描述物件。
+[!UICONTROL 支援網站搜尋] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 它提供單一 `siteKnowledge.supportSiteSearch` 物件變更為結構描述，以擷取支援網站搜尋的相關資訊。
 
 ![](../../images/field-groups/support-site-search.png)
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `supportSiteSearch` | [[!UICONTROL 內部網站搜尋]](../../data-types/internal-site-search.md) | 擷取有關搜尋事件的詳細資料。 |
 

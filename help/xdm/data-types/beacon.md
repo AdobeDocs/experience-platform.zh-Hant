@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；結構描述；結構描述；XDM；欄位；結構描述；信標；互動細節；資料型別；資料型別；
+keywords: Experience Platform；首頁；熱門主題；結構；結構；XDM；欄位；結構；信標；互動詳細資訊；資料型別；資料型別；
 solution: Experience Platform
 title: 信標資料型別
-description: 本檔案提供XDM個別設定檔類別的概觀。
+description: 瞭解XDM個別設定檔類別。
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 3%
+source-wordcount: '233'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Beacon] 資料型別
+# [!UICONTROL 信標] 資料型別
 
-[!UICONTROL Beacon] 是標準的XDM資料型別，說明在行動裝置進入範圍內時，將身分資訊傳遞給行動應用程式的無線裝置。
+[!UICONTROL 信標] 是標準的XDM資料型別，說明在行動裝置進入範圍內時，可將身分資訊傳遞給行動應用程式的無線裝置。
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
-| 屬性 | 資料型別 | 說明 |
+| 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `beaconMajor` | 雙倍 | 主要值會識別和區分1和65,535之間的群組值與不帶正負號的整數值。 |
-| `beaconMinor` | 雙倍 | 次要值會識別和區分1和65,535之間的個別值與不帶正負號的整數值。 |
-| `proximity` | 字串 | 與信標的預估距離。 請參閱 [附錄](#proximity) 以取得接受的值和定義。 |
-| `proximityUUID` | 字串 | 近似程度UUID （通用唯一識別碼）是一種特殊型別的識別碼，可用來將您網路中的信標與非您控制之網路中的所有其他信標區分開來。 近似程度UUID會設定為信標，以傳輸到範圍內的行動裝置，藉以識別組織的信標。 |
+| `beaconMajor` | 雙倍 | 主要值會識別和區分1和65,535之間的群組值與不帶正負號的整數。 |
+| `beaconMinor` | 雙倍 | 次要值會識別和區分1和65,535之間的個別值與不帶正負號的整數。 |
+| `proximity` | 字串 | 和信標的預估距離。 請參閱 [附錄](#proximity) 以取得接受的值和定義。 |
+| `proximityUUID` | 字串 | 鄰近UUID （通用唯一識別碼）是一種特殊型別的識別碼，可用來將您網路中的信標與非您控制之網路中的所有其他信標區分開來。 近似程度UUID會設定至信標中，以傳輸到範圍內的行動裝置來識別組織的信標。 |
 
 {style="table-layout:auto"}
 
@@ -33,15 +33,15 @@ ht-degree: 3%
 
 ## 附錄
 
-以下小節包含更多關於 [!UICONTROL Beacon] 資料型別。
+下節包含更多關於 [!UICONTROL 信標] 資料型別。
 
-## 近似程度的接受值 {#proximity}
+## 近似程度接受的值 {#proximity}
 
-下表概述下列專案的可接受值 `proximity` 及其相關涵義：
+下表概述下列專案可接受的值 `proximity` 及其相關意義：
 
 | 值 | 說明 |
 | --- | --- |
 | `immediate` | 幾公分以內。 |
 | `near` | 距離不到10米。 |
 | `far` | 10米以外。 |
-| `unknown` | 無法判斷距離，可能是因為訊號太弱。 |
+| `unknown` | 無法確認距離，可能是因為訊號弱。 |
