@@ -48,7 +48,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="資料流執行詳細資訊"
->abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入瞭解，請參閱量度定義指南。"
+>abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -111,7 +111,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
->abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入瞭解，請參閱量度定義指南。"
+>abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]

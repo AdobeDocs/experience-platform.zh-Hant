@@ -6,7 +6,7 @@ exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1949'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -176,7 +176,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="對象來源"
->abstract="選擇最初如何在對象中收集客戶資料。當使用者成為此區段的目標時，資料會顯示在Facebook中"
+>abstract="選擇最初如何在對象中收集客戶資料。當區段以使用者為目標時，資料會顯示在 Facebook 中"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"

@@ -48,7 +48,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 * [XDM UI指南](./ui/overview.md)
 * [結構描述登入API指南](./api/overview.md)
 
-## XDM系統中的資料行為 {#data-behaviors}
+## XDM 系統中的資料行為 {#data-behaviors}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
