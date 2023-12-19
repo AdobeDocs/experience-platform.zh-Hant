@@ -4,14 +4,21 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
+source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 4%
+source-wordcount: '704'
+ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform Debugger發行說明
+
+## 1.5.4版 — 2023年12月19日
+
+### 修正和改良
+
+* 修正設定未保留的問題。
+* 修正導致Debugger在檢視Analytics處理後點選時當機的問題。
 
 ## 1.5.3版 — 2023年12月6日
 
@@ -25,6 +32,14 @@ ht-degree: 4%
 * 修正Analytics請求表格中缺少Activity Map資料的問題。
 * 修正檢視Target追蹤會導致當機的問題。
 * 新增當Debugger無法在Firefox中設定頁面上的基礎結構時的警告。
+
+## 1.5.2版 — 2023年11月10日
+
+（僅限Firefox）
+
+### 修正和改良
+
+* 更新檔案的組織。
 
 ## 1.5.1版 — 2023年11月2日
 
