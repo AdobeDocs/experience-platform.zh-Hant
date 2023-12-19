@@ -2,9 +2,9 @@
 title: 中繼轉換API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Meta Conversions API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
+source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
 workflow-type: tm+mt
-source-wordcount: '2595'
+source-wordcount: '2565'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,12 @@ ht-degree: 0%
 >* 已購買Real-Time CDP Prime和Ultimate套件的客戶可以使用快速入門功能。 如需詳細資訊，請聯絡您的Adobe代表。
 >* 此功能適用於全新實作，目前不支援在現有標籤和事件轉送屬性上自動安裝擴充功能和設定。
 
+>[!NOTE]
+>
+>任何現有使用者端都可使用快速入門工作流程建立可供下列專案使用的參考實作：
+>* 作為全新實作的開始。
+>* 將其當作參考實作，您可以檢查以瞭解其設定方式，然後在目前的生產實作中複製。
+
 快速入門功能可協助您使用中繼轉換API和中繼畫素擴充功能輕鬆而高效地完成設定。 此工具會自動執行在Adobe標籤和事件轉送中執行的多個步驟，大幅縮短設定時間。
 
 此功能會在新自動產生的標籤上自動安裝及設定中繼轉換API和中繼畫素擴充功能，並使用必要的規則和資料元素來設定事件轉送屬性。 此外，也會自動安裝及設定Experience Platform Web SDK和資料流。 最後，快速入門功能會自動將程式庫發佈到開發環境中的指定URL，如此即可透過事件轉送和Experience Platform邊緣網路即時啟用使用者端資料收集和伺服器端事件轉送。
@@ -152,7 +158,7 @@ ht-degree: 0%
 
 ![在您的網站對話方塊中新增程式碼](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-此 [!UICONTROL 驗證結果] 對話方塊會顯示中繼擴充功能實作結果。 選取&#x200B;**[!UICONTROL 「下一步」]**。您也可以選取「 」，檢視其他驗證結果 **[!UICONTROL 保證]** 連結。
+此 [!UICONTROL 驗證結果] 對話方塊會顯示中繼擴充功能實作結果。 選取 **[!UICONTROL 下一個]**. 您也可以選取「 」，檢視其他驗證結果 **[!UICONTROL 保證]** 連結。
 
 ![顯示實作結果的測試結果對話方塊](../../../images/extensions/server/meta/test-results.png)
 
