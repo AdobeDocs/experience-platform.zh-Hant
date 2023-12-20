@@ -2,10 +2,10 @@
 description: 此頁面說明Destination SDK支援的各種OAuth 2授權流程，並提供為目的地設定OAuth 2授權的指示。
 title: OAuth 2授權
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 4%
+source-wordcount: '2181'
+ht-degree: 2%
 
 ---
 
@@ -33,11 +33,16 @@ Destination SDK支援多種前往目的地的授權方法。 其中一種選項�
 
 ### 您系統中的必要條件 {#prerequisites}
 
-首先，您必須在系統中建立適用於Adobe Experience Platform的應用程式，或在系統中註冊Experience Platform。 目標是產生使用者端ID和使用者端密碼，這是驗證Experience Platform至您的目的地所需的密碼。 在您的系統中，此設定會包含您所需的Adobe Experience Platform OAuth 2重新導向/回呼URL，您可於下列清單中取得該URL。
+首先，您必須在系統中建立適用於Adobe Experience Platform的應用程式，或在系統中註冊Experience Platform。 目標是產生使用者端ID和使用者端密碼，這是驗證Experience Platform至您的目的地所需的密碼。
+
+在您的系統中，此設定會包含您所需的Adobe Experience Platform OAuth 2重新導向/回呼URL，您可於下列清單中取得該URL。
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
@@ -115,7 +120,7 @@ Adobe為OAuth 2授權設計的系統：
 | `grant` | 字串 | 使用「OAUTH2_AUTHORIZATION_CODE」。 |
 | `accessTokenUrl` | 字串 | 您這邊的URL會核發存取權杖，並可選擇重新整理權杖。 |
 | `authorizationUrl` | 字串 | 授權伺服器的URL，您可在此處重新導向使用者以登入您的應用程式。 |
-| `refreshTokenUrl` | 字串 | *選填.* 您這邊的URL會發出重新整理Token。 通常 `refreshTokenUrl` 與 `accessTokenUrl`. |
+| `refreshTokenUrl` | 字串 | *選填。* 您這邊的URL會發出重新整理Token。 通常 `refreshTokenUrl` 與 `accessTokenUrl`. |
 | `clientId` | 字串 | 系統指派給Adobe Experience Platform的使用者端ID。 |
 | `clientSecret` | 字串 | 您的系統指派給Adobe Experience Platform的使用者端密碼。 |
 | `scope` | 字串清單 | *可選*. 設定存取Token允許Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
@@ -200,7 +205,7 @@ Adobe會使用以下標準輸入來簡化目的地設定，並具備覆寫值的
 | `authType` | 字串 | 使用「OAUTH2」。 |
 | `grant` | 字串 | 使用「OAUTH2_CLIENT_CREDENTIALS」。 |
 | `accessTokenUrl` | 字串 | 授權伺服器的URL，它會發出存取權杖和選用的重新整理權杖。 |
-| `refreshTokenUrl` | 字串 | *選填.* 您這邊的URL會發出重新整理Token。 通常 `refreshTokenUrl` 與 `accessTokenUrl`. |
+| `refreshTokenUrl` | 字串 | *選填。* 您這邊的URL會發出重新整理Token。 通常 `refreshTokenUrl` 與 `accessTokenUrl`. |
 | `clientId` | 字串 | 系統指派給Adobe Experience Platform的使用者端ID。 |
 | `clientSecret` | 字串 | 您的系統指派給Adobe Experience Platform的使用者端密碼。 |
 | `scope` | 字串清單 | *可選*. 設定存取Token允許Experience Platform對您的資源執行的範圍。 範例： &quot;read， write&quot;。 |
@@ -362,7 +367,7 @@ Adobe會使用以下標準輸入來簡化目的地設定，並具備覆寫值的
 | `authenticationDataFields.isRequired` | 布林值 | 指定在授權流程中是否需要自訂資料欄位。 |
 | `authenticationDataFields.format` | 字串 | 當您選取 `"format":"password"`，Adobe會加密授權資料欄位的值。 搭配使用時 `"fieldType": "CUSTOMER"`，這也會在使用者鍵入欄位時隱藏UI中的輸入。 |
 | `authenticationDataFields.fieldType` | 字串 | 指出當合作夥伴（您）或使用者在Experience Platform中設定您的目的地時，輸入是否來自他們。 |
-| `authenticationDataFields.value` | 字串. 布林值. 整數 | 自訂資料欄位的值。 值與從中選擇的型別相符 `authenticationDataFields.type`. |
+| `authenticationDataFields.value` | 字串。 布林值。 整數 | 自訂資料欄位的值。 值與從中選擇的型別相符 `authenticationDataFields.type`. |
 | `authenticationDataFields.authenticationResponsePath` | 字串 | 指出您正在參照的API回應路徑欄位。 |
 
 {style="table-layout:auto"}
