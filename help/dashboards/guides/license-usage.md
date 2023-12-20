@@ -4,10 +4,10 @@ title: 授權使用儀表板指南
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 4%
+source-wordcount: '2108'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,14 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="授權使用量儀表板"
->abstract="授權使用量儀表板可讓您深入了解您已購買的 Adobe Experience Platform 產品。儀表板概述顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
+>abstract="授權使用情況儀表板可讓您深入分析已購買的Adobe Experience Platform產品。 儀表板概覽會顯示您產品的主要量度，包括每個主要量度的使用情況和您簽約的授權金額。 詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="授權使用量儀表板"
+>abstract="授權使用情況儀表板可讓您深入分析已購買的Adobe Experience Platform產品。 儀表板概覽會顯示您產品的主要量度，包括每個主要量度的使用情況和您簽約的授權金額。 詳細資料工作區顯示特定沙箱中每個產品的量度劃分。<br>使用預測每月月底都會重新整理，並預測未來六個月期間的使用量。 若要減少使用量，請為沙箱和資料集設定資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="資料集有效期"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="假名設定檔資料有效期"
 
 您可以透過Adobe Experience Platform檢視貴組織授權使用情況的重要資訊 [!UICONTROL 授權使用情況] 儀表板。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
@@ -46,7 +53,7 @@ ht-degree: 4%
 
 ![授權使用儀表板概述索引標籤，在左側導覽側邊欄中反白顯示授權使用情形。](../images/license-usage/dashboard-overview.png)
 
-## [!UICONTROL 概覽標籤] {#overview-tab}
+## [!UICONTROL 概觀] 標籤 {#overview-tab}
 
 此儀表板會以表格格式顯示您所有授權的Adobe Experience Platform產品，包括附加元件。 此表格提供所有可用設定檔中授權使用情形的重要資訊。
 
@@ -56,7 +63,7 @@ ht-degree: 4%
 | **[!UICONTROL 主要量度]** | 主要量度，用於在內追蹤該產品。 |
 | **[!UICONTROL 授權金額]** | 產品授權合約中同意的主要量度數量上限的合約值。 |
 | **[!UICONTROL 使用狀況]** | 您使用的主要量度數量。 此值提供該量度在所有沙箱（生產或開發）中的總使用量。 |
-| **[!UICONTROL 使用狀況 %]** | 根據您的授權數量使用的主要量度百分比。 |
+| **[!UICONTROL 使用量%]** | 根據您的授權數量使用的主要量度百分比。 |
 
 >[!NOTE]
 >
