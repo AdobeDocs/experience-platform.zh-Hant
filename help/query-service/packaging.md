@@ -2,9 +2,9 @@
 title: 查詢服務封裝
 description: 以下檔案概述查詢服務可用功能和產品的包裝，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 47f02f6d1d4017dfe0fccddcd137487e064b3039
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '930'
 ht-degree: 2%
 
 ---
@@ -23,18 +23,6 @@ ht-degree: 2%
 - **平台式應用程式** (Adobe Real-time Customer Data Platform、Adobe Customer Journey Analytics和Adobe Journey Optimizer)：查詢服務存取權從一開始就會針對平台式應用程式的每個變數和層級提供，以執行臨時查詢。
 - **[!DNL Data Distiller]** (可與Adobe Real-Time CDP、Customer Journey Analytics和Adobe Journey Optimizer一起購買的附加套件)：提供執行批次查詢的查詢服務存取權 [!DNL Data Distiller].
 
-## 術語 {#terminology}
-
-下節提供與「查詢服務」封裝相關之重要術語的定義：
-
-- **資料湖儲存**：資料湖主要用途如下：
-   - 充當將資料上線到Experience Platform中的中繼區域；
-   - 充當所有Experience Platform資料的長期資料儲存體；
-   - 啟用資料分析和資料科學等使用案例。
-- **資料匯出**：此 [資料集](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=zh-Hant) 根據您的應用程式、產品層級和購買的任何附加元件，您可以匯出型別。 衍生資料集可透過查詢服務資料Distiller附加元件建立，且可以 [已從Adobe Experience Platform匯出](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activation-overview.html) 至多種目的地，包括 [雲端儲存空間目的地](/help/destinations/ui/export-datasets.md).
-- **加速的查詢**：加速查詢會傳回以彙總資料為基礎的結果，以減少結果的等待時間，並提供更具互動性的資訊交換。 對加速存放區進行的無狀態查詢只能當作Data Distiller附加元件的一部分提供。
-- **計算時數**：計算時數是量度，用於使用查詢服務API透過批次查詢追蹤資料的掃描和寫入。 它是以每年時數計算，並在所有沙箱中測量。 提供給貴組織的計算時數會在交易範圍處理程式中定義。
-
 ## 權益 {#entitlements}
 
 下表根據封裝方式概述主要查詢服務權益：
@@ -47,8 +35,8 @@ ht-degree: 2%
 | 最長執行時間 | 10 分鐘 | 24 小時 |
 | 授權量度 | **查詢使用者並行**： <ul><li>1位同時使用者(Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5位同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢並行**： <ul><li>1個並行執行查詢(所有應用程式&#x200B;)</li></ul> **其他Ad Hoc Query使用者套件附加元件** 可購買以增加客戶的授權特定查詢權益。 <ul><li>每包+5個額外的同時使用者</li><li>每包+1個額外的並行執行查詢</li></ul> | **計算時數**： <ul><li>變數（根據客戶的應用程式權益設定範圍）</li></ul> **計算時數** 是測量執行批次查詢時，查詢服務引擎讀取、處理資料以及將資料寫入資料湖所花費的時間。 |
 | 加速查詢和報告使用 | 無 | 是 — 並行加速查詢可讓您從加速存放區讀取資料，並在您的儀表板中顯示。 也提供在加速存放區中儲存報告模型和資料集的專用權益。 |
-| 資料湖儲存容量 | 是 — 您的總儲存權利取決於您的平台應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的儲存權益，好讓您的資料Distiller使用案例原始和衍生資料集在七天資料到期日之後繼續儲存。<br>您的資料湖儲存容量是以TB為單位，取決於您購買的計算時數數量。 |
-| 資料匯出允許 | 是 — 您的總匯出許可權取決於您的平台式應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供其他匯出權益，以允許匯出使用Data Distiller建立的衍生資料集。<br>您每年的資料匯出容量是以TB為單位，並且取決於您購買的計算時數數量。 |
+| 資料湖儲存容量 | 您的總儲存許可權取決於您的平台應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的儲存權益，好讓您的資料Distiller使用案例原始和衍生資料集在七天資料到期日之後繼續儲存。<br>您的資料湖儲存容量是以TB為單位，取決於您購買的計算時數數量。 請檢視產品說明以取得更多詳細資料。 |
+| 資料匯出允許 | 您的總匯出權益取決於您的平台式應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供其他匯出權益，以允許匯出使用Data Distiller建立的衍生資料集。<br>您每年的資料匯出容量是以TB為單位，並且取決於您購買的計算時數數量。 如需更多詳細資訊，請檢視產品說明。 |
 | 查詢執行介面 | <ul><li>查詢服務UI</li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li></ul> | <ul><li>查詢服務UI </li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li><li>REST API</li></ul> |
 | 查詢結果傳回，透過 | 使用者端UI | 衍生資料集儲存在Data Lake中 |
 | 結果限制 | <ul><li>查詢服務UI - 100列</li><li>協力廠商使用者端 — 50,000</li><li>[!DNL PostgresSQL] 使用者端 — 50,000</li></ul> | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。</li><li>協力廠商使用者端（列數沒有上限）</li><li>[!DNL PostgresSQL] 使用者端（列數沒有上限）</li><li>REST API （列數沒有上限）</li></ul> |

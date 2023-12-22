@@ -2,9 +2,9 @@
 title: AI/ML功能管道
 description: 瞭解如何使用Data Distiller，透過Adobe Experience Platform資料衍生的功能豐富您的機器學習管道。 將原始資料轉換為功能並提供功能資料，以訓練或評分支援行銷使用案例的模型。
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,9 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 ![詳細說明AI-ML功能配管的資訊圖。](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. 透過Data Distiller的強大查詢功能，您可以從Experience Platform中提供的豐富行為資料擷取有意義的功能，並將擷取的功能資料帶入機器學習環境，而不需要在Experience Platform之外複製大量事件資料。
-2. 將準備好的功能資料集讀入您偏好的機器學習工具中，並結合來自企業資料的其他功能，以訓練、實驗、調整和部署根據您的業務量身打造的自訂模型。
-3. 從您的模型產生分數、預測或建議，並將輸出傳回Experience Platform，以透過Real-time Customer Data Platform和Adobe Journey Optimizer最佳化客戶體驗。
+- 透過Data Distiller強大的查詢功能，您可以從Experience Platform中提供的豐富行為資料擷取有意義的功能。 然後，您可以將提取的特徵資料帶入機器學習環境，而不需要在Experience Platform之外複製大量事件資料。
+- 將準備好的功能資料集讀入您偏好的機器學習工具中，並結合來自企業資料的其他功能，以訓練、實驗、調整和部署根據您的業務量身打造的自訂模型。
+- 從您的模型產生分數、預測或建議，並將輸出傳回Experience Platform，以透過Real-time Customer Data Platform和Adobe Journey Optimizer最佳化客戶體驗。
 
 ## 先決條件 {#prerequisites}
 
@@ -43,10 +43,13 @@ This document provides an overview of the AI/ML feature pipelines use case and d
 
 本系列指南包含的檔案說明在Experience Platform中建立功能管道，以饋送機器學習環境中的自訂模型的基本步驟。 您現在已準備好在Data Distiller與您的 [!DNL Jupyter Notebook].
 
-- [從連線到Data Distiller [!DNL Python] notebook](./establish-connection.md)
-- [探索和分析資料集](./exploratory-analysis.md)
-- [機器學習的工程師功能](./feature-engineering.md)
-- [匯出功能資料集](./export-data.md)
+- **設定**： [從連線到Data Distiller [!DNL Python] notebook](./establish-connection.md)
+
+以下連結的檔案與上方資訊圖中指示的步驟相對應。
+
+- **步驟1**： [探索和分析資料集](./exploratory-analysis.md)
+- **步驟2**： [機器學習的工程師功能](./feature-engineering.md)
+- **步驟3**： [匯出功能資料集](./export-data.md)
 
 ## 其他資源
 
