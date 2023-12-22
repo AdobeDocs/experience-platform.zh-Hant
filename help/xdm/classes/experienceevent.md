@@ -4,22 +4,22 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 瞭解XDM ExperienceEvent類別和事件資料模型化的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
 workflow-type: tm+mt
-source-wordcount: '2659'
+source-wordcount: '2656'
 ht-degree: 1%
 
 ---
 
 # [!DNL XDM ExperienceEvent] 類別
 
-[!DNL XDM ExperienceEvent] 是標準的體驗資料模型(XDM)類別，可讓您在特定事件發生或達到特定條件集時，建立系統的時間戳記快照。
+[!DNL XDM ExperienceEvent] 是一個標準的體驗資料模型(XDM)類別。 當特定事件發生或達到特定條件集合時，使用此類別建立系統的時間戳記快照。
 
 體驗事件是所發生事件的事實記錄，包括時間點和所涉及個人的身分。 事件可以是明確的（直接可觀察的人類動作）或內隱的（在沒有直接人類動作的情況下引發），並且記錄時不會進行彙總或解譯。 如需有關在平台生態系統中使用此類別的高層級資訊，請參閱 [XDM概覽](../home.md#data-behaviors).
 
-此 [!DNL XDM ExperienceEvent] 類別本身為結構描述提供幾個時間序列相關的欄位。 其中兩個欄位(`_id` 和 `timestamp`)為 **必填** 適用於以類別為基礎的所有結構描述，其餘則為選用。 某些欄位的值會在擷取資料時自動填入。
+此 [!DNL XDM ExperienceEvent] 類別本身為結構描述提供幾個時間序列相關的欄位。 其中兩個欄位(`_id` 和 `timestamp`)為 **必填** 適用於以此類別為基礎的所有結構描述，其餘則是選擇性的。 某些欄位的值會在擷取資料時自動填入。
 
-![Platform UI中顯示的XDM ExperienceEvent結構](../images/classes/experienceevent/structure.png)
+![Platform UI中顯示的XDM ExperienceEvent結構。](../images/classes/experienceevent/structure.png)
 
 | 屬性 | 說明 |
 | --- | --- |
@@ -27,7 +27,7 @@ ht-degree: 1%
 | `eventMergeId` | 若使用 [Adobe Experience Platform Web SDK](../../edge/home.md) 若要內嵌資料，這代表造成建立記錄之內嵌批次的ID。 此欄位在資料擷取時由系統自動填入。 不支援在Web SDK實作的內容之外使用此欄位。 |
 | `eventType` | 指出事件型別或類別的字串。 如果您想要將相同結構描述和資料集中的不同事件型別區分開來，例如將產品檢視事件與零售公司的加入購物車事件區分開來，則可以使用此欄位。<br><br>此屬性的標準值提供在 [附錄部分](#eventType)，包括預期使用案例的說明。 此欄位是可延伸的列舉，這表示您也可以使用自己的事件型別字串來分類您正在追蹤的事件。<br><br>`eventType` 限制您只能針對應用程式的每個點選使用單一事件，因此您必須使用計算欄位，讓系統知道哪個事件最重要。 如需詳細資訊，請參閱以下章節： [計算欄位的最佳實務](#calculated). |
 | `producedBy` | 說明事件製作者或來源的字串值。 如有需要，此欄位可用於篩選掉某些事件產生者，以用於分段目的。<br><br>此屬性的部分建議值提供在 [附錄部分](#producedBy). 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生器。 |
-| `identityMap` | 對應欄位，其中包含套用事件之個人的一組名稱空間身分識別。 系統會在擷取身分資料時自動更新此欄位。 為了正確使用此欄位， [即時客戶個人檔案](../../profile/home.md)，請勿嘗試在資料作業中手動更新欄位內容。<br /><br />請參閱以下連結中有關身分對應的章節： [結構描述組合的基本面](../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
+| `identityMap` | 對應欄位，其中包含套用事件之個人的一組名稱空間身分識別。 系統會在擷取身分資料時自動更新此欄位。 若要正確使用此欄位來進行 [即時客戶個人檔案](../../profile/home.md)，請勿嘗試在資料作業中手動更新欄位內容。<br /><br />請參閱以下連結中有關身分對應的章節： [結構描述組合的基本面](../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
 | `timestamp`<br>**（必要）** | 事件發生時間的ISO 8601時間戳記，格式如下 [RFC 3339第5.6節](https://datatracker.ietf.org/doc/html/rfc3339). 此時間戳記必須發生在過去。 請參閱以下小節： [時間戳記](#timestamps) 以取得使用此欄位的最佳作法。 |
 
 {style="table-layout:auto"}
@@ -50,7 +50,7 @@ ht-degree: 1%
 
 體驗應用程式中的某些互動可能會產生多個相關事件，這些事件在技術上會共用相同的事件時間戳記，因此可以顯示為單一事件記錄。 例如，如果客戶檢視您網站上的產品，這可能會導致事件記錄具有兩種可能性 `eventType` 值： 「產品檢視」事件(`commerce.productViews`)或一般「頁面檢視」事件(`web.webpagedetails.pageViews`)。 在這些情況下，您可以在單一點選中擷取多個事件時，使用計算欄位來擷取最重要的屬性。
 
-[Adobe Experience Platform資料準備](../../data-prep/home.md) 可讓您對應、轉換及驗證來往於XDM的資料。 使用可用的 [對應函式](../../data-prep/functions.md) 由服務提供，您可以叫用邏輯運運算元，以便在資料擷取至Experience Platform時，優先處理、轉換及/或合併多事件記錄中的資料。 在上述範例中，您可以指定 `eventType` 作為計算欄位，每當「產品檢視」和「頁面檢視」發生時，都會優先處理「產品檢視」。
+使用 [Adobe Experience Platform資料準備](../../data-prep/home.md) 對應、轉換及驗證來往於XDM的資料。 使用可用的 [對應函式](../../data-prep/functions.md) 由服務提供，您可以叫用邏輯運運算元，以便在資料擷取至Experience Platform時，優先處理、轉換及/或合併多事件記錄中的資料。 在上述範例中，您可以指定 `eventType` 作為計算欄位，每當「產品檢視」和「頁面檢視」發生時，都會優先處理「產品檢視」。
 
 如果您是透過UI手動將資料擷取到Platform，請參閱 [計算欄位](../../data-prep/ui/mapping.md#calculated-fields) ，以瞭解如何建立計算欄位的特定步驟。
 
@@ -140,7 +140,7 @@ Adobe提供數個標準欄位群組，可與搭配使用 [!DNL XDM ExperienceEve
 | `leadOperation.changeEngagementCampaignCadence` | 此事件會追蹤潛在客戶在行銷活動中參與頻率的變更。 |
 | `leadOperation.convertLead` | 此事件會追蹤銷售機會何時轉換。 |
 | `leadOperation.interestingMoment` | 此事件會追蹤何時為個人錄製有趣的時刻。 |
-| `leadOperation.mergeLeads` | 此事件會追蹤來自多個銷售機會（參考相同實體）的資訊何時合併。 |
+| `leadOperation.mergeLeads` | 此事件會追蹤來自參照相同實體的多個銷售機會的資訊何時合併。 |
 | `leadOperation.newLead` | 此事件會追蹤銷售機會的建立時間。 |
 | `leadOperation.scoreChanged` | 此事件會追蹤潛在客戶評分屬性的值何時變更。 |
 | `leadOperation.statusInCampaignProgressionChanged` | 此事件會追蹤潛在客戶在行銷活動中的狀態何時已變更。 |
