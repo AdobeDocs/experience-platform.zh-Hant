@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform Privacy Service 說明
 breadcrumb-title: Privacy Service 指南
 user-guide-description: 管理客戶資料要求，以符合 GDPR 和 CCPA 等法律隱私權法規。
 feature: Privacy
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: 7f2f1f9669d4f750baf6992ed5686fb622e2bb65
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '91'
 ht-degree: 100%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 100%
    * [概觀](./regulations/overview.md)
    * [常見問題集](./regulations/faq.md)
    * [術語](./regulations/terminology.md)
+* [最佳作法](./best-practices.md)
 * [疑難排解指南](./troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [發行說明](./release-notes.md)
