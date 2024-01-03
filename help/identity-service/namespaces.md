@@ -2,9 +2,9 @@
 title: 身分名稱空間總覽
 description: 瞭解Identity Service中的身分識別名稱空間。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1779'
 ht-degree: 7%
 
 ---
@@ -22,8 +22,6 @@ ht-degree: 7%
 * [[!DNL Privacy Service]](../privacy-service/home.md)：身分名稱空間用於一般資料保護規範(GDPR)等法律隱私權法規的合規性請求中。 每個隱私權請求都是相對於名稱空間提出，以識別哪些消費者的資料應該受到影響。
 
 ## 瞭解身分名稱空間
-
-![使用Identity Service的資料工作流程圖例。](images/identity-service-stitching.png)
 
 完整身分包含兩個元件： **身分值** 和 **身分名稱空間**. 例如，如果身分的值是 `scott@acme.com`，則名稱空間會將此值識別為電子郵件地址，以提供其內容。 同樣地，名稱空間可以區分 `555-123-456` 作為電話號碼，以及 `3126ABC` 作為CRM ID。 基本上， **名稱空間會提供指定身分的上下文**. 跨設定檔片段比對記錄資料時，例如 [!DNL Real-Time Customer Profile] 會合併設定檔資料，身分值和名稱空間必須相符。
 
