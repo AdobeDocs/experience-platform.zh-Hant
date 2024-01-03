@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
+source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
 workflow-type: tm+mt
-source-wordcount: '3910'
+source-wordcount: '3933'
 ht-degree: 3%
 
 ---
@@ -21,13 +21,13 @@ ht-degree: 3%
 - [[!DNL Segmentation Service]](../home.md)： [!DNL Segmentation Service] 可讓您對儲存在中的資料進行分段 [!DNL Experience Platform] 和歸入較小群組的個人（例如客戶、潛在客戶、使用者或組織）相關的資訊。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：可透過橋接正在被擷取到的不同資料來源的身分，以建立客戶設定檔 [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。 為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
 
 您也應該瞭解在本檔案中使用的兩個關鍵辭彙，並瞭解它們之間的差異：
 
 - **對象**：一組具有類似行為和/或特徵的人。 此人員集合可由Adobe Experience Platform使用區段定義或對象構成（平台產生的對象）產生，或由外部來源（例如自訂上傳）（外部產生的對象）產生。
 - **區段定義**：Adobe Experience Platform用來說明目標對象之關鍵特性或行為的規則。
-- **區段**：將設定檔分隔為對象的行為。
+- **區段**：將設定檔分隔為對象的動作。
 
 ## 概觀
 
@@ -72,17 +72,17 @@ ht-degree: 3%
 
 | 動作 | 來源 | 說明 |
 | ------ | ------- | ----------- |
-| [!UICONTROL 編輯] | Segmentation Service | 可讓您開啟「區段產生器」來編輯您的對象。 如需使用「區段產生器」的詳細資訊，請參閱 [區段產生器UI指南](./segment-builder.md). |
-| [!UICONTROL 開啟構成] | 對象構成 | 可讓您開啟對象構成來檢視您的對象。 如需對象構成的詳細資訊，請參閱 [對象構成UI指南](./audience-composition.md). |
-| [!UICONTROL 啟用到目的地] | Segmentation Service | 可讓您將對象啟用至目的地。 如需將受眾啟用至目的地的詳細資訊，請參閱 [啟用概述](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL 與合作夥伴分享] | 對象構成、自訂上傳、細分服務 | 可讓您與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請參閱 [區段比對概觀](./segment-match/overview.md). |
-| [!UICONTROL 管理標籤] | 對象構成、自訂上傳、細分服務 | 可讓您管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
-| [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 可讓您管理受眾所屬的資料夾。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
+| [!UICONTROL 編輯] | Segmentation Service | 開啟區段產生器以編輯您的對象。 請注意，如果您的對象是透過API建立的，則您會 **非** 能夠使用區段產生器加以編輯。 如需使用「區段產生器」的詳細資訊，請參閱 [區段產生器UI指南](./segment-builder.md). |
+| [!UICONTROL 開啟構成] | 對象構成 | 開啟「對象」構成來檢視對象。 如需對象構成的詳細資訊，請參閱 [對象構成UI指南](./audience-composition.md). |
+| [!UICONTROL 啟用到目的地] | Segmentation Service | 將對象啟用至目的地。 如需將受眾啟用至目的地的詳細資訊，請參閱 [啟用概述](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL 與合作夥伴分享] | 對象構成、自訂上傳、細分服務 | 與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請參閱 [區段比對概觀](./segment-match/overview.md). |
+| [!UICONTROL 管理標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
+| [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 管理對象所屬的資料夾。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
 | [!UICONTROL 副本] | 對象構成、自訂上傳、細分服務 | 複製選取的對象。 |
-| [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 可讓您管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL 封存] | 自訂上傳 | 封存選取的對象。 |
 | [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 |
-| [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 可讓您在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ ht-degree: 3%
 
 有關詳細資訊 [!DNL Unified Search]，包括支援的功能，請參閱 [整合式搜尋檔案](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
-**標記** {#tags}
+**標籤** {#tags}
 
 您可以新增使用者定義的標籤，以更好地說明、尋找和管理您的對象。
 
@@ -201,7 +201,7 @@ ht-degree: 3%
 
 將顯示可用篩選器清單。
 
-| 篩選 | 說明 |
+| 篩選器 | 說明 |
 | ------ | ----------- |
 | [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可用選項包括細分服務、自訂上傳、對象構成和Audience Manager。 |
 | [!UICONTROL 具有任何標籤] | 可讓您依標籤篩選。 您可以選取 **[!UICONTROL 具有任何標籤]** 和 **[!UICONTROL 具有所有標籤]**. 時間 **[!UICONTROL 具有任何標籤]** 已選取，則已篩選的對象將包括 **任何** 已新增標籤的URL數量。 時間 **[!UICONTROL 具有所有標籤]** 已選取，則篩選的對象必須包括 **全部** 已新增標籤的URL數量。 |

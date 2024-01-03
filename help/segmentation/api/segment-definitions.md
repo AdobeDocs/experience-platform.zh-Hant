@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: d47ec6fca05191f532b5a2e94f1943c4337258ed
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1228'
 ht-degree: 3%
 
 ---
@@ -153,6 +153,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 您可以透過向以下網站發出POST請求，建立新的區段定義： `/segment/definitions` 端點。
 
+>[!IMPORTANT]
+>
+>透過API建立的區段定義 **無法** 使用區段產生器編輯。
+
 **API格式**
 
 ```http
@@ -199,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `name` | 用於參照區段定義的唯一名稱。 |
-| `description` | (選填.) 您正在建立的區段定義的說明。 |
-| `evaluationInfo` | (選填.) 您正在建立的區段定義型別。 如果要建立批次區段，請設定 `evaluationInfo.batch.enabled` 為true。 如果您想要建立串流區段，請設定 `evaluationInfo.continuous.enabled` 為true。 如果要建立邊緣區段，請設定 `evaluationInfo.synchronous.enabled` 為true。 如果留空，區段定義將建立為 **批次** 區段。 |
+| `description` | （選擇性。） 您正在建立的區段定義的說明。 |
+| `evaluationInfo` | （選擇性。） 您正在建立的區段定義型別。 如果要建立批次區段，請設定 `evaluationInfo.batch.enabled` 為true。 如果您想要建立串流區段，請設定 `evaluationInfo.continuous.enabled` 為true。 如果要建立邊緣區段，請設定 `evaluationInfo.synchronous.enabled` 為true。 如果留空，區段定義將建立為 **批次** 區段。 |
 | `schema` | 和區段中的實體相關聯的結構描述。 包含一個 `id` 或 `name` 欄位。 |
 | `expression` | 包含有關區段定義的欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
