@@ -194,7 +194,7 @@ Adobe提供幾個標準（「核心」） XDM類別。 其中兩個類別， [!D
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="必要欄位群組"
->abstract="您使用的來源需要此欄位群組。 因此，您無法將其從方案中刪除。"
+>abstract="您正在使用的來源需要此欄位群組。因此，您無法將其從方案中刪除。"
 
 欄位群組是可重複使用的元件，可定義一或多個實作特定功能的欄位，例如個人詳細資料、飯店偏好設定或地址。 欄位群組是要包含在實作相容類別的結構描述中。
 
