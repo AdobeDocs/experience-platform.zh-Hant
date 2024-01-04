@@ -2,7 +2,7 @@
 title: 報告套裝資料的Adobe Analytics來源聯結器
 description: 本檔案提供Analytics概觀及說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
+source-git-commit: 5ec22fcf0f4c48efc28a3abd343bb00a19756281
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 2%
@@ -51,7 +51,7 @@ XDM是公開記錄的規格，為應用程式提供通用結構和定義，用�
 | -------------- | ---------------- |
 | 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **非** 已啟用) | &lt; 2分鐘 |
 | 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **是** 已啟用) | 長達30分鐘 |
-| 資料湖的新資料 | &lt; 90分鐘 |
+| 資料湖的新資料 | &lt; 2.25小時 |
 | 少於100億個事件的回填 | &lt; 4週 |
 
 生產沙箱的Analytics回填預設為13個月。 對於非生產沙箱中的Analytics資料，回填會設定為三個月。 上表提及的100億個事件上限嚴格與預期延遲有關。
