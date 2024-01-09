@@ -1,15 +1,20 @@
 ---
 title: Adobe Experience Platform Web軟體開發套件(SDK)概覽
 description: 瞭解如何使用Adobe Experience Platform Web SDK將Platform功能整合至您的網站。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
+source-git-commit: a8b1aa87ecd85c530188e520db2f17136a63ae44
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
 
 
 # Adobe Experience Platform Web SDK {#overview}
+
+>[!IMPORTANT]
+>
+>在2024年4月底，Adobe Experience Platform Web SDK將會移除所有版本Internet Explorer的支援。
 
 Adobe Experience Platform Web Software Development Kit (SDK)是使用者端的JavaScript程式庫，可讓Adobe Experience Cloud的客戶透過Adobe Experience Platform Edge Network與其服務互動。 Adobe提供兩種實作Web SDK的方法：
 
