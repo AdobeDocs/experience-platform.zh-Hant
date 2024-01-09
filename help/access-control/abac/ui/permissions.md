@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理角色許可權
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面設定角色許可權的相關資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 7c44683c8110d78654baba4bc53f2c3c2daf2831
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 5%
+source-wordcount: '986'
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 許可權是Experience Cloud的區域，管理員可以在其中定義使用者角色和存取原則，以管理產品應用程式內功能和物件的存取許可權。
 
-透過 權限，您可以建立和管理角色，並為這些角色指派所需的資源權限。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
+透過「許可權」，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
 
 緊接在 [建立新角色](#create-a-new-role)，您會回到 **[!UICONTROL 角色]** 標籤。 如果您正在編輯現有角色的許可權，請從以下位置選取角色： **[!UICONTROL 角色]** 標籤。 或者，使用篩選選項來篩選結果以尋找角色。
 
@@ -30,7 +30,7 @@ ht-degree: 5%
 
 UI中的角色可使用下列篩選器：
 
-| 篩選 | 說明 |
+| 篩選器 | 說明 |
 | --- | --- |
 | [!UICONTROL 建立時間介於] | 選取開始日期和/或結束日期，以定義篩選結果的日期範圍。 |
 | [!UICONTROL 建立者] | 從下拉式清單中選取使用者，依角色建立者篩選。 |
@@ -100,6 +100,10 @@ UI中的角色可使用下列篩選器：
 若要從角色中移除使用者，請選取 **X** 圖示加以存取（位於使用者名稱旁）。
 
 ![flac-remove-users](../../images/flac-ui/flac-remove-users.png)
+
+以下影片旨在協助您瞭解如何建立新角色及管理該角色的使用者。
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## 管理角色的API認證 {#manage-api-credentials-for-role}
 
