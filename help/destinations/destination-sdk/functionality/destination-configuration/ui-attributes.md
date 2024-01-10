@@ -2,16 +2,16 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定UI屬性，例如檔案連結、目的地卡片類別以及目的地連線型別和頻率。
 title: UI屬性
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
 # UI屬性
 
-UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目的地卡片顯示的視覺元素，例如目的地平台標誌、檔案頁面的連結、目的地說明及其類別和型別。
+UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目的地卡片顯示的視覺元素，例如標誌、檔案頁面的連結、目的地說明及其類別和型別。
 
 若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或請參閱下列目的地設定總覽頁面：
 
@@ -21,10 +21,10 @@ UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目
 時間 [建立目的地](../../authoring-api/destination-configuration/create-destination-configuration.md) 透過Destination SDK， `uiAttributes` 區段會定義目的地卡片的下列視覺屬性：
 
 * 您在中的目的地檔案頁面URL [目的地目錄](../../../catalog/overview.md).
-* 您託管要在目的地目錄卡片中顯示之圖示的URL。
 * Platform UI中顯示您目的地的類別。
 * 您目的地的資料匯出頻率。
 * 目的地連線型別，例如Amazon S3、Azure Blob等。
+* 您託管要在目的地目錄卡片中顯示之圖示的URL。
 
 您可以透過以下方式設定UI屬性 `/authoring/destinations` 端點。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
 
@@ -82,14 +82,6 @@ UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目
 
 ![顯示目的地類別位置的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` 是字串引數，根據目的地而定，會參照連線的型別。 支援的值： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -114,9 +106,17 @@ Users can see the icon on your destination card, as shown in the image below.
 
 ![顯示標示為測試版之目的地卡片的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
+### `icon` {#icon}
+
+您可以新增標誌圖示至您的目的地，如下圖所示。
+
+![顯示圖示位置的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+若要將標誌新增至目的地卡片，您需要在以下情況下與Adobe團隊共用所需的影像 [提交目的地以供檢閱](../../guides/submit-destination.md#logo).
+
 ## 後續步驟 {#next-steps}
 
-閱讀本文後，您應該更加瞭解您可以為目的地設定的UI屬性，以及使用者在Platform UI中可看到這些屬性的位置。
+閱讀本文後，您應該更加瞭解您可以為目的地設定哪些UI屬性，以及使用者將在Platform UI中的何處看到這些屬性。
 
 若要深入瞭解其他目的地元件，請參閱下列文章：
 
