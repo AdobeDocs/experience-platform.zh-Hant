@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
+source-git-commit: 17aa9029dc83454133847352c21aa9ac68f23be8
 workflow-type: tm+mt
-source-wordcount: '2282'
+source-wordcount: '2430'
 ht-degree: 2%
 
 ---
@@ -114,13 +114,27 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| 每個沙箱的受眾 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個對象，但前提是每個個別沙箱中的對象少於4000個。 嘗試建立其他對象可能會影響系統效能。 深入瞭解 [建立對象](/help/segmentation/ui/segment-builder.md) 區段產生器的連結。 |
+| 每個沙箱的受眾 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個對象，但前提是每個個別沙箱中的對象少於4000個。 其中包含批次、串流和邊緣對象。 嘗試建立其他對象可能會影響系統效能。 深入瞭解 [建立對象](/help/segmentation/ui/segment-builder.md) 區段產生器的連結。 |
 | 每個沙箱的Edge對象 | 150 | 效能護欄 | 只要每個個別沙箱中的邊緣對象少於150個，組織就可以總共擁有超過150個邊緣對象。 嘗試建立其他邊緣對象可能會影響系統效能。 深入瞭解 [邊緣對象](/help/segmentation/ui/edge-segmentation.md). |
-| 每個沙箱的串流受眾 | 500 | 效能護欄 | 只要每個個別沙箱中的串流對象少於500個，組織就可以總共超過500個串流對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解 [串流對象](/help/segmentation/ui/streaming-segmentation.md). |
+| 所有沙箱的邊緣輸送量 | 1500 RPS | 效能護欄 | Edge區段支援每秒高達1500個進入Adobe Experience Platform Edge Network的傳入事件。 邊緣區段在進入Adobe Experience Platform Edge Network後，最多可能需要350毫秒的時間來處理傳入事件。 深入瞭解 [邊緣對象](/help/segmentation/ui/edge-segmentation.md). |
+| 每個沙箱的串流受眾 | 500 | 效能護欄 | 只要每個個別沙箱中的串流對象少於500個，組織就可以總共超過500個串流對象。 其中包含串流和邊緣對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解 [串流對象](/help/segmentation/ui/streaming-segmentation.md). |
+| 所有沙箱的串流輸送量 | 1500 RPS | 效能護欄 | 串流區段支援每秒最多1500個傳入事件。 串流區段最多可能需要5分鐘，才能讓設定檔符合區段會籍資格。 深入瞭解 [串流對象](/help/segmentation/ui/streaming-segmentation.md). |
 | 每個沙箱的批次對象 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個批次對象，只要每個個別沙箱中有少於4000個批次對象即可。 嘗試建立其他批次對象可能會影響系統效能。 |
 | 每個沙箱的帳戶對象 | 50 | 系統強制的護欄 | 您最多可以在沙箱中建立50個帳戶對象。 當您在沙箱中達到50個對象後， **[!UICONTROL 建立對象]** 嘗試建立新帳戶對象時，控制項會停用。 深入瞭解 [帳戶對象](/help/segmentation/ui/account-audiences.md). |
 | 每個沙箱的已發佈組合 | 10 | 效能護欄 | 一個沙箱中最多可以有10個已發佈的組合。 深入瞭解 [UI指南中的對象構成](/help/segmentation/ui/audience-composition.md). |
 | 最大對象人數 | 30% | 效能護欄 | 建議的對象最大成員資格為系統中設定檔總數的30%。 您可以建立具有超過30%設定檔的對象為成員，或是多個大型對象，但會影響系統效能。 |
+
+{style="table-layout:auto"}
+
+## 預期的可用性
+
+以下章節概述 **預期** 下游服務(例如Real-Time CDP目的地)中對象和合併原則的可用性：
+
+| 沙箱型別 | 時間 |
+| ------------ | ---- |
+| 現有沙箱 | 1 小時 |
+| 新沙箱 | 2 小時 |
+| 新重設沙箱 | 2 小時 |
 
 {style="table-layout:auto"}
 
