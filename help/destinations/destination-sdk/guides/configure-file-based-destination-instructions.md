@@ -2,9 +2,9 @@
 description: 此頁面列出並說明使用Destination SDK設定檔案型目的地的步驟。
 title: 使用Destination SDK來設定以檔案為基礎的目的地
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 開始者 [建立伺服器和檔案組態](../authoring-api/destination-server/create-destination-server.md) 使用 `/destinations-server` 端點。
 
-以下是的設定範例 [!DNL Amazon S3] 目的地。 若要設定其他型別的檔案型目的地，請參閱其對應的 [伺服器設定](../functionality/destination-server/server-specs.md).
+以下是的設定範例 [!DNL Amazon S3] 目的地。 如需設定中所使用欄位以及設定其他檔案型目的地型別的詳細資訊，請參閱其對應的欄位 [伺服器設定](../functionality/destination-server/server-specs.md).
 
 **API格式**
 
@@ -40,7 +40,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
     "name": "S3 destination",
     "destinationServerType": "FILE_BASED_S3",
     "fileBasedS3Destination": {
-        "bucketName": {
+        "bucket": {
             "templatingStrategy": "PEBBLE_V1",
             "value": "{{customerData.bucketName}}"
         },
@@ -116,7 +116,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 以下顯示的範例為目的地組態，使用 `/destinations` api端點。
 
-若要在步驟1中將伺服器和檔案組態連線至此目的地組態，請將伺服器和範本組態的執行個體ID新增為 `destinationServerId` 此處。
+若要將伺服器和檔案組態從步驟1連線至此目的地組態，請新增 `instance ID` 的伺服器和檔案組態為 `destinationServerId` 此處。
 
 **API格式**
 
@@ -124,7 +124,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 POST platform.adobe.io/data/core/activation/authoring/destinations
 ```
 
-```json {line-numbers="true" highlight="84"}
+```json {line-numbers="true" highlight="83"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -189,7 +189,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "https://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -232,7 +232,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -244,7 +259,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 如果您使用對象中繼資料設定，則必須將其連線至您在步驟2中建立的目的地設定。 將對象中繼資料設定的例項ID新增至您的目的地設定，如下所示 `audienceTemplateId`.
 
-```json {line-numbers="true" highlight="91"}
+```json {line-numbers="true" highlight="90"}
 {
     "name": "Amazon S3 destination",
     "description": "Amazon S3 destination is a fictional destination, used for this example.",
@@ -309,7 +324,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://www.adobe.io/apis/experienceplatform.html",
+        "documentationLink": "http://www.adobe.com/go/destinations-YOURDESTINATION-en",
         "category": "S3",
         "connectionType": "S3",
         "flowRunsSupported": true,
@@ -358,7 +373,22 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
             "ONCE"
         ],
         "defaultFrequency": "DAILY",
-        "defaultStartTime": "00:00"
+        "defaultStartTime": "00:00",
+       "filenameConfig":{
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      }
     },
     "backfillHistoricalProfileData": true
 }
@@ -367,6 +397,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 ## 步驟4：設定驗證 {#set-up-authentication}
 
 視您是否指定 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 或 `"authenticationRule": "PLATFORM_AUTHENTICATION"` 在上述目的地設定中，您可以使用 `/destination` 或 `/credentials` 端點。
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` 是兩種驗證規則中較常見的一種，如果您要求使用者先對您的目的地提供某種形式的驗證，然後才能設定連線和匯出資料，則需使用這兩種驗證規則。
 
 * 如果您已選取 `"authenticationRule": "CUSTOMER_AUTHENTICATION"` 在「目的地設定」中，請參閱下列章節，以瞭解Destination SDK針對以檔案為基礎的目的地所支援的驗證型別：
 
@@ -384,10 +418,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 使用先前步驟中的設定端點設定您的目的地後，您可以使用 [目的地測試工具](../testing-api/batch-destinations/file-based-destination-testing-overview.md) 測試Adobe Experience Platform與目的地之間的整合。
 
-在測試目的地的程式中，您必須使用Experience PlatformUI來建立區段，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
+在測試目的地的程式中，您必須使用Experience PlatformUI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
-* [建立對象檔案頁面](/help/segmentation/ui/overview.md#create-segment)
-* [建立對象影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [建立對象 — 檔案頁面](/help/segmentation/ui/overview.md#create-segment)
+* [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## 步驟6：發佈您的目的地 {#publish-destination}
 
