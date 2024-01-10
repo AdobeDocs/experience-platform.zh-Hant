@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您有 **非** 為您的構成提供一個標題，依預設會有一個標題「構成」，後面接著建立日期和時間。
+>如果您有 **非** 為您的構成提供一個標題，依預設會有一個標題「構成」，後面接著建立日期和時間。 此外，每個構成 **必須** 有自己的唯一名稱。
 
 更新構成詳細資訊後，選取 **[!UICONTROL 儲存]** 以確認這些更新。 對象構成畫布會重新出現。
 
