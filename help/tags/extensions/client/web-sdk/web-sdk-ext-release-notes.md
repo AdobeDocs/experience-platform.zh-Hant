@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: fb2cf23f4762eec4bcab1126bdfb1aaa4144e777
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 36%
+source-wordcount: '1990'
+ht-degree: 32%
 
 ---
 
@@ -13,6 +13,15 @@ ht-degree: 36%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## 2.21.4版 — 2024年1月10日
+
+**修正和改良**
+
+* 修正儲存設定覆寫但未設定所有3個環境時，擴充功能UI會當機的問題。
+* 修正編輯更新變數動作時，根清除現有值核取方塊未填入的問題。
+
+包含2.19.2版的Adobe Experience Platform Web SDK。
 
 ## 2.21.3版 — 2023年11月10日
 
@@ -231,13 +240,13 @@ ht-degree: 36%
 
 ## 2.2.0版 — 2020年10月1日
 
-* 客戶嘗試以沙盒結構描述建立 XDM 物件時，遇到驗證問題。呼叫Platform的API現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
+* 客戶嘗試以沙箱結構描述建立 XDM 物件時，遇到驗證問題。呼叫Platform的API現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
 * 使用時 `identityMap` 資料元素中，下拉式清單現在會預先填入名稱空間，因此您不必手動填寫。
 * `xdmObject` 資料元素的 UI 已改版。在新的 UI 中，您可以看到哪些欄位已填入，不必在物件中輸入每個項目。
 
 ## 2.1.1版 — 2020年8月26日
 
-* 修正 XDM 物件檢視中，Adobe Experience Platform 沙盒無法正常顯示的問題。使用此版本的擴充功能時，如果清單未顯示預期的沙盒，使用者應向其 Adobe Experience Platform 管理員確認是否已正確設定存取權限。
+* 修正 XDM 物件檢視中，Adobe Experience Platform 沙箱無法正常顯示的問題。使用此版本的擴充功能時，如果清單未顯示預期的沙箱，使用者應向其 Adobe Experience Platform 管理員確認是否已正確設定存取權限。
 
 ## 2.1.0版 — 2020年8月5日
 

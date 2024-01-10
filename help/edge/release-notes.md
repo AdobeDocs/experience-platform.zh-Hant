@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: e46ac94a2328b045d7270b2498d6cb7ef5f0464b
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 4%
+source-wordcount: '1740'
+ht-degree: 2%
 
 ---
 
@@ -15,6 +15,14 @@ ht-degree: 4%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需Web SDK標籤擴充功能的最新發行說明，請參閱 [Web SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## 2.19.2版 — 2024年1月10日
+
+**修正和改良**
+
+* 修正身分錯誤遮罩其他錯誤，並將身分錯誤變更為警告的問題。
+* 修正當renderDecisions設為false的頁面呼叫頂端時，頁面呼叫底部絕不會傳送的問題。
+* 修正有多個adobe_mc查詢字串引數時，Web SDK無法讀取跨網域身分的問題。
 
 ## 2.19.1版 — 2023年11月10日
 
