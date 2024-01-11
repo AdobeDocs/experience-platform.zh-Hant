@@ -1,7 +1,8 @@
 ---
 title: Lambda函式範例 — 擷取類似記錄
 description: 瞭解如何根據相似度量度和相似度臨界值，從一個或多個資料集中識別及擷取類似或相關記錄。 此工作流程可強調不同資料集之間有意義的關聯或重疊。
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 3%

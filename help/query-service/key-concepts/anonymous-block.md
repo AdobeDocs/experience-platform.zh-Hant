@@ -2,9 +2,9 @@
 title: 查詢服務中的匿名區塊
 description: 匿名區塊是Adobe Experience Platform查詢服務支援的SQL語法，可讓您有效執行一系列查詢
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
+source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 0%
 Adobe Experience Platform查詢服務支援匿名區塊。 匿名區塊功能可讓您連結一或多個依序執行的SQL敘述句。 它們也允許例外狀況處理的選項。
 
 匿名區塊功能是執行一系列操作或查詢的有效方式。 區塊中的查詢鏈結可以儲存為範本，並排程在特定時間或間隔執行。 這些查詢可用於寫入和附加資料以建立新的資料集，通常用於您具有相依性的情況。
-
->[!IMPORTANT]
->
->使用匿名區塊排程查詢目前只能透過 [!DNL Query Service] API。 請參閱以下檔案： [透過API排程查詢的完整指示](../api/scheduled-queries.md).
 
 此表格提供區塊主要區段的劃分：執行和例外狀況處理。 截面由關鍵字定義 `BEGIN`， `END`、和 `EXCEPTION`.
 

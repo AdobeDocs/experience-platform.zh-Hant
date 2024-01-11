@@ -3,10 +3,10 @@ keywords: IP位址， IP範圍，允許清單，允許清單
 title: 查詢服務的IP位址允許清單
 description: 此頁面提供可新增至允許清單的IP範圍。
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3a00f98b7463f7fb35aa53f703d67193f18400cf
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 2%
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -27,16 +27,21 @@ Adobe建議您將下列IP範圍新增至允許清單，實際取決於您的地�
 
 ## VA7：美國和美洲客戶 {#us-americas}
 
-* 52.138.119.167
+* 20.14.241.153
 
 ## NLD2：EMEA客戶 {#emea}
 
-* 51.124.70.4
+* 20.101.233.128
 
 ## AUS5：APAC客戶 {#apac}
 
-* 20.193.36.37
+* 20.248.220.69
 
 ## CAN2：加拿大客戶 {#can2}
 
-* 20.104.5.248
+* 4.172.1.139
+
+## GBR9：英國客戶 {#gbr9}
+
+* 20.108.200.9
+
