@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 73%
+source-wordcount: '287'
+ht-degree: 72%
 
 ---
 
 
 # Real-Time Customer Data Platform 說明 {#rtcdp}
 
-* [Real-Time CDP 概觀](overview.md)
-* [Real-Time CDP B2B 版本概觀](b2b-overview.md)
-* 快速入門 {#intro}
+* [Real-Time CDP檔案](home.md)
+* 開始使用 {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Real-Time CDP 概觀](overview.md)
       * [開始使用 Real-Time CDP](get-started.md)
       * [首頁](home-page-dashboards.md)
    * Real-Time CDP B2B 版本 {#rtcdpb2b-intro}
+      * [Real-Time CDP B2B 版本概觀](b2b-overview.md)
       * [使用案例範例](./b2b-use-case.md)
       * [端對端教學課程](./b2b-tutorial.md)
       * [Real-Time CDP B2B 版本指南護欄](b2b-guardrails.md)
@@ -73,11 +74,12 @@ ht-degree: 73%
    * [來源概觀](sources/sources-overview.md)
    * [Real-Time CDP B2B 版本中的來源](sources/b2b.md)
 * 使用案例 {#use-cases}
+   * [支援的使用案例概觀](/help/rtcdp/use-case-guides/overview.md)
    * 個人化、深入分析和參與 {#personalization-insights-engagement}
       * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * 客戶贏取 {#customer-acquisition}
       * [不依賴第三方Cookie即可吸引和贏取新客戶](/help/rtcdp/partner-data/prospecting.md)
-      * [使用合作夥伴輔助的訪客識別，為未知的訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
       * [未驗證使用者的離站重新目標定位](./partner-data/offsite-retargeting.md)
    * 設定檔擴充 {#profile-enrichment}
       * [使用合作夥伴提供的屬性補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
