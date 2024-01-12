@@ -2,10 +2,10 @@
 title: 在UI中建立Adobe Analytics來源連線
 description: 瞭解如何在UI中建立Adobe Analytics來源連線，以將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 6%
+source-wordcount: '2695'
+ht-degree: 4%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 6%
 
 ![目錄](../../../../images/tutorials/create/analytics/catalog.png)
 
-### 選擇資料
+### 選取資料
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ ht-degree: 6%
 
 &lt;!—Analytics報表套裝一次只能設定一個沙箱。 若要將相同的報告套裝匯入不同的沙箱，必須透過不同沙箱的設定刪除資料集流程並再次例項化。—>
 
-### 對應
+### 映射
 
 >[!IMPORTANT]
 >
@@ -133,8 +133,8 @@ Platform會自動偵測您的對應集是否有任何易記名稱衝突。 如�
 
 下列檔案提供進一步瞭解「資料準備」、計算欄位和對應函式的資源：
 
-* [資料準備概觀](../../../../../data-prep/home.md)
-* [資料準備對應函數](../../../../../data-prep/functions.md)
+* [資料準備總覽](../../../../../data-prep/home.md)
+* [資料準備對應函式](../../../../../data-prep/functions.md)
 * [新增計算欄位](../../../../../data-prep/ui/mapping.md#calculated-fields)
 
 <!-- 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 當您為完成對應後， [!DNL Analytics] 報表套裝資料時，您可以套用篩選規則和條件，選擇性地將資料納入或排除內嵌至Real-Time Customer Profile。 僅支援篩選 [!DNL Analytics] 資料與資料只會在輸入前進行篩選 [!DNL Profile.] 所有資料都會內嵌至Data Lake。
 
+>[!BEGINSHADEBOX]
+
+**有關資料準備和篩選即時客戶設定檔之Analytics資料的其他資訊**
+
+* 您可以將篩選功能用於傳送到個人資料的資料，但不能用於傳送到資料湖的資料。
+* 您可以使用篩選即時資料，但無法篩選回填資料。
+   * 此 [!DNL Analytics] 來源不會將資料回填到設定檔中。
+* 如果您在資料的初始設定期間使用「資料準備」組態， [!DNL Analytics] 流量，這些變更也會套用至13個月自動回填。
+   * 不過，不適用於篩選，因為篩選僅保留給即時資料。
+* 「資料準備」會套用至串流和批次擷取路徑。 如果您修改現有的「資料準備」設定，這些變更會套用至串流和批次擷取路徑上的新傳入資料。
+   * 不過，無論資料是串流或批次資料，任何「資料準備」設定都不會套用至已擷取到Experience Platform的資料。
+* 來自Analytics的標準屬性一律會自動對應。 因此，您無法將轉換套用至標準屬性。
+   * 不過，您可以篩選掉標準屬性，只要Identity Service或設定檔中不需要這些屬性。
+* 您不能使用欄層級篩選來篩選必填欄位和身分欄位。
+* 雖然您可以篩選掉次要身分，尤其是AAID和AACustomID，但您無法篩選ECID。
+* 發生轉換錯誤時，對應的欄會產生NULL。
+
+>[!ENDSHADEBOX]
+
 #### 列層級篩選
 
 >[!IMPORTANT]
 >
->使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於設定檔擷取**。使用欄層級篩選來選取您要&#x200B;**為設定檔擷取排除**&#x200B;的資料欄。
+>使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於設定檔擷取**。使用欄層級篩選來選取您要的資料欄 **針對設定檔擷取排除**.
 
 您可以篩選資料 [!DNL Profile] 列層級和欄層級的擷取。 列層級篩選可讓您定義字串包含、等於、開頭或結尾等條件。 您也可以使用列層級篩選來聯結條件，使用 `AND` 以及 `OR`，並使用否定條件 `NOT`.
 
@@ -203,9 +222,9 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 * [!UICONTROL 等於]
 * [!UICONTROL 不等於]
-* [!UICONTROL 開始於]
-* [!UICONTROL 終止於]
-* [!UICONTROL 不終止於]
+* [!UICONTROL 開頭為]
+* [!UICONTROL 結尾為]
+* [!UICONTROL 結尾不是]
 * [!UICONTROL 包含]
 * [!UICONTROL 不包含]
 * [!UICONTROL 存在]
@@ -255,7 +274,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![資料流 — 詳細資料](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
-### 請檢閱
+### 檢閱
 
 此 [!UICONTROL 檢閱] 步驟隨即顯示，可讓您在建立新的Analytics資料流之前先檢閱該資料流。 連線的詳細資訊會依類別分組，包括：
 
@@ -298,7 +317,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 | 量度 | 說明 |
 | --- | --- |
-| 批次 ID  | 指定批次的ID。 此值是在內部產生。 |
+| 批次識別碼 | 指定批次的ID。 此值是在內部產生。 |
 | 資料集名稱 | 用於Analytics資料的指定資料集名稱。 |
 | 來源 | 內嵌資料的來源。 |
 | 已更新 | 最近的流量執行反複專案的日期。 |
@@ -316,10 +335,10 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 建立連線後，系統會自動建立資料流以包含傳入的資料，並以您選取的結構描述填入資料集。 此外，還會進行資料回填，以及內嵌長達 13 個月的歷史資料。初始內嵌完成時， [!DNL Analytics] 資料供下游平台服務使用，例如 [!DNL Real-Time Customer Profile] 和細分服務。 如需更多詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-Time Customer Profile] 概覽](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] 概覽](../../../../../segmentation/home.md)
-* [[!DNL Data Science Workspace] 概覽](../../../../../data-science-workspace/home.md)
-* [[!DNL Query Service] 概覽](../../../../../query-service/home.md)
+* [[!DNL Real-Time Customer Profile] 概觀](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] 概觀](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service] 概觀](../../../../../query-service/home.md)
 
 以下影片旨在協助您瞭解如何使用Adobe Analytics來源聯結器擷取資料：
 
