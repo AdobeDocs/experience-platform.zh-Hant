@@ -2,10 +2,10 @@
 title: 身分名稱空間總覽
 description: 瞭解Identity Service中的身分識別名稱空間。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
+source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
 workflow-type: tm+mt
-source-wordcount: '1779'
-ht-degree: 7%
+source-wordcount: '1869'
+ht-degree: 9%
 
 ---
 
@@ -21,7 +21,19 @@ ht-degree: 7%
 * [[!DNL Identity Service]](./home.md)：透過跨裝置和系統橋接身分，更能瞭解個別客戶及其行為。
 * [[!DNL Privacy Service]](../privacy-service/home.md)：身分名稱空間用於一般資料保護規範(GDPR)等法律隱私權法規的合規性請求中。 每個隱私權請求都是相對於名稱空間提出，以識別哪些消費者的資料應該受到影響。
 
-## 瞭解身分名稱空間
+## 瞭解身分名稱空間 {#understanding-identity-namespaces}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="身分識別命名空間"
+>abstract="身分名稱空間是指定身分的上下文。 例如，名稱空間 `Email` 可能對應至 **名稱<span>@acme.com**. 同樣地，名稱空間 `Phone` 可能對應至 `555-555-1234`."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="身分識別值"
+>abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分識別命名空間定義。跨設定檔片段比對記錄資料時，名稱空間和身分值必須相符。 跨設定檔片段比對記錄資料時，名稱空間和身分值必須相符。"
+>text="Learn more in documentation"
 
 完整身分包含兩個元件： **身分值** 和 **身分名稱空間**. 例如，如果身分的值是 `scott@acme.com`，則名稱空間會將此值識別為電子郵件地址，以提供其內容。 同樣地，名稱空間可以區分 `555-123-456` 作為電話號碼，以及 `3126ABC` 作為CRM ID。 基本上， **名稱空間會提供指定身分的上下文**. 跨設定檔片段比對記錄資料時，例如 [!DNL Real-Time Customer Profile] 會合併設定檔資料，身分值和名稱空間必須相符。
 
