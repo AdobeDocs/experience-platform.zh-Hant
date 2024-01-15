@@ -2,10 +2,10 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 9%
+source-wordcount: '1859'
+ht-degree: 5%
 
 ---
 
@@ -67,19 +67,14 @@ ht-degree: 9%
 >所有匯出動作都會記錄在稽核記錄中。
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="儲存並退出套件"
->abstract="若要退出套件與儲存，使用者只需使用後退選項即可。"
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="移除一個物件"
->abstract="使用者必須選取該行，然後使用刪除選項 (在選取後可用) 以移除該行。"
+>abstract="若要從封裝中移除物件，請選取要移除的列，然後使用在選取時可供使用的刪除選項。 請注意，您無法從已發佈的封裝中移除物件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="套件有效期設定"
->abstract="該日期設定為從今天起 90 天。該日期會持續變更，直到該套件發佈為止。如果使用者明天造訪草稿狀態的套件，則日期會移動 +1 天 (除非使用者設定)。"
+>abstract="封裝會設定為在草稿狀態中閒置一段時間後到期。 預設日期是從今天起的90天。 該日期會持續變更，直到該套件發佈為止。如果您在明天造訪處於草稿狀態的套件，則日期會往前移動+1天，除非您手動進行此設定。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
