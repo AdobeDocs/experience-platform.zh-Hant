@@ -2,10 +2,10 @@
 title: Experience Platform中資料收集的許可權管理
 description: 有關如何在Adobe Experience Platform中管理許可權和控制資料收集功能存取的高級概觀。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 29%
+source-wordcount: '1285'
+ht-degree: 28%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platform底下的許可權包括存取資料串流、身分、�
 
 | 類別 | 權限 | 說明 |
 | --- | --- | --- |
-| 沙箱 | (不適用) | 依據 [沙箱](../sandboxes/home.md) 這些許可權是在您的組織下建立的，您可以透過Admin Console中的此許可權類別控制對每一個的存取。 |
+| 沙箱 | （不適用） | 依據 [沙箱](../sandboxes/home.md) 這些許可權是在您的組織下建立的，您可以透過Admin Console中的此許可權類別控制對每一個的存取。 |
 | 資料模型製作 | 管理結構描述 | 授予檢視、建立和編輯的能力 [體驗資料模型(XDM)結構描述](../xdm/home.md). |
 | 資料模型製作 | 檢視結構描述 | 授予結構描述的唯讀存取權。 |
 | Identity Management | 管理身分識別命名空間 | 授予檢視、建立和編輯的能力 [身分名稱空間](../identity-service/namespaces.md). |
@@ -50,7 +50,7 @@ Adobe Experience Platform資料收集下的許可權可控制對標籤和事件�
 | 平台 | Web | 授予的存取權 [Web屬性](../tags/ui/administration/companies-and-properties.md) 與其他屬性權利結合時。 |
 | 平台 | 行動 | 授予的存取權 [行動屬性](../tags/ui/administration/companies-and-properties.md) 與其他屬性權利結合時。 |
 | 平台 | Edge | 授予的存取權 [事件轉送邊緣屬性](../tags/ui/event-forwarding/getting-started.md) 與其他屬性權利結合時。 |
-| 屬性 | (不適用) | 根據您的組織下已建立的屬性，您可以透過Admin Console中的此許可權類別控制每個屬性的存取權。<br><br>使用者的指派屬性權利僅適用於他們透過此許可權類別被授予存取權的屬性。 |
+| 屬性 | （不適用） | 根據您的組織下已建立的屬性，您可以透過Admin Console中的此許可權類別控制每個屬性的存取權。<br><br>使用者的指派屬性權利僅適用於他們透過此許可權類別被授予存取權的屬性。 |
 | 屬性權利 | 核准 | 授予核准程式庫組建作為一部分的能力 [發佈流程](../tags/ui/publishing/publishing-flow.md). |
 | 屬性權利 | 開發 | 授予開發程式庫組建作為一部分的能力 [發佈流程](../tags/ui/publishing/publishing-flow.md). |
 | 屬性權利 | 編輯屬性 | 授予編輯使用者有權存取之屬性的基本設定的能力。 |
@@ -58,7 +58,8 @@ Adobe Experience Platform資料收集下的許可權可控制對標籤和事件�
 | 屬性權利 | 管理擴充功能 | 授予管理 [擴充功能](../tags/ui/managing-resources/extensions/overview.md) 使用者有權存取的屬性。 |
 | 屬性權利 | 發佈 | 授予將程式庫組建發佈為一部分的能力 [發佈流程](../tags/ui/publishing/publishing-flow.md). |
 | 公司權利 | 開發擴充功能 | 授予建立及修改組織擁有的擴充功能套件的能力，包括私人發行和公開發行要求。 |
-| 公司權利 | 管理擴充功能 | 此許可權僅適用於您擁有Adobe Journey Optimizer或其他解決方案的授權，可授予行動應用程式內及推送訊息存取權的情況。 這可讓您管理Adobe Experience Cloud知道的應用程式，以及與Firebase雲端傳訊服務和Apple推播通知服務通訊所需的推播認證。 |
+| 公司權利 | 管理應用程式設定 | 此許可權僅適用於您擁有Adobe Journey Optimizer或其他解決方案的授權，可授予行動應用程式內及推送訊息存取權的情況。 這可讓您管理Adobe Experience Cloud知道的應用程式，以及與Firebase雲端傳訊服務和Apple推播通知服務通訊所需的推播認證。 |
+| 公司權利 | 管理屬性 | 授予您建立和管理標籤（Web屬性）、事件轉送（邊緣屬性）和行動屬性的能力。 |
 
 {style="table-layout:auto"}
 
