@@ -2,10 +2,10 @@
 title: 資料元素
 description: 資料元素是資料字典 (或資料地圖) 的建置組塊。使用資料元素，在行銷和廣告技術之間收集、組織和傳遞資料。
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 71%
+source-wordcount: '1614'
+ht-degree: 69%
 
 ---
 
@@ -89,15 +89,17 @@ ht-degree: 71%
 
 建立或編輯元素時，您可以儲存並建置您[使用中的程式庫](../publishing/libraries.md#active-library)。這樣會立即將變更儲存至您的程式庫並執行組建。組件狀態會隨即顯示。您也可以從以下專案建立新程式庫： [!UICONTROL 作用中程式庫] 下拉式清單。
 
-## 資料元素類型 {#types-of-data-elements}
+## 資料元素型別 {#types-of-data-elements}
 
-資料元素類型由擴充功能決定。可建立的類型沒有限制。
+>[!NOTE]
+>
+>資料元素類型由擴充功能決定。可建立的類型沒有限制。
 
-以下各節會說明核心擴充功能中可用的資料元素類型。其他擴充功能則使用其他類型的資料元素。
+以下各節說明 **核心擴充功能**. 其他擴充功能則使用其他類型的資料元素。
 
 ### Cookie
 
-任何可在下列欄位中參考的可用網域 Cookie：Cookie 名稱欄位。
+可在「Cookie名稱」欄位中參考任何可用的網域Cookie。
 
 #### 範例：
 
