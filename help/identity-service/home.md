@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service總覽
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 876613610f8e3b369bc3fd41d235c214b791fd4d
+source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1522'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 2%
 您可以使用Adobe Experience Platform Identity Service及其功能解決這些挑戰，以便：
 
 * 產生 **身分圖表** 可將不同的身分連結在一起，因此能讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。
-* 提供驗證和偵錯工具。
 * 建立即時客戶個人檔案的圖形，接著用於合併屬性和行為，以建立客戶的全面檢視。
+* 使用各種工具執行驗證和偵錯。
 
 本檔案概述Identity Service，以及您如何在Experience Platform內容中使用其功能。
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 | 身分識別服務 | Identity Service是Experience Platform中的服務，可連結（或取消連結）身分以維護身分圖表。 |
 | 識別圖 | 身分圖表是身分的集合，代表單一客戶。 如需詳細資訊，請閱讀以下指南： [使用身分圖表檢視器](./ui/identity-graph-viewer.md). |
 | 即時客戶設定檔 | 即時客戶個人檔案是Adobe Experience Platform中的一項服務，其功能： <ul><li>合併設定檔片段，根據身分圖表建立設定檔。</li><li>將設定檔分段，以便傳送至目的地進行啟用。</li></ul> |
-| 設定檔 | 設定檔是主旨、組織或個人的表示法。 設定檔由兩個元素組成： <ul><li>屬性：屬性會提供名稱、年齡或性別等資訊。</li><li>行為：行為可提供有關指定設定檔活動的資訊。 例如，設定檔行為可以分辨特定設定檔是「搜尋涼鞋」還是「訂購T恤」。</li></ul> |
+| 設定檔 | 設定檔是主旨、組織或個人的表示法。 設定檔由四個元素組成： <ul><li>屬性：屬性會提供名稱、年齡或性別等資訊。</li><li>行為：行為可提供有關指定設定檔活動的資訊。 例如，設定檔行為可以分辨特定設定檔是「搜尋涼鞋」還是「訂購T恤」。</li><li>身分：對於合併的個人檔案，這會提供與個人相關聯的所有身分資訊。 身分可以分為三種類別：人員（CRMID、電子郵件、電話）、裝置(IDFA、GAID)和Cookie (ECID、AAID)。</li><li>對象成員資格：設定檔所屬的群組（忠誠使用者、住在加利福尼亞的使用者等）</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,14 +67,10 @@ ht-degree: 2%
 
 Identity Service提供下列作業，以達成其使命：
 
-您可以使用Identity Service來達成下列作業：
-
 * 建立自訂名稱空間以符合您組織的需求。
 * 建立、更新和檢視身分圖。
 * 根據資料集刪除身分。
 * 刪除身分以確保法規遵循。
-
->[!BEGINSHADEBOX]
 
 ## Identity Service如何連結身分
 
@@ -97,8 +93,6 @@ Identity Service提供下列作業，以達成其使命：
 
 考量到上述情況，Identity Service會建立以下兩者之間的連結： `CRM_ID:ABC, ECID:123`以及 `{CRM_ID:ABC, ECID:456}`. 這會產生一個身分圖表，讓您「擁有」三個身分：一個代表個人識別碼(CRM ID)，兩個代表Cookie識別碼(ECID)。
 
->[!ENDSHADEBOX]
-
 ## 身分圖
 
 身分圖表是不同身分名稱空間之間關係的地圖，可讓您以視覺效果呈現並更能瞭解哪些客戶身分連結，以及如何連結。 閱讀有關教學課程 [使用身分圖表檢視器](./ui/identity-graph-viewer.md) 以取得詳細資訊。
@@ -111,9 +105,11 @@ Identity Service提供下列作業，以達成其使命：
 
 Identity Service在Experience Platform中扮演著重要的角色。 部分重要整合專案包括：
 
-* [即時客戶個人檔案](../profile/home.md)：在合併指定設定檔的屬性和事件之前，即時客戶設定檔可以參考身分圖表。
 * [方案](../xdm/home.md)：在指定的結構描述中，標示為身分的結構描述欄位允許建立身分圖表。
 * [資料集](../catalog/datasets/overview.md)：當資料集啟用擷取至Real-time Customer Profile時，會從資料集產生身分圖，前提是資料集至少有兩個欄位標籤為身分。
+* [Web SDK](../edge/home.md)：Web SDK會將體驗事件傳送至Adobe Experience Platform，而當事件中存在兩個或多個身分時，身分服務會產生圖表。
+* [即時客戶個人檔案](../profile/home.md)：在合併指定設定檔的屬性和事件之前，即時客戶設定檔可以參考身分圖表。
 * [目的地](../destinations/home.md)：目的地可以根據身分名稱空間將設定檔資訊傳送至其他系統，例如雜湊電子郵件。
 * [區段比對](../segmentation/ui/segment-match/overview.md)：區段比對會比對兩個不同沙箱中，具有相同身分名稱空間和身分值的兩個設定檔。
 * [Privacy Service](../privacy-service/home.md)：如果刪除請求包含 `identity`，則指定的名稱空間和身分值組合，可以使用Privacy Service中的隱私權要求處理功能從身分服務中刪除。
+
