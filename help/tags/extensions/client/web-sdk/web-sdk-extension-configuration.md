@@ -2,9 +2,9 @@
 title: 設定Web SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1580'
 ht-degree: 6%
 
 ---
@@ -83,6 +83,10 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 * **[!UICONTROL 從VisitorAPI移轉ECID]**：此選項預設為啟用。 啟用此功能後，SDK可讀取 `AMCV` 和 `s_ecid` Cookie並設定 `AMCV` 使用的Cookie [!DNL Visitor.js]. 移轉至Web SDK時，此功能很重要，因為有些頁面可能仍使用 [!DNL Visitor.js]. 此選項可讓SDK繼續使用相同程式碼 [!DNL ECID] 因此不會將使用者識別為兩個不同的使用者。
 * **[!UICONTROL 使用第三方Cookie]**：啟用此選項後，Web SDK會嘗試將使用者識別碼儲存在第三方Cookie中。 如果成功，則會在使用者瀏覽多個網域時將其識別為單一使用者，而不是在每個網域上將其識別為個別使用者。 如果已啟用此選項，如果瀏覽器不支援第三方Cookie或使用者已設定不允許第三方Cookie，SDK仍可能無法將使用者識別碼儲存在第三方Cookie中。 在此情況下，SDK只會將識別碼儲存在第一方網域中。
 
+  >[!IMPORTANT]
+  >>協力廠商Cookie與 [第一方裝置ID](../../../../edge/identity/first-party-device-ids.md) Web SDK的功能。
+您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
+  >
 ## 設定個人化設定 {#personalization}
 
 此區段可讓您設定在載入個人化內容時如何隱藏頁面的某些部分。 這可確保您的訪客只會看到個人化頁面。
@@ -103,7 +107,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 
 >[!IMPORTANT]
 >
->使用預先隱藏程式碼片段時，Adobe建議使用 [!DNL CSS] 規則做為使用的規則 [預先隱藏樣式](#prehiding-style).
+使用預先隱藏程式碼片段時，Adobe建議使用 [!DNL CSS] 規則做為使用的規則 [預先隱藏樣式](#prehiding-style).
 
 ## 設定資料收集設定 {#data-collection}
 
@@ -130,7 +134,7 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 
 >[!IMPORTANT]
 >
-> 資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
+資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
 
 ![此影像顯示Web SDK標籤擴充功能頁面中的資料流設定覆寫。](assets/datastream-overrides.png)
 
