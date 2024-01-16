@@ -5,10 +5,10 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 31%
+source-wordcount: '770'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 31%
 * 快速入門 {#get-started}
    * [快速入門手冊](./quick-start/quick-start.md)
    * [實作指南](./quick-start/implementation-guides.md)
-* UI 指南 {#ui}
+* UI指南 {#ui}
    * [概觀](./ui/managing-resources/overview.md)
    * 擴充功能 {#extensions}
       * [概觀](./ui/managing-resources/extensions/overview.md)
@@ -45,7 +45,7 @@ ht-degree: 31%
    * [程式庫](./ui/publishing/libraries.md)
    * [自行託管程式庫](./ui/publishing/hosts/self-hosting-libraries.md)
    * [重新發佈程式庫](./ui/publishing/republish.md)
-   * [Experience Platform 標籤 (中國)](./ui/publishing/premium-cdn.md)
+   * [Experience Platform標籤（中國）](./ui/publishing/premium-cdn.md)
 * 用戶端資訊 {#client-side}
    * [概觀](./ui/client-side/overview.md)
    * [非同步部署](./ui/client-side/asynchronous-deployment.md)
@@ -135,7 +135,7 @@ ht-degree: 31%
       * [Awin轉換標籤](https://exchange.adobe.com/apps/ec/103240)
       * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)
       * [Bing Ads通用事件追蹤](https://exchange.adobe.com/apps/ec/100154)
-      * [Branch](https://exchange.adobe.com/apps/ec/101382)
+      * [分支](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] 視訊追蹤 {#brightcove}
          * [概觀](./extensions/client/brightcove/overview.md)
          * [發行說明](./extensions/client/brightcove/release-notes.md)
@@ -159,7 +159,7 @@ ht-degree: 31%
       * [分貝](https://exchange.adobe.com/apps/ec/100913)
       * [Demandbase](https://exchange.adobe.com/apps/ec/101605)
       * [差分隱私權](https://exchange.adobe.com/apps/ec/104535)
-      * [Dynamic Media 檢視器](https://exchange.adobe.com/apps/ec/103048)
+      * [Dynamic Media檢視器](https://exchange.adobe.com/apps/ec/103048)
       * [EDDL協助程式](https://exchange.adobe.com/apps/ec/107691)
       * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)
       * [ForeSee](https://exchange.adobe.com/apps/ec/100164)
@@ -226,7 +226,7 @@ ht-degree: 31%
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
       * Google Ads增強型轉換 {#google-ads-enhanced-conversions}
          * [概觀](./extensions/server/google-ads-enhanced-conversions/overview.md)
-      * Google Cloud Platform {#google-cloud-platform}
+      * Google Cloud平台 {#google-cloud-platform}
          * [概述](./extensions/server/google-cloud-platform/overview.md)
       * [!DNL LinkedIn Conversions API] {#linkedin}
          * [概述](./extensions/server/linkedin/overview.md)
@@ -282,8 +282,8 @@ ht-degree: 31%
       * [條件類型](./extension-dev/edge/condition-types.md)
       * [動作類型](./extension-dev/edge/action-types.md)
       * [資料元素類型](./extension-dev/edge/data-element-types.md)
-      * [內容參數](./extension-dev/edge/context.md)
-   * [託管協力廠商程式庫](./extension-dev/third-party-libraries.md)
+      * [內容引數](./extension-dev/edge/context.md)
+   * [託管第三方程式庫](./extension-dev/third-party-libraries.md)
    * [Turbine 自由變數](./extension-dev/turbine.md)
    * [回溯相容性標準](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
@@ -319,12 +319,7 @@ ht-degree: 31%
       * [搜尋資源](./api/guides/search.md)
       * [秘密](./api/guides/secrets.md)
 * [常見問題集](./faq.md)
-* [術語 更新](./term-updates.md)
+* [術語更新](./term-updates.md)
 * [停止支援Internet Explorer 10和11](./ie-deprecation.md)
-* 發行說明 {#release-notes}
-   * [最新消息](./release-notes/current.md)
-   * [2021 年發行說明](./release-notes/2021.md)
-   * [2020 年發行說明](./release-notes/2020.md)
-   * [2019 年發行說明](./release-notes/2019.md)
-   * [2018 年發行說明](./release-notes/2018.md)
+* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
 
