@@ -1,11 +1,11 @@
 ---
 title: 衛星物件參考
-description: 瞭解使用者端_satellite物件，以及您可以在標籤中執行的各種功能。
+description: 瞭解使用者端_satellite物件，以及您可在標籤中執行的各種功能。
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: 309f3cce82c5d6c7f10c08b05da6d9c6c44631b6
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 42%
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 42%
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
-本檔案可用作使用者端的參考 `_satellite` 物件以及您可以用它執行的各種功能。
+本檔案可用作使用者端的參考 `_satellite` 物件，以及您可以使用該物件執行的各種功能。
 
 ## `track`
 
@@ -31,7 +31,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` 會使用已設定核心標籤擴充功能之指定識別碼的「直接呼叫」事件型別，觸發所有規則。 上述範例會使用「直接呼叫」事件類型觸發所有規則，其中設定的識別碼為 `contact_submit`。也會傳遞包含相關資訊的選用物件。您可以在條件或動作的文字欄位內輸入 `%event.detail%`，或是在 Custom Code 條件或動作的程式碼編輯器內輸入 `event.detail`，以存取詳細資料物件。
+`track` 使用已設定核心標籤擴充功能之指定識別碼的「直接呼叫」事件型別，以引發所有規則。 上述範例會使用「直接呼叫」事件類型觸發所有規則，其中設定的識別碼為 `contact_submit`。也會傳遞包含相關資訊的選用物件。您可以在條件或動作的文字欄位內輸入 `%event.detail%`，或是在 Custom Code 條件或動作的程式碼編輯器內輸入 `event.detail`，以存取詳細資料物件。
 
 ## `getVar`
 
@@ -51,9 +51,9 @@ var product = _satellite.getVar('product');
 
 >[!NOTE]
 >
->您可以使用百分比(`%`)語法來參考標籤實作中許多表單欄位的變數，減少呼叫的需求 `_satellite.getVar()`. 例如，使用 `%product%` 將存取產品資料元素或自訂變數的值。
+>您可以使用百分比(`%`)語法來參考標籤實作中許多表單欄位的變數，減少呼叫的需求 `_satellite.getVar()`. 例如，使用 `%product%` 將會存取產品資料元素或自訂變數的值。
 
-當事件觸發規則時，您可以傳遞規則的對應專案 `event` 物件進入 `_satellite.getVar()` 如下所示：
+當事件觸發規則時，您可以傳遞規則的對應 `event` 物件移入 `_satellite.getVar()` 如下所示：
 
 ```javascript
 // event refers to the calling rule's event
@@ -61,6 +61,10 @@ var rule = _satellite.getVar('return event rule', event);
 ```
 
 ## `setVar`
+
+>[!NOTE]
+>
+>此 `setVar` 程式碼與Tags中指定的資料元素完全不同。
 
 **程式碼**
 
@@ -74,7 +78,7 @@ _satellite.setVar(name: string, value: *)
 _satellite.setVar('product', 'Circuit Pro');
 ```
 
-`setVar()` 設定具有指定名稱和值的自訂變數。 變數的值之後可以透過 `_satellite.getVar()` 存取。
+`setVar()` 使用指定的名稱和值設定自訂變數。 變數的值之後可以透過 `_satellite.getVar()` 存取。
 
 您可以傳遞鍵值為變數名稱且值為個別變數值的物件，選擇是否要一次設定多個變數。
 
@@ -124,7 +128,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-此 `logger` 物件允許將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯（透過呼叫）功能時，才會顯示訊息 `_satellite.setDebug(true)` 或使用適當的瀏覽器擴充功能)。
+此 `logger` 物件允許將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯(透過呼叫 `_satellite.setDebug(true)` 或使用適當的瀏覽器擴充功能)。
 
 ### 記錄取代警告
 
@@ -142,7 +146,7 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` 包含讀取和寫入Cookie的函式。 它是公開第三方程式庫js-cookie的副本。 如需此程式庫更進階用法的詳細資訊，請檢閱 [js-cookie檔案](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` 包含讀取和寫入Cookie的函式。 這是一份公開的協力廠商程式庫js-cookie。 如需此程式庫更進階使用方式的詳細資訊，請檢閱 [js-cookie檔案](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### 設定Cookie {#cookie-set}
 
@@ -156,11 +160,11 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->舊版 [`setCookie`](#setCookie) 設定Cookie的方法中，此函式呼叫的第三個（選用）引數是整數，指出Cookie的過期時間（以天為單位）。 在這個新方法中，「attributes」物件會改為被接受為第三個引數。 若要使用新方法設定Cookie的有效期，您必須提供 `expires` 屬性物件中的屬性，並將其設定為所需的值。 以下範例說明此方法。
+>在舊版 [`setCookie`](#setCookie) 設定Cookie的方法中，此函式呼叫的第三個（選用）引數是整數，指出Cookie的到期時間（以天為單位）。 在這個新方法中，「attributes」物件會被視為第三個引數。 若要使用新方法設定Cookie的有效期，您必須提供 `expires` 屬性物件中的屬性，並將其設定為所需的值。 這會在以下範例中示範。
 
 **範例**
 
-以下函式呼叫所寫入的Cookie會在一週後過期。
+以下函式呼叫會寫入一週後過期的Cookie。
 
 ```javascript
 _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
@@ -210,7 +214,7 @@ _satellite.cookie.remove('product');
 _satellite.buildInfo
 ```
 
-此物件包含目前標籤執行階段程式庫組建的相關資訊。 此物件包含下列屬性：
+此物件包含有關建立目前標籤執行階段程式庫的資訊。 此物件包含下列屬性：
 
 ### `turbineVersion`
 
@@ -236,7 +240,7 @@ _satellite.buildInfo
 
 ## `environment`
 
-此物件包含部署目前標籤執行階段程式庫所在環境的相關資訊。
+此物件包含目前標籤執行階段程式庫部署所在環境的相關資訊。
 
 **程式碼**
 
@@ -276,9 +280,9 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` 將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯（透過呼叫）功能時，才會顯示訊息 `_satellite.setDebug(true)` 或使用適當的瀏覽器擴充功能)。
+`notify` 將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯(透過呼叫 `_satellite.setDebug(true)` 或使用適當的瀏覽器擴充功能)。
 
-可傳遞選用的記錄層級，這會影響所記錄訊息的樣式和篩選。 支援層級如下：
+可傳遞選用記錄層級，這會影響所記錄訊息的樣式和篩選。 支援層級如下：
 
 3 - 資訊訊息。
 
@@ -382,7 +386,7 @@ _satellite._monitors
 
 **範例**
 
-在執行標籤庫的網頁上，將程式碼片段新增至HTML。 通常，程式碼會插入 `<head>` 元素之前的 `<script>` 載入標籤程式庫的元素。 這可讓監視器擷取標籤程式庫中發生的最早系統事件。 例如：
+在執行標籤庫的網頁上，將程式碼片段新增至您的HTML。 通常，程式碼會插入 `<head>` 元素之前的 `<script>` 載入標籤程式庫的元素。 這可讓監視器取得標籤程式庫中發生的最早系統事件。 例如：
 
 ```html
 <!DOCTYPE html>
@@ -424,7 +428,7 @@ _satellite._monitors
 </html>
 ```
 
-在第一個指令碼元素中，由於標籤程式庫尚未載入，因此初始的 `_satellite` 已建立物件並在上建立陣列 `_satellite._monitors` 已初始化。 接著，指令碼將監視器物件新增到該陣列。監視器物件可以指定下列方法，標籤程式庫稍後會呼叫這些方法：
+在第一個指令碼元素中，由於標籤程式庫尚未載入，因此初始的 `_satellite` 物件已建立，且陣列位於 `_satellite._monitors` 已初始化。 接著，指令碼將監視器物件新增到該陣列。監視器物件可以指定下列方法，標籤程式庫稍後會呼叫這些方法：
 
 ### `ruleTriggered`
 
@@ -432,11 +436,11 @@ _satellite._monitors
 
 ### `ruleCompleted`
 
-此函式會在完全處理規則後呼叫。 換言之，事件已發生、所有條件皆已傳遞，且所有動作皆已執行。 傳遞至的事件物件 `ruleCompleted` 包含已完成規則的相關資訊。
+此函式會在規則完全處理後呼叫。 換句話說，事件已發生、所有條件皆已傳遞，且所有動作皆已執行。 傳遞至的事件物件 `ruleCompleted` 包含有關已完成規則的資訊。
 
 ### `ruleConditionFailed`
 
-觸發規則且其中一個條件失敗後，會呼叫此函式。 已傳遞到 `ruleConditionFailed` 的事件物件包含有關已觸發規則和已失敗條件的資訊。
+此函式會在規則觸發且其中一個條件失敗後呼叫。 已傳遞到 `ruleConditionFailed` 的事件物件包含有關已觸發規則和已失敗條件的資訊。
 
 若已呼叫 `ruleTriggered`，之後即將會呼叫 `ruleCompleted` 或 `ruleConditionFailed`。
 
@@ -455,4 +459,4 @@ _satellite._monitors
 
 ![](../../images/debug.png)
 
-您可視需要將其他Hook或其他資訊新增到這些處理常式。
+可視需要將其他Hook或其他資訊新增到這些處理常式。
