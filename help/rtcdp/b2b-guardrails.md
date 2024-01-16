@@ -6,9 +6,9 @@ description: Adobe Experience Platform 使用與傳統關聯式資料模型不�
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 | 無巢狀舊關聯 | 0 | 柔光 | 您不應在兩個非關聯式之間建立[!DNL XDM Individual Profile] 結構描述。 不建議將建立關係的功能用於不屬於的任何結構描述 [!DNL Profile] 聯合結構描述。 |
 | 只有B2B物件可以參與多對一關係 | 0 | 強烈 | 系統只支援B2B物件之間的多對一關係。 如需多對一關係的詳細資訊，請參閱以下教學課程： [定義B2B綱要關係](../xdm/tutorials/relationship-b2b.md). |
 | B2B物件之間巢狀關聯的最大深度 | 3 | 強烈 | B2B物件之間巢狀關聯的最大深度為3。 這表示在高度巢狀結構描述中，B2B物件間的巢狀層級不應超過3層。 |
+| 每個維度實體的單一結構描述 | 1 | 強烈 | 每個維度實體都必須有一個結構描述。 嘗試使用從多個結構描述建立的維度實體可能會影響分段結果。 不同的維度實體應該有不同的結構描述。 |
 
 ## 資料大小限制
 
@@ -93,7 +94,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| 所有維度實體的總大小 | 5 GB   | 柔光 | 建議所有維度實體的總大小為5GB。 擷取大型尺寸圖元可能會影響系統效能。 例如，不建議嘗試載入10GB的產品目錄作為維度實體。 |
+| 所有維度實體的總大小 | 5GB   | 柔光 | 建議所有維度實體的總大小為5GB。 擷取大型尺寸圖元可能會影響系統效能。 例如，不建議嘗試載入10GB的產品目錄作為維度實體。 |
 | 每個維度實體結構描述的資料集 | 5 | 柔光 | 建議每個維度實體結構描述最多關聯5個資料集。 例如，如果您為「產品」建立結構描述，並新增五個貢獻資料集，則不應建立與產品結構描述繫結的第六個資料集。 |
 | 每日擷取的Dimension實體批次 | 每個實體4個 | 柔光 | 建議每天擷取的維度實體批次數量上限為每個實體4個。 例如，您每天最多可以擷取4次產品目錄的更新。 擷取相同實體的其他維度實體批次可能會影響系統效能。 |
 
