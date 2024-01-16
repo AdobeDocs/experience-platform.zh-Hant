@@ -2,7 +2,7 @@
 title: Real-Time CDP中的範例使用案例
 description: 檢視跨服務使用案例範例，以善用Real-Time CDP實作。
 feature: Use Cases
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 Adobe Real-Time CDP提供廣泛支援的合作夥伴識別碼，可讓您建立潛在客戶的對象、使用合作夥伴的屬性讓已知對象更豐富等等。
 
-支援的使用案例可分組為客戶贏取和設定檔擴充案例。 如需廣泛的實作資訊，請瀏覽下列檔案連結。
+範例使用案例可以分組到客戶贏取和設定檔擴充案例中。 如需廣泛的實作資訊，請瀏覽下列檔案連結。
 
 ### 客戶贏取 {#customer-acquisition}
 

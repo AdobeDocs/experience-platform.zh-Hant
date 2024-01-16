@@ -4,7 +4,7 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
-source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
+source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 72%
@@ -74,7 +74,7 @@ ht-degree: 72%
    * [來源概觀](sources/sources-overview.md)
    * [Real-Time CDP B2B 版本中的來源](sources/b2b.md)
 * 使用案例 {#use-cases}
-   * [支援的使用案例概觀](/help/rtcdp/use-case-guides/overview.md)
+   * [範例使用案例概觀](/help/rtcdp/use-case-guides/overview.md)
    * 個人化、深入分析和參與 {#personalization-insights-engagement}
       * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * 客戶贏取 {#customer-acquisition}
