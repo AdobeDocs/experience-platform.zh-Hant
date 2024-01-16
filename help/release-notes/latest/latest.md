@@ -4,16 +4,16 @@ description: Adobe Experience Platform的2023年10月發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '1068'
-ht-degree: 32%
+source-wordcount: '1052'
+ht-degree: 31%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2023 年 10 月 25 日**
+**發行日期： 2023年10月25日**
 
- Experience Platform 現有功能的更新：
+Experience Platform現有功能的更新：
 
 - [儀表板](#dashboards)
 - [資料集合](#data-collection)
