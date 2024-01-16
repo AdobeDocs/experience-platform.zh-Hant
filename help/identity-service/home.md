@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service總覽
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 | --- | --- |
 | 身分 | 身分是實體獨有的資料。 通常這是真實世界的物件，例如個人、硬體裝置或網頁瀏覽器（以Cookie表示）。 完全合格的身分包含兩個元素： **身分名稱空間** 和 **身分值**. |
 | 身分命名空間 | 身分名稱空間是指定身分的上下文。 例如，名稱空間 `Email` 可能對應至 **朱利安<span>@acme.com**. 同樣地，名稱空間 `Phone` 可能對應至 `555-555-1234`. 如需詳細資訊，請閱讀 [身分名稱空間總覽](./namespaces.md) |
-| 身分識別值 | 身分值是代表真實世界實體的字串，並會透過名稱空間在身分服務中分類。 例如，電子郵件 **朱利安<span>@acme.com** 可分類為 `Email` 名稱空間。 |
+| 身分識別值 | 身分值是代表真實世界實體的字串，並會透過名稱空間在身分服務中分類。 例如，身分值（字串） **朱利安<span>@acme.com** 可分類為 `Email` 名稱空間。 |
 | 身分類型 | 身分型別是身分名稱空間的元件。 身分型別會指定身分資料是否連結在身分圖表中。 |
 | 連結 | 連結或連結是一種方法，可讓兩個不同的身分分別代表相同的實體。 例如，「」之間的連結`Email` =朱利安<span>@acme.com」和&quot;`Phone` = 555-555-1234」表示兩個身分代表相同的實體。 這表示已與您的品牌互動的客戶同時使用julien的電子郵件地址<span>@acme.com和電話號碼555-555-1234相同。 |
 | 身分識別服務 | Identity Service是Experience Platform中的服務，可連結（或取消連結）身分以維護身分圖表。 |
@@ -91,7 +91,7 @@ Identity Service提供下列作業，以達成其使命：
 * 接下來，如果您以相同的認證登入相同的電子商務網站，但使用手機上的網頁瀏覽器，而非筆記型電腦上的網頁瀏覽器，則會在Identity Service中註冊新的ECID。
 * 在幕後，Identity Service會將此新事件處理為 `{CRM_ID:ABC, ECID:456}`，其中CRM_ID： ABC代表您驗證的客戶ID，而ECID：456代表您行動裝置上的網頁瀏覽器。
 
-考量到上述情況，Identity Service會建立以下兩者之間的連結： `CRM_ID:ABC, ECID:123`以及 `{CRM_ID:ABC, ECID:456}`. 這會產生一個身分圖表，讓您「擁有」三個身分：一個代表個人識別碼(CRM ID)，兩個代表Cookie識別碼(ECID)。
+考量到上述情況，Identity Service會建立以下兩者之間的連結： `{CRM_ID:ABC, ECID:123}`以及 `{CRM_ID:ABC, ECID:456}`. 這會產生一個身分圖表，讓您「擁有」三個身分：一個代表個人識別碼(CRM ID)，兩個代表Cookie識別碼(ECID)。
 
 ## 身分圖
 
