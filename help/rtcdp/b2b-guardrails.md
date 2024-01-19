@@ -6,9 +6,9 @@ description: Adobe Experience Platform 使用與傳統關聯式資料模型不�
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
+source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1794'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,10 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 本檔案有兩種預設限制：
 
-* **軟性限制：** 可以超越軟性限制，但軟性限制提供系統效能的建議指引。
-
-* **硬限制：** 硬限制可提供絕對最大值。
+| 護欄型別 | 說明 |
+| -------------- | ----------- |
+| **效能護欄（軟性限制）** | 效能護欄是與使用案例範圍相關的使用限制。 超過效能護欄時，您可能會遇到效能降低和延遲的問題。 Adobe對這類效能降級概不負責。 客戶若持續超過效能護欄，可選擇授權額外的容量，以避免效能降低。 |
+| **系統強制的護欄（硬限制）** | Real-Time CDP UI或API會強制執行系統強制的護欄。 這些限制不得超過，因為UI和API會阻止您這樣做或會傳回錯誤。 |
 
 >[!INFO]
 >
@@ -50,10 +51,11 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 >本節中概述的資料模型限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP Adobe Experience Platform B2B Edition的預設限制完整清單，請將這些限制與 [即時客戶設定檔資料檔案的護欄](../profile/guardrails.md).
 
 | 護欄 | 限制 | 限制型別 | 說明 |
-| --- | --- | --- | --- |
-| Real-Time CDP B2B Edition standard XDM類別資料集 | 60 | 柔光 | 建議使用最多60個資料集，這些資料集會利用Real-Time CDP B2B Edition提供的標準Experience Data Model (XDM)類別。 如需B2B使用案例的標準XDM類別的完整清單，請參閱 [Real-Time CDP B2B Edition檔案中的結構描述](schemas/b2b.md). <br/><br/>*注意：由於Experience Platform非標準化混合資料模型的性質，大部分客戶不會超過此限制。 如需瞭解如何模型化您的資料，或想進一步瞭解自訂限制，請聯絡客戶服務代表。* |
-| 舊版多實體關係 | 20 | 柔光 | 建議在主要實體和維度實體之間最多定義20個多實體關係。 在移除或停用現有關聯性之前，不應進行其他關聯性對應。 |
-| 每個XDM類別的多對一關係 | 2 | 柔光 | 建議每個XDM類別最多定義2個多對一關係。 在移除或停用現有關係之前，不應建立其他關係。 如需如何在兩個結構描述之間建立關係的步驟，請參閱的教學課程： [定義B2B綱要關係](../xdm/tutorials/relationship-b2b.md). |
+| --------- | ----- | ---------- | ----------- |
+| Real-Time CDP B2B Edition standard XDM類別資料集 | 60 | 效能護欄 | 建議使用最多60個資料集，這些資料集會利用Real-Time CDP B2B Edition提供的標準Experience Data Model (XDM)類別。 如需B2B使用案例的標準XDM類別的完整清單，請參閱 [Real-Time CDP B2B Edition檔案中的結構描述](schemas/b2b.md). <br/><br/>*注意：由於Experience Platform非標準化混合資料模型的性質，大部分客戶不會超過此限制。 如需瞭解如何模型化您的資料，或想進一步瞭解自訂限制，請聯絡客戶服務代表。* |
+| 身分圖表中的個人帳戶身分計數 | 50 | 效能護欄 | 個人帳戶在身分圖表中的身分數量上限為50。 任何具有超過50個身分的設定檔都會從分段、匯出和查詢中排除。 |
+| 舊版多實體關係 | 20 | 效能護欄 | 建議在主要實體和維度實體之間最多定義20個多實體關係。 在移除或停用現有關聯性之前，不應進行其他關聯性對應。 |
+| 每個XDM類別的多對一關係 | 2 | 效能護欄 | 建議每個XDM類別最多定義2個多對一關係。 在移除或停用現有關係之前，不應建立其他關係。 如需如何在兩個結構描述之間建立關係的步驟，請參閱的教學課程： [定義B2B綱要關係](../xdm/tutorials/relationship-b2b.md). |
 
 ### Dimension實體護欄
 
@@ -62,11 +64,11 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 >本節中概述的資料模型限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP Adobe Experience Platform B2B Edition的預設限制完整清單，請將這些限制與 [即時客戶設定檔資料檔案的護欄](../profile/guardrails.md).
 
 | 護欄 | 限制 | 限制型別 | 說明 |
-| --- | --- | --- | --- |
-| 無巢狀舊關聯 | 0 | 柔光 | 您不應在兩個非關聯式之間建立[!DNL XDM Individual Profile] 結構描述。 不建議將建立關係的功能用於不屬於的任何結構描述 [!DNL Profile] 聯合結構描述。 |
-| 只有B2B物件可以參與多對一關係 | 0 | 強烈 | 系統只支援B2B物件之間的多對一關係。 如需多對一關係的詳細資訊，請參閱以下教學課程： [定義B2B綱要關係](../xdm/tutorials/relationship-b2b.md). |
-| B2B物件之間巢狀關聯的最大深度 | 3 | 強烈 | B2B物件之間巢狀關聯的最大深度為3。 這表示在高度巢狀結構描述中，B2B物件間的巢狀層級不應超過3層。 |
-| 每個維度實體的單一結構描述 | 1 | 強烈 | 每個維度實體都必須有一個結構描述。 嘗試使用從多個結構描述建立的維度實體可能會影響分段結果。 不同的維度實體應該有不同的結構描述。 |
+| --------- | ----- | ---------- | ----------- |
+| 無巢狀舊關聯 | 0 | 效能護欄 | 您不應在兩個非關聯式之間建立[!DNL XDM Individual Profile] 結構描述。 建立關聯性是 **非** 建議用於不屬於的任何結構描述 [!DNL Profile] 聯合結構描述。 |
+| 只有B2B物件可以參與多對一關係 | 0 | 系統強制的護欄 | 系統只支援B2B物件之間的多對一關係。 如需多對一關係的詳細資訊，請參閱以下教學課程： [定義B2B綱要關係](../xdm/tutorials/relationship-b2b.md). |
+| B2B物件之間巢狀關聯的最大深度 | 3 | 系統強制的護欄 | B2B物件之間巢狀關聯的最大深度為3。 這表示在高度巢狀結構描述中，B2B物件間的巢狀層級不應超過3層。 |
+| 每個維度實體的單一結構描述 | 1 | 系統強制的護欄 | 每個維度實體都必須有一個結構描述。 嘗試使用從多個結構描述建立的維度實體可能會影響分段結果。 不同的維度實體應該有不同的結構描述。 |
 
 ## 資料大小限制
 
@@ -83,8 +85,8 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 >本節中概述的資料大小限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP Adobe Experience Platform B2B Edition的預設限制完整清單，請將這些限制與 [即時客戶設定檔資料檔案的護欄](../profile/guardrails.md).
 
 | 護欄 | 限制 | 限制型別 | 說明 |
-| --- | --- | --- | --- |
-| 每日每個XDM類別擷取的批次 | 45 | 柔光 | 每個XDM類別每天擷取的批次總數不應超過45個。 擷取其他批次可能會妨礙最佳效能。 |
+| --------- | ----- | ---------- | ----------- |
+| 每日每個XDM類別擷取的批次 | 45 | 效能護欄 | 每個XDM類別每天擷取的批次總數不應超過45個。 擷取其他批次可能會妨礙最佳效能。 |
 
 ### Dimension實體護欄
 
@@ -93,10 +95,10 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 >本節中概述的資料大小限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP Adobe Experience Platform B2B Edition的預設限制完整清單，請將這些限制與 [即時客戶設定檔資料檔案的護欄](../profile/guardrails.md).
 
 | 護欄 | 限制 | 限制型別 | 說明 |
-| --- | --- | --- | --- |
-| 所有維度實體的總大小 | 5GB   | 柔光 | 建議所有維度實體的總大小為5GB。 擷取大型尺寸圖元可能會影響系統效能。 例如，不建議嘗試載入10GB的產品目錄作為維度實體。 |
-| 每個維度實體結構描述的資料集 | 5 | 柔光 | 建議每個維度實體結構描述最多關聯5個資料集。 例如，如果您為「產品」建立結構描述，並新增五個貢獻資料集，則不應建立與產品結構描述繫結的第六個資料集。 |
-| 每日擷取的Dimension實體批次 | 每個實體4個 | 柔光 | 建議每天擷取的維度實體批次數量上限為每個實體4個。 例如，您每天最多可以擷取4次產品目錄的更新。 擷取相同實體的其他維度實體批次可能會影響系統效能。 |
+| --------- | ----- | ---------- | ----------- |
+| 所有維度實體的總大小 | 5GB   | 效能護欄 | 建議所有維度實體的總大小為5GB。 擷取大型尺寸圖元可能會影響系統效能。 例如，不建議嘗試載入10GB的產品目錄作為維度實體。 |
+| 每個維度實體結構描述的資料集 | 5 | 效能護欄 | 建議每個維度實體結構描述最多關聯5個資料集。 例如，如果您為「產品」建立結構描述，並新增五個貢獻資料集，則不應建立與產品結構描述繫結的第六個資料集。 |
+| 每日擷取的Dimension實體批次 | 每個實體4個 | 效能護欄 | 建議每天擷取的維度實體批次數量上限為每個實體4個。 例如，您每天最多可以擷取4次產品目錄的更新。 擷取相同實體的其他維度實體批次可能會影響系統效能。 |
 
 ## 分段護欄
 
@@ -107,8 +109,8 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 >本節中概述的區段限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP Adobe Experience Platform B2B Edition的預設限制完整清單，請將這些限制與 [即時客戶設定檔資料檔案的護欄](../profile/guardrails.md).
 
 | 護欄 | 限制 | 限制型別 | 說明 |
-| --- | --- | --- | --- |
-| 每個B2B沙箱的區段 | 400 | 柔光 | 只要每個個別B2B沙箱中的區段少於400個，組織就可以總共超過400個區段。 嘗試建立其他區段可能會影響系統效能。 |
+| --------- | ----- | ---------- | ----------- |
+| 每個B2B沙箱的區段定義 | 400 | 效能護欄 | 只要每個個別B2B沙箱中的區段定義少於400個，組織就可以總共超過400個區段定義。 嘗試建立其他區段定義可能會影響系統效能。 |
 
 ## 後續步驟
 
