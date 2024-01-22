@@ -4,9 +4,9 @@ title: Real-time Customer Data Platform中的身分
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更清楚瞭解客戶及其行為。
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Adobe Experience Platform [!DNL Identity Service] 透過跨裝置和系統橋接
 
 ## 身分圖
 
-身分圖表是不同身分名稱空間之間關係的對應，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。 所有客戶身分圖表都由共同管理和更新 [!DNL Identity Service] 近乎即時，用來回應客戶活動。
+身分圖表是不同身分之間的關係圖，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。 所有客戶身分圖表會由Identity Service集體管理及更新，以回應客戶活動。
 
-[!DNL Identity Service] 管理只有您的組織能看見的身分圖表，並根據您的資料建置，稱為專用圖表。 [!DNL Identity Service] 當內嵌的資料記錄包含多個身分時，會增加您的私人圖表，在找到的身分之間新增關係。
+[!DNL Identity Service] 管理僅對您的組織可見的身分圖表，並根據您的資料建置。 [!DNL Identity Service] 當內嵌的資料記錄包含多個身分時，增加找到的身分之間的關係，可以增強您的圖表。
 
 ## 後續步驟
 
