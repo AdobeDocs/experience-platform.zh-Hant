@@ -2,19 +2,14 @@
 title: pinterest客戶清單連線
 description: 從您的客戶清單、造訪過您網站的人，或已在Pinterest上與您的內容互動的人中建立對象。
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
+source-git-commit: 02110e4b4156774c2961803f78ae1c3fc9d6240a
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '719'
 ht-degree: 3%
 
 ---
 
 # [!DNL Pinterest Customer List] 連線
-
->[!IMPORTANT]
->
->* 自2023年11月16日起，您可以在目的地目錄中看到兩張Pinterest卡並排。 這是因為用來將資料匯出至Pinterest的Pinterest廣告商API已升級。 現有的Pinterest目的地聯結器已重新命名為 **[!UICONTROL （淘汰） Pinterest]** 和一張新卡片 **[!UICONTROL （新） Pinterest]** 現在可供您使用。
->* 使用 **[!UICONTROL （新） Pinterest]** 目錄中與Pinterest的任何行銷活動的連線。 如果您有任何使用中的資料流至 **[!UICONTROL （淘汰） Pinterest]** 目的地，請閱讀 [升級檔案](/help/destinations/catalog/advertising/pinterest-upgrade.md) 以瞭解您的行動專案，確保不會中斷您的行銷活動。
 
 ## 概觀 {#overview}
 
