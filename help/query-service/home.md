@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務總覽
 description: 瞭解Experience Platform中查詢服務的角色。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
+source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Adobe Experience Platform會擷取各種來源的資料。 行銷人員的主要
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] 使用機器學習和人工智慧，從Experience Platform中儲存的資料獲得見解。 資料科學家可以使用 [!DNL Data Science Workspace] 根據有關客戶及其活動的記錄和時間序列資料來建立配方。 這些配方有助於進行預測，例如購買傾向和建議個人可能會讚賞和使用的選件。 您可以在以下位置使用SQL： [!DNL Data Science Workspace] 將查詢服務整合至 [!DNL JupyterLab] 探索、轉換及分析Adobe Analytics資料。 閱讀 [[!DNL Data Science Workspace] 概述](../data-science-workspace/home.md) 和 [Jypiter Notebook連線指南](./clients/jupyter-notebook.md) 如需如何操作的詳細資訊 [!DNL Data Science Workspace] 會與查詢服務互動。
+Adobe Experience Platform [!DNL Data Science Workspace] 使用機器學習和人工智慧，從Experience Platform中儲存的資料獲得見解。 資料科學家可以使用 [!DNL Data Science Workspace] 根據有關客戶及其活動的記錄和時間序列資料來建立配方。 這些配方有助於進行預測，例如購買傾向和建議個人可能會讚賞和使用的選件。 您可以在以下位置使用SQL： [!DNL Data Science Workspace] 將查詢服務整合至 [!DNL JupyterLab] 探索、轉換及分析Adobe Analytics資料。 閱讀 [[!DNL Data Science Workspace] 概述](../data-science-workspace/home.md) 和 [Jupyter Notebook連線指南](./clients/jupyter-notebook.md) 如需如何操作的詳細資訊 [!DNL Data Science Workspace] 會與查詢服務互動。
 
 ### [!DNL Segmentation Service] {#segmentation}
 
