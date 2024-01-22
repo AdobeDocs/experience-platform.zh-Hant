@@ -5,10 +5,10 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 9c07664873f649645db57a9a025277f515333b1e
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '3446'
-ht-degree: 4%
+source-wordcount: '3411'
+ht-degree: 2%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->* 若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions).
+>* 若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions).
 >
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions).
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions).
 >
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 >
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] 據以組織客戶體驗資料的標準化框架。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md)： [!DNL Adobe Experience Platform Segmentation Service] 可讓您在中建立對象 [!DNL Adobe Experience Platform] 從您的 [!DNL Real-Time Customer Profile] 資料。
 * [[!DNL Sandboxes]](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
 
@@ -61,19 +61,19 @@ ht-degree: 4%
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集必要和選用標題的值 {#gather-values-headers}
 
-為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 * 授權：持有人 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{ORG_ID}`
+* x-api-key： `{API_KEY}`
+* x-gw-ims-org-id： `{ORG_ID}`
 
 中的資源 [!DNL Experience Platform] 可隔離至特定的虛擬沙箱。 在要求給 [!DNL Platform] API中，您可以指定要執行作業的沙箱名稱和ID。 這些是選用引數。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -81,7 +81,7 @@ ht-degree: 4%
 
 包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
-* Content-Type: `application/json`
+* Content-Type： `application/json`
 
 ### API參考檔案 {#api-reference-documentation}
 
@@ -1036,13 +1036,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `value` | 您想要用來更新引數的新值。 |
 | `id` | 指定您要新增至目的地資料流的對象ID。 |
 | `name` | *可選*. 指定您要新增至目的地資料流的對象名稱。 請注意，此欄位並非必填欄位，您可以在不提供名稱的情況下成功將對象新增至目的地資料流。 |
-| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br> 提供下列選項：: <br> <ul><li>`%DESTINATION_NAME%`: 必要. 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`: 必要. 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`: 選填. 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`：選填。 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`: 選填. 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br> 有關設定檔案名稱的詳細資訊，請參閱 [設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 區段。 |
-| `exportMode` | 必要. 選取「`"DAILY_FULL_EXPORT"`」或「`"FIRST_FULL_THEN_INCREMENTAL"`」。如需有關這兩個選項的詳細資訊，請參閱 [匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在「批次目的地啟動」教學課程中。 |
+| `filenameTemplate` | 此欄位會決定匯出至目的地之檔案的檔案名稱格式。 <br> 下列選項可供使用： <br> <ul><li>`%DESTINATION_NAME%`：必要。 匯出的檔案包含目的地名稱。</li><li>`%SEGMENT_ID%`：必要。 匯出的檔案包含匯出對象的ID。</li><li>`%SEGMENT_NAME%`：選填。 匯出的檔案包含匯出對象的名稱。</li><li>`DATETIME(YYYYMMdd_HHmmss)` 或 `%TIMESTAMP%`：選填。 選取這兩個選項之一，讓您的檔案包含Experience Platform產生檔案的時間。</li><li>`custom-text`：選填。 將此預留位置取代為您要在檔案名稱結尾附加的任何自訂文字。</li></ul> <br> 有關設定檔案名稱的詳細資訊，請參閱 [設定檔案名稱](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) 區段。 |
+| `exportMode` | 強制。 選取 `"DAILY_FULL_EXPORT"` 或 `"FIRST_FULL_THEN_INCREMENTAL"`. 如需有關這兩個選項的詳細資訊，請參閱 [匯出完整檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) 和 [匯出增量檔案](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) 在「批次目的地啟動」教學課程中。 |
 | `startDate` | 選取對象應開始將設定檔匯出至您的目的地的日期。 |
-| `frequency` | 必要. <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 匯出模式，您可以選取 `ONCE` 或 `DAILY`.</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 匯出模式，您可以選取 `"DAILY"`， `"EVERY_3_HOURS"`， `"EVERY_6_HOURS"`， `"EVERY_8_HOURS"`， `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | 的 *批次目的地* 僅限。 只有在選取 `"DAILY_FULL_EXPORT"` 中的模式 `frequency` 選擇器。 <br> 必要. <br> <ul><li>選取 `"AFTER_SEGMENT_EVAL"` 讓啟動工作在每日Platform批次分段工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取 `"SCHEDULED"` 讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新的，這取決於批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增 `startTime` 以指示每日匯出應在UTC中發生的時間。</li></ul> |
+| `frequency` | 強制。 <br> <ul><li>對於 `"DAILY_FULL_EXPORT"` 匯出模式，您可以選取 `ONCE` 或 `DAILY`.</li><li>對於 `"FIRST_FULL_THEN_INCREMENTAL"` 匯出模式，您可以選取 `"DAILY"`， `"EVERY_3_HOURS"`， `"EVERY_6_HOURS"`， `"EVERY_8_HOURS"`， `"EVERY_12_HOURS"`.</li></ul> |
+| `triggerType` | 的 *批次目的地* 僅限。 只有在選取 `"DAILY_FULL_EXPORT"` 中的模式 `frequency` 選擇器。 <br> 強制。 <br> <ul><li>選取 `"AFTER_SEGMENT_EVAL"` 讓啟動工作在每日Platform批次分段工作完成後立即執行。 這可確保在啟動工作執行時，最新的設定檔會匯出至您的目的地。</li><li>選取 `"SCHEDULED"` 讓啟動工作以固定時間執行。 這可確保Experience Platform設定檔資料每天在同一時間匯出，但您匯出的設定檔可能不是最新的，這取決於批次細分工作是否在啟動工作開始之前完成。 選取此選項時，您也必須新增 `startTime` 以指示每日匯出應在UTC中發生的時間。</li></ul> |
 | `endDate` | 的 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 選取時不適用 `"exportMode":"DAILY_FULL_EXPORT"` 和 `"frequency":"ONCE"`. <br> 設定對象成員停止匯出至目的地的日期。 |
-| `startTime` | 的 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 必要. 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
+| `startTime` | 的 *批次目的地* 僅限。 只有在批次檔案匯出目的地(例如Amazon S3、SFTP或Azure Blob)中將對象新增至資料流時，才需要此欄位。 <br> 強制。 選取包含對象成員的檔案應該產生並匯出至您的目的地的時間。 |
 
 {style="table-layout:auto"}
 

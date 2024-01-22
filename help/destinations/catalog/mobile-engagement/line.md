@@ -4,9 +4,9 @@ title: LINE連線
 description: LINE目的地可讓您新增設定檔至平台對象，並為連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1190'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 | 認證 | 說明 | 範例 |
 | --- | --- | --- |
-| `[!DNL Channel access token (long-lived)]` | 您的 [!DNL LINE Channel access token (long-lived)]。 | `aaa2112XSMWqLXR7..........nyilFU=` |
+| `[!DNL Channel access token (long-lived)]` | 您的 [!DNL LINE Channel access token (long-lived)]. | `aaa2112XSMWqLXR7..........nyilFU=` |
 
 請參閱 [[!DNL LINE] 檔案](https://developers.line.biz/en/docs/messaging-api/getting-started/) ，以取得建立管道或將管道新增至現有管道的指引 [!DNL LINE] 帳戶透過 [!DNL LINE] 開發人員主控台。
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -111,7 +111,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 
 讀取 [將設定檔和受眾啟用至串流受眾匯出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
@@ -120,7 +120,7 @@ ht-degree: 2%
 
 若要正確將對象資料從Adobe Experience Platform傳送至 [!DNL LINE] 目的地，您必須進行欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要正確將XDM欄位對應至 [!DNL LINE] 目的地欄位，請遵循下列步驟：
 
-根據您的來源身分，必須對應以下目標身分名稱空間： |目標身分 |來源欄位 |目標欄位 | | — | — | — | |廣告商ID (IFA) | `IDFA` 或 `GAID` | `LineId` | | LINE使用者ID | `UserID` | `LineId` |
+根據您的來源身分，必須對應以下目標身分名稱空間： | 目標身分 | 來源欄位 | 目標欄位 | | — | — | — | | 廣告商ID (IFA) | `IDFA` 或 `GAID` | `LineId` | | LINE使用者ID | `UserID` | `LineId` |
 
 如果您的目標身分是 *LINE使用者ID* 您將需要下列專案：
 ![Platform UI熒幕擷圖範例，顯示將LINE使用者ID用於目標身分識別時的Target對應。](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

@@ -3,9 +3,9 @@ title: Marketo Measure Ultimate目的地
 description: 瞭解如何將資料連線並啟用至Marketo Measure Ultimate目的地。
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '643'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ Marketo Measure （前身為Bizible）可協助行銷人員深入瞭解哪些行
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下區段列出的欄位。
 
@@ -72,7 +72,7 @@ Marketo Measure （前身為Bizible）可協助行銷人員深入瞭解哪些行
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要啟用資料，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 閱讀 [匯出資料集](/help/destinations/ui/export-datasets.md) 教學課程，以取得將資料集匯出至此目的地的詳細指示。
 

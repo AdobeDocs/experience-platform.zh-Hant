@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '1702'
-ht-degree: 3%
+source-wordcount: '1706'
+ht-degree: 1%
 
 ---
 
@@ -106,17 +106,17 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Profile Management] | [!UICONTROL 管理B2B AI] | 存取以讀取、建立、編輯和刪除所有B2B AI/ML服務的設定和組態。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視B2B設定檔] | 以唯讀方式存取B2B實體設定檔（例如Account、Opportunity等）、所有B2B AI/ML服務的設定和組態，以及B2B儀表板Widget。 |
 | [!DNL Profile Management] | [!UICONTROL 管理B2B設定檔] | 讀取、建立、編輯和刪除B2B實體設定檔（例如Account、Opportunity等）的存取權。 所有B2B AI/ML服務和B2B儀表板Widget之設定和設定的唯讀存取權。 |
-| [!DNL Identity Management] | [!UICONTROL 管理身分識別命名空間] | 讀取、建立、編輯和刪除身分名稱空間的存取權。 |
-| [!DNL Identity Management] | [!UICONTROL 檢視身分命名空間] | 身分識別名稱空間的唯讀存取權。 |
+| [!DNL Identity Management] | [!UICONTROL 管理身分識別名稱空間] | 讀取、建立、編輯和刪除身分名稱空間的存取權。 |
+| [!DNL Identity Management] | [!UICONTROL 檢視身分識別名稱空間] | 身分識別名稱空間的唯讀存取權。 |
 | [!DNL Identity Management] | [!UICONTROL 檢視身分圖表] | 身分圖表的唯讀存取權。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 管理沙箱] | 存取讀取、建立、編輯和刪除沙箱。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 檢視沙箱] | 屬於您組織的沙箱的唯讀存取權。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 重設沙箱] | 重設沙箱的功能。 |
-| [!DNL Destinations] | [!UICONTROL 管理目的地] | 讀取、建立及刪除目的地啟用流程和目的地帳戶的存取權。 |
-| [!DNL Destinations] | [!UICONTROL 檢視目的地] | 以唯讀方式存取中的可用目的地 **[!UICONTROL 目錄]** 中的標籤和已驗證的目的地 **[!UICONTROL 瀏覽]** 標籤。 |
-| [!DNL Destinations] | [!UICONTROL 啟用目的地] | 讓使用者能啟用現有目的地的區段。 在啟動工作流程中啟用對應步驟。 此許可權需要 [!UICONTROL 檢視目的地] 或 [!UICONTROL 管理目的地] 將授與會啟用目的地資料的使用者。 |
-| [!DNL Destinations] | [!UICONTROL 啟用區段而不進行對應] | 讓使用者能啟用現有目的地的區段，而不顯示 [對應步驟](../destinations/ui/activate-batch-profile-destinations.md#mapping). 使用者在啟動工作流程中可以新增和移除區段，但無法新增或移除已對應的屬性或身分。此許可權需要 [!UICONTROL 啟用目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
-| [!DNL Destinations] | [!UICONTROL 管理和啟用資料集目的地] | 可讀取、建立、編輯和停用資料集匯出流程。 還能對已建立的作用中資料集啟用資料。 |
+| [!DNL Destinations] | [!UICONTROL 檢視目的地] | 以唯讀許可權檢視中可用的目的地 **[!UICONTROL 目錄]** 中的標籤和已驗證的目的地 **[!UICONTROL 瀏覽]** 標籤。 |
+| [!DNL Destinations] | [!UICONTROL 管理目的地] | 讀取、建立和刪除目的地連線和目的地帳戶的存取權。 |
+| [!DNL Destinations] | [!UICONTROL 啟用目的地] | 讓使用者能啟用現有目的地的區段。 在啟動工作流程中啟用對應步驟。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
+| [!DNL Destinations] | [!UICONTROL 啟用區段而不進行對應] | 讓使用者能啟用現有目的地的區段，而不顯示 [對應步驟](../destinations/ui/activate-batch-profile-destinations.md#mapping). 使用者可以在啟動工作流程中新增和移除區段，但無法新增或移除對應的屬性或身分。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
+| [!DNL Destinations] | [!UICONTROL 管理和啟用資料集目的地] | 可讀取、建立、編輯和停用資料集匯出流程。 還能對已建立的作用中資料集啟用資料。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
 | [!DNL Destinations] | [!UICONTROL 目的地製作] | 能夠使用編寫目的地 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
 | [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和停用來源的存取權。 |
 | [!DNL Data Ingestion] | [!UICONTROL 檢視來源] | 對中的可用來源具有唯讀存取權 **[!UICONTROL 目錄]** 標籤和已驗證的來源 **[!UICONTROL 瀏覽]** 標籤。 |

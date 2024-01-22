@@ -4,10 +4,10 @@ title: Microsoft Dynamics 365連線
 description: Microsoft Dynamics 365目的地可讓您匯出帳戶資料，並在Microsoft Dynamics 365中根據您的業務需求加以啟用。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2183'
-ht-degree: 2%
+source-wordcount: '2019'
+ht-degree: 1%
 
 ---
 
@@ -86,7 +86,7 @@ ht-degree: 2%
 
 | 目標身分 | 範例 | 說明 | 考量事項 |
 |---|---|---|---|
-| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 連絡人的唯一識別碼。 | **必要**. 請參閱 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) 以取得更多詳細資料。 |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | 連絡人的唯一識別碼。 | **強制**. 請參閱 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) 以取得更多詳細資料。 |
 
 {style="table-layout:auto"}
 
@@ -111,7 +111,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -150,7 +150,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 
 讀取 [將設定檔和受眾啟用至串流受眾匯出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
@@ -169,7 +169,7 @@ ht-degree: 2%
    * **[!UICONTROL 選取身分名稱空間]**：選取此選項，從清單中將來源欄位對應到身分名稱空間。
      ![平台UI熒幕擷圖顯示連絡人的Target對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * 在您的XDM設定檔結構描述與您的 [!DNL Dynamics 365] 例項： |XDM設定檔結構描述|[!DNL Dynamics 365] 執行個體|必要| |—|—|—| |`contactid`|`contactid`|是 |
+   * 在您的XDM設定檔結構描述與您的 [!DNL Dynamics 365] 例項： |XDM設定檔結構描述|[!DNL Dynamics 365] 執行個體| 必填| |—|—|—| |`contactid`|`contactid`| 是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項，將您的來源欄位對應到您在 **[!UICONTROL 屬性名稱]** 欄位。 請參閱 [[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) 以取得支援屬性的完整清單。
      ![顯示電子郵件Target對應的平台UI熒幕擷圖。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)

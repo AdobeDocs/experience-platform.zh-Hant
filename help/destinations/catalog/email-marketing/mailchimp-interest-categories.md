@@ -1,12 +1,12 @@
 ---
-title: Mailchimp 興趣類別
+title: Mailchimp興趣類別
 description: Mailchimp （也稱為Intuit Mailchimp）是一種流行的行銷自動化平台和電子郵件行銷服務，企業使用它來管理與聯絡人（客戶、客戶或其他感興趣的當事方）使用郵寄清單和電子郵件行銷活動。 可使用此連接器根據聯絡人的興趣和偏好將他們排序。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2388'
-ht-degree: 3%
+source-wordcount: '2299'
+ht-degree: 2%
 
 ---
 
@@ -82,7 +82,7 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| 電子郵件 | 連絡人電子郵件地址 | 必要 |
+| 電子郵件 | 連絡人電子郵件地址 | 強制 |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -152,7 +152,7 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 
 讀取 [將設定檔和受眾啟用至串流受眾匯出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
@@ -167,7 +167,7 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 1. 在 **[!UICONTROL 選取來源欄位]** 視窗，選擇 **[!UICONTROL 選取屬性]** 類別並選取XDM屬性或選擇 **[!UICONTROL 選取身分名稱空間]** 並選取身分。
 1. 在 **[!UICONTROL 選取目標欄位]** 視窗，選擇 **[!UICONTROL 選取身分名稱空間]** 並選取身分或選擇 **[!UICONTROL 選取屬性]** 類別並從填入的屬性清單中選取 [!DNL Mailchimp] API。 *您新增至所選專案的任何自訂屬性 [!DNL Mailchimp] 對象也可選擇為目標欄位。*
 
-   XDM設定檔結構描述與之間可用的對應 [!DNL Mailchimp Interest Categories] 如下所示： |來源欄位 |目標欄位 |附註 | | — | — | — | |`IdentityMap: Email`|`Identity: email`|必要：是 | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
+   XDM設定檔結構描述與之間可用的對應 [!DNL Mailchimp Interest Categories] 如下所示： | 來源欄位 | 目標欄位 | 附註 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 必要：是 | |`xdm: person.name.firstName`|`Attribute: FNAME`| | |`xdm: person.name.lastName`|`Attribute: LNAME`| | |`xdm: person.birthDayAndMonth`|`Attribute: BIRTHDAY`| |
 
    此外， `ADDRESS` 是特殊目標欄位，稱為 `merge field` 在您的 [!DNL Mailchimp] 對象。 此 [[!DNL Mailchimp] 檔案](https://mailchimp.com/developer/marketing/docs/merge-fields/) 將所需的索引鍵定義為 `addr1`， `city`， `state`、和 `zip`和選用的索引鍵 `addr2` 和 `country`. 這些欄位的值必須是字串。 如果任何 `ADDRESS` 若有欄位對應，則目的地會傳遞 `ADDRESS` 物件至 [!DNL Mailchimp] 用於更新的API。 任何 `ADDRESS` 未對應的欄位其值預設為 `NULL` 除了國家/地區預設為 `US`.
 

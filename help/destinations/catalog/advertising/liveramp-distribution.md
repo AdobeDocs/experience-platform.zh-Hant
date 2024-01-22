@@ -2,9 +2,9 @@
 title: LiveRamp — 散發連線
 description: 瞭解如何使用LiveRamp - Distribution聯結器來編排及啟用先前上線到LiveRamp的受眾，以及下游廣告目的地。
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2716'
+source-wordcount: '2722'
 ht-degree: 38%
 
 ---
@@ -65,7 +65,7 @@ ht-degree: 38%
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -195,7 +195,7 @@ ht-degree: 38%
 
 * **[!UICONTROL 廣告商資料目的地條款合約]**：輸入 `I AGREE` 確認迪士尼廣告商資料條款的認可與同意。
 * **[!UICONTROL 使用者端名稱]**：輸入您要向目的地合作夥伴顯示的公司名稱。
-* **[!UICONTROL 電子郵件地址]**：輸入繫結至個人的電子郵件地址。 該電子郵件地址做為廣告商資料條款合約的簽名。
+* **[!UICONTROL 電子郵件地址]**：輸入繫結至個人的電子郵件地址。 此電子郵件地址可作為廣告商資料條款合約的簽章。
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -431,7 +431,7 @@ ht-degree: 38%
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 此 [!DNL LiveRamp - Distribution] 連線會啟用已透過上線至您LiveRamp帳戶的對象。 [LiveRamp — 入門](liveramp-onboarding.md) 連線。
 

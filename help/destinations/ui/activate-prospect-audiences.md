@@ -3,9 +3,9 @@ title: 對目的地啟用潛在客戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用潛在客戶對象
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '619'
 ht-degree: 16%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 16%
 
 ### 必要權限 {#permissions}
 
-若要啟用潛在客戶對象，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+若要啟用潛在客戶對象，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 啟用目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 為確保您擁有啟動潛在客戶對象的必要許可權，請瀏覽目的地目錄。 如果目的地有 **[!UICONTROL 啟動]** 控制項，則表示您擁有適當的許可權。
 

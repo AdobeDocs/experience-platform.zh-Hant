@@ -3,9 +3,9 @@ keywords: crm；CRM；CRM目的地；外聯；外聯crm目的地
 title: 外展連線
 description: 外展目的地可讓您匯出帳戶資料，並在外展內根據您的業務需求啟用資料。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1678'
 ht-degree: 2%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 2%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| `OutreachId` | <ul><li>[!DNL Outreach] 識別碼。 這是對應至潛在客戶設定檔的數值。</li><li>ID必須與 [!DNL Outreach] 正在更新的潛在客戶URL。</li><li>請參閱 [[!DNL Outreach] 檔案](https://api.outreach.io/api/v2/docs#update-an-existing-resource) 以取得更多詳細資料。</li></ul> | 必要 |
+| `OutreachId` | <ul><li>[!DNL Outreach] 識別碼。 這是對應至潛在客戶設定檔的數值。</li><li>ID必須與 [!DNL Outreach] 正在更新的潛在客戶URL。</li><li>請參閱 [[!DNL Outreach] 檔案](https://api.outreach.io/api/v2/docs#update-an-existing-resource) 以取得更多詳細資料。</li></ul> | 強制 |
 
 ## 匯出型別和頻率 {#export-type-frequency}
 
@@ -135,7 +135,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 
 讀取 [將設定檔和受眾啟用至串流受眾匯出目標](../../ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
@@ -154,7 +154,7 @@ ht-degree: 2%
    * **[!UICONTROL 選取身分名稱空間]**：選取此選項，從清單中將來源欄位對應到身分名稱空間。
      ![平台UI熒幕擷取畫面顯示使用ExpancationId的Target對應。](../../assets/catalog/crm/outreach/target-mapping.png)
 
-   * 在您的XDM設定檔結構描述與您的 [!DNL Outreach] 例項： |XDM設定檔結構描述|[!DNL Outreach] 執行個體|必要| |—|—|—| |`Oid`|`OutreachId`|是 |
+   * 在您的XDM設定檔結構描述與您的 [!DNL Outreach] 例項： |XDM設定檔結構描述|[!DNL Outreach] 執行個體| 必填| |—|—|—| |`Oid`|`OutreachId`| 是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項，將您的來源欄位對應到您在 [!UICONTROL 屬性名稱] 欄位。 請參閱 [[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect) 以取得支援屬性的完整清單。
      ![平台UI熒幕擷圖顯示使用LastName的Target對應。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)

@@ -5,10 +5,10 @@ title: 使用Adobe Experience Platform中的流量服務API連線到串流目的
 description: 本檔案說明如何使用Adobe Experience Platform API建立串流目的地
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2241'
-ht-degree: 3%
+source-wordcount: '2206'
+ht-degree: 2%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions).
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions).
 >
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions).
+>若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions).
 >
 >閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
@@ -56,12 +56,12 @@ ht-degree: 3%
 若要呼叫Platform API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * 授權：持有人 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{ORG_ID}`
+* x-api-key： `{API_KEY}`
+* x-gw-ims-org-id： `{ORG_ID}`
 
 Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Platform API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -69,7 +69,7 @@ Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Pla
 
 包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
-* Content-Type: `application/json`
+* Content-Type： `application/json`
 
 ### Swagger檔案 {#swagger-docs}
 

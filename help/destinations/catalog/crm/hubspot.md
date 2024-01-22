@@ -3,9 +3,9 @@ title: HubSpot連線
 description: HubSpot目的地可讓您管理HubSpot帳戶中的聯絡人記錄。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1543'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 2%
 >
 > 私人應用程式應獲指派以下範圍：
 > `crm.objects.contacts.write`， `crm.objects.contacts.read`
-> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> `crm.schemas.contacts.write`， `crm.schemas.contacts.read`
 
 | 認證 | 說明 | 範例 |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ ht-degree: 2%
 
 | 目標身分 | 範例 | 說明 | 考量事項 |
 |---|---|---|---|
-| `email` | `test@test.com` | 連絡人的電子郵件地址。 | 必要 |
+| `email` | `test@test.com` | 連絡人的電子郵件地址。 | 強制 |
 
 ## 支援的對象 {#supported-audiences}
 
@@ -99,7 +99,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -133,7 +133,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 讀取 [將設定檔和受眾啟用至串流受眾匯出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
 
@@ -153,7 +153,7 @@ ht-degree: 2%
 1. 在 **[!UICONTROL 選取目標欄位]** 視窗，選擇 **[!UICONTROL 選取屬性]** 並選取 `email`.
    ![Platform UI熒幕擷取畫面，選取電子郵件作為目標屬性以對應為身分。](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
-| 來源欄位 | 目標欄位 | 必要 |
+| 來源欄位 | 目標欄位 | 強制 |
 | --- | --- | --- |
 | `IdentityMap: Email` | `Identity: email` | 是 |
 

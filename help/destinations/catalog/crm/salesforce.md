@@ -3,9 +3,9 @@ keywords: crm；CRM；crm目的地；salesforce crm；salesforce crm目的地
 title: Salesforce CRM連線
 description: Salesforce CRM目的地可讓您匯出帳戶資料，並在Salesforce CRM中根據您的業務需求加以啟用。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2818'
+source-wordcount: '2821'
 ht-degree: 1%
 
 ---
@@ -144,7 +144,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -153,7 +153,7 @@ ht-degree: 1%
 ### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫以下必填欄位並選取 **[!UICONTROL 連線到目的地]**. 請參閱 [彙總 [!DNL Salesforce CRM] 認證](#gather-credentials) 區段以取得任何指引。
-|認證 |說明 | | — | — | | **[!UICONTROL 使用者名稱]** |您的 [!DNL Salesforce] 帳戶使用者名稱。 | | **[!UICONTROL 密碼]** |由下列專案組成的串連字串 [!DNL Salesforce] 帳戶密碼已附加您的 [!DNL Salesforce] 安全性Token。<br>串連值採用以下形式 `{PASSWORD}{TOKEN}`.<br> 請注意，請勿使用任何大括弧或空格。<br>例如，若您的 [!DNL Salesforce] 密碼為 `MyPa$$w0rd123` 和 [!DNL Salesforce] 安全性權杖是 `TOKEN12345....0000`，即您在中使用的串連值 **[!UICONTROL 密碼]** 欄位為 `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL 自訂網域]** |您的 [!DNL Salesforce] 網域前置詞。 <br>例如，如果您的網域為 *`d5i000000isb4eak-dev-ed`.my.salesforce.com*，您必須提供 `d5i000000isb4eak-dev-ed` 做為值。 | | **[!UICONTROL 使用者端ID]** |您的 [!DNL Salesforce] 已連線的應用程式 `Consumer Key`. | | **[!UICONTROL 使用者端密碼]** |您的 [!DNL Salesforce] 已連線的應用程式 `Consumer Secret`. |
+| 認證 | 說明 | | — | — | | **[!UICONTROL 使用者名稱]** | 您的 [!DNL Salesforce] 帳戶使用者名稱。 | | **[!UICONTROL 密碼]** | 串連字串，由您的 [!DNL Salesforce] 帳戶密碼已附加您的 [!DNL Salesforce] 安全性Token。<br>串連值採用以下形式 `{PASSWORD}{TOKEN}`.<br> 請注意，請勿使用任何大括弧或空格。<br>例如，若您的 [!DNL Salesforce] 密碼為 `MyPa$$w0rd123` 和 [!DNL Salesforce] 安全性權杖是 `TOKEN12345....0000`，即您在中使用的串連值 **[!UICONTROL 密碼]** 欄位為 `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL 自訂網域]** | 您的 [!DNL Salesforce] 網域前置詞。 <br>例如，如果您的網域為 *`d5i000000isb4eak-dev-ed`.my.salesforce.com*，您必須提供 `d5i000000isb4eak-dev-ed` 做為值。 | | **[!UICONTROL 使用者端ID]** | 您的 [!DNL Salesforce] 已連線的應用程式 `Consumer Key`. | | **[!UICONTROL 使用者端密碼]** | 您的 [!DNL Salesforce] 已連線的應用程式 `Consumer Secret`. |
 
 ![顯示如何驗證的平台UI熒幕擷圖。](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
@@ -180,7 +180,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 
 讀取 [將設定檔和受眾啟用至串流受眾匯出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
@@ -205,8 +205,8 @@ ht-degree: 1%
 
    * 如果您使用的是 *連絡人* 在區段內，請參閱Salesforce中的「物件參考」，以瞭解 [連絡人](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) 以定義要更新欄位的對應。
    * 您可以透過搜尋字詞來識別必填欄位 *必填*，如上述連結的欄位說明中所述。
-   * 根據您要匯出或更新之欄位，在XDM設定檔結構描述與之間新增對應 [!DNL (API) Salesforce CRM]： |來源欄位|目標欄位|附註 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 連絡人的姓氏，最多80個字元。 |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`|連絡人的名字，最多40個字元。 | |`xdm: personalEmail.address`|`Attribute: Email`|連絡人的電子郵件地址。 |
+   * 根據您要匯出或更新之欄位，在XDM設定檔結構描述與之間新增對應 [!DNL (API) Salesforce CRM]： |來源欄位|目標欄位| 附註 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 連絡人的姓氏，最多80個字元。 |\
+     |`xdm: person.name.firstName`|`Attribute: FirstName`| 連絡人的名字，最多40個字元。 | |`xdm: personalEmail.address`|`Attribute: Email`| 連絡人的電子郵件地址。 |
 
    * 以下顯示使用這些對應的範例：
      ![顯示Target對應的平台UI熒幕擷取畫面範例。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -215,8 +215,8 @@ ht-degree: 1%
 
    * 如果您使用的是 *銷售機會* 在區段內，請參閱Salesforce中的「物件參考」，以瞭解 [銷售機會](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) 以定義要更新欄位的對應。
    * 您可以透過搜尋字詞來識別必填欄位 *必填*，如上述連結的欄位說明中所述。
-   * 根據您要匯出或更新之欄位，在XDM設定檔結構描述與之間新增對應 [!DNL (API) Salesforce CRM]： |來源欄位|目標欄位|附註 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 銷售機會的姓氏，最多80個字元。 |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. 潛在客戶的公司。 | |`xdm: personalEmail.address`|`Attribute: Email`|潛在客戶的電子郵件地址。 |
+   * 根據您要匯出或更新之欄位，在XDM設定檔結構描述與之間新增對應 [!DNL (API) Salesforce CRM]： |來源欄位|目標欄位| 附註 | | — | — | — | |`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`| |`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`. 銷售機會的姓氏，最多80個字元。 |\
+     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`. 潛在客戶的公司。 | |`xdm: personalEmail.address`|`Attribute: Email`| 潛在客戶的電子郵件地址。 |
 
    * 以下顯示使用這些對應的範例：
      ![顯示Target對應的平台UI熒幕擷取畫面範例。](../../assets/catalog/crm/salesforce/mappings-leads.png)

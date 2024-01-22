@@ -2,10 +2,10 @@
 title: Adobe Campaign Managed Cloud Services連線
 description: Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1582'
-ht-degree: 4%
+source-wordcount: '1550'
+ht-degree: 1%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 4%
 Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 使用 Campaign 可以：
-* 透過單一可存取的客戶檢視，推動個人化和參與,
-* 將電子郵件、行動裝置、線上和線下頻道整合至客戶歷程,
-* 自動化有意義且即時的訊息和優惠方案傳遞.
+* 透過單一可存取的客戶檢視，推動個人化和參與。
+* 將電子郵件、行動裝置、線上和線下頻道整合至客戶歷程，
+* 自動化傳送有意義的即時訊息和優惠方案。
 
 >[!IMPORTANT]
 >
@@ -84,7 +84,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -119,10 +119,10 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 
-讀取 [啟用對象資料至批次設定檔匯出目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant) 以取得啟用此目的地的對象資料的相關指示。
+讀取 [啟用對象資料至批次設定檔匯出目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) 以取得啟用此目的地的對象資料的相關指示。
 
 ### 對應屬性和身分 {#map}
 

@@ -3,9 +3,9 @@ title: SalesforceMarketing Cloud帳戶參與度
 description: 瞭解如何使用SalesforceMarketing Cloud帳戶參與（前身為Pardot）目的地匯出您的帳戶資料，並在SalesforceMarketing Cloud帳戶參與中根據您的業務需求將其啟用。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1532'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| 電子郵件 | 潛在客戶電子郵件地址 | 必要 |
+| 電子郵件 | 潛在客戶電子郵件地址 | 強制 |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 
 >[!IMPORTANT]
 >
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
@@ -137,7 +137,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 >* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
 
 讀取 [將設定檔和受眾啟用至串流受眾匯出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
@@ -152,7 +152,7 @@ A [!DNL Marketing Cloud Account Engagement] 訂閱的帳戶 [Marketing Cloud帳�
 1. 在 **[!UICONTROL 選取來源欄位]** 視窗，選擇 **[!UICONTROL 選取屬性]** 類別並選取XDM屬性或選擇 **[!UICONTROL 選取身分名稱空間]** 並選取身分。
 1. 在 **[!UICONTROL 選取目標欄位]** 視窗，選擇 **[!UICONTROL 選取身分名稱空間]** 並選取身分或選擇 **[!UICONTROL 選取自訂屬性]** 類別並從清單中指定 [[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields) 從可用的結構描述中。
 
-   * 重複這些步驟，在您的XDM設定檔結構描述之間新增任何對應，並 [!DNL Marketing Cloud Account Engagement]： |來源欄位 |目標欄位 |強制 | | — | — | — | |`IdentityMap: Email`|`Identity: email`|是 | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
+   * 重複這些步驟，在您的XDM設定檔結構描述之間新增任何對應，並 [!DNL Marketing Cloud Account Engagement]： | 來源欄位 | 目標欄位 | 強制 | | — | — | — | |`IdentityMap: Email`|`Identity: email`| 是 | |`xdm: MailingAddress.city`|`xdm: city`| | |`xdm: person.name.firstName`|`Attribute: firstName`| |
 
    * 具有上述對應的範例如下所示：
      ![顯示Target對應的平台UI熒幕擷取畫面範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

@@ -5,9 +5,9 @@ description: 瞭解如何對目的地啟用帳戶對象
 badgeLimitedAvailability: label="可用性限制" type="Caution"
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ### 必要權限 {#permissions}
 
-若要啟用帳戶對象，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+若要啟用帳戶對象，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 啟用目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 為確保您擁有啟動帳戶對象的必要許可權，請瀏覽目的地目錄。 如果目的地有 **[!UICONTROL 啟動]** 控制項，則表示您擁有適當的許可權。
 

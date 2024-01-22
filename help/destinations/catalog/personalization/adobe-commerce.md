@@ -2,10 +2,10 @@
 title: Adobe Commerce目的地聯結器
 description: 瞭解Adobe Commerce和Real-Time CDP商家如何提供高度相關的網站內容和促銷活動，並根據Real-Time CDP中建立和管理之客戶對象進行自訂，進而個人化購物體驗。
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: ddc4e877b3ae2f8b235faec1c29e71d389195e02
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 4%
+source-wordcount: '696'
+ht-degree: 3%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 4%
 
 在Experience Platform中，建立下列專案：
 
-- [方案](../../../xdm/schema/composition.md). 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [瞭解更多](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) 有關如何建立包含Commerce特定欄位群組的結構描述。
+- [結構描述](../../../xdm/schema/composition.md). 您建立的結構描述代表您計畫從Adobe Commerce擷取的資料。 [瞭解更多](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) 有關如何建立包含Commerce特定欄位群組的結構描述。
 - [資料集](../../../catalog/datasets/user-guide.md#create). 資料集是資料集合的儲存和管理結構。 您會使用先前建立的結構描述建立此資料集。
 - [資料流](../../../datastreams/overview.md#create). 可讓資料從Adobe Experience Platform流向其他AdobeDX產品的ID。 此ID必須與您特定Adobe Commerce執行個體中的特定網站相關聯。 當您建立此資料流時，請指定您在上面建立的XDM結構描述。
 
@@ -37,7 +37,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 若要連線至 [!DNL Adobe Commerce] 目的地：
 
@@ -65,7 +65,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 管理目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 讀取 [啟用設定檔和對象以設定檔請求目的地](../../ui/activate-edge-personalization-destinations.md) 以取得啟用對象至 [!DNL Commerce] 目的地。
 
