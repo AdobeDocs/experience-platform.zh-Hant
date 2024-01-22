@@ -4,9 +4,9 @@ description: pinterest即將淘汰Real-Time CDP中Pinterest目的地目前使用
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 3968c8e2a0ebd2084a7047fb41e2b85c5da7a6e7
+source-git-commit: e3341ec6f62844858ecda7dd4db70d085f0bf217
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '531'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ pinterest已將 [pinterest目的地](/help/destinations/catalog/advertising/pint
 
 ## 有什麼計畫？
 
-Adobe即將發行新的Pinterest目的地卡，此卡會利用Pinterest API v5，並將您現有的資料流保留在新連線中。
+Adobe已發行新的Pinterest目的地卡，此卡會利用Pinterest API v5，並將您現有的資料流保留在新連線中。
 
 ## 我是否需要做任何事來維持我啟用的對象正常運作？
 
@@ -45,7 +45,7 @@ Adobe即將發行新的Pinterest目的地卡，此卡會利用Pinterest API v5�
 
 ### 啟用流向新目的地 {#disable-old-enable-new-flows}
 
-然後，您需要啟用新卡片的資料流 **[!UICONTROL （新） Pinterest]**.
+然後，您需要啟用新的資料流  **[!UICONTROL pinterest]** 卡片。
 
 1. 前往 **[!UICONTROL 目的地>瀏覽]** 並使用熒幕上的篩選器來篩選 **[!UICONTROL pinterest]** 僅限目的地。
    ![僅在「瀏覽」索引標籤中篩選Pinterest資料流程](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
@@ -66,14 +66,18 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 ![新舊的Pinterest目的地並排](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
+<!--
+
 >[!IMPORTANT]
 >
->在2023年11月16日之後，系統會標籤舊版Pinterest目的地 **[!UICONTROL 棄用]**. <span class="preview">您在11月16日之後對（淘汰） Pinterest目的地的資料流所做的任何變更都將 *非* 會自動轉至新的Pinterest目的地。 </span>
->例如，我們 *不推薦* 您在11月16日之後對舊目的地啟用新對象。 若您這麼做，您將必須遵循 [一般啟動步驟](/help/destinations/ui/activate-segment-streaming-destinations.md) 在採取客戶動作後，將對象新增至新目的地。
+>After November 16th, 2023 the legacy Pinterest destination is marked **[!UICONTROL Deprecating]**. <span class="preview">Any changes that you make to dataflows to the (Deprecating) Pinterest destination after November 16th will *not* be automatically carried over to the new Pinterest destination. </span>
+>For example, we *do not recommend* that you activate new audiences to the old destination after November 16th. If you do that, you will then have to follow the [regular activation steps](/help/destinations/ui/activate-segment-streaming-destinations.md) to add the audience to the new destination once the customer actions are taken.
+
+-->
 
 **最遲於2023年12月15日**： <span class="preview">客戶動作1</span>. 您需要重新向Pinterest進行驗證，以便新卡片連線到Pinterest。 在中檢視完整指示 [本節](#reauthenticate).
 
-<span class="preview">客戶動作2</span>然後，您需要停用舊卡片中Pinterest的資料流，並啟用新卡片中的資料流。 在中檢視完整指示 [本節](#disable-old-enable-new-flows).
+<span class="preview">客戶動作2</span>然後，您必須啟用新卡片中的資料流。 在中檢視完整指示 [本節](#disable-old-enable-new-flows).
 
 <!--
 
@@ -83,8 +87,12 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-**2024年1月18日之後**： <span class="preview">pinterest已關閉V4廣告商API的存取權。 任何尚未升級至新目的地的Real-Time CDP客戶現在都會發現他們的資料流無法升級至Pinterest目的地。 [向Pinterest重新驗證](#reauthenticate) 和 [啟用資料流](#disable-old-enable-new-flows) 到升級目的地，繼續將行銷活動至Pinterest</span>.
+**2024年1月18日之後**： <span class="preview">pinterest已關閉V4廣告商API的存取權。 任何尚未升級至新目的地的Real-Time CDP客戶現在都會發現他們的資料流無法升級至Pinterest目的地。 [向Pinterest重新驗證](#reauthenticate) 和 [啟用資料流](#disable-old-enable-new-flows) 升級至目的地，繼續將行銷活動至Pinterest。</span>
 
-## 其他要注意的專案
+<!--
 
-在新目的地卡片上啟用資料流並停用舊目的地卡片上的資料流後，您應該不會看到行銷活動或來自Adobe Real-Time CDP的受眾中合格設定檔數的中斷。
+## Other items to note
+
+After you enable the dataflows on the new destination card and disable the dataflows on the old destination cards, you should see no disruption in your campaigns or in the numbers of qualified profiles in the audiences coming in from Adobe Real-Time CDP.
+
+-->
