@@ -5,7 +5,7 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
 source-wordcount: '1859'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
@@ -69,12 +69,12 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="移除一個物件"
->abstract="若要從封裝中移除物件，請選取要移除的列，然後使用在選取時可供使用的刪除選項。 請注意，您無法從已發佈的封裝中移除物件。"
+>abstract="若要從套件中刪除物件，請選取要刪除的行，然後使用刪除選項 (選取時可用)。請注意，您無法從已發佈的套件中刪除物件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="套件有效期設定"
->abstract="封裝會設定為在草稿狀態中閒置一段時間後到期。 預設日期是從今天起的90天。 該日期會持續變更，直到該套件發佈為止。如果您在明天造訪處於草稿狀態的套件，則日期會往前移動+1天，除非您手動進行此設定。"
+>abstract="套件在草稿狀態一段時間不活動後將過期。預設日期設定為從今天起 90 天。該日期會持續變更，直到該套件發佈為止。如果您明天造訪草稿狀態的套件，則日期會移動 +1 天 (除非您以手動設定)。"
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
