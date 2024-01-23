@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Media Edge API
 description: Media Edge API概述
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
+source-git-commit: b247790a155c04301215b03dad2f2765a1afd8fe
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 3%
@@ -33,7 +33,7 @@ Media Edge API建立在Adobe Experience Platform上，可在的架構中提供�
 
 下表顯示適用於各種Media Analytics案例的可能Adobe API服務：
 
-| 使用案例 | API服務 |
+| 使用實例 | API服務 |
 | -------- | ----------- |
 | Adobe Experience Platform解決方案 | 媒體邊緣 |
 | Real-Time CDP +Customer Journey Analytics | 媒體邊緣 |
@@ -42,7 +42,7 @@ Media Edge API建立在Adobe Experience Platform上，可在的架構中提供�
 
 >[!NOTE]
 >
-> Analytics的Media Collection API服務仍會接收XDM資料，但並未針對Media Edge服務進行最佳化。 視從Media Player傳送的資料而定，某些僅限Analytics的資料也可以透過Media Edge API服務路由。
+> 適用於Analytics的Media Collection API服務仍會接收XDM資料，但並未針對Media Edge服務進行最佳化。 視從Media Player傳送的資料而定，某些僅限Analytics的資料也可以透過Media Edge API服務路由。
 
 下圖顯示兩個API服務的資料流程：
 
