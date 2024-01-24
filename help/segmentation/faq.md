@@ -2,10 +2,10 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '2714'
-ht-degree: 0%
+source-wordcount: '2739'
+ht-degree: 1%
 
 ---
 
@@ -108,6 +108,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 | 發佈日期 | 中的對象 **已發佈** 狀態是已準備好用於所有下游服務的對象。 | 是 | 是 | 是 | 可以匯入或更新。 | 使用批次、串流或邊緣細分評估。 | 是 |
 | 非使用中 | 中的對象 **非使用中** state為目前未使用的對象。 它仍存在於Platform中，但會 **非** 在標籤為草稿或發佈前都可使用。 | 否，但可以顯示。 | 無 | 無 | 不再更新。 | Platform不再評估或更新。 | 是 |
 | 已刪除 | 中的對象 **已刪除** state是已刪除的對象。 實際刪除資料最多可能需要幾分鐘的時間才能執行。 | 無 | 無 | 無 | 基礎資料已刪除。 | 刪除完成後，不會進行資料評估或執行。 | 無 |
+| 作用中 | 此狀態已 **已棄用** 和已由 **已發佈** 狀態。 | 不適用 | 不適用 | 不適用 | 不適用 | 不適用 | 不適用 |
 
 ### 對象入口網站和對象構成將如何與Real-Time CDP合作夥伴資料的發行互動？
 

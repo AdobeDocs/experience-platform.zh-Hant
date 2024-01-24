@@ -2,10 +2,10 @@
 title: 計算屬性UI指南
 description: 瞭解如何使用Adobe Experience Platform UI建立、檢視和更新計算屬性。
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 8%
+source-wordcount: '1576'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 8%
 本UI指南需要瞭解各種 [!DNL Experience Platform] 與管理相關的服務 [!DNL Real-Time Customer Profiles]. 在閱讀本指南或使用UI之前，請檢視以下服務的檔案：
 
 - [[!DNL Real-Time Customer Profile]](../home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] 據以組織客戶體驗資料的標準化框架。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
 
 ## 檢視計算屬性 {#view}
 
@@ -38,7 +38,7 @@ ht-degree: 8%
 | ----- | ----------- |
 | [!UICONTROL 名稱] | 計算屬性的顯示名稱。 |
 | [!UICONTROL 說明] | 計算屬性的說明。 |
-| [!UICONTROL 評估方式] | 計算屬性的評估方法。 目前僅限 **批次** 支援。 |
+| [!UICONTROL 評估方法] | 計算屬性的評估方法。 目前僅限 **批次** 支援。 |
 | [!UICONTROL 上次評估時間] | 此時間戳記代表上次成功的評估執行。 僅限發生的事件 **早於** 此時間戳記會納入上次成功評估中。 |
 | [!UICONTROL 上次評估狀態] | 說明在上次評估執行中是否成功計算運算屬性的狀態。 可能的值包括 **[!UICONTROL 成功]** 或 **[!UICONTROL 已失敗]**. |
 | [!UICONTROL 重新整理頻率] | 表示計算屬性的重新整理頻率。 可能的值包括每小時、每日、每週或每月。 |
@@ -112,7 +112,7 @@ ht-degree: 8%
 
 ![此 [!UICONTROL 快速重新整理] 核取方塊會醒目提示。](./images/ui/enable-fast-refresh.png)
 
-快速重新整理可讓您的屬性保持為最新狀態。啟用此選項可讓您每天重新整理計算屬性，即使回顧期較長，也能讓您快速對使用者活動做出反應。
+快速重新整理可讓您的屬性保持為最新狀態。啟用此選項可讓您每天重新整理計算屬性，甚至更長的回顧期間，讓您快速回應使用者活動。
 
 如需快速重新整理的詳細資訊，請參閱 [快速重新整理區段](./overview.md#fast-refresh) 「 」的「計算屬性概觀」。
 
@@ -155,6 +155,10 @@ ht-degree: 8%
 >例如，如果您建立的區段定義正在尋找「所有具有有效電子郵件地址的設定檔」，其中電子郵件位址列位是由具有最新函式的計算屬性填入，則 **必須** 同時包含電子郵件地址的值 **和** 電子郵件地址的時間戳記已存在。
 
 建立計算屬性後，您可以使用 **已發佈** 計算其他下游服務中的屬性。 由於計算屬性是在您的設定檔聯合結構描述中建立的設定檔屬性欄位，因此您可以查詢即時客戶設定檔的計算屬性值、在對象中使用它們、在目的地啟用它們，或在Adobe Journey Optimizer的歷程中使用它們進行個人化。
+
+>[!NOTE]
+>
+>計算的屬性 **無法** 用於對象中 **組合**.
 
 ![隨即顯示「區段產生器」，其中顯示計算屬性作為區段定義構成的一部分。](./images/ui/use-ca.png)
 

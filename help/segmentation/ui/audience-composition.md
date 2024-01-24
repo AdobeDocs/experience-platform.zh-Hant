@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -115,6 +115,10 @@ ht-degree: 0%
 設定檔屬性清單隨即顯示。 選取要排除的屬性型別，然後按一下 **[!UICONTROL 選取]** 以將它們新增至您的排除區塊。
 
 ![隨即顯示屬性清單。](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>依屬性排除時，您只能指定 **一** 要排除的值。 使用逗號或分號之類的任何分隔符號，都只會排除該確切值。 例如，將值設為 `red, blue` 將導致排除該詞語 `red, blue` 從屬性，但將 **非** 結果會排除任一字詞 `red` 或 `blue`.
 
 ## [!UICONTROL 擴充] {#enrich-block}
 
