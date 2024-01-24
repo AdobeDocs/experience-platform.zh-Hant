@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform首頁和控制面板
 description: Adobe Experience Platform 的儀表板、首頁和首次使用者體驗
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 1%
+source-wordcount: '850'
+ht-degree: 2%
 
 ---
 
@@ -32,7 +32,13 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 ![Platform UI首頁會顯示快速入門Widget](assets/platform-home/getting-started-widget.png)
 
-## 量度控制面板
+## 量度控制面板 {#metrics-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_home_metrics_totalProfiles"
+>title="設定檔總數"
+>abstract="貴組織在Experience Platform內擁有的設定檔總數。 此計數是根據您組織的合併原則，不包括設定檔片段。 設定檔的數量每24小時更新一次。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="如需了解詳細資訊，請參閱文件"
 
 量度控制面板會顯示Experience Platform資料的最新資訊。 儀表板分為兩個區段：
 
@@ -44,7 +50,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 * **結構描述總數**：此 **結構描述總數** 計數器顯示系統中的結構描述數目。 建立結構描述時會更新此計數器。 如需詳細資訊，請閱讀 [結構概觀](../xdm/home.md).
 * **資料集總數**：此 **資料集總數** 計數器顯示系統中的資料集數量和資料量 [!DNL Platform]. 建立資料集時會更新此計數器。 如需資料集的詳細資訊，請參閱 [資料集總覽](../catalog/datasets/overview.md).
-* **設定檔總數**：此 **設定檔** count顯示擁有設定檔的總人數 [!DNL Real-Time Customer Profile]. 其中不包含設定檔片段。 這是您的總計可定址對象。 此計數使用預設值 [合併原則](profile/merge-policies.md) 在統一設定檔的合併原則設定中設定。 設定檔的數量每24小時更新一次。 如需設定檔的詳細資訊，請參閱 [即時客戶個人檔案總覽](../profile/home.md).
+* **設定檔總數**：此 **設定檔** count顯示貴組織在Experience Platform中的設定檔總數。 其中不包含設定檔片段。 這是您的總計可定址對象。 此計數使用預設值 [合併原則](profile/merge-policies.md) 在即時客戶個人檔案的合併原則設定中設定。 設定檔的數量每24小時更新一次。 如需設定檔的詳細資訊，請參閱 [即時客戶個人檔案總覽](../profile/home.md).
 * **區段總數**： **區段** 顯示為組織建立的區段總數。 此數字會在建立新區段時更新。 如需區段的詳細資訊，請參閱 [Segmentation Service概述](../segmentation/home.md).
 
 ### 最近專案
