@@ -6,10 +6,10 @@ title: Customer AI錯誤疑難排解
 description: 尋找Customer AI中常見錯誤的答案。
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: d88f9691f7a2affc7737e1adab75fc441e3f7e4f
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 0%
+source-wordcount: '1709'
+ht-degree: 1%
 
 ---
 
@@ -56,3 +56,21 @@ ht-degree: 0%
 如果限制適用人口無效或無法進行，請變更您的預測期間。
 
 - 請嘗試將預測時段變更為7天，並檢視錯誤是否持續發生。 如果錯誤不再發生，表示您可能沒有足夠的資料可供定義的預測時段使用。
+
+### 錯誤
+
+| 錯誤代碼 | 標題 | 訊息範本 | 訊息範例 |
+| ---------- | ----- | ---------------- | --------------- |
+| 400 | 目標不足 | 使用者太少({{actual_num_samples}} in total) meeting the prediction goal definition from {{outcome_window_start}} to {{outcome_window_end}}. We require at least {{min_num_samples}} 具有合格事件以建立模型的使用者。 <br><br>建議的解決方案： <br><br>1. 檢查資料可用性 <br>2. 減少預測目標時間範圍 <br>3. 修改預測目標定義以包含更多使用者（錯誤碼：VALIDATION-400 NOT_ENOUGH_OBJECTIVE） | 符合2020-04-01到2021-04-01預測目標定義的使用者太少（總共200名）。 我們至少需要500名具有合格活動的使用者來建立模型。 <br><br>建議的解決方案： <br>1. 檢查資料可用性 <br>2. 減少預測目標時間範圍 <br>3. 修改預測目標定義以包含更多使用者。 （錯誤碼：VALIDATION-400 NOT_ENOUGH_OBJECTIVE） |
+| 401 | 人口不足 | 符合資格的使用者太少({{actual_num_samples}} in total) from {{eligibility_window_start}} to {{eligibility_window_end}}. We require at least {{min_num_samples}} 符合建立模型的使用者。 <br><br>建議的解決方案： <br>1. 檢查資料可用性 <br>2. 如果提供合格的母體定義，請縮短合格篩選時間範圍3。 如果未提供合格的母體定義，請嘗試新增一個（錯誤代碼：VALIDATION-401 NOT_ENOUGH_POPULATION） | 從2020-04-01到2021-04-01的合格使用者太少（總共200個）。 我們至少需要500名符合資格的使用者才能建立模型。<br><br>建議的解決方案：<br>1. 檢查資料可用性<br>2. 如果提供合格的母體定義，請縮短合格篩選的時間範圍。<br>3.如果未提供合格的母體定義，請嘗試新增一個。 （錯誤碼：VALIDATION-401 NOT_ENOUGH_POPULATION） |
+| 402 | 模型錯誤 | 我們無法使用目前的輸入資料集和設定產生高品質的模型。 <br><br>建議包括： <br>1. 修改您的設定以新增合格的母體定義。 <br>2. 使用其他資料來源來改善模型品質 <br>3. 新增自訂事件，在模型中加入更多資料（錯誤碼：VALIDATION-402 BAD_MODEL） | 我們無法使用目前的輸入資料集和設定產生高品質的模型。 <br><br>建議包括： <br>1. 請考慮修改您的設定以新增合格的母體定義。 <br>2. 請考慮使用其他資料來源來改善模型品質。 （錯誤碼：VALIDATION-402 BAD_MODEL） |
+| 403 | 不符合資格的分數 | 此分數分佈與預期有太多差異。 <br><br>建議包括： <br>1. 請確認模型已使用最新資料進行訓練，否則請考慮重新訓練您的模型。 <br>2. 請確定評分任務中沒有資料問題（例如遺失資料/資料延遲）。 （錯誤碼：VALIDATION-403 INELIGIBLE_SCORES） | 此分數分佈與預期有太多差異。 <br><br>建議包括： <br>1. 請確認模型已使用最新資料進行訓練，否則請考慮重新訓練您的模型。 <br>2. 請確定評分任務中沒有資料問題（例如遺失資料/資料延遲）。 （錯誤碼：VALIDATION-403 INELIGIBLE_SCORES） |
+| 405 | 無評分資料 | 沒有可用於評分的使用者行為或設定檔資料 {{eligibility_window_start}} to {{eligibility_window_end}}請檢查資料，以確保定期更新。 （錯誤碼：VALIDATION-405 NO_SCORING_DATA） | 從2020-04-01到2021-04-01沒有可用於評分的使用者行為或設定檔資料。 請檢查資料，以確保定期更新。 （錯誤碼：VALIDATION-405 NO_SCORING_DATA） |
+| 407 | 歷史事件資料不足 | 沒有足夠的資料可建置模型。 從2020-04-01到2021-04-01，只有90天的資料。 <br><br>我們需要120天的最新資料。 如需詳細資訊，請參閱資料需求檔案。 <br><br>建議的解決方案： <br>1. 檢查資料可用性 <br>2. 減少預測目標時間範圍 <br>3. 如果提供合格的母體定義，請縮短合格篩選的時間範圍 <br>4. 如果未提供合格的母體定義，請嘗試新增一個（錯誤代碼：VALIDATION-407 NOT_ENOUGH_HISTORICAL_EVENT_DATA） | 沒有足夠的資料可建置模型。 從2020-04-01到2021-04-01，只有90天的資料。<br><br>我們需要120天的最新資料。 如需詳細資訊，請參閱資料需求檔案。<br><br>建議的解決方案：<br>1. 檢查資料可用性。<br>2. 縮短預測目標時間範圍。<br>3.如果提供合格的母體定義，請縮短合格篩選的時間範圍。<br>4.如果未提供合格的母體定義，請嘗試新增一個。 （錯誤碼：VALIDATION-407 NOT_ENOUGH_HISTORICAL_EVENT_DATA） |
+| 408 | 沒有符合資格的最近資料 | 中沒有符合資格的使用者的使用者行為資料。 {{data_days}} days prior to {{etl_window_end}}. 請檢查資料集，確保會定期更新。 （錯誤碼：VALIDATION-408 NO_RECENT_DATA_FOR_ELIGIBLE_POPULATION） | 2021-04-01之前60天內沒有符合資格的使用者的使用者行為資料。 請檢查資料集，確保會定期更新。 （錯誤碼：VALIDATION-408 NO_RECENT_DATA_FOR_ELIGIBLE_POPULATION） |
+| 409 | 無目標 | 沒有符合來自的預測目標定義的使用者 {{outcome_window_start}} to {{outcome_window_end}}. We require at least {{min_num_samples}} 具有合格事件以建立模型的使用者。 <br><br>建議的解決方案： <br>1. 檢查資料可用性 <br>2. 修改預測目標定義（錯誤碼：VALIDATION-409 NO_OBJECTIVE） | 2020-04-01到2021-04-01期間沒有符合預測目標定義的使用者。 我們至少需要500名具有合格活動的使用者來建立模型。 <br><br>建議的解決方案：<br>1. 檢查資料可用性。<br>2. 修改預測目標定義。 （錯誤碼：VALIDATION-409 NO_OBJECTIVE） |
+| 410 | 無母體 | 沒有符合資格的使用者來自 {{eligibility_window_start}} to {{eligibility_window_end}}. We require at least {{min_num_samples}} 符合建立模型的使用者。 <br><br>建議的解決方案： <br>1. 檢查資料可用性 <br>2. 若提供合格的母體定義，請修改條件或增加合格篩選的時間範圍（錯誤代碼：VALIDATION-410 NO_POPULATION） | 2020-04-01到2021-04-01沒有符合資格的使用者。 我們至少需要500名符合資格的使用者才能建立模型。 <br><br>建議的解決方案：<br>1. 檢查資料可用性。 <br> 2. 如果提供合格母體定義，請修改條件或增加合格篩選的時間範圍。 （錯誤碼：VALIDATION-410 NO_POPULATION） |
+| 411 | ETL之後沒有輸入資料 | 模型沒有可供之間使用的使用者行為或設定檔資料 {{etl_start_date}} and {{etl_end_date}}. 請確定資料集有足夠的資料。 （錯誤碼：VALIDATION-411 NO_INPUT_DATA_AFTER_ETL） | 在2020-04-01和2021-04-01之間沒有可供模型使用的使用者行為或設定檔資料。 請確定資料集有足夠的資料。 （錯誤碼：VALIDATION-411 NO_INPUT_DATA_AFTER_ETL） |
+| 412 | ETL之後沒有事件 | 模型沒有可供之間使用的使用者行為資料 {{etl_start_date}} and {{etl_end_date}}. 請確定資料集有足夠的資料。 | 在2020-04-01和2021-04-01之間沒有模型可用的使用者行為資料。 請確定資料集有足夠的資料。 （錯誤碼：VALIDATION-412 NO_EVENT_DATA_AFTER_ETL） |
+| 413 | 目標中的單一值 | CustomerAI要求資料集必須同時具有符合及不符合預測目標定義的事件。 輸入資料集只包含符合以下條件的事件： {{etl_window_start}} and {{etl_window_end}}. <br><br>建議的解決方案： <br>1. 修改預測目標定義 <br>2. 驗證資料完整性，或使用包含預測目標之不合格事件範例的其他專案（錯誤代碼：VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE） | CustomerAI要求資料集必須同時具有符合及不符合預測目標定義的事件。 輸入資料集只包含介於2020-04-01和2021-04-01之間的合格事件。<br><br>建議的解決方案：<br>1. 修改預測目標定義。<br>2. 驗證資料完整度或使用包含預測目標之不合格事件範例的不同專案。 （錯誤碼：VALIDATION-413 SINGLE_VALUE_IN_OBJECTIVE） |
+| 414 | 無影響因素 | 影響因子模型產生非預期的輸出。 建議您使用修改後的設定來建立新的應用程式。 （錯誤碼：VALIDATION-414 NO_INFLUENCE_FACTORS） | 影響因子模型產生非預期的輸出。 建議您使用修改後的設定來建立新的應用程式。 （錯誤碼：VALIDATION-414 NO_INFLUENCE_FACTORS） |
