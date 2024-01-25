@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
 workflow-type: tm+mt
-source-wordcount: '3352'
+source-wordcount: '3426'
 ht-degree: 7%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 7%
 | eVar2 | 頁面名稱 | 會員忠誠度ID |
 | eVar3 | URL | 頁面名稱 |
 | eVar4 | 搜尋字詞 | 產品名稱 |
-| event1 | 點擊次數 | 頁面檢視 |
+| event1 | 點擊數 | 頁面檢視 |
 | event2 | 頁面檢視 | 購物車新增 |
 | event3 | 購物車新增 | 結帳 |
 | event4 | 購買 | 購買 |
@@ -265,7 +265,11 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->對象預估值會透過使用當天的樣本資料的樣本大小產生。如果您的設定檔存放區中的實體少於100萬個，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2000萬個以上的實體，則會使用全部實體的5%。 如需為區段定義產生預估的相關資訊，請參閱 [預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段定義建立教學課程的內容。
+>使用當天樣本資料的樣本大小會產生對象預估。 如果您的設定檔存放區中的實體少於100萬個，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2000萬個以上的實體，則會使用全部實體的5%。
+>
+>此外，此估計值是根據上次執行設定檔範例工作的時間。 這表示如果您使用相對日期函式，例如&quot;Today&quot;或&quot;This week&quot;，估計將會根據最後一個設定檔範例工作執行時間進行計算。 例如，如果今天是1月24日，而最後一個設定檔範例工作是在1月22日執行，則「昨天」相對日期函式將以1月21日為基礎，而不是1月23日。
+>
+>如需為區段定義產生預估的相關資訊，請參閱 [預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 區段定義建立教學課程的內容。
 
 您也可以選取評估方法。 如果您知道要使用的評估方法，可以使用下拉式清單選取所需的評估方法。 如果您想瞭解此區段定義符合哪些評估型別，可以選取瀏覽圖示 ![放大鏡的資料夾圖示](../images/ui/segment-builder/segment-evaluation-select-icon.png) 檢視可用區段定義評估方法的清單。
 
