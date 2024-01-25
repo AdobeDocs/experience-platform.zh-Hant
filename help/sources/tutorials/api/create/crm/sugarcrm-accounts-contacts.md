@@ -2,10 +2,10 @@
 title: 使用Flow Service API為SugarCRM帳戶和聯絡人建立來源連線和資料流
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至SugarCRM帳戶和聯絡人。
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
 workflow-type: tm+mt
-source-wordcount: '2160'
-ht-degree: 2%
+source-wordcount: '2104'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 ## 快速入門
 
-本指南需要您深入了解下列 Experience Platform 元件：
+本指南需要您實際瞭解下列Experience Platform元件：
 
 * [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
 * [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
@@ -350,6 +350,8 @@ curl -X GET \
 ```
 
 >[!TAB 連絡人]
+
+成功的回應會傳回結構，如下所示。
 
 ```json
 {

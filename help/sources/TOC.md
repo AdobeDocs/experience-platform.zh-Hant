@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
+source-git-commit: 4d9c04909cba29b0c6685c357dbb84af9fa14b47
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1007'
 ht-degree: 10%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 10%
       - [HubSpot聯結器](connectors/marketing-automation/hubspot.md)
       - [Mailchimp聯結器](connectors/marketing-automation/mailchimp.md)
       - [oracleEloqua聯結器](connectors/marketing-automation/oracle-eloqua.md)
+      - [oracleNetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [oracleResponsys聯結器](connectors/marketing-automation/oracle-responsys.md)
       - [SalesforceMarketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 付款 {#payments}
@@ -183,6 +184,8 @@ ht-degree: 10%
          - [MailChimp行銷活動](tutorials/api/create/marketing-automation/mailchimp-campaign.md)
          - [MailChimp成員](tutorials/api/create/marketing-automation/mailchimp-members.md)
          - [oracleEloqua](tutorials/api/create/marketing-automation/oracle-eloqua.md)
+         - [oracleNetSuite活動](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
+         - [oracleNetSuite實體](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [oracleResponsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
@@ -306,6 +309,8 @@ ht-degree: 10%
          - [Mailchimp行銷活動](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
          - [Mailchimp會員](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [oracleEloqua](tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+         - [oracleNetSuite活動](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
+         - [oracleNetSuite實體](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [oracleResponsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
