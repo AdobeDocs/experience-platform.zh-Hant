@@ -2,10 +2,10 @@
 title: 工單API端點
 description: 資料衛生API中的/workorder端點可讓您以程式設計方式管理身分的刪除任務。
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1283'
-ht-degree: 2%
+source-wordcount: '1281'
+ht-degree: 1%
 
 ---
 
@@ -87,9 +87,9 @@ curl -X POST \
 | `datasetId` | 如果您要從單一資料集中刪除，此值必須是相關資料集的ID。 如果您要從所有資料集中刪除，請將值設為 `ALL`.<br><br>如果您指定單一資料集，該資料集的相關聯Experience Data Model (XDM)結構描述必須定義主要身分。 如果資料集沒有主要身分，則必須有身分對應，資料生命週期請求才能修改資料集。<br>如果身分對應存在，則會顯示為名為的頂層欄位 `identityMap`.<br>請注意，資料集列的身分對應中可能有許多身分，但只能將一個標示為主要身分。 `"primary": true` 必須包含以強制 `id` 以比對主要身分。 |
 | `displayName` | 記錄刪除請求的顯示名稱。 |
 | `description` | 記錄刪除請求的說明。 |
-| `identities` | 陣列，包含您要刪除其資訊之至少一個使用者的身分識別。 每個身分都由 [身分名稱空間](../../identity-service/namespaces.md) 和一個值：<ul><li>`namespace`：包含單一字串屬性， `code`，代表身分名稱空間。 </li><li>`id`：身分值。</ul>如果 `datasetId` 會指定單一資料集，底下的每個實體 `identities` 必須使用與結構描述的主要身分相同的身分名稱空間。<br><br>如果 `datasetId` 設為 `ALL`，則 `identities` 陣列不受限於任何單一名稱空間，因為每個資料集可能不同。 不過，您的請求仍受限於貴組織可用的名稱空間，如報告所述 [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `identities` | 陣列，包含您要刪除其資訊之至少一個使用者的身分識別。 每個身分都由 [身分名稱空間](../../identity-service/features/namespaces.md) 和一個值：<ul><li>`namespace`：包含單一字串屬性， `code`，代表身分名稱空間。 </li><li>`id`：身分值。</ul>如果 `datasetId` 會指定單一資料集，底下的每個實體 `identities` 必須使用與結構描述的主要身分相同的身分名稱空間。<br><br>如果 `datasetId` 設為 `ALL`，則 `identities` 陣列不受限於任何單一名稱空間，因為每個資料集可能不同。 不過，您的請求仍受限於貴組織可用的名稱空間，如報告所述 [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
-{style="table-layout:auto"}
+{style="table-layout：自動"}
 
 **回應**
 
@@ -114,7 +114,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `workorderId` | 刪除順序的ID。 這可用於稍後查詢刪除狀態。 |
-| `orgId` | 您的組織 ID。 |
+| `orgId` | 您的組織ID。 |
 | `bundleId` | 與此刪除順序相關聯的套件組合ID，用於偵錯。 多個刪除訂單會整合在一起，由下游服務處理。 |
 | `action` | 工單正在執行的動作。 對於記錄刪除，值為 `identity-delete`. |
 | `createdAt` | 建立刪除順序時的時間戳記。 |
@@ -192,7 +192,7 @@ curl -X GET \
 | 屬性 | 說明 |
 | --- | --- |
 | `workorderId` | 刪除順序的ID。 這可用於稍後查詢刪除狀態。 |
-| `orgId` | 您的組織 ID。 |
+| `orgId` | 您的組織ID。 |
 | `bundleId` | 與此刪除順序相關聯的套件組合ID，用於偵錯。 多個刪除訂單會整合在一起，由下游服務處理。 |
 | `action` | 工單正在執行的動作。 對於記錄刪除，值為 `identity-delete`. |
 | `createdAt` | 建立刪除順序時的時間戳記。 |
@@ -280,7 +280,7 @@ curl -X PUT \
 | 屬性 | 說明 |
 | --- | --- |
 | `workorderId` | 刪除順序的ID。 這可用於稍後查詢刪除狀態。 |
-| `orgId` | 您的組織 ID。 |
+| `orgId` | 您的組織ID。 |
 | `bundleId` | 與此刪除順序相關聯的套件組合ID，用於偵錯。 多個刪除訂單會整合在一起，由下游服務處理。 |
 | `action` | 工單正在執行的動作。 對於記錄刪除，值為 `identity-delete`. |
 | `createdAt` | 建立刪除順序時的時間戳記。 |

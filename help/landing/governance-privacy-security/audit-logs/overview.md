@@ -2,10 +2,10 @@
 title: 稽核記錄概觀
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1294'
-ht-degree: 44%
+source-wordcount: '1291'
+ht-degree: 42%
 
 ---
 
@@ -50,10 +50,10 @@ ht-degree: 44%
 | [資料類型](../../../xdm/schema/composition.md#data-type) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [目標](../../../destinations/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>啟用</li><li>停用</li><li>資料集啟用</li><li>資料集移除</li><li>設定檔啟動</li><li>設定檔移除</li></ul> |
 | [欄位群組](../../../xdm/schema/composition.md#field-group) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [識別圖](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
-| [身分命名空間](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>建立</li><li>更新</li></ul> |
+| [身分圖表](../../../identity-service/features/identity-graph-viewer.md) | <ul><li>檢視</li></ul> |
+| [身分名稱空間](../../../identity-service/features/namespaces.md) | <ul><li>建立</li><li>更新</li></ul> |
 | [合併原則](../../../profile/merge-policies/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
-| [產品描述檔](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
+| [產品設定檔](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [查詢](../../../query-service/ui/overview.md) | <ul><li>執行</li></ul> |
 | [查詢範本](../../../query-service/ui/overview.md) | <ul><li>建立</li><li>更新</li><li>刪除</li></ul> |
 | [角色（以屬性為基礎的存取控制）](../../../access-control/home.md) | <ul><li>建立</li><li>更新</li><li>刪除</li><li>新增使用者</li><li>移除使用者</li></ul> |
@@ -100,7 +100,7 @@ ht-degree: 44%
 
 以下篩選器可用於 UI 中的稽核事件：
 
-| 篩選 | 說明 |
+| 篩選器 | 說明 |
 | --- | --- |
 | [!UICONTROL 類別] | 使用下拉式選單來篩選顯示的結果 [類別](#category). |
 | [!UICONTROL 動作] | 依動作篩選。 每項服務的可用動作會顯示在資源表格中。 |
@@ -136,7 +136,7 @@ ht-degree: 44%
 
 ## 管理API中的稽核記錄
 
-所有可以在 UI 中執行的動作，也可以使用 API 呼叫來完成。如需詳細資訊，請參閱 [ API 參考文件](https://www.adobe.io/experience-platform-apis/references/audit-query/)。
+所有可以在 UI 中執行的動作，也可以使用 API 呼叫來完成。請參閱 [API參考檔案](https://www.adobe.io/experience-platform-apis/references/audit-query/) 以取得詳細資訊。
 
 ## 管理Adobe Admin Console的稽核記錄
 

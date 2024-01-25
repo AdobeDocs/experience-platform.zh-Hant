@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 同意和偏好設定結構描述欄位群組
 description: 瞭解同意和偏好設定結構描述欄位群組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ ht-degree: 0%
 >* 如果客戶在管道層級選擇退出，則任何對等的同意或偏好設定在 `idSpecific` 都會被忽略。
 >* 如果未設定管道層級的同意或偏好設定，或客戶已選擇加入，則中的對等同意或偏好設定會生效。 `idSpecific` 榮譽。
 
-中的每一個索引鍵 `idSpecific` 物件代表Adobe Experience Platform Identity服務可辨識的特定身分名稱空間。 雖然您可以定義自己的自訂名稱空間來分類不同的識別碼，但建議您使用Identity Service提供的標準名稱空間之一，來減少即時客戶個人檔案的儲存大小。 如需身分識別名稱空間的詳細資訊，請參閱 [身分名稱空間總覽](../../../identity-service/namespaces.md) Identity Service檔案中。
+中的每一個索引鍵 `idSpecific` 物件代表Adobe Experience Platform Identity服務可辨識的特定身分名稱空間。 雖然您可以定義自己的自訂名稱空間來分類不同的識別碼，但建議您使用Identity Service提供的標準名稱空間之一，來減少即時客戶個人檔案的儲存大小。 如需身分識別名稱空間的詳細資訊，請參閱 [身分名稱空間總覽](../../../identity-service/features/namespaces.md) Identity Service檔案中。
 
 每個名稱空間物件的索引鍵代表客戶已設定偏好設定的唯一身分值。 每個身分值都可以包含一組完整的同意和偏好設定，格式與相同 `consents`.
 

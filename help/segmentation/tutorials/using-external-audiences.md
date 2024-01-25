@@ -5,9 +5,9 @@ description: 按照本教學課程瞭解如何搭配Adobe Experience Platform使
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1724'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 使用外部對象的第一個步驟是建立身分名稱空間。 身分名稱空間可讓Platform關聯受眾的來源。
 
-若要建立身分名稱空間，請依照 [身分名稱空間指南](../../identity-service/namespaces.md#manage-namespaces). 建立身分名稱空間時，請將來源詳細資料新增到身分名稱空間中，並標籤其 [!UICONTROL 型別] as a **[!UICONTROL 非人員識別碼]**.
+若要建立身分名稱空間，請依照 [身分名稱空間指南](../../identity-service/features/namespaces.md#manage-namespaces). 建立身分名稱空間時，請將來源詳細資料新增到身分名稱空間中，並標籤其 [!UICONTROL 型別] as a **[!UICONTROL 非人員識別碼]**.
 
 ![「建立身分名稱空間」強制回應視窗中會醒目提示非人員識別碼。](../images/tutorials/external-audiences/identity-namespace-info.png)
 

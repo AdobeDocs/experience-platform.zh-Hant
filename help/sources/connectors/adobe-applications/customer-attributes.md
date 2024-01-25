@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 客戶屬性來源聯結器總覽
 description: 瞭解如何使用API或使用者介面將客戶屬性連結至Adobe Experience Platform
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 10%
+source-wordcount: '381'
+ht-degree: 7%
 
 ---
 
@@ -25,7 +25,7 @@ Experience Platform提供內嵌支援 [!DNL Customer Attributes] 將設定檔資
 
 ## 身分
 
-資料集的主要身分包含在來源資料的CSV檔案的第一欄。 此 [!DNL Customer Attributes] 來源假設身分一律對應至 [`CORE` 名稱空間](../../../identity-service/namespaces.md)，系統產生的名稱空間，由支援 [[!DNL Identity Service]](../../../identity-service/home.md).
+資料集的主要身分包含在來源資料的CSV檔案的第一欄。 此 [!DNL Customer Attributes] 來源假設身分一律對應至 [`CORE` 名稱空間](../../../identity-service/features/namespaces.md)，系統產生的名稱空間，由支援 [[!DNL Identity Service]](../../../identity-service/home.md).
 
 使用時，您無法選取身分的現有名稱空間 [!DNL Customer Attributes] 來源，因為 [!DNL Customer Attributes] 假設結構描述的主要身分一律在身分對應中。 [!DNL Customer Attributes] 然後以自動執行的方式建立來源ID與身分對應UUID的對應。
 

@@ -3,7 +3,7 @@ title: (Beta)交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 5%
@@ -38,11 +38,11 @@ ht-degree: 5%
 
 ## ID比對要求 {#id-matching-requirements}
 
-根據您擷取至Adobe Experience Platform的ID型別，您必須遵守其對應的要求。 請閱讀 [身分名稱空間總覽](/help/identity-service/namespaces.md) 以取得詳細資訊。
+根據您擷取至Adobe Experience Platform的ID型別，您必須遵守其對應的要求。 請閱讀 [身分名稱空間總覽](/help/identity-service/features/namespaces.md) 以取得詳細資訊。
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL The Trade Desk] 支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] 支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 請依照ID比對需求一節中的指示，針對純文字和雜湊電子郵件地址分別使用適當的名稱空間。
 

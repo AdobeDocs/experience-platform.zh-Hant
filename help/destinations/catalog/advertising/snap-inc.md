@@ -2,7 +2,7 @@
 title: Snap Inc連線
 description: 瞭解如何連線至Snapchat Ads平台以及從Experience Platform匯出您的對象。
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 2%
@@ -37,7 +37,7 @@ ht-degree: 2%
 
 ## 支援的身分 {#supported-identities}
 
-此 *Snap Inc* 目的地支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+此 *Snap Inc* 目的地支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
 
 所有傳送至的識別碼 *Snap Inc* 目的地必須以SHA-256格式進行雜湊處理。 若要在傳送純文字識別碼到目的地之前進行雜湊處理，請檢查 **[!UICONTROL 套用轉換]** 對應目的地目標識別碼時的選項。
 

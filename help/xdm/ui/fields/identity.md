@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中定義身分欄位
 description: 瞭解如何在Experience Platform使用者介面中定義身分欄位。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -20,7 +20,7 @@ ht-degree: 6%
 身分欄位是在Platform中建構客戶身分圖表的重要元件，這最終會影響Real-time Customer Profile如何將不同的資料片段合併在一起，以獲得客戶的完整檢視。 在定義結構描述中的身分欄位之前，請參閱以下檔案以瞭解與身分欄位相關的主要服務和概念：
 
 * [Adobe Experience Platform Identity服務](../../../identity-service/home.md)：跨裝置和系統橋接身分，根據資料集符合的XDM結構描述所定義的身分欄位將其連結在一起。
-   * [身分名稱空間](../../../identity-service/namespaces.md)：身分名稱空間會定義與單一人員相關的不同型別的身分資訊，且是每個身分欄位的必要元件。
+   * [身分名稱空間](../../../identity-service/features/namespaces.md)：身分名稱空間會定義與單一人員相關的不同型別的身分資訊，且是每個身分欄位的必要元件。
 * [即時客戶個人檔案](../../../profile/home.md)：運用客戶身分圖表，根據來自多個來源的彙總資料提供統一的消費者個人檔案，並近乎即時更新。
 
 ## 定義身分欄位 {#define-a-identity-field}
@@ -56,6 +56,6 @@ ht-degree: 6%
 
 ## 後續步驟
 
-本指南說明如何在UI中定義身分欄位。 使用此結構描述擷取資料時，您的客戶身分圖表將會更新，以反映結構描述的身分欄位。 請參閱 [身分圖表檢視器](../../../identity-service/ui/identity-graph-viewer.md) 以瞭解如何在UI中探索您組織的私人圖表。
+本指南說明如何在UI中定義身分欄位。 使用此結構描述擷取資料時，您的客戶身分圖表將會更新，以反映結構描述的身分欄位。 請參閱 [身分圖表檢視器](../../../identity-service/features/identity-graph-viewer.md) 以瞭解如何在UI中探索您組織的私人圖表。
 
 請參閱以下主題的概觀： [在UI中定義欄位](./overview.md#special) 瞭解如何在中定義其他XDM欄位型別 [!DNL Schema Editor].

@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
 source-wordcount: '1319'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -134,5 +134,5 @@ ECID會儲存未驗證（匿名）的事件，而CRM ID會儲存已驗證的事�
 
 * [身分圖表連結規則概觀](./overview.md)
 * [設定身分圖表連結規則的範例案例](./example-scenarios.md)
-* [身分連結邏輯](./identity-linking-logic.md)
-* [Identity Service和即時客戶個人檔案](identity-and-profile.md)
+* [身分連結邏輯](../features/identity-linking-logic.md)
+* [Identity Service和即時客戶個人檔案](../identity-and-profile.md)

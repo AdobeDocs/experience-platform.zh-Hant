@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料模型化的最佳實務
 description: 本檔案介紹Experience Data Model (XDM)結構描述，以及構成要在Adobe Experience Platform中使用的結構描述的建置組塊、原則和最佳實務。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 1%
@@ -206,7 +206,7 @@ ht-degree: 1%
 
 在Experience Platform中，標示為身分的XDM欄位可用來拼接來自多個資料來源的個別客戶相關資訊。 雖然結構描述可以有多個欄位標示為身分，但必須定義單一主要身分，結構描述才能在中使用 [!DNL Real-Time Customer Profile]. 請參閱以下小節： [身分欄位](./composition.md#identity) 結構描述組合的基本知識中，以取得這些欄位使用案例的更多詳細資訊。
 
-在設計方案時，關聯式資料庫表格中的任何主索引鍵都可能是主要身分的候選專案。 適用身分欄位的其他範例包括客戶電子郵件地址、電話號碼、帳戶ID和 [ECID](../../identity-service/ecid.md).
+在設計方案時，關聯式資料庫表格中的任何主索引鍵都可能是主要身分的候選專案。 適用身分欄位的其他範例包括客戶電子郵件地址、電話號碼、帳戶ID和 [ECID](../../identity-service/features/ecid.md).
 
 ### Adobe應用程式結構欄位群組 {#adobe-application-schema-field-groups}
 

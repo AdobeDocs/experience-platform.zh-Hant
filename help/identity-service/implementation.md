@@ -1,9 +1,9 @@
 ---
 title: Identity Service實作指南
 description: 瞭解提供給Adobe Experience Platform的資料在由Identity Service用於建立身分圖表之前如何進行處理。
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 建立其他身分名稱空間
 
-雖然Experience Platform提供各種標準名稱空間，但您可能需要建立其他名稱空間以將您的身分正確分類。 如需詳細資訊，請閱讀以下指南： [為您的組織建立自訂名稱空間](./namespaces.md).
+雖然Experience Platform提供各種標準名稱空間，但您可能需要建立其他名稱空間以將您的身分正確分類。 如需詳細資訊，請閱讀以下指南： [為您的組織建立自訂名稱空間](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ Experience Data Model (XDM)是Experience Platform組織客戶資料的標準化�
 >
 >* 陣列和對應型別欄位不受支援，且無法標籤為身分欄位。
 >* 在標籤欄位時，會提供所產生身分的名稱空間。
+
+如需詳細資訊，請閱讀以下內容的指南： [在UI中定義身分欄位](../xdm/ui/fields/identity.md).
 
 ## 設定Identity服務的資料集
 

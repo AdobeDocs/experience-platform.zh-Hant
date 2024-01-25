@@ -2,14 +2,14 @@
 title: 設定檔匯出行為
 description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2931'
 ht-degree: 0%
 
 ---
 
-# 不同目的地類型的設定檔匯出行為
+# 不同目的地型別的設定檔匯出行為
 
 Experience Platform中有多種目的地型別，如下圖所示。 關於會觸發目的地匯出的內容以及匯出中包含的內容，這些目的地的匯出模式稍有不同，如下節後續所述。
 
@@ -109,7 +109,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 | 決定目的地匯出的因素 | 目的地匯出包含的內容 |
 |---------|----------|
-| <ul><li>對應的屬性和受眾可作為目的地匯出的提示。 這表示如果任何對應的對象變更狀態(從 `null` 至 `realized` 或從 `realized` 至 `exiting`)或更新任何對應的屬性，就會開始匯出目的地。</li><li>身分對應中的變更定義為針對新增/移除的身分 [身分圖表](/help/identity-service/ui/identity-graph-viewer.md) ，用於對應以供匯出的身分名稱空間。</li><li>屬性的變更定義為對應到目的地的屬性的任何更新。</li></ul> | <ul><li>已對應至目的地並已變更的受眾將包含在 `segmentMembership` 物件。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些未變更的對象可能也會包含在呼叫中。 在任何情況下，僅會匯出對應的對象。</li><li>名稱空間中所有已對應至目的地身分的身分 `identityMap` 物件也包含在內。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
+| <ul><li>對應的屬性和受眾可作為目的地匯出的提示。 這表示如果任何對應的對象變更狀態(從 `null` 至 `realized` 或從 `realized` 至 `exiting`)或更新任何對應的屬性，就會開始匯出目的地。</li><li>身分對應中的變更定義為針對新增/移除的身分 [身分圖表](/help/identity-service/features/identity-graph-viewer.md) ，用於對應以供匯出的身分名稱空間。</li><li>屬性的變更定義為對應到目的地的屬性的任何更新。</li></ul> | <ul><li>已對應至目的地並已變更的受眾將包含在 `segmentMembership` 物件。 在某些情況下，它們可能會使用多個呼叫匯出。 此外，在某些情況下，某些未變更的對象可能也會包含在呼叫中。 在任何情況下，僅會匯出對應的對象。</li><li>名稱空間中所有已對應至目的地身分的身分 `identityMap` 物件也包含在內。</li><li>目的地匯出僅包含對應的屬性。</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -147,7 +147,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 並非設定檔的所有更新都符合增量檔案匯出中包含的設定檔資格。 例如，如果將屬性新增到設定檔或從設定檔中移除，則匯出中不包含該設定檔。 僅設定檔的 `segmentMembership` 屬性已變更將會包含在匯出的檔案中。 換言之，只有在設定檔成為對象的一部分或從對象中移除時，才會納入增量檔案匯出中。
 
-同樣地，如果將新的身分識別（新的電子郵件地址、電話號碼、ECID等）新增至 [身分圖表](/help/identity-service/ui/identity-graph-viewer.md)，這並不表示有理由將設定檔納入新的增量檔案匯出中。
+同樣地，如果將新的身分識別（新的電子郵件地址、電話號碼、ECID等）新增至 [身分圖表](/help/identity-service/features/identity-graph-viewer.md)，這並不表示有理由將設定檔納入新的增量檔案匯出中。
 
 如果將新對象新增到目的地對應，這不會影響其他區段的資格和匯出。 匯出排程是按對象個別設定，而檔案會按區段個別匯出，即使對象已新增至相同的目的地資料流亦然。
 

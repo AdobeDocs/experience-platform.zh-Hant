@@ -2,7 +2,7 @@
 title: Google顯示和視訊360連線
 description: Display & Video 360 （先前稱為DoubleClick Bid Manager）工具可用來跨顯示器、影片和行動庫存來源執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 2%
@@ -28,7 +28,7 @@ ht-degree: 2%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Google Display & Video 360] 支援根據下表所示的身分來啟用對象。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+[!DNL Google Display & Video 360] 支援根據下表所示的身分來啟用對象。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
 
 | 身分 | 說明 | 考量事項 |
 |---|---|---|

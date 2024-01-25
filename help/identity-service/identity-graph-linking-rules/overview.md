@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
+source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,6 @@ ht-degree: 0%
 * [概觀](./overview.md)
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [範例情境](./example-scenarios.md)
-* [Identity Service和即時客戶個人檔案](identity-and-profile.md)
-* [身分連結邏輯](./identity-linking-logic.md)
 
 透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRM ID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「設定檔摺疊」）。 為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。
 
@@ -114,5 +112,3 @@ ht-degree: 0%
 
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [設定身分圖表連結規則的範例案例](./example-scenarios.md)
-* [Identity Service和即時客戶個人檔案](identity-and-profile.md)
-* [身分連結邏輯](./identity-linking-logic.md)

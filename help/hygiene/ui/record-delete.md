@@ -2,9 +2,9 @@
 title: 刪除記錄
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1557'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 4%
 請參閱下列檔案，以取得有關Platform中身分的詳細資訊：
 
 * [Adobe Experience Platform Identity服務](../../identity-service/home.md)：跨裝置和系統橋接身分，根據資料集符合的XDM結構描述所定義的身分欄位將其連結在一起。
-* [身分名稱空間](../../identity-service/namespaces.md)：身分名稱空間會定義不同的型別 of 可與單一人員相關的身分資訊，且是每個身分欄位的必要元件。
+* [身分名稱空間](../../identity-service/features/namespaces.md)：身分名稱空間會定義不同的型別 of 可與單一人員相關的身分資訊，且是每個身分欄位的必要元件。
 * [即時客戶個人檔案](../../profile/home.md)：使用身分圖表，根據來自多個來源的彙總資料提供統一的消費者個人檔案，並近乎即時更新。
 * [體驗資料模型(XDM)](../../xdm/home.md)：透過使用結構描述，提供Platform資料的標準定義和結構。 所有Platform資料集都符合特定的XDM結構描述，而結構描述會定義哪些欄位是身分。
 * [身分欄位](../../xdm/ui/fields/identity.md)：瞭解身分欄位如何在XDM結構描述中定義。

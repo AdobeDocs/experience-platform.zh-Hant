@@ -2,9 +2,9 @@
 description: 瞭解如何建構API呼叫，以透過Adobe Experience Platform Destination SDK建立目的地設定。
 title: 建立目的地設定
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1194'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ POST /authoring/destinations
 
 請注意，您不需要將所有引數新增至API呼叫，而且裝載可以根據您的API需求自訂。
 
-+++請求
++++要求
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
@@ -193,7 +193,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |---------|----------|------|
 | `name` | 字串 | 指示Experience Platform目錄中目的地的標題。 |
 | `description` | 字串 | 提供說明，讓Adobe將在目的地卡片的Experience Platform目的地目錄中使用該說明。 目標不超過4到5個句子。 ![顯示目的地說明的平台UI影像。](../../assets/authoring-api/destination-configuration/destination-description.png "目的地說明"){width="100" zoomable="yes"} |
-| `status` | 字串 | 表示目的地卡片的生命週期狀態。 接受的值為 `TEST`、`PUBLISHED` 和 `DELETED`。使用 `TEST` 當您首次設定目的地時。 |
+| `status` | 字串 | 表示目的地卡片的生命週期狀態。 接受的值為 `TEST`， `PUBLISHED`、和 `DELETED`. 使用 `TEST` 當您首次設定目的地時。 |
 | `customerAuthenticationConfigurations.authType` | 字串 | 表示用於向目的地伺服器驗證Experience Platform客戶的設定。 另請參閱 [客戶驗證設定](../../functionality/destination-configuration/customer-authentication.md) 以取得支援驗證型別的詳細資訊。 |
 | `customerDataFields.name` | 字串 | 為您要介紹的自訂欄位提供名稱。 <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 ![顯示客戶資料欄位的平台UI影像。](../../assets/authoring-api/destination-configuration/customer-data-fields.png "客戶資料欄位"){width="100" zoomable="yes"} |
 | `customerDataFields.type` | 字串 | 指出您要介紹的自訂欄位型別。 接受的值為 `string`， `object`， `integer`. <br/><br/> 另請參閱 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 以取得這些設定的詳細資訊。 |
@@ -208,9 +208,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `uiAttributes.connectionType` | 字串 | 連線的型別（視目的地而定）。 支援的值： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | 字串 | 是指目的地支援的資料匯出型別。 將設為 `Streaming` 針對API型整合，或 `Batch` 將檔案匯出至目的地時。 |
 | `identityNamespaces.externalId.acceptsAttributes` | 布林值 | 指出客戶是否可將標準設定檔屬性對應至您正在設定的身分。 |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 顯示客戶能否對應屬於的身分 [自訂名稱空間](/help/identity-service/namespaces.md#manage-namespaces) 以識別您正在設定的身分。 |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | 布林值 | 顯示客戶能否對應屬於的身分 [自訂名稱空間](/help/identity-service/features/namespaces.md#manage-namespaces) 以識別您正在設定的身分。 |
 | `identityNamespaces.externalId.transformation` | 字串 | _未在設定範例中顯示_. 例如，用於 [!DNL Platform] 客戶使用純電子郵件地址作為屬性，而您的平台僅接受雜湊電子郵件。 您可以在此處提供需要套用的轉換（例如，將電子郵件轉換為小寫，然後進行雜湊）。 |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 指示哪一個 [標準身分名稱空間](/help/identity-service/namespaces.md#standard) （例如，IDFA）客戶可將對應至您正在設定的身分。 <br> 當您使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 至小寫及雜湊電子郵件地址或電話號碼。 |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | 指示哪一個 [標準身分名稱空間](/help/identity-service/features/namespaces.md#standard) （例如，IDFA）客戶可將對應至您正在設定的身分。 <br> 當您使用 `acceptedGlobalNamespaces`，您可以使用 `"requiredTransformation":"sha256(lower($))"` 至小寫及雜湊電子郵件地址或電話號碼。 |
 | `destinationDelivery.authenticationRule` | 字串 | 指示方式 [!DNL Platform] 客戶連線至您的目的地。 接受的值為 `CUSTOMER_AUTHENTICATION`， `PLATFORM_AUTHENTICATION`， `NONE`. <br> <ul><li>使用 `CUSTOMER_AUTHENTICATION` 如果Platform客戶透過使用者名稱和密碼、持有人權杖或其他驗證方法登入您的系統。 例如，如果您也選取了 `authType: OAUTH2` 或 `authType:BEARER` 在 `customerAuthenticationConfigurations`. </li><li> 使用 `PLATFORM_AUTHENTICATION` 如果Adobe與您的目的地之間有全域驗證系統，而且 [!DNL Platform] 客戶不需要提供任何驗證認證即可連線至您的目的地。 在此情況下，您必須使用 [認證API](../../credentials-api/create-credential-configuration.md) 設定。 </li><li>使用 `NONE` 如果不需要驗證即可將資料傳送至您的目的地平台。 </li></ul> |
 | `destinationDelivery.destinationServerId` | 字串 | 此 `instanceId` 的 [目的地伺服器範本](../destination-server/create-destination-server.md) 用於此目的地。 |
 | `backfillHistoricalProfileData` | 布林值 | 控制將受眾啟動至目的地時，是否匯出歷史設定檔資料。 永遠將此專案設為 `true`. |

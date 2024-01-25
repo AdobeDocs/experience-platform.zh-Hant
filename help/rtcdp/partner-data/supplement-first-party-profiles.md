@@ -3,9 +3,9 @@ title: 使用合作夥伴提供的屬性補充第一方設定檔
 description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的對象最佳化。
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 80%
 
 ---
@@ -56,7 +56,7 @@ Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密
 1. 身為&#x200B;**客戶**，您會向&#x200B;**資料合作夥伴**&#x200B;取得授權。
 2. 身為&#x200B;**客戶**，您會擴充您的設定檔資料和治理模式以和&#x200B;**合作夥伴**&#x200B;提供的屬性相符。
 3. 身為&#x200B;**客戶**，您要吸引想使用資料合作夥伴擴充的對象。一般來說，會刪去這些對象的個人可識別資訊 (PII) 之類的輸入識別碼，例如電子郵件、姓名、地址等。
-4. **合作夥伴**&#x200B;會為其可相匹配的設定檔附加已授權的屬性。另一個選擇是可將[合作夥伴 ID](/help/identity-service/namespaces.md) 納入並擷取至合作夥伴範圍的 ID 命名空間中。
+4. **合作夥伴**&#x200B;會為其可相匹配的設定檔附加已授權的屬性。另一個選擇是可將[合作夥伴 ID](/help/identity-service/features/namespaces.md) 納入並擷取至合作夥伴範圍的 ID 命名空間中。
 5. 身為&#x200B;**客戶**，您可以將資料合作夥伴的屬性載入至 Real-Time CDP 中的客戶設定檔。
 
 ## 如何實現使用案例：逐步說明 {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Commenting out links for now
 
 >[!TIP]
 >
->如果您選擇使用資料廠商提供的個人型識別碼來補充您的客戶設定檔，您可以建立類型為&#x200B;**[[!UICONTROL 合作夥伴 ID]](/help/identity-service/namespaces.md)** 的新身分類型。
+>如果您選擇使用資料廠商提供的個人型識別碼來補充您的客戶設定檔，您可以建立類型為&#x200B;**[[!UICONTROL 合作夥伴 ID]](/help/identity-service/features/namespaces.md)** 的新身分類型。
 >
->如需有關合作夥伴 ID 的詳細資訊，請閱讀[身分類型章節](/help/identity-service/namespaces.md)。
+>如需有關合作夥伴 ID 的詳細資訊，請閱讀[身分類型章節](/help/identity-service/features/namespaces.md)。
 >閱讀有關在 Experience Platform 使用者介面中[如何定義身分欄位](/help/xdm/ui/fields/identity.md)的資訊。
 
 ### 匯出您在刪去個人可識別資訊 (PII) 或雜湊 PII 時要擴充的對象 {#export-audiences}
@@ -130,7 +130,7 @@ Commenting out links for now
 
 當您探索本頁說明的使用案例時，請注意下列限制：
 
-* 如果您選擇使用合作夥伴 ID，請注意在建置您的[身分識別圖](/help/identity-service/ui/identity-graph-viewer.md)時不要使用這些 ID。
+* 如果您選擇使用合作夥伴 ID，請注意在建置您的[身分識別圖](/help/identity-service/features/identity-graph-viewer.md)時不要使用這些 ID。
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 

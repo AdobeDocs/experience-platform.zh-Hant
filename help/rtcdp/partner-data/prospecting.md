@@ -3,9 +3,9 @@ title: 不依賴第三方Cookie即可吸引和贏取新客戶
 description: 了解如何透過挖掘潛在客戶使用案例吸引並獲取新客戶，而不依賴使用第三方 Cookie。
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 87%
 
 ---
@@ -65,7 +65,7 @@ Adobe Real-time Customer Data Platform可協助品牌安全地將其支援的資
 
 當您完成實作使用案例的步驟時，您將使用以下 Real-Time CDP 功能和 UI 元素 (按使用順序列出)。確保您擁有所有這些區域所需的屬性型存取控制權限，或要求系統管理員授予您必要的權限。
 
-* [身分](/help/identity-service/namespaces.md)
+* [身分](/help/identity-service/features/namespaces.md)
 * [結構描述](/help/xdm/home.md)
 * [資料使用情況標籤](/help/data-governance/labels/overview.md)
 * [資料集](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Adobe Real-time Customer Data Platform可協助品牌安全地將其支援的資
 
 ![建立新的合作夥伴 ID 身分命名空間。](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* 如需有關合作夥伴 ID 命名空間的詳細資訊，請閱讀[身分類型章節](/help/identity-service/namespaces.md)。
+* 如需有關合作夥伴 ID 命名空間的詳細資訊，請閱讀[身分類型章節](/help/identity-service/features/namespaces.md)。
 * 閱讀有關在 Experience Platform 使用者介面中[如何定義身分欄位](/help/xdm/ui/fields/identity.md)的資訊。
 
 #### 建立含有 **[!UICONTROL XDM 個別潛在客戶設定檔]**&#x200B;類別的新結構描述

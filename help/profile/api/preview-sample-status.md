@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 預覽範例狀態（設定檔預覽） API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分佈，並產生顯示資料集重疊、身分重疊和未拼接設定檔的報告。
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 1%
 
 ---
@@ -208,7 +208,7 @@ curl -X GET \
 
 您可以執行GET要求給 `/previewsamplestatus/report/namespace` 端點，用來檢視設定檔存放區中所有合併設定檔的依身分名稱空間劃分。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
 
-身分識別名稱空間是Adobe Experience Platform Identity Service的重要元件，用途是作為客戶資料相關內容的指標。 若要進一步瞭解，請先閱讀 [身分名稱空間總覽](../../identity-service/namespaces.md).
+身分識別名稱空間是Adobe Experience Platform Identity Service的重要元件，用途是作為客戶資料相關內容的指標。 若要進一步瞭解，請先閱讀 [身分名稱空間總覽](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ curl -X GET \
 | `fullIDsFragmentCount` | 名稱空間中的設定檔片段總數。 |
 | `fullIDsCount` | 名稱空間中合併的設定檔總數。 |
 | `fullIDsPercentage` | 此 `fullIDsCount` 佔合併的設定檔總數的百分比( `totalRows` 值傳回 [上一個範例狀態](#view-last-sample-status))，以小數點格式表示。 |
-| `code` | 此 `code` 用於名稱空間。 這在使用名稱空間時可以找到 [Adobe Experience Platform Identity服務API](../../identity-service/api/list-namespaces.md) 也稱為 [!UICONTROL 身分符號] 在Experience Platform UI中。 若要進一步瞭解，請造訪 [身分名稱空間總覽](../../identity-service/namespaces.md). |
+| `code` | 此 `code` 用於名稱空間。 這在使用名稱空間時可以找到 [Adobe Experience Platform Identity服務API](../../identity-service/api/list-namespaces.md) 也稱為 [!UICONTROL 身分符號] 在Experience Platform UI中。 若要進一步瞭解，請造訪 [身分名稱空間總覽](../../identity-service/features/namespaces.md). |
 | `value` | 此 `id` 名稱空間的值。 這在使用名稱空間時可以找到 [身分識別服務API](../../identity-service/api/list-namespaces.md). |
 
 ## 產生資料集重疊報告
@@ -444,7 +444,7 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `data` | 此 `data` 物件包含以逗號分隔的清單，其中包含身分名稱空間程式碼及其各自設定檔計數的唯一組合。 |
-| 名稱空間程式碼 | 此 `code` 是每個身分名稱空間名稱的簡短形式。 每個專案的對應 `code` 至其 `name` 可使用找到 [Adobe Experience Platform Identity服務API](../../identity-service/api/list-namespaces.md). 此 `code` 也稱為 [!UICONTROL 身分符號] 在Experience Platform UI中。 若要進一步瞭解，請造訪 [身分名稱空間總覽](../../identity-service/namespaces.md). |
+| 名稱空間程式碼 | 此 `code` 是每個身分名稱空間名稱的簡短形式。 每個專案的對應 `code` 至其 `name` 可使用找到 [Adobe Experience Platform Identity服務API](../../identity-service/api/list-namespaces.md). 此 `code` 也稱為 [!UICONTROL 身分符號] 在Experience Platform UI中。 若要進一步瞭解，請造訪 [身分名稱空間總覽](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | 報表的時間戳記。 如果 `date` 引數是在請求期間提供，而傳回的報表是對應於提供的日期。 若否 `date` 引數之後，則會傳回最近的報告。 |
 
 ### 解譯身分名稱空間重疊報表

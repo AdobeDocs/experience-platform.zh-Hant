@@ -4,7 +4,7 @@ title: LINE連線
 description: LINE目的地可讓您新增設定檔至平台對象，並為連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -54,7 +54,7 @@ ht-degree: 2%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL LINE] 支援下表中描述的身分更新和匯出。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+[!DNL LINE] 支援下表中描述的身分更新和匯出。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
 
 | 目標身分 | 說明 |
 |---|---|

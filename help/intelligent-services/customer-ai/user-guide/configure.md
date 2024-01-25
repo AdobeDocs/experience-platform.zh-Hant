@@ -5,9 +5,9 @@ feature: Customer AI
 title: 設定Customer AI執行個體
 description: AI/ML服務提供Customer AI作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下小節提供設定Customer AI執行個體的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2824'
+source-wordcount: '2827'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ AI/ML服務提供Customer AI作為簡單易用的Adobe Sensei服務，可針對�
 
 提供所需的值，然後選取 **[!UICONTROL 下一個]** 以繼續。
 
-## 選擇資料 {#select-data}
+## 選取資料 {#select-data}
 
 Customer AI在設計上會使用Adobe Analytics、Adobe Audience Manager、一般體驗事件和消費者體驗事件資料來計算傾向分數。 選取資料集時，只會列出與Customer AI相容的資料集。 若要選取資料集，請選取(**+**)符號，或選取核取方塊一次新增多個資料集。 使用搜尋選項快速尋找您感興趣的資料集。
 
@@ -113,7 +113,7 @@ Customer AI在設計上會使用Adobe Analytics、Adobe Audience Manager、一�
 
 >[!NOTE]
 >
-> 如果資料集沒有有效的身分型別（名稱空間），您必須使用設定主要身分，並將其指派給身分名稱空間 [結構描述編輯器](../../../xdm/schema/composition.md#identity). 若要進一步瞭解名稱空間和身分，請造訪 [Identity Service名稱空間](../../../identity-service/namespaces.md) 檔案。
+> 如果資料集沒有有效的身分型別（名稱空間），您必須使用設定主要身分，並將其指派給身分名稱空間 [結構描述編輯器](../../../xdm/schema/composition.md#identity). 若要進一步瞭解名稱空間和身分，請造訪 [Identity Service名稱空間](../../../identity-service/features/namespaces.md) 檔案。
 
 ## 定義目標 {#define-a-goal}
 

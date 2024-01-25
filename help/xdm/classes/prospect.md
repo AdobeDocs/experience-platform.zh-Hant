@@ -2,7 +2,7 @@
 title: XDM個別潛在客戶設定檔類別
 description: 瞭解Experience Data Model (XDM)中的XDM個別潛在客戶設定檔類別。
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 | `_id` | [!UICONTROL 字串] | 記錄的唯一、系統產生的字串識別碼。 此欄位用於追蹤個別記錄的唯一性、防止資料重複，以及在下游服務中查詢該記錄。<br><br>由於此欄位是系統產生的，因此在資料擷取期間不會提供明確值。 不過，您可以視需要選擇提供自己的唯一ID值。 |
 | `createdByBatchID` | [!UICONTROL 字串] | 造成記錄建立的擷取批次識別碼。 |
 | `modifiedByBatchID` | [!UICONTROL 字串] | 導致記錄更新的上次擷取批次識別碼。 |
-| `partnerID` | [!UICONTROL 字串] | 通常是指用來識別個別潛在客戶的不重複假名識別碼。 請參閱以下檔案： [身分型別](../../identity-service/namespaces.md#identity-type) 以進一步瞭解合作夥伴ID以及Adobe Experience Platform中提供的其他身分型別。 |
+| `partnerID` | [!UICONTROL 字串] | 通常是指用來識別個別潛在客戶的不重複假名識別碼。 請參閱以下檔案： [身分型別](../../identity-service/features/namespaces.md#identity-type) 以進一步瞭解合作夥伴ID以及Adobe Experience Platform中提供的其他身分型別。 |
 | `repositoryCreatedBy` | [!UICONTROL 字串] | 建立紀錄的使用者ID。 |
 | `repositoryLastModifiedBy` | [!UICONTROL 字串] | 上次修改紀錄的使用者ID。 建立記錄時， `modifiedByUser` 值設為 `createdByUser` 值。 |
 

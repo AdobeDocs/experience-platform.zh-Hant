@@ -3,7 +3,7 @@ keywords: crm；CRM；CRM目的地；外聯；外聯crm目的地
 title: 外展連線
 description: 外展目的地可讓您匯出帳戶資料，並在外展內根據您的業務需求啟用資料。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -71,7 +71,7 @@ ht-degree: 2%
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Outreach] 支援下表中描述的身分更新。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+[!DNL Outreach] 支援下表中描述的身分更新。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|

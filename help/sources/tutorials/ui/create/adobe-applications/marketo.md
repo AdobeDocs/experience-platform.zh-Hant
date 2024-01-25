@@ -2,9 +2,9 @@
 title: 在UI中建立Marketo Engage來源連線和資料流
 description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流的步驟，以便將B2B資料引進Adobe Experience Platform。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1675'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 * [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
 * [體驗資料模型(XDM)](../../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
    * [在UI中建立和編輯方案](../../../../../xdm/ui/resources/schemas.md)：瞭解如何在UI中建立和編輯方案。
-* [身分名稱空間](../../../../../identity-service/namespaces.md)：身分名稱空間是元件，屬於 [!DNL Identity Service] 作為身分相關內容的指示器。 完整身分包含ID值和名稱空間。
+* [身分名稱空間](../../../../../identity-service/features/namespaces.md)：身分名稱空間是元件，屬於 [!DNL Identity Service] 作為身分相關內容的指示器。 完整身分包含ID值和名稱空間。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 * [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
@@ -138,7 +138,7 @@ ht-degree: 0%
 每個 [!DNL Marketo] 資料集有其專屬的對應規則要遵循。 如需如何對應的詳細資訊，請參閱下列內容 [!DNL Marketo] 資料集至XDM：
 
 * [活動](../../../../connectors/adobe-applications/mapping/marketo.md#activities)
-* [計畫](../../../../connectors/adobe-applications/mapping/marketo.md#programs)
+* [方案](../../../../connectors/adobe-applications/mapping/marketo.md#programs)
 * [計畫成員資格](../../../../connectors/adobe-applications/mapping/marketo.md#program-memberships)
 * [公司](../../../../connectors/adobe-applications/mapping/marketo.md#companies)
 * [靜態清單](../../../../connectors/adobe-applications/mapping/marketo.md#static-lists)
@@ -181,8 +181,8 @@ ht-degree: 0%
 
 依照本教學課程中的指示，您已成功建立資料流以引入 [!DNL Marketo] 資料。 傳入資料現在可供下游Platform服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-Time Customer Profile] 概覽](/help/profile/home.md)
-* [[!DNL Data Science Workspace] 概覽](/help/data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile] 概觀](/help/profile/home.md)
+* [[!DNL Data Science Workspace] 概觀](/help/data-science-workspace/home.md)
 
 ## 附錄 {#appendix}
 

@@ -3,7 +3,7 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 0%
@@ -185,8 +185,8 @@ Adobe如果您的生產沙箱包含：
 
 請參閱以下檔案以瞭解更多有關 [!DNL Identity Service]：
 
-* [[!DNL Identity Service] 概覽](home.md)
-* [身分圖表檢視器](ui/identity-graph-viewer.md)
+* [[!DNL Identity Service] 概觀](home.md)
+* [身分圖表檢視器](features/identity-graph-viewer.md)
 
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 

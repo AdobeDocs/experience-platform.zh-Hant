@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 檢視目的地詳細資料
 description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及編輯啟用、啟用及停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
 | [!UICONTROL 類別] | 指示目的地型別。 請參閱 [目的地目錄](../catalog/overview.md) 以取得詳細資訊。 |
 | [!UICONTROL 連線類型] | 指出將您的對象傳送至目的地所使用的表單。 可能的值包括 [!UICONTROL Cookie] 和 [!UICONTROL 以設定檔為基礎]. |
 | [!UICONTROL 頻率] | 指出將對象傳送到目的地的頻率。 可能的值包括 [!UICONTROL 串流] 和 [!UICONTROL 批次]. |
-| [!UICONTROL 身分] | 代表目的地接受的身分名稱空間，例如 `GAID`， `IDFA`，或 `email`. 如需接受的身分名稱空間詳細資訊，請參閱 [身分名稱空間總覽](../../identity-service/namespaces.md). |
+| [!UICONTROL 身分] | 代表目的地接受的身分名稱空間，例如 `GAID`， `IDFA`，或 `email`. 如需接受的身分名稱空間詳細資訊，請參閱 [身分名稱空間總覽](../../identity-service/features/namespaces.md). |
 | [!UICONTROL 建立者] | 表示建立此目的地的使用者。 |
 | [!UICONTROL 已建立] | 表示建立此目的地的UTC日期時間。 |
 

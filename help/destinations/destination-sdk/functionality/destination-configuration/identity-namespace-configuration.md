@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定支援的目標身分。
 title: 身分名稱空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '842'
 ht-degree: 4%
 
 ---
@@ -17,13 +17,13 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 
 執行此操作時，除了目標設定檔屬性外，使用者還可以選擇目標身分。
 
-若要進一步瞭解Experience Platform中的身分識別名稱空間，請參閱 [身分名稱空間檔案](../../../../identity-service/namespaces.md).
+若要進一步瞭解Experience Platform中的身分識別名稱空間，請參閱 [身分名稱空間檔案](../../../../identity-service/features/namespaces.md).
 
 設定目的地的身分識別名稱空間時，您可以微調目的地支援的目標身分對應，例如：
 
 * 允許使用者將XDM屬性對應至身分識別名稱空間。
-* 允許使用者對應 [標準身分名稱空間](../../../../identity-service/namespaces.md#standard) 到您自己的身分識別名稱空間。
-* 允許使用者對應 [自訂身分名稱空間](../../../../identity-service/namespaces.md#manage-namespaces) 到您自己的身分識別名稱空間。
+* 允許使用者對應 [標準身分名稱空間](../../../../identity-service/features/namespaces.md#standard) 到您自己的身分識別名稱空間。
+* 允許使用者對應 [自訂身分名稱空間](../../../../identity-service/features/namespaces.md#manage-namespaces) 到您自己的身分識別名稱空間。
 
 若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或請參閱操作說明指南 [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,7 +55,7 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 |---------|----------|---|------|
 | `acceptsAttributes` | 布林值 | 選填 | 指出客戶是否可將標準設定檔屬性對應至您正在設定的身分。 |
 | `acceptsCustomNamespaces` | 布林值 | 選填 | 指出客戶是否可將自訂身分名稱空間對應至您正在設定的身分名稱空間。 |
-| `acceptedGlobalNamespaces` | - | 選填 | 指示哪一個 [標準身分名稱空間](../../../../identity-service/namespaces.md#standard) (例如， [!UICONTROL IDFA])客戶可對應至您正在設定的身分。 |
+| `acceptedGlobalNamespaces` | - | 選填 | 指示哪一個 [標準身分名稱空間](../../../../identity-service/features/namespaces.md#standard) (例如， [!UICONTROL IDFA])客戶可對應至您正在設定的身分。 |
 | `transformation` | 字串 | 選填 | 顯示 [[!UICONTROL 套用轉換]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 如果來源欄位是XDM屬性或自訂身分名稱空間，系統會勾選Platform UI中的核取方塊。 使用此選項可讓使用者在匯出時雜湊來源屬性。 若要啟用此選項，請將值設為 `sha256(lower($))`. |
 | `requiredTransformation` | 字串 | 選填 | 當客戶選取此來源身分名稱空間時， [[!UICONTROL 套用轉換]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) 核取方塊會自動套用至對應，且客戶無法將其停用。 若要啟用此選項，請將值設為 `sha256(lower($))`. |
 
@@ -84,7 +84,7 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 身分名稱空間不需要1對1的對應， [!DNL Platform] 以及您的目的地。
 例如，客戶可將 [!DNL Platform] [!DNL IDFA] 名稱空間轉換為 [!DNL IDFA] 名稱空間，或可對應相同的名稱空間 [!DNL Platform] [!DNL IDFA] 名稱空間重新命名為 [!DNL Customer ID] 您目的地中的名稱空間。
 
-深入瞭解中的身分 [身分名稱空間總覽](../../../../identity-service/namespaces.md).
+深入瞭解中的身分 [身分名稱空間總覽](../../../../identity-service/features/namespaces.md).
 
 ## 對應考量事項
 

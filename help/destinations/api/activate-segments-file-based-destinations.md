@@ -4,7 +4,7 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 4%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ 檢視要在輸入結構描述中使用的可用身分
 
-回應會傳回您在建立輸入結構描述時可使用的身分。 請注意，此回應會傳回兩者 [標準](/help/identity-service/namespaces.md#standard) 和 [自訂](/help/identity-service/namespaces.md#manage-namespaces) 您在Experience Platform中設定的身分名稱空間。
+回應會傳回您在建立輸入結構描述時可使用的身分。 請注意，此回應會傳回兩者 [標準](/help/identity-service/features/namespaces.md#standard) 和 [自訂](/help/identity-service/features/namespaces.md#manage-namespaces) 您在Experience Platform中設定的身分名稱空間。
 
 ```json
 [

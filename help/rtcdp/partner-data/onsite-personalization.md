@@ -3,7 +3,7 @@ title: 使用合作夥伴協助的訪客辨識功能，為未知訪客提供個�
 description: 了解如何使用合作夥伴輔助的訪客識別為訪客提供個人化的現場體驗。
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 90%
@@ -51,7 +51,7 @@ ht-degree: 90%
    * [標記](/help/tags/home.md)
    * [資料流](/help/datastreams/overview.md)
 * Real-Time CDP 中的資料管理
-   * [身分](/help/identity-service/namespaces.md)
+   * [身分](/help/identity-service/features/namespaces.md)
    * [結構描述](/help/xdm/home.md)
    * [資料使用情況標籤](/help/data-governance/labels/overview.md)
    * [資料集](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ UI 的&#x200B;**[!UICONTROL 資料收集]**&#x200B;部分看起來類似於下�
 
 當您探索本頁說明的使用案例時，請注意下列限制：
 
-* 如果您使用合作夥伴 ID，請注意在建置您的[身分識別圖譜](/help/identity-service/ui/identity-graph-viewer.md)時不要使用這些 ID。
+* 如果您使用合作夥伴 ID，請注意在建置您的[身分識別圖譜](/help/identity-service/features/identity-graph-viewer.md)時不要使用這些 ID。
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 

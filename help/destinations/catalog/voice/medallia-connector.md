@@ -2,7 +2,7 @@
 title: Medallia連線
 description: 針對目標Medallia調查和意見回饋收集啟用設定檔，以更好地瞭解客戶需求和期望。
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 2%
@@ -44,7 +44,7 @@ B2B品牌想要評估並簡化其上線計畫。 他們想要將個人化調查�
 
 ## 支援的身分 {#supported-identities}
 
-Medallia支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+Medallia支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|

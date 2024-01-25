@@ -4,7 +4,7 @@ title: Real-time Customer Data Platform中的身分
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，協助您更清楚瞭解客戶及其行為。
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Experience Platform [!DNL Identity Service] 透過跨裝置和系統橋接
 
 ## 身分識別命名空間
 
-身分名稱空間是的元件 [!DNL Identity Service] 和做為指標，為客戶身分提供額外內容。 「電子郵件」是常用ID名稱空間的範例，在此範例中，跨多個網站使用相同的電子郵件地址，可讓您彙整多個不同的身分識別，每個識別都有一個唯一的客戶ID，而且實際上屬於同一個客戶。 [!DNL Experience Platform] 可讓您使用ID名稱空間在使用者介面中搜尋個別設定檔。 如需有關檢視設定檔的詳細資訊，請參閱 [設定檔瀏覽概觀](profile-browse.md). 若要深入瞭解身份識別名稱空間，請參閱 [身分名稱空間總覽](../../identity-service/namespaces.md).
+身分名稱空間是的元件 [!DNL Identity Service] 和做為指標，為客戶身分提供額外內容。 「電子郵件」是常用ID名稱空間的範例，在此範例中，跨多個網站使用相同的電子郵件地址，可讓您彙整多個不同的身分識別，每個識別都有一個唯一的客戶ID，而且實際上屬於同一個客戶。 [!DNL Experience Platform] 可讓您使用ID名稱空間在使用者介面中搜尋個別設定檔。 如需有關檢視設定檔的詳細資訊，請參閱 [設定檔瀏覽概觀](profile-browse.md). 若要深入瞭解身份識別名稱空間，請參閱 [身分名稱空間總覽](../../identity-service/features/namespaces.md).
 
 ## 身分圖
 

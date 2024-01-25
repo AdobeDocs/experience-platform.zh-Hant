@@ -1,15 +1,15 @@
 ---
-title: 目的地啟動工作流程中的身分處理
+title: 目的地啟用工作流程中的身分處理
 description: 瞭解在啟用工作流程中如何根據目的地型別處理身分匯出
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1180'
-ht-degree: 3%
+source-wordcount: '1163'
+ht-degree: 1%
 
 ---
 
-# 目的地啟動工作流程中的身分處理
+# 目的地啟用工作流程中的身分處理
 
 此頁面說明身分識別如何匯出至不同目的地型別的特殊性，並教導您如何根據目的地找到哪些身分識別可供匯出。
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 的 [檔案型目的地](/help/destinations/destination-types.md#file-based) (例如 [!DNL Amazon S3]、 SFTP、大多數電子郵件行銷目的地(例如 [!DNL Adobe Campaign]， [!DNL Oracle Eloqua]， [!DNL Salesforce Marketing Cloud])，這些目的地中的身分設定大多是開放的，這表示您不需要在 [選取屬性](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes) 批次啟動工作流程的步驟。
 
-如果您選擇將身分新增至檔案匯出，請注意來自的單一身分 [身分名稱空間](/help/identity-service/ui/identity-graph-viewer.md#access-identity-graph-viewer) 可以在匯出中選取。 當您選取要匯出的身分時，系統會自動將其選取為 [強制屬性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) 和 [重複資料刪除索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
+如果您選擇將身分新增至檔案匯出，請注意來自的單一身分 [身分名稱空間](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer) 可以在匯出中選取。 當您選取要匯出的身分時，系統會自動將其選取為 [強制屬性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) 和 [重複資料刪除索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys).
 
 ![選取為必要屬性和重複資料刪除索引鍵的身分。](/help/destinations/assets/how-destinations-work/selected-identity.png)
 

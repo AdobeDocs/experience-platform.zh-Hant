@@ -2,22 +2,22 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
-ht-degree: 28%
+source-wordcount: '2257'
+ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2023 年 9 月 28 日**
+**發行日期： 2023年9月28日**
 
 Adobe Experience Platform中的新功能：
 
 - [計算屬性](#computed-attributes)
 
- Experience Platform 現有功能的更新：
+Experience Platform現有功能的更新：
 
 - [警報](#alerts)
 - [儀表板](#dashboards)
@@ -90,7 +90,7 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 若要了解有關資料治理的詳細資訊，請閱讀[資料治理概觀](../../data-governance/home.md)。
 
-## 資料檢疫 {#hygiene}
+## 資料衛生 {#hygiene}
 
 Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪除消費者記錄和資料集，以管理儲存的資料。 使用 [!UICONTROL 資料生命週期] 在UI中或透過呼叫資料衛生API，您能夠有效地管理您的資料存放區。 使用這些功能可確保資訊如預期使用、在不正確的資料需要修正時更新，並在組織原則認為必要時刪除。
 
@@ -99,7 +99,7 @@ Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪�
 | 功能 | 說明 |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} | 透過Adobe Experience Platform中的進階資料生命週期管理功能，跨所有資料存放區管理您的資料生命週期，以符合客戶承諾和授權協定：自動化資料集到期日和記錄刪除。<br>有了自動化資料集有效期，您可以刪除整個資料集，並設定要刪除資料集的日期和時間。<br>記錄刪除可讓您透過定位個別消費者設定檔的主要身分，來刪除個別消費者設定檔。 您可以透過UI或透過CSV/JSON檔案上傳個別提供主要身分。 請參閱 [記錄刪除檔案](../../hygiene/ui/record-delete.md) 以取得詳細資訊 |
-| 資料集有效期 | 藉由自動化資料集到期功能，將您的資料減至最少，並控制您的授權協定。 刪除整個資料集並設定要刪除資料集的日期和時間，以減少資料量。 請參閱 [資料集有效期限檔案](../../hygiene/ui/dataset-expiration.md) 以取得詳細資訊。 |
+| 資料集到期 | 藉由自動化資料集到期功能，將您的資料減至最少，並控制您的授權協定。 刪除整個資料集並設定要刪除資料集的日期和時間，以減少資料量。 請參閱 [資料集有效期限檔案](../../hygiene/ui/dataset-expiration.md) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}
 
@@ -174,8 +174,8 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 更新說明 |
 | --- | --- | --- |
-| 擴充功能 | [!UICONTROL AJO 實體欄位] | 此 [[!UICONTROL 多變體的標幟]](https://github.com/adobe/xdm/pull/1774/files) 已新增至 [!UICONTROL ajo實體欄位] 以識別變體是否為多變體。 |
-| 資料類型 | [!UICONTROL 產品清單項目] | [[!UICONTROL 傳回專案]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含退貨授權資訊。 |
+| 擴充功能 | [!UICONTROL ajo實體欄位] | 此 [[!UICONTROL 多變體的標幟]](https://github.com/adobe/xdm/pull/1774/files) 已新增至 [!UICONTROL ajo實體欄位] 以識別變體是否為多變體。 |
+| 資料類型 | [!UICONTROL 產品清單專案] | [[!UICONTROL 傳回專案]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含退貨授權資訊。 |
 | 資料類型 | 訂購 | [[!UICONTROL 傳回資訊]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含RMA （退貨授權）。 |
 
 {style="table-layout:auto"}
@@ -190,7 +190,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 功能 | 說明 |
 | --- | --- |
-| Identity Service UI增強功能 | 在Experience Platform UI中使用改良的自訂名稱空間建立工具，以便更妥善地管理您的自訂名稱空間及其對應的身分型別。 增強的Identity Service UI提供您以下功能： <ul><li>關聯式體驗：視覺提示、清晰度，以及身分名稱空間和身分型別的關聯式。</li><li>準確性：處理錯誤的能力更強，不再有重複的身分名稱。</li><li>可發現性：從產品內對話方塊存取檔案。</li></ul> 如需詳細資訊，請閱讀以下指南： [建立自訂名稱空間](../../identity-service/namespaces.md#create-namespaces). |
+| Identity Service UI增強功能 | 在Experience Platform UI中使用改良的自訂名稱空間建立工具，以便更妥善地管理您的自訂名稱空間及其對應的身分型別。 增強的Identity Service UI提供您以下功能： <ul><li>關聯式體驗：視覺提示、清晰度，以及身分名稱空間和身分型別的關聯式。</li><li>準確性：處理錯誤的能力更強，不再有重複的身分名稱。</li><li>可發現性：從產品內對話方塊存取檔案。</li></ul> 如需詳細資訊，請閱讀以下指南： [建立自訂名稱空間](../../identity-service/features/namespaces.md#create-namespaces). |
 | 身分識別圖譜限制的變更 | 身分圖表限制已從150個身分變更為50個身分。 將新身分擷取到完整圖表時，會刪除根據擷取時間戳記和身分型別的最舊身分。 Cookie身分型別會優先刪除。 Adobe如果您的生產沙箱包含： <ul><li>個人識別碼 (例如 CRM ID) 設定為 cookie/裝置身分識別類型的自訂命名空間。</li><li>cookie/裝置識別碼被設定為跨裝置身分識別類型的自訂命名空間。</li></ul> Adobe 工程部門將手動處理這些要求。如需詳細資訊，請閱讀 [Identity Service資料的護欄](../../identity-service/guardrails.md) 及指南 [資料管理授權權益最佳實務](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}

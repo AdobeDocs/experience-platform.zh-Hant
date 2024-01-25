@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Attribution AI UI指南
 description: 本檔案可用作在Intelligent Services使用者介面中與Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 1%
+source-wordcount: '2450'
+ht-degree: 0%
 
 ---
 
 # Attribution AI UI指南
 
-作為Intelligent Services的一部分，Attribution AI是一種多管道的演演算法歸因服務，可計算客戶互動對指定結果的影響和累加影響。 透過 Attribution AI，行銷人員可經由了解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
+作為Intelligent Services的一部分，Attribution AI是一種多管道的演演算法歸因服務，可計算客戶互動對指定結果的影響和累加影響。 透過Attribution AI，行銷人員可經由瞭解每個客戶在客戶歷程各個階段的互動所產生的影響，來衡量行銷和廣告支出並予以最佳化。
 
 本檔案可用作在Intelligent Services使用者介面中與Attribution AI互動的指南。
 
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 ![命名模型](./images/user-guide/naming_instance.png)
 
-## 選擇資料 {#select-data}
+## 選取資料 {#select-data}
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
@@ -103,7 +103,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 如果資料集沒有有效的身分型別（名稱空間），您必須使用設定主要身分，並將其指派給身分名稱空間 [結構描述編輯器](../../xdm/schema/composition.md#identity). 若要進一步瞭解名稱空間和身分，請造訪 [Identity Service名稱空間](../../identity-service/namespaces.md) 檔案。
+> 如果資料集沒有有效的身分型別（名稱空間），您必須使用設定主要身分，並將其指派給身分名稱空間 [結構描述編輯器](../../xdm/schema/composition.md#identity). 若要進一步瞭解名稱空間和身分，請造訪 [Identity Service名稱空間](../../identity-service/features/namespaces.md) 檔案。
 
 ## 對應媒體頻道和行銷活動欄位 {#aai-mapping}
 

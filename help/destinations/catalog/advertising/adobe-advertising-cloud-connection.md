@@ -2,7 +2,7 @@
 title: Adobe Advertising Cloud DSP連線
 description: Adobe Advertising Cloud DSP是Adobe Real-time Customer Data Platform的整合式目的地，可讓您與核准的廣告商和使用者共用已驗證的第一方受眾，以啟用行銷活動。
 exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1055'
 ht-degree: 2%
@@ -41,7 +41,7 @@ Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)目的地可讓您與�
 
 ## 支援的身分 {#supported-identities}
 
-Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/namespaces.md).
+Adobe Advertising Cloud DSP目的地支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|

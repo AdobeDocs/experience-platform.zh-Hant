@@ -2,10 +2,10 @@
 description: 此頁面說明從Adobe Experience Platform匯出至目的地的資料中的訊息格式和設定檔轉換。
 title: 訊息格式
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2502'
-ht-degree: 1%
+source-wordcount: '2489'
+ht-degree: 0%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 1%
 
 若要瞭解Adobe端的訊息格式及設定檔設定和轉換程式，請熟悉下列Experience Platform概念：
 
-* **體驗資料模式 (XDM)**. [XDM概覽](../../../../xdm/home.md) 和  [如何在Adobe Experience Platform中建立XDM結構描述](../../../../xdm/tutorials/create-schema-ui.md).
-* **類別**. [在 UI 中建立和編輯類別](../../../../xdm/ui/resources/classes.md).
+* **體驗資料模型(XDM)**. [XDM概覽](../../../../xdm/home.md) 和  [如何在Adobe Experience Platform中建立XDM結構描述](../../../../xdm/tutorials/create-schema-ui.md).
+* **類別**. [在UI中建立和編輯類別](../../../../xdm/ui/resources/classes.md).
 * **身分對應**. 身分對應代表Adobe Experience Platform中所有一般使用者身分的對應。 請參閱 `xdm:identityMap` 在 [XDM欄位字典](../../../../xdm/schema/field-dictionary.md).
 * **SegmentMembership**. 此 [區段會籍](../../../../xdm/schema/field-dictionary.md) XDM屬性會通知設定檔所屬的對象。 針對中的三個不同值 `status` 欄位，請閱讀以下檔案： [對象成員資格詳細資料結構欄位群組](../../../../xdm/field-groups/profile/segmentation.md).
 
@@ -380,7 +380,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 ### 身分 {#identities}
 
-如需Experience Platform中身分的相關資訊，請參閱 [身分名稱空間總覽](../../../../identity-service/namespaces.md).
+如需Experience Platform中身分的相關資訊，請參閱 [身分名稱空間總覽](../../../../identity-service/features/namespaces.md).
 
 **輸入**
 
@@ -1212,9 +1212,9 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 | `destination.namespaceSegmentTimestamps` | 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`：傳回含有ID的區段時的時間 `seg-id-1`，來自 `ups` 名稱空間是以UNIX時間戳記格式建立的。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`：傳回具有ID的對象的時間 `seg-id-1`，來自 `ups` 名稱空間已更新，採用UNIX時間戳記格式。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`：傳回具有ID的對象的時間 `seg-id-1`，來自 `ups` 以UNIX時間戳記格式啟用至目的地。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：傳回目標上對象啟動更新的時間（UNIX時間戳記格式）。</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | 僅傳回具有狀態的對象 `realized`，橫跨所有名稱空間。 | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | 僅傳回具有狀態的對象 `exited`，橫跨所有名稱空間。 | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **已過時. 取代為`destination.namespaceSegmentAliases`** <br><br> 從Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **已過時. 取代為`destination.namespaceSegmentNames`** <br><br>  從Adobe Experience Platform名稱空間中的對象名稱對應至合作夥伴系統中的對象名稱。 | `destination.segmentNames["seg-name-1"]` |
-| `destination.segmentTimestamps` | **已過時. 取代為`destination.namespaceSegmentTimestamps`** <br><br> 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`：傳回具有ID的對象的時間 `seg-id-1` 建立的UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已更新，採用UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已以UNIX時間戳記格式啟用至目的地。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：傳回目標上對象啟動更新的時間（UNIX時間戳記格式）。</li></ul> |
+| `destination.segmentAliases` | **已棄用。 取代為`destination.namespaceSegmentAliases`** <br><br> 從Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **已棄用。 取代為`destination.namespaceSegmentNames`** <br><br>  從Adobe Experience Platform名稱空間中的對象名稱對應至合作夥伴系統中的對象名稱。 | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **已棄用。 取代為`destination.namespaceSegmentTimestamps`** <br><br> 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`：傳回具有ID的對象的時間 `seg-id-1` 建立的UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已更新，採用UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已以UNIX時間戳記格式啟用至目的地。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：傳回目標上對象啟動更新的時間（UNIX時間戳記格式）。</li></ul> |
 
 {style="table-layout:auto"}
 

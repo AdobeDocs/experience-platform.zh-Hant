@@ -3,7 +3,7 @@ keywords: 行動；炫耀；傳訊；
 title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| external_id | 自訂 [!DNL Braze] 支援對應任何身分的識別碼。 | 您可以傳送任何 [身分](../../../identity-service/namespaces.md) 至 [!DNL Braze] 目的地，只要您將它對應到 [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | 自訂 [!DNL Braze] 支援對應任何身分的識別碼。 | 您可以傳送任何 [身分](../../../identity-service/features/namespaces.md) 至 [!DNL Braze] 目的地，只要您將它對應到 [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

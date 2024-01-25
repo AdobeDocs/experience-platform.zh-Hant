@@ -2,10 +2,10 @@
 title: 在Real-time Customer Data Platform B2B版本中定義兩個結構描述之間的關係
 description: 瞭解如何在Adobe Real-time Customer Data Platform B2B Edition中定義兩個結構描述之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 16%
+source-wordcount: '1363'
+ht-degree: 15%
 
 ---
 
@@ -61,7 +61,7 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 
 >[!NOTE]
 >
->時間 [將XDM欄位設定為身分](../ui/fields/identity.md)，您必須提供身分名稱空間來定義底下的身分。 這可以是Adobe提供的標準名稱空間，或貴組織定義的自訂名稱空間。 實際上，名稱空間只是內容字串，您可以設定為您喜歡的任何值，前提是這對於貴組織分類身分型別很有意義。 請參閱以下主題的概觀： [身分名稱空間](../../identity-service/namespaces.md) 以取得詳細資訊。
+>時間 [將XDM欄位設定為身分](../ui/fields/identity.md)，您必須提供身分名稱空間來定義底下的身分。 這可以是Adobe提供的標準名稱空間，或貴組織定義的自訂名稱空間。 實際上，名稱空間只是內容字串，您可以設定為您喜歡的任何值，前提是這對於貴組織分類身分型別很有意義。 請參閱以下主題的概觀： [身分名稱空間](../../identity-service/features/namespaces.md) 以取得詳細資訊。
 
 為方便參考，以下幾節將說明在定義關係之前，本教學課程中使用的每個結構描述的結構。 請留意已在結構描述結構中定義主要身分的位置，以及這些身分使用的自訂名稱空間。
 

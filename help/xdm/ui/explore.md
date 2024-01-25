@@ -5,7 +5,7 @@ title: 探索UI中的結構描述資源
 description: 瞭解如何在Experience Platform使用者介面中探索現有結構描述、類別、結構描述欄位群組和資料型別。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -86,7 +86,7 @@ ht-degree: 0%
 
 檢查包含身分欄位的結構描述時，這些欄位會列在左側邊欄中，位於類別或欄位群組（提供這些欄位給結構描述）下方。 在左側邊欄中選取身分欄位名稱，以顯示畫布中的欄位，無論其巢狀深度為何。
 
-身分欄位在畫布中會以指紋圖示強調顯示(![指紋圖示影像](../images/ui/explore/identity-symbol.png))。 如果您選取身分欄位名稱，則可檢視其他資訊，例如 [身分名稱空間](../../identity-service/namespaces.md) 以及欄位是否為結構描述的主要身分。
+身分欄位在畫布中會以指紋圖示強調顯示(![指紋圖示影像](../images/ui/explore/identity-symbol.png))。 如果您選取身分欄位名稱，則可檢視其他資訊，例如 [身分名稱空間](../../identity-service/features/namespaces.md) 以及欄位是否為結構描述的主要身分。
 
 ![](../images/ui/explore/identity-field.png)
 

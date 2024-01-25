@@ -1,17 +1,17 @@
 ---
 title: Web SDK中的身分資料
 description: 瞭解如何使用Adobe Experience Platform Web SDK擷取和管理Adobe Experience Cloud ID (ECID)。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 0%
 
 ---
 
-
 # Web SDK中的身分資料
 
-Adobe Experience Platform Web SDK使用 [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) 以追蹤訪客行為。 使用ECID，您可以確保每個裝置都有唯一識別碼，此識別碼可以跨多個工作階段持續存在，繫結特定裝置在Web工作階段期間和之間發生的所有點選。
+Adobe Experience Platform Web SDK使用 [Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md) 以追蹤訪客行為。 使用ECID，您可以確保每個裝置都有唯一識別碼，此識別碼可以跨多個工作階段持續存在，繫結特定裝置在Web工作階段期間和之間發生的所有點選。
 
 本檔案概述如何使用Platform Web SDK管理ECID。
 
@@ -104,7 +104,7 @@ alloy("sendEvent", {
 >Adobe建議傳送代表個人的名稱空間，例如 `CRMID`，作為主要身分。
 
 
-內的每個屬性 `identityMap` 代表屬於特定身分識別 [身分名稱空間](../../identity-service/namespaces.md). 屬性名稱應為身分名稱空間符號，您可以在「 」下方的Adobe Experience Platform使用者介面中找到[!UICONTROL 身分]「。 屬性值應該是屬於該身分名稱空間的身分陣列。
+內的每個屬性 `identityMap` 代表屬於特定身分識別 [身分名稱空間](../../identity-service/features/namespaces.md). 屬性名稱應為身分名稱空間符號，您可以在「 」下方的Adobe Experience Platform使用者介面中找到[!UICONTROL 身分]「。 屬性值應該是屬於該身分名稱空間的身分陣列。
 
 >[!IMPORTANT]
 >

@@ -2,9 +2,9 @@
 title: 在UI中為自訂活動資料建立Marketo Engage來源連線和資料流
 description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流的步驟，以便將自訂活動資料引進Adobe Experience Platform。
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 * [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
 * [體驗資料模型(XDM)](../../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
    * [在UI中建立和編輯方案](../../../../../xdm/ui/resources/schemas.md)：瞭解如何在UI中建立和編輯方案。
-* [身分名稱空間](../../../../../identity-service/namespaces.md)：身分名稱空間是元件，屬於 [!DNL Identity Service] 作為身分相關內容的指示器。 完整身分包含ID值和名稱空間。
+* [身分名稱空間](../../../../../identity-service/features/namespaces.md)：身分名稱空間是元件，屬於 [!DNL Identity Service] 作為身分相關內容的指示器。 完整身分包含ID值和名稱空間。
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 * [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
@@ -73,7 +73,7 @@ ht-degree: 0%
 
 接下來，將新欄位新增至您的結構描述。 此新欄位必須設為 `type: object` 和將包含自訂活動的個別欄位。
 
-若要新增欄位，請選取加號(`+`)。 以下專案的專案： *[!UICONTROL 未命名的欄位 |型別]* 隨即顯示。 接下來，使用設定欄位屬性 *[!UICONTROL 欄位屬性]* 面板。 將欄位名稱設為自訂活動的API名稱，並將顯示名稱設為自訂活動的顯示名稱。 然後，將型別設定為 `object` 並將欄位群組指派給您在上一步建立的自訂活動欄位群組。 完成後，選取 **[!UICONTROL 套用]**.
+若要新增欄位，請選取加號(`+`)。 以下專案的專案： *[!UICONTROL 未命名的欄位 | 型別]* 隨即顯示。 接下來，使用設定欄位屬性 *[!UICONTROL 欄位屬性]* 面板。 將欄位名稱設為自訂活動的API名稱，並將顯示名稱設為自訂活動的顯示名稱。 然後，將型別設定為 `object` 並將欄位群組指派給您在上一步建立的自訂活動欄位群組。 完成後，選取 **[!UICONTROL 套用]**.
 
 ![具有加號(`+`)簽署選取以便新增欄位。](../../../../images/tutorials/create/marketo-custom-activities/add-new-object.png)
 
@@ -99,19 +99,19 @@ ht-degree: 0%
 
 ![已選取Marketo Engage來源的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/marketo/catalog.png)
 
-### 選擇資料
+### 選取資料
 
 選取 **[!UICONTROL 活動]** 從清單 [!DNL Marketo] 資料集，然後選取 **[!UICONTROL 下一個]**.
 
 ![在已選取活動資料集的來源工作流程中，選取資料步驟。](../../../../images/tutorials/create/marketo-custom-activities/select-data.png)
 
-### 資料流詳細資訊
+### 資料流詳細資料
 
 下一個， [為您的資料流提供資訊](./marketo.md#provide-dataflow-details)，包括資料集和資料流的名稱和說明、您將使用的結構描述及其設定 [!DNL Profile] 擷取、錯誤診斷和部分擷取。
 
 ![資料流詳細資料步驟。](../../../../images/tutorials/create/marketo-custom-activities/dataflow-detail.png)
 
-### 對應
+### 映射
 
 系統會自動填入標準活動欄位的對應，但自訂活動欄位必須手動對應至其對應的目標欄位。
 
@@ -135,7 +135,7 @@ ht-degree: 0%
 
 ![來源和目標資料的所有對應。](../../../../images/tutorials/create/marketo-custom-activities/all-mappings.png)
 
-### 請檢閱
+### 檢閱
 
 此 *[!UICONTROL 檢閱]* 步驟隨即顯示，可讓您在建立新資料流之前對其進行檢閱。 詳細資料會分組到以下類別中：
 
