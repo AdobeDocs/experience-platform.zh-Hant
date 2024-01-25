@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2313'
 ht-degree: 3%
 
 ---
@@ -26,13 +26,6 @@ ht-degree: 3%
 [!DNL Query Editor] 透過連線至 [!DNL Query Service]和查詢只會在此連線作用中時執行。
 
 ## 存取 [!DNL Query Editor] {#accessing-query-editor}
-
->[!CONTEXTUALHELP]
->id="platform_queryservice_create_datagovernance"
->title="資料治理義務"
->abstract="請記住，遵守貴組織的資料控管政策並符合法規要求是您的唯一責任。 Experience Platform提供資料控管工具，供您管理資料使用義務。 在查詢或處理資料之前，套用適當的資料使用標籤。 請參閱檔案以瞭解資料控管工具和最佳實務。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant" text="資料治理概觀"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant" text="資料控管標籤總覽"
 
 在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 查詢]** 在左側導覽功能表中開啟 [!DNL Query Service] 工作區。 接下來，若要開始寫入查詢，請選取 **[!UICONTROL 建立查詢]** 在熒幕的右上方。 此連結可從以下連結的任何頁面取得： [!DNL Query Service] 工作區。
 

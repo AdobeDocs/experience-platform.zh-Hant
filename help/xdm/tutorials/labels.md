@@ -2,10 +2,10 @@
 title: 管理結構描述的資料使用標籤
 description: 瞭解如何在Adobe Experience Platform UI中新增資料使用標籤到Experience Data Model (XDM)結構描述欄位。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
+source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 7%
+source-wordcount: '806'
+ht-degree: 8%
 
 ---
 
@@ -39,12 +39,6 @@ ht-degree: 7%
 >id="platform_schemas_editgovernancelabels"
 >title="編輯控管標籤"
 >abstract="將標籤套用在方案欄位以顯示適用於該特定欄位中包含的資料的使用原則。"
-
->[!CONTEXTUALHELP]
->id="platform_schemas_labelusageacknowledgement"
->title="標籤使用"
->abstract="編輯此物件的標籤之前，請注意下列下游效果：<br>治理原則：使用標籤來治理資料能否啟用到下游目的地。 不正確的標籤使用方式可能會讓下游無法存取資料。<br>同意原則：在區段中包含設定檔時，使用標籤來強制實施客戶同意和偏好設定。 不正確的標籤使用方式可能會讓下游無法存取資料。<br>存取原則：以屬性為基礎的存取控制會使用標籤來決定哪些使用者角色可以存取特定資產。 非預期的標籤使用可能會讓貴組織中的某些人無法使用他們之前有權存取的資產。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=zh-Hant" text="以屬性為基礎的存取控制概觀"
 
 若要開始新增標籤，您必須先 [選取要編輯的現有結構描述](../ui/resources/schemas.md#edit) 或 [建立新結構描述](../ui/resources/schemas.md#create) 以在架構編輯器中檢視其結構。
 

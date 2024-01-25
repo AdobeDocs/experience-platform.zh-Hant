@@ -3,14 +3,19 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制概述
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的相關資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1844'
 ht-degree: 14%
 
 ---
 
-# 以屬性為基礎的存取控制概觀
+# 以屬性為基礎的存取控制概觀 {#attribute-based-access-control-overview}
+
+>[!CONTEXTUALHELP]
+>id="platform_accesscontrol_abac_labelusageaccesspolicy"
+>title="標籤使用存取原則"
+>abstract=""
 
 以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制對特定物件及/或權能的存取。 屬性可以是新增至物件的中繼資料，例如新增至結構欄位或區段的標籤。 管理員定義存取原則，其中包含管理使用者存取許可權的屬性。
 
@@ -103,7 +108,7 @@ ht-degree: 14%
 
 Adobe Experience Platform [!DNL Identity Service] 透過跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 
-作為屬性型存取控制的一部分， `view-identity-graph` 許可權可讓您決定組織中的哪些使用者可以透過使用者介面或API存取身分圖表。 如需詳細資訊，請參閱以下指南： [使用身分圖表檢視器](../../identity-service/ui/identity-graph-viewer.md).
+作為屬性型存取控制的一部分， `view-identity-graph` 許可權可讓您決定組織中的哪些使用者可以透過使用者介面或API存取身分圖表。 如需詳細資訊，請參閱以下指南： [使用身分圖表檢視器](../../identity-service/features/identity-graph-viewer.md).
 
 如需詳細資訊，請參閱 [!DNL Identity Service]，請參閱 [[!DNL Identity Service] 概述](../../identity-service/home.md).
 
