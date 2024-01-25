@@ -2,9 +2,9 @@
 title: Identity Service連結邏輯
 description: 瞭解Identity Service如何連結不同的身分，以建立客戶的完整檢視。
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
+source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,17 @@ ht-degree: 0%
 
 * **設定檔記錄**：這些身分通常來自CRM系統。
 * **體驗事件**：這些身分識別通常來自WebSDK實作或Adobe Analytics來源。
+
+## 建立連結的語意意義
+
+身分代表真實世界的實體。 如果在兩個身分之間建立了連結，則表示兩個身分會彼此相關聯。 以下範例說明此概念：
+
+| 動作 | 已建立的連結 | 含義 |
+| --- | --- | --- |
+| 一般使用者使用電腦登入。 | CRM ID與ECID會連結在一起。 | 使用者(CRM ID)所擁有的裝置具有瀏覽器(ECID)。 |
+| 一般使用者使用iPhone匿名瀏覽。 | IDFA與ECID連結。 | Apple硬體裝置(IDFA) (例如iPhone)會與瀏覽器(ECID)建立關聯。 |
+| 一般使用者先使用Google Chrome，再使用Firefox登入。 | CRM ID已與兩個不同的ECID連結。 | 人員(CRM ID)與2個網頁瀏覽器相關聯(**注意**：每個瀏覽器都有自己的ECID)。 |
+| 資料工程師會擷取CRM記錄，該記錄包含兩個標示為身分的欄位： CRM ID和電子郵件。 | CRM ID與電子郵件已連結。 | 人員(CRM ID)已與此電子郵件地址相關聯。 |
 
 ## 瞭解Identity Service連結邏輯
 
@@ -85,10 +96,13 @@ Identity Service可辨識您的圖形中已存在CRM ID：60013ABC，因此僅�
 | `t=3` | ECID：44675 | 檢視首頁 |
 | `t=4` | ECID：44675， CRM ID： 31260XYZ | 檢視購買記錄 |
 
+每個事件的主要身分將會根據 [如何設定資料元素型別](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*`  — 表示標示為身分的欄位，而ECID標示為主要。
->* 依預設，會將人員識別碼（在此例中為CRM ID）指定為主要身分。 如果人員識別碼不存在，則Cookie識別碼（在此例中為ECID）會成為主要識別碼。
+>* 如果您選取CRM ID作為主要身分，則已驗證的事件（具有包含CRM ID和ECID之身分對應的事件）將具有CRM ID的主要身分。 對於未驗證的事件（具有僅包含ECID之身分對應的事件），將具有ECID的主要身分識別。 Adobe建議使用此選項。
+>
+>* 如果您選取ECID作為主要身分，則無論驗證狀態為何，ECID都會成為主要身分。
 
 在此範例中：
 
