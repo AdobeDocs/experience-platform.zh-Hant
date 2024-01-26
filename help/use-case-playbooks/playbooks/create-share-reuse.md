@@ -4,10 +4,10 @@ title: 建立、共用和重複使用教戰手冊執行個體
 description: 了解如何建立、共用和重複使用教戰手冊執行個體以完成您的行銷使用案例。
 badgeBeta: label="Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '725'
-ht-degree: 100%
+source-wordcount: '745'
+ht-degree: 97%
 
 ---
 
@@ -20,6 +20,11 @@ ht-degree: 100%
 若要使用教戰手冊，請瀏覽至&#x200B;**[!UICONTROL 使用案例] > [!UICONTROL 教戰手冊]**。瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
 
 ## 建立教戰手冊執行個體 {#create-playbook-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_create"
+>title="建立例項"
+>abstract="產生歷程、受眾、結構或目的地等資產清單，以用於歷程或啟用案例。"
 
 在建立教戰手冊執行個體之前，請探索可用的教戰手冊以[探索適合您的教戰手冊](/help/use-case-playbooks/playbooks/discover.md)。當您準備好繼續使用教戰手冊並建立執行個體時，請選取&#x200B;**[!UICONTROL 建立執行個體]**&#x200B;以繼續使用教戰手冊並產生技術資產。
 

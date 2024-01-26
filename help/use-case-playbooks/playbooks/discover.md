@@ -4,10 +4,10 @@ title: 探索正確的教戰手冊
 description: 了解如何探索適合您的使用案例的教戰手冊，並啟用教戰手冊。
 badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 96%
+source-wordcount: '776'
+ht-degree: 91%
 
 ---
 
@@ -51,6 +51,11 @@ ht-degree: 96%
 
 
 ### 摘要 {#summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_assets"
+>title="資產"
+>abstract="這些是行動手冊產生的資產。 建立教戰手冊的例項後，您可以在啟發性的沙箱中檢視資產，並視需要將其提升至其他沙箱。"
 
 檢查摘要章節以了解從教戰手冊建立執行個體後會產生哪些資產。為每個教戰手冊產生的資產都是根據該教戰手冊啟用的使用案例訂製的。如需摘要章節中的所有項目，可在下面取得詳細資訊。
 
