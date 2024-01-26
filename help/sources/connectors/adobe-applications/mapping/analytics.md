@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Analytics來源聯結器的對應欄位
 description: 使用Adobe Analytics來源聯結器將Analytics欄位對應到XDM欄位。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: bb07d45df3ca585b2ca4af07cc991ac0b1e4df12
+source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2388'
 ht-degree: 14%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `m_keywords` | `search.keywords` | 字串 | 用於關鍵字維度的變數。 |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | 整數 | 表示訪客的作業系統的數值ID。 這是根據user_agent資料行。 |
 | `m_page_url` | `web.webPageDetails.URL` | 字串 | 頁面點選的URL。 |
-| `m_pagename_no_url` | `web.webPageDetails.name` | 字串 | 用來填入「頁面」維度的變數。 |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | 字串 | 具有頁面名稱的點選等於1。 這類似於Adobe Analytics頁面檢視量度。 |
 | `m_referrer` | `web.webReferrer.URL` | 字串 | 上一頁的頁面URL。 |
 | `m_search_page_num` | `search.pageDepth` | 整數 | 供所有搜尋頁面排名維度使用。 指出在用戶點進您的網站之前，網站顯示的搜尋結果頁面。 |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | 字串 | 狀態變數。 |
@@ -152,7 +152,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `m_page_event_var1` | `web.webInteraction.URL` | 字串 | 僅用於連結追蹤影像要求中的變數。 此變數包含下載連結、退出連結或自訂連結點選的URL。 |
 | `m_page_event_var2` | `web.webInteraction.name` | 字串 | 僅用於連結追蹤影像要求中的變數。 這會列出連結的自訂名稱（如果已指定）。 |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | 布林值 | 用來填入找不到頁面維度的變數。 此變數應為空白或包含「ErrorPage」。 |
-| `m_pagename_no_url` | `web.webPageDetails.pageViews.value` | 數字 | 頁面名稱（若有設定）。 若未指定頁面，此值會留空。 |
+| `m_pagename_no_url` | `web.webPageDetails.name` | 數字 | 頁面名稱（若有設定）。 若未指定頁面，此值會留空。 |
 | `m_paid_search` | `search.isPaid` | 布林值 | 如果點選符合付費搜尋偵測，則會設定此旗標。 |
 | `m_product_list` | `productListItems[].items` | 陣列 | 產品清單，透過產品變數傳入。 | {SKU （字串），數量（整數），價格總計（數字）} |
 | `m_ref_type` | `web.webReferrer.type` | 字串 | 此數值 ID 表示點擊的反向連結類型。<br/>`1`：網站內<br/>`2`：其他網站<br/>`3`：搜尋引擎<br/>`4`：硬碟<br/>`5`：USENET<br/>`6`：分類/建立書籤（無反向連結）<br/>`7`：電子郵件<br/>`8`：無JavaScript<br/>`9`：社交網路 |
@@ -203,7 +203,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | 字串 | 用於登入頁面原始維度的變數。 訪客的登入頁面的頁面名稱。 |
 | `post_keywords` | `search.keywords` | 字串 | 為點選收集的關鍵字。 |
 | `post_page_url` | `web.webPageDetails.URL` | 字串 | 頁面點選的URL。 |
-| `post_pagename_no_url` | `web.webPageDetails.name` | 字串 | 用來填入「頁面」維度的變數。 |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | 字串 | 具有頁面名稱的點選等於1。 這類似於Adobe Analytics頁面檢視量度。 |
 | `post_purchaseid` | `commerce.order.purchaseID` | 字串 | 用來唯一識別購買行為的變數。 |
 | `post_referrer` | `web.webReferrer.URL` | 字串 | 上一頁的URL。 |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | 字串 | 狀態變數。 |
@@ -233,11 +233,11 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `post_latitude` | `placeContext.geo._schema.latitude` | 數字 | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | 數字 | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | 字串 | 影像要求中傳送的點選型別（標準點選、下載連結、退出連結或自訂連結已點按）。 |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | 數字 | 影像要求中傳送的點選型別（標準點選、下載連結、退出連結或自訂連結已點按）。 |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | 數字 | 如果點選是連結點選，則等於1。 這類似於Adobe Analytics中的頁面事件量度。 |
 | `post_page_event_var1` | `web.webInteraction.URL` | 字串 | 此變數僅用於連結追蹤影像要求。 這是下載連結、退出連結或自訂連結點選的URL。 |
 | `post_page_event_var2` | `web.webInteraction.name` | 字串 | 此變數僅用於連結追蹤影像要求。 這是連結的自訂名稱。 |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | 布林值 | 用於填入找不到頁面維度。 此變數應為空白或包含「ErrorPage」 |
-| `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | 數字 | 頁面名稱（若有設定）。 若未指定頁面，此值會留空。 |
+| `post_pagename_no_url` | `web.webPageDetails.name` | 數字 | 頁面名稱（若有設定）。 若未指定頁面，此值會留空。 |
 | `post_product_list` | `productListItems[].items` | 陣列 | 產品清單，透過產品變數傳入。 | {SKU （字串），數量（整數），價格總計（數字）} |
 | `post_search_engine` | `search.searchEngine` | 字串 | 表示將訪客反向連結至您網站的搜尋引擎數值ID。 |
 | `mvvar1_instances` | `.list.items[]` | 物件 | 變數值的清單。 包含分隔的自訂值清單（視實作而定）。 |
