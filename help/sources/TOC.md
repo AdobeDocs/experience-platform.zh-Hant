@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 4d9c04909cba29b0c6685c357dbb84af9fa14b47
+source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 10%
 
 ---
@@ -303,6 +303,7 @@ ht-degree: 10%
       - 本機系統 {#local-system}
          - [本機檔案上傳](tutorials/ui/create/local-system/local-file-upload.md)
       - 行銷自動化 {#marketing-automation}
+         - [釺焊](tutorials/ui/create/marketing-automation/braze.md)
          - [查特利奧](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
