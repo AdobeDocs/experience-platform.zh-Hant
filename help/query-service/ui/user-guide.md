@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 3%
+source-wordcount: '2550'
+ht-degree: 2%
 
 ---
 
@@ -85,13 +85,13 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 ### 執行選取的查詢 {#execute-selected-query}
 
 如果您已撰寫多個查詢，但只需要執行一個查詢，您可以反白標示所選的查詢並選取
-[!UICONTROL 執行選取的查詢] 圖示。 除非您在編輯器中選取查詢，否則此圖示預設為停用。
+[!UICONTROL 執行選取的查詢] 圖示。 在編輯器中選取查詢語法之前，此圖示預設為停用。
 
 ![查詢編輯器具有 [!UICONTROL 執行選取的查詢] 圖示醒目提示。](../images/ui/query-editor/run-selected-query.png)
 
 ### 結果計數 {#result-count}
 
-「查詢編輯器」有最多50,000列的輸出。 但是，在查詢編輯器主控台中一次只顯示50列。 若要變更主控台中顯示的列數，請選取 **[!UICONTROL 結果計數]** 下拉式清單，然後從50、100、150、300和500值中選擇。
+「查詢編輯器」有最多50,000列的輸出。 您可以選擇在查詢編輯器主控台中一次顯示的列數。 若要變更主控台中顯示的列數，請選取 **[!UICONTROL 結果計數]** 下拉式清單，並從50、100、150、300和500選項中選取。
 
 ![結果計數下拉式清單反白顯示的查詢編輯器。](../images/ui/query-editor/result-count.png)
 
@@ -101,7 +101,7 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 ![SQL輸入欄位和「播放」反白顯示的查詢編輯器。](../images/ui/query-editor/editor.png)
 
-若要將開發時間縮到最短，建議您使用傳回列的限制來開發查詢。 例如 `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`。確認查詢產生預期的輸出後，請移除限制並使用執行查詢 `CREATE TABLE tablename AS SELECT` 以使用輸出產生資料集。
+為了將開發時間減至最少，建議您使用傳回列數的限制來開發查詢。 例如 `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`。確認查詢產生預期的輸出後，請移除限制並使用執行查詢 `CREATE TABLE tablename AS SELECT` 以使用輸出產生資料集。
 
 ## 寫入工具 [!DNL Query Editor] {#writing-tools}
 
@@ -123,6 +123,12 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 ![查詢編輯器 [!UICONTROL 設定文字格式] 和醒目提示的SQL敘述句。](../images/ui/query-editor/format-text.png)
 
+<!-- ### Undo text {#undo-text}
+
+If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
+
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+
 ### 複製SQL {#copy-sql}
 
 選取復製圖示，將SQL從查詢編輯器複製到剪貼簿。 此複製功能可用於查詢範本和查詢編輯器中新建立的查詢。
@@ -134,6 +140,10 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 此 [!DNL Query Editor] 當您撰寫查詢時，會自動建議可能的SQL關鍵字以及資料表或資料行詳細資訊。 自動完成功能預設為啟用，並可透過選取 [!UICONTROL 語法自動完成] 切換至「查詢編輯器」的右上角。
 
 自動完成組態設定是每個使用者設定的，並記得該使用者連續登入的時間。
+
+>[!NOTE]
+>
+>語法自動完成切換功能僅適用於舊版的查詢編輯器。
 
 ![語法自動完成切換的查詢編輯器會反白顯示。](../images/ui/query-editor/auto-complete-toggle.png)
 
@@ -159,21 +169,47 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 [!DNL Query Editor] 會在您撰寫查詢時自動驗證查詢，提供一般SQL驗證和特定執行驗證。 如果查詢下方出現紅色底線（如下圖所示），則表示查詢中有錯誤。
 
+<!-- ... Image below needs updating couldn't replicate the effect -->
+
 ![查詢編輯器輸入以紅色加底線顯示SQL以表示錯誤。](../images/ui/query-editor/syntax-error-highlight.png)
 
 偵測到錯誤時，您可以暫留在SQL程式碼上，檢視特定的錯誤訊息。
+
+<!-- ... Image below needs updating couldn't replicate the effect -->
 
 ![含有錯誤訊息的對話方塊。](../images/ui/query-editor/linting-error.png)
 
 ### 查詢詳細資料 {#query-details}
 
-若要在「查詢編輯器」中檢視查詢，請從以下位置選取任何已儲存的範本： [!UICONTROL 範本] 標籤。 查詢詳細資訊面板提供管理所選查詢的更多資訊和工具。
+若要在「查詢編輯器」中檢視查詢，請從以下位置選取任何已儲存的範本： [!UICONTROL 範本] 標籤。 查詢詳細資訊面板提供管理所選查詢的更多資訊和工具。 此外，也會顯示有用的中繼資料，例如上次修改查詢的時間以及修改者（如適用）。
+
+>[!NOTE]
+>
+>此 [!UICONTROL 檢視排程]， [!UICONTROL 新增排程] 和 [!UICONTROL 刪除查詢] 只有在查詢已儲存為範本後，才可使用選項。 此 [!UICONTROL 新增排程] 選項會直接將您從查詢編輯器帶往排程產生器。 此 [!UICONTROL 檢視排程] 選項會直接帶您前往該查詢的排程詳細目錄。 請參閱查詢排程檔案，以瞭解如何 [在UI中建立查詢排程](./query-schedules.md#create-schedule).
 
 ![查詢編輯器會醒目提示查詢詳細資訊面板。](../images/ui/query-editor/query-details.png)
 
-此面板可讓您直接從UI產生輸出資料集、刪除或命名顯示的查詢，以及新增排程至查詢。
+從詳細資訊面板，您可以直接從UI產生輸出資料集、刪除或命名顯示的查詢、檢視查詢執行排程，以及將查詢新增到排程。
 
-此面板也會顯示有用的中繼資料，例如上次修改查詢的時間及修改者（如適用）。 若要產生資料集，請選取 **[!UICONTROL 輸出資料集]**. 此 **[!UICONTROL 輸出資料集]** 對話方塊隨即顯示。 輸入名稱和說明，然後選取 **[!UICONTROL 執行查詢]**. 新資料集會顯示在 **[!UICONTROL 資料集]** 標籤上的 [!DNL Query Service] 使用者介面於 [!DNL Platform].
+若要產生輸出資料集，請選取 **[!UICONTROL 以CTAS身分執行]**. 此 **[!UICONTROL 輸入輸出資料集詳細資料]** 對話方塊隨即顯示。 輸入名稱和說明，然後選取 **[!UICONTROL 以CTAS身分執行]**. 新資料集會顯示在 **[!UICONTROL 資料集]** 瀏覽標籤。 另請參閱 [檢視資料集檔案](../../catalog/datasets/user-guide.md#view-datasets) 以進一步瞭解貴組織的可用資料集。
+
+>[!NOTE]
+>
+>此 [!UICONTROL 以CTAS身分執行] 選項僅在查詢具有 **非** 已排程。
+
+![此 [!UICONTROL 輸入輸出資料集詳細資料] 對話方塊。](../images/ui/query-editor/output-dataset-details.png)
+
+在您執行 **[!UICONTROL 以CTAS身分執行]** 動作，系統會顯示一則確認訊息，通知您動作成功。 此快顯訊息包含一個連結，提供導覽至查詢記錄工作區的一個便利方式。 請參閱 [查詢記錄檔案](./query-logs.md) 以取得關於查詢記錄的詳細資訊。
+
+### 正在儲存查詢 {#saving-queries}
+
+此 [!DNL Query Editor] 提供儲存功能，可讓您儲存查詢並稍後處理。 若要儲存查詢，請選取 **[!UICONTROL 儲存]** 在的右上角 [!DNL Query Editor]. 在儲存查詢之前，必須使用 **[!UICONTROL 查詢詳細資料]** 面板。
+
+>[!NOTE]
+>
+>使用查詢編輯器命名並儲存在中的查詢，可在查詢控制面板中作為範本使用 [!UICONTROL 範本] 標籤。 請參閱 [範本檔案](./query-templates.md) 以取得詳細資訊。
+
+當您在「查詢編輯器」中儲存查詢時，會彈出一則確認訊息，通知您操作成功。 此快顯訊息包含連結，提供導覽至查詢排程工作區的便利方式。 請參閱 [排程查詢檔案](./query-schedules.md) 以瞭解如何以自訂步調執行查詢。
 
 ### 排定的查詢 {#scheduled-queries}
 
@@ -185,13 +221,6 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 任何排定的查詢都會新增到 [!UICONTROL 排定的查詢] 標籤。 您可以從該工作區透過UI監視所有已排程查詢工作的狀態。 在 [!UICONTROL 排定的查詢] 索引標籤中，您可以找到有關查詢執行及訂閱警報的重要資訊。 可用的資訊包括狀態、排程詳細資料，以及執行失敗時的錯誤訊息/代碼。 請參閱 [監視排定的查詢檔案](./monitor-queries.md) 以取得詳細資訊。
 
-### 正在儲存查詢 {#saving-queries}
-
-此 [!DNL Query Editor] 提供儲存功能，可讓您儲存查詢並稍後處理。 若要儲存查詢，請選取 **[!UICONTROL 儲存]** 在的右上角 [!DNL Query Editor]. 在儲存查詢之前，必須使用 **[!UICONTROL 查詢詳細資料]** 面板。
-
->[!NOTE]
->
->使用查詢編輯器命名並儲存在中的查詢，可在查詢控制面板中作為範本使用 [!UICONTROL 範本] 標籤。 請參閱 [範本檔案](./query-templates.md) 以取得詳細資訊。
 
 ### 如何尋找先前的查詢 {#previous-queries}
 
@@ -219,7 +248,7 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 
 ### 查詢結果 {#query-results}
 
-查詢完成後，結果會顯示在 **[!UICONTROL 結果]** 標籤，在 **[!UICONTROL 主控台]** 標籤。 此檢視顯示查詢的表格輸出，最多可顯示100列。 此檢視可讓您驗證您的查詢是否產生預期的輸出。 若要使用您的查詢產生資料集，請移除傳回列的限制，並使用執行查詢 `CREATE TABLE tablename AS SELECT` 以使用輸出產生資料集。 請參閱 [產生資料集教學課程](./create-datasets.md) 有關如何從中的查詢結果產生資料集的指示 [!DNL Query Editor].
+查詢完成後，結果會顯示在 **[!UICONTROL 結果]** 標籤，在 **[!UICONTROL 主控台]** 標籤。 此檢視顯示您查詢的表格輸出，根據您選擇顯示50到500列結果 [結果計數](#result-count). 此檢視可讓您驗證您的查詢是否產生預期的輸出。 若要使用您的查詢產生資料集，請移除傳回列的限制，並使用執行查詢 `CREATE TABLE tablename AS SELECT` 以使用輸出產生資料集。 請參閱 [產生資料集教學課程](./create-datasets.md) 有關如何從中的查詢結果產生資料集的指示 [!DNL Query Editor].
 
 ![查詢編輯器控制檯的「結果」索引標籤會顯示查詢執行的結果。](../images/ui/query-editor/query-results.png)
 

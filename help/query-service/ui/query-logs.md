@@ -2,9 +2,9 @@
 title: 查詢記錄
 description: 每次執行查詢時都會自動產生查詢記錄，並可透過UI取得查詢記錄以協助疑難排解。 本檔案概述如何使用及導覽UI的「查詢服務記錄檔」區段。
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,13 @@ A [每個日誌表格資料欄的說明](./overview.md#log) 您可以在查詢�
 
 ![查詢記錄工作區中選取了一列，並且右側邊欄中的記錄資料反白顯示。](../images/ui/query-log/log-details.png)
 
-在記錄詳細資料面板中，您可以選取新的輸出資料集，並檢視或複製執行中使用的完整SQL查詢。
+在記錄詳細資訊面板中，您可以執行各種動作。 您可以以CTAS身分執行查詢，這會建立新的輸出資料集，請參閱或複製執行中使用的完整SQL查詢，或刪除查詢。
 
-![查詢記錄工作區中選取了一列，並反白顯示輸出資料集和SQL查詢。](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>的選項 [!UICONTROL 以CTAS身分執行] 僅適用於SELECT查詢。
+
+![查詢記錄工作區中選取了某一列，以CTAS身分執行，刪除查詢和復本SQL圖示突出顯示。](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -75,13 +79,13 @@ A [每個日誌表格資料欄的說明](./overview.md#log) 您可以在查詢�
 
 下表證明了每個篩選的說明。
 
-| 篩選 | 說明 |
+| 篩選器 | 說明 |
 | ------ | ----------- |
 | [!UICONTROL 排除儀表板查詢] | 此核取方塊預設為啟用，並排除用於產生深入分析的查詢所產生的記錄。 這些查詢是系統產生的，模糊了使用者產生的記錄，這些記錄是監視、管理和疑難排解所必需的。 若要檢視系統產生的記錄，請取消選取核取方塊。 |
 | [!UICONTROL 開始日期] | 若要篩選在特定期間內建立之查詢的記錄，請設定 [!UICONTROL 開始] 和 [!UICONTROL 結束] 中的日期 [!UICONTROL 開始日期] 區段。 |
 | [!UICONTROL 完成日期] | 若要篩選在特定期間內完成的查詢記錄，請設定 [!UICONTROL 開始] 和 [!UICONTROL 結束] 中的日期 [!UICONTROL 完成日期] 區段。 |
 | [!UICONTROL 狀態] | 若要根據以下專案篩選記錄檔： [!UICONTROL 狀態] 在查詢中，選取適當的選項按鈕。 可用的選項包括 [!UICONTROL 已提交]， [!UICONTROL 進行中]， [!UICONTROL 成功]、和 [!UICONTROL 已失敗]. 您一次只能根據一個狀態條件篩選記錄。 |
-| [!UICONTROL 用戶端] | 若要根據使用的查詢使用者端篩選記錄，請在任意文字欄位中輸入下列其中一個接受的值： `API`， `Adobe Query Service UI`，或 `QsAccel`. |
+| [!UICONTROL 使用者端] | 若要根據使用的查詢使用者端篩選記錄，請在任意文字欄位中輸入下列其中一個接受的值： `API`， `Adobe Query Service UI`，或 `QsAccel`. |
 | [!UICONTROL 我的查詢] | 使用 [!UICONTROL 我的查詢] 切換以篩選由您執行的查詢記錄。 |
 | [!UICONTROL 查詢記錄ID] | 若要根據查詢的唯一記錄ID進行篩選，請在任意文字欄位中輸入記錄ID。 此資訊可在以下網址找到： [!UICONTROL 記錄詳細資料]. |
 

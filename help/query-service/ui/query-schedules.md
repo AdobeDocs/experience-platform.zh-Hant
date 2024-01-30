@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 75ef9c58aa7c5f1cc628d1f13b6c5f56b362458a
+source-git-commit: 7d2027bf315ae6e354c906e4aabf6371a92e4148
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
@@ -19,19 +19,31 @@ ht-degree: 0%
 
 任何排定的查詢都會新增到 [!UICONTROL 排定的查詢] 標籤。 您可以從該工作區透過UI監視所有已排程查詢工作的狀態。 在 [!UICONTROL 排定的查詢] 索引標籤可讓您找到有關查詢執行的重要資訊，並訂閱警示。 可用的資訊包括狀態、排程詳細資料，以及執行失敗時的錯誤訊息/代碼。 請參閱 [監視排定的查詢檔案](./monitor-queries.md) 以取得詳細資訊。
 
+此工作流程涵蓋查詢服務UI中的排程程式。 若要瞭解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
+
 ## 建立查詢排程 {#create-schedule}
 
-若要將排程新增至查詢，請從 [!UICONTROL 範本] 標籤或 [!UICONTROL 排定的查詢] 標籤以導覽至「查詢編輯器」。
+若要排程查詢，請從下列任一選項中選取查詢範本： [!UICONTROL 範本] 標籤或 [!UICONTROL 範本] 的欄 [!UICONTROL 排定的查詢] 標籤。 選取範本名稱可將您導覽至查詢編輯器。
 
-若要瞭解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
+如果您從「查詢編輯器」存取已儲存的查詢，則可以建立查詢的排程，或從詳細資訊面板檢視查詢的排程。
 
-當從查詢編輯器存取已儲存的查詢時， [!UICONTROL 時程表] 索引標籤會顯示在查詢名稱下方。 選取 **[!UICONTROL 時程表]**.
+>[!TIP]
+>
+>選取 **[!UICONTROL 檢視排程]** 若要瀏覽至「排程」工作區，並快速檢視任何排定的查詢執行。
+
+![具有的查詢編輯器 [!UICONTROL 檢視排程] 和 [!UICONTROL 新增排程] 反白顯示。](../images/ui/query-schedules/view-add-schedule.png)
+
+選取 **[!UICONTROL 新增排程]** 導覽至 [排程詳細資訊頁面](#schedule-details).
+
+或者，選取 **[!UICONTROL 時程表]** 索引標籤在查詢名稱下方。
 
 ![Query Editor中的Schedules索引標籤會反白顯示。](../images/ui/query-schedules/schedules-tab.png)
 
 排程工作區隨即顯示。 選取 **[!UICONTROL 新增排程]** 以建立排程。
 
 ![「查詢編輯器排程」工作區中的「新增排程」會反白顯示。](../images/ui/query-schedules/add-schedule.png)
+
+### 編輯排程詳細資料 {#schedule-details}
 
 便會顯示「排程詳細資訊」頁面。 您可以在此頁面選擇排定查詢的頻率、開始和結束日期、排定查詢在一週中的哪一天執行，以及要將查詢匯出到哪個資料集。
 
@@ -45,7 +57,7 @@ ht-degree: 0%
 - **[!UICONTROL 每月]**：選取的查詢將在您選取的日期、時間和日期期間每個月執行。 請注意，所選的時間為 **UTC**，而不是您的當地時區。
 - **[!UICONTROL 每年]**：選取的查詢將每年在您選取的日期、月、時間和日期期間執行。 請注意，所選的時間為 **UTC**，而不是您的當地時區。
 
-對於輸出資料集，您可以選擇使用現有資料集或建立新資料集。
+對於輸出資料集，您可以選擇使用附加至現有資料集或建立並附加至新資料集。 第二個選項表示如果您是第一次執行查詢並建立資料集，任何後續執行都會將資料插入該資料集。
 
 >[!IMPORTANT]
 >
@@ -66,6 +78,18 @@ ht-degree: 0%
 確認所有這些詳細資料後，請選取 **[!UICONTROL 儲存]** 以建立排程。 您會回到顯示新建立之排程詳細資訊的排程工作區，包括排程ID、排程本身以及排程的輸出資料集。 您可以使用排程ID來查詢排程查詢本身執行的詳細資訊。 若要進一步瞭解，請閱讀 [已排程查詢執行端點指南](../api/runs-scheduled-queries.md).
 
 ![已反白新建立排程的排程工作區。](../images/ui/query-schedules/schedules-workspace.png)
+
+## 檢視排定的查詢執行 {#scheduled-query-runs}
+
+若要檢視查詢範本排定的執行清單，請導覽至 [!UICONTROL 排定的查詢] 標籤並從可用清單中選取範本名稱。
+
+![已排程查詢索引標籤中反白了已命名的範本。](../images/ui/query-schedules/view-scheduled-runs.png)
+
+該排定查詢的查詢執行清單隨即顯示。
+
+![「已排程查詢」工作區的詳細資訊區段，其中包含已排程查詢的查詢執行清單醒目提示。](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+請參閱 [monitor scheduled queried guide](./monitor-queries.md#inline-actions) 有關如何透過UI監視所有查詢作業狀態的完整資訊。
 
 ## 刪除或停用排程 {#delete-schedule}
 

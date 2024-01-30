@@ -2,10 +2,10 @@
 title: 引數化查詢
 description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 10%
+source-wordcount: '690'
+ht-degree: 11%
 
 ---
 
@@ -47,21 +47,17 @@ SELECT
 
 若要在UI中建立引數化查詢，請導覽至「查詢編輯器」。 請參閱以下小節： [存取查詢編輯器](./user-guide.md#accessing-query-editor) 以取得更多指示。
 
-使用 `'$'` 前置詞，在文本編輯器中將查詢參數輸入到查詢中。接下來，將索引鍵的缺少值新增至 [!UICONTROL 查詢引數] 區段。 如果您忽略將值新增到任何必要的索引鍵，則無法執行查詢。 警示圖示(![警示圖示。](../images/ui/parameterized-queries/alert-icon.png))會出現在任何空白專案旁的「查詢引數」區段 [!UICONTROL 值] 輸入欄位。
+使用 `'$'` 前置詞，在文本編輯器中將查詢參數輸入到查詢中。接下來，選取 **[!UICONTROL 查詢引數]** 標籤進行篩選 [!UICONTROL 主控台] 為索引鍵新增缺少的值。 如果您忽略將值新增到任何必要的索引鍵，則無法執行查詢。 警示圖示(![警示圖示。](../images/ui/parameterized-queries/alert-icon.png))會出現在任何空白專案旁的「查詢引數」區段 [!UICONTROL 值] 輸入欄位。
+
+>[!NOTE]
+>
+>如果查詢未採用引數，您仍可在「查詢編輯器」中輸入不必要的引數。 查詢編輯器會忽略所有不必要的索引鍵值配對，而這些配對對查詢的執行或結果沒有影響。
 
 ![具有引數化查詢的查詢編輯器和「查詢引數」區段會反白顯示。](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >變更索引標籤 [!UICONTROL 查詢引數] 至 [!UICONTROL 主控台] 以檢視查詢的主控台輸出。
-
-如果您移除引數，並嘗試在執行查詢後再次執行查詢，則會在 [!UICONTROL 查詢引數] 區段來警示您。
-
->[!NOTE]
->
->如果查詢未採用引數，您仍可在「查詢編輯器」中輸入不必要的引數。 查詢編輯器會忽略所有不必要的索引鍵值配對，而這些配對對查詢的執行或結果沒有影響。
-
-![查詢編輯器的空白值欄位和查詢引數錯誤會醒目提示。](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## 使用查詢記錄檔詳細資料檢查引數值 {#check-parameter-values}
 
