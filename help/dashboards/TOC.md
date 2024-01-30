@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform 儀表板說明
 breadcrumb-title: 儀表板指南
 user-guide-description: 了解如何透過可自訂的儀表板在 Experience Platform 視覺化資料。
 feature: Dashboards
-source-git-commit: ea9cfa38ae861fd5003bea55b17a473aaf2979d5
+source-git-commit: 643e70bb2e55c2fad89fdf784298f7ac6f98397e
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 36%
+ht-degree: 32%
 
 ---
 
@@ -38,4 +38,5 @@ ht-degree: 36%
    * [Power BI](integrations/power-bi.md)
 * [查詢儀表板資料集](query.md)
 * [Real-time Customer Data Platform Insights資料模型](cdp-insights-data-model.md)
+* [檢視分析SQL](view-sql.md)
 * [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)

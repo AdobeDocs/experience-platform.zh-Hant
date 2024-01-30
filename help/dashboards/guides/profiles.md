@@ -4,10 +4,10 @@ title: 設定檔儀表板指南
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織即時客戶設定檔資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 10%
+source-wordcount: '4996'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 >
 >自拍攝快照以來對資料所做的任何變更或更新都不會反映在儀表板中，直到拍攝下一個快照為止。
 
-## 探索設定檔儀表板
+## 探索設定檔控制面板 {#explore-dashboard}
 
 若要導覽至Platform UI中的設定檔控制面板，請選取「 」 **[!UICONTROL 設定檔]** 在左側欄中，然後選取 **[!UICONTROL 概觀]** 標籤來顯示控制面板。
 
@@ -37,7 +37,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ![Experience Platform設定檔控制面板，醒目提示設定檔和概觀。](../images/profiles/dashboard-overview.png)
 
-### 修改設定檔控制面板
+### 修改設定檔儀表板 {#modify-dashboard}
 
 您可以選取「輪廓」圖示板的外觀 **[!UICONTROL 修改儀表板]**. 您可以移動、新增、調整大小及移除儀表板中的Widget，也可以存取 **[!UICONTROL Widget資料庫]** 探索可用的Widget，並為您的組織建立自訂Widget。
 
@@ -50,6 +50,10 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 ![強調顯示「設定檔」儀表板概述中的新增Widget。](../images/profiles/profiles-overview-add-widget.png)
 
 在Widget資料庫中，您可以瀏覽標準與自訂對象Widget的選取專案。 如需如何新增Widget的相關資訊，請參閱如何新增Widget的程式庫檔案 [新增Widget](../customize/widget-library.md#add-widgets).
+
+### 檢視SQL {#view-sql}
+
+您可以透過開啟「 」按鈕來檢視產生在控制面板上視覺化分析的SQL。 [!UICONTROL 概觀] 工作區。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要進一步瞭解此功能，請參閱 [檢視SQL UI指南](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -386,7 +390,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="單一身分識別設定檔"
 >abstract="此介面工具會提供您組織的設定檔計數，這些設定檔只有一種可以建立其身分識別的 ID 類型。此 ID 類型可以是電子郵件或 ECID。"
 
-此 [!UICONTROL 單一身分設定檔] Widget會提供貴組織只有一種型別ID型別的設定檔計數，以建立其身分。 此 ID 類型可以是電子郵件或 ECID。設定檔計數是從最近快照中所包含的資料產生。
+此 [!UICONTROL 單一身分設定檔] Widget會提供貴組織只有一種型別ID型別的設定檔計數，以建立其身分。 此ID型別可以是電子郵件或ECID。 設定檔計數是從最近快照中所包含的資料產生。
 
 ![單一身分設定檔Widget。](../images/profiles/single-identity-profiles.png)
 

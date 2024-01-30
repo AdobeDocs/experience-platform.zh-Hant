@@ -4,10 +4,10 @@ title: 目的地儀表板指南
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織作用中目的地的重要資訊。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3171'
-ht-degree: 20%
+source-wordcount: '3244'
+ht-degree: 19%
 
 ---
 
@@ -51,13 +51,17 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 在Widget資料庫中，您可以瀏覽標準與自訂對象Widget的選取專案。 如需如何新增Widget的相關資訊，請參閱如何新增Widget的程式庫檔案 [新增Widget](../customize/widget-library.md#add-widgets).
 
+### 檢視SQL {#view-sql}
+
+您可以透過開啟「 」按鈕來檢視產生在控制面板上視覺化分析的SQL。 [!UICONTROL 概觀] 工作區。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要進一步瞭解此功能，請參閱 [檢視SQL UI指南](../view-sql.md).
+
 ## 預設Widget {#default-widgets}
 
 Adobe Experience Platform的所有新執行個體都會提供預設Widget載出，以強調資料中最新可用的深入分析。 下列Widget從一開始便已在您的區段檢視中預先設定。 有關Widget用途和功能的完整詳細資訊，請參閱下文。
 
 * [[!UICONTROL 最常用的目的地]](#most-used-destinations)
 * [[!UICONTROL 最近建立的目的地]](#recently-created-destinations)
-* [[!UICONTROL 最近啟動的區段]](#recently-activated-segments)
+* [[!UICONTROL 最近啟用的區段]](#recently-activated-segments)
 
 >[!NOTE]
 >
@@ -87,9 +91,9 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 * [[!UICONTROL 對象規模趨勢]](#audience-size-trend)
 * [[!UICONTROL 未對應對象 (依身分識別)]](#unmapped-audiences-by-identity)
 * [[!UICONTROL 已對應對象 (依身分識別)]](#mapped-audiences-by-identity)
-* [[!UICONTROL 常見對象]](#common-audiences)
+* [[!UICONTROL 通用對象]](#common-audiences)
 * [[!UICONTROL 對應的對象]](#mapped-audiences)
-* [[!UICONTROL 已對應對象的健康情況]](#mapped-audience-health)
+* [[!UICONTROL 對應的對象健康狀況]](#mapped-audience-health)
 * [[!UICONTROL 目的地計數]](#destinations-count)
 * [[!UICONTROL 目的地狀態]](#destination-status)
 * [[!UICONTROL 依目的地平台區分的有效目的地]](#active-destinations-by-destination-platform)
@@ -192,7 +196,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 此 **[!UICONTROL 依身分割槽分的未對應對象]** widget列出前五名 **未對應** 依指定目的地和身分的遞減身分計數排名的對象。 它會根據所選的ID反白標示對對應至所選目的地帳戶最有利的受眾。
 
-目的地ID下拉式清單會篩選您的可用對象。  下拉選單中列出的篩選器 ID 會根據在概觀頁面頂端選取的目的地帳戶而變更。
+目的地ID下拉式清單會篩選您的可用對象。 下拉式清單中列出的篩選器ID會隨著在概覽頁面頂端選取的目的地帳戶而改變。
 
 身分欄會計算對象中，可能對應至在Widget ID下拉式選單中所選ID的來源ID數量。
 

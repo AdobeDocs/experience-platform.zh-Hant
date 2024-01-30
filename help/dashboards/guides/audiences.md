@@ -4,9 +4,9 @@ title: Audiences控制面板指南
 description: Adobe Experience Platform提供一個控制面板，您可以透過它檢視有關您組織已建立之對象的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3053'
+source-wordcount: '3133'
 ht-degree: 9%
 
 ---
@@ -50,6 +50,10 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 ![此 [!UICONTROL 受眾] 儀表板總覽 [!UICONTROL 新增Widget] 反白顯示。](../images/audiences/audiences-overview-add-widget.png)
 
 在Widget資料庫中，您可以瀏覽標準與自訂對象Widget的選取專案。 如需如何新增Widget的相關資訊，請參閱如何新增Widget的程式庫檔案 [新增Widget](../customize/widget-library.md#add-widgets).
+
+### 檢視SQL {#view-sql}
+
+您可以透過開啟「 」按鈕來檢視產生在控制面板上視覺化分析的SQL。 [!UICONTROL 概觀] 工作區。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要進一步瞭解此功能，請參閱 [檢視SQL UI指南](../view-sql.md).
 
 ## 選取對象 {#select-audience}
 
