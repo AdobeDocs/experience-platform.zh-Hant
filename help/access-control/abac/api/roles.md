@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 角色API端點
 description: 屬性式存取控制API中的/roles端點可讓您以程式設計方式管理Adobe Experience Platform中的角色。
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: 4b48fa5e9a1e9933cd33bf45b73ff6b0d831f06f
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 4%
 
 ---
@@ -440,13 +440,13 @@ curl -X PUT \
 
 **回應**
 
-成功會傳回您更新的角色，包括其名稱、說明和角色型別的新值。
+成功的回應會傳回您更新的角色，包括其名稱、說明和角色型別的新值。
 
 ```json
 {
   "id": "3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809",
-  "name": "Administrator Role",
-  "description": "Role with permission sets for admin type of access",
+  "name": "Administrator role for ACME",
+  "description": "New administrator role for ACME",
   "roleType": "user-defined",
   "permissionSets": [
     "manage-datasets",
@@ -486,7 +486,7 @@ PATCH若要更新與角色相關聯的主體，請向 `/roles` 端點，同時�
 **API格式**
 
 ```http
-PATCH /roles/{ROLE_ID}
+PATCH /roles/{ROLE_ID}/subjects
 ```
 
 | 參數 | 說明 |
@@ -520,7 +520,34 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 **回應**
 
-成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
+成功的回應會傳回您更新的角色，包括主題的新值。
+
+```json
+{
+  "subjects": [
+    [
+      {
+        "subjectId": "03Z07HFQCCUF3TUHAX274206@AdobeID",
+        "subjectType": "user"
+      }
+    ]
+  ],
+  "_page": {
+    "limit": 1,
+    "count": 1
+  },
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects",
+      "templated": true
+    },
+    "page": {
+      "href": "https://platform.adobe.io:443/data/foundation/access-control/administration/roles/{ROLE_ID}/subjects?limit={limit}&start={start}&orderBy={orderBy}&property={property}",
+      "templated": true
+    }
+  }
+}
+```
 
 ## 刪除角色 {#delete}
 

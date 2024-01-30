@@ -3,10 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理角色許可權
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面設定角色許可權的相關資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 3%
+source-wordcount: '984'
+ht-degree: 2%
 
 ---
 
@@ -155,9 +155,9 @@ UI中的角色可使用下列篩選器：
 
 您將會返回 **[!UICONTROL 使用者群組]** 標籤。
 
-## 透過產品設定檔將使用者新增到 Experience Platform
+## 透過角色新增使用者至Experience Platform
 
-若要將使用者新增至產品設定檔，請登入Admin Console並選取 **[!UICONTROL 新增使用者]**
+若要將使用者新增至角色，請登入Admin Console並選取 **[!UICONTROL 新增使用者]**
 
 ![product-profile-add-users](../../images/flac-ui/product-profile-add-users.png)
 

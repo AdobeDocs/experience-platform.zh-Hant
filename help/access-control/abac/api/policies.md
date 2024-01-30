@@ -2,11 +2,11 @@
 keywords: Experience Platform；首頁；熱門主題；API；屬性型存取控制；屬性型存取控制
 solution: Experience Platform
 title: 存取控制原則API端點
-description: 屬性式存取控制API中的/policies端點可讓您以程式設計方式管理Adobe Experience Platform中的原則。
+description: 以屬性為基礎的存取控制API中的/policies端點可讓您以程式設計方式管理Adobe Experience Platform中的原則。
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1433'
 ht-degree: 2%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 2%
 >
 >如果傳遞的是使用者權杖，則權杖的使用者必須具有請求組織的「組織管理員」角色。
 
-存取控制原則是將屬性集合在一起以建立允許和不允許動作的宣告。 這些原則可以是本機或全域，並且可以覆寫其他原則。 此 `/policies` 屬性型存取控制API中的端點可讓您以程式設計方式管理原則，包括管理原則的規則相關資訊及其各自的主題條件。
+存取控制原則是將屬性集合在一起，以建立允許和不允許動作的陳述式。 這些原則可以是本機或全域，並且可以覆寫其他原則。 此 `/policies` 以屬性為基礎的存取控制API中的端點可讓您以程式設計方式管理原則，包括管理原則的規則相關資訊及其各自的主題條件。
 
 >[!IMPORTANT]
 >
->此端點不可與 `/policies` 中的端點 [原則服務API](../../../data-governance/api/policies.md)，用來管理資料使用原則。
+>此端點切勿與 `/policies` 中的端點 [原則服務API](../../../data-governance/api/policies.md)，用來管理資料使用原則。
 
 ## 快速入門
 
-本指南中使用的API端點是以屬性為基礎的存取控制API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點屬於屬性型存取控制API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
 
 ## 擷取原則清單 {#list}
 
@@ -132,25 +132,25 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用於查詢、更新和刪除原則。 |
-| `imsOrgId` | 可存取查詢之原則的組織。 |
+| `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用來查詢、更新和刪除原則。 |
+| `imsOrgId` | 可存取查詢原則的組織。 |
 | `createdBy` | 建立原則的使用者ID。 |
 | `createdAt` | 建立原則的時間。 此 `createdAt` 屬性會顯示在unix epoch時間戳記中。 |
 | `modifiedBy` | 上次更新原則的使用者ID。 |
 | `modifiedAt` | 上次更新原則的時間。 此 `modifiedAt` 屬性會顯示在unix epoch時間戳記中。 |
 | `name` | 原則的名稱。 |
-| `description` | （選用）可新增的屬性，以提供特定原則的進一步資訊。 |
+| `description` | （選用）可新增的屬性，以提供有關特定原則的進一步資訊。 |
 | `status` | 原則的目前狀態。 此屬性定義原則目前是否為 `active` 或 `inactive`. |
-| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，會請求存取資源以執行動作。 在這種情況下， `subjectCondition` 是套用至主旨屬性的類似查詢條件。 |
-| `rules` | 定義原則的規則集。 規則定義哪些屬性組合已獲授權，主體才能成功對資源執行動作。 |
-| `rules.effect` | 考量以下專案的值後所產生的影響： `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
-| `rules.resource` | 主體可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器，甚至API。 |
-| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，這有助於決定針對該結構描述的操作是允許還是不允許的。 |
+| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，需要存取資源以執行動作。 在這種情況下， `subjectCondition` 是套用至主旨屬性的類似查詢條件。 |
+| `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
+| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
+| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
 | `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
 
-## 依ID查詢原則詳細資料 {#lookup}
+## 依ID查詢原則詳細資訊 {#lookup}
 
-向發出GET要求 `/policies` 端點時，在請求路徑中提供原則ID以擷取有關該個別原則的資訊。
+向發出GET要求 `/policies` 端點，同時在請求路徑中提供原則ID以擷取該個別原則的資訊。
 
 **API格式**
 
@@ -160,11 +160,11 @@ GET /policies/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| {POLICY_ID} | 您要擷取之原則的ID。 |
+| {POLICY_ID} | 您要擷取的原則識別碼。 |
 
 **要求**
 
-下列要求會擷取個別原則的相關資訊。
+以下請求會擷取個別原則的相關資訊。
 
 ```shell
 curl -X GET \
@@ -176,58 +176,72 @@ curl -X GET \
 
 **回應**
 
-成功的要求會傳回有關查詢的原則ID的資訊。
+成功的要求會傳回查詢原則ID的相關資訊。
 
 ```json
 {
-    "id": "13138ef6-c007-495d-837f-0a248867e219",
-    "imsOrgId": "{IMS_ORG}",
-    "createdBy": "{CREATED_BY}",
-    "createdAt": 1652859368555,
-    "modifiedBy": "{MODIFIED_BY}",
-    "modifiedAt": 1652890780206,
-    "name": "Documentation-Copy",
-    "description": "xyz",
-    "status": "active",
-    "subjectCondition": null,
-    "rules": [
+  "policies": [
+    {
+      "id": "7019068e-a3a0-48ce-b56b-008109470592",
+      "imsOrgId": "5555467B5D8013E50A494220@AdobeOrg",
+      "createdBy": "example@AdobeID",
+      "createdAt": 1652892767559,
+      "modifiedBy": "example@AdobeID",
+      "modifiedAt": 1652895736367,
+      "name": "schema-field",
+      "description": "schema-field",
+      "status": "inactive",
+      "subjectCondition": null,
+      "rules": [
         {
-            "effect": "Permit",
-            "resource": "orgs/{IMS_ORG}/sandboxes/ro-sand/schemas/*/schema-fields/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"and\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/xql/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.read",
+            "com.adobe.action.write",
+            "com.adobe.action.view"
+          ]
         },
         {
-            "effect": "Deny",
-            "resource": "orgs/{IMS_ORG}/sandboxes/*/segments/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Permit",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/*/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.delete"
+          ]
+        },
+        {
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/delete-sandbox-adfengine-test-8/segments/*",
+          "condition": "{\"!\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}",
+          "actions": [
+            "com.adobe.action.write"
+          ]
         }
-    ],
-    "_etag": "\"0300d43c-0000-0200-0000-62851c9c0000\""
+      ],
+      "etag": "\"0300593f-0000-0200-0000-62852ff80000\""
+    }
+  ]
 }
 ```
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用於查詢、更新和刪除原則。 |
-| `imsOrgId` | 可存取查詢之原則的組織。 |
+| `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用來查詢、更新和刪除原則。 |
+| `imsOrgId` | 可存取查詢原則的組織。 |
 | `createdBy` | 建立原則的使用者ID。 |
 | `createdAt` | 建立原則的時間。 此 `createdAt` 屬性會顯示在unix epoch時間戳記中。 |
 | `modifiedBy` | 上次更新原則的使用者ID。 |
 | `modifiedAt` | 上次更新原則的時間。 此 `modifiedAt` 屬性會顯示在unix epoch時間戳記中。 |
 | `name` | 原則的名稱。 |
-| `description` | （選用）可新增的屬性，以提供特定原則的進一步資訊。 |
+| `description` | （選用）可新增的屬性，以提供有關特定原則的進一步資訊。 |
 | `status` | 原則的目前狀態。 此屬性定義原則目前是否為 `active` 或 `inactive`. |
-| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，會請求存取資源以執行動作。 在這種情況下， `subjectCondition` 是套用至主旨屬性的類似查詢條件。 |
-| `rules` | 定義原則的規則集。 規則定義哪些屬性組合已獲授權，主體才能成功對資源執行動作。 |
-| `rules.effect` | 考量以下專案的值後所產生的影響： `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
-| `rules.resource` | 主體可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器，甚至API。 |
-| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，這有助於決定針對該結構描述的操作是允許還是不允許的。 |
+| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，需要存取資源以執行動作。 在這種情況下， `subjectCondition` 是套用至主旨屬性的類似查詢條件。 |
+| `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
+| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
+| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
 | `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
 
 
@@ -243,7 +257,7 @@ POST /policies
 
 **要求**
 
-下列要求會建立名為的新原則： `acme-integration-policy`.
+以下請求會建立名為的新原則： `acme-integration-policy`.
 
 ```shell
 curl -X POST \
@@ -261,7 +275,7 @@ curl -X POST \
           "resource": "/orgs/{IMS_ORG}/sandboxes/*",
           "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
           "actions": [
-            "read"
+            "com.adobe.action.read"
           ]
         }
       ]
@@ -271,12 +285,12 @@ curl -X POST \
 | 參數 | 說明 |
 | --- | --- |
 | `name` | 原則的名稱。 |
-| `description` | （選用）可新增的屬性，以提供特定原則的進一步資訊。 |
+| `description` | （選用）可新增的屬性，以提供有關特定原則的進一步資訊。 |
 | `imsOrgId` | 包含原則的組織。 |
-| `rules` | 定義原則的規則集。 規則定義哪些屬性組合已獲授權，主體才能成功對資源執行動作。 |
-| `rules.effect` | 考量以下專案的值後所產生的影響： `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
-| `rules.resource` | 主體可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器，甚至API。 |
-| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，這有助於決定針對該結構描述的操作是允許還是不允許的。 |
+| `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
+| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
+| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
 | `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
 
 **回應**
@@ -301,7 +315,7 @@ curl -X POST \
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -311,18 +325,18 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用於查詢、更新和刪除原則。 |
+| `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用來查詢、更新和刪除原則。 |
 | `name` | 原則的名稱。 |
-| `rules` | 定義原則的規則集。 規則定義哪些屬性組合已獲授權，主體才能成功對資源執行動作。 |
-| `rules.effect` | 考量以下專案的值後所產生的影響： `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
-| `rules.resource` | 主體可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器，甚至API。 |
-| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，這有助於決定針對該結構描述的操作是允許還是不允許的。 |
+| `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
+| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
+| `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
 | `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
 
 
 ## 依原則ID更新原則 {#put}
 
-PUT若要更新個別原則的規則，請向 `/policies` 端點，同時在請求路徑中提供您要更新之原則的ID。
+若要更新個別原則的規則，請向以下網站發出PUT請求： `/policies` 端點，並在請求路徑中提供您要更新之原則的ID。
 
 **API格式**
 
@@ -332,7 +346,7 @@ PUT /policies/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| {POLICY_ID} | 您要更新的原則ID。 |
+| {POLICY_ID} | 您要更新之原則的ID。 |
 
 **要求**
 
@@ -352,7 +366,7 @@ curl -X PUT \
         "resource": "/orgs/{IMS_ORG}/sandboxes/*",
         "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
         "actions": [
-          "read"
+          "com.adobe.action.read"
         ]
       }
     ]
@@ -381,7 +395,7 @@ curl -X PUT \
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -391,7 +405,7 @@ curl -X PUT \
 
 ## 更新原則屬性 {#patch}
 
-若要更新個別原則的屬性，請向以下發出PATCH請求： `/policies` 端點，同時在請求路徑中提供您要更新之原則的ID。
+若要更新個別原則的屬性，請向以下網站發出PATCH請求： `/policies` 端點，並在請求路徑中提供您要更新之原則的ID。
 
 **API格式**
 
@@ -401,11 +415,11 @@ PATCH /policies/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| {POLICY_ID} | 您要更新的原則ID。 |
+| {POLICY_ID} | 您要更新之原則的ID。 |
 
 **要求**
 
-以下請求會取代 `/description` 在原則ID中 `c3863937-5d40-448d-a7be-416e538f955e`.
+以下請求會取代 `/description` 原則ID中 `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X PATCH \
@@ -426,13 +440,13 @@ curl -X PATCH \
 
 | 運作 | 說明 |
 | --- | --- |
-| `op` | 用於定義更新角色所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. |
-| `path` | 要更新的引數路徑。 |
+| `op` | 用於定義更新角色所需動作的操作呼叫。 操作包括： `add`， `replace`、和 `remove`. |
+| `path` | 要更新之引數的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
 
 **回應**
 
-成功回應會傳回查詢的原則識別碼和更新的說明。
+成功的回應會傳回查詢的原則識別碼和更新的說明。
 
 ```json
 {
@@ -452,7 +466,7 @@ curl -X PATCH \
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -462,7 +476,7 @@ curl -X PATCH \
 
 ## 刪除原則 {#delete}
 
-若要刪除原則，請向以下發出DELETE要求： `/policies` 端點，同時提供您要刪除之原則的ID。
+若要刪除原則，請向以下網站發出DELETE請求： `/policies` 端點，同時提供您要刪除之原則的ID。
 
 **API格式**
 
@@ -472,11 +486,11 @@ DELETE /policies/{POLICY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| {POLICY_ID} | 您要刪除之原則的ID。 |
+| {POLICY_ID} | 您要刪除的原則識別碼。 |
 
 **要求**
 
-以下請求會刪除ID為的原則 `c3863937-5d40-448d-a7be-416e538f955e`.
+以下請求會刪除ID為 `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X DELETE \
@@ -490,4 +504,4 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
 
-您可以嘗試對原則進行查詢(GET)請求以確認刪除。 您會收到HTTP狀態404 （找不到），因為原則已從管理中移除。
+您可以嘗試對原則發出查詢(GET)請求以確認刪除。 您會收到HTTP狀態404 （找不到），因為原則已從管理中移除。
