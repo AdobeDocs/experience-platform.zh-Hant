@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: 探索正確的教戰手冊
 description: 了解如何探索適合您的使用案例的教戰手冊，並啟用教戰手冊。
-badgeBeta: label="Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# (Beta) 探索正確的教戰手冊
-
->[!AVAILABILITY]
->
->此功能目前為 Beta 版，尚未供所有使用者使用。文件和功能可能會有所變更。
+# 探索正確的教戰手冊
 
 若要使用教戰手冊，請瀏覽至&#x200B;**[!UICONTROL 使用案例] > [!UICONTROL 教戰手冊]**。瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
 
@@ -48,7 +43,6 @@ ht-degree: 91%
 思維導圖首先會定義使用者歷程中接觸到的人，並在每個步驟說明 Adob&#x200B;&#x200B;e 是否傳遞了某些內容 (例如新訊息或提醒)，或者目標角色是否採取了某些行動而觸發了下一則訊息或事件。
 
 ![已反白顯示教戰手冊思維導圖。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### 摘要 {#summary}
 

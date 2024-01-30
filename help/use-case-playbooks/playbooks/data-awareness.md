@@ -2,18 +2,19 @@
 solution: Experience Platform
 title: 使用案例教戰手冊中的資料感知概觀
 description: 瞭解如何透過將最終啟髮型沙箱中產生的資產複製到其他沙箱，以加快實現價值的時間。
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
+exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
+source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-
 # 使用案例教戰手冊中的資料感知概觀
 
-使用案例教戰手冊是行銷範本，設計用於產生資產，例如常見行銷使用案例的對象、結構或歷程。 在Adobe Experience Platform中，這些範本會參考數個標準欄位和欄位群組。 但是，在某些情況下，您可能已經設定自己的結構描述、欄位和欄位群組。 這可能會使使用案例範本產生的部分資產（例如歷程）與您的資料不相容。 若要瞭解如何使用資料感知功能，以便讓產生的資產更符合併完善您的現有資產，請閱讀本教學課程。
+使用案例教戰手冊是行銷範本，旨在針對常見行銷使用案例產生對象、結構或歷程等資產。 您可以在啟發性的沙箱中測試教戰手冊建立的資產，當您準備好時，您可以將資產匯入其他開發沙箱，以使用這些沙箱中提供的資料進行進一步測試。 對測試感到滿意後，您就可以將資產從開發沙箱移至生產沙箱。
+
+但是，在某些情況下，您可能已經在其他開發沙箱中設定自己的結構描述、欄位和欄位群組。 這可能會使使用案例範本產生的部分資產（例如歷程）與您的資料不相容。 若要瞭解如何使用資料感知功能，以便讓產生的資產更符合併完善您的現有資產，請閱讀本教學課程。
 
 ## 先決條件 {#prerequisites}
 
@@ -22,6 +23,10 @@ ht-degree: 0%
 建立例項會在勵志沙箱中產生一組資產，例如歷程、區段、方案和訊息。 請閱讀下文，瞭解如何將這些資產複製到其他沙箱。
 
 ### 建立及發佈套件 {#create-publish-package}
+
+>[!NOTE]
+>
+> 您只能將套件匯入其他開發沙箱。 完成所有必要的變更或更新後，您就可以從這些開發沙箱將資產或套件匯入生產環境。 您無法直接從使用案例教戰手冊沙箱匯入到生產環境。
 
 1. 若要將物件從啟發性的沙箱匯入另一個沙箱，請瀏覽至使用案例行動手冊的所需執行個體，然後選取「 」 **[!UICONTROL 發佈到不同的沙箱]** 將成品匯出為封裝。
 
@@ -48,10 +53,6 @@ ht-degree: 0%
 5. 選取 **+** 控制並啟動工作流程，以將使用案例行動手冊產生的資產匯入 **[!UICONTROL Target沙箱]**. 選取目標沙箱，並使用下拉式清單確認您要匯入的套件名稱。 在繼續下一步之前，新增工作詳細資訊，例如工作名稱和工作說明。
 
    ![啟動匯入工作流程、選取目標、確認封裝、新增工作詳細資料。](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
-
-   >[!NOTE]
-   >
-   > 您只能將套件匯入其他開發沙箱。 生產沙箱已針對這類匯入停用。
 
 6. 在 **[!UICONTROL 檢視相依性]** 步驟，您可以對應結構描述，並將其他資產從啟發性的沙箱複製到目標沙箱。 此 **[!UICONTROL 完成]** 在您對應每個結構描述之前，按鈕都會停用。
 
@@ -96,3 +97,7 @@ ht-degree: 0%
 ## 後續步驟
 
 閱讀本指南後，您現在已清楚瞭解如何運用使用案例教戰手冊以及 [沙箱工具](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) 以建立參考您結構描述的可執行檔歷程。 進一步瞭解常見問題 [Real-Time CDP使用案例](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+
+### 有關此主題的更多說明
+
+[沙箱工具](/help/sandboxes/ui/sandbox-tooling.md)
