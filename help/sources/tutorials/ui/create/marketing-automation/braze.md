@@ -1,10 +1,9 @@
 ---
 title: 在UI中為Braze資料建立資料流
 description: 瞭解如何使用Adobe Experience Platform UI為您的Braze帳戶建立資料流。
-hide: true
-hidefromtoc: true
+last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 92d3a7143edc81cc5266ef5a33a8c53dcfdf1074
+source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 1%
