@@ -5,10 +5,10 @@ user-guide-title: Edge Network Server API 文件
 breadcrumb-title: Edge Network Server API 文件
 user-guide-description: 透過 Experience Cloud 或 Experience Platform Edge 服務，使用 Edge Network Server API 進行資料收集、個人化、廣告和行銷使用案例。
 feature: Data Collection
-source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
+source-git-commit: f7b6154166ccd7989c563115e99717937cfe9a5d
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 46%
+source-wordcount: '76'
+ht-degree: 60%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 46%
 * [概觀](overview.md)
 * [效能護欄](guardrails.md)
 * [驗證](authentication.md)
-* 資料收集 {#data-collection}
+* 資料彙集 {#data-collection}
    * [單一事件資料收集](interactive-data-collection.md)
    * [批次事件資料收集](non-interactive-data-collection.md)
 * 與其他Adobe解決方案互動 {#interacting-other-adobe-solutions}
@@ -30,8 +30,3 @@ ht-degree: 46%
 * [位置提示](location-hints.md)
 * [錯誤處理](error-handling.md)
 * [疑難排解](troubleshooting.md)
-* Media Edge API {#media-edge-apis}
-   * [Media Edge API總覽](media-edge-api/overview.md)
-   * [Media Edge API快速入門](media-edge-api/getting-started.md)
-   * [Media Edge API疑難排解](media-edge-api/troubleshooting.md)
-   * [Media Edge API Open API規格資源](media-edge-api/swagger.md)
