@@ -2,9 +2,9 @@
 title: Real-time Customer Data Platform Insights資料模型
 description: 瞭解如何搭配Real-time Customer Data Platform前瞻分析資料模型使用SQL查詢，以自訂您自己的行銷和KPI使用案例的Real-Time CDP報表。
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 8a9843231252042ea99018bdd5954ab587dbf39c
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Real-time Customer Data Platform Insights資料模型
 
 Real-time Customer Data Platform見解資料模型功能會公開資料模型和SQL，為各種設定檔、目的地和分段Widget的見解提供支援。 您可以自訂這些SQL查詢範本，以針對行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 請參閱查詢加速商店報告見解檔案以瞭解 [如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+
+>[!NOTE]
+>
+>Adobe Experience Platform系統中的「區段」一詞已更新為「對象」。 檔案路徑和資料集命名慣例仍會使用某些區段參照。
 
 ## 先決條件
 
@@ -37,27 +41,27 @@ Real-Time CDP報表可讓您深入分析設定檔資料，以及資料與對象�
 
 ![輪廓模型的ERD。](./images/cdp-insights/profile-model.png)
 
-#### 設定檔計數使用案例
+#### 設定檔計數使用案例 {#profile-count}
 
-用於設定檔計數Widget的邏輯會傳回建立快照時設定檔存放區中合併的設定檔總數。 請參閱 [[!UICONTROL 設定檔計數] Widget檔案](./guides/profiles.md#profile-count) 以取得詳細資訊。
+用於的邏輯 [!UICONTROL 設定檔計數] widget會傳回拍攝快照時設定檔存放區中合併的設定檔總數。 請參閱 [[!UICONTROL 設定檔計數] Widget檔案](./guides/profiles.md#profile-count) 以取得詳細資訊。
 
 產生 [!UICONTROL 設定檔計數] 可以在下方的可摺疊區段中看到Widget。
 
 +++SQL查詢
 
 ```sql
-SELECT adwh_dim_merge_policies.merge_policy_name,
-  sum(adwh_fact_profile.count_of_profiles) CNT
-FROM qsaccel.profile_agg.adwh_fact_profile
-LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_merge_policies ON adwh_dim_merge_policies.merge_policy_id=adwh_fact_profile.merge_policy_id
-WHERE adwh_fact_profile.date_key='${lastProcessDate}'
-AND adwh_fact_profile.merge_policy_id=${mergePolicyId}
-GROUP BY adwh_dim_merge_policies.merge_policy_name;
+SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
+       sum(qsaccel.profile_agg.adwh_fact_profile.count_of_profiles) CNT
+  FROM qsaccel.profile_agg.adwh_fact_profile
+  LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_merge_policies ON qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_id=adwh_fact_profile.merge_policy_id
+  WHERE qsaccel.profile_agg.adwh_fact_profile.date_key='2024-01-10'
+    AND qsaccel.profile_agg.adwh_fact_profile.merge_policy_id = 2027892989
+  GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
 +++
 
-#### 單一身分設定檔使用案例
+#### 單一身分設定檔使用案例 {#single-identity-profiles}
 
 用於的邏輯 [!UICONTROL 單一身分設定檔] Widget會提供貴組織只有一種型別ID型別的設定檔計數，以建立其身分。 請參閱[[!UICONTROL 單一身分設定檔] Widget檔案](./guides/profiles.md#single-identity-profiles) 以取得詳細資訊。
 
@@ -66,13 +70,13 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 +++SQL查詢
 
 ```sql
-SELECT adwh_dim_merge_policies.merge_policy_name,
-  sum(adwh_fact_profile.count_of_Single_Identity_profiles) CNT
-FROM QSAccel.profile_agg.adwh_fact_profile
-LEFT OUTER JOIN QSAccel.profile_agg.adwh_dim_merge_policies ON adwh_dim_merge_policies.merge_policy_id=adwh_fact_profile.merge_policy_id
-WHERE adwh_fact_profile.date_key='${lastProcessDate}'
-  AND adwh_fact_profile.merge_policy_id =${mergePolicyId}
-GROUP BY adwh_dim_merge_policies.merge_policy_name;
+SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
+       sum(qsaccel.profile_agg.adwh_fact_profile.count_of_Single_Identity_profiles) CNT
+  FROM qsaccel.profile_agg.adwh_fact_profile
+  LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_merge_policies ON qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_id=adwh_fact_profile.merge_policy_id
+  WHERE qsaccel.profile_agg.adwh_fact_profile.date_key='2024-01-10'
+    AND qsaccel.profile_agg.adwh_fact_profile.merge_policy_id = 2027892989
+  GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
 +++
@@ -90,7 +94,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 ![名稱空間模型的ERD。](./images/cdp-insights/namespace-model.png)
 
-#### 依身分使用案例的設定檔
+#### 依身分使用案例的設定檔 {#profiles-by-identity}
 
 此 [!UICONTROL 依身分割槽分的設定檔] widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](./guides/profiles.md#profiles-by-identity) 以取得詳細資訊。
 
@@ -99,23 +103,22 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 +++SQL查詢
 
 ```sql
-SELECT adwh_dim_namespaces.namespace_description,
-    sum(adwh_fact_profile_by_namespace.count_of_profiles) count_of_profiles
-FROM qsaccel.profile_agg.adwh_fact_profile_by_namespace
-JOIN qsaccel.profile_agg.adwh_dim_namespaces ON adwh_fact_profile_by_namespace.namespace_id = adwh_dim_namespaces.namespace_id
-AND adwh_fact_profile_by_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
-WHERE adwh_fact_profile_by_namespace.merge_policy_id =${mergePolicyId}
-AND adwh_fact_profile_by_namespace.date_key = '${lastProcessDate}'
-GROUP BY adwh_fact_profile_by_namespace.date_key,
-        adwh_fact_profile_by_namespace.merge_policy_id,
-        adwh_dim_namespaces.namespace_description
-ORDER BY count_of_profiles DESC
-LIMIT 5;
+SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
+        sum(qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.count_of_profiles) count_of_profiles
+  FROM qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines
+  LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_namespaces ON qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.namespace_id = qsaccel.profile_agg.adwh_dim_namespaces.namespace_id
+  AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = qsaccel.profile_agg.adwh_dim_namespaces.merge_policy_id
+  WHERE qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = 2027892989
+    AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.date_key = '2024-01-10'
+  GROUP BY qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.date_key,
+          qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id,
+          qsaccel.profile_agg.adwh_dim_namespaces.namespace_description
+  ORDER BY count_of_profiles DESC;
 ```
 
 +++
 
-#### 依身分使用案例區分的單一身分設定檔
+#### 依身分使用案例區分的單一身分設定檔 {#single-identity-profiles-by-identity}
 
 用於的邏輯 [!UICONTROL 依身分割槽分的單一身分設定檔] widget說明僅以單一唯一識別碼識別的設定檔總數。 請參閱 [依身分Widget檔案的單一身分設定檔](./guides/profiles.md#single-identity-profiles-by-identity) 以取得詳細資訊。
 
@@ -124,22 +127,16 @@ LIMIT 5;
 +++SQL查詢
 
 ```sql
-SELECT
-  adwh_dim_namespaces.namespace_description,
-  sum(adwh_fact_profile_by_namespace.count_of_Single_Identity_profiles) count_of_Single_Identity_profiles
-FROM
-  qsaccel.profile_agg.adwh_fact_profile_by_namespace
-  LEFT OUTER JOIN
-    qsaccel.profile_agg.adwh_dim_namespaces
-    ON adwh_fact_profile_by_namespace.namespace_id = adwh_dim_namespaces.namespace_id
-AND adwh_fact_profile_by_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
-WHERE
-  adwh_fact_profile_by_namespace.merge_policy_id=${mergePolicyId}
-  AND adwh_fact_profile_by_namespace.date_key='${lastProcessDate}'
-GROUP BY
-  adwh_fact_profile_by_namespace.date_key,
-  adwh_fact_profile_by_namespace.merge_policy_id,
-  adwh_dim_namespaces.namespace_description;
+SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
+        sum(qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.count_of_Single_Identity_profiles) count_of_Single_Identity_profiles
+  FROM qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines
+  LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_namespaces ON qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.namespace_id = qsaccel.profile_agg.adwh_dim_namespaces.namespace_id
+  AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = qsaccel.profile_agg.adwh_dim_namespaces.merge_policy_id
+  WHERE qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = 2027892989
+    AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.date_key = '2024-01-10'
+  GROUP BY qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.date_key,
+          qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id,
+          qsaccel.profile_agg.adwh_dim_namespaces.namespace_description;
 ```
 
 +++
@@ -160,7 +157,7 @@ GROUP BY
 
 ![對象模型的ERD。](./images/cdp-insights/audience-model.png)
 
-#### 對象人數使用案例
+#### 對象人數使用案例 {#audience-size}
 
 用於的邏輯 [!UICONTROL 對象人數] widget會傳回在選取對象中最近一次快照時的合併設定檔總數。 請參閱 [[!UICONTROL 對象人數] Widget檔案](./guides/audiences.md#audience-size) 以取得詳細資訊。
 
@@ -169,27 +166,22 @@ GROUP BY
 +++SQL查詢
 
 ```sql
-SELECT adwh_fact_profile_by_segment.date_key,
-       adwh_dim_merge_policies.merge_policy_name,
-       adwh_dim_segments.segment,
-       adwh_dim_segments.segment_name,
-       sum(adwh_fact_profile_by_segment.count_of_profiles)count_of_profiles
-FROM qsaccel.profile_agg.adwh_fact_profile_by_segment
-LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_segments ON adwh_fact_profile_by_segment.segment_id = adwh_dim_segments.segment_id
-LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_merge_policies ON adwh_fact_profile_by_segment.merge_policy_id=adwh_dim_merge_policies.merge_policy_id
-WHERE adwh_fact_profile_by_segment.date_key ='${lastProcessDate}'
-  AND adwh_fact_profile_by_segment.merge_policy_id=${mergePolicyId}
-GROUP BY adwh_fact_profile_by_segment.date_key,
-         adwh_dim_merge_policies.merge_policy_name,
-         adwh_dim_segments.segment,
-         adwh_dim_segments.segment_name
-ORDER BY count_of_profiles DESC
-LIMIT 20;
+SELECT
+  sum(
+    qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.count_of_profiles
+  ) count_of_profiles
+FROM
+  qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines
+  LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_segments ON qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.segment_id = qsaccel.profile_agg.adwh_dim_segments.segment_id
+WHERE
+  qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.segment_id = -1323307941
+  AND qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.merge_policy_id = 1914917902
+  AND qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key = '2024-01-12';
 ```
 
 +++
 
-#### 對象人數變化趨勢使用案例
+#### 對象人數變化趨勢使用案例 {#audience-size-change-trend}
 
 用於的邏輯 [!UICONTROL 對象人數變化趨勢] widget提供線圖，說明最近每日快照之間符合指定對象資格的設定檔總數差異。 請參閱 [[!UICONTROL 對象人數變化趨勢] Widget檔案](./guides/audiences.md#audience-size-change-trend) 以取得詳細資訊。
 
@@ -198,19 +190,35 @@ LIMIT 20;
 +++SQL查詢
 
 ```sql
-SELECT DISTINCT cast(adwh_dim_segments.create_date AS Date) Date_key, adwh_dim_merge_policies.merge_policy_name,
-  count(DISTINCT adwh_dim_segments.segment_id)Segments_Added
-FROM qsaccel.profile_agg.adwh_fact_profile_by_segment
-JOIN qsaccel.profile_agg.adwh_dim_segments ON adwh_fact_profile_by_segment.segment_id = adwh_dim_segments.segment_id
-JOIN qsaccel.profile_agg.adwh_dim_merge_policies ON adwh_fact_profile_by_segment.merge_policy_id=adwh_dim_merge_policies.merge_policy_id
-WHERE Cast(adwh_dim_segments.create_date AS date) >= dateadd(DAY, - ${dayRange}, '${lastProcessDate}')
-AND adwh_fact_profile_by_segment.merge_policy_id=${mergePolicyId}
-GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.merge_policy_name ;
+SELECT date_key,
+      Profiles_added
+  FROM
+    (SELECT rn_num,
+            date_key,
+            (count_of_profiles-lag(count_of_profiles, 1, 0) over(
+                                                                ORDER BY date_key))Profiles_added
+    FROM
+      (SELECT date_key,
+              sum(x.count_of_profiles)count_of_profiles,
+              row_number() OVER (
+                                  ORDER BY date_key) rn_num
+        FROM qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines x
+        INNER JOIN
+          (SELECT MAX(process_date) last_process_date,
+                  merge_policy_id
+          FROM qsaccel.profile_agg.adwh_lkup_process_delta_log
+          WHERE process_name = 'FACT_TABLES_PROCESSING'
+            AND process_status = 'SUCCESSFUL'
+          GROUP BY merge_policy_id) y ON x.merge_policy_id = y.merge_policy_id
+        WHERE segment_id = 1333234510
+          AND x.date_key >= dateadd(DAY, -30 -1, y.last_process_date)
+        GROUP BY x.date_key) a)b
+  WHERE rn_num > 1;
 ```
 
 +++
 
-#### 最常使用的目的地使用案例
+#### 最常使用的目的地使用案例 {#most-used-destinations}
 
 中使用的邏輯 [!UICONTROL 最常使用的目的地] Widget會根據對應至您組織最常用目的地的受眾數量，列出這些目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能會顯示可能未充分利用的目的地。 請參閱相關的檔案： [[!UICONTROL 最常使用的目的地] Widget](./guides/destinations.md#most-used-destinations) 以取得詳細資訊。
 
@@ -219,25 +227,23 @@ GROUP BY cast(adwh_dim_segments.create_date AS date), adwh_dim_merge_policies.me
 +++SQL查詢
 
 ```sql
-SELECT
-   adwh_dim_destination.destination_name, adwh_dim_destination.destination_id,
-   count( distinct adwh_dim_br_segment_destinations.segment_id ) segment_count
-FROM
-   qsaccel.profile_agg.adwh_dim_destination
-   join qsaccel.profile_agg.adwh_dim_br_segment_destinations
- ON
-   adwh_dim_destination.destination_id = adwh_dim_br_segment_destinations.destination_id
- WHERE
-   adwh_dim_destination.destination_name is not null
- group by
-   adwh_dim_destination.destination_name,
-   adwh_dim_destination.destination_id
-   order by segment_count desc limit 5;
+SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
+       qsaccel.profile_agg.adwh_dim_destination.destination_id,
+       qsaccel.profile_agg.adwh_dim_destination.destination,
+       count(DISTINCT qsaccel.profile_agg.adwh_dim_br_segment_destinations.segment_id) segment_count
+  FROM qsaccel.profile_agg.adwh_dim_destination
+  JOIN qsaccel.profile_agg.adwh_dim_br_segment_destinations ON qsaccel.profile_agg.adwh_dim_destination.destination_id = qsaccel.profile_agg.adwh_dim_br_segment_destinations.destination_id
+  WHERE qsaccel.profile_agg.adwh_dim_destination.destination_name IS NOT NULL
+  GROUP BY qsaccel.profile_agg.adwh_dim_destination.destination_name,
+           qsaccel.profile_agg.adwh_dim_destination.destination,
+           qsaccel.profile_agg.adwh_dim_destination.destination_id
+  ORDER BY segment_count DESC
+  LIMIT 20;
 ```
 
 +++
 
-#### 最近啟用的對象使用案例
+#### 最近啟用的對象使用案例 {#recently-activated-audiences}
 
 的邏輯 [!UICONTROL 最近啟用的對象] widget提供最近對應至目的地的對象清單。 此清單提供系統中目前使用中的對象和目的地的快照，可協助疑難排解任何錯誤的對應。 請參閱 [[!UICONTROL 最近啟用的對象] Widget檔案](./guides/destinations.md#recently-activated-audiences) 以取得詳細資訊。
 
@@ -246,16 +252,25 @@ FROM
 +++SQL查詢
 
 ```sql
-SELECT segment_name, segment, destination_name, a.create_time create_time
-FROM qsaccel.profile_agg.adwh_dim_br_segment_destinations a
-INNER JOIN qsaccel.profile_agg.adwh_dim_segments b ON a.segment_id = b.segment_id
-INNER JOIN qsaccel.profile_agg.adwh_dim_destination c ON a.destination_id = c.destination_id
-ORDER BY create_time desc, segment LIMIT 5;
+SELECT
+  segment_name,
+  segment,
+  destination_name,
+  a.create_time create_time
+FROM
+  qsaccel.profile_agg.adwh_dim_br_segment_destinations a
+  INNER JOIN qsaccel.profile_agg.adwh_dim_segments b ON a.segment_id = b.segment_id
+  INNER JOIN qsaccel.profile_agg.adwh_dim_destination c ON a.destination_id = c.destination_id
+ORDER BY
+  create_time DESC,
+  segment
+LIMIT
+  20;
 ```
 
 +++
 
-### 名稱空間 — 對象模型
+### 名稱空間 — 對象模型 {#namespace-audience-model}
 
 名稱空間 — 對象模型由以下資料集組成：
 
@@ -272,7 +287,7 @@ ORDER BY create_time desc, segment LIMIT 5;
 
 ![名稱空間 — 對象模型的ERD。](./images/cdp-insights/namespace-audience-model.png)
 
-#### 依對象使用案例的身分割槽分的設定檔
+#### 依對象使用案例的身分割槽分的設定檔 {#audience-profiles-by-identity}
 
 中使用的邏輯 [!UICONTROL 依身分割槽分的設定檔] widget會針對特定對象，在您的個人資料存放區中提供所有合併個人資料的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](./guides/audiences.md#profiles-by-identity) 以取得詳細資訊。
 
@@ -281,16 +296,16 @@ ORDER BY create_time desc, segment LIMIT 5;
 +++SQL查詢
 
 ```sql
-SELECT adwh_dim_namespaces.namespace_description,
-  sum( adwh_fact_profile_by_segment_and_namespace.count_of_profiles) count_of_profiles
-FROM qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace
-LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_namespaces
-ON adwh_fact_profile_by_segment_and_namespace.namespace_id = adwh_dim_namespaces.namespace_id
-AND adwh_fact_profile_by_segment_and_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
-WHERE adwh_fact_profile_by_segment_and_namespace.segment_id = {segment_id}
-AND adwh_fact_profile_by_segment_and_namespace.merge_policy_id = {merge_policy_id}
-AND adwh_fact_profile_by_segment_and_namespace.date_key = '{date}'
-GROUP BY adwh_dim_namespaces.namespace_description;
+SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
+        sum(qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.count_of_profiles) count_of_profiles
+  FROM qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines
+  LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_namespaces ON qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.namespace_id = qsaccel.profile_agg.adwh_dim_namespaces.namespace_id
+  AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.merge_policy_id = qsaccel.profile_agg.adwh_dim_namespaces.merge_policy_id
+  WHERE qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.segment_id = 1333234510
+    AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.merge_policy_id = 1709997014
+    AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.date_key = '2024-01-10'
+  GROUP BY qsaccel.profile_agg.adwh_dim_namespaces.namespace_description
+  ORDER BY count_of_profiles DESC;
 ```
 
 +++
@@ -308,7 +323,7 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 ![重疊名稱空間模型的ERD。](./images/cdp-insights/overlap-namespace-model.png)
 
-#### 身分重疊（設定檔）使用案例
+#### 身分重疊（設定檔）使用案例 {#profiles-identity-overlap}
 
 中使用的邏輯 [!UICONTROL 身分重疊] Widget會顯示您電腦中設定檔的重疊 **設定檔存放區** 包含兩個選取的身分識別。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 設定檔] 儀表板檔案](./guides/profiles.md#identity-overlap).
 
@@ -318,48 +333,49 @@ GROUP BY adwh_dim_namespaces.namespace_description;
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
-       Sum(overlap_col2) overlap_col2,
-       coalesce(Sum(overlap_count), 0) overlap_count
+        Sum(overlap_col2) overlap_col2,
+        coalesce(Sum(overlap_count), 0) overlap_count
   FROM
     (SELECT 0 overlap_col1,
             0 overlap_col2,
             Sum(count_of_profiles) overlap_count
-     FROM qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace
-     WHERE adwh_fact_profile_overlap_of_namespace.merge_policy_id = ${mergePolicyId}
-       AND adwh_fact_profile_overlap_of_namespace.date_key = '${lastProcessDate}'
-       AND adwh_fact_profile_overlap_of_namespace.overlap_id IN
-         (SELECT adwh_dim_overlap_namespaces.overlap_id
-          FROM qsaccel.profile_agg.adwh_dim_overlap_namespaces
-          WHERE adwh_dim_overlap_namespaces.merge_policy_id=${mergePolicyId}
-            AND adwh_dim_overlap_namespaces.overlap_namespaces IN ('${namespace1}',
-                                                                   '${namespace2}')
-          GROUP BY adwh_dim_overlap_namespaces.overlap_id
-          HAVING Count(*) > 1)
-     UNION ALL SELECT count_of_profiles overlap_col1,
+    FROM qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace
+    WHERE qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace.merge_policy_id = 2027892989
+      AND qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace.date_key = '2024-01-10'
+      AND qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace.overlap_id IN
+        (SELECT a.overlap_id
+          FROM
+            (SELECT qsaccel.profile_agg.adwh_dim_overlap_namespaces.overlap_id overlap_id,
+                    count(*) cnt_num
+            FROM qsaccel.profile_agg.adwh_dim_overlap_namespaces
+            WHERE qsaccel.profile_agg.adwh_dim_overlap_namespaces.merge_policy_id = 2027892989
+              AND qsaccel.profile_agg.adwh_dim_overlap_namespaces.overlap_namespaces in ('avid',
+                                                                                          'crmid')
+            GROUP BY qsaccel.profile_agg.adwh_dim_overlap_namespaces.overlap_id)a
+          WHERE a.cnt_num>1 )
+    UNION ALL SELECT count_of_profiles overlap_col1,
                       0 overlap_col2,
                       0 overlap_count
-     FROM qsaccel.profile_agg.adwh_fact_profile_by_namespace
-     JOIN qsaccel.profile_agg.adwh_dim_namespaces ON
-     adwh_fact_profile_by_namespace.namespace_id = adwh_dim_namespaces.namespace_id
-     AND adwh_fact_profile_by_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
-     WHERE adwh_fact_profile_by_namespace.merge_policy_id = ${mergePolicyId}
-       AND adwh_fact_profile_by_namespace.date_key = '${lastProcessDate}'
-       AND adwh_dim_namespaces.namespace_description = '${namespace1}'
-     UNION ALL SELECT 0 overlap_col1,
+    FROM qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines
+    JOIN qsaccel.profile_agg.adwh_dim_namespaces ON qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.namespace_id = qsaccel.profile_agg.adwh_dim_namespaces.namespace_id
+    AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = qsaccel.profile_agg.adwh_dim_namespaces.merge_policy_id
+    WHERE qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = 2027892989
+      AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.date_key = '2024-01-10'
+      AND qsaccel.profile_agg.adwh_dim_namespaces.namespace_description = 'avid'
+    UNION ALL SELECT 0 overlap_col1,
                       count_of_profiles overlap_col2,
                       0 Overlap_count
-     FROM qsaccel.profile_agg.adwh_fact_profile_by_namespace
-     JOIN qsaccel.profile_agg.adwh_dim_namespaces ON
-     adwh_fact_profile_by_namespace.namespace_id = adwh_dim_namespaces.namespace_id
-     AND adwh_fact_profile_by_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
-     WHERE adwh_fact_profile_by_namespace.merge_policy_id = ${mergePolicyId}
-       AND adwh_fact_profile_by_namespace.date_key = '${lastProcessDate}'
-       AND adwh_dim_namespaces.namespace_description = '${namespace2}' ) a;
+    FROM qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines
+    JOIN qsaccel.profile_agg.adwh_dim_namespaces ON qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.namespace_id = qsaccel.profile_agg.adwh_dim_namespaces.namespace_id
+    AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = qsaccel.profile_agg.adwh_dim_namespaces.merge_policy_id
+    WHERE qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.merge_policy_id = 2027892989
+      AND qsaccel.profile_agg.adwh_fact_profile_by_namespace_trendlines.date_key = '2024-01-10'
+      AND qsaccel.profile_agg.adwh_dim_namespaces.namespace_description = 'crmid' )a;
 ```
 
 +++
 
-### 依對象模型重疊名稱空間
+### 依對象模型重疊名稱空間 {#overlap-namespace-by-audience-model}
 
 依對象模型的重疊名稱空間是由下列資料集組成：
 
@@ -376,7 +392,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 ![依對象模型的重疊名稱空間ERD。](./images/cdp-insights/overlap-namespace-by-audience-model.png)
 
-#### 身分重疊（對象）使用案例
+#### 身分重疊（對象）使用案例 {#audiences-identity-overlap}
 
 中使用的邏輯 [!UICONTROL 受眾] 儀表板 [!UICONTROL 身分重疊] widget說明包含特定對象兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 受眾] 儀表板檔案](./guides/audiences.md#identity-overlap).
 
@@ -385,74 +401,82 @@ SELECT Sum(overlap_col1) overlap_col1,
 +++SQL查詢
 
 ```sql
-SELECT
-   Sum(overlap_col1) overlap_col1,
-   Sum( overlap_col2) overlap_col2,
-   Sum(overlap_count) Overlap_count
-FROM
-   (
-      SELECT
-         0 overlap_col1,
-         0 overlap_col2,
-         Sum(count_of_profiles) Overlap_count
-      FROM
-         qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace_by_segment
-      WHERE
-         adwh_fact_profile_overlap_of_namespace_by_segment.segment_id = $ {segmentId}
-         and adwh_fact_profile_overlap_of_namespace_by_segment.merge_policy_id =$ {mergePolicyId}
-         and adwh_fact_profile_overlap_of_namespace_by_segment.date_key = '${lastProcessDate}'
-         and adwh_fact_profile_overlap_of_namespace_by_segment.overlap_id IN
-         (
-            SELECT
-               adwh_dim_overlap_namespaces.overlap_id
-            FROM
-               qsaccel.profile_agg.adwh_dim_overlap_namespaces
-            WHERE
-               adwh_dim_overlap_namespaces.merge_policy_id =$ {mergePolicyId}
-               AND adwh_dim_overlap_namespaces.overlap_namespaces IN
-               (
-                  '${namespace1}',
-                  '${namespace2}'
-               )
-            GROUP BY
-               adwh_dim_overlap_namespaces.overlap_id
-            HAVING
-               Count(*) > 1
-         )
-      UNION ALL
-      SELECT
-         count_of_profiles overlap_col1,
-         0 overlap_col2,
-         0 Overlap_count
-      FROM
-         qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace
-         LEFT OUTER JOIN
-            qsaccel.profile_agg.adwh_dim_namespaces
-            ON adwh_fact_profile_by_segment_and_namespace.namespace_id = adwh_dim_namespaces.namespace_id
-            and adwh_fact_profile_by_segment_and_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
-      WHERE
-         adwh_dim_namespaces.namespace_description = '${namespace1}'
-         and adwh_fact_profile_by_segment_and_namespace.segment_id = $ {segmentId}
-         and adwh_fact_profile_by_segment_and_namespace.merge_policy_id =$ {mergePolicyId}
-         and adwh_fact_profile_by_segment_and_namespace.date_key = '${lastProcessDate}'
-      UNION ALL
-      SELECT
-         0 overlap_col1,
-         count_of_profiles overlap_col2,
-         0 Overlap_count
-      FROM
-         qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace
-         LEFT OUTER JOIN
-            qsaccel.profile_agg.adwh_dim_namespaces
-            ON adwh_fact_profile_by_segment_and_namespace.namespace_id = adwh_dim_namespaces.namespace_id
-            and adwh_fact_profile_by_segment_and_namespace.merge_policy_id = adwh_dim_namespaces.merge_policy_id
-      WHERE
-         adwh_dim_namespaces.namespace_description = '${namespace2}'
-         and adwh_fact_profile_by_segment_and_namespace.segment_id = $ {segmentId}
-         and adwh_fact_profile_by_segment_and_namespace.merge_policy_id =$ {mergePolicyId}
-         and adwh_fact_profile_by_segment_and_namespace.date_key = '${lastProcessDate}'
-   )
-   a;
+SELECT Sum(overlap_col1) overlap_col1,
+        Sum(overlap_col2) overlap_col2,
+        Sum(overlap_count) Overlap_count
+  FROM
+    (SELECT 0 overlap_col1,
+            0 overlap_col2,
+            Sum(count_of_profiles) Overlap_count
+    FROM qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace_by_segment
+    WHERE qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace_by_segment.segment_id = 1333234510
+      AND qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace_by_segment.merge_policy_id = 1709997014
+      AND qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace_by_segment.date_key = '2024-01-10'
+      AND qsaccel.profile_agg.adwh_fact_profile_overlap_of_namespace_by_segment.overlap_id IN
+        (SELECT a.overlap_id
+          FROM
+            (SELECT qsaccel.profile_agg.adwh_dim_overlap_namespaces.overlap_id overlap_id,
+                    count(*) cnt_num
+            FROM qsaccel.profile_agg.adwh_dim_overlap_namespaces
+            WHERE qsaccel.profile_agg.adwh_dim_overlap_namespaces.merge_policy_id = 1709997014
+              AND qsaccel.profile_agg.adwh_dim_overlap_namespaces.overlap_namespaces in ('crmid',
+                                                                                          'email')
+            GROUP BY qsaccel.profile_agg.adwh_dim_overlap_namespaces.overlap_id)a
+          WHERE a.cnt_num>1 )
+    UNION ALL SELECT count_of_profiles overlap_col1,
+                      0 overlap_col2,
+                      0 Overlap_count
+    FROM qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines
+    LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_namespaces ON qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.namespace_id = qsaccel.profile_agg.adwh_dim_namespaces.namespace_id
+    AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.merge_policy_id = qsaccel.profile_agg.adwh_dim_namespaces.merge_policy_id
+    WHERE qsaccel.profile_agg.adwh_dim_namespaces.namespace_description = 'crmid'
+      AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.segment_id = 1333234510
+      AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.merge_policy_id = 1709997014
+      AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.date_key = '2024-01-10'
+    UNION ALL SELECT 0 overlap_col1,
+                      count_of_profiles overlap_col2,
+                      0 Overlap_count
+    FROM qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines
+    LEFT OUTER JOIN qsaccel.profile_agg.adwh_dim_namespaces ON qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.namespace_id = qsaccel.profile_agg.adwh_dim_namespaces.namespace_id
+    AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.merge_policy_id = qsaccel.profile_agg.adwh_dim_namespaces.merge_policy_id
+    WHERE qsaccel.profile_agg.adwh_dim_namespaces.namespace_description = 'email'
+      AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.segment_id = 1333234510
+      AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.merge_policy_id = 1709997014
+      AND qsaccel.profile_agg.adwh_fact_profile_by_segment_and_namespace_trendlines.date_key = '2024-01-10' ) a;
 ```
 
 +++
+
+<!-- Commented out as Anil wanted to add something but did not provide information yet:
+### Overlap Namespace-Audience model {#overlap-namespace-audience-model}
+
+The overlap namespace-audience model is comprised of the following datasets: 
+
+- `adwh_fact_profile_overlap_by_namespace_and_segment`
+- `adwh_dim_date`
+- `adwh_dim_namespace`
+- `adwh_dim_overlap_namespaces`
+- `adwh_dim_merge_policies`
+- `adwh_dim_segments`
+- `adwh_dim_br_segment_destinations`
+- `adwh_dim_destination`
+- `adwh_dim_destination_platform`
+
+![An ERD of the overlap namespace-audience model.](./images/cdp-insights/overlap-namespace-audience-model.png) -->
+
+<!-- What insights are gathered from this particular data model? -->
+
+<!-- Commented out as Anil wanted to add something but did not provide information yet:
+### AI model {#ai-model}
+
+The AI model is comprised of the following datasets: 
+
+- `adwh_fact_profile_ai_models`
+- `adwh_dim_date`
+- `adwh_dim_merge_policies`
+- `adwh_dim_ai_models`
+
+![An ERD of the AI model.](./images/cdp-insights/ai-model.png) -->
+
+<!-- What insights are gathered from this particular data model? -->
+
