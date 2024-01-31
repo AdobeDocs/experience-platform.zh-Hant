@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 使用案例教戰手冊概觀
 description: 了解如何使用 Experience Platform 中的使用案例教戰手冊以開始使用各種行銷使用案例。
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: c79bffdc38d269385689da64ee8e78ea60e6af92
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 32%
@@ -34,7 +34,6 @@ ht-degree: 32%
 * 建立不同的資產，以供您在準備就緒時使用、測試及提升至生產環境。
 
 ![檢視所有教戰手冊](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
-<!-- Replace this image with a current image -->
 
 每個教戰手冊都包含有關該手冊解決的特定使用案例的資訊。
 
