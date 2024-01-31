@@ -3,10 +3,10 @@ title: 未驗證訪客的離站重新目標定位
 description: 瞭解如何使用潛在客戶ID建立計算屬性，用來建立未驗證使用者的對象，以重新鎖定未驗證使用者。
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 2%
+source-wordcount: '1462'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 對於此使用案例，您可以建立計算屬性，如果合作夥伴ID存在，此屬性就會取得過去24小時內合作夥伴ID的最新值。
 
-使用搜尋列，您可以找到「合作夥伴ID」事件，並將其新增至計算屬性畫布。
+使用搜尋列，您可以尋找並新增「合作夥伴ID」事件，該 [您在現場個人化使用案例期間建立](#get-data-in) 至計算屬性畫布。
 
 ![此 [!UICONTROL 活動] 標籤和搜尋列會反白顯示。](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -109,7 +109,7 @@ ht-degree: 2%
 
 新增事件後，您需要新增屬性。 由於您使用的是未經驗證的訪客，因此可以新增您剛建立的計算屬性。 這個新建立的計算屬性可讓您將合作夥伴ID連結至對象。
 
-若要新增計算屬性，請在 **[!UICONTROL 屬性]**，選取 **[!UICONTROL XDM個別設定檔]**，後接 **[!UICONTROL 標籤(_T)]**， **[!UICONTROL SystemComputedAttribute]**、和 **[!UICONTROL 合作夥伴ID]**. 現在，新增 **[!UICONTROL 值]** 的屬性區段的URL值。
+若要新增計算屬性，請在 **[!UICONTROL 屬性]**，選取 **[!UICONTROL XDM個別設定檔]**，後接 **[您組織的租使用者ID](../../xdm/api/getting-started.md#know-your-tenant-id).**， **[!UICONTROL SystemComputedAttribute]**、和 **[!UICONTROL 合作夥伴ID]**. 現在，新增 **[!UICONTROL 值]** 的屬性區段的URL值。
 
 ![會顯示用來存取計算屬性的資料夾路徑。](../assets/offsite-retargeting/access-computed-attribute.png)
 
