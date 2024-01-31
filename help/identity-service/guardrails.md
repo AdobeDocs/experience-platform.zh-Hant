@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 | 護欄 | 限制 | 附註 |
 | --- | --- | --- |
-| 圖表中的身分數量 | 50 | 更新具有50個連結身分的圖形時，Identity Service將套用「先進先出」機制，並刪除最舊的身分，為最新的身分騰出空間。 刪除是根據身分型別和時間戳記。 此限制會套用至沙箱層級。 如需詳細資訊，請閱讀以下章節： [瞭解刪除邏輯](#deletion-logic). |
+| 圖表中的身分數量 | 50 | 更新具有50個連結身分的圖形時，Identity Service將套用「先進先出」的機制，並刪除最舊的身分，以為此圖形的最新身分騰出空間(**注意**：即時客戶設定檔不受影響)。 刪除是根據身分型別和時間戳記。 此限制會套用至沙箱層級。 如需詳細資訊，請閱讀以下章節： [瞭解刪除邏輯](#deletion-logic). |
 | 單一批次擷取的身分連結數 | 50 | 單一批次可能包含異常身分，這些身分會造成不想要的圖表合併。 為防止此情況，Identity Service將不會擷取已連結至50個或更多身分的身分。 |
 | XDM記錄中的身分數量 | 20 | 需要的XDM記錄數量下限為2。 |
 | 自訂名稱空間數量 | None | 您可以建立的自訂名稱空間數量沒有限制。 |
@@ -135,7 +135,7 @@ Adobe如果您的生產沙箱包含：
 
 >[!TAB 刪除程式]
 
-因此，Identity Service會根據時間戳記和身分型別刪除最舊的身分。 在此情況下，會刪除ECID：35577。
+因此，Identity Service會根據時間戳記和身分型別刪除最舊的身分。 在此情況下，ECID：35577只會從身分圖表中刪除。
 
 ![](./images/guardrails/during-split.png)
 
@@ -166,7 +166,7 @@ Adobe如果您的生產沙箱包含：
 
 >[!TAB 刪除程式]
 
-因此，Identity Service會刪除最舊的身分，在此案例中為ECID：35577。 刪除ECID：35577也會導致以下刪除：
+因此，Identity Service只會從身分圖表刪除最舊的身分，此案例中為ECID：35577。 刪除ECID：35577也會導致以下刪除：
 
 * CRM ID：60013和現已刪除的ECID：35577之間的連結，因此會產生圖表分割情況。
 * IDFA： 32110、IDFA： 02383以及所代表的其餘身分 `(...)`. 這些身分會遭到刪除，因為個別身分不會連結至任何其他身分，因此無法在圖形中顯示。
