@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
+source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
 workflow-type: tm+mt
-source-wordcount: '5080'
+source-wordcount: '5459'
 ht-degree: 2%
 
 ---
@@ -151,6 +151,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | map_get_values | 接受地圖和按鍵輸入。 如果輸入是單一索引鍵，則函式會傳回與該索引鍵相關聯的值。 如果輸入為字串陣列，則函式會傳回與所提供索引鍵對應的所有值。 如果傳入的對應有重複的索引鍵，則傳回值必須刪除重複的索引鍵並傳回唯一值。 | <ul><li>對應： **必填** 輸入地圖資料。</li><li>索引鍵：  **必填** 索引鍵可以是單一字串或字串陣列。 如果提供任何其他基本型別（資料/數字），則會將其視為字串。</li></ul> | get_values(MAP， KEY) | 請參閱 [附錄](#map_get_values) 以取得程式碼範例。 | |
 | map_has_keys | 如果提供一個或多個輸入鍵，則函式傳回true。 如果提供字串陣列作為輸入，則函式在找到的第一個鍵上傳回true。 | <ul><li>對應：  **必填** 輸入地圖資料</li><li>索引鍵：  **必填** 索引鍵可以是單一字串或字串陣列。 如果提供任何其他基本型別（資料/數字），則會將其視為字串。</li></ul> | map_has_keys(MAP， KEY) | 請參閱 [附錄](#map_has_keys) 以取得程式碼範例。 | |
 | add_to_map | 接受至少兩個輸入。 可提供任意數量的地圖作為輸入。 「資料準備」會傳回單一對應，其中包含來自所有輸入的所有索引鍵/值組。 如果一個或多個索引鍵重複（在相同對應中或跨對應），資料準備會去除重複的索引鍵，因此第一個索引鍵/值組會按照它們在輸入中傳遞的順序持續存在。 | 對應： **必填** 輸入地圖資料。 | add_to_map(MAP 1， MAP 2， MAP 3， ...) | 請參閱 [附錄](#add_to_map) 以取得程式碼範例。 | |
+| object_to_map （語法1） | 使用此函式來建立對應資料型別。 | <ul><li>索引鍵： **必填** 金鑰必須是字串。 如果提供其他任何基本值（例如整數或日期），則會自動轉換為字串並視為字串。</li><li>ANY_TYPE： **必填** 請參閱任何支援的XDM資料型別，但Map除外。</li></ul> | object_to_map(KEY， ANY_TYPE， KEY， ANY_TYPE， ... ) | 請參閱 [附錄](#object_to_map) 以取得程式碼範例。 | |
+| object_to_map （語法2） | 使用此函式來建立對應資料型別。 | <ul><li>物件： **必填** 您可以提供內送物件或物件陣列，並以索引鍵指向物件內的屬性。</li></ul> | object_to_map(OBJECT) | 請參閱 [附錄](#object_to_map) 以取得程式碼範例。 |
+| object_to_map （語法3） | 使用此函式來建立對應資料型別。 | <ul><li>物件： **必填** 您可以提供內送物件或物件陣列，並以索引鍵指向物件內的屬性。</li></ul> | object_to_map(OBJECT_ARRAY， ATTRIBUTE_IN_OBJECT_TO_BE_USED_AS_A_KEY) | 請參閱 [附錄](#object_to_map) 以取得程式碼範例。 |
 
 {style="table-layout:auto"}
 
@@ -173,6 +176,20 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 大小_of | 傳回輸入的大小。 | <ul><li>輸入： **必填** 您嘗試尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | 此函式用於將整個輸入陣列中的所有元素附加到Profile中陣列的結尾。 此函式為 **僅限** 適用於更新期間。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必填** 在設定檔中附加陣列的陣列。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123， 456] |
 | upsert_array_replace | 此函式用於取代陣列中的元素。 此函式為 **僅限** 適用於更新期間。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必填** 用來取代設定檔中陣列的陣列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123， 456] |
+
+{style="table-layout:auto"}
+
+### 階層 — 對應 {#map}
+
+>[!NOTE]
+>
+>請向左/向右捲動以檢視表格的完整內容。
+
+| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| array_to_map | 此函式以物件陣列和索引鍵作為輸入，並傳回索引鍵欄位的對應，其中值為索引鍵，而陣列元素為值。 | <ul><li>輸入： **必填** 您要尋找的第一個非null物件的物件陣列。</li><li>索引鍵：  **必填** 索引鍵必須是物件陣列中的欄位名稱，而且物件必須是值。</li></ul> | array_to_map(OBJECT[] 輸入，鍵) | 閱讀 [附錄](#object_to_map) 以取得程式碼範例。 |
+| object_to_map | 此函式將物件當作引數，並傳回機碼值組的對應。 | <ul><li>輸入： **必填** 您要尋找的第一個非null物件的物件陣列。</li></ul> | object_to_map(OBJECT_INPUT) | &quot;object_to_map(address)，其中輸入為&quot; + &quot;address： {line1 ： \&quot;345 park ave\&quot;，line2： \&quot;bldg 2\&quot;，City ： \&quot;san jose\&quot;，State ： \&quot;CA\&quot;，type： \&quot;office\&quot;}&quot; | 傳回具有給定欄位名稱和值配對的對應，如果輸入為null，則傳回null。 例如︰`"{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"` |
+| to_map | 此函式接受索引鍵值配對清單並傳回索引鍵值配對的對應。 | | to_map(OBJECT_INPUT) | &quot;to_map(\&quot;firstName\&quot;， \&quot;John\&quot;， \&quot;lastName\&quot;， \&quot;Doe\&quot;)&quot; | 傳回具有給定欄位名稱和值配對的對應，如果輸入為null，則傳回null。 例如︰`"{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"` |
 
 {style="table-layout:auto"}
 
@@ -455,3 +472,150 @@ example = "add_to_map(book_details, book_details2) where input is {\n" +
 ```
 
 +++
+
+#### object_to_map {#object_to_map}
+
+**語法1**
+
++++選取以檢視範例
+
+```json
+example = "object_to_map(\"firstName\", \"John\", \"lastName\", \"Doe\")",
+result = "{\"firstName\" : \"John\", \"lastName\": \"Doe\"}"
+```
+
++++
+
+**語法2**
+
++++選取以檢視範例
+
+```json
+example = "object_to_map(address) where input is " +
+  "address: {line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}",
+result = "{line1 : \"345 park ave\",line2: \"bldg 2\",City : \"san jose\",State : \"CA\",type: \"office\"}"
+```
+
++++
+
+**語法3**
+
++++選取以檢視範例
+
+```json
+example = "object_to_map(addresses,type)" +
+        "\n" +
+        "[\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "]" ,
+result = "{\n" +
+        "    \"home\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City\": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"home\"\n" +
+        "    },\n" +
+        "    \"work\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"work\"\n" +
+        "    },\n" +
+        "    \"office\":\n" +
+        "    {\n" +
+        "        \"line1\": \"345 park ave\",\n" +
+        "        \"line2\": \"bldg 2\",\n" +
+        "        \"City \": \"san jose\",\n" +
+        "        \"State\": \"CA\",\n" +
+        "        \"type\": \"office\"\n" +
+        "    }\n" +
+        "}" 
+```
+
++++
+
+#### array_to_map {#array_to_map}
+
++++選取以檢視範例
+
+```json
+example = "array_to_map(addresses, \"type\") where addresses is\n" +
+  "\n" +
+  "[\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "]" ,
+result = "{\n" +
+  "    \"home\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City\": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"home\"\n" +
+  "    },\n" +
+  "    \"work\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"work\"\n" +
+  "    },\n" +
+  "    \"office\":\n" +
+  "    {\n" +
+  "        \"line1\": \"345 park ave\",\n" +
+  "        \"line2\": \"bldg 2\",\n" +
+  "        \"City \": \"san jose\",\n" +
+  "        \"State\": \"CA\",\n" +
+  "        \"type\": \"office\"\n" +
+  "    }\n" +
+  "}",
+returns = "Returns a map with given field name and value pairs or null if input is null"
+```
+
++++
+
