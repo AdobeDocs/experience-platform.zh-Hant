@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: 快速入門
 description: 了解如何開始使用「使用案例教戰手冊」功能。
+role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '927'
 ht-degree: 14%
 
 ---
@@ -65,7 +66,7 @@ ht-degree: 14%
 
 **目的地的許可權**
 
-若要建立和管理目的地，請使用目的地許可權； **[!UICONTROL 管理]**， **[!UICONTROL 目的地]**， **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 啟用區段而不進行對應]**， **[!UICONTROL 管理和啟用資料集目的地]**、 UICONTROL目的地製作*。
+若要建立和管理目的地，請使用目的地許可權； **[!UICONTROL 管理]**， **[!UICONTROL 目的地]**， **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 啟用區段而不進行對應]**， **[!UICONTROL 管理和啟用資料集目的地]**， **[!UICONTROL 目的地製作]**.
 
 **歷程的許可權**
 

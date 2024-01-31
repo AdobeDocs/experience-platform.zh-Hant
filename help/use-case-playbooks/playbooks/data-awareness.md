@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: 使用案例教戰手冊中的資料感知概觀
 description: 瞭解如何透過將最終啟髮型沙箱中產生的資產複製到其他沙箱，以加快實現價值的時間。
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# 使用案例教戰手冊中的資料感知概觀
+# 將Playbook產生的資產發佈到其他沙箱 {#publish-to-other-sandboxes}
 
 使用案例教戰手冊是行銷範本，旨在針對常見行銷使用案例產生對象、結構或歷程等資產。 您可以在啟發性的沙箱中測試教戰手冊建立的資產，當您準備好時，您可以將資產匯入其他開發沙箱，以使用這些沙箱中提供的資料進行進一步測試。 對測試感到滿意後，您就可以將資產從開發沙箱移至生產沙箱。
 
@@ -97,7 +98,3 @@ ht-degree: 0%
 ## 後續步驟
 
 閱讀本指南後，您現在已清楚瞭解如何運用使用案例教戰手冊以及 [沙箱工具](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) 以建立參考您結構描述的可執行檔歷程。 進一步瞭解常見問題 [Real-Time CDP使用案例](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### 有關此主題的更多說明
-
-[沙箱工具](/help/sandboxes/ui/sandbox-tooling.md)

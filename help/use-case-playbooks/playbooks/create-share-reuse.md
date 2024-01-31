@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 建立、共用和重複使用教戰手冊執行個體
 description: 了解如何建立、共用和重複使用教戰手冊執行個體以完成您的行銷使用案例。
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 83%
 
 ---
 
@@ -18,8 +19,8 @@ ht-degree: 86%
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
->title="建立例項"
->abstract="產生歷程、受眾、結構或目的地等資產清單，以用於歷程或啟用案例。"
+>title="建立執行個體"
+>abstract="產生資產清單 (例如旅程、對象、綱要或目的地) 以在旅程或啟動情境中使用。"
 
 在建立教戰手冊執行個體之前，請探索可用的教戰手冊以[探索適合您的教戰手冊](/help/use-case-playbooks/playbooks/discover.md)。當您準備好繼續使用教戰手冊並建立執行個體時，請選取&#x200B;**[!UICONTROL 建立執行個體]**&#x200B;以繼續使用教戰手冊並產生技術資產。
 
@@ -73,6 +74,12 @@ ht-degree: 86%
 您可以和其他團隊成員共用產生的執行個體和資產。若要這麼做，請從瀏覽器複製 URL 連結並和您的團隊共用，提供他們對產生的資產的概觀。
 
 ![在使用案例教戰手冊檢視中反白顯示的 URL。](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## 端對端行動手冊程式的影片逐步解說
+
+觀看此影片瞭解如何從端對端探索、建立、發佈使用案例行動手冊並對執行個體進行疑難排解，以及如何將行動手冊產生的資產複製到組織中設定的其他沙箱中。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## 後續步驟 {#next-steps}
 

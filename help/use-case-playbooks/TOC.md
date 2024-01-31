@@ -4,8 +4,7 @@ user-guide-title: Adobe Experience Platform 使用案例教戰手冊
 breadcrumb-title: Adobe Experience Platform 使用案例教戰手冊
 user-guide-description: 使用 Experience Platform 中的教戰手冊以產生資產並開始使用各種行銷使用案例。
 feature: Playbooks
-hide: true
-source-git-commit: 3db5a24f970d6778ec737857ab5d06beaabfc18a
+source-git-commit: 93b28a2cf89cac811d17bb990fc78fa87ee86969
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 81%

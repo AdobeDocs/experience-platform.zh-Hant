@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: 教戰手冊的已知限制和疑難排解問題
 description: 進一步了解教戰手冊的已知問題和常見問題，以及如何疑難排解
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # 疑難排解和已知限制 {#troubleshooting-known-limitations}
 
+瞭解如何在使用使用案例教戰手冊時疑難排解錯誤，並瞭解一般可用性版本的已知限制。
+
 ## 疑難排解 {#troubleshooting}
+
+檢視使用使用案例教戰手冊時常見錯誤的疑難排解建議
 
 ### 未設定Adobe Journey Optimizer表面
 
@@ -35,7 +40,7 @@ ht-degree: 2%
 
 * 使用時 [資料感知功能](/help/use-case-playbooks/playbooks/data-awareness.md) 若要將結構描述從啟發性的沙箱提升至開發沙箱，您可能會看到類似以下的一些錯誤：
 
-![schema-error](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![結構描述對應工作流程中顯示的錯誤。](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 這是因為從您的結構描述產生的某些欄位，不存在於您要複製至的開發沙箱的結構描述中。 查詢這些欄位。 接著，返回開發沙箱，您可以：
 

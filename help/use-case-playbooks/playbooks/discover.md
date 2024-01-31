@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 探索正確的教戰手冊
 description: 了解如何探索適合您的使用案例的教戰手冊，並啟用教戰手冊。
+role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -49,7 +50,7 @@ ht-degree: 91%
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
 >title="資產"
->abstract="這些是行動手冊產生的資產。 建立教戰手冊的例項後，您可以在啟發性的沙箱中檢視資產，並視需要將其提升至其他沙箱。"
+>abstract="以下是本教戰手冊產生的資產。建立教戰手冊執行個體後，您可以查看靈感沙箱中的資產，並根據需要將其提升到其他沙箱。"
 
 檢查摘要章節以了解從教戰手冊建立執行個體後會產生哪些資產。為每個教戰手冊產生的資產都是根據該教戰手冊啟用的使用案例訂製的。如需摘要章節中的所有項目，可在下面取得詳細資訊。
 
