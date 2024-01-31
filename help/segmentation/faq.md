@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2746'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ### 我需要什麼許可權才能上傳外部產生的對象？
 
-為了上傳外部產生的對象，您需要同時具有「管理對象/區段」和「管理資料集」許可權。 沒有特定的角色型控制項需要上傳外部產生的對象。
+若要上傳外部產生的對象，您必須具備「檢視對象/區段」、「管理對象/區段」、「檢視資料集」、「管理資料集」、「檢視來源」和「管理來源」許可權。 沒有特定的角色型控制項需要上傳外部產生的對象。
 
 ### 上傳外部產生的對象時會發生什麼事？
 
