@@ -2,7 +2,7 @@
 title: Real-Time CDP中的範例使用案例
 description: 檢視跨服務使用案例範例，以善用Real-Time CDP實作。
 feature: Use Cases
-source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
+source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -76,11 +76,11 @@ Adobe Real-Time CDP提供廣泛支援的合作夥伴識別碼，可讓您建立�
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="../partner-data/prospecting.md">
+    <a href="../partner-data/supplement-first-party-profiles.md">
       <img alt="使用合作夥伴提供的屬性補充第一方設定檔" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
     </a>
     <div>
-      <a href="../partner-data/prospecting.md">
+      <a href="../partner-data/supplement-first-party-profiles.md">
     <strong>使用合作夥伴提供的屬性補充第一方設定檔</strong>
     </a>
     </div>

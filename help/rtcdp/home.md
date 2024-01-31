@@ -3,10 +3,10 @@ title: Real-Time CDP產品檔案
 description: 瞭解如何使用Adobe Real-Time CDP。
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 3%
+source-wordcount: '1071'
+ht-degree: 4%
 
 ---
 
@@ -20,17 +20,17 @@ ht-degree: 3%
 
 >[!BEGINTABS]
 
+>[!TAB 使用案例教戰手冊]
+
+此 [!UICONTROL 使用案例教戰手冊] 功能現已正式開放所有Real-Time CDP和Adobe Journey Optimizer客戶使用。 [!UICONTROL 使用案例教戰手冊] 專門設計來協助使用者在開始使用Real-time Customer Data Platform或Adobe Journey Optimizer時克服挑戰。 當您不確定從何處開始或是如何針對您想要的使用案例建立正確的資產時，使用案例教戰手冊會提供靈感，並建立不同的資產，讓您在準備就緒時測試並匯入生產環境。
+
+[![影像](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB 沙箱工具]
 
 使用沙箱工具功能可提高沙箱之間的設定準確性，並在沙箱之間順暢地匯出和匯入設定。 您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。
 
 [![影像](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB （有限GA）啟用帳戶對象]
-
-Real-Time CDP B2B客戶現在可以啟用 [帳戶對象](/help/segmentation/ui/account-audiences.md) 至特定目的地。
-
-[![影像](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
 
 >[!TAB 計算的屬性]
 
