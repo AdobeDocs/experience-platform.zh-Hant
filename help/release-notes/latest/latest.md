@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '974'
-ht-degree: 40%
+source-wordcount: '1036'
+ht-degree: 38%
 
 ---
 
@@ -75,6 +75,14 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 | 目的地 | 說明 |
 | ----------- | ----------- |
 | [公用連線](../../destinations/catalog/advertising/pubmatic.md) | 使用此目的地可將受眾資料傳送至 [!DNL PubMatic Connect] 平台。 |
+
+{style="table-layout:auto"}
+
+**新功能或更新的功能** {#destinations-new-updated-functionality}
+
+| 功能 | 說明 |
+| ----------- | ----------- |
+| 新增 **假定的角色** Amazon S3目的地的驗證型別 | 如果您不想與Experience Platform共用帳戶金鑰和秘密金鑰，請在將Experience Platform連線至您的Amazon S3貯體時，使用新的假定角色驗證型別。 閱讀更多有關中新驗證方法的資訊 [驗證區段](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) Amazon S3檔案。 |
 
 {style="table-layout:auto"}
 
