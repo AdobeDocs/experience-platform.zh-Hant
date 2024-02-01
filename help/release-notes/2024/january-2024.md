@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 發行說明 (2024 年 1 月)
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
-source-git-commit: 88dc2fc84002ae4400e4a11370ac3354cd38cd0e
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 40%
@@ -45,7 +45,7 @@ Experience Platform現有功能的更新：
 
 | 功能 | 說明 |
 | --- | --- |
-| 新的對應工具函數 | <ul><li>`object_to_map`：使用 `object_to_map` 函式以建立對應資料型別。 此函式支援數種不同的語法。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 物件](../../data-prep/functions.md#objects). </li><li>`to_map`：使用 `to_map` 函式以使用物件來建立具有指定欄位名稱和值配對的對應。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 對應](../../data-prep/functions.md#objects). </li><li>`array_to_map`：使用 `array_to_map` 函式，以使用物件陣列來建立具有指定欄位名稱和值組的對應。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 對應](../../data-prep/functions.md#objects). |
+| 新的對應工具函數 | <ul><li>`object_to_map`：使用 `object_to_map` 函式以建立對應資料型別。 此函式支援數種不同的語法。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 物件](../../data-prep/functions.md#objects). </li><li>`to_map`：使用 `to_map` 函式以使用物件來建立具有指定欄位名稱和值配對的對應。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 對應](../../data-prep/functions.md#map). </li><li>`array_to_map`：使用 `array_to_map` 函式，以使用物件陣列來建立具有指定欄位名稱和值組的對應。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 對應](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
