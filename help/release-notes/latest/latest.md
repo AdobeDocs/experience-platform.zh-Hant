@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
+source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 38%
+source-wordcount: '1476'
+ht-degree: 39%
 
 ---
 
@@ -19,9 +19,11 @@ Adobe Experience Platform中的新功能：
 
 Experience Platform現有功能的更新：
 
-- [儀表板](#dashboards)
+- [屬性型存取控制](#abac)
 - [資料準備](#data-prep)
+- [儀表板](#dashboards)
 - [目的地](#destinations)
+- [身分識別服務](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [即時客戶設定檔](#profile)
 - [來源](#sources)
@@ -37,6 +39,22 @@ Experience Platform現有功能的更新：
 - 取得所有 [必要許可權](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 使用教戰手冊和教戰手冊產生的資產。
 - 瞭解 [資料感知功能](/help/use-case-playbooks/playbooks/data-awareness.md) 可讓您將產生的資產複製到其他沙箱環境
 - Get [疑難排解提示](/help/use-case-playbooks/playbooks/troubleshooting.md) 如果您在使用使用案例教戰手冊時遇到錯誤或困難。
+
+## 屬性型存取控制 {#abac}
+
+屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別對象指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
+
+透過屬性型存取控制，組織的管理員可以控制使用者對所有平台工作流程和資源的存取權限，包括其中的敏感個人資料 (SPD)、個人身分資訊 (PII) 和其他自訂類型資料。管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
+
+**新檔案或更新檔案**
+
+| 檔案更新 | 說明 |
+| --- | --- |
+| 已記錄用於屬性式存取控制的新API端點 | 此 [存取控制API參考檔案](https://developer.adobe.com/experience-platform-apis/references/access-control/) 現在包含以屬性為基礎的存取控制API角色、原則及產品端點。 這些端點可用於為使用者擷取指定沙箱中指定資源的相關角色、原則和產品。 |
+
+{style="table-layout:auto"}
+
+若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](../../access-control/abac/overview.md)。關於屬性型存取控制工作流程的綜合指南，請閱讀[屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md)。
 
 ## 資料準備 {#data-prep}
 
@@ -88,6 +106,20 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
+## 身分識別服務 {#identity-service}
+
+Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分，為您提供客戶及其行為的全方位檢視，讓您可即時實現有影響力的個人數位體驗。
+
+**新檔案或更新檔案**
+
+| 檔案更新 | 說明 |
+| --- | --- |
+| 檔案重組 | Identity Service檔案已重新編排，以改善Identity Service中概念的呈現方式及清晰度：<ul><li>造訪 [Identity Service總覽頁面](../../identity-service/home.md) 如需擴充術語指南，請參閱使用案例範例，詳細說明典型客戶歷程、Identity Service如何將身分連結在一起的劃分，以及Identity Service在Experience Platform生態系統中所扮演角色的摘要。</li><li>閱讀指南： [瞭解Identity Service與即時客戶個人檔案之間的關係](../../identity-service/identity-and-profile.md) 瞭解這兩種服務如何搭配運作，以及其目的、程式、輸入和輸出之間的差異的詳細摘要。</li><li>請參閱 [Identity Service連結邏輯指南](../../identity-service/features/identity-linking-logic.md) 以取得身分圖表在不同案例和時間戳記下的行為方式解釋和視覺化。</li></ul> |
+
+{style="table-layout:auto"}
+
+若要進一步瞭解Identity Service，請參閱 [Identity Service總覽](../../identity-service/home.md).
+
 ## Real-Time Customer Data Platform {#rtcdp}
 
 建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶設定檔。[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶設定檔。然後，根據這些設定檔建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
@@ -97,6 +129,17 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 | 功能 | 說明 |
 | --- | --- |
 | 的更新 [Real-Time CDP首頁](https://experience.adobe.com) | <ul><li>**設定檔Widget**：您現在可以使用設定檔介面工具集導覽至設定檔總覽頁面，並檢視您組織的設定檔量度。</li><li>**設定檔量度卡片**：首頁儀表板中的設定檔量度卡現在會顯示貴組織中的設定檔總數，視您個別的合併原則而定。</li><li>**結構描述Widget**：您現在可以使用結構描述Widget導覽至UI中的結構描述建立工作流程。</li></ul> |
+
+{style="table-layout:auto"}
+
+**新檔案或更新檔案**
+
+| 檔案更新 | 說明 |
+| --- | --- |
+| 新的Real-Time CDP檔案首頁 | 造訪 [新的Real-Time CDP檔案首頁](/help/rtcdp/home.md) 以取得關於如何開始使用產品、護欄、範例使用案例等等的簡單資訊。 |
+| 範例Real-Time CDP使用案例概覽 | 造訪 [新的範例使用案例概觀頁面](/help/rtcdp/use-case-guides/overview.md) 您的組織可以透過Real-Time CDP實現的範例使用案例集合。 |
+
+{style="table-layout:auto"}
 
 若要進一步瞭解Real-Time CDP，請閱讀 [Real-Time CDP概觀](../../rtcdp/overview.md).
 
