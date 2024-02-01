@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="資料治理義務"
->abstract="請記住，遵守貴組織的資料控管政策並符合法規要求是您的唯一責任。 Experience Platform提供資料控管工具，供您管理資料使用義務。 在查詢或處理資料之前，套用適當的資料使用標籤。 請參閱檔案以瞭解資料控管工具和最佳實務。"
+>abstract="請記住，您有責任遵守組織的資料治理原則並滿足監管要求。Experience Platform 可提供資料治理工具，以協助您管理資料使用義務。請在查詢或處理資料之前套用適當的資料使用標籤。請參閱文件以了解資料治理工具和最佳實務。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=zh-Hant" text="資料治理概觀"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant" text="資料控管標籤總覽"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=zh-Hant" text="資料治理標籤概觀"
 
 Adobe Experience Platform的核心功能之一，是將來自多個企業系統的資料彙集在一起，以便讓行銷人員更能識別、瞭解客戶並與之互動。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 因此，請務必確保您在下列範圍內的資料作業： [!DNL Platform] 符合資料使用原則。
 

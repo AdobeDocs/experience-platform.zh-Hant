@@ -10,7 +10,7 @@ ht-degree: 14%
 
 ---
 
-# 以屬性為基礎的存取控制概觀 {#attribute-based-access-control-overview}
+# 屬性式存取控制概觀 {#attribute-based-access-control-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_accesscontrol_abac_labelusageaccesspolicy"
