@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
+source-git-commit: 1d8ba11b1043fa68bf3c0205e8cecc2de8910234
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1190'
 ht-degree: 5%
 
 ---
@@ -128,7 +128,7 @@ ht-degree: 5%
       * [資料登陸區域](./catalog/cloud-storage/data-landing-zone.md)
       * [Google雲端儲存空間](./catalog/cloud-storage/google-cloud-storage.md)
       * [sftp連線](./catalog/cloud-storage/sftp.md)
-      * [SFTP目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [檔案式雲端儲存目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 客戶關係管理(CRM)目的地 {#crm}
       * [Hubspot連線](./catalog/crm/hubspot.md)
       * [Salesforce CRM連線](./catalog/crm/salesforce.md)
