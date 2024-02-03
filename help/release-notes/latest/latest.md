@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 39%
+source-wordcount: '1551'
+ht-degree: 37%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 檢視SQL | 您現在可以檢視設定檔、對象、目的地和自訂深入分析背後的SQL，然後透過查詢編輯器依需求執行查詢。 從SQL中汲取超過40種現有的見解靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料中獲得獨特的見解。 如需詳細資訊，請閱讀以下指南： [檢視分析SQL](../../dashboards/view-sql.md). |
+| 檢視SQL | 您現在可以使用「檢視SQL」切換來檢視「設定檔」、「對象」、「目的地」和自訂深入分析背後的SQL，然後透過「查詢編輯器」依需求執行查詢。 存取支援Real-time Customer Data Platform深入分析的SQL可幫助您瞭解資料模型分析背後的邏輯。 此透明度可讓您的AdobeReal-time CDP資料更易於存取、理解，並更能對決策產生影響。<br>從SQL中汲取超過40種現有的見解靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料中獲得獨特的見解。 SQL也可供您使用 [設定檔](../../dashboards/insights/profiles.md)， [受眾](../../dashboards/insights/audiences.md)、和 [目的地](../../dashboards/insights/destinations.md) Experience League檔案中的深入分析。 這些檔案會強調可使用標準深入分析來回答的業務使用案例。 如需詳細資訊，請閱讀以下指南： [檢視分析SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
