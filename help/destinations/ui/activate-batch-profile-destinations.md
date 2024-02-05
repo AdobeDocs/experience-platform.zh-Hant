@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
 workflow-type: tm+mt
-source-wordcount: '3765'
+source-wordcount: '3797'
 ht-degree: 11%
 
 ---
@@ -142,7 +142,12 @@ ht-degree: 11%
 
 4. 選取 **[!UICONTROL 建立]** 以儲存排程。
 
-### 匯出增量檔案 {#export-incremental-files}
+### 匯出增量檔案
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="設定檔案名稱"
+>abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 選取 **[!UICONTROL 匯出增量檔案]** 觸發匯出，其中第一個檔案是所選對象所有設定檔資格的完整快照，後續檔案是自上次匯出以來的增量設定檔資格。
 
@@ -167,7 +172,7 @@ ht-degree: 11%
 
 4. 選取 **[!UICONTROL 建立]** 以儲存排程。
 
-### 設定檔案名稱 {#file-names}
+### 設定檔案名稱
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"

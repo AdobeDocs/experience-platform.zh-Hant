@@ -3,7 +3,7 @@ title: 使用合作夥伴提供的屬性補充第一方設定檔
 description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的對象最佳化。
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 80%
@@ -30,7 +30,7 @@ Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密
 
 例如，當您需要使用人口統計和意圖訊號豐富您的客戶記錄時，請遵循此使用案例中所述的步驟。
 
-## 必要條件和規劃 {#prerequisites-and-planning}
+## 必要條件和規劃
 
 考慮使用資料合作夥伴的屬性來補充您自己的第一方設定檔時，您應該和該資料合作夥伴討論並解決有關資料擴充循環的以下詳細資料：
 
