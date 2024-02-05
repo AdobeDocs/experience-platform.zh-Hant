@@ -4,9 +4,9 @@ title: 快速入門
 description: 了解如何開始使用「使用案例教戰手冊」功能。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 14%
 
 ---
@@ -29,6 +29,11 @@ ht-degree: 14%
 ## 建立開發沙箱 {#create-development-sandbox}
 
 使用案例教戰手冊使用特殊型別的開發沙箱。 若要開始使用並存取[[!UICONTROL 使用案例教戰手冊]](/help/use-case-playbooks/playbooks/overview.md)功能，[可建立新的開發沙箱](/help/sandboxes/ui/user-guide.md#create) (確保您沒有選取生產沙箱) 並使用尾碼包含 `-ucp` 或 `-UCP` 的名稱 (非標題)，如下所示。
+
+>[!IMPORTANT]
+>
+>當您建立新的開發沙箱時，請確定名稱包含 `-ucp` 或 `-UCP` 在尾碼中。
+
 
 ![建立使用案例教戰手冊的開發沙箱](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
