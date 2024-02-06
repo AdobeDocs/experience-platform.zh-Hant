@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '3426'
-ht-degree: 7%
+source-wordcount: '3562'
+ht-degree: 6%
 
 ---
 
@@ -255,9 +255,17 @@ ht-degree: 7%
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合建議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
-建立區段定義時， **[!UICONTROL 區段屬性]** 工作區右側的區段會顯示結果區段定義的預估大小，讓您在建立受眾本身之前根據需要調整區段定義。
+建立區段定義時， **[!UICONTROL 對象屬性]** 工作區右側的區段會顯示結果區段定義的預估大小，讓您在建立受眾本身之前根據需要調整區段定義。
 
-此 **[!UICONTROL 區段屬性]** 區段也是您指定區段定義之重要資訊的位置，包括其名稱、說明和評估型別。 區段定義名稱是用來在組織所定義的區段定義中識別您的區段定義，因此應該是描述性、簡潔且唯一的。
+**[!UICONTROL 合格的設定檔]** 表示 **實際** 符合區段定義規則的設定檔數。 此數字會在區段評估工作執行後，每24小時更新一次。
+
+合格設定檔的時間戳記表示最近 **批次** 區段評估工作和 **非** 針對使用串流或邊緣區段評估的區段定義而顯示。 如果您編輯區段定義，則在下次執行區段評估工作之前，合格設定檔的數量將保持不變。
+
+**[!UICONTROL 預估的設定檔]** 表示 **近似值** 根據的設定檔數 **範例工作**. 新增規則或條件並選取後，您會看到此值的更新版本 **[!UICONTROL 重新整理預估值]**. 選取資訊泡泡可提供錯誤臨界值和最近的範例作業時間。
+
+![合格的設定檔和預估的設定檔會在「對象屬性」區段中強調顯示。](../images/ui/segment-builder/audience-estimates.png)
+
+此 **[!UICONTROL 對象屬性]** 區段也是您指定區段定義之重要資訊的位置，包括其名稱、說明和評估型別。 區段定義名稱是用來在組織所定義的區段定義中識別您的區段定義，因此應該是描述性、簡潔且唯一的。
 
 在繼續建立區段定義時，您可以選取「 」，檢視對象的編頁預覽 **[!UICONTROL 檢視設定檔]**.
 

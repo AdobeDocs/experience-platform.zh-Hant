@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3933'
 ht-degree: 3%
@@ -331,7 +331,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->外部產生的對象 **必須** 為CSV格式，並擁有 **最大** 共11欄，且小於1GB。
+>外部產生的對象 **必須** 為CSV格式，並擁有 **最大** 共25欄，且小於1GB。
 
 選取要匯入的CSV檔案後，將顯示此外部產生對象的範例資料清單。 確認範例資料正確後，選取「 」 **[!UICONTROL 下一個]**.
 
