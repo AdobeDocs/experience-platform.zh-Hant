@@ -2,9 +2,9 @@
 title: Adobe Campaign Managed Cloud Services連線
 description: Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1589'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 1%
 Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 使用 Campaign 可以：
+
 * 透過單一可存取的客戶檢視，推動個人化和參與。
 * 將電子郵件、行動裝置、線上和線下頻道整合至客戶歷程，
 * 自動化傳送有意義的即時訊息和優惠方案。
@@ -32,6 +33,7 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 >* 對於每個區段，您最多可以新增20個欄位至 [地圖](#map) 至Adobe Campaign，
 >* Azure Blob儲存資料登陸區域(DLZ)上的資料保留：7天，
 >* 啟用頻率為最少3小時。
+>* 此連線支援的檔案名稱長度上限為255個字元。 當您 [設定匯出的檔案名稱](../../ui/activate-batch-profile-destinations.md#configure-file-names)，請確定檔案名稱不超過255個字元。 超過檔案名稱長度上限會導致啟用錯誤。
 
 ## 使用案例 {#use-cases}
 
