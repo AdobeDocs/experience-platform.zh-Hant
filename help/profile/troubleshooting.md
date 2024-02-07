@@ -4,9 +4,9 @@ title: 即時客戶設定檔疑難排解指南
 type: Documentation
 description: 本檔案提供即時客戶個人檔案常見問題的解答，以及使用Adobe Experience Platform處理個人檔案資料時常見錯誤的疑難排解指南。
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
@@ -122,18 +122,6 @@ ht-degree: 0%
 ```
 
 當嘗試為設定檔資料建立刪除請求時找不到有效的批次時，就會發生此錯誤。 在重試之前，請檢查您已為啟用設定檔的資料集輸入正確的ID。
-
-### 尚未建立投影目的地
-
-```json
-{
-  "status":404,
-  "title":"The projection destination has not yet been created.",
-  "type":"http://ns.adobe.com/adobecloud/problem/missing-entity"
-}
-```
-
-此錯誤發生於 `destinationId` 提供於 `POST /config/projections` 請求無效。 在重試之前，請仔細檢查您是否已提供有效的目的地ID。 若要建立新目的地，請依照以下說明的步驟： [設定檔開發人員指南](./api/edge-projections.md#create-a-destination).
 
 ### 不支援的媒體型別
 

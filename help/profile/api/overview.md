@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔API指南
 description: 即時客戶設定檔API可讓開發人員探索和使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或錯誤新增的設定檔資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '881'
 ht-degree: 1%
 
 ---
@@ -31,10 +31,6 @@ ht-degree: 1%
 每個計算屬性都包含運算式（或「規則」），可評估傳入的資料並將結果值儲存在設定檔屬性中。 這些計算可協助您輕鬆回答與期限購買價值、購買間隔時間或應用程式開啟次數相關的問題，而不需要您每次都需要手動執行複雜的計算。 然後可以在設定檔中檢視這些計算的屬性值，用來建立對象，或是透過許多不同的存取模式進行存取。
 
 您可以使用建立、檢視、編輯和刪除計算屬性。 `ca/attributes/` 端點。 若要瞭解如何使用計算屬性，請參閱 [計算屬性概述](../computed-attributes/overview.md). 如需API作業的相關資訊，請造訪 [計算屬性API端點指南](../computed-attributes/api.md).
-
-## 邊緣投影 {#edge-projections}
-
-Adobe Experience Platform可讓您在名為「邊緣」的策略性伺服器上輕鬆存取資料，進而實現客戶體驗的即時個人化。 此 [!DNL Real-Time Customer Profile] API提供端點，可透過稱為「投影」的元件處理邊緣。 這包括投影設定，以決定應該投影到每個邊緣的資料，以及投影目的地，以定義要路由投影的位置。 如需有關使用邊緣投影的詳細資訊，請造訪 [投影設定和目的地端點指南](edge-projections.md).
 
 ## 實體([!DNL Profile] access) {#entities}
 

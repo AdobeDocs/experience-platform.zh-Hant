@@ -2,14 +2,14 @@
 title: 即時客戶個人檔案概述
 description: 即時客戶個人檔案會合併來自各種來源的資料，並以個別客戶個人檔案和相關時間序列事件的形式提供對該資料的存取權。 此功能可讓行銷人員跨多個管道，與其對象推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1821'
 ht-degree: 1%
 
 ---
 
-# [!DNL Real-Time Customer Profile] 概覽
+# [!DNL Real-Time Customer Profile] 概觀
 
 Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。替換為 [!DNL Real-Time Customer Profile]，您能透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，檢視每個個別客戶的整體檢視。 [!DNL Profile] 可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。 此總覽可協助您瞭解的角色和使用 [!DNL Real-Time Customer Profile] 在 [!DNL Experience Platform].
 
@@ -104,10 +104,6 @@ Adobe Experience Platform [!DNL Segmentation Service] 會產生為個別客戶�
 ### 串流擷取和串流細分
 
 即時輸入可透過稱為串流擷取的流程進行。 當個人資料和時間序列資料被擷取時， [!DNL Real-Time Customer Profile] 在將資料與現有資料合併並更新聯合檢視之前，會透過進行中的串流細分程式，自動決定從對象中包含或排除該資料。 因此，您可以即時執行計算並作出決定，在客戶與您的品牌互動時，向客戶傳遞強化的個人化體驗。 在內嵌資料時，資料也會經過驗證，以確保資料可正確內嵌，並符合資料集所依據的結構描述。 如需有關內嵌期間所完成驗證的詳細資訊，請從閱讀 [資料擷取品質概觀](../ingestion/quality/overview.md).
-
-## 邊緣投影
-
-為了即時跨多個管道為您的客戶推動協調、一致和個人化的體驗，正確的資料需要隨時可用並隨著變更持續更新。 Adobe Experience Platform透過使用所謂的edge來啟用資料的即時存取。 Edge是地理位置上放置的伺服器，可儲存資料並讓應用程式輕鬆存取資料。 例如，Adobe應用程式(例如Adobe Target和Adobe Campaign)會使用Edge來即時提供個人化客戶體驗。 資料會透過投影路由至邊緣，投影目的地定義資料將傳送至的邊緣，而投影組態則定義可在邊緣使用的特定資訊。 若要進一步瞭解並開始使用投影，請使用 [!DNL Real-Time Customer Profile] API，請參閱 [邊緣投影端點參考線](api/edge-projections.md).
 
 ## 將資料擷取至 [!DNL Profile]
 

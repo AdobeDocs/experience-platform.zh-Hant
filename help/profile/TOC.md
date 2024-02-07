@@ -3,17 +3,17 @@ audience: user
 user-guide-title: 即時客戶設定檔指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
-source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 30%
+source-wordcount: '129'
+ht-degree: 25%
 
 ---
 
 
 # [!DNL Real-Time Customer Profile] {#profile}
 
-* [[!DNL Profile] 概覽](home.md)
+* [[!DNL Profile] 概觀](home.md)
 * [設定檔概述（影片）](video/profile-overview.md)
 * [[!DNL Profile] 和分段護欄](guardrails.md)
 * [[!DNL Profile] 儀表板](ui/profile-dashboard.md)
@@ -23,7 +23,6 @@ ht-degree: 30%
 * [!DNL Profile] API {#api}
    * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
-   * [邊緣投影](api/edge-projections.md)
    * [實體([!DNL Profile] access)](api/entities.md)
    * [匯出工作([!DNL Profile] export)](api/export-jobs.md)
    * [預覽樣本狀態([!DNL Profile] 預覽)](api/preview-sample-status.md)
@@ -32,7 +31,7 @@ ht-degree: 30%
    * [[!DNL Profile] UI指南](ui/user-guide.md)
    * [[!DNL Profile] 詳細資料自訂](ui/profile-customization.md)
    * [潛在客戶設定檔](ui/prospect-profile.md)
-* 計算屬性 {#computed-attributes}
+* 計算的屬性 {#computed-attributes}
    * [概觀](computed-attributes/overview.md)
    * [計算屬性API指南](computed-attributes/api.md)
    * [計算屬性UI指南](computed-attributes/ui.md)

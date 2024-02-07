@@ -2,10 +2,10 @@
 title: 邊緣設定檔
 description: 瞭解邊緣設定檔、相關術語、邊緣設定檔的可用區域，以及邊緣設定檔的可用服務。
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 1%
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 1%
 - IRL1
 - AUS3
 - SGP3
-- JPN3
+- 日文3
 - IND1
 
 這些區域都是設定檔著陸的有效選項。
@@ -61,7 +61,7 @@ Projection Worker Service (MEPW)會監視設定檔上集線器上發生的變更
 
 ## 後續步驟
 
-閱讀本指南後，您應該對邊緣設定檔有基本的瞭解，包括關於邊緣設定檔可用區域和服務的資訊。 如需邊緣投影的詳細資訊，請參閱 [邊緣投影端點參考線](./api/edge-projections.md). 如需AdobeExperience Edge的詳細資訊，請參閱 [Edge概述](../edge/home.md).
+閱讀本指南後，您應該對邊緣設定檔有基本的瞭解，包括關於邊緣設定檔可用區域和服務的資訊。 如需AdobeExperience Edge的詳細資訊，請參閱 [Edge概述](../edge/home.md).
 
 ## 附錄
 
@@ -77,6 +77,4 @@ Projection Worker Service (MEPW)會監視設定檔上集線器上發生的變更
 
 ### 資料到期如何處理邊緣設定檔？
 
-對於邊緣設定檔，資料到期會決定設定檔在邊緣上停留多久才會被移除。 資料到期日為 **滾動**，這表示每次在edge存取設定檔時，資料到期時間都會重設。
-
-您可以將邊緣設定檔的資料過期時間新增至 [邊緣投影](./api/edge-projections.md). 預設情況下，資料的有效期為14天，但最短1小時和90天的上限可以設定。
+對於邊緣設定檔，資料到期會決定設定檔在邊緣上停留多久才會被移除。 資料到期日為 **滾動**，這表示每次在edge存取設定檔時，資料到期時間都會重設。 依預設，資料的有效期為14天。
