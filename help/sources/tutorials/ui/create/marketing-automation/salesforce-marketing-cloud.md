@@ -2,9 +2,9 @@
 title: 連線您的SalesforceMarketing Cloud帳戶，以透過UIExperience Platform
 description: 瞭解如何透過UI將您的SalesforceMarketing Cloud帳戶連結至Experience Platform。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
+source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 1%
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| Host | 應用程式的主機伺服器。 這通常是您的子網域。 **注意：** 輸入您的 `host` 值，您必須指定 `{subdomain}.rest.marketingcloudapis.com`. 例如，如果您的主機URL為 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`，則您只需輸入 `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` 作為您的主機值。 |
+| Host | 應用程式的主機伺服器。 這通常是您的子網域。 **注意：** 輸入您的 `host` 值，您必須指定 `{subdomain}.rest.marketingcloudapis.com`. 例如，如果您的主機URL為 `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`，然後您必須輸入 `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` 作為您的主機值。 |
 | 使用者端ID | 與您的關聯的使用者端ID [!DNL Salesforce Marketing Cloud] 應用程式。 |
 | 使用者端密碼 | 與您的關聯的使用者端密碼 [!DNL Salesforce Marketing Cloud] 應用程式。 |
 
