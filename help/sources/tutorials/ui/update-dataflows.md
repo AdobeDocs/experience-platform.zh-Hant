@@ -58,7 +58,7 @@ ht-degree: 8%
 
 ![add-data](../../images/tutorials/update-dataflows/add-data.png)
 
-### 資料流詳細資訊
+### 資料流詳細資料
 
 在 [!UICONTROL 資料流詳細資料] 頁面，您可以為資料流提供更新的名稱和說明，並重新設定資料流的錯誤臨界值。 在此步驟中，您也可以設定或修改警示訂閱的設定。
 
@@ -66,7 +66,7 @@ ht-degree: 8%
 
 ![資料流 — 詳細資料](../../images/tutorials/update-dataflows/dataflow-detail.png)
 
-### 對應
+### 映射
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ ht-degree: 8%
 
 ![排程快顯視窗](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
-### 請檢閱
+### 檢閱
 
 此 **[!UICONTROL 檢閱]** 步驟隨即顯示，可讓您在更新資料流之前先檢閱資料流。
 

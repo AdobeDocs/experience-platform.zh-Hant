@@ -6,8 +6,8 @@ description: Adobe Experience Platform查詢服務提供使用者介面，可用
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1517'
-ht-degree: 3%
+source-wordcount: '1504'
+ht-degree: 2%
 
 ---
 
@@ -134,7 +134,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 | 參數 | 說明 | 範例 |
 |---|---|---|
 | **伺服器/主機** | 您連線的伺服器/主機名稱。 <ul><li>此值會用於即將到期的認證和不即將到期的認證，其形式為 `server.adobe.io`. 值位於 **[!UICONTROL 主機]** 在 [!UICONTROL 即將到期的認證] 區段。</ul></li> | `acme.platform.adobe.io` |
-| **連接埠** | 您連線的伺服器/主機連線埠。 <ul><li>此值會用於即將到期的認證和不即將到期的認證，並可在下列位置找到： **[!UICONTROL 連線埠]** 在 [!UICONTROL 即將到期的認證] 區段。</ul></li> | `80` |
+| **連線埠** | 您連線的伺服器/主機連線埠。 <ul><li>此值會用於即將到期的認證和不即將到期的認證，並可在下列位置找到： **[!UICONTROL 連線埠]** 在 [!UICONTROL 即將到期的認證] 區段。</ul></li> | `80` |
 | **資料庫** | 您正在連線的資料庫。 <ul><li>此值會用於即將到期的認證和不即將到期的認證，並會發現於 **[!UICONTROL 資料庫]** 在 [!UICONTROL 即將到期的認證] 區段。 </ul></li> | `prod:all` |
 | **使用者名稱** | 連線到外部使用者端的使用者使用者名稱。 <ul><li>此值會用於即將到期的認證和不即將到期的認證。 它以前採用英數字串的形式 `@AdobeOrg`. 此值位於 **[!UICONTROL 使用者名稱]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
 | **密碼** | 連線到外部使用者端的使用者密碼。 <ul><li>如果您使用即將到期的認證，您可在下列位置找到： **[!UICONTROL 密碼]** 在 [!UICONTROL 即將到期的認證] 區段。</li><li>如果您使用不會到期的認證，此值是來自technicalAccountID的串連引數，以及從設定JSON檔案取得的認證。 密碼值採用以下形式： `{technicalAccountId}:{credential}`.</li></ul> | <ul><li>即將到期的認證密碼超過一千個字元的英數字串。 將不會提供範例。</li><li>不會到期的認證密碼如下：<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |

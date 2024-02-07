@@ -5,18 +5,18 @@ description: 瞭解Adobe Experience Platform區段服務，以及此服務在平
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1627'
 ht-degree: 14%
 
 ---
 
-# [!DNL Segmentation Service] 概覽
+# [!DNL Segmentation Service] 概觀
 
 Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RESTful API，可讓您透過區段定義或其他來源，從 [!DNL Real-Time Customer Profile] 資料。 這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 本檔案提供以下專案的概觀： [!DNL Segmentation Service] 以及它在Adobe Experience Platform中扮演的角色。
 
-## 快速入門 [!DNL Segmentation Service]
+## 快速入門：[!DNL Segmentation Service]
 
 您應瞭解本檔案中使用的下列主要辭彙：
 
@@ -62,7 +62,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="串流評估"
->abstract="串流細分是持續進行的資料選擇流程，其會根據使用者活動來更新對象。 "
+>abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新對象。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=zh-Hant" text="使用串流分段近乎即時地評估事件"
 
 Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。

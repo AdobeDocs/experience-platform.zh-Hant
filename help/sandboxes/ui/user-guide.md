@@ -6,8 +6,8 @@ description: 本檔案提供如何在Adobe Experience Platform使用者介面中
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 7%
+source-wordcount: '940'
+ht-degree: 5%
 
 ---
 
@@ -126,7 +126,7 @@ ht-degree: 7%
 
 從沙箱清單中選取您要刪除的沙箱。 在出現的右側導覽面板中，選取 **[!UICONTROL 刪除]**.
 
-![delete](../images/ui/delete.png)
+![刪除](../images/ui/delete.png)
 
 會出現一個對話方塊，提示您確認您的選擇。 選取 **[!UICONTROL 繼續]** 以繼續進行。
 

@@ -4,8 +4,8 @@ description: 瞭解如何在網站上非同步部署Adobe Experience Platform標
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 61%
+source-wordcount: '1045'
+ht-degree: 59%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 61%
 
 ### 非同步部署
 
-您可以將 `async` 屬性新增到 `<script>` 標籤，以非同步載入任何程式庫。例如：
+您可以新增「 」，以非同步載入任何程式庫 `async` 屬性至 `<script>` 標籤之間。 例如：
 
 ```markup
 <script src="example.js" async></script>

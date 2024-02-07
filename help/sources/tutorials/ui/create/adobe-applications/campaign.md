@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 7%
+ht-degree: 6%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 ## 快速入門
 
-本指南需要您深入了解下列 Experience Platform 元件：
+本指南需要您實際瞭解下列Experience Platform元件：
 
 * [來源](../../../../home.md)：Platform可讓您從各種來源擷取資料，同時可以使用Platform服務來建構、加標籤及增強傳入資料。
 * [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
@@ -34,7 +34,7 @@ ht-degree: 7%
 
 ![顯示Adobe Campaign Managed Cloud Services卡片的來源目錄。](../../../../images/tutorials/create/campaign/catalog.png)
 
-### 選擇資料 {#select-data}
+### 選取資料 {#select-data}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
@@ -139,5 +139,5 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 依照本教學課程所述，您已成功建立資料流，將您的Campaign v8傳遞記錄檔和追蹤記錄檔資料帶入Platform。 傳入資料現在可供下游Platform服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-Time Customer Profile] 概覽](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace] 概覽](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile] 概觀](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] 概觀](../../../../../data-science-workspace/home.md)
