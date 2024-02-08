@@ -2,9 +2,9 @@
 title: 沙箱工具套件API端點
 description: 沙箱工具API中的/packages端點可讓您以程式設計方式管理Adobe Experience Platform中的套件。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1531'
 ht-degree: 6%
 
 ---
@@ -134,7 +134,7 @@ curl -X PUT \
   }'
 ```
 
-| 屬性 | 說明 | 類型 | 必要 |
+| 屬性 | 說明 | 類型 | 強制 |
 | --- | --- | --- | --- |
 | `id` | 要更新之封裝的ID。 | 字串 | 是 |
 | `action` | 若要將成品新增至封裝中，動作值應為 **新增**. 僅支援此動作 **部分** 封裝型別。 | 字串 | 是 |
@@ -213,7 +213,7 @@ curl -X PUT \
   }'
 ```
 
-| 屬性 | 說明 | 類型 | 必要 |
+| 屬性 | 說明 | 類型 | 強制 |
 | --- | --- | --- | --- |
 | `id` | 要更新之封裝的ID。 | 字串 | 是 |
 | `action` | 若要從封裝中刪除成品，動作值應為 **DELETE**. 僅支援此動作 **部分** 封裝型別。 | 字串 | 是 |
@@ -288,7 +288,7 @@ curl -X PUT \
   }'
 ```
 
-| 屬性 | 說明 | 類型 | 必要 |
+| 屬性 | 說明 | 類型 | 強制 |
 | --- | --- | --- | --- |
 | `id` | 要更新之封裝的ID。 | 字串 | 是 |
 | `action` | 若要更新套件中的中繼資料欄位，動作值應為 **更新**. 僅支援此動作 **部分** 封裝型別。 | 字串 | 是 |
@@ -391,7 +391,7 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
 ```
 
-| 屬性 | 說明 | 類型 | 必要 |
+| 屬性 | 說明 | 類型 | 強制 |
 | --- | --- | --- | --- |
 | `expiryPeriod` | 這個使用者指定的時段會定義從發佈套件開始的套件到期日（以天為單位）。 此值不應為負數。<br> 如果未指定值，則預設值將從發佈日期算起90 （天）。 | 整數 | 無 |
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **要求**
 
-以下請求會使用 {PACKAGE_ID} 已提供。 裝載是替代的對應，如果專案存在，則索引鍵為 `artifactId` 由套件提供，而另一個選項為值。 如果地圖或承載為 **空白**，則不會執行任何替代。
+下列請求會擷取要匯入的套件。 裝載是替代的對應，如果專案存在，則索引鍵為 `artifactId` 由套件提供，而另一個選項為值。 如果地圖或承載為 **空白**，則不會執行任何替代。
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -773,9 +773,8 @@ curl -X POST \
   }'
 ```
 
-| 屬性 | 說明 | 類型 | 必要 |
+| 屬性 | 說明 | 類型 | 強制 |
 | --- | --- | --- | --- |
-| `id` | 套件的ID。 | 字串 | 是 |
 | `alternatives` | `alternatives` 代表來源沙箱成品對應至現有目標沙箱成品。 由於成品已存在，匯入工作會避免在Target沙箱中建立這些成品。 | 字串 | 無 |
 
 **回應**
