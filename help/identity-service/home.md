@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service總覽
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
 | 詞語 | 定義 |
 | --- | --- |
 | 身分 | 身分是實體獨有的資料。 通常這是真實世界的物件，例如個人、硬體裝置或網頁瀏覽器（以Cookie表示）。 完全合格的身分包含兩個元素： **身分名稱空間** 和 **身分值**. |
-| 身分命名空間 | 身分命名空間是特定身分的背景。例如，名稱空間 `Email` 可能對應至 **朱利安<span>@acme.com**. 同樣地，名稱空間 `Phone` 可能對應至 `555-555-1234`. 如需詳細資訊，請閱讀 [身分名稱空間總覽](./features/namespaces.md) |
+| 身分命名空間 | 身分命名空間是特定身分的背景。例如，名稱空間 `Email` 可能與身分值對應： **朱利安<span>@acme.com**. 同樣地，名稱空間 `Phone` 可能與身分值對應： `555-555-1234`. 如需詳細資訊，請閱讀 [身分名稱空間總覽](./features/namespaces.md). |
 | 身分識別值 | 身分值是代表真實世界實體的字串，並會透過名稱空間在身分服務中分類。 例如，身分值（字串） **朱利安<span>@acme.com** 可分類為 `Email` 名稱空間。 |
 | 身分類型 | 身分型別是身分名稱空間的元件。 身分型別會指定身分資料是否連結在身分圖表中。 |
 | 連結 | 連結或連結是一種方法，可讓兩個不同的身分分別代表相同的實體。 例如，「」之間的連結`Email` =朱利安<span>@acme.com」和&quot;`Phone` = 555-555-1234」表示兩個身分代表相同的實體。 這表示已與您的品牌互動的客戶同時使用julien的電子郵件地址<span>@acme.com和電話號碼555-555-1234相同。 |
