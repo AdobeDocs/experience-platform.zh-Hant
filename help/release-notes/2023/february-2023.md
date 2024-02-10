@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2023 年 2 月)
 description: Adobe Experience Platform 2023 年 2 月版發行說明。
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
 source-wordcount: '1255'
 ht-degree: 97%
@@ -102,7 +102,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用 SQL 啟用設定檔的資料集 | [在 CTAS 查詢中使用 LABEL 使資料集「啟用設定檔」](../../query-service/sql/syntax.md#create-table-as-select)，或使用 ALTER 以更新要為設定檔啟用的現有資料集。您可以使用此擴充的SQL建構，針對即時客戶個人檔案業務使用案例的衍生資料集提供順暢的支援。 請參閱 [衍生資料集檔案的流暢的SQL流程](../../query-service/data-distiller/derived-datasets/seamless-sql-flow.md) 以取得更多詳細資料。 |
+| 使用 SQL 啟用設定檔的資料集 | [在 CTAS 查詢中使用 LABEL 使資料集「啟用設定檔」](../../query-service/sql/syntax.md#create-table-as-select)，或使用 ALTER 以更新要為設定檔啟用的現有資料集。您可以使用此擴充的SQL建構，針對即時客戶個人檔案業務使用案例的衍生資料集提供順暢的支援。 請參閱 [衍生資料集檔案的流暢的SQL流程](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) 以取得更多詳細資料。 |
 | 監視已排程查詢 | 使用[「已排程查詢」索引標籤](../../query-service/ui/monitor-queries.md)找到有關查詢執行的重要資訊並訂閱警示。監視查詢以獲取排程詳細資料、狀態，並在萬一查詢失敗時獲取錯誤訊息/代碼。 |
 | 切換自動完成功能 | 消除特定的中繼資料命令並[切換查詢編輯器自動完成功能](../../query-service/ui/user-guide.md#auto-complete)以縮短處理時間。本功能會在您編寫查詢時自動建議可能的 SQL 關鍵字和表格的詳細資料。 |
 | 資料集範例 | 指定查詢中的抽樣率並[使用資料集範例建立統一的隨機採樣](../../query-service/key-concepts/dataset-samples.md)，或根據特定標準建立條件式範例。 |

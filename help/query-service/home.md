@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務總覽
 description: 瞭解Experience Platform中查詢服務的角色。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,16 @@ Adobe Experience Platform會擷取各種來源的資料。 行銷人員的主要
 
 ## 使用查詢服務 {#usage}
 
-若要分析資料，您可以使用查詢服務使用者介面和RESTful API，從中建立SQL查詢。 透過使用者介面，您可以編寫和執行查詢、檢視以前執行的查詢，以及存取由您組織內的使用者儲存的查詢。 您可以使用查詢編輯器（如沙箱），在將查詢執行到更廣的資料集之前先測試查詢。 請參閱 [查詢服務使用者介面指南](ui/overview.md) 以取得關於使用UI的詳細資訊。 RESTful API提供類似的體驗。 您可以使用查詢服務API以程式設計方式寫入和執行查詢、排程查詢以供未來使用和重複，以及建立您要寫入的查詢範本。 有關使用查詢服務API的更多資訊，請參閱 [Query Service開發人員指南](api/getting-started.md).
+若要分析資料，請使用Query Service使用者介面或RESTful API建立並執行SQL查詢。
+使用Query Service UI，您可以撰寫、執行和排程查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。 您也可以先測試查詢，再使用查詢編輯器在更廣泛的資料集上執行查詢。 請參閱 [查詢服務UI指南](ui/overview.md) 以概略瞭解UI功能。
+
+RESTful API提供類似的體驗。 您可以使用查詢服務API以程式設計方式寫入和執行查詢、建立並儲存您要調整的查詢範本，或排程查詢以自動執行。 請參閱 [Query Service開發人員指南](api/getting-started.md) 以取得關於使用查詢服務API的詳細資訊。
+
+若要快速開始使用查詢服務功能，建議您閱讀以下檔案：
+
+- [查詢執行的一般指引](./best-practices/writing-queries.md)
+- [查詢服務中的SQL語法](./sql/syntax.md)
+- [使用SQL建立衍生資料集](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## 查詢服務和Experience Platform服務 {#experience-platform-services}
 
