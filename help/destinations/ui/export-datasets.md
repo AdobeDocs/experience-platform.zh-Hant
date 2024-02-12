@@ -3,7 +3,7 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 4d662bc8ec8729654589c8675c5e598b94957ed7
+source-git-commit: d6b3dd7de1e8b5247bf692d1654fc4506ab4a471
 workflow-type: tm+mt
 source-wordcount: '1838'
 ht-degree: 4%
@@ -56,7 +56,7 @@ ht-degree: 4%
   <tr>
     <td>Customer Journey Analytics</td>
     <td>全部</td>
-    <td> 透過Sources、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。 閱讀中所需的許可權 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics檔案</a>.  <br> <b>可用性注意事項：</b> 將資料集匯出至雲端的功能目前處於發行的「有限測試」階段，可能在您的環境中尚未提供使用。 當該功能供一般用途時，此備註將被刪除。如需Customer Journey Analytics發行程式的相關資訊，請參閱 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics功能發行</a>. </td>
+    <td> <p> 透過Sources、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。 閱讀中所需的許可權 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Customer Journey Analytics檔案</a>. </p> <p> <b>可用性注意事項：</b> 將資料集匯出至雲端的功能目前處於發行的「有限測試」階段，可能在您的環境中尚未提供使用。 當該功能供一般用途時，此備註將被刪除。如需Customer Journey Analytics發行程式的相關資訊，請參閱 <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Customer Journey Analytics功能發行</a>. </p> </td>
   </tr>
   <tr>
     <td>資料Distiller</td>
