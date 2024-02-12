@@ -2,9 +2,9 @@
 title: 報告套裝資料的Adobe Analytics來源聯結器
 description: 本檔案提供Analytics概觀及說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1139'
 ht-degree: 2%
 
 ---
@@ -52,7 +52,11 @@ XDM是公開記錄的規格，為應用程式提供通用結構和定義，用�
 | 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **非** 已啟用) | &lt; 2分鐘 |
 | 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **是** 已啟用) | 長達30分鐘 |
 | 資料湖的新資料 | &lt; 2.25小時 |
+| CJA的新資料，不含 [拼接](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3.75小時 |
+| 使用拼接將資料新增至CJA | &lt; 7小時 |
 | 少於100億個事件的回填 | &lt; 4週 |
+
+如需CJA延遲的詳細資訊，請參閱： [Customer Journey Analytics護欄](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 生產沙箱的Analytics回填預設為13個月。 對於非生產沙箱中的Analytics資料，回填會設定為三個月。 上表提及的100億個事件上限嚴格與預期延遲有關。
 
