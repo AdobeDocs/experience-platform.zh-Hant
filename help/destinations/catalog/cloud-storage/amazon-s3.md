@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 13%
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**. Amazon S3目的地支援兩種驗證方法：
 
 * 存取金鑰和機密金鑰驗證
-* 假定的角色驗證
+* 假定角色驗證
 
 #### 存取金鑰和機密金鑰驗證
 
@@ -85,16 +85,16 @@ ht-degree: 13%
 
   ![此影像顯示UI中格式正確的PGP金鑰範例。](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### 假定的角色 {#assumed-role-authentication}
+#### 假定角色 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
->title="假定的角色驗證"
->abstract="如果您不想與Adobe共用帳戶金鑰和秘密金鑰，請使用此驗證型別。 Experience Platform會改用角色型存取來連線至您的Amazon S3位置。 貼上您在AWS中為Adobe使用者建立之角色的ARN。 模式類似於 `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>title="假定角色驗證"
+>abstract="如果您不想與 Adobe 共用帳戶金鑰和祕密金鑰，請使用此驗證類型。否則，Experience Platform 會使用基於角色的存取連線到您的 Amazon S3 位置。貼上您在 AWS 中為 Adobe 使用者建立之角色的 ARN。該模式類似於 `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
 ![選取假定的角色驗證時必填欄位的影像。](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-如果您不想與Adobe共用帳戶金鑰和秘密金鑰，請使用此驗證型別。 Experience Platform會改用角色型存取來連線至您的Amazon S3位置。
+如果您不想與 Adobe 共用帳戶金鑰和祕密金鑰，請使用此驗證類型。Experience Platform會改用角色型存取來連線至您的Amazon S3位置。
 
 為此，您需要在AWS主控台中建立一個Adobe的假設使用者， [許可權必要許可權](#required-s3-permission) 以寫入您的Amazon S3貯體。 建立 **[!UICONTROL 受信任的實體]** 在AWS中透過Adobe帳戶 **[!UICONTROL 670664943635]**. 如需詳細資訊，請參閱 [有關建立角色的AWS檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 

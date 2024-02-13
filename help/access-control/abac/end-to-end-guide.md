@@ -5,8 +5,8 @@ description: 本檔案提供Adobe Experience Platform中屬性型存取控制的
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 21%
+source-wordcount: '1714'
+ht-degree: 18%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 21%
 
 [!UICONTROL 許可權] 是Experience Cloud區域，管理員可在此定義使用者角色和原則，以管理產品應用程式內功能和物件的許可權。
 
-到 [!UICONTROL 許可權]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 [!UICONTROL 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。]
+到 [!UICONTROL 許可權]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 [!UICONTROL 許可權] 也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。
 
 如果您沒有管理員許可權，請聯絡系統管理員以獲得存取權。
 
@@ -67,7 +67,7 @@ Platform UI的許可權工作區隨即顯示，並開啟在 **[!UICONTROL 角色
 >id="platform_permissions_labels_about"
 >title="什麼是標籤？"
 >abstract="標籤可讓您根據適用於該資料的使用原則對資料集和欄位進行分類。平台提供了幾個 Adobe 定義的「核心」資料使用標籤，涵蓋了適用於資料控管的各種常見限制。例如，敏感資料「S」標籤 (例如 RHD (受監管的健康資料))，可讓您將受保護的健康資訊 (PHI) 加以分類。您也可以定義適合您組織需求的自訂標籤。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤總覽"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="資料使用標籤概觀"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
@@ -84,7 +84,7 @@ Platform UI的許可權工作區隨即顯示，並開啟在 **[!UICONTROL 角色
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="建立新角色"
->abstract="您可以建立一個新角色以更好地分類存取您 Platform 執行個體的使用者。例如，您可以為內部行銷團隊建立角色並將 RHD 標籤套用到該角色，從而允許您的內部行銷團隊存取受保護的健康資訊 (PHI)。或者，您也可以為外部機構建立一個角色，且不將 RHD 標籤套用到該角色來拒絕該角色存取 PHI 資料。"
+>abstract="您可以建立一個新角色以更好地分類存取您 Platform 執行個體的使用者。例如，您可以為內部行銷團隊建立角色並將 RHD 標籤套用到該角色，進而允許您的內部行銷團隊存取受保護的健康資訊 (PHI)。或者，您也可以為外部機構建立一個角色，且不將 RHD 標籤套用到該角色來拒絕該角色存取 PHI 資料。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html#create-a-new-role" text="建立新角色"
 
 >[!CONTEXTUALHELP]
@@ -254,7 +254,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 您已完成將標籤套用至角色、結構描述欄位和區段。 指派給這些角色的外部機構無法檢視這些標籤，及其在結構描述、資料集和設定檔檢視中的值。 使用區段產生器時，這些欄位也限制用於區段定義。
 
-若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](./overview.md)。
+如需以屬性為基礎的存取控制的詳細資訊，請參閱 [屬性型存取控制概觀](./overview.md).
 
 以下影片旨在協助您瞭解屬性型存取控制，並概述如何設定角色、資源和原則。
 

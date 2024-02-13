@@ -17,7 +17,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
 >title="方案關係"
->abstract="屬於不同類別的方案可藉由關係欄位建立內容連結，從而讓您能夠建置更複雜的分段規則。如需有關方案關係的詳細資訊，請查看此文件。"
+>abstract="屬於不同類別的方案可藉由關係欄位建立內容連結，進而讓您能夠建置更複雜的分段規則。如需有關方案關係的詳細資訊，請查看此文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
