@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 2fd721084ff8b3cf24b585a2179b1efe34de4c83
+source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1849'
 ht-degree: 4%
 
 ---
@@ -239,3 +239,4 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 * 透過API建立的資料集目前無法匯出。
 * UI目前不會阻止您刪除匯出至目的地的資料集。 請勿刪除匯出至目的地的資料集。 [移除資料集](#remove-dataset) 從目的地資料流中刪除之前。
 * 資料集匯出的監控量度目前與設定檔匯出的數字混合在一起，因此不能反映真正的匯出數字。
+* 時間戳記超過365天的資料會從資料集匯出中排除。 如需詳細資訊，請檢視 [排程資料集匯出的護欄](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
