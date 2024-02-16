@@ -6,7 +6,7 @@ exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_constraints"
 >title="時間限制重構"
->abstract="已移除規則層級和群組層級時間限制，以釐清時間限制的使用方式。 請將您的限制重新寫入為畫布層級或卡片層級的時間限制。"
+>abstract="為了釐清時間限制的使用，我們已將規則層級和群組層級的時間限制。請將您的限制重新寫入為畫布層級或卡片層級的時間限制。"
 
 2024年1月發行的Adobe Experience Platform已對Adobe Experience Platform分段服務進行變更，在可以定義時間限制的地方新增限制。 這些變更會影響使用區段產生器UI新建或編輯的區段。 本指南說明如何減少這些變更。
 

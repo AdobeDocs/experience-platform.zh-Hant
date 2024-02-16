@@ -3,7 +3,7 @@ description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加
 title: 使用 UI 中的範本建立來源資料流
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 9%
@@ -51,7 +51,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 >id="platform_sources_templates_accounttype"
 >title="選取商業類型"
 >abstract="為您的使用案例選取適合的商業類型。您的存取權限可能會依據您的即時客戶資料平台訂閱帳戶而不同。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant" text="Real-Time CDP 概觀"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 概觀"
 
 在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 並檢視Experience Platform中可用的來源目錄。
 
