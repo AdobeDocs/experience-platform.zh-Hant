@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 來源連接器說明
 breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1012'
 ht-degree: 10%
 
 ---
@@ -296,6 +296,7 @@ ht-degree: 10%
          - [teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - 資料合作夥伴 {#data-partner}
          - [Merkury Enterprise身分解析](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom潛在客戶資料匯入](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - 電子商務 {#ecommerce}
          - [SAP商務](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
