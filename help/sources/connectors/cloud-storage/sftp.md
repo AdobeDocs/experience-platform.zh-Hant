@@ -2,16 +2,20 @@
 keywords: Experience Platform；首頁；熱門主題；SFTP；sftp
 solution: Experience Platform
 title: SFTP來源聯結器概述
-description: 瞭解如何使用API或使用者介面將SFTP伺服器連線到Adobe Experience Platform。
+description: 瞭解如何使用API或使用者介面將SFTP伺服器連線至Adobe Experience Platform。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
 workflow-type: tm+mt
-source-wordcount: '721'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
 
 # SFTP聯結器
+
+>[!IMPORTANT]
+>
+>此 [!DNL SFTP] Adobe Experience Platform連線的伺服器必須能夠支援區塊化，這表示多個連線可連線至單一檔案。 若您的 [!DNL SFTP] 伺服器不支援區塊化，則您可能會收到阻止檔案擷取的錯誤。
 
 Adobe Experience Platform為AWS等雲端服務供應商提供原生連線， [!DNL Google Cloud Platform]、和 [!DNL Azure]，可讓您從這些系統帶入資料。
 
@@ -19,22 +23,22 @@ Adobe Experience Platform為AWS等雲端服務供應商提供原生連線， [!D
 
 ## IP位址允許清單
 
-在使用來源聯結器之前，必須將IP位址清單新增至允許清單。 使用來源時，若未將您地區專屬的IP位址新增至允許清單，可能會導致錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
 
 ## 檔案和目錄的命名限制
 
-以下是您在命名雲端儲存體檔案或目錄時必須考慮的限制清單。
+以下是在命名雲端儲存空間檔案或目錄時必須考慮的限制清單。
 
 - 目錄和檔案元件名稱不能超過255個字元。
 - 目錄和檔案名稱不能以正斜線(`/`)。 如果提供，則會自動移除。
 - 下列保留的URL字元必須正確逸出： `! ' ( ) ; @ & = + $ , % # [ ]`
 - 不允許使用下列字元： `" \ / : | < > * ?`.
-- 不允許非法URL路徑字元。 程式碼點數類似 `\uE000`雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的相關規則，請參閱 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- 不允許下列檔案名稱：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)，以及兩個點字元(...)。
+- 不允許非法URL路徑字元。 程式碼點數如下 `\uE000`雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的管理規則，請參閱 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- 不允許下列檔案名稱： LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)和兩個點字元(..)。
 
-## 設定Base64編碼的OpenSSH私密金鑰 [!DNL SFTP]
+## 設定Base64編碼的OpenSSH私密金鑰，用於 [!DNL SFTP]
 
-此 [!DNL SFTP] 來源支援驗證，使用 [!DNL Base64]-encoded OpenSSH私密金鑰。 如需如何產生Base64編碼的OpenSSH私密金鑰並連線的詳細資訊，請參閱以下步驟 [!DNL SFTP] 至平台。
+此 [!DNL SFTP] 來源支援使用進行驗證 [!DNL Base64]-encoded OpenSSH私密金鑰。 如需有關如何產生Base64編碼的OpenSSH私密金鑰並連線的資訊，請參閱以下步驟 [!DNL SFTP] 至平台。
 
 ### [!DNL Windows] 使用者
 
@@ -50,7 +54,7 @@ Adobe Experience Platform為AWS等雲端服務供應商提供原生連線， [!D
 
 ![選擇性功能](../../images/tutorials/create/sftp/optional-features.png)
 
-選用的功能清單隨即顯示。 若 **OpenSSH使用者端** 已經預先安裝在您的電腦中，則會包含在 **已安裝功能** 清單位於 **選購功能**.
+選擇性功能清單隨即顯示。 如果 **OpenSSH使用者端** 已經預先安裝在您的電腦中，則會包含在 **已安裝功能** 清單在 **選購功能**.
 
 ![open-ssh](../../images/tutorials/create/sftp/open-ssh.png)
 
@@ -142,17 +146,17 @@ more ~/.ssh/authorized_keys
 
 >[!IMPORTANT]
 >
->使用者必須在連線前停用SFTP伺服器設定中的鍵盤互動式驗證。 停用此設定將允許手動輸入密碼，而不是透過服務或程式輸入。 請參閱 [Component Pro檔案](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) 有關鍵盤互動式驗證的詳細資訊。
+>使用者必須在連線前停用SFTP伺服器設定中的鍵盤互動式驗證。 停用此設定將允許手動輸入密碼，而不是透過服務或程式輸入。 請參閱 [Component Pro檔案](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) 以取得鍵盤互動式驗證的詳細資訊。
 
 以下檔案提供如何將SFTP伺服器連線至的相關資訊 [!DNL Platform] 使用API或使用者介面：
 
 ### 使用API
 
 - [使用流量服務API建立SFTP基本連線](../../tutorials/api/create/cloud-storage/sftp.md)
-- [使用Flow Service API探索雲端儲存空間的資料結構和內容](../../tutorials/api/explore/cloud-storage.md)
+- [使用流量服務API探索雲端儲存空間來源的資料結構和內容](../../tutorials/api/explore/cloud-storage.md)
 - [使用流量服務API為雲端儲存空間來源建立資料流](../../tutorials/api/collect/cloud-storage.md)
 
 ### 使用UI
 
 - [在使用者介面中建立SFTP來源連線](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [在UI中建立雲端儲存體連線的資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [在UI中為雲端儲存空間連線建立資料流](../../tutorials/ui/dataflow/batch/cloud-storage.md)
