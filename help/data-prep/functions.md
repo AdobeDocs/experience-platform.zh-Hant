@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5525e81afe0945716c510ff7a0b06cc7e4d5ee6c
+source-git-commit: 51a4c8e0c667e8f9319e61476a6b709324101dad
 workflow-type: tm+mt
-source-wordcount: '5908'
+source-wordcount: '5459'
 ht-degree: 2%
 
 ---
@@ -285,26 +285,27 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 {style="table-layout:auto"}
 
-### Analytics函式 {#analytics}
+<!-- ### Analytics functions {#analytics}
 
 >[!NOTE]
 >
->請向左/向右捲動以檢視表格的完整內容。
+>Please scroll left/right to view the full contents of the table.
 
-| 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
+| Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| get_event_id | 從Analytics事件字串中擷取事件ID。 | <ul><li>EVENT_STRING： **必填** 逗號分隔的Analytics事件字串。</li><li>事件名稱： **必填** 要擷取的事件名稱和ID。</li></ul> | get_event_id(EVENT_STRING， EVENT_NAME) | get_event_id(&quot;event101=5：123456，scOpen&quot;， &quot;event101&quot;) | 123456 |
-| get_event_value | 從Analytics事件字串中擷取事件值。 如果未指定事件值，則會傳回1。 | <ul><li>EVENT_STRING： **必填** 逗號分隔的Analytics事件字串。</li><li>事件名稱： **必填** 要從中擷取值的事件名稱。</li></ul> | get_event_value(EVENT_STRING， EVENT_NAME) | get_event_value(&quot;event101=5：123456，scOpen&quot;， &quot;event101&quot;) | 5 |
-| get_product_categories | 從Analytics產品字串中擷取產品類別。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li></ul> | get_product_categories(PRODUCTS_STRING) | get_product_categories（&quot;；範例產品1；1；3.50，範例類別2；範例產品2；1；5.99&quot;） | [null，「範例category 2」] |
-| get_product_names | 從Analytics產品字串中擷取產品名稱。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li></ul> | get_product_names(PRODUCTS_STRING) | get_product_names（&quot;；範例產品1；1；3.50，範例類別2；範例產品2；1；5.99&quot;） | [&quot;Example product 1&quot;，&quot;Example product 2&quot;] |
-| get_product_quantities | 從Analytics產品字串中擷取數量。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li></ul> | get_product_quantices(PRODUCTS_STRING) | get_product_quantities（&quot;；範例產品1；1；3.50，範例類別2；範例產品2&quot;） | [&quot;1&quot;，空] |
-| get_product_prices | 從Analytics產品字串中擷取價格。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li></ul> | get_product_prices(PRODUCTS_STRING) | get_product_prices（&quot;；範例產品1；1；3.50，範例類別2；範例產品2&quot;） | [&quot;3.50&quot;，空] |
-| get_product_events | 從產品字串中擷取已命名事件，做為物件陣列。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li><li>事件名稱： **必填** 要從中擷取值的事件名稱。</li></ul> | get_product_events(PRODUCTS_STRING， EVENT_NAME) | get_product_events（&quot;；範例產品1；1；4.20；event1=2.3\|event2=5:1，；範例產品2；1；4.20；event1=3\|event2=2:2&quot;， &quot;event2&quot;） | [`{"id": "1","value", "5"}`、`{"id": "2","value", "1"}`] |
-| get_product_event_ids | 從產品字串中擷取已命名事件的ID，做為字串陣列。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li><li>事件名稱： **必填** 要從中擷取值的事件名稱。</li></ul> | get_product_events_ids(PRODUCTS_STRING， EVENT_NAME) | get_product_event_ids（&quot;；範例產品1；1；4.20；event1=2.3\|event2=5:1，；範例產品2；1；4.20；event1=3\|event2=2:2&quot;， &quot;event2&quot;） | [「1」、「2」] |
-| get_product_event_values | 從產品字串中擷取已命名事件的值，做為字串陣列。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li><li>事件名稱： **必填** 要從中擷取值的事件名稱。</li></ul> | get_product_events_values(PRODUCTS_STRING， EVENT_NAME) | get_product_event_values（&quot;；範例產品1；1；4.20；event1=2.3\|event2=5:1，；範例產品2；1；4.20；event1=3\|event2=2:2&quot;， &quot;event1&quot;） | [「2.3」、「3」] |
-| get_product_evars | 從產品字串中擷取已命名事件的evar值，做為字串陣列。 | <ul><li>PRODUCTS_STRING： **必填** Analytics產品字串。</li><li>eVar名稱： **必填** 要擷取的eVar名稱。</li></ul> | get_product_evars(PRODUCTS_STRING， EVENT_NAME) | get_product_evars(&quot;；範例產品；1；6.69；；eVar1=銷售值&quot;， &quot;eVar1&quot;) | [「銷售值」] |
+| aa_get_event_id | Extracts the event ID from an Analytics event string. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract and ID from.</li></ul> | aa_get_event_id(EVENT_STRING, EVENT_NAME) | aa_get_event_id("event101=5:123456,scOpen", "event101") | 123456 |
+| aa_get_event_value | Extracts the event value from an Analytics event string. If the event value is not specified 1 is returned. | <ul><li>EVENT_STRING: **Required** The comma-separated Analytics event string.</li><li>EVENT_NAME: **Required** The event name to extract a value from.</li></ul> | aa_get_event_value(EVENT_STRING, EVENT_NAME) | aa_get_event_value("event101=5:123456,scOpen", "event101") | 5 |
+| aa_get_product_categories | Extracts the product category from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_categories(PRODUCTS_STRING) | aa_get_product_categories(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | [null,"Example category 2"] |
+| aa_get_product_names | Extracts the product name from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_names(PRODUCTS_STRING) | aa_get_product_names(";Example product 1;1;3.50,Example category 2;Example product 2;1;5.99") | ["Example product 1","Example product 2"] |
+| aa_get_product_quantities | Extracts the quantities from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_quantities(PRODUCTS_STRING) | aa_get_product_quantities(";Example product 1;1;3.50,Example category 2;Example product 2") | ["1", null] |
+| aa_get_product_prices | Extracts the price from an Analytics products string. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li></ul> | aa_get_product_prices(PRODUCTS_STRING) | aa_get_product_prices(";Example product 1;1;3.50,Example category 2;Example product 2") | ["3.50", null] |
+| aa_get_product_event_values | Extracts values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_values(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_values(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event1") | ["2.3", "3"] |
+| aa_get_product_evars | Extracts the evar values for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVAR_NAME: **Required** The eVar name to extract.</li></ul> | aa_get_product_evars(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_evars(";Example product;1;6.69;;eVar1=Merchandising value", "eVar1") | ["Merchandising value"] |
 
-{style="table-layout:auto"}
+{style="table-layout:auto"} -->
+
+<!-- | aa_get_product_events | Extracts a named event from the products string as an array of objects. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_events(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_events(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| aa_get_product_event_ids | Extracts the IDs for the named event from the products string as an array of strings. | <ul><li>PRODUCTS_STRING: **Required** The Analytics products string.</li><li>EVENT_NAME: **Required** The event name to extract values from.</li></ul> | aa_get_product_event_ids(PRODUCTS_STRING, EVENT_NAME) | aa_get_product_event_ids(";Example product 1;1;4.20;event1=2.3\|event2=5:1,;Example product 2;1;4.20;event1=3\|event2=2:2", "event2") | ["1", "2"] | -->
 
 ### 物件複製 {#object-copy}
 
