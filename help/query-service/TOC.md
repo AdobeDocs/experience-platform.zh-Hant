@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform 查詢服務說明
 breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: ad3b739f300aa51f6f12c566ab49fafedb90be23
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '317'
 ht-degree: 19%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 19%
    - [列出使用者的頁面檢視](use-cases/list-visitor-sessions.md)
    - [依頁面檢視列出訪客](use-cases/visitors-by-number-of-page-views.md)
    - [傾向分數](use-cases/propensity-score.md)
-   - [Lambda函式範例：擷取類似的記錄](use-cases/retrieve-similar-records.md)
+   - [使用較高階函式擷取類似記錄](use-cases/retrieve-similar-records.md)
    - [從Analytics資料傳回並使用銷售變數](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [檢視訪客的統計報表](use-cases/roll-up-report-of-a-visitor.md)
@@ -106,6 +106,7 @@ ht-degree: 19%
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
    - [Adobe定義的函式](sql/adobe-defined-functions.md)
+   - [高階函式](sql/higher-order-functions.md)
    - [Spark SQL函式](sql/spark-sql-functions.md)
    - [中繼資料命令](sql/metadata.md)
    - [準備的陳述式](sql/prepared-statements.md)

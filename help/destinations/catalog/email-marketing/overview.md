@@ -4,10 +4,10 @@ title: 電子郵件行銷目的地概觀
 type: Tutorial
 description: 電子郵件服務提供者(ESP)可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。 瞭解哪些ESP受支援作為Experience Platform目的地。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 5%
+source-wordcount: '376'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,8 @@ Adobe Experience Platform支援下列電子郵件行銷目的地：
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
-* [Mailchimp 興趣類別](mailchimp-interest-categories.md)
+* [Mailchimp興趣類別](mailchimp-interest-categories.md)
+* [Mailchimp標籤](mailchimp-tags.md)
 * [(API)OracleEloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [（檔案）OracleEloqua](oracle-eloqua.md)
@@ -63,7 +64,7 @@ Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragment
 | 地址狀態 | `homeAddress.stateProvince` |
 | 地址郵遞區號 | `homeAddress.postalCode` |
 | 生日 | `person.birthDayAndMonth` |
-| 區段成員資格 | `segmentMembership.status` |
+| 區塊會籍 | `segmentMembership.status` |
 
 {style="table-layout:auto"}
 

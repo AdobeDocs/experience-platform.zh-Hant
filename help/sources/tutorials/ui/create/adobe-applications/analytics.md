@@ -2,9 +2,9 @@
 title: 在UI中建立Adobe Analytics來源連線
 description: 瞭解如何在UI中建立Adobe Analytics來源連線，以將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
+source-wordcount: '2755'
 ht-degree: 4%
 
 ---
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### 篩選即時客戶設定檔 {#filtering-for-profile}
+## 篩選即時客戶設定檔 {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 >[!ENDSHADEBOX]
 
-#### 列層級篩選
+### 列層級篩選
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### 欄層級篩選
+### 欄層級篩選
 
 選取 **[!UICONTROL 欄篩選器]** 以套用欄層級篩選。
 
@@ -267,6 +267,14 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 完成後，選取 **[!UICONTROL 下一個]**.
 
 ![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### 篩選次要身分
+
+使用欄篩選器從設定檔擷取中排除次要身分。 若要篩選次要身分，請選取 **[!UICONTROL 欄篩選器]** 然後選取 **[!UICONTROL 身分(_I)]**.
+
+此篩選器僅適用於將身分標示為次要身分時。 如果選取身分，但事件到達時其中一個身分標示為主要身分，則這些身分不會篩選掉。
+
+![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### 提供資料流詳細資料
 

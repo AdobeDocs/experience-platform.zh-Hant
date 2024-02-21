@@ -4,10 +4,10 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 5%
+source-wordcount: '1202'
+ht-degree: 4%
 
 ---
 
@@ -139,6 +139,8 @@ ht-degree: 5%
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL延伸模組](./catalog/data-management/aam-dil-extension.md)
+   * 電子商務目的地 {#ecommerce}
+      * [SAP商務](./catalog/ecommerce/sap-commerce.md)
    * 電子郵件目的地 {#email}
       * [Bizible擴充功能](./catalog/email/bizible.md)
       * [Marketo擴充功能](./catalog/email/marketo.md)
@@ -149,6 +151,7 @@ ht-degree: 5%
       * [Adobe Campaign連線](./catalog/email-marketing/adobe-campaign.md)
       * [Adobe Campaign Managed Cloud Services連線](./catalog/email-marketing/adobe-campaign-managed-services.md)
       * [Mailchimp興趣類別](./catalog/email-marketing/mailchimp-interest-categories.md)
+      * [Mailchimp標籤](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Oracle Eloqua連線](./catalog/email-marketing/oracle-eloqua-api.md)
       * [（檔案） Eloqua連線Oracle](./catalog/email-marketing/oracle-eloqua.md)
       * [oracleResponsys連線](./catalog/email-marketing/oracle-responsys.md)

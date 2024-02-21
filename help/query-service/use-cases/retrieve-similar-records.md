@@ -1,19 +1,21 @@
 ---
-title: Lambda函式範例 — 擷取類似記錄
+title: 使用高階函式擷取類似記錄
 description: 瞭解如何根據相似度量度和相似度臨界值，從一個或多個資料集中識別及擷取類似或相關記錄。 此工作流程可強調不同資料集之間有意義的關聯或重疊。
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
+source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '4031'
 ht-degree: 3%
 
 ---
 
-# Lambda函式範例：擷取類似的記錄
+# 使用較高階函式擷取類似記錄
 
-使用資料Distiller Lambda函式，從一或多個資料集中識別及擷取類似或相關的記錄，藉此解決數種常見的使用案例。 您可以使用本指南來識別來自不同資料集，且其特性或屬性具有重大相似性的產品。 本檔案的方法提供下列解決方案：重複資料刪除、記錄連結、建議系統、資訊擷取，以及文字分析等。
+使用資料Distiller高階函式來解決各種常見的使用案例。 若要從一個或多個資料集中識別及擷取類似或相關的記錄，請使用本指南中詳述的篩選、轉換和還原函式。 若要瞭解如何使用高階函式來處理複雜的資料型別，請參閱有關如何使用的檔案 [管理陣列和對應資料型別](../sql/higher-order-functions.md).
 
-檔案會說明實作相似度連線的程式，然後使用Data Distiller lambda函式來計算資料集之間的相似度，並根據選取的屬性加以篩選。 對於程式的每個步驟，都會提供SQL程式碼片段和說明。 工作流程會使用Jaccard相似性測量來實施相似性結合，並使用Data Distiller lambda函式來實施代碼化。 這些方法接著用於根據相似性量度，從一個或多個資料集中識別及擷取類似或相關的記錄。 程式的主要區段包括： [使用lambda函式的代碼化](#data-transformation)，則 [不重複元素的交叉聯結](#cross-join-unique-elements)，則 [Jaccard相似度計算](#compute-the-jaccard-similarity-measure)，以及 [臨界值型篩選](#similarity-threshold-filter).
+使用本指南來識別來自不同資料集，且其特性或屬性具有重大相似性的產品。 此方法提供的解決方案包括：重複資料刪除、記錄連結、建議系統、資訊擷取和文字分析等。
+
+本檔案說明實作相似度加入的程式，接著會使用Data Distiller高階函式計算資料集之間的相似度，並根據選取的屬性加以篩選。 對於程式的每個步驟，都會提供SQL程式碼片段和說明。 此工作流程會使用Jaccard相似性測量來實施相似性結合，並使用Data Distiller高階函式來實施代碼化。 這些方法接著用於根據相似性量度，從一個或多個資料集中識別及擷取類似或相關的記錄。 程式的主要區段包括： [使用高階函式的代碼化](#data-transformation)，則 [不重複元素的交叉聯結](#cross-join-unique-elements)，則 [Jaccard相似度計算](#compute-the-jaccard-similarity-measure)，以及 [臨界值型篩選](#similarity-threshold-filter).
 
 ## 先決條件
 
@@ -24,11 +26,11 @@ ht-degree: 3%
    - **臨界值**：相似度臨界值用於判斷兩個記錄何時被視為相似到足以包含在連線結果中。 相似度分數高於臨界值的記錄會被視為符合專案。
 - 此 **Jaccard相似度** index （或Jaccard similarity measurement）是用於評估樣本集相似性和多樣性的統計資料。 其定義為交集的大小除以樣本集的聯集大小。 Jaccard相似性測量的範圍從零到一。 Jaccard相似度為零表示這些集合之間沒有相似性，而Jaccard相似度為1表示這些集合完全相同。
   ![文氏圖表可說明Jaccard相似性測量。](../images/use-cases/jaccard-similarity.png)
-- **Lambda函式** 在Data Distiller中，為匿名、內嵌函式，可在SQL陳述式中定義及使用。 高階函式由於其能夠建立可作為資料傳遞的簡明、即時函式，而經常用於高階函式。 Lambda函式通常搭配高階函式使用，例如 `transform`， `filter`、和 `array_sort`. Lambda函式在不需要定義完整函式的情況下特別有用，而且可以內嵌使用簡短的一次性函式。
+- **高階函式** 在Data Distiller中，是動態的內嵌工具，可直接在SQL陳述式中處理和轉換資料。 這些多功能的函式省去了資料操控中多個步驟的需求，尤其是當 [處理陣列和地圖等複雜型別](../sql/higher-order-functions.md). 透過提高查詢效率和簡化轉換，高階函式有助於在各種業務情景中更敏捷地分析和更好的決策。
 
 ## 快速入門
 
-必須使用Data Distiller SKU才能對Adobe Experience Platform資料執行lambda函式。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
+必須使用Data Distiller SKU才能對Adobe Experience Platform資料執行更高階的功能。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
 
 ## 建立相似性 {#establish-similarity}
 
@@ -319,7 +321,7 @@ FROM
 
 +++
 
-### 確保設定權杖長度
+### 確保設定權杖長度 {#ensure-set-token-length}
 
 可以向陳述式新增其他條件，以確保產生的序列具有特定長度。 下列SQL陳述式會透過將 `transform` 函式比較複雜。 陳述式會使用 `filter` 函式範圍 `transform` 以確保產生的序列長度為六個字元。 它透過將NULL值指定給這些職位來處理不可能的情況。
 
@@ -355,11 +357,11 @@ FROM
 
 +++
 
-## 使用Data Distiller lambda函式探索解決方案 {#lambda-function-solutions}
+## 使用Data Distiller高階函式探索解決方案 {#higher-order-function-solutions}
 
-Lambda函式是強大的建構，可讓您實作「程式設計」，例如Data Distiller中的語法。 它們可用來反複運算陣列中多個值的函式。
+高階函式是強大的建構，可讓您實作「程式設計」，例如Data Distiller中的語法。 它們可用來反複運算陣列中多個值的函式。
 
-在Data Distiller中，Lambda函式適用於建立n格和反複處理字元順序。
+在Data Distiller中，高階函式非常適合建立n格和反複處理字元順序。
 
 此 `reduce` 函式，尤其是在產生的序列中使用 `transform`，提供衍生累積值或聚總的方法，這些累積值或聚總對於各種分析和計畫處理至關重要。
 
@@ -371,7 +373,7 @@ SELECT transform(
     x -> reduce(
         sequence(1, x),  
         0,  -- Initial accumulator value
-        (acc, y) -> acc + y  -- Lambda function to add numbers
+        (acc, y) -> acc + y  -- Higher-order function to add numbers
     )
 ) AS sum_result;
 ```
@@ -381,17 +383,17 @@ SELECT transform(
 - 第1行： `transform` 套用函式 `x -> reduce` 序列中產生的每個元素上。
 - 第2行： `sequence(1, 5)` 產生一到五的數字序列。
 - 第3行： `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` 對序列中的每個元素x執行縮減操作（從1到5）。
-   - 此 `reduce` 函式會採用初始的累加器值0，從一到目前值的順序 `x`和lambda函式 `(acc, y) -> acc + y` 以新增數字。
-   - Lambda函式 `acc + y` 將目前值相加以累積總和 `y` 到累加器 `acc`.
+   - 此 `reduce` 函式會採用初始的累加器值0，從一到目前值的順序 `x`、和高階函式 `(acc, y) -> acc + y` 以新增數字。
+   - 高階函式 `acc + y` 將目前值相加以累積總和 `y` 到累加器 `acc`.
 - 第8行： `AS sum_result` 將產生的欄重新命名為sum_result。
 
-總而言之，此lambda函式有兩個引數(`acc` 和 `y`)並定義要執行的作業，在此例中會新增 `y` 到累加器 `acc`. 這個Lambda函式會在縮減程式期間針對序列中的每個元素執行。
+總而言之，此高階函式有兩個引數(`acc` 和 `y`)並定義要執行的作業，在此例中會新增 `y` 到累加器 `acc`. 在縮減程式期間，會針對序列中的每個元素執行此高階函式。
 
 此陳述式的輸出是單一欄(`sum_result`)，其中包含一到五位數字的累計和。
 
-### Lambda函式的值 {#value-of-lambda-functions}
+### 高階函式的值 {#value-of-higher-order-functions}
 
-本節會分析精簡版的Tri-gram SQL敘述句，以便更清楚瞭解Data Distiller中Lambda函式的值，進而更有效率地建立n字元。
+本節會分析精簡版的Tri-gram SQL敘述句，以便更清楚瞭解Data Distiller中高階函式的值，進而更有效率地建立n個字元。
 
 以下陳述式適用於 `ProductName` 內的欄 `featurevector1` 表格。 它會使用從產生的序列中取得的位置，產生一組衍生自表格內已修改產品名稱的三字元子字串。
 
@@ -407,11 +409,11 @@ FROM
 
 以下是對SQL敘述句的分析：
 
-- 第2行： `transform` 將lambda函式套用至序列中的每個整數。
+- 第2行： `transform` 套用高階函式至序列中的每個整數。
 - 第3行： `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` 產生整數序列，從 `1` 修改後產品名稱的長度減去2。
    - `length(lower(replace(ProductName, ' ', '')))` 計算 `ProductName` 變為小寫並移除空格後。
    - `- 2` 從長度減去兩個，以確保序列會產生3個字元子字串的有效起始位置。 減2可確保每個起始位置後面有足夠的字元來擷取3個字元的子字串。 此處的子字串函式的運作方式類似於lookahead運運算元。
-- 第4行： `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` 是對每個整數運作的lambda函式 `i` 產生的序列中。
+- 第4行： `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` 是一個高階函式，會對每個整數執行操作 `i` 產生的序列中。
    - 此 `substring(...)` 函式會從「 」擷取3個字元的子字串 `ProductName` 欄。
    - 在擷取子字串之前， `lower(replace(ProductName, ' ', ''))` 轉換 `ProductName` 並移除空格，以確保一致性。
 
@@ -707,6 +709,10 @@ WHERE jaccard_similarity>=0.4
 
 ### 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在可以使用此邏輯來強調不同資料集之間有意義的關係或重疊。 從特性或屬性具有重大相似性的不同資料集中識別產品的能力，具有許多真實世界的應用程式。 此邏輯可用於產品比對（將類似的產品分組或建議給客戶）、資料清理（改善資料品質）和市場購物籃分析（提供客戶行為、偏好和潛在交叉銷售機會的深入分析）等情境。
+閱讀本檔案後，您現在可以使用此邏輯來強調不同資料集之間有意義的關係或重疊。 從特性或屬性具有重大相似性的不同資料集中識別產品的能力，有多項真實世界應用程式。 此邏輯可用於以下情況：
+
+- 產品比對：將類似的產品分組或建議給客戶。
+- 資料清除：改善資料品質。
+- 購物籃分析：提供客戶行為、偏好設定和潛在交叉銷售機會的深入分析。
 
 如果您尚未閱讀本文章，建議您閱讀 [AI/ML功能管道總覽](../data-distiller/ml-feature-pipelines/overview.md). 使用該概述來瞭解Data Distiller和您偏好的機器學習如何建立自訂資料模型，透過Experience Platform資料支援您的行銷使用案例。
