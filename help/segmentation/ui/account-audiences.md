@@ -4,9 +4,9 @@ description: 瞭解如何建立和使用帳戶對象，以定位下游目的地�
 badgeLimitedAvailability: label="可用性限制" type="Caution"
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -74,3 +74,101 @@ ht-degree: 0%
 ## 後續步驟 {#next-steps}
 
 閱讀本指南後，您現在已更瞭解如何在Adobe Experience Platform中建立和使用您的帳戶對象。 若要瞭解如何在Platform中使用其他型別的對象，請參閱 [Segmentation Service UI指南](./overview.md).
+
+## 附錄 {#appendix}
+
+下節提供有關帳戶對象的額外資訊。
+
+### 帳戶細分驗證 {#validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="最大回顧期間錯誤"
+>abstract="體驗事件的回顧期間上限為30天。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="最大巢狀容器深度錯誤"
+>abstract="巢狀容器的最大深度為 **5**. 這表示您 **無法** 建立對象時具有五個以上的巢狀容器。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxBreadth"
+>title="最大規則數量錯誤"
+>abstract="單一容器內的規則數量上限為 **5**. 這表示您 **無法** 建立對象時，單一容器中有五個以上的規則。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_crossEntityMaxDepth"
+>title="最大跨實體數量錯誤"
+>abstract="單一受眾可使用的跨實體最大數量為 **5**. 跨實體是指您在對象內不同實體之間變更時。 例如，從帳戶移至個人再移至行銷清單。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowCustomEntity"
+>title="自訂實體錯誤"
+>abstract="自訂實體為 **非** 允許。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_b2bBuiltInEntities"
+>title="無效的B2B實體錯誤"
+>abstract="僅允許使用下列B2B實體： `_xdm.context.account`， `_xdm.content.opportunity`， `_xdm.context.profile`， `_xdm.context.experienceevent`， `_xdm.context.account-person`， `_xdm.classes.opportunity-person`， `_xdm.classes.marketing-list-member`， `_xdm.classes.marketing-list`， `_xdm.context.campaign-member`、和 `_xdm.classes.campaign`."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_rhsMaxOptions"
+>title="最大值錯誤"
+>abstract="單一欄位可檢查的值數量上限為 **50**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByReference"
+>title="inSegment事件錯誤"
+>abstract="inSegment事件包括 **非** 允許。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByValue"
+>title="inSegment事件錯誤"
+>abstract="inSegment事件包括 **非** 允許。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowSequentialEvents"
+>title="循序事件錯誤"
+>abstract="循序事件包括 **非** 允許。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowMaps"
+>title="對應型別屬性錯誤"
+>abstract="對應型別屬性為 **非** 允許。"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxNestedAggregationDepth"
+>title="最大巢狀實體深度錯誤"
+>abstract="巢狀陣列的最大深度為 **5**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxObjectNestingLevel"
+>title="最大巢狀物件數量錯誤"
+>abstract="允許的最大巢狀物件數量為 **10**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="限制違規"
+>abstract="對象違反限制。 如需詳細資訊，請閱讀連結的檔案。"
+
+使用帳戶對象時，該對象 **必須** 請遵循下列限制：
+
+>[!NOTE]
+>
+>下列清單顯示 **預設** 帳戶對象的限制。 這些值 **五月** 會根據您組織管理員實作的設定而變更。
+
+- 體驗事件的最大回顧期間為 **30天**.
+- 巢狀容器的最大深度為 **5**.
+   - 這表示您 **無法** 建立對象時具有五個以上的巢狀容器。
+- 單一容器內的規則數量上限為 **5**.
+   - 這表示您的對象 **無法** 有五個以上的規則組成您的對象。
+- 可使用的跨實體最大數量為 **5**.
+   - 跨實體是指您在對象內不同實體之間變更時。 例如，從帳戶移至個人再移至行銷清單。
+- 自訂實體 **無法** 使用。
+- 單一欄位可檢查的值數量上限為 **50**.
+   - 例如，如果您有「城市名稱」欄位，您可以根據50個城市名稱檢查該值。
+- 帳戶對象 **無法** 使用 `inSegment` 事件。
+- 帳戶對象 **無法** 使用循序事件。
+- 帳戶對象 **無法** 使用地圖。
+- 巢狀陣列的最大深度為 **5**.
+- 巢狀物件的最大數量為 **10**.
