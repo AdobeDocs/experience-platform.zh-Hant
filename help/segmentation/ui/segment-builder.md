@@ -253,7 +253,7 @@ ht-degree: 6%
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
 >abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合建議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 建立區段定義時， **[!UICONTROL 對象屬性]** 工作區右側的區段會顯示結果區段定義的預估大小，讓您在建立受眾本身之前根據需要調整區段定義。
 

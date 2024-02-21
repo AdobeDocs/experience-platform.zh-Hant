@@ -22,7 +22,7 @@ ht-degree: 8%
 >id="platform_dashboards_licenseUsage_prediction"
 >title="授權使用量儀表板"
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。<br><br>每月月底都會重新整理使用量預測，並預報未來六個月的使用量。若要減少使用量，請針對沙箱和資料集設定資料集或匿名設定檔資料到期。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="資料集到期"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=zh-Hant" text="資料集到期"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料到期"
 
 您可以透過Adobe Experience Platform檢視貴組織授權使用情況的重要資訊 [!UICONTROL 授權使用情況] 儀表板。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。

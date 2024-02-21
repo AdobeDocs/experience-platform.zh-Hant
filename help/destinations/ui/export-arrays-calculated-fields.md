@@ -6,8 +6,8 @@ badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1481'
+ht-degree: 5%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 7%
 >id="platform_destinations_export_arrays_flat_files"
 >title="(Beta 版) 匯出陣列支援"
 >abstract="使用&#x200B;**新增計算欄位**&#x200B;控制項，將簡單的整數、字串或布林值陣列從 Experience Platform 匯出到您想要的雲端儲存空間目的地。存在一些限制。檢視文件了解大量範例和支援的功能。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="範例"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="已知限制"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=zh-Hant#examples" text="範例"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=zh-Hant#known-limitations" text="已知限制"
 
 >[!AVAILABILITY]
 >
