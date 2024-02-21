@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: 快速入門
+title: 開始使用使用使用案例教戰手冊
 description: 了解如何開始使用「使用案例教戰手冊」功能。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
+source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 14%
+source-wordcount: '947'
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 14%
 瞭解如何針對使用案例行動手冊設定帳戶，這些行動手冊是專為Real-time Customer Data Platform和Adobe Journey Optimizer而設計。 三個主要設定步驟為：
 
 * 建立沙箱
-* 設定使用者許可權
+* 設定使用者權限
 * 設定電子郵件、推播和簡訊通知的Journey Optimizer頻道介面(如果您打算使用Journey Optimizer教戰手冊)
 
 ## 設定使用案例教戰手冊 — 影片逐步解說 {#video}
