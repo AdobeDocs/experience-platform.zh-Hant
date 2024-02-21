@@ -2,9 +2,9 @@
 title: B2B名稱空間和結構描述
 description: 本檔案提供建立B2B來源聯結器時所需的自訂名稱空間概觀。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1620'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 3%
 
 ## B2B名稱空間
 
-身分名稱空間是的元件 [[!DNL Identity Service]](../../../../identity-service/home.md) 用於區分身分的內容或型別。 完整身分包含ID值和名稱空間。 請參閱 [名稱空間概觀](../../../../identity-service/features/namespaces.md) 以取得詳細資訊。
+身分名稱空間是的元件 [[!DNL Identity Service]](../../../../identity-service/home.md) 這有助於區分身分的上下文。 完整身分包含身分值和名稱空間。 閱讀 [名稱空間概觀](../../../../identity-service/features/namespaces.md) 以取得詳細資訊。
 
 B2B名稱空間會用於實體的主要身分識別中。
 
