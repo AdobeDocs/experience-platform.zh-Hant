@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 檢視目的地詳細資料
 description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及編輯啟用、啟用及停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '1100'
 ht-degree: 1%
 
 ---
@@ -115,6 +115,32 @@ ht-degree: 1%
 
 ![啟用資料檢視串流目的地](../assets/ui/details-page/activation-data-streaming.png)
 
+<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+
+To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+
+![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+
+### [!BADGE 測試版]{type=Informative}隨選將多個檔案匯出至批次目的地 {#bulk-export}
+
 >[!NOTE]
 >
->如需探索對象詳細資訊頁面的詳細資訊，請參閱 [區段UI總覽](../../segmentation/ui/overview.md#segment-details).
+此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+
+您可以 [隨選匯出多個檔案](../ui/export-file-now.md) 從 **[!UICONTROL 啟用資料]** 頁面。 若要這麼做，請選取您要隨選匯出檔案的對象，然後選取 **[!UICONTROL 立即匯出檔案]** 控制以觸發一次性匯出，將每個所選對象的檔案傳送到批次目的地。
+
+![反白顯示「立即匯出檔案」按鈕的影像。](../assets/ui/details-page/bulk-export-file-now.png)
+
+### [!BADGE 測試版]{type=Informative}編輯匯出至批次目的地的多個對象啟用排程 {#bulk-edit-schedule}
+
+>[!NOTE]
+>
+此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+
+若要同時編輯多個對象的現有啟用排程，請選取所需的對象，然後選取「 」 **[!UICONTROL 編輯排程]**. 如需如何定義或編輯匯出排程的詳細資訊，請參閱 [排程對象匯出](../ui/activate-batch-profile-destinations.md#scheduling) 區段。
+
+![啟用資料畫面會醒目顯示選項，用以編輯多個對象的啟用排程。](../assets/ui/details-page/bulk-edit-schedule.png)
+
+>[!NOTE]
+>
+如需探索對象詳細資訊頁面的詳細資訊，請參閱 [區段UI總覽](../../segmentation/ui/overview.md#segment-details).

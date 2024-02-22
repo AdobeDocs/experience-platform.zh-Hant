@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
+source-wordcount: '3879'
 ht-degree: 11%
 
 ---
@@ -73,6 +73,10 @@ ht-degree: 11%
 >
 >選取源自於以下位置的對象： **[!UICONTROL 自訂上傳]** 自動啟用 [選取擴充屬性](#select-enrichment-attributes) 步驟。
 
+>[!TIP]
+>
+>您可以從現有的啟用流程中移除對象 **[!UICONTROL 啟用資料]** 頁面。 請參閱 [專屬檔案](../ui/destination-details-page.md#bulk-remove) 以取得詳細資訊。
+
 ## 排程對象匯出 {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ ht-degree: 11%
 >title="排程"
 >abstract="使用鉛筆圖示設定檔案匯出類型 (完整檔案或增量檔案) 和匯出頻率。"
 
-[!DNL Adobe Experience Platform] 將電子郵件行銷和雲端儲存目的地的資料匯出為 [不同的檔案型別](#supported-file-formats-export). 在 **[!UICONTROL 正在排程]** 頁面，您可以為要匯出的每個對象設定排程和檔案名稱。 必須設定排程，但可選擇是否設定檔案名稱。
+[!DNL Adobe Experience Platform] 將電子郵件行銷和雲端儲存目的地的資料匯出為 [不同的檔案型別](#supported-file-formats-export). 在 **[!UICONTROL 正在排程]** 頁面，您可以為要匯出的每個對象設定排程和檔案名稱。
+
+Experience Platform會自動設定每個檔案匯出的預設排程。 您可以視需要修改預設排程，方法是選取每個排程旁的鉛筆圖示，並定義自訂排程。
+
+![編輯「排程」步驟中反白顯示的排程控制項。](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>您可以從以下位置編輯現有啟用流程的對象啟用排程： **[!UICONTROL 啟用資料]** 頁面。 請參閱以下檔案： [大量編輯啟動排程](../ui/destination-details-page.md#bulk-edit-schedule) 以取得詳細資訊。
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] 自動將匯出檔案分割為每檔案500萬筆記錄（列）。 每一列代表一個設定檔。
 >
 >分割檔案名稱會附加一個數字，指示檔案是較大匯出的一部分，例如： `filename.csv`， `filename_2.csv`， `filename_3.csv`.
-
-選取 **[!UICONTROL 建立排程]** 與您要傳送至目的地之對象相對應的控制。
-
-![建立在「排程」步驟中反白顯示的排程控制項。](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### 匯出完整檔案 {#export-full-files}
 
@@ -247,6 +255,14 @@ ht-degree: 11%
 1. 您選取要匯出的欄位現在會出現在對應檢視中，並在匯出的檔案中顯示編輯的標頭。
 
    ![顯示可匯出至目的地之設定檔屬性的模型視窗。](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Beta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+
+   ![顯示透過拖放重新排序之對應欄位的錄製。](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. （選擇性）您可以選取匯出的欄位作為 [強制索引鍵](#mandatory-keys) 或 [重複資料刪除索引鍵](#deduplication-keys).
 

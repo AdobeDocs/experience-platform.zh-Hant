@@ -3,9 +3,9 @@ title: （測試版）使用Experience PlatformUI隨選將檔案匯出至批次�
 type: Tutorial
 description: 瞭解如何使用Experience PlatformUI隨選將檔案匯出至批次目的地。
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '722'
 ht-degree: 8%
 
 ---
@@ -48,13 +48,9 @@ ht-degree: 8%
 
    ![影像反白顯示篩選的資料流。](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. 選取 **[!UICONTROL 啟用資料]** 標籤並選取您要隨選匯出檔案的對象，然後選取 **[!UICONTROL 立即匯出檔案]** 控制以觸發一次性匯出，將檔案傳送到批次目的地。
+3. 選取 **[!UICONTROL 啟用資料]** 標籤並選取您要隨選匯出檔案的對象，然後選取 **[!UICONTROL 立即匯出檔案]** 控制以觸發一次性匯出，將每個所選對象的檔案傳送到批次目的地。
 
-   >[!IMPORTANT]
-   >
-   >UI目前不支援選取多個對象來大量隨選匯出檔案。 使用 [臨機啟動API](/help/destinations/api/ad-hoc-activation-api.md) 用於此目的。
-
-   ![反白顯示「立即匯出檔案」按鈕的影像。](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![反白顯示「立即匯出檔案」按鈕的影像。](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. 選取 **[!UICONTROL 是]** 以確認並觸發檔案匯出。
 
