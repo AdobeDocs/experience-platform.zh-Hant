@@ -3,9 +3,9 @@ title: Linkedin轉換API事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能可讓您測量Linkedin行銷活動的效能。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 ## 先決條件 {#prerequisites}
 
-您必須在 [!DNL LinkedIn] 行銷活動廣告帳戶。 [!DNL Adobe] 建議在交談規則名稱開頭加入「CAPI」，將其與您可能已設定的其他轉換規則型別區分開來。
+您必須 [建立轉換規則](https://www.linkedin.com/help/lms/answer/a1657171) 在您的 [!DNL LinkedIn Campaign Manager] 帳戶。 [!DNL Adobe] 建議在交談規則名稱開頭加入「CAPI」，將其與您可能已設定的其他轉換規則型別區分開來。
 
 ### 建立密碼和資料元素
 
@@ -40,7 +40,7 @@ ht-degree: 1%
 
 設定好所有資料元素後，您就可以開始建立事件轉送規則，以判斷將事件傳送至的時間和方式 [!DNL LinkedIn].
 
-建立新的事件轉送 [規則](../../../ui/managing-resources/rules.md) 在事件轉送屬性中。 在 **[!UICONTROL 動作]**，新增動作並將擴充功能設為 **[!UICONTROL linkedIn]**. 接下來，選取 **[!UICONTROL 傳送網頁轉換]** 針對 **[!UICONTROL 動作型別]**.
+建立新的事件轉送 [規則](../../../ui/managing-resources/rules.md) 在事件轉送屬性中。 在 **[!UICONTROL 動作]**，新增動作並將擴充功能設為 **[!UICONTROL linkedIn]**. 接下來，選取 **[!UICONTROL 傳送轉換]** 針對 **[!UICONTROL 動作型別]**.
 
 ![「事件轉送屬性規則」檢視中，醒目顯示新增事件轉送規則動作設定所需的欄位。](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ ht-degree: 1%
 
 | 輸入 | 說明 |
 | --- | --- |
-| [!UICONTROL 轉換] | 在中建立的轉換規則ID [linkedIn行銷活動管理員](https://www.linkedin.com/help/lms/answer/a1657171) 或透過 [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL 轉換] | 在中建立的轉換規則ID [linkedIn行銷活動管理員](https://www.linkedin.com/help/lms/answer/a1657171). 選取轉換規則以取得ID，然後從瀏覽器URL複製ID (例如 `/campaignmanager/accounts/508111232/conversions/15588877`)作為 `/conversions/<id>`. |
 | [!UICONTROL 轉換時間] | 轉換事件發生的每個時間戳記（毫秒）。 <br><br> 注意：如果您的來源以秒為單位記錄轉換時間戳記，請在結尾插入000以將其轉換為毫秒。 |
 | [!UICONTROL 貨幣] | ISO格式的貨幣代碼。 |
 | [!UICONTROL 數量] | 十進位字串中的轉換值（例如「100.05」）。 |
-| [!UICONTROL 事件ID] | 廣告商產生的唯一ID可指出每個事件。 這是選用欄位，用於重複資料刪除。 |
+| [!UICONTROL 事件ID] | 廣告商產生的唯一ID可指出每個事件。 這是選用欄位，用於 [去重複化](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -86,4 +86,6 @@ ht-degree: 1%
 
 ## 後續步驟
 
-本指南說明如何將資料傳送至 [!DNL LinkedIn] 使用 [!DNL LinkedIn Conversions API] 事件轉送擴充功能。 如需事件轉送功能的詳細資訊，請參閱 [!DNL Adobe Experience Platform]，請參閱 [事件轉送概觀](../../../ui/event-forwarding/overview.md).
+本指南說明如何將資料傳送至 [!DNL LinkedIn] 使用 [!DNL LinkedIn Conversions API] 事件轉送擴充功能。 如需事件轉送功能的詳細資訊，請參閱 [!DNL Adobe Experience Platform]，閱讀 [事件轉送概觀](../../../ui/event-forwarding/overview.md).
+
+如需使用Experience Platform偵錯程式和事件轉送監視工具對實作進行偵錯的詳細資訊，請參閱 [Adobe Experience Platform Debugger概觀](../../../../debugger/home.md) 和 [監視事件轉送中的活動](../../../ui/event-forwarding/monitoring.md).
