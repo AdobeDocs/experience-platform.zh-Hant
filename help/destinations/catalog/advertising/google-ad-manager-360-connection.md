@@ -2,16 +2,24 @@
 title: (Beta) [!DNL Google Ad Manager 360] 連線
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 5%
+source-wordcount: '1211'
+ht-degree: 4%
 
 ---
 
 # (Beta) [!DNL Google Ad Manager 360] 連線
 
-## 概觀 {#overview}
+>[!IMPORTANT]
+>
+> Google即將發佈的變更專案 [Google Ads API](https://developers.google.com/google-ads/api/docs/start)， [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)，以及 [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 以支援「 」中定義的合規性和同意相關要求 [數位市場法案](https://digital-markets-act.ec.europa.eu/index_en) (DMA)在歐盟([歐盟使用者同意原則](https://www.google.com/about/company/user-consent-policy/))。 預計這些同意要求變更將於2024年3月6日起生效。
+><br/><br/>
+>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 Adobe身為Google合作夥伴，為您提供在歐盟DMA下符合這些同意要求的必要工具。
+><br/><br/>
+>已購買AdobePrivacy &amp; Security Shield且已設定 [同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 不需要採取任何動作，即可篩選出未同意的設定檔。
+><br/><br/>
+>尚未購買AdobePrivacy &amp; Security Shield的客戶必須使用 [區段定義](../../../segmentation/home.md#segment-definitions) 中的功能 [區段產生器](../../../segmentation/ui/segment-builder.md) 以篩選掉未同意的設定檔，以便持續使用現有的Real-Time CDP Google目標而不中斷。
 
 此 [!DNL Google Ad Manager 360] 連線可為以下專案啟用批次上傳 [!DNL publisher provided identifiers] (PPID)至 [!DNL Google Ad Manager 360]，透過 [!DNL Google Cloud Storage].
 

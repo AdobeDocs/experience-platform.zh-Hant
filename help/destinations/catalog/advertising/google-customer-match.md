@@ -3,16 +3,24 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1972'
 ht-degree: 1%
 
 ---
 
 # [!DNL Google Customer Match] 連線
 
-## 概觀 {#overview}
+>[!IMPORTANT]
+>
+> Google即將發佈的變更專案 [Google Ads API](https://developers.google.com/google-ads/api/docs/start)， [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)，以及 [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 以支援「 」中定義的合規性和同意相關要求 [數位市場法案](https://digital-markets-act.ec.europa.eu/index_en) (DMA)在歐盟([歐盟使用者同意原則](https://www.google.com/about/company/user-consent-policy/))。 預計這些同意要求變更將於2024年3月6日起生效。
+><br/><br/>
+>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 Adobe身為Google合作夥伴，為您提供在歐盟DMA下符合這些同意要求的必要工具。
+><br/><br/>
+>已購買AdobePrivacy &amp; Security Shield且已設定 [同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 不需要採取任何動作，即可篩選出未同意的設定檔。
+><br/><br/>
+>尚未購買AdobePrivacy &amp; Security Shield的客戶必須使用 [區段定義](../../../segmentation/home.md#segment-definitions) 中的功能 [區段產生器](../../../segmentation/ui/segment-builder.md) 以篩選掉未同意的設定檔，以便持續使用現有的Real-Time CDP Google目標而不中斷。
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) 可讓您使用線上和離線資料，透過Google所擁有和營運的屬性聯絡客戶，並與客戶重新互動，例如： [!DNL Search]， [!DNL Shopping]， [!DNL Gmail]、和 [!DNL YouTube].
 
