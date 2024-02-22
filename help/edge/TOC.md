@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 28%
+source-wordcount: '188'
+ht-degree: 23%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 28%
    * [執行命令](fundamentals/executing-commands.md)
    * [追蹤事件](fundamentals/tracking-events.md)
    * [設定頁面事件的頂端和底部](fundamentals/top-bottom-page-events.md)
-   * [為  除錯](fundamentals/debugging.md)
+   * [偵錯](fundamentals/debugging.md)
    * [設定CSP](fundamentals/configuring-a-csp.md)
    * [與多個屬性互動](fundamentals/interacting-with-multiple-properties.md)
    * [使用者代理使用者端提示](fundamentals/user-agent-client-hints.md)
@@ -32,7 +32,7 @@ ht-degree: 28%
    * [概觀](identity/overview.md)
    * [第一方裝置ID](identity/first-party-device-ids.md)
    * [行動裝置對網頁和跨網域ID共用](identity/id-sharing.md)
-* 資料收集 {#data-collection}
+* 資料彙集 {#data-collection}
    * [自動收集的資訊](data-collection/automatic-information.md)
    * [追蹤連結](data-collection/track-links.md)
    * [收集商務、產品和訂單資料](data-collection/collect-commerce-data.md)
@@ -46,6 +46,7 @@ ht-degree: 28%
    * [呈現個人化內容](personalization/rendering-personalization-content.md)
    * [透過混合實施進行個人化](personalization/hybrid-personalization.md)
    * [管理忽隱忽現情形](personalization/manage-flicker.md)
+
    * Adobe Target {#adobe-target}
       * [概觀](personalization/adobe-target/target-overview.md)
       * [實作單頁應用程式](personalization/adobe-target/spa-implementation.md)
@@ -53,14 +54,15 @@ ht-degree: 28%
       * [使用mbox第三方ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [比較at.js程式庫與Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Analytics for Target (A4T)記錄 {#a4t}
-         * [總覽](personalization/adobe-target/analytics-logging/overview.md)
-         * [用戶端 記錄](personalization/adobe-target/analytics-logging/client-side.md)
+         * [概觀](personalization/adobe-target/analytics-logging/overview.md)
+         * [使用者端記錄](personalization/adobe-target/analytics-logging/client-side.md)
          * [伺服器端記錄](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer Decisioning {#offer-decisioning}
+   * offer decisioning {#offer-decisioning}
       * [概觀](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [概觀](personalization/ajo/overview.md)
       * [實作單頁應用程式](personalization/ajo/web-spa-implementation.md)
+      * [設定網頁應用程式內傳訊](personalization/web-in-app-messaging.md)
 * 同意 {#consent}
    * [支援同意](consent/supporting-consent.md)
    * IAB透明與同意架構2.0 {#iab-tcf}

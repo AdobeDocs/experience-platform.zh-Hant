@@ -5,18 +5,18 @@ description: 瞭解如何為Experience PlatformWeb SDK設定CSP
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: 設定；設定；SDK；邊緣；Web SDK；設定；上下文；Web；裝置；環境；Web SDK設定；內容安全性原則；
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 099f87acded9eca31c31555e63c0ea49ae2d1719
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 0%
 
 ---
 
 # 設定CSP
 
-A [內容安全性原則](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP)可用來限制瀏覽器可使用的資源。 CSP也可限制指令碼和樣式資源的功能。 Adobe Experience Platform Web SDK不需要CSP，但新增一個CSP可減少攻擊面，以防止惡意攻擊。
+A [內容安全性原則](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP)可用來限制瀏覽器可使用的資源。 CSP也可限制指令碼和樣式資源的功能。 Adobe Experience Platform Web SDK不需要CSP，但新增一個CSP可減少攻擊面，以防止惡意攻擊。
 
-CSP必須反映如何進行 [!DNL Platform Web SDK] 已部署和設定。 下列CSP顯示SDK可能需要哪些變更才能正常運作。 視您的特定環境而定，可能需要其他CSP設定。
+CSP必須考量如何進行 [!DNL Platform Web SDK] 已部署和設定。 下列CSP顯示SDK可能需要哪些變更才能正常運作。 視您的特定環境而定，可能需要其他CSP設定。
 
 ## 內容安全性原則範例
 
@@ -29,17 +29,17 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-在上述範例中， `EDGE-DOMAIN` 應取代為第一方網域。 第一方網域是針對 [edgeDomain](configuring-the-sdk.md#edge-domain) 設定。 如果尚未設定第一方網域， `EDGE-DOMAIN` 應取代為 `*.adobedc.net`. 如果使用開啟訪客移轉 [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled)，則 `connect-src` 指示詞也需要包含 `*.demdex.net`.
+在上述範例中， `EDGE-DOMAIN` 應該取代為第一方網域。 第一方網域是針對 [edgeDomain](configuring-the-sdk.md#edge-domain) 設定。 如果尚未設定第一方網域， `EDGE-DOMAIN` 應取代為 `*.adobedc.net`. 如果使用開啟訪客移轉 [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled)，則 `connect-src` 指示詞也需要包含 `*.demdex.net`.
 
-### 使用NONCE可允許內嵌指令碼和樣式元素
+### 使用NONCE允許內嵌指令碼和樣式元素
 
-[!DNL Platform Web SDK] 可以修改頁面內容，且必須獲得核准才能建立內嵌指令碼和樣式標籤。 若要完成此操作，Adobe建議使用Nonce [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP指令。 Nonce是伺服器產生的強密碼隨機權杖，每個唯一頁面檢視產生一次。
+[!DNL Platform Web SDK] 可以修改頁面內容，而且必須獲得核准才能建立內嵌指令碼和樣式標籤。 若要完成此操作，Adobe建議使用Nonce [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) CSP指示詞。 Nonce是伺服器產生的密碼編譯增強隨機權杖，每個唯一頁面檢視產生一次。
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-此外，CSP Nonce必須新增為 [!DNL Platform Web SDK] [基底程式碼](installing-the-sdk.md#adding-the-code) 指令碼標籤。 [!DNL Platform Web SDK] 然後會在將內嵌指令碼或樣式標籤新增至頁面時，使用該Nonce：
+此外，CSP Nonce必須新增為 [!DNL Platform Web SDK] [基底程式碼](installing-the-sdk.md#adding-the-code) 指令碼標籤。 [!DNL Platform Web SDK] 接著，將內嵌指令碼或樣式標籤新增至頁面時，會使用該Nonce：
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -59,4 +59,12 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe會 **not** 建議指定 `unsafe-inline` 因為它允許任何指令碼在頁面上執行，這會限制CSP的優點。
+>Adobe會 **非** 建議指定 `unsafe-inline` 因為它允許任何指令碼在頁面上執行，這限制了CSP的優點。
+
+## 設定CSP以供應用程式內傳訊使用 {#in-app-messaging}
+
+當您設定 [網頁應用程式內傳訊](../personalization/web-in-app-messaging.md)中，您必須在CSP中加入下列指令：
+
+```
+default-src  blob:;
+```
