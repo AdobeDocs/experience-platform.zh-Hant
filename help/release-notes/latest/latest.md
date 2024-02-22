@@ -2,88 +2,64 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
 workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 38%
+source-wordcount: '1242'
+ht-degree: 21%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期： 2024年1月30日**
-
-Adobe Experience Platform中的新功能：
-
-- [使用案例教戰手冊](#use-case-playbooks)
+**發行日期： 2024年2月21日**
 
 Experience Platform現有功能的更新：
 
-- [屬性型存取控制](#abac)
-- [資料準備](#data-prep)
-- [儀表板](#dashboards)
+- [警報](#alerts)
+- [資料集合](#data-collection)
+<!-- - [Data Prep](#data-prep) -->
 - [目的地](#destinations)
-- [身分識別服務](#identity-service)
-- [Real-Time Customer Data Platform](#rtcdp)
-- [即時客戶設定檔](#profile)
+- [沙箱](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
-## 使用案例教戰手冊 {#use-case-playbooks}
+## 警報 {#alerts}
 
-此 [!UICONTROL 使用案例教戰手冊] 功能現已正式開放所有Real-Time CDP和Adobe Journey Optimizer客戶使用。 [!UICONTROL 使用案例教戰手冊] 專門設計來協助使用者在開始使用Real-time Customer Data Platform或Adobe Journey Optimizer時克服挑戰。 當您不確定從何處開始或是如何針對您想要的使用案例建立正確的資產時，使用案例教戰手冊會提供靈感，並建立不同的資產，讓您在準備就緒時測試並匯入生產環境。
-
-開始使用 [!UICONTROL 使用案例教戰手冊]，請閱讀下列檔案頁面：
-
-- 閱讀 [概觀頁面](/help/use-case-playbooks/playbooks/overview.md) 瞭解其用途、可用性資訊，並取得教戰手冊如何運作的端對端示範，從探索到建立執行個體，再到將產生的資產匯入其他沙箱環境。
-- 取得所有專案的清單 [可用的教戰手冊](/help/use-case-playbooks/playbooks/playbooks-list.md)，依產品分組(Real-Time CDP或Journey Optimizer)
-- 取得所有 [必要許可權](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 使用教戰手冊和教戰手冊產生的資產。
-- 瞭解 [資料感知功能](/help/use-case-playbooks/playbooks/data-awareness.md) 可讓您將產生的資產複製到其他沙箱環境
-- Get [疑難排解提示](/help/use-case-playbooks/playbooks/troubleshooting.md) 如果您在使用使用案例教戰手冊時遇到錯誤或困難。
-
-## 屬性型存取控制 {#abac}
-
-屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別對象指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
-
-透過屬性型存取控制，組織的管理員可以控制使用者對所有平台工作流程和資源的存取權限，包括其中的敏感個人資料 (SPD)、個人身分資訊 (PII) 和其他自訂類型資料。管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
-
-**新檔案或更新檔案**
-
-| 檔案更新 | 說明 |
-| --- | --- |
-| 已記錄用於屬性式存取控制的新API端點 | 此 [存取控制API參考檔案](https://developer.adobe.com/experience-platform-apis/references/access-control/) 現在包含以屬性為基礎的存取控制API角色、原則及產品端點。 這些端點可用於為使用者擷取指定沙箱中指定資源的相關角色、原則和產品。 |
+Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤顯示，並可選擇在UI本身或透過電子郵件通知接收警報訊息。
+**新功能或更新功能**
+| 功能 | 說明 | | — | — | | 警示歷史記錄標籤 | 作為Experience Platform管理員，您可以使用管理警示訂閱者功能，將警示指派給Adobe使用者ID、外部電子郵件地址或電子郵件群組清單。 如需詳細資訊，請參閱 [警報UI檔案](../../observability/alerts/ui.md) 以取得有關「歷史記錄」標籤的詳細資訊。 |
 
 {style="table-layout:auto"}
 
-若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](../../access-control/abac/overview.md)。關於屬性型存取控制工作流程的綜合指南，請閱讀[屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md)。
+若要進一步瞭解警示，請閱讀 [[!DNL Observability Insights] 概述](../../observability/home.md).
 
-## 資料準備 {#data-prep}
+## 資料收集 {#data-collection}
 
-「資料準備」讓資料工程師可在體驗資料模式 (XDM) 之間對應、轉換和驗證資料。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 新的對應工具函數 | <ul><li>`object_to_map`：使用 `object_to_map` 函式以建立對應資料型別。 此函式支援數種不同的語法。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 物件](../../data-prep/functions.md#objects). </li><li>`to_map`：使用 `to_map` 函式以使用物件來建立具有指定欄位名稱和值配對的對應。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 對應](../../data-prep/functions.md#map). </li><li>`array_to_map`：使用 `array_to_map` 函式，以使用物件陣列來建立具有指定欄位名稱和值組的對應。 如需詳細資訊，請閱讀以下指南： [階層的函式 — 對應](../../data-prep/functions.md#map). |
+| [Web SDK中的應用程式內傳訊支援](../../edge/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK現在支援Adobe Journey Optimizer行銷活動的Web應用程式內訊息設定。 |
 
 {style="table-layout:auto"}
 
-如需「資料準備」的詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
+若要了解有關資料收集的詳細資訊，請閱讀[資料收集概觀](../../tags/home.md)。
 
-## 儀表板 {#dashboards}
+<!-- ## Data Prep {#data-prep}
 
-Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取的有關組織資料的重要分析。
+Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**新功能或更新功能**
+**New or updated features**
 
-| 功能 | 說明 |
+| Feature | Description |
 | --- | --- |
-| 檢視SQL | 您現在可以使用「檢視SQL」切換來檢視「設定檔」、「對象」、「目的地」和自訂深入分析背後的SQL，然後透過「查詢編輯器」依需求執行查詢。 存取支援Real-time Customer Data Platform深入分析的SQL可幫助您瞭解資料模型分析背後的邏輯。 此透明度可讓您的AdobeReal-time CDP資料更易於存取、理解，並更能對決策產生影響。<br>從SQL中汲取超過40種現有的見解靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料中獲得獨特的見解。 SQL也可供您使用 [設定檔](../../dashboards/insights/profiles.md)， [受眾](../../dashboards/insights/audiences.md)、和 [目的地](../../dashboards/insights/destinations.md) Experience League檔案中的深入分析。 這些檔案會強調可使用標準深入分析來回答的業務使用案例。 如需詳細資訊，請閱讀以下指南： [檢視分析SQL](../../dashboards/view-sql.md). |
+| New mapper functions for Adobe Analytics | You can now use the following functions to extract event data from Adobe Analytics: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md) |
 
 {style="table-layout:auto"}
 
-如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
+For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md). -->
 
 ## 目的地 {#destinations}
 
@@ -93,7 +69,9 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
-| [公用連線](../../destinations/catalog/advertising/pubmatic.md) | 使用此目的地可將受眾資料傳送至 [!DNL PubMatic Connect] 平台。 |
+| [Gainsight PX連線](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX是一個產品體驗平台，可讓產品團隊瞭解使用者如何使用其產品、收集意見並建立應用程式內參與，例如產品逐步解說，以推動使用者上線和產品採用。 |
+| [Mailchimp標籤連線](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp是熱門的行銷自動化平台和電子郵件行銷服務。 您可以使用Mailchimp標籤聯結器來建構、標示或分類您的連絡人。 |
+| [SAP商務連線](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce是適用於B2B和B2C企業的雲端型電子商務平台解決方案，可作為SAP客戶體驗產品組合的一部分提供。 您可以使用此目的地，從現有Experience Platform對象更新SAP Commerce中的客戶詳細資料。 |
 
 {style="table-layout:auto"}
 
@@ -101,77 +79,42 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 新增 **假定的角色** Amazon S3目的地的驗證型別 | 如果您不想與Experience Platform共用帳戶金鑰和秘密金鑰，請在將Experience Platform連線至您的Amazon S3貯體時，使用新的假定角色驗證型別。 閱讀更多有關中新驗證方法的資訊 [驗證區段](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) Amazon S3檔案。 |
+| 啟用一般可用的帳戶對象 | 對某些目的地啟用帳戶對象的功能現在普遍適用於購買 [企業對企業](/help/rtcdp/overview.md#rtcdp-b2b) 和 [企業對個人](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform版。 閱讀有關教學課程 [啟用帳戶對象](/help/destinations/ui/activate-account-audiences.md) 以取得完整的資訊，包括支援的目的地。 |
+| Google目的地的數位市場法同意執行工具 | Google即將發佈的變更專案 [Google Ads API](https://developers.google.com/google-ads/api/docs/start)， [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)，以及 [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 以支援「 」中定義的合規性和同意相關要求 [數位市場法案](https://digital-markets-act.ec.europa.eu/index_en) (DMA)在歐盟([歐盟使用者同意原則](https://www.google.com/about/company/user-consent-policy/))。 預計這些同意要求變更將於2024年3月6日起生效。 <br/><br/> 為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 Adobe身為Google合作夥伴，為您提供在歐盟DMA下符合這些同意要求的必要工具。<br/><br/>已購買AdobePrivacy &amp; Security Shield且已設定 [同意原則](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 不需要採取任何動作，即可篩選出未同意的設定檔。<br/><br/>尚未購買AdobePrivacy &amp; Security Shield的客戶必須使用 [區段定義](../../segmentation/home.md#segment-definitions) 中的功能 [區段產生器](../../segmentation/ui/segment-builder.md) 以篩選掉未同意的設定檔，以便持續使用現有的Real-Time CDP Google目標而不中斷。 |
+| [!BADGE 測試版]{type=Informational}重新排序批次目的地的對應欄位 | 您現在可以拖放中的對應欄位，變更CSV匯出中的欄順序 [對應](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 步驟。 UI中對應欄位的順序反映了轉存CSV檔案中欄位的順序（從上到下），其中上列是CSV檔案中最左側的欄。 <br/><br/> 此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。 |
+| [!BADGE 測試版]{type=Informative}預先選取批次目的地的預設匯出排程 | Experience Platform現在會自動為每個檔案匯出設定預設排程。 請參閱以下檔案： [排程對象匯出](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) 以瞭解如何修改預設排程。 <br/><br/> 此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。 |
+| [!BADGE 測試版]{type=Informative}大量編輯批次目的地的對象啟用排程 | 您現在可以從大量編輯多個對象的啟用排程 [啟用資料](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) 頁面。 <br/><br/> 此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。 |
+| [!BADGE 測試版]{type=Informative}依需求將大量檔案匯出至批次目的地 | 您現在可以透過 [隨選匯出檔案](../../destinations/ui/export-file-now.md) 功能。 <br/><br/> 此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。 |
 
 {style="table-layout:auto"}
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
-## 身分識別服務 {#identity-service}
+## 沙箱 {#sandboxes}
 
-Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分，為您提供客戶及其行為的全方位檢視，讓您可即時實現有影響力的個人數位體驗。
-
-**新檔案或更新檔案**
-
-| 檔案更新 | 說明 |
-| --- | --- |
-| 檔案重組 | Identity Service檔案已重新編排，以改善Identity Service中概念的呈現方式及清晰度：<ul><li>造訪 [Identity Service總覽頁面](../../identity-service/home.md) 如需擴充術語指南，請參閱使用案例範例，詳細說明典型客戶歷程、Identity Service如何將身分連結在一起的劃分，以及Identity Service在Experience Platform生態系統中所扮演角色的摘要。</li><li>閱讀指南： [瞭解Identity Service與即時客戶個人檔案之間的關係](../../identity-service/identity-and-profile.md) 瞭解這兩種服務如何搭配運作，以及其目的、程式、輸入和輸出之間的差異的詳細摘要。</li><li>請參閱 [Identity Service連結邏輯指南](../../identity-service/features/identity-linking-logic.md) 以取得身分圖表在不同案例和時間戳記下的行為方式解釋和視覺化。</li></ul> |
-
-{style="table-layout:auto"}
-
-若要進一步瞭解Identity Service，請參閱 [Identity Service總覽](../../identity-service/home.md).
-
-## Real-Time Customer Data Platform {#rtcdp}
-
-建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶設定檔。[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶設定檔。然後，根據這些設定檔建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
+Adobe Experience Platform的建置可豐富全球的數位體驗應用程式。 公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。 為了滿足此需求，Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 的更新 [Real-Time CDP首頁](https://experience.adobe.com) | <ul><li>**設定檔Widget**：您現在可以使用設定檔介面工具集導覽至設定檔總覽頁面，並檢視您組織的設定檔量度。</li><li>**設定檔量度卡片**：首頁儀表板中的設定檔量度卡現在會顯示貴組織中的設定檔總數，視您個別的合併原則而定。</li><li>**結構描述Widget**：您現在可以使用結構描述Widget導覽至UI中的結構描述建立工作流程。</li></ul> |
+| 沙箱工具 | 除了現在支援同意和治理規則的物件型別之外，使用沙箱工具來匯入未啟用統一設定檔的結構描述，在匯入區段時檢查目標沙箱中缺少的屬性，並預設為使用現有的合併原則。 如需這些功能的詳細資訊，請參閱 [沙箱工具介面指南](../../sandboxes/ui/sandbox-tooling.md). |
 
 {style="table-layout:auto"}
 
-**新檔案或更新檔案**
-
-| 檔案更新 | 說明 |
-| --- | --- |
-| 新的Real-Time CDP檔案首頁 | 造訪 [新的Real-Time CDP檔案首頁](/help/rtcdp/home.md) 以取得關於如何開始使用產品、護欄、範例使用案例等等的簡單資訊。 |
-| 範例Real-Time CDP使用案例概覽 | 造訪 [新的範例使用案例概觀頁面](/help/rtcdp/use-case-guides/overview.md) 您的組織可以透過Real-Time CDP實現的範例使用案例集合。 |
-
-{style="table-layout:auto"}
-
-若要進一步瞭解Real-Time CDP，請閱讀 [Real-Time CDP概觀](../../rtcdp/overview.md).
-
-## 即時客戶設定檔 {#profile}
-
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
-
-**更新的功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| 改善設定檔檢視器預設控制面板卡片的當地語系化 | 預設設定檔卡片現在會有動態當地語系化的名稱。 自訂設定檔卡片可以繼續擁有可編輯的自訂名稱。 |
-
-{style="table-layout:auto"}
-
-若要深入瞭解即時客戶個人檔案，請閱讀 [設定檔概述](../../profile/home.md)
+如需沙箱的詳細資訊，請閱讀 [沙箱總覽](../../sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的對象。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立對象。這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
-**新功能或更新功能**
+**新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 外部產生的對象上傳 | 欄數上限已增加到 **25**. |
-| 區段產生器預估 | 預估和合格的設定檔現在會顯示在對象屬性區段中。 如需此變更的詳細資訊，請參閱 [區段產生器UI指南](../../segmentation/ui/segment-builder.md). |
+| 帳戶對象 | 帳戶對象現在可普遍使用！ 您現在可以使用帳戶細分，讓Real-Time Customer Platform的B2B和B2P版本中，行銷細分體驗從以人物為基礎的對象到以帳戶為基礎的對象，變得完整而精細。 此版本可讓您使用以人物為基礎的對象作為以帳戶為基礎的對象的述詞、新增搜尋功能、支援使用自訂實體，並符合資料控管。 如需有關此功能的詳細資訊，請參閱 [帳戶對象總覽](../../segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
-
-如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
@@ -181,10 +124,8 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative}[!DNL Oracle NetSuite] 來源 | 使用 [!DNL Oracle NetSuite] 來源目錄中的整合，可從 [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) 和 [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) 要Experience Platform的帳戶。 |
-| [!BADGE Beta]{type=Informative}[!DNL Braze Currents] 來源 | 使用 [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) 整合來源目錄，從您的取得資料 [!DNL Braze] 要Experience Platform的帳戶。 |
-| 支援的金鑰組驗證 [!DNL Snowflake] 批次來源 | 您現在可以在建立新時使用金鑰組驗證 [!DNL Snowflake] 批次資料的帳戶。 如需詳細資訊，請閱讀以下指南： [建立 [!DNL Snowflake] 使用API的帳戶](../../sources/tutorials/api/create/databases/snowflake.md) 或指南 [建立 [!DNL Snowflake] 使用UI的帳戶](../../sources/tutorials/ui/create/databases/snowflake.md). |
+| [!BADGE 測試版]{type=Informative} [!DNL Acxiom] 來源 | 使用 [[!DNL Acxiom Prospecting Data Import] 來源](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) 以擷取及對應資料 [!DNL Acxiom] 將潛在客戶服務移至Experience Platform。 |
 
 {style="table-layout:auto"}
 
-若要了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+如需有關來源的詳細資訊，請閱讀 [來源概觀](../../sources/home.md).
