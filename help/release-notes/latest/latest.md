@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 1 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 21%
@@ -17,7 +17,6 @@ Experience Platform現有功能的更新：
 
 - [警報](#alerts)
 - [資料集合](#data-collection)
-<!-- - [Data Prep](#data-prep) -->
 - [目的地](#destinations)
 - [沙箱](#sandboxes)
 - [Segmentation Service](#segmentation)
@@ -79,7 +78,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 啟用一般可用的帳戶對象 | 對某些目的地啟用帳戶對象的功能現在普遍適用於購買 [企業對企業](/help/rtcdp/overview.md#rtcdp-b2b) 和 [企業對個人](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform版。 閱讀有關教學課程 [啟用帳戶對象](/help/destinations/ui/activate-account-audiences.md) 以取得完整的資訊，包括支援的目的地。 |
+| 啟用一般可用的帳戶對象 | 對某些目的地啟用帳戶對象的功能現在普遍適用於購買 [企業對企業](/help/rtcdp/overview.md#rtcdp-b2b) 和 [企業對個人](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platform版。 閱讀有關教學課程 [啟用帳戶對象](/help/destinations/ui/activate-account-audiences.md) 以取得完整的資訊，包括支援的目的地。 |
 | Google目的地的數位市場法同意執行工具 | Google即將發佈的變更專案 [Google Ads API](https://developers.google.com/google-ads/api/docs/start)， [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)，以及 [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 以支援「 」中定義的合規性和同意相關要求 [數位市場法案](https://digital-markets-act.ec.europa.eu/index_en) (DMA)在歐盟([歐盟使用者同意原則](https://www.google.com/about/company/user-consent-policy/))。 預計這些同意要求變更將於2024年3月6日起生效。 <br/><br/> 為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 Adobe身為Google合作夥伴，為您提供在歐盟DMA下符合這些同意要求的必要工具。<br/><br/>已購買AdobePrivacy &amp; Security Shield且已設定 [同意原則](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 不需要採取任何動作，即可篩選出未同意的設定檔。<br/><br/>尚未購買AdobePrivacy &amp; Security Shield的客戶必須使用 [區段定義](../../segmentation/home.md#segment-definitions) 中的功能 [區段產生器](../../segmentation/ui/segment-builder.md) 以篩選掉未同意的設定檔，以便持續使用現有的Real-Time CDP Google目標而不中斷。 |
 | [!BADGE 測試版]{type=Informational}重新排序批次目的地的對應欄位 | 您現在可以拖放中的對應欄位，變更CSV匯出中的欄順序 [對應](../../destinations/ui/activate-batch-profile-destinations.md#mapping) 步驟。 UI中對應欄位的順序反映了轉存CSV檔案中欄位的順序（從上到下），其中上列是CSV檔案中最左側的欄。 <br/><br/> 此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。 |
 | [!BADGE 測試版]{type=Informative}預先選取批次目的地的預設匯出排程 | Experience Platform現在會自動為每個檔案匯出設定預設排程。 請參閱以下檔案： [排程對象匯出](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) 以瞭解如何修改預設排程。 <br/><br/> 此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。 |

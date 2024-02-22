@@ -5,7 +5,7 @@ description: 瞭解如何對目的地啟用帳戶對象
 badgeB2B: label="B2B版本" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->對目的地啟用帳戶對象的功能適用於購買以下產品的公司： [企業對企業](/help/rtcdp/overview.md#rtcdp-b2b) 和 [企業對個人](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform版。
+>對目的地啟用帳戶對象的功能適用於購買以下產品的公司： [企業對企業](/help/rtcdp/overview.md#rtcdp-b2b) 和 [企業對個人](/help/rtcdp/overview.md#rtcdp-b2p) Real-time Customer Data Platform版。
 
 本文會說明匯出所需的工作流程 [帳戶對象](/help/segmentation/ui/account-audiences.md) 從Adobe Experience Platform前往您偏好的目的地。
 

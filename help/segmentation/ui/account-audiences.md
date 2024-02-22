@@ -1,12 +1,12 @@
 ---
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
-badgeLimitedAvailability: label="可用性限制" type="Caution"
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->帳戶對象僅適用於 [Real-time Customer Data Platform的B2B版本](../../rtcdp/b2b-overview.md). 此外，帳戶對象功能目前正在 **可用性限制**. 請聯絡Adobe客戶服務或您的Adobe代表，以要求存取此功能。
+>帳戶對象僅適用於 [Real-time Customer Data Platform的B2B版本](../../rtcdp/overview.md#rtcdp-b2b) 和 [Real-time Customer Data Platform的B2P版本](../../rtcdp/overview.md#rtcdp-b2p).
 
 透過帳戶細分，Adobe Experience Platform可讓您從以人物為基礎的受眾到以帳戶為基礎的受眾，使用完整且精密的行銷細分體驗。
 
