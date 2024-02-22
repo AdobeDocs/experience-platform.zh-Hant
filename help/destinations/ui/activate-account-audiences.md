@@ -2,12 +2,12 @@
 title: 對目的地啟用帳戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用帳戶對象
-badgeLimitedAvailability: label="可用性限制" type="Caution"
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B版本" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->對目的地啟用帳戶對象的功能僅適用於 [Real-time Customer Data Platform的B2B版本](../../rtcdp/b2b-overview.md). 此外，帳戶對象功能目前正在 **可用性限制**. 請聯絡Adobe客戶服務或您的Adobe代表，以要求存取此功能。
+>對目的地啟用帳戶對象的功能適用於購買以下產品的公司： [企業對企業](/help/rtcdp/overview.md#rtcdp-b2b) 和 [企業對個人](/help/rtcdp/overview.md#rtcdp-b2b) Real-time Customer Data Platform版。
 
 本文會說明匯出所需的工作流程 [帳戶對象](/help/segmentation/ui/account-audiences.md) 從Adobe Experience Platform前往您偏好的目的地。
 
@@ -79,7 +79,7 @@ ht-degree: 0%
 
 ## 重要圖說文字和已知限制 {#important-callouts-known-limitations}
 
-請注意下列重要圖說和已知限制，瞭解啟用帳戶對象功能的有限可用性版本。
+請注意下列重要圖說和已知限制，瞭解啟用帳戶對象功能的一般可用性版本。
 
 ### 將帳戶對象啟用至時，需在對映步驟中選取對映 **[!UICONTROL （公司） LinkedIn相符的受眾]** 目的地 {#required-mappings}
 
