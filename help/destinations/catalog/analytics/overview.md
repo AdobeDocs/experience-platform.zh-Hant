@@ -3,9 +3,9 @@ keywords: analytics目的地；analytics目的地
 title: Analytics目的地概觀
 description: Analytics目的地會追蹤訪客與您網站上內容的互動情形，並收集資料以瞭解您的對象行為。 這些平台為您最有價值的訪客提供參與度和轉換的獨特見解。
 exl-id: d7a2351b-c2ce-4776-a2b7-f8bb5e73b45b
-source-git-commit: 7ad013cb4359f2d65e78e30bc8472f62f4505b3a
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '176'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Analytics目的地會追蹤訪客與您網站上內容的互動情形，並收�
 * [Decibel副檔名](decibel.md)
 * [Demandbase擴充功能](demandbase.md)
 * [Dialogtech擴充功能](dialogtech.md)
-* [Gainsight PX](gainsight-px.md)
+* [Gainsight PX連線](gainsight-px.md)
 * [Google全域網站標籤分析擴充功能](gtag-analytics.md)
 * [Google Universal Analytics擴充功能](google-universal-analytics.md)
 * [JW Player Analytics (Beta)擴充功能](jw-player-analytics.md)

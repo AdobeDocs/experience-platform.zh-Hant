@@ -4,9 +4,9 @@ user-guide-title: 目的地指南
 user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
-source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1203'
 ht-degree: 4%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 4%
       * [Decibel副檔名](./catalog/analytics/decibel.md)
       * [Demandbase擴充功能](./catalog/analytics/demandbase.md)
       * [DialogTech擴充功能](./catalog/analytics/dialogtech.md)
-      * [Gainsight PX](./catalog/analytics/gainsight-px.md)
+      * [Gainsight PX連線](./catalog/analytics/gainsight-px.md)
       * [Google全域網站標籤擴充功能](./catalog/analytics/gtag-analytics.md)
       * [Google Universal Analytics擴充功能](./catalog/analytics/google-universal-analytics.md)
       * [JW Player Analytics (Beta)擴充功能](./catalog/analytics/jw-player-analytics.md)
