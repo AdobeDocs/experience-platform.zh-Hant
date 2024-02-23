@@ -28,7 +28,7 @@ Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您�
 **新功能或更新功能**
 | 功能 | 說明 | | — | — | | 警示歷史記錄標籤 | 作為Experience Platform管理員，您可以使用管理警示訂閱者功能，將警示指派給Adobe使用者ID、外部電子郵件地址或電子郵件群組清單。 如需詳細資訊，請參閱 [警報UI檔案](../../observability/alerts/ui.md) 以取得有關「歷史記錄」標籤的詳細資訊。 |
 
-{style="table-layout:auto"}
+
 
 若要進一步瞭解警示，請閱讀 [[!DNL Observability Insights] 概述](../../observability/home.md).
 
