@@ -1,7 +1,7 @@
 ---
 title: 在Web SDK中設定網頁應用程式內傳訊支援
 description: 瞭解如何設定Web SDK標籤擴充功能以支援Web應用程式內傳訊。
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
