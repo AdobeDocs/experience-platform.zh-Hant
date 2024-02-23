@@ -2,7 +2,7 @@
 title: Google顯示和視訊360連線
 description: Display & Video 360 （先前稱為DoubleClick Bid Manager）工具可用來跨顯示器、影片和行動庫存來源執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
+source-git-commit: 7d43abd507b5cee2b5c5d90af253d3e9290013a2
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 2%
@@ -14,11 +14,11 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 > Google即將發佈的變更專案 [Google Ads API](https://developers.google.com/google-ads/api/docs/start)， [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)，以及 [Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview) 以支援「 」中定義的合規性和同意相關要求 [數位市場法案](https://digital-markets-act.ec.europa.eu/index_en) (DMA)在歐盟([歐盟使用者同意原則](https://www.google.com/about/company/user-consent-policy/))。 預計這些同意要求變更將於2024年3月6日起生效。
-><br/><br/>
+><br/>
 >為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 Adobe身為Google合作夥伴，為您提供在歐盟DMA下符合這些同意要求的必要工具。
-><br/><br/>
+><br/>
 >已購買AdobePrivacy &amp; Security Shield且已設定 [同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 不需要採取任何動作，即可篩選出未同意的設定檔。
-><br/><br/>
+><br/>
 >尚未購買AdobePrivacy &amp; Security Shield的客戶必須使用 [區段定義](../../../segmentation/home.md#segment-definitions) 中的功能 [區段產生器](../../../segmentation/ui/segment-builder.md) 以篩選掉未同意的設定檔，以便持續使用現有的Real-Time CDP Google目標而不中斷。
 
 [!DNL Display & Video 360]，先前稱為 [!DNL DoubleClick Bid Manager]，是用於跨顯示、影片和行動詳細目錄來源執行重新定位以及以對象為目標的數位行銷活動的工具。
