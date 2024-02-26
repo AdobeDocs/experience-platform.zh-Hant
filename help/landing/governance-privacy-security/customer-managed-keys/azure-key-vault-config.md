@@ -2,9 +2,9 @@
 title: 設定Azure金鑰儲存庫
 description: 瞭解如何使用Azure建立新的企業帳戶，或使用現有的企業帳戶並建立金鑰儲存庫。
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->僅限高階和標準服務層級 [!DNL Azure] 支援金鑰儲存庫。 [!DNL Azure Managed HSM]， [!DNL Azure Dedicated HSM] 和 [!DNL Azure Payments HSM] 不受支援。 請參閱 [[!DNL Azure] 檔案](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) 以取得所提供的金鑰管理服務的詳細資訊。
+>僅限標準、進階及受管理的HSM層級 [!DNL Azure] 支援金鑰儲存庫。 [!DNL Azure Dedicated HSM] 和 [!DNL Azure Payments HSM] 不受支援。 請參閱 [[!DNL Azure] 檔案](https://learn.microsoft.com/en-us/azure/security/fundamentals/key-management#azure-key-management-services) 以取得所提供的金鑰管理服務的詳細資訊。
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ![此 [!DNL Keys] 標籤之 [!DNL Azure] 替換為 [!DNL Generate import] 反白顯示。](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-使用提供的表單提供索引鍵的名稱，然後選取 **RSA** 鍵型別。 至少 **[!DNL RSA key size]** 至少必須是 **3072** 位元（視需求） [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] 也與RSA 3027相容。
+使用提供的表單提供索引鍵的名稱，然後選取 **RSA** 或 **RSA-HSM** 鍵型別。 至少 **[!DNL RSA key size]** 至少必須是 **3072** 位元（視需求） [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] 也與RSA 3027相容。
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ ht-degree: 0%
 
 使用剩餘的控制項來設定您想要產生或匯入的金鑰。 完成後，選取 **[!DNL Create]**.
 
-![建立金鑰控制面板 [!DNL 3072] 位元醒目提示。](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![此 [!DNL Create a key] 儀表板，具有 [!DNL 3072] 位元醒目提示。](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 已設定的金鑰會出現在儲存庫的金鑰清單中。
 
