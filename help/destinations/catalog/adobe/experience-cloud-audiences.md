@@ -3,9 +3,9 @@ title: Experience Cloud 對象
 description: 瞭解如何從Real-time Customer Data Platform將受眾分享至各種Experience Cloud應用程式。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 2%
 
 ---
@@ -95,6 +95,7 @@ ht-degree: 2%
 * 目前支援單一Experience Cloud對象目的地。 嘗試設定第二個目的地連線會導致錯誤。
 * 連線到目的地時，您可以看到以下選項： [啟用資料流警報](../../ui/alerts.md). 雖然可在UI中看見，但 **目前不支援啟用警示選項**.
 * **對象回填支援**：首次匯出至Audience Manager或其他Experience Cloud解決方案時，會包含對象的歷史母體。 的使用者 [舊版對象共用整合](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) 設定此目的地的訪客預期回填差異約為6小時。
+* 源自於的對象 [對象構成](../../../segmentation/ui/audience-composition.md) 不直接支援。 若要啟用此目的地的複合對象，您必須透過以下方式建立對象定義 [區段產生器](../../../segmentation/ui/segment-builder.md) 根據您的複合對象，並啟用新建立的對象。
 
 ### 啟用對象時的延遲 {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Audience Manager中的對象和特徵須遵循 [角色型存取控制](https://e
 
 從Real-Time CDP匯出的受眾會指派給Audience Manager為的特定資料來源，稱為 **[!UICONTROL Experience Platform區段]**.
 
-若要僅允許特定使用者存取對象，您可以將存取控制套用至屬於資料來源的對象。 在Audience Manager為這些對象和從Real-Time CDP區段建立的特徵，設定新的存取控制許可權。
+若要僅允許特定使用者存取對象，請使用 [角色型存取控制](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) 設定使用者對從Real-Time CDP受眾建立的受眾和特徵的存取權。
