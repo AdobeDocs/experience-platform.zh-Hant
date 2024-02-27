@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
 ht-degree: 0%
@@ -220,9 +220,9 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 選取屬性後，您可以選取排序依據。 這是以遞增（從最低到最高）或遞減（從最高到最低）順序顯示。
 
-此外，您可以啟用「 」以限制傳回的對象數量。 **[!UICONTROL 新增設定檔限制]** 切換。 當啟用此切換時，您可以設定在「 」中傳回的最大對象數 **[!UICONTROL 包含的設定檔]** 欄位。
+此外，您可以啟用「 」以限制傳回的設定檔數 **[!UICONTROL 新增設定檔限制]** 切換。 當啟用此切換時，您可以設定在 **[!UICONTROL 包含的設定檔]** 欄位。
 
-![新增設定檔限制切換會反白顯示，以讓您限制傳回的對象數量。](../images/ui/audience-composition/add-profile-limit.png)
+![新增設定檔限制切換會反白顯示，以讓您限制傳回的設定檔數量。](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
 
