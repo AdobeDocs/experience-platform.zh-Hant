@@ -2,9 +2,9 @@
 title: 查詢服務封裝
 description: 以下檔案概述查詢服務可用功能和產品的包裝，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 1eeed32779318c58b75edef29c92786201fddf6a
+source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '1004'
 ht-degree: 2%
 
 ---
@@ -33,13 +33,13 @@ ht-degree: 2%
 | 支援的使用案例 | <ul><li>探索&#x200B;</li><li>資料探索&#x200B;</li><li>資料驗證</li><li>實驗</li></ul> | <ul><li>清潔</li><li>塑形</li><li>操控</li><li>充實</li></ul> |
 | 支援的語意 | <ul><li>選取查詢</li></ul> | <ul><li>CTAS和ITAS查詢</li></ul> |
 | 最長執行時間 | 10 分鐘 | 24 小時 |
-| 授權量度 | **查詢使用者並行**： <ul><li>1位同時使用者(Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5位同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢並行**： <ul><li>1個並行執行查詢(所有應用程式&#x200B;)</li></ul> **其他ad hoc query users pack附加元件** 可購買以增加您授權的臨時查詢權利。 <ul><li>每包+5個額外的同時使用者</li><li>每包+1個額外的並行執行查詢</li></ul> | **計算時數**： <ul><li>變數（根據您的應用程式權益設定範圍）</li></ul> **計算時數** 是測量執行批次查詢時，查詢服務引擎讀取、處理資料以及將資料寫入資料湖所花費的時間。 |
+| 授權量度 | **查詢使用者並行**： <ul><li>1位同時使用者(Real-Time CDP、Adobe Journey Optimizer)&#x200B;</li><li>5位同時使用者(Customer Journey Analytics&#x200B;)</li></ul> **查詢並行**： <ul><li>1個並行執行查詢(所有應用程式&#x200B;)</li></ul> **其他ad hoc query users pack附加元件** 可購買以增加您授權的臨時查詢權利。 <ul><li>每包+5個額外的同時使用者</li><li>每包+1個額外的並行執行查詢</li></ul> | **計算時數**： <ul><li>變數（根據您的應用程式權益設定範圍）</li></ul> **計算時數** 是測量執行批次查詢時，查詢服務引擎讀取、處理資料以及將資料寫入資料湖所花費的時間。 <br>透過Data Distiller SKU，您還能取得其他使用者和查詢並行存取，這可用於執行臨時查詢。  資料Distiller SKU包含：<br><ul><li>+5個額外的同時使用者</li><li>+1個額外的並行執行查詢</li></ul> |
 | 加速查詢和報告使用 | 無 | 是 — 並行加速查詢可讓您從加速存放區讀取資料，並在您的儀表板中顯示。 也提供在加速存放區中儲存報告模型和資料集的專用權益。 |
 | 資料湖儲存容量 | 您的總儲存許可權取決於您的平台應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的儲存權益，好讓您的資料Distiller使用案例原始和衍生資料集在七天資料到期日之後繼續儲存。<br>您的資料湖儲存容量是以TB為單位，取決於您購買的計算時數數量。 請檢視產品說明以取得更多詳細資料。 |
 | 資料匯出允許 | 您的總匯出權益取決於您的平台式應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的匯出權利，以允許匯出使用Data Distiller建立的衍生資料集。<br>您每年的資料匯出容量是以TB為單位，並且取決於您購買的計算時數數量。 如需更多詳細資訊，請檢視產品說明。 |
 | 查詢執行介面 | <ul><li>查詢服務UI</li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li></ul> | <ul><li>查詢服務UI </li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li><li>REST API</li></ul> |
 | 查詢結果傳回，透過 | 使用者端UI | 衍生資料集儲存在Data Lake中 |
-| 結果限制 | <ul><li>查詢服務UI - 100列</li><li>協力廠商使用者端 — 50,000</li><li>[!DNL PostgresSQL] 使用者端 — 50,000</li></ul> | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。</li><li>協力廠商使用者端（列數沒有上限）</li><li>[!DNL PostgresSQL] 使用者端（列數沒有上限）</li><li>REST API （列數沒有上限）</li></ul> |
+| 結果限制 | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。</li><li>協力廠商使用者端 — 50,000</li><li>[!DNL PostgresSQL] 使用者端 — 50,000</li></ul> | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。<br>注意：CTAS和ITAS查詢只會產生成功訊息，因為查詢輸出會儲存在衍生資料集中。</li><li>協力廠商使用者端（列數沒有上限）</li><li>[!DNL PostgresSQL] 使用者端（列數沒有上限）</li><li>REST API （列數沒有上限）</li></ul> |
 | 讀取資料集容量 | 是 | 是 |
 | 寫入資料集容量 | 無 | 是 |
 | 排程容量 | 無 | 是 |
