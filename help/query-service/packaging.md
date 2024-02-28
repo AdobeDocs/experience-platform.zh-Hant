@@ -2,9 +2,9 @@
 title: 查詢服務封裝
 description: 以下檔案概述查詢服務可用功能和產品的包裝，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 2bea95d855d24aa9d5763ab541ec282f0d8d1d56
+source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '963'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 2%
 | 資料匯出允許 | 您的總匯出權益取決於您的平台式應用程式授權。 例如，Real-Time CDP、AJO、CJA等。 | 是 — 提供額外的匯出權利，以允許匯出使用Data Distiller建立的衍生資料集。<br>您每年的資料匯出容量是以TB為單位，並且取決於您購買的計算時數數量。 如需更多詳細資訊，請檢視產品說明。 |
 | 查詢執行介面 | <ul><li>查詢服務UI</li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li></ul> | <ul><li>查詢服務UI </li><li>協力廠商使用者端UI</li><li>[!DNL PostgresSQL] 使用者端UI</li><li>REST API</li></ul> |
 | 查詢結果傳回，透過 | 使用者端UI | 衍生資料集儲存在Data Lake中 |
-| 結果限制 | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。</li><li>協力廠商使用者端 — 50,000</li><li>[!DNL PostgresSQL] 使用者端 — 50,000</li></ul> | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。<br>注意：CTAS和ITAS查詢只會產生成功訊息，因為查詢輸出會儲存在衍生資料集中。</li><li>協力廠商使用者端（列數沒有上限）</li><li>[!DNL PostgresSQL] 使用者端（列數沒有上限）</li><li>REST API （列數沒有上限）</li></ul> |
+| 結果限制 | <ul><li>查詢服務UI — 輸出列數可以 [已使用UI設定進行設定](./ui/user-guide.md#result-count) 到50到500列。</li><li>協力廠商使用者端 — 50,000</li><li>[!DNL PostgresSQL] 使用者端 — 50,000</li></ul> | CTAS和ITAS查詢只會產生成功訊息，因為查詢輸出會儲存在衍生資料集中。 |
 | 讀取資料集容量 | 是 | 是 |
 | 寫入資料集容量 | 無 | 是 |
 | 排程容量 | 無 | 是 |
