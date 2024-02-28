@@ -2,9 +2,9 @@
 title: 中繼轉換API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Meta Conversions API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
+source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 此 [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) 可讓您將伺服器端行銷資料連結至 [!DNL Meta] 技術協助您最佳化廣告目標定位、降低每個動作的成本以及評估結果。 事件連結至 [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID和的處理方式與使用者端事件類似。
 
 使用 [!DNL Meta Conversions API] 擴充功能上，您可在以下位置運用API的功能： [事件轉送](../../../ui/event-forwarding/overview.md) 資料傳送至的規則 [!DNL Meta] 來自Adobe Experience Platform Edge Network。 本文介紹如何安裝擴充功能，以及在事件轉送中使用其功能 [規則](../../../ui/managing-resources/rules.md).
+
+## 示範
+
+以下影片旨在協助您瞭解 [!DNL Meta Conversions API].
+
+>[!VIDEO](https://unlockmarketingdata.com/video-meta-conversions-api)
 
 ## 先決條件
 
