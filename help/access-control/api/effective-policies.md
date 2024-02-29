@@ -1,10 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；有效原則；存取控制api
+keywords: Experience Platform；首頁；熱門主題；有效政策；存取控制api
 solution: Experience Platform
 title: 有效原則API端點
 description: 瞭解如何使用Adobe Experience Platform的存取控制API檢視有效的存取原則。
+role: Developer
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 1%
@@ -17,7 +18,7 @@ ht-degree: 1%
 >
 >如果傳遞的是使用者權杖，則權杖的使用者必須具有請求組織的「組織管理員」角色。
 
-若要檢視目前使用者的有效存取控制原則，請向下列使用者發出POST要求： `/acl/effective-policies` 中的端點 [!DNL Access Control] API。 您要在要求裝載中擷取的許可權和資源型別必須以陣列形式提供。 這會在以下範例API呼叫中說明。
+若要檢視目前使用者的有效存取控制原則，請向下列使用者發出POST要求： `/acl/effective-policies` 中的端點 [!DNL Access Control] API。 您要在要求裝載中擷取的許可權和資源型別必須以陣列形式提供。 這會在以下的範例API呼叫中示範。
 
 **API格式**
 
@@ -27,7 +28,7 @@ POST /acl/effective-policies
 
 **要求**
 
-以下請求會擷取關於「[!UICONTROL 管理資料集]「對」的許可權和存取權」[!UICONTROL 結構描述]「目前使用者的資源型別。
+以下請求會擷取關於&quot;[!UICONTROL 管理資料集]「許可權和對「」的存取權[!UICONTROL 結構描述]「目前使用者的資源型別。
 
 ```shell
 curl -X POST \
@@ -45,11 +46,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->如需可在承載陣列中提供的許可權和資源型別的完整清單，請參閱附錄 [接受的許可權和資源型別](#accepted-permissions-and-resource-types).
+>如需承載陣列中可提供的許可權和資源型別的完整清單，請參閱附錄中的區段： [接受的許可權和資源型別](#accepted-permissions-and-resource-types).
 
 **回應**
 
-成功的回應會傳回要求中提供的許可權和資源型別相關資訊。 回應包含目前使用者對請求中指定的資源型別具有的使用中許可權。 如果要求裝載中包含的任何許可權對目前使用者而言是作用中的，API會傳回帶有星號(`*`)以表示許可權為使用中。 請求中提供的任何非使用者作用中的許可權會在回應裝載中忽略。
+成功的回應會傳回要求中提供的許可權和資源型別相關資訊。 回應包括目前使用者對請求中指定的資源型別具有的有效許可權。 如果要求裝載中包含的任何許可權對目前使用者而言為作用中，API會傳回帶有星號(`*`)以指出許可權為作用中。 請求中提供的任何使用者非作用中的許可權會在回應裝載中忽略。
 
 ```json
 {
@@ -68,15 +69,15 @@ curl -X POST \
 
 ## 後續步驟
 
-本檔案說明如何呼叫 [!DNL Access Control] API可傳回有關資源型別的作用中許可權和相關存取原則的資訊。 如需關於存取控制的詳細資訊， [!DNL Experience Platform]，請參閱 [存取控制總覽](../home.md).
+本檔案說明如何呼叫 [!DNL Access Control] API可傳回有關資源型別的作用中許可權和相關存取原則的資訊。 有關存取控制的詳細資訊 [!DNL Experience Platform]，請參閱 [存取控制總覽](../home.md).
 
 ## 附錄
 
-本節提供使用的補充資訊 [!DNL Access Control] API。
+本節提供使用 [!DNL Access Control] API。
 
 ### 接受的許可權和資源型別
 
-以下是可包含在對的POST請求之裝載中的許可權和資源型別清單 `/acl/active-permissions` 端點。
+以下是可包含在POST要求之裝載中的許可權和資源型別清單 `/acl/active-permissions` 端點。
 
 **權限**
 

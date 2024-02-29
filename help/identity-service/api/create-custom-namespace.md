@@ -1,10 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；名稱空間；名稱空間；名稱空間；名稱空間；名稱空間；身分名稱空間；身分名稱空間；身分名稱空間；身分
+keywords: Experience Platform；首頁；熱門主題；名稱空間；名稱空間；名稱空間；名稱空間；身分名稱空間；身分名稱空間；身分名稱空間；身分
 solution: Experience Platform
 title: 在Identity Service API中建立自訂名稱空間
 description: 使用身分名稱空間API，您可以建立僅供您的組織使用的自訂身分名稱空間。
+role: Developer
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 3%
@@ -15,11 +16,11 @@ ht-degree: 3%
 
 使用 [!DNL Identity Namespace] API後，您可以建立僅供貴組織使用的自訂身分名稱空間。
 
-如需建立自訂名稱空間的建議，請參閱 [Identity Service常見問題集檔案](../troubleshooting-guide.md).
+如需有關建立自訂名稱空間的建議，請參閱 [Identity Service常見問題集檔案](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
->名稱空間是身分的限定詞。 因此，建立名稱空間後，便無法刪除名稱空間。
+>名稱空間是身分的限定詞。 因此，建立名稱空間後就無法刪除。
 
 **API格式**
 
@@ -63,4 +64,4 @@ curl -X POST \
 
 ## 後續步驟
 
-繼續下一教學課程，前往 [列出身分的原生ID](./list-native-id.md)
+繼續進行下一個教學課程： [列出身分的原生ID](./list-native-id.md)

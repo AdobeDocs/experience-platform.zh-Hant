@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 排程API端點
 description: 排程是一種工具，可用於每天自動執行一次批次分段工作。
+role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1996'
-ht-degree: 4%
+source-wordcount: '2040'
+ht-degree: 3%
 
 ---
 
@@ -136,12 +137,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 
 | 屬性 | 說明 |
 | -------- | ------------ |
-| `name` | **必要.** 字串形式的排程名稱。 |
-| `type` | **必要.** 字串形式的作業型別。 兩種支援的型別為「batch_segmentation」和「export」。 |
-| `properties` | **必要.** 包含與排程相關之其他屬性的物件。 |
+| `name` | **必填。** 字串形式的排程名稱。 |
+| `type` | **必填。** 字串形式的作業型別。 兩種支援的型別為「batch_segmentation」和「export」。 |
+| `properties` | **必填。** 包含與排程相關之其他屬性的物件。 |
 | `properties.segments` | **下列情況需要 `type` 等於&quot;batch_segmentation&quot;。** 使用 `["*"]` 可確保納入所有區段。 |
-| `schedule` | *選填.* 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請參閱 [cron運算式格式](#appendix). 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 <br><br>如果未提供此字串，則會自動產生系統產生的排程。 |
-| `state` | *選填.* 包含排程狀態的字串。 兩種支援的狀態為「作用中」和「非作用中」。 依預設，狀態會設為「非使用中」。 |
+| `schedule` | *選填。* 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請參閱 [cron運算式格式](#appendix). 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 <br><br>如果未提供此字串，則會自動產生系統產生的排程。 |
+| `state` | *選填。* 包含排程狀態的字串。 兩種支援的狀態為「作用中」和「非作用中」。 依預設，狀態會設為「非使用中」。 |
 
 **回應**
 

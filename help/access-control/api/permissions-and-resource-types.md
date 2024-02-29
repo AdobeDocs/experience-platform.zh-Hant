@@ -2,9 +2,10 @@
 keywords: Experience Platform；首頁；熱門主題；存取控制許可權；存取控制資源型別；存取控制api
 solution: Experience Platform
 title: 參考API端點
-description: 存取控制API中的參考端點可讓您檢視可用許可權和資源型別的名稱，然後可以使用這些名稱來檢視目前使用者的有效存取控制原則。
+description: 存取控制API中的參考端點可讓您檢視可用許可權和資源型別的名稱，然後這些名稱可用來檢視目前使用者的有效存取控制原則。
+role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 1%
@@ -17,9 +18,9 @@ ht-degree: 1%
 >
 >如果傳遞的是使用者權杖，則權杖的使用者必須具有請求組織的「組織管理員」角色。
 
-您可以透過向以下專案發出GET請求，列出所有許可權和資源型別的名稱： `/acl/reference` 端點。 這些名稱隨後可用於對發出的API呼叫 [檢視有效的存取控制原則](./effective-policies.md) （目前使用者）。
+您可以透過向以下網站發出GET請求，列出所有許可權和資源型別的名稱： `/acl/reference` 端點。 這些名稱隨後可用於對的API呼叫 [檢視有效的存取控制原則](./effective-policies.md) 目前使用者的。
 
-許可權是透過Adobe Admin Console管理的原則，並對應至零個或多個資源型別原則。 資源型別是啟用特定型別之讀取、寫入和/或刪除功能的原則 [!DNL Platform] 資源（例如資料集或結構描述）。
+許可權是透過Adobe Admin Console管理的原則，並對應到零個或多個資源型別原則。 資源型別是啟用特定型別之讀取、寫入及/或刪除功能的原則 [!DNL Platform] 資源（例如資料集或結構描述）。
 
 **API格式**
 
@@ -39,7 +40,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回 `permissions` 物件和 `resource-types` 物件，分別包含存取許可權或資源型別的完整名稱清單。
+成功的回應會傳回 `permissions` 物件與 `resource-types` 物件，分別包含存取許可權或資源型別的完整名稱清單。
 
 ```json
 {

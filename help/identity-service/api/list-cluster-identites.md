@@ -3,10 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；清單身分；清單叢
 solution: Experience Platform
 title: 列出叢集中的所有身分
 description: 在身分圖表中相關聯的身分（無論名稱空間為何）會視為該身分圖表中相同「叢集」的一部分。 下列選項提供存取所有叢整合員的方法。
+role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '365'
 ht-degree: 1%
 
 ---
@@ -19,10 +20,10 @@ ht-degree: 1%
 
 擷取單一身分的所有叢整合員。
 
-您可以使用選填的 `graph-type` 指示要從其中取得叢集的身分圖表引數。 選項包括：
+您可以使用選填的 `graph-type` 表示要從其中取得叢集的身分圖表的引數。 選項包括：
 
-- 無 — 不執行任何身分拼接。
-- 私人身分圖表 — 根據您的私人身分圖表執行身分拼接。 若否 `graph-type` 「 」會顯示，這是預設值。
+- 無 — 不執行身分拼接。
+- 私人身分圖表 — 根據您的私人身分圖表執行身分拼接。 若否 `graph-type` 「 」會顯示，此為預設值。
 
 **API格式**
 
@@ -32,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **要求**
 
-選項1：以名稱空間形式提供身分(`nsId`，依ID)和ID值(`id`)。
+選項1：提供身分作為名稱空間(`nsId`，依ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -43,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2：以名稱空間形式提供身分(`ns`，依名稱)和ID值(`id`)。
+選項2：提供身分作為名稱空間(`ns`，依名稱)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -54,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3：以XID提供身分(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案涵蓋的章節 [取得身分的XID](./list-native-id.md).
+選項3：以XID提供身分(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案的區段，內容涵蓋 [取得身分的XID](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -67,11 +68,11 @@ curl -X GET \
 
 ## 取得多個身分的相關身分
 
-使用 `POST` 作為批次等效的 `GET` 上述方法可傳回多個身分的叢集中的身分。
+使用 `POST` 作為批次等同專案， `GET` 上述方法可傳回多個身分叢集中的身分。
 
 >[!NOTE]
 >
->要求不應超過最多1000個身分。 超過1000個身分的要求會產生400個狀態代碼。
+>請求應指示不超過1000個身分。 超過1000個身分的要求將會導致400個狀態代碼。
 
 **API格式**
 
@@ -83,9 +84,9 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 下列要求示範如何提供要擷取叢整合員的XID清單。
 
-**Stub請求**
+**Stub要求**
 
-使用方式 `x-uis-cst-ctx: stub` 標頭將傳回存根回應。 這是臨時解決方案，可在服務完成時協助早期整合開發進度。 當不再需要時，這將被取代。
+使用方式 `x-uis-cst-ctx: stub` 標頭將傳回存根的回應。 這是臨時解決方案，可在服務完成時協助早期整合開發進度。 當不再需要時，這將被取代。
 
 ```shell
 curl -X POST \
@@ -237,8 +238,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->無論請求的XID是否屬於相同叢集，或一或多個叢集完全關聯，回應中都會為請求中提供的每個XID各有一個專案。
+>無論請求的XID是否屬於相同叢集，或一或多個叢集完全相關，回應中一律會為請求中提供的每個XID各有一個專案。
 
 ## 後續步驟
 
-繼續下一教學課程，前往 [列出身分的叢集記錄](./list-cluster-history.md)
+繼續進行下一個教學課程： [列出身分的叢集記錄](./list-cluster-history.md)

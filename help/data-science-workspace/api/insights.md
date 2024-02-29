@@ -1,23 +1,24 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；深入分析；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；深入分析；sensei機器學習api
 solution: Experience Platform
 title: Insights API端點
-description: 深入分析包含的量度可讓資料科學家藉由顯示相關評估量度，評估並選擇最佳的ML模型。
+description: 深入分析包含一些量度，可供資料科學家藉由顯示相關評估量度，評估及選擇最佳的ML模型。
+role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '514'
 ht-degree: 3%
 
 ---
 
 # Insights端點
 
-深入分析包含的量度可讓資料科學家藉由顯示相關評估量度，評估並選擇最佳的ML模型。
+深入分析包含一些量度，可供資料科學家藉由顯示相關評估量度，評估及選擇最佳的ML模型。
 
 ## 擷取見解清單
 
-您可以透過對見解端點執行單一GET請求來擷取見解清單。  若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱附錄 [用於資產擷取的查詢引數](./appendix.md#query).
+您可以透過對見解端點執行單一GET請求來擷取見解清單。  若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱 [用於資產擷取的查詢引數](./appendix.md#query).
 
 **API格式**
 
@@ -38,7 +39,7 @@ curl -X GET \
 
 **回應**
 
-成功回應會傳回包含見解清單的裝載，而每個見解都有唯一識別碼( `id` )。 此外，您將會收到 `context` ，其中包含與分析事件和量度資料後續追蹤的特定分析相關聯的唯一識別碼。
+成功的回應會傳回包含見解清單的裝載，且每個見解都有唯一識別碼( `id` )。 此外，您將會收到 `context` ，其中包含與特定見解相關聯的唯一識別碼，後續會有見解事件和量度資料。
 
 ```json
 {
@@ -100,14 +101,14 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 與Insight對應的ID。 |
+| `id` | 與Insight相對應的ID。 |
 | `experimentId` | 有效的實驗ID。 |
 | `experimentRunId` | 有效的實驗回合ID。 |
-| `modelId` | 有效的模型ID。 |
+| `modelId` | 有效的模型識別碼。 |
 
 ## 擷取特定分析
 
-若要查詢特定分析，請提出GET請求並提供有效的 `{INSIGHT_ID}` 在請求路徑中。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱附錄 [用於資產擷取的查詢引數](./appendix.md#query).
+若要查詢特定分析，請提出GET請求並提供有效的 `{INSIGHT_ID}` 在請求路徑中。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱 [用於資產擷取的查詢引數](./appendix.md#query).
 
 **API格式**
 
@@ -117,7 +118,7 @@ GET /insights/{INSIGHT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{INSIGHT_ID}` | Sensei深入分析的唯一識別碼。 |
+| `{INSIGHT_ID}` | Sensei Insight的唯一識別碼。 |
 
 **要求**
 
@@ -163,14 +164,14 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 與Insight對應的ID。 |
+| `id` | 與Insight相對應的ID。 |
 | `experimentId` | 有效的實驗ID。 |
 | `experimentRunId` | 有效的實驗回合ID。 |
-| `modelId` | 有效的模型ID。 |
+| `modelId` | 有效的模型識別碼。 |
 
 ## 新增模型分析
 
-您可以透過執行POST請求和提供新模型分析的前後關聯、事件和量度的裝載，來建立新的模型分析。 用於建立新「模型分析」的內容欄位不需要附加現有服務，但您可以選擇透過提供一個或多個對應ID來使用現有服務建立新的「模型分析」：
+您可以透過執行POST請求和提供上下文、事件和量度的裝載來建立新的模型分析。 要附加現有服務，並不需要用於建立新模型深入分析的內容欄位，但您可以選擇提供一個或多個對應ID，使用現有服務建立新的模型深入分析：
 
 ```json
 "context": {
@@ -263,7 +264,7 @@ curl -X POST \
 
 ## 擷取演演算法的預設量度清單
 
-您可以透過對量度端點執行單一GET要求，擷取所有演演算法和預設量度的清單。 若要查詢特定量度，請提出GET請求並提供有效的 `{ALGORITHM}` 在請求路徑中。
+您可以透過對量度端點執行單一GET要求，擷取所有演演算法和預設量度的清單。 查詢特定量度的方式，請提出GET請求並提供有效的量度 `{ALGORITHM}` 在請求路徑中。
 
 **API格式**
 
@@ -278,7 +279,7 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 **要求**
 
-以下請求包含查詢，並使用演演算法識別碼擷取特定量度 `{ALGORITHM}`
+以下請求包含查詢，並使用演演算法識別碼來擷取特定量度 `{ALGORITHM}`
 
 ```shell
 curl -X GET \
@@ -291,7 +292,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含 `algorithm` 唯一識別碼和一組預設量度。
+成功的回應會傳回包含 `algorithm` 唯一識別碼和一系列預設量度。
 
 ```json
 {

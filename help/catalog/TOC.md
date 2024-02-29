@@ -3,10 +3,11 @@ audience: user
 user-guide-title: 目錄與資料集指南
 user-guide-description: 在 Data Lake 中探索資料處理歷程、中繼資料、檔案說明、目錄和資料集，並進一步了解「目錄服務」系統。
 feature: Catalog
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 36%
+source-wordcount: '112'
+ht-degree: 33%
 
 ---
 
@@ -28,7 +29,7 @@ ht-degree: 36%
    * [資料使用情況標籤](api/labels.md)
    * [附錄](api/appendix.md)
 * 資料集 {#datasets}
-   * [資料集概述](datasets/overview.md)
+   * [資料集總覽](datasets/overview.md)
    * [資料集使用手冊](datasets/user-guide.md)
    * [使用API建立並填入資料集](datasets/create.md)
    * [為設定檔和身分啟用資料集](datasets/enable-for-profile.md)

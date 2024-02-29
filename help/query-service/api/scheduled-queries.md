@@ -3,10 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服
 solution: Experience Platform
 title: 排程端點
 description: 以下章節會逐步說明您可以使用查詢服務API為已排程查詢進行的各種API呼叫。
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1214'
 ht-degree: 2%
 
 ---

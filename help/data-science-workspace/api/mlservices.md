@@ -1,25 +1,26 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；Data Science Workspace；熱門主題；mlservices；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；mlservices；sensei機器學習api
 solution: Experience Platform
 title: MLServices API端點
-description: MLService是已發佈的經訓練模型，讓您的組織能夠存取及重複使用先前開發的模型。 MLServices的主要功能是能依排程自動執行訓練和評分。 排程的訓練回合有助於維持模型的效率和正確性，而排程的評分回合則可確保一致地產生新的見解。
+description: MLService是經過訓練的已發佈模型，讓您的組織能夠存取及重複使用先前開發的模型。 MLServices的主要功能是能依排程自動化訓練和評分。 排程的訓練回合有助於維護模型的效率和準確性，而排程的評分回合則可確保一致地產生新的見解。
+role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '887'
 ht-degree: 2%
 
 ---
 
 # MLServices端點
 
-MLService是已發佈的經訓練模型，讓您的組織能夠存取及重複使用先前開發的模型。 MLServices的主要功能是能依排程自動執行訓練和評分。 排程的訓練回合有助於維持模型的效率和正確性，而排程的評分回合則可確保一致地產生新的見解。
+MLService是經過訓練的已發佈模型，讓您的組織能夠存取及重複使用先前開發的模型。 MLServices的主要功能是能依排程自動化訓練和評分。 排程的訓練回合有助於維護模型的效率和準確性，而排程的評分回合則可確保一致地產生新的見解。
 
-自動訓練和評分排程的定義包含開始時間戳記、結束時間戳記和以表示的頻率 [cron運算式](https://en.wikipedia.org/wiki/Cron). 排程可在以下情況下定義： [建立MLService](#create-an-mlservice) 或套用者 [更新現有的MLService](#update-an-mlservice).
+自動訓練和評分排程的定義包含開始時間戳記、結束時間戳記和頻率(以 [cron運算式](https://en.wikipedia.org/wiki/Cron). 排程可在以下情況下定義： [建立MLService](#create-an-mlservice) 或套用者 [更新現有的MLService](#update-an-mlservice).
 
 ## 建立MLService {#create-an-mlservice}
 
-您可以執行POST要求以及提供服務名稱和有效MLInstance ID的裝載，以建立MLService。 用來建立MLService的MLInstance不需要有現有的訓練實驗，但您可以藉由提供對應的實驗ID和訓練回合ID，選擇使用現有的訓練模型建立MLService。
+您可以執行POST要求以及提供服務名稱和有效MLInstance ID的裝載，以建立MLService。 用來建立MLService的MLInstance不需要有現有的訓練實驗，但您可以選擇提供對應的實驗ID和訓練回合ID，以現有的訓練模型建立MLService。
 
 **API格式**
 
@@ -62,16 +63,16 @@ curl -X POST \
 | `name` | 所需的MLService名稱。 與此MLService對應的服務將繼承此值，以作為服務名稱顯示在「服務庫」UI中。 |
 | `description` | MLService的選擇性說明。 與此MLService對應的服務將繼承此值，以作為服務的說明顯示在「服務庫」UI中。 |
 | `mlInstanceId` | 有效的MLInstance ID。 |
-| `trainingDataSetId` | 如果提供，訓練資料集ID將覆寫MLInstance的預設資料集ID。 如果用來建立MLService的MLInstance未定義訓練資料集，您必須提供適當的訓練資料集ID。 |
-| `trainingExperimentId` | 您可以選擇提供的實驗ID。 如果未提供此值，則建立MLService也將使用MLInstance的預設設定來建立新的實驗。 |
-| `trainingExperimentRunId` | 您可以選擇提供的訓練回合ID。 如果未提供此值，則建立MLService也會使用MLInstance的預設訓練引數來建立和執行訓練回合。 |
-| `trainingSchedule` | 自動化訓練回合排程。 如果定義了此屬性，則MLService將會依排程自動執行訓練回合。 |
+| `trainingDataSetId` | 如果提供的訓練資料集ID將覆寫MLInstance的預設資料集ID。 如果用來建立MLService的MLInstance未定義訓練資料集，您必須提供適當的訓練資料集ID。 |
+| `trainingExperimentId` | 您可以選擇提供的實驗ID。 如果未提供此值，則建立MLService也會使用MLInstance的預設設定來建立新的實驗。 |
+| `trainingExperimentRunId` | 您可以選擇提供的訓練回合ID。 如果未提供此值，則建立MLService也會使用MLInstance的預設訓練引數來建立並執行訓練回合。 |
+| `trainingSchedule` | 自動化訓練回合排程。 如果定義此屬性，則MLService會自動依排程執行訓練回合。 |
 | `trainingSchedule.startTime` | 排程的訓練回合將開始的時間戳記。 |
 | `trainingSchedule.endTime` | 排程的訓練回合將結束的時間戳記。 |
 | `trainingSchedule.cron` | 定義自動訓練執行頻率的cron運算式。 |
-| `scoringSchedule` | 自動評分回合的排程。 如果已定義此屬性，則MLService將會依排程自動執行評分回合。 |
-| `scoringSchedule.startTime` | 排定的評分回合將開始的時間戳記。 |
-| `scoringSchedule.endTime` | 排定的評分回合將結束的時間戳記。 |
+| `scoringSchedule` | 自動評分回合的排程。 如果定義此屬性，MLService將會依排程自動執行評分回合。 |
+| `scoringSchedule.startTime` | 排程的評分回合將開始的時間戳記。 |
+| `scoringSchedule.endTime` | 排程的評分回合將結束的時間戳記。 |
 | `scoringSchedule.cron` | 定義自動評分執行頻率的cron運算式。 |
 
 **回應**
@@ -107,7 +108,7 @@ curl -X POST \
 
 ## 擷取MLServices清單 {#retrieve-a-list-of-mlservices}
 
-您可以透過執行單一GET要求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱附錄 [用於資產擷取的查詢引數](./appendix.md#query).
+您可以透過執行單一GET要求來擷取MLServices清單。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱 [用於資產擷取的查詢引數](./appendix.md#query).
 
 **API格式**
 
@@ -166,7 +167,7 @@ curl -X GET \
 
 ## 擷取特定MLService {#retrieve-a-specific-mlservice}
 
-您可以透過執行GET請求，在請求路徑中包含所需的MLService ID，來擷取特定實驗的詳細資訊。
+您可以透過執行GET請求（請求路徑中包含所需的MLService ID）來擷取特定實驗的詳細資料。
 
 **API格式**
 
@@ -210,11 +211,11 @@ curl -X GET \
 
 ## 更新MLService {#update-an-mlservice}
 
-您可以透過PUT請求（請求路徑中包含目標MLService的ID）來覆寫其屬性，並提供包含已更新屬性的JSON裝載，以更新現有的MLService。
+您可以透過PUT請求（請求路徑中包含目標MLService的ID）覆寫其屬性，並提供包含已更新屬性的JSON裝載，以更新現有的MLService。
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求 [依ID擷取MLService](#retrieve-a-specific-mlservice). 接著，修改並更新傳回的JSON物件，並將整個修改過的JSON物件套用為PUT請求的裝載。
+>為確保此PUT請求成功，建議您先執行GET請求，並 [依ID擷取MLService](#retrieve-a-specific-mlservice). 然後，修改和更新傳回的JSON物件，並套用整個修改的JSON物件作為PUT請求的裝載。
 
 **API格式**
 
@@ -256,7 +257,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回包含MLService更新詳細資訊的裝載。
+成功的回應會傳回包含MLService已更新詳細資料的裝載。
 
 ```json
 {

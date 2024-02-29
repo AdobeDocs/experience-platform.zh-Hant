@@ -3,8 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；API；屬性型存取控
 solution: Experience Platform
 title: 存取控制原則API端點
 description: 以屬性為基礎的存取控制API中的/policies端點可讓您以程式設計方式管理Adobe Experience Platform中的原則。
+role: Developer
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 2%

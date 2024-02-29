@@ -3,10 +3,11 @@ audience: user
 user-guide-title: 資料流指南
 user-guide-description: 了解資料流以及如何跨不同服務設定資料流。
 feature: Dataflows
-source-git-commit: ba0399b0d171c2e604b4de3b22f8568b5431bcf4
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 25%
+source-wordcount: '57'
+ht-degree: 24%
 
 ---
 
@@ -17,7 +18,7 @@ ht-degree: 25%
 - API指南 {#api}
    - [監視資料流](./api/monitor.md)
    - [排序和篩選API回應](./api/sort-and-filter.md)
-- UI 指南 {#ui}
+- UI指南 {#ui}
    - [監視來源中的資料流](./ui/monitor-sources.md)
    - [監視身分中的資料流](./ui/monitor-identities.md)
    - [監視設定檔中的資料流](./ui/monitor-profiles.md)

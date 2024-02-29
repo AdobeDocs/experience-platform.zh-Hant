@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；
 solution: Experience Platform
-title: Sensei Machine Learning API指南附錄
+title: Sensei機器學習API指南附錄
 description: 以下小節提供Sensei Machine Learning API各種功能的參考資訊。
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -19,22 +20,22 @@ ht-degree: 3%
 
 此 [!DNL Sensei Machine Learning] API支援擷取資產的查詢引數。 下表說明可用的查詢引數及其用途：
 
-| 查詢參數 | 說明 | 預設值 |
+| 查詢引數 | 說明 | 預設值 |
 | --------------- | ----------- | ------- |
-| `start` | 表示分頁的起始索引。 | `start=0` |
+| `start` | 表示分頁的開始索引。 | `start=0` |
 | `limit` | 表示要傳回的結果數目上限。 | `limit=25` |
-| `orderby` | 指示要用於依優先順序排序的屬性。 包含破折號(**-**)，然後依遞減順序排序，否則結果會依遞增順序排序。 | `orderby=created` |
+| `orderby` | 指示要用於依優先順序排序的屬性。 包含破折號(**-**)在屬性名稱前面，以依遞減順序排序，否則結果會依遞增順序排序。 | `orderby=created` |
 | `property` | 表示物件必須滿足才能傳回的比較運算式。 | `property=deleted==false` |
 
 >[!NOTE]
 >
->合併多個查詢引數時，必須以&amp;符號(**和**)。
+>結合多個查詢引數時，必須以&amp;符號(**&amp;**)。
 
 ## Python CPU和GPU設定 {#cpu-gpu-config}
 
-Python引擎能夠選擇CPU或GPU，用於訓練或評分目的，並定義於 [MLInstance](./mlinstances.md) 作為任務規格(`tasks.specification`)。
+Python引擎能夠選擇CPU或GPU來進行訓練或評分，並且是在 [MLInstance](./mlinstances.md) 作為任務規格(`tasks.specification`)。
 
-以下是指定使用CPU進行訓練，並使用GPU進行評分的設定範例：
+以下是指定使用CPU進行訓練，以及使用GPU進行評分的設定範例：
 
 ```json
 [
@@ -69,21 +70,21 @@ Python引擎能夠選擇CPU或GPU，用於訓練或評分目的，並定義於 [
 
 >[!NOTE]
 >
->的值 `cpus` 和 `gpus` 並不表示CPU或GPU的數量，而是表示實體機器的數量。 這些值是可允許的 `"1"` 否則和會擲回例外狀況。
+>下列專案的值 `cpus` 和 `gpus` 並不表示CPU或GPU的數量，而是表示實體機器的數量。 這些值是可允許的 `"1"` 否則，和將會擲回例外狀況。
 
 ## PySpark和Spark資源設定 {#resource-config}
 
-Spark引擎能夠修改運算資源，以用於訓練和評分目的。 下表說明這些資源：
+Spark引擎能夠修改運算資源以用於訓練和評分目的。 下表說明這些資源：
 
 | 資源 | 說明 | 類型 |
 | -------- | ----------- | ---- |
-| driverMemory | 驅動程式的記憶體(MB) | int |
+| driveremory | 驅動程式的記憶體(MB) | int |
 | driverCores | 驅動程式使用的核心數目 | int |
 | executorMemory | 執行器的記憶體(MB) | int |
 | executorCores | 執行程式使用的核心數目 | int |
 | numExecutors | 執行者數量 | int |
 
-資源可在 [MLInstance](./mlinstances.md) 作為(A)個別訓練或評分引數，或(B)其他規格物件內(`specification`)。 例如，下列資源設定對於訓練和評分都是相同的：
+資源可在 [MLInstance](./mlinstances.md) 作為(A)個別訓練或評分引數，或(B)在額外規格物件內(`specification`)。 例如，下列資源設定對訓練和評分都是相同的：
 
 ```json
 [

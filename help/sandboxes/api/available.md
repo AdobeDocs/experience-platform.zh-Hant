@@ -3,8 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；列出可用沙箱；列
 solution: Experience Platform
 title: 可用的沙箱API端點
 description: 您可以透過向可用的沙箱端點發出GET請求來列出目前使用者可用的沙箱。
+role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 2%

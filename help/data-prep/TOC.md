@@ -3,22 +3,23 @@ audience: user
 user-guide-title: 資料準備指南
 user-guide-description: 準備您的資料以擷取至 Adobe Experience Platform，並了解「資料準備」如何協助您對應、轉換和驗證資料。
 feature: Data Prep
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 65%
+source-wordcount: '61'
+ht-degree: 59%
 
 ---
 
 
 # 資料準備 {#data-prep}
 
-- [資料準備概觀](home.md)
+- [資料準備總覽](home.md)
 - [資料準備函式](functions.md)
 - 對應服務API {#api}
    - [概觀](./api/overview.md)
    - [快速入門](./api/getting-started.md)
-   - [函式](./api/functions.md)
+   - [函數](./api/functions.md)
    - [對應集](./api/mapping-set.md)
 - UI {#ui}
    - [資料準備UI指南](./ui/mapping.md)

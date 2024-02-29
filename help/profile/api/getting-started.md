@@ -3,11 +3,12 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: Real-Time Customer Profile API快速入門
 type: Documentation
 description: 設定檔API快速入門手冊概述您需瞭解的主要概念和基本功能，才能使用即時客戶設定檔API端點，對設定檔資料執行基本CRUD作業。
+role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 12%
+source-wordcount: '407'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +28,7 @@ ht-degree: 12%
 
 ## 讀取範例 API 呼叫
 
-此 [!DNL Real-Time Customer Profile] API檔案提供API呼叫範例，示範如何正確格式化請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
+此 [!DNL Real-Time Customer Profile] API檔案提供API呼叫範例，示範如何正確格式化請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ## 必要的標頭
 

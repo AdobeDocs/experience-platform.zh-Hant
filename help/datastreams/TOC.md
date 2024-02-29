@@ -5,7 +5,8 @@ user-guide-title: Adobe Experience Platform 資料流說明
 breadcrumb-title: 資料流指南
 user-guide-description: 了解如何在 Adobe Experience Platform 中設定資料流。
 feature: Datastreams
-source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 90%

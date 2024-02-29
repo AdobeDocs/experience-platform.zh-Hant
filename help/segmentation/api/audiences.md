@@ -1,8 +1,9 @@
 ---
 title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 3%
@@ -32,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 擷取對象清單時，可以使用以下查詢引數：
 
-| 查詢參數 | 說明 | 範例 |
+| 查詢引數 | 說明 | 範例 |
 | --------------- | ----------- | ------- |
 | `start` | 指定傳回對象的開始位移。 | `start=5` |
 | `limit` | 指定每頁傳回的最大對象數。 | `limit=10` |
@@ -195,7 +196,7 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 +++
 
-## 建立新受眾 {#create}
+## 建立新對象 {#create}
 
 您可以透過向以下傳送POST請求來建立新對象： `/audiences` 端點。
 

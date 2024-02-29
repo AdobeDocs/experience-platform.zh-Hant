@@ -3,10 +3,11 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 設定檔匯出作業API端點
 type: Documentation
 description: 即時客戶個人檔案可讓您結合來自多個來源的資料（包括屬性資料和行為資料），在Adobe Experience Platform中建立個別客戶的單一檢視。 然後，可將設定檔資料匯出至資料集，以供進一步處理。
+role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1512'
 ht-degree: 2%
 
 ---

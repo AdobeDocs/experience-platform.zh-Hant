@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: 使用串流區段近乎即時地評估事件
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用串流區段的範例。
+role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1956'
-ht-degree: 7%
+source-wordcount: '1962'
+ht-degree: 4%
 
 ---
 
@@ -32,25 +33,25 @@ ht-degree: 7%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
 - [[!DNL Segmentation]](../home.md)：提供使用區段定義和其他外部來源建立對象的功能，來源為 [!DNL Real-Time Customer Profile] 資料。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
 
 以下小節提供您需瞭解的其他資訊，才能成功對進行呼叫 [!DNL Platform] API。
 
 ### 讀取範例 API 呼叫
 
-本開發人員指南提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
+本開發人員指南提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集所需標頭的值
 
-為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
+- x-api-key： `{API_KEY}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 中的所有資源 [!DNL Experience Platform] 會隔離至特定的虛擬沙箱。 所有要求至 [!DNL Platform] API需要標頭，用以指定將進行作業的沙箱名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -351,7 +352,7 @@ curl -X POST \
 | `properties` | **（必要）** 包含與排程相關之其他屬性的物件。 |
 | `properties.segments` | **(必要條件： `type` 等於 `batch_segmentation`)** 使用 `["*"]` 可確保納入所有區段定義。 |
 | `schedule` | **（必要）** 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時內執行超過一次。 範例顯示為(`0 0 1 * * ?`)表示工作會在每天1點觸發:00:00 UTC。 如需詳細資訊，請參閱 [cron運算式格式](./schedules.md#appendix) 區段內排程的相關檔案內。 |
-| `state` | *（可選）* 包含排程狀態的字串。 可用值： `active` 和 `inactive`. 預設值為 `inactive`。組織只能建立一個排程。 本教學課程稍後會介紹更新排程的步驟。 |
+| `state` | *（可選）* 包含排程狀態的字串。 可用值： `active` 和 `inactive`. 預設值為 `inactive`. 組織只能建立一個排程。 本教學課程稍後會介紹更新排程的步驟。 |
 
 **回應**
 

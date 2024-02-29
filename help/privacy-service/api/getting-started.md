@@ -1,11 +1,12 @@
 ---
 title: 驗證並存取 Privacy Service API
 description: 瞭解如何向Privacy ServiceAPI驗證以及如何解譯檔案中的範例API呼叫。
+role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '862'
-ht-degree: 7%
+source-wordcount: '851'
+ht-degree: 5%
 
 ---
 
@@ -72,7 +73,7 @@ ht-degree: 7%
 將API新增至專案後， **[!UICONTROL PRIVACY SERVICE API]** 專案的頁面會顯示所有Privacy ServiceAPI呼叫所需的下列認證：
 
 * `{API_KEY}` ([!UICONTROL 使用者端ID])
-* `{ORG_ID}` ([!UICONTROL 組織 ID])
+* `{ORG_ID}` ([!UICONTROL 組織ID])
 
 ![在開發人員控制檯中新增API後的整合資訊。](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 

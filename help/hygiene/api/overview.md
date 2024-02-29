@@ -1,11 +1,12 @@
 ---
 title: 資料衛生API指南
 description: 瞭解如何以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料。
+role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -35,7 +36,7 @@ ht-degree: 5%
 
 本檔案提供範例API呼叫，示範如何格式化您的請求。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/api-guide.md#sample-api) (位於Experience Platform API快速入門手冊中)。
 
-## 資料集有效期
+## 資料集到期
 
 資料集到期是時間延遲的「刪除資料集」動作。 透過建立資料集有效期，您就能指定該資料集應該刪除的未來時間。 請參閱 [資料集到期端點指南](./dataset-expiration.md) 以取得在API中排程資料集有效期的詳細資訊。
 

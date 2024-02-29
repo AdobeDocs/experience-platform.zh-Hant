@@ -1,23 +1,24 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；身分；身分
 solution: Experience Platform
-title: 清單身分對應
+title: 列出身分對應
 description: 對應是叢集中指定名稱空間之所有身分識別的集合。
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '278'
 ht-degree: 1%
 
 ---
 
-# 清單身分對應
+# 列出身分對應
 
 對應是叢集中指定名稱空間之所有身分識別的集合。
 
 ## 取得單一身分的身分對應
 
-指定身分後，從要求中身分所代表的名稱空間擷取所有相關身分。
+指定身分後，從要求中身分所代表的相同名稱空間擷取所有相關身分。
 
 **API格式**
 
@@ -27,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **要求**
 
-選項1：以名稱空間形式提供身分(`nsId`，依ID)和ID值(`id`)。
+選項1：提供身分作為名稱空間(`nsId`，依ID)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -38,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2：以名稱空間形式提供身分(`ns`，依名稱)和ID值(`id`)。
+選項2：提供身分作為名稱空間(`ns`，依名稱)和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -49,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3：以XID提供身分(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案涵蓋的章節 [取得身分的XID](./list-native-id.md).
+選項3：以XID提供身分(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案的區段，內容涵蓋 [取得身分的XID](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -66,7 +67,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->要求不應超過最多1000個身分。 超過1000個身分的要求會產生400個狀態代碼。
+>請求應指示不超過1000個身分。 超過1000個身分的要求將會導致400個狀態代碼。
 
 **API格式**
 
@@ -76,7 +77,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **要求內文**
 
-選項1：提供要擷取對應的XID清單。
+選項1：提供要擷取對應之XID的清單。
 
 ```shell
 {
@@ -144,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-如果提供的輸入找不到相關身分， `HTTP 204` 傳回的回應代碼沒有內容。
+如果找不到具有所提供輸入的相關身分， `HTTP 204` 傳回的回應代碼沒有內容。
 
 **回應**
 
@@ -183,8 +184,8 @@ curl -X POST \
 ```
 
 - `lastAssociationTime`：輸入身分最後一次與此身分關聯的時間戳記。
-- `regions`：提供 `regionId` 和 `lastAssociationTime` 檢視身分的位置。
+- `regions`：提供 `regionId` 和 `lastAssociationTime` 顯示身分的位置。
 
 ## 後續步驟
 
-繼續下一教學課程，前往 [列出可用的名稱空間](./list-namespaces.md).
+繼續進行下一個教學課程： [列出可用的名稱空間](./list-namespaces.md).

@@ -3,10 +3,11 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 原則服務API指南
 description: 原則服務API可讓開發人員管理Experience Platform中的資料使用標籤和原則。 請遵循本指南以了解如何使用 API 執行關鍵作業。
+role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '543'
 ht-degree: 3%
 
 ---

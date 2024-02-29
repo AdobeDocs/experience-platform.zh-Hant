@@ -2,11 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；API；屬性型存取控制；屬性型存取控制
 solution: Experience Platform
 title: 產品API端點
-description: 屬性式存取控制API中的/products端點可讓您以程式設計方式管理Adobe Experience Platform中的產品。
+description: 以屬性為基礎的存取控制API中的/products端點可讓您以程式設計方式管理Adobe Experience Platform中的產品。
+role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '513'
 ht-degree: 3%
 
 ---
@@ -21,11 +22,11 @@ ht-degree: 3%
 
 ## 快速入門
 
-本指南中使用的API端點是以屬性為基礎的存取控制API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的API端點屬於屬性型存取控制API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
 
 ## 擷取已授權產品的清單 {#list}
 
-您可以透過向以下網站發出GET請求，擷取已授權產品的清單： `/products` 端點。
+您可以透過向以下網站發出GET要求，擷取已授權產品的清單： `/products` 端點。
 
 **API格式**
 
@@ -69,7 +70,7 @@ curl -X GET \
 
 ## 依產品ID查詢許可權類別
 
-您可以透過向「 」發出GET要求，查詢指定產品的許可權類別 `/products/{PRODUCT_ID}/categories` 端點（指定您的產品ID時）。
+您可以透過向以下網站發出GET要求，查詢指定產品的許可權類別： `/products/{PRODUCT_ID}/categories` 端點。
 
 **API格式**
 
@@ -144,7 +145,7 @@ curl -X GET \
 
 ## 依產品ID查詢許可權集
 
-您可以透過向以下網站發出GET要求，查詢指定產品的許可權集： `/products/{PRODUCT_ID}/permission-sets` 端點（指定您的產品ID時）。
+您可以透過向以下網站發出GET要求，查詢指定產品的許可權集： `/products/{PRODUCT_ID}/permission-sets` 端點。
 
 **API格式**
 
@@ -154,7 +155,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 | 參數 | 說明 |
 | --- | --- |
-| {PRODUCT_ID} | 與您要查閱的許可權集相關聯的產品的ID。 |
+| {PRODUCT_ID} | 與您要查閱的許可權集相關聯的產品識別碼。 |
 
 **要求**
 
@@ -239,6 +240,6 @@ curl -X GET \
 | `id` | 查詢許可權集的對應ID。 |
 | `name` | 查詢許可權集的對應名稱。 |
 | `category` | 可用的許可權類別。 |
-| `permissions` | 許可權包括檢視和/或使用Platform功能，例如建立沙箱、定義結構描述和管理資料集的能力。 |
-| `permissions.resource` | 主體可以或無法存取的資產或物件。 資源可以是檔案、應用程式、伺服器，甚至API。 |
+| `permissions` | 許可權包括檢視和/或使用Platform功能的能力，例如建立沙箱、定義結構以及管理資料集。 |
+| `permissions.resource` | 主體可以或無法存取的資產或物件。 資源可以是檔案、應用程式、伺服器或甚至API。 |
 | `permissions.actions` | 允許主體對查詢的資源執行的動作。 可能的值包括： `view`， `read`， `create`， `edit`、和 `delete` |

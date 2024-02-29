@@ -4,10 +4,11 @@ user-guide-title: Adobe Experience Platform 資料控管說明
 breadcrumb-title: 資料治理指南
 user-guide-description: 透過使用標籤、行銷動作和治理原則，強制執行資料使用限制。
 feature: Data Governance
-source-git-commit: 38447348bc96b2f3f330ca363369eb423efea1c8
+role: User,Developer,Admin
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 48%
+source-wordcount: '90'
+ht-degree: 42%
 
 ---
 

@@ -4,10 +4,11 @@ audience: user
 user-guide-title: Intelligent Services 說明
 breadcrumb-title: Intelligent Services 指南
 user-guide-description: 使用智慧型人工智慧服務，從行銷事件資料產生分數、探索見解並建立區段。
-source-git-commit: a8a721cde2ebd68e72a1ee36b6d9274792474b3d
+role: User
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 38%
+source-wordcount: '136'
+ht-degree: 32%
 
 ---
 
@@ -23,7 +24,7 @@ ht-degree: 38%
    - [使用者介面指南](attribution-ai/user-guide.md)
    - [探索深入分析](attribution-ai/discover-insights.md)
    - [下載分數](attribution-ai/download-scores.md)
-   - 資料治理 {#aai-data-governance}
+   - 資料控管 {#aai-data-governance}
       - [存取控制](attribution-ai/aai-data-governance/access-controls.md)
       - [稽核記錄](attribution-ai/aai-data-governance/audit-logs.md)
       - [客戶自控金鑰](attribution-ai/aai-data-governance/customer-managed-keys.md)
@@ -42,13 +43,13 @@ ht-degree: 38%
    - [概觀](customer-ai/overview.md)
    - [Customer AI快速入門](customer-ai/getting-started.md)
    - [資料需求](customer-ai/data-requirements.md)
-   - UI 指南{#user-guide}
+   - UI指南{#user-guide}
       - [設定執行個體](customer-ai/user-guide/configure.md)
       - [探索深入分析](customer-ai/user-guide/discover-insights.md)
       - [使用Customer AI分數建立區段](customer-ai/user-guide/create-segment.md)
       - [下載分數](customer-ai/user-guide/download-scores.md)
    - [錯誤疑難排解](customer-ai/troubleshooting.md)
-   - 資料治理 {#cai-data-governance}
+   - 資料控管 {#cai-data-governance}
       - [存取控制](customer-ai/cai-data-governance/access-controls.md)
       - [稽核記錄](customer-ai/cai-data-governance/audit-logs.md)
       - [客戶自控金鑰](customer-ai/cai-data-governance/customer-managed-keys.md)

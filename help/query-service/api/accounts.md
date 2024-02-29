@@ -2,11 +2,12 @@
 keywords: Experience Platform；首頁；熱門主題；查詢服務；API指南；查詢服務；查詢服務帳戶；帳戶；
 solution: Experience Platform
 title: 帳戶API端點
-description: 您可以為永久性建立查詢服務帳戶。
+description: 您可以為持續性建立查詢服務帳戶。
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '498'
 ht-degree: 4%
 
 ---
@@ -17,11 +18,11 @@ ht-degree: 4%
 
 ## 快速入門
 
-本指南中使用的端點是Query Service API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標頭及如何讀取範例API呼叫。
+本指南中使用的端點屬於查詢服務API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
 
 ## 建立帳戶
 
-您可以透過向以下發出POST請求來建立查詢服務整合帳戶： `/accounts` 端點。
+您可以透過向以下發出POST請求，以建立查詢服務整合帳戶： `/accounts` 端點。
 
 **API格式**
 
@@ -31,7 +32,7 @@ POST /accounts
 
 **要求**
 
-以下請求將為您的組織建立新的查詢服務整合帳戶。
+下列請求將為您的組織建立新的查詢服務整合帳戶。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
@@ -52,7 +53,7 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `accountName` | **必填** 查詢服務整合帳戶的名稱。 |
-| `assignedToUser` | **必填** 將為其建立查詢服務整合帳戶的Adobe ID。 |
+| `assignedToUser` | **必填** 要為其建立查詢服務整合帳戶的Adobe ID。 |
 | `credential` | *（可選）* 用於查詢服務整合的認證。 如果未指定，系統會自動為您產生認證。 |
 | `description` | *（可選）* 查詢服務整合帳戶的說明。 |
 
@@ -71,12 +72,12 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `technicalAccountName` | 查詢服務整合帳戶的名稱。 |
-| `technicalAccountId` | 查詢服務整合帳戶的ID。 此專案連同 `credential`，為您的帳戶撰寫密碼。 |
-| `credential` | 查詢服務整合帳戶的認證。 此專案連同 `technicalAccountId`，為您的帳戶撰寫密碼。 |
+| `technicalAccountId` | 查詢服務整合帳戶的ID。 此專案以及 `credential`，會為您的帳戶撰寫密碼。 |
+| `credential` | 查詢服務整合帳戶的認證。 此專案以及 `technicalAccountId`，會為您的帳戶撰寫密碼。 |
 
 ## 更新帳戶
 
-您可以透過向發出PUT請求來更新您的查詢服務整合帳戶 `/accounts` 端點。
+您可以透過向以下網站發出PUT請求，更新您的查詢服務整合帳戶： `/accounts` 端點。
 
 **API格式**
 
@@ -86,7 +87,7 @@ POST /accounts/{ACCOUNT_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | 您要更新的查詢服務整合帳戶ID。 |
+| `{ACCOUNT_ID}` | 您要更新的查詢服務整合帳戶識別碼。 |
 
 **要求**
 
@@ -109,13 +110,13 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `accountName` | *（可選）* 查詢服務整合帳戶的更新名稱。 |
-| `assignedToUser` | *（可選）* 查詢服務整合帳戶所連結的更新Adobe ID。 |
-| `credential` | *（可選）* 更新您的Query Service帳戶的認證。 |
+| `assignedToUser` | *（可選）* 查詢服務整合帳戶連結的更新Adobe ID。 |
+| `credential` | *（可選）* 更新您的Query Service帳戶認證。 |
 | `description` | *（可選）* 查詢服務整合帳戶的更新說明。 |
 
 **回應**
 
-成功回應會傳回HTTP狀態200，其中包含您新更新查詢服務整合帳戶的相關資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新更新的查詢服務整合帳戶的相關資訊。
 
 ```json
 {
@@ -134,7 +135,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 ## 列出所有帳戶
 
-您可以透過向以下專案發出GET要求，擷取所有查詢服務整合帳戶的清單： `/accounts` 端點。
+您可以透過向以下專案發出GET請求，擷取所有查詢服務整合帳戶的清單： `/accounts` 端點。
 
 **API格式**
 
@@ -154,7 +155,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，並包含所有查詢服務整合帳戶的清單。
+成功的回應會傳回HTTP狀態200，其中包含所有查詢服務整合帳戶的清單。
 
 ```json
 {
@@ -205,7 +206,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 ## 刪除帳戶
 
-您可以透過向發出DELETE請求來刪除您的查詢服務整合帳戶 `/accounts` 端點。
+您可以透過向以下網站發出DELETE請求，刪除您的查詢服務整合帳戶： `/accounts` 端點。
 
 **API格式**
 
@@ -215,7 +216,7 @@ DELETE /accounts/{ACCOUNT_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{ACCOUNT_ID}` | 您要刪除的查詢服務整合帳戶ID。 |
+| `{ACCOUNT_ID}` | 您要刪除之查詢服務整合帳戶的ID。 |
 
 **要求**
 
@@ -229,7 +230,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/queryauth/accounts/E09A
 
 **回應**
 
-成功回應會傳回HTTP狀態200，並出現訊息，指出已成功刪除帳戶。
+成功的回應會傳回HTTP狀態200，並顯示訊息，指出已成功刪除帳戶。
 
 ```json
 {

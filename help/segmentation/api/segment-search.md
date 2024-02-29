@@ -1,10 +1,11 @@
 ---
 title: 區段搜尋API端點
 description: Adobe Experience Platform Segmentation Service API中，區段搜尋是用來搜尋各種資料來源包含的欄位，並近乎即時地傳回。 本指南提供的資訊可協助您更清楚瞭解區段搜尋，且包含使用API執行基本動作的範例API呼叫。
+role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1189'
 ht-degree: 2%
 
 ---
