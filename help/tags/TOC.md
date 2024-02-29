@@ -5,9 +5,9 @@ breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
-source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
+source-git-commit: 1e61b2258f943a09cba30aa1c0bc1c6647b9fd16
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '773'
 ht-degree: 35%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 35%
    * [部署JavaScript標籤以管理客戶同意](./ui/client-side/consent.md)
    * [內容安全性原則(CSP)支援](./ui/client-side/content-security-policy.md)
    * [子資源完整性(SRI)支援](./ui/client-side/sri.md)
+   * [傳輸層安全性](./ui/client-side/transport-layer-security.md)
 * 事件轉送 {#event-forwarding}
    * [概觀](./ui/event-forwarding/overview.md)
    * [快速入門](./ui/event-forwarding/getting-started.md)
