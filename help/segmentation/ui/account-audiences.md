@@ -4,9 +4,9 @@ description: 瞭解如何建立和使用帳戶對象，以定位下游目的地�
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -41,19 +41,29 @@ ht-degree: 0%
 
 此檢視會列出對象的相關資訊，包括名稱、設定檔計數、來源、生命週期狀態、建立日期和上次更新日期。
 
+您也可以使用搜尋和篩選功能，快速搜尋及排序特定帳戶對象。 有關此功能的詳細資訊，請參閱 [分段UI指南](./overview.md#manage-audiences).
+
 ## 建立對象 {#create}
+
+>[!NOTE]
+>
+>使用評估帳戶對象 **批次** 區段，並將每24小時評估一次。
 
 若要建立帳戶對象，請選取 **[!UICONTROL 建立對象]** 於 [!UICONTROL 瀏覽] 頁面。
 
 ![此 [!UICONTROL 建立對象] 按鈕會在帳戶對象瀏覽頁面上反白顯示。](../images/ui/account-audiences/select-create-audience.png)
 
-「區段產生器」隨即顯示。 帳戶屬性會顯示在左側導覽列上。
+「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在 [!UICONTROL 屬性] 索引標籤上，您可以同時新增Platform建立和自訂屬性。
 
-![隨即顯示「區段產生器」。 請注意，只會顯示屬性。](../images/ui/account-audiences/segment-builder.png)
+![隨即顯示「區段產生器」。 請注意，只會顯示屬性和對象。](../images/ui/account-audiences/segment-builder.png)
 
 建立帳戶對象時，請注意，事件會列於 **[!UICONTROL 人員]**，而非他們自己的標籤，因為這些屬性會與人員相關聯。
 
 ![尋找事件的位置，位於 [!UICONTROL 人員] 資料夾)會反白顯示。](../images/ui/account-audiences/attributes.png)
+
+在 [!UICONTROL 受眾] 索引標籤上，您可以新增先前建立的以人物為基礎的對象，以便在建立您自己的帳戶對象時由建置。
+
+![「區段產生器」內的「對象」索引標籤會醒目提示。](../images/ui/account-audiences/audiences.png)
 
 如需使用「區段產生器」的詳細資訊，請參閱 [區段產生器UI指南](./segment-builder.md).
 
