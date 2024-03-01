@@ -7,7 +7,7 @@ exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
@@ -89,77 +89,77 @@ ht-degree: 0%
 
 下節提供有關帳戶對象的額外資訊。
 
-### 帳戶細分驗證 {#validation}
+### 帳戶分段驗證 {#validation}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="最大回顧期間錯誤"
->abstract="體驗事件的回顧期間上限為30天。"
+>title="回顧期間上限錯誤"
+>abstract="體驗事件的回顧期間上限為 30 天。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
->title="最大巢狀容器深度錯誤"
->abstract="巢狀容器的最大深度為 **5**. 這表示您 **無法** 建立對象時具有五個以上的巢狀容器。"
+>title="巢狀容器深度上限錯誤"
+>abstract="巢狀容器深度上限為 **5**。這表示建立對象時，**不能**&#x200B;有超過五個巢狀容器。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxBreadth"
->title="最大規則數量錯誤"
->abstract="單一容器內的規則數量上限為 **5**. 這表示您 **無法** 建立對象時，單一容器中有五個以上的規則。"
+>title="規則數上限錯誤"
+>abstract="單一容器內規則數上限為 **5**。這表示建立對象時，**不能**&#x200B;在單一容器中有超過五個規則。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_crossEntityMaxDepth"
->title="最大跨實體數量錯誤"
->abstract="單一受眾可使用的跨實體最大數量為 **5**. 跨實體是指您在對象內不同實體之間變更時。 例如，從帳戶移至個人再移至行銷清單。"
+>title="跨實體數上限錯誤"
+>abstract="單一對象中可以進行的跨實體數上限為 **5**。跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowCustomEntity"
 >title="自訂實體錯誤"
->abstract="自訂實體為 **非** 允許。"
+>abstract="**不**&#x200B;允許自訂實體。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_b2bBuiltInEntities"
->title="無效的B2B實體錯誤"
->abstract="僅允許使用下列B2B實體： `_xdm.context.account`， `_xdm.content.opportunity`， `_xdm.context.profile`， `_xdm.context.experienceevent`， `_xdm.context.account-person`， `_xdm.classes.opportunity-person`， `_xdm.classes.marketing-list-member`， `_xdm.classes.marketing-list`， `_xdm.context.campaign-member`、和 `_xdm.classes.campaign`."
+>title="B2B 實體無效錯誤"
+>abstract="僅允許使用下列 B2B 實體：`_xdm.context.account`、`_xdm.content.opportunity`、`_xdm.context.profile`、`_xdm.context.experienceevent`、`_xdm.context.account-person`、`_xdm.classes.opportunity-person`、`_xdm.classes.marketing-list-member`、`_xdm.classes.marketing-list`、`_xdm.context.campaign-member` 和 `_xdm.classes.campaign`。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_rhsMaxOptions"
->title="最大值錯誤"
->abstract="單一欄位可檢查的值數量上限為 **50**."
+>title="值數量上限錯誤"
+>abstract="單一欄位可以檢查的值數量上限為 **50**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByReference"
->title="inSegment事件錯誤"
->abstract="inSegment事件包括 **非** 允許。"
+>title="inSegment 事件錯誤"
+>abstract="**不**&#x200B;允許 inSegment 事件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowInSegmentByValue"
->title="inSegment事件錯誤"
->abstract="inSegment事件包括 **非** 允許。"
+>title="inSegment 事件錯誤"
+>abstract="**不**&#x200B;允許 inSegment 事件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowSequentialEvents"
->title="循序事件錯誤"
->abstract="循序事件包括 **非** 允許。"
+>title="Sequential 事件錯誤"
+>abstract="**不**&#x200B;允許 Sequential 事件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_allowMaps"
->title="對應型別屬性錯誤"
->abstract="對應型別屬性為 **非** 允許。"
+>title="Map-type 屬性錯誤"
+>abstract="**不**&#x200B;允許 Map-type 屬性。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxNestedAggregationDepth"
->title="最大巢狀實體深度錯誤"
->abstract="巢狀陣列的最大深度為 **5**."
+>title="巢狀實體深度上限錯誤"
+>abstract="巢狀陣列深度上限為 **5**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_maxObjectNestingLevel"
->title="最大巢狀物件數量錯誤"
->abstract="允許的最大巢狀物件數量為 **10**."
+>title="巢狀物件數上限錯誤"
+>abstract="允許的巢狀物件數上限為 **10**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_generic"
->title="限制違規"
->abstract="對象違反限制。 如需詳細資訊，請閱讀連結的檔案。"
+>title="違反限制"
+>abstract="對象違反限制。請閱讀連結的文件以了解更多詳細資訊。"
 
 使用帳戶對象時，該對象 **必須** 請遵循下列限制：
 
@@ -169,16 +169,16 @@ ht-degree: 0%
 
 - 體驗事件的最大回顧期間為 **30天**.
 - 巢狀容器的最大深度為 **5**.
-   - 這表示您 **無法** 建立對象時具有五個以上的巢狀容器。
+   - 這表示建立對象時，**不能**&#x200B;有超過五個巢狀容器。
 - 單一容器內的規則數量上限為 **5**.
    - 這表示您的對象 **無法** 有五個以上的規則組成您的對象。
 - 可使用的跨實體最大數量為 **5**.
-   - 跨實體是指您在對象內不同實體之間變更時。 例如，從帳戶移至個人再移至行銷清單。
+   - 跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。
 - 自訂實體 **無法** 使用。
-- 單一欄位可檢查的值數量上限為 **50**.
+- 單一欄位可以檢查的值數量上限為 **50**。
    - 例如，如果您有「城市名稱」欄位，您可以根據50個城市名稱檢查該值。
 - 帳戶對象 **無法** 使用 `inSegment` 事件。
 - 帳戶對象 **無法** 使用循序事件。
 - 帳戶對象 **無法** 使用地圖。
-- 巢狀陣列的最大深度為 **5**.
+- 巢狀陣列深度上限為 **5**。
 - 巢狀物件的最大數量為 **10**.
