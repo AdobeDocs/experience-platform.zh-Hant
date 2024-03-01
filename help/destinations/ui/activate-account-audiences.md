@@ -5,10 +5,10 @@ description: 瞭解如何對目的地啟用帳戶對象
 badgeB2B: label="B2B版本" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
-ht-degree: 0%
+source-wordcount: '834'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +25,12 @@ ht-degree: 0%
 前往 **[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取 **[!UICONTROL 目錄]** 標籤。 使用 **[!UICONTROL 資料型別]** 篩選並選取 **[!UICONTROL 帳戶]** 檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)， [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)， [Azure Blob儲存體](/help/destinations/catalog/cloud-storage/azure-blob.md)， [資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)、和 [SFTP](/help/destinations/catalog/cloud-storage/sftp.md))和 [（公司） LinkedIn相符的受眾](/help/destinations/catalog/social/linkedin.md) 目的地。
 
 ![支援帳戶對象的目的地。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## 影片概述
+
+請觀看下方的影片，概略瞭解如何建立和啟用帳戶對象，以及啟用帳戶對象時支援的使用案例。
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## 先決條件 {#prerequisites}
 

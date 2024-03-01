@@ -3,10 +3,10 @@ keywords: 目的地；問題；常見問題；faq；目的地常見問題
 title: 常見問答
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 3%
+source-wordcount: '1673'
+ht-degree: 2%
 
 ---
 
@@ -48,6 +48,15 @@ ht-degree: 3%
 為確保所有設定檔都傳送至您的目的地，您必須使用新設定建立新的對象，然後將其啟用至您的目的地。
 
 +++
+
+### 從目的地移除對象時，是否有任何傳送至目的地的訊號指出對象已移除？
+
++++回答
+
+否，Experience Platform目的地和目標系統的客戶執行個體之間沒有相依性。 在接收端，目標系統看到的唯一指示是它停止接收該對象資料。
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 
@@ -82,7 +91,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 +++回答在您傳送對象到之前 [!DNL Facebook]，確定您符合下列需求：
 
 * 您的 [!DNL Facebook] 使用者帳戶必須具有 **[!DNL Manage campaigns]** 已為您計畫使用的廣告帳戶啟用許可權。
-* 此 **Adobe Experience Cloud** 企業帳戶必須新增為廣告合作夥伴，才能在您的 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`. 另請參閱 [新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
+* 此 **Adobe Experience Cloud** 企業帳戶必須新增為廣告合作夥伴，才能在您的 [!DNL Facebook Ad Account]. 使用 `business ID=206617933627973`。另請參閱 [新增合作夥伴至您的Business Manager](https://www.facebook.com/business/help/1717412048538897) 詳細資訊，請參閱Facebook檔案。
 
   >[!IMPORTANT]
   >
@@ -136,7 +145,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 +++回答是。 Experience Platform中的Facebook目的地與Facebook中的廣告帳戶之比是1:1。 您可以為公司中的每個Facebook廣告帳戶建立個別的Facebook目的地。 請遵循 [目的地連線教學課程](/help/destinations/ui/connect-destination.md) 並在Platform UI中為每個新Facebook目的地連線至個別的Facebook帳戶。 您可以連線的Facebook廣告帳戶數量沒有限制。
 +++
 
-## Google 目標客戶比對 {#google-customer-match}
+## Google Customer Match {#google-customer-match}
 
 ### 將對象匯出至Google Customer Match時，為什麼在Google介面的對象名稱結尾會附加額外的數字？
 
