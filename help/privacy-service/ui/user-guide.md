@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 管理Privacy Service UI中的隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1458'
 ht-degree: 14%
 
 ---
@@ -46,6 +46,7 @@ ht-degree: 14%
 | [!UICONTROL GDPR] | 歐盟的 [!DNL General Data Protection Regulation] |
 | [!UICONTROL HIPAA_AUS] | 此 [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | 巴西的 [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MHMDA] | 此 [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | 紐西蘭 [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | 泰國的 [!DNL Personal Data Protection Act] |
 | [!UICONTROL UCPA] | 此 [!DNL Utah Consumer Privacy Act] |

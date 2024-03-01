@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規概述
 description: 本檔案概述Adobe Experience Cloud支援的各種隱私權法規。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 0%
 | GDPR （歐盟） | 此 [[!DNL General Data Protection Regulation (GDPR)]](https://gdpr-info.eu) 為歐洲經濟區(EEA)成員引進了許多新的資料隱私權，包括存取權和被遺忘權。 這些權利代表在EEA中居住且企業已收集其個人資料的任何人，隨時可以請求存取或刪除其資料。<br><br>英國（英國退歐後）有自己的法規版本UK-GDPR，其公民可享有與EEA版本相同的權利。 |
 | HIPAA （美國） | 此 [[!DNL Health Insurance Portability and Accountability Act (HIPAA)]](https://www.hhs.gov/hipaa/index.html) 是一項美國聯邦法律，建立目的在於改善醫療效率、改善健康保險的可攜性，以及保護病患和健康計畫成員的隱私。 根據HIPAA，個人有權存取和修改其資訊，並取得其醫療記錄或健康資訊的副本。 涵蓋的實體與涵蓋實體的業務夥伴必須遵守HIPAA法規。 |
 | LGPD （巴西） | 此 [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) 旨在規範巴西境內所有個人或自然人的個人資料處理方式。 LGPD賦予巴西公民存取和刪除其個人資料的權利，得知其個人資料是否遭到販售或揭露（以及對象是誰）的權利，以及選擇退出將資料販售給第三方的權利。 |
+| MHMDA （華盛頓州） | 此 [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) 增強消費者有關其健康資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。 |
 | 紐西蘭 [!DNL Privacy Act] | 此 [紐西蘭 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) 控制機構如何收集、使用、披露、儲存和存取紐西蘭公民和組織的個人資訊。 2020年，最新版本的法案大幅更新了這些隱私權法律。 更新內容包括新罪、增加罰款、強制通知資料洩露，以及增加隱私權專員的權力。 |
 | PDPA （泰國） | 此 [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) 引入的目的是保護泰文資料擁有者，避免非法收集、使用或公開其個人資料。 受歐盟GDPR啟發，該法規授予泰國公民請求存取或刪除其儲存的個人資料的權利。 |
 | UCPA （猶他州） | 此 [[!DNL Utah Consumer Privacy Act]](https://le.utah.gov/~2022/bills/static/SB0227.html) 建立消費者瞭解企業收集哪些個人資料、企業如何使用其個人資料，以及企業是否銷售其個人資料的權利。 消費者可以要求企業刪除或停止銷售其個人資料。 |

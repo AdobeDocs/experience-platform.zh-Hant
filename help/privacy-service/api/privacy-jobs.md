@@ -5,9 +5,9 @@ title: 隱私權工作API端點
 description: 瞭解如何使用Privacy Service API管理Experience Cloud應用程式的隱私權工作。
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1857'
 ht-degree: 1%
 
 ---
@@ -26,25 +26,34 @@ ht-degree: 1%
 
 **API格式**
 
-此請求格式使用 `regulation` 上的查詢引數 `/jobs` 端點，因此開頭是問號(`?`)，如下所示。 回應會分頁，讓您能夠使用其他查詢引數(`page` 和 `size`)以篩選回應。 您可以使用&amp;符號(`&`)。
+此請求格式使用 `regulation` 上的查詢引數 `/jobs` 端點，因此開頭是問號(`?`)，如下所示。 列出資源時，Privacy Service API會傳回最多1000個工作並分頁回應。 使用其他查詢引數(`page`， `size`和日期篩選器)，以篩選回應。 您可以使用&amp;符號(`&`)。
+
+>[!TIP]
+>
+>使用其他查詢引數進一步篩選特定查詢的結果。 例如，您可以探索在指定期間內已提交多少隱私權工作，以及使用它們的狀態 `status`， `fromDate`、和 `toDate` 查詢引數。
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | 參數 | 說明 |
 | --- | --- |
-| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>請參閱以下主題的概觀： [支援的法規](../regulations/overview.md) 以取得上述值代表的隱私權法規的詳細資訊。 |
+| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>請參閱以下主題的概觀： [支援的法規](../regulations/overview.md) 以取得上述值代表的隱私權法規的詳細資訊。 |
 | `{PAGE}` | 要顯示的資料頁（使用0編號）。 預設值為 `0`。 |
-| `{SIZE}` | 每個頁面上顯示的結果數。 預設值為 `1` 最大值為 `100`. 超過最大值會導致API傳回400程式碼錯誤。 |
+| `{SIZE}` | 每個頁面上顯示的結果數。 預設值為 `100` 最大值為 `1000`. 超過最大值會導致API傳回400程式碼錯誤。 |
+| `{status}` | 預設行為是包含所有狀態。 如果您指定狀態型別，請求只會傳回符合該狀態型別的隱私權工作。 接受的值包括： <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | 此引數會將結果限製為指定日期之前處理的結果。 從請求日期起，系統可以回顧45天。 但是，範圍不能超過30天。<br>它接受YYYY-MM-DD格式。 您提供的日期會解譯為以格林威治標準時間(GMT)表示的終止日期。<br>如果您未提供此引數(以及 `fromDate`)，則預設行為會傳回過去七天內資料的工作。 如果您使用 `toDate`，您也必須使用 `fromDate` 查詢引數。 如果您未同時使用兩者，呼叫會傳回400錯誤。 |
+| `{fromDate}` | 此引數會將結果限製為指定日期之後處理的結果。 從請求日期起，系統可以回顧45天。 但是，範圍不能超過30天。<br>它接受YYYY-MM-DD格式。 您提供的日期會解譯為以格林威治標準時間(GMT)表示的請求來源日期。<br>如果您未提供此引數(以及 `toDate`)，則預設行為會傳回過去七天內資料的工作。 如果您使用 `fromDate`，您也必須使用 `toDate` 查詢引數。 如果您未同時使用兩者，呼叫會傳回400錯誤。 |
+| `{filterDate}` | 此引數會將結果限製為指定日期處理的結果。 它接受YYYY-MM-DD格式。 系統可以回顧過去45天。 |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **要求**

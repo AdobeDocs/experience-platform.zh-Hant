@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform字彙表
 description: Experience Platform 重要術語表。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7979'
+source-wordcount: '7996'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 **批次識別碼**：批次ID是Adobe為資料批次產生的識別碼。
 
-**批次擷取**：批次內嵌可讓您將資料以批次檔案的形式內嵌到Experience Platform中。 批次是多個資料單位，由一或多個要作為一個單位進行內嵌的檔案所組成。
+**批次擷取**：批次內嵌可讓您將資料以批次檔案的形式內嵌到Experience Platform中。 批次是資料單位，由一或多個要作為單一單位內嵌的檔案組成。
 
 **批次細分**：批次細分是現有資料選擇流程的替代方法，並會透過區段定義一次移動所有設定檔資料以產生相應的受眾。 建立後，會儲存並儲存此區段，以便將其匯出以供使用。
 
@@ -344,6 +344,8 @@ ht-degree: 0%
 **合併方法**：使用Platform UI定義合併原則時，合併方法會指定發生衝突時資料片段的優先順序。 使用即時客戶設定檔API定義合併原則時，會使用下列專案決定合併方法 `attributeMerge` 物件。
 
 **合併原則**：合併原則是Experience Platform用來判斷如何將來自多個來源的客戶資料片段合併以建立個別設定檔的規則。 當發生資料衝突時，合併原則會決定哪些資料應優先納入設定檔中。
+
+**MHMDAa**：此 [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) 增強消費者有關其健康資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。
 
 **Mixin**：請參閱「結構欄位群組」。
 

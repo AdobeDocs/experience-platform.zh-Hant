@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 隱私權法規術語
 description: 本檔案提供Adobe Experience Cloud支援之隱私權法規相關關鍵辭彙的定義。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
-ht-degree: 2%
+source-wordcount: '1842'
+ht-degree: 1%
 
 ---
 
@@ -100,6 +100,8 @@ ht-degree: 2%
 ## M
 
 **主要機構**：在歐盟內針對資料處理進行主要決策的地點；就處理者而言。
+
+**MHMDAa**：此 [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) 增強消費者有關其健康資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。
 
 ## N
 
