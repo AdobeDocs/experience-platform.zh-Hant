@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1209'
 ht-degree: 4%
 
 ---
@@ -247,6 +247,7 @@ ht-degree: 4%
          * [使用自訂檔案格式選項和自訂檔案名稱設定來設定Azure Data Lake儲存體目的地](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [使用自訂檔案格式選項和自訂檔案名稱設定來設定資料登陸區域(DLZ)目的地](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [使用預先定義的檔案格式選項和自訂檔案名稱設定來設定SFTP目的地](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [設定以檔案為基礎的目的地，以匯出潛在客戶對象](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * 目的地製作API參考 {#authoring-api}
       * [Destination SDK （目的地製作） API參考](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * 目的地伺服器作業 {#server-operations}
