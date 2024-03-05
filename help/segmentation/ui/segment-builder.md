@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3562'
+source-wordcount: '3629'
 ht-degree: 6%
 
 ---
@@ -282,6 +282,8 @@ ht-degree: 6%
 您也可以選取評估方法。 如果您知道要使用的評估方法，可以使用下拉式清單選取所需的評估方法。 如果您想瞭解此區段定義符合哪些評估型別，可以選取瀏覽圖示 ![放大鏡的資料夾圖示](../images/ui/segment-builder/segment-evaluation-select-icon.png) 檢視可用區段定義評估方法的清單。
 
 此 [!UICONTROL 評估方法資格] 彈出視窗會出現。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出視窗會顯示哪些評估方法符合資格和不符合資格。 根據您在區段定義中使用的引數，它可能不符合某些評估方法的資格。 如需每種評估方法需求的詳細資訊，請參閱 [串流細分](./streaming-segmentation.md#query-types) 或 [邊緣細分](./edge-segmentation.md#query-types) 概述。
+
+完成建立區段定義後，您也可以變更區段定義的評估方法。 如果您將評估方法從「邊緣」或「串流」變更為「批次」，您將 **非** 能夠將其變更回Edge或Streaming。 評估方法的變更將會 **僅限** 一旦您選取「 」，就會生效 **[!UICONTROL 儲存]** 在彈出視窗中。 取消對話方塊將會 **維護** 原始評估方法。
 
 ![評估方法適用性快顯視窗會出現。 這會顯示哪些評估方法適用於區段定義，哪些則不適用於區段定義。](../images/ui/segment-builder/select-evaluation-method.png)
 
