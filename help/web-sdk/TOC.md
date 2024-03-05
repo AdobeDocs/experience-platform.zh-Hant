@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform Web SDK 說明
 breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
-source-git-commit: 567ba2c43c2dcea401911cf25ae7a6be259acb81
+source-git-commit: 6e78383b232a7b604514a4db85884372ef11d3a8
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '222'
 ht-degree: 22%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 22%
       * [整合（不含標籤）](consent/iab-tcf/without-tags.md)
 
 * 使用案例 {#use-cases}
+   * [概觀](use-cases/overview.md)
    * [使用Web SDK傳送資料給Adobe Analytics](use-cases/adobe-analytics.md)
    * [使用者代理使用者端提示](use-cases/client-hints.md)
    * [收集商務資料](use-cases/collect-commerce-data.md)
