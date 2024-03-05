@@ -1,15 +1,15 @@
 ---
 title: 摘要標籤
-description: 瞭解如何使用Adobe Experience Platform Debugger中的「摘要」標籤。
+description: 瞭解如何使用Adobe Experience Platform Debugger中的摘要標籤。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；摘要；清除；要求；摘要畫面；解決方案；資訊；Analytics；Target；DTM；Audience Manager；Launch；ID 服務
 seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 74%
+source-wordcount: '711'
+ht-degree: 85%
 
 ---
 
@@ -81,7 +81,7 @@ Experience Platform Debugger 針對各個解決方案顯示的資訊如下：
   </tr> 
   <tr> 
    <td colname="col1"> <p>版本 </p> </td> 
-   <td colname="col2"> <p>Turbine 版本</a> </p> </td> 
+   <td colname="col2"> <p>Turbine版本</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>建置日期 </p> </td> 
@@ -89,7 +89,7 @@ Experience Platform Debugger 針對各個解決方案顯示的資訊如下：
   </tr> 
   <tr> 
    <td colname="col1"> <p>環境 </p> </td> 
-   <td colname="col2"> <p>此 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" format="https" scope="external"> 環境</a> 由標籤庫使用 </p> </td> 
+   <td colname="col2"> <p>此 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant" format="https" scope="external"> 環境</a> 由標籤庫使用 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>擴充功能 </p> </td> 
@@ -104,7 +104,7 @@ Experience Platform Debugger 針對各個解決方案顯示的資訊如下：
  <tbody> 
   <tr> 
    <td colname="col1"> <p>程式庫版本 </p> </td> 
-   <td colname="col2"> <p>Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">程式庫版本</a>號碼 </p> </td> 
+   <td colname="col2"> <p>Adobe Experience Platform Web SDK <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">程式庫版本</a>號碼 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>命名空間</p> </td> 

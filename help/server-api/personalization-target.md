@@ -2,7 +2,7 @@
 title: 透過Adobe Target實現個人化
 description: 瞭解如何使用伺服器API來傳遞和轉譯在Adobe Target中建立的個人化體驗。
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 1%
@@ -17,7 +17,7 @@ Edge Network Server API可協助提供和轉譯在Adobe Target中建立的個人
 
 >[!IMPORTANT]
 >
->透過建立的個人化體驗 [Target視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 伺服器API不完全支援。 伺服器API可以 **擷取** VEC建立的活動，但伺服器API無法 **轉譯** VEC建立的活動。 如果您想要轉譯VEC建立的活動，請實作 [混合個人化](../edge/personalization/hybrid-personalization.md) 使用Web SDK和Edge Network伺服器API。
+>透過建立的個人化體驗 [Target視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 伺服器API不完全支援。 伺服器API可以 **擷取** VEC建立的活動，但伺服器API無法 **轉譯** VEC建立的活動。 如果您想要轉譯VEC建立的活動，請實作 [混合個人化](../web-sdk/personalization/hybrid-personalization.md) 使用Web SDK和Edge Network伺服器API。
 
 ## 設定您的資料串流 {#configure-your-datastream}
 

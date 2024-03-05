@@ -2,10 +2,10 @@
 title: 資料收集的資料準備
 description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件綱要。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ ht-degree: 59%
 
 ## 透過WebSDK將現有的資料層傳送至Edge Network {#send-datalayer-via-websdk}
 
-現有的資料層必須使用 `data` 的選項 `sendEvent` 命令，如 [Web SDK檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+現有的資料層必須使用 [`data`](/help/web-sdk/commands/sendevent/data.md) 內的物件 `sendEvent` 命令。
 
-如果您使用標籤，則必須使用 **[!UICONTROL 資料]** 欄位屬於 **[!UICONTROL 傳送事件]** 動作型別，如 [Web SDK標籤擴充功能檔案](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+如果您使用標籤，則必須使用 **[!UICONTROL 資料]** 欄位屬於 **[!UICONTROL 傳送事件]** 動作型別，如 [Web SDK標籤擴充功能檔案](/help/tags/extensions/client/web-sdk/action-types.md).
 
 本指南的其餘部分著重於在WebSDK傳送資料層後，如何將資料層對應至XDM標準。
 

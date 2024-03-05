@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform中的同意處理
 description: 瞭解如何使用Adobe 2.0標準在Adobe Experience Platform中處理客戶同意訊號。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 0%
@@ -25,12 +25,12 @@ Adobe Experience Platform可讓您處理從客戶收集的同意資料，並將�
 
 本指南需要您實際瞭解處理同意資料所涉及的各種Experience Platform服務：
 
-* [體驗資料模型(XDM)](../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
-* [Adobe Experience Platform Identity服務](../../../../identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
-* [即時客戶個人檔案](../../../../profile/home.md)：使用 [!DNL Identity Service] 從資料集即時建立詳細客戶設定檔的功能。 即時客戶設定檔從資料湖提取資料，並將客戶設定檔儲存在其自己的獨立資料存放區中。
-* [Adobe Experience Platform Web SDK](../../../../edge/home.md)：使用者端JavaScript程式庫，可讓您將各種Platform服務整合至您面向客戶的網站。
-   * [SDK同意命令](../../../../edge/consent/supporting-consent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md)：可讓您將即時客戶個人檔案資料分割成共用類似特徵且對行銷策略有類似回應的一組個人。
+* [體驗資料模型(XDM)](/help/xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
+* [Adobe Experience Platform Identity服務](/help/identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
+* [即時客戶個人檔案](/help/profile/home.md)：使用 [!DNL Identity Service] 從資料集即時建立詳細客戶設定檔的功能。 即時客戶設定檔從資料湖提取資料，並將客戶設定檔儲存在其自己的獨立資料存放區中。
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)：使用者端JavaScript程式庫，可讓您將各種Platform服務整合至您面向客戶的網站。
+   * [SDK同意命令](/help/web-sdk/consent/supporting-consent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
+* [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md)：可讓您將即時客戶個人檔案資料分割成共用類似特徵且對行銷策略有類似回應的一組個人。
 
 ## 同意處理流程摘要 {#summary}
 
@@ -49,7 +49,7 @@ Experience Platform除了CMP同意變更掛接所觸發的SDK命令外，同意�
 
 >[!NOTE]
 >
->如需上述XDM同意欄位結構的詳細資訊，請參閱 [[!UICONTROL 同意和偏好設定] 資料型別](../../../../xdm/data-types/consents.md).
+>如需上述XDM同意欄位結構的詳細資訊，請參閱 [[!UICONTROL 同意和偏好設定] 資料型別](/help/xdm/data-types/consents.md).
 
 設定系統後，Platform Web SDK會解譯目前使用者的資料收集同意值，以判斷資料應傳送至Adobe Experience Platform Edge Network、從使用者端捨棄或持續存在，直到資料收集許可權設為「是」或「否」為止。
 

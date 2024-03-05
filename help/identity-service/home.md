@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identity Service總覽
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -109,7 +109,7 @@ Identity Service在Experience Platform中扮演著重要的角色。 部分重�
 
 * [方案](../xdm/home.md)：在指定的結構描述中，標示為身分的結構描述欄位允許建立身分圖表。
 * [資料集](../catalog/datasets/overview.md)：當資料集啟用擷取至Real-time Customer Profile時，會從資料集產生身分圖，前提是資料集至少有兩個欄位標籤為身分。
-* [Web SDK](../edge/home.md)：Web SDK會將體驗事件傳送至Adobe Experience Platform，而當事件中存在兩個或多個身分時，身分服務會產生圖表。
+* [Web SDK](../web-sdk/home.md)：Web SDK會將體驗事件傳送至Adobe Experience Platform，而當事件中存在兩個或多個身分時，身分服務會產生圖表。
 * [即時客戶個人檔案](../profile/home.md)：在合併指定設定檔的屬性和事件之前，即時客戶設定檔可以參考身分圖表。 如需詳細資訊，請閱讀以下指南： [瞭解Identity Service與即時客戶個人檔案之間的關係](./identity-and-profile.md).
 * [目的地](../destinations/home.md)：目的地可以根據身分名稱空間將設定檔資訊傳送至其他系統，例如雜湊電子郵件。
 * [區段比對](../segmentation/ui/segment-match/overview.md)：區段比對會比對兩個不同沙箱中，具有相同身分名稱空間和身分值的兩個設定檔。

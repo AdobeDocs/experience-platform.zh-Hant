@@ -3,7 +3,7 @@ title: 未驗證訪客的離站重新目標定位
 description: 瞭解如何使用潛在客戶ID建立計算屬性，用來建立未驗證使用者的對象，以重新鎖定未驗證使用者。
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1462'
 ht-degree: 1%
@@ -39,7 +39,7 @@ ht-degree: 1%
 - [對象](../../segmentation/home.md)
 - [計算屬性](../../profile/computed-attributes/overview.md)
 - [目的地](../../destinations/home.md)
-- [Web SDK](../../edge/home.md)
+- [Web SDK](../../web-sdk/home.md)
 
 ## 將合作夥伴資料帶入Real-Time CDP {#get-data-in}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 客戶屬性來源聯結器總覽
 description: 瞭解如何使用API或使用者介面將客戶屬性連結至Adobe Experience Platform
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '380'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ Experience Platform提供內嵌支援 [!DNL Customer Attributes] 將設定檔資
 
 的 [!DNL Customer Attributes] 要繫結至其他人的資料 [!DNL Profile] 資料集、其資料和身分必須能夠符合Experience CloudID。
 
-您可以建立 `CORE` 名稱空間，方法為使用設定訪客的Experience CloudID [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)， [行動SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)，或 [Experience CloudID服務API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant).
+您可以建立 `CORE` 名稱空間，方法為使用設定訪客的Experience CloudID [Web SDK](/help/web-sdk/identity/overview.md)， [行動SDK](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/)，或 [Experience CloudID服務API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant).
 
 此 [!DNL Customer Attributes] 檔案不會進一步填入任何其他身分關係。 例如，如果 [!DNL Customer Attributes] 來源資料集包含 **電子郵件** 和 **熟客方案ID** 欄位，則這些欄位必須在結構描述中標籤為身分欄位，才能處理到 [!DNL Identity Service].
 

@@ -3,7 +3,7 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Adobe如果您的生產沙箱包含：
 若您想要保留已根據CRM ID驗證的事件，建議您將ECID的主要識別碼變更為CRM ID。 請閱讀下列檔案，以瞭解如何實作此變更的步驟：
 
 * [設定Experience Platform標籤的身分對應](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Experience Platform Web SDK中的身分資料](../edge/identity/overview.md#using-identitymap)
+* [Experience Platform Web SDK中的身分資料](../web-sdk/identity/overview.md#using-identitymap)
 
 ### 範例情境
 

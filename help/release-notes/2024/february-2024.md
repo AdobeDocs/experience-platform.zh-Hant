@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 發行說明 (2024 年 2 月)
 description: Adobe Experience Platform 2024 年 2 月版發行說明。
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 21%
@@ -27,7 +27,7 @@ Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您�
 **新功能或更新功能**
 | 功能 | 說明 | | — | — | | 警示歷史記錄標籤 | 作為Experience Platform管理員，您可以使用管理警示訂閱者功能，將警示指派給Adobe使用者ID、外部電子郵件地址或電子郵件群組清單。 如需詳細資訊，請參閱 [警報UI檔案](../../observability/alerts/ui.md) 以取得有關「歷史記錄」標籤的詳細資訊。 |
 
-
+{style="table-layout:auto"}
 
 若要進一步瞭解警示，請閱讀 [[!DNL Observability Insights] 概述](../../observability/home.md).
 
@@ -39,7 +39,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | --- | --- |
-| [Web SDK中的應用程式內傳訊支援](../../edge/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK現在支援Adobe Journey Optimizer行銷活動的Web應用程式內訊息設定。 |
+| [Web SDK中的應用程式內傳訊支援](../../web-sdk/personalization/web-in-app-messaging.md) | Adobe Experience Platform Web SDK現在支援Adobe Journey Optimizer行銷活動的Web應用程式內訊息設定。 |
 
 {style="table-layout:auto"}
 

@@ -2,9 +2,9 @@
 title: 資料收集端對端總覽
 description: 有關如何使用Adobe Experience Platform的資料收集功能將事件資料傳送至Adobe Experience Cloud解決方案的高層級概觀。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
+source-wordcount: '2616'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,8 @@ Adobe Experience Platform會收集您的資料並傳輸至其他Adobe產品和�
 >
 >本節使用資料收集UI來設定Web SDK標籤擴充功能，但您也可以改用原始程式碼來安裝和設定。 如需詳細資訊，請參閱下列指南：
 >
->* [安裝SDK](../edge/fundamentals/installing-the-sdk.md)
->* [設定SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [安裝SDK](/help/web-sdk/install/overview.md)
+>* [設定SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >另請注意，即使您只想使用事件轉送，您仍必須如所述安裝和設定SDK，才能在設定事件轉送 [後續步驟](#event-forwarding).
 
@@ -141,7 +141,7 @@ Adobe Experience Platform會收集您的資料並傳輸至其他Adobe產品和�
 
 SDK的設定頁面隨即顯示。 大部分必要值都會自動填入預設值，您可以視需要選擇變更。
 
-![設定 Web SDK](./images/e2e/configure-sdk.png)
+![設定Web SDK](./images/e2e/configure-sdk.png)
 
 不過，在安裝SDK之前，您必須選取資料流，讓資料流知道要將您的資料傳送至何處。 在 **[!UICONTROL 資料串流]**，使用下拉式選單來選取您在 [更早的步驟](#datastream). 設定資料流後，選取 **[!UICONTROL 儲存]** 以完成SDK至屬性的安裝。
 

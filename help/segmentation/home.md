@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 分段服務總覽
 description: 瞭解Adobe Experience Platform區段服務，以及此服務在平台生態系統中所扮演的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '1627'
 ht-degree: 14%
@@ -92,7 +92,7 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 >abstract="邊緣分段指在 Edge Network 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=zh-Hant" text="邊緣分段服務 UI 指南"
 
-邊緣區段是即時評估Platform中區段的能力 [在Edge Network](../edge/home.md)，啟用相同頁面和下一頁個人化使用案例。
+邊緣區段是即時評估Platform中區段的能力 [在Edge Network](../web-sdk/home.md)，啟用相同頁面和下一頁個人化使用案例。
 
 若要深入瞭解邊緣細分，請閱讀 [API檔案](./api/edge-segmentation.md) 或 [UI檔案](./ui/edge-segmentation.md).
 

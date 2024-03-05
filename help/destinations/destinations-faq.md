@@ -3,7 +3,7 @@ keywords: 目的地；問題；常見問題；faq；目的地常見問題
 title: 常見問答
 description: 關於Adobe Experience Platform目的地最常見問題的解答
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1673'
 ht-degree: 2%
@@ -185,11 +185,11 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 ### 我是否需要使用Experience Platform Web SDK傳送對象和屬性至Adobe Target？
 
-+++答案否， [Web SDK](../edge/home.md) 不一定要啟用對象，才可以 [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++答案否， [Web SDK](../web-sdk/home.md) 不一定要啟用對象，才可以 [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
 但是，如果 [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) 已使用（而非Web SDK），僅支援下一次工作階段個人化。
 
-的 [相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md) 使用案例，您必須使用 [Web SDK](../edge/home.md) 或 [Edge Network伺服器API](../server-api/overview.md). 請參閱以下檔案： [啟用對象至邊緣目的地](ui/activate-edge-personalization-destinations.md) 以取得更多實作詳細資訊。
+的 [相同頁面和下一頁個人化](ui/activate-edge-personalization-destinations.md) 使用案例，您必須使用 [Web SDK](../web-sdk/home.md) 或 [Edge Network伺服器API](../server-api/overview.md). 請參閱以下檔案： [啟用對象至邊緣目的地](ui/activate-edge-personalization-destinations.md) 以取得更多實作詳細資訊。
 +++
 
 ### 我可以從Real-time Customer Data Platform傳送至Adobe Target或自訂個人化目的地的屬性數量是否有限制？
@@ -208,7 +208,7 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### 我在Experience Platform中建立對象後，需要多久才能供邊緣細分使用案例使用？
 
-+++回答對象定義會傳播至 [Edge Network](../edge/home.md) 最多一小時。 但是，如果對象在這第一個小時內啟動，可能會錯過一些符合對象資格的訪客。
++++回答對象定義會傳播至 [Edge Network](../web-sdk/home.md) 最多一小時。 但是，如果對象在這第一個小時內啟動，可能會錯過一些符合對象資格的訪客。
 +++
 
 ### 我可以在哪裡檢視Adobe Target中已啟用的屬性？

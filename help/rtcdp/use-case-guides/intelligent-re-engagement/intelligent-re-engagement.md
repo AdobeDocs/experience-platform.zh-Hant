@@ -3,7 +3,7 @@ title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 49%
@@ -147,7 +147,7 @@ ht-degree: 49%
 
 #### 客戶數位交易結構描述
 
-此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/edge/home.md) 且是參考各種用於觸發歷程、詳細線上客戶分析和增強受眾功能的瀏覽和轉換事件所必需的。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) 且是參考各種用於觸發歷程、詳細線上客戶分析和增強受眾功能的瀏覽和轉換事件所必需的。
 
 客戶數位交易結構描述是由 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 
@@ -244,7 +244,7 @@ ht-degree: 49%
 >
 >如果您使用 [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md)，這是一個實施選項。
 
-此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此結構描述類似於「客戶數位交易」結構描述，但不同之處在於其適用時機 [Web SDK](/help/edge/home.md) 不是資料收集的選項；因此，當您使用 [!DNL Adobe Analytics Source Connector] 將您的線上資料傳送到 [!DNL Adobe Experience Platform] 作為主要或次要資料流。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此結構描述類似於「客戶數位交易」結構描述，但不同之處在於其適用時機 [Web SDK](/help/web-sdk/home.md) 不是資料收集的選項；因此，當您使用 [!DNL Adobe Analytics Source Connector] 將您的線上資料傳送到 [!DNL Adobe Experience Platform] 作為主要或次要資料流。
 
 此 [!DNL Adobe] Web聯結器結構描述是由 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 

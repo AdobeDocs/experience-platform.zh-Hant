@@ -3,7 +3,7 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 397a88caaf7762dfa9b64aaa472910c6a34e7778
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 15%
@@ -38,7 +38,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 ### 資料串流ID {#datastream-id}
 
-將Adobe Target連線設定為時 [使用資料串流ID](#parameters)，您必須擁有 [Adobe Experience Platform Web SDK](../../../edge/home.md) 已實作。
+將Adobe Target連線設定為時 [使用資料串流ID](#parameters)，您必須擁有 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) 已實作。
 
 在不使用資料串流ID的情況下設定Adobe Target連線，不需要您實作Web SDK。
 
@@ -106,7 +106,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 * **名稱**：填寫此目的地的偏好名稱。
 * **說明**：輸入目的地的說明。 例如，您可以提及要將此目的地用於哪個行銷活動。 此欄位為選用。
 * **資料串流ID**：這會決定要將對象包含在哪個資料收集資料串流中。 下拉式功能表只會顯示已啟用Target和Adobe Experience Platform服務的資料串流。 另請參閱 [設定資料串流](../../../datastreams/configure.md#aep) 以取得如何為Adobe Experience Platform和Adobe Target設定資料流的詳細資訊。
-   * **[!UICONTROL 無]**：如果您需要設定Adobe Target個人化，但無法實施 [Experience PlatformWeb SDK](../../../edge/home.md). 使用此選項時，從Experience Platform匯出至Target的受眾僅支援下一次工作階段個人化，且會停用邊緣細分。 如需詳細資訊，請參閱下表。
+   * **[!UICONTROL 無]**：如果您需要設定Adobe Target個人化，但無法實施 [Experience PlatformWeb SDK](/help/web-sdk/home.md). 使用此選項時，從Experience Platform匯出至Target的受眾僅支援下一次工作階段個人化，且會停用邊緣細分。 如需詳細資訊，請參閱下表。
 
   | Adobe Target實施（不含Web SDK） | Web SDK實作 |
   |---|---|

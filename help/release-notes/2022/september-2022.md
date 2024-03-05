@@ -2,16 +2,16 @@
 title: Adobe Experience Platform發行說明2022年9月
 description: Adobe Experience Platform 2022年9月版本注意事項。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2938'
-ht-degree: 24%
+source-wordcount: '2762'
+ht-degree: 23%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 9 月 28 日**
+**發行日期： 2022年9月28日**
 
 Adobe Experience Platform中的新功能：
 
@@ -42,7 +42,7 @@ Adobe Experience Platform 現有功能的更新：
 | 功能 | 說明 |
 | --- | --- |
 | 屬性型存取控制 | 以屬性為基礎的存取控制可讓您使用可定義組織或資料使用範圍的標籤，來標籤Experience Data Model (XDM)結構描述欄位和區段。 同時，管理員可以使用使用者和角色管理介面來定義涵蓋XDM結構描述欄位和區段的存取原則，以更好地管理使用者或使用者群組（內部、外部或第三方使用者）的存取許可權。 如需詳細資訊，請參閱 [屬性型存取控制概觀](../../access-control/abac/overview.md). |
-| 權限 | 許可權是Experience Cloud的區域，管理員可以在其中定義使用者角色和存取原則，以管理產品應用程式內功能和物件的存取許可權。 透過許可權，您可以建立和管理角色、為這些角色指派所需的資源許可權，以及建立原則以運用標籤並定義哪些使用者角色有權存取特定Platform資源。 權限也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。如需詳細資訊，請參閱 [許可權UI指南](../../access-control/abac/ui/browse.md). |
+| 權限 | 許可權是Experience Cloud的區域，管理員可以在其中定義使用者角色和存取原則，以管理產品應用程式內功能和物件的存取許可權。 透過許可權，您可以建立和管理角色、為這些角色指派所需的資源許可權，以及建立原則以運用標籤並定義哪些使用者角色有權存取特定Platform資源。 許可權也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。 如需詳細資訊，請參閱 [許可權UI指南](../../access-control/abac/ui/browse.md). |
 
 若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](../../access-control/abac/overview.md)。關於屬性型存取控制工作流程的綜合指南，請閱讀[屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md)。
 
@@ -110,8 +110,8 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | 平台UI中的左側導覽整合 | 先前專屬資料收集UI的所有功能（包括標籤、事件轉送和資料串流）現在也可透過Experience Platform左側導覽的類別下使用 **[!UICONTROL 資料彙集]**. 如此一來，在Platform中使用資料收集功能時，就不需要在UI之間切換。 |
 | 標籤和事件轉送中的使用者歸因 | 清單可用時 [!UICONTROL 屬性] 在標籤和事件轉送中，每個列出的屬性現在會顯示其上次更新時間，以及進行更新的使用者。 |
 | [[!DNL Snap Conversions API] 副檔名](https://exchange.adobe.com/apps/ec/108550) 用於事件轉送 | 您現在可以將資料傳送至 [!DNL Snapchat Conversions API] 使用 [事件轉送](../../tags/ui/event-forwarding/overview.md) 副檔名。 有關如何驗證和使用API的詳細資訊，請參閱 [[!DNL Snapchat Marketing API] 檔案](https://marketingapi.snapchat.com/docs/conversion.html). |
-| [[!DNL User-Agent Client Hints] 在Web SDK中](../../edge/fundamentals/user-agent-client-hints.md) | Web SDK現在支援 [[!DNL User-Agent Client Hints]](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 使用者端提示可讓網站擁有者存取許多與 [!DNL User-Agent] 字串，但採用更能保護隱私的方式來進行。 |
-| [Web SDK逐頁移轉](../../edge/home.md#migrating-to-web-sdk) | 您現在可以從其他Experience Cloud程式庫移轉現有的Web屬性，例如 [!DNL at.js]，一次一個頁面。 如此可分階段移轉Web SDK，而不需一次移轉所有頁面。 |
+| [Web SDK中的使用者代理使用者端提示](/help/web-sdk/use-cases/client-hints.md) | Web SDK現在支援 [使用者代理使用者端提示](https://developer.chrome.com/docs/privacy-sandbox/user-agent/). 使用者端提示可讓網站擁有者存取許多與 [!DNL User-Agent] 字串，但採用更能保護隱私的方式來進行。 |
+| [Web SDK逐頁移轉](../../web-sdk/home.md#migrating-to-web-sdk) | 您現在可以從其他Experience Cloud程式庫移轉現有的Web屬性，例如 [!DNL at.js]，一次一個頁面。 如此可分階段移轉Web SDK，而不需一次移轉所有頁面。 |
 | [[!DNL Adobe Journey Optimizer] 支援資料串流](../../datastreams/overview.md#aep) | 適用於資料串流的Adobe Experience Platform服務現在支援 [!DNL Adobe Journey Optimizer]. 此選項可讓您在中使用網頁和應用程式型傳入頻道 [!DNL Adobe Journey Optimizer]. |
 
 {style="table-layout:auto"}
@@ -126,11 +126,11 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 目標 SDK | Destination SDK現在為建立批次（或檔案式）生產或私有目的地的合作夥伴和客戶提供完整支援。 如需詳細資訊，請參閱下列檔案頁面： <ul><li>[Destination SDK概觀](../../destinations/destination-sdk/overview.md)</li><li>[設定以檔案為基礎的目的地](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[設定檔案型目的地的檔案格式選項](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[測試以檔案為基礎的目的地](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
+| Destination SDK | Destination SDK現在為建立批次（或檔案式）生產或私有目的地的合作夥伴和客戶提供完整支援。 如需詳細資訊，請參閱下列檔案頁面： <ul><li>[Destination SDK概觀](../../destinations/destination-sdk/overview.md)</li><li>[設定以檔案為基礎的目的地](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md)</li><li>[設定檔案型目的地的檔案格式選項](../../destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)</li><li>[測試以檔案為基礎的目的地](../../destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md)</li></ul> |
 
 {style="table-layout:auto"}
 
-**新目的地或更新的目的地**
+**新的或更新目的地**
 
 | 目的地 | 說明 |
 | ----------- | ----------- |
@@ -139,7 +139,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 {style="table-layout:auto"}
 
-**新文件或更新的文件**
+**新檔案或更新檔案**
 
 | 文件 | 說明 |
 | ----------- | ----------- |
@@ -204,7 +204,7 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 | --- | --- |
 | 支援資料集刪除 | 透過提出請求時，Identity Service現在支援資料集刪除 [目錄服務API](https://developer.adobe.com/experience-platform-apis/references/catalog/)、UI或資料衛生。 閱讀指南： [刪除UI中的資料集](../../catalog/datasets/user-guide.md#delete-a-dataset) 以取得詳細資訊。 |
 
-若要了解有關身分識別服務的詳細資訊，請閱讀[身分識別服務概觀](../../identity-service/home.md).
+若要進一步瞭解Identity Service，請閱讀 [Identity Service總覽](../../identity-service/home.md).
 
 ## 查詢服務 {#query-service}
 

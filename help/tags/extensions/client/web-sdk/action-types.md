@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '741'
 ht-degree: 2%
 
 ---
@@ -23,15 +23,15 @@ ht-degree: 2%
 
 「傳送事件」動作型別中還有其他欄位，根據您的實作而定，這些欄位也可能會相當實用。 請注意，這些欄位都是選用欄位。
 
-- **型別：** 此欄位可讓您指定將記錄在XDM結構描述中的事件型別。 請參閱 [檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) 以取得預設事件型別的詳細資訊。
-- **資料：** 使用此欄位可傳送不符合XDM結構描述的資料。 如果您嘗試更新Adobe Target設定檔或傳送Target Recommendations屬性，此欄位會很有用。 如需範例，請檢視 [檔案](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=zh-Hant).<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
+- **型別：** 此欄位可讓您指定將記錄在XDM結構描述中的事件型別。 另請參閱 [`type`](/help/web-sdk/commands/sendevent/type.md) 在 `sendEvent` 命令以取得詳細資訊。
+- **資料：** 使用此欄位可傳送不符合XDM結構描述的資料。 如果您嘗試更新Adobe Target設定檔或傳送Target Recommendations屬性，此欄位會很有用。 另請參閱 [`data`](/help/web-sdk/commands/sendevent/data.md) 在 `sendEvent` 命令以取得詳細資訊。<!--- **Merge ID:** If you would like to specify a merge ID for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. -->
 - **資料集ID：** 如果您需要傳送資料至資料流中所指定資料集以外的資料集，您可以在此處指定該資料集ID。
 - **檔案將解除安裝：** 如果您想要確保事件可到達伺服器，即使使用者導覽離開頁面，請檢查 **[!UICONTROL 檔案將解除安裝]** 核取方塊。 這可讓事件連線至伺服器，但會忽略回應。
-- **呈現視覺個人化決定：** 如果您想在頁面上呈現個人化內容，請檢查 **[!UICONTROL 呈現視覺個人化決定]** 核取方塊。 如有需要，您也可以指定決定範圍及/或曲面。 請參閱 [個人化檔案](../../../../edge/personalization/rendering-personalization-content.md#automatically-rendering-content) 以取得有關呈現個人化內容的詳細資訊。
+- **呈現視覺個人化決定：** 如果您想在頁面上呈現個人化內容，請檢查 **[!UICONTROL 呈現視覺個人化決定]** 核取方塊。 如有需要，您也可以指定決定範圍及/或曲面。 請參閱 [個人化檔案](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) 以取得有關呈現個人化內容的詳細資訊。
 
 ## 設定同意 {#set-consent}
 
-在您收到使用者的同意後，必須使用「設定同意」動作型別，將此同意傳達Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。另請參閱 [支援客戶同意偏好設定](../../../../edge/consent/supporting-consent.md). 使用Adobe版本2.0時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
+在您收到使用者的同意後，必須使用「設定同意」動作型別，將此同意傳達Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。另請參閱 [支援客戶同意偏好設定](/help/web-sdk/consent/supporting-consent.md). 使用Adobe版本2.0時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
 
 在此動作中，系統也會提供選填欄位，供您加入身分對應，以便在收到同意後同步身分資料。 同意設為「擱置中」或「退出」時，同步會很有用，因為同意呼叫可能是第一個要觸發的呼叫。
 

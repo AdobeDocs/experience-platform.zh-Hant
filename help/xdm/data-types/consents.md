@@ -3,10 +3,10 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 同意和偏好設定資料型別
 description: 「隱私權同意、個人化及行銷偏好設定」資料型別旨在支援收集由「同意管理平台」(CMP)和其他資料來源從您的資料作業產生的客戶許可權和偏好設定。
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2294'
-ht-degree: 1%
+source-wordcount: '2278'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 參閱本檔案前，請先實際瞭解XDM及中的結構描述用法 [!DNL Experience Platform]. 請先檢閱下列檔案再繼續：
 
-* [XDM 系統概觀](https://www.adobe.com/go/xdm-home-en)
+* [XDM系統概覽](https://www.adobe.com/go/xdm-home-en)
 * [結構描述組合基本概念](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## 資料型別結構 {#structure}
@@ -267,7 +267,7 @@ ht-degree: 1%
 
 ## 處理同意和偏好設定變更
 
-當客戶在您的網站上變更其同意或偏好設定時，應使用收集這些變更並立即執行 [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md). 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
+當客戶在您的網站上變更其同意或偏好設定時，應使用收集這些變更並立即執行 [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
 
 ## 附錄 {#appendix}
 

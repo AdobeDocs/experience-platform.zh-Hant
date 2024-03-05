@@ -2,10 +2,10 @@
 title: 個人化概覽
 description: 瞭解如何使用Adobe Experience Platform Edge Network Server API從Adobe個人化解決方案擷取個人化內容。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 10%
+source-wordcount: '729'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 10%
 
 此外， [!DNL Server API] 透過Adobe Experience Platform個人化目的地提供相同頁面和下一頁個人化功能，例如 [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱 [專用指南](../destinations/ui/activate-edge-personalization-destinations.md).
 
-使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站內容的邏輯。 不喜歡 [Web SDK](../edge/home.md)，則 [!DNL Server API] 沒有機制可自動套用傳回的內容 [!DNL Adobe Target] 和 [!DNL Offer Decisioning].
+使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站內容的邏輯。 不喜歡 [Web SDK](../web-sdk/home.md)，則 [!DNL Server API] 沒有機制可自動套用傳回的內容 [!DNL Adobe Target] 和 [!DNL Offer Decisioning].
 
 ## 術語 {#terminology}
 

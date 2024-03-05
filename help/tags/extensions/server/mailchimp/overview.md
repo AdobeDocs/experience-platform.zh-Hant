@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 5%
+source-wordcount: '1267'
+ht-degree: 4%
 
 ---
 
@@ -83,7 +83,7 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能�
 
 下一個， [建立資料元素](../../../ui/managing-resources/data-elements.md#create-a-data-element) 使用 [!UICONTROL 核心] 擴充功能和 [!UICONTROL 密碼] 資料元素型別以參照 `Mailchimp API Key` 您剛才建立的密碼。 輸入 `Mailchimp Token` 作為資料元素名稱。
 
-### 安裝並設定 擴充功能
+### 安裝並設定擴充功能
 
 在相同事件轉送屬性中，選取 **[!UICONTROL 擴充功能]，** 則 **[!UICONTROL 目錄]** 以顯示可安裝的擴充功能。 從這裡，搜尋Mailchimp擴充功能並選取 **[!UICONTROL 安裝]**.
 
@@ -105,7 +105,7 @@ Mailchimp [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能�
 
 在中使用此擴充功能時 [規則](../../../ui/managing-resources/rules.md)，擴充功能會隨著每個事件傳送數個資料值至Mailchimp。 對於一般實作，您可以設定 [Adobe Experience Platform Web SDK擴充功能](../../client/web-sdk/overview.md) 以傳送該資料至 [!DNL Platform Edge Network] 供擴充功能在事件轉送屬性中使用。
 
-此擴充功能所需的資料可以作為XDM資料或非XDM資料從Web SDK傳送。 請參閱檔案以深入瞭解 [傳送XDM資料](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+此擴充功能所需的資料可以任一XDM資料形式從Web SDK傳送(使用 [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) 或非XDM資料(使用 [`data`](/help/web-sdk/commands/sendevent/data.md) 物件)。
 
 例如，如果客戶進行購買或在您的網站上註冊了事件，您可以使用此擴充功能透過Mailchimp傳送確認電子郵件。 從Web SDK傳送所需資訊至Edge Network後，擴充功能會透過Mailchimp觸發電子郵件。
 

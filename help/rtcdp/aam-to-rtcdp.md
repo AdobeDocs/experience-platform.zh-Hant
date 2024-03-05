@@ -2,10 +2,10 @@
 title: 從 Audience Manager 到 Real-Time CDP 的進化
 description: 在規劃從 Audience Manager 移轉到 Real-Time CDP 之前，請注意需考量的事項。
 exl-id: 83ab9a5d-9abc-4072-b449-e2a9ecd48639
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 84%
+source-wordcount: '498'
+ht-degree: 88%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe 建議您依照下列方式將區段分類：
 
 ## 2. 哪些區段對於透過 [!UICONTROL Audience Manager 來源連接器]傳送至關重要？
 
-根據其評估標準，沒有資料相依性、沒有目的地或啟動挑戰，且其分段規則可在之後的日期透過 [Adobe Experience Platform Web SDK](/help/edge/web-sdk-faq.md) 之類的 Real-Time CDP 資料集合建立的區段應透過 Audience Manager 來源連接器傳送。
+根據其評估標準，沒有資料相依性、沒有目的地或啟動挑戰，且其分段規則可在之後的日期透過 [Adobe Experience Platform Web SDK](/help/web-sdk/faq.md) 之類的 Real-Time CDP 資料集合建立的區段應透過 Audience Manager 來源連接器傳送。
 
 ## 3. 您會使用 [!UICONTROL Experience Cloud 對象]目的地將資料帶回 Audience Manager 嗎？
 

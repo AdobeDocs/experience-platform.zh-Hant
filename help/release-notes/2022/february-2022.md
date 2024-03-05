@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 發行說明 (2022 年 2 月)
 description: Adobe Experience Platform 2022 年 2 月版發行說明。
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 26%
+source-wordcount: '1014'
+ht-degree: 16%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 3 月 7 日**
+**發行日期： 2022年3月7日**
 
 >[!NOTE]
 >
@@ -33,13 +33,13 @@ Adobe Experience Platform提供多個 [!DNL dashboards] 您可以透過檢視有
 
 | 功能 | 說明 |
 | --- | --- |
-| 新的標準目的地Widget | 下列標準Widget可讓您視覺化與目的地相關的不同量度。<ul><li>目的地最近啟用的區段。 此Widget會根據所選目的地，以遞減順序顯示最近啟用的前五個區段。</li><li>對象規模趨勢. 此Widget針對已對應至目的地帳戶的區段，描述一段時間內設定檔計數之間的關係。</li><li>按身份識別的未對應區段. 此 Widget 會針對特定目的地和身分識別列出按遞減的身分識別計數排名的前五個未對應區段。</li><li>按身分識別的未對應區段. 此Widget列出前五個對應區段。 區段會根據其各自符合從Widget下拉式選單中所選目的地ID的來源ID計數，從高到低排序。</li><li>常見對象. 此 Widget 會提供在頁面頂部選擇的目的地帳戶中啟動的前五個區段的清單，以及在 Widget 下拉式清單中選取的目的地。</li></ul> 如需可用標準Widget的詳細資訊，請參閱 [目的地儀表板檔案。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
+| 新的標準目的地Widget | 下列標準Widget可讓您視覺化與目的地相關的不同量度。<ul><li>目的地最近啟用的區段。 此Widget會根據所選目的地，以遞減順序顯示最近啟用的前五個區段。</li><li>對象人數趨勢。 此Widget針對已對應至目的地帳戶的區段，描述一段時間內設定檔計數之間的關係。</li><li>依身分割槽分的未對應區段。 此Widget會依指定目的地和身分的遞減身分計數，列出前五個未對應的區段。</li><li>依身分割槽分的對應區段。 此Widget列出前五個對應區段。 區段會根據其各自符合從Widget下拉式選單中所選目的地ID的來源ID計數，從高到低排序。</li><li>通用對象。 此Widget提供在頁面上方所選目的地帳戶，以及在下拉式Widget中選取的目的地啟用的前五個區段清單。</li></ul> 如需可用標準Widget的詳細資訊，請參閱 [目的地儀表板檔案。](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#standard-widgets). |
 
 如需詳細資訊，請參閱 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md).
 
 ## 資料收集 {#data-collection}
 
- Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將資料傳送至Adobe Experience Platform Edge Network，在那裡可以擴充和轉換資料，並將資料分發至Adobe或非Adobe目的地。
 
 **新功能**
 
@@ -47,7 +47,7 @@ Adobe Experience Platform提供多個 [!DNL dashboards] 您可以透過檢視有
 | --- | --- |
 | 改善資料流設定的UI工作流程 | 更新在資料收集UI中建立新資料流的工作流程。 將服務新增至資料流時，只有您有權存取的服務會包含在選項清單中。 請參閱以下指南： [設定資料串流](../../datastreams/overview.md) 以取得詳細資訊。 |
 | 資料收集的資料準備 | 如果您使用Adobe Experience Platform Web SDK，您現在可以運用資料準備功能，將您的資料對應至伺服器端的Experience Data Model (XDM)。 請參閱以下小節： [資料收集的資料準備](../../datastreams/data-prep.md) 如需詳細資訊，請參閱資料串流指南。 |
-| 第一方裝置ID | 您現在可以在使用Adobe Experience Platform Web SDK收集客戶資料時，將自己的裝置ID傳送至Platform Edge Network，針對第三方Cookie有效期限近期的瀏覽器限制提供因應措施。 請參閱以下指南： [第一方裝置ID](../../edge/identity/first-party-device-ids.md) 以取得詳細資訊。 |
+| 第一方裝置ID | 您現在可以在使用Adobe Experience Platform Web SDK收集客戶資料時，將自己的裝置ID傳送至Platform Edge Network，針對第三方Cookie有效期限近期的瀏覽器限制提供因應措施。 請參閱以下指南： [第一方裝置ID](../../web-sdk/identity/first-party-device-ids.md) 以取得詳細資訊。 |
 
 如需Platform資料收集的詳細資訊，請參閱 [資料收集概觀](../../collection/home.md).
 

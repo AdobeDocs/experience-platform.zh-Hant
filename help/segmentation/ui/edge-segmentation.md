@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Edge Segmentation UI指南
 description: 瞭解如何使用邊緣分段，在邊緣即時評估Platform中的區段定義，啟用相同頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >邊緣區段現在可供所有Platform使用者普遍使用。 如果您在Beta版期間建立邊緣區段定義，這些區段定義仍可繼續運作。
 
-邊緣區段是即時評估Adobe Experience Platform中區段的能力 [在邊緣](../../edge/home.md)，啟用相同頁面和下一頁個人化使用案例。
+邊緣區段是即時評估Adobe Experience Platform中區段的能力 [在邊緣](../../web-sdk/home.md)，啟用相同頁面和下一頁個人化使用案例。
 
 >[!IMPORTANT]
 >

@@ -3,9 +3,9 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '906'
 ht-degree: 9%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 9%
 
 ## 先決條件 {#prerequisites}
 
-這項整合由以下提供技術支援 [Adobe Experience Platform Web SDK](../../../edge/home.md) 或 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). 您必須使用其中一個SDK才能使用此目的地。
+這項整合由以下提供技術支援 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) 或 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/). 您必須使用其中一個SDK才能使用此目的地。
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ ht-degree: 9%
 ]
 ```
 
-如果您沒有使用 [標籤](../../../tags/home.md) 若要部署Experience PlatformWeb SDK，請使用 [處理來自事件的回應](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) 功能以檢視匯出的資料。
+如果您沒有使用 [標籤](/help/tags/home.md) 若要部署Experience Platform Web SDK，請使用 [命令回應](/help/web-sdk/commands/command-responses.md) 以檢視匯出的資料。
 
 來自Adobe Experience Platform的JSON回應可加以剖析，以找出您要與Adobe Experience Platform整合之應用程式的對應整合別名。 對象ID可傳入應用程式的程式碼中作為定位引數。 以下是目標回應特有的內容範例。
 

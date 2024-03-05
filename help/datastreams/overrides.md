@@ -2,10 +2,10 @@
 title: 設定資料流覆寫
 description: 了解如何在資料流 UI 中設定資料流覆寫並透過 Web SDK 啟動它們。
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 11feeae0409822f0b1ccba2df263f0be466d54e3
+source-git-commit: 90493d179e620604337bda96cb3b7f5401ca4a81
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 67%
+source-wordcount: '1180'
+ht-degree: 61%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 67%
 
 >[!IMPORTANT]
 >
->僅支援資料流覆寫 [Web SDK](../edge/home.md) 和 [行動SDK](https://developer.adobe.com/client-sdks/home/) 整合。 [伺服器API](../server-api/overview.md) 整合目前不支援資料流覆寫。
+>僅支援資料流覆寫 [Web SDK](../web-sdk/home.md) 和 [行動SDK](https://developer.adobe.com/client-sdks/home/) 整合。 [伺服器API](../server-api/overview.md) 整合目前不支援資料流覆寫。
 ><br>
 >當您需要將不同的資料發送到不同的資料流時，應使用資料流覆寫。請勿對個人化使用案例或同意資料使用資料流覆寫。
 
@@ -116,110 +116,155 @@ ht-degree: 67%
 
 ## 透過 Web SDK 將覆寫傳送至 Edge Network {#send-overrides-web-sdk}
 
->[!NOTE]
->
->如果不透過 Web SDK 命令傳送設定覆寫，也可選擇將設定覆寫新增到 Web SDK [標記擴充功能](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)。
+在資料收集UI中設定資料流覆寫後，您可以透過Web SDK或Mobile SDK將覆寫傳送至Edge Network。
 
-在資料收集 UI 中[設定資料流覆寫](#configure-overrides)後，現在即可透過 Web SDK 將覆寫傳送到 Edge Network。
+* **Web SDK**：請參閱 [資料流設定覆寫](../web-sdk/commands/datastream-overrides.md#library) 標籤擴充功能指示和JavaScript程式庫程式碼範例說明。
+* **行動SDK**：請參閱下文。
 
-如果您使用Web SDK，請透過將覆寫傳送至Edge Network `edgeConfigOverrides` command是啟動資料流設定覆寫的第二個也是最後一個步驟。
+### 透過行動SDK覆寫資料串流ID {#id-override-mobile}
 
-透過 `edgeConfigOverrides`Web SDK 命令傳送資料流設定覆寫到 Edge Network。這個命令會建立傳遞至的資料流覆寫 [!DNL Edge Network] 在下一個指令上。 如果您使用 `configure` 命令，則會針對每個請求傳遞覆寫。
+以下範例說明資料串流ID覆寫在行動SDK整合上的外觀。 選取下面的標籤以檢視 [!DNL iOS] 和 [!DNL Android] 範例。
 
-此 `edgeConfigOverrides` 命令會建立資料流覆寫，這些覆寫會傳遞至 [!DNL Edge Network] 在下一個指令上。
+>[!BEGINTABS]
 
-設定覆寫和 `configure` 命令一起傳送時，會隨附在下列 Web SDK 命令中。
+>[!TAB iOS (Swift)]
 
-* [sendEvent](../edge/fundamentals/tracking-events.md)
-* [setConsent](../edge/consent/iab-tcf/overview.md)
-* [getIdentity](../edge/identity/overview.md)
-* [appendIdentityToUrl](../edge/identity/id-sharing.md#cross-domain-sharing)
-* [configure](../edge/fundamentals/configuring-the-sdk.md)
+此範例顯示資料串流ID覆寫在Mobile SDK中的外觀 [!DNL iOS] 整合。
 
-個別命令的設定選項可能會覆寫全域指定的選項。
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
 
-### 透過Web SDK傳送設定覆寫 `sendEvent` 命令 {#send-event}
-
-下面的範例會顯示在 `sendEvent` 命令時設定覆寫可能的情況。
-
-```js {line-numbers="true" highlight="5-25"}
-alloy("sendEvent", {
-  xdm: {
-    /* ... */
-  },
-  edgeConfigOverrides: {
-    datastreamId: "{DATASTREAM_ID}"
-    com_adobe_experience_platform: {
-      datasets: {
-        event: {
-          datasetId: "SampleEventDatasetIdOverride"
-        }
-      }
-    },
-    com_adobe_analytics: {
-      reportSuites: [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
-        ]
-    },
-    com_adobe_identity: {
-      idSyncContainerId: "1234567"
-    },
-    com_adobe_target: {
-      propertyToken: "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  }
-});
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
 ```
 
-| 參數 | 說明 |
-|---|---|
-| `edgeConfigOverrides.datastreamId` | 使用此參數讓單一要求可前往和 `configure` 命令所定義的資料流不同的資料流。 |
+>[!TAB Android™ (Kotlin)]
 
-### 透過Web SDK傳送設定覆寫 `configure` 命令 {#send-configure}
+此範例顯示資料串流ID覆寫在Mobile SDK中的外觀 [!DNL Android] 整合。
 
-下面的範例會顯示在 `configure` 命令時設定覆寫可能的情況。
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
 
-```js {line-numbers="true" highlight="8-30"}
-alloy("configure", {
-  defaultConsent: "in",
-  edgeDomain: "etc",
-  edgeBasePath: "ee",
-  datastreamId: "{DATASTREAM_ID}",
-  orgId: "org",
-  debugEnabled: true,
-  edgeConfigOverrides: {
-    "com_adobe_experience_platform": {
-      "datasets": {
-        "event": {
-          datasetId: "SampleProfileDatasetIdOverride"
-        }
-      }
-    },
-    "com_adobe_analytics": {
-      "reportSuites": [
-        "MyFirstOverrideReportSuite",
-        "MySecondOverrideReportSuite",
-        "MyThirdOverrideReportSuite"
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### 透過行動SDK進行資料流設定覆寫 {#config-override-mobile}
+
+以下範例說明資料流設定覆寫在行動SDK整合上看起來是什麼樣子。 選取下面的標籤以檢視 [!DNL iOS] 和 [!DNL Android] 範例。
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+此範例顯示資料流設定覆寫在行動SDK中看起來是什麼樣子 [!DNL iOS] 整合。
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
       ]
-    },
-    "com_adobe_identity": {
-      "idSyncContainerId": "1234567"
-    },
-    "com_adobe_target": {
-      "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
-    }
-  },
-  onBeforeEventSend: function() { /* … */ });
-};
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
 ```
 
-## 透過Mobile SDK將覆寫傳送至Edge Network {#send-overrides-mobile-sdk}
+>[!TAB Android (Kotlin)]
 
-晚於 [設定資料流覆寫](#configure-overrides) 在資料收集UI中，您現在可以透過Mobile SDK將覆寫傳送至Edge Network。
+此範例顯示資料流設定覆寫在行動SDK中看起來是什麼樣子 [!DNL Android] 整合。
 
-若要瞭解如何將覆寫傳送至Edge Network，請參閱 [使用sendEvent傳送覆寫的相關指南](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) 或 [使用規則傳送覆寫的指南](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
 
 ## 裝載範例 {#payload-example}
 

@@ -2,9 +2,9 @@
 title: 使用Adobe Experience Platform Web SDK處理客戶同意資料
 description: 瞭解如何整合Adobe Experience Platform Web SDK，以便在Adobe Experience Platform中處理客戶同意資料。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1311'
 ht-degree: 1%
 
 ---
@@ -24,15 +24,15 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 本指南會遵循在UI中使用標籤擴充功能設定SDK的工作流程。 如果您不想使用擴充功能，且想要直接在網站上內嵌獨立SDK版本，請參閱下列檔案，而非本指南：
 
-* [設定資料流](../../../datastreams/overview.md)
-* [安裝SDK](../../../edge/fundamentals/installing-the-sdk.md)
-* [設定SDK的同意命令](../../../edge/consent/supporting-consent.md)
+* [設定資料流](/help/datastreams/overview.md)
+* [安裝SDK](/help/web-sdk/install/overview.md)
+* [設定SDK的同意命令](/help/web-sdk/commands/configure/defaultconsent.md)
 
 本指南中的安裝步驟需要您實際瞭解標籤擴充功能及其在Web應用程式中的安裝方式。 如需詳細資訊，請參閱下列檔案：
 
-* [標記總覽](../../../tags/home.md)
-* [快速入門手冊](../../../tags/quick-start/quick-start.md)
-* [發佈概觀](../../../tags/ui/publishing/overview.md)
+* [標記總覽](/help/tags/home.md)
+* [快速入門手冊](/help/tags/quick-start/quick-start.md)
+* [發佈概觀](/help/tags/ui/publishing/overview.md)
 
 ## 設定資料流
 
@@ -110,14 +110,7 @@ Adobe Experience Platform Web SDK可讓您擷取同意管理平台(CMP)產生的
 
 ### `setConsent` 語法
 
->[!NOTE]
->
->如需Platform SDK命令常用語法的簡介，請參閱以下檔案： [正在執行命令](../../../edge/fundamentals/executing-commands.md).
-
-此 `setConsent` 命令需要兩個引數：
-
-1. 指出命令型別的字串(在此案例中， `"setConsent"`)
-1. 包含單一陣列型別屬性的裝載物件： `consent`. 此 `consent` 陣列必須至少包含一個物件，以提供Adobe標準所需的同意欄位。
+此 [`setConsent`](/help/web-sdk/commands/setconsent.md) 命令需要包含單一陣列型別屬性的裝載物件： `consent`. 此 `consent` 陣列必須至少包含一個物件，以提供Adobe標準所需的同意欄位。
 
 以下範例顯示Adobe標準所需的同意欄位 `setConsent` 呼叫：
 
@@ -139,7 +132,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -200,7 +193,7 @@ var setConsent = function () {
 
 ## 處理SDK回應
 
-全部 [!DNL Platform SDK] 命令會傳回promise ，指出呼叫成功或失敗。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 請參閱以下小節： [處理成功或失敗](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) 如需特定範例，請參閱執行SDK命令的指南。
+全部 [!DNL Platform SDK] 命令會傳回promise ，指出呼叫成功或失敗。 然後，您可以將這些回應用於其他邏輯，例如向客戶顯示確認訊息。 另請參閱 [命令回應](/help/web-sdk/commands/command-responses.md) 以取得詳細資訊。
 
 一旦您成功建立 `setConsent` 透過SDK進行的呼叫，您可以使用平台UI中的設定檔檢視器，驗證資料是否登陸設定檔存放區。 請參閱以下小節： [依身分瀏覽設定檔](../../../profile/ui/user-guide.md#browse-identity) 以取得詳細資訊。
 

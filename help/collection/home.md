@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料彙集概觀
 description: 瞭解在Adobe Experience Platform中收集客戶體驗資料相關的各種技術。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 7%
+source-wordcount: '489'
+ht-degree: 6%
 
 ---
 
@@ -27,7 +27,7 @@ Adobe Experience Platform提供了一套技術，可讓您從使用者端來源�
 * [標記](../tags/home.md)
 * [資料流](../datastreams/overview.md)
 * [事件轉送](../tags/ui/event-forwarding/overview.md)
-* [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Adobe Experience Platform Web SDK](../web-sdk/home.md)
 * [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
 * [邊緣網路伺服器 API](../server-api/overview.md)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)

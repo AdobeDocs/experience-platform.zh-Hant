@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用「資料準備」將部分列更新傳送到「即時客戶個人檔案」
 description: 瞭解如何使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 * 只有當傳送部分列更新至時，才應該使用串流更新插入方法 [!DNL Real-Time Customer Profile]. 部分列更新為 **非** 由資料湖使用。
 * 串流更新插入方法不支援更新、取代和移除身分。 如果新身分不存在，則會建立新身分。 因此， `identity` 作業必須一律設定為建立。 如果身分已經存在，則操作是無操作。
-* 串流更新插入方法目前不支援 [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=zh-Hant) 和 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* 串流更新插入方法目前不支援 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) 和 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## 後續步驟
 

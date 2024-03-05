@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 同意和偏好設定結構描述欄位群組
 description: 瞭解同意和偏好設定結構描述欄位群組。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ ht-degree: 0%
 
 ## 處理同意和偏好設定變更
 
-當客戶在您的網站上變更其同意或偏好設定時，應使用收集這些變更並立即執行 [Adobe Experience Platform Web SDK](../../../edge/consent/supporting-consent.md). 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
+當客戶在您的網站上變更其同意或偏好設定時，應使用收集這些變更並立即執行 [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
 
 ## 後續步驟
 

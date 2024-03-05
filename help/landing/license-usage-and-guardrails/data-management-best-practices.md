@@ -2,9 +2,9 @@
 title: 資料管理授權權益最佳實務
 description: 了解可以更有效管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '2264'
+source-wordcount: '2237'
 ht-degree: 2%
 
 ---
@@ -109,8 +109,8 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 | Adobe Audience Manager來源篩選 | 建立Adobe Audience Manager來源連線時，您可以挑選要帶入的區段和特徵 [!DNL data lake] 和即時客戶個人檔案，而非擷取整個Audience Manager資料。 請參閱以下指南： [建立Audience Manager來源連線](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) 以取得詳細資訊。 |
 | Adobe Analytics資料準備 | 您可以使用 [!DNL Data Prep] 功能性，方便您建立Analytics來源連線，篩選掉使用案例不需要的資料。 到 [!DNL Data Prep]，您可以定義哪些屬性/欄需要發佈至設定檔。 您也可以提供條件陳述式，告知Platform資料應該發佈至設定檔，還是僅發佈至 [!DNL data lake]. 請參閱以下指南： [建立Analytics來源連線](../../sources/tutorials/ui/create/adobe-applications/analytics.md) 以取得詳細資訊。 |
 | 支援為設定檔啟用/停用資料集 | 若要將資料擷取至即時客戶個人檔案，您必須啟用資料集以用於個人檔案存放區。 如此一來，會將新增至 [!DNL Addressable Audience] 和 [!DNL Profile Richness] 權益。 客戶設定檔使用案例不再需要資料集後，您可以停用該資料集與設定檔的整合，以確保您的資料符合授權規範。 請參閱以下指南： [為設定檔啟用和停用資料集](../../catalog/datasets/enable-for-profile.md) 以取得詳細資訊。 |
-| Web SDK和Mobile SDK資料排除 | Web和Mobile SDK收集的資料有兩種型別：自動收集的資料以及開發人員明確收集的資料。 若要更妥善地管理授權法規遵循，您可以透過內容設定，在SDK的組態中停用自動資料收集。 您的開發人員也可以移除或設定自訂資料。 請參閱以下指南： [設定SDK基礎知識](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#fundamentals) 以取得詳細資訊。 |
-| 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Platform，您可以移除規則動作中的對應以在所有事件中排除資料，或是將條件新增至規則，讓資料僅針對特定事件引發，藉此排除傳送的資料。 請參閱以下檔案： [事件和條件](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)以取得詳細資訊。 |
+| Web SDK和Mobile SDK資料排除 | Web和Mobile SDK收集的資料有兩種型別：自動收集的資料以及開發人員明確收集的資料。 若要更妥善地管理授權法規遵循，您可以透過內容設定，在SDK的組態中停用自動資料收集。 您的開發人員也可以移除或設定自訂資料。 |
+| 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Platform，您可以移除規則動作中的對應以在所有事件中排除資料，或是將條件新增至規則，讓資料僅針對特定事件引發，藉此排除傳送的資料。 請參閱以下檔案： [事件和條件](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if) 以取得詳細資訊。 |
 | 在來源層級篩選資料 | 您可以使用邏輯和比較運運算元，在建立連線並將資料擷取到Experience Platform之前，先篩選來源中的列層級資料。 如需詳細資訊，請閱讀以下指南： [篩選來源的資料列層級資料，使用 [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
@@ -167,7 +167,6 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 | [體驗事件有效期](../../profile/event-expirations.md) | 為擷取到啟用設定檔的資料集中的所有事件套用到期時間。 請聯絡您的Adobe客戶團隊或客戶服務，以啟用此功能。 |
 | [Adobe Analytics資料準備篩選器](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | 套用 [!DNL Kafka] 篩選以從內嵌中排除不必要的資料 |
 | [Adobe Audience Manager來源聯結器篩選器](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | 套用Audience Manager來源連線篩選條件，從擷取中排除不必要的資料 |
-| [Alloy SDK資料篩選器](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#fundamentals) | 套用Alloy篩選器以從擷取中排除不必要的資料 |
 | [事件轉寄資料篩選器](../../tags/ui/event-forwarding/overview.md) | 套用伺服器端 [!DNL Kafka] 篩選條件來從內嵌中排除不必要的資料。  請參閱以下檔案： [標籤規則](../../tags/ui/managing-resources/rules.md) 以取得其他資訊。 |
 | [授權使用情況儀表板UI](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | 檢視貴組織授權相關資料的快照，以供Experience Platform |
 | [資料集重疊報表API](../../profile/tutorials/dataset-overlap-report.md) | 輸出對可定址對象貢獻最大的資料集 |

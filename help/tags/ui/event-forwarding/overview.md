@@ -3,9 +3,9 @@ title: 事件轉送概觀
 description: 了解 Adobe Experience Platform 中的事件轉送功能，它可讓您使用 Platform Edge Network 執行工作，而不變更標記實施。
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 2005238d2e06ed91fd4b0835be38a4b7b8ecf3b4
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 7%
 
 ---
@@ -30,7 +30,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 >
 >如需事件轉送如何在Platform資料收集生態系統中適應的詳細資訊，請參閱 [資料收集概觀](../../../collection/home.md).
 
-事件轉送與Adobe Experience Platform結合 [Web SDK](../../../edge/home.md) 和 [行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) 提供下列優點：
+事件轉送與Adobe Experience Platform結合 [Web SDK](/help/web-sdk/home.md) 和 [行動SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) 提供下列優點：
 
 **效能**：
 
@@ -38,7 +38,7 @@ Adobe Experience Platform中的事件轉送可讓您將收集的事件資料傳�
 * 減少載入網頁所需的時間，以提升網站效能。
 * 減少所需的使用者端技術數量，以提供您的體驗並將資料傳送至許多目的地。
 
-**資料控管**:
+**資料控管**：
 
 * 增加透明度和控制跨所有屬性傳送哪些資料。
 
