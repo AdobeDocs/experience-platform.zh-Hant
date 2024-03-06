@@ -4,7 +4,8 @@ user-guide-title: 體驗資料模型 (XDM) 系統說明
 breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
-source-git-commit: f0d437743b33818c27de94eb522227bb950e60cb
+role: Developer
+source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 15%
@@ -109,7 +110,7 @@ ht-degree: 15%
 * 資料型別 {#data-types}
    * [帳戶詳細資料](./data-types/account-details.md)
    * [廣告插播](./data-types/ad-break.md)
-   * [位址](./data-types/address.md)
+   * [地址](./data-types/address.md)
    * [廣告詳細資訊](./data-types/advertising-details-information.md)
    * [廣告Pod詳細資訊](./data-types/advertising-pod-details-information.md)
    * [應用程式](./data-types/application.md)
