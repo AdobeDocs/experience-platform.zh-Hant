@@ -2,10 +2,10 @@
 title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2700'
-ht-degree: 55%
+source-wordcount: '2737'
+ht-degree: 54%
 
 ---
 
@@ -101,7 +101,7 @@ ht-degree: 55%
 | [!UICONTROL 協力廠商 ID 同步容器 ID] | 用於協力廠商 ID 同步之容器的數值 ID。 |
 | [!UICONTROL 容器 ID 覆寫] | 在此區段中，您可以定義其他第三方ID同步容器ID，以用來覆寫預設的ID。 |
 | [!UICONTROL 存取類型] | 定義 Edge Network 接受資料流的驗證類型。 <ul><li>**[!UICONTROL 混合驗證]**：選取此選項時，Edge Network 會同時接受已驗證和未驗證的要求。當您計劃使用 Web SDK 或 [Mobile SDK](https://developer.adobe.com/client-sdks/home/) 以及[伺服器 API](../server-api/overview.md) 時，請選取此選項。 </li><li>**[!UICONTROL 僅限已驗證]**：選取此選項時，Edge Network 只接受已驗證的要求。當您計劃只使用伺服器 API 並希望防止 Edge Network 處理任何未驗證的要求時，請選取此選項。</li></ul> |
-| [!UICONTROL Media Analytics] | 透過Experience Platform SDK或Media Edge API啟用處理Edge Network整合的串流追蹤資料。 若要瞭解Media Analytics，請參閱 [檔案](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). |
+| [!UICONTROL Media Analytics] | 透過Experience Platform SDK或Media Edge API啟用處理Edge Network整合的串流追蹤資料。 若要瞭解Media Analytics，請參閱 [檔案](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=zh-Hant). |
 
 在這裡，如果您要設定 Experience Platform 的資料流，請依照[資料收集的資料準備](./data-prep.md)教學課程的說明，將資料對應至 Platform 事件綱要，然後才返回本指南。否則，請選取「**[!UICONTROL 儲存]**」，並繼續進行下一區段。
 
@@ -142,6 +142,7 @@ ht-degree: 55%
 | 設定 | 說明 |
 | --- | --- |
 | [!UICONTROL 報告套裝 ID] | **(必要)** 您要將資料傳送到的 Analytics 報告套裝的 ID。此 ID 可以在「[!UICONTROL 管理員] > [!UICONTROL 報告套裝]」下的 Adobe Analytics UI 中找到。如果指定多個報告套裝，則資料會複製到每個報告套裝。 |
+| [!UICONTROL 訪客ID名稱空間] | （選用）您要用於Adobe Analytics的名稱空間 [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=zh-Hant). 當您傳送具有為此名稱空間指定的值的事件時，系統會自動將其用作 `visitorID` Analytics中的。 |
 | [!UICONTROL 報告套裝覆寫] | 在本區段中，您可以新增其他報告套裝 ID，以用於覆寫預設的報告套裝 ID。 |
 
 ### Adobe Audience Manager 設定 {#audience-manager}
@@ -173,7 +174,7 @@ ht-degree: 55%
 |---| --- |
 | [!UICONTROL 事件資料集] | **(必要)** 選取要將客戶事件資料串流到的 Platform 資料集。此綱要必須使用 [XDM 體驗事件類別](../xdm/classes/experienceevent.md)。若要新增其他資料集，請選取&#x200B;**[!UICONTROL 新增事件資料集]**。 |
 | [!UICONTROL 設定檔資料集] | 選取要將客戶屬性資料傳送到的 Platform 資料集。此綱要必須使用 [XDM 個人設定檔類別](../xdm/classes/individual-profile.md)。 |
-| [!UICONTROL Offer Decisioning] | 啟用Web SDK實作的Offer decisioning。 請參閱以下指南： [搭配Web SDK使用Offer Decisioning](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) 以取得更多實作詳細資訊。<br><br>如需有關 Offer Decisioning 功能的詳細資訊，請參閱 [Adobe Journey Optimizer 文件](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html)。 |
+| [!UICONTROL Offer Decisioning] | 啟用Web SDK實作的Offer decisioning。 請參閱以下指南： [搭配Web SDK使用Offer Decisioning](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) 以取得更多實作詳細資訊。<br><br>如需有關 Offer Decisioning 功能的詳細資訊，請參閱 [Adobe Journey Optimizer 文件](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant)。 |
 | [!UICONTROL 邊緣分段] | 啟用 [邊緣細分](../segmentation/ui/edge-segmentation.md) 用於此資料流。 當 SDK 透過支援邊緣分段的資料流傳送資料時，相關設定檔的任何更新的區段會籍都會在回應中傳回。<br><br>此選項可以和[!UICONTROL 個人化目的地] (用於[下一頁個人化使用案例)](../destinations/ui/activate-edge-personalization-destinations.md) 結合在一起使用。 |
 | [!UICONTROL 個人化目的地] | 啟用[!UICONTROL 邊緣分段]核取方塊後再啟用此功能時，此選項可讓資料流連線至個人化目的地，例如[自訂個人化](../destinations/catalog/personalization/custom-personalization.md)。<br><br>如需有關[設定個人化目的地](../destinations/ui/activate-edge-personalization-destinations.md)的具體步驟，請參閱目的地文件。 |
 | [!UICONTROL Adobe Journey Optimizer] | 啟用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 用於此資料流。 <br><br>啟用此選項可讓資料流從 [!DNL Adobe Journey Optimizer] 中以 Web 和應用程式為主的傳入行銷活動傳回個人化內容。此選項需要[!UICONTROL 邊緣分段]才能啟用。如果 [!UICONTROL 邊緣細分] 未勾選，則此選項會呈現灰色。 |
