@@ -1,9 +1,9 @@
 ---
 title: Merkury Enterprise身分解析來源概觀
 description: 瞭解如何使用使用者介面將Merkury企業身分識別解析連線至Adobe Experience Platform。
-last-substantial-update: 2023-12=12
+last-substantial-update: 2023-12-12T00:00:00Z
 badge: Beta
-source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
+source-git-commit: 2f277e835333343ea22e52e05aa84a63f1d3d8ec
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%

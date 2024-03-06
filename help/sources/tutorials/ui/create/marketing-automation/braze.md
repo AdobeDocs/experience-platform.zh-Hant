@@ -3,18 +3,18 @@ title: 在UI中為Braze資料建立資料流
 description: 瞭解如何使用Adobe Experience Platform UI為您的Braze帳戶建立資料流。
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 1%
 
 ---
 
-# 建立 [!DNL Braze] ui中的來源連線
+# 建立 [!DNL Braze Currents] ui中的來源連線
 
 >[!NOTE]
 >
->此 [!DNL Braze] 來源為測試版。 請閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+>此 [!DNL Braze Currents] 來源為測試版。 請閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 [!DNL Braze] 促進消費者與品牌之間以客戶為中心的即時互動。 [!DNL Braze Currents] 是來自Braze平台的參與事件即時資料流，是最強大但最精細的匯出專案 [!DNL Braze] 平台。
 
@@ -44,7 +44,7 @@ ht-degree: 1%
 
 在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在 *行銷自動化* 類別，選取 **[!UICONTROL 釺焊]**，然後選取 **[!UICONTROL 新增資料]**.
+在 *行銷自動化* 類別，選取 **[!UICONTROL 銅線電流]**，然後選取 **[!UICONTROL 新增資料]**.
 
 ![已選取「釺焊電流」來源的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-建立連線後，您必須收集下列認證值，然後您會在「硬碟控制面板」中提供這些值，以傳送資料至 [!DNL Platform]. 如需詳細資訊，請閱讀 [!DNL Braze] [導覽至洋流的指南](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+建立連線後，您必須收集下列認證值，然後您會在「硬碟控制面板」中提供這些值，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀 [!DNL Braze] [導覽至洋流的指南](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | 欄位 | 說明 |
-| ---------- | ----------- |
-| `Client ID` | 與您的關聯的使用者端ID [!DNL Platform] 來源。 |
-| `Client Secret` | 與您的關聯的使用者端密碼 [!DNL Platform] 來源。 |
-| `Tenant ID` | 與您的相關聯的租使用者ID [!DNL Platform] 來源。 |
-| `Sandbox Name` | 與您的關聯的沙箱 [!DNL Platform] 來源。 |
-| `Dataflow ID` | 與您的關聯的資料流ID [!DNL Platform] 來源。 |
-| `Streaming Endpoint` | 與您的相關聯的串流端點 [!DNL Platform] 來源。 請注意，Braze會自動將其轉換為批次串流端點。 |
+| --- | --- |
+| 使用者端ID | 與您的Experience Platform來源相關聯的使用者端ID。 |
+| 使用者端密碼 | 與您的Experience Platform來源相關聯的使用者端密碼。 |
+| 租使用者ID | 與您的Experience Platform來源相關聯的租使用者ID。 |
+| 沙箱名稱 | 與您的Experience Platform來源關聯的沙箱。 |
+| 資料流ID | 與您的Experience Platform來源相關聯的資料流ID。 |
+| 串流端點 | 與您的Experience Platform來源相關聯的串流端點。 **注意**： [!DNL Braze] 自動將其轉換為批次串流端點。 |
 
 ### 設定 [!DNL Braze Currents] 將資料串流至您的資料來源
 
