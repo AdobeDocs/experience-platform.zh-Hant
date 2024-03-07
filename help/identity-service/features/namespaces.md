@@ -2,9 +2,9 @@
 title: 身分名稱空間總覽
 description: 瞭解Identity Service中的身分識別名稱空間。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1920'
 ht-degree: 12%
 
 ---
@@ -134,6 +134,10 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 根據您的組織資料和使用案例，您可能需要自訂名稱空間。 自訂名稱空間可透過以下方式建立： [[!DNL Identity Service]](../api/create-custom-namespace.md) API或透過UI。
 
 若要建立自訂名稱空間，請選取 **[!UICONTROL 建立身分名稱空間]**.
+
+>[!TIP]
+>
+>整合身分是用來連線其他系統的名稱空間。 它們不會用於身分解析，也不會用於拼接身分。 選取 **[!UICONTROL 檢視整合身分]** 以更新清單並包含整合身分。 不過，整合身分預設為隱藏，因為這些身分是僅限檢視的，您不需要加以設定。
 
 ![在身分工作區中建立身分名稱空間按鈕。](../images/namespace/create-identity-namespace.png)
 
