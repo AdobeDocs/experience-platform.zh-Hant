@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 管理Privacy Service UI中的隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 14%
+source-wordcount: '1511'
+ht-degree: 13%
 
 ---
 
@@ -143,6 +143,8 @@ ht-degree: 14%
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 選取 **[!UICONTROL 工作型別]** 請求（「刪除」或「存取」）以及清單中一個或多個可用產品的完整清單。
+
+Privacy Service支援兩種針對個人資料的工作請求： [!UICONTROL 存取] （讀取）和/或 [!UICONTROL 刪除]. 您可以提交請求，以接收產品中與查詢主題相關的所有資訊，或請求刪除與查詢主題相關的所有資訊。
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 

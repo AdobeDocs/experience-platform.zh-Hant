@@ -5,7 +5,7 @@ title: 使用UI建立及編輯資料型別
 type: Tutorial
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯資料型別。
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 本教學課程涵蓋在Platform使用者介面中建立和編輯自訂資料型別的步驟。
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
 本指南需要實際瞭解XDM系統。 請參閱 [XDM概覽](../../home.md) 介紹XDM在Experience Platform生態系統內的角色，以及 [結構描述組合的基本面](../../schema/composition.md) 瞭解資料型別對XDM結構描述的貢獻。
 
@@ -105,7 +105,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 將欄位新增至資料型別後，請選取 **[!UICONTROL 儲存]** 以儲存變更並將資料型別新增至 [!DNL Schema Library].
 
-## 將資料型別新增到結構描述
+## 將資料型別新增到結構描述 {#add-data-type}
 
 建立資料型別後，您就可以開始在結構描述中使用它。 由於XDM結構描述是由類別和零個或多個欄位群組所組成，因此資料型別提供的欄位無法直接新增到結構描述。 反之，它們必須包含在類別或欄位群組中。
 
@@ -123,7 +123,7 @@ Adobe Experience Platform提供許多標準資料型別，可用於涵蓋各種�
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 本指南說明如何使用Platform UI建立及編輯資料型別。 如需功能的詳細資訊， [!UICONTROL 方案] 工作區，請參閱 [[!UICONTROL 方案] 工作區概觀](../overview.md).
 

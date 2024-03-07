@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3671'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 >
 >如需架構建立流程的完整導覽，請跟隨以下導覽： [結構描述建立教學課程](../../tutorials/create-schema-ui.md) 以建立完整的範例結構描述，並熟悉 [!DNL Schema Editor].
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
 本指南需要實際瞭解XDM系統。 請參閱 [XDM概覽](../../home.md) 介紹XDM在Experience Platform生態系統內的角色，以及 [結構描述組合的基本面](../../schema/composition.md) 以取得結構描述建構方式的概觀。
 
@@ -227,7 +227,7 @@ ht-degree: 2%
 
 新欄位會新增到畫布中，並在 [租使用者ID](../../api/getting-started.md#know-your-tenant_id) 以避免與標準XDM欄位衝突。 與新欄位相關聯的欄位群組也會顯示在下方 **[!UICONTROL 欄位群組]** 在左側邊欄中。
 
-![租使用者ID](../../images/ui/resources/schemas/tenantId.png)
+![租用戶 ID](../../images/ui/resources/schemas/tenantId.png)
 
 >[!NOTE]
 >
@@ -350,7 +350,7 @@ ht-degree: 2%
 
 確認類別變更後，畫布將會重設，並且所有構成進度將會遺失。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 本檔案說明在Platform UI中建立和編輯結構描述的基本知識。 強烈建議您檢閱 [結構描述建立教學課程](../../tutorials/create-schema-ui.md) 適用於在UI中建置完整方案的完整工作流程，包括建立自訂欄位群組，以及獨特使用案例的資料型別。
 

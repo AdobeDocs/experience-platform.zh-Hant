@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -24,13 +24,13 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 本檔案概述如何在Experience PlatformUI中建立、編輯及管理自訂類別。
 
-## 先決條件
+## 先決條件 {#prerequisites}
 
 本指南需要實際瞭解XDM系統。 請參閱 [XDM概覽](../../home.md) 介紹XDM在Experience Platform生態系統內的角色，以及 [結構描述組合的基本面](../../schema/composition.md) 以瞭解類別對XDM結構描述的貢獻。
 
 雖然本指南並非必要，但建議您也參閱相關的教學課程： [在UI中構成結構描述](../../tutorials/create-schema-ui.md) 以熟悉架構編輯器的各種功能。
 
-## 快速入門
+## 快速入門 {#getting-started}
 
 在Platform UI中選取 **[!UICONTROL 方案]** 在左側導覽以開啟 [!UICONTROL 方案] 工作區，然後選取 **[!UICONTROL 類別]** 標籤。 會顯示可用類別的清單。
 
@@ -121,7 +121,7 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 您可以在儲存架構之前，於初始建立程式期間隨時變更架構的類別。 但是，應謹慎執行此操作，因為欄位群組僅與特定類別相容。 變更類別會重設畫布和您已新增的任何欄位。
 請參閱以下指南： [建立和編輯方案](./schemas.md#change-class) 以取得詳細資訊。
 
-## 後續步驟
+## 後續步驟 {#next-steps}
 
 本檔案說明如何使用Platform UI建立和編輯類別。 如需功能的詳細資訊， [!UICONTROL 方案] 工作區，請參閱 [[!UICONTROL 方案] 工作區概觀](../overview.md).
 
