@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3633'
 ht-degree: 6%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 6%
 >
 >對於在Platform內建立的對象，僅限具有 **相同** 將會顯示合併原則。
 
-此 **[!UICONTROL 受眾]** 索引標籤會列出從外部來源(例如Adobe Audience Manager)匯入的所有對象，以及在中建立的對象 [!DNL Experience Platform].
+此 **[!UICONTROL 受眾]** 索引標籤會列出從外部來源(例如Adobe Audience Manager或Customer Journey Analytics)匯入的所有對象，以及在中建立的對象 [!DNL Experience Platform].
 
 在 **[!UICONTROL 受眾]** 索引標籤中，您可以將所有可用的來源視為一組資料夾。 選取資料夾時，可以看到可用的子資料夾和對象。 此外，您可以選取資料夾圖示（如最右邊影像所示）來檢視資料夾結構（核取記號代表您目前所在的資料夾），並藉由選取樹狀結構中資料夾的名稱，輕鬆導覽至資料夾。
 
