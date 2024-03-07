@@ -3,9 +3,9 @@ title: 核心事件轉送擴充功能概觀
 description: 瞭解Adobe Experience Platform中的核心事件轉送擴充功能。
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1715'
 ht-degree: 91%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 91%
 
 ### 自訂程式碼
 
-指定必須存在作為事件條件的任何自訂程式碼。使用內建程式碼編輯器輸入自訂程式碼。Adobe Experience Platform中的事件轉送支援ES6。
+指定必須存在作為事件條件的任何自訂程式碼。使用內建程式碼編輯器輸入自訂程式碼。Adobe Experience Platform中的事件轉送支援ES13。
 
 1. 選取 **[!UICONTROL 開啟編輯器]**.
 1. 輸入自訂程式碼。
@@ -155,7 +155,7 @@ module.exports = (context) => {
 
 ### 自訂程式碼
 
-提供觸發事件和評估條件後執行的程式碼。Adobe Experience Platform中的事件轉送支援ES6。
+提供觸發事件和評估條件後執行的程式碼。Adobe Experience Platform中的事件轉送支援ES13。
 
 1. 為動作程式碼命名。
 1. 選取 **[!UICONTROL 開啟編輯器]**.
@@ -183,7 +183,7 @@ arc.ruleStash.core.productCategory
 
 ### 自訂程式碼
 
-在UI中選取以下專案可輸入自訂JavaScript：  **[!UICONTROL 開啟編輯器]** 和將程式碼插入編輯器視窗中。
+在UI中選取「 」，可輸入自訂JavaScript  **[!UICONTROL 開啟編輯器]** 並將程式碼插入編輯器視窗中。
 
 編輯器視窗中需有傳回陳述式，以指明應作為資料元素值使用的值。如果未包含傳回陳述式，或系統傳回 `null` 或 `undefined` 值，則資料元素的預設值會反映 `null` 或 `undefined`。
 
@@ -226,4 +226,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->此 `interact` 來自使用者端的呼叫具有 `events`，但若是事件轉送，您需要 `event`. 這是因為事件轉送會個別檢查每個事件，而非如使用者端所示，整批檢查多個事件。
+>此 `interact` 來自使用者端的呼叫具有 `events`，但若要進行事件轉送，您需要 `event`. 這是因為事件轉送會個別檢查每個事件，而非如使用者端一樣，一次檢查多個事件。
