@@ -2,10 +2,10 @@
 title: 標籤擴充功能參考
 description: 尋找Adobe Experience Platform中標籤擴充功能的檔案。
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 9%
+source-wordcount: '469'
+ht-degree: 8%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 9%
 * [Adobe使用者端資料層](./client-data-layer/overview.md)
 * [AdobeContextHub](./contexthub/overview.md)
 * [Adobe Experience Manager Forms](https://exchange.adobe.com/apps/ec/107493)*
-* [Adobe Experience Cloud ID 服務](./id-service/overview.md)
+* [Adobe Experience Cloud ID服務](./id-service/overview.md)
 * [Adobe Experience Platform示範](./platform-demo/overview.md)
 * [Adobe Experience Platform Web SDK](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
@@ -58,7 +58,7 @@ ht-degree: 9%
 * [Awin轉換標籤](https://exchange.adobe.com/apps/ec/103240)*
 * [Beemray Human Context](https://exchange.adobe.com/apps/ec/101063)*
 * [Bing Ads通用事件追蹤](https://exchange.adobe.com/apps/ec/100154)*
-* [Branch](https://exchange.adobe.com/apps/ec/101382)*
+* [分支](https://exchange.adobe.com/apps/ec/101382)*
 * [[!DNL BrightCove] 視訊追蹤](./brightcove/overview.md)
 * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)*
 * [管道來源識別碼](https://exchange.adobe.com/apps/ec/101412)*
@@ -77,7 +77,7 @@ ht-degree: 9%
 * [分貝](https://exchange.adobe.com/apps/ec/100913)*
 * [Demandbase](https://exchange.adobe.com/apps/ec/101605)*
 * [差分隱私權](https://exchange.adobe.com/apps/ec/104535)*
-* [Dynamic Media 檢視器](https://exchange.adobe.com/apps/ec/103048)*
+* [Dynamic Media檢視器](https://exchange.adobe.com/apps/ec/103048)*
 * [EDDL協助程式](https://exchange.adobe.com/apps/ec/107691)*
 * [Flashtalking OneTag](https://exchange.adobe.com/apps/ec/101392)*
 * [ForeSee](https://exchange.adobe.com/apps/ec/100164)*
@@ -106,7 +106,7 @@ ht-degree: 9%
 * [SDI調查](https://exchange.adobe.com/apps/ec/102991)*
 * [SDI工具組](https://exchange.adobe.com/apps/ec/101460)*
 * [SessionCam](https://exchange.adobe.com/apps/ec/100517)*
-* [SPA檢視變更事件](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
+<!-- * [SPA View Change Event](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html) -->
 * [儲存扳手](https://exchange.adobe.com/apps/ec/102990)*
 * [依回圈水平線區分的標籤](https://exchange.adobe.com/apps/ec/106092)*
 * [Tealium收集](https://exchange.adobe.com/apps/ec/104217)*

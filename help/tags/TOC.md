@@ -6,10 +6,10 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 35%
+source-wordcount: '761'
+ht-degree: 36%
 
 ---
 
@@ -196,7 +196,6 @@ ht-degree: 35%
       * [SDI調查](https://exchange.adobe.com/apps/ec/102991)
       * [SDI工具組](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [SPA檢視變更事件](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [儲存扳手](https://exchange.adobe.com/apps/ec/102990)
       * [依回圈水平線區分的標籤](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium收集](https://exchange.adobe.com/apps/ec/104217)
@@ -222,7 +221,6 @@ ht-degree: 35%
       * [!DNL Braze] {#braze}
          * [概述](./extensions/server/braze/overview.md)
       * [Google Analytics的Cloud Connector](https://exchange.adobe.com/apps/ec/106542)
-      * [Google Analytics 4的Cloud Connector](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * 核心 {#core}
          * [概觀](./extensions/server/core/overview.md)
       * [Epsilon事件API](https://exchange.adobe.com/apps/ec/109127)
