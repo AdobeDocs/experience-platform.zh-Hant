@@ -4,9 +4,9 @@ title: twitter事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能可讓您將事件擷取至Twitter中，以滿足您的業務需求。
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1048'
 ht-degree: 3%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 3%
 
 | 欄位名稱 | 說明 | 範例 | 必要 |
 | --- | --- | --- | --- |
-| [!UICONTROL 轉換時間] | ISO 8601或yyyy-MM-dd&#39;T&#39;HH中的字串形式的日期 — 時間:mm:SSSZ格式。 | 2022-02-18T01:14:00.603盎司 | 是 |
+| [!UICONTROL 轉換時間] | 以ISO 8601或以下格式作為字串的日期 — 時間 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 格式。 | 2022-02-18T01:14:00.603盎司 | 是 |
 | [!UICONTROL 事件ID] | 特定事件的基底36 ID。 此ID應符合「 」中預先設定的事件，該事件包含在 [!DNL Twitter] 廣告帳戶。 這稱為「事件管理員」中對應事件的ID。 | o87ne或tw-o8z6j-o87ne (tw-pixel_id-event-id) | 是 |
 | [!UICONTROL 專案數] | 在事件中購買的專案數。 這必須是大於0的正數。 | 4 | 無 |
 | [!UICONTROL 貨幣] | 事件中購買專案的貨幣。 這以ISO-4217表示，若未提供，預設為USD。 | USD | 無 |

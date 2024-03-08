@@ -2,9 +2,10 @@
 title: AdobeTikTok網站事件API擴充功能整合
 description: 此Adobe Experience Platform網頁事件API可讓您直接與TikTok共用網站互動。
 last-substantial-update: 2023-09-26T00:00:00Z
-source-git-commit: d8b7006ade1dc82fdd79b7ed744c021bc304bca7
+exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
+source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1105'
 ht-degree: 3%
 
 ---
@@ -64,7 +65,7 @@ Web事件和引數包含有關事件的一般資訊。 支援的標準事件包�
 | 輸入 | 說明 |
 | --- | --- |
 | 活動名稱 | 事件的名稱。 這些是預先定義名稱的動作，建立者為 [!DNL TikTok] 和為必填欄位。 請參閱 [[!DNL TikTok] 行銷API](https://business-api.tiktok.com/portal/docs?id=1741601162187777) 檔案以取得支援事件的詳細資訊。 |
-| 事件時間 | ISO 8601或yyyy-MM-dd&#39;T&#39;HH中的字串形式的日期 — 時間:mm:SSSZ格式。 這是必填欄位。 |
+| 事件時間 | 以ISO 8601或以下格式作為字串的日期 — 時間 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 格式。 這是必填欄位。 |
 | 事件ID | 廣告商產生的唯一ID可指出每個事件。 這是選用欄位，用於重複資料刪除。 |
 
 {style="table-layout:auto"}
@@ -77,7 +78,7 @@ Web事件和引數包含有關事件的一般資訊。 支援的標準事件包�
 
 | 輸入 | 說明 |
 | --- | --- |
-| IP位址 | 瀏覽器的非雜湊公用IP位址。 支援IPv4和IPv6位址。 可辨識IPv6位址的完整和壓縮形式。 |
+| IP 位址 | 瀏覽器的非雜湊公用IP位址。 支援IPv4和IPv6位址。 可辨識IPv6位址的完整和壓縮形式。 |
 | 使用者代理 | 來自使用者裝置的非雜湊使用者代理。 |
 | 電子郵件 | 與轉換事件相關之連絡人的電子郵件地址。 |
 | 電話 | 電話號碼必須是E164格式[+][國家/地區代碼][區碼][local phone number] 雜湊處理前。 |
