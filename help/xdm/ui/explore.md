@@ -5,9 +5,9 @@ title: 探索UI中的結構描述資源
 description: 瞭解如何在Experience Platform使用者介面中探索現有結構描述、類別、結構描述欄位群組和資料型別。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,14 @@ ht-degree: 0%
 所有包含子屬性的物件型別欄位首次出現在畫布中時，預設會收合。 若要顯示任何欄位的子屬性，請選取其名稱旁的圖示。
 
 ![](../images/ui/explore/field-expand.png)
+
+### 標準類別和欄位群組指標 {#standard-class-and-field-group-indicator}
+
+在架構編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示。](../images/ui/explore/padlock-icon.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+
+![反白顯示掛鎖圖示的結構描述編輯器](../images/ui/explore/schema-editor-padlock-icon.png)
+
+請參閱 [新增自訂欄位至標準欄位群組](./resources/schemas.md) 指南檔案。 您無法編輯標準類別。
 
 ### 系統產生的欄位 {#system-fields}
 

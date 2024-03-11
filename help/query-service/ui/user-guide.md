@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '2576'
+source-wordcount: '2647'
 ht-degree: 2%
 
 ---
@@ -255,6 +255,10 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 查詢完成後，結果會顯示在 **[!UICONTROL 結果]** 標籤，在 **[!UICONTROL 主控台]** 標籤。 此檢視顯示您查詢的表格輸出，根據您選擇顯示50到500列結果 [結果計數](#result-count). 此檢視可讓您驗證您的查詢是否產生預期的輸出。 若要使用您的查詢產生資料集，請移除傳回列的限制，並使用執行查詢 `CREATE TABLE tablename AS SELECT` 以使用輸出產生資料集。 請參閱 [產生資料集教學課程](./create-datasets.md) 有關如何從中的查詢結果產生資料集的指示 [!DNL Query Editor].
 
 ![查詢編輯器控制檯的「結果」索引標籤會顯示查詢執行的結果。](../images/ui/query-editor/query-results.png)
+
+## 使用案例 {#use-cases}
+
+Query Service為跨產業和業務案例的各種使用案例提供解決方案。 這些實用的範例說明此服務在滿足各種需求時的彈性與影響。 至 [瞭解查詢服務如何為您的特定業務需求帶來價值](../use-cases/overview.md)，探索完整的使用案例檔案集合。 瞭解如何使用查詢服務來提供見解和解決方案，以增強營運效率和業務成功。
 
 ## 透過以下方式執行查詢 [!DNL Query Service] 教學課程影片 {#query-tutorial-video}
 

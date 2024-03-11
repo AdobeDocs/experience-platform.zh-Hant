@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3671'
+source-wordcount: '3732'
 ht-degree: 2%
 
 ---
@@ -126,6 +126,12 @@ ht-degree: 2%
 此 [!DNL Schema Editor] 會以畫布中顯示的欄位群組提供的欄位重新出現。
 
 ![此 [!DNL Schema Editor] 並顯示範例結構描述。](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>在架構編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示。](../../images/ui/explore/padlock-icon.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+>
+>![反白顯示掛鎖圖示的結構描述編輯器](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 將欄位群組新增到結構描述後，您可以選擇使用 [移除現有欄位](#remove-fields) 或 [新增自訂欄位](#add-fields) 這些群組，視您的需求而定。
 

@@ -2,9 +2,9 @@
 title: 同意分析和追蹤
 description: 瞭解如何建立同意分析儀表板，以追蹤使用者同意在一段時間內的趨勢。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '1912'
+source-wordcount: '1909'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,9 @@ ht-degree: 0%
 - **同意趨勢** 追蹤使用者同意隨時間變化的趨勢。 分析同意偏好設定變更可協助行銷人員規劃及執行適應這些使用者偏好設定變更的行銷活動。 例如，您可能想要進行目標明確的教育宣傳活動、透明和信任宣傳，或激勵宣傳以促使您做出同意選擇。 您也可以將可能已對同意產生負面影響的行銷活動建立關聯，以主動降低這些行銷活動的頻率。
 - **同意重疊** 使用同意管道間的重疊，為同意多個管道的客戶，在多個管道上提供一致的個人化訊息。 行銷人員可以排定資源優先順序，並將資源配置給某些管道，以便獲得更高程度的同意和個人化訊息，進而引起客戶的共鳴，並提高回應率。
 
-<!-- ## Build a consent dashboard {#build-a-consent-dashboard} -->
-
 ## 建立同意的對象 {#create-consent-audiences}
 
 若要建立同意儀表板，您必須先建立同意聯絡的所有設定檔對象。 若要導覽至「Real-time Customer Data Platform區段產生器」，請選取「 」 **[!UICONTROL 受眾]** （在Platform UI的左側導覽器中）。 從 [!UICONTROL 客戶] 的標籤 [!UICONTROL 受眾] 儀表板，選取 **[!UICONTROL 建立對象]** 在檢視的右上方，然後 **[!UICONTROL 建置規則]**.
-
-<!-- Update screenshot below to include Create audience -->s
 
 ![此 [!UICONTROL 受眾] 儀表板，具有 [!UICONTROL 客戶]， [!UICONTROL 受眾]、和 [!UICONTROL 建立區段] 反白顯示。](../images/insights-use-cases/consent-analysis/create-audience.png)
 

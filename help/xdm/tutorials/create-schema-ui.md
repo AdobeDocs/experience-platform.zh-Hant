@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '4632'
+source-wordcount: '4695'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 
 此教學課程需要您實際瞭解架構建立中Adobe Experience Platform的各個層面。 在開始本教學課程之前，請檢閱檔案以瞭解下列概念：
 
-* [[!DNL Experience Data Model (XDM)]](../home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。
+* [[!DNL Experience Data Model (XDM)]](../home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
    * [結構描述組合基本概念](../schema/composition.md)：XDM結構描述及其建置區塊的概觀，包括類別、結構描述欄位群組、資料型別和個別欄位。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 
@@ -116,6 +116,12 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 結構畫布會重新出現。 此 **[!UICONTROL 欄位群組]** 區段現在列出&quot;[!UICONTROL 人口統計細節]」和 **[!UICONTROL 結構]** 區段包含欄位群組貢獻的欄位。 您可以在欄位群組名稱底下選取 **[!UICONTROL 欄位群組]** 區段來反白顯示它在畫布中提供的特定欄位。
 
 ![結構描述編輯器，其人口統計詳細資料欄位群組已反白顯示。](../images/tutorials/create-schema/demographic-details-structure.png)
+
+>[!NOTE]
+>
+>在架構編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示。](../images/ui/explore/padlock-icon.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+>
+>![反白顯示掛鎖圖示的結構描述編輯器](../images/ui/explore/padlock-icon-highlight.png)
 
 此欄位群組在頂層名稱下提供了數個欄位 `person` 資料型別為&quot;[!UICONTROL 個人]「。 這組欄位說明個人的相關資訊，包括姓名、出生日期和性別。
 
@@ -229,7 +235,7 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 
 | 限制 | 說明 |
 | --- | --- |
-| [!UICONTROL 必要] | 表示資料擷取需要欄位。 根據此結構描述上傳到資料集，但不包含此欄位的任何資料在擷取時都會失敗。 |
+| [!UICONTROL 必填] | 表示資料擷取需要欄位。 根據此結構描述上傳到資料集，但不包含此欄位的任何資料在擷取時都會失敗。 |
 | [!UICONTROL 陣列] | 表示欄位包含值陣列，每個都具有指定的資料型別。 例如，在資料型別為&quot;的欄位上使用此限制[!UICONTROL 字串]」指定欄位將包含字串陣列。 |
 | [!UICONTROL 列舉和建議值] | 列舉表示此欄位必須包含可能值的列舉清單中的其中一個值。 或者，您也可以使用此選項來只提供字串欄位的建議值清單，而不用限制欄位為這些值。 |
 | [!UICONTROL 身分] | 表示此欄位是身分欄位。 提供了有關身分欄位的詳細資訊 [在本教學課程的後面部分](#identity-field). |

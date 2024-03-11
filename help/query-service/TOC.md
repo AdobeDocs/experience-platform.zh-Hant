@@ -5,9 +5,9 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '320'
 ht-degree: 19%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 19%
       - [將資料匯出至ML環境](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - 使用案例 {#use-cases}
+   - [支援的使用案例](use-cases/overview.md)
    - [捨棄的瀏覽](use-cases/abandoned-browse.md)
    - [歸因分析](use-cases/attribution-analysis.md)
    - [機器人篩選](use-cases/bot-filtering.md)
