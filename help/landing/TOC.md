@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 透過指南、文件和教學課程，了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 24%
 
 ---
@@ -44,9 +44,10 @@ ht-degree: 24%
    * [概觀](application-services.md)
    * [Adobe Real-time Customer Data Platform （全版本）](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [應用程式與Intelligent Services （影片）](video/application-intelligent-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=zh-Hant)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=zh-Hant)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Platform與Experience Cloud整合（影片）](video/experience-cloud-integrations.md)
 * 治理、隱私和安全性 {#governance-privacy-security}
    * [概觀](./governance-privacy-security/overview.md)
