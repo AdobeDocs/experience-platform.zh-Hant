@@ -1,17 +1,17 @@
 ---
 title: 使用JavaScript程式庫安裝Web SDK
 description: 使用獨立的CDN檔案參考Web SDK程式庫。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
-
 # 使用JavaScript程式庫安裝Web SDK
 
-安裝Web SDK的一個選項是參考CDN上託管的JavaScript程式庫。 您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
+安裝Web SDK的替代方法，但無需 [使用標籤擴充功能](extension.md) 是參照在CDN上託管的JavaScript資料庫。 您可以直接參考程式庫，或下載程式庫並在您自己的基礎架構中託管。 提供縮制和完整格式。
 
 Web SDK程式庫可使用下列URL結構：
 

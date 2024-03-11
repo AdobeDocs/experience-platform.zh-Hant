@@ -1,13 +1,13 @@
 ---
 title: 使用標籤擴充功能安裝Web SDK
 description: 使用Adobe Experience Cloud資料彙集參考Web SDK資料庫。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # 使用標籤擴充功能安裝Web SDK
 
@@ -23,6 +23,8 @@ Adobe提供專屬的標籤擴充功能，可用來實作和設定Web SDK。 此�
 1. 瀏覽至 **[!UICONTROL 擴充功能]**，然後選取 **[!UICONTROL 目錄]** 標籤。
 1. 找到並安裝 **[!UICONTROL Adobe Experience Platform Web SDK]** 副檔名。
 1. 為每個環境選取適當的沙箱和資料流，然後按一下 **[!UICONTROL 儲存]**.
+
+請參閱檔案，瞭解如何 [設定Web SDK標籤擴充功能](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) 以取得詳細資訊。
 
 ## 發佈標籤程式碼以進行開發
 
