@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
 role: Admin
-source-git-commit: 267857cfdcc75310c7e490fdbae3494ecd5a8fb7
+source-git-commit: 472852b383f117281fd235ad39dedba401df7679
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 70%
@@ -76,14 +76,14 @@ ht-degree: 70%
    * [Real-Time CDP B2B 版本中的來源](sources/b2b.md)
 * 使用案例 {#use-cases}
    * [範例使用案例概觀](/help/rtcdp/use-case-guides/overview.md)
-   * 個人化、深入分析和參與 {#personalization-insights-engagement}
-      * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-      * [智慧地重新與您的客戶互動：Luma範例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
    * 客戶贏取 {#customer-acquisition}
       * [不依賴第三方Cookie即可吸引和贏取新客戶](/help/rtcdp/partner-data/prospecting.md)
       * [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md)
       * [未驗證使用者的離站重新目標定位](./partner-data/offsite-retargeting.md)
    * 設定檔擴充 {#profile-enrichment}
       * [使用合作夥伴提供的屬性補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+   * 個人化、深入分析和參與 {#personalization-insights-engagement}
+      * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [智慧地重新與您的客戶互動：Luma範例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform 發行說明](https://www.adobe.com/go/platform-release-notes_tw)
 * [Experience Platform 詞彙表](https://www.adobe.com/go/platform-glossary_tw)

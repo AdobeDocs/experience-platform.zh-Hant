@@ -2,10 +2,10 @@
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 18%
+source-wordcount: '1440'
+ht-degree: 17%
 
 ---
 
@@ -53,6 +53,19 @@ ht-degree: 18%
 {style="table-layout:auto"}
 
 ![Amazon S3以設定檔為基礎的匯出型別，在UU中強調顯示。](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+
+## 匯出資料集 {#export-datasets}
+
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
+
+## 匯出資料的檔案格式 {#file-format}
+
+匯出時 *對象資料*，平台會建立 `.csv`， `parquet`，或 `.json` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [支援的匯出檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 區段建立模型。
+
+匯出時 *資料集*，平台會建立 `.parquet` 或 `.json` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證資料集匯出成功](../../ui/export-datasets.md#verify) 區段的資料。
 
 ## 連線到目標 {#connect}
 
@@ -169,13 +182,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 另請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
-## 匯出資料集 {#export-datasets}
+## 驗證資料匯出成功 {#exported-data}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+若要確認資料是否已成功匯出，請檢查 [!DNL Amazon S3] 儲存，並確認匯出的檔案包含預期的設定檔母體。
 
-* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
-* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
+## IP位址允許清單 {#ip-address-allow-list}
 
-## 匯出的資料 {#exported-data}
-
-的 [!DNL Amazon S3] 目的地， [!DNL Platform] 會在您提供的儲存位置中建立資料檔案。 如需檔案的詳細資訊，請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。
+請參閱 [IP位址允許清單](ip-address-allow-list.md) 文章(如果您需要將AdobeIP新增至允許清單)。

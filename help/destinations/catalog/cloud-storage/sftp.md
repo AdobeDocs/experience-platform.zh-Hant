@@ -2,9 +2,9 @@
 title: sftp連線
 description: 建立與您的SFTP伺服器的即時輸出連線，以定期從Adobe Experience Platform匯出限定資料檔案。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1091'
 ht-degree: 8%
 
 ---
@@ -56,6 +56,19 @@ ht-degree: 8%
 {style="table-layout:auto"}
 
 ![目的地目錄中醒目提示的SFTP設定檔型匯出型別。](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## 匯出資料集 {#export-datasets}
+
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
+
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
+
+## 匯出資料的檔案格式 {#file-format}
+
+匯出時 *對象資料*，平台會建立 `.csv`， `parquet`，或 `.json` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [支援的匯出檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 區段建立模型。
+
+匯出時 *資料集*，平台會建立 `.parquet` 或 `.json` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證資料集匯出成功](../../ui/export-datasets.md#verify) 區段的資料。
 
 ## 連線到目標 {#connect}
 
@@ -129,17 +142,10 @@ ht-degree: 8%
 
 另請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
-## 匯出資料集 {#export-datasets}
+## 驗證資料匯出成功 {#exported-data}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
-
-* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
-* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
-
-## 匯出的資料 {#exported-data}
-
-的 [!DNL SFTP] 目的地，平台會建立 `.csv` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。
+若要確認資料是否已成功匯出，請檢查您的SFTP儲存空間，並確定匯出的檔案包含預期的設定檔母體。
 
 ## IP位址允許清單 {#ip-address-allow-list}
 
-請參閱 [SFTP目的地的IP位址允許清單](ip-address-allow-list.md) 如果您需要將AdobeIP新增至允許清單。
+請參閱 [IP位址允許清單](ip-address-allow-list.md) 文章(如果您需要將AdobeIP新增至允許清單)。

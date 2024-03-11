@@ -2,9 +2,9 @@
 title: Azure Blob連線
 description: 建立與您的Azure Blob儲存體的即時輸出連線，以定期從Adobe Experience Platform匯出CSV資料檔案。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1089'
 ht-degree: 7%
 
 ---
@@ -62,11 +62,18 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-## 支援的檔案格式 {#file-formats}
+## 匯出資料集 {#export-datasets}
 
-[!DNL Experience Platform] 支援下列要匯出的檔案格式 [!DNL Azure Blob]：
+此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
 
-* 逗號分隔值(CSV)：目前僅支援逗號分隔值的匯出資料檔案。
+* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
+* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
+
+## 匯出資料的檔案格式 {#file-format}
+
+匯出時 *對象資料*，平台會建立 `.csv`， `parquet`，或 `.json` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [支援的匯出檔案格式](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) 區段建立模型。
+
+匯出時 *資料集*，平台會建立 `.parquet` 或 `.json` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [驗證資料集匯出成功](../../ui/export-datasets.md#verify) 區段的資料。
 
 ## 連線到目標 {#connect}
 
@@ -123,13 +130,6 @@ ht-degree: 7%
 
 另請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) 以取得啟用此目的地對象的指示。
 
-## 匯出資料集 {#export-datasets}
+## 驗證資料匯出成功 {#exported-data}
 
-此目的地支援資料集匯出。 如需如何設定資料集匯出的完整資訊，請閱讀教學課程：
-
-* 操作說明 [使用Platform使用者介面匯出資料集](/help/destinations/ui/export-datasets.md).
-* 操作說明 [使用流量服務API以程式設計方式匯出資料集](/help/destinations/api/export-datasets.md).
-
-## 匯出的資料 {#exported-data}
-
-的 [!DNL Azure Blob Storage] 目的地， [!DNL Platform] 建立 `.csv` 檔案中所指定的儲存位置。 如需檔案的詳細資訊，請參閱 [啟用對象資料至批次設定檔匯出目的地](../../ui/activate-batch-profile-destinations.md) （在audience activation教學課程中）。
+若要確認資料是否已成功匯出，請檢查 [!DNL Azure Blob] 儲存，並確認匯出的檔案包含預期的設定檔母體。
