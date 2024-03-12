@@ -4,9 +4,9 @@ description: 瞭解如何為資料串流設定機器人偵測，以區分人類�
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >機器人偵測不會捨棄任何機器人請求。 它只會以機器人分數更新XDM結構描述，並將事件轉送至 [資料流服務](configure.md) 您已設定的。
+>
+>Adobe解決方案可能會以不同的方式處理機器人評分。 例如，Adobe Analytics使用其 [機器人篩選服務](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) 而且不會使用Edge Network設定的分數。 這兩個服務使用相同的 [IAB機器人清單](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)，因此機器人分數相同。
 
 建立機器人偵測規則後，可能需要最多15分鐘的時間才能傳播至Edge Network。
 
