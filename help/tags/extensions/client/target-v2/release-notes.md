@@ -2,10 +2,10 @@
 title: Adobe Target v2擴充功能發行說明
 description: Adobe Experience Platform中Adobe Target v2標籤擴充功能的最新發行說明。
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
+source-git-commit: a062305e3ed0eb4d127f93ff37efe15e41eaa601
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 19%
+source-wordcount: '834'
+ht-degree: 17%
 
 ---
 
@@ -14,6 +14,11 @@ ht-degree: 19%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+
+## v0.20.3 （2024年1月23日）
+
+- 更新以支援 `at.js` 2.11.4
+- 修正錯誤，防止將無效的地理資料傳送至傳送API。
 
 ## v0.20.2 （2023年11月29日）
 
@@ -55,7 +60,7 @@ ht-degree: 19%
 ## v0.18.0 （2022年6月1日）
 
 - 更新以支援 `at.js` v2.9.0
-- 新增的「使用者代理用戶端提示」支援。
+- 新增的「使用者代理使用者端提示」支援。
 
 ## v0.17.1 （2022年1月28日）
 
@@ -142,7 +147,7 @@ ht-degree: 19%
 - 在 adobe.target.getOffer API 中新增 Target 全域 Mbox 支援
 - 修正參數和頁面載入參數未正確處理的問題
 
-## v0.12.0 (2019 年 10 月 10 日)
+## v0.12.0 （2019年10月10日）
 
 - 已更新 `at.js` 至v2.2。
 - 改善Experience CloudID程式庫(ECID) v4.4與之間整合的效能 `at.js` 2.2.
