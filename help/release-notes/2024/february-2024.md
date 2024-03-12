@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform 發行說明 (2024 年 2 月)
 description: Adobe Experience Platform 2024 年 2 月版發行說明。
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
+source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
 workflow-type: tm+mt
 source-wordcount: '1244'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -24,10 +25,11 @@ Experience Platform現有功能的更新：
 ## 警報 {#alerts}
 
 Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過以下方式訂閱不同的警報規則： [!UICONTROL 警報] 索引標籤顯示，並可選擇在UI本身或透過電子郵件通知接收警報訊息。
+
 **新功能或更新功能**
 
-| 功能 | 說明 | 
-| --- | --- | 
+| 功能 | 說明 |
+| --- | --- |
 | 警示歷史記錄標籤 | 作為Experience Platform管理員，您可以使用管理警示訂閱者功能，將警示指派給Adobe使用者ID、外部電子郵件地址或電子郵件群組清單。 如需詳細資訊，請參閱 [警報UI檔案](../../observability/alerts/ui.md) 以取得有關「歷史記錄」標籤的詳細資訊。 |
 
 {style="table-layout:auto"}
