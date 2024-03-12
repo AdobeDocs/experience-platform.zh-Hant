@@ -1,9 +1,10 @@
 ---
 title: 內容
 description: 自動收集裝置、環境或位置資料。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '900'
 ht-degree: 5%
 
 ---
@@ -59,8 +60,34 @@ ht-degree: 5%
 | --- | --- | --- | --- |
 | 當地時間 | 適用於使用者的本機時間戳記（以簡化的延伸模組表示） [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) 格式。 | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | 當地時區位移 | 使用者與GMT時差的分鐘數。 | `xdm.placeContext.localTimezoneOffset` | `360` |
+| 國家/地區代碼 | 一般使用者的國家/地區代碼。 | `xdm.placeContext.geo.countryCode` | `US` |
+| 州/省 | 一般使用者的省/市/自治區代碼。 | `xdm.placeContext.geo.stateProvince` | `CA` |
+| 緯度 | 一般使用者位置的緯度。 | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
+| 經度 | 一般使用者位置的經度。 | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### 時間戳記
+
+此 `timestamp` 關鍵字會收集有關事件時間戳記的資訊。 無法移除這個部分的內容。
+
+| 維度 | 說明 | XDM 路徑 | 範例值 |
+| --- | --- | --- | --- |
+| 事件的時間戳記 | 使用者的UTC時間戳記（以簡化的延伸形式） [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) 格式。 | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### 實作詳細資料
+
+此 `implementationDetails` 關鍵字會收集用於收集事件之SDK版本的相關資訊。
+
+| 維度 | 說明 | XDM 路徑 | 範例值 |
+| --- | --- | --- | --- |
+| 名稱 | 軟體開發套件(SDK)識別碼。 此欄位會使用URI來改善不同軟體程式庫所提供的識別碼之間的唯一性。 | `xdm.implementationDetails.name` | 使用獨立程式庫時，值為 `https://ns.adobe.com/experience/alloy`. 當資料庫作為標籤擴充功能的一部分使用時，值為 `https://ns.adobe.com/experience/alloy+reactor`. |
+| 版本 | 軟體開發套件(SDK)版本。 | `xdm.implementationDetails.version` | 使用獨立程式庫時，值為程式庫版本。 當將程式庫用作標籤擴充功能的一部分時，值為程式庫版本和以聯結的標籤擴充功能版本 `+`. 例如，如果程式庫版本為 `2.1.0` 而標籤擴充功能版本為 `2.1.3`，該值會是 `2.1.0+2.1.3`. |
+| 環境 | 收集資料的環境。 此一律設為 `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### 高平均資訊量使用者端提示
 
