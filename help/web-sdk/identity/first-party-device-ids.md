@@ -2,12 +2,13 @@
 title: Web SDK中的第一方裝置ID
 description: 瞭解如何為Adobe Experience Platform Web SDK設定第一方裝置識別碼(FPID)。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # Web SDK中的第一方裝置ID
 
@@ -47,6 +48,28 @@ FPID會使用第一方Cookie來追蹤訪客。 第一方Cookie在使用使用DNS
 Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org/doc/html/rfc4122). 不採用UUIDv4格式的裝置ID將會遭到拒絕。
 
 產生UUID幾乎都會產生不重複的隨機ID，而發生碰撞的機率極小。 UUIDv4不能使用IP位址或任何其他個人識別資訊(PII)進行內建。 UUID隨處可見，而且幾乎每種程式語言都能找到程式庫來產生它們。
+
+## 在資料串流UI中設定第一方ID Cookie {#setting-cookie-datastreams}
+
+您可以在資料串流UI中指定Cookie名稱，其中 [!DNL FPID] 可以位於中，而不必讀取Cookie值並將FPID納入身分對應中。
+
+>[!IMPORTANT]
+>
+>此功能需要您具備 [第一方資料收集](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) 已啟用。
+
+請參閱 [資料串流檔案](../../datastreams/configure.md) 以取得有關如何設定資料流的詳細資訊。
+
+設定資料流時，啟用 **[!UICONTROL 第一方ID Cookie]** 選項。 此設定可告知Edge Network在查詢第一方裝置ID時參考指定的Cookie，而不是在 [身分對應](#identityMap).
+
+請參閱以下檔案： [第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant) 以取得搭配Adobe Experience Cloud使用的詳細資訊。
+
+![顯示資料流設定的平台UI影像，其中醒目顯示第一方ID Cookie設定](../assets/first-party-id-datastreams.png)
+
+啟用此設定時，您必須提供預期儲存ID的Cookie名稱。
+
+使用第一方ID時，無法執行第三方ID同步。 第三方ID同步需仰賴 [!DNL Visitor ID] 服務與 `UUID` 由該服務產生。 使用第一方ID功能時，會產生ECID而不使用 [!DNL Visitor ID] 服務，因此協力廠商ID無法同步。
+
+使用第一方ID時，由於Audience Manager合作夥伴ID同步主要是根據，因此不支援在合作夥伴平台上定位為啟用的Audience Manager功能 `UUIDs` 或 `DIDs`. 衍生自第一方ID的ECID未連結至 `UUID`，使其不可定址。
 
 ## 使用您自己的伺服器設定Cookie
 
