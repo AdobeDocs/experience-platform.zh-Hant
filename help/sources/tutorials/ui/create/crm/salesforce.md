@@ -2,9 +2,9 @@
 title: 使用Experience Platform使用者介面連線您的Salesforce帳戶
 description: 瞭解如何使用使用者介面連線您的Salesforce帳戶並將您的CRM資料帶入Experience Platform。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 | `username` | 的使用者名稱 [!DNL Salesforce] 使用者帳戶。 |
 | `password` | 的密碼 [!DNL Salesforce] 使用者帳戶。 |
 | `securityToken` | 的安全性權杖 [!DNL Salesforce] 使用者帳戶。 |
-| `apiVersion` | （選用）的REST API版本 [!DNL Salesforce] 您正在使用的例項。 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
+| `apiVersion` | （選用）的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0` 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
 
 有關驗證的詳細資訊，請參閱 [此 [!DNL Salesforce] 驗證指南](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 

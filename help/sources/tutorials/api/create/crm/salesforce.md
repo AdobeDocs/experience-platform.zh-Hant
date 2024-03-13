@@ -5,9 +5,9 @@ title: 使用流量服務API建立Salesforce基本連線
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Salesforce帳戶。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '511'
 ht-degree: 4%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 4%
 | `username` | 的使用者名稱 [!DNL Salesforce] 使用者帳戶。 |
 | `password` | 的密碼 [!DNL Salesforce] 使用者帳戶。 |
 | `securityToken` | 的安全性權杖 [!DNL Salesforce] 使用者帳戶。 |
-| `apiVersion` | （選用）的REST API版本 [!DNL Salesforce] 您正在使用的例項。 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
+| `apiVersion` | 選用)的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0` 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Salesforce] 為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 如需開始使用的詳細資訊，請造訪 [此Salesforce檔案](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
