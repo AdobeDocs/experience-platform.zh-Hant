@@ -3,10 +3,10 @@ title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
-ht-degree: 49%
+ht-degree: 48%
 
 ---
 
@@ -60,7 +60,7 @@ ht-degree: 49%
 放棄的產品瀏覽情境會鎖定網站和行動應用程式上放棄的產品瀏覽。 當已檢視產品但未購買或未新增到購物車時，就會觸發此情境。 在此範例中，如果過去24小時內沒有清單新增，則會在3天後觸發品牌參與度。<p>![客戶智慧型放棄的產品瀏覽情境高階視覺化概觀。](../intelligent-re-engagement/images/re-engagement-journey.png "客戶智慧型放棄的產品瀏覽情境高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 1. 您可以建立方案和資料集，然後啟用 [!UICONTROL 個人資料].
-2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
+2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics來源聯結器，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您從設定檔清單建立重點對象，以檢查&#x200B;**使用者**&#x200B;在過去三天是否有進行參與行動。
 5. 您會在中建立放棄的產品瀏覽歷程 [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ ht-degree: 49%
 放棄購物車情況適用於產品已放入購物車但尚未在網站和行動應用程式上購買的情況。 此外，付費媒體行銷活動可以使用此方法開始和停止。<p>![客戶放棄購物車案例高階視覺化概觀。](../intelligent-re-engagement/images/abandoned-cart-journey.png "客戶放棄購物車案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 1. 您可以建立結構描述和資料集，並為以下專案啟用 [!UICONTROL 個人資料].
-2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
+2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics來源聯結器，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您從設定檔清單建立重點對象，以檢查&#x200B;**客戶**&#x200B;是否已將商品放入購物車但尚未完成購買。**[!UICONTROL 新增到購物車]**&#x200B;事件會啟動計時器；計時器會等待 30 分鐘，然後檢查是否有購買。如果沒有購買，那麼會將&#x200B;**客戶**&#x200B;新增到&#x200B;**[!UICONTROL 捨棄購物車]**&#x200B;對象。
 5. 您在 [!DNL Adobe Journey Optimizer] 中建立一個廢棄購物車歷程。
@@ -84,7 +84,7 @@ ht-degree: 49%
 訂購確認案例聚焦於透過網站和行動應用程式進行的產品購買。<p>![客戶訂單確認案例高階視覺化概觀。](../intelligent-re-engagement/images/order-confirmation-journey.png "客戶訂單確認案例高階視覺化概觀。"){width="1920" zoomable="yes"}</p>
 
 1. 您可以建立方案和資料集，然後啟用 [!UICONTROL 個人資料].
-2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
+2. 您可以透過Web SDK、Mobile SDK或API將資料內嵌至Experience Platform。 也可以使用Analytics來源聯結器，但可能會導致歷程延遲。
 3. 您可以內嵌其他已啟用設定檔的資料，這些資料可以透過身分圖表連結至已驗證的網頁和行動應用程式訪客。
 4. 您在 [!DNL Adobe Journey Optimizer] 中建立一個確認歷程。
 5. [!DNL Adobe Journey Optimizer] 使用偏好管道發送訂購確認訊息。
