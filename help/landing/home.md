@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform 概觀
 description: Adobe Experience Platform可讓組織集中和標準化客戶資料，再運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 2%
@@ -64,7 +64,7 @@ Adobe已在Experience Platform上建置多個應用程式服務。 您可以在�
 * [**字彙**](glossary.md)\
   檢閱Adobe Experience Platform術語。
 
-* [**發行說明**](https://www.adobe.com/go/platform-release-notes_tw)\
+* [**發行說明**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
   尋找最近使用的相關資訊 [!DNL Experience Platform] 發行並檢閱過去的版本。
 
 * [**疑難排解指南**](troubleshooting.md)\

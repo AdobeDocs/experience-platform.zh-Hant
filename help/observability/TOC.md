@@ -4,10 +4,10 @@ user-guide-title: 檢視範圍指南
 user-guide-description: 了解如何使用 Adobe Experience Platform 檢視範圍的統計量度和事件通知來監控平台活動。
 feature: Observability
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 61%
+ht-degree: 60%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 61%
    * [UI指南](./alerts/ui.md)
    * [訂閱I/O事件通知](./alerts/subscribe.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

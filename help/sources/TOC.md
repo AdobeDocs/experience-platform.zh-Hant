@@ -5,7 +5,7 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
+source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 10%
@@ -386,4 +386,4 @@ ht-degree: 10%
 - [IP位址允許清單](ip-address-allow-list.md)
 - [常見問答](./troubleshooting.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

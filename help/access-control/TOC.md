@@ -5,10 +5,10 @@ breadcrumb-title: Access Control 指南
 user-guide-description: 使用 Adobe Admin Console 中的產品設定檔管理使用者權限。了解如何將使用者指派到產品和沙箱。
 feature: Access Control
 role: Admin
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 49%
+ht-degree: 48%
 
 ---
 
@@ -46,4 +46,4 @@ ht-degree: 49%
    * [檢視有效原則](api/effective-policies.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

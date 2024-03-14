@@ -4,10 +4,10 @@ user-guide-title: 資料準備指南
 user-guide-description: 準備您的資料以擷取至 Adobe Experience Platform，並了解「資料準備」如何協助您對應、轉換和驗證資料。
 feature: Data Prep
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 59%
+ht-degree: 57%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 59%
 - [對應集](mapping-set.md)
 - [串流更新插入](upserts.md)
 - [疑難排解指南](troubleshooting-guide.md)
-- [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

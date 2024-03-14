@@ -2,10 +2,10 @@
 audience: user
 user-guide-title: Adobe Experience Platform 協助工具
 user-guide-description: 了解 Experience Platform 致力於為每個人提供無障礙和包容的功能。
-source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 66%
+source-wordcount: '41'
+ht-degree: 63%
 
 ---
 
@@ -17,4 +17,4 @@ ht-degree: 66%
 * [Platform的自訂協助工具](custom.md)
 * [Platform檔案](https://experienceleague.adobe.com/docs/experience-platform.html)
 * [平台概觀](https://www.adobe.com/go/platform-overview-en)
-* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

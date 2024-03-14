@@ -5,7 +5,7 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 4%
@@ -296,4 +296,4 @@ ht-degree: 4%
       * [檔案自助服務範本](./destination-sdk/docs-framework/self-service-template.md)
       * [製作最佳實務](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [常見問答](./destinations-faq.md)
-* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

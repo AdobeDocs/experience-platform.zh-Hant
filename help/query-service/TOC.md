@@ -5,7 +5,7 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 19%
@@ -115,4 +115,4 @@ ht-degree: 19%
 - [常見問答](troubleshooting-guide.md)
 - [IP位址允許清單](ip-address-allowlist.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

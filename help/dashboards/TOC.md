@@ -5,10 +5,10 @@ breadcrumb-title: 儀表板指南
 user-guide-description: 了解如何透過可自訂的儀表板在 Experience Platform 視覺化資料。
 feature: Dashboards
 role: Developer,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 34%
+ht-degree: 33%
 
 ---
 
@@ -44,4 +44,4 @@ ht-degree: 34%
 * [查詢儀表板資料集](query.md)
 * [Real-time Customer Data Platform Insights資料模型](cdp-insights-data-model.md)
 * [檢視分析SQL](view-sql.md)
-* [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -5,10 +5,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置對象。
 feature: Segments
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 37%
+ht-degree: 36%
 
 ---
 
@@ -73,4 +73,4 @@ ht-degree: 37%
    - [強制區段遵守資料使用規範](tutorials/governance.md)
 - [常見問答](./faq.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

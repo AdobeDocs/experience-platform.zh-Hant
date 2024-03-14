@@ -5,10 +5,10 @@ user-guide-title: Intelligent Services 說明
 breadcrumb-title: Intelligent Services 指南
 user-guide-description: 使用智慧型人工智慧服務，從行銷事件資料產生分數、探索見解並建立區段。
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -55,4 +55,4 @@ ht-degree: 32%
       - [客戶自控金鑰](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [資料控管](customer-ai/cai-data-governance/data-governance.md)
       - [治理政策](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform發行說明](https://www.adobe.com/go/platform-release-notes_tw)
+- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
