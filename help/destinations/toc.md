@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
+source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -140,6 +140,8 @@ ht-degree: 4%
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL延伸模組](./catalog/data-management/aam-dil-extension.md)
+   * 資料與身分識別合作夥伴 {#data-partner}
+      * [Acxiom潛在客戶抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
    * 電子商務目的地 {#ecommerce}
       * [SAP商務](./catalog/ecommerce/sap-commerce.md)
    * 電子郵件目的地 {#email}
