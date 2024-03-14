@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 10%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 10%
       - [Snowflake聯結器](connectors/databases/snowflake.md)
       - [teradata Vantage聯結器](connectors/databases/teradata-vantage.md)
    - 資料與身分合作夥伴 {#data-partner}
+      - [Acxiom資料擷取](connectors/data-partners/acxiom-data-ingestion.md)
       - [Acxiom潛在客戶資料匯入](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise身分解析](connectors/data-partners/merkury.md)
    - 電子商務 {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 10%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - 資料與身分合作夥伴 {#data-partner}
-         - [Merkury Enterprise身分解析](tutorials/ui/create/data-partners/merkury.md)
+         - [Acxiom資料擷取](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Acxiom潛在客戶資料匯入](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Merkury Enterprise身分解析](tutorials/ui/create/data-partners/merkury.md)
       - 電子商務 {#ecommerce}
          - [SAP商務](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
