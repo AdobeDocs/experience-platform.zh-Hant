@@ -3,10 +3,10 @@ title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
+source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
 workflow-type: tm+mt
-source-wordcount: '3772'
-ht-degree: 48%
+source-wordcount: '3894'
+ht-degree: 49%
 
 ---
 
@@ -147,7 +147,7 @@ ht-degree: 48%
 
 #### 客戶數位交易結構描述
 
-此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) 且是參考各種用於觸發歷程、詳細線上客戶分析和增強受眾功能的瀏覽和轉換事件所必需的。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或相關數位平台上發生的客戶活動。 此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) 且必須參考用於觸發歷程、詳細線上客戶分析、增強受眾功能和個人化傳訊的各種瀏覽和轉換事件。
 
 客戶數位交易結構描述是由 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 
@@ -178,6 +178,25 @@ ht-degree: 48%
 
 +++
 
++++商務詳細資料 (欄位群組)
+
+此 [商業細節](/help/xdm/field-groups/event/commerce-details.md) 欄位群組用於說明商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
+
+| 欄位 | 說明 |
+| --- | --- |
+| `commerce.cart.cartID` | 購物車的 ID。 |
+| `commerce.order.orderType` | 描述產品訂購類型的物件。 |
+| `commerce.order.payments.paymentAmount` | 描述產品訂購付款金額的物件。 |
+| `commerce.order.payments.paymentType` | 描述產品訂購付款類型的物件。 |
+| `commerce.order.payments.transactionID` | 物件產品訂購交易 ID。 |
+| `commerce.order.purchaseID` | 物件產品訂單購買 ID。 |
+| `productListItems.name` | 代表客戶所選產品的項目名稱清單。 |
+| `productListItems.priceTotal` | 代表客戶所選產品的項目清單總價。 |
+| `productListItems.product` | 選取的產品。 |
+| `productListItems.quantity` | 代表客戶所選產品的項目清單數量。 |
+
++++
+
 +++外部來源系統稽核詳細資料 (欄位群組)
 
 外部來源系統稽核屬性是一種標準體驗資料模式 (XDM) 的資料類型，這模式會擷取外部來源系統的稽核詳細資料。
@@ -186,7 +205,7 @@ ht-degree: 48%
 
 #### 客戶離線交易結構描述
 
-此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。該資料通常是從 POS (或類似系統) 被擷取至 [!DNL Adobe Experience Platform]，且大部份通常會透過 API 連線串流至平台。其目的是參考各種離線轉換事件，這些事件用於觸發歷程、深層線上和離線客戶分析，以及增強受眾功能。
+此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。該資料通常是從 POS (或類似系統) 被擷取至 [!DNL Adobe Experience Platform]，且大部份通常會透過 API 連線串流至平台。其目的是參考各種離線轉換事件，這些事件用於觸發歷程、深層線上和離線客戶分析、增強受眾功能和個人化傳訊。
 
 客戶離線交易結構描述會以 [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) 類別。
 
@@ -346,7 +365,7 @@ ht-degree: 48%
 設定此對象時需要以下欄位和條件：
 
 * `eventType: commerce.productViews`
-* 與 `THEN` （循序事件）排除 `eventType: commerce.productListAdds` 或 `application.launch` 或 `web.webpagedetails.pageViews` 或 `commerce.purchases` （包括線上和離線）
+* 與 `THEN` （循序事件）排除 `eventType: commerce.productListAdds` 和 `application.launch` 和 `web.webpagedetails.pageViews` 和 `commerce.purchases` （包括線上和離線）
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -370,7 +389,7 @@ ht-degree: 48%
 
 設定此對象時需要以下欄位和條件：
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` （串流）
 
 +++
@@ -381,7 +400,7 @@ ht-degree: 48%
 
 設定此對象時需要以下欄位和條件：
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` （批次）
 
 +++
@@ -395,7 +414,7 @@ ht-degree: 48%
 設定此對象時需要以下欄位和條件：
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now and <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
