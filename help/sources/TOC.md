@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
+source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1031'
 ht-degree: 10%
 
 ---
@@ -115,6 +115,7 @@ ht-degree: 10%
    - 付款 {#payments}
       - [PayPal聯結器](connectors/payments/paypal.md)
       - [方形聯結器](connectors/payments/square.md)
+      - [Stripe聯結器](connectors/payments/stripe.md)
    - 通訊協定 {#protocols}
       - [通用OData聯結器](connectors/protocols/odata.md)
       - [通用REST API聯結器](connectors/protocols/generic-rest.md)
@@ -195,6 +196,7 @@ ht-degree: 10%
       - 付款 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [正方形](tutorials/api/create/payments/square.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - 通訊協定 {#protocols}
          - [通用OData](tutorials/api/create/protocols/odata.md)
          - [一般REST API](tutorials/api/create/protocols/generic-rest.md)
@@ -323,6 +325,7 @@ ht-degree: 10%
       - 付款 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [正方形](tutorials/ui/create/payments/square.md)
+         - [Stripe](tutorials/ui/create/payments/stripe.md)
       - 通訊協定 {#protocols}
          - [通用OData](tutorials/ui/create/protocols/odata.md)
       - 串流 {#streaming}
