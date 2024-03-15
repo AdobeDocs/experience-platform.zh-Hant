@@ -1,12 +1,12 @@
 ---
 title: Acxiom資料增強功能
-description: 使用此聯結器在Real-Time CDP中啟用第一方Adobe設定檔至Acxiom，以擴充及跨行銷管道使用。
+description: 使用此聯結器在Real-Time CDP中啟動第一方Adobe設定檔至Acxiom，以擴充資料並跨行銷管道使用。 然後，您可以使用Acxiom來源匯入具有增強型資料的設定檔，並在Real-Time CDP中處理這些設定檔。
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: 6f272ce0ad619f835920ab9d25d0946d7709d7cb
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 3%
+source-wordcount: '1346'
+ht-degree: 2%
 
 ---
 
@@ -18,30 +18,29 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-使用Acxiom資料增強聯結器將其他描述性資料提供給Adobe設定檔，以用於分析、細分和目標定位應用程式。 由於有數百個可用元素，這可讓使用者更妥善地劃分資料區段及建立資料模型，進而實現更精確的目標定位及預測性模型。
+使用 [!DNL Acxiom Data Enhancement] 聯結器可為您的客戶設定檔提供其他描述性資料，以用於分析、細分和目標定位應用程式。 由於有數百個可用元素，這可讓您更精確劃分資料區段及建立資料模型，進而建立更準確的鎖定目標和預測性模型。
 
 ![行銷圖表可將第一方資料匯出至Acxiom，然後將擴充的資料匯回Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-本教學課程提供建立 [!DNL Acxiom Data Enhancement] 使用Adobe Experience Platform使用者介面的目的地連線和資料流。  此聯結器是用來將資料傳送至Acxiom增強服務，使用Amazon S3作為放置點。
+本教學課程提供建立 [!DNL Acxiom Data Enhancement] 使用Adobe Experience Platform使用者介面的目的地連線和資料流。 此聯結器是用來將資料傳送至Acxiom增強服務，使用Amazon S3作為放置點。
 
 ![已選取Acxiom目的地的目的地目錄。](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解如何使用Acxiom資料增強功能目的地，以下是Adobe Experience Platform客戶可以使用此目的地解決的範例使用案例。
+為了協助您更清楚瞭解您應如何及何時使用 [!DNL Acxiom Data Enhancement] 目的地，以下是Adobe Experience Platform客戶可以使用此目的地解決的範例使用案例。
 
 ### 增強客戶資料 {#enhance-customer-data}
 
-行銷專業人員應使用此聯結器，藉由將選取的描述性元素附加至Adobe設定檔，並使用這些元素更好地鎖定行銷活動，以提高其外展策略的成效。
+行銷專業人員應使用此聯結器，藉由將選取的描述性元素附加至其客戶設定檔中，並運用這些元素更好地鎖定行銷活動，以提高其外展策略的成效。
 
 例如，身為行銷人員，您可能想要透過使用其他資料豐富現有對象的設定檔，以加深對現有對象的瞭解。 這麼做將改善您的細分和目標定位策略，進而促進行銷活動個人化和轉換。
 
 使用案例是透過結合目的地和來源聯結器來執行。
 
-
 一開始您可以使用此目的地聯結器匯出現有客戶記錄以進行擴充。 Acxiom的服務會搜尋檔案、擷取檔案、使用Acxiom的資料擴充檔案並產生檔案。
 
-然後，客戶將使用對應的Acxiom資料擷取來源卡片，將水合的客戶設定檔擷取回Adobe Real-Time CDP。
+然後，客戶會使用對應的 [Acxiom資料擷取](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) 來源卡片，用於將水合的客戶設定檔擷取回Adobe Real-Time CDP。
 
 ## 先決條件 {#prerequisites}
 
@@ -79,6 +78,8 @@ ht-degree: 3%
 >
 >若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
+若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
+
 ### 驗證目標 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
@@ -99,7 +100,7 @@ ht-degree: 3%
 
 ### 現有帳戶
 
-已使用Acxiom Data Enhancement卡定義的帳戶將會出現在清單快顯視窗中，並且在選取時會提供帳戶的詳細資訊。  當您導覽至「 」，以下是UI的範例 **目的地** > **帳戶**；
+已使用定義帳戶 [!DNL Acxiom Data Enhancement] 目的地會出現在清單快顯視窗中。 選取後，您可以在右側邊欄中檢視帳戶的詳細資料。 導覽至「 」時，從UI檢視範例 **[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**；
 
 ![現有帳戶](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
@@ -144,14 +145,14 @@ ht-degree: 3%
 
 | 目標欄位 | 來源說明 |
 |--------------|-------------------------------------------------------------|
-| 名稱 | Experience Platform中的person.name.fullName值。 |
-| 名字 | Experience Platform中的person.name.firstName值。 |
-| 姓氏 | Experience Platform中的person.name.lastName值。 |
-| address1 | Experience Platform中的mailingAddress.street1值。 |
-| address2 | Experience Platform中的mailingAddress.street2值。 |
-| city | Experience Platform中的mailingAddress.city值。 |
-| state | Experience Platform中的mailingAddress.state值。 |
-| zip | Experience Platform的mailingAddress.postalCode值。 |
+| 名稱 | 此 `person.name.fullName` Experience Platform的值。 |
+| 名字 | 此 `person.name.firstName` Experience Platform的值。 |
+| 姓氏 | 此 `person.name.lastName` Experience Platform的值。 |
+| address1 | 此 `mailingAddress.street1` Experience Platform的值。 |
+| address2 | 此 `mailingAddress.street2` Experience Platform的值。 |
+| city | 此 `mailingAddress.city` Experience Platform的值。 |
+| state | 此 `mailingAddress.state` Experience Platform的值。 |
+| zip | 此 `mailingAddress.postalCode` Experience Platform的值。 |
 
 >[!NOTE]
 >

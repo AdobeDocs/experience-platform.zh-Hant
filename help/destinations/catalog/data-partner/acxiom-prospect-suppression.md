@@ -3,9 +3,9 @@ title: Acxiom前景抑制
 description: 將您的第一方對象匯出至Acxiom目的地，以允許Acxiom抑制已知或轉換的客戶。 然後使用Acxiom來源聯結器從Acxiom擷取並啟用潛在客戶清單，將您的已知或轉換的客戶移除。
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c881f8375bc0eccb8e64666a888735c03018421c
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1466'
 ht-degree: 2%
 
 ---
@@ -102,7 +102,7 @@ Acxiom的服務會搜尋檔案、擷取檔案，並搭配其他選取條件使�
 
 ### 現有帳戶
 
-已使用Acxiom Prospect-Suppression卡定義的帳戶將會出現在清單快顯視窗中，並且在選取時會提供帳戶的詳細資訊。  當您導覽至「 」，以下是UI的範例 **目的地** > **帳戶**；
+已使用定義帳戶 [!DNL Acxiom Prospect Suppression] 目的地會出現在清單快顯視窗中。 選取後，您可以在右側邊欄中檢視帳戶的詳細資料。 導覽至「 」時，從UI檢視範例 **[!UICONTROL 目的地]** > **[!UICONTROL 帳戶]**：
 
 ![現有帳戶](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -145,14 +145,14 @@ Acxiom的服務會搜尋檔案、擷取檔案，並搭配其他選取條件使�
 
 | 目標欄位 | 來源說明 |
 |--------------|-------------------------------------------------------------|
-| 名稱 | Experience Platform中的person.name.fullName值。 |
-| 名字 | Experience Platform中的person.name.firstName值。 |
-| 姓氏 | Experience Platform中的person.name.lastName值。 |
-| address1 | Experience Platform中的mailingAddress.street1值。 |
-| address2 | Experience Platform中的mailingAddress.street2值。 |
-| city | Experience Platform中的mailingAddress.city值。 |
-| state | Experience Platform中的mailingAddress.state值。 |
-| zip | Experience Platform的mailingAddress.postalCode值。 |
+| 名稱 | 此 `person.name.fullName` Experience Platform的值。 |
+| 名字 | 此 `person.name.firstName` Experience Platform的值。 |
+| 姓氏 | 此 `person.name.lastName` Experience Platform的值。 |
+| address1 | 此 `mailingAddress.street1` Experience Platform的值。 |
+| address2 | 此 `mailingAddress.street2` Experience Platform的值。 |
+| city | 此 `mailingAddress.city` Experience Platform的值。 |
+| state | 此 `mailingAddress.state` Experience Platform的值。 |
+| zip | 此 `mailingAddress.postalCode` Experience Platform的值。 |
 
 {style="table-layout:auto"}
 
