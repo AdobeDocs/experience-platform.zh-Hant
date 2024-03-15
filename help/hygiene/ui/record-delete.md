@@ -1,24 +1,25 @@
 ---
 title: 刪除記錄
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
+badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 86cf250b2915a49d994fee0ab9d9ddbf65f6f836
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 4%
+source-wordcount: '1566'
+ht-degree: 8%
 
 ---
 
-# [!BADGE 測試版]{type=Informative}刪除記錄 {#record-delete}
+# 刪除記錄 {#record-delete}
 
 使用 [[!UICONTROL 資料生命週期] 工作區](./overview.md) 根據主要身分刪除Adobe Experience Platform中的記錄。 這些記錄可以與個別消費者或包含在身分圖表中的任何其他實體繫結。
 
 >[!IMPORTANT]
 > 
-記錄刪除功能目前在Beta版中提供，且僅適用於 **限量發行**. 並非所有客戶都可使用。 記錄刪除請求僅適用於有限版本中的組織。
+>記錄刪除功能目前在Beta版中提供，且僅適用於 **限量發行**. 並非所有客戶都可使用。 記錄刪除請求僅適用於有限版本中的組織。
 > 
 > 
-記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們是 **非** 用於資料主體權利要求（法規遵循），如一般資料保護規範(GDPR)等隱私權法規。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 而非。
+>記錄刪除旨在用於資料清理、匿名資料移除或資料最小化。 它們是 **非** 用於資料主體權利要求（法規遵循），如一般資料保護規範(GDPR)等隱私權法規。 對於所有合規性使用案例，請使用 [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) 而非。
 
 ## 先決條件 {#prerequisites}
 
@@ -27,7 +28,7 @@ ht-degree: 4%
 請參閱下列檔案，以取得有關Platform中身分的詳細資訊：
 
 * [Adobe Experience Platform Identity服務](../../identity-service/home.md)：跨裝置和系統橋接身分，根據資料集符合的XDM結構描述所定義的身分欄位將其連結在一起。
-* [身分名稱空間](../../identity-service/features/namespaces.md)：身分名稱空間會定義不同的型別 of 可與單一人員相關的身分資訊，且是每個身分欄位的必要元件。
+* [身分名稱空間](../../identity-service/features/namespaces.md)：身分名稱空間會定義與單一人員相關的不同型別的身分資訊，且是每個身分欄位的必要元件。
 * [即時客戶個人檔案](../../profile/home.md)：使用身分圖表，根據來自多個來源的彙總資料提供統一的消費者個人檔案，並近乎即時更新。
 * [體驗資料模型(XDM)](../../xdm/home.md)：透過使用結構描述，提供Platform資料的標準定義和結構。 所有Platform資料集都符合特定的XDM結構描述，而結構描述會定義哪些欄位是身分。
 * [身分欄位](../../xdm/ui/fields/identity.md)：瞭解身分欄位如何在XDM結構描述中定義。
@@ -42,7 +43,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 > 
-為了提高效率並降低資料集作業成本，進行中的變更包括，已移至Delta格式的組織可從Identity Service、即時客戶設定檔和資料湖中刪除資料。 此型別 of 使用者稱為delta-migrated。 已進行差異移轉的組織之使用者，可選擇從單一或所有資料集中刪除記錄。 來自尚未進行差異移轉之組織的使用者，無法選擇從單一或所有資料集中刪除記錄，如下圖所示。 在此情況下，請繼續執行 [提供身分](#provide-identities) 部分。
+>為了提高效率並降低資料集作業成本，進行中的變更包括，已移至Delta格式的組織可從Identity Service、即時客戶設定檔和資料湖中刪除資料。 此型別的使用者稱為差異移轉使用者。 已進行差異移轉的組織之使用者，可選擇從單一或所有資料集中刪除記錄。 來自尚未進行差異移轉之組織的使用者，無法選擇從單一或所有資料集中刪除記錄，如下圖所示。 在此情況下，請繼續執行 [提供身分](#provide-identities) 部分。
 
 ![使用的請求建立工作流程 [!UICONTROL 刪除記錄] 選項已選取並反白顯示。](../images/ui/record-delete/delete-record.png)
 
@@ -60,31 +61,31 @@ ht-degree: 4%
 
 >[!NOTE]
 >
-選取 **[!UICONTROL 所有資料集]** 選項可能會導致刪除操作花費更長的時間，並且可能不會導致準確的記錄刪除。
+>選取 **[!UICONTROL 所有資料集]** 選項可能會導致刪除操作花費更長的時間，並且可能不會導致準確的記錄刪除。
 
 ## 提供身分 {#provide-identities}
 
-[!CONTEXTUALHELP]
-id="platform_hygiene_primaryidentity"
-title="主要身分識別"
-abstract="主要身分識別指將記錄和 Experience Platform 中的消費者設定檔繫結的屬性。資料集的主要身分識別欄位由資料集建立基礎的方案定義。在此欄中，您必須提供型別 (or 名稱空間)，以取得紀錄的主要身分，例如 `email` （針對電子郵件地址和） `ecid` 用於Experience CloudID。 若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_primaryidentity"
+>title="主要身分識別"
+>abstract="主要身分識別指將記錄和 Experience Platform 中的消費者設定檔繫結的屬性。資料集的主要身分識別欄位由資料集建立基礎的方案定義。在此欄中，您必須提供記錄的主要身分識別的類型 (或命名空間)，例如用於電子郵件地址的 `email`，以及用於 Experience Cloud ID 的 `ecid`。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
-[!CONTEXTUALHELP]
-id="platform_hygiene_identityvalue"
-title="身分識別值"
-abstract="在此資料欄中，您必須提供記錄主要身分的值，該值必須與身分型別相對應 provided 在左欄中。 如果主要身分型別 is `email`，該值應為記錄的電子郵件地址。 若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
+>[!CONTEXTUALHELP]
+>id="platform_hygiene_identityvalue"
+>title="身分識別值"
+>abstract="在此欄中，您必須提供記錄的主要身分識別的值，該值必須和左欄中提供的身分識別類型相對應。如果主要身分識別類型是 `email`，則該值應該是記錄的電子郵件地址。若要了解詳細資訊，請查看「資料生命週期 UI 指南」。"
 
 刪除記錄時，您必須提供身分資訊，讓系統能夠決定要刪除哪些記錄。 對於Platform中的任何資料集，記錄會根據 **主要身分** 由資料集結構描述定義的欄位。
 
-和Platform中的所有身分欄位一樣，主要身分也由兩部分組成： **type** （有時稱為身分名稱空間）和 **值**. 身分型別 provides 此內容說明欄位如何識別記錄（例如電子郵件地址），而值代表該型別記錄的特定身分 (for 例如， `jdoe@example.com` 針對 `email` 身分型別)。 Common 做為身分識別的欄位包括帳戶資訊、裝置ID和Cookie ID。
+和Platform中的所有身分欄位一樣，主要身分也由兩部分組成： **type** （有時稱為身分名稱空間）和 **值**. 身分型別提供欄位如何識別記錄的上下文（例如電子郵件地址），值代表該型別記錄的特定身分(例如， `jdoe@example.com` 針對 `email` 身分型別)。 做為身分識別的常見欄位包括帳戶資訊、裝置ID和Cookie ID。
 
 >[!TIP]
 >
-如果您不知道特定資料集的主要身分，可以在Platform UI中找到。 在 **[!UICONTROL 資料集]** 從工作區中，選取有問題的資料集。 在資料集的詳細資訊頁面上，將滑鼠移至右側邊欄中資料集的結構描述名稱上。 主要身分會與結構描述名稱和說明一起顯示。
+>如果您不知道特定資料集的主要身分，可以在Platform UI中找到。 在 **[!UICONTROL 資料集]** 從工作區中，選取有問題的資料集。 在資料集的詳細資訊頁面上，將滑鼠移至右側邊欄中資料集的結構描述名稱上。 主要身分會與結構描述名稱和說明一起顯示。
 >
-![資料集控制面板，已選取資料集，並從資料集詳細資料面板開啟結構描述對話方塊。 資料集的主要ID會反白顯示。](../images/ui/record-delete/dataset-primary-identity.png)
+>![資料集控制面板，已選取資料集，並從資料集詳細資料面板開啟結構描述對話方塊。 資料集的主要ID會反白顯示。](../images/ui/record-delete/dataset-primary-identity.png)
 
-如果您要從單一資料集中刪除記錄，您提供的所有身分都必須有相同的型別 since 資料集只能有一個主要身分。 如果您要從所有資料集中刪除，您可以包含多個身分型別 since 不同的資料集可能擁有不同的主要身分。
+如果您要從單一資料集中刪除記錄，您提供的所有身分都必須有相同的型別，因為資料集只能有一個主要身分。 如果您要從所有資料集中刪除，則可以包含多個身分型別，因為不同的資料集可能具有不同的主要身分。
 
 刪除記錄時，有兩個選項可提供身分識別：
 
@@ -125,7 +126,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 ![使用的請求建立工作流程 [!UICONTROL 新增身分] 選項會醒目提示。](../images/ui/record-delete/add-identity.png)
 
-顯示的控制項可讓您一次輸入一個身分。 在 **[!UICONTROL 主要身分]**，使用下拉式選單來選取身分型別。 Under **[!UICONTROL 身分值]**，提供記錄的主要身分值。
+顯示的控制項可讓您一次輸入一個身分。 在 **[!UICONTROL 主要身分]**，使用下拉式選單來選取身分型別。 在 **[!UICONTROL 身分值]**，提供記錄的主要身分值。
 
 ![已手動新增包含身分欄位的請求建立工作流程。](../images/ui/record-delete/identity-added.png)
 
@@ -139,7 +140,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 >[!IMPORTANT]
 > 
-每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板** 每月最多可提交600,000筆身分記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 此 [刪除記錄的API方法](../api/workorder.md#create) 允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為上限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
+>每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板** 每月最多可提交600,000筆身分記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 此 [刪除記錄的API方法](../api/workorder.md#create) 允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為上限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
 
 ![請求設定的 [!UICONTROL 名稱] 和 [!UICONTROL 說明] 欄位和 [!UICONTROL 提交] 反白顯示。](../images/ui/record-delete/submit.png)
 
@@ -151,7 +152,7 @@ A [!UICONTROL 確認請求] 對話方塊似乎表示身分在刪除後就無法�
 
 >[!NOTE]
 >
-請參閱的概觀區段： [時間軸和透明度](../home.md#record-delete-transparency) 以瞭解記錄刪除執行後如何處理的詳細資訊。
+>請參閱的概觀區段： [時間軸和透明度](../home.md#record-delete-transparency) 以瞭解記錄刪除執行後如何處理的詳細資訊。
 
 ![此 [!UICONTROL 記錄] 的標籤 [!UICONTROL 資料生命週期] 工作區中醒目提示新請求。](../images/ui/record-delete/request-log.png)
 
