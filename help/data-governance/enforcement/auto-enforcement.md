@@ -4,24 +4,24 @@ solution: Experience Platform
 title: 自動原則執行
 description: 本文介紹在Experience Platform中將對象啟用到目的地時，如何自動執行資料使用原則。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2012'
 ht-degree: 0%
 
 ---
 
 # 自動執行原則
 
+資料使用標籤和原則可供所有Adobe Experience Platform使用者使用。 定義資料使用原則並套用資料使用標籤，以確保正確處理任何敏感、可識別或合約資料。 這些措施有助於強制實施組織的資料治理規則，規範如何存取、處理、儲存和共用資料。
+
+為了協助保護您的組織免受潛在風險和責任的影響，Platform會在啟用目標受眾時發生任何違規時，自動強制執行使用原則。
+
 >[!IMPORTANT]
 >
->自動原則執行僅適用於已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板**.
+>同意原則和自動同意原則執行僅適用於已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板**.
 
-在標籤資料並定義資料使用原則後，您就可以強制資料使用符合原則。 將對象啟用至目的地時，Adobe Experience Platform會在任何違規發生時自動強制執行使用原則。
-
->[!NOTE]
->
->本檔案著重於資料控管和同意政策的實作。 如需有關存取控制原則的資訊，請參閱以下檔案： [基於屬性的存取控制](../../access-control/abac/overview.md).
+本檔案著重於資料控管和同意政策的實作。 如需有關存取控制原則的資訊，請參閱以下檔案： [基於屬性的存取控制](../../access-control/abac/overview.md).
 
 ## 先決條件
 
@@ -94,27 +94,31 @@ ht-degree: 0%
 
 在彈出視窗的左欄中選取原則違規，以顯示該違規的詳細資訊。
 
-![](../images/enforcement/violation-policy-select.png)
+![指示發生原則違規的對話方塊，並反白顯示原則名稱。](../images/enforcement/violation-policy-select.png)
 
 違規訊息會提供違規原則的摘要，包括原則設定要檢查的條件、觸發違規的特定動作，以及問題的可能解決方法清單。
 
-![](../images/enforcement/violation-summary.png)
+![反白違規摘要的原則違規對話方塊。](../images/enforcement/violation-summary.png)
 
 違規摘要下方會顯示資料譜系圖，可讓您視覺化哪些資料集、合併原則、對象和目的地與原則違規有關。 您目前變更的圖元會在圖形中反白顯示，指示在流程中的哪個點導致發生違規。 您可以在圖形中選取實體名稱，以開啟相關實體的詳細資訊頁面。
 
-![](../images/enforcement/data-lineage.png)
+![反白顯示資料譜系圖的原則違規對話方塊。](../images/enforcement/data-lineage.png)
 
 您也可以使用 **[!UICONTROL 篩選]** 圖示(![](../images/enforcement/filter.png))，依類別篩選顯示的實體。 必須選取至少兩個類別才能顯示資料。
 
-![](../images/enforcement/lineage-filter.png)
+![含有資料譜系篩選器和下拉式功能表且反白顯示的原則違規對話方塊。](../images/enforcement/lineage-filter.png)
 
 選取 **[!UICONTROL 清單檢視]** 以清單形式顯示資料譜系。 若要切換回視覺化圖表，請選取 **[!UICONTROL 路徑檢視]**.
 
-![](../images/enforcement/list-view.png)
+![反白顯示資料譜系路徑檢視的原則違規對話方塊。](../images/enforcement/list-view.png)
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-如果您有 [已建立的同意原則](../policies/user-guide.md#consent-policy) 並且將對象啟用至目的地，您可以瞭解同意原則如何影響啟用中包含的設定檔百分比。
+將對象啟用至目的地時，您可以瞭解 [同意原則](../policies/user-guide.md#consent-policy) 會影響啟用中包含的不同設定檔百分比。
+
+>[!NOTE]
+>
+>同意政策僅適用於已購買Adobe Healthcare Shield或Adobe Privacy &amp; Security Shield的組織。
 
 #### 付費媒體的同意原則增強功能 {#consent-policy-enhancement}
 

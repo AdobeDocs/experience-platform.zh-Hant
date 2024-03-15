@@ -3,7 +3,7 @@ title: 工單API端點
 description: 資料衛生API中的/workorder端點可讓您以程式設計方式管理身分的刪除任務。
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 1%
@@ -126,9 +126,9 @@ curl -X POST \
 
 {style="table-layout:auto"}
 
-## 擷取記錄刪除的狀態(#lookup)
+## 擷取記錄刪除的狀態 {#lookup}
 
-晚於 [建立記錄刪除請求](#create)，您可使用GET要求來檢查其狀態。
+在您之後 [建立記錄刪除請求](#create)，您可使用GET要求來檢查其狀態。
 
 **API格式**
 
