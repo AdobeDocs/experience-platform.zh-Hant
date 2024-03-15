@@ -1,12 +1,10 @@
 ---
 title: 串流SDK API的檔案自助服務範本
 description: 瞭解如何使用流量服務API，將來源中的串流資料匯入Adobe Experience Platform。
-hide: true
-hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1637'
 ht-degree: 1%
 
 ---

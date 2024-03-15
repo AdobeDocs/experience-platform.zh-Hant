@@ -1,13 +1,11 @@
 ---
 title: 串流SDK UI的檔案自助服務範本
 description: 瞭解如何使用UI將來源中的串流資料匯入Adobe Experience Platform。
-hide: true
-hidefromtoc: true
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 1%
+source-wordcount: '1186'
+ht-degree: 0%
 
 ---
 
@@ -66,7 +64,7 @@ ht-degree: 1%
 
 ![Experience Platform來源目錄](../assets/streaming/catalog.png)
 
-## 選擇資料
+## 選取資料
 
 此 **[!UICONTROL 選取資料]** 步驟隨即顯示，提供介面供您選取要帶到Platform的資料。
 
@@ -83,7 +81,7 @@ ht-degree: 1%
 
 ![來源工作流程的預覽步驟。](../assets/streaming/preview.png)
 
-## 資料流詳細資訊
+## 資料流詳細資料
 
 此 **資料流詳細資料** 步驟隨即顯示，為您提供使用現有資料集或為資料流建立新資料集的選項，並為您提供資料流名稱和說明的機會。 在此步驟中，您還可以配置設定檔擷取、錯誤診斷、部分擷取和警報的設定。
 
@@ -91,7 +89,7 @@ ht-degree: 1%
 
 ![來源工作流程的資料流詳細資料步驟。](../assets/streaming/dataflow-detail.png)
 
-## 對應
+## 映射
 
 此 [!UICONTROL 對應] 步驟隨即顯示，為您提供介面，用於將來源結構描述中的來源欄位對應到目標結構描述中適當的目標XDM欄位。
 
@@ -101,7 +99,7 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 ![來源工作流程的對應步驟。](../assets/streaming/mapping.png)
 
-## 請檢閱
+## 檢閱
 
 此 **[!UICONTROL 檢閱]** 步驟隨即顯示，可讓您在建立新資料流之前對其進行檢閱。 詳細資料會分組到以下類別中：
 

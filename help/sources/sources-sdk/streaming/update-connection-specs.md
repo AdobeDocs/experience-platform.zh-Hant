@@ -1,10 +1,8 @@
 ---
 title: 使用流量服務API更新串流SDK的連線規格
-description: 以下檔案提供如何使用Flow Service API for Self-Serve Sources (Streaming SDK)建立連線規格的步驟。
-hide: true
-hidefromtoc: true
+description: 以下檔案提供如何使用Flow Service API for Self-Serve Sources (Streaming SDK)進行連線規格的步驟。
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 2%
@@ -23,7 +21,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **要求**
 
-下列要求會將說明新增至上一個教學課程中建立的串流連線規格。
+下列請求會將說明新增至上一個教學課程中建立的串流連線規格。
 
 ```shell
 PUT -X GET \
@@ -193,4 +191,4 @@ PUT -X GET \
 
 ## 後續步驟
 
-完成連線規格的更新後，您現在可以繼續進行 [測試並提交您的來源以進行整合](./submit.md).
+完成連線規格的更新後，您現在可以繼續前往 [測試並提交您的來源以進行整合](./submit.md).
