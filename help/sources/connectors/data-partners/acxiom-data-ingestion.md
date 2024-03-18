@@ -2,7 +2,7 @@
 title: Acxiom資料擷取
 description: 瞭解如何內嵌 [!DNL Acxiom] 將資料放入Real-time Customer Data Platform、豐富第一方設定檔，並改善對象和跨行銷管道啟用。
 badge: Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 1%
@@ -54,3 +54,4 @@ ht-degree: 1%
 ## 後續步驟
 
 閱讀本檔案後，您已完成從匯入資料所需的先決條件設定 [!DNL Acxiom] 要Experience Platform的帳戶。 您現在可以在以下位置繼續參閱指南： [正在連線 [!DNL Acxiom Data Ingestion] 以使用使用者介面Experience Platform](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
