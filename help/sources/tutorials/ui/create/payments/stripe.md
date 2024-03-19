@@ -1,10 +1,8 @@
 ---
 title: 使用使用者介面從您的Stripe帳戶擷取付款資料以Experience Platform。
 description: 瞭解如何使用使用者介面，從您的Stripe帳戶擷取付款資料以Experience Platform。
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: b5e791882ddb7cb8c87c15d4812470b3bbc9a72e
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 2%

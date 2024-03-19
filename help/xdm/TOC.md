@@ -5,10 +5,10 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: a3b23c67847765692144459939afec23fd15c2a5
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 15%
+source-wordcount: '590'
+ht-degree: 18%
 
 ---
 
@@ -43,13 +43,13 @@ ht-degree: 15%
    * [區段定義](./classes/segment-definition.md)
    * B2B類別 {#b2b}
       * [XDM商業帳戶](./classes/b2b/business-account.md)
-      * [XDM商業帳戶個人關係](./classes/b2b/business-account-person-relation.md)
+      * [XDM 商業帳戶個人關係](./classes/b2b/business-account-person-relation.md)
       * [XDM商業活動](./classes/b2b/business-campaign.md)
-      * [XDM商業活動會員](./classes/b2b/business-campaign-members.md)
+      * [XDM 商業活動會員](./classes/b2b/business-campaign-members.md)
       * [XDM商業機會](./classes/b2b/business-opportunity.md)
-      * [XDM商業機會個人關係](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM 商業機會個人關係](./classes/b2b/business-opportunity-person-relation.md)
       * [XDM業務行銷清單](./classes/b2b/business-marketing-list.md)
-      * [XDM業務行銷清單成員](./classes/b2b/business-marketing-list-members.md)
+      * [XDM 業務行銷清單會員](./classes/b2b/business-marketing-list-members.md)
 * 欄位群組 {#field-groups}
    * XDM個別設定檔 {#profile}
       * [同意和偏好設定](./field-groups/profile/consents.md)
@@ -186,12 +186,13 @@ ht-degree: 15%
       * [資料類型](./ui/resources/data-types.md)
    * 定義欄位 {#fields}
       * [概觀](./ui/fields/overview.md)
-      * [必填欄位](./ui/fields/required.md)
-      * [物件欄位](./ui/fields/object.md)
       * [陣列欄位](./ui/fields/array.md)
       * [列舉欄位](./ui/fields/enum.md)
       * [身分欄位](./ui/fields/identity.md)
+      * [地圖](./ui/fields/map.md)
+      * [物件欄位](./ui/fields/object.md)
       * [關係欄位](./ui/fields/relationship.md)
+      * [必填欄位](./ui/fields/required.md)
    * [欄位式工作流程](./ui/field-based-workflows.md)
    * [產生範例XDM資料](./ui/sample.md)
    * [匯出XDM結構描述](./ui/export.md)

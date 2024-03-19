@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
+source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 10%
 
 ---
@@ -299,6 +299,7 @@ ht-degree: 10%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+         - [Snowflake串流](tutorials/ui/create/databases/snowflake-streaming.md)
          - [teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - 資料與身分合作夥伴 {#data-partner}
          - [Acxiom資料擷取](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4018'
 ht-degree: 3%
 
 ---
@@ -212,6 +212,18 @@ ht-degree: 3%
 | [!UICONTROL 修改日期] | 可讓您根據對象的上次修改日期進行篩選。 您可以選擇日期範圍，以篩選上次修改對象的時間。 |
 
 ![瀏覽對象頁面上會顯示並反白顯示可用的篩選器。](../images/ui/overview/filter-audiences.png)
+
+**大量動作** {#bulk-actions}
+
+此外，您最多可以選取25個不同的對象，並對這些對象執行各種動作。 這些動作包括 [移至資料夾](#folders)， [編輯或套用標籤](#tags)， [套用存取權標籤](../../access-control/abac/ui/labels.md)、和 [刪除](#browse).
+
+![大量動作的可用選項會反白顯示。](../images/ui/overview/bulk-actions.png)
+
+將大量動作套用至這些對象時，將會套用下列條件：
+
+- 您 **可以** 從不同頁面選取對象。
+- 您 **無法** 刪除用於目的地啟用的對象。
+- 如果您選取篩選器，則所選的對象 **將** 重設。
 
 ### 對象詳細資料 {#audience-details}
 

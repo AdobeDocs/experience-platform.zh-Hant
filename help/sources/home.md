@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 來源聯結器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1530'
 ht-degree: 1%
 
 ---
@@ -181,6 +181,7 @@ Experience Platform支援從協力廠商支付系統擷取資料。 如需特定
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE 批次]{type=Informative}
 
 ### 串流 {#streaming}
 

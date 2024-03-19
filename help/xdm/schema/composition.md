@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結構描述組合基本概念
 description: 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
 workflow-type: tm+mt
-source-wordcount: '4229'
+source-wordcount: '4236'
 ht-degree: 6%
 
 ---
@@ -261,7 +261,7 @@ Experience Platform提供許多常見資料型別，屬於 [!DNL Schema Registry
 
 >[!NOTE]
 >
->「對應」欄位型別允許索引鍵值配對資料，包括單一索引鍵的多個值。 可以在標準XDM類別和欄位群組中找到對應，但您也可以使用結構描述登入API定義自訂對應。 請參閱上的教學課程 [定義自訂欄位](../tutorials/custom-fields-api.md#custom-maps) 以取得詳細資訊。
+>「對應」欄位型別允許索引鍵值配對資料，包括單一索引鍵的多個值。 您可以在標準XDM類別和欄位群組中找到對應，但您也可以定義自訂對應。 請參閱API教學課程，位於 [定義自訂地圖欄位](../tutorials/custom-fields-api.md#custom-maps) 或指南 [在使用者介面中定義對應欄位](../ui/fields/map.md) 以取得詳細資訊。
 
 ## 組合範例 {#composition-example}
 

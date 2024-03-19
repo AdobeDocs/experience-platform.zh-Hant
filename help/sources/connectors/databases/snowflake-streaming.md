@@ -5,7 +5,7 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 1%
@@ -47,7 +47,6 @@ Experience Platform支援從串流處理資料 [!DNL Snowflake] 資料庫。
 | `role` | （選用）可以為使用者針對指定連線提供的自訂定義角色。 如果未提供，則此值預設為 `public`. |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Snowflake] 是 `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-如需有關驗證的詳細資訊，請參閱此 [[!DNL Snowflake] 檔案](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### 設定角色設定 {#configure-role-settings}
 
@@ -83,3 +82,4 @@ Experience Platform支援從串流處理資料 [!DNL Snowflake] 資料庫。
 下列教學課程提供如何連線至 [!DNL Snowflake] 要使用APIExperience Platform的串流來源：
 
 * [從串流資料 [!DNL Snowflake] 要使用流程服務APIExperience Platform的資料庫](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [從串流資料 [!DNL Snowflake] 要在Experience Platform使用者介面中使用來源工作區來Experience Platform的資料庫](../../tutorials/ui/create/databases/snowflake-streaming.md)

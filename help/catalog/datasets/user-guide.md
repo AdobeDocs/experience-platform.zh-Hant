@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 4%
+source-wordcount: '2932'
+ht-degree: 3%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 4%
 本使用手冊需要您實際瞭解下列Adobe Experience Platform元件：
 
 * [資料集](overview.md)：中資料持續性的儲存和管理結構 [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：[!DNL Experience Platform] 據以組織客戶體驗資料的標準化框架。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
    * [結構描述組合基本概念](../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
    * [結構描述編輯器](../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用建置您自己的自訂XDM結構描述 [!DNL Schema Editor] 在 [!DNL Platform] 使用者介面。
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
@@ -41,12 +41,36 @@ ht-degree: 4%
 
 在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 資料集]** 在左側導覽以開啟 **[!UICONTROL 資料集]** 儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資訊，包括其名稱、資料集所遵守的結構描述，以及最新擷取執行的狀態。
 
-![反白顯示左側導覽列中資料集專案的影像。](../images/datasets/user-guide/browse-datasets.png)
+![Platform UI的資料集專案會在左側導覽列中反白顯示。](../images/datasets/user-guide/browse-datasets.png)
 
 從中選擇資料集的名稱 [!UICONTROL 瀏覽] 標籤以存取其 **[!UICONTROL 資料集活動]** 畫面並檢視您選取之資料集的詳細資訊。 活動索引標籤包含將所使用訊息的比率視覺化的圖形，以及成功和失敗批次的清單。
 
-![系統隨即醒目顯示您所選資料集的詳細資料。](../images/datasets/user-guide/dataset-activity-1.png)
-![屬於您所選資料集的範例批次會反白顯示。](../images/datasets/user-guide/dataset-activity-2.png)
+![您所選資料集的量度和視覺效果會強調顯示。](../images/datasets/user-guide/dataset-activity-1.png)
+![會反白顯示與您所選資料集相關的範例批次。](../images/datasets/user-guide/dataset-activity-2.png)
+
+## 更多動作 {#more-actions}
+
+您可以 [!UICONTROL 刪除] 或 [!UICONTROL 為設定檔啟用資料集] 從 [!UICONTROL 資料集] 詳細資料檢視。 若要檢視可用的動作，請選取 **[!UICONTROL ...更多]** （在UI的右上方）。 下拉式選單出現。
+
+![具有的資料集工作區 [!UICONTROL ...更多] 下拉式功能表強調顯示。](../images/datasets/user-guide/more-actions.png)
+
+如果您選取 **[!UICONTROL 為設定檔啟用資料集]**，則會顯示確認對話方塊。 選取 **[!UICONTROL 啟用]** 以確認您的選擇。
+
+>[!NOTE]
+>
+>若要為設定檔啟用資料集，資料集堅持的結構必須相容以用於Real-Time Customer Profile。 請參閱 [為設定檔啟用資料集](#enable-profile) 區段以取得詳細資訊。
+
+![啟用資料集確認對話方塊。](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+如果您選取 **[!UICONTROL 刪除]**，則 [!UICONTROL 刪除資料集] 確認對話方塊隨即顯示。 選取 **[!UICONTROL 刪除]** 以確認您的選擇。
+
+>[!NOTE]
+>
+>您無法刪除系統資料集。
+
+您也可以刪除資料集或新增資料集，以便用於「即時客戶個人檔案」，其來源為 [!UICONTROL 瀏覽] 標籤。 請參閱 [內嵌動作區段](#inline-actions) 以取得詳細資訊。
+
+![刪除資料集確認對話方塊。](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## 內嵌資料集動作 {#inline-actions}
 
@@ -135,13 +159,13 @@ ht-degree: 4%
 
 ## 建立資料集 {#create}
 
-若要建立新資料集，請先在「資料集」儀表板先選取&#x200B;**[!UICONTROL 建立資料集]**。****
+若要建立新資料集，請從選取 **[!UICONTROL 建立資料集]** 在 **[!UICONTROL 資料集]** 儀表板。
 
 ![建立資料集按鈕會醒目提示。](../images/datasets/user-guide/select-create.png)
 
 在下一個畫面中，畫面會顯示下列兩個建立新資料集的選項：
 
-* [從結構建立資料集](#schema)
+* [從結構描述建立資料集](#schema)
 * [從CSV檔案建立資料集](#csv)
 
 ### 使用現有結構描述建立資料集 {#schema}
@@ -253,7 +277,7 @@ ht-degree: 4%
 
 您可以從中刪除資料集 [!DNL Profile] 使用即時客戶個人檔案API僅儲存（將資料留在資料湖中）。 如需詳細資訊，請參閱 [設定檔系統作業API端點指南](../../profile/api/profile-system-jobs.md).
 
-## 監視資料內嵌
+## 監視資料擷取
 
 在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 監視]** ，位於左側導覽器中。 此 **[!UICONTROL 監視]** 控制面板可讓您檢視批次或串流擷取的傳入資料狀態。 若要檢視個別批次的狀態，請選取 **[!UICONTROL 批次端對端]** 或 **[!UICONTROL 端對端串流]**. 控制面板會列出所有批次或串流擷取執行，包括成功、失敗或仍在進行的作業。 每個清單都提供批次的詳細資訊，包括批次ID、目標資料集的名稱和擷取的記錄數。 如果目標資料集已啟用 [!DNL Profile]，也會顯示內嵌的身分和設定檔記錄數。
 

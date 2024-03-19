@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
 workflow-type: tm+mt
-source-wordcount: '5789'
+source-wordcount: '5792'
 ht-degree: 2%
 
 ---
@@ -289,7 +289,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->您只能使用下列Analytics函式進行串流擷取。
+>您只能對WebSDK和Adobe Analytics流程使用下列分析函式。
 
 | 函數 | 說明 | 參數 | 語法 | 運算式 | 範例輸出 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
