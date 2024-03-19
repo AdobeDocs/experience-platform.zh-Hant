@@ -1,10 +1,9 @@
 ---
-title: Adobe Experience Platform 發行說明
-description: Adobe Experience Platform 2024 年 1 月版發行說明。
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Adobe Experience Platform 發行說明 (2024 年 3 月)
+description: Adobe Experience Platform 2024 年 3 月的發行說明。
 source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1043'
 ht-degree: 33%
 
 ---
@@ -117,3 +116,4 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 {style="table-layout:auto"}
 
 如需有關來源的詳細資訊，請閱讀 [來源概觀](../../sources/home.md).
+
