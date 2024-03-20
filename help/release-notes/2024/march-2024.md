@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2024 年 3 月)
 description: Adobe Experience Platform 2024 年 3 月的發行說明。
-source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
+source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 33%
+source-wordcount: '1063'
+ht-degree: 32%
 
 ---
 
@@ -28,6 +28,10 @@ Experience Platform現有功能的更新：
 ## 目錄服務 {#catalog-service}
 
 目錄服務是在 Adobe Experience Platform 內針對資料位置和連結的記錄系統。雖然所有內嵌至Experience Platform的資料都會以檔案和目錄的形式儲存在Data Lake中，但Catalog仍保有這些檔案和目錄的中繼資料和說明，以供查閱和監控之用。
+
+>[!NOTE]
+>
+>我們瞭解並正在努力修正表格中影像旁邊呈現不必要語法的顯示問題。
 
 | 功能 | 說明 |
 | --- | --- |
