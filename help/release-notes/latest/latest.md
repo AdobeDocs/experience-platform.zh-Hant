@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 3 月的發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1061'
-ht-degree: 32%
+source-wordcount: '1175'
+ht-degree: 33%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 32%
 Experience Platform現有功能的更新：
 
 - [目錄服務](#catalog-service)
+- [資料收集](#data-collection)
 - [資料準備](#data-prep)
 - [目的地](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
@@ -55,6 +56,20 @@ Experience Platform現有功能的更新：
 {style="table-layout:auto"}
 
 如需「資料準備」的詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
+
+## 資料收集 {#data-collection}
+
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+
+**新功能**
+
+| 類型 | 功能 | 說明 |
+| --- | --- | --- |
+| 擴充功能 | [!DNL Merkury] 標籤擴充功能 | 此 [[!DNL Merkury] 標籤延伸模組](https://exchange.adobe.com/apps/ec/600027/merkury-tag) 為訪客的匿名網站提供領先業界的匹配率， [!DNL Merkury] ID。 品牌可以利用 [!DNL Merkury] 標籤和Adobe，以提供即時的個人化網站體驗。 此外， [!DNL Merkury] 標籤可促進第一方數位資料的成長，以及連線的線上和離線客戶設定檔。 |
+
+{style="table-layout:auto"}
+
+若要進一步瞭解資料彙集，請參閱 [資料收集概觀](../../tags/home.md).
 
 ## 目的地 {#destinations}
 
