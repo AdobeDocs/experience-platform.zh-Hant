@@ -2,9 +2,9 @@
 title: 身分名稱空間總覽
 description: 瞭解Identity Service中的身分識別名稱空間。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
+source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '1862'
 ht-degree: 12%
 
 ---
@@ -102,13 +102,11 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 | Adobe Analytics （舊版ID） | 代表Adobe Analytics的名稱空間。 請參閱以下檔案： [Adobe Analytics名稱空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) 以取得詳細資訊。 |
 | Apple IDFA （廣告商的ID） | 代表廣告商Apple ID的名稱空間。 請參閱以下檔案： [興趣型廣告](https://support.apple.com/en-us/HT202074) 以取得詳細資訊。 |
 | Apple推播通知服務 | 代表使用Apple推播通知服務所收集之身分的名稱空間。 請參閱以下檔案： [Apple推播通知服務](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) 以取得詳細資訊。 |
-| 核心 | 代表Adobe Audience Manager的名稱空間。 此名稱空間也可以透過其舊版名稱「Adobe AudienceManager」來參照。 請參閱以下檔案： [AUDIENCE MANAGERID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html#aam-ids) 以取得詳細資訊。 |
 | ECID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](./ecid.md) 以取得詳細資訊。 |
 | 電子郵件 | 代表電子郵件地址的名稱空間。 這種型別的名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
 | 電子郵件（SHA256，小寫） | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 請參閱以下檔案： [SHA256雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 以取得詳細資訊。 |
 | Firebase雲端通訊 | 一個名稱空間，代表使用Google Firebase Cloud Messaging為推播通知所收集的身分。 請參閱以下檔案： [Google Firebase雲端通訊](https://firebase.google.com/docs/cloud-messaging) 以取得詳細資訊。 |
 | Google廣告ID (GAID) | 代表Google Advertising ID的名稱空間。 請參閱以下檔案： [Google廣告ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) 以取得詳細資訊。 |
-| Google點按ID | 代表Google點選ID的名稱空間。 請參閱以下檔案： [Google Ads中的點選追蹤](https://developers.google.com/adwords/api/docs/guides/click-tracking) 以取得詳細資訊。 |
 | 電話 | 代表電話號碼的名稱空間。 這種型別的名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
 | 電話(E.164) | 代表需要以E.164格式雜湊的原始電話號碼的名稱空間。 E.164格式包含加號(`+`)、國際國家/地區撥號代碼、當地區號和電話號碼。 例如: `(+)(country code)(area code)(phone number)`。 |
 | 電話(SHA256) | 代表需使用SHA256雜湊處理之電話號碼的名稱空間。 您必須移除符號、字母及任何前導零。 您也必須新增國家/地區呼叫代碼作為前置詞。 |
