@@ -2,10 +2,10 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 3 月的發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1175'
-ht-degree: 33%
+source-wordcount: '1209'
+ht-degree: 32%
 
 ---
 
@@ -82,6 +82,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | [(Beta) Acxiom資料增強功能連線](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新增 | 使用此聯結器可啟用從Real-Time CDP到Acxiom的第一方設定檔，以擴充資料並跨行銷管道使用。 然後，您可以使用Acxiom來源匯入具有增強型資料的設定檔，並在Real-Time CDP中處理這些設定檔。 |
 | [(Beta) Acxiom潛在客戶抑制連線](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新增 | 將您的第一方對象匯出至Acxiom目的地，以允許Acxiom抑制已知或轉換的客戶。 然後，使用 [Acxiom潛在客戶資料匯入](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) 來源聯結器可從Acxiom擷取及啟用潛在客戶清單，並移除您已知或轉換的客戶。 |
 | [Amazon Ads連線](../../destinations/catalog/advertising/amazon-ads.md) | 更新 | 將資料匯出至Amazon Ads目的地時，您現在可以將資料路由至Amazon DSP或AmazonMarketing Cloud（新增）。 |
+| [LiveRamp入門連線](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp入門目的地現在支援傳送至歐洲和澳洲的作業 [!DNL LiveRamp] [!DNL SFTP] 執行個體。 最大匯出檔案大小也增加為1,000萬列（之前為500萬列）。 |
 
 {style="table-layout:auto"}
 
