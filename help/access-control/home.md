@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1706'
+source-wordcount: '1707'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform的存取控制需透過 **[!UICONTROL 許可權]** 在
 
 - 授權Adobe Experience Platform或使用Experience Platform的應用程式/應用程式服務後，會傳送電子郵件給授權期間指定的管理員。
 - 管理員登入 [Adobe Admin Console](#adobe-admin-console) 並選取 **Adobe Experience Platform** 從總覽頁面上的產品清單。
-- 若要授予Experience Platform的存取權，管理員需要將使用者新增到預設的產品設定檔： `AEP-Default-All-Users`.
+- 若要授與Experience Platform的存取權，建議管理員將使用者新增至預設產品設定檔： `AEP-Default-All-Users`.
 - 在「Experience Platform許可權」中，管理員可以建立新角色，或編輯任何現有角色的許可權和使用者。
 - 在建立或編輯角色時，管理員會使用 **[!UICONTROL 使用者]** 標籤，並授予許可權給這些使用者(例如&quot;[!UICONTROL 讀取資料集]「或」[!UICONTROL 管理結構描述]「)，方式為編輯角色的許可權。 同樣地，管理員可以使用相同的編輯選項指派存取權給沙箱。
 - 當使用者登入Experience Platform使用者介面時，他們對該Experience Platform功能的存取是由先前步驟授予他們的許可權所驅動。 例如，如果使用者沒有 [!UICONTROL 檢視資料集] 許可權， **[!UICONTROL 資料集]** 該使用者看不到側邊功能表中的索引標籤。
