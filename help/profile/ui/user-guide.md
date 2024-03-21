@@ -3,10 +3,10 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
-ht-degree: 1%
+source-wordcount: '2103'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 * [[!DNL Real-Time Customer Profile] 概述](../home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 * [[!DNL Identity Service]](../../identity-service/home.md)：啟用 [!DNL Real-Time Customer Profile] 透過在異類資料來源被擷取時橋接身分 [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
 
 ## [!UICONTROL 概觀]
 
@@ -144,6 +144,12 @@ ht-degree: 1%
 
 ![「屬性」標籤會反白顯示。 設定檔屬性隨即顯示。](../images/user-guide/attributes.png)
 
+若要檢視「邊緣」上可用的屬性，請選取 **[!UICONTROL Edge]** 資料位置選擇器上的。
+
+![屬性標籤中的資料位置選取器會反白顯示。](../images/user-guide/attributes-select.png)
+
+如需邊緣設定檔的詳細資訊，請參閱 [邊緣設定檔檔案](../edge-profiles.md).
+
 ### 事件標籤
 
 此 **[!UICONTROL 活動]** 索引標籤包含來自與客戶相關聯的100個最新ExperienceEvents的資料。 此資料可能包括電子郵件開啟、購物車活動和頁面檢視。 選取 **[!UICONTROL 檢視全部]** 對於任何個別事件，都會提供額外的欄位和值當作事件的一部分擷取。
@@ -158,7 +164,11 @@ ht-degree: 1%
 
 如需Experience Platform中區段的詳細資訊，請參閱 [AdobeExperience Platform劃分服務檔案](../../segmentation/home.md).
 
-![對象成員資格索引標籤會醒目提示。 設定檔的對象會籍詳細資訊隨即顯示。](../images/user-guide/segment-membership.png)
+![對象成員資格索引標籤會醒目提示。 設定檔的對象會籍詳細資訊隨即顯示。](../images/user-guide/audience-membership.png)
+
+若要檢視Edge上可用設定檔的對象成員資格，請選取「 」 **[!UICONTROL Edge]** 在資料位置選擇器中。 有關邊緣區段的詳細資訊，請參閱 [邊緣分段指南](../../segmentation/ui/edge-segmentation.md).
+
+![對象成員資格標籤中的資料位置選擇器會醒目提示。](../images/user-guide/audience-membership-select.png)
 
 ## 合併政策
 
