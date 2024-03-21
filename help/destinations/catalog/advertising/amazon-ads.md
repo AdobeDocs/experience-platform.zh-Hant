@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書供應商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的鑰匙式整合。 使用Adobe Experience Platform中的Amazon Ads目的地，使用者能在Amazon DSP上定義用於鎖定和啟用的廣告商對象。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 [!DNL Amazon Ads] 提供一系列選項，協助您為註冊銷售商、廠商、圖書廠商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。
 
-此 [!DNL Amazon Ads] 與Adobe Experience Platform的整合提供以下專案的統整整合： [!DNL Amazon Ads] 產品，包括Amazon DSP (ADSP)和Amazon Marketing Cloud (AMC)。
+此 [!DNL Amazon Ads] 與Adobe Experience Platform的整合提供以下專案的統整整合： [!DNL Amazon Ads] 產品，包括Amazon DSP (ADSP)和AmazonMarketing Cloud(AMC)。
 
 使用 [!DNL Amazon Ads] 目的地：在Adobe Experience Platform中，使用者能定義廣告商對象，以在Amazon DSP上鎖定和啟用。  此外，使用者可將其資料上傳至 [!DNL Amazon Marketing Cloud] 若要依對象瞭解成效，廣告商提供的維度、Amazon區段中的成員資格，或AMC中可用的其他訊號。 將廣告商受眾上傳至AMC後，使用者可以使用 [!DNL Amazon Marketing Cloud] 若要使用中的Amazon訊號來修改、增強或附加至對象成員 [!DNL Amazon Marketing Cloud].
 
@@ -171,7 +171,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2024 年 2 月 | 功能和檔案更新 | 新增匯出對象以用於以下專案的選項： [!DNL Amazon Marketing Cloud] (AMC)。 |
+| 2024 年 3 月 | 功能和檔案更新 | 新增匯出對象以用於以下專案的選項： [!DNL Amazon Marketing Cloud] (AMC)。 |
 | 2023 年 5 月 | 功能和檔案更新 | <ul><li>在中新增對廣告商區域選取的支援 [目的地連線工作流程](#destination-details).</li><li>更新說明檔案，反映新增廣告商地區選擇。 如需選取正確廣告商地區的詳細資訊，請參閱 [Amazon檔案](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | 2023 年 3 月 | 首次發行 | 已發佈初始目的地版本和檔案。 |
 
