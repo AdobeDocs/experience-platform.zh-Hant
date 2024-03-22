@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流量服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API使用HTTP API來源為原始資料和XDM資料建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
+source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1658'
 ht-degree: 3%
 
 ---
@@ -456,9 +456,6 @@ curl -X POST \
 }
 ```
 
-| 屬性 | 說明 |
-| --- | --- |
-
 ## 建立資料流
 
 建立來源和目標連線後，您現在可以建立資料流。 資料流負責從來源排程及收集資料。 您可以透過對以下專案執行POST請求來建立資料流： `/flows` 端點。
@@ -579,16 +576,16 @@ POST /collection/{INLET_URL}
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{INLET_URL}` | 您的串流端點網址。 您可以向以下網站發出GET要求來擷取此URL： `/connections` 端點並提供您的基本連線ID。 |
-| `{FLOW_ID}` | HTTP API串流資料流的ID。 |
+| `{FLOW_ID}` | HTTP API串流資料流的ID。 XDM和RAW資料都需要此ID。 |
 
 **要求**
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB 傳送XDM資料]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -d '{
         "header": {
@@ -625,10 +622,36 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB 原始資料]
+>[!TAB 以流程ID作為HTTP標頭傳送原始資料]
+
+傳送原始資料時，您可以將流量ID指定為查詢引數或HTTP標頭的一部分。 下列範例會將流量ID指定為HTTP標題。
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB 使用流量ID作為查詢引數傳送原始資料]
+
+傳送原始資料時，您可以將流量ID指定為查詢引數或HTTP標題。 下列範例會將流量ID指定為查詢引數。
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",
