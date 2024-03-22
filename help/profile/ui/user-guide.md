@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2108'
 ht-degree: 0%
 
 ---
@@ -190,9 +190,9 @@ ht-degree: 0%
 
 從主要 **[!UICONTROL 設定檔]** 功能表，選取 **[!UICONTROL 計算的屬性]** 標籤以檢視屬於您組織的計算屬性清單。
 
-如需計算屬性的詳細資訊，請參閱 [計算屬性概述](../computed-attributes/overview.md). 如需如何在Platform UI中使用計算屬性的詳細資訊，請參閱 [計算屬性UI指南](../computed-attributes/ui.md).
+![「計算屬性」標籤會反白顯示。](../images/user-guide/computed-attributes.png)
 
-影像
+如需計算屬性的詳細資訊，請參閱 [計算屬性概述](../computed-attributes/overview.md). 如需如何在Platform UI中使用計算屬性的詳細資訊，請參閱 [計算屬性UI指南](../computed-attributes/ui.md).
 
 ## 後續步驟
 
