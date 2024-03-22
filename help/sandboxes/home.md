@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 沙箱總覽
 description: 沙箱是單一Experience Platform執行個體中的虛擬分割區，可與數位體驗應用程式的開發流程無縫整合。
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 06f1b64d5c4dfa6e0ca1f6da171ece8e9db9e693
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Experience Platform執行個體支援多個生產及開發沙箱，每個沙箱�
 總而言之，沙箱提供下列優點：
 
 * **應用程式生命週期管理**：建立個別的虛擬環境，以開發及改進數位體驗應用程式。
-* **專案與品牌管理**：允許多個專案在相同的組織中平行執行，同時提供隔離和存取控制。 未來版本將支援在多個區域部署。
+* **專案與品牌管理**：允許多個專案在相同的組織中平行執行，同時提供隔離和存取控制。
 * **靈活的發展生態系統**：以順暢、可擴充且符合成本效益的方式提供沙箱，以用於探索、啟用和示範用途。
 
 ## 沙箱的存取控制
