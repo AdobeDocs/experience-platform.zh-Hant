@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads提供一系列選項，協助您為註冊賣家、廠商、圖書供應商、Kindle Direct Publishing (KDP)作者、應用程式開發人員和/或代理商達成廣告目標。 Amazon Ads與Adobe Experience Platform的整合提供與Amazon Ads產品(包括Amazon DSP (ADSP))的鑰匙式整合。 使用Adobe Experience Platform中的Amazon Ads目的地，使用者能在Amazon DSP上定義用於鎖定和啟用的廣告商對象。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -38,7 +38,7 @@ AMC將Amazon擁有和運營的屬性所產生的獨特訊號整合在一起，�
 
 此項與的整合 [!DNL Amazon Marketing Cloud] (AMC)允許 [!DNL Amazon Ads] 廣告商從Adobe Experience Platform表單傳遞CDP區段至AMC。 廣告商隨後可透過以下方式加入CDP輸入 [!DNL Amazon Ads] 會以符合隱私權要求的格式，針對媒體影響、受眾區段和客戶歷程等主題發出訊號並進行自訂分析。 例如，廣告商可能會上傳其現有客戶的清單，以瞭解彙總的廣告促銷活動成效，或Amazon上轉換事件的彙總統計資料，例如檢視產品詳細資料頁面、將產品新增至購物車或購買產品。
 
-### 廣告最佳化：
+### Advertising最佳化
 
 此項與的整合 [!DNL Amazon Marketing Cloud] (AMC)可讓廣告商上傳自己的客戶清單，並使用 [!DNL Amazon Marketing Cloud] SQL，在Amazon DSP中建立可啟動的受眾以進行目標定位之前，會定期對受眾執行重疊分析、隱藏、新增或最佳化。
 
