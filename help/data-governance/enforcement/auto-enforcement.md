@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 自動原則執行
 description: 本文介紹在Experience Platform中將對象啟用到目的地時，如何自動執行資料使用原則。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 0%
 
 如果嘗試啟用對象時發生原則違規(或 [對已啟用的對象進行編輯](#policy-enforcement-for-activated-audiences))此動作會遭到阻止，且出現彈出視窗，指出已違反一或多個原則。 一旦觸發違規， **[!UICONTROL 儲存]** 在更新適當的元件以符合資料使用原則之前，會針對您正在修改的實體停用按鈕。
 
-在彈出視窗的左欄中選取原則違規，以顯示該違規的詳細資訊。
+選取原則名稱，以顯示該違規的詳細資訊。
 
 ![指示發生原則違規的對話方塊，並反白顯示原則名稱。](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ ht-degree: 0%
 
 ![反白顯示資料譜系圖的原則違規對話方塊。](../images/enforcement/data-lineage.png)
 
-您也可以使用 **[!UICONTROL 篩選]** 圖示(![](../images/enforcement/filter.png))，依類別篩選顯示的實體。 必須選取至少兩個類別才能顯示資料。
+您也可以使用 **[!UICONTROL 篩選]** 圖示(![篩選器圖示。](../images/enforcement/filter.png))，依類別篩選顯示的實體。 必須選取至少兩個類別才能顯示資料。
 
 ![含有資料譜系篩選器和下拉式功能表且反白顯示的原則違規對話方塊。](../images/enforcement/lineage-filter.png)
 
 選取 **[!UICONTROL 清單檢視]** 以清單形式顯示資料譜系。 若要切換回視覺化圖表，請選取 **[!UICONTROL 路徑檢視]**.
 
 ![反白顯示資料譜系路徑檢視的原則違規對話方塊。](../images/enforcement/list-view.png)
+
+#### 標籤已成功套用 {#labels-successfully-applied}
+
+如果您在標籤結構描述欄位之前建立資料使用原則，當您在標籤套用至結構描述時，可能會遇到治理原則違規對話方塊。 在此情況下，您可以成功為部分結構描述加上標籤。 此 [!UICONTROL 標籤已成功套用] 索引標籤會指出哪些標籤已成功套用，因為該欄位沒有原則限制。
+
+使用資料歷程圖表來瞭解必須先進行哪些其他設定變更，才能將標籤新增至結構描述欄位。
+
+![原則違規對話方塊，其中包含 [!UICONTROL 標籤已成功套用] 索引標籤反白顯示。](../images/enforcement/labels-successfully-applied.png)
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
