@@ -3,9 +3,9 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '2083'
 ht-degree: 2%
 
 ---
@@ -130,8 +130,6 @@ curl -X GET \
 
 成功的回應會傳回資料集到期日的詳細資料。
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ curl -X GET \
 }
 ```
 
-## 建立或更新資料集有效期 {#create-or-update}
+## 建立資料集有效期 {#create}
 
-透過PUT請求建立或更新資料集的到期日。 PUT請求會使用 `datasetId` 或 `ttlId`.
+為確保資料在指定期間後從系統中移除，請以ISO 8601格式提供資料集ID和到期日與時間，以排程特定資料集的到期日。
+
+若要建立資料集有效期，請執行如下所示的POST請求，並在裝載中提供下列提及的值。
 
 **API格式**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| 參數 | 說明 |
-| --- | --- |
-| `{DATASET_ID}` | 您要為其排程到期的資料集ID。 |
-| `{TTL_ID}` | 資料集過期時間的ID。 |
 
 **要求**
 
-下列請求會排程資料集 `5b020a27e7040801dedbf46e` ，並於2022年底（格林威治標準時間）刪除。 如果資料集找不到現有的有效期，則會建立新的有效期。 如果資料集已有暫止的到期日，則會將該到期日更新為新的到期日 `expiry` 值。
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `datasetId` | **必填** 您要為其排程到期的目標資料集ID。 |
+| `expiry` | **必填** ISO 8601格式的日期和時間。 如果字串沒有明確的時區位移，則會假設時區為UTC。 系統內的資料有效期限是根據提供的到期值所設定。<br>注意：<ul><li>如果資料集已存在資料集有效期，請求將失敗。</li><li>此日期和時間必須至少為 **未來24小時**.</li></ul> |
+| `displayName` | 資料集到期要求的選用顯示名稱。 |
+| `description` | 到期要求的選擇性說明。 |
+
+**回應**
+
+如果之前沒有資料集有效期，成功的回應會傳回HTTP 201 （已建立）狀態和資料集有效期的新狀態。
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `ttlId` | 資料集過期時間的ID。 |
+| `datasetId` | 此到期適用於的資料集ID。 |
+| `datasetName` | 此到期適用於的資料集的顯示名稱。 |
+| `sandboxName` | 目標資料集所在之沙箱的名稱。 |
+| `imsOrg` | 您組織的ID。 |
+| `status` | 資料集到期的目前狀態。 |
+| `expiry` | 刪除資料集的預定日期和時間。 |
+| `updatedAt` | 上次更新到期時間的時間戳記。 |
+| `updatedBy` | 上次更新到期日的使用者。 |
+| `displayName` | 到期要求的顯示名稱。 |
+| `description` | 到期要求的說明。 |
+
+如果資料集已存在資料集有效期，則會出現400 （錯誤請求） HTTP狀態。 如果資料集過期時間不存在（或您無權存取），失敗的回應會傳回404 （找不到） HTTP狀態。
+
+## 更新資料集有效期 {#update}
+
+若要更新資料集的到期日，請使用PUT請求和 `ttlId`. 您可以更新 `displayName`， `description`、和/或 `expiry` 資訊。
+
+>[!NOTE]
+>
+>如果您變更到期日和時間，未來必須至少為24小時。 此強制的延遲提供您取消或重新排程到期日的機會，並避免任何意外遺失資料。
+
+**API格式**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| 參數 | 說明 |
+| --- | --- |
+| `{TTL_ID}` | 您要變更的資料集有效期ID。 |
+
+**要求**
+
+以下請求會重新排程資料集到期日 `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` 於2024年底發生（格林威治標準時間）。 如果找到現有的資料集有效期，則會以新的資料集更新該有效期 `expiry` 值。
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `expiry` | ISO 8601格式的日期和時間。 如果字串沒有明確的時區位移，則會假設時區為UTC。 系統內的資料有效期限是根據提供的到期值所設定。 相同資料集的任何先前到期時間戳記都會取代為您提供的新到期值。 |
+| `expiry` | **必填** ISO 8601格式的日期和時間。 如果字串沒有明確的時區位移，則會假設時區為UTC。 系統內的資料有效期限是根據提供的到期值所設定。 相同資料集的任何先前到期時間戳記都會取代為您提供的新到期值。 此日期和時間必須至少為 **未來24小時**. |
 | `displayName` | 到期要求的顯示名稱。 |
 | `description` | 到期要求的選擇性說明。 |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回資料集到期日的詳細資料，如果更新了預先存在的到期日，則HTTP狀態為200 （確定），如果沒有預先存在的到期日，則傳回201 （建立）。
+如果更新了預先存在的到期時間，則成功的回應會傳回資料集到期時間的新狀態和HTTP狀態200 （確定）。
 
 ```json
 {
@@ -258,6 +332,8 @@ curl -X PUT \
 | `updatedBy` | 上次更新到期日的使用者。 |
 
 {style="table-layout:auto"}
+
+如果資料集過期時間不存在，失敗的回應會傳回404 （找不到） HTTP狀態。
 
 ## 取消資料集有效期 {#delete}
 
