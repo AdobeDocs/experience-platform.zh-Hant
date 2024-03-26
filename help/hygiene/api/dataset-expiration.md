@@ -3,7 +3,7 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
+source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 2%
@@ -489,3 +489,4 @@ curl -X GET \
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | 按讚 `createdDate` / `createdFromDate` / `createdToDate`，但符合資料集到期日的更新時間，而不是建立時間。<br><br>每次編輯時都會視為更新到期日，包括建立、取消或執行的時間。 | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
+
