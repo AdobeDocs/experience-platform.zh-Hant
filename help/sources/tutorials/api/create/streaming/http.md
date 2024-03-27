@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流量服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API使用HTTP API來源為原始資料和XDM資料建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
+source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 3%
@@ -718,3 +718,4 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
     }
 }
 ```
+
