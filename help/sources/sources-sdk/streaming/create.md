@@ -2,14 +2,19 @@
 title: 使用流量服務API建立串流SDK的新連線規格
 description: 以下檔案提供如何使用「流程服務API」建立連線規格，以及透過「自助式來源」整合新來源的步驟。
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '756'
 ht-degree: 1%
 
 ---
 
 # 使用建立新的連線規格 [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 連線對規格代表來源的結構。 它包含有關來源驗證需求的資訊，定義如何探索和檢查來源資料，並提供有關給定來源屬性的資訊。 此 `/connectionSpecs` 中的端點 [!DNL Flow Service] API可讓您以程式設計方式管理組織內的連線規格。
 

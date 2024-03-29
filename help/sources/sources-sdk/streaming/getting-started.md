@@ -2,14 +2,19 @@
 title: 自助來源快速入門(Streaming SDK)
 description: 本文介紹嘗試使用自助來源（串流SDK）建立新來源之前，需要知道的先決條件資訊。
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '543'
 ht-degree: 12%
 
 ---
 
 # 自助來源快速入門(Streaming SDK)
+
+>[!NOTE]
+>
+>自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 自助來源（串流SDK）可讓您整合自己的來源，以將串流資料帶到Adobe Experience Platform。 本檔案介紹嘗試呼叫 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

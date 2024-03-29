@@ -2,14 +2,19 @@
 title: 記錄您的來源（串流SDK）
 description: 在Adobe Experience Platform中讓新來源上線之前的最後一步是記錄您的新來源。
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
 
 # 記錄您的來源（串流SDK）
+
+>[!NOTE]
+>
+>自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 在Adobe Experience Platform中即時設定新來源之前的最後一個步驟，是記錄您的新來源。
 

@@ -2,14 +2,19 @@
 title: 使用流量服務API更新串流SDK的流量規格
 description: 以下檔案提供如何使用Flow Service API for Self-Serve Sources (Streaming SDK)擷取和更新流程規格的步驟。
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 1%
+source-wordcount: '423'
+ht-degree: 2%
 
 ---
 
 # 使用更新流程規格 [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 產生新的連線規格ID後，您必須將此ID新增至流程規格，才能建立資料流。
 

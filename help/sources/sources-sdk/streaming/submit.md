@@ -2,14 +2,19 @@
 title: 測試並提交您的來源
 description: 以下檔案提供如何使用Flow Service API測試及驗證新來源，以及透過Self-Serve Sources (Streaming SDK)整合新來源的步驟。
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
 
 # 測試並提交您的來源
+
+>[!NOTE]
+>
+>自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 使用自助式來源（串流SDK）將新來源整合到Adobe Experience Platform的最後步驟，是測試並提交您的新來源。 當您完成連線規格並更新串流流程規格後，您就可以開始透過API或UI測試來源的功能。 成功後，您可以連絡您的Adobe代表以提交新的來源。
 

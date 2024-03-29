@@ -2,14 +2,19 @@
 title: 使用流量服務API更新串流SDK的連線規格
 description: 以下檔案提供如何使用Flow Service API for Self-Serve Sources (Streaming SDK)進行連線規格的步驟。
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 2%
+source-wordcount: '163'
+ht-degree: 3%
 
 ---
 
 # 使用流程服務API更新連線規格
+
+>[!NOTE]
+>
+>自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
 
 您可以透過PUT操作更新連線規格的屬性。 透過PUT要求更新連線規格時，內文必須包含在POST要求中建立新連線規格時所需的所有欄位。
 
