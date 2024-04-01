@@ -3,9 +3,9 @@ title: 使用Adobe Experience Platform Web SDK呈現個人化內容
 description: 瞭解如何使用Adobe Experience Platform Web SDK呈現個人化內容。
 keywords: 個人化；renderDecisions；sendEvent；decisionScopes；主張；
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 6841a6f777d18845ce36e3503fbdb9698ece84bb
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platform Web SDK支援從Adobe個人化解決方案擷取個人
 
 此外，Web SDK透過Adobe Experience Platform個人化目的地，提供相同頁面和下一頁個人化功能，例如 [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱 [專用指南](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-在Adobe Target中建立的內容 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 以及Adobe Journey Optimizer的 [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 可由SDK自動擷取及轉譯。 在Adobe Target中建立的內容 [表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 或Offer decisioning無法由SDK自動轉譯。 相反地，您必須使用SDK請求此內容，然後自行手動轉譯內容。
+在Adobe Target中建立的內容 [視覺化體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 以及Adobe Journey Optimizer的 [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 可由SDK自動擷取及轉譯。 在Adobe Target中建立的內容 [表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)， Adobe Journey Optimizer的 [程式碼型Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 或Offer decisioning無法由SDK自動轉譯。 相反地，您必須使用SDK請求此內容，然後自行手動轉譯內容。
 
 ## 自動呈現內容 {#automatic}
 
@@ -299,7 +299,7 @@ SDK提供的設施可以 [管理忽隱忽現情形](../personalization/manage-fl
 
 ## 在不增加量度的情況下在單頁應用程式中轉譯主張 {#applypropositions}
 
-此 `applyPropositions` 命令可讓您從以下位置呈現或執行主張陣列 [!DNL Target] 至單頁應用程式，而不增加 [!DNL Analytics] 和 [!DNL Target] 量度。 這會提高報表的正確性。
+此 `applyPropositions` 命令可讓您從以下位置呈現或執行主張陣列 [!DNL Target] 或Adobe Journey Optimizer轉換為單頁應用程式，而不增加 [!DNL Analytics] 和 [!DNL Target] 量度。 這會提高報表的正確性。
 
 >[!IMPORTANT]
 >
@@ -338,7 +338,7 @@ alloy("applyPropositions", {
 
 ### 使用案例2：沒有選擇器的演算主張
 
-此使用案例適用於透過編寫的活動選件 [!DNL Target Form-based Experience Composer].
+此使用案例適用於透過編寫的體驗 [!DNL Target Form-based Experience Composer] 或Adobe Journey Optimizer的 [程式碼型Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
 
 您必須在「 」中提供選取器、動作和範圍 `applyPropositions` 呼叫。
 
@@ -372,16 +372,31 @@ alloy("sendEvent", {
         var renderedPropositions = applyPropositionsResult.propositions;
 
         // Send the display notifications via sendEvent command
-        alloy("sendEvent", {
-            "xdm": {
-                "eventType": "decisioning.propositionDisplay",
-                "_experience": {
-                    "decisioning": {
-                        "propositions": renderedPropositions
-                    }
-                }
-            }
-        });
+        function sendDisplayEvent(proposition) {
+            const {
+                id,
+                scope,
+                scopeDetails = {}
+            } = proposition;
+
+            alloy("sendEvent", {
+                xdm: {
+                    eventType: "decisioning.propositionDisplay",
+                    _experience: {
+                        decisioning: {
+                            propositions: [{
+                                id: id,
+                                scope: scope,
+                                scopeDetails: scopeDetails,
+                            }, ],
+                            propositionEventType: {
+                                display: 1
+                            },
+                        },
+                    },
+                },
+            });
+        }
     });
 });
 ```

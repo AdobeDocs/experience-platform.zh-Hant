@@ -3,9 +3,9 @@ title: 使用Web SDK和Edge Network Server API的混合個人化
 description: 本文會示範如何使用Web SDK搭配伺服器API，在Web屬性上部署混合式個人化。
 keywords: 個人化；混合；伺服器api；伺服器端；混合實作；
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '837'
+source-wordcount: '861'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Hybdrid個人化說明使用 [Edge Network伺服器API](../../server-api/overview.md)，並在使用者端轉譯，使用 [Web SDK](../home.md).
 
-您可以將混合式個人化與Adobe Target或Offer Decisioning等個人化解決方案搭配使用，兩者的差異在於其內容 [!UICONTROL 伺服器API] 裝載。
+您可以將混合式個人化與Adobe Target、Adobe Journey Optimizer或Offer Decisioning等個人化解決方案搭配使用，不同之處在於 [!UICONTROL 伺服器API] 裝載。
 
 ## 先決條件 {#prerequisites}
 
@@ -39,9 +39,9 @@ Hybdrid個人化說明使用 [Edge Network伺服器API](../../server-api/overvie
 1. 伺服器API會將個人化內容傳回至您的應用程式伺服器。
 1. 應用程式伺服器傳回HTML回應給使用者端瀏覽器，其中包含 [身分和叢集Cookie](#cookies).
 1. 在使用者端頁面上， [!DNL Web SDK] `applyResponse` 呼叫命令，傳入標題和內文的 [!UICONTROL 伺服器API] 上一步驟的回應。
-1. 此 [!DNL Web SDK] 轉譯頁面載入 [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 會自動選件，因為 `renderDecisions` 旗標已設定為 `true`.
-1. 表單式 [!DNL JSON] 優惠方案是透過以下方式手動套用： `applyPersonalization` 方法，以更新 [!DNL DOM] 根據個人化選件。
-1. 針對表單式活動，必須手動傳送顯示事件，以指出何時已顯示選件。 這可透過以下方式完成 `sendEvent` 命令。
+1. 此 [!DNL Web SDK] 轉譯Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) 選件和Journey Optimizer Web Channel專案會自動執行，因為 `renderDecisions` 旗標已設定為 `true`.
+1. Target表單式 [!DNL HTML]/[!DNL JSON] 選件和Journey Optimizer程式碼型體驗可透過以下方式手動套用： `applyProposition` 方法，以更新 [!DNL DOM] 根據主張中的個人化內容。
+1. 針對Target表單式 [!DNL HTML]/[!DNL JSON] 選件和Journey Optimizer程式碼型體驗的顯示事件必須手動傳送，以指出已顯示傳回內容的時間。 這可透過以下方式完成 `sendEvent` 命令。
 
 ## Cookie {#cookies}
 

@@ -2,20 +2,20 @@
 title: 個人化概覽
 description: 瞭解如何使用Adobe Experience Platform Edge Network Server API從Adobe個人化解決方案擷取個人化內容。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '735'
 ht-degree: 9%
 
 ---
 
 # 個人化概覽
 
-使用 [!DNL Server API]，您可以從Adobe個人化解決方案擷取個人化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) 和 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant).
+使用 [!DNL Server API]，您可以從Adobe個人化解決方案擷取個人化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html)， [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)、和 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant).
 
 此外， [!DNL Server API] 透過Adobe Experience Platform個人化目的地提供相同頁面和下一頁個人化功能，例如 [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱 [專用指南](../destinations/ui/activate-edge-personalization-destinations.md).
 
-使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站內容的邏輯。 不喜歡 [Web SDK](../web-sdk/home.md)，則 [!DNL Server API] 沒有機制可自動套用傳回的內容 [!DNL Adobe Target] 和 [!DNL Offer Decisioning].
+使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站內容的邏輯。 不喜歡 [Web SDK](../web-sdk/home.md)，則 [!DNL Server API] 沒有機制可自動套用Adobe個人化解決方案傳回的內容。
 
 ## 術語 {#terminology}
 
@@ -34,24 +34,30 @@ ht-degree: 9%
 
 ```json
 {
-   "query":{
-      "personalization":{
-         "schemas":[
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-         ],
-         "decisionScopes":[
-            "alloyStore",
-            "siteWide",
-            "__view__",
-            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
-         ]
-      }
-   }
+  "query": {
+    "personalization": {
+      "schemas": [
+        "https://ns.adobe.com/personalization/html-content-item",
+        "https://ns.adobe.com/personalization/json-content-item",
+        "https://ns.adobe.com/personalization/redirect-item",
+        "https://ns.adobe.com/personalization/dom-action"
+      ],
+      "decisionScopes": [
+        "alloyStore",
+        "siteWide",
+        "__view__",
+        "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
+      ],
+      "surfaces": [
+        "web://mywebpage.html/",
+        "web://mywebpage.html/#sample-json-content"
+      ]
+    }
+  }
 }
 ```
+
+
 
 | 屬性 | 類型 | 必填/選填 | 說明 |
 | --- | --- | --- | ---|

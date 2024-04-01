@@ -3,16 +3,16 @@ title: 搭配Platform Web SDK使用Adobe Journey Optimizer
 description: 瞭解如何使用Adobe Journey Optimizer以Experience Platform Web SDK呈現個人化內容
 keywords: ajo；ajo網頁；adobe journey optimizer；renderDecisions；介面；決定；主張；範圍；結構
 exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '390'
 ht-degree: 1%
 
 ---
 
 # 使用 [!DNL Adobe Journey Optimizer] 使用 [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] 可以傳遞並轉譯受管理的個人化體驗 [!DNL Adobe Journey Optimizer] 至網路頻道。 您可以使用WYSIWYG編輯器， [!DNL Adobe Journey Optimizer] [Web Campaign UI](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)，以建立、啟用及傳遞您的 [!DNL Journey Optimizer Web] 行銷活動和個人化體驗。
+[!DNL Adobe Experience Platform] [!DNL Web SDK] 可以傳遞並轉譯受管理的個人化體驗 [!DNL Adobe Journey Optimizer] 至網路頻道。 您可以使用WYSIWYG編輯器， [!DNL Adobe Journey Optimizer] [網頁管道](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)或非視覺化介面、 [程式碼型Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 以建立、啟用及傳遞您的 [!DNL Journey Optimizer Web] 行銷活動和個人化體驗。
 
 >[!IMPORTANT]
 >
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## 術語 {#terminology}
 
-**[!UICONTROL 表面]**：Web介面是由URL識別的Web屬性，其中 [!DNL Adobe Journey Optimizer] 將會提供體驗內容。
+**[!UICONTROL 表面]**：網頁介面是指由URI識別的頁面上的網頁或位置，其中 [!DNL Adobe Journey Optimizer] 將會提供體驗內容。
 
 **[!UICONTROL 主張]**：在 [!DNL Adobe Journey Optimizer]，此主張與從體驗中選取的體驗相關聯 [!DNL Journey Optimizer Campaign].
 
