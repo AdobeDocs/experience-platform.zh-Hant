@@ -3,10 +3,10 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1231'
+ht-degree: 1%
 
 ---
 
@@ -77,11 +77,11 @@ ht-degree: 2%
 
 | 元素 | 說明 |
 |---|---|
-| [!UICONTROL 平台] | 您為其設定連線的目的地。 |
+| [!UICONTROL Platform] | 您為其設定連線的目的地。 |
 | [!UICONTROL 連線類型] | 代表與儲存貯體或目的地的帳戶連線型別。 根據目的地，驗證選項為： <ul><li>針對電子郵件行銷目標：可以是S3、FTP或Azure Blob。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>對於Amazon S3雲端儲存目的地：存取金鑰 </li><li>對於SFTP雲端儲存目標： SFTP的基本驗證</li><li>OAuth 1或OAuth 2驗證</li><li>持有人權杖驗證</li></ul> |
 | [!UICONTROL 使用者名稱] | 您在「 」中選擇的使用者名稱 [連線目的地精靈](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL 目的地] | 代表與針對目的地建立的基本資訊相連結的唯一成功目的地資料流數目。 |
-| [!UICONTROL 已驗證] | 授權連線到此目的地的日期。 |
+| [!UICONTROL 已授權] | 授權連線到此目的地的日期。 |
 
 {style="table-layout:auto"}
 
@@ -110,7 +110,7 @@ ht-degree: 2%
 | [!UICONTROL 已建立] | 至目的地的啟動流程建立日期和UTC時間。 選取上/下箭頭符號，依最新先或最舊先排序啟動流程。 |
 | [!UICONTROL 狀態] | `Enabled` 或 `Disabled`. 表示資料是否正在啟用至此目的地。 |
 
-按一下目的地列，即可在右側邊欄中顯示該目的地的詳細資訊。
+按一下目的地列，即可在右側欄中顯示目的地的詳細資訊，例如目的地ID、說明、啟用的對象數量等。
 
 ![按一下目的地列](../assets/ui/workspace/click-destination-row.png)
 
@@ -120,8 +120,8 @@ ht-degree: 2%
 
 此 **[!UICONTROL 系統檢視]** 索引標籤會以圖形呈現您在Adobe Experience Platform中設定的啟動流程。
 
-![Data-flows1](../assets/ui/workspace/data-flows1.png)
+![資料流程1](../assets/ui/workspace/data-flows1.png)
 
 選取頁面上顯示的任何目的地，然後按一下 **[!UICONTROL 檢視資料流]** 檢視您為每個目的地設定的所有連線的相關資訊。
 
-![Data-flows2](../assets/ui/workspace/data-flows2.png)
+![資料流程2](../assets/ui/workspace/data-flows2.png)
