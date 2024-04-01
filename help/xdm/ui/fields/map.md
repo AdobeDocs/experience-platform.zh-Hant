@@ -1,9 +1,10 @@
 ---
 title: 在UI中定義對應欄位
 description: 瞭解如何在Experience Platform使用者介面中定義對應欄位。
-source-git-commit: 8eea73c91d0671b1ddaeb8da0dc18b3e5e306f57
+exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
+source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -25,6 +26,19 @@ A [!UICONTROL 對應值型別] 屬性隨即顯示。 此值須用於 [!UICONTROL
 設定好子欄位後，您必須將其指派給欄位群組。 使用 **[!UICONTROL 欄位群組]** 下拉式功能表或搜尋欄位，然後選取 **[!UICONTROL 套用]**. 您可以使用相同的程式繼續將欄位新增至物件，或選取 **[!UICONTROL 儲存]** 以確認您的設定。
 
 ![正在套用的欄位群組選擇和設定的記錄。](../../images/ui/fields/special/assign-to-field-group.gif)
+
+## 使用限制 {#restrictions}
+
+XDM對於此資料型別的使用有下列限制：
+
+* 對應型別必須是型別 `object`.
+* 對應型別不得有已定義的屬性（換言之，它們會定義「空白」物件）。
+* 對應型別必須包括 `additionalProperties.type` 此欄位說明可放置在地圖中的值，也可 `string` 或 `integer`.
+
+請確定您只在絕對必要時才使用對應型別欄位，因為這些欄位具有下列效能缺陷：
+
+* 回應時間來自 [Adobe Experience Platform查詢服務](../../../query-service/home.md) 1億筆記錄從3秒降至10秒。
+* 地圖必須少於16個索引鍵，否則可能會進一步降低。
 
 >[!NOTE]
 >
