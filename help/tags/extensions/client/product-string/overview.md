@@ -1,15 +1,15 @@
 ---
-title: Adobe Analytics Product String擴充功能概觀
+title: Adobe Analytics Product String擴充功能概述
 description: 瞭解Adobe Experience Platform中的Adobe Analytics Product String標籤擴充功能。
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '516'
 ht-degree: 90%
 
 ---
 
-# Adobe Analytics Product String擴充功能概觀
+# Adobe Analytics Product String擴充功能概述
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ ht-degree: 90%
 Category;Product;Quantity;Price;eventN=X|eventN2=X2;eVarN=merch_category|eVarN2=merch_category2
 ```
 
-如需完整文件，請造訪[產品](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=zh-Hant)。
+如需完整文件，請造訪[產品](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html)。
 
 ## 擴充功能說明
 
@@ -89,7 +89,7 @@ digitalData.transaction.item.productInfo.productName
 
 此動作必須搭配「Adobe Analytics - 設定變數」動作和「Adobe Analytics - 傳送信標」動作，以設定相對應的成功事件。以下說明正確的動作順序。
 
-![標準欄位](./images/screenshot-price-type.png)
+![標準欄位](./images/screenshot-action-type.png)
 
 ### 需求
 
