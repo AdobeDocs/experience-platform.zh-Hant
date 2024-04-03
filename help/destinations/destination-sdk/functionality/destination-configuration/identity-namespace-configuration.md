@@ -2,9 +2,9 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定支援的目標身分。
 title: 身分名稱空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '892'
 ht-degree: 4%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 4%
 
 Experience Platform使用身分名稱空間來說明特定身分的型別。 例如，身分名稱空間稱為 `Email` 會識別類似這樣的值 `name@email.com` 作為電子郵件地址。
 
-除了透過Destination SDK建立目的地之外， [設定合作夥伴結構描述](schema-configuration.md) 讓使用者可將設定檔屬性和身分對應至，您也可以定義目的地平台支援的身分名稱空間。
+除了以外，當透過Destination SDK建立即時（串流）目的地時 [設定合作夥伴結構描述](schema-configuration.md) 讓使用者可將設定檔屬性和身分對應至，您也必須定義目的地平台支援的身分名稱空間。 例如，如果目的地平台接受雜湊電子郵件，而且 [!DNL IDFA]，您必須將這兩個身分定義為 [在本檔案中進一步說明](#supported-parameters).
 
-執行此操作時，除了目標設定檔屬性外，使用者還可以選擇目標身分。
+將受眾啟用至串流目的地時，除了目標設定檔屬性外，使用者還必須對應目標身分。 否則，不會將對象啟動至目的地平台。
+
+透過Destination SDK建立檔案型目的地時，身分識別名稱空間的設定是選用的。
 
 若要進一步瞭解Experience Platform中的身分識別名稱空間，請參閱 [身分名稱空間檔案](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Experience Platform使用身分名稱空間來說明特定身分的型別。 例
 
 | 整合型別 | 支援功能 |
 |---|---|
-| 即時（串流）整合 | 是 |
-| 檔案式（批次）整合 | 是 |
+| 即時（串流）整合 | 是（必要） |
+| 檔案式（批次）整合 | 是（選擇性） |
 
 ## 支援的引數 {#supported-parameters}
 
