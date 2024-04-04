@@ -4,10 +4,10 @@ title: 使用區段服務API建立區段定義
 type: Tutorial
 description: 按照本教學課程瞭解如何使用Adobe Experience Platform Segmentation Service API開發、測試、預覽和儲存區段定義。
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 12%
+source-wordcount: '1066'
+ht-degree: 6%
 
 ---
 
@@ -23,25 +23,25 @@ ht-degree: 12%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您使用區段定義或其他外部來源，從即時客戶設定檔資料建立對象。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：[!DNL Platform] 據以組織客戶體驗資料的標準化框架。為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。 為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
 
 以下小節提供您需瞭解的其他資訊，才能成功對 [!DNL Platform] API。
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集所需標頭的值
 
-為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
+- x-api-key： `{API_KEY}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 中的所有資源 [!DNL Experience Platform] 會隔離至特定的虛擬沙箱。 所有要求至 [!DNL Platform] API需要標頭，用以指定將進行作業的沙箱名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -72,7 +72,12 @@ ht-degree: 12%
 
 ### 如何產生預估值
 
-資料範例可用來評估區段定義，以及估計合格設定檔的數量。 每天早上（上午12點至凌晨2點，也就是UTC時間早上7點至晚上9點）都有新資料載入記憶體，而所有分段查詢都是使用當天的範例資料來估計。 因此，任何新增的欄位或收集的其他資料都會反映在第二天的估計值中。
+當啟用即時客戶個人檔案的資料擷取到Platform時，會儲存在個人檔案資料存放區中。 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 如果設定檔計數未變更超過5%，則取樣工作每週都會自動執行。
+
+範例的觸發方式取決於所使用的擷取型別：
+
+- 對於串流資料工作流程，會每小時進行一次檢查，以判斷是否符合增加或減少5%的臨界值。 如果達到此臨界值，則會自動觸發範例工作以更新計數。
+- 對於批次擷取，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合5%增加或減少臨界值，則會執行工作以更新計數。 使用設定檔API，您可以預覽最新成功的範例作業，以及依資料集和身分名稱空間列出設定檔分佈。
 
 範例大小取決於設定檔存放區中的實體總數。 下表顯示這些範例大小：
 
