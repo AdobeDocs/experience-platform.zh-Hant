@@ -2,7 +2,7 @@
 title: 查詢服務封裝
 description: 以下檔案概述查詢服務可用功能和產品的包裝，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -85,3 +85,4 @@ Experience Platform的存取控制會透過 [Adobe Admin Console](https://adminc
 ## 後續步驟
 
 閱讀本檔案後，您應該能更清楚瞭解查詢服務中可用的不同封裝型別和查詢執行功能。 若要進一步瞭解查詢服務，例如知名的業界使用案例，請閱讀 [使用案例檔案](./use-cases/abandoned-browse.md). 如需一般資訊，請瀏覽 [查詢服務總覽](./home.md).
+
