@@ -4,9 +4,9 @@ title: 使用串流區段近乎即時地評估事件
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用串流區段的範例。
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2038'
 ht-degree: 4%
 
 ---
@@ -454,3 +454,7 @@ curl -X POST \
 ### 區段定義需要多久才能使用？
 
 區段定義最多需要一小時才能使用。
+
+### 資料串流是否有任何限制？
+
+為了將串流資料用於串流分段，請 **必須** 是串流事件之間的間距。 如果太多事件在同一秒內串流傳入，Platform會將這些事件視為機器人產生的資料，且加以捨棄。 作為最佳實務，您應該 **至少** 事件資料間隔5秒，以確保資料正確使用。

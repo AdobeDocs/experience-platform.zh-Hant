@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 串流區段UI指南
 description: Adobe Experience Platform上的串流區段可讓您以近乎即時的速度進行區段，同時聚焦於資料的豐富度。 有了串流區段，現在只要資料進入平台，區段資格就能執行，無需排程及執行區段工作。 有了這項功能，現在可以在資料傳入Platform時評估大部分割槽段規則，這表示區段會籍將保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
+source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -119,3 +119,7 @@ ht-degree: 0%
 ### 區段定義需要多久才能使用？
 
 區段定義最多需要一小時才能使用。
+
+### 資料串流是否有任何限制？
+
+為了將串流資料用於串流分段，請 **必須** 是串流事件之間的間距。 如果太多事件在同一秒內串流傳入，Platform會將這些事件視為機器人產生的資料，且加以捨棄。 作為最佳實務，您應該 **至少** 事件資料間隔5秒，以確保資料正確使用。

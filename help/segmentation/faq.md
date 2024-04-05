@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
+source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3189'
 ht-degree: 1%
 
 ---
@@ -269,3 +269,10 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 如果您使用設定檔查詢來擷取新建立的設定檔，並檢視其對象成員資格，則會顯示其為 **兩者** 對象A和對象B，儘管這兩個對象的定義相互矛盾。 每日批次區段評估工作執行後，對象成員資格將會更新，以反映此更新的設定檔資料狀態。
 
 如果您需要更高的即時對象解析度，請使用串流或邊緣細分。
+
+### 批次區段工作流程需要多久才能使用串流資料？
+
+在批次區段工作流程中，串流資料最多可能需要三個小時才能使用。
+
+例如，如果批次分段工作在下午9點執行，則一定包含串流擷取的資料 **直到** 下午6點。 在下午6點後但晚上9點前擷取的串流擷取資料 **五月** 包括。
+
