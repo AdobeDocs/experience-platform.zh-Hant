@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 管理Privacy Service UI中的隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
+source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 13%
+source-wordcount: '1722'
+ht-degree: 12%
 
 ---
 
@@ -90,17 +90,25 @@ ht-degree: 13%
 >
 >將篩選器套用至工作請求Widget後，您可以選取 **X** 在過濾藥丸上。 接著，工作請求會傳回預設追蹤清單。
 
-### 工作請求
+### 工作請求 {#job-requests}
 
-工作請求Widget會列出組織中所有可用的工作請求，包括請求型別、目前狀態、到期日及請求者電子郵件等詳細資訊。
+此 [!UICONTROL 工作請求] 工作區會列出有關組織中最近工作請求的詳細資訊。 詳細資訊包括請求型別、目前狀態、到期日、請求者電子郵件等。 一次載入100筆記錄的集合。 依預設，當您向下捲動以瀏覽時，最近建立的工作會顯示於頂端，並載入更多記錄集。
 
 >[!NOTE]
 >
 >先前建立之工作的資料僅可在完成日期後30天記憶體取。
 
-您可以在工作請求標題下方的搜尋列中鍵入關鍵字，以篩選清單。 清單會在您輸入時自動篩選，顯示包含符合搜尋詞之值的請求。 您也可以使用 **[!UICONTROL 申請時間]** 下拉式功能表，為列出的工作選取時間範圍。
+您可以在搜尋列下方輸入關鍵字，以篩選清單 [!UICONTROL 工作請求] 標題。 清單會在您輸入時自動篩選，顯示包含符合搜尋詞之值的請求。 搜尋欄位會執行「快速」搜尋，比對隱私權工作ID與UI中目前轉譯/載入的工作。 它不是您所有提交工作的完整搜尋。 而是套用至載入結果的篩選器。 使用Privacy Service API [根據特定規則、日期範圍或單一工單退回工單](../api/privacy-jobs.md#list).
 
-![工作請求搜尋選項](../images/user-guide/job-search.png)
+>[!TIP]
+>
+>若要將過去30天的記錄載入UI，您必須向下捲動表格並載入更多記錄批次。
+
+![反白顯示搜尋欄位的「隱私權主控台工作請求」區段。](../images/user-guide/job-search.png)
+
+或者，使用搜尋按鈕來執行跨越特定日期範圍的隱私權工作查詢。 此動作會傳回貴組織在指定時間段內提交的所有隱私權工作。 選取 **[!UICONTROL 申請時間]** 下拉式功能表以選擇查詢的開始與完成日期。 可用的選項包括 [!UICONTROL 今天]， [!UICONTROL 過去7天]， [!UICONTROL 過去2週]， [!UICONTROL 過去30天]，或 [!UICONTROL 自訂]. 搭配使用時 [!UICONTROL 申請時間] 選項，搜尋功能只會顯示您所選日期範圍之間提交的工作請求。
+
+![具有搜尋欄位、在下拉式選單中請求以及反白顯示搜尋按鈕的工作請求區段。](../images/user-guide/requested-on-dropdown-menu.png)
 
 若要檢視特定工作請求的詳細資訊，請從清單中選取請求的工作ID以開啟 **[!UICONTROL 工作詳細資訊]** 頁面。
 
