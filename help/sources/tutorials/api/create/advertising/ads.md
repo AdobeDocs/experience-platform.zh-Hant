@@ -2,14 +2,18 @@
 title: 使用流量服務API建立Google Ads基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連結至Google Ads。
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '741'
 ht-degree: 3%
 
 ---
 
 # 使用，建立Google Ads基本連線 [!DNL Flow Service] API
+
+>[!WARNING]
+>
+>此 [!DNL Google Ads] 來源暫時無法使用。 Adobe正在努力解決此來源的問題。
 
 >[!NOTE]
 >

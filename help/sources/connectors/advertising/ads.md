@@ -3,14 +3,18 @@ keywords: Experience Platform；首頁；熱門主題；Google Ads；google ads
 title: Google Ads來源概觀
 description: 瞭解如何使用API或使用者介面將Google Ads連結至Adobe Experience Platform。
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
 # [!DNL Google Ads] 來源
+
+>[!WARNING]
+>
+>此 [!DNL Google Ads] 來源暫時無法使用。 Adobe正在努力解決此來源的問題。
 
 >[!NOTE]
 >
