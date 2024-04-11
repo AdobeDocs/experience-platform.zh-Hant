@@ -4,9 +4,9 @@ title: 屬性型存取控制端對端指南
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的端對端指南
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1736'
 ht-degree: 18%
 
 ---
@@ -132,6 +132,10 @@ Platform UI的許可權工作區隨即顯示，並開啟在 **[!UICONTROL 角色
 >將標籤新增到欄位時，該標籤將套用到該欄位的父級資源（類別或欄位群組）。 如果父類別或欄位群組被其他結構描述使用，這些結構描述將繼承相同的標籤。
 
 ## 將標籤套用至區段
+
+>[!NOTE]
+>
+>如果您希望將相同的存取限制套用至區段，則任何使用已標籤屬性的區段都必須同樣加上標籤。
 
 完成標示結構描述欄位後，您現在可以開始標示區段。
 
