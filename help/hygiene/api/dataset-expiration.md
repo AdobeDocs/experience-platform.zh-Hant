@@ -3,9 +3,9 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2141'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 在實際起始資料集刪除作業之前，您可以隨時取消到期日或修改其觸發時間。 取消資料集到期日後，您可以設定新的到期日，以重新開啟資料集。
 
-開始刪除資料集後，其到期工作將標籤為 `executing`，且可能不會進一步變更。 資料集本身最多可以復原七天，但必須透過Adobe服務要求啟動的手動程式進行。 請求執行時，Data Lake、Identity Service和即時客戶設定檔會開始個別程式，從各自的服務中移除資料集的內容。 從所有三項服務中刪除資料後，到期日將標籤為 `executed`.
+開始刪除資料集後，其到期工作將標籤為 `executing`，且可能不會進一步變更。 資料集本身最多可以復原七天，但必須透過Adobe服務要求啟動的手動程式進行。 請求執行時，Data Lake、Identity Service和即時客戶設定檔會開始個別程式，從各自的服務中移除資料集的內容。 從所有三項服務中刪除資料後，到期日將標籤為 `completed`.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **回應**
 
 成功的回應會列出產生的資料集有效期。 下列範例的空格已截斷。
+
+>[!IMPORTANT]
+>
+>此 `ttlId` 在回應中亦稱為 `{DATASET_EXPIRATION_ID}`. 兩者都會參照資料集到期的唯一識別碼。
 
 ```json
 {
@@ -90,26 +94,30 @@ curl -X GET \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `totalRecords` | 與清單呼叫的引數相符的資料集到期計數。 |
-| `ttlDetails` | 包含傳回資料集有效期的詳細資訊。 如需資料集到期屬性的詳細資訊，請參閱回應一節，以發出 [查詢呼叫](#lookup). |
+| `total_count` | 與清單呼叫的引數相符的資料集到期計數。 |
+| `results` | 包含傳回資料集有效期的詳細資訊。 如需資料集到期屬性的詳細資訊，請參閱回應一節，以發出 [查詢呼叫](#lookup). |
 
 {style="table-layout:auto"}
 
 ## 查詢資料集有效期 {#lookup}
 
-若要查詢資料集有效期，請使用以下任一專案發出GET請求： `datasetId` 或 `ttlId`.
+若要查詢資料集有效期，請使用以下任一專案發出GET請求： `{DATASET_ID}` 或 `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>此 `{DATASET_EXPIRATION_ID}` 稱為 `ttlId` 在回應中。 兩者都會參照資料集到期的唯一識別碼。
 
 **API格式**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | 參數 | 說明 |
 | --- | --- |
 | `{DATASET_ID}` | 您要查詢其有效期的資料集ID。 |
-| `{TTL_ID}` | 資料集過期時間的ID。 |
+| `{DATASET_EXPIRATION_ID}` | 資料集過期時間的ID。 |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **回應**
 
-如果之前沒有資料集有效期，成功的回應會傳回HTTP 201 （已建立）狀態和資料集有效期的新狀態。
+成功的回應會傳回HTTP 201 （已建立）狀態和資料集到期的新狀態。
 
 ```json
 {
@@ -254,7 +262,7 @@ curl -X POST \
 | `displayName` | 到期要求的顯示名稱。 |
 | `description` | 到期要求的說明。 |
 
-如果資料集已存在資料集有效期，則會出現400 （錯誤請求） HTTP狀態。 如果資料集過期時間不存在（或您無權存取），失敗的回應會傳回404 （找不到） HTTP狀態。
+如果資料集已存在資料集有效期，則會出現400 （錯誤請求） HTTP狀態。 如果資料集過期時間不存在（或您無權存取資料集），失敗的回應會傳回404 （找不到） HTTP狀態。
 
 ## 更新資料集有效期 {#update}
 
@@ -267,14 +275,12 @@ curl -X POST \
 **API格式**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | 參數 | 說明 |
 | --- | --- |
-| `{TTL_ID}` | 您要變更的資料集有效期ID。 |
+| `{DATASET_EXPIRATION_ID}` | 您要變更的資料集有效期ID。 注意：這稱為 `ttlId` 在回應中。 |
 
 **要求**
 
@@ -374,19 +380,19 @@ curl -X DELETE \
 
 ## 擷取資料集的到期狀態歷史記錄 {#retrieve-expiration-history}
 
-您可以使用查詢引數查詢特定資料集的到期狀態歷史記錄 `include=history` 在查詢請求中。 結果包括關於建立資料集有效期、已套用的任何更新，及其取消或執行（如果適用）的資訊。 您也可以使用 `ttlId` 資料集有效期限的。
+若要查詢特定資料集的到期狀態歷史記錄，請使用 `{DATASET_ID}` 和 `include=history` 查詢請求中的查詢引數。 結果包括關於建立資料集有效期、已套用的任何更新，及其取消或執行（如果適用）的資訊。 您也可以使用 `{DATASET_EXPIRATION_ID}` 以擷取資料集到期狀態歷史記錄。
 
 **API格式**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | 參數 | 說明 |
 | --- | --- |
 | `{DATASET_ID}` | 您要查詢其到期歷程記錄的資料集ID。 |
-| `{TTL_ID}` | 資料集過期時間的ID。 |
+| `{DATASET_EXPIRATION_ID}` | 資料集過期時間的ID。 注意：這稱為 `ttlId` 在回應中。 |
 
 {style="table-layout:auto"}
 
