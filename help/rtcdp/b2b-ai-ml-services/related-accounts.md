@@ -5,10 +5,10 @@ description: 有關Experience PlatformReal-Time CDP B2B中相關帳戶功能的�
 feature: Get Started, Profiles, B2B
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 6%
+source-wordcount: '435'
+ht-degree: 4%
 
 ---
 
@@ -32,7 +32,7 @@ B2B企業通常將其客戶資訊儲存在多個系統中，每個系統僅包�
 
 ![在Experience Platform UI中顯示「相關」帳戶的畫面。](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-使用此功能在Experience PlatformUI中檢視帳戶設定檔的相關帳戶設定檔，然後將相關帳戶加入您的區段定義中，以擴大您的觸及面或在您的區段中套用更廣的標準。
+使用此功能在Experience PlatformUI中檢視帳戶設定檔的相關帳戶設定檔，然後將相關帳戶加入您的區段定義中，以擴大您的觸及面或在您的對象中套用更廣的標準。
 
 ## 啟用相關的帳戶服務 {#enable}
 

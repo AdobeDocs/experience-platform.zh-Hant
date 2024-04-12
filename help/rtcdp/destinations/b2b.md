@@ -4,9 +4,9 @@ description: Adobe Real-time Customer Data Platform B2B版本中目的地角色�
 feature: Destinations
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Real-Time CDP B2B Edition完全支援的Experience Platform目的地包括Google
 
 若要瞭解目的地如何適合您的B2B工作流程，請參閱 [端到端教學課程](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
-Adobe Real-time Customer Data Platform B2B Edition可讓您透過Marketo Engage目的地聯結器匯出B2B資料。 透過使用Marketo Engage目的地，您可以將在Adobe Experience Platform中建立的區段推送至Marketo，在那裡，區段會顯示為靜態清單。
+Adobe Real-time Customer Data Platform B2B Edition可讓您透過Marketo Engage目的地聯結器匯出B2B資料。 透過使用Marketo Engage目的地，您可以將在Adobe Experience Platform中建立的對象推送至Marketo，在那裡，這些對象會顯示為靜態清單。
 
 下列檔案提供有關使用Marketo Engage目的地匯出資料的詳細資訊：
 

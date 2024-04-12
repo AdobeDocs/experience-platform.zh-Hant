@@ -4,9 +4,9 @@ title: 資料治理概觀
 description: 資料控管可讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和原則。
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '689'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Real-Time CDP是以Adobe Experience Platform為建置基礎，因此大多數資
 >
 >如需有關行銷動作及其在資料使用原則中的使用的詳細資訊，請參閱 [資料使用原則概觀](../../data-governance/policies/overview.md) 在 [!DNL Experience Platform] 檔案。
 
-對目的地定義行銷動作可讓您確保傳送至這些目的地的任何設定檔或區段都符合資料使用原則。 因此，您應該根據組織對啟用實施原則限制的需求，將適當的行銷動作新增到您的目的地。
+對目的地定義行銷動作可讓您確保傳送至這些目的地的任何設定檔或對象都符合資料使用原則。 因此，您應該根據組織對啟用實施原則限制的需求，將適當的行銷動作新增到您的目的地。
 
 行銷動作只能在第一次設定目的地時選取。 根據您使用的目的地型別，設定行銷動作的機會會顯示在設定工作流程的不同位置。 請參閱 [目的地檔案](../destinations/overview.md) 以瞭解如何設定特定目的地的步驟。
 
@@ -49,7 +49,7 @@ Adobe Experience Platform為常見客戶體驗使用案例提供數項核心原�
 
 ## 強制資料使用規範 {#enforce}
 
-一旦標籤資料並定義使用原則，您就可以強制資料使用符合原則。 在Real-Time CDP中啟用目的地的受眾區段時，資料控管會在任何違規發生時自動強制執行使用原則。
+一旦標籤資料並定義使用原則，您就可以強制資料使用符合原則。 在Real-Time CDP中啟用目的地的對象時，資料控管會在任何違規發生時自動強制執行使用原則。
 
 檢視檔案： [自動原則執行](../../data-governance/enforcement/auto-enforcement.md) 以取得詳細資訊。
 

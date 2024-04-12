@@ -6,7 +6,7 @@ description: Adobe Experience Platform 使用與傳統關聯式資料模型不�
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '1794'
 ht-degree: 2%
@@ -102,7 +102,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 ## 分段護欄
 
-本節中概述的護欄參考組織可在Experience Platform中建立的區段數量和性質，以及對應及啟用區段至目的地。
+本節中概述的護欄是指組織可在Experience Platform中建立的對象數量和性質，以及對應及啟用對象至目的地。
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和
 
 #### Dimension實體
 
-雖然維護設定檔資料的設定檔資料存放區不是關聯式存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立區段。 這項整合稱為 [多實體分段](../segmentation/multi-entity-segmentation.md).
+雖然維護設定檔資料的設定檔資料存放區不是關聯式存放區，但設定檔允許與小型維度實體整合，以便以簡化且直覺的方式建立對象。 這項整合稱為 [多實體分段](../segmentation/multi-entity-segmentation.md).
 
 您的組織也可以定義XDM類別來說明個人以外的專案，例如商店、產品或屬性。 這些非[!DNL XDM Individual Profile] 結構描述稱為「維度實體」（也稱為「查詢實體」），不包含時間序列資料。 代表維度實體的結構描述會透過使用連結至設定檔實體。 [綱要關係](../xdm/tutorials/relationship-ui.md).
 

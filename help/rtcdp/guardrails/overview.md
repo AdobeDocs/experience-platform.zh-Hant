@@ -3,7 +3,7 @@ title: Real-Time CDP護欄
 description: 瞭解Real-Time CDP各種服務和領域的資料護欄。
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 1%
@@ -27,7 +27,6 @@ ht-degree: 1%
 >[!TIP]
 >
 >此外，造訪 [數位體驗藍圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) 以取得進一步資訊，例如 [端對端延遲圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 用於各種Experience Platform服務。
-
 
 ## 護欄型別 {#guardrail-types}
 

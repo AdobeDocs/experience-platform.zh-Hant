@@ -1,12 +1,12 @@
 ---
 keywords: RTCDP；CDP；Real-time Customer Data Platform；即時客戶資料平台；real time cdp；cdp；Customer AI
 title: Real-time Customer Data Platform概觀
-description: Adobe Real-time Customer Data Platform概觀
+description: 瞭解Adobe Real-time Customer Data Platform如何協助您將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，其可用於跨所有管道和裝置即時提供個人化客戶體驗。
 feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---

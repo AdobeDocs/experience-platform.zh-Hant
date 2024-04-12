@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
-user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象區段，並對協力廠商目的地啟動這些區段。
+user-guide-description: 將來自多個企業來源的已知和匿名資料放在一起，以建立客戶設定檔，從這些設定檔建立對象，並對第三方目的地啟用這些對象。
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 70%
+source-wordcount: '294'
+ht-degree: 59%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 70%
    * [帳戶設定檔 UI 指南](accounts/account-profile-ui-guide.md)
 * 管理 {#admin}
    * [管理概觀](administration/admin-overview.md)
+* 對象和細分 {#segmentation}
+   * [分段概觀](segmentation/segmentation-overview.md)
+   * [區段產生器指南](segmentation/segment-builder-guide.md)
+   * [Real-Time CDP B2B 版本中的分段](segmentation/b2b.md)
+   * [Customer AI](segmentation/customer-ai.md)
 * 資料集 {#datasets}
    * [資料集](datasets/dataset.md)
    * [Platform 上的資料品質](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 70%
 * 綱要 {#schemas}
    * [綱要概觀](schemas/overview.md)
    * [Real-Time CDP B2B 版本中的綱要](schemas/b2b.md)
-* 區段 {#segmentation}
-   * [分段概觀](segmentation/segmentation-overview.md)
-   * [區段產生器指南](segmentation/segment-builder-guide.md)
-   * [Real-Time CDP B2B 版本中的分段](segmentation/b2b.md)
-   * [Customer AI](segmentation/customer-ai.md)
 * 來源 {#sources}
    * [來源概觀](sources/sources-overview.md)
    * [Real-Time CDP B2B 版本中的來源](sources/b2b.md)

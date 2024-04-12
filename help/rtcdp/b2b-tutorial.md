@@ -6,9 +6,9 @@ description: 設定Adobe Real-time Customer Data Platform B2B Edition實作時�
 feature: Get Started, B2B
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -76,33 +76,33 @@ Marketo Engage來源聯結器提供自動對應功能，可讓您更輕鬆地將
 
 Bodea行銷人員會檢查所有欄位群組是否已適當對應，並透過初始化資料流來繼續來源設定流程。 藉由建立資料流以匯入Marketo資料，下游Platform服務即可使用傳入的資料。 在初始內嵌流程中，資料會以批次形式帶入Experience Platform。 之後，後續擷取的資料會以近乎即時更新的方式串流至設定檔中。
 
-## 建立區段以評估資料
+## 建立受眾以評估您的資料
 
 下一個任務是根據來源資料中相關實體的特定屬性，為Bodea的新電子郵件行銷活動建立對象。 在Platform UI中，Bodea行銷人員會先選取 **[!UICONTROL 區段]** 在左側導覽中，然後 **[!UICONTROL 建立區段]**.
 
-在此範例中，此區段會尋找所有在銷售部門工作並與至少有一個未結商機之任何帳戶相關的人員。 此區段需要XDM個別設定檔類別、XDM商業帳戶類別和XDM商業機會類別之間的連結。
+在此範例中，受眾會尋找所有在銷售部門工作的人員，以及和至少有一個未完成銷售機會的任何帳戶相關的人員。 此對象需要XDM個人資料類別、XDM商業帳戶類別和XDM商業機會類別之間的連結。
 
 ![使用案例區段](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
 > 
->如需如何建立區段以評估資料的指示，請參閱 [區段產生器UI指南](../segmentation/ui/segment-builder.md). 如需更具體的B2B分段使用案例，請參閱 [Real-Time CDP B2B Edition的區段概觀](./segmentation/b2b.md).
+>如需如何建立對象以評估資料的指示，請參閱 [區段產生器UI指南](../segmentation/ui/segment-builder.md). 如需更具體的B2B分段使用案例，請參閱 [Real-Time CDP B2B Edition的區段概觀](./segmentation/b2b.md).
 
 區段產生器可讓您從即時客戶個人檔案資料建立可行銷的受眾，並依據您定義的屬性、事件和現有受眾組合，檢視潛在受眾的估計值。
 
 ## 將評估過的資料啟用到目的地
 
-成功建立區段後，中會提供摘要 [!UICONTROL 詳細資料] 區段。 由於目前沒有針對區段啟用目的地，因此Bodea行銷人員需要將受眾匯出至資料集，以便對其進行存取和操作。
+成功建立受眾後，中會提供摘要 [!UICONTROL 詳細資料] 區段。 由於目前沒有針對區段定義啟用的目的地，因此Bodea行銷人員需要將受眾匯出至資料集，以便對其進行存取和操作。
 
 在 [!UICONTROL 區段] Platform UI的工作區中，Bodea行銷人員選取 **[!UICONTROL 啟用到目的地]**.
 
-![對目的地啟用區段](./assets/b2b-tutorial/activate-to-destination.png)
+![對目的地啟用對象](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->請參閱上的教學課程 [啟用區段至目的地](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) 以瞭解如何完成此任務的完整步驟。
+>請參閱上的教學課程 [將對象啟用至目的地](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) 以瞭解如何完成此任務的完整步驟。
 
-Bodea行銷人員會啟用區段至Marketo目的地，讓他們能以靜態清單的形式，將區段資料從Platform推送至Marketo Engage。 請參閱 [Marketo目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) 以取得詳細資訊。
+Bodea行銷人員會將對象啟用至Marketo目的地，這可讓他們以靜態清單的形式，將對象資料從Platform推送至Marketo Engage。 請參閱 [Marketo目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) 以取得詳細資訊。
 
 ## 後續步驟
 

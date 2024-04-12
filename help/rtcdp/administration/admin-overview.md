@@ -4,10 +4,10 @@ title: Real-time Customer Data Platform管理概觀
 description: 本文概述由Adobe Experience Platform支援的Adobe Real-time Customer Data Platform管理功能。
 feature: Access Control, Get Started, Sandboxes
 exl-id: c5bdeac6-345a-4ef1-bc5a-a993f565b9d6
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 1%
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 1%
 
 ## 存取控制
 
-存取控制是透過 [Adobe Admin Console](https://adminconsole.adobe.com). 此功能可運用中的產品設定檔 [!DNL Admin Console]，可讓您連結具有許可權和沙箱的使用者。 使用此功能，管理員可以為已定義的使用者集授予或限制特定Real-Time CDP功能的存取權。
+以屬性為基礎的存取控制會透過許可權UI管理。 此功能利用許可權UI中的角色，可讓您連結具有許可權和沙箱的使用者。 使用此功能，管理員可以為已定義的使用者集授予或限制特定Real-Time CDP功能的存取權。
 
-若要進一步瞭解存取控制，請參閱 [存取控制總覽](../../access-control/home.md) 在 [!DNL Experience Platform] 檔案。
+若要進一步瞭解存取控制，請參閱 [屬性型存取控制概觀](/help/access-control/abac/overview.md) 在 [!DNL Experience Platform] 檔案。
 
 >[!IMPORTANT]
 >
@@ -33,6 +33,6 @@ ht-degree: 1%
 
 Adobe Experience Platform (以及擴充功能的Real-Time CDP)可在全球範圍內豐富數位體驗應用程式。 公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。
 
-為了滿足此需求，Adobe Experience Platform提供「沙箱」，可讓您分割單一 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以便用於開發及改進數位體驗應用程式。
+為了滿足此需求，Adobe Experience Platform提供 *沙箱*，可讓您分割單一 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以便用於開發及改進數位體驗應用程式。 您可以使用沙箱工具功能來改善不同沙箱之間的設定準確性，並順暢地匯出和匯入沙箱之間的沙箱設定。 請依照以下提供的步驟操作： [沙箱工具介面指南](../../sandboxes/ui/sandbox-tooling.md).
 
 如需沙箱的詳細資訊，請參閱 [沙箱總覽](../../sandboxes/home.md) 在 [!DNL Experience Platform] 檔案。

@@ -5,9 +5,9 @@ description: 此範例情境提供您實作 Adobe Real-Time Customer Data Platfo
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1151'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 Real-time Customer Data Platform B2B版本擴充了現有的Real-Time CDP和Adobe Experience Platform產品，以支援B2B資料和工作流程。 本檔案提供的範例使用案例會示範B2B版本提供的其他優點。 包括:
 
 - 結合來自不同獨立資料來源的個人和帳戶資料，以產生全面檢視，從而更好地瞭解客戶並更準確地劃分。 請參閱以下檔案： [建立XDM結構描述關係](./schemas/b2b.md) 用於各種B2B來源，以取得詳細資訊。
-- 根據相關實體的屬性來細分對象。 這包括客戶、商機、行銷活動和行銷清單。 區段不再侷限於「人員」屬性和「體驗事件」。 請參閱 [B2B分段檔案](./segmentation/b2b.md) 以取得建立B2B特定對象的更多範例。
+- 根據相關實體的屬性來細分對象。 這包括客戶、商機、行銷活動和行銷清單。 對象不再侷限於「人員」屬性和「體驗事件」。 請參閱 [B2B分段檔案](./segmentation/b2b.md) 以取得建立B2B特定對象的更多範例。
 - 原生支援與多個帳戶相關之個人的使用案例。
 
 ## 使用案例
@@ -50,9 +50,9 @@ Bodea是一家技術公司，推出一項新產品，並且想要透過電子郵
 
 這可防止Bodea的行銷團隊有效率地利用這個新機會鎖定這些公司的特定業務聯絡人。
 
-到目前為止，Townsend在其所有帳戶中累計在Bodea產品上花費超過一百萬美元。 不過，使用舊系統建立的區段不會包含來自Townsend的任何人，除非在單一銷售系統中花費的總額超過100萬美元。 這是因為收入資料是儲存在不同銷售系統下的帳戶中。
+到目前為止，Townsend在其所有帳戶中累計在Bodea產品上花費超過一百萬美元。 不過，使用舊系統建立的受眾不會包含來自Townsend的任何人，除非在單一銷售系統中花費的總額超過100萬美元。 這是因為收入資料是儲存在不同銷售系統下的帳戶中。
 
-由於Townsend的開支分散於不同的銷售系統，且各別的總金額不超過100萬，因此該區段找不到任何符合Marketo 1或Marketo 2資格的人員。
+由於Townsend的開支分散於不同的銷售系統，且個別而言的總金額不超過100萬，因此區段定義無法在Marketo 1或Marketo 2中找到符合資格的人員。
 
 ### Real-Time CDP B2B版本如何解決問題
 
@@ -77,10 +77,10 @@ Bodea是一家技術公司，推出一項新產品，並且想要透過電子郵
 | 商機1，$20萬 |
 | 機會2，$900,000 |
 
-- 針對不同的行銷方案，使用此彙總資料建立唯一區段。 在此範例中，區段會尋找符合以下條件的所有人員：
+- 針對不同的行銷方案，使用此彙總資料建立唯一受眾。 在此範例中，區段定義會尋找符合以下條件的所有人員：
 
    - 擁有相關商機（跨所有帳戶）超過一百萬美元的價值
-   - 和
+   - AND
    - 在上個月造訪過產品頁面
 
 - 建立受眾，使其成為Bodea新行銷活動最有效的收件者。 在此範例中，RT-CDP， B2B Edition將協助行銷人員識別 `p2@townsend.com` 作為此行銷活動的正確目標。

@@ -1,12 +1,12 @@
 ---
 keywords: 細分；細分rtcdp；即時客戶資料平台細分
 title: Real-time Customer Data Platform中的Segmentation Service
-description: Adobe Real-Time Customer Data Platform是以Adobe Experience Platform為建置基礎，並運用許多Experience Platform服務和功能。 您可以使用區段服務，將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
+description: Adobe Real-time Customer Data Platform是以Adobe Experience Platform為建置基礎，並運用許多Experience Platform服務和功能。 您可以使用區段服務，將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '543'
 ht-degree: 4%
 
 ---
@@ -19,11 +19,11 @@ Real-Time CDP是以Adobe Experience Platform為建置基礎，並運用許多 [!
 
 ## 區段
 
-區段是定義特定屬性或行為的程式，這些屬性或行為由設定檔存放區中的設定檔子集共用，以便區分可行銷人群組和您的客戶群。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件行銷活動中，您可能想要一個受眾，其中包含過去30天內搜尋跑鞋但未完成購買的所有使用者。 使用不同的區段，您可以聚焦於各種受眾，提供更自訂的行銷體驗。
+區段是定義特定屬性或行為的程式，這些屬性或行為由設定檔存放區中的設定檔子集共用，以便區分可行銷人群組和您的客戶群。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件行銷活動中，您可能想要一個受眾，其中包含過去30天內搜尋跑鞋但未完成購買的所有使用者。 使用不同的區段定義，您可以聚焦於各種受眾，提供更自訂的行銷體驗。
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] 可讓您輕鬆建立及存取區段，並使用不同的建置區塊來進一步表示區段特性。 如需如何使用「區段產生器」的詳細資訊，請參閱 [區段產生器指南](./segment-builder-guide.md).
+[!DNL Platform] 可讓您輕鬆建立及存取區段定義，並使用不同的建置區塊來進一步描述您的受眾。 如需如何使用「區段產生器」的詳細資訊，請參閱 [區段產生器指南](./segment-builder-guide.md).
 
 ## Customer AI
 
@@ -36,7 +36,7 @@ Real-time Customer Data Platform隨附的Customer AI可讓您在個人層面產�
 * 針對貴公司的獨特使用案例和資料，提供可自訂的選項。
 * 利用客戶傾向分數（例如流失和轉換）來增強即時客戶個人檔案。
 * 使用傾向分數的影響因素增強客戶設定檔。
-* 根據影響因素和傾向分數建立客戶區段。
+* 根據影響因素和傾向分數建立客戶的對象。
 
 Customer AI位於 **[!UICONTROL 服務]** 標籤下的 **[!UICONTROL Adobe服務]**.
 
@@ -44,7 +44,7 @@ Customer AI位於 **[!UICONTROL 服務]** 標籤下的 **[!UICONTROL Adobe服務
 
 ### Customer AI快速入門
 
-若要開始使用Customer AI，您需要遵循 [資料準備教學課程](../../intelligent-services/data-preparation.md) 並根據您的使用案例設定輸入結構。 接下來，您需要 [設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md). 設定例證後，會產生模型，您可在其中進行 [檢視您的深入分析和分數](../../intelligent-services/customer-ai/user-guide/discover-insights.md). 使用模型產生的資料，您可以建立資料驅動啟動的區段。
+若要開始使用Customer AI，您需要遵循 [資料準備教學課程](../../intelligent-services/data-preparation.md) 並根據您的使用案例設定輸入結構。 接下來，您需要 [設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md). 設定例證後，會產生模型，您可在其中進行 [檢視您的深入分析和分數](../../intelligent-services/customer-ai/user-guide/discover-insights.md). 使用模型產生的資料，您可以建立資料驅動啟動的對象。
 
 若要進一步瞭解Customer AI，請造訪 [Customer AI概述](../../intelligent-services/customer-ai/overview.md). 此外，以下影片說明Customer AI如何運用AI傾向豐富客戶個人檔案，以及執行客戶細分和目標定位工作。
 
