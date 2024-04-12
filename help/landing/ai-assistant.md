@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: b1f2d85f5a1cf6bb38344c87496488a919800029
+source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
 workflow-type: tm+mt
-source-wordcount: '2604'
+source-wordcount: '2730'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ AI助理是UI功能，可用來導覽並瞭解Adobe Experience Platform和Real-t
 
 * 有關如何執行與資料和受眾相關之工作的指南。
 * 貴組織中現有資料物件的狀態和量度。
-* 使用案例範例和細微差別，更能瞭解您的資料物件，包括屬性、資料流、資料集、目的地、結構描述、區段和來源。
+* 使用案例範例和細微差別，更能瞭解您的資料物件，包括屬性、受眾、資料流程、資料集、目的地、結構描述和來源。
 
 請閱讀以下指南，瞭解如何使用AI助理來協助導覽並瞭解您的Experience Platform和Real-Time CDP工作流程。
 
@@ -51,7 +51,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 * **使用問題**：使用問題與組織內的資料物件有關。 使用問題的一些範例包括：
    * 我有多少資料集？
    * 有多少結構描述屬性從未使用過？
-   * 已啟用哪些區段？
+   * 已啟用哪些對象？
 
 >[!ENDSHADEBOX]
 
@@ -59,13 +59,14 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 您可以使用AI助理來達成下列目標：
 
-| 目標 | 說明 |
-| --- | --- |
-| 學習Experience Platform和Real-Time CDP概念 | 您可以詢問AI Assistant的概念問題，這樣您就可以將自己帶入Experience Platform和Real-Time CDP中。 您也可以使用AI Assistant來瞭解您不熟悉的物件和行為。 |
-| 確保沙箱中的資料整潔 | 您可以使用AI Assistant來識別任何重複專案或未使用的物件，以便有效地維護沙箱的乾淨。 |
-| 協調價值分析 | 您可以使用AI Assistant來識別您最常使用的物件，並評估任何績效指標或尋找最有價值的資料。 |
-| 瞭解影響分析 | 您可以使用AI助理來識別某些工作流程中使用的物件，以便評估任何變更的影響。 |
-| 監控您的資料 | 您可以使用AI助理來監視任何資料流、擷取或評估工作，以便檢視任何差異或報告進度。 |
+| 目標 | 說明 | 範例 |
+| --- | --- | --- |
+| 學習概念和持續工作流程 | <ul><li>身為新手使用者，您可以使用AI Assistant來瞭解Real-Time CDP和Adobe Journey Optimizer概念，並且將自己帶入你不熟悉的產品和功能。</li><li>身為經驗豐富的使用者，您可以使用AI Assistant來解決可能阻礙您工作流程的邊緣案例。 | <ul><li>如何在Journey Analytics中設定儀表板？</li><li>告訴我一些Real-Time CDP的使用案例。</li></ul> |
+| 疑難排解 | 使用AI助理瞭解如何偵錯工作流程中可能遇到的基本錯誤。 | <ul><li>發生此錯誤的原因 {ERROR_MESSAGE} 平均值？</li><li>我為何無法刪除名為「Luma：電子郵件對象」的對象？</li></ul> |
+| 沙箱衛生 | 使用AI助理來識別任何重複專案或未使用的物件，以便您能夠有效地維護您的沙箱。 | <ul><li>您可以顯示類似的對象嗎？</li><li>是否有任何沒有關聯資料集的結構描述？</li></ul> |
+| 值分析 | 使用AI助理可以識別您最常用的資料物件，並評估任何績效指標或尋找最有價值的資料物件。 | <ul><li>我們的「Luma：電子郵件對象」區段定義中有多少設定檔？</li><li>對象何時啟用以Experience Cloud對象目的地？</li></ul> |
+| 搜尋 | 使用AI助理來尋找支援的Experience Platform物件，例如對象、資料集、目的地、結構描述和來源。 | <ul><li>列出在上季建立的名稱中包含「Luma」的對象。</li><li>「Luma：自訂動作」XDM結構描述中有哪些屬性？</li></ul> |
+| 影響分析 | 使用AI助理來識別某些工作流程中使用的資料物件，以便您評估任何變更的影響。 | <ul><li>使用哪些對象 `homeAddress.city` 在「Luma：PersonProfiles」結構描述中？</li><li>哪些資料集是 `consents.marketing.push.val` 設定檔屬性儲存在中？</li></ul> |
 
 ## 在Experience PlatformUI中存取AI助理
 
@@ -75,7 +76,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 AI Assistant介面隨即顯示，立即為您提供開始使用的資訊。 您可以使用下提供的選項 [!UICONTROL 開始使用的概念] 回答下列問題和命令：
 
-* [!UICONTROL 系統會啟用我的哪些區段？]
+* [!UICONTROL 已啟用我的哪些對象？]
 * [!UICONTROL 什麼是結構描述？]
 * [!UICONTROL 告訴我一些Real-Time CDP的常見使用案例]
 
@@ -145,7 +146,7 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 
 若要讓AI Assistant回應有關您組織內資料使用情況的查詢，您必須處於有效沙箱中。
 
-在以下範例中，AI助理會隨附以下查詢： **「向我顯示含有超過1000個設定檔的區段定義，並包含啟用狀態。」** AI Assistant接著會以圖表回應，將您的區段和設定檔資料視覺化。
+在以下範例中，AI助理會隨附以下查詢： **「使用超過1000個設定檔顯示區段定義並包含啟用狀態。」** AI Assistant接著會以圖表回應，將您的區段和設定檔資料視覺化。
 
 ![繼續回答有關資料使用的問題。](./images/ai-assistant/data-usage-question.png)
 
@@ -157,11 +158,11 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 
 ![展開的圖表。](./images/ai-assistant/chart-expanded.png)
 
-出現資料使用問題提示時，AI Assistant會提供如何計算答案的說明。 在以下範例中，AI Assistant概述其顯示的區段定義及其超過1000個設定檔和各自啟用狀態所採取步驟。
+出現資料使用問題提示時，AI Assistant會提供如何計算答案的說明。 在以下範例中，AI Assistant概述其顯示的區段定義所使用的步驟，其中包含超過1000個設定檔及其各自的啟用狀態。
 
-![繼續回答有關區段的問題，以說明AI Assistant如何計算答案。](./images/ai-assistant/results-explained.png)
+![繼續回答有關區段定義的問題，說明AI Assistant如何計算答案。](./images/ai-assistant/results-explained.png)
 
-您還可以提供篩選器和修改查詢，並可以指示AI助理根據您包含的篩選器呈現其結果。 例如，您可以要求AI助理按照區段建立的日期順序，顯示計數區段定義的趨勢；移除總設定檔為零的區段定義；以及在顯示資料時，使用月份名稱而非整數。
+您還可以提供篩選器和修改查詢，並可以指示AI助理根據您包含的篩選器呈現其結果。 例如，您可以要求AI助理按其建立日期的順序，顯示計數區段定義的趨勢；移除總設定檔為零的區段定義；以及在顯示資料時，使用月份名稱而非整數。
 
 +++
 
@@ -169,7 +170,7 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 
 +++選取以檢視自動完成的範例
 
-您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：區段、結構描述、資料集、來源和目的地。
+您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：受眾、結構描述、資料集、來源和目的地。
 
 加入加號(**`+`**)。 您也可以選取加號(**`+`**)，位於文字輸入方塊底部。 隨即顯示一個視窗，其中包含沙箱中建議的資料物件清單。
 
@@ -208,16 +209,16 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 您也可以向AI Assistant詢問有關下列網域中資料使用情況的問題：
 
 * 屬性
+* 對象
 * 資料流
 * 資料集
 * 目的地 _（關於帳戶的問題和資料流的一些問題目前無法回答。）_
 * 方案 _（目前無法回答有關欄位群組的問題。）_
-* 區段
 * 來源 _（目前無法回答有關帳戶的問題。）_
 
-對於使用資料查詢，答案可能不會反映UI的目前狀態。 支援這些問題的資料每24小時更新一次。 例如，使用者白天在Real-Time CDP中所做的變更會在夜間與資料存放區同步，然後早上就可供使用者提問。 您可能需要將問題的格式設定為：「標題為的區段是什麼時候 {TITLE} 建立時間？」 而非「何時會 {TITLE} 區段已建立？」
+對於使用資料查詢，答案可能不會反映UI的目前狀態。 支援這些問題的資料每24小時更新一次。 例如，使用者白天在Real-Time CDP中所做的變更會在夜間與資料存放區同步，然後早上就可供使用者提問。 您可能需要將問題的格式設定為：「標題的對象是什麼時候 {TITLE} 建立時間？」 而非「何時會 {TITLE} 對象已建立？」
 
-您需要登入沙箱，查詢與物件（例如結構描述、資料集、屬性、目的地和區段）相關的特定資料。
+您需要登入沙箱，查詢與物件（例如對象、結構描述、資料集、屬性和目的地）相關的特定資料。
 
 ### 範例資料使用問題 {#example-data-usage-questions}
 
@@ -225,9 +226,9 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 
 | 問題型別 | 說明 | 範例 |
 | --- | --- | --- | 
-| 資料譜系 | 追蹤其他Experience Platform物件中一或多個物件的使用情況 | <ul><li>使用哪些資料集 {SCHEMA_NAME} 綱要？</li><li>使用相同結構描述擷取了多少資料集？</li><li>已啟用區段中已使用哪些資料集？</li><li>列出具有用於已啟動區段之屬性的結構描述。</li><li>顯示啟用的區段 {DESTINATION_ACCOUNT_NAME} 和超過1000個設定檔。</li><li>顯示已啟動區段（在2023年1月之後已修改）中使用的屬性。</li><li>什麼是資料集透過擷取 {SOURCE_NAME}？</li><li>哪些資料流相關聯 {DATAFLOW_NAME}</li><li>列出與已啟動區段相關且建立於過去1年的結構描述。</li></ul> |
-| 分佈與彙總 | 關於Experience Platform物件使用情況的摘要式問題 | <ul><li>已啟動區段的百分比為何？</li><li>區段中使用了多少欄位？</li><li>啟用至最多目的地的區段有哪些？</li><li>列出重複的區段。</li><li>顯示啟用的區段 {DESTINATION_ACCOUNT_NAME} 並按設定檔大小排名。</li><li>尚未啟動但設定檔超過100個的區段百分比為何？ 顯示他們的姓名。</li><li>列出將資料擷取到我的資料集中的3個來源聯結器。</li><li>根據已啟動區段中的出現次數，列出前5個用於已啟動區段的屬性。</li></ul> |
-| 物件查詢 | 擷取或存取Experience Platform物件或其屬性。 | <ul><li>哪些資料集沒有任何相關聯的結構描述</li><li>列出用於以下專案的屬性： {SEGMENT_NAME}？</li><li>給我已啟用設定檔但自建立以來未修改的結構描述清單。</li><li>上週修改了哪些區段？</li><li>列出具有相同區段定義的區段及其建立日期。</li><li>哪些資料集已啟用設定檔，並且包括已從每個資料集建立多少區段。</li><li>哪些來源帳戶與資料集XYZ相關聯？</li><li>顯示區段定義和修改日期 {SEGMENT_NAME}.</li></ul> |
+| 資料譜系 | 追蹤其他Experience Platform物件中一或多個物件的使用情況 | <ul><li>使用哪些資料集 {SCHEMA_NAME} 綱要？</li><li>使用相同結構描述擷取了多少資料集？</li><li>啟用的受眾中使用了哪些資料集？</li><li>列出具有用於已啟動受眾之屬性的結構描述。</li><li>顯示啟用的對象 {DESTINATION_ACCOUNT_NAME} 和超過1000個設定檔。</li><li>顯示啟用對象中所使用的屬性，這些對象在2023年1月之後已修改。</li><li>什麼是資料集透過擷取 {SOURCE_NAME}？</li><li>哪些資料流相關聯 {DATAFLOW_NAME}</li><li>列出與啟用的對象相關且建立於過去1年的結構描述。</li></ul> |
+| 分佈與彙總 | 關於Experience Platform物件使用情況的摘要式問題 | <ul><li>啟用的對象百分比為何？</li><li>區段中使用了多少欄位？</li><li>哪些對象啟用的目的地數量最多？</li><li>列出重複的對象。</li><li>顯示啟用的對象 {DESTINATION_ACCOUNT_NAME} 並按設定檔大小排名。</li><li>尚未啟用但擁有超過100個設定檔的對象百分比為何？ 顯示他們的姓名。</li><li>列出將資料擷取到我的資料集中的3個來源聯結器。</li><li>根據啟用對象的發生次數，列出前5個用於啟用對象的屬性。</li></ul> |
+| 物件查詢 | 擷取或存取Experience Platform物件或其屬性。 | <ul><li>哪些資料集沒有任何相關聯的結構描述</li><li>列出用於以下專案的屬性： {AUDIENCE_NAME}？</li><li>給我已啟用設定檔但自建立以來未修改的結構描述清單。</li><li>上週修改了哪些對象？</li><li>列出具有相同區段定義的對象及其建立日期。</li><li>哪些資料集已啟用設定檔，並且包括已從每個資料集建立多少對象。</li><li>哪些來源帳戶與資料集XYZ相關聯？</li><li>顯示區段定義和修改日期 {AUDIENCE_NAME}.</li></ul> |
 
 +++
 
@@ -276,56 +277,6 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 ### 警告和限制 {#caveats-and-limitations}
 
 以下章節概述使用AI助理時應考量的目前注意事項和限制。
-<!-- 
-#### Conversational experience
-
-You must consider several nuances regarding the conversational experience when querying the AI Assistant.
-
->[!NOTE]
->
->These limitations are temporary and are being improved upon throughout the course of the alpha.
-
->[!BEGINTABS]
-
->[!TAB Unable to infer context from prior discussion]
-
-The AI Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The AI Assistant cannot infer what "them" means. |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The AI Assistant cannot intelligently reference documentation based on "more". |
-| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The AI Assistant cannot infer what you want an example of.|
-| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The AI Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
-| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The AI Assistant is cannot infer what "them" is referring to. |
-
-{style="table-layout:auto"}
-
->[!TAB Unable to infer context from a page]
-
-When asking the AI Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "What does this do?" | "What does {PAGE_NAME} do? | The AI Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
-| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The AI Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
-
-{style="table-layout:auto"}
-
-Furthermore, the AI Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
-
->[!TAB Ambiguity]
-
-You must phrase your questions clearly and scope them within a product, application, or domain, as the AI Assistant currently cannot disambiguate questions.
-
-| Ambiguous question | Clear question | Note |
-| --- | --- | --- |
-| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
-| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
-
-{style="table-layout:auto"}
-
->[!ENDTABS] -->
 
 #### 有限的閒聊
 
@@ -356,6 +307,6 @@ AI Assistant可能會提供其功能的錯誤印象。 它可能會錯誤地回�
 
 | 錯誤的問題 | 好問題 | 附註 |
 | --- | --- | --- |
-| 我最大的區段是什麼？ | 我最大的區段是什麼？ 使用資料。 | 明確告知AI助理，您希望答案以資料為基礎。 |
-| 我最大的區段是什麼？ | 列出我最大的區段。 | 在某些情況下，「什麼……」問題可能會被誤認為檔案型問題。 使用類似「list」的命令是較強化的指標，表示您對上下文中的資料存有疑問。 |
-| 我有多少資料集？ | 計算我的資料集。 | 原始問題適用於區段，但可能不適用於資料集。 |
+| 我的最大受眾為何？ | 我的最大受眾為何？ 使用資料。 | 明確告知AI助理，您希望答案以資料為基礎。 |
+| 我的最大受眾為何？ | 列出我最大的對象。 | 在某些情況下，「什麼……」問題可能會被誤認為檔案型問題。 使用類似「list」的命令是較強化的指標，表示您對上下文中的資料存有疑問。 |
+| 我有多少資料集？ | 計算我的資料集。 | 原始問題適用於對象，但可能無法用於資料集。 |
