@@ -5,9 +5,9 @@ title: 使用流程服務API建立付款來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從支付應用程式擷取資料，以及使用來源聯結器和API擷取資料至Platform的步驟。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1363'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有付款來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#payments) 以取得可建立基礎連線的付款來源清單。
+>* 為了建立資料流，您必須擁有付款來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#payments) 以取得可建立基礎連線的付款來源清單。
+>* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。
 
 ## 快速入門
 

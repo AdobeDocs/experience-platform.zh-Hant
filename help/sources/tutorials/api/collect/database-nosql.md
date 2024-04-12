@@ -5,9 +5,9 @@ title: 使用流程服務API建立資料庫來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從資料庫擷取資料，以及使用來源聯結器和API擷取資料到Platform的步驟。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有包含資料庫來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#database) 以取得可建立基礎連線的資料庫來源清單。
+>* 為了建立資料流，您必須擁有包含資料庫來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#database) 以取得可建立基礎連線的資料庫來源清單。
+>* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。 唯一支援的時間戳記 [[!DNL Snowflake] 來源](../../../connectors/databases/snowflake.md) 是TIMESTAMP_NTZ搭配UTC時間。
 
 ## 快速入門
 

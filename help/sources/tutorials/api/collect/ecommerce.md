@@ -5,9 +5,9 @@ title: 使用流量服務API建立電子商務來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商電子商務系統擷取資料，以及使用來源聯結器和API擷取資料到Platform的步驟。
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1304'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有包含電子商務來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#ecommerce) 如需可建立基礎連線的電子商務來源清單。
+>* 為了建立資料流，您必須擁有包含電子商務來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#ecommerce) 如需可建立基礎連線的電子商務來源清單。
+>* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。
 
 ## 快速入門
 

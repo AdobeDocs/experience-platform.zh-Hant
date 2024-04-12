@@ -5,9 +5,9 @@ title: 在UI中使用同意和偏好設定來源建立資料流
 type: Tutorial
 description: 資料流是排程的工作，可擷取來源中的資料並將其擷取至Platform資料集。 本教學課程提供如何使用Platform UI為同意和偏好設定來源建立資料流的步驟。
 exl-id: 340b5945-baa1-4f79-88fa-2572606f6083
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有已驗證的帳戶， [!DNL OneTrust Integration] 來源。 請參閱上的教學課程 [建立 [!DNL OneTrust Integration] ui中的來源連線](../../ui/create/consent-and-preferences/onetrust.md) 以取得詳細資訊。
+>* 為了建立資料流，您必須擁有已驗證的帳戶， [!DNL OneTrust Integration] 來源。 請參閱上的教學課程 [建立 [!DNL OneTrust Integration] ui中的來源連線](../../ui/create/consent-and-preferences/onetrust.md) 以取得詳細資訊。
+>* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。
 
 ## 快速入門
 
@@ -144,8 +145,8 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 依照本教學課程所述，您已成功建立資料流，以將您的同意和偏好設定來源中的資料匯入Platform。 下游現在可以使用傳入的資料 [!DNL Platform] 服務，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-Time Customer Profile] 概覽](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] 概覽](../../../../data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile] 概觀](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] 概觀](../../../../data-science-workspace/home.md)
 
 
 >[!WARNING]

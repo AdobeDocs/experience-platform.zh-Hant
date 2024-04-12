@@ -5,9 +5,9 @@ title: 在UI中使用資料庫來源建立資料流
 type: Tutorial
 description: 資料流是排程的工作，可擷取來源中的資料並將其擷取至Platform資料集。 本教學課程提供如何使用Platform UI為資料庫來源建立資料流的步驟。
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1441'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有具有資料庫來源的已驗證帳戶。 在UI中建立不同資料庫來源帳戶的教學課程清單可在以下網址找到： [來源概觀](../../../home.md#database).
+>* 為了建立資料流，您必須擁有具有資料庫來源的已驗證帳戶。 在UI中建立不同資料庫來源帳戶的教學課程清單可在以下網址找到： [來源概觀](../../../home.md#database).
+>
+>* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。 唯一支援的時間戳記 [[!DNL Snowflake] 來源](../../../connectors/databases/snowflake.md) 是TIMESTAMP_NTZ搭配UTC時間。
 
 ## 快速入門
 
@@ -140,5 +142,5 @@ Platform會根據您選取的目標結構或資料集，為自動對應的欄位
 
 依照本教學課程中的指示，您已成功建立資料流，將資料從您的資料庫來源帶入Platform。 下游現在可以使用傳入的資料 [!DNL Platform] 服務，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
 
-* [[!DNL Real-Time Customer Profile] 概覽](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] 概覽](../../../../data-science-workspace/home.md)
+* [[!DNL Real-Time Customer Profile] 概觀](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] 概觀](../../../../data-science-workspace/home.md)

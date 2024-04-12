@@ -5,9 +5,9 @@ title: 使用流量服務API建立CRM來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從協力廠商CRM系統擷取資料，以及使用來源聯結器和API將資料引進Platform的步驟。
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1367'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有具有CRM來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#customer-relationship-management) 以取得可建立基礎連線的CRM來源清單。
+>* 為了建立資料流，您必須擁有具有CRM來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#customer-relationship-management) 以取得可建立基礎連線的CRM來源清單。
+>* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。
 
 ## 快速入門
 

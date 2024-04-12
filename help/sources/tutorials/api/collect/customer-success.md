@@ -5,9 +5,9 @@ title: 使用流程服務API建立客戶成功來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從客戶成功系統擷取資料，以及使用來源聯結器和API擷取資料至Platform的步驟。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1257'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,8 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有具有客戶成功來源的有效基本連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#customer-success) 以取得您可以用來建立基礎連線的客戶成功來源清單。
+>* 為了建立資料流，您必須擁有具有客戶成功來源的有效基本連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#customer-success) 以取得您可以用來建立基礎連線的客戶成功來源清單。
+>* 為了讓Experience Platform擷取資料，所有以表格為基礎的批次來源的時區都必須設定為UTC。
 
 ## 快速入門
 

@@ -5,9 +5,9 @@ title: 使用流程服務API建立通訊協定來源的資料流
 type: Tutorial
 description: 本教學課程涵蓋從通訊協定應用程式擷取資料，以及使用來源聯結器和API擷取資料到Platform的步驟。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->為了建立資料流，您必須擁有包含通訊協定來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#protocols) 以取得您可以用來建立基礎連線的通訊協定來源清單。
+>* 為了建立資料流，您必須擁有包含通訊協定來源的有效基底連線ID。 如果您沒有此ID，請參閱 [來源概觀](../../../home.md#protocols) 以取得您可以用來建立基礎連線的通訊協定來源清單。
 
 ## 快速入門
 
