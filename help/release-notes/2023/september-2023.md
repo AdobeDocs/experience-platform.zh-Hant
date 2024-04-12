@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '2257'
+source-wordcount: '2263'
 ht-degree: 26%
 
 ---
@@ -70,7 +70,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
 | 資料流 | 裝置查詢支援 | 設定資料流時，您現在可以選取要收集的裝置查詢資訊層級。 裝置查詢資訊包括裝置、硬體、作業系統以及用來與頁面互動的瀏覽器的相關資料。 <br>  裝置查詢資訊無法與使用者代理程式和使用者端提示一起收集。 選擇收集裝置資訊將會停用收集使用者代理程式和使用者端提示，反之亦然。 所有裝置查詢資訊都儲存在 `xdm:device` 欄位群組。 從以下檔案瞭解更多資訊： [設定資料串流](../../datastreams/configure.md#geolocation-device-lookup). |
-| 擴充功能 | [!DNL TikTok] 網站事件API擴充功能 | 此 [[!DNL TikTok] 網頁事件API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) 擴充功能可讓您善用Adobe Experience Platform Edge Network中擷取的資料，並將其傳送至 [!DNL TikTok] 以伺服器端事件的形式使用 [!DNL TikTok] 網頁事件API。 |
+| 擴充功能 | [!DNL TikTok] 網站事件API擴充功能 | 此 [[!DNL TikTok] 網頁事件API](https://exchange.adobe.com/apps/ec/109834/tiktok-web-events-api) 擴充功能可讓您運用Adobe Experience PlatformEdge Network中擷取的資料，並將其傳送至 [!DNL TikTok] 以伺服器端事件的形式使用 [!DNL TikTok] 網頁事件API。 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} | 透過Adobe Experience Platform中的進階資料生命週期管理功能，跨所有資料存放區管理您的資料生命週期，以符合客戶承諾和授權協定：自動化資料集到期日和記錄刪除。<br>有了自動化資料集有效期，您可以刪除整個資料集，並設定要刪除資料集的日期和時間。<br>記錄刪除可讓您透過定位個別消費者設定檔的主要身分，來刪除個別消費者設定檔。 您可以透過UI或透過CSV/JSON檔案上傳個別提供主要身分。 請參閱 [記錄刪除檔案](../../hygiene/ui/record-delete.md) 以取得詳細資訊 |
+| [!BADGE 測試版]{type=Informative}記錄刪除（限量發行） | 透過Adobe Experience Platform中的進階資料生命週期管理功能，跨所有資料存放區管理您的資料生命週期：自動化資料集到期日和記錄刪除，以符合客戶承諾和授權協定。<br>有了自動化資料集有效期，您可以刪除整個資料集，並設定要刪除資料集的日期和時間。<br>記錄刪除可讓您透過定位個別消費者設定檔的主要身分，來刪除個別消費者設定檔。 您可以透過UI或透過CSV/JSON檔案上傳個別提供主要身分。 請參閱 [記錄刪除檔案](../../hygiene/ui/record-delete.md) 以取得詳細資訊 |
 | 資料集到期 | 藉由自動化資料集到期功能，將您的資料減至最少，並控制您的授權協定。 刪除整個資料集並設定要刪除資料集的日期和時間，以減少資料量。 請參閱 [資料集有效期限檔案](../../hygiene/ui/dataset-expiration.md) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}

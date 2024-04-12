@@ -3,9 +3,9 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2166'
 ht-degree: 2%
 
 ---
@@ -197,6 +197,10 @@ curl -X GET \
 為確保資料在指定期間後從系統中移除，請以ISO 8601格式提供資料集ID和到期日與時間，以排程特定資料集的到期日。
 
 若要建立資料集有效期，請執行如下所示的POST請求，並在裝載中提供下列提及的值。
+
+>[!NOTE]
+>
+>如果您收到404錯誤，請確定請求沒有其他正斜線。 結尾斜線可能會導致POST要求失敗。
 
 **API格式**
 
