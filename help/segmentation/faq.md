@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3161'
 ht-degree: 1%
 
 ---
@@ -86,7 +86,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ### 我可以刪除外部產生的對象嗎？
 
-此時，您只能停用外部產生的對象。 在此狀態下，設定檔 **將** 維持使用中狀態，以便用於下游應用程式。 刪除外部產生對象的支援將在後續版本中新增。
+是！您可在對象入口網站中刪除外部產生的對象。
 
 ### 如果我意外上傳了外部產生的對象，該怎麼辦？
 
