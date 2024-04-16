@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM個別設定檔類別
 description: 瞭解XDM個別設定檔類別。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,7 @@ ht-degree: 0%
 
 設定檔的範圍包括匿名行為訊號（例如瀏覽器Cookie），以及包含詳細資訊（例如姓名、出生日期、地點和電子郵件地址）的高度識別設定檔。 隨著個人檔案成長，它會成為個人資訊、身分、聯絡詳細資料和個人通訊偏好設定的健全存放庫。 如需有關在平台生態系統中使用此類別的高層級資訊，請參閱 [XDM概覽](../home.md#data-behaviors).
 
-此 [!DNL XDM Individual Profile] 類別本身提供了數個系統產生的值，這些值會在擷取資料時自動填入，而所有其他欄位則必須透過使用來新增 [相容的結構描述欄位群組](#field-groups)：
-
-![](../images/classes/individual-profile.png)
+![XDM個別設定檔類別的結構描述圖。](../images/classes/individual-profile.png)
 
 | 屬性 | 說明 |
 | --- | --- |
