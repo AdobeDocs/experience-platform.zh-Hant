@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: 忽略年度時間限制更新
 description: 瞭解如何解決忽略年份時間限制的問題。
-source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
+exl-id: 44bb8817-e32d-4806-ad4e-b1840313e768
+source-git-commit: 006950092f69d378b064c795b117166343e5d8f2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 9%
+source-wordcount: '246'
+ht-degree: 8%
 
 ---
-
 
 # 忽略年份時間限制更新 {#ignore-year}
 
@@ -16,6 +16,10 @@ ht-degree: 9%
 >id="platform_audiences_segmentBuilder_ignoreYear"
 >title="忽略年份更新"
 >abstract="忽略年份時間限制已更新。請重新儲存您的對象。"
+
+>[!IMPORTANT]
+>
+>在使用評估的區段定義中，您只能使用「忽略年份」時間限制 **批次細分**. 在區段定義中新增「忽略年份」時間限制，即可產生對象 **不合格** 適用於串流或邊緣細分。
 
 2024年2月發行的Adobe Experience Platform已對Adobe Experience Platform分段服務進行變更，以解決在對象建立和評估中「忽略年份」選項的問題。
 

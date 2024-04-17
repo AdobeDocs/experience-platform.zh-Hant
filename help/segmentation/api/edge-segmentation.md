@@ -4,9 +4,9 @@ title: 使用API的邊緣細分
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用邊緣區段的範例。
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1207'
 ht-degree: 1%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 1%
 
 - 區段定義包含單一事件和 `inSegment` 事件。
    - 但是，如果區段包含在 `inSegment` 事件只是設定檔，區段定義 **將** 啟用邊緣區段。
+- 區段定義會使用「忽略年份」作為其時間限制的一部分。
 
 ## 擷取所有已啟用邊緣細分的區段
 
@@ -279,6 +280,6 @@ curl -X POST \
 
 下節列出與邊緣細分相關的常見問題：
 
-### 在Edge Network上使用區段需要多久時間？
+### 區段需要多久才能在Edge Network上使用？
 
-在Edge Network上提供區段最多需要一小時的時間。
+區段在Edge Network上可供使用最多需要一小時。

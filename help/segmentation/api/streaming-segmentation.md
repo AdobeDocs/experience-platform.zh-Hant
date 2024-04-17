@@ -4,9 +4,9 @@ title: 使用串流區段近乎即時地評估事件
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用串流區段的範例。
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2050'
 ht-degree: 4%
 
 ---
@@ -87,6 +87,7 @@ ht-degree: 4%
 - 區段定義包括多個實體（多實體查詢）。
 - 區段定義包含單一事件和 `inSegment` 事件。
    - 但是，如果區段包含在 `inSegment` 事件只是設定檔，區段定義 **將** 已啟用串流區段。
+- 區段定義會使用「忽略年份」作為其時間限制的一部分。
 
 請注意，進行串流細分時適用下列准則：
 

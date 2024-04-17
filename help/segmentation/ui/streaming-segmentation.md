@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 串流區段UI指南
 description: Adobe Experience Platform上的串流區段可讓您以近乎即時的速度進行區段，同時聚焦於資料的豐富度。 有了串流區段，現在只要資料進入平台，區段資格就能執行，無需排程及執行區段工作。 有了這項功能，現在可以在資料傳入Platform時評估大部分割槽段規則，這表示區段會籍將保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1541'
 ht-degree: 0%
 
 ---
@@ -48,6 +48,7 @@ ht-degree: 0%
 - 區段定義包括多個實體（多實體查詢）。
 - 區段定義包含單一事件和 `inSegment` 事件。
    - 但是，如果區段定義包含在 `inSegment` 事件只是設定檔，區段定義 **將** 已啟用串流區段。
+- 區段定義會使用「忽略年份」作為其時間限制的一部分。
 
 請注意，進行串流細分時適用下列准則：
 

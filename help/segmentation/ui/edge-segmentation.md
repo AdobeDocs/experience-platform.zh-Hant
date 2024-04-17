@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Edge Segmentation UI指南
 description: 瞭解如何使用邊緣分段，在邊緣即時評估Platform中的區段定義，啟用相同頁面和下一頁個人化使用案例。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '970'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 0%
 
 - 區段定義包含單一事件和 `inSegment` 事件。
    - 但是，如果區段定義包含在 `inSegment` 事件只是設定檔，區段定義 **將** 啟用邊緣區段。
+- 區段定義會使用「忽略年份」作為其時間限制的一部分。
 
 ## 後續步驟
 
@@ -64,6 +65,6 @@ ht-degree: 0%
 
 下節列出與邊緣細分相關的常見問題：
 
-### 在Edge Network上使用區段定義需要多久時間？
+### 區段定義需要多久才能在Edge Network上使用？
 
-在Edge Network上提供區段定義最多需要一小時的時間。
+區段定義最多需要一小時才能在Edge Network上使用。
