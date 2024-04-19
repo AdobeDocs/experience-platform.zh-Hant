@@ -5,16 +5,16 @@ type: Documentation
 description: Adobe Experience Platform可讓您從設定檔存放區中刪除資料集或批次，以移除不再需要或錯誤新增的即時客戶設定檔資料。 這需要使用設定檔API來建立設定檔系統作業或刪除請求。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1327'
 ht-degree: 2%
 
 ---
 
 # 設定檔系統作業端點（刪除請求）
 
-Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強大的設定檔。 資料已擷取到 [!DNL Platform] 儲存在 [!DNL Data Lake]，而且如果資料集已啟用設定檔功能，該資料會儲存在 [!DNL Real-Time Customer Profile] 資料存放區。 有時候，您可能需要從設定檔存放區中刪除資料集或批次，以移除不再需要或新增錯誤的資料。 這需要使用 [!DNL Real-Time Customer Profile] 建立API [!DNL Profile] 系統工作，或 `delete request`，您也可以在需要時修改、監控或移除這些專案。
+Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強大的設定檔。 資料已擷取到 [!DNL Platform] 儲存在 [!DNL Data Lake]，而且如果資料集已啟用設定檔功能，該資料會儲存在 [!DNL Real-Time Customer Profile] 資料存放區。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用 [!DNL Real-Time Customer Profile] 建立API [!DNL Profile] 系統工作，或 `delete request`，您也可以在需要時修改、監控或移除這些專案。
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ curl -X GET \
 
 透過向發出的POST請求，可起始新的刪除請求 `/systems/jobs` 端點，要求內文中提供要刪除的資料集或批次的ID。
 
-### 刪除資料集
+### 刪除資料集和相關聯的設定檔資料
 
-若要從設定檔存放區中刪除資料集，資料集ID必須包含在POST請求內文中。 此動作將會刪除指定資料集的所有資料。 [!DNL Experience Platform] 可讓您根據記錄和時間序列結構描述刪除資料集。
+為了從設定檔存放區中刪除資料集以及與資料集相關聯的所有設定檔資料，資料集ID必須包含在POST請求內文中。 此動作將會刪除指定資料集的所有資料。 [!DNL Experience Platform] 可讓您根據記錄和時間序列結構描述刪除資料集。
 
 **API格式**
 

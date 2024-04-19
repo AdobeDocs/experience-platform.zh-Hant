@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: aee82356f1f519398f381e161be14789532561f1
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2943'
 ht-degree: 3%
 
 ---
@@ -273,9 +273,9 @@ ht-degree: 3%
 
 ## 刪除啟用設定檔的資料集
 
-如果已為設定檔啟用資料集，透過UI刪除該資料集將會從資料湖、身分服務和Platform內的設定檔存放區中刪除該資料集。
+如果設定檔已啟用資料集，透過UI刪除該資料集將會從資料湖、身分服務以及在設定檔存放區中刪除與該資料集相關聯的任何設定檔資料。
 
-您可以從中刪除資料集 [!DNL Profile] 使用即時客戶個人檔案API僅儲存（將資料留在資料湖中）。 如需詳細資訊，請參閱 [設定檔系統作業API端點指南](../../profile/api/profile-system-jobs.md).
+您可以從以下位置刪除與資料集相關聯的設定檔資料： [!DNL Profile] 使用即時客戶個人檔案API儲存（將資料留在資料湖中）。 如需詳細資訊，請參閱 [設定檔系統作業API端點指南](../../profile/api/profile-system-jobs.md).
 
 ## 監視資料擷取
 

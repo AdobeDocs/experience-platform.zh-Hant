@@ -4,9 +4,9 @@ title: 即時客戶設定檔API指南
 description: 即時客戶設定檔API可讓開發人員探索和使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或錯誤新增的設定檔資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 1%
 
 ## 設定檔系統工作 {#profile-system-jobs}
 
-擷取到中的設定檔啟用資料 [!DNL Platform] 儲存在 [!DNL Data Lake] 以及 [!DNL Real-Time Customer Profile] 資料存放區。 有時候，可能有必要從以下刪除資料集或批次： [!DNL Profile] 儲存，以移除您不再需要或新增錯誤的資料。 這需要使用API來建立 [!DNL Profile System Job]，也稱為「[!DNL delete request]「」，可視需要修改、監視或刪除。 若要瞭解如何使用來處理刪除請求 `/system/jobs` 中的端點 [!DNL Real-Time Customer Profile] API，請遵循以下概述的步驟： [設定檔系統作業端點指南](profile-system-jobs.md).
+擷取到中的設定檔啟用資料 [!DNL Platform] 儲存在 [!DNL Data Lake] 以及 [!DNL Real-Time Customer Profile] 資料存放區。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用API來建立 [!DNL Profile System Job]，也稱為「[!DNL delete request]「」，可視需要修改、監視或刪除。 若要瞭解如何使用來處理刪除請求 `/system/jobs` 中的端點 [!DNL Real-Time Customer Profile] API，請遵循以下概述的步驟： [設定檔系統作業端點指南](profile-system-jobs.md).
 
 ## 更新設定檔屬性 {#update-profile}
 
