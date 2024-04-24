@@ -3,7 +3,7 @@ title: 刪除記錄
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 86cf250b2915a49d994fee0ab9d9ddbf65f6f836
+source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 8%
@@ -140,7 +140,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 >[!IMPORTANT]
 > 
->每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買Adobe Real-time Customer Data Platform和Adobe Journey Optimizer所有版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板** 每月最多可提交600,000筆身分記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 此 [刪除記錄的API方法](../api/workorder.md#create) 允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為上限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
+>每個月可提交的不重複身分記錄刪除總數有不同的限制。 這些限制是以您的授權合約為基礎。 已購買所有Adobe Real-time Customer Data Platform或Adobe Journey Optimizer版本的組織，每個月最多可提交100,000筆身分記錄刪除。 已購買的組織 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板** 每月最多可提交600,000筆身分記錄刪除。<br>透過UI的單一記錄刪除請求可讓您一次提交10,000個ID。 此 [刪除記錄的API方法](../api/workorder.md#create) 允許一次提交100,000個ID。<br>最佳實務是每個請求提交儘可能多的ID，以您的ID限製為上限。 當您要刪除大量ID時，應避擴音交小量ID或每個記錄刪除請求使用一個單一ID。
 
 ![請求設定的 [!UICONTROL 名稱] 和 [!UICONTROL 說明] 欄位和 [!UICONTROL 提交] 反白顯示。](../images/ui/record-delete/submit.png)
 
