@@ -2,9 +2,9 @@
 title: 使用Adobe Target搭配Web SDK進行個人化
 description: 瞭解如何使用Adobe Target以Experience Platform Web SDK呈現個人化內容
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1173'
 ht-degree: 5%
 
 ---
@@ -35,17 +35,18 @@ ht-degree: 5%
 
 下圖可協助您瞭解 [!DNL Target] 和 [!DNL Web SDK] 邊緣決策。
 
-![使用Platform Web SDK的Adobe Target邊緣決策圖表](./assets/target-platform-web-sdk.png)
+![使用Platform Web SDK的Adobe Target邊緣決策圖表](assets/target-platform-web-sdk-new.png)
 
 | 呼叫 | 詳細資料 |
 | --- | --- |
-| 1 | 裝置載入 [!DNL Web SDK]. 此 [!DNL Web SDK] 會傳送要求至Edge Network，要求包含XDM資料、資料串流環境ID、傳入引數和客戶ID （選用）。 頁面（或容器）已預先隱藏。 |
+| 1 | 裝置載入 [!DNL Web SDK]. 此 [!DNL Web SDK] 會傳送要求給Edge Network，其中包含XDM資料、資料串流環境ID、傳入引數和客戶ID （選用）。 頁面（或容器）已預先隱藏。 |
 | 2 | Edge Network會傳送要求給Edge Services，以使用訪客ID、同意和其他訪客內容資訊（例如地理位置和方便使用的裝置名稱）來擴充要求。 |
-| 3 | 邊緣網路會將擴充的個人化請求傳送至 [!DNL Target] 邊緣包含訪客ID和傳入的引數。 |
+| 3 | Edge Network會將擴充的個人化請求傳送至 [!DNL Target] 邊緣包含訪客ID和傳入的引數。 |
 | 4 | 個人資料指令碼執行，然後注入到 [!DNL Target] 設定檔儲存。 設定檔儲存體會從擷取區段 [!UICONTROL 對象庫] (例如，區段共用自 [!DNL Adobe Analytics]， [!DNL Adobe Audience Manager]，則 [!DNL Adobe Experience Platform])。 |
-| 5 | 根據URL要求引數和設定檔資料， [!DNL Target] 決定要針對目前頁面檢視和未來預先擷取檢視，為訪客顯示哪些活動和體驗。 [!DNL Target] 然後將此傳回至edge network。 |
-| 6 | a. Edge網路會將個人化回應傳送回頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會儘快出現，不會有忽隱忽現的預設內容。<br>b.作為使用者在單頁應用程式(SPA)中的動作結果而顯示的檢視個人化內容會快取，以便在觸發檢視時立刻套用，不需額外的伺服器呼叫。 <br>。Edge Network會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化。 |
-| 7 | 邊緣網路轉送 [!UICONTROL 目標分析] (A4T)的詳細資料（活動、體驗和轉換中繼資料） [!DNL Analytics] edge. |
+| 5 | 根據URL要求引數和設定檔資料， [!DNL Target] 決定要針對目前頁面檢視和未來預先擷取檢視，為訪客顯示哪些活動和體驗。 [!DNL Target] 然後將此傳送回Edge Network。 |
+| 6 | a.Edge Network會將個人化回應傳送回頁面，選擇性地包括其他個人化的設定檔值。 目前頁面上的個人化內容會儘快出現，不會有忽隱忽現的預設內容。<br>b.作為使用者在單頁應用程式(SPA)中的動作結果而顯示的檢視個人化內容會快取，以便在觸發檢視時立刻套用，不需額外的伺服器呼叫。 <br>c.Edge Network會傳送訪客ID和Cookie中的其他值，例如同意、工作階段ID、身分、Cookie檢查、個人化。 |
+| 7 | Web SDK會從裝置傳送通知給Edge Network。 |
+| 8 | Edge Network轉送 [!UICONTROL 目標分析] (A4T)的詳細資料（活動、體驗和轉換中繼資料） [!DNL Analytics] edge. |
 
 ## 正在啟用 [!DNL Adobe Target]
 
