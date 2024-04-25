@@ -1,11 +1,11 @@
 ---
 title: 互動式資料收集
-description: 瞭解Adobe Experience Platform Edge Network Server API如何執行互動式資料收集。
+description: 瞭解Adobe Experience PlatformEdge Network伺服器API如何執行互動式資料收集。
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f8434746c4a023ec895d23a59e04fca4baecfc36
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 6%
+source-wordcount: '179'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 6%
 
 ## 概觀 {#overview}
 
-互動式資料收集端點會接收單一事件，並在使用者端預期Adobe Experience Platform Edge Network伺服器傳回回應時使用。 這些端點在執行資料收集時也可以從其他Edge Network服務傳回內容。
+互動式資料收集端點會接收單一事件，並在使用者端預期Adobe Experience PlatformEdge Network伺服器傳回回應時使用。 這些端點在執行資料收集時也可以從其他Edge Network服務傳回內容。
+
+>[!IMPORTANT]
+>
+>此 `/interact` 端點主要設計供Experience PlatformSDK使用。 此端點可能會有額外的變更，其行為可能會演化，恕不另行通知。 例如，未來可能會將新專案新增至回應裝載。
 
 伺服器回應包含一或多個 `Handle` 物件，如下所示。
 
@@ -63,7 +67,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | 參數 | 類型 | 必要 | 說明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 可以。 | 資料串流ID。 |
-| `requestId` | `String` | 無 | 提供用於關聯內部伺服器請求的使用者端隨機ID。 如果未提供，Edge Network將會產生回應並傳回回應。 |
+| `requestId` | `String` | 無 | 提供用於關聯內部伺服器請求的使用者端隨機ID。 如果未提供任何專案，Edge Network將會產生一個專案，並在回應中傳回。 |
 
 ### 回應 {#response}
 
