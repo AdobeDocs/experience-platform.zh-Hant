@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform的AI助理
 description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-time Customer Data Platform概念，以及有關您物件的使用資訊。
-badge: Alpha
+badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: f38f528c421c7cbf7116cc0ee323e8e7dcde6292
+source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> 適用於Adobe Experience Platform的AI助理目前Alpha。 功能和檔案可能會有所變更。
+> Adobe Experience Platform的AI助理目前仍在測試階段。 功能和檔案可能會有所變更。
 
 AI助理是UI功能，可用來導覽並瞭解Adobe Experience Platform和Real-time Customer Data Platform概念以及有關您物件的使用資訊。
 
