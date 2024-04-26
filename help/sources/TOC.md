@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 0d85f37ee2da4857205819a3a4dea3f25eaad26e
+source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1036'
 ht-degree: 10%
 
 ---
@@ -97,7 +97,7 @@ ht-degree: 10%
       - [Acxiom潛在客戶資料匯入](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Merkury Enterprise身分解析](connectors/data-partners/merkury.md)
    - 電子商務 {#ecommerce}
-      - [SAP商務](connectors/ecommerce/sap-commerce.md)
+      - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Streaming](connectors/ecommerce/shopify-streaming.md)
    - 本機系統 {#local-system}
@@ -111,6 +111,7 @@ ht-degree: 10%
       - [oracleEloqua聯結器](connectors/marketing-automation/oracle-eloqua.md)
       - [oracleNetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [oracleResponsys聯結器](connectors/marketing-automation/oracle-responsys.md)
+      - [PathFactor](connectors/marketing-automation/pathfactory.md)
       - [SalesforceMarketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 付款 {#payments}
       - [PayPal聯結器](connectors/payments/paypal.md)
@@ -179,7 +180,7 @@ ht-degree: 10%
          - [teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - 電子商務 {#ecommerce}
-         - [SAP商務](tutorials/api/create/ecommerce/sap-commerce.md)
+         - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/api/create/ecommerce/shopify-streaming.md)
       - 行銷自動化 {#marketing-automation}
@@ -192,6 +193,7 @@ ht-degree: 10%
          - [oracleNetSuite活動](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [oracleNetSuite實體](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [oracleResponsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
+         - [PathFactor](tutorials/api/create/marketing-automation/pathfactory.md)
          - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
@@ -306,7 +308,7 @@ ht-degree: 10%
          - [Acxiom潛在客戶資料匯入](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Merkury Enterprise身分解析](tutorials/ui/create/data-partners/merkury.md)
       - 電子商務 {#ecommerce}
-         - [SAP商務](tutorials/ui/create/ecommerce/sap-commerce.md)
+         - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Streaming](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - 本機系統 {#local-system}
@@ -322,6 +324,7 @@ ht-degree: 10%
          - [oracleNetSuite活動](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [oracleNetSuite實體](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [oracleResponsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
+         - [PathFactor](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 付款 {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
