@@ -3,18 +3,14 @@ keywords: Experience Platform；首頁；熱門主題；teradata；teradata優�
 title: teradata Vantage來源聯結器概述
 description: 瞭解如何使用API或使用者介面將Teradata Vantage連線至Adobe Experience Platform。
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Teradata Vantage] 來源
-
->[!NOTE]
->
->此 [!DNL Teradata Vantage] 來源為測試版。 請參閱 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+# [!DNL Teradata Vantage] 來源
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
