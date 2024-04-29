@@ -5,9 +5,9 @@ breadcrumb-title: 來源連接器指南
 user-guide-description: 擷取各種來源的資料。了解如何建構、標記和增強已擷取的資料。
 feature: Sources
 role: Developer
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 10%
 
 ---
@@ -348,6 +348,7 @@ ht-degree: 10%
       - [付款連線資料流](tutorials/ui/dataflow/payments.md)
       - [通訊協定連線資料流](tutorials/ui/dataflow/protocols.md)
    - [使用 UI 中的範本建立來源資料流](tutorials/ui/templates.md)
+   - [篩選來源物件](tutorials/ui/filter.md)
    - [隨選擷取](tutorials/ui/on-demand-ingestion.md)
    - [監視批次資料流](tutorials/ui/monitor.md)
    - [監視串流資料流](tutorials/ui/monitor-streaming.md)
