@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；資料登陸區域；資
 title: 使用UI將資料登陸區域連線至Platform
 description: 瞭解如何使用Platform使用者介面建立資料登陸區域來源聯結器。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
+source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -60,23 +60,41 @@ ht-degree: 0%
 
 如需如何為雲端儲存空間來源建立資料流的詳細逐步指南，請參閱以下教學課程： [建立雲端儲存空間資料流以將資料帶到Platform](../../dataflow/batch/cloud-storage.md).
 
-## 擷取並重新整理 [!DNL Data Landing Zone] 認證
+## 擷取您的 [!DNL Data Landing Zone] 認證
 
-[!DNL Data Landing Zone] 是隨Adobe Experience Platform來源授權提供的現成可用來源。 [!DNL Data Landing Zone] 使用SAS URI和SAS權杖型驗證。 您可以從以下位置擷取和重新整理您的驗證認證： [!UICONTROL 來源目錄] 頁面。
+[!DNL Data Landing Zone] 是您的Adobe Experience Platform來源授權隨附的來源。 [!DNL Data Landing Zone] 使用SAS URI和SAS權杖型驗證。 您可以從以下位置擷取驗證認證： [!UICONTROL 來源目錄] 頁面。
 
-在 [!UICONTROL 來源目錄]，位於 [!UICONTROL 雲端儲存空間] 類別，選取省略符號(**...**)從 **[!UICONTROL 資料登陸區域]** 卡片。 從出現的下拉式功能表中，選取 **[!UICONTROL 檢視認證]**.
+若要擷取您的認證，請選取 **[!UICONTROL 資料登陸區域]** 卡片，然後從出現的右側邊欄複製您的認證。
 
-![資料登陸區域的檢視選項清單。](../../../../images/tutorials/create/dlz/options.png)
+![資料登陸區域的檢視選項清單。](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 此時畫面會顯示彈出視窗，其中顯示您的容器名稱、SAS權杖、儲存體帳戶名稱、SAS URI以及到期日。
 
-選取 **[!UICONTROL 重新整理認證]** 並留出數秒時間，以便處理您更新的認證。
+## 重新整理您的 [!DNL Data Landing Zone] 認證
 
->[!TIP]
->
->您的 [!DNL Data Landing Zone] 認證已設定為90天後自動過期，您必須使用新認證以重新連線 [!DNL Data Landing Zone] 過期之後。 您的Platform資料流不會受到即將到期的認證的影響，而且您仍然可以使用新認證繼續使用新的和現有的資料流。
+您的 [!DNL Data Landing Zone] 認證已設定為90天後自動過期，您必須使用新認證以重新連線 [!DNL Data Landing Zone] 過期之後。 您的Experience Platform資料流不會受到即將到期的認證的影響，而且您仍然可以使用新認證繼續使用新的和現有的資料流。
 
-![與指定資料登陸區域帳戶相關聯的認證。](../../../../images/tutorials/create/dlz/view-credentials.png)
+有兩種方式可重新整理 [!DNL Data Landing Zone] 認證：
+
+>[!BEGINTABS]
+
+>[!TAB 使用來源卡]
+
+若要從來源目錄頁面重新整理您的認證，請選取省略符號(**`...`**)中 [!DNL Data Landing Zone] 卡片，然後選取 **[!UICONTROL 重新整理認證]**.
+
+![使用來源卡片重新整理認證。](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+
+此時會出現一個快顯視窗，提示您確認後再繼續。 準備就緒後，選擇 **[!UICONTROL 重新整理認證]**.
+
+![重新整理證明資料確認視窗。](../../../../images/tutorials/create/dlz/confirm.png)
+
+>[!TAB 使用右邊欄]
+
+若要使用右邊欄重新整理您的認證，請選取 **[!UICONTROL 資料登陸區域]** 來源卡片，然後選取 **[!UICONTROL 更多動作]**. 接下來，選取 **[!UICONTROL 重新整理認證]** 然後使用出現的快顯視窗進行確認。
+
+![使用右邊欄重新整理認證。](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
+
+>[!ENDTABS]
 
 ## 後續步驟
 
