@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2794'
 ht-degree: 2%
 
 ---
@@ -88,6 +88,16 @@ UI切換可讓您在舊版和增強版的查詢編輯器之間切換。 雖然�
 [!UICONTROL 執行選取的查詢] 圖示。 在編輯器中選取查詢語法之前，此圖示預設為停用。
 
 ![查詢編輯器具有 [!UICONTROL 執行選取的查詢] 圖示醒目提示。](../images/ui/query-editor/run-selected-query.png)
+
+### 取消查詢編輯器工作階段 {#cancel-query}
+
+取消長時間執行的查詢，以控制查詢執行並提高生產力。 此動作會在查詢執行期間清除查詢編輯器。 請注意，查詢會在背景中繼續執行。 如果是CTAS查詢，仍會產生輸出資料集。 若要取消編輯器中的執行並繼續構成SQL敘述句，請選取 **[!UICONTROL 取消查詢]** 執行查詢之後。
+
+![查詢編輯器 [!UICONTROL 取消查詢] 反白顯示。](../images/ui/query-editor/cancel-query-run.png)
+
+確認對話方塊隨即顯示。 選取 **[!UICONTROL 確認]** 以取消查詢執行。
+
+![取消查詢確認對話方塊中反白顯示「確認」。](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### 結果計數 {#result-count}
 
@@ -219,7 +229,11 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 已儲存為範本的查詢可以從「查詢編輯器」進行排程。 排程查詢可讓您以自訂步調自動執行查詢。 您可以根據頻率、日期和時間排程查詢，並視需要為您的結果選擇輸出資料集。 您也可以透過UI停用或刪除查詢排程。
 
-排程是在查詢編輯器中設定。 使用查詢編輯器時，您只能將排程新增至已建立、儲存和執行的查詢。 同樣的限制不適用於 [!DNL Query Service] API：
+排程是在查詢編輯器中設定。 使用查詢編輯器時，您只能將排程新增至已建立、儲存和執行的查詢。 同樣的限制不適用於 [!DNL Query Service] API。
+
+>[!NOTE]
+>
+>連續十次執行失敗的已排程查詢會自動放入 [!UICONTROL 已隔離] 狀態。 具有此狀態的查詢需要您的介入，才能進行任何進一步的執行。 請參閱 [隔離的查詢](./monitor-queries.md#quarantined-queries) 檔案，以瞭解更多詳細資訊。
 
 請參閱查詢排程檔案，以瞭解如何 [在UI中建立查詢排程](./query-schedules.md). 或者，若要瞭解如何使用API新增排程，請參閱 [排程查詢端點指南](../api/scheduled-queries.md).
 
