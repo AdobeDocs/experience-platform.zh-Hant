@@ -5,7 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 2bf445144789a05e8a789994d30b884be7a8843d
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '2730'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe Experience Platform的AI助理目前仍在測試階段。 功能和檔案可能會有所變更。
+>Adobe Experience Platform的AI助理目前仍在測試階段。 功能和檔案可能會有所變更。
 
 AI助理是UI功能，可用來導覽並瞭解Adobe Experience Platform和Real-time Customer Data Platform概念以及有關您物件的使用資訊。
 

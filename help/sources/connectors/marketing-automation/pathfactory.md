@@ -2,10 +2,9 @@
 title: PathFactory來源概觀
 description: 瞭解如何使用API或使用者介面將PathFactory連線至Adobe Experience Platform。
 last-substantial-update: 2024-04-30T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 2%

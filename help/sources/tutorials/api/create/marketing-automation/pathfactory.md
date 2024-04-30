@@ -1,11 +1,9 @@
 ---
 title: 使用Flow Service API建立PathFactory基本連線
 description: 瞭解如何使用流量服務API根據Experience Platform驗證您的PathFactory帳戶。
-last-substantial-update: 2024-04-30T00:00:00Z
-hide: true
-hidefromtoc: true
 badge: Beta
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
+source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 2%
