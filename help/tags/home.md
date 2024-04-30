@@ -1,11 +1,11 @@
 ---
 title: 標籤概覽
-description: Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標記功能，以強化相關客戶體驗。
+description: Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標籤可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: 81f25e74931354003d89a57adedb578ddfe00704
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 78%
+source-wordcount: '588'
+ht-degree: 65%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 78%
 >
 >Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](./term-updates.md)。
 
-Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標記功能，以強化相關客戶體驗。
+Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標籤可讓客戶透過簡單的方式部署及管理所有必要的分析、行銷及廣告標籤功能，以便支援相關客戶體驗。
 
 標籤可讓任何人建置和維護自己的整合，稱為 *擴充功能*. 這些擴充功能可為 [!DNL Adobe Experience Cloud] 客戶提供應用程式商店的使用體驗，讓客戶快速安裝、設定和部署自己的標籤。
 
@@ -28,6 +28,10 @@ Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記�
 * 使用規則產生器，透過整合資料和行銷技術提供引人入勝的體驗。
 
 ## 主要功能 {#key-features}
+
+使用右側面板中產品說明內的，深入瞭解標籤並檢視其他可用資源。
+
+![資料收集UI中的標籤屬性。](./images/ui/tags-overview/tags-properties.png)
 
 ### 擴充功能 {#extensions}
 
@@ -70,7 +74,7 @@ Adobe Experience Platform 標記是新一代 Adobe 標記管理功能。標記�
 
 * 標籤會與Reactor API互動。
 * 可透過 API 自動部署。
-* 將  API 與您自己的內部系統進行整合。
+* 將API與您自己的內部系統進行整合。
 * 如有需要，您可以建置您專屬的使用者介面。
 
 ### 輕量型模組化容器標籤 {#modular-tag}
