@@ -3,10 +3,10 @@ title: 使用流程服務API建立Azure事件中樞來源連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Azure事件中樞帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 3%
+source-wordcount: '1473'
+ht-degree: 2%
 
 ---
 
@@ -52,6 +52,29 @@ ht-degree: 3%
 | `eventHubName` | 您的名稱 [!DNL Event Hubs] 來源。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 此 [!DNL Event Hubs] 連線規格ID為： `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
+如需下列專案的共用存取簽章(SAS)驗證的詳細資訊： [!DNL Event Hubs]，閱讀 [[!DNL Azure] 使用SAS指南](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+
+>[!TAB 事件中樞Azure Active Directory驗證]
+
+| 認證 | 說明 |
+| --- | --- |
+| `tenantId` | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在中稱為「目錄ID」。 [!DNL Microsoft Azure] 介面。 |
+| `clientId` | 指派給應用程式的應用程式ID。 您可以從以下位置擷取此ID： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| `clientSecretValue` | 使用者端密碼與使用者端ID搭配使用，用來驗證您的應用程式。 您可以從以下位置擷取您的使用者端密碼： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| `namespace` | 的名稱空間 [!DNL Event Hubs] 您正在存取。 一個 [!DNL Event Hubs] namespace提供唯一的範圍設定容器，您可以在其中建立一或多個 [!DNL Event Hubs]. |
+
+如需詳細資訊，請參閱 [!DNL Azure Active Directory]，閱讀 [使用Microsoft Entra ID的Azure指南](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB 事件中心範圍的Azure Active Directory驗證]
+
+| 認證 | 說明 |
+| --- | --- |
+| `tenantId` | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在中稱為「目錄ID」。 [!DNL Microsoft Azure] 介面。 |
+| `clientId` | 指派給應用程式的應用程式ID。 您可以從以下位置擷取此ID： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| `clientSecretValue` | 使用者端密碼與使用者端ID搭配使用，用來驗證您的應用程式。 您可以從以下位置擷取您的使用者端密碼： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| `namespace` | 的名稱空間 [!DNL Event Hubs] 您正在存取。 一個 [!DNL Event Hubs] namespace提供唯一的範圍設定容器，您可以在其中建立一或多個 [!DNL Event Hubs]. |
+| `eventHubName` | 您的名稱 [!DNL Event Hubs] 來源。 |
+
 >[!ENDTABS]
 
 如需這些值的詳細資訊，請參閱 [此事件中樞檔案](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -82,7 +105,7 @@ POST /connections
 
 POST若要使用標準驗證建立帳戶，請向 `/connections` 端點，同時提供您的值 `sasKeyName`， `sasKey`、和 `namespace`.
 
-+++請求
++++要求
 
 ```shell
 curl -X POST \
@@ -136,7 +159,7 @@ curl -X POST \
 
 POST若要使用SAS驗證建立帳戶，請向 `/connections` 端點，同時提供您的值 `sasKeyName`， `sasKey`，`namespace`、和 `eventHubName`.
 
-+++請求
++++要求
 
 ```shell
 curl -X POST \
@@ -171,6 +194,120 @@ curl -X POST \
 | `auth.params.sasKey` | 產生的共用存取權簽章。 |
 | `auth.params.namespace` | 的名稱空間 [!DNL Event Hubs] 您正在存取。 |
 | `params.eventHubName` | 您的名稱 [!DNL Event Hubs] 來源。 |
+| `connectionSpec.id` | 此 [!DNL Event Hubs] 連線規格ID為： `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++回應
+
+成功的回應會傳回新建立的基本連線的詳細資料，包括其唯一識別碼(`id`)。 建立來源連線的下一個步驟需要此連線ID。
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB 事件中樞Azure Active Directory驗證]
+
+POST若要使用Azure Active Directory驗證建立帳戶，請向 `/connections` 端點，同時提供您的值 `tenantId`， `clientId`，`clientSecretValue`、和 `namespace`.
+
++++要求
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `auth.params.tenantId` | 您應用程式的租使用者ID。 **注意**：租使用者ID在中稱為「目錄ID」。 [!DNL Microsoft Azure] 介面。 |
+| `auth.params.clientId` | 您組織的使用者端ID。 |
+| `auth.params.clientSecretValue` | 您組織的使用者端密碼值。 |
+| `auth.params.namespace` | 的名稱空間 [!DNL Event Hubs] 您正在存取。 |
+| `connectionSpec.id` | 此 [!DNL Event Hubs] 連線規格ID為： `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++回應
+
+成功的回應會傳回新建立的基本連線的詳細資料，包括其唯一識別碼(`id`)。 建立來源連線的下一個步驟需要此連線ID。
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB 事件中心範圍的Azure Active Directory驗證]
+
+POST若要使用Azure Active Directory驗證建立帳戶，請向 `/connections` 端點，同時提供您的值 `tenantId`， `clientId`，`clientSecretValue`， `namespace`、和 `eventHubName`.
+
++++要求
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Scoped Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}",
+              "eventHubName": "{EVENT_HUB_NAME}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `auth.params.tenantId` | 您應用程式的租使用者ID。 **注意**：租使用者ID在中稱為「目錄ID」。 [!DNL Microsoft Azure] 介面。 |
+| `auth.params.clientId` | 您組織的使用者端ID。 |
+| `auth.params.clientSecretValue` | 您組織的使用者端密碼值。 |
+| `auth.params.namespace` | 的名稱空間 [!DNL Event Hubs] 您正在存取。 |
+| `auth.params.eventHubName` | 您的名稱 [!DNL Event Hubs] 來源。 |
 | `connectionSpec.id` | 此 [!DNL Event Hubs] 連線規格ID為： `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 +++

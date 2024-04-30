@@ -3,9 +3,9 @@ title: 在使用者介面中建立Azure事件中樞來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Azure事件中樞來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1680cc4e1d5c1576767053a74e560bc2eb8c24cb
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '1094'
 ht-degree: 1%
 
 ---
@@ -52,9 +52,32 @@ ht-degree: 1%
 | 命名空間 | 的名稱空間 [!DNL Event Hubs] 您正在存取。 一個 [!DNL Event Hubs] namespace提供唯一的範圍設定容器，您可以在其中建立一或多個 [!DNL Event Hubs]. |
 | 事件中心名稱 | 您的名稱 [!DNL Event Hubs] 來源。 |
 
->[!ENDTABS]
+如需下列專案的共用存取簽章(SAS)驗證的詳細資訊： [!DNL Event Hubs]，閱讀 [[!DNL Azure] 使用SAS指南](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-如需這些值的詳細資訊，請參閱 [此事件中樞檔案](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+>[!TAB 事件中樞Azure Active Directory驗證]
+
+| 認證 | 說明 |
+| --- | --- |
+| 租使用者ID | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在中稱為「目錄ID」。 [!DNL Microsoft Azure] 介面。 |
+| 使用者端ID | 指派給應用程式的應用程式ID。 您可以從以下位置擷取此ID： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| 使用者端密碼值 | 使用者端密碼與使用者端ID搭配使用，用來驗證您的應用程式。 您可以從以下位置擷取您的使用者端密碼： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| 命名空間 | 的名稱空間 [!DNL Event Hubs] 您正在存取。 一個 [!DNL Event Hubs] namespace提供唯一的範圍設定容器，您可以在其中建立一或多個 [!DNL Event Hubs]. |
+
+如需詳細資訊，請參閱 [!DNL Azure Active Directory]，閱讀 [使用Microsoft Entra ID的Azure指南](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB 事件中心範圍的Azure Active Directory驗證]
+
+| 認證 | 說明 |
+| --- | --- |
+| 租使用者ID | 您要向其請求許可權的租使用者ID。 您可以將您的租使用者ID格式化為GUID或友好名稱。 **注意**：租使用者ID在中稱為「目錄ID」。 [!DNL Microsoft Azure] 介面。 |
+| 使用者端ID | 指派給應用程式的應用程式ID。 您可以從以下位置擷取此ID： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| 使用者端密碼值 | 使用者端密碼與使用者端ID搭配使用，用來驗證您的應用程式。 您可以從以下位置擷取您的使用者端密碼： [!DNL Microsoft Entra ID] 您註冊的入口網站 [!DNL Azure Active Directory]. |
+| 命名空間 | 的名稱空間 [!DNL Event Hubs] 您正在存取。 一個 [!DNL Event Hubs] namespace提供唯一的範圍設定容器，您可以在其中建立一或多個 [!DNL Event Hubs]. |
+| 事件中心名稱 | 您的名稱 [!DNL Event Hubs] 來源。 |
+
+如需詳細資訊，請參閱 [!DNL Azure Active Directory]，閱讀 [使用Microsoft Entra ID的Azure指南](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!ENDTABS]
 
 收集必要的認證後，您可以依照下列步驟連結 [!DNL Event Hubs] 要Experience Platform的帳戶。
 
@@ -90,7 +113,7 @@ ht-degree: 1%
 
 >[!TAB 標準驗證]
 
-若要建立 [!DNL Event Hubs] 具有標準驗證的帳戶，請選取 **[!UICONTROL 標準驗證]** 然後為您的欄位提供值 [!UICONTROL SAS金鑰名稱]， [!UICONTROL SAS金鑰]、和 [!UICONTROL 名稱空間].
+若要建立 [!DNL Event Hubs] 具有標準驗證的帳戶，使用 [!UICONTROL 帳戶驗證] 下拉式功能表，然後選取 **[!UICONTROL 標準驗證]**. 接下來，提供您的值 [!UICONTROL SAS金鑰名稱]， [!UICONTROL SAS金鑰]、和 [!UICONTROL 名稱空間].
 
 輸入驗證認證後，請選取 **[!UICONTROL 連線到來源]**.
 
@@ -98,11 +121,23 @@ ht-degree: 1%
 
 >[!TAB SAS驗證]
 
-若要建立 [!DNL Event Hubs] 具有SAS驗證的帳戶，請選取 **[!UICONTROL SAS驗證]** 然後為您的欄位提供值 [!UICONTROL SAS金鑰名稱]， [!UICONTROL SAS金鑰]， [!UICONTROL 名稱空間]、和 [!UICONTROL 事件中樞名稱].
+若要建立 [!DNL Event Hubs] 具有SAS驗證的帳戶，使用 [!UICONTROL 帳戶驗證] 下拉式功能表，然後選取 **[!UICONTROL SAS驗證]**. 接下來，提供您的值 [!UICONTROL SAS金鑰名稱]， [!UICONTROL SAS金鑰]， [!UICONTROL 名稱空間]、和 [!UICONTROL 事件中樞名稱].
 
 輸入驗證認證後，請選取 **[!UICONTROL 連線到來源]**.
 
 ![Azure事件中樞的SAS驗證介面。](../../../../images/tutorials/create/eventhub/sas.png)
+
+>[!TAB 事件中樞Azure Active Directory驗證]
+
+若要建立 [!DNL Event Hubs] 具有事件中心Azure Active Directory驗證的帳戶，使用 [!UICONTROL 帳戶驗證] 下拉式功能表，然後選取 **[!UICONTROL 事件中心Azure Active Directory]**. 接下來，提供您的值 [!UICONTROL 租使用者ID]， [!UICONTROL 使用者端ID]， [!UICONTROL 使用者端密碼值]、和 [!UICONTROL 名稱空間].
+
+![Azure事件中心Azure Active Directory驗證](../../../../images/tutorials/create/eventhub/active-directory.png)
+
+>[!TAB 事件中心範圍的Azure Active Directory驗證]
+
+若要建立 [!DNL Event Hubs] 具有事件中心範圍的Azure Active Directory驗證的帳戶，請使用 [!UICONTROL 帳戶驗證] 下拉式功能表，然後選取 **[!UICONTROL 事件中心範圍的Azure Active Directory]**. 接下來，提供您的值 [!UICONTROL 租使用者ID]， [!UICONTROL 使用者端ID]， [!UICONTROL 使用者端密碼值]， [!UICONTROL 名稱空間]、和 [!UICONTROL 事件中心名稱].
+
+![Azure事件中樞範圍的Azure活動目錄驗證](../../../../images/tutorials/create/eventhub/scoped.png)
 
 >[!ENDTABS]
 
