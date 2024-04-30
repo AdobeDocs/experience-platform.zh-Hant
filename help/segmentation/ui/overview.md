@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '4014'
+source-wordcount: '4105'
 ht-degree: 3%
 
 ---
@@ -80,7 +80,8 @@ ht-degree: 3%
 | [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 管理對象所屬的資料夾。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
 | [!UICONTROL 副本] | Segmentation Service | 複製選取的對象。 |
 | [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL 封存] | 自訂上傳 | 封存選取的對象。 |
+| [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
+| [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
 | [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 |
 | [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ ht-degree: 3%
 
 ![更新頻率摘要按鈕會醒目提示。](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-圓形圖會出現，顯示依更新頻率劃分的對象劃分。 圖表會在中間顯示對象總數。 如果您將滑鼠游標停留在對象的不同部分，它會顯示屬於每個更新頻率型別的對象數量。
+圓形圖會出現，顯示依更新頻率劃分的對象劃分。 圖表在中間顯示對象總數，在底部顯示UTC格式的每日批次評估時間。 如果您將滑鼠游標停留在對象的不同部分，它會顯示屬於每個更新頻率型別的對象數量。
 
-![顯示更新頻率圓餅圖。](../images/ui/overview/update-frequency-chart.png)
+![更新頻率圓餅圖會醒目提示，並顯示批次細分評估時間。](../images/ui/overview/update-frequency-chart.png)
 
 ### 自訂 {#customize}
 
@@ -115,7 +116,7 @@ ht-degree: 3%
 | [!UICONTROL 名稱] | 對象名稱。 |
 | [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
 | [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括細分服務、自訂上傳、對象構成和Audience Manager。 |
-| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Published`、和 `Archived`. |
+| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Inactive`， `Published`、和 `Archived`. 有關生命週期狀態的詳細資訊，包括不同狀態的含義以及如何將受眾移動到不同生命週期狀態，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-status). |
 | [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括 [!UICONTROL 批次]， [!UICONTROL 串流]， [!UICONTROL Edge]、和 [!UICONTROL 未排程]. |
 | [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
 | [!UICONTROL 已建立] | 建立對象的日期和時間(UTC)。 |
@@ -205,7 +206,7 @@ ht-degree: 3%
 | ------ | ----------- |
 | [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可用選項包括細分服務、自訂上傳、對象構成和Audience Manager。 |
 | [!UICONTROL 具有任何標籤] | 可讓您依標籤篩選。 您可以選取 **[!UICONTROL 具有任何標籤]** 和 **[!UICONTROL 具有所有標籤]**. 時間 **[!UICONTROL 具有任何標籤]** 已選取，則已篩選的對象將包括 **任何** 已新增標籤的URL數量。 時間 **[!UICONTROL 具有所有標籤]** 已選取，則篩選的對象必須包括 **全部** 已新增標籤的URL數量。 |
-| [!UICONTROL 生命週期狀態] | 可讓您根據對象的生命週期狀態進行篩選。 可用的選項包括 [!UICONTROL 作用中]， [!UICONTROL 已封存]， [!UICONTROL 已刪除]， [!UICONTROL 草稿]， [!UICONTROL 非使用中]、和 [!UICONTROL 已發佈]. |
+| [!UICONTROL 生命週期狀態] | 可讓您根據對象的生命週期狀態進行篩選。 可用的選項包括 [!UICONTROL 已刪除]， [!UICONTROL 草稿]， [!UICONTROL 非使用中]、和 [!UICONTROL 已發佈]. |
 | [!UICONTROL 更新頻率] | 可讓您根據對象的更新頻率進行篩選。 可用的選項包括 [!UICONTROL 已排程]， [!UICONTROL 連續]、和 [!UICONTROL 隨選]. |
 | [!UICONTROL 建立者] | 可讓您根據建立受眾的人員進行篩選。 |
 | [!UICONTROL 建立日期] | 可讓您根據對象的建立日期進行篩選。 您可以選取日期範圍，以篩選建立對象的時間。 |
@@ -408,7 +409,7 @@ ht-degree: 3%
 | 欄位 | 說明 |
 | ----- | ----------- | 
 | [!UICONTROL 名稱] | 對象名稱。 |
-| [!UICONTROL 狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Published`、和 `Archived`. |
+| [!UICONTROL 狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Inactive`， `Published`、和 `Archived`. |
 | [!UICONTROL 已建立] | 建立對象的時間和日期。 |
 | [!UICONTROL 建立者] | 建立對象的人員名稱。 |
 | [!UICONTROL 已更新] | 上次更新對象的時間和日期。 |
