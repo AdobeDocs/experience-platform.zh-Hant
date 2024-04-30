@@ -2,10 +2,10 @@
 description: 瞭解如何在Experience PlatformUI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
 title: 客戶資料欄位
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 4%
+source-wordcount: '1742'
+ht-degree: 1%
 
 ---
 
@@ -51,7 +51,7 @@ ht-degree: 4%
 
 建立您自己的客戶資料欄位時，您可以使用下表所述的引數來設定其行為。
 
-| 參數 | 類型 | 必填/選填 | 說明 |
+| 參數 | 類型 | 必要/選用 | 說明 |
 |---------|----------|------|---|
 | `name` | 字串 | 必要 | 為您要介紹的自訂欄位提供名稱。 此名稱不會顯示在Platform UI中，除非 `title` 欄位空白或缺失。 |
 | `type` | 字串 | 必要 | 表示您要引入的自訂欄位的型別。 接受的值： <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
@@ -62,7 +62,7 @@ ht-degree: 4%
 | `enum` | 字串 | 選填 | 將自訂欄位呈現為下拉式功能表，並列出使用者可用的選項。 |
 | `default` | 字串 | 選填 | 從「 」定義預設值 `enum` 清單。 |
 | `hidden` | 布林值 | 選填 | 指出客戶資料欄位是否顯示在UI中。 |
-| `unique` | 布林值 | 選填 | 當您需要建立客戶資料欄位時，使用此引數，該欄位的值在使用者的組織設定的所有目的地資料流中必須是唯一的。 例如，**[!UICONTROL 整合別名]**&#x200B;欄位 (在[自訂個人化](../../../catalog/personalization/custom-personalization.md)目的地中) 就必須是唯一的，這表示到此目的地的兩個單獨的資料流在此欄位不能具有相同的值。 |
+| `unique` | 布林值 | 選填 | 當您需要建立客戶資料欄位時，使用此引數，該欄位的值在使用者的組織設定的所有目的地資料流中必須是唯一的。 例如， **[!UICONTROL 整合別名]** 中的欄位 [自訂個人化](../../../catalog/personalization/custom-personalization.md) 目的地必須是唯一的，這表示流向此目的地的兩個個別資料流在此欄位中不能有相同的值。 |
 | `readOnly` | 布林值 | 選填 | 指出客戶是否可以變更欄位的值。 |
 
 {style="table-layout:auto"}
@@ -261,7 +261,7 @@ ht-degree: 4%
 
 若要建立動態下拉式選取器，您必須設定兩個元件：
 
-**步驟 1.** [建立目的地伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) 與 `responseFields` 動態API呼叫的範本，如下所示。
+**步驟1.** [建立目的地伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) 與 `responseFields` 動態API呼叫的範本，如下所示。
 
 ```json
 {
@@ -309,7 +309,7 @@ ht-degree: 4%
 }
 ```
 
-**步驟 2.** 使用 `dynamicEnum` 物件，如下所示。 在以下範例中， `User` 下拉式清單是使用動態伺服器擷取。
+**步驟2.** 使用 `dynamicEnum` 物件，如下所示。 在以下範例中， `User` 下拉式清單是使用動態伺服器擷取。
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -340,6 +340,56 @@ ht-degree: 4%
 
 設定 `destinationServerId` 引數，代表您在步驟1建立的目的地伺服器ID。 您可以在的回應中看到目的地伺服器ID [擷取目的地伺服器設定](../../authoring-api/destination-server/retrieve-destination-server.md) API呼叫。
 
+## 建立巢狀客戶資料欄位 {#nested-fields}
+
+您可以為複雜的整合模式建立巢狀客戶資料欄位。 這可讓您為客戶鏈結一系列選擇。
+
+例如，您可以新增巢狀客戶資料欄位，要求客戶選取與您目的地的整合型別，然後立即選取另一個專案。 第二個選取專案是整合型別內的巢狀欄位。
+
+若要新增巢狀欄位，請使用 `properties` 引數，如下所示。 在以下的設定範例中，您可以在中看到三個獨立的巢狀欄位 **您的目的地 — 整合專屬設定** 客戶資料欄位。
+
+>[!TIP]
+>
+>從2024年4月發行版本開始，您可以設定 `isRequired` 巢狀欄位上的引數。 例如，在下方的設定程式碼片段中，前兩個巢狀欄位會標示為必要（醒目提示第xxx行），而客戶除非為欄位選取值，否則無法繼續。 進一步瞭解 [支援的引數](#supported-parameters) 區段。
+
+```json {line-numbers="true" highlight="10,19"}
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+```
+
 ## 建立條件式客戶資料欄位 {#conditional-options}
 
 您可以建立條件式客戶資料欄位，這些欄位僅在使用者選取特定選項時才會顯示在啟動工作流程中。
@@ -358,7 +408,7 @@ ht-degree: 4%
 }
 ```
 
-在更廣闊的背景中，您可以看到 `conditional` 以下目的地設定中使用的欄位，以及 `fileType` 字串與 `csvOptions` 在其中定義它的物件。
+在更廣闊的背景中，您可以看到 `conditional` 以下目的地設定中使用的欄位，以及 `fileType` 字串與 `csvOptions` 在其中定義它的物件。 條件欄位定義於 `properties` 引數。
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
