@@ -1,13 +1,13 @@
 ---
-description: 目的地可讓您從Adobe Experience Platform向無數的外部合作夥伴啟用資料。 本教學課程提供如何使用Experience Platform使用者介面監視目的地的資料流的指示。
+description: 瞭解如何使用Experience Platform使用者介面監控目的地的資料流。
 solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
+source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
 workflow-type: tm+mt
-source-wordcount: '3290'
-ht-degree: 10%
+source-wordcount: '3337'
+ht-degree: 6%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 10%
 
 使用Experience Platform目錄中的各種目的地，從Platform向無數的外部合作夥伴啟用您的資料。 Platform藉由提供資料流透明度，讓追蹤資料流向目的地的程式變得更輕鬆。
 
-監視儀表板可讓您以視覺化方式呈現資料流程的歷程，包括資料啟用的目的地。 本教學課程提供如何直接在目的地Workspace中監視資料流，或使用「監視」控制面板透過Experience Platform使用者介面監視目的地的資料流的說明。
+監視儀表板可讓您以視覺化方式呈現資料流程的歷程，包括資料啟用的目的地、您要檢視的資料型別、每次資料流程執行的匯出資料等等。
+
+本教學課程提供如何直接在目的地Workspace中監視資料流，或使用「監視」控制面板透過Experience Platform使用者介面監視目的地的資料流的說明。
 
 ## 快速入門 {#getting-started}
 
@@ -48,7 +50,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="資料流執行詳細資訊"
->abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
+>abstract="目的地資料流執行詳細資訊包含對象啟用狀態的資訊，以及從Real-Time Customer Profile取得的量度，以產生唯一身分。 若要深入了解，請檢閱量度定義指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -58,7 +60,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的區段中建立、更新和刪除的身分。"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包含從匯出對象中建立、更新和移除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
@@ -76,7 +78,7 @@ ht-degree: 10%
 
 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 
-- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
+- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規而略過用於啟用的設定檔身分總數。
 - **[!UICONTROL 身分失敗]**：由於錯誤而未啟用到目的地的設定檔身分總數。
 
@@ -89,7 +91,7 @@ ht-degree: 10%
    - 的 **[!UICONTROL 已完成]** 執行時，處理時間量度一律會顯示一個小時。
    - 針對仍在中的資料流執行 **[!UICONTROL 處理]** 狀態，此視窗會開啟一小時以上，用來擷取所有量度，以處理對應至資料流執行的所有量度。 例如，上午9:30開始的資料流執行可能會維持處理狀態1小時30分鐘，以擷取及處理所有量度。 接著，處理視窗關閉且資料流狀態更新為 **已完成**，顯示的處理時間會變更為一小時。
 - **[!UICONTROL 已接收的設定檔]**：資料流中接收的設定檔總數。
-- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
+- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 身分失敗]** 由於錯誤而未啟用到目的地的設定檔身分總數。
 - **[!UICONTROL 啟用率]**：已成功啟動或略過的接收身分百分比。 下列公式示範如何計算此值：
@@ -111,7 +113,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
->abstract="目的地資料流執行詳細資訊包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
+>abstract="目的地資料流執行詳細資訊包含對象啟用狀態的資訊，以及從Real-Time Customer Profile取得的量度，以產生唯一身分。 若要深入了解，請檢閱量度定義指南。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
@@ -122,7 +124,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的區段中建立、更新和刪除的身分。"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包含從匯出對象中建立、更新和移除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
@@ -131,7 +133,7 @@ ht-degree: 10%
 
 對於批次目的地， [!UICONTROL 資料流執行] 索引標籤會提供有關資料流執行的量度資料。 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 
-- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
+- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規，從選取的目的地啟用中排除的個別設定檔身分計數。
 
 ![批次目的地的資料流執行檢視。](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -139,10 +141,10 @@ ht-degree: 10%
 每個個別資料流執行會顯示下列詳細資訊：
 
 - **[!UICONTROL 資料流執行開始]**：資料流執行開始的時間。
-- **[!UICONTROL 區段]**：與每個資料流執行相關聯的區段名稱。
+- **[!UICONTROL 對象]**：與每個資料流執行相關聯的對象名稱。
 - **[!UICONTROL 處理時間]**：處理資料流執行所花的時間。
 - **[!UICONTROL 已接收的設定檔]**：資料流中接收的設定檔總數。 此值每 60 分鐘更新一次。
-- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的區段中建立、更新和刪除的身分。
+- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 狀態]**：代表資料流所處的狀態。 這可以是三種狀態之一： [!UICONTROL 成功]， [!UICONTROL 已失敗]、和 [!UICONTROL 處理中]. [!UICONTROL 成功] 表示資料流作用中，且正在根據其提供的排程匯出資料。 [!UICONTROL 已失敗] 表示資料啟用作業已因錯誤而暫停。 [!UICONTROL 處理中] 表示資料流尚未作用中，通常會在建立新資料流時遇到。
 
@@ -150,7 +152,7 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->根據目的地資料流的排程頻率產生資料流執行。 會針對每個執行獨立的資料流執行 [合併原則](../../profile/merge-policies/overview.md) 套用至區段。
+>根據目的地資料流的排程頻率產生資料流執行。 會針對每個執行獨立的資料流執行 [合併原則](../../profile/merge-policies/overview.md) 套用至對象。
 
 除了資料流清單上顯示的詳細資訊之外，資料流的詳細資訊頁面還會顯示更多關於資料流的特定資訊：
 
@@ -174,11 +176,15 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="啟用"
->abstract="目的地啟用視圖包含區段啟用狀態的資訊，以及取自即時客戶設定檔以產生唯一身分的量度。"
+>abstract="目的地啟用檢視包含對象啟用狀態的資訊，以及從Real-Time Customer Profile取得的量度，以產生唯一身分。"
 
 若要存取 [!UICONTROL 監視] 儀表板，選取 **[!UICONTROL 監視]** (![監檢視示](../assets/ui/monitor-destinations/monitoring-icon.png))中。 一旦於 [!UICONTROL 監視] 頁面，選取 [!UICONTROL 目的地]. 此 [!UICONTROL 監視] 儀表板包含有關目的地執行作業的量度和資訊。
 
-使用 [!UICONTROL 目的地] 儀表板來取得啟動流程健康狀態的整體概念。 首先，您可以針對所有批次和串流目的地取得彙總層級的深入分析，然後深入研究資料流、資料流執行和已啟動區段的詳細檢視，以深入瞭解您的啟動資料。 中的畫面 [!UICONTROL 監視] 控制面板透過量度和錯誤說明提供可操作的深入分析，協助您疑難排解啟用情況下可能發生的任何問題。
+使用 [!UICONTROL 目的地] 儀表板來取得啟動流程健康狀態的整體概念。 首先，您可以針對所有批次和串流目的地取得彙總層級的深入分析，然後深入研究資料流、資料流執行和已啟動對象的詳細檢視，以深入瞭解您的啟動資料。 中的畫面 [!UICONTROL 監視] 控制面板透過量度和錯誤說明提供可操作的深入分析，協助您疑難排解啟用情況下可能發生的任何問題。
+
+您可以依資料型別篩選顯示的資訊：客戶、帳戶(僅適用於Adobe Real-Time CDP B2B版本)、潛在客戶和帳戶擴充。 如需這些選項的詳細資訊，請參閱 [監視儀表板指南](/help/dataflows/ui/monitor.md#monitoring-dashboard-overview).
+
+![監控儀表板檢視中醒目提示的資料型別篩選器。](/help/dataflows/assets/ui/monitor-destinations/add-data-filter.png)
 
 控制面板的中心是 [!UICONTROL 啟用] 面板，其中包含量度和圖表，可顯示匯出至串流目的地的資料啟用率，以及匯出至批次目的地的失敗批次資料流執行狀況。
 
@@ -202,7 +208,7 @@ ht-degree: 10%
 
 此 **[!UICONTROL 啟用]** 圖表預設會顯示，您可以停用它以展開底下的目的地清單。 選取 **[!UICONTROL 度量與圖表]** 切換以停用圖形。
 
-此 **[!UICONTROL 啟用]** 面板會顯示至少包含一個現有帳戶的目的地清單。 此清單也包含接收的個人檔案、啟用的身分、失敗的身分、排除的身分、啟用率、失敗的資料流總數以及這些目的地上次更新日期的相關資訊。 並非所有量度都適用於所有目的地型別。 下表概述每種目的地型別、串流或批次可用的量度。
+此 **[!UICONTROL 啟用]** 面板會顯示至少包含一個現有帳戶的目的地清單。 此清單也包含接收的個人檔案、啟用的身分、失敗的身分、排除的身分、啟用率、失敗的資料流總數以及這些目的地上次更新日期的相關資訊。 並非所有量度都適用於所有目的地型別。 下表概述每個目的地型別（串流或批次）的可用量度和資訊。
 
 | 量度 | 目的地型別 |
 ---------|----------|
@@ -230,7 +236,7 @@ ht-degree: 10%
 
 ![所有在監視儀表板中反白顯示的資料流。](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
-選取資料流以進行進一步檢查後，「資料流詳細資料」頁面會包含切換功能，可讓您檢視資料流中已啟動的資料（依資料流執行或區段劃分）。
+選取資料流以進行進一步檢查後，「資料流詳細資料」頁面會包含切換功能，可讓您檢視資料流中已啟動的資料，並按照資料流執行或對象進行劃分。
 
 ### 資料流執行檢視 {#dataflow-runs-view}
 
@@ -240,7 +246,7 @@ ht-degree: 10%
 >
 >對於要串流目的地的資料流，資料流執行會劃分為每小時時段。 每個每小時視窗都會產生對應的資料流執行ID。
 >
->針對批次目的地的資料流，每個區段都會根據區段啟用排程頻率產生相對應的資料流執行。 例如，如果您為相同目的地資料流中的五個區段設定每日排程啟動，則每天將會產生五個個別的資料流執行。
+>針對批次目的地的資料流，每個對象都會根據對象啟用排程頻率產生相對應的資料流執行。 例如，如果您為相同目的地資料流中的五個對象設定每日排程啟動，則每天將會產生五個個別的資料流執行。
 
 ![強調顯示具有數個執行的資料流執行面板。](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
@@ -248,34 +254,34 @@ ht-degree: 10%
 
 ![資料流執行檢視，其僅顯示失敗切換會反白顯示](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
-### 區段層級檢視 {#segment-level-view}
+### 對象層級檢視 {#segment-level-view}
 
-時間 **[!UICONTROL 區段]** 選取「 」時，您會看到在所選時間範圍內對所選資料流啟用的區段清單。 此畫麵包含啟用的身分識別、排除的身分識別的區段層級資訊，以及上次資料流執行的狀態和時間。 檢閱已排除和已啟用的身分的量度，即可驗證區段是否已成功啟用。
+時間 **[!UICONTROL 受眾]** ，您會看到在所選時間範圍內對所選資料流啟用的對象清單。 此畫麵包含啟用的身分、排除的身分以及上次資料流執行的狀態和時間的對象層級資訊。 您可以檢閱已排除和已啟動身分的量度，以確認對象是否已成功啟動。
 
-例如，您正在啟用名為「加州的忠誠會員」的區段至Amazon S3目的地「加州的忠誠會員12月」。 假設在選取的區段中，有100個設定檔，但100個設定檔中只有80個包含忠誠度ID屬性，而且您已將匯出對應規則定義為 `loyalty.id` 為必要項。 在此情況下，在區段層級，您會看到80個身分已啟用，20個身分已排除。
+例如，您正在將名為「加州忠誠會員」的受眾啟用至Amazon S3目的地「加州十二月的忠誠會員」。 假設在選取的對象中存在100個設定檔，但在100個設定檔中只有80個包含忠誠度ID屬性，而且您已將匯出對應規則定義為 `loyalty.id` 為必要項。 在此案例中，在對象層級，您會看到80個身分已啟用，20個身分已排除。
 
 >[!IMPORTANT]
 >
->請注意與區段層級量度相關的目前限制：
->- 區段層級檢視目前僅適用於批次目的地。
->- 目前僅針對成功的資料流執行記錄區段層級量度。 失敗的資料流執行和排除的記錄不會記錄這些事件。
+>請注意與對象層級量度相關的目前限制：
+>- 對象層級檢視目前僅適用於批次目的地。
+>- 對象層級量度目前僅記錄成功的資料流執行。 失敗的資料流執行和排除的記錄不會記錄這些事件。
 
-![在資料流面板中反白顯示的區段。](../assets/ui/monitor-destinations/dashboard-segments-view.png)
+![在資料流面板中反白顯示的對象。](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
-在區段層級檢視中，度量是在所選時間範圍內跨多個資料流執行進行彙總。 如果有多個資料流執行，您可以從區段層級向下展開，以檢視每個資料流執行的劃分（依選取的區段篩選）。
-使用篩選器按鈕 ![篩選](../assets/ui/monitor-destinations/filter-add.png) 若要向下鑽研資料流中每個區段的資料流執行檢視。
+在對象層級檢視中，這些量度會在所選時間範圍內跨多個資料流執行進行彙總。 如果有多個資料流執行，您可以從對象層級向下展開，以檢視每個資料流執行的劃分（依選取的對象篩選）。
+使用篩選器按鈕 ![篩選](../assets/ui/monitor-destinations/filter-add.png) 若要深入研究資料流中每個對象的資料流執行檢視。
 
 ### 資料流執行頁面 {#dataflow-runs-page}
 
 「資料流執行」頁面會顯示資料流執行的相關資訊，包括資料流執行開始時間、處理時間、收到的設定檔、已啟用的身分、已排除的身分、身分失敗、啟用率和狀態。
 
-當您從以下位置向下展開至資料流執行頁面時： [區段層級檢視](#segment-level-view)，您可選擇透過下列選項篩選資料流執行：
+當您從以下位置向下展開至資料流執行頁面時： [對象層級檢視](#segment-level-view)，您可選擇透過下列選項篩選資料流執行：
 
-- **[!UICONTROL 具有失敗身分的資料流執行]**：針對選取的區段，此選項會列出無法啟用的所有資料流執行。 若要檢查特定資料流執行中的身分識別失敗的原因，請參閱 [資料流執行詳細資訊頁面](#dataflow-run-details-page) 用於該資料流執行。
-- **[!UICONTROL 具有已略過身分的資料流執行]**：針對選取的區段，此選項會列出所有資料流執行，其中部分身分未完全啟用且已略過部分設定檔。 若要檢查某個資料流執行中的身分被略過的原因，請參閱 [資料流執行詳細資訊頁面](#dataflow-run-details-page) 用於該資料流執行。
-- **[!UICONTROL 具有已啟用的身分的資料流執行]**：針對選取的區段，此選項會列出具有已成功啟用的身分的所有資料流執行。
+- **[!UICONTROL 具有失敗身分的資料流執行]**：針對選取的對象，此選項會列出所有無法啟用的資料流執行。 若要檢查特定資料流執行中的身分識別失敗的原因，請參閱 [資料流執行詳細資訊頁面](#dataflow-run-details-page) 用於該資料流執行。
+- **[!UICONTROL 具有已略過身分的資料流執行]**：針對選取的對象，此選項會列出所有資料流執行，其中部分身分未完全啟用並略過部分設定檔。 若要檢查某個資料流執行中的身分被略過的原因，請參閱 [資料流執行詳細資訊頁面](#dataflow-run-details-page) 用於該資料流執行。
+- **[!UICONTROL 具有已啟用的身分的資料流執行]**：針對選取的對象，此選項會列出具有已成功啟用的身分的所有資料流執行。
 
-![顯示如何篩選區段資料流執行的選項按鈕。](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+![顯示如何篩選對象資料流執行的選項按鈕。](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
 若要檢視特定資料流執行的詳細資訊，請選取篩選器 ![篩選](../assets/ui/monitor-destinations/filter-add.png) 在資料流執行開始時間旁邊，檢視資料流執行詳細資訊頁面。
 
@@ -289,15 +295,15 @@ ht-degree: 10%
 - **[!UICONTROL IMS組織ID]**：資料流所屬的組織。
 - **[!UICONTROL 上次更新時間]**：上次更新資料流執行的時間。
 
-詳細資訊頁面也有切換功能，可在資料流執行錯誤和區段之間切換。 此選項僅適用於批次目的地中的資料流執行。
+詳細資訊頁面也會進行切換，以在資料流執行錯誤和對象之間切換。 此選項僅適用於批次目的地中的資料流執行。
 
 資料流執行錯誤檢視會顯示失敗的身分和已排除的身分清單。 會顯示失敗和已排除的身分的相關資訊，包括錯誤代碼、身分計數和說明。 依預設，清單會顯示失敗的身分。 若要顯示跳過的身分，請選取 **[!UICONTROL 身分已排除]** 切換。
 
 ![在監視檢視中反白顯示的身分排除切換](../assets/ui/monitor-destinations/identities-excluded.png)
 
-時間 **[!UICONTROL 區段]** 如果選取，您將看到在所選資料流執行中啟動的區段清單。 此畫麵包含啟用的身分識別、排除的身分識別的區段層級資訊，以及上次資料流執行的狀態和時間。
+時間 **[!UICONTROL 受眾]** 如果選取，您會看到在所選資料流執行中啟用的對象清單。 此畫麵包含啟用的身分、排除的身分以及上次資料流執行的狀態和時間的對象層級資訊。
 
-![在資料流執行詳細資訊畫面中檢視區段。](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+![在資料流執行詳細資訊畫面中的對象檢視。](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## 後續步驟 {#next-steps}
 
