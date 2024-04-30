@@ -2,10 +2,10 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
+source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 8%
+source-wordcount: '2241'
+ht-degree: 7%
 
 ---
 
@@ -165,6 +165,52 @@ ht-degree: 8%
 
 ![此 [!UICONTROL 套件物件與相依性] 頁面顯示套件中包含的資產清單，醒目提示 [!UICONTROL 完成].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+## 匯出和匯入整個沙箱
+
+>[!NOTE]
+>
+>完整沙箱匯出/匯入僅支援即時客戶資料平台物件。 將不會包含歷程物件。
+
+### 匯出整個沙箱 {#export-entire-sandbox}
+
+若要匯出整個沙箱，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 封裝]** 標籤並選取 **[!UICONTROL 建立封裝]**.
+
+![此 [!UICONTROL 沙箱] **[!UICONTROL 封裝]** 標籤反白顯示 [!UICONTROL 建立封裝].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+選取 **[!UICONTROL 整個沙箱]** 針對 [!UICONTROL 封裝型別] 在 [!UICONTROL 建立封裝] 對話方塊。 提供 [!UICONTROL 封裝名稱] ，然後選取 **[!UICONTROL Sandbox]** 下拉式清單中的。 最後，選取 **[!UICONTROL 建立]** 以確認您的輸入。
+
+![此 [!UICONTROL 建立封裝] 顯示已完成欄位和醒目提示的對話方塊 [!UICONTROL 建立].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+已成功建立封裝，請選取 **[!UICONTROL 發佈]** 以發佈套件。
+
+![強調新發佈套件的沙箱套件清單。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+您將返回 **[!UICONTROL 封裝]** 索引標籤中的 [!UICONTROL 沙箱] 環境，您可在其中檢視新發佈的套件。
+
+### 匯入整個沙箱套件 {#import-entire-sandbox-package}
+
+>[!NOTE]
+>
+>所有物件都會當作新物件匯入目標沙箱中。 最佳實務是將完整的沙箱套件匯入空的沙箱。
+
+若要將套件匯入目標沙箱，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 瀏覽]** 索引標籤並選取沙箱名稱旁邊的加號(+)選項。
+
+![沙箱 **[!UICONTROL 瀏覽]** 索引標籤中反白匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+使用下拉式選單，使用 **[!UICONTROL 封裝名稱]** 下拉式清單。 新增 **[!UICONTROL 工作名稱]**，將用於未來的監控，且選填 **[!UICONTROL 工作說明]**，然後選取 **[!UICONTROL 下一個]**.
+
+![匯入詳細資訊頁面顯示 [!UICONTROL 封裝名稱] 下拉式清單選取專案](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>您必須擁有封裝中包含之所有物件的完整許可權。 如果您沒有許可權，匯入作業將會失敗並顯示錯誤訊息。
+
+您被帶到 [!UICONTROL 套件物件與相依性] 您可以在此頁面檢視匯入和排除物件的物件數目和相依性。 從這裡，選擇 **[!UICONTROL 匯入]** 以完成套件匯入。
+
+![此 [!UICONTROL 套件物件與相依性] 頁面顯示不支援之物件型別的內嵌訊息，強調顯示 [!UICONTROL 匯入].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+
+留出一些時間讓匯入完成。 完成時間會因封裝中的物件數目而異。 您可以從以下位置監視匯入作業： [!UICONTROL 沙箱] **[!UICONTROL 工作]** 標籤。
+
 <!--
 ## Export and import an entire sandbox 
 
@@ -207,37 +253,37 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 -->
 
-## 監視匯入工作並檢視匯入物件詳細資訊
+## 監視匯入詳細資料 {#view-import-details}
 
-若要檢視匯入的物件和匯入的詳細資訊，請瀏覽至 [!UICONTROL 沙箱] **[!UICONTROL 匯入]** 標籤並從清單中選取封裝。 或者，使用搜尋列來搜尋套件。
+若要檢視匯入的詳細資訊，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 工作]** 標籤並從清單中選取封裝。 或者，使用搜尋列來搜尋套件。
 
-![沙箱 [!UICONTROL 匯入] 索引標籤會醒目顯示匯入套件選項。](../images/ui/sandbox-tooling/imports-tab.png)
+![沙箱 [!UICONTROL 工作] 索引標籤會醒目顯示匯入套件選項。](../images/ui/sandbox-tooling/imports-tab.png)
 
-### 檢視匯入的物件 {#view-imported-objects}
+<!--### View imported objects {#view-imported-objects}
 
-在 **[!UICONTROL 匯入]** 索引標籤中的 [!UICONTROL 沙箱] 環境，選取 **[!UICONTROL 檢視匯入的物件]** 從右邊的詳細資料窗格。
+On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
-選取 **[!UICONTROL 檢視匯入的物件]** 從右邊的詳細資料窗格 **[!UICONTROL 匯入]** 索引標籤中的 [!UICONTROL 沙箱] 環境。
+Select **[!UICONTROL View imported objects]** from the right details pane on the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment.
 
-![沙箱 [!UICONTROL 匯入] 索引標籤反白顯示 [!UICONTROL 檢視匯入的物件] 右窗格中的選取範圍。](../images/ui/sandbox-tooling/view-imported-objects.png)
+![The sandboxes [!UICONTROL Imports] tab highlights the [!UICONTROL View imported objects] selection in the right pane.](../images/ui/sandbox-tooling/view-imported-objects.png)
 
-使用箭頭來展開物件，以檢視已匯入封裝的欄位完整清單。
+Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![沙箱 [!UICONTROL 匯入的物件] 顯示匯入封裝的物件清單。](../images/ui/sandbox-tooling/expand-imported-objects.png)
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-### 檢視匯入詳細資料 {#view-import-details}
-
-選取 **[!UICONTROL 檢視匯入詳細資料]** 從右側詳細資料窗格 **[!UICONTROL 匯入]** tab鍵。
+選取 **[!UICONTROL 檢視匯入摘要]** 從右側詳細資料窗格 **[!UICONTROL 工作]** tab鍵。
 
 ![沙箱 [!UICONTROL 匯入] 索引標籤反白顯示 [!UICONTROL 檢視匯入詳細資料] 右窗格中的選取範圍。](../images/ui/sandbox-tooling/view-import-details.png)
 
-此 **[!UICONTROL 匯入詳細資料]** 對話方塊會顯示匯入的詳細劃分。
-
-![此 [!UICONTROL 匯入詳細資料] 顯示匯入詳細劃分的對話方塊。](../images/ui/sandbox-tooling/import-details.png)
+此 **[!UICONTROL 匯入摘要]** 對話方塊會顯示匯入的劃分以及進度百分比。
 
 >[!NOTE]
 >
->匯入完成後，您會在Platform UI中收到通知。 您可以從警示圖示存取這些通知。 如果工作失敗，您可以從這裡導覽至疑難排解。
+>您可以導覽至特定的詳細目錄頁面，以檢視物件清單。
+
+![此 [!UICONTROL 匯入詳細資料] 顯示匯入詳細劃分的對話方塊。](../images/ui/sandbox-tooling/import-details.png)
+
+匯入完成時，會在Platform UI中收到通知。 您可以從警示圖示存取這些通知。 如果工作失敗，您可以從這裡導覽至疑難排解。
 
 ## 教學課程影片
 
