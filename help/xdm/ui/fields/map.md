@@ -2,9 +2,9 @@
 title: 在UI中定義對應欄位
 description: 瞭解如何在Experience Platform使用者介面中定義對應欄位。
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
+source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform可讓您完全自訂自訂Experience Data Model (XDM)類別、結構描述欄位群組和資料型別的結構。
 
-您也可以在結構描述編輯器中定義對應欄位，以模型化和動態資料結構，或儲存索引鍵值配對的集合。 地圖資料結構允許根據唯一識別碼來組織和存取資訊的位置進行有效且快速的查詢、插入和刪除。
+您也可以在結構描述編輯器中定義對應欄位，以模型化和動態資料結構，或儲存索引鍵值配對的集合。
 
 在Platform使用者介面(UI)中定義新欄位時，請使用 **[!UICONTROL 型別]** 下拉式清單並選取「**[!UICONTROL 地圖]**」從清單中。
 
@@ -34,6 +34,8 @@ XDM對於此資料型別的使用有下列限制：
 * 對應型別必須是型別 `object`.
 * 對應型別不得有已定義的屬性（換言之，它們會定義「空白」物件）。
 * 對應型別必須包括 `additionalProperties.type` 此欄位說明可放置在地圖中的值，也可 `string` 或 `integer`.
+* 多實體分段只能根據對應索引鍵而不是值來定義。
+* 帳戶對象不支援地圖。
 
 請確定您只在絕對必要時才使用對應型別欄位，因為這些欄位具有下列效能缺陷：
 
