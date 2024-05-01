@@ -3,9 +3,9 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1957'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 ## 使用案例 {#use-cases}
 
-使用Adobe個人化解決方案(例如Adobe Target)或您自己的個人化合作夥伴平台(例如 [!DNL Optimizely]， [!DNL Pega])以及專利系統（例如內部CMS），透過提供更深入的客戶個人化體驗 [自訂個人化](../catalog/personalization/custom-personalization.md) 目的地。 同時利用Experience Platform Edge Network的資料收集和細分功能。
+使用Adobe個人化解決方案(例如Adobe Target)或您自己的個人化合作夥伴平台(例如 [!DNL Optimizely]， [!DNL Pega])以及專利系統（例如內部CMS），透過提供更深入的客戶個人化體驗 [自訂個人化](../catalog/personalization/custom-personalization.md) 目的地。 同時利用Experience PlatformEdge Network資料收集和細分功能。
 
 下述使用案例包含網站個人化及鎖定網站上的目標廣告。
 
@@ -78,6 +78,10 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 設定個人化目的地的第一個步驟，是為Experience Platform Web SDK設定資料流。 這是在資料收集UI中完成。
 
 設定資料流時，在 **[!UICONTROL Adobe Experience Platform]** 請確定兩者 **[!UICONTROL 邊緣細分]** 和 **[!UICONTROL 個人化目的地]** 已選取。
+
+>[!TIP]
+>
+>從2024年4月版本開始，發生下列情況時，您不需要選取「邊緣細分」核取方塊 [設定與Adobe Target的連線](/help/destinations/catalog/personalization/adobe-target-connection.md). 在這種情況下， [下一次工作階段個人化](#next-session) 是唯一可用的個人化使用案例。
 
 ![強調邊緣細分和個人化目的地的資料流設定！](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
