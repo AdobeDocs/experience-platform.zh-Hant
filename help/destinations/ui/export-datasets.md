@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 5d9384f57765126709f6bfcc005334ba4120595a
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1891'
 ht-degree: 4%
 
 ---
@@ -211,15 +211,13 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
    ![可用的資料集導覽選項在「啟動資料」欄中反白顯示。](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. 此 **[!UICONTROL 啟用資料]** 目的地頁面隨即顯示。 選取您要移除的資料集，然後選取 **[!UICONTROL 移除資料集]** 在右側邊欄中，以觸發資料集移除確認對話方塊。
+1. [!BADGE 測試版] 此 **[!UICONTROL 啟用資料]** 目的地頁面隨即顯示。 使用資料集清單左側的核取方塊來選取您要移除的資料集，然後選取「 」 **[!UICONTROL 移除資料集]** 在右側邊欄中，以觸發移除資料集確認對話方塊。
 
-   ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/remove-dataset-control.png)
+   >[!NOTE]
+   >
+此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
 
-<!-- USE THIS FOR BULK REMOVE RELEASE
-
-1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
-
-    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
+   ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
 1. 在確認對話方塊中，選取 **[!UICONTROL 移除]** 立即將資料集從匯出至目的地時移除。
 

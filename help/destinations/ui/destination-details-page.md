@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 檢視目的地詳細資料
 description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及編輯啟用、啟用及停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1154'
 ht-degree: 1%
 
 ---
@@ -115,11 +115,15 @@ ht-degree: 1%
 
 ![啟用資料檢視串流目的地](../assets/ui/details-page/activation-data-streaming.png)
 
-<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+### [!BADGE 測試版]{type=Informative}從啟動流程中移除多個對象 {#bulk-remove}
 
-To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+>[!NOTE]
+>
+此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
 
-![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+若要從現有的啟用流程移除多個對象，請選取對象，然後選取「 」 **[!UICONTROL 移除對象]**.
+
+![啟用資料熒幕醒目提示「移除對象」選項。](../assets/ui/details-page/bulk-remove-audiences.png)
 
 ### [!BADGE 測試版]{type=Informative}隨選將多個檔案匯出至批次目的地 {#bulk-export}
 
