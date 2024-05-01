@@ -2,7 +2,7 @@
 description: 瞭解如何在Experience PlatformUI中建立輸入欄位，讓使用者指定有關如何連線及將資料匯出至目的地的各種相關資訊。
 title: 客戶資料欄位
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 1%
@@ -352,7 +352,7 @@ ht-degree: 1%
 >
 >從2024年4月發行版本開始，您可以設定 `isRequired` 巢狀欄位上的引數。 例如，在下方的設定程式碼片段中，前兩個巢狀欄位會標示為必要（醒目提示第xxx行），而客戶除非為欄位選取值，否則無法繼續。 進一步瞭解 [支援的引數](#supported-parameters) 區段。
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",
