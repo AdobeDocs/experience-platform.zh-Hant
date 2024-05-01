@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 來源聯結器概述
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
 source-wordcount: '1531'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Experience Platform支援從協力廠商廣告系統擷取資料。 如需特定
 
 ### Analytics {#analytics}
 
-Experience Platform支援從協力廠商分析平台擷取資料。 如需詳細資訊，請參閱下列相關檔案：
+Experience Platform支援從協力廠商分析平台擷取資料。 如需詳細資訊，請閱讀下列相關檔案：
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE 串流]{type=Positive}

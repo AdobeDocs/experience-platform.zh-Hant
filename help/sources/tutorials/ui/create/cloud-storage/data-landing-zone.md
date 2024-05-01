@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料登陸區域；資料登陸區域
 title: 使用UI將資料登陸區域連線至Platform
 description: 瞭解如何使用Platform使用者介面建立資料登陸區域來源聯結器。
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---

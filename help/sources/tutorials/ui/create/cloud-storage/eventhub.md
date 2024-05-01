@@ -3,9 +3,9 @@ title: 在使用者介面中建立Azure事件中樞來源連線
 description: 瞭解如何使用Adobe Experience Platform UI建立Azure事件中樞來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >此 [!DNL Azure Event Hubs] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
 
-本教學課程提供建立 [!DNL Azure Event Hubs] 使用Adobe Experience Platform使用者介面的帳戶。
+閱讀本教學課程以瞭解如何建立 [!DNL Azure Event Hubs] 使用Adobe Experience Platform使用者介面的帳戶。
 
 ## 快速入門
 
