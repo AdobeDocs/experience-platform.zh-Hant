@@ -1,9 +1,10 @@
 ---
 title: 設定檔深入分析
 description: 探索為您的設定檔深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索您的客戶及其消費者體驗。
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -14,12 +15,9 @@ ht-degree: 1%
 
 存取提供個人資料的SQL來瞭解您的個人資料見解，然後產生您自己的見解，以進一步探索您的客戶及其構成個人資料的消費者體驗。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
 
 下列見解全部都可供您用作 [設定檔儀表板](../guides/profiles.md) 或自訂 [使用者定義儀表板](../user-defined-dashboards.md). 請參閱 [自訂概述](../customize/overview.md) 以取得如何自訂儀表板的指示，或 [建立和編輯新Widget](../customize/custom-widgets.md) 在Widget資料庫和 [使用者定義儀表板](../user-defined-dashboards.md#create-widget).
-
-下列見解全部都可供您用作 [設定檔儀表板](../guides/profiles.md) 或自訂儀表板。
 
 ## 依合併原則區分的對象重疊 {#audience-overlap-by-merge-policy}
 
@@ -781,7 +779,6 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 閱讀本檔案後，您現在瞭解產生儀表板深入分析的SQL，以及此分析解決哪些常見問題。 您現在可以編輯並反複處理SQL，以產生您自己的深入分析。
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
 
-您也可以閱讀並瞭解為產生深入分析的SQL [受眾](./audiences.md) 和 [目的地](./destinations.md) 控制面板。
+您也可以閱讀並瞭解為產生深入分析的SQL [受眾](./audiences.md)， [帳戶設定檔](./account-profiles.md)、和 [目的地](./destinations.md) 控制面板。

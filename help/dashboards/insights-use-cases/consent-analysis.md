@@ -2,7 +2,7 @@
 title: 同意分析和追蹤
 description: 瞭解如何建立同意分析儀表板，以追蹤使用者同意在一段時間內的趨勢。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -143,7 +143,7 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 >您現在可以在儲存儀表板之前，調整大小或將Widget移動至所需的大小和位置。
 
 
-下圖示範您完成的Widget的顯示方式以及其他可能的自訂深入分析。 如需可建立之Widget型別的詳細資訊，請參閱 [資料模型檔案](../cdp-insights-data-model.md).
+下圖示範您完成的Widget的顯示方式以及其他可能的自訂深入分析。 如需可建立之Widget型別的詳細資訊，請參閱 [資料模型檔案](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 

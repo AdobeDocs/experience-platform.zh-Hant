@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；使用者介面；UI；自訂；授權使用儀表板；儀表板；授權使用；權益；使用
-title: 授權使用儀表板指南
+title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fabc6611baec68e7948ed2539c496b5a0125cd72
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2107'
 ht-degree: 8%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 8%
 
 此儀表板會以表格格式顯示您所有授權的Adobe Experience Platform產品，包括附加元件。 此表格提供所有可用設定檔中授權使用情形的重要資訊。
 
-| 資料行名稱 | 說明 |
+| 欄名稱 | 說明 |
 |---|---|
 | **[!UICONTROL 產品]** | 貴組織授權的Adobe解決方案。 |
 | **[!UICONTROL 主要量度]** | 主要量度，用於在內追蹤該產品。 |

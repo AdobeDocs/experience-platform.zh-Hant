@@ -1,10 +1,10 @@
 ---
-title: 帳戶設定檔儀表板指南
+title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: b7875128592b17044b068d8064de082bf00a8309
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表板檢視有關帳戶設定檔的重要資訊，如每日快照期間所擷取。 本指南概述如何存取及使用 [!UICONTROL 帳戶設定檔] UI中的控制面板，並提供控制面板中顯示之視覺效果的詳細資訊。
 
-如需帳戶設定檔使用者介面中所有功能的概述，請造訪 [帳戶設定檔UI指南](../../rtcdp/accounts/account-profile-ui-guide.md).
+本檔案提供內的功能概觀 [!UICONTROL 帳戶設定檔] 儀表板和詳細說明可用的標準深入分析。 請參閱 [[!UICONTROL 帳戶設定檔] UI指南](../../rtcdp/accounts/account-profile-ui-guide.md) 以取得其可用功能的完整細節。
 
 ## 快速入門
 
-您必須有權使用 [Adobe Real-time Customer Data Platform B2B版本](../../rtcdp/b2b-overview.md) 以存取B2B [!UICONTROL 帳戶設定檔] 儀表板。
+您必須有權使用 [Adobe Real-time Customer Data Platform B2B版本](../../rtcdp/b2b-overview.md) 存取B2B [!UICONTROL 帳戶設定檔] 儀表板。
 
-## 帳戶設定檔資料
+## 帳戶設定檔資料 {#data}
 
-此 [!UICONTROL 帳戶設定檔] 儀表板會顯示您的行銷管道的多個來源，以及貴組織目前用來儲存客戶帳戶資訊的各種系統的整合帳戶資訊快照。
+此 [!UICONTROL 帳戶設定檔] 儀表板會顯示整合帳戶資訊的快照。 此帳戶資訊來自於行銷管道的多個來源，以及貴組織目前用來儲存客戶帳戶資訊的各種系統。
 
 快照中的設定檔資料顯示的資料與拍攝快照的特定時間點完全相同。 換言之，快照不是資料的近似或樣本，而且 [!UICONTROL 帳戶設定檔] 儀表板未即時更新。
 
@@ -29,17 +29,33 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 >
 >自拍攝快照以來對資料所做的任何變更或更新都不會反映在儀表板中，直到拍攝下一個快照為止。
 
-## 探索 [!UICONTROL 帳戶設定檔] 儀表板
+## 探索 [!UICONTROL 帳戶設定檔] 儀表板 {#explore}
 
 若要導覽至 [!UICONTROL 帳戶設定檔] 在Platform UI中，選取 **[!UICONTROL 設定檔]** 在 [!UICONTROL 帳戶] ，位於左側導覽面板中。
 
 ![左側導覽中具有帳戶設定檔的Platform UI會醒目提示，並會顯示概觀標籤。](../images/account-profiles/account-profiles-dashboard.png)
 
-從 [!UICONTROL 帳戶設定檔] 控制面板，您可以 [瀏覽擷取到您組織中的帳戶設定檔](#browse-account-profiles)，或 [使用Widget快速檢視您帳戶設定檔資料的完整內容](#standard-widgets) 以視覺效果呈現資料的各方面。
+從 [!UICONTROL 帳戶設定檔] 控制面板，您可以 [瀏覽擷取到您組織中的帳戶設定檔](#browse-account-profiles)，或 [使用Widget快速檢視您帳戶設定檔資料的完整內容](#standard-widgets).
+
+### 日期篩選 {#date-filter}
+
+此 [!UICONTROL 概觀] tab由小工具組成，提供唯讀量度，傳達有關您帳戶設定檔的重要資訊。 選取行事曆圖示或日期，以變更Widget的全域日期篩選。
+
+>[!IMPORTANT]
+>
+>您在下拉式行事曆中選取的日期範圍會影響所有深入分析，但兩個預測性評分Widget除外([分佈](#predictive-scoring-distribution) 和 [主要影響因素](#predictive-scoring-top-influential-factors))。
+
+![帳戶設定檔概述索引標籤，其中醒目顯示日期選擇器和篩選器圖示。](../images/account-profiles/date-filter.png)
+
+### 設定銷售機會至帳戶比對服務 {#lead-to-account-matching-service}
+
+選取 **[!UICONTROL 設定]** 若要設定銷售線索與帳戶的比對服務，請從 [!UICONTROL 帳戶設定] 對話方塊。 如需有關如何設定銷售線索與帳戶比對的完整詳細資訊，請參閱 [UI指南](../../rtcdp/accounts/account-profile-ui-guide.md#configure-lead-to-account-matching). 若要進一步瞭解銷售線索與帳戶的比對，請參閱 [在Real-Time CDP B2B檔案中導致帳戶相符](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+![反白顯示設定的「帳戶設定檔」控制面板。](../images/account-profiles/settings.png)
 
 ## 瀏覽帳戶設定檔 {#browse-account-profiles}
 
-此 [!UICONTROL 瀏覽] 索引標籤可讓您使用連線企業來源的帳戶ID或直接輸入來源詳細資訊，來搜尋及檢視擷取到您組織的唯讀帳戶設定檔。 從這裡，您可以看到屬於帳戶個人資料的重要資訊，包括其名稱、產業、收入和對象等。
+從 [!UICONTROL 瀏覽] 索引標籤上，您可以搜尋並檢視擷取到您組織中的唯讀帳戶設定檔。 使用連線企業來源的帳戶ID或直接輸入來源詳細資料。 在此工作區中，您可以檢視屬於帳戶個人資料的重要資訊，包括其名稱、產業、收入和對象等。
 
 選取 [!UICONTROL 設定檔ID] 結果顯示在 [!UICONTROL 瀏覽] 標籤以開啟 [!UICONTROL 詳細資料] 帳戶設定檔的標籤。
 
@@ -47,42 +63,79 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 顯示在上的帳戶設定檔資訊 [!UICONTROL 詳細資料] 索引標籤已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 請參閱以下檔案： [在Adobe Real-time Customer Data Platform中瀏覽帳戶設定檔](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) 以進一步瞭解Platform UI中的帳戶設定檔檢視功能。
 
-## 此 [!UICONTROL 帳戶設定檔] [!UICONTROL 概觀] {#overview}
-
-此 [!UICONTROL 概觀] tab由小工具組成，提供唯讀量度，傳達有關您帳戶設定檔的重要資訊。 選取 **[!UICONTROL 修改儀表板]** 變更 [!UICONTROL 概觀] 移動Widget並調整其大小以定位。
-
-![帳號設定檔概述索引標籤中反白顯示修改儀表板。](../images/account-profiles/modify-dashboard.png)
-
-請參考以下檔案： [修改儀表板](../customize/modify.md) 和 [Widget程式庫概觀](../customize/widget-library.md) 以進一步瞭解。
-
 ## 標準Widget {#standard-widgets}
 
 Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不同量度。
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
-* [依產業區分的帳戶總數](#total-accounts-by-industry)
 * [帳戶設定檔已新增](#account-profiles-added)
+* [各產業客戶](#accounts-by-industry)
+* [依型別的帳戶](#accounts-by-type)
+* [機會已新增](#opportunities-added)
+* [依個人角色的機會](#opportunities-by-person-role)
+* [商機（依收入）](#opportunities-by-revenue)
+* [按狀態與階段列出的機會](#opportunities-by-status-&-stage)
+* [成功的機會](#opportunities-won)
 * [預測性評分分佈](#predictive-scoring-distribution)
 * [預測性評分主要影響因素](#predictive-scoring-top-influential-factors)
-
-### 依產業區分的帳戶總數 {#total-accounts-by-industry}
-
-此Widget會顯示單一量度中的帳戶總數，並使用環形圖來說明構成整體數字的產業中計數比例大小。 索引鍵提供組成環圈圖之不同產業的色彩編碼資訊。
-
-當游標暫留在環圈圖的個別區段上時，不同產業的個人計數會顯示在對話方塊中。
-
-![依產業Widget區分的帳戶總數。](../images/account-profiles/total-accounts-by-industry-widget.png)
+* [依產業區分的帳戶總數](#total-accounts-by-industry)
 
 ### 帳戶設定檔已新增 {#account-profiles-added}
 
-此Widget會使用色彩編碼的長條圖，說明在指定期間內新增至帳戶的設定檔計數，以及構成這些新增設定檔的不同行業比例。 各產業皆以不同色彩編碼，按鍵會針對組成長條圖的不同產業提供色彩編碼資訊。 分析期間是從Widget下拉式選單中選取。 長條圖可在30天、90天和12個月期間進行視覺化。
+此 [!UICONTROL 帳戶設定檔已新增] Widget使用線圖來顯示一段時間內每天新增的帳戶設定檔數。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選器，預設行為會列出今天之前一年新增的帳戶設定檔。 結果可用於推斷新增的帳戶設定檔數量趨勢。
+
+![帳戶設定檔已新增Widget。](../images/account-profiles/account-profiles-added.png)
+
+### 各產業客戶 {#accounts-by-industry}
+
+此 [!UICONTROL 各產業客戶] widget會顯示環形圖內單一量度的帳戶總數。 環圈圖說明了組成此總計的不同產業的相對組成。 以色彩編碼的索引鍵提供所有包含的產業劃分。 當游標暫留在環圈圖的個別區段上時，會在對話方塊中顯示每個產業的個人計數。
+
+![依產業劃分的帳戶Widget。](../images/account-profiles/accounts-by-industry.png)
+
+### 依型別的帳戶 {#accounts-by-type}
+
+此 [!UICONTROL 依型別的帳戶] widget會顯示環形圖內單一量度的帳戶總數。 環形圖說明構成此總計的不同帳戶型別的相對組成。 以色彩編碼的金鑰提供所有包含的帳戶型別的劃分。 當游標暫留在環圈圖的個別區段上時，每種型別的帳戶個別計數都會顯示在對話方塊中。
+
+![「帳戶」依型別Widget。](../images/account-profiles/accounts-by-type.png)
+
+### 機會已新增 {#opportunities-added}
+
+此 [!UICONTROL 機會已新增] Widget使用線圖來顯示一段時間中每天新增的機會數量。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選，預設行為會列出今天之前一年新增的機會。 這些結果可用來推斷新增商機數量的趨勢。
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![機會已新增Widget。](../images/account-profiles/opportunities-added.png)
+
+### 依個人角色的機會 {#opportunities-by-person-role}
+
+此 [!UICONTROL 依個人角色的機會] widget會在環形圖內的單一量度中顯示您的機會總數。 環圈圖說明構成此機會總數的角色相對組成。 以色彩編碼的金鑰提供所有包含角色的劃分。 當游標暫留在環圈圖的個別區段上時，每個角色的個別計數都會顯示在對話方塊中。
 
 >[!NOTE]
 >
->由於設定檔只會新增至帳戶，永遠不會移除，因此一段時間內新增的設定檔最低數量為零。
+>此 [!UICONTROL 找不到資料] 或 [!UICONTROL 無法載入] 未在結構描述中使用「Opportunity-Person」橋接表格時，會導致錯誤。 如果您的分析顯示其中一個錯誤，請檢查您的聯合結構描述，並確定「機會 — 人員」欄位群組正在擷取資料。
 
-![帳戶設定檔已新增Widget。](../images/account-profiles/accounts-profiles-added-widget.png)
+![依個人列出的機會Widget。](../images/account-profiles/opportunities-by-person-role.png)
+
+### 商機（依收入） {#opportunities-by-revenue}
+
+此 [!UICONTROL 商機（依收入）] widget使用長條圖來說明您的商機所產生的預估收入總額。 Widget最多可支援六個機會。
+
+若要檢視包含商機之特定收入總計的對話方塊，請使用游標暫留在個別長條上。
+
+![按收入分類的機會Widget。](../images/account-profiles/opportunities-by-revenue.png)
+
+### 按狀態與階段列出的機會 {#opportunities-by-status-&-stage}
+
+此Widget使用長條圖來說明在行銷/銷售漏斗的所有階段中開啟或關閉的機會數量。 Widget會使用顏色來區分機會的階段。 以色彩編碼的索引鍵表示商機的可用階段。
+
+![按狀態和階段Widget分類的機會。](../images/account-profiles/opportunities-by-status-&-stage.png)
+
+### 成功的機會 {#opportunities-won}
+
+此 [!UICONTROL 成功的機會] widget會在環形圖中顯示已在單一量度中成功完成的業務機會總數。 環圈圖可說明成功或失敗機會的相對組成。 以色彩編碼的金鑰會區分成功與未成功的商機。 當游標暫留在環圈圖的個別區段上時，每個角色的個別計數都會顯示在對話方塊中。
+
+![機會贏得了Widget。](../images/account-profiles/opportunities-won.png)
 
 ### 預測性評分分佈 {#predictive-scoring-distribution}
 
@@ -94,6 +147,10 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 Widget中的下拉式功能表可讓您選取帳戶評分模式。
 
+>[!NOTE]
+>
+>全域日期範圍篩選器不適用於預測性評分深入分析。 預測性評分Widget會根據下拉式清單中選取的帳戶評分模型分析資料。
+
 ![預測性評分分佈Widget。](../images/account-profiles/predictive-scoring-distribution.png)
 
 ### 預測性評分主要影響因素 {#predictive-scoring-top-influential-factors}
@@ -104,8 +161,20 @@ Widget中的下拉式功能表可讓您選取帳戶評分模式。
 
 Widget中的下拉式功能表可讓您選取帳戶評分模式。
 
+>[!NOTE]
+>
+>全域日期範圍篩選器不適用於預測性評分深入分析。 預測性評分Widget會根據下拉式清單中選取的帳戶評分模型分析資料。
+
 ![預測性評分主要影響因素Widget。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### 依產業區分的帳戶總數 {#total-accounts-by-industry}
+
+此Widget會顯示單一量度中的帳戶總數，並使用環形圖來說明構成整體數字的產業中計數比例大小。 索引鍵提供組成環圈圖之不同產業的色彩編碼資訊。
+
+當游標暫留在環圈圖的個別區段上時，不同產業的個人計數會顯示在對話方塊中。
+
+![依產業Widget區分的帳戶總數。](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## 後續步驟
 
-依照本檔案操作，您現在應該知道如何找到 [!UICONTROL 帳戶設定檔] 儀表板。 您也應該瞭解可用介面工具列中顯示的量度。 若要進一步瞭解如何在Experience Platform UI中使用帳戶設定檔做為B2B資料的一部分，請參閱 [帳戶設定檔概述](../../rtcdp/accounts/account-profile-overview.md) 適用於Adobe Real-Time CDP， B2B Edition。
+依照本檔案操作，您現在應該知道如何找到 [!UICONTROL 帳戶設定檔] 儀表板，也瞭解可用介面工具列中顯示的量度。 若要進一步瞭解如何在Experience Platform UI中使用帳戶設定檔做為B2B資料的一部分，請參閱 [帳戶設定檔概述](../../rtcdp/accounts/account-profile-overview.md) 適用於Adobe Real-Time CDP， B2B Edition。

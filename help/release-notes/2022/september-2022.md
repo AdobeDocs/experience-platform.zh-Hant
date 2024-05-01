@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2022年9月
 description: Adobe Experience Platform 2022年9月版本注意事項。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '2762'
 ht-degree: 23%
@@ -94,7 +94,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 | --- | --- |
 | 使用中標籤 | 在Widget資料庫中檢視時，使用中標籤可輕鬆識別控制面板中是否存在現有Widget。 這可讓您輕鬆避免重複，不過您仍可依需要多次新增相同的Widget。 |
 | 使用者定義的儀表板 | 使用者定義儀表板可讓您建置和管理自訂儀表板，有助於加速深入分析和自訂視覺效果。 透過使用者定義儀表板，您可以建立、新增和編輯客製化Widget，以視覺化方式呈現與貴組織相關的關鍵量度。 閱讀 [功能指南](../../dashboards/user-defined-dashboards.md) 以進一步瞭解。 |
-| 客戶資料平台見解資料模型 | 客戶資料平台(CDP)見解資料模型功能會公開為各種設定檔、目的地和分段Widget提供見解的資料模型和SQL。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標使用案例建立CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 閱讀 [CDP Insights資料模型功能指南](../../dashboards/cdp-insights-data-model.md) 以進一步瞭解。 |
+| 客戶資料平台見解資料模型 | 客戶資料平台(CDP)見解資料模型功能會公開為各種設定檔、目的地和分段Widget提供見解的資料模型和SQL。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標使用案例建立CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 閱讀 [CDP Insights資料模型功能指南](../../dashboards/data-models/cdp-insights-data-model-b2c.md) 以進一步瞭解。 |
 | 對象重疊報表Widget | 此Widget同時適用於兩者 [!UICONTROL 設定檔] 和 [!UICONTROL 區段] 控制面板。 報表提供您所選區段按最高或最低重疊百分比排名的有序對象清單。 從 [!UICONTROL 設定檔] 控制面板您可以透過所有可用區段的合併原則，篩選及檢視對象重疊。 此 [!UICONTROL 區段] 控制面板可讓您依特定區段篩選對象重疊。<br>使用此分析來建立新的、高效能區段，並避免將相同的對象傳送到不同的目的地。 報表也有助於識別隱藏的深入分析，以改進細分或找出要追求的不重複設定檔。 閱讀個別 [設定檔](../../dashboards/guides/profiles.md#audience-overlap-report) 和 [區段](../../dashboards/guides/audiences.md#audience-overlap-report) Widget指南以進一步瞭解。 |
 
 如需詳細資訊，請參閱 [!DNL Dashboards]，請參閱 [[!DNL Dashboards] 概述](../../dashboards/home.md).

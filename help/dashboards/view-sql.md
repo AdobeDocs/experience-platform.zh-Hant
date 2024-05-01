@@ -1,7 +1,8 @@
 ---
 title: 檢視分析SQL
 description: 檢視您的設定檔、對象、目的地和自訂深入分析背後的SQL，並透過查詢編輯器依需求執行查詢。
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -58,4 +59,4 @@ ht-degree: 0%
 
 ## 後續步驟
 
-閱讀本檔案後，您現在瞭解如何在標準儀表板或使用者定義儀表板中存取SQL以取得任何深入分析。 如果您尚未閱讀本文章，建議您閱讀 [Real-time Customer Data Platform Insights資料模型檔案](./cdp-insights-data-model.md). 該檔案包含針對您的行銷和KPI需求量身打造的Real-Time CDP報表自訂SQL範本的相關見解。
+閱讀本檔案後，您現在瞭解如何在標準儀表板或使用者定義儀表板中存取SQL以取得任何深入分析。 如果您尚未閱讀本文章，建議您閱讀 [Real-time Customer Data Platform Insights資料模型檔案](./data-models/cdp-insights-data-model-b2c.md). 該檔案包含針對您的行銷和KPI需求量身打造的Real-Time CDP報表自訂SQL範本的相關見解。

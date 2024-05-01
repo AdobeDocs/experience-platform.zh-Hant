@@ -4,10 +4,10 @@ title: 使用查詢服務來探索、驗證及處理控制面板資料集
 type: Documentation
 description: 瞭解如何使用查詢服務來探索及處理原始資料集，以便在Experience Platform中強化設定檔、受眾和目的地儀表板。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 0%
+source-wordcount: '944'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Adobe Experience Platform透過Experience PlatformUI中提供的控制面板，提供您組織設定檔、對象和目的地資料的重要資訊。 然後您可以使用Adobe Experience Platform [!DNL Query Service] 探索、驗證及處理原始資料集，以便在data lake中支援這些儀表板。
 
-## 快速入門 [!DNL Query Service]
+## 快速入門：[!DNL Query Service]
 
 Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake中查詢資料，支援行銷人員從其資料中獲得見解。 [!DNL Query Service] 提供使用者介面和API，可用來聯結Data Lake中的任何資料集，以及將查詢結果擷取為新資料集，以用於報表、機器學習或內嵌至Real-time Customer Profile。
 
@@ -45,7 +45,7 @@ Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake
 
 設定檔儀表板分析會繫結至貴組織所定義的合併原則。 對於每個使用中的合併原則，資料湖中都會有一個可用的設定檔屬性資料集。
 
-這些資料集的命名慣例是 **設定檔 — 快照 — 匯出** 後面接著系統產生的隨機英數字元。 例如: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+這些資料集的命名慣例是 **設定檔 — 快照 — 匯出** 後面接著系統產生的隨機英數字元。 例如: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`。
 
 若要瞭解每個設定檔快照集匯出資料集的完整結構描述，您可以預覽及探索資料集 [使用資料集檢視器](../catalog/datasets/user-guide.md) 在Experience Platform UI中。
 
@@ -86,7 +86,7 @@ Adobe Experience Platform [!DNL Query Service] 透過啟用標準SQL在Data Lake
 
 CDP分析資料模型功能會公開SQL，為各種設定檔、目的地和分段Widget提供深入分析。 您可以自訂這些SQl查詢範本，為您的行銷和KPI使用案例建立CDP報告。
 
-CDP報告可提供您個人檔案資料及其與受眾和目的地關係的深入分析。 如需如何操作的詳細資訊，請參閱CDP見解資料模型檔案 [將CDP見解資料模型套用至您的特定KPI使用案例](./cdp-insights-data-model.md).
+CDP報告可提供您個人檔案資料及其與受眾和目的地關係的深入分析。 如需如何操作的詳細資訊，請參閱CDP見解資料模型檔案 [將CDP見解資料模型套用至您的特定KPI使用案例](./data-models/cdp-insights-data-model-b2c.md).
 
 ## 範例查詢
 

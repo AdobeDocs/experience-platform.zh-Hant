@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；設定檔；對象；對象；分段；使用者介面；UI；自訂；對象儀表板；儀表板
-title: Audiences控制面板指南
+title: 受眾控制面板
 description: Adobe Experience Platform提供一個控制面板，您可以透過它檢視有關您組織已建立之對象的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3132'
 ht-degree: 9%
 
 ---

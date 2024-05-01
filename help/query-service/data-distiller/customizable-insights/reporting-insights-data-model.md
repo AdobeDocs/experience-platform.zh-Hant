@@ -2,7 +2,7 @@
 title: Query Accelerated Store Reporting Insights指南
 description: 瞭解如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 查詢加速存放區可讓您減少從資料獲得重要深入分析所需的時間和處理能力。 一般會定期（例如，每小時或每天）處理資料，並在此期間建立和報告彙總檢視。 分析這些從彙總資料產生的報表會得出旨在改善業務績效的見解。 query accelerated store提供快取服務、並行、互動式體驗和無狀態API。 不過，它假設資料已針對彙總查詢進行預處理和最佳化，而不是針對原始資料查詢。
 
-查詢加速存放區可讓您建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型。 然後，您就可以與互動，或將您的報表深入解析內嵌至您選擇的報表/視覺效果架構中。 請參閱Real-time Customer Data Platform Insights資料模型檔案以瞭解如何 [自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../../dashboards/cdp-insights-data-model.md).
+查詢加速存放區可讓您建立自訂資料模型及/或擴充現有的Adobe Real-time Customer Data Platform資料模型。 然後，您就可以與互動，或將您的報表深入解析內嵌至您選擇的報表/視覺效果架構中。 請參閱Real-time Customer Data Platform Insights資料模型檔案以瞭解如何 [自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、對象和目標的深入分析，並啟用Real-Time CDP深入分析控制面板。 本檔案將引導您完成建立報表見解資料模型的程式，同時也會說明如何視需要擴充Real-Time CDP資料模型。
 

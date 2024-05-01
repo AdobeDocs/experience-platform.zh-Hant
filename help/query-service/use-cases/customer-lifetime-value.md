@@ -2,7 +2,7 @@
 title: 追蹤資料訊號以產生客戶期限值
 description: 本指南提供端對端示範，說明如何搭配使用Data Distiller和使用者定義的儀表板與Real-time Customer Data Platform，以測量及視覺化客戶期限值。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -56,7 +56,7 @@ ht-degree: 0%
 * 建立維度表格以擴充您的報表見解模型。
 * 查詢您的擴充式加速存放區報告見解資料模型
 
-請參閱Real-time Customer Data Platform Insights資料模型檔案以瞭解如何 [自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../dashboards/cdp-insights-data-model.md).
+請參閱Real-time Customer Data Platform Insights資料模型檔案以瞭解如何 [自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 請務必設定排程，定期重新整理您的自訂資料模型。 這可確保資料會視需要傳回作為您擷取管道的一部分，並填入您的使用者定義儀表板。 請參閱 [排程查詢指南](../ui/query-schedules.md#create-schedule) 以瞭解如何設定您的排程。
 

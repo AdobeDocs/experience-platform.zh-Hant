@@ -1,9 +1,10 @@
 ---
 title: 受眾分析
 description: 探索為您的受眾深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索Adobe Experience Platform中的受眾資料。
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1124'
 ht-degree: 1%
 
 ---
@@ -14,8 +15,7 @@ ht-degree: 1%
 
 存取提供對象分析功能的SQL，藉此瞭解您的對象分析，然後產生您自己的分析，進一步探索組成對象的身分和設定檔。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
 
 下列見解全部都可供您用作 [受眾控制面板](../guides/audiences.md) 或自訂 [使用者定義儀表板](../user-defined-dashboards.md). 請參閱 [自訂概述](../customize/overview.md) 以取得如何自訂儀表板的指示，或 [建立和編輯新Widget](../customize/custom-widgets.md) 在Widget資料庫和 [使用者定義儀表板](../user-defined-dashboards.md#create-widget).
 
@@ -583,7 +583,6 @@ SELECT p.destination_platform ,
 
 閱讀本檔案後，您現在瞭解產生儀表板深入分析的SQL，以及此分析解決哪些常見問題。 您現在可以編輯並反複處理SQL，以產生您自己的深入分析。
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
 
-您也可以閱讀並瞭解為產生深入分析的SQL [設定檔](./profiles.md) 和 [目的地](./destinations.md) 控制面板。
+您也可以閱讀並瞭解為產生深入分析的SQL [設定檔](./profiles.md)， [帳戶設定檔](./account-profiles.md) 和 [目的地](./destinations.md) 控制面板。
