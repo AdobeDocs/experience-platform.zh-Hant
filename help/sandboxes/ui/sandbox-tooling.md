@@ -2,9 +2,9 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
+source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
 workflow-type: tm+mt
-source-wordcount: '2241'
+source-wordcount: '2314'
 ht-degree: 7%
 
 ---
@@ -137,7 +137,7 @@ ht-degree: 7%
 
 ![沙箱 **[!UICONTROL 瀏覽]** 索引標籤中反白匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-使用下拉式功能表，選取 **[!UICONTROL 封裝名稱]** 您想要匯入至目標沙箱。 新增選用專案 **[!UICONTROL 工作名稱]**，將用於日後的監視。 依預設，在匯入套件的結構描述時，統一設定檔將會停用。 切換 **為設定檔啟用結構描述** 若要啟用此功能，請選取 **[!UICONTROL 下一個]**.
+使用下拉式功能表，選取 **[!UICONTROL 封裝名稱]** 您想要匯入至目標沙箱。 新增 **[!UICONTROL 工作名稱]**，將用於日後的監視。 依預設，在匯入套件的結構描述時，統一設定檔將會停用。 切換 **為設定檔啟用結構描述** 若要啟用此功能，請選取 **[!UICONTROL 下一個]**.
 
 ![匯入詳細資訊頁面顯示 [!UICONTROL 封裝名稱] 下拉式清單選取專案](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
@@ -169,7 +169,12 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->完整沙箱匯出/匯入僅支援即時客戶資料平台物件。 將不會包含歷程物件。
+>目前，匯出或匯入整個沙箱時僅支援Real-time Customer Data Platform物件。 目前不支援歷程之類的Adobe Journey Optimizer物件。
+
+您可以將所有支援的物件型別匯出至完整的沙箱套件，然後跨各種沙箱匯入套件以複製物件設定。 例如，此功能可讓您：
+
+- 如果您需要重設沙箱，請重新匯入沙箱以重新產生物件的所有設定
+- 將套件匯入其他沙箱，並將其用作Blueprint沙箱以加快開發流程。
 
 ### 匯出整個沙箱 {#export-entire-sandbox}
 
@@ -210,48 +215,6 @@ ht-degree: 7%
 ![此 [!UICONTROL 套件物件與相依性] 頁面顯示不支援之物件型別的內嵌訊息，強調顯示 [!UICONTROL 匯入].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
 留出一些時間讓匯入完成。 完成時間會因封裝中的物件數目而異。 您可以從以下位置監視匯入作業： [!UICONTROL 沙箱] **[!UICONTROL 工作]** 標籤。
-
-<!--
-## Export and import an entire sandbox 
-
->[!NOTE]
->
->All export and import actions are recorded in the audit logs.
-
-### Export an entire sandbox {#export-entire-sandbox}
-
-To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
-
-![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
-
-Select **[!UICONTROL Entire sandbox]** for the Type of package in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
-
-![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
-
-The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
-
-![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
-
-You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
-
-### Import the entire sandbox package {#import-entire-sandbox-package}
-
-To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
-
-![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
-
-Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
-
-![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
-
->[!NOTE]
->
->All objects are created as new from the package when importing an entire sandbox. The objects are not listed in the [!UICONTROL Package object and dependencies] page, as there can be multiples. An inline message is displayed, advising of object types that are not supported.
-
-You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
-
- ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
--->
 
 ## 監視匯入詳細資料 {#view-import-details}
 
