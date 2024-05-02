@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2024 年 3 月)
 description: Adobe Experience Platform 2024 年 3 月的發行說明。
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
+source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 33%
@@ -39,20 +39,6 @@ Experience Platform現有功能的更新：
 
 如需有關目錄服務的詳細資訊，請參考[目錄服務概觀](../../catalog/home.md)。
 
-## 資料收集 {#data-collection}
-
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
-
-**新功能**
-
-| 類型 | 功能 | 說明 |
-| --- | --- | --- |
-| 擴充功能 | [!DNL Merkury] 標籤擴充功能 | 此 [[!DNL Merkury] 標籤延伸模組](https://exchange.adobe.com/apps/ec/600027/merkury-tag) 為訪客的匿名網站提供領先業界的匹配率， [!DNL Merkury] ID。 品牌可以利用 [!DNL Merkury] 標籤和Adobe，以提供即時的個人化網站體驗。 此外， [!DNL Merkury] 標籤可促進第一方數位資料的成長，以及連線的線上和離線客戶設定檔。 |
-
-{style="table-layout:auto"}
-
-若要進一步瞭解資料彙集，請參閱 [資料收集概觀](../../tags/home.md).
-
 ## 資料準備 {#data-prep}
 
 「資料準備」讓資料工程師可在體驗資料模式 (XDM) 之間對應、轉換和驗證資料。
@@ -66,6 +52,20 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 {style="table-layout:auto"}
 
 如需「資料準備」的詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
+
+## 資料收集 {#data-collection}
+
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+
+**新功能**
+
+| 類型 | 功能 | 說明 |
+| --- | --- | --- |
+| 擴充功能 | [!DNL Merkury] 標籤擴充功能 | 此 [[!DNL Merkury] 標籤延伸模組](https://exchange.adobe.com/apps/ec/600027/merkury-tag) 為訪客的匿名網站提供領先業界的匹配率， [!DNL Merkury] ID。 品牌可以利用 [!DNL Merkury] 標籤和Adobe，以提供即時的個人化網站體驗。 此外， [!DNL Merkury] 標籤可促進第一方數位資料的成長，以及連線的線上和離線客戶設定檔。 |
+
+{style="table-layout:auto"}
+
+若要進一步瞭解資料彙集，請參閱 [資料收集概觀](../../tags/home.md).
 
 ## 目的地 {#destinations}
 
