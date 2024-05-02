@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 常見問答
 description: 本檔案包含和查詢服務相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
-ht-degree: 1%
+source-wordcount: '4425'
+ht-degree: 0%
 
 ---
 
@@ -125,7 +125,7 @@ SELECT * FROM customers LIMIT 0;
 +++回答
 [Adobe客戶支援電話號碼的完整清單](https://helpx.adobe.com/ca/contact/phone.html) 可在Adobe說明頁面上取得。 或者，您也可以完成下列步驟，線上上取得說明：
 
-- 瀏覽至 [https://www.adobe.com/](https://www.adobe.com/) 在網頁瀏覽器中。
+- 瀏覽至 [https://www.adobe.com/](https://www.adobe.com/tw) 在網頁瀏覽器中。
 - 在頂端導覽列的右側，選取 **[!UICONTROL 登入]**.
 
 ![已登入的Adobe網站會醒目提示。](./images/troubleshooting/adobe-sign-in.png)
@@ -277,7 +277,7 @@ SELECT count(1) FROM myTableName
 
 您也應該查閱檔案以瞭解如何執行的指引 [UI中已排程的查詢](./ui/user-guide.md#scheduled-queries) 和至 [API](./api/scheduled-queries.md).
 
-請注意，使用時 [!DNL Query Editor] 您只能將排程新增至已建立、儲存及執行的查詢。 這不適用於 [!DNL Query Service] API。
+請注意，使用時 [!DNL Query Editor] 您只能將排程新增至已建立並儲存的查詢。 這不適用於 [!DNL Query Service] API。
 +++
 
 ### 「已達工作階段上限」錯誤是什麼意思？
@@ -457,7 +457,7 @@ WHERE T2.ID IS NULL
 
 +++
 
-### 我可以使用CTAS查詢建立具有雙底線名稱（類似於UI中顯示的名稱）的資料集嗎？ 例如: `test_table_001`.
+### 我可以使用CTAS查詢建立具有雙底線名稱（類似於UI中顯示的名稱）的資料集嗎？ 例如: `test_table_001`。
 
 +++答案否，這是各Experience Platform的刻意限制，適用於所有Adobe服務，包括查詢服務。 結構描述和資料集名稱可接受具有兩個底線的名稱，但資料集的表格名稱只能包含單一底線。
 +++
@@ -648,18 +648,18 @@ and timestamp < to_timestamp('2022-07-23');
 | **08P01** | 不適用 | 不支援的訊息型別 | 不支援的訊息型別 |
 | **28P01** | 啟動 — 驗證 | 密碼無效 | 無效的驗證Token |
 | **28000** | 啟動 — 驗證 | 無效的授權型別 | 無效的授權型別。 必須是 `AuthenticationCleartextPassword`. |
-| **42P12** | 啟動 — 驗證 | 找不到表格 | 找不到要使用的資料表 |
+| **四十二點12** | 啟動 — 驗證 | 找不到表格 | 找不到要使用的資料表 |
 | **42601** | 查詢 | 語法錯誤 | 無效的命令或語法錯誤 |
-| **42P01** | 查詢 | 找不到表格 | 找不到查詢中指定的資料表 |
-| **42P07** | 查詢 | 表格已存在 | 已有相同名稱的表格存在(CREATE TABLE) |
+| **四十二點01** | 查詢 | 找不到表格 | 找不到查詢中指定的資料表 |
+| **四十二點07** | 查詢 | 表格已存在 | 已有相同名稱的表格存在(CREATE TABLE) |
 | **53400** | 查詢 | LIMIT超過最大值 | 使用者指定的LIMIT子句高於100,000 |
 | **53400** | 查詢 | 陳述式逾時 | 提交即時陳述式所花時間超過10分鐘上限 |
 | **58000** | 查詢 | 系統錯誤 | 內部系統失敗 |
 | **0A000** | 查詢/命令 | 不支援 | 不支援查詢/命令中的特性/功能 |
 | **42501** | 刪除表格查詢 | 正在卸除不是由查詢服務建立的資料表 | 正在捨棄的資料表不是由查詢服務使用 `CREATE TABLE` 陳述式 |
 | **42501** | 刪除表格查詢 | 資料表不是由已驗證的使用者建立 | 目前登入的使用者並未建立正在捨棄的表格 |
-| **42P01** | 刪除表格查詢 | 找不到表格 | 找不到查詢中指定的資料表 |
-| **42P12** | 刪除表格查詢 | 找不到下列專案的表格： `dbName`：請檢視 `dbName` | 在目前的資料庫中找不到資料表 |
+| **四十二點01** | 刪除表格查詢 | 找不到表格 | 找不到查詢中指定的資料表 |
+| **四十二點12** | 刪除表格查詢 | 找不到下列專案的表格： `dbName`：請檢視 `dbName` | 在目前的資料庫中找不到資料表 |
 
 ### 為什麼我在表格上使用history_meta()方法時會收到58000錯誤碼？
 

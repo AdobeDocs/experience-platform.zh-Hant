@@ -2,9 +2,9 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 0%
 
 ---
@@ -67,16 +67,20 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不同量度。
 
+>[!IMPORTANT]
+>
+>如果您未提供日期篩選器，前瞻分析的預設行為會分析從前一年到今天新增的資料。
+
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
 * [帳戶設定檔已新增](#account-profiles-added)
-* [各產業客戶](#accounts-by-industry)
-* [依型別的帳戶](#accounts-by-type)
+* [依產業的新帳戶](#accounts-by-industry)
+* [新帳戶（依型別）](#accounts-by-type)
 * [機會已新增](#opportunities-added)
-* [依個人角色的機會](#opportunities-by-person-role)
-* [商機（依收入）](#opportunities-by-revenue)
-* [按狀態與階段列出的機會](#opportunities-by-status-&-stage)
-* [成功的機會](#opportunities-won)
+* [依個人角色的新機會](#opportunities-by-person-role)
+* [按收入顯示的新商機](#opportunities-by-revenue)
+* [按狀態和階段的新機會](#opportunities-by-status-&-stage)
+* [贏得新商機](#opportunities-won)
 * [預測性評分分佈](#predictive-scoring-distribution)
 * [預測性評分主要影響因素](#predictive-scoring-top-influential-factors)
 * [依產業區分的帳戶總數](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 ![帳戶設定檔已新增Widget。](../images/account-profiles/account-profiles-added.png)
 
-### 各產業客戶 {#accounts-by-industry}
+### 依產業的新帳戶 {#accounts-by-industry}
 
-此 [!UICONTROL 各產業客戶] widget會顯示環形圖內單一量度的帳戶總數。 環圈圖說明了組成此總計的不同產業的相對組成。 以色彩編碼的索引鍵提供所有包含的產業劃分。 當游標暫留在環圈圖的個別區段上時，會在對話方塊中顯示每個產業的個人計數。
+此 [!UICONTROL 依產業的新帳戶] widget會顯示環形圖內單一量度的帳戶總數。 環圈圖說明了組成此總計的不同產業的相對組成。 以色彩編碼的索引鍵提供所有包含的產業劃分。 當游標暫留在環圈圖的個別區段上時，會在對話方塊中顯示每個產業的個人計數。
 
-![依產業劃分的帳戶Widget。](../images/account-profiles/accounts-by-industry.png)
+![依產業Widget的新帳戶。](../images/account-profiles/new-accounts-by-industry.png)
 
-### 依型別的帳戶 {#accounts-by-type}
+### 新帳戶（依型別） {#accounts-by-type}
 
-此 [!UICONTROL 依型別的帳戶] widget會顯示環形圖內單一量度的帳戶總數。 環形圖說明構成此總計的不同帳戶型別的相對組成。 以色彩編碼的金鑰提供所有包含的帳戶型別的劃分。 當游標暫留在環圈圖的個別區段上時，每種型別的帳戶個別計數都會顯示在對話方塊中。
+此 [!UICONTROL 新帳戶（依型別）] widget會顯示環形圖內單一量度的帳戶總數。 環形圖說明構成此總計的不同帳戶型別的相對組成。 以色彩編碼的金鑰提供所有包含的帳戶型別的劃分。 當游標暫留在環圈圖的個別區段上時，每種型別的帳戶個別計數都會顯示在對話方塊中。
 
-![「帳戶」依型別Widget。](../images/account-profiles/accounts-by-type.png)
+![新帳戶（依型別Widget）。](../images/account-profiles/new-accounts-by-type.png)
 
 ### 機會已新增 {#opportunities-added}
 
@@ -107,35 +111,35 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 ![機會已新增Widget。](../images/account-profiles/opportunities-added.png)
 
-### 依個人角色的機會 {#opportunities-by-person-role}
+### 依個人角色的新機會 {#opportunities-by-person-role}
 
-此 [!UICONTROL 依個人角色的機會] widget會在環形圖內的單一量度中顯示您的機會總數。 環圈圖說明構成此機會總數的角色相對組成。 以色彩編碼的金鑰提供所有包含角色的劃分。 當游標暫留在環圈圖的個別區段上時，每個角色的個別計數都會顯示在對話方塊中。
+此 [!UICONTROL 依個人角色的新機會] widget會在環形圖內的單一量度中顯示您的機會總數。 環圈圖說明構成此機會總數的角色相對組成。 以色彩編碼的金鑰提供所有包含角色的劃分。 當游標暫留在環圈圖的個別區段上時，每個角色的個別計數都會顯示在對話方塊中。
 
 >[!NOTE]
 >
 >此 [!UICONTROL 找不到資料] 或 [!UICONTROL 無法載入] 未在結構描述中使用「Opportunity-Person」橋接表格時，會導致錯誤。 如果您的分析顯示其中一個錯誤，請檢查您的聯合結構描述，並確定「機會 — 人員」欄位群組正在擷取資料。
 
-![依個人列出的機會Widget。](../images/account-profiles/opportunities-by-person-role.png)
+![依人員角色的新機會Widget。](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### 商機（依收入） {#opportunities-by-revenue}
+### 按收入顯示的新商機 {#opportunities-by-revenue}
 
-此 [!UICONTROL 商機（依收入）] widget使用長條圖來說明您的商機所產生的預估收入總額。 Widget最多可支援六個機會。
+此 [!UICONTROL 按收入顯示的新商機] widget使用長條圖來說明您的商機所產生的預估收入總額。 Widget最多可支援六個機會。
 
 若要檢視包含商機之特定收入總計的對話方塊，請使用游標暫留在個別長條上。
 
-![按收入分類的機會Widget。](../images/account-profiles/opportunities-by-revenue.png)
+![依收入分類的新商機Widget。](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### 按狀態與階段列出的機會 {#opportunities-by-status-&-stage}
+### 按狀態和階段的新機會 {#opportunities-by-status-&-stage}
 
 此Widget使用長條圖來說明在行銷/銷售漏斗的所有階段中開啟或關閉的機會數量。 Widget會使用顏色來區分機會的階段。 以色彩編碼的索引鍵表示商機的可用階段。
 
-![按狀態和階段Widget分類的機會。](../images/account-profiles/opportunities-by-status-&-stage.png)
+![按狀態和階段Widget顯示的新商機。](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### 成功的機會 {#opportunities-won}
+### 贏得新商機 {#opportunities-won}
 
-此 [!UICONTROL 成功的機會] widget會在環形圖中顯示已在單一量度中成功完成的業務機會總數。 環圈圖可說明成功或失敗機會的相對組成。 以色彩編碼的金鑰會區分成功與未成功的商機。 當游標暫留在環圈圖的個別區段上時，每個角色的個別計數都會顯示在對話方塊中。
+此 [!UICONTROL 贏得新商機] widget會在環形圖中顯示已在單一量度中成功完成的業務機會總數。 環圈圖可說明成功或失敗機會的相對組成。 以色彩編碼的金鑰會區分成功與未成功的商機。 當游標暫留在環圈圖的個別區段上時，每個角色的個別計數都會顯示在對話方塊中。
 
-![機會贏得了Widget。](../images/account-profiles/opportunities-won.png)
+![新機會贏得了Widget。](../images/account-profiles/new-opportunities-won.png)
 
 ### 預測性評分分佈 {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ Widget中的下拉式功能表可讓您選取帳戶評分模式。
 ### 依產業區分的帳戶總數 {#total-accounts-by-industry}
 
 此Widget會顯示單一量度中的帳戶總數，並使用環形圖來說明構成整體數字的產業中計數比例大小。 索引鍵提供組成環圈圖之不同產業的色彩編碼資訊。
+
+>[!NOTE]
+>
+>此深入分析所顯示的資訊取決於您指定的日期範圍。 如果您未提供日期篩選，則洞察的預設行為會分析從前一年到今天新增的資料。
 
 當游標暫留在環圈圖的個別區段上時，不同產業的個人計數會顯示在對話方塊中。
 

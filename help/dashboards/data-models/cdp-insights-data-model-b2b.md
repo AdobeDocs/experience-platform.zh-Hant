@@ -3,9 +3,10 @@ title: Real-time Customer Data Platform Insights資料模型B2B版本
 description: 瞭解如何使用SQL查詢搭配Real-time Customer Data Platform Insights Data Models (B2B Edition)來自訂您自己的Real-Time CDP報告，以用於您的行銷和KPI使用案例。
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -49,15 +50,15 @@ Real-Time CDP B2B報告提供您帳戶設定檔資料以及帳戶與商機之間
 
 ![帳戶設定檔模型的實體關聯圖表。](../images/data-models/account-profile-model.png)
 
-#### 依產業使用案例的帳戶 {#accounts-by-industry}
+#### 依產業使用案例的新帳戶 {#accounts-by-industry}
 
-用於的邏輯 [!UICONTROL 各產業帳戶] insight會根據帳戶設定檔的數量及彼此的相對大小，傳回前五大產業。 請參閱 [[!UICONTROL 各產業帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-industry) 以取得詳細資訊。
+用於的邏輯 [!UICONTROL 依產業的新帳戶] insight會根據帳戶設定檔的數量及彼此的相對大小，傳回前五大產業。 請參閱 [[!UICONTROL 各產業帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-industry) 以取得詳細資訊。
 
 >[!TIP]
 >
 >您可以自訂此SQL查詢，以傳回大致前五個產業。
 
-產生 [!UICONTROL 各產業帳戶] 可在下方的可摺疊區段中看到深入分析。
+產生 [!UICONTROL 依產業的新帳戶] 可在下方的可摺疊區段中看到深入分析。
 
 +++SQL查詢
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### 按型別分類帳戶的使用案例 {#accounts-by-type}
+#### 新帳戶（依型別分類）使用案例 {#accounts-by-type}
 
-用於的邏輯 [!UICONTROL 按型別帳戶] insight會傳回依型別劃分的帳戶數字細目。 此深入分析可協助引導業務策略與營運，包括資源分配或行銷策略。 請參閱 [[!UICONTROL 按型別帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-type) 以取得詳細資訊。
+用於的邏輯 [!UICONTROL 新帳戶（依型別）] insight會傳回依型別劃分的帳戶數字細目。 此深入分析可協助引導業務策略與營運，包括資源分配或行銷策略。 請參閱 [[!UICONTROL 新帳戶（依型別）] Widget檔案](../guides/account-profiles.md#accounts-by-type) 以取得詳細資訊。
 
-產生 [!UICONTROL 按型別帳戶] 可在下方的可摺疊區段中看到深入分析。
+產生 [!UICONTROL 新帳戶（依型別）] 可在下方的可摺疊區段中看到深入分析。
 
 +++SQL查詢
 

@@ -3,9 +3,10 @@ title: 帳戶設定檔深入分析
 description: 探索為您的帳戶設定檔深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索您的客戶及其消費者體驗。
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## 各產業客戶 {#accounts-by-industry}
+## 依產業的新帳戶 {#accounts-by-industry}
 
 此深入分析所回答的問題：
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## 依型別的帳戶 {#accounts-by-type}
+## 新帳戶（依型別） {#accounts-by-type}
 
 此深入分析所回答的問題：
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## 依個人角色的機會 {#opportunities-by-person-role}
+## 依個人角色的新機會 {#opportunities-by-person-role}
 
 此深入分析所回答的問題：
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## 商機（依收入） {#opportunities-by-revenue}
+## 按收入顯示的新商機 {#opportunities-by-revenue}
 
 此深入分析所回答的問題：
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## 按狀態與階段列出的機會 {#opportunities-by-status-and-stage}
+## 按狀態和階段的新機會 {#opportunities-by-status-and-stage}
 
 此深入分析所回答的問題：
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## 成功的機會 {#opportunities-won}
+## 贏得新商機 {#opportunities-won}
 
 此深入分析所回答的問題：
 
