@@ -215,7 +215,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
    >[!NOTE]
    >
-此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+   >此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
 
    ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
