@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
+source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4274'
 ht-degree: 3%
 
 ---
@@ -82,12 +82,8 @@ ht-degree: 3%
 | [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
 | [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
-| [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 |
+| [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 用於下游目的地或為其他對象相依對象的對象 **無法** 都會被刪除。 如需有關刪除對象的詳細資訊，請參閱 [區段常見問題集](../faq.md#lifecycle-states). |
 | [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> 您將會 **非** 能夠刪除用於目的地啟用的對象。
 
 頁面頂端有選項，可新增所有對象至排程、匯入對象、建立新對象和檢視更新頻率的劃分。
 
@@ -356,6 +352,15 @@ ht-degree: 3%
 
 ![此 [!UICONTROL 對象詳細資料] 頁面隨即顯示。](../images/ui/overview/import-audience-audience-details.png)
 
+您也可以選擇向外部產生的對象新增一些額外詳細資訊，包括提供ID、定義其合併原則或編輯其欄資料型別。
+
+>[!NOTE]
+>
+>如果您使用自訂外部對象ID，則必須遵循下列准則：
+>
+> - It **必須** 以字母（a-z或A-Z）、底線(_)或美元符號($)開頭。
+> - 所有後續字元都可由英數字元(a-z、A-Z、0-9)、底線(_)或美元符號($)組成。
+
 填寫對象詳細資料後，選擇 **[!UICONTROL 下一個]**.
 
 ![此 [!UICONTROL 下一個] 按鈕上會醒目提示 [!UICONTROL 對象詳細資料] 頁面。](../images/ui/overview/import-audience-filled-details.png)
@@ -397,6 +402,14 @@ ht-degree: 3%
 ![在對象構成中為您組織建立的對象清單。](../images/ui/overview/compositions.png)
 
 依預設，此檢視會列出對象的相關資訊，包括名稱、狀態、建立日期、建立者、上次更新日期和上次更新者。
+
+每個對象旁都會顯示一個省略符號圖示。 選取此專案會顯示對象可用的快速動作清單。
+
+| 動作 | 說明 |
+| ------ | ----------- |
+| 複製 | 複製選取的對象。 |
+| 管理存取權 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
+| 刪除 | 刪除選取的對象。 用於下游目的地或為其他對象相依對象的對象 **無法** 都會被刪除。 如需有關刪除對象的詳細資訊，請參閱 [區段常見問題集](../faq.md#lifecycle-states). |
 
 您可以選取 ![自訂表格](../images/ui/overview/customize-table.png) 圖示可變更要顯示的欄位。
 

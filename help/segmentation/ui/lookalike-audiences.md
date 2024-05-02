@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 相似的對象
 description: 瞭解如何使用Adobe Experience Platform中的相似受眾鎖定新的高價值受眾。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2193'
 ht-degree: 9%
 
 ---
@@ -197,7 +197,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 標準「C9」標籤可用於標籤不應用於資料科學的資料，並可透過啟用標準「限制資料科學」原則來強制執行。 您也可以建立其他原則，以限制使用其他標籤（包括敏感標籤）的資料，避免其用於資料科學。 如需管理資料使用原則的詳細資訊，請參閱 [資料使用原則UI指南](../../data-governance/policies/user-guide.md). 如需管理資料使用標籤的詳細資訊，請參閱 [資料使用標籤UI指南](../../data-governance/labels/user-guide.md).
 
-依預設，相似對象的模型化程式將會排除 **任何** 根據貴組織啟用的隱私權原則的欄位、資料集或對象。 如果基本對象沒有合約標籤，則模型流程會排除 **任何** 根據貴組織啟用的隱私權原則的欄位、資料集或對象。
+根據預設，如果基本對象沒有合約標籤，則相似對象的模型流程將排除 **任何** 根據貴組織啟用的隱私權原則的欄位、資料集或對象。
 
 ## 後續步驟
 
