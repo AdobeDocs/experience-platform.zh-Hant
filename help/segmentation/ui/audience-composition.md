@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
+source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
 workflow-type: tm+mt
-source-wordcount: '1844'
+source-wordcount: '1889'
 ht-degree: 0%
 
 ---
@@ -55,6 +55,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >請注意 **僅限** 使用預設合併原則定義的對象將會出現。
+>
+>此外，僅 **已發佈** 您可以使用使用區段產生器建立的對象。 使用對象構成和外部產生的對象建立的對象為 **非** 可用。
 
 對象清單隨即顯示。 選取您要包含的對象，接著 **[!UICONTROL 新增]** 以將它們附加至您的對象區塊。
 
@@ -101,6 +103,10 @@ ht-degree: 0%
 如果您依對象排除，您可以選取「 」，以選取您要排除的對象 **[!UICONTROL 新增對象]**.
 
 ![此 [!UICONTROL 新增對象] 按鈕已選取，可讓您選擇要排除的對象。](../images/ui/audience-composition/add-excluded-audience.png)
+
+>[!IMPORTANT]
+>
+>僅限 **已發佈** 您可以使用使用區段產生器建立的對象。 使用對象構成和外部產生的對象建立的對象為 **非** 可用。
 
 對象清單隨即顯示。 選取 **[!UICONTROL 新增]** 以將您想要排除的對象新增至排除區塊。
 
