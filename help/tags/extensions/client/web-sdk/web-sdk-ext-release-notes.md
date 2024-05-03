@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1983'
+source-wordcount: '2024'
 ht-degree: 32%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 32%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](/help/web-sdk/release-notes.md).
+
+## 2.22.0版 — 2024年5月3日
+
+**新功能**
+
+* 擴充變數資料元素以支援資料物件。
+* 「更新變數」動作現在支援修改傳遞Adobe Analytics、Adobe Audience Manager和Adobe Target資料。
+
+包含2.19.2版的Adobe Experience Platform Web SDK。
 
 ## 2.21.4版 — 2024年1月10日
 
@@ -176,7 +185,7 @@ ht-degree: 32%
 
 包含 2.7.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 在「傳送事件完成」事件中可取得來自Edge Network的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。
+* 「傳送事件完成」事件中可提供Edge Network的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。
 
 ## 2.7.3版 — 2021年9月7日
 
