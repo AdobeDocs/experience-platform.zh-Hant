@@ -2,10 +2,10 @@
 title: 使用Adobe Target搭配Web SDK進行個人化
 description: 瞭解如何使用Adobe Target以Experience Platform Web SDK呈現個人化內容
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
+source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 5%
+source-wordcount: '1354'
+ht-degree: 4%
 
 ---
 
@@ -184,6 +184,58 @@ alloy("sendEvent",
 | `data` | 物件 | 傳送至的任意索引鍵/值組 [!DNL Target] 目標類別下的解決方案。 |
 
 典型 [!DNL Web SDK] 使用此命令的程式碼如下所示：
+
+**延遲儲存設定檔或實體引數，直到內容顯示給一般使用者為止**
+
+若要延遲在設定檔中記錄屬性，直到內容已顯示，請設定 `data.adobe.target._save=false` 在您的請求中。
+
+例如，您的網站包含三個決定範圍，分別對應至網站上的三個類別連結（「男性、女性和兒童」），而您想要追蹤使用者最後造訪的類別。 傳送這些要求與 `__save` 標幟設定為 `false` 以避免在請求內容時保留類別。 將內容視覺化之後，傳送適當的裝載(包括 `eventToken` 和 `stateToken`)來記錄對應的屬性。
+
+<!--Save profile or entity attributes by default with:
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "__save" : true // Optional. __save=true is the default 
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt",
+        "entity.id" : "1234",
+      }
+    }
+  }
+} ) ; 
+```
+-->
+
+以下範例會傳送trackEvent樣式訊息、執行設定檔指令碼、儲存屬性，並立即記錄事件。
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt" ,
+        "entity.id" : "1234" ,
+        "track": {
+          "scopes": [ "mbox1", "mbox2"],
+          "type": "display|click|..."
+        }
+      }
+    }
+  }
+} ) ;
+```
+
+>[!NOTE]
+>
+>如果 `__save` 指令會被省略，儲存設定檔和實體屬性會立即進行，就像請求已執行一樣，即使請求的其餘部分是個人化的預先擷取。 此 `__save` 指示只與設定檔和實體屬性相關。 如果追蹤物件存在， `__save` 指示詞已忽略。 資料會立即儲存並記錄通知。
 
 **`sendEvent`使用設定檔資料**
 
