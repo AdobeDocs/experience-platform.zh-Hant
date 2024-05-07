@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
+source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
 workflow-type: tm+mt
 source-wordcount: '4274'
 ht-degree: 3%
@@ -23,7 +23,7 @@ ht-degree: 3%
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md)：可透過橋接正在被擷取到的不同資料來源的身分，以建立客戶設定檔 [!DNL Platform].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。 為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
 
-您也應該瞭解在本檔案中使用的兩個關鍵辭彙，並瞭解它們之間的差異：
+您也應該瞭解在本檔案中使用的三個關鍵辭彙，並瞭解它們之間的差異：
 
 - **對象**：一組具有類似行為和/或特徵的人。 此人員集合可由Adobe Experience Platform使用區段定義或對象構成（平台產生的對象）產生，或由外部來源（例如自訂上傳）（外部產生的對象）產生。
 - **區段定義**：Adobe Experience Platform用來說明目標對象之關鍵特性或行為的規則。
