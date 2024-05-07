@@ -1,17 +1,17 @@
 ---
 title: 設定資料流覆寫
-description: 了解如何在資料流 UI 中設定資料流覆寫並透過 Web SDK 啟動它們。
+description: 瞭解如何在資料串流UI中設定資料串流覆寫，並透過Web SDK或Mobile SDK啟用它們。
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 68%
+source-wordcount: '1081'
+ht-degree: 57%
 
 ---
 
 # 設定資料流覆寫
 
-資料流覆寫可讓您定義資料流的額外設定，這些設定會透過 Web SDK 傳遞到 Edge Network。
+資料流覆寫可讓您為資料流定義其他設定，這些設定會透過Web SDK或Mobile SDK傳遞給Edge Network。
 
 這可幫助您觸發與預設資料流不同的資料流行為，而無需建立資料流或修改現有設定。
 
@@ -68,7 +68,7 @@ ht-degree: 68%
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該設定了 Adobe Target 資料流覆寫。現在您可以[透過 Web SDK 將覆寫發送到 Edge Network](#send-overrides)。
+您現在應該設定了 Adobe Target 資料流覆寫。現在您可以 [透過Web SDK或Mobile SDK將覆寫傳送至Edge Network](#send-overrides).
 
 ### 適用於 Adobe Analytics 的資料流覆寫 {#analytics-overrides}
 
@@ -82,7 +82,7 @@ ht-degree: 68%
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該設定了 Adobe Analytics 資料流覆寫。現在您可以[透過 Web SDK 將覆寫發送到 Edge Network](#send-overrides)。
+您現在應該設定了 Adobe Analytics 資料流覆寫。現在您可以 [透過Web SDK或Mobile SDK將覆寫傳送至Edge Network](#send-overrides).
 
 ### 適用於 Experience Platform 事件資料集的資料流覆寫 {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ ht-degree: 68%
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該設定了 Adobe Experience Platform 資料流覆寫。現在您可以[透過 Web SDK 將覆寫發送到 Edge Network](#send-overrides)。
+您現在應該設定了 Adobe Experience Platform 資料流覆寫。現在您可以 [透過Web SDK或Mobile SDK將覆寫傳送至Edge Network](#send-overrides).
 
 ### 適用於協力廠商 ID 同步容器的資料流覆寫 {#container-overrides}
 
@@ -112,9 +112,9 @@ ht-degree: 68%
 
 新增所需的覆寫後，請儲存資料流設定。
 
-您現在應該設定了 ID 同步容器覆寫。現在您可以[透過 Web SDK 將覆寫傳送到 Edge Network](#send-overrides)。
+您現在應該設定了 ID 同步容器覆寫。現在您可以 [透過Web SDK或Mobile SDK將覆寫傳送至Edge Network](#send-overrides).
 
-## 透過 Web SDK 將覆寫傳送至 Edge Network {#send-overrides}
+## 將覆寫傳送至Edge Network {#send-overrides}
 
 在資料收集UI中設定資料流覆寫後，您可以透過Web SDK或Mobile SDK將覆寫傳送給Edge Network。
 
