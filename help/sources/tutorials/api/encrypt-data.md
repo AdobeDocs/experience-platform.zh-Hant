@@ -2,16 +2,16 @@
 title: 加密的資料擷取
 description: 瞭解如何使用API透過雲端儲存批次來源內嵌加密的檔案。
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1736'
 ht-degree: 2%
 
 ---
 
 # 加密的資料擷取
 
-Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的檔案。 透過加密的資料擷取，您可以運用非對稱的加密機制，將批次資料安全地傳輸至Experience Platform。 目前，支援的非對稱加密機製為PGP和GPG。
+您可以使用雲端儲存批次來源，將加密資料檔案擷取至Adobe Experience Platform。 透過加密的資料擷取，您可以運用非對稱的加密機制，將批次資料安全地傳輸至Experience Platform。 目前，支援的非對稱加密機製為PGP和GPG。
 
 加密的資料擷取程式如下：
 
@@ -27,7 +27,7 @@ Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的�
 
 本檔案提供如何產生加密金鑰組以加密您的資料，以及使用雲端儲存空間來源將加密資料擷取到Experience Platform的步驟。
 
-## 快速入門
+## 快速入門 {#get-started}
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
@@ -39,9 +39,9 @@ Adobe Experience Platform可讓您透過雲端儲存批次來源內嵌加密的�
 
 如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../landing/api-guide.md).
 
-### 加密檔案支援的副檔名
+### 加密檔案支援的副檔名 {#supported-file-extensions-for-encrypted-files}
 
-加密檔案支援的副檔名清單如下：
+加密檔案支援的副檔名清單為：
 
 * .csv
 * .tsv
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **要求**
 
++++檢視範例請求
+
 下列要求會使用PGP加密演演算法產生加密金鑰組。
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | 您使用的加密演演算法型別。 支援的加密型別為 `PGP` 和 `GPG`. |
 | `params.passPhrase` | 密碼可為您的加密金鑰提供額外的保護層。 建立後，Experience Platform會將複雜密碼與公開金鑰儲存在不同的安全儲存庫中。 您必須提供非空白字串作為複雜密碼。 |
 
++++
+
 **回應**
+
++++檢視範例回應
 
 成功的回應會傳回Base64編碼的公開金鑰、公開金鑰ID，以及金鑰的到期時間。 到期時間會自動設定為產生金鑰日期後的180天。 到期時間目前無法設定。
 
@@ -115,9 +121,93 @@ curl -X POST \
 | `publicKeyId` | 公開金鑰ID可用來建立資料流，以及將加密的雲端儲存空間資料擷取到Experience Platform。 |
 | `expiryTime` | 到期時間會定義加密金鑰組的到期日。 此日期會自動設定為產生金鑰的日期後180天，並以unix時間戳記格式顯示。 |
 
-+++（可選）為已簽署的資料建立簽署驗證金鑰組
++++
 
-### 建立客戶自控金鑰組
+### 擷取加密金鑰 {#retrieve-encryption-keys}
+
+若要擷取貴組織內的所有加密金鑰，請向以下網站發出GET請求： `/encryption/keys` endpoit=nt.
+
+**API格式**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**要求**
+
++++檢視範例請求
+
+以下請求會擷取貴組織中的所有加密金鑰。
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**回應**
+
++++檢視範例回應
+
+成功的回應會傳回您的加密演演算法、公開金鑰、公開金鑰ID，以及您金鑰對應的到期時間。
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### 依ID擷取加密金鑰 {#retrieve-encryption-keys-by-id}
+
+GET若要擷取一組特定的加密金鑰，請向 `/encryption/keys` 端點，並提供您的公開金鑰ID作為標頭引數。
+
+**API格式**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**要求**
+
++++檢視範例請求
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**回應**
+
++++檢視範例回應
+
+成功的回應會傳回您的加密演演算法、公開金鑰、公開金鑰ID，以及您金鑰對應的到期時間。
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### 建立客戶自控金鑰組 {#create-customer-managed-key-pair}
 
 您可以選擇建立簽署驗證金鑰組，以簽署並擷取您的加密資料。
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **要求**
+
++++檢視範例請求
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | 您使用的加密演演算法型別。 支援的加密型別為 `PGP` 和 `GPG`. |
 | `publicKey` | 與您用來簽署已加密之客戶自控金鑰對應的公開金鑰。 此金鑰必須使用Base64編碼。 |
 
++++
+
 **回應**
+
++++檢視範例回應
 
 ```json
 {    
@@ -179,7 +275,7 @@ curl -X POST \
 * [Azure Blob](../api/create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../api/create/cloud-storage/adls-gen2.md)
 * [Azure檔案儲存體](../api/create/cloud-storage/azure-file-storage.md)
-* [Data Landing Zone](../api/create/cloud-storage/data-landing-zone.md)
+* [資料登陸區域](../api/create/cloud-storage/data-landing-zone.md)
 * [FTP](../api/create/cloud-storage/ftp.md)
 * [Google雲端儲存空間](../api/create/cloud-storage/google.md)
 * [oracle物件儲存](../api/create/cloud-storage/oracle-object-storage.md)
@@ -196,7 +292,7 @@ curl -X POST \
 >* [公開金鑰ID](#create-encryption-key-pair)
 >* [來源連線ID](../api/collect/cloud-storage.md#source)
 >* [目標連線ID](../api/collect/cloud-storage.md#target)
->* [對應 ID](../api/collect/cloud-storage.md#mapping)
+>* [對應ID](../api/collect/cloud-storage.md#mapping)
 
 POST若要建立資料流，請向 `/flows` 的端點 [!DNL Flow Service] API。 若要內嵌加密的資料，您必須新增 `encryption` 區段至 `transformations` 屬性並包含 `publicKeyId` 之前步驟中建立的物件。
 
@@ -206,11 +302,13 @@ POST若要建立資料流，請向 `/flows` 的端點 [!DNL Flow Service] API。
 POST /flows
 ```
 
-**要求**
-
 >[!BEGINTABS]
 
 >[!TAB 建立資料流以進行加密的資料擷取]
+
+**要求**
+
++++檢視範例請求
 
 以下請求會建立資料流，以擷取雲端儲存空間的加密資料。
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`， `minute`， `hour`， `day`，或 `week`. |
 | `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 間隔的值應為非零整數。 當頻率設定為 `once` 且應大於或等於 `15` 其他頻率值。 |
 
++++
+
+**回應**
+
++++檢視範例回應
+
+成功的回應會傳回ID (`id`)中，所有新增的資料流都會顯示這個值。
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB 建立資料流以擷取加密和簽署的資料]
+
+**要求**
+
++++檢視範例請求
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | 簽署驗證金鑰ID與使用Experience Platform共用Base64編碼公開金鑰後擷取的公開金鑰ID相同。 |
 
->[!ENDTABS]
++++
 
 **回應**
+
++++檢視範例回應
 
 成功的回應會傳回ID (`id`)中，所有新增的資料流都會顯示這個值。
 
@@ -331,10 +451,92 @@ curl -X POST \
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**週期性內嵌的限制**
+### 刪除加密金鑰 {#delete-encryption-keys}
+
+DELETE若要刪除您的加密金鑰，請向 `/encryption/keys` 端點，並提供您的公開金鑰ID作為標頭引數。
+
+**API格式**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**要求**
+
++++檢視範例請求
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**回應**
+
+成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
+
+### 驗證加密金鑰 {#validate-encryption-keys}
+
+GET若要驗證您的加密金鑰，請向 `/encryption/keys/validate/` 端點，並提供您要驗證為標頭引數的公開金鑰ID。
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**要求**
+
++++檢視範例請求
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**回應**
+
+成功的回應會傳回確認ID有效或無效的訊息。
+
+>[!BEGINTABS]
+
+>[!TAB 有效]
+
+有效的公開金鑰ID傳回狀態 `Active` 以及您的公開金鑰ID。
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB 無效]
+
+無效的公開金鑰ID傳回狀態 `Expired` 以及您的公開金鑰ID。
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## 週期性內嵌的限制 {#restrictions-on-recurring-ingestion}
 
 加密的資料擷取不支援在來源中擷取循環或多層資料夾。 所有加密的檔案都必須包含在單一資料夾中。 也不支援在單一來源路徑中包含多個資料夾的萬用字元。
 
@@ -356,14 +558,13 @@ curl -X POST \
 * ACME — 客戶
    * File1.csv.gpg
    * File2.json.gpg
-   * Subfolder1
+   * 子資料夾1
       * File3.csv.gpg
       * File4.json.gpg
       * File5.csv.gpg
 * ACME忠誠度
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## 後續步驟
 
