@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
 workflow-type: tm+mt
 source-wordcount: '3337'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="資料流執行詳細資訊"
->abstract="目的地資料流執行詳細資訊包含對象啟用狀態的資訊，以及從Real-Time Customer Profile取得的量度，以產生唯一身分。 若要深入了解，請檢閱量度定義指南。"
+>abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -60,7 +60,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包含從匯出對象中建立、更新和移除的身分。"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的對象中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
@@ -78,7 +78,7 @@ ht-degree: 6%
 
 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 
-- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
+- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規而略過用於啟用的設定檔身分總數。
 - **[!UICONTROL 身分失敗]**：由於錯誤而未啟用到目的地的設定檔身分總數。
 
@@ -91,7 +91,7 @@ ht-degree: 6%
    - 的 **[!UICONTROL 已完成]** 執行時，處理時間量度一律會顯示一個小時。
    - 針對仍在中的資料流執行 **[!UICONTROL 處理]** 狀態，此視窗會開啟一小時以上，用來擷取所有量度，以處理對應至資料流執行的所有量度。 例如，上午9:30開始的資料流執行可能會維持處理狀態1小時30分鐘，以擷取及處理所有量度。 接著，處理視窗關閉且資料流狀態更新為 **已完成**，顯示的處理時間會變更為一小時。
 - **[!UICONTROL 已接收的設定檔]**：資料流中接收的設定檔總數。
-- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
+- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 身分失敗]** 由於錯誤而未啟用到目的地的設定檔身分總數。
 - **[!UICONTROL 啟用率]**：已成功啟動或略過的接收身分百分比。 下列公式示範如何計算此值：
@@ -113,7 +113,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
->abstract="目的地資料流執行詳細資訊包含對象啟用狀態的資訊，以及從Real-Time Customer Profile取得的量度，以產生唯一身分。 若要深入了解，請檢閱量度定義指南。"
+>abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
@@ -124,7 +124,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包含從匯出對象中建立、更新和移除的身分。"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的對象中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
@@ -133,7 +133,7 @@ ht-degree: 6%
 
 對於批次目的地， [!UICONTROL 資料流執行] 索引標籤會提供有關資料流執行的量度資料。 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 
-- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
+- **[!UICONTROL 身分已啟用]**：成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規，從選取的目的地啟用中排除的個別設定檔身分計數。
 
 ![批次目的地的資料流執行檢視。](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -144,7 +144,7 @@ ht-degree: 6%
 - **[!UICONTROL 對象]**：與每個資料流執行相關聯的對象名稱。
 - **[!UICONTROL 處理時間]**：處理資料流執行所花的時間。
 - **[!UICONTROL 已接收的設定檔]**：資料流中接收的設定檔總數。 此值每 60 分鐘更新一次。
-- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包含從匯出對象中建立、更新和移除的身分。
+- **[!UICONTROL 身分已啟用]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
 - **[!UICONTROL 身分已排除]**：根據缺少屬性和同意違規從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 狀態]**：代表資料流所處的狀態。 這可以是三種狀態之一： [!UICONTROL 成功]， [!UICONTROL 已失敗]、和 [!UICONTROL 處理中]. [!UICONTROL 成功] 表示資料流作用中，且正在根據其提供的排程匯出資料。 [!UICONTROL 已失敗] 表示資料啟用作業已因錯誤而暫停。 [!UICONTROL 處理中] 表示資料流尚未作用中，通常會在建立新資料流時遇到。
 
@@ -176,7 +176,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="啟用"
->abstract="目的地啟用檢視包含對象啟用狀態的資訊，以及從Real-Time Customer Profile取得的量度，以產生唯一身分。"
+>abstract="目標啟用視圖包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。"
 
 若要存取 [!UICONTROL 監視] 儀表板，選取 **[!UICONTROL 監視]** (![監檢視示](../assets/ui/monitor-destinations/monitoring-icon.png))中。 一旦於 [!UICONTROL 監視] 頁面，選取 [!UICONTROL 目的地]. 此 [!UICONTROL 監視] 儀表板包含有關目的地執行作業的量度和資訊。
 

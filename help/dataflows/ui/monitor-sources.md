@@ -5,7 +5,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 8%
 * [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
 * [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 使用監視儀表板監視來源資料
+## 使用監視儀表板監視您的來源資料
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
