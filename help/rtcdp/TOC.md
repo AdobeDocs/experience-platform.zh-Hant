@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
 user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶設定檔，利用這些設定檔建立對象，以及對協力廠商目標啟動這些對象。
 role: Admin
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 69%
+source-wordcount: '301'
+ht-degree: 67%
 
 ---
 
@@ -83,6 +83,7 @@ ht-degree: 69%
    * 設定檔擴充 {#profile-enrichment}
       * [使用合作夥伴提供的屬性補充第一方設定檔](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * 個人化的深入分析和參與 {#personalization-insights-engagement}
+      * [將一次性客戶價值提升至期限價值](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [以智慧方式重新吸引您的客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [智慧地重新與您的客戶互動：Luma範例](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Experience Platform 發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
