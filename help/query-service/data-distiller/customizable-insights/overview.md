@@ -1,9 +1,10 @@
 ---
 title: 可自訂的見解
 description: 瞭解使用案例、基本功能，以及使用Data Distiller開發可自訂見解儀表板的必要步驟。 探索Data Distiller內的可自訂深入分析功能如何提升透明度，並取得不同維度（例如設定檔、受眾、行銷活動、歷程、權益和同意）的營運深入分析。
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -11,6 +12,8 @@ ht-degree: 0%
 # 可自訂的見解
 
 使用Data Distiller的可自訂深入分析，建立量身打造的報表資料模型以擷取更深入的深入分析、最佳化策略，並調整分析以符合特定業務需求。 使用可自訂深入分析功能來增強透明度，並從Adobe Experience Platform資料跨維度（例如設定檔、對象、行銷活動、歷程、權益和同意）取得營運深入分析。 此功能提供多功能、最適化解決方案，根據您的特定業務需求量身打造貴組織的報表資料模型。
+
+至 [將可自訂的深入分析視覺化](../../../dashboards/data-distiller/overview.md) 您可以使用 [query pro mode](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) 使用自訂SQL查詢進行複雜的分析，並將您的資料轉換為易於理解的圖表。 使用Query Pro模式可在您的控制面板上建立客製化的深入分析和視覺效果，並將您的深入分析下載為CSV檔案以迎合技術和非技術受眾。
 
 本文介紹使用案例、基本功能，以及使用Data Distiller開發可自訂見解儀表板的必要步驟。
 

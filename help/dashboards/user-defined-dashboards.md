@@ -1,17 +1,18 @@
 ---
-title: 使用者定義儀表板
+title: 自訂儀表板
 description: 瞭解如何建立及管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，將關鍵量度視覺化。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1624'
+ht-degree: 2%
 
 ---
 
-# 使用者定義的儀表板
+# 自訂儀表板
 
-Adobe Experience Platform儀表板可協助您透過使用者定義的儀表板功能，快速獲得見解並自訂視覺效果。 此功能可讓您建立和管理自訂儀表板，以便在其中建立、新增和編輯自訂Widget，以視覺化方式呈現與貴組織相關的關鍵量度。
+使用Adobe Experience Platform儀表板可透過儀表板功能加速深入分析和自訂視覺效果。 使用此功能來建立和管理自訂儀表板，您可以在其中建立、新增和編輯自訂的Widget，以視覺化與您的組織相關的關鍵量度。
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![在左側導覽中顯示儀表板的儀表板詳細目錄，並反白顯示「建立儀表板」。](./images/user-defined-dashboards/create-dashboard.png)
 
-在新增自訂儀表板之前，儀表板庫存是空的，並顯示「找不到儀表板」。 訊息。 建立後，您的所有使用者定義控制面板都會列在控制面板詳細目錄中。
+在新增自訂儀表板之前，儀表板庫存是空的，並顯示「找不到儀表板」。 訊息。 建立後，您的所有儀表板都會列在儀表板詳細目錄中。
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->若要編輯現有儀表板，請從詳細目錄清單中選取儀表板名稱，然後選取鉛筆圖示(![鉛筆圖示。](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 此 [!UICONTROL 建立儀表板] 對話方塊隨即顯示。 為您要建立的Widget集合輸入人性化的描述性名稱，然後選取 **[!UICONTROL 儲存]**.
 
 ![「建立儀表板」對話方塊。](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+已購買Data Distiller SKU的使用者可選擇使用自訂SQL查詢來建立其深入分析。 請參閱 [可自訂的深入分析建立指南](./data-distiller/customizable-insights/overview.md) 以取得此工作流程的指示。
 
 新建立的空白圖示板會出現，而您選擇的名稱會顯示在檢視的左上角。
 
@@ -42,13 +46,13 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="介面工具的最大數量"
->abstract="使用者定義的儀表板最多支援十個介面工具。將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。"
+>abstract="儀表板服務最多可支援10個Widget。 將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。"
 
 從您的新儀表板檢視中，選取 **[!UICONTROL 新增Widget]** 以開始建立Widget的程式。
 
 >[!IMPORTANT]
 >
->使用者定義的儀表板最多支援十個介面工具。將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。
+>每個儀表板最多可支援10個Widget。 將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。
 
 ![醒目提示新增Widget的新空白儀表板。](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -73,7 +77,7 @@ Widget Composer工作區隨即顯示。 接下來，選取 **[!UICONTROL 選取�
 | 欄欄位 | 說明 |
 |---|---|
 | [!UICONTROL 標題] | 資料表的名稱。 |
-| [!UICONTROL 表格類型] | 表格的型別。 可能的型別包括： `fact`， `dimension`、和 `none`. |
+| [!UICONTROL 表格型別] | 表格的型別。 可能的型別包括： `fact`， `dimension`、和 `none`. |
 | [!UICONTROL 記錄] | 與所選表格相關聯的記錄數。 |
 | [!UICONTROL 查詢] | 連結至所選表格的表格數目。 |
 | [!UICONTROL 屬性] | 所選表格的屬性數目。 |
@@ -150,21 +154,25 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 為了確保Adobe Real-time Customer Data Platform見解儀表板的每個查詢都有足夠的資源來有效執行，API會透過為每個查詢指派並行位置來追蹤資源使用情況。 系統最多可以處理四個同時查詢，因此在任何給定時間都有四個同時查詢空位可用。 查詢會根據並行位置放入佇列中，然後在佇列中等待，直到有足夠的並行位置可用。
 
-### 複製Widget
+### 編輯、複製或刪除Widget {#duplicate}
 
-建立Widget後，您可以複製整個Widget並自訂其屬性以建立唯一的Widget，而不需從頭開始。 若要複製Widget，請先導覽至控制面板詳細目錄。 然後，從詳細目錄清單中選取控制面板名稱。 您的自訂儀表板隨即出現。
+建立Widget後，您就可以從自訂儀表板編輯、複製或刪除整個Widget。
 
-![包含控制面板和自訂控制面板名稱的Platform UI會醒目提示。](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>若要在任何現有的自訂控制面板之間切換，請選取左側導覽列中的控制面板，然後從詳細目錄清單中選取控制面板名稱。
 
 選取鉛筆圖示(![鉛筆圖示。](./images/user-defined-dashboards/edit-icon.png))，以進入編輯模式。
 
 ![反白顯示鉛筆圖示的自訂儀表板。](./images/user-defined-dashboards/edit-mode.png)
 
-接著，選取您要複製之Widget右上方的省略符號，接著再選取 **[!UICONTROL 複製]** 從可用選項清單中選取。
+接著，選取您要編輯、複製或刪除之Widget右上角的省略符號。 從下拉式選單中選取適當的動作。
 
-![使用者定義儀表板中的Widget，其中反白顯示橢圓形和重複的Widget。](./images/user-defined-dashboards/duplicate.png)
+![自訂儀表板中的Widget，其中反白顯示橢圓形和重複的Widget。](./images/user-defined-dashboards/duplicate.png)
 
-重複的Widget會顯示在您使用者定義的儀表板中。 選取新Widget的省略符號，然後選取 **[!UICONTROL 編輯]**，以自訂您的新Widget。
+>[!NOTE]
+>
+>複製可讓您自訂深入分析的屬性，以建立唯一的Widget，而不需從頭開始。 如果複製Widget，它會出現在您的自訂儀表板中。 接著，您可以選取新Widget的省略符號，接著再選取 **[!UICONTROL 編輯]**，以自訂您的分析。
 
 ## 後續步驟和其他資源
 
@@ -172,6 +180,6 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 若要探索適用於的可用預先設定量度和視覺效果 [設定檔](./guides/profiles.md#standard-widgets)， [區段](./guides/audiences.md#standard-widgets)、和 [目的地](./guides/destinations.md#standard-widgets) 儀表板，請參閱其各自檔案中的標準Widget清單。
 
-若要加深您對Experience Platform中使用者定義之控制面板的瞭解，請觀看下列影片：
+若要加深您對Experience Platform中控制面板的瞭解，請觀看以下影片：
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

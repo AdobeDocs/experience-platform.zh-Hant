@@ -5,15 +5,15 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 19%
+source-wordcount: '321'
+ht-degree: 21%
 
 ---
 
 
-# Adobe Experience Platform查詢服務 {#query}
+# Adobe Experience Platform 查詢服務 {#query}
 
 - [查詢服務總覽](home.md)
 - [查詢服務封裝](packaging.md)
@@ -29,6 +29,7 @@ ht-degree: 19%
       - [建立十等分衍生資料集](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - 延伸應用程式報表的可自訂分析 {#customizable-insights}
       - [概觀](data-distiller/customizable-insights/overview.md)
+      - [Query pro模式](data-distiller/customizable-insights/query-pro-mode.md)
       - [傳送加速的查詢](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [報表深入分析資料模型指南](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - AI/ML功能管道 {#ml-feature-pipelines}
