@@ -3,10 +3,10 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 13%
+source-wordcount: '1459'
+ht-degree: 11%
 
 ---
 
@@ -139,6 +139,16 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 >若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
 
 讀取 [啟用對象以邊緣個人化目的地](../../ui/activate-edge-personalization-destinations.md) 以取得啟用此目的地對象的指示。
+
+## 從Target目的地移除對象 {#remove}
+
+如果對象已在Adobe Target中使用，則需要執行額外步驟，才能從現有Adobe Target連線中移除該對象 [活動](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). 嘗試從Adobe Target連線中移除對象時，如果Adobe Target活動使用對象，則會導致錯誤。
+
+![Platform UI影像顯示嘗試移除Target活動使用的對象所導致的錯誤。](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+若要在活動中使用對象時，從Target目的地移除對象，您必須先從使用對象的Target活動中移除對象，或完全刪除活動。 然後，您就可以從Target連線中移除對象。
+
+如果活動未使用對象，請前往 **[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]** > **[!UICONTROL 選取目的地資料流]** > **[!UICONTROL 啟用資料]**，選取您要移除的對象，然後選取 **[!UICONTROL 移除對象]**.
 
 ## 匯出的資料 {#exported-data}
 
