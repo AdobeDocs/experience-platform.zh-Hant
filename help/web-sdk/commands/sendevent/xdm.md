@@ -1,9 +1,10 @@
 ---
 title: xdm
-description: 傳送至Adobe的結構描述對齊物件。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: 瞭解如何透過XDM結構描述對齊的物件傳送資料給Adobe。
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -14,11 +15,11 @@ ht-degree: 0%
 
 Adobe Experience Platform使用結構描述，以一致且可重複使用的方式說明資料結構。 藉由定義跨系統的一致資料，將可輕鬆保留意義，進而從資料中獲得價值。
 
-此欄位的最大限製為32 KB。
+此物件的最大限製為32 KB。
 
 ## 使用Web SDK擴充功能設定XDM物件
 
-設定 **[!UICONTROL XDM]** 標籤規則動作中的欄位。 此 [xdm物件](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) 提供直覺式介面，將其他資料元素對應至其各自的XDM欄位。
+設定 **[!UICONTROL XDM]** 標籤規則動作中的物件。 此 [xdm物件](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) 提供直覺式介面，將其他資料元素對應至其各自的XDM欄位。
 
 1. 登入 [experience.adobe.com](https://experience.adobe.com) 使用您的Adobe ID憑證。
 1. 瀏覽至 **[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**.
@@ -39,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-以下範例使用 [商務詳細資料結構欄位群組](/help/xdm/field-groups/event/commerce-details.md)：
+以下範例使用 [Commerce詳細資料結構欄位群組](/help/xdm/field-groups/event/commerce-details.md)：
 
 ```javascript
 alloy("sendEvent",{

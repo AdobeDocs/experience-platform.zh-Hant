@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能中的資料元素型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種資料元素型別。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '599'
 ht-degree: 5%
 
 ---
@@ -52,11 +52,14 @@ ht-degree: 5%
 
 ## 變數 {#variable}
 
-建立XDM物件的另一種方法是使用 **[!UICONTROL 變數]** 資料元素。 而XDM物件資料元素是在參考時建立的，例如在 `sendEvent` 指令， **[!UICONTROL 變數]** 資料元素可透過以下方式更新： [!UICONTROL 更新變數] 動作。 若要使用資料元素，請選取正確的Adobe Experience Platform沙箱和結構描述。
+您可以使用建立裝載物件 **[!UICONTROL 變數]** 資料元素。 兩者 [!UICONTROL XDM] 和 [!UICONTROL 資料] 支援物件。
 
-![顯示「建立資料元素」畫面的UI影像。](assets/variable-data-element.png)
+* 當您選取 [!UICONTROL XDM]，選取所需的 [!UICONTROL Sandbox] 和 [!UICONTROL 結構描述].
+* 當您選取 [!UICONTROL 資料]，選取所需的解決方案。 可用的解決方案包括 [!UICONTROL Adobe Analytics] 和 [!UICONTROL Adobe Target].
 
-建立此資料元素後，您就可以使用 [更新變數](./action-types.md#update-variable) 動作以修改資料元素。 然後在傳送事件動作中，對XDM選項使用變數資料元素。
+![顯示資料元素選項的標籤UI影像。](assets/variable-data-element.png)
+
+建立此資料元素後，您可以使用 [更新變數](./action-types.md#update-variable) 修改它的動作。 準備就緒後，您可以將此資料元素加入至 [傳送事件](./action-types.md#send-event) 將資料傳送至資料流的動作。
 
 ## 後續步驟 {#next-steps}
 

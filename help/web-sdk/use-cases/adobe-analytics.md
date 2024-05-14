@@ -1,77 +1,107 @@
 ---
 title: 使用Web SDK傳送資料至Adobe Analytics
 description: 瞭解如何使用Adobe Experience Platform Web SDK傳送資料給Adobe Analytics。
-keywords: adobe analytics；analytics；對應的資料；對應的變數；
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 3%
+source-wordcount: '634'
+ht-degree: 0%
 
 ---
 
+
 # 使用Web SDK傳送資料給Adobe Analytics
 
-Adobe Experience Platform Web SDK可透過Adobe Experience Platform Edge Network傳送資料給Adobe Analytics。 資料到達Edge Network時，會將XDM物件轉譯為Adobe Analytics可瞭解的格式。
+Experience Platform Web SDK可透過Experience PlatformEdge Network傳送資料至Adobe Analytics。 Adobe提供數個選項，可讓您使用Web SDK將資料傳送至Adobe Analytics：
 
-## xdm欄位群組
+* 新增 [**[!UICONTROL Adobe Analytics ExperienceEvent欄位群組]**](../../xdm/field-groups/event/analytics-full-extension.md) 到您的結構描述，然後使用 [`XDM` 物件](../commands/sendevent/xdm.md).
+* 使用 [`data` 物件](../commands/sendevent/data.md) 傳送資料至Adobe Analytics而不使用XDM結構描述。
+* 使用自動產生的 [內容資料變數](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata) 和 [處理規則](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about).
 
-為了更方便擷取最常見的Adobe Analytics量度，Adobe提供您可使用的以Adobe Analytics為目標的欄位群組。 如需此結構的詳細資訊，請參閱 [Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組](/help/xdm/field-groups/event/analytics-full-extension.md).
+## 使用 `XDM` 物件 {#use-xdm-object}
 
-## 變數對應
+如果您想使用Adobe Analytics專用的預先定義結構描述，您可以新增 [Adobe Analytics ExperienceEvent結構欄位群組](../../xdm/field-groups/event/analytics-full-extension.md) 到您的結構描述。 新增後，您可以使用 `xdm` 物件，用於將資料傳送至報表套裝。 資料到達Edge Network時，會將XDM物件轉譯為Adobe Analytics可瞭解的格式。
 
-邊緣網路會自動對應許多XDM變數。 另請參閱 [邊緣網路中的Analytics變數對應](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=zh-Hant) Adobe Analytics實作指南中的，以取得自動對應變數的完整變數清單。
+您可透過下列兩種方式，透過Web SDK將資料傳送至Adobe Analytics：
 
-任何未自動對應的變數都可在 [上下文資料變數](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html). 然後您可以使用 [處理規則](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about.html) 將上下文資料變數對應至Analytics變數。 例如，如果您的自訂XDM結構描述如下所示：
+* [使用Web SDK標籤擴充功能將資料傳送至Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-tag-extension)
+* [使用Web SDK JavaScript程式庫傳送資料給Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/web-sdk-javascript-library)
 
-```js
+另請參閱 [XDM物件變數對應至Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) Adobe Analytics實作指南中的，以取得XDM欄位及其對應至Analytics變數的方式。
+
+## 使用 `data` 物件 {#use-data-object}
+
+除了使用XDM物件外，您也可以改用資料物件。 資料物件適合目前使用AppMeasurement的實施，可大幅簡化升級至Web SDK的程式。
+
+根據您使用的是AppMeasurement或Analytics標籤擴充功能，請參閱下列指南以取得有關如何移轉至Web SDK的詳細資訊：
+
+* [從Adobe Analytics標籤擴充功能移轉至Web SDK標籤擴充功能](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/analytics-extension-to-web-sdk)
+* [從AppMeasurement移轉至Web SDK](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk)
+
+請參閱以下檔案： [資料物件變數對應至Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics/implementation/aep-edge/data-var-mapping) Adobe Analytics實作指南中的，以取得資料物件欄位及其對應至Analytics變數的方式。
+
+## 使用上下文資料變數 {#use-context-data-variables}
+
+任何未自動對應的變數都可在 [內容資料變數](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/contextdata). 然後您可以使用 [處理規則](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) 將上下文資料變數對應至Analytics變數。 例如，如果您的自訂XDM結構描述如下所示：
+
+```json
 {
-  key:value,
-  object:{
-    key1:value1,
-    key2:value2
-  },
-  array:[
-    "v0",
-    "v1",
-    "v2"
-  ],
-  arrayofobjects:[
-    {
-      obj1key:objval0
+  "xdm": {
+    "key":"value",
+    "animal": {
+      "species": "Raven",
+      "size": "13 inches"
     },
-    {
-      obj2key:objval1
-    }
-  ]
+    "array": [
+      "v0",
+      "v1",
+      "v2"
+    ],
+    "objectArray":[{
+      "ad1": "300x200",
+      "ad2": "60x240",
+      "ad3": "600x50"
+    }]
+  }
 }
 ```
 
-然後，這些會是處理規則介面中可供您使用的內容資料索引鍵：
+然後，這些欄位將是「處理規則」介面中可供您使用的內容資料索引鍵：
 
 ```javascript
 a.x.key //value
-a.x.object.key1 //value1
-a.x.object.key2 //value2
+a.x.animal.species //Raven
+a.x.animal.size //13 inches
 a.x.array.0 //v0
 a.x.array.1 //v1
 a.x.array.2 //v2
-a.x.arrayofobjects.0.obj1key //objval0
-a.x.arrayofobjects.1.obj2key //objval1
+a.x.objectarray.0.ad1 //300x200
+a.x.objectarray.1.ad2 //60x240
+a.x.objectarray.2.ad3 //600x50
 ```
 
->[!NOTE]
->
->透過Edge Network集合，所有事件都會傳送至Analytics以及您為資料流設定的任何其他服務。 例如，如果您將Analytics和Target都設定為服務，並為個人化和Analytics分別發出呼叫，則兩個事件都會傳送至Analytics和Target。 這些事件會記錄在Analytics報表中，並可能影響跳出率等量度。
+## 常見問題集
 
-## 頁面檢視和連結追蹤呼叫
++++如何在Web SDK中區分頁面檢視呼叫和連結追蹤呼叫？
 
-Adobe Analytics中的AppMeasurement功能會針對頁面檢視使用個別方法呼叫([`t()` 方法](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/t-method.html))和連結追蹤呼叫([`tl()` 方法](https://experienceleague.adobe.com/docs/analytics/implementation/vars/functions/tl-method.html))。 Web SDK僅會提供 [`sendEvent`](../commands/sendevent/overview.md) 用於傳送頁面檢視和連結追蹤的命令。 您在事件中包含的資料會判斷它是否為 [頁面檢視](https://experienceleague.adobe.com/docs/analytics/components/metrics/page-views.html) 或 [頁面事件](https://experienceleague.adobe.com/docs/analytics/components/metrics/page-events.html) 在Adobe Analytics中。
+Adobe Analytics中的AppMeasurement功能會針對頁面檢視使用個別方法呼叫([`t()` 方法](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/t-method))和連結追蹤呼叫([`tl()` 方法](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method))。 Web SDK僅會提供 [`sendEvent`](../commands/sendevent/overview.md) 用於傳送頁面檢視和連結追蹤的命令。 您在事件中包含的資料會判斷它是否為 [頁面檢視](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-views) 或 [頁面事件](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/page-events) 在Adobe Analytics中。
 
-依預設，所有事件在Adobe Analytics中都會被視為頁面檢視。 如果您想要將Web SDK事件設定為Adobe Analytics連結追蹤呼叫，請設定下列XDM欄位：
+依預設，所有事件在Adobe Analytics中都會被視為頁面檢視。 如果您想要將Web SDK事件設定為Adobe Analytics連結追蹤呼叫，請設定下列欄位：
 
-* **`web.webInteraction.URL`**：連結URL。
-* **`web.webInteraction.name`**：自訂連結、下載連結或退出連結維度名稱，視中的值而定 `web.webInteraction.type`
-* **`web.webInteraction.type`**：判斷點按的連結型別。 有效值包括 `other` (自訂連結)、`download` (下載連結) 和 `exit` (退出連結)。
+* **xdm物件**： `xdm.web.webInteraction.name`， `web.webInteraction.type`、和 `web.webInteraction.URL`
+* **資料物件**： `data.__adobe.analytics.linkName`， `data.__adobe.analytics.linkType`、和 `data.__adobe.analytics.linkURL`
+* **內容資料**：不支援
 
-如果您啟用 [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) 在 `configure` 會為您填入這些XDM欄位。
+請參閱 [`tl()` 方法](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/functions/tl-method) Adobe Analytics實作指南以瞭解詳細資訊。
+
+如果您啟用 [`clickCollectionEnabled`](../commands/configure/clickcollectionenabled.md) 在 `configure` 命令，這些欄位會為您填入。
+
++++
+
++++資料串流如何透過專為Adobe Analytics提供的資料，將資料與其他服務區分開來？
+
+傳送至資料流的所有事件都會傳遞至所有已設定的服務。 例如，如果您分別呼叫個人化和Analytics，這兩個事件都會傳送至Analytics和Target。 這些事件會記錄在Analytics報表中，並可能影響跳出率等量度。
+
+如果您使用Web SDK，這些呼叫通常會結合在 [`sendEvent`](../commands/sendevent/overview.md) 命令。
+
++++
