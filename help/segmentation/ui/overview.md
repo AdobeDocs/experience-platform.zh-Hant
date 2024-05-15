@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
+source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
 workflow-type: tm+mt
 source-wordcount: '4274'
 ht-degree: 3%
@@ -112,7 +112,7 @@ ht-degree: 3%
 | [!UICONTROL 名稱] | 對象名稱。 |
 | [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
 | [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括細分服務、自訂上傳、對象構成和Audience Manager。 |
-| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Inactive`， `Published`、和 `Archived`. 有關生命週期狀態的詳細資訊，包括不同狀態的含義以及如何將受眾移動到不同生命週期狀態，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-status). |
+| [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Inactive`、和 `Published`. 有關生命週期狀態的詳細資訊，包括不同狀態的含義以及如何將受眾移動到不同生命週期狀態，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-status). |
 | [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括 [!UICONTROL 批次]， [!UICONTROL 串流]， [!UICONTROL Edge]、和 [!UICONTROL 未排程]. |
 | [!UICONTROL 上次更新者] | 上次更新對象的人員名稱。 |
 | [!UICONTROL 已建立] | 建立對象的日期和時間(UTC)。 |
@@ -422,7 +422,7 @@ ht-degree: 3%
 | 欄位 | 說明 |
 | ----- | ----------- | 
 | [!UICONTROL 名稱] | 對象名稱。 |
-| [!UICONTROL 狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Inactive`， `Published`、和 `Archived`. |
+| [!UICONTROL 狀態] | 對象的狀態。 此欄位可能的值包括 `Draft`， `Inactive`、和 `Published`. |
 | [!UICONTROL 已建立] | 建立對象的時間和日期。 |
 | [!UICONTROL 建立者] | 建立對象的人員名稱。 |
 | [!UICONTROL 已更新] | 上次更新對象的時間和日期。 |

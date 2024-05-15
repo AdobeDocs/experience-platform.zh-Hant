@@ -2,16 +2,16 @@
 title: Adobe Experience Platform 發行說明 (2022 年 4 月)
 description: Adobe Experience Platform 2022 年 4 月版發行說明。
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2904'
-ht-degree: 18%
+source-wordcount: '2670'
+ht-degree: 19%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期：2022 年 4 月 27 日**
+**發行日期： 2022年4月27日**
 
 Adobe Experience Platform 現有功能的更新：
 
@@ -69,7 +69,7 @@ Platform提供多個儀表板，您可在其中檢視有關組織資料的重要
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 區段控制面板 | 您現在可以使用監視儀表板來監視區段的資料流。 若要深入瞭解，請閱讀以下指南： [在UI中監視區段](../../dataflows/ui/monitor-segments.md) |
+| 區段控制面板 | 您現在可以使用監視儀表板來監視區段的資料流。 若要深入瞭解，請閱讀以下指南： [在UI中監視區段](../../dataflows/ui/monitor-audiences.md) |
 
 如需資料流的詳細一般資訊，請參閱 [資料流概觀](../../dataflows/home.md). 若要深入瞭解細分，請參閱 [分段總覽](../../segmentation/home.md).
 
@@ -138,7 +138,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | 欄位群組 | [[!UICONTROL 同意原則評估結果對應]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | 擷取個人的同意原則評估結果。 |
 | 欄位群組 | [[!UICONTROL 網站搜尋]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | 擷取網站搜尋的相關資訊，例如，搜尋查詢、篩選和訂購。 |
 | 欄位群組 | [[!UICONTROL 合併銷售機會]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | 擷取兩個或多個潛在客戶合併之事件的詳細資訊。 |
-| 欄位群組 | [[!UICONTROL 已傳送電子郵件]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | 擷取傳送電子郵件給收件者之事件的詳細資料。 |
+| 欄位群組 | [[!UICONTROL 電子郵件已傳送]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | 擷取傳送電子郵件給收件者之事件的詳細資料。 |
 | 欄位群組 | [[!UICONTROL 拼接欄位]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | 擷取透過事件的身分拼接流程運算出的值。 |
 | 欄位群組 | [[!UICONTROL 稽核的次要收件者詳細資料]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | 擷取稽核次要收件者詳細資料的Adobe Journey Optimizer欄位群組。 |
 | 欄位群組 | [[!UICONTROL XDM商業帳戶個人關係詳細資訊]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | 擷取和帳戶 — 個人關係相關的細節。 |
@@ -163,7 +163,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 | 資料類型 | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | 已新增多個與購物車相關的欄位。 |
 | 資料類型 | [[!UICONTROL 產品清單項目]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | 針對選取的選項和折扣金額新增欄位。 |
 | 擴充功能（智慧型服務） | [[!UICONTROL Intelligent Services JourneyAI傳送時間最佳化]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | 針對傳送時間分數最佳化儲存格式。 |
-| 擴充功能(Workfront) | [[!UICONTROL Workfront 變更事件]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | 數個欄位已取代為 `workfront:customData` 自訂表單欄位的欄位。 |
+| 擴充功能(Workfront) | [[!UICONTROL Workfront變更事件]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | 數個欄位已取代為 `workfront:customData` 自訂表單欄位的欄位。 |
 | 擴充功能(Workfront) | [[!UICONTROL 工作任務屬性]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | 新增了數個欄位。 |
 | 擴充功能(Workfront) | [[!UICONTROL 工作物件]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | 父物件型別和自訂表單欄位的新欄位。 |
 

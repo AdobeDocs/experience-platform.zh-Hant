@@ -1,7 +1,8 @@
 ---
 title: 監視儀表板總覽
 description: 瞭解如何使用Adobe Experience Platform UI中的監控儀表板
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 1%
@@ -100,7 +101,7 @@ ht-degree: 1%
 
 >[!TAB 對象]
 
-選取 **[!UICONTROL 受眾]** 以檢視對象和細分工作的量度。 閱讀指南： [監視受眾資料](monitor-segments.md) 以取得詳細資訊。
+選取 **[!UICONTROL 受眾]** 以檢視對象和細分工作的量度。 閱讀指南： [監視受眾資料](monitor-audiences.md) 以取得詳細資訊。
 
 ![已選取受眾卡的Ui中的監視儀表板。](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ ht-degree: 1%
 * [監視來源資料](monitor-sources.md).
 * [監視身分資料](monitor-identities.md).
 * [監視設定檔資料](monitor-profiles.md).
-* [監視受眾資料](monitor-segments.md).
+* [監視受眾資料](monitor-audiences.md).
 * [監視目的地資料](monitor-destinations.md).
