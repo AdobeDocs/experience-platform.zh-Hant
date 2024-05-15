@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；家庭；智慧型服務；熱門主題；智慧型服務；智慧型服務
 solution: Experience Platform
-title: Intelligent Service概述
+title: Intelligent Services 概觀
 description: 智慧型服務可讓行銷分析師及從業人員運用客戶體驗使用案例中人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司需求設定專屬預測，而不需要資料科學專業知識。 此外，行銷從業人員可以在Adobe Experience Cloud、Adobe Experience Platform和第三方應用程式中啟用預測。
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
 source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-# Intelligent Service概述 {#intelligent-services-overview}
+# Intelligent Services 概觀 {#intelligent-services-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_home"
->title="Intelligent Service概述"
+>title="Intelligent Services 概觀"
 >abstract=""
 
 智慧型服務可讓行銷分析師及從業人員運用客戶體驗使用案例中人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司需求設定專屬預測，而不需要資料科學專業知識。 此外，行銷從業人員可以在以下位置啟用預測： [!DNL Adobe Experience Cloud]， [!DNL Adobe Experience Platform]和第三方應用程式。

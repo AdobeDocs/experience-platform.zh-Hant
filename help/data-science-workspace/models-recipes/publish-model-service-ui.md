@@ -8,11 +8,11 @@ exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 在資料科學工作區UI中將模型發佈為服務 {#publish-a-model-as-a-service}
+# 在資料科學工作區 UI 中將模型發佈為服務 {#publish-a-model-as-a-service}
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"
