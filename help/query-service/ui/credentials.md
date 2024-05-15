@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
+source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
 workflow-type: tm+mt
-source-wordcount: '1504'
-ht-degree: 2%
+source-wordcount: '1807'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +47,28 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 >![Admin Console設定索引標籤中會醒目提示隱私權與安全性、驗證設定和最長工作階段期限。](../images/ui/credentials/max-session-life.png)
 >
 >請參閱Adobe說明檔案，以瞭解有關 [進階設定](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) 由Admin Console提供。
+
+### 連線至查詢工作階段中的Customer Journey Analytics資料 {#connect-to-customer-journey-analytics}
+
+搭配使用Customer Journey AnalyticsBI擴充功能與Power BI或Tableau來存取您的Customer Journey Analytics [資料檢視](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) 使用SQL。 藉由整合Query Service與BI擴充功能，您可以直接在Query Service工作階段中存取資料檢視。 此整合簡化了使用查詢服務作為其PostgreSQL介面的BI工具功能。 此功能消除了在BI工具中重複資料檢視的需求，確保跨平台的一致報告，並簡化了Customer Journey Analytics資料與BI平台中其他來源的整合。
+
+請參閱檔案以瞭解如何 [將Query Service連線到各種案頭使用者端應用程式](../clients/overview.md) 例如 [Power BI](../clients/power-bi.md) 或 [Tableau](../clients/tableau.md)
+
+>[!IMPORTANT]
+>
+>需要Customer Journey Analytics工作區專案和資料檢視才能使用此功能。
+
+若要以Power BI或Tableau存取您的Customer Journey Analytics資料，請選取 [!UICONTROL 資料庫] 下拉式功能表，然後選取 `prod:cja` 可用選項中的。 接下來，複製您的 [!DNL Postgres] 用於您的Power BI或Tableau組態中的證明資料引數（主機、連線埠、資料庫、使用者名稱等）。
+
+![反白顯示資料庫下拉式清單的[查詢服務認證]索引標籤。](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>當您連線Power BI或Tableau以Customer Journey Analytics時，會使用查詢服務「並行工作階段」權益。 如果需要其他工作階段和查詢，可購買額外的臨時查詢使用者套件附加元件，以取得五個額外的並行工作階段和一個額外的並行查詢。
+
+您也可以直接從Query Editor或Postgres CLI存取您的Customer Journey Analytics資料。 若要這麼做，請參考 `cja` 資料庫寫入您的查詢。 請參閱查詢編輯器 [查詢撰寫指南](./user-guide.md#query-authoring) 有關如何寫入、執行和儲存查詢的詳細資訊。
+
+請參閱 [BI擴充功能指南](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) 以取得使用SQL存取Customer Journey Analytics資料檢視的完整指示。
 
 ## 不會到期的認證 {#non-expiring-credentials}
 

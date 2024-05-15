@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將使用者端連線至查詢服務
 description: 本檔案說明如何從各種案頭使用者端應用程式連線至查詢服務，以及如何驗證這些連線。
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 778c65c6310ed4a627be0fd3ae076784cfc8495b
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -29,3 +29,7 @@ ht-degree: 0%
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
+
+>[!IMPORTANT]
+>
+>身為Power BI和Tableau使用者，您可以從「查詢服務」憑證標籤將Customer Journey Analytics連線至您的BI工具。 如需認證檔案的操作說明，請參閱認證檔案 [將您的BI工具連線至Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).

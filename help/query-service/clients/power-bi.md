@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 將Power BI連線至查詢服務
 description: 本檔案將逐步說明連線Power BI與Adobe Experience Platform查詢服務的步驟。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 1%
+source-wordcount: '1073'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 快速入門
 
-本指南要求您已擁有 [!DNL Power BI] 案頭應用程式，並熟悉如何導覽其介面。 若要下載 [!DNL Power BI] 案頭或如需詳細資訊，請參閱 [正式 [!DNL Power BI] 檔案](https://docs.microsoft.com/zh-tw/power-bi/).
+本指南要求您已擁有 [!DNL Power BI] 案頭應用程式，並熟悉如何導覽其介面。 若要下載 [!DNL Power BI] 案頭或如需詳細資訊，請參閱 [正式 [!DNL Power BI] 檔案](https://docs.microsoft.com/en-us/power-bi/).
 
 >[!IMPORTANT]
 >
@@ -42,6 +42,10 @@ ht-degree: 1%
 此 [!DNL PostgreSQL] 資料庫對話方塊隨即顯示，要求伺服器和資料庫使用值。 操作說明的額外說明 [從Power Query Desktop連線至PostgreSQL資料庫](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) 可在以下官方網站找到： [!DNL PowerBI] 檔案。
 
 這些必要的值會從您的Adobe Experience Platform憑證中取得。 若要尋找您的認證，請登入Platform UI並選取 **[!UICONTROL 查詢]** 從左側導覽，後面接著 **[!UICONTROL 認證]**. 如需尋找資料庫名稱、主機、連線埠和登入證明資料的詳細資訊，請參閱 [credentials指南](../ui/credentials.md).
+
+>[!IMPORTANT]
+>
+>身為Power BI或Tableau使用者，您可以從「查詢服務」憑證標籤將Customer Journey Analytics連線至您的BI工具。 如需認證檔案的操作說明，請參閱認證檔案 [將您的BI工具連線至Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![「Experience Platform查詢」工作區中反白了「認證」標籤和「過期認證」 。](../images/clients/power-bi/query-service-credentials-page.png)
 

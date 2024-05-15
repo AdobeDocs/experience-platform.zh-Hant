@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Tableau；Tableau；查詢服務；查詢服務；連線到查詢服務；
 solution: Experience Platform
-title: 將 Tableau 連接至查詢服務
+title: 將Tableau連線至查詢服務
 description: 本檔案將逐步說明連線Tableau與Adobe Experience Platform查詢服務的步驟。
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 1%
 | **[!DNL Password]** | 此英數字串是您的Experience Platform **[!UICONTROL 密碼]** 認證。 如果您想要使用不會到期的認證，此值為來自下列專案的串連引數： `technicalAccountID` 和 `credential` 已下載到設定JSON檔案中。 密碼值採用以下形式： {technicalAccountId}：{credential}. 不會到期的認證的設定JSON檔案是在其初始化期間進行一次性下載，且Adobe不會保留的副本。 |
 
 如需尋找使用者名稱、密碼和登入憑證的詳細資訊，請參閱 [credentials指南](../ui/credentials.md). 若要尋找您的認證，請登入 [!DNL Platform]，然後選取 **[!UICONTROL 查詢]**，後接 **[!UICONTROL 認證]**.
+
+>[!IMPORTANT]
+>
+>身為Tableau或Power BI使用者，您可以從「查詢服務」憑證標籤將Customer Journey Analytics連線至您的BI工具。 如需認證檔案的操作說明，請參閱認證檔案 [將您的BI工具連線至Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 確定您已核取 **[!UICONTROL 需要SSL]** 方塊。 請參閱 [SSL模式檔案](./ssl-modes.md) 瞭解協力廠商連線至Adobe Experience Platform查詢服務的SSL支援。
 
