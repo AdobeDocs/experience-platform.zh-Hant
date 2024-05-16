@@ -5,9 +5,9 @@ description: 透過使用帳戶設定檔，Adobe Real-time Customer Data Platfor
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ![顯示Widget的總覽標籤](images/b2b-account-profile-overview.png)
 
-請參閱相關的檔案： [[!UICONTROL 帳戶設定檔]](../../dashboards/guides/account-profiles.md) 儀表板以深入瞭解。
+請參閱相關的檔案： [[!UICONTROL 帳戶設定檔]](../../dashboards/guides/account-profiles.md) 儀表板以深入瞭解。 請參閱以下檔案： [Real-time Customer Data Platform Insights資料模型B2B版本](../../dashboards/data-models/cdp-insights-data-model-b2b.md) 有關如何使用您的見解資料模型為您的儀表板建立自訂圖表的詳細資訊。
 
 ## 設定銷售線索與帳戶的比對 {#configure-lead-to-account-matching}
 
