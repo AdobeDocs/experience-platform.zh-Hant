@@ -3,9 +3,9 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2175'
 ht-degree: 5%
 
 ---
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [更多詳情](../rendering-personalization-content.md#manually-rendering-content)
 
+**範例3 — 追蹤執行動作後引發的事件**
+
+此範例會追蹤在執行特定動作（例如按一下按鈕）後引發的事件。
+您可以透過新增任何其他自訂引數 `__adobe.target` 資料物件。
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## 如何在單頁應用程式中觸發檢視變更
 
 ### 使用at.js
@@ -893,7 +914,7 @@ alloy("sendEvent", {
 
 ![顯示Analytics設定的資料串流UI。](assets/analytics-enabled-datastream-config.png)
 
-啟用伺服器端Analytics記錄時，A4T裝載需要與Analytics共用，好讓Analytics報告顯示正確的曝光次數和轉換，才能在Edge Network層級共用，讓客戶不需要執行任何其他處理。
+啟用伺服器端Analytics記錄時，A4T裝載需要與Analytics共用，以便Analytics報表顯示正確的曝光次數和轉換，並在Edge Network層級共用，讓客戶不需要執行任何其他處理。
 
 以下是啟用伺服器端Analytics記錄時，資料如何流入我們的系統：
 
