@@ -3,7 +3,7 @@ title: 將一次性客戶價值提升至期限價值
 description: 瞭解如何建立個人化行銷活動，以根據特定客戶的屬性、行為和過去購買提供最佳補充性產品或服務。
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 27%
@@ -27,7 +27,7 @@ ht-degree: 27%
 * 建立對象
 * 建立歷程以在Adobe Journey Optimizer中鎖定這些對象，並在Real-Time CDP中啟用它們。
 
-![逐步將一次性值進化為期限值高階視覺概覽。](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
+![逐步將一次性值進化為期限值高階視覺概覽。](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## 必要條件和規劃 {#prerequisites-and-planning}
 
@@ -54,7 +54,7 @@ ht-degree: 27%
 
 以下是Real-Time CDP和Journey Optimizer各種元件的高階架構檢視。 此圖表顯示資料如何流經兩個Experience Platform應用程式，從資料收集一直到透過歷程或促銷活動啟用它到目的地的時間，以達到本頁面上描述的使用案例。
 
-![架構高階視覺化概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
+![架構高階視覺化概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## 如何實現使用案例：高層級概觀 {#achieve-the-use-case-high-level}
 
@@ -70,7 +70,7 @@ ht-degree: 27%
 
 >[!BEGINSHADEBOX]
 
-![逐步將一次性值進化為期限值高階視覺概覽。](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
+![逐步將一次性值進化為期限值高階視覺概覽。](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. 您可以建立方案和資料集，然後標籤這些的 [!UICONTROL 個人資料].
 2. 系統會透過Web SDK、Mobile Edge SDK或API收集資料並整合至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
@@ -304,7 +304,7 @@ ht-degree: 27%
 
 尤其是，您必須在使用案例的不同步驟中建立和使用兩個對象，如下圖所示。
 
-![醒目提示的對象。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![醒目提示的對象。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -351,7 +351,7 @@ ht-degree: 27%
 * 期限歷程，其中包含您傳送給高價值、低頻率客戶的訊息
 * 回應您的呼叫並購買訂閱之使用者的訂單確認歷程。
 
-![醒目提示歷程。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![醒目提示歷程。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 下面列出的是每個歷程分支所需的精確資料。
 
@@ -361,7 +361,7 @@ ht-degree: 27%
 
 期限歷程針對過去30天內未鎖定的高價值與低頻率客戶的對象。 系統會向這些客戶顯示訊息，如果7天後仍未購買，您可以將非購買者納入您可向其中顯示付費媒體廣告的受眾。 如果他們確實有購買，您可以在訂單確認歷程中設定購買者，詳細資訊見個別索引標籤。
 
-![期限歷程高階視覺化概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "一次性價值至期限歷程高階視覺概覽。"){width="600" zoomable="yes"}
+![期限歷程高階視覺化概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "一次性價值至期限歷程高階視覺概覽。"){zoomable="yes"}
 
 +++詳細歷程邏輯
 
@@ -383,7 +383,7 @@ ht-degree: 27%
 
 訂單確認歷程聚焦於是否透過網站或行動應用程式進行購買。 客戶成功完成購買（例如與您的公司的訂閱）後，您便可以在訂單確認歷程中進行設定。
 
-![客戶訂購確認歷程的高層次視覺概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "客戶訂購確認歷程的高層次視覺概觀。"){width="600" zoomable="yes"}
+![客戶訂購確認歷程的高層次視覺概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "客戶訂購確認歷程的高層次視覺概觀。"){zoomable="yes"}
 
 +++歷程邏輯
 

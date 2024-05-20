@@ -4,7 +4,7 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: b94828381da56fa957b44b77aefa00a8ddd4bbd6
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '4404'
 ht-degree: 4%
@@ -745,7 +745,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-++[!DNL Amazon S3]  — 具有假定角色驗證的基本連線要求
++++[!DNL Amazon S3]  — 具有假定角色驗證的基本連線要求
 
 >[!TIP]
 >
