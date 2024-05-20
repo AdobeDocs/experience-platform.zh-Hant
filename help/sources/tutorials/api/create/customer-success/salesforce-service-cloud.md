@@ -5,9 +5,9 @@ title: 使用流量服務API建立Salesforce Service雲端來源連線
 type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Salesforce Service Cloud。
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 1f13b5fcad683b4c0ede96654e35d6f0c64d9eb7
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '498'
 ht-degree: 4%
 
 ---
@@ -32,12 +32,13 @@ ht-degree: 4%
 為了 [!DNL Flow Service] 以連線 [!DNL Salesforce Service Cloud]，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 |
-| ---------- | ----------- |
+| --- | ---|
+| `environmentUrl` | 的URL [!DNL Salesforce] 來源執行個體。 |
 | `username` | 您的使用者名稱 [!DNL Salesforce Service Cloud] 使用者帳戶。 |
 | `password` | 您的密碼 [!DNL Salesforce Service Cloud] 帳戶。 |
 | `securityToken` | 您的的安全性權杖 [!DNL Salesforce Service Cloud] 帳戶。 |
 | `apiVersion` | （選用）的REST API版本 [!DNL Salesforce Service Cloud] 您正在使用的例項。 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Salesforce Service Cloud] 為： `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Salesforce Service Cloud] 為： `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 如需開始使用的詳細資訊，請參閱 [此Salesforce Service Cloud檔案](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
@@ -75,24 +76,26 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "username": "{USERNAME}",
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce-service-cloud",
               "password": "{PASSWORD}",
               "securityToken": "{SECURITY_TOKEN}"
           }
       },
       "connectionSpec": {
-          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
           "version": "1.0"
       }
   }'
 ```
 
 | 參數 | 說明 |
-| --------- | ----------- |
+| ---| --- |
+| `auth.params.environmentUrl` | 您的URL [!DNL Salesforce Service Cloud] 執行個體。 |
 | `auth.params.username` | 與您的相關聯的使用者名稱 [!DNL Salesforce Service Cloud] 帳戶。 |
 | `auth.params.password` | 與您的關聯的密碼 [!DNL Salesforce Service Cloud] 帳戶。 |
 | `auth.params.securityToken` | 與您的關聯的安全性權杖 [!DNL Salesforce Service Cloud] 帳戶。 |
-| `connectionSpec.id` | 此 [!DNL Salesforce Service Cloud] 連線規格ID： `b66ab34-8619-49cb-96d1-39b37ede86ea` |
+| `connectionSpec.id` | 此 [!DNL Salesforce Service Cloud] 連線規格ID： `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **回應**
 

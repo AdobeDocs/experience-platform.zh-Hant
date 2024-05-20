@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Salesforce；salesforce
-solution: Experience Platform
 title: 使用流量服務API建立Salesforce基本連線
-type: Tutorial
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Salesforce帳戶。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
+source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 4%
+source-wordcount: '785'
+ht-degree: 3%
 
 ---
 
@@ -29,18 +26,40 @@ ht-degree: 4%
 
 ### 收集必要的認證
 
-為了 [!DNL Flow Service] 以連線到 [!DNL Salesforce]，您必須提供下列連線屬性的值：
+此 [!DNL Salesforce] 來源支援基本驗證和OAuth2使用者端認證。
+
+>[!BEGINTABS]
+
+>[!TAB 基本驗證]
+
+連線您的 [!DNL Salesforce] 帳戶至 [!DNL Flow Service] 使用基本驗證，提供下列認證的值：
 
 | 認證 | 說明 |
-| ---------- | ----------- |
+| --- | --- |
 | `environmentUrl` | 的URL [!DNL Salesforce] 來源執行個體。 |
 | `username` | 的使用者名稱 [!DNL Salesforce] 使用者帳戶。 |
 | `password` | 的密碼 [!DNL Salesforce] 使用者帳戶。 |
 | `securityToken` | 的安全性權杖 [!DNL Salesforce] 使用者帳戶。 |
-| `apiVersion` | 選用)的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0` 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
+| `apiVersion` | 選用)的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0`. 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Salesforce] 為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 如需開始使用的詳細資訊，請造訪 [此Salesforce檔案](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+
+>[!TAB OAuth 2使用者端認證]
+
+連線您的 [!DNL Salesforce] 帳戶至 [!DNL Flow Service] 使用OAuth 2使用者端認證，提供下列認證的值：
+
+| 認證 | 說明 |
+| --- | --- |
+| `environmentUrl` | 的URL [!DNL Salesforce] 來源執行個體。 |
+| `clientId` | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce]. |
+| `clientSecret` | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce]. |
+| `apiVersion` | 的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0`. 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 此值是OAuth2使用者端認證驗證的必要專案。 |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL Salesforce] 為： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+如需為使用OAuth的詳細資訊 [!DNL Salesforce]，閱讀 [[!DNL Salesforce] OAuth授權流程指南](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 ### 使用平台API
 
@@ -60,7 +79,11 @@ POST /connections
 
 **要求**
 
-下列要求會建立 [!DNL Salesforce]：
+>[!BEGINTABS]
+
+>[!TAB 基本驗證]
+
+下列要求會建立 [!DNL Salesforce] 使用基本驗證：
 
 ```shell
 curl -X POST \
@@ -71,14 +94,15 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Salesforce Connection",
-      "description": "Connection for Salesforce account",
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using basic authentication",
       "auth": {
           "specName": "Basic Authentication",
-          "params": {****
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "securityToken": "{SECURITY_TOKEN}"
+          "params":
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce",
+              "password": "xxxx",
+              "securityToken": "xxxx"
           }
       },
       "connectionSpec": {
@@ -89,11 +113,53 @@ curl -X POST \
 ```
 
 | 屬性 | 說明 |
-| -------- | ----------- |
+| --- | --- |
+| `auth.params.environmentUrl` | 您的URL [!DNL Salesforce] 執行個體。 |
 | `auth.params.username` | 與您的相關聯的使用者名稱 [!DNL Salesforce] 帳戶。 |
 | `auth.params.password` | 與您的關聯的密碼 [!DNL Salesforce] 帳戶。 |
 | `auth.params.securityToken` | 與您的關聯的安全性權杖 [!DNL Salesforce] 帳戶。 |
 | `connectionSpec.id` | 此 [!DNL Salesforce] 連線規格ID： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!TAB OAuth 2使用者端認證]
+
+下列要求會建立 [!DNL Salesforce] 使用OAuth 2使用者端認證：
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using OAuth 2",
+      "auth": {
+          "specName": "OAuth2 Client Credential",
+          "params":
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "clientId": "xxxx",
+            "clientSecret": "xxxx",
+            "apiVersion": "60.0"
+        }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
+```
+
+| 屬性 | 說明 |
+| --- | --- |
+| `auth.params.environmentUrl` | 您的URL [!DNL Salesforce] 執行個體。 |
+| `auth.params.clientId` | 與您的關聯的使用者端ID [!DNL Salesforce] 帳戶。 |
+| `auth.params.clientSecret` | 與您的關聯的使用者端密碼 [!DNL Salesforce] 帳戶。 |
+| `auth.params.apiVersion` | 的REST API版本 [!DNL Salesforce] 您正在使用的例項。 |
+| `connectionSpec.id` | 此 [!DNL Salesforce] 連線規格ID： `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!ENDTABS]
 
 **回應**
 
