@@ -2,10 +2,10 @@
 title: 在UI中建立Marketo Engage來源連線和資料流
 description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流的步驟，以便將B2B資料引進Adobe Experience Platform。
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 744098777141c61ac27fe6f150c05469d5705dee
 workflow-type: tm+mt
-source-wordcount: '1675'
-ht-degree: 0%
+source-wordcount: '1831'
+ht-degree: 2%
 
 ---
 
@@ -31,10 +31,10 @@ ht-degree: 0%
 
 ### 收集必要的認證
 
-為了存取您的 [!DNL Marketo] 帳戶，您必須提供下列值：
+為了存取您的 [!DNL Marketo] account onExperience Platform，您必須提供下列值：
 
 | 認證 | 說明 |
-| ---------- | ----------- |
+| ---- | ---- |
 | `munchkinId` | Munchkin ID是特定「 」的唯一識別碼 [!DNL Marketo] 執行個體。 |
 | `clientId` | 您的唯一使用者端ID [!DNL Marketo] 執行個體。 |
 | `clientSecret` | 您專屬的使用者端密碼 [!DNL Marketo] 執行個體。 |
@@ -45,27 +45,37 @@ ht-degree: 0%
 
 ## 連線您的 [!DNL Marketo] 帳戶
 
-在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽列存取 [!UICONTROL 來源] 工作區。 此 [!UICONTROL 目錄] 畫面會顯示各種來源，供您建立帳戶。
+在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋列來尋找您要使用的特定來源。
+在 *Adobe應用程式* 類別，選取 **[!UICONTROL Marketo Engage]**，然後選取 **[!UICONTROL 新增資料]**.
 
-在 [!UICONTROL Adobe應用程式] 類別，選取 **[!UICONTROL Marketo Engage]**. 然後，選取 **[!UICONTROL 新增資料]** 以建立新的 [!DNL Marketo] 資料流。
+>[!TIP]
+>
+>來源目錄中的來源會顯示 **[!UICONTROL 設定]** 選項，當指定的來源尚未擁有已驗證的帳戶時。 一旦驗證帳戶存在，此選項就會變更為 **[!UICONTROL 新增資料]**.
 
-![目錄](../../../../images/tutorials/create/marketo/catalog.png)
+![已選取Marketo Engage來源的來源目錄。](../../../../images/tutorials/create/marketo/catalog.png)
 
 此 **[!UICONTROL 連線Marketo Engage帳戶]** 頁面便會顯示。 在此頁面中，您可以使用新帳戶或存取現有帳戶。
 
-### 現有帳戶
+>[!BEGINTABS]
 
-若要以現有帳戶建立資料流，請選取「 」 **[!UICONTROL 現有帳戶]** 然後選取 [!DNL Marketo] 您要使用的帳戶。 選取 **[!UICONTROL 下一個]** 以繼續進行。
+>[!TAB 建立新帳戶]
 
-![現有](../../../../images/tutorials/create/marketo/existing.png)
+若要建立新帳戶，請選取 **[!UICONTROL 新帳戶]** 並提供名稱、選擇性說明和您的認證。
 
-### 新帳戶
+完成後，選取 **[!UICONTROL 連線到來源]** 然後等待一段時間以建立新連線。
 
-如果您要建立新帳戶，請選取 **[!UICONTROL 新帳戶]**. 在出現的輸入表單上，提供帳戶名稱、可選說明，以及 [!DNL Marketo] 驗證認證。 完成後，選取 **[!UICONTROL 連線到來源]** 然後等待一段時間以建立新連線。
+![用於驗證新Marketo帳戶的新帳戶介面。](../../../../images/tutorials/create/marketo/new.png)
 
-![新](../../../../images/tutorials/create/marketo/new.png)
+>[!TAB 使用現有帳戶]
+
+若要使用現有帳戶，請選取 **[!UICONTROL 現有帳戶]** 然後從現有帳戶目錄中選取您要使用的帳戶。
+
+選取 **[!UICONTROL 下一個]** 以繼續進行。
+
+![現有的帳戶介面，您可在此選取現有的Marketo帳戶。](../../../../images/tutorials/create/marketo/existing.png)
+
+>[!ENDTABS]
 
 ## 選取資料集
 
@@ -77,59 +87,65 @@ ht-degree: 0%
 >
 >為了簡單起見，下列教學課程使用 [!UICONTROL 機會] 例如，以下概述的步驟適用於10個步驟中的任一個 [!DNL Marketo] 資料集。
 
-選取您要先擷取的資料集，然後選取「 」 **[!UICONTROL 下一個]**.
+選取您要擷取的資料集。 這會更新介面，以顯示資料集的預覽。 完成後，選取 **[!UICONTROL 下一個]**.
 
-![select-data](../../../../images/tutorials/create/marketo/select-data.png)
+![預覽介面](../../../../images/tutorials/create/marketo/preview.png)
 
-## 提供資料流詳細資料 {#provide-dataflow-details}
+## 提供資料集和資料流詳細資料 {#provide-dataset-and-dataflow-details}
 
-此 [!UICONTROL 資料流詳細資料] 頁面可讓您選取要使用現有資料集還是新資料集。 在此程式中，您還可以配置以下專案的設定 [!UICONTROL 設定檔資料集]， [!UICONTROL 錯誤診斷]， [!UICONTROL 部分擷取]、和 [!UICONTROL 警報].
+接下來，您必須提供有關資料集和資料流的資訊。
 
-![資料流詳細資料](../../../../images/tutorials/create/marketo/dataflow-details.png)
+### 資料集詳細資訊 {#dataset-details}
+
+資料集是資料集合的儲存和管理結構，通常是包含方案 (欄) 和欄位 (列) 的表格。 成功擷取到Experience Platform的資料會以資料集的形式儲存在資料湖中。 在此步驟中，您可以建立新資料集或使用現有資料集。
 
 >[!BEGINTABS]
 
->[!TAB 使用現有的資料集]
-
-若要將資料內嵌至現有的資料集，請選取「 」 **[!UICONTROL 現有資料集]**. 您可以使用來擷取現有的資料集 [!UICONTROL 進階搜尋] 選項，或捲動下拉式選單中的現有資料集清單來進行分類。 選取資料集後，請為資料流提供名稱和說明。
-
-![existing-data](../../../../images/tutorials/create/marketo/existing-dataset.png)
-
 >[!TAB 使用新資料集]
 
-若要擷取到新資料集中，請選取「 」 **[!UICONTROL 新資料集]** 然後提供輸出資料集名稱和選用的說明。 接下來，使用 [!UICONTROL 進階搜尋] 選項或捲動下拉式選單中的現有方案清單。 選取結構描述後，請為資料流提供名稱和說明。
+若要使用新資料集，請選取「 」 **[!UICONTROL 新資料集]** 然後為您的資料集提供名稱和說明（選用）。 您也必須選取您的資料集所要遵守的Experience Data Model (XDM)結構。
 
-![新資料集](../../../../images/tutorials/create/marketo/new-dataset.png)
+![新的資料集選取介面。](../../../../images/tutorials/create/marketo/new-dataset.png)
+
+>[!TAB 使用現有的資料集]
+
+如果您已有現有的資料集，請選取「 」 **[!UICONTROL 現有資料集]** 然後使用 **[!UICONTROL 進階搜尋]** 用於檢視貴組織中所有資料集視窗的選項，包括其個別詳細資訊，例如是否啟用這些資料集以擷取至即時客戶設定檔。
+
+![現有的資料集選取介面。](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
 >[!ENDTABS]
 
-### 啟用 [!DNL Profile] 和錯誤診斷
-
-接下來，選取 **[!UICONTROL 設定檔資料集]** 切換以啟用您的資料集 [!DNL Profile]. 這可讓您建立實體屬性和行為的整體檢視。 來自所有人的資料 [!DNL Profile]啟用的資料集將包含在 [!DNL Profile] 和變更會在您儲存資料流時套用。
-
-[!UICONTROL 錯誤診斷] 針對資料流中發生的任何錯誤記錄，啟用詳細的錯誤訊息產生，同時 [!UICONTROL 部分擷取] 可讓您擷取包含錯誤的資料，最多可擷取您手動定義的特定臨界值。 請參閱 [部分批次擷取概觀](../../../../../ingestion/batch-ingestion/partial.md) 以取得詳細資訊。
+### 資料流設定 {#dataflow-configurations}
 
 >[!IMPORTANT]
 >
 >此 [!DNL Marketo] 來源會使用批次擷取來擷取所有歷史記錄，並使用串流擷取來即時更新。 這可讓來源在擷取任何錯誤記錄時繼續串流。 啟用 **[!UICONTROL 部分擷取]** 切換，然後設定 [!UICONTROL 錯誤臨界值%] 達到最大值，以防止資料流失敗。
 
-![設定檔與錯誤](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+如果您的資料集已啟用即時客戶個人檔案，那麼在此步驟中，您可以切換 **[!UICONTROL 設定檔資料集]** 啟用您的資料以供設定檔擷取。 您也可以使用此步驟來啟用 **[!UICONTROL 錯誤診斷]** 和 **[!UICONTROL 部分擷取]**.
 
-### 啟用警示
+* **[!UICONTROL 錯誤診斷]**：選取 **[!UICONTROL 錯誤診斷]** 指示來源產生錯誤診斷，以便您稍後在監控資料集活動和資料流狀態時參考。
+* **[!UICONTROL 部分擷取]**： [部分批次擷取](../../../../../ingestion/batch-ingestion/partial.md) 能夠內嵌包含錯誤的資料，上限為特定可設定的臨界值。 此功能可讓您將所有精確資料成功擷取到Experience Platform，同時所有不正確的資料會個別批次處理，並提供無效原因的資訊。
 
-您可以啟用警報以接收有關資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱來源警報](../../alerts.md).
+在此步驟中，您可以啟用 **[!UICONTROL 範例資料流]** 可限制資料擷取，並避免擷取所有歷史資料（包括個人身分）所產生的額外成本。
 
-當您完成提供詳細資訊給資料流時，請選取「 」 **[!UICONTROL 下一個]**.
+>[!BEGINSHADEBOX]
 
-![警報](../../../../images/tutorials/create/marketo/alerts.png)
+**使用範例資料流的快速指南**
 
-### 擷取公司資料時略過無人認領的帳戶
+範例資料流是您可以為設定的設定 [!DNL Marketo] 資料流來限制您的擷取率，然後嘗試Experience Platform功能而不需要擷取大量資料。
 
-建立資料流以從公司資料集中擷取資料時，您可以設定 [!UICONTROL 排除無人認領的帳戶] 若要從擷取中排除或包含無人認領的帳戶。
+* 啟用範例資料流，可在回填工作期間擷取最多10萬筆記錄（從最大的記錄ID）或最多10天的活動，以限制歷史資料。
+* 針對所有B2B實體使用範例資料流設定時，您必須考慮到某些相關記錄可能會遺失，因為系統不會擷取來源資料的整個歷史記錄。
+
+>[!ENDSHADEBOX]
+
+![「資料流詳細資料」頁面的「資料流組態」段落。](../../../../images/tutorials/create/marketo/dataflow-configurations.png)
+
+此外，如果您從公司資料集中擷取資料，則可啟用 **[!UICONTROL 排除無人認領的帳戶]** 將無人認領的帳戶排除在擷取之外。
 
 當個人填寫表單時， [!DNL Marketo] 根據不含其他資料的公司名稱建立虛擬帳戶記錄。 對於新的資料流，預設會啟用排除無人認領帳戶的切換按鈕。 對於現有的資料流，您可以啟用或停用此功能，而變更會套用至新擷取的資料，而非現有的資料。
 
-![無人認領的帳戶](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
+![排除無人認領的帳戶](../../../../images/tutorials/create/marketo/unclaimed-accounts.png)
 
 ## 對應您的 [!DNL Marketo] 目標XDM欄位的資料集來源欄位
 
@@ -150,7 +166,7 @@ ht-degree: 0%
 
 您可以根據自己的需求，選擇直接對應欄位，或使用資料準備函式來轉換來源資料，以衍生計算或計算的值。 如需使用對應介面的完整步驟，請參閱 [資料準備UI指南](../../../../../data-prep/ui/mapping.md).
 
-![對應](../../../../images/tutorials/create/marketo/mapping.png)
+![Marketo資料的對應介面。](../../../../images/tutorials/create/marketo/mapping.png)
 
 對應集準備就緒後，選取 **[!UICONTROL 下一個]** 並留出一些時間建立新的資料流。
 
@@ -163,7 +179,7 @@ ht-degree: 0%
 
 檢閱資料流後，選取「 」 **[!UICONTROL 儲存並擷取]** 並留出一些時間建立資料流。
 
-![評論](../../../../images/tutorials/create/marketo/review.png)
+![此檢閱頁面可讓您在擷取之前確認資料流的詳細資訊。](../../../../images/tutorials/create/marketo/review.png)
 
 ## 監視資料流
 
@@ -179,10 +195,7 @@ ht-degree: 0%
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已成功建立資料流以引入 [!DNL Marketo] 資料。 傳入資料現在可供下游Platform服務使用，例如 [!DNL Real-Time Customer Profile] 和 [!DNL Data Science Workspace]. 如需更多詳細資訊，請參閱下列檔案：
-
-* [[!DNL Real-Time Customer Profile] 概觀](/help/profile/home.md)
-* [[!DNL Data Science Workspace] 概觀](/help/data-science-workspace/home.md)
+依照本教學課程中的指示，您已成功建立資料流以從擷取B2B資料 [!DNL Marketo Engage] 來源以Experience Platform。
 
 ## 附錄 {#appendix}
 

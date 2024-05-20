@@ -2,9 +2,9 @@
 title: 使用Experience Platform使用者介面連線您的Salesforce帳戶
 description: 瞭解如何使用使用者介面連線您的Salesforce帳戶並將您的CRM資料帶入Experience Platform。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
+source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -26,17 +26,38 @@ ht-degree: 0%
 
 ### 收集必要的認證 {#gather-required-credentials}
 
-為了驗證您的 [!DNL Salesforce] account對Experience Platform，您必須提供對應至下列的值 [!DNL Salesforce] 認證：
+此 [!DNL Salesforce] 來源支援基本驗證和OAuth2使用者端認證。
+
+>[!BEGINTABS]
+
+>[!TAB 基本驗證]
+
+您必須提供下列認證的值，才能連線 [!DNL Salesforce] 使用基本驗證的帳戶。
 
 | 認證 | 說明 |
 | --- | --- |
-| `environmentUrl` | 的URL [!DNL Salesforce] 來源執行個體。 |
-| `username` | 的使用者名稱 [!DNL Salesforce] 使用者帳戶。 |
-| `password` | 的密碼 [!DNL Salesforce] 使用者帳戶。 |
-| `securityToken` | 的安全性權杖 [!DNL Salesforce] 使用者帳戶。 |
-| `apiVersion` | （選用）的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0` 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
+| 環境URL | 的URL [!DNL Salesforce] 來源執行個體。 |
+| 使用者名稱 | 的使用者名稱 [!DNL Salesforce] 使用者帳戶。 |
+| 密碼 | 的密碼 [!DNL Salesforce] 使用者帳戶。 |
+| 安全性權杖 | 的安全性權杖 [!DNL Salesforce] 使用者帳戶。 |
+| API版本 | （選用）的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0` 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
 
 有關驗證的詳細資訊，請參閱 [此 [!DNL Salesforce] 驗證指南](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB OAuth2使用者端認證]
+
+您必須提供下列認證的值，才能連線 [!DNL Salesforce] 使用OAuth2使用者端認證的帳戶。
+
+| 認證 | 說明 |
+| --- | --- |
+| 環境URL | 的URL [!DNL Salesforce] 來源執行個體。 |
+| 使用者端ID | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式藉由識別您的應用程式，代表您的帳戶運作。 [!DNL Salesforce]. |
+| 使用者端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式藉由識別您的應用程式，代表您的帳戶運作。 [!DNL Salesforce]. |
+| API版本 | （選用）的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0` 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
+
+如需為使用OAuth的詳細資訊 [!DNL Salesforce]，閱讀 [[!DNL Salesforce] OAuth授權流程指南](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 收集必要的認證後，您可以依照下列步驟連線 [!DNL Salesforce] 要Experience Platform的帳戶。
 
