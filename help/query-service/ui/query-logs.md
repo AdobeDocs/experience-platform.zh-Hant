@@ -2,9 +2,9 @@
 title: 查詢記錄
 description: 每次執行查詢時都會自動產生查詢記錄，並可透過UI取得查詢記錄以協助疑難排解。 本檔案概述如何使用及導覽UI的「查詢服務記錄檔」區段。
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,13 @@ Adobe Experience Platform會維護透過API和UI發生的所有查詢事件的�
 
 記錄檔是由任何查詢事件自動產生，並包含所使用SQL、查詢狀態、所需時間以及上次執行時間等資訊。 您可以使用查詢記錄檔資料當作強大的工具，來疑難排解低效或問題查詢。 稽核記錄功能會保留更完整的記錄資訊，可在以下連結中找到： [稽核記錄檔案](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## 檢查查詢記錄
+## 檢查查詢記錄 {#check-query-logs}
 
 若要檢查查詢記錄，請選取 [!UICONTROL 查詢] 導覽至查詢服務工作區，然後選取 [!UICONTROL 記錄] 可用選項中的。
+
+>[!NOTE]
+>
+>預設會排除系統查詢和控制面板查詢。 請參閱 [篩選器](#filter-logs) 區段，以瞭解如何根據您的設定調整顯示的記錄。
 
 ![顯示查詢和記錄的Platform UI。](../images/ui/query-log/logs.png)
 
@@ -77,11 +81,12 @@ A [每個日誌表格資料欄的說明](./overview.md#log) 您可以在查詢�
 
 ![查詢記錄工作區，其中顯示並反白了篩選選項。](../images/ui/query-log/log-filter-settings.png)
 
-下表證明了每個篩選的說明。
+下表提供每個篩選的說明。
 
 | 篩選器 | 說明 |
 | ------ | ----------- |
 | [!UICONTROL 排除儀表板查詢] | 此核取方塊預設為啟用，並排除用於產生深入分析的查詢所產生的記錄。 這些查詢是系統產生的，模糊了使用者產生的記錄，這些記錄是監視、管理和疑難排解所必需的。 若要檢視系統產生的記錄，請取消選取核取方塊。 |
+| [!UICONTROL 排除系統查詢] | 此核取方塊預設為啟用，並排除系統產生的記錄。 系統產生的查詢通常包括背景工作或維護操作，可能與使用者監控、管理或疑難排解目的無關。 如果您需要檢查系統產生的記錄，請取消選取此核取方塊以將其包含在記錄檢視中。 |
 | [!UICONTROL 開始日期] | 若要篩選在特定期間內建立之查詢的記錄，請設定 [!UICONTROL 開始] 和 [!UICONTROL 結束] 中的日期 [!UICONTROL 開始日期] 區段。 |
 | [!UICONTROL 完成日期] | 若要篩選在特定期間內完成的查詢記錄，請設定 [!UICONTROL 開始] 和 [!UICONTROL 結束] 中的日期 [!UICONTROL 完成日期] 區段。 |
 | [!UICONTROL 狀態] | 若要根據以下專案篩選記錄檔： [!UICONTROL 狀態] 在查詢中，選取適當的選項按鈕。 可用的選項包括 [!UICONTROL 已提交]， [!UICONTROL 進行中]， [!UICONTROL 成功]、和 [!UICONTROL 已失敗]. 您一次只能根據一個狀態條件篩選記錄。 |

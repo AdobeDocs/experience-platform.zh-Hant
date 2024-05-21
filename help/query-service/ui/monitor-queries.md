@@ -2,9 +2,9 @@
 title: 監視排定的查詢
 description: 瞭解如何透過查詢服務UI監視查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2030'
+source-wordcount: '2454'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 >[!NOTE]
 >
->警示訂閱圖示包含在未命名欄的每一列中。 請參閱 [警示訂閱](#alert-subscription) 區段以取得詳細資訊。
+>警示訂閱圖示(![警示訂閱圖示。](../images/ui/monitor-queries/alert-subscription-icon.png))包含在未命名欄的每一列中。 請參閱 [警示訂閱](#alert-subscription) 區段以取得詳細資訊。
 
 | 欄 | 說明 |
 |---|---|
@@ -81,19 +81,31 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 若要刪除排定的查詢，請選取您要管理的排定查詢的省略符號，然後選取「 」 **[!UICONTROL 刪除排程]** 從躍現式選單中的選項。 畫面會顯示一個對話方塊，確認您的動作。 選取 **[!UICONTROL 刪除]** 以確認您的設定。
 
-刪除排定的查詢後，它會 **非** 已從排程查詢清單中移除。 省略符號提供的內嵌動作會遭到移除，並以灰色的「新增警報」圖示取代。 您無法訂閱已刪除排程的警示。 該列保留在UI中，以提供排程查詢過程中所執行的執行的資訊。
+刪除排定的查詢後，它會 **非** 已從排程查詢清單中移除。 省略符號提供的內嵌動作會被移除，並以灰色的加入警報訂閱圖示取代。 您無法訂閱已刪除排程的警示。 該列保留在UI中，以提供排程查詢過程中所執行的執行的資訊。
 
-![「排程查詢」索引標籤中會顯示已刪除的排程查詢，且醒目提示警示圖示會呈現灰色。](../images/ui/monitor-queries/post-delete.png)
+![「排程查詢」索引標籤中會顯示已刪除的排程查詢，且醒目提示警示訂閱圖示呈現灰色。](../images/ui/monitor-queries/post-delete.png)
 
 如果您要為該查詢範本排定執行，請從適當的資料列選取範本名稱，以切換作業選項至「查詢編輯器」，然後遵循下列步驟 [新增排程至查詢的指示](./query-schedules.md#create-schedule) 如檔案所述。
 
-### 訂閱警報 {#alert-subscription}
+### 訂閱警示 {#alert-subscription}
 
-若要訂閱排程查詢執行的警示，請選取您要管理的排程查詢的省略符號，然後選取 **[!UICONTROL 訂閱]** 從躍現式選單中的選項。
+若要訂閱排程查詢執行的警示，請選取 `...` （省略符號）或警報訂閱圖示(![警示訂閱圖示。](../images/ui/monitor-queries/alert-subscription-icon.png))以取得您要管理的排程查詢。 內嵌動作下拉式功能表隨即顯示。 接下來，選取 **[!UICONTROL 訂閱]** 可用選項中的。
 
-此 [!UICONTROL 警報] 對話方塊開啟。 此 [!UICONTROL 警報] 對話方塊會讓您訂閱UI通知和電子郵件警示。 警示是以查詢的狀態為基礎。 有三個可用選項： `start`， `success`、和 `failure`. 勾選適當的一或多個方塊並選取 **[!UICONTROL 儲存]** 以訂閱。 您可以訂閱警示，只要他們沒有 [!UICONTROL 上次執行時間戳記] 值。
+![已排程的查詢工作區具有橢圓形、警報訂閱圖示，且內嵌動作下拉式選單反白顯示。](../images/ui/monitor-queries/subscribe.png)
+
+此 [!UICONTROL 警報] 對話方塊開啟。 此 [!UICONTROL 警報] 對話方塊會讓您訂閱UI通知和電子郵件警示。 有數個警報訂閱選項可供使用： `start`， `success`， `failure`， `quarantine`、和 `delay`. 勾選適當的一或多個方塊並選取 **[!UICONTROL 儲存]** 以訂閱。
 
 ![警示訂閱對話方塊。](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+下表說明支援的查詢警示型別：
+
+| 警示型別 | 說明 |
+|---|---|
+| `start` | 此警報會在排定的查詢執行起始或開始處理時通知您。 |
+| `success` | 此警報會在排定的查詢執行成功完成時通知您，表示查詢執行時沒有任何錯誤。 |
+| `failed` | 排定的查詢執行發生錯誤或無法成功執行時，就會觸發此警報。 它有助於您及時識別並解決問題。 |
+| `quarantine` | 當排程的查詢執行進入隔離狀態時，此警報便會啟動。 在中註冊查詢時 [隔離功能](#quarantined-queries)，任何連續十次執行失敗的排程查詢都會自動放入 [!UICONTROL 已隔離] 州別。 然後需要您的介入才能進行任何進一步的執行。 |
+| `delay` | 此警報會通知您是否有 [查詢執行結果的延遲](#query-run-delay) 超過指定的臨界值。 您可以設定自訂時間，當查詢在該期間內執行時觸發警報，而不需要完成或失敗。 |
 
 >[!NOTE]
 >
@@ -107,7 +119,11 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ![「排程查詢」索引標籤中會顯示資訊圖示，並反白顯示詳細資訊面板。](../images/ui/monitor-queries/details-panel.png)
 
-### 隔離的查詢 {#quarantined-queries}
+## 隔離的查詢 {#quarantined-queries}
+
+>[!NOTE]
+>
+>隔離警報不適用於「只執行一次」的臨時查詢。 隔離警報僅適用於排程批次（CTAS和ITAS）查詢。
 
 註冊隔離功能後，任何連續十次執行失敗的排程查詢都會自動放入 [!UICONTROL 已隔離] 狀態。 具有此狀態的查詢會變成非使用中，且不會以其排定的步調執行。 之後，您需要介入才能進行任何進一步的執行。 這樣可保護系統資源，因為您必須先檢閱並修正SQL的問題，才能進一步執行。
 
@@ -116,6 +132,22 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 ![內嵌動作下拉式選單中反白顯示有省略符號和「啟用隔離」的已排程查詢索引標籤。](../images/ui/monitor-queries/inline-enable.png)
 
 在排程建立過程中，您也可以在隔離功能中註冊查詢。 請參閱 [查詢排程檔案](./query-schedules.md#quarantine) 以取得詳細資訊。
+
+## 查詢執行延遲 {#query-run-delay}
+
+設定查詢延遲的警示，控制您的運算時間。 您可以監視查詢績效，並在特定期間後查詢狀態保持不變時接收通知。 使用&#39;[!UICONTROL 查詢執行延遲]」警報，當查詢在特定時段後繼續處理而未完成時通知。
+
+當您 [訂閱警示](#alert-subscription) 對於已排程的查詢執行，可用的警報之一是 [!UICONTROL 查詢執行延遲]. 此警報需要您設定執行時間的臨界值，此時您會收到處理延遲的通知。
+
+若要選擇觸發通知的臨界值持續時間，請在文字輸入欄位中輸入數字，或使用向上和向下箭頭增加一分鐘。 由於臨界值是以分鐘為單位設定，因此觀察查詢執行延遲的最長持續時間為1440分鐘（24小時）。 執行延遲的預設時段為150分鐘。
+
+>[!NOTE]
+>
+>查詢執行只能有一個執行延遲時間。 如果您變更延遲臨界值，訂閱警示的使用者和整個組織的使用者都會變更延遲臨界值。
+
+![「已排程查詢」索引標籤上的「警示」對話方塊，其查詢執行延遲輸入欄位會反白顯示。](../images/ui/monitor-queries/query-run-delay-input.png)
+
+請參閱訂閱警報一節，瞭解如何 [訂閱 [!UICONTROL 查詢執行延遲] 警報](#alert-subscription).
 
 ## 篩選查詢 {#filter}
 
@@ -157,7 +189,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ![排程詳細資訊畫面中反白顯示執行ID。](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-## 查詢執行總覽 {#query-run-overview}
+## 查詢執行概觀 {#query-run-overview}
 
 此 [!UICONTROL 查詢執行總覽] 提供此排程查詢個別執行的相關資訊，以及執行狀態的更詳細劃分。 此頁面也包含使用者端資訊，以及可能導致查詢失敗的任何錯誤的詳細資訊。
 
