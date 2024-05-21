@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '3080'
 ht-degree: 3%
 
 ---
@@ -74,9 +74,66 @@ ht-degree: 3%
 
 ## 內嵌資料集動作 {#inline-actions}
 
-資料集UI現在為每個可用的資料集提供一組內嵌動作。 選取您要管理的資料集的省略符號(...)，在快顯功能表中檢視可用選項。 可用的動作包括； [[!UICONTROL 預覽資料集]](#preview)， [[!UICONTROL 管理資料和存取標籤]](#manage-and-enforce-data-governance)， [[!UICONTROL 啟用統一的設定檔]](#enable-profile)， [[!UICONTROL 管理標籤]](#add-tags)， [[!UICONTROL 移至資料夾]](#move-to-folders)、和 [[!UICONTROL 刪除]](#delete). 如需這些可用動作的詳細資訊，請參閱其各自的章節。
+資料集UI現在為每個可用的資料集提供一組內嵌動作。 選取您要管理的資料集的省略符號(...)，在快顯功能表中檢視可用選項。 可用的動作包括；
 
-### 新增資料集標籤 {#add-tags}
+* [[!UICONTROL 預覽資料集]](#preview)，
+* [[!UICONTROL 管理資料和存取標籤]](#manage-and-enforce-data-governance)
+* [[!UICONTROL 啟用統一的設定檔]](#enable-profile)
+* [[!UICONTROL 管理標籤]](#manage-tags)
+* [[!UICONTROL 移至資料夾]](#move-to-folders)
+* [[!UICONTROL 刪除]](#delete).
+
+如需這些可用動作的詳細資訊，請參閱其各自的章節。 若要瞭解如何同時管理大量資料集，請參閱 [大量動作](#bulk-actions) 區段。
+
+### 預覽資料集 {#preview}
+
+您可以預覽資料集範例資料，其來源為 [!UICONTROL 瀏覽] 標籤以及 [!UICONTROL 資料集活動] 檢視。 從 [!UICONTROL 瀏覽] 索引標籤中，選取您要預覽的資料集名稱旁邊的省略符號(...)。 選單清單中的選項隨即顯示。 接下來，選取 **[!UICONTROL 預覽資料集]** 從可用選項清單中選取。 如果資料集空白，預覽連結將會停用，並改為表示無法預覽。
+
+![針對所選資料集反白顯示具有省略符號和預覽資料集選項的「資料集」工作區的「瀏覽」索引標籤。](../images/datasets/user-guide/preview-dataset-option.png)
+
+這將會開啟預覽視窗，其中資料集的結構描述階層檢視會顯示在右側。
+
+![隨即顯示資料集預覽對話方塊，其中包含資料集的結構相關資訊以及範例值。](../images/datasets/user-guide/preview-dataset.png)
+
+或者，從 **[!UICONTROL 資料集活動]** 熒幕，選取 **[!UICONTROL 預覽資料集]** 靠近熒幕右上角，可預覽最多100列資料。
+
+![預覽資料集按鈕會醒目提示。](../images/datasets/user-guide/select-preview.png)
+
+如需存取資料的更強大方法， [!DNL Experience Platform] 提供下游服務，例如 [!DNL Query Service] 和 [!DNL JupyterLab] 以探索及分析資料。 如需詳細資訊，請參閱下列檔案：
+
+* [查詢服務總覽](../../query-service/home.md)
+* [JupyterLab使用手冊](../../data-science-workspace/jupyterlab/overview.md)
+
+### 管理和強制執行資料集的資料控管 {#manage-and-enforce-data-governance}
+
+您可以選取「 」的內嵌選項，管理資料集的資料控管標籤。 [!UICONTROL 瀏覽] 標籤。 選取您要管理的資料集名稱旁的省略符號(...)，然後選取 **[!UICONTROL 管理資料和存取標籤]** 下拉式選單中的。
+
+資料使用標籤（套用至結構描述層級）可讓您根據套用至該資料的使用原則來分類資料集和欄位。 請參閱 [資料控管概觀](../../data-governance/home.md) 以進一步瞭解標籤，或參閱 [資料使用標籤使用手冊](../../data-governance/labels/overview.md) 以取得如何套用標籤至結構描述，以傳播至資料集的指示。
+
+## 為即時客戶個人檔案啟用資料集 {#enable-profile}
+
+每個資料集都能夠使用其擷取的資料擴充客戶設定檔。 要執行此操作，資料集所遵守的結構描述必須相容以用於 [!DNL Real-Time Customer Profile]. 相容的結構描述符合下列需求：
+
+* 結構描述至少指定一個屬性做為身分屬性。
+* 結構描述具有定義為主要身分的身分屬性。
+
+如需為下列專案啟用結構的詳細資訊： [!DNL Profile]，請參閱 [結構描述編輯器使用手冊](../../xdm/tutorials/create-schema-ui.md).
+
+您可以從以下兩個內嵌選項為設定檔啟用資料集： [!UICONTROL 瀏覽] 標籤以及 [!UICONTROL 資料集活動] 檢視。 從 [!UICONTROL 瀏覽] 的標籤 [!UICONTROL 資料集] 在工作區中，選取您要為設定檔啟用的資料集省略符號。 選單清單中的選項隨即顯示。 接下來，選取 **[!UICONTROL 啟用統一的設定檔]** 從可用選項清單中選取。
+
+![資料集工作區的「瀏覽」索引標籤中會反白顯示省略符號和啟用統一的設定檔。](../images/datasets/user-guide/enable-for-profile.png)
+
+或者，從資料集的 **[!UICONTROL 資料集活動]** 熒幕，選取 **[!UICONTROL 個人資料]** 在「 」內切換 **[!UICONTROL 屬性]** 欄。 啟用後，會使用擷取到資料集中的資料來填入客戶設定檔。
+
+>[!NOTE]
+>
+>如果資料集已包含資料，且已啟用 [!DNL Profile]，現有的資料不會自動被 [!DNL Profile]. 為啟用資料集後 [!DNL Profile]，建議您重新內嵌任何現有資料，以貢獻給客戶設定檔。
+
+![資料集詳細資訊頁面會醒目顯示設定檔切換按鈕。](../images/datasets/user-guide/enable-dataset-profiles.png)
+
+已啟用設定檔的資料集也可依此條件篩選。 請參閱如何操作的區段 [篩選設定檔啟用的資料集](#filter-profile-enabled-datasets) 以取得詳細資訊。
+
+### 管理資料集標籤 {#manage-tags}
 
 新增自訂建立的標籤來組織資料集並改善搜尋、篩選和排序功能。 從 [!UICONTROL 瀏覽] 的標籤 [!UICONTROL 資料集] 在工作區中，選取您要管理的資料集省略符號，然後選取 **[!UICONTROL 管理標籤]** 下拉式選單中的。
 
@@ -91,6 +148,52 @@ ht-degree: 3%
 將標籤新增到資料集後，即可根據對應的標籤篩選資料集。 請參閱如何操作的區段 [依標籤篩選資料集](#enable-profile) 以取得詳細資訊。
 
 如需如何分類商業物件以便輕鬆探索和分類的詳細資訊，請參閱以下指南中的 [管理中繼資料分類](../../administrative-tags/ui/managing-tags.md). 本指南詳細說明具有適當許可權的使用者如何建立預先定義的標籤、將類別指派給標籤，以及在Platform UI中執行標籤和標籤類別的所有相關CRUD作業。
+
+### 移至資料夾 {#move-to-folders}
+
+您可以將資料集放在資料夾中，以改善資料集管理。 若要將資料集移至資料夾，請選取您要管理的資料集名稱旁的省略符號(...)，然後選取 **[!UICONTROL 移至資料夾]** 下拉式選單中的。
+
+![此 [!UICONTROL 資料集] 儀表板，帶有橢圓和 [!UICONTROL 移至資料夾] 反白顯示。](../images/datasets/user-guide/move-to-folder.png)
+
+此 [!UICONTROL 移動] 資料集至資料夾對話方塊隨即顯示。 選取您要移動對象的資料夾，然後選取「 」 **[!UICONTROL 移動]**. 快顯通知會通知您資料集移動成功。
+
+![此 [!UICONTROL 移動] 資料集對話方塊，使用 [!UICONTROL 移動] 反白顯示。](../images/datasets/user-guide/move-dialog.png)
+
+>[!TIP]
+>
+>您也可以直接從「行動資料集」對話方塊建立資料夾。 若要建立資料夾，請選取建立資料夾圖示(![建立資料夾圖示。](../images/datasets/user-guide/create-folder-icon.png))。
+>
+>![此 [!UICONTROL 移動] 資料集對話方塊，其中的「建立資料夾」圖示會強調顯示。](/help/catalog/images/datasets/user-guide/create-folder.png)
+
+資料集放入資料夾後，您可以選擇僅顯示屬於特定資料夾的資料集。 若要開啟資料夾結構，請選取顯示資料夾圖示(![顯示資料夾圖示](../images/datasets/user-guide/show-folders-icon.png))。 接著，選取您選擇的資料夾以檢視所有關聯的資料集。
+
+![此 [!UICONTROL 資料集] 控制面板上會顯示資料集資料夾結構、顯示資料夾圖示，以及反白顯示的選定資料夾。](../images/datasets/user-guide/folder-structure.png)
+
+### 刪除資料集 {#delete}
+
+您可以從中的資料集內嵌動作刪除資料集 [!UICONTROL 瀏覽] 標籤或右上角 [!UICONTROL 資料集活動] 檢視。 從 [!UICONTROL 瀏覽] 檢視，選取您要刪除的資料集名稱旁邊的省略符號(...)。 選單清單中的選項隨即顯示。 接下來，選取 **[!UICONTROL 刪除]** 下拉式選單中的。
+
+![針對所選資料集，具有省略符號和醒目提示刪除選項的資料集工作區的「瀏覽」索引標籤。](../images/datasets/user-guide/inline-delete-dataset.png)
+
+確認對話方塊隨即顯示。 請選取「**[!UICONTROL 刪除]**」完成確認。
+
+或者，選取 **[!UICONTROL 刪除資料集]** 從 **[!UICONTROL 資料集活動]** 畫面。
+
+>[!NOTE]
+>
+>Adobe應用程式和服務(例如Adobe Analytics、Adobe Audience Manager或 [!DNL Offer Decisioning])無法刪除。
+
+![「刪除資料集」按鈕在資料集詳細資訊頁面中會醒目提示。](../images/datasets/user-guide/delete-dataset.png)
+
+確認方塊隨即顯示。 選取 **[!UICONTROL 刪除]** 以確認刪除資料集。
+
+![系統會顯示刪除的確認強制回應視窗，並反白顯示「刪除」按鈕。](../images/datasets/user-guide/confirm-delete.png)
+
+### 刪除啟用設定檔的資料集
+
+如果設定檔已啟用資料集，透過UI刪除該資料集將會從資料湖、身分服務以及在設定檔存放區中刪除與該資料集相關聯的任何設定檔資料。
+
+您可以從以下位置刪除與資料集相關聯的設定檔資料： [!DNL Profile] 使用即時客戶個人檔案API儲存（將資料留在資料湖中）。 如需詳細資訊，請參閱 [設定檔系統作業API端點指南](../../profile/api/profile-system-jobs.md).
 
 ## 搜尋和篩選資料集 {#search-and-filter}
 
@@ -132,30 +235,24 @@ ht-degree: 3%
 
 您可以根據定義資料集結構的結構來篩選資料集。 選取下拉式圖示或將結構描述名稱輸入文字欄位。 可能的相符專案清單隨即顯示。 從清單中選取適當的結構描述。
 
+## 大量動作 {#bulk-actions}
+
+使用大量動作來提升營運效率，以及同時對多個資料集執行多個動作。 您可以透過大量動作節省時間並維持井然有序的資料結構，例如 [移至資料夾](#move-to-folders)， [編輯標籤](#manage-tags)、和 [刪除](#delete) 資料集。
+
+若要一次對多個資料集執行動作，請以每列的核取方塊選取個別資料集，或選取含有欄標題核取方塊的整個頁面。 選取後，大量動作列隨即顯示。
+
+![「資料集瀏覽」索引標籤中選取了許多資料集，並反白顯示大量動作列。](../images/datasets/user-guide/bulk-actions.png)
+
+對資料集套用大量動作時，將會套用下列條件：
+
+* 您可以從UI的不同頁面選取資料集。
+* 如果您選取篩選器，選取的資料集將會重設。
+
 ## 依建立日期排序資料集 {#sort}
 
 中的資料集 [!UICONTROL 瀏覽] 索引標籤可依遞增或遞減日期排序。 選取 [!UICONTROL 已建立] 或 [!UICONTROL 上次更新時間] 欄標題在升序和降序之間切換。 選取後，欄會以向上或向下箭頭指向欄標題的側邊來指示此專案。
 
 ![「資料集」工作區的「瀏覽」索引標籤中，已建立和上次更新欄會反白顯示。](../images/datasets/user-guide/ascending-descending-columns.png)
-
-## 預覽資料集 {#preview}
-
-您可以預覽資料集範例資料，其來源為 [!UICONTROL 瀏覽] 標籤以及 [!UICONTROL 資料集活動] 檢視。 從 [!UICONTROL 瀏覽] 索引標籤中，選取您要預覽的資料集名稱旁邊的省略符號(...)。 選單清單中的選項隨即顯示。 接下來，選取 **[!UICONTROL 預覽資料集]** 從可用選項清單中選取。 如果資料集空白，預覽連結將會停用，並改為表示無法預覽。
-
-![針對所選資料集反白顯示具有省略符號和預覽資料集選項的「資料集」工作區的「瀏覽」索引標籤。](../images/datasets/user-guide/preview-dataset-option.png)
-
-這將會開啟預覽視窗，其中資料集的結構描述階層檢視會顯示在右側。
-
-![隨即顯示資料集預覽對話方塊，其中包含資料集的結構相關資訊以及範例值。](../images/datasets/user-guide/preview-dataset.png)
-
-或者，從 **[!UICONTROL 資料集活動]** 熒幕，選取 **[!UICONTROL 預覽資料集]** 靠近熒幕右上角，可預覽最多100列資料。
-
-![預覽資料集按鈕會醒目提示。](../images/datasets/user-guide/select-preview.png)
-
-如需存取資料的更強大方法， [!DNL Experience Platform] 提供下游服務，例如 [!DNL Query Service] 和 [!DNL JupyterLab] 以探索及分析資料。 如需詳細資訊，請參閱下列檔案：
-
-* [查詢服務總覽](../../query-service/home.md)
-* [JupyterLab使用手冊](../../data-science-workspace/jupyterlab/overview.md)
 
 ## 建立資料集 {#create}
 
@@ -201,81 +298,6 @@ ht-degree: 3%
 >CSV欄名稱的開頭必須為字母數字字元，並且只能包含字母、數字和底線。
 
 ![隨即顯示「新增資料」畫面。 上傳資料集CSV檔案的位置會醒目提示。](../images/datasets/user-guide/add-csv-data.png)
-
-## 為即時客戶個人檔案啟用資料集 {#enable-profile}
-
-每個資料集都能夠使用其擷取的資料擴充客戶設定檔。 要執行此操作，資料集所遵守的結構描述必須相容以用於 [!DNL Real-Time Customer Profile]. 相容的結構描述符合下列需求：
-
-* 結構描述至少指定一個屬性做為身分屬性。
-* 結構描述具有定義為主要身分的身分屬性。
-
-如需為下列專案啟用結構的詳細資訊： [!DNL Profile]，請參閱 [結構描述編輯器使用手冊](../../xdm/tutorials/create-schema-ui.md).
-
-您可以從以下兩個內嵌選項為設定檔啟用資料集： [!UICONTROL 瀏覽] 標籤以及 [!UICONTROL 資料集活動] 檢視。 從 [!UICONTROL 瀏覽] 的標籤 [!UICONTROL 資料集] 在工作區中，選取您要為設定檔啟用的資料集省略符號。 選單清單中的選項隨即顯示。 接下來，選取 **[!UICONTROL 啟用統一的設定檔]** 從可用選項清單中選取。
-
-![資料集工作區的「瀏覽」索引標籤中會反白顯示省略符號和啟用統一的設定檔。](../images/datasets/user-guide/enable-for-profile.png)
-
-或者，從資料集的 **[!UICONTROL 資料集活動]** 熒幕，選取 **[!UICONTROL 個人資料]** 在「 」內切換 **[!UICONTROL 屬性]** 欄。 啟用後，會使用擷取到資料集中的資料來填入客戶設定檔。
-
->[!NOTE]
->
->如果資料集已包含資料，且已啟用 [!DNL Profile]，現有的資料不會自動被 [!DNL Profile]. 為啟用資料集後 [!DNL Profile]，建議您重新內嵌任何現有資料，以貢獻給客戶設定檔。
-
-![資料集詳細資訊頁面會醒目顯示設定檔切換按鈕。](../images/datasets/user-guide/enable-dataset-profiles.png)
-
-已啟用設定檔的資料集也可依此條件篩選。 請參閱如何操作的區段 [篩選設定檔啟用的資料集](#filter-profile-enabled-datasets) 以取得詳細資訊。
-
-## 管理和強制執行資料集的資料控管 {#manage-and-enforce-data-governance}
-
-您可以選取「 」的內嵌選項，管理資料集的資料控管標籤。 [!UICONTROL 瀏覽] 標籤。 選取您要管理的資料集名稱旁的省略符號(...)，然後選取 **[!UICONTROL 管理資料和存取標籤]** 下拉式選單中的。
-
-資料使用標籤（套用至結構描述層級）可讓您根據套用至該資料的使用原則來分類資料集和欄位。 請參閱 [資料控管概觀](../../data-governance/home.md) 以進一步瞭解標籤，或參閱 [資料使用標籤使用手冊](../../data-governance/labels/overview.md) 以取得如何套用標籤至結構描述，以傳播至資料集的指示。
-
-## 移至資料夾 {#move-to-folders}
-
-您可以將資料集放在資料夾中，以改善資料集管理。 若要將資料集移至資料夾，請選取您要管理的資料集名稱旁的省略符號(...)，然後選取 **[!UICONTROL 移至資料夾]** 下拉式選單中的。
-
-![此 [!UICONTROL 資料集] 儀表板，帶有橢圓和 [!UICONTROL 移至資料夾] 反白顯示。](../images/datasets/user-guide/move-to-folder.png)
-
-此 [!UICONTROL 移動] 資料集至資料夾對話方塊隨即顯示。 選取您要移動對象的資料夾，然後選取「 」 **[!UICONTROL 移動]**. 快顯通知會通知您資料集移動成功。
-
-![此 [!UICONTROL 移動] 資料集對話方塊，使用 [!UICONTROL 移動] 反白顯示。](../images/datasets/user-guide/move-dialog.png)
-
->[!TIP]
->
->您也可以直接從「行動資料集」對話方塊建立資料夾。 若要建立資料夾，請選取建立資料夾圖示(![建立資料夾圖示。](../images/datasets/user-guide/create-folder-icon.png))。
->
->![此 [!UICONTROL 移動] 資料集對話方塊，其中的「建立資料夾」圖示會強調顯示。](/help/catalog/images/datasets/user-guide/create-folder.png)
-
-資料集放入資料夾後，您可以選擇僅顯示屬於特定資料夾的資料集。 若要開啟資料夾結構，請選取顯示資料夾圖示(![顯示資料夾圖示](../images/datasets/user-guide/show-folders-icon.png))。 接著，選取您選擇的資料夾以檢視所有關聯的資料集。
-
-![此 [!UICONTROL 資料集] 控制面板上會顯示資料集資料夾結構、顯示資料夾圖示，以及反白顯示的選定資料夾。](../images/datasets/user-guide/folder-structure.png)
-
-## 刪除資料集 {#delete}
-
-您可以從中的資料集內嵌動作刪除資料集 [!UICONTROL 瀏覽] 標籤或右上角 [!UICONTROL 資料集活動] 檢視。 從 [!UICONTROL 瀏覽] 檢視，選取您要刪除的資料集名稱旁邊的省略符號(...)。 選單清單中的選項隨即顯示。 接下來，選取 **[!UICONTROL 刪除]** 下拉式選單中的。
-
-![針對所選資料集，具有省略符號和醒目提示刪除選項的資料集工作區的「瀏覽」索引標籤。](../images/datasets/user-guide/inline-delete-dataset.png)
-
-確認對話方塊隨即顯示。 請選取「**[!UICONTROL 刪除]**」完成確認。
-
-或者，選取 **[!UICONTROL 刪除資料集]** 從 **[!UICONTROL 資料集活動]** 畫面。
-
->[!NOTE]
->
->Adobe應用程式和服務(例如Adobe Analytics、Adobe Audience Manager或 [!DNL Offer Decisioning])無法刪除。
-
-![「刪除資料集」按鈕在資料集詳細資訊頁面中會醒目提示。](../images/datasets/user-guide/delete-dataset.png)
-
-確認方塊隨即顯示。 選取 **[!UICONTROL 刪除]** 以確認刪除資料集。
-
-![系統會顯示刪除的確認強制回應視窗，並反白顯示「刪除」按鈕。](../images/datasets/user-guide/confirm-delete.png)
-
-## 刪除啟用設定檔的資料集
-
-如果設定檔已啟用資料集，透過UI刪除該資料集將會從資料湖、身分服務以及在設定檔存放區中刪除與該資料集相關聯的任何設定檔資料。
-
-您可以從以下位置刪除與資料集相關聯的設定檔資料： [!DNL Profile] 使用即時客戶個人檔案API儲存（將資料留在資料湖中）。 如需詳細資訊，請參閱 [設定檔系統作業API端點指南](../../profile/api/profile-system-jobs.md).
 
 ## 監視資料擷取
 
