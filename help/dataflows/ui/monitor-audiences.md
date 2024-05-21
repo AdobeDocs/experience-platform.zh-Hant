@@ -6,7 +6,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
 workflow-type: tm+mt
 source-wordcount: '1862'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 2%
    - [匯出工作](../../segmentation/api/export-jobs.md)：匯出作業為非同步程式，用於儲存資料集的對象成員。
 - [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
 
-## 監視受眾控制面板 {#monitoring-audiences-dashboard}
+## 監視對象儀表板 {#monitoring-audiences-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segments"
 >title="對象"
->abstract="對象檢視包含貴組織所有對象的相關資訊，以及這些對象的啟用和評估工作的相關進一步資訊。"
+>abstract="對象檢視包含有關您組織之所有對象的資訊，以及有關其啟動和評估工作的詳細資訊。"
 
 若要存取 **[!UICONTROL 受眾]** 儀表板，選取 **[!UICONTROL 監視]** ，位於左側導覽器中。 一旦於 **[!UICONTROL 監視]** 頁面，選取 **[!UICONTROL 受眾]** 卡片。
 
@@ -170,7 +170,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="分段工作"
->abstract="分段作業檢視包含有關所有對象之評估和匯出作業的資訊。"
+>abstract="分段工作檢視包含有關您所有對象之評估和匯出工作的資訊。"
 
 若要存取 **[!UICONTROL 分段工作]** 儀表板，選取 **[!UICONTROL 分段工作]** 在 [!UICONTROL 受眾] 儀表板。 此 [!UICONTROL 監視] 儀表板包含有關評估和匯出作業的量度和資訊。
 

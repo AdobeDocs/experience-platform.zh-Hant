@@ -5,7 +5,7 @@ exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
 source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
 source-wordcount: '1624'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -45,14 +45,14 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
->title="介面工具的最大數量"
->abstract="儀表板服務最多可支援10個Widget。 將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。"
+>title="Widget 的最大數量"
+>abstract="儀表板服務最多支援十個 Widget。將十個 Widget 新增到儀表板後，「[!UICONTROL 新增 Widget]」選項會停用並顯示為灰色。"
 
 從您的新儀表板檢視中，選取 **[!UICONTROL 新增Widget]** 以開始建立Widget的程式。
 
 >[!IMPORTANT]
 >
->每個儀表板最多可支援10個Widget。 將十個介面工具新增到儀表板後，[!UICONTROL 新增介面工具] 選項會停用並顯示為灰色。
+>每個儀表板最多可支援10個Widget。 將十個 Widget 新增到儀表板後，「[!UICONTROL 新增 Widget]」選項會停用並顯示為灰色。
 
 ![醒目提示新增Widget的新空白儀表板。](./images/user-defined-dashboards/add-new-widget.png)
 
