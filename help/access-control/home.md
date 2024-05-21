@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
+source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1718'
 ht-degree: 1%
 
 ---
@@ -100,6 +100,7 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Profile Management] | [!UICONTROL 檢視區段] | 可用區段的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 管理合併原則] | 讀取、建立、編輯和刪除合併原則的存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視合併原則] | 可用合併原則的唯讀存取權。 |
+| [!DNL Profile Management] | [!UICONTROL 匯入對象] | 存取讀取、建立、編輯和刪除匯入的對象。 |
 | [!DNL Profile Management] | [!UICONTROL 匯出區段的對象] | 能夠將評估的對象區段匯出至資料集。 |
 | [!DNL Profile Management] | [!UICONTROL 評估某個區段給某個對象] | 透過評估區段定義來為對象產生設定檔的功能。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視B2B AI] | 以唯讀方式存取所有B2B AI/ML服務的設定和組態。 |
