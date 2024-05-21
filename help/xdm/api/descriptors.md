@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 描述項API端點
 description: Schema Registry API中的/descriptors端點可讓您以程式設計方式管理體驗應用程式中的XDM描述項。
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
+source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1919'
 ht-degree: 1%
 
 ---
@@ -288,6 +288,10 @@ curl -X DELETE \
 下節提供有關使用中的描述項的其他資訊 [!DNL Schema Registry] API。
 
 ### 定義描述項 {#defining-descriptors}
+
+>[!NOTE]
+>
+>可套用至結構描述的描述項數目上限為4000。
 
 以下小節提供可用描述項型別的概觀，包括定義每種型別的描述項所需的欄位。
 

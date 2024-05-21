@@ -2,16 +2,20 @@
 title: XDM個別潛在客戶設定檔類別
 description: 瞭解Experience Data Model (XDM)中的XDM個別潛在客戶設定檔類別。
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f4ddcf14de7a5cec42b5ebc521203cfdd1498a9f
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 3%
+source-wordcount: '390'
+ht-degree: 5%
 
 ---
 
 # [!UICONTROL XDM個別潛在客戶設定檔] 類別
 
 在Experience Data Model (XDM)中， [!UICONTROL XDM個別潛在客戶設定檔] class會擷取潛在客戶設定檔，這些設定檔通常來自漏斗頂端客戶贏取使用案例的資料合作夥伴。
+
+>[!NOTE]
+>
+>若要將XDM個別潛在客戶設定檔中的欄位設定為身分，您必須先建立至少一個合作夥伴ID名稱空間。 如需有關合作夥伴 ID 命名空間的詳細資訊，請閱讀[身分類型章節](../../identity-service/features/namespaces.md)。
 
 ![XDM潛在客戶類別的結構描述圖。](../images/classes/individual-prospect-profile.png)
 
