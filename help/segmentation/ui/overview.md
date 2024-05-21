@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4274'
-ht-degree: 3%
+source-wordcount: '4334'
+ht-degree: 2%
 
 ---
 
@@ -85,7 +85,11 @@ ht-degree: 3%
 | [!UICONTROL 刪除] | 對象構成、自訂上傳、細分服務 | 刪除選取的對象。 用於下游目的地或為其他對象相依對象的對象 **無法** 都會被刪除。 如需有關刪除對象的詳細資訊，請參閱 [區段常見問題集](../faq.md#lifecycle-states). |
 | [!UICONTROL 新增到封裝] | 對象構成、自訂上傳、細分服務 | 在沙箱之間移動對象。 如需有關此功能的詳細資訊，請參閱 [沙箱工具手冊](../../sandboxes/ui/sandbox-tooling.md). |
 
-頁面頂端有選項，可新增所有對象至排程、匯入對象、建立新對象和檢視更新頻率的劃分。
+>[!IMPORTANT]
+>
+>在刪除您的對象之前，請確定對象為 **非** 在以帳戶為基礎的對象中作為元件使用，或在Adobe Journey Optimizer中使用。
+
+頁面頂端有選項，可新增所有對象至排程、匯入對象、建立新對象和檢視對象評估的摘要。
 
 切換 **[!UICONTROL 排程所有對象]** 將啟用排程分段。 有關已排程分段的詳細資訊，請參閱 [本使用手冊的已排程分段區段](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ ht-degree: 3%
 
 ![對象瀏覽頁面上的頂端導覽列會醒目提示。 此列包含建立對象的按鈕和匯入對象的按鈕。](../images/ui/overview/browse-audiences-top.png)
 
-您可以選取 **[!UICONTROL 更新頻率摘要]** 以顯示顯示更新頻率的圓餅圖。
+您可以選取 **[!UICONTROL 評估摘要]** 顯示圓形圖，其中顯示對象評估的摘要。
 
-![更新頻率摘要按鈕會醒目提示。](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![評估摘要按鈕會醒目顯示。](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-圓形圖會出現，顯示依更新頻率劃分的對象劃分。 圖表在中間顯示對象總數，在底部顯示UTC格式的每日批次評估時間。 如果您將滑鼠游標停留在對象的不同部分，它會顯示屬於每個更新頻率型別的對象數量。
+圓形圖會出現，依對象評估顯示對象劃分。 圖表在中間顯示對象總數，在底部顯示UTC格式的每日批次評估時間。 如果您將滑鼠游標停留在對象的不同部分，它會顯示屬於每個更新頻率型別的對象數量。
 
-![更新頻率圓餅圖會醒目提示，並顯示批次細分評估時間。](../images/ui/overview/update-frequency-chart.png)
+![對象評估圓形圖會醒目顯示，並顯示批次細分評估時間。](../images/ui/overview/evaluation-summary.png)
 
 ### 自訂 {#customize}
 
@@ -203,7 +207,7 @@ ht-degree: 3%
 | [!UICONTROL Origin] | 可讓您根據對象來源進行篩選。 可用選項包括細分服務、自訂上傳、對象構成和Audience Manager。 |
 | [!UICONTROL 具有任何標籤] | 可讓您依標籤篩選。 您可以選取 **[!UICONTROL 具有任何標籤]** 和 **[!UICONTROL 具有所有標籤]**. 時間 **[!UICONTROL 具有任何標籤]** 已選取，則已篩選的對象將包括 **任何** 已新增標籤的URL數量。 時間 **[!UICONTROL 具有所有標籤]** 已選取，則篩選的對象必須包括 **全部** 已新增標籤的URL數量。 |
 | [!UICONTROL 生命週期狀態] | 可讓您根據對象的生命週期狀態進行篩選。 可用的選項包括 [!UICONTROL 已刪除]， [!UICONTROL 草稿]， [!UICONTROL 非使用中]、和 [!UICONTROL 已發佈]. |
-| [!UICONTROL 更新頻率] | 可讓您根據對象的更新頻率進行篩選。 可用的選項包括 [!UICONTROL 已排程]， [!UICONTROL 連續]、和 [!UICONTROL 隨選]. |
+| [!UICONTROL 更新頻率] | 可讓您根據對象的更新頻率（評估方法）進行篩選。 可用的選項包括 [!UICONTROL 已排程]， [!UICONTROL 連續]、和 [!UICONTROL 隨選]. |
 | [!UICONTROL 建立者] | 可讓您根據建立受眾的人員進行篩選。 |
 | [!UICONTROL 建立日期] | 可讓您根據對象的建立日期進行篩選。 您可以選取日期範圍，以篩選建立對象的時間。 |
 | [!UICONTROL 修改日期] | 可讓您根據對象的上次修改日期進行篩選。 您可以選擇日期範圍，以篩選上次修改對象的時間。 |
@@ -329,6 +333,10 @@ ht-degree: 3%
 ![隨即顯示「區段產生器」工作區。](../images/ui/overview/segment-builder.png)
 
 ### 匯入對象 {#import-audience}
+
+>[!IMPORTANT]
+>
+>若要匯入外部產生的對象，您可以 **必須** 擁有下列許可權： [!UICONTROL 檢視區段]， [!UICONTROL 管理區段]、和 [!UICONTROL 匯入對象]. 如需這些許可權的詳細資訊，請參閱 [存取控制總覽](../../access-control/home.md#permissions).
 
 您可以選取 **[!UICONTROL 匯入對象]** 匯入外部產生的對象。
 
