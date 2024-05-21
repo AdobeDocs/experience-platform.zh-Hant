@@ -3,9 +3,9 @@ title: 使用流量服務API建立Google PubSub來源連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Google PubSub帳戶。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1147'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
-為了 [!DNL Flow Service] 以連線到 [!DNL PubSub]，您必須提供下列連線屬性的值：
+您必須提供下列連線屬性的值，才能連線 [!DNL PubSub] 帳戶至 [!DNL Flow Service]. 如需有關驗證和先決條件設定的詳細資訊，請參閱 [[!DNL PubSub source] 概述](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 >[!ENDTABS]
 
-如需這些值的詳細資訊，請參閱此 [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) 檔案。 若要使用以服務帳戶為基礎的驗證，請參閱此 [[!DNL PubSub] 建立服務帳戶指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生認證的步驟。
+如需這些值的詳細資訊，請閱讀此 [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) 檔案。 若要使用以服務帳戶為基礎的驗證，請閱讀此 [[!DNL PubSub] 建立服務帳戶指南](https://cloud.google.com/docs/authentication/production#create_service_account) 以取得如何產生認證的步驟。
 
 >[!TIP]
 >
@@ -90,7 +90,7 @@ POST /connections
 
 若要使用專案型驗證建立基礎連線，請向以下發出POST請求： `/connections` 端點，並提供您的 `projectId` 和 `credentials` 在要求內文中。
 
-+++請求
++++要求
 
 ```shell
 curl -X POST \
@@ -142,7 +142,7 @@ curl -X POST \
 
 POST若要使用主題和訂閱式驗證建立基礎連線，請向 `/connections` 端點，並提供您的 `credentials`， `topicName`、和 `subscriptionName` 在要求內文中。
 
-+++請求
++++要求
 
 ```shell
 curl -X POST \

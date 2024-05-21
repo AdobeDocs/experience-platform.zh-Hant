@@ -3,10 +3,10 @@ title: 在使用者介面中建立Google PubSub來源連線
 description: 瞭解如何使用Platform使用者介面建立Google PubSub來源聯結器。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1099'
-ht-degree: 1%
+source-wordcount: '1098'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,8 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-為了連線 [!DNL PubSub] 對於Platform，您必須提供下列認證的有效值：
+您必須提供下列連線屬性的值，才能連線 [!DNL PubSub] 要Experience Platform的帳戶。 如需有關驗證和先決條件設定的詳細資訊，請參閱 [[!DNL PubSub source] 概述](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 
@@ -37,7 +38,7 @@ ht-degree: 1%
 
 | 認證 | 說明 |
 | --- | --- |
-| 專案 ID | 驗證所需的專案ID [!DNL PubSub]. |
+| 專案ID | 驗證所需的專案ID [!DNL PubSub]. |
 | 認證 | 驗證所需的認證 [!DNL PubSub]. 您必須確保在移除認證的空格後，放入完整的JSON檔案。 |
 
 >[!TAB 主題和訂閱型驗證]
@@ -109,7 +110,7 @@ ht-degree: 1%
 >
 >指派給的主體（角色） [!DNL PubSub] 專案會繼承內建立的所有主題和訂閱中 [!DNL PubSub] 專案。 如果您希望主參與者（角色）能夠存取特定主題，則也必須將該主參與者（角色）新增到主題的對應訂閱中。 如需詳細資訊，請閱讀 [[!DNL PubSub] 存取控制檔案](<https://cloud.google.com/pubsub/docs/access-control>).
 
-## 選擇資料
+## 選取資料
 
 成功的驗證會帶您前往 [!UICONTROL 選取資料] 步驟，您可在此導覽至 [!DNL PubSub] 資料階層，並選取您要帶入Experience Platform的資料。
 
