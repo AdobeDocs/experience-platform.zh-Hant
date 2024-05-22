@@ -3,10 +3,10 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 檢視目的地詳細資料
 description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及編輯啟用、啟用及停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 1%
+source-wordcount: '1106'
+ht-degree: 0%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 | [!UICONTROL 狀態] | 指示目的地是啟用或停用。 |
 | [!UICONTROL 行銷動作] | 表示適用於此目的地以進行資料控管的行銷動作（使用案例）。 |
 | [!UICONTROL 類別] | 指示目的地型別。 請參閱 [目的地目錄](../catalog/overview.md) 以取得詳細資訊。 |
-| [!UICONTROL 連線類型] | 指出將您的對象傳送至目的地所使用的表單。 可能的值包括 [!UICONTROL Cookie] 和 [!UICONTROL 以設定檔為基礎]. |
+| [!UICONTROL 連線型別] | 指出將您的對象傳送至目的地所使用的表單。 可能的值包括 [!UICONTROL Cookie] 和 [!UICONTROL 以設定檔為基礎]. |
 | [!UICONTROL 頻率] | 指出將對象傳送到目的地的頻率。 可能的值包括 [!UICONTROL 串流] 和 [!UICONTROL 批次]. |
 | [!UICONTROL 身分] | 代表目的地接受的身分名稱空間，例如 `GAID`， `IDFA`，或 `email`. 如需接受的身分名稱空間詳細資訊，請參閱 [身分名稱空間總覽](../../identity-service/features/namespaces.md). |
 | [!UICONTROL 建立者] | 表示建立此目的地的使用者。 |
@@ -125,21 +125,13 @@ ht-degree: 1%
 
 ![啟用資料熒幕醒目提示「移除對象」選項。](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE 測試版]{type=Informative}隨選將多個檔案匯出至批次目的地 {#bulk-export}
-
->[!NOTE]
->
-此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+### 隨選將多個檔案匯出至批次目的地 {#bulk-export}
 
 您可以 [隨選匯出多個檔案](../ui/export-file-now.md) 從 **[!UICONTROL 啟用資料]** 頁面。 若要這麼做，請選取您要隨選匯出檔案的對象，然後選取 **[!UICONTROL 立即匯出檔案]** 控制以觸發一次性匯出，將每個所選對象的檔案傳送到批次目的地。
 
 ![反白顯示「立即匯出檔案」按鈕的影像。](../assets/ui/details-page/bulk-export-file-now.png)
 
-### [!BADGE 測試版]{type=Informative}編輯匯出至批次目的地的多個對象啟用排程 {#bulk-edit-schedule}
-
->[!NOTE]
->
-此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+### 編輯匯出至批次目的地的多個對象的啟用排程 {#bulk-edit-schedule}
 
 若要同時編輯多個對象的現有啟用排程，請選取所需的對象，然後選取「 」 **[!UICONTROL 編輯排程]**. 如需如何定義或編輯匯出排程的詳細資訊，請參閱 [排程對象匯出](../ui/activate-batch-profile-destinations.md#scheduling) 區段。
 

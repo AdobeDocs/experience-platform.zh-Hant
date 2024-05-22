@@ -3,10 +3,10 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '3879'
-ht-degree: 11%
+source-wordcount: '3937'
+ht-degree: 1%
 
 ---
 
@@ -82,7 +82,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
 >title="排程"
->abstract="使用鉛筆圖示設定檔案匯出類型 (完整檔案或增量檔案) 和匯出頻率。"
+>abstract="使用鉛筆圖示來設定檔案匯出型別（完整檔案或增量檔案）和匯出頻率。"
 
 [!DNL Adobe Experience Platform] 將電子郵件行銷和雲端儲存目的地的資料匯出為 [不同的檔案型別](#supported-file-formats-export). 在 **[!UICONTROL 正在排程]** 頁面，您可以為要匯出的每個對象設定排程和檔案名稱。
 
@@ -104,19 +104,19 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
->title="檔案匯出選項 "
->abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的設定檔。<br> 第一個增量檔案匯出包括符合對象資格的所有設定檔，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
+>title="檔案匯出選項"
+>abstract="選取 **匯出完整檔案** 匯出符合對象資格的所有設定檔的完整快照。 選取 **匯出增量檔案** 僅匯出自上次匯出以來符合對象資格的設定檔。 <br> 第一個增量檔案匯出包含符合對象資格的所有設定檔，以作為回填。 未來的增量檔案僅包含自第一次增量檔案匯出以來符合對象資格的設定檔。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="對象評估後啟動"
->abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。"
+>title="在對象評估後啟動"
+>abstract="啟動會在每日細分工作完成後立即執行。 這可確保匯出最新的設定檔。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
->title="排程啟動"
->abstract="在一天中的固定時間執行啟動。"
+>title="已排程的啟動"
+>abstract="啟動在一天的固定時間執行。"
 
 選取 **[!UICONTROL 匯出完整檔案]** 以觸發檔案的匯出，該檔案包含所選對象的所有設定檔資格的完整快照。
 
@@ -155,7 +155,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="針對以檔案為基礎的目的地，系統會為每個對象產生唯一的檔案名稱。 使用檔案名稱編輯器來建立和編輯唯一的檔案名稱，或保留預設名稱。"
 
 選取 **[!UICONTROL 匯出增量檔案]** 觸發匯出，其中第一個檔案是所選對象所有設定檔資格的完整快照，後續檔案是自上次匯出以來的增量設定檔資格。
 
@@ -185,7 +185,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="針對以檔案為基礎的目的地，系統會為每個對象產生唯一的檔案名稱。 使用檔案名稱編輯器來建立和編輯唯一的檔案名稱，或保留預設名稱。"
 
 對於大多數目的地，預設檔案名稱會包含目的地名稱、對象ID以及日期和時間指示器。 例如，您可以編輯匯出的檔案名稱，以區分不同的促銷活動，或將資料匯出時間附加至檔案。 請注意，某些目的地開發人員可能會選擇為其目的地顯示不同的預設檔案名稱附加選項。
 
@@ -223,7 +223,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 設定完所有對象後，選取「 」 **[!UICONTROL 下一個]** 以繼續。
 
-## 映射 {#mapping}
+## 對應 {#mapping}
 
 在此步驟中，您必須選取要新增至匯出至目標目的地之檔案的設定檔屬性。 若要選取要匯出的設定檔屬性和身分：
 
@@ -256,7 +256,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    ![顯示可匯出至目的地之設定檔屬性的模型視窗。](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Beta]{type=Informative}
+1. （選擇性） UI中對應欄位的順序反映了匯出CSV檔案中欄的順序（從上到下），而上列是CSV檔案中最左側的欄。 您可以拖放對應列，以任何想要的方式重新排序對應欄位，如下所示。
 
    >[!NOTE]
    >
@@ -274,8 +274,8 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
->title="關於強制屬性"
->abstract="選取所有匯出的設定檔應包含的 XDM 方案屬性。沒有強制金鑰的設定檔不會匯出到目的地。若未選取強制金鑰，則會匯出所有合格的設定檔，無論其屬性如何。"
+>title="關於必要屬性"
+>abstract="選取所有匯出的設定檔都應該包含的XDM結構描述屬性。沒有強制索引鍵的設定檔不會匯出至目的地。 若未選取強制索引鍵，將會匯出所有合格的設定檔，無論其屬性為何。"
 
 強制屬性是使用者啟用的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
 
@@ -285,12 +285,12 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 建議其中一個屬性為 [唯一識別碼](../../destinations/catalog/email-marketing/overview.md#identity) 從您的結構描述。 如需強制屬性的詳細資訊，請參閱 [電子郵件行銷目的地](../../destinations/catalog/email-marketing/overview.md#identity) 檔案。
 
-### 去重複化索引鍵 {#deduplication-keys}
+### 重複資料刪除索引鍵 {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
->title="關於去重複化索引鍵"
->abstract="選取去重複化索引鍵，以消除匯出檔案中同一設定檔的多筆記錄。選取單一命名空間或最多兩個 XDM 方案屬性作為去重複化索引鍵。未選取去重複化索引鍵可能會導致匯出檔案中出現重複的設定檔項目。"
+>title="關於重複資料刪除索引鍵"
+>abstract="選取重複資料刪除索引鍵，以消除匯出檔案中同一設定檔的多筆記錄。選取單一名稱空間或最多兩個XDM結構描述屬性作為重複資料刪除索引鍵。未選取重複資料刪除索引鍵可能會導致匯出檔案中出現重複的設定檔專案。"
 
 重複資料刪除索引鍵是使用者定義的主索引鍵，可決定使用者要透過哪個身分來為其設定檔進行重複資料刪除重複資料刪除&#x200B;。
 
@@ -505,8 +505,8 @@ Adobe Experience Platform會使用結構描述中四個建議且常用的屬性�
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="排除擴充屬性"
-abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#select-enrichment-attributes" text="如需了解詳細資訊，請參閱文件"
+abstract="啟用此選項可將設定檔從選取的自訂上傳對象匯出至您的目的地，同時排除其所有屬性。"
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="在檔案中瞭解更多"
 
 >[!IMPORTANT]
 >
@@ -543,10 +543,10 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
-title="檢視適用的同意原則"
-abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如果您的公司無權存取上述 SKU，則會停用此控制項。"
+title="檢視適用的同意政策"
+abstract="如果您的組織已購買 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板**，選取 **[!UICONTROL 檢視適用的同意政策]** 檢視已套用哪些同意原則，以及因這些原則而在啟用中包含多少設定檔。 如果您的公司無法存取上述SKU，則會停用此控制項。"
 
-如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀關於 [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得詳細資訊。
+如果您的組織已購買 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板**，選取 **[!UICONTROL 檢視適用的同意政策]** 檢視已套用哪些同意原則，以及因這些原則而在啟用中包含多少設定檔。 閱讀關於 [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得詳細資訊。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 
