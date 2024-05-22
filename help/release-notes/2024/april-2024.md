@@ -1,10 +1,9 @@
 ---
-title: Adobe Experience Platform 發行說明 (2024 年 4 月)
+title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 4 月版發行說明。
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1895'
 ht-degree: 17%
 
 ---
@@ -52,7 +51,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
 | 擴充功能 | [!DNL Acxiom Anonymous Visitor Insights] 標籤擴充功能 | 探索您的網站訪客來自何處 [!DNL Acxiom's Visitor Insights]. 藉由利用地理IP查詢技術，Acxiom可以精確找出匿名瀏覽器的位置。 在識別之後，在其組織的資料庫中搜尋會產生其他深入分析，並傳回至瀏覽器。 內容建立者因此可以量身打造內容，以符合這些資料點，為訪客提供更個人化且吸引人的體驗，即使他們一開始是陌生人。 |
-| 資料流 | [Edge Network 機器人偵測](../../datastreams/bot-detection.md) | 源自非人類實體（例如自動化程式、網頁刮刀、編目程式、指令碼掃描器）的流量，會使得識別來自人類訪客的事件變得更加困難。 此類流量可能會對重要的商業量度產生負面影響，導致不正確的流量報表。 <br>機器人偵測可讓您識別系統產生的事件， [Web SDK](../../web-sdk/home.md)， [行動SDK](https://developer.adobe.com/client-sdks/home/) 和 [[!DNL Server API]](../../server-api/overview.md) 由已知的編目程式和機器人所產生。 透過為資料串流設定機器人偵測，您可以識別要分類為機器人事件的特定IP位址、IP範圍和請求標題。 <br> 識別機器人流量可讓您更準確地測量使用者在您網站或行動應用程式上的活動。 |
+| 資料流 | [Edge Network機器人偵測](../../datastreams/bot-detection.md) | 源自非人類實體（例如自動化程式、網頁刮刀、編目程式、指令碼掃描器）的流量，會使得識別來自人類訪客的事件變得更加困難。 此類流量可能會對重要的商業量度產生負面影響，導致不正確的流量報表。 <br>機器人偵測可讓您識別系統產生的事件， [Web SDK](../../web-sdk/home.md)， [行動SDK](https://developer.adobe.com/client-sdks/home/) 和 [[!DNL Server API]](../../server-api/overview.md) 由已知的編目程式和機器人所產生。 透過為資料串流設定機器人偵測，您可以識別要分類為機器人事件的特定IP位址、IP範圍和請求標題。 <br> 識別機器人流量可讓您更準確地測量使用者在您網站或行動應用程式上的活動。 |
 | Mobile SDK | 主要版本發行 | 新的主要版本Mobile SDK已針對下列平台發行： iOS Mobile Core 5.x和相容的iOS擴充功能、Android Mobile Core 3.x和相容的Android擴充功能、React Native Core 6.x和相容的React Native擴充功能、Flutter Core 4.x和相容的Flutter擴充功能。 這些發行版本提供數項新功能和增強功能，包括適用於Jetpack Compose的Android SDK支援、適用於Adobe Journey Optimizer程式碼型體驗的支援，以及適用於Flutter的Adobe Journey Optimizer Messaging擴充功能的正式發行。 如需發行說明的詳細資訊，請參閱 [行動SDK發行說明](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobile SDK | 隱私權 | 由於Apple政策更新，從2024年5月1日開始，開發人員必須實作新的隱私權功能，才能提交至App Store。 所有使用Mobile SDK的Adobe客戶，如果他們想要在5月1日之後獲得App Store核准，都必須升級至SDK 5.x版。 |
 | Roku SDK | Roku SDK | Roku SDK的第一個主要版本已發行，並支援適用於平台Edge Network的串流媒體。 |
