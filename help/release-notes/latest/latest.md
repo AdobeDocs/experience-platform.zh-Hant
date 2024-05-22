@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform 發行說明 (2024 年 5 月)
 description: Adobe Experience Platform 2024 年 5 月的發行說明。
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 20%
+source-wordcount: '1596'
+ht-degree: 19%
 
 ---
 
@@ -71,9 +71,9 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 重新排序批次目的地的對應欄位 | 您現在可以拖放中的對應欄位，變更CSV匯出中的欄順序 [對應步驟](../../destinations/ui/activate-batch-profile-destinations.md#mapping). UI中對應欄位的順序反映了轉存CSV檔案中欄位的順序（從上到下），其中上列是CSV檔案中最左側的欄。 |
+| 重新排序批次目的地的對應欄位 | 您現在可以拖放中的對應欄位，變更CSV匯出中的欄順序 [對應步驟](../../destinations/ui/activate-batch-profile-destinations.md#mapping). UI中對應欄位的順序反映了轉存CSV檔案中欄位的順序（從上到下），其中上列是CSV檔案中最左側的欄。 <br> ![如何重新排序對應的檢視。](../2024/assets/may/reorder-mappings.gif "如何重新排序對應的檢視。"){width="100" zoomable="yes"} |
 | 預先選取批次目的地的預設匯出排程 | Experience Platform現在會自動為每個檔案匯出設定預設排程。 請參閱以下檔案： [排程對象匯出](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) 以瞭解如何修改預設排程。 |
-| 編輯批次目的地的多個對象啟用排程 | 您現在可以從以下位置編輯多個對象的啟用排程： [目的地詳細資訊頁面](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| 編輯批次目的地的多個對象啟用排程 | 您現在可以編輯多個對象的啟用排程，這些對象會從匯出至批次（以檔案為基礎）目的地。 **[!UICONTROL 啟用資料]** 的標籤 [目的地詳細資訊頁面](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![檢視如何選取多個對象並編輯檔案匯出排程。](../2024/assets/may/bulk-edit-schedule.gif "檢視如何選取多個對象並編輯檔案匯出排程。"){width="100" zoomable="yes"} |
 | 隨選將多個對象匯出至批次目的地 | 您現在可以透過 [隨選匯出檔案](../../destinations/ui/export-file-now.md) 功能。 |
 
 {style="table-layout:auto"}
