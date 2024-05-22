@@ -5,9 +5,9 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
+source-git-commit: 65714e2b18dc787abe074e8448aa1d640c867338
 workflow-type: tm+mt
-source-wordcount: '3122'
+source-wordcount: '3042'
 ht-degree: 0%
 
 ---
@@ -80,13 +80,7 @@ AI Assistant介面隨即顯示，立即為您提供開始使用的資訊。 您�
 * [!UICONTROL 什麼是結構描述？]
 * [!UICONTROL 告訴我一些Real-Time CDP的常見使用案例]
 
-![AI Assistant的「入門概念」一節。](./images/ai-assistant/ideas-to-get-started.png)
-
-若要與AI Assistant互動，請使用輸入方塊輸入您的查詢或命令。 您也可以使用(**`+`**)符號，以利用自動完成功能及書籤圖示來存取您的書籤化查詢與命令。
-
-![AI助理輸入方塊會反白顯示。](./images/ai-assistant/interact.png)
-
-## 使用案例範例：使用AI助理加快您的綱要建立流程
+## AI助理使用者介面指南
 
 >[!NOTE]
 >
@@ -104,97 +98,137 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 
 收到來自AI助理的回應後，您可以從多個選項中進行選取，以決定要如何繼續。
 
-### 儲存查詢 {#save-your-query}
+### AI助理功能 {#features}
 
-+++選取以檢視如何儲存查詢的範例
+本節概述您可以在Experience Platform工作流程中使用的AI Assistant各種功能。
 
-若要儲存查詢，請選取問題旁的書籤圖示。
+<!-- 
+### Save your query {#save-your-query}
 
-![選取書籤的熒幕擷圖。](./images/ai-assistant/save-your-query.png)
++++Select to view an example of how to save a query
 
-若要存取已儲存的查詢，請選取輸入方塊下方的書籤圖示，然後選取您要執行的查詢。
+To save your query, select the bookmark icon beside your question.
 
-![書籤圖示的熒幕擷圖和已儲存查詢的清單。](./images/ai-assistant/bookmarks.png)
+![Screenshot of a selected bookmark.](./images/ai-assistant/save-your-query.png)
 
-+++
+To access your saved queries, select the bookmark icon below the input box, then select the query you would like to run.
+
+![Screenshot of bookmark icon and a list of saved queries.](./images/ai-assistant/bookmarks.png)
+
++++ -->
 
 ### 在您的沙箱中檢視資料 {#view-data-in-your-sandbox}
 
+根據您的查詢，AI Assistant會提供與沙箱中資料相關的其他資訊。 若要檢視查詢回應如何套用至您的特定沙箱，請選取 **[!UICONTROL 在您的沙箱中].**
+
+在檢視與您的沙箱相關的資料時，AI Assistant可能會提供顯示您查詢的資料的特定UI頁面的直接連結。
+
 +++選取以檢視範例
 
-根據您的查詢，AI Assistant會提供與沙箱中資料相關的其他資訊。 若要檢視查詢回應如何套用至您的沙箱，請選取 **[!UICONTROL 在您的沙箱中].**
+在此範例中，AI Assistant會傳回有關您沙箱中現有XDM結構描述的其他資訊，包括其總計數和五個最常用的欄位。
 
-在此步驟中，AI助理可以提供特定問題物件UI頁面的直接連結。 在以下範例中，AI Assistant提供直接連結至 [!UICONTROL 方案] 和 [!UICONTROL 區段] UI頁面。
-
-![「在您的沙箱中」選項的熒幕擷圖。](./images/ai-assistant/in-your-sandbox.png)
+![「在您的沙箱中」下拉式視窗會開啟，顯示有關您結構描述的其他資訊。](./images/ai-assistant/in-your-sandbox.png)
 
 +++
 
-### 驗證回應 {#verify-the-response}
+### 檢視引文 {#view-citations}
+
+您可以檢閱每個答案的可用引文，以驗證AI助理傳回給您的回應。
 
 +++選取此選項可檢視如何顯示來源的範例
 
-若要檢視引文及驗證AI助理的回應，請選取 **[!UICONTROL 顯示來源]**. AI Assistant提供可證實其回應的檔案連結。 您也可以使用AI Assistant提供的查詢 [!UICONTROL 相關建議] 以進一步探索與原始查詢相關的主題。
+若要檢視引文及驗證AI助理的回應，請選取 **[!UICONTROL 顯示來源]**.
 
-![「顯示來源」熒幕擷圖。](./images/ai-assistant/show-sources.png)
+![已選取「顯示來源」的AI助理回應。](./images/ai-assistant/show-sources.png)
+
+AI Assistant會更新介面，並提供檔案連結給您，以證實初始回應。 此外，當啟用引文時，AI Assistant會更新回應以包含註腳，以指出參照所提供檔案的回應特定部分。
+
+![AI Assistant提供的概念問題引文下拉式功能表。](./images/ai-assistant/citations.png)
+
+您也可以使用AI Assistant提供的查詢 **[!UICONTROL 相關建議]** 以進一步探索與原始查詢相關的主題。
+
+![由AI助理提供的查詢清單作為相關建議。](./images/ai-assistant/related-suggestions.png)
 
 +++
 
 ### 使用資料和視覺效果 {#usage-data-and-visualization}
 
+您必須處於作用中沙箱中，AI助理才能充分回應有關您使用資料的問題。
+
 +++選取此選項可檢視使用資料問題和資料視覺效果的範例
 
-若要讓AI Assistant回應有關您組織內使用量資料的查詢，您必須處於作用中沙箱。
+在下列範例中，會詢問AI助理員下列查詢： **「顯示使用Amazon S3來源建立的資料流」**， AI助理接著會以表格回應，該表格會列出您的資料流及其對應的ID。 若要檢視整個資料表格，請選取右上角的展開圖示。
 
-在以下範例中，AI助理會隨附以下查詢： **「使用超過1000個設定檔顯示區段定義並包含啟用狀態。」** AI Assistant接著會以圖表回應，將您的區段和設定檔資料視覺化。
+![繼續詢問關於使用資料的問題。](./images/ai-assistant/usage-data-question.png)
 
-![繼續詢問關於使用資料的問題。](./images/ai-assistant/data-usage-question.png)
+此時會出現表格的展開檢視，讓您根據查詢的引數獲得更完整的資料流清單。
 
-您可以將滑鼠停留在個別長條圖上，以檢視特定資料。 您也可以選取展開圖示，以檢檢視表的大圖。
+![展開表格的檢視。](./images/ai-assistant/table.png)
 
-![繼續回答說明資料視覺化效果的問題。](./images/ai-assistant/data-visualization.png)
+在使用資料問題出現提示時，AI助理會提供其如何計算答案的解釋。 在以下範例中，AI Assistant概述其識別使用建立的資料流所應採取的步驟。 [!DNL Amazon S3] 來源。
 
-視覺效果的展開檢視隨即顯示。 您可以使用展開的強制回應視窗來進一步檢查資料，且在視覺化傳回大量欄時特別實用。
+![繼續回答有關區段定義的問題，說明AI Assistant如何計算答案。](./images/ai-assistant/answer-explained.png)
 
-![展開的圖表。](./images/ai-assistant/chart-expanded.png)
-
-在使用資料問題出現提示時，AI助理會提供其如何計算答案的解釋。 在以下範例中，AI Assistant概述其顯示的區段定義所使用的步驟，其中包含超過1000個設定檔及其各自的啟用狀態。
-
-![繼續回答有關區段定義的問題，說明AI Assistant如何計算答案。](./images/ai-assistant/results-explained.png)
-
-您還可以提供篩選器和修改查詢，並可以指示AI助理根據您包含的篩選器呈現其結果。 例如，您可以要求AI助理按其建立日期的順序，顯示計數區段定義的趨勢；移除總設定檔為零的區段定義；以及在顯示資料時，使用月份名稱而非整數。
+您還可以提供篩選器和修改查詢，並可以指示AI助理根據您包含的篩選器呈現其結果。 例如，您可以要求AI助理按照區段定義的建立日期順序，顯示區段定義計數的趨勢；移除總設定檔為零的區段定義；以及在顯示資料時，使用月份名稱而非整數。
 
 +++
 
 ### 使用自動完成 {#use-auto-complete}
 
-+++選取以檢視自動完成的範例
-
 您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：受眾、結構描述、資料集、來源和目的地。
+
++++選取以檢視自動完成的範例
 
 加入加號(**`+`**)。 您也可以選取加號(**`+`**)，位於文字輸入方塊底部。 隨即顯示一個視窗，其中包含沙箱中建議的資料物件清單。
 
-![自動完成範例](./images/ai-assistant/auto-complete-one.png)
-
-接著，選取您要查詢的資料物件以完成問題，然後提交問題。
-
-![自動完成並附上問答的範例](./images/ai-assistant/auto-complete-two.png)
+![自動完成範例](./images/ai-assistant/autocomplete.png)
 
 +++
 
 ### 使用多圈 {#use-multi-turn}
 
-+++選取以檢視多圈範例
-
 您可以使用AI Assistant的多圈功能，在體驗期間進行更自然的交談。 AI Assistant能夠回答後續的問題。 該上下文可從先前的互動中推斷。
 
-在以下範例中，會要求AI助理取得目前組織中資料流程的總數。
++++選取以檢視多圈範例
 
-![多圈範例](./images/ai-assistant/multi-turn-one.png)
+在以下範例中，會先要求AI助理提供資料流總數，然後要求列出10個最近的資料流。
 
-接著，AI助理會收到另一個後續追蹤要求。 這次，AI Assistant會列出組織中目前存在的資料流來進行回應。
+![多圈範例](./images/ai-assistant/multi-turn.png)
 
-![包含問答的多圈範例](./images/ai-assistant/multi-turn-two.png)
++++
+
+## 提供意見反應 {#feedback}
+
+您可以使用回答中提供的選項，針對AI助理的體驗提供意見回饋。
+
+若要提供意見回饋，請在收到AI助理的回應後，選取向上拇指、向下拇指或標幟，然後在提供的文字方塊中輸入您的意見回饋。
+
+![AI助理中的意見回饋選項。](./images/ai-assistant/provide-feedback.png)
+
+
++++選取以檢視更多範例
+
+>[!BEGINTABS]
+
+>[!TAB 豎起大拇指]
+
+選取向上拇指圖示，提供您對於AI助理的良好體驗的反饋。
+
+![正面意見回饋視窗。](./images/ai-assistant/thumbs-up.png)
+
+>[!TAB 向下拇指]
+
+選取向下縮圖圖示，即可根據您使用AI助理的經驗，提供哪些可改善的意見回饋。 在此步驟中，您也可以提供關於體驗的特定註解。 評論中提供的意見回饋會每天稽核。
+
+![負面意見回饋視窗。](./images/ai-assistant/thumbs-down.png)
+
+>[!TAB 標幟]
+
+選取標幟圖示以提供關於您使用AI助理體驗的進一步報告。
+
+![報表結果視窗。](./images/ai-assistant/flag.png)
+
+>[!ENDTABS]
 
 +++
 
@@ -261,44 +295,6 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 
 {style="table-layout:auto"}
 
-## 提供意見反應 {#feedback}
-
->[!BEGINSHADEBOX]
-
-**您的意見回饋已要求**
-
-在此Alpha階段，請您針對從AI助理收到的回應提供意見反應。 所有回應和提交的意見都會經過稽核，以繼續改善AI助理體驗。
-
-若要提供意見回饋，請在收到AI助理的回應後選取向上或向下拇指，然後在提供的文字方塊中輸入您的意見回饋。 接下來，選取 **[!UICONTROL 提交意見]** 以提交。
-
->[!ENDSHADEBOX]
-
-+++提供意見回饋
-
->[!BEGINTABS]
-
->[!TAB 豎起大拇指]
-
-選取向上拇指圖示，提供您對於AI助理的良好體驗的反饋。
-
-![正面意見回饋視窗。](./images/ai-assistant/thumbs-up.png)
-
->[!TAB 向下拇指]
-
-選取向下縮圖圖示，即可根據您使用AI助理的經驗，提供哪些可改善的意見回饋。 在此步驟中，您也可以提供關於體驗的特定註解。 評論中提供的意見回饋會每天稽核。
-
-![負面意見回饋視窗。](./images/ai-assistant/thumbs-down.png)
-
->[!TAB 標幟]
-
-選取標幟圖示以提供關於您使用AI助理體驗的進一步報告。
-
-![報表結果視窗。](./images/ai-assistant/flag.png)
-
->[!ENDTABS]
-
-+++
-
 ## 其他資訊 {#additional-information}
 
 請參閱本節以取得有關AI Assistant forExperience Platform的更多資訊。
@@ -315,27 +311,32 @@ AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assi
 
 AI Assistant可能會提供其功能的錯誤印象。 它可能會錯誤地回答以下型別的問題：
 
-| 範例問題 | 注意 |
+| 範例問題 | 備註 |
 | --- | --- |
 | 「您可以回答有關以下方面的問題 {ENTITY}？」 | 只要「AI助理」能夠在索引中找到參照指定實體的單一頁面，就會回答「是」。 |
 | 「您知道嗎 **x** 語言？」 | AI助理目前僅支援英文，但因為基礎模型可以支援，所以可能會回答「是」。 |
 | 「您可以……？」 | AI助理可能會回答「是」，即使它無法回答。 |
 
-### 提示 {#tips}
+## 常見問題集 {#faq}
 
-以下章節概述使用AI助理時應考慮的一些提示和解決方法。
+以下是有關AI助理常見問題的答案清單。
 
-#### 問題可能會以錯誤的資訊來源來回答
+### AI助理的資訊是否為即時提供？
 
-在某些情況下，您關於使用情況資料的問題可能會根據檔案得出答案。 這是因為AI助理可能會將您的問題錯誤地路由到錯誤的資訊來源。 您可以透過以下方式防止此情況：
+AI助理回應中顯示的資料每天都會更新。 這表示回應中的資料可能比您在回應Experience Platform使用者介面時看到的資料晚24小時。
 
-* 改寫您的問題以使用類似SQL的語言
-* 明確呼叫要使用的資訊來源。
+### AI助理支援哪些Adobe應用程式？
 
-請閱讀下表的範例：
+AI助理可支援Adobe Experience Platform、Real-time Customer Data Platform和Adobe Journey Optimizer概念問題。 針對資料使用問題，AI助理目前僅支援Real-Time CDP資料物件。
 
-| 錯誤的問題 | 好問題 | 附註 |
-| --- | --- | --- |
-| 我的最大受眾為何？ | 我的最大受眾為何？ 使用資料。 | 明確告知AI助理，您希望答案以資料為基礎。 |
-| 我的最大受眾為何？ | 列出我最大的對象。 | 在某些情況下，「什麼……」問題可能會被誤認為檔案型問題。 使用類似「list」的命令是較強化的指標，表示您對上下文中的資料存有疑問。 |
-| 我有多少資料集？ | 計算我的資料集。 | 原始問題適用於對象，但可能無法用於資料集。 |
+### AI助理有哪些功能？
+
+AI助理可以處理Adobe概念查詢，並可回答與Experience Platform物件使用情況相關的問題。 （例如「已啟用多少對象？」）。
+
+### AI助理可以提供設定檔資料的相關資訊嗎？
+
+不可以。 AI助理無法存取設定檔層級的資料。
+
+### 我的個人資訊是否會用於AI助理的訓練資料？
+
+AI助理不會將個人資訊用於訓練目的。 請勿向AI助理提供任何關於您自己（包括您的姓名或聯絡資訊）或任何其他方的個人資訊。
