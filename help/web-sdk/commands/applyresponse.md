@@ -1,7 +1,8 @@
 ---
 title: applyResponse
-description: 使用來自Edge Network的回應來初始化Web SDK。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: 使用Edge Network的回應來初始化Web SDK。
+exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
+source-git-commit: 74725546163f0807d3188aff5b5ffda9b8d6350b
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -10,7 +11,7 @@ ht-degree: 0%
 
 # `applyResponse`
 
-此 `applyResponse` 命令可讓您根據Edge Network的回應執行各種動作。 它通常用於混合式部署，即伺服器對Edge Network進行初始呼叫的部署。 此命令會從該呼叫取得回應，並在瀏覽器中初始化Web SDK。
+此 `applyResponse` 命令可讓您根據Edge Network的回應執行各種動作。 它通常用於混合式部署，其中伺服器會對Edge Network進行初始呼叫。 此命令會從該呼叫取得回應，並在瀏覽器中初始化Web SDK。
 
 ## 使用Web SDK標籤擴充功能套用回應
 
@@ -31,11 +32,11 @@ ht-degree: 0%
 
 * **`renderDecisions`**：此布林值會強制Web SDK轉譯任何符合自動轉譯條件的個人化內容。 等於 [`renderDecisions`](sendevent/renderdecisions.md) 在 [`sendEvent`](sendevent/overview.md) 命令。
 * **`responseHeaders`**：字串標頭名稱與字串標頭值的對應。
-* **`responseBody`**：必填。 從伺服器呼叫到Edge Network的JSON回應內文。
+* **`responseBody`**：必填。 從伺服器呼叫至Edge Network的JSON回應內文。
 * **`personalization.sendDisplayEvent`**：運算方式相同的布林值 [`personalization.sendDisplayEvent`](sendevent/personalization.md) 在 `sendEvent` 命令。
 
 ```js
-allow("applyResponse",{
+alloy("applyResponse",{
   "renderDecisions": true,
   "responseHeaders": {},
   "responseBody": {},
@@ -49,6 +50,6 @@ allow("applyResponse",{
 
 如果您決定 [處理回應](command-responses.md) 使用此命令，回應物件中可以使用下列屬性：
 
-* **`propositions`**：邊緣網路傳回的主張陣列。 自動呈現的建議包含標幟 `renderAttempted` 設為 `true`.
+* **`propositions`**：Edge Network傳回的主張陣列。 自動呈現的建議包含標幟 `renderAttempted` 設為 `true`.
 * **`inferences`**：一系列推斷物件，其中包含關於此使用者的機器學習資訊。
-* **`destinations`**：邊緣網路傳回的目的地物件陣列。
+* **`destinations`**：Edge Network傳回的目的地物件陣列。
