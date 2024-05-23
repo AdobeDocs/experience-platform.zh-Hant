@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料登陸區域來源
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '844'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >此頁面是特定的 [!DNL Data Landing Zone] *來源* Experience Platform中的聯結器。 如需有關連線至 [!DNL Data Landing Zone] *目的地* 聯結器，請參閱 [[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Platform。 您可以存取一個 [!DNL Data Landing Zone] 每個沙箱的容器，以及所有容器的總資料量限於您的Platform產品和服務授權所提供的總資料。 Platform及其應用程式服務的所有客戶，例如 [!DNL Customer Journey Analytics]， [!DNL Journey Orchestration]， [!DNL Intelligent Services]、和 [!DNL Adobe Real-Time Customer Data Platform] 已布建一個 [!DNL Data Landing Zone] 每個沙箱的容器。 您可以透過讀取檔案並將檔案寫入容器 [!DNL Azure Storage Explorer] 或您的命令列介面。
+[!DNL Data Landing Zone] 是 [!DNL Azure Blob] 由Adobe Experience Platform布建的儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Platform。 您可以存取一個 [!DNL Data Landing Zone] 每個沙箱的容器，以及所有容器的總資料量限於您的Platform產品和服務授權所提供的總資料。 Platform及其應用程式的所有客戶，例如 [!DNL Customer Journey Analytics]， [!DNL Journey Orchestration]， [!DNL Intelligent Services]、和 [!DNL Adobe Real-Time Customer Data Platform] 已布建一個 [!DNL Data Landing Zone] 每個沙箱的容器。 您可以透過讀取檔案並將檔案寫入容器 [!DNL Azure Storage Explorer] 或您的命令列介面。
 
 [!DNL Data Landing Zone] 支援SAS驗證，其資料受到標準保護 [!DNL Azure Blob] 存放區安全機制在存放和傳輸中。 SAS式驗證可讓您安全地存取 [!DNL Data Landing Zone] 透過公用網際網路連線的容器。 您不需要變更網路即可存取 [!DNL Data Landing Zone] 容器，表示您不需要為網路設定任何允許清單或跨區域設定。 Platform對上傳至 [!DNL Data Landing Zone] 容器。 所有檔案會在七天後刪除。
 
@@ -68,7 +68,7 @@ ht-degree: 0%
 
 選取要上傳的檔案後，您必須識別 [!DNL Blob] 輸入您要上傳它做為和您想要的目的地目錄。 完成後，選取 **上傳**.
 
-| [!DNL Blob] 類型 | 說明 |
+| [!DNL Blob] 型別 | 說明 |
 | --- | --- |
 | 區塊 [!DNL Blob] | 區塊 [!DNL Blobs] 已針對以有效率的方式上傳大量資料而最佳化。 區塊 [!DNL Blobs] 為的預設選項 [!DNL Data Landing Zone]. |
 | 附加 [!DNL Blob] | 附加 [!DNL Blobs] 已針對在檔案結尾附加資料而最佳化。 |

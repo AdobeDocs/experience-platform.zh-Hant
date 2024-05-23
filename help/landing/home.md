@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 概觀
 description: Adobe Experience Platform可讓組織集中和標準化客戶資料，再運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 2%
+source-wordcount: '431'
+ht-degree: 1%
 
 ---
 
@@ -28,13 +28,13 @@ Adobe Experience Platform是市面上功能最強大、最靈活、最開放的�
 
 ## [!DNL Experience Platform] 檔案
 
-[!DNL Experience Platform] 檔案提供多種格式，適用於各種功能和服務。 若要進一步瞭解可用的檔案型別，請造訪 [Platform檔案概覽](documentation/overview.md).
+[!DNL Experience Platform] 檔案提供多種格式，適用於各種功能和應用程式。 若要進一步瞭解可用的檔案型別，請造訪 [Platform檔案概覽](documentation/overview.md).
 
 開始瞭解更多關於特定的 [!DNL Platform] 服務，返回 [檔案登陸頁面](https://experienceleague.adobe.com/docs/experience-platform.html) 並選取適當的參考線。
 
-### 上建應用程式服務的說明檔案 [!DNL Experience Platform]
+### 建置在應用程式的相關檔案 [!DNL Experience Platform]
 
-Adobe已在Experience Platform上建置多個應用程式服務。 您可以在他們的指南中找到這些應用程式的檔案，連結如下：
+Adobe已在Experience Platform之上建立多個應用程式。 您可以在他們的指南中找到這些應用程式的檔案，連結如下：
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,7 +43,7 @@ Adobe已在Experience Platform上建置多個應用程式服務。 您可以在�
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-以下影片說明以Experience Platform為基礎建立之每個應用程式服務的使用案例。
+以下影片說明以Experience Platform為基礎建立之每個應用程式的使用案例。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
