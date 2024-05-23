@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: 即時客戶設定檔指南
-user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
+user-guide-description: 合併客戶資料，以建立跨管道客戶互動的統一檢視。
 feature: Profiles
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 24%
+source-wordcount: '132'
+ht-degree: 14%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 24%
 * [邊緣設定檔](edge-profiles.md)
 * [體驗事件有效期](event-expirations.md)
 * [假名設定檔有效期](pseudonymous-profiles.md)
+* [客戶時間戳記排序](customer-timestamp-ordering.md)
 * [!DNL Profile] API {#api}
    * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
@@ -40,7 +41,7 @@ ht-degree: 24%
 * 合併政策 {#merge-policies}
    * [概觀](merge-policies/overview.md)
    * [合併原則API](api/merge-policies.md)
-   * [合併原則UI指南](merge-policies/ui-guide.md)
+   * [合併原則 UI 指南](merge-policies/ui-guide.md)
    * [建立合併原則（影片）](video/create-merge-policies.md)
 * 聯合結構描述 {#union-schemas}
    * [聯合結構描述UI指南](ui/union-schema.md)
@@ -49,7 +50,7 @@ ht-degree: 24%
    * [新增資料至即時客戶個人檔案](tutorials/add-profile-data.md)
    * [設定設定檔的資料集](tutorials/dataset-configuration.md)
    * [產生資料集重疊報告](tutorials/dataset-overlap-report.md)
-   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant)
+   * [更多教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [隱私權請求處理](privacy.md)
 * [[!DNL Profile] 疑難排解指南](troubleshooting.md)
 * [設定檔API參考](https://www.adobe.com/go/profile-apis-en)
