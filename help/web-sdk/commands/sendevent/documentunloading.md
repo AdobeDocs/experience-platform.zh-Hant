@@ -1,16 +1,17 @@
 ---
 title: documentUnloading
 description: 使用JavaScript sendBeacon API傳送資料給Adobe。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 2%
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
 # `documentUnloading`
 
-此 `documentUnloading` 屬性可讓您使用JavaScript [`sendBeacon`](https://developer.mozilla.org/zh-TW/docs/Web/API/Navigator/sendBeacon) 傳送資料給Adobe的方法。 如果典型的請求花費太長時間，瀏覽器可以取消請求。 您可以指示Web SDK使用 `sendBeacon` 因此當您導覽離開頁面後，請求會在背景執行。 啟用此屬性可協助防止解除安裝時瀏覽器取消資料請求。
+此 `documentUnloading` 屬性可讓您使用JavaScript [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) 傳送資料給Adobe的方法。 如果典型的請求花費太長時間，瀏覽器可以取消請求。 您可以指示Web SDK使用 `sendBeacon` 因此當您導覽離開頁面後，請求會在背景執行。 啟用此屬性可協助防止解除安裝時瀏覽器取消資料請求。
 
 數個瀏覽器對可傳送的資料量設下64 KB的限制 `sendBeacon` 一次性。 如果瀏覽器因裝載太大而拒絕事件，Web SDK會退回使用其一般傳輸方法。
 
@@ -29,7 +30,11 @@ ht-degree: 2%
 
 ## 使用Web SDK JavaScript程式庫設定檔案解除載入
 
-設定 `documentUnloading` 執行時的布林值 `sendEvent` 命令。 其預設值為 `false`。將此屬性設為 `true` 如果您想要使用 `sendBeacon` 傳送資料給Adobe的方法。
+設定 `documentUnloading` 執行時的布林值 `sendEvent` 命令。 其預設值為 `false`. 將此屬性設為 `true` 如果您想要使用 `sendBeacon` 傳送資料給Adobe的方法。
+
+>[!IMPORTANT]
+>
+>此 `documentUnloading` 屬性與 [`renderDecisions`](renderdecisions.md) 屬性。 您不應該將兩個屬性都設為 `true` 同時。
 
 ```js
 alloy("sendEvent", {

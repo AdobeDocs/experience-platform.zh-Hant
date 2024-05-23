@@ -1,9 +1,10 @@
 ---
 title: renderDecisions
 description: 呈現符合自動呈現資格的個人化內容。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 6f7a3531-c2b6-4e90-a7ad-9f0fe4dc39e9
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,10 @@ ht-degree: 0%
 ## 使用Web SDK JavaScript資料庫轉譯個人化內容
 
 設定 `renderDecisions` 執行時的布林值 `sendEvent` 命令。 如果省略，此屬性會預設為 `false`. 將此屬性設為 `true` 如果您想要自動呈現個人化內容。
+
+>[!IMPORTANT]
+>
+>此 `renderDecisions` 屬性與 [`documentUnloading`](documentunloading.md) 屬性。 您不應該將兩個屬性都設為 `true` 同時。
 
 ```js
 alloy("sendEvent", {

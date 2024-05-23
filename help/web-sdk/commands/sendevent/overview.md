@@ -1,13 +1,13 @@
 ---
 title: sendEvent
-description: 將資料傳送至Adobe Experience Platform Edge Network。
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: 將資料傳送至Adobe Experience PlatformEdge Network。
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
+source-git-commit: 9ea7b678f5cfa19c7fd1e3ba6633cdeed4084b18
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # `sendEvent`
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
@@ -44,6 +44,6 @@ alloy("sendEvent", {
 
 如果您決定 [處理回應](../command-responses.md) 使用此命令，回應物件中可以使用下列屬性：
 
-* **`propositions`**：邊緣網路傳回的主張陣列。 自動呈現的建議包含標幟 `renderAttempted` 設為 `true`.
+* **`propositions`**：Edge Network傳回的主張陣列。 自動呈現的建議包含標幟 `renderAttempted` 設為 `true`.
 * **`inferences`**：一系列推斷物件，其中包含關於此使用者的機器學習資訊。
-* **`destinations`**：邊緣網路傳回的目的地物件陣列。
+* **`destinations`**：Edge Network傳回的目的地物件陣列。
