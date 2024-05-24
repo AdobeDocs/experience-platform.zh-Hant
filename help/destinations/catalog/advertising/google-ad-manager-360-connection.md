@@ -2,10 +2,10 @@
 title: (Beta) [!DNL Google Ad Manager 360] 連線
 description: Google Ad Manager 360是Google的廣告服務平台，可讓發佈者透過視訊和行動應用程式，管理其網站上廣告的顯示方式。
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 0db22ba2993012357cf65daaeffb5676193fba23
+source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 4%
+source-wordcount: '1206'
+ht-degree: 0%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 4%
 | 對象來源 | 支援 | 說明 |
 ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -64,7 +64,7 @@ ht-degree: 4%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及適用的結構描述欄位（例如PPID），如 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及適用的結構描述欄位（例如PPID），如 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -83,7 +83,7 @@ ht-degree: 4%
 2. 在 [!DNL Google Ad Manager] 介面，前往 **[!UICONTROL 管理員]** > **[!UICONTROL 全域設定]** > **[!UICONTROL 網路設定]**，並啟用 **[!UICONTROL API存取]** 滑桿。
 
 
-## 連線到目標 {#connect}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -91,7 +91,7 @@ ht-degree: 4%
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證目標 {#authenticate}
+### 驗證到目的地 {#authenticate}
 
 若要向目的地進行驗證，請填寫必填欄位並選取 **[!UICONTROL 連線到目的地]**.
 
@@ -100,12 +100,12 @@ ht-degree: 4%
 
 如需這些值的詳細資訊，請參閱 [Google雲端儲存空間HMAC金鑰](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) 指南。 有關如何產生您自己的存取金鑰ID和機密存取金鑰的步驟，請參閱 [[!DNL Google Cloud Storage] 來源概觀](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目的地詳細資料 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="將對象 ID 附加到對象名稱"
->abstract="選取此選項可讓 Google Ad Manager 360 中的對象名稱包含來自 Experience Platform 的對象 ID，如下所示：`Audience Name (Audience ID)`"
+>title="將對象ID附加至對象名稱"
+>abstract="選取此選項，讓此目的地中的對象名稱包含來自Experience Platform的對象ID，如下所示： `Audience Name (Audience ID)`"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -125,7 +125,7 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟動此目標的對象 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 

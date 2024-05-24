@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: 目的地指南
-user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
+user-guide-description: 針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 4%
+source-wordcount: '1224'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 4%
       * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [（測試版）在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
-      * [(Beta 版) 使用計算欄位匯出平面方案檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [（測試版）使用計算欄位匯出平面結構描述檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
    * [刪除目的地帳戶](./ui/delete-destination-account.md)
@@ -83,6 +83,7 @@ ht-degree: 4%
       * [Google廣告管理員連線](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360連線](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match連線](./catalog/advertising/google-customer-match.md)
+      * [（測試版） Google Customer Match + DV360連線](./catalog/advertising/google-customer-match-dv360.md)
       * [Google顯示和視訊360連線](./catalog/advertising/google-dv360.md)
       * [Google gtag擴充功能](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight標籤擴充功能](./catalog/advertising/linkedin.md)
@@ -128,7 +129,7 @@ ht-degree: 4%
       * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
       * [Azure事件中樞連線](./catalog/cloud-storage/azure-event-hubs.md)
       * [資料登陸區域](./catalog/cloud-storage/data-landing-zone.md)
-      * [Google雲端儲存空間](./catalog/cloud-storage/google-cloud-storage.md)
+      * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [sftp連線](./catalog/cloud-storage/sftp.md)
       * [檔案式雲端儲存目的地的IP位址允許清單](./catalog/cloud-storage/ip-address-allow-list.md)
    * 客戶關係管理(CRM)目的地 {#crm}
@@ -144,7 +145,7 @@ ht-degree: 4%
       * [Acxiom潛在客戶抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom資料增強功能](./catalog/data-partner/acxiom-data-enhancement.md)
    * 電子商務目的地 {#ecommerce}
-      * [SAP商務](./catalog/ecommerce/sap-commerce.md)
+      * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * 電子郵件目的地 {#email}
       * [Bizible擴充功能](./catalog/email/bizible.md)
       * [Marketo擴充功能](./catalog/email/marketo.md)
@@ -297,4 +298,4 @@ ht-degree: 4%
       * [檔案自助服務範本](./destination-sdk/docs-framework/self-service-template.md)
       * [製作最佳實務](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [常見問答](./destinations-faq.md)
-* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
