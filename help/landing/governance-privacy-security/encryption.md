@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的資料加密
 description: 瞭解如何在Adobe Experience Platform中加密傳輸和待用資料。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: fd31d54339b8d87b80799a9c0fa167cc9a07a33f
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -30,25 +30,25 @@ Platform與任何外部元件之間傳輸的所有資料，都會使用HTTPS透�
 將資料帶入系統之後，以及 [靜態加密](#at-rest)，Platform服務會透過下列方式擴充及匯出資料：
 
 - [目的地](../../destinations/home.md) 可讓您啟用資料以Adobe應用程式和合作夥伴應用程式。
-- 原生平台應用程式，例如 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home) 也可以使用資料。
+- 原生平台應用程式，例如 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home) 也可以使用資料。
 
 ### mTLS通訊協定支援 {#mtls-protocol-support}
 
-您現在可以使用相互傳輸層安全性(mTLS)，確保對HTTP API目的地和Adobe Journey Optimizer自訂動作的輸出連線具有增強的安全性。 mTLS是一種用於相互驗證的端對端安全性方法，可確保共用資訊的雙方在共用資料之前，都是聲稱的身分。 mTLS包括相較於TLS的額外步驟，其中伺服器也會要求使用者端的憑證並在其末端驗證它。
+您現在可以使用相互傳輸層安全性(mTLS)，確保對輸出連線的增強安全性 [HTTP API目的地](../../destinations/catalog/streaming/http-destination.md) 和Adobe Journey Optimizer [自訂動作](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS是一種用於相互驗證的端對端安全性方法，可確保共用資訊的雙方在共用資料之前，都是聲稱的身分。 mTLS包括相較於TLS的額外步驟，其中伺服器也會要求使用者端的憑證並在其末端驗證它。
 
-#### Adobe Journey Optimizer中的mTLS {#mtls-in-adobe-journey-optimizer}
-
-在Adobe Journey Optimizer中，mTLS會與 [自訂動作](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). 無其他 [Adobe Journey Optimizer自訂動作的設定](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) 是啟用mTLS的必要條件。 當自訂動作的端點啟用mTLS時，系統會從Adobe Experience Platform金鑰存放區擷取憑證，並自動將其提供給端點（這是mTLS連線的必要）。
-
-如果您想要將mTLS與這些Adobe Journey Optimizer和Experience PlatformHTTP API目標工作流程搭配使用，您放入Adobe Journey Optimizer客戶動作UI或目標UI的伺服器位址必須停用TLS通訊協定，並且僅啟用mTLS。 如果仍在端點上啟用TLS 1.2通訊協定，則不會傳送使用者端驗證的憑證。 這表示若要搭配這些工作流程使用mTLS，您的「接收」伺服器端點必須是mTLS **僅限** 已啟用連線端點。
+如果您想要 [搭配Adobe Journey Optimizer自訂動作使用mTLS](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) 和Experience PlatformHTTP API目標工作流程、您放入Adobe Journey Optimizer客戶動作UI或目標UI的伺服器位址，必須停用TLS通訊協定，並且僅啟用mTLS。 如果仍在端點上啟用TLS 1.2通訊協定，則不會傳送使用者端驗證的憑證。 這表示若要搭配這些工作流程使用mTLS，您的「接收」伺服器端點必須是mTLS **僅限** 已啟用連線端點。
 
 >[!IMPORTANT]
 >
->您的Adobe Journey Optimizer自訂動作或歷程中不需要額外設定，即可啟用mTLS；當偵測到啟用mTLS的端點時，此程式會自動發生。 每個憑證的一般名稱(CN)和主體替代名稱(SAN)都可在檔案中作為憑證的一部分提供，如果您希望這樣做，還可以用作其他所有權驗證層。
+>您的Adobe Journey Optimizer自訂動作或HTTP API目的地中不需要進行額外的設定，即可啟用mTLS；當偵測到啟用mTLS的端點時，此程式會自動發生。 每個憑證的一般名稱(CN)和主體替代名稱(SAN)都可在檔案中作為憑證的一部分提供，如果您希望這樣做，還可以用作其他所有權驗證層。
 >
 >RFC 2818於2000年5月發行，它不建議在HTTPS憑證中使用一般名稱(CN)欄位來進行主體名稱驗證。 它建議改用「dns名稱」型別的「主體替代名稱」延伸模組(SAN)。
 
 ### 下載憑證 {#download-certificates}
+
+>[!NOTE]
+>
+>您有責任保持公開憑證為最新狀態。 請務必定期檢閱憑證，尤其是在憑證到期日臨近時。 您應該將此頁面加入書籤，以便在您的環境中儲存最新的復本。
 
 如果您要檢查CN或SAN以進行其他協力廠商驗證，可以在這裡下載相關憑證：
 

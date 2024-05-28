@@ -2,10 +2,10 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 0%
+source-wordcount: '1675'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 從 [!UICONTROL 帳戶設定檔] 控制面板，您可以 [瀏覽擷取到您組織中的帳戶設定檔](#browse-account-profiles)，或 [使用Widget快速檢視您帳戶設定檔資料的完整內容](#standard-widgets).
 
-### 日期篩選 {#date-filter}
+### 日期篩選器 {#date-filter}
 
 此 [!UICONTROL 概觀] tab由小工具組成，提供唯讀量度，傳達有關您帳戶設定檔的重要資訊。 選取行事曆圖示或日期，以變更Widget的全域日期篩選。
 
@@ -73,19 +73,18 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
-* [帳戶設定檔已新增](#account-profiles-added)
+* [已新增的帳戶設定檔](#account-profiles-added)
 * [依產業的新帳戶](#accounts-by-industry)
 * [新帳戶（依型別）](#accounts-by-type)
-* [機會已新增](#opportunities-added)
 * [依個人角色的新機會](#opportunities-by-person-role)
 * [按收入顯示的新商機](#opportunities-by-revenue)
 * [按狀態和階段的新機會](#opportunities-by-status-&-stage)
 * [贏得新商機](#opportunities-won)
+* [已新增的機會](#opportunities-added)
 * [預測性評分分佈](#predictive-scoring-distribution)
 * [預測性評分主要影響因素](#predictive-scoring-top-influential-factors)
-* [依產業區分的帳戶總數](#total-accounts-by-industry)
 
-### 帳戶設定檔已新增 {#account-profiles-added}
+### 已新增的帳戶設定檔 {#account-profiles-added}
 
 此 [!UICONTROL 帳戶設定檔已新增] Widget使用線圖來顯示一段時間內每天新增的帳戶設定檔數。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選器，預設行為會列出今天之前一年新增的帳戶設定檔。 結果可用於推斷新增的帳戶設定檔數量趨勢。
 
@@ -102,14 +101,6 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 此 [!UICONTROL 新帳戶（依型別）] widget會顯示環形圖內單一量度的帳戶總數。 環形圖說明構成此總計的不同帳戶型別的相對組成。 以色彩編碼的金鑰提供所有包含的帳戶型別的劃分。 當游標暫留在環圈圖的個別區段上時，每種型別的帳戶個別計數都會顯示在對話方塊中。
 
 ![新帳戶（依型別Widget）。](../images/account-profiles/new-accounts-by-type.png)
-
-### 機會已新增 {#opportunities-added}
-
-此 [!UICONTROL 機會已新增] Widget使用線圖來顯示一段時間中每天新增的機會數量。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選，預設行為會列出今天之前一年新增的機會。 這些結果可用來推斷新增商機數量的趨勢。
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![機會已新增Widget。](../images/account-profiles/opportunities-added.png)
 
 ### 依個人角色的新機會 {#opportunities-by-person-role}
 
@@ -141,6 +132,14 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 ![新機會贏得了Widget。](../images/account-profiles/new-opportunities-won.png)
 
+### 已新增的機會 {#opportunities-added}
+
+此 [!UICONTROL 機會已新增] Widget使用線圖來顯示一段時間中每天新增的機會數量。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選，預設行為會列出今天之前一年新增的機會。 這些結果可用來推斷新增商機數量的趨勢。
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![機會已新增Widget。](../images/account-profiles/opportunities-added.png)
+
 ### 預測性評分分佈 {#predictive-scoring-distribution}
 
 此 [!UICONTROL 預測性評分分佈] widget會顯示所有帳戶設定檔的分數分佈，協助您一眼瞭解銷售管道的狀況。 評分資料會透過環形圖和直條圖傳送。
@@ -170,18 +169,6 @@ Widget中的下拉式功能表可讓您選取帳戶評分模式。
 >全域日期範圍篩選器不適用於預測性評分深入分析。 預測性評分Widget會根據下拉式清單中選取的帳戶評分模型分析資料。
 
 ![預測性評分主要影響因素Widget。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### 依產業區分的帳戶總數 {#total-accounts-by-industry}
-
-此Widget會顯示單一量度中的帳戶總數，並使用環形圖來說明構成整體數字的產業中計數比例大小。 索引鍵提供組成環圈圖之不同產業的色彩編碼資訊。
-
->[!NOTE]
->
->此深入分析所顯示的資訊取決於您指定的日期範圍。 如果您未提供日期篩選，則洞察的預設行為會分析從前一年到今天新增的資料。
-
-當游標暫留在環圈圖的個別區段上時，不同產業的個人計數會顯示在對話方塊中。
-
-![依產業Widget區分的帳戶總數。](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## 後續步驟
 

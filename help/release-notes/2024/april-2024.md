@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 4 月版發行說明。
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 17%
@@ -121,7 +121,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 | 排定的查詢警示 | 在排程查詢時，透過主動通知保持資訊靈通，確保高效且及時的任務管理。 您可以 [在建立查詢時訂閱警示](../../query-service/ui/query-schedules.md#alerts-for-query-status) 或針對現有排程查詢使用內嵌動作。 請參閱 [訂閱含有內嵌動作的警報](../../query-service/ui/monitor-queries.md#alert-subscription) 檔案以取得詳細資訊。 |
 | 已改善排程查詢導覽 | 在查詢範本與排程執行之間輕鬆導覽，以提高生產力。 請參閱以下檔案： [檢視排定的查詢執行](../../query-service/ui/query-schedules.md#scheduled-query-runs) 以取得詳細資訊。 |
 | 延伸查詢輸出 | 在主控台記憶體取最多500列的查詢結果，以更深入地分析您的資料。請參閱 [結果計數](../../query-service/ui/user-guide.md#result-count) 檔案以取得詳細資訊。 |
-| 舊版查詢編輯器失效 | 自2024年4月30日起，增強型查詢編輯器已成為所有使用者的預設編輯器。 舊版編輯器將於2024年5月30日淘汰，不再提供使用。 請參閱 [查詢編輯器使用手冊](../../query-service/ui/user-guide.md) 以取得詳細資訊。 |
+| 舊版查詢編輯器失效 | 自2024年4月30日起，增強型查詢編輯器已成為所有使用者的預設編輯器。 舊版編輯器將於2024年5月24日淘汰，不再提供使用。 請參閱 [查詢編輯器使用手冊](../../query-service/ui/user-guide.md) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}
 

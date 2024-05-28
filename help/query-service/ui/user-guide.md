@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->舊版編輯器已於2024年5月30日淘汰。 它無法再供使用。 您現在可以使用 [增強型查詢編輯器](#enhanced-editor-toggle) 撰寫、驗證及執行查詢
+>舊版編輯器已於2024年5月24日淘汰。 它無法再供使用。 您現在可以使用 [增強型查詢編輯器](#enhanced-editor-toggle) 撰寫、驗證及執行查詢
 
 查詢編輯器是Adobe Experience Platform查詢服務所提供的互動式工具，可讓您針對 [!DNL Experience Platform] 使用者介面。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢來填入以下位置的資料集： [!DNL Experience Platform].
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->舊版編輯器已於2024年5月30日淘汰。 它無法再供使用。 您現在可以使用增強型查詢編輯器來撰寫、驗證和執行查詢。
+>舊版編輯器已於2024年5月24日淘汰。 它無法再供使用。 您現在可以使用增強型查詢編輯器來撰寫、驗證和執行查詢。
 
 使用查詢編輯器，您可以編寫、執行和儲存客戶體驗資料的查詢。 在查詢編輯器中執行或儲存的所有查詢，都可供貴組織中有權存取查詢服務的所有使用者使用。
 
@@ -124,7 +124,7 @@ ht-degree: 0%
 
 ![顯示下拉式表格名稱建議的「查詢編輯器」輸入。](../images/ui/query-editor/tables-auto.png)
 
-### 設定文字格式 {#format-text}
+### 格式化文字 {#format-text}
 
 此 [!UICONTROL 設定文字格式] 功能可新增標準化的語法樣式，讓您的查詢更易讀取。 選取 **[!UICONTROL 設定文字格式]** 標準化查詢編輯器中的所有文字。
 
