@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: d22f8b4a39cb76dab4c976d8ea883d5170ee34e4
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1913'
 ht-degree: 0%
 
 ---
@@ -66,9 +66,9 @@ ht-degree: 0%
 
 ![對象可能的合併型別會反白顯示。](../images/ui/audience-composition/merge-types.png)
 
-| 合併型別 | 說明 |
+| 合併類型 | 說明 |
 | ---------- | ----------- |
-| [!UICONTROL Union] | 對象會合併為一個對象。 這相當於OR操作。 |
+| [!UICONTROL 聯集] | 對象會合併為一個對象。 這相當於OR操作。 |
 | [!UICONTROL 交集] | 對象會結合，而只有共用的對象 **全部** 正在新增的。 這相當於AND操作。 |
 | [!UICONTROL 排除重疊] | 對象會結合，而只有共用的對象 **一個，但不是全部** 正在新增的。 這相當於XOR操作。 |
 
@@ -232,7 +232,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Split] {#split-block}
 
-此 **[!UICONTROL Split]** 區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。
+此 **[!UICONTROL Split]** 區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。 將您的對象分割為子對象時，此分割為 **持續**. 這表示在每次評估中，設定檔都會位於相同的子對象中。
 
 若要新增 **[!UICONTROL Split]** 區塊，選取 **+** 圖示，後面接著 **[!UICONTROL Split]**.
 
