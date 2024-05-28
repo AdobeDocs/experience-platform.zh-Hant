@@ -2,10 +2,10 @@
 title: 使用Experience Platform使用者介面連線您的Salesforce帳戶
 description: 瞭解如何使用使用者介面連線您的Salesforce帳戶並將您的CRM資料帶入Experience Platform。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 | 認證 | 說明 |
 | --- | --- |
-| 環境URL | 的URL [!DNL Salesforce] 來源執行個體。 |
+| 環境 URL | 的URL [!DNL Salesforce] 來源執行個體。 |
 | 使用者名稱 | 的使用者名稱 [!DNL Salesforce] 使用者帳戶。 |
 | 密碼 | 的密碼 [!DNL Salesforce] 使用者帳戶。 |
 | 安全性權杖 | 的安全性權杖 [!DNL Salesforce] 使用者帳戶。 |
@@ -50,9 +50,9 @@ ht-degree: 0%
 
 | 認證 | 說明 |
 | --- | --- |
-| 環境URL | 的URL [!DNL Salesforce] 來源執行個體。 |
-| 使用者端ID | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce]. |
-| 使用者端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce]. |
+| 環境 URL | 的URL [!DNL Salesforce] 來源執行個體。 |
+| 用戶端 ID | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce]. |
+| 用戶端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce]. |
 | API版本 | 的REST API版本 [!DNL Salesforce] 您正在使用的例項。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0`. 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |
 
 如需為使用OAuth的詳細資訊 [!DNL Salesforce]，閱讀 [[!DNL Salesforce] OAuth授權流程指南](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
@@ -65,7 +65,7 @@ ht-degree: 0%
 
 在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在 *CRM* 類別，選取 **[!DNL Salesforce]**，然後選取 **[!UICONTROL 新增資料]**.
+選取 **[!DNL Salesforce]** 在 *[!UICONTROL CRM]* 類別，然後選取 **[!UICONTROL 新增資料]**.
 
 >[!TIP]
 >
@@ -95,7 +95,7 @@ ht-degree: 0%
 
 對於基本驗證，請選取 **[!UICONTROL 基本驗證]** 然後提供下列認證的值：
 
-* 環境URL
+* 環境 URL
 * 使用者名稱
 * 密碼
 * API版本（選擇性）
@@ -108,9 +108,9 @@ ht-degree: 0%
 
 針對OAuth 2使用者端認證，選取 **[!UICONTROL OAuth2使用者端認證]** 然後提供下列認證的值：
 
-* 環境URL
-* 使用者端ID
-* 使用者端密碼
+* 環境 URL
+* 用戶端 ID
+* 用戶端密碼
 * API版本
 
 完成後，選取 **[!UICONTROL 連線到來源]**.
