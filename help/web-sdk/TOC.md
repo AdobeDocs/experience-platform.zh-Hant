@@ -1,15 +1,15 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Adobe Experience Platform Web SDK 說明
-breadcrumb-title: Web SDK 指南
-user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
+user-guide-title: Adobe Experience Platform Web SDK說明
+breadcrumb-title: Web SDK指南
+user-guide-description: 透過Edge網路與Experience Cloud服務互動。
 feature: Web SDK
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: ec801c550740c4cba3481a961599f548518bb032
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 22%
+source-wordcount: '226'
+ht-degree: 14%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 22%
       * [edgeConfigId](commands/configure/edgeconfigid.md)
       * [edgeDomain](commands/configure/edgedomain.md)
       * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+      * [streamingMedia](commands/configure/streamingmedia.md)
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
@@ -47,17 +48,20 @@ ht-degree: 22%
       * [documentUnloading](commands/sendevent/documentunloading.md)
       * [個人化](commands/sendevent/personalization.md)
       * [renderDecisions](commands/sendevent/renderdecisions.md)
-      * [type](commands/sendevent/type.md)
+      * [類型](commands/sendevent/type.md)
       * [xdm](commands/sendevent/xdm.md)
    * [appendIdentityToUrl](commands/appendidentitytourl.md)
    * [applyPropositions](commands/applypropositions.md)
    * [applyResponse](commands/applyresponse.md)
+   * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
+   * [sendMediaEvent](commands/sendmediaevent.md)
    * [設定資料流覆寫](commands/datastream-overrides.md)
    * [命令回應](commands/command-responses.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * 身分 {#identity}
    * [概觀](identity/overview.md)

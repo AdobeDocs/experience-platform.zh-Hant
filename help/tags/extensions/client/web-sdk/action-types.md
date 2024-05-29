@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 2%
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -48,6 +48,33 @@ ht-degree: 2%
 ![](assets/update-variable-set-property.png)
 
 更新變數動作中的編輯器與XDM物件資料元素中的編輯器有一些差異。 首先，更新變數動作具有標示為「xdm」的根層級專案。 如果按一下此專案，您可以指定要用來設定整個物件的資料元素。 其次，更新變數動作有核取方塊可清除xdm物件的資料。 按一下左側的其中一個屬性，然後核取右側的核取方塊以清除值。 這會在設定變數的任何值之前，清除目前的值。
+
+## 傳送媒體事件 {#send-media-event}
+
+傳送媒體事件至Adobe Experience Platform和/或Adobe Analytics。 當您追蹤網站上的媒體事件時，此動作很有用。 選取執行個體（如果有多個執行個體）。 此動作需要 `playerId` 代表追蹤媒體工作階段的唯一識別碼。 此外還需要 **[!UICONTROL 體驗品質]** 和 `playhead` 啟動媒體工作階段時的資料元素。
+
+![顯示傳送媒體事件畫面的Platform UI影像。](assets/send-media-event.png)
+
+此 **[!UICONTROL 傳送媒體事件]** 動作型別支援下列屬性：
+
+- **[!UICONTROL 例項]**：使用的Web SDK執行個體。
+- **[!UICONTROL 媒體事件型別]**：要追蹤的媒體事件型別。
+- **[!UICONTROL 播放器ID]**：媒體工作階段唯一識別碼。
+- **[!UICONTROL 播放點]**：媒體播放的目前位置（以秒為單位）。
+- **[!UICONTROL 媒體工作階段詳細資料]**：傳送媒體開始事件時，應指定必要的媒體工作階段詳細資料。
+- **[!UICONTROL 章節詳細資訊]**：您可以在此段落中指定傳送章節開始媒體事件時的章節詳細資訊。
+- **[!UICONTROL 廣告詳細資料]**：傳送 `AdBreakStart` 事件，您必須指定必要的廣告詳細資料。
+- **[!UICONTROL 廣告Pod詳細資料]**：傳送Advertising Pod時的詳細資訊 `AdStart` 事件。
+- **[!UICONTROL 錯誤詳細資料]**：有關正在追蹤的播放錯誤的詳細資料。
+- **[!UICONTROL 狀態更新詳細資訊]**：正在更新的播放器狀態。
+- **[!UICONTROL 自訂中繼資料]**：所追蹤媒體事件的相關自訂中繼資料。
+- **[!UICONTROL 體驗品質]**：所追蹤的體驗資料的媒體品質。
+
+## 取得Media Analytics追蹤器 {#get-media-analytics-tracker}
+
+此動作用於取得舊版Media Analytics API。 設定動作並提供物件名稱時，系統會匯出舊版Media Analytics API至該視窗物件。 如果未提供，則會將其匯出至 `window.Media` 和目前的Media JS程式庫一樣。
+
+![顯示「取得Media Analytics追蹤器」動作型別的平台UI影像。](assets/get-media-analytics-tracker.png)
 
 ## 後續步驟 {#next-steps}
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK擴充功能中的資料元素型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種資料元素型別。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '653'
 ht-degree: 5%
 
 ---
@@ -60,6 +60,12 @@ ht-degree: 5%
 ![顯示資料元素選項的標籤UI影像。](assets/variable-data-element.png)
 
 建立此資料元素後，您可以使用 [更新變數](./action-types.md#update-variable) 修改它的動作。 準備就緒後，您可以將此資料元素加入至 [傳送事件](./action-types.md#send-event) 將資料傳送至資料流的動作。
+
+## 媒體：體驗品質 {#quality-experience}
+
+A **[!UICONTROL 體驗品質]** 將串流媒體事件傳送到Adobe Experience Platform時，資料元素會很有幫助。 您可在建立媒體工作階段時新增此元素，而下列媒體事件將包含更新的體驗品質資料。
+
+![顯示「建立體驗資料元素品質」畫面的UI影像。](assets/qoe-data-element.png)
 
 ## 後續步驟 {#next-steps}
 
