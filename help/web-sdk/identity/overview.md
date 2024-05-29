@@ -2,9 +2,9 @@
 title: Web SDK中的身分資料
 description: 瞭解如何使用Adobe Experience Platform Web SDK擷取和管理Adobe Experience Cloud ID (ECID)。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1481'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Adobe Experience Platform Web SDK使用 [Adobe Experience Cloud ID (ECID)](../..
 
 Platform Web SDK會使用Cookie指派及追蹤ECID，並有多種可用方法來設定這些Cookie的產生方式。
 
-當新使用者進入您的網站時，Adobe Experience Cloud Identity Service會嘗試為該使用者設定裝置識別Cookie。 首次造訪的訪客會在首次從Adobe Experience Platform Edge Network回應時產生並傳回ECID。 若為重複訪客，ECID會擷取自 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie並由Edge Network新增至裝載。
+當新使用者進入您的網站時，Adobe Experience Cloud Identity Service會嘗試為該使用者設定裝置識別Cookie。 首次造訪訪訪客時，系統會在首次從Adobe Experience PlatformEdge Network回應時產生並傳回ECID。 若為重複訪客，ECID會擷取自 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie並由Edge Network新增至裝載。
 
 在設定包含ECID的Cookie後，Web SDK產生的每個後續請求都會在 `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie。
 
-使用Cookie來識別裝置時，您有兩個選項可以與Edge Network互動：
+使用Cookie來識別裝置時，您有兩個選項可與Edge Network互動：
 
-1. 將資料直接傳送至Edge Network網域 `adobedc.net`. 此方法稱為 [協力廠商資料收集](#third-party).
+1. 直接將資料傳送至Edge Network網域 `adobedc.net`. 此方法稱為 [協力廠商資料收集](#third-party).
 1. 在您自己的網域上建立指向 `adobedc.net`. 此方法稱為 [第一方資料收集](#first-party).
 
 如下節所述，您選擇使用的資料收集方法會直接影響各瀏覽器的Cookie存留期。
@@ -56,9 +56,36 @@ Platform Web SDK會使用Cookie指派及追蹤ECID，並有多種可用方法來
 
 如上所述，若要考慮Cookie有效期限的影響，您可以選擇設定並管理您自己的裝置識別碼。 請參閱以下指南： [第一方裝置ID](./first-party-device-ids.md) 以取得詳細資訊。
 
-## 擷取目前使用者的ECID和區域
+## 擷取目前使用者的ECID和區域 {#retrieve-ecid}
 
-若要擷取目前訪客的唯一ECID，請使用 `getIdentity` 命令。 對於尚未擁有ECID的首次訪客，此命令會產生新的ECID。 `getIdentity` 也會傳回訪客的地區ID。
+根據您的使用案例，有兩種方式可存取 [!DNL ECID]：
+
+* [擷取 [!DNL ECID] 透過資料收集的資料準備](#retrieve-ecid-data-prep)：這是您應使用的建議方法。
+* [擷取 [!DNL ECID] 透過 `getIdentity()` 命令](#retrieve-ecid-getidentity)：只有在您需要下列專案時才使用此方法： [!DNL ECID] 使用者端的資訊。
+
+### 擷取 [!DNL ECID] 透過資料收集的資料準備 {#retrieve-ecid-data-prep}
+
+使用 [資料收集的資料準備](../../datastreams/data-prep.md) 對應 [!DNL ECID] 至 [!DNL XDM] 欄位。 這是存取 [!DNL ECID].
+
+要執行此操作，請將來源欄位設定為以下路徑：
+
+```js
+xdm.identityMap.ECID[0].id
+```
+
+然後，將目標欄位設定為欄位型別的XDM路徑 `string`.
+
+![](../../tags/extensions/client/web-sdk/assets/access-ecid-data-prep.png)
+
+
+### 擷取 [!DNL ECID] 透過 `getIdentity()` 命令 {#retrieve-ecid-getidentity}
+
+
+>[!IMPORTANT]
+>
+>您應該僅透過 `getIdentity()` 命令(如果您需要 [!DNL ECID] 在使用者端上。 如果您只想將ECID對應至XDM欄位，請使用 [資料收集的資料準備](#retrieve-ecid-data-prep) 而非。
+
+若要擷取目前訪客的唯一ECID，請使用 `getIdentity` 命令。 首次造訪的訪客沒有 [!DNL ECID] 然而，這個指令會產生 [!DNL ECID]. `getIdentity` 也會傳回訪客的地區ID。
 
 >[!NOTE]
 >
