@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
+source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
 workflow-type: tm+mt
-source-wordcount: '2024'
-ht-degree: 32%
+source-wordcount: '2096'
+ht-degree: 31%
 
 ---
 
@@ -13,6 +13,21 @@ ht-degree: 32%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](/help/web-sdk/release-notes.md).
+
+## 2.23.1版 — 2024年5月28日
+
+**新功能**
+
+* 新增對 [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) 元件進行識別。
+* 已新增 [`Send Media Event`](action-types.md#send-media-event) 的動作 [!DNL Streaming Media Collection] 功能。
+* 已新增 [`Media: Quality of Experience`](data-element-types.md#quality-experience) 的資料元素 [!DNL Streaming Media Collection] 功能。
+
+包含2.20.0版的Adobe Experience Platform Web SDK。
+
+**修正和改良**
+
+* 修正在中搜尋資料元素時發生的錯誤 [更新變數](action-types.md#update-variable) 動作。
+* 已移除 [!UICONTROL 媒體] 事件型別中的事件型別，建議用於 `sendEvent` 動作。
 
 ## 2.22.0版 — 2024年5月3日
 

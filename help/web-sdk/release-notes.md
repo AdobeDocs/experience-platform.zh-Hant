@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform Web SDK 發行說明
-description: Adobe Experience Platform Web SDK 最新版本注意事項。
+description: Adobe Experience Platform Web SDK最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
+source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
 workflow-type: tm+mt
-source-wordcount: '1777'
+source-wordcount: '1811'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,16 @@ ht-degree: 1%
 >Google [已宣佈](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) 預計在2024年下半年停止支援第三方Cookie Chrome。 因此，第三方Cookie將不再於任何主要瀏覽器中受到支援。
 >
 >實作此變更後，Adobe將停止支援 `demdex` Web SDK目前支援的Cookie。
+
+## 2.20.0版 — 2024年5月21日
+
+**新功能**
+
+* 新增的支援 [串流媒體收集](../web-sdk/commands/configure/streamingmedia.md).
+
+**修正和改良**
+
+* 修正在選擇退出同意時，預先隱藏程式碼片段會隱藏預設內容的錯誤。
 
 ## 2.19.2版 — 2024年1月10日
 
@@ -92,7 +102,7 @@ ht-degree: 1%
 **修正和改良**
 
 * 修正Adobe Target VEC自訂程式碼動作將程式碼插入至替代位置的問題，而非使用 [!DNL at.js].
-* 修正部分邊緣案例中，對Edge Network的請求未正確設定「referer」標題的問題。
+* 修正某些邊緣案例中，向Edge Network提出的請求未正確設定「referer」標題的問題。
 * 修正以下問題： [使用者代理使用者端提示](/help/web-sdk/use-cases/client-hints.md) 屬性可能設定為不正確的型別。
 * 修正以下問題： `placeContext.localTime` 不符合結構描述。
 
@@ -120,7 +130,7 @@ ht-degree: 1%
 
 ## 2.12.0版 — 2022年6月29日
 
-* 變更對Edge Network的請求，以使用 `cluster` URL中的Cookie位置提示。 這可確保在工作階段中變更位置（例如，透過VPN或透過行動裝置駕駛等）的使用者點選相同的邊緣，並具有相同的個人化設定檔。
+* 將請求變更為Edge Network以使用 `cluster` URL中的Cookie位置提示。 這可確保在工作階段中變更位置（例如，透過VPN或透過行動裝置駕駛等）的使用者點選相同的邊緣，並具有相同的個人化設定檔。
 * 將getLibraryInfo命令回應中設定的函式字串化。
 
 ## 2.11.0版 — 2022年6月13日
@@ -202,10 +212,10 @@ ht-degree: 1%
 * 此 [`getIdentity`](/help/web-sdk/commands/getidentity.md) 命令現在會連同身分傳回邊緣區域ID。
 * 已改善從伺服器收到的警告和錯誤，並以更適當的方式加以處理。
 * 新增對Adobe同意書2.0標準的支援 [`setConsent`](/help/web-sdk/commands/setconsent.md) 命令。
-* 收到同意偏好設定時，會進行雜湊處理，並儲存在本機儲存體中，以最佳化CMP、Platform Web SDK和Platform Edge Network之間的整合。 如果您正在收集同意偏好設定，我們現在鼓勵您致電 `setConsent` 在每次載入頁面時。
+* 收到同意偏好設定時，會進行雜湊處理，並儲存在本機儲存體中，以最佳化CMP、Platform Web SDK和PlatformEdge Network之間的整合。 如果您正在收集同意偏好設定，我們現在鼓勵您致電 `setConsent` 在每次載入頁面時。
 * 兩個 [監視鉤點](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)， `onCommandResolved` 和 `onCommandRejected`，已新增。
 * 錯誤修正：當使用者導覽至新的單頁應用程式檢視、返回原始檢視，並按一下符合轉換資格的元素時，個人化互動通知事件將包含有關相同活動的重複資訊。
-* 錯誤修正：如果SDK傳送的第一個事件已 `documentUnloading` 設為 `true`， [`sendBeacon`](https://developer.mozilla.org/zh-TW/docs/Web/API/Navigator/sendBeacon) 會用於傳送事件，導致有關未建立身分的錯誤。
+* 錯誤修正：如果SDK傳送的第一個事件已 `documentUnloading` 設為 `true`， [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) 會用於傳送事件，導致有關未建立身分的錯誤。
 
 ## 2.3.0版 — 2020年11月
 
