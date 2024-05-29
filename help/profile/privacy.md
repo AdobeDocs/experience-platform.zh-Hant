@@ -5,7 +5,7 @@ title: 即時客戶個人檔案中的隱私權請求處理
 type: Documentation
 description: Adobe Experience Platform Privacy Service會根據多項隱私權法規的規定，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 本檔案說明與處理即時客戶個人檔案的隱私權請求相關的重要概念。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 0%
@@ -52,10 +52,10 @@ Identity Service維護全域定義（標準）和使用者定義（自訂）的�
 >
 >Privacy Service只能處理 [!DNL Profile] 使用不執行身分拼接的合併原則的資料。 請參閱以下小節： [合併原則限制](#merge-policy-limitations) 以取得詳細資訊。
 >
->請注意，隱私權請求是根據法規要求以非同步方式處理，完成所需時間會有所不同。 若您的電腦發生變更 [!DNL Profile] 當要求仍在處理時，並不保證這些傳入記錄也會在該要求中處理。 系統保證只會刪除請求隱私權工作時，Data Lake或「設定檔存放區」中保留的設定檔。 如果您在刪除工作期間擷取與刪除請求主題相關的設定檔資料，並不保證會刪除所有設定檔片段。
+>請注意，隱私權請求是根據法規要求以非同步方式處理，完成所需時間會有所不同。 若您的電腦發生變更 [!DNL Profile] 當要求仍在處理時，並不保證這些傳入記錄也會在該要求中處理。 只有在請求隱私權工作時，儲存在Data Lake或設定檔存放區中的設定檔才會被刪除。 如果您在刪除工作期間擷取與刪除請求主題相關的設定檔資料，並不保證會刪除所有設定檔片段。
 >您有責任在刪除請求時，留意Platform或Profile Service中的任何傳入資料，因為該資料將會插入記錄存放區。 您必須審慎擷取已刪除或正在刪除的資料。
 
-### 使用 API
+### 使用API
 
 在API中建立工作請求時，在中提供的任何ID `userIDs` 必須使用特定 `namespace` 和 `type`. 有效的 [身分名稱空間](#namespaces) 辨識者 [!DNL Identity Service] 必須提供 `namespace` 值，而 `type` 必須為 `standard` 或 `unregistered` （分別針對標準和自訂名稱空間）。
 

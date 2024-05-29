@@ -1,12 +1,12 @@
 ---
 title: 不依賴第三方Cookie即可吸引和贏取新客戶
-description: 了解如何透過挖掘潛在客戶使用案例吸引並獲取新客戶，而不依賴使用第三方 Cookie。
+description: 瞭解如何透過潛在使用案例吸引和贏取新客戶，而不需依賴第三方Cookie。
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 87%
+ht-degree: 85%
 
 ---
 
@@ -110,7 +110,7 @@ Adobe Real-time Customer Data Platform可協助品牌安全地將其支援的資
 
 ![XDM 個別潛在客戶設定檔類別的預先設定欄位](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)。
 
-接下來，您必須選取之前建立的合作夥伴 ID 身分作為結構描述的主要身分。設定檔記錄必須帶有主要身分。需要執行此步驟以確保潛在客戶資料可以載入到設定檔存放區，用於細分和啟動作業。
+接下來，您必須選取之前建立的合作夥伴 ID 身分作為結構描述的主要身分。設定檔記錄必須帶有主要身分。此步驟是必要的，才能確保潛在客戶資料可載入設定檔存放區，並可供細分和啟用。
 
 >[!AVAILABILITY]
 >

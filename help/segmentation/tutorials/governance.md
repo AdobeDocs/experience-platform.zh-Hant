@@ -4,10 +4,10 @@ title: 使用API強制對象區段遵守資料使用規範
 type: Tutorial
 description: 本教學課程涵蓋使用API強制資料使用法規遵循區段定義的步驟。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1355'
-ht-degree: 9%
+source-wordcount: '1348'
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)： [!DNL Real-Time Customer Profile] 是一般查詢實體存放區，用於管理 [!DNL Experience Data Model (XDM)] 資料範圍 [!DNL Platform]. 設定檔會合併各種企業資料資產的資料，並在統一的簡報中提供該資料的存取權。
    - [合併原則](../../profile/api/merge-policies.md)：使用的規則 [!DNL Real-Time Customer Profile] 以判斷在特定條件下可以將哪些資料合併到統一檢視中。 您可以針對資料控管目的設定合併原則。
-- [[!DNL Segmentation]](../home.md)：如何 [!DNL Real-Time Customer Profile] 會將設定檔存放區中包含的大量個人群組分割為較小的群組，這些群組具有類似的特徵，且對行銷策略的回應也會類似。
+- [[!DNL Segmentation]](../home.md)：如何 [!DNL Real-Time Customer Profile] 會將設定檔存放區中包含的大量個人群組分割成較小的群組，這些群組具有類似的特徵，且對行銷策略的回應也會類似。
 - [資料控管](../../data-governance/home.md)：資料控管使用下列元件，提供資料使用標籤和執行的基礎結構：
    - [資料使用情況標籤](../../data-governance/labels/user-guide.md)：根據處理資料集和欄位個別資料的敏感度等級，用來說明資料集和欄位。
    - [資料使用原則](../../data-governance/policies/overview.md)：指出在特定資料使用標籤分類的資料上允許哪些行銷動作的設定。
@@ -32,19 +32,19 @@ ht-degree: 9%
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需文件中用於範例 API 呼叫的慣例相關資訊，請參閱 [ 疑難排解指南中的](../../landing/troubleshooting.md#how-do-i-format-an-api-request)如何讀取範例 API 呼叫[!DNL Experience Platform]一節。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
 
 ### 收集所需標頭的值
 
-為了對 [!DNL Platform] API 進行呼叫，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
+- x-api-key： `{API_KEY}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 中的所有資源 [!DNL Experience Platform] 會隔離至特定的虛擬沙箱。 所有要求至 [!DNL Platform] API需要標頭，用以指定將進行作業的沙箱名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >

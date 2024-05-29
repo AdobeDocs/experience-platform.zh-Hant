@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -31,13 +31,13 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
 >title="資料集活動中的負數"
->abstract="擷取記錄中的負數表示使用者在選取的時間範圍內刪除了某些批次。"
+>abstract="內嵌記錄中的負數表示使用者已刪除選定時間範圍內的特定批次。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_daysRemaining"
 >title="資料集有效期"
->abstract="此欄表示目標資料集在自動到期之前剩餘的天數。"
+>abstract="此欄指出目標資料集自動過期前的剩餘天數。"
 
 在 [!DNL Experience Platform] UI，選取 **[!UICONTROL 資料集]** 在左側導覽以開啟 **[!UICONTROL 資料集]** 儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資訊，包括其名稱、資料集所遵守的結構描述，以及最新擷取執行的狀態。
 
@@ -102,7 +102,7 @@ ht-degree: 3%
 如需存取資料的更強大方法， [!DNL Experience Platform] 提供下游服務，例如 [!DNL Query Service] 和 [!DNL JupyterLab] 以探索及分析資料。 如需詳細資訊，請參閱下列檔案：
 
 * [查詢服務總覽](../../query-service/home.md)
-* [JupyterLab使用手冊](../../data-science-workspace/jupyterlab/overview.md)
+* [JupyterLab 使用手冊](../../data-science-workspace/jupyterlab/overview.md)
 
 ### 管理和強制執行資料集的資料控管 {#manage-and-enforce-data-governance}
 
@@ -263,7 +263,7 @@ ht-degree: 3%
 在下一個畫面中，畫面會顯示下列兩個建立新資料集的選項：
 
 * [從結構描述建立資料集](#schema)
-* [從CSV檔案建立資料集](#csv)
+* [從 CSV 檔案建立資料集](#csv)
 
 ### 使用現有結構描述建立資料集 {#schema}
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4334'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -50,17 +50,17 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="流失"
->abstract="流失代表和上次執行區段作業時相比，對象內正在變更的設定檔的百分比。"
+>abstract="流失率代表和上次執行區段作業相比，對象中發生變更的設定檔百分比。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="評估方式"
->abstract="對象的評估方式包括批次、串流和邊緣。"
+>abstract="對象的評估方法包括批次、串流和邊緣。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="將所有對象新增到排程"
->abstract="啟用以在每日排程更新中包含所有使用批次分段評估的對象。停用以從排程更新中移除所有對象。"
+>title="將所有對象新增至排程"
+>abstract="啟用後可在每日排程更新中包含所有使用批次細分評估的對象。 停用以從排程更新中移除所有對象。"
 
 選取 **[!UICONTROL 瀏覽]** 標籤檢視貴組織的所有對象清單。 此檢視會列出對象的相關資訊，包括設定檔計數、來源、建立日期、上次修改日期、標籤和劃分。
 
@@ -78,7 +78,7 @@ ht-degree: 2%
 | [!UICONTROL 與合作夥伴分享] | 對象構成、自訂上傳、細分服務 | 與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請參閱 [區段比對概觀](./segment-match/overview.md). |
 | [!UICONTROL 管理標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
 | [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 管理對象所屬的資料夾。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
-| [!UICONTROL 副本] | Segmentation Service | 複製選取的對象。 |
+| [!UICONTROL 複製] | Segmentation Service | 複製選取的對象。 |
 | [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
 | [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
@@ -278,7 +278,7 @@ ht-degree: 2%
 
 此 **[!UICONTROL 對象總數]** 區段顯示符合對象資格的設定檔總數。
 
-預估值是透過使用當天樣本資料的樣本大小所產生。 如果您的設定檔存放區中的實體少於100萬個，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2000萬個以上的實體，則會使用全部實體的5%。 如需有關產生預估的詳細資訊，請參閱 [預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 對象建立教學課程的。
+預估值是透過使用當天樣本資料的樣本大小所產生。 如果您的設定檔存放區中有少於100萬個實體，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。 如需有關產生預估的詳細資訊，請參閱 [預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) 對象建立教學課程的。
 
 **已啟用的目的地** {#activated-destinations}
 
@@ -300,7 +300,7 @@ ht-degree: 2%
 
 掃描的樣本大小取決於設定檔存放區中的實體總數。 下表顯示這些範例大小：
 
-| 設定檔存放區中的實體 | 樣本大小 |
+| 設定檔存放區中的實體 | 抽樣大小 |
 | ------------------------- | ----------- |
 | 少於100萬 | 完整資料集 |
 | 100萬到2000萬 | 100萬 |
@@ -403,7 +403,7 @@ ht-degree: 2%
 
 ![「對象瀏覽」頁面會反白切換至「排程所有對象」 。](../images/ui/overview/browse-audiences-scheduled.png)
 
-## 組合 {#compositions}
+## 構成 {#compositions}
 
 選取 **[!UICONTROL 組合]** 索引標籤以檢視透過對象構成為您的組織產生的所有對象清單。
 

@@ -3,7 +3,7 @@ title: 將一次性客戶價值提升至期限價值
 description: 瞭解如何建立個人化行銷活動，以根據特定客戶的屬性、行為和過去購買提供最佳補充性產品或服務。
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 27%
@@ -17,7 +17,7 @@ ht-degree: 27%
 >* 本頁提供Real-Time CDP和Adobe Journey Optimizer的實作範例，以達成上述使用案例。 使用頁面上提供的圖、資格標準和其他欄位作為指南，而不是規範圖。
 >* 若要完成此使用案例，您需要取得Real-Time CDP和Adobe Journey Optimizer的授權。 請閱讀以下內容： [先決條件和規劃區段](#prerequisites-and-planning) 再看下方。
 
-實施一次性客戶價值至終身價值的使用案例，以提高品牌參與度和品牌忠誠度。 運用Experience Platform的力量，輔以以下工具，在多個管道或歷程上建立連線的客戶體驗 [Real-Time CDP](/help/rtcdp/home.md) 和 [Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home).
+實施一次性客戶價值至終身價值的使用案例，以提高品牌參與度和品牌忠誠度。 運用Experience Platform的力量，輔以以下工具，在多個管道或歷程上建立連線的客戶體驗 [Real-Time CDP](/help/rtcdp/home.md) 和 [Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home).
 
 您鎖定的角色是您屬性中不常見的訪客，這些訪客在過去三個月中進行了一些購買。
 
@@ -33,7 +33,7 @@ ht-degree: 27%
 
 考量到您已在內部定義業務目標和目標，以提高品牌忠誠度。 這可以轉換為執行使用案例，以提高客戶參與度和忠誠度。
 
-為此，所需的技術包含兩個Experience Platform應用程式 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant). 以下列出您在實作使用案例時將使用的兩個應用程式的各種功能和UI元素。
+為此，所需的技術包含兩個Experience Platform應用程式 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant). 以下列出您在實作使用案例時將使用的兩個應用程式的各種功能和UI元素。
 
 >[!TIP]
 >
@@ -296,7 +296,7 @@ ht-degree: 27%
 
 ### 建立對象 {#create-audiences}
 
-此使用案例需要您建立兩個受眾，以定義由設定檔存放區中的設定檔子集共用的特定屬性或行為，以區分可行銷人群組。 在Adobe Experience Platform中可以透過多種方式建立對象：
+此使用案例需要您建立兩個受眾，以定義由個人資料存放區中的個人資料子集共用的特定屬性或行為，以區分可行銷的人員群組。 在Adobe Experience Platform中可以透過多種方式建立對象：
 
 * 如需如何建立受眾的詳細資訊，請參閱 [Audience Service UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * 如需如何撰寫的資訊 [對象](/help/segmentation/home.md)，閱讀 [對象構成UI指南](/help/segmentation/ui/audience-composition.md).

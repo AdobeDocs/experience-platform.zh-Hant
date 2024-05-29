@@ -3,7 +3,7 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 0%
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## [!UICONTROL 瀏覽] 索引標籤量度
 
-選取 **[!UICONTROL 瀏覽]** 標籤以顯示與貴組織設定檔資料相關的數個量度。 您也可以使用此索引標籤，依照本指南下一節所述，使用合併原則或身分來瀏覽設定檔存放區。
+選取 **[!UICONTROL 瀏覽]** 標籤以顯示與貴組織設定檔資料相關的數個量度。 您也可以使用此標籤來瀏覽使用合併原則或身分的設定檔存放區，如本指南下一節所述。
 
 在的右側 **[!UICONTROL 瀏覽]** 標籤為 [設定檔計數](#profile-count) 以及清單 [依名稱空間區分的設定檔](#profiles-by-namespace).
 
@@ -170,7 +170,7 @@ ht-degree: 0%
 
 ![對象成員資格標籤中的資料位置選擇器會醒目提示。](../images/user-guide/audience-membership-select.png)
 
-## 合併政策
+## 合併原則
 
 從主要 **[!UICONTROL 設定檔]** 功能表，選取 **[!UICONTROL 合併原則]** 標籤以檢視屬於您組織的合併原則清單。 每個列出的原則都會顯示其名稱（無論是否為預設的合併原則）及其套用的結構描述類別。
 

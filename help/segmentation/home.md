@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 分段服務總覽
 description: 瞭解Adobe Experience Platform區段服務，以及此服務在平台生態系統中所扮演的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1627'
-ht-degree: 14%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 本檔案提供以下專案的概觀： [!DNL Segmentation Service] 以及它在Adobe Experience Platform中扮演的角色。
 
-## 快速入門：[!DNL Segmentation Service]
+## 快速入門 [!DNL Segmentation Service]
 
 您應瞭解本檔案中使用的下列主要辭彙：
 
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ## 區段的運作方式
 
-區段是定義特定屬性或行為的程式，這些屬性或行為由設定檔存放區中的設定檔子集共用，以便區分可行銷人群組和您的客戶群。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件行銷活動中，您可能想要一個受眾，其中包含過去30天內搜尋跑鞋但未完成購買的所有使用者。
+區段是定義特定屬性或行為的程式，這些屬性或行為由您的個人資料存放區中的個人資料子集共用，以便區分可行銷人群組和您的客戶群。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件行銷活動中，您可能想要一個受眾，其中包含過去30天內搜尋跑鞋但未完成購買的所有使用者。
 
 從概念上定義對象後，即會在其中建置 [!DNL Experience Platform]. 一般而言，對象是由行銷人員或對象專家建立，不過有些組織偏好由行銷部門與資料分析師合作建立。 檢閱傳送至的資料時 [!DNL Platform]，資料分析人員可以兩種方式建立受眾 — 透過選取將用於建立受眾規則或條件的欄位和值來建立區段定義，或使用受眾構成來構成受眾。
 
@@ -56,16 +56,16 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
->title="評估方式"
->abstract="Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。"
+>title="評估方法"
+>abstract="Platform目前支援三種評估受眾的方法：串流分段、批次分段和邊緣分段。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="串流評估"
->abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新對象。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=zh-Hant" text="使用串流分段近乎即時地評估事件"
+>abstract="串流細分是持續的資料選擇過程，會更新您的對象以回應使用者活動。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="使用串流區段近乎即時地評估事件"
 
-Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。
+Platform目前支援三種評估受眾的方法：串流分段、批次分段和邊緣分段。
 
 ### 串流區段 {#streaming}
 
@@ -73,14 +73,14 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 
 若要進一步瞭解串流區段，請參閱 [串流區段檔案](./api/streaming-segmentation.md).
 
-### 批次分段 {#batch}
+### 批次細分 {#batch}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="批次評估"
->abstract="批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，系統會儲存並存放該對象，以便您可以將對象匯出使用。"
+>abstract="作為現有資料選擇流程的替代方法，批次細分會透過區段定義一次移動所有設定檔資料，以產生相應的受眾。 建立對象後，會儲存並儲存對象，以便您匯出以供使用。"
 
-批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，會儲存並儲存產生的對象，以便您將其匯出以供使用。
+作為現有資料選擇流程的替代方法，批次細分會透過區段定義一次移動所有設定檔資料，以產生相應的受眾。 建立後，會儲存並儲存產生的對象，以便您將其匯出以供使用。
 
 每24小時自動評估批次對象。 如果您想要依需求評估批次對象，則可以使用區段工作。 若要深入瞭解區段工作，請參閱 [區段作業檔案](./api/segment-jobs.md).
 
@@ -88,11 +88,11 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
->title="邊緣評估"
->abstract="邊緣分段指在 Edge Network 上即時評估 Platform 中的區段的能力，可實現同一頁面和下一頁面個人化的使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=zh-Hant" text="邊緣分段服務 UI 指南"
+>title="Edge評估"
+>abstract="邊緣區段能在Edge Network上即時評估Platform中的區段，啟用相同頁面和下一頁個人化使用案例。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Edge區段UI指南"
 
-邊緣區段是即時評估Platform中區段的能力 [在Edge Network](../web-sdk/home.md)，啟用相同頁面和下一頁個人化使用案例。
+邊緣區段是即時評估Platform中區段的能力 [在Edge Network上](../web-sdk/home.md)，啟用相同頁面和下一頁個人化使用案例。
 
 若要深入瞭解邊緣細分，請閱讀 [API檔案](./api/edge-segmentation.md) 或 [UI檔案](./ui/edge-segmentation.md).
 
@@ -114,7 +114,7 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 >
 >規劃區段定義時，請記住，區段定義可從任何其他區段定義中參照並與之結合。 選取名稱時，請考量您的區段定義可能包含可重複使用的部分的可能性。
 
-### 合併政策
+### 合併原則
 
 合併原則是以下使用者使用的規則： [!DNL Profile] 以決定在特定條件下，如何將資料優先並合併到統一檢視中。
 
@@ -133,13 +133,13 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 ## 進階分段功能
 
 區段定義可設定為透過合併以持續產生對象 [串流資料擷取](../ingestion/streaming-ingestion/overview.md) 並具備下列任一進階分段功能：
-- [順序分段](#sequential)
+- [循序分段](#sequential)
 - [動態細分](#dynamic)
 - [多實體分段](#multi-entity)
 
 以下各節將更詳細地討論這些進階功能。
 
-### 順序分段 {#sequential}
+### 循序分段 {#sequential}
 
 標準使用者歷程本質上為循序性質。 Adobe Experience Platform可讓您定義一系列有序的對象來反映此歷程，因此能擷取事件發生的順序。 您可以使用中的視覺事件時間軸，將事件依所需順序排列 [!DNL Segment Builder].
 

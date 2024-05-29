@@ -3,10 +3,10 @@ title: 智慧型重新吸引
 description: 在關鍵轉換時刻提供引人注目的互聯體驗，以智慧方式重新吸引不常造訪的客戶。
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 49%
+ht-degree: 47%
 
 ---
 
@@ -180,7 +180,7 @@ ht-degree: 49%
 
 +++商務詳細資料 (欄位群組)
 
-此 [商業細節](/help/xdm/field-groups/event/commerce-details.md) 欄位群組用於說明商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
+此 [Commerce詳細資料](/help/xdm/field-groups/event/commerce-details.md) 欄位群組用於說明商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
 
 | 欄位 | 說明 |
 | --- | --- |
@@ -223,7 +223,7 @@ ht-degree: 49%
 
 +++商務詳細資料 (欄位群組)
 
-此 [商業細節](/help/xdm/field-groups/event/commerce-details.md) 欄位群組用於說明商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
+此 [Commerce詳細資料](/help/xdm/field-groups/event/commerce-details.md) 欄位群組用於說明商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
 
 | 欄位 | 說明 |
 | --- | --- |
@@ -344,7 +344,7 @@ ht-degree: 49%
 
 ### 建立對象 {#create-audience}
 
-重新參與案例使用受眾來定義由個人資料存放區中的個人資料子集共用的特定屬性或行為，以將可行銷的人員群組與您的客戶群區分開來。 您可以在中以多種方式建立對象 [!DNL Adobe Experience Platform].
+重新參與案例使用受眾來定義個人資料存放區中個人資料子集共用的特定屬性或行為，以便區分可行銷人群組和您的客戶群。 您可以在中以多種方式建立對象 [!DNL Adobe Experience Platform].
 
 如需如何建立受眾的詳細資訊，請參閱 [audience service UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
@@ -446,7 +446,7 @@ ht-degree: 49%
 
 +++事件
 
-事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+事件可讓您一直觸發歷程，以即時傳送訊息給流入歷程的個人。 如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * 事件 1：產品檢視
    * 結構描述：客戶數位交易
@@ -571,7 +571,7 @@ ht-degree: 49%
 
 +++事件
 
-事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+事件可讓您一直觸發歷程，以即時傳送訊息給流入歷程的個人。 如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * 事件 2：加入購物車
    * 結構描述：客戶數位交易
@@ -704,7 +704,7 @@ ht-degree: 49%
 
 +++事件
 
-事件可讓您一致性地觸發歷程，以即時傳送訊息給流入歷程的個人。如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+事件可讓您一直觸發歷程，以即時傳送訊息給流入歷程的個人。 如需有關事件的詳細資訊，請閱讀 [一般事件指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * 事件 4：網上購買
    * 結構描述：客戶數位交易

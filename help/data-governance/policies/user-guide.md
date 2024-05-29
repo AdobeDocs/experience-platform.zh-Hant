@@ -4,19 +4,19 @@ solution: Experience Platform
 title: 在UI中管理資料使用原則
 description: Adobe Experience Platform資料控管提供使用者介面，可讓您建立和管理資料使用原則。 本檔案概述您可以在Experience Platform使用者介面的「原則」工作區中執行的動作。
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 18%
+source-wordcount: '1768'
+ht-degree: 1%
 
 ---
 
-# 管理 UI 中的資料使用原則 {#user-guide}
+# 在UI中管理資料使用原則 {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="在您的設定檔資料中整合並強制執行客戶同意"
->abstract="<h2>說明</h2><p>Platform 可讓您將從客戶收集來的同意資料整合到他們各自的設定檔中。然後，您可以設定同意原則以確定此資料是否可以包含在已啟用至特定目的地的區段中。</p>"
+>abstract="<h2>說明</h2><p>Platform可讓您將從客戶收集到的同意資料整合到其個別設定檔中。 然後您可以設定同意原則，以判斷此資料是否可包含在針對特定目的地啟用的區段中。</p>"
 
 本檔案說明如何使用 **[!UICONTROL 原則]** Adobe Experience Platform UI中的工作區，用來建立和管理資料使用原則。
 
@@ -99,12 +99,12 @@ ht-degree: 18%
 
 ![](../images/policies/created-policy.png)
 
-### 建立內容原則 {#consent-policy}
+### 建立同意原則 {#consent-policy}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="說明"
->abstract="<ul><li>確保您透過 OneTrust 來源連接器或標準 XDM 結構描述，將偏好設定資料擷取到您的聯合結構描述以取得同意。</li><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#create-governance-policy">建立原則</a>。</li><li>在 <b>If</b> 區段下，描述將觸發原則檢查的條件或動作。</li><li>在 <b>Then</b> 區段下，輸入同意屬性，此同意屬性必須存在才能將設定檔包含在觸發原則的動作中。</li><li>選取<b>儲存</b>以建立原則。若要啟用原則，請選取右側邊欄中的 <b>狀態</b>切換。</li><li>當您將區段啟用到目的地時，Experience Platform 會自動強制執行您的已啟用同意原則，並提供每個原則如何影響對象大小的詳細資訊。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#consent-policy">建立同意原則</a>指南。</li></ul>"
+>abstract="<ul><li>確保您透過OneTrust來源聯結器或標準XDM結構描述將偏好設定資料擷取到聯合結構描述中以獲得同意。</li><li>選取 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a> 在左側導覽中，然後選取 <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">建立原則</a>.</li><li>在 <b>如果</b> 區段，說明會觸發原則檢查的條件或動作。</li><li>在 <b>則</b> 區段，輸入必須存在的同意屬性，設定檔才能包含在觸發原則的動作中。</li><li>選取 <b>儲存</b> 以建立原則。 若要啟用此原則，請選取 <b>狀態</b> 在右側邊欄中切換。</li><li>當您對目的地啟用區段時，Experience Platform會自動強制執行您已啟用的同意原則，並提供每個原則如何影響您對象規模的詳細資訊。</li><li>如需有關此功能的更多說明，請參閱以下指南： <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#consent-policy">建立同意原則</a> 在Experience League上。</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -126,7 +126,7 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentif"
 >title="If 條件"
->abstract="首先定義將觸發原則檢查的條件。條件可以包括正在採取的特定行銷動作、存在的特定資料控管標籤，或兩者的組合。"
+>abstract="從定義將觸發原則檢查的條件開始。 條件可能包括已執行的特定行銷動作、出現的特定資料治理標籤，或兩者的組合。"
 
 在 **[!UICONTROL 如果]** 區段，選取應該觸發此原則的行銷動作和/或資料使用標籤。 選取 **[!UICONTROL 檢視全部]** 和 **[!UICONTROL 選取標籤]** 以分別檢視可用行銷動作和標籤的完整清單。
 
@@ -143,9 +143,9 @@ ht-degree: 18%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Then 條件"
->abstract="定義「If」條件後，使用「Then」部分從聯合方案中選擇至少一個同意屬性。此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。"
+>abstract="定義「If」條件後，請使用「Then」區段從聯合結構描述中選取至少一個同意屬性。 這是必須存在的屬性，才能將設定檔納入此原則所控管的動作中。"
 
-在 **[!UICONTROL 則]** 區段，從聯合結構描述中選取至少一個同意屬性。 此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。您可以從清單中選擇其中一個提供的選項，或選取 **[!UICONTROL 檢視全部]** 以直接從聯合結構描述選擇屬性。
+在 **[!UICONTROL 則]** 區段，從聯合結構描述中選取至少一個同意屬性。 這是必須存在的屬性，才能將設定檔納入此原則所控管的動作中。 您可以從清單中選擇其中一個提供的選項，或選取 **[!UICONTROL 檢視全部]** 以直接從聯合結構描述選擇屬性。
 
 選取同意屬性時，請選擇您要此原則檢查的屬性值。
 

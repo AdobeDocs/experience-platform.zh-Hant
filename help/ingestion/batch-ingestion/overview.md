@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 批次擷取API概觀
 description: Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形式擷取到Platform。 所擷取的資料可以是CRM系統中平面檔案（例如Parquet檔案）的設定檔資料，或是符合Experience Data Model (XDM)登入中已知結構的資料。
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 4%

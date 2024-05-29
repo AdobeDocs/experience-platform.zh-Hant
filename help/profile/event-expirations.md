@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 體驗事件有效期
 description: 本文提供在Adobe Experience Platform資料集中設定個別體驗事件到期時間的一般指引。
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 體驗事件資料到期和假名設定檔資料到期是互補功能。
 
-#### 詳細程度
+#### 粒度
 
 體驗事件資料到期的有效期適用於 **資料集** 層級。 因此，每個資料集可以有不同的資料到期設定。
 

@@ -5,7 +5,7 @@ title: 使用流程服務API連線到批次目的地並啟用資料
 description: 使用流程服務API的逐步指示，在Experience Platform中建立批次雲端儲存空間或電子郵件行銷目的地並啟用資料
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3411'
 ht-degree: 2%
@@ -173,7 +173,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `name` | 提供基本連線至Experience Platform的名稱 [!DNL Profile Store]. |
+| `name` | 提供基本連線至Experience Platform的名稱 [!DNL Profile store]. |
 | `description` | 您可以選擇提供基本連線的說明。 |
 | `connectionSpec.id` | 使用連線規格ID用於 [Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
@@ -207,7 +207,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -224,7 +224,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `name` | 提供來源連線至Experience Platform的名稱 [!DNL Profile Store]. |
+| `name` | 提供來源連線至Experience Platform的名稱 [!DNL Profile store]. |
 | `description` | 您可以選擇提供來源連線的說明。 |
 | `connectionSpec.id` | 使用連線規格ID用於 [Experience Platform設定檔存放區](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | 使用您在上一步中取得的基本連線ID。 |
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **回應**
 
-成功的回應會傳回唯一識別碼(`id`)作為新建立的來源連線至 [!DNL Profile Store]. 這可確認您已成功連線至您的 [!DNL Experience Platform] 資料。 將此值依後續步驟的需要儲存。
+成功的回應會傳回唯一識別碼(`id`)作為新建立的來源連線至 [!DNL Profile store]. 這可確認您已成功連線至您的 [!DNL Experience Platform] 資料。 將此值依後續步驟的需要儲存。
 
 ```json
 {

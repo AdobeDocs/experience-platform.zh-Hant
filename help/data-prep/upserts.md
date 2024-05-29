@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用「資料準備」將部分列更新傳送到「即時客戶個人檔案」
 description: 瞭解如何使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 0%
@@ -130,7 +130,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 | --- | --- | 
 | `create` | 預設操作。 這會為產生XDM實體建立方法 [!DNL Real-Time Customer Profile]. |
 | `merge` | 這會為以下專案產生XDM實體更新方法 [!DNL Real-Time Customer Profile]. |
-| `delete` | 這會為以下專案產生XDM實體刪除方法 [!DNL Real-Time Customer Profile] 並永久移除以下專案的資料： [!DNL Profile Store]. |
+| `delete` | 這會為以下專案產生XDM實體刪除方法 [!DNL Real-Time Customer Profile] 並永久移除以下專案的資料： [!DNL Profile store]. |
 
 支援下列作業 [!DNL Identity Service]：
 

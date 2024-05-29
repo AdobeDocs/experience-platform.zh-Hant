@@ -4,14 +4,14 @@ title: Real-time Customer Data Platform中的Segmentation Service
 description: Adobe Real-time Customer Data Platform是以Adobe Experience Platform為建置基礎，並運用許多Experience Platform服務和功能。 您可以使用區段服務，將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service]在 [!DNL Real-Time Customer Data Platform]
+# [!DNL Segmentation Service] 在 [!DNL Real-Time Customer Data Platform]
 
 [!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)可讓您從多個來源取得資料，為客戶帶來協調一致的體驗。 使用可達成提供相關的個人化行銷活動 [!DNL Segmentation Service]，Adobe Experience Platform的一部分。
 
@@ -19,7 +19,7 @@ Real-Time CDP是以Adobe Experience Platform為建置基礎，並運用許多 [!
 
 ## 區段
 
-區段是定義特定屬性或行為的程式，這些屬性或行為由設定檔存放區中的設定檔子集共用，以便區分可行銷人群組和您的客戶群。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件行銷活動中，您可能想要一個受眾，其中包含過去30天內搜尋跑鞋但未完成購買的所有使用者。 使用不同的區段定義，您可以聚焦於各種受眾，提供更自訂的行銷體驗。
+區段是定義特定屬性或行為的程式，這些屬性或行為由您的個人資料存放區中的個人資料子集共用，以便區分可行銷人群組和您的客戶群。 例如，在名為「您忘記購買運動鞋嗎？」的電子郵件行銷活動中，您可能想要一個受眾，其中包含過去30天內搜尋跑鞋但未完成購買的所有使用者。 使用不同的區段定義，您可以聚焦於各種受眾，提供更自訂的行銷體驗。
 
 ## [!DNL Segment Builder]
 
@@ -29,7 +29,7 @@ Real-Time CDP是以Adobe Experience Platform為建置基礎，並運用許多 [!
 
 Real-time Customer Data Platform隨附的Customer AI可讓您在個人層面產生客戶預測，並提供相關解釋。
 
-在影響因子的協助下，Customer AI 可告知您客戶可能會有什麼行為以及原因何在。 此外，您可以受益於Customer AI預測和洞察，透過提供最合適的優惠和訊息來個人化客戶體驗。 Customer AI可協助您：
+在影響因子的協助下，Customer AI可告知您客戶可能會做什麼以及為什麼。 此外，您可以受益於Customer AI預測和洞察，透過提供最合適的優惠和訊息來個人化客戶體驗。 Customer AI可協助您：
 
 * 提供高準確度的客戶傾向模型，以實現更強大的細分和目標定位。
 * 瞭解特定客戶行為背後的影響因素及可能性。

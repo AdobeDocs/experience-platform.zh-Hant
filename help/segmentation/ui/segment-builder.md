@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3633'
-ht-degree: 6%
+ht-degree: 0%
 
 ---
 
@@ -20,12 +20,12 @@ ht-degree: 6%
 
 ![接著會顯示區段產生器UI。](../images/ui/segment-builder/segment-builder.png)
 
-## 分段定義建置區塊 {#building-blocks}
+## 區段定義建置區塊 {#building-blocks}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
->abstract="構成區段定義的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
+>abstract="構成區段定義的三種欄位型別為屬性、事件和受眾。 屬性可讓您使用屬於XDM Individual Profile類別的設定檔屬性，事件可讓您根據使用XDM ExperienceEvent資料元素發生的動作或事件來建立對象，而對象則可讓您使用從外部來源匯入的對象。"
 
 區段定義的基本建置區塊是屬性和事件。 此外，現有對象中包含的屬性和事件可作為新定義的元件。
 
@@ -73,14 +73,14 @@ ht-degree: 6%
 
 | 欄位 | 報表套裝結構描述A | 報告套裝結構描述B |
 | ----- | --------------------- | --------------------- |
-| eVar1 | 反向連結網域 | 登入Y/N |
-| eVar2 | 頁面名稱 | 會員忠誠度ID |
-| eVar3 | URL | 頁面名稱 |
-| eVar4 | 搜尋字詞 | 產品名稱 |
-| event1 | 點擊數 | 頁面檢視 |
+| EVAR1 | 反向連結網域 | 登入Y/N |
+| EVAR2 | 頁面名稱 | 會員忠誠度ID |
+| EVAR3 | URL | 頁面名稱 |
+| EVAR4 | 搜尋字詞 | 產品名稱 |
+| event1 | 點按 | 頁面檢視 |
 | event2 | 頁面檢視 | 購物車新增 |
-| event3 | 購物車新增 | 結帳 |
-| event4 | 購買 | 購買 |
+| event3 | 購物車新增 | 結帳次數 |
+| event4 | 購買次數 | 購買次數 |
 
 在此情況下，您可以使用以下結構描述對應這兩個報表套裝：
 
@@ -95,7 +95,7 @@ ht-degree: 6%
 | 情境 | 聯合結構描述體驗 | 分段通用變數 | 分段對應變數 |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | 單一報告套裝 | 泛型變數中包含易記名稱描述項。 <br><br>**範例：** 頁面名稱(eVar2) | <ul><li>泛型變數中包含的易記名稱描述項</li><li>查詢使用來自特定資料集的資料，因為這是唯一使用資料</li></ul> | 查詢可以使用Adobe Analytics資料，也可能使用其他來源。 |
-| 多報告套裝 | 泛型變數未包含任何易記名稱描述元。 <br><br>**範例：** EVAR2 | <ul><li>任何具有多個描述元的欄位都會顯示為一般。 這表示UI中未出現任何好記的名稱。</li><li>查詢可以使用任何包含eVar的資料集中的資料，這可能會導致混合或不正確的結果。</li></ul> | 查詢會正確使用來自多個資料集的合併結果。 |
+| 多報表套裝 | 泛型變數未包含任何易記名稱描述元。 <br><br>**範例：** EVAR2 | <ul><li>任何具有多個描述元的欄位都會顯示為一般。 這表示UI中未出現任何好記的名稱。</li><li>查詢可以使用任何包含eVar的資料集中的資料，這可能會導致混合或不正確的結果。</li></ul> | 查詢會正確使用來自多個資料集的合併結果。 |
 
 ### 對象
 
@@ -227,12 +227,12 @@ ht-degree: 6%
 
 ![容器在展開後顯示。](../images/ui/segment-builder/unwrapped-container.png)
 
-## 合併政策
+## 合併原則
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
->title="合併政策"
->abstract="合併政策可讓不同的資料集合併，形成您的設定檔。平台已提供預設的合併政策，不然您也可以在設定檔中建立新的預設合併政策。針對此對象選擇和您的行銷目的相符的合併政策。"
+>title="合併原則"
+>abstract="合併原則可讓您合併不同的資料集，以形成您的設定檔。 Platform已提供預設合併原則，或者您可以在設定檔中建立新的預設合併原則。 為此對象選擇符合您行銷目的的合併原則。"
 
 [!DNL Experience Platform] 可讓您將來自多個來源的資料彙集在一起，並將其合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則即為 [!DNL Platform] 會使用來決定資料的優先順序，以及將合併哪些資料以建立設定檔。
 
@@ -247,13 +247,13 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="區段定義屬性"
->abstract="區段定義屬性部分會顯示產生的區段定義大小的估計值，以顯示合格設定檔數量和設定檔總數的比較。這可讓您在建置對象本身之前根據需要調整您的區段定義。"
+>abstract="區段定義屬性區段會顯示結果區段定義的大小預估值，顯示合格的設定檔數與設定檔總數的比較。 這可讓您在建立受眾本身之前，視需要調整區段定義。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
->title="重新整理預估"
->abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合建議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>title="重新整理預估值"
+>abstract="您可以重新整理區段定義的預估值，以立即預覽有多少設定檔符合建議的區段定義。 使用當天樣本資料的樣本大小會產生對象預估。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽對象"
 
 建立區段定義時， **[!UICONTROL 對象屬性]** 工作區右側的區段會顯示結果區段定義的預估大小，讓您在建立受眾本身之前根據需要調整區段定義。
 
@@ -273,7 +273,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->使用當天樣本資料的樣本大小會產生對象預估。 如果您的設定檔存放區中的實體少於100萬個，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2000萬個以上的實體，則會使用全部實體的5%。
+>使用當天樣本資料的樣本大小會產生對象預估。 如果您的設定檔存放區中有少於100萬個實體，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。
 >
 >此外，此估計值是根據上次執行設定檔範例工作的時間。 這表示如果您使用相對日期函式，例如&quot;Today&quot;或&quot;This week&quot;，估計將會根據最後一個設定檔範例工作執行時間進行計算。 例如，如果今天是1月24日，而最後一個設定檔範例工作是在1月22日執行，則「昨天」相對日期函式將以1月21日為基礎，而不是1月23日。
 >

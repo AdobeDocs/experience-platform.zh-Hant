@@ -1,11 +1,11 @@
 ---
 title: 資料管理授權權益最佳實務
-description: 了解可以更有效管理 Adobe Experience Platform 授權權益的最佳實務及工具。
+description: 瞭解可用來更妥善管理Adobe Experience Platform授權權益的最佳實務和工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2237'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platform是一個開放系統，可將您的資料轉換為健�
 
 Platform提供可建立設定檔數量及可匯入資料量的授權。 因為有引入任何資料來源、數量或歷史記錄的容量，所以可能會隨著資料數量的增加而超過您的授權權利。
 
-本文件會概述可遵循的最佳做法以及可用來將 Adobe Experience Platform 的授權權益管理得更好的工具。
+本檔案會概述要遵循的最佳實務，以及可用來將Adobe Experience Platform的授權權益管理得更好的工具。
 
 ## 瞭解Adobe Experience Platform資料儲存
 
@@ -51,7 +51,7 @@ Experience Platform主要由兩個資料存放庫組成： [!DNL data lake] 和�
 
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。
 
-## 授權使用量儀表板
+## 授權使用情況儀表板
 
 Adobe Experience Platform UI提供控制面板，讓您檢視貴組織適用於Platform的授權相關資料快照。 儀表板中的資料與快照拍攝時的特定時間點顯示的資料完全相同。 快照既不是近似值，也不是資料範例，而且儀表板不會即時更新。
 

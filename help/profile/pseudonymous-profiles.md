@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 假名設定檔資料有效期
 description: 本檔案提供在Adobe Experience Platform中設定假名設定檔資料到期日的一般指引。
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 - 使用者定義的時間內未發生任何活動。 活動由任何正在內嵌的體驗事件或客戶起始的設定檔屬性更新來定義。
    - 例如，新的頁面檢視事件或年齡屬性更新會視為活動。 但是，非使用者起始的對象成員資格更新為 **非** 視為活動。 目前，若要計算資料有效期，設定檔層級的追蹤是根據體驗事件的事件時間和設定檔屬性的擷取時間。
 
-## 存取權 {#access}
+## 存取 {#access}
 
 無法透過Platform UI或API設定假名設定檔資料的有效期。 反之，您必須聯絡支援才能啟用此功能。 聯絡支援時，請包含下列資訊：
 
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 假名設定檔資料到期和體驗事件資料到期是互補功能。
 
-#### 詳細程度
+#### 粒度
 
 假名設定檔資料的有效期適用於 **沙箱** 層級。 因此，資料過期將會影響沙箱中的所有設定檔。
 

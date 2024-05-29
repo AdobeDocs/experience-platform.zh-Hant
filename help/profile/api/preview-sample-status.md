@@ -4,7 +4,7 @@ title: 預覽範例狀態（設定檔預覽） API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分佈，並產生顯示資料集重疊、身分重疊和未拼接設定檔的報告。
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe Experience Platform可讓您從多個來源擷取客戶資料，以便為每個個別客戶建立強大且統一的設定檔。 將資料內嵌至Platform後，會執行範例工作以更新設定檔計數和其他即時客戶設定檔資料相關量度。
 
-此範例工作的結果可以使用檢視 `/previewsamplestatus` 端點，即時客戶個人檔案API的一部分。 此端點也可用來根據資料集和身分名稱空間列出設定檔分佈，以及產生多個報表，以瞭解您組織設定檔存放區的組成。 本指南會逐步說明使用檢視這些量度所需的步驟。 `/previewsamplestatus` api端點。
+此範例工作的結果可以使用檢視 `/previewsamplestatus` 端點，即時客戶個人檔案API的一部分。 此端點也可用來根據資料集和身分名稱空間列出設定檔分佈，以及產生多個報表，以瞭解您組織設定檔存放區的構成。 本指南會逐步說明使用檢視這些量度所需的步驟。 `/previewsamplestatus` api端點。
 
 >[!NOTE]
 >
@@ -100,7 +100,7 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `numRowsToRead` | 範例中合併的設定檔總數。 |
-| `sampleJobRunning` | 傳回的布林值 `true` 當範例工作正在進行時。 提供批次檔案實際新增至設定檔存放區時，從上傳至時發生延遲的透明度。 |
+| `sampleJobRunning` | 傳回的布林值 `true` 當範例工作正在進行時。 將批次檔案實際新增至設定檔存放區時，針對該檔案上傳至時發生的延遲提供透明度。 |
 | `cosmosDocCount` | Cosmos中的檔案總數。 |
 | `totalFragmentCount` | 設定檔存放區中的設定檔片段總數。 |
 | `lastSuccessfulBatchTimestamp` | 上次成功的批次擷取時間戳記。 |
@@ -207,7 +207,7 @@ curl -X GET \
 
 ## 依身分名稱空間列出設定檔分佈
 
-您可以執行GET要求給 `/previewsamplestatus/report/namespace` 端點，用來檢視設定檔存放區中所有合併設定檔的依身分名稱空間劃分。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
+您可以執行GET要求給 `/previewsamplestatus/report/namespace` 端點，用來檢視個人資料存放區中所有合併個人資料的依身分名稱空間劃分。 這包括Adobe提供的標準身分識別，以及貴組織定義的自訂身分識別。
 
 身分識別名稱空間是Adobe Experience Platform Identity Service的重要元件，用途是作為客戶資料相關內容的指標。 若要進一步瞭解，請先閱讀 [身分名稱空間總覽](../../identity-service/features/namespaces.md).
 
@@ -304,7 +304,7 @@ curl -X GET \
 
 ## 產生資料集重疊報告
 
-資料集重疊報表可公開對可定址對象貢獻最大的資料集（合併的設定檔），讓您檢視組織設定檔存放區的組成。 除了提供您資料的深入分析，此報表還可協助您採取動作以最佳化授權使用，例如設定特定資料集的到期時間。
+資料集重疊報表可公開對可定址對象貢獻最大的資料集（合併的設定檔），讓您檢視組織設定檔存放區的構成。 除了提供您資料的深入分析，此報表還可協助您採取動作以最佳化授權使用，例如設定特定資料集的到期時間。
 
 您可以透過向以下執行GET請求來產生資料集重疊報表： `/previewsamplestatus/report/dataset/overlap` 端點。
 
@@ -372,7 +372,7 @@ curl -X GET \
 
 ## 產生身分名稱空間重疊報表 {#identity-overlap-report}
 
-身分名稱空間重疊報表可讓您透過公開對可定址對象貢獻最大的身分名稱空間（合併的設定檔），檢視組織設定檔存放區的組成。 這包括Adobe提供的標準身分名稱空間，以及貴組織定義的自訂身分名稱空間。
+身分名稱空間重疊報表可公開對可定址對象貢獻最大的身分名稱空間（合併的設定檔），讓您檢視組織設定檔存放區的組成。 這包括Adobe提供的標準身分名稱空間，以及貴組織定義的自訂身分名稱空間。
 
 您可以透過向以下人員執行GET請求來產生身分名稱空間重疊報表： `/previewsamplestatus/report/namespace/overlap` 端點。
 

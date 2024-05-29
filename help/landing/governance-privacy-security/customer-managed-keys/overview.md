@@ -2,10 +2,10 @@
 title: Adobe Experience Platform中的客戶自控金鑰
 description: 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 3%
+source-wordcount: '716'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform Data Lake和設定檔存放區中的資料是使用CMK加密。 這些會視為您的主要資料存放區。
+>Adobe Experience Platform Data Lake和設定檔存放區中的資料已使用CMK加密。 這些會視為您的主要資料存放區。
 
 本檔案提供在Platform中啟用客戶自控金鑰(CMK)功能的程式概覽，以及完成這些步驟所需的先決條件資訊。
 
@@ -66,7 +66,7 @@ CMK包含在Healthcare Shield以及Adobe的Privacy and Security Shield產品中�
 
 >[!NOTE]
 >
->非主要（快取/暫時）資料的7天資料集到期有兩個使用案例特定例外。 如需這些功能的詳細資訊，請參閱其各自的檔案。<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=zh-Hant#message-preset-sms)</li><li>[邊緣投影](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>非主要（快取/暫時）資料的7天資料集到期有兩個使用案例特定例外。 如需這些功能的詳細資訊，請參閱其各自的檔案。<ul><li>[Adobe Journey Optimizer URL Shortener](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[邊緣投影](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
 
 ## 後續步驟
 

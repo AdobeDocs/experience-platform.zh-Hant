@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform可讓您從設定檔存放區中刪除資料集或批次，以移除不再需要或錯誤新增的即時客戶設定檔資料。 這需要使用設定檔API來建立設定檔系統作業或刪除請求。
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1327'
 ht-degree: 2%
@@ -305,4 +305,4 @@ curl -X POST \
 
 ## 後續步驟
 
-現在您已經知道從刪除資料集和批次的步驟 [!DNL Profile Store] 範圍 [!DNL Experience Platform]，您可以安全地刪除已錯誤新增或您的組織不再需要的資料。 請注意，刪除請求無法復原，因此您應該僅刪除確信現在不需要且未來不需要的資料。
+現在您已經知道從刪除資料集和批次的步驟 [!DNL Profile store] 範圍 [!DNL Experience Platform]，您可以安全地刪除已錯誤新增或您的組織不再需要的資料。 請注意，刪除請求無法復原，因此您應該僅刪除確信現在不需要且未來不需要的資料。

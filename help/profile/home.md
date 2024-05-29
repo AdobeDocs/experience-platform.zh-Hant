@@ -2,7 +2,7 @@
 title: 即時客戶個人檔案概述
 description: 即時客戶個人檔案會合併來自各種來源的資料，並以個別客戶個人檔案和相關時間序列事件的形式提供對該資料的存取權。 此功能可讓行銷人員跨多個管道，與其對象推動協調、一致且相關的體驗。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -75,7 +75,7 @@ Experience PlatformUI提供了一個儀表板，您可以在其中檢視有關�
 
 每個企業都想要以個人化的方式與客戶溝通。 然而，為客戶提供相關數位體驗的挑戰之一，就是瞭解如何將中斷連線的資料繫結在一起，這通常會分散在平板電腦、行動電話和筆記型電腦等不同數位頻道中。 [!DNL Identity Service] 可讓您連結來自多個頻道的身分，並為每個客戶建立身分圖表，藉此拼接客戶的完整面貌。 造訪 [Identity Service總覽](../identity-service/home.md) 以取得詳細資訊。
 
-### 合併政策
+### 合併原則
 
 將來自多個來源的資料片段彙整在一起並加以合併，以便檢視每個個別客戶的完整檢視時，合併原則是指 [!DNL Platform] 會使用來決定資料的優先順序，以及會使用哪些資料來建立客戶設定檔。
 

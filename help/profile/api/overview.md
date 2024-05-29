@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解；API；統一設定檔；統一設定檔；統一；設定檔；rtcp；啟用設定檔；啟用設定檔
 title: 即時客戶設定檔API指南
-description: 即時客戶設定檔API可讓開發人員探索和使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或錯誤新增的設定檔資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
+description: 即時客戶設定檔API可讓開發人員探索和使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或錯誤新增的設定檔資料。 請依照本指南瞭解如何使用API執行關鍵作業。
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '883'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 [!DNL Real-Time Customer Profile] 資料可匯出至資料集以供進一步處理，例如匯出對象以供啟動或匯出設定檔屬性以供報告。 對象的匯出作業是的一部分 [!DNL Adobe Experience Platform Segmentation Service] API，請閱讀 [分段匯出作業端點指南](../../profile/api/export-jobs.md) 以進一步瞭解。 如需如何建立和管理設定檔屬性之匯出工作的逐步指示，請造訪 [匯出作業端點指南](export-jobs.md).
 
-## 合併政策 {#merge-policies}
+## 合併原則 {#merge-policies}
 
 將來自多個來源的資料彙集在一起時 [!DNL Experience Platform]，合併原則是指 [!DNL Platform] 使用來決定資料的優先順序，以及將合併哪些資料以建立個別客戶設定檔。 使用 [!DNL Real-Time Customer Profile] API後，您可以建立新的合併原則、管理現有原則，並為您的組織設定預設合併原則。 若要使用API處理合併原則，請造訪 [合併原則端點指南](merge-policies.md).
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 ## 預覽樣本狀態([!DNL Profile] 預覽) {#profile-preview}
 
-將資料內嵌至Platform後，會執行範例工作以更新設定檔計數和其他即時客戶設定檔資料相關量度。 此範例工作的結果可以使用檢視 `/previewsamplestatus` 端點，即時客戶個人檔案API的一部分。 此端點也可用來根據資料集和身分名稱空間列出設定檔分佈，以及產生多個報表，以瞭解您組織設定檔存放區的組成。  若要開始使用 `/profilepreviewstatus` 端點，請參閱 [預覽範例狀態端點指南](preview-sample-status.md).
+將資料內嵌至Platform後，會執行範例工作以更新設定檔計數和其他即時客戶設定檔資料相關量度。 此範例工作的結果可以使用檢視 `/previewsamplestatus` 端點，即時客戶個人檔案API的一部分。 此端點也可用來根據資料集和身分名稱空間列出設定檔分佈，以及產生多個報表，以瞭解您組織設定檔存放區的構成。  若要開始使用 `/profilepreviewstatus` 端點，請參閱 [預覽範例狀態端點指南](preview-sample-status.md).
 
 ## 設定檔系統工作 {#profile-system-jobs}
 

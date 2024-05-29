@@ -4,7 +4,7 @@ title: 使用API啟用設定檔更新的資料集
 type: Tutorial
 description: 本教學課程說明如何使用Adobe Experience Platform API來啟用具有「更新插入」功能的資料集，以更新即時客戶設定檔資料。
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
