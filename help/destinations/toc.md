@@ -5,9 +5,9 @@ user-guide-description: 針對跨頻道行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
    * [使用流程服務API啟用檔案型目的地的資料](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [使用流量服務API連線到串流目的地並啟用資料](./api/streaming-destinations.md)
    * [連線至檔案式電子郵件行銷目的地，並使用流量服務API啟用資料](./api/connect-activate-batch-destinations.md)
-   * [（測試版）透過臨機啟動API將受眾啟動至批次目的地](./api/ad-hoc-activation-api.md)
+   * [透過臨機啟動API將對象啟動至批次目的地](./api/ad-hoc-activation-api.md)
    * [編輯目的地](./api/edit-destination.md)
    * [更新目的地資料流](./api/update-destination-dataflows.md)
    * [刪除目的地帳戶](./api/delete-destination-account.md)
