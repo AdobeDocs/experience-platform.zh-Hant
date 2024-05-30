@@ -5,7 +5,7 @@ feature: Customer AI
 title: 使用預測分數建立客戶區段
 description: 預測執行完成時，個人檔案會自動使用預測傾向分數。 使用Customer AI分數擴充設定檔可建立客戶區段，以根據其傾向分數尋找對象。 本節提供使用「區段產生器」建立區段的步驟。
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -22,21 +22,21 @@ ht-degree: 0%
 
 在平台UI中，按一下 **[!UICONTROL 區段]** ，然後按一下 **[!UICONTROL 建立區段]**.
 
-![](../images/user-guide/segments.png)
+![](../images/user-guide/segments_new.png)
 
 此 **區段產生器** 隨即顯示。 從左側 **[!UICONTROL 欄位]** 欄和底下 **[!UICONTROL 屬性]** 索引標籤，按一下名為的資料夾 **[!UICONTROL XDM個別設定檔]** 然後按一下包含您組織名稱空間的資料夾。 資料夾命名為 **[!UICONTROL Customer AI]** 包含預測執行的結果，並以分數所屬的執行個體命名。 按一下執行個體資料夾以存取其所需執行個體的結果。
 
-![](../images/user-guide/results.png)
+![](../images/user-guide/results_new.png)
 
 位於區段產生器的中心，拖放 **[!UICONTROL 分數]** 屬性至 *規則產生器畫布* 以定義規則。
 
 在右手下 *區段屬性* 欄中，提供區段的名稱。
 
-![](../images/user-guide/properties.png)
+![](../images/user-guide/properties_new.png)
 
 在左側上方 *欄位* 欄，按一下 **齒輪** 圖示並選取 *合併原則* 從下拉式清單。 按一下 **[!UICONTROL 儲存]** 以建立區段。
 
-![](../images/user-guide/merge_policy.png)
+![](../images/user-guide/merge_policy_new.png)
 
 ## 後續步驟
 
