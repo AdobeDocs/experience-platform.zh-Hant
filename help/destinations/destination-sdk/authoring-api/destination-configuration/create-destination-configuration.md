@@ -2,7 +2,7 @@
 description: 瞭解如何建構API呼叫，以透過Adobe Experience Platform Destination SDK建立目的地設定。
 title: 建立目的地設定
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 3%
@@ -217,7 +217,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `segmentMappingConfig.mapUserInput` | 布林值 | 控制使用者是否輸入目的地啟用工作流程中的對象對應ID。 |
 | `segmentMappingConfig.mapExperiencePlatformSegmentId` | 布林值 | 控制目的地啟動工作流程中的對象對應ID是否為Experience Platform對象ID。 |
 | `segmentMappingConfig.mapExperiencePlatformSegmentName` | 布林值 | 控制目的地啟動工作流程中的對象對應ID是否為Experience Platform對象名稱。 |
-| `segmentMappingConfig.audienceTemplateId` | 布林值 | 此 `instanceId` 的 [對象中繼資料範本](../../metadata-api/create-audience-template.md) 用於此目的地。 |
+| `segmentMappingConfig.audienceTemplateId` | 字串 | 此 `instanceId` 的 [對象中繼資料範本](../../metadata-api/create-audience-template.md) 用於此目的地。 |
 | `schemaConfig.profileFields` | 陣列 | 當您新增預先定義的 `profileFields` 如上述組態所示，使用者可以選擇將Experience Platform屬性對應至目的地側預先定義的屬性。 |
 | `schemaConfig.profileRequired` | 布林值 | 使用 `true` 使用者是否應該能夠將設定檔屬性從Experience Platform對應至目的地側的自訂屬性，如上方的設定範例所示。 |
 | `schemaConfig.segmentRequired` | 布林值 | 永遠使用 `segmentRequired:true`. |
