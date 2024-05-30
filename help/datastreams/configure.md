@@ -2,10 +2,10 @@
 title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 370ab0b2a575cc2b5d17f3ae2b3b0b6a6999c462
+source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 54%
+source-wordcount: '2753'
+ht-degree: 53%
 
 ---
 
@@ -175,7 +175,7 @@ ht-degree: 54%
 | [!UICONTROL 事件資料集] | **(必要)** 選取要將客戶事件資料串流到的 Platform 資料集。此綱要必須使用 [XDM 體驗事件類別](../xdm/classes/experienceevent.md)。若要新增其他資料集，請選取&#x200B;**[!UICONTROL 新增事件資料集]**。 |
 | [!UICONTROL 設定檔資料集] | 選取要將客戶屬性資料傳送到的 Platform 資料集。此綱要必須使用 [XDM 個人設定檔類別](../xdm/classes/individual-profile.md)。 |
 | [!UICONTROL Offer Decisioning] | 啟用Web SDK實作的Offer decisioning。 請參閱以下指南： [搭配Web SDK使用Offer Decisioning](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) 以取得更多實作詳細資訊。<br><br>如需有關 Offer Decisioning 功能的詳細資訊，請參閱 [Adobe Journey Optimizer 文件](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant)。 |
-| [!UICONTROL 邊緣分段] | 啟用 [邊緣細分](../segmentation/ui/edge-segmentation.md) 用於此資料流。 當 SDK 透過支援邊緣分段的資料流傳送資料時，相關設定檔的任何更新的區段會籍都會在回應中傳回。<br><br>此選項可以和[!UICONTROL 個人化目的地] (用於[下一頁個人化使用案例)](../destinations/ui/activate-edge-personalization-destinations.md) 結合在一起使用。 |
+| [!UICONTROL 邊緣分段] | 啟用 [邊緣細分](../segmentation/ui/edge-segmentation.md) 用於此資料流。 當 [Web SDK](../web-sdk/home.md) 或 [Edge Network伺服器API](../server-api/overview.md) 會透過啟用邊緣細分的資料流傳送資料，相關設定檔的任何更新對象會籍都會在回應中傳回。<br><br>您可以將此選項與 **[!UICONTROL 個人化目的地]** 針對相同頁面和下一頁個人化使用案例，請前往 [邊緣目的地](../destinations/ui/activate-edge-personalization-destinations.md) 或 [!DNL Offer Decisioning]. |
 | [!UICONTROL 個人化目的地] | 啟用[!UICONTROL 邊緣分段]核取方塊後再啟用此功能時，此選項可讓資料流連線至個人化目的地，例如[自訂個人化](../destinations/catalog/personalization/custom-personalization.md)。<br><br>如需有關[設定個人化目的地](../destinations/ui/activate-edge-personalization-destinations.md)的具體步驟，請參閱目的地文件。 |
 | [!UICONTROL Adobe Journey Optimizer] | 啟用 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 用於此資料流。 <br><br>啟用此選項可讓資料流從 [!DNL Adobe Journey Optimizer] 中以 Web 和應用程式為主的傳入行銷活動傳回個人化內容。此選項需要[!UICONTROL 邊緣分段]才能啟用。如果 [!UICONTROL 邊緣細分] 未勾選，則此選項會呈現灰色。 |
 
