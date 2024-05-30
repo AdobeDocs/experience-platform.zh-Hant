@@ -1,7 +1,7 @@
 ---
-title: mediaCollection
+title: streamingMedia
 description: 設定Web SDK以收集與您Web屬性上媒體使用相關的資料。
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: c0cb244221215f78f9ef13d8a54a8799ab15df6c
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 6%
