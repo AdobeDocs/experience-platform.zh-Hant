@@ -2,10 +2,10 @@
 title: Experience Platform中資料收集的許可權管理
 description: 有關如何在Adobe Experience Platform中管理許可權和控制資料收集功能存取的高級概觀。
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 60590a77859320891717244eec58b556935354b5
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 28%
+source-wordcount: '1338'
+ht-degree: 25%
 
 ---
 
@@ -34,8 +34,8 @@ Adobe Experience Platform底下的許可權包括存取資料串流、身分、�
 | 沙箱 | （不適用） | 依據 [沙箱](../sandboxes/home.md) 這些許可權是在您的組織下建立的，您可以透過Admin Console中的此許可權類別控制對每一個的存取。 |
 | 資料模型製作 | 管理結構描述 | 授予檢視、建立和編輯的能力 [體驗資料模型(XDM)結構描述](../xdm/home.md). |
 | 資料模型製作 | 檢視結構描述 | 授予結構描述的唯讀存取權。 |
-| Identity Management | 管理身分識別命名空間 | 授予檢視、建立和編輯的能力 [身分名稱空間](../identity-service/features/namespaces.md). |
-| Identity Management | 檢視身分命名空間 | 授予識別名稱空間的唯讀存取權。 |
+| Identity Management | 管理身分識別名稱空間 | 授予檢視、建立和編輯的能力 [身分名稱空間](../identity-service/features/namespaces.md). |
+| Identity Management | 檢視身分識別名稱空間 | 授予識別名稱空間的唯讀存取權。 |
 | 資料收集 | 管理資料串流 | 授予檢視、建立和編輯的能力 [資料串流](../datastreams/overview.md). |
 | 資料收集 | 檢視資料串流 | 授予資料串流的唯讀存取權。 |
 
@@ -78,7 +78,15 @@ Adobe Experience Platform資料收集下的許可權可控制對標籤和事件�
 
 ### 在Adobe Experience Platform下管理許可權 {#manage-platform}
 
-從 **[!UICONTROL 許可權]** Adobe Experience Platform區域，選取您要編輯的角色。
+>[!NOTE]
+>
+>若要管理角色的許可權，您需要管理員許可權。 如果您沒有管理員許可權，請聯絡您的系統管理員。
+
+Experience Cloud的 **[!UICONTROL 許可權]** 區段可讓您定義使用者角色和原則，以管理產品應用程式內功能和物件的存取權。
+
+到 [!UICONTROL 許可權]，您可以建立和管理角色，並為這些角色指派所需的資源許可權。
+
+![Adobe Experience Cloud反白許可權產品。](./images/permissions/permissions-product.png)
 
 若要存取資料收集功能，您必須啟用 **[!UICONTROL 沙箱]**， **[!UICONTROL 資料模式]**， **[!UICONTROL Identity Management]**、和 **[!UICONTROL 資料彙集]** 類別。
 
