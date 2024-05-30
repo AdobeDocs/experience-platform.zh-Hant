@@ -4,9 +4,9 @@ title: 使用流程服務API將對象啟用至檔案型目的地
 description: 瞭解如何使用流量服務API將包含合格設定檔的檔案匯出至雲端儲存目標。
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
 workflow-type: tm+mt
-source-wordcount: '4404'
+source-wordcount: '4760'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 >
 >如需中沙箱的詳細資訊 [!DNL Experience Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
 
-包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
+包含裝載(`POST`， `PUT`， `PATCH`)需要其他媒體型別標頭：
 
 * Content-Type： `application/json`
 
@@ -4454,7 +4454,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 >[!ENDSHADEBOX]
 
-最後，您需要將資料流PATCH為您剛剛建立的對應集資訊。
+最後，您需要 `PATCH` 具有您剛建立的對應集資訊的資料流。
 
 >[!BEGINSHADEBOX]
 
@@ -4504,11 +4504,88 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ![醒目提示使用者目前步驟的啟用對象步驟](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-若要對資料流進行任何更新，請使用 `PATCH` 操作。例如，您可以更新資料流，以選取欄位作為必要索引鍵或重複資料刪除索引鍵。
+若要對資料流進行任何更新，請使用 `PATCH` 作業。 例如，您可以將行銷動作新增至資料流。 或者，您可以更新資料流，以選取欄位作為強制索引鍵或重複資料刪除索引鍵。
+
+### 新增行銷動作 {#add-marketing-action}
+
+若要新增 [行銷動作](/help/data-governance/api/marketing-actions.md)，請參閱以下的請求和回應範例。
+
+>[!IMPORTANT]
+>
+>此 `If-Match` 進行下列動作時需要頁首： `PATCH` 要求。 此標頭的值是您要更新之資料流的唯一版本。 每次成功更新資料流、目標連線等流程實體時，etag值都會隨之更新。
+>
+> GET若要取得最新版etag值，請對 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 端點，其中 `{ID}` 是您要更新的資料流ID。
+>
+> 請務必將 `If-Match` 標頭使用雙引號，如下例所示， `PATCH` 要求。
+
+>[!BEGINSHADEBOX]
+
+**要求**
+
+>[!TIP]
+>
+>將行銷動作新增至資料流之前，您可以查詢現有的核心和自訂行銷動作。 檢視 [如何擷取現有行銷動作清單](/help/data-governance/api/marketing-actions.md#list).
+
++++將行銷動作新增至目的地資料流 — 請求
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+   {
+      "op":"add",
+      "path":"/policy",
+      "value":{
+         "enforcementRefs":[
+            
+         ]
+      }
+   },
+   {
+      "op":"add",
+      "path":"/policy/enforcementRefs/-",
+      "value":"/dulepolicy/marketingActions/custom/6b935bc8-bb9e-451b-a327-0ffddfb91e66/constraints"
+   }
+]'
+```
+
++++
+
+
+**回應**
+
++++新增行銷動作 — 回應
+
+成功的回應會傳回回應代碼 `200` 以及更新資料流和更新eTag的ID。
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ### 新增必要索引鍵 {#add-mandatory-key}
 
-若要新增 [強制索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)，請參閱以下的請求和回應範例
+若要新增 [強制索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)，請參閱以下的請求和回應範例。
+
+>[!IMPORTANT]
+>
+>此 `If-Match` 進行下列動作時需要頁首： `PATCH` 要求。 此標頭的值是您要更新之資料流的唯一版本。 每次成功更新資料流、目標連線等流程實體時，etag值都會隨之更新。
+>
+> GET若要取得最新版etag值，請對 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 端點，其中 `{ID}` 是您要更新的資料流ID。
+>
+> 請務必將 `If-Match` 標頭使用雙引號，如下例所示， `PATCH` 要求。
 
 >[!BEGINSHADEBOX]
 
@@ -4517,12 +4594,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++將身分新增為強制欄位 — 請求
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4540,12 +4618,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++將XDM屬性新增為強制欄位 — 請求
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4579,6 +4658,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 若要新增 [重複資料刪除索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)，請參閱以下的請求和回應範例
 
+>[!IMPORTANT]
+>
+>此 `If-Match` 進行下列動作時需要頁首： `PATCH` 要求。 此標頭的值是您要更新之資料流的唯一版本。 每次成功更新資料流、目標連線等流程實體時，etag值都會隨之更新。
+>
+> GET若要取得最新版etag值，請對 `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` 端點，其中 `{ID}` 是您要更新的資料流ID。
+>
+> 請務必將 `If-Match` 標頭使用雙引號，如下例所示， `PATCH` 要求。
+
 >[!BEGINSHADEBOX]
 
 **要求**
@@ -4586,12 +4673,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++新增身分識別作為重複資料刪除索引鍵 — 請求
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4612,12 +4700,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++新增XDM屬性作為重複資料刪除索引鍵 — 請求
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
