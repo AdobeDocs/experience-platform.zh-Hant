@@ -4,9 +4,9 @@ description: 瞭解如何將客戶時間戳記訂購新增至資料集，以確�
 badgePrivateBeta: label="私人測試版" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # 客戶時間戳記排序
 
-在Adobe Experience Platform中，透過串流擷取擷取來擷取資料至設定檔存放區時，不會自動保證資料順序。 訂購客戶時間戳記時，您可以保證最新訊息（根據提供的客戶時間戳記）會保留在設定檔存放區中。 所有過時的訊息都會被捨棄，並且 **非** 可用於使用設定檔資料（例如細分和目的地）的下游服務。 因此，這樣可讓您的設定檔資料保持一致，並使您的設定檔資料與來源系統保持同步。
+在Adobe Experience Platform中，透過串流擷取來擷取資料至設定檔存放區時，預設不保證資料順序。 訂購客戶時間戳記時，您可以保證最新訊息（根據提供的客戶時間戳記）會保留在設定檔存放區中。 所有過時的訊息都會被捨棄，並且 **非** 可用於使用設定檔資料（例如細分和目的地）的下游服務。 因此，這樣可讓您的設定檔資料保持一致，並使您的設定檔資料與來源系統保持同步。
 
-若要啟用客戶時間戳記排序，請使用 `extSourceSystemAudit.lastUpdatedDate` 欄位(在 [外部來源系統稽核屬性資料型別](../xdm/data-types/external-source-system-audit-attributes.md) 和聯絡您的Adobe技術客戶經理或Adobe客戶服務，瞭解您的沙箱和資料集資訊。
+若要啟用客戶時間戳記排序，請使用 `extSourceSystemAudit.lastUpdatedDate` 欄位(在 [外部來源系統稽核屬性資料型別](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) 和聯絡您的Adobe技術客戶經理或Adobe客戶服務，瞭解您的沙箱和資料集資訊。
 
 ## 限制
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 - 此 `extSourceSystemAudit.lastUpdatedDate` 欄位 **必須** 位於 [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) 格式。 使用ISO 8601格式時， **必須** 採用格式的完整日期時間 `yyyy-MM-ddTHH:mm:ss.sssZ` (例如， `2028-11-13T15:06:49.001Z`)。
 - 所有擷取的資料列 **必須** 包含 `extSourceSystemAudit.lastUpdatedDate` 欄位做為最上層欄位群組。 這表示此欄位 **必須** 並未巢狀內嵌於XDM結構描述中。 如果此欄位遺失或格式不正確，格式錯誤的記錄將 **非** 內嵌，並傳送相對應的錯誤訊息。
 - 任何已啟用客戶時間戳記排序的資料集 **必須** 是不含任何先前已擷取資料的新資料集。
-- 對於任何給定的設定檔片段，僅限包含較新的列 `extSourceSystemAudit.lastUpdatedDate` 將會內嵌。 如果列不包含較新的專案 `extSourceSystemAudit.lastUpdatedDate`，則會捨棄該列。
+- 對於任何給定的設定檔片段，僅限包含較新的列 `extSourceSystemAudit.lastUpdatedDate` 將會內嵌。 包含 `extSourceSystemAudit.lastUpdatedDate` 將會捨棄已過期或年齡相同的專案。
 
 ## 推薦
 
