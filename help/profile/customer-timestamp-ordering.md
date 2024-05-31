@@ -4,7 +4,7 @@ description: 瞭解如何將客戶時間戳記訂購新增至資料集，以確�
 badgePrivateBeta: label="私人測試版" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
+source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 在Adobe Experience Platform中，透過串流擷取來擷取資料至設定檔存放區時，預設不保證資料順序。 訂購客戶時間戳記時，您可以保證最新訊息（根據提供的客戶時間戳記）會保留在設定檔存放區中。 所有過時的訊息都會被捨棄，並且 **非** 可用於使用設定檔資料（例如細分和目的地）的下游服務。 因此，這樣可讓您的設定檔資料保持一致，並使您的設定檔資料與來源系統保持同步。
 
-若要啟用客戶時間戳記排序，請使用 `extSourceSystemAudit.lastUpdatedDate` 欄位(在 [外部來源系統稽核屬性資料型別](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) 和聯絡您的Adobe技術客戶經理或Adobe客戶服務，瞭解您的沙箱和資料集資訊。
+若要啟用客戶時間戳記排序，請使用 `extSourceSystemAudit.lastUpdatedDate` 欄位(在 [外部來源系統稽核屬性欄位群組](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) 和聯絡您的Adobe技術客戶經理或Adobe客戶服務，瞭解您的沙箱和資料集資訊。
 
 ## 限制
 
