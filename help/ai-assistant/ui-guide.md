@@ -1,0 +1,165 @@
+---
+title: Adobe Experience Platform中的AI助理
+description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-time Customer Data Platform概念，以及有關您物件的使用資訊。
+hide: true
+hidefromtoc: true
+source-git-commit: 723638fcd580c81a84ffe6bf38c197c62fabc1f3
+workflow-type: tm+mt
+source-wordcount: '1223'
+ht-degree: 0%
+
+---
+
+# AI Assistant UI指南
+
+請閱讀本指南，瞭解如何在Adobe Experience Platform UI中使用AI Assistant。
+
+## 在Experience PlatformUI中存取AI助理
+
+若要啟動AI助理，請選取 **[!UICONTROL AI助理圖示]** 從Experience PlatformUI的頂端標題。
+
+![Experience Platform首頁，其中已選取AI助理圖示並開啟AI助理介面。](./images/ai-assistant.png)
+
+AI Assistant介面隨即顯示，立即為您提供開始使用的資訊。 您可以使用下提供的選項 [!UICONTROL 開始使用的概念] 回答下列問題和命令：
+
+* [!UICONTROL 已啟用我的哪些對象？]
+* [!UICONTROL 什麼是結構描述？]
+* [!UICONTROL 告訴我一些Real-Time CDP的常見使用案例]
+
+## AI助理使用者介面指南
+
+>[!NOTE]
+>
+>以下工作流程是使用Experience Event結構描述建立程式的範例，說明如何使用Experience PlatformUI中的AI Assistant。
+
+考慮您正在建立的使用案例 **裝置交易事件結構描述**. 在體驗事件結構描述建立程式期間，您會 `eventType` 欄位。 「此時，您可以選擇退出工作流程並參閱 [結構描述組合的基本面](../xdm/schema/composition.md) 檔案或您可以使用AI助理來擷取問題的答案，並透過AI助理建議的檔案連結尋找其他資源。」
+
+若要開始，請在提供的文字方塊中輸入您的問題。 在以下範例中，AI Assistant會提供以下問題： &quot;**什麼是ExperienceEvent結構描述中的eventType欄位？**&quot;
+
+![用於Experience Platform的AI助理具有下列準備進行查詢的問題：「什麼是ExperienceEvent結構描述中的eventType欄位？](./images/question.png)
+
+AI Assistant接著會查詢其知識庫並計算答案。 幾分鐘後，AI Assistant會傳回答案和相關建議，您可將其用作後續提示。
+
+![有上一個查詢答案的Experience PlatformAI助理。](./images/answer.png)
+
+收到來自AI助理的回應後，您可以從多個選項中進行選取，以決定要如何繼續。
+
+### AI助理功能 {#features}
+
+本節概述您可以在Experience Platform工作流程中使用的AI Assistant各種功能。
+
+### 檢視作業資料物件 {#view-operational-data-objects}
+
+根據您的查詢，AI Assistant會提供與沙箱中資料相關的其他資訊。 若要檢視查詢回應如何套用至您的特定沙箱，請選取 **[!UICONTROL 在您的沙箱中].**
+
+在檢視與您的沙箱相關的資料時，AI Assistant可能會提供顯示您查詢的資料的特定UI頁面的直接連結。
+
++++選取以檢視範例
+
+在此範例中，AI Assistant會傳回有關您沙箱中現有XDM結構描述的其他資訊，包括其總計數和五個最常用的欄位。
+
+![「在您的沙箱中」下拉式視窗會開啟，顯示有關您結構描述的其他資訊。](./images/in-your-sandbox.png)
+
++++
+
+### 檢視引文 {#view-citations}
+
+您可以檢閱每個產品知識答案中可用的引文，來驗證AI助理傳回給您的回應。
+
++++選取此選項可檢視如何顯示來源的範例
+
+若要檢視引文及驗證AI助理的回應，請選取 **[!UICONTROL 顯示來源]**.
+
+![已選取「顯示來源」的AI助理回應。](./images/show-sources.png)
+
+AI Assistant會更新介面，並提供檔案連結給您，以證實初始回應。 此外，當啟用引文時，AI Assistant會更新回應以包含註腳，以指出參照所提供檔案的回應特定部分。
+
+![AI Assistant提供的概念問題引文下拉式功能表。](./images/citations.png)
+
+您也可以使用AI助理在下方提供的建議 **[!UICONTROL 相關建議]** 以進一步探索與您原始問題相關的主題。
+
+![AI助理提供的建議清單。](./images/related-suggestions.png)
+
++++
+
+### 營運分析 {#operational-insights}
+
+您必須處於作用中沙箱中，AI助理才能充分回應有關您營運深入分析的問題。
+
++++選取以檢視操作見解問題的範例
+
+在下列範例中，會詢問AI助理員下列查詢： **「顯示使用Amazon S3來源建立的資料流」**， AI助理接著會以表格回應，該表格會列出您的資料流及其對應的ID。 若要檢視整個資料表格，請選取右上角的展開圖示。
+
+![繼續回答有關營運見解的問題。](./images/usage-data-question.png)
+
+此時會出現表格的展開檢視，讓您根據查詢的引數獲得更完整的資料流清單。
+
+![展開表格的檢視。](./images/table.png)
+
+出現營運見解問題提示時，AI Assistant會提供其如何計算答案的解釋。 在以下範例中，AI Assistant概述其識別使用建立的資料流所應採取的步驟。 [!DNL Amazon S3] 來源。
+
+![繼續回答有關區段定義的問題，說明AI Assistant如何計算答案。](./images/answer-explained.png)
+
+您也可以提供篩選器和修改問題，也可以指示AI助理根據您包含的篩選器來呈現其結果。 例如，您可以要求AI助理按照區段定義的建立日期順序，顯示區段定義計數的趨勢；移除總設定檔為零的區段定義；以及在顯示資料時，使用月份名稱而非整數。
+
++++
+
+### 使用自動完成 {#use-auto-complete}
+
+您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：受眾、結構描述、資料集、來源和目的地。
+
++++選取以檢視自動完成的範例
+
+加入加號(**`+`**)。 您也可以選取加號(**`+`**)，位於文字輸入方塊底部。 隨即顯示一個視窗，其中包含沙箱中建議的資料物件清單。
+
+![自動完成範例](./images/autocomplete.png)
+
++++
+
+### 使用多圈 {#use-multi-turn}
+
+您可以使用AI Assistant的多圈功能，在體驗期間進行更自然的交談。 AI Assistant能夠回答後續的問題。 該上下文可從先前的互動中推斷。
+
++++選取以檢視多圈範例
+
+在以下範例中，會先要求AI助理提供資料流總數，然後要求列出10個最近的資料流。
+
+![多圈範例](./images/multi-turn.png)
+
++++
+
+## 提供意見反應 {#feedback}
+
+您可以使用回答中提供的選項，針對AI助理的體驗提供意見回饋。
+
+若要提供意見回饋，請在收到AI助理的回應後，選取向上拇指、向下拇指或標幟，然後在提供的文字方塊中輸入您的意見回饋。
+
+![AI助理中的意見回饋選項。](./images/provide-feedback.png)
+
+若要重設，請選取省略符號(**`...`**)，然後選取 **[!UICONTROL 開始新交談]**. 這會通知AI助理您打算變更主題，並在疑難排解失敗或參考錯誤資訊的查詢時特別有用。
+
++++選取以檢視更多範例
+
+>[!BEGINTABS]
+
+>[!TAB 豎起大拇指]
+
+選取向上拇指圖示，提供您對於AI助理的良好體驗的反饋。
+
+![正面意見回饋視窗。](./images/thumbs-up.png)
+
+>[!TAB 向下拇指]
+
+選取向下縮圖圖示，即可根據您使用AI助理的經驗，提供哪些可改善的意見回饋。 在此步驟中，您也可以提供關於體驗的特定註解。 評論中提供的意見回饋會每天稽核。
+
+![負面意見回饋視窗。](./images/thumbs-down.png)
+
+>[!TAB 標幟]
+
+選取標幟圖示以提供關於您使用AI助理體驗的進一步報告。
+
+![報表結果視窗。](./images/flag.png)
+
+>[!ENDTABS]
+
++++
