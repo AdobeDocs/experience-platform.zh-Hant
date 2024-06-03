@@ -3,11 +3,11 @@ keywords: Experience Platform；首頁；熱門主題；UI；UI；XDM；XDM系�
 solution: Experience Platform
 title: 使用結構編輯器建立結構
 type: Tutorial
-description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
+description: 本教學課程涵蓋以Experience Platform結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
 workflow-type: tm+mt
-source-wordcount: '4695'
+source-wordcount: '4813'
 ht-degree: 0%
 
 ---
@@ -353,11 +353,36 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 
 ## 更多動作 {#more}
 
-在結構編輯器中，您還可以執行快速動作以複製結構描述的JSON結構，或刪除結構（如果尚未為即時客戶個人檔案啟用或具有關聯的資料集）。 選取 [!UICONTROL 更多] 在檢視頂端，顯示包含快速動作的下拉式清單。
-
-複製JSON結構功能可讓您檢視當您仍在建置結構描述和資料管道時，範例裝載的外觀。 在架構中有複雜的物件對應結構（例如身分對應）的情況下，此功能特別實用。
+在架構編輯器中，您還可以執行快速動作以複製架構的JSON結構或刪除架構。 選取 [!UICONTROL 更多] 在檢視頂端，顯示包含快速動作的下拉式清單。
 
 ![結構描述編輯器，其反白顯示更多按鈕，並顯示下拉式選項。](../images/tutorials/create-schema/more-actions.png)
+
+### 刪除結構描述 {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="無法刪除結構描述"
+>abstract="無法刪除此結構描述，因為它已為設定檔啟用，並且具有關聯的資料集。"
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="無法刪除結構描述"
+>abstract="無法刪除此結構描述，因為它已為設定檔啟用。"
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="無法刪除結構描述"
+>abstract="無法刪除此結構描述，因為它有關聯的資料集。"
+
+可以使用在UI中從結構編輯器刪除結構描述 [!UICONTROL 更多] 動作，以及結構描述詳細資訊 [!UICONTROL 瀏覽] 標籤。 在某些情況下，無法刪除結構描述。 如果符合下列條件，則無法刪除結構描述：
+
+* 此結構描述已針對設定檔啟用。
+* 此結構描述已啟用設定檔功能，且具有關聯的資料集。
+* 此結構描述有關聯的資料集，但未針對設定檔啟用。
+
+### 複製 JSON 結構 {#copy-json-structure}
+
+選取 **[!UICONTROL 複製JSON結構]** ，以為Schema Library中的任何結構描述產生匯出裝載。 此動作會將JSON結構複製到剪貼簿。 接著，您就可以使用匯出的JSON將結構描述及任何相關資源匯入不同的沙箱或組織。 如此一來，在不同環境之間共用和重複使用結構會變得簡單而有效。
 
 ## 後續步驟和其他資源
 

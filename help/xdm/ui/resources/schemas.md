@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '3732'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-# 在 UI 中建立和編輯綱要
+# 在 UI 中建立和編輯綱要 {#create-edit-schemas-in-ui}
 
 本指南概述如何在Adobe Experience Platform UI中建立、編輯及管理貴組織的Experience Data Model (XDM)方案。
 
@@ -233,7 +233,7 @@ ht-degree: 2%
 
 新欄位會新增到畫布中，並在 [租使用者ID](../../api/getting-started.md#know-your-tenant_id) 以避免與標準XDM欄位衝突。 與新欄位相關聯的欄位群組也會顯示在下方 **[!UICONTROL 欄位群組]** 在左側邊欄中。
 
-![租用戶 ID](../../images/ui/resources/schemas/tenantId.png)
+![租使用者ID](../../images/ui/resources/schemas/tenantId.png)
 
 >[!NOTE]
 >
@@ -281,12 +281,12 @@ ht-degree: 2%
 
 ![新增至標準物件的欄位](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## 啟用即時客戶設定檔的方案 {#profile}
+## 為即時客戶個人檔案啟用結構 {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="啟用設定檔的方案"
->abstract="為設定檔啟用方案時，從此方案建立的任何資料集都會參與即時客戶設定檔，該設定檔會合併來自不同來源的資料以建構每個客戶的完整視圖。一旦將方案用於擷取資料至設定檔中，即無法停用。如需詳細資訊，請查看文件。"
+>title="為設定檔啟用結構描述"
+>abstract="為設定檔啟用結構描述時，從此結構描述建立的任何資料集都會參與即時客戶設定檔，其會合併來自不同來源的資料，以建構每個客戶的完整檢視。 一旦使用結構描述將資料擷取到設定檔中，就無法停用它。 如需詳細資訊，請參閱檔案。"
 
 [即時客戶個人檔案](../../../profile/home.md) 合併來自不同來源的資料，以建構每個個別客戶的完整檢視。 如果您希望結構描述擷取的資料參與此程式，您必須啟用結構描述以供使用 [!DNL Profile].
 

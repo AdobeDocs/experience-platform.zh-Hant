@@ -2,7 +2,7 @@
 title: Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組
 description: 瞭解Adobe Analytics ExperienceEvent完整擴充功能結構欄位群組。
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 5%
@@ -72,12 +72,12 @@ ht-degree: 5%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `browserIDStr` | 字串 | 用於瀏覽器的Adobe Analytics識別碼(又稱為 [瀏覽器型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=zh-Hant))。 |
-| `operatingSystemIDStr` | 字串 | 適用於所使用作業系統的Adobe Analytics識別碼(又稱為 [作業系統型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=zh-Hant))。 |
+| `browserIDStr` | 字串 | 用於瀏覽器的Adobe Analytics識別碼(又稱為 [瀏覽器型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html))。 |
+| `operatingSystemIDStr` | 字串 | 適用於所使用作業系統的Adobe Analytics識別碼(又稱為 [作業系統型別維度](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html))。 |
 
 ## 自訂事件欄位 {#events}
 
-Analytics擴充功能欄位群組提供10個物件欄位，最多可擷取100個 [自訂事件量度](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=zh-Hant) 每個欄位群組，共1000個。
+Analytics擴充功能欄位群組提供10個物件欄位，最多可擷取100個 [自訂事件量度](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html) 每個欄位群組，共1000個。
 
 每個頂層事件物件包含其各自範圍的個別事件物件。 例如， `event101to200` 包含作為輸入資料的事件 `event101` 至 `event200`.
 
