@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
+source-git-commit: e96477882beceb6e370d53df3cc65e8dfb28745f
 workflow-type: tm+mt
-source-wordcount: '2096'
-ht-degree: 31%
+source-wordcount: '2158'
+ht-degree: 30%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 31%
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](/help/web-sdk/release-notes.md).
+
+## 2.23.2版 — 2024年6月3日
+
+**修正和改良**
+
+* 修正定義設定覆寫時，修改擴充功能設定時發生的錯誤。
+* 允許設定媒體收集Ping間隔的空白值。
+* 修正修改更新變數動作時發生的錯誤。
+* 允許重設設定覆寫中的ID同步容器。
+
+包含2.20.0版的Adobe Experience Platform Web SDK。
 
 ## 2.23.1版 — 2024年5月28日
 
