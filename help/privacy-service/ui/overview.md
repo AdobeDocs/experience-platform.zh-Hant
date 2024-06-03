@@ -7,16 +7,16 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 18%
+ht-degree: 0%
 
 ---
 
-# [!DNL Privacy Service] UI 概觀 {#privacy-ui-guide}
+# [!DNL Privacy Service] UI總覽 {#privacy-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
->title="資料主體要求"
->abstract="此介面工具會顯示 Privacy Service 在特定日期處理的已提交和已完成資料主體要求的數量。如需有關您的 Privacy Service 流程的詳細資訊，請在左側導覽中選取&#x200B;**要求**。"
+>title="資料主體請求"
+>abstract="此Widget顯示Privacy Service在指定日期內處理的已提交與已完成資料主體要求數目。 如需有關Privacy Service流程的詳細資訊，請選取 **請求** ，位於左側導覽器中。"
 
 Privacy Service UI可讓您協調各種Adobe Experience Cloud應用程式的隱私權和合規性請求。
 

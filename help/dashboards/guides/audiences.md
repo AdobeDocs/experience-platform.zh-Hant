@@ -7,7 +7,7 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
 source-wordcount: '3132'
-ht-degree: 9%
+ht-degree: 0%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 在Widget資料庫中，您可以瀏覽標準與自訂對象Widget的選取專案。 如需如何新增Widget的相關資訊，請參閱如何新增Widget的程式庫檔案 [新增Widget](../customize/widget-library.md#add-widgets).
 
-### 檢視SQL {#view-sql}
+### 檢視 SQL {#view-sql}
 
 您可以透過開啟「 」按鈕來檢視產生在控制面板上視覺化分析的SQL。 [!UICONTROL 概觀] 工作區。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要進一步瞭解此功能，請參閱 [檢視SQL UI指南](../view-sql.md).
 
@@ -81,10 +81,10 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 Adobe Experience Platform的所有新執行個體都會提供預設Widget載出，以強調資料中最新可用的深入分析。 下列Widget從一開始便已在您的區段檢視中預先設定。 有關Widget用途和功能的完整詳細資訊，請參閱其各自章節。
 
-* [[!UICONTROL 對象規模]](#audience-size)
+* [[!UICONTROL 對象人數]](#audience-size)
 * [[!UICONTROL 對象人數變化趨勢]](#audience-size-change-trend)
-* [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
-* [[!UICONTROL 依身分識別劃分的設定檔]](#profiles-by-identity)
+* [[!UICONTROL 身分重疊]](#identity-overlap)
+* [[!UICONTROL 依身分割槽分的設定檔]](#profiles-by-identity)
 
 >[!NOTE]
 >
@@ -93,17 +93,17 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 
 ## Customer AI Widget {#customer-ai-audiences-widgets}
 
-Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 Customer AI通過分析現有的消費者體驗事件資料來預測這一點 **流失或轉換傾向分數**. 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 此 [分數的分佈](#customer-ai-distribution-of-scores) 和 [評分摘要](#customer-ai-scoring-summary) 深入分析會示範您對象中的劃分。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
+Customer AI可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 Customer AI通過分析現有的消費者體驗事件資料來預測這一點 **流失或轉換傾向分數**. 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 此 [分數的分佈](#customer-ai-distribution-of-scores) 和 [評分摘要](#customer-ai-scoring-summary) 深入分析會示範您對象中的劃分。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
 
-* [[!UICONTROL Customer AI 評分摘要]](#customer-ai-scoring-summary)
-* [[!UICONTROL Customer AI 分數的分佈]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Customer AI評分摘要]](#customer-ai-scoring-summary)
+* [[!UICONTROL 分數的Customer AI分佈]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL Customer AI 分數的分佈] {#customer-ai-distribution-of-scores}
+### [!UICONTROL 分數的Customer AI分佈] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_distributionOfScores"
->title="分數分佈"
->abstract="此介面工具會依傾向分數 (以 5% 的增量) 將設定檔總數的分佈視覺化。設定檔計數的分佈由 AI 模型和所選合併原則決定。您可以從介面工具標題下的下拉選單中變更 AI 模型。"
+>title="分數的分佈"
+>abstract="此Widget會依個人檔案總數的傾向分數，以5%的增量將其分佈視覺化。 設定檔計數的分佈由AI模型和所選的合併原則決定。 您可以從Widget標題下方的下拉式選單中變更AI模型。"
 
 此 [!UICONTROL 分數的Customer AI分佈] Widget會依傾向分數分類設定檔總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
 
@@ -127,12 +127,12 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 
 有關Customer AI的更多資訊可在以下網址找到： [探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Customer AI 評分摘要] {#customer-ai-scoring-summary}
+### [!UICONTROL Customer AI評分摘要] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_scoringSummary"
->title="分數摘要"
->abstract="此介面工具會顯示已評分設定檔的總數，並將其分類到包含高、中、低傾向的貯體。圓環圖說明了高、中、低傾向設定檔總數的比例組成。"
+>title="評分摘要"
+>abstract="此Widget顯示已評分設定檔的總數，並將其分類為包含高、中和低傾向性的貯體。 環形圖可說明高、中及低傾向性中總設定檔的成比例。"
 
 此Widget顯示已評分的個人檔案總數，並將其分類為分別包含高、中及低傾向的綠色、黃色及紅色貯體。 環形圖用於說明高、中和低傾向性之間總設定檔的成比例，分別表示為綠色、黃色和紅色。 設定檔符合75歲以上的高傾向、25到74歲之間的中傾向，以及24歲以下的低傾向。 圖例會指出色彩代碼和傾向性臨界值。 當游標暫留在環圈圖的個別區段上時，高、中和低傾向性的設定檔計數會顯示在對話方塊中。
 
@@ -156,23 +156,23 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
-* [[!UICONTROL 對象規模]](#audience-size)
+* [[!UICONTROL 對象人數]](#audience-size)
 * [[!UICONTROL 對象啟用順序]](#audience-activation-order)
-* [[!UICONTROL 對象規模趨勢]](#audience-size-trend)
+* [[!UICONTROL 對象人數趨勢]](#audience-size-trend)
 * [[!UICONTROL 對象人數變化趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 依身分割槽分的對象人數趨勢]](#audience-size-trend-by-identity)
 * [[!UICONTROL 對象重疊]](#audience-overlap)
 * [[!UICONTROL 對象重疊報表]](#audience-overlap-report)
-* [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
-* [[!UICONTROL 依身分識別劃分的設定檔]](#profiles-by-identity)
+* [[!UICONTROL 身分重疊]](#identity-overlap)
+* [[!UICONTROL 依身分割槽分的設定檔]](#profiles-by-identity)
 * [[!UICONTROL 排定的啟用]](#scheduled-activations)
 
-### [!UICONTROL 對象規模] {#audience-size}
+### [!UICONTROL 對象人數] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="對象規模"
->abstract="此介面工具會顯示選取對象內合併設定檔的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
+>title="對象人數"
+>abstract="此Widget會顯示所選對象中合併的設定檔總數。 此數字取決於套用至您資料的合併原則，且在最新快照時是正確的。"
 
 此 **[!UICONTROL 對象人數]** widget會顯示擷取快照時所選對象中的合併設定檔總數。 此數字是將對象合併原則套用至您的設定檔資料，以將設定檔片段合併在一起，並為對象中的每個人形成單一設定檔的結果。
 
@@ -180,12 +180,12 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 ![此 [!UICONTROL 受眾] 控制面板概述 [!UICONTROL 對象人數] 醒目提示Widget。](../images/audiences/audience-size.png)
 
-### [!UICONTROL 對象規模趨勢] {#audience-size-trend}
+### [!UICONTROL 對象人數趨勢] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="對象規模趨勢"
->abstract="此介面工具會提供有關符合&#x200B;**任何**&#x200B;區段定義標準的設定檔總數的資訊，這會在過去 30 天、90 天或 12 個月每日快照期間擷取。"
+>title="對象人數趨勢"
+>abstract="此Widget針對符合條件的設定檔總數提供相關資訊 **任何** 過去30天、90天或12個月的區段定義，在每日快照期間擷取。"
 
 此 **[!UICONTROL 對象人數趨勢]** Widget提供符合資格的設定檔總數的線圖插圖 **任何** 一段指定時間內的對象。 對象人數趨勢可在30天、90天和12個月的期間內以視覺化方式呈現。 期間是從Widget的下拉式功能表中選擇。 對象人數會反映在y軸，而時間則反映在x軸。
 
@@ -253,12 +253,12 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 選取 **[!UICONTROL 關閉]** 以返回 [!UICONTROL 受眾] 儀表板。
 
-### [!UICONTROL 身分識別覆蓋] {#identity-overlap}
+### [!UICONTROL 身分重疊] {#identity-overlap}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
->title="身分識別覆蓋"
->abstract="此介面工具會顯示包含兩個所選身分識別的對象中設定檔的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的設定檔的數量由圓圈之間的覆蓋表示。"
+>title="身分重疊"
+>abstract="此Widget會顯示您的對象中同時包含兩個所選身分的設定檔重疊。 圓圈會顯示每個身分的相對大小。 包含兩個名稱空間的設定檔數目會以圓圈之間的重疊來表示。"
 
 此 **[!UICONTROL 身分重疊]** Widget會顯示文氏圖表或集合圖表，顯示您的對象中包含多個身分的設定檔重疊情形。
 
@@ -270,12 +270,12 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 ![此 [!UICONTROL 受眾] 醒目提示身分重疊Widget的儀表板總覽。](../images/audiences/identity-overlap.png)
 
-### [!UICONTROL 依身分識別劃分的設定檔] {#profiles-by-identity}
+### [!UICONTROL 依身分割槽分的設定檔] {#profiles-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
->title="依身分識別劃分的設定檔"
->abstract="此介面工具會顯示選取對象中每個合併設定檔身分識別的劃分。"
+>title="依身分區分的輪廓"
+>abstract="此Widget會顯示您所選對象中每個合併設定檔的身分劃分。"
 
 此 **[!UICONTROL 依身分割槽分的設定檔]** widget會顯示您所選對象中每個合併設定檔的身分劃分。 依身分割槽分的設定檔總數可能會高於對象中的設定檔總數，因為一個設定檔可能會有多個相關聯的身分。 換言之，將每個身分顯示的值加總在一起，可能會超過總對象人數。 這是因為如果客戶透過多個管道與您的品牌互動，則多個身分可能會與該個別客戶相關聯。
 

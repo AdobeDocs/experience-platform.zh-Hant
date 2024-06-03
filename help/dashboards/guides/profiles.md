@@ -87,7 +87,7 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 預先設定的設定檔詳細資訊Widget如下：
 
-#### 客戶設定檔 {#customer-profile}
+#### 客戶輪廓 {#customer-profile}
 
 此 [!UICONTROL 客戶設定檔] Widget會顯示與設定檔相關聯之使用者的名字和姓氏，以及其 [!UICONTROL 設定檔ID]. 設定檔ID是與身分型別相關聯的自動產生識別碼，代表設定檔。 若要深入瞭解身分識別與身分識別名稱空間，請參閱 [身分概述](../../rtcdp/profile/identities-overview.md).
 
@@ -280,7 +280,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilecount"
->title="設定檔計數"
+>title="輪廓計數"
 >abstract="此Widget會顯示拍攝快照時，設定檔存放區中合併的設定檔總數。 數目取決於套用至您的設定檔資料的所選合併原則。"
 
 此 **[!UICONTROL 設定檔計數]** widget會顯示拍攝快照時設定檔存放區中合併的設定檔總數。 此數字是已將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
@@ -305,7 +305,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
->title="設定檔計數變更"
+>title="輪廓計數變更"
 >abstract="此Widget會顯示合併的設定檔總數 **已新增** 到上次快照時的設定檔存放區。 數目取決於套用至您的設定檔資料的所選合併原則。"
 
 此 **[!UICONTROL 設定檔計數變更]** widget會顯示自上次快照集以來，新增至設定檔存放區的合併設定檔數目。 此數字是已將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。 您可以使用下拉式選擇器來檢視過去30天、90天或12個月內新增的設定檔數。
@@ -320,7 +320,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesaddedtrend"
->title="設定檔計數變更趨勢"
+>title="輪廓計數變更趨勢"
 >abstract="此Widget顯示過去30天、90天或12個月每日新增至設定檔存放區的合併設定檔數。 數目也取決於套用至設定檔資料的所選合併原則。"
 
 此 **[!UICONTROL 設定檔計數變更趨勢]** widget會顯示過去30天、90天或12個月每日新增至設定檔存放區的合併設定檔總數。 此數字會每天在擷取快照時更新，因此如果您要將設定檔擷取到Platform，則要等到下次擷取快照時才會反映設定檔的數量。 新增的設定檔計數是選定的合併原則套用至設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
@@ -349,7 +349,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilesbyidentity"
->title="依身分區分的設定檔"
+>title="依身分區分的輪廓"
 >abstract="此Widget會依身分顯示個人資料存放區中所有合併個人資料的劃分。"
 
 此 **[!UICONTROL 依身分割槽分的設定檔]** widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 依身分割槽分的設定檔總數（也就是將每個名稱空間顯示的值相加）可能會高於合併的設定檔總數，因為一個設定檔可能會有多個相關聯的名稱空間。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。
@@ -387,7 +387,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_singleidentityprofiles"
->title="單一身分設定檔"
+>title="單一身分輪廓"
 >abstract="此Widget會提供貴組織只有一種ID型別之設定檔的計數，以建立其身分識別。 此ID型別可以是電子郵件或ECID。"
 
 此 [!UICONTROL 單一身分設定檔] Widget會提供貴組織只有一種型別ID型別的設定檔計數，以建立其身分。 此ID型別可以是電子郵件或ECID。 設定檔計數是從最近快照中所包含的資料產生。
@@ -406,7 +406,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
->title="未分段的設定檔"
+>title="未分段的輪廓"
 >abstract="此Widget提供未附加至任何對象的所有設定檔總數，代表您組織內啟用設定檔的機會。"
 
 此 [!UICONTROL 未分段的設定檔] widget提供未附加至任何對象的所有設定檔總數。 產生的數字在最後一個快照集之前是準確的，代表您組織內設定檔啟用的機會。 它還表示有機會刪除未提供足夠ROI的個人檔案。
