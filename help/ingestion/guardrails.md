@@ -3,14 +3,18 @@ keywords: Experience Platform；疑難排解；護欄；指南；
 title: 資料擷取的護欄
 description: 瞭解Adobe Experience Platform中資料擷取的護欄。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 1%
+source-wordcount: '646'
+ht-degree: 0%
 
 ---
 
 # 資料擷取的護欄
+
+>[!IMPORTANT]
+>
+>批次和串流擷取的護欄會在組織層級進行計算，而不是沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需有關授權使用權益的詳細資訊，請參閱 [資料管理最佳實務指南](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 護欄是臨界值，可為Adobe Experience Platform中的資料和系統使用、效能最佳化，以及避免錯誤或意外結果提供指引。 護欄可指您與授權權益相關的資料使用或消費與處理。
 
@@ -20,7 +24,7 @@ ht-degree: 1%
 
 下表概述使用時需考慮的護欄 [批次擷取API](./batch-ingestion/overview.md) 或來源：
 
-| 擷取型別 | 準則 | 附註 |
+| 擷取型別 | 准則 | 附註 |
 | --- | --- | --- |
 | 使用批次擷取API擷取資料湖 | <ul><li>您可以使用批次擷取API，每小時可擷取最多20 GB的資料至Data Lake。</li><li>每個批次的最大檔案數為1500。</li><li>最大批次大小為100 GB。</li><li>每列的屬性或欄位數上限為10000。</li><li>每分鐘每個使用者的批次數量上限為138。</li></ul> | |
 | 使用批次來源擷取資料湖 | <ul><li>您可以使用批次擷取來源（例如），每小時將高達200 GB的資料擷取至資料湖 [!DNL Azure Blob]， [!DNL Amazon S3]、和 [!DNL SFTP].</li><li>批次大小應介於256 MB和100 GB之間。 這同時適用於未壓縮和壓縮的資料。 若在資料湖中解壓縮壓縮壓縮的資料，將套用這些限制。</li><li>每個批次的最大檔案數為1500。</li><li>檔案或資料夾的最小大小為1個位元組。 您無法擷取0位元組大小的檔案或資料夾。</li></ul> | 閱讀 [來源概觀](../sources/home.md) 如需可用於資料內嵌的來源目錄。 |
@@ -35,7 +39,7 @@ ht-degree: 1%
 
 下表概述使用串流來源時應考慮的護欄：
 
-| 擷取型別 | 準則 | 附註 |
+| 擷取型別 | 准則 | 附註 |
 | --- | --- | --- |
 | 串流來源 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>擷取至資料湖時，串流來源支援每秒有4000到5000個請求。 除了現有的來源連線外，這同時適用於新建立的來源連線。 **注意**：串流資料可能需要30分鐘的時間才能完全處理至Data Lake。</li><li>串流來源在將資料擷取至設定檔或串流細分時，支援每秒最多1500個請求。</li></ul> | 串流來源，例如 [!DNL Kafka]， [!DNL Azure Event Hubs]、和 [!DNL Amazon Kinesis] 請勿使用 [!DNL Data Collection Core Service] (DCCS)路由，而且可以有不同的輸送量限制。 請參閱 [來源概觀](../sources/home.md) 如需可用於資料內嵌的來源目錄。 |
 

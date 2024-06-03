@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 串流擷取概觀
 description: Adobe Experience Platform的串流擷取為使用者提供從使用者端和伺服器端裝置傳送資料以即時Experience Platform的方法。
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '424'
 ht-degree: 1%
 
 ---
 
-# 串流擷取概觀
+# 串流擷取總覽
 
 Adobe Experience Platform的串流擷取為使用者提供一種從使用者端和伺服器端裝置傳送資料至的方法 [!DNL Experience Platform] 即時。
 
@@ -35,7 +35,11 @@ Adobe Experience Platform可讓您透過產生 [!DNL Real-Time Customer Profile]
 
 如需啟用資料集的詳細資訊，請參閱 [!DNL Profile] 和 [!DNL Identity Service]，請閱讀 [設定資料集指南](../../profile/tutorials/dataset-configuration.md).
 
-## 串流擷取的預期延遲為何？ [!DNL Platform]？
+## 在Experience Platform上串流擷取的預期延遲為何？
+
+>[!IMPORTANT]
+>
+>串流擷取的護欄會在組織層級進行計算，而非沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需有關授權使用權益的詳細資訊，請參閱 [資料管理最佳實務指南](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
