@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
+source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2101'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,13 @@ ht-degree: 1%
 >abstract="授權使用情況儀表板可讓您深入分析已購買的Adobe Experience Platform產品。 儀表板概覽會顯示您產品的主要量度，包括每個主要量度的使用情況和您簽約的授權金額。 詳細資訊工作區會顯示特定沙箱中每個產品的量度劃分。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="資料集有效期"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="假名設定檔資料有效期"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_reduction"
+>title="如何減少使用量"
+>abstract="若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="假名設定檔資料到期影片"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="假名設定檔資料到期檔案"
 
 您可以透過Adobe Experience Platform檢視貴組織授權使用情況的重要資訊 [!UICONTROL 授權使用情況] 儀表板。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
