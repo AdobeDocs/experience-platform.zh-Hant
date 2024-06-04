@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM系統概覽
 description: 標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)由Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
-source-wordcount: '2117'
-ht-degree: 4%
+source-wordcount: '2101'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ XDM是基礎架構，可讓Adobe Experience Cloud在Experience Platform的支援
 
 ## XDM結構描述 {#xdm-schemas}
 
-Experience Platform 會使用結構，以一致且可重複使用的方式說明資料結構。藉由定義跨系統的一致資料，將更容易保留意義，進而從資料中獲得價值。
+Experience Platform使用結構描述，以一致且可重複使用的方式說明資料結構。 藉由定義跨系統的一致資料，將更容易保留意義，進而從資料中獲得價值。
 
 在將資料擷取到Platform之前，必須組成結構描述資料的結構並對可包含在每個欄位中的資料型別提供限制。 結構描述包含一個基底類別和零個或多個結構描述欄位群組。
 
@@ -48,12 +48,12 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 * [XDM UI指南](./ui/overview.md)
 * [結構描述登入API指南](./api/overview.md)
 
-## XDM 系統中的資料行為 {#data-behaviors}
+## XDM系統中的資料行為 {#data-behaviors}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="資料行為"
->abstract="用於 Experience Platform 的資料分為三種行為類型：記錄、時間序列和臨時。記錄方案會提供有關主體屬性的資訊，而時間序列方案則會在採取動作時擷取系統的快照。臨時方案會擷取僅供單一資料集使用的命名空間欄位。如需有關 Platform 中資料行為的詳細資訊，請查看此文件。"
+>abstract="打算用於Experience Platform的資料分為三種行為型別：記錄、時間序列和臨機。 記錄結構描述提供有關主體屬性的資訊，而時間序列結構描述會在執行動作時擷取系統的快照。 臨時結構描述會擷取名稱空間僅供單一資料集使用的欄位。 請參閱檔案以取得有關Platform資料行為的詳細資訊。"
 
 打算用於Experience Platform的資料分為三種行為型別：
 
@@ -118,10 +118,6 @@ Experience Platform與結構無關，這表示任何符合XDM標準的結構均�
 即時客戶設定檔提供集中式消費者設定檔，用於針對性和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，並包含涉及設定檔主旨之事件的可行時間戳記帳戶。 這些事件可能發生在您與Experience Platform搭配使用的任何系統中。
 
 即時客戶設定檔會根據 [!UICONTROL XDM個別設定檔] 和 [!UICONTROL XDM ExperienceEvent] 類別，以及根據該資料回應查詢。
-
->[!NOTE]
->
->即時客戶個人檔案可以 **非** 根據類別以外的支援結構描述 [!UICONTROL XDM ExperienceEvent] 類別。
 
 系統會維護每個客戶設定檔的一個例項，將資料合併在一起，形成個人的「單一信任來源」。 此統一資料使用所謂的「聯合結構描述」（有時稱為「聯合檢視」）來表示。 聯合結構描述會將實施相同類別的所有結構描述的欄位彙總到單一結構描述中。 使用UI或API構成結構描述時，您可以啟用結構描述以與即時客戶個人檔案搭配使用，並標籤它以包含在聯合中。 然後，標籤的結構描述將參與要提供給設定檔的結構描述定義。
 
