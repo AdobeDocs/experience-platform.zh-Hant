@@ -6,21 +6,25 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c425d1016bed80113b879a683114861d839b79eb
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 1%
+source-wordcount: '1685'
+ht-degree: 2%
 
 ---
 
 # 資料啟用的護欄
+
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
 
 此頁面提供啟動行為的預設使用量和速率限制。 檢閱下列護欄時，系統假設您已正確設定 [已連線至目的地](/help/destinations/ui/connect-destination.md).
 
 >[!NOTE]
 >
 >* 大多數客戶不會超過這些預設限制。 如果您想瞭解自訂限制，請聯絡客戶服務代表。
->* 本檔案中所概述的限制會持續改善。 請定期回訪以取得更新內容。
+>* 本檔案中所概述的限制會持續改善。 請定期回訪以取得更新消息。
 >* 根據個別下游限制，某些目的地的護欄可能會比此頁面上記錄的護欄更嚴格。 也請務必檢查 [目錄](/help/destinations/catalog/overview.md) 您連線並啟用資料的目標頁面。
 
 ## 護欄型別 {#limit-types}

@@ -3,16 +3,20 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 0%
+source-wordcount: '1549'
+ht-degree: 1%
 
 ---
 
 # 護欄 [!DNL Identity Service] 資料
 
 本檔案提供以下專案的使用與速率限制相關資訊： [!DNL Identity Service] 資料可協助您最佳化身分圖表的使用方式。 檢閱下列護欄時，系統假設您已正確地模型化資料。 如果您有任何關於如何模型化資料的問題，請聯絡您的客戶服務代表。
+
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
 
 ## 快速入門
 
@@ -63,7 +67,7 @@ ht-degree: 0%
 刪除優先順序如下：
 
 1. Cookie ID
-2. 裝置ID
+2. 裝置 ID
 3. 跨裝置ID、電子郵件和電話
 
 ### 刪除規則#2根據儲存在身分上的時間戳記

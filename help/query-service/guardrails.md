@@ -3,18 +3,21 @@ keywords: Experience Platform；查詢；查詢服務；疑難排解；護欄；
 title: 查詢服務的護欄
 description: 本檔案提供查詢服務資料的使用量限制資訊，以協助您最佳化查詢使用。
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 1%
+source-wordcount: '1181'
+ht-degree: 2%
 
 ---
 
 # 查詢服務的護欄
 
 護欄是引導資料與系統使用、效能最佳化，以及在Adobe Experience Platform中避免錯誤或意外結果的臨界值。
-
 本檔案提供查詢服務資料的預設使用限制，以協助您在查詢與授權權益相關的資料時最佳化系統效能。
+
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
 
 ## 先決條件
 

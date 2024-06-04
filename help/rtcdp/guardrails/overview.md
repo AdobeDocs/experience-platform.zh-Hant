@@ -3,9 +3,9 @@ title: Real-Time CDP護欄
 description: 瞭解Real-Time CDP各種服務和領域的資料護欄。
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 1%
 # Real-Time CDP護欄
 
 護欄是臨界值，可為Real-Time CDP中的資料和系統使用、效能最佳化，以及避免錯誤或意外結果提供指引。 護欄可指您與授權權益相關的資料使用或消費與處理。
+
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
 
 從這裡開始，然後按照下面的連結來瞭解Real-Time CDP各種服務和區域的所有護欄：
 

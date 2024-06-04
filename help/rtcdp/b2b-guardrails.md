@@ -2,14 +2,14 @@
 keywords: 設定檔；即時客戶設定檔；疑難排解；護欄；指引；限制；實體；主要實體；維度實體；RTCDP；CDP；B2B版本；Real-time Customer Data Platform；即時客戶資料平台；real time cdp；b2b；cdp；
 title: Real-time Customer Data Platform B2B版本的預設護欄
 type: Documentation
-description: Adobe Experience Platform 使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。本檔案提供預設的使用和速率限制，協助您使用Adobe Real-time Customer Data Platform B2B Edition為資料建立模型，以獲得最佳系統效能。
+description: Adobe Experience Platform使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。 本檔案提供預設的使用和速率限制，協助您使用Adobe Real-time Customer Data Platform B2B Edition為資料建立模型，以獲得最佳系統效能。
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 2%
+source-wordcount: '1817'
+ht-degree: 1%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 2%
 >本檔案中概述的限制代表Real-time Customer Data Platform B2B Edition啟用的變更。 如需Real-Time CDP Adobe Experience Platform B2B Edition的預設限制完整清單，請將這些限制與 [即時客戶設定檔資料檔案的護欄](../profile/guardrails.md).
 
 Real-time Customer Data Platform B2B Edition可讓您根據行為深入分析和客戶屬性，以即時客戶設定檔和帳戶設定檔的形式，提供個人化的跨頻道體驗。 為了支援這種處理設定檔的新方法，Experience Platform使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。
+
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
 
 本檔案提供預設的使用和速率限制，幫助您模型化資料以獲得最佳系統效能。 檢閱下列護欄時，系統假設您已正確地模型化資料。 如果您有任何關於如何模型化資料的問題，請聯絡您的客戶服務代表。
 

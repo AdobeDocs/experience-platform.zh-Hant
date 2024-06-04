@@ -3,18 +3,22 @@ title: 即時客戶設定檔資料和細分的預設護欄
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
+description: 瞭解設定檔資料和分段的效能和系統強制的護欄，以確保最佳化地使用Real-Time CDP功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '2434'
-ht-degree: 2%
+source-wordcount: '2457'
+ht-degree: 1%
 
 ---
 
 # 預設護欄 [!DNL Real-Time Customer Profile] 資料與細分
 
 Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以即時客戶設定檔的形式提供個人化的跨管道體驗。 為了支援這種處理設定檔的新方法，Experience Platform使用與傳統關聯式資料模型不同的高度非標準化混合資料模型。
+
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
 
 本檔案提供預設的使用和速率限制，幫助您模型化設定檔資料，以獲得最佳系統效能。 檢閱下列護欄時，系統假設您已正確地模型化資料。 如果您有任何關於如何模型化資料的問題，請聯絡您的客戶服務代表。
 
@@ -116,7 +120,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 | --------- | ----- | ---------- | ----------- |
 | 每個沙箱的受眾 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個對象，但前提是每個個別沙箱中的對象少於4000個。 其中包含批次、串流和邊緣對象。 嘗試建立其他對象可能會影響系統效能。 深入瞭解 [建立對象](/help/segmentation/ui/segment-builder.md) 區段產生器的連結。 |
 | 每個沙箱的Edge對象 | 150 | 效能護欄 | 只要每個個別沙箱中的邊緣對象少於150個，組織就可以總共擁有超過150個邊緣對象。 嘗試建立其他邊緣對象可能會影響系統效能。 深入瞭解 [邊緣對象](/help/segmentation/ui/edge-segmentation.md). |
-| 所有沙箱的邊緣輸送量 | 1500 RPS | 效能護欄 | Edge區段支援的峰值為每秒1500個進入Adobe Experience Platform Edge Network的傳入事件。 邊緣區段在進入Adobe Experience Platform Edge Network後，最多可能需要350毫秒的時間來處理傳入事件。 深入瞭解 [邊緣對象](/help/segmentation/ui/edge-segmentation.md). |
+| 所有沙箱的邊緣輸送量 | 1500 RPS | 效能護欄 | 邊緣細分支援每秒鐘尖峰值1500個進入Adobe Experience PlatformEdge Network的傳入事件。 邊緣區段在進入Adobe Experience PlatformEdge Network後，最多可能需要350毫秒來處理傳入事件。 深入瞭解 [邊緣對象](/help/segmentation/ui/edge-segmentation.md). |
 | 每個沙箱的串流受眾 | 500 | 效能護欄 | 只要每個個別沙箱中的串流對象少於500個，組織就可以總共超過500個串流對象。 其中包含串流和邊緣對象。 嘗試建立其他串流對象可能會影響系統效能。 深入瞭解 [串流對象](/help/segmentation/ui/streaming-segmentation.md). |
 | 所有沙箱的串流輸送量 | 1500 RPS | 效能護欄 | 串流細分支援每秒1500個傳入事件的峰值。 串流區段最多可能需要5分鐘，才能讓設定檔符合區段會籍資格。 深入瞭解 [串流對象](/help/segmentation/ui/streaming-segmentation.md). |
 | 每個沙箱的批次對象 | 4000 | 效能護欄 | 一個組織總共可以有超過4000個批次對象，只要每個個別沙箱中有少於4000個批次對象即可。 嘗試建立其他批次對象可能會影響系統效能。 |
@@ -164,11 +168,11 @@ Dimension實體提供查閱資料，可協助並簡化多實體區段定義，�
 
 ![顯示輪廓圖元由尺寸圖元組成的資訊圖。](images/guardrails/profile-and-dimension-entities.png)
 
-### 設定檔片段
+### 輪廓片段
 
 在此檔案中，有數個護欄會參照「設定檔片段」。 在Experience Platform中，多個設定檔片段會合併在一起，以形成即時客戶設定檔。 每個片段代表指定資料集中該ID的唯一主要身分和對應的記錄或完整事件資料集。 若要瞭解有關設定檔片段的詳細資訊，請參閱 [設定檔概述](home.md#profile-fragments-vs-merged-profiles).
 
-### 合併政策 {#merge-policies}
+### 合併原則 {#merge-policies}
 
 將來自多個來源的資料彙集在一起時，合併原則是Platform用來判斷資料優先順序的方式以及將會合併哪些資料以建立該統一檢視的規則。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。 當來自多個來源的資料衝突時，合併原則會決定要將哪些資訊包含在個人設定檔中。 每個組織最多允許五(5)個合併原則。 若要深入瞭解合併原則，請參閱 [合併原則概觀](merge-policies/overview.md).
 

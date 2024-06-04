@@ -3,9 +3,9 @@ keywords: Experience Platform；疑難排解；護欄；指南；
 title: 資料擷取的護欄
 description: 瞭解Adobe Experience Platform中資料擷取的護欄。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
+source-git-commit: 7a2463e1bb09180ae7e02674d0c0040c8c874ad5
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >批次和串流擷取的護欄會在組織層級進行計算，而不是沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需有關授權使用權益的詳細資訊，請參閱 [資料管理最佳實務指南](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 護欄是臨界值，可為Adobe Experience Platform中的資料和系統使用、效能最佳化，以及避免錯誤或意外結果提供指引。 護欄可指您與授權權益相關的資料使用或消費與處理。
+
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
 
 本文提供Adobe Experience Platform中資料擷取護欄的相關指示。
 

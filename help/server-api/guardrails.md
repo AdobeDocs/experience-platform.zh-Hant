@@ -2,9 +2,9 @@
 title: Edge Network伺服器API的效能護欄
 description: 瞭解如何在最佳效能護欄內使用伺服器API。
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 2%
 
 ---
@@ -18,14 +18,18 @@ ht-degree: 2%
 
 Adobe對超過使用量限制所造成的效能降低不負責任。 持續超過效能護欄的客戶可請求額外的處理容量，以避免效能降低。
 
+>[!IMPORTANT]
+>
+>檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
+
 ## 定義
 
-* **可用性** 每個五分鐘間隔的計算方式為Experience PlatformEdge Network所處理之未因錯誤而失敗且僅與布建的Edge Network API相關的要求的百分比。 如果租使用者未在指定的五分鐘間隔內提出任何請求，則該間隔會視為100%可用。
+* **可用性** 每個五分鐘間隔的計算方式為Experience PlatformEdge Network所處理之要求的百分比，這些要求不會因錯誤而失敗，且僅與布建的Edge NetworkAPI有關。 如果租使用者未在指定的五分鐘間隔內提出任何請求，則該間隔會視為100%可用。
 * **每月連續運作時間百分比** 特定區域的計算方式為每月所有五分鐘間隔的可用性平均值。
 * 一個 **上游** 是Edge Network背後的服務，可針對特定資料流啟用，例如Adobe伺服器端轉送、Adobe Edge Segmentation或Adobe Target。
 * A **請求單位** 對應至8 KB的請求片段，以及針對資料流設定的一個上游。
 * A **請求** 是客戶擁有的應用程式傳送給的單一訊息 [!DNL Server API]. 請求可包含一或多個請求單位。
-* 一個 **錯誤** 是任何因邊緣網路而失敗的要求 [內部服務錯誤](error-handling.md).
+* 一個 **錯誤** 是任何因Edge Network而失敗的要求 [內部服務錯誤](error-handling.md).
 
 ## 服務限制
 
