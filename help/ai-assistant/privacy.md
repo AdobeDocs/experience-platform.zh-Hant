@@ -1,9 +1,10 @@
 ---
 title: AI助理的隱私權、安全性和控管
 description: 瞭解AI Assistant的隱私權、安全性和治理實務。
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 371e065d-c2dd-4233-b78e-a42757fce853
+source-git-commit: 1762fcbcc730ccb08340a71383c90404c3fea614
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,6 @@ Adobe Experience Platform中的AI助理是透過隱私、安全性和治理機�
 * AI助理目前沒有使用任何個人資料，即使用於訓練目的亦然。
 * AI助理不知道消費者資料。
 * 所有現有 [存取控制](../access-control/home.md) 原則將由AI助理遵循。
-   * 物件支援物件層級存取控制。 即將支援屬性的物件層級存取控制。
    * 任何以屬性為基礎的新存取控制原則都會在最多24小時後反映在AI助理中*
 * 您必須被授予明確許可權才能與AI助理互動。
    * 您可以使用針對Experience Platform和Journey Optimizer設定不同許可權 [許可權UI](../access-control/abac/ui/permissions.md) 而且您可以使用 [Admin Console](../access-control/ui/browse.md) 以指派Customer Journey Analytics的許可權。
