@@ -1,11 +1,9 @@
 ---
 title: Adobe Experience Platform中的AI助理概述
 description: 瞭解AI Assistant、其細微差別和使用案例，以及如何使用它來加快您與Adobe Experience Platform和Real-time Customer Data Platform的工作流程。
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 0%
 
 ---
@@ -72,6 +70,13 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 * 來源 _（目前無法回答有關帳戶的問題。）_
 
 若是操作見解問題，答案可能不會反映UI的目前狀態。 支援這些問題的資料每24小時更新一次。 例如，使用者白天在Real-Time CDP中所做的變更會在夜間與資料存放區同步，然後早上就可供使用者提問。 您需要登入沙箱以查詢與物件相關的特定資料。
+
+### 功能範圍 {#feature-scope}
+
+目前，AI助理的範圍如下：
+
+* [產品知識](./home.md#product-knowledge)： AI助理可以回答Experience Platform、Real-time Customer Data Platform和Adobe Journey Optimizer的產品知識問題。 您也可以深入探討Customer Journey Analytics的產品知識主題，但必須透過Customer Journey AnalyticsUI。
+* [營運分析](./home.md#operational-insights)：您可以向AI助理詢問有關下列資料物件的操作深入分析的問題：屬性、受眾、資料流程、資料集、目的地、歷程、結構描述和來源。
 
 ## 功能存取 {#feature-access}
 
