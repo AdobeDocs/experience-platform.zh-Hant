@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的AI助理概述
 description: 瞭解AI Assistant、其細微差別和使用案例，以及如何使用它來加快您與Adobe Experience Platform和Real-time Customer Data Platform的工作流程。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: b51291e6c3663c6d6e6d416f0d2c37563c852155
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '679'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform中的AI助理是一種對話式體驗，可用來加�
 
 >[!IMPORTANT]
 >
->您必須先同意使用者合約，才能使用AI Assistant。 使用者合約也包含公開測試版合約。 這樣一來，您就可以在以Beta版容量推出其他AI Assistant功能時使用它們。
+>您必須同意 [使用者合約](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) 才能使用AI助理。 使用者合約也包含公開測試版合約。 這樣一來，您就可以在以Beta版容量推出其他AI Assistant功能時使用它們。
 
 +++選取以檢視使用者合約介面
 
