@@ -4,9 +4,9 @@ description: 瞭解如何使用SQL查詢搭配Real-time Customer Data Platform I
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Real-Time CDP B2B報告提供您帳戶設定檔資料以及帳戶與商機之間
 
 #### 依產業使用案例的新帳戶 {#accounts-by-industry}
 
-用於的邏輯 [!UICONTROL 依產業的新帳戶] insight會根據帳戶設定檔的數量及彼此的相對大小，傳回前五大產業。 請參閱 [[!UICONTROL 各產業帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-industry) 以取得詳細資訊。
+用於的邏輯 [!UICONTROL 依產業的新帳戶] insight會根據帳戶設定檔的數量及彼此的相對大小，傳回前五大產業。 請參閱 [[!UICONTROL 依產業的新帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-industry) 以取得詳細資訊。
 
 >[!TIP]
 >

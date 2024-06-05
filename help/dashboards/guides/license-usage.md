@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
+source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2135'
 ht-degree: 1%
 
 ---
@@ -158,6 +158,10 @@ ht-degree: 1%
 | [!UICONTROL 串流區段數(Pack)] | 當新資料透過串流流進入「細分服務」時，套件會更新個人設定檔的區段會籍。 評估區段會籍時會根據目前人員設定檔屬性和目前事件的值，而不考慮歷史行為。 串流區段是一項共用功能。 |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>您可以在銷售訂單中檢查授權權利，以計算「儲存空間津貼」等量度。<br>例如，<ul><li>儲存容量=合約中「授權設定檔」的數量X平均設定檔豐富度</li></ul>
 
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。 如需每個量度的詳細定義，請參閱適當的產品說明檔案：
 
