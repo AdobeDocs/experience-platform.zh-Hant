@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
+source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1731'
 ht-degree: 1%
 
 ---
@@ -79,12 +79,24 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 
 | 類別 | 權限 | 說明 |
 | --- | --- | --- |
+| [!DNL AI Assistant] | [!UICONTROL 啟用AI助理] | 詢問的能力 [AI助理](../ai-assistant/access.md) 問題。 |
+| [!DNL AI Assistant] | [!UICONTROL 檢視營運分析] | 存取以取得對的回應 [營運分析](../ai-assistant/home.md##operational-insights) 查詢。 |
 | [!DNL Alerts] | [!UICONTROL 檢視警示歷史記錄] | 警示歷程記錄的唯讀存取權。 |
 | [!DNL Alerts] | [!UICONTROL 解決警示] | 讀取、編輯和刪除警示的存取權。 |
 | [!DNL Alerts] | [!UICONTROL 檢視警示] | 警示的唯讀存取權。 |
 | [!DNL Alerts] | [!UICONTROL 管理警報] | 讀取、建立、編輯和刪除警示歷程記錄的存取權。 |
 | [!DNL Computed Attributes] | [!UICONTROL 檢視計算屬性] | 計算屬性標籤、詳細目錄和詳細資料的唯讀存取權。 |
 | [!DNL Computed Attributes] | [!UICONTROL 管理計算屬性] | 讀取、建立、刪除草稿及停用計算屬性的存取權。 |
+| [!DNL Dashboards] | [!UICONTROL 檢視授權使用情況儀表板] | 唯讀存取權，可檢視授權使用儀表板。 |
+| [!DNL Dashboards] | [!UICONTROL 管理標準儀表板] | 新增尚未在Data Warehouse的自訂屬性。 |
+| [!DNL Data Governance] | [!UICONTROL 管理使用標籤] | 存取讀取、建立和刪除使用標籤。 |
+| [!DNL Data Governance] | [!UICONTROL 管理資料使用原則] | 讀取、建立、編輯和刪除資料使用原則的存取權。 |
+| [!DNL Data Governance] | [!UICONTROL 檢視資料使用原則] | 屬於您組織的資料使用原則的唯讀存取權。 |
+| [!DNL Data Governance] | [!UICONTROL 檢視使用者活動記錄] | 唯讀存取權，可檢視錄製的影片 [稽核記錄](../landing/governance-privacy-security/audit-logs/overview.md) 平台活動的資訊來源。 |
+| [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和停用來源的存取權。 |
+| [!DNL Data Ingestion] | [!UICONTROL 檢視來源] | 對中的可用來源具有唯讀存取權 **[!UICONTROL 目錄]** 標籤和已驗證的來源 **[!UICONTROL 瀏覽]** 標籤。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 存取建立、接受和拒絕合作夥伴握手以連線兩個組織並啟用 [!DNL Segment Match] 流程。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 讀取、建立、編輯和發佈的存取權 [!DNL Segment Match] 與作用中合作夥伴的摘要。 |
 | [!DNL Data Lifecycle] | [!UICONTROL 檢視資料生命週期] | 資料生命週期的唯讀存取。 |
 | [!DNL Data Lifecycle] | [!UICONTROL 管理資料生命週期] | 讀取、建立、編輯和刪除資料生命週期的存取權。 |
 | [!DNL Data Modeling] | [!UICONTROL 管理結構描述] | 讀取、建立、編輯和刪除結構描述和相關資源的存取權。 |
@@ -94,6 +106,16 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Data Management] | [!UICONTROL 管理資料集] | 存取讀取、建立、編輯和刪除資料集。 結構描述的唯讀存取權。 |
 | [!DNL Data Management] | [!UICONTROL 檢視資料集] | 資料集和結構描述的唯讀存取權。 |
 | [!DNL Data Management] | [!UICONTROL 資料監視] | 監督資料集和資料流的唯讀存取權。 |
+| [!DNL Data Science Workspace] | [!UICONTROL 管理資料科學工作區] | 在中讀取、建立、編輯和刪除的存取權 [!DNL Data Science Workspace]. |
+| [!DNL Destinations] | [!UICONTROL 檢視目的地] | 以唯讀許可權檢視中可用的目的地 **[!UICONTROL 目錄]** 中的標籤和已驗證的目的地 **[!UICONTROL 瀏覽]** 標籤。 |
+| [!DNL Destinations] | [!UICONTROL 管理目的地] | 讀取、建立和刪除目的地連線和目的地帳戶的存取權。 |
+| [!DNL Destinations] | [!UICONTROL 啟用目的地] | 讓使用者能啟用現有目的地的區段。 在啟動工作流程中啟用對應步驟。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
+| [!DNL Destinations] | [!UICONTROL 啟用區段而不進行對應] | 讓使用者能啟用現有目的地的區段，而不顯示 [對應步驟](../destinations/ui/activate-batch-profile-destinations.md#mapping). 使用者可以在啟動工作流程中新增和移除區段，但無法新增或移除對應的屬性或身分。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
+| [!DNL Destinations] | [!UICONTROL 管理和啟用資料集目的地] | 可讀取、建立、編輯和停用資料集匯出流程。 還能對已建立的作用中資料集啟用資料。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
+| [!DNL Destinations] | [!UICONTROL 目的地製作] | 能夠使用編寫目的地 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
+| [!DNL Identity Management] | [!UICONTROL 管理身分識別名稱空間] | 讀取、建立、編輯和刪除身分名稱空間的存取權。 |
+| [!DNL Identity Management] | [!UICONTROL 檢視身分識別名稱空間] | 身分識別名稱空間的唯讀存取權。 |
+| [!DNL Identity Management] | [!UICONTROL 檢視身分圖表] | 身分圖表的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 管理設定檔] | 存取讀取、建立、編輯和刪除用於客戶設定檔的資料集。 對可用設定檔的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視設定檔] | 對可用設定檔的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 管理區段] | 讀取、建立、編輯和刪除區段的存取權。 |
@@ -107,31 +129,11 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Profile Management] | [!UICONTROL 管理B2B AI] | 存取以讀取、建立、編輯和刪除所有B2B AI/ML服務的設定和組態。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視B2B設定檔] | 以唯讀方式存取B2B實體設定檔（例如Account、Opportunity等）、所有B2B AI/ML服務的設定和組態，以及B2B儀表板Widget。 |
 | [!DNL Profile Management] | [!UICONTROL 管理B2B設定檔] | 讀取、建立、編輯和刪除B2B實體設定檔（例如Account、Opportunity等）的存取權。 所有B2B AI/ML服務和B2B儀表板Widget之設定和設定的唯讀存取權。 |
-| [!DNL Identity Management] | [!UICONTROL 管理身分識別名稱空間] | 讀取、建立、編輯和刪除身分名稱空間的存取權。 |
-| [!DNL Identity Management] | [!UICONTROL 檢視身分識別名稱空間] | 身分識別名稱空間的唯讀存取權。 |
-| [!DNL Identity Management] | [!UICONTROL 檢視身分圖表] | 身分圖表的唯讀存取權。 |
+| [!DNL Query Service] | [!UICONTROL 管理查詢] | 存取Platform資料的讀取、建立、編輯和刪除結構化SQL查詢。 |
+| [!DNL Query Service] | [!UICONTROL 管理查詢服務整合] | 存取以建立、更新和刪除不會到期的認證以進行查詢服務存取。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 管理沙箱] | 存取讀取、建立、編輯和刪除沙箱。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 檢視沙箱] | 屬於您組織的沙箱的唯讀存取權。 |
 | [!DNL Sandbox Administration] | [!UICONTROL 重設沙箱] | 重設沙箱的功能。 |
-| [!DNL Destinations] | [!UICONTROL 檢視目的地] | 以唯讀許可權檢視中可用的目的地 **[!UICONTROL 目錄]** 中的標籤和已驗證的目的地 **[!UICONTROL 瀏覽]** 標籤。 |
-| [!DNL Destinations] | [!UICONTROL 管理目的地] | 讀取、建立和刪除目的地連線和目的地帳戶的存取權。 |
-| [!DNL Destinations] | [!UICONTROL 啟用目的地] | 讓使用者能啟用現有目的地的區段。 在啟動工作流程中啟用對應步驟。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
-| [!DNL Destinations] | [!UICONTROL 啟用區段而不進行對應] | 讓使用者能啟用現有目的地的區段，而不顯示 [對應步驟](../destinations/ui/activate-batch-profile-destinations.md#mapping). 使用者可以在啟動工作流程中新增和移除區段，但無法新增或移除對應的屬性或身分。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
-| [!DNL Destinations] | [!UICONTROL 管理和啟用資料集目的地] | 可讀取、建立、編輯和停用資料集匯出流程。 還能對已建立的作用中資料集啟用資料。 此許可權還需要 [!UICONTROL 檢視目的地] 將許可權授與將針對目的地啟用資料的使用者。 |
-| [!DNL Destinations] | [!UICONTROL 目的地製作] | 能夠使用編寫目的地 [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md). |
-| [!DNL Data Ingestion] | [!UICONTROL 管理來源] | 讀取、建立、編輯和停用來源的存取權。 |
-| [!DNL Data Ingestion] | [!UICONTROL 檢視來源] | 對中的可用來源具有唯讀存取權 **[!UICONTROL 目錄]** 標籤和已驗證的來源 **[!UICONTROL 瀏覽]** 標籤。 |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | 存取建立、接受和拒絕合作夥伴握手以連線兩個組織並啟用 [!DNL Segment Match] 流程。 |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | 讀取、建立、編輯和發佈的存取權 [!DNL Segment Match] 與作用中合作夥伴的摘要。 |
-| [!DNL Data Science Workspace] | [!UICONTROL 管理資料科學工作區] | 在中讀取、建立、編輯和刪除的存取權 [!DNL Data Science Workspace]. |
-| 資料治理 | [!UICONTROL 管理使用標籤] | 存取讀取、建立和刪除使用標籤。 |
-| 資料治理 | [!UICONTROL 管理資料使用原則] | 讀取、建立、編輯和刪除資料使用原則的存取權。 |
-| 資料治理 | [!UICONTROL 檢視資料使用原則] | 屬於您組織的資料使用原則的唯讀存取權。 |
-| 資料治理 | [!UICONTROL 檢視使用者活動記錄] | 唯讀存取權，可檢視錄製的影片 [稽核記錄](../landing/governance-privacy-security/audit-logs/overview.md) 平台活動的資訊來源。 |
-| [!DNL Dashboards] | [!UICONTROL 檢視授權使用情況儀表板] | 唯讀存取權，可檢視授權使用儀表板。 |
-| [!DNL Dashboards] | [!UICONTROL 管理標準儀表板] | 新增尚未在Data Warehouse的自訂屬性。 |
-| [!DNL Query Service] | [!UICONTROL 管理查詢] | 存取Platform資料的讀取、建立、編輯和刪除結構化SQL查詢。 |
-| [!DNL Query Service] | [!UICONTROL 管理查詢服務整合] | 存取以建立、更新和刪除不會到期的認證以進行查詢服務存取。 |
 
 ## 後續步驟
 
