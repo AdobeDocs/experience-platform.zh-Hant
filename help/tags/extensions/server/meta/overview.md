@@ -2,9 +2,9 @@
 title: 中繼轉換API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Meta Conversions API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2578'
+source-wordcount: '2583'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 此 [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) 可讓您將伺服器端行銷資料連結至 [!DNL Meta] 技術協助您最佳化廣告目標定位、降低每個動作的成本以及評估結果。 事件連結至 [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) ID和的處理方式與使用者端事件類似。
 
-使用 [!DNL Meta Conversions API] 擴充功能上，您可在以下位置運用API的功能： [事件轉送](../../../ui/event-forwarding/overview.md) 資料傳送至的規則 [!DNL Meta] 來自Adobe Experience Platform Edge Network。 本文介紹如何安裝擴充功能，以及在事件轉送中使用其功能 [規則](../../../ui/managing-resources/rules.md).
+使用 [!DNL Meta Conversions API] 擴充功能上，您可在以下位置運用API的功能： [事件轉送](../../../ui/event-forwarding/overview.md) 資料傳送至的規則 [!DNL Meta] 從Adobe Experience PlatformEdge Network。 本文介紹如何安裝擴充功能，以及在事件轉送中使用其功能 [規則](../../../ui/managing-resources/rules.md).
 
 ## 示範
 
@@ -53,15 +53,15 @@ ht-degree: 0%
 
 擴充功能已安裝，您現在可以在事件轉送規則中運用其功能。
 
-## 與中繼業務擴充功能(MBE)整合 {#mbe}
+## 與Facebook和Instagram擴充功能整合 {#facebook}
 
-與中繼業務擴充功能(MBE)增強功能的整合可讓您快速驗證中繼業務帳戶。 接著會自動填入 [!UICONTROL 畫素ID] 和中繼轉換API [!UICONTROL 存取權杖]，更易於安裝和設定中繼轉換API。
+使用Facebook和Instagram擴充功能的整合可讓您快速驗證您的中繼企業帳戶。 接著會自動填入 [!UICONTROL 畫素ID] 和中繼轉換API [!UICONTROL 存取權杖]，更易於安裝和設定中繼轉換API。
 
-安裝時，會出現在MBE中進行驗證的對話方塊提示 [!UICONTROL 中繼轉換API] 副檔名。
+安裝時，會出現對話方塊提示，提示在Facebook和Instagram中進行驗證 [!UICONTROL 中繼轉換API] 副檔名。
 
 ![此 [!UICONTROL 中繼轉換API擴充功能] 安裝頁面醒目提示 [!UICONTROL 連線至中繼].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-在MBE中驗證的對話方塊提示也會顯示在事件轉送的快速啟動工作流程UI中。
+在Facebook和Instagram中驗證的對話方塊提示也會顯示在事件轉送的快速啟動工作流程UI中。
 
 ![快速入門工作流程UI醒目提示 [!UICONTROL 連線至中繼].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -129,7 +129,7 @@ ht-degree: 0%
 
 快速入門功能可協助您使用中繼轉換API和中繼畫素擴充功能輕鬆而高效地完成設定。 此工具會自動執行在Adobe標籤和事件轉送中執行的多個步驟，大幅縮短設定時間。
 
-此功能會在新自動產生的標籤上自動安裝及設定中繼轉換API和中繼畫素擴充功能，並使用必要的規則和資料元素來設定事件轉送屬性。 此外，也會自動安裝及設定Experience Platform Web SDK和資料流。 最後，快速入門功能會自動將程式庫發佈到開發環境中的指定URL，如此即可透過事件轉送和Experience Platform邊緣網路即時啟用使用者端資料收集和伺服器端事件轉送。
+此功能會在新自動產生的標籤上自動安裝及設定中繼轉換API和中繼畫素擴充功能，並使用必要的規則和資料元素來設定事件轉送屬性。 此外，也會自動安裝及設定Experience Platform Web SDK和資料流。 最後，快速入門功能會自動將程式庫發佈到開發環境中的指定URL，如此即可透過事件轉送和Experience PlatformEdge Network即時啟用使用者端資料收集和伺服器端事件轉送。
 
 以下影片介紹快速入門功能。
 
@@ -190,7 +190,7 @@ ht-degree: 0%
 
 ![未顯示任何事件的標籤屬性頁面](../../../images/extensions/server/meta/edit-rule.png)
 
-選取 [!UICONTROL 事件型別]. 在此範例中，我們已選取 [!UICONTROL 按一下] 事件並設定為在 **.add-to-cart-button** 已選取。 選取&#x200B;**[!UICONTROL 「保留變更」]**。
+選取 [!UICONTROL 事件型別]. 在此範例中，我們已選取 [!UICONTROL 按一下] 事件並設定為在 **.add-to-cart-button** 已選取。 選取 **[!UICONTROL 保留變更]**.
 
 ![顯示點選事件的事件設定畫面](../../../images/extensions/server/meta/event-configuration.png)
 
