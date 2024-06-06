@@ -1,9 +1,10 @@
 ---
 title: Adobe Experience Platform中的AI助理
 description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-time Customer Data Platform概念，以及有關您物件的使用資訊。
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
+source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 若要啟動AI助理，請選取 **[!UICONTROL AI助理圖示]** 從Experience PlatformUI的頂端標題。
 
-![Experience Platform首頁，其中已選取AI助理圖示並開啟AI助理介面。](./images/ai-assistant.png)
+![Experience Platform首頁，其中已選取AI助理圖示並開啟AI助理介面。](./images/ai-assistant-full-icon.png)
 
 AI Assistant介面隨即顯示，立即為您提供開始使用的資訊。 您可以使用下提供的選項 [!UICONTROL 開始使用的概念] 回答下列問題和命令：
 
@@ -86,9 +87,13 @@ AI Assistant會更新介面，並提供檔案連結給您，以證實初始回�
 
 +++選取以檢視操作見解問題的範例
 
-在下列範例中，會詢問AI助理員下列查詢： **「顯示使用Amazon S3來源建立的資料流」**， AI助理接著會以表格回應，該表格會列出您的資料流及其對應的ID。 若要檢視整個資料表格，請選取右上角的展開圖示。
+在下列範例中，會詢問AI助理員下列查詢： **「顯示使用Amazon S3來源建立的資料流」**.
 
-![繼續回答有關營運見解的問題。](./images/usage-data-question.png)
+![有關營運見解的問題。](./images/op-insights-question.png)
+
+AI助理接著會以表格回應，該表格會列出您的資料流及其對應的ID。 若要檢視整個資料表格，請選取右上角的展開圖示。
+
+![營運見解答案](./images/op-insights-answer.png)
 
 此時會出現表格的展開檢視，讓您根據查詢的引數獲得更完整的資料流清單。
 
@@ -96,9 +101,13 @@ AI Assistant會更新介面，並提供檔案連結給您，以證實初始回�
 
 出現營運見解問題提示時，AI Assistant會提供其如何計算答案的解釋。 在以下範例中，AI Assistant概述其識別使用建立的資料流所應採取的步驟。 [!DNL Amazon S3] 來源。
 
-![繼續回答有關區段定義的問題，說明AI Assistant如何計算答案。](./images/answer-explained.png)
+![AI助理會說明其運算結果的方式。](./images/answer-explained.png)
 
 您也可以提供篩選器和修改問題，也可以指示AI助理根據您包含的篩選器來呈現其結果。 例如，您可以要求AI助理按照區段定義的建立日期順序，顯示區段定義計數的趨勢；移除總設定檔為零的區段定義；以及在顯示資料時，使用月份名稱而非整數。
+
+**注意：** 營運見解答案目前為Beta版。 在AI助理使用者介面中選取工具提示圖示以檢視Beta版通知和檔案的連結。
+
+![已選取AI助理工具提示圖示。](./images/op-insights-beta-note.png)
 
 +++
 
@@ -122,7 +131,27 @@ AI Assistant會更新介面，並提供檔案連結給您，以證實初始回�
 
 在以下範例中，會先要求AI助理提供資料流總數，然後要求列出10個最近的資料流。
 
-![多圈範例](./images/multi-turn.png)
+![多圈範例](./images/multiturn.png)
+
+若要重設，請選取省略符號(**`...`**)，然後選取 **[!UICONTROL 開始新交談]**. 這會通知AI助理您打算變更主題，並在疑難排解失敗或參考錯誤資訊的查詢時特別有用。
+
+![已選取省略符號，且已選取開始新交談選項。](./images/reset.png)
+
++++
+
+### 使用可發現性 {#use-discoverability}
+
+您可以使用AI助理的可發現性功能來檢視AI助理支援的一般主體清單（群組為實體）。
+
++++選取以檢視可發現性的範例
+
+若要檢視可發現性，請選取AI Assistant介面頂端標題上的燈泡圖示。
+
+![AI Assistant可發現性功能。](./images/lightbulb.png)
+
+接著，選取類別，然後從提供的清單中選取提示。 您可以使用此功能來進一步瞭解AI助理可以回答的問題型別。 您也可以使用任意文字或 [自動完成](#use-auto-complete).
+
+![AI助理在可發現性中提示。](./images/prompt.png)
 
 +++
 
@@ -133,8 +162,6 @@ AI Assistant會更新介面，並提供檔案連結給您，以證實初始回�
 若要提供意見回饋，請在收到AI助理的回應後，選取向上拇指、向下拇指或標幟，然後在提供的文字方塊中輸入您的意見回饋。
 
 ![AI助理中的意見回饋選項。](./images/provide-feedback.png)
-
-若要重設，請選取省略符號(**`...`**)，然後選取 **[!UICONTROL 開始新交談]**. 這會通知AI助理您打算變更主題，並在疑難排解失敗或參考錯誤資訊的查詢時特別有用。
 
 +++選取以檢視更多範例
 
