@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Adobe Experience Platform Assurance
 breadcrumb-title: Assurance 指南
-user-guide-description: Adobe Experience Platform Assurance 讓您可以檢查、證明、模擬和驗證您在行動應用程式中收集資料或服務體驗的方式。
+user-guide-description: Adobe Experience Platform保證可讓您檢查、證明、模擬及驗證如何在行動應用程式中收集資料或提供體驗。
 feature: Assurance
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 94%
+source-wordcount: '71'
+ht-degree: 60%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 94%
 - 檢視 {#view}
    - [事件異動](./views/event-transactions.md)
    - [擴充功能版本](./views/extension-versions.md)
+   - [Edge傳遞](./views/edge-delivery.md)
    - [應用程式內傳訊](./views/in-app-messaging.md)
    - [裝置上檢視](./views/on-device-views.md)
    - [Places Service](./views/places-service.md)
