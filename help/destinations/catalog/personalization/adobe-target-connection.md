@@ -3,9 +3,9 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 | 發行月份 | 更新型別 | 說明 |
 |---|---|---|
-| 2024 年 4 月 | 功能和檔案更新 | 使用資料串流ID連線至Target目的地時，您現在可以 *不需要* 以啟用邊緣區段的資料流。 這表示Target目的地將會搭配批次和串流對象運作，不過您可以完成的使用案例會有所不同。 在中檢視表格 [連線引數](#parameters) 區段以取得詳細資訊。 |
+| 2024 年 4 月 | 功能和檔案更新 | 現在當您連線至Target目的地並使用資料串流ID時 *不需要* 以啟用邊緣區段的資料流。 這表示Target目的地將會搭配批次和串流對象運作，不過您可以完成的使用案例會有所不同。 在中檢視表格 [連線引數](#parameters) 區段以取得詳細資訊。 |
 | 2024 年 1 月 | 功能和檔案更新 | 您現在可以為預設的生產沙箱和其他非預設沙箱將受眾和設定檔屬性共用到Adobe Target連線。 |
 | 2023 年 6 月 | 功能和檔案更新 | 自2023年6月起，當您設定新的Adobe Target目的地連線時，可以選取您要共用對象的Adobe Target工作區。 如需詳細資訊，請參閱「[連線參數](#parameters)」一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)的教學課程。 |
 | 2023 年 5 月 | 功能和檔案更新 | 截至2023年5月， **[!UICONTROL Adobe Target]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
@@ -62,9 +62,9 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 >[!IMPORTANT]
 >
->您啟用至此目的地的對象必須使用 [主動邊緣合併原則](../../../segmentation/ui/segment-builder.md#merge-policies). 此 [!DNL Active-On-Edge] 合併原則可確保持續評估對象 [在邊緣](../../../segmentation/ui/edge-segmentation.md) 和可用於即時和下一頁個人化使用案例。
-> 如果您將使用不同合併原則的對象對應至邊緣目的地，則不會評估這些對象。
-> 請依照以下說明操作： [建立合併原則](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確保啟用 **[!UICONTROL Active-On-Edge合併原則]** 切換。
+>啟用時 *相同頁面和下一頁個人化使用案例的邊緣對象*，受眾 *必須* 使用 [主動邊緣合併原則](../../../segmentation/ui/segment-builder.md#merge-policies). 此 [!DNL active-on-edge] 合併原則可確保持續評估對象 [在邊緣](../../../segmentation/ui/edge-segmentation.md) 和可用於即時和下一頁個人化使用案例。  閱讀關於 [所有可用使用案例](#parameter)，根據實作型別。
+>如果您將使用不同合併原則的邊緣受眾對應至Adobe Target目的地，這些受眾將不會針對即時和下一頁使用案例進行評估。
+>請依照以下說明操作： [建立合併原則](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確保啟用 **[!UICONTROL Active-On-Edge合併原則]** 切換。
 
 
 | 對象來源 | 支援 | 說明 |
