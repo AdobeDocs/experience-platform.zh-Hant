@@ -5,9 +5,9 @@ user-guide-description: 針對跨頻道行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
+source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1224'
 ht-degree: 3%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 3%
    * [概觀](./destination-sdk/overview.md)
    * [整合必要條件](./destination-sdk/integration-prerequisites.md)
    * [Destination SDK快速入門](./destination-sdk/getting-started.md)
+   * [字彙](/help/destinations/destination-sdk/glossary.md)
    * 功能 {#functionality}
       * [設定選項](./destination-sdk/functionality/configuration-options.md)
       * 目的地伺服器元件 {#destination-server}

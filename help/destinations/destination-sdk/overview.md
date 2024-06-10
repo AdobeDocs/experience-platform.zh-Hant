@@ -2,9 +2,9 @@
 description: Adobe Experience Platform Destination SDK是一組設定API，可讓您根據您選擇的資料和驗證格式，設定用於Experience Platform的目的地整合模式，以將對象和設定檔資料傳送至您的端點或儲存位置。 設定儲存在Experience Platform中，並可透過API擷取以取得其他更新。
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: 9c59f6edd51c61c1fe2ff69e0adea49e6efb8745
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,88 @@ Adobe Experience Platform Destination SDK是一套設定API，可讓您根據您
 Destination SDK檔案會提供指示，讓您使用Adobe Experience Platform Destination SDK來設定、測試和發行與Adobe Experience Platform的生產化目的地整合，並讓您的目的地成為不斷成長的目的地目錄的一部分。 透過使用Destination SDK，您也可以建立自己的自訂私人目的地，以匯出符合您需求的資料。
 
 ![Experience Platform UI的熒幕擷圖，顯示目的地目錄。](assets/destinations-catalog-overview.png)
+
+## 快速入門 — 探索基本資訊 {#quick-start}
+
+請檢閱下列連結中的檔案，以快速開始透過Destination SDK設定和提交您的目的地。
+
+>[!BEGINSHADEBOX]
+
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p><b>設定頁面</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">說明所有組態選項</a></li>
+                <li> 目的地伺服器設定 —  <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md">伺服器規格</a> 和 <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md">範本規格</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">客戶資料欄位和其他目的地設定元件</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">範本化和巨集</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>指南</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/overview.md#process">高階整合程式</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">設定串流目的地</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">設定以檔案為基礎的目的地</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md">設定匯出潛在客戶設定檔的目的地</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/submit-destination.md">提交目的地以進行發佈</a></li>
+            </ul>
+        </td>
+                <td>
+            <p><b>API參考</b></p>
+            <ul>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-servers-and-templates">目的地伺服器端點API參考</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-configurations">目的地端點API參考</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Audience-metadata-templates">對象中繼資料API參考</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-testing">測試API參考</a></li>
+                <li><a href="https://developer.adobe.com/experience-platform-apis/references/destination-authoring/#tag/Destination-publishing">Destination publishing API參考</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="border: 0;">
+  <tbody>
+    <tr>
+        <td>
+            <p><b>設定串流目的地 — 速查表</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">設定串流目的地的端對端指南</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md">透過Pebble範本瞭解資料轉換</a> 和 <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md">檢視支援的範本功能</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">瞭解資料彙總原則</a></li>
+                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">即時設定範例</a></li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">測試您的串流目的地</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>設定以檔案為基礎的目的地 — 速查表</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/guides/configure-file-based-destination-instructions.md">設定以檔案為基礎的目的地端對端指南</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md">設定匯出檔案的檔案格式</a></li>
+                <li><a href="/help/destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md">Amazon S3目的地的即時設定範例</a></li>
+                <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/batch-configuration.md">批次設定</a> 檔案匯出排程和檔案命名資訊</li>
+                <li><a href="/help/destinations/destination-sdk/testing-api/batch-destinations/file-based-destination-testing-overview.md">測試以檔案為基礎的目的地</a></li>
+            </ul>
+        </td>
+        <td>
+            <p><b>其他重要資訊</b></p>
+            <ul>
+                <li><a href="/help/destinations/destination-sdk/getting-started.md#obtain-authentication-credentials">取得使用API所需的驗證認證</a></li>
+                <li><a href="/help/destinations/destination-sdk/integration-prerequisites.md">整合必要條件</a></li>
+                <li><a href="/help/destinations/destination-sdk/glossary.md">Destination SDK辭彙表</a></li>                
+                <li><a href="/help/destinations/destination-sdk/functionality/rate-limiting-retry-policy.md">速率限制和重試原則</a></li>
+                <li><a href="/help/destinations/destination-sdk/docs-framework/self-service-template.md">記錄您的目的地的自助服務範本</a></li>
+            </ul>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+
+>[!ENDSHADEBOX]
 
 ## 產品化和自訂整合 {#productized-custom-integrations}
 

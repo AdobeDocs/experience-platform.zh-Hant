@@ -2,9 +2,9 @@
 description: 使用對象中繼資料範本，以程式設計方式在您的目的地建立、更新或刪除對象。 Adobe提供可擴充的對象中繼資料範本，您可以根據行銷API的規格進行設定。 定義、測試及提交範本後，Adobe會使用該範本來建構對目的地的API呼叫。
 title: 對象中繼資料管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -523,7 +523,7 @@ ht-degree: 0%
 
 在中尋找範本中所有引數的說明 [建立對象範本](../metadata-api/create-audience-template.md) API參考。
 
-## 對象中繼資料範本中使用的巨集
+## 對象中繼資料範本中使用的巨集 {#macros}
 
 為了在Experience Platform與API之間傳遞對象ID、存取權杖、錯誤訊息等資訊，對象範本包含您可以使用的巨集。 請閱讀以下本頁三個設定範例中所使用的巨集說明：
 
