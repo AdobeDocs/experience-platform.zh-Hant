@@ -2,9 +2,9 @@
 description: 此頁面提供您需要提交以檢閱使用Destination SDK撰寫的生產目的地的所有資訊。
 title: 提交以Destination SDK撰寫的生產目的地，以供複查
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 0%
 >* 如果Adobe團隊要求您在初次提交後對設定進行任何更新，則您必須在進行更新後提交另一個目的地發佈請求。
 >
 >* 即使您的目的地在Experience Platform目錄中上線後，如果您需要對設定進行任何更新，則必須提交新的目的地發佈請求，才能將更新反映在設定中。
+>
+>* 對於您正在更新的新目的地和現有目的地，檢閱時間軸和所需的人工因素都相同。
 
 將目的地發佈至之前 [Experience Platform目的地目錄](/help/destinations/catalog/overview.md)，您必須向Adobe提供有關目的地和所執行測試的特定資訊，以確保使用者在啟用您平台的資料時，享有最佳體驗。
 
@@ -260,7 +262,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 目的地目錄包含每個目的地卡片的標誌。 在您的提交電子郵件中，加入含有目的地標誌的影像。
 
 影像需求如下：
-* **格式**: `SVG`
+* **格式**： `SVG`
 * **大小**：小於2MB
 
 ## 下載範例電子郵件 {#download-sample-email}
