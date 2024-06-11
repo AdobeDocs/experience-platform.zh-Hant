@@ -2,10 +2,10 @@
 description: 瞭解如何為使用Destination SDK建立的目的地設定支援的目標身分。
 title: 身分名稱空間設定
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 4%
+source-wordcount: '918'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +13,15 @@ ht-degree: 4%
 
 Experience Platform使用身分名稱空間來說明特定身分的型別。 例如，身分名稱空間稱為 `Email` 會識別類似這樣的值 `name@email.com` 作為電子郵件地址。
 
-除了以外，當透過Destination SDK建立即時（串流）目的地時 [設定合作夥伴結構描述](schema-configuration.md) 讓使用者可將設定檔屬性和身分對應至，您也必須定義目的地平台支援的身分名稱空間。 例如，如果目的地平台接受雜湊電子郵件，而且 [!DNL IDFA]，您必須將這兩個身分定義為 [在本檔案中進一步說明](#supported-parameters).
+根據您建立的目的地型別（串流或檔案型），請記住以下身分名稱空間要求：
 
-將受眾啟用至串流目的地時，除了目標設定檔屬性外，使用者還必須對應目標身分。 否則，不會將對象啟動至目的地平台。
+* 除了以外，當透過Destination SDK建立即時（串流）目的地時 [設定合作夥伴結構描述](schema-configuration.md) 使用者可將設定檔屬性和身分對應到哪些物件，您也必須定義 *至少一個* 目的地平台支援的身分名稱空間。 例如，如果目的地平台接受雜湊電子郵件，而且 [!DNL IDFA]，您必須將這兩個身分定義為 [在本檔案中進一步說明](#supported-parameters).
 
-透過Destination SDK建立檔案型目的地時，身分識別名稱空間的設定是選用的。
+  >[!IMPORTANT]
+  >
+  >將對象啟用至串流目的地時，使用者也必須對應 _至少一個目標身分_，以及目標設定檔屬性。 否則，不會將對象啟動至目的地平台。
+
+* 透過Destination SDK建立檔案型目的地時，身分名稱空間的設定為 _可選_.
 
 若要進一步瞭解Experience Platform中的身分識別名稱空間，請參閱 [身分名稱空間檔案](../../../../identity-service/features/namespaces.md).
 
@@ -114,7 +118,7 @@ Experience Platform客戶可以選擇以雜湊格式或純文字將資料擷取�
    }
 ```
 
-使用未雜湊的來源欄位時勾選此選項，讓 Adobe Experience Platform 在啟動時自動將它們雜湊。
+使用未雜湊的來源欄位時，請核取此選項，讓Adobe Experience Platform在啟用時自動雜湊這些欄位。
 
 將未雜湊的來源屬性對應到目的地預期會雜湊的目標屬性時(例如： `email_lc_sha256` 或 `phone_sha256`)，檢查 **套用轉換** 讓Adobe Experience Platform在啟動時自動雜湊來源屬性的選項。
 
