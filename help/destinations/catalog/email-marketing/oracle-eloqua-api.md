@@ -3,10 +3,10 @@ title: (API) Oracle Eloqua連線
 description: (API) Oracle Eloqua目的地可讓您匯出帳戶資料，並在Oracle Eloqua中根據您的業務需求加以啟用。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 4%
+source-wordcount: '2033'
+ht-degree: 1%
 
 ---
 
@@ -77,12 +77,12 @@ ht-degree: 4%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中每個選取的對象，對應至 [!DNL Oracle Eloqua] 區段狀態會從Platform更新其對象狀態。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中每個選取的對象，對應至 [!DNL Oracle Eloqua] 區段狀態會從Platform更新其對象狀態。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
-## 連線到目標 {#connect}
+## 連線到目的地 {#connect}
 
 >[!IMPORTANT]
 >
@@ -92,12 +92,12 @@ ht-degree: 4%
 
 範圍 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 搜尋 [!DNL (API) Oracle Eloqua]. 或者，您可以在 **[!UICONTROL 電子郵件行銷]** 類別。
 
-### 驗證目標 {#authenticate}
+### 驗證到目的地 {#authenticate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="公司名稱\使用者名稱"
->abstract="在此欄位中填寫 `{COMPANY_NAME}\{USERNAME}` 表單中來自 Oracle Eloqua 的公司名稱和使用者名稱"
+>abstract="在表格中填入您公司的名稱和Oracle Eloqua的使用者名稱 `{COMPANY_NAME}\{USERNAME}`"
 
 填寫以下必填欄位。 請參閱 [彙總 [!DNL Oracle Eloqua] 認證](#gather-credentials) 區段以取得任何指引。
 * **[!UICONTROL 密碼]**：您的密碼 [!DNL Oracle Eloqua] 帳戶。
@@ -108,13 +108,14 @@ ht-degree: 4%
 
 如果提供的詳細資料有效，UI會顯示 **[!UICONTROL 已連線]** 帶有綠色勾號的狀態。 然後您可以繼續下一步驟。
 
-### 填寫目標詳細資訊 {#destination-details}
+### 填寫目的地詳細資料 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="若要尋找您的 Pod 編號，請登入 Oracle Eloqua。成功登入後，記下瀏覽器中的 URL。 "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle 知識庫 - 找出您的 Pod 編號"
+>abstract="若要尋找您的Pod編號，請登入Oracle Eloqua。 請記下您成功登入後瀏覽器中的URL。 "
+
+<!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 ![顯示目的地詳細資訊的平台UI熒幕擷圖。](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
@@ -129,7 +130,7 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟動此目標的對象 {#activate}
+## 啟用此目的地的對象 {#activate}
 
 >[!IMPORTANT]
 > 
