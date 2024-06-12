@@ -1,22 +1,20 @@
 ---
 title: 設定身分設定的範例情境
 description: 瞭解設定身分設定的範例情境。
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Beta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
 # 設定身分圖表連結規則的範例案例
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->身分圖表連結規則目前Alpha。 功能和檔案可能會有所變更。
+>此功能尚未推出；身分圖表連結規則的Beta版計畫預計於7月在開發沙箱上開始。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。
 
 本檔案概述設定身分圖表連結規則時可考慮的範例情境。
 
@@ -28,7 +26,7 @@ ht-degree: 1%
 | --- | --- |
 | 家用電腦和平板電腦 | 丈夫和妻子都登入各自的銀行帳戶。 |
 | 公用資訊站 | 在機場登入的旅行者，會使用他們的忠誠度身份證來登記行李和列印登機牌。 |
-| 客服中心 | 客服中心人員代表客戶致電客戶支援以解決問題，登入單一裝置。 |
+| 呼叫中心 | 客服中心人員代表客戶致電客戶支援以解決問題，登入單一裝置。 |
 
 ![共用裝置](../images/identity-settings/shared-devices.png)
 

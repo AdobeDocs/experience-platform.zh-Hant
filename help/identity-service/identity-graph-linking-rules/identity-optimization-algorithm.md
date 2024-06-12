@@ -1,11 +1,9 @@
 ---
 title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
-hide: true
-hidefromtoc: true
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
+source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 1%
