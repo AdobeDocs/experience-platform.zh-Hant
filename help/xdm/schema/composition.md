@@ -4,18 +4,18 @@ solution: Experience Platform
 title: 結構描述組合基本概念
 description: 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
+source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
-source-wordcount: '4236'
-ht-degree: 6%
+source-wordcount: '4293'
+ht-degree: 2%
 
 ---
 
-# 結構描述組合基本概念
+# 結構描述組合的基礎知識
 
 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。 如需XDM的一般資訊，以及在中如何使用XDM。 [!DNL Platform]，請參閱 [XDM系統概覽](../home.md).
 
-## 瞭解結構描述 {#understanding-schemas}
+## 了解結構描述 {#understanding-schemas}
 
 結構是一組規則，可代表及驗證資料的結構和格式。 從高層面來說，結構提供了真實對象 (如人) 的抽象定義，並概述應包含在該對象的每個執行個體中的資料 (如名字、姓氏、生日等)。
 
@@ -52,8 +52,8 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
->title="方案中的身分"
->abstract="身分是方案中的重要欄位，可用於識別主題，例如電子郵件地址或行銷 ID。這些欄位用於為每個人建構身分識別圖並建立客戶設定檔。如需進一步了解方案中的身分，請查看此文件。"
+>title="結構描述中的身分"
+>abstract="身分是結構描述中可用來識別主旨的關鍵欄位，例如電子郵件地址或行銷ID。 這些欄位可用來建構每個人的身分圖表，並建置客戶設定檔。 請參閱檔案以取得結構描述中身分的詳細資訊。"
 
 結構用於擷取資料到Experience Platform中。 此資料可用於多項服務，以建立個別實體的單一、統一檢視。 因此，在為客戶身分設計結構時，重要的是考慮哪些欄位可用於識別主旨，無論資料來自何處。
 
@@ -170,7 +170,12 @@ Experience Platform使用組合方法，其中結合標準建置區塊以建立�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="類別"
->abstract="每個方案都以單一類別為基礎。類別定義了方案的行為，以及做為所有方案的基礎且類別必須包含的通用屬性。如需深入了解類別如何參與方案的組成，請查看此文件。"
+>abstract="每個結構描述都以單一類別為基礎。 類別會定義結構描述的行為以及基於該類別的所有結構描述必須包含的通用屬性。 請參閱檔案以深入瞭解類別如何參與結構描述構成。"
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_industries"
+>title="產業型別"
+>abstract="如果您為您的企業選取相關的產業，則機器學習模型可以透過更準確地對應來源欄位與符合產業標準的標準欄位群組，以提供更好的資料組織。 這可確保資料整合符合您的特定產業需求，並可產生更精確且相關的資料深入分析。"
 
 構成結構描述從指派類別開始。 類別會定義結構描述將包含之資料（記錄或時間序列）的行為方面。 除此之外，類別會說明基於該類別的所有結構描述所需包含的最小通用屬性數量，並提供合併多個相容資料集的方法。
 
@@ -189,12 +194,12 @@ Adobe提供幾個標準（「核心」） XDM類別。 其中兩個類別， [!D
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="欄位群組"
->abstract="欄位群組是可重複使用的元件，可讓您使用額外屬性擴充方案。大部分欄位群組僅與部分類別相容。您可以使用 Adobe 定義的標準欄位群組，或是手動定義您自己的自訂欄位群組。如需深入了解欄位群組如何參與方案的組成，請查看此文件。"
+>abstract="欄位群組是可重複使用的元件，可讓您使用其他屬性擴充方案。 大多數欄位群組僅與特定類別相容。 您可以使用由Adobe定義的標準欄位群組，或手動定義您自己的自訂欄位群組。 請參閱檔案以進一步瞭解欄位群組如何參與結構描述構成。"
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="必要欄位群組"
->abstract="您正在使用的來源需要此欄位群組。因此，您無法將其從方案中刪除。"
+>abstract="您使用的來源需要此欄位群組。 因此，您無法從結構描述中刪除它。"
 
 欄位群組是可重複使用的元件，可定義一或多個實作特定功能的欄位，例如個人詳細資料、飯店偏好設定或地址。 欄位群組是要包含在實作相容類別的結構描述中。
 
@@ -240,7 +245,7 @@ Experience Platform提供許多常見資料型別，屬於 [!DNL Schema Registry
 
 * 字串
 * 整數
-* 雙倍
+* 雙精度
 * 布林值
 * 陣列
 * 物件
@@ -252,8 +257,8 @@ Experience Platform提供許多常見資料型別，屬於 [!DNL Schema Registry
 這些純量型別的有效範圍可以進一步限製為特定圖樣、格式、最小值/最大值或預先定義的值。 使用這些限制，可以表示各種更具體的欄位型別，包括：
 
 * 列舉
-* 長
-* 短
+* 長整數
+* 短整數
 * 位元組
 * 日期
 * 日期時間
@@ -275,7 +280,7 @@ Experience Platform提供許多常見資料型別，屬於 [!DNL Schema Registry
 
 ![包含四個結構描述以及對其做出貢獻的欄位群組的流程圖。](../images/schema-composition/composition.png)
 
-### Union {#union}
+### 聯合 {#union}
 
 雖然Experience Platform可讓您針對特定使用案例來撰寫結構描述，但也允許您檢視特定類別型別的結構描述「聯合」。 上圖顯示兩個根據XDM ExperienceEvent類別的結構描述，以及兩個根據的結構描述 [!DNL XDM Individual Profile] 類別。 聯合（如下所示）會彙總共用相同類別的所有結構描述的欄位([!DNL XDM ExperienceEvent] 和 [!DNL XDM Individual Profile]（分別是）。
 

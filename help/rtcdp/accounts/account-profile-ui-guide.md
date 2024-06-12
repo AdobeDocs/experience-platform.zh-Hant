@@ -5,9 +5,9 @@ description: 透過使用帳戶設定檔，Adobe Real-time Customer Data Platfor
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1680'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 選取 **[!UICONTROL 設定檔]** 在 [!UICONTROL 帳戶] ，以檢視帳戶設定檔的概觀。 在 [!UICONTROL 概觀] 標籤中，儀表板會顯示圖形或圖表，在單一進入點中顯示Widget。
 
-![顯示Widget的總覽標籤](images/b2b-account-profile-overview.png)
+![帳戶設定檔概述索引標籤在左側導覽中有設定檔，且概述反白顯示。](images/b2b-account-profile-overview.png)
 
 請參閱相關的檔案： [[!UICONTROL 帳戶設定檔]](../../dashboards/guides/account-profiles.md) 儀表板以深入瞭解。 請參閱以下檔案： [Real-time Customer Data Platform Insights資料模型B2B版本](../../dashboards/data-models/cdp-insights-data-model-b2b.md) 有關如何使用您的見解資料模型為您的儀表板建立自訂圖表的詳細資訊。
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 若要設定銷售線索與帳戶的比對，請選取 **[!UICONTROL 設定檔]** 在 [!UICONTROL 帳戶] ，位於左側導覽器中。 在 **[!UICONTROL 概觀]** 索引標籤，選取 **[!UICONTROL 設定]** 右上角。
 
-![選取設定](images/b2b-configuring-accounts-profile.png)
+![反白顯示設定的「帳戶設定檔概述」標籤。](images/b2b-configuring-accounts-profile.png)
 
 此 **[!UICONTROL 帳戶設定]** 對話方塊開啟。 從此處選取 **[!UICONTROL 啟用銷售線索與帳戶的比對]** 切換即可啟用此功能。 使用下拉式選單來選取 **[!UICONTROL 每日]** 針對 **[!UICONTROL 相符的步調]** 設定。 最後，選取相關的 **[!UICONTROL 符合條件]** 選項後面接著 **[!UICONTROL 儲存]** 以確認您的設定並返回 **[!UICONTROL 帳戶設定檔]** 畫面。
 

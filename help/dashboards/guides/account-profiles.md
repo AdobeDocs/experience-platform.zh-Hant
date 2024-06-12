@@ -2,9 +2,9 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1763'
 ht-degree: 1%
 
 ---
@@ -73,7 +73,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
-* [已新增的帳戶設定檔](#account-profiles-added)
+* [已新增帳戶輪廓](#account-profiles-added)
 * [依產業的新帳戶](#accounts-by-industry)
 * [新帳戶（依型別）](#accounts-by-type)
 * [依個人角色的新機會](#opportunities-by-person-role)
@@ -84,7 +84,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 * [預測性評分分佈](#predictive-scoring-distribution)
 * [預測性評分主要影響因素](#predictive-scoring-top-influential-factors)
 
-### 已新增的帳戶設定檔 {#account-profiles-added}
+### 已新增帳戶輪廓 {#account-profiles-added}
 
 此 [!UICONTROL 帳戶設定檔已新增] Widget使用線圖來顯示一段時間內每天新增的帳戶設定檔數。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選器，預設行為會列出今天之前一年新增的帳戶設定檔。 結果可用於推斷新增的帳戶設定檔數量趨勢。
 
@@ -169,6 +169,14 @@ Widget中的下拉式功能表可讓您選取帳戶評分模式。
 >全域日期範圍篩選器不適用於預測性評分深入分析。 預測性評分Widget會根據下拉式清單中選取的帳戶評分模型分析資料。
 
 ![預測性評分主要影響因素Widget。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### 無法載入資料錯誤 {#errors}
+
+如果顯示Widget *[!UICONTROL 無法載入。 請再試一次。]* 這是因為沒有可用於B2B實體的資料。 例如，Widget會顯示於下方 [!UICONTROL 依個人角色的新機會]，顯示訊息「[!UICONTROL 無法載入。 請再試一次。]&quot;因為此沙箱沒有可用的機會資料。
+
+![無法載入分析錯誤。](../images/account-profiles/unable-to-load.png)
+
+若要解決此問題，您必須內嵌B2B實體資料，例如 *機會人員* 資料，放入沙箱。 48小時後，資料會反映在Widget中。
 
 ## 後續步驟
 

@@ -5,7 +5,7 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以Experience Platform結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 0%
@@ -49,10 +49,6 @@ Adobe Experience Platform使用者介面可讓您建立和管理 [!DNL Experienc
 此 [!UICONTROL 建立結構描述] 工作流程隨即顯示。 接著，選擇結構描述的基底類別。 您可以在下列核心類別之間選擇 [!UICONTROL XDM個別設定檔] 和 [!UICONTROL XDM ExperienceEvent]，或 [!UICONTROL 其他] 如果這些類別不適合您的用途。 此 [!UICONTROL 其他] 類別選項可讓您 [建立新類別](#create-new-class) 或從其他預先存在的類別中選擇。
 
 請參閱 [XDM個別設定檔](../classes/individual-profile.md) 和 [XDM ExperienceEvent](../classes/experienceevent.md) 檔案，以取得這些類別的詳細資訊。 在本教學課程中，請選取 **[!UICONTROL XDM個別設定檔]** 後面接著 **[!UICONTROL 下一個]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 

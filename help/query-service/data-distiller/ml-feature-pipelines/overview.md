@@ -1,21 +1,19 @@
 ---
-title: AI/ML功能管道
+title: AI/ML 功能管道
 description: 瞭解如何使用Data Distiller，透過Adobe Experience Platform資料衍生的功能豐富您的機器學習管道。 將原始資料轉換為功能並提供功能資料，以訓練或評分支援行銷使用案例的模型。
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# AI/ML功能管道
+# AI/ML 功能管道
 
 <!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
-
-<!--  -->
 
 資料Distiller讓資料科學家和工程師能利用Adobe Experience Platform中收集和整理的高價值客戶體驗資料，讓他們的機器學習管道更為豐富。 從 [!DNL Python] notebook在任何環境中，您都可以以互動方式探索Experience Platform中的客戶資料、從資料定義及計算功能，並將計算功能讀入您的機器學習環境中以進行模型製作。
 
