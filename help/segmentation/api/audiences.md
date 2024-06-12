@@ -3,10 +3,10 @@ title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
@@ -49,7 +49,7 @@ GET /audiences?{QUERY_PARAMETERS}
 +++擷取對象清單的範例要求。
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -173,7 +173,7 @@ curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
 }
 ```
 
-| 屬性 | 對象型別 | 說明 |
+| 屬性 | 客群類型 | 說明 |
 | -------- | ------------- | ----------- | 
 | `id` | 兩者 | 適用於對象的系統產生唯讀識別碼。 |
 | `audienceId` | 兩者 | 如果對象是平台產生的對象，此值與 `id`. 如果對象是外部產生的，此值由使用者端提供。 |
