@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；擷取；疑難排解；來源疑難排解；來源常見問題集；faq；來源聯結器；來源聯結器；來源聯結器常見問題集；來源聯結器疑難排解；
+keywords: Experience Platform；首頁；熱門主題；來源；擷取；疑難排解；來源疑難排解；來源常見問答；faq；來源聯結器；來源聯結器；來源聯結器常見問答；來源聯結器疑難排解；
 solution: Experience Platform
 title: 來源疑難排解
-description: 本檔案提供Adobe Experience Platform來源相關常見問題的解答。
+description: 本檔案提供有關Adobe Experience Platform來源常見問題的解答。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 來源疑難排解指南
 
-本檔案提供Adobe Experience Platform來源相關常見問題的解答。 關於其他相關問題和疑難排解 [!DNL Platform] 服務，包括所有使用者遇到的 [!DNL Platform] API，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
+本檔案提供有關Adobe Experience Platform來源常見問題的解答。 關於其他相關問題和疑難排解 [!DNL Platform] 服務，包括所有使用者遇到的服務 [!DNL Platform] API，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
 
 ## 常見問答
 
@@ -27,15 +27,15 @@ ht-degree: 0%
 
 可以使用連線字串、使用者名稱和密碼或存取權杖和金鑰來驗證來源。 有關受支援驗證型別的特定詳細資訊，請參閱指定來源聯結器的檔案。
 
-### 為什麼我最近所有的流量執行都失敗？
+### 為什麼我最近的所有流量執行都會失敗？
 
-如果您注意到最近所有的資料流執行都失敗，表示您的認證可能已變更或過期。 若要修正此問題，請嘗試使用最新的認證更新您的連線。
+如果您注意到您最近的所有資料流執行都失敗，表示您的認證可能已變更或過期。 若要修正此問題，請嘗試使用最新的認證更新您的連線。
 
 ### 支援哪些檔案型別？
 
 目前支援的檔案型別為分隔檔案、JSON和Parquet。
 
-### 檔案名稱和大小的限制是什麼？
+### 檔案名稱和大小有哪些限制？
 
 以下是您必須說明來源中檔案的限制清單。
 
@@ -43,11 +43,11 @@ ht-degree: 0%
 - 目錄和檔案名稱不能以正斜線(`/`)。 如果提供，則會自動移除。
 - 下列保留的URL字元必須正確逸出： `! ' ( ) ; @ & = + $ , % # [ ]`
 - 不允許使用下列字元： `" \ / : | < > * ?`.
-- 不允許非法URL路徑字元。 程式碼點數類似 `\uE000`雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的相關規則，請參閱 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- 不允許下列檔案名稱：LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)，以及兩個點字元(...)。
-- 每個批次的最大檔案數為1500，最大批次大小為100 GB。
+- 不允許非法URL路徑字元。 程式碼點數如下 `\uE000`雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的管理規則，請參閱 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- 不允許下列檔案名稱： LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)和兩個點字元(..)。
+- 每個批次的最大檔案數為1500，批次大小上限為100 GB。
 - 每列的屬性或欄位數上限為10,000。
-- 每位使用者每分鐘可傳送的批次數量上限為138。
+- 每位使用者每分鐘可傳送的批次數量上限為2000。
 
 ### 支援哪些資料型別？
 
@@ -55,11 +55,11 @@ ht-degree: 0%
 
 ### 支援哪些日期和時間格式？
 
-來源在擷取資料時支援多種日期時間格式。 如需受支援日期時間格式的詳細資訊，請參閱 [資料格式處理指南](../data-prep/data-handling.md#dates) 「資料準備」檔案中。
+擷取資料時，來源支援多種日期時間格式。 如需受支援日期時間格式的詳細資訊，請參閱 [資料格式處理指南](../data-prep/data-handling.md#dates) 「資料準備」檔案中。
 
-### 如何格式化CSV、JSON和Parquet檔案中的陣列？
+### 如何在CSV、JSON和Parquet檔案中格式化陣列？
 
-JSON和Parquet檔案原生支援陣列。 對於平面結構（例如CSV），不支援陣列。 不過，具有多個值的字串可以使用資料準備函式（例如explode和join）來分割為陣列。 有關這些資料準備函式的更多資訊，請參閱 [資料準備函式指南](../data-prep/functions.md#string)
+JSON和Parquet檔案原生支援陣列。 對於平面結構（例如CSV），不支援陣列。 不過，具有多個值的字串可以使用資料準備函式（例如explode和join）來分割為陣列。 有關這些資料準備函式的詳細資訊，請參閱 [資料準備函式指南](../data-prep/functions.md#string)
 
 ### 哪些來源支援部分擷取？
 
@@ -67,12 +67,12 @@ JSON和Parquet檔案原生支援陣列。 對於平面結構（例如CSV），�
 
 ### 何時應使用部分擷取？
 
-如果您這麼做，應使用部分擷取 **not** 具有限制，例如將整個檔案擷取到Platform。 或者，如果您不介意擷取可能包含錯誤的資料，則應使用部分擷取。
+如果您這樣做，應該使用部分擷取 **非** 具有限制，例如將整個檔案擷取到Platform。 或者，如果您不介意擷取可能包含錯誤的資料，則應該使用部分擷取。
 
 ### 典型的部分擷取錯誤臨界值為何？
 
-部分擷取沒有「典型錯誤臨界值」。 此值可能會因使用案例而異。 預設情況下，錯誤臨界值設定為5%。
+部分擷取沒有「一般錯誤臨界值」。 此值會因使用案例而異。 預設情況下，錯誤臨界值設定為5%。
 
 ### 建立新資料流後，流程執行狀態需要多久的時間才能更新？
 
-流程執行不會即時產生，而且在指定之後可能需要約兩到三分鐘的時間進行更新 `startTime`. 在建立新資料流後立即檢查資料流執行的狀態不會傳回資料流執行的資訊 `lastRunDetails` 因為它尚未發生。 建議在檢查流程執行的狀態之前，允許資料流程在幾分鐘內產生。
+流程執行不會即時產生，而且在指定之後可能需要約兩到三分鐘才會更新 `startTime`. 在建立新資料流後，立即檢查資料流執行的狀態不會傳回資料流執行的資訊。 `lastRunDetails` 因為它尚未發生。 建議在檢查流程執行的狀態之前，允許資料流程有幾分鐘產生。

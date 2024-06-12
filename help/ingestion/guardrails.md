@@ -3,7 +3,7 @@ keywords: Experience Platform；疑難排解；護欄；指南；
 title: 資料擷取的護欄
 description: 瞭解Adobe Experience Platform中資料擷取的護欄。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 7a2463e1bb09180ae7e02674d0c0040c8c874ad5
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 0%
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 | 擷取型別 | 准則 | 附註 |
 | --- | --- | --- |
-| 使用批次擷取API擷取資料湖 | <ul><li>您可以使用批次擷取API，每小時可擷取最多20 GB的資料至Data Lake。</li><li>每個批次的最大檔案數為1500。</li><li>最大批次大小為100 GB。</li><li>每列的屬性或欄位數上限為10000。</li><li>每分鐘每個使用者的批次數量上限為138。</li></ul> | |
+| 使用批次擷取API擷取資料湖 | <ul><li>您可以使用批次擷取API，每小時可擷取最多20 GB的資料至Data Lake。</li><li>每個批次的最大檔案數為1500。</li><li>最大批次大小為100 GB。</li><li>每列的屬性或欄位數上限為10000。</li><li>每分鐘每個使用者的批次數量上限為2000。</li></ul> | |
 | 使用批次來源擷取資料湖 | <ul><li>您可以使用批次擷取來源（例如），每小時將高達200 GB的資料擷取至資料湖 [!DNL Azure Blob]， [!DNL Amazon S3]、和 [!DNL SFTP].</li><li>批次大小應介於256 MB和100 GB之間。 這同時適用於未壓縮和壓縮的資料。 若在資料湖中解壓縮壓縮壓縮的資料，將套用這些限制。</li><li>每個批次的最大檔案數為1500。</li><li>檔案或資料夾的最小大小為1個位元組。 您無法擷取0位元組大小的檔案或資料夾。</li></ul> | 閱讀 [來源概觀](../sources/home.md) 如需可用於資料內嵌的來源目錄。 |
 | 批次內嵌至設定檔 | <ul><li>記錄類別的大小上限為100 KB （硬式）。</li><li>ExperienceEvent類別的大小上限為10 KB （硬式）。</li></ul> | |
 | 每天擷取的設定檔或ExperienceEvent批次數量 | **每天最多可擷取90個Profile或ExperienceEvent批次。** 這表示每天擷取的Profile和ExperienceEvent批次總數不能超過90。 擷取其他批次將會影響系統效能。 | 這是軟性限制。 雖然可能會超過軟性限制，但軟性限制提供系統效能的建議指引。 |
