@@ -3,19 +3,24 @@ solution: Experience Platform
 title: Real-time Customer Data Platform和Adobe Journey Optimizer的可用使用案例手冊。
 description: Real-time Customer Data Platform和Adobe Journey Optimizer中的所有教戰手冊。
 role: User
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
-
 
 # 可用的使用案例教戰手冊
 
 請閱讀本頁面，概略瞭解您可以在Real-time Customer Data Platform和Adobe Journey Optimizer中探索和使用的所有可用教戰手冊。
 
 ## Journey Optimizer中的使用案例手冊 {#optimizer-playbooks}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="可用的教戰手冊"
+>abstract="Real-time Customer Data Platform和Adobe Journey Optimizer中的所有教戰手冊。"
 
 | 教戰手冊名稱 | 說明 |
 | ------------- |  ----------- |
