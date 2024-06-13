@@ -5,11 +5,11 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
 workflow-type: tm+mt
 source-wordcount: '1862'
-ht-degree: 12%
+ht-degree: 6%
 
 ---
 
-# 身分名稱空間總覽
+# 身分命名空間總覽
 
 請閱讀以下檔案，深入瞭解您可以在Adobe Experience Platform Identity Service中處理身分識別名稱空間的動作。
 
@@ -26,13 +26,13 @@ ht-degree: 12%
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="身分識別命名空間"
->abstract="身分命名空間是特定身分的背景。例如，`Email`的命名空間可以對應 **name<span>@acme.com**。同樣地，`Phone` 的命名空間可以對應 `555-555-1234`。"
+>abstract="身分名稱空間是指定身分的上下文。 例如，名稱空間 `Email` 可能對應至 **名稱<span>@acme.com**. 同樣地，名稱空間 `Phone` 可能對應至 `555-555-1234`."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
->title="身分識別值"
->abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分識別命名空間定義。當全部設定檔片段都符合記錄資料時，命名空間和識別值必須相符。當全部設定檔片段都符合記錄資料時，命名空間和識別值必須相符。"
+>title="身分值"
+>abstract="身分值是代表唯一個人、組織或資產的識別碼。 值所代表的身分內容或型別是由對應的身分名稱空間所定義。 跨設定檔片段比對記錄資料時，名稱空間和身分值必須相符。 跨設定檔片段比對記錄資料時，名稱空間和身分值必須相符。"
 >text="Learn more in documentation"
 
 完整身分包含兩個元件： **身分值** 和 **身分名稱空間**. 例如，如果身分的值是 `scott@acme.com`，則名稱空間會將此值識別為電子郵件地址，以提供其內容。 同樣地，名稱空間可以區分 `555-123-456` 作為電話號碼，以及 `3126ABC` 作為CRM ID。 基本上， **名稱空間會提供指定身分的上下文**. 跨設定檔片段比對記錄資料時，例如 [!DNL Real-Time Customer Profile] 會合併設定檔資料，身分值和名稱空間必須相符。
@@ -65,14 +65,14 @@ ht-degree: 12%
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
->title="指定身分類型"
->abstract="身分類型控制資料是否儲存到身分識別圖中。不會為下列身分類型產生身分識別圖：非個人識別碼和合作夥伴 ID。"
+>title="指定身分型別"
+>abstract="身分型別可控制資料是否儲存在身分圖表中。 不會為下列身分型別產生身分圖表：非人員識別碼和合作夥伴ID。"
 >text="Learn more in documentation"
 
 身分名稱空間的一個元素是 **身分型別**. 身分型別會判斷：
 
 * 是否要產生身分圖表：
-   * 不會為下列身分類型產生身分識別圖：非個人識別碼和合作夥伴 ID。
+   * 不會為下列身分型別產生身分圖表：非人員識別碼和合作夥伴ID。
    * 會針對所有其他身分型別產生身分圖表。
 * 達到系統限制時，會從身分圖表移除哪些身分。 如需詳細資訊，請閱讀 [身分資料的護欄](../guardrails.md).
 
@@ -82,9 +82,9 @@ Experience Platform中有以下身分型別：
 | --- | --- |
 | Cookie ID | Cookie ID可識別網頁瀏覽器。 這些身分對於擴充至關重要，並構成身分圖表的大多數。 然而，自然而然地，它們會迅速衰落，並隨著時間而失去價值。 |
 | 跨裝置ID | 跨裝置ID會識別個人，通常會將其他ID連結在一起。 範例包括登入ID、CRM ID和熟客ID。 此表示會 [!DNL Identity Service] 以敏感地處理值。 |
-| 裝置ID | 裝置ID會識別硬體裝置，例如IDFA (iPhone和iPad)、GAID (Android)和RIDA (Roku)，而且可由家中的多個人共用。 |
+| 裝置 ID | 裝置 ID 會識別硬體裝置，例如 IDFA (iPhone 和 iPad)、GAID (Android) 和 RIDA (Roku)，而且可由家中的多個人共用。 |
 | 電子郵件地址 | 電子郵件地址通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 此型別的身分包含個人識別資訊(PII)。 此表示會 [!DNL Identity Service] 以敏感地處理值。 |
-| 非人員識別碼 | 非人員ID是用來儲存需要名稱空間但未連線至人員叢集的識別碼。 例如，產品SKU、與產品、組織或商店相關的資料。 |
+| 非人員識別碼 | 非人員 ID 是用於儲存需要命名空間但未連接到人員叢集的識別碼。例如，產品 SKU；與產品、組織或存放區有關的資料。 |
 | 合作夥伴 ID | <ul><li>合作夥伴 ID 指資料合作夥伴用於代表人員的識別碼。合作夥伴ID通常使用假名，以免揭露個人的真實身分，而且可能是機率。 在Real-time Customer Data Platform中，合作夥伴ID主要用於擴充受眾啟用和資料擴充，而非用於建立身分圖表連結。</li><li>擷取包含指定為合作夥伴ID型別的身分名稱空間的身分時，不會產生身分圖表。</li><li>若無法使用合作夥伴ID的身分型別來內嵌合作夥伴資料，可能會導致身分服務受到系統圖表限制，且個人資料可能會不必要地合併。</li><ul> |
 | 電話號碼 | 電話號碼通常與單一人員相關聯，因此可用於跨不同頻道識別該人員。 此型別的身分識別包括PII。 此表示會 [!DNL Identity Service] 以敏感地處理值。 |
 
@@ -104,22 +104,22 @@ Experience Platform提供數個適用於所有組織的身分識別名稱空間�
 | Apple推播通知服務 | 代表使用Apple推播通知服務所收集之身分的名稱空間。 請參閱以下檔案： [Apple推播通知服務](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) 以取得詳細資訊。 |
 | ECID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](./ecid.md) 以取得詳細資訊。 |
 | 電子郵件 | 代表電子郵件地址的名稱空間。 這種型別的名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
-| 電子郵件（SHA256，小寫） | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 請參閱以下檔案： [SHA256雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 以取得詳細資訊。 |
+| 電子郵件 (SHA256，小寫) | 預先雜湊電子郵件地址的名稱空間。 使用SHA256雜湊之前，此名稱空間中提供的值會轉換為小寫。 在電子郵件地址標準化之前，需要修剪前置和結尾空格。 無法回溯變更此設定。 請參閱以下檔案： [SHA256雜湊支援](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) 以取得詳細資訊。 |
 | Firebase雲端通訊 | 一個名稱空間，代表使用Google Firebase Cloud Messaging為推播通知所收集的身分。 請參閱以下檔案： [Google Firebase雲端通訊](https://firebase.google.com/docs/cloud-messaging) 以取得詳細資訊。 |
 | Google廣告ID (GAID) | 代表Google Advertising ID的名稱空間。 請參閱以下檔案： [Google廣告ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) 以取得詳細資訊。 |
 | 電話 | 代表電話號碼的名稱空間。 這種型別的名稱空間通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 |
-| 電話(E.164) | 代表需要以E.164格式雜湊的原始電話號碼的名稱空間。 E.164格式包含加號(`+`)、國際國家/地區撥號代碼、當地區號和電話號碼。 例如: `(+)(country code)(area code)(phone number)`。 |
-| 電話(SHA256) | 代表需使用SHA256雜湊處理之電話號碼的名稱空間。 您必須移除符號、字母及任何前導零。 您也必須新增國家/地區呼叫代碼作為前置詞。 |
+| 電話(E.164) | 代表需要以E.164格式雜湊的原始電話號碼的名稱空間。 E.164格式包含加號(`+`)、國際國家/地區撥號代碼、當地區號和電話號碼。 例如： `(+)(country code)(area code)(phone number)`. |
+| 電話 (SHA256) | 代表需使用SHA256雜湊處理之電話號碼的名稱空間。 您必須移除符號、字母及任何前導零。 您也必須新增國家/地區呼叫代碼作為前置詞。 |
 | 電話(SHA256_E.164) | 代表需要使用SHA256和E.164格式雜湊的原始電話號碼的名稱空間。 |
 | TNTID | 代表Adobe Target的名稱空間。 請參閱以下檔案： [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) 以取得詳細資訊。 |
 | Windows AID | 代表Windows Advertising ID的名稱空間。 請參閱以下檔案： [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) 以取得詳細資訊。 |
 
-### 檢視身分命名空間 {#view-identity-namespaces}
+### 檢視身分名稱空間 {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"
 >title="檢視整合身分"
->abstract="整合身分識別是用於連接其他系統的命名空間，不用於身分識別解析或拼接身分識別。<br>這些身分依預設是隱藏的。使用切換來檢視整合命名空間。"
+>abstract="整合身分是用來連線其他系統的名稱空間，不會用於身分解析或拼接身分。 <br> 預設會隱藏這些身分。 使用切換來檢視整合名稱空間。"
 
 若要在UI中檢視身分識別名稱空間，請選取 **[!UICONTROL 身分]** 在左側導覽中，然後選取 **[!UICONTROL 瀏覽]**.
 

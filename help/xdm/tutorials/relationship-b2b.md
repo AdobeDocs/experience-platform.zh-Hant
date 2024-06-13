@@ -5,16 +5,16 @@ exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1363'
-ht-degree: 15%
+ht-degree: 1%
 
 ---
 
-# 在 Real-Time Customer Data Platform B2B 版本中定義兩個方案之間的多對一關係 {#relationship-b2b}
+# 在Real-time Customer Data Platform B2B Edition中定義兩個結構描述之間的多對一關係 {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
->title="參考方案"
->abstract="選取要建立關係的方案。根據方案的類別，方案還可能和 B2B 內容中的其他實體存在現有關係。請查看文件以了解 B2B 方案類別彼此間的關係。"
+>title="參照結構描述"
+>abstract="選取要建立關係的結構描述。 根據架構的類別，它也可能與B2B內容中的其他實體有現有關係。 請參閱檔案以瞭解B2B結構描述類別如何相互關聯。"
 
 Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Model (XDM)類別，可擷取基本B2B資料實體，包括 [帳戶](../classes/b2b/business-account.md)， [機會](../classes/b2b/business-opportunity.md)， [行銷活動](../classes/b2b/business-campaign.md)、等等。 根據這些類別建置結構描述，並啟用它們以用於中 [即時客戶個人檔案](../../profile/home.md)，您可以將不同來源的資料合併到稱為聯合結構的統一呈現中。
 
@@ -46,12 +46,12 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 
 結構描述關係由 **來源結構描述** 會參照的主要身分欄位 **參考結構描述**. 在接下來的步驟中， 」[!DNL Opportunities]「做為來源結構描述，而「[!DNL Accounts]」會做為參考結構描述。
 
-### 了解 B2B 關係中的身分
+### 瞭解B2B關係中的身分
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
->title="參考身分識別命名空間"
->abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。請查看文件以了解有關 B2B 關係中身分識別的詳細資訊。"
+>title="參考身分命名空間"
+>abstract="參考結構描述的主要身分欄位的名稱空間（型別）。 參考結構描述必須具有已建立的主要身分欄位才能參與關係。 請參閱檔案以進一步瞭解B2B關係中的身分。"
 
 為了建立關係，參考結構描述必須具有定義的主要身分。 為B2B實體設定主要身分時，請記住，如果您跨不同系統或位置收集字串型實體ID，則這些ID可能會重疊，這可能會導致Platform中的資料衝突。
 
@@ -79,17 +79,17 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 
 ![帳戶結構描述](../images/tutorials/relationship-b2b/accounts.png)
 
-## 為來源方案定義關係欄位 {#relationship-field}
+## 定義來源結構描述的關係欄位 {#relationship-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
->title="目前方案中的關係名稱"
->abstract="說明從目前方案到參考方案的關係的標籤 (例如，「相關帳戶」)。此標籤會用於設定檔和分段中，以從相關 B2B 實體將內容提供給資料。請查看文件以了解有關建置 B2B 方案關係的詳細資訊。"
+>title="來自目前結構描述的關係名稱"
+>abstract="說明從目前結構描述到參照結構描述關係的標籤（例如，「相關帳戶」）。 此標籤用於設定檔和區段，為相關B2B實體的資料提供內容。 請參閱檔案以進一步瞭解建立B2B結構描述關係。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
->title="參考方案中的關係名稱"
->abstract="說明從參考方案到目前方案的關係的標籤 (例如，「相關機會」)。此標籤會用於設定檔和分段中，以從相關 B2B 實體將內容提供給資料。請查看文件以了解有關建置 B2B 方案關係的詳細資訊。"
+>title="來自參照結構描述的關係名稱"
+>abstract="說明從參考結構描述到目前結構描述關係的標籤（例如，「相關機會」）。 此標籤用於設定檔和區段，為相關B2B實體的資料提供內容。 請參閱檔案以進一步瞭解建立B2B結構描述關係。"
 
 為了定義兩個結構描述之間的關係，來源結構描述必須具有專用欄位，以指示參考結構描述的主要身分。 標準B2B類別包含常用相關商業實體的專用來源索引鍵欄位。 例如， [!UICONTROL XDM商業機會] 類別包含相關帳戶(`accountKey`)和相關行銷活動(`campaignKey`)。 不過，您也可以新增其他 [!UICONTROL B2B來源] 若您需要超過預設的元件，請使用自訂欄位群組將欄位新增至結構描述。
 

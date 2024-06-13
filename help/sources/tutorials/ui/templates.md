@@ -1,21 +1,21 @@
 ---
 description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加速B2B資料的資料擷取程式。
-title: 使用 UI 中的範本建立來源資料流
+title: 在UI中使用範本建立來源資料流
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
-ht-degree: 9%
+ht-degree: 1%
 
 ---
 
-# 使用 UI 中的範本建立來源資料流 {#create-a-sources-dataflow-using-templates-in-the-ui}
+# 在UI中使用範本建立來源資料流 {#create-a-sources-dataflow-using-templates-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Platform UI 中的來源範本"
->abstract="範本包括多種自動產生的資產，例如結構描述、資料集、身分識別、對應規則、身分識別命名空間和資料流，您將資料從來源帶入 Experience Platform 時可以使用。您可以更新自動產生的資產，以針對您的使用案例進行自訂。"
+>title="Platform UI中的來源範本"
+>abstract="範本包括自動產生的資產，例如結構描述、資料集、身分、對應規則、身分名稱空間和資料流程，在將資料從來源引進Experience Platform時可使用這些資產。 您可以更新自動產生的資產以供自訂，以符合您的使用案例。"
 
 >[!IMPORTANT]
 >
@@ -45,13 +45,13 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 * [[!DNL Experience Data Model (XDM)] 系統](../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
 * [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
-## 在 Platform UI 中使用範本 {#use-templates-in-the-platform-ui}
+## 在Platform UI中使用範本 {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
->title="選取商業類型"
->abstract="為您的使用案例選取適合的商業類型。您的存取權限可能會依據您的即時客戶資料平台訂閱帳戶而不同。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=zh-Hant" text="Real-Time CDP 概觀"
+>title="選取業務型別"
+>abstract="為您的使用案例選取適當的業務型別。 您的存取權可能會因您的Real-time Customer Data Platform訂閱帳戶而異。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP 概觀"
 
 在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 並檢視Experience Platform中可用的來源目錄。
 
@@ -105,7 +105,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 | 機會聯絡人角色 | 「商機聯絡人角色」範本會擷取與特定商機相關聯之潛在客戶的角色相關詳細資訊。 |
 | 人員 | 「人員」範本會擷取個別人員的屬性，例如人口統計細節、聯絡資訊和同意偏好設定。 |
 | 計畫成員資格 | 「方案會籍」範本會擷取與商業促銷活動相關連絡人的詳細資料，包括培養步調和連絡人回應。 |
-| 方案 | 方案範本會擷取商業促銷活動的詳細資料，如狀態、管道、時間表和成本。 |
+| 計畫 | 方案範本會擷取商業促銷活動的詳細資料，如狀態、管道、時間表和成本。 |
 | 靜態清單成員資格 | 「靜態清單成員資格」範本會擷取靜態清單中人員與其成員資格之間的關係。 |
 | 靜態清單 | 靜態清單範本會擷取特定使用案例的具現化人員清單。 |
 
@@ -207,10 +207,10 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_review"
->title="檢閱您自動產生的資產"
->abstract="產生所有資產最多可能需要五分鐘的時間。如果您選擇離開頁面，資產完成後您將收到傳回的通知。您可以在產生資產後檢閱資產，並可隨時對資料流進行其他設定。"
+>title="檢閱自動產生的資產"
+>abstract="產生所有資產最多可能需要五分鐘。 如果您選擇離開頁面，當資產完成後，您會收到通知以返回。 產生資產後，您就可以加以檢閱，並隨時對資料流進行其他設定。"
 
-此 [!UICONTROL 檢閱範本資產] 頁面會顯示作為範本的一部分自動產生的資產。 您可以在此頁面檢視與來源連線相關聯的自動產生結構描述、資料集、身分名稱空間和資料流程。 產生所有資產最多可能需要五分鐘的時間。如果您選擇離開頁面，資產完成後您將收到傳回的通知。您可以在產生資產後檢閱資產，並可隨時對資料流進行其他設定。
+此 [!UICONTROL 檢閱範本資產] 頁面會顯示作為範本的一部分自動產生的資產。 您可以在此頁面檢視與來源連線相關聯的自動產生結構描述、資料集、身分名稱空間和資料流程。 產生所有資產最多可能需要五分鐘。 如果您選擇離開頁面，當資產完成後，您會收到通知以返回。 產生資產後，您就可以加以檢閱，並隨時對資料流進行其他設定。
 
 根據預設，自動產生的資料流會設為草稿狀態，以允許對設定進行進一步自訂，例如對應規則或排程頻率。 選取省略符號(`...`)，然後選取「 」 **[!UICONTROL 預覽對應]** 檢視為草稿資料流建立的對應集。
 

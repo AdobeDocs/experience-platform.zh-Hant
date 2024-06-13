@@ -8,26 +8,26 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1158'
-ht-degree: 10%
+ht-degree: 0%
 
 ---
 
-# 使用 [!DNL Schema Editor] 定義兩個方案之間的一對一關係 {#relationship-ui}
+# 使用定義兩個結構描述之間的一對一關係 [!DNL Schema Editor] {#relationship-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
->title="方案關係"
->abstract="屬於不同類別的方案可藉由關係欄位建立內容連結，進而讓您能夠建置更複雜的分段規則。如需有關方案關係的詳細資訊，請查看此文件。"
+>title="結構描述關係"
+>abstract="屬於不同類別的結構描述可透過關係欄位進行內容連結，讓您建立更複雜的細分規則。 請參閱檔案以取得結構描述關係的詳細資訊。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_reference_schema"
->title="參考方案"
->abstract="選取要建立關係的方案。此方案可能和目前方案屬於不同類別。如需有關方案關係的詳細資訊，請查看此文件。"
+>title="參照結構描述"
+>abstract="選取要建立關係的綱要。 此結構描述可以是與目前結構描述不同的類別。 請參閱檔案以取得結構描述關係的詳細資訊。"
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_1to1_identity_namespace"
->title="參考身分識別命名空間"
->abstract="適用於參考方案的主要身分識別欄位的命名空間 (類型)。參考方案必須有一個已建立的主要身分識別欄位才能參與關係。如需有關方案關係的詳細資訊，請查看此文件。"
+>title="參考身分命名空間"
+>abstract="參考結構描述的主要身分欄位的名稱空間（型別）。 參考結構描述必須具有已建立的主要身分欄位才能參與關係。 請參閱檔案以取得結構描述關係的詳細資訊。"
 
 瞭解客戶之間的關係以及他們跨不同管道與您品牌的互動，是Adobe Experience Platform的重要一環。 在的結構中定義這些關係 [!DNL Experience Data Model] (XDM)結構描述可讓您對客戶資料獲得複雜的深入分析。
 
@@ -103,7 +103,7 @@ ht-degree: 10%
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## 為來源方案定義關係欄位 {#relationship-field}
+## 定義來源結構描述的關係欄位 {#relationship-field}
 
 一旦您的來源結構描述定義了專用參考欄位後，您就可以將其指定為關係欄位。
 
