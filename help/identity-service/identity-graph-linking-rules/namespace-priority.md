@@ -2,9 +2,10 @@
 title: 名稱空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 badge: Beta
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -50,9 +51,9 @@ ht-degree: 1%
 
 處理此主題的另一種方法是使用基數。 對於指定的人員實體，將會建立多少身分？ 在大多數情況下，人員會有一個CRM ID、數個硬體裝置識別碼（IDFA/GAID重設不應該經常發生），以及更多的Cookie （可以想見，個人可以在多個裝置上瀏覽、使用無痕模式，或在任何指定時間重設Cookie）。 一般而言， **較低基數表示名稱空間具有較高值**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## 驗證名稱空間優先順序設定
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+瞭解如何排列名稱空間的優先順序後，您就可以使用圖表模擬工具來測試各種圖表摺疊情況，並確保優先順序設定傳回預期的圖表結果。 如需詳細資訊，請參閱使用指南 [圖表模擬工具](./graph-simulation.md).
 
 ## 設定名稱空間優先順序
 
