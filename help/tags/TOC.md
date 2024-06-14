@@ -1,22 +1,22 @@
 ---
 audience: user
-user-guide-title: 標記說明
+user-guide-title: 標籤說明
 breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 36%
+source-wordcount: '765'
+ht-degree: 35%
 
 ---
 
 
 # 標記 {#tags}
 
-* [標記總覽](./home.md)
+* [標籤總覽](./home.md)
 * 快速入門 {#get-started}
    * [快速入門手冊](./quick-start/quick-start.md)
    * [實作指南](./quick-start/implementation-guides.md)
@@ -250,7 +250,9 @@ ht-degree: 36%
       * [!DNL Twitter] {#twitter}
          * [概述](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] 網頁事件API {#tiktok}
-         * [概觀](./extensions/server/tiktok/overview.md)
+         * [概述](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [概述](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] 事件API {#zendesk}
          * [概觀](./extensions/server/zendesk/overview.md)
 * 擴充功能開發 {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 36%
 * [常見問題集](./faq.md)
 * [術語更新](./term-updates.md)
 * [停止支援Internet Explorer 10和11](./ie-deprecation.md)
-* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Platform發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
 
