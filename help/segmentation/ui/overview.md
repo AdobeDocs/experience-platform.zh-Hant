@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4334'
+source-wordcount: '4346'
 ht-degree: 1%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 1%
 | [!UICONTROL 與合作夥伴分享] | 對象構成、自訂上傳、細分服務 | 與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請參閱 [區段比對概觀](./segment-match/overview.md). |
 | [!UICONTROL 管理標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
 | [!UICONTROL 移至資料夾] | 對象構成、自訂上傳、細分服務 | 管理對象所屬的資料夾。 如需有關此功能的詳細資訊，請參閱以下章節： [篩選和標籤](#manage-audiences). |
-| [!UICONTROL 複製] | Segmentation Service | 複製選取的對象。 |
+| [!UICONTROL 複製] | Segmentation Service | 複製選取的對象。 有關此函式的詳細資訊，請參閱 [區段常見問題集](../faq.md#copy). |
 | [!UICONTROL 套用存取權標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL 發佈] | 自訂上傳，分段服務 | 發佈選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
 | [!UICONTROL 停用] | 自訂上傳，分段服務 | 停用選取的對象。 如需有關生命週期狀態管理的詳細資訊，請參閱 [區段常見問答集的生命週期狀態區段](../faq.md#lifecycle-states). |
@@ -226,7 +226,7 @@ ht-degree: 1%
 - 您 **無法** 刪除用於目的地啟用的對象。
 - 如果您選取篩選器，則所選的對象 **將** 重設。
 
-### 對象詳細資料 {#audience-details}
+### 客群詳細資料 {#audience-details}
 
 若要檢視特定對象的詳細資訊，請在 **[!UICONTROL 瀏覽]** 標籤。
 

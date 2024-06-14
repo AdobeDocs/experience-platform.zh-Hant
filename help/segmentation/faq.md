@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b41a60942460e22556714699975f9eb281d76335
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4060'
+source-wordcount: '4096'
 ht-degree: 0%
 
 ---
@@ -206,6 +206,10 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 此時，您 **必須** 手動檢查對象是否用於Adobe Journey Optimizer的下游，因為此狀態目前不會自動檢查。
 
 此外，您 **必須** 手動檢查對象是否作為以帳戶為基礎的對象的元件使用，因為此狀態目前也不會自動檢查。
+
+### 當我複製對象時會發生什麼事？ {#copy}
+
+當您複製對象時，新對象將處於草稿狀態，並保留套用至原始對象的相同資料夾、標籤和標籤。
 
 ### 使用對象做為子對象是否會影響生命週期狀態轉換？
 
