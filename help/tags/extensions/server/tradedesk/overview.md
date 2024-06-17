@@ -3,18 +3,16 @@ title: Trade Desk Real-Time Conversions API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Trade Desk Real-Time Conversions API擴充功能。
 hide: true
 hidefromtoc: true
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 1%
+source-wordcount: '930'
+ht-degree: 2%
 
 ---
 
 # [!DNL The Trade Desk Real-Time Conversions API] 擴充功能概觀
 
-[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) 可讓您將事件傳送至 [!DNL The Trade Desk] 以運用重新定位和歸因。
-
-您可以使用 [!DNL The Trade Desk Real-Time Conversions API] 從Adobe Experience PlatformEdge Network傳送資料至的擴充功能 [!DNL The Trade Desk] 利用API的功能，在 [事件轉送](../../../ui/event-forwarding/overview.md) 規則。
+您可以使用 [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) 從Adobe Experience PlatformEdge Network傳送資料至的擴充功能 [!DNL The Trade Desk] 利用API的功能，在 [事件轉送](../../../ui/event-forwarding/overview.md) 規則。
 
 使用 [!DNL The Trade Desk Real-Time Conversions API] 擴充功能上，您可在以下位置運用API的功能： [事件轉送](../../../ui/event-forwarding/overview.md) 資料傳送至的規則 [!DNL The Trade Desk] 從Adobe Experience PlatformEdge Network。
 
@@ -91,7 +89,8 @@ ht-degree: 1%
 
 **[!UICONTROL 物件要求引數]**
 
-請閱讀以下章節，瞭解JSON格式的請求引數，例如專案、隱私權和資料處理。
+包含更多資訊的JSON物件。 您可以選擇使用一組縮減的鍵值輸入或提供原始JSON。 此外，您可以選取磁碟(![磁碟圖示](../../../images/extensions/server/tradedesk/disk-icon.png))。
+
 
 ![此 [!DNL Object Request Parameters] 顯示可用欄位的區段。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
@@ -99,14 +98,14 @@ ht-degree: 1%
 
 **[!UICONTROL 設定覆寫]**
 
->注意
+>[!NOTE]
 >
 >此 [!UICONTROL 設定覆寫] 欄位可讓您設定不同的 [!DNL Advertiser ID] 和/或 [!DNL Merchant ID] 每個規則上。
 
 | 輸入 | 說明 |
 | --- | --- |
-| 廣告商ID | 您要覆寫擴充功能設定中提供的廣告商ID的廣告商ID。 |
-| 商家ID | 您要覆寫擴充功能設定中提供的商家識別碼的商家識別碼。 |
+| 廣告商 ID | 此事件相關廣告商的唯一識別碼。 您可以提供不同的廣告商ID，覆寫您在擴充功能設定中提供的ID。 |
+| 商家ID | 每個商家提供的唯一識別碼 [!DNL The Trade Desk] 整個上線程式。 您可以提供不同的商人ID，以覆寫您在擴充功能設定中提供的ID。 |
 
 ![此 [!DNL Configuration Overrides] 顯示可用欄位的區段。](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
