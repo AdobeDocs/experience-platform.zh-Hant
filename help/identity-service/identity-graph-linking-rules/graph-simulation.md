@@ -2,14 +2,19 @@
 title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 badge: Beta
-source-git-commit: 21436bc051510729fa14b759f562b0bca7a5abba
+exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
+source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
 workflow-type: tm+mt
-source-wordcount: '1404'
+source-wordcount: '1438'
 ht-degree: 1%
 
 ---
 
 # [!DNL Graph Simulation] UI指南
+
+>[!AVAILABILITY]
+>
+>此功能尚未推出；身分圖表連結規則的Beta版計畫預計於7月在開發沙箱上開始。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。
 
 [!DNL Graph Simulation] 是Identity Service UI中的工具，可用於模擬身分圖表在指定身分的特定組合下的行為方式，以及您設定 [身分最佳化演演算法](./identity-optimization-algorithm.md).
 
