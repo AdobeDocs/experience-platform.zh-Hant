@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何使用計算欄位，將平面結構描述檔案中的陣列從Real-Time CDP匯出至雲端儲存空間目的地。
 badge: Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1477'
 ht-degree: 5%
 
 ---
@@ -31,9 +31,13 @@ ht-degree: 5%
 * [UI指南和概觀](/help/data-prep/ui/mapping.md#calculated-fields)
 * [資料準備函式](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->並非上方列出的所有函式都受支援 *將欄位匯出至雲端儲存空間目的地時* 使用計算欄位功能。 請參閱 [支援的函式區段](#supported-functions) 如需詳細資訊，請參閱以下內容。
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Platform中的陣列和其他物件型別 {#arrays-strings-other-objects}
 
@@ -84,9 +88,11 @@ Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解 [�
 
 ![反白目標欄位並填入目標值的對應步驟。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## 支援的函數 {#supported-functions}
+## 支援的函式 {#supported-functions}
 
-請注意，測試版的計算欄位僅支援以下函式，且目的地的陣列支援：
+所有記錄 [資料準備函式](/help/data-prep/functions.md) 支援在檔案型目的地啟用資料。
+
+但是請注意，目前以下函式僅在Beta版的計算欄位中提供廣泛的使用案例說明和範例輸出資訊，並且支援目標的陣列：
 
 * `join`
 * `coalesce`
