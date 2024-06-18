@@ -4,17 +4,17 @@ title: 驗證及存取Experience PlatformAPI
 type: Tutorial
 description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 7%
+source-wordcount: '2149'
+ht-degree: 2%
 
 ---
 
 
 # 驗證及存取 Experience Platform API
 
-本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。在本教學課程結束時，您將已產生或收集下列憑證，這些憑證需要作為所有Platform API呼叫中的標題：
+本檔案逐步說明如何存取Adobe Experience Platform開發人員帳戶，進而呼叫Experience Platform API。 在本教學課程結束時，您將已產生或收集下列憑證，這些憑證需要作為所有Platform API呼叫中的標題：
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -88,15 +88,15 @@ ht-degree: 7%
 >
 >選取 **[!UICONTROL 檢視檔案]** 可在個別瀏覽器視窗中導覽以完成 [Experience Platform API參考檔案](https://developer.adobe.com/experience-platform-apis/).
 
-### 選取OAuth伺服器對伺服器驗證型別 {#select-oauth-server-to-server}
+### 選取 [!UICONTROL OAuth伺服器對伺服器] 驗證型別 {#select-oauth-server-to-server}
 
-接著，選取驗證型別以產生存取權杖並存取Experience PlatformAPI。
+接下來，選取 [!UICONTROL OAuth伺服器對伺服器] 驗證型別，以產生存取權杖並存取Experience PlatformAPI。
 
 >[!IMPORTANT]
 >
->選取 **[!UICONTROL OAuth伺服器對伺服器]** 方法，因為這將是日後唯一支援的方法。 此 **[!UICONTROL 服務帳戶(JWT)]** 方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在區段中取得詳細資訊 [!BADGE 已棄用]{type=negative}[產生JSON Web權杖(JWT)](#jwt).
+>此 **[!UICONTROL OAuth伺服器對伺服器]** 方法是唯一支援往後發展的權杖產生方法。 先前支援的 **[!UICONTROL 服務帳戶(JWT)]** 方法已過時，且無法選取以進行新整合。 雖然使用JWT驗證方法的現有整合功能可繼續使用至2025年1月1日，Adobe強烈建議您將現有整合功能移轉至新的 [!UICONTROL OAuth伺服器對伺服器] 該日期之前的方法。 在區段中取得詳細資訊 [!BADGE 已棄用]{type=negative}[產生JSON Web權杖(JWT)](#jwt).
 
-![選取「Experience PlatformAPI」。](./images/api-authentication/oauth-authentication-method.png)
+![選取Experience Platform API的OAuth伺服器對伺服器驗證方法。](./images/api-authentication/oauth-authentication-method.png)
 
 ### 選取要整合的產品設定檔 {#select-product-profiles}
 
@@ -126,7 +126,7 @@ Your integration's service account will gain access to granular features through
 ![在Developer Console中新增API後的整合資訊。](./images/api-authentication/api-integration-information.png)
 
 * `{API_KEY}` ([!UICONTROL 使用者端ID])
-* `{ORG_ID}` ([!UICONTROL 組織 ID])
+* `{ORG_ID}` ([!UICONTROL 組織ID])
 
 <!--
 
@@ -154,10 +154,10 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 
 >[!WARNING]
 >
-不建議使用產生存取權杖的JWT方法。 所有新的整合必須使用 [OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server). Adobe 也建議您將現有的整合移轉至 OAuth 方法。 請參閱下列重要檔案：
+不建議使用產生存取權杖的JWT方法。 所有新的整合必須使用 [OAuth伺服器對伺服器驗證方法](#select-oauth-server-to-server). Adobe也要求您在2025年1月1日前將現有的整合移轉至OAuth方法，以便您的整合能繼續運作。 請參閱下列重要檔案：
 > 
 * [應用程式從JWT移轉至OAuth的移轉指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [OAuth 新舊應用程式的實施指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+* [使用OAuth的新舊應用程式實作指南](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
 * [使用OAuth伺服器對伺服器憑證方法的優勢](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ 檢視已棄用的資訊
@@ -313,7 +313,7 @@ This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentica
 
 ### 將開發人員新增至產品設定檔 {#add-developers-to-product-profile}
 
-移至 [[!DNL Admin Console]](https://adminconsole.adobe.com/) 並使用您的 Adobe ID 登入。
+前往 [[!DNL Admin Console]](https://adminconsole.adobe.com/) 並使用您的Adobe ID登入。
 
 選取 **[!UICONTROL 產品]**，然後選取 **[!UICONTROL Adobe Experience Platform]** 從產品清單中。
 
