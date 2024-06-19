@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience Platform中的IAB TCF 2.0支援
 description: 瞭解如何設定您的資料作業和結構描述，以在對Adobe Experience Platform中的目的地啟用區段時傳達客戶同意選擇。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Adobe Experience Platform是已註冊的 [IAB TCF 2.0廠商清單](https://iabeu
 * [Adobe Experience Platform Identity服務](/help/identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
 * [即時客戶個人檔案](/help/profile/home.md)：使用 [!DNL Identity Service] 以即時從資料集建立詳細的客戶設定檔。 [!DNL Real-Time Customer Profile] 從資料湖提取資料，並將客戶設定檔儲存在其自己的獨立資料存放區中。
 * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)：使用者端JavaScript程式庫，可讓您將各種Platform服務整合至您面向客戶的網站。
-   * [SDK同意命令](/help/web-sdk/consent/supporting-consent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
+   * [SDK同意命令](../../../../web-sdk/commands/setconsent.md)：本指南中顯示的同意相關SDK命令的使用案例概觀。
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md)：可讓您除 [!DNL Real-Time Customer Profile] 將資料歸入個人群組，這些個人具有類似特徵且對行銷策略的回應類似。
 
 除了上述Platform服務以外，您也應該熟悉 [目的地](/help/data-governance/home.md) 以及他們在Platform生態系統中的角色。
@@ -124,7 +124,7 @@ Adobe Audience Manager與Platform共用的任何區段(透過 [!DNL Audience Man
 
 | 資料流欄位 | 值 |
 | --- | --- |
-| [!UICONTROL 沙箱] | 平台的名稱 [沙箱](/help/sandboxes/home.md) 包含設定資料流所需的串流連線和資料集。 |
+| [!UICONTROL Sandbox] | 平台的名稱 [沙箱](/help/sandboxes/home.md) 包含設定資料流所需的串流連線和資料集。 |
 | [!UICONTROL 串流入口] | 適用於Experience Platform的有效串流連線。 請參閱上的教學課程 [建立串流連線](/help/ingestion/tutorials/create-streaming-connection-ui.md) 如果您沒有現有的串流入口。 |
 | [!UICONTROL 事件資料集] | 選取 [!DNL XDM ExperienceEvent] 資料集建立於 [上一步](#datasets). 若您包含 [[!UICONTROL IAB TCF 2.0同意] 欄位群組](/help/xdm/field-groups/event/iab.md) 在此資料集的結構描述中，您可以使用來追蹤一段時間內的同意變更事件， [`sendEvent`](#sendEvent) 命令，將該資料儲存在此資料集中。 請記住，儲存在此資料集中的同意值為 **非** 用於自動執行工作流程。 |
 | [!UICONTROL 設定檔資料集] | 選取 [!DNL XDM Individual Profile] 資料集建立於 [上一步](#datasets). 使用回應CMP同意變更掛接時 [`setConsent`](#setConsent) 命令，收集的資料會儲存在此資料集中。 由於此資料集已啟用設定檔功能，在自動執行工作流程期間，將會接受儲存在此資料集中的同意值。 |

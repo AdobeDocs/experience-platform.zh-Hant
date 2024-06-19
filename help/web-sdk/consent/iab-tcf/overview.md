@@ -3,16 +3,16 @@ title: Adobe Experience Platform Web SDK中的IAB TCF 2.0支援
 description: 瞭解如何使用Adobe Experience Platform Web SDK支援IAB TCF 2.0同意偏好設定
 keywords: 同意；setConsent；設定檔隱私權欄位群組；體驗事件隱私權欄位群組；隱私權欄位群組；IAB TCF 2.0；Real-Time CDP；
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # Adobe Experience Platform Web SDK中的IAB TCF 2.0支援
 
-Adobe Experience Platform Web SDK支援Interactive Advertising Bureau Transparency &amp; Consent Framework 2.0版(IAB TCF 2.0)。 本指南說明透過Adobe Experience Platform Web SDK整合Adobe Real-time Customer Data Platform、Audience Manager、Experience Events、Adobe Analytics和Edge Network，支援IAB TCF 2.0的需求。
+Adobe Experience Platform Web SDK支援Interactive Advertising Bureau Transparency &amp; Consent Framework 2.0版(IAB TCF 2.0)。 本指南說明透過Adobe Experience Platform Web SDK整合Adobe Real-time Customer Data Platform、Audience Manager、Experience Events、Adobe Analytics和Edge Network來支援IAB TCF 2.0的需求。
 
 此外，下列指南可協助您瞭解如何整合IAB TCF 2.0與標籤，以及不使用標籤。
 
@@ -69,7 +69,7 @@ Adobe Audience Manager (AAM)支援IAB TCF 2.0，可讓您評估、尊重客戶�
 
 ### 變更時設定同意
 
-Adobe Experience Platform Web SDK具有 `setConsent` 命令，使用IAB TCF 2.0將客戶的同意偏好設定傳達給所有Adobe服務。如果您正在與Real-Time CDP整合，這會更新客戶的設定檔。 如果您正在與Audience Manager整合，這會更新客戶的資訊。 呼叫此專案也會設定具有完全或完全不同同意偏好設定的Cookie，該偏好設定會控制是否允許傳送未來的體驗事件。 其目的是每當同意變更時，就會呼叫此動作。 日後載入頁面時，系統會讀取Edge Network同意Cookie，判斷是否可傳送Experience事件，以及是否可設定身分Cookie。
+Adobe Experience Platform Web SDK具有 `setConsent` 命令，使用IAB TCF 2.0將客戶的同意偏好設定傳達給所有Adobe服務。如果您正在與Real-Time CDP整合，這會更新客戶的設定檔。 如果您正在與Audience Manager整合，這會更新客戶的資訊。 呼叫此專案也會設定具有完全或完全不同同意偏好設定的Cookie，該偏好設定會控制是否允許傳送未來的體驗事件。 其目的是每當同意變更時，就會呼叫此動作。 日後載入頁面時，系統會讀取Edge Network同意Cookie，判斷是否可傳送Experience事件，以及是否可設定身分識別Cookie。
 
 與Audience Manager的IAB TCF 2.0整合類似，Edge Network會在客戶針對下列用途提供明確同意後提供同意：
 
@@ -78,7 +78,7 @@ Adobe Experience Platform Web SDK具有 `setConsent` 命令，使用IAB TCF 2.0�
 - **特殊用途1：** 確保安全性、防止欺詐和除錯。 （根據IAB TCF法規，一律同意）
 - **Adobe廠商許可權：** 同意進行Adobe（廠商565）
 
-如需詳細資訊，請參閱 `setConsent` 命令，請閱讀以下檔案： [支援同意](../../consent/supporting-consent.md).
+如需詳細資訊，請參閱 `setConsent` 命令，請閱讀上專屬的Web SDK檔案 [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### 新增同意至體驗事件
 

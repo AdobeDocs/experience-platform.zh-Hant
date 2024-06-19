@@ -1,15 +1,15 @@
 ---
 solution: Data Collection
 audience: user
-user-guide-title: Adobe Experience Platform Web SDK說明
-breadcrumb-title: Web SDK指南
-user-guide-description: 透過Edge網路與Experience Cloud服務互動。
+user-guide-title: Adobe Experience Platform Web SDK 說明
+breadcrumb-title: Web SDK 指南
+user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
 role: Developer
-source-git-commit: ec801c550740c4cba3481a961599f548518bb032
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 14%
+source-wordcount: '224'
+ht-degree: 22%
 
 ---
 
@@ -91,7 +91,6 @@ ht-degree: 14%
       * [在Web SDK中設定網頁應用程式內傳訊支援](personalization/web-in-app-messaging.md)
 
 * 同意 {#consent}
-   * [支援同意](consent/supporting-consent.md)
    * IAB透明與同意架構2.0 {#iab-tcf}
       * [概觀](consent/iab-tcf/overview.md)
       * [與標籤整合](consent/iab-tcf/with-tags.md)

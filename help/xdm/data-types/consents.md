@@ -3,7 +3,7 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 同意和偏好設定資料型別
 description: 「隱私權同意、個人化及行銷偏好設定」資料型別旨在支援收集由「同意管理平台」(CMP)和其他資料來源從您的資料作業產生的客戶許可權和偏好設定。
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2278'
 ht-degree: 0%
@@ -267,7 +267,7 @@ ht-degree: 0%
 
 ## 處理同意和偏好設定變更
 
-當客戶在您的網站上變更其同意或偏好設定時，應使用收集這些變更並立即執行 [Adobe Experience Platform Web SDK](/help/web-sdk/consent/supporting-consent.md). 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
+當客戶在您的網站上變更其同意或偏好設定時，應使用收集這些變更並立即執行 [Adobe Experience Platform Web SDK](../../web-sdk/commands/setconsent.md). 如果客戶選擇退出資料收集，所有資料收集必須立即停止。 如果客戶選擇退出個人化，則他們造訪的下一個頁面上應該不會出現個人化。
 
 ## 附錄 {#appendix}
 

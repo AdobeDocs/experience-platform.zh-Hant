@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: e5fd8a53cfd612034d12a761ac4779ed930557d4
+source-git-commit: fb9f7757d77b221c733bbed5124fa576a6b02ed2
 workflow-type: tm+mt
 source-wordcount: '1264'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 ## 設定同意 {#set-consent}
 
-在您收到使用者的同意後，必須使用「設定同意」動作型別，將此同意傳達Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。另請參閱 [支援客戶同意偏好設定](/help/web-sdk/consent/supporting-consent.md). 使用Adobe版本2.0時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
+在您收到使用者的同意後，必須使用「設定同意」動作型別，將此同意傳達Adobe Experience Platform Web SDK。 目前支援「Adobe」和「IAB TCF」等兩種標準。另請參閱 [支援客戶同意偏好設定](../../../../web-sdk/commands/setconsent.md). 使用Adobe版本2.0時，僅支援資料元素值。 您將需要建立可解析為同意物件的資料元素。
 
 在此動作中，系統也會提供選填欄位，供您加入身分對應，以便在收到同意後同步身分資料。 同意設為「擱置中」或「退出」時，同步會很有用，因為同意呼叫可能是第一個要觸發的呼叫。
 

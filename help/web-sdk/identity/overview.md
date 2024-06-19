@@ -2,7 +2,7 @@
 title: Web SDK中的身分資料
 description: 瞭解如何使用Adobe Experience Platform Web SDK擷取和管理Adobe Experience Cloud ID (ECID)。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 6b58d72628b58b75a950892e7c16d397e3c107e2
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%
@@ -104,7 +104,7 @@ alloy("getIdentity")
   });
 ```
 
-## 使用 `identityMap`
+## 使用 `identityMap` {#using-identitymap}
 
 使用XDM [`identityMap` 欄位](../../xdm/schema/composition.md#identityMap)，您可使用多個識別碼來識別裝置/使用者、設定其驗證狀態，並決定要將哪個識別碼視為主要識別碼。 如果尚未將任何識別碼設為 `primary`，則主要預設為 `ECID`.
 
