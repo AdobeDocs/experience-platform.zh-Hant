@@ -5,10 +5,10 @@ breadcrumb-title: 進階資料生命週期管理指南
 user-guide-description: 在 Experience Platform 中刪除個別記錄並排定資料集有效日期，以進行資料清理、匿名資料移除及資料最小化。
 feature: Data Hygiene
 role: User, Developer, Admin
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 9885c0d75ac28cfd73179b63b3d54da9b0ccf967
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 63%
+source-wordcount: '67'
+ht-degree: 64%
 
 ---
 
@@ -27,3 +27,4 @@ ht-degree: 63%
    * [記錄刪除](./api/jobs.md)
    * [(Beta)記錄刪除](./api/workorder.md)
    * [配額](./api/quota.md)
+* [最佳作法](./best-practices.md)
