@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的AI助理
 description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-time Customer Data Platform概念，以及有關您物件的使用資訊。
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # AI Assistant UI指南
 
 請閱讀本指南，瞭解如何在Adobe Experience Platform UI中使用AI Assistant。
+
+以下影片旨在協助您瞭解AI Assistant。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## 在Experience PlatformUI中存取AI助理
 
@@ -81,7 +85,7 @@ AI Assistant會更新介面，並提供檔案連結給您，以證實初始回�
 
 +++
 
-### 營運分析 {#operational-insights}
+### 運作深入分析 {#operational-insights}
 
 您必須處於作用中沙箱中，AI助理才能充分回應有關您營運深入分析的問題。
 
@@ -111,6 +115,22 @@ AI助理接著會以表格回應，該表格會列出您的資料流及其對應
 
 +++
 
+### 驗證操作見解回應 {#verify-responses}
+
+您可以使用AI助理提供的SQL查詢來驗證與操作深入分析問題相關的每個回應。
+
++++選取以檢視驗證作業分析回應的範例
+
+在收到操作深入分析問題的答案後，請選取「 」 **[!UICONTROL 顯示來源]** 然後選取 **[!UICONTROL 檢視來源查詢]**.
+
+![檢視來源查詢](./images/view-source-query.png)
+
+在查詢操作深入分析問題時，AI助理會提供SQL查詢，供您用來驗證運算其答案所花費的程式。 此來源查詢僅供驗證之用，查詢服務不支援。
+
+![來源查詢範例](./images/source-query.png)
+
++++
+
 ### 使用自動完成 {#use-auto-complete}
 
 您可以使用自動完成函式來接收沙箱中存在之資料物件的清單。 自動完成建議適用於下列網域：受眾、結構描述、資料集、來源和目的地。
@@ -132,6 +152,14 @@ AI助理接著會以表格回應，該表格會列出您的資料流及其對應
 在以下範例中，會先要求AI助理提供資料流總數，然後要求列出10個最近的資料流。
 
 ![多圈範例](./images/multiturn.png)
+
++++
+
+### 開始新交談
+
+您可以透過重設並開始新對話來變更AI助理的主題。
+
++++選取以檢視重設交談的範例
 
 若要重設，請選取省略符號(**`...`**)，然後選取 **[!UICONTROL 開始新交談]**. 這會通知AI助理您打算變更主題，並在疑難排解失敗或參考錯誤資訊的查詢時特別有用。
 

@@ -1,11 +1,11 @@
 ---
 title: Adobe Experience Platform中的AI助理概述
-description: 瞭解AI Assistant、其細微差別和使用案例，以及如何使用它來加快您與Adobe Experience Platform和Real-time Customer Data Platform的工作流程。
+description: 了解 AI 助理、其細微差別和使用案例，以及如何使用它來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 1%
+source-wordcount: '820'
+ht-degree: 6%
 
 ---
 
@@ -55,7 +55,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 {style="table-layout:auto"}
 
-### 營運分析 {#operational-insights}
+### 運作深入分析 {#operational-insights}
 
 >[!IMPORTANT]
 >
@@ -69,14 +69,18 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 您可以在下列網域中向AI Assistant詢問有關您的營運見解的問題：
 
-* 屬性
-* 對象
-* 資料流
-* 資料集
-* 目的地 _（關於帳戶的問題和資料流的一些問題目前無法回答。）_
-* 歷程
-* 方案 _（目前無法回答有關欄位群組的問題。）_
-* 來源 _（目前無法回答有關帳戶的問題。）_
+| 網域 | 支援的中繼資料 |
+| --- | --- |
+| 屬性 | <ul><li>屬性名稱查閱</li><li>屬性 — 結構描述關係</li><li>屬性 — 資料集關係</li><li>屬性 — 對象關係</li><li>屬性 — 目的地關係</li><li>未使用的屬性</li></ul> |
+| 對象 | <ul><li>對象計數</li><li>對象型別（串流或批次）</li><li>建立/修改日期</li><li>啟用狀態</li><li>設定檔計數</li><li>複製對象</li><li>對象定義查閱</li><li>對象 — 屬性關係</li><li>對象 — 資料集關係</li><li>對象 — 目的地關係</li><li>InSegment規則</li><li>名稱查詢</li><li>名稱和ID查閱 |
+| 資料流 | <ul><li>資料流計數</li><li>資料流程狀態</li><li>資料流 — 資料集關係</li><li>資料流 — 來源關係</li></ul> |
+| 資料集 | <ul><li>資料集計數</li><li>設定檔啟用狀態</li><li>建立/修改日期</li><li>資料集 — 結構描述關係</li><li>資料集 — 對象關係</li><li>資料集 — 屬性關係</li><li>資料集 — 資料流關係</li><li>名稱查詢 </li><li>名稱和ID查閱</li></ul> |
+| 目的地 | <ul><li>設定的目的地計數</li><li>目的地 — 對象關係</li><li>目的地屬性關係</li></ul> |
+| 歷程 | <ul><li>計數</li><li>名稱查詢</li><li>名稱和ID查閱</li><li>歷程狀態</li><li>觸發狀態（對象與事件）</li><li>建立/修改日期</li><li>循環頻率</li></ul> |
+| 結構描述 | <ul><li>結構描述計數</li><li>建立/修改日期</li><li>結構描述類別型別</li><li>結構描述 — 屬性關係</li><li>結構描述 — 資料集關係</li><li>結構描述 — 對象關係</li><li>設定檔啟用狀態</li><li>名稱查詢</li><li>名稱和ID查閱</li></ul> |
+| 來源 | <ul><li>帳戶計數</li><li>帳戶狀態</li><li>每個帳戶的作用中/非作用中資料流</li><li>來源聯結器 — 資料流關係</li><li>來源帳戶 — 資料流關係</li></ul> |
+
+{style="table-layout:auto"}
 
 若是操作見解問題，答案可能不會反映UI的目前狀態。 支援這些問題的資料每24小時更新一次。 例如，使用者白天在Real-Time CDP中所做的變更會在夜間與資料存放區同步，然後早上就可供使用者提問。 您需要登入沙箱以查詢與物件相關的特定資料。
 
