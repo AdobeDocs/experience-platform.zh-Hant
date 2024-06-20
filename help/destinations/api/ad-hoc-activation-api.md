@@ -5,10 +5,10 @@ title: 透過臨機啟動API將對象啟動至批次目的地
 description: 本文說明透過臨機啟動API啟動對象的端對端工作流程，包括在啟動前進行的細分工作。
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 1%
+source-wordcount: '1612'
+ht-degree: 0%
 
 ---
 
@@ -71,12 +71,12 @@ Adobe Experience Platform每24小時執行一次排程的區段工作。 臨機�
 若要呼叫Platform API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * 授權：持有人 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{ORG_ID}`
+* x-api-key： `{API_KEY}`
+* x-gw-ims-org-id： `{ORG_ID}`
 
 Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Platform API的請求中，您可以指定將執行作業的沙箱名稱和ID。 這些是選用引數。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Experience Platform中的資源可以隔離到特定的虛擬沙箱。 在對Pla
 
 包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
-* Content-Type: `application/json`
+* Content-Type： `application/json`
 
 ## 步驟3：在Platform UI中建立啟動流程 {#activation-flow}
 
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | 屬性 | 說明 |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | 您想要啟用對象之目的地執行個體的ID。 您可以導覽至，從Platform UI取得這些ID **[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]** 索引標籤，然後按一下所需的目的地列，以在右側邊欄中顯示目的地ID。 如需詳細資訊，請閱讀 [目的地工作區檔案](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 您要啟用至所選目的地的對象ID。 |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | 您要啟用至所選目的地的對象ID。 您可以使用臨機API匯出平台產生的對象以及外部（自訂上傳）對象。 啟用外部對象時，請使用系統產生的ID，而非對象ID。 您可以在對象UI的對象摘要檢視中找到系統產生的ID。 <br> ![檢視不應選取的對象ID。](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "檢視不應選取的對象ID。"){width="100" zoomable="yes"} <br> ![檢視系統產生的應使用的對象ID。](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "檢視系統產生的應使用的對象ID。"){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### 具有匯出ID的請求（將棄用） {#request-deprecated}
+### 使用匯出ID的請求 {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**已棄用的請求型別**. 此範例型別說明API版本1的請求型別。 在臨機啟動API v2中，您不需要包含最新的對象匯出工作ID。
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
