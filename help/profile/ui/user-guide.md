@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -132,9 +132,13 @@ ht-degree: 0%
 
 顯示的預設欄位也可以在組織層級變更以顯示偏好的設定檔屬性。 若要進一步瞭解如何自訂這些欄位，包括新增和移除屬性以及調整儀表板面板大小的逐步指示，請閱讀 [設定檔詳細資料自訂指南](profile-customization.md).
 
-![「詳細資訊」標籤會反白顯示。 設定檔詳細資訊隨即顯示。](../images/user-guide/profile-detail.png)
+![「詳細資訊」標籤會反白顯示。 設定檔詳細資訊隨即顯示。](../images/user-guide/profile-detail-row-name.png)
 
-您可以選取另一個可用標籤，以檢視與個別客戶設定檔相關的額外資訊。 這些標籤包含屬性、事件和對象成員資格標籤，會顯示設定檔目前符合資格的對象。
+您也可以選擇在檢視屬性名稱作為其顯示名稱與其欄位路徑名稱之間切換。 若要在這兩個顯示之間切換，請選取 **[!UICONTROL 顯示顯示名稱]** 切換。
+
+![「顯示名稱」切換會反白顯示，顯示名稱會顯示在屬性下。](../images/user-guide/profile-detail.png)
+
+若要檢視與個別客戶設定檔相關的額外資訊，請選取其他任一可用頁標。 這些標籤包含屬性、事件和對象成員資格標籤，會顯示設定檔目前符合資格的對象。
 
 ### 屬性標籤
 
@@ -170,7 +174,7 @@ ht-degree: 0%
 
 ![對象成員資格標籤中的資料位置選擇器會醒目提示。](../images/user-guide/audience-membership-select.png)
 
-## 合併原則
+## 合併政策
 
 從主要 **[!UICONTROL 設定檔]** 功能表，選取 **[!UICONTROL 合併原則]** 標籤以檢視屬於您組織的合併原則清單。 每個列出的原則都會顯示其名稱（無論是否為預設的合併原則）及其套用的結構描述類別。
 
