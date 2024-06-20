@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案詳細說明並說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
+source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
 workflow-type: tm+mt
-source-wordcount: '4111'
+source-wordcount: '4256'
 ht-degree: 2%
 
 ---
@@ -104,20 +104,34 @@ GROUPING SETS ( grouping_element [, ...] )
 #### 範例
 
 ```sql
-SELECT * FROM Customers SNAPSHOT SINCE 123;
+SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT AS OF 345;
+SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
 
-SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
 
-SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
 
-SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+(SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
+  INNER JOIN 
+(SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
+  ON a.id = b.id;
 ```
+
+下表說明SNAPSHOT子句中每個語法選項的意義。
+
+| 語法 | 含義 |
+|-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| `SINCE start_snapshot_id` | 從指定的快照ID （獨佔）開始讀取資料。 |
+| `AS OF end_snapshot_id` | 會以指定的快照ID （含）讀取資料。 |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | 讀取指定的開始和結束快照ID之間的資料。 它不屬於 `start_snapshot_id` 並包含 `end_snapshot_id`. |
+| `BETWEEN HEAD AND start_snapshot_id` | 將資料從開頭（第一個快照之前）讀取至指定的啟動快照識別碼（包含）。 請注意，這只會傳回以下位置的列： `start_snapshot_id`. |
+| `BETWEEN end_snapshot_id AND TAIL` | 在指定的之後讀取資料 `end-snapshot_id` 到資料集的結尾（不包括快照ID）。 這表示如果 `end_snapshot_id` 是資料集中的最後一個快照，查詢將傳回零列，因為沒有快照超過該最後一個快照。 |
+| `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | 從指定的快照集ID開始讀取資料 `table_to_be_queried` 並將其與來自的資料聯結 `table_to_be_joined` 原樣 `your_chosen_snapshot_id`. 此聯結是以兩個要聯結之表格的ID欄中的相符ID為基礎。 |
 
 A `SNAPSHOT` 子句與表格或表格別名搭配使用，但不適用於子查詢或檢視的頂端。 A `SNAPSHOT` 子句適用於任何位置a `SELECT` 可套用表格上的查詢。
 
@@ -128,8 +142,6 @@ A `SNAPSHOT` 子句與表格或表格別名搭配使用，但不適用於子查�
 >如果您正在查詢兩個快照ID，則當啟動快照過期且可選的遞補行為旗標(`resolve_fallback_snapshot_on_failure`)已設定：
 >
 >- 如果設定了選擇性備援行為旗標，查詢服務會選擇最早的可用快照，將其設定為開始快照，並傳回最早可用快照與指定結束快照之間的資料。 此資料為 **包含** 最早的可用快照集。
->
->- 如果未設定選用的後援行為標幟，則會傳回錯誤。
 
 ### WHERE子句
 
@@ -760,7 +772,7 @@ ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-04-01 00:
 
 >[!NOTE]
 >
->此 `Statistics ID` 和產生的統計資料只適用於每個階段作業，而且無法在不同的PSQL階段作業間存取。<br><br>限制：<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>計算的統計資料為 **非** 跨工作階段持續存在。</li></ul><br><br>選項:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟會設為true。 因此，在不支援的資料型別上請求統計資料時，它不會出錯但會無訊息地略過具有不支援的資料型別的欄位。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`.
+>此 `Statistics ID` 和產生的統計資料只適用於每個階段作業，而且無法在不同的PSQL階段作業間存取。<br><br>限制：<ul><li>陣列或對應資料型別不支援產生統計資料</li><li>計算的統計資料為 **非** 跨工作階段持續存在。</li></ul><br><br>選項：<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>依預設，標幟會設為true。 因此，在不支援的資料型別上請求統計資料時，它不會出錯但會無訊息地略過具有不支援的資料型別的欄位。<br>若要在要求不支援資料型別的統計資料時啟用錯誤通知，請使用： `SET skip_stats_for_complex_datatypes = false`.
 
 主控台輸出會顯示如下。
 
