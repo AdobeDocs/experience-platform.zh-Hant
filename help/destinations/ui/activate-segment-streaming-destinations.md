@@ -3,10 +3,10 @@ title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 1%
+source-wordcount: '1188'
+ht-degree: 6%
 
 ---
 
@@ -79,7 +79,9 @@ ht-degree: 1%
 
 1. 在 **[!UICONTROL 選取來源欄位]** 頁面，使用 **[!UICONTROL 選取屬性]** 或 **[!UICONTROL 選取身分名稱空間]** 在兩個可用來源欄位類別之間切換的選項。 從可用的 [!DNL XDM] 設定檔屬性和身分名稱空間，選取要對應至目的地的設定檔屬性，然後選擇 **[!UICONTROL 選取]**.
 
-   ![選取來源欄位頁面，其中顯示數個可用的來源欄位。](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   使用 **[!UICONTROL 僅顯示含有資料的欄位]** 切換以僅顯示填入值的結構描述欄位。 依預設，只會顯示填入的結構欄位。
+
+   ![選取來源欄位頁面，其中顯示數個可用的來源欄位。](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. 選取右側的按鈕 **[!UICONTROL 目標欄位]** 登入點。
 
@@ -91,12 +93,12 @@ ht-degree: 1%
 
 1. 若要新增更多對應，請重複步驟1至5。
 
-### 套用轉換 {#apply-transformation}
+### 套用轉換  {#apply-transformation}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
->title="套用轉換"
->abstract="使用未雜湊的來源欄位時，請核取此選項，讓Adobe Experience Platform在啟用時自動雜湊這些欄位。"
+>title="套用轉換 "
+>abstract="使用未雜湊的來源欄位時勾選此選項，讓 Adobe Experience Platform 在啟動時自動將它們雜湊。"
 
 將未雜湊的來源屬性對應到目的地預期會雜湊的目標屬性時(例如： `email_lc_sha256` 或 `phone_sha256`)，檢查 **套用轉換** 讓Adobe Experience Platform在啟動時自動雜湊來源屬性的選項。
 
@@ -107,7 +109,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="結束日期"
->abstract="無法為客群排程新增結束日期。"
+>abstract="無法使用新增對象排程的結束日期。"
 
 根據預設， **[!UICONTROL 對象排程]** 頁面僅顯示您在目前啟用流程中選擇的新選取對象。
 
@@ -141,7 +143,7 @@ ht-degree: 1%
 
 ### 同意原則評估 {#consent-policy-evaluation}
 
-如果您的組織已購買 **AdobeHealthcare Shield** 或 **Adobe隱私權與安全防護板**，選取 **[!UICONTROL 檢視適用的同意政策]** 檢視已套用哪些同意原則，以及因這些原則而在啟用中包含多少設定檔。 閱讀關於 [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得詳細資訊。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。閱讀關於 [同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) 以取得詳細資訊。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 
