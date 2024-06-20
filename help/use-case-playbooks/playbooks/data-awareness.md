@@ -4,14 +4,14 @@ title: 使用案例教戰手冊中的資料感知概觀
 description: 瞭解如何透過將最終啟髮型沙箱中產生的資產複製到其他沙箱，以加快實現價值的時間。
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# 將Playbook產生的資產發佈到其他沙箱 {#publish-to-other-sandboxes}
+# 將Publish playbook產生的資產移至其他沙箱 {#publish-to-other-sandboxes}
 
 使用案例教戰手冊是行銷範本，旨在針對常見行銷使用案例產生對象、結構或歷程等資產。 您可以在啟發性的沙箱中測試教戰手冊建立的資產，當您準備好時，您可以將資產匯入其他開發沙箱，以使用這些沙箱中提供的資料進行進一步測試。 對測試感到滿意後，您就可以將資產從開發沙箱移至生產沙箱。
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 先決條件 {#prerequisites}
 
-閱讀本教學課程前，請先瀏覽 [可用的使用案例教戰手冊範本](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) 和 [建立執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md) 屬於偏好的行動手冊。
+閱讀本教學課程前，請先瀏覽 [可用的使用案例教戰手冊範本](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) 和 [建立執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md) 屬於偏好的行動手冊。
 
 建立例項會在勵志沙箱中產生一組資產，例如歷程、區段、方案和訊息。 請閱讀下文，瞭解如何將這些資產複製到其他沙箱。
 
@@ -29,11 +29,11 @@ ht-degree: 0%
 >
 > 您只能將套件匯入其他開發沙箱。 完成所有必要的變更或更新後，您就可以從這些開發沙箱將資產或套件匯入生產環境。 您無法直接從使用案例教戰手冊沙箱匯入到生產環境。
 
-1. 若要將物件從啟發性的沙箱匯入另一個沙箱，請瀏覽至使用案例行動手冊的所需執行個體，然後選取「 」 **[!UICONTROL 發佈到不同的沙箱]** 將成品匯出為封裝。
+1. 若要將物件從啟發性的沙箱匯入另一個沙箱，請瀏覽至使用案例行動手冊的所需執行個體，然後選取「 」 **[!UICONTROL 將Publish移至其他沙箱]** 將成品匯出為封裝。
 
    ![顯示不同使用案例執行個體的GIF](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. 一旦您選取 **[!UICONTROL 發佈到不同的沙箱]** 按鈕，強制回應視窗隨即顯示。 填寫名稱和可選的說明，然後選取 **[!UICONTROL 建立]**. 此步驟將產生的資產整合到一個套件中，可將其匯入不同的沙箱中。
+2. 一旦您選取 **[!UICONTROL 將Publish移至其他沙箱]** 按鈕，強制回應視窗隨即顯示。 填寫名稱和可選的說明，然後選取 **[!UICONTROL 建立]**. 此步驟將產生的資產整合到一個套件中，可將其匯入不同的沙箱中。
 
    ![建立套件的強制回應視窗](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 

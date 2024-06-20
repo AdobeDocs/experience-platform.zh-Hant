@@ -4,9 +4,9 @@ title: 開始使用使用使用案例教戰手冊
 description: 了解如何開始使用「使用案例教戰手冊」功能。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '953'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # 快速入門
 
-瞭解如何針對使用案例行動手冊設定帳戶，這些行動手冊是專為Real-time Customer Data Platform和Adobe Journey Optimizer而設計。 三個主要設定步驟為：
+瞭解如何為使用案例教戰手冊設定帳戶，這些教戰手冊是專為Real-time Customer Data Platform和Adobe Journey Optimizer設計的（如果未自動設定）。 三個主要設定步驟為：
 
 * 建立沙箱
 * 設定使用者權限
@@ -87,7 +87,7 @@ ht-degree: 15%
 
 ## 在Journey Optimizer中設定沙箱和管道表面 {#configure-channel-surfaces}
 
-如果您的組織獲得授權 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html)，而您正在尋求使用專為Journey Optimizer設計的教戰手冊，您需要在沙箱中設定頻道預設集，以定義訊息所需的技術引數。 [了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=zh-Hant)。
+如果您的組織獲得授權 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)，而您正在尋求使用專為Journey Optimizer設計的教戰手冊，您需要在沙箱中設定頻道預設集，以定義訊息所需的技術引數。 [了解如何在 Adob&#x200B;&#x200B;e Journey Optimizer 中設定管道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=zh-Hant)。
 
 若要在Journey Optimizer中建立教戰手冊的例項，您需要設定電子郵件、推播和簡訊通知的頻道介面。
 
@@ -113,4 +113,4 @@ ht-degree: 15%
 
 ## 後續步驟 {#next-steps}
 
-現在您已依照本檔案中的所有步驟進行，您應該已使用左側導覽中提供的使用案例教戰手冊來建立開發沙箱。 您現在也知道如何授予團隊成員檢視和管理教戰手冊以及產生資產所需的許可權。 接下來，請閱讀如何 [探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md) 為您，然後 [從中建立執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+現在您已依照本檔案中的所有步驟進行，您應該已使用左側導覽中提供的使用案例教戰手冊來建立開發沙箱。 您現在也知道如何授予團隊成員檢視和管理教戰手冊以及產生資產所需的許可權。 接下來，請閱讀如何 [選擇正確的行動手冊](/help/use-case-playbooks/playbooks/choose.md) 為您，然後 [從中建立執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md).

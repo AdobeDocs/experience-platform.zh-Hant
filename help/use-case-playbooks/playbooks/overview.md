@@ -4,10 +4,10 @@ title: 使用案例教戰手冊概觀
 description: 了解如何使用 Experience Platform 中的使用案例教戰手冊以開始使用各種行銷使用案例。
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '533'
+ht-degree: 30%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 * **[使用案例教戰手冊的概觀](#overview)**
 * [開始使用必要的設定和許可權](/help/use-case-playbooks/playbooks/get-started.md)
 * [可用的使用案例教戰手冊](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [探索正確的教戰手冊](/help/use-case-playbooks/playbooks/discover.md)
+* [從一系列教戰手冊中進行選擇](/help/use-case-playbooks/playbooks/choose.md)
 * [建立、共用和重複使用教戰手冊執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [使用資料感知功能，將Playbook產生的資產複製到其他環境](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [疑難排解和已知限制](troubleshooting.md)
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 建立Playbook例項，以產生為您的使用案例量身打造且可在Experience Platform中重複使用的特定資產，例如結構描述、對象或歷程。 這些物件的目的是協助您了解實作特定使用案例所需的所有資源。它們不包含任何資料，並在開發沙箱中建立。 開始使用這些資產或在使用這些資產之前對其進行編輯，並在Real-Time CDP或Journey Optimizer中與您的團隊共用這些資產。 將所需的資產從啟發性的沙箱提升至開發沙箱，然後進一步提升至生產沙箱。
 
-### 影片概述
+### 影片概觀
 
 觀看此影片瞭解如何從端對端探索、建立、發佈使用案例行動手冊並對執行個體進行疑難排解，以及如何將行動手冊產生的資產複製到組織中設定的其他沙箱中。
 
@@ -54,7 +54,7 @@ ht-degree: 0%
 
 ## UI 指南 {#ui-guides}
 
-決定您要使用的教戰手冊後，請從 UI 中將其選取並開始使用。閱讀的UI指南 [如何探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md) 為了您和 [如何建立、共用及重複使用playbook例項](/help/use-case-playbooks/playbooks/create-share-reuse.md) 有關如何建立執行個體並充分利用行動手冊的完整資訊。 若要瞭解如何將各種資產從啟發性的沙箱提升至其他開發沙箱，然後再提升至生產環境，請閱讀以下檔案： [資料感知](/help/use-case-playbooks/playbooks/data-awareness.md).
+決定您要使用的教戰手冊後，請從 UI 中將其選取並開始使用。閱讀的UI指南 [如何從選項中選擇正確的教戰手冊](/help/use-case-playbooks/playbooks/choose.md) 為了您和 [如何建立、共用及重複使用playbook例項](/help/use-case-playbooks/playbooks/create-share-reuse.md) 有關如何建立執行個體並充分利用行動手冊的完整資訊。 若要瞭解如何將各種資產從啟發性的沙箱提升至其他開發沙箱，然後再提升至生產環境，請閱讀以下檔案： [資料感知](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## 疑難排解和已知限制 {#trouble-shooting-known-limitations}
 

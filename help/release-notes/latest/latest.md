@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2024年6月
 description: Adobe Experience Platform 2024 年 6 月的發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9707c40beec3000456510a8a384a0af58d6d9fa
+source-git-commit: b2b38c1b540d074998e96712465ff52c68371004
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1358'
+ht-degree: 18%
 
 ---
 
@@ -127,7 +127,7 @@ Adobe Experience Platform中的AI助理是一種對話式體驗，可用來加�
 
 若要開始使用，請閱讀 [使用案例教戰手冊概覽](/help/use-case-playbooks/playbooks/overview.md)，此頁面會提供教戰手冊功能、用途的概觀，以及端對端示範，包括如何建立例項，並將產生的資產匯入其他沙箱環境。
 
-若要瞭解如何存取及設定啟發性的沙箱，以實驗及探索各種使用案例教戰手冊，請參閱 [探索正確的行動手冊](/help/use-case-playbooks/playbooks/discover.md) 檔案。
+若要瞭解如何存取及設定啟發性的沙箱，以實驗及探索各種使用案例教戰手冊，請參閱 [導覽至使用案例教戰手冊](/help/use-case-playbooks/playbooks/navigate.md) 檔案。
 
 若要深入瞭解 [!DNL Use Case Playbooks]，請閱讀下列檔案頁面：
 
