@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案詳細說明並說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
+source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4305'
 ht-degree: 2%
 
 ---
@@ -312,7 +312,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | 模式的預設值。 如果已指定，則結構描述只會在其刪除時刪除 **非** 包含任何表格。 |
 | `CASCADE` | 如果已指定，則會捨棄綱要，並一併捨棄綱要中出現的所有表格。 |
 
-## 建立檢視
+## 建立檢視 {#create-view}
+
+SQL檢視是以SQL敘述句的結果集為基礎的虛擬表格。 建立檢視，使用 `CREATE VIEW` 陳述式並為其命名。 然後，您可以使用該名稱來參照查詢的結果。 這可讓您更輕鬆地重複使用複雜查詢。
 
 下列語法會定義 `CREATE VIEW` 查詢資料集。 此資料集可以是ADLS或加速存放區資料集。
 

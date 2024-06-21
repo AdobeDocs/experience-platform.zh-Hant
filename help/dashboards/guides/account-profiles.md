@@ -2,7 +2,7 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 1%
@@ -170,7 +170,7 @@ Widget中的下拉式功能表可讓您選取帳戶評分模式。
 
 ![預測性評分主要影響因素Widget。](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-### 無法載入資料錯誤 {#errors}
+## 無法載入資料錯誤 {#errors}
 
 如果顯示Widget *[!UICONTROL 無法載入。 請再試一次。]* 這是因為沒有可用於B2B實體的資料。 例如，Widget會顯示於下方 [!UICONTROL 依個人角色的新機會]，顯示訊息「[!UICONTROL 無法載入。 請再試一次。]&quot;因為此沙箱沒有可用的機會資料。
 
