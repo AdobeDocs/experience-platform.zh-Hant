@@ -2,10 +2,10 @@
 title: 報告套裝資料的Adobe Analytics來源聯結器
 description: 本檔案提供Analytics概觀及說明Analytics資料的使用案例。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: 7812cfa44e1fcbe71d7b6231dc0b31c727c93a31
+source-git-commit: d56a37c5b1c5768b3f6811be9d30d45628fdabca
 workflow-type: tm+mt
-source-wordcount: '1145'
-ht-degree: 2%
+source-wordcount: '1189'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +47,7 @@ XDM是公開記錄的規格，為應用程式提供通用結構和定義，用�
 
 下表列出Platform上Analytics資料的預期延遲。 延遲會依客戶組態、資料磁碟區和消費者應用程式而有所不同。 例如，如果Analytics實作設定為 `A4T` 管道的延遲將增加到5至10分鐘。
 
-| Analytics 資料 | 預期延遲 |
+| Analytics資料 | 預期延遲 |
 | -------------- | ---------------- |
 | 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **非** 已啟用) | &lt; 2分鐘 |
 | 將新資料新增至 [!DNL Real-Time Customer Profile] (A4T **是** 已啟用) | 長達30分鐘 |
@@ -89,13 +89,19 @@ XDM是公開記錄的規格，為應用程式提供通用結構和定義，用�
 * `endUserIDs._experience.mcid.id`
 * `endUserIDs._experience.aacustomid.id`
 
-這些欄位不會標記為身分識別。 而是將相同的身分識別複製到XDM的 `identityMap` 做為機碼值組：
+這些欄位不會標籤為身分。 而是將相同的身分（如果存在於事件中）複製到XDM的 `identityMap` 做為機碼值組：
 
 * `{ "key": "AAID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
-在身分對應中，如果ECID存在，則會標示為事件的主要身分。 在此情況下，AAID可能以ECID為基礎，因為 [Identity Service寬限期](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 否則，AAID會標示為事件的主要身分識別。 AACUSTOMID 永遠不會標記為事件的主要 ID。不過，如果AACUSTOMID存在，則AAID會因為作業順序Experience Cloud而以AACUSTOMID為基礎。
+當身分或身分複製到時 `identityMap`， `endUserIDs._experience.mcid.namespace.code` 也設定在相同事件上：
+
+* 如果AAID存在， `endUserIDs._experience.aaid.namespace.code` 設為&quot;AAID&quot;。
+* 如果ECID存在， `endUserIDs._experience.mcid.namespace.code` 設為&quot;ECID&quot;。
+* 如果AACUSTOMID存在， `endUserIDs._experience.aacustomid.namespace.code` 設為&quot;AACUSTOMID&quot;。
+
+在身分對應中，如果ECID存在，則會標示為事件的主要身分。 在此情況下，AAID可能以ECID為基礎，因為 [Identity Service寬限期](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). 否則，AAID會標示為事件的主要身分識別。 絕不會將AACUSTOMID標示為事件的主要ID。 不過，如果AACUSTOMID存在，則AAID會因為作業順序Experience Cloud而以AACUSTOMID為基礎。
 
 >[!NOTE]
 >
