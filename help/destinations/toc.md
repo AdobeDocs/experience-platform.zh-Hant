@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: 目的地指南
-user-guide-description: 針對跨頻道行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
+user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動、目標定位廣告等，啟用已知和未知的資料。
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
+source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 3%
+source-wordcount: '1227'
+ht-degree: 6%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 3%
       * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [（測試版）在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
-      * [（測試版）使用計算欄位匯出平面結構描述檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Beta 版) 使用計算欄位匯出平面方案檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
    * [刪除目的地帳戶](./ui/delete-destination-account.md)
@@ -141,6 +141,7 @@ ht-degree: 3%
    * 資料管理平台目的地 {#data-management}
       * [資料管理平台(DMP)目的地概觀](./catalog/data-management/overview.md)
       * [Audience ManagerDIL延伸模組](./catalog/data-management/aam-dil-extension.md)
+      * [Zeta行銷平台](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * 資料與身分識別合作夥伴 {#data-partner}
       * [Acxiom潛在客戶抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom資料增強功能](./catalog/data-partner/acxiom-data-enhancement.md)
