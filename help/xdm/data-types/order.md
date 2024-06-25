@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 訂單資料型別
 description: 瞭解訂單體驗資料模型(XDM)資料型別。
 exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 09ca510da0819ab38687edadbcc632ccbbe8ef83
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 6%
+source-wordcount: '364'
+ht-degree: 13%
 
 ---
 
@@ -15,15 +15,24 @@ ht-degree: 6%
 
 [!UICONTROL 訂購] 是標準的體驗資料模型(XDM)資料型別，可描述產品清單的訂單。
 
-<img src="../images/data-types/order.PNG" width="400" /><br />
+![的圖表 [!UICONTROL 訂購] 資料型別。](../images/data-types/order.png)
 
-| 屬性 | 資料類型 | 說明 |
-| --- | --- | --- |
-| `payments` | 陣列 [[!UICONTROL 付款專案]](./payment-item.md) | 此訂單的付款清單。 |
-| `currencyCode` | 字串 | 用於訂單總額的ISO 4217貨幣代碼。 所有執行個體都必須符合規則運算式 `^[A-Z]{3}$`. 範例如下：`USD` 和 `EUR`。 |
-| `priceTotal` | 雙倍 | 此訂單套用所有折扣和稅金後的總價。 |
-| `purchaseID` | 字串 | 賣家為此購買或合約所指派的唯一識別碼。 由於這由賣家定義，無法保證ID是唯一的。 |
-| `purchaseOrderNumber` | 字串 | 購買者為此購買或合約所指派的唯一識別碼。 |
+| 顯示名稱 | 屬性 | 資料類型 | 說明 |
+|-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
+| 購買 ID | `purchaseID` | 字串 | 賣家為此購買或合約所指派的唯一識別碼。 不保證ID為唯一，因為此ID是由賣家定義。 |
+| 採購單號碼 | `purchaseOrderNumber` | 字串 | 購買者為此購買或合約所指派的唯一識別碼。 |
+| 付款清單 | `payments` | 陣列 [[!UICONTROL 付款專案]](./payment-item.md) | 此訂單的付款清單。 付款的詳細資訊請參閱 [!UICONTROL 付款專案] 規格。 |
+| 退款清單 | `refunds` | 陣列 [[!UICONTROL 退款專案]](./refund-item.md) | 此訂單的退款清單。 退款詳情載於 [!UICONTROL 退款專案] 規格。 |
+| 傳回資訊 | `returns` | [[!UICONTROL 傳回資訊]](./return.md) | RMA （退貨授權）簽發。 有關回訪的詳情，請參閱 [!UICONTROL 傳回資訊] 規格。 |
+| 貨幣 | `currencyCode` | 字串 | 用於訂單總額的ISO 4217貨幣代碼。 例如： `USD` 和 `EUR`. 所有例項都必須符合此模式 `^[A-Z]{3}$`. |
+| 稅捐金額 | `taxAmount` | 數字 | 買方支付作為最終付款一部分的稅捐金額。 |
+| 折扣金額 | `discountAmount` | 數字 | 套用至整個訂單（而非個別產品）的一般價格與特殊價格之間的差異。 |
+| 總價 | `priceTotal` | 數字 | 此訂單套用所有折扣和稅額之後的總價。 |
+| 訂單類型 | `orderType` | 字串 | 已下單的訂單型別。 可能的值包括 `checkout` 和 `instant_purchase`. |
+| 上次更新日期 | `lastUpdatedDate` | 字串 | 商業系統中特定訂單記錄的上次更新時間。 格式：日期時間。 |
+| 建立日期 | `createdDate` | 字串 | 在商務系統中建立新訂單的時間/日期。 格式：日期時間。 |
+| 取消日期 | `cancelDate` | 字串 | 購物者啟動訂單取消的日期/時間。 格式：日期時間。 |
+| 已退款的總金額 | `refundTotal` | 數字 | 此退款中針對訂單提供的總金額，結合所有退款專案及任何折扣後等。 已套用。 |
 
 {style="table-layout:auto"}
 
