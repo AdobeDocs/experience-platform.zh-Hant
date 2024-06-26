@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
+source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1233'
 ht-degree: 6%
 
 ---
@@ -145,6 +145,8 @@ ht-degree: 6%
    * 資料與身分識別合作夥伴 {#data-partner}
       * [Acxiom潛在客戶抑制](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Acxiom資料增強功能](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Merkury Enterprise連線](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+      * [Merkury Enterprise身分](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * 電子商務目的地 {#ecommerce}
       * [SAP COMMERCE](./catalog/ecommerce/sap-commerce.md)
    * 電子郵件目的地 {#email}
