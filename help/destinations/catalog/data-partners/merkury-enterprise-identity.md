@@ -77,9 +77,11 @@ Merkury Enterprise Identity Destination提供安全傳輸消費者PII的功能�
 ## 匯出型別和頻率
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
-|**對象**|**支援**|**說明來源**|\
-|—|—|—|\
-✓ |分段服務||透過Experience Platform產生的對象 [[細分服務]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| 自訂上傳|X|對象 [[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) 從CSV檔案Experience Platform為。
+
+|**Audience**|**Supported**|**Description origin**|            
+|---|---|---|      
+|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
+Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.
 
 {style="table-layout:auto"}
 
