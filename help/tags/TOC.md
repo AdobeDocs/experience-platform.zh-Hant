@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: 標籤說明
+user-guide-title: 標記說明
 breadcrumb-title: 標記
 user-guide-description: 了解如何部署及管理分析、行銷和廣告標籤，以強化客戶體驗。
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '769'
 ht-degree: 35%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 35%
    * [概觀](./ui/event-forwarding/overview.md)
    * [快速入門](./ui/event-forwarding/getting-started.md)
    * [設定密碼](./ui/event-forwarding/secrets.md)
-   * [監控(Beta)](./ui/event-forwarding/monitoring.md)
+   * [監視(Beta)](./ui/event-forwarding/monitoring.md)
 * 管理 {#admin}
    * [概觀](./ui/administration/overview.md)
    * [公司和屬性](./ui/administration/companies-and-properties.md)
@@ -142,7 +142,7 @@ ht-degree: 35%
          * [概觀](./extensions/client/brightcove/overview.md)
          * [發行說明](./extensions/client/brightcove/release-notes.md)
       * [CallTrackingMetrics](https://exchange.adobe.com/apps/ec/107695)
-      * [管道來源識別碼](https://exchange.adobe.com/apps/ec/101412)
+      * [管道Source識別碼](https://exchange.adobe.com/apps/ec/101412)
       * [Cheetah體驗](https://exchange.adobe.com/apps/ec/102759)
       * [Clicktale](https://exchange.adobe.com/apps/ec/100082)
       * 常見Analytics外掛程式 {#plugins}
@@ -279,7 +279,7 @@ ht-degree: 35%
       * [資料元素類型](./extension-dev/web/data-element-types.md)
       * [核心模組](./extension-dev/web/core.md)
       * [共用模組](./extension-dev/web/shared.md)
-   * 邊緣擴充功能 {#edge}
+   * Edge擴充功能 {#edge}
       * [擴充功能流程](./extension-dev/edge/flow.md)
       * [程式庫模組格式](./extension-dev/edge/format.md)
       * [條件類型](./extension-dev/edge/condition-types.md)
@@ -299,6 +299,7 @@ ht-degree: 35%
       * [規則](./api/endpoints/rules.md)
       * [規則元件](./api/endpoints/rule-components.md)
       * [擴充功能套件](./api/endpoints/extension-packages.md)
+      * [擴充功能套件使用授權](./api/endpoints/extension-package-usage-authorizations.md)
       * [擴充功能](./api/endpoints/extensions.md)
       * [程式庫](./api/endpoints/libraries.md)
       * [組建](./api/endpoints/builds.md)
