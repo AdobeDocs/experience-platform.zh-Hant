@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1241'
 ht-degree: 5%
 
 ---
@@ -89,7 +89,8 @@ ht-degree: 5%
       * [linkedIn Insight標籤擴充功能](./catalog/advertising/linkedin.md)
       * [LiveRamp — 入門連線](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp — 散發連線](./catalog/advertising/liveramp-distribution.md)
-      * [Magnite串流即時連線](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [(Beta)菱鎂礦批次](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [(Beta) Magnite串流即時連線](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
       * [pinterest客戶清單連線](./catalog/advertising/pinterest.md)
