@@ -5,10 +5,10 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 6%
+source-wordcount: '1237'
+ht-degree: 5%
 
 ---
 
@@ -45,9 +45,9 @@ ht-degree: 6%
       * [根據LiveRamp識別碼將受眾啟用至已組織的目的地](./ui/activate-curated-destinations.md)
       * [對目的地啟用潛在客戶對象](./ui/activate-prospect-audiences.md)
       * [對目的地啟用帳戶對象](./ui/activate-account-audiences.md)
-      * [（測試版）使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
+      * [(Beta)使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
-      * [（測試版）在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
+      * [(Beta)在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
       * [(Beta 版) 使用計算欄位匯出平面方案檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
@@ -65,11 +65,11 @@ ht-degree: 6%
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform受眾共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-   * 廣告目的地{#advertising}
+   * Advertising目的地{#advertising}
       * [Advertising目的地概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud連線](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud擴充功能](./catalog/advertising/adobe-advertising-cloud.md)
-      * [（測試版） Amazon Ads連線](./catalog/advertising/amazon-ads.md)
+      * [(Beta) Amazon Ads連線](./catalog/advertising/amazon-ads.md)
       * [Awin廣告商轉換標籤擴充功能](./catalog/advertising/awin-conversiontag.md)
       * [Awin廣告商Mastertag擴充功能](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads通用事件追蹤(UET)擴充功能](./catalog/advertising/bing-ads.md)
@@ -83,12 +83,13 @@ ht-degree: 6%
       * [Google廣告管理員連線](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360連線](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match連線](./catalog/advertising/google-customer-match.md)
-      * [（測試版） Google Customer Match + DV360連線](./catalog/advertising/google-customer-match-dv360.md)
+      * [(Beta) Google Customer Match + DV360連線](./catalog/advertising/google-customer-match-dv360.md)
       * [Google顯示和視訊360連線](./catalog/advertising/google-dv360.md)
       * [Google gtag擴充功能](./catalog/advertising/gtag-advertising.md)
       * [linkedIn Insight標籤擴充功能](./catalog/advertising/linkedin.md)
       * [LiveRamp — 入門連線](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp — 散發連線](./catalog/advertising/liveramp-distribution.md)
+      * [Magnite串流即時連線](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
       * [pinterest客戶清單連線](./catalog/advertising/pinterest.md)
@@ -96,7 +97,7 @@ ht-degree: 6%
       * [Pubmatic Connect連線](./catalog/advertising/pubmatic.md)
       * [Snapchat Ads連線](./catalog/advertising/snap-inc.md)
       * [交易台連線](./catalog/advertising/tradedesk.md)
-      * [（測試版）交易台CRM連線](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta)交易台CRM連線](./catalog/advertising/tradedesk-emails.md)
       * [twitter通用網站標籤擴充功能](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX連線](./catalog/advertising/datax.md)
    * Analytics目的地 {#analytics}
@@ -176,8 +177,8 @@ ht-degree: 6%
       * [硬式連線](./catalog/mobile-engagement/braze.md)
       * [線路連線](./catalog/mobile-engagement/line.md)
       * [Moengage連線](./catalog/mobile-engagement/moengage.md)
-   * 個人化目的地 {#personalization}
-      * [個人化目的地概觀](./catalog/personalization/overview.md)
+   * Personalization目的地 {#personalization}
+      * [Personalization目的地概觀](./catalog/personalization/overview.md)
       * [（可用性限制）對象分析](./catalog/personalization/audience-analysis.md)
       * [Adobe Commerce連線](./catalog/personalization/adobe-commerce.md)
       * [Adobe Target連線](./catalog/personalization/adobe-target-connection.md)
