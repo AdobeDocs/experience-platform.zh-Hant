@@ -25,7 +25,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="欄位"
->abstract="構成區段定義的三種欄位類型為屬性、事件和對象。屬性可讓您使用屬於 XDM 個人檔案類別的設定檔屬性，事件可讓您使用 XDM ExperienceEvent 資料元素來根據發生的動作或事件建立對象，而對象則可讓您使用從外部來源匯入的對象。"
+>abstract="構成區段定義的三種欄位類型為屬性、事件和客群。屬性可讓您使用屬於 XDM 個人輪廓類別的輪廓屬性，事件可讓您根據使用 XDM ExperienceEvent 資料元素發生的動作或事件來建立客群，而客群則可讓您使用從外部來源匯入的客群。"
 
 區段定義的基本建置區塊是屬性和事件。 此外，現有對象中包含的屬性和事件可作為新定義的元件。
 
@@ -173,9 +173,9 @@ ht-degree: 6%
 
 ### 程式碼檢視
 
-或者，您也可以檢視在中建立的規則之程式碼型版本。 [!DNL Segment Builder]. 在規則產生器畫布中建立規則後，您可以選取 **[!UICONTROL 程式碼檢視]** 以PQL形式檢視您的區段定義。
+或者，您也可以檢視在中建立的規則之程式碼型版本。 [!DNL Segment Builder]. 在規則產生器畫布中建立規則後，您可以選取 **[!UICONTROL 程式碼檢視]** 以便以PQL的形式檢視您的區段定義。
 
-![程式碼檢視按鈕會反白顯示，讓您看到區段定義為PQL。](../images/ui/segment-builder/code-view.png)
+![程式碼檢視按鈕強調顯示，可讓您檢視如PQL的區段定義。](../images/ui/segment-builder/code-view.png)
 
 程式碼檢視提供按鈕，可讓您複製區段定義的值，以用於API呼叫。 若要取得最新版本的區段定義，請確定您已儲存對區段定義進行的最新變更。
 
@@ -255,7 +255,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="區段定義屬性"
->abstract="區段定義屬性部分會顯示產生的區段定義大小的估計值，以顯示合格設定檔數量和設定檔總數的比較。這可讓您在建置對象本身之前根據需要調整您的區段定義。"
+>abstract="區段定義屬性區段會顯示結果區段定義的大小預估值，顯示合格的輪廓數與輪廓總數的比較。這可讓您在建立客群本身之前，視需要調整區段定義。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -291,7 +291,7 @@ ht-degree: 6%
 
 此 [!UICONTROL 評估方法資格] 彈出視窗會出現。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出視窗會顯示哪些評估方法符合資格和不符合資格。 根據您在區段定義中使用的引數，它可能不符合某些評估方法的資格。 如需每種評估方法需求的詳細資訊，請參閱 [串流細分](./streaming-segmentation.md#query-types) 或 [邊緣細分](./edge-segmentation.md#query-types) 概述。
 
-完成建立區段定義後，您也可以變更區段定義的評估方法。 如果您將評估方法從「邊緣」或「串流」變更為「批次」，您將 **非** 能夠將其變更回Edge或Streaming。 評估方法的變更將會 **僅限** 一旦您選取「 」，就會生效 **[!UICONTROL 儲存]** 在彈出視窗中。 取消對話方塊將會 **維護** 原始評估方法。
+完成建立區段定義後，您也可以變更區段定義的評估方法。 如果您將評估方法從Edge或串流變更為批次，您將 **非** 能夠將其變更回Edge或串流。 評估方法的變更將會 **僅限** 一旦您選取「 」，就會生效 **[!UICONTROL 儲存]** 在彈出視窗中。 取消對話方塊將會 **維護** 原始評估方法。
 
 ![評估方法適用性快顯視窗會出現。 這會顯示哪些評估方法適用於區段定義，哪些則不適用於區段定義。](../images/ui/segment-builder/select-evaluation-method.png)
 
