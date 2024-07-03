@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3975'
 ht-degree: 11%
 
 ---
@@ -131,7 +131,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    >[!NOTE]
    >
-   >此 **[!UICONTROL 區段評估後]** 以下所述的選項僅適用於部分Beta版客戶。
+   >此 **[!UICONTROL 區段評估後]** 底下所述的選項僅適用於特定的Beta客戶。
 
    使用 **[!UICONTROL 區段評估後]** 讓啟動工作在每日Platform批次分段工作完成後立即執行的選項。 此選項可確保當啟動工作執行時，最新的設定檔會匯出至您的目的地。
 
@@ -231,7 +231,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    ![新增對應工作流程中反白顯示的新欄位控制項。](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
-1. 選取右側的箭頭 **[!UICONTROL 來源欄位]** 登入點。
+1. 選取右側的箭頭 **[!UICONTROL Source欄位]** 登入點。
 
    ![選取對應工作流程中醒目提示的原始程式欄位控制項。](../assets/ui/activate-batch-profile-destinations/select-source-field.png)
 
@@ -432,7 +432,7 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 >
 > 例如，如果欄位 `person.name.firstName` 具有與目的地的行銷動作衝突的特定資料使用標籤，您會在檢閱步驟中看到資料使用原則違規。 如需詳細資訊，請參閱 [Adobe Experience Platform中的資料控管](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-### [!BADGE 測試版]{type=Informative}透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
+### [!BADGE Beta]{type=Informative}透過計算欄位匯出陣列 {#export-arrays-calculated-fields}
 
 部分測試版客戶可將陣列物件從Experience Platform匯出至雲端儲存目的地。 深入瞭解 [匯出陣列和計算欄位](/help/destinations/ui/export-arrays-calculated-fields.md) 並聯絡您的Adobe代表以取得功能的存取權。
 
@@ -442,13 +442,22 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 
 #### 無法透過對應工作流程選取對象成員資格屬性
 
-由於已知限制，您目前無法使用 **[!UICONTROL 選取欄位]** 新增視窗 `segmentMembership.status` 至您的檔案匯出。 您而是需要手動貼上值 `xdm: segmentMembership.status` 放入結構欄位中，如下所示。
+由於已知限制，您目前無法使用 **[!UICONTROL 選取欄位]** 新增視窗 `segmentMembership.seg_namespace.seg_id.status` 至您的檔案匯出。 您而是需要手動貼上值 `xdm: segmentMembership.seg_namespace.seg_id.status` 放入結構欄位中，如下所示。
 
 ![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-檔案匯出內容可能會以下列方式有所差異，具體取決於是否 `segmentMembership.status` 已選取：
-* 如果 `segmentMembership.status` 欄位已選取，匯出的檔案包括 **[!UICONTROL 作用中]** 初始完整快照中的成員，以及新 **[!UICONTROL 作用中]** 和 **[!UICONTROL 已過期]** 後續增量匯出中的成員。
-* 如果 `segmentMembership.status` 未選取欄位，匯出的檔案僅包含 **[!UICONTROL 作用中]** 初始完整快照和後續增量匯出中的成員。
+
+>[!NOTE]
+>
+對於雲端儲存空間目的地，下列屬性會預設新增至對應：
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+檔案匯出內容可能會以下列方式有所差異，具體取決於是否 `segmentMembership.seg_namespace.seg_id.status` 已選取：
+
+* 如果 `segmentMembership.seg_namespace.seg_id.status` 欄位已選取，匯出的檔案包括 **[!UICONTROL 作用中]** 初始完整快照中的成員，以及新 **[!UICONTROL 作用中]** 和 **[!UICONTROL 已過期]** 後續增量匯出中的成員。
+* 如果 `segmentMembership.seg_namespace.seg_id.status` 未選取欄位，匯出的檔案僅包含 **[!UICONTROL 作用中]** 初始完整快照和後續增量匯出中的成員。
 
 深入瞭解 [檔案型目的地的設定檔匯出行為](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -488,19 +497,19 @@ Adobe建議選取身分名稱空間，例如 [!DNL CRM ID] 或電子郵件地址
 
 >[!NOTE]
 >
-Adobe Experience Platform會使用結構描述中四個建議且常用的屬性來預先填入您的選擇： `person.name.firstName`， `person.name.lastName`， `personalEmail.address`， `segmentMembership.status`.
+Adobe Experience Platform會使用結構描述中四個建議且常用的屬性來預先填入您的選擇： `person.name.firstName`， `person.name.lastName`， `personalEmail.address`， `segmentMembership.seg_namespace.seg_id.status`.
 
 ![此影像顯示在對象啟動工作流程的對應步驟中預先填入的建議屬性。](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-由於已知限制，您目前無法使用 **[!UICONTROL 選取欄位]** 新增視窗 `segmentMembership.status` 至您的檔案匯出。 您必須手動貼上值 `xdm: segmentMembership.status` 放入結構欄位中，如下所示。
+由於已知限制，您目前無法使用 **[!UICONTROL 選取欄位]** 新增視窗 `segmentMembership.seg_namespace.seg_id.status` 至您的檔案匯出。 您必須手動貼上值 `xdm: segmentMembership.seg_namespace.seg_id.status` 放入結構欄位中，如下所示。
 >
 ![熒幕錄製，顯示啟動工作流程對應步驟中的對象成員資格因應措施。](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-檔案匯出會依下列方式而異 `segmentMembership.status` 已選取：
-* 如果 `segmentMembership.status` 欄位已選取，匯出的檔案包括 **[!UICONTROL 作用中]** 初始完整快照和中的成員 **[!UICONTROL 作用中]** 和 **[!UICONTROL 已過期]** 後續增量匯出中的成員。
-* 如果 `segmentMembership.status` 未選取欄位，匯出的檔案僅包含 **[!UICONTROL 作用中]** 初始完整快照和後續增量匯出中的成員。
+檔案匯出會依下列方式而異 `segmentMembership.seg_namespace.seg_id.status` 已選取：
+* 如果 `segmentMembership.seg_namespace.seg_id.status` 欄位已選取，匯出的檔案包括 **[!UICONTROL 作用中]** 初始完整快照和中的成員 **[!UICONTROL 作用中]** 和 **[!UICONTROL 已過期]** 後續增量匯出中的成員。
+* 如果 `segmentMembership.seg_namespace.seg_id.status` 未選取欄位，匯出的檔案僅包含 **[!UICONTROL 作用中]** 初始完整快照和後續增量匯出中的成員。
 
 ## 選取擴充屬性 {#select-enrichment-attributes}
 
