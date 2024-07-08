@@ -2,10 +2,10 @@
 title: 自動化資料集有效期
 description: 瞭解如何在Adobe Experience Platform UI中排程資料集有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 21%
+source-wordcount: '871'
+ht-degree: 18%
 
 ---
 
@@ -26,7 +26,13 @@ ht-degree: 21%
 
 >[!NOTE]
 >
->資料集到期目前不會從Adobe Experience Platform Edge Network刪除資料。 不過，資料集設為過期後，資料不可能保留在Edge Network內。 這是因為資料集到期的15天服務授權合約與Edge Network中存在資料的14天期間重疊，之後才捨棄資料。
+>資料集到期目前不會從Adobe Experience PlatformEdge Network中刪除資料。 不過，資料集設為過期後，資料不可能保留在Edge Network內。 這是因為資料集到期的15天服務授權合約與Edge Network中存在資料的14天期間重疊，之後才捨棄資料。
+
+進階資料生命週期管理透過支援資料集刪除 [資料集到期端點](../api/dataset-expiration.md) 和ID刪除（列層級資料），透過使用主要身分 [工單端點](../api/workorder.md). 您也可以管理資料集有效期，以及 [記錄刪除](./record-delete.md) 透過Platform UI。 如需詳細資訊，請參閱連結的檔案。
+
+>[!NOTE]
+>
+>資料生命週期不支援批次刪除。
 
 ## 排程資料集到期 {#schedule-dataset-expiration}
 
@@ -39,7 +45,7 @@ ht-degree: 21%
 
 >[!IMPORTANT]
 >
-Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics使用者有20個擱置中的排程資料集到期工作單。 Healthcare Shield和Privacy and Security Shield使用者有50個擱置中的排程資料集到期工作單。 這表示您可以同時排程刪除20或50個資料集。<br>例如，如果您有20個排程的資料集有效期，而其中一個資料集將於明天刪除，則在刪除該資料集之前，您無法設定任何其他有效期。
+>Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics使用者有20個擱置中的排程資料集到期工作單。 Healthcare Shield和Privacy and Security Shield使用者有50個擱置中的排程資料集到期工作單。 這表示您可以同時排程刪除20或50個資料集。<br>例如，如果您有20個排程的資料集有效期，而其中一個資料集將於明天刪除，則在刪除該資料集之前，您無法設定任何其他有效期。
 
 ![此 [!UICONTROL 資料生命週期] 工作區，使用 [!UICONTROL 建立請求] 反白顯示。](../images/ui/ttl/create-request-button.png)
 
@@ -59,7 +65,7 @@ Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics使用者有
 
 >[!NOTE]
 >
-只會顯示屬於目前沙箱的資料集。
+>只會顯示屬於目前沙箱的資料集。
 
 ### 提交請求 {#submit-request}
 
@@ -73,7 +79,7 @@ A [!UICONTROL 確認請求] 對話方塊隨即顯示。 系統會要求您確認
 
 >[!NOTE]
 >
-請參閱的概觀區段： [時間軸和透明度](../home.md#dataset-expiration-transparency) 以取得資料集過期執行後如何處理的詳細資訊。
+>請參閱的概觀區段： [時間軸和透明度](../home.md#dataset-expiration-transparency) 以取得資料集過期執行後如何處理的詳細資訊。
 
 ## 編輯或取消資料集有效期 {#edit-or-cancel}
 

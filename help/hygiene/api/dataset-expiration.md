@@ -3,10 +3,10 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 2%
+source-wordcount: '2217'
+ht-degree: 1%
 
 ---
 
@@ -27,6 +27,12 @@ ht-degree: 2%
 >[!WARNING]
 >
 >如果資料集設為過期，您必須手動變更任何可能會將資料擷取至該資料集的資料流程，讓您的下游工作流程不會受到負面影響。
+
+進階資料生命週期管理透過資料集到期端點支援資料集刪除，並透過使用主要身分的ID刪除（列層級資料）支援 [工單端點](./workorder.md). 您也可以管理 [資料集有效期](../ui/dataset-expiration.md) 和 [記錄刪除](../ui/record-delete.md) 透過Platform UI。 如需詳細資訊，請參閱連結的檔案。
+
+>[!NOTE]
+>
+>資料生命週期不支援批次刪除。
 
 ## 快速入門
 

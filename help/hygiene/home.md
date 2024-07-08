@@ -2,9 +2,9 @@
 title: 進階資料生命週期管理概觀
 description: 進階資料生命週期管理可讓您更新或清除過時或不準確的記錄，進而管理資料的生命週期。
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '636'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,10 @@ Adobe Experience Platform提供一套強大的工具，可管理大型複雜資�
 
 這些活動可使用以下專案執行： [[!UICONTROL 資料生命週期] UI工作區](#ui) 或 [資料衛生API](#api). 當資料生命週期工作執行時，系統會在流程的每個步驟提供透明度更新。 請參閱以下小節： [時間軸和透明度](#timelines-and-transparency) 有關如何在系統中表示每種工作型別的詳細資訊。
 
+>[!NOTE]
+>
+>進階資料生命週期管理透過支援資料集刪除 [資料集到期端點](./api/dataset-expiration.md) 和ID刪除（列層級資料），透過使用主要身分 [工單端點](./api/workorder.md). 您也可以管理 [資料集有效期](./ui/dataset-expiration.md) 和 [記錄刪除](./ui/record-delete.md) 透過Platform UI。 如需詳細資訊，請參閱連結的檔案。 請注意，資料生命週期不支援批次刪除。
+
 ## [!UICONTROL 資料生命週期] UI工作區 {#ui}
 
 此 [!UICONTROL 資料生命週期] Platform UI中的工作區可讓您設定和排程資料生命週期作業，協助確保您的記錄可如預期般維護。
@@ -42,7 +46,7 @@ Adobe Experience Platform提供一套強大的工具，可管理大型複雜資�
 
 下列動作會在 [資料集到期要求](./ui/dataset-expiration.md) 建立時間：
 
-| 測試 | 排程到期之後的時間 | 說明 |
+| 階段 | 排程到期之後的時間 | 說明 |
 | --- | --- | --- |
 | 已提交請求 | 0 小時 | 資料管理員或隱私權分析人員提交資料集在指定時間到期的請求。 此請求會顯示在 [!UICONTROL 資料生命週期UI] 在提交之後，且會維持擱置狀態，直到排定的到期時間為止，之後會執行要求。 |
 | 資料集已捨棄 | 1 小時 | 資料集會從「 」中刪除 [資料集詳細目錄頁面](../catalog/datasets/user-guide.md) 在UI中。 Data Lake中的資料只會軟刪除，並將一直保留至程式結束，之後會硬刪除。 |
