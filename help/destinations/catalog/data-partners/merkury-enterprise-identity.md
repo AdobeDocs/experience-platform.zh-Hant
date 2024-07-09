@@ -1,11 +1,9 @@
 ---
 title: Mercury Enterprise身分目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise Identity目的地連線。
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1469'
 ht-degree: 2%
 
 ---
@@ -15,33 +13,33 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->目的地聯結器和檔案頁面是由Merkury團隊建立和維護的。 如有任何查詢或更新要求，請聯絡您的Merkury客戶代表。
+>目的地聯結器和檔案頁面是由 [!DNL Merkury] 團隊。 如有任何查詢或更新要求，請連絡 [!DNL Merkury] 客戶代表。
 
 ## 概觀
 
-使用Merkury Enterprise Identity目的地建立更準確、完整且有洞察力的消費者個人檔案。 透過改良的設定檔資料，行銷人員可以支援更好的深入分析、區段和模型，從而產生更準確的目標定位和預測性模型。
+使用 [!DNL Merkury Enterprise Identity] 建立更準確、全面且深入解析的消費者個人檔案的目的地。 透過改良的設定檔資料，行銷人員可以支援更好的深入分析、區段和模型，從而產生更準確的目標定位和預測性模型。
 
 ![顯示Merkury與Experience Platform之間相互連結（包括擷取和啟用）的圖表](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
-依照本檔案頁面中的步驟，建立Merkury Identity目的地連線，並使用Adobe Experience Platform使用者介面啟用對象以進行識別和擴充。
+依照本檔案頁面中的步驟，建立 [!DNL Merkury Identity] 目的地連線並啟用對象，以使用Adobe Experience Platform使用者介面進行識別與擴充。
 
 >[!NOTE]
 >
->如果您想要以Merkury Connect帳戶啟用媒體目的地的對象，請改用我們的Merkury Connections目的地。
+>如果您想要透過您的 [!DNL Merkury Connect] 帳戶，使用 [!DNL Merkury Connections] 目的地而非。
 
 ![Experience Platform目的地目錄中醒目提示的Merkury Enterprise身分識別目的地卡。](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 ## 使用案例
 
-Merkury Enterprise Identity Destination提供安全傳輸消費者PII的功能，以實現下列Merkury功能：
+此 [!DNL Merkury Enterprise Identity] 目的地提供安全傳輸下列消費者PII的功能 [!DNL Merkury] 功能：
 
-* **資料品質**：透過資料檢疫和標準化改善消費者設定檔資料品質。 Merkury包含美國郵遞衛生和移動識別，以支援最進階的直接郵件行銷使用案例。
-* **身分解析**：透過Merkury個人和家庭ID建立客戶精確而全面的單一檢視。 Merkury ID提供深層設定檔連結，由Merkury擁有2.68億以上使用者的完整美國成人消費者身分圖表提供支援。
-* **擴充**：使用Mercury資料提供更深入的分析和個人化體驗。 Merkury Data包含10,000多種可用的資料屬性，涵蓋人口、生活方式、財務、生活事件等，以及從Merkury Data Suite購買的資料。
+* **資料品質**：透過資料檢疫和標準化改善消費者設定檔資料品質。 [!DNL Merkury] 包含美國郵遞區號和移動身分識別，以支援最進階的直接郵件行銷使用案例。
+* **身分解析**：建立精確且完整的客戶單一檢視，資訊來自 [!DNL Merkury] 個人和家庭ID。 Mercury ID提供由支援的深層設定檔連結 [!DNL Merkury]2.68億以上人口的完整美國成人消費者身分圖表。
+* **擴充**：使用獲得更好的見解和個人化 [!DNL Merkury Data]. [!DNL Merkury Data] 包括超過10,000種可用的資料屬性，涵蓋人口、生活方式、財務、生活事件，以及購買以下產品的資料： [!DNL Merkury Data Suite].
 
 >[!NOTE]
 >
->這些使用案例會透過目的地和來源聯結器的組合執行。 客戶一開始會匯出其現有客戶記錄，以使用此目的地聯結器進行擴充。 Merkury的服務會搜尋檔案、擷取檔案、使用Merkury的資料擴充檔案並產生檔案。 然後，客戶將使用對應的Merkury來源聯結器來源卡片，將水合的客戶設定檔擷取回Adobe Real-Time CDP。
+>這些使用案例會透過目的地和來源聯結器的組合執行。 客戶一開始會匯出其現有客戶記錄，以使用此目的地聯結器進行擴充。 [!DNL Merkury]的服務會搜尋檔案、擷取檔案，並透過以下擴充檔案： [!DNL Merkury]的資料並產生檔案。 然後，客戶會使用對應的 [!DNL Merkury] Source聯結器來源卡片，可將水合的客戶設定檔擷取回Adobe Real-Time CDP。
 
 ## 先決條件
 
@@ -54,7 +52,7 @@ Merkury Enterprise Identity Destination提供安全傳輸消費者PII的功能�
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | Google廣告ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](/help/identity-service/features/ecid.md) 以取得詳細資訊。 |
 | phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
@@ -77,11 +75,9 @@ Merkury Enterprise Identity Destination提供安全傳輸消費者PII的功能�
 ## 匯出型別和頻率
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
-
-|**Audience**|**Supported**|**Description origin**|            
-|---|---|---|      
-|Segmentation Service|✓|Audiences generated through the Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) into Experience Platform from CSV files.
+|**對象**|**支援**|**說明來源**|\
+|—|—|—|\
+✓ |分段服務||透過Experience Platform產生的對象 [[細分服務]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| 自訂上傳|X|對象 [[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) 從CSV檔案Experience Platform為。
 
 {style="table-layout:auto"}
 
@@ -124,7 +120,7 @@ Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/do
 
 >[!NOTE]
 >
->選取CSV選項時，將會顯示分隔字元、引號字元、逸出字元、空值、空值、壓縮格式和包含資訊清單檔案選項，請洽詢您的Merkury團隊為您的帳戶提供適當的設定。
+>選取CSV選項時，將會顯示分隔符號、引號字元、逸出字元、空值、空值、壓縮格式以及包含資訊清單檔案選項，請洽詢您的Merkury團隊，以取得您帳戶的適當設定。
 
 ![csv選項影像](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
@@ -145,20 +141,20 @@ Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/do
 
 >[!IMPORTANT]
 >
->* 若要啟用資料，您需要「檢視目的地」、「啟用目的地」、「檢視設定檔」和「檢視區段」存取控制許可權。 請閱讀存取控制總覽或聯絡您的產品管理員以取得所需許可權。
->* 若要匯出身分，您需要檢視身分圖表存取控制許可權。
+>* 若要啟用資料，您需要 **檢視目的地**， **啟用目的地**， **檢視設定檔**、和 **檢視區段** 存取控制許可權。 請閱讀存取控制總覽或聯絡您的產品管理員以取得所需許可權。
+>* 若要匯出身分，您需要 **檢視身分圖表** 存取控制許可權。
 
 讀取 [啟用對象資料至批次設定檔匯出目的地](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) 以取得啟用此目的地對象的指示。
 
 ## 對應建議
 
-正確處理Merkury端的檔案需要名稱和位址元素。 雖然並非所有元素都需要，但儘可能提供有助於成功比對。
+正確處理 [!DNL Merkury] side需要名稱和位址元素。 雖然並非所有元素都需要，但儘可能提供有助於成功比對。
 
-下表提供對應建議，列出客戶可將設定檔屬性對應至的Merkury處理所使用的目的地屬性。 將這些元素視為建議，因為並非所有元素都是必要的，而來源值將視帳戶的需求而定。
+下表提供對應建議，列出您目的地一側所使用的屬性。 [!DNL Merkury] 客戶可以將設定檔屬性對應到的處理作業。 將這些元素視為建議，因為並非所有元素都是必要的，而來源值將視帳戶的需求而定。
 
-| 目標欄位 | 來源說明 |
+| 目標欄位 | Source說明 |
 |---|---|
-| ID | 用於對應merkury資料以透過Merkury企業身分解析來源聯結器Experience Platform的身分欄位 |
+| ID | 用於對應的身分欄位 [!DNL Merkury] 要Experience Platform的資料 [!DNL Merkury Enterprise Identity] Source聯結器 |
 | Input_First_Name | 此 `person.name.firstName` Experience Platform的值。 |
 | Input_Last_Name | 此 `person.name.lastName` Experience Platform的值。 |
 | Input_Address_Line_1 | 此 `mailingAddress.street` Experience Platform的值。 |
@@ -181,4 +177,4 @@ Custom uploads|X|Audiences [[imported]](https://experienceleague.adobe.com/en/do
 
 ## 後續步驟
 
-依照本教學課程所述，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至Merkury管理的S3位置。 接下來，您需要連絡您的Merkury代表，提供帳戶名稱、檔案名稱及貯體路徑，以便設定處理作業。
+依照本教學課程所述，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至 [!DNL Merkury] 受管理的S3位置。 接下來，您需要連絡 [!DNL Merkury] 具有帳戶名稱、檔案名稱及儲存貯體路徑以便設定處理的代表。

@@ -1,38 +1,37 @@
 ---
 title: Mercury Enterprise連線目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise連線目的地連線。
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1375'
 ht-degree: 3%
 
 ---
+
 
 # Mercury Enterprise連線目的地
 
 >[!NOTE]
 >
->目的地聯結器和檔案頁面是由Merkury團隊建立和維護的。 如有任何查詢或更新要求，請聯絡您的Merkury客戶代表。
+>目的地聯結器和檔案頁面是由 [!DNL Merkury] 團隊。 如有任何查詢或更新要求，請連絡 [!DNL Merkury] 客戶代表。
 
 ## 概觀
 
-使用Merkury Enterprise Connections目的地將受眾安全地傳送至Merkury。 Merkury可讓行銷人員輕鬆比對及傳送個人化對象至Merkury超過80部的高階定址電視/電視、發行商及廣告技術連線。 Merkury擁有超過2.68億人的完整美國成人消費者身分圖表。
+使用 [!DNL Merkury Enterprise Connections] 將受眾安全地傳送至的目的地 [!DNL Merkury]. [!DNL Merkury] 讓行銷人員可輕鬆比對及傳送個人化對象至 [!DNL Merkury]的80+高階可定址電視/電視、發行商和廣告技術連線。 [!DNL Merkury] 這項技術採用2.68億以上的美國成人消費者身分識別綜合圖表。
 
 ![顯示Merkury與Experience Platform之間相互連結（包括擷取和啟用）的圖表](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
-依照本檔案頁面中的步驟，建立Merkury Connections目的地連線，並使用Adobe Experience Platform使用者介面啟用對象。
+依照本檔案頁面中的步驟，建立 [!DNL Merkury Connections] 目的地連線，並使用Adobe Experience Platform使用者介面啟用對象。
 
 >[!NOTE]
 >
->如果您想要以Merkury Connect帳戶啟用媒體目的地的對象，請改用我們的Merkury Connections目的地。
+>如果您想要透過您的 [!DNL Merkury Connect] 帳戶，使用 [!DNL Merkury Connections] 目的地而非。
 
 ![Experience Platform目的地目錄中醒目提示的Merkury Enterprise Connections目的地卡片。](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## 使用案例
 
-* **數位媒體啟用**：可輕鬆比對您的受眾設定檔，並將其傳送至Merkury的50多個進階定址發佈商和廣告技術連線。
+* **數位媒體啟用**：輕鬆比對並傳送您的受眾設定檔至 [!DNL Merkury]50多家進階定址發佈商和廣告技術連線。
 * **提升效率**：增強您的無Cookie、可定址媒體觸及率，改善鎖定目標效率及Advertising投資報酬率(ROAS)。
 
 ## 先決條件
@@ -57,7 +56,7 @@ ht-degree: 3%
 
 ## 支援的對象
 
-本節說明可將哪些型別的對象匯出至此目的地。
+本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | **閱聽眾** | **支援** | **說明來源** |
 |---|---|---|      
@@ -116,15 +115,15 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->選取CSV選項時，將會顯示分隔字元、引號字元、逸出字元、空值、空值、壓縮格式和包含資訊清單檔案選項，請洽詢您的Merkury團隊為您的帳戶提供適當的設定。
+>選取CSV選項時，將會顯示分隔符號、引號字元、逸出字元、空值、空值、壓縮格式以及包含資訊清單檔案選項，請洽詢您的Merkury團隊，以取得您帳戶的適當設定。
 
 ![csv選項的影像](../../assets/catalog/data-partners/merkury-connections/media/image8.png)
 
 ### 現有帳戶
 
-已使用Merkury Enterprise連線目的地定義的帳戶會出現在清單快顯視窗中。 選取後，您可以在右側邊欄中檢視帳戶的詳細資料。 導覽至「 」時，從UI檢視範例 **目的地** > **帳戶**；
+已使用Merkury Enterprise連線目的地定義的帳戶會出現在清單快顯視窗中。 選取後，您可以在右側邊欄中檢視帳戶的詳細資料。 導覽至「 」時，從UI檢視範例 **目的地** > **帳戶**：
 
-![目的地帳戶頁面中的目的地帳戶熒幕擷圖](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
+![目的地帳戶頁面中的目的地帳戶熒幕擷圖。](../../assets/catalog/data-partners/merkury-connections/media/image5.png)
 
 ## 啟用警示
 
@@ -136,21 +135,21 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->* 若要啟用資料，您需要「檢視目的地」、「啟用目的地」、「檢視設定檔」和「檢視區段」存取控制許可權。 請閱讀存取控制總覽或聯絡您的產品管理員以取得所需許可權。
->* 若要匯出身分，您需要檢視身分圖表存取控制許可權。
+>* 若要啟用資料，您需要 **檢視目的地**， **啟用目的地**， **檢視設定檔**、和 **檢視區段** 存取控制許可權。 請閱讀存取控制總覽或聯絡您的產品管理員以取得所需許可權。
+>* 若要匯出身分，您需要 **檢視身分圖表** 存取控制許可權。
 
 
 讀取 [啟用對象資料至批次設定檔匯出目的地](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) 以取得啟用此目的地對象的指示。
 
 ## 對應建議
 
-正確處理Merkury端的檔案需要名稱和位址元素。 雖然並非所有元素都需要，但儘可能提供有助於成功比對。
+正確處理 [!DNL Merkury] side需要名稱和位址元素。 雖然並非所有元素都需要，但儘可能提供有助於成功比對。
 
-下表提供對應建議，列出客戶可將設定檔屬性對應至的Merkury處理所使用的目的地屬性。 將這些元素視為建議，因為並非所有元素都是必要的，而來源值將視帳戶的需求而定。
+下表提供對應建議，列出您目的地一側所使用的屬性。 [!DNL Merkury] 客戶可以將設定檔屬性對應到的處理作業。 將這些元素視為建議，因為並非所有元素都是必要的，而來源值將視帳戶的需求而定。
 
 | 目標欄位 | Source說明 |
 |---|---|
-| ID | 用於對應merkury資料以透過Merkury Enterprise Identity Resolution Source聯結器進行Experience Platform的身分欄位 |
+| ID | 用於對應的身分欄位 [!DNL Merkury] 要Experience Platform的資料 [!DNL Merkury Enterprise Identity] Source聯結器 |
 | Input_First_Name | 此 `person.name.firstName` Experience Platform的值。 |
 | Input_Last_Name | 此 `person.name.lastName` Experience Platform的值。 |
 | Input_Address_Line_1 | 此 `mailingAddress.street` Experience Platform的值。 |
@@ -173,4 +172,4 @@ ht-degree: 3%
 
 ## 後續步驟
 
-依照本教學課程所述，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至Merkury管理的S3位置。 接下來，您需要連絡您的Merkury代表，提供帳戶名稱、檔案名稱及貯體路徑，以便設定處理作業。
+依照本教學課程所述，您已成功建立資料流，以將設定檔資料從Experience Platform匯出至 [!DNL Merkury] 受管理的S3位置。 接下來，您需要連絡 [!DNL Merkury] 具有帳戶名稱、檔案名稱及儲存貯體路徑以便設定處理的代表。
