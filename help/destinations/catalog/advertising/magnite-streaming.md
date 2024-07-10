@@ -4,7 +4,7 @@ description: 使用此目的地可將AdobeCDP對象即時傳送到Magnite串流�
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c61907768f6d3cfdae3d07291bb25ff4a5229a89
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 1%
@@ -63,7 +63,7 @@ ht-degree: 1%
 | 對象來源 | 支援 | 說明 |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

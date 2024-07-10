@@ -3,7 +3,7 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -47,13 +47,13 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 ## 使用案例 {#use-cases}
 
-使用Adobe個人化解決方案(例如Adobe Target)或您自己的個人化合作夥伴平台(例如 [!DNL Optimizely]， [!DNL Pega])以及專利系統（例如內部CMS），透過提供更深入的客戶個人化體驗 [自訂個人化](../catalog/personalization/custom-personalization.md) 目的地。 同時利用Experience PlatformEdge Network資料收集和細分功能。
+使用Adobe個人化解決方案(例如Adobe Target)或您自己的個人化合作夥伴平台(例如 [!DNL Optimizely]， [!DNL Pega])以及專利系統（例如內部CMS），透過提供更深入的客戶個人化體驗 [自訂Personalization](../catalog/personalization/custom-personalization.md) 目的地。 同時利用Experience PlatformEdge Network資料收集和細分功能。
 
 下述使用案例包含網站個人化及鎖定網站上的目標廣告。
 
-若要啟用這些使用案例，客戶需要一種快速簡化的方法，從Experience Platform中擷取對象和設定檔屬性資訊，然後將此資訊傳送至 [Adobe Target](../catalog/personalization/adobe-target-connection.md) 或 [自訂個人化](../catalog/personalization/custom-personalization.md) Experience Platform UI中的連線。
+若要啟用這些使用案例，客戶需要一種快速簡化的方法，從Experience Platform中擷取對象和設定檔屬性資訊，然後將此資訊傳送至 [Adobe Target](../catalog/personalization/adobe-target-connection.md) 或 [自訂Personalization](../catalog/personalization/custom-personalization.md) Experience Platform UI中的連線。
 
-### 同一頁面的個人化 {#same-page}
+### 相同頁面個人化 {#same-page}
 
 使用者造訪您網站的頁面。 您可以使用目前的頁面瀏覽資訊（例如反向連結URL、瀏覽器語言、內嵌的產品資訊）來選取下一個動作或決定（例如個人化），方法是使用 [自訂個人化](../catalog/personalization/custom-personalization.md) 非Adobe平台的連線(例如， [!DNL Pega]， [!DNL Optimizely] 或其他。)。
 
@@ -61,7 +61,7 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 使用者造訪您網站上的頁面A。 根據此互動，使用者已符合一組對象的資格。 接著，使用者按一下連結，系統就會將使用者從頁面A帶往頁面B。使用者在頁面A上先前互動期間符合資格的對象，以及目前網站造訪決定的設定檔更新，將用於支援下一個動作或決定（例如，要向訪客顯示的廣告橫幅，或在A/B測試的情況下，要顯示的頁面版本）。
 
-### 下一個工作階段的個人化 {#next-session}
+### 下一次工作階段個人化 {#next-session}
 
 使用者造訪您網站上的數個頁面。 根據這些互動，使用者已符合一組對象的資格。 然後，使用者會終止目前的瀏覽工作階段。
 
@@ -77,13 +77,13 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 設定個人化目的地的第一個步驟，是為Experience Platform Web SDK設定資料流。 這是在資料收集UI中完成。
 
-設定資料流時，在 **[!UICONTROL Adobe Experience Platform]** 請確定兩者 **[!UICONTROL 邊緣細分]** 和 **[!UICONTROL 個人化目的地]** 已選取。
+設定資料流時，在 **[!UICONTROL Adobe Experience Platform]** 請確定兩者 **[!UICONTROL Edge區段]** 和 **[!UICONTROL Personalization目的地]** 已選取。
 
 >[!TIP]
 >
->從2024年4月版本開始，發生下列情況時，您不需要選取「邊緣細分」核取方塊 [設定與Adobe Target的連線](/help/destinations/catalog/personalization/adobe-target-connection.md). 在這種情況下， [下一次工作階段個人化](#next-session) 是唯一可用的個人化使用案例。
+>自2024年4月發行版本開始，符合以下條件時，您不需要選取Edge區段核取方塊： [設定與Adobe Target的連線](/help/destinations/catalog/personalization/adobe-target-connection.md). 在這種情況下， [下一次工作階段個人化](#next-session) 是唯一可用的個人化使用案例。
 
-![強調邊緣細分和個人化目的地的資料流設定！](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Edge區段和Personalization目的地資料流設定強調顯示！](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 如需如何設定資料串流的詳細資訊，請依照 [Platform Web SDK檔案](../../datastreams/configure.md#aep).
 
@@ -93,9 +93,9 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 >[!IMPORTANT]
 >
->目前，邊緣目的地僅支援啟用使用 [主動邊緣合併原則](../../segmentation/ui/segment-builder.md#merge-policies) 設為預設值。 如果您將使用不同合併原則的對象對應至邊緣目的地，則不會評估這些對象。
+>目前，邊緣目的地僅支援啟用使用 [Edge上主動式合併原則](../../segmentation/ui/segment-builder.md#merge-policies) 設為預設值。 如果您將使用不同合併原則的對象對應至邊緣目的地，則不會評估這些對象。
 
-請依照以下說明操作： [建立合併原則](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確保啟用 **[!UICONTROL Active-On-Edge合併原則]** 切換。
+請依照以下說明操作： [建立合併原則](../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確保啟用 **[!UICONTROL Edge上主動式合併原則]** 切換。
 
 ### 在Platform中建立新對象 {#create-audience}
 
@@ -141,7 +141,7 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 您可以根據對象的來源，從多種對象型別中進行選取：
 
 * **[!UICONTROL 分段服務]**：細分服務在Experience Platform中產生的對象。 請參閱 [細分檔案](../../segmentation/ui/overview.md) 以取得更多詳細資料。
-* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/audience-portal.md#import-audience).
 * 其他型別的對象，源自其他Adobe解決方案，例如 [!DNL Audience Manager].
 
 ![選取啟用工作流程的對象步驟，並反白顯示數個對象。](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 為了保護這些資料， **[!UICONTROL 自訂個人化]** 目的地要求您使用 [Edge Network伺服器API](../../server-api/overview.md) 設定以屬性為基礎的個人化目的地時。 所有伺服器API呼叫都必須在 [已驗證的內容](../../server-api/authentication.md).
+>設定檔屬性可能包含敏感資料。 為了保護這些資料， **[!UICONTROL 自訂Personalization]** 目的地要求您使用 [Edge Network伺服器API](../../server-api/overview.md) 設定以屬性為基礎的個人化目的地時。 所有伺服器API呼叫都必須在 [已驗證的內容](../../server-api/authentication.md).
 >
 ><br>如果您已在使用Web SDK或Mobile SDK進行整合，您可以透過新增伺服器端整合來透過伺服器API擷取屬性。
 >
@@ -164,7 +164,7 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 ### 選取來源屬性 {#select-source-attributes}
 
-若要新增來源屬性，請選取 **[!UICONTROL 新增欄位]** 控制 **[!UICONTROL 來源欄位]** 欄並搜尋或導覽至您所需的XDM屬性欄位，如下所示。
+若要新增來源屬性，請選取 **[!UICONTROL 新增欄位]** 控制 **[!UICONTROL Source欄位]** 欄並搜尋或導覽至您所需的XDM屬性欄位，如下所示。
 
 ![熒幕錄製，顯示如何在對應步驟中選取目標屬性。](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
@@ -174,7 +174,7 @@ Adobe Experience Platform使用 [邊緣細分](../../segmentation/ui/edge-segmen
 
 >[!NOTE]
 >
->目標屬性的選取範圍僅適用於 [自訂個人化](../catalog/personalization/custom-personalization.md) 啟用工作流程，以便在目的地平台中支援易記名稱欄位對應。
+>目標屬性的選取範圍僅適用於 [自訂Personalization](../catalog/personalization/custom-personalization.md) 啟用工作流程，以便在目的地平台中支援易記名稱欄位對應。
 
 ![熒幕錄製，顯示如何在對應步驟中選取XDM屬性](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 

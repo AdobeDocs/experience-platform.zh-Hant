@@ -3,7 +3,7 @@ keywords: 飛艇屬性；飛艇目的地
 title: 飛艇屬性連線
 description: 將Adobe對象資料順暢地傳遞給Airship，作為Airship中用於鎖定的對象屬性。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 2%
@@ -40,9 +40,9 @@ ht-degree: 2%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分，視您的欄位對應而定。 |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分，視您的欄位對應而定。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -124,7 +124,7 @@ Adobe Experience Platform設定檔屬性類似於 [!DNL Airship] 屬性之間對
 
 ## 對應考量事項 {#mapping-considerations}
 
-[!DNL Airship] 屬性可在代表裝置例項(例如iPhone)的頻道上設定，或可將所有使用者裝置對應至共同識別碼（例如客戶ID）的命名使用者上設定。 如果您的結構描述中以純文字（未雜湊）電子郵件地址為主要身分，請選取結構描述中的電子郵件欄位 **[!UICONTROL 來源屬性]** 並將對應至 [!DNL Airship] 已命名使用者在下的右側欄 **[!UICONTROL 目標身分]**，如下所示。
+[!DNL Airship] 屬性可在代表裝置例項(例如iPhone)的頻道上設定，或可將所有使用者裝置對應至共同識別碼（例如客戶ID）的命名使用者上設定。 如果您的結構描述中以純文字（未雜湊）電子郵件地址為主要身分，請選取結構描述中的電子郵件欄位 **[!UICONTROL Source屬性]** 並將對應至 [!DNL Airship] 已命名使用者在下的右側欄 **[!UICONTROL 目標身分]**，如下所示。
 
 ![已命名的使用者對應](../../assets/catalog/mobile-engagement/airship/mapping.png)
 

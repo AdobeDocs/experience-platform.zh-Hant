@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 相似的對象
 description: 瞭解如何使用Adobe Experience Platform中的相似受眾鎖定新的高價值受眾。
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2192'
 ht-degree: 9%
 
 ---
@@ -106,7 +106,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 您可以將游標停留在圖表中的特定一點上方，以顯示目前醒目標示的點之相似度百分比和預期的設定檔數量。
 
-### 類似的對象 {#list}
+### 相似客群 {#list}
 
 「相似對象」區段會顯示先前針對所選基本對象建立的所有相似對象清單。
 
@@ -179,7 +179,7 @@ Y軸顯示具有對應於x軸相符值之相似度百分比的設定檔預期計
 
 ![相似受眾區段會醒目提示。](../images/ui/lookalike-audiences/select-laa.png)
 
-對象詳細資訊頁面隨即顯示。 如需本頁的詳細資訊，請參閱 [Segmentation Service UI指南的對象詳細資訊區段](./overview.md#audience-details).
+對象詳細資訊頁面隨即顯示。 如需本頁的詳細資訊，請參閱 [Audience Portal概觀的對象詳細資訊區段](./audience-portal.md#audience-details).
 
 ![系統會顯示相似對象的詳細資料。](../images/ui/lookalike-audiences/laa-details.png)
 

@@ -3,7 +3,7 @@ title: LiveRamp — 入門連線
 description: 瞭解如何使用LiveRamp聯結器將對象從Adobe Real-time Customer Data Platform上線到LiveRamp Connect。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 3%
@@ -37,9 +37,9 @@ ht-degree: 3%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員中都有用於的識別碼（名稱、電話號碼或其他）。 [!DNL LiveRamp - Onboarding] 目的地。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員中都有用於的識別碼（名稱、電話號碼或其他）。 [!DNL LiveRamp - Onboarding] 目的地。 |
 | 匯出頻率 | **[!UICONTROL 每日批次]** | 由於設定檔會根據對象評估在Experience Platform中更新，因此設定檔（身分）會每天更新一次，從下游到目的地平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -211,7 +211,7 @@ Platform會將兩個CSV檔案匯出至 [!DNL LiveRamp - Onboarding]：
 * `Expired`：設定檔不再符合對象的資格，但過去已符合資格。
 * `""`（空字串）：設定檔從未符合對象的資格。
 
-例如，轉存的CSV檔案包含一個 `email` 屬性，源自Experience Platform的兩個對象 [分段服務](../../../segmentation/home.md)，和一個 [已匯入](../../../segmentation/ui/overview.md#importing-an-audience) 外部對象，看起來可能像這樣：
+例如，轉存的CSV檔案包含一個 `email` 屬性，源自Experience Platform的兩個對象 [分段服務](../../../segmentation/home.md)，和一個 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 外部對象，看起來可能像這樣：
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-在上述範例中， `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 和 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 區段會說明源自細分服務的對象，而 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` 說明匯入Platform的對象為 [自訂上傳](../../../segmentation/ui/overview.md#importing-an-audience).
+在上述範例中， `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` 和 `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` 區段會說明源自細分服務的對象，而 `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` 說明匯入Platform的對象為 [自訂上傳](../../../segmentation/ui/audience-portal.md#import-audience).
 
 因為Platform會為每個產生一個CSV檔案 [合併原則ID](../../../profile/merge-policies/overview.md)，也會為每個合併原則ID產生個別的資料流執行。
 

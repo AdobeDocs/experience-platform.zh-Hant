@@ -2,9 +2,9 @@
 title: Adobe Experience Platform 發行說明 (2024 年 3 月)
 description: Adobe Experience Platform 2024 年 3 月的發行說明。
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1190'
 ht-degree: 33%
 
 ---
@@ -75,8 +75,8 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 目的地 | 類型 | 說明 |
 | ----------- | --------- | ----------- |
-| [(Beta) Acxiom資料增強功能連線](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新增 | 使用此聯結器可啟用從Real-Time CDP到Acxiom的第一方設定檔，以擴充資料並跨行銷管道使用。 然後，您可以使用Acxiom來源匯入具有增強型資料的設定檔，並在Real-Time CDP中處理這些設定檔。 |
-| [(Beta) Acxiom潛在客戶抑制連線](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新增 | 將您的第一方對象匯出至Acxiom目的地，以允許Acxiom抑制已知或轉換的客戶。 然後，使用 [Acxiom潛在客戶資料匯入](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) 來源聯結器可從Acxiom擷取及啟用潛在客戶清單，並移除您已知或轉換的客戶。 |
+| [(Beta) Acxiom Data Enhancement連線](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新增 | 使用此聯結器可啟用從Real-Time CDP到Acxiom的第一方設定檔，以擴充資料並跨行銷管道使用。 然後，您可以使用Acxiom來源匯入具有增強型資料的設定檔，並在Real-Time CDP中處理這些設定檔。 |
+| [(Beta) Acxiom潛在客戶隱藏連線](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新增 | 將您的第一方對象匯出至Acxiom目的地，以允許Acxiom抑制已知或轉換的客戶。 然後，使用 [Acxiom潛在客戶資料匯入](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) 來源聯結器可從Acxiom擷取及啟用潛在客戶清單，並移除您已知或轉換的客戶。 |
 | [Amazon Ads連線](../../destinations/catalog/advertising/amazon-ads.md) | 更新 | 將資料匯出至Amazon Ads目的地時，您現在可以將資料路由至Amazon DSP或AmazonMarketing Cloud（新增）。 |
 | [LiveRamp入門連線](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp入門目的地現在支援傳送至歐洲和澳洲的作業 [!DNL LiveRamp] [!DNL SFTP] 執行個體。 最大匯出檔案大小也增加為1,000萬列（之前為500萬列）。 |
 
@@ -112,7 +112,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 大量動作 | 對象詳細目錄現在支援大量動作。 使用大量動作，您可以快速選取多個對象以將其移至資料夾、套用標籤、套用存取權標籤或刪除。 <br> ![Audiences UI工作區中的大量動作。](../2024/assets/march/bulk-actions.png "Audiences UI工作區中的大量動作。"){width="100" zoomable="yes"} <br>如需有關此功能的詳細資訊，請參閱 [Segmentation Service UI指南](../../segmentation/ui/overview.md#bulk-actions). |
+| 大量動作 | 對象詳細目錄現在支援大量動作。 使用大量動作，您可以快速選取多個對象以將其移至資料夾、套用標籤、套用存取權標籤或刪除。 <br> ![Audiences UI工作區中的大量動作。](../2024/assets/march/bulk-actions.png "Audiences UI工作區中的大量動作。"){width="100" zoomable="yes"} <br>如需有關此功能的詳細資訊，請參閱 [Audience Portal概述](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 
@@ -126,8 +126,8 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 類型 | 說明 |
 | --- | --- | --- |
-| [!BADGE 測試版]{type=Informative} [!DNL Acxiom Data Ingestion] | 新增 | 使用 [[!DNL Acxiom Data Ingestion] 來源](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) 擷取 [!DNL Acxiom] 將資料匯入Real-time Customer Data Platform並豐富第一方設定檔。 然後，您可以使用您的 [!DNL Acxiom] — 擴充第一方設定檔，以改善對象並跨行銷管道啟用。 <br> ![Acxiom資料擷取來源。](../2024/assets/march/acxiom-data-ingestion.png "新Acxiom資料擷取來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Acxiom Data Ingestion] 概述](../../sources/connectors/data-partners/acxiom-data-ingestion.md) 以取得如何開始使用的資訊。 |
-| [!BADGE 測試版]{type=Informative} [!DNL Stripe] | 新增 | 使用 [[!DNL Stripe] 來源](../../sources/connectors/payments/stripe.md) 將客戶在購買流程中擷取的資料擷取到Experience Platform。 內嵌後，您就可以使用此資料建立個人化優惠，並解鎖更豐富的商業深入分析。 <br> ![Stripe來源。](../2024/assets/march/stripe.png "新Stripe來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Stripe] 概述](../../sources/connectors/payments/stripe.md) 以取得如何開始使用的資訊。 |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | 新增 | 使用 [[!DNL Acxiom Data Ingestion] 來源](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) 擷取 [!DNL Acxiom] 將資料匯入Real-time Customer Data Platform並豐富第一方設定檔。 然後，您可以使用您的 [!DNL Acxiom] — 擴充第一方設定檔，以改善對象並跨行銷管道啟用。 <br> ![Acxiom資料擷取來源。](../2024/assets/march/acxiom-data-ingestion.png "新Acxiom資料擷取來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Acxiom Data Ingestion] 概述](../../sources/connectors/data-partners/acxiom-data-ingestion.md) 以取得如何開始使用的資訊。 |
+| [!BADGE Beta]{type=Informative} [!DNL Stripe] | 新增 | 使用 [[!DNL Stripe] 來源](../../sources/connectors/payments/stripe.md) 將客戶在購買流程中擷取的資料擷取到Experience Platform。 內嵌後，您就可以使用此資料建立個人化優惠，並解鎖更豐富的商業深入分析。 <br> ![Stripe來源。](../2024/assets/march/stripe.png "新Stripe來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Stripe] 概述](../../sources/connectors/payments/stripe.md) 以取得如何開始使用的資訊。 |
 | UI支援 [!DNL Snowflake Streaming] | 新增 | 您現在可以使用 [[!DNL Snowflake Streaming] 來源](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) 在Experience Platform UI中，將資料從您的 [!DNL Snowflake] 資料庫。 <br> ![Snowflake串流來源。](../2024/assets/march/snowflake-streaming.png "全新Snowflake條紋來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Snowflake Streaming] 概述](../../sources/connectors/databases/snowflake-streaming.md) 以取得如何開始使用的資訊。 |
 
 {style="table-layout:auto"}

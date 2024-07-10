@@ -3,7 +3,7 @@ title: Experience Cloud 對象
 description: 瞭解如何從Real-time Customer Data Platform將受眾分享至各種Experience Cloud應用程式。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 2%
@@ -19,7 +19,7 @@ ht-degree: 2%
 
 使用此目的地可啟用從Real-Time CDP到Audience Manager和Adobe Analytics的受眾。
 
-若要將受眾傳送至Adobe Analytics，您需要Audience Manager授權。 如需詳細資訊，請參閱 [Audience Analytics概觀](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=zh-Hant).
+若要將受眾傳送至Adobe Analytics，您需要Audience Manager授權。 如需詳細資訊，請參閱 [Audience Analytics概觀](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
 
 若要將受眾傳送至其他Adobe解決方案，請使用從Real-Time CDP到的直接連線 [Adobe Target](../personalization/adobe-target-connection.md)， [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md)， [Adobe Campaign](../email-marketing/adobe-campaign.md) 和 [Marketo Engage](../adobe/marketo-engage.md).
 
@@ -112,7 +112,7 @@ ht-degree: 2%
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](/help/identity-service/features/ecid.md) 以取得詳細資訊。 |
-| GAID | Google廣告ID | 擷取至Real-Time CDP且主要身分為Google Advertising ID (GAID)的設定檔可匯出至此目的地。 |
+| GAID | GOOGLE ADVERTISING ID | 擷取至Real-Time CDP並具有Google Advertising ID (GAID)主要身分的設定檔可匯出至此目的地。 |
 | IDFA | 廣告商適用的Apple ID | 使用廣告商Apple ID (IDFA)的主要身分識別擷取至Real-Time CDP的設定檔可匯出至此目的地。 |
 | email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | 擷取至Real-Time CDP的主要身分識別為雜湊電子郵件地址的設定檔可匯出至此目的地。 |
 
@@ -123,9 +123,9 @@ ht-degree: 2%
 本節說明您可以將哪種型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+| ---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -135,7 +135,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 |---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出以上一節所列的身分識別中斷之對象的所有成員。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出以上一節所列的身分識別中斷之對象的所有成員。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Real-Time CDP中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}

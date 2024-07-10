@@ -2,7 +2,7 @@
 title: twitter自訂對象連線
 description: 在Twitter中鎖定您現有的追隨者和客戶，並透過啟用您在Adobe Experience Platform中建立的受眾來建立相關的再次行銷活動
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 5%
@@ -28,7 +28,7 @@ ht-degree: 5%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| device_id | IDFA/AdID/Android ID | Adobe Experience Platform支援廣告商Google Advertising ID (GAID)和Apple ID (IDFA)。 請對應來源結構描述中的這些名稱空間和/或屬性，位於 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 目標啟用工作流程的。 |
+| device_id | IDFA/AdID/Android ID | Adobe Experience Platform支援廣告商適用的Google Advertising ID (GAID)和Apple ID (IDFA)。 請對應來源結構描述中的這些名稱空間和/或屬性，位於 [對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) 目標啟用工作流程的。 |
 | 電子郵件 | 使用者的電子郵件地址 | 請將純文字電子郵件地址和SHA256雜湊電子郵件地址對應至此欄位。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 如果您將客戶電子郵件地址雜湊再上傳至Adobe Experience Platform，請注意，這些身分必須使用SHA256進行雜湊處理，不可使用Salt。 |
 
 {style="table-layout:auto"}
@@ -38,9 +38,9 @@ ht-degree: 5%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ ht-degree: 5%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有Twitter自訂對象目的地中使用的識別碼。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有Twitter自訂對象目的地中使用的識別碼。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}

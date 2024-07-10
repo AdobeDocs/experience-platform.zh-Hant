@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience PlatformUI總覽
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -129,7 +129,7 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 此 **[!UICONTROL 設定檔]** 區段可讓您瀏覽客戶設定檔、檢視設定檔量度、建立和管理合併原則，以及檢視聯合結構描述。 若要進一步瞭解如何使用 [!UICONTROL 設定檔] 部分，請閱讀 [[!DNL Profile] 使用手冊](../profile/ui/user-guide.md). 如需即時客戶個人檔案的詳細資訊，請參閱 [即時客戶個人檔案總覽](../profile/home.md).
 
-此 **[!UICONTROL 區段]** 區段可讓您建立和管理區段定義。 若要進一步瞭解如何使用 [!UICONTROL 區段] 部分，請閱讀 [分段使用手冊](../segmentation/ui/overview.md). 如需分段服務的詳細資訊，請參閱 [Segmentation Service概述](../segmentation/home.md).
+此 **[!UICONTROL 受眾]** 區段可讓您建立和管理區段定義。 若要進一步瞭解如何使用 [!UICONTROL 受眾] 部分，請閱讀 [分段使用手冊](../segmentation/ui/overview.md). 如需分段服務的詳細資訊，請參閱 [Segmentation Service概述](../segmentation/home.md).
 
 此 **[!UICONTROL 身分]** 區段可讓您建立和管理身分識別名稱空間。 如需關於的詳細資訊 [!UICONTROL 身分] 一節，包含身分名稱空間以及如何在Platform UI中使用身分的相關資訊，請參閱 [身分名稱空間總覽](../identity-service/features/namespaces.md).
 
@@ -141,7 +141,7 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 ### [!UICONTROL 資料科學]
 
-此 **[!UICONTROL Notebooks]** 區段可讓您存取JupyterLab，這是一個互動式開發環境，可讓您探索、分析您的資料並將其模型化。 若要進一步瞭解如何使用Notebooks區段，請參閱 [JupyterLab使用手冊](../data-science-workspace/jupyterlab/overview.md). 有關「資料科學工作區」的詳細資訊，請參閱 [資料科學工作區概觀](../data-science-workspace/home.md)
+此 **[!UICONTROL Notebooks]** 區段可讓您存取JupyterLab，這是一個互動式開發環境，可讓您探索、分析您的資料並將其模型化。 若要進一步瞭解如何使用Notebooks區段，請參閱 [JupyterLab使用手冊](../data-science-workspace/jupyterlab/overview.md). 有關Data Science Workspace的詳細資訊，請參閱 [資料科學Workspace概觀](../data-science-workspace/home.md)
 
 此 **[!UICONTROL 模型]** 區段可讓您使用機器學習和人工智慧來建立、開發、訓練及調整模型以進行預測。 如需有關「模型」區段的詳細資訊，請參閱的教學課程： [訓練和評估模型](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 

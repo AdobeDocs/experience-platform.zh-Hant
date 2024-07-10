@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 檢視目的地詳細資料
 description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及編輯啟用、啟用及停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 0%
@@ -115,7 +115,7 @@ ht-degree: 0%
 
 ![啟用資料檢視串流目的地](../assets/ui/details-page/activation-data-streaming.png)
 
-### [!BADGE 測試版]{type=Informative}從啟動流程中移除多個對象 {#bulk-remove}
+### [!BADGE Beta]{type=Informative}從啟動流程中移除多個對象 {#bulk-remove}
 
 >[!NOTE]
 >
@@ -139,4 +139,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-如需探索對象詳細資訊頁面的詳細資訊，請參閱 [區段UI總覽](../../segmentation/ui/overview.md#segment-details).
+如需探索對象詳細資訊頁面的詳細資訊，請參閱 [Audience Portal概述](../../segmentation/ui/audience-portal.md#segment-details).

@@ -2,7 +2,8 @@
 title: Mailchimp標籤
 description: Mailchimp標籤目的地可讓您匯出帳戶資料，並在Mailchimp中將其啟用，以便與聯絡人互動。
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -86,9 +87,9 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +99,7 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中選取的每個對象，對應至 [!DNL Mailchimp Tags] 區段狀態會以Platform中的對象狀態更新。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中選取的每個對象，對應至 [!DNL Mailchimp Tags] 區段狀態會以Platform中的對象狀態更新。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -167,13 +168,13 @@ API金鑰的範例為 `0123456789abcdef0123456789abcde-us14`.
 1. 在 **[!UICONTROL 對應]** 步驟，選取 **[!UICONTROL 新增對應]**. 您會在畫面上看到新的對應列。
 1. 在 **[!UICONTROL 選取來源欄位]** 視窗，選擇 **[!UICONTROL 選取身分名稱空間]** 並選取 `Email` 身分名稱空間。
 
-   ![來自身分名稱空間且來源欄位為電子郵件的平台UI熒幕擷取畫面。](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Platform UI熒幕擷取畫面，將Source欄位顯示為來自身分名稱空間的電子郵件。](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. 在 **[!UICONTROL 選取目標欄位]** 視窗，選擇 **[!UICONTROL 選取身分名稱空間]** 並選取 `Email` 身分名稱空間。
 
    ![Platform UI熒幕擷取畫面，將Target欄位顯示為來自身分名稱空間的電子郵件。](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   XDM設定檔結構描述與之間的對應 [!DNL Mailchimp Tags] 將如下所示： | 來源欄位 | 目標欄位 | 強制 | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| 是 |
+   XDM設定檔結構描述與之間的對應 [!DNL Mailchimp Tags] 將如下所示： | Source欄位 | 目標欄位 | 強制 | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| 是 |
 
    具有已完成對應的範例如下所示：
    ![顯示欄位對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

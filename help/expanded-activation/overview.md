@@ -1,15 +1,15 @@
 ---
-title: Audience Manager展開啟用
+title: Audience Manager 擴充啟用
 description: 瞭解如何透過Audience Manager展開啟用，將Audience Manager對象啟用至社交和廣告目的地。
-source-git-commit: 5bc8d6c7173f221c2830a9b15c8ec6241e8bc59d
+exl-id: 1f209578-a688-40b8-8f13-dab0d4380b3b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
-
-# Audience Manager展開啟用
+# Audience Manager 擴充啟用
 
 Audience Manager Extended Activation以Adobe Experience Platform為基礎，可協助現有的 [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home) 使用者啟動其對象至 [社交](../destinations/catalog/social/overview.md) 和 [廣告](../destinations/catalog/advertising/overview.md) Real-Time CDP的目的地平台，例如 [facebook](../destinations/catalog/social/facebook.md)， [Google Ads](../destinations/catalog/advertising/google-ads-destination.md)、等等。
 
@@ -21,8 +21,8 @@ Audience Manager Extended Activation以Adobe Experience Platform為基礎，可�
 
 Audience Manager Expanded Activation使用Adobe Experience Platform的概念和元件。 若要更清楚瞭解展開式啟動工作流程以及您將使用的元件，請確定您對下列概念有基本的瞭解：
 
-* [受眾](../segmentation/ui/overview.md)：受眾是共用相似行為和/或特徵的一組人。 此人員集合可由Adobe Experience Platform使用區段定義或對象構成（平台產生的對象）產生，或由外部來源（例如自訂上傳）（外部產生的對象）產生。 在Expanded Activation中，您的Audience Manager區段（對象）會匯入為 [自訂上傳](../segmentation/ui/overview.md#import-audience).
-* [來源聯結器](../sources/home.md)：來源聯結器（也稱為來源）可協助Experience Platform使用者輕鬆地從多個來源擷取資料，允許使用Experience Platform服務來建構、標籤和增強資料。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
+* [受眾](../segmentation/ui/overview.md)：受眾是共用相似行為和/或特徵的一組人。 此人員集合可由Adobe Experience Platform使用區段定義或對象構成（平台產生的對象）產生，或由外部來源（例如自訂上傳）（外部產生的對象）產生。 在Expanded Activation中，您的Audience Manager區段（對象）會匯入為 [自訂上傳](../segmentation/ui/audience-portal.md#import-audience).
+* [Source聯結器](../sources/home.md)：Source聯結器（也稱為來源）可協助Experience Platform使用者輕鬆擷取來自多個來源的資料，允許使用Experience Platform服務來建構、標籤和增強資料。 資料可從多種來源擷取，例如雲端儲存空間、協力廠商軟體和CRM系統。
 * [目的地聯結器](../destinations/home.md)：目的地會說明受眾已啟用及傳送所在的任何端點，例如Adobe應用程式、廣告平台、雲端儲存服務或行銷服務。 [!DNL Expanded Activation] 支援啟用對象，以 [廣告](../destinations/catalog/advertising/overview.md) 和 [社交](../destinations/catalog/social/overview.md) 目的地聯結器。
 
 ## 先決條件 {#prerequisites}
@@ -43,4 +43,3 @@ Audience Manager Expanded Activation使用Adobe Experience Platform的概念和�
 ## 後續步驟 {#next-steps}
 
 現在您已更瞭解使用的使用案例和優點 [!DNL Expanded Activation]，開始 [設定您的帳戶](administration.md) 然後 [啟用您的對象](activate-audiences.md).
-

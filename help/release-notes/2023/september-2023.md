@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2023年9月版本注意事項。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 26%
@@ -98,7 +98,7 @@ Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!BADGE 測試版]{type=Informative}記錄刪除（限量發行） | 透過Adobe Experience Platform中的進階資料生命週期管理功能，跨所有資料存放區管理您的資料生命週期：自動化資料集到期日和記錄刪除，以符合客戶承諾和授權協定。<br>有了自動化資料集有效期，您可以刪除整個資料集，並設定要刪除資料集的日期和時間。<br>記錄刪除可讓您透過定位個別消費者設定檔的主要身分，來刪除個別消費者設定檔。 您可以透過UI或透過CSV/JSON檔案上傳個別提供主要身分。 請參閱 [記錄刪除檔案](../../hygiene/ui/record-delete.md) 以取得詳細資訊 |
+| [!BADGE Beta]{type=Informative}記錄刪除（限量發行） | 透過Adobe Experience Platform中的進階資料生命週期管理功能，跨所有資料存放區管理您的資料生命週期：自動化資料集到期日和記錄刪除，以符合客戶承諾和授權協定。<br>有了自動化資料集有效期，您可以刪除整個資料集，並設定要刪除資料集的日期和時間。<br>記錄刪除可讓您透過定位個別消費者設定檔的主要身分，來刪除個別消費者設定檔。 您可以透過UI或透過CSV/JSON檔案上傳個別提供主要身分。 請參閱 [記錄刪除檔案](../../hygiene/ui/record-delete.md) 以取得詳細資訊 |
 | 資料集到期 | 藉由自動化資料集到期功能，將您的資料減至最少，並控制您的授權協定。 刪除整個資料集並設定要刪除資料集的日期和時間，以減少資料量。 請參閱 [資料集有效期限檔案](../../hygiene/ui/dataset-expiration.md) 以取得詳細資訊。 |
 
 {style="table-layout:auto"}
@@ -134,7 +134,7 @@ Add these to release notes as they go out
 | 功能 | 說明 |
 | ----------- | ----------- |
 | Real-Time CDP中的資料匯出 | 此 [資料集匯出](../../destinations/ui/export-datasets.md) 功能現已正式推出。 另請參閱 [您可以根據Experience Platform應用程式匯出哪些資料集](../../destinations/ui/export-datasets.md#datasets-to-export) 您已購買，並檢視 [匯出資料集的護欄](/help/destinations/guardrails.md#dataset-exports). |
-| （測試版）支援匯出陣列型別物件 | 將原始值（字串、int或布林值）的陣列匯出為平面結構描述檔案，以匯出至雲端儲存空間目的地。 進一步瞭解 [檔案](../../destinations/ui/export-arrays-calculated-fields.md). |
+| (Beta)支援匯出陣列型別物件 | 將原始值（字串、int或布林值）的陣列匯出為平面結構描述檔案，以匯出至雲端儲存空間目的地。 進一步瞭解 [檔案](../../destinations/ui/export-arrays-calculated-fields.md). |
 | Destination SDK中的動態下拉式清單選擇器 | 透過Destination SDK建立目的地時，您現在可以使用 [動態下拉式清單選擇器](../../destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#dynamic-dropdown-selectors) 將擷取自API的值填入下拉式選擇器的欄位中。 |
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
@@ -174,9 +174,9 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 更新說明 |
 | --- | --- | --- |
-| 擴充功能 | [!UICONTROL ajo實體欄位] | 此 [[!UICONTROL 多變體的標幟]](https://github.com/adobe/xdm/pull/1774/files) 已新增至 [!UICONTROL ajo實體欄位] 以識別變體是否為多變體。 |
+| 擴充功能 | [!UICONTROL AJO實體欄位] | 此 [[!UICONTROL 多變體的標幟]](https://github.com/adobe/xdm/pull/1774/files) 已新增至 [!UICONTROL AJO實體欄位] 以識別變體是否為多變體。 |
 | 資料類型 | [!UICONTROL 產品清單專案] | [[!UICONTROL 傳回專案]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含退貨授權資訊。 |
-| 資料類型 | 訂購 | [[!UICONTROL 傳回資訊]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含RMA （退貨授權）。 |
+| 資料類型 | 順序 | [[!UICONTROL 傳回資訊]](https://github.com/adobe/xdm/pull/1773/files) 新增以包含RMA （退貨授權）。 |
 
 {style="table-layout:auto"}
 
@@ -199,7 +199,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以從以下位置加入任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學工作區或內嵌到即時客戶個人檔案中。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以從以下位置加入任何資料集： [!DNL Data Lake] 並將查詢結果擷取為新資料集，以用於報表、資料科學Workspace，或內嵌至即時客戶個人檔案。
 
 **更新的功能**
 
@@ -220,7 +220,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 可自訂欄 | 您現在可以使用可重新調整大小的欄來自訂對象入口網站的版面。 如需有關此功能的詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#customize). |
+| 可自訂欄 | 您現在可以使用可重新調整大小的欄來自訂對象入口網站的版面。 如需有關此功能的詳細資訊，請參閱 [Audience Portal概述](../../segmentation/ui/audience-portal.md#customize). |
 | 更新頻率劃分 | 您現在可以檢視組織中對象更新頻率的劃分。 如需有關此功能的詳細資訊，請參閱 [分段UI指南](../../segmentation/ui/overview.md#browse). |
 
 若要深入瞭解分段服務，請參閱 [Segmentation Service概述](../../segmentation/home.md).

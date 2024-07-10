@@ -5,10 +5,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置對象。
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 36%
+source-wordcount: '185'
+ht-degree: 43%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 36%
    - [邊緣分段](api/edge-segmentation.md)
    - [匯出工作](api/export-jobs.md)
    - [預覽和預估](api/previews-and-estimates.md)
-   - [時程表](api/schedules.md)
+   - [排程](api/schedules.md)
    - [區段定義](api/segment-definitions.md)
    - [區段工作](api/segment-jobs.md)
    - [區段搜尋](api/segment-search.md)
@@ -33,10 +33,11 @@ ht-degree: 36%
 - 區段UI {#ui}
    - [概觀](ui/overview.md)
    - [受眾控制面板](ui/audience-dashboard.md)
+   - [Audience Portal](ui/audience-portal.md)
    - [對象構成](ui/audience-composition.md)
    - [區段產生器](ui/segment-builder.md)
-   - [帳戶對象](ui/account-audiences.md)
-   - [類似的對象](ui/lookalike-audiences.md)
+   - [帳戶客群](ui/account-audiences.md)
+   - [相似客群](ui/lookalike-audiences.md)
    - [潛在客戶對象](ui/prospect-audience.md)
    - [邊緣分段](ui/edge-segmentation.md)
    - [串流區段](ui/streaming-segmentation.md)
@@ -48,7 +49,7 @@ ht-degree: 36%
       - [疑難排解](ui/segment-match/troubleshooting.md)
 - [接受同意](consents.md)
 - [多實體分段](multi-entity-segmentation.md)
-- 設定檔查詢語言 {#pql}
+- Profile Query Language {#pql}
    - [概觀](pql/overview.md)
    - [布林函式](pql/boolean-functions.md)
    - [比較函式](pql/comparison-functions.md)
@@ -73,4 +74,4 @@ ht-degree: 36%
    - [強制區段遵守資料使用規範](tutorials/governance.md)
 - [常見問答](./faq.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Platform發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

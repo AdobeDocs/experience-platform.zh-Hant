@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 串流區段UI指南
 description: Adobe Experience Platform上的串流區段可讓您以近乎即時的速度進行區段，同時聚焦於資料的豐富度。 有了串流區段，現在只要資料進入平台，區段資格就能執行，無需排程及執行區段工作。 有了這項功能，現在可以在資料傳入Platform時評估大部分割槽段規則，這表示區段會籍將保持最新，而不會執行排程的區段工作。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1537'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->為了讓串流細分發揮作用，您需要為組織啟用已排程的分段。 如需啟用已排程分段的詳細資訊，請參閱 [分段使用手冊中的串流分段區段](./overview.md#scheduled-segmentation).
+>為了讓串流細分發揮作用，您需要為組織啟用已排程的分段。 如需啟用已排程分段的詳細資訊，請參閱 [Audience Portal概述](./audience-portal.md#scheduled-segmentation).
 
 如果查詢符合以下任何條件，則會自動使用串流區段來評估：
 
@@ -75,7 +75,7 @@ ht-degree: 0%
 >
 >如果區段定義從沒有狀態變成已實現，或是從退出變成已實現，則會視為符合條件。 如果區段定義從實現到退出，則會視為不合格。
 >
->若需這些狀態的詳細資訊，請參閱狀態表格內的 [分段總覽](./overview.md#browse).
+>若需這些狀態的詳細資訊，請參閱狀態表格內的 [Audience Portal概述](./audience-portal.md#customize).
 
 ![設定檔隨時間變化的卡片會反白顯示，並顯示一段時間內設定檔的線圖。](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 

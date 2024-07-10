@@ -4,7 +4,7 @@ description: 使用此目的地，以批次方式將AdobeCDP對象傳送至Magni
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 0e6d95e2f68d97805af439d91b4a53230eaf773f
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 1%
@@ -77,7 +77,7 @@ Magnite串流：批次目的地可以接收 *任何* 來自AdobeCDP的身分來�
 | 對象來源 | 支援 | 說明 |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 

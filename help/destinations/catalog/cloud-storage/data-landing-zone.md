@@ -3,10 +3,10 @@ title: 資料登陸區域目的地
 description: 瞭解如何連線至資料登陸區域，以啟用受眾及匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1585'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -35,9 +35,9 @@ Platform會對上傳至的所有檔案強制實施嚴格的七天存留時間(TT
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ curl -X POST \
 
 使用您的 [!DNL Data Landing Zone] 容器已連線至 [!DNL Azure Storage Explorer]，您現在可以開始從Experience Platform將檔案匯出至 [!DNL Data Landing Zone] 容器。 若要匯出檔案，您必須建立與 [!DNL Data Landing Zone] Experience Platform UI中的目的地，如下節所述。
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!IMPORTANT]
 > 
@@ -204,11 +204,11 @@ curl -X POST \
 
 若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). 在目標設定工作流程中，填寫以下兩個區段中列出的欄位。
 
-### 驗證到目的地 {#authenticate}
+### 驗證目標 {#authenticate}
 
 請確定您已連線至 [!DNL Data Landing Zone] 容器至 [!DNL Azure Storage Explorer] 如 [必備條件](#prerequisites) 區段。 因為 [!DNL Data Landing Zone] 是Adobe布建的儲存體，您不需要在Experience PlatformUI中執行任何進一步步驟，即可對目的地進行驗證。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -230,7 +230,7 @@ curl -X POST \
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

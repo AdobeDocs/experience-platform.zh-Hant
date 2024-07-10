@@ -4,10 +4,10 @@ title: 評估及存取區段結果
 type: Tutorial
 description: 按照本教學課程瞭解如何使用Adobe Experience Platform分段服務API評估區段定義及存取分段結果。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 2%
+source-wordcount: '1594'
+ht-degree: 1%
 
 ---
 
@@ -29,12 +29,12 @@ ht-degree: 2%
 本教學課程也要求您完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en) 以便成功呼叫 [!DNL Platform] API。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - 授權：持有人 `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{ORG_ID}`
+- x-api-key： `{API_KEY}`
+- x-gw-ims-org-id： `{ORG_ID}`
 
 中的所有資源 [!DNL Experience Platform] 會隔離至特定的虛擬沙箱。 要求給 [!DNL Platform] API需要標頭，用以指定將進行作業的沙箱名稱：
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ ht-degree: 2%
 
 [已排程的評估](#scheduled-evaluation) （也稱為「排程分段」）可讓您建立在特定時間執行匯出作業的週期性排程，而 [隨選評估](#on-demand-evaluation) 包括建立區段工作以立即建立對象。 各步驟概述如下。
 
-如果您尚未完成 [使用分段API建立區段定義](./create-a-segment.md) 教學課程或建立區段定義，使用 [區段產生器](../ui/overview.md)，請先觀看再繼續本教學課程。
+如果您尚未完成 [使用分段API建立區段定義](./create-a-segment.md) 教學課程或建立區段定義，使用 [區段產生器](../ui/segment-builder.md)，請先觀看再繼續本教學課程。
 
 ## 已排程的評估 {#scheduled-evaluation}
 

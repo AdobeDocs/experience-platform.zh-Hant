@@ -3,7 +3,7 @@ keywords: 行動；炫耀；傳訊；
 title: 硬式連線
 description: Braze是全方位的客戶參與平台，可在客戶與所喜愛品牌之間提供相關且令人難忘的體驗。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 2%
@@ -49,9 +49,9 @@ ht-degree: 2%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分，視您的欄位對應而定。[!DNL Adobe Experience Platform] 對象已匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。 |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏）和/或身分，視您的欄位對應而定。[!DNL Adobe Experience Platform] 對象已匯出至 [!DNL Braze] 在 `AdobeExperiencePlatformSegments` 屬性。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -115,18 +115,18 @@ ht-degree: 2%
 
 ![釺焊目的地新增對應](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-在 [!UICONTROL 來源欄位] 區段，按一下空白欄位旁的箭頭按鈕。
+在 [!UICONTROL Source欄位] 區段，按一下空白欄位旁的箭頭按鈕。
 
-![硬碟目的地來源對應](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![釺焊目的地Source對應](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 在 [!UICONTROL 選取來源欄位] 視窗，您可以選擇以下兩種XDM欄位類別：
 * [!UICONTROL 選取屬性]：使用此選項將XDM結構描述中的特定欄位對應至 [!DNL Braze] 屬性。
 
-![硬碟目的地對應來源屬性](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![釺焊目的地對應Source屬性](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL 選取身分名稱空間]：使用此選項來對應 [!DNL Platform] 將身分名稱空間設為 [!DNL Braze] 名稱空間。
 
-![硬碟目的地對應來源名稱空間](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![釺焊目的地對應Source名稱空間](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 選擇您的來源欄位，然後按一下 **[!UICONTROL 選取]**.
 

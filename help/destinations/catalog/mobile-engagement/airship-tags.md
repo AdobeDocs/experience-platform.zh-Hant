@@ -3,7 +3,7 @@ keywords: 飛艇標籤；飛艇目的地
 title: 飛艇標籤連線
 description: 將Adobe對象資料順暢地傳遞給Airship，作為Airship中用於鎖定目標的對象標籤。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 2%
@@ -41,9 +41,9 @@ ht-degree: 2%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有在「飛艇標籤」目的地中使用的識別碼。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員具有在「飛艇標籤」目的地中使用的識別碼。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -132,11 +132,11 @@ Adobe Experience Platform中的受眾概念類似 [標籤](https://docs.airship.
 
 ## 對應考量事項 {#mapping-considerations}
 
-[!DNL Airship] 標籤可在頻道上設定，以代表裝置例項，例如iPhone，或可對映所有使用者裝置至共同識別碼（例如客戶ID）的已命名使用者。 如果您的結構描述中以純文字（未雜湊）電子郵件地址為主要身分，請選取結構描述中的電子郵件欄位 **[!UICONTROL 來源屬性]** 並將對應至 [!DNL Airship] 已命名使用者在下的右側欄 **[!UICONTROL 目標身分]**，如下所示。
+[!DNL Airship] 標籤可在頻道上設定，以代表裝置例項，例如iPhone，或可對映所有使用者裝置至共同識別碼（例如客戶ID）的已命名使用者。 如果您的結構描述中以純文字（未雜湊）電子郵件地址為主要身分，請選取結構描述中的電子郵件欄位 **[!UICONTROL Source屬性]** 並將對應至 [!DNL Airship] 已命名使用者在下的右側欄 **[!UICONTROL 目標身分]**，如下所示。
 
 ![已命名的使用者對應](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-對於應對應至管道（即裝置）的識別碼，請根據來源對應至適當的管道。 下列影像說明如何將Google Advertising ID對應至 [!DNL Airship] Android頻道。
+對於應對應至管道（即裝置）的識別碼，請根據來源對應至適當的管道。 下列影像說明如何將Google Advertising ID對應至 [!DNL Airship] Android管道。
 
 ![連線到飛艇標籤](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
 ![連線到飛艇標籤](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)

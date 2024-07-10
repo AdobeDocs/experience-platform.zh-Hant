@@ -3,10 +3,10 @@ title: HubSpot連線
 description: HubSpot目的地可讓您管理HubSpot帳戶中的聯絡人記錄。
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1543'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -78,9 +78,9 @@ ht-degree: 2%
 
 此目的地也支援下表所述的對象啟用。
 
-| 對象型別 | 說明 |
----------|----------|
-| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 客群類型 | 說明 |
+|---------|----------|
+| 自訂上傳 | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 此外，也會在中建立新屬性 [!DNL HubSpot] 若使用對象名稱，其值會與每個所選對象來自Platform的對應對象狀態一併顯示。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 此外，也會在中建立新屬性 [!DNL HubSpot] 若使用對象名稱，其值會與每個所選對象來自Platform的對應對象狀態一併顯示。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}

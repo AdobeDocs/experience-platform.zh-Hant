@@ -2,13 +2,13 @@
 title: PubMatic Connect
 description: PubMatic提供未來程式化的數位行銷供應鏈，以最大化客戶價值。 PubMatic Connect結合平台技術與專屬服務，以強化詳細目錄與資料的封裝與異動方式。
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
-
 
 # PubMatic Connect目的地 {#pubmatic-connect}
 
@@ -40,7 +40,7 @@ ht-degree: 3%
 
 | 目標身分 | 說明 | 考量事項 |
 | --------------- | ------ | --- |
-| GAID | Google廣告ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
@@ -53,7 +53,7 @@ ht-degree: 3%
 | 對象來源 | 支援 | 說明 |
 | --- | --------- | ------ |
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ ht-degree: 3%
 
 | 項目 | 類型 | 附註 |
 | --- | --- | --- |
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，而這些區段具有PubMatic Connect目的地所使用的識別碼（名稱、電話號碼或其他）。 |
+| 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，而這些區段具有PubMatic Connect目的地所使用的識別碼（名稱、電話號碼或其他）。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據區段評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -95,7 +95,7 @@ ht-degree: 3%
 - **[!UICONTROL 資料合作夥伴ID]**：在中設定的資料合作夥伴ID [!DNL PubMatic] 此整合的帳戶。
 - **[!UICONTROL 預設國家/地區代碼]**：如果設定檔中未提供預設國家/地區代碼，則應套用至所有身分。
 - **[!UICONTROL 帳戶ID]**：您的 [!DNL PubMatic Connect] 帳戶ID。
-- **[!UICONTROL 帳戶型別]**：您的帳戶型別 [!DNL PubMatic] 平台帳戶。 與您的 [!DNL PubMatic] 若您有任何問題需要選擇，請諮詢客戶經理。 可使用的選項包括：
+- **[!UICONTROL 帳戶型別]**：您的帳戶型別 [!DNL PubMatic] 平台帳戶。 與您的 [!DNL PubMatic] 若您有任何問題需要選擇，請諮詢客戶經理。 可用的選項包括：
    - [!UICONTROL 發佈者]
    - [!UICONTROL DEMAND_PARTNER]
    - [!UICONTROL 購買者]

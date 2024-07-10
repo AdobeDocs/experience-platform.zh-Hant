@@ -3,7 +3,7 @@ title: 啟用串流目的地的受眾資料
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的受眾對應至串流目的地來啟用這些受眾。
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 6%
@@ -52,7 +52,7 @@ ht-degree: 6%
 您可以根據對象的來源，從多種對象型別中進行選取：
 
 * **[!UICONTROL 分段服務]**：細分服務在Experience Platform中產生的對象。 請參閱 [細分檔案](../../segmentation/ui/overview.md) 以取得更多詳細資料。
-* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/audience-portal.md#import-audience).
 * 其他型別的對象，源自其他Adobe解決方案，例如 [!DNL Audience Manager].
 
 ![選取對象步驟中反白顯示的多個對象。](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
@@ -73,7 +73,7 @@ ht-degree: 6%
 
    ![新增反白顯示的新對應控制項。](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
-1. 選取右側的箭頭 **[!UICONTROL 來源欄位]** 登入點。
+1. 選取右側的箭頭 **[!UICONTROL Source欄位]** 登入點。
 
    ![選取醒目提示的原始碼欄位控制項。](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 

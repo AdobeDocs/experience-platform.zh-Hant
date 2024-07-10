@@ -3,7 +3,7 @@ keywords: 廣告；bing；
 title: Microsoft Bing連線
 description: 透過Microsoft Bing連線目的地，您可以在整個Microsoft Advertising網路（包括顯示廣告、搜尋和原生）中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 10%
@@ -30,7 +30,7 @@ ht-degree: 10%
 
 | 身分 | 說明 |
 |---|---|
-| MAID | Microsoft廣告ID |
+| MAID | MICROSOFT ADVERTISING ID |
 
 {style="table-layout:auto"}
 
@@ -39,9 +39,9 @@ ht-degree: 10%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ ht-degree: 10%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至 [!DNL Microsoft Bing] 目的地。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在將對象的所有成員匯出至 [!DNL Microsoft Bing] 目的地。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -62,7 +62,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->如果您打算使用建立您的第一個目的地 [!DNL Microsoft Bing] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe諮詢或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL Microsoft Bing] Audience Manager中的整合，也就是您設定的ID同步會移轉到Platform。
+>如果您打算使用建立您的第一個目的地 [!DNL Microsoft Bing] 且尚未啟用 [ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) 若是過去的Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前已設定 [!DNL Microsoft Bing] Audience Manager中的整合，也就是您設定的ID同步會移轉到Platform。
 
 設定目的地時，您必須提供下列資訊：
 

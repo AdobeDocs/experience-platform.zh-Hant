@@ -4,7 +4,7 @@ title: Activation 總覽
 type: Tutorial
 description: 瞭解如何在Adobe Experience Platform中將您的對象啟動至各種型別的目的地。
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 1%
@@ -52,7 +52,7 @@ Adobe Experience Platform支援廣泛的目的地。 受眾啟用工作流程會
 
 ### 從對象詳細資訊頁面啟用對象 {#activate-audience-details}
 
-您可以從對象詳細資訊頁面啟用目的地的對象。 另請參閱 [對象詳細資料](../../segmentation/ui/overview.md#audience-details) 以取得詳細資訊。
+您可以從對象詳細資訊頁面啟用目的地的對象。 另請參閱 [對象詳細資料](../../segmentation/ui/audience-portal.md#audience-details) 以取得詳細資訊。
 
 視選取的目標而定，請遵循下列文章中所述的步驟以完成啟動工作流程：
 

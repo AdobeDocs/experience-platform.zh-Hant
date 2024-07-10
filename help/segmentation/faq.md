@@ -2,7 +2,7 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '4096'
 ht-degree: 0%
@@ -175,7 +175,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ### 如何將對象置於已發佈狀態？
 
-針對使用區段產生器或對象構成建立的對象，您可以選取「[!UICONTROL 發佈]&quot;。
+針對使用區段產生器或對象構成建立的對象，您可以選取「[!UICONTROL Publish]&quot;。
 
 外部建立的對象會自動設定為已發佈。
 
@@ -189,7 +189,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 >
 >「重新發佈」狀態與對象行為的已發佈狀態相同。
 
-您可以選取處於非作用中狀態的對象、開啟Audience Portal上的快速動作功能表，然後選取「 」，以重新發佈對象 [!UICONTROL 發佈].
+您可以選取處於非作用中狀態的對象、開啟Audience Portal上的快速動作功能表，然後選取「 」，以重新發佈對象 [!UICONTROL Publish].
 
 ### 如何將對象置於已刪除狀態？
 
@@ -239,11 +239,11 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ### 我可以建立的資料夾數量是否有限制？
 
-沒有，您可以建立的資料夾數量沒有限制。 如需資料夾的詳細資訊，請參閱 [對象詳細目錄區段](./ui/overview.md#folders) 區段服務UI總覽的。
+沒有，您可以建立的資料夾數量沒有限制。 如需資料夾的詳細資訊，請參閱 [對象詳細目錄區段](./ui/audience-portal.md#folders) 區段服務UI總覽的。
 
 ### 可新增至對象的標籤數量是否有限制？
 
-不可以，可新增至對象的標籤數量沒有限制。 如需有關標籤的詳細資訊，請閱讀 [對象詳細目錄區段](./ui/overview.md#tags) 區段服務UI總覽的。
+不可以，可新增至對象的標籤數量沒有限制。 如需有關標籤的詳細資訊，請閱讀 [對象詳細目錄區段](./ui/audience-portal.md#tags) 區段服務UI總覽的。
 
 ### 我可以建立的標籤數量是否有限制？
 
@@ -251,7 +251,7 @@ Adobe Experience Platform [!DNL Segmentation Service] 提供使用者介面和RE
 
 ### 當我在父資料夾中依名稱或標籤搜尋對象時，可以一併搜尋相關的子資料夾嗎？
 
-否，不支援此行為。 不過，您可以變更對象詳細目錄檢視來檢視 **所有對象**，然後搜尋所有資料夾。 如需在對象詳細目錄中使用搜尋的詳細資訊，請參閱 [搜尋區段](./ui/overview.md#search) 區段服務UI總覽的。
+否，不支援此行為。 不過，您可以變更對象詳細目錄檢視來檢視 **所有對象**，然後搜尋所有資料夾。 如需在對象詳細目錄中使用搜尋的詳細資訊，請參閱 [搜尋區段](./ui/audience-portal.md#search) 區段服務UI總覽的。
 
 ### 我可以在建立時自動將受眾指派到資料夾中嗎？
 

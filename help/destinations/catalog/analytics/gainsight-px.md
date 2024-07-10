@@ -2,13 +2,13 @@
 title: Gainsight PX連線
 description: 使用Gainsight PX目的地將分段資訊傳送到Gainsight PX平台。
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '890'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
-
 
 # Gainsight PX連線 {#gainsight-px}
 
@@ -51,7 +51,7 @@ Gainsight PX支援下表所述的身分啟用。 進一步瞭解 [身分](../../
 | 對象來源 | 支援 | 說明 |
 |---|---|---|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | X | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | X | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ Gainsight PX支援下表所述的身分啟用。 進一步瞭解 [身分](../../
 
 | 項目 | 類型 | 附註 |
 |---|---|---|
-| 匯出型別 | **[!UICONTROL 區段匯出]** | 您正在匯出某個對象的所有成員，而這些成員中都有用於的識別碼（名稱、電話號碼或其他）。 [!DNL Gainsight PX] 目的地。 |
+| 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出某個對象的所有成員，而這些成員中都有用於的識別碼（名稱、電話號碼或其他）。 [!DNL Gainsight PX] 目的地。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}

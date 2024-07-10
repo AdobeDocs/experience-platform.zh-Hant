@@ -3,7 +3,7 @@ keywords: 自訂個人化；目的地；experience platform自訂目的地；
 title: 自訂個人化連線
 description: 此目的地提供外部個人化、內容管理系統、廣告伺服器，以及在您的網站上執行的其他應用程式，以便從Adobe Experience Platform擷取對象資訊。 此目的地會根據使用者設定檔對象成員資格，提供即時個人化。
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 9%
@@ -23,7 +23,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->設定檔屬性可能包含敏感資料。 若要保護此資料，您必須使用 [Edge Network伺服器API](/help/server-api/overview.md) 設定時 **[!UICONTROL 自訂個人化]** 屬性型個人化的目的地。 所有伺服器API呼叫都必須在 [已驗證的內容](../../../server-api/authentication.md).
+>設定檔屬性可能包含敏感資料。 若要保護此資料，您必須使用 [Edge Network伺服器API](/help/server-api/overview.md) 設定時 **[!UICONTROL 自訂Personalization]** 屬性型個人化的目的地。 所有伺服器API呼叫都必須在 [已驗證的內容](../../../server-api/authentication.md).
 >
 ><br>如果您已在使用Web SDK或Mobile SDK進行整合，您可以透過新增伺服器端整合來透過伺服器API擷取屬性。
 >
@@ -46,9 +46,9 @@ ht-degree: 9%
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ ht-degree: 9%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 您可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../datastreams/overview.md). |
+| 匯出類型 | **[!DNL Profile request]** | 您正在請求已對應至單一設定檔之自訂個人化目的地的所有對象。 您可以為不同的設定不同的自訂個人化目的地 [Adobe資料收集資料串流](../../../datastreams/overview.md). |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## 連線到目標 {#connect}
@@ -156,11 +156,11 @@ alloy("sendEvent", {
   });
 ```
 
-### 的範例回應 [!UICONTROL 使用屬性的自訂個人化]
+### 的範例回應 [!UICONTROL 具有屬性的自訂Personalization]
 
-使用時 **[!UICONTROL 使用屬性的自訂個人化]**，API回應將與下列範例類似。
+使用時 **[!UICONTROL 具有屬性的自訂Personalization]**，API回應將與下列範例類似。
 
-兩者之間的差異 **[!UICONTROL 使用屬性的自訂個人化]** 和 **[!UICONTROL 自訂個人化]** 是包含的 `attributes` API回應中的區段。
+兩者之間的差異 **[!UICONTROL 具有屬性的自訂Personalization]** 和 **[!UICONTROL 自訂Personalization]** 是包含的 `attributes` API回應中的區段。
 
 ```json
 [

@@ -3,7 +3,8 @@ title: Acxiom資料增強功能
 description: 使用此聯結器在Real-Time CDP中啟動第一方Adobe設定檔至Acxiom，以擴充資料並跨行銷管道使用。 然後，您可以使用Acxiom來源匯入具有增強型資料的設定檔，並在Real-Time CDP中處理這些設定檔。
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 2%
@@ -56,7 +57,7 @@ ht-degree: 2%
 | 對象來源 | 支援 | 說明 |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | x | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | x | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -67,7 +68,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 |------------------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出區段的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -143,14 +144,14 @@ ht-degree: 2%
 
 下表列出目標端的屬性，這些屬性用於Acxiom處理，可供客戶將設定檔屬性對應至。 將這些元素視為建議，因為並非所有元素都是必要的，而來源值將視帳戶的需求而定。
 
-| 目標欄位 | 來源說明 |
+| 目標欄位 | Source說明 |
 |--------------|-------------------------------------------------------------|
 | 名稱 | 此 `person.name.fullName` Experience Platform的值。 |
 | 名字 | 此 `person.name.firstName` Experience Platform的值。 |
 | 姓氏 | 此 `person.name.lastName` Experience Platform的值。 |
 | address1 | 此 `mailingAddress.street1` Experience Platform的值。 |
 | address2 | 此 `mailingAddress.street2` Experience Platform的值。 |
-| city | 此 `mailingAddress.city` Experience Platform的值。 |
+| 城市 | 此 `mailingAddress.city` Experience Platform的值。 |
 | state | 此 `mailingAddress.state` Experience Platform的值。 |
 | zip | 此 `mailingAddress.postalCode` Experience Platform的值。 |
 

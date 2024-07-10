@@ -2,10 +2,11 @@
 title: Audience Analysis目的地
 description: 檢視客戶在Customer Journey Analytics中符合資格的對象。
 badgeLimitedAvailability: label="可用性限制" type="Informative"
-source-git-commit: 83b3d40e17f444555769020526bb723265a09eb9
+exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '801'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -31,7 +32,7 @@ Audience Analysis支援下表所述的身分啟用。 進一步瞭解 [身分](/
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| GAID | Google廣告ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
+| GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 | ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](/help/identity-service/features/ecid.md) 以取得詳細資訊。 |
 | phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
@@ -45,9 +46,9 @@ Audience Analysis支援下表所述的身分啟用。 進一步瞭解 [身分](/
 使用此目的地時，支援下列型別的對象：
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -57,12 +58,12 @@ Audience Analysis支援下表所述的身分啟用。 進一步瞭解 [身分](/
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出具有Audience Analysis目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有Audience Analysis目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## 設定新目的地
+## 設定新的目的地
 
 >[!IMPORTANT]
 > 

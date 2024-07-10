@@ -4,7 +4,7 @@ title: 使用區段服務API建立區段定義
 type: Tutorial
 description: 按照本教學課程瞭解如何使用Adobe Experience Platform Segmentation Service API開發、測試、預覽和儲存區段定義。
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 6%
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 本檔案提供開發、測試、預覽和儲存區段定義的教學課程，使用 [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-如需如何使用使用者介面建立區段定義的詳細資訊，請參閱 [區段產生器指南](../ui/overview.md).
+如需如何使用使用者介面建立區段定義的詳細資訊，請參閱 [區段產生器指南](../ui/segment-builder.md).
 
 ## 快速入門
 
@@ -81,7 +81,7 @@ ht-degree: 6%
 
 範例大小取決於設定檔存放區中的實體總數。 下表顯示這些範例大小：
 
-| 設定檔存放區中的實體 | 樣本大小 |
+| 設定檔存放區中的實體 | 抽樣大小 |
 | ------------------------- | ----------- |
 | 少於100萬 | 完整資料集 |
 | 100萬到2000萬 | 100萬 |

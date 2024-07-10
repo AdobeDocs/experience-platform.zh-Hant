@@ -1,11 +1,12 @@
 ---
-title: SAP商務連線
+title: SAP Commerce連線
 description: 使用SAP Commerce目標聯結器更新SAP帳戶中的客戶記錄。
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 2%
+source-wordcount: '2246'
+ht-degree: 3%
 
 ---
 
@@ -44,8 +45,8 @@ ht-degree: 2%
 #### 產生服務金鑰 {#prerequisites-service-key}
 
 * 此 [!DNL SAP Commerce] 服務金鑰可讓您存取 [!DNL SAP Subscription Billing] 透過Experience Platform的API。 請參閱 [!DNL SAP Commerce] [使用使用者端ID和使用者端密碼建立服務金鑰](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) 以建立服務金鑰。 [!DNL SAP Commerce] 需要下列項目:
-   * 使用者端ID
-   * 使用者端密碼
+   * 用戶端 ID
+   * 用戶端密碼
    * URL。 URL模式如下： `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. 此值稍後將用於取得 `Region` 和 `Endpoint`.
 
 +++選取以檢視服務金鑰的範例
@@ -93,10 +94,10 @@ ht-degree: 2%
 
 | 認證 | 說明 |
 | --- | --- |
-| 使用者端ID | 的值 `clientId` 服務金鑰中。 |
-| 使用者端密碼 | 的值 `clientSecret` 服務金鑰中。 |
+| 用戶端 ID | 的值 `clientId` 服務金鑰中。 |
+| 用戶端密碼 | 的值 `clientSecret` 服務金鑰中。 |
 | 端點 | 的值 `url` 從服務金鑰，它類似於 `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| 地區 | 您的資料中心位置。 區域存在於中 `url` 且其值類似於 `eu10` 或 `us10`. 例如，如果 `url` 是 `https://eu10.revenue.cloud.sap/api` 您需要 `eu10`. |
+| 區域 | 您的資料中心位置。 區域存在於中 `url` 且其值類似於 `eu10` 或 `us10`. 例如，如果 `url` 是 `https://eu10.revenue.cloud.sap/api` 您需要 `eu10`. |
 
 ## 護欄 {#guardrails}
 
@@ -118,10 +119,10 @@ ht-degree: 2%
 
 此目的地也支援下表所述的對象啟用。
 
-| 對象型別 | 說明 |
----------|----------|
+| 客群類型 | 支援 | 說明 |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -131,7 +132,7 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中每個選取的對象，對應至 [!DNL SAP Commerce] 其他屬性會從Platform更新其對象狀態。</li></ul> |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出對象的所有成員，以及所需的結構欄位 *（例如：電子郵件地址、電話號碼、姓氏）*，根據您的欄位對應。</li><li> 針對Platform中每個選取的對象，對應至 [!DNL SAP Commerce] 其他屬性會從Platform更新其對象狀態。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}

@@ -2,7 +2,7 @@
 description: 此頁面列出並說明使用Destination SDK設定檔案型目的地的步驟。
 title: 使用Destination SDK來設定以檔案為基礎的目的地
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%
@@ -407,7 +407,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    * [Amazon S3驗證](../functionality/destination-configuration/customer-authentication.md#s3)
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Azure Data Lake儲存](../functionality/destination-configuration/customer-authentication.md#adls)
-   * [Google雲端儲存空間](../functionality/destination-configuration/customer-authentication.md#gcs)
+   * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
    * [使用SSH金鑰進行SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [使用密碼的SFTP驗證](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
@@ -420,10 +420,10 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 在測試目的地的程式中，您必須使用Experience PlatformUI來建立對象，並啟用至您的目的地。 請參閱以下兩個資源，以取得如何在Experience Platform中建立對象的指示：
 
-* [建立對象 — 檔案頁面](/help/segmentation/ui/overview.md#create-segment)
+* [建立對象 — 檔案頁面](/help/segmentation/ui/audience-portal.md#create-audience)
 * [建立對象 — 影片逐步解說](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## 步驟6：發佈您的目的地 {#publish-destination}
+## 步驟6：Publish您的目的地 {#publish-destination}
 
 >[!NOTE]
 >

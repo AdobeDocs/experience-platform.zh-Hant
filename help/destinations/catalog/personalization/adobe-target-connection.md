@@ -3,10 +3,10 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1555'
-ht-degree: 2%
+ht-degree: 11%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 2%
 |---|---|---|
 | 2024 年 4 月 | 功能和檔案更新 | 現在當您連線至Target目的地並使用資料串流ID時 *不需要* 以啟用邊緣區段的資料流。 這表示Target目的地將會搭配批次和串流對象運作，不過您可以完成的使用案例會有所不同。 在中檢視表格 [連線引數](#parameters) 區段以取得詳細資訊。 |
 | 2024 年 1 月 | 功能和檔案更新 | 您現在可以為預設的生產沙箱和其他非預設沙箱將受眾和設定檔屬性共用到Adobe Target連線。 |
-| 2023 年 6 月 | 功能和檔案更新 | 自2023年6月起，當您設定新的Adobe Target目的地連線時，可以選取您要共用對象的Adobe Target工作區。 如需詳細資訊，請參閱「[連線參數](#parameters)」一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html)的教學課程。 |
+| 2023 年 6 月 | 功能和檔案更新 | 自2023年6月起，當您設定新的Adobe Target目的地連線時，可以選取您要共用對象的Adobe Target工作區。 如需詳細資訊，請參閱「[連線參數](#parameters)」一節。另外，如需有關工作區的詳細資訊，請參閱 Adobe Target 中有關[設定工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=zh-Hant)的教學課程。 |
 | 2023 年 5 月 | 功能和檔案更新 | 截至2023年5月， **[!UICONTROL Adobe Target]** 連線支援 [屬性型個人化](../../ui/activate-edge-personalization-destinations.md#map-attributes) 並且通常可供所有客戶使用。 |
 
 {style="table-layout:auto"}
@@ -64,13 +64,13 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 >
 >啟用時 *相同頁面和下一頁個人化使用案例的邊緣對象*，受眾 *必須* 使用 [主動邊緣合併原則](../../../segmentation/ui/segment-builder.md#merge-policies). 此 [!DNL active-on-edge] 合併原則可確保持續評估對象 [在邊緣](../../../segmentation/ui/edge-segmentation.md) 和可用於即時和下一頁個人化使用案例。  閱讀關於 [所有可用使用案例](#parameter)，根據實作型別。
 >如果您將使用不同合併原則的邊緣受眾對應至Adobe Target目的地，這些受眾將不會針對即時和下一頁使用案例進行評估。
->請依照以下說明操作： [建立合併原則](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確保啟用 **[!UICONTROL Active-On-Edge合併原則]** 切換。
+>請依照以下說明操作： [建立合併原則](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy)，並確保啟用 **[!UICONTROL Edge上主動式合併原則]** 切換。
 
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | X | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | X | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -85,13 +85,13 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 {style="table-layout:auto"}
 
-## 連線到目的地 {#connect}
+## 連線到目標 {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
->title="關於資料串流ID"
->abstract="此選項會決定要將對象包含在哪個資料收集資料串流中。 下拉式功能表只會顯示已啟用Target組態的資料串流。 若要使用邊緣分段，您必須選取資料串流ID。 選取「無」會停用使用邊緣分段的所有使用案例。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="進一步瞭解選取資料串流"
+>title="關於資料流 ID"
+>abstract="此選項會確定哪個資料集合資料流中將包含對象。下拉選單僅顯示已啟用目標設定的資料流。若要使用邊緣分段，您必須選取一個資料流 ID。選取不停用所有使用邊緣分段的使用案例。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=zh-Hant#parameters" text="了解有關選取資料流的詳細資訊"
 
 >[!IMPORTANT]
 > 
@@ -101,13 +101,13 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 
 Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體。 不需要驗證。
 
-### 連線引數 {#parameters}
+### 連線參數 {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
->title="關於Adobe Target工作區"
->abstract="選取將與其共用受眾的Adobe Target工作區。 您可以為每個Adobe Target連線選取單一工作區。 啟動後，在遵循適用的Experience Platform資料使用標籤時，會將對象路由到所選的工作區。"
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="進一步瞭解Adobe Target工作區"
+>title="關於 Adobe Target 工作區"
+>abstract="選取將共用對象的 Adobe Target 工作區。您可以為每個 Adobe Target 連線選取一個工作區。啟動後，對象將被導向到選取的工作區，同時依循適用的 Experience Platform 資料使用標籤。"
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=zh-Hant" text="進一步了解 Adobe Target 工作區"
 
 當 [設定](../../ui/connect-destination.md) 您必須提供下列資訊給此目的地：
 
@@ -123,9 +123,9 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
   | Adobe Target實施 *不含* Web SDK | Adobe Target實施 *替換為* Web SDK | Adobe Target實施 *替換為* Web SDK *和* 關閉邊緣區段 |
   |---|---|---|
-  | <ul><li>資料流不是必要專案。 Adobe Target可透過以下方式部署： [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)， [伺服器端](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation)，或 [混合式](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 實作方法。</li><li>[邊緣細分](../../../segmentation/ui/edge-segmentation.md) 不受支援。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 不受支援。</li><li>您可以將對象和設定檔屬性共用至Adobe Target連線，用於 *預設生產沙箱* 以及非預設的沙箱。</li><li>若要在不使用資料流ID的情況下設定下一個工作階段個人化，請使用 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>需要具有Adobe Target和Experience Platform設定為服務的資料流。</li><li>邊緣細分如預期運作。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md#use-cases) 支援。</li><li>支援從其他沙箱共用對象和設定檔屬性。</li></ul> | <ul><li>需要具有Adobe Target和Experience Platform設定為服務的資料流。</li><li>時間 [設定資料串流](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)，請勿選取 **邊緣細分** 核取方塊。</li><li>[下一次工作階段個人化](../../ui/activate-edge-personalization-destinations.md#next-session) 支援。</li><li>支援從其他沙箱共用對象和設定檔屬性。</li></ul> |
+  | <ul><li>資料流不是必要專案。 Adobe Target可透過以下方式部署： [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html)， [伺服器端](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation)，或 [混合式](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) 實作方法。</li><li>[Edge區段](../../../segmentation/ui/edge-segmentation.md) 不受支援。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md) 不受支援。</li><li>您可以將對象和設定檔屬性共用至Adobe Target連線，用於 *預設生產沙箱* 以及非預設的沙箱。</li><li>若要在不使用資料流ID的情況下設定下一個工作階段個人化，請使用 [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>需要具有Adobe Target和Experience Platform設定為服務的資料流。</li><li>Edge區段如預期運作。</li><li>[相同頁面和下一頁個人化](../../ui/activate-edge-personalization-destinations.md#use-cases) 支援。</li><li>支援從其他沙箱共用對象和設定檔屬性。</li></ul> | <ul><li>需要具有Adobe Target和Experience Platform設定為服務的資料流。</li><li>時間 [設定資料串流](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)，請勿選取 **Edge區段** 核取方塊。</li><li>[下一次工作階段個人化](../../ui/activate-edge-personalization-destinations.md#next-session) 支援。</li><li>支援從其他沙箱共用對象和設定檔屬性。</li></ul> |
 
-* **工作區**：選取Adobe Target [工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) 對象將共用的目標。 您可以為每個Adobe Target連線選取單一工作區。 啟用後，在遵循適用的同時，會將對象路由到選取的工作區 [Experience Platform資料使用標籤](../../../data-governance/labels/overview.md).
+* **Workspace**：選取Adobe Target [工作區](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=zh-Hant) 對象將共用的目標。 您可以為每個 Adobe Target 連線選取一個工作區。啟用後，在遵循適用的同時，會將對象路由到選取的工作區 [Experience Platform資料使用標籤](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >
@@ -139,7 +139,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

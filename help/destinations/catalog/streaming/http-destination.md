@@ -4,10 +4,10 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的Experience Platform，或針對從Analytics匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2639'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -34,9 +34,9 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
 | 對象來源 | 支援 | 說明 |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/overview.md#import-audience) 從CSV檔案Experience Platform為。 |
+| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 * [OAuth 2.0密碼授予](https://www.oauth.com/oauth2-servers/access-tokens/password-grant/).
 
-## 連線到目的地 {#connect-destination}
+## 連線到目標 {#connect-destination}
 
 >[!IMPORTANT]
 > 
@@ -120,8 +120,8 @@ curl --location --request POST 'https://some-api.com/token' \
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_clientcredentialstype"
->title="使用者端認證型別"
->abstract="選取 **內文表單已編碼** 在要求內文中包含使用者端ID和使用者端密碼，或 **基本授權** 在授權標頭中包含使用者端ID和使用者端密碼。 檢視檔案中的範例。"
+>title="用戶端憑證類型"
+>abstract="選取&#x200B;**內文表單已編碼**，以在要求的內文中包含用戶端 ID 和用戶端密碼，或選取&#x200B;**基本授權**，以在要求的內文中包含用戶端 ID 和用戶端密碼。檢視文件中的範例。"
 
 #### 持有人權杖驗證 {#bearer-token-authentication}
 
@@ -164,32 +164,32 @@ curl --location --request POST 'https://some-api.com/token' \
    * **[!UICONTROL 內文表單已編碼]**：在此案例中， [!DNL client ID] 和 [!DNL client secret] 包含 *在要求內文中* 已傳送至您的目的地。 如需範例，請參閱 [支援的驗證型別](#supported-authentication-types) 區段。
    * **[!UICONTROL 基本授權]**：在此案例中， [!DNL client ID] 和 [!DNL client secret] 包含 *在 `Authorization` 頁首* 進行base64編碼並傳送至您的目的地之後。 如需範例，請參閱 [支援的驗證型別](#supported-authentication-types) 區段。
 
-### 填寫目的地詳細資料 {#destination-details}
+### 填寫目標詳細資訊 {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
 >title="標頭"
->abstract="依照此格式，輸入您要納入目的地呼叫的任何自訂標頭： `header1:value1,header2:value2,...headerN:valueN`"
+>abstract="按照以下格式輸入您希望包含在目的地呼叫中的任何自訂標頭：`header1:value1,header2:value2,...headerN:valueN`"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
->title="HTTP端點"
->abstract="您要傳送設定檔資料的HTTP端點URL。"
+>title="HTTP 端點"
+>abstract="要將設定檔資料傳送到的 HTTP 端點的 URL。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
->title="包含區段名稱"
->abstract="如果您希望資料匯出包含正在匯出的對象名稱，請切換按鈕。 檢視選取此選項的資料匯出範例檔案。"
+>title="包括區段名稱"
+>abstract="切換是否希望資料匯出包括您正在匯出的對象的名稱。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
->title="包含區段時間戳記"
->abstract="如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此按鈕。 檢視選取此選項的資料匯出範例檔案。"
+>title="包括區段時間戳記"
+>abstract="切換是否希望資料匯出包括建立和更新對象時的 UNIX 時間戳記，以及對象對應至啟動目的地時的 UNIX 時間戳記。檢視選取此選項時的資料匯出範例的文件。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
 >title="查詢參數"
->abstract="您可以選擇將查詢引數新增到HTTP端點URL。 將您使用的查詢引數格式設定如下： `parameter1=value&parameter2=value`."
+>abstract="或者，您可以將查詢參數新增到 HTTP 端點 URL。將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。"
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
@@ -199,7 +199,7 @@ curl --location --request POST 'https://some-api.com/token' \
 * **[!UICONTROL 說明]**：輸入有助於您日後識別此目的地的說明。
 * **[!UICONTROL 標頭]**：依照此格式，輸入您要納入目的地呼叫的任何自訂標頭： `header1:value1,header2:value2,...headerN:valueN`.
 * **[!UICONTROL HTTP端點]**：您要將設定檔資料傳送至的HTTP端點URL。
-* **[!UICONTROL 查詢引數]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢引數格式設定如下： `parameter1=value&parameter2=value`.
+* **[!UICONTROL 查詢引數]**：您可以選擇將查詢引數新增至HTTP端點URL。 將您使用的查詢參數格式化，類似這樣：`parameter1=value&parameter2=value`。
 * **[!UICONTROL 包含區段名稱]**：如果您希望資料匯出包含您正在匯出的對象名稱，請切換按鈕。 有關選取此選項的資料匯出範例，請參閱 [匯出的資料](#exported-data) 區段。
 * **[!UICONTROL 包含區段時間戳記]**：如果您希望資料匯出包含建立和更新對象時的UNIX時間戳記，以及對象對應至啟用目的地時的UNIX時間戳記，請切換此按鈕。 有關選取此選項的資料匯出範例，請參閱 [匯出的資料](#exported-data) 區段。
 
@@ -209,7 +209,7 @@ curl --location --request POST 'https://some-api.com/token' \
 
 當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
 
-## 啟用此目的地的對象 {#activate}
+## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 

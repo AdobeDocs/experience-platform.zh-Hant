@@ -4,14 +4,14 @@ description: 瞭解如何建立和使用帳戶對象，以定位下游目的地�
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 7d630c3673304060ad26375955602440a495f354
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 27%
 
 ---
 
-# 帳戶對象
+# 帳戶客群
 
 >[!AVAILABILITY]
 >
@@ -41,7 +41,7 @@ ht-degree: 27%
 
 此檢視會列出對象的相關資訊，包括名稱、設定檔計數、來源、生命週期狀態、建立日期和上次更新日期。
 
-您也可以使用搜尋和篩選功能，快速搜尋及排序特定帳戶對象。 有關此功能的詳細資訊，請參閱 [分段UI指南](./overview.md#manage-audiences).
+您也可以使用搜尋和篩選功能，快速搜尋及排序特定帳戶對象。 有關此功能的詳細資訊，請參閱 [Audience Portal概述](./audience-portal.md#manage-audiences).
 
 ## 建立對象 {#create}
 
@@ -67,7 +67,7 @@ ht-degree: 27%
 
 如需使用「區段產生器」的詳細資訊，請參閱 [區段產生器UI指南](./segment-builder.md).
 
-## 啟用對象 {#activate}
+## 啟用客群 {#activate}
 
 >[!NOTE]
 >

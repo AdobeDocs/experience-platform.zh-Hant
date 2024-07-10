@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制概述
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的相關資訊
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 14%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 14%
 | 原則 | 策略是將屬性組合在一起的陳述式，用於建立允許和不允許的動作。原則可以是本機或全域，並且可以覆寫其他原則。 |
 | 資源 | 資源是主體可以存取或無法存取的資產或物件。 資源可以是區段或結構描述欄位。 |
 | 角色 | 角色用於分類與 Platform 執行個體互動的使用者類型，也是存取控制原則的組成要素。在基於角色的存取控制環境中，使用者存取布建是透過共同責任和需求進行分組。 一個角色具有一組給定的權限，您的組織成員可以指派到一個或多個角色，依據他們需要的視圖範圍或寫入權限而定。 |
-| 主旨 | 主旨是請求存取資源以執行動作的使用者。 |
+| 主題 | 主旨是請求存取資源以執行動作的使用者。 |
 | 使用者群組 | 使用者群組是多個使用者，這些使用者已分組在一起，並且有權執行相同的功能。 |
 
 ## 權限
@@ -98,7 +98,7 @@ ht-degree: 14%
 >
 >總而言之，使用目的地和基於屬性的存取控制時，請記住以下含義：
 >
->* 您只能啟用您有權存取和檢視的區段 [區段瀏覽檢視](/help/segmentation/ui/overview.md#browse) 和 [選取區段步驟](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) 啟動工作流程的。
+>* 您只能啟用您有權存取和檢視的對象 [對象入口網站](/help/segmentation/ui/audience-portal.md#browse) 和 [選取區段步驟](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) 啟動工作流程的。
 >* 在 [啟動工作流程的對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)，您只能檢視和選取您有存取許可權的欄位以進行啟用。
 >* 如果您想要在現有目的地啟用其他區段，而您無權存取對應至匯出之所有欄位，啟用工作流程將為您封鎖。
 

@@ -4,10 +4,10 @@ type: Tutorial
 description: 瞭解如何透過將受眾傳送至串流設定檔型目的地，以啟用您在Adobe Experience Platform中的受眾資料。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
 workflow-type: tm+mt
-source-wordcount: '763'
-ht-degree: 0%
+source-wordcount: '764'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 本文適用於下列三個目的地：
 
 * [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [Azure事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Azure 事件中樞](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
 * [HTTP API目的地](/help/destinations/catalog/streaming/http-destination.md).
 
 ## 先決條件 {#prerequisites}
@@ -57,8 +57,8 @@ ht-degree: 0%
 
 您可以根據對象的來源，從多種對象型別中進行選取：
 
-* **[!UICONTROL 分段服務]**：細分服務在Experience Platform中產生的對象。 請參閱 [細分檔案](../../segmentation/ui/overview.md) 以取得更多詳細資料。
-* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL 分段服務]**：細分服務在Experience Platform中產生的對象。 請參閱 [Audience Portal檔案](../../segmentation/ui/audience-portal.md) 以取得更多詳細資料。
+* **[!UICONTROL 自訂上傳]**：在Experience Platform外部產生的對象，並以CSV檔案的形式上傳至Platform。 若要深入瞭解外部對象，請參閱以下檔案： [匯入對象](../../segmentation/ui/audience-portal.md#import-audience).
 * 其他型別的對象，源自其他Adobe解決方案，例如 [!DNL Audience Manager].
 
 ![在啟動工作流程的「選取對象」步驟中，反白核取方塊選取範圍的影像。](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
