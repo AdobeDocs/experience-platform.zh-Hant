@@ -1,9 +1,9 @@
 ---
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 531bee643c14ad407a1207cca9093e210e5227a5
 workflow-type: tm+mt
-source-wordcount: '3646'
+source-wordcount: '3674'
 ht-degree: 3%
 
 ---
@@ -387,7 +387,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 >
 >依預設，外部產生的對象資料的有效期限為30天。 如果以任何方式更新或修改對象，則會重設資料有效期。
 >
->此外，如果您的外部產生的對象包含敏感及/或健康相關資訊，您可以 **必須** 將資料啟用至任何目的地之前，請先套用必要的資料使用標籤。 如需套用資料使用標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md).
+>此外，如果您的外部產生的對象包含敏感及/或健康相關資訊，您可以 **必須** 將資料啟用至任何目的地之前，請先套用必要的資料使用標籤。 由於來自外部產生對象的變數會儲存在資料湖中，而非即時客戶個人檔案中，因此您應： **非** 在您的CSV檔案中包含同意資料。 如需套用資料使用標籤的詳細資訊，請參閱以下檔案： [管理標籤](../../access-control/abac/ui/labels.md).
 
 ## 後續步驟
 
