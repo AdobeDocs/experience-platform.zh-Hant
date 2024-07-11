@@ -1,22 +1,23 @@
 ---
 title: onBeforeEventSend
-description: 在傳送資料之前執行的回呼。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: 瞭解如何設定Web SDK以註冊JavaScript函式，該函式可以變更您在將資料傳送至Adobe之前傳送的資料。
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
 
+
 # `onBeforeEventSend`
 
-此 `onBeforeEventSend` 回呼可讓您註冊JavaScript函式，該函式可變更您在將資料傳送至Adobe之前所傳送的資料。 此回呼可讓您控制 `xdm` 或 `data` 物件，包括新增、編輯或移除元素的功能。 您也可以有條件地完全取消傳送資料，例如使用偵測到的使用者端機器人流量。
+此 `onBeforeEventSend` 回呼可讓您註冊JavaScript函式，該函式可變更您在傳送資料給Adobe之前所傳送的資料。 此回呼可讓您控制 `xdm` 或 `data` 物件，包括新增、編輯或移除元素的功能。 您也可以有條件地完全取消傳送資料，例如使用偵測到的使用者端機器人流量。
 
 >[!WARNING]
 >
 >此回呼允許使用自訂程式碼。 如果您包含在回呼中的任何程式碼擲回未攔截到的例外狀況，處理事件時就會中止。 資料不會傳送至Adobe。
 
-## 使用Web SDK標籤擴充功能在事件傳送回呼前開啟
+## 使用Web SDK標籤擴充功能設定在事件傳送回呼之前 {#tag-extension}
 
 選取 **[!UICONTROL 在事件傳送前提供回呼代碼]** 按鈕時間 [設定標籤擴充功能](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). 此按鈕會開啟一個強制回應視窗，您可在其中插入所需的程式碼。
 
@@ -28,21 +29,14 @@ ht-degree: 0%
 1. 此按鈕會開啟包含程式碼編輯器的模型視窗。 插入所需的程式碼，然後按一下 **[!UICONTROL 儲存]** 以關閉強制回應視窗。
 1. 按一下 **[!UICONTROL 儲存]** 在擴充功能設定底下，然後發佈變更。
 
-在程式碼編輯器中，您可以新增、編輯或移除程式碼編輯器內的 `content` 物件。 此物件包含傳送至Adobe的裝載。 您不需要定義 `content` 物件或在函式中包裝任何程式碼。 任何定義於外部的變數 `content` 可使用，但不包含在傳送至Adobe的裝載中。
+在程式碼編輯器中，您可以存取下列變數：
 
->[!TIP]
->
->物件 `content.xdm` 和 `content.data` 一律在此內容中定義，因此您不需要檢查它們是否存在。 這些物件中的部分變數取決於您的實作和資料層。 Adobe建議檢查這些物件中是否有未定義的值，以防止JavaScript錯誤。
+* **`content.xdm`**：此 [XDM](../sendevent/xdm.md) 事件的裝載。
+* **`content.data`**：此 [資料](../sendevent/data.md) 事件的物件裝載。
+* **`return true`**：立即結束回呼，並將資料傳送至，與中的目前值Adobe `content` 物件。
+* **`return false`**：立即結束回呼並中止傳送資料至Adobe。
 
-例如，如果您想要：
-
-* 新增XDM元素 `xdm.commerce.order.purchaseID`
-* 強制所有字元 `xdm.marketing.trackingCode` 至小寫
-* 刪除 `xdm.environment.operatingSystemVersion`
-* 如果事件型別是連結點選，會立即傳送資料，無論其下方的程式碼為何
-* 在偵測到機器人時取消傳送資料給Adobe
-
-模型視窗中的對等程式碼如下：
+任何定義於外部的變數 `content` 可使用，但不包含在傳送至Adobe的裝載中。
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -69,19 +63,18 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >避免傳回 `false` 在頁面上的第一個事件上。 回歸 `false` 在第一個事件上可能會對個人化產生負面影響。
 
-## 使用Web SDK JavaScript程式庫在事件傳送回呼前開啟
+## 使用Web SDK JavaScript程式庫設定在事件傳送回呼之前 {#library}
 
 註冊 `onBeforeEventSend` 執行時回撥 `configure` 命令。 您可以變更 `content` 變數名稱為任何您想要的值，只要變更內嵌函式內的引數變數即可。
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
     content.xdm._experience ??= {};
     content.xdm._experience.analytics ??= {};
@@ -121,8 +114,8 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": lastChanceLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: lastChanceLogic
 });    
 ```

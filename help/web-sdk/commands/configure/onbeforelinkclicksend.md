@@ -1,24 +1,30 @@
 ---
 title: onBeforeLinkClickSend
 description: 在傳送連結追蹤資料之前執行的回呼。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
+
 # `onBeforeLinkClickSend`
 
-此 `onBeforeLinkClickSend` 回呼可讓您註冊JavaScript函式，該函式可變更您在將資料傳送至Adobe之前傳送的連結追蹤資料。 此回呼可讓您控制 `xdm` 或 `data` 物件，包括新增、編輯或移除元素的功能。 您也可以有條件地完全取消傳送資料，例如使用偵測到的使用者端機器人流量。 Web SDK 2.15.0或更新版本支援此功能。
+>[!IMPORTANT]
+>
+>已棄用此回呼。 使用 [`filterClickDetails`](clickcollection.md) 而非。
 
-此回呼只會在以下情況下執行： [`clickCollectionEnabled`](clickcollectionenabled.md) 已啟用。 如果 `clickCollectionEnabled` 已停用，此回呼不會執行。 如果兩者 `onBeforeEventSend` 和 `onBeforeLinkClickSend` 包含已註冊的函式， `onBeforeLinkClickSend` 函式會先執行。 一旦 `onBeforeLinkClickSend` 函式完成， `onBeforeEventSend` 然後執行。
+此 `onBeforeLinkClickSend` 回呼可讓您註冊JavaScript函式，該函式可變更您在將資料傳送至Adobe之前所傳送的連結追蹤資料。 此回呼可讓您控制 `xdm` 或 `data` 物件，包括新增、編輯或移除元素的功能。 您也可以有條件地完全取消傳送資料，例如使用偵測到的使用者端機器人流量。 Web SDK 2.15.0或更新版本支援此功能。
+
+此回呼只會在以下情況下執行： [`clickCollectionEnabled`](clickcollectionenabled.md) 已啟用且 [`filterClickDetails`](clickcollection.md) 不包含註冊的函式。 如果 `clickCollectionEnabled` 已停用，或如果 `filterClickDetails` 包含已登入的函式，則此回呼不會執行。 如果 `onBeforeEventSend` 和 `onBeforeLinkClickSend` 兩者都包含已註冊的函式， `onBeforeLinkClickSend` 會先執行。
 
 >[!WARNING]
 >
 >此回呼允許使用自訂程式碼。 如果您包含在回呼中的任何程式碼擲回未攔截到的例外狀況，處理事件時就會中止。 資料不會傳送至Adobe。
 
-## 在連結前按一下，使用Web SDK標籤擴充功能傳送回呼
+## 使用Web SDK標籤擴充功能在連結前點選傳送回呼進行設定 {#tag-extension}
 
 選取 **[!UICONTROL 在連結前提供點選事件傳送回撥代碼]** 按鈕時間 [設定標籤擴充功能](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). 此按鈕會開啟一個強制回應視窗，您可在其中插入所需的程式碼。
 
@@ -31,19 +37,15 @@ ht-degree: 0%
 1. 此按鈕會開啟包含程式碼編輯器的模型視窗。 插入所需的程式碼，然後按一下 **[!UICONTROL 儲存]** 以關閉強制回應視窗。
 1. 按一下 **[!UICONTROL 儲存]** 在擴充功能設定底下，然後發佈變更。
 
-在程式碼編輯器中，您可以新增、編輯或移除程式碼編輯器內的 `content` 物件。 此物件包含傳送至Adobe的裝載。 您不需要定義 `content` 物件或在函式中包裝任何程式碼。 任何定義於外部的變數 `content` 可使用，但不包含在傳送至Adobe的裝載中。
+在程式碼編輯器中，您可以存取下列變數：
 
->[!TIP]
->
->物件 `content.xdm`， `content.data`、和 `content.clickedElement` 一律在此內容中定義，因此您不需要檢查它們是否存在。 這些物件中的部分變數取決於您的實作和資料層。 Adobe建議檢查這些物件中是否有未定義的值，以防止JavaScript錯誤。
+* **`content.clickedElement`**：被點按的DOM元素。
+* **`content.xdm`**：事件的XDM裝載。
+* **`content.data`**：事件的資料物件裝載。
+* **`return true`**：使用目前的變數值立即結束回呼。 此 `onBeforeEventSend` 如果回呼包含已註冊的函式，則會執行。
+* **`return false`**：立即結束回呼並中止傳送資料至Adobe。 此 `onBeforeEventSend` 不執行回呼。
 
-例如，假設您要執行下列動作：
-
-* 修改目前頁面URL
-* 擷取Adobe AnalyticseVar中的點選元素
-* 將連結型別從「其他」變更為「下載」
-
-模型視窗中的對等程式碼如下：
+任何定義於外部的變數 `content` 可使用，但不包含在傳送至Adobe的裝載中。
 
 ```js
 // Set an already existing value to something else
@@ -63,26 +65,26 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-類似於 [`onBeforeEventSend`](onbeforeeventsend.md)，您可以 `return true` 立即完成函式，或 `return false` 立即取消傳送資料。 如果您取消在中傳送資料 `onBeforeLinkClickSend` 當兩者 `onBeforeEventSend` 和 `onBeforeLinkClickSend` 包含已註冊的函式， `onBeforeEventSend` 函式未執行。
+類似於 [`onBeforeEventSend`](onbeforeeventsend.md)，您可以 `return true` 立即完成功能，或 `return false` 以中止傳送資料至Adobe。 如果您中止在中傳送資料 `onBeforeLinkClickSend` 當兩者 `onBeforeEventSend` 和 `onBeforeLinkClickSend` 包含已註冊的函式， `onBeforeEventSend` 函式未執行。
 
-## 在連結前按一下，使用Web SDK JavaScript程式庫傳送回呼
+## 使用Web SDK JavaScript程式庫在連結前按一下傳送回呼進行設定 {#library}
 
 註冊 `onBeforeLinkClickSend` 執行時回撥 `configure` 命令。 您可以變更 `content` 變數名稱為任何您想要的值，只要變更內嵌函式內的引數變數即可。
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: function(content) {
     // Add, modify, or delete values
     content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
     
-    // Return true to immediately complete the function
+    // Return true to complete the function immediately
     if (sendImmediate == true) {
       return true;
     }
     
-    // Return false to immediately cancel sending data
+    // Return false to cancel sending data immediately
     if(myBotDetector.isABot()){
       return false;
     }
@@ -99,8 +101,8 @@ function lastChanceLinkLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": lastChanceLinkLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: lastChanceLinkLogic
 });    
 ```

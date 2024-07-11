@@ -2,10 +2,10 @@
 title: 設定Web SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 6%
+source-wordcount: '2012'
+ht-degree: 5%
 
 ---
 
@@ -39,9 +39,9 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 
 ![此影像顯示標籤UI中Web SDK標籤擴充功能的一般設定](assets/web-sdk-ext-general.png)
 
-* **[!UICONTROL 名稱]**：Adobe Experience Platform Web SDK擴充功能支援頁面上的多個例項。 此名稱可用來透過標籤設定，將資料傳送至多個組織。 執行個體名稱預設為 `alloy`. 不過，您可以將執行個體名稱變更為任何有效的JavaScript物件名稱。
+* **[!UICONTROL 名稱]**：Adobe Experience Platform Web SDK擴充功能支援頁面上的多個例項。 此名稱可用來透過標籤設定，將資料傳送至多個組織。 執行個體名稱預設為 `alloy`. 不過，您可將執行個體名稱變更為任何有效的JavaScript物件名稱。
 * **[!UICONTROL IMS組織ID]**：您要在Adobe傳送資料的組織ID。 大部分時間都會使用自動填入的預設值。 頁面上有多個例項時，請找到您要傳送資料的第二個組織，以該組織的值填入此欄位。
-* **[!UICONTROL 邊緣網域]**：擴充功能傳送及接收資料的網域。 Adobe建議對此擴充功能使用第一方網域(CNAME)。 預設的第三方網域適用於開發環境，但不適用於生產環境。若需設定第一方 CNAME 的相關說明，請參閱[此處](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
+* **[!UICONTROL Edge網域]**：擴充功能傳送及接收資料的網域。 Adobe建議對此擴充功能使用第一方網域(CNAME)。 預設的第三方網域適用於開發環境，但不適用於生產環境。若需設定第一方 CNAME 的相關說明，請參閱[此處](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=zh-Hant)。
 
 ## 設定資料流設定 {#datastreams}
 
@@ -111,11 +111,29 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 
 ## 設定資料收集設定 {#data-collection}
 
-![此影像顯示標籤UI中Web SDK標籤擴充功能的資料收集設定](assets/web-sdk-ext-collection.png)
+管理資料收集組態設定。 JavaScript資料庫中的類似設定可使用 [`configure`](/help/web-sdk/commands/configure/overview.md) 命令。
 
-* **[!UICONTROL 回呼函式]**：擴充功能中提供的回呼函式也稱為 [`onBeforeEventSend` 函式](/help/web-sdk/commands/configure/onbeforeeventsend.md) 在程式庫中。 此函式可讓您在事件傳送至Edge Network之前，先行全域修改事件。
-* **[!UICONTROL 啟用點選資料收集]**：Web SDK可以自動收集您的連結點選資訊。 依預設，此功能已啟用，但可使用此選項加以停用。 如果連結包含下列其中一個下載運算式，也會標示為下載連結： [!UICONTROL 下載連結限定詞] 文字方塊。 Adobe提供您一些預設的下載連結限定詞。 您可以視需要加以編輯。
-* **[!UICONTROL 自動收集的內容資料]**：依預設，Web SDK會收集關於裝置、Web、環境和地標內容的特定內容資料。 如果您不想要收集這些資料，或只想要收集某些類別的資料，請選取「 」 **[!UICONTROL 特定內容資訊]** 並選取您要收集的資料。 另請參閱 [`context`](/help/web-sdk/commands/configure/context.md) 以取得詳細資訊。
+![此影像顯示標籤UI中Web SDK標籤擴充功能的資料收集設定。](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL 在事件傳送回撥前開啟]**：回呼函式，用於評估及修改傳送至Adobe的裝載。 使用 `content` 變數來修改裝載。 此回呼的標籤相當於 [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) 在JavaScript資料庫中。
+* **[!UICONTROL 收集內部連結點按次數]**：可讓您收集網站或屬性內部連結追蹤資料的核取方塊。 啟用此核取方塊時，會顯示事件分組選項：
+   * **[!UICONTROL 無事件分組]**：連結追蹤資料會以個別事件傳送至Adobe。 在個別事件中傳送的連結點選可能會增加傳送至Adobe Experience Platform的資料的合約使用量。
+   * **[!UICONTROL 使用工作階段存放區進行事件分組]**：將連結追蹤資料儲存在工作階段存放區中，直到下一頁事件為止。 在以下頁面中，儲存的連結追蹤資料和頁面檢視資料會同時傳送給Adobe。 Adobe建議在追蹤內部連結時啟用此設定。
+   * **[!UICONTROL 使用本機物件進行事件分組]**：將連結追蹤資料儲存在本機物件中，直到下一個頁面事件為止。 如果訪客導覽至新頁面，連結追蹤資料會遺失。 此設定在單頁應用程式環境中最為有利。
+* **[!UICONTROL 收集外部連結點按次數]**：啟用收集外部連結的核取方塊。
+* **[!UICONTROL 收集下載連結點按次數]**：啟用收集下載連結的核取方塊。
+* **[!UICONTROL 下載連結限定詞]**：限定連結URL為下載連結的規則運算式。
+* **[!UICONTROL 篩選點按屬性]**：回呼函式，可在集合前評估及修改點按相關屬性。 此函式在 [!UICONTROL 在事件傳送回撥前開啟].
+* **內容設定**：自動收集訪客資訊，這會為您填入特定XDM欄位。 您可以選擇 **[!UICONTROL 所有預設內容資訊]** 或 **[!UICONTROL 特定內容資訊]**. 此標籤等同於 [`context`](/help/web-sdk/commands/configure/context.md) 在JavaScript資料庫中。
+   * **[!UICONTROL Web]**：收集目前頁面的相關資訊。
+   * **[!UICONTROL 裝置]**：收集使用者裝置的相關資訊。
+   * **[!UICONTROL 環境]**：收集有關使用者瀏覽器的資訊。
+   * **[!UICONTROL 地標內容]**：收集有關使用者位置的資訊。
+   * **[!UICONTROL 高平均資訊量使用者代理提示]**：收集有關使用者裝置的詳細資訊。
+
+>[!TIP]
+>
+此 **[!UICONTROL 在連結前按一下傳送]** 欄位是已棄用的回呼，僅對已設定它的屬性可見。 此標籤等同於 [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) 在JavaScript資料庫中。 使用 **[!UICONTROL 篩選點按屬性]** 回撥以篩選或調整點選資料，或使用 **[!UICONTROL 在事件傳送回撥前開啟]** 以篩選或調整傳送至Adobe的整體裝載。 如果兩者 **[!UICONTROL 篩選點按屬性]** 回呼與 **[!UICONTROL 在連結前按一下傳送]** 已設定回呼，只有 **[!UICONTROL 篩選點按屬性]** 回呼執行。
 
 ## 設定媒體收集設定 {#media-collection}
 
@@ -155,6 +173,6 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這麼做，請參
 
 ## 設定進階設定
 
-使用 **[!UICONTROL 邊緣基底路徑]** Edge Network欄位。 這應該不需要更新，但在您參與Beta或Alpha的情況下，Adobe可能會要求您變更此欄位。
+使用 **[!UICONTROL Edge基本路徑]** Edge Network欄位。 這應該不需要更新，但在您參與Beta或Alpha的情況下，Adobe可能會要求您變更此欄位。
 
 ![此影像顯示使用Web SDK標籤擴充功能頁面的進階設定。](assets/advanced-settings.png)

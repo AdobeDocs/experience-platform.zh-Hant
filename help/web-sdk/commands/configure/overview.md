@@ -2,7 +2,7 @@
 title: 設定Adobe Experience Platform Web SDK
 description: 使用Web SDK時，請使用configure命令來設定必要的設定。
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: 1c614ef525d55d7476d037c6838b35c3471e4501
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Web SDK的設定可使用 `configure` 命令。 設定Web SDK是重要且必要�
 
 當您使用擴充功能傳送資料給Adobe時，就會設定這些組態設定。
 
-## 使用JavaScript程式庫設定Web SDK {#configure-js}
+## 使用JavaScript資料庫設定Web SDK {#configure-js}
 
 執行 `configure` 命令。 此指令是呼叫任何其他Web SDK指令(例如 [`sendEvent`](../sendevent/overview.md).
 
@@ -35,25 +35,32 @@ Web SDK的設定可使用 `configure` 命令。 設定Web SDK是重要且必要�
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "clickCollectionEnabled": false,
-  "context": ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"],
-  "debugEnabled": true,
-  "defaultConsent": "pending",
-  "downloadLinkQualifier": "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$",
-  "edgeBasePath": "ee",
-  "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
-  "edgeDomain": "data.example.com",
-  "idMigrationEnabled": false,
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  clickCollectionEnabled: true,
+  clickCollection: {
+    internalLinkEnabled: true,
+    downloadLinkEnabled: true,
+    externalLinkEnabled: true,
+    eventGroupingEnabled: true,
+    sessionStorageEnabled: true
+  },
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"],
+  debugEnabled: true,
+  defaultConsent: "pending",
+  downloadLinkQualifier: "\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$",
+  edgeBasePath: "ee",
+  edgeConfigOverrides: { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
+  edgeDomain: "data.example.com",
+  idMigrationEnabled: false,
+  onBeforeEventSend: function(content) {
     if(content.xdm.web?.webReferrer) delete content.xdm.web.webReferrer.URL;
   },
-  "onBeforeLinkClickSend": function(content) {
+  onBeforeLinkClickSend: function(content) {
     content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
   },
-  "prehidingStyle": "#container { opacity: 0 !important }",
-  "targetMigrationEnabled": true,
-  "thirdPartyCookiesEnabled": false
+  prehidingStyle: "#container { opacity: 0 !important }",
+  targetMigrationEnabled: true,
+  thirdPartyCookiesEnabled: false
 });
 ```
