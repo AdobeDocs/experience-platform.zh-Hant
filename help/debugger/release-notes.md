@@ -4,21 +4,34 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
+source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '758'
 ht-degree: 5%
 
 ---
 
 # Adobe Experience Platform Debugger發行說明
 
+## 1.6.0版 — 2024年7月11日
+
+### 新功能
+
+* 允許使用者選擇加入/退出技術和個人資料收集。
+
+### 修正和改良
+
+* 修正Firefox指令碼插入和隱私權原則連結。
+* 擷取遺失的Analytics請求。
+* 修正含有大量複雜主控台訊息的頁面當機。
+* 將Adobe Experience Platform Debugger更新為資訊清單v3擴充功能。
+
 ## 1.5.4版 — 2023年12月19日
 
 ### 修正和改良
 
 * 修正設定未保留的問題。
-* 修正導致Debugger在檢視Analytics處理後點選時當機的問題。
+* 修正導致Debugger在檢視Analytics Post處理的點選時當機的問題。
 
 ## 1.5.3版 — 2023年12月6日
 
@@ -62,7 +75,7 @@ ht-degree: 5%
 * 修正無法顯示Target追蹤的問題。
 * 修正「傳送意見回饋」按鈕。
 * 修正≥2.18.0版Web SDK摘要中缺少「資料串流ID」的問題。
-* 修正無法搜尋Edge記錄檔的問題。
+* 修正Edge記錄檔無法搜尋的問題。
 * 新增特定帳戶型別其他設定檔的相關備註。
 
 ## 1.4.1版 — 2022年11月1日
@@ -100,7 +113,7 @@ ht-degree: 5%
 * 新增「關於」連結以顯示最新發行版本和說明。
 * 新增切換功能，可檢視Analytics請求的處理後點選。 Analytics區段提供此切換選項。
 * 修正在偵錯工具外部關閉工作階段時的遠端偵錯工作階段問題。
-* 修正Web SDK Edge Transactions索引標籤中顯示的錯誤通知。
+* 修正Web SDK Edge Transactions標籤中顯示的錯誤通知。
 * 修正偵錯工具存取_satellite物件時，頁面出現棄用警告的Adobe標籤。
 * 修正在頁面上找不到AppMeasurement執行個體的某些情況。
 * 修正第一次開啟偵錯工具視窗時發生的頁面連線問題。
@@ -112,9 +125,9 @@ ht-degree: 5%
 
 ## 1.1.0版 — 2021年10月5日
 
-* 遠端偵錯視覺效果 — 將遠端偵錯事件組織成Adobe Experience Platform Web SDK > Edge Transactions區段中的視覺流程圖。
+* 遠端偵錯視覺效果 — 將遠端偵錯事件組織成Adobe Experience Platform Web SDK > Edge交易區段中的視覺化流程圖。
 * 啟動新的遠端偵錯工作階段時，需要頁面上使用的Adobe Experience Platform Web SDK組織與登入的組織相符。
-* 僅顯示已連線標籤的邊緣交易。 仍可在「記錄> Edge」區段中取得Target追蹤記錄。
+* 僅顯示已連線標籤的邊緣交易。 記錄檔> Edge區段中仍提供Target追蹤記錄檔。
 * 允許頁面上每個Adobe Experience Platform Web SDK執行個體的個別資料流ID設定覆寫。 新增偵錯功能切換。
 * 修正Adobe Target追蹤權杖不一定會與Adobe Experience Platform Web SDK的遠端偵錯工作階段一併傳送的問題。
 
