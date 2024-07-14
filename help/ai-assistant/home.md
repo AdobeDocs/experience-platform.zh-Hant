@@ -2,10 +2,10 @@
 title: Adobe Experience Platform中的AI助理概述
 description: 了解 AI 助理、其細微差別和使用案例，以及如何使用它來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
+source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 6%
+source-wordcount: '928'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform中的AI助理是一種對話式體驗，可用來加�
 
 >[!IMPORTANT]
 >
->您必須同意 [使用者合約](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) 才能使用AI助理。 使用者合約也包含公開測試版合約。 這樣一來，您就可以在以Beta版容量推出其他AI Assistant功能時使用它們。
+>您必須先同意[使用者合約](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html)，才能使用AI小幫手。 使用者合約也包含公開測試版合約。 這樣一來，您就可以在以Beta版容量推出其他AI Assistant功能時使用它們。
 
 +++選取以檢視使用者合約介面
 
@@ -33,9 +33,9 @@ Adobe Experience Platform中的AI助理是一種對話式體驗，可用來加�
 
 AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類看得懂的答案，以回應您提交的問題。
 
-這種基礎資料的內部表示法也稱為 **[!DNL Knowledge Graph]**  — 特定答案的概念、資料和中繼資料的完整網路。
+此基礎資料的內部表示也稱為&#x200B;**[!DNL Knowledge Graph]** — 特定答案的概念、資料和中繼資料的完整網路。
 
-此 [!DNL Knowledge Graph] 由每次提交查詢時參考的子圖表組成：
+[!DNL Knowledge Graph]包含每次提交查詢時所參考的子圖形：
 
 * 客戶營運分析。
 * 各種中繼商店的客戶營運分析。
@@ -59,7 +59,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 >[!IMPORTANT]
 >
->營運見解答案為測試版。 任何可存取此 **檢視營運分析** 許可權將可存取操作見解答案。
+>營運見解答案為測試版。 有權存取&#x200B;**檢視營運分析**&#x200B;許可權的任何人將有權存取營運分析答案。
 
 營運深入分析是指回答AI助理產生的中繼資料物件（屬性、受眾、資料流、資料集、目的地、歷程、結構描述和來源），包括計數、查閱和歷程影響。 它不會檢視沙箱中的任何資料。
 
@@ -69,16 +69,16 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 您可以在下列網域中向AI Assistant詢問有關您的營運見解的問題：
 
-| 網域 | 支援的中繼資料 |
-| --- | --- |
-| 屬性 | <ul><li>屬性名稱查閱</li><li>屬性 — 結構描述關係</li><li>屬性 — 資料集關係</li><li>屬性 — 對象關係</li><li>屬性 — 目的地關係</li><li>未使用的屬性</li></ul> |
-| 對象 | <ul><li>對象計數</li><li>對象型別（串流或批次）</li><li>建立/修改日期</li><li>啟用狀態</li><li>設定檔計數</li><li>複製對象</li><li>對象定義查閱</li><li>對象 — 屬性關係</li><li>對象 — 資料集關係</li><li>對象 — 目的地關係</li><li>InSegment規則</li><li>名稱查詢</li><li>名稱和ID查閱 |
-| 資料流 | <ul><li>資料流計數</li><li>資料流程狀態</li><li>資料流 — 資料集關係</li><li>資料流 — 來源關係</li></ul> |
-| 資料集 | <ul><li>資料集計數</li><li>設定檔啟用狀態</li><li>建立/修改日期</li><li>資料集 — 結構描述關係</li><li>資料集 — 對象關係</li><li>資料集 — 屬性關係</li><li>資料集 — 資料流關係</li><li>名稱查詢 </li><li>名稱和ID查閱</li></ul> |
-| 目的地 | <ul><li>設定的目的地計數</li><li>目的地 — 對象關係</li><li>目的地屬性關係</li></ul> |
-| 歷程 | <ul><li>計數</li><li>名稱查詢</li><li>名稱和ID查閱</li><li>歷程狀態</li><li>觸發狀態（對象與事件）</li><li>建立/修改日期</li><li>循環頻率</li></ul> |
-| 結構描述 | <ul><li>結構描述計數</li><li>建立/修改日期</li><li>結構描述類別型別</li><li>結構描述 — 屬性關係</li><li>結構描述 — 資料集關係</li><li>結構描述 — 對象關係</li><li>設定檔啟用狀態</li><li>名稱查詢</li><li>名稱和ID查閱</li></ul> |
-| 來源 | <ul><li>帳戶計數</li><li>帳戶狀態</li><li>每個帳戶的作用中/非作用中資料流</li><li>來源聯結器 — 資料流關係</li><li>來源帳戶 — 資料流關係</li></ul> |
+| 網域 | 支援的中繼資料 | 不支援的中繼資料 |
+| --- | --- | --- |
+| 屬性 | <ul><li>屬性名稱查閱</li><li>屬性 — 結構描述關係</li><li>屬性 — 資料集關係</li><li>屬性 — 對象關係</li><li>屬性 — 目的地關係</li></ul> | <ul><li>屬性類別</li><li>稽核</li><li>淘汰狀態</li><li>標記</li><li>儲存在屬性中的值</li></ul> |
+| 對象 | <ul><li>對象計數</li><li>對象型別（串流或批次）</li><li>建立/修改日期</li><li>啟用狀態</li><li>設定檔計數</li><li>複製對象</li><li>對象定義查閱</li><li>對象 — 屬性關係</li><li>對象 — 資料集關係</li><li>對象 — 目的地關係</li><li>InSegment規則</li><li>名稱查詢</li><li>名稱和ID查閱 | <ul><li>對象重疊</li><li>客群啟用</li><li>對象 — 行銷活動關係</li><li>稽核</li><li>建立/修改</li><li>標記</li><li>設定檔資格趨勢</li></ul> |
+| 資料流 | <ul><li>資料流計數</li><li>資料流程狀態</li><li>資料流 — 資料集關係</li><li>資料流 — 來源關係</li></ul> | <ul><li>建立/修改</li><li>資料流 — 批次關係</li><li>擷取設定檔計數</li></ul> |
+| 資料集 | <ul><li>資料集計數</li><li>設定檔啟用狀態</li><li>建立/修改日期</li><li>資料集 — 結構描述關係</li><li>資料集 — 對象關係</li><li>資料集 — 屬性關係</li><li>資料集 — 資料流關係</li><li>名稱查詢 </li><li>名稱和ID查閱</li></ul> | <ul><li>稽核</li><li>建立者：</li><li>資料集 — 批次關係</li><li>資料集建立/修改</li><li>資料集大小</li><li>設定檔數</li><li>列數</li><li>值查詢</li></ul> |
+| 目的地 | <ul><li>設定的目的地計數</li><li>目的地 — 對象關係</li><li>目的地屬性關係</li></ul> | <ul><li>帳戶設定</li><li>帳戶認證資訊</li><li>啟用的不重複設定檔</li></ul> |
+| 歷程 | <ul><li>計數</li><li>名稱查詢</li><li>名稱和ID查閱</li><li>歷程狀態</li><li>觸發狀態（對象與事件）</li><li>建立/修改日期</li><li>循環頻率</li></ul> | <ul><li>屬性 — 歷程關係</li><li>稽核</li><li>建立/修改</li><li>建立者：</li><li>活動</li><li>歷程 — 資料集</li><li>歷程 — 結構描述</li><li>優惠</li><li>設定檔資格趨勢</li><li>步驟事件</li></ul> |
+| 結構描述 | <ul><li>結構描述計數</li><li>建立/修改日期</li><li>結構描述類別型別</li><li>結構描述 — 屬性關係</li><li>結構描述 — 資料集關係</li><li>結構描述 — 對象關係</li><li>設定檔啟用狀態</li><li>名稱查詢</li><li>名稱和ID查閱</li></ul> | <ul><li>稽核</li><li>建立/修改</li><li>建立者：</li><li>欄位群組</li><li>身分</li><li>身分識別命名空間</li><li>標記</li><li>設定檔數</li></ul> |
+| 來源 | <ul><li>帳戶計數</li><li>帳戶狀態</li><li>每個帳戶的作用中/非作用中資料流</li><li>Source聯結器 — 資料流關係</li><li>Source帳戶 — 資料流關係</li></ul> | <ul><li>帳戶認證資訊</li><li>帳戶設定</li><li>資料擷取量度</li><li>設定檔數</li><li>Source — 批次關係</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 目前，AI助理的範圍如下：
 
 * [產品知識](./home.md#product-knowledge)： AI助理可以回答Experience Platform、Real-time Customer Data Platform和Adobe Journey Optimizer的產品知識問題。 您也可以深入探討Customer Journey Analytics的產品知識主題，但必須透過Customer Journey AnalyticsUI。
-* [營運分析](./home.md#operational-insights)：您可以向AI助理詢問有關下列資料物件的操作深入分析的問題：屬性、受眾、資料流程、資料集、目的地、歷程、結構描述和來源。
+* [營運分析](./home.md#operational-insights)：您可以向AI助理詢問有關下列資料物件的營運分析問題：屬性、對象、資料流、資料集、目的地、歷程、結構描述和來源。
 
 ## 後續步驟
 

@@ -2,9 +2,9 @@
 title: AI助理的問題指南
 description: 請閱讀本檔案以瞭解查詢AI助理時可以使用的範例問題。
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
+source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1694'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 若要瞭解查詢AI助理時可以使用的一組範例問題，請閱讀本檔案。
 
-您也可以使用本檔案來瞭解以下秘訣 [如何表達您的問題](#phrasing-your-questions) 以從AI Assistant取得最佳回應。
+您也可以使用本檔案來瞭解[如何表達您的問題](#phrasing-your-questions)的秘訣，以從AI助理取得最佳回應。
 
 ## 基於目標的問題 {#objectives-questions}
 
@@ -22,38 +22,38 @@ ht-degree: 1%
 | 目標 | 說明 | 範例 |
 | --- | --- | --- |
 | 學習概念和持續工作流程 | <ul><li>身為新手使用者，您可以使用AI Assistant來瞭解Real-Time CDP和Adobe Journey Optimizer概念，並且將自己帶入你不熟悉的產品和功能。</li><li>身為經驗豐富的使用者，您可以使用AI Assistant來解決可能阻礙您工作流程的邊緣案例。 | <ul><li>如何在Journey Analytics中設定儀表板？</li><li>告訴我一些Real-Time CDP的使用案例。</li></ul> |
-| 疑難排解 | 使用AI助理瞭解如何偵錯工作流程中可能遇到的基本錯誤。 | <ul><li>發生此錯誤的原因 {ERROR_MESSAGE} 平均值？</li><li>我為何無法刪除名為「Luma：電子郵件對象」的對象？</li></ul> |
+| 疑難排解 | 使用AI助理瞭解如何偵錯工作流程中可能遇到的基本錯誤。 | <ul><li>此錯誤{ERROR_MESSAGE}代表什麼意思？</li><li>我為何無法刪除名為「Luma：電子郵件對象」的對象？</li></ul> |
 | 沙箱衛生 | 使用AI助理來識別任何重複專案或未使用的物件，以便您能夠有效地維護您的沙箱。 | <ul><li>您可以顯示類似的對象嗎？</li><li>是否有任何沒有關聯資料集的結構描述？</li></ul> |
 | 值分析 | 使用AI助理可以識別您最常用的資料物件，並評估任何績效指標或尋找最有價值的資料物件。 | <ul><li>我們的「Luma：電子郵件對象」區段定義中有多少設定檔？</li><li>對象何時啟用以Experience Cloud對象目的地？</li></ul> |
 | 搜尋 | 使用AI助理來尋找支援的Experience Platform物件，例如對象、資料集、目的地、結構描述和來源。 | <ul><li>列出在上季建立的名稱中包含「Luma」的對象。</li><li>「Luma：自訂動作」XDM結構描述中有哪些屬性？</li></ul> |
-| 影響分析 | 使用AI助理來識別某些工作流程中使用的資料物件，以便您評估任何變更的影響。 | <ul><li>使用哪些對象 `homeAddress.city` 在「Luma：PersonProfiles」結構描述中？</li><li>哪些資料集是 `consents.marketing.push.val` 設定檔屬性儲存在中？</li></ul> |
+| 影響分析 | 使用AI助理來識別某些工作流程中使用的資料物件，以便您評估任何變更的影響。 | <ul><li>哪些對象在「Luma：PersonProfiles」結構描述中使用`homeAddress.city`？</li><li>`consents.marketing.push.val`設定檔屬性儲存在哪些資料集中？</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 依實體和產品知識問題的營運深入分析{#objects-questions}
 
-下列問題會依資料物件分組，並分類為 [營運分析](./home.md#operational-insights) 或 [產品知識](./home.md#product-knowledge).
+下列問題依資料物件分組，並分類為[營運分析](./home.md#operational-insights)或[產品知識](./home.md#product-knowledge)。
 
-* **受眾 — 營運深入分析**
+* **對象 — 營運深入分析**
    * 哪些對象使用其他對象？
    * 不同對象中的設定檔數量分佈情況如何？
-   * 顯示上次修改時間早於此時間的對象： {RELATIVE_DATE}.
+   * 顯示上次在{RELATIVE_DATE}之前修改的對象。
    * 哪些對象有0個設定檔？
-   * 是 {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} 用於任何其他對象？
+   * {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME}是否用於任何其他對象？
 * **屬性 — 營運深入分析**
-   * 哪些對象具有xdm屬性 {ATTRIBUTE_PATH} 區段定義中的事件？
+   * 哪些受眾的區段定義中有xdm屬性{ATTRIBUTE_PATH}？
    * 有多少個XDM結構描述屬性未用於任何受眾？
-   * 哪些結構描述具有xdm屬性 {ATTRIBUTE_PATH} 在裡面？
+   * 哪些結構描述中有xdm屬性{ATTRIBUTE_PATH}？
    * 會啟用哪些XDM屬性？
    * 具有超過10個設定檔的對象會使用哪些XDM屬性？
 * **資料流 — 營運深入分析**
-   * 哪些資料流參與 {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} 資料集？
+   * 哪些資料流對{USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}資料集有貢獻？
    * 未使用哪些來源資料流，或是哪些資料不再流入？
    * 列出我擁有的來源資料流。
    * 每個來源聯結器會設定哪些資料流？
 * **資料集 — 營運深入分析**
    * 使用相同結構描述擷取了多少資料集？
-   * 與哪個來源聯結器相關聯 {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} 資料集？
+   * 哪個來源聯結器與{USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}資料集相關聯？
    * 每個對象會使用哪些資料集？
    * 哪些結構描述沒有用於任何資料集？
    * 我有多少資料集？
@@ -64,16 +64,16 @@ ht-degree: 1%
    * 哪些目的地的已啟動受眾數量最高？
 * **歷程 — 營運深入分析**
    * 我有多少個歷程？
-   * 已在哪些歷程中建立 {RELATIVE_DATE} （例如上週）或 {RELATIVE_DATE} （例如特定日期之前/之後/當天）？
-   * 顯示在中修改的歷程清單 {RELATIVE_DATE} （例如上週）或 {RELATIVE_DATE} （例如特定日期之前/之後/當天）？
+   * 已在{RELATIVE_DATE} （例如上週）或{RELATIVE_DATE} （例如特定日期之前/之後/日期）建立哪些歷程？
+   * 顯示在{RELATIVE_DATE} （例如上週）或{RELATIVE_DATE} （例如特定日期之前/之後/日期）中修改的歷程清單？
    * 列出我的即時歷程。
    * 列出即時歷程中使用的對象。
-* **來源 — 營運分析**
+* **來源 — 營運深入分析**
    * 哪些來源處於作用中狀態？
-   * 哪個來源聯結器與資料集相關聯 {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * 哪個來源聯結器與資料集{USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}關聯。
    * 哪個來源聯結器具有最高數目的關聯帳戶？
    * 顯示資料流及其關聯的來源聯結器。
-* **直接學習 — 產品知識(Real-Time CDP和Journey Optimizer)**
+* **指向式學習 — 產品知識(Real-Time CDP和Journey Optimizer)**
    * 哪些對象具有相似性？
    * 使用者群組與角色有何關係？
    * 何時應使用資料型別與欄位群組？
@@ -84,6 +84,30 @@ ht-degree: 1%
    * 我可以在擷取資料後刪除已啟用設定檔的結構描述嗎？
    * 我為何刪除不了對象？
    * 評估對象和鎖定結果需要多久時間？
+
++++選取此選項可檢視建議提示的其他清單
+
+* 我可以在擷取資料後刪除已啟用設定檔的結構描述嗎？
+* 使用者群組與角色有何關係？
+* 何時應使用資料型別與欄位群組？&#39;
+* 身分識別與主要或外部索引鍵之間有何差異？
+* 評估區段並取得鎖定目標結果需要多久時間？
+* 如何計算設定檔豐富度？
+* 告訴我一些Real-Time CDP的常見使用案例。
+* 我為何刪除不了區段？
+* 為設定檔啟用結構描述後，我可以進行什麼型別的變更？
+* 為何無法在AEP中存取儀表板？
+* 有多少區段使用xdm屬性{FIELD_PATH}
+* 我是否有其他區段中使用的任何區段？
+* {SCHEMA_NAME}結構描述中的哪些欄位包含{STRING}？
+* 哪些受眾的區段定義中有xdm屬性{FULL_ATTRIBUTE_PATH}？
+* 哪些結構描述中有xdm屬性{FULL_ATTRIBUTE_PATH}？
+* 未使用哪些來源資料流，或是哪些資料不再流入？
+* 列出我的即時歷程。
+* 列出即時歷程中使用的對象。
+* 哪些來源處於作用中狀態？
+
++++
 
 ## 用詞說明問題 {#phrasing-your-questions}
 
@@ -99,7 +123,7 @@ ht-degree: 1%
 
 | 執行 | 範例 |
 | --- | --- |
-| <ul><li>請指定要擷取或分析的物件或資訊的特定資訊。</li><li>請嘗試將資料物件名稱放在引號中。 如果您只知道物件名稱的一部分，您也可以在問題中指定。</li><li>使用 [物件自動完成](./ui-guide.md#use-auto-complete) 以協助AI助理更清楚瞭解您的查詢內容。</li></ul> | <ul><li>哪些資料集使用「Luma — 忠誠度」方案？</li><li>顯示名稱中有「Luma」的已啟動區段。 依設定檔計數對其排名。</li></ul> |
+| <ul><li>請指定要擷取或分析的物件或資訊的特定資訊。</li><li>請嘗試將資料物件名稱放在引號中。 如果您只知道物件名稱的一部分，您也可以在問題中指定。</li><li>使用[物件自動完成](./ui-guide.md#use-auto-complete)以協助AI助理更清楚瞭解您的查詢內容。</li></ul> | <ul><li>哪些資料集使用「Luma — 忠誠度」方案？</li><li>顯示名稱中有「Luma」的已啟動區段。 依設定檔計數對其排名。</li></ul> |
 | <ul><li>避免模稜兩可，使用清楚的語言</li><li>使用精確術語，確保查詢內容更清楚。</li><li>在詢問有關Adobe Experience Platform的問題時，請嘗試使用Experience Platform的特定術語，以改善回應的相關性。</li></ul> | <ul><li>「ACME對象」中有多少個設定檔。</li><li>顯示啟用的對象中使用的前5大XDM屬性。</li></ul> |
 | <ul><li>提供內容或指定條件以篩選結果。</li><li>在問題中使用篩選條件來限制回應中的資料量。</li></ul> | <ul><li>顯示尚未啟用且建立日期超過6個月且從未修改過的對象。</li><li>向我顯示啟用至「ACME目的地」且擁有超過10000個設定檔的對象。</li></ul> |
 
@@ -115,6 +139,51 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
+## 不支援的問題範例 {#unsupported-questions}
+
+以下是AI助理目前不支援的問題範例清單。
+
++++選取此選項可檢視不支援問題的範例
+
+### 運作深入分析
+
+* 此沙箱[中有多少設定檔符合特定條件，例如「住在加州」]？
+* 此設定檔{PROFILE_INFO/ATTRIBUTE_VALUE}位於哪些區段？
+* 資料集中有多少設定檔有電子郵件？
+* 哪個資料集構成此沙箱中的設定檔最大數量？
+* 哪個資料集的記錄數量最高？
+* {RELATIVE_DATE}中刪除了多少區段？
+* 我的哪些資料集大小最大？
+* 在{AUDIENCE_NAME}中給我設定檔。
+* 我的沙箱中的設定檔總數是多少？
+* 有多少身分名稱空間與對象{AUDIENCE_NAME}相關聯？
+* 顯示今天評估的所有對象區段的報告
+* 有多少區段具有重疊的設定檔？
+* 有多少批次正在載入{DATASET_NAME}
+* 我有多少個使用中的優惠方案？
+* 我有多少個作用中的行銷活動？
+* 我的資料來源來自何處？
+* 最大的資料集或資料來源為何？
+* 我可以取得已建立這些結構描述的使用者清單嗎？
+
+### 疑難排解
+
+* 此批次{BATCH_NAME/BATCH_ID}為何仍在處理中？
+* 為什麼沒有人符合此對象{AUDIENCE_NAME}的資格？
+* 我無法看見Customer AI，為什麼以及如何加以修正？
+* 我看不到資料集預覽，為什麼以及如何修正？
+* 為何無法刪除{SEGMENT/DATASET/SCHEMA_NAME}？
+* 我有權存取查詢服務嗎？
+
+### 工作與自動化
+
+* 撰寫一個查詢，從{DATASET_NAME}給我一條記錄。
+* 將範例API呼叫寫入/schemas/{schemaId}/fields/{fieldPath}/values。
+* 為我設定來源/目的地。
+* 使用條件{USER_SPECIFIC_CRITERIA}為我建立對象。
+
++++
+
 ## 後續步驟
 
-閱讀本檔案後，您現在已瞭解如何最佳化AI助理的問題。 如需在工作流程期間使用此功能的詳細資訊，請參閱 [AI助理使用者介面指南](ui-guide.md).
+閱讀本檔案後，您現在已瞭解如何最佳化AI助理的問題。 如需工作流程期間如何使用功能的詳細資訊，請閱讀[AI助理使用者介面指南](ui-guide.md)。
