@@ -8,15 +8,15 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL 外部Source系統稽核詳細資料] 欄位群組
+# [!UICONTROL 外部Source系統稽核詳細資料]欄位群組
 
-[!UICONTROL 外部Source系統稽核詳細資料] 是標準的體驗資料模型(XDM)欄位群組，可藉由參照其屬性並新增內容中繼資料，擴充核心的「外部Source系統稽核屬性」資料型別。 如此可讓您進行詳細的稽核追蹤，並彈性整合來自外部來源的資料。
+[!UICONTROL 外部Source系統稽核詳細資料]是標準的體驗資料模型(XDM)欄位群組，可參考核心「外部Source系統稽核屬性」的屬性並新增內容中繼資料，以擴充其資料型別。 如此可讓您進行詳細的稽核追蹤，並彈性整合來自外部來源的資料。
 
 ![外部Source系統稽核詳細資料欄位群組的結構描述圖。](../../images/field-groups/shared/external-source-system-audit-details.png)
 
 | 顯示名稱 | 屬性 | 資料類型 | 說明 |
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
-| [!UICONTROL 外部Source系統稽核詳細資料] | `external-source-system-audit-details` | [[!UICONTROL 外部Source系統稽核屬性]](../../data-types/external-source-system-audit-attributes.md) | 「[!UICONTROL 外部Source系統稽核詳細資料]「欄位群組」會參照其屬性並新增內容中繼資料，以擴充核心「外部Source系統稽核屬性」資料型別。 這有助於詳細稽核追蹤，以及外部來源的彈性資料整合，適應設定檔擷取的非同步性質。 |
+| [!UICONTROL 外部Source系統稽核詳細資料] | `external-source-system-audit-details` | [[!UICONTROL 外部Source系統稽核屬性]](../../data-types/external-source-system-audit-attributes.md) | &#39;[!UICONTROL 外部Source系統稽核詳細資料]&#39;欄位群組藉由參考其屬性並新增內容中繼資料，來擴充核心「外部Source系統稽核屬性」資料型別。 這有助於詳細稽核追蹤，以及外部來源的彈性資料整合，適應設定檔擷取的非同步性質。 |
 
 {style="table-layout:auto"}
 

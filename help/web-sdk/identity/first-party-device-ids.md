@@ -12,64 +12,64 @@ ht-degree: 0%
 
 # Web SDK中的第一方裝置ID
 
-Adobe Experience Platform Web SDK指派 [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) 網站訪客使用Cookie來追蹤使用者行為。 若要說明瀏覽器對Cookie有效期的限制，您可以選擇設定並管理您自己的裝置識別碼。 這些稱為第一方裝置ID (FPID)。
+Adobe Experience Platform Web SDK會使用Cookie將[Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html)指派給網站訪客，以追蹤使用者行為。 若要說明瀏覽器對Cookie有效期的限制，您可以選擇設定並管理您自己的裝置識別碼。 這些稱為第一方裝置ID (FPID)。
 
 >[!NOTE]
 >
->只有透過Platform Web SDK將資料傳送至Platform Edge Network時，才能使用第一方裝置ID支援。
+>只有透過Platform Web SDK將資料傳送至PlatformEdge Network時，才能使用第一方裝置ID支援。
 
 >[!IMPORTANT]
 >
->第一方裝置ID與 [第三方Cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) Web SDK的功能。
+>第一方裝置識別碼與Web SDK中的[第三方Cookie](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity)功能不相容。
 >您可以使用第一方裝置識別碼，或使用第三方Cookie，但無法同時使用這兩項功能。
 
 本文介紹如何為Platform Web SDK實作設定第一方裝置ID。
 
 ## 先決條件
 
-本指南假設您熟悉身分識別資料在Platform Web SDK中的運作方式，包括ECID和 `identityMap`. 請參閱以下主題的概觀： [Web SDK中的身分資料](./overview.md) 以取得詳細資訊。
+本指南假設您熟悉身分識別資料在Platform Web SDK中的運作方式，包括ECID和`identityMap`的角色。 如需詳細資訊，請參閱Web SDK](./overview.md)中[身分資料的概觀。
 
 ## 使用FPID
 
-FPID會使用第一方Cookie來追蹤訪客。 第一方Cookie在使用使用DNS的伺服器設定時最有效 [A記錄](https://datatracker.ietf.org/doc/html/rfc1035) （適用於IPv4）或 [AAAA記錄](https://datatracker.ietf.org/doc/html/rfc3596) （適用於IPv6），而非DNS CNAME或JavaScript程式碼。
+FPID會使用第一方Cookie來追蹤訪客。 使用使用DNS [A記錄](https://datatracker.ietf.org/doc/html/rfc1035) （適用於IPv4）或[AAAA記錄](https://datatracker.ietf.org/doc/html/rfc3596) （適用於IPv6）的伺服器(而非DNS CNAME或JavaScript程式碼)設定第一方Cookie時，其最有效。
 
 >[!IMPORTANT]
 >
->`A` 或 `AAAA` 記錄僅支援設定和追蹤Cookie。 資料收集的主要方法是透過DNS CNAME。 換言之，FPID是使用A記錄或AAAA記錄設定，然後使用CNAME傳送至Adobe。
+>`A`或`AAAA`記錄僅支援設定和追蹤Cookie。 資料收集的主要方法是透過DNS CNAME。 換言之，FPID是使用A記錄或AAAA記錄設定，然後使用CNAME傳送至Adobe。
 >
->此 [Adobe管理的憑證方案](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) 也仍支援第一方資料收集。
+>[Adobe管理的憑證方案](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program)也仍支援第一方資料收集。
 
 設定FPID Cookie後，就能在收集事件資料時擷取其值並傳送至Adobe。 收集的FPID會作為種子來產生ECID，這繼續是Adobe Experience Cloud應用程式中的主要識別碼。
 
-若要將網站訪客的FPID傳送至Platform Edge Network，您必須將FPID加入至 `identityMap` 給該訪客的。 請參閱本檔案稍後章節於 [在中使用FPID `identityMap`](#identityMap) 以取得詳細資訊。
+若要將網站訪客的FPID傳送至PlatformEdge Network，您必須在該訪客的`identityMap`中加入FPID。 如需詳細資訊，請參閱本檔案後面關於[在`identityMap`](#identityMap)中使用FPID的章節。
 
 ### ID格式需求
 
-Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org/doc/html/rfc4122). 不採用UUIDv4格式的裝置ID將會遭到拒絕。
+平台Edge Network只接受符合[UUIDv4格式](https://datatracker.ietf.org/doc/html/rfc4122)的ID。 不採用UUIDv4格式的裝置ID將會遭到拒絕。
 
 產生UUID幾乎都會產生不重複的隨機ID，而發生碰撞的機率極小。 UUIDv4不能使用IP位址或任何其他個人識別資訊(PII)進行內建。 UUID隨處可見，而且幾乎每種程式語言都能找到程式庫來產生它們。
 
 ## 在資料串流UI中設定第一方ID Cookie {#setting-cookie-datastreams}
 
-您可以在資料串流UI中指定Cookie名稱，其中 [!DNL FPID] 可以位於中，而不必讀取Cookie值並將FPID納入身分對應中。
+您可以在資料串流UI中指定Cookie名稱（可容納[!DNL FPID]），而不需要讀取Cookie值並在身分對應中包含FPID。
 
 >[!IMPORTANT]
 >
->此功能需要您具備 [第一方資料收集](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) 已啟用。
+>此功能需要您啟用[第一方資料收集](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en)。
 
-請參閱 [資料串流檔案](../../datastreams/configure.md) 以取得有關如何設定資料流的詳細資訊。
+如需如何設定資料串流的詳細資訊，請參閱[資料串流檔案](../../datastreams/configure.md)。
 
-設定資料流時，啟用 **[!UICONTROL 第一方ID Cookie]** 選項。 此設定可告知Edge Network在查詢第一方裝置ID時參考指定的Cookie，而不是在 [身分對應](#identityMap).
+設定資料流時，請啟用&#x200B;**[!UICONTROL 第一方ID Cookie]**&#x200B;選項。 此設定可告知Edge Network在查詢第一方裝置識別碼時參考指定的Cookie，而不是在[身分對應](#identityMap)中查詢此值。
 
-請參閱以下檔案： [第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant) 以取得搭配Adobe Experience Cloud使用的詳細資訊。
+請參閱[第一方Cookie](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=zh-Hant)的相關檔案，深入瞭解其如何使用Adobe Experience Cloud。
 
-![顯示資料流設定的平台UI影像，其中醒目顯示第一方ID Cookie設定](../assets/first-party-id-datastreams.png)
+![顯示資料流設定的平台UI影像，其中強調第一方ID Cookie設定](../assets/first-party-id-datastreams.png)
 
 啟用此設定時，您必須提供預期儲存ID的Cookie名稱。
 
-使用第一方ID時，無法執行第三方ID同步。 第三方ID同步需仰賴 [!DNL Visitor ID] 服務與 `UUID` 由該服務產生。 使用第一方ID功能時，會產生ECID而不使用 [!DNL Visitor ID] 服務，因此協力廠商ID無法同步。
+使用第一方ID時，無法執行第三方ID同步。 協力廠商ID同步依賴於[!DNL Visitor ID]服務以及該服務產生的`UUID`。 使用第一方ID功能時，會產生ECID而不使用[!DNL Visitor ID]服務，因此無法同步第三方ID。
 
-使用第一方ID時，由於Audience Manager合作夥伴ID同步主要是根據，因此不支援在合作夥伴平台上定位為啟用的Audience Manager功能 `UUIDs` 或 `DIDs`. 衍生自第一方ID的ECID未連結至 `UUID`，使其不可定址。
+當您使用第一方ID時，由於Audience Manager合作夥伴ID同步主要是以`UUIDs`或`DIDs`為基礎，因此不支援在合作夥伴平台中針對啟用的Audience Manager功能。 從第一方ID衍生的ECID未連結至`UUID`，使其無法定址。
 
 ## 使用您自己的伺服器設定Cookie
 
@@ -82,7 +82,7 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 
 >[!IMPORTANT]
 >
->使用JavaScript的 `document.cookie` 方法幾乎永遠不會受到限制Cookie持續時間的瀏覽器原則的保護。
+>使用JavaScript的`document.cookie`方法設定的Cookie，幾乎永遠無法受到限制Cookie持續時間的瀏覽器原則的保護。
 
 ### 何時設定Cookie
 
@@ -108,27 +108,27 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 
 ### `HTTPOnly` {#http-only}
 
-使用設定的Cookie `HTTPOnly` 無法使用使用者端指令碼存取標幟。 這表示如果您設定 `HTTPOnly` 標幟設定FPID時，您必須使用伺服器端指令碼語言來讀取要包含在 `identityMap`.
+無法使用使用者端指令碼存取使用`HTTPOnly`標幟設定的Cookie。 這表示如果您在設定FPID時設定`HTTPOnly`旗標，則必須使用伺服器端指令碼語言來讀取要包含在`identityMap`中的Cookie值。
 
-如果您選擇讓Platform Edge Network讀取FPID Cookie的值，請設定 `HTTPOnly` 標幟可確保任何使用者端指令碼都無法存取值，但不會對Platform Edge Network讀取Cookie的能力產生任何負面影響。
+如果您選擇讓PlatformEdge Network讀取FPID Cookie的值，設定`HTTPOnly`旗標可確保任何使用者端指令碼都無法存取該值，但不會對PlatformEdge Network讀取Cookie的能力產生任何負面影響。
 
 >[!NOTE]
 >
->使用 `HTTPOnly` 標幟對可能限制Cookie期限的Cookie原則沒有影響。 不過，在設定和讀取FPID的值時，您仍應考慮這個問題。
+>使用`HTTPOnly`旗標並不會對可能限制Cookie存留期的Cookie原則造成影響。 不過，在設定和讀取FPID的值時，您仍應考慮這個問題。
 
 ### `Secure` {#secure}
 
-使用設定的Cookie `Secure` 屬性只會以加密的要求透過HTTPS通訊協定傳送至伺服器。 使用此標幟有助於確保中間人攻擊者無法輕鬆存取Cookie的值。 可能的話，最好還是將 `Secure` 標幟。
+以`Secure`屬性設定的Cookie僅會透過HTTPS通訊協定，以加密的要求傳送至伺服器。 使用此標幟有助於確保中間人攻擊者無法輕鬆存取Cookie的值。 可能的話，最好設定`Secure`旗標。
 
 ### `SameSite` {#same-site}
 
-此 `SameSite` 屬性可讓伺服器判斷Cookie是否隨跨網站要求傳送。 屬性可針對跨網站偽造攻擊提供某些保護。 有三種可能的值存在： `Strict`， `Lax`、和 `None`. 請洽詢您的內部團隊，判斷適合您組織的設定。
+`SameSite`屬性可讓伺服器判斷Cookie是否隨跨網站要求傳送。 屬性可針對跨網站偽造攻擊提供某些保護。 存在三個可能的值： `Strict`、`Lax`和`None`。 請洽詢您的內部團隊，判斷適合您組織的設定。
 
-若否 `SameSite` 屬性已指定，現在某些瀏覽器的預設設定為 `SameSite=Lax`.
+如果未指定`SameSite`屬性，某些瀏覽器的預設設定現在是`SameSite=Lax`。
 
-## 在中使用FPID `identityMap` {#identityMap}
+## 在`identityMap`中使用FPID {#identityMap}
 
-以下是如何在 `identityMap`：
+以下是如何在`identityMap`中設定FPID的範例：
 
 ```json
 {
@@ -144,7 +144,7 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 }
 ```
 
-就像其他身分型別一樣，您可以將FPID與其他身分一起包含在 `identityMap`. 以下是已驗證CRM ID所包含的FPID範例：
+與其他身分型別一樣，您可以在`identityMap`中包含FPID與其他身分。 以下是已驗證CRM ID所包含的FPID範例：
 
 ```json
 {
@@ -183,7 +183,7 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 }
 ```
 
-下列專案 `identityMap` 會導致Edge Network的錯誤回應，因為它遺失 `primary` FPID的指標。 最後出現其中一個ID `identityMap` 必須標示為 `primary`.
+下列`identityMap`會導致Edge Network的錯誤回應，因為它遺失FPID的`primary`指標。 在`identityMap`中出現的最後一個ID必須標籤為`primary`。
 
 ```json
 {
@@ -204,7 +204,7 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 }
 ```
 
-在此情況下，Edge Network傳回的錯誤回應會類似於以下內容：
+在此情況下，Edge Network傳回的錯誤回應將類似於以下內容：
 
 ```json
 {
@@ -226,9 +226,9 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 
 身分會依下列順序排定優先順序：
 
-1. ECID包含在 `identityMap`
+1. `identityMap`中包含的ECID
 1. ECID儲存在Cookie中
-1. FPID包含在 `identityMap`
+1. `identityMap`中包含的FPID
 1. 儲存在Cookie中的FPID
 
 ## 移轉至第一方裝置ID
@@ -237,15 +237,15 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 
 為了協助說明此流程，請思考先前曾造訪過您網站的客戶的情況，以及FPID移轉對Adobe解決方案中識別該客戶的方式有何影響。
 
-![此圖表顯示客戶ID值在移轉至FPID後如何在兩次造訪之間更新](../assets/identity/tracking/visits.png)
+![圖表顯示客戶的ID值在移轉至FPID後如何在造訪之間更新](../assets/identity/tracking/visits.png)
 
 >[!IMPORTANT]
 >
->此 `ECID` Cookie的優先順序一律高於 `FPID`.
+>`ECID` Cookie一律優先於`FPID`。
 
 | 造訪 | 說明 |
 | --- | --- |
-| 首次造訪 | 假設您尚未開始設定FPID Cookie。 包含在以下專案中的ECID： [AMCV Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) 將是用來識別訪客的識別碼。 |
+| 首次造訪 | 假設您尚未開始設定FPID Cookie。 [AMCV Cookie](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8)中包含的ECID將是用來識別訪客的識別碼。 |
 | 第二次造訪 | 已開始推出第一方裝置ID解決方案。 現有的ECID仍存在，且仍然是訪客身分識別的主要識別碼。 |
 | 第三次造訪 | 在第二次和第三次造訪之間，已過了足夠的時間且由於瀏覽器原則已刪除ECID。 但是，由於FPID是使用DNS A記錄設定的，因此FPID會持續存在。 FPID現在會視為主要ID，並用來植入寫入一般使用者裝置的ECID。 在Adobe Experience Platform和Experience Cloud解決方案中，該使用者現在會被視為新訪客。 |
 | 第四次瀏覽 | 在第三次和第四次造訪之間，已過了足夠的時間且由於瀏覽器原則已刪除ECID。 如同先前的造訪，FPID會因設定方式而持續存在。 這次會產生與上次造訪相同的ECID。 在整個Experience Platform和Experience Cloud解決方案中，使用者會被視為與上次造訪相同的使用者。 |
@@ -259,7 +259,7 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 
 ### 植入ID和單純產生ID有何不同？
 
-內建概念的獨特之處在於，傳遞至Adobe Experience Cloud的FPID會使用確定性演演算法轉換為ECID。 每次將相同的FPID傳送至Adobe Experience Platform Edge Network時，相同的ECID都會從FPID內建。
+內建概念的獨特之處在於，傳遞至Adobe Experience Cloud的FPID會使用確定性演演算法轉換為ECID。 每次將相同的FPID傳送至Adobe Experience PlatformEdge Network時，相同的ECID則會從FPID內建而來。
 
 ### 何時應該產生第一方裝置識別碼？
 
@@ -271,4 +271,4 @@ Platform Edge Network僅接受符合 [UUIDv4格式](https://datatracker.ietf.org
 
 ### FPID是否儲存在任何平台或Experience Cloud解決方案上？
 
-一旦使用FPID來設定ECID的種子，就會從 `identityMap` 和已取代為產生的ECID。 FPID不會儲存在任何Adobe Experience Platform或Experience Cloud解決方案中。
+一旦使用FPID來設定ECID的種子後，就會從`identityMap`中捨棄該FPID，並取代為已產生的ECID。 FPID不會儲存在任何Adobe Experience Platform或Experience Cloud解決方案中。

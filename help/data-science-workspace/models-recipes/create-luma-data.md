@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；luma網路資料；資料科學工作區；熱門主題；配方；示範資料；示範網路資料；luma資料
+keywords: Experience Platform；luma網路資料；資料科學Workspace；熱門主題；配方；示範資料；示範網路資料；luma資料
 solution: Experience Platform
 title: 建立Luma網頁結構描述和資料集
 type: Tutorial
@@ -7,21 +7,21 @@ description: 本教學課程提供Luma示範傾向模型所需的必要條件和
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 1%
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 # 建立Luma傾向模型結構描述和資料集
 
-本教學課程提供您所有其他專案所需的先決條件和資產 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 教學課程。 完成後，您和您的組織將可以使用以下結構描述和資料集。
+此教學課程提供您所有其他[!DNL Adobe Experience Platform] [!DNL Data Science Workspace]教學課程所需的先決條件和資產。 完成後，您和您的組織將可以使用以下結構描述和資料集。
 
-**綱要:**
+**結構描述：**
 
 - Luma Web資料結構
 - 傾向模型評分結果結構描述
 
-**資料集:**
+**資料集：**
 
 - Luma網路資料集
 - 傾向性模型訓練資料集
@@ -30,7 +30,7 @@ ht-degree: 1%
 
 ## 下載資產 {#assets}
 
-以下教學課程使用自訂Luma購買傾向模型。 繼續進行之前， [下載必要的資產](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip資料夾。 此資料夾包含：
+以下教學課程使用自訂Luma購買傾向模型。 繼續之前，[下載必要的資產](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip資料夾。 此資料夾包含：
 
 - 購買傾向性機型筆記型電腦
 - 用來將資料內嵌至訓練和評分資料集（Luma網路資料的子集）的筆記本
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 ### 建立Luma Web資料結構描述並擷取資料
 
-為了建立模型，Platform中必須有資料集，可用來對模型進行訓練和評分。 下列影片教學課程來自 [資料科學工作區課程](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw) 會逐步引導您建立Luma結構描述，並擷取購買傾向模型使用的資料。
+為了建立模型，Platform中必須有資料集，可用來對模型進行訓練和評分。 下列來自[Data Science Workspace課程](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw)的影片教學課程，將逐步引導您建立Luma結構描述及擷取購買傾向模型使用的資料。
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
@@ -55,6 +55,6 @@ ht-degree: 1%
 
 ## 後續步驟
 
-依照本教學課程，您已成功建立Luma傾向模型所需的結構描述和資料集。 您現在已準備好繼續下一教學課程，並使用建立模型 [配方產生器筆記本](../jupyterlab/create-a-model.md) 教學課程。
+依照本教學課程，您已成功建立Luma傾向模型所需的結構描述和資料集。 您現在已準備好繼續下一個教學課程，並使用[配方產生器筆記本](../jupyterlab/create-a-model.md)教學課程建立模型。
 
-此外，您可以使用提供的探索資料分析(EDA)筆記本來探索資料。 此筆記本可用來協助瞭解Luma資料中的模式、檢查資料健全度，並總結預測傾向模型的相關資料。 若要進一步瞭解探索資料分析，請造訪 [EDA檔案](../jupyterlab/eda-notebook.md).
+此外，您可以使用提供的探索資料分析(EDA)筆記本來探索資料。 此筆記本可用來協助瞭解Luma資料中的模式、檢查資料健全度，並總結預測傾向模型的相關資料。 若要進一步瞭解探索資料分析，請造訪[EDA檔案](../jupyterlab/eda-notebook.md)。

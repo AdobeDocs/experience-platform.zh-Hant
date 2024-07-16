@@ -2,26 +2,26 @@
 keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；範例資料；
 solution: Experience Platform
 title: 範例資料API端點
-description: 您可以使用Adobe Experience Platform API中的「/samples」端點，以程式設計方式擷取、建立、更新及驗證對應範例資料。
+description: 您可以在Adobe Experience Platform API中使用「/samples」端點，以程式設計方式擷取、建立、更新及驗證對應範例資料。
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 5%
+source-wordcount: '405'
+ht-degree: 4%
 
 ---
 
 
 # 範例資料端點
 
-為對應集建立結構描述時，可以使用範例資料。 您可以使用 `/samples` 「資料準備API」中的端點，以程式設計方式擷取、建立和更新範例資料。
+為對應集建立結構描述時，可以使用範例資料。 您可以使用資料準備API中的`/samples`端點以程式設計方式擷取、建立和更新範例資料。
 
 ## 列出範例資料
 
-您可以透過向以下專案發出GET請求，擷取貴組織的所有對應範例資料清單： `/samples` 端點。
+您可以藉由向`/samples`端點發出GET要求，擷取貴組織的所有對應範例資料清單。
 
 **API格式**
 
-此 `/samples` 端點支援數個查詢引數，以協助篩選結果。 目前，您必須同時包含 `start` 和 `limit` 請求中的引數。
+`/samples`端點支援數個查詢引數，以協助篩選結果。 目前，您必須同時包含`start`和`limit`引數作為請求的一部分。
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -29,12 +29,12 @@ GET /samples?limit={LIMIT}&start={START}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{LIMIT}` | **必填**. 指定傳回的對應範例資料數目。 |
-| `{START}` | **必填**. 指定結果頁面的位移。 若要取得結果的第一頁，請將值設為 `start=0`. |
+| `{LIMIT}` | **必要**。 指定傳回的對應範例資料數目。 |
+| `{START}` | **必要**。 指定結果頁面的位移。 若要取得結果的第一頁，請將值設為`start=0`。 |
 
 **要求**
 
-以下請求將擷取您組織內最後兩個對應範例資料。
+以下請求將擷取貴組織內最後兩個對應範例資料。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
@@ -81,12 +81,12 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `sampleData` |  |
-| `sampleType` |  |
+| `sampleData` | |
+| `sampleType` | |
 
 ## 建立範例資料
 
-您可以透過向以下發出POST請求來建立範例資料： `/samples` 端點。
+您可以對`/samples`端點發出POST要求，以建立範例資料。
 
 ```http
 POST /samples
@@ -127,7 +127,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 ## 上傳檔案以建立範例資料
 
-您可以透過向以下網站發出POST請求，使用檔案建立範例資料： `/samples/upload` 端點。
+您可以透過向`/samples/upload`端點發出POST要求，使用檔案建立範例資料。
 
 **API格式**
 
@@ -166,7 +166,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 ## 查詢特定範例資料物件
 
-您可以在GET請求的路徑中提供其ID，以查詢範例資料的特定物件。 `/samples` 端點。
+GET您可以在`/samples`端點的範例要求路徑中提供其ID，以查詢範例資料的特定物件。
 
 **API格式**
 
@@ -176,7 +176,7 @@ GET /samples/{SAMPLE_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | 您要擷取的範例資料物件的ID。 |
+| `{SAMPLE_ID}` | 您要擷取之範例資料物件的ID。 |
 
 **要求**
 
@@ -207,7 +207,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 ## 更新範例資料
 
-您可以在PUT請求的路徑中提供特定範例資料物件的ID，以更新該物件。 `/samples` 端點。
+您可以在`/samples`端點的PUT要求路徑中提供特定範例資料物件的ID，以更新該物件。
 
 **API格式**
 
@@ -221,7 +221,7 @@ PUT /samples/{SAMPLE_ID}
 
 **要求**
 
-以下請求會更新指定的範例資料。 具體來說，它會把姓氏從「Smith」更新為「Lee」。
+以下請求會更新指定的範例資料。 具體來說，這會將姓氏從「Smith」更新為「Lee」。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \

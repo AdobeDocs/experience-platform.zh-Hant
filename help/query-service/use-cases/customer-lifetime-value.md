@@ -15,28 +15,28 @@ ht-degree: 0%
 
 下列資訊圖表說明產生高效能資料，以改善行銷活動的資料收集、操控、分析和執行的週期。
 
-![從觀察到分析再到行動的資料往返資訊圖。](../images/use-cases/infographic-use-case-cycle.png)
+![從觀察到分析再到動作的資料往返資訊圖。](../images/use-cases/infographic-use-case-cycle.png)
 
 此端對端使用案例示範如何擷取及修改資料訊號，以計算客戶期限值衍生屬性。 這些衍生的資料集可接著套用至您的Real-Time CDP設定檔資料，並可用於使用者定義的儀表板，以建立供深入分析使用的儀表板。 透過Data Distiller，您可以擴充Real-Time CDP見解資料模型，並使用CLV衍生的資料集和儀表板見解來建立新受眾，並將其啟用至所需的目的地。 然後，這些高效能受眾可用於支援您的下一個行銷活動。
 
 本指南旨在協助您透過測量推動CLV的關鍵接觸點上的資料訊號，以及在您的環境中實作類似的使用案例，來更好地瞭解您的客戶體驗。 下圖會摘要說明整個程式。
 
-![運用客戶期限值所需之廣泛步驟的資訊圖。](../images/use-cases/implementation-steps.png)
+![使用客戶期限值所需之廣泛步驟的資訊圖。](../images/use-cases/implementation-steps.png)
 
 ## 快速入門 {#getting-started}
 
 本指南需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [查詢服務](../home.md)：提供使用者介面和RESTful API，您可在其中使用SQL查詢來分析和擴充資料。
+* [查詢服務](../home.md)：提供使用者介面和RESTful API，您可以使用SQL查詢來分析和擴充資料。
 * [分段服務](../../segmentation/home.md)：可讓您從即時客戶設定檔資料產生對象。
 
 ## 先決條件
 
-本指南要求您具備 [資料Distiller](../data-distiller/overview.md) SKU屬於套裝產品的一部分。 如果您不確定您是否擁有此服務，請洽詢您的Adobe服務代表。
+本指南要求您擁有[資料Distiller](../data-distiller/overview.md) SKU，作為套件方案的一部分。 如果您不確定您是否擁有此服務，請洽詢您的Adobe服務代表。
 
 ## 建立衍生的資料集 {#create-derived-dataset}
 
-建立CLV的第一步是從使用者動作擷取的資料訊號建立衍生資料集。 此特定使用案例記錄於有關航空公司忠誠度方案的獨立檔案中。 請參閱指南以瞭解如何 [使用查詢服務建立十等分衍生的資料集以搭配您的設定檔資料使用](./deciles-use-case.md). 檔案中提供完整範例和說明，說明下列步驟：
+建立CLV的第一步是從使用者動作擷取的資料訊號建立衍生資料集。 此特定使用案例記錄於有關航空公司忠誠度方案的獨立檔案中。 請參閱指南以瞭解如何[使用查詢服務來建立以十等位元為基礎的衍生資料集，以搭配您的設定檔資料使用](./deciles-use-case.md)。 檔案中提供完整範例和說明，說明下列步驟：
 
 * 建立結構描述以允許十等分分組。
 * 使用查詢服務來建立十等分。
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 ## 擴充見解資料模型和排程更新 {#extend-data-model-and-set-refresh-schedule}
 
-接下來，您必須建立自訂資料模型或擴充現有的Adobe Real-Time CDP資料模型，以參與您的CLV報表深入分析。 請參閱檔案以瞭解如何 [透過Query Service建立報告見解資料模型，以與加速商店資料和使用者定義的儀表板搭配使用](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). 本教學課程涵蓋下列步驟：
+接下來，您必須建立自訂資料模型或擴充現有的Adobe Real-Time CDP資料模型，以參與您的CLV報表深入分析。 請參閱檔案，瞭解如何透過Query Service [建立報告見解資料模型，以搭配加速商店資料和使用者定義儀表板](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model)使用。 本教學課程涵蓋下列步驟：
 
 * 使用Data Distiller建立模型以報告深入分析。
 * 建立表格、關係及填入資料。
@@ -56,24 +56,24 @@ ht-degree: 0%
 * 建立維度表格以擴充您的報表見解模型。
 * 查詢您的擴充式加速存放區報告見解資料模型
 
-請參閱Real-time Customer Data Platform Insights資料模型檔案以瞭解如何 [自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+請參閱Real-time Customer Data Platform前瞻分析資料模型檔案，瞭解如何[自訂您的SQL查詢範本，為您的行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報告](../../dashboards/data-models/cdp-insights-data-model-b2c.md)。
 
-請務必設定排程，定期重新整理您的自訂資料模型。 這可確保資料會視需要傳回作為您擷取管道的一部分，並填入您的使用者定義儀表板。 請參閱 [排程查詢指南](../ui/query-schedules.md#create-schedule) 以瞭解如何設定您的排程。
+請務必設定排程，定期重新整理您的自訂資料模型。 這可確保資料會視需要傳回作為您擷取管道的一部分，並填入您的使用者定義儀表板。 請參閱[排程查詢指南](../ui/query-schedules.md#create-schedule)以瞭解如何設定排程。
 
 ## 建立儀表板以擷取深入分析 {#build-a-custom-dashboard}
 
-現在您已建立自訂資料模型，您已準備好使用自訂查詢和使用者定義儀表板將您的資料視覺化。 如需如何操作的完整指引，請參閱使用者定義控制面板概觀 [建立自訂儀表板](../../dashboards/user-defined-dashboards.md). UI指南包括下列專案的詳細資訊：
+現在您已建立自訂資料模型，您已準備好使用自訂查詢和使用者定義儀表板將您的資料視覺化。 如需如何[建立自訂儀表板](../../dashboards/user-defined-dashboards.md)的完整指引，請參閱使用者定義儀表板概觀。 UI指南包括下列專案的詳細資訊：
 
 * 如何建立Widget。
 * 如何使用Widget撰寫器。
 
 以下提供使用十等分儲存貯體的自訂CLV Widget範例。
 
-![以十等分為基礎的自訂CLTV Widget集合。](../images/use-cases/deciles-user-defined-dashboard.png)
+![自訂十等分的CLTV Widget集合。](../images/use-cases/deciles-user-defined-dashboard.png)
 
 ## 建立並啟用高效能對象 {#create-and-activate-audiences}
 
-下一步是建立區段定義，並從您的即時客戶設定檔資料產生對象。 請參閱區段產生器UI指南以瞭解如何 [在Platform中建立和啟用對象](../../segmentation/ui/segment-builder.md). 本指南提供幾個小節，說明如何：
+下一步是建立區段定義，並從您的即時客戶設定檔資料產生對象。 請參閱區段產生器UI指南，瞭解如何[在Platform](../../segmentation/ui/segment-builder.md)中建立及啟用對象。 本指南提供幾個小節，說明如何：
 
 * 使用屬性、事件和現有對象的組合作為建置區塊來建立區段定義。
 * 使用規則產生器畫布和容器來控制分段規則的執行順序。
@@ -81,21 +81,21 @@ ht-degree: 0%
 * 啟用已排程區段的所有區段定義。
 * 啟用串流區段的指定區段定義。
 
-另外，也有 [區段產生器影片教學課程](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) 以取得詳細資訊。
+或者，您也可以參閱[區段產生器教學影片](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html)以取得詳細資訊。
 
 ## 為電子郵件行銷活動啟用對象 {#activate-audience-for-campaign}
 
 當您建立對象後，您就可以將其啟用至目的地。 Platform支援各種電子郵件服務提供者(ESP)，可讓您管理電子郵件行銷活動，例如傳送促銷電子郵件行銷活動。
 
-檢查 [電子郵件行銷目的地概觀](../../destinations/catalog/email-marketing/overview.md#connect-destination) ，以取得您要匯出資料的支援目的地清單(例如 [oracleEloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) 頁面)。
+檢查[電子郵件行銷目的地概觀](../../destinations/catalog/email-marketing/overview.md#connect-destination)，以取得您要匯出資料的支援目的地清單(例如[OracleEloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)頁面)。
 
 ## 檢視從行銷活動傳回的分析資料 {#post-campaign-data-analysis}
 
-來源中的資料現在可以是 [逐步處理](../key-concepts/incremental-load.md) 在加速的資料存放區中，作為排程資料模型重新整理的一部分。 客戶的任何回應事件都可在發生時或批次中擷取到Adobe Experience Platform。 您的資料模型可能會重新整理一次，或一天重新整理多次，視您的設定或來源聯結器而定。 請參閱 [批次擷取API總覽](../../ingestion/batch-ingestion/api-overview.md) 或 [串流擷取概觀](../../ingestion/streaming-ingestion/overview.md) 以取得詳細資訊。
+來源資料現在可以進行[逐步處理](../key-concepts/incremental-load.md)，做為加速資料存放區中資料模型排程重新整理的一部分。 客戶的任何回應事件都可在發生時或批次中擷取到Adobe Experience Platform。 您的資料模型可能會重新整理一次，或一天重新整理多次，視您的設定或來源聯結器而定。 如需詳細資訊，請參閱[批次擷取API總覽](../../ingestion/batch-ingestion/api-overview.md)或[串流擷取總覽](../../ingestion/streaming-ingestion/overview.md)。
 
 更新資料模型後，您的自訂儀表板Widget就會提供有意義的訊號，讓您測量並視覺化客戶期限值。
 
-![自訂Widget，根據對象和電子郵件促銷活動顯示已開啟的電子郵件數量。](../images/use-cases/post-activation-and-email-response-kpis.png)
+![自訂Widget，根據對象和電子郵件行銷活動顯示開啟的電子郵件數量。](../images/use-cases/post-activation-and-email-response-kpis.png)
 
 為您的自訂分析提供各種視覺效果選項。
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 這些見解進而可協助您為後續行銷活動制定業務策略。
 
-![四個自訂Widget的集合，詳細說明電子郵件促銷活動的結果。](../images/use-cases/example-widgets.png)
+![四個自訂Widget的集合，詳細說明電子郵件行銷活動的結果。](../images/use-cases/example-widgets.png)
 
 ## 後續步驟
 

@@ -24,12 +24,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
-| `{FILTER}` | 用來篩選回應中傳回結果的查詢引數。 多個引數會以&amp;符號(`&`)。 請參閱以下指南： [篩選目錄資料](filter-data.md) 以取得詳細資訊。 |
+| `{OBJECT_TYPE}` | 要列出的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{FILTER}` | 用來篩選回應中傳回結果的查詢引數。 多個引數以&amp;符號(`&`)分隔。 如需詳細資訊，請參閱[篩選目錄資料](filter-data.md)的指南。 |
 
 **要求**
 
-以下範例請求會擷取資料集清單，並包含 `limit` 篩選條件將回應減少為五個結果，以及 `properties` 此篩選器會限制每個資料集所顯示的屬性。
+下列範例要求會擷取資料集清單，`limit`篩選會將回應減少為五個結果，以及`properties`篩選會限制每個資料集所顯示的屬性。
 
 ```shell
 curl -X GET \
@@ -42,11 +42,11 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回以下清單 [!DNL Catalog] 鍵值配對形式的物件，依請求中提供的查詢引數篩選。 對於每個機碼值組，機碼代表 [!DNL Catalog] 有問題的物件，然後可用於對的其他呼叫 [檢視該特定物件](look-up-object.md) 以取得更多詳細資料。
+成功的回應會以索引鍵值配對的形式傳回[!DNL Catalog]物件清單，並根據要求中提供的查詢引數加以篩選。 對於每個索引鍵/值組，索引鍵代表相關[!DNL Catalog]物件的唯一識別碼，然後可用於對[檢視特定物件](look-up-object.md)的其他呼叫以取得詳細資訊。
 
 >[!NOTE]
 >
->如果傳回的物件不包含 `properties` 查詢，回應只會傳回所請求的屬性，如所示 ***`Sample Dataset 3`*** 和 ***`Sample Dataset 4`*** 底下。
+>如果傳回的物件不包含`properties`查詢所指示的一或多個要求屬性，則回應只會傳回其包含的要求屬性，如下方&#x200B;***`Sample Dataset 3`***&#x200B;和&#x200B;***`Sample Dataset 4`***&#x200B;所示。
 
 ```json
 {

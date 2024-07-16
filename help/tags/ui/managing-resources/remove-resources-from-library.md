@@ -5,7 +5,7 @@ exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 89%
+ht-degree: 80%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 當您不再需要資源在建置內發揮作用時，您必須從包含該資源的程式庫中將其移除，然後建立新的組建。
 
@@ -47,7 +47,7 @@ ht-degree: 89%
 
 1. 停用資源。
    1. 從清單檢視中選取資源。
-   1. 選取 **[!UICONTROL 停用]**.
+   1. 選取&#x200B;**[!UICONTROL 停用]**。
 1. 建立新的開發程式庫。
 1. 新增 `latest` 版本的已停用資源。
 1. 儲存並建置。

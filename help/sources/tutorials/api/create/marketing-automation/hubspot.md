@@ -1,55 +1,55 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；Hubspot；Hubspot
+keywords: Experience Platform；首頁；熱門主題；hubspot；Hubspot
 solution: Experience Platform
 title: 使用Flow Service API建立HubSpot基本連線
 type: Tutorial
-description: 瞭解如何使用Flow Service API將Adobe Experience Platform連線至HubSpot。
+description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至HubSpot。
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 1%
+source-wordcount: '479'
+ht-degree: 4%
 
 ---
 
-# 建立 [!DNL HubSpot] 基礎連線使用 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API建立[!DNL HubSpot]基本連線
 
-基礎連線代表來源和Adobe Experience Platform之間已驗證的連線。
+基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL HubSpot] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教學課程將逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL HubSpot]建立基礎連線的步驟。
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-以下小節提供成功連線所需瞭解的其他資訊 [!DNL HubSpot] 使用 [!DNL Flow Service] API。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL HubSpot]。
 
 ### 收集必要的認證
 
-為了 [!DNL Flow Service] 以連線 [!DNL HubSpot]，您必須提供下列連線屬性：
+若要讓[!DNL Flow Service]與[!DNL HubSpot]連線，您必須提供下列連線屬性：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `clientId` | 與您的關聯的使用者端ID [!DNL HubSpot] 應用程式。 |
-| `clientSecret` | 與您的關聯的使用者端密碼 [!DNL HubSpot] 應用程式。 |
+| `clientId` | 與您的[!DNL HubSpot]應用程式關聯的使用者端識別碼。 |
+| `clientSecret` | 與您的[!DNL HubSpot]應用程式關聯的使用者端密碼。 |
 | `accessToken` | 最初驗證您的OAuth整合時獲得的存取權杖。 |
-| `refreshToken` | 初次驗證您的OAuth整合時獲得的重新整理權杖。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL HubSpot] 為： `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `refreshToken` | 重新整理權杖是在最初驗證您的OAuth整合時取得。 |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL HubSpot]的連線規格識別碼為： `cc6a4487-9e91-433e-a3a3-9cf6626c1806`。 |
 
-如需入門的詳細資訊，請參閱此 [HubSpot檔案](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
+如需開始使用的詳細資訊，請參閱此[HubSpot檔案](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
 
 ## 建立基礎連線
 
-基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基本連線ID可讓您瀏覽和瀏覽來源內的檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
+基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-POST若要建立基本連線ID，請向 `/connections` 端點，同時提供 [!DNL HubSpot] 要求引數中的驗證認證。
+若要建立基底連線ID，請在提供[!DNL HubSpot]驗證認證作為要求引數的一部分時，向`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -59,7 +59,7 @@ POST /connections
 
 **要求**
 
-下列要求會建立 [!DNL HubSpot]：
+下列要求會建立[!DNL HubSpot]的基礎連線：
 
 ```shell
 curl -X POST \
@@ -90,15 +90,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.clientId` | 與您的關聯的使用者端ID [!DNL HubSpot] 應用程式。 |
-| `auth.params.clientSecret` | 與您的關聯的使用者端密碼 [!DNL HubSpot] 應用程式。 |
+| `auth.params.clientId` | 與您的[!DNL HubSpot]應用程式關聯的使用者端識別碼。 |
+| `auth.params.clientSecret` | 與您的[!DNL HubSpot]應用程式關聯的使用者端密碼。 |
 | `auth.params.accessToken` | 最初驗證您的OAuth整合時獲得的存取權杖。 |
-| `auth.params.refreshToken` | 初次驗證您的OAuth整合時獲得的重新整理權杖。 |
-| `connectionSpec.id` | 此 [!DNL HubSpot] 連線規格ID： `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `auth.params.refreshToken` | 重新整理權杖是在最初驗證您的OAuth整合時取得。 |
+| `connectionSpec.id` | [!DNL HubSpot]連線規格識別碼： `cc6a4487-9e91-433e-a3a3-9cf6626c1806`。 |
 
 **回應**
 
-成功回應會傳回新建立的連線，包括其唯一連線識別碼(`id`)。 在下一個教學課程中探索您的資料時，需要此ID。
+成功的回應會傳回新建立的連線，包括其唯一的連線識別碼(`id`)。 在下個教學課程中探索您的資料時，需要此ID。
 
 ```json
 {
@@ -109,7 +109,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立 [!DNL HubSpot] 基礎連線使用 [!DNL Flow Service] API。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL HubSpot]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
-* [使用探索資料表格的結構和內容 [!DNL Flow Service] API](../../explore/tabular.md)
-* [建立資料流，以使用將行銷自動化資料帶入Platform [!DNL Flow Service] API](../../collect/marketing-automation.md)
+* [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
+* [使用 [!DNL Flow Service] API建立資料流以將行銷自動化資料帶入Platform](../../collect/marketing-automation.md)

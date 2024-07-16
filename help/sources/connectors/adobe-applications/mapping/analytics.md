@@ -1,13 +1,13 @@
 ---
 keywords: Analytics對應欄位；analytics對應
 solution: Experience Platform
-title: Adobe Analytics來源聯結器的對應欄位
-description: 使用Adobe Analytics來源聯結器將Analytics欄位對應到XDM欄位。
+title: Adobe Analytics Source聯結器的對應欄位
+description: 使用Adobe Analytics Source Connector將Analytics欄位對應到XDM欄位。
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
 source-wordcount: '2388'
-ht-degree: 14%
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 
 選取欄位會直接從Adobe Analytics對應至Experience Data Model (XDM)。
 
-| Analytics 欄位 | XDM欄位 | XDM型別 | 說明 |
+| 分析欄位 | XDM欄位 | XDM型別 | 說明 |
 | --------------- | --------- | -------- | ---------- |
 | `m_evar1`<br/>`[...]`<br/>`m_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | 字串 | 自訂Analytics eVar。 每個組織可以使用eVar的方式不同。 |
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | 字串 | 自訂Analytics prop。 每個組織可以使用Prop的方式不同。 |
@@ -40,21 +40,21 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `m_page_url` | `web.webPageDetails.URL` | 字串 | 頁面點選的URL。 |
 | `m_pagename` | `web.webPageDetails.pageViews.value` | 字串 | 具有頁面名稱的點選等於1。 這類似於Adobe Analytics頁面檢視量度。 |
 | `m_referrer` | `web.webReferrer.URL` | 字串 | 上一頁的頁面URL。 |
-| `m_search_page_num` | `search.pageDepth` | 整數 | 供所有搜尋頁面排名維度使用。 指出在用戶點進您的網站之前，網站顯示的搜尋結果頁面。 |
+| `m_search_page_num` | `search.pageDepth` | 整數 | 供所有搜尋頁面排名維度使用。 指出在使用者點進您的網站之前，您的網站出現在搜尋結果的哪個頁面。 |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | 字串 | 狀態變數。 |
 | `m_user_server` | `web.webPageDetails.server` | 字串 | 用於伺服器維度的變數。 |
 | `m_zip` | `_experience.analytics.customDimensions.`<br/>`postalCode` | 字串 | 用來填入郵遞區號維度的變數。 |
 | `accept_language` | `environment.browserDetails.acceptLanguage` | 字串 | 列出所有接受的語言，如Accept-Language HTTP標頭所示。 |
-| `homepage` | `web.webPageDetails.isHomePage` | 布林值 | 已不再使用。指出目前的URL是否為瀏覽器的首頁。 |
+| `homepage` | `web.webPageDetails.isHomePage` | 布林值 | 已不再使用。 指出目前的URL是否為瀏覽器的首頁。 |
 | `ipv6` | `environment.ipV6` | 字串 |
 | `j_jscript` | `environment.browserDetails.javaScriptVersion` | 字串 | 瀏覽器支援的JavaScript版本。 |
 | `user_agent` | `environment.browserDetails.userAgent` | 字串 | 在HTTP標頭中傳送的使用者代理字串。 |
-| `mobileappid` | `application.name` | 字串 | 行動應用程式ID，以下列格式儲存： `[AppName][BundleVersion]`. |
+| `mobileappid` | `application.name` | 字串 | 行動應用程式ID，以下列格式儲存： `[AppName][BundleVersion]`。 |
 | `mobiledevice` | `device.model` | 字串 | 行動裝置的名稱。 在iOS上，這會儲存為逗號分隔的2位數字串。 第一個數字代表裝置代別，第二個數字代表裝置系列。 |
 | `pointofinterest` | `placeContext.POIinteraction.POIDetail.`<br/>`name` | 字串 | 由行動服務使用。 代表地標。 |
 | `pointofinterestdistance` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.distanceToCenter` | 數字 | 由行動服務使用。 代表興趣點距離。 |
-| `mobileplaceaccuracy` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.deviceGeoAccuracy` | 數字 | 從內容資料變數 a.loc.acc 收集。指出 GPS 在採集時的準確度 (以公尺為單位)。 |
-| `mobileplacecategory` | `placeContext.POIinteraction.POIDetail.`<br/>`category` | 字串 | 從內容資料變數 a.loc.category 收集。說明特定位置的類別。 |
+| `mobileplaceaccuracy` | `placeContext.POIinteraction.POIDetail.`<br/>`geoInteractionDetails.deviceGeoAccuracy` | 數字 | 從內容資料變數a.loc.acc收集。 指出GPS在採集時的準確度（以公尺為單位）。 |
+| `mobileplacecategory` | `placeContext.POIinteraction.POIDetail.`<br/>`category` | 字串 | 從內容資料變數a.loc.category收集。 說明特定位置的類別。 |
 | `mobileplaceid` | `placeContext.POIinteraction.POIDetail.`<br/>`POIID` | 字串 | 從內容資料變數a.loc.id收集。 指定興趣點的識別碼。 |
 | `video` | `media.mediaTimed.primaryAssetReference.`<br/>`_id` | 字串 | 視訊的名稱。 |
 | `videoad` | `advertising.adAssetReference._id` | 字串 | 廣告資產的識別碼。 |
@@ -100,11 +100,11 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `videototaltime` | `media.mediaTimed.totalTimePlayed` | 物件 | <!-- MISSING --> | {id （字串），值（數字）} |
 | `videoqoetimetostart` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.timeToStart` | 物件 | 視訊品質開始時間。 | {id （字串），值（數字）} |
 | `videoqoedropbeforestart` | `media.mediaTimed.dropBeforeStarts` | 物件 | <!-- MISSING --> | {id （字串），值（數字）} |
-| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | 物件 | 影片品質緩衝計數 | {id （字串），值（數字）} |
-| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | 物件 | 影片品質緩衝時間 | {id （字串），值（數字）} |
-| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | 物件 | 影片品質變更計數 | {id （字串），值（數字）} |
-| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | 物件 | 影片品質平均位元速率 | {id （字串），值（數字）} |
-| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | 物件 | 影片品質錯誤計數 | {id （字串），值（數字）} |
+| `videoqoebuffercount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.buffers` | 物件 | 視訊品質緩衝計數 | {id （字串），值（數字）} |
+| `videoqoebuffertime` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bufferTime` | 物件 | 視訊品質緩衝時間 | {id （字串），值（數字）} |
+| `videoqoebitratechangecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateChanges` | 物件 | 視訊品質變更計數 | {id （字串），值（數字）} |
+| `videoqoebitrateaverage` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.bitrateAverage` | 物件 | 視訊品質平均位元速率 | {id （字串），值（數字）} |
+| `videoqoeerrorcount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.errors` | 物件 | 視訊品質錯誤計數 | {id （字串），值（數字）} |
 | `videoqoedroppedframecount` | `media.mediaTimed.primaryAssetViewDetails.`<br/>`qoe.droppedFrames` | 物件 | <!-- MISSING --> | {id （字串），值（數字）} |
 | `videoprogress10` | `media.mediaTimed.progress10` | 物件 | <!-- MISSING --> | {id （字串），值（數字）} |
 | `videoprogress25` | `media.mediaTimed.progress25` | 物件 | <!-- MISSING --> | {id （字串），值（數字）} |
@@ -120,9 +120,9 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 
 ## 分割對應欄位
 
-這些欄位有單一來源，但對應至 **多個** xdm位置。
+這些欄位有單一來源，但對應至&#x200B;**多個** XDM位置。
 
-| Analytics 欄位 | XDM欄位 | XDM型別 | 說明 |
+| 分析欄位 | XDM欄位 | XDM型別 | 說明 |
 | --------------- | --------- | -------- | ---------- |
 | `s_resolution` | `device.screenWidth`，<br/>`device.screenHeight` | 整數 | 表示熒幕解析度的數值ID。 |
 | `mobileosversion` | `environment.operatingSystem`，<br/>`environment.operatingSystemVersion` | 字串 | 行動作業系統版本。 |
@@ -134,7 +134,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 
 來自ADC的選取欄位必須轉換，除了需要從Adobe Analytics直接複製以外的邏輯才能在XDM中產生。
 
-| Analytics 欄位 | XDM欄位 | XDM型別 | 說明 |
+| 分析欄位 | XDM欄位 | XDM型別 | 說明 |
 | --------------- | --------- | -------- | ----------- |
 | `m_prop1`<br/>`[...]`<br/>`m_prop75` | `_experience.analytics.customDimensions`<br/>`.listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | 物件 | 自訂Analytics prop，設定為清單prop。 它包含分隔的值清單。 | {} |
 | `m_hier1`<br/>`[...]`<br/>`m_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | 物件 | 由階層變數使用。 它包含分隔的值清單。 | {values (array)， delimiter (string)} |
@@ -155,7 +155,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `m_pagename_no_url` | `web.webPageDetails.name` | 數字 | 頁面名稱（若有設定）。 若未指定頁面，此值會留空。 |
 | `m_paid_search` | `search.isPaid` | 布林值 | 如果點選符合付費搜尋偵測，則會設定此旗標。 |
 | `m_product_list` | `productListItems[].items` | 陣列 | 產品清單，透過產品變數傳入。 | {SKU （字串），數量（整數），價格總計（數字）} |
-| `m_ref_type` | `web.webReferrer.type` | 字串 | 此數值 ID 表示點擊的反向連結類型。<br/>`1`：網站內<br/>`2`：其他網站<br/>`3`：搜尋引擎<br/>`4`：硬碟<br/>`5`：USENET<br/>`6`：分類/建立書籤（無反向連結）<br/>`7`：電子郵件<br/>`8`：無JavaScript<br/>`9`：社交網路 |
+| `m_ref_type` | `web.webReferrer.type` | 字串 | 表示點選的反向連結型別的數值ID。<br/>`1`：網站內<br/>`2`：其他網站<br/>`3`：搜尋引擎<br/>`4`：硬碟<br/>`5`： USENET<br/>`6`：已輸入/建立書籤（無反向連結）<br/>`7`：電子郵件<br/>`8`：無JavaScript<br/>`9`：社交網路 |
 | `m_search_engine` | `search.searchEngine` | 字串 | 表示將訪客反向連結至您網站的搜尋引擎數值ID。 |
 | `post_currency` | `commerce.order.currencyCode` | 字串 | 交易期間使用的貨幣代碼。 |
 | `post_cust_hit_time_gmt` | `timestamp` | 字串 | 這僅用於啟用時間戳記的資料集。 這是根據UNIX®時間，隨點選傳送的時間戳記。 |
@@ -164,8 +164,8 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `post_cust_visid` | `endUserIDs._experience.aacustomid.namespace.code` | 字串 | 客戶訪客ID。 |
 | `post_visid_high` + `visid_low` | `identityMap` | 物件 | 造訪的唯一識別碼。 |
 | `post_visid_high` + `visid_low` | `endUserIDs._experience.aaid.id` | 字串 | 造訪的唯一識別碼。 |
-| `post_visid_high` | `endUserIDs._experience.aaid.primary` | 布林值 | 搭配使用 `visid_low` 以唯一識別造訪。 |
-| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | 字串 | 搭配使用 `visid_low` 以唯一識別造訪。 |
+| `post_visid_high` | `endUserIDs._experience.aaid.primary` | 布林值 | 與`visid_low`搭配使用以唯一識別造訪。 |
+| `post_visid_high` | `endUserIDs._experience.aaid.namespace.code` | 字串 | 與`visid_low`搭配使用以唯一識別造訪。 |
 | `post_visid_low` | `identityMap` | 物件 | 與visid_high搭配使用，以專門識別造訪。 |
 | `hit_time_gmt` | `receivedTimestamp` | 字串 | 點選的時間戳記，根據UNIX®時間。 |
 | `hitid_high` + `hitid_low` | `_id` | 字串 | 用於識別點選的唯一識別碼。 |
@@ -188,9 +188,9 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 
 在Adobe使用處理規則、VISTA規則和查詢表格調整值後，選取欄位（稱為「貼文值」）會包含資料。 大部分的貼文值都有預先處理的對應專案。 貴組織可決定您要使用預處理欄位、後處理欄位或兩者。
 
-若要進一步瞭解使用查詢服務執行這些轉換，請參閱 [Adobe定義的函式](/help/query-service/sql/adobe-defined-functions.md) （在查詢服務使用手冊中）。
+若要進一步瞭解如何使用查詢服務執行這些轉換，請參閱查詢服務使用手冊中的[Adobe定義函式](/help/query-service/sql/adobe-defined-functions.md)。
 
-| Analytics 欄位 | XDM欄位 | XDM型別 | 說明 |
+| 分析欄位 | XDM欄位 | XDM型別 | 說明 |
 | --------------- | --------- | -------- | ---------- |
 | `post_evar1`<br/>`[...]`<br/>`post_evar250` | `_experience.analytics.customDimensions.`<br/>`eVars.eVar1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`eVars.eVar250` | 字串 | 自訂Analytics eVar。 每個組織可以使用eVar的方式不同。 |
 | `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`props.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`props.prop75` | 字串 | 自訂Analytics prop。 每個組織可以使用Prop的方式不同。 |
@@ -226,7 +226,7 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `post_prop1`<br/>`[...]`<br/>`post_prop75` | `_experience.analytics.customDimensions.`<br/>`listprops.prop1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`listprops.prop75` | 物件 | 自訂Analytics prop，設定為清單prop。 它包含分隔的值清單。 |
 | `post_hier1`<br/>`[...]`<br/>`post_hier5` | `_experience.analytics.customDimensions.`<br/>`hierarchies.hier1`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`hierarchies.hier5` | 物件 | 供階層變數使用，且包含分隔的值清單。 | {values (array)， delimiter (string)} |
 | `post_mvvar1`<br/>`[...]`<br/>`post_mvvar3` | `_experience.analytics.customDimensions.`<br/>`lists.list1.list[]`<br/>`[...]`<br/>`_experience.analytics.customDimensions.`<br/>`lists.list3.list[]` | 陣列 | 變數值的清單。 包含分隔的自訂值清單（視實作而定）。 | {value (string)， key (string)} |
-| `post_cookies` | `environment.browserDetails.cookiesEnabled` | 布林值 | 「Cookie 支援」維度所使用的變數。 |
+| `post_cookies` | `environment.browserDetails.cookiesEnabled` | 布林值 | 用於「Cookie支援」維度的變數。 |
 | `post_event_list` | `commerce.purchases`，<br/>`commerce.productViews`，<br/>`commerce.productListOpens`，<br/>`commerce.checkouts`，<br/>`commerce.productListAdds`，<br/>`commerce.productListRemovals`，<br/>`commerce.productListViews` | 物件 | 點選時觸發的標準商務事件。 | {id （字串），值（數字）} |
 | `post_event_list` | `_experience.analytics.event1to100.event1`<br/>`[...]`<br/>`_experience.analytics.event901to1000.event1000` | 物件 | 點選時觸發的自訂事件。 | {id （物件），值（物件）} |
 | `post_java_enabled` | `environment.browserDetails.javaEnabled` | 布林值 | 此旗標可指出是否已啟用Java™。 |
@@ -246,11 +246,11 @@ Adobe Experience Platform可讓您透過Analytics來源擷取Adobe Analytics資�
 | `color` | `device.colorDepth` | 整數 | 色彩深度ID，根據c_color欄的值。 |
 | `first_hit_ref_type` | `_experience.analytics.endUser.`<br/>`firstWeb.webReferrer.type` | 字串 | 數值ID，代表訪客第一個反向連結的反向連結型別。 |
 | `first_hit_time_gmt` | `_experience.analytics.endUser.`<br/>`firstTimestamp` | 整數 | 訪客第一次點選的時間戳記，格式為UNIX®時間。 |
-| `geo_country` | `placeContext.geo.countryCode` | 字串 | 根據 IP 的點擊來源國家/地區縮寫。 |
+| `geo_country` | `placeContext.geo.countryCode` | 字串 | 根據IP的點選來源國家/地區縮寫。 |
 | `geo_latitude` | `placeContext.geo._schema.latitude` | 數字 | <!-- MISSING --> |
 | `geo_longitude` | `placeContext.geo._schema.longitude` | 數字 | <!-- MISSING --> |
 | `paid_search` | `search.isPaid` | 布林值 | 如果點選符合付費搜尋偵測，則會設定此旗標。 |
-| `ref_type` | `web.webReferrer.type` | 字串 | 此數值 ID 表示點擊的反向連結類型。 |
+| `ref_type` | `web.webReferrer.type` | 字串 | 表示點選的反向連結型別的數值ID。 |
 | `visit_paid_search` | `_experience.analytics.session.`<br/>`search.isPaid` | 布林值 | 指出造訪的首次點選是否來自付費搜尋點選的旗標（1=付費，0=未付費）。 |
 | `visit_ref_type` | `_experience.analytics.session.`<br/>`web.webReferrer.type` | 字串 | 表示造訪的第一個反向連結的反向連結型別數值ID。 |
 | `visit_search_engine` | `_experience.analytics.session.`<br/>`search.searchEngine` | 字串 | 造訪的第一個搜尋引擎數值ID。 |

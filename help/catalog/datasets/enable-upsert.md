@@ -17,34 +17,34 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->本教學課程中說明的工作流程僅適用於批次擷取。 如需串流擷取更新插入，請參閱上的指南 [使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」](../../data-prep/upserts.md).
+>本教學課程中說明的工作流程僅適用於批次擷取。 如需串流擷取更新插入，請參閱[使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」的指南](../../data-prep/upserts.md)。
 
 ## 快速入門
 
-若要參閱本教學課程，請先實際瞭解管理已啟用設定檔的資料集所牽涉到的多項Adobe Experience Platform服務。 開始進行本教學課程之前，請先檢閱相關檔案 [!DNL Platform] 服務：
+若要參閱本教學課程，請先實際瞭解管理已啟用設定檔的資料集所牽涉到的多項Adobe Experience Platform服務。 在開始本教學課程之前，請先檢閱這些相關[!DNL Platform]服務的檔案：
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
-- [[!DNL Catalog Service]](../../catalog/home.md)：此RESTful API可讓您建立資料集並加以設定，用於 [!DNL Real-Time Customer Profile] 和 [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
+- [[!DNL Catalog Service]](../../catalog/home.md)： RESTful API可讓您建立資料集並為[!DNL Real-Time Customer Profile]和[!DNL Identity Service]設定資料集。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
 - [批次擷取](../../ingestion/batch-ingestion/overview.md)：批次擷取API可讓您將資料以批次檔案的形式擷取到Experience Platform中。
 
 以下章節提供您需瞭解的其他資訊，才能成功呼叫Platform API。
 
 ### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值
 
-為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-包含裝載(POST、PUT、PATCH)的所有請求都需要額外的 `Content-Type` 標頭。 必要時，此標頭的正確值會顯示在範例要求中。
+所有包含裝載(POST、PUT、PATCH)的要求都需要額外`Content-Type`標題。 必要時，此標頭的正確值會顯示在範例要求中。
 
-中的所有資源 [!DNL Experience Platform] 會隔離至特定的虛擬沙箱。 所有要求至 [!DNL Platform] API需要 `x-sandbox-name` 標頭，指定執行作業的沙箱名稱。 如需中沙箱的詳細資訊 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要`x-sandbox-name`標頭，以指定將在其中執行操作的沙箱名稱。 如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 ## 建立已啟用設定檔更新的資料集
 
@@ -52,9 +52,9 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->若要建立新的已啟用設定檔的資料集，您必須知道已為設定檔啟用的現有XDM結構描述的ID。 如需如何查詢或建立已啟用設定檔的結構描述的詳細資訊，請參閱以下教學課程： [使用結構描述登入API建立結構描述](../../xdm/tutorials/create-schema-api.md).
+>若要建立新的已啟用設定檔的資料集，您必須知道已為設定檔啟用的現有XDM結構描述的ID。 如需如何查閱或建立啟用設定檔的結構描述的相關資訊，請參閱有關使用結構描述登入API建立結構描述[的教學課程](../../xdm/tutorials/create-schema-api.md)。
 
-若要建立已啟用設定檔和更新的資料集，請使用POST請求 `/dataSets` 端點。
+若要建立已啟用設定檔和更新的資料集，請使用對`/dataSets`端點的POST請求。
 
 **API格式**
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **要求**
 
-藉由包含兩者 `unifiedIdentity` 和 `unifiedProfile` 在 `tags` 在請求內文中，將會啟用資料集 [!DNL Profile] 建立時。 在 `unifiedProfile` 陣列，新增 `isUpsert:true` 將新增資料集支援更新的功能。
+藉由在要求內文中的`tags`下同時包含`unifiedIdentity`和`unifiedProfile`，資料集將在建立時啟用[!DNL Profile]。 在`unifiedProfile`陣列中，新增`isUpsert:true`將增加資料集支援更新的能力。
 
 ```shell
 curl -X POST \
@@ -95,12 +95,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `schemaRef.id` | 的ID [!DNL Profile]資料集將依據的已啟用結構描述。 |
-| `{TENANT_ID}` | 內的名稱空間 [!DNL Schema Registry] 包含屬於您組織的資源。 請參閱 [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) 的區段 [!DNL Schema Registry] 開發人員指南，以取得詳細資訊。 |
+| `schemaRef.id` | 資料集將依據已啟用[!DNL Profile]的結構描述識別碼。 |
+| `{TENANT_ID}` | [!DNL Schema Registry]內的名稱空間，其中包含屬於您組織的資源。 如需詳細資訊，請參閱[!DNL Schema Registry]開發人員指南的[TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id)一節。 |
 
 **回應**
 
-成功的回應會顯示一個陣列，其中包含以形式建立之資料集的ID `"@/dataSets/{DATASET_ID}"`.
+成功的回應會顯示一個陣列，其中包含`"@/dataSets/{DATASET_ID}"`形式的新建立資料集識別碼。
 
 ```json
 [
@@ -114,11 +114,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->為了設定要更新插入的現有設定檔啟用的資料集，您必須先停用設定檔的資料集，然後隨著 `isUpsert` 標籤之間。 如果現有的資料集未針對設定檔啟用，您可以直接進行的步驟 [為設定檔和更新插入啟用資料集](#enable-the-dataset). 如果您不確定，下列步驟將說明如何檢查資料集是否已啟用。
+>為了設定要更新插入的現有設定檔啟用的資料集，您必須先停用設定檔的資料集，然後隨著`isUpsert`標籤重新啟用它。 如果沒有為設定檔啟用現有資料集，您可以直接進入[為設定檔啟用資料集並更新插入](#enable-the-dataset)的步驟。 如果您不確定，下列步驟將說明如何檢查資料集是否已啟用。
 
 ### 檢查資料集是否已針對設定檔啟用
 
-使用 [!DNL Catalog] API時，您可以檢查現有資料集以判斷是否已啟用它以用於中 [!DNL Real-Time Customer Profile]. 以下呼叫會依ID擷取資料集的詳細資料。
+您可以使用[!DNL Catalog] API檢查現有的資料集，以判斷是否已啟用它以在[!DNL Real-Time Customer Profile]中使用。 以下呼叫會依ID擷取資料集的詳細資料。
 
 **API格式**
 
@@ -175,11 +175,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27
 }
 ```
 
-在 `tags` 屬性，您會看到 `unifiedProfile` 與值同時存在 `enabled:true`. 因此， [!DNL Real-Time Customer Profile] 已針對此資料集啟用。
+在`tags`屬性下，您可以看到`unifiedProfile`以值`enabled:true`出現。 因此，已針對此資料集啟用[!DNL Real-Time Customer Profile]。
 
 ### 停用設定檔的資料集
 
-若要設定已啟用設定檔的資料集以進行更新，您必須先停用 `unifiedProfile` 和 `unifiedIdentity` 標籤，並連同以下重新啟用它們 `isUpsert` 標籤之間。 這是使用兩個PATCH要求來完成，一次為停用，另一次為重新啟用。
+若要設定已啟用設定檔的資料集以進行更新，您必須先停用`unifiedProfile`和`unifiedIdentity`標籤，然後隨著`isUpsert`標籤重新啟用它們。 這是使用兩個PATCH要求來完成，一次為停用，另一次為重新啟用。
 
 >[!WARNING]
 >
@@ -197,7 +197,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **要求**
 
-第一個PATCH請求內文包含 `path` 至 `unifiedProfile` 和 `path` 至 `unifiedIdentity`，設定 `value` 至 `enabled:false` 以停用標籤。
+第一個PATCH要求內文包含`path`到`unifiedProfile`以及`path`到`unifiedIdentity`，為停用標籤將這兩個路徑的`value`設定為`enabled:false`。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -222,7 +222,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **回應**
 
-成功的PATCH要求會傳回HTTP狀態200 （確定）以及包含已更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 此 `unifiedProfile` 和 `unifiedIdentity` 標籤現已停用。
+成功的PATCH要求會傳回HTTP狀態200 （確定）以及包含已更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 `unifiedProfile`和`unifiedIdentity`標籤現已停用。
 
 ```json
 [
@@ -236,7 +236,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 >[!IMPORTANT]
 >
->為設定檔啟用資料集時，請確保與該資料集相關聯的結構描述為 **另外** 已啟用設定檔。 如果結構描述未啟用設定檔，資料集將會 **非** 在Platform UI中顯示為已啟用設定檔。
+>為設定檔啟用資料集時，請確保與資料集相關聯的結構描述也&#x200B;**已啟用**&#x200B;設定檔。 如果結構描述未啟用設定檔，資料集&#x200B;**不會**&#x200B;在Platform UI中顯示為啟用設定檔。
 
 **API格式**
 
@@ -250,7 +250,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **要求**
 
-請求內文包含 `path` 至 `unifiedProfile` 設定 `value` 以包含 `enabled` 和 `isUpsert` 標籤，均設為 `true`，和 `path` 至 `unifiedIdentity` 設定 `value` 以包含 `enabled` 標籤已設為 `true`.
+要求內文包含`path`至`unifiedProfile`，將`value`設定為包含`enabled`與`isUpsert`標籤（兩者皆設定為`true`），以及將`path`至`unifiedIdentity`設定`value`，將`enabled`標籤設定為`true`。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -280,7 +280,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **回應**
 
-成功的PATCH要求會傳回HTTP狀態200 （確定）以及包含已更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 此 `unifiedProfile` 標籤和 `unifiedIdentity` 標籤現在已啟用並設定用於屬性更新。
+成功的PATCH要求會傳回HTTP狀態200 （確定）以及包含已更新資料集ID的陣列。 此ID應符合PATCH請求中傳送的ID。 `unifiedProfile`標籤和`unifiedIdentity`標籤現在已啟用並設定為屬性更新。
 
 ```json
 [
@@ -290,4 +290,4 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 ## 後續步驟
 
-批次擷取工作流程現在可以使用您的設定檔和已啟用更新插入的資料集，來更新設定檔資料。 若要進一步瞭解如何將資料擷取至Adobe Experience Platform，請先閱讀 [資料擷取概觀](../../ingestion/home.md).
+批次擷取工作流程現在可以使用您的設定檔和已啟用更新插入的資料集，來更新設定檔資料。 若要進一步瞭解如何將資料擷取至Adobe Experience Platform，請先閱讀[資料擷取概觀](../../ingestion/home.md)。

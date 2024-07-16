@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL 實作詳細資料] 資料型別
+# [!UICONTROL 實作詳細資料]資料型別
 
-[!UICONTROL 實作詳細資料] 是標準的體驗資料模型(XDM)資料型別，可描述技術實作，例如API或SDK。
+[!UICONTROL 實作詳細資料]是標準的體驗資料模型(XDM)資料型別，可描述技術實作，例如API或SDK。
 
 ![資料型別結構](../images/data-types/implementation-details.png)
 
@@ -25,5 +25,5 @@ ht-degree: 6%
 
 如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)

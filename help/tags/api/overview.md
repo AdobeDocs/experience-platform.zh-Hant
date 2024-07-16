@@ -4,7 +4,7 @@ description: Reactor API 可讓開發人員以程式設計方式管理 Adobe Exp
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1079'
 ht-degree: 4%
 
 ---
@@ -13,112 +13,112 @@ ht-degree: 4%
 
 Reactor API提供數個端點，可讓您以程式設計方式管理Adobe Experience Platform標籤的所有資源。
 
-這些端點概述如下。 如需詳細資訊，請參閱個別端點指南，並參閱 [快速入門手冊](./getting-started.md) 以取得如何驗證API的重要資訊。
+這些端點概述如下。 請瀏覽個別端點指南以取得詳細資料，並參閱[快速入門手冊](./getting-started.md)以取得有關如何向API驗證的重要資訊。
 
-若要檢視所有可用的端點和CRUD作業，請造訪 [Reactor API參考](https://www.adobe.io/experience-platform-apis/references/reactor/).
+若要檢視所有可用的端點和CRUD作業，請造訪[Reactor API參考](https://www.adobe.io/experience-platform-apis/references/reactor/)。
 
 ## 公司
 
 公司代表標籤使用者的組織，通常是企業。 這些公司將1:1與組織ID相符。 API使用者將只能看見他們有權存取的公司。
 
-請參閱 [公司端點指南](./endpoints/companies.md) 以瞭解如何在API中檢視可用的公司。
+請參閱[公司端點指南](./endpoints/companies.md)，瞭解如何在API中檢視可用的公司。
 
 ## 屬性
 
 屬性是一個容器，可容納Reactor API中提供的大部分其他資源。 唯一不屬於屬性的資源是稽核事件、公司、擴充功能套件和設定檔。 屬性只屬於一個公司，而公司可以有許多屬性。
 
-請參閱 [屬性端點指南](./endpoints/properties.md) 以瞭解如何管理API中的屬性。
+請參閱[屬性端點指南](./endpoints/properties.md)，瞭解如何管理API中的屬性。
 
 ## 資料元素
 
 資料元素的作用就像變數，指向應用程式內的重要資料片段。 資料元素可用於規則和擴充功能設定。 當規則在執行階段在瀏覽器或應用程式中觸發時，將會解析資料元素的值並在規則中使用。
 
-請參閱 [資料元素端點指南](./endpoints/data-elements.md) 以瞭解如何管理API中的資料元素。
+請參閱[資料元素端點指南](./endpoints/data-elements.md)，瞭解如何管理API中的資料元素。
 
 ## 規則
 
 規則可控制已部署程式庫中所包含資源的行為。 規則是一或多個規則元件的群組，其存在是為了以邏輯方式將規則元件連結在一起。
 
-請參閱 [規則端點指南](./endpoints/rules.md) 以瞭解如何管理API中的規則。
+請參閱[規則端點指南](./endpoints/rules.md)，瞭解如何管理API中的規則。
 
 ## 規則元件
 
 規則元件是組成規則的個別專案。 規則元件有三種基本型別：
 
-* **活動**：觸發規則的原因
-* **條件**：規則會檢查以判斷動作的專案
-* **動作**：系統會根據是否符合條件執行規則
+* **事件**：觸發規則的專案
+* **條件**：規則會檢查哪些專案來判斷動作
+* **動作**：依據是否符合條件所執行的規則
 
-請參閱 [規則端點指南](./endpoints/rules.md) 以瞭解如何管理API中的規則。
+請參閱[規則端點指南](./endpoints/rules.md)，瞭解如何管理API中的規則。
 
 ## 擴充功能套件
 
 擴充功能套件代表標籤使用者可使用的一組個別功能。 這些功能通常以規則元件和資料元素的形式提供，但也可以包含主要模組和共用模組。 擴充功能套件提供的功能，會在包含在程式庫中時，以擴充功能的形式安裝。
 
-請參閱 [擴充功能套件端點指南](./endpoints/extension-packages.md) 以瞭解如何在API中管理擴充功能套件。
+請參閱[擴充功能套件端點指南](./endpoints/extension-packages.md)，瞭解如何在API中管理擴充功能套件。
 
 ## 擴充功能
 
 擴充功能代表擴充功能套件已安裝的例項。 擴充功能可讓屬性使用擴充功能套件定義的功能。 建立資料元素和規則元件時，會運用這些功能。
 
-請參閱 [擴充功能端點指南](./endpoints/extensions.md) 以瞭解如何管理API中的擴充功能。
+請參閱[擴充功能端點指南](./endpoints/extensions.md)，瞭解如何管理API中的擴充功能。
 
 ## 程式庫
 
 程式庫是代表屬性所需行為的資源集合（擴充功能、規則和資料元素）。 程式庫會編譯成組建，這些組建會指派給不同的環境，以便他們沿著發佈流程從測試移至生產環境。
 
-請參閱 [程式庫端點指南](./endpoints/libraries.md) 以瞭解如何管理API中的程式庫。
+請參閱[資料庫端點指南](./endpoints/libraries.md)，瞭解如何管理API中的資料庫。
 
 ## 組建
 
 標籤程式庫會編譯成組建，以便指派給環境進行測試和部署。 組建的內容會因程式庫中包含的資源、指派組建的環境組態，以及組建所屬的屬性平台而有所不同。
 
-請參閱 [組建端點指南](./endpoints/builds.md) 以瞭解如何管理API中的組建。
+請參閱[組建端點指南](./endpoints/builds.md)，瞭解如何管理API中的組建。
 
 ## 環境
 
-環境會指出可部署組建的特定主機，以及組建應部署為一組檔案還是以封存格式壓縮。 在Reactor API中，環境與主機本身是分開的，由管理 `/hosts` 端點。
+環境會指出可部署組建的特定主機，以及組建應部署為一組檔案還是以封存格式壓縮。 在Reactor API中，環境與主機本身是分開的，主機是由`/hosts`端點管理。
 
-請參閱 [組建端點指南](./endpoints/builds.md) 以瞭解如何管理API中的組建。
+請參閱[組建端點指南](./endpoints/builds.md)，瞭解如何管理API中的組建。
 
 ## 主機
 
 主機代表託管目的地，可傳送及最終部署程式庫組建。 主機可以是Akamai或SFTP伺服器。
 
-請參閱 [hosts端點指南](./endpoints/hosts.md) 以瞭解如何在API中管理主機。
+請參閱[主機端點指南](./endpoints/hosts.md)，瞭解如何在API中管理主機。
 
 ## 應用程式設定
 
-應用程式設定可儲存及擷取認證，以供日後使用。 請參閱 [應用程式設定端點指南](./endpoints/app-configurations.md) 以瞭解如何管理API中的應用程式設定。
+應用程式設定可儲存及擷取認證，以供日後使用。 請參閱[應用程式設定端點指南](./endpoints/app-configurations.md)，瞭解如何在API中管理應用程式設定。
 
 ## 稽核事件
 
 稽核事件是在進行變更時對另一個標籤資源的特定變更記錄。 這些是可透過使用回呼函式訂閱的系統事件。
 
-請參閱 [稽核事件端點指南](./endpoints/audit-events.md) 瞭解如何在API中管理稽核事件。
+請參閱[稽核事件端點指南](./endpoints/audit-events.md)，瞭解如何在API中管理稽核事件。
 
 ## 回呼
 
-回呼是每當產生新稽核事件時，Platform傳送給URL主機的訊息。 請參閱 [回呼端點指南](./endpoints/callbacks.md) 以瞭解如何在API中管理回呼。
+回呼是每當產生新稽核事件時，Platform傳送給URL主機的訊息。 請參閱[回呼端點指南](./endpoints/callbacks.md)，瞭解如何在API中管理回呼。
 
 ## 附註
 
-附註是可新增至特定標籤資源的文字註釋，例如資料元素、擴充功能、程式庫、屬性、規則和規則元件。 請參閱 [附註端點指南](./endpoints/notes.md) 以瞭解如何在API中管理附註。
+附註是可新增至特定標籤資源的文字註釋，例如資料元素、擴充功能、程式庫、屬性、規則和規則元件。 請參閱[筆記端點指南](./endpoints/notes.md)，瞭解如何在API中管理筆記。
 
 ## 設定檔
 
 設定檔包含有關登入使用者的所有資訊，包括所屬所有Adobe組織、每個組織內所屬的產品設定檔，以及每個產品設定檔所擁有的許可權。
 
-請參閱 [設定檔端點指南](./endpoints/profile.md) 以瞭解如何在API中檢視此資訊。
+請參閱[設定檔端點指南](./endpoints/profile.md)，瞭解如何在API中檢視此資訊。
 
 ## 搜尋
 
-此 `/search` 端點提供一種尋找符合所需條件的資源的方法，以查詢表示。 所有查詢的範圍皆為您目前的公司和可存取的屬性。 請參閱 [搜尋端點指南](./endpoints/search.md) 以瞭解如何使用此功能。
+`/search`端點提供尋找符合所需條件（以查詢表示）之資源的方法。 所有查詢的範圍皆為您目前的公司和可存取的屬性。 請參閱[搜尋端點指南](./endpoints/search.md)以瞭解如何使用這項功能。
 
 ## 秘密
 
-密碼包含可允許事件轉寄驗證至其他系統以進行安全資料交換的認證。 請參閱 [秘密指南](./guides/secrets.md) 以概略瞭解秘密在事件轉送中的運作方式，以及 [秘密端點指南](./endpoints/secrets.md) 以瞭解如何在Reactor API中管理這些變數。
+密碼包含可允許事件轉寄驗證至其他系統以進行安全資料交換的認證。 請參閱[密碼指南](./guides/secrets.md)，以概略了解密碼在事件轉送中的運作方式，並參閱[密碼端點指南](./endpoints/secrets.md)，以瞭解如何在Reactor API中管理密碼。
 
 ## 後續步驟
 
-若要開始使用Schema登入API進行呼叫，請閱讀 [快速入門手冊](./getting-started.md) 然後選取其中一個端點指南以瞭解如何使用特定端點。
+若要開始使用Schema Registry API進行呼叫，請閱讀[快速入門手冊](./getting-started.md)，然後選取其中一個端點指南，以瞭解如何使用特定端點。

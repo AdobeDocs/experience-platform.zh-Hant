@@ -4,8 +4,8 @@ description: Adobe Experience Platform核心擴充功能最新發行說明。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 49%
+source-wordcount: '1632'
+ht-degree: 46%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-## 2023 年 3 月 29 日
+## 2023年3月29日
 
 v3.4.1
 
@@ -31,7 +31,7 @@ v3.4.1
       * 查詢字串參數
       * 流量來源
       * 變數
-* 變更events/EntersViewport委派以使用 [交集觀察器API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) 取代手動偵測進入檢視區的元素。
+* 變更events/EntersViewport委派以使用[交集觀察器API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)，而非手動偵測進入檢視區的元素。
 * 移除將DTM Cookie移轉至LocalStorage的程式碼。
 * 當LocalStorage和SessionStorage API無法使用時，將警告記錄到主控台。
 
@@ -39,9 +39,9 @@ v3.4.1
 
 v3.3.0
 
-* 變更 [觸發直接呼叫動作](./overview.md#direct-call-action) 以便您提供自訂事件資訊，以傳送給直接呼叫規則。
+* 變更[觸發直接呼叫動作](./overview.md#direct-call-action)，讓您可以提供自訂事件資訊，以傳送給直接呼叫規則。
 
-## 2021 年 10 月 8 日
+## 2021年10月8日
 
 v3.2.2
 
@@ -79,7 +79,7 @@ v3.1.0
 * 合併的物件 — 選取多個資料元素，每個元素都會提供物件。 這些物件將深層（遞回）合併在一起，以產生新物件。
 * 條件值 — 根據比較結果，傳回兩個值（conditionalValue或fallbackValue）之一。
 * 執行階段環境 — 傳回下列Launch環境變數之一：環境階段、程式庫建置日期、屬性名稱、屬性ID、規則名稱、規則ID、事件型別、事件詳細資料裝載、直接呼叫識別碼。
-* JavaScript工具 — 常見JavaScript作業的包裝函式：基本字串操控（取代、子字串、規則運算式相符、第一個和最後一個索引、分割、分割）、基本陣列作業（分割、聯結、pop、shift）和基本通用作業（分割、長度）。
+* JavaScript工具 — 常見JavaScript操作的包裝函式：基本字串操控（取代、子字串、規則運算式相符、第一個和最後一個索引、分割、分割）、基本陣列操作（分割、連線、pop、shift）和基本通用操作（分割、長度）。
 * 裝置屬性 — 傳回裝置屬性，例如視窗大小或熒幕大小。
 
 ## 2021年8月11日
@@ -88,7 +88,7 @@ v3.0.0
 
 * PDCL-6153：新增支援，可靠地提取快取自訂程式碼動作的完整合格URL。
 
-核心擴充功能v3.0.0搭配多項變更： [Turbine Web執行階段v27.2.0](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)，可在使用者的公司支援Premium CDN時，讓使用者在許多Adobe管理的託管區域間載入其程式庫。
+核心擴充功能v3.0.0與Turbine Web執行階段](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)中[v27.2.0的變更結合，如果使用者的公司支援Premium CDN，則使用者可在許多Adobe管理託管區域中載入其程式庫。
 
 此升級為選擇性升級，且回溯相容於沒有Premium CDN的使用者，且為公司啟用Premium CDN的客戶所強制。
 
@@ -99,13 +99,13 @@ v2.0.7
 * 修正文字輸入上的滑鼠互動無法正常運作的問題。
 * 不建議使用瀏覽器和作業系統條件。
 
-## 2021 年 5 月 4 日
+## 2021年5月4日
 
 v2.0.6
 
 * 微幅更新以修正熒幕大小變更時扭曲的圖示。
 
-## 2021 年 3 月 11 日
+## 2021年3月11日
 
 v2.0.5
 
@@ -117,13 +117,13 @@ v2.0.4
 
 * 新增各種欄位的資料元素支援 — 已在以下事件中新增資料元素支援：「頁面上的時間」、「進入檢視區」、「暫留」和「媒體播放時間」。 以及下列條件：「網站逗留時間」和「值比較」
 * 新增對ctrl/cmd +按一下以及使用滑鼠中鍵按一下來使用「連結延遲」的預設行為的支援
-* **在點選事件上將連結延遲標示為「不再支援」。**  — 如需詳細資訊，請參閱 [資料收集部落格](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) 適用於Adobe Experience Platform
+* **在點選事件上將連結延遲標籤為「不再支援」。** — 如需詳細資訊，請參閱Adobe Experience Platform的[資料收集部落格](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)
 
 ## 2021 年 1 月 6 日
 
 v1.9.0
 
-* **全新「觸發直接呼叫」動作**  — 核心擴充功能現在包含新的動作型別，稱為 `Trigger Direct Call`.  若要透過其他規則的動作觸發直接呼叫規則，就能使用此動作。此動作直接對應至 `_satellite.track()` 方法。特別感謝 Jan Exner 對此主題貢獻的心力。
+* **新的「觸發直接呼叫」動作** — 核心擴充功能現在包含名為`Trigger Direct Call`的新動作型別。  若要透過其他規則的動作觸發直接呼叫規則，就能使用此動作。此動作直接對應至 `_satellite.track()` 方法。特別感謝Jan Exner對此主題貢獻的心力。
 
 ## 2020 年 12 月 8 日
 
@@ -169,19 +169,19 @@ v1.7.3
 
 v1.7.0
 
-* **存取`event`自訂程式碼資料元素內的變數** - 現在起，您可在規則範圍內執行時，參考自訂程式碼資料元素內的事件。物件將包含觸發規則之事件的實用資訊。特別感謝 Stewart Schilling 對此主題貢獻的心力。
+* **存取`event`自訂程式碼資料元素內的變數** - 現在起，您可在規則範圍內執行時，參考自訂程式碼資料元素內的事件。物件將包含觸發規則之事件的實用資訊。特別感謝Stewart Schilling對此主題貢獻的心力。
 
 ## 2019 年 10 月 7 日
 
 v1.6.2
 
-* **全新 Constant 資料元素** - 核心擴充功能現在包含名為 `Constant` 的新資料元素類型。需儲存將被不同條件、動作或自訂程式碼參考的常數值時，即可使用此值。特別感謝 Jan Exner 對此主題貢獻的心力。
+* **全新 Constant 資料元素** - 核心擴充功能現在包含名為 `Constant` 的新資料元素類型。需儲存將被不同條件、動作或自訂程式碼參考的常數值時，即可使用此值。特別感謝Jan Exner對此主題貢獻的心力。
 
 ## 2019 年 9 月 11 日
 
 v1.6.1
 
-* **支援 CSP Nonce** - 核心擴充功能現起提供選用的設定參數。您可以新增參照 Nonce 的資料元素。完成設定後，標籤新增至頁面的所有內嵌指令碼都會使用您所設定的Nonce。 這項變更可支援使用具備Nonce的內容安全性原則，即使是CSP環境也仍能載入標籤指令碼。 您可以閱讀更多有關搭配標籤與CSP使用的資訊 [此處](../../../ui/client-side/content-security-policy.md).
+* **支援 CSP Nonce** - 核心擴充功能現起提供選用的設定參數。您可以新增參照 Nonce 的資料元素。完成設定後，標籤新增至頁面的所有內嵌指令碼都會使用您所設定的Nonce。 這項變更可支援使用具備Nonce的內容安全性原則，即使是CSP環境也仍能載入標籤指令碼。 您可以在[這裡](../../../ui/client-side/content-security-policy.md)閱讀更多有關搭配CSP使用標籤的資訊。
 
 ## 2019 年 6 月 18 日
 
@@ -209,8 +209,8 @@ v1.4.2
 ## 2018 年 11 月 8 日
 
 * **「保留同類群組」選項** - 在「取樣」條件中新增了保留同類群組的選項。這可讓使用者在不同工作階段間，將使用者保留或移出取樣同類群組。例如，如果勾選「保留同類群組」核取方塊，且在首次對特定訪客執行該條件時傳回true，則後續對同一訪客執行該條件時都會傳回true。 同樣地，如果勾選「保留同類群組」核取方塊，且在首次對特定訪客執行該條件時傳回false，則後續對同一訪客執行該條件時都會傳回false。
-* **錯誤修正**  — 修正標籤同步載入頁面中，但並未正確安裝（沒有呼叫）頁面上，使用Page Bottom事件和Custom Code動作的規則問題。 `_satellite.pageBottom()`)會清除網站內容。
-* **錯誤修正**  — 修正當瀏覽器的DOMContentLoaded事件引發後，標籤程式庫以非同步方式載入並完成載入時，Enters Viewport無法運作的問題。
+* **錯誤修正** — 修正當標籤同步載入頁面中，但並未正確安裝（沒有呼叫`_satellite.pageBottom()`）時，在頁面上使用「頁面底部」事件和「自訂程式碼」動作的規則會清除網站內容的問題。
+* **錯誤修正** — 修正當瀏覽器的DOMContentLoaded事件引發後，標籤程式庫以非同步方式載入並完成載入時，Enters Viewport無法運作的問題。
 
 ## 2018 年 5 月 24 日
 

@@ -11,13 +11,13 @@ ht-degree: 4%
 
 # 擴充功能套件使用授權端點
 
-擴充功能套件代表 [副檔名](./extensions.md) （由擴充功能開發人員編寫）。 擴充功能套件會定義可提供給標籤使用者的其他功能。 這些功能可能包括主要模組和共用模組，但最常提供為 [規則元件](./rule-components.md) （事件、條件和動作）和 [資料元素](./data-elements.md).
+擴充功能套件表示擴充功能[由擴充功能開發人員所編寫。 ](./extensions.md)擴充功能套件會定義可提供給標籤使用者的其他功能。 這些功能可以包括主要模組和共用模組，不過它們最常作為[規則元件](./rule-components.md) （事件、條件和動作）和[資料元素](./data-elements.md)提供。
 
-擴充功能套件由開發人員的 [公司](./companies.md). 擴充功能套件的擁有者可授權其他企業使用其私人版本的套件。 每個授權企業都會獲得單一擴充功能套件的使用授權，該套件適用於該套件所有未來和目前的私人版本。
+擴充功能套件屬於開發人員的[公司](./companies.md)。 擴充功能套件的擁有者可授權其他企業使用其私人版本的套件。 每個授權企業都會獲得單一擴充功能套件的使用授權，該套件適用於該套件所有未來和目前的私人版本。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取擴充功能套件的擴充功能套件使用授權 {#list}
 
@@ -31,7 +31,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriza
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 此 `ID` 要列出其擴充功能套件使用授權之屬性的。 |
+| `{PROPERTY_ID}` | 您要列出其擴充套件使用授權之屬性的`ID`。 |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ curl -X GET \
 
 ## 建立擴充功能套件使用授權 {#create}
 
-為每個建立擴充功能套件使用授權 [擴充功能套件](./extension-packages.md) 和 `{ORG_ID}` 您想要授權的組織。 若要建立新的擴充功能套件使用授權，請向下列端點發出POST請求。
+針對您想要授權的每個組織[擴充功能套件](./extension-packages.md)和`{ORG_ID}`，建立擴充功能套件使用授權。 若要建立新的擴充功能套件使用授權，請向下列端點發出POST請求。
 
 **API格式**
 
@@ -112,7 +112,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 此 `ID` 要建立授權的擴充功能套件的。」 |
+| `EXTENSION_PACKAGE_ID` | 您要為其建立授權的延伸套件`ID`。」 |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.authorized_org_id` | 此 `ID` 您想要授權的組織。 |
+| `attributes.authorized_org_id` | 您要授權的組織`ID`。 |
 
 **回應**
 
@@ -183,7 +183,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->在上述範例回應中，授權目前位於 `pending_approval` 階段。 在使用擴充功能套件之前，組織必須核准授權。 當授權處於未決核准狀態時，組織的使用者可以瀏覽私人擴充功能套件，但他們無法安裝該套件，且無法在擴充功能目錄中找到。
+>在上述範例回應中，授權目前處於`pending_approval`階段。 在使用擴充功能套件之前，組織必須核准授權。 當授權處於未決核准狀態時，組織的使用者可以瀏覽私人擴充功能套件，但他們無法安裝該套件，且無法在擴充功能目錄中找到。
 
 ## 擷取擴充功能套件使用授權清單 {#list_authorizations}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 ## 刪除擴充功能套件使用授權 {#delete}
 
-若要刪除擴充功能套件使用授權，請包含其 `ID` 在DELETE請求的路徑中。 這可防止授權組織檢視目錄中擴充功能套件的私人版本，以及在其屬性上安裝該套件。
+若要刪除擴充套件使用授權，請在DELETE要求的路徑中包含其`ID`。 這可防止授權組織檢視目錄中擴充功能套件的私人版本，以及在其屬性上安裝該套件。
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `ID` | 此 `ID` 要刪除的擴充功能套件使用授權。 |
+| `ID` | 您要刪除之擴充套件使用授權的`ID`。 |
 
 {style="table-layout:auto"}
 
@@ -298,11 +298,11 @@ curl -X DELETE \
 
 ## 更新擴充功能套件使用授權 {#update}
 
-若要核准或拒絕擴充功能套件使用授權，請包含其 `ID` 在PATCH請求的路徑中。
+若要核准或拒絕擴充套件使用授權，請在PATCH要求的路徑中包含其`ID`。
 
 >[!NOTE]
 >
->若要核准或拒絕貴公司的擴充功能套件使用授權，您必須擁有 `manage_properties` 權利。
+>若要核准或拒絕貴公司的擴充功能套件使用授權，您必須擁有`manage_properties`許可權。
 
 **API格式**
 
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `ID` | 此 `ID` 要刪除的擴充功能套件使用授權。 |
+| `ID` | 您要刪除之擴充套件使用授權的`ID`。 |
 
 {style="table-layout:auto"}
 
@@ -338,7 +338,7 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 您想要修訂的屬性。 針對擴充功能套件使用授權，您可以修訂其 `state`. |
+| `attributes` | 您想要修訂的屬性。 針對擴充功能套件使用授權，您可以修訂其`state`。 |
 
 **回應**
 
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | 參數 | 說明 |
 | --- | --- |
-| `ID` | 此 `ID` 要擷取的擴充功能套件使用授權中。 |
+| `ID` | 您要擷取的擴充套件使用授權的`ID`。 |
 
 {style="table-layout:auto"}
 

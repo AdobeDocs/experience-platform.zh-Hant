@@ -5,7 +5,7 @@ exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
 source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '3129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform將來自多個企業系統的資料整合在一起，�
 1. 隱私權
 1. 資料衛生
 
-本檔案會檢視每個不同的控管領域，並示範如何在使用「查詢服務」時促進資料法規遵循。 請參閱 [治理、隱私和安全性概述](../../landing/governance-privacy-security/overview.md) 以進一步瞭解Experience Platform如何讓您管理客戶資料並確保法規遵循。
+本檔案會檢視每個不同的控管領域，並示範如何在使用「查詢服務」時促進資料法規遵循。 請參閱[治理、隱私和安全性總覽](../../landing/governance-privacy-security/overview.md)，以進一步瞭解Experience Platform如何讓您管理客戶資料並確保法規遵循。
 
 ## 安全性 {#security}
 
@@ -33,15 +33,15 @@ Adobe Experience Platform將來自多個企業系統的資料整合在一起，�
 
 查詢服務的安全性分為下列類別：
 
-* [存取控制](#access-control)：存取權可透過角色和許可權控制，包括資料集和欄層級的許可權。
-* 透過以下方式保護資料 [連線能力](#connectivity)：透過Platform和外部使用者端，利用即將到期的憑證或不即將到期的憑證實現有限的連線，進而保護資料的安全。
-* 透過以下方式保護資料 [加密和客戶管理的金鑰(CMK)](#encryption-and-customer-managed-keys)：當資料處於靜止狀態時，可透過加密控制存取。
+* [存取控制](#access-control)：存取是由角色和許可權（包括資料集和資料行層級的許可權）所控制。
+* 透過[連線](#connectivity)保護資料：藉由使用即將到期的認證或不會到期的認證達成有限的連線，透過Platform和外部使用者端保護資料。
+* 透過[加密和客戶管理的金鑰(CMK)保護資料](#encryption-and-customer-managed-keys)：資料靜止時可透過加密控制存取。
 
 ### 存取控制 {#access-control}
 
-Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console](https://adminconsole.adobe.com/) 使用角色型許可權來管理對查詢服務功能的存取。 同樣地，您可以透過結構描述和資料欄位的標籤管理，控制特定資料屬性的存取權。
+Adobe Experience Platform中的存取控制可讓您使用[Adobe Admin Console](https://adminconsole.adobe.com/)，使用角色型許可權來管理對查詢服務功能的存取。 同樣地，您可以透過結構描述和資料欄位的標籤管理，控制特定資料屬性的存取權。
 
-本節概述使用者要完全利用查詢服務功能，必須具備的存取控制許可權。 檢視檔案： [管理許可權](../../access-control/ui/permissions.md) 和 [管理使用者](../../access-control/ui/users.md) 以取得關於指派存取權給產品設定檔的詳細說明。
+本節概述使用者要完全利用查詢服務功能，必須具備的存取控制許可權。 如需將存取權指派給產品設定檔的詳細指示，請參閱[管理許可權](../../access-control/ui/permissions.md)和[管理使用者](../../access-control/ui/users.md)上的檔案。
 
 #### 相關許可權
 
@@ -53,7 +53,7 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 | 權限 | 說明 |
 |---|---|
-| [!UICONTROL 管理查詢] | 此許可權可讓使用者執行資料探索和批次查詢，以便讀取現有資料集或寫入資料集上的資料。 這包括兩者 `CREATE TABLE AS SELECT` (`CTAS`)和 `INSERT INTO AS SELECT` (`ITAS`)個查詢。 |
+| [!UICONTROL 管理查詢] | 此許可權可讓使用者執行資料探索和批次查詢，以便讀取現有資料集或寫入資料集上的資料。 這包含`CREATE TABLE AS SELECT` (`CTAS`)和`INSERT INTO AS SELECT` (`ITAS`)查詢。 |
 
 **資料集許可權**
 
@@ -70,7 +70,7 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 以屬性為基礎的存取控制功能可讓Query Service使用者限制對關鍵使用者資料的存取。 可以根據指派給角色的許可權來授與或限制存取權。 使用者對個別欄的存取權是由相關資料使用標籤以及套用至指派給使用者的角色的許可權集所控制。
 
-使用資料使用標籤來標籤結構描述欄位群組和類別，會將資料使用限制套用至具有相同欄位群組和類別的所有結構描述。 請參閱以下主題的概觀： [基於屬性的存取控制](../../access-control/abac/overview.md) 以取得此功能的完整資訊。
+使用資料使用標籤來標籤結構描述欄位群組和類別，會將資料使用限制套用至具有相同欄位群組和類別的所有結構描述。 如需此功能的完整資訊，請參閱[以屬性為基礎的存取控制](../../access-control/abac/overview.md)的概觀。
 
 此功能可讓您將機密欄的存取權授與您所選的使用者群組。 欄上的存取控制可限制特定使用者型別的讀取和寫入能力。
 
@@ -80,24 +80,24 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 1. 如果拒絕使用者存取綱要中的某一欄，也會拒絕使用者在受限制的欄上讀取或寫入的許可權。 這適用於下列常見案例：
 
-   * **案例1**：當使用者嘗試執行僅影響受限制欄的查詢時，系統會擲回該欄不存在的錯誤。
-   * **案例2**：當使用者嘗試執行具有多個欄（包括受限欄）的查詢時，系統僅為所有非受限欄傳回輸出。
+   * **案例1**：當使用者嘗試執行只影響受限資料行的查詢時，系統會擲回資料行不存在的錯誤。
+   * **案例2**：當使用者嘗試執行包含多個資料行（包含受限資料行）的查詢時，系統只傳回所有非受限資料行的輸出。
 
 1. 如果使用者嘗試存取計算欄位，使用者需要存取構成中使用的所有欄位，或系統也拒絕存取計算欄位。
 
 #### 檢視的存取控制
 
-「查詢服務」提供將標準ANSI SQL用於 [`CREATE VIEW`](../sql/syntax.md#create-view) 陳述式。 對於高度敏感的資料工作流程，您必須在建立檢視時實施適當的控制項。
+查詢服務可為[`CREATE VIEW`](../sql/syntax.md#create-view)敘述句使用標準ANSI SQL。 對於高度敏感的資料工作流程，您必須在建立檢視時實施適當的控制項。
 
-此 `CREATE VIEW` 關鍵字會定義查詢的檢視，但檢視不是實際具體化的。 而是每次在查詢中參考檢視時都執行查詢。 當使用者從資料集建立檢視時，父資料集的角色和屬性型存取控制規則為 **非** 階層式套用。 因此，在建立檢視時，您必須明確設定每個欄的許可權。
+`CREATE VIEW`關鍵字定義了查詢的檢視，但該檢視並未實際具體化。 而是每次在查詢中參考檢視時都執行查詢。 當使用者從資料集建立檢視時，父資料集的角色和屬性型存取控制規則是&#x200B;**不**&#x200B;階層式套用。 因此，在建立檢視時，您必須明確設定每個欄的許可權。
 
 #### 對加速的資料集建立欄位式存取限制 {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-使用 [以屬性為基礎的存取控制功能](../../access-control/abac/overview.md) 您可以在下列位置定義事實和維度資料集的組織或資料使用範圍： [加速存放區](../data-distiller/customizable-insights/send-accelerated-queries.md). 這可讓管理員管理特定區段的存取權，並更好地管理授予使用者或使用者群組的存取權。
+透過[以屬性為基礎的存取控制功能](../../access-control/abac/overview.md)，您可以在[加速存放區](../data-distiller/customizable-insights/send-accelerated-queries.md)中的事實和維度資料集，定義組織或資料使用範圍。 這可讓管理員管理特定區段的存取權，並更好地管理授予使用者或使用者群組的存取權。
 
-若要針對加速資料集建立欄位式存取限制，您可以使用查詢服務CTAS查詢來建立加速資料集，並根據現有的XDM結構描述或臨時結構描述來建構這些資料集。 然後，管理員可以 [新增和編輯結構描述的資料使用標籤](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) 或 [臨時結構描述](./ad-hoc-schema-labels.md#edit-governance-labels). 您可以從以下位置套用、建立及編輯方案標籤： [!UICONTROL 標籤] 中的工作區 [!UICONTROL 方案] UI。
+若要針對加速資料集建立欄位式存取限制，您可以使用查詢服務CTAS查詢來建立加速資料集，並根據現有的XDM結構描述或臨時結構描述來建構這些資料集。 然後，系統管理員可以[新增並編輯結構描述](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field)或[臨時結構描述](./ad-hoc-schema-labels.md#edit-governance-labels)的資料使用標籤。 您可以從[!UICONTROL 結構描述] UI中的[!UICONTROL 標籤]工作區，套用、建立及編輯結構描述的標籤。
 
-資料使用標籤也可以是 [已直接套用或編輯至資料集](../../data-governance/labels/user-guide.md#add-labels) 透過「資料集UI」，或從「存取控制」建立 [!UICONTROL 標籤] 工作區。 請參閱操作方法指南 [建立新標籤](../../access-control/abac/ui/labels.md) 以取得詳細資訊。
+資料使用標籤也可以透過「資料集」UI直接套用或編輯至資料集](../../data-governance/labels/user-guide.md#add-labels)，或是從「存取控制」[!UICONTROL 標籤]工作區建立。 [如需詳細資訊，請參閱如何[建立新標籤](../../access-control/abac/ui/labels.md)的指南。
 
 接著，即可透過附加的資料使用標籤，以及套用至指派給使用者的角色之許可權集，來控制使用者對個別欄的存取權。
 
@@ -107,52 +107,52 @@ Adobe Experience Platform中的存取控制可讓您使用 [Adobe Admin Console]
 
 #### 透過外部使用者端連線
 
-使用協力廠商使用者端存取查詢服務需要授權認證。 必須使用這些認證，才能使用任何相容的外部使用者端存取查詢服務。 您可以使用以下其中一種方式來連線到外部使用者端： [即將到期的認證](#expiring-credentials) 或 [不會到期的認證](#non-expiring-credentials).
+使用協力廠商使用者端存取查詢服務需要授權認證。 必須使用這些認證，才能使用任何相容的外部使用者端存取查詢服務。 您可以使用[即將到期的認證](#expiring-credentials)或[不會到期的認證](#non-expiring-credentials)來連線到外部使用者端。
 
 #### 透過過期認證的連線時間有限 {#expiring-credentials}
 
-[即將到期的認證](../ui/credentials.md) 允許使用者與外部使用者端建立暫時連線。 這組認證只有24小時有效。 這些型別的認證到期時，查詢服務儀表板中的認證索引標籤也會顯示。
+[即將到期的認證](../ui/credentials.md)允許使用者與外部使用者端建立暫時連線。 這組認證只有24小時有效。 這些型別的認證到期時，查詢服務儀表板中的認證索引標籤也會顯示。
 
-![「查詢服務」工作區中的「認證」索引標籤中反白了即將過期的認證。](../images/data-governance/overview/expiring-credentials.png)
+![查詢服務工作區中的認證索引標籤中反白了即將到期的認證。](../images/data-governance/overview/expiring-credentials.png)
 
 #### 不會到期的認證 {#non-expiring-credentials}
 
-[不會到期的認證](../ui/credentials.md#non-expiring-credentials) 可讓您與外部使用者端建立永久連線，讓您無需手動密碼即可輕鬆連線至查詢服務。
+[不會到期的認證](../ui/credentials.md#non-expiring-credentials)可讓您與外部使用者端建立永久連線，讓您無需手動密碼即可輕鬆連線至查詢服務。
 
-若要啟用產生不會到期的認證的選項，您必須依照下列步驟進行 [必要的工作流程](../ui/credentials.md#prerequisites). 在此程式中，您的組織管理員需要設定產品設定檔的許可權，讓管理員控制哪些帳戶有權使用不會到期的認證。
+若要啟用產生不會到期的認證的選項，您必須遵循概述的[必要工作流程](../ui/credentials.md#prerequisites)。 在此程式中，您的組織管理員需要設定產品設定檔的許可權，讓管理員控制哪些帳戶有權使用不會到期的認證。
 
-允許具有不會到期認證的技術使用者帳戶可以指派角色，根據其職責和需求定義其讀取和寫入存取權的範圍，以確保適當的資料控管。 請參閱上一節關於 [透過存取控制使用角色型許可權](#access-control) 以管理對查詢服務的存取。
+允許具有不會到期認證的技術使用者帳戶可以指派角色，根據其職責和需求定義其讀取和寫入存取權的範圍，以確保適當的資料控管。 請參閱先前關於[的章節，透過存取控制](#access-control)使用角色型許可權來管理對查詢服務的存取。
 
-先決條件工作流程完成後，授權使用者現在可以 [產生所需的連線認證](../ui/credentials.md#generate-credentials).
+先決條件工作流程完成後，授權的使用者現在可以[產生必要的連線認證](../ui/credentials.md#generate-credentials)。
 
 #### SSL資料加密
 
 為了提高安全性，Query Service為SSL連線提供原生支援，以加密使用者端/伺服器通訊。 Platform支援各種SSL選項，以符合您的資料安全性需求，並平衡加密和金鑰交換的處理開銷。
 
-請參閱指南中的可用內容 [協力廠商使用者端連線至查詢服務的SSL選項](../clients/ssl-modes.md) 以取得詳細資訊，包括如何使用 `verify-full` ssl引數值。
+如需詳細資訊，包括如何使用`verify-full` SSL引數值連線，請參閱第三方使用者端連線至查詢服務](../clients/ssl-modes.md)的可用[SSL選項指南。
 
 ### 加密和客戶管理金鑰(CMK) {#encryption-and-customer-managed-keys}
 
 加密是使用演演算法程式，將資料轉換為已編碼及無法讀取的文字，以確保資訊受到保護且無法存取，而不需要使用解密金鑰。
 
-查詢服務資料規範可確保資料一律加密。 傳輸中的資料一律符合HTTPS標準，靜態資料會使用系統層級的金鑰在Azure Data Lake存放區中加密。 請參閱以下檔案： [如何在Adobe Experience Platform中加密資料](../../landing/governance-privacy-security/encryption.md) 以取得詳細資訊。 如需如何在Azure Data Lake儲存體中對閒置資料進行加密的詳細資訊，請參閱 [Azure官方檔案](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+查詢服務資料規範可確保資料一律加密。 傳輸中的資料一律符合HTTPS標準，靜態資料會使用系統層級的金鑰在Azure Data Lake存放區中加密。 如需詳細資訊，請參閱有關[在Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md)中資料如何加密的檔案。 如需如何在Azure Data Lake Storage中加密閒置資料的詳細資訊，請參閱[Azure官方檔案](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption)。
 
-傳輸中的資料一律符合HTTPS標準，同樣地，當資料在資料湖中靜止時，會使用客戶管理金鑰(CMK)進行加密，而資料湖管理已支援該金鑰。 目前支援的版本為TLS1.2。請參閱 [客戶自控金鑰(CMK)檔案](../../landing/governance-privacy-security/customer-managed-keys/overview.md) 瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
+傳輸中的資料一律符合HTTPS標準，同樣地，當資料在資料湖中靜止時，會使用客戶管理金鑰(CMK)進行加密，而資料湖管理已支援該金鑰。 目前支援的版本為TLS1.2。請參閱[客戶自控金鑰(CMK)檔案](../../landing/governance-privacy-security/customer-managed-keys/overview.md)，瞭解如何為Adobe Experience Platform中儲存的資料設定您自己的加密金鑰。
 
 
 ## 稽核 {#audit}
 
-查詢服務會記錄使用者活動，並將該活動分類為不同的記錄型別。 記錄提供資訊 **誰** 已執行 **什麼** 動作，以及 **當**. 稽核記錄中所記錄的每個動作都包含中繼資料，其指出動作類型、日期和時間、執行動作之使用者的電子郵件 ID，以及與動作類型相關的其他屬性。
+查詢服務會記錄使用者活動，並將該活動分類為不同的記錄型別。 記錄提供有關&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**何時**&#x200B;的資訊。 記錄中記錄的每個動作都包含中繼資料，其指出動作型別、日期和時間、執行動作之使用者的電子郵件ID，以及與動作型別相關的其他屬性。
 
 Platform使用者可視需要請求任何記錄類別。 本節提供為「查詢服務」擷取的資訊型別，以及此資訊的存取位置的詳細資訊。
 
 ### 查詢記錄 {#query-logs}
 
-查詢記錄UI可讓您監視和檢閱已透過查詢編輯器或查詢服務API執行的所有查詢的執行詳細資訊。 這使查詢服務活動具有透明度，可讓您檢查的中繼資料 **全部** 已跨查詢服務執行的查詢。 它包含所有型別的查詢，無論是探索、批次或排程查詢。
+查詢記錄UI可讓您監視和檢閱已透過查詢編輯器或查詢服務API執行的所有查詢的執行詳細資訊。 這會使查詢服務活動具有透明度，可讓您檢查跨查詢服務執行的&#x200B;**所有**&#x200B;查詢的中繼資料。 它包含所有型別的查詢，無論是探索、批次或排程查詢。
 
-您可以透過以下位置的Platform UI存取查詢記錄： [!UICONTROL 記錄檔] 的標籤 [!UICONTROL 查詢] 工作區。
+可透過[!UICONTROL 查詢]工作區之[!UICONTROL 記錄]索引標籤中的Platform UI存取查詢記錄。
 
-![查詢記錄索引標籤，其詳細資訊面板會反白顯示。](../images/data-governance/overview/queries-log.png)
+![詳細資料面板反白顯示的查詢記錄標籤。](../images/data-governance/overview/queries-log.png)
 
 ### 稽核記錄 {#audit-logs}
 
@@ -166,19 +166,19 @@ Platform使用者可視需要請求任何記錄類別。 本節提供為「查�
 |---|---|
 | 查詢 | 執行 |
 | 查詢範本 | 建立、刪除、更新 |
-| 排定的查詢 | 建立、刪除、更新 |
+| 已排程的查詢 | 建立、刪除、更新 |
 
 以下是三個延伸伺服器記錄檔的清單，其中包含的詳細資訊多於在查詢記錄檔中找到的詳細資料。 可在稽核記錄查詢類別中找到延伸記錄：
 
-1. **中繼查詢記錄**：執行查詢時，會執行各種相關聯的後端子查詢（例如剖析）。 這些型別的查詢稱為「中繼資料」查詢。 您可以在稽核記錄中找到其相關詳細資料。
-1. **工作階段記錄**：系統會在使用者登入查詢服務時為其建立工作階段專案記錄，無論他們是否執行查詢。
-1. **協力廠商使用者端連線記錄**：當使用者成功將查詢服務連線至協力廠商使用者端時，會產生連線稽核記錄。
+1. **中繼查詢記錄**：執行查詢時，會執行各種相關的後端子查詢（例如剖析）。 這些型別的查詢稱為「中繼資料」查詢。 您可以在稽核記錄中找到其相關詳細資料。
+1. **工作階段記錄檔**：系統會在使用者登入查詢服務時，為使用者建立工作階段專案記錄檔，不論使用者是否執行查詢。
+1. **協力廠商使用者端連線記錄**：當使用者成功將查詢服務連線到協力廠商使用者端時，就會產生連線稽核記錄。
 
-請參閱 [稽核記錄概觀](../../landing/governance-privacy-security/audit-logs/overview.md) 如需稽核記錄如何協助您的組織處理資料合規性的詳細資訊。
+如需稽核記錄如何協助您的組織處理資料規範性的詳細資訊，請參閱[稽核記錄概觀](../../landing/governance-privacy-security/audit-logs/overview.md)。
 
 ## 資料使用情況 {#data-usage}
 
-Platform的資料控管架構可讓您以統一方式，負責地使用所有Adobe解決方案、服務和平台上的資料。 它協調在整個Adobe Experience Cloud中擷取、通訊和使用中繼資料的系統方法。 這反過來又可協助資料控管單位根據所需行銷動作加標籤資料，以及依據這些預期行銷動作對該資料設定的限制。 請參閱以下主題的概觀： [資料使用情況標籤](../../data-governance/labels/overview.md) 瞭解資料控管如何讓您將資料使用標籤套用至資料集和欄位的詳細資訊。
+Platform的資料控管架構可讓您以統一方式，負責地使用所有Adobe解決方案、服務和平台上的資料。 它協調在整個Adobe Experience Cloud中擷取、通訊和使用中繼資料的系統方法。 這反過來又可協助資料控管單位根據所需行銷動作加標籤資料，以及依據這些預期行銷動作對該資料設定的限制。 請參閱[資料使用標籤](../../data-governance/labels/overview.md)的概觀，以取得資料控管如何讓您將資料使用標籤套用至資料集和欄位的詳細資訊。
 
 最佳實務是在資料歷程的每個階段致力於資料合規性。 為此，使用臨時結構描述的衍生資料集應在資料控管框架中適當地加上標籤。 查詢服務形成的衍生資料集有兩種型別：使用標準結構的資料集和使用臨時結構的資料集。
 
@@ -186,21 +186,21 @@ Platform的資料控管架構可讓您以統一方式，負責地使用所有Ado
 >
 >使用查詢服務建立的資料集稱為「衍生資料集」。
 
-由於臨時結構描述是由個別使用者出於特定目的所建立，因此XDM結構描述欄位會為該特定資料集進行命名，而不是打算用於不同的資料集。 因此，臨機操作結構依預設不會顯示在Experience PlatformUI中。 雖然在標準與臨時結構描述之間，資料使用標籤的應用沒有差異，但是查詢服務為標籤目的建立的臨時結構描述必須首先在Platform UI中可見。 請參閱以下指南： [在Platform UI中探索臨時結構描述](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) 以取得更多詳細資料。
+由於臨時結構描述是由個別使用者出於特定目的所建立，因此XDM結構描述欄位會為該特定資料集進行命名，而不是打算用於不同的資料集。 因此，臨機操作結構依預設不會顯示在Experience PlatformUI中。 雖然在標準與臨時結構描述之間，資料使用標籤的應用沒有差異，但是查詢服務為標籤目的建立的臨時結構描述必須首先在Platform UI中可見。 如需詳細資訊，請參閱[在平台UI](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas)中探索臨時結構描述的相關指南。
 
-存取結構描述後，您可以 [將標籤套用至個別欄位](../../xdm/tutorials/labels.md). 在結構描述加上標籤後，衍生自該結構描述的所有資料集都會繼承這些標籤。 從這裡，您可以設定資料使用原則，限制將帶有特定標籤的資料啟用到特定目的地。 如需詳細資訊，請參閱 [資料使用原則](../../data-governance/policies/overview.md).
+存取結構描述後，您可以[將標籤套用至個別欄位](../../xdm/tutorials/labels.md)。 在結構描述加上標籤後，衍生自該結構描述的所有資料集都會繼承這些標籤。 從這裡，您可以設定資料使用原則，限制將帶有特定標籤的資料啟用到特定目的地。 如需詳細資訊，請參閱[資料使用原則](../../data-governance/policies/overview.md)的概觀。
 
 ## 隱私權 {#privacy}
 
-[Privacy Service](../../privacy-service/home.md) 協助您根據隱私權法規，管理客戶存取和刪除其資料的請求。 其做法是搜尋資料中預先存在的識別碼，並根據請求的隱私權工作存取或刪除該資料。 資料必須正確加上標籤，服務才能在隱私權工作期間決定要存取或刪除哪些欄位。 受隱私權請求限制的資料必須包含客戶身分資訊，才能將不同的資料片段與隱私權請求所套用的個人聯絡起來。 查詢服務可透過唯一識別碼擴充其使用的資料，以符合隱私權工作的需求。
+[Privacy Service](../../privacy-service/home.md)可協助您管理客戶請求，以便依照隱私權法規存取和刪除其資料。 其做法是搜尋資料中預先存在的識別碼，並根據請求的隱私權工作存取或刪除該資料。 資料必須正確加上標籤，服務才能在隱私權工作期間決定要存取或刪除哪些欄位。 受隱私權請求限制的資料必須包含客戶身分資訊，才能將不同的資料片段與隱私權請求所套用的個人聯絡起來。 查詢服務可透過唯一識別碼擴充其使用的資料，以符合隱私權工作的需求。
 
 隱私權請求可以傳送至資料湖或設定檔資料存放區。 從資料湖中刪除的記錄不會導致從這些記錄中建立的設定檔刪除。 此外，從Data Lake刪除個人資訊的隱私權工作不會刪除其設定檔，因此在隱私權工作完成後，擷取的任何資訊（包含該設定檔ID）都會正常更新該設定檔。 這再次說明必須正確識別臨時結構中所使用的資料。
 
-請參閱Privacy Service檔案以取得以下專案的詳細資訊： [隱私權請求的身分資料](../../privacy-service/identity-data.md) 以及如何設定資料作業並運用Adobe技術，有效擷取適合客戶隱私權請求的身分資訊。
+請參閱Privacy Service檔案，以取得隱私權要求[身分資料的詳細資訊](../../privacy-service/identity-data.md)，以及如何設定您的資料作業，並運用Adobe技術有效擷取適合客戶隱私權要求的身分資訊。
 
-資料控管的查詢服務功能可簡化及簡化資料分類程式，以及遵守資料使用規範。 識別資料後，查詢服務可讓您在所有輸出資料集上配置主要身分。 您 **必須** 將身分新增至資料集，以利資料隱私權請求，並努力符合資料規範。
+資料控管的查詢服務功能可簡化及簡化資料分類程式，以及遵守資料使用規範。 識別資料後，查詢服務可讓您在所有輸出資料集上配置主要身分。 您&#x200B;**必須**&#x200B;將身分新增至資料集，以方便資料隱私權請求並努力符合資料規範。
 
-透過Platform UI將結構描述資料欄位設定為身分欄位，並且查詢服務也可讓您 [使用SQL命令&#39;ALTER TABLE&#39;標籤主要身分](../sql/syntax.md#alter-table). 使用設定身分 `ALTER TABLE` 當資料集是使用SQL建立的，而非直接透過平台UI從結構描述建立時，命令特別有用。 請參閱檔案以瞭解如何 [在UI中定義身分欄位](../../xdm/ui/fields/identity.md) 使用標準結構描述時。
+結構描述資料欄位可以透過Platform UI設定為身分欄位，而且查詢服務也可讓您使用SQL命令&#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table)來[標籤主要身分。 使用`ALTER TABLE`命令設定識別在資料集是使用SQL建立的，而非透過Platform UI直接從結構描述建立時，特別有用。 請參閱檔案，瞭解在使用標準結構描述時，如何[在UI](../../xdm/ui/fields/identity.md)中定義身分欄位。
 
 ## 資料衛生 {#data-hygiene}
 
@@ -212,4 +212,4 @@ Platform的資料控管架構可讓您以統一方式，負責地使用所有Ado
 
 此情況的例外是刪除。 如果資料集要求資料衛生刪除，且在刪除完成之前，會執行另一個衍生的資料集查詢，則衍生的資料集將會從原始資料集中擷取資訊。 在此情況下，您必須注意，如果已傳送刪除資料集的請求，您不得使用相同的資料集來源執行任何新衍生的資料集查詢。
 
-請參閱 [資料衛生概觀](../../hygiene/home.md) 以進一步瞭解Adobe Experience Platform中的資料衛生。
+如需Adobe Experience Platform中資料衛生的詳細資訊，請參閱[資料衛生總覽](../../hygiene/home.md)。

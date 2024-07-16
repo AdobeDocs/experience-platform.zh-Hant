@@ -25,19 +25,19 @@ ht-degree: 0%
 >
 >* 對於您正在更新的新目的地和現有目的地，檢閱時間軸和所需的人工因素都相同。
 
-將目的地發佈至之前 [Experience Platform目的地目錄](/help/destinations/catalog/overview.md)，您必須向Adobe提供有關目的地和所執行測試的特定資訊，以確保使用者在啟用您平台的資料時，享有最佳體驗。
+在將您的目的地發佈至[Experience Platform目的地目錄](/help/destinations/catalog/overview.md)之前，您必須向Adobe提供有關目的地以及您執行之測試的特定資訊，以確保使用者在將資料啟用至您的平台時享有最佳體驗。
 
-此頁面列出提交或更新您使用Adobe Experience Platform Destination SDK編寫的目的地時，所需的所有資訊。 若要在Adobe Experience Platform中成功提交目的地，請傳送電子郵件至 <aepdestsdk@adobe.com> 其中包括：
+此頁面列出提交或更新您使用Adobe Experience Platform Destination SDK編寫的目的地時，所需的所有資訊。 若要在Adobe Experience Platform中成功提交目的地，請傳送電子郵件至<aepdestsdk@adobe.com>，包括：
 
 * 目的地解決的使用案例說明。 只有在您提交新的目的地設定時，才需要執行此作業。
 * 目的地提交原因的說明。 只有在更新現有的目的地設定時，才需要此專案。
 * 使用測試目的地API端點對您的目的地執行HTTP呼叫後的測試結果。 請與Adobe共用對您的目的地端點發出的API呼叫，以及從您的目的地端點接收的API回應。
 * 檔案型目的地的其他需求：
-   * 使用測試API將請求和回應範例共用至 [使用範例設定檔測試您的檔案型目的地](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * 使用測試API共用要求與回應範例，以使用範例設定檔](../testing-api/batch-destinations/file-based-destination-testing-api.md)測試您的檔案型目的地[。
    * 附加目的地產生的範例檔案，並匯出至儲存位置。
    * 提交一些形式的證明，證明您已成功將匯出的檔案從儲存位置擷取到系統中。
-* 證明您已使用針對您的目的地提交目的地發佈請求 [目的地發佈API](../publishing-api/create-publishing-request.md).
-* 檔案PR （提取請求），遵循 [自助服務檔案程式](../docs-framework/documentation-instructions.md).
+* 證明您已使用[目的地發佈API](../publishing-api/create-publishing-request.md)提交目的地的目的地發佈要求。
+* 檔案PR （提取要求），遵循[自助服務檔案程式](../docs-framework/documentation-instructions.md)中所述的指示。
 * 影像檔，會顯示為Experience Platform目的地目錄中目的地卡片的標誌。
 
 您可以在下列各節中找到有關每個專案的詳細資訊：
@@ -46,8 +46,8 @@ ht-degree: 0%
 
 提供目的地為Experience Platform客戶解決的使用案例說明。 您的說明可與現有合作夥伴的使用案例類似：
 
-* [pinterest](/help/destinations/catalog/advertising/pinterest.md)：從您的客戶清單、造訪過您網站的人或已在Pinterest上與您的內容互動的人中建立對象。
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)：DataX API適用於廣告商，如果廣告商想要鎖定在Verizon Media (VMG)中電子郵件地址以外的特定受眾群組，則可以使用VMG的近乎即時API快速建立新受眾並推送所需的受眾群組。
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md)：從您的客戶清單、造訪過您網站的人，或已在Pinterest上與您的內容互動的人，建立對象。
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases)： DataX API可供廣告商使用，這些廣告商想要鎖定在Verizon Media (VMG)中以電子郵件地址作為輸入的特定受眾群組，以便快速建立新受眾，並使用VMG的近乎即時API推送所需的受眾群組。
 
 ## 更新原因 {#reason-for-update}
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 ## 使用測試目的地API後的測試結果 {#testing-api-response}
 
-使用後提供測試結果 [測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) 端點來對您的目的地執行HTTP呼叫。 其中包括：
+使用[測試目的地API](../testing-api/streaming-destinations/streaming-destination-testing-overview.md)端點對您的目的地執行HTTP呼叫後，提供測試結果。 其中包括：
 
 * 使用測試API對您的目的地端點提出完整API請求（標頭和內文）。
 * 從您的目的地端點接收的API回應。
@@ -233,11 +233,11 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ### 測試API回應 {#testing-api-response-file-based}
 
-使用測試API將請求和回應範例納入其中 [使用範例設定檔測試您的檔案型目的地](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+使用測試API來使用範例設定檔](../testing-api/batch-destinations/file-based-destination-testing-api.md)測試您的檔案型目的地[之後，加入請求和回應範例。
 
 ### 附加匯出的檔案 {#attach-exported-file}
 
-在您的 [提交電子郵件](#download-sample-email)，附加您設定之目的地匯出至您儲存位置的CSV檔案。
+在您的[提交電子郵件](#download-sample-email)中，附加您設定的目的地匯出至儲存位置的CSV檔案。
 
 ### 成功擷取的證明 {#proof-of-successful-ingestion}
 
@@ -249,13 +249,13 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 證明您已提交目的地發佈請求 {#destination-publishing-request-proof}
 
-成功測試目的地後，您必須使用 [目的地發佈API](../publishing-api/create-publishing-request.md) 將目的地提交至Adobe以供檢閱和發佈。
+成功測試目的地之後，您必須使用[目的地發佈API](../publishing-api/create-publishing-request.md)將目的地提交給Adobe進行檢閱和發佈。
 
-提供目的地之發佈要求的ID。 如需如何擷取發佈請求ID的詳細資訊，請閱讀本文 [擷取目的地發佈請求](../publishing-api/retrieve-publishing-request.md).
+提供目的地之發佈要求的ID。 如需如何擷取發佈要求ID的詳細資訊，請閱讀如何[擷取目的地發佈要求](../publishing-api/retrieve-publishing-request.md)。
 
 ## 適用於產品化整合的目的地檔案PR （提取請求） {#documentation-pr}
 
-如果您是獨立軟體廠商(ISV)或系統整合商(SI)，請建立 [產品化整合](../overview.md#productized-custom-integrations)，您必須使用 [自助服務檔案程式](../docs-framework/documentation-instructions.md) ，為您的目的地建立產品檔案頁面。 在提交程式中，請為目的地檔案提供提取請求(PR)。
+如果您是建立[產品化整合](../overview.md#productized-custom-integrations)的獨立軟體廠商(ISV)或系統整合商(SI)，您必須使用[自助服務檔案程式](../docs-framework/documentation-instructions.md)，為您的目的地建立產品檔案頁面。 在提交程式中，請為目的地檔案提供提取請求(PR)。
 
 ## 您目的地的標誌 {#logo}
 
@@ -267,4 +267,4 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## 下載範例電子郵件 {#download-sample-email}
 
-[下載](../assets/guides/sample-email-submit-destination.rtf) 包含您需要提供以進行Adobe的所有資訊的範例電子郵件。
+[下載](../assets/guides/sample-email-submit-destination.rtf)範例電子郵件，其中包含您需要提供以供Adobe的所有資訊。

@@ -5,18 +5,18 @@ description: 瞭解如何使用流程服務API建立隨選擷取的流程執行
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
 source-git-commit: cea12160656ba0724789db03e62213022bacd645
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '797'
 ht-degree: 1%
 
 ---
 
-# 使用建立隨選擷取的流程執行 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API建立隨選擷取的資料流執行
 
 流程執行代表流程執行的例項。 例如，如果排程在早上9:00、上午10:00及上午11:00每小時執行流程，則您會有三個流程執行個體。 流程執行是您的特定組織所專屬。
 
 隨選擷取可讓您建立針對指定資料流執行的流程。 這可讓您的使用者根據指定的引數建立流程執行，並建立擷取週期，而不使用服務權杖。 僅批次來源支援隨選擷取。
 
-本教學課程涵蓋如何使用隨選擷取和建立流程執行的步驟。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教學課程涵蓋如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)隨選擷取和建立資料流執行的步驟。
 
 ## 快速入門
 
@@ -26,16 +26,16 @@ ht-degree: 1%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用以下專案來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
+* [來源](../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
 
 ## 為以表格為基礎的來源建立資料流執行
 
-若要建立以表格為基礎的來源的流程，請向以下網站發出POST請求： [!DNL Flow Service] API，同時提供您要建立執行作業的流程ID，以及開始時間、結束時間和差異欄的值。
+若要建立以表格為基礎的來源的流程，請向[!DNL Flow Service] API提出POST要求，同時提供您要建立執行之流程的識別碼，以及開始時間、結束時間和差異欄的值。
 
 >[!TIP]
 >
@@ -49,11 +49,11 @@ POST /runs/
 
 **要求**
 
-下列請求會建立流程ID的流程執行 `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+下列要求會建立流程識別碼`3abea21c-7e36-4be1-bec1-d3bad0e3e0de`的流程執行。
 
 >[!NOTE]
 >
->您只需提供 `deltaColumn` 建立您的首次資料流執行時。 之後， `deltaColumn` 將修補為的一部分 `copy` 和中的轉換，將被視為事實的來源。 任何變更 `deltaColumn` 流執行引數的值會產生錯誤。
+>建立您的第一個資料流執行時，您只需要提供`deltaColumn`。 之後，`deltaColumn`將會修補為流程中`copy`轉換的一部分，並將視為真相來源。 任何透過資料流執行引數變更`deltaColumn`值的嘗試都會導致錯誤。
 
 ```shell
 curl -X POST \
@@ -82,12 +82,12 @@ curl -X POST \
 | `params.startTime` | 隨選資料流執行的排定時間。 此值以unix時間表示。 |
 | `params.windowStartTime` | 將會從中擷取資料的最早日期和時間。 此值以unix時間表示。 |
 | `params.windowEndTime` | 擷取資料的日期和時間，截止日期為。 此值以unix時間表示。 |
-| `params.deltaColumn` | 必須有delta欄才能分割資料，並將新擷取的資料與歷史資料分開。 **注意**：此 `deltaColumn` 只有在建立您的第一個流程執行時才需要。 |
+| `params.deltaColumn` | 必須有delta欄才能分割資料，並將新擷取的資料與歷史資料分開。 **注意**：只有在建立您的第一個資料流執行時才需要`deltaColumn`。 |
 | `params.deltaColumn.name` | 差異資料行的名稱。 |
 
 **回應**
 
-成功的回應會傳回新建立的流程執行的詳細資料，包括其唯一執行 `id`.
+成功的回應傳回新建立的資料流執行的詳細資料，包括其唯一執行`id`。
 
 ```json
 {
@@ -102,7 +102,7 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 新建立的資料流執行ID。 請參閱以下指南： [正在擷取流程規格](../api/collect/database-nosql.md#specs) 以取得以表格為基礎的執行規格的詳細資訊。 |
+| `id` | 新建立的資料流執行ID。 請參閱[擷取流程規格](../api/collect/database-nosql.md#specs)的指南，以取得資料表式執行規格的詳細資訊。 |
 | `etag` | 流程執行的資源版本。 |
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
@@ -124,7 +124,7 @@ curl -X POST \
 
 ## 為檔案型來源建立資料流執行
 
-若要建立檔案型來源的流程，請向以下發出POST請求： [!DNL Flow Service] API，同時提供您要針對其建立執行的流程ID，以及開始時間和結束時間的值。
+若要建立檔案型來源的流程，請向[!DNL Flow Service] API提出POST要求，同時提供您要建立執行的流程識別碼，以及開始時間和結束時間的值。
 
 >[!TIP]
 >
@@ -138,7 +138,7 @@ POST /runs/
 
 **要求**
 
-下列請求會建立流程ID的流程執行 `3abea21c-7e36-4be1-bec1-d3bad0e3e0de`.
+下列要求會建立流程識別碼`3abea21c-7e36-4be1-bec1-d3bad0e3e0de`的流程執行。
 
 ```shell
 curl -X POST \
@@ -167,7 +167,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立的流程執行的詳細資料，包括其唯一執行 `id`.
+成功的回應傳回新建立的資料流執行的詳細資料，包括其唯一執行`id`。
 
 
 ```json
@@ -183,9 +183,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 新建立的資料流執行ID。 請參閱以下指南： [正在擷取流程規格](../api/collect/database-nosql.md#specs) 以取得以表格為基礎的執行規格的詳細資訊。 |
+| `id` | 新建立的資料流執行ID。 請參閱[擷取流程規格](../api/collect/database-nosql.md#specs)的指南，以取得資料表式執行規格的詳細資訊。 |
 | `etag` | 流程執行的資源版本。 |
 
 ## 監視您的流量執行
 
-建立流程執行後，您可以監視透過它擷取的資料，以檢視有關流程執行、完成狀態和錯誤的資訊。 若要使用API監控您的流量執行，請參閱上的教學課程 [監視API中的資料流](./monitor.md). 若要使用Platform UI監控您的流量執行，請參閱以下指南： [使用監視儀表板監視來源資料流](../../../dataflows/ui/monitor-sources.md).
+建立流程執行後，您可以監視透過它擷取的資料，以檢視有關流程執行、完成狀態和錯誤的資訊。 若要使用API監視您的資料流執行，請參閱有關[監視API中的資料流的教學課程](./monitor.md)。 若要使用Platform UI監視您的資料流執行，請參閱[使用監視儀表板](../../../dataflows/ui/monitor-sources.md)監視來源資料流的指南。

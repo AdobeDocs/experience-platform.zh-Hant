@@ -4,29 +4,29 @@ description: 結構描述登入API中的/import端點可讓您在組織和沙箱
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '288'
 ht-degree: 1%
 
 ---
 
 # 匯入端點
 
-此 `/rpc/import` 中的端點 [!DNL Schema Registry] API可讓您從產生的匯出裝載中建立Experience Data Model (XDM)資源。 匯出裝載可從兩個來源建立：
+[!DNL Schema Registry] API中的`/rpc/import`端點可讓您從產生的匯出裝載中建立體驗資料模型(XDM)資源。 匯出裝載可從兩個來源建立：
 
-* 此 [`/rpc/export` 端點](./export.md) 會從現有XDM資源建立匯出裝載，讓您在沙箱之間共用資源。
-* 此 [`/rpc/csv2schema` 端點](./csv-to-schema.md) 會從CSV範本建立匯出裝載。
+* [`/rpc/export`端點](./export.md)會從現有的XDM資源建立匯出承載，讓您在沙箱之間共用資源。
+* [`/rpc/csv2schema`端點](./csv-to-schema.md)會從CSV範本建立匯出承載。
 
-建立匯出裝載後，您可以使用 `/rpc/import` 端點，以在您選擇的沙箱中產生資源（以及所有相依資源）。
+建立匯出裝載後，您就可以使用`/rpc/import`端點在您選擇的沙箱中產生資源（以及所有相依資源）。
 
 ## 快速入門
 
-此 `/rpc/import` 端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+`/rpc/import`端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-此 `/rpc/import` 端點是遠端程式呼叫(RPC)的一部分，受 [!DNL Schema Registry]. 不像 [!DNL Schema Registry] API、RPC端點不需要其他標頭，例如 `Accept` 或 `Content-Type`，且請勿使用 `CONTAINER_ID`. 相反地，他們必須使用 `/rpc` 名稱空間，如下方API呼叫所示。
+`/rpc/import`端點是[!DNL Schema Registry]支援的遠端程式呼叫(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要`Accept`或`Content-Type`等其他標頭，也不使用`CONTAINER_ID`。 相反地，他們必須使用`/rpc`名稱空間，如下面的API呼叫所示。
 
 ## 匯入資源 {#import}
 
-為XDM資源產生匯出裝載後，您便可以在對的POST請求中使用該裝載 `/import` 端點，將該資源匯入目標組織和沙箱。
+產生XDM資源的匯出裝載後，您可以在對`/import`端點的POST請求中使用該裝載，將該資源匯入目標組織和沙箱。
 
 **API格式**
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **要求**
 
-以下請求會採用從對的呼叫傳回的裝載 [`/rpc/export` 端點](./export.md) 匯入欄位群組(`Restaurant`)放入新組織和沙箱，由 `x-gw-ims-org-id` 和 `x-sandbox-name` 標頭。
+下列要求會擷取從呼叫[`/rpc/export`端點](./export.md)傳回的承載，以將欄位群組(`Restaurant`)匯入新組織和沙箱，其決定方式分別為`x-gw-ims-org-id`和`x-sandbox-name`標頭。
 
 ```shell
 curl -X POST \

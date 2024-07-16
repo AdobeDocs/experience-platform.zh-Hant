@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDK支援訪客ID共用功能，可讓客戶在行
 
 ### 在行動應用程式和行動網站之間提供一致的個人化內容
 
-一家服裝公司想要根據客戶的興趣來打造個人化體驗，並在同時載入WebViews的行動應用程式中維持個人化的準確性。 透過使用行動裝置對網頁的ID共用功能，他們可確保在應用程式和行動網站內容中使用相同的訪客識別碼，傳遞 [!DNL ECID] 移至行動網頁URL。
+一家服裝公司想要根據客戶的興趣來打造個人化體驗，並在同時載入WebViews的行動應用程式中維持個人化的準確性。 藉由使用行動裝置對網頁的ID共用功能，使用者可將[!DNL ECID]傳遞至行動網頁URL，使用應用程式和行動網頁內容中的相同訪客識別碼，確保向客戶呈現最正確的優惠。
 
 ### 跨網域提供一致的個人化
 
@@ -32,29 +32,29 @@ Adobe Experience Platform Web SDK支援訪客ID共用功能，可讓客戶在行
 
 ## 先決條件 {#prerequisites}
 
-若要使用行動裝置對網頁和跨網域的ID共用，您必須使用 [!DNL Web SDK] 2.11.0版或更新版本。
+若要使用行動裝置對網頁和跨網域識別碼共用，您必須使用[!DNL Web SDK] 2.11.0版或更新版本。
 
-若為Edge Network行動實作，此功能在 [邊緣網路的身分識別](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) 擴充功能從1.1.0版(iOS和Android)開始。
+對於Edge Network行動實作，此功能從1.1.0版(iOS和Android)開始，在[Edge Network身分識別](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/)擴充功能中受到支援。
 
-此功能也與 [!DNL VisitorAPI.js] 1.7.0版或更新版本。
+此功能也與[!DNL VisitorAPI.js] 1.7.0版或更新版本相容。
 
 ## 行動裝置對網頁ID共用 {#mobile-to-web}
 
-使用 `getUrlVariables` 來自的API [邊緣網路的身分識別](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) 擴充功能可將識別碼擷取為查詢引數，並在開啟時附加至URL [!DNL webViews].
+使用Edge Network](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables)延伸模組[身分識別中的`getUrlVariables` API來擷取識別碼做為查詢引數，並在開啟[!DNL webViews]時將其附加至您的URL。
 
-Web SDK不需額外設定即可接受 `ECID` 查詢字串中的值。
+Web SDK不需額外設定，即可接受查詢字串中的`ECID`值。
 
 查詢字串引數包括：
 
-* `MCID`：Experience CloudID (`ECID`)
-* `MCORGID`：Experience Cloud `orgID` 必須與 `orgID` 設定於 [!DNL Web SDK].
+* `MCID`：Experience Cloud識別碼(`ECID`)
+* `MCORGID`：Experience Cloud`orgID`必須符合[!DNL Web SDK]中設定的`orgID`。
 * `TS`：時間戳記引數不能超過五分鐘。
 
 
-行動裝置對網頁的ID共用會使用 `adobe_mc` 引數。 當 `adobe_mc` 引數存在且有效， `ECID` 來自查詢字串的，會自動新增至在第一次向Edge Network提出要求時的身分對應。 所有後續的Edge Network互動都會使用 `ECID`.
+行動裝置對網頁識別碼共用使用`adobe_mc`引數。 當`adobe_mc`引數存在且有效時，來自查詢字串的`ECID`會自動新增到對Edge Network發出的第一個要求中的身分對應。 所有後續Edge Network互動都會使用該`ECID`。
 
-如需如何將訪客ID從行動應用程式傳遞至WebView的詳細資訊，請參閱以下檔案： [處理WebView](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+有關如何將訪客ID從行動應用程式傳遞至WebView的詳細資訊，請參閱[處理WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation)的檔案。
 
 ## 實作跨網域ID共用 {#cross-domain-sharing}
 
-請參閱 [`appendIdentityToUrl`](../commands/appendidentitytourl.md) 使用Web SDK標籤擴充功能和Web SDK JavaScript程式庫的實作指示命令。
+如需使用Web SDK標籤擴充功能和Web SDK JavaScript程式庫的實作指示，請參閱[`appendIdentityToUrl`](../commands/appendidentitytourl.md)命令。

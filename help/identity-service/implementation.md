@@ -1,7 +1,8 @@
 ---
 title: Identity Service實作指南
 description: 瞭解提供給Adobe Experience Platform的資料在由Identity Service用於建立身分圖表之前如何進行處理。
-source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
+exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 0%
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 ## 建立其他身分名稱空間
 
-雖然Experience Platform提供各種標準名稱空間，但您可能需要建立其他名稱空間以將您的身分正確分類。 如需詳細資訊，請閱讀以下指南： [為您的組織建立自訂名稱空間](./features/namespaces.md).
+雖然Experience Platform提供各種標準名稱空間，但您可能需要建立其他名稱空間以將您的身分正確分類。 如需詳細資訊，請閱讀[為您的組織建立自訂名稱空間](./features/namespaces.md)的指南。
 
 >[!NOTE]
 >
@@ -30,13 +31,13 @@ ht-degree: 0%
 
 ## 在體驗資料模型(XDM)中包含身分資料
 
-Experience Data Model (XDM)是Experience Platform組織客戶資料的標準化架構，可讓Experience Platform和其他與Experience Platform互動的服務彼此共用和瞭解資料。 如需詳細資訊，請參閱 [XDM系統概覽](../xdm/home.md).
+Experience Data Model (XDM)是Experience Platform組織客戶資料的標準化架構，可讓Experience Platform和其他與Experience Platform互動的服務彼此共用和瞭解資料。 如需詳細資訊，請閱讀[XDM系統總覽](../xdm/home.md)。
 
 記錄和時間序列結構描述都提供了包含身分資料的方法。 在擷取資料時，如果發現來自不同名稱空間的資料片段共用共同的身分資料，身分圖表會在這些資料片段之間建立新的關係。
 
 ## 將XDM欄位標示為身分
 
-任何型別的欄位 `string` 在實作記錄或時間序列的結構描述中，XDM類別可以標示為身分欄位。 因此，所有擷取至該欄位的資料都將被視為身分資料。
+在實作記錄或時間序列XDM類別的結構描述中，型別`string`的任何欄位都可以標示為身分欄位。 因此，所有擷取至該欄位的資料都將被視為身分資料。
 
 如果身分欄位共用常見的PII資料，則這些身分欄位也允許連結身分。
 例如，透過將電話號碼欄位標示為身分欄位，Identity Service會自動繪製與其他使用相同電話號碼之個人的關係圖。
@@ -46,15 +47,15 @@ Experience Data Model (XDM)是Experience Platform組織客戶資料的標準化�
 >* 陣列和對應型別欄位不受支援，且無法標籤為身分欄位。
 >* 在標籤欄位時，會提供所產生身分的名稱空間。
 
-如需詳細資訊，請閱讀以下內容的指南： [在UI中定義身分欄位](../xdm/ui/fields/identity.md).
+如需詳細資訊，請閱讀[在UI](../xdm/ui/fields/identity.md)中定義身分欄位的指南。
 
 ## 設定Identity服務的資料集
 
-在串流擷取程式期間，Identity Service會自動從記錄和時間序列資料中擷取身分資料。 不過，您必須先為Identity Service啟用資料，才能擷取資料。 閱讀有關教學課程  [使用API為即時客戶個人資料和身分服務設定資料集](../profile/tutorials/dataset-configuration.md) 以取得詳細資訊。
+在串流擷取程式期間，Identity Service會自動從記錄和時間序列資料中擷取身分資料。 不過，您必須先為Identity Service啟用資料，才能擷取資料。 如需詳細資訊，請參閱有關[使用API為即時客戶設定檔和身分識別服務設定資料集](../profile/tutorials/dataset-configuration.md)的教學課程。
 
 ## 將資料內嵌至Identity Service
 
-Identity服務會使用透過以下方式傳送給Experience Platform的XDM相容資料： [批次擷取](../ingestion/batch-ingestion/overview.md) 或 [串流擷取](../ingestion/streaming-ingestion/overview.md).
+識別服務會使用[批次擷取](../ingestion/batch-ingestion/overview.md)或[串流擷取](../ingestion/streaming-ingestion/overview.md)傳送給Experience Platform的符合XDM規範的資料。
 
 以下影片旨在協助您瞭解Identity Service。 此影片說明如何將資料欄位標示為身分、擷取身分識別資料，然後驗證資料是否已送入Adobe Experience Platform Identity Service私人圖表。
 

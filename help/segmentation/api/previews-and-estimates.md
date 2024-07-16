@@ -15,24 +15,24 @@ ht-degree: 2%
 
 開發區段定義時，您可以使用Adobe Experience Platform中的預估和預覽工具來檢視摘要層級的資訊，協助確保您隔離預期的對象。
 
-* **預覽** 提供符合區段定義之資格設定檔的分頁清單，讓您比較結果與預期。
+* **預覽**&#x200B;提供符合區段定義之設定檔的編頁清單，讓您比較結果與預期結果。
 
-* **預估** 提供有關區段定義的統計資訊，例如預計對象人數、信賴區間和錯誤標準差。
+* **預估**&#x200B;提供有關區段定義的統計資訊，例如預計對象人數、信賴區間和錯誤標準差。
 
 >[!NOTE]
 >
->若要存取與即時客戶個人檔案資料相關的類似量度，例如特定名稱空間內的個人檔案片段總數和合併的個人檔案數，或整體個人檔案資料存放區，請參閱 [設定檔預覽（預覽範例狀態）端點指南](../../profile/api/preview-sample-status.md)，設定檔API開發人員指南的一部分。
+>若要存取與即時客戶設定檔資料相關的類似量度，例如特定名稱空間或整個設定檔資料存放區的設定檔片段和合併設定檔總數，請參閱設定檔API開發人員指南中的[設定檔預覽（預覽範例狀態）端點指南](../../profile/api/preview-sample-status.md)。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [!DNL Adobe Experience Platform Segmentation Service] API。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)以取得您成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫。
 
 ## 如何產生預估值
 
 當將記錄擷取至設定檔存放區後，設定檔總數增加或減少超過5%，則會觸發取樣工作以更新計數。 資料取樣觸發的方式取決於擷取方法：
 
-* **批次擷取：** 對於批次擷取，在成功將批次擷取到設定檔存放區後15分鐘內，如果符合5%增加或減少臨界值，則會執行工作以更新計數。
-* **串流擷取：** 對於串流資料工作流程，會每小時進行一次檢查，以判斷是否符合增加或減少5%的臨界值。 如果超過100次，系統就會自動觸發工作以更新計數。
+* **批次擷取：**&#x200B;對於批次擷取，在成功將批次擷取到設定檔存放區後15分鐘內，如果達到5%的增加或減少臨界值，則會執行工作以更新計數。
+* **串流擷取：**&#x200B;對於串流資料工作流程，會每小時進行一次檢查，以判斷是否已達到5%的增加或減少臨界值。 如果超過100次，系統就會自動觸發工作以更新計數。
 
 掃描的樣本大小取決於設定檔存放區中的實體總數。 下表顯示這些範例大小：
 
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 ## 建立新的預覽 {#create-preview}
 
-您可以透過向以下發出POST請求來建立新的預覽 `/preview` 端點。
+您可以對`/preview`端點發出POST要求，以建立新的預覽。
 
 >[!NOTE]
 >
@@ -81,9 +81,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `predicateExpression` | 查詢資料所依據的PQL運算式。 |
-| `predicateType` | 下查詢運算式的述詞型別 `predicateExpression`. 目前此屬性唯一接受的值是 `pql/text`. |
-| `predicateModel` | 的名稱 [!DNL Experience Data Model] 設定檔資料所根據的(XDM)結構描述類別。 |
-| `graphType` | 您要從中取得叢集的圖表型別。 支援的值包括 `none` （不執行身分拼接）和 `pdg` （根據您的私人身分圖表執行身分拼接）。 |
+| `predicateType` | `predicateExpression`下查詢運算式的述詞型別。 目前，這個屬性的唯一接受值為`pql/text`。 |
+| `predicateModel` | 設定檔資料所根據的[!DNL Experience Data Model] (XDM)結構描述類別的名稱。 |
+| `graphType` | 您要從中取得叢集的圖表型別。 支援的值為`none` （不執行身分拼接）和`pdg` （根據您的私人身分圖表執行身分拼接）。 |
 
 **回應**
 
@@ -106,7 +106,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 ## 擷取特定預覽的結果 {#get-preview}
 
-您可以透過向「 」發出GET請求來擷取有關特定預覽的詳細資訊 `/preview` 端點並在請求路徑中提供預覽ID。
+您可以向`/preview`端點發出GET要求，並在要求路徑中提供預覽ID，以擷取特定預覽的詳細資訊。
 
 **API格式**
 
@@ -116,7 +116,7 @@ GET /preview/{PREVIEW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 此 `previewId` 要擷取的預覽值。 |
+| `{PREVIEW_ID}` | 您要擷取之預覽的`previewId`值。 |
 
 **要求**
 
@@ -179,11 +179,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `results` | 實體ID及其相關身分的清單。 提供的連結可用於透過以下方式查詢指定的實體： [設定檔存取API端點](../../profile/api/entities.md). |
+| `results` | 實體ID及其相關身分的清單。 提供的連結可以使用[設定檔存取API端點](../../profile/api/entities.md)來查詢指定的實體。 |
 
 ## 擷取特定估算工作的結果 {#get-estimate}
 
-建立預覽作業後，您可以使用其 `previewId` 在GET請求的路徑中 `/estimate` 端點可檢視關於區段定義的統計資訊，包括預計對象人數、信賴區間和錯誤標準差。
+建立預覽工作後，您可以在GET要求至`/estimate`端點的路徑中使用其`previewId`來檢視有關區段定義的統計資訊，包括預計對象大小、信賴區間和錯誤標準差。
 
 **API格式**
 
@@ -193,7 +193,7 @@ GET /estimate/{PREVIEW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 只有在建立預覽作業時，才會觸發預估作業，且兩個作業會共用相同的ID值以進行查詢。 具體來說，這就是 `previewId` 建立預覽作業時傳回的值。 |
+| `{PREVIEW_ID}` | 只有在建立預覽作業時，才會觸發預估作業，且兩個作業會共用相同的ID值以進行查詢。 具體而言，這是建立預覽作業時傳回的`previewId`值。 |
 
 **要求**
 
@@ -245,8 +245,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 | -------- | ----------- |
 | `estimatedNamespaceDistribution` | 一個物件陣列，顯示區段內依身分名稱空間劃分的設定檔數量。 依名稱空間區分的設定檔總數（加總針對每個名稱空間顯示的值），可能會高於設定檔計數量度，因為一個設定檔可能會與多個名稱空間建立關聯。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。 |
 | `state` | 預覽工作的目前狀態。 狀態將為「RUNNING」，直到處理完成，此時會變成「RESULT_READY」或「FAILED」。 |
-| `_links.preview` | 當 `state` 為「RESULT_READY」，此欄位會提供一個URL來檢視預估值。 |
+| `_links.preview` | 當`state`為「RESULT_READY」時，此欄位會提供一個URL來檢視預估值。 |
 
 ## 後續步驟
 
-閱讀本指南後，您應該更瞭解如何使用分段API來處理預覽和預估。 若要瞭解如何存取與即時客戶設定檔資料相關的量度，例如特定名稱空間內的設定檔片段總數和合併的設定檔總數，或是設定檔資料存放區整體，請造訪 [設定檔預覽(`/previewsamplestatus`)端點指南](../../profile/api/preview-sample-status.md).
+閱讀本指南後，您應該更瞭解如何使用分段API來處理預覽和預估。 若要瞭解如何存取與您的即時客戶設定檔資料相關的量度，例如特定名稱空間內的設定檔片段和合併設定檔總數，或是整體設定檔資料存放區，請造訪[設定檔預覽(`/previewsamplestatus`)端點指南](../../profile/api/preview-sample-status.md)。

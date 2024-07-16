@@ -40,8 +40,8 @@ Marketo Measure （前身為Bizible）可協助行銷人員深入瞭解哪些行
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 資料集匯出]** | 您正在匯出原始資料集，這些資料集未依對象興趣或資格進行分組或建構。 深入瞭解 [資料集匯出](/help/destinations/destination-types.md#dataset-export-destinations). |
-| 匯出頻率 | **[!UICONTROL 批次]** | 此批次目的地每兩小時會將檔案匯出至Marketo Measure平台。 深入瞭解 [排程資料集匯出](/help/destinations/ui/export-datasets.md#scheduling). |
+| 匯出類型 | **[!UICONTROL 資料集匯出]** | 您正在匯出原始資料集，這些資料集未依對象興趣或資格進行分組或建構。 深入瞭解[資料集匯出](/help/destinations/destination-types.md#dataset-export-destinations)。 |
+| 匯出頻率 | **[!UICONTROL 批次]** | 此批次目的地每兩小時會將檔案匯出至Marketo Measure平台。 深入瞭解[排程資料集匯出](/help/destinations/ui/export-datasets.md#scheduling)。 |
 
 {style="table-layout:auto"}
 
@@ -49,37 +49,37 @@ Marketo Measure （前身為Bizible）可協助行銷人員深入瞭解哪些行
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下區段列出的欄位。
+若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下區段列出的欄位。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
+* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 
-![Marketo Measure目的地的連線至目的地工作流程。](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+![Marketo Measure目的地的連線到目的地工作流程。](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
 ## 將資料集匯出至此目的地 {#export-datasets}
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理和啟用資料集目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-閱讀 [匯出資料集](/help/destinations/ui/export-datasets.md) 教學課程，以取得將資料集匯出至此目的地的詳細指示。
+閱讀[匯出資料集](/help/destinations/ui/export-datasets.md)教學課程，瞭解將資料集匯出至此目的地的詳細指示。
 
 ## 驗證資料匯出 {#exported-data}
 
-若要驗證資料集匯出是否成功，您可以檢查資料集是否已成功匯出至 [Snowflake資料倉儲](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
+若要驗證資料集匯出是否成功，您可以檢查資料集是否已成功匯入[Snowflake資料倉儲](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html)。
 
 ## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，讀取 [資料控管概觀](/help/data-governance/home.md).
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](/help/data-governance/home.md)。

@@ -4,8 +4,8 @@ description: 開始在Adobe Experience Platform中開發您自己的標籤擴充
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 88%
+source-wordcount: '448'
+ht-degree: 71%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../term-updates.md)，以取得術語變更的彙總參考資料。
 
-為協助您著手展開擴充功能的建置，我們將使用 Adobe 工程師提供的開放原始碼架構工具，為您的擴充功能套件建立必要的檔案和檔案結構，您只需負責最重要的工作，也就是撰寫程式碼。
+為了協助您著手展開擴充功能的建置，我們將使用Adobe工程師提供的開放原始碼架構工具，為您的擴充功能套件建立必要的檔案和檔案結構，而您只需負責最重要的工作：撰寫程式碼。
 
 ## 先決條件
 
@@ -61,7 +61,6 @@ npx @adobe/reactor-scaffold
 >* 可以新增多個事件、條件、動作。
 >* 只能有一個組態檢視。
 
-
 ## 後續步驟
 
-* 請遵循 [提交程式概觀](./submit/overview.md) 並準備 [驗證](./submit/upload-and-test.md#validate) 和 [上傳](./submit/upload-and-test.md#integration) 您在標籤生態系統中測試的擴充功能。
+* 遵循[提交程式概述](./submit/overview.md)，並準備[驗證](./submit/upload-and-test.md#validate)和[上傳](./submit/upload-and-test.md#integration)您的擴充功能，以便在標籤生態系統中進行測試。

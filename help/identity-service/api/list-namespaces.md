@@ -33,7 +33,7 @@ curl -X GET \
 
 **回應**
 
-回應包括物件陣列，每個物件代表可用的名稱空間。 具有「」的名稱空間[!UICONTROL 自訂]「 」的值[!UICONTROL false]&quot;是標準名稱空間，而具有&quot;[!UICONTROL 自訂]「 」的值[!UICONTROL true]&quot;是您的組織建立的名稱空間。
+回應包括物件陣列，每個物件代表可用的名稱空間。 「[!UICONTROL 自訂]」值為「[!UICONTROL false]」的名稱空間是標準名稱空間，而「[!UICONTROL 自訂]」值為「[!UICONTROL true]」的名稱空間是貴組織建立的名稱空間。
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ curl -X GET \
 
 ## 後續步驟
 
-繼續進行下一個教學課程： [建立自訂名稱空間](./create-custom-namespace.md)
+繼續進行下一個教學課程，以[建立自訂名稱空間](./create-custom-namespace.md)

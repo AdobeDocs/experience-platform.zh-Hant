@@ -5,7 +5,7 @@ exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 76%
+ht-degree: 72%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 擴充功能開發人員不斷新增功能至其擴充功能，也經常修正錯誤。這些更新會封裝成新版本的擴充功能，並可在擴充功能目錄中提供作為升級版本。
 
@@ -25,7 +25,7 @@ ht-degree: 76%
 
 ## 升級通知
 
-當您已安裝至屬性的擴充功能，且目錄中有較新版本時，您會看到 [!UICONTROL 升級] 按鈕時，可瀏覽擴充功能卡上的資訊。
+當您已安裝至屬性的擴充功能，以及目錄中有較新版本時，當您檢視「已安裝擴充功能」頁面時，將會在擴充功能卡上看到[!UICONTROL 升級]按鈕。
 
 您也可以在該擴充功能提供的資源編輯資源時看到通知。
 
@@ -41,11 +41,11 @@ ht-degree: 76%
 
 安裝升級和第一次安裝擴充功能差不多。
 
-1. 選取 **[!UICONTROL 升級]** 前往 [!UICONTROL 擴充功能組態] 畫面。
+1. 選取&#x200B;**[!UICONTROL 升級]**&#x200B;以移至[!UICONTROL 擴充功能組態]畫面。
 1. 依需求變更任何設定。
 1. 選取「**[!UICONTROL 儲存]**」。
 
-在您點選之前，實際上並不會執行升級作業 **[!UICONTROL 儲存]**. 在此動作之前，您可以隨時選取 [!UICONTROL 取消] 並繼續使用目前安裝的版本。 選取 **[!UICONTROL 儲存]** 無法復原。
+在您點選&#x200B;**[!UICONTROL 儲存]**&#x200B;之前，實際上並不會執行升級。 在此之前的任何時間，您都可以選取[!UICONTROL 取消]，並繼續使用目前安裝的版本。 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;後即無法復原。
 
 如果您的程式庫處於 `Approved` 或 `Submitted` 狀態，無法升級擴充功能。因下一個版本必須包含新的擴充功能版本。若為處於 `Approved` 或 `Submitted` 狀態的程式庫，下一個版本為生產版本。該版本會失敗，因未包含最新版本，因此工作流程是先發佈或拒絕處於 `Approved` 或 `Submitted` 狀態的程式庫，_再_&#x200B;升級擴充功能。
 
@@ -55,7 +55,7 @@ ht-degree: 76%
 
 除此之外，新增升級的擴充功能至程式庫，也就像[新增其他變更](../../publishing/libraries.md)至程式庫一樣。
 
-從 [!UICONTROL 編輯程式庫] 畫面，您可使用&quot;[!UICONTROL 新增所有變更的資源]」按鈕，或者您可以使用「[!UICONTROL 新增資源]」按鈕，並自行選取升級版擴充功能。
+在[!UICONTROL 編輯程式庫]畫面中，您可以使用「[!UICONTROL 新增所有變更的資源]」按鈕，也可以使用「[!UICONTROL 新增資源]」按鈕並自行選取升級版擴充功能。
 
 >[!TIP]
 >

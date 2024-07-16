@@ -23,20 +23,20 @@ Adobe Experience Platform Web SDK支援Interactive Advertising Bureau Transparen
 
 若要使用IAB TCF 2.0實作Web SDK，您必須實際瞭解Experience Data Model (XDM)和Experience事件。 開始之前，請檢閱下列檔案：
 
-- [Experience Data Model (XDM)系統概覽](../../../xdm/home.md)：標準化和互通性是Adobe Experience Platform背後的重要概念。 [!DNL Experience Data Model (XDM)]由Adobe推動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
+- [Experience Data Model (XDM)系統概覽](../../../xdm/home.md)：標準化和互用性是Adobe Experience Platform背後的重要概念。 [!DNL Experience Data Model (XDM)]是標準化客戶體驗資料，並為客戶體驗管理定義結構描述的工作，由Adobe驅動。
 
 ## Experience Platform整合
 
 若要使用SDK將同意資料傳送至Adobe Experience Platform，須符合下列條件：
 
-- 其結構描述基礎的資料集 [!DNL XDM Individual Profile] 類別並包含TCF 2.0同意欄位，這些欄位已啟用以用於中 [!DNL Real-Time Customer Profile].
+- 資料集的結構描述是以[!DNL XDM Individual Profile]類別為基礎，並包含已啟用於[!DNL Real-Time Customer Profile]中使用的TCF 2.0同意欄位。
 - 使用Platform設定的資料流以及上述已啟用設定檔的資料集。
 
-請參考以下指南： [符合TCF 2.0](../../../landing/governance-privacy-security/consent/iab/overview.md) 以取得建立所需資料集和資料流的指示。
+請參閱[TCF 2.0規範](../../../landing/governance-privacy-security/consent/iab/overview.md)的指南，瞭解建立必要資料集和資料流的說明。
 
 ## Audience Manager整合
 
-Adobe Audience Manager (AAM)支援IAB TCF 2.0，可讓您評估、尊重客戶的隱私權選擇，並將其轉寄給下游合作夥伴。 <!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
+Adobe Audience Manager (AAM)支援IAB TCF 2.0，可讓您評估、尊重客戶的隱私權選擇，並將其轉寄給下游合作夥伴。<!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
 
 >[!TIP]
 >
@@ -48,10 +48,10 @@ Adobe Audience Manager (AAM)支援IAB TCF 2.0，可讓您評估、尊重客戶�
 
 若要收集事件的同意資訊，需具備下列條件：
 
-- 資料集根據 [!DNL XDM Experience Event] 類別，具有 [!DNL Experience Event] 隱私權結構欄位群組。
-- 使用設定的資料流 [!DNL XDM Experience Event] 以上資料集。
+- 以[!DNL XDM Experience Event]類別為基礎，具有[!DNL Experience Event]隱私權結構描述欄位群組的資料集。
+- 使用上述[!DNL XDM Experience Event]資料集設定的資料流。
 
-如需如何將XDM體驗事件轉換為Analytics點選的詳細資訊，請參閱 [使用Web SDK傳送資料至Adobe Analytics](/help/web-sdk/use-cases/adobe-analytics.md).
+如需如何將XDM Experience事件轉換為Analytics點選的詳細資訊，請參閱[使用Web SDK傳送資料至Adobe Analytics](/help/web-sdk/use-cases/adobe-analytics.md)。
 
 ## Adobe Experience Platform Web SDK整合
 
@@ -65,25 +65,25 @@ Adobe Audience Manager (AAM)支援IAB TCF 2.0，可讓您評估、尊重客戶�
 
 若尚未儲存客戶的同意偏好設定，則使用預設同意。 這表示預設同意選項可控制Adobe Experience Platform Web SDK的行為，並根據客戶的地區變更。
 
-例如，若您的客戶不在一般資料保護規範(GDPR)的管轄範圍內，則預設同意可設為 `in`，但在GDPR的司法權區內，預設同意可設為 `pending`. 您的同意管理平台(CMP)可能會偵測客戶的區域並提供標幟 `gdprApplies` 至IAB TCF 2.0。此旗標可用於設定預設同意。 另請參閱 [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) 以取得詳細資訊。
+例如，如果您的客戶不在一般資料保護規範(GDPR)的管轄範圍內，則預設同意可設為`in`，但在GDPR的管轄範圍內，預設同意可設為`pending`。 您的同意管理平台(CMP)可能會偵測客戶的區域，並為IAB TCF 2.0提供標幟`gdprApplies`。此旗標可用於設定預設同意。 如需詳細資訊，請參閱[`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md)。
 
 ### 變更時設定同意
 
-Adobe Experience Platform Web SDK具有 `setConsent` 命令，使用IAB TCF 2.0將客戶的同意偏好設定傳達給所有Adobe服務。如果您正在與Real-Time CDP整合，這會更新客戶的設定檔。 如果您正在與Audience Manager整合，這會更新客戶的資訊。 呼叫此專案也會設定具有完全或完全不同同意偏好設定的Cookie，該偏好設定會控制是否允許傳送未來的體驗事件。 其目的是每當同意變更時，就會呼叫此動作。 日後載入頁面時，系統會讀取Edge Network同意Cookie，判斷是否可傳送Experience事件，以及是否可設定身分識別Cookie。
+Adobe Experience Platform Web SDK有`setConsent`命令，可使用IAB TCF 2.0將客戶的同意偏好設定傳達給所有Adobe服務。如果您正在與Real-Time CDP整合，這會更新客戶的設定檔。 如果您正在與Audience Manager整合，這會更新客戶的資訊。 呼叫此專案也會設定具有完全或完全不同同意偏好設定的Cookie，該偏好設定會控制是否允許傳送未來的體驗事件。 其目的是每當同意變更時，就會呼叫此動作。 日後載入頁面時，系統會讀取Edge Network同意Cookie，判斷是否可傳送Experience事件，以及是否可設定身分識別Cookie。
 
 與Audience Manager的IAB TCF 2.0整合類似，Edge Network會在客戶針對下列用途提供明確同意後提供同意：
 
-- **目的1：** 儲存和/或存取裝置上的資訊
-- **目的10：** 開發和改善產品
-- **特殊用途1：** 確保安全性、防止欺詐和除錯。 （根據IAB TCF法規，一律同意）
-- **Adobe廠商許可權：** 同意進行Adobe（廠商565）
+- **用途1：**&#x200B;儲存和/或存取裝置上的資訊
+- **用途10：**&#x200B;開發和改進產品
+- **特殊用途1：**&#x200B;確保安全性、防止欺詐和偵錯。 （根據IAB TCF法規，一律同意）
+- **Adobe廠商許可權：** Adobe的同意（廠商565）
 
-如需詳細資訊，請參閱 `setConsent` 命令，請閱讀上專屬的Web SDK檔案 [setConsent](../../../web-sdk/commands/setconsent.md).
+如需`setConsent`命令的詳細資訊，請閱讀[setConsent](../../../web-sdk/commands/setconsent.md)上的專用Web SDK檔案。
 
 ### 新增同意至體驗事件
 
-Adobe Experience Platform Web SDK具有 [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) 收集體驗事件的命令。 如果您正在與Experience Event或Adobe Analytics整合，並且想要瞭解每個體驗事件的同意偏好設定，請將同意資訊新增至每個 `sendEvent` 命令。
+Adobe Experience Platform Web SDK有[`sendEvent`](/help/web-sdk/commands/sendevent/overview.md)個命令可收集體驗事件。 如果您要與Experience Events或Adobe Analytics整合，並且想要每個體驗事件的同意偏好設定，請為每個`sendEvent`命令新增同意資訊。
 
 ## 後續步驟
 
-您已基本瞭解IAB透明與同意架構2.0，請參閱其中一份使用IAB TCF 2.0的指南 [含標籤](./with-tags.md) 或 [沒有標籤](./without-tags.md).
+現在您已基本瞭解IAB透明與同意架構2.0，請參閱其中一份使用含標籤](./with-tags.md)的IAB TCF 2.0 [或不含標籤的[的指南](./without-tags.md)。

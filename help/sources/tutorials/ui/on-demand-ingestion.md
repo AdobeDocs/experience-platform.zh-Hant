@@ -31,21 +31,21 @@ ht-degree: 0%
 
 本檔案需要您實際瞭解下列Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
 * [資料流](../../../dataflows/home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流可跨不同服務進行設定，有助於將資料從來源聯結器移至目標資料集、身分服務和即時客戶個人檔案，以及移至目的地。
-* [沙箱](../../../sandboxes/home.md)：Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
+* [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 隨選建立資料流 {#create-a-dataflow-on-demand}
 
-導覽至 *[!UICONTROL 資料流]* 「來源」工作區的標籤。 從這裡，尋找您要隨選執行的資料流，然後選取省略符號(**`...`**)。
+導覽至來源工作區的&#x200B;*[!UICONTROL 資料流程]*&#x200B;標籤。 從這裡，尋找您要隨選執行的資料流，然後選取資料流名稱旁邊的省略符號(**`...`**)。
 
 ![來源工作區中的資料流清單。](../../images/tutorials/on-demand/select-dataflow.png)
 
-接下來，選取 **[!UICONTROL 隨選執行]** 從出現的下拉式功能表中。
+接著，從出現的下拉式功能表中選取&#x200B;**[!UICONTROL 隨選執行]**。
 
-![已選取隨選執行選項的下拉式功能表。](../../images/tutorials/on-demand/run-on-demand.png)
+![已選取[隨選執行]選項的下拉式功能表。](../../images/tutorials/on-demand/run-on-demand.png)
 
-設定隨選擷取的排程。 選取 **[!UICONTROL 擷取開始時間]**，則 **[!UICONTROL 日期範圍開始時間]**，以及 **[!UICONTROL 日期範圍結束時間]**.
+設定隨選擷取的排程。 選取&#x200B;**[!UICONTROL 擷取開始時間]**、**[!UICONTROL 日期範圍開始時間]**&#x200B;和&#x200B;**[!UICONTROL 日期範圍結束時間]**。
 
 | 正在排程設定 | 說明 |
 | --- | --- |
@@ -53,18 +53,18 @@ ht-degree: 0%
 | [!UICONTROL 日期範圍開始時間] | 將會從中擷取資料的最早日期和時間。 |
 | [!UICONTROL 日期範圍結束時間] | 擷取資料的日期和時間，截止日期為。 |
 
-選取 **[!UICONTROL 排程]** 並提供一些時間，讓您的隨選資料流觸發。
+選取「**[!UICONTROL 排程]**」，並等待一段時間讓您的隨選資料流觸發。
 
 ![隨選擷取的排程設定視窗。](../../images/tutorials/on-demand/configure-schedule.png)
 
-選取您的資料流名稱以檢視您的資料流活動。 您將在這裡看到已處理的資料流執行清單。 選取資料流執行，然後選取 **[!UICONTROL 重試]** 從右側邊欄重新嘗試擷取所選的資料流執行反複專案。
+選取您的資料流名稱以檢視您的資料流活動。 您將在這裡看到已處理的資料流執行清單。 選取資料流執行，然後從右側邊欄選取&#x200B;**[!UICONTROL 重試]**，以重試選取的資料流執行反複專案的擷取。
 
-![針對所選資料流執行的已處理流程清單。](../../images/tutorials/on-demand/processed.png)
+![所選資料流的已處理資料流執行清單。](../../images/tutorials/on-demand/processed.png)
 
-選取 **[!UICONTROL 已排程]** 檢視排程供未來內嵌使用的資料流執行清單。
+選取&#x200B;**[!UICONTROL 已排程]**，以檢視排程供未來內嵌的資料流執行清單。
 
-![針對所選資料流執行的排程流程清單。](../../images/tutorials/on-demand/scheduled.png)
+![所選資料流的排程資料流執行清單。](../../images/tutorials/on-demand/scheduled.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您已瞭解如何針對現有來源資料流建立依需求執行的流程。 如需有關來源的詳細資訊，請閱讀 [來源概觀](../../home.md)
+閱讀本檔案後，您已瞭解如何針對現有來源資料流建立依需求執行的流程。 如需來源的詳細資訊，請閱讀[來源概觀](../../home.md)

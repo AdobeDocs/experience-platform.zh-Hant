@@ -1,6 +1,6 @@
 ---
 solution: Experience Platform
-title: 使用API的邊緣細分
+title: 使用API的Edge區段
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用邊緣區段的範例。
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
@@ -15,29 +15,29 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->以下檔案說明如何使用API執行邊緣細分。 如需使用UI執行邊緣區段的資訊，請參閱 [邊緣分段UI指南](../ui/edge-segmentation.md).
+>以下檔案說明如何使用API執行邊緣細分。 如需使用UI執行邊緣區段的資訊，請參閱[邊緣區段UI指南](../ui/edge-segmentation.md)。
 >
->邊緣區段現在可供所有Platform使用者普遍使用。 如果您在Beta版期間建立邊緣區段定義，這些區段定義仍可繼續運作。
+>Edge區段現在可供所有Platform使用者普遍使用。 如果您在Beta版期間建立邊緣區段定義，這些區段定義仍可繼續運作。
 
-邊緣區段能讓您在Adobe Experience Platform的邊緣即時評估區段定義，啟用相同頁面和下一頁個人化使用案例。
+Edge區段能讓您在Adobe Experience Platform的邊緣即時評估區段定義，啟用相同頁面和下一頁個人化使用案例。
 
 >[!IMPORTANT]
 >
 > 邊緣資料將會儲存在距離收集地點最近的邊緣伺服器位置，而且可能會儲存在指定為Adobe Experience Platform資料中心中心（或主體）以外的位置。
 >
-> 此外，邊緣區段引擎只會處理有以下情況的邊緣請求： **一** 主要標籤的身分，這與非edge型的主要身分一致。
+> 此外，邊緣區段引擎將只處理邊緣上有&#x200B;**one**&#x200B;主要標籤身分的請求，這與非邊緣型主要身分一致。
 
 ## 快速入門
 
-這份開發人員指南需要您實際瞭解各種 [!DNL Adobe Experience Platform] 邊緣細分涉及的服務。 在開始本教學課程之前，請先檢閱下列服務的檔案：
+此開發人員指南需要深入瞭解與邊緣細分相關的各種[!DNL Adobe Experience Platform]服務。 在開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者個人檔案。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您從建立對象 [!DNL Real-Time Customer Profile] 資料。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織客戶體驗資料。
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md)：可讓您從[!DNL Real-Time Customer Profile]資料建立對象。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織客戶體驗資料的標準化架構。
 
-為了成功呼叫任何Experience Platform API端點，請閱讀以下指南： [Platform API快速入門](../../landing/api-guide.md) 以瞭解必要的標頭以及如何讀取範例API呼叫。
+為了成功呼叫任何Experience Platform API端點，請閱讀[Platform API快速入門](../../landing/api-guide.md)的指南，瞭解必要的標頭以及如何讀取範例API呼叫。
 
-## 邊緣細分查詢型別 {#query-types}
+## Edge區段查詢型別 {#query-types}
 
 為了使用邊緣區段來評估區段，查詢必須符合以下准則：
 
@@ -46,33 +46,33 @@ ht-degree: 1%
 | 單一事件 | 任何會參照沒有時間限制的單一傳入事件的區段定義。 | 將專案新增至購物車的使用者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
 | 單一設定檔 | 任何參考單一設定檔屬性的區段定義 | 美國居民。 | `homeAddress.countryCode = "US"` |
 | 參考設定檔的單一事件 | 任何參考一或多個設定檔屬性以及沒有時間限制的單一傳入事件的區段定義。 | 居住在美國的人造訪了首頁。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| 否定具有設定檔屬性的單一事件 | 任何參考已否定單一傳入事件和一個或多個設定檔屬性的區段定義 | 居住在美國且擁有 **非** 造訪了首頁。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
+| 否定具有設定檔屬性的單一事件 | 任何參考已否定單一傳入事件和一個或多個設定檔屬性的區段定義 | 住在美國且&#x200B;**未**&#x200B;造訪過首頁的人。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | 時間範圍內的單一事件 | 任何參照一段時間內單一傳入事件的區段定義。 | 過去24小時內造訪過首頁的人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
 | 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | 居住在美國的人在過去24小時內瀏覽了首頁。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
-| 在時間範圍內否定具有設定檔屬性的單一事件 | 任何區段定義，會參照一或多個設定檔屬性，以及一段時間內否定單一傳入事件。 | 居住在美國且擁有 **非** 在過去24小時內造訪了首頁。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)]))` |
-| 24小時時間範圍內的頻率事件 | 任何分段定義，會參照在24小時之時間範圍內發生特定次數的事件。 | 造訪首頁的人 **至少** 過去24小時內5次。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 在24小時時間範圍內具有設定檔屬性的頻率事件 | 任何區段定義，會參照一或多個設定檔屬性，以及在24小時之時間範圍內發生特定次數的事件。 | 造訪首頁的美國人 **至少** 過去24小時內5次。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 在24小時時間範圍內具有設定檔的否定頻率事件 | 任何區段定義，會參照一或多個設定檔屬性，以及在24小時之時間範圍內發生特定次數之否定事件。 | 尚未造訪首頁的人 **更多** 在過去24小時內超過五次。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| 24小時內時間設定檔中有多個傳入點選 | 任何會參照24小時內發生之多個事件的區段定義。 | 造訪過首頁的人 **或** 在過去24小時內造訪過結帳頁面。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| 在24小時時間範圍內有多個具有設定檔的事件 | 任何區段定義，會參照在24小時之時間範圍內發生的一或多個設定檔屬性和多個事件。 | 造訪首頁的美國人 **和** 在過去24小時內造訪過結帳頁面。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| 在時間範圍內否定具有設定檔屬性的單一事件 | 任何區段定義，會參照一或多個設定檔屬性，以及一段時間內否定單一傳入事件。 | 居住在美國且&#x200B;**不**&#x200B;的人在過去24小時內造訪了首頁。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)]))` |
+| 24小時時間範圍內的頻率事件 | 任何分段定義，會參照在24小時之時間範圍內發生特定次數的事件。 | 過去24小時內至少造訪過首頁&#x200B;**5次的人**。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 在24小時時間範圍內具有設定檔屬性的頻率事件 | 任何區段定義，會參照一或多個設定檔屬性，以及在24小時之時間範圍內發生特定次數的事件。 | 過去24小時內至少造訪過首頁&#x200B;**5次的美國人**。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
+| 在24小時時間範圍內具有設定檔的否定頻率事件 | 任何區段定義，會參照一或多個設定檔屬性，以及在24小時之時間範圍內發生特定次數之否定事件。 | 過去24小時內未造訪過首頁&#x200B;**超過**&#x200B;五次的人。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
+| 24小時內時間設定檔中有多個傳入點選 | 任何會參照24小時內發生之多個事件的區段定義。 | 造訪首頁&#x200B;**或**&#x200B;的人在過去24小時內造訪了結帳頁面。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
+| 在24小時時間範圍內有多個具有設定檔的事件 | 任何區段定義，會參照在24小時之時間範圍內發生的一或多個設定檔屬性和多個事件。 | 來自美國的人員在過去24小時內造訪了首頁&#x200B;**和**&#x200B;造訪了結帳頁面。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
 | 區段區段 | 包含一或多個批次或串流區段的任何區段定義。 | 居住在美國且處於「現有區段」區段的人員。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
 | 參考地圖的查詢 | 任何參照屬性對應的區段定義。 | 已根據外部區段資料新增至購物車的使用者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
 
-此外，區段 **必須** 繫結至在edge上作用中的合併原則。 如需有關合併原則的詳細資訊，請參閱 [合併原則指南](../../profile/api/merge-policies.md).
+此外，區段&#x200B;**必須**&#x200B;繫結至邊緣上作用中的合併原則。 如需有關合併原則的詳細資訊，請參閱[合併原則指南](../../profile/api/merge-policies.md)。
 
-區段定義會 **非** 在下列情況下啟用邊緣分段：
+在下列情況下，區段定義將&#x200B;**不會**&#x200B;啟用邊緣分段：
 
-- 區段定義包含單一事件和 `inSegment` 事件。
-   - 但是，如果區段包含在 `inSegment` 事件只是設定檔，區段定義 **將** 啟用邊緣區段。
+- 區段定義包含單一事件和`inSegment`事件的組合。
+   - 但是，如果`inSegment`事件中包含的區段僅為設定檔，則區段定義&#x200B;**將**&#x200B;啟用邊緣分段。
 - 區段定義會使用「忽略年份」作為其時間限制的一部分。
 
 ## 擷取所有已啟用邊緣細分的區段
 
-您可以透過向以下網站發出GET請求，擷取貴組織內所有啟用邊緣劃分的區段清單： `/segment/definitions` 端點。
+您可以向`/segment/definitions`端點發出GET要求，擷取貴組織內所有啟用邊緣劃分的區段清單。
 
 **API格式**
 
-若要擷取已啟用邊緣細分的區段，您必須包含查詢引數 `evaluationInfo.synchronous.enabled=true` 在請求路徑中。
+若要擷取為邊緣細分啟用的區段，您必須在請求路徑中包含查詢引數`evaluationInfo.synchronous.enabled=true`。
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -91,7 +91,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回組織中已啟用邊緣區段的一系列區段。 有關傳回的區段定義的詳細資訊，請參閱 [區段定義端點指南](./segment-definitions.md).
+成功的回應會傳回組織中已啟用邊緣區段的一系列區段。 在[區段定義端點指南](./segment-definitions.md)中找到有關傳回的區段定義的詳細資訊。
 
 ```json
 {
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## 建立已啟用邊緣分段的區段
 
-您可以透過向以下發出POST請求，建立已啟用邊緣劃分的區段： `/segment/definitions` 符合下列任一專案的端點： [上面列出的邊緣區段查詢型別](#query-types).
+您可以對符合上述[邊緣劃分查詢型別](#query-types)之一的`/segment/definitions`端點發出POST要求，以建立已啟用邊緣劃分的區段。
 
 **API格式**
 
@@ -192,7 +192,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->以下範例是建立區段的標準請求。 如需建立區段定義的詳細資訊，請參閱以下教學課程： [建立區段](../tutorials/create-a-segment.md).
+>以下範例是建立區段的標準請求。 如需建立區段定義的詳細資訊，請閱讀[建立區段](../tutorials/create-a-segment.md)的教學課程。
 
 ```shell
 curl -X POST \
@@ -274,7 +274,7 @@ curl -X POST \
 
 現在您知道如何建立啟用邊緣細分的區段，就能使用它們來啟用相同頁面和下一頁個人化使用案例。
 
-若要瞭解如何使用Adobe Experience Platform使用者介面執行類似動作及使用區段，請造訪 [區段產生器使用手冊](../ui/segment-builder.md).
+若要瞭解如何使用Adobe Experience Platform使用者介面執行類似的動作並處理區段，請造訪[區段產生器使用手冊](../ui/segment-builder.md)。
 
 ## 附錄
 

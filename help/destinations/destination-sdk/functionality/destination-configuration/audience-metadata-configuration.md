@@ -15,9 +15,9 @@ ht-degree: 3%
 
 Destination SDK提供的工具，可用於以程式設計方式建立、更新或刪除目的地平台中的對象。
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或請參閱操作說明指南 [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration).
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[設定選項](../configuration-options.md)檔案中的圖表，或參閱如何[使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)的指南。
 
-您可以透過以下方式設定對象中繼資料範本： `/authoring/audience-templates` 端點。 建立您的對象中繼資料設定後，您可以使用 `/authoring/destinations` 端點以設定 `audienceMetadataConfig` 區段。 本節將說明目的地應將哪些對象中繼資料對應至您的對象範本。
+您可以透過`/authoring/audience-templates`端點設定對象中繼資料範本。 建立您的對象中繼資料設定後，您可以使用`/authoring/destinations`端點來設定`audienceMetadataConfig`區段。 本節將說明目的地應將哪些對象中繼資料對應至您的對象範本。
 
 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
 
@@ -28,7 +28,7 @@ Destination SDK提供的工具，可用於以程式設計方式建立、更新�
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -54,10 +54,10 @@ Destination SDK提供的工具，可用於以程式設計方式建立、更新�
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | 布林值 | 指示是否 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目的地啟用工作流程中的值應為Experience Platform對象名稱。 |
-| `mapExperiencePlatformSegmentId` | 布林值 | 指示是否 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目的地啟用工作流程中的值應為Experience Platform的受眾ID。 |
-| `mapUserInput` | 布林值 | 啟用或停用使用者輸入 [[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling) 目標啟用工作流程中的值。 如果設為 `true`， `audienceTemplateId` 無法出現。 |
-| `audienceTemplateId` | 字串 | 此 `instanceId` 的 [對象中繼資料範本](../../metadata-api/create-audience-template.md) 用於您的目的地。 |
+| `mapExperiencePlatformSegmentName` | 布林值 | 指出目的地啟用工作流程中的[[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling)值是否應為Experience Platform對象名稱。 |
+| `mapExperiencePlatformSegmentId` | 布林值 | 指出目的地啟用工作流程中的[[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling)值是否應為Experience Platform的受眾識別碼。 |
+| `mapUserInput` | 布林值 | 啟用或停用目的地啟用工作流程中[[!UICONTROL 對應ID]](../../../ui/activate-segment-streaming-destinations.md#scheduling)值的使用者輸入。 若設為`true`，則無法顯示`audienceTemplateId`。 |
+| `audienceTemplateId` | 字串 | [對象中繼資料範本](../../metadata-api/create-audience-template.md)的`instanceId`用於您的目的地。 |
 
 {style="table-layout:auto"}
 

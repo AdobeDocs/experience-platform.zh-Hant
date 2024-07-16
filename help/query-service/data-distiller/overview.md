@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # 資料Distiller概觀
 
-Data Distiller是一套產品，其中包括Adobe Experience Platform的部分功能。 使用Data Distiller，您可以透過在查詢服務中執行批次查詢，針對即時客戶設定檔或分析使用案例執行擷取後資料準備（例如清理、整形和操作）。 您對Data Distiller的使用取決於您對平台型應用程式的權益。
+資料Distiller是一套產品，其中包括Adobe Experience Platform的部分功能。 透過資料Distiller，您可以透過在查詢服務中執行批次查詢，為即時客戶個人檔案或分析使用案例執行擷取後資料準備（例如清理、塑造和操控）。 您對Data Distiller的使用取決於您對平台型應用程式的權益。
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}
@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## 護欄
 
-請參閱 [查詢服務護欄](../guardrails.md) 有關與您的授權許可權相關之查詢服務資料預設使用限制的檔案。
+請參閱[查詢服務護欄](../guardrails.md)檔案，瞭解與授權許可權相關的查詢服務資料預設使用限制。
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

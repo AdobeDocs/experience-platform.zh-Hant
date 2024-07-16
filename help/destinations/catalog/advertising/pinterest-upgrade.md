@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->如果您的組織已設定資料流，讓資料在2023年11月16日（新日期之前）匯出至Pinterest，則您會套用此頁面上的客戶動作專案 **[!UICONTROL pinterest]** 使用最新Pinterest API的目的地已新增至目的地目錄。
+>如果您的組織已設定資料流，以在2023年11月16日(使用最新Pinterest API的新&#x200B;**[!UICONTROL Pinterest]**&#x200B;目的地新增至目的地目錄的日期)之前將資料匯出至Pinterest，則您會套用此頁面上的客戶動作專案。
 
 ## 發生什麼事？
 
-pinterest已將 [pinterest目的地](/help/destinations/catalog/advertising/pinterest.md) 在Real-Time CDP中。 Adobe已更新目標以使用 [v5廣告商API](https://developers.pinterest.com/docs/getting-started/migration/). 請閱讀本頁面以瞭解您的行動專案，以便順暢地轉換至新的API，而不會中斷您的Pinterest行銷活動。
+pinterest已棄用Real-Time CDP中[Pinterest目的地](/help/destinations/catalog/advertising/pinterest.md)使用的v4廣告商API。 Adobe已更新目的地以使用[v5廣告商API](https://developers.pinterest.com/docs/getting-started/migration/)。 請閱讀本頁面以瞭解您的行動專案，以便順暢地轉換至新的API，而不會中斷您的Pinterest行銷活動。
 
 ## 為什麼會收到通知？
 
@@ -35,22 +35,22 @@ Adobe已發行新的Pinterest目的地卡，此卡會利用Pinterest API v5，�
 
 ### 向Pinterest重新驗證 {#reauthenticate}
 
-1. 前往 **[!UICONTROL 目的地>帳戶]** 並在熒幕上使用篩選器以僅篩選Pinterest目的地。
+1. 移至&#x200B;**[!UICONTROL 目的地>帳戶]**，然後在熒幕上使用篩選器以僅篩選Pinterest目的地。
    ![僅篩選Pinterest帳戶](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. 在 **pinterest** 目的地，選取三點符號……並選取 **[!UICONTROL 編輯詳細資料]**.
-   ![選取編輯詳細資訊](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. 選取 **[!UICONTROL 重新連線OAuth]** 並登入您的Pinterest帳戶。
+2. 在&#x200B;**Pinterest**&#x200B;目的地上，選取三點符號……並選取&#x200B;**[!UICONTROL 編輯詳細資料]**。
+   ![選取編輯詳細資料](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
+3. 選取&#x200B;**[!UICONTROL 重新連線OAuth]**並登入您的Pinterest帳戶。
    ![選取重新連線OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. 移至下節中的行動專案
 
 ### 啟用流向新目的地 {#disable-old-enable-new-flows}
 
-然後，您需要啟用新的資料流  **[!UICONTROL pinterest]** 卡片。
+然後，您需要啟用新&#x200B;**[!UICONTROL Pinterest]**&#x200B;卡的資料流。
 
-1. 前往 **[!UICONTROL 目的地>瀏覽]** 並使用熒幕上的篩選器來篩選 **[!UICONTROL pinterest]** 僅限目的地。
+1. 移至&#x200B;**[!UICONTROL 目的地>瀏覽]**&#x200B;並在熒幕上使用篩選器以僅篩選&#x200B;**[!UICONTROL Pinterest]**目的地。
    ![僅在「瀏覽」索引標籤中篩選Pinterest資料流程](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. 選取超連結的連線名稱（以上熒幕擷圖範例中的忠誠度行銷活動）至 **[!UICONTROL pinterest]** 目的地並切換 **[!UICONTROL 啟用]** 切換至 **於**.
-   ![針對新連線切換開啟，針對舊連線切換關閉](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+2. 選取超連結的連線名稱（以上熒幕擷圖範例中的「忠誠度促銷活動」）至&#x200B;**[!UICONTROL Pinterest]**&#x200B;目的地，並將&#x200B;**[!UICONTROL 啟用]**&#x200B;切換至&#x200B;**開啟**。
+   ![開啟新連線，並關閉舊連線](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
 
@@ -62,7 +62,7 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 是，請參閱下文：
 
-**2023年11月16日前**：新目的地已準備就緒，您應該會在目錄中看到兩張Pinterest卡片並排，直到Pinterest停止支援舊的v4 API為止。 您目前Pinterest卡片的所有現有資料流都會複製到新目的地。
+**在2023年11月16日前**：新目的地已準備就緒，您應該會在目錄中並排看到兩張Pinterest卡片，直到Pinterest停止支援舊的v4 API為止。 您目前Pinterest卡片的所有現有資料流都會複製到新目的地。
 
 ![新舊的Pinterest目的地並排](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
@@ -75,9 +75,9 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-**最遲於2023年12月15日**： <span class="preview">客戶動作1</span>. 您需要重新向Pinterest進行驗證，以便新卡片連線到Pinterest。 在中檢視完整指示 [本節](#reauthenticate).
+**在2023年12月15日之前**： <span class="preview">客戶動作1</span>。 您需要重新向Pinterest進行驗證，以便新卡片連線到Pinterest。 檢視[本節](#reauthenticate)中的完整指示。
 
-<span class="preview">客戶動作2</span>然後，您必須啟用新卡片中的資料流。 在中檢視完整指示 [本節](#disable-old-enable-new-flows).
+<span class="preview">客戶動作2</span>。然後，您必須啟用新卡片中的資料流。 檢視[本節](#disable-old-enable-new-flows)中的完整指示。
 
 <!--
 
@@ -87,7 +87,7 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 -->
 
-**2024年1月18日之後**： <span class="preview">pinterest已關閉V4廣告商API的存取權。 任何尚未升級至新目的地的Real-Time CDP客戶現在都會發現他們的資料流無法升級至Pinterest目的地。 [向Pinterest重新驗證](#reauthenticate) 和 [啟用資料流](#disable-old-enable-new-flows) 升級至目的地，繼續將行銷活動至Pinterest。</span>
+**在2024年1月18日之後**： <span class="preview">Pinterest已關閉V4廣告商API的存取權。 任何尚未升級至新目的地的Real-Time CDP客戶現在都會發現他們的資料流無法升級至Pinterest目的地。 [重新驗證給Pinterest](#reauthenticate)並[啟用資料流](#disable-old-enable-new-flows)至升級的目的地，以將您的行銷活動恢復到Pinterest。</span>
 
 <!--
 

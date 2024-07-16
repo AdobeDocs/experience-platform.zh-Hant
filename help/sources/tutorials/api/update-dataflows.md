@@ -1,37 +1,37 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；流程服務；更新資料流程
 solution: Experience Platform
-title: 使用流量服務API更新資料流
+title: 使用流程服務API更新資料流程
 type: Tutorial
 description: 本教學課程涵蓋使用流量服務API更新資料流的步驟，包括其名稱、說明和排程。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '603'
 ht-degree: 2%
 
 ---
 
-# 使用流量服務API更新資料流
+# 使用流程服務API更新資料流程
 
-本教學課程涵蓋更新資料流的步驟，包括其基本資訊、排程及使用之對應集 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教學課程涵蓋更新資料流的步驟，包括其基本資訊、排程和使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)的對應集。
 
 ## 快速入門
 
-本教學課程要求您具備有效的流量ID。 如果您沒有有效的流量ID，請從「 」中選擇您選擇的聯結器 [來源概觀](../../home.md) 並依照在嘗試本教學課程之前概述的步驟進行。
+本教學課程要求您具備有效的流量ID。 如果您沒有有效的流量ID，請從[來源概觀](../../home.md)中選取您選擇的聯結器，並依照在嘗試本教學課程之前概述的步驟進行。
 
-本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
+本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
 
 ## 查詢資料流詳細資料
 
-更新資料流的第一步，是使用資料流ID擷取資料流詳細資料。 您可以透過向以下網站發出GET要求，檢視現有資料流的目前詳細資料： `/flows` 端點。
+更新資料流的第一步是使用流量ID擷取資料流詳細資料。 您可以透過向`/flows`端點發出GET要求來檢視現有資料流的目前詳細資料。
 
 **API格式**
 
@@ -41,7 +41,7 @@ GET /flows/{FLOW_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FLOW_ID}` | 唯一 `id` 您要擷取之資料流的值。 |
+| `{FLOW_ID}` | 您要擷取之資料流的唯一`id`值。 |
 
 **要求**
 
@@ -58,7 +58,7 @@ curl -X GET \
 
 **回應**
 
-成功回應會傳回資料流的目前詳細資料，包括其版本、排程和唯一識別碼(`id`)。
+成功的回應會傳回資料流的目前詳細資料，包括其版本、排程和唯一識別碼(`id`)。
 
 ```json
 {
@@ -172,11 +172,11 @@ curl -X GET \
 
 ## 更新資料流
 
-PATCH若要更新資料流的執行排程、名稱和說明，請對 [!DNL Flow Service] API，同時提供您的流量ID、版本以及您要使用的新排程。
+若要更新資料流的執行排程、名稱和說明，請對[!DNL Flow Service] API執行PATCH要求，同時提供您的資料流ID、版本以及您要使用的新排程。
 
 >[!IMPORTANT]
 >
->此 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是您要更新的連線唯一版本。 每次成功更新資料流時，etag值都會隨之更新。
+>發出PATCH要求時需要`If-Match`標頭。 此標頭的值是您要更新之連線的唯一版本。 每次成功更新資料流時，etag值都會更新。
 
 **API格式**
 
@@ -217,13 +217,13 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 定義要更新的流程部分。 |
 | `value` | 您想要用來更新引數的新值。 |
 
 **回應**
 
-成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
+成功的回應會傳回您的流程ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的流量ID。
 
 ```json
 {
@@ -234,7 +234,7 @@ curl -X PATCH \
 
 ## 更新對應
 
-您可以透過向以下專案發出PATCH請求，更新現有資料流的對應集： [!DNL Flow Service] API並為您提供更新的值 `mappingId` 和 `mappingVersion`.
+您可以對[!DNL Flow Service] API發出PATCH要求並為您的`mappingId`和`mappingVersion`提供更新的值，以更新現有資料流的對應集。
 
 **API格式**
 
@@ -271,15 +271,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. |
-| `path` | 定義要更新的流程部分。 在此範例中， `transformations` 正在更新。 |
+| `op` | 用於定義更新資料流所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
+| `path` | 定義要更新的流程部分。 在此範例中，正在更新`transformations`。 |
 | `value.name` | 要更新的屬性名稱。 |
 | `value.params.mappingId` | 用於更新資料流對應集的新對應ID。 |
-| `value.params.mappingVersion` | 與更新後的對應ID相關聯的新對應版本。 |
+| `value.params.mappingVersion` | 與已更新對應ID關聯的新對應版本。 |
 
 **回應**
 
-成功的回應會傳回您的流量ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的流量ID。
+成功的回應會傳回您的流程ID和更新的etag。 您可以透過向[!DNL Flow Service] API發出GET請求來驗證更新，同時提供您的流量ID。
 
 ```json
 {
@@ -290,4 +290,4 @@ curl -X PATCH \
 
 ## 後續步驟
 
-依照本教學課程，您已使用更新資料流的基本資訊、排程和對映集。 [!DNL Flow Service] API。 如需使用來源聯結器的詳細資訊，請參閱 [來源概觀](../../home.md).
+依照本教學課程，您已使用[!DNL Flow Service] API更新資料流的基本資訊、排程和對映集。 如需使用來源聯結器的詳細資訊，請參閱[來源概觀](../../home.md)。

@@ -11,9 +11,9 @@ ht-degree: 2%
 
 ---
 
-# [!UICONTROL 網頁資訊] 資料型別
+# [!UICONTROL 網頁資訊]資料型別
 
-[!UICONTROL 網頁資訊] 是標準的體驗資料模型(XDM)資料型別，可描述透過特定於全球資訊網通道的體驗事件所記錄的資訊，包括網頁、反向連結及/或與頁面上的互動相關的連結。
+[!UICONTROL 網頁資訊]是標準的體驗資料模型(XDM)資料型別，描述透過特定於全球資訊網通道的體驗事件所記錄的資訊，包括網頁、反向連結和/或與頁面上的互動相關的連結。
 
 ![](../images/data-types/web-information.png)
 
@@ -27,5 +27,5 @@ ht-degree: 2%
 
 如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.schema.json)

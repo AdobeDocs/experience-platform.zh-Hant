@@ -4,14 +4,14 @@ description: Adobe Experience Platform中常見Web SDK外掛程式標籤擴充�
 exl-id: e9b05ca5-0efc-426c-855a-5f0ccbfe20da
 source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 4%
+source-wordcount: '47'
+ht-degree: 2%
 
 ---
 
 # 常見Web SDK外掛程式發行說明
 
-## 2022 年 10 月 6 日
+## 2022年10月6日
 
 ### 常見Web SDK外掛程式擴充功能1.0.0
 

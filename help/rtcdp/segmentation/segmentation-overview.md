@@ -11,11 +11,11 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Segmentation Service] 在 [!DNL Real-Time Customer Data Platform]
+# [!DNL Real-Time Customer Data Platform]中的[!DNL Segmentation Service]
 
-[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)可讓您從多個來源取得資料，為客戶帶來協調一致的體驗。 使用可達成提供相關的個人化行銷活動 [!DNL Segmentation Service]，Adobe Experience Platform的一部分。
+[!DNL Adobe Real-Time Customer Data Platform] (Real-Time CDP)可讓您從多個來源取得資料，以便為您的客戶帶來協調且一致的體驗。 使用Adobe Experience Platform的[!DNL Segmentation Service]，部分功能即可提供相關的個人化行銷活動。
 
-Real-Time CDP是以Adobe Experience Platform為建置基礎，並運用許多 [!DNL Experience Platform] 服務與功能。 使用 [!DNL Segmentation Service]，您可將客戶劃分為具有類似特徵的較小群組，藉此提供量身打造的行銷功能。
+Real-Time CDP是以Adobe Experience Platform為建置基礎，並利用許多[!DNL Experience Platform]服務和功能。 使用[!DNL Segmentation Service]，您可以將客戶劃分為具有類似特徵的較小群組，以提供量身打造的行銷。
 
 ## 區段
 
@@ -23,7 +23,7 @@ Real-Time CDP是以Adobe Experience Platform為建置基礎，並運用許多 [!
 
 ## [!DNL Segment Builder]
 
-[!DNL Platform] 可讓您輕鬆建立及存取區段定義，並使用不同的建置區塊來進一步描述您的受眾。 如需如何使用「區段產生器」的詳細資訊，請參閱 [區段產生器指南](./segment-builder-guide.md).
+[!DNL Platform]可讓您輕鬆建立及存取區段定義，並使用不同的建置區塊來進一步描述您的對象。 如需如何使用區段產生器的詳細資訊，請參閱[區段產生器指南](./segment-builder-guide.md)。
 
 ## Customer AI
 
@@ -38,19 +38,19 @@ Real-time Customer Data Platform隨附的Customer AI可讓您在個人層面產�
 * 使用傾向分數的影響因素增強客戶設定檔。
 * 根據影響因素和傾向分數建立客戶的對象。
 
-Customer AI位於 **[!UICONTROL 服務]** 標籤下的 **[!UICONTROL Adobe服務]**.
+Customer AI位於&#x200B;**[!UICONTROL Adobe服務]**&#x200B;下的&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤中。
 
 ![Customer AI位置](../assets/overview/rtcdp-customer-ai.png)
 
 ### Customer AI快速入門
 
-若要開始使用Customer AI，您需要遵循 [資料準備教學課程](../../intelligent-services/data-preparation.md) 並根據您的使用案例設定輸入結構。 接下來，您需要 [設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md). 設定例證後，會產生模型，您可在其中進行 [檢視您的深入分析和分數](../../intelligent-services/customer-ai/user-guide/discover-insights.md). 使用模型產生的資料，您可以建立資料驅動啟動的對象。
+若要開始使用Customer AI，您必須遵循[資料準備教學課程](../../intelligent-services/data-preparation.md)，並根據您的使用案例設定輸入結構描述。 接下來，您需要[設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md)。 設定執行個體後，會產生一個模型，您可在其中[檢視您的見解和分數](../../intelligent-services/customer-ai/user-guide/discover-insights.md)。 使用模型產生的資料，您可以建立資料驅動啟動的對象。
 
-若要進一步瞭解Customer AI，請造訪 [Customer AI概述](../../intelligent-services/customer-ai/overview.md). 此外，以下影片說明Customer AI如何運用AI傾向豐富客戶個人檔案，以及執行客戶細分和目標定位工作。
+若要進一步瞭解Customer AI，請造訪[Customer AI概觀](../../intelligent-services/customer-ai/overview.md)。 此外，以下影片說明Customer AI如何運用AI傾向豐富客戶個人檔案，以及執行客戶細分和目標定位工作。
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
 
 
 ## 後續步驟
 
-閱讀本概述後，您現在應該瞭解Real-Time CDP如何運用 [!DNL Segmentation Service] 增強行銷活動的自訂和個人化。 如需關於的詳細資訊 [!DNL Segmentation Service]，請閱讀 [細分檔案](../../segmentation/home.md).
+閱讀此概覽後，您現在應該瞭解Real-Time CDP如何運用[!DNL Segmentation Service]來增強行銷活動的自訂和個人化。 如需[!DNL Segmentation Service]的詳細資訊，請參閱[分段檔案](../../segmentation/home.md)。

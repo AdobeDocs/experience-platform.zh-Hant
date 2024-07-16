@@ -9,83 +9,83 @@ ht-degree: 3%
 
 ---
 
-# 連線您的 [!DNL Salesforce Service Cloud] 要使用UIExperience Platform的帳戶
+# 使用UI連線您的[!DNL Salesforce Service Cloud]帳戶以Experience Platform
 
-本教學課程提供如何連線至 [!DNL Salesforce Service Cloud] 透過Experience Platform使用者介面將客戶成功資料帶入Adobe Experience Platform。
+本教學課程提供如何使用Experience Platform使用者介面連線您的[!DNL Salesforce Service Cloud]帳戶並將您的客戶成功資料帶入Adobe Experience Platform的步驟。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
-   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構編輯器UI建立自訂結構描述。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+   * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
+   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-如果您已有有效的 [!DNL Salesforce Service Cloud] 連線時，您可以略過本檔案的其餘部分，並繼續進行上的教學課程 [設定資料流讓客戶成功](../../dataflow/customer-success.md)
+如果您已有有效的[!DNL Salesforce Service Cloud]連線，可以略過本檔案的其餘部分，並繼續進行教學課程： [設定資料流以取得客戶成功](../../dataflow/customer-success.md)
 
 ### 收集必要的認證
 
-此 [!DNL Salesforce Service Cloud] 來源支援基本驗證和OAuth2使用者端認證。
+[!DNL Salesforce Service Cloud]來源支援基本驗證和OAuth2使用者端認證。
 
 >[!BEGINTABS]
 
 >[!TAB 基本驗證]
 
-您必須提供下列認證的值，才能連線 [!DNL Salesforce Service Cloud] 使用基本驗證的帳戶。
+您必須提供下列認證的值，才能使用基本驗證連線您的[!DNL Salesforce Service Cloud]帳戶。
 
 | 認證 | 說明 |
 | --- | --- |
-| 環境 URL | 的URL [!DNL Salesforce Service Cloud] 來源執行個體。 |
-| 使用者名稱 | 的使用者名稱 [!DNL Salesforce Service Cloud] 使用者帳戶。 |
-| 密碼 | 的密碼 [!DNL Salesforce Service Cloud] 使用者帳戶。 |
-| 安全性權杖 | 的安全性權杖 [!DNL Salesforce Service Cloud] 使用者帳戶。 |
-| API版本 | （選用）的REST API版本 [!DNL Salesforce Service Cloud] 您正在使用的例項。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0`. 如果此欄位留空，Experience Platform將自動使用最新可用版本。 |
+| 環境 URL | [!DNL Salesforce Service Cloud]來源執行個體的網址。 |
+| 使用者名稱 | [!DNL Salesforce Service Cloud]使用者帳戶的使用者名稱。 |
+| 密碼 | [!DNL Salesforce Service Cloud]使用者帳戶的密碼。 |
+| 安全性權杖 | [!DNL Salesforce Service Cloud]使用者帳戶的安全性權杖。 |
+| API版本 | （選用）您正在使用的[!DNL Salesforce Service Cloud]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform將自動使用最新可用版本。 |
 
-有關驗證的詳細資訊，請參閱 [此 [!DNL Salesforce Service Cloud] 驗證指南](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+如需驗證的詳細資訊，請參閱[此 [!DNL Salesforce Service Cloud] 驗證指南](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm)。
 
 >[!TAB OAuth2使用者端認證]
 
-您必須提供下列認證的值，才能連線 [!DNL Salesforce Service Cloud] 使用OAuth2使用者端認證的帳戶。
+您必須提供下列認證的值，才能使用OAuth2使用者端認證連線您的[!DNL Salesforce Service Cloud]帳戶。
 
 | 認證 | 說明 |
 | --- | --- |
-| 環境 URL | 的URL [!DNL Salesforce Service Cloud] 來源執行個體。 |
-| 用戶端 ID | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce Service Cloud]. |
-| 用戶端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過識別您的應用程式來代表您的帳戶運作。 [!DNL Salesforce Service Cloud]. |
-| API版本 | 的REST API版本 [!DNL Salesforce Service Cloud] 您正在使用的例項。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本 `52`，則您必須輸入值為 `52.0`. 如果此欄位留空，Experience Platform將自動使用最新可用版本。 |
+| 環境 URL | [!DNL Salesforce Service Cloud]來源執行個體的網址。 |
+| 用戶端 ID | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce Service Cloud]識別您的應用程式，以代表您的帳戶運作。 |
+| 用戶端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce Service Cloud]識別您的應用程式，以代表您的帳戶運作。 |
+| API版本 | 您正在使用的[!DNL Salesforce Service Cloud]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，Experience Platform將自動使用最新可用版本。 |
 
-如需為使用OAuth的詳細資訊 [!DNL Salesforce Service Cloud]，閱讀 [[!DNL Salesforce Service Cloud] OAuth授權流程指南](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+如需針對[!DNL Salesforce Service Cloud]使用OAuth的詳細資訊，請參閱OAuth授權流程](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5)的[[!DNL Salesforce Service Cloud] 指南。
 
 >[!ENDTABS]
 
-收集必要的認證後，您可以依照下列步驟連線 [!DNL Salesforce Service Cloud] 要Experience Platform的帳戶。
+收集必要的認證後，您可以依照下列步驟連線您的[!DNL Salesforce Service Cloud]帳戶以Experience Platform。
 
-## 連線您的 [!DNL Salesforce Service Cloud] 帳戶
+## 連線您的[!DNL Salesforce Service Cloud]帳戶
 
-在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-選取 **[!DNL Salesforce Service Cloud]** 在 *[!UICONTROL 客戶成功]* 類別，然後選取 **[!UICONTROL 新增資料]**.
+在&#x200B;*[!UICONTROL 客戶成功]*&#x200B;類別下選取&#x200B;**[!DNL Salesforce Service Cloud]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
 >[!TIP]
 >
->來源目錄中的來源會顯示 **[!UICONTROL 設定]** 選項，當指定的來源尚未擁有已驗證的帳戶時。 一旦驗證帳戶存在，此選項就會變更為 **[!UICONTROL 新增資料]**.
+>當指定的來源尚未具有已驗證的帳戶時，來源目錄中的來源會顯示&#x200B;**[!UICONTROL 設定]**&#x200B;選項。 一旦驗證帳戶存在，此選項就會變更為&#x200B;**[!UICONTROL 新增資料]**。
 
 ![已選取Salesforce Service Cloud來源卡的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/salesforce-service-cloud/catalog.png)
 
-此 **[!UICONTROL 連線到Salesforce Service Cloud]** 頁面便會顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+**[!UICONTROL 連線至Salesforce Service Cloud]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 使用現有帳戶
 
-若要使用現有帳戶，請選取 **[!UICONTROL 現有帳戶]**，然後從顯示的清單中選取所需的帳戶。 完成後，選取 **[!UICONTROL 下一個]** 以繼續進行。
+若要使用現有帳戶，請選取&#x200B;**[!UICONTROL 現有帳戶]**，然後從顯示的清單中選取所需的帳戶。 完成後，選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
 
 ![貴組織中已經存在的已驗證Salesforce Service Cloud帳戶清單。](../../../../images/tutorials/create/salesforce-service-cloud/existing.png)
 
 ### 建立新帳戶
 
-若要建立新帳戶，請選取 **[!UICONTROL 新帳戶]** 並為您的新檔案提供名稱和說明 [!DNL Salesforce Service Cloud] 帳戶。
+若要建立新帳戶，請選取&#x200B;**[!UICONTROL 新帳戶]**，並為您新的[!DNL Salesforce Service Cloud]帳戶提供名稱和描述。
 
-![此介面可讓您提供適當的驗證認證，以建立新的Salesforce Service Cloud帳戶。](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
+![提供適當的驗證認證，您可在其中建立新Salesforce Service Cloud帳戶的介面。](../../../../images/tutorials/create/salesforce-service-cloud/new.png)
 
 接著，選取您要用於新帳戶的驗證型別。
 
@@ -93,32 +93,32 @@ ht-degree: 3%
 
 >[!TAB 基本驗證]
 
-對於基本驗證，請選取 **[!UICONTROL 基本驗證]** 然後提供下列認證的值：
+若要進行基本驗證，請選取&#x200B;**[!UICONTROL 基本驗證]**，然後提供下列認證的值：
 
 * 環境 URL
 * 使用者名稱
 * 密碼
 * API版本（選擇性）
 
-完成後，選取 **[!UICONTROL 連線到來源]**.
+完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**。
 
 ![建立Salesforce帳戶的基本驗證介面。](../../../../images/tutorials/create/salesforce-service-cloud/basic.png)
 
 >[!TAB OAuth2使用者端認證]
 
-針對OAuth 2使用者端認證，選取 **[!UICONTROL OAuth2使用者端認證]** 然後提供下列認證的值：
+針對OAuth 2使用者端認證，請選取&#x200B;**[!UICONTROL OAuth2使用者端認證]**，然後提供下列認證的值：
 
 * 環境 URL
 * 用戶端 ID
 * 用戶端密碼
 * API版本
 
-完成後，選取 **[!UICONTROL 連線到來源]**.
+完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**。
 
-![Salesforce帳戶建立的OAuth介面。](../../../../images/tutorials/create/salesforce-service-cloud/oauth2.png)
+![用於建立Salesforce帳戶的OAuth介面。](../../../../images/tutorials/create/salesforce-service-cloud/oauth2.png)
 
 >[!ENDTABS]
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與的連線， [!DNL Salesforce Service Cloud] 帳戶。 您現在可以繼續進行下一個教學課程及 [設定資料流以將客戶成功資料匯入Experience Platform](../../dataflow/customer-success.md).
+依照本教學課程中的指示，您已建立與[!DNL Salesforce Service Cloud]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，將客戶成功資料匯入Experience Platform](../../dataflow/customer-success.md)。

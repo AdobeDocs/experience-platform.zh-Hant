@@ -18,7 +18,7 @@ ht-degree: 2%
 >title="Intelligent Services 概觀"
 >abstract=""
 
-智慧型服務可讓行銷分析師及從業人員運用客戶體驗使用案例中人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司需求設定專屬預測，而不需要資料科學專業知識。 此外，行銷從業人員可以在以下位置啟用預測： [!DNL Adobe Experience Cloud]， [!DNL Adobe Experience Platform]和第三方應用程式。
+智慧型服務可讓行銷分析師及從業人員運用客戶體驗使用案例中人工智慧和機器學習的強大功能。 這可讓行銷分析人員使用業務層級設定，針對公司需求設定專屬預測，而不需要資料科學專業知識。 此外，行銷從業人員可以在[!DNL Adobe Experience Cloud]、[!DNL Adobe Experience Platform]和第三方應用程式中啟用預測。
 
 下列影片的設計目的是協助您瞭解Intelligent Services。 本影片以商業使用案例範例說明高階工作流程，並概述Attribution AI和Customer AI的功能。
 
@@ -26,7 +26,7 @@ ht-degree: 2%
 
 ## 智慧型服務的優點
 
-Intelligent Services，內建於 [!DNL Adobe Experience Platform]，讓負責客戶體驗的行銷人員能夠存取AI-as-a-service，讓任何人都能輕鬆預測客戶行為、衡量行銷活動的影響，或確保每一筆投資都能獲得更好的回報。 以下列出Intelligent Services提供的一些優點。
+以[!DNL Adobe Experience Platform]為基礎的Intelligent Services可讓負責客戶體驗的行銷人員存取AI-as-a-service，讓任何人都能輕鬆預測客戶行為、衡量行銷活動的影響，或確保每一筆投資都有更好的回報。 以下列出Intelligent Services提供的一些優點。
 
 ### 符合成本效益的上市速度
 
@@ -44,7 +44,7 @@ Adobe擁有AI/ML專業知識，並搭配深入的CXM經驗，而Intelligent Serv
 
 ### 擷取
 
-客戶資料會內嵌並透過上的體驗資料模型(XDM)進行轉換 [!DNL Adobe Experience Platform]. 若要進一步瞭解XDM，請造訪 [XDM概覽](../xdm/home.md).
+客戶資料會在[!DNL Adobe Experience Platform]上透過體驗資料模型(XDM)擷取及轉換。 若要深入瞭解XDM，請造訪[XDM概觀](../xdm/home.md)。
 
 ### 設定
 
@@ -56,8 +56,8 @@ Adobe擁有AI/ML專業知識，並搭配深入的CXM經驗，而Intelligent Serv
 
 ### 採取動作
 
-最後，您可以決定要對預測採取哪些動作，例如消費深入分析、在整個範圍內啟用應用程式 [!DNL Adobe Experience Cloud]，並建置自訂儀表板。
+最後，您可以決定要對預測採取哪些動作，例如消費深入分析、跨[!DNL Adobe Experience Cloud]啟用應用程式，以及建立自訂儀表板。
 
 ## 後續步驟
 
-目前，Intelligent Services提供Attribution AI和Customer AI。 Attribution AI可讓行銷人員聰明地促進跨頻道和行銷活動的行銷效率。 若要進一步瞭解Attribution AI，請造訪 [Attribution AI概觀](./attribution-ai/overview.md). Customer AI可讓行銷人員超個人化客戶體驗。 若要進一步瞭解Customer AI，請造訪 [Customer AI概述](./customer-ai/overview.md).
+目前，Intelligent Services提供Attribution AI和Customer AI。 Attribution AI可讓行銷人員聰明地促進跨頻道和行銷活動的行銷效率。 若要深入瞭解Attribution AI，請瀏覽[Attribution AI概觀](./attribution-ai/overview.md)。 Customer AI可讓行銷人員超個人化客戶體驗。 若要進一步瞭解Customer AI，請造訪[Customer AI總覽](./customer-ai/overview.md)。

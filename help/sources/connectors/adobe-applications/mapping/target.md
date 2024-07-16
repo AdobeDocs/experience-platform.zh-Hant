@@ -5,7 +5,7 @@ description: 瞭解如何將Adobe Target事件欄位對應到體驗資料模型(
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 source-git-commit: 81412493b096264ce7a89e3ca2348edb2dcd1798
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '431'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 0%
 | ------------------------- | -------------------- | ----- |
 | **`id`** | 唯一請求識別碼 |
 | **`dataSource`** | | 設定為所有使用者端的「1」。 |
-| `dataSource._id` | 系統產生的值，無法與要求一併傳入。 | 此資料來源的唯一ID。 這將由個人或建立資料來源的系統來提供。 |
+| `dataSource._id` | 系統產生的值，無法與要求一併傳入。 | 此資料來源的唯一ID。這將由個人或建立資料來源的系統來提供。 |
 | `dataSource.code` | 系統產生的值，無法與要求一併傳入。 | 完整@id的捷徑。 至少可以使用其中一個程式碼或@id。 有時候，此程式碼稱為資料來源整合程式碼。 |
-| `dataSource.tags` | 系統產生的值，無法與要求一併傳入。 | 標籤可用來指出應用程式應如何使用這些別名來解譯指定資料來源所代表的別名。<br><br>範例：<br><ul><li>`isAVID`：代表Analytics訪客ID的資料來源。</li><li>`isCRSKey`：代表應在CRS中作為索引鍵使用的別名的資料來源。</li></ul>標籤會在建立資料來源時設定，但也會在參照特定資料來源時納入管道訊息中。 |
+| `dataSource.tags` | 系統產生的值，無法與要求一併傳入。 | 標籤可用來指出應用程式應如何使用這些別名來解譯指定資料來源所代表的別名。<br><br>範例：<br><ul><li>`isAVID`：代表Analytics訪客ID的資料來源。</li><li>`isCRSKey`：資料來源代表應該用作CRS中金鑰的別名。</li></ul>標籤會在建立資料來源時設定，但也會在參照特定資料來源時納入管道訊息中。 |
 | **`timestamp`** | 事件時間戳記 |
 | **`channel`** | `context.channel` | 僅適用於檢視傳遞。 選項包括「網頁」和「行動裝置」，預設值為「網頁」。 |
 | **`endUserIds`** |
@@ -57,7 +57,7 @@ ht-degree: 0%
 | `experience.target.activities[i].activityEvents` | 包含使用者透過此事件點選的活動事件的詳細資料。 |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
-| `device.type` | 下列屬性之一 `deviceAtlas` （或NULL）： <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
+| `device.type` | `deviceAtlas` （或NULL）的下列屬性之一： <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
 | `device.typeID` | （空字串） |
 | `device.manufacturer` | `deviceAtlas.manufacturer` |
 | `device.model` | `deviceAtlas.model` |

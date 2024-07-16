@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Audience Analysis目的地
 
-此 [!UICONTROL 對象分析] 目的地可讓您擴充Adobe Experience Platform受眾資料至 [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant). 您可以選取要納入產生之擴充資料中的對象。 然後，您便可將對象資格作為維度用於 [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) 報告。
+[!UICONTROL Audience Analysis]目的地可讓您將Adobe Experience Platform對象資料擴充為[Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=zh-Hant)。 您可以選取要納入產生之擴充資料中的對象。 然後，受眾資格便可在[Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html)報表中作為維度使用。
 
 >[!AVAILABILITY]
 >
@@ -28,15 +28,15 @@ ht-degree: 3%
 
 ## 支援的身分
 
-Audience Analysis支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md). 通常會使用Experience CloudID (ECID)。
+Audience Analysis支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。 通常會使用Experience CloudID (ECID)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
-| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](/help/identity-service/features/ecid.md) 以取得詳細資訊。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
+| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
 | extern_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 |
 
 {style="table-layout:auto"}
@@ -47,8 +47,8 @@ Audience Analysis支援下表所述的身分啟用。 進一步瞭解 [身分](/
 
 | 對象來源 | 支援 | 說明 |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform產生的對象 [分段服務](../../../segmentation/home.md). |
-| 自訂上傳 | ✓ (A) | 受眾 [已匯入](../../../segmentation/ui/audience-portal.md#import-audience) 從CSV檔案Experience Platform為。 |
+| [!DNL Segmentation Service] | ✓ (A) | 透過Experience Platform[細分服務](../../../segmentation/home.md)產生的對象。 |
+| 自訂上傳 | ✓ (A) | 對象[從CSV檔案匯入](../../../segmentation/ui/audience-portal.md#import-audience)至Experience Platform。 |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Audience Analysis支援下表所述的身分啟用。 進一步瞭解 [身分](/
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有Audience Analysis目的地中所使用識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 當根據對象評估在Experience Platform中更新設定檔時，聯結器會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -67,44 +67,44 @@ Audience Analysis支援下表所述的身分啟用。 進一步瞭解 [身分](/
 
 >[!IMPORTANT]
 > 
->若要建立目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要建立目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-若要建立此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md).
+若要建立此目的地，請依照[目的地設定教學課程](../../ui/connect-destination.md)中所述的步驟進行。
 
 ### 目的地詳細資料
 
 若要設定目的地的詳細資訊，請填寫下方的必填和選用欄位。 UI中欄位旁的星號表示該欄位為必填欄位。
 
 * **[!UICONTROL 名稱]**：目的地名稱。
-* **[!UICONTROL 說明]**：目的地說明。
-* **[!UICONTROL 資料串流ID]**：您要以合格對象擴充的資料串流ID。 您可以在下列位置取得此ID： [資料串流管理員](/help/datastreams/overview.md).
+* **[!UICONTROL 描述]**：目的地描述。
+* **[!UICONTROL 資料串流ID]**：您要與合格對象擴充的資料串流ID。 您可以在[資料串流管理員](/help/datastreams/overview.md)中取得此識別碼。
 * **[!UICONTROL 整合別名]**：整合別名。
 
 ### 警報
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-* **[!UICONTROL 超過啟用略過率]**：當啟用略過率超過臨界值時收到通知。
+* **[!UICONTROL 啟用略過率超過]**：當啟用略過率超過臨界值時會收到通知。
 
-當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
 ### 治理原則與執行動作
 
 此選擇性區段可讓您定義資料治理原則，並確保使用的資料在傳送及啟用受眾時符合要求。
 
-完成選取目的地所需的行銷動作後，選取「 」 **[!UICONTROL 建立]**.
+當您完成選取目的地所需的行銷動作時，請選取&#x200B;**[!UICONTROL 建立]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 建立目的地後，您就可以針對目的地啟用所需的對象。
 
-1. 如果您尚未位於建立的目的地，您可以導覽至「 」以再次尋找該目的地 **[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**.
-1. 選取 **[!UICONTROL 啟用對象]**.
-1. 選取您要分析資格的所需對象。 完成後，選取 **[!UICONTROL 下一個]**.
-1. 檢閱目的地組態和對象設定，然後選取「 」 **[!UICONTROL 完成]**.
+1. 如果您尚未位於建立的目的地，您可以導覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 瀏覽]**，再次找到該目的地。
+1. 選取&#x200B;**[!UICONTROL 啟用對象]**。
+1. 選取您要分析資格的所需對象。 完成後，選取&#x200B;**[!UICONTROL 下一步]**。
+1. 檢閱目的地組態和對象設定，然後選取&#x200B;**[!UICONTROL 完成]**。
 
-您可以導覽回「 」，新增更多對象以供日後分析 **[!UICONTROL 啟用對象]** 頁面。 對象啟動後，您就無法移除對象。
+您可以導覽回&#x200B;**[!UICONTROL 啟用對象]**&#x200B;頁面，新增更多對象以供日後分析。 對象啟動後，您就無法移除對象。

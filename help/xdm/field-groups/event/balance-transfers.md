@@ -9,9 +9,9 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL 餘額轉帳] 結構描述欄位群組
+# [!UICONTROL 餘額轉帳]結構描述欄位群組
 
-[!UICONTROL 餘額轉帳] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 欄位群組提供單一 `personalFinances.balanceTransfers` 物件至結構描述，擷取帳戶間財務餘額轉帳的詳細資料。
+[!UICONTROL 餘額轉帳]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組。 欄位群組提供單一`personalFinances.balanceTransfers`物件給結構描述，擷取帳戶間財務餘額轉帳的詳細資料。
 
 ![](../../images/field-groups/balance-transfers.png)
 
@@ -23,4 +23,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).
+如需欄位群組的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json)。

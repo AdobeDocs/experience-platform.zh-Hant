@@ -13,15 +13,15 @@ ht-degree: 5%
 
 # 批次內嵌開發人員指南
 
-本檔案提供使用的完整指南 [批次擷取API端點](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) 在Adobe Experience Platform中。 如需批次擷取API的概觀，包括先決條件和最佳實務，請先閱讀 [批次擷取API總覽](overview.md).
+本檔案提供在Adobe Experience Platform中使用[批次擷取API端點](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)的完整指南。 如需批次擷取API的概觀，包括必要條件和最佳實務，請先閱讀[批次擷取API概觀](overview.md)。
 
-本檔案的附錄提供以下專案的資訊： [格式化要用於內嵌的資料](#data-transformation-for-batch-ingestion)，包括範例CSV和JSON資料檔案。
+本檔案的附錄提供[格式化要用於內嵌](#data-transformation-for-batch-ingestion)的資料的資訊，包括範例CSV和JSON資料檔案。
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). 批次內嵌是透過RESTful API提供，您可在此針對支援的物件型別執行基本CRUD作業。
+本指南中使用的API端點是[批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)的一部分。 批次內嵌是透過RESTful API提供，您可在此針對支援的物件型別執行基本CRUD作業。
 
-在繼續之前，請檢閱 [批次擷取API總覽](overview.md) 和 [快速入門手冊](getting-started.md).
+在繼續之前，請檢閱[批次擷取API總覽](overview.md)和[快速入門手冊](getting-started.md)。
 
 ## 擷取JSON檔案
 
@@ -35,7 +35,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->以下範例適用於單行JSON。 若要內嵌多行JSON，請 `isMultiLineJson` 需要設定標幟。 如需詳細資訊，請閱讀 [批次擷取疑難排解指南](./troubleshooting.md).
+>以下範例適用於單行JSON。 若要內嵌多行JSON，需要設定`isMultiLineJson`標幟。 如需詳細資訊，請參閱[批次擷取疑難排解指南](./troubleshooting.md)。
 
 **API格式**
 
@@ -97,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 >[!NOTE]
 >
->請參閱附錄一節，瞭解 [格式正確的JSON資料檔案範例](#data-transformation-for-batch-ingestion).
+>請參閱附錄一節，以取得正確格式化的JSON資料檔](#data-transformation-for-batch-ingestion)的[範例。
 
 **API格式**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如 `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如`acme/customers/campaigns/summer.json`。 |
 
 **回應**
 
@@ -232,7 +232,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### 上傳檔案
 
-現在您已建立批次，可以使用 `batchId` 從之前上傳檔案到批次。 您可以將多個檔案上傳到批次中。
+現在您已建立批次，可以使用之前的`batchId`將檔案上傳到批次。 您可以將多個檔案上傳到批次中。
 
 **API格式**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如 `acme/customers/campaigns/summer.parquet`. |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如`acme/customers/campaigns/summer.parquet`。 |
 
 **回應**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | 參數 | 說明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 以整數表示請求範圍的開始和結束。 |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如 `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如`acme/customers/campaigns/summer.json`。 |
 
 
 **回應**
@@ -450,7 +450,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 完成大型檔案
 
-現在您已建立批次，可以使用 `batchId` 從之前上傳檔案到批次。 您可以將多個檔案上傳到批次中。
+現在您已建立批次，可以使用之前的`batchId`將檔案上傳到批次。 您可以將多個檔案上傳到批次中。
 
 **API格式**
 
@@ -513,7 +513,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 擷取CSV檔案
 
-若要內嵌CSV檔案，您需要建立支援CSV的類別、結構描述和資料集。 如需如何建立必要類別和架構的詳細資訊，請依照 [臨時結構描述建立教學課程](../../xdm/api/ad-hoc.md).
+若要內嵌CSV檔案，您需要建立支援CSV的類別、結構描述和資料集。 如需有關如何建立必要類別和結構描述的詳細資訊，請依照[臨機結構描述建立教學課程](../../xdm/api/ad-hoc.md)中提供的指示操作。
 
 >[!NOTE]
 >
@@ -617,11 +617,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### 上傳檔案
 
-現在您已建立批次，可以使用 `batchId` 從之前上傳檔案到批次。 您可以將多個檔案上傳到批次中。
+現在您已建立批次，可以使用之前的`batchId`將檔案上傳到批次。 您可以將多個檔案上傳到批次中。
 
 >[!NOTE]
 >
->請參閱附錄一節，瞭解 [格式正確的CSV資料檔案範例](#data-transformation-for-batch-ingestion).
+>請參閱附錄一節，以取得[正確格式化的CSV資料檔範例](#data-transformation-for-batch-ingestion)。
 
 **API格式**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如 `acme/customers/campaigns/summer.csv`. |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如`acme/customers/campaigns/summer.csv`。 |
 
 
 **回應**
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 刪除批次 {#delete-a-batch}
 
-透過使用執行以下POST請求，可以刪除批次 `action=REVERT` 查詢引數到您要刪除之批次的ID。 該批次被標籤為「非使用中」，因此符合記憶體回收的資格。 系統會以非同步方式收集批次，然後將收集到的批次標示為「已刪除」。
+若要刪除批次，請以您要刪除之批次的ID的`action=REVERT`查詢引數執行下列POST請求。 該批次被標籤為「非使用中」，因此符合記憶體回收的資格。 系統會以非同步方式收集批次，然後將收集到的批次標示為「已刪除」。
 
 **API格式**
 
@@ -758,10 +758,10 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 若要修補批次，需要下列專案：
 
-- **已啟用設定檔和屬性更新的資料集。** 這是透過資料集標籤完成的，並需要特定的 `isUpsert:true` 標籤已新增至 `unifiedProfile` 陣列。 如需詳細步驟，瞭解如何建立資料集或設定現有資料集以進行更新，請遵循的教學課程 [為設定檔更新啟用資料集](../../catalog/datasets/enable-upsert.md).
-- **包含要修補的欄位和設定檔身分欄位的Parquet檔案。** 修補批次的資料格式與一般批次擷取程式類似。 需要的輸入是Parquet檔案，除了要更新的欄位之外，上傳的資料必須包含身分欄位，以便與設定檔存放區中的資料相符。
+- **已啟用設定檔和屬性更新的資料集。**&#x200B;這是透過資料集標籤完成的，並需要將特定的`isUpsert:true`標籤新增到`unifiedProfile`陣列。 如需詳細步驟，說明如何建立資料集或設定現有資料集以進行更新插入，請遵循[啟用資料集以進行設定檔更新的教學課程](../../catalog/datasets/enable-upsert.md)。
+- **包含要修補的欄位和設定檔識別欄位的Parquet檔案。**&#x200B;修補批次的資料格式與一般批次擷取程式類似。 需要的輸入是Parquet檔案，除了要更新的欄位之外，上傳的資料必須包含身分欄位，以便與設定檔存放區中的資料相符。
 
-當您為「設定檔」和upsert啟用資料集，並建立Parquet檔案後，其中包含您要修補的欄位以及必要的身分識別欄位，您可以遵循以下步驟 [擷取Parquet檔案](#ingest-parquet-files) 以透過批次擷取完成修補程式。
+一旦您啟用了設定檔和upsert的資料集，以及包含您要修補的欄位以及必要的身分欄位的Parquet檔案，您可以依照[擷取Parquet檔案](#ingest-parquet-files)的步驟，透過批次擷取完成修補。
 
 ## 重播批次
 
@@ -769,7 +769,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 建立批次
 
-首先，您需要建立批次，以JSON作為輸入格式。 建立批次時，您需要提供資料集ID。 您也必須確保批次中上傳的所有檔案都符合連結至所提供資料集的XDM結構。 此外，您還需要在重播區段中提供舊批次作為參考。 在下列範例中，您是使用ID重播批次 `batchIdA` 和 `batchIdB`.
+首先，您需要建立批次，以JSON作為輸入格式。 建立批次時，您需要提供資料集ID。 您也必須確保批次中上傳的所有檔案都符合連結至所提供資料集的XDM結構。 此外，您還需要在重播區段中提供舊批次作為參考。 在下列範例中，您正在重播識別碼為`batchIdA`和`batchIdB`的批次。
 
 **API格式**
 
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### 上傳檔案
 
-現在您已建立批次，可以使用 `batchId` 從之前上傳檔案到批次。 您可以將多個檔案上傳到批次中。
+現在您已建立批次，可以使用之前的`batchId`將檔案上傳到批次。 您可以將多個檔案上傳到批次中。
 
 **API格式**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如 `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | 您嘗試上傳之檔案的完整路徑和名稱。 此檔案路徑是本機檔案路徑，例如`acme/customers/campaigns/summer.json`。 |
 
 **回應**
 
@@ -919,9 +919,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### 批次擷取的資料轉換
 
-為了將資料檔案擷取至 [!DNL Experience Platform]，檔案的階層結構必須符合 [體驗資料模型(XDM)](../../xdm/home.md) 和要上傳的目標資料集相關聯的結構描述。
+為了將資料檔案擷取到[!DNL Experience Platform]，該檔案的階層結構必須符合與要上傳到的資料集相關聯的[體驗資料模型(XDM)](../../xdm/home.md)結構描述。
 
-有關如何對應CSV檔案以符合XDM結構的資訊，請參閱 [範例轉換](../../etl/transformations.md) 以及格式正確的JSON資料檔案的範例。 您可以在此處找到檔案中提供的範例檔案：
+有關如何對應CSV檔案以符合XDM結構描述的資訊，請參閱[範例轉換](../../etl/transformations.md)檔案，以及正確格式化的JSON資料檔案範例。 您可以在此處找到檔案中提供的範例檔案：
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)

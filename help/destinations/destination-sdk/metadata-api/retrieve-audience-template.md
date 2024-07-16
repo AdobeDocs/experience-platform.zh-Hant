@@ -4,8 +4,8 @@ title: 擷取對象範本
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 1%
+source-wordcount: '420'
+ht-degree: 0%
 
 ---
 
@@ -15,21 +15,21 @@ ht-degree: 1%
 >
 >**API端點**： `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-此頁面以範例說明可用於擷取對象中繼資料範本的API請求和裝載，使用 `/authoring/audience-templates` api端點。
+此頁面以範例說明API要求與裝載，您可以使用`/authoring/audience-templates` API端點來擷取對象中繼資料範本。
 
-如需可透過此端點設定的功能的詳細說明，請參閱 [對象中繼資料管理](../functionality/audience-metadata-management.md).
+如需您可以透過此端點設定的功能的詳細說明，請參閱[對象中繼資料管理](../functionality/audience-metadata-management.md)。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 對象範本API操作快速入門 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 擷取對象範本 {#retrieve}
 
-您可以透過建立對象範本 `GET` 要求給 `/authoring/audience-templates` 端點。
+您可以對`/authoring/audience-templates`端點發出`GET`要求，以擷取現有的對象範本。
 
 **API格式**
 
@@ -39,13 +39,13 @@ ht-degree: 1%
 GET /authoring/audience-templates
 ```
 
-使用下列API格式來擷取特定的受眾範本，其定義為 `{INSTANCE_ID}` 引數。
+使用下列API格式來擷取由`{INSTANCE_ID}`引數定義的特定對象範本。
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}
 ```
 
-以下兩個請求會擷取您IMS組織的所有受眾範本或特定受眾範本，端視您是否傳遞 `INSTANCE_ID` 請求中的引數。
+以下兩個請求會擷取您IMS組織的所有受眾範本，或特定的受眾範本，端視您是否在請求中傳遞`INSTANCE_ID`引數而定。
 
 選取下方的每個索引標籤以檢視對應的裝載。
 
@@ -53,9 +53,9 @@ GET /authoring/audience-templates/{INSTANCE_ID}
 
 >[!TAB 擷取所有對象範本]
 
-以下請求將根據 [!DNL IMS Org ID] 和沙箱設定。
+下列請求將根據[!DNL IMS Org ID]和沙箱設定，擷取您有權存取的對象範本清單。
 
-+++請求
++++要求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates \
@@ -69,7 +69,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++回應
 
-成功的回應會根據「 」傳回HTTP狀態200，其中包含您可存取的對象範本清單 [!DNL IMS Org ID] 以及您使用的沙箱名稱。 一 `instanceId` 對應至一個對象範本。
+成功的回應會根據您使用的[!DNL IMS Org ID]和沙箱名稱，傳回HTTP狀態200，其中包含您可存取的對象範本清單。 一個`instanceId`對應至一個對象範本。
 
 ```json
 {
@@ -182,9 +182,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 >[!TAB 擷取特定對象範本]
 
-以下請求將根據 [!DNL IMS Org ID] 和沙箱設定。
+下列請求將根據[!DNL IMS Org ID]和沙箱設定，擷取您有權存取的對象範本清單。
 
-+++請求
++++要求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-templates/{INSTANCE_ID} \
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，其中包含與對應的對象範本詳細資訊 `{INSTANCE_ID}` 通話時提供。
+成功的回應會傳回HTTP狀態200，其中包含與呼叫上提供的`{INSTANCE_ID}`對應的對象範本詳細資料。
 
 ```json
 {
@@ -317,8 +317,8 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/audience-te
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道如何使用 `/authoring/destination-servers` api端點。 讀取 [如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md) 以瞭解此步驟在設定目的地的程式中的適用位置。
+閱讀本檔案後，您現在知道如何使用`/authoring/destination-servers` API端點擷取目的地伺服器組態的詳細資料。 閱讀[如何使用Destination SDK來設定您的目的地](../guides/configure-destination-instructions.md)，以瞭解此步驟在設定目的地的過程中適合到什麼位置。

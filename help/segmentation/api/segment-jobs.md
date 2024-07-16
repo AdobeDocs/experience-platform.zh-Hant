@@ -13,21 +13,21 @@ ht-degree: 2%
 
 # 區段作業端點
 
-區段作業為非同步程式，可依需求建立對象區段。 它參照 [區段定義](./segment-definitions.md)以及任何 [合併原則](../../profile/api/merge-policies.md) 控制方式 [!DNL Real-Time Customer Profile] 會合併您設定檔片段中的重疊屬性。 當區段作業成功完成時，您可以收集關於區段的各種資訊，例如處理期間可能發生的任何錯誤以及您的對象的最終規模。
+區段作業為非同步程式，可依需求建立對象區段。 它參考[區段定義](./segment-definitions.md)，以及任何[合併原則](../../profile/api/merge-policies.md)，可控制[!DNL Real-Time Customer Profile]如何在您的設定檔片段中合併重疊的屬性。 當區段作業成功完成時，您可以收集關於區段的各種資訊，例如處理期間可能發生的任何錯誤以及您的對象的最終規模。
 
 本指南提供的資訊可協助您更清楚瞭解區段作業，並提供使用API執行基本動作的範例API呼叫。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [!DNL Adobe Experience Platform Segmentation Service] API。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)以取得您成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫。
 
 ## 擷取區段作業清單 {#retrieve-list}
 
-您可以透過向以下網站發出GET請求，擷取組織的所有區段作業清單： `/segment/jobs` 端點。
+您可以藉由對`/segment/jobs`端點發出GET要求，擷取貴組織的所有區段工作清單。
 
 **API格式**
 
-此 `/segment/jobs` 端點支援數個查詢引數，以協助篩選結果。 雖然這些引數是選用的，但強烈建議使用這些引數來協助減少昂貴的額外負荷。 在不使用引數的情況下呼叫此端點將會擷取您的組織可用的所有匯出作業。 可包含多個引數，以&amp;符號(`&`)。
+`/segment/jobs`端點支援數個查詢引數，以協助篩選結果。 雖然這些引數是選用的，但強烈建議使用這些引數來協助減少昂貴的額外負荷。 在不使用引數的情況下呼叫此端點將會擷取您的組織可用的所有匯出作業。 可以包含多個引數，以&amp;符號(`&`)分隔。
 
 ```http
 GET /segment/jobs
@@ -41,8 +41,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | 指定傳回之區段作業的開始位移。 | `start=1` |
 | `limit` | 指定每頁傳回的區段工作數。 | `limit=20` |
 | `status` | 根據狀態篩選結果。 支援的值為NEW、QUEUED、PROCESSING、SUCCEEDED、FAILED、CANCELING、CANCELED | `status=NEW` |
-| `sort` | 已傳回區段作業的訂單。 以格式撰寫 `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
-| `property` | 篩選區段作業，並取得指定篩選器的完全相符專案。 它可採用下列其中一種格式撰寫： <ul><li>`[jsonObjectPath]==[value]`  — 篩選物件索引鍵</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]`  — 在陣列中篩選</li></ul> | `property=segments~segmentId==workInUS` |
+| `sort` | 已傳回區段作業的訂單。 是以`[attributeName]:[desc|asc]`格式撰寫。 | `sort=creationTime:desc` |
+| `property` | 篩選區段作業，並取得指定篩選器的完全相符專案。 它可採用下列其中一種格式撰寫： <ul><li>`[jsonObjectPath]==[value]` — 篩選物件金鑰</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 在陣列中篩選</li></ul> | `property=segments~segmentId==workInUS` |
 
 **要求**
 
@@ -58,9 +58,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 成功的回應會傳回HTTP狀態200，其中包含指定組織的區段作業清單，格式為JSON。 不過，回應會因區段作業中的區段定義數量而異。
 
-**區段作業中的1500個以下區段定義**
+**您的區段工作中有小於或等於1500個區段定義**
 
-如果您的區段作業中執行的區段定義少於1500個，則所有區段定義的完整清單將會顯示在 `children.segments` 屬性。
+如果您的區段作業中執行的區段定義少於1500個，則`children.segments`屬性內將顯示所有區段定義的完整清單。
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **超過1500個區段定義**
 
-如果您在區段工作中執行的區段定義超過1500個， `children.segments` 屬性將會顯示 `*`，表示正在評估所有區段定義。
+如果您的區段作業中執行的區段定義超過1500個，則`children.segments`屬性將顯示`*`，表示正在評估所有區段定義。
 
 >[!NOTE]
 >
@@ -267,7 +267,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `status` | 區塊作業的目前狀態。 狀態的潛在值包括「NEW」、「PROCESSING」、「CANCELING」、「CANCELLED」、「FAILED」和「SUCCEEDED」。 |
 | `segments` | 此物件包含區段作業中傳回之區段定義的相關資訊。 |
 | `segments.segment.id` | 區段定義的ID。 |
-| `segments.segment.expression` | 包含區段定義之運算式（以PQL撰寫）相關資訊的物件。 |
+| `segments.segment.expression` | 一個物件，包含有關在PQL中寫入的區段定義運算式的資訊。 |
 | `metrics` | 包含區段作業之診斷資訊的物件。 |
 | `metrics.totalTime` | 一個物件，包含細分工作開始和結束的時間以及花費的總時間資訊。 |
 | `metrics.profileSegmentationTime` | 一個物件，包含區段評估開始和結束的時間以及花費的總時間資訊。 |
@@ -278,7 +278,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 ## 建立新的區段工作 {#create}
 
-您可以透過向以下網站發出POST請求，以建立新的區段作業： `/segment/jobs` 端點，並在內文中包含您要建立新對象之區段定義的ID。
+您可以對`/segment/jobs`端點發出POST要求，並在內文中加入您要建立新對象之區段定義的ID，藉此建立新的區段作業。
 
 **API格式**
 
@@ -288,7 +288,7 @@ POST /segment/jobs
 
 建立新區段作業時，請求和回應會因區段作業中的區段定義數量而異。
 
-**區段作業中的1500個以下區段定義**
+**您的區段工作中有小於或等於1500個區段定義**
 
 **要求**
 
@@ -308,7 +308,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `segmentId` | 您要為其建立區段作業的區段定義ID。 這些區段定義可屬於不同的合併原則。 有關區段定義的詳細資訊，請參閱 [區段定義端點指南](./segment-definitions.md). |
+| `segmentId` | 您要為其建立區段作業的區段定義ID。 這些區段定義可屬於不同的合併原則。 如需區段定義的詳細資訊，請參閱[區段定義端點指南](./segment-definitions.md)。 |
 
 **回應**
 
@@ -409,7 +409,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `status` | 區塊作業的目前狀態。 由於區段作業是新建的，因此狀態將一律為「NEW」。 |
 | `segments` | 一個物件，其中包含此區段工作執行的目標區段定義相關資訊。 |
 | `segments.segment.id` | 您提供的區段定義的ID。 |
-| `segments.segment.expression` | 包含區段定義之運算式（以PQL撰寫）相關資訊的物件。 |
+| `segments.segment.expression` | 一個物件，包含有關在PQL中寫入的區段定義運算式的資訊。 |
 
 **超過1500個區段定義**
 
@@ -417,7 +417,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 >[!NOTE]
 >
->雖然您可以建立具有超過1500個區段定義的區段作業，但這是下列步驟 **強烈不建議**.
+>雖然您可以建立超過1500個區段定義的區段作業，但&#x200B;**強烈不建議這麼做**。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -441,7 +441,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `schema.name` | 區段定義的結構描述名稱。 |
-| `segments.segmentId` | 執行含有超過1500個區段的區段工作時，您需要傳遞 `*` 作為區段ID，表示您要執行具有所有區段的區段作業。 |
+| `segments.segmentId` | 執行含有超過1500個區段的區段作業時，您必須傳遞`*`作為區段ID，以表示您要執行含有所有區段的區段作業。 |
 
 **回應**
 
@@ -526,13 +526,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `id` | 新建立區段作業的系統產生唯讀識別碼。 |
-| `status` | 區塊作業的目前狀態。 由於區段作業是新建的，因此狀態將一律為 `NEW`. |
+| `status` | 區塊作業的目前狀態。 由於區段作業是新建立的，因此狀態將一律為`NEW`。 |
 | `segments` | 一個物件，其中包含此區段工作執行的目標區段定義相關資訊。 |
-| `segments.segment.id` | 此 `*` 表示此區段工作正在針對組織內的所有區段定義執行。 |
+| `segments.segment.id` | `*`表示此區段工作正在貴組織內針對所有區段定義執行。 |
 
 ## 擷取特定區段工作 {#get}
 
-您可以透過向以下網站發出GET請求，擷取特定區段作業的詳細資訊： `/segment/jobs` 端點，並提供您要在請求路徑中擷取的區段作業ID。
+您可以向`/segment/jobs`端點發出GET要求，並在要求路徑中提供您要擷取之區段作業的識別碼，藉此擷取特定區段作業的詳細資訊。
 
 **API格式**
 
@@ -542,7 +542,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | 此 `id` 您要擷取之區段工作的值。 |
+| `{SEGMENT_JOB_ID}` | 您要擷取之區段作業的`id`值。 |
 
 **要求**
 
@@ -558,9 +558,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 成功的回應會傳回HTTP狀態200，其中包含指定區段工作的詳細資訊。  不過，回應會因區段作業中的區段定義數目而異。
 
-**區段作業中的1500個以下區段定義**
+**您的區段工作中有小於或等於1500個區段定義**
 
-如果您的區段作業中執行的區段定義少於1500個，則所有區段定義的完整清單將會顯示在 `children.segments` 屬性。
+如果您的區段作業中執行的區段定義少於1500個，則`children.segments`屬性內將顯示所有區段定義的完整清單。
 
 ```json
 {
@@ -624,7 +624,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **超過1500個區段定義**
 
-如果您在區段工作中執行的區段定義超過1500個， `children.segments` 屬性將會顯示 `*`，表示正在評估所有區段定義。
+如果您的區段作業中執行的區段定義超過1500個，則`children.segments`屬性將顯示`*`，表示正在評估所有區段定義。
 
 ```json
 {
@@ -708,12 +708,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 | `status` | 區塊作業的目前狀態。 狀態的潛在值包括「NEW」、「PROCESSING」、「CANCELING」、「CANCELLED」、「FAILED」和「SUCCEEDED」。 |
 | `segments` | 此物件包含區段作業中傳回之區段定義的相關資訊。 |
 | `segments.segment.id` | 區段定義的ID。 |
-| `segments.segment.expression` | 包含區段定義之運算式（以PQL撰寫）相關資訊的物件。 |
+| `segments.segment.expression` | 一個物件，包含有關在PQL中寫入的區段定義運算式的資訊。 |
 | `metrics` | 包含區段作業之診斷資訊的物件。 |
 
 ## 大量擷取區段作業 {#bulk-get}
 
-您可以透過向以下網站發出POST請求，擷取有關多個區段作業的詳細資訊： `/segment/jobs/bulk-get` 端點，並提供  `id` 請求內文中區段工作的值。
+您可以對`/segment/jobs/bulk-get`端點發出POST要求，並在要求內文中提供區段作業的`id`值，以擷取有關多個區段作業的詳細資訊。
 
 **API格式**
 
@@ -744,7 +744,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **回應**
 
-成功的回應會傳回HTTP狀態207以及請求的區段作業。 然而，的值 `children.segments` 如果區段作業的執行中包含1500個以上的區段定義，則屬性會有所不同。
+成功的回應會傳回HTTP狀態207以及請求的區段作業。 不過，如果區段作業的執行時間超過1500個區段定義，則`children.segments`屬性的值會有所不同。
 
 >[!NOTE]
 >
@@ -802,11 +802,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 | `status` | 區塊作業的目前狀態。 狀態的潛在值包括「NEW」、「PROCESSING」、「CANCELING」、「CANCELLED」、「FAILED」和「SUCCEEDED」。 |
 | `segments` | 此物件包含區段作業中傳回之區段定義的相關資訊。 |
 | `segments.segment.id` | 區段定義的ID。 |
-| `segments.segment.expression` | 包含區段定義之運算式（以PQL撰寫）相關資訊的物件。 |
+| `segments.segment.expression` | 一個物件，包含有關在PQL中寫入的區段定義運算式的資訊。 |
 
 ## 取消或刪除特定區段工作 {#delete}
 
-您可以透過向以下專案發出DELETE請求，刪除特定區段作業： `/segment/jobs` 端點，並提供您要在請求路徑中刪除的區段作業ID。
+您可以向`/segment/jobs`端點發出DELETE要求，並在要求路徑中提供您要刪除之區段作業的識別碼，藉此刪除特定區段作業。
 
 >[!NOTE]
 >
@@ -820,7 +820,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | 此 `id` 您要刪除之區段工作的值。 |
+| `{SEGMENT_JOB_ID}` | 您要刪除之區段作業的`id`值。 |
 
 **要求**
 

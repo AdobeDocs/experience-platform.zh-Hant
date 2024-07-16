@@ -16,9 +16,9 @@ ht-degree: 5%
 
 ## 先決條件 {#prerequisites}
 
-本指南需要您實際瞭解 [Privacy Service](../home.md) 以及它如何讓您管理來自Adobe Experience Cloud應用程式中資料主體（客戶）的存取和刪除請求。
+本指南需要您實際瞭解[Privacy Service](../home.md)，以及它如何讓您跨Adobe Experience Cloud應用程式管理資料主體（客戶）的存取和刪除請求。
 
-為了建立API的存取認證，您組織內的管理員之前必須設定要在Adobe Admin Console中Privacy Service的產品設定檔。 您指派給API整合的產品設定檔決定在存取Privacy Service功能時，該整合具有哪些許可權。 請參閱以下指南： [管理Privacy Service許可權](../permissions.md) 以取得詳細資訊。
+為了建立API的存取認證，您組織內的管理員之前必須設定要在Adobe Admin Console中Privacy Service的產品設定檔。 您指派給API整合的產品設定檔決定在存取Privacy Service功能時，該整合具有哪些許可權。 如需詳細資訊，請參閱[管理Privacy Service許可權](../permissions.md)指南。
 
 ## 收集所需標頭的值 {#gather-values-required-headers}
 
@@ -28,33 +28,33 @@ ht-degree: 5%
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-這些值的產生方式 [Adobe Developer Console](https://developer.adobe.com/console). 您的 `{ORG_ID}` 和 `{API_KEY}` 只需產生一次，且可在未來API呼叫中重複使用。 不過，您的 `{ACCESS_TOKEN}` 是暫時性的，必須每24小時重新產生一次。
+這些值是使用[Adobe Developer Console](https://developer.adobe.com/console)產生。 您的`{ORG_ID}`和`{API_KEY}`只需要產生一次，並可在未來的API呼叫中重複使用。 不過，您的`{ACCESS_TOKEN}`是暫時性的，必須每24小時重新產生一次。
 
 以下將詳細介紹產生這些值的步驟。
 
 ### 一次性設定 {#one-time-setup}
 
-前往 [Adobe Developer Console](https://developer.adobe.com/console) 並使用您的Adobe ID登入。 接下來，請依照教學課程中概述的步驟進行 [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) 在開發人員控制檯檔案中。
+移至[Adobe Developer Console](https://developer.adobe.com/console)並使用您的Adobe ID登入。 接下來，請依照教學課程中概述的步驟，在Developer Console檔案中建立[空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)。
 
-建立新專案後，選取 **[!UICONTROL 新增至專案]** 並選擇 **[!UICONTROL API]** 下拉式選單中的。
+建立新專案後，請選取&#x200B;**[!UICONTROL 新增至專案]**，然後從下拉式功能表中選擇&#x200B;**[!UICONTROL API]**。
 
-![正在從以下專案選取的API選項 [!UICONTROL 新增至專案] 開發人員控制檯中專案詳細資訊頁面的下拉式清單](../images/api/getting-started/add-api-button.png)
+![從Developer Console中專案詳細資訊頁面的[!UICONTROL 新增至專案]下拉式清單中選取的API選項](../images/api/getting-started/add-api-button.png)
 
 #### 選取Privacy ServiceAPI {#select-privacy-service-api}
 
-此 **[!UICONTROL 新增API]** 畫面隨即顯示。 選取 **[!UICONTROL Experience Cloud]** 若要縮小可用API的清單，請選取的卡片 **[!UICONTROL PRIVACY SERVICE API]** 在選取之前 **[!UICONTROL 下一個]**.
+**[!UICONTROL 新增API]**&#x200B;畫面會出現。 選取&#x200B;**[!UICONTROL Experience Cloud]**&#x200B;以縮小可用API清單的範圍，然後在選取&#x200B;**[!UICONTROL 下一步]**&#x200B;之前，選取&#x200B;**[!UICONTROL Privacy ServiceAPI]**&#x200B;的卡片。
 
-![從可用API清單中選取的Privacy ServiceAPI卡](../images/api/getting-started/add-privacy-service-api.png)
+![正在從可用API清單中選取Privacy ServiceAPI卡](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->選取 **[!UICONTROL 檢視檔案]** 可在個別瀏覽器視窗中導覽以完成 [Privacy Service API參考檔案](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+>選取&#x200B;**[!UICONTROL 檢視檔案]**&#x200B;選項，在個別瀏覽器視窗中瀏覽至完整的[Privacy ServiceAPI參考檔案](https://developer.adobe.com/experience-platform-apis/references/privacy-service/)。
 
 接著，選取驗證型別以產生存取權杖並存取Privacy ServiceAPI。
 
 >[!IMPORTANT]
 >
->選取 **[!UICONTROL OAuth伺服器對伺服器]** 方法，因為這是唯一支援日後使用的方法。 此 **[!UICONTROL 服務帳戶(JWT)]** 方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在區段中取得詳細資訊 [!BADGE 已棄用]{type=negative}[產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt).
+>選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;方法，因為這是日後唯一支援的方法。 **[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt)。
 
 ![選取Oauth伺服器對伺服器的驗證方法。](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
@@ -64,43 +64,43 @@ ht-degree: 5%
 
 >[!NOTE]
 >
-產品設定檔及其提供的精細許可權，由管理員透過Adobe Admin Console建立和管理。 請參閱以下指南： [Privacy Service許可權](../permissions.md) 以取得詳細資訊。
+產品設定檔及其提供的精細許可權，由管理員透過Adobe Admin Console建立和管理。 如需詳細資訊，請參閱[Privacy Service許可權](../permissions.md)的指南。
 
-完成後，選取 **[!UICONTROL 儲存已設定的API]**.
+完成後，選取&#x200B;**[!UICONTROL 儲存設定的API]**。
 
-![在儲存設定之前，從清單中選取單一產品設定檔](../images/api/getting-started/select-product-profiles.png)
+![儲存組態之前，從清單中選取單一產品設定檔](../images/api/getting-started/select-product-profiles.png)
 
-將API新增至專案後， **[!UICONTROL PRIVACY SERVICE API]** 專案的頁面會顯示所有Privacy ServiceAPI呼叫所需的下列認證：
+將API新增至專案後，專案的&#x200B;**[!UICONTROL Privacy Service API]**&#x200B;頁面會顯示所有呼叫Privacy Service API時所需的下列認證：
 
-* `{API_KEY}` ([!UICONTROL 使用者端ID])
-* `{ORG_ID}` ([!UICONTROL 組織ID])
+* `{API_KEY}` （[!UICONTROL 使用者端識別碼]）
+* `{ORG_ID}` （[!UICONTROL 組織識別碼]）
 
-![在開發人員控制檯中新增API後的整合資訊。](/help/privacy-service/images/api/getting-started/api-integration-information.png)
+在Developer Console中新增API後的![整合資訊。](/help/privacy-service/images/api/getting-started/api-integration-information.png)
 
 ### 每個工作階段的驗證 {#authentication-each-session}
 
-您必須收集的最終必要認證是 `{ACCESS_TOKEN}`，用於Authorization標頭。 不像 `{API_KEY}` 和 `{ORG_ID}`，必須每24小時產生新Token才能繼續使用API。
+您必須收集的最終必要認證是您的`{ACCESS_TOKEN}`，用於授權標頭。 不像`{API_KEY}`和`{ORG_ID}`的值，每24小時必須產生一次新Token才能繼續使用API。
 
 一般來說，產生存取權杖有兩個方法：
 
-* [手動產生權杖](#manual-token) 以進行測試和開發。
-* [自動化權杖產生](#auto-token) 用於API整合。
+* [手動產生Token](#manual-token)以進行測試和開發。
+* [自動產生API整合的權杖](#auto-token)。
 
 #### 手動產生權杖 {#manual-token}
 
-若要手動產生新的 `{ACCESS_TOKEN}`，導覽至 **[!UICONTROL 認證]** > **[!UICONTROL OAuth伺服器對伺服器]** 並選取 **[!UICONTROL 產生存取權杖]**，如下所示。
+若要手動產生新的`{ACCESS_TOKEN}`，請瀏覽至&#x200B;**[!UICONTROL 認證]** > **[!UICONTROL OAuth伺服器對伺服器]**，然後選取&#x200B;**[!UICONTROL 產生存取權杖]**，如下所示。
 
-![如何在開發人員控制檯UI中產生存取權杖的熒幕記錄。](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
+![如何在Developer Console UI中產生存取權杖的熒幕錄製。](/help/privacy-service/images/api/getting-started/generate-access-token.gif)
 
-會產生新的存取Token，並提供按鈕以將該Token複製到剪貼簿。 此值用於必要的 [!DNL Authorization] 標題，且必須以格式提供 `Bearer {ACCESS_TOKEN}`.
+會產生新的存取Token，並提供按鈕以將該Token複製到剪貼簿。 此值用於必要的[!DNL Authorization]標頭，且必須以`Bearer {ACCESS_TOKEN}`格式提供。
 
 #### 自動化權杖產生 {#auto-token}
 
-您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀以下章節： [使用Postman驗證及測試API呼叫](/help/landing/api-authentication.md#use-postman) 在Experience Platform API驗證指南中。
+您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀Experience PlatformAPI驗證指南中有關[使用Postman驗證和測試API呼叫](/help/landing/api-authentication.md#use-postman)的章節。
 
 ## 讀取範例 API 呼叫 {#read-sample-api-calls}
 
-每個端點指南都提供API呼叫範例，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/api-guide.md#sample-api) （位於平台API快速入門手冊中）。
+每個端點指南都提供API呼叫範例，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Platform API快速入門手冊中[如何讀取範例API呼叫](../../landing/api-guide.md#sample-api)的相關章節。
 
 ## 後續步驟 {#next-steps}
 

@@ -12,13 +12,13 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL 個人聯絡詳細資訊] 結構描述欄位群組
+# [!UICONTROL 個人聯絡詳細資訊]結構描述欄位群組
 
 >[!NOTE]
 >
->數個結構描述欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../name-updates.md) 以取得詳細資訊。
+>數個結構描述欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../name-updates.md)的檔案。
 
-[!UICONTROL 個人聯絡詳細資訊] 是的標準結構描述欄位群組 [[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md) 說明個人的聯絡資訊。
+[!UICONTROL 個人連絡人詳細資料]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組，說明個別人員的連絡資訊。
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -34,5 +34,5 @@ ht-degree: 2%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

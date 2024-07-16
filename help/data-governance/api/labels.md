@@ -14,19 +14,19 @@ ht-degree: 3%
 
 # 標籤端點
 
-資料使用標籤可讓您根據可能適用於該資料的使用原則來分類資料。 此 `/labels` 中的端點 [!DNL Policy Service API] 可讓您以程式設計方式管理體驗應用程式中的資料使用標籤。
+資料使用標籤可讓您根據可能適用於該資料的使用原則來分類資料。 [!DNL Policy Service API]中的`/labels`端點可讓您以程式設計方式管理體驗應用程式內的資料使用標籤。
 
 >[!NOTE]
 >
->此 `/labels` 端點僅用於擷取、建立和更新資料使用標籤。 如需如何使用API呼叫將標籤新增至資料集和欄位的步驟，請參閱的指南 [管理資料集標籤](../labels/dataset-api.md).
+>`/labels`端點僅用於擷取、建立和更新資料使用標籤。 如需如何使用API呼叫將標籤新增至資料集和欄位的步驟，請參閱[管理資料集標籤](../labels/dataset-api.md)的指南。
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/). 在繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何專案所需標題的重要資訊 [!DNL Experience Platform] API。
+本指南中使用的API端點是[[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/)的一部分。 繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何[!DNL Experience Platform] API所需必要標題的重要資訊。
 
 ## 擷取標籤清單 {#list}
 
-您可以列出所有 `core` 或 `custom` 向發出GET請求以貼上標籤 `/labels/core` 或 `/labels/custom`，依序輸入。
+您可以分別向`/labels/core`或`/labels/custom`發出GET要求，以列出所有`core`或`custom`標籤。
 
 **API格式**
 
@@ -50,7 +50,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回從系統擷取的自訂標籤清單。 由於上述範例要求是向 `/labels/custom`，以下的回應只會顯示自訂標籤。
+成功的回應會傳回從系統擷取的自訂標籤清單。 由於上述範例要求是向`/labels/custom`發出，因此下列回應只會顯示自訂標籤。
 
 ```json
 {
@@ -108,7 +108,7 @@ curl -X GET \
 
 ## 查詢標籤 {#look-up}
 
-您可以包含特定標籤的 `name` 屬性位於GET請求的路徑中 [!DNL Policy Service] API。
+您可以在[!DNL Policy Service] API的GET要求路徑中包含該標籤的`name`屬性，以查詢特定標籤。
 
 **API格式**
 
@@ -119,11 +119,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LABEL_NAME}` | 此 `name` 要查閱的自訂標籤的屬性。 |
+| `{LABEL_NAME}` | 您要查閱之自訂標籤的`name`屬性。 |
 
 **要求**
 
-以下請求會擷取自訂標籤 `L2`，如路徑所示。
+下列要求會擷取自訂標籤`L2`，如路徑中所示。
 
 ```shell
 curl -X GET \
@@ -162,7 +162,7 @@ curl -X GET \
 
 ## 建立或更新自訂標籤 {#create-update}
 
-若要建立或更新自訂標籤，您必須向以下專案發出PUT請求： [!DNL Policy Service] API。
+若要建立或更新自訂標籤，您必須向[!DNL Policy Service] API發出PUT要求。
 
 **API格式**
 
@@ -172,11 +172,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LABEL_NAME}` | 此 `name` 自訂標籤的屬性。 如果使用此名稱的自訂標籤不存在，則會建立新標籤。 如果標籤確實存在，則會更新該標籤。 |
+| `{LABEL_NAME}` | 自訂標籤的`name`屬性。 如果使用此名稱的自訂標籤不存在，則會建立新標籤。 如果標籤確實存在，則會更新該標籤。 |
 
 **要求**
 
-以下請求會建立新標籤， `L3`，旨在說明內含客戶選定付款計畫相關資訊的資料。
+下列請求會建立新標籤`L3`，此標籤旨在說明包含與客戶所選付款計畫相關資訊的資料。
 
 ```shell
 curl -X PUT \
@@ -196,7 +196,7 @@ curl -X PUT \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 適用於標籤的唯一字串識別碼。 此值用於查詢目的，並將標籤套用至資料集和欄位，因此建議該值簡短明瞭。 |
-| `category` | 標籤的類別。 雖然您可以建立自己的自訂標籤類別，但強烈建議您使用 `Custom` 是否希望標籤顯示在UI中。 |
+| `category` | 標籤的類別。 雖然您可以建立自己的自訂標籤類別，但如果您想要標籤顯示在UI中，強烈建議您使用`Custom`。 |
 | `friendlyName` | 標籤的易記名稱，用於顯示目的。 |
 | `description` | （選用）標籤說明，提供更多相關情境。 |
 
@@ -228,4 +228,4 @@ curl -X PUT \
 
 ## 後續步驟
 
-本指南涵蓋 `/labels` 原則服務API中的端點。 如需如何將標籤套用至資料集和欄位的步驟，請參閱 [資料集標籤API指南](../labels/dataset-api.md).
+本指南涵蓋原則服務API中`/labels`端點的使用。 如需如何將標籤套用至資料集和欄位的步驟，請參閱[資料集標籤API指南](../labels/dataset-api.md)。

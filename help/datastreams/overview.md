@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # 資料流概觀
 
-資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。當 [`configure`](/help/web-sdk/commands/configure/overview.md) SDK中的命令可控制使用者端上必須處理的專案(例如 `edgeDomain`)，資料串流會處理SDK的所有其他設定。 當傳送請求到 Adob&#x200B;&#x200B;e Experience Platform Edge Network 時，`edgeConfigId` 會用於參照資料流。這讓您無須在網站上進行程式碼變更即可更新伺服器端設定。
+資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。雖然SDK中的[`configure`](/help/web-sdk/commands/configure/overview.md)命令可控制使用者端（例如`edgeDomain`）上必須處理的專案，但資料串流會處理SDK的所有其他設定。 當傳送請求到 Adob&#x200B;&#x200B;e Experience Platform Edge Network 時，`edgeConfigId` 會用於參照資料流。這讓您無須在網站上進行程式碼變更即可更新伺服器端設定。
 
 在 Adob&#x200B;&#x200B;e Experience Platform UI 或資料集合 UI 的左側導覽中選取&#x200B;**[!UICONTROL 資料流]**，即可建立並管理資料流。
 
@@ -57,7 +57,7 @@ ht-degree: 77%
 
 ### 稽核記錄
 
-在 Experience Platform 中，可使用稽核記錄的形式監視資料流活動。稽核記錄指出 **誰** 已執行 **什麼** 動作，以及 **當**，以及其他內容資料，可協助您疑難排解資料串流的相關問題，協助您的企業遵守公司資料管理原則和法規要求。
+在 Experience Platform 中，可使用稽核記錄的形式監視資料流活動。稽核記錄會指出&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**何時**，以及其他可協助您疑難排解資料串流相關問題的內容資料，以協助您的企業遵守公司資料管理原則和法規要求。
 
 每當使用者建立、更新或刪除資料流時，都會建立稽核記錄以記錄動作。每當使用者透過[資料集合的資料準備](./data-prep.md)建立、更新或刪除對應時，同樣的情況就會發生。無論更新的是資料流或是對應，都會將產生的稽核記錄分類為[!UICONTROL 資料流]資源類型。
 

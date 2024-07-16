@@ -20,15 +20,15 @@ ht-degree: 4%
 
 角色定義管理員、專家或一般使用者對貴組織資源的存取權。 在基於角色的存取控制環境中，使用者存取布建是透過共同責任和需求進行分組。 一個角色具有一組給定的權限，您的組織成員可以指派到一個或多個角色，依據他們需要的視圖範圍或寫入權限而定。
 
-此 `/roles` 以屬性為基礎的存取控制API中的端點可讓您以程式設計方式管理組織中的角色。
+以屬性為基礎的存取控制API中的`/roles`端點可讓您以程式設計方式管理組織中的角色。
 
 ## 快速入門
 
-本指南中使用的API端點屬於屬性型存取控制API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的API端點屬於屬性型存取控制API的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 擷取角色清單 {#list}
 
-您可以透過向以下人員發出GET請求，列出屬於您組織的所有現有角色： `/roles` 端點。
+您可以透過向`/roles`端點發出GET要求，列出屬於您組織的所有現有角色。
 
 **API格式**
 
@@ -105,7 +105,7 @@ curl -X GET \
 | `id` | 與角色相對應的ID。 此ID是自動產生的。 |
 | `name` | 您角色的名稱。 |
 | `description` | description屬性提供角色的額外資訊。 |
-| `roleType` | 角色的指定型別。 角色型別的可能值包括： `user-defined` 和 `system-defined`. |
+| `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
 | `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
@@ -113,7 +113,7 @@ curl -X GET \
 
 ## 查詢角色 {#lookup}
 
-您可以透過提出包含對應角色的GET請求來查詢個別角色 `roleId` 在請求路徑中。
+您可以透過在請求路徑中包含對應`roleId`的GET請求來查詢個別角色。
 
 **API格式**
 
@@ -127,7 +127,7 @@ GET /roles/{ROLE_ID}
 
 **要求**
 
-以下請求會擷取以下專案的資訊： `{ROLE_ID}`.
+下列要求會擷取`{ROLE_ID}`的資訊。
 
 ```shell
 curl -X GET \
@@ -172,7 +172,7 @@ curl -X GET \
 | `id` | 與角色相對應的ID。 此ID是自動產生的。 |
 | `name` | 您角色的名稱。 |
 | `description` | description屬性提供角色的額外資訊。 |
-| `roleType` | 角色的指定型別。 角色型別的可能值包括： `user-defined` 和 `system-defined`. |
+| `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
 | `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
@@ -180,7 +180,7 @@ curl -X GET \
 
 ## 依角色ID查詢主題
 
-您也可以向以下網站發出GET要求來擷取主題： `/roles` 端點並提供 {ROLE_ID}.
+您也可以在提供{ROLE_ID}的同時向`/roles`端點提出GET要求來擷取主題。
 
 **API格式**
 
@@ -194,7 +194,7 @@ GET /roles/{ROLE_ID}/subjects
 
 **要求**
 
-以下請求會擷取與關聯的主體 `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+下列要求會擷取與`3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`關聯的主體。
 
 ```shell
 curl -X GET \
@@ -256,7 +256,7 @@ curl -X GET \
 
 ## 建立角色 {#create}
 
-POST若要建立新角色，請向 `/roles` 端點，同時提供角色名稱、說明和角色型別的值。
+若要建立新角色，請在提供角色名稱、說明和角色型別的值時，向`/roles`端點提出POST要求。
 
 **API格式**
 
@@ -283,7 +283,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 您角色的名稱。 確保您角色的名稱是描述性的，因為您可以使用此名稱來查閱有關您角色的資訊。 |
 | `description` | （選擇性）您可納入的描述性值，以提供角色的相關詳細資訊。 |
-| `roleType` | 角色的指定型別。 角色型別的可能值包括： `user-defined` 和 `system-defined`. |
+| `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 
 **回應**
 
@@ -320,7 +320,7 @@ curl -X POST \
 | `id` | 與角色相對應的ID。 此ID是自動產生的。 |
 | `name` | 您角色的名稱。 |
 | `description` | description屬性提供角色的額外資訊。 |
-| `roleType` | 角色的指定型別。 角色型別的可能值包括： `user-defined` 和 `system-defined`. |
+| `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
 | `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
@@ -328,7 +328,7 @@ curl -X POST \
 
 ## 更新角色 {#patch}
 
-您可以透過向以下專案發出PATCH請求來更新角色的屬性： `/roles` 端點，並為您要套用的作業提供對應的角色ID和值。
+您可以透過向`/roles`端點發出PATCH要求來更新角色的屬性，同時為您要套用的操作提供對應的角色ID和值。
 
 **API格式**
 
@@ -361,7 +361,7 @@ curl -X PATCH \
 
 | 運作 | 說明 |
 | --- | --- |
-| `op` | 用於定義更新角色所需動作的操作呼叫。 操作包括： `add`， `replace`、和 `remove`. |
+| `op` | 用於定義更新角色所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 要更新之引數的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
 
@@ -400,7 +400,7 @@ curl -X PATCH \
 | `id` | 與角色相對應的ID。 此ID是自動產生的。 |
 | `name` | 您角色的名稱。 |
 | `description` | description屬性提供角色的額外資訊。 |
-| `roleType` | 角色的指定型別。 角色型別的可能值包括： `user-defined` 和 `system-defined`. |
+| `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
 | `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
@@ -408,7 +408,7 @@ curl -X PATCH \
 
 ## 依角色ID更新角色 {#put}
 
-您可以透過向以下專案發出PUT請求來更新角色： `/roles` 端點，並指定與您要更新的角色對應的角色ID。
+您可以對`/roles`端點發出PUT要求，並指定與您要更新之角色對應的角色ID，以更新角色。
 
 **API格式**
 
@@ -418,7 +418,7 @@ PUT /roles/{ROLE_ID}
 
 **要求**
 
-以下請求會更新角色ID的名稱、說明和角色型別： `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`.
+下列要求會更新角色ID的名稱、說明和角色型別： `3dfa045d-de58-4dfd-8ea9-e4e2c1b6d809`。
 
 ```shell
 curl -X PUT \
@@ -437,7 +437,7 @@ curl -X PUT \
 | --- | --- |
 | `name` | 角色的更新名稱。 |
 | `description` | 角色的更新說明。 |
-| `roleType` | 角色的指定型別。 角色型別的可能值包括： `user-defined` 和 `system-defined`. |
+| `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 
 **回應**
 
@@ -474,7 +474,7 @@ curl -X PUT \
 | `id` | 與角色相對應的ID。 此ID是自動產生的。 |
 | `name` | 您角色的名稱。 |
 | `description` | description屬性提供角色的額外資訊。 |
-| `roleType` | 角色的指定型別。 角色型別的可能值包括： `user-defined` 和 `system-defined`. |
+| `roleType` | 角色的指定型別。 角色型別的可能值為： `user-defined`和`system-defined`。 |
 | `permissionSets` | 許可權集代表管理員可套用至角色的一組許可權。 管理員可以將許可權集指派給角色，而不是指派個別許可權。 這可讓您從包含一組許可權的預定義角色建立自訂角色。 |
 | `sandboxes` | 此屬性會顯示貴組織內為特定角色布建的沙箱。 |
 | `subjectAttributes` | 指出主旨與其可存取之平台資源之間關聯的屬性。 |
@@ -482,7 +482,7 @@ curl -X PUT \
 
 ## 依角色ID更新主旨
 
-PATCH若要更新與角色相關聯的主體，請向 `/roles` 端點，同時提供您要更新之主體的角色ID。
+若要更新與角色相關聯的主體，請在提供您要更新之主體的角色ID時，向`/roles`端點提出PATCH要求。
 
 **API格式**
 
@@ -496,7 +496,7 @@ PATCH /roles/{ROLE_ID}/subjects
 
 **要求**
 
-以下要求會更新與關聯的主題 `{ROLE_ID}`.
+下列要求會更新與`{ROLE_ID}`關聯的主體。
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/access-control/administration/roles/<ROLE_ID>/subjects' \
@@ -515,7 +515,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | 運作 | 說明 |
 | --- | --- |
-| `op` | 用於定義更新角色所需動作的操作呼叫。 操作包括： `add`， `replace`、和 `remove`. |
+| `op` | 用於定義更新角色所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 要更新之引數的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
 
@@ -552,7 +552,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 ## 刪除角色 {#delete}
 
-DELETE若要刪除角色，請向 `/roles` 端點，並指定您要刪除的角色的ID。
+若要刪除角色，請在指定您要刪除的DELETE識別碼時，向`/roles`端點提出角色要求。
 
 **API格式**
 
@@ -566,7 +566,7 @@ DELETE /roles/{ROLE_ID}
 
 **要求**
 
-以下請求會刪除ID為的角色 `{ROLE_ID}`.
+下列請求會刪除識別碼為`{ROLE_ID}`的角色。
 
 ```shell
 curl -X DELETE \
@@ -584,7 +584,7 @@ curl -X DELETE \
 
 ## 新增API認證 {#apicredential}
 
-若要新增API認證，請發出PATCH請求至 `/roles` 端點並提供主體的角色ID。
+若要新增API認證，請在提供主體的角色ID時，向`/roles`端點提出PATCH要求。
 
 **API格式**
 
@@ -605,7 +605,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/acces
 
 | 運作 | 說明 |
 | --- | --- |
-| `op` | 用於定義更新角色所需動作的操作呼叫。 操作包括： `add`， `replace`、和 `remove`. |
+| `op` | 用於定義更新角色所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 要新增的引數的路徑。 |
 | `value` | 您想要用來新增引數的值。 |
 

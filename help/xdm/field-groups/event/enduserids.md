@@ -12,13 +12,13 @@ ht-degree: 14%
 ---
 
 
-# [!UICONTROL 一般使用者ID詳細資訊] 結構描述欄位群組
+# [!UICONTROL 一般使用者ID詳細資料]結構描述欄位群組
 
 >[!NOTE]
 >
->數個結構描述欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../name-updates.md) 以取得詳細資訊。
+>數個結構描述欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../name-updates.md)的檔案。
 
-[!UICONTROL 一般使用者ID詳細資訊] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)，用於說明個人在多個Adobe應用程式中的身分資訊。 欄位群組提供根層級 `endUserIDs` 物件，其本身包含唯讀 `_experience` 其值會在擷取資料時自動更新的欄位。
+[!UICONTROL 一般使用者ID詳細資訊]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，用於描述跨數個Adobe應用程式的個人身分資訊。 欄位群組提供根層級`endUserIDs`物件，其本身包含唯讀的`_experience`欄位，其值會在擷取資料時自動更新。
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -37,5 +37,5 @@ ht-degree: 14%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)

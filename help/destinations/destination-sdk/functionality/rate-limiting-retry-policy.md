@@ -4,7 +4,7 @@ title: 使用Destination SDK建立的串流目的地的速率限制和重試原�
 exl-id: aad10039-9957-4e9e-a0b7-7bf65eb3eaa9
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 合作夥伴建立的目的地可能會傳回各種錯誤，並有不同的速率限制原則。 此頁面說明Experience Platform如何處理串流目的地傳回的不同錯誤型別。
 
-使用Destination SDK設定目的地時，您可以在兩種彙總型別之間選取 —  [最大努力彙總](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation) 和 [可設定的彙總](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation). 根據您選取的聚總型態，請閱讀下方Experience Platform處理錯誤與比率限制的方式。
+使用Destination SDK設定目的地時，您可以在兩種彙總型別之間選取 — [最大努力彙總](../functionality/destination-configuration/aggregation-policy.md#best-effort-aggregation)和[可設定的彙總](../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)。 根據您選取的聚總型態，請閱讀下方Experience Platform處理錯誤與比率限制的方式。
 
 ## 最大努力彙總 {#best-effort-aggregation}
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 * Experience Platform重試將資料傳送至您的平台的錯誤：
    * HTTP回應代碼420和429
    * HTTP回應程式碼大於500
-* Experience Platform的錯誤 *不會* 重試將資料傳送至您的平台：您的平台傳回的所有其他資料
+* Experience Platform *未*&#x200B;重試將資料傳送至您的平台的錯誤：您的平台傳回的所有其他資料
 
 ### 描述重試方法 {#retry-approach}
 

@@ -6,26 +6,26 @@ description: 結構描述登入API中的/sampledata端點可讓您產生對應�
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '311'
 ht-degree: 1%
 
 ---
 
 # 範例資料端點
 
-若要將資料內嵌至Adobe Experience Platform，資料的格式和結構必須符合現有的Experience Data Model (XDM)結構。 根據特定資料集的結構描述複雜性，可能很難判斷資料集在擷取時預期的資料確切形狀。
+若要將資料內嵌至Adobe Experience Platform，資料的格式和結構必須符合現有的Experience Data Model (XDM)結構描述。 根據特定資料集的結構描述複雜性，可能很難判斷資料集在擷取時預期的資料確切形狀。
 
-使用 `/sampledata` 中的端點 [!DNL Schema Registry] API的環境中，您可以為先前建立的任何結構描述產生範例擷取物件。
+您可以使用[!DNL Schema Registry] API中的`/sampledata`端點為先前建立的任何結構描述產生範例擷取物件。
 
 ## 快速入門
 
-本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-範例資料端點是 [!DNL Schema Registry]. 不像 [!DNL Schema Registry] API、RPC端點不需要其他標頭，例如 `Accept` 或 `Content-Type`，且請勿使用 `CONTAINER_ID`. 相反地，他們必須使用 `/rpc` 名稱空間，如下面的API呼叫所示。
+範例資料端點是[!DNL Schema Registry]支援的遠端程式呼叫(RPC)的一部分。 與[!DNL Schema Registry] API中的其他端點不同，RPC端點不需要`Accept`或`Content-Type`等其他標頭，也不使用`CONTAINER_ID`。 相反地，他們必須使用`/rpc`名稱空間，如下面的API呼叫所示。
 
 ## 擷取結構描述的範例資料
 
-您可以在端點的GET要求路徑中指定結構描述的ID，以擷取結構描述資料庫中任何結構的範例資料。
+您可以在端點的GET要求路徑中指定結構描述的ID，以擷取結構描述資料庫內任何結構的範例資料。
 
 **API格式**
 
@@ -35,13 +35,13 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要為其產生範例資料的結構描述。 |
+| `{SCHEMA_ID}` | 您要產生範例資料的結構描述之`meta:altId`或URL編碼的`$id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列請求會產生「忠誠會員」結構的範例資料。
+以下請求會產生「忠誠會員」結構的範例資料。
 
 ```shell
 curl -X GET \

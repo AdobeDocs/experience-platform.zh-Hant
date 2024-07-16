@@ -6,7 +6,7 @@ exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '486'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -16,20 +16,20 @@ Adobe Experience Platform提供Adobe新一代的標籤管理功能。 Platform�
 
 如需標籤的簡介，請參閱下列資源：
 
-- [標記總覽](../../../tags/home.md)
-- [快速入門指南](../../../tags/quick-start/quick-start.md)
+- [標籤總覽](../../../tags/home.md)
+- [快速入門手冊](../../../tags/quick-start/quick-start.md)
 
 ## 如何在Platform介面中尋找標籤擴充功能 {#how-to-find-extensions-in-interface}
 
-若要在Platform介面中尋找擴充功能，請瀏覽 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]** 並選取 **[!UICONTROL 擴充功能]** 在 **[!UICONTROL 型別]** 篩選。
+若要在Platform介面中尋找擴充功能，請瀏覽至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**，並在&#x200B;**[!UICONTROL 型別]**&#x200B;篩選器中選取&#x200B;**[!UICONTROL 擴充功能]**。
 
-![介面中的擴充功能篩選器](../../assets/catalog/launch-extensions/filter.png)
+介面中的![擴充功能篩選器](../../assets/catalog/launch-extensions/filter.png)
 
 ## 標籤擴充功能的運作方式 {#how-extensions-work}
 
-A [標籤延伸模組](../../../tags/home.md#extensions) 是程式碼套件，可增強網站或行動應用程式的功能。 這可能包括傳送原始事件資料到目的地，例如 [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) 但它們也可用於其他功能。
+[標籤擴充功能](../../../tags/home.md#extensions)是增強網站或行動應用程式功能的程式碼套件。 這可能包括傳送原始事件資料到類似[Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md)的目的地，但它們也可以提供其他功能。
 
-區分標籤和事件轉送擴充功能很重要。 Platform目的地使用者介面中浮現的擴充功能包括 *標籤延伸模組*. 如需詳細資訊，請參閱事件轉送概觀 [標籤與事件轉送之間的差異](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
+區分標籤和事件轉送擴充功能很重要。 Platform目的地使用者介面中出現的擴充功能是&#x200B;*標籤擴充功能*。 請參閱事件轉送概觀，以取得關於標籤和事件轉送](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags)之間[差異的詳細資訊。
 
 
 
@@ -47,7 +47,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 現有的Experience Cloud客戶可免費使用Platform的標籤功能。 系統透過易於使用的擴充功能（您可安裝、設定、更新和刪除）簡化網站上的標籤部署作業。 標籤在您的網站上留下很小的空間，讓您能夠保持頁面快速載入。
 
-雖然您無法啟用對象來標籤擴充功能，但您可以設定規則，只在某些情況下轉送事件資料。 這項強大的功能可讓您只在特定情況下轉送事件資料，而不是在每次互動時傳送事件資料。 如需詳細資訊，請閱讀 [標籤檔案](../../../tags/ui/managing-resources/rules.md).
+雖然您無法啟用對象來標籤擴充功能，但您可以設定規則，只在某些情況下轉送事件資料。 這項強大的功能可讓您只在特定情況下轉送事件資料，而不是在每次互動時傳送事件資料。 如需詳細資訊，請參閱[標籤檔案](../../../tags/ui/managing-resources/rules.md)中的規則。
 
 ## 擴充功能的範例使用案例 {#extensions-use-cases}
 

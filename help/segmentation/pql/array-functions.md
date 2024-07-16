@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
 title: 陣列、清單和設定PQL函式
-description: 設定檔查詢語言(PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。
+description: Profile Query Language (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 5%
+source-wordcount: '753'
+ht-degree: 4%
 
 ---
 
 # 陣列、清單和設定函式
 
-[!DNL Profile Query Language] (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
+[!DNL Profile Query Language] (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。 如需其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] 總覽](./overview.md)。
 
-## 在
+## 位於
 
-此 `in` 函式是用來決定專案是陣列或清單的成員。
+`in`函式是用來判斷專案是陣列或清單的成員。
 
 **格式**
 
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 **範例**
 
-以下PQL查詢定義在3月、6月或9月有生日的人。
+以下PQL查詢定義三月、六月或九月有生日的人。
 
 ```sql
 person.birthMonth in [3, 6, 9]
@@ -34,11 +34,11 @@ person.birthMonth in [3, 6, 9]
 
 ## 不在
 
-此 `notIn` 函式是用來判斷專案是否不是陣列或清單的成員。
+`notIn`函式是用來判斷專案是否不是陣列或清單的成員。
 
 >[!NOTE]
 >
->此 `notIn` 函式 *另外* 可確保這兩個值都不等於null。 因此，結果並非完全否定 `in` 函式。
+>`notIn`函式&#x200B;*也*&#x200B;可確保這兩個值都不等於null。 因此，結果不是`in`函式的完全否定。
 
 **格式**
 
@@ -48,7 +48,7 @@ person.birthMonth in [3, 6, 9]
 
 **範例**
 
-以下PQL查詢定義生日不是3月、6月或9月的人。
+下列PQL查詢會定義非三月、六月或九月的人員生日。
 
 ```sql
 person.birthMonth notIn [3, 6, 9]
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## 相交
 
-此 `intersects` 函式是用來判斷兩個陣列或清單是否至少有一個通用成員。
+`intersects`函式是用來判斷兩個陣列或清單是否至少有一個通用成員。
 
 **格式**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## 交集
 
-此 `intersection` 函式用來決定兩個陣列或清單的共同成員。
+`intersection`函式是用來決定兩個陣列或清單的共同成員。
 
 **格式**
 
@@ -84,15 +84,15 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 **範例**
 
-以下PQL查詢定義人員1和人員2是否都有最喜愛的紅色、藍色和綠色顏色。
+以下PQL查詢定義人員1和人員2是否同時具有最喜愛的紅色、藍色和綠色顏色。
 
 ```sql
 person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "green"]
 ```
 
-## 子集：
+## 子集: 
 
-此 `subsetOf` 函式來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的子集。 換句話說，陣列A中的所有元素都是陣列B的元素。
+`subsetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的子集。 換句話說，陣列A中的所有元素都是陣列B的元素。
 
 **格式**
 
@@ -108,9 +108,9 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 person.favoriteCities.subsetOf(person.visitedCities)
 ```
 
-## 超集
+## 超集: 
 
-此 `supersetOf` 函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的超集。 換句話說，該陣列A包含陣列B中的所有元素。
+`supersetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的超集。 換句話說，該陣列A包含陣列B中的所有元素。
 
 **格式**
 
@@ -126,9 +126,9 @@ person.favoriteCities.subsetOf(person.visitedCities)
 person.eatenFoods.supersetOf(["sushi", "pizza"])
 ```
 
-## 包含
+## 包括
 
-此 `includes` 函式是用來決定陣列或清單是否包含指定專案。
+`includes`函式是用來判斷陣列或清單是否包含指定的專案。
 
 **格式**
 
@@ -138,15 +138,15 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 **範例**
 
-以下PQL查詢定義哪些人最喜歡的顏色包括紅色。
+以下PQL查詢定義哪些人最喜愛的顏色包括紅色。
 
 ```sql
 person.favoriteColors.includes("red")
 ```
 
-## Distinct
+## 相異
 
-此 `distinct` 函式可用來從陣列或清單中移除重複值。
+`distinct`函式用於從陣列或清單中移除重複值。
 
 **格式**
 
@@ -164,7 +164,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## 分組依據
 
-此 `groupBy` 函式用來根據運算式的值，將陣列或清單的值分割成群組。
+`groupBy`函式用來根據運算式的值，將陣列或清單的值分割成群組。
 
 **格式**
 
@@ -179,15 +179,15 @@ person.orders.storeId.distinct().count() > 1
 
 **範例**
 
-下列PQL查詢會將放置訂單的所有訂單分組。
+下列PQL查詢會將下訂單所依據的所有訂單分組。
 
 ```sql
 orders.groupBy(storeId)
 ```
 
-## 篩選
+## 篩選器
 
-此 `filter` 函式用於根據運算式篩選陣列或清單。
+`filter`函式是用來根據運算式篩選陣列或清單。
 
 **格式**
 
@@ -202,7 +202,7 @@ orders.groupBy(storeId)
 
 **範例**
 
-以下PQL查詢定義所有21歲或以上的人。
+以下PQL查詢會定義所有21歲或以上的人。
 
 ```sql
 person.filter(age >= 21)
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## 地圖
 
-此 `map` 函式用於將運算式套用至指定陣列中的每個專案，以建立新陣列。
+`map`函式是用來建立新陣列，方法是將運算式套用至指定陣列中的每個專案。
 
 **格式**
 
@@ -220,15 +220,15 @@ array.map(expression)
 
 **範例**
 
-下列PQL查詢會建立新的數字陣列，並對原始數字的值進行平方。
+以下PQL查詢會建立新的數字陣列，並對原始數字的值進行平方。
 
 ```sql
 numbers.map(square)
 ```
 
-## 第一 `n` 在陣列中 {#first-n}
+## 陣列中的前`n` {#first-n}
 
-此 `topN` 函式用於傳回第一個 `N` 在陣列中的專案，當根據給定的數值運算式依遞增順序排序時。
+當根據給定的數值運算式依遞增順序排序時，`topN`函式用來傳回陣列中的前`N`個專案。
 
 **格式**
 
@@ -250,9 +250,9 @@ numbers.map(square)
 orders.topN(price, 5)
 ```
 
-## 上次 `n` 在陣列中
+## 陣列中的最後`n`
 
-此 `bottomN` 函式用於傳回最後 `N` 在陣列中的專案，當根據給定的數值運算式依遞增順序排序時。
+當根據給定的數值運算式依遞增順序排序時，`bottomN`函式用於傳回陣列中的最後`N`個專案。
 
 **格式**
 
@@ -274,9 +274,9 @@ orders.topN(price, 5)
 orders.bottomN(price, 5)
 ```
 
-## 第一個專案
+## 第一個項目
 
-此 `head` 函式用於傳回陣列或清單中的第一個專案。
+`head`函式用來傳回陣列或清單中的第一個專案。
 
 **格式**
 
@@ -286,7 +286,7 @@ orders.bottomN(price, 5)
 
 **範例**
 
-下列PQL查詢會傳回價格最高的前五個訂單中的第一個。 關於的更多資訊 `topN` 函式位於 [第一 `n` 在陣列中](#first-n) 區段。
+下列PQL查詢會傳回價格最高的前五個訂單中的第一個。 有關`topN`函式的詳細資訊可在陣列](#first-n)區段的[第一個`n`中找到。
 
 ```sql
 orders.topN(price, 5).head()
@@ -294,4 +294,4 @@ orders.topN(price, 5).head()
 
 ## 後續步驟
 
-現在您已瞭解陣列、清單和設定函式，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已瞭解陣列、清單和設定函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱[Profile Query Language概觀](./overview.md)。

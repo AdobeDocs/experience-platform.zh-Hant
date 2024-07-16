@@ -4,18 +4,18 @@ description: 瞭解如何在Reactor API中呼叫/callbacks端點。
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 5%
+source-wordcount: '606'
+ht-degree: 6%
 
 ---
 
 # 回呼端點
 
-回呼是Reactor API傳送至特定URL （通常由您的組織託管）的訊息。
+回呼是Reactor API傳送至特定URL （通常是您的組織託管的網址）的訊息。
 
-回呼旨在與搭配使用 [稽核事件](./audit-events.md) 追蹤Reactor API中的活動。 每次產生特定型別的稽核事件時，回呼都會傳送相符訊息至指定的URL。
+回呼旨在與[稽核事件](./audit-events.md)搭配使用，以追蹤Reactor API中的活動。 每次產生特定型別的稽核事件時，回呼都會傳送符合訊息至指定的URL。
 
-在回撥中指定的URL背後的服務必須以HTTP狀態碼200 （確定）或201 （已建立）回應。 如果服務沒有回應這些狀態代碼中的任何一個，則會依下列間隔重試訊息傳送：
+在回撥中指定的URL之後的服務必須以HTTP狀態碼200 （確定）或201 （已建立）回應。 如果服務未回應任一狀態代碼，則會依下列時間間隔重試訊息傳送：
 
 * 1分鐘
 * 5 分鐘
@@ -27,15 +27,15 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->重試間隔相對於上一個間隔。 例如，如果一分鐘重試失敗，則下次嘗試會在一分鐘嘗試失敗後（產生訊息後6分鐘）排程五分鐘。
+>重試間隔與上一個間隔有關。 例如，如果一分鐘重試失敗，則下次嘗試會排程在1分鐘嘗試失敗後的5分鐘（產生訊息後的6分鐘）。
 
-如果所有傳送嘗試均不成功，則會捨棄訊息。
+如果所有傳送嘗試均失敗，則會捨棄訊息。
 
-回呼只屬於一個 [屬性](./properties.md). 屬性可以有許多回呼。
+回呼只屬於一個[屬性](./properties.md)。 屬性可以有許多回呼。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 清單回呼 {#list}
 
@@ -49,13 +49,13 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 此 `id` 要列出其回呼的屬性。 |
+| `{PROPERTY_ID}` | 您要列出其回呼的屬性`id`。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->您可以使用查詢引數，根據下列屬性篩選列出的回呼：<ul><li>`created_at`</li><li>`updated_at`</li></ul>請參閱指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
+>您可以使用查詢引數，根據下列屬性篩選列出的回呼：<ul><li>`created_at`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
 
 **要求**
 
@@ -116,9 +116,9 @@ curl -X GET \
 }
 ```
 
-## 查詢回撥 {#lookup}
+## 查詢回呼 {#lookup}
 
-您可以在GET請求的路徑中提供回呼的ID以查詢回呼。
+您可以在GET請求的路徑中提供回呼的ID以查詢它。
 
 **API格式**
 
@@ -128,7 +128,7 @@ GET /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 此 `id` 要查閱的回撥的資料來源。 |
+| `CALLBACK_ID` | 您要查閱之回呼的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -192,7 +192,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 的 [屬性](./properties.md) 您正在定義底下的回呼。 |
+| `PROPERTY_ID` | 您正在定義回呼的[屬性](./properties.md)的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -221,7 +221,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `url` | 回撥訊息的URL目的地。 URL必須使用HTTPS通訊協定副檔名。 |
-| `subscriptions` | 字串陣列，指出將觸發回撥的稽核事件型別。 請參閱 [稽核事件端點指南](./audit-events.md) 以取得可能的事件型別清單。 |
+| `subscriptions` | 字串陣列，指出將觸發回撥的稽核事件型別。 如需可能的事件型別清單，請參閱[稽核事件端點指南](./audit-events.md)。 |
 
 {style="table-layout:auto"}
 
@@ -261,9 +261,9 @@ curl -X POST \
 }
 ```
 
-## 更新回撥
+## 更新回呼
 
-您可以在PATCH請求的路徑中包含回呼的ID來更新回呼。
+您可以在PATCH請求的路徑中包含回呼的ID以更新回呼。
 
 **API格式**
 
@@ -273,13 +273,13 @@ PATCH /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 此 `id` 要更新的回撥的預設值。 |
+| `CALLBACK_ID` | 您要更新的回呼的`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會更新 `subscriptions` 陣列，供現有的回呼使用。
+下列要求會更新現有回呼的`subscriptions`陣列。
 
 ```shell
 curl -X PATCH \
@@ -306,9 +306,9 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 一個物件，其屬性代表要針對回呼更新的屬性。 每個索引鍵代表要更新的特定回呼屬性，以及應更新到的對應值。<br><br>可針對回呼更新下列屬性：<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | 此 `id` 要更新的回撥。 這應該符合 `{CALLBACK_ID}` 請求路徑中提供的值。 |
-| `type` | 正在更新的資源型別。 此端點的值必須為 `callbacks`. |
+| `attributes` | 物件，其屬性代表要針對回呼更新的屬性。 每個索引鍵代表要更新的特定回呼屬性，以及應更新到的對應值。<br><br>可以更新回呼的下列屬性：<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | 您要更新的回呼`id`。 這應該符合請求路徑中提供的`{CALLBACK_ID}`值。 |
+| `type` | 正在更新的資源型別。 此端點的值必須是`callbacks`。 |
 
 {style="table-layout:auto"}
 
@@ -351,7 +351,7 @@ curl -X PATCH \
 
 ## 刪除回撥
 
-您可以在DELETE請求的路徑中包含回呼的ID以刪除回呼。
+您可以在DELETE請求的路徑中包含回呼ID以刪除回呼。
 
 **API格式**
 
@@ -361,7 +361,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `CALLBACK_ID` | 此 `id` 要刪除的回撥的預設值。 |
+| `CALLBACK_ID` | 您要刪除之回呼的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -379,4 +379,4 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回HTTP狀態204 （無內容），且沒有回應內文，這表示回呼已被刪除。
+成功的回應會傳回HTTP狀態204 （無內容），且沒有回應內文，這表示回呼已刪除。

@@ -1,11 +1,11 @@
 ---
 title: 回溯相容性標準
-description: 瞭解Adobe Experience Platform的回溯相容性標準，確保更新版本的標籤擴充功能與舊版相容。
+description: 瞭解Adobe Experience Platform中的回溯相容性標準，確保更新版本的標籤擴充功能與舊版相容。
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
-ht-degree: 84%
+ht-degree: 81%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../term-updates.md)，以取得術語變更的彙總參考資料。
 
-Adobe Experience Platform中標籤擴充功能的更新必須回溯相容於舊版擴充功能。 這表示：
+Adobe Experience Platform中標籤擴充功能的更新必須回溯相容於舊版的擴充功能。 這表示：
 
 * 對擴充功能的主要元件所做的任何修改，都必須與舊版相容。這包括擴充功能組態、事件類型、條件類型、動作類型、資料元素類型和共用模組。
 * 使用者使用舊版擴充功能建立的元件，必須能通過較新版本提供的結構描述方面的驗證。
-* Adobe Experience Platform使用者應該能夠安裝您的擴充功能更新版本，並在他們刻意變更前，讓他們已完成的一切都能繼續正常運作。
+* Adobe Experience Platform使用者應該能夠安裝您擴充功能的更新版本，並且讓他們已完成的一切都能繼續正常運作，直到他們刻意變更為止。
 
 ## 允許的變更
 

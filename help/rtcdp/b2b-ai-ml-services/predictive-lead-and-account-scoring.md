@@ -7,7 +7,7 @@ badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/lega
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '859'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ B2B行銷人員在行銷漏斗頂端面臨多種挑戰。 為了有效率，B2B�
 
 >[!NOTE]
 >
->[!DNL Marketo] 資料來源目前為必要專案，因為它是唯一可在人員設定檔層級提供轉換事件的資料來源。
+>目前需要[!DNL Marketo]資料來源，因為它是唯一可在個人設定檔層級提供轉換事件的資料來源。
 
 預測性銷售線索和帳戶評分使用樹狀結構（隨機森林/漸層提升）機器學習方法，以建立預測性銷售線索評分模型。
 
@@ -37,13 +37,13 @@ B2B行銷人員在行銷漏斗頂端面臨多種挑戰。 為了有效率，B2B�
 | 目標型別 | 欄位 |
 | --- | --- |
 | `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li></ul> |
-| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>範例： `opportunityEvent.dataValueChanges.attributeName` 等於 `Stage` 和 `opportunityEvent.dataValueChanges.newValue` 等於 `Contract`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>範例： `opportunityEvent.dataValueChanges.attributeName`等於`Stage`而`opportunityEvent.dataValueChanges.newValue`等於`Contract`</ul> |
 
 演演算法會考量下列屬性和輸入資料：
 
 * 個人設定檔
 
-| XDM欄位 | 必填/選填 |
+| XDM欄位 | 必要/選用 |
 | --- | --- |
 | `personComponents.sourceAccountKey.sourceKey` | 必要 |
 | `workAddress.country` | 選填 |
@@ -52,21 +52,21 @@ B2B行銷人員在行銷漏斗頂端面臨多種挑戰。 為了有效率，B2B�
 
 >[!NOTE]
 > 
->演演算法只會檢查 `sourceAccountKey.sourceKey` 「人員：人員元件」欄位群組中的欄位。
+>演演算法只會檢查Person：personComponents欄位群組中的`sourceAccountKey.sourceKey`欄位。
 
-* 帳戶設定檔
+* 帳戶輪廓
 
-| XDM欄位 | 必填/選填 |
+| XDM欄位 | 必要/選用 |
 | --- | --- |
 | `accountKey.sourceKey` | 必要 |
 | `extSourceSystemAudit.createdDate` | 必要 |
 | `accountOrganization.industry` | 選填 |
 | `accountOrganization.numberOfEmployees` | 選填 |
-| `accountOrganization.annualRevenue.amount` | 選用 |
+| `accountOrganization.annualRevenue.amount` | 選填 |
 
 * 體驗事件
 
-| XDM欄位 | 必填/選填 |
+| XDM欄位 | 必要/選用 |
 | --- | --- |
 | `_id` | 必要 |
 | `personKey.sourceKey` | 必要 |
@@ -86,35 +86,35 @@ B2B行銷人員在行銷漏斗頂端面臨多種挑戰。 為了有效率，B2B�
 
 評分工作每天都會執行，且結果會儲存為設定檔屬性和帳戶屬性，然後可用於區段定義和個人化。 現成的Analytics深入分析也可在帳戶概述控制面板上取得。
 
-請參閱檔案以取得如何操作的詳細資訊 [管理預測性銷售線索和帳戶評分](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) 服務。
+請參閱檔案，以取得關於如何[管理預測性銷售線索和帳戶評分](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)服務的詳細資訊。
 
 ## 檢視預測性銷售線索與帳戶評分結果 {#how-to-view}
 
-工作執行後，結果會儲存在名稱下的每個模型的新系統資料集中 `LeadsAI.Scores` - ***分數名稱***. 每個分數欄位群組都位於 `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+工作執行後，結果會儲存在名稱為`LeadsAI.Scores` - ***分數名稱***&#x200B;的每個模型的新系統資料集中。 每個分數欄位群組都可以位於`{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`。
 
 | 屬性 | 說明 |
 | --- | --- |
 | 分數 | 設定檔在定義的時間範圍內達到預測目標的相對可能性。 此值不被視為機率百分比，而是個人資料相較於整體母體的可能性。 此分數介於0到100之間。 |
 | 百分位數 | 此值提供設定檔相對於其他類似評分的設定檔的效能相關資訊。 百分位數的範圍介於1到100。 |
-| 模型型別 | 選取的模型型別會指示這是人員或帳戶分數。 |
+| 模型類型 | 選取的模型型別會指示這是人員或帳戶分數。 |
 | 評分日期 | 評分發生的日期。 |
 | 影響因素 | 個人資料可能發生轉換的預測原因。 因子由下列屬性組成：<ul><li>程式碼：對設定檔的預測分數產生正面影響的設定檔或行為屬性。</li><li>值：設定檔或行為屬性的值。</li><li>重要性：表示設定檔或行為屬性對預測分數（低、中、高）的權重。</li></ul> |
 
 ### 檢視客戶設定檔分數
 
-若要檢視個人設定檔的預測性分數，請選取 **[!UICONTROL 設定檔]** 在左側面板的「客戶」區段下，然後輸入身分名稱空間和身分值。 完成後，選取 **[!UICONTROL 檢視]**.
+若要檢視人員設定檔的預測性分數，請選取左側面板中客戶區段下的&#x200B;**[!UICONTROL 設定檔]**，然後輸入身分名稱空間和身分值。 完成後，請選取&#x200B;**[!UICONTROL 檢視]**。
 
 接著，從清單中選取設定檔。
 
 ![客戶設定檔](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-此 **[!UICONTROL 詳細資料]** 頁面現在包含預測性分數。 按一下預測性分數旁的圖表圖示。
+**[!UICONTROL 詳細資料]**&#x200B;頁面現在包含預測性分數。 按一下預測性分數旁的圖表圖示。
 
 ![客戶設定檔預測性分數](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 快顯對話方塊會顯示分數、整體分數分佈、此分數的主要影響因素，以及分數目標定義。
 
-![客戶設定檔預測性分數詳細資訊](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+![客戶設定檔預測性分數詳細資料](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
 
 ## 監控預測性銷售線索和帳戶評分工作 {#monitoring-jobs}
 
@@ -124,4 +124,4 @@ B2B行銷人員在行銷漏斗頂端面臨多種挑戰。 為了有效率，B2B�
 * 下一個評分工作（日期）
 * 下一個訓練工作（日期）
 
-如需詳細資訊，請參閱以下檔案： [監控預測性銷售線索和帳戶評分的工作](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+如需詳細資訊，請參閱有關[針對預測性銷售線索和帳戶評分](/help/dataflows/ui/b2b/monitor-profile-enrichment.md)監視工作的檔案。

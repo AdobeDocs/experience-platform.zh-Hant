@@ -3,8 +3,8 @@ title: 在 Assurance 中檢視 Adob​​e Analytics
 description: 本指南會說明如何將 Adobe Analytics 和 Adob​​e Experience Platform Assurance 一起使用。
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '359'
+workflow-type: tm+mt
+source-wordcount: '352'
 ht-degree: 100%
 
 ---

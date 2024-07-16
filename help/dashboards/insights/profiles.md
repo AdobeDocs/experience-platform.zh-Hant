@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 存取提供個人資料的SQL來瞭解您的個人資料見解，然後產生您自己的見解，以進一步探索您的客戶及其構成個人資料的消費者體驗。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
-請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
+請參閱[檢視SQL檔案](../view-sql.md)，以取得有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
 
-下列見解全部都可供您用作 [設定檔儀表板](../guides/profiles.md) 或自訂 [使用者定義儀表板](../user-defined-dashboards.md). 請參閱 [自訂概述](../customize/overview.md) 以取得如何自訂儀表板的指示，或 [建立和編輯新Widget](../customize/custom-widgets.md) 在Widget資料庫和 [使用者定義儀表板](../user-defined-dashboards.md#create-widget).
+下列見解全部都可供您用作[設定檔儀表板](../guides/profiles.md)或自訂[使用者定義儀表板](../user-defined-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../user-defined-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
-## 依合併原則區分的對象重疊 {#audience-overlap-by-merge-policy}
+## 依合併原則區分的客群重疊 {#audience-overlap-by-merge-policy}
 
 此深入分析所回答的問題：
 
@@ -64,9 +64,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-請參閱 [依據合併原則Widget檔案的對象重疊](../guides/profiles.md#audience-overlap-by-merge-policy) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱合併原則Widget檔案的[對象重疊](../guides/profiles.md#audience-overlap-by-merge-policy)。
 
-## 對象重疊報表 {#audience-overlap-report}
+## 客群重疊報告 {#audience-overlap-report}
 
 此深入分析所回答的問題：
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-請參閱 [對象重疊報表Widget檔案](../guides/profiles.md#audience-overlap-report) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象重疊報表Widget檔案](../guides/profiles.md#audience-overlap-report)。
 
 ## 對象（計數） {#audiences}
 
@@ -159,9 +159,9 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-請參閱 [Audiences Widget檔案](../guides/profiles.md#audiences) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象Widget檔案](../guides/profiles.md#audiences)。
 
-## 對應到目的地狀態的對象 {#audiences-mapped-to-destination-status}
+## 對應到目的地狀態的客群 {#audiences-mapped-to-destination-status}
 
 此深入分析所回答的問題：
 
@@ -191,9 +191,9 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-請參閱 [對應到目的地狀態Widget檔案的對象](../guides/profiles.md#audiences-mapped-to-destination-status) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱對應到目的地狀態Widget檔案的[對象](../guides/profiles.md#audiences-mapped-to-destination-status)。
 
-## 對象人數 {#audiences-size}
+## 客群人數 {#audiences-size}
 
 此深入分析所回答的問題：
 
@@ -224,9 +224,9 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-請參閱 [對象規模Widget檔案](../guides/profiles.md#audiences-size) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象大小Widget檔案](../guides/profiles.md#audiences-size)。
 
-## 分數的Customer AI分佈 {#customer-ai-distribution-of-scores}
+## Customer AI 分數的分佈 {#customer-ai-distribution-of-scores}
 
 此深入分析所回答的問題：
 
@@ -361,9 +361,9 @@ SELECT b.model_name,
 
 +++
 
-請參閱 [分數Widget檔案的Customer AI分佈](../guides/profiles.md#customer-ai-distribution-of-scores) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱分數Widget檔案的[Customer AI分佈](../guides/profiles.md#customer-ai-distribution-of-scores)。
 
-## Customer AI評分摘要 {#customer-ai-scoring-summary}
+## Customer AI 評分摘要 {#customer-ai-scoring-summary}
 
 此深入分析所回答的問題：
 
@@ -402,13 +402,13 @@ SELECT model_name,
 
 +++
 
-請參閱 [Customer AI評分摘要Widget檔案](../guides/profiles.md#customer-ai-scoring-summary) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[Customer AI評分摘要Widget檔案](../guides/profiles.md#customer-ai-scoring-summary)。
 
 ## 身分識別覆蓋 {#identity-overlap}
 
 此深入分析所回答的問題：
 
-- 兩者之間的共同交集是什麼 [!UICONTROL 身分型別A] 和 [!UICONTROL 身分型別B]？
+- [!UICONTROL 身分型別A]和[!UICONTROL 身分型別B]之間的共同交集是什麼？
 - 我如何根據特定身分型別的重疊來調整客戶對象，以增強目標式行銷策略？
 - 評估交集區域內的行銷活動績效能獲得哪些深入分析？
 - 運用此行銷活動績效深入分析，如何最佳化未來的行銷工作？
@@ -459,7 +459,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-請參閱 [身分重疊Widget檔案](../guides/profiles.md#identity-overlap) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[身分重疊Widget檔案](../guides/profiles.md#identity-overlap)。
 
 ## 設定檔計數 {#profile-count}
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-有關本深入分析外觀和功能的完整資訊，請參閱 [設定檔計數Widget指南](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+您可以在[設定檔計數Widget指南](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count)中找到此深入分析外觀和功能的完整資訊。
 
-請參閱 [設定檔計數Widget檔案](../guides/profiles.md#profile-count) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數Widget檔案](../guides/profiles.md#profile-count)。
 
 ## 設定檔計數變更 {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-請參閱 [設定檔計數變更Widget檔案](../guides/profiles.md#profile-count-change) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數變更Widget檔案](../guides/profiles.md#profile-count-change)。
 
 ## 設定檔計數變更趨勢 {#profile-count-change-trend}
 
@@ -562,9 +562,9 @@ SELECT date_key,
 
 +++
 
-請參閱 [設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profile-count-change-trend) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profile-count-change-trend)。
 
-## 設定檔計數趨勢 {#profile-count-trend}
+## 輪廓計數趨勢 {#profile-count-trend}
 
 此深入分析所回答的問題：
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-請參閱 [設定檔計數趨勢Widget檔案](../guides/profiles.md#profile-count-trend) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數趨勢Widget檔案](../guides/profiles.md#profile-count-trend)。
 
 ## 依身分識別劃分的設定檔 {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-請參閱 [依身分Widget檔案的設定檔](../guides/profiles.md#profiles-by-identity) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[依身分Widget的設定檔檔案](../guides/profiles.md#profiles-by-identity)。
 
 ## 設定檔計數變更趨勢 {#profiles-count-change-trend}
 
@@ -656,9 +656,9 @@ SELECT date_key,
 
 +++
 
-請參閱 [設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profiles-count-change-trend) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數變更趨勢Widget檔案](../guides/profiles.md#profiles-count-change-trend)。
 
-## 依身分列出的設定檔計數變更趨勢 {#profiles-count-change-trend-by-identity}
+## 依身分列出的輪廓計數變更趨勢 {#profiles-count-change-trend-by-identity}
 
 此深入分析所回答的問題：
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-請參閱 [依身分Widget檔案的設定檔計數變更趨勢](../guides/profiles.md#profiles-count-change-trend-by-identity) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱身分識別介面工具檔案的[設定檔計數變更趨勢](../guides/profiles.md#profiles-count-change-trend-by-identity)。
 
 ## 單一身分識別設定檔 {#single-identity-profiles}
 
@@ -722,9 +722,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-請參閱 [單一身分設定檔Widget檔案](../guides/profiles.md#single-identity-profiles) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[單一身分設定檔Widget檔案](../guides/profiles.md#single-identity-profiles)。
 
-## 依身分割槽分的單一身分設定檔 {#single-identity-profiles-by-identity}
+## 依身分區分的單一身分輪廓 {#single-identity-profiles-by-identity}
 
 此深入分析所回答的問題：
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-請參閱 [依身分Widget檔案的單一身分設定檔](../guides/profiles.md#single-identity-profiles-by-identity) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[依身分識別的Widget檔案](../guides/profiles.md#single-identity-profiles-by-identity)。
 
 ## 無區段設定檔 {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-請參閱 [未分段的設定檔Widget檔案](../guides/profiles.md#unsegmented-profiles) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[未分段的設定檔Widget檔案](../guides/profiles.md#unsegmented-profiles)。
 
 ## 後續步驟
 
 閱讀本檔案後，您現在瞭解產生儀表板深入分析的SQL，以及此分析解決哪些常見問題。 您現在可以編輯並反複處理SQL，以產生您自己的深入分析。
 
-請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
+如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-您也可以閱讀並瞭解為產生深入分析的SQL [受眾](./audiences.md)， [帳戶設定檔](./account-profiles.md)、和 [目的地](./destinations.md) 控制面板。
+您也可以閱讀並瞭解產生[對象](./audiences.md)、[帳戶設定檔](./account-profiles.md)和[目的地](./destinations.md)儀表板之深入分析的SQL。

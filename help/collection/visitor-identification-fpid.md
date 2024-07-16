@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # 透過FPID的訪客身分識別
 
-[!DNL First-party IDs] (`FPIDs`)是由客戶產生、管理和儲存的裝置ID。 這可讓客戶控制識別使用者裝置。 透過傳送 `FPIDs`，Edge Network不會產生全新的 `ECID` 針對不包含此值的請求。
+[!DNL First-party IDs] (`FPIDs`)是由客戶產生、管理和儲存的裝置ID。 這可讓客戶控制識別使用者裝置。 傳送`FPIDs`後，Edge Network不會針對不包含的全新`ECID`請求產生全新的請求。
 
-此 `FPID` 可包含在API要求內文中，作為 `identityMap` 或可作為Cookie傳送。
+`FPID`可以作為`identityMap`的一部分包含在API要求內文中，也可以作為Cookie傳送。
 
-一個 `FPID` 可決定性地轉譯為 `ECID` 由Edge Network提供，因此 `FPID` 身分與Experience Cloud解決方案完全相容。 取得 `ECID` 來自特定 `FPID` 一律會產生相同的結果，因此使用者將擁有一致的體驗。
+Edge Network可決定性地將`FPID`轉譯為`ECID`，因此`FPID`識別與Experience Cloud解決方案完全相容。 從特定`FPID`取得`ECID`一律會產生相同的結果，因此使用者將擁有一致的體驗。
 
-此 `ECID` 以這種方式取得，可透過 `identity.fetch` 查詢：
+以這種方式取得的`ECID`可透過`identity.fetch`查詢擷取：
 
 ```json
 {
@@ -33,15 +33,15 @@ ht-degree: 0%
 }
 ```
 
-對於同時包含 `FPID` 和 `ECID`，則 `ECID` 已存在於請求中的優先順序將高於可從產生的優先順序 `FPID`. 換言之，邊緣網路使用 `ECID` 已提供，而且 `FPID` 會忽略。 新 `ECID` 只有當 `FPID` 會自行提供。
+對於同時包含`FPID`和`ECID`的請求，已存在於請求中的`ECID`將優先於可從`FPID`產生的請求。 換言之，Edge Network使用已提供的`ECID`，而忽略`FPID`。 只有在自行提供`FPID`時，才會產生新的`ECID`。
 
-就裝置ID而言， `server` 資料串流應使用 `FPID` 做為裝置ID。 其他身分(即 `EMAIL`)也可在要求內文中提供，但Edge Network需要明確提供主要身分。 主要身分是將設定檔資料儲存到的基本身分。
+就裝置ID而言，`server`資料串流應使用`FPID`作為裝置ID。 其他身分（亦即`EMAIL`）也可於要求內文中提供，但Edge Network需要明確提供主要身分。 主要身分是將設定檔資料儲存到的基本身分。
 
 >[!NOTE]
 >
->沒有身分的請求（分別在請求內文中未明確設定主要身分）將失敗。
+>沒有身分的請求（分別在請求內文中沒有明確設定的主要身分）將失敗。
 
-下列專案 `identityMap` 欄位群組的格式正確 `server` 資料流請求：
+`server`資料流要求的下列`identityMap`欄位群組格式正確：
 
 ```json
 {
@@ -63,7 +63,7 @@ ht-degree: 0%
 }
 ```
 
-下列專案 `identityMap` 在欄位群組上設定時，將導致錯誤回應 `server` 資料流請求：
+在`server`資料流要求上設定下列`identityMap`欄位群組時，會產生錯誤回應：
 
 ```json
 {
@@ -84,7 +84,7 @@ ht-degree: 0%
 }
 ```
 
-在這種情況下，Edge Network傳回的錯誤回應類似於以下內容：
+在此案例中，Edge Network傳回的錯誤回應類似於以下內容：
 
 ```json
 {
@@ -100,9 +100,9 @@ ht-degree: 0%
 }
 ```
 
-## 訪客身分識別 `FPID`
+## 使用`FPID`的訪客身分識別
 
-若要透過以下方式識別使用者： `FPID`，請確定 `FPID` 在向Edge Network提出任何請求之前，已傳送Cookie。 此 `FPID` 可在Cookie中傳遞，或作為 `identityMap` 在要求內文中。
+若要透過`FPID`識別使用者，在向Edge Network提出任何要求之前，請確定已傳送`FPID` Cookie。 `FPID`可以在Cookie中或作為要求內文中`identityMap`的一部分傳遞。
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## 以下列方式要求 `FPID` 傳遞為 `identityMap` 欄位
+## 以`identityMap`欄位傳遞含`FPID`的要求
 
-以下範例會傳遞 [!DNL FPID] as a `identityMap` 引數。
+下列範例將[!DNL FPID]當做`identityMap`引數傳遞。
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"

@@ -5,8 +5,8 @@ feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 26%
+source-wordcount: '864'
+ht-degree: 22%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 26%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-若要在Adobe Experience Platform中使用事件轉送，您必須使用下列一個或多個選項，將資料傳送至Adobe Experience Platform Edge Network：
+若要在Adobe Experience Platform中使用事件轉送，您必須使用下列一個或多個選項，將資料傳送至Adobe Experience PlatformEdge Network：
 
 * [Adobe Experience Platform Web SDK](../../extensions/client/web-sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
@@ -38,11 +38,11 @@ ht-degree: 26%
 
 在 Adobe Experience Platform 中建立結構描述。
 
-1. 透過選取「 」建立結構描述 **[!UICONTROL 方案]**>**[!UICONTROL 建立結構描述]** 並選取 **[!UICONTROL XDM ExperienceEvent]** 選項。
+1. 選取&#x200B;**[!UICONTROL 結構描述]**>**[!UICONTROL 建立結構描述]**&#x200B;並選擇&#x200B;**[!UICONTROL XDM ExperienceEvent]**&#x200B;選項以建立結構描述。
 
 1. 為結構描述命名並提供簡短說明。
 
-1. 您可以選取「 」，新增「ExperienceEvent Web詳細資訊」欄位群組 **[!UICONTROL 新增]** 旁邊 **[!UICONTROL 欄位群組]**.
+1. 您可以選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;旁的&#x200B;**[!UICONTROL 新增]**，以新增「ExperienceEvent Web詳細資料」欄位群組。
 
    >[!NOTE]
    >
@@ -54,23 +54,24 @@ ht-degree: 26%
 
 ## 建立事件轉送屬性
 
-在 **[!UICONTROL 標籤]** 工作區，建立型別的屬性 **[!UICONTROL Edge]**.
+在&#x200B;**[!UICONTROL 標籤]**&#x200B;工作區中，建立型別&#x200B;**[!UICONTROL Edge]**&#x200B;的屬性。
 
-1. 選取&#x200B;**[!UICONTROL 「新屬性」]**。
+1. 選取&#x200B;**[!UICONTROL 新屬性]**。
 
 1. 為屬性命名。
 
-1. 選擇「邊緣」平台型別。
+1. 選擇「Edge」平台型別。
 
 1. 選取「**[!UICONTROL 儲存]**」。
 
-建立屬性後，請前往 **[!UICONTROL 環境]** 索引標籤中的專案並記下環境ID。 如果資料流中使用的Adobe組織與事件轉送中使用的Adobe組織不同，您可以從以下位置複製環境ID： **[!UICONTROL 環境]** 按Tab鍵並在建立資料流時貼上。 或者，您也可以從下拉式選單中選取環境。
+建立屬性之後，請移至新屬性的&#x200B;**[!UICONTROL 環境]**索引標籤，然後進行
+環境ID的注意事項。 如果資料串流中使用的Adobe組織與事件轉送中使用的Adobe組織不同，您可以從「**[!UICONTROL 環境]**」標籤複製環境ID，並在建立資料串流時貼上。 或者，您也可以從下拉式選單中選取環境。
 
 ## 建立資料串流
 
 若要在Adobe Experience Platform中建立資料串流，請使用建立事件轉送屬性時產生的環境ID。
 
-1. 選取 **[!UICONTROL 資料串流]** ，位於左側導覽器中。
+1. 在左側導覽中選取&#x200B;**[!UICONTROL 資料串流]**。
 
 1. 為組態命名並選擇是否填寫相關說明。說明可協助您在組態清單中識別各個組態。
 
@@ -78,13 +79,13 @@ ht-degree: 26%
 
 ## 啟用事件轉送
 
-接下來，設定Edge Network，將資料傳送至事件轉送及其他Adobe產品。
+接著，設定Edge Network將資料傳送至事件轉送及其他Adobe產品。
 
-1. 在 **[!UICONTROL 資料串流]** 工作區中，選取您建立的屬性。
+1. 在&#x200B;**[!UICONTROL 資料串流]**&#x200B;工作區中，選取您建立的屬性。
 
 1. 選取「開發」、「生產」或「預備」環境。
 
-   若要將資料傳送至Adobe組織外部的事件轉送環境，請選取「 」 **[!UICONTROL 切換到進階模式]** 並貼入ID。 ID是在您建立事件轉送屬性時提供。
+   或者，若要將資料傳送至Adobe組織外部的事件轉送環境，請選取&#x200B;**[!UICONTROL 切換到進階模式]**&#x200B;並貼入ID。 ID是在您建立事件轉送屬性時提供。
 
 1. 開啟必要工具並依需求設定。
 
@@ -96,9 +97,9 @@ ht-degree: 26%
 
 ## 設定Platform Web SDK擴充功能，將資料傳送至先前建立的資料流
 
-在中建立您的屬性 **[!UICONTROL 標籤]** 工作區，然後導覽至 **[!UICONTROL 擴充功能]** 並從目錄中選取Experience PlatformWeb SDK擴充功能以進行設定和安裝。
+在&#x200B;**[!UICONTROL 標籤]**&#x200B;工作區中建立您的屬性，然後導覽至&#x200B;**[!UICONTROL 擴充功能]**，並從目錄中選取Experience PlatformWeb SDK擴充功能以進行設定和安裝。
 
-請參閱 [Web SDK擴充功能檔案](../../extensions/client/web-sdk/overview.md) 以取得組態選項的詳細資訊。
+如需設定選項的詳細資訊，請參閱[Web SDK擴充功能檔案](../../extensions/client/web-sdk/overview.md)。
 
 ## 建立標籤規則以將資料傳送至Platform Web SDK
 
@@ -106,17 +107,17 @@ ht-degree: 26%
 
 使用Platform Web SDK擴充功能和「傳送事件」動作型別，建立頁面載入規則：
 
-1. 開啟 **[!UICONTROL 規則]** 索引標籤，然後選取 **[!UICONTROL 建立新規則]**.
+1. 開啟&#x200B;**[!UICONTROL 規則]**&#x200B;標籤，然後選取&#x200B;**[!UICONTROL 建立新規則]**。
 
 1. 為規則命名。
 
-1. 選取 **[!UICONTROL 事件新增]**.
+1. 選取&#x200B;**[!UICONTROL 事件新增]**。
 
-1. 選擇擴充功能及該擴充功能提供的任一事件類型以新增事件，然後設定事件相關設定，例如，選取 **[!UICONTROL 核心 — 已載入視窗]**.
+1. 選擇擴充功能及該擴充功能提供的任一事件類型以新增事件，然後設定事件相關設定，例如，選取&#x200B;**[!UICONTROL 核心 — 視窗已載入]**。
 
-1. 使用 Platform Web SDK 擴充功能新增動作。選取 **[!UICONTROL 傳送事件]** 從 **[!UICONTROL 動作型別]** 清單中，選取所需的執行個體（之前設定的Alloy執行個體），然後選取要新增至Alloy點選內XDM資料區塊的資料元素。
+1. 使用 Platform Web SDK 擴充功能新增動作。從&#x200B;**[!UICONTROL 動作型別]**&#x200B;清單中選取&#x200B;**[!UICONTROL 傳送事件]**，選取所需的執行個體（先前設定的Alloy執行個體），然後選取要新增至Alloy點選內XDM資料區塊的資料元素。
 
-1. 其餘設定維持此範例中的預設值，並選取 **[!UICONTROL 儲存]**.
+1. 其餘設定維持此範例的預設值，並選取&#x200B;**[!UICONTROL 儲存]**。
 
 再舉個例子：您可能可以建立一項規則，在使用者將游標停留在指定按鈕上時，將資料層傳送至邊緣。
 

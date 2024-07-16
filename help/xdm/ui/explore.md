@@ -14,25 +14,25 @@ ht-degree: 0%
 
 # 探索UI中的結構描述資源
 
-在Adobe Experience Platform中，所有體驗資料模型(XDM)結構描述資源都會儲存在 [!DNL Schema Library]，包括Adobe提供的標準資源及貴組織定義的自訂資源。 在Experience PlatformUI中，您可以檢視中任何現有結構、類別、欄位群組或資料型別的結構和欄位 [!DNL Schema Library]. 這在計畫和準備資料擷取時特別有用，因為UI會提供關於這些XDM資源提供的每個欄位的預期資料型別和使用案例的資訊。
+在Adobe Experience Platform中，所有Experience Data Model (XDM)結構描述資源都儲存在[!DNL Schema Library]中，包括由Adobe提供的標準資源以及您組織定義的自訂資源。 在Experience PlatformUI中，您可以檢視[!DNL Schema Library]中任何現有結構描述、類別、欄位群組或資料型別的結構和欄位。 這在計畫和準備資料擷取時特別有用，因為UI會提供關於這些XDM資源提供的每個欄位的預期資料型別和使用案例的資訊。
 
 本教學課程涵蓋在Experience PlatformUI中探索現有結構描述、類別、欄位群組和資料型別的步驟。
 
 ## 查詢結構描述資源 {#lookup}
 
-在Platform UI中選取 **[!UICONTROL 方案]** ，位於左側導覽器中。 此 [!UICONTROL 方案] 工作區提供 **[!UICONTROL 瀏覽]** 索引標籤以探索您組織中的所有結構描述，以及其他用於探索的專用索引標籤 **[!UICONTROL 類別]**， **[!UICONTROL 欄位群組]**、和 **[!UICONTROL 資料型別]** （分別）。
+在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**。 [!UICONTROL 結構描述]工作區提供&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤以探索您組織中的所有結構描述，以及其他專用索引標籤以分別探索&#x200B;**[!UICONTROL 類別]**、**[!UICONTROL 欄位群組]**&#x200B;和&#x200B;**[!UICONTROL 資料型別]**。
 
 ![](../images/ui/explore/tabs.png)
 
-篩選圖示(![濾鏡圖示影像](../images/ui/explore/icon.png))在左側邊欄中顯示控制項，以縮小列出的結果。 顯示的控制項會因所列的資源型別而異。
+篩選圖示（![篩選圖示影像](../images/ui/explore/icon.png)）在左側邊欄中顯示控制項，以縮小列出的結果。 顯示的控制項會因所列的資源型別而異。
 
-例如，若要篩選清單以僅顯示Adobe提供的標準資料型別，請選取 **[!UICONTROL 資料型別]** 和 **[!UICONTROL Adobe]** 在 **[!UICONTROL 型別]** 和 **[!UICONTROL 所有者]** 區段。
+例如，若要篩選清單以僅顯示Adobe提供的標準資料型別，請分別在&#x200B;**[!UICONTROL 型別]**&#x200B;和&#x200B;**[!UICONTROL 所有者]**&#x200B;區段下選取&#x200B;**[!UICONTROL 資料型別]**&#x200B;和&#x200B;**[!UICONTROL Adobe]**。
 
-此 **[!UICONTROL 包含在設定檔中]** 切換可讓您篩選結果，只顯示用於已啟用「 」以供使用的結構描述的資源 [即時客戶個人檔案](../../profile/home.md). 此 **[!UICONTROL 顯示臨時結構描述]** 切換篩選使用名稱空間僅供單一資料集使用的欄位建立的結構描述清單。
+**[!UICONTROL 包含在設定檔]**&#x200B;切換可讓您篩選結果，以僅顯示用於已啟用[即時客戶設定檔](../../profile/home.md)之結構描述中的資源。 **[!UICONTROL 顯示臨時結構描述]**&#x200B;切換會篩選使用僅供單一資料集使用的名稱空間欄位建立的結構描述清單。
 
-![此 [!UICONTROL 方案] 工作區 [!UICONTROL 瀏覽] 索引標籤中反白顯示篩選面板。](../images/ui/explore/filter.png)
+![反白顯示篩選面板的[!UICONTROL 結構描述]工作區[!UICONTROL 瀏覽]索引標籤。](../images/ui/explore/filter.png)
 
-當資源列在 **[!UICONTROL 類別]**， **[!UICONTROL 欄位群組]**，或 **[!UICONTROL 資料型別]** 標籤，您可以選取 **[!UICONTROL Adobe]** 以僅顯示標準資源或 **[!UICONTROL 客戶]** 以僅顯示貴組織建立的資源。
+在&#x200B;**[!UICONTROL 類別]**、**[!UICONTROL 欄位群組]**&#x200B;或&#x200B;**[!UICONTROL 資料型別]**&#x200B;標籤上列出資源時，您可以選取&#x200B;**[!UICONTROL Adobe]**&#x200B;以僅顯示標準資源，或選取&#x200B;**[!UICONTROL 客戶]**&#x200B;以僅顯示貴組織建立的資源。
 
 ![](../images/ui/explore/filter-data-type.png)
 
@@ -56,17 +56,17 @@ ht-degree: 0%
 
 ### 標準類別和欄位群組指標 {#standard-class-and-field-group-indicator}
 
-在架構編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示。](../images/ui/explore/padlock-icon.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](../images/ui/explore/padlock-icon.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 
-![反白顯示掛鎖圖示的結構描述編輯器](../images/ui/explore/schema-editor-padlock-icon.png)
+![結構描述編輯器反白顯示掛鎖圖示](../images/ui/explore/schema-editor-padlock-icon.png)
 
-請參閱 [新增自訂欄位至標準欄位群組](./resources/schemas.md) 指南檔案。 您無法編輯標準類別。
+請參閱[將自訂欄位新增到標準欄位群組](./resources/schemas.md)檔案以取得指引。 您無法編輯標準類別。
 
 ### 系統產生的欄位 {#system-fields}
 
-有些欄位名稱的前置字元為底線，例如 `_repo` 和 `_id`. 這些代表系統將在擷取資料時自動產生並指派之欄位的預留位置。
+某些欄位名稱的前置字元為底線，例如`_repo`和`_id`。 這些代表系統將在擷取資料時自動產生並指派之欄位的預留位置。
 
-因此，大部分這些欄位在擷取至Platform時應從資料結構中排除。 此規則的主要例外為 [`_{TENANT_ID}` 欄位](../api/getting-started.md#know-your-tenant_id)，貴組織下建立的所有XDM欄位都必須命名於此。
+因此，大部分這些欄位在擷取至Platform時應從資料結構中排除。 此規則的主要例外是[`_{TENANT_ID}`欄位](../api/getting-started.md#know-your-tenant_id)，在您組織下建立的所有XDM欄位都必須位於該欄位之下。
 
 ### 資料類型 {#data-types}
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 ![](../images/ui/explore/data-types.png)
 
-任何附加了方括弧(`[]`)代表該特定資料型別的陣列。 例如，資料型別為 **[!UICONTROL 字串]\[]** 表示欄位需要字串值的陣列。 資料型別 **[!UICONTROL 付款專案]\[]** 表示符合下列條件的物件陣列： [!UICONTROL 付款專案] 資料型別。
+任何附加了方括弧(`[]`)的資料型別都代表該特定資料型別的陣列。 例如，**[!UICONTROL String]\[]**&#x200B;的資料型別表示欄位需要字串值的陣列。 **[!UICONTROL 付款專案]\[]**&#x200B;的資料型別表示符合[!UICONTROL 付款專案]資料型別的物件陣列。
 
 如果陣列欄位是以物件型別為基礎，您可以在畫布中選取其圖示，以顯示每個陣列專案的預期屬性。
 
@@ -82,7 +82,7 @@ ht-degree: 0%
 
 ### [!UICONTROL 欄位屬性] {#field-properties}
 
-當您選取畫布中任何欄位的名稱時，右側欄會更新，顯示底下該欄位的詳細資訊 **[!UICONTROL 欄位屬性]**. 其中包括欄位預期使用案例、預設值、模式、格式、欄位是否為必填等內容的說明。
+當您選取畫布中任何欄位的名稱時，右邊欄會更新，以在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下顯示該欄位的詳細資訊。 其中包括欄位預期使用案例、預設值、模式、格式、欄位是否為必填等內容的說明。
 
 ![](../images/ui/explore/field-properties.png)
 
@@ -94,17 +94,17 @@ ht-degree: 0%
 
 檢查包含身分欄位的結構描述時，這些欄位會列在左側邊欄中，位於類別或欄位群組（提供這些欄位給結構描述）下方。 在左側邊欄中選取身分欄位名稱，以顯示畫布中的欄位，無論其巢狀深度為何。
 
-身分欄位在畫布中會以指紋圖示強調顯示(![指紋圖示影像](../images/ui/explore/identity-symbol.png))。 如果您選取身分欄位名稱，則可檢視其他資訊，例如 [身分名稱空間](../../identity-service/features/namespaces.md) 以及欄位是否為結構描述的主要身分。
+畫布中的身分欄位會以指紋圖示（![指紋圖示影像](../images/ui/explore/identity-symbol.png)）強調顯示。 如果您選取身分欄位名稱，則可以檢視其他資訊，例如[身分名稱空間](../../identity-service/features/namespaces.md)，以及該欄位是否為結構描述的主要身分。
 
 ![](../images/ui/explore/identity-field.png)
 
 >[!NOTE]
 >
->請參閱以下指南： [定義身分欄位](./fields/identity.md) 以取得身分欄位及其與下游Platform服務關係的詳細資訊。
+>請參閱[定義身分欄位](./fields/identity.md)的指南，以取得身分欄位及其與下游平台服務關係的詳細資訊。
 
 ### 關係欄位 {#relationship}
 
-如果您檢查包含關係欄位的結構描述，該欄位將會列在下的左側邊欄中 **[!UICONTROL 關係]**. 在左側邊欄中選取關係欄位名稱，以顯示畫布中的欄位，無論其巢狀深度為何。
+如果您正在檢查包含關聯性欄位的結構描述，該欄位將會列在左側邊欄的&#x200B;**[!UICONTROL 關聯性]**&#x200B;下。 在左側邊欄中選取關係欄位名稱，以顯示畫布中的欄位，無論其巢狀深度為何。
 
 關聯性欄位在畫布中也以唯一方式反白顯示，顯示該欄位連結到的參考結構描述名稱。 如果您選取關係欄位的名稱，即可在右側邊欄中檢視參照結構描述主要身分的身分名稱空間。
 
@@ -112,8 +112,8 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->請參閱上的教學課程 [在UI中建立關係](../tutorials/relationship-ui.md) 以取得在XDM結構描述中使用關係的詳細資訊。
+>請參閱有關[在UI](../tutorials/relationship-ui.md)中建立關聯性的教學課程，以瞭解在XDM結構描述中使用關聯性的詳細資訊。
 
 ## 後續步驟
 
-本檔案說明如何在Experience Platform UI中探索現有的XDM資源。 有關不同功能的詳細資訊， [!UICONTROL 方案] 工作區和 [!DNL Schema Editor]，請參閱 [[!UICONTROL 方案] 工作區概觀](./overview.md).
+本檔案說明如何在Experience Platform UI中探索現有的XDM資源。 如需[!UICONTROL 結構描述]工作區和[!DNL Schema Editor]不同功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](./overview.md)。

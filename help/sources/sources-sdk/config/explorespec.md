@@ -84,4 +84,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-填入您的瀏覽規格後，您可以繼續使用 [!DNL Flow Service] API。 請參閱 [自助來源（批次SDK） API指南](../api/api-overview.md) 以取得詳細資訊。
+填入您的瀏覽規格後，您就可以繼續使用[!DNL Flow Service] API建立完整的連線規格。 如需詳細資訊，請參閱[自助式來源（批次SDK） API指南](../api/api-overview.md)。

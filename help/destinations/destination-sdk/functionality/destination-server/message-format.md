@@ -15,14 +15,14 @@ ht-degree: 0%
 
 若要瞭解Adobe端的訊息格式及設定檔設定和轉換程式，請熟悉下列Experience Platform概念：
 
-* **體驗資料模型(XDM)**. [XDM概覽](../../../../xdm/home.md) 和  [如何在Adobe Experience Platform中建立XDM結構描述](../../../../xdm/tutorials/create-schema-ui.md).
-* **類別**. [在UI中建立和編輯類別](../../../../xdm/ui/resources/classes.md).
-* **身分對應**. 身分對應代表Adobe Experience Platform中所有一般使用者身分的對應。 請參閱 `xdm:identityMap` 在 [XDM欄位字典](../../../../xdm/schema/field-dictionary.md).
-* **SegmentMembership**. 此 [區段會籍](../../../../xdm/schema/field-dictionary.md) XDM屬性會通知設定檔所屬的對象。 針對中的三個不同值 `status` 欄位，請閱讀以下檔案： [對象成員資格詳細資料結構欄位群組](../../../../xdm/field-groups/profile/segmentation.md).
+* **體驗資料模型(XDM)**。 [XDM總覽](../../../../xdm/home.md)和[如何在Adobe Experience Platform中建立XDM結構描述](../../../../xdm/tutorials/create-schema-ui.md)。
+* **類別**。 [在UI中建立和編輯類別](../../../../xdm/ui/resources/classes.md)。
+* **識別對應**。 身分對應代表Adobe Experience Platform中所有一般使用者身分的對應。 參考[XDM欄位字典](../../../../xdm/schema/field-dictionary.md)中的`xdm:identityMap`。
+* **區段會籍**。 [segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM屬性會通知設定檔所屬的對象。 對於`status`欄位中的三個不同值，請閱讀[對象成員資格詳細資料結構描述欄位群組](../../../../xdm/field-groups/profile/segmentation.md)的檔案。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -43,7 +43,7 @@ Experience Platform可以調整匯出設定檔的訊息格式，以符合您側�
 
 * Adobe Experience Platform中的來源(1)和目標(2) XDM結構
 * 合作夥伴端的預期訊息格式(3)，以及
-* XDM結構描述和預期訊息格式之間的轉換層，您可透過建立 [訊息轉換範本](#using-templating).
+* XDM結構描述和預期的訊息格式之間的轉換層，您可以建立[訊息轉換範本](#using-templating)來定義此轉換層。
 
 ![結構描述至JSON轉換](../../assets/functionality/destination-server/transformations-3-steps.png)
 
@@ -55,11 +55,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**來源XDM結構描述(1)**：此專案代表客戶在Experience Platform中使用的結構描述。 在Experience Platform中，在 [對應步驟](../../../ui/activate-segment-streaming-destinations.md#mapping) 在啟用目的地工作流程中，客戶會將欄位從其XDM結構描述對應到您目的地的目標結構描述(2)。
+**Source XDM結構描述(1)**：此專案是指客戶在Experience Platform中使用的結構描述。 在Experience Platform中，在啟用目的地工作流程的[對應步驟](../../../ui/activate-segment-streaming-destinations.md#mapping)中，客戶會將欄位從其XDM結構描述對應到您目的地的目標結構描述(2)。
 
-**目標XDM結構描述(2)**：根據您目的地預期格式的JSON標準結構描述(3)和目的地可解譯的屬性，您可以在目標XDM結構描述中定義設定檔屬性和身分。 您可以在目的地設定的下列位置執行此操作： [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) 和 [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md) 物件。
+**目標XDM結構描述(2)**：根據您目的地預期格式的JSON標準結構描述(3)以及目的地可以轉譯的屬性，您可以在目標XDM結構描述中定義設定檔屬性和身分。 您可以在目的地設定的[schemaConfig](../../functionality/destination-configuration/schema-configuration.md)和[identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md)物件中執行此動作。
 
-**目的地設定檔屬性的JSON標準結構描述(3)**：此範例代表 [JSON結構描述](https://json-schema.org/learn/miscellaneous-examples.html) 平台支援的所有設定檔屬性及其型別（例如：物件、字串、陣列）。 目的地可支援的範例欄位可能是 `firstName`， `lastName`， `gender`， `email`， `phone`， `productId`， `productName`、等等。 您需要 [訊息轉換範本](#using-templating) 量身打造資料匯出的不Experience Platform，使其符合您的預期格式。
+目的地設定檔屬性的&#x200B;**JSON標準結構描述(3)**：此範例代表您的平台支援的所有設定檔屬性及其型別（例如：物件、字串、陣列）的[JSON結構描述](https://json-schema.org/learn/miscellaneous-examples.html)。 目的地可支援的範例欄位可能是`firstName`、`lastName`、`gender`、`email`、`phone`、`productId`、`productName`等。 您需要[訊息轉換範本](#using-templating)，才能量身打造匯出不Experience Platform的資料以符合您預期的格式。
 
 根據上述結構描述轉換，以下說明來源XDM結構描述和合作夥伴端範例結構描述之間的設定檔設定變更方式：
 
@@ -67,11 +67,11 @@ Users who want to activate data to your destination need to map the fields in th
 
 ## 快速入門 — 轉換三個基本屬性 {#getting-started}
 
-為了示範設定檔轉換程式，以下範例在Adobe Experience Platform中使用三個常見的設定檔屬性： **名字**， **姓氏**、和 **電子郵件地址**.
+為了示範設定檔轉換程式，下列範例在Adobe Experience Platform中使用三個常見的設定檔屬性： **名字**、**姓氏**&#x200B;和&#x200B;**電子郵件地址**。
 
 >[!NOTE]
 >
->客戶將屬性從來源XDM結構描述對應到Adobe Experience Platform UI中的合作夥伴XDM結構描述，在 **對應** 的步驟 [啟用目標工作流程](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>客戶在[啟用目的地工作流程](../../../ui/activate-segment-streaming-destinations.md#mapping)的&#x200B;**對應**&#x200B;步驟中，將來源XDM結構描述中的屬性對應到Adobe Experience Platform UI中的合作夥伴XDM結構描述。
 
 假設您的平台可以接收類似以下的訊息格式：
 
@@ -107,16 +107,16 @@ Authorization: Bearer YOUR_REST_API_KEY
 設定檔有3個區段：
 
 * `segmentMembership` （永遠出現在設定檔上）
-   * 此區段包含設定檔中存在的所有對象。 對象可以有兩種狀態之一： `realized` 或 `exited`.
+   * 此區段包含設定檔中存在的所有對象。 對象可以有兩種狀態之一： `realized`或`exited`。
 * `identityMap` （永遠出現在設定檔上）
    * 本節包含設定檔上存在的所有身分識別(電子郵件、Google GAID、Apple IDFA等)，以及使用者在啟動工作流程中對應以匯出的身分識別。
 * 屬性（視目的地設定而定，這些屬性可能會出現在設定檔中）。 預先定義的屬性與自由格式屬性之間也有細微的差異：
-   * 的 *自由格式屬性*，這些內含 `.value` 路徑（如果屬性出現在設定檔上） (請參閱 `lastName` 屬性（來自範例1）。 如果設定檔上不存在這些變數，則不會包含 `.value` 路徑(請參閱 `firstName` 屬性（來自範例1）。
-   * 的 *預先定義的屬性*，這些不包含 `.value` 路徑。 設定檔中存在的所有對應屬性都會出現在屬性對應中。 不會出現的不存在的專案(請參閱範例2 - `firstName` 屬性不存在於設定檔上)。
+   * 針對&#x200B;*自由格式屬性*，如果屬性存在於設定檔上，則這些屬性會包含`.value`路徑（請參閱範例1中的`lastName`屬性）。 如果設定檔上不存在這些變數，則不會包含`.value`路徑（請參閱範例1中的`firstName`屬性）。
+   * 針對&#x200B;*預先定義的屬性*，這些屬性不包含`.value`路徑。 設定檔中存在的所有對應屬性都會出現在屬性對應中。 不存在屬性（請參閱範例2 — 設定檔上不存在`firstName`屬性）。
 
 請參閱以下兩個Experience Platform中的設定檔範例：
 
-### 範例1搭配 `segmentMembership`， `identityMap` 自由格式屬性的和屬性 {#example-1}
+### 範例1，包含`segmentMembership`、`identityMap`和自由格式屬性的屬性 {#example-1}
 
 ```json
 {
@@ -145,7 +145,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-### 範例2，具有 `segmentMembership`， `identityMap` 預先定義屬性的和屬性 {#example-2}
+### 範例2，包含預先定義屬性的`segmentMembership`、`identityMap`和屬性 {#example-2}
 
 ```json
 {
@@ -172,13 +172,13 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## 使用範本語言進行身分、屬性和對象成員資格轉換 {#using-templating}
 
-Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](https://jinja.palletsprojects.com/en/2.11.x/)，將欄位從Experience PlatformXDM結構描述轉換為目的地支援的格式。
+Adobe使用[Pebble範本](https://pebbletemplates.io/) （類似於[Jinja](https://jinja.palletsprojects.com/en/2.11.x/)的範本化語言）將欄位從Experience PlatformXDM結構描述轉換為目的地支援的格式。
 
 本節提供如何進行這些轉換的數個範例，從輸入XDM結構描述，透過範本，以及輸出為目的地接受的裝載格式。 以下範例是透過增加複雜性來呈現，如下所示：
 
-1. 簡單轉換範例。 瞭解範本化如何與簡單的轉換搭配運作 [設定檔屬性](#attributes)， [對象會籍](#segment-membership)、和 [身分](#identities) 欄位。
-2. 結合上述欄位的範本範例複雜性增加： [建立可傳送對象和身分的範本](./message-format.md#segments-and-identities) 和 [建立可傳送區段、身分和設定檔屬性的範本](#segments-identities-attributes).
-3. 包含彙總索引鍵的範本。 當您使用 [可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 在目標設定中，Experience Platform會根據對象ID、對象狀態或身分名稱空間等條件，將匯出至目標的設定檔分組。
+1. 簡單轉換範例。 瞭解範本化如何與[設定檔屬性](#attributes)、[對象成員資格](#segment-membership)和[身分](#identities)欄位的簡單轉換搭配運作。
+2. 結合上述欄位的範本複雜性增加： [建立傳送對象和身分的範本](./message-format.md#segments-and-identities)和[建立傳送區段、身分和設定檔屬性的範本](#segments-identities-attributes)。
+3. 包含彙總索引鍵的範本。 當您在目的地組態中使用[可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)時，Experience Platform會根據對象ID、對象狀態或身分名稱空間等條件，將匯出至目的地的設定檔分組。
 
 ### 設定檔屬性 {#attributes}
 
@@ -186,7 +186,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 >[!IMPORTANT]
 >
->如需Adobe Experience Platform中所有可用設定檔屬性的清單，請參閱 [XDM欄位字典](../../../../xdm/schema/field-dictionary.md).
+>如需Adobe Experience Platform中所有可用設定檔屬性的清單，請參閱[XDM欄位字典](../../../../xdm/schema/field-dictionary.md)。
 
 
 **輸入**
@@ -223,7 +223,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 >[!IMPORTANT]
 >
->對於您使用的所有範本，您必須逸出非法字元，例如雙引號 `""` 插入之前 [範本](../../functionality/destination-server/templating-specs.md) 在 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如需有關逸出雙引號的詳細資訊，請參閱 [JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>針對您使用的所有範本，您必須先逸出不合法的字元，例如雙引號`""`，再於[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中插入[範本](../../functionality/destination-server/templating-specs.md)。 如需有關逸出雙引號的詳細資訊，請參閱[JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -263,10 +263,10 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 }
 ```
 
-### 對象會籍 {#audience-membership}
+### 客群會籍 {#audience-membership}
 
-此 [區段會籍](../../../../xdm/schema/field-dictionary.md) XDM屬性會通知設定檔所屬的對象。
-針對中的三個不同值 `status` 欄位，請閱讀以下檔案： [對象成員資格詳細資料結構欄位群組](../../../../xdm/field-groups/profile/segmentation.md).
+[segmentMembership](../../../../xdm/schema/field-dictionary.md) XDM屬性會通知設定檔所屬的對象。
+對於`status`欄位中的三個不同值，請閱讀[對象成員資格詳細資料結構描述欄位群組](../../../../xdm/field-groups/profile/segmentation.md)的檔案。
 
 **輸入**
 
@@ -320,7 +320,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 >[!IMPORTANT]
 >
->對於您使用的所有範本，您必須逸出非法字元，例如雙引號 `""` 插入之前 [範本](../../functionality/destination-server/templating-specs.md) 在 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如需有關逸出雙引號的詳細資訊，請參閱 [JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>針對您使用的所有範本，您必須先逸出不合法的字元，例如雙引號`""`，再於[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中插入[範本](../../functionality/destination-server/templating-specs.md)。 如需有關逸出雙引號的詳細資訊，請參閱[JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 
 ```python
@@ -380,7 +380,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 ### 身分 {#identities}
 
-如需Experience Platform中身分的相關資訊，請參閱 [身分名稱空間總覽](../../../../identity-service/features/namespaces.md).
+如需Experience Platform中身分的相關資訊，請參閱[身分名稱空間概觀](../../../../identity-service/features/namespaces.md)。
 
 **輸入**
 
@@ -424,7 +424,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 >[!IMPORTANT]
 >
->對於您使用的所有範本，您必須逸出非法字元，例如雙引號 `""` 插入之前 [範本](../../functionality/destination-server/templating-specs.md) 在 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如需有關逸出雙引號的詳細資訊，請參閱 [JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>針對您使用的所有範本，您必須先逸出不合法的字元，例如雙引號`""`，再於[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中插入[範本](../../functionality/destination-server/templating-specs.md)。 如需有關逸出雙引號的詳細資訊，請參閱[JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -561,7 +561,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 >[!IMPORTANT]
 >
->對於您使用的所有範本，您必須逸出非法字元，例如雙引號 `""` 插入之前 [範本](../../functionality/destination-server/templating-specs.md) 在 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如需有關逸出雙引號的詳細資訊，請參閱 [JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>針對您使用的所有範本，您必須先逸出不合法的字元，例如雙引號`""`，再於[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中插入[範本](../../functionality/destination-server/templating-specs.md)。 如需有關逸出雙引號的詳細資訊，請參閱[JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -609,7 +609,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 **結果**
 
-此 `json` 以下表示從Adobe Experience Platform匯出的資料。
+以下`json`代表從Adobe Experience Platform匯出的資料。
 
 ```json
 {
@@ -743,7 +743,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 >[!IMPORTANT]
 >
->對於您使用的所有範本，您必須逸出非法字元，例如雙引號 `""` 插入之前 [範本](../../functionality/destination-server/templating-specs.md) 在 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如需有關逸出雙引號的詳細資訊，請參閱 [JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>針對您使用的所有範本，您必須先逸出不合法的字元，例如雙引號`""`，再於[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中插入[範本](../../functionality/destination-server/templating-specs.md)。 如需有關逸出雙引號的詳細資訊，請參閱[JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
 ```python
 {
@@ -801,7 +801,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 **結果**
 
-此 `json` 以下表示從Adobe Experience Platform匯出的資料。
+以下`json`代表從Adobe Experience Platform匯出的資料。
 
 ```json
 {
@@ -859,20 +859,20 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 ### 在您的範本中加入彙總金鑰，以存取依不同條件分組的匯出設定檔 {#template-aggregation-key}
 
-當您使用 [可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 在目標設定中，您可以根據對象ID、對象別名、對象成員資格或身分名稱空間等條件，將匯出至目標的設定檔分組。
+當您在目的地組態中使用[可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)時，您可以根據對象ID、對象別名、對象成員資格或身分名稱空間等條件，將匯出至目的地的設定檔分組。
 
 在訊息轉換範本中，您可以存取上述彙總索引鍵，如下列章節的範例所示。 使用彙總金鑰來建構匯出為Experience Platform之外的HTTP訊息，以符合目的地預期的格式和速率限制。
 
 #### 在範本中使用對象ID彙總索引鍵 {#aggregation-key-segment-id}
 
-如果您使用 [可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 並設定 `includeSegmentId` 若設為true，則匯出至目的地的HTTP訊息中的設定檔會依對象ID分組。 請參閱下方以瞭解如何在範本中存取對象ID。
+如果您使用[可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)並將`includeSegmentId`設為true，則匯出至目的地的HTTP訊息中的設定檔會依對象ID分組。 請參閱下方以瞭解如何在範本中存取對象ID。
 
 **輸入**
 
 請考量下列四個設定檔，其中：
 
-* 前兩個是具有對象ID的對象的一部分 `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* 第三個設定檔是具有對象ID的對象的一部分 `8f812592-3f06-416b-bd50-e7831848a31a`
+* 前兩個是對象ID為`788d8874-8007-4253-92b7-ee6b6c20c6f3`的對象的一部分
+* 第三個設定檔是對象ID為`8f812592-3f06-416b-bd50-e7831848a31a`的對象的一部分
 * 第四個設定檔是上述兩個對象的一部分。
 
 設定檔1：
@@ -963,9 +963,9 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 >[!IMPORTANT]
 >
->對於您使用的所有範本，您必須逸出非法字元，例如雙引號 `""` 插入之前 [範本](../../functionality/destination-server/templating-specs.md) 在 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如需有關逸出雙引號的詳細資訊，請參閱 [JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>針對您使用的所有範本，您必須先逸出不合法的字元，例如雙引號`""`，再於[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中插入[範本](../../functionality/destination-server/templating-specs.md)。 如需有關逸出雙引號的詳細資訊，請參閱[JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
-請注意以下方式 `audienceId` 用於範本中存取對象ID。 此範例假設您使用 `audienceId` 目的地分類法的對象成員資格。 您可以改用任何其他欄位名稱，視您自己的分類法而定。
+請注意以下範本中如何使用`audienceId`來存取對象ID。 此範例假設您在目的地分類法中使用`audienceId`作為對象成員資格。 您可以改用任何其他欄位名稱，視您自己的分類法而定。
 
 ```python
 {
@@ -1017,7 +1017,7 @@ Adobe使用 [卵石範本](https://pebbletemplates.io/)，類似於 [金家](htt
 
 #### 在範本中使用對象別名彙總索引鍵 {#aggregation-key-segment-alias}
 
-如果您使用 [可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 並設定 `includeSegmentId` 若設為true，您也可以在範本中存取對象別名。
+如果您使用[可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)並將`includeSegmentId`設為true，則也可以在範本中存取對象別名。
 
 將下行的內容新增至範本，以存取依對象別名分組的匯出設定檔。
 
@@ -1027,7 +1027,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### 在範本中使用對象狀態彙總索引鍵 {#aggregation-key-segment-status}
 
-如果您使用 [可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 並設定 `includeSegmentId` 和 `includeSegmentStatus` 若設為true，您可以存取範本中的對象狀態。 如此一來，您就可以根據應從區段新增還是移除設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
+如果您使用[可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)並將`includeSegmentId`和`includeSegmentStatus`設定為true，則您可以存取範本中的對象狀態。 如此一來，您就可以根據應從區段新增還是移除設定檔，將匯出至目的地的HTTP訊息中的設定檔分組。
 
 可能的值包括：
 
@@ -1043,7 +1043,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### 在範本中使用身分名稱空間彙總金鑰 {#aggregation-key-identity}
 
-以下範例說明 [可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) 在目的地設定中，設定為依身分名稱空間彙總匯出的設定檔，採用形式 `"namespaces": ["email", "phone"]` 和 `"namespaces": ["GAID", "IDFA"]`. 請參閱 `groups` 中的引數 [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md) 檔案，以瞭解有關分組的更多詳細資訊。
+以下是範例，其中目的地組態中的[可設定的彙總](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)設定為依據身分名稱空間彙總匯出的設定檔，格式為`"namespaces": ["email", "phone"]`和`"namespaces": ["GAID", "IDFA"]`。 如需分組的詳細資訊，請參閱[建立目的地組態](../../authoring-api/destination-configuration/create-destination-configuration.md)檔案中的`groups`引數。
 
 **輸入**
 
@@ -1115,9 +1115,9 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 >[!IMPORTANT]
 >
->對於您使用的所有範本，您必須逸出非法字元，例如雙引號 `""` 插入之前 [範本](../../functionality/destination-server/templating-specs.md) 在 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). 如需有關逸出雙引號的詳細資訊，請參閱 [JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
+>針對您使用的所有範本，您必須先逸出不合法的字元，例如雙引號`""`，再於[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中插入[範本](../../functionality/destination-server/templating-specs.md)。 如需有關逸出雙引號的詳細資訊，請參閱[JSON標準](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/)中的第9章。
 
-請注意 `input.aggregationKey.identityNamespaces` 用於以下的範本
+請注意，下列範本中使用了`input.aggregationKey.identityNamespaces`
 
 ```python
 {
@@ -1199,22 +1199,22 @@ https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 
 ### 參考：轉換範本中使用的內容與函式 {#reference}
 
-提供給範本的內容包含 `input`  （此呼叫中匯出的設定檔/資料）和 `destination` (有關Adobe將資料傳送至哪個目的地的資料，適用於所有設定檔)。
+提供給範本的內容包含`input` （此呼叫中匯出的設定檔/資料）和`destination` (Adobe傳送資料的目標之相關資料，對所有設定檔都有效)。
 
 下表提供上述範例中函式的說明。
 
 | 函數 | 說明 | 範例 |
 |---------|----------|----------|
-| `input.profile` | 設定檔，表示為 [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). 依照此頁面中進一步提及的合作夥伴XDM結構描述。 |
-| `hasSegments` | 此函式以名稱空間對象ID的地圖作為引數。 函式傳回 `true` 如果地圖中至少有一個對象（無論其狀態為何），以及 `false` 否則。 您可以使用此函式來決定是否要在對象地圖上反複運算。 | `hasSegments(input.profile.segmentMembership)` |
+| `input.profile` | 以[JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html)表示的設定檔。 依照此頁面中進一步提及的合作夥伴XDM結構描述。 |
+| `hasSegments` | 此函式以名稱空間對象ID的地圖作為引數。 如果地圖中至少有一個對象（不論其狀態為何），則函式會傳回`true`，否則會傳回`false`。 您可以使用此函式來決定是否要在對象地圖上反複運算。 | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | 從特定Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | 從特定Adobe Experience Platform名稱空間中的對象名稱對應至合作夥伴系統中的對象名稱。 | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
-| `destination.namespaceSegmentTimestamps` | 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`：傳回含有ID的區段時的時間 `seg-id-1`，來自 `ups` 名稱空間是以UNIX時間戳記格式建立的。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`：傳回具有ID的對象的時間 `seg-id-1`，來自 `ups` 名稱空間已更新，採用UNIX時間戳記格式。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`：傳回具有ID的對象的時間 `seg-id-1`，來自 `ups` 以UNIX時間戳記格式啟用至目的地。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：傳回目標上對象啟動更新的時間（UNIX時間戳記格式）。</li></ul> |
-| `addedSegments(mapOfNamespacedSegmentIds)` | 僅傳回具有狀態的對象 `realized`，橫跨所有名稱空間。 | `addedSegments(input.profile.segmentMembership)` |
-| `removedSegments(mapOfNamespacedSegmentIds)` | 僅傳回具有狀態的對象 `exited`，橫跨所有名稱空間。 | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **已棄用。 取代為`destination.namespaceSegmentAliases`** <br><br> 從Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **已棄用。 取代為`destination.namespaceSegmentNames`** <br><br>  從Adobe Experience Platform名稱空間中的對象名稱對應至合作夥伴系統中的對象名稱。 | `destination.segmentNames["seg-name-1"]` |
-| `destination.segmentTimestamps` | **已棄用。 取代為`destination.namespaceSegmentTimestamps`** <br><br> 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`：傳回具有ID的對象的時間 `seg-id-1` 建立的UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已更新，採用UNIX時間戳記格式。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`：傳回具有ID的對象的時間 `seg-id-1` 已以UNIX時間戳記格式啟用至目的地。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：傳回目標上對象啟動更新的時間（UNIX時間戳記格式）。</li></ul> |
+| `destination.namespaceSegmentTimestamps` | 傳回建立、更新或啟用對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`：傳回從`ups`名稱空間建立識別碼為`seg-id-1`之區段的時間（UNIX時間戳記格式）。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`：傳回從`ups`名稱空間更新識別碼為`seg-id-1`之對象的時間（UNIX時間戳記格式）。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`：傳回識別碼為`seg-id-1`的對象，從`ups`名稱空間啟動至目的地的時間，格式為UNIX時間戳記。</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`：傳回在目的地更新對象啟用的時間（UNIX時間戳記格式）。</li></ul> |
+| `addedSegments(mapOfNamespacedSegmentIds)` | 只傳回所有名稱空間中狀態為`realized`的對象。 | `addedSegments(input.profile.segmentMembership)` |
+| `removedSegments(mapOfNamespacedSegmentIds)` | 只傳回所有名稱空間中狀態為`exited`的對象。 | `removedSegments(input.profile.segmentMembership)` |
+| `destination.segmentAliases` | **已棄用。 取代為`destination.namespaceSegmentAliases`** <br><br>從Adobe Experience Platform名稱空間中的對象ID對應至合作夥伴系統中的對象別名。 | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **已棄用。 取代為`destination.namespaceSegmentNames`** <br><br>從Adobe Experience Platform名稱空間中的對象名稱對應到合作夥伴系統中的對象名稱。 | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentTimestamps` | **已棄用。 取代為`destination.namespaceSegmentTimestamps`** <br><br>傳回建立、更新或啟動對象的時間（以UNIX時間戳記格式）。 | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`：傳回識別碼為`seg-id-1`的對象建立時間（以UNIX時間戳記格式）。</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`：傳回識別碼為`seg-id-1`的對象更新時間（以UNIX時間戳記格式）。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`：傳回識別碼為`seg-id-1`的對象啟動至目的地的時間（UNIX時間戳記格式）。</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`：傳回在目的地更新對象啟用的時間（UNIX時間戳記格式）。</li></ul> |
 
 {style="table-layout:auto"}
 

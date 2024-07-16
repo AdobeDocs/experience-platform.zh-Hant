@@ -10,32 +10,32 @@ ht-degree: 0%
 
 ---
 
-# 傳送部分列更新至 [!DNL Real-Time Customer Profile] 使用 [!DNL Data Prep]
+# 使用[!DNL Data Prep]傳送部分資料列更新至[!DNL Real-Time Customer Profile]
 
 >[!WARNING]
 >
->已棄用透過DCS入口針對設定檔更新擷取的Experience Data Model (XDM)實體更新訊息(含JSONPATCH作業)。 或者，您可以 [將原始資料擷取至DCS入口](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) 並指定必要的資料對應，以將您的資料轉換為符合XDM的訊息以進行設定檔更新。
+>已棄用透過DCS入口針對設定檔更新擷取的Experience Data Model (XDM)實體更新訊息(含JSONPATCH作業)。 或者，您可以[將原始資料擷取至DCS入口](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection)，並指定必要的資料對應，將您的資料轉換為符合XDM規範的訊息，以進行設定檔更新。
 
-串流更新插入 [!DNL Data Prep] 可讓您將部分列更新傳送至 [!DNL Real-Time Customer Profile] 同時透過單一API請求建立和建立新的身分連結。
+[!DNL Data Prep]中的串流更新插入可讓您傳送部分資料列更新至[!DNL Real-Time Customer Profile]資料，同時使用單一API要求建立和建立新的身分連結。
 
-透過串流更新插入，您可以保留資料的格式，同時將該資料轉譯為 [!DNL Real-Time Customer Profile] 在內嵌期間PATCH請求。 根據您提供的輸入， [!DNL Data Prep] 可讓您傳送單一API裝載，並將資料轉譯為兩者 [!DNL Real-Time Customer Profile] PATCH和 [!DNL Identity Service] 建立請求。
+透過串流更新插入，您可以在擷取期間將該資料轉譯為[!DNL Real-Time Customer Profile]個PATCH請求時保留資料格式。 根據您提供的輸入，[!DNL Data Prep]可讓您傳送單一API裝載，並將資料轉譯為[!DNL Real-Time Customer Profile]PATCH和[!DNL Identity Service]建立要求。
 
 >[!NOTE]
 >
->若要利用更新插入功能，建議您在資料擷取期間關閉XDM相容的設定，並使用重新對應傳入的裝載 [資料準備對應程式](./ui/mapping.md).
+>若要利用更新插入功能，建議您在資料擷取期間關閉XDM相容的設定，並使用[資料準備對應程式](./ui/mapping.md)重新對應傳入裝載。
 
-本檔案提供如何在中串流更新外掛的資訊 [!DNL Data Prep].
+本檔案提供如何在[!DNL Data Prep]中串流更新插入的資訊。
 
 ## 快速入門
 
 此概覽需要深入瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Data Prep]](./home.md)： [!DNL Data Prep] 可讓資料工程師對應、轉換及驗證來往於Experience Data Model (XDM)的資料。
-* [[!DNL Identity Service]](../identity-service/home.md)：透過跨裝置和系統橋接身分，更能瞭解個別客戶及其行為。
-* [即時客戶個人檔案](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
-* [來源](../sources/home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [[!DNL Data Prep]](./home.md)： [!DNL Data Prep]可讓資料工程師對應、轉換及驗證與Experience Data Model (XDM)之間的資料。
+* [[!DNL Identity Service]](../identity-service/home.md)：跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
+* [即時客戶個人檔案](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶個人檔案。
+* [來源](../sources/home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
 
-## 在中使用串流更新插入 [!DNL Data Prep] {#streaming-upserts-in-data-prep}
+## 在[!DNL Data Prep]中使用串流更新插入 {#streaming-upserts-in-data-prep}
 
 >[!NOTE]
 >
@@ -43,26 +43,26 @@ ht-degree: 0%
 
 ### 串流更新插入高階工作流程
 
-串流更新插入 [!DNL Data Prep] 其運作方式如下：
+[!DNL Data Prep]中的串流更新插入的運作方式如下：
 
-* 您必須先建立和啟用資料集 [!DNL Profile] 消耗。 請參閱以下指南： [啟用資料集 [!DNL Profile]](../catalog/datasets/enable-for-profile.md) 以取得詳細資訊。
-* 如果新身分必須連結，則您也必須建立其他資料集 **使用相同結構描述** 作為您的 [!DNL Profile] 資料集。
-* 準備好資料集後，您必須建立資料流，將傳入的請求對應至 [!DNL Profile] 資料集；
+* 您必須先建立並啟用[!DNL Profile]使用量的資料集。 如需詳細資訊，請參閱[啟用 [!DNL Profile]](../catalog/datasets/enable-for-profile.md)的資料集指南。
+* 如果新身分必須連結，則您也必須建立其他資料集&#x200B;**，其結構描述**&#x200B;與您的[!DNL Profile]資料集相同。
+* 準備好資料集後，您必須建立資料流，將傳入的請求對應至[!DNL Profile]資料集；
 * 接下來，您必須更新傳入請求以包含必要的標頭。 這些標頭會定義：
-   * 需要執行的資料操作 [!DNL Profile]： `create`， `merge`、和 `delete`.
-   * 要透過執行的選擇性身分操作 [!DNL Identity Service]： `create`.
+   * 需要對[!DNL Profile]執行的資料操作： `create`、`merge`和`delete`。
+   * 要與[!DNL Identity Service]一起執行的選擇性身分作業： `create`。
 
 ### 設定身分資料集
 
 如果新身分必須連結，則您必須在傳入裝載中建立並傳遞額外的資料集。 建立身分資料集時，您必須確保符合下列需求：
 
-* 身分資料集必須擁有其關聯的結構描述作為 [!DNL Profile] 資料集。 結構描述不相符可能會導致不一致的系統行為。
-* 不過，您必須確保身分資料集與不同 [!DNL Profile] 資料集。 如果資料集相同，則會覆寫資料而非更新資料。
-* 雖然初始資料集必須啟用 [!DNL Profile]，身分資料集 **不應啟用** 的 [!DNL Profile]. 否則，也會覆寫資料，而非更新資料。 不過，身分資料集 **應該啟用** 的 [!DNL Identity Service].
+* 身分資料集必須具有關聯的結構描述做為[!DNL Profile]資料集。 結構描述不相符可能會導致不一致的系統行為。
+* 不過，您必須確保身分資料集與[!DNL Profile]資料集不同。 如果資料集相同，則會覆寫資料而非更新資料。
+* 雖然必須為[!DNL Profile]啟用初始資料集，但身分資料集&#x200B;**不應為[!DNL Profile]啟用**。 否則，也會覆寫資料，而非更新資料。 但是，應該為[!DNL Identity Service]啟用身分資料集&#x200B;****。
 
 #### 與身分資料集相關聯之結構描述中的必填欄位 {#identity-dataset-required-fileds}
 
-如果您的結構描述包含必填欄位，則必須抑制資料集的驗證才能啟用 [!DNL Identity Service] 以僅接收身分。 您可以套用 `disabled` 值至 `acp_validationContext` 引數。 請參閱下列範例：
+如果您的結構描述包含必填欄位，則必須隱藏資料集的驗證，以允許[!DNL Identity Service]僅接收身分識別。 您可以將`disabled`值套用至`acp_validationContext`引數來隱藏驗證。 請參閱下列範例：
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
@@ -114,33 +114,33 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 
 | 參數 | 說明 |
 | --- | --- |
-| `flowId` | 用於識別資料流的唯一ID。 此資料流ID應該對應至使用建立的來源連線 [!DNL Amazon Kinesis]， [!DNL Azure Event Hubs]，或 [!DNL HTTP API]. 此資料流也應該有 [!DNL Profile] — 啟用資料集作為目標資料集。 **注意**：的ID [!DNL Profile]啟用的目標資料集也會用作 `datasetId` 引數。 |
+| `flowId` | 用於識別資料流的唯一ID。 此資料流ID應該對應到使用[!DNL Amazon Kinesis]、[!DNL Azure Event Hubs]或[!DNL HTTP API]建立的來源連線。 此資料流也應該有[!DNL Profile]啟用的資料集作為目標資料集。 **注意**：已啟用[!DNL Profile]的目標資料集的識別碼也會當作您的`datasetId`引數使用。 |
 | `imsOrgId` | 與您的組織相對應的ID。 |
-| `datasetId` | 的ID [!DNL Profile] — 啟用資料流的目標資料集。 **注意**：此ID與 [!DNL Profile] — 已在資料流中找到啟用的目標資料集ID。 |
-| `operations` | 此引數概述以下動作： [!DNL Data Prep] 將會根據傳入的請求來進行。 |
-| `operations.data` | 定義必須在中執行的動作 [!DNL Real-Time Customer Profile]. |
-| `operations.identity` | 透過定義資料上允許的操作 [!DNL Identity Service]. |
+| `datasetId` | 您的資料流已啟用[!DNL Profile]的目標資料集識別碼。 **注意**：此ID與您資料流中具有[!DNL Profile]功能的目標資料集ID相同。 |
+| `operations` | 此引數概述[!DNL Data Prep]根據傳入的請求將採取的動作。 |
+| `operations.data` | 定義必須在[!DNL Real-Time Customer Profile]中執行的動作。 |
+| `operations.identity` | 定義[!DNL Identity Service]允許對資料執行的作業。 |
 | `operations.identityDatasetId` | （選用）只有在必須連結新身分時才需要身分資料集的ID。 |
 
 #### 支援的作業
 
-支援下列作業 [!DNL Real-Time Customer Profile]：
+[!DNL Real-Time Customer Profile]支援下列作業：
 
 | 運作 | 說明 |
 | --- | --- | 
-| `create` | 預設操作。 這會為產生XDM實體建立方法 [!DNL Real-Time Customer Profile]. |
-| `merge` | 這會為以下專案產生XDM實體更新方法 [!DNL Real-Time Customer Profile]. |
-| `delete` | 這會為以下專案產生XDM實體刪除方法 [!DNL Real-Time Customer Profile] 並永久移除以下專案的資料： [!DNL Profile store]. |
+| `create` | 預設操作。 這會為[!DNL Real-Time Customer Profile]產生XDM實體建立方法。 |
+| `merge` | 這會產生[!DNL Real-Time Customer Profile]的XDM實體更新方法。 |
+| `delete` | 這會產生[!DNL Real-Time Customer Profile]的XDM實體刪除方法，並從[!DNL Profile store]永久移除資料。 |
 
-支援下列作業 [!DNL Identity Service]：
+[!DNL Identity Service]支援下列作業：
 
 | 運作 | 說明 |
 | --- | --- |
-| `create` | 此引數唯一允許的作業。 如果 `create` 傳遞為的值 `operations.identity`，然後 [!DNL Data Prep] 產生XDM實體建立請求 [!DNL Identity Service]. 如果身分已經存在，則會忽略身分。 **注意：** 如果 `operations.identity` 設為 `create`，然後 `identityDatasetId` 也必須指定。 XDM實體建立由內部產生的訊息 [!DNL Data Prep] 將會為此資料集id產生元件。 |
+| `create` | 此引數唯一允許的作業。 如果`create`傳遞為`operations.identity`的值，則[!DNL Data Prep]會產生[!DNL Identity Service]的XDM實體建立請求。 如果身分已經存在，則會忽略身分。 **注意：**&#x200B;如果`operations.identity`設定為`create`，則必須同時指定`identityDatasetId`。 將針對此資料集ID產生由[!DNL Data Prep]元件內部產生的XDM實體建立訊息。 |
 
 ### 沒有身分設定的裝載
 
-如果不需要連結新身分，則可以省略 `identity` 和 `identityDatasetId` 操作中的引數。 這麼做只會傳送資料至 [!DNL Real-Time Customer Profile] 並略過 [!DNL Identity Service]. 如需範例，請參閱以下裝載：
+如果新身分不需要連結，則您可以在操作中省略`identity`和`identityDatasetId`引數。 這樣做只會傳送資料給[!DNL Real-Time Customer Profile]並略過[!DNL Identity Service]。 如需範例，請參閱以下裝載：
 
 ```shell
 {
@@ -158,14 +158,14 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 
 ## 動態傳遞主要身分
 
-若要進行XDM更新，結構描述必須啟用 [!DNL Profile] 並包含主要身分。 您可以透過兩種方式指定XDM結構描述的主要身分：
+針對XDM更新，結構描述必須啟用[!DNL Profile]並包含主要身分。 您可以透過兩種方式指定XDM結構描述的主要身分：
 
 * 在XDM結構中指定一個靜態欄位作為主要身分；
 * 透過XDM結構描述中的身分對應欄位群組，將其中一個身分欄位指定為主要身分。
 
 ### 將靜態欄位指定為XDM結構描述中的主要身分欄位
 
-在以下範例中， `state`， `homePhone.number` 和其他屬性會以其各自的指定值更新插入 [!DNL Profile] 主要身分為 `sampleEmail@gmail.com`. 然後，串流會產生XDM實體更新訊息 [!DNL Data Prep] 元件。 [!DNL Real-Time Customer Profile] 然後確認XDM更新訊息以更新插入設定檔記錄。
+在下列範例中，`state`、`homePhone.number`和其他屬性會以其各自的指定值更新插入[!DNL Profile]，主要識別碼為`sampleEmail@gmail.com`。 然後，串流[!DNL Data Prep]元件會產生XDM實體更新訊息。 [!DNL Real-Time Customer Profile]接著確認XDM更新訊息以更新插入設定檔記錄。
 
 >[!NOTE]
 >
@@ -214,7 +214,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ### 透過XDM結構描述中的身分對應欄位群組，將其中一個身分欄位指定為主要身分
 
-在此範例中，標題包含 `operations` 屬性和 `identity` 和 `identityDatasetId` 屬性。 如此可讓資料與 [!DNL Real-Time Customer Profile] 以及要傳遞至的身分 [!DNL Identity Service].
+在此範例中，標頭包含具有`identity`和`identityDatasetId`屬性的`operations`屬性。 這允許資料與[!DNL Real-Time Customer Profile]合併，也允許將身分傳遞給[!DNL Identity Service]。
 
 ```shell
 curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec3583275ffce4880ffc482be5a9d810c4b' \
@@ -261,12 +261,12 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 
 ## 已知限制和主要考量事項
 
-以下概述使用串流更新插入時應考量的已知限制清單 [!DNL Data Prep]：
+以下概述使用[!DNL Data Prep]串流更新插入時應考量的已知限制清單：
 
-* 只有當傳送部分列更新至時，才應該使用串流更新插入方法 [!DNL Real-Time Customer Profile]. 部分列更新為 **非** 由資料湖使用。
-* 串流更新插入方法不支援更新、取代和移除身分。 如果新身分不存在，則會建立新身分。 因此， `identity` 作業必須一律設定為建立。 如果身分已經存在，則操作是無操作。
-* 串流更新插入方法目前不支援 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) 和 [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* 只有在傳送部分資料列更新至[!DNL Real-Time Customer Profile]時，才應該使用串流更新插入方法。 部分資料列更新&#x200B;**不是**&#x200B;由資料湖使用。
+* 串流更新插入方法不支援更新、取代和移除身分。 如果新身分不存在，則會建立新身分。 因此，`identity`作業必須一律設定為建立。 如果身分已經存在，則操作是無操作。
+* 串流更新插入方法目前不支援[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)和[Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在應該瞭解如何在中串流更新插入 [!DNL Data Prep] 傳送部分資料列更新至 [!DNL Real-Time Customer Profile] 資料，同時透過單一API請求建立和連結身分識別。 有關其他專案的詳細資訊 [!DNL Data Prep] 功能，請閱讀 [[!DNL Data Prep] 概述](./home.md). 若要瞭解如何在 [!DNL Data Prep] API，請閱讀 [[!DNL Data Prep] 開發人員指南](./api/overview.md).
+閱讀本檔案後，您現在應該瞭解如何在[!DNL Data Prep]中串流更新插入，以傳送您[!DNL Real-Time Customer Profile]資料的部分列更新，同時使用單一API請求建立和連結身分識別。 如需其他[!DNL Data Prep]功能的詳細資訊，請閱讀[[!DNL Data Prep] 概觀](./home.md)。 若要瞭解如何在[!DNL Data Prep] API中使用對應集，請閱讀[[!DNL Data Prep] 開發人員指南](./api/overview.md)。

@@ -5,7 +5,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->串流來源，例如 [HTTP API來源](../../sources/connectors/streaming/http.md) 目前不受監視儀表板支援。 目前，您只能使用儀表板來監視批次來源。
+>監控儀表板目前不支援串流來源，例如[HTTP API來源](../../sources/connectors/streaming/http.md)。 目前，您只能使用儀表板來監視批次來源。
 
 請閱讀本檔案，瞭解如何使用監視儀表板在Experience PlatformUI中監視來源資料流。
 
@@ -21,11 +21,11 @@ ht-degree: 9%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [資料流](../home.md)：資料流能呈現資料處理作業在Platform上行動資料的情形。 資料流可跨不同服務進行設定，有助於將資料從來源聯結器移至目標資料集，以及 [!DNL Identity] 和 [!DNL Profile]，並至 [!DNL Destinations].
-   * [資料流執行](../../sources/notifications.md)：資料流執行是根據所選資料流的頻率設定而定期排程的工作。
-* [來源](../../sources/home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
-* [Identity Service](../../identity-service/home.md)：透過跨裝置和系統橋接身分，更能瞭解個別客戶及其行為。
-* [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
+* [資料流](../home.md)：資料流可呈現跨平台行動資料的資料作業。 資料流是跨不同服務設定的，有助於將資料從來源聯結器移至目標資料集、移至[!DNL Identity]和[!DNL Profile]以及移至[!DNL Destinations]。
+   * [資料流執行](../../sources/notifications.md)：資料流執行是根據所選資料流的頻率設定所排程的週期性工作。
+* [來源](../../sources/home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
+* [身分識別服務](../../identity-service/home.md)：透過跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
+* [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
 * [沙箱](../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ## 使用監視儀表板監視您的來源資料
@@ -46,25 +46,25 @@ ht-degree: 9%
 
 At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
 
-在監視控制面板中，選取 [!UICONTROL 來源] 從主要標題更新您的儀表板，以顯示您的來源資料流擷取率。
+在監視儀表板中，從主要標題中選取[!UICONTROL 來源]，以顯示您的來源資料流擷取率來更新儀表板。
 
-![已選取來源卡片的監視儀表板。](../assets/ui/monitor-sources/sources.png)
+![已選取來源卡的監視儀表板。](../assets/ui/monitor-sources/sources.png)
 
-此 [!UICONTROL 擷取率] 圖表會根據您設定的時間範圍顯示您的資料擷取率。 依預設，監視控制面板會顯示過去24小時的擷取率。 如需如何設定時間範圍的步驟，請閱讀上的指南 [設定監視時間範圍](monitor.md#configure-monitoring-time-frame).
+[!UICONTROL 擷取率]圖表會根據您設定的時間範圍顯示您的資料擷取率。 依預設，監視控制面板會顯示過去24小時的擷取率。 如需設定時間範圍的步驟，請閱讀[設定監視時間範圍](monitor.md#configure-monitoring-time-frame)的指南。
 
-預設會啟用圖表顯示。 若要隱藏圖形，請選取 **[!UICONTROL 度量與圖表]** 以停用切換並隱藏圖形。
+預設會啟用圖表顯示。 若要隱藏圖表，請選取&#x200B;**[!UICONTROL 度量和圖表]**&#x200B;以停用切換並隱藏圖表。
 
 ![擷取率量度圖表。](../assets/ui/monitor-sources/metrics-graph.png)
 
 控制面板的下方會顯示一個表格，概述所有現有來源資料流程的目前度量報表。
 
-![監視儀表板測量結果表格。](../assets/ui/monitor-sources/metrics-table.png)
+![監視儀表板測量結果資料表。](../assets/ui/monitor-sources/metrics-table.png)
 
 | 量度 | 說明 |
 | --- | --- |
 | 已收到的記錄 | 從來源接收的記錄總數。 |
 | 已擷取的記錄 | 擷取到Data Lake的記錄總數。 |
-| 略過的記錄 | 略過的記錄總數。 |
+| 已略過記錄 | 略過的記錄總數。 |
 | 失敗的記錄 | 因錯誤而無法擷取的記錄總數。 |
 | 擷取率 | 根據接收的記錄總數所擷取的記錄百分比。 |
 | 失敗的資料流總數 | 失敗的資料流總數。 |
@@ -76,30 +76,30 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 | 篩選選項 | 說明 |
 | --- | --- |
 | 搜尋 | 使用搜尋列將檢視篩選為單一來源型別。 |
-| 來源 | 選取 **[!UICONTROL 來源]** 以篩選檢視並顯示每個來源型別的量度資料。 這是監控儀表板使用的預設顯示。 |
-| 資料流 | 選取 **[!UICONTROL 資料流]** 以篩選檢視並顯示每個資料流的量度資料。 |
-| 僅顯示失敗 | 選取 **[!UICONTROL 僅顯示失敗]** 以篩選檢視，並僅顯示報告擷取失敗的資料流。 |
-| 我的來源 | 您可以使用進一步篩選檢視 [!UICONTROL 我的來源] 下拉式功能表。 使用下拉式功能表來依類別篩選檢視。 或者，您可以選取 **[!UICONTROL 所有來源]** 以在所有或來源上顯示量度，或選取 **[!UICONTROL 我的來源]** 以僅顯示您有對應帳戶的來源。 |
+| 來源 | 選取&#x200B;**[!UICONTROL 來源]**&#x200B;以篩選檢視並顯示每個來源型別的量度資料。 這是監控儀表板使用的預設顯示。 |
+| 資料流 | 選取&#x200B;**[!UICONTROL 資料流]**&#x200B;以篩選檢視並顯示每個資料流的量度資料。 |
+| 僅顯示失敗 | 選取&#x200B;**[!UICONTROL 僅顯示失敗]**&#x200B;以篩選檢視並僅顯示報告擷取失敗的資料流程。 |
+| 我的來源 | 您可以使用[!UICONTROL 我的來源]下拉式功能表來進一步篩選檢視。 使用下拉式功能表來依類別篩選檢視。 或者，您可以選取「**[!UICONTROL 所有來源]**」來顯示所有或來源上的量度，或選取「**[!UICONTROL 我的來源]**」來僅顯示您有對應帳戶的來源。 |
 
 {style="table-layout:auto"}
 
-若要監視在特定資料流中擷取的資料，請選取篩選圖示 ![篩選](../assets/ui/monitor-sources/filter.png) 在來源旁邊。
+若要監視在特定資料流中擷取的資料，請選取來源旁的篩選圖示![篩選](../assets/ui/monitor-sources/filter.png)。
 
-![選取指定來源旁邊的篩選圖示，監視特定資料流。](../assets/ui/monitor-sources/monitor-dataflow.png)
+![選取指定來源旁的篩選圖示，以監視特定資料流。](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 量度表格會更新為對應至您選取之來源的活動資料流表格。 在此步驟中，您可以檢視資料流的其他資訊，包括其對應的資料集和資料型別，以及時間戳記，以指出資料流上次作用的時間。
 
-若要進一步檢查資料流，請選取篩選器圖示 ![篩選](../assets/ui/monitor-sources/filter.png) 位於資料流旁。
+若要進一步檢查資料流，請選取資料流旁的篩選圖示![篩選](../assets/ui/monitor-sources/filter.png)。
 
-![監控儀表板中的資料流表格。](../assets/ui/monitor-sources/select-dataflow.png)
+![監視儀表板中的資料流表格。](../assets/ui/monitor-sources/select-dataflow.png)
 
 接下來，您會進入一個介面，該介面會列出您所選取資料流的所有資料流執行反複專案。
 
 資料流執行代表資料流執行的例項。 例如，如果資料流排程在每小時的上午9:00、上午10:00及上午11:00執行，則您會有三個資料流執行個體。 流程執行是您的特定組織所專屬。
 
-若要檢查特定資料流執行反複專案的量度，請選取篩選器圖示 ![篩選](../assets/ui/monitor-sources/filter.png) 位於您的資料流旁。
+若要檢查特定資料流執行反複專案的量度，請選取資料流旁的篩選圖示![篩選](../assets/ui/monitor-sources/filter.png)。
 
-![資料流執行量度頁面。](../assets/ui/monitor-sources/dataflow-page.png)
+![資料流執行測量結果頁面。](../assets/ui/monitor-sources/dataflow-page.png)
 
 使用資料流執行詳細資訊頁面來檢視您所選執行疊代的度量和資訊。
 
@@ -110,8 +110,8 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 | 已擷取的記錄 | 從資料流執行擷取的記錄總數。 |
 | 失敗的記錄 | 由於資料流執行中的錯誤而未擷取的記錄總數。 |
 | 檔案總數 | 資料流執行中的檔案總數。 |
-| 資料大小 | 資料流執行中包含的資料大小總計。 |
-| 資料流執行ID | 資料流執行反複專案的ID。 |
+| 資料的大小 | 資料流執行中包含的資料大小總計。 |
+| 資料流執行 ID | 資料流執行反複專案的ID。 |
 | 組織ID | 在其中建立資料流執行的組織ID。 |
 | 狀態 | 資料流執行的狀態。 |
 | 資料流執行開始 | 表示資料流執行開始的時間戳記。 |
@@ -124,9 +124,9 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 {style="table-layout:auto"}
 
-如果您的資料流執行報告錯誤，您可以向下捲動至頁面底部，使用 [!UICONTROL 資料流執行錯誤] 介面。
+如果您的資料流執行報告錯誤，您可以向下捲動到頁面底部，使用[!UICONTROL 資料流執行錯誤]介面。
 
-使用 [!UICONTROL 記錄失敗] 區段來檢視由於錯誤而未擷取的記錄上的量度。 若要檢視完整的錯誤報告，請選取 **[!UICONTROL 預覽錯誤診斷]**. 若要下載錯誤診斷和檔案資訊清單的復本，請選取 **[!UICONTROL 下載]** 然後複製要與搭配使用的範例API呼叫 [!DNL Data Access] API。
+使用[!UICONTROL 記錄失敗]區段來檢視因錯誤而未擷取的記錄上的量度。 若要檢視完整的錯誤報告，請選取&#x200B;**[!UICONTROL 預覽錯誤診斷]**。 若要下載錯誤診斷與檔案資訊清單的復本，請選取[下載]，然後複製要與[!DNL Data Access] API一起使用的範例API呼叫。****
 
 >[!NOTE]
 >
@@ -136,7 +136,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 ## 後續步驟 {#next-steps}
 
-依照本教學課程，您已使用成功監視來源層級的擷取資料流 **[!UICONTROL 監視]** 儀表板。 您也已成功識別在擷取程式期間導致資料流失敗的錯誤。 如需更多詳細資訊，請參閱下列檔案：
+依照此教學課程，您已使用&#x200B;**[!UICONTROL 監視]**&#x200B;儀表板，成功監視來源層級的擷取資料流。 您也已成功識別在擷取程式期間導致資料流失敗的錯誤。 如需更多詳細資訊，請參閱下列檔案：
 
-* [監控身分資料](./monitor-identities.md).
-* [監控設定檔資料](./monitor-profiles.md).
+* [正在監視身分資料](./monitor-identities.md)。
+* [正在監視設定檔資料](./monitor-profiles.md)。

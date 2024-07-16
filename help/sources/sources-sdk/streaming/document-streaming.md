@@ -1,5 +1,5 @@
 ---
-title: 記錄您的來源（串流SDK）
+title: 記錄您的Source （串流SDK）
 description: 在Adobe Experience Platform中讓新來源上線之前的最後一步是記錄您的新來源。
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
 badge: Beta
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+>自助來源串流SDK為測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
 在Adobe Experience Platform中即時設定新來源之前的最後一個步驟，是記錄您的新來源。
 
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 * 您可以遵循的教學課程，為您的新來源建立檔案頁面；
 * 供您填寫新來源的檔案範本；
-* [如何使用Markdown語言撰寫技術檔案的指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)；
-* [瞭解AdobeMarkdown風格的相關指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [使用Markdown撰寫技術檔案的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)；
+* [瞭解AdobeMarkdown風格的說明](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions)。
 
 ## 先決條件
 
 開始記錄新來源前，需要下列專案：
 
-* **有效的GitHub使用者帳戶**：如果您沒有現有的GitHub帳戶，則必須透過以下方式建立一個帳戶： [GitHub註冊頁面](https://github.com/)；
-* **存取GitHub Desktop**：您必須使用 [GitHub案頭應用程式](https://desktop.github.com/) 以便在您的本機環境中建立您的來原始檔；
+* **有效的GitHub使用者帳戶**：如果您沒有現有的GitHub帳戶，則必須透過[GitHub註冊頁面](https://github.com/)建立一個帳戶；
+* **存取GitHub Desktop**：您必須使用[GitHub Desktop應用程式](https://desktop.github.com/)，才能在本機環境中建立來原始檔；
 * 您與Adobe的整合必須處於測試階段，且您的來源已部署在Platform中的中繼環境。
 
 ## 在Platform中建立來原始檔的高階指示
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ## 檔案範本
 
-您可以使用預填 [API檔案範本](streaming-template-api.md) 或 [UI檔案範本](streaming-template-ui.md) 協助建立來原始檔。 您可以在下方找到如何編輯範本及開啟提取請求的指示。 為您新來源提交的檔案將由Adobe檔案團隊稽核和發佈。
+您可以使用預先填入的[API檔案範本](streaming-template-api.md)或[UI檔案範本](streaming-template-ui.md)來協助建立您來源的檔案。 您可以在下方找到如何編輯範本及開啟提取請求的指示。 為您新來源提交的檔案將由Adobe檔案團隊稽核和發佈。
 
 您也可以下載下列檔案範本：
 

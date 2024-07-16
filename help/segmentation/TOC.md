@@ -30,7 +30,7 @@ ht-degree: 43%
    - [區段工作](api/segment-jobs.md)
    - [區段搜尋](api/segment-search.md)
    - [串流區段](api/streaming-segmentation.md)
-- 區段UI {#ui}
+- 分段UI {#ui}
    - [概觀](ui/overview.md)
    - [受眾控制面板](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
@@ -44,8 +44,8 @@ ht-degree: 43%
    - [串流區段（影片）](video/streaming-segmentation-overview.md)
    - [忽略年份時間限制更新](ui/ignore-year.md)
    - [時間限制重構](ui/segment-refactoring.md)
-   - 區段比對 {#segment-match}
-      - [區段比對概觀](ui/segment-match/overview.md)
+   - 區段相符{#segment-match}
+      - [區段比對總覽](ui/segment-match/overview.md)
       - [疑難排解](ui/segment-match/troubleshooting.md)
 - [接受同意](consents.md)
 - [多實體分段](multi-entity-segmentation.md)
@@ -74,4 +74,4 @@ ht-degree: 43%
    - [強制區段遵守資料使用規範](tutorials/governance.md)
 - [常見問答](./faq.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

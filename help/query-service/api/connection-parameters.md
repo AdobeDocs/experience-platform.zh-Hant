@@ -16,11 +16,11 @@ ht-degree: 1%
 
 ## API呼叫範例
 
-下節會逐步引導您使用執行完整的API呼叫。 [!DNL Query Service] API。 此呼叫包含一般API格式、顯示必要標題的範例要求以及範例回應。
+下節將逐步引導您完成可以使用[!DNL Query Service] API進行的API呼叫。 此呼叫包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
 ### 要求連線引數
 
-您可以向以下網址發出GET要求，擷取您的連線引數： `/connection_parameters` 端點。 如需有關使用連線引數透過互動服務連線的使用者端的詳細資訊，請參閱以下檔案： [查詢服務使用者端](../clients/overview.md).
+您可以向`/connection_parameters`端點發出GET要求，以擷取您的連線引數。 如需有關使用連線引數透過互動式服務連線的使用者端的詳細資訊，請參閱[查詢服務使用者端](../clients/overview.md)的檔案。
 
 **API格式**
 

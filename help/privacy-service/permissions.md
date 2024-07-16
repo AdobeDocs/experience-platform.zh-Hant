@@ -4,7 +4,7 @@ description: 了解如何使用 Adob​​e Admin Console 管理 Adobe Experienc
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1481'
 ht-degree: 95%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 95%
 
 選取產品設定檔後，您可以使用「**[!UICONTROL 權限]**」索引標籤開始針對設定檔[編輯權限](#edit-permissions)，或選取「**[!UICONTROL 使用者]**」索引標籤，開始對設定檔[指派使用者](#assign-users)。
 
-![產品設定檔Admin Console的許可權索引標籤。](./images/permissions/users-permissions-tabs.png)
+![產品設定檔Admin Console的許可權標籤。](./images/permissions/users-permissions-tabs.png)
 
 ### 編輯設定檔的權限 {#edit-permissions}
 
@@ -65,25 +65,25 @@ ht-degree: 95%
 
 編輯設定檔的權限時，可用權限會顯示在左欄的清單中，而設定檔中包含的權限則會顯示在右欄的清單中。選取清單中的權限在任一欄之間移動。
 
-![可用和包含的許可權欄。](./images/permissions/edit-permissions.png)
+![可用和包含的許可權資料行。](./images/permissions/edit-permissions.png)
 
 將權限歸類到不同類別。若要在類別之間切換，請從左側導覽中選取所需的類別。
 
-![此 [!UICONTROL 選擇退出銷售] 區段。](./images/permissions/switch-category.png)
+![許可權下的[!UICONTROL 選擇退出銷售]區段。](./images/permissions/switch-category.png)
 
 完成設定權限後，即可選取「**[!UICONTROL 儲存]**」。
 
-![反白顯示「儲存」之產品設定檔的許可權設定。](./images/permissions/save-permissions.png)
+![反白顯示[儲存]之產品設定檔的許可權設定。](./images/permissions/save-permissions.png)
 
 產品設定檔檢視會重新顯示，並新增所反映的權限。
 
-![為產品設定檔新增的許可權。](./images/permissions/permissions-added.png)
+![產品設定檔的已新增許可權。](./images/permissions/permissions-added.png)
 
 ### 將使用者指派至設定檔 {#assign-users}
 
 若要將使用者指派至產品設定檔 (並授予他們設定檔的設定權限)，請選取「**[!UICONTROL 使用者]**」索引標籤，接著選取「**[!UICONTROL 新增使用者]**」。
 
-![Admin Console中產品設定檔的「使用者」索引標籤。](./images/permissions/manage-users.png)
+![Admin Console中產品設定檔的[使用者]索引標籤。](./images/permissions/manage-users.png)
 
 如需有關如何管理產品設定檔的使用者的詳細資訊，請參閱 [Admin Console 文件](https://helpx.adobe.com/tw/enterprise/using/manage-product-profiles.html)。
 

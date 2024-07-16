@@ -22,11 +22,11 @@ ht-degree: 0%
 
 ![疑難排解](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-這是因為Journey Optimizer教戰手冊會為電子郵件、推播和簡訊頻道建立訊息。 閱讀 [開始使用](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) 設定不同曲面的指南。
+這是因為Journey Optimizer教戰手冊會為電子郵件、推播和簡訊頻道建立訊息。 閱讀[開始使用](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer)指南，以設定不同的介面。
 
-## 狀態 *失敗* 建立新執行個體時 {#status-failed}
+## 建立新執行個體時狀態&#x200B;*失敗* {#status-failed}
 
-如果您在嘗試建立執行個體時看到失敗訊息，這可能是因為您的管理員未授予您必要的使用者許可權。 行動手冊包含許多不同的資產，您的使用者需要許可權才能建立這些資產，才能成功建立行動手冊的執行個體。 請參閱 [許可權](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) 本指南中有關如何設定許可權的區段。
+如果您在嘗試建立執行個體時看到失敗訊息，這可能是因為您的管理員未授予您必要的使用者許可權。 行動手冊包含許多不同的資產，您的使用者需要許可權才能建立這些資產，才能成功建立行動手冊的執行個體。 請參閱本指南的[許可權](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions)一節，瞭解如何設定許可權。
 
 ## 匯入失敗 {#import-failure}
 

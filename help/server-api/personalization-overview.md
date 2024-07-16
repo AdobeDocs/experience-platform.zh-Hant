@@ -1,6 +1,6 @@
 ---
-title: 個人化概覽
-description: 瞭解如何使用Adobe Experience Platform Edge Network Server API從Adobe個人化解決方案擷取個人化內容。
+title: Personalization概觀
+description: 瞭解如何使用Adobe Experience PlatformEdge Network伺服器API，從Adobe個人化解決方案擷取個人化內容。
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 9%
 
 ---
 
-# 個人化概覽
+# Personalization概觀
 
-使用 [!DNL Server API]，您可以從Adobe個人化解決方案擷取個人化內容，包括 [Adobe Target](https://business.adobe.com/products/target/adobe-target.html)， [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)、和 [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant).
+透過[!DNL Server API]，您可以從Adobe個人化解決方案擷取個人化內容，包括[Adobe Target](https://business.adobe.com/products/target/adobe-target.html)、[Adobe Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)和[Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=zh-Hant)。
 
-此外， [!DNL Server API] 透過Adobe Experience Platform個人化目的地提供相同頁面和下一頁個人化功能，例如 [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) 和 [自訂個人化連線](../destinations/catalog/personalization/custom-personalization.md). 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱 [專用指南](../destinations/ui/activate-edge-personalization-destinations.md).
+此外，[!DNL Server API]透過Adobe Experience Platform個人化目標(例如[Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md)和[自訂個人化連線](../destinations/catalog/personalization/custom-personalization.md))提供相同頁面和下一頁個人化功能。 若要瞭解如何設定相同頁面和下一頁個人化的Experience Platform，請參閱[專屬指南](../destinations/ui/activate-edge-personalization-destinations.md)。
 
-使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站內容的邏輯。 不喜歡 [Web SDK](../web-sdk/home.md)，則 [!DNL Server API] 沒有機制可自動套用Adobe個人化解決方案傳回的內容。
+使用伺服器API時，您必須整合個人化引擎提供的回應，與用來呈現網站內容的邏輯。 與[Web SDK](../web-sdk/home.md)不同，[!DNL Server API]沒有機制可自動套用Adobe個人化解決方案傳回的內容。
 
 ## 術語 {#terminology}
 
 在使用Adobe個人化解決方案之前，請務必瞭解下列概念：
 
-* **優惠方案**：優惠方案是行銷訊息，其中可能包含與其關聯的規則，以指定誰有資格檢視選件。
+* **優惠方案**：優惠方案是行銷訊息，其內容可能包含與其相關聯的規則，指定誰有資格檢視優惠方案。
 * **決定**：決定（先前稱為優惠活動）會通知優惠選擇。
 * **結構描述**：決定的結構描述會通知傳回的優惠型別。
 * **範圍**：決定的範圍。
-   * 在Adobe Target中，這是 [!DNL mbox]. 此 [!DNL global mbox] 是 `__view__` 範圍
-   * 的 [!DNL Offer Decisioning]，這些是JSON的Base64編碼字串，包含您希望offer decisioning服務用來建議選件的活動和位置ID。
+   * 在Adobe Target中，這是[!DNL mbox]。 [!DNL global mbox]是`__view__`範圍
+   * 對於[!DNL Offer Decisioning]，這些是JSON的Base64編碼字串，其中包含您希望offer decisioning服務用來建議優惠方案的活動和位置ID。
 
-## 此 `query` 物件 {#query-object}
+## `query`物件 {#query-object}
 
 擷取個人化內容需要請求範例的明確請求查詢物件。 查詢物件具有下列格式：
 
@@ -66,7 +66,7 @@ ht-degree: 9%
 
 ## 控制代碼物件 {#handle}
 
-從個人化解決方案中擷取的個人化內容會顯示在 `personalization:decisions` 控制代碼，其裝載格式如下：
+從個人化解決方案擷取的個人化內容以`personalization:decisions`控制代碼呈現，其承載格式如下：
 
 ```json
 {
@@ -121,7 +121,7 @@ ht-degree: 9%
 | --- | --- | --- |
 | `payload.id` | 字串 | 決定ID。 |
 | `payload.scope` | 字串 | 導致建議優惠方案的決定範圍。 |
-| `payload.scopeDetails.decisionProvider` | 字串 | 將設為 `TGT` 使用Adobe Target時。 |
+| `payload.scopeDetails.decisionProvider` | 字串 | 使用Adobe Target時設為`TGT`。 |
 | `payload.scopeDetails.activity.id` | 字串 | 優惠活動的唯一ID。 |
 | `payload.scopeDetails.experience.id` | 字串 | 優惠方案位置的唯一ID。 |
 | `items[].id` | 字串 | 優惠方案位置的唯一ID。 |
@@ -192,11 +192,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | 參數 | 類型 | 必要 | 說明 |
 | --- | --- | --- | --- |
 | `configId` | 字串 | 是 | 資料串流ID。 |
-| `requestId` | 字串 | 無 | 提供外部要求追蹤ID。 如果未提供，Edge Network會為您產生回應，並將其傳回至回應內文/標頭。 |
+| `requestId` | 字串 | 無 | 提供外部要求追蹤ID。 如果未提供任何專案，Edge Network會為您產生一個專案，並將其傳回至回應內文/標頭。 |
 
 ### 回應 {#response}
 
-傳回 `200 OK` 狀態與一或多個 `Handle` 物件，視在資料流設定中啟用的邊緣服務而定。
+根據資料流設定中啟用的邊緣服務，傳回`200 OK`狀態和一或多個`Handle`物件。
 
 ```json
 {
@@ -254,9 +254,9 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ## 通知 {#notifications}
 
-當使用者造訪或呈現預先擷取的內容或檢視時，應觸發通知。 若要在正確的範圍內引發通知，請務必追蹤對應的 `id` 用於每個範圍。
+當使用者造訪或呈現預先擷取的內容或檢視時，應觸發通知。 若要在正確的範圍中引發通知，請務必追蹤每個範圍的對應`id`。
 
-具有右側的通知 `id` 的範圍中定義報表的欄位)時需觸發，報表才能正確反映。
+必須針對對應的範圍觸發具有許可權`id`的通知，才能正確反映報表。
 
 **API格式**
 
@@ -316,16 +316,16 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | 參數 | 類型 | 必要 | 說明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 是 | 資料收集端點所使用的資料串流的ID。 |
-| `requestId` | `String` | 無 | 外部外部請求追蹤ID。 如果未提供，Edge Network會為您產生回應，並將其傳回至回應內文/標頭。 |
-| `silent` | `Boolean` | 無 | 選用的布林值引數，指出Edge Network是否應傳回 `204 No Content` 包含空承載的回應。 使用對應的HTTP狀態代碼和承載來報告嚴重錯誤。 |
+| `requestId` | `String` | 無 | 外部外部請求追蹤ID。 如果未提供任何專案，Edge Network會為您產生一個專案，並將其傳回至回應內文/標頭。 |
+| `silent` | `Boolean` | 無 | 選擇性布林值引數，指出Edge Network是否應該傳回具有空白承載的`204 No Content`回應。 使用對應的HTTP狀態代碼和承載來報告嚴重錯誤。 |
 
 ### 回應 {#notifications-response}
 
-成功的回應會傳回下列其中一種狀態，以及 `requestID` 若請求中未提供任何專案。
+成功的回應會傳回下列其中一種狀態，如果要求中未提供任何狀態，則傳回`requestID`。
 
-* `202 Accepted` 成功處理要求時；
-* `204 No Content` 成功處理要求時，且 `silent` 引數已設為 `true`；
-* `400 Bad Request` 要求格式不正確時（例如，找不到必要的主要身分）。
+* 成功處理要求時`202 Accepted`；
+* 成功處理要求且`silent`引數設定為`true`時的`204 No Content`；
+* `400 Bad Request`當要求的格式不正確（例如，找不到必要的主要身分）。
 
 ```json
 {

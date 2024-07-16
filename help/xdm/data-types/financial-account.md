@@ -9,9 +9,9 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL 財務帳戶] 資料型別
+# [!UICONTROL 財務帳戶]資料型別
 
-[!UICONTROL 財務帳戶] 是標準的XDM資料型別，說明財務帳戶的詳細資料，包括其型別、擁有者和目前餘額。
+[!UICONTROL 財務帳戶]是標準的XDM資料型別，說明財務帳戶的詳細資料，包括其型別、擁有者和目前餘額。
 
 ![](../images/data-types/financial-account.png)
 
@@ -24,4 +24,4 @@ ht-degree: 8%
 
 {style="table-layout:auto"}
 
-如需資料型別的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+如需資料型別的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json)。

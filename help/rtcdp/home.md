@@ -7,23 +7,23 @@ exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
 source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
 workflow-type: tm+mt
 source-wordcount: '1114'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 # Adobe [!DNL Real-Time CDP] 文件 {#rtcdp-documentation}
 
-使用Adobe Real-time Customer Data Platform (Real-Time CDP)整合來自多個企業來源的已知和匿名資料，以建立客戶設定檔，其可用於跨所有管道和裝置即時提供個人化客戶體驗。 閱讀 [Real-Time CDP概觀](/help/rtcdp/overview.md) 以取得詳細資訊。
+使用Adobe Real-time Customer Data Platform (Real-Time CDP)整合來自多個企業來源的已知和匿名資料，以建立客戶設定檔，其可用於跨所有管道和裝置即時提供個人化客戶體驗。 如需詳細資訊，請閱讀[Real-Time CDP概觀](/help/rtcdp/overview.md)。
 
 ## 新增功能？ {#whats-new}
 
-瞭解Real-Time CDP產品和檔案的最新增強功能。 如需功能、改進項目與修正的完整清單，請參閱詳細的[發行說明](/help/release-notes/latest/latest.md)。請瀏覽 [每月發行說明的檔案更新區段](/help/release-notes/latest/latest.md#documentation-updates).
+瞭解Real-Time CDP產品和檔案的最新增強功能。 如需功能、改進項目與修正的完整清單，請參閱詳細的[發行說明](/help/release-notes/latest/latest.md)。請造訪每月發行說明](/help/release-notes/latest/latest.md#documentation-updates)的[檔案更新區段，隨時掌握檔案的最新變更。
 
 >[!BEGINTABS]
 
 >[!TAB 使用案例教戰手冊]
 
-此 [!UICONTROL 使用案例教戰手冊] 功能現已正式開放所有Real-Time CDP和Adobe Journey Optimizer客戶使用。 [!UICONTROL 使用案例教戰手冊] 專門設計來協助使用者在開始使用Real-time Customer Data Platform或Adobe Journey Optimizer時克服挑戰。 當您不確定從何處開始或是如何針對您想要的使用案例建立正確的資產時，使用案例教戰手冊會提供靈感，並建立不同的資產，讓您在準備就緒時測試並匯入生產環境。
+[!UICONTROL 使用案例教戰手冊]功能現在已普遍提供給所有Real-Time CDP和Adobe Journey Optimizer客戶。 [!UICONTROL 使用案例教戰手冊]的設計目的，是協助使用者在開始使用Real-time Customer Data Platform或Adobe Journey Optimizer時克服挑戰。 當您不確定從何處開始或是如何針對您想要的使用案例建立正確的資產時，使用案例教戰手冊會提供靈感，並建立不同的資產，讓您在準備就緒時測試並匯入生產環境。
 
 [![影像](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 [![影像](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
 
->[!TAB 計算的屬性]
+>[!TAB 計算屬性]
 
 透過直覺式UI將事件資料輕鬆摘要為設定檔屬性，以強化行為型細分、個人化和啟用。 透過此功能，您可以自助式建立計算屬性、管理這些屬性，並用於區段、Real-Time CDP目的地或Adobe Journey Optimizer。 此外，計算屬性可簡化細分和歷程工作流程，協助您順暢地提供相關體驗。
 
@@ -41,7 +41,7 @@ ht-degree: 4%
 
 >[!TAB 資料匯出]
 
-資料集匯出功能現已正式推出。 另請參閱 [您可以根據Experience Platform應用程式匯出哪些資料集](../destinations/ui/export-datasets.md#datasets-to-export) 您已購買，並檢視 [匯出資料集的護欄](/help/destinations/guardrails.md#dataset-exports).
+資料集匯出功能現已正式推出。 檢視您可根據所購買的Experience Platform應用程式](../destinations/ui/export-datasets.md#datasets-to-export)匯出哪些資料集[，並檢查匯出資料集的[護欄](/help/destinations/guardrails.md#dataset-exports)。
 
 [![影像](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
@@ -61,11 +61,11 @@ ht-degree: 4%
   <tr style="border: 0;">
     <td>
     <a href="/help/rtcdp/get-started.md"><img src="assets/do-not-localize/start-quick.png"></a>
-    <div><strong>開始使用</strong><br/>取得Real-Time CDP的概觀，瞭解如何使用Real-Time CDP大規模擷取、管理和啟用資料。</div>
+    <div><strong>開始使用</strong><br/>取得Real-Time CDP概觀，瞭解如何使用Real-Time CDP大規模擷取、管理和啟用資料。</div>
     </td>
     <td>
     <a href="/help/rtcdp/overview.md#rtcdp-editions"><img src="assets/do-not-localize/start-campaign.jpeg"></a>
-    <div><strong>適合我公司的Real-Time CDP版本</strong><br/>瞭解不同Real-Time CDP版本之間的差異，並決定哪一個版本最適合您的公司。</div>
+    <div><strong>哪個Real-Time CDP版本適合我的公司</strong><br/>瞭解不同Real-Time CDP版本之間的差異，並決定哪一個版本最適合您的公司。</div>
     </td>
     <td>
     <a href="/help/landing/ui-guide.md"><img src="assets/do-not-localize/start-interface.jpeg"></a>
@@ -73,12 +73,12 @@ ht-degree: 4%
     </td>
     <td>
     <a href="/help/landing/end-to-end-tutorial.md"><img src="assets/do-not-localize/start-journey.jpeg"></a>
-    <div><strong>探索端對端工作流程</strong><br/>瞭解從擷取、透過豐富設定檔和建立對象，到啟用的資料流程。
+    <div><strong>探索端對端工作流程</strong><br/>瞭解從擷取、透過豐富設定檔和建立對象到啟用的資料流程。
     </div>
     </td>
     <td>
     <a href="/help/rtcdp/use-case-guides/overview.md"><img src="assets/do-not-localize/start-use-cases.jpeg"></a>
-    <div><strong>Real-Time CDP使用案例範例</strong><br/>探索Real-Time CDP可協助貴公司贏取新客戶、豐富已知設定檔等的許多方式。
+    <div><strong>範例Real-Time CDP使用案例</strong><br/>探索Real-Time CDP可協助貴公司取得新客戶、豐富已知設定檔等的許多方式。
     </div>
     </td>
   </tr>
@@ -100,7 +100,7 @@ ht-degree: 4%
 * 瞭解您在管理資料的同時，也遵守了適用於資料使用的各種法規、限制和政策；
 * 向客戶行銷，並跨管道個人化他們的體驗。
 
-![投影片節選說明Adobe Real-Time CDP的四大支柱。](/help/rtcdp/assets/rtcdp-four-pillars.png)
+![摘錄自Adobe Real-Time CDP四大支柱的投影片。](/help/rtcdp/assets/rtcdp-four-pillars.png)
 
 探索以下產品檔案連結，瞭解Adobe Real-Time CDP的四大核心支柱如何協助您達成企業使用案例。
 
@@ -108,37 +108,37 @@ ht-degree: 4%
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-data.svg" width="35px"><br/>
-      <strong>資料擷取與管理</strong><br/>探索多種將資料傳入Real-Time CDP的方法。 <br/><a href="/help/ingestion/batch-ingestion/overview.md">批次擷取</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">串流擷取</a> - <a href="/help/sources/home.md">來源</a> - <a href="/help/xdm/schema/composition.md">方案</a> - <a href="/help/catalog/datasets/overview.md">資料集</a> - <a href="/help/query-service/home.md">查詢</a>
+      <strong>資料擷取與管理</strong><br/>探索多種將資料傳入Real-Time CDP的方法。 <br/><a href="/help/ingestion/batch-ingestion/overview.md">批次內嵌</a> - <a href="/help/ingestion/streaming-ingestion/overview.md">串流內嵌</a> - <a href="/help/sources/home.md">來源</a> - <a href="/help/xdm/schema/composition.md">結構描述</a> - <a href="/help/catalog/datasets/overview.md">資料集</a> - <a href="/help/query-service/home.md">查詢</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon_profile-audience.svg" width="35px"><br/>
-      <strong>設定檔與對象</strong><br/>管理各種型別的設定檔，並根據共同興趣、行為或特徵將其分組為受眾。 <br/><a href="/help/segmentation/home.md">受眾</a> - <a href="/help/profile/home.md">設定檔</a> - <a href="/help/identity-service/home.md">身分</a> - <a href="/help/dashboards/guides/license-usage.md">授權使用情況</a> - <a href="/help/privacy-service/home.md">隱私權管理</a>
+      <strong>設定檔與對象</strong><br/>管理各種型別的設定檔，並根據共同興趣、行為或特徵將其分組為對象。 <br/><a href="/help/segmentation/home.md">對象</a> - <a href="/help/profile/home.md">設定檔</a> - <a href="/help/identity-service/home.md">身分</a> - <a href="/help/dashboards/guides/license-usage.md">授權使用情況</a> - <a href="/help/privacy-service/home.md">隱私權管理</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-lock.svg" width="35px"><br/>
-      <strong>資料控管和信任</strong><br/>瞭解如何確保遵守適用於資料使用的各種法規、限制和政策。 <br/><a href="/help/data-governance/home.md">資料控管</a> - <a href="/help/data-governance/labels/overview.md">資料使用情況標籤</a> - <a href="/help/data-governance/policies/overview.md">資料使用原則</a>
+      <strong>資料控管與信任</strong><br/>瞭解如何確保遵循適用於資料使用的各種法規、限制和原則。 <br/><a href="/help/data-governance/home.md">資料控管</a> - <a href="/help/data-governance/labels/overview.md">資料使用標籤</a> - <a href="/help/data-governance/policies/overview.md">資料使用原則</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-content.svg" width="35px"><br/>
-      <strong>資料啟用</strong><br/>跨管道對客戶進行行銷，並將資料從Real-Time CDP匯出至任何需要的儲存位置。 <br/><a href="/help/destinations/catalog/overview.md">目的地目錄</a> - <a href="/help/destinations/destination-types.md">目的地型別</a> - <a href="/help/destinations/ui/activation-overview.md">啟用對象</a>  - <a href="/help/destinations/ui/export-datasets.md">匯出資料集</a>
+      <strong>資料啟用</strong><br/>跨管道向客戶行銷，並將資料從Real-Time CDP匯出至任何需要的儲存位置。 <br/><a href="/help/destinations/catalog/overview.md">目的地目錄</a> - <a href="/help/destinations/destination-types.md">目的地型別</a> - <a href="/help/destinations/ui/activation-overview.md">啟用對象</a> - <a href="/help/destinations/ui/export-datasets.md">匯出資料集</a>
     </td>
   </tr>
   <tr style="border: 0;">
     <td>
       <img src="assets/do-not-localize/icon-configure.svg" width="35px"><br/>
-      <strong>設定和管理</strong><br/>作為管理員，瞭解如何協助您的團隊進行正確的許可權、存取控制和沙箱設定。 <br/><a href="/help/access-control/home.md">存取控制</a> - <a href="/help/access-control/abac/overview.md">以屬性為基礎的存取控制</a> - <a href="/help/access-control/abac/end-to-end-guide.md">端對端指南</a> - <a href="/help/sandboxes/home.md">沙箱管理</a> 
+      <strong>設定和管理</strong><br/>身為管理員，瞭解如何協助您的團隊進行正確的許可權、存取控制和沙箱設定。 <br/><a href="/help/access-control/home.md">存取控制</a> - <a href="/help/access-control/abac/overview.md">屬性式存取控制</a> - <a href="/help/access-control/abac/end-to-end-guide.md">端對端指南</a> - <a href="/help/sandboxes/home.md">沙箱管理</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-cloud.svg" width="35px"><br/>
-      <strong>雲端和AI/ML功能</strong><br/>AI和ML功能可在多個儀表板中協助您進行過程中的每個步驟。 部分重點包括以下區域。 <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">相似受眾</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">相關帳戶</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">預測性銷售線索與帳戶評分</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">銷售線索與帳戶的比對</a>
+      <strong>雲端和AI/ML功能</strong><br/>AI和ML功能會在您使用多個控制面板的每一步協助您。 部分重點包括以下區域。 <br/> <a href="/help/segmentation/ui/lookalike-audiences.md">相似對象</a> - <a href="/help/rtcdp/segmentation/customer-ai.md">Customer AI</a> - <a href="/help/rtcdp/b2b-ai-ml-services/related-accounts.md">相關帳戶</a> - <a href="/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md">預測性銷售線索和帳戶評分</a> - <a href="/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md">銷售線索與帳戶的比對</a>
     </td>
     <td>
       <img src="assets/do-not-localize/icon-learn.svg" width="35px"><br/>
-      <strong>護欄和最佳實務</strong><br/>瞭解在Real-Time CDP中使用資料時的最佳實務和目前限制。<br/><a href="/help/rtcdp/guardrails/overview.md">護欄</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">資料管理授權權益最佳實務</a> - <a href="/help/xdm/schema/best-practices.md">資料模型最佳實務</a> - <a href="/help/privacy-service/best-practices.md">Privacy Service最佳實務</a> 
+      <strong>護欄和最佳實務</strong><br/>瞭解在Real-Time CDP中使用資料時的最佳實作和目前限制。<br/><a href="/help/rtcdp/guardrails/overview.md">護欄</a> - <a href="/help/landing/license-usage-and-guardrails/data-management-best-practices.md">資料管理授權權益最佳實務</a> - <a href="/help/xdm/schema/best-practices.md">資料模型最佳實務</a> - <a href="/help/privacy-service/best-practices.md">Privacy Service最佳實務</a> 
     </td>
     <td>
       <img src="assets/do-not-localize/icon-code.svg" width="35px"><br/>
-      <strong>開發人員</strong><br/>使用Real-Time CDP提供的各種API和SDK來設定資料擷取、管理設定檔、建立受眾等。 <br/><a href="/help/landing/api-authentication.md">驗證並開始使用API</a> - <a href="https://developer.adobe.com/experience-platform-apis/">完整API參考</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md">來源SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">行動SDK</a>
+      <strong>開發人員</strong><br/>使用Real-Time CDP提供的各種API和SDK來設定資料擷取、管理設定檔、建立對象等。 <br/><a href="/help/landing/api-authentication.md">驗證並開始使用API</a> - <a href="https://developer.adobe.com/experience-platform-apis/">完整API參考</a> - <a href="/help/destinations/destination-sdk/overview.md">Destination SDK</a> - <a href="/help/sources/sources-sdk/overview.md">來源SDK</a> - <a href="https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/">行動SDK</a>
     </td>
   </tr>
 </table>
@@ -159,20 +159,20 @@ ht-degree: 4%
     </a>
     </div>
     <p>
-    <em>瞭解Real-Time CDP在大型Adobe Experience Cloud中的地位</em>
+    <em>瞭解Real-Time CDP在大型Adobe Experience Cloud中的位置</em>
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=zh-Hant">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
       <img alt="「Adobe Experience Platform基本架構」視訊的縮圖影像" src="/help/rtcdp/assets/platform-architecture-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=zh-Hant">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
     <strong>Adobe Experience Platform的基本架構</strong>
     </a>
     </div>
     <p>
-    <em>從概觀圖表的引導逐步說明，瞭解Adobe Experience Platform的高階架構</em>
+    <em>透過概觀圖表的引導逐步說明，瞭解Adobe Experience Platform的高階架構</em>
     <p>
   </td>
   <td>
@@ -197,12 +197,12 @@ ht-degree: 4%
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">產品說明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B版本</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B版本</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">安全性概覽(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=zh-Hant" target="_blank">實作藍圖</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">字彙表</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=zh-Hant" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">產品說明Real-Time CDP B2C Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">B2B Edition</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">安全性總覽(PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=zh-Hant" target="_blank">實作Blueprint</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank">字彙表</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=zh-Hant" target="_blank">檔案</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API參考資料 —  <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">課程：Experience Platform簡介</a></a>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=zh-Hant" target="_blank">檔案</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">API參考 — <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">課程：Experience Platform簡介</a></a>
 </td>
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>掌握最新資訊、為社群作出貢獻，並提升您的Adobe Real-Time CDP體驗！</b><br/>請造訪Real-time Customer Data Platform社群，與其他從業人員討論功能。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">立即加入社群！</a></td></tr></table>
+<b>掌握最新資訊、為社群作出貢獻，並提升您的Adobe Real-Time CDP體驗！</b><br/>造訪Real-time Customer Data Platform社群，與其他從業人員討論功能。 <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">立即加入社群！</a></td></tr></table>

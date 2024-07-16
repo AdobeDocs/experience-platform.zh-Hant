@@ -17,12 +17,12 @@ ht-degree: 2%
 
 <!-- When configuring a destination, you must specify an authentication rule and one or more `destinationServerId` parameters, corresponding to the destination servers that define where the data will be delivered to. In most cases, the authentication rule that you should use is `CUSTOMER_AUTHENTICATION`.  -->
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或請參閱下列目的地設定總覽頁面：
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[組態選項](../configuration-options.md)檔案中的圖表，或檢視下列目的地組態概觀頁面：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-您可以透過以下方式設定目的地傳送設定： `/authoring/destinations` 端點。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
+您可以透過`/authoring/destinations`端點設定目的地傳遞設定。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
 
 * [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -31,7 +31,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -48,16 +48,16 @@ ht-degree: 2%
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `authenticationRule` | 字串 | 指示方式 [!DNL Platform] 應該會連線至您的目的地。 支援的值：<ul><li>`CUSTOMER_AUTHENTICATION`：如果Platform客戶透過上述任何驗證方法登入您的系統，請使用此選項 [此處](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`：如果Adobe與您的目的地之間有全域驗證系統，而且您設定了 [!DNL Platform] 客戶不需要提供任何驗證認證即可連線至您的目的地。 在此情況下，您必須使用 [認證API](../../credentials-api/create-credential-configuration.md) 設定。 </li><li>`NONE`：如果不需要驗證即可將資料傳送至您的目的地平台，請使用此選項。 </li></ul> |
-| `destinationServerId` | 字串 | 此 `instanceId` 的 [目的地伺服器](../../authoring-api/destination-server/create-destination-server.md) 要匯出資料的目標位置。 |
-| `deliveryMatchers.type` | 字串 | <ul><li>設定檔案型目的地的目的地傳送時，請一律將此項設為 `SOURCE`.</li><li>設定串流目的地的目的地傳送時， `deliveryMatchers` 區段不是必填欄位。</li></ul> |
-| `deliveryMatchers.value` | 字串 | <ul><li>設定檔案型目的地的目的地傳送時，請一律將此項設為 `batch`.</li><li>設定串流目的地的目的地傳送時， `deliveryMatchers` 區段不是必填欄位。</li></ul> |
+| `authenticationRule` | 字串 | 指示[!DNL Platform]應該如何連線到您的目的地。 支援的值：<ul><li>`CUSTOMER_AUTHENTICATION`：如果Platform客戶透過[此處](customer-authentication.md)說明的任何驗證方法登入您的系統，請使用此選項。</li><li>`PLATFORM_AUTHENTICATION`：如果Adobe與您的目的地之間有全域驗證系統，且[!DNL Platform]客戶不需要提供任何驗證認證即可連線至您的目的地，請使用此選項。 在此情況下，您必須使用[認證API](../../credentials-api/create-credential-configuration.md)設定來建立認證物件。 </li><li>`NONE`：如果不需要驗證即可將資料傳送至您的目的地平台，請使用此選項。 </li></ul> |
+| `destinationServerId` | 字串 | 您要匯出資料的[目的地伺服器](../../authoring-api/destination-server/create-destination-server.md)的`instanceId`。 |
+| `deliveryMatchers.type` | 字串 | <ul><li>設定檔案型目的地的目的地傳遞時，請一律將此項設為`SOURCE`。</li><li>設定串流目的地的目的地傳遞時，`deliveryMatchers`區段不是必要的。</li></ul> |
+| `deliveryMatchers.value` | 字串 | <ul><li>設定檔案型目的地的目的地傳遞時，請一律將此項設為`batch`。</li><li>設定串流目的地的目的地傳遞時，`deliveryMatchers`區段不是必要的。</li></ul> |
 
 {style="table-layout:auto"}
 
 ## 串流目的地的目的地傳送設定 {#destination-delivery-streaming}
 
-以下範例說明應如何為串流目的地設定目的地傳送設定。 請注意 `deliveryMatchers` 區段並非串流目的地的必要欄位。
+以下範例說明應如何為串流目的地設定目的地傳送設定。 請注意，串流目的地不需要`deliveryMatchers`區段。
 
 >[!BEGINSHADEBOX]
 
@@ -76,7 +76,7 @@ ht-degree: 2%
 
 ## 檔案型目的地的目的地傳送設定 {#destination-delivery-file-based}
 
-以下範例說明應如何針對以檔案為基礎的目的地設定目的地傳送設定。 請注意 `deliveryMatchers` 檔案型目的地需要區段。
+以下範例說明應如何針對以檔案為基礎的目的地設定目的地傳送設定。 請注意，以檔案為基礎的目的地需要`deliveryMatchers`區段。
 
 >[!BEGINSHADEBOX]
 

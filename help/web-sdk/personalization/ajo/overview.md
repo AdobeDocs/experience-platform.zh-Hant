@@ -6,34 +6,34 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
 source-wordcount: '390'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# 使用 [!DNL Adobe Journey Optimizer] 使用 [!DNL Platform Web SDK]
+# 搭配[!DNL Platform Web SDK]使用[!DNL Adobe Journey Optimizer]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] 可以傳遞並轉譯受管理的個人化體驗 [!DNL Adobe Journey Optimizer] 至網路頻道。 您可以使用WYSIWYG編輯器， [!DNL Adobe Journey Optimizer] [網頁管道](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)或非視覺化介面、 [程式碼型Experience Channel](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) 以建立、啟用及傳遞您的 [!DNL Journey Optimizer Web] 行銷活動和個人化體驗。
+[!DNL Adobe Experience Platform] [!DNL Web SDK]可以傳送並轉譯在[!DNL Adobe Journey Optimizer]中管理的個人化體驗至Web Channel。 您可以使用WYSIWYG編輯器[!DNL Adobe Journey Optimizer] [Web Channel](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)或非視覺化介面[程式碼式體驗管道](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based)，來建立、啟用及傳遞您的[!DNL Journey Optimizer Web]行銷活動和個人化體驗。
 
 >[!IMPORTANT]
 >
->閱讀 [Adobe Journey Optimizer Web Channel檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=zh-Hant) 以取得關於快速入門的資訊 [!DNL Journey Optimizer Web] 體驗撰寫和報告。
+>閱讀[Adobe Journey Optimizer Web Channel檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=zh-Hant)，以瞭解開始使用[!DNL Journey Optimizer Web]體驗撰寫和報告的資訊。
 
 ## 術語 {#terminology}
 
-**[!UICONTROL 表面]**：網頁介面是指由URI識別的頁面上的網頁或位置，其中 [!DNL Adobe Journey Optimizer] 將會提供體驗內容。
+**[!UICONTROL 介面]**：網頁介面是網頁或網頁上的位置，由URI識別，並將傳遞[!DNL Adobe Journey Optimizer]體驗內容。
 
-**[!UICONTROL 主張]**：在 [!DNL Adobe Journey Optimizer]，此主張與從體驗中選取的體驗相關聯 [!DNL Journey Optimizer Campaign].
+**[!UICONTROL 主張]**：在[!DNL Adobe Journey Optimizer]中，主張與從[!DNL Journey Optimizer Campaign]中選取的體驗相關。
 
-## 正在啟用 [!DNL Adobe Journey Optimizer] {#enable-ajo}
+## 正在啟用[!DNL Adobe Journey Optimizer] {#enable-ajo}
 
-若要開始使用 [!DNL Adobe Journey Optimizer]，請遵循下列步驟。
+若要開始使用[!DNL Adobe Journey Optimizer]，請遵循下列步驟。
 
-1. 瀏覽 [必備條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) 從 [!DNL Adobe Journey Optimizer] [Web體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)，尤其是：
-   * 設定 [!DNL Adobe Experience Cloud Visual Editing Helper].
-   * 啟用 [!DNL Adobe Journey Optimizer] 在您的 [資料流](../../../datastreams/overview.md).
-   * 啟用 [!UICONTROL Active-On-Edge合併原則] 選項。
+1. 從[!DNL Adobe Journey Optimizer] [Web體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)瀏覽[必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites)，特別是：
+   * 設定[!DNL Adobe Experience Cloud Visual Editing Helper]。
+   * 在您的[資料流](../../../datastreams/overview.md)中啟用[!DNL Adobe Journey Optimizer]。
+   * 啟用[!UICONTROL Edge上的Active-On合併原則]選項。
 
-2. 新增 `renderDecisions` 選項新增至您的事件。 設定 `renderDecisions` 至 `true` ，用於自動呈現網頁表面上傳送的Journey Optimizer內容主張。
+2. 將`renderDecisions`選項新增至您的事件。 將`renderDecisions`設為`true`，以在網頁表面上自動呈現傳遞的Journey Optimizer內容主張。
 
    ```javascript
    alloy("sendEvent", {
@@ -42,7 +42,7 @@ ht-degree: 1%
    })
    ```
 
-3. 可選擇在事件中指定其他介面。 根據預設，Web SDK會自動產生目前網頁的網頁表面，並將其包含在對Edge Network發出的請求中。 如有需要，可在下列欄位中指定其他曲面，以將其包含在請求中： `personalization.surfaces` 的選項 `sendEvent` 指令，或在 **[!UICONTROL 曲面]** [[!UICONTROL 傳送事件] 動作](../../../tags/extensions/client/web-sdk/action-types.md#send-event) Web SDK擴充功能的設定。
+3. 可選擇在事件中指定其他介面。 根據預設，Web SDK會自動產生目前網頁的網頁表面，並將其包含在對Edge Network發出的請求中。 如有需要，可在`sendEvent`命令的`personalization.surfaces`選項中，或在Web SDK擴充功能的對應&#x200B;**[!UICONTROL Surfaces]** [[!UICONTROL 傳送事件]動作](../../../tags/extensions/client/web-sdk/action-types.md#send-event)設定中指定這些專案，以便在要求中包含其他介面。
 
    ```javascript
    alloy("sendEvent", {
@@ -55,7 +55,7 @@ ht-degree: 1%
 
    ![extension-add-surface](./assets/extension-add-surface.png)
 
-   事件介面包含在 `query.personalization.surfaces` 要求欄位：
+   事件表面包含在`query.personalization.surfaces`要求欄位中：
 
    ```json
    {
@@ -80,17 +80,17 @@ ht-degree: 1%
    }
    ```
 
-4. 與其他個人化功能類似，您可以新增 **[預先隱藏程式碼片段](../manage-flicker.md)** 只隱藏頁面的某些部分。
+4. 如同其他個人化功能，您可以新增&#x200B;**[預先隱藏程式碼片段](../manage-flicker.md)**，以便在擷取體驗時只隱藏頁面的某些部分。
 
 ## 建立Adobe Journey Optimizer網頁體驗 {#create-ajo-web-experiences}
 
-請遵循 [網站行銷活動製作](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) 說明來自 [!DNL Adobe Journey Optimizer] [Web體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) 以建立 [!DNL Journey Optimizer Web] 行銷活動和體驗。
+遵循[!DNL Adobe Journey Optimizer] [網頁體驗指南](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)中的[網頁行銷活動製作](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign)指示，以建立[!DNL Journey Optimizer Web]個行銷活動和體驗。
 
 ## 呈現個人化內容 {#rendering-personalized-content}
 
-請參閱以下檔案： [呈現個人化內容](../rendering-personalization-content.md) 以取得詳細資訊。
+如需詳細資訊，請參閱有關[呈現個人化內容](../rendering-personalization-content.md)的檔案。
 
-網路表面的Adobe Journey Optimizer主張的處理方式與以下專案類似： `__view__` 決定範圍主張。 具體來說，當 `renderDecisions` 選項已設為 `true` 在 `sendEvent` 這些命令將由Web SDK自動轉譯。
+網頁介面的Adobe Journey Optimizer主張的處理方式與`__view__`決定範圍主張類似。 具體來說，當`sendEvent`命令中的`renderDecisions`選項設為`true`時，這些將會由Web SDK自動轉譯。
 
 Journey Optimizer內容主張範例：
 
@@ -145,6 +145,6 @@ Journey Optimizer內容主張範例：
 
 ## 偵錯 {#debugging}
 
-若要針對Adobe Journey Optimizer個人化實作除錯，請使用 [Web SDK除錯](/help/web-sdk/use-cases/debugging.md). [!DNL Adobe Journey Optimizer] 使用進行疑難排解時可以使用偵錯追蹤 [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). 使用檢查事件 `AJO:` 前置詞。
+若要偵錯Adobe Journey Optimizer個人化實作，請使用[Web SDK偵錯](/help/web-sdk/use-cases/debugging.md)。 使用[[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)進行疑難排解時，有[!DNL Adobe Journey Optimizer]個偵錯追蹤可供使用。 檢查具有`AJO:`首碼的事件。
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

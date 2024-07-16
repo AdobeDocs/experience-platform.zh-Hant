@@ -13,9 +13,9 @@ ht-degree: 4%
 
 # 批次擷取API總覽
 
-Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形式擷取到Platform。 所擷取的資料可以是平面檔案（例如Parquet檔案）的設定檔資料，或是符合 [!DNL Experience Data Model] (XDM)登入。
+Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形式擷取到Platform。 所擷取的資料可以是平面檔案（例如Parquet檔案）的設定檔資料，或是符合[!DNL Experience Data Model] (XDM)登入中已知結構描述的資料。
 
-此 [批次擷取API參考資料](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) 提供有關這些API呼叫的其他資訊。
+[批次擷取API參考](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)提供這些API呼叫的其他資訊。
 
 下圖概述批次擷取程式：
 
@@ -23,12 +23,12 @@ Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形�
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). 在繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的API端點是[批次擷取API](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)的一部分。 繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
-### [!DNL Data Ingestion] 必備條件
+### [!DNL Data Ingestion]必要條件
 
 - 要上傳的資料必須是Parquet或JSON格式。
-- 在中建立的資料集 [[!DNL Catalog services]](../../catalog/home.md).
+- 在[[!DNL Catalog services]](../../catalog/home.md)中建立的資料集。
 - Parquet檔案的內容必須符合要上傳到之資料集的結構描述子集。
 - 在驗證後取得您唯一的存取Token。
 
@@ -48,15 +48,15 @@ Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形�
 
 >[!NOTE]
 >
->若要上傳大於512MB的檔案，檔案必須分成較小的區塊。 上傳大型檔案的指示可在以下連結中找到： [此檔案的大型檔案上傳區段](#large-file-upload---create-file).
+>若要上傳大於512MB的檔案，檔案必須分成較小的區塊。 上傳大型檔案的指示可在此檔案的[大型檔案上傳區段中找到](#large-file-upload---create-file)。
 
 ### 型別
 
-擷取資料時，請務必瞭解如何 [!DNL Experience Data Model] (XDM)結構描述有效。 如需XDM欄位型別如何對應至不同格式的詳細資訊，請參閱 [Schema Registry開發人員指南](../../xdm/api/getting-started.md).
+擷取資料時，請務必瞭解[!DNL Experience Data Model] (XDM)結構描述的運作方式。 如需有關XDM欄位型別如何對應到不同格式的詳細資訊，請參閱[結構描述登入開發人員指南](../../xdm/api/getting-started.md)。
 
-擷取資料時有一些彈性 — 如果型別不符合目標結構描述中的內容，資料將會轉換為表達的目標型別。 如果失敗，則會讓批次失敗 `TypeCompatibilityException`.
+擷取資料時有一些彈性 — 如果型別不符合目標結構描述中的內容，資料將會轉換為表達的目標型別。 如果失敗，它將失敗`TypeCompatibilityException`的批次。
 
-例如，JSON和CSV都不會使用 `date` 或 `date-time` 型別。 因此，這些值會使用 [ISO 8601格式字串](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00英吋)或Unix時間(以毫秒為單位，1531263959000會在擷取時轉換為目標XDM型別。
+例如，JSON或CSV都不具有`date`或`date-time`型別。 因此，這些值會以[ISO 8601格式字串](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;)或Unix時間(以毫秒為單位，1531263959000)表示，並在擷取時轉換為目標XDM型別。
 
 下表顯示擷取資料時支援的轉換。
 
@@ -77,9 +77,9 @@ Adobe Experience Platform批次擷取API可讓您將資料以批次檔案的形�
 >
 >布林值和陣列無法轉換為其他型別。
 
-## 使用API
+## 使用 API
 
-此 [!DNL Data Ingestion] API可讓您將資料以批次（由一或多個要當作單一單位內嵌的檔案組成的一個資料單位）的形式內嵌到 [!DNL Experience Platform] 基本步驟如下：
+[!DNL Data Ingestion] API可讓您以批次（包含一或多個要以單一單位形式內嵌之檔案的資料單位）的形式將資料擷取到[!DNL Experience Platform]中，基本步驟如下：
 
 1. 建立新批次。
 2. 將檔案上傳到與資料的XDM結構描述相符的指定資料集。
@@ -146,11 +146,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!NOTE]
 >
->批次內嵌可用於以增量方式更新設定檔存放區中的資料。 如需詳細資訊，請參閱以下章節： [更新批次](#patch-a-batch) 在 [批次內嵌開發人員指南](api-overview.md).
+>批次內嵌可用於以增量方式更新設定檔存放區中的資料。 如需詳細資訊，請參閱[批次擷取開發人員指南](api-overview.md)中有關[更新批次](#patch-a-batch)的章節。
 
 >[!INFO]
 >
->以下範例使用 [Apache Parquet](https://parquet.apache.org/docs/) 檔案格式。 以下是使用JSON檔案格式的範例： [批次內嵌開發人員指南](api-overview.md).
+>下列範例使用[Apache Parquet](https://parquet.apache.org/docs/)檔案格式。 您可以在[批次擷取開發人員指南](api-overview.md)中找到使用JSON檔案格式的範例。
 
 ### 小檔案上傳
 
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## 訊號批次完成
 
-將所有檔案都上傳到批次之後，就可以發出完成批次的訊號。 藉由執行此動作， [!DNL Catalog] DataSetFile專案是為已完成的檔案建立的，並與上面產生的批次相關聯。 此 [!DNL Catalog] 然後批次會標籤為成功，這會觸發下游流程擷取可用資料。
+將所有檔案都上傳到批次之後，就可以發出完成批次的訊號。 如此一來，便會為完成的檔案建立[!DNL Catalog] DataSetFile專案，並與上述產生的批次產生關聯。 然後[!DNL Catalog]批次會標籤為成功，這會觸發下游流程擷取可用資料。
 
 **要求**
 
@@ -401,20 +401,20 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | -------- | ----------- |
 | `{USER_ID}` | 建立或更新批次的使用者ID。 |
 
-此 `"status"` 欄位會顯示所請求批次的目前狀態。 批次可以有下列其中一種狀態：
+`"status"`欄位會顯示所請求批次的目前狀態。 批次可以有下列其中一種狀態：
 
 ## 批次擷取狀態
 
 | 狀態 | 說明 |
 | ------ | ----------- |
 | 已放棄 | 批次未在預期時間範圍內完成。 |
-| 已中止 | 中止作業具有 **明確** 已針對指定的批次呼叫（透過批次擷取API）。 批次一旦處於「已載入」狀態，就無法中止。 |
+| 已中止 | 已針對指定的批次明確呼叫&#x200B;**中止作業** （透過批次擷取API）。 批次一旦處於「已載入」狀態，就無法中止。 |
 | 作用中 | 已成功提升批次，並可用於下游消耗。 此狀態可與「成功」互換使用。 |
 | 已刪除 | 批次的資料已完全移除。 |
-| 失敗 | 因設定錯誤和/或資料錯誤而導致的終端機狀態。 失敗批次的資料將 **非** 顯示。 此狀態可與「失敗」互換使用。 |
+| 失敗 | 因設定錯誤和/或資料錯誤而導致的終端機狀態。 失敗的批次的資料將&#x200B;**不會**&#x200B;顯示。 此狀態可與「失敗」互換使用。 |
 | 停用中 | 批次已成功提升，但已還原或已過期。 該批次不再可用於下游沖銷。 |
 | 已載入 | 批次的資料已完成，且批次已準備好進行升級。 |
-| 載入中 | 此批次的資料正在上傳，批次目前正在上傳 **非** 已準備好提升。 |
+| 載入中 | 此批次的資料正在上傳，批次目前為&#x200B;**尚未**&#x200B;可升級。 |
 | 正在重試 | 此批次的資料正在處理中。 但由於系統或暫時性錯誤，批次失敗 — 因此，將重試此批次。 |
 | 已暫存 | 批次升級流程的準備階段已完成，且擷取工作已執行。 |
 | 預備 | 正在處理批次的資料。 |

@@ -17,23 +17,23 @@ ht-degree: 5%
 
 ## 檢視沙箱
 
-在Platform UI中選取 **[!UICONTROL 沙箱]** 在左側導覽中，然後選取 **[!UICONTROL 瀏覽]** 以開啟 [!UICONTROL 沙箱] 儀表板。 儀表板會列出貴組織的所有可用沙箱，包括其個別型別（生產或開發）。
+在Platform UI中，選取左側導覽列中的&#x200B;**[!UICONTROL 沙箱]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;以開啟[!UICONTROL 沙箱]儀表板。 儀表板會列出貴組織的所有可用沙箱，包括其個別型別（生產或開發）。
 
-![檢視 — 沙箱](../images/ui/view-sandboxes.png)
+![檢視沙箱](../images/ui/view-sandboxes.png)
 
 ## 在沙箱之間切換
 
 沙箱指標位於Platform UI的頂端標題中，會顯示您目前所在沙箱的標題、區域及型別。
 
-![sandbox-indicator](../images/ui/sandbox-indicator.png)
+![沙箱指標](../images/ui/sandbox-indicator.png)
 
 若要在沙箱之間切換，請選取沙箱指標，然後從下拉式清單中選取所需的沙箱。
 
-![切換器介面](../images/ui/switcher-interface.png)
+![switcher-interface](../images/ui/switcher-interface.png)
 
 選取沙箱後，畫面會重新整理並更新至您選取的沙箱。
 
-![沙箱交換](../images/ui/sandbox-switched.png)
+![沙箱已交換](../images/ui/sandbox-switched.png)
 
 ## 建立新沙箱 {#create}
 
@@ -49,27 +49,27 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->建立新沙箱需要您將其新增到中的角色 [[!UICONTROL 許可權]](../../access-control/abac/ui/permissions.md) 然後再開始使用。 若要瞭解如何為角色布建沙箱，請參閱 [管理角色的沙箱](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) 檔案。
+>建立新沙箱需要您將它新增到[[!UICONTROL 許可權]](../../access-control/abac/ui/permissions.md)中的角色，然後才能開始使用。 若要瞭解如何布建角色的沙箱，請參閱角色的[管理沙箱](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role)檔案。
 
 使用下列影片快速概略說明如何在Experience Platform中使用沙箱。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-若要建立新沙箱，請選取「 」 **[!UICONTROL 建立沙箱]** 在畫面的右上角。
+若要建立新沙箱，請選取畫面右上角的&#x200B;**[!UICONTROL 建立沙箱]**。
 
 ![create-sandbox](../images/ui/create-sandbox.png)
 
-此 **[!UICONTROL 建立沙箱]** 對話方塊隨即顯示。 如果您正在建立開發沙箱，請選取 **[!UICONTROL 開發]** 在下拉式面板中。 若要建立新的生產沙箱，請選取 **[!UICONTROL 生產]**.
+**[!UICONTROL 建立沙箱]**&#x200B;對話方塊就會顯示。 如果您正在建立開發沙箱，請在下拉式面板中選取&#x200B;**[!UICONTROL 開發]**。 若要建立新的生產沙箱，請選取&#x200B;**[!UICONTROL 生產]**。
 
-![sandbox-type](../images/ui/sandbox-type.png)
+![沙箱型別](../images/ui/sandbox-type.png)
 
 選取型別後，為您的沙箱提供名稱和標題。 標題的說明性應該要能讓人看得懂，並且要足以輕鬆識別。 沙箱名稱是用於API呼叫的全小寫識別碼，因此應是唯一的且簡潔的。 沙箱名稱必須以字母開頭，最多可包含256個字元，且僅包含英數字元和連字型大小(-)。
 
-完成後，選取 **[!UICONTROL 建立]**.
+完成後，選取&#x200B;**[!UICONTROL 建立]**。
 
 ![sandbox-info](../images/ui/sandbox-info.png)
 
-當您完成沙箱的建立後，請重新整理頁面，新的沙箱就會出現在 **[!UICONTROL 沙箱]** 具有「」狀態的儀表板[!UICONTROL 建立]「。 系統布建新沙箱大約需要30秒，之後其狀態會變更為&quot;[!UICONTROL 作用中]「。
+當您完成建立沙箱後，請重新整理頁面，新的沙箱會顯示在&#x200B;**[!UICONTROL 沙箱]**&#x200B;儀表板中，狀態為&quot;[!UICONTROL 正在建立]&quot;。 系統布建新沙箱大約需要30秒，之後沙箱的狀態會變更為&quot;[!UICONTROL 作用中]&quot;。
 
 ![new-sandbox](../images/ui/new-sandbox.png)
 
@@ -78,8 +78,8 @@ ht-degree: 5%
 >[!WARNING]
 >
 >以下是可防止您重設預設生產沙箱或使用者建立的生產沙箱的例外清單：
->* 如果Adobe Analytics也將沙箱中代管的身分圖表用於，則無法重設預設的生產沙箱 [跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 功能。
->* 如果Adobe Audience Manager也將沙箱中代管的身分圖表用於，則無法重設預設的生產沙箱 [以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html).
+>* 如果Adobe Analytics也將沙箱中代管的身分圖表用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能，則無法重設預設的生產沙箱。
+>* 如果Adobe Audience Manager也將沙箱中代管的身分圖表用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)，則無法重設預設的生產沙箱。
 >* 如果預設生產沙箱包含CDA和PBD功能的資料，則無法重設。
 >* 在警告訊息後，可以重設使用者建立的、用於與Adobe Audience Manager或Audience Core Service雙向區段共用的生產沙箱。
 >* 在起始沙箱重設之前，您將需要手動刪除您的構圖，以確保適當的清理關聯的對象資料。
@@ -88,15 +88,15 @@ ht-degree: 5%
 
 對象構成目前未與沙箱重設功能整合，因此在執行沙箱重設之前，需要手動刪除對象。
 
-選取 **[!UICONTROL 受眾]** 從左側導覽列中，然後選取 **[!UICONTROL 組合]**.
+從左側導覽選取&#x200B;**[!UICONTROL 對象]**，然後選取&#x200B;**[!UICONTROL 組合]**。
 
-![此 [!UICONTROL 組合] 索引標籤中的 [!UICONTROL 受眾] 工作區。](../images/ui/audiences.png)
+![ [!UICONTROL 對象]工作區中的[!UICONTROL 組合]索引標籤。](../images/ui/audiences.png)
 
-接著，選取省略符號(`...`)，然後選取「 」 **[!UICONTROL 刪除]**.
+接著，選取第一個對象旁邊的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 刪除]**。
 
-![對象功能表醒目提示 [!UICONTROL 刪除] 選項。](../images/ui/delete-composition.png)
+![標示[!UICONTROL 刪除]選項的對象功能表。](../images/ui/delete-composition.png)
 
-系統會顯示成功刪除的確認，而您會返回 **[!UICONTROL 組合]** 標籤。
+顯示成功刪除的確認訊息，並返回&#x200B;**[!UICONTROL 構成]**&#x200B;索引標籤。
 
 對您的所有構成重複上述步驟。 這將會從對象詳細目錄中刪除所有對象。 移除所有對象後，您就可以繼續重設沙箱。
 
@@ -104,38 +104,38 @@ ht-degree: 5%
 
 重設生產或開發沙箱會刪除與該沙箱關聯的所有資源（結構描述、資料集等），同時維護沙箱的名稱和關聯的許可權。 此「乾淨」沙箱可繼續以相同名稱供擁有存取權的使用者使用。
 
-從沙箱清單中選取您要重設的沙箱。 在出現的右側導覽面板中，選取 **[!UICONTROL 沙箱已重設]**.
+從沙箱清單中選取您要重設的沙箱。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL 沙箱重設]**。
 
 ![重設](../images/ui/reset.png)
 
-會出現一個對話方塊，提示您確認您的選擇。 選取 **[!UICONTROL 繼續]** 以繼續進行。
+會出現一個對話方塊，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL 繼續]**&#x200B;以繼續。
 
 ![重設警告](../images/ui/reset-warning.png)
 
-在最終確認視窗中，在對話方塊中輸入沙箱名稱，然後選取 **[!UICONTROL 重設]**.
+在最後的確認視窗中，在對話方塊中輸入沙箱的名稱，並選取&#x200B;**[!UICONTROL 重設]**。
 
-![reset-confirm](../images/ui/reset-confirm.png)
+![重設確認](../images/ui/reset-confirm.png)
 
 ## 刪除沙箱
 
 >[!WARNING]
 >
->您無法刪除預設的生產沙箱。 但是，任何使用者建立的、用於雙向區段共用的生產沙箱， [!DNL Audience Manager] 或 [!DNL Audience Core Service] 可在警告訊息後刪除。
+>您無法刪除預設的生產沙箱。 不過，在警告訊息之後，可以刪除任何使用者建立的、用於與[!DNL Audience Manager]或[!DNL Audience Core Service]雙向區段共用的生產沙箱。
 
 刪除生產或開發沙箱會永久移除與該沙箱相關聯的所有資源，包括許可權。
 
-從沙箱清單中選取您要刪除的沙箱。 在出現的右側導覽面板中，選取 **[!UICONTROL 刪除]**.
+從沙箱清單中選取您要刪除的沙箱。 在出現的右側導覽面板中，選取&#x200B;**[!UICONTROL 刪除]**。
 
 ![刪除](../images/ui/delete.png)
 
-會出現一個對話方塊，提示您確認您的選擇。 選取 **[!UICONTROL 繼續]** 以繼續進行。
+會出現一個對話方塊，提示您確認您的選擇。 選取&#x200B;**[!UICONTROL 繼續]**&#x200B;以繼續。
 
-![delete-warning](../images/ui/delete-warning.png)
+![刪除警告](../images/ui/delete-warning.png)
 
-在最終確認視窗中，在對話方塊中輸入沙箱名稱，然後選取  **[!UICONTROL 繼續]**.
+在最後的確認視窗中，在對話方塊中輸入沙箱的名稱，並選取&#x200B;**[!UICONTROL 繼續]**。
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
 ## 後續步驟
 
-本檔案會示範如何在Experience Platform UI中管理沙箱。 如需有關如何使用沙箱API管理沙箱的資訊，請參閱 [沙箱開發人員指南](../api/getting-started.md).
+本檔案會示範如何在Experience Platform UI中管理沙箱。 有關如何使用沙箱API管理沙箱的資訊，請參閱[沙箱開發人員指南](../api/getting-started.md)。

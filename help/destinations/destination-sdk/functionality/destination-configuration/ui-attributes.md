@@ -13,31 +13,31 @@ ht-degree: 0%
 
 UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目的地卡片顯示的視覺元素，例如標誌、檔案頁面的連結、目的地說明及其類別和型別。
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或請參閱下列目的地設定總覽頁面：
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[組態選項](../configuration-options.md)檔案中的圖表，或檢視下列目的地組態概觀頁面：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-時間 [建立目的地](../../authoring-api/destination-configuration/create-destination-configuration.md) 透過Destination SDK， `uiAttributes` 區段會定義目的地卡片的下列視覺屬性：
+當[透過Destination SDK建立目的地](../../authoring-api/destination-configuration/create-destination-configuration.md)時，`uiAttributes`區段會定義目的地卡片的下列視覺屬性：
 
-* 您在中的目的地檔案頁面URL [目的地目錄](../../../catalog/overview.md).
+* [目的地目錄](../../../catalog/overview.md)中目的地檔案頁面的URL。
 * Platform UI中顯示您目的地的類別。
 * 您目的地的資料匯出頻率。
 * 目的地連線型別，例如Amazon S3、Azure Blob等。
 * 您託管要在目的地目錄卡片中顯示之圖示的URL。
 
-您可以透過以下方式設定UI屬性 `/authoring/destinations` 端點。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
+您可以透過`/authoring/destinations`端點設定UI屬性。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
 
 * [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
 本文說明可用於目的地的所有受支援UI屬性，並顯示客戶將在Experience PlatformUI中看到的內容。
 
-![顯示Experience Platform介面中UI屬性的UI熒幕擷圖](../../assets/functionality/destination-configuration/ui-attributes.png)
+![UI熒幕擷圖顯示Experience Platform介面中的UI屬性](../../assets/functionality/destination-configuration/ui-attributes.png)
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -62,11 +62,11 @@ UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目
 
 ### `documentationLink` {#documentation-link}
 
-`documentationLink` 是字串引數，會參照 [目的地目錄](../../../catalog/overview.md) 以取得您的目的地。 Adobe Experience Platform中每個產品化的目的地都必須有對應的檔案頁面。 [瞭解如何建立目的地檔案頁面](../../docs-framework/documentation-instructions.md) 以取得您的目的地。 請注意，私人/自訂目的地不需要此資訊。
+`documentationLink`是字串引數，參照到您目的地的[目的地目錄](../../../catalog/overview.md)中的檔案頁面。 Adobe Experience Platform中每個產品化的目的地都必須有對應的檔案頁面。 [瞭解如何為您的目的地建立目的地檔案頁面](../../docs-framework/documentation-instructions.md)。 請注意，私人/自訂目的地不需要此資訊。
 
-使用以下格式： `http://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中 `YOURDESTINATION` 是您目的地的名稱。 針對名為Moviestar的目的地，您可以使用 `http://www.adobe.com/go/destinations-moviestar-en`.
+使用以下格式： `http://www.adobe.com/go/destinations-YOURDESTINATION-en`，其中`YOURDESTINATION`是您目的地的名稱。 對於名為Moviestar的目的地，您可以使用`http://www.adobe.com/go/destinations-moviestar-en`。
 
-使用者可以從UI中的目的地目錄頁面檢視和瀏覽您的檔案連結。 他們必須瀏覽至您的目的地卡片，然後選取「 」 **[!UICONTROL 更多動作]**，然後 **[!UICONTROL 檢視檔案]**，如下圖所示。
+使用者可以從UI中的目的地目錄頁面檢視和瀏覽您的檔案連結。 他們需要瀏覽到您的目的地卡片，然後選取&#x200B;**[!UICONTROL 其他動作]**，然後選取&#x200B;**[!UICONTROL 檢視檔案]**，如下圖所示。
 
 ![顯示檔案連結位置的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -76,7 +76,7 @@ UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目
 
 ### `category` {#category}
 
-`category` 是字串引數，會參照在Adobe Experience Platform中指派給您的目的地的類別。 如需詳細資訊，請閱讀 [目的地類別](../../../destination-types.md). 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`.
+`category`是字串引數，會參照指派給您Adobe Experience Platform中目的地的類別。 如需詳細資訊，請閱讀[目的地類別](../../../destination-types.md)。 使用下列其中一個值： `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`。
 
 使用者可在目的地目錄的畫面左側看到目的地類別清單，如下圖所示。
 
@@ -84,27 +84,27 @@ UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目
 
 ### `connectionType` {#connection-type}
 
-`connectionType` 是字串引數，根據目的地而定，會參照連線的型別。 支援的值： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
+`connectionType`是參照連線型別的字串引數，視目的地而定。 支援的值： <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
 
-使用者可以在以下位置檢視目的地連線型別： [瀏覽](../../../ui/destinations-workspace.md#browse) 目的地工作區的索引標籤。
+使用者可在目的地工作區的[瀏覽](../../../ui/destinations-workspace.md#browse)索引標籤中看到目的地連線型別。
 
-![顯示UI中連線型別位置的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
+![UI影像顯示UI中的連線型別位置。](../../assets/functionality/destination-configuration/ui-attributes-connection.png)
 
 ### `frequency` {#frequency}
 
-`frequency` 是字串引數，參考您的目的地支援的資料匯出型別。 將設為 `Streaming` 針對API型整合，或 `Batch` 將檔案匯出至目的地時。
+`frequency`是字串引數，參考目的地支援的資料匯出型別。 針對以API為基礎的整合設定為`Streaming`，或當您匯出檔案至目的地時設定為`Batch`。
 
-使用者可以在以下位置檢視頻率型別： **[!UICONTROL 資料流執行]** 每個目的地連線的頁面。
+使用者可以在每個目的地連線的&#x200B;**[!UICONTROL 資料流執行]**&#x200B;頁面中看到頻率型別。
 
-![顯示UI中頻率型別位置的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
+![UI影像顯示UI中的頻率型別位置。](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 
 ### `isBeta` {#isbeta}
 
 如果您透過Destination SDK建立的目的地可供有限數量的客戶使用，您可能會想要將目的地目錄中的目的地卡片標示為測試版。
 
-若要這麼做，您可以使用 `isBeta: "true"` 目的地設定的UI屬性區段中的引數，以適當地標示目的地卡片。
+若要這麼做，您可以使用目的地設定之UI屬性區段中的`isBeta: "true"`引數，以適當地標示目的地卡片。
 
-![顯示標示為測試版之目的地卡片的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
+![UI影像顯示標示為Beta的目的地卡片。](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
 ### `icon` {#icon}
 
@@ -112,7 +112,7 @@ UI屬性會定義Adobe在Adobe Experience Platform使用者介面中應針對目
 
 ![顯示圖示位置的UI影像。](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-若要將標誌新增至目的地卡片，您需要在以下情況下與Adobe團隊共用所需的影像 [提交目的地以供檢閱](../../guides/submit-destination.md#logo).
+若要新增標誌至您的目的地卡片，您必須在[提交目的地以供檢閱時](../../guides/submit-destination.md#logo)，與Adobe團隊共用想要的影像。
 
 ## 後續步驟 {#next-steps}
 

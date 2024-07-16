@@ -5,8 +5,8 @@ description: 將您在Platform中的資料連結至其他Adobe Experience Cloud�
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 12%
+source-wordcount: '224'
+ht-degree: 7%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 目前，Platform支援下列的Adobe目的地。
 
-若要瞭解連線和擴充功能之間的差異，請參閱 [連線](../../destination-types.md#connections) 在目的地型別與類別頁面中。
+若要瞭解連線和擴充功能之間的差異，請參閱[目的地型別和類別]頁面中的[連線](../../destination-types.md#connections)。
 
 ### 連線
 
@@ -35,9 +35,9 @@ ht-degree: 12%
 
 * [Adobe Advertising Cloud擴充功能](../advertising/adobe-advertising-cloud.md)
 * [Adobe Analytics 擴充功能](../analytics/adobe-analytics.md)
-* [Adobe Media Analytics for Audio and Video 擴充功能](../analytics/adobe-video-analytics.md)
+* [Adobe Medium Analytics for Audio and Video擴充功能](../analytics/adobe-video-analytics.md)
 * [Adobe Target 擴充功能](../personalization/adobe-target.md)
-* [Adobe Target v2 擴充功能](../personalization/adobe-target-v2.md)
+* [Adobe Target v2擴充功能](../personalization/adobe-target-v2.md)
 * [Audience ManagerDIL延伸模組](../data-management/aam-dil-extension.md)
 * [Experience Cloud ID 服務擴充功能](../personalization/adobe-ecid.md)
 * [Marketo擴充功能](../email/marketo.md)
@@ -48,4 +48,4 @@ ht-degree: 12%
 
 使用Experience Platform受眾共用功能，將Experience Platform受眾共用至其他Adobe目的地。 如需詳細資訊(在Audience Manager檔案入口網站中開啟)，請參閱以下頁面：
 
-* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising Cloud和Adobe TargetExperience Platform受眾共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [透過核心服務整合，與Adobe Audience Manager、Adobe Advertising Cloud和Adobe Target共用Experience Platform受眾](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

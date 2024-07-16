@@ -4,24 +4,24 @@ description: 瞭解如何在Reactor API中呼叫/rule_components端點。
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1151'
 ht-degree: 3%
 
 ---
 
 # 規則元件端點
 
-在資料收集標籤中， [規則](./rules.md) 控制已部署中資源的行為 [資料庫](./libraries.md). **規則元件** 是構成規則的個別零件。 如果規則是配方，則規則元件是組成要素之一。 此 `/rule_components` Reactor API中的端點可讓您以程式設計方式管理規則元件。
+在資料收集標籤中，[規則](./rules.md)可控制已部署[資料庫](./libraries.md)中資源的行為。 **規則元件**&#x200B;是組成規則的個別零件。 如果規則是配方，則規則元件是組成要素之一。 Reactor API中的`/rule_components`端點可讓您以程式設計方式管理規則元件。
 
 >[!NOTE]
 >
->本文介紹如何在Reactor API中管理規則元件。 如需有關如何在UI中與規則和規則元件互動的詳細資訊，請參閱 [UI指南](../../ui/managing-resources/rules.md).
+>本文介紹如何在Reactor API中管理規則元件。 如需有關如何在UI中與規則和規則元件互動的詳細資訊，請參閱[UI指南](../../ui/managing-resources/rules.md)。
 
 規則元件有三種基本型別：
 
 | 規則元件型別 | 說明 |
 | --- | --- |
-| 活動 | 事件是規則的觸發器。 規則會在使用者端裝置執行階段發生事件時啟動。 &quot;[!UICONTROL 程式庫載入]「， 」[!UICONTROL 頁面頂端]「」和「[!UICONTROL 按一下]「是事件的範例。 |
+| 活動 | 事件是規則的觸發器。 規則會在使用者端裝置執行階段發生事件時啟動。 「[!UICONTROL 資料庫載入]」、「[!UICONTROL 頁面頂端]」和「[!UICONTROL 按一下]」為事件的範例。 |
 | 條件 | 條件是在執行任何動作前，評估是否符合特定條件。 一旦發生事件，就會評估條件。 只有在符合所有條件時，才會執行規則的動作。 |
 | 動作 | 這些是您希望規則實際執行的動作，例如傳送Adobe Analytics信標、擷取自訂訪客ID，或引發特定mbox。 |
 
@@ -29,11 +29,11 @@ ht-degree: 3%
 
 規則元件只屬於一個規則。 一個規則可以（也應該）有許多規則元件。
 
-規則元件僅由其中一個提供 [副檔名](./extensions.md). 擴充功能可提供許多規則元件型別。
+規則元件僅由一個[延伸模組](./extensions.md)提供。 擴充功能可提供許多規則元件型別。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取規則元件清單 {#list}
 
@@ -47,13 +47,13 @@ GET /rules/{RULE_ID}/rule_components
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_ID` | 此 `id` 要列出其元件的規則。 |
+| `RULE_ID` | 您要列出其元件的規則的`id`。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->使用查詢引數，可以根據以下屬性篩選列出的規則元件：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>請參閱以下指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
+>使用查詢引數，可以根據以下屬性篩選列出的規則元件：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
 
 **要求**
 
@@ -186,7 +186,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_COMPONENT_ID` | 此 `id` 要查閱的規則元件的。 |
+| `RULE_COMPONENT_ID` | 您要查閱之規則元件的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` ，位於要定義其下規則元件的屬性內。 |
+| `PROPERTY_ID` | 您正在定義規則元件之屬性的`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會建立新的規則元件。 在承載中， `relationships` 屬性會將元件與特定規則和現有的擴充功能建立關聯。 請參閱以下指南： [關係](../guides/relationships.md) 以取得詳細資訊。
+以下請求會建立新的規則元件。 在承載中，`relationships`屬性會將元件與特定規則和現有的擴充功能建立關聯。 如需詳細資訊，請參閱[關係](../guides/relationships.md)的指南。
 
 ```shell
 curl -X POST \
@@ -359,15 +359,15 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **（必要）** 您可以定義的規則元件型別由提供 [擴充功能套件](./extension-packages.md). 建立新規則元件時，您必須提供委派描述項ID，以指出此規則元件所依據的擴充功能套件、元件的型別（事件、條件或動作），以及如擴充功能所定義的特定元件名稱（例如核心擴充功能中的「Click」事件）。<br><br>請參閱以下指南： [委派描述項ID](../guides/delegate-descriptor-ids.md) 以取得詳細資訊。 |
-| `attributes.name` | **（必要）** 適用於規則元件的易讀名稱。 |
+| `attributes.delegate_descriptor_id` | **（必要）**&#x200B;您可以定義的規則元件型別是由[擴充功能套件](./extension-packages.md)所提供。 建立新規則元件時，您必須提供委派描述項ID，以指出此規則元件所依據的擴充功能套件、元件的型別（事件、條件或動作），以及如擴充功能所定義的特定元件名稱（例如核心擴充功能中的「Click」事件）。<br><br>如需詳細資訊，請參閱[委派描述項ID](../guides/delegate-descriptor-ids.md)的指南。 |
+| `attributes.name` | **（必要）**&#x200B;規則元件的人類可讀名稱。 |
 | `attributes.delay_next` | 表示是否要延遲後續動作的布林值。 |
 | `attributes.order` | 整數，表示依型別載入元件的順序。 |
 | `attributes.rule_order` | 整數，指出關聯規則要引發的優先順序。 |
 | `attributes.settings` | 以字串表示的設定JSON物件。 |
 | `attributes.timeout` | 整數，指出依序執行之動作的逾時。 |
-| `relationships` | 為規則元件建立必要關係的物件。 必須建立兩個關係： <ol><li>`extension`：定義此規則元件的擴充功能。 這必須是擴充功能套件由 `delegate_descriptor_id`.</li><li>`rules`：此元件在下定義的規則。</li></ol>如需關係的一般資訊，請參閱 [關係指南](../guides/relationships.md). |
-| `type` | 正在建立的資源型別。 此端點的值必須為 `rule_components`. |
+| `relationships` | 為規則元件建立必要關係的物件。 必須建立兩個關係： <ol><li>`extension`：定義此規則元件的延伸模組。 這必須是副檔名套件以`delegate_descriptor_id`表示的相同副檔名。</li><li>`rules`：正在定義此元件的規則。</li></ol>如需關係的一般資訊，請參閱[關係指南](../guides/relationships.md)。 |
+| `type` | 正在建立的資源型別。 此端點的值必須是`rule_components`。 |
 
 {style="table-layout:auto"}
 
@@ -473,7 +473,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->更新規則元件也會更新父項規則的 `updated_at` 時間戳記。
+>更新規則元件也會更新父項規則的`updated_at`時間戳記。
 
 **API格式**
 
@@ -483,13 +483,13 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_COMPONENT_ID` | 此 `id` 要更新的規則元件的。 |
+| `RULE_COMPONENT_ID` | 您要更新的規則元件的`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會更新 `order` 和 `settings` 現有規則元件的屬性。
+下列要求會更新現有規則元件的`order`和`settings`屬性。
 
 ```shell
 curl -X PATCH \
@@ -513,8 +513,8 @@ curl -X PATCH \
 | 屬性 | 說明 |
 | --- | --- |
 | `attributes` | 物件，其規則元件代表要針對規則元件更新的屬性。 您可以為規則元件更新下列屬性： <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
-| `id` | 此 `id` 要更新的規則元件的。 這應該符合 `{RULE_COMPONENT_ID}` 請求路徑中提供的值。 |
-| `type` | 正在更新的資源型別。 此端點的值必須為 `rule_components`. |
+| `id` | 您要更新的規則元件的`id`。 這應該符合請求路徑中提供的`{RULE_COMPONENT_ID}`值。 |
+| `type` | 正在更新的資源型別。 此端點的值必須是`rule_components`。 |
 
 {style="table-layout:auto"}
 
@@ -626,7 +626,7 @@ DELETE /rule_components/{RULE_COMPONENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `RULE_COMPONENT_ID` | 此 `id` 要刪除的規則元件的。 |
+| `RULE_COMPONENT_ID` | 您要刪除之規則元件的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -646,17 +646,17 @@ curl -X DELETE \
 
 ## 管理規則元件的附註 {#notes}
 
-規則元件是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 請參閱 [附註端點指南](./notes.md) 有關如何管理規則元件和其他相容資源附註的詳細資訊。
+規則元件是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 如需有關如何管理規則元件和其他相容資源的附註的詳細資訊，請參閱[附註端點指南](./notes.md)。
 
 ## 擷取規則元件的相關資源 {#related}
 
-下列呼叫示範如何擷取規則元件的相關資源。 時間 [查詢規則元件](#lookup)，這些關係會列在 `relationships` 規則元件。
+下列呼叫示範如何擷取規則元件的相關資源。 當[查詢規則元件](#lookup)時，這些關係會列在`relationships`規則元件下。
 
-請參閱 [關係指南](../guides/relationships.md) 以進一步瞭解Reactor API中的關係。
+請參閱[關係指南](../guides/relationships.md)，以取得有關Reactor API中關係的詳細資訊。
 
 ### 列出規則元件的相關規則 {#rules}
 
-您可以藉由附加，列出使用特定規則元件的規則 `/rules` 至查閱請求的路徑。
+您可以將`/rules`附加至查閱要求的路徑，以列出使用特定規則元件的規則。
 
 **API格式**
 
@@ -666,7 +666,7 @@ GET  /rule_components/{RULE_COMPONENT_ID}/rules
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | 此 `id` 要列出其規則的規則元件的。 |
+| `{RULE_COMPONENT_ID}` | 您要列出其規則的規則元件的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -760,7 +760,7 @@ curl -X GET \
 
 ### 查詢規則元件的相關擴充功能 {#extension}
 
-您可以藉由附加以查詢提供規則元件的擴充功能 `/extension` 至查閱請求的路徑。
+您可以將`/extension`附加至查閱要求的路徑，以查閱提供規則元件的擴充功能。
 
 **API格式**
 
@@ -770,7 +770,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | 此 `id` 要查詢其擴充功能的規則元件的。 |
+| `{RULE_COMPONENT_ID}` | 您要查詢其副檔名的規則元件之`id`。 |
 
 {style="table-layout:auto"}
 
@@ -880,7 +880,7 @@ curl -X GET \
 
 ### 查詢規則元件的相關來源 {#origin}
 
-您可以藉由附加來查詢規則元件的原始（舊版版本） `/origin` 至查閱請求的路徑。
+您可以將`/origin`附加至查閱要求的路徑，以查閱規則元件的來源（先前的修訂版本）。
 
 **API格式**
 
@@ -890,7 +890,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 
 | 參數 | 說明 |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | 此 `id` 要查詢其原點的規則元件。 |
+| `{RULE_COMPONENT_ID}` | 您要查詢其來源的規則元件之`id`。 |
 
 {style="table-layout:auto"}
 

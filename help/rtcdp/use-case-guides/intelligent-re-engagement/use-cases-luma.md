@@ -2,7 +2,8 @@
 title: 智慧型重新參與Luma範例
 description: 智慧型重新參與使用案例的範例影片。
 feature: Use Cases
-source-git-commit: ffa049f1650e9592bda934822cce8565db40c013
+exl-id: 635ac7ce-2059-4fed-8a4a-e32b2cd7ceea
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 1%

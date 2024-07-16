@@ -4,8 +4,8 @@ description: 瞭解Adobe Experience Platform如何支援子資源完整性(SRI)�
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 72%
+source-wordcount: '594'
+ht-degree: 67%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 本文介紹Adobe Experience Platform如何支援子資源完整性(SRI)。
 
@@ -34,11 +34,11 @@ SRI 驗證程序的摘要如下：
 
 ## 標記管理系統的限制
 
-作為標籤管理系統(TMS)，Adobe Experience Platform中的標籤提供編譯的JavaScript程式庫組建，讓您透過單一載入到頁面上 `<script>` 元素（內嵌程式碼）。 TMS 提供的動態功能是透過動態替換該指令碼的內容來完成，不需要您變更其他任何內容。
+作為標籤管理系統(TMS)，Adobe Experience Platform中的標籤提供編譯的JavaScript程式庫組建，讓您使用單一`<script>`元素（內嵌程式碼）載入到頁面上。 TMS 提供的動態功能是透過動態替換該指令碼的內容來完成，不需要您變更其他任何內容。
 
 不過，指令碼內容變更時，這些內容的密碼編譯雜湊也會變更。因此，讓 SRI 與 TMS 搭配運作的唯一方法是在您發佈新組建的同時更新內嵌程式碼。對許多人來說，這首先否定了使用 TMS 的主要目的。
 
-下一個最佳標籤安全性選項是實作內容安全性原則。 如需詳細資訊，請參閱以下指南： [CSP和標籤](./content-security-policy.md).
+下一個最佳標籤安全性選擇是實作內容安全性原則。 如需詳細資訊，請參閱[CSP和標籤](./content-security-policy.md)的指南。
 
 ## 將 SRI 整合至組建部署中
 
@@ -56,4 +56,4 @@ SRI 驗證程序的摘要如下：
 
 ## 後續步驟
 
-本檔案說明搭配標籤使用SRI的限制，以及將SRI整合至程式庫組建部署（儘管有這些限制）所需的步驟。 如果您尚未閱讀指南，強烈建議您參閱 [CSP和標籤](./content-security-policy.md) 以取得替代安全性選項。
+本檔案說明搭配標籤使用SRI的限制，以及將SRI整合至程式庫組建部署（儘管有這些限制）所需的步驟。 如果您尚未閱讀[CSP和標籤](./content-security-policy.md)的指南，強烈建議您參閱其他安全性選項。

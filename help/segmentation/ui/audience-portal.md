@@ -291,7 +291,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![對象的範例設定檔會反白顯示。 範例設定檔資訊包含設定檔識別碼、名字、姓氏及人員的電子郵件。](../images/ui/audience-portal/audience-details-profiles.png)
 
-## 已排程的分段 {#scheduled-segmentation}
+## 已排程分段 {#scheduled-segmentation}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"

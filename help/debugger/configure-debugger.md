@@ -14,21 +14,21 @@ ht-degree: 50%
 
 # 設定Platform Debugger
 
-您可以在外觀和運作方式上，設定Adobe Experience Platform Debugger的某些設定。
+您可以調整Adobe Experience Platform Debugger外觀和運作方式的某些設定。
 
 ![](images/settings.jpg)
 
 ## 淺色或深色模式
 
-Platform Debugger開啟後，您可以前往 **[!UICONTROL 設定]** 並選取 **深色模式** （預設）或 **光源模式**.
+Platform Debugger開啟後，您可以移至&#x200B;**[!UICONTROL 設定]**&#x200B;並選取&#x200B;**深色模式** （預設值）或&#x200B;**淺色模式**，以選取您偏好的外觀。
 
 ## 重設
 
-選取 **[!UICONTROL 重設所有資料和設定]** 以返回清除所有資料並恢復預設設定。
+選取&#x200B;**[!UICONTROL 重設所有資料和設定]**&#x200B;以返回清除所有資料並恢復預設設定。
 
 ## 將 Experience Platform Debugger 鎖定在單一頁面
 
-在您變更網站頁面後，Experience Platform Debugger 視窗會隨之更新，顯示該頁面的實際資訊。畫面底部會顯示您所連線的頁面名稱。若要將Experience Platform Debugger鎖定在單一頁面，請選取 **[!UICONTROL 鎖定]** （位於Platform Debugger視窗右下角）。
+在您變更網站頁面後，Experience Platform Debugger 視窗會隨之更新，顯示該頁面的實際資訊。畫面底部會顯示您所連線的頁面名稱。若要將Experience Platform Debugger鎖定在單一頁面，請選取Platform Debugger視窗右下角的&#x200B;**[!UICONTROL 鎖定]**。
 
 ![](images/lock.jpg)
 

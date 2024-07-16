@@ -29,7 +29,7 @@ ht-degree: 30%
 
 ## 概觀 {#overview}
 
-[!UICONTROL 使用案例教戰手冊] 當您開始使用Real-Time CDP或Adobe Journey Optimizer時，可能不知道從何開始，或不知道如何建立正確的資產，才能達成您想要的使用案例，或許可以幫助您克服此問題。 使用案例教戰手冊可透過以下方式為您提供幫助：
+[!UICONTROL 使用案例教戰手冊]可協助您在開始使用Real-Time CDP或Adobe Journey Optimizer時克服問題，但您可能無法確切瞭解如何開始使用或是如何建立正確的資產，進而達成您想要的使用案例。 使用案例教戰手冊可透過以下方式為您提供幫助：
 
 * 向您展示靈感的使用案例
 * 建立不同的資產，以供您在準備就緒時使用、測試及提升至生產環境。
@@ -50,11 +50,11 @@ ht-degree: 30%
 
 ## 可用性 {#availability}
 
-部分 [!UICONTROL 使用案例教戰手冊] 專為Real-Time CDP使用案例量身打造，其他則最適合使用Journey Optimizer的客戶。 瀏覽目錄以尋找最適合您的產品和使用案例的行動手冊。 在中進一步瞭解Real-Time CDP和Journey Optimizer [Adobe產品說明](https://helpx.adobe.com/legal/product-descriptions.html).
+有些[!UICONTROL 使用案例教戰手冊]是針對Real-Time CDP使用案例量身打造的，有些則是最適合使用Journey Optimizer的客戶。 瀏覽目錄以尋找最適合您的產品和使用案例的行動手冊。 在[Adobe產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中探索有關Real-Time CDP和Journey Optimizer的更多資訊。
 
 ## UI 指南 {#ui-guides}
 
-決定您要使用的教戰手冊後，請從 UI 中將其選取並開始使用。閱讀的UI指南 [如何從選項中選擇正確的教戰手冊](/help/use-case-playbooks/playbooks/choose.md) 為了您和 [如何建立、共用及重複使用playbook例項](/help/use-case-playbooks/playbooks/create-share-reuse.md) 有關如何建立執行個體並充分利用行動手冊的完整資訊。 若要瞭解如何將各種資產從啟發性的沙箱提升至其他開發沙箱，然後再提升至生產環境，請閱讀以下檔案： [資料感知](/help/use-case-playbooks/playbooks/data-awareness.md).
+決定您要使用的教戰手冊後，請從 UI 中將其選取並開始使用。閱讀[的UI指南，瞭解如何從選項中選擇正確的行動手冊](/help/use-case-playbooks/playbooks/choose.md)，以及[如何建立、共用和重複使用Playbook執行個體](/help/use-case-playbooks/playbooks/create-share-reuse.md)，以取得如何建立執行個體和充分利用Playbook的完整資訊。 若要瞭解如何將各種資產從啟發性的沙箱提升至其他開發沙箱，然後再提升至生產環境，請閱讀有關[資料感知度](/help/use-case-playbooks/playbooks/data-awareness.md)的檔案。
 
 ## 疑難排解和已知限制 {#trouble-shooting-known-limitations}
 

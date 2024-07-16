@@ -4,26 +4,26 @@ description: 瞭解如何在Reactor API中呼叫/libraries端點。
 exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1517'
 ht-degree: 5%
 
 ---
 
 # 程式庫端點
 
-程式庫是標籤資源的集合([擴充功能](./extensions.md)， [規則](./rules.md)、和 [資料元素](./data-elements.md))代表所需行為的 [屬性](./properties.md). 此 `/libraries` Reactor API中的端點可讓您以程式設計方式管理標籤屬性中的程式庫。
+程式庫是標籤資源（[擴充功能](./extensions.md)、[規則](./rules.md)和[資料元素](./data-elements.md)）的集合，代表[屬性](./properties.md)的所需行為。 Reactor API中的`/libraries`端點可讓您以程式設計方式管理標籤屬性中的程式庫。
 
-程式庫只屬於一個屬性。 屬性可以有許多程式庫。
+程式庫只屬於一個屬性。 屬性可以有許多資料庫。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
-在Reactor API中使用程式庫之前，請務必瞭解程式庫狀態和環境在決定您可以對特定程式庫執行哪些動作時所扮演的角色。 請參閱 [程式庫發佈流程](../../ui/publishing/publishing-flow.md) 以取得詳細資訊。
+在Reactor API中使用程式庫之前，請務必瞭解程式庫狀態和環境在決定您可對特定程式庫執行哪些動作時所扮演的角色。 如需詳細資訊，請參閱[程式庫發佈流程](../../ui/publishing/publishing-flow.md)的指南。
 
 ## 擷取程式庫清單 {#list}
 
-您可以在GET要求的路徑中包含屬性的ID，以擷取屬性的程式庫清單。
+您可以在GET請求的路徑中包含屬性的ID，以擷取屬性的程式庫清單。
 
 **API格式**
 
@@ -33,13 +33,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 擁有程式庫的屬性。 |
+| `PROPERTY_ID` | 擁有資料庫之屬性的`id`。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->使用查詢引數，可根據下列屬性篩選列出的程式庫：<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>請參閱指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
+>您可以使用查詢引數，根據下列屬性篩選列出的程式庫：<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
 
 **要求**
 
@@ -159,7 +159,7 @@ GET /libraries/{LIBRARY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 此 `id` ，屬於您要查閱的程式庫。 |
+| `LIBRARY_ID` | 您要查閱之資料庫的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -177,7 +177,7 @@ curl -X GET \
 
 **回應**
 
-成功回應會傳回程式庫的詳細資料。
+成功的回應會傳回程式庫的詳細資料。
 
 ```json
 {
@@ -270,13 +270,13 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 的 [屬性](./properties.md) 您正在定義下方的程式庫。 |
+| `PROPERTY_ID` | 您正在定義資料庫的[屬性](./properties.md)的`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-下列要求會針對指定的屬性建立新程式庫。 第一次建立程式庫時，只會 `name` 屬性可設定。 若要將資料元素、擴充功能和規則新增至程式庫，您必須建立關係。 請參閱以下小節： [管理程式庫資源](#resources) 以取得詳細資訊。
+下列要求會針對指定的屬性建立新程式庫。 第一次建立程式庫時，只能設定其`name`屬性。 若要將資料元素、擴充功能和規則新增至程式庫，您必須建立關係。 如需詳細資訊，請參閱[管理程式庫資源](#resources)的相關章節。
 
 ```shell
 curl -X POST \
@@ -297,8 +297,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必要）** 可讀取的資料庫名稱。 |
-| `type` | 正在更新的資源型別。 此端點的值必須為 `libraries`. |
+| `attributes.name` | **（必要）**&#x200B;程式庫的人類可讀名稱。 |
+| `type` | 正在更新的資源型別。 此端點的值必須是`libraries`。 |
 
 {style="table-layout:auto"}
 
@@ -406,11 +406,11 @@ curl -X POST \
 
 ## 管理程式庫的資源 {#resources}
 
-與程式庫相關聯的資料元素、擴充功能、規則和環境會透過關係建立。 以下各節說明如何透過API呼叫管理這些關係。
+與程式庫關聯的資料元素、擴充功能、規則和環境會透過關係建立。 以下各節涵蓋如何透過API呼叫管理這些關係。
 
 ### 將資源新增至程式庫 {#add-resources}
 
-您可以藉由附加來將資源新增至程式庫 `/relationships` 前往POST請求的路徑，後接資源型別。
+您可以將`/relationships`附加至POST請求的路徑，然後附加資源型別，藉此將資源新增至程式庫。
 
 **API格式**
 
@@ -460,7 +460,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新增關係的詳細資料。 執行 [查詢請求](#lookup) 對於資料庫，會在下方顯示新增的關係 `relationships` 屬性。
+成功的回應會傳回新增關係的詳細資料。 執行程式庫的[查詢要求](#lookup)會在`relationships`屬性下顯示新增的關係。
 
 ```json
 {
@@ -483,7 +483,7 @@ curl -X POST \
 
 ### 取代程式庫的資源 {#replace-resources}
 
-您可以藉由附加以取代程式庫特定型別的所有現有資源 `/relationships` 前往PATCH請求的路徑，後接您要取代的資源型別。
+您可以將`/relationships`附加至PATCH要求的路徑，然後加上您要取代的資源型別，來取代程式庫特定型別的所有現有資源。
 
 **API格式**
 
@@ -500,7 +500,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **要求**
 
-下列要求會將程式庫的擴充功能取代為 `data` 陣列。
+下列要求會將程式庫的擴充功能取代為`data`陣列中提供的擴充功能。
 
 ```shell
 curl -X PATCH \
@@ -529,7 +529,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回已更新關係的詳細資料。 執行 [查詢請求](#lookup) 對於程式庫，會顯示以下專案下的關係 `relationships` 屬性。
+成功的回應會傳回已更新關係的詳細資料。 執行程式庫的[查詢要求](#lookup)時，會在`relationships`屬性下顯示關係。
 
 ```json
 {
@@ -548,7 +548,7 @@ curl -X PATCH \
 
 ### 移除程式庫的資源 {#remove-resources}
 
-您可以藉由附加，從程式庫中移除現有資源 `/relationships` 前往DELETE請求的路徑，後接您要移除的資源型別。
+您可以將`/relationships`附加至DELETE請求的路徑，然後加上您要移除的資源型別，以從程式庫中移除現有資源。
 
 **API格式**
 
@@ -565,7 +565,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **要求**
 
-下列要求會將規則從程式庫中移除。 任何未包含在中的現有規則 `data` 陣列不會被刪除。
+下列請求會從程式庫中移除規則。 不會刪除`data`陣列中未包含的任何現有規則。
 
 ```shell
 curl -X DELETE \
@@ -594,7 +594,7 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回資源型別已更新關係的詳細資料。 如果此資源型別不存在任何關係，則 `data` 屬性會以空白陣列傳回。 執行 [查詢請求](#lookup) 對於程式庫，會顯示以下專案下的關係 `relationships` 屬性。
+成功的回應會傳回資源型別更新關係的詳細資料。 如果此資源型別不存在關聯，`data`屬性會以空白陣列傳回。 執行程式庫的[查詢要求](#lookup)時，會在`relationships`屬性下顯示關係。
 
 ```json
 {
@@ -610,7 +610,7 @@ curl -X DELETE \
 
 ## 將程式庫指派至環境 {#environment}
 
-您可以將程式庫指派給環境  `/relationships/environment` 到POST請求的路徑。
+您可以將程式庫指派給環境`/relationships/environment`，指派給POST要求的路徑。
 
 **API格式**
 
@@ -644,14 +644,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `id` | 您指派程式庫的目標環境ID。 |
-| `type` | 必須設定為 `environments`. |
+| `id` | 指派程式庫的目標環境ID。 |
+| `type` | 必須設定為`environments`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回關係的詳細資料。 執行 [查詢請求](#lookup) （對於資料庫），會在下方顯示新增的關係 `relationships` 屬性。
+成功的回應會傳回關係的詳細資料。 執行程式庫的[查詢要求](#lookup)會在`relationships`屬性下顯示新增的關係。
 
 ```json
 {
@@ -668,7 +668,7 @@ curl -X POST \
 
 ## 轉換程式庫 {#transition}
 
-您可以在PATCH請求的路徑中包含程式庫的ID，並提供適當的程式庫，將程式庫轉換為其他發佈狀態 `meta.action` 值。
+您可以在PATCH要求的路徑中包含程式庫的識別碼，並在裝載中提供適當的`meta.action`值，將程式庫轉換為其他發佈狀態。
 
 **API格式**
 
@@ -678,13 +678,13 @@ PATCH /libraries/{LIBRARY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 此 `id` 要轉換的程式庫中。 |
+| `LIBRARY_ID` | 您要轉換的程式庫`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會根據的值，轉換現有程式庫的狀態 `meta.action` 已在裝載中提供。 程式庫的可用動作取決於其目前的發佈狀態，如 [發佈流程](../../ui/publishing/publishing-flow.md#state).
+下列要求會根據承載中提供的`meta.action`值，轉換現有程式庫的狀態。 程式庫的可用動作取決於其目前的發佈狀態，如[發佈流程](../../ui/publishing/publishing-flow.md#state)中所述。
 
 ```shell
 curl -X PATCH \
@@ -706,15 +706,15 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `meta.action` | 您要在程式庫上進行的特定轉變動作。 視程式庫目前的發佈狀態而定，下列動作可供使用： <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | 此 `id` 要更新的程式庫的。 這應該符合 `{LIBRARY_ID}` 請求路徑中提供的值。 |
-| `type` | 正在更新的資源型別。 此端點的值必須為 `libraries`. |
+| `meta.action` | 您要在程式庫上進行的特定轉換動作。 視程式庫目前的發佈狀態而定，下列動作可供使用： <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
+| `id` | 您要更新之程式庫的`id`。 這應該符合請求路徑中提供的`{LIBRARY_ID}`值。 |
+| `type` | 正在更新的資源型別。 此端點的值必須是`libraries`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功回應會傳回已更新程式庫的詳細資料。
+成功的回應會傳回已更新程式庫的詳細資料。
 
 ```json
 {
@@ -798,7 +798,7 @@ curl -X PATCH \
 }
 ```
 
-## 發佈程式庫 {#publish}
+## Publish a程式庫 {#publish}
 
 >[!NOTE]
 >
@@ -814,7 +814,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | 參數 | 說明 |
 | --- | --- |
-| `LIBRARY_ID` | 此 `id` ，位於您要發佈的程式庫中。 |
+| `LIBRARY_ID` | 您要發佈的資料庫`id`。 |
 
 {style="table-layout:auto"}
 
@@ -905,17 +905,17 @@ curl -X POST \
 
 ## 管理程式庫的附註 {#notes}
 
-程式庫是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 請參閱 [附註端點指南](./notes.md) 如需如何管理程式庫和其他相容資源的附註的詳細資訊。
+程式庫是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 如需有關如何管理程式庫和其他相容資源的筆記的詳細資訊，請參閱[筆記端點指南](./notes.md)。
 
 ## 擷取程式庫的相關資源 {#related}
 
-下列呼叫示範如何擷取程式庫的相關資源。 時間 [查詢資料庫](#lookup)，這些關係會列在 `relationships` 屬性。
+下列呼叫示範如何擷取程式庫的相關資源。 當[查詢資料庫](#lookup)時，這些關係會列在`relationships`屬性下。
 
-請參閱 [關係指南](../guides/relationships.md) 以取得有關Reactor API中關係的詳細資訊。
+請參閱[關係指南](../guides/relationships.md)，以取得有關Reactor API中關係的詳細資訊。
 
 ### 列出程式庫的相關資料元素 {#data-elements}
 
-您可以藉由附加，列出程式庫所使用的資料元素 `/data_elements` 至查閱請求的路徑。
+您可以將`/data_elements`附加至查閱要求的路徑，以列出程式庫所使用的資料元素。
 
 **API格式**
 
@@ -925,7 +925,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 此 `id` 要列出其資料元素的程式庫。 |
+| `{LIBRARY_ID}` | 您要列出其資料元素的資料庫的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1056,7 +1056,7 @@ curl -X GET \
 
 ### 列出程式庫的相關擴充功能 {#extensions}
 
-您可以藉由附加，列出程式庫使用的擴充功能 `/extensions` 至查閱請求的路徑。
+您可以將`/extensions`附加至查閱要求的路徑，以列出程式庫所使用的副檔名。
 
 **API格式**
 
@@ -1066,7 +1066,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 此 `id` 要列出其副檔名的程式庫。 |
+| `{LIBRARY_ID}` | 您要列出其副檔名的程式庫之`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1187,7 +1187,7 @@ curl -X GET \
 
 ### 列出程式庫的相關規則 {#rules}
 
-您可以透過附加來列出程式庫使用的規則 `/rules` 至查閱請求的路徑。
+您可以將`/rules`附加至查閱要求的路徑，以列出程式庫所使用的規則。
 
 **API格式**
 
@@ -1197,7 +1197,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 此 `id` 要列出其規則的程式庫。 |
+| `{LIBRARY_ID}` | 您要列出其規則的資料庫的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1300,7 +1300,7 @@ curl -X GET \
 
 ### 查詢程式庫的相關環境 {#related-environment}
 
-您可以藉由附加來查詢已指派程式庫的環境 `/environment` 到GET請求的路徑。
+您可以將`/environment`附加至GET請求的路徑，以查詢已指派程式庫的環境。
 
 **API格式**
 
@@ -1310,7 +1310,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 此 `id` 要查詢其環境的程式庫。 |
+| `{LIBRARY_ID}` | 您要查詢其環境的程式庫`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1412,7 +1412,7 @@ curl -X GET \
 
 ### 查詢程式庫的相關屬性 {#property}
 
-您可以透過附加來查詢擁有程式庫的屬性 `/property` 到GET請求的路徑。
+您可以將`/property`附加至GET請求的路徑，以查詢擁有程式庫的屬性。
 
 **API格式**
 
@@ -1422,7 +1422,7 @@ GET  /libraries/{LIBRARY_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 此 `id` 要查詢其屬性的程式庫。 |
+| `{LIBRARY_ID}` | 您要查詢其屬性的資料庫`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1533,9 +1533,9 @@ curl -X GET \
 }
 ```
 
-### 查詢上游的程式庫 {#upstream}
+### 查詢程式庫的上游 {#upstream}
 
-您可以藉由附加，從程式庫上游查詢下一個程式庫 `/upstream_library` 到GET請求的路徑。
+您可以將`/upstream_library`附加至GET請求的路徑，從程式庫上游查詢下一個程式庫。
 
 **API格式**
 
@@ -1545,7 +1545,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 
 | 參數 | 說明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 此 `id` 要查詢其上遊程式庫的程式庫。 |
+| `{LIBRARY_ID}` | 您要查詢其上遊程式庫的程式庫`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1563,7 +1563,7 @@ curl -X GET \
 
 **回應**
 
-成功回應會傳回上遊程式庫的詳細資訊。
+成功的回應會傳回上遊程式庫的詳細資料。
 
 ```json
 {

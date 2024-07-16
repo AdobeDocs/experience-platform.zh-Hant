@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL 身分對應] 結構描述欄位群組
+# [!UICONTROL IdentityMap]架構欄位群組
 
 >[!NOTE]
 >
->數個結構描述欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../name-updates.md) 以取得詳細資訊。
+>數個結構描述欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../name-updates.md)的檔案。
 
-[!UICONTROL 身分對應] 是的標準結構描述欄位群組 [[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md). 欄位群組提供單一對應欄位，其中包含一組由名稱空間輸入的使用者身分。
+[!UICONTROL IdentityMap]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組。 欄位群組提供單一對應欄位，其中包含一組由名稱空間輸入的使用者身分。
 
-![的圖表 [!UICONTROL 身分對應] 結構描述欄位群組](../../images/field-groups/identitymap.png)
+![ [!UICONTROL IdentityMap]結構描述欄位群組](../../images/field-groups/identitymap.png)的圖表
 
-請參閱以下連結中有關身分對應的章節： [結構描述組合的基本面](../../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊，包括其優點和缺點。
+請參閱結構描述組合](../../schema/composition.md#identityMap)的[基本概念中的身分對應一節，以取得有關其使用案例的更多資訊，包括其優點和缺點。
 
 **範例**
 
@@ -38,4 +38,4 @@ ht-degree: 0%
 }
 ```
 
-如需欄位群組的詳細資訊，請參閱 [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) 在公用XDM存放庫中。
+如需欄位群組的詳細資訊，請參閱公用XDM存放庫中的[完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json)。

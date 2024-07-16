@@ -3,8 +3,8 @@ title: 驗證編輯器檢視
 description: 本指南會詳細介紹 Adob​​e Experience Platform Assurance 中驗證編輯器檢視的資訊。
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
-source-wordcount: '527'
+workflow-type: tm+mt
+source-wordcount: '502'
 ht-degree: 100%
 
 ---

@@ -25,16 +25,16 @@ ht-degree: 2%
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [Experience Data Model (XDM)系統](../../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
+* [體驗資料模型(XDM)系統](../../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
    * [[!DNL Schema Editor]](../../xdm/ui/overview.md)：瞭解如何在Platform UI中建立和管理結構描述和其他資源。
-* [[!DNL Data Governance]](../../data-governance/home.md)：瞭解如何 [!DNL Data Governance] 可讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和政策。
-* [以屬性為基礎的存取控制](../../access-control/abac/overview.md)：以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制對特定物件及/或權能的存取。 屬性可以是新增至物件的中繼資料，例如新增至臨時或一般結構描述欄位的標籤。 管理員定義存取原則，其中包含管理使用者存取許可權的屬性。
+* [[!DNL Data Governance]](../../data-governance/home.md)：瞭解[!DNL Data Governance]如何讓您管理客戶資料，並確保遵守適用於資料使用的法規、限制和原則。
+* [以屬性為基礎的存取控制](../../access-control/abac/overview.md)：以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓管理員根據屬性控制特定物件和/或功能的存取。 屬性可以是新增至物件的中繼資料，例如新增至臨時或一般結構描述欄位的標籤。 管理員定義存取原則，其中包含管理使用者存取許可權的屬性。
 
 ## 建立臨時結構描述
 
 一旦您的查詢執行完畢，且產生結果後，即會自動產生臨時結構描述，並新增至結構描述詳細目錄。
 
-若要新增資料標籤，請導覽至 [!UICONTROL 方案] 控制面板瀏覽標籤，方法是選取 [!UICONTROL 方案] （在Platform UI的左側邊欄中）。 此時會顯示結構描述詳細目錄。
+若要新增資料標籤，請在Platform UI的左側邊欄中選取[!UICONTROL 結構描述]，導覽至[!UICONTROL 結構描述]儀表板瀏覽標籤。 此時會顯示結構描述詳細目錄。
 
 >[!NOTE]
 >
@@ -42,41 +42,41 @@ ht-degree: 2%
 
 ## 探索Platform UI結構描述詳細目錄中的臨時結構描述 {#discover-ad-hoc-schemas}
 
-若要在Platform UI中啟用顯示臨時方案，請選取篩選圖示(![篩選器圖示。](../images/data-governance/filter.png))，然後選取「 ** 」[!UICONTROL 顯示臨時結構描述] 在出現的左側欄中。
+若要在Platform UI中啟用顯示臨時結構描述，請選取篩選圖示(![篩選圖示。](../images/data-governance/filter.png))，然後在出現的左側欄中選取**[!UICONTROL 顯示臨機操作結構描述]。
 
-![「結構描述」控制面板篩選選項左側邊欄的「顯示臨機結構描述」切換已啟用。](../images/data-governance/adhoc-schema-toggle.png)
+![結構描述儀表板篩選選項左側邊欄的「顯示臨機結構描述」切換已啟用。](../images/data-governance/adhoc-schema-toggle.png)
 
 從可用清單中選取最近建立的臨機操作綱要的名稱。 隨即顯示臨機架構結構的視覺效果。
 
-![臨時結構描述結構圖範例。](../images/data-governance/adhoc-schema-structure-diagram.png)
+![範例臨時結構描述結構圖。](../images/data-governance/adhoc-schema-structure-diagram.png)
 
 ## 編輯控管標籤
 
-若要編輯臨機操作結構描述的資料標籤，請選取 [!UICONTROL 標籤] 標籤。 標籤工作區可讓您對臨機架構欄位套用、建立和編輯標籤，以及透過UI控制存取許可權。 此處顯示臨時結構描述中的所有欄位。
+若要編輯臨機操作結構描述的資料標籤，請選取[!UICONTROL 標籤]標籤。 標籤工作區可讓您對臨機架構欄位套用、建立和編輯標籤，以及透過UI控制存取許可權。 此處顯示臨時結構描述中的所有欄位。
 
 ## 編輯結構描述或欄位的標籤
 
-若要編輯整個結構描述的標籤，請選取鉛筆圖示(![鉛筆圖示。](../images/data-governance/edit-icon.png))到結構描述名稱旁邊 [!UICONTROL 標籤] 標籤。
+若要編輯整個結構描述的標籤，請選取鉛筆圖示(![鉛筆圖示。](../images/data-governance/edit-icon.png))到[!UICONTROL 標籤]標籤下結構描述名稱的一側。
 
-![標籤會在結構工作區中檢視，並以鉛筆圖示反白顯示。](../images/data-governance/edit-entire-schema-labels.png)
+![結構描述工作區中的標籤檢視中，以鉛筆圖示反白顯示。](../images/data-governance/edit-entire-schema-labels.png)
 
-若要將標籤套用至現有欄位，請從清單中選取一或多個欄位，然後選取 [!UICONTROL 編輯治理標籤] 在右側邊欄中。
+若要將標籤套用至現有欄位，請從清單中選取一或多個欄位，然後在右側邊欄中選取[!UICONTROL 編輯治理標籤]。
 
-![在右側邊欄中反白顯示「編輯治理標籤」選項的結構描述工作區中的「標籤」檢視。](../images/data-governance/edit-governance-labels.png)
+![在右側邊欄中反白顯示「編輯治理標籤」選項的結構描述工作區中的標籤檢視。](../images/data-governance/edit-governance-labels.png)
 
 ## 編輯標籤彈出視窗
 
-此 [!UICONTROL 編輯標籤] 彈出視窗會出現。 從這個檢視，您可以透過UI建立或編輯現有的治理標籤。
+出現[!UICONTROL 編輯標籤]彈出視窗。 從這個檢視，您可以透過UI建立或編輯現有的治理標籤。
 
-![「編輯標籤」彈出視窗。](../images/data-governance/edit-labels-popover.png)
+![編輯標籤彈出視窗。](../images/data-governance/edit-labels-popover.png)
 
-請參閱檔案以瞭解如何 [建立或編輯所選結構描述或欄位的標籤](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
+請參閱檔案以瞭解如何[建立或編輯所選結構描述或欄位](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field)的標籤。
 
 >[!NOTE]
 >
 >建立新標籤或編輯現有標籤需要組織的管理員許可權。 如果您沒有管理員許可權，請聯絡您的系統管理員以安排存取權。
 
-您也可以使用許可權工作區來建立標籤。 請參閱 [在許可權工作區中建立標籤指南](../../access-control/abac/ui/labels.md) 以取得指示。
+您也可以使用許可權工作區來建立標籤。 如需指示，請參閱在許可權工作區](../../access-control/abac/ui/labels.md)中建立標籤的[指南。
 
 套用以屬性為基礎的適當層級存取控制後，下列系統行為將套用至使用者嘗試存取無法存取的資料時，透過「查詢服務」執行的任何查詢：
 

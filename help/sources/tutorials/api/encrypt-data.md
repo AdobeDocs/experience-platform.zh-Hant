@@ -5,7 +5,7 @@ exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
 source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
 source-wordcount: '1736'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 2%
 
 加密的資料擷取程式如下：
 
-1. [使用Experience PlatformAPI建立加密金鑰組](#create-encryption-key-pair). 加密金鑰組由私密金鑰和公開金鑰組成。 建立後，您可以複製或下載公開金鑰，以及其對應的公開金鑰ID和到期時間。 在此過程中，私密金鑰將由Experience Platform儲存在安全的儲存庫中。 **注意：** 回應中的公開金鑰以Base64編碼，且必須在使用前解密。
+1. [使用Experience PlatformAPI建立加密金鑰組](#create-encryption-key-pair)。 加密金鑰組由私密金鑰和公開金鑰組成。 建立後，您可以複製或下載公開金鑰，以及其對應的公開金鑰ID和到期時間。 在此過程中，私密金鑰將由Experience Platform儲存在安全的儲存庫中。 **注意：**&#x200B;回應中的公開金鑰是Base64編碼的，必須在使用之前解密。
 2. 使用公開金鑰來加密您要擷取的資料檔案。
 3. 將加密檔案放入雲端儲存空間。
-4. 加密檔案準備就緒後， [為您的雲端儲存空間來源建立來源連線和資料流](#create-a-dataflow-for-encrypted-data). 在流程建立步驟期間，您必須提供 `encryption` 並包含您的公開金鑰ID。
+4. 加密檔案準備就緒後，[為您的雲端儲存空間來源](#create-a-dataflow-for-encrypted-data)建立來源連線和資料流。 在流程建立步驟期間，您必須提供`encryption`引數並包含您的公開金鑰ID。
 5. Experience Platform會從安全儲存庫中擷取私密金鑰，以在擷取資料時解密資料。
 
 >[!IMPORTANT]
@@ -31,13 +31,13 @@ ht-degree: 2%
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
-   * [雲端儲存空間來源](../api/collect/cloud-storage.md)：建立資料流，將雲端儲存空間來源中的批次資料匯入Experience Platform。
+* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
+   * [雲端儲存空間來源](../api/collect/cloud-storage.md)：建立資料流，將批次資料從您的雲端儲存空間來源帶入Experience Platform。
 * [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
 
 ### 加密檔案支援的副檔名 {#supported-file-extensions-for-encrypted-files}
 
@@ -64,7 +64,7 @@ ht-degree: 2%
 
 ## 建立加密金鑰組 {#create-encryption-key-pair}
 
-擷取加密資料至Experience Platform的第一步，是透過向以下專案發出POST要求，以建立您的加密金鑰組： `/encryption/keys` 的端點 [!DNL Connectors] API。
+將加密資料擷取至Experience Platform的第一步，是透過向[!DNL Connectors] API的`/encryption/keys`端點發出POST要求來建立您的加密金鑰組。
 
 **API格式**
 
@@ -96,7 +96,7 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- |
-| `encryptionAlgorithm` | 您使用的加密演演算法型別。 支援的加密型別為 `PGP` 和 `GPG`. |
+| `encryptionAlgorithm` | 您使用的加密演演算法型別。 支援的加密型別為`PGP`和`GPG`。 |
 | `params.passPhrase` | 密碼可為您的加密金鑰提供額外的保護層。 建立後，Experience Platform會將複雜密碼與公開金鑰儲存在不同的安全儲存庫中。 您必須提供非空白字串作為複雜密碼。 |
 
 +++
@@ -125,7 +125,7 @@ curl -X POST \
 
 ### 擷取加密金鑰 {#retrieve-encryption-keys}
 
-若要擷取貴組織內的所有加密金鑰，請向以下網站發出GET請求： `/encryption/keys` endpoit=nt.
+若要擷取您組織中的所有加密金鑰，請向`/encryption/keys` endpoit=nt發出GET要求。
 
 **API格式**
 
@@ -168,7 +168,7 @@ curl -X GET \
 
 ### 依ID擷取加密金鑰 {#retrieve-encryption-keys-by-id}
 
-GET若要擷取一組特定的加密金鑰，請向 `/encryption/keys` 端點，並提供您的公開金鑰ID作為標頭引數。
+若要擷取一組特定的加密金鑰，請向`/encryption/keys`端點提出GET要求，並提供您的公開金鑰ID作為標頭引數。
 
 **API格式**
 
@@ -215,7 +215,7 @@ curl -X GET \
 
 ### 共用您的公開金鑰以Experience Platform
 
-若要共用您的公開金鑰，請向發出POST要求 `/customer-keys` 端點，同時提供您的加密演演算法和您的Base64編碼公開金鑰。
+若要共用您的公開金鑰，請在提供加密演演算法和Base64編碼公開金鑰的同時，向`/customer-keys`端點提出POST要求。
 
 **API格式**
 
@@ -243,7 +243,7 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- |
-| `encryptionAlgorithm` | 您使用的加密演演算法型別。 支援的加密型別為 `PGP` 和 `GPG`. |
+| `encryptionAlgorithm` | 您使用的加密演演算法型別。 支援的加密型別為`PGP`和`GPG`。 |
 | `publicKey` | 與您用來簽署已加密之客戶自控金鑰對應的公開金鑰。 此金鑰必須使用Base64編碼。 |
 
 +++
@@ -264,7 +264,7 @@ curl -X POST \
 
 +++
 
-## 使用將您的雲端儲存空間來源連線至Experience Platform [!DNL Flow Service] API
+## 使用[!DNL Flow Service] API連線您的雲端儲存空間來源以Experience Platform
 
 擷取加密金鑰組後，您現在可以繼續並為雲端儲存空間來源建立來源連線，並將加密的資料匯入Platform。
 
@@ -274,14 +274,14 @@ curl -X POST \
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
 * [Azure Blob](../api/create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../api/create/cloud-storage/adls-gen2.md)
-* [Azure檔案儲存體](../api/create/cloud-storage/azure-file-storage.md)
+* [Azure 檔案儲存體](../api/create/cloud-storage/azure-file-storage.md)
 * [資料登陸區域](../api/create/cloud-storage/data-landing-zone.md)
 * [FTP](../api/create/cloud-storage/ftp.md)
-* [Google雲端儲存空間](../api/create/cloud-storage/google.md)
-* [oracle物件儲存](../api/create/cloud-storage/oracle-object-storage.md)
+* [Google Cloud Storage](../api/create/cloud-storage/google.md)
+* [Oracle Object Storage](../api/create/cloud-storage/oracle-object-storage.md)
 * [SFTP](../api/create/cloud-storage/sftp.md)
 
-建立基礎連線後，您必須遵循的教學課程中概述的步驟 [為雲端儲存空間來源建立來源連線](../api/collect/cloud-storage.md) 以便建立來源連線、目標連線和對應。
+建立基礎連線後，您必須遵循教學課程中概述的步驟，針對[建立雲端儲存空間來源](../api/collect/cloud-storage.md)的來源連線，以建立來源連線、目標連線和對應。
 
 ## 為加密的資料建立資料流 {#create-a-dataflow-for-encrypted-data}
 
@@ -289,12 +289,12 @@ curl -X POST \
 >
 >您必須具備下列專案，才能為加密的資料擷取建立資料流：
 >
->* [公開金鑰ID](#create-encryption-key-pair)
->* [來源連線ID](../api/collect/cloud-storage.md#source)
->* [目標連線ID](../api/collect/cloud-storage.md#target)
+>* [公開金鑰識別碼](#create-encryption-key-pair)
+>* [Source連線ID](../api/collect/cloud-storage.md#source)
+>* [目標連線識別碼](../api/collect/cloud-storage.md#target)
 >* [對應ID](../api/collect/cloud-storage.md#mapping)
 
-POST若要建立資料流，請向 `/flows` 的端點 [!DNL Flow Service] API。 若要內嵌加密的資料，您必須新增 `encryption` 區段至 `transformations` 屬性並包含 `publicKeyId` 之前步驟中建立的物件。
+若要建立資料流，請向[!DNL Flow Service] API的`/flows`端點提出POST要求。 若要內嵌加密的資料，您必須將`encryption`區段新增至`transformations`屬性，並包含在先前步驟中建立的`publicKeyId`。
 
 **API格式**
 
@@ -304,7 +304,7 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB 建立資料流以進行加密的資料擷取]
+>[!TAB 建立加密資料擷取的資料流]
 
 **要求**
 
@@ -360,11 +360,11 @@ curl -X POST \
 | `sourceConnectionIds` | 來源連線ID。 此ID代表資料從來源傳輸至Platform的過程。 |
 | `targetConnectionIds` | 目標連線ID。 此ID代表資料傳入Platform後著陸的位置。 |
 | `transformations[x].params.mappingId` | 對應ID。 |
-| `transformations.name` | 擷取加密檔案時，您必須提供 `Encryption` 作為資料流的其他轉換引數。 |
+| `transformations.name` | 擷取加密檔案時，您必須提供`Encryption`作為資料流的其他轉換引數。 |
 | `transformations[x].params.publicKeyId` | 您建立的公開金鑰ID。 此ID是用來加密雲端儲存體資料的加密金鑰組的一半。 |
 | `scheduleParams.startTime` | 資料流的開始時間（以Epoch時間計）。 |
-| `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`， `minute`， `hour`， `day`，或 `week`. |
-| `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 間隔的值應為非零整數。 當頻率設定為 `once` 且應大於或等於 `15` 其他頻率值。 |
+| `scheduleParams.frequency` | 資料流收集資料的頻率。 可接受的值包括： `once`、`minute`、`hour`、`day`或`week`。 |
+| `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 間隔的值應為非零整數。 當頻率設定為`once`時不需要間隔，其他頻率值應該大於或等於`15`。 |
 
 +++
 
@@ -372,7 +372,7 @@ curl -X POST \
 
 +++檢視範例回應
 
-成功的回應會傳回ID (`id`)中，所有新增的資料流都會顯示這個值。
+成功的回應會傳回您加密資料之新建立資料流的識別碼(`id`)。
 
 ```json
 {
@@ -442,7 +442,7 @@ curl -X POST \
 
 +++檢視範例回應
 
-成功的回應會傳回ID (`id`)中，所有新增的資料流都會顯示這個值。
+成功的回應會傳回您加密資料之新建立資料流的識別碼(`id`)。
 
 ```json
 {
@@ -457,7 +457,7 @@ curl -X POST \
 
 ### 刪除加密金鑰 {#delete-encryption-keys}
 
-DELETE若要刪除您的加密金鑰，請向 `/encryption/keys` 端點，並提供您的公開金鑰ID作為標頭引數。
+若要刪除您的加密金鑰，請向`/encryption/keys`端點提出DELETE要求，並提供您的公開金鑰識別碼作為標頭引數。
 
 **API格式**
 
@@ -485,7 +485,7 @@ curl -X DELETE \
 
 ### 驗證加密金鑰 {#validate-encryption-keys}
 
-GET若要驗證您的加密金鑰，請向 `/encryption/keys/validate/` 端點，並提供您要驗證為標頭引數的公開金鑰ID。
+若要驗證您的加密金鑰，請向`/encryption/keys/validate/`端點發出GET要求，並提供您要驗證為標頭引數的公開金鑰ID。
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -513,7 +513,7 @@ curl -X GET \
 
 >[!TAB 有效]
 
-有效的公開金鑰ID傳回狀態 `Active` 以及您的公開金鑰ID。
+有效的公開金鑰識別碼傳回`Active`狀態以及您的公開金鑰識別碼。
 
 ```json
 {
@@ -524,7 +524,7 @@ curl -X GET \
 
 >[!TAB 無效]
 
-無效的公開金鑰ID傳回狀態 `Expired` 以及您的公開金鑰ID。
+無效的公開金鑰識別碼傳回`Expired`狀態以及您的公開金鑰識別碼。
 
 ```json
 {
@@ -540,7 +540,7 @@ curl -X GET \
 
 加密的資料擷取不支援在來源中擷取循環或多層資料夾。 所有加密的檔案都必須包含在單一資料夾中。 也不支援在單一來源路徑中包含多個資料夾的萬用字元。
 
-以下是支援的資料夾結構範例，來源路徑為 `/ACME-customers/*.csv.gpg`.
+以下是支援的資料夾結構範例，其中來源路徑為`/ACME-customers/*.csv.gpg`。
 
 在此案例中，粗體的檔案會擷取到Experience Platform中。
 
@@ -551,7 +551,7 @@ curl -X GET \
    * File4.json
    * **檔案5.csv.gpg**
 
-以下是不受支援的資料夾結構範例，其中來源路徑為 `/ACME-customers/*`.
+以下是來源路徑為`/ACME-customers/*`的不支援資料夾結構範例。
 
 在此案例中，流程執行將失敗，並傳回錯誤訊息，指出無法從來源複製資料。
 
@@ -568,4 +568,4 @@ curl -X GET \
 
 ## 後續步驟
 
-按照本教學課程，您已為雲端儲存空間資料建立加密金鑰組，並使用資料流擷取加密的資料。 [!DNL Flow Service API]. 如需資料流完整性、錯誤和量度的狀態更新，請閱讀以下指南： [使用監控資料流 [!DNL Flow Service] API](./monitor.md).
+依照此教學課程，您已為雲端儲存空間資料建立加密金鑰組，並使用[!DNL Flow Service API]為資料流擷取加密資料。 如需資料流完整性、錯誤和量度的狀態更新，請參閱[使用 [!DNL Flow Service] API](./monitor.md)監視資料流的指南。

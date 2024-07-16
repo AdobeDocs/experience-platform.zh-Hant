@@ -13,7 +13,7 @@ ht-degree: 0%
 
 使用對象中繼資料範本，以程式設計方式在您的目的地建立、更新或刪除對象。 Adobe提供可擴充的對象中繼資料範本，您可以根據行銷API的規格進行設定。 定義、測試及提交設定後，Adobe會使用該設定來建構對目的地的API呼叫。
 
-您可以使用來設定本檔案中描述的功能 `/authoring/audience-templates` api端點。 讀取 [建立中繼資料範本](../metadata-api/create-audience-template.md) 如需您可以在端點上執行的作業完整清單。
+您可以使用`/authoring/audience-templates` API端點來設定本檔案中描述的功能。 讀取[建立中繼資料範本](../metadata-api/create-audience-template.md)，以取得您可在端點上執行的完整作業清單。
 
 ## 何時使用對象中繼資料管理端點 {#when-to-use}
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 受眾中繼資料管理支援的使用案例 {#use-cases}
 
-透過Destination SDK中的受眾中繼資料支援，當您設定Experience Platform目的地時，可以為Platform使用者提供下列其中一個選項，方便他們將受眾對應及啟用至您的目的地。 您可以透過 [對象中繼資料設定](../functionality/destination-configuration/audience-metadata-configuration.md) 區段中的目的地設定。
+透過Destination SDK中的受眾中繼資料支援，當您設定Experience Platform目的地時，可以為Platform使用者提供下列其中一個選項，方便他們將受眾對應及啟用至您的目的地。 您可以透過目的地組態的[對象中繼資料組態](../functionality/destination-configuration/audience-metadata-configuration.md)區段中的引數，控制使用者可用的選項。
 
 ### 使用案例1 — 您有第三方API，使用者不需要輸入對應ID
 
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 如果對象和其他中繼資料需要由合作夥伴或使用者在您的目的地手動建立，則使用者必須在啟動工作流程中手動填寫對象對應ID欄位，以在您的目的地和Experience Platform之間同步對象中繼資料。
 
-![輸入對應ID](../assets/functionality/input-mapping-id.png)
+![輸入對應識別碼](../assets/functionality/input-mapping-id.png)
 
 ### 使用案例3 — 您的目的地接受Experience Platform的受眾ID，使用者不需要手動輸入對應ID
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
 為了支援上述使用案例，Adobe提供您一個通用範本，您可以根據您的API規格來自訂該範本。
 
-您可以使用一般範本來 [建立新的對象範本](../metadata-api/create-audience-template.md) 如果您的API支援：
+如果您的API支援：，您可以使用通用範本來[建立新的對象範本](../metadata-api/create-audience-template.md)
 
 * HTTP方法：POST、GET、PUT、DELETE、PATCH
 * 驗證型別：OAuth 1、具有重新整理權杖的OAuth 2、具有持有人權杖的OAuth 2
@@ -57,7 +57,7 @@ ht-degree: 0%
 
 本節包含三個一般對象中繼資料設定的範例，以供您參考，以及設定主要區段的說明。 請注意三個設定範例之間的URL、標頭、請求和回應內文差異。 這是因為三個範例平台的行銷API規格不同。
 
-請注意，在某些範例中，巨集欄位如 `{{authData.accessToken}}` 或 `{{segment.name}}` 在URL中使用，而在其他範例中，會在標頭或請求內文中使用。 這確實取決於您的行銷API規格。
+請注意，在某些範例中，URL會使用`{{authData.accessToken}}`或`{{segment.name}}`等巨集欄位，而在其他範例中，這些欄位會用於標頭或要求內文。 這確實取決於您的行銷API規格。
 
 | 範本區段 | 說明 |
 |--- |--- |
@@ -521,7 +521,7 @@ ht-degree: 0%
 }
 ```
 
-在中尋找範本中所有引數的說明 [建立對象範本](../metadata-api/create-audience-template.md) API參考。
+在[建立對象範本](../metadata-api/create-audience-template.md) API參考中尋找範本中所有引數的說明。
 
 ## 對象中繼資料範本中使用的巨集 {#macros}
 
@@ -534,8 +534,8 @@ ht-degree: 0%
 | `{{segment.id}}` | 可讓您以Experience Platform存取對象ID。 |
 | `{{customerData.accountId}}` | 可讓您存取在目的地設定中設定的帳戶ID欄位。 |
 | `{{oauth2ServiceAccessToken}}` | 可讓您根據您的OAuth 2設定動態產生存取權杖。 |
-| `{{authData.accessToken}}` | 可讓您將存取Token傳遞至API端點。 使用 `{{authData.accessToken}}` 如果Experience Platform應使用不會到期的權杖來連線至您的目的地，否則請使用 `{{oauth2ServiceAccessToken}}` 以產生存取權杖。 |
-| `{{body.segments[0].segment.id}}` | 傳回已建立對象的唯一識別碼，作為索引鍵的值 `externalAudienceId`. |
+| `{{authData.accessToken}}` | 可讓您將存取Token傳遞至API端點。 如果Experience Platform應該使用不會到期的權杖來連線到您的目的地，請使用`{{authData.accessToken}}`，否則請使用`{{oauth2ServiceAccessToken}}`來產生存取權杖。 |
+| `{{body.segments[0].segment.id}}` | 傳回已建立對象的唯一識別碼，作為索引鍵`externalAudienceId`的值。 |
 | `{{error.message}}` | 傳回會在Experience PlatformUI中向使用者顯示的錯誤訊息。 |
 
 {style="table-layout:auto"}

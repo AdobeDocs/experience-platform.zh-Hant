@@ -9,9 +9,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL 支援網站搜尋] 結構描述欄位群組
+# [!UICONTROL 支援網站搜尋]結構描述欄位群組
 
-[!UICONTROL 支援網站搜尋] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 它提供單一 `siteKnowledge.supportSiteSearch` 物件變更為結構描述，以擷取支援網站搜尋的相關資訊。
+[!UICONTROL 支援網站搜尋]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組。 它為結構描述提供單一`siteKnowledge.supportSiteSearch`物件，擷取支援網站搜尋的相關資訊。
 
 ![](../../images/field-groups/support-site-search.png)
 
@@ -21,4 +21,4 @@ ht-degree: 5%
 
 {style="table-layout:auto"}
 
-如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).
+如需欄位群組的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json)。

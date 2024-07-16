@@ -1,7 +1,8 @@
 ---
 title: 使用高階函式管理陣列和對應資料型別
 description: 瞭解如何在Query Service中使用高階函式來管理陣列和對應資料型別。 提供常見使用案例的實用範例。
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 `transform(array<T>, function<T, U>): array<U>`
 
-上述程式碼片段會將函式套用至陣列的每個元素，並傳迴轉換元素的新陣列。 具體而言， `transform` 函式接受型別T的陣列，並將每個元素從型別T轉換為型別U。然後它會傳回U型別的陣列。實際型別T和U取決於轉換函式的特定用途。
+上述程式碼片段會將函式套用至陣列的每個元素，並傳迴轉換元素的新陣列。 具體來說，`transform`函式接受型別T的陣列，並將每個元素從型別T轉換為型別U。然後它會傳回U型別的陣列。實際型別T和U取決於轉換函式的特定用途。
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ ht-degree: 0%
 
 **範例**
 
-以下SQL範例示範此使用案例。 查詢會從指定的表格中擷取有限的資料列集，轉換 `productListItems` 陣列方式 `priceTotal` 屬性（依73）。 結果包括 `_id`， `productListItems`，以及轉換的 `price_in_inr` 欄。 選取範圍是根據特定時間戳記範圍。
+以下SQL範例示範此使用案例。 查詢會從指定的資料表中擷取有限的資料列集合，將每個專案的`priceTotal`屬性乘以73來轉換`productListItems`陣列。 結果包含`_id`、`productListItems`和轉換後的`price_in_inr`欄。 選取範圍是根據特定時間戳記範圍。
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ LIMIT  10;
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-在上面的程式碼片段中， `exists` 函式會套用至陣列的每個元素，並傳回布林值。 布林值會指出陣列中是否有一或多個元素符合指定的條件。 在此情況下，系統會確認是否存在具有特定SKU的產品。
+在上述程式碼片段中，`exists`函式會套用至陣列的每個元素，並傳回布林值。 布林值會指出陣列中是否有一或多個元素符合指定的條件。 在此情況下，系統會確認是否存在具有特定SKU的產品。
 
 **範例**
 
-在以下SQL範例中，查詢會擷取 `productListItems` 從 `geometrixxx_999_xdm_pqs_1batch_10k_rows` 表格並評估具有SKU的元素是否等於 `123679` 在 `productListItems` 陣列存在。 然後它會根據特定時間戳記範圍篩選結果，並將最終結果限製為10列。
+在以下SQL範例中，查詢會從`geometrixxx_999_xdm_pqs_1batch_10k_rows`資料表擷取`productListItems`，並評估`productListItems`陣列中SKU等於`123679`的元素是否存在。 然後它會根據特定時間戳記範圍篩選結果，並將最終結果限製為10列。
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ productListItems
 
 **範例**
 
-以下查詢會選取 `productListItems` 欄，套用篩選器以僅包含SKU大於100000的元素，並將結果集限製為特定時間戳記範圍內的列。 篩選的陣列隨後會別名為 `_filter` 在輸出中。
+下列查詢會選取`productListItems`欄、套用篩選條件以僅包含SKU大於100000的元素，並將結果集限製為特定時間戳記範圍內的列。 然後，篩選的陣列會在輸出中別名為`_filter`。
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ productListItems | _filter
 
 **範例**
 
-此查詢範例會計算SKU的最大值，來源為 `productListItems` 陣列在指定的時間戳記範圍內，並將結果加倍。 輸出包含原始檔案 `productListItems` 陣列和已計算的 `max_value`.
+此查詢範例會計算指定時間戳記範圍內`productListItems`陣列的最大SKU值，並將結果加倍。 輸出包含原始`productListItems`陣列和計算的`max_value`。
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ productListItems | max_value
 
 **範例**
 
-以下查詢使用 `zip_with` 函式，可建立兩個陣列中的值組。 其做法是將 `productListItems` 陣列轉換為整數序列，此序列是使用 `Sequence` 函式。 結果會與原始檔案一起選取 `productListItems` 欄為基礎，並根據時間戳記範圍加以限制。
+下列查詢使用`zip_with`函式從兩個陣列建立值組。 其做法是將來自`productListItems`陣列的SKU值新增至整數序列（使用`Sequence`函式產生）。 結果會與原始`productListItems`欄一起選取，而且會根據時間戳記範圍加以限制。
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-此 `map_form_arrays` 函式會使用兩個陣列的配對值來建立對應。
+`map_form_arrays`函式使用兩個陣列中的配對值來建立對應。
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ productListItems     | map_from_entries
 
 **範例**
 
-以下SQL會建立對應，其中索引鍵是使用 `Sequence` 函式，而值是來自 `productListItems` 陣列。 查詢會選取 `productListItems` 欄並使用 `Map_from_arrays` 函式，可根據產生的數字序列和陣列元素建立對應。 結果限製為10列，並根據時間戳記範圍進行篩選。
+下列SQL會建立對應，其中的索引鍵是使用`Sequence`函式產生的循序數字，而值是來自`productListItems`陣列的元素。 查詢會選取`productListItems`資料行，並使用`Map_from_arrays`函式，根據產生的數字順序和陣列元素建立對應。 結果限製為10列，並根據時間戳記範圍進行篩選。
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-此 `map_concat` 函式以上程式碼片段中的功能採用多個對應作為引數，並傳回結合來自輸入對應的所有機碼值組的新對應。 函式會將多個對應串連到單一對應中，而產生的對應會包含輸入對應中的所有機碼值組。
+上述程式碼片段中的`map_concat`函式以多個對應作為引數，並傳回結合來自輸入對應的所有機碼值組的新對應。 函式會將多個對應串連到單一對應中，而產生的對應會包含輸入對應中的所有機碼值組。
 
 **範例**
 
-下列SQL會建立一個對應，其中每個專案都在 `productListItems` 與序號相關聯，接著與另一個對應串連，其中索引鍵產生於特定序號範圍。
+以下SQL會建立對應，其中`productListItems`中的每個專案都與序號相關聯，然後與另一個對應串連，其中索引鍵是在特定序列範圍中產生。
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ productListItems     | map_from_entries
 
 **範例**
 
-查詢會選取 `identitymap` 資料表中的資料行 `geometrixxx_999_xdm_pqs_1batch_10k_rows` 並擷取和索引鍵相關的值 `AAID` 每一列。 結果限製為指定時間戳記範圍內的列，而查詢將輸出限製為10列。
+查詢從資料表`geometrixxx_999_xdm_pqs_1batch_10k_rows`選取`identitymap`資料行，並擷取與每個資料列的索引鍵`AAID`相關的值。 結果限製為指定時間戳記範圍內的列，而查詢將輸出限製為10列。
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ LIMIT 10;
 
 **範例**
 
-以下查詢會擷取 `identitymap` 欄，以及 `Cardinality` 函式會計算 `identitymap`. 結果限製為10列，並根據指定的時間戳記範圍進行篩選。
+下列查詢會擷取`identitymap`欄，`Cardinality`函式會計算`identitymap`內每個對應中的元素數目。 結果限製為10列，並根據指定的時間戳記範圍進行篩選。
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ LIMIT  10;
 
 **範例**
 
-以下查詢會選取 `productListItems` 欄，會從陣列中移除任何重複的專案，並根據指定的時間戳記範圍將輸出限製為10列。
+下列查詢會選取`productListItems`欄、從陣列中移除任何重複的專案，以及根據指定的時間戳記範圍將輸出限製為10列。
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 以下高階函式的範例將說明為擷取類似記錄使用案例的一部分。 有關每個函式用途的範例和說明會提供在該檔案的個別區段中。
 
-此 [`transform` 函式範例](../use-cases/retrieve-similar-records.md#length-adjustment) 涵蓋產品清單的代碼化。
+[`transform`函式範例](../use-cases/retrieve-similar-records.md#length-adjustment)涵蓋產品清單的代碼化。
 
-此 [`filter` 函式範例](../use-cases/retrieve-similar-records.md#filter-results) 示範從文字資料更精細且更精確的相關資訊擷取。
+[`filter`函式範例](../use-cases/retrieve-similar-records.md#filter-results)示範從文字資料更精細、更精確的相關資訊擷取。
 
-此 [`reduce` 函式](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) 提供衍生累積值或聚總的方法，這些累積值或聚總對於各種分析和計畫處理而言至關重要。
+[`reduce`函式](../use-cases/retrieve-similar-records.md#higher-order-function-solutions)提供衍生累積值或聚總的方法，這可以在各種分析和計畫處理中起到關鍵作用。

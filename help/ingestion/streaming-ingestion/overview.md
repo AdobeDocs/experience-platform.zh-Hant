@@ -13,33 +13,33 @@ ht-degree: 1%
 
 # 串流擷取總覽
 
-Adobe Experience Platform的串流擷取為使用者提供一種從使用者端和伺服器端裝置傳送資料至的方法 [!DNL Experience Platform] 即時。
+Adobe Experience Platform的串流擷取為使用者提供從使用者端和伺服器端裝置即時傳送資料到[!DNL Experience Platform]的方法。
 
 ## 您可以使用串流擷取做什麼？
 
-Adobe Experience Platform可讓您透過產生 [!DNL Real-Time Customer Profile] 適用於每個個別客戶。 串流擷取可讓您傳送，因此在建立這些設定檔時扮演關鍵角色 [!DNL Profile] 資料進入 [!DNL Data Lake] 儘可能縮短延遲時間。
+Adobe Experience Platform可讓您為每個個別客戶產生[!DNL Real-Time Customer Profile]，藉此推動協調、一致且相關的體驗。 串流擷取可讓您以儘可能少的延遲將[!DNL Profile]資料傳送到[!DNL Data Lake]，因此在建立這些設定檔時扮演了關鍵角色。
 
 以下影片旨在協助您瞭解串流擷取，並概述上述概念。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### 串流設定檔記錄和 [!DNL ExperienceEvents]
+### 串流設定檔記錄和[!DNL ExperienceEvents]
 
-透過串流擷取，使用者可以串流設定檔記錄並 [!DNL ExperienceEvents] 至 [!DNL Platform] 幾秒鐘內即可協助推動即時個人化。 所有傳送至串流獲取API的資料都會自動儲存在 [!DNL Data Lake].
+透過串流擷取，使用者可在數秒內將設定檔記錄和[!DNL ExperienceEvents]串流到[!DNL Platform]，以協助推動即時個人化。 傳送至串流擷取API的所有資料都會自動儲存在[!DNL Data Lake]中。
 
-請閱讀 [建立串流連線指南](../tutorials/create-streaming-connection.md) 以取得詳細資訊。
+如需詳細資訊，請參閱[建立串流連線指南](../tutorials/create-streaming-connection.md)。
 
 ### 資料集的資料流
 
-一旦您確定您的資料是乾淨的，就可以為以下專案啟用資料集 [!DNL Real-Time Customer Profile] 和 [!DNL Identity Service].
+一旦您確定您的資料是乾淨的，就可以為[!DNL Real-Time Customer Profile]和[!DNL Identity Service]啟用資料集。
 
-如需啟用資料集的詳細資訊，請參閱 [!DNL Profile] 和 [!DNL Identity Service]，請閱讀 [設定資料集指南](../../profile/tutorials/dataset-configuration.md).
+如需為[!DNL Profile]和[!DNL Identity Service]啟用資料集的詳細資訊，請參閱[設定資料集指南](../../profile/tutorials/dataset-configuration.md)。
 
 ## 在Experience Platform上串流擷取的預期延遲為何？
 
 >[!IMPORTANT]
 >
->串流擷取的護欄會在組織層級進行計算，而非沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需有關授權使用權益的詳細資訊，請參閱 [資料管理最佳實務指南](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>串流擷取的護欄會在組織層級進行計算，而非沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需授權使用權益的詳細資訊，請閱讀[資料管理最佳實務指南](../../landing/license-usage-and-guardrails/data-management-best-practices.md)。
 
 | 目的地 | 預期延遲 |
 | --------- | ---------------- |
@@ -52,13 +52,13 @@ Adobe Experience Platform可讓您透過產生 [!DNL Real-Time Customer Profile]
 
 | RPS限制 | 附註 |
 | --- | --- |
-| 每秒1000個請求 | 使用時，這些可包含多則訊息 `/collection/batch` 端點。 |
-| 每秒10000傳個別訊息 | 使用時，可將訊息分組為較少的實際請求 `/collection/batch` 端點。 |
+| 每秒1000個請求 | 這些可在使用`/collection/batch`端點時包含多個訊息。 |
+| 每秒10000傳個別訊息 | 使用`/collection/batch`端點時，可將訊息分組為較少的實際要求。 |
 
 >[!IMPORTANT]
 >
->強制限制會變成 **每分鐘60個請求** 使用預期用於偵錯用途的同步驗證時。
+>使用同步驗證時，強制限制變成每分鐘&#x200B;**60個要求**，因為它是用於偵錯目的。
 
 ## Adobe Experience Platform擴充功能
 
-您可以使用Adobe Experience Platform擴充功能來建立新的串流連線。 此 [!DNL Experience Platform] 擴充功能提供傳送信標的動作，格式化方式為 [!DNL Experience Data Model] (XDM)用於即時擷取至 [!DNL Experience Platform]. 造訪 [Experience Platform擴充功能](../../tags/extensions/client/web-sdk/overview.md) 檔案以取得詳細資訊。
+您可以使用Adobe Experience Platform擴充功能來建立新的串流連線。 [!DNL Experience Platform]擴充功能提供動作，可傳送格式化為[!DNL Experience Data Model] (XDM)的信標以即時擷取至[!DNL Experience Platform]。 如需詳細資訊，請瀏覽[Experience Platform擴充功能](../../tags/extensions/client/web-sdk/overview.md)檔案。

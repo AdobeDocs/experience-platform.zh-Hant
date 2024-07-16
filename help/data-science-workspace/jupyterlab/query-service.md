@@ -1,30 +1,30 @@
 ---
-keywords: Experience Platform；JupyterLab；筆記型電腦；Data Science Workspace；熱門主題；查詢服務
+keywords: Experience Platform；JupyterLab；筆記本；資料科學Workspace；熱門主題；查詢服務
 solution: Experience Platform
 title: Jupyter Notebook中的查詢服務
 type: Tutorial
-description: Adobe Experience Platform可讓您透過將查詢服務整合到JupyterLab中作為標準功能，來在Data Science Workspace中使用結構化查詢語言(SQL)。 本教學課程示範常見使用案例的範例SQL查詢，以探索、轉換和分析Adobe Analytics資料。
+description: Adobe Experience Platform可讓您將查詢服務整合至JupyterLab作為標準功能，以使用Data Science Workspace中的結構化查詢語言(SQL)。 本教學課程示範常見使用案例的範例SQL查詢，以探索、轉換及分析Adobe Analytics資料。
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 1%
+source-wordcount: '822'
+ht-degree: 0%
 
 ---
 
 # Jupyter Notebook中的查詢服務
 
-[!DNL Adobe Experience Platform] 可讓您使用結構化查詢語言(SQL)於 [!DNL Data Science Workspace] 透過整合 [!DNL Query Service] 到 [!DNL JupyterLab] 作為標準特徵。
+[!DNL Adobe Experience Platform]可讓您將[!DNL Query Service]整合至[!DNL JupyterLab]作為標準功能，以在[!DNL Data Science Workspace]中使用結構化查詢語言(SQL)。
 
-本教學課程示範常見使用案例的範例SQL查詢，以探索、轉換和分析 [!DNL Adobe Analytics] 資料。
+本教學課程示範常見使用案例的範例SQL查詢，以探索、轉換及分析[!DNL Adobe Analytics]資料。
 
 ## 快速入門
 
-開始進行本教學課程之前，您必須具備下列必要條件：
+開始進行本教學課程前，您必須具備下列必要條件：
 
-- 存取 [!DNL Adobe Experience Platform]. 如果您無權存取中的組織 [!DNL Experience Platform]，請在繼續之前聯絡您的系統管理員
+- 存取[!DNL Adobe Experience Platform]。 如果您沒有[!DNL Experience Platform]中組織的存取權，請在繼續之前與您的系統管理員交談
 
-- 一個 [!DNL Adobe Analytics] 資料集
+- [!DNL Adobe Analytics]資料集
 
 - 深入瞭解本教學課程使用的下列重要概念：
    - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
@@ -32,43 +32,43 @@ ht-degree: 1%
    - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## 存取 [!DNL JupyterLab] 和 [!DNL Query Service] {#access-jupyterlab-and-query-service}
+## 存取[!DNL JupyterLab]和[!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 在 [[!DNL Experience Platform]](https://platform.adobe.com)，導覽至 **[!UICONTROL Notebooks]** 左側導覽欄中的。 等待JupyterLab載入。
+1. 在[[!DNL Experience Platform]](https://platform.adobe.com)中，從左側導覽欄瀏覽至&#x200B;**[!UICONTROL 筆記本]**。 等待片刻載入JupyterLab。
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >如果新的啟動器標籤未自動顯示，請按一下以開啟新的啟動器標籤 **[!UICONTROL 檔案]** 然後選取 **[!UICONTROL 新增啟動器]**.
+   >如果新的啟動器標籤未自動顯示，請按一下&#x200B;**[!UICONTROL 檔案]**&#x200B;開啟新的啟動器標籤，然後選取&#x200B;**[!UICONTROL 新增啟動器]**。
 
-2. 在「啟動器」標籤中，按一下 **[!UICONTROL 空白]** 圖示開啟Python 3環境中的空白筆記本。
+2. 在「啟動器」標籤中，按一下Python 3環境中的&#x200B;**[!UICONTROL 空白]**&#x200B;圖示以開啟空白筆記本。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    >[!NOTE]
    >
-   >Python 3目前是Notebooks中唯一支援查詢服務的環境。
+   >Python 3是目前在筆記型電腦中唯一支援查詢服務的環境。
 
-3. 在左側選取範圍邊欄中，按一下 **[!UICONTROL 資料]** 圖示並連按兩下 **[!UICONTROL 資料集]** 目錄，列出所有資料集。
+3. 在左側選取範圍邊欄上，按一下&#x200B;**[!UICONTROL 資料]**&#x200B;圖示，然後按兩下&#x200B;**[!UICONTROL 資料集]**&#x200B;目錄以列出所有資料集。
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 尋找 [!DNL Adobe Analytics] 要探索的資料集並在清單上按一下右鍵，請按一下 **[!UICONTROL 在筆記本中查詢資料]** 以在空白筆記本中產生SQL查詢。
+4. 尋找要探索的[!DNL Adobe Analytics]資料集並在清單上按一下滑鼠右鍵，按一下&#x200B;**[!UICONTROL 在筆記本中查詢資料]**&#x200B;以在空白筆記本中產生SQL查詢。
 
-5. 按一下第一個產生且包含函式的儲存格 `qs_connect()` 並按一下播放按鈕來執行它。 此函式會在您的Notebook執行個體與 [!DNL Query Service].
+5. 按一下包含函式`qs_connect()`的第一個產生儲存格，然後按一下播放按鈕來執行它。 此函式會在您的筆記本執行個體與[!DNL Query Service]之間建立連線。
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. 向下複製 [!DNL Adobe Analytics] 資料集名稱來自第二個產生的SQL查詢，將是之後的值 `FROM`.
+6. 從第二個產生的SQL查詢中複製[!DNL Adobe Analytics]資料集名稱，它將是`FROM`之後的值。
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
-7. 按一下「 」，插入新的筆記本儲存格 **+** 按鈕。
+7. 按一下&#x200B;**+**&#x200B;按鈕，插入新的筆記本儲存格。
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
-8. 在新儲存格中複製、貼上及執行下列匯入陳述式。 這些陳述式將用於視覺化您的資料：
+8. 在新儲存格中複製、貼上及執行以下匯入陳述式。 這些陳述式將用來視覺化您的資料：
 
    ```python
    import plotly.plotly as py
@@ -76,7 +76,7 @@ ht-degree: 1%
    from plotly.offline import iplot
    ```
 
-9. 接下來，複製下列變數，並將其貼到新的儲存格中。 視需要修改其值，然後執行它們。
+9. 接下來，將下列變數複製並貼到新儲存格中。 視需要修改其值，然後執行。
 
    ```python
    target_table = "your Adobe Analytics dataset name"
@@ -85,22 +85,22 @@ ht-degree: 1%
    target_day = "01"
    ```
 
-   - `target_table`：您的名稱 [!DNL Adobe Analytics] 資料集。
+   - `target_table`： [!DNL Adobe Analytics]資料集的名稱。
    - `target_year`：目標資料來自的特定年份。
    - `target_month`：目標來自的特定月份。
-   - `target_day`：目標資料來自的特定日期。
+   - `target_day`：目標資料來源的特定日期。
 
    >[!NOTE]
    >
-   >您可以隨時變更這些值。 執行此操作時，請務必執行變數儲存格以套用變更。
+   >您可以隨時變更這些值。 執行時，請務必執行變數儲存格以套用變更。
 
 ## 查詢您的資料 {#query-your-data}
 
-在個別筆記本儲存格中輸入下列SQL查詢。 在查詢的儲存格上選取，然後選取 **[!UICONTROL play]** 按鈕。 成功的查詢結果或錯誤記錄檔會顯示在執行的儲存格下方。
+在個別筆記本儲存格中輸入下列SQL查詢。 在查詢的儲存格上選取，接著選取&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕，以執行查詢。 成功的查詢結果或錯誤記錄檔會顯示在執行的儲存格下方。
 
-當筆記型電腦長時間處於非使用中狀態時，筆記型電腦與電腦之間的連線 [!DNL Query Service] 可能會中斷。 在這種情況下，請重新啟動 [!DNL JupyterLab] 藉由選取 **重新啟動** 按鈕 ![重新啟動按鈕](../images/jupyterlab/user-guide/restart_button.png) 位於電源按鈕旁的右上角。
+當筆記本長時間未使用時，筆記本與[!DNL Query Service]之間的連線可能會中斷。 在這種情況下，請選取電源按鈕右上角的&#x200B;**重新啟動**&#x200B;按鈕![重新啟動按鈕](../images/jupyterlab/user-guide/restart_button.png)，以重新啟動[!DNL JupyterLab]。
 
-筆記型電腦核心會重設，但儲存格仍會保留，請重新執行所有儲存格，以繼續處理您中斷的儲存格。
+筆記型電腦核心會重設，但儲存格會保留，請重新執行所有儲存格，繼續您中斷的儲存格。
 
 ### 每小時訪客計數 {#hourly-visitor-count}
 
@@ -120,9 +120,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-在上述查詢中， `WHERE` 子句設為下列專案的值 `target_year`. 將變數包含在大括弧(`{}`)。
+在上述查詢中，`WHERE`子句中的時間戳記設定為`target_year`的值。 將變數包含在大括弧(`{}`)中，以包含變數在SQL查詢中。
 
-查詢的第一行包含選擇性變數 `hourly_visitor`. 查詢結果將作為Pandas資料流儲存在此變數中。 將結果儲存在資料流中可讓您稍後使用所需的視覺化查詢結果 [!DNL Python] 封裝。 執行下列動作 [!DNL Python] 在新儲存格中產生橫條圖的程式碼：
+查詢的第一行包含選擇性變數`hourly_visitor`。 查詢結果將作為Pandas資料流儲存在此變數中。 將結果儲存在資料流中，可讓您稍後使用想要的[!DNL Python]封裝將查詢結果視覺化。 在新儲存格中執行下列[!DNL Python]程式碼以產生長條圖：
 
 ```python
 trace = go.Bar(
@@ -145,7 +145,7 @@ iplot(fig)
 
 下列查詢會傳回指定日期的每小時動作計數：
 
-#### 查詢 <!-- omit in toc -->
+#### 查詢<!-- omit in toc -->
 
 ```sql
 %%read_sql hourly_actions -d -c QS_CONNECTION
@@ -160,15 +160,15 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-執行上述查詢會將結果儲存在 `hourly_actions` 作為資料流。 在新儲存格中執行以下函式以預覽結果：
+執行上述查詢會將結果以`hourly_actions`的資料流形式儲存。 在新儲存格中執行以下函式以預覽結果：
 
 ```python
 hourly_actions.head()
 ```
 
-您可以修改上述查詢，以使用中的邏輯運運算元傳回指定日期範圍的每小時動作計數 **位置** 子句：
+可以修改上述查詢，以使用&#x200B;**WHERE**&#x200B;子句中的邏輯運運算元，傳回指定日期範圍的每小時動作計數：
 
-#### 查詢 <!-- omit in toc -->
+#### 查詢<!-- omit in toc -->
 
 ```sql
 %%read_sql hourly_actions_date_range -d -c QS_CONNECTION
@@ -184,7 +184,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-執行修改的查詢會將結果儲存在 `hourly_actions_date_range` 作為資料流。 在新儲存格中執行以下函式以預覽結果：
+執行修改後的查詢會將結果以`hourly_actions_date_range`的資料流形式儲存。 在新儲存格中執行以下函式以預覽結果：
 
 ```python
 hourly_actions_date_rage.head()
@@ -192,9 +192,9 @@ hourly_actions_date_rage.head()
 
 ### 每個訪客工作階段的事件數 {#number-of-events-per-visitor-session}
 
-以下查詢會傳回指定日期內每個訪客工作階段的事件數：
+下列查詢會傳回指定日期內每個訪客工作階段的事件數：
 
-#### 查詢 <!-- omit in toc -->
+#### 查詢<!-- omit in toc -->
 
 ```sql
 %%read_sql events_per_session -c QS_CONNECTION
@@ -208,7 +208,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-執行下列動作 [!DNL Python] 產生每次造訪工作階段事件數長條圖的程式碼：
+執行下列[!DNL Python]程式碼以產生每次造訪工作階段事件數的長條圖：
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -227,7 +227,7 @@ iplot(fig)
 
 下列查詢會傳回指定日期前十個最受歡迎的頁面：
 
-#### 查詢 <!-- omit in toc -->
+#### 查詢<!-- omit in toc -->
 
 ```sql
 %%read_sql popular_pages -c QS_CONNECTION
@@ -242,9 +242,9 @@ LIMIT  10;
 
 ### 指定日的作用中使用者 {#active-users-for-a-given-day}
 
-以下查詢會傳回指定日期最活躍的十位使用者：
+下列查詢會傳回指定日期前十位最活躍的使用者：
 
-#### 查詢 <!-- omit in toc -->
+#### 查詢<!-- omit in toc -->
 
 ```sql
 %%read_sql active_users -c QS_CONNECTION
@@ -261,7 +261,7 @@ LIMIT  10;
 
 下列查詢會傳回在指定日期產生大部分使用者活動的十個城市：
 
-#### 查詢 <!-- omit in toc -->
+#### 查詢<!-- omit in toc -->
 
 ```sql
 %%read_sql active_cities -c QS_CONNECTION
@@ -276,4 +276,4 @@ LIMIT  10;
 
 ## 後續步驟
 
-本教學課程示範利用的一些範例使用案例 [!DNL Query Service] 在 [!DNL Jupyter] 筆記本。 請遵循 [使用Jupyter Notebooks分析您的資料](./analyze-your-data.md) 教學課程，以瞭解如何使用Data Access SDK執行類似操作。
+本教學課程示範在[!DNL Jupyter]筆記型電腦中運用[!DNL Query Service]的一些使用案例。 請依照[使用Jupyter Notebooks分析您的資料](./analyze-your-data.md)教學課程，瞭解如何使用Data Access SDK執行類似的作業。

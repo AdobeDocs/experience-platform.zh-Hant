@@ -22,12 +22,12 @@ ht-degree: 60%
 * 資料彙集 {#data-collection}
    * [單一事件資料收集](interactive-data-collection.md)
    * [批次事件資料收集](non-interactive-data-collection.md)
-* 與其他Adobe解決方案互動 {#interacting-other-adobe-solutions}
+* 與其他Adobe解決方案{#interacting-other-adobe-solutions}互動
    * [與Adobe Analytics互動](interacting-adobe-analytics.md)
 * 個人化 {#personalization}
-   * [個人化概覽](personalization-overview.md)
-   * [透過Adobe Target實現個人化](personalization-target.md)
-   * [透過Offer decisioning個人化](personalization-offer-decisioning.md)
+   * [Personalization概觀](personalization-overview.md)
+   * [透過Adobe Target的Personalization](personalization-target.md)
+   * [Personalization (透過Offer Decisioning)](personalization-offer-decisioning.md)
 * [位置提示](location-hints.md)
 * [錯誤處理](error-handling.md)
 * [疑難排解](troubleshooting.md)

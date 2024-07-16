@@ -9,9 +9,9 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL 內部網站搜尋] 資料型別
+# [!UICONTROL 內部網站搜尋]資料型別
 
-[!UICONTROL 內部網站搜尋] 是描述內部網站搜尋的標準XDM資料型別，包括所有相關的搜尋行為和細節。
+[!UICONTROL 內部網站搜尋]是描述內部網站搜尋的標準XDM資料型別，包括所有相關的搜尋行為和細節。
 
 ![](../images/data-types/internal-site-search.png)
 
@@ -26,17 +26,17 @@ ht-degree: 3%
 | `numberOfResults` | [!UICONTROL 整數] | 傳回的搜尋結果總數。 |
 | `postalCode` | [!UICONTROL 字串] | 用於搜尋的郵遞區號（如適用）。 |
 | `productFindingMethods` | [!UICONTROL 字串] | 具有銷售繫結的內部網站搜尋字詞值。 此值表示在檢視產品之前立即搜尋的字詞。 |
-| `radiusDistance` | [!UICONTROL 整數] | 結合 `radiusType`，表示搜尋半徑的選取距離。 |
-| `radiusType` | [!UICONTROL 整數] | 選取的距離型別 `radiusDistance`，英里或公里。 |
+| `radiusDistance` | [!UICONTROL 整數] | 與`radiusType`結合，表示搜尋半徑的選取距離。 |
+| `radiusType` | [!UICONTROL 整數] | `radiusDistance`的選取距離型別，英里或公里。 |
 | `refinementInstances` | [!UICONTROL 整數] | 內部網站搜尋的完善次數。 |
 | `refinementType` | 字串陣列 | 列出套用至搜尋結果的細分型別。 範例包括部門、品牌、價格、店內、評論評等、顏色、材質等。 |
 | `refinementValue` | [!UICONTROL 字串] | 將搜尋完善的值。 |
 | `resultsPageNumber` | [!UICONTROL 整數] | 針對分頁搜尋結果，此值會追蹤訪客正在檢視的結果頁面。 |
 | `resultsPerPage` | [!UICONTROL 整數] | 若為分頁搜尋結果，此值會追蹤每頁顯示的搜尋結果數目。 |
 | `searchType` | [!UICONTROL 字串] | 擷取正在執行的搜尋方法（如適用）。 範例可能包括預先輸入搜尋、直接輸入搜尋或網站可能有的任何其他型別的自訂搜尋功能。 |
-| `sortOrder` | [!UICONTROL 字串] | 結合 `sortType`，表示搜尋結果的排序順序（升序或降序）。 |
+| `sortOrder` | [!UICONTROL 字串] | 與`sortType`結合，表示搜尋結果的排序順序（升序或降序）。 |
 | `term` | [!UICONTROL 字串] | 訪客輸入的內部網站搜尋辭彙。 |
 
 {style="table-layout:auto"}
 
-如需資料型別的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json).
+如需資料型別的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/internal-site-search.schema.json)。

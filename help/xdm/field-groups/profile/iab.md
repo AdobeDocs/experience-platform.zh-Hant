@@ -11,13 +11,13 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL IAB TCF 2.0同意] 設定檔結構描述的欄位群組
+# 設定檔結構描述的[!UICONTROL IAB TCF 2.0同意]欄位群組
 
 >[!NOTE]
 >
->本檔案涵蓋 [!UICONTROL IAB TCF 2.0同意] xdm個別設定檔類別的結構描述欄位群組。 若是用於XDM ExperienceEvent類別的欄位群組，請參閱下列內容 [檔案](../event/iab.md) 而非。
+>本文介紹XDM個人設定檔類別的[!UICONTROL IAB TCF 2.0同意]結構描述欄位群組。 若是用於XDM ExperienceEvent類別的欄位群組，請改為參閱下列[檔案](../event/iab.md)。
 
-[!UICONTROL IAB TCF 2.0同意] 是的標準結構描述欄位群組 [[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md) 用於擷取時間戳記系列IAB同意字串，以追蹤一段時間內的同意變更模式。
+[!UICONTROL IAB TCF 2.0同意]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組，用於擷取時間戳記系列IAB同意字串，以追蹤一段時間的同意變更模式。
 
 ![](../../images/field-groups/iab-profile.png)
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 {style="table-layout:auto"}
 
-下列JSON示範結構 `identityPrivacyInfo` 地圖。
+下列JSON示範`identityPrivacyInfo`對應的結構。
 
 ```json
 {
@@ -50,15 +50,15 @@ ht-degree: 1%
 }
 ```
 
-如範例所示，的每一個根層級索引鍵 `xdm:identityPrivacyInfo` 對應至Identity Service識別的身分名稱空間。 反過來，每個名稱空間屬性必須至少有一個子屬性，其索引鍵符合該名稱空間中客戶對應的身分值。 在此範例中，客戶以Experience CloudID (`ECID`)值 `13782522493631189`.
+如範例所示，`xdm:identityPrivacyInfo`的每個根層級索引鍵都與識別服務所識別的識別名稱空間相對應。 反過來，每個名稱空間屬性必須至少有一個子屬性，其索引鍵符合該名稱空間中客戶對應的身分值。 在此範例中，客戶以`13782522493631189`的Experience Cloud識別碼(`ECID`)值識別。
 
 >[!NOTE]
 >
 >雖然上述範例使用單一名稱空間/值組來代表客戶的身分，但您可以為其他名稱空間新增其他金鑰，而每個名稱空間可以有多個身分值，每個值都有自己的TCF同意偏好設定集。
 
-對於每個身分值， `identityIABConsent` 必須提供屬性，此屬性會提供身分的TCF同意值。 此屬性的值必須符合 [[!UICONTROL 同意字串] 資料型別](../../data-types/consent-string.md).
+必須為每個身分識別值提供`identityIABConsent`屬性，以提供身分識別的TCF同意值。 這個屬性的值必須符合[[!UICONTROL 同意字串]資料型別](../../data-types/consent-string.md)。
 
-請參閱以下指南： [平台中的IAB TCF 2.0支援](../../../landing/governance-privacy-security/consent/iab/overview.md) 以取得此欄位群組使用案例的詳細資訊。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
+如需此欄位群組使用案例的詳細資訊，請參閱Platform](../../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

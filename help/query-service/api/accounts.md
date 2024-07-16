@@ -14,15 +14,15 @@ ht-degree: 4%
 
 # 帳戶端點
 
-在Adobe Experience Platform Query Service中，帳戶是用來建立可搭配外部SQL使用者端使用的不會到期的認證。 您可以使用 `/accounts` Query Service API中的端點，可讓您以程式設計方式建立、擷取、編輯和刪除您的Query Service整合帳戶（也稱為技術帳戶）。
+在Adobe Experience Platform Query Service中，帳戶是用來建立可搭配外部SQL使用者端使用的不會到期的認證。 您可以在查詢服務API中使用`/accounts`端點，以程式設計方式建立、擷取、編輯和刪除您的查詢服務整合帳戶（也稱為技術帳戶）。
 
 ## 快速入門
 
-本指南中使用的端點屬於查詢服務API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+本指南中使用的端點屬於查詢服務API的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)以取得您成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫。
 
 ## 建立帳戶
 
-您可以透過向以下發出POST請求，以建立查詢服務整合帳戶： `/accounts` 端點。
+您可以對`/accounts`端點發出POST要求，以建立查詢服務整合帳戶。
 
 **API格式**
 
@@ -52,10 +52,10 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `accountName` | **必填** 查詢服務整合帳戶的名稱。 |
-| `assignedToUser` | **必填** 要為其建立查詢服務整合帳戶的Adobe ID。 |
-| `credential` | *（可選）* 用於查詢服務整合的認證。 如果未指定，系統會自動為您產生認證。 |
-| `description` | *（可選）* 查詢服務整合帳戶的說明。 |
+| `accountName` | **必要**&#x200B;查詢服務整合帳戶的名稱。 |
+| `assignedToUser` | **必要**&#x200B;將為其建立查詢服務整合帳戶的Adobe ID。 |
+| `credential` | *（選擇性）*&#x200B;用於查詢服務整合的認證。 如果未指定，系統會自動為您產生認證。 |
+| `description` | *（選擇性）*&#x200B;查詢服務整合帳戶的說明。 |
 
 **回應**
 
@@ -72,12 +72,12 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `technicalAccountName` | 查詢服務整合帳戶的名稱。 |
-| `technicalAccountId` | 查詢服務整合帳戶的ID。 此專案以及 `credential`，會為您的帳戶撰寫密碼。 |
-| `credential` | 查詢服務整合帳戶的認證。 此專案以及 `technicalAccountId`，會為您的帳戶撰寫密碼。 |
+| `technicalAccountId` | 查詢服務整合帳戶的ID。 這連同`credential`構成您帳戶的密碼。 |
+| `credential` | 查詢服務整合帳戶的認證。 這連同`technicalAccountId`構成您帳戶的密碼。 |
 
 ## 更新帳戶
 
-您可以透過向以下網站發出PUT請求，更新您的查詢服務整合帳戶： `/accounts` 端點。
+您可以對`/accounts`端點發出PUT要求，以更新您的查詢服務整合帳戶。
 
 **API格式**
 
@@ -109,10 +109,10 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `accountName` | *（可選）* 查詢服務整合帳戶的更新名稱。 |
-| `assignedToUser` | *（可選）* 查詢服務整合帳戶連結的更新Adobe ID。 |
-| `credential` | *（可選）* 更新您的Query Service帳戶認證。 |
-| `description` | *（可選）* 查詢服務整合帳戶的更新說明。 |
+| `accountName` | *（選擇性）*&#x200B;查詢服務整合帳戶的更新名稱。 |
+| `assignedToUser` | *（選擇性）*&#x200B;查詢服務整合帳戶所連結的已更新Adobe ID。 |
+| `credential` | *（選擇性）*&#x200B;查詢服務帳戶的更新認證。 |
+| `description` | *（選擇性）*&#x200B;查詢服務整合帳戶的更新說明。 |
 
 **回應**
 
@@ -135,7 +135,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
 
 ## 列出所有帳戶
 
-您可以透過向以下專案發出GET請求，擷取所有查詢服務整合帳戶的清單： `/accounts` 端點。
+您可以向`/accounts`端點發出GET要求，以擷取所有查詢服務整合帳戶的清單。
 
 **API格式**
 
@@ -206,7 +206,7 @@ curl -X GET https://platform.adobe.io/foundation/queryauth/accounts \
 
 ## 刪除帳戶
 
-您可以透過向以下網站發出DELETE請求，刪除您的查詢服務整合帳戶： `/accounts` 端點。
+您可以透過向`/accounts`端點發出DELETE要求來刪除您的查詢服務整合帳戶。
 
 **API格式**
 

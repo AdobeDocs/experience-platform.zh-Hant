@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # 沙箱管理端點
 
-Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。 此 `/sandboxes` 中的端點 [!DNL Sandbox] API可讓您以程式設計方式管理Platform中的沙箱。
+Adobe Experience Platform中的沙箱提供獨立的開發環境，可讓您測試功能、執行實驗及進行自訂設定，而不會影響您的生產環境。 [!DNL Sandbox] API中的`/sandboxes`端點可讓您以程式設計方式管理Platform中的沙箱。
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的API端點是[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 擷取沙箱清單 {#list}
 
-您可以透過向以下網站發出GET請求，列出屬於您組織的所有沙箱（作用中或其他方式）： `/sandboxes` 端點。
+您可以透過向`/sandboxes`端點發出GET要求，列出屬於您組織的所有沙箱（作用中或其他方式）。
 
 **API格式**
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 請參閱以下小節： [查詢引數](./appendix.md#query) 以取得詳細資訊。 |
+| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 如需詳細資訊，請參閱[查詢引數](./appendix.md#query)的相關章節。 |
 
 **要求**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回屬於您組織的沙箱清單，包括詳細資訊，例如 `name`， `title`， `state`、和 `type`.
+成功的回應會傳回屬於您組織的沙箱清單，包括`name`、`title`、`state`和`type`等詳細資訊。
 
 ```json
 {
@@ -130,14 +130,14 @@ curl -X GET \
 | --- | --- |
 | `name` | 沙箱的名稱。 此屬性用於API呼叫中的查閱用途。 |
 | `title` | 沙箱的顯示名稱。 |
-| `state` | 沙箱的目前處理狀態。 沙箱的狀態可以是下列任一專案： <br/><ul><li>`creating`：沙箱已建立，但系統仍在布建中。</li><li>`active`：沙箱已建立且作用中。</li><li>`failed`：由於錯誤，沙箱無法由系統布建，因此已停用。</li><li>`deleted`：沙箱已手動停用。</li></ul> |
-| `type` | 沙箱型別。 目前支援的沙箱型別包括 `development` 和 `production`. |
+| `state` | 沙箱的目前處理狀態。 沙箱的狀態可以是下列任一專案： <br/><ul><li>`creating`：沙箱已建立，但系統仍在布建中。</li><li>`active`：沙箱已建立且作用中。</li><li>`failed`：由於發生錯誤，沙箱無法由系統布建，因此已停用。</li><li>`deleted`：沙箱已手動停用。</li></ul> |
+| `type` | 沙箱型別。 目前支援的沙箱型別包括`development`和`production`。 |
 | `isDefault` | 表示此沙箱是否為組織的預設生產沙箱的布林值屬性。 |
 | `eTag` | 特定版本沙箱的識別碼。 用於版本控制和快取效率，每次對沙箱進行變更時都會更新此值。 |
 
 ## 查詢沙箱 {#lookup}
 
-您可以透過提出包含沙箱的GET請求來查詢個別沙箱 `name` 屬性存放於要求路徑中。
+您可以透過在請求路徑中包含沙箱的`name`屬性的GET請求來查詢個別沙箱。
 
 **API格式**
 
@@ -147,7 +147,7 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 此 `name` 要查詢之沙箱的屬性。 |
+| `{SANDBOX_NAME}` | 您要查詢之沙箱的`name`屬性。 |
 
 **要求**
 
@@ -163,7 +163,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回沙箱的詳細資料，包括其 `name`， `title`， `state`、和 `type`.
+成功的回應傳回沙箱的詳細資料，包括其`name`、`title`、`state`和`type`。
 
 ```json
 {
@@ -185,8 +185,8 @@ curl -X GET \
 | --- | --- |
 | `name` | 沙箱的名稱。 此屬性用於API呼叫中的查閱用途。 |
 | `title` | 沙箱的顯示名稱。 |
-| `state` | 沙箱的目前處理狀態。 沙箱的狀態可以是下列任一專案： <ul><li>**建立**：沙箱已建立，但系統仍在布建中。</li><li>**主要**：沙箱已建立且作用中。</li><li>**失敗**：由於錯誤，沙箱無法由系統布建，因此已停用。</li><li>**已刪除**：沙箱已手動停用。</li></ul> |
-| `type` | 沙箱型別。 目前支援的沙箱型別包括： `development` 和 `production`. |
+| `state` | 沙箱的目前處理狀態。 沙箱的狀態可以是下列任一專案： <ul><li>**正在建立**：沙箱已建立，但系統仍在布建中。</li><li>**使用中**：沙箱已建立且使用中。</li><li>**失敗**：由於發生錯誤，沙箱無法由系統布建，因此已停用。</li><li>**已刪除**：沙箱已手動停用。</li></ul> |
+| `type` | 沙箱型別。 目前支援的沙箱型別包括： `development`和`production`。 |
 | `isDefault` | 表示此沙箱是否為組織預設沙箱的布林值屬性。 通常這是生產沙箱。 |
 | `eTag` | 特定版本沙箱的識別碼。 用於版本控制和快取效率，每次對沙箱進行變更時都會更新此值。 |
 
@@ -194,13 +194,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->建立新沙箱時，您必須先將該新沙箱新增到您的產品設定檔中 [Adobe Admin Console](https://adminconsole.adobe.com/) 開始使用新沙箱之前。 請參閱以下檔案： [管理產品設定檔的許可權](../../access-control/ui/permissions.md) 有關如何將沙箱布建至產品設定檔的資訊。
+>建立新沙箱時，您必須先在[Adobe Admin Console](https://adminconsole.adobe.com/)中將該新沙箱新增到您的產品設定檔中，然後才能開始使用新沙箱。 如需有關如何將沙箱布建至產品設定檔的資訊，請參閱有關[管理產品設定檔的許可權](../../access-control/ui/permissions.md)的檔案。
 
-您可以透過向以下網站發出POST請求，建立新的開發或生產沙箱： `/sandboxes` 端點。
+您可以對`/sandboxes`端點發出POST要求，以建立新的開發或生產沙箱。
 
 ### 建立開發沙箱
 
-若要建立開發沙箱，您必須提供 `type` 屬性值為的屬性 `development` 請求承載中。
+若要建立開發沙箱，您必須在要求裝載中提供值為`development`的`type`屬性。
 
 **API格式**
 
@@ -230,11 +230,11 @@ curl -X POST \
 | --- | --- |
 | `name` | 將在未來請求中用於存取沙箱的識別碼。 此值必須是唯一的，最佳做法是使其儘可能具描述性。 此值不能包含任何空格或特殊字元。 |
 | `title` | 在Platform使用者介面中用於顯示用途的人類可讀名稱。 |
-| `type` | 要建立的沙箱型別。 對於非生產沙箱，此值必須為 `development`. |
+| `type` | 要建立的沙箱型別。 對於非生產沙箱，此值必須是`development`。 |
 
 **回應**
 
-成功的回應會傳回新建立的沙箱的詳細資料，顯示其 `state` 是「建立」。
+成功的回應會傳回新建立的沙箱的詳細資料，顯示其`state`正在「建立」。
 
 ```json
 {
@@ -248,11 +248,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->系統布建沙箱約需30秒鐘，之後則會有 `state` 將會變成「作用中」或「失敗」。
+>系統布建沙箱約需30秒鐘，之後的`state`會變成「作用中」或「失敗」。
 
 ### 建立生產沙箱
 
-若要建立生產沙箱，您必須提供 `type` 屬性值為的屬性 `production` 請求承載中。
+若要建立生產沙箱，您必須在要求裝載中提供值為`production`的`type`屬性。
 
 **API格式**
 
@@ -283,11 +283,11 @@ curl -X POST \
 | --- | --- |
 | `name` | 將在未來請求中用於存取沙箱的識別碼。 此值必須是唯一的，最佳做法是使其儘可能具描述性。 此值不能包含任何空格或特殊字元。 |
 | `title` | 在Platform使用者介面中用於顯示用途的人類可讀名稱。 |
-| `type` | 要建立的沙箱型別。 對於生產沙箱，此值必須為 `production`. |
+| `type` | 要建立的沙箱型別。 對於生產沙箱，此值必須是`production`。 |
 
 **回應**
 
-成功的回應會傳回新建立的沙箱的詳細資料，顯示其 `state` 是「建立」。
+成功的回應會傳回新建立的沙箱的詳細資料，顯示其`state`正在「建立」。
 
 ```json
 {
@@ -301,15 +301,15 @@ curl -X POST \
 
 >[!NOTE]
 >
->系統布建沙箱約需30秒鐘，之後則會有 `state` 將會變成「作用中」或「失敗」。
+>系統布建沙箱約需30秒鐘，之後的`state`會變成「作用中」或「失敗」。
 
 ## 更新沙箱 {#put}
 
-您可以透過提出包含沙箱的PATCH請求來更新沙箱中的一個或多個欄位 `name` 以及要更新請求裝載的屬性中。
+您可以透過提出PATCH請求來更新沙箱中的一個或多個欄位，該請求在請求路徑中包含沙箱的`name`以及在請求承載中要更新的屬性。
 
 >[!NOTE]
 >
->目前僅沙箱的 `title` 屬性可以更新。
+>目前只能更新沙箱的`title`屬性。
 
 **API格式**
 
@@ -319,11 +319,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 此 `name` 您要更新之沙箱的屬性。 |
+| `{SANDBOX_NAME}` | 您要更新的沙箱的`name`屬性。 |
 
 **要求**
 
-以下請求會更新 `title` 名為「acme」之沙箱的屬性。
+以下請求會更新名為「acme」的沙箱的`title`屬性。
 
 ```shell
 curl -X PATCH \
@@ -353,7 +353,7 @@ curl -X PATCH \
 
 ## 重設沙箱 {#reset}
 
-沙箱具有「原廠重設」功能，可從沙箱中刪除所有非預設資源。 您可以透過提出PUT請求來重設沙箱，該請求包含沙箱的 `name` 在請求路徑中。
+沙箱具有「原廠重設」功能，可從沙箱中刪除所有非預設資源。 您可以透過在請求路徑中包含沙箱的`name`的PUT請求來重設沙箱。
 
 **API格式**
 
@@ -363,8 +363,8 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 此 `name` 要重設之沙箱的屬性。 |
-| `validationOnly` | 此選用引數可讓您對沙箱重設作業執行預檢作業，而不需提出實際請求。 將此引數設為 `validationOnly=true` 檢查您即將重設的沙箱是否包含任何Adobe Analytics、Adobe Audience Manager或區段共用資料。 |
+| `{SANDBOX_NAME}` | 您要重設之沙箱的`name`屬性。 |
+| `validationOnly` | 此選用引數可讓您對沙箱重設作業執行預檢作業，而不需提出實際請求。 將此引數設為`validationOnly=true`，以檢查您即將重設的沙箱是否包含任何Adobe Analytics、Adobe Audience Manager或區段共用資料。 |
 
 **要求**
 
@@ -392,7 +392,7 @@ curl -X PUT \
 >
 >沙箱重設後，系統布建約需要30秒。
 
-成功的回應會傳回更新後的沙箱的詳細資料，顯示其 `state` 是「重設」。
+成功的回應會傳回更新沙箱的詳細資料，顯示其`state`正在「重設」。
 
 ```json
 {
@@ -405,7 +405,7 @@ curl -X PUT \
 }
 ```
 
-如果Adobe Analytics也將其中代管的身分圖表用於以下專案，則無法重設預設生產沙箱及任何使用者建立的生產沙箱： [跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 功能，或其中代管的身分圖表同時被Adobe Audience Manager用於 [以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 功能。
+如果其中代管的身分圖表也被Adobe Analytics用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能，則無法重設預設生產沙箱和任何使用者建立的生產沙箱。
 
 以下是可防止沙箱重設的可能例外清單：
 
@@ -432,7 +432,7 @@ curl -X PUT \
 }
 ```
 
-您可以繼續重設用來與進行雙向區段共用的生產沙箱 [!DNL Audience Manager] 或 [!DNL Audience Core Service] 藉由新增 `ignoreWarnings` 引數的對應章節。
+您可以繼續重設用來與[!DNL Audience Manager]或[!DNL Audience Core Service]進行雙向區段共用的生產沙箱，方法是在您的要求中新增`ignoreWarnings`引數。
 
 **API格式**
 
@@ -442,8 +442,8 @@ PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 此 `name` 要重設之沙箱的屬性。 |
-| `ignoreWarnings` | 此選用引數可讓您略過驗證檢查，並強制重設用來與共用雙向區段的生產沙箱。 [!DNL Audience Manager] 或 [!DNL Audience Core Service]. 此引數無法套用至預設的生產沙箱。 |
+| `{SANDBOX_NAME}` | 您要重設之沙箱的`name`屬性。 |
+| `ignoreWarnings` | 選擇性引數可讓您略過驗證檢查，並強制重設用來與[!DNL Audience Manager]或[!DNL Audience Core Service]進行雙向區段共用的生產沙箱。 此引數無法套用至預設的生產沙箱。 |
 
 **要求**
 
@@ -463,7 +463,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回更新後的沙箱的詳細資料，顯示其 `state` 是「重設」。
+成功的回應會傳回更新沙箱的詳細資料，顯示其`state`正在「重設」。
 
 ```json
 {
@@ -482,11 +482,11 @@ curl -X PUT \
 >
 >無法刪除預設的生產沙箱。
 
-您可以透過提出包含沙箱的DELETE請求來刪除沙箱 `name` 在請求路徑中。
+您可以透過在請求路徑中包含沙箱的`name`的DELETE請求來刪除沙箱。
 
 >[!NOTE]
 >
->發出此API呼叫會更新沙箱的 `status` 屬性加以「已刪除」並停用。 刪除沙箱後，GET請求仍可擷取沙箱的詳細資料。
+>發出此API呼叫會將沙箱的`status`屬性更新為「已刪除」並將其停用。 刪除沙箱後，GET請求仍可擷取沙箱的詳細資料。
 
 **API格式**
 
@@ -496,9 +496,9 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SANDBOX_NAME}` | 此 `name` 要刪除的沙箱的。 |
-| `validationOnly` | 此選用引數可讓您對沙箱刪除操作執行預先檢查而不會提出實際請求。 將此引數設為 `validationOnly=true` 檢查您即將重設的沙箱是否包含任何Adobe Analytics、Adobe Audience Manager或區段共用資料。 |
-| `ignoreWarnings` | 此選用引數可讓您略過驗證檢查，並強制刪除用於雙向區段共用的使用者建立的生產沙箱。 [!DNL Audience Manager] 或 [!DNL Audience Core Service]. 此引數無法套用至預設的生產沙箱。 |
+| `{SANDBOX_NAME}` | 您要刪除的沙箱的`name`。 |
+| `validationOnly` | 此選用引數可讓您對沙箱刪除操作執行預先檢查而不會提出實際請求。 將此引數設為`validationOnly=true`，以檢查您即將重設的沙箱是否包含任何Adobe Analytics、Adobe Audience Manager或區段共用資料。 |
+| `ignoreWarnings` | 此選用引數可讓您略過驗證檢查，並強制刪除使用者建立的生產沙箱（用於與[!DNL Audience Manager]或[!DNL Audience Core Service]的雙向區段共用）。 此引數無法套用至預設的生產沙箱。 |
 
 **要求**
 
@@ -514,7 +514,7 @@ curl -X DELETE \
 
 **回應**
 
-成功的回應會傳回沙箱的更新詳細資料，顯示其 `state` 為「已刪除」。
+成功的回應會傳回沙箱的更新詳細資料，顯示其`state`已「刪除」。
 
 ```json
 {

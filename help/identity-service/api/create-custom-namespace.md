@@ -14,9 +14,9 @@ ht-degree: 3%
 
 # 在Identity Service API中建立自訂名稱空間
 
-使用 [!DNL Identity Namespace] API後，您可以建立僅供貴組織使用的自訂身分名稱空間。
+使用[!DNL Identity Namespace] API，您可以建立僅供您的組織使用的自訂身分名稱空間。
 
-如需有關建立自訂名稱空間的建議，請參閱 [Identity Service常見問題集檔案](../troubleshooting-guide.md).
+如需建立自訂名稱空間的建議，請參閱[Identity Service常見問題集檔案](../troubleshooting-guide.md)。
 
 >[!NOTE]
 >
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## 後續步驟
 
-繼續進行下一個教學課程： [列出身分的原生ID](./list-native-id.md)
+繼續下一個教學課程，以[列出身分識別的原生ID](./list-native-id.md)

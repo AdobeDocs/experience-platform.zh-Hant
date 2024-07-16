@@ -11,15 +11,15 @@ ht-degree: 0%
 
 # 檢視分析SQL
 
-使用 [!UICONTROL 檢視SQL] 功能，可檢視您的設定檔、對象、目的地和自訂深入分析背後的SQL，並透過查詢編輯器依需求執行查詢。 從SQL中汲取超過40種現有的見解靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料中獲得獨特的見解。
+使用[!UICONTROL 檢視SQL]功能來檢視您的設定檔、對象、目的地和自訂深入分析背後的SQL，並透過「查詢編輯器」依需求執行查詢。 從SQL中汲取超過40種現有的見解靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料中獲得獨特的見解。
 
 ## 導覽至控制面板概觀 {#navigate-to-overview}
 
-若要開啟您選擇的儀表板，請選取 **[!UICONTROL 設定檔]**， **[!UICONTROL 受眾]**，或 **[!UICONTROL 目的地]** 從左側導覽。 下次選取 **[!UICONTROL 概觀]** 如果工作區未自動顯示，則從「索引標籤」選項啟動。
+若要開啟您選擇的儀表板，請從左側導覽中選取&#x200B;**[!UICONTROL 設定檔]**、**[!UICONTROL 對象]**&#x200B;或&#x200B;**[!UICONTROL 目的地]**。 接著，如果工作區未自動顯示，請從索引標籤選項中選取&#x200B;**[!UICONTROL 概觀]**。
 
-或者，選取 **[!UICONTROL 儀表板]** 從左側導覽，後面接著自訂儀表板的名稱。 使用者定義控制面板的概觀隨即顯示。
+或者，從左側導覽選取&#x200B;**[!UICONTROL 儀表板]**，然後選取自訂儀表板的名稱。 使用者定義控制面板的概觀隨即顯示。
 
-![Experience Platform UI搭配 [!UICONTROL 設定檔]， [!UICONTROL 受眾]， [!UICONTROL 目的地]、和 [!UICONTROL 儀表板] 反白顯示。](./images/view-sql/dashboard-navigation.png)
+![具有[!UICONTROL 設定檔]、[!UICONTROL 對象]、[!UICONTROL 目的地]和[!UICONTROL 儀表板]的Experience PlatformUI已強調顯示。](./images/view-sql/dashboard-navigation.png)
 
 ## 檢視SQL切換 {#toggle}
 
@@ -27,15 +27,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您啟用 [!UICONTROL 檢視SQL] 在切換功能之前，您無法變更全域和Widget層級篩選器。
+>如果您啟用[!UICONTROL 檢視SQL]切換，則在您停用此功能之前，您無法變更全域和Widget層級篩選器。
 
-![此 [!UICONTROL 檢視SQL] 切換反白顯示。](./images/view-sql/view-sql-toggle.png)
+![反白顯示[!UICONTROL 檢視SQL]切換。](./images/view-sql/view-sql-toggle.png)
 
-啟用切換即可顯示 [!UICONTROL 檢視SQL] 個別分析上的文字。
+啟用切換功能以在每個個別分析上顯示[!UICONTROL 檢視SQL]文字。
 
-![深入分析，使用 [!UICONTROL 檢視SQL] 反白顯示。](./images/view-sql/insight-view-sql.png)
+![強調顯示[!UICONTROL 檢視SQL]的深入分析。](./images/view-sql/insight-view-sql.png)
 
-選取 **[!UICONTROL 檢視SQL]** 以開啟包含介面工具之SQL的對話方塊。
+選取&#x200B;**[!UICONTROL 檢視SQL]**&#x200B;以開啟包含Widget SQL的對話方塊。
 
 ## SQL對話方塊 {#sql-dialog}
 
@@ -43,20 +43,20 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您可以選取復製圖示(![復製圖示。](./images/view-sql/copy-icon.png))。
+>您可以選取復製圖示（![復製圖示），將整個SQL陳述式複製到剪貼簿。](./images/view-sql/copy-icon.png))。
 
-![反白顯示SQL敘述句的深入分析對話方塊。](./images/view-sql/sql-dialog.png)
+![反白顯示SQL陳述式的深入分析對話方塊。](./images/view-sql/sql-dialog.png)
 
-選取 **[!UICONTROL 執行SQL]** 以開啟查詢編輯器，並預先填入查詢。
+選取&#x200B;**[!UICONTROL 執行SQL]**&#x200B;以開啟已預先填入查詢的查詢編輯器。
 
-![與的深入分析對話方塊 [!UICONTROL 執行SQL] 反白顯示。](./images/view-sql/run-sql.png)
+![與[!UICONTROL 執行SQL]的深入分析對話方塊已反白顯示。](./images/view-sql/run-sql.png)
 
 ## 編輯現有的SQL {#edit-sql}
 
 「查詢編輯器」即會出現。 您現在可以編輯陳述式，並以更符合報告需求的方式查詢平台資料。 以適當的名稱儲存您的新查詢範本。
 
-![已預先填入所選分析SQL的查詢編輯器。](./images/view-sql/edit-sql.png)
+![已預先填入您選擇的分析SQL的查詢編輯器。](./images/view-sql/edit-sql.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您現在瞭解如何在標準儀表板或使用者定義儀表板中存取SQL以取得任何深入分析。 如果您尚未閱讀本文章，建議您閱讀 [Real-time Customer Data Platform Insights資料模型檔案](./data-models/cdp-insights-data-model-b2c.md). 該檔案包含針對您的行銷和KPI需求量身打造的Real-Time CDP報表自訂SQL範本的相關見解。
+閱讀本檔案後，您現在瞭解如何在標準儀表板或使用者定義儀表板中存取SQL以取得任何深入分析。 如果您尚未閱讀[Real-time Customer Data Platform Insights資料模型檔案](./data-models/cdp-insights-data-model-b2c.md)，建議您先閱讀。 該檔案包含針對您的行銷和KPI需求量身打造的Real-Time CDP報表自訂SQL範本的相關見解。

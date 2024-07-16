@@ -15,7 +15,7 @@ ht-degree: 85%
 
 # 摘要標籤
 
-若要執行Adobe Experience Platform Debugger，請在瀏覽器中開啟您要檢查的頁面，然後選取圖示(![](images/start-icon.jpg))。 擴充功能會在 **摘要** 標籤。
+若要執行Adobe Experience Platform Debugger，請在瀏覽器中開啟您要檢查的頁面，然後在瀏覽器列上選取圖示(![](images/start-icon.jpg))。 擴充功能會在&#x200B;**摘要**&#x200B;標籤上開啟。
 
 ![](images/summary.jpg)
 
@@ -77,19 +77,19 @@ Experience Platform Debugger 針對各個解決方案顯示的資訊如下：
  <tbody> 
   <tr> 
    <td colname="col1"> <p>名稱 </p> </td> 
-   <td colname="col2"> <p>標籤的名稱 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> 屬性</a> </p> </td> 
+   <td colname="col2"> <p>標籤<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external">屬性</a>的名稱 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>版本 </p> </td> 
-   <td colname="col2"> <p>Turbine版本</a> </p> </td> 
+   <td colname="col2"> <p>Turbine</a>的版本 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>建置日期 </p> </td> 
-   <td colname="col2"> <p>標籤 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> 資料庫</a> 建置日期 </p> </td> 
+   <td colname="col2"> <p>標籤<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external">資料庫</a>建置日期 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>環境 </p> </td> 
-   <td colname="col2"> <p>此 <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant" format="https" scope="external"> 環境</a> 由標籤庫使用 </p> </td> 
+   <td colname="col2"> <p>標籤程式庫使用的<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=zh-Hant" format="https" scope="external">環境</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>擴充功能 </p> </td> 

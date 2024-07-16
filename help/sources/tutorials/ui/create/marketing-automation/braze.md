@@ -3,57 +3,58 @@ title: 在UI中為Braze資料建立資料流
 description: 瞭解如何使用Adobe Experience Platform UI為您的Braze帳戶建立資料流。
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
-source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
+exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '689'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# 建立 [!DNL Braze Currents] ui中的來源連線
+# 在使用者介面中建立[!DNL Braze Currents]來源連線
 
 >[!NOTE]
 >
->此 [!DNL Braze Currents] 來源為測試版。 請閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+>[!DNL Braze Currents]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
-[!DNL Braze] 促進消費者與品牌之間以客戶為中心的即時互動。 [!DNL Braze Currents] 是來自Braze平台的參與事件即時資料流，是最強大但最精細的匯出專案 [!DNL Braze] 平台。
+[!DNL Braze]可即時促進消費者與品牌之間以客戶為中心的互動。 [!DNL Braze Currents]是來自Braze平台的參與事件即時資料流，是[!DNL Braze]平台中最穩健但最精細的匯出專案。
 
-請閱讀下列教學課程，瞭解如何從匯入參與事件資料 [!DNL Braze] 在UI中帳戶至Adobe Experience Platform。
+請閱讀下列教學課程，瞭解如何在UI中將[!DNL Braze]帳戶的參與事件資料帶入Adobe Experience Platform。
 
 ## 先決條件
 
 若要完成本指南中的步驟，您將需要：
 
-* 登入 [Adobe Experience Platform](https://platform.adobe.com) 和建立新串流來源連線的許可權。
-* 登入您的 [[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)，未使用 [電流聯結器授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)和建立聯結器的許可權。 如需詳細資訊，請閱讀 [設定需求 [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
+* 登入[Adobe Experience Platform](https://platform.adobe.com)並取得建立新串流來源連線的許可權。
+* 登入您的[[!DNL Braze] 儀表板](https://dashboard.braze.com/sign_in)、未使用的[Currences Connector授權](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)，以及建立聯結器的許可權。 如需詳細資訊，請閱讀設定 [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements)的[需求。
 
 ## 快速入門
 
 本教學課程需要您實際瞭解下列Adobe Experience Platform元件：
 
-* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)：作為依據的標準化架構 [!DNL Experience Platform] 組織客戶體驗資料。
-   * [結構描述組合基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
-   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構編輯器UI建立自訂結構描述。
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
+* [[!DNL Experience Data Model (XDM)] 系統](../../../../../xdm/home.md)： [!DNL Experience Platform]用來組織客戶體驗資料的標準化架構。
+   * [結構描述組合的基本概念](../../../../../xdm/schema/composition.md)：瞭解XDM結構描述的基本建置區塊，包括結構描述組合中的關鍵原則和最佳實務。
+   * [結構描述編輯器教學課程](../../../../../xdm/tutorials/create-schema-ui.md)：瞭解如何使用結構描述編輯器使用者介面建立自訂結構描述。
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
-本教學課程也需要您實際瞭解 [[!DNL Braze] 電流](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents).
+此教學課程也需要實際瞭解[[!DNL Braze] 電流](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)。
 
-如果您已有 [!DNL Braze] 連線時，您可以略過本檔案的其餘部分，並繼續進行上的教學課程 [設定資料流](../../dataflow/marketing-automation.md).
+如果您已有[!DNL Braze]連線，可以略過本檔案的其餘部分，並繼續進行有關[設定資料流](../../dataflow/marketing-automation.md)的教學課程。
 
-## 連線您的 [!DNL Braze] 要Experience Platform的帳戶
+## 將您的[!DNL Braze]帳戶連線至Experience Platform
 
-在Platform UI中選取 **[!UICONTROL 來源]** 從左側導覽存取 [!UICONTROL 來源] 工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
+在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 您可以從熒幕左側的目錄中選取適當的類別。 或者，您可以使用搜尋選項來尋找您要使用的特定來源。
 
-在 *行銷自動化* 類別，選取 **[!UICONTROL 銅線電流]**，然後選取 **[!UICONTROL 新增資料]**.
+在&#x200B;*行銷自動化*&#x200B;類別下，選取&#x200B;**[!UICONTROL 硬碟電流]**，然後選取&#x200B;**[!UICONTROL 新增資料]**。
 
-![已選取「釺焊電流」來源的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/braze/catalog.png)
+![已選取「硬碟電流」來源的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/braze/catalog.png)
 
-接下來，上傳提供的 [「銅線電流」範例檔案](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). 此檔案包含Braze在事件中可能傳送的所有可能欄位。
+接著，上傳提供的[Braze Currences範例檔案](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json)。 此檔案包含Braze在事件中可能傳送的所有可能欄位。
 
 ![「新增資料」畫面。](../../../../images/tutorials/create/braze/select-data.png)
 
 上傳檔案後，您必須提供資料流詳細資訊，包括資料集和您對應至的結構描述的相關資訊。
-![「資料流詳細資料」畫面會醒目提示「資料集詳細資料」。](../../../../images/tutorials/create/braze/dataflow-detail.png)
+![「資料流詳細資料」畫面醒目提示「資料集詳細資料」。](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 然後，使用對應介面為資料設定對應。
 
@@ -63,25 +64,25 @@ ht-degree: 1%
 >
 >銅製時間戳記不是以毫秒表示，而是以秒表示。 為了準確反映Experience Platform中的時間戳記，您需要建立以毫秒為單位的計算欄位。 計算「時間* 1000」將正確地轉換為毫秒，適合對應到Experience Platform內的時間戳記欄位。
 >
->![建立時間戳記的計算欄位 ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![正在建立時間戳記](../../../../images/tutorials/create/braze/create-calculated-field.png)的計算欄位
 
 ### 收集必要的認證
 
-建立連線後，您必須收集下列認證值，然後您會在「硬碟控制面板」中提供這些值，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀 [!DNL Braze] [導覽至洋流的指南](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+建立連線後，您必須收集下列認證值，然後您會在「硬碟控制面板」中提供這些值，以將資料傳送至Experience Platform。 如需詳細資訊，請閱讀瀏覽至Currences](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents)的[!DNL Braze] [指南。
 
 | 欄位 | 說明 |
 | --- | --- |
-| 使用者端ID | 與您的Experience Platform來源相關聯的使用者端ID。 |
+| 用戶端 ID | 與您的Experience Platform來源相關聯的使用者端ID。 |
 | 使用者端密碼 | 與您的Experience Platform來源相關聯的使用者端密碼。 |
 | 租使用者ID | 與您的Experience Platform來源相關聯的租使用者ID。 |
 | 沙箱名稱 | 與您的Experience Platform來源關聯的沙箱。 |
-| 資料流ID | 與您的Experience Platform來源相關聯的資料流ID。 |
-| 串流端點 | 與您的Experience Platform來源相關聯的串流端點。 **注意**： [!DNL Braze] 自動將其轉換為批次串流端點。 |
+| 資料流 ID | 與您的Experience Platform來源相關聯的資料流ID。 |
+| 串流端點 | 與您的Experience Platform來源相關聯的串流端點。 **注意**： [!DNL Braze]會自動將此轉換為批次串流端點。 |
 
-### 設定 [!DNL Braze Currents] 將資料串流至您的資料來源
+### 設定[!DNL Braze Currents]將資料串流至您的資料來源
 
-在 [!DNL Braze Dashboard]，導覽至合作夥伴整合 **->** 資料匯出，然後選取 **[!DNL Create New Current]**. 系統會提示您提供聯結器的名稱、聯結器的相關通知連絡資訊，以及上方列出的憑證。 選取您要接收的事件，選擇性地設定任何所需的欄位排除/轉換，然後選取 **[!DNL Launch Current]**.
+在[!DNL Braze Dashboard]中，導覽至「合作夥伴整合&#x200B;**->**&#x200B;資料匯出」，然後選取&#x200B;**[!DNL Create New Current]**。 系統會提示您提供聯結器的名稱、聯結器的相關通知連絡資訊，以及上方列出的憑證。 選取您要接收的事件，選擇性地設定任何想要的欄位排除/轉換，然後選取&#x200B;**[!DNL Launch Current]**。
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已建立與的連線， [!DNL Braze] 帳戶。 您現在可以繼續進行下一個教學課程及 [設定資料流以將行銷自動化系統資料帶入 [!DNL Platform]](../../dataflow/marketing-automation.md).
+依照本教學課程中的指示，您已建立與[!DNL Braze]帳戶的連線。 您現在可以繼續進行下一個教學課程，並[設定資料流，以將行銷自動化系統資料匯入 [!DNL Platform]](../../dataflow/marketing-automation.md)。

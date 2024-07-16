@@ -1,47 +1,47 @@
 ---
-title: 透過Offer decisioning個人化
+title: Personalization (透過Offer Decisioning)
 description: 瞭解如何使用伺服器API，透過Offer decisioning傳遞及呈現個人化體驗。
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 5%
+source-wordcount: '534'
+ht-degree: 1%
 
 ---
 
-# 透過Offer decisioning個人化
+# Personalization (透過Offer Decisioning)
 
 ## 概觀 {#overview}
 
-Edge Network Server API可提供在中管理的個人化體驗 [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant) 至網路頻道。
+Edge Network伺服器API可將以[Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant)管理的個人化體驗傳送至網路頻道。
 
-[!DNL Offer Decisioning] 支援非視覺化介面，以建立、啟用及傳遞您的活動和個人化體驗。
+[!DNL Offer Decisioning]支援非視覺化介面，以建立、啟用及傳遞您的活動和個人化體驗。
 
 ## 先決條件 {#prerequisites}
 
-透過以下方式個人化： [!DNL Offer Decisioning] 需要您擁有 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) 設定整合專案之前。
+設定整合之前，透過[!DNL Offer Decisioning]的Personalization需要您擁有[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=zh-Hant)的存取權。
 
 ## 設定您的資料串流 {#configure-your-datastream}
 
-您必須先在資料流設定上啟用Adobe Experience Platform個人化，然後啟用「伺服器API」並結合Offer Decisioning使用 **[!UICONTROL offer decisioning]** 選項。
+您必須先在資料流組態上啟用Adobe Experience Platform個人化，並啟用&#x200B;**[!UICONTROL Offer decisioning]**&#x200B;選項，才能搭配使用Server API與Offer decisioning。
 
-請參閱 [新增服務至資料流的指南](../datastreams/overview.md#adobe-experience-platform-settings)，以取得如何啟用Offer Decisioning的詳細資訊。
+如需如何啟用Offer decisioning的詳細資訊，請參閱將服務新增至資料流](../datastreams/overview.md#adobe-experience-platform-settings)的[指南。
 
-![顯示資料流服務設定畫面的UI影像，其中已選取Offer decisioning](assets/aep-od-datastream.png)
+![顯示資料流服務設定畫面的UI影像，已選取Offer decisioning](assets/aep-od-datastream.png)
 
-## 建立對象 {#audience-creation}
+## 對象建立 {#audience-creation}
 
-[!DNL Offer Decisioning] 仰賴Adobe Experience Platform細分服務建立對象。 您可以尋找的相關檔案： [!DNL Segmentation Service] [此處](../segmentation/home.md).
+[!DNL Offer Decisioning]仰賴Adobe Experience Platform Segmentation Service建立對象。 您可以在[這裡](../segmentation/home.md)找到[!DNL Segmentation Service]的檔案。
 
 ## 定義決定範圍 {#creating-decision-scopes}
 
-此 [!DNL Offer Decision Engine] 使用Adobe Experience Platform資料和 [即時客戶個人檔案](../profile/home.md)，以及 [!DNL Offer Library]，在適當的時間將優惠方案提供給適當的客戶和管道。
+[!DNL Offer Decision Engine]使用Adobe Experience Platform資料、[即時客戶設定檔](../profile/home.md)以及[!DNL Offer Library]，在適當的時間將優惠方案提供給適當的客戶和管道。
 
-若要進一步瞭解 [!DNL Offer Decisioning Engine]，請參閱專屬的 [檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant).
+若要深入瞭解[!DNL Offer Decisioning Engine]，請參閱專屬的[檔案](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=zh-Hant)。
 
-晚於 [設定您的資料流](#configure-your-datastream)，您必須定義用於個人化行銷活動的決定範圍。
+在[設定您的資料流](#configure-your-datastream)之後，您必須定義要用於個人化行銷活動中的決定範圍。
 
-[決定範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) 是Base64編碼的JSON字串，其中包含您想要的活動和位置ID。 [!DNL Offer Decisioning Service] 建議優惠方案時使用。
+[決定範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes)是Base64編碼的JSON字串，其中包含您希望[!DNL Offer Decisioning Service]在提出優惠方案時使用的活動和位置ID。
 
 **決定範圍JSON**
 
@@ -58,11 +58,11 @@ Edge Network Server API可提供在中管理的個人化體驗 [offer decisionin
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-建立優惠方案與集合後，您需要定義 [決定範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
+建立優惠和集合後，您需要定義[決定範圍](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes)。
 
-複製Base64編碼的決定範圍。 您將在以下位置使用它： `query` 伺服器API要求的物件。
+複製Base64編碼的決定範圍。 您會在伺服器API要求的`query`物件中使用它。
 
-![顯示Offer decisioningUI的UI影像，醒目提示決定範圍。](assets/decision-scope.png)
+![顯示Offer decisioningUI的UI影像，強調決定範圍。](assets/decision-scope.png)
 
 ```json
 "query":{
@@ -88,7 +88,7 @@ POST /ee/v2/interact
 
 >[!NOTE]
 >
->此 `xdm` 和 `data` 物件是選用的，只有在您已建立區段，且區段的條件在其中任何一個物件中使用欄位時，才需要Offer decisioning。
+>`xdm`和`data`物件是選用專案，只有在您已建立區段，且區段的條件在其中任何一個物件中使用欄位時，才需要Offer decisioning。
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -181,7 +181,7 @@ curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 回應 {#response}
 
-Edge Network會傳回類似下列的回應。
+Edge Network會傳回類似以下的回應。
 
 ```json
 {
@@ -244,9 +244,9 @@ Edge Network會傳回類似下列的回應。
 }
 ```
 
-如果訪客根據傳送至的資料符合個人化活動的資格 [!DNL Offer Decisioning]，相關活動內容會位於 `handle` 物件，其中型別為 `personalization:decisions`.
+如果訪客根據傳送至[!DNL Offer Decisioning]的資料符合個人化活動的資格，則會在`handle`物件下找到相關活動內容，其中型別為`personalization:decisions`。
 
-其他內容將會傳回至 `handle` 物件。 其他內容型別與 [!DNL Offer Decisioning] 個人化。 如果訪客符合多個活動的資格，則會將其包含在陣列中。
+其他內容也會傳回`handle`物件下。 其他內容型別與[!DNL Offer Decisioning]個人化無關。 如果訪客符合多個活動的資格，則會將其包含在陣列中。
 
 下表說明該部分回應的主要元素。
 

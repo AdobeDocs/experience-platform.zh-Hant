@@ -6,17 +6,17 @@ exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '310'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL 預訂詳細資料] 結構描述欄位群組
+# [!UICONTROL 保留區詳細資料]結構描述欄位群組
 
-[!UICONTROL 預訂詳細資料] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md) 用於擷取和預訂相關的資訊，包括時間長度、修改、可退款狀態和房間數。
+[!UICONTROL 預訂詳細資料]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，用於擷取預訂的相關資訊，包括長度、修改、可退款狀態和房間數目。
 
-欄位群組提供單一物件型別欄位， `reservations`. 此物件中包含的屬性說明如下。
+欄位群組提供單一物件型別欄位`reservations`。 此物件中包含的屬性說明如下。
 
-![預訂詳細資料結構](../../images/field-groups/reservation-details.png)
+![保留區詳細資料結構](../../images/field-groups/reservation-details.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
@@ -41,12 +41,12 @@ ht-degree: 5%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.schema.json)
 
 ## 產業特定訂房欄位群組
 
-有其他數個標準欄位群組可擴充 [!UICONTROL 預訂詳細資料] 適用於產業特定使用案例的結構描述。 如需詳細資訊，請參閱下列檔案：
+有其他幾個標準欄位群組針對特定產業的使用案例延伸[!UICONTROL 保留詳細資料]結構描述。 如需詳細資訊，請參閱下列檔案：
 
 * [[!UICONTROL 餐飲預訂]](./dining-reservation.md)
 * [[!UICONTROL 航班預訂]](./flight-reservation.md)

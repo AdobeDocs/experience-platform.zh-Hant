@@ -137,5 +137,5 @@ Commenting out links for now
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
 * 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
-* [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md) 造訪期間，使用者未經驗證，或先前沒有您品牌的記錄。
+* [在造訪期間使用合作夥伴協助的訪客辨識](/help/rtcdp/partner-data/onsite-personalization.md)，針對未知的訪客提供個人化現場體驗，使用者不需驗證或擁有您品牌的先前記錄。
 * [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

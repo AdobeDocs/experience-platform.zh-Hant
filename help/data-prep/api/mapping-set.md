@@ -6,22 +6,22 @@ description: 您可以在Adobe Experience Platform API中使用「/mappingSets�
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '859'
 ht-degree: 3%
 
 ---
 
 # 對應集端點
 
-對應集可用來定義來源結構描述中的資料如何對應到目的地結構描述。 您可以使用 `/mappingSets` 資料準備API中的端點，以程式設計方式擷取、建立、更新和驗證對應集。
+對應集可用來定義來源結構描述中的資料如何對應到目的地結構描述的資料。 您可以使用資料準備API中的`/mappingSets`端點以程式設計方式擷取、建立、更新和驗證對應集。
 
 ## 清單對應集
 
-您可以透過向以下專案發出GET請求，擷取貴組織的所有對應集清單： `/mappingSets` 端點。
+您可以藉由對`/mappingSets`端點發出GET要求，擷取貴組織的所有對應集清單。
 
 **API格式**
 
-此 `/mappingSets` 端點支援數個查詢引數，以協助篩選結果。 雖然這些引數大部分是選用的，但強烈建議使用它們來協助減少昂貴的額外負荷。 不過，您必須同時包含 `start` 和 `limit` 請求中的引數。 可包含多個引數，以&amp;符號(`&`)。
+`/mappingSets`端點支援數個查詢引數，以協助篩選結果。 雖然這些引數大多為選用引數，但強烈建議使用這些引數來協助減少昂貴的額外負荷。 不過，您必須在要求中同時包含`start`和`limit`引數。 可以包含多個引數，以&amp;符號(`&`)分隔。
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -32,15 +32,15 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{LIMIT}` | (**必填**)指定傳回的對應集數目。 |
-| `{START}` | (**必填**)指定結果頁面的位移。 若要取得結果的第一頁，請將值設為 `start=0`. |
+| `{LIMIT}` | （**必要**）指定傳回的對應集數目。 |
+| `{START}` | （**必要**）指定結果頁面的位移。 若要取得結果的第一頁，請將值設為`start=0`。 |
 | `{NAME}` | 依名稱篩選對應集。 |
-| `{ORDER_BY}` | 排序結果的順序。 僅支援的欄位為 `createdDate` 和 `updatedDate`. 您可以在屬性前面加上 `+` 或 `-` 以分別依遞增或遞減順序排序。 |
-| `{EXPAND_SCHEMA}` | 一個布林值，可決定是否將完整輸出結構描述作為回應的一部分傳回。 |
+| `{ORDER_BY}` | 排序結果的順序。 唯一支援的欄位是`createdDate`和`updatedDate`。 您可以在屬性前面加上`+`或`-`，以分別依遞增或遞減順序排序。 |
+| `{EXPAND_SCHEMA}` | 布林值，決定是否將完整輸出結構描述當作回應的一部分傳回。 |
 
 **要求**
 
-以下請求將擷取組織內最後兩個對應集。
+以下請求將擷取您組織內最後兩個對應集。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -165,7 +165,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## 建立對應集
 
-您可以透過向以下專案發出POST請求來建立新的對應集： `/mappingSets` 端點。
+您可以對`/mappingSets`端點發出POST要求，以建立新的對應集。
 
 **API格式**
 
@@ -216,15 +216,15 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `outputSchema.schemaRef.id` | 您參考的XDM結構描述的ID。 |
-| `outputSchema.schemaRef.contentType` | 決定參考之結構描述的回應格式。 有關此欄位的詳細資訊，請參閱 [Schema Registry開發人員指南](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | 來源型別說明如何將值從來源擷取至目的地。 來源型別支援兩種可能的值： <ul><li>`ATTRIBUTE`：來源型別 `ATTRIBUTE` 當輸入屬性來自來源結構描述時使用。</li><li>`EXPRESSION`：來源型別 `EXPRESSION` 使用計算欄位完成對應時使用。</li></ul> **警告**：錯誤設定來源型別值可能會使您的對應集無法編輯。 |
-| `mappings.source` | 您希望資料從中對應的位置。 |
+| `outputSchema.schemaRef.id` | 您正在參照的XDM結構描述的ID。 |
+| `outputSchema.schemaRef.contentType` | 決定參考之結構描述的回應格式。 您可以在[結構描述登入開發人員指南](../../xdm/api/schemas.md#lookup)中找到此欄位的詳細資訊。 |
+| `mappings.sourceType` | 來源型別說明如何將值從來源擷取至目的地。 來源型別支援兩個可能的值： <ul><li>`ATTRIBUTE`：當輸入屬性來自來源結構描述時，會使用來源型別`ATTRIBUTE`。</li><li>`EXPRESSION`：使用計算欄位完成對應時使用來源型別`EXPRESSION`。</li></ul> **警告**：不正確設定來源型別值，可能會使您的對應集無法編輯。 |
+| `mappings.source` | 您希望資料對應的來源位置。 |
 | `mappings.destination` | 您希望資料對應到的位置。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含您新建立對應集的相關資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新建立的對應集的相關資訊。
 
 ```json
 {
@@ -239,7 +239,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 ## 驗證對應
 
-您可以透過向以下發出POST請求，驗證您的對應是否正常運作： `/mappingSets/validate` 端點。
+您可以透過向`/mappingSets/validate`端點發出POST請求來驗證您的對應是否正常運作。
 
 **API格式**
 
@@ -313,7 +313,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 
 ## 預覽對應資料
 
-您可以透過向以下專案發出POST請求，預覽您的資料將對應至的內容： `/mappingSets/preview` 端點。
+您可以透過向`/mappingSets/preview`端點發出POST要求，預覽您的資料將對應至的內容。
 
 **API格式**
 
@@ -392,7 +392,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 ## 查詢對應集
 
-您可以在GET請求的路徑中提供其ID以擷取特定的對應集。 `/mappingSets` 端點。 此端點也支援數個查詢引數，以協助您擷取有關指定對應集版本的詳細資訊。
+您可以在`/mappingSets`端點的GET要求路徑中提供其ID，以擷取特定的對應集。 此端點也支援數個查詢引數，以協助您擷取有關指定對應集版本的詳細資料。
 
 **API格式**
 
@@ -404,8 +404,8 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**必填**)您要擷取之對應集的ID。 |
-| `{EXPAND_SCHEMA}` | 布林值查詢引數，可決定是否將輸出結構描述傳回為回應的一部分。 |
+| `{MAPPING_SET_ID}` | （**必要**）您要擷取的對應集識別碼。 |
+| `{EXPAND_SCHEMA}` | 布林值查詢引數，可決定是否傳回輸出結構描述作為回應的一部分。 |
 | `{VERSION}` | 整數查詢引數，可決定要擷取哪個版本的對應集。 |
 
 **要求**
@@ -426,7 +426,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 >[!NOTE]
 >
->下列回應已因空格而截斷。
+>下列回應已因空間而截斷。
 
 ```json
 {
@@ -583,7 +583,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 ## 更新對應集
 
-您可以在的路徑中提供對應集的ID，以更新對應集。 `PUT` 向以下專案提出的請求： `mappingSets` 端點。
+您可以在`PUT`要求至`mappingSets`端點的路徑中提供其ID，以更新對應集。
 
 **API格式**
 
@@ -593,7 +593,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | 您要更新的對應集ID。 |
+| `{MAPPING_SET_ID}` | 您要更新的對應集識別碼。 |
 
 **要求**
 
@@ -641,11 +641,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **回應**
 
-成功回應會傳回HTTP狀態200，其中包含您新更新對應集的詳細資訊。
+成功的回應會傳回HTTP狀態200，其中包含您新更新對應集的詳細資訊。
 
 >[!NOTE]
 >
->下列回應已因空格而截斷。
+>下列回應已因空間而截斷。
 
 ```json
 {
@@ -810,7 +810,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 ## 列出對應集的對應
 
-您可以在GET要求的路徑中提供特定對應集的ID至下列端點，以檢視屬於該對應集的所有對應。
+您可以在GET要求的路徑中提供其ID至下列端點，以檢視屬於特定對應集的所有對應。
 
 **API格式**
 
@@ -820,7 +820,7 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | 您要擷取對應的對應集ID。 |
+| `{MAPPING_SET_ID}` | 您要擷取對應之對應集的ID。 |
 
 **要求**
 
@@ -911,9 +911,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## 查詢對應集內的對應
+## 在對應集中查詢對應
 
-您可以在GET請求的路徑中提供其ID至下列端點，以擷取對應集的特定對應。
+您可以在GET要求的路徑中提供其ID至下列端點，以擷取對應集的特定對應。
 
 **API格式**
 
@@ -923,7 +923,7 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | 您要查閱對應資訊之對應集的ID。 |
+| `{MAPPING_SET_ID}` | 您要查詢對應資訊之對應集的ID。 |
 | `{MAPPING_ID}` | 您要查閱的對應ID。 |
 
 **要求**

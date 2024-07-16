@@ -7,25 +7,25 @@ exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
-# [!UICONTROL 地理互動細節] 資料型別
+# [!UICONTROL 地理互動詳細資料]資料型別
 
-[!UICONTROL 地理互動細節] 是標準的XDM資料型別，說明地理位置定義區域中目前的包含狀態。
+[!UICONTROL 地理互動詳細資料]是標準的XDM資料型別，說明地理定義區域中目前的包含狀態。
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `geoShape` | [[!UICONTROL 地理形狀]](./geo-shape.md) | 說明互動區域的地理形狀。 此欄位可描述方塊、圓形或多邊形。 |
-| `deviceGeoAccuracy` | 雙倍 | 地理測量裝置或機制的精確度（以公尺測量）。 |
-| `distanceToCenter` | 雙倍 | 有地理圓圈的情況下和地理中心的距離（以公尺測量）。 |
+| `deviceGeoAccuracy` | 雙精度 | 地理測量裝置或機制的精確性 (以公尺衡量)。 |
+| `distanceToCenter` | 雙精度 | 有地理圓圈的情況下和地理中心的距離（以公尺測量）。 |
 
 {style="table-layout:auto"}
 
 如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.schema.json)

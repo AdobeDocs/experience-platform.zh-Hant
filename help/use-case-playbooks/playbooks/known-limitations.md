@@ -20,11 +20,11 @@ ht-degree: 1%
 
 建立行動手冊例項並產生資產時，會出現幾項已知限制。
 
-* 對於產生的結構描述，如果結構描述是在行動手冊的一個例項中產生，並且您編輯它，則為另一個結構描述 *不會* 如果您啟用行動手冊的另一個例項，則會產生行動手冊。 請改為繼續使用您在執行個體中編輯的結構描述。
+* 對於產生的結構描述，如果結構描述是在行動手冊的一個執行個體中產生，並且您編輯它，那麼如果您啟用行動手冊的另一個執行個體，則不會&#x200B;*產生另一個結構描述。*&#x200B;請改為繼續使用您在執行個體中編輯的結構描述。
 
-* 使用時 [資料感知功能](/help/use-case-playbooks/playbooks/data-awareness.md) 若要將結構描述從啟發性的沙箱提升至開發沙箱，您可能會看到類似以下的一些錯誤：
+* 使用[資料感知功能](/help/use-case-playbooks/playbooks/data-awareness.md)將結構描述從啟髮型沙箱提升至開發沙箱時，您可能會看到類似以下的一些錯誤：
 
-![結構描述對應工作流程中顯示的錯誤。](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
+結構描述對應工作流程中顯示![錯誤。](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 這是因為從您的結構描述產生的某些欄位，不存在於您要複製至的開發沙箱的結構描述中。 查詢這些欄位。 接著，返回開發沙箱，您可以：
 

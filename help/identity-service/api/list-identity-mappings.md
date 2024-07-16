@@ -28,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **要求**
 
-選項1：提供身分作為名稱空間(`nsId`，依ID)和ID值(`id`)。
+選項1：提供身分做為名稱空間（`nsId`，依ID）和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2：提供身分作為名稱空間(`ns`，依名稱)和ID值(`id`)。
+選項2：提供識別作為名稱空間（`ns`，依名稱）和識別碼值(`id`)。
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3：以XID提供身分(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案的區段，內容涵蓋 [取得身分的XID](./list-native-id.md).
+選項3：以XID (`xid`)提供身分識別。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案有關[取得身分識別的XID](./list-native-id.md)的章節。
 
 ```shell
 curl -X GET \
@@ -63,7 +63,7 @@ curl -X GET \
 
 ### 取得多個身分的身分對應
 
-使用 `POST` 方法當作 `GET` 上述方法可擷取多個身分的對應。
+將`POST`方法作為上述`GET`方法的批次等同物使用，以擷取多個身分的對應。
 
 >[!NOTE]
 >
@@ -86,7 +86,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-選項2：提供身分清單作為複合ID，其中每個名稱依名稱空間ID命名ID值和名稱空間。 此範例示範在覆寫預設值時使用此方法 `graph-type` 「私密圖表」的。
+選項2：提供身分清單作為複合ID，其中每個名稱依名稱空間ID命名ID值和名稱空間。 此範例示範在覆寫&quot;Private Graph&quot;的預設`graph-type`時使用此方法。
 
 ```shell
 {
@@ -145,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-如果找不到具有所提供輸入的相關身分， `HTTP 204` 傳回的回應代碼沒有內容。
+若找不到具有所提供輸入的相關身分，則會傳回`HTTP 204`回應代碼，且不含任何內容。
 
 **回應**
 
@@ -183,9 +183,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`：輸入身分最後一次與此身分關聯的時間戳記。
-- `regions`：提供 `regionId` 和 `lastAssociationTime` 顯示身分的位置。
+- `lastAssociationTime`：輸入識別上次與此識別相關聯的時間戳記。
+- `regions`：提供識別出現位置的`regionId`和`lastAssociationTime`。
 
 ## 後續步驟
 
-繼續進行下一個教學課程： [列出可用的名稱空間](./list-namespaces.md).
+繼續下一節的教學課程： [列出可用的名稱空間](./list-namespaces.md)。

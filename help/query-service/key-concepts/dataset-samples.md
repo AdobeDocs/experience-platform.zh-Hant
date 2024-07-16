@@ -4,14 +4,14 @@ description: 查詢服務範例資料集可讓您對巨量資料執行探索性�
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
 source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
 
 # 資料集範例
 
-Adobe Experience Platform查詢服務提供範例資料集，作為其近似查詢處理功能的一部分。 範例資料集是以現有的均勻隨機樣本建立的 [!DNL Azure Data Lake Storage] (ADLS)資料集僅使用原始記錄的一定百分比。 此百分比稱為取樣速率。 調整取樣率以控制精確度與處理時間的平衡，可讓您對巨量資料進行探索性查詢，大幅減少處理時間，但代價是查詢精確度。
+Adobe Experience Platform查詢服務提供範例資料集，作為其近似查詢處理功能的一部分。 範例資料集是使用來自現有[!DNL Azure Data Lake Storage] (ADLS)資料集的統一隨機範例建立的，只會使用來自原始資料集的記錄百分比。 此百分比稱為取樣速率。 調整取樣率以控制精確度與處理時間的平衡，可讓您對巨量資料進行探索性查詢，大幅減少處理時間，但代價是查詢精確度。
 
 由於許多使用者不需要資料集彙總操作的確切答案，因此在探索查詢大型資料集時，發出近似查詢以傳回近似答案會更有效率。 由於範例資料集只包含原始資料集的一部分資料，因此可讓您犧牲查詢準確性，以縮短回應時間。 在讀取時，查詢服務必須掃描的列數較少，產生的結果速度比您查詢整個資料集的速度更快。
 
@@ -26,7 +26,7 @@ Adobe Experience Platform查詢服務提供範例資料集，作為其近似查�
 
 ## 快速入門 {#get-started}
 
-若要使用本檔案中詳述的建立及刪除近似查詢處理功能，您必須將工作階段標幟設為 `true`. 從查詢編輯器或PSQL使用者端的命令列輸入 `SET aqp=true;` 命令。
+若要使用本檔案中詳述的建立及刪除近似查詢處理功能，您必須將工作階段標幟設定為`true`。 從查詢編輯器或PSQL使用者端的命令列輸入`SET aqp=true;`命令。
 
 >[!NOTE]
 >
@@ -36,9 +36,9 @@ Adobe Experience Platform查詢服務提供範例資料集，作為其近似查�
 
 ## 建立統一的隨機資料集範例 {#create-a-sample}
 
-使用 `ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x` 以資料集名稱命令以從該資料集建立統一的隨機範例。
+使用具有資料集名稱的`ANALYZE TABLE <table_name> TABLESAMPLE SAMPLERATE x`命令，從該資料集建立統一的隨機樣本。
 
-樣本率是從原始資料集中取得的記錄百分比。 您可以使用來控制取樣速率 `TABLESAMPLE SAMPLERATE` 關鍵字。 在此範例中，5.0的值等於50%的取樣率。 2.5的值將等於25%等。
+樣本率是從原始資料集中取得的記錄百分比。 您可以使用`TABLESAMPLE SAMPLERATE`關鍵字來控制取樣率。 在此範例中，5.0的值等於50%的取樣率。 2.5的值將等於25%等。
 
 >[!IMPORTANT]
 >
@@ -68,11 +68,11 @@ ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestam
 ANALYZE TABLE large_table TABLESAMPLE FILTERCONTEXT (month(to_timestamp(timestamp)) in ('8', '9') AND (product.name = "product1" OR product.name = "product2")) SAMPLERATE 10;
 ```
 
-在提供的範例中，表格名稱為 `large_table`，原始表格的篩選條件為 `month(to_timestamp(timestamp)) in ('8', '9')`，則取樣率為（已篩選資料的X%），在此例中為 `10`.
+在提供的範例中，資料表名稱為`large_table`，原始資料表的篩選條件為`month(to_timestamp(timestamp)) in ('8', '9')`，取樣率為（已篩選資料的X%），在此例中為`10`。
 
 ## 檢視範例清單 {#view-list-of-samples}
 
-使用 `sample_meta()` 函式來檢視與ADLS表格相關的範例清單。
+使用`sample_meta()`函式檢視與ADLS表格關聯的範例清單。
 
 ```sql
 SELECT sample_meta('example_dataset_name')
@@ -89,7 +89,7 @@ SELECT sample_meta('example_dataset_name')
 
 ## 查詢範例資料集 {#query-sample-datasets}
 
-使用 `{EXAMPLE_DATASET_NAME}` 直接查詢範例表格。 或者，新增 `WITHAPPROXIMATE` 關鍵字到查詢的結尾，查詢服務會自動使用最近建立的範例。
+使用`{EXAMPLE_DATASET_NAME}`直接查詢範例資料表。 或者，將`WITHAPPROXIMATE`關鍵字新增到查詢的結尾，查詢服務會自動使用最近建立的範例。
 
 ```sql
 SELECT * FROM example_dataset_name WITHAPPROXIMATE;

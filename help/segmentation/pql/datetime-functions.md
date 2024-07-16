@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
 title: PQL日期和時間函式
-description: 日期和時間函式用於對設定檔查詢語言(PQL)中的值執行日期和時間作業。
+description: 日期和時間函式可用來對Profile Query Language (PQL)中的值執行日期和時間作業。
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 4%
+source-wordcount: '493'
+ht-degree: 2%
 
 ---
 
 # 日期和時間函式
 
-日期和時間函式用於對內的值執行日期和時間作業 [!DNL Profile Query Language] (PQL)。 如需其他PQL函式的詳細資訊，請參閱 [[!DNL Profile Query Language] 概述](./overview.md).
+日期和時間函式是用來對[!DNL Profile Query Language] (PQL)中的值執行日期和時間作業。 如需其他PQL函式的詳細資訊，請參閱[[!DNL Profile Query Language] 總覽](./overview.md)。
 
 ## 當月
 
-此 `currentMonth` 函式以整數傳回目前月份。
+`currentMonth`函式以整數傳回目前月份。
 
 **格式**
 
@@ -34,7 +34,7 @@ person.birthMonth = currentMonth()
 
 ## 取得月份
 
-此 `getMonth` 函式會根據指定的時間戳記，以整數傳回月份。
+`getMonth`函式會根據指定的時間戳記，以整數傳回月份。
 
 **格式**
 
@@ -52,7 +52,7 @@ person.birthdate.getMonth() = 6
 
 ## 目前年份
 
-此 `currentYear` 函式以整數傳回目前年份。
+`currentYear`函式以整數傳回目前年份。
 
 **格式**
 
@@ -70,7 +70,7 @@ product.saleYear = currentYear()
 
 ## 取得年份
 
-此 `getYear` 函式會根據指定的時間戳記，以整數傳回年份。
+`getYear`函式會根據指定的時間戳記，以整數傳回年份。
 
 **格式**
 
@@ -88,7 +88,7 @@ person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 
 ## 當月日期
 
-此 `currentDayOfMonth` 函式以整數傳回當月的目前日期。
+`currentDayOfMonth`函式以整數傳回當月的目前日期。
 
 **格式**
 
@@ -106,7 +106,7 @@ person.birthDay = currentDayOfMonth()
 
 ## 取得當月日期
 
-此 `getDayOfMonth` 函式根據指定的時間戳記，以整數傳回日。
+`getDayOfMonth`函式會根據指定的時間戳記，以整數傳回日。
 
 **格式**
 
@@ -124,11 +124,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## 發生
 
-此 `occurs` 函式比較指定的時間戳記函式與固定的時段。
+`occurs`函式比較指定的時間戳記函式與固定的時間週期。
 
 **格式**
 
-此 `occurs` 函式可使用下列任何格式來撰寫：
+可以使用下列任何格式來撰寫`occurs`函式：
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -139,19 +139,19 @@ product.sale.getDayOfMonth() <= 15
 
 | 引數 | 說明 |
 | --------- | ----------- |
-| `{COMPARISON}` | 比較運運算元。 可以是下列任一運運算元： `>`， `>=`， `<`， `<=`， `=`， `!=`. 有關比較函式的詳細資訊，請參閱 [比較函式檔案](./comparison-functions.md). |
+| `{COMPARISON}` | 比較運運算元。 可以是下列任何運運算元： `>`、`>=`、`<`、`<=`、`=`、`!=`。 在[比較函式檔案](./comparison-functions.md)中可以找到更多關於比較函式的資訊。 |
 | `{INTEGER}` | 非負整數。 |
-| `{TIME_UNIT}` | 時間單位。 可以是下列任一字詞： `millisecond(s)`， `second(s)`， `minute(s)`， `hour(s)`， `day(s)`， `week(s)`， `month(s)`， `year(s)`， `decade(s)`， `century`， `centuries`， `millennium`， `millennia`. |
-| `{DIRECTION}` | 說明何時將日期與進行比較的預置詞。 可以是下列任一字詞： `before`， `after`， `from`. |
-| `{TIME}` | 可以是時間戳記常值(`today`， `now`， `yesterday`， `tomorrow`)，相對時間單位（以下其中之一） `this`， `last`，或 `next` 後跟時間單位)或時間戳記屬性。 |
+| `{TIME_UNIT}` | 時間單位。 可以是下列任一字詞： `millisecond(s)`、`second(s)`、`minute(s)`、`hour(s)`、`day(s)`、`week(s)`、`month(s)`、`year(s)`、`decade(s)`、`century`、`centuries`、`millennium`、`millennia`。 |
+| `{DIRECTION}` | 說明何時將日期與進行比較的預置詞。 可以是下列任一字詞： `before`、`after`、`from`。 |
+| `{TIME}` | 可以是時間戳記常值(`today`、`now`、`yesterday`、`tomorrow`)、相對時間單位（`this`、`last`或`next`其中之一，後面接著時間單位）或時間戳記屬性。 |
 
 >[!NOTE]
 >
->單詞的用法 `on` 是選用專案。 它有助於改善某些組合的可讀性，例如 `timestamp occurs on date(2019,12,31)`.
+>使用字詞`on`是選用的。 它可改善某些組合（例如`timestamp occurs on date(2019,12,31)`）的可讀性。
 
 **範例**
 
-下列PQL查詢會檢查專案上週是否售出。
+下列PQL查詢會檢查該專案上週是否售出。
 
 ```sql
 product.saleDate occurs last week
@@ -165,11 +165,11 @@ product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 
 ## 現在
 
-`now` 是代表PQL執行時間戳記的保留字。
+`now`是代表PQL執行時間戳記的保留字。
 
 **範例**
 
-下列PQL查詢會檢查專案是否在三小時前剛好售出。
+下列PQL查詢會檢查專案是否在三小時前剛剛售出。
 
 ```sql
 product.saleDate occurs = 3 hours before now
@@ -177,11 +177,11 @@ product.saleDate occurs = 3 hours before now
 
 ## 今天
 
-`today` 是一個保留字，代表PQL執行當天開始的時間戳記。
+`today`是保留字，代表PQL執行當天開始的時間戳記。
 
 **範例**
 
-以下PQL查詢會檢查個人的生日是否為三天前。
+下列PQL查詢會檢查個人的生日是否為三天前。
 
 ```sql
 person.birthday occurs = 3 days before today
@@ -189,4 +189,4 @@ person.birthday occurs = 3 days before today
 
 ## 後續步驟
 
-現在您已瞭解日期和時間函式，可以在PQL查詢中使用它們。 如需其他PQL函式的詳細資訊，請參閱 [設定檔查詢語言概觀](./overview.md).
+現在您已瞭解日期和時間函式，可以在PQL查詢中使用它們。 如需其他PQL功能的詳細資訊，請參閱[Profile Query Language概觀](./overview.md)。

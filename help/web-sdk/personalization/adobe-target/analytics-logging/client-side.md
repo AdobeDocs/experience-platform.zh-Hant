@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ## 概觀 {#overview}
 
-Adobe Experience Platform Web SDK可讓您收集 [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) 網頁應用程式使用者端的資料。
+Adobe Experience Platform Web SDK可讓您在網頁應用程式的使用者端上收集[Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)資料。
 
-使用者端記錄表示相關 [!DNL Target] 資料會在使用者端傳回，讓您收集資料並與Analytics共用。 如果您想使用手動將資料傳送至Analytics，應啟用此選項 [資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
+使用者端記錄表示使用者端會傳回相關的[!DNL Target]資料，讓您收集資料並與Analytics共用。 如果您打算使用[資料插入API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html)手動將資料傳送至Analytics，則應啟用此選項。
 
 >[!NOTE]
 >
->使用來執行此操作的方法 [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant) 目前正在開發中，將於不久的未來提供。
+>使用[AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)執行此工作的方法目前正在開發中，不久將可供使用。
 
 本文介紹為Web SDK設定使用者端A4T記錄的步驟，並提供一些常見使用案例的實施範例。
 
@@ -40,13 +40,13 @@ Adobe Experience Platform Web SDK可讓您收集 [Adobe Analytics for Target (A4
 
 ### 啟用Analytics使用者端記錄 {#enable-analytics-client-side-logging}
 
-若要考慮為實作啟用Analytics使用者端記錄，您必須在以下專案中停用Adobe Analytics設定： [資料流](../../../../datastreams/overview.md).
+若要考慮為實作啟用Analytics使用者端記錄，您必須停用[資料流](../../../../datastreams/overview.md)中的Adobe Analytics設定。
 
-![Analytics資料流設定已停用](../assets/disable-analytics-datastream.png)
+![已停用Analytics資料流設定](../assets/disable-analytics-datastream.png)
 
-### 擷取 [!DNL A4T] 來自SDK的資料並將其傳送到Analytics {#a4t-to-analytics}
+### 從SDK擷取[!DNL A4T]資料並將其傳送到Analytics {#a4t-to-analytics}
 
-為了讓此報告方法正常運作，您必須傳送 [!DNL A4T] 從擷取的相關資料 [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) Analytics點選中的命令。
+為了讓此報告方法正常運作，您必須傳送從Analytics點選中的[`sendEvent`](/help/web-sdk/commands/sendevent/overview.md)命令擷取的[!DNL A4T]相關資料。
 
 Target Edge計算主張回應時，會檢查Analytics使用者端記錄是否已啟用（亦即，資料流中是否停用Analytics）。 如果啟用使用者端記錄，則系統會在回應中為每個主張新增Analytics權杖。
 
@@ -54,7 +54,7 @@ Target Edge計算主張回應時，會檢查Analytics使用者端記錄是否已
 
 ![使用者端記錄流程](../assets/analytics-client-side-logging.png)
 
-以下是 `interact` 啟用Analytics使用者端記錄時的回應。 如果主張適用於具有Analytics報告的活動，則會有 `scopeDetails.characteristics.analyticsToken` 屬性。
+以下為啟用Analytics使用者端記錄時`interact`回應的範例。 如果主張適用於具有Analytics報告的活動，則它將具有`scopeDetails.characteristics.analyticsToken`屬性。
 
 ```json
 {
@@ -136,7 +136,7 @@ Target Edge計算主張回應時，會檢查Analytics使用者端記錄是否已
 }
 ```
 
-表單式體驗撰寫器活動的主張可在相同主張下同時包含內容和點選量度專案。 因此，與其讓單一Analytics代號在中顯示內容， `scopeDetails.characteristics.analyticsToken` 屬性，這些屬性可能同時具有中指定的顯示和點按分析Token `scopeDetails.characteristics.analyticsDisplayToken` 和 `scopeDetails.characteristics.analyticsClickToken` 屬性，請對應。
+表單式體驗撰寫器活動的主張可在相同主張下同時包含內容和點選量度專案。 因此，不是在`scopeDetails.characteristics.analyticsToken`屬性中顯示內容的單一分析權杖，這些屬性可以相應地在`scopeDetails.characteristics.analyticsDisplayToken`和`scopeDetails.characteristics.analyticsClickToken`屬性中同時指定顯示和點按分析權杖。
 
 ```json
 {
@@ -204,11 +204,11 @@ Target Edge計算主張回應時，會檢查Analytics使用者端記錄是否已
 }
 ```
 
-所有值來自 `scopeDetails.characteristics.analyticsToken`以及 `scopeDetails.characteristics.analyticsDisplayToken` （適用於顯示的內容）和 `scopeDetails.characteristics.analyticsClickToken` （適用於點選量度）是需要收集並納入的A4T裝載 `tnta` 標籤中的變數 [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) 呼叫。
+來自`scopeDetails.characteristics.analyticsToken`、以及`scopeDetails.characteristics.analyticsDisplayToken` （適用於顯示的內容）和`scopeDetails.characteristics.analyticsClickToken` （適用於點選量度）的所有值都是需要收集的A4T裝載，並包含在[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)呼叫中的`tnta`標籤。
 
 >[!IMPORTANT]
 >
->此 `analyticsToken`， `analyticsDisplayToken`， `analyticsClickToken` 屬性可包含多個代號，串連為以逗號分隔的單一字串。
+>`analyticsToken`、`analyticsDisplayToken`、`analyticsClickToken`屬性可包含多個權杖，以單一逗號分隔的字串串串連。
 >
 >在下節提供的實施範例中，會反複收集多個Analytics權杖。 若要串連一系列Analytics代號，請使用類似下列的函式：
 >
@@ -227,11 +227,11 @@ Target Edge計算主張回應時，會檢查Analytics使用者端記錄是否已
 
 ### 表單式體驗撰寫器活動 {#form-based-composer}
 
-您可以使用Web SDK從控制主張的執行 [Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) 活動。
+您可以使用Web SDK控制來自[Adobe Target表單式體驗撰寫器](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)活動的主張執行。
 
-當您請求特定決定範圍的建議時，傳回的建議會包含其適當的Analytics代號。 最佳實務建議鏈結平台Web SDK `sendEvent` 命令並逐一檢視傳回的主張，以便在收集Analytics權杖時執行這些建議。
+當您請求特定決定範圍的建議時，傳回的建議會包含其適當的Analytics代號。 最佳實務是鏈結Platform Web SDK `sendEvent`命令並逐一檢視傳回的主張，以便在同時收集Analytics權杖時執行這些建議。
 
-您可以觸發 `sendEvent` 適用於表單式體驗撰寫器活動範圍的命令，如下所示：
+您可以為表單式體驗撰寫器活動範圍觸發`sendEvent`命令，如下所示：
 
 ```javascript
 alloy("sendEvent", {
@@ -251,7 +251,7 @@ alloy("sendEvent", {
 });
 ```
 
-您必須從此處實作程式碼以執行建議，並建構最終將傳送至Analytics的裝載。 以下範例說明 `results.propositions` 可能包含：
+您必須從此處實作程式碼以執行建議，並建構最終將傳送至Analytics的裝載。 這是`results.propositions`可能包含的範例：
 
 ```json
 [
@@ -391,7 +391,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-主張可以有不同型別的專案，如 `schema` 相關專案的屬性。 表單式體驗撰寫器活動支援四種主張專案結構描述：
+主張可以有不同型別的專案，如相關專案的`schema`屬性所指示。 表單式體驗撰寫器活動支援四種主張專案結構描述：
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -400,7 +400,7 @@ var JSON_SCHEMA = "https://ns.adobe.com/personalization/json-content-item";
 var REDIRECT_SCHEMA = "https://ns.adobe.com/personalization/redirect-item";
 ```
 
-`HTML_SCHEMA` 和 `JSON_SCHEMA` 是反映選件型別的結構描述，而 `MEASUREMENT_SCHEMA` 反映應附加至DOM元素的量度。
+`HTML_SCHEMA`和`JSON_SCHEMA`是反映選件型別的結構描述，而`MEASUREMENT_SCHEMA`則反映應附加至DOM元素的量度。
 
 訪客實際點按先前顯示內容時，點選量度的Analytics裝載應加以收集，並與內容專案分開傳送至Analytics。
 
@@ -425,12 +425,12 @@ function getClickAnalyticsPayload(proposition) {
 
 1. 傳送擷取表單式體驗撰寫器活動選件的事件；
 1. 將內容變更套用至頁面；
-1. 傳送 `decisioning.propositionDisplay` 通知事件；
+1. 傳送`decisioning.propositionDisplay`通知事件；
 1. 從SDK回應收集Analytics顯示Token，並建構用於Analytics點選的裝載；
-1. 使用將裝載傳送至Analytics [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)；
-1. 如果傳送的主張中有任何點按量度，則應設定點按接聽程式，以便執行點按時，它會傳送 `decisioning.propositionInteract` 通知事件。 此 `onBeforeEventSend` 應該設定處理常式，以便在攔截時 `decisioning.propositionInteract` 事件，則會發生下列動作：
-   1. 收集Analytics Token的點按來源 `xdm._experience.decisioning.propositions`
-   1. 透過將收集的Analytics裝載傳送至Analytics點選 [資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)；
+1. 使用[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)將裝載傳送至Analytics；
+1. 如果傳遞的主張中有任何點按量度，則應設定點按接聽程式，以便執行點按時，它會傳送`decisioning.propositionInteract`通知事件。 應設定`onBeforeEventSend`處理常式，以便在攔截`decisioning.propositionInteract`事件時會發生下列動作：
+   1. 正在從`xdm._experience.decisioning.propositions`收集點選分析權杖
+   1. 透過[資料插入API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)，以收集的Analytics裝載傳送點選Analytics點選；
 
 ```javascript
 alloy("sendEvent", {
@@ -467,13 +467,13 @@ alloy("sendEvent", {
 
 ### 視覺化體驗撰寫器活動 {#visual-experience-composer-acitivties}
 
-Web SDK可讓您處理使用編寫的選件 [視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Web SDK可讓您處理使用[視覺化體驗撰寫器(VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)編寫的選件。
 
 >[!NOTE]
 >
->實施此使用案例的步驟與的步驟非常類似 [表單式體驗撰寫器活動](#form-based-composer). 請參閱上一節以取得更多詳細資料。
+>實作此使用案例的步驟與[表單式體驗撰寫器活動](#form-based-composer)的步驟非常類似。 請參閱上一節以取得更多詳細資料。
 
-啟用自動呈現時，您可以從頁面上執行的建議中收集Analytics代號。 最佳實務建議鏈結平台Web SDK `sendEvent` 命令並逐一檢視傳回的主張，以篩選Web SDK嘗試呈現的主張。
+啟用自動呈現時，您可以從頁面上執行的建議中收集Analytics代號。 最佳實務是鏈結Platform Web SDK `sendEvent`命令並逐一檢視傳回的主張，以篩選Web SDK嘗試轉譯的主張。
 
 **範例**
 
@@ -509,13 +509,13 @@ alloy("sendEvent", {
 });
 ```
 
-### 使用 `onBeforeEventSend` 處理頁面量度的方式 {#using-onbeforeeventsend}
+### 使用`onBeforeEventSend`處理頁面量度 {#using-onbeforeeventsend}
 
 您可以使用Adobe Target活動在頁面上設定不同的量度，手動附加至DOM或自動附加至DOM （VEC編寫的活動）。 這兩種型別都是網頁上延遲的一般使用者互動。
 
-若想解決此問題，最佳作法是使用收集Analytics負載 `onBeforeEventSend` Adobe Experience Platform Web SDK鉤點。 此 `onBeforeEventSend` 應該使用來設定勾點 `configure` 命令，和將會反映在透過資料流傳送的所有事件中。
+若要解決此問題，最佳實務是使用`onBeforeEventSend` Adobe Experience Platform Web SDK勾點收集Analytics裝載。 `onBeforeEventSend`連結應使用`configure`命令設定，並將反映在透過資料流傳送的所有事件中。
 
-以下範例說明如何 `onBeforeEventSent` 可設定為觸發Analytics點選：
+以下是如何設定`onBeforeEventSent`以觸發Analytics點選的範例：
 
 ```javascript
 alloy("configure", {
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## 後續步驟 {#next-steps}
 
-本指南涵蓋Web SDK中A4T資料的使用者端記錄。 請參閱以下指南： [伺服器端記錄](server-side.md) 有關如何在Edge Network上處理A4T資料的詳細資訊。
+本指南涵蓋Web SDK中A4T資料的使用者端記錄。 請參閱[伺服器端記錄](server-side.md)的指南，以取得如何處理Edge Network上的A4T資料的詳細資訊。

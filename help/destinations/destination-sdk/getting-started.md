@@ -4,8 +4,8 @@ title: Destination SDK快速入門
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 5%
+source-wordcount: '583'
+ht-degree: 1%
 
 ---
 
@@ -17,16 +17,16 @@ ht-degree: 5%
 
 ## 術語 {#terminology}
 
-本指南使用平台專屬的概念，例如組織和沙箱。 請參閱 [Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) 以取得這些詞語和其他詞語的定義。
+本指南使用平台專屬的概念，例如組織和沙箱。 請參閱[Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)，瞭解這些詞語和其他詞語的定義。
 
 ## 取得必要的驗證認證 {#obtain-authentication-credentials}
 
-Destination SDK使用 [Adobe I/O](https://www.adobe.io/) 用於驗證的閘道。 若要對Destination SDK端點進行API呼叫，您必須在API呼叫中提供某些標題。 與Adobe交換團隊合作，為您設定驗證 [Adobe Developer Console](https://developer.adobe.com/console).
+Destination SDK使用[Adobe I/O](https://www.adobe.io/)閘道進行驗證。 若要對Destination SDK端點進行API呼叫，您必須在API呼叫中提供某些標題。 與Adobe Exchange團隊合作，為您設定[Adobe Developer Console](https://developer.adobe.com/console)的驗證。
 
-若要成功呼叫Destination SDK API端點，請遵循 [Experience Platform驗證教學課程](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=zh-Hant). 從「 」開始教學課程[產生API金鑰、組織ID和使用者端密碼](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)「步驟。 Adobe交換團隊將為您處理先前的步驟。 完成驗證教學課程，提供Destination SDK API呼叫中每個必要標題的值，如下所示：
+若要成功呼叫Destination SDK API端點，請依照[Experience Platform驗證教學課程](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=zh-Hant)操作。 從[產生API金鑰、組織ID和使用者端密碼](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)步驟開始教學課程。 Adobe Exchange團隊將為您處理先前的步驟。 完成驗證教學課程，提供Destination SDK API呼叫中每個必要標題的值，如下所示：
 
-* `x-api-key: {API_KEY}`，也稱為使用者端ID
-* `x-gw-ims-org-id: {ORG_ID}`，也稱為組織ID
+* `x-api-key: {API_KEY}`，也稱為使用者端識別碼
+* `x-gw-ims-org-id: {ORG_ID}`，也稱為組織識別碼
 * `Authorization: Bearer {ACCESS_TOKEN}`。存取權杖的到期時間為24小時（以毫秒為單位），因此您必須重新整理。 若要重新整理存取Token，請重複驗證教學課程中概述的步驟。
 
 <!--
@@ -52,11 +52,11 @@ Experience Platform中的所有資源都會隔離至特定的虛擬沙箱。 請
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Adobe交換團隊提供您沙箱名稱，您必須在呼叫Destination SDKAPI端點時使用它。
+Adobe Exchange團隊會提供您沙箱名稱，您必須在呼叫Destination SDKAPI端點時使用它。
 
 ## 角色型存取控制(RBAC) {#rbac}
 
-若要使用Destination SDKAPI端點，請參閱 [參考檔案](functionality/configuration-options.md)，您需要 **[!UICONTROL 目的地製作]** 存取控制許可權。 與AdobeExchange團隊合作，在中將此許可權指派給您 [Adobe Admin Console](https://adminconsole.adobe.com/).
+若要使用[參考檔案](functionality/configuration-options.md)中說明的Destination SDKAPI端點，您需要&#x200B;**[!UICONTROL 目的地製作]**&#x200B;存取控制許可權。 與Adobe Exchange團隊合作，在[Adobe Admin Console](https://adminconsole.adobe.com/)中將此許可權指派給您。
 
 ![目的地編寫許可權](./assets/destination-authoring-permission.png)
 
@@ -80,5 +80,5 @@ Adobe交換團隊提供您沙箱名稱，您必須在呼叫Destination SDKAPI端
    * [使用Destination SDK設定串流目的地](guides/configure-destination-instructions.md)
    * [使用Destination SDK來設定以檔案為基礎的目的地](guides/configure-file-based-destination-instructions.md)
 
-* 有關所有作業，請參閱 [Destination Authoring API檔案](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* 使用 [目的地製作API Postman集合](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) 使用Destination SDK API端點設定目的地。 若要開始使用Postman，請參閱 [匯入環境和集合的步驟](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) 和 [建立Postman環境的影片指南](https://video.tv.adobe.com/v/28832).
+* 如需所有作業，請參閱[Destination Authoring API檔案](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)。
+* 使用[Destination Authoring API Postman集合](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json)，使用Destination SDKAPI端點設定您的目的地。 若要開始使用Postman，請參閱[匯入環境和集合的步驟](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)以及建立Postman環境的[影片指南](https://video.tv.adobe.com/v/28832)。

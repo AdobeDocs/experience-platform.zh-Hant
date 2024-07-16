@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights資料模型B2C版本
 
-適用於的Real-time Customer Data Platform Insights資料模型 [B2C版本](../../rtcdp/overview.md#rtcdp-b2c) 公開可支援各種設定檔、目的地和分段Widget深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以針對行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 請參閱查詢加速商店報告見解檔案以瞭解 [如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+[B2C Edition](../../rtcdp/overview.md#rtcdp-b2c)的Real-time Customer Data Platform Insights資料模型會公開為各種設定檔、目的地和分段Widget提供深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以針對行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 請參閱query accelerated store reporting insights檔案，以瞭解[如何透過Query Service建立報告見解資料模型，以搭配使用accelerated store資料和使用者定義的儀表板](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md)。
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 先決條件
 
-本指南需要您實際瞭解 [使用者定義儀表板功能](../user-defined-dashboards.md). 請先閱讀檔案，再繼續閱讀本指南。
+本指南需要您實際瞭解[使用者定義儀表板功能](../user-defined-dashboards.md)。 請先閱讀檔案，再繼續閱讀本指南。
 
 ## Real-Time CDP深入分析報表與使用案例
 
@@ -41,13 +41,13 @@ Real-Time CDP報表可讓您深入分析設定檔資料，以及資料與對象�
 
 下圖包含每個資料集中的相關資料欄位。
 
-![輪廓模型的ERD。](../images/cdp-insights/profile-model.png)
+![設定檔模型的ERD。](../images/cdp-insights/profile-model.png)
 
 #### 設定檔計數使用案例 {#profile-count}
 
-用於的邏輯 [!UICONTROL 設定檔計數] widget會傳回拍攝快照時設定檔存放區中合併的設定檔總數。 請參閱 [[!UICONTROL 設定檔計數] Widget檔案](../guides/profiles.md#profile-count) 以取得詳細資訊。
+用於[!UICONTROL 設定檔計數] Widget的邏輯會傳回建立快照時設定檔存放區中合併的設定檔總數。 如需詳細資訊，請參閱[[!UICONTROL 設定檔計數] Widget檔案](../guides/profiles.md#profile-count)。
 
-產生 [!UICONTROL 設定檔計數] 可以在下方的可摺疊區段中看到Widget。
+產生[!UICONTROL 設定檔計數] Widget的SQL會顯示在下方的可摺疊區段中。
 
 +++SQL查詢
 
@@ -65,9 +65,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### 單一身分設定檔使用案例 {#single-identity-profiles}
 
-用於的邏輯 [!UICONTROL 單一身分設定檔] Widget會提供貴組織只有一種型別ID型別的設定檔計數，以建立其身分。 請參閱 [[!UICONTROL 單一身分設定檔] Widget檔案](../guides/profiles.md#single-identity-profiles) 以取得詳細資訊。
+用於[!UICONTROL 單一身分設定檔] Widget的邏輯會提供貴組織只有一種型別識別碼型別的設定檔計數，以建立其身分。 如需詳細資訊，請參閱[[!UICONTROL 單一身分設定檔]介面工具檔案](../guides/profiles.md#single-identity-profiles)。
 
-產生 [!UICONTROL 單一身分設定檔] 可以在下方的可摺疊區段中看到Widget。
+產生[!UICONTROL 單一身分設定檔] Widget的SQL會顯示在下方的可摺疊區段中。
 
 +++SQL查詢
 
@@ -98,9 +98,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### 依身分使用案例的設定檔 {#profiles-by-identity}
 
-此 [!UICONTROL 依身分割槽分的設定檔] widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](../guides/profiles.md#profiles-by-identity) 以取得詳細資訊。
+依身分割槽分的[!UICONTROL 設定檔] Widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 如需詳細資訊，請參閱[[!UICONTROL 依身分割槽分的設定檔] Widget檔案](../guides/profiles.md#profiles-by-identity)。
 
-產生 [!UICONTROL 依身分割槽分的設定檔] 可以在下方的可摺疊區段中看到Widget。
+可摺疊的區段顯示依身分]介面產生[!UICONTROL 設定檔的SQL。
 
 +++SQL查詢
 
@@ -122,9 +122,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### 依身分使用案例區分的單一身分設定檔 {#single-identity-profiles-by-identity}
 
-用於的邏輯 [!UICONTROL 依身分割槽分的單一身分設定檔] widget說明僅以單一唯一識別碼識別的設定檔總數。 請參閱 [依身分Widget檔案的單一身分設定檔](../guides/profiles.md#single-identity-profiles-by-identity) 以取得詳細資訊。
+依身分]用於[!UICONTROL 單一身分設定檔的邏輯Widget可說明僅以單一唯一識別碼識別的設定檔總數。 如需詳細資訊，請參閱依身分Widget檔案的[單一身分設定檔](../guides/profiles.md#single-identity-profiles-by-identity)。
 
-產生 [!UICONTROL 依身分割槽分的單一身分設定檔] 可以在下方的可摺疊區段中看到Widget。
+可摺疊的區段顯示透過身分]介面產生[!UICONTROL 單一身分設定檔的SQL。
 
 +++SQL查詢
 
@@ -161,9 +161,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### 對象人數使用案例 {#audience-size}
 
-用於的邏輯 [!UICONTROL 對象人數] widget會傳回在選取對象中最近一次快照時的合併設定檔總數。 請參閱 [[!UICONTROL 對象人數] Widget檔案](../guides/audiences.md#audience-size) 以取得詳細資訊。
+用於[!UICONTROL 對象大小] Widget的邏輯會傳回在最新快照集時所選對象內的合併設定檔總數。 如需詳細資訊，請參閱[[!UICONTROL 對象大小] Widget檔案](../guides/audiences.md#audience-size)。
 
-產生 [!UICONTROL 對象人數] 可以在下方的可摺疊區段中看到Widget。
+可摺疊的區段顯示產生[!UICONTROL 對象大小] Widget的SQL。
 
 +++SQL查詢
 
@@ -185,9 +185,9 @@ WHERE
 
 #### 對象人數變化趨勢使用案例 {#audience-size-change-trend}
 
-用於的邏輯 [!UICONTROL 對象人數變化趨勢] widget提供線圖，說明最近每日快照之間符合指定對象資格的設定檔總數差異。 請參閱 [[!UICONTROL 對象人數變化趨勢] Widget檔案](../guides/audiences.md#audience-size-change-trend) 以取得詳細資訊。
+用於[!UICONTROL 對象人數變更趨勢] Widget的邏輯會提供最近每日快照之間符合指定對象資格的設定檔總數差異的線圖說明。 如需詳細資訊，請參閱[[!UICONTROL 對象人數變更趨勢] Widget檔案](../guides/audiences.md#audience-size-change-trend)。
 
-產生 [!UICONTROL 對象人數變化趨勢] 可以在下方的可摺疊區段中看到Widget。
+可摺疊的區段顯示產生[!UICONTROL 對象人數變化趨勢] Widget的SQL。
 
 +++SQL查詢
 
@@ -222,9 +222,9 @@ SELECT date_key,
 
 #### 最常使用的目的地使用案例 {#most-used-destinations}
 
-中使用的邏輯 [!UICONTROL 最常使用的目的地] Widget會根據對應至您組織最常用目的地的受眾數量，列出這些目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能會顯示可能未充分利用的目的地。 請參閱相關的檔案： [[!UICONTROL 最常使用的目的地] Widget](../guides/destinations.md#most-used-destinations) 以取得詳細資訊。
+[!UICONTROL 最常使用的目的地] Widget中使用的邏輯，會根據對應至您組織最常使用的目的地對象數目，列出這些目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能會顯示可能未充分利用的目的地。 如需詳細資訊，請參閱[[!UICONTROL 最常使用的目的地] Widget](../guides/destinations.md#most-used-destinations)的相關檔案。
 
-產生 [!UICONTROL 最常使用的目的地] 可以在下方的可摺疊區段中看到Widget。
+產生[!UICONTROL 最常使用的目的地] Widget的SQL會顯示在下方的可摺疊區段中。
 
 +++SQL查詢
 
@@ -247,9 +247,9 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### 最近啟用的對象使用案例 {#recently-activated-audiences}
 
-的邏輯 [!UICONTROL 最近啟用的對象] widget提供最近對應至目的地的對象清單。 此清單提供系統中目前使用中的對象和目的地的快照，可協助疑難排解任何錯誤的對應。 請參閱 [[!UICONTROL 最近啟用的對象] Widget檔案](../guides/destinations.md#recently-activated-audiences) 以取得詳細資訊。
+[!UICONTROL 最近啟用的對象] Widget的邏輯提供最近對應到目的地的對象清單。 此清單提供系統中目前使用中的對象和目的地的快照，可協助疑難排解任何錯誤的對應。 如需詳細資訊，請參閱[[!UICONTROL 最近啟用的對象] Widget檔案](../guides/destinations.md#recently-activated-audiences)。
 
-產生 [!UICONTROL 最近啟用的對象] 可以在下方的可摺疊區段中看到Widget。
+產生[!UICONTROL 最近啟用的對象] Widget的SQL會顯示在下方的可摺疊區段中。
 
 +++SQL查詢
 
@@ -291,9 +291,9 @@ LIMIT
 
 #### 依對象使用案例的身分割槽分的設定檔 {#audience-profiles-by-identity}
 
-中使用的邏輯 [!UICONTROL 依身分割槽分的設定檔] widget會針對特定對象，在您的個人資料存放區中提供所有合併個人資料的身分劃分。 請參閱 [[!UICONTROL 依身分割槽分的設定檔] Widget檔案](../guides/audiences.md#profiles-by-identity) 以取得詳細資訊。
+依身分]設定檔中的[!UICONTROL 設定檔所使用的邏輯，會針對指定對象，提供設定檔存放區中所有合併設定檔的身分劃分。 如需詳細資訊，請參閱[[!UICONTROL 依身分割槽分的設定檔] Widget檔案](../guides/audiences.md#profiles-by-identity)。
 
-產生 [!UICONTROL 依身分割槽分的設定檔] 可以在下方的可摺疊區段中看到Widget。
+可摺疊的區段顯示依身分]介面產生[!UICONTROL 設定檔的SQL。
 
 +++SQL查詢
 
@@ -327,9 +327,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### 身分重疊（設定檔）使用案例 {#profiles-identity-overlap}
 
-中使用的邏輯 [!UICONTROL 身分重疊] Widget會顯示您電腦中設定檔的重疊 **設定檔存放區** 包含兩個選取的身分識別。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 設定檔] 儀表板檔案](../guides/profiles.md#identity-overlap).
+[!UICONTROL 身分重疊] Widget中使用的邏輯會顯示您&#x200B;**設定檔存放區**&#x200B;中包含兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱[!UICONTROL 設定檔]儀表板檔案](../guides/profiles.md#identity-overlap)的[[!UICONTROL 身分重疊] Widget區段。
 
-產生 [!UICONTROL 身分重疊] 可以在下方的可摺疊區段中看到Widget。
+可摺疊的區段顯示產生[!UICONTROL 身分重疊] Widget的SQL。
 
 +++SQL查詢
 
@@ -392,13 +392,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 下圖包含每個資料集中的相關資料欄位。
 
-![依對象模型的重疊名稱空間ERD。](../images/cdp-insights/overlap-namespace-by-audience-model.png)
+![依對象模型區分的重疊名稱空間ERD。](../images/cdp-insights/overlap-namespace-by-audience-model.png)
 
 #### 身分重疊（對象）使用案例 {#audiences-identity-overlap}
 
-中使用的邏輯 [!UICONTROL 受眾] 儀表板 [!UICONTROL 身分重疊] widget說明包含特定對象兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱 [[!UICONTROL 身分重疊] 的widget區段 [!UICONTROL 受眾] 儀表板檔案](../guides/audiences.md#identity-overlap).
+在[!UICONTROL 對象]儀表板[!UICONTROL 身分重疊]介面工具中使用的邏輯可說明包含特定對象之兩個所選身分的設定檔重疊。 如需詳細資訊，請參閱[!UICONTROL 對象]儀表板檔案](../guides/audiences.md#identity-overlap)的[[!UICONTROL 身分重疊] Widget區段。
 
-產生 [!UICONTROL 身分重疊] 可以在下方的可摺疊區段中看到Widget。
+可摺疊的區段顯示產生[!UICONTROL 身分重疊] Widget的SQL。
 
 +++SQL查詢
 

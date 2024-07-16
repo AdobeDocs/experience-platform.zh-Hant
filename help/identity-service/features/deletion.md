@@ -21,23 +21,23 @@ Adobe Experience Platform Identity Service會透過決定性地連結個別人�
 
 以下檔案參考下列Experience Platform功能：
 
-* [Identity Service](../home.md)：透過跨裝置和系統橋接身分，更能瞭解個別客戶及其行為。
-   * [身分圖表](./identity-graph-viewer.md)：身分圖表是特定客戶不同身分之間的關係地圖，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。
-   * [身分名稱空間](./namespaces.md)：身分識別名稱空間是Identity Service的元件，用途是作為身分識別相關內容的指標。 例如，它們區分「name」的值<span>@email.com」作為電子郵件地址，或「443522」作為數值CRM ID。
-* [目錄服務](../../catalog/home.md)：探索Data Lake中的資料譜系、中繼資料、檔案說明、目錄和資料集。
-* [資料衛生](../../hygiene/home.md)：排程自動化資料集有效期，或從單一資料集或所有資料集中刪除個別記錄，藉此管理您儲存的消費者資料。
-* [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)：管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的請求。
-* [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶設定檔。
+* [身分識別服務](../home.md)：透過跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
+   * [身分圖表](./identity-graph-viewer.md)：身分圖表是特定客戶不同身分之間關係的對應，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。
+   * [身分識別名稱空間](./namespaces.md)：身分識別名稱空間是Identity Service的元件，用來做為身分識別相關內容的指標。 例如，他們將「name<span>@email.com」的值做為電子郵件地址，或「443522」做為數值CRM ID。
+* [目錄服務](../../catalog/home.md)：探索資料湖中的資料譜系、中繼資料、檔案說明、目錄和資料集。
+* [資料衛生](../../hygiene/home.md)：排程自動化資料集有效期，或從單一資料集或所有資料集中刪除個別記錄，以管理您儲存的消費者資料。
+* [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)：管理客戶透過Adobe Experience Cloud應用程式存取、選擇退出銷售或刪除其個人資料的請求。
+* [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的客戶個人檔案。
 
 ## 單一身分刪除
 
-單一身分刪除請求可讓您刪除圖表中的身分，導致移除與身分名稱空間關聯的單一使用者身分相關聯的連結。 您可以使用以下提供的機制 [Privacy Service](../../privacy-service/home.md) 若是客戶要求刪除資料等使用案例，或是遵循一般資料保護規範(GDPR)等隱私權法規。
+單一身分刪除請求可讓您刪除圖表中的身分，導致移除與身分名稱空間關聯的單一使用者身分相關聯的連結。 您可以使用[Privacy Service](../../privacy-service/home.md)提供的機制來處理使用案例，例如客戶要求刪除資料以及遵循隱私權法規(例如一般資料保護規範(GDPR))的要求。
 
 以下各節會概述您可以在Experience Platform中用於單一身分刪除請求的機制。
 
 ### Privacy Service中的單一身分刪除
 
-Privacy Service會根據隱私權法規(例如一般資料保護規範(GDPR)和加州消費者隱私保護法(CCPA))的規定，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 透過Privacy Service，您可以使用API或UI提交工作請求。 當Experience Platform收到來自Privacy Service的刪除請求時，平台會傳送確認給Privacy Service，確認已收到請求且受影響的資料已標示為刪除。 個人身分的刪除是根據提供的名稱空間和/或ID值。 此外，刪除也會針對與指定組織相關聯的所有沙箱進行。 如需詳細資訊，請閱讀以下指南： [在Identity Service中處理隱私權請求](../privacy.md).
+Privacy Service會根據隱私權法規(例如一般資料保護規範(GDPR)和加州消費者隱私保護法(CCPA))的規定，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。 透過Privacy Service，您可以使用API或UI提交工作請求。 當Experience Platform收到來自Privacy Service的刪除請求時，平台會傳送確認給Privacy Service，確認已收到請求且受影響的資料已標示為刪除。 個人身分的刪除是根據提供的名稱空間和/或ID值。 此外，刪除也會針對與指定組織相關聯的所有沙箱進行。 如需詳細資訊，請參閱在Identity Service](../privacy.md)中處理[隱私權要求的指南。
 
 下表提供Privacy Service中單一身分刪除的劃分資訊：
 
@@ -56,11 +56,11 @@ Privacy Service會根據隱私權法規(例如一般資料保護規範(GDPR)和�
 
 ### 目錄服務中的資料集刪除
 
-您可以使用目錄服務來提交資料集刪除請求。 如需如何使用目錄服務刪除資料集的詳細資訊，請閱讀上的指南 [使用目錄服務API刪除物件](../../catalog/api/delete-object.md). 或者，您可以使用Platform UI來提交資料集刪除請求。 如需詳細資訊，請閱讀 [資料集使用手冊](../../catalog/datasets/user-guide.md#delete-a-dataset).
+您可以使用目錄服務來提交資料集刪除請求。 如需如何使用目錄服務刪除資料集的詳細資訊，請參閱使用目錄服務API](../../catalog/api/delete-object.md)刪除物件[的指南。 或者，您可以使用Platform UI來提交資料集刪除請求。 如需詳細資訊，請閱讀[資料集使用手冊](../../catalog/datasets/user-guide.md#delete-a-dataset)。
 
 ### 資料衛生中的資料集有效期
 
-此 [[!UICONTROL 資料衛生] 工作區](../../hygiene/ui/overview.md) Adobe Experience Platform UI中，可讓您為資料集排程有效期。 當資料集到達其到期日時，資料湖、身分服務和即時客戶設定檔會開始個別程式，從各自的服務中移除資料集的內容。 如需詳細資訊，請閱讀以下指南： [使用管理資料集有效期 [!UICONTROL 資料衛生] 工作區](../../hygiene/ui/dataset-expiration.md).
+Adobe Experience Platform UI中的[[!UICONTROL 資料衛生]工作區](../../hygiene/ui/overview.md)可讓您排程資料集的到期時間。 當資料集到達其到期日時，資料湖、身分服務和即時客戶設定檔會開始個別程式，從各自的服務中移除資料集的內容。 如需詳細資訊，請參閱[使用[!UICONTROL 資料衛生]工作區](../../hygiene/ui/dataset-expiration.md)管理資料集有效期的指南。
 
 下表提供目錄服務和資料衛生中資料集刪除之間的差異明細：
 
@@ -89,7 +89,7 @@ Privacy Service會根據隱私權法規(例如一般資料保護規範(GDPR)和�
 
 ## 後續步驟
 
-本檔案說明您可以在Experience Platform上用於刪除身分和資料集的各種機制。 本檔案也概述身分識別與資料集刪除如何影響身分識別圖形。 如需Identity Service的詳細資訊，請參閱 [Identity Service總覽](../home.md).
+本檔案說明您可以在Experience Platform上用於刪除身分和資料集的各種機制。 本檔案也概述身分識別與資料集刪除如何影響身分識別圖形。 如需有關Identity服務的詳細資訊，請閱讀[Identity服務概觀](../home.md)。
 
 <!--
 

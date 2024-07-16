@@ -2,7 +2,8 @@
 title: Real-Time CDP中的範例使用案例
 description: 檢視跨服務使用案例範例，以善用Real-Time CDP實作。
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -39,7 +40,7 @@ Adobe Real-Time CDP提供廣泛支援的合作夥伴識別碼，可讓您建立�
     </a>
     </div>
     <p>
-    <em>不依賴第三方Cookie即可吸引和贏取新客戶</em>
+    <em>在不依賴第三方Cookie的情況下與新客戶互動及取得新客戶</em>
     <p>
   </td>
   <td>
@@ -71,7 +72,7 @@ Adobe Real-Time CDP提供廣泛支援的合作夥伴識別碼，可讓您建立�
   </tr>
   </table>
 
-### 設定檔擴充 {#profile-enrichment}
+### 輪廓擴充 {#profile-enrichment}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -85,13 +86,13 @@ Adobe Real-Time CDP提供廣泛支援的合作夥伴識別碼，可讓您建立�
     </a>
     </div>
     <p>
-    <em>使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎、獲得有關客戶群的新見解，並改善受眾最佳化。</em>
+    <em>使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎、獲得客戶基礎的新深入分析以及更好的對象最佳化。</em>
     <p>
   </td>
   </tr>
   </table>
 
-## 個人化、深入分析、參與 {#personalization-insights-engagement}
+## Personalization，深入分析，參與 {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -105,7 +106,7 @@ Adobe Real-Time CDP提供廣泛支援的合作夥伴識別碼，可讓您建立�
     </a>
     </div>
     <p>
-    <em>以聰明負責的方式重新吸引放棄轉換的客戶。 透過體驗與失效的客戶互動，以提高轉換率並增加使用者端期限值。</em>
+    <em>以聰明且負責的方式重新與放棄轉換的客戶互動。 使用體驗來與失效的客戶互動，以提高轉換率並增加使用者端期限值。</em>
     <p>
   </td>
   </tr>

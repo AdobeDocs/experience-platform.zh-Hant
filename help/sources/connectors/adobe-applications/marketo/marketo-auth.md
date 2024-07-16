@@ -6,36 +6,36 @@ description: 本檔案提供如何產生Marketo驗證憑證的相關資訊。
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
 
-# 驗證您的 [!DNL Marketo Engage] 來源聯結器
+# 驗證您的[!DNL Marketo Engage]來源聯結器
 
-建立之前 [!DNL Marketo Engage] (以下稱&quot;[!DNL Marketo]&quot;)來源聯結器，您必須先透過 [!DNL Marketo] 介面，以及擷取Munchkin ID、使用者端ID和使用者端密碼的值。
+建立[!DNL Marketo Engage] （以下稱為「[!DNL Marketo]」）來源聯結器之前，您必須先透過[!DNL Marketo]介面設定自訂服務，以及擷取Munchkin ID、使用者端ID和使用者端密碼的值。
 
-以下檔案提供如何取得驗證認證以建立 [!DNL Marketo] 來源聯結器。
+以下檔案提供如何取得驗證認證以建立[!DNL Marketo]來源聯結器的步驟。
 
 ## 設定新角色
 
-取得驗證認證的第一步，是透過 [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) 介面。
+取得驗證認證的第一步，是透過[[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1)介面設定新角色。
 
-登入 [!DNL Marketo] 並選取 **[!DNL Admin]** 從頂端導覽列取得。
+登入[!DNL Marketo]並從上方導覽列中選取&#x200B;**[!DNL Admin]**。
 
-![新角色的管理員](../images/marketo/home.png)
+新角色的![管理員](../images/marketo/home.png)
 
-此 *[!DNL Users & Role]s* 頁面包含使用者、角色和登入歷程記錄的相關資訊。 若要建立新角色，請選取 **[!DNL Roles]** 從頂端標題中，然後選取 **[!DNL New Role]**.
+*[!DNL Users & Role]s*&#x200B;頁面包含使用者、角色和登入歷程記錄的相關資訊。 若要建立新角色，請從頂端標題選取&#x200B;**[!DNL Roles]**，然後選取&#x200B;**[!DNL New Role]**。
 
-![new-role](../images/marketo/new-role.png)
+![新角色](../images/marketo/new-role.png)
 
-隨即顯示「**[!DNL Create New Role]**」對話框。提供名稱和說明，然後選取您要授予此角色的許可權。 許可權僅限於特定工作區，使用者只能在其擁有許可權的工作區中執行動作。
+**[!DNL Create New Role]**&#x200B;對話方塊就會顯示。 提供名稱和說明，然後選取您要授予此角色的許可權。 許可權僅限特定工作區使用，使用者只能在擁有許可權的工作區中執行動作。
 
-選取要授與的許可權後，請選取「 」 **[!DNL Create]**.
+選取要授與的許可權後，請選取&#x200B;**[!DNL Create]**。
 
 ![create-new-role](../images/marketo/create-new-role.png)
 
-透過建立角色時，您可以管理API上受限制的許可權 [!DNL Marketo]. 除了選取「存取API」之外，您還可以透過選取以下許可權來提供具有最低存取層級的角色：
+使用[!DNL Marketo]建立角色時，您可以管理API上受限制的許可權。 您不必選取「存取API」，而是可以選取下列許可權，以最低的存取層級為角色提供存取權：
 
 * [!DNL Read-Only Activity]
 * [!DNL Read-Only Assets]
@@ -51,58 +51,58 @@ ht-degree: 0%
 
 ## 設定新使用者
 
-與角色類似，您可以透過以下連結設定新使用者： **[!DNL Users & Roles]** 頁面。 此 **[!DNL Users]** 頁面提供目前布建在Marketo中的作用中使用者清單。 選取 **[!DNL Invite New User]** 以布建新使用者。
+與角色類似，您可以從&#x200B;**[!DNL Users & Roles]**&#x200B;頁面設定新使用者。 **[!DNL Users]**&#x200B;頁面提供目前在Marketo中布建的使用中使用者清單。 選取&#x200B;**[!DNL Invite New User]**&#x200B;以布建新使用者。
 
-![invite-new-user](../images/marketo/invite-new-user.png)
+![邀請 — 新使用者](../images/marketo/invite-new-user.png)
 
-彈出視窗對話方塊選單出現。 為您的電子郵件、名字、姓氏和原因提供適當的資訊。 在此步驟中，您還可以建立您邀請的新使用者帳戶存取權的到期日。 完成後，選取 **[!DNL Next]**.
+彈出對話方塊選單出現。 為您的電子郵件、名字、姓氏和原因提供適當的資訊。 在此步驟中，您也可以針對您邀請的新使用者帳戶建立存取權的到期日。 完成後，選取&#x200B;**[!DNL Next]**。
 
 >[!IMPORTANT]
 >
 >設定新使用者時，您必須將存取權指派給嚴格依照您正在建立的自訂服務專屬的使用者。
 
-![user-info](../images/marketo/new-user-info.png)
+![使用者資訊](../images/marketo/new-user-info.png)
 
-選取中適當的欄位 **[!DNL Permissions]** 步驟，然後選取 **[!DNL API Only]** 核取方塊以向新使用者提供API角色。 選取 **[!DNL Next]** 以繼續進行。
+在&#x200B;**[!DNL Permissions]**&#x200B;步驟中選取適當的欄位，然後選取&#x200B;**[!DNL API Only]**&#x200B;核取方塊以提供API角色給新使用者。 選取&#x200B;**[!DNL Next]**&#x200B;以繼續。
 
 ![許可權](../images/marketo/permissions.png)
 
-若要完成程式，請選取 **[!DNL Send]**.
+若要完成程式，請選取&#x200B;**[!DNL Send]**。
 
-![message](../images/marketo/message.png)
+![訊息](../images/marketo/message.png)
 
 ## 設定自訂服務
 
-建立新使用者後，您可以設定自訂服務以擷取新的認證。 在管理頁面中，選取 **[!DNL LaunchPoint]**.
+建立新使用者後，您可以設定自訂服務以擷取新的認證。 從管理頁面中，選取&#x200B;**[!DNL LaunchPoint]**。
 
 ![admin-launchpoint](../images/marketo/admin-launchpoint.png)
 
-此 **[!DNL Installed services]** 頁面包含現有服務的清單，若要建立新的自訂服務，請選取 **[!DNL New]** 然後選取 **[!DNL New Service]**.
+**[!DNL Installed services]**&#x200B;頁面包含現有服務的清單，若要建立新的自訂服務，請選取&#x200B;**[!DNL New]**，然後選取&#x200B;**[!DNL New Service]**。
 
 ![新服務](../images/marketo/new-service.png)
 
-為您的新服務提供描述性顯示名稱，然後選取 **[!DNL Custom]** 從 **[!DNL Service]** 下拉式功能表。 提供適當的說明，然後從中選擇要布建的使用者 **[!DNL API Only User]** 下拉式功能表。 填入必要的詳細資料後，請選取 **[!DNL Create]** 以建立新的自訂服務。
+提供您的新服務描述性顯示名稱，然後從&#x200B;**[!DNL Service]**&#x200B;下拉式功能表中選取&#x200B;**[!DNL Custom]**。 提供適當的說明，然後從&#x200B;**[!DNL API Only User]**&#x200B;下拉式功能表中選取您要布建的使用者。 填寫完必要的詳細資料後，請選取&#x200B;**[!DNL Create]**&#x200B;以建立新的自訂服務。
 
-![create](../images/marketo/create.png)
+![建立](../images/marketo/create.png)
 
 ## 取得您的使用者端ID和使用者端密碼
 
-建立新的自訂服務後，您現在可以擷取使用者端ID和使用者端密碼的值。 從 **[!DNL Installed Services]** 功能表，找到您要存取的自訂服務，然後選取 **[!DNL View Details]**.
+建立新的自訂服務後，您現在可以擷取使用者端ID和使用者端密碼的值。 從&#x200B;**[!DNL Installed Services]**&#x200B;功能表，找出您要存取的自訂服務，然後選取&#x200B;**[!DNL View Details]**。
 
-![view-details](../images/marketo/view-details.png)
+![檢視詳細資料](../images/marketo/view-details.png)
 
-會出現一個對話方塊，其中包含您的使用者端ID和使用者端密碼。
+隨即顯示一個對話方塊，其中包含您的使用者端ID和使用者端密碼。
 
 ![認證](../images/marketo/credentials.png)
 
 ## 取得您的Munchkin ID
 
-您必須完成的最後一個步驟，才能驗證您的 [!DNL Marketo] 來源聯結器是擷取您的Munchkin ID。 在管理頁面中，選取 **[!DNL Munchkin]** 在 **[!DNL Integration]** 面板。
+要驗證[!DNL Marketo]來源聯結器，您必須完成的最後一個步驟是擷取您的Munchkin ID。 從管理頁面，選取「**[!DNL Integration]**」面板下的「**[!DNL Munchkin]**」。
 
 ![admin-munchkin](../images/marketo/admin-munchkin.png)
 
-此 *[!DNL Munchkin]* 頁面隨即顯示，您的唯一Munchkin ID會列在面板頂端。
+*[!DNL Munchkin]*&#x200B;頁面隨即顯示，您的唯一Munchkin ID會列在面板頂端。
 
 ![munchkin-Id](../images/marketo/munchkin-id.png)
 
-結合您的使用者端ID和使用者端密碼，您可以使用Munchkin ID設定新帳戶和 [建立新的 [!DNL Marketo] 來源連線](../../../tutorials/ui/create/adobe-applications/marketo.md) 在Experience Platform上。
+結合您的使用者端ID和使用者端密碼，您可以使用您的Munchkin ID來設定新帳戶，並在Experience Platform上[建立新的 [!DNL Marketo] 來源連線](../../../tutorials/ui/create/adobe-applications/marketo.md)。

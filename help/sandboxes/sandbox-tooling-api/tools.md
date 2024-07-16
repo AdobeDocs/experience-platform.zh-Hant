@@ -4,8 +4,8 @@ description: 沙箱工具API中的/tools端點可讓您在Adobe Experience Platf
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 19%
+source-wordcount: '150'
+ht-degree: 20%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 19%
 
 沙箱工具可讓您選取不同的成品並將其匯出至套件。 套件可以包含單一物件或多個物件。 套件中包含的任何物件都必須來自相同沙箱。
 
-此 `/tools` 沙箱工具API中的端點可讓您列出和擷取作業JSON資料。
+沙箱工具API中的`/tools`端點可讓您列出及擷取工作JSON資料。
 
-## 工作詳細資訊 {#details}
+## 工作詳細資料 {#details}
 
-GET若要獨立擷取工作JSON資料，請對 `/tools` 端點並提供作業的ID。
+若要獨立擷取工作JSON資料，請對`/tools`端點提出GET要求，並提供工作的識別碼。
 
 **API格式**
 
@@ -31,7 +31,7 @@ GET /tools/job/{JOB_ID}
 
 **要求**
 
-以下請求會擷取以下專案的資訊： {JOB_ID}.
+下列要求會擷取{JOB_ID}的資訊。
 
 ```shell
 curl -X GET \
@@ -43,7 +43,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回查詢之工作ID的詳細資料，並提供即時狀態更新為 `completedTasks` 和 `failedTasks` 會隨著工作進行而更新。
+成功回應會傳回查詢之工作ID的詳細資料，提供即時狀態更新，因為`completedTasks`和`failedTasks`會隨著工作進行而更新。
 
 ```json
 {

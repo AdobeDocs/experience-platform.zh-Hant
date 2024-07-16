@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->此整合適用於 [Adobe Campaign 8.4或更高版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
+>此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)。
 
 ## 概觀 {#overview}
 
@@ -29,17 +29,17 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 使用Adobe Campaign Managed Cloud Services連線時，請記得下列護欄：
 
-* 您可以 [啟用](#activate) 此目的地最多25個對象。
+* 您最多可以[啟動](#activate)25個對象到此目的地。
 
-  您可以更新 **NmsCdp_Aep_Audience_List_Limit** 中的選項 **[!UICONTROL 管理]** > **[!UICONTROL Platform]** > **[!UICONTROL 選項]** Campaign檔案總管的資料夾。
+  您可以在Campaign檔案總管的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 平台]** > **[!UICONTROL 選項]**&#x200B;資料夾中更新&#x200B;**NmsCdp_Aep_Audience_List_Limit**&#x200B;選項的值，以變更此限制。
 
-* 對於每個對象，您最多可以新增20個欄位至 [地圖](#map) 前往Adobe Campaign。
+* 對於每個對象，您最多可以新增20個欄位至[將](#map)對應至Adobe Campaign。
 
-  您可以更新 **NmsCdp_Aep_Destinations_Max_Columns** 中的選項 **[!UICONTROL 管理]** > **[!UICONTROL Platform]** > **[!UICONTROL 選項]** Campaign檔案總管的資料夾。
+  您可以在Campaign檔案總管的&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 平台]** > **[!UICONTROL 選項]**&#x200B;資料夾中更新&#x200B;**NmsCdp_Aep_Destinations_Max_Columns**&#x200B;選項的值，以變更此限制。
 
 * Azure Blob儲存資料登陸區域(DLZ)上的資料保留：7天。
 * 啟用頻率為最少3小時。
-* 此連線支援的檔案名稱長度上限為255個字元。 當您 [設定匯出的檔案名稱](../../ui/activate-batch-profile-destinations.md#configure-file-names)，請確定檔案名稱不超過255個字元。 超過檔案名稱長度上限會導致啟用錯誤。
+* 此連線支援的檔案名稱長度上限為255個字元。 當您[設定匯出的檔案名稱](../../ui/activate-batch-profile-destinations.md#configure-file-names)時，請確定檔案名稱不超過255個字元。 超過檔案名稱長度上限會導致啟用錯誤。
 
 ## 使用案例 {#use-cases}
 
@@ -64,14 +64,14 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 ## 支援的身分 {#supported-identities}
 
-*Adobe Campaign Managed Cloud Services* 支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
+*Adobe Campaign Managed Cloud Services*&#x200B;支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
 | external_id | 自訂使用者ID | 當您的來源身分是自訂名稱空間時，請選取此目標身分。 我們建議使用此身分識別，並將其對應至您的Campaign執行個體中代表客戶的ID (loyalty_ID、account_ID、customer_ID...) |
-| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 請參閱以下檔案： [ECID](/help/identity-service/features/ecid.md) 以取得詳細資訊。 |
-| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
-| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當來源欄位包含未雜湊屬性時，請核取 **[!UICONTROL 套用轉換]** 選項，擁有 [!DNL Platform] 啟動時自動雜湊資料。 |
+| ECID | Experience Cloud ID | 代表ECID的名稱空間。 此名稱空間也可以以下列别名表示：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」。 如需詳細資訊，請參閱[ECID](/help/identity-service/features/ecid.md)上的下列檔案。 |
+| email_lc_sha256 | 使用SHA256演演算法雜湊的電子郵件地址 | Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
+| phone_sha256 | 使用SHA256演演算法雜湊的電話號碼 | Adobe Experience Platform同時支援純文字和SHA256雜湊電話號碼。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。 |
 | GAID | GOOGLE ADVERTISING ID | 當您的來源身分是GAID名稱空間時，請選取GAID目標身分。 |
 | IDFA | 廣告商適用的Apple ID | 當您的來源身分是IDFA名稱空間時，請選取IDFA目標身分。 |
 
@@ -83,8 +83,8 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出對象的所有成員，以及所需的結構欄位（例如：電子郵件地址、電話號碼、姓氏），如 [目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解 [批次檔案型目的地](/help/destinations/destination-types.md#file-based). |
+| 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | 您正在匯出對象的所有成員，以及所需的結構描述欄位（例如：電子郵件地址、電話號碼、姓氏），如[目的地啟用工作流程](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)的選取設定檔屬性畫面中所選。 |
+| 匯出頻率 | **[!UICONTROL 批次]** | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解[批次檔案型目的地](/help/destinations/destination-types.md#file-based)。 |
 
 {style="table-layout:auto"}
 
@@ -92,9 +92,9 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
-若要連線至此目的地，請遵循以下說明的步驟： [目的地設定教學課程](../../ui/connect-destination.md). 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
+若要連線到此目的地，請依照[目的地組態教學課程](../../ui/connect-destination.md)中所述的步驟進行。 在設定目標工作流程中，填寫以下兩個區段中列出的欄位。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -103,55 +103,55 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/destination-details.png)
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL 選取執行個體]**：您的 **[!DNL Campaign]** 行銷執行個體。
-* **[!UICONTROL 目標對應]**：選取您在中使用的目標對應 **[!DNL Adobe Campaign]** 以傳送傳遞。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)。
+* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
+* **[!UICONTROL 選取執行個體]**：您的&#x200B;**[!DNL Campaign]**&#x200B;行銷執行個體。
+* **[!UICONTROL 目標對應]**：選取您在&#x200B;**[!DNL Adobe Campaign]**&#x200B;中使用的目標對應，以傳送傳遞。 [了解更多](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html)。
 * **[!UICONTROL 選取同步型別]**：
 
-   * **[!UICONTROL 對象同步]**：使用此選項將Adobe Experience Platform對象傳送至Adobe Campaign。
-   * **[!UICONTROL 設定檔同步（僅更新）]**：使用此選項將Adobe Experience Platform設定檔屬性匯入Adobe Campaign並建立同步程式，以便定期更新。
+   * **[!UICONTROL 對象同步]**：使用此選項將Adobe Experience Platform對象傳送到Adobe Campaign。
+   * **[!UICONTROL 設定檔同步（僅更新）]**：使用此選項將Adobe Experience Platform設定檔屬性帶入Adobe Campaign，並建立同步程式，以便定期更新。
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需有關警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
 ### 治理原則與執行動作 {#governance}
 
-選取適用於您要匯出至目的地之資料的行銷動作。 若為Adobe Campaign，建議您選取 **[!UICONTROL 電子郵件目標定位]** 行銷動作。
+選取適用於您要匯出至目的地之資料的行銷動作。 若為Adobe Campaign，建議您選取&#x200B;**[!UICONTROL 電子郵件鎖定目標]**&#x200B;行銷動作。
 
-如需行銷動作的詳細資訊，請參閱 [資料使用原則概觀](/help/data-governance/policies/overview.md) 頁面。
+如需行銷動作的詳細資訊，請參閱[資料使用原則概觀](/help/data-governance/policies/overview.md)頁面。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
->* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-讀取 [啟用對象資料至批次設定檔匯出目的地](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) 以取得啟用此目的地的對象資料的相關指示。
+讀取[啟用批次設定檔匯出目的地的對象資料](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html)，以取得啟用此目的地的對象資料的相關指示。
 
 ### 對應屬性和身分 {#map}
 
-選取要與設定檔一起匯出的XDM欄位，並將它們對應到相對應的Adobe Campaign欄位。[深入瞭解電子郵件行銷目的地的身分和屬性選擇](overview.md)
+選取要與設定檔一起匯出的XDM欄位，並將它們對應到相對應的Adobe Campaign欄位。[進一步瞭解電子郵件行銷目的地的身分和屬性選擇](overview.md)
 
 1. 選取來源欄位：
 
-   * 選取 **識別碼** （例如：電子郵件欄位）作為來源身分，可在Adobe Experience Platform和Adobe Campaign中唯一識別設定檔。
+   * 選取&#x200B;**識別碼** （例如：電子郵件欄位）作為在Adobe Experience Platform和Adobe Campaign中唯一識別設定檔的來源識別碼。
 
-   * 選取所有其他專案 **xdm來源設定檔屬性** 需要匯出至Adobe Campaign的資訊。
+   * 選取需要匯出至Adobe Campaign的所有其他&#x200B;**XDM來源設定檔屬性**。
 
    >[!NOTE]
    >
    >「segmentMembershipStatus」欄位是反映segmentMembership狀態的必要對應。 此欄位預設為新增，無法修改或移除。
 
-1. 在Adobe Campaign中將每個欄位與其目標欄位對應。 可用的目標欄位由以下情況下選取的目標對應決定： [建立目的地](#destination-details).
+1. 在Adobe Campaign中將每個欄位與其目標欄位對應。 可用的目標欄位由[建立目的地](#destination-details)時選取的目標對應決定。
 
 1. 識別強制屬性和重複資料刪除索引鍵。 請注意，標示為「必要」或「重複資料刪除索引鍵」的屬性中的值不可以是Null。
 
-   * [強制屬性](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 確認所有設定檔記錄皆包含所選屬性。 例如：所有匯出的設定檔都包含電子郵件地址。 建議將身分欄位和用作重複資料刪除索引鍵的欄位都設為強制性。
-   * [重複資料刪除索引鍵](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) 是主要索引鍵，可決定使用者希望為其設定檔進行重複資料刪除的身分識別。
+   * [必要屬性](../../ui/activate-batch-profile-destinations.md#mandatory-attributes)確定所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址。 建議將身分欄位和用作重複資料刪除索引鍵的欄位都設為強制性。
+   * [重複資料刪除索引鍵](../../ui/activate-batch-profile-destinations.md#mandatory-attributes)是決定使用者要為其設定檔進行重複資料刪除之身分的主索引鍵。
 
      >[!IMPORTANT]
      >
@@ -159,8 +159,8 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. 執行對應後，您可以檢閱並完成目的地設定，以開始將資料傳送至 **[!DNL Campaign]**.
-   [瞭解如何檢閱並完成目的地設定](/help/destinations/destination-types.md#review).
+1. 執行對應後，您可以檢閱並完成目的地設定，以開始傳送資料給&#x200B;**[!DNL Campaign]**。
+   [瞭解如何檢閱並完成目的地設定](/help/destinations/destination-types.md#review)。
 
 ## 匯出的資料/驗證資料匯出 {#exported-data}
 
@@ -168,18 +168,18 @@ Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台�
 
 ### 監視資料匯出作業 {#jobs}
 
-導覽至 **[!UICONTROL 管理]** > **[!UICONTROL 稽核]** > **[!UICONTROL 對象載入工作]** 功能表以監視從Adobe Experience Platform啟動的所有匯出作業。
+導覽至&#x200B;**[!UICONTROL 管理]** > **[!UICONTROL 稽核]** > **[!UICONTROL 對象載入工作]**&#x200B;功能表，以監視從Adobe Experience Platform啟用的所有匯出工作。
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### 存取匯出的資料 {#data}
 
-的 **[!UICONTROL 對象同步]**，您可以導覽至「 」以檢查匯出的對象， **[!UICONTROL 設定檔和目標]** > **[!UICONTROL 清單]** > **[!UICONTROL AEP對象]** 功能表。
+若為&#x200B;**[!UICONTROL 對象同步]**，您可以導覽至&#x200B;**[!UICONTROL 設定檔及目標]** > **[!UICONTROL 清單]** > **[!UICONTROL AEP對象]**&#x200B;功能表，以檢查匯出的對象。
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-的 **[!UICONTROL 設定檔同步（僅更新）]**，目的地中啟用的對象會定位的每個設定檔，其資料會自動更新至Campaign資料庫中。
+針對&#x200B;**[!UICONTROL 設定檔同步（僅更新）]**，資料會自動更新至目的地中啟用的對象所定位之每個設定檔的Campaign資料庫。
 
 ## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，讀取 [資料控管概觀](/help/data-governance/home.md).
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請閱讀[資料控管概觀](/help/data-governance/home.md)。

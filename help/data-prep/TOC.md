@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 57%
+ht-degree: 60%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 57%
 - [對應集](mapping-set.md)
 - [串流更新插入](upserts.md)
 - [疑難排解指南](troubleshooting-guide.md)
-- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

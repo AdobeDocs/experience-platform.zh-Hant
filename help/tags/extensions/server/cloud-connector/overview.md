@@ -4,8 +4,8 @@ description: 瞭解Adobe Experience Platform中的Cloud Connector事件轉送擴
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
 source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
 workflow-type: tm+mt
-source-wordcount: '1616'
-ht-degree: 87%
+source-wordcount: '1356'
+ht-degree: 83%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 雲端聯結器事件轉送擴充功能可讓您建立自訂HTTP請求，以將資料傳送至目的地或從目的地擷取資料。 Cloud Connector 擴充功能就像 Adobe Experience Platform Edge Network 的郵差一樣，可將資料傳送至尚未具備專屬擴充功能的端點。
 
@@ -25,7 +25,7 @@ ht-degree: 87%
 
 ### 要求類型
 
-若要選取端點所需的要求型別，請在 [!UICONTROL 請求型別] 下拉式清單。
+若要選取端點所需的要求型別，請在[!UICONTROL 要求型別]下拉式清單中選取適當的型別。
 
 | 方法 | 說明 |
 |---|---|
@@ -47,13 +47,13 @@ ht-degree: 87%
 
 為您要以查詢字串參數形式傳送的每個索引鍵/值組定義索引鍵和值。若要手動輸入資料元素，請使用大括弧資料元素代碼化進行事件轉送。 若要以索引鍵或值的形式參照資料元素「siteSection」的值，請輸入 `{{siteSection}}`。或者，您也可以從下拉式選單中選取先前建立的資料元素。
 
-若要新增更多查詢引數，請選取 **[!UICONTROL 新增其他]**.
+若要新增更多查詢引數，請選取&#x200B;**[!UICONTROL 新增其他]**。
 
 #### 標頭
 
 為您要以標頭傳送的每個索引鍵/值組定義索引鍵和值。若要手動輸入資料元素，請使用大括弧資料元素代碼化進行事件轉送。 若要以索引鍵或值的形式參照資料元素「pageName」的值，請輸入 `{{pageName}}`。或者，您也可以從下拉式選單中選取先前建立的資料元素。
 
-若要新增更多標頭，請選取 **[!UICONTROL 新增其他]**.
+若要新增其他標頭，請選取&#x200B;**[!UICONTROL 新增其他]**。
 
 預先定義的標頭如下表所示。不僅限使用下列標頭，您也可以視需求新增專屬的自訂標頭，以便使用。
 
@@ -63,11 +63,11 @@ ht-degree: 87%
 
 | 標頭 | 說明 |
 |---|---|
-| [A-IM](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) |  |
-| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
-| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
+| [A-IM](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) | |
+| [Accept](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) | |
+| [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) | |
+| [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) | |
+| [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) | |
 | [Accept-Datetime](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/Accept) | 由使用者代理程式傳送，表示想存取原始資源的過去狀態。為此，針對原始資源 TimeGate 所發送的 HTTP 要求中會傳送 `Accept-Datetime` 標頭，其值表示所需原始資源過去狀態的日期時間。 |
 | Access-Control-Request-Headers | 瀏覽器在發出[預檢要求](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request)時使用，讓伺服器知道用戶端提出實際要求時，可能會傳送哪些 [HTTP 標頭](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)。 |
 | Access-Control-Request-Method | 瀏覽器在發出[預檢要求](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request)時使用，讓伺服器知道用戶端提出實際要求時可能會使用哪種 [HTTP 方法](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)。此標頭為必填項目，因為預檢要求一概都是 [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS)，且不使用與實際要求相同的方法。 |
@@ -83,30 +83,30 @@ ht-degree: 87%
 | Forwarded | 包含來自[反向 Proxy 伺服器](https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)的資訊，但在要求路徑涉及 Proxy 時，資訊遭到更改或遺失。 |
 | From | 包含真人使用者的網際網路電子郵件地址，發出要求的使用者代理程式由該使用者控制。 |
 | Host | 指定要求預計抵達的伺服器主機和連接埠號碼。 |
-| If-Match |  |
-| If-Modified-Since |  |
-| [If-None-Match](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) |  |
-| [If-Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) |  |
-| [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) |  |
-| [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) |  |
-| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | 實作專用標頭，可能會在要求回應鏈的任何位置產生多種效果，功用是與未有 Cache-Control 標頭的 HTTP/1.0 快取回溯相容。 |  |
+| If-Match | |
+| If-Modified-Since | |
+| [If-None-Match](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-None-Match) | |
+| [If-Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Range) | |
+| [If-Unmodified-Since](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Max-Forwards](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
+| [Origin](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin) | |
+| [Pragma](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Pragma) | 實作專用標頭，可能會在要求回應鏈的任何位置產生多種效果，功用是與未有 Cache-Control 標頭的 HTTP/1.0 快取回溯相容。 | |
 | [Proxy-Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | 表示伺服器應傳回的文件部分。 |  |
-| [Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | 上一個網頁的網址，使用者在此點選連結，前往當前所要求存取的頁面。 |  |
+| [Range](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Range) | 表示伺服器應傳回的文件部分。 | |
+| [Referer](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) | 上一個網頁的網址，使用者在此點選連結，前往當前所要求存取的頁面。 | |
 | TE | 指定使用者代理程式願意接受的傳輸編碼(較直觀的名稱為 `Accept-Transfer-Encoding`)。 |
-| Upgrade | 「[`Upgrade`」標頭欄位的相關 RFC 文件為 RFC 7230 第 6.7 節](https://tools.ietf.org/html/rfc7230#section-6.7)。該標準建立了在當前用戶端、伺服器、傳輸通訊協定連線上升級或改用其他通訊協定的規則。例如，只要伺服器決定認可並實作「`Upgrade`」標頭欄位，此標頭即可標準允許用戶端從 HTTP 1.1 變更為 HTTP 2.0。雙方均不需接受「`Upgrade`」標頭欄位中指定的條款。用戶端和伺服器標頭皆可適用。如果指定「`Upgrade`」標頭欄位，傳送者必須指定「`upgrade`」選項以傳送「`Connection`」標頭欄位。 |  |
+| Upgrade | 「[`Upgrade`」標頭欄位的相關 RFC 文件為 RFC 7230 第 6.7 節](https://tools.ietf.org/html/rfc7230#section-6.7)。該標準建立了在當前用戶端、伺服器、傳輸通訊協定連線上升級或改用其他通訊協定的規則。例如，只要伺服器決定認可並實作「`Upgrade`」標頭欄位，此標頭即可標準允許用戶端從 HTTP 1.1 變更為 HTTP 2.0。雙方均不需接受「`Upgrade`」標頭欄位中指定的條款。用戶端和伺服器標頭皆可適用。如果指定「`Upgrade`」標頭欄位，傳送者必須指定「`upgrade`」選項以傳送「`Connection`」標頭欄位。 | |
 | [User-Agent](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers/User-Agent) | 包含特徵字串，供同級的網路通訊協定識別發出要求的軟體使用者代理程式，了解其應用程式類型、作業系統、軟體廠商或軟體版本等詳細資訊。 |
 | [Via](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Via) | 由正向和反向 Proxy 新增，可顯示於要求標頭和回應標頭中。 |
 | [Warning](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Warning) | 潛在問題的一般警告資訊。 |
-| X-CSRF-Token |  |
-| X-Requested-With |  |
+| X-CSRF-Token | |
+| X-Requested-With | |
 
 #### Body as JSON
 
 為您要在要求內文中傳送的每個索引鍵/值組定義索引鍵和值。若要手動輸入資料元素，請使用大括弧資料元素代碼化進行事件轉送。 若要以索引鍵或值的形式參照資料元素「appSection」的值，請輸入 `{{appSection}}`。或者，您也可以從下拉式選單中選取先前建立的資料元素。
 
-若要新增其他索引鍵/值組，請選取 **[!UICONTROL 新增其他]**.
+若要新增其他索引鍵/值組，請選取&#x200B;**[!UICONTROL 新增其他]**。
 
 #### Body as Raw
 
@@ -116,7 +116,7 @@ ht-degree: 87%
 
 事件轉送中規則內的動作會依序執行。 某些情況下，您或許可以從外部來源擷取不在用戶端傳入事件上的資料，然後接受此回應，並在單一規則內的後續動作中轉換資料或將資料傳送至最終目的地。進階區段中的「儲存要求回應」會啟用此功能。
 
-若要儲存端點的回應內文，請檢查 **[!UICONTROL 儲存請求回應]** 方塊中，並在文字欄位中定義回應索引鍵。
+若要儲存端點的回應內文，請勾選&#x200B;**[!UICONTROL 儲存要求回應]**&#x200B;方塊，並在文字欄位中定義回應索引鍵。
 
 如果您已將回應索引鍵定義為「`productDetails`」，請在資料元素中參照此資料，接著在同一規則的後續動作中參照此資料元素。若要建立參照「`productDetail`」的資料元素，請建立「`path`」類型的資料元素，並輸入以下路徑：
 

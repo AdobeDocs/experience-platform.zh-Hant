@@ -15,57 +15,57 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->帳戶對象僅適用於 [Real-time Customer Data Platform的B2B版本](../../rtcdp/overview.md#rtcdp-b2b) 和 [Real-time Customer Data Platform的B2P版本](../../rtcdp/overview.md#rtcdp-b2p).
+>帳戶對象僅可在Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b)的[B2B版本和Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p)的[B2P版本中使用。
 
 透過帳戶細分，Adobe Experience Platform可讓您從以人物為基礎的受眾到以帳戶為基礎的受眾，使用完整且精密的行銷細分體驗。
 
-帳戶對象可用於作為以帳戶為基礎的目的地的輸入，讓您在下游服務中鎖定這些帳戶內的人員。 例如，您可以使用以帳戶為基礎的受眾來擷取所有已建立帳戶的記錄 **非** 擁有首席營運官(COO)或首席行銷官(CMO)職銜之人員的聯絡資訊。
+帳戶對象可用於作為以帳戶為基礎的目的地的輸入，讓您在下游服務中鎖定這些帳戶內的人員。 例如，您可以使用以帳戶為基礎的受眾來擷取&#x200B;**不**&#x200B;擁有任何職銜為首席營運官(COO)或首席行銷官(CMO)之人員的聯絡資訊的所有帳戶記錄。
 
 ## 術語 {#terminology}
 
 開始使用帳戶對象之前，請先檢閱不同對象型別之間的差異：
 
-- **帳戶對象**：帳戶對象是使用建立的對象 **帳戶** 設定檔資料。 帳戶設定檔資料可用來建立受眾，將下游帳戶內的人員設為目標。 如需帳戶設定檔的詳細資訊，請參閱 [帳戶設定檔概述](../../rtcdp/accounts/account-profile-overview.md).
-- **People對象**：People對象是使用建立的對象 **客戶** 設定檔資料。 客戶設定檔資料可用來建立以您企業的客戶為目標之對象。 如需客戶設定檔的詳細資訊，請參閱 [即時客戶個人檔案總覽](../../profile/home.md).
-- **潛在客戶對象**：潛在客戶對象是使用建立的對象 **潛在客戶** 設定檔資料。 潛在客戶設定檔資料可用來從未經驗證的使用者建立對象。 如需潛在客戶設定檔的詳細資訊，請參閱 [潛在客戶設定檔概述](../../profile/ui/prospect-profile.md).
+- **帳戶對象**：帳戶對象是使用&#x200B;**帳戶**&#x200B;設定檔資料建立的對象。 帳戶設定檔資料可用來建立受眾，將下游帳戶內的人員設為目標。 如需帳戶設定檔的詳細資訊，請閱讀[帳戶設定檔總覽](../../rtcdp/accounts/account-profile-overview.md)。
+- **People對象**： People對象是使用&#x200B;**客戶**&#x200B;設定檔資料建立的對象。 客戶設定檔資料可用來建立以您企業的客戶為目標之對象。 如需客戶設定檔的詳細資訊，請閱讀[即時客戶設定檔總覽](../../profile/home.md)。
+- **潛在客戶對象**：潛在客戶對象是使用&#x200B;**潛在客戶**&#x200B;設定檔資料建立的對象。 潛在客戶設定檔資料可用來從未經驗證的使用者建立對象。 如需潛在客戶設定檔的詳細資訊，請閱讀[潛在客戶設定檔概觀](../../profile/ui/prospect-profile.md)。
 
 ## 存取 {#access}
 
-若要存取帳戶對象，請選取「 」 **[!UICONTROL 受眾]** 在 **[!UICONTROL 帳戶]** 區段。
+若要存取帳戶對象，請在&#x200B;**[!UICONTROL 帳戶]**&#x200B;區段中選取&#x200B;**[!UICONTROL 對象]**。
 
-![Accounts區段內的Audiences按鈕會醒目提示。](../images/ui/account-audiences/select.png)
+![[帳戶]區段中的[對象]按鈕會反白顯示。](../images/ui/account-audiences/select.png)
 
-此 [!UICONTROL 瀏覽] 頁面隨即顯示，顯示組織所有帳戶對象的清單。
+顯示[!UICONTROL 瀏覽]頁面，顯示組織所有帳戶對象的清單。
 
-![隨即顯示屬於組織的帳戶對象。](../images/ui/account-audiences/browse.png)
+![顯示屬於組織的帳戶對象。](../images/ui/account-audiences/browse.png)
 
 此檢視會列出對象的相關資訊，包括名稱、設定檔計數、來源、生命週期狀態、建立日期和上次更新日期。
 
-您也可以使用搜尋和篩選功能，快速搜尋及排序特定帳戶對象。 有關此功能的詳細資訊，請參閱 [Audience Portal概述](./audience-portal.md#manage-audiences).
+您也可以使用搜尋和篩選功能，快速搜尋及排序特定帳戶對象。 如需有關此功能的詳細資訊，請參閱[對象入口網站概觀](./audience-portal.md#manage-audiences)。
 
 ## 建立對象 {#create}
 
 >[!NOTE]
 >
->使用評估帳戶對象 **批次** 區段，並將每24小時評估一次。
+>帳戶對象是使用&#x200B;**批次**&#x200B;細分評估，每24小時評估一次。
 
-若要建立帳戶對象，請選取 **[!UICONTROL 建立對象]** 於 [!UICONTROL 瀏覽] 頁面。
+若要建立帳戶對象，請在[!UICONTROL 瀏覽]頁面上選取&#x200B;**[!UICONTROL 建立對象]**。
 
-![此 [!UICONTROL 建立對象] 按鈕會在帳戶對象瀏覽頁面上反白顯示。](../images/ui/account-audiences/select-create-audience.png)
+![帳戶對象瀏覽頁面會醒目顯示[!UICONTROL 建立對象]按鈕。](../images/ui/account-audiences/select-create-audience.png)
 
-「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在 [!UICONTROL 屬性] 索引標籤上，您可以同時新增Platform建立和自訂屬性。
+「區段產生器」隨即顯示。 帳戶屬性和對象會顯示在左側導覽列上。 在[!UICONTROL 屬性]標籤下，您可以同時新增Platform建立和自訂屬性。
 
-![隨即顯示「區段產生器」。 請注意，只會顯示屬性和對象。](../images/ui/account-audiences/segment-builder.png)
+![會顯示區段產生器。 請注意，只會顯示屬性和對象。](../images/ui/account-audiences/segment-builder.png)
 
-建立帳戶對象時，請注意，事件會列於 **[!UICONTROL 人員]**，而非他們自己的標籤，因為這些屬性會與人員相關聯。
+建立帳戶對象時，請注意，事件列在&#x200B;**[!UICONTROL 人員]**&#x200B;下，而不是作為自己的標籤，因為這些屬性與人員相關聯。
 
-![尋找事件的位置，位於 [!UICONTROL 人員] 資料夾)會反白顯示。](../images/ui/account-audiences/attributes.png)
+![在[!UICONTROL People]資料夾中尋找事件的位置會反白顯示。](../images/ui/account-audiences/attributes.png)
 
-在 [!UICONTROL 受眾] 索引標籤上，您可以新增先前建立的以人物為基礎的對象，以便在建立您自己的帳戶對象時由建置。
+在[!UICONTROL 對象]標籤下方，您可以新增先前建立的以人物為基礎的對象，以便在建立您自己的帳戶對象時建置。
 
-![「區段產生器」內的「對象」索引標籤會醒目提示。](../images/ui/account-audiences/audiences.png)
+![區段產生器內的「對象」索引標籤會醒目提示。](../images/ui/account-audiences/audiences.png)
 
-如需使用「區段產生器」的詳細資訊，請參閱 [區段產生器UI指南](./segment-builder.md).
+如需使用區段產生器的詳細資訊，請參閱[區段產生器UI指南](./segment-builder.md)。
 
 ## 啟用客群 {#activate}
 
@@ -75,15 +75,15 @@ ht-degree: 27%
 
 建立帳戶對象後，您可以對其他下游服務啟用對象。
 
-選取您要啟用的對象，然後 **[!UICONTROL 啟用到目的地]**.
+選取您要啟用的對象，然後選取&#x200B;**[!UICONTROL 啟用到目的地]**。
 
-![此 [!UICONTROL 啟用到目的地] 在所選對象的「快速動作」功能表中，按鈕會反白顯示。](../images/ui/account-audiences/activate.png)
+![在選取對象的快速動作功能表中，[!UICONTROL 啟用至目的地]按鈕會醒目提示。](../images/ui/account-audiences/activate.png)
 
-此 [!UICONTROL 啟用目的地] 頁面便會顯示。 如需啟用程式的詳細資訊，包括支援的目的地和欄位對應的詳細資訊，請參閱 [啟用帳戶對象](/help/destinations/ui/activate-account-audiences.md) 教學課程。
+[!UICONTROL 啟用目的地]頁面隨即顯示。 如需啟動程式的詳細資訊，包括支援的目的地以及欄位對應的詳細資訊，請參閱[啟動帳戶對象](/help/destinations/ui/activate-account-audiences.md)教學課程。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本指南後，您現在已更瞭解如何在Adobe Experience Platform中建立和使用您的帳戶對象。 若要瞭解如何在Platform中使用其他型別的對象，請參閱 [Segmentation Service UI指南](./overview.md).
+閱讀本指南後，您現在已更瞭解如何在Adobe Experience Platform中建立和使用您的帳戶對象。 若要瞭解如何在Platform中使用其他型別的對象，請參閱[Segmentation Service UI指南](./overview.md)。
 
 ## 附錄 {#appendix}
 
@@ -161,24 +161,24 @@ ht-degree: 27%
 >title="違反限制"
 >abstract="對象違反限制。請閱讀連結的文件以了解更多詳細資訊。"
 
-使用帳戶對象時，該對象 **必須** 請遵循下列限制：
+使用帳戶對象時，對象&#x200B;**必須**&#x200B;符合下列限制：
 
 >[!NOTE]
 >
->下列清單顯示 **預設** 帳戶對象的限制。 這些值 **五月** 會根據您組織管理員實作的設定而變更。
+>下列清單顯示帳戶對象的&#x200B;**預設**&#x200B;限制。 這些值&#x200B;**可能**&#x200B;會依據您組織管理員實作的設定而變更。
 
-- 體驗事件的最大回顧期間為 **30天**.
-- 巢狀容器的最大深度為 **5**.
+- 體驗事件的回顧期間上限為&#x200B;**30天**。
+- 巢狀容器的最大深度為&#x200B;**5**。
    - 這表示建立對象時，**不能**&#x200B;有超過五個巢狀容器。
-- 單一容器內的規則數量上限為 **5**.
-   - 這表示您的對象 **無法** 有五個以上的規則組成您的對象。
-- 可使用的跨實體最大數量為 **5**.
+- 單一容器內的規則數目上限為&#x200B;**5**。
+   - 這表示您的對象&#x200B;**不能**&#x200B;有超過五個規則組成您的對象。
+- 可使用的跨實體數目上限為&#x200B;**5**。
    - 跨實體是指您在對象內不同實體之間進行切換。例如，從帳戶到人員再到行銷清單。
-- 自訂實體 **無法** 使用。
+- 無法使用自訂實體&#x200B;****。
 - 單一欄位可以檢查的值數量上限為 **50**。
    - 例如，如果您有「城市名稱」欄位，您可以根據50個城市名稱檢查該值。
-- 帳戶對象 **無法** 使用 `inSegment` 事件。
-- 帳戶對象 **無法** 使用循序事件。
-- 帳戶對象 **無法** 使用地圖。
+- 帳戶對象&#x200B;**無法**&#x200B;使用`inSegment`個事件。
+- 帳戶對象&#x200B;**不能**&#x200B;使用循序事件。
+- 帳戶對象&#x200B;**無法**&#x200B;使用地圖。
 - 巢狀陣列深度上限為 **5**。
-- 巢狀物件的最大數量為 **10**.
+- 巢狀物件的數量上限為&#x200B;**10**。

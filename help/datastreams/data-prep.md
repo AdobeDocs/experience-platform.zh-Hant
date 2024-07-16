@@ -25,14 +25,14 @@ ht-degree: 60%
 
 在兩種使用案例中，「資料收集的資料準備」很有用：
 
-1. 網站具有格式正確、受控管和維護的資料層，且偏好直接傳送至Edge Network，而非使用JavaScript操作在頁面上將其轉換為XDM （透過Tags資料元素或手動JavaScript操作）。
+1. 網站具有格式正確、受控管和維護的資料層，且偏好直接傳送給Edge Network，而非使用JavaScript操作在頁面上將其轉換為XDM (透過標籤資料元素或手動JavaScript操作)。
 2. 網站上會部署標籤系統以外的標籤系統。
 
-## 透過WebSDK將現有的資料層傳送至Edge Network {#send-datalayer-via-websdk}
+## 透過WebSDK傳送現有資料層給Edge Network {#send-datalayer-via-websdk}
 
-現有的資料層必須使用 [`data`](/help/web-sdk/commands/sendevent/data.md) 內的物件 `sendEvent` 命令。
+必須使用`sendEvent`命令內的[`data`](/help/web-sdk/commands/sendevent/data.md)物件來傳送現有的資料層。
 
-如果您使用標籤，則必須使用 **[!UICONTROL 資料]** 欄位屬於 **[!UICONTROL 傳送事件]** 動作型別，如 [Web SDK標籤擴充功能檔案](/help/tags/extensions/client/web-sdk/action-types.md).
+如果您使用標籤，則必須使用&#x200B;**[!UICONTROL 傳送事件]**&#x200B;動作型別的&#x200B;**[!UICONTROL 資料]**&#x200B;欄位，如[Web SDK標籤擴充功能檔案](/help/tags/extensions/client/web-sdk/action-types.md)所述。
 
 本指南的其餘部分著重於在WebSDK傳送資料層後，如何將資料層對應至XDM標準。
 
@@ -54,7 +54,7 @@ ht-degree: 60%
 
 完成資料流的基本設定之後，請選取「**[!UICONTROL 儲存並新增對應]**」，「**[!UICONTROL 選取資料]**」步驟會隨即顯示。在這裡，您必須提供一個 JSON 物件範例 (代表您計劃傳送到 Platform 的資料的結構)。
 
-若要直接從資料層擷取屬性，JSON 物件必須具有單一根屬性`data`。的子屬性 `data` 物件之後應該會以對應至您要擷取的資料層屬性的方式建構。 請選取以下區段，即可檢視正確格式化並具有 `data` 根的 JSON 物件範例。
+若要直接從資料層擷取屬性，JSON 物件必須具有單一根屬性`data`。然後應該以對應至您要擷取的資料層屬性的方式建構`data`物件的子屬性。 請選取以下區段，即可檢視正確格式化並具有 `data` 根的 JSON 物件範例。
 
 +++具有 `data` 根的 JSON 檔案範例
 
@@ -154,7 +154,7 @@ ht-degree: 60%
 
 您可以選取將物件以檔案形式上傳的選項，或選擇將原始物件貼到所提供的文字方塊中。如果 JSON 有效，則會在右側面板中顯示預覽綱要。選取&#x200B;**[!UICONTROL 「下一步」]**&#x200B;以繼續。
 
-![預期傳入資料的JSON範例。](assets/data-prep/select-data.png)
+預期傳入資料的![JSON範例。](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -164,18 +164,18 @@ ht-degree: 60%
 
 **[!UICONTROL 對應]**&#x200B;步驟隨即顯示，可讓您將來源資料中的欄位對應到 Platform 中目標事件綱要的欄位。在這裡，您可以使用兩種方式設定對應：
 
-* [建立對應規則](#create-mapping) 用於此資料流。
+* [透過手動程式為此資料流建立對應規則](#create-mapping)。
 * 從現有資料流[匯入對應規則](#import-mapping)。
 
 ### 建立對應規則 {#create-mapping}
 
-若要建立對應規則，請選取 **[!UICONTROL 新增對應]**.
+若要建立對應規則，請選取&#x200B;**[!UICONTROL 新增對應]**。
 
-![新增對應。](assets/data-prep/add-new-mapping.png)
+![正在新增對應。](assets/data-prep/add-new-mapping.png)
 
 選取來源圖示 (![來源圖示](assets/data-prep/source-icon.png))，然後在顯示的對話框中選取要在所提供的畫布中對應的來源欄位。選擇欄位後，請使用「**[!UICONTROL 選取]**」按鈕以繼續進行。
 
-![選取要在來源結構描述中對應的欄位。](assets/data-prep/source-mapping.png)
+![正在來源結構描述中選取要對應的欄位。](assets/data-prep/source-mapping.png)
 
 接下來，選取綱要圖示 (![綱要圖示](assets/data-prep/schema-icon.png))，開啟目標事件綱要的類似對話框。選擇要將資料對應到的欄位，然後再確認「**[!UICONTROL 選取]**」。
 
@@ -201,11 +201,11 @@ ht-degree: 60%
 
 若要開始，請選取&#x200B;**[!UICONTROL 匯入對應]**。
 
-![正在選取匯入對應按鈕。](assets/data-prep/import-mapping-button.png)
+正在選取![匯入對應按鈕。](assets/data-prep/import-mapping-button.png)
 
 在顯示的對話框中，選取要匯入其對應規則的資料流。選擇資料流後，請選取&#x200B;**[!UICONTROL 預覽]**。
 
-![選取現有的資料流。](assets/data-prep/select-mapping-rules.png)
+![正在選取現有的資料流。](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ ht-degree: 60%
 
 下一個畫面會顯示選取的資料流已儲存之對應規則的預覽。請確保顯示的對應符合您的預期，然後選取&#x200B;**[!UICONTROL 匯入]**，以確認對應並將其新增到新資料流。
 
-![要匯入的對映規則。](assets/data-prep/import-mapping-rules.png)
+![要匯入的對應規則。](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -223,7 +223,7 @@ ht-degree: 60%
 
 繼續依照上述步驟將其餘的欄位對應到目標綱要。雖然您不必對應所有可用的來源欄位，但目標結構描述中設定為必要的任何欄位都必須對應，才能完成此步驟。 **[!UICONTROL 必要欄位]**&#x200B;計數器會顯示目前的設定中有多少個必要欄位尚未對應。
 
-必填欄位計數達到零且對對應滿意後，選擇 **[!UICONTROL 儲存]** 以完成變更。
+當必要的欄位數達到零且您對對應感到滿意後，請選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成變更。
 
 ![對應完成](assets/data-prep/mapping-complete.png)
 

@@ -20,9 +20,9 @@ ht-degree: 81%
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
 >title="建立實例"
->abstract="產生資產清單 (例如旅程、對象、綱要或目的地) 以在旅程或啟動情境中使用。"
+>abstract="產生資產清單 (例如旅程、對象、結構描述或目的地) 以在旅程或啟動情境中使用。"
 
-在建立教戰手冊例項之前，請先探索可用的教戰手冊，以 [選擇正確的行動手冊](/help/use-case-playbooks/playbooks/choose.md). 當您準備好繼續使用教戰手冊並建立執行個體時，請選取&#x200B;**[!UICONTROL 建立執行個體]**&#x200B;以繼續使用教戰手冊並產生技術資產。
+在建立教戰手冊執行個體之前，請先探索可用的教戰手冊，以[選擇正確的教戰手冊](/help/use-case-playbooks/playbooks/choose.md)。 當您準備好繼續使用教戰手冊並建立執行個體時，請選取&#x200B;**[!UICONTROL 建立執行個體]**&#x200B;以繼續使用教戰手冊並產生技術資產。
 
 ![建立教戰手冊的執行個體。](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -63,7 +63,7 @@ ht-degree: 81%
 >
 >在開發沙箱中進行測試，準備就緒後即可移動到生產環境。
 >
->物件產生後，只要新增資料，即可在開發沙箱中繼續測試。只要您想在開發沙箱中測試資產，就可以在準備就緒時，在生產沙箱中複製資產邏輯（對象定義、歷程、結構描述等）。 您可以使用移至開發沙箱，然後移至生產沙箱。 [資料感知功能](/help/use-case-playbooks/playbooks/data-awareness.md).
+>物件產生後，只要新增資料，即可在開發沙箱中繼續測試。只要您想在開發沙箱中測試資產，就可以在準備就緒時，在生產沙箱中複製資產邏輯（對象定義、歷程、結構描述等）。 您可以使用[資料感知功能](/help/use-case-playbooks/playbooks/data-awareness.md)，先移至開發沙箱，然後再移至生產沙箱。
 
 ## 重複使用教戰手冊 {#reuse-playbooks}
 

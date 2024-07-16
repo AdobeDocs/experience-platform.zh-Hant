@@ -12,4 +12,4 @@ ht-degree: 34%
 
 # Experience Platform的協助工具例外和因應措施
 
-目前Experience Platform中的因應措施沒有明顯的例外狀況。
+目前Experience Platform中的因應措施沒有已注意的例外。

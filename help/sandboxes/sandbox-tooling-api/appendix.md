@@ -4,14 +4,14 @@ description: 本檔案提供與使用沙箱工具API相關的補充資訊。
 exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 1%
 
 ---
 
 # Sandbox API指南附錄
 
-本檔案提供使用 [!DNL Sandbox] API。
+本檔案提供與使用[!DNL Sandbox] API相關的補充資訊。
 
 ## 使用查詢引數 {#query}
 
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->此 `limit` 可個別傳遞和啟動。
+>`limit`可以個別傳遞和啟動。
 
 | 參數 | 說明 |
 | --- | --- |

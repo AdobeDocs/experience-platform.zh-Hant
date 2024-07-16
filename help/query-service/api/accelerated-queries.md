@@ -12,19 +12,19 @@ ht-degree: 1%
 
 # 加速的查詢端點
 
-在Data Distiller SKU中， [查詢服務API](https://developer.adobe.com/experience-platform-apis/references/query-service/) 可讓您對accelerated store進行無狀態查詢。 傳回的結果會根據彙總的資料。 減少結果的延遲可讓您以更具互動性的方式交換資訊。 加速的查詢API也用於提供動力 [使用者定義儀表板](../../dashboards/user-defined-dashboards.md).
+作為Data Distiller SKU的一部分，[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/)可讓您對加速存放區進行無狀態查詢。 傳回的結果會根據彙總的資料。 減少結果的延遲可讓您以更具互動性的方式交換資訊。 加速的查詢API也用來支援[使用者定義儀表板](../../dashboards/user-defined-dashboards.md)。
 
-在繼續本指南之前，請確定您已閱讀並瞭解 [查詢服務API指南](./getting-started.md) 以成功使用查詢服務API。
+繼續本指南之前，請確定您已閱讀並瞭解[查詢服務API指南](./getting-started.md)，以便成功使用查詢服務API。
 
 ## 快速入門
 
-需要Data Distiller SKU才能使用查詢加速存放區。 請參閱 [封裝](../packaging.md) 和 [護欄](../guardrails.md#query-accelerated-store)、和 [授權](../data-distiller/license-usage.md) 與資料Distiller SKU相關的檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
+需要Data Distiller SKU才能使用查詢加速存放區。 請參閱[封裝](../packaging.md)和[護欄](../guardrails.md#query-accelerated-store)，以及與Data Distiller SKU相關的[授權](../data-distiller/license-usage.md)檔案。 如果您沒有Data Distiller SKU，請聯絡您的Adobe客戶服務代表以取得更多資訊。
 
 以下幾節將詳細介紹透過查詢服務API以無狀態方式存取查詢加速存放區所需的API呼叫。 每個呼叫都包含一般API格式、顯示必要標題的範例要求以及範例回應。
 
 ## 執行加速查詢 {#run-accelerated-query}
 
-向發出POST請求 `/accelerated-queries` 端點以執行加速查詢。 查詢直接包含在請求承載中，或使用範本ID參照。
+向`/accelerated-queries`端點發出POST要求以執行加速查詢。 查詢直接包含在請求承載中，或使用範本ID參照。
 
 **API格式**
 
@@ -36,7 +36,7 @@ POST /accelerated-queries
 
 >[!IMPORTANT]
 >
->要求 `/accelerated-queries` 端點需要SQL陳述式或範本ID，但不是兩者都需要。 在請求中提交兩者會產生錯誤。
+>對`/accelerated-queries`端點的要求需要SQL陳述式或範本ID，但不是兩者都需要。 在請求中提交兩者會產生錯誤。
 
 下列請求會將請求內文中的SQL查詢提交至加速存放區。
 
@@ -80,9 +80,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 
 | 屬性 | 說明 |
 |---|---|
-| `dbName` | 您對其執行加速查詢的資料庫名稱。 的值 `dbName` 應採用格式 `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. 提供的資料庫必須存在於加速存放區中，否則請求會導致錯誤。 您也必須確保 `x-sandbox-name` 中的標題和沙箱名稱 `dbName` 請參閱相同沙箱。 |
+| `dbName` | 您對其執行加速查詢的資料庫名稱。 `dbName`的值應採用`{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`格式。 提供的資料庫必須存在於加速存放區中，否則請求會導致錯誤。 您也必須確保`dbName`中的`x-sandbox-name`標頭和沙箱名稱參照相同的沙箱。 |
 | `sql` | SQL陳述式字串。 允許的大小上限為1000000個字元。 |
-| `templateId` | 向發出POST請求時建立並儲存為範本的查詢的唯一識別碼 `/templates` 端點。 |
+| `templateId` | 向`/templates`端點發出POST請求時，建立並儲存為範本之查詢的唯一識別碼。 |
 | `name` | 加速查詢的選擇性人性化描述性名稱。 |
 | `description` | 有關查詢意圖的可選評論，可幫助其他使用者瞭解其用途。 允許的大小上限為1000個位元組。 |
 
@@ -209,6 +209,6 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 | `resultsMeta` | 此物件包含結果中傳回之每個欄的中繼資料，讓使用者知道每個欄的名稱和型別。 |
 | `resultsMeta._adhoc` | 臨機Experience Data Model (XDM)結構描述中的欄位已命名為僅供單一資料集使用。 |
 | `resultsMeta._adhoc.type` | 臨時結構描述的資料型別。 |
-| `resultsMeta._adhoc.meta:xdmType` | 這是XDM欄位型別的系統產生值。 如需可用型別的詳細資訊，請參閱以下檔案： [可用的XDM型別](../../xdm/tutorials/custom-fields-api.md). |
+| `resultsMeta._adhoc.meta:xdmType` | 這是XDM欄位型別的系統產生值。 如需可用型別的詳細資訊，請參閱有關[可用XDM型別](../../xdm/tutorials/custom-fields-api.md)的檔案。 |
 | `resultsMeta._adhoc.properties` | 這些是查詢資料集的欄名稱。 |
 | `resultsMeta._adhoc.results` | 這些是查詢資料集的列名稱。 它們會反映每個傳回的欄。 |

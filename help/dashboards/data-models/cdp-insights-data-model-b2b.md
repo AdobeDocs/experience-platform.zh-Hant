@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights資料模型B2B版本
 
-B2B Edition的Real-time Customer Data Platform Insights資料模型會公開支援深入分析的資料模型和SQL [帳戶設定檔](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). 您可以自訂這些SQL查詢範本，以建立B2B行銷和關鍵績效指標(KPI)使用案例的Real-Time CDP報表。 這些深入分析接著可作為控制面板的自訂Widget使用。
+B2B版本的Real-time Customer Data Platform Insights資料模型會公開支援[帳戶設定檔](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview)深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以建立B2B行銷和關鍵績效指標(KPI)使用案例的Real-Time CDP報表。 這些深入分析接著可作為控制面板的自訂Widget使用。
 
 >[!AVAILABILITY]
 >
->已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 請參閱相關的檔案，瞭解可用 [Real-Time CDP版本](../../rtcdp/overview.md#rtcdp-editions) 如需詳細資訊，或聯絡您的Adobe代表。
+>已購買Real-Time CDP Prime和Ultimate套件的客戶可使用此功能。 如需詳細資訊，請參閱可用[Real-Time CDP版本](../../rtcdp/overview.md#rtcdp-editions)的相關檔案，或聯絡您的Adobe代表。
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## 先決條件
 
-本指南需要深入瞭解自訂儀表板。 請閱讀以下檔案： [如何建立自訂儀表板](../user-defined-dashboards.md) 再繼續本指南。
+本指南需要深入瞭解自訂儀表板。 在繼續本指南之前，請先閱讀有關[如何建立自訂儀表板](../user-defined-dashboards.md)的檔案。
 
 ## Real-Time CDP B2B深入分析報表與使用案例 {#B2B-insight-reports-and-use-cases}
 
@@ -52,13 +52,13 @@ Real-Time CDP B2B報告提供您帳戶設定檔資料以及帳戶與商機之間
 
 #### 依產業使用案例的新帳戶 {#accounts-by-industry}
 
-用於的邏輯 [!UICONTROL 依產業的新帳戶] insight會根據帳戶設定檔的數量及彼此的相對大小，傳回前五大產業。 請參閱 [[!UICONTROL 依產業的新帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-industry) 以取得詳細資訊。
+[!UICONTROL 依產業分類的新帳戶]分析所使用的邏輯，會根據帳戶設定檔的數目和彼此的相對大小，傳回前五個產業。 如需詳細資訊，請參閱[[!UICONTROL 依產業的新帳戶] Widget檔案](../guides/account-profiles.md#accounts-by-industry)。
 
 >[!TIP]
 >
 >您可以自訂此SQL查詢，以傳回大致前五個產業。
 
-產生 [!UICONTROL 依產業的新帳戶] 可在下方的可摺疊區段中看到深入分析。
+可摺疊的區段顯示依據產業]分析產生[!UICONTROL 新帳戶的SQL。
 
 +++SQL查詢
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### 新帳戶（依型別分類）使用案例 {#accounts-by-type}
 
-用於的邏輯 [!UICONTROL 新帳戶（依型別）] insight會傳回依型別劃分的帳戶數字細目。 此深入分析可協助引導業務策略與營運，包括資源分配或行銷策略。 請參閱 [[!UICONTROL 新帳戶（依型別）] Widget檔案](../guides/account-profiles.md#accounts-by-type) 以取得詳細資訊。
+依型別]分析用於[!UICONTROL 新帳戶的邏輯會傳回依型別劃分帳戶的數值明細。 此深入分析可協助引導業務策略與營運，包括資源分配或行銷策略。 如需詳細資訊，請參閱依型別]的[[!UICONTROL 新帳戶Widget檔案](../guides/account-profiles.md#accounts-by-type)。
 
-產生 [!UICONTROL 新帳戶（依型別）] 可在下方的可摺疊區段中看到深入分析。
+在下面的可摺疊區段中可看見依型別]分析產生[!UICONTROL 新帳戶的SQL。
 
 +++SQL查詢
 

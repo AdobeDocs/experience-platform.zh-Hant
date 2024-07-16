@@ -4,8 +4,8 @@ description: Adobe Experience Platform 2023 年 8 月版發行說明。
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1750'
-ht-degree: 93%
+source-wordcount: '1739'
+ht-degree: 92%
 
 ---
 
@@ -68,7 +68,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 同意分析和追蹤使用案例 | 瞭解如何針對各種行銷使用案例，使用建立Real-Time CDP資料的同意儀表板 [同意分析和追蹤檔案](../../dashboards/insights-use-cases/consent-analysis.md). 此文件會詳細介紹如何建立具備符合您業務需求屬性為主的對象，然後透過使用 Adob&#x200B;&#x200B;e Experience Platform UI 中的預設小工具來獲取深入的分析和見解。此文件還會說明如何使用使用者定義的儀表板功能來構建您自己的自訂小工具。本檔案涵蓋同意趨勢和同意重疊使用案例。 |
+| 同意分析和追蹤使用案例 | 瞭解如何使用[同意分析和追蹤檔案](../../dashboards/insights-use-cases/consent-analysis.md)，針對Real-Time CDP資料的各種行銷使用案例建立同意儀表板。 此文件會詳細介紹如何建立具備符合您業務需求屬性為主的對象，然後透過使用 Adob&#x200B;&#x200B;e Experience Platform UI 中的預設小工具來獲取深入的分析和見解。此文件還會說明如何使用使用者定義的儀表板功能來構建您自己的自訂小工具。本檔案涵蓋同意趨勢和同意重疊使用案例。 |
 
 {style="table-layout:auto"}
 
@@ -120,8 +120,8 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 
 **新功能或更新的功能** {#destinations-new-updated-functionality}
 
-- 您現在可以 [啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md) 至雲端儲存空間目的地。
-- 一般 [啟動護欄](../../destinations/guardrails.md#general-activation-guardrails) 每個沙箱最多100個目的地的數量已更新為 _硬限制_.
+- 您現在可以[啟用潛在客戶對象](../../destinations/ui/activate-prospect-audiences.md)至雲端儲存目的地。
+- 每個沙箱最多100個目的地的一般[啟動護欄](../../destinations/guardrails.md#general-activation-guardrails)已更新為&#x200B;_硬性限制_。
 
 如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
 
@@ -133,7 +133,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 類別 | [[!UICONTROL XDM 個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1758/files) | 使用此類別引入來自資料供應商的漏斗頂部客戶贏取使用案例的潛在客戶資料。請參閱 [[!UICONTROL XDM個別潛在客戶設定檔]](../../xdm/classes/prospect.md) 請參閱檔案以檢視範例並深入瞭解。 |
+| 類別 | [[!UICONTROL XDM 個別潛在客戶設定檔]](https://github.com/adobe/xdm/pull/1758/files) | 此類別可讓您從資料供應商最頂層的客戶贏取使用案例取得潛在客戶設定檔。 請參閱[[!UICONTROL XDM個別潛在客戶設定檔]](../../xdm/classes/prospect.md)檔案，檢視範例並瞭解更多資訊。 |
 
 {style="table-layout:auto"}
 
@@ -141,8 +141,8 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 更新說明 |
 | --- | --- | --- |
-| 副檔名([!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]) | [[!UICONTROL 內容資料]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL 內容資料] 將對應物件新增至 [!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能] 以提供Adobe Analytics的內容資料。 |
-| 欄位群組 | 多個 | 多個欄位已新增至 [[!UICONTROL 擴充事件區段詳細資訊]](https://github.com/adobe/xdm/pull/1760/files). |
+| 擴充功能([!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]) | [[!UICONTROL 內容資料]](https://github.com/adobe/xdm/pull/1761/files) | [!UICONTROL 內容資料]對應物件已新增至[!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]，以提供Adobe Analytics的內容資料。 |
+| 欄位群組 | 多個 | 數個欄位已新增至[[!UICONTROL 擴充事件區段詳細資料]](https://github.com/adobe/xdm/pull/1760/files)。 |
 
 {style="table-layout:auto"}
 

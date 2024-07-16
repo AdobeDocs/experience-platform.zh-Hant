@@ -1,6 +1,6 @@
 ---
-title: 角色和專案階段
-description: 這部影片會概述成功Experience Platform專案所涉及的角色、階段和關鍵成果。
+title: 角色與專案階段
+description: 這部影片會概略介紹成功Experience Platform專案所涉及的角色、階段和關鍵結果。
 kt: 4338
 audience: all
 doc-type: video

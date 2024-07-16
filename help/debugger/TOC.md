@@ -19,13 +19,13 @@ ht-degree: 51%
 * [安裝擴充功能](./install-debugger.md)
 * [設定擴充功能](./configure-debugger.md)
 * [摘要標籤](./summary.md)
-* 解決方案索引標籤 {#solutions}
+* 解決方案標籤{#solutions}
    * [概觀](./solutions/overview.md)
    * [Adobe Target](./solutions/target.md)
 * [記錄檔索引標籤](./logs.md)
 * [網路標籤](./network.md)
 * [事件標籤](./events.md)
-* Auditor索引標籤 {#auditor}
+* Auditor索引標籤{#auditor}
    * [概觀](./auditor/overview.md)
    * [標籤一致性測試](./auditor/tag-consistency.md)
    * [標籤是否存在測試](./auditor/tag-presence.md)

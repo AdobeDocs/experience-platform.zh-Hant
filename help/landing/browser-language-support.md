@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Experience Platform UI的瀏覽器和語言支援
-description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可建置和管理可提升客戶體驗的完整解決方案。  Experience Platform 可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
+description: Adobe Experience Platform是市面上功能最強大、最靈活、最開放的系統，可建置和管理可提升客戶體驗的完整解決方案。 Experience Platform可讓組織集中和標準化來自任何系統的客戶資料與內容，並運用資料科學和機器學習技術大幅改善豐富個人化體驗的設計和傳遞。
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 24%
+source-wordcount: '251'
+ht-degree: 10%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform使用者介面(UI)可支援多種瀏覽器和語言。
 
 ## 瀏覽器支援
 
-Platform UI的設計可在以下環境中以最佳方式運作： **最新版本** Google Chrome、Safari、Firefox和Microsoft Edge的URL編號。 在舊版的瀏覽器上使用某些功能時可能會遇到問題。
+Platform UI的設計可在Google Chrome、Safari、Firefox和Microsoft Edge的&#x200B;**最新版本**&#x200B;中以最佳方式運作。 在舊版的瀏覽器上使用某些功能時可能會遇到問題。
 
 | 作業系統 | 支援的瀏覽器 |
 |---|---|
@@ -52,10 +52,10 @@ Platform UI的設計可在以下環境中以最佳方式運作： **最新版本
 若要變更您的語言：
 
 1. 登入您的Experience Platform帳戶。
-1. 按下 `Ctrl + i` 以開啟帳戶資訊功能表。
-1. 前往 **[!UICONTROL 偏好語言]**.
+1. 按`Ctrl + i`開啟帳戶資訊功能表。
+1. 移至&#x200B;**[!UICONTROL 偏好的語言]**。
 1. 選取您的第一語言和第二語言偏好設定。
-1. 選取 **[!UICONTROL 儲存]** 並關閉視窗。
+1. 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;並關閉視窗。
 
 >[!NOTE]
 >

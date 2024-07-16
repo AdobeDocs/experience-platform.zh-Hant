@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # 查詢目錄物件
 
-如果您知道特定的 [!DNL Catalog] 物件時，您可以執行GET要求來檢視該物件的詳細資訊。
+如果您知道特定[!DNL Catalog]物件的唯一識別碼，則可以執行GET要求來檢視該物件的詳細資訊。
 
 >[!NOTE]
 >
->檢視特定物件時，最佳作法仍是 [依屬性篩選](filter-data.md) 並只傳回您感興趣的屬性。
+>檢視特定物件時，最佳實務仍是[依屬性篩選](filter-data.md)，並只傳回您感興趣的屬性。
 
 **API格式**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 您要擷取之特定物件的識別碼。 |
 
 **要求**
 
-以下請求會依ID擷取資料集，傳回其 `name`， `description`， `tags`、和 `files` 屬性。
+下列要求會依其ID擷取資料集，傳回其`name`、`description`、`tags`和`files`屬性。
 
 ```shell
 curl -X GET \
@@ -46,7 +46,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回指定的資料集，但僅傳回要求的資料集 `properties` 內文中的。
+成功的回應會傳回指定的資料集，但內文中只包含請求的`properties`。
 
 ```json
 {
@@ -65,4 +65,4 @@ curl -X GET \
 
 >[!NOTE]
 >
->其值前置詞為的屬性 `@` 代表相互關聯的物件。 請參閱附錄中有關 [檢視相互關聯的物件](appendix.md#view-interrelated-objects) 瞭解如何檢視這些物件詳細資訊的步驟。
+>值以`@`為前置詞的屬性代表相互關聯的物件。 如需如何檢視這些物件詳細資訊的步驟，請參閱[檢視相關物件](appendix.md#view-interrelated-objects)的附錄一節。

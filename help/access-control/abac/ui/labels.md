@@ -27,14 +27,14 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->整個組織只有一個標籤清單。 若要建立自訂標籤，您需要 **[!UICONTROL 管理使用標籤]** 生產沙箱的許可權。 目前不支援刪除標籤。
+>整個組織只有一個標籤清單。 若要建立自訂標籤，您需要在生產沙箱上有&#x200B;**[!UICONTROL 管理使用標籤]**&#x200B;許可權。 目前不支援刪除標籤。
 
-若要建立新標籤，請選取 **[!UICONTROL 標籤]** 索引標籤並選取 **[!UICONTROL 建立標籤]**.
+若要建立新標籤，請選取側邊欄中的&#x200B;**[!UICONTROL 標籤]**&#x200B;索引標籤，然後選取&#x200B;**[!UICONTROL 建立標籤]**。
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-此 **[!UICONTROL 建立新標籤]** 對話方塊隨即顯示，提示您輸入名稱、可選的易記名稱和可選的說明。
+**[!UICONTROL 建立新標籤]**&#x200B;對話方塊隨即顯示，提示您輸入名稱、選用的易記名稱和選用的說明。
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 
-完成後，選取 **[!UICONTROL 確認]**.
+完成後，選取&#x200B;**[!UICONTROL 確認]**。

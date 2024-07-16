@@ -2,7 +2,8 @@
 title: Stripe
 description: 瞭解如何將Stripe帳戶的付款資料擷取至Adobe Experience Platform
 badge: Beta
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 1%
@@ -13,69 +14,69 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->此 [!DNL Stripe] 來源為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+>[!DNL Stripe]來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-各種規模的數千家企業都在使用 [!DNL Stripe] 透過線上和親身參與的方式接受付款、創造新的收入來源，並透過Adobe Experience Platform、Adobe Commerce和以下協助向全球擴張 [!DNL Magento Open Source].
+數千家不同規模的企業透過線上及親身使用[!DNL Stripe]接受付款、產生新的收入來源，並透過Adobe Experience Platform、Adobe Commerce和[!DNL Magento Open Source]協助進行全球擴張。
 
-使用 [!DNL Stripe] Experience Platform中的來源，用於擷取客戶在購買流程期間擷取的資料。 內嵌後，即可使用此資料建立個人化優惠方案，並解鎖更豐富的商業深入分析。
+在Experience Platform中使用[!DNL Stripe]來源來擷取客戶在購買流程中擷取的資料。 內嵌後，即可使用此資料建立個人化優惠方案，並解鎖更豐富的商業深入分析。
 
 >[!TIP]
 >
->關於的問題 [!DNL Stripe] Experience Platform上的來源，聯絡 [!DNL Stripe] Adobe合作夥伴<span>@stripe.com.
+>有關Experience Platform上[!DNL Stripe]來源的問題，請透過adobe-partnership<span>@stripe.com聯絡[!DNL Stripe]。
 
 >[!BEGINSHADEBOX]
 
-**的範例使用案例 [!DNL Stripe] 來源**
+[!DNL Stripe]來源的&#x200B;**範例使用案例**
 
-您的企業可讓客戶在您的線上商店購買商品，選擇如下 **立即購買** 和 **稍後付款** (使用 [!DNL Klarna]， [!DNL Afterpay]， [!DNL Affirm]，或 [!DNL Zip])。
+您的企業可讓客戶在您的線上商店購買專案，並可選擇&#x200B;**立即購買**&#x200B;及&#x200B;**稍後付款** （使用[!DNL Klarna]、[!DNL Afterpay]、[!DNL Affirm]或[!DNL Zip]）。
 
-使用 [!DNL Stripe] 要分析使用的資料來源 **立即購買** 和 **稍後付款** 選項並嘗試為這些客戶提供個人化優惠方案。 例如，考慮建議使用附加元件專案，在結帳前增加購物車中的專案數量。
+使用[!DNL Stripe]資料來源來分析&#x200B;**立即購買**&#x200B;和&#x200B;**稍後付款**&#x200B;選項的使用情況，並嘗試為這些客戶提供個人化優惠。 例如，考慮建議使用附加元件專案，在結帳前增加購物車中的專案數量。
 
 >[!ENDSHADEBOX]
 
-請閱讀以下檔案，瞭解如何設定 [!DNL Stripe] 來源帳戶、擷取必要的認證，並建立您的結構描述。
+請閱讀以下檔案，瞭解如何設定[!DNL Stripe]來源帳戶、擷取必要的認證，以及建立您的結構描述。
 
 ## 先決條件 {#prerequisites}
 
-以下各節提供您在連線前必須完成的先決條件設定資訊 [!DNL Stripe] 要Experience Platform的帳戶。
+下列章節提供您在將[!DNL Stripe]帳戶連線至Experience Platform之前必須完成的先決條件設定資訊。
 
 ### 擷取您的存取權杖
 
-* 登入 [[!DNL Stripe] 儀表板](https://dashboard.stripe.com/login) 使用您的 [!DNL Stripe] 電子郵件地址和密碼。
-* 在 [!DNL Developers] 儀表板，選取 **[!DNL API keys for developers]**.
-* 在 **API金鑰** 索引標籤，選取 **[!DNL Reveal test key]** 以顯示您的存取Token。
-* 您現在可以在連線時將此權杖當做存取權杖 [!DNL Stripe] 要Experience Platform的帳戶，使用 [!DNL Flow Service] API或Experience Platform UI。
+* 使用您的[!DNL Stripe]電子郵件地址和密碼登入[[!DNL Stripe] 儀表板](https://dashboard.stripe.com/login)。
+* 在[!DNL Developers]儀表板中，選取&#x200B;**[!DNL API keys for developers]**。
+* 在&#x200B;**API金鑰**&#x200B;標籤下，選取&#x200B;**[!DNL Reveal test key]**&#x200B;以顯示您的存取權杖。
+* 您現在可以在使用[!DNL Flow Service] API或Experience PlatformUI連線您的[!DNL Stripe]帳戶以進行Experience Platform時，使用此權杖作為存取權杖。
 
 ### 收集必要的認證
 
-為了連線您的 [!DNL Stripe] 要Experience Platform的帳戶，您必須提供下列驗證認證的值：
+為了將您的[!DNL Stripe]帳戶連線到Experience Platform，您必須提供下列驗證認證的值：
 
 >[!BEGINTABS]
 
 >[!TAB API]
 
-在連線時，您必須提供下列認證 [!DNL Stripe] 帳戶使用 [!DNL Flow Service] API。
+使用[!DNL Flow Service] API連線您的[!DNL Stripe]帳戶時，您必須提供下列認證。
 
 | 認證 | 說明 |
 | --- | --- |
-| `accessToken` | 您的 [!DNL Stripe] OAuth 2重新整理程式碼驗證Token。 |
-| `connectionSpec.id` | 的連線規格ID [!DNL Stripe] 來源。 此ID的固定為： `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`. |
+| `accessToken` | 您的[!DNL Stripe] OAuth 2重新整理程式碼驗證Token。 |
+| `connectionSpec.id` | [!DNL Stripe]來源的連線規格ID。 此ID已固定為： `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`。 |
 
 >[!TAB UI]
 
-在連線時，您必須提供下列認證 [!DNL Stripe] 使用Experience Platform使用者介面的帳戶。
+使用Experience Platform使用者介面連線您的[!DNL Stripe]帳戶時，您必須提供下列認證。
 
 | 認證 | 說明 |
 | --- | --- |
-| 存取權杖 | 您的 [!DNL Stripe] OAuth 2重新整理程式碼驗證Token。 |
+| 存取權杖 | 您的[!DNL Stripe] OAuth 2重新整理程式碼驗證Token。 |
 
 >[!ENDTABS]
 
-有關使用的詳細資訊 [!DNL Stripe] API，請閱讀 [[!DNL Stripe] 有關API金鑰的檔案](https://docs.stripe.com/keys).
+如需使用[!DNL Stripe] API的詳細資訊，請閱讀[[!DNL Stripe] 有關API金鑰](https://docs.stripe.com/keys)的檔案。
 
 ### 建立體驗資料模型(XDM)結構描述
 
-此 [!DNL Stripe] 來源支援從下列資源路徑擷取資料：
+[!DNL Stripe]來源支援從下列資源路徑擷取資料：
 
 * 費用
 * 訂閱
@@ -84,13 +85,13 @@ ht-degree: 1%
 * 客戶
 * 價格
 
-您必須建立XDM結構描述來說明資料集，資料集可儲存將要傳送的欄位和資料型別 [!DNL Stripe] 以Experience Platform。
+您必須建立XDM結構描述來說明資料集，資料集可以儲存將從[!DNL Stripe]傳送到Experience Platform的欄位和資料型別。
 
 >[!BEGINTABS]
 
 >[!TAB 費用]
 
-在 [!DNL Stripe]， **費用** 代表將資金移入 [!DNL Stripe]. 閱讀 [[!DNL Stripe] API費用指南](https://docs.stripe.com/api/charges) 以取得特定費用屬性的詳細資訊。
+在[!DNL Stripe]中，**費用**&#x200B;代表嘗試將資金移入您的[!DNL Stripe]。 如需特定收費屬性的詳細資訊，請參閱[[!DNL Stripe] API收費指南](https://docs.stripe.com/api/charges)。
 
 +++選取以檢視Stripe費用物件
 
@@ -185,7 +186,7 @@ ht-degree: 1%
 
 >[!TAB 訂閱]
 
-在 [!DNL Stripe]，您可以使用 **訂閱** 以重複產生方式向客戶收費。 閱讀 [[!DNL Stripe] 訂閱的API指南](https://docs.stripe.com/api/subscriptions) 以取得特定訂閱屬性的詳細資訊。
+在[!DNL Stripe]中，您可以使用&#x200B;**訂閱**&#x200B;以定期方式向客戶收費。 如需特定訂閱屬性的詳細資訊，請參閱訂閱](https://docs.stripe.com/api/subscriptions)的[[!DNL Stripe] API指南。
 
 +++選取以檢視Stripe訂閱物件
 
@@ -327,7 +328,7 @@ ht-degree: 1%
 
 >[!TAB 退款]
 
-在 [!DNL Stripe]，您可以使用 **退款** 將先前建立的費用退款。 閱讀 [[!DNL Stripe] 退款API指南](https://docs.stripe.com/api/refunds) 以取得特定退款屬性的詳細資訊。
+在[!DNL Stripe]中，您可以使用&#x200B;**退款**&#x200B;來退還先前建立的費用。 如需特定退款屬性的詳細資訊，請參閱退款](https://docs.stripe.com/api/refunds)的[[!DNL Stripe] API指南。
 
 +++選取以檢視Stripe退款物件
 
@@ -363,7 +364,7 @@ ht-degree: 1%
 
 >[!TAB 餘額交易]
 
-在 [!DNL Stripe]， **餘額交易** 代表基金在貴公司與 [!DNL Stripe] 帳戶。 閱讀 [[!DNL Stripe] 餘額交易的API指南](https://docs.stripe.com/api/balance_transactions) 以取得特定餘額交易屬性的詳細資訊。
+在[!DNL Stripe]中，**餘額交易**&#x200B;代表您[!DNL Stripe]帳戶之間的資金流動。 如需特定餘額交易屬性的詳細資訊，請參閱餘額交易](https://docs.stripe.com/api/balance_transactions)的[[!DNL Stripe] API指南。
 
 +++選取以檢視「Stripe餘額異動」物件
 
@@ -391,7 +392,7 @@ ht-degree: 1%
 
 >[!TAB 客戶]
 
-在 [!DNL Stripe]， **客戶** 代表您企業的指定客戶。 如需特定客戶屬性的詳細資訊，請參閱 [[!DNL Stripe] 客戶的API指南](https://docs.stripe.com/api/customers) 以取得特定客戶屬性的詳細資訊。
+在[!DNL Stripe]中，**個客戶**&#x200B;代表您企業的指定客戶。 如需特定客戶屬性的詳細資訊，請參閱客戶的[[!DNL Stripe] API指南](https://docs.stripe.com/api/customers)，瞭解特定客戶屬性的詳細資訊。
 
 +++選取以檢視StripeCustomer物件
 
@@ -431,7 +432,7 @@ ht-degree: 1%
 
 >[!TAB 價格]
 
-在 [!DNL Stripe]， **價格** 代表重複購買和一次性購買產品的單位成本、貨幣和可選帳單週期。 閱讀 [[!DNL Stripe] 價格的API指南](https://docs.stripe.com/api/prices) 以取得特定價格屬性的詳細資訊。
+在[!DNL Stripe]中，**價格**&#x200B;代表重複購買與一次性購買產品的單位成本、貨幣以及選擇性帳單週期。 如需特定價格屬性的詳細資訊，請參閱價格](https://docs.stripe.com/api/prices)的[[!DNL Stripe] API指南。
 
 +++選取以檢視「Stripe價格」物件
 
@@ -472,15 +473,15 @@ ht-degree: 1%
 
 ### IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
 ### 設定Experience Platform的許可權
 
-您必須同時擁有兩者 **[!UICONTROL 檢視來源]** 和 **[!UICONTROL 管理來源]** 為您的帳戶啟用的許可權以連線您的 [!DNL Stripe] 要Experience Platform的帳戶。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀 [存取控制UI指南](../../../access-control/ui/overview.md).
+您必須同時為您的帳戶啟用&#x200B;**[!UICONTROL 檢視來源]**&#x200B;和&#x200B;**[!UICONTROL 管理來源]**&#x200B;許可權，才能將您的[!DNL Stripe]帳戶連線至Experience Platform。 請聯絡您的產品管理員以取得必要許可權。 如需詳細資訊，請閱讀[存取控制UI指南](../../../access-control/ui/overview.md)。
 
 ## 後續步驟
 
-完成先決條件設定後，您就可以繼續連線並擷取 [!DNL Stripe] 要Experience Platform的資料。 請閱讀以下指南，瞭解如何擷取 [!DNL Stripe] 使用API或使用者介面進行Experience Platform的付款資料：
+完成先決條件設定後，您可以繼續連線並擷取[!DNL Stripe]資料以Experience Platform。 請閱讀下列指南，瞭解如何使用API或使用者介面將[!DNL Stripe]付款資料擷取到Experience Platform：
 
-* [使用流程服務API從您的Stripe帳戶擷取付款資料以Experience Platform](../../tutorials/api/create/payments/stripe.md).
-* [使用使用者介面從您的Stripe帳戶擷取付款資料以Experience Platform](../../tutorials/ui/create/payments/stripe.md).
+* [使用流程服務API](../../tutorials/api/create/payments/stripe.md)，從您的Stripe帳戶擷取付款資料以Experience Platform。
+* [使用使用者介面](../../tutorials/ui/create/payments/stripe.md)從您的Stripe帳戶擷取付款資料以Experience Platform。

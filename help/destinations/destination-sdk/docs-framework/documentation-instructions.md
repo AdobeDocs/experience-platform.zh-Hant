@@ -4,8 +4,8 @@ description: 協助您在Adobe Experience Platform中為目的地建立檔案頁
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 1%
+source-wordcount: '502'
+ht-degree: 0%
 
 ---
 
@@ -25,20 +25,20 @@ ht-degree: 1%
 * 逐步指示讓您為新目的地建立檔案頁面；
 * 範本供您填寫目的地；
 * [使用Markdown的一般指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html)；
-* [AdobeMarkdown風格的特定指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (AdobeMarkdown的風格與一般Markdown非常類似)。
-* A [最佳實務頁面](./authoring-best-practices.md) 協助您為符合Experience Platform檔案品質標準的目的地頁面撰寫檔案頁面。
+* [AdobeMarkdown風格的特定指示](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (AdobeMarkdown風格與一般Markdown非常類似)。
+* [最佳實務頁面](./authoring-best-practices.md)可協助您為目的地頁面撰寫符合Experience Platform檔案品質標準的檔案頁面。
 
 ## 先決條件 {#prerequisites}
 
 若要根據本文的指示建立目的地的檔案，需有下列專案：
 
-* **GitHub帳戶**. 註冊 [GitHub](https://github.com/) 如果您還沒有帳戶。
-* **GitHub Desktop**. 如果您選取 [在本機環境中建立檔案](./work-in-local-environment.md)，您必須使用 [GitHub Desktop](https://desktop.github.com/).
+* **GitHub帳戶**。 如果您還沒有帳戶，請註冊[GitHub](https://github.com/)。
+* **GitHub案頭**。 如果您選擇在您的本機環境中[建立檔案](./work-in-local-environment.md)，則必須使用[GitHub Desktop](https://desktop.github.com/)。
 * 您與Adobe的整合必須處於測試階段，且您的目的地部署在Adobe Experience Platform中的中繼環境。
 
 ## 在Adobe Experience Platform中建立目的地檔案的高層級指示 {#high-level-instructions}
 
-整體而言，若要建立目的地的檔案，您必須 [建立分支](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) Adobe Experience Platform存放庫的檔案並編輯 [提供的檔案範本](./self-service-template.md) 在新分支中。 使用Adobe提供的範本來建立新的目的地頁面。 準備就緒後，開啟提取請求(PR)。 以下提供執行此動作的說明： [建立新目的地頁面的步驟](./documentation-instructions.md#steps-to-create-docs-page).
+整體而言，若要為目的地建立檔案，您需要[建立Adobe Experience Platform檔案存放庫的分叉](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository)，並在新分支中編輯[提供的檔案範本](./self-service-template.md)。 使用Adobe提供的範本來建立新的目的地頁面。 準備就緒後，開啟提取請求(PR)。 下面是建立新目的地頁面的[步驟中的進一步指示](./documentation-instructions.md#steps-to-create-docs-page)。
 
 <!--
 
@@ -49,9 +49,9 @@ ht-degree: 1%
 
 ## 檔案範本 {#documentation-template}
 
-為協助您建立說明檔案頁面，Adobe已預先填入 [檔案範本](./self-service-template.md) 敬請參考使用： 您可以在下方找到如何編輯範本及開啟提取請求的指示。 Adobe檔案團隊將檢閱並發佈您新目的地的檔案。
+為協助您建立說明檔案頁面，Adobe已為您預先填入[說明檔案範本](./self-service-template.md)。 您可以在下方找到如何編輯範本及開啟提取請求的指示。 Adobe檔案團隊將檢閱並發佈您新目的地的檔案。
 
-[在此處下載範本](../assets/docs-framework/yourdestination-template.zip) 並解壓縮檔案以解壓縮 `yourdestination.md` 檔案。
+[在此下載範本](../assets/docs-framework/yourdestination-template.zip)並解壓縮檔案以解壓縮`yourdestination.md`檔案。
 
 下面是使用範本建立檔案頁面的說明。
 
@@ -64,4 +64,4 @@ ht-degree: 1%
 
 ## 最佳作法 {#best-practices}
 
-檢閱 [製作最佳實務](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) 建立目的地檔案頁面之前和期間。 也請務必閱讀 [Adobe檔案撰寫指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) 如需撰寫Adobe檔案團隊在編寫檔案時所使用的更多撰寫提示。
+在建立目的地檔案頁面之前和期間，請檢閱[撰寫最佳實務](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md)。 也請務必閱讀Adobe檔案的[撰寫指南](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html)，以取得Adobe檔案團隊在撰寫檔案時所使用的更多撰寫提示。

@@ -13,11 +13,11 @@ ht-degree: 1%
 
 # 查詢多個目錄物件
 
-如果您想要檢視數個特定物件，而不是針對每個物件提出一個要求， [!DNL Catalog] 提供簡單捷徑來請求相同型別的多個物件。 您可以使用單一GET要求，包含以逗號分隔的ID清單，以傳回多個特定物件。
+如果您想要檢視數個特定物件，而不是針對每個物件提出一項要求，則[!DNL Catalog]會提供簡單捷徑來要求相同型別的多個物件。 您可以使用單一GET要求，包含以逗號分隔的ID清單，以傳回多個特定物件。
 
 >[!NOTE]
 >
->即使請求特定 [!DNL Catalog] 物件，最佳做法仍是 `properties` 查詢引數以僅傳回您需要的屬性。
+>即使要求特定[!DNL Catalog]物件，最佳做法仍是`properties`查詢引數以僅傳回您需要的屬性。
 
 **API格式**
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | 您要擷取的特定物件之一的識別碼。 |
 
 **要求**
@@ -46,11 +46,11 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回指定資料集的清單，其中僅包含要求的屬性(`name`， `description`、和 `files`)表示。
+成功的回應會傳回指定資料集清單，其中只包含每個資料集的要求屬性（`name`、`description`和`files`）。
 
 >[!NOTE]
 >
->如果傳回的物件不包含 `properties` 查詢，回應只會傳回所請求的屬性，如所示 ***`Sample Dataset 3`*** 和 ***`Sample Dataset 4`*** 底下。
+>如果傳回的物件不包含`properties`查詢所指示的一或多個要求屬性，則回應只會傳回其包含的要求屬性，如下方&#x200B;***`Sample Dataset 3`***&#x200B;和&#x200B;***`Sample Dataset 4`***&#x200B;所示。
 
 ```json
 {

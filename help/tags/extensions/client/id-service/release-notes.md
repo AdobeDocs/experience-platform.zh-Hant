@@ -4,8 +4,8 @@ description: Adobe Experience Platform中Adobe Experience Cloud Identity服務�
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 64%
+source-wordcount: '688'
+ht-degree: 62%
 
 ---
 
@@ -13,15 +13,15 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-本檔案涵蓋Adobe Experience Cloud Identity服務標籤擴充功能的發行說明。 如需Experience CloudIdentity服務本身的發行說明，請參閱 [Identity Service檔案](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
+本檔案涵蓋Adobe Experience Cloud Identity Service標籤擴充功能的發行說明。 如需Experience CloudIdentity服務本身的發行說明，請參閱[Identity服務檔案](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html)。
 
-## 2022年10月17日
+## 2022 年 10 月 17 日
 
 ### Experience Cloud ID 擴充功能 5.5.0
 
-* 擴充功能現在支援5.5.0版的 [訪客JS使用者端](https://github.com/Adobe-Marketing-Cloud/id-service). 請參閱 [訪客發行說明](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) 以取得特定更新。
+* 擴充功能現在支援5.5.0版的[訪客JS使用者端](https://github.com/Adobe-Marketing-Cloud/id-service)。 如需特定更新，請參閱[訪客發行說明](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0)。
 
 ## 2022年3月9日
 
@@ -29,20 +29,20 @@ ht-degree: 64%
 
 * 此版本包含最新的Visitor 5.4.0，其中包含下列更新：
 
-   * 能夠設定的 `s_ecid` 使用cookieLifetime設定的Cookie
+   * 能夠使用cookieLifetime設定來設定`s_ecid` Cookie的存留期
    * 更新當頁面載入子iFrame時發生的Firefox瀏覽器問題
 
-## 2021年10月10日
+## 2021 年 10 月 10 日
 
 ### Experience Cloud ID 擴充功能 5.3.1
 
 * 此版本包含最新的Visitor 5.3.0，其中包含下列新更新：
 
    * 更新演演算法以產生本機ECID
-   * 最新的選擇加入，包含 `Secure` 和 `SameSite` 隱私權Cookie的標幟
+   * 隱私權Cookie的最新選擇加入，包含`Secure`和`SameSite`旗標
    * 修正頁面載入子iFrame時的Firefox瀏覽器問題
 
-## 2021 年 1 月 12 日
+## 2021年1月12日
 
 ### Experience Cloud ID 擴充功能 5.2.0
 
@@ -111,7 +111,7 @@ ht-degree: 64%
 * 修正取得 Opt-In preApprovals Input 的錯誤
 * 將 preOptInApprovals 中的 VIDEO_ANALYTICS 重新命名為 MEDIA_ANALYTICS
 
-   ![](../../../images/ecid-media-analytics.png)
+  ![](../../../images/ecid-media-analytics.png)
 
 ## 2019 年 7 月 17 日
 
@@ -120,7 +120,7 @@ ht-degree: 64%
 * 將 visitor.js 更新至 4.4.0
 * 新增 setCustomerIDs 的 SHA256 雜湊支援
 
-   ![](../../../images/ecid-setCustomerIDs-hash.png)
+  ![](../../../images/ecid-setCustomerIDs-hash.png)
 
 ## 2019 年 5 月 13 日
 
@@ -129,7 +129,7 @@ ht-degree: 64%
 * 將 visitor.js 更新至 4.3
 * 在標籤擴充功能中新增ECID的資料元素型別
 
-   ![](../../../images/ecid-data-element.png)
+  ![](../../../images/ecid-data-element.png)
 
 ## 2019 年 4 月 9 日
 
@@ -150,7 +150,7 @@ ht-degree: 64%
 * 將 visitor.js 更新至 4.0
 * 為全新內建的選擇加入物件新增的設定選項。選擇加入設定可用來隱藏 Adobe 解決方案的 Cookie 和信標呼叫，以更密切支援 GDPR 等規範
 
-   ![](../../../images/ext-mcid-opt-in.png)
+  ![](../../../images/ext-mcid-opt-in.png)
 
 ## 2018 年 3 月 20 日
 

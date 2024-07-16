@@ -13,13 +13,13 @@ ht-degree: 4%
 
 # 資料存取API指南
 
-資料存取API為使用者提供RESTful介面，著重於內擷取資料集的可發現性和可存取性，以支援Adobe Experience Platform [!DNL Experience Platform].
+資料存取API透過為使用者提供RESTful介面來支援Adobe Experience Platform，該介面著重於[!DNL Experience Platform]內擷取資料集的可發現性和可存取性。
 
-![此圖表說明資料存取如何協助在Experience Platform中探索及存取內嵌的資料集。](images/Data_Access_Experience_Platform.png)
+![資料存取如何協助Experience Platform內擷取資料集的可發現性和可存取性的圖表。](images/Data_Access_Experience_Platform.png)
 
 ## API規格參考
 
-Swagger API參考檔案可在以下網址找到： [此處](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+您可以在[這裡](https://developer.adobe.com/experience-platform-apis/references/data-access/)找到Swagger API參考檔案。
 
 ## 術語 {#terminology}
 
@@ -93,7 +93,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-此 `"data"` 陣列包含指定批次中所有檔案的清單。 每個傳回的檔案都有自己的唯一ID (`{FILE_ID}`)內含於 `"dataSetFileId"` 欄位。 您可以使用此唯一ID來存取或下載檔案。
+`"data"`陣列包含指定批次中所有檔案的清單。 每個傳回的檔案在`"dataSetFileId"`欄位中都有自己的唯一識別碼(`{FILE_ID}`)。 您可以使用此唯一ID來存取或下載檔案。
 
 | 屬性 | 說明 |
 | -------- | ----------- |
@@ -102,7 +102,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 ## 存取和下載批次中的檔案
 
-若要存取檔案的特定詳細資料，請使用檔案識別碼(`{FILE_ID}`)，包括其名稱、位元組大小及下載連結。
+若要存取檔案的特定詳細資料，請將檔案識別碼(`{FILE_ID}`)搭配資料存取API使用，包括其名稱、位元組大小以及下載連結。
 
 回應包含資料陣列。 根據ID指向的檔案是個別檔案還是目錄，傳回的資料陣列可能會包含單一專案或屬於該目錄的檔案清單。 每個檔案元素都包含檔案的詳細資訊。
 
@@ -114,7 +114,7 @@ GET /files/{FILE_ID}
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{FILE_ID}` | 等於 `"dataSetFileId"`，要存取之檔案的ID。 |
+| `{FILE_ID}` | 等於`"dataSetFileId"`，要存取的檔案識別碼。 |
 
 **要求**
 
@@ -150,7 +150,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `data.name` | 檔案的名稱(例如， `profiles.csv`)。 |
+| `data.name` | 檔案的名稱（例如，`profiles.csv`）。 |
 | `data.length` | 檔案的大小（位元組）。 |
 | `data._links.self.href` | 下載檔案的URL。 |
 
@@ -197,12 +197,12 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `data.name` | 檔案的名稱(例如， `profiles.csv`)。 |
+| `data.name` | 檔案的名稱（例如，`profiles.csv`）。 |
 | `data._links.self.href` | 下載檔案的URL。 |
 
 ## 存取檔案的內容 {#access-file-contents}
 
-您也可以使用 [!DNL Data Access] 用於存取檔案內容的API。 然後，您可以將內容下載到外部來源。
+您也可以使用[!DNL Data Access] API來存取檔案的內容。 然後，您可以將內容下載到外部來源。
 
 **API格式**
 
@@ -227,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `{FILE_ID}` | 資料集中檔案的ID。 |
-| `{FILE_NAME}` | 檔案的完整名稱(例如， `profiles.csv`)。 |
+| `{FILE_NAME}` | 檔案的完整名稱（例如，`profiles.csv`）。 |
 
 **回應**
 
@@ -235,8 +235,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## 其他程式碼範例
 
-如需其他範例，請參閱 [資料存取教學課程](tutorials/dataset-data.md).
+如需其他範例，請參閱[資料存取教學課程](tutorials/dataset-data.md)。
 
 ## 訂閱資料擷取事件 {#subscribe-to-data-ingestion-events}
 
-您可以透過以下方式訂閱特定的高價值事件： [Adobe Developer Console](https://developer.adobe.com/console/). 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 請參閱上的教學課程 [訂閱資料擷取通知](../ingestion/quality/subscribe-events.md) 以取得詳細資訊。
+您可以透過[Adobe Developer Console](https://developer.adobe.com/console/)訂閱特定的高值事件。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱[訂閱資料擷取通知](../ingestion/quality/subscribe-events.md)的教學課程。

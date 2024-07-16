@@ -12,9 +12,9 @@ ht-degree: 1%
 
 # 檢視特定訪客的統計報表
 
-本檔案提供了一個SQL範例，可彙總特定使用者的多個分析屬性的資料，並在一個報表中檢視這些資料。 透過Adobe Experience Platform查詢服務，您可以編寫使用 [!DNL Experience Events] 以擷取各種使用案例。 體驗事件由Experience Data Model (XDM) ExperienceEvent類別表示，可在使用者與網站或服務互動時，擷取系統不可變且非彙總的快照。 體驗事件甚至可用於時間網域分析。 請參閱 [後續步驟區段](#next-steps) 有關更多使用案例，包括 [!DNL Experience Events] 以產生訪客報表。
+本檔案提供了一個SQL範例，用來彙總特定使用者的多個分析屬性的資料，並在一個報表中一起檢視這些資料。 使用Adobe Experience Platform查詢服務，您可以撰寫使用[!DNL Experience Events]來擷取各種使用案例的查詢。 體驗事件由體驗資料模型(XDM) ExperienceEvent類別表示，可在使用者與網站或服務互動時，擷取系統不可變且非彙總的快照。 體驗事件甚至可用於時間網域分析。 請參閱[後續步驟一節](#next-steps)，瞭解更多涉及[!DNL Experience Events]產生訪客報表的使用案例。
 
-有關XDM和的更多資訊 [!DNL Experience Events] 您可在以下網址找到： [[!DNL XDM System] 概觀](../../xdm/home.md). 透過結合查詢服務與 [!DNL Experience Events]，您就能有效追蹤使用者之間的行為趨勢。 以下檔案提供涉及下列專案的查詢範例： [!DNL Experience Events].
+有關XDM和[!DNL Experience Events]的更多資訊可在[[!DNL XDM System] 總覽](../../xdm/home.md)中找到。 結合查詢服務與[!DNL Experience Events]，您就能有效追蹤使用者之間的行為趨勢。 下列檔案提供涉及[!DNL Experience Events]的查詢範例。
 
 ## 目標
 
@@ -49,10 +49,10 @@ ORDER BY pageViews DESC;
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案可讓您更瞭解如何使用查詢服務搭配 [!DNL Experience Events] 以檢視指定使用者的analytics值彙總報表。
+閱讀本檔案可讓您更瞭解如何搭配[!DNL Experience Events]使用查詢服務，以檢視指定使用者的分析值彙總報表。
 
 請參閱下列使用案例，以瞭解其他以訪客為基礎的使用案例：
 
-- [擷取依頁面檢視次陣列織的訪客清單。](./visitors-by-number-of-page-views.md)
+- [擷取按頁面檢視次陣列織的訪客清單。](./visitors-by-number-of-page-views.md)
 - [列出訪客之前的工作階段。](./list-visitor-sessions.md)
 - [依日期建立事件的趨勢報表。](./trended-report-of-events.md)

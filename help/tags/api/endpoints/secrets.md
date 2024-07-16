@@ -4,20 +4,20 @@ description: 瞭解如何在Reactor API中呼叫/secrets端點。
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 4%
 
 ---
 
 # 密碼端點
 
-密碼是僅存在於事件轉送屬性（具有的屬性）中的資源。 `platform` 屬性設定為 `edge`)。 它們允許事件轉寄驗證至另一個系統，以進行安全資料交換。
+密碼是僅存在於事件轉送屬性（屬性為`platform`屬性設定為`edge`的屬性）中的資源。 它們允許事件轉寄驗證至另一個系統，以進行安全資料交換。
 
-本指南說明如何呼叫 `/secrets` Reactor API中的端點。 如需不同機密型別及其使用方式的詳細說明，請參閱 [秘密](../guides/secrets.md) 然後再返回本指南。
+本指南說明如何呼叫Reactor API中的`/secrets`端點。 如需不同密碼型別及其使用方式的詳細說明，請參閱有關[密碼](../guides/secrets.md)的高層級概觀，然後再返回本指南。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取屬性的密碼清單 {#list-property}
 
@@ -302,7 +302,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->當您建立新密碼時，API會傳回包含該資源資訊的立即回應。 同時，會觸發秘密交換工作，以測試認證交換是否正常運作。 系統會以非同步方式處理此工作，並將密碼的狀態屬性更新為 `succeeded` 或 `failed` 視結果而定。
+>當您建立新密碼時，API會傳回包含該資源資訊的立即回應。 同時，會觸發秘密交換工作，以測試認證交換是否正常運作。 此工作以非同步方式處理，並根據結果將密碼的狀態屬性更新為`succeeded`或`failed`。
 
 **API格式**
 
@@ -353,15 +353,15 @@ curl -X POST \
 | --- | --- |
 | `name` | 密碼的唯一描述性名稱。 |
 | `type_of` | 密碼代表的驗證認證型別。 有三個接受的值：<ul><li>`token`：權杖字串。</li><li>`simple-http`：使用者名稱和密碼。</li><li>`oauth2`：符合OAuth標準的認證。</li></ul> |
-| `credentials` | 包含密碼認證值的物件。 依據 `type_of` 屬性，必須提供不同的屬性。 請參閱以下小節： [認證](../guides/secrets.md#credentials) 秘密指南中，以瞭解每種型別需求的詳細資訊。 |
-| `relationships.environment` | 每個密碼在首次建立時都必須與環境相關聯。 此 `data` 此屬性中的物件必須包含 `id` 要指派給的秘密，以及 `type` 值 `environments`. |
-| `type` | 正在建立的資源型別。 對於此呼叫，值必須是 `secrets`. |
+| `credentials` | 包含密碼認證值的物件。 根據`type_of`屬性，必須提供不同的屬性。 如需每種型別需求的詳細資訊，請參閱密碼指南中[認證](../guides/secrets.md#credentials)的相關章節。 |
+| `relationships.environment` | 每個密碼在首次建立時都必須與環境相關聯。 此屬性中的`data`物件必須包含要指派密碼的環境的`id`，以及`environments`的`type`值。 |
+| `type` | 正在建立的資源型別。 對於這個呼叫，值必須是`secrets`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回密碼的詳細資料。 請注意，根據密碼的型別，底下的某些屬性 `credentials` 可能已隱藏。
+成功的回應會傳回密碼的詳細資料。 請注意，根據密碼的型別，`credentials`下的某些屬性可能會隱藏。
 
 ```json
 {
@@ -417,13 +417,13 @@ curl -X POST \
 }
 ```
 
-## 測試 `oauth2` 密碼 {#test}
+## 測試`oauth2`密碼 {#test}
 
 >[!NOTE]
 >
->此作業只能對含有密碼的密碼執行 `type_of` 值 `oauth2`.
+>此作業只能對具有`type_of`值`oauth2`的密碼執行。
 
-您可以測試 `oauth2` 在PATCH請求的路徑中包含其ID以保密。 測試操作會執行交換並將授權服務回應包含在 `test_exchange` 密碼的屬性 `meta` 物件。 此操作不會更新密碼本身。
+您可以在PATCH要求的路徑中包含其ID以測試`oauth2`機密。 測試作業會執行交換並將授權服務回應包含在密碼的`meta`物件的`test_exchange`屬性中。 此操作不會更新密碼本身。
 
 **API格式**
 
@@ -433,7 +433,7 @@ PATCH /secrets/{SECRET_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 的ID `oauth2` 要測試的密碼。 |
+| `{SECRET_ID}` | 您要測試之`oauth2`密碼的識別碼。 |
 
 {style="table-layout:auto"}
 
@@ -463,16 +463,16 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 必須包含 `type_of` 屬性值為的屬性 `oauth2`. |
-| `meta` | 必須包含 `action` 屬性值為的屬性 `test`. |
+| `attributes` | 必須包含值為`oauth2`的`type_of`屬性。 |
+| `meta` | 必須包含值為`test`的`action`屬性。 |
 | `id` | 您正在測試的秘密ID。 這必須符合請求路徑中提供的ID。 |
-| `type` | 正在操作的資源型別。 必須設為 `secrets`. |
+| `type` | 正在操作的資源型別。 必須設定為`secrets`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回機密的詳細資料，授權服務的回應包含在 `meta.test_exchange`.
+成功的回應會傳回機密的詳細資料，授權服務的回應包含在`meta.test_exchange`下。
 
 ```json
 { 
@@ -580,16 +580,16 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 必須包含 `type_of` 與要更新的密碼相符的屬性(`token`， `simple-http`，或 `oauth2`)。 |
-| `meta` | 必須包含 `action` 屬性值為的屬性 `retry`. |
+| `attributes` | 必須包含與要更新的密碼相符的`type_of`屬性（`token`、`simple-http`或`oauth2`）。 |
+| `meta` | 必須包含值為`retry`的`action`屬性。 |
 | `id` | 您正在重試的秘密ID。 這必須符合請求路徑中提供的ID。 |
-| `type` | 正在操作的資源型別。 必須設為 `secrets`. |
+| `type` | 正在操作的資源型別。 必須設定為`secrets`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回密碼的詳細資料，其狀態會重設為 `pending`. 交換完成後，密碼的狀態將更新為 `succeeded` 或 `failed` 視結果而定。
+成功的回應會傳回密碼的詳細資料，其狀態會重設為`pending`。 交換完成後，密碼的狀態會根據結果更新為`succeeded`或`failed`。
 
 ```json
 {
@@ -644,11 +644,11 @@ curl -X PATCH \
 }
 ```
 
-## 重新授權 `oauth2-google` 密碼 {#reauthorize}
+## 重新授權`oauth2-google`密碼 {#reauthorize}
 
-每個 `oauth2-google` 密碼包含 `meta.authorization_url_expires_at` 指出授權URL到期時間的屬性。 在此時間之後，必須重新授權密碼才能更新驗證程式。
+每個`oauth2-google`密碼都包含一個`meta.authorization_url_expires_at`屬性，指出授權URL何時到期。 在此時間之後，必須重新授權密碼才能更新驗證程式。
 
-若要重新授權 `oauth2-google` secret，對有問題的密碼提出PATCH要求。
+若要重新授權`oauth2-google`機密，請針對相關機密提出PATCH要求。
 
 **API格式**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SECRET_ID}` | 此 `id` 您想要重新授權的密碼。 |
+| `{SECRET_ID}` | 您要重新授權的密碼的`id`。 |
 
 **要求**
 
-此 `data` 請求承載中的物件必須包含 `meta.action` 屬性設定為 `reauthorize`.
+要求承載中的`data`物件必須包含設定為`reauthorize`的`meta.action`屬性。
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **回應**
 
-成功的回應會傳回更新的密碼的詳細資料。 您必須從此處複製並貼上 `meta.authorization_url` 至瀏覽器以完成授權程式。
+成功的回應會傳回更新的密碼的詳細資料。 從這裡，您必須複製`meta.authorization_url`並貼到瀏覽器中以完成授權程式。
 
 ```json
 {
@@ -795,7 +795,7 @@ Reactor API可讓您向特定資源新增附註，包括秘密。 附註是對�
 
 >[!NOTE]
 >
->請參閱 [附註端點指南](./notes.md) 以取得有關如何建立和編輯Reactor API資源附註的詳細資訊。
+>如需有關如何建立和編輯Reactor API資源的附註的詳細資訊，請參閱[附註端點指南](./notes.md)。
 
 您可以透過提出GET要求來擷取與機密相關的所有附註。
 
@@ -870,13 +870,13 @@ curl -X GET \
 
 ## 擷取密碼的相關資源 {#related}
 
-以下呼叫示範如何擷取密碼的相關資源。 時間 [查詢秘密](#lookup)，這些關係會列在 `relationships` 屬性。
+以下呼叫示範如何擷取密碼的相關資源。 當[查詢秘密](#lookup)時，這些關係會列在`relationships`屬性下。
 
-請參閱 [關係指南](../guides/relationships.md) 以進一步瞭解Reactor API中的關係。
+請參閱[關係指南](../guides/relationships.md)，以取得有關Reactor API中關係的詳細資訊。
 
 ### 查詢密碼的相關環境 {#environment}
 
-您可以透過附加來查詢使用秘密的環境 `/environment` 到GET請求的路徑。
+您可以將`/environment`附加至GET要求的路徑，以查詢使用密碼的環境。
 
 **API格式**
 
@@ -985,7 +985,7 @@ curl -X GET \
 
 ### 查詢密碼的相關屬性 {#property}
 
-您可以透過附加來查詢擁有秘密的屬性 `/property` 到GET請求的路徑。
+您可以將`/property`附加至GET要求的路徑，以查詢擁有密碼的屬性。
 
 **API格式**
 

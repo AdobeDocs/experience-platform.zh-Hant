@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；結構描述；
+keywords: Experience Platform；首頁；熱門主題；資料準備；api指南；方案；
 title: 函式API端點
 description: 您可以使用資料準備API中的「/functions」端點來驗證對應運算式，並列出可用的對應集函式。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '213'
 ht-degree: 2%
 
 ---
 
 # 函式端點
 
-對應集函式可讓您在來源和目的地結構描述之間轉換資料。 您可以使用 `/languages/el` 端點來驗證運算式，並取得所有可用對應集函式的清單。
+對應集函式可讓您在來源和目的地結構描述之間轉換資料。 您可以使用`/languages/el`端點來驗證運算式，並取得所有可用對應集函式的清單。
 
 ## 驗證運算式
 
-您可以透過向以下發出POST要求，來驗證目前的運算式是否有效： `/languages/el/validate` 端點。
+您可以透過向`/languages/el/validate`端點發出POST要求來驗證您目前的運算式是否有效。
 
 **API格式**
 
@@ -52,7 +52,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 ## 清單對應集函式
 
-您可以透過向以下專案發出GET請求，擷取所有可用對應集函式的清單： `/languages/el/functions` 端點。
+您可以向`/languages/el/functions`端點發出GET要求，以擷取所有可用對應集函式的清單。
 
 **API格式**
 
@@ -76,7 +76,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 >[!NOTE]
 >
->此回應已因空格而截斷。
+>此回應已因空間而遭截斷。
 
 ```json
 [
@@ -117,7 +117,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 ## 清單對應集運運算元
 
-您可以透過向以下專案發出GET請求，擷取所有可供您使用的對應集運運算元清單： `/languages/el/operators` 端點。
+您可以向`/languages/el/operators`端點發出GET要求，以擷取您可用的所有對應集運運算元清單。
 
 **API格式**
 
@@ -141,7 +141,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
 
 >[!NOTE]
 >
->此回應已因空格而截斷。
+>此回應已因空間而遭截斷。
 
 ```json
 [

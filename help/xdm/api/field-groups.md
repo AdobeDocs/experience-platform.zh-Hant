@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述登入；欄位群組；欄位群組；建立
+keywords: Experience Platform；首頁；熱門主題；API；API；XDM；XDM系統；體驗資料模型；體驗資料模型；資料模型；資料模型；結構描述登入；欄位群組；欄位群組；建立
 solution: Experience Platform
 title: 欄位群組API端點
 description: 結構描述登入API中的/fieldgroups端點可讓您以程式設計方式管理體驗應用程式中的XDM結構描述欄位群組。
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1197'
 ht-degree: 2%
 
 ---
 
 # 結構描述欄位群組端點
 
-結構描述欄位群組是可重複使用的元件，可定義代表特定概念的一或多個欄位，例如個人、郵寄地址或網頁瀏覽器環境。 視欄位群組代表的資料行為（記錄或時間序列）而定，這些欄位群組旨在包含在實作相容類別的結構描述中。 此 `/fieldgroups` 中的端點 [!DNL Schema Registry] API可讓您以程式設計方式管理體驗應用程式中的欄位群組。
+結構描述欄位群組是可重複使用的元件，可定義代表特定概念的一或多個欄位，例如個人、郵寄地址或網頁瀏覽器環境。 視欄位群組代表的資料行為（記錄或時間序列）而定，這些欄位群組旨在包含在實施相容類別的結構描述中。 [!DNL Schema Registry] API中的`/fieldgroups`端點可讓您以程式設計方式管理體驗應用程式中的欄位群組。
 
 ## 快速入門
 
-本指南中使用的端點是 [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的閱讀指南，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
+本指南中使用的端點是[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 擷取欄位群組清單 {#list}
 
-您可以在「 」下方列出所有欄位群組 `global` 或 `tenant` 向發出GET請求來建立容器 `/global/fieldgroups` 或 `/tenant/fieldgroups`（分別）。
+您可以分別向`/global/fieldgroups`或`/tenant/fieldgroups`發出GET要求，列出`global`或`tenant`容器下的所有欄位群組。
 
 >[!NOTE]
 >
->列出資源時，結構描述登入將結果集限製為300個專案。 若要傳回超出此限制的資源，您必須使用分頁引數。 也建議您使用其他查詢引數來篩選結果並減少傳回的資源數量。 請參閱以下小節： [查詢引數](./appendix.md#query) 詳細資訊。
+>列出資源時，結構描述登入將結果集限製為300個專案。 為了傳回超過此限制的資源，您必須使用分頁引數。 也建議您使用其他查詢引數來篩選結果並減少傳回的資源數量。 如需詳細資訊，請參閱附錄檔案中有關[查詢引數](./appendix.md#query)的部分。
 
 **API格式**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 您要從中擷取欄位群組的容器： `global` 適用於Adobe建立的欄位群組或 `tenant` 適用於貴組織擁有的欄位群組。 |
-| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 請參閱 [附錄檔案](./appendix.md#query) 以取得可用引數的清單。 |
+| `{CONTAINER_ID}` | 您要擷取欄位群組的容器： `global` (針對Adobe建立的欄位群組)或`tenant` （針對貴組織擁有的欄位群組）。 |
+| `{QUERY_PARAMS}` | 篩選結果的選用查詢引數。 如需可用引數的清單，請參閱[附錄檔案](./appendix.md#query)。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會從「 」擷取欄位群組清單 `tenant` 容器，使用 `orderby` 查詢引數，依欄位群組排序 `title` 屬性。
+下列要求會使用`orderby`查詢引數，依欄位群組的`title`屬性排序欄位群組，從`tenant`容器擷取欄位群組清單。
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於 `Accept` 標頭已在請求中傳送。 下列專案 `Accept` 標頭可用於列出欄位群組：
+回應格式取決於請求中傳送的`Accept`標頭。 下列`Accept`標題可用於列出欄位群組：
 
-| `Accept` 頁首 | 說明 |
+| `Accept`標題 | 說明 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 傳回每個資源的簡短摘要。 這是列出資源的建議標頭。 （上限： 300） |
-| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON欄位群組，包含原始欄位 `$ref` 和 `allOf` 包含。 （上限： 300） |
+| `application/vnd.adobe.xed+json` | 傳回每個資源的完整JSON欄位群組，包含原始`$ref`和`allOf`。 （上限： 300） |
 
 {style="table-layout:auto"}
 
 **回應**
 
-上述請求使用的是 `application/vnd.adobe.xed-id+json` `Accept` 標題，因此回應僅包含 `title`， `$id`， `meta:altId`、和 `version` 每個欄位群組的屬性。 使用另一個 `Accept` 頁首(`application/vnd.adobe.xed+json`)會傳回每個欄位群組的所有屬性。 選取適當的 `Accept` 標題依您在回應中所需的資訊而定。
+上述要求使用了`application/vnd.adobe.xed-id+json` `Accept`標頭，因此回應只包含每個欄位群組的`title`、`$id`、`meta:altId`和`version`屬性。 使用其他`Accept`標頭(`application/vnd.adobe.xed+json`)會傳回每個欄位群組的所有屬性。 根據您在回應中需要的資訊，選取適當的`Accept`標頭。
 
 ```json
 {
@@ -111,7 +111,7 @@ curl -X GET \
 
 ## 查詢欄位群組 {#lookup}
 
-您可以在GET請求的路徑中包含欄位群組ID來查詢特定欄位群組。
+您可以在GET請求的路徑中包含欄位群組ID，以查詢特定欄位群組。
 
 **API格式**
 
@@ -121,14 +121,14 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 存放您要擷取之欄位群組的容器： `global` 針對Adobe建立的欄位群組或 `tenant` 適用於貴組織擁有的欄位群組。 |
-| `{FIELD_GROUP_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要查閱的欄位群組的名稱。 |
+| `{CONTAINER_ID}` | 容納您要擷取之欄位群組的容器： `global`用於Adobe建立的欄位群組，或`tenant`用於您的組織擁有的欄位群組。 |
+| `{FIELD_GROUP_ID}` | 您要查閱之欄位群組的`meta:altId`或URL編碼的`$id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會依其擷取欄位群組 `meta:altId` 路徑中提供的值。
+下列要求會依照路徑中提供的`meta:altId`值擷取欄位群組。
 
 ```shell
 curl -X GET \
@@ -140,21 +140,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-回應格式取決於 `Accept` 標頭已在請求中傳送。 所有查詢請求都需要 `version` 包含在 `Accept` 標頭。 下列專案 `Accept` 標頭可供使用：
+回應格式取決於請求中傳送的`Accept`標頭。 所有查詢請求都要求在`Accept`標頭中包含`version`。 下列`Accept`標頭可供使用：
 
-| `Accept` 頁首 | 說明 |
+| `Accept`標題 | 說明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | 原始 `$ref` 和 `allOf`，有標題和說明。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解決，具有標題和說明。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 原始 `$ref` 和 `allOf`，無標題或說明。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解決，無標題或說明。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 和 `allOf` 已解決，包含描述項。 |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | 具有`$ref`和`allOf`的原始，有標題和說明。 |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref`和`allOf`已解決，有標題和說明。 |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 含有`$ref`和`allOf`的原始，沒有標題或說明。 |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref`和`allOf`已解決，無標題或說明。 |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | 已解決`$ref`和`allOf`，包含描述元。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回欄位群組的詳細資訊。 傳回的欄位取決於 `Accept` 標頭已在請求中傳送。 使用不同的實驗 `Accept` 標頭，用來比較回應及判斷哪個標頭最適合您的使用案例。
+成功的回應會傳回欄位群組的詳細資料。 傳回的欄位取決於請求中傳送的`Accept`標頭。 嘗試使用不同的`Accept`標頭來比較回應，並決定哪個標頭最適合您的使用案例。
 
 ```json
 {
@@ -217,7 +217,7 @@ curl -X GET \
 
 ## 建立欄位群組 {#create}
 
-您可以在下定義自訂欄位群組 `tenant` 容器建立POST要求。
+您可以發出POST要求，以在`tenant`容器下定義自訂欄位群組。
 
 **API格式**
 
@@ -227,11 +227,11 @@ POST /tenant/fieldgroups
 
 **要求**
 
-定義新欄位群組時，必須包含 `meta:intendedToExtend` 屬性，列出 `$id` 與欄位群組相容的類別。 在此範例中，欄位群組與 `Property` 先前定義的類別。 自訂欄位必須巢狀內嵌於 `_{TENANT_ID}` （如範例所示）以避免與類別和其他欄位群組提供的類似欄位發生任何衝突。
+定義新欄位群組時，它必須包含`meta:intendedToExtend`屬性，列出與欄位群組相容的類別的`$id`。 在此範例中，欄位群組與先前定義的`Property`類別相容。 自訂欄位必須巢狀內嵌於`_{TENANT_ID}`下（如範例所示），以避免與類別和其他欄位群組提供的類似欄位發生任何衝突。
 
 >[!NOTE]
 >
->有關如何定義要包含在欄位群組中的不同欄位型別的詳細資訊，請參閱以下指南： [在API中定義自訂欄位](../tutorials/custom-fields-api.md#define-fields).
+>如需有關如何定義要包含在欄位群組中的不同欄位型別的詳細資訊，請參閱[在API中定義自訂欄位的指南](../tutorials/custom-fields-api.md#define-fields)。
 
 ```SHELL
 curl -X POST \
@@ -300,7 +300,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201 （已建立）以及包含新建立欄位群組詳細資訊的裝載，包括 `$id`， `meta:altId`、和 `version`. 這些值是唯讀的，並由 [!DNL Schema Registry].
+成功的回應會傳回HTTP狀態201 （已建立）以及包含新建立欄位群組之詳細資訊的裝載，包括`$id`、`meta:altId`和`version`。 這些值是唯讀的，並由[!DNL Schema Registry]指派。
 
 ```JSON
 {
@@ -384,15 +384,15 @@ curl -X POST \
 }
 ```
 
-執行GET要求至 [列出所有欄位群組](#list) 「租使用者」容器中的「屬性詳細資料」欄位群組，或者您可以 [執行查詢(GET)請求](#lookup) 使用URL編碼 `$id` URI直接檢視新欄位群組。
+執行[列出租使用者容器中所有欄位群組](#list)的GET要求現在會包含屬性詳細資料欄位群組，或者您可以[使用URL編碼的`$id` URI執行查詢(GET)要求](#lookup)以直接檢視新的欄位群組。
 
 ## 更新欄位群組 {#put}
 
-您可以透過PUT操作取代整個欄位群組，基本上是重寫資源。 透過PUT請求更新欄位群組時，本文必須包含以下情況所需的所有欄位： [建立新欄位群組](#create) 在POST請求中。
+您可以透過PUT作業取代整個欄位群組，基本上是重寫資源。 透過PUT要求更新欄位群組時，本文必須包含在POST要求中[建立新欄位群組](#create)時所需的所有欄位。
 
 >[!NOTE]
 >
->如果您只想更新部分欄位群組而不是完全取代它，請參閱 [更新欄位群組的一部分](#patch).
+>如果您只想更新部分欄位群組而不是完全取代它，請參閱[更新部分欄位群組](#patch)的區段。
 
 **API格式**
 
@@ -402,13 +402,13 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | 此 `meta:altId` 或URL編碼 `$id` 要重新寫入的欄位群組。 |
+| `{FIELD_GROUP_ID}` | 您要重新寫入之欄位群組的`meta:altId`或URL編碼的`$id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會重新寫入現有欄位群組，並新增 `propertyCountry` 欄位。
+下列要求會重新寫入現有的欄位群組，新增新的`propertyCountry`欄位。
 
 ```SHELL
 curl -X PUT \
@@ -482,7 +482,7 @@ curl -X PUT \
 
 **回應**
 
-成功的回應會傳回已更新欄位群組的詳細資訊。
+成功的回應會傳回已更新欄位群組的詳細資料。
 
 ```JSON
 {
@@ -573,11 +573,11 @@ curl -X PUT \
 
 ## 更新欄位群組的部分 {#patch}
 
-您可以使用PATCH請求來更新部分欄位群組。 此 [!DNL Schema Registry] 支援所有標準JSON修補程式操作，包括 `add`， `remove`、和 `replace`. 如需JSON修補程式的詳細資訊，請參閱 [API基礎指南](../../landing/api-fundamentals.md#json-patch).
+您可以使用PATCH請求來更新欄位群組的部分。 [!DNL Schema Registry]支援所有標準JSON修補程式操作，包括`add`、`remove`和`replace`。 如需JSON修補程式的詳細資訊，請參閱[API基礎指南](../../landing/api-fundamentals.md#json-patch)。
 
 >[!NOTE]
 >
->如果您想使用新值取代整個資源，而不是更新個別欄位，請參閱 [使用PUT操作取代欄位群組](#put).
+>如果您想要以新值取代整個資源，而不是更新個別欄位，請參閱[使用PUT作業取代欄位群組](#put)一節。
 
 **API格式**
 
@@ -587,15 +587,15 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | URL編碼 `$id` URI或 `meta:altId` 要更新的欄位群組。 |
+| `{FIELD_GROUP_ID}` | 您要更新的欄位群組之URL編碼的`$id` URI或`meta:altId`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下範例請求會更新 `description` 欄位群組中的欄位名稱，並新增一個 `propertyCity` 欄位。
+下列範例要求會更新現有欄位群組的`description`，並新增新的`propertyCity`欄位。
 
-請求內文採用陣列形式，每個列出的物件都代表個別欄位的特定變更。 每個物件都包含要執行的操作(`op`)，操作應執行於哪個欄位(`path`)，以及該作業應包含哪些資訊(`value`)。
+請求內文採用陣列形式，每個列出的物件代表個別欄位的特定變更。 每個物件都包含要執行的作業(`op`)、應在哪個欄位上執行該作業(`path`)，以及該作業中應包含哪些資訊(`value`)。
 
 ```SHELL
 curl -X PATCH \
@@ -625,7 +625,7 @@ curl -X PATCH \
 
 **回應**
 
-回應顯示兩個操作都已成功執行。 此 `description` 已更新，並且 `propertyCountry` 已新增至 `definitions`.
+回應顯示兩個作業都已成功執行。 `description`已更新，且`propertyCountry`已新增至`definitions`下。
 
 ```JSON
 {
@@ -716,7 +716,7 @@ curl -X PATCH \
 
 ## 刪除欄位群組 {#delete}
 
-有時可能需要從結構描述登入中移除欄位群組。 可透過使用路徑中提供的欄位群組ID執行DELETE請求來完成。
+有時可能需要從結構描述登入中移除欄位群組。 這是透過使用路徑中提供的欄位群組ID執行DELETE請求來完成。
 
 **API格式**
 
@@ -726,7 +726,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | URL編碼 `$id` URI或 `meta:altId` 要刪除的欄位群組的名稱。 |
+| `{FIELD_GROUP_ID}` | 您要刪除之欄位群組的URL編碼`$id` URI或`meta:altId`。 |
 
 {style="table-layout:auto"}
 
@@ -745,4 +745,4 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204 （無內容）和空白內文。
 
-您可以嘗試 [查詢(GET)請求](#lookup) 至欄位群組。 您需要包含 `Accept` 標頭中，但應該會收到HTTP狀態404 （找不到），因為欄位群組已從Schema Registry中移除。
+您可以嘗試對欄位群組進行[查詢(GET)請求](#lookup)，以確認刪除。 您需要在要求中加入`Accept`標頭，但應該會收到HTTP狀態404 （找不到），因為欄位群組已從結構描述登入中移除。

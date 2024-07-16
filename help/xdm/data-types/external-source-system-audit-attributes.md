@@ -1,15 +1,15 @@
 ---
-title: 外部來源系統稽核屬性資料型別
-description: 瞭解外部來源系統稽核屬性Experience Data Model (XDM)資料型別。
+title: 外部Source系統稽核屬性資料型別
+description: 瞭解外部Source系統稽核屬性Experience Data Model (XDM)資料型別。
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '168'
-ht-degree: 17%
+ht-degree: 20%
 
 ---
 
-# [!UICONTROL 外部來源系統稽核屬性] 資料型別
+# [!UICONTROL 外部Source系統稽核屬性]資料型別
 
 [!UICONTROL 外部來源系統稽核屬性]是一種標準的體驗資料模式 (XDM) 資料類型，用於擷取外部來源系統的稽核詳細資料。
 
@@ -17,7 +17,7 @@ ht-degree: 17%
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `externalKey` | [[!UICONTROL B2B來源]](./b2b-source.md) | 用於稽核之來源的複合識別碼。 |
+| `externalKey` | [[!UICONTROL B2B Source]](./b2b-source.md) | 用於稽核之來源的複合識別碼。 |
 | `createdBy` | 字串 | 建立此記錄的使用者名稱。 |
 | `createdDate` | 日期時間 | 建立此記錄的日期。 |
 | `externalID` | 字串 | 來源的外部唯一識別碼。 如有需要，此值可用於協助識別和刪除重複專案。 |
@@ -31,5 +31,5 @@ ht-degree: 17%
 
 如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)

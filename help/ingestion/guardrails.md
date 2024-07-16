@@ -14,30 +14,30 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->批次和串流擷取的護欄會在組織層級進行計算，而不是沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需有關授權使用權益的詳細資訊，請參閱 [資料管理最佳實務指南](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>批次和串流擷取的護欄會在組織層級進行計算，而不是沙箱層級。 這表示您的每個沙箱資料使用量都會與對應至您整個組織的授權使用量權利總數繫結。 此外，開發沙箱中的資料使用量限製為您的設定檔總數的10%。 如需授權使用權益的詳細資訊，請閱讀[資料管理最佳實務指南](../landing/license-usage-and-guardrails/data-management-best-practices.md)。
 
 護欄是臨界值，可為Adobe Experience Platform中的資料和系統使用、效能最佳化，以及避免錯誤或意外結果提供指引。 護欄可指您與授權權益相關的資料使用或消費與處理。
 
 >[!IMPORTANT]
 >
->檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 本文提供Adobe Experience Platform中資料擷取護欄的相關指示。
 
 ## 批次擷取的護欄
 
-下表概述使用時需考慮的護欄 [批次擷取API](./batch-ingestion/overview.md) 或來源：
+下表概述使用[批次擷取API](./batch-ingestion/overview.md)或來源時應考慮的護欄：
 
 | 擷取型別 | 准則 | 附註 |
 | --- | --- | --- |
 | 使用批次擷取API擷取資料湖 | <ul><li>您可以使用批次擷取API，每小時可擷取最多20 GB的資料至Data Lake。</li><li>每個批次的最大檔案數為1500。</li><li>最大批次大小為100 GB。</li><li>每列的屬性或欄位數上限為10000。</li><li>每分鐘每個使用者的批次數量上限為2000。</li></ul> | |
-| 使用批次來源擷取資料湖 | <ul><li>您可以使用批次擷取來源（例如），每小時將高達200 GB的資料擷取至資料湖 [!DNL Azure Blob]， [!DNL Amazon S3]、和 [!DNL SFTP].</li><li>批次大小應介於256 MB和100 GB之間。 這同時適用於未壓縮和壓縮的資料。 若在資料湖中解壓縮壓縮壓縮的資料，將套用這些限制。</li><li>每個批次的最大檔案數為1500。</li><li>檔案或資料夾的最小大小為1個位元組。 您無法擷取0位元組大小的檔案或資料夾。</li></ul> | 閱讀 [來源概觀](../sources/home.md) 如需可用於資料內嵌的來源目錄。 |
+| 使用批次來源擷取資料湖 | <ul><li>您可以使用批次擷取來源（例如[!DNL Azure Blob]、[!DNL Amazon S3]和[!DNL SFTP]），每小時最多可擷取200 GB的資料至資料湖。</li><li>批次大小應介於256 MB和100 GB之間。 這同時適用於未壓縮和壓縮的資料。 若在資料湖中解壓縮壓縮壓縮的資料，將套用這些限制。</li><li>每個批次的最大檔案數為1500。</li><li>檔案或資料夾的最小大小為1個位元組。 您無法擷取0位元組大小的檔案或資料夾。</li></ul> | 請閱讀[來源概觀](../sources/home.md)，瞭解您可以用於資料擷取的來源目錄。 |
 | 批次內嵌至設定檔 | <ul><li>記錄類別的大小上限為100 KB （硬式）。</li><li>ExperienceEvent類別的大小上限為10 KB （硬式）。</li></ul> | |
-| 每天擷取的設定檔或ExperienceEvent批次數量 | **每天最多可擷取90個Profile或ExperienceEvent批次。** 這表示每天擷取的Profile和ExperienceEvent批次總數不能超過90。 擷取其他批次將會影響系統效能。 | 這是軟性限制。 雖然可能會超過軟性限制，但軟性限制提供系統效能的建議指引。 |
+| 每天擷取的設定檔或ExperienceEvent批次數量 | **每天擷取的Profile或ExperienceEvent批次數量上限為90。**&#x200B;這表示每天擷取的Profile和ExperienceEvent批次總數不能超過90。 擷取其他批次將會影響系統效能。 | 這是軟性限制。 雖然可能會超過軟性限制，但軟性限制提供系統效能的建議指引。 |
 
 ## 串流擷取的護欄
 
-閱讀 [串流擷取概觀](./streaming-ingestion/overview.md) 以取得串流擷取的護欄相關資訊。
+閱讀[串流擷取總覽](./streaming-ingestion/overview.md)，瞭解串流擷取的護欄資訊。
 
 ## 串流來源的護欄
 
@@ -45,14 +45,14 @@ ht-degree: 0%
 
 | 擷取型別 | 准則 | 附註 |
 | --- | --- | --- |
-| 串流來源 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>擷取至資料湖時，串流來源支援每秒有4000到5000個請求。 除了現有的來源連線外，這同時適用於新建立的來源連線。 **注意**：串流資料可能需要30分鐘的時間才能完全處理至Data Lake。</li><li>串流來源在將資料擷取至設定檔或串流細分時，支援每秒最多1500個請求。</li></ul> | 串流來源，例如 [!DNL Kafka]， [!DNL Azure Event Hubs]、和 [!DNL Amazon Kinesis] 請勿使用 [!DNL Data Collection Core Service] (DCCS)路由，而且可以有不同的輸送量限制。 請參閱 [來源概觀](../sources/home.md) 如需可用於資料內嵌的來源目錄。 |
+| 串流來源 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>擷取至資料湖時，串流來源支援每秒有4000到5000個請求。 除了現有的來源連線外，這同時適用於新建立的來源連線。 **注意**：串流資料最多可能需要30分鐘才能完全處理至資料湖。</li><li>串流來源在將資料擷取至設定檔或串流細分時，支援每秒最多1500個請求。</li></ul> | 串流來源（例如[!DNL Kafka]、[!DNL Azure Event Hubs]和[!DNL Amazon Kinesis]）不使用[!DNL Data Collection Core Service] (DCCS)路由，而且可能有不同的輸送量限制。 如需您可以用於資料擷取的來源目錄，請參閱[來源概觀](../sources/home.md)。 |
 
 ## 後續步驟
 
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [端對端延遲圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 用於各種Experience Platform服務。
-* [Real-time Customer Data Platform （B2C版本 — Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2P - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2B - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-time Customer Data Platform （B2C Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2P - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2B - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

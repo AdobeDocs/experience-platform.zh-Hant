@@ -4,14 +4,14 @@ description: Adobe Experience Platform中常見Analytics外掛程式標籤擴充
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '352'
 ht-degree: 55%
 
 ---
 
 # 常見Analytics外掛程式發行說明
 
-## 2022 年 6 月 03 日
+## 2022年6月3日
 
 ### 常見 Analytics 外掛程式擴充功能 3.0.7
 
@@ -41,8 +41,8 @@ ht-degree: 55%
 
 #### 錯誤修正
 
-* 修正getPageLoadTime在視窗物件上設定變數時發生錯誤
-* 修正當queryParam不存在於查詢字串中時，getQueryParam傳回undefined而非「」的問題
+* 修正getPageLoadTime在視窗物件上設定變數錯誤的問題
+* 修正getQueryParam傳回undefined而非「」的問題（如果queryParam不存在於查詢字串中）
 * 修正初始化動作中顯示錯誤版本號碼的問題
 
 ## 2021 年 3 月 19 日
@@ -51,7 +51,7 @@ ht-degree: 55%
 
 #### 功能
 
-* 所有外掛程式都已更新，自動包含版本資訊作為內容資料
+* 所有外掛程式均已更新，自動納入版本資訊作為內容資料
 * 新增getPercentPageViewed外掛程式
 * 為下列外掛程式新增資料元素
    * getGeoCoordinates
@@ -76,7 +76,7 @@ ht-degree: 55%
 
 * 更新初始化動作中的文件
 
-## 2019年12月5
+## 2019年12月5日
 
 ### 常見 Analytics 外掛程式擴充功能 2.1.1
 

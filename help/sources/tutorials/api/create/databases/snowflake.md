@@ -6,36 +6,36 @@ exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 source-git-commit: 4de2193a45fc2925af310b5e2475eabe26d13adc
 workflow-type: tm+mt
 source-wordcount: '932'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
-# 建立 [!DNL Snowflake] 基礎連線使用 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API建立[!DNL Snowflake]基本連線
 
 >[!IMPORTANT]
 >
->此 [!DNL Snowflake] 已購買Real-time Customer Data Platform Ultimate的使用者可在來源目錄中取得來源。
+>[!DNL Snowflake]來源可在來源目錄中提供給已購買Real-time Customer Data Platform Ultimate的使用者。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-使用下列教學課程來瞭解如何為建立基本連線 [!DNL Snowflake] 使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+使用下列教學課程瞭解如何使用[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)為[!DNL Snowflake]建立基礎連線。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用以下專案來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
 
-下節提供成功連線所需的其他資訊 [!DNL Snowflake] 使用 [!DNL Flow Service] API。
+以下章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL Snowflake]。
 
 ### 收集必要的認證
 
-您必須提供下列認證屬性的值，才能驗證您的 [!DNL Snowflake] 來源。
+您必須提供下列認證屬性的值，才能驗證您的[!DNL Snowflake]來源。
 
 >[!BEGINTABS]
 
@@ -43,40 +43,40 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須唯一識別跨不同帳戶的身分 [!DNL Snowflake] 組織。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `orgname-account_name`。如需帳戶名稱的詳細資訊，請參閱 [!DNL Snowflake] 檔案： [帳戶識別碼](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `warehouse` | 此 [!DNL Snowflake] warehouse會管理應用程式的查詢執行程式。 每個 [!DNL Snowflake] Warehouse彼此獨立，將資料帶到Platform時必須個別存取。 |
-| `database` | 此 [!DNL Snowflake] 資料庫包含您要帶入Platform的資料。 |
-| `username` | 的使用者名稱 [!DNL Snowflake] 帳戶。 |
-| `password` | 的密碼 [!DNL Snowflake] 使用者帳戶。 |
-| `role` | 要使用的預設存取控制角色 [!DNL Snowflake] 工作階段。 該角色應為已指派給指定使用者的現有角色。 預設角色為 `PUBLIC`. |
-| `connectionString` | 用來連線至您的裝置的連線字串 [!DNL Snowflake] 執行個體。 的連線字串模式 [!DNL Snowflake] 是 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
+| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如： `orgname-account_name`。 如需帳戶名稱的詳細資訊，請閱讀[帳戶識別碼](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)的[!DNL Snowflake]檔案。 |
+| `warehouse` | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料傳送至Platform時必須個別存取。 |
+| `database` | [!DNL Snowflake]資料庫包含您要帶入Platform的資料。 |
+| `username` | [!DNL Snowflake]帳戶的使用者名稱。 |
+| `password` | [!DNL Snowflake]使用者帳戶的密碼。 |
+| `role` | 在[!DNL Snowflake]工作階段中使用的預設存取控制角色。 該角色應為已指派給指定使用者的現有角色。 預設角色為`PUBLIC`。 |
+| `connectionString` | 用來連線至您[!DNL Snowflake]執行個體的連線字串。 [!DNL Snowflake]的連線字串模式為`jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
 
 >[!TAB 金鑰組驗證]
 
-若要使用金鑰組驗證，您必須產生2048位元RSA金鑰組，然後在建立帳戶時提供下列值 [!DNL Snowflake] 來源。
+若要使用金鑰組驗證，您必須產生2048位元RSA金鑰組，然後在建立[!DNL Snowflake]來源的帳戶時提供下列值。
 
 | 認證 | 說明 |
 | --- | --- |
-| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須唯一識別跨不同帳戶的身分 [!DNL Snowflake] 組織。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如: `orgname-account_name`。如需帳戶名稱的詳細資訊，請參閱 [!DNL Snowflake] 檔案： [帳戶識別碼](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `username` | 您的使用者名稱 [!DNL Snowflake] 帳戶。 |
-| `privateKey` | 此 [!DNL Base64-]您的加密私密金鑰 [!DNL Snowflake] 帳戶。 您可以產生加密或未加密的私密金鑰。 如果您使用加密的私密金鑰，則在針對Experience Platform進行驗證時，也必須提供私密金鑰複雜密碼。 |
+| `account` | 帳戶名稱可唯一識別組織內的帳戶。 在此情況下，您必須跨不同的[!DNL Snowflake]組織唯一識別帳戶。 若要這麼做，您必須在帳戶名稱前加上組織名稱。 例如： `orgname-account_name`。 如需帳戶名稱的詳細資訊，請閱讀[帳戶識別碼](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization)的[!DNL Snowflake]檔案。 |
+| `username` | 您[!DNL Snowflake]帳戶的使用者名稱。 |
+| `privateKey` | 您[!DNL Snowflake]帳戶的[!DNL Base64-]編碼私密金鑰。 您可以產生加密或未加密的私密金鑰。 如果您使用加密的私密金鑰，則在針對Experience Platform進行驗證時，也必須提供私密金鑰複雜密碼。 |
 | `privateKeyPassphrase` | 私密金鑰複雜密碼是附加的安全性層級，在使用加密的私密金鑰進行驗證時必須使用此層級。 如果您使用未加密的私密金鑰，則不需要提供複雜密碼。 |
-| `database` | 此 [!DNL Snowflake] 包含您要擷取以Experience Platform之資料的資料庫。 |
-| `warehouse` | 此 [!DNL Snowflake] warehouse會管理應用程式的查詢執行程式。 每個 [!DNL Snowflake] warehouse彼此獨立，在將資料帶到Experience Platform時必須個別存取。 |
+| `database` | 包含您要擷取以Experience Platform之資料的[!DNL Snowflake]資料庫。 |
+| `warehouse` | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料移至Experience Platform時，必須個別存取。 |
 
-如需這些值的詳細資訊，請參閱 [[!DNL Snowflake] 金鑰組驗證指南](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+如需這些值的詳細資訊，請參閱[[!DNL Snowflake] 金鑰組驗證指南](https://docs.snowflake.com/en/user-guide/key-pair-auth.html)。
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->您必須設定 `PREVENT_UNLOAD_TO_INLINE_URL` 標幟到 `FALSE` 允許從解除安裝資料 [!DNL Snowflake] 要Experience Platform的資料庫
+>您必須將`PREVENT_UNLOAD_TO_INLINE_URL`標幟設定為`FALSE`，以允許從[!DNL Snowflake]資料庫解除安裝資料以Experience Platform。
 
 ## 建立基礎連線
 
 基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基本連線ID，請向以下連線ID發出POST請求： `/connections` 端點，同時提供 [!DNL Snowflake] 要求內文中的驗證認證。
+若要建立基底連線ID，請在提供您的[!DNL Snowflake]驗證認證作為要求內文的一部分時，向`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -86,11 +86,11 @@ POST /connections
 
 >[!BEGINTABS]
 
->[!TAB ConnectionString]
+>[!TAB 連線字串]
 
 +++要求
 
-下列要求會建立 [!DNL Snowflake]：
+下列要求會建立[!DNL Snowflake]的基礎連線：
 
 ```shell
 curl -X POST \
@@ -118,8 +118,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | 用來連線至您的裝置的連線字串 [!DNL Snowflake] 執行個體。 的連線字串模式 [!DNL Snowflake] 是 `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
-| `connectionSpec.id` | 此 [!DNL Snowflake] 連線規格ID： `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+| `auth.params.connectionString` | 用來連線至您[!DNL Snowflake]執行個體的連線字串。 [!DNL Snowflake]的連線字串模式為`jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`。 |
+| `connectionSpec.id` | [!DNL Snowflake]連線規格識別碼： `b2e08744-4f1a-40ce-af30-7abac3e23cf3`。 |
 
 +++
 
@@ -172,13 +172,13 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.account` | 您的名稱 [!DNL Snowflake] 帳戶。 |
-| `auth.params.username` | 與您的相關聯的使用者名稱 [!DNL Snowflake] 帳戶。 |
-| `auth.params.database` | 此 [!DNL Snowflake] 從其中提取資料的資料庫。 |
-| `auth.params.privateKey` | 此 [!DNL Base64-]已編碼您的加密私密金鑰 [!DNL Snowflake] 帳戶。 |
+| `auth.params.account` | 您的[!DNL Snowflake]帳戶名稱。 |
+| `auth.params.username` | 與您的[!DNL Snowflake]帳戶相關聯的使用者名稱。 |
+| `auth.params.database` | 將從其中提取資料的[!DNL Snowflake]資料庫。 |
+| `auth.params.privateKey` | 您的[!DNL Snowflake]帳戶的[!DNL Base64-]編碼加密私密金鑰。 |
 | `auth.params.privateKeyPassphrase` | 與您的私密金鑰對應的複雜密碼。 |
-| `auth.params.warehouse` | 此 [!DNL Snowflake] 您正在使用的倉儲。 |
-| `connectionSpec.id` | 此 [!DNL Snowflake] 連線規格ID： `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+| `auth.params.warehouse` | 您正在使用的[!DNL Snowflake]倉儲。 |
+| `connectionSpec.id` | [!DNL Snowflake]連線規格識別碼： `b2e08744-4f1a-40ce-af30-7abac3e23cf3`。 |
 
 +++
 
@@ -229,12 +229,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `auth.params.account` | 您的名稱 [!DNL Snowflake] 帳戶。 |
-| `auth.params.username` | 與您的相關聯的使用者名稱 [!DNL Snowflake] 帳戶。 |
-| `auth.params.database` | 此 [!DNL Snowflake] 從其中提取資料的資料庫。 |
-| `auth.params.privateKey` | 此 [!DNL Base64-]已編碼的未加密私密金鑰(您的 [!DNL Snowflake] 帳戶。 |
-| `auth.params.warehouse` | 此 [!DNL Snowflake] 您正在使用的倉儲。 |
-| `connectionSpec.id` | 此 [!DNL Snowflake] 連線規格ID： `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+| `auth.params.account` | 您的[!DNL Snowflake]帳戶名稱。 |
+| `auth.params.username` | 與您的[!DNL Snowflake]帳戶相關聯的使用者名稱。 |
+| `auth.params.database` | 將從其中提取資料的[!DNL Snowflake]資料庫。 |
+| `auth.params.privateKey` | [!DNL Snowflake]帳戶的[!DNL Base64-]編碼未加密私密金鑰。 |
+| `auth.params.warehouse` | 您正在使用的[!DNL Snowflake]倉儲。 |
+| `connectionSpec.id` | [!DNL Snowflake]連線規格識別碼： `b2e08744-4f1a-40ce-af30-7abac3e23cf3`。 |
 
 +++
 
@@ -253,7 +253,7 @@ curl -X POST \
 
 >[!ENDTABS]
 
-依照本教學課程，您已建立 [!DNL Snowflake] 基礎連線使用 [!DNL Flow Service] API。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL Snowflake]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
-* [使用瀏覽資料表的結構和內容 [!DNL Flow Service] API](../../explore/tabular.md)
-* [建立資料流以使用將資料庫資料帶入Platform [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
+* [使用 [!DNL Flow Service] API建立資料流以將資料庫資料帶到Platform](../../collect/database-nosql.md)

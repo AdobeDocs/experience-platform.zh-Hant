@@ -2,19 +2,19 @@
 title: 資料夾端點
 description: 瞭解如何使用Adobe Experience Platform API建立、更新、管理和刪除資料夾。
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 4%
 
 ---
 
-
 # 資料夾端點
 
 >[!IMPORTANT]
 >
->這組端點的端點URL為 `https://experience.adobe.io`.
+>這組端點的端點URL是`https://experience.adobe.io`。
 
 資料夾是一項功能，可讓您更妥善地組織業務物件，以更輕鬆地進行導覽和分類。
 
@@ -22,11 +22,11 @@ ht-degree: 4%
 
 ## 快速入門
 
-在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+繼續之前，請檢閱[快速入門手冊](./getting-started.md)以取得您成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫。
 
 ## 擷取資料夾清單 {#list}
 
-您可以透過向以下網站發出GET請求，擷取屬於您組織的資料夾清單： `/folder` 並指定資料夾型別和父資料夾ID。
+您可以向`/folder`端點發出GET要求，並指定資料夾型別和上層資料夾ID，以擷取屬於您組織的資料夾清單。
 
 **API格式**
 
@@ -36,8 +36,8 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括 `segment` 和 `dataset`. |
-| `{PARENT_FOLDER_ID}` | 您要從中擷取資料夾清單的父資料夾ID。 若要檢視所有父資料夾的清單，請使用資料夾ID `root`. |
+| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括`segment`和`dataset`。 |
+| `{PARENT_FOLDER_ID}` | 您要從中擷取資料夾清單的父資料夾ID。 若要檢視所有父資料夾的清單，請使用資料夾識別碼`root`。 |
 
 **要求**
 
@@ -113,7 +113,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfo
 
 ## 建立新資料夾 {#create}
 
-您可以透過向以下網站發出POST請求來建立新資料夾： `/folder` 端點並指定資料夾型別。
+您可以對`/folder`端點發出POST要求並指定資料夾型別，以建立新資料夾。
 
 **API格式**
 
@@ -123,7 +123,7 @@ POST /folder/{FOLDER_TYPE}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括 `segment` 和 `dataset`. |
+| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括`segment`和`dataset`。 |
 
 **要求**
 
@@ -185,7 +185,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
 
 ## 擷取特定資料夾 {#get}
 
-您可以透過向以下專案發出GET請求，擷取屬於您組織的特定資料夾： `/folder` 並指定資料夾型別和資料夾的ID。
+您可以向`/folder`端點發出GET要求，並指定資料夾型別和資料夾的ID，以擷取屬於您組織的特定資料夾。
 
 **API格式**
 
@@ -195,7 +195,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括 `segment` 和 `dataset`. |
+| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括`segment`和`dataset`。 |
 | `{FOLDER_ID}` | 您要擷取的資料夾識別碼。 |
 
 **要求**
@@ -250,13 +250,13 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 | `createdAt` | 資料夾建立時間的時間戳記。 |
 | `modifiedBy` | 上次更新資料夾的使用者ID。 |
 | `modifiedAt` | 資料夾上次更新的時間戳記。 |
-| `status` | 要求的資料夾狀態。 支援的值包括 `IN_USE` 和 `ARCHIVED`. |
+| `status` | 要求的資料夾狀態。 支援的值包括`IN_USE`和`ARCHIVED`。 |
 
 +++
 
 ## 驗證指定的資料夾 {#validate}
 
-您可以透過向以下專案發出GET請求，驗證資料夾是否符合在其中放置物件的條件： `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` 端點，並提供資料夾型別和ID。
+您可以透過向`/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate`端點發出GET要求，來驗證資料夾是否符合在其中有物件的資格，並提供資料夾型別和ID。
 
 **API格式**
 
@@ -266,7 +266,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括 `segment` 和 `dataset`. |
+| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括`segment`和`dataset`。 |
 | `{FOLDER_ID}` | 您正在驗證的資料夾的ID。 |
 
 **要求**
@@ -316,7 +316,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 ## 更新特定資料夾 {#update}
 
-您可以透過向以下專案發出PATCH請求，更新屬於您組織的特定資料夾的詳細資料： `/folder` 並指定資料夾型別和資料夾的ID。
+您可以對`/folder`端點發出PATCH要求，並指定資料夾型別和資料夾的ID，以更新屬於您組織的特定資料夾的詳細資料。
 
 **API格式**
 
@@ -326,7 +326,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括 `segment` 和 `dataset`. |
+| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括`segment`和`dataset`。 |
 | `{FOLDER_ID}` | 您要更新的資料夾識別碼。 |
 
 **要求**
@@ -378,7 +378,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-7
 
 ## 刪除特定資料夾 {#delete}
 
-您可以透過向以下專案發出DELETE請求，刪除屬於您組織的特定資料夾： `/folder` 並指定資料夾型別和資料夾的ID。
+您可以刪除屬於您組織的特定資料夾，方法是向`/folder`發出DELETE要求並指定資料夾型別和資料夾的ID。
 
 ***API格式**
 
@@ -388,7 +388,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括 `segment` 和 `dataset`. |
+| `{FOLDER_TYPE}` | 資料夾中包含的物件型別。 支援的值包括`segment`和`dataset`。 |
 | `{FOLDER_ID}` | 您要刪除的資料夾的ID。 |
 
 **要求**

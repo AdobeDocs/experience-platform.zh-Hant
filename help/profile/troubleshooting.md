@@ -7,15 +7,15 @@ exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
 source-wordcount: '964'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 即時客戶個人檔案疑難排解指南
 
-本檔案提供即時客戶個人檔案常見問題的解答，以及常見錯誤的疑難排解指南。 如需Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
+本檔案提供即時客戶個人檔案常見問題的解答，以及常見錯誤的疑難排解指南。 如需Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-替換為 [!DNL Real-Time Customer Profile]，您能透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，檢視每個個別客戶的整體檢視。 這可讓行銷人員跨多個管道為客戶推動協調、一致且相關的體驗。
+透過[!DNL Real-Time Customer Profile]，您可以透過合併來自多個管道（包括線上、離線、CRM和協力廠商）的資料，檢視每個個別客戶的整體檢視。 這可讓行銷人員跨多個管道為客戶推動協調、一致且相關的體驗。
 
 ## 常見問題集
 
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 ### 即時客戶個人檔案可接受哪些型別的資料？
 
-設定檔接受兩者 **記錄** 和 **時間序列** 資料，只要相關資料包含至少一個身分值，可將資料與不重複個人建立關聯。
+設定檔接受&#x200B;**記錄**&#x200B;和&#x200B;**時間序列**&#x200B;資料，只要有關資料至少包含一個識別值，可將資料與不重複的個人建立關聯。
 
-和所有Platform服務一樣，設定檔需要其資料在Experience Data Model (XDM)結構描述下語義結構化。 反過來，此結構描述必須有 **主要身分** 已定義並啟用以便在設定檔中使用。
+和所有Platform服務一樣，設定檔需要其資料在Experience Data Model (XDM)結構描述下語義結構化。 反過來，此結構描述必須已定義&#x200B;**主要身分**，而且必須啟用才能在設定檔中使用。
 
-如果您不熟悉XDM，請從 [XDM概覽](../xdm/home.md) 以進一步瞭解。 接下來，請參閱XDM使用手冊，以瞭解操作步驟 [設定身分欄位](../xdm/tutorials/create-schema-ui.md#identity-field) 和 [為設定檔啟用結構描述](../xdm/tutorials/create-schema-ui.md#profile).
+如果您不熟悉XDM，請從[XDM總覽](../xdm/home.md)開始瞭解更多。 接下來，請參閱XDM使用手冊，瞭解如何[設定身分識別欄位](../xdm/tutorials/create-schema-ui.md#identity-field)和[為設定檔](../xdm/tutorials/create-schema-ui.md#profile)啟用結構描述。
 
 ### 設定檔資料會儲存在哪裡？
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 如果資料已內嵌至非設定檔資料集，您必須將該資料重新內嵌至已啟用設定檔的資料集，才能使其在設定檔存放區中使用。 可以為設定檔啟用現有資料集，但是在該設定之前擷取的任何資料仍將不會顯示在設定檔存放區中。
 
-如果您想要將先前擷取的資料新增至設定檔存放區，請遵循 [資料集設定教學課程](./tutorials/dataset-configuration.md) 建立新資料集或轉換要啟用設定檔的現有資料集，然後將所需資料重新內嵌至該資料集。
+如果您想要將先前擷取的資料新增至設定檔存放區，請依照[資料集組態教學課程](./tutorials/dataset-configuration.md)中的指示來建立新資料集，或將現有資料集轉換為可啟用設定檔的資料集，然後將想要的資料重新擷取至該資料集。
 
 ### 如何檢視我內嵌的設定檔資料？
 
@@ -45,19 +45,19 @@ ht-degree: 0%
 
 #### 使用 API
 
-如果您知道要存取之設定檔實體的ID，則可以使用 `/entities` （設定檔存取）設定檔API中的端點來查詢這些實體。 請參閱以下小節： [實體](./api/entities.md) 詳細資訊，請參閱開發人員指南。
+如果您知道要存取之設定檔實體的ID，則可以使用設定檔API中的`/entities` （設定檔存取）端點來尋找這些實體。 如需詳細資訊，請參閱開發人員指南中[entities](./api/entities.md)的相關章節。
 
-您也可以使用Adobe Experience Platform Segmentation Service API來存取已符合受眾會籍資格的客戶的個別設定檔。 請參閱 [Segmentation Service概述](../segmentation/home.md) 以取得詳細資訊。
+您也可以使用Adobe Experience Platform Segmentation Service API來存取已符合受眾會籍資格的客戶的個別設定檔。 如需詳細資訊，請參閱[分段服務總覽](../segmentation/home.md)。
 
 #### 使用UI
 
-在Experience Platform UI中， **[!UICONTROL 瀏覽]** 索引標籤中的 **[!UICONTROL 設定檔]** 工作區可讓您檢視設定檔總數，並依其身分值搜尋個別設定檔。 請參閱 [設定檔使用手冊](./ui/user-guide.md) 以取得詳細資訊。
+在Experience PlatformUI中，**[!UICONTROL 設定檔]**&#x200B;工作區中的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤可讓您檢視設定檔總計數，並依其身分值搜尋個別設定檔。 如需詳細資訊，請參閱[設定檔使用手冊](./ui/user-guide.md)。
 
-您也可以在「 」下方檢視對象清單 **[!UICONTROL 瀏覽]** 索引標籤中的 **[!UICONTROL 受眾]** 工作區。 選取對象後，畫面會顯示符合該對象資格的設定檔範例。 然後，您可以選取這些列出的設定檔之一，以檢視其詳細資訊。 請參閱 [區段UI總覽](../segmentation/ui/overview.md) 以取得詳細資訊。
+您也可以在&#x200B;**[!UICONTROL 對象]**&#x200B;工作區的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤下檢視對象清單。 選取對象後，畫面會顯示符合該對象資格的設定檔範例。 然後，您可以選取這些列出的設定檔之一，以檢視其詳細資訊。 如需詳細資訊，請參閱[區段UI總覽](../segmentation/ui/overview.md)。
 
 ## 錯誤代碼
 
-以下是您在使用Real-time Customer Profile API時可能會遇到的錯誤訊息清單。 如果您遇到的錯誤未在此處列出，您可能會在一般情況下找到它 [平台疑難排解指南](../landing/troubleshooting.md) 而非。
+以下是您在使用Real-time Customer Profile API時可能會遇到的錯誤訊息清單。 如果此處未列出您遇到的錯誤，您可以在一般[平台疑難排解指南](../landing/troubleshooting.md)中找到。
 
 ### 無法查詢所提供路徑之計算屬性的結構描述
 
@@ -68,9 +68,9 @@ ht-degree: 0%
 }
 ```
 
-建立新的計算屬性時，如果系統找不到要求裝載中提供的結構描述，就會發生此錯誤。 確認您已在裝載中提供正確的租使用者ID `path` 屬性，而且其值 `schema.name` 是有效的結構描述名稱。
+建立新的計算屬性時，如果系統找不到要求裝載中提供的結構描述，就會發生此錯誤。 確定您已提供有效負載`path`屬性中的正確租使用者ID，且`schema.name`的值為有效的結構描述名稱。
 
-如果您不知道租使用者ID，可以依照以下檔案中的步驟擷取之 [Schema Registry開發人員指南](../xdm/api/getting-started.md).
+如果您不知道您的租使用者ID，可以按照[Schema Registry開發人員指南](../xdm/api/getting-started.md)中的步驟擷取它。
 
 ### 指定的結構描述或definedOn已經存在相同名稱的函式
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 }
 ```
 
-建立新的計算屬性時，如果提供的是 `name` 屬性已用於 `schema.name`. 在重試之前，以唯一名稱取代值。
+建立新的計算屬性時，當提供的`name`屬性已用於`schema.name`下指示的結構描述時，就會發生此錯誤。 在重試之前，以唯一名稱取代值。
 
 ### 運算式的傳回結構描述與XDM結構描述中運算屬性的結構描述不同
 
@@ -92,7 +92,7 @@ ht-degree: 0%
 }
 ```
 
-建立新的計算屬性時，如果提供的是 `name` 屬性已用於 `schema.name`. 在重試之前，以唯一名稱取代值。
+建立新的計算屬性時，當提供的`name`屬性已用於`schema.name`下指示的結構描述時，就會發生此錯誤。 在重試之前，以唯一名稱取代值。
 
 ### 無效的刪除請求（設定檔系統作業）
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 }
 ```
 
-為刪除系統作業提供無效的裝載時，就會發生此錯誤。 確保您在裝載的底下提供有效的資料集或批次ID `dataSetID` 或 `batchID` 屬性。 請參閱以下小節： [建立刪除請求](./api/profile-system-jobs.md#create-a-delete-request) 詳細資訊，請參閱個人資料開發人員指南。
+為刪除系統作業提供無效的裝載時，就會發生此錯誤。 請確定您分別在承載的`dataSetID`或`batchID`屬性下提供有效的資料集或批次ID。 如需詳細資訊，請參閱設定檔開發人員指南中有關[建立刪除請求](./api/profile-system-jobs.md#create-a-delete-request)的章節。
 
 ### 找不到設定檔資料集的批次
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 當嘗試為設定檔資料建立刪除請求時找不到有效的批次時，就會發生此錯誤。 在重試之前，請檢查您已為啟用設定檔的資料集輸入正確的ID。
 
-### 不支援的媒體型別
+### 不支援的媒體類型
 
 ```json
 {

@@ -9,9 +9,9 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL 產品類別] 結構描述欄位群組
+# [!UICONTROL 產品類別]結構描述欄位群組
 
-[!UICONTROL 產品類別] 是的標準結構描述欄位群組 [[!UICONTROL 產品] 類別](../../classes/product.md) 會擷取和產品類別相關的屬性。
+[!UICONTROL 產品類別]是[[!UICONTROL 產品]類別](../../classes/product.md)的標準結構描述欄位群組，可擷取與產品類別相關的屬性。
 
 ![](../../images/field-groups/product/product-category.png)
 
@@ -24,4 +24,4 @@ ht-degree: 9%
 
 {style="table-layout:auto"}
 
-如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json).
+如需欄位群組的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-category.schema.json)。

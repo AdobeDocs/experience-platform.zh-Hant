@@ -4,14 +4,14 @@ title: 擷取目的地伺服器設定
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 2%
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
 # 擷取目的地伺服器設定
 
-此頁面以範例說明API要求與裝載，您可用此API要求與裝載來擷取有關使用之現有目的地伺服器設定的資訊。 `/authoring/destination-servers` api端點。
+此頁面是您可用來使用`/authoring/destination-servers` API端點擷取現有目的地伺服器組態相關資訊的API要求與裝載範例。
 
 如需目的地伺服器所用功能的詳細說明，請參閱下列文章：
 
@@ -22,15 +22,15 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 開始使用目的地伺服器API作業 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 擷取目的地伺服器設定 {#retrieve}
 
-您可以擷取現有的目的地伺服器組態，方法是 `GET` 要求給 `/authoring/destination-servers` 端點。
+您可以對`/authoring/destination-servers`端點發出`GET`要求，以擷取現有的目的地伺服器組態。
 
 >[!TIP]
 >
@@ -44,13 +44,13 @@ ht-degree: 2%
 GET /authoring/destination-servers
 ```
 
-使用下列API格式來擷取特定的目的地伺服器組態，其定義為 `{INSTANCE_ID}` 引數。
+使用下列API格式來擷取由`{INSTANCE_ID}`引數定義的特定目的地伺服器組態。
 
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
 
-以下兩個要求會擷取您IMS組織的所有目的地伺服器設定，或特定目的地伺服器設定，端視您是否傳遞 `INSTANCE_ID` 請求中的引數。
+以下兩個要求會擷取您IMS組織的所有目的地伺服器設定，或特定的目的地伺服器設定，端視您在要求中是否傳遞`INSTANCE_ID`引數而定。
 
 選取下方的每個標籤，以檢視對應的裝載及其回應。
 
@@ -58,9 +58,9 @@ GET /authoring/destination-servers/{INSTANCE_ID}
 
 >[!TAB 擷取所有目的地伺服器設定]
 
-以下請求將依據以下內容，擷取您有權存取的目的地伺服器設定清單 [!DNL IMS Org ID] 和沙箱設定。
+下列要求將根據[!DNL IMS Org ID]和沙箱設定，擷取您有權存取的目的地伺服器設定清單。
 
-+++請求
++++要求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -74,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，其中包含您有權存取的目的地伺服器設定清單，根據 [!DNL IMS Org ID] 以及您使用的沙箱名稱。 一 `instanceId` 對應至一個目的地伺服器。 以下範例回應包含兩個目的地伺服器設定。
+成功的回應會根據您使用的[!DNL IMS Org ID]和沙箱名稱，傳回HTTP狀態200，其中包含您可存取的目的地伺服器設定清單。 一個`instanceId`對應至一個目的地伺服器。 以下範例回應包含兩個目的地伺服器設定。
 
 ```json
 {
@@ -151,11 +151,11 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++
 
->[!TAB 擷取特定目的地伺服器組態]
+>[!TAB 擷取特定的目的地伺服器組態]
 
-以下請求將擷取以下定義的特定目的地伺服器設定： `{INSTANCE_ID}` 引數。
+下列要求將擷取`{INSTANCE_ID}`引數定義的特定目的地伺服器組態。
 
-+++請求
++++要求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers/{INSTANCE_ID} \
@@ -173,7 +173,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++回應
 
-成功的回應會傳回HTTP狀態200，且目的地伺服器的設定會與 `{INSTANCE_ID}` 您已提供。
+成功的回應會傳回HTTP狀態200，且目的地伺服器的組態會對應至您提供的`{INSTANCE_ID}`。
 
 ```json
 {
@@ -221,11 +221,11 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在知道如何透過Destination SDK擷取目的地伺服器設定 `/authoring/destination-servers` api端點。
+閱讀此檔案後，您現在知道如何透過Destination SDK`/authoring/destination-servers` API端點擷取目的地伺服器組態。
 
 若要深入瞭解您可以使用此端點的功能，請參閱下列文章：
 

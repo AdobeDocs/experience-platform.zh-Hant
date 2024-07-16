@@ -12,15 +12,15 @@ ht-degree: 0%
 
 ---
 
-# 中的重複資料刪除 [!DNL Query Service]
+# [!DNL Query Service]中的重複資料刪除
 
-Adobe Experience Platform [!DNL Query Service] 支援重複資料刪除。 當需要從計算中移除整個列或忽略特定欄位集（因為列中只有部分資料是重複資訊）時，可以執行重複資料刪除。
+Adobe Experience Platform [!DNL Query Service]支援重複資料刪除。 當需要從計算中移除整個列或忽略特定欄位集（因為列中只有部分資料是重複資訊）時，可以執行重複資料刪除。
 
-去重複化通常涉及使用 `ROW_NUMBER()` 函式在視窗中隨著有序的時間針對ID （或一對ID）傳回，這會傳回代表偵測到重複專案次數的新欄位。 時間通常以表示 [!DNL Experience Data Model] (XDM) `timestamp` 欄位。
+重複資料刪除通常涉及在順序時間內對ID （或一組ID）在視窗中使用`ROW_NUMBER()`函式，這會傳回代表偵測到重複專案次數的新欄位。 時間通常使用[!DNL Experience Data Model] (XDM) `timestamp`欄位來表示。
 
-當 `ROW_NUMBER()` 是 `1`，這指的是原始例項。 一般而言，這是您想要使用的例項。 這通常會在子選取的範圍內完成，其中重複資料刪除會在較高層級完成 `SELECT` 例如執行彙總計數。
+當`ROW_NUMBER()`的值為`1`時，它會參考原始執行個體。 一般而言，這是您想要使用的例項。 這通常會在子選取內完成，其中重複資料刪除會在較高層級`SELECT`中完成，就像執行彙總計數一樣。
 
-重複資料刪除使用案例可以是全域的，或限製為單一使用者或使用者的ID `identityMap`.
+重複資料刪除使用案例可以是全域的，或限製為`identityMap`中的單一使用者或一般使用者ID。
 
 本檔案概述如何針對三個常見使用案例執行重複資料刪除：體驗事件、購買和量度。
 
@@ -32,13 +32,13 @@ Adobe Experience Platform [!DNL Query Service] 支援重複資料刪除。 當�
 
 >[!CAUTION]
 >
->中有許多資料集 [!DNL Experience Platform]包括Adobe Analytics Data Connector產生的重複資料刪除，已套用體驗事件層級的重複資料刪除。 因此，重新套用此層級的重複資料刪除是不必要的，而且會減慢查詢速度。
+>[!DNL Experience Platform]中的許多資料集(包括Adobe Analytics Data Connector產生的資料集)已套用體驗事件層級的重複資料刪除。 因此，重新套用此層級的重複資料刪除是不必要的，而且會減慢查詢速度。
 >
->請務必瞭解資料集的來源，並知道是否已套用體驗事件層級的重複資料刪除。 對於串流處理的任何資料集(例如來自Adobe Target的資料集)，您可以 **將** 需要套用體驗事件層級的重複資料刪除，因為這些資料來源具有「至少一次」語意。
+>請務必瞭解資料集的來源，並知道是否已套用體驗事件層級的重複資料刪除。 對於串流處理的任何資料集(例如來自Adobe Target的資料集)，您&#x200B;**將**&#x200B;需要套用體驗事件層級的重複資料刪除，因為這些資料來源具有「至少一次」語意。
 
-**範圍：** 全域
+**領域：**&#x200B;全域
 
-**視窗鍵：** `id`
+**視窗索引鍵：** `id`
 
 ### 重複資料刪除範例
 
@@ -64,15 +64,15 @@ SELECT COUNT(*) AS num_events FROM (
 ) WHERE id_dup_num = 1
 ```
 
-## 購買 {#purchases}
+## 購買次數 {#purchases}
 
-如果您有重複購買專案，您可能會想要保留大部分的 [!DNL Experience Event] 列，但忽略與購買相關聯的欄位(例如 `commerce.orders` 量度)。 購買包含購買ID的特殊欄位，即 `commerce.order.purchaseID`.
+如果您有重複購買，您可能會想要保留大多數[!DNL Experience Event]列，但忽略與購買相關聯的欄位（例如`commerce.orders`量度）。 購買包含購買ID的特殊欄位，即`commerce.order.purchaseID`。
 
-建議使用 `purchaseID` ，因為這是XDM中購買ID的標準語意欄位。 建議使用訪客範圍來移除重複的購買資料，因為查詢的速度比使用全域範圍來得快，而且購買ID不太可能跨多個訪客ID重複。
+建議在訪客範圍內使用`purchaseID`，因為這是XDM中購買ID的標準語意欄位。 建議使用訪客範圍來移除重複的購買資料，因為查詢的速度比使用全域範圍來得快，而且購買ID不太可能跨多個訪客ID重複。
 
-**範圍：** 訪客
+**範圍：**&#x200B;訪客
 
-**視窗鍵：** identityMap[$NAMESPACE].id &amp; commerce.order.purchaseID
+**視窗索引鍵：** identityMap[$NAMESPACE].id &amp; commerce.order.purchaseID
 
 ### 重複資料刪除範例
 
@@ -89,7 +89,7 @@ FROM experience_events
 
 >[!NOTE]
 >
->在某些情況下，原始Analytics資料會在訪客ID間顯示重複的購買ID， **五月** 需要對所有訪客執行購買ID重複計數。 當購買ID不存在時，此方法需要您納入條件，以使用事件ID來儘可能快速地保留查詢。
+>在某些情況下，原始Analytics資料跨訪客ID具有重複的購買ID，您&#x200B;**可能**&#x200B;需要對所有訪客執行購買ID重複計數。 當購買ID不存在時，此方法需要您納入條件，以使用事件ID來儘可能快速地保留查詢。
 
 ### 完整範例
 
@@ -116,11 +116,11 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 
 如果您的量度使用選用的唯一ID，且出現該ID的重複專案，您可能會想要忽略該量度值，並保留體驗事件的其餘部分。
 
-在XDM中，幾乎所有量度都會使用 `Measure` 資料型別，包含選填 `id` 可用於重複資料刪除的欄位。
+在XDM中，幾乎所有量度都使用`Measure`資料型別，其中包含您可用來重複資料刪除的選用欄位`id`。
 
-**範圍：** 訪客
+**範圍：**&#x200B;訪客
 
-**視窗鍵：** identityMap[$NAMESPACE]Measure物件的.id和id
+**視窗索引鍵：** identityMap[$NAMESPACE].ID和Measure物件識別碼
 
 ### 重複資料刪除範例
 
@@ -156,4 +156,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## 後續步驟
 
-本檔案提供重複資料刪除的範例，並說明如何在查詢服務內執行重複資料刪除。 如需使用查詢服務撰寫查詢時的最佳實務，請參閱 [編寫查詢指南](../best-practices/writing-queries.md).
+本檔案提供重複資料刪除的範例，並說明如何在查詢服務內執行重複資料刪除。 如需使用查詢服務撰寫查詢時的最佳實務，請參閱[撰寫查詢指南](../best-practices/writing-queries.md)。

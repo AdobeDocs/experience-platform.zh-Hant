@@ -3,36 +3,36 @@ keywords: Experience Platform；首頁；熱門主題；串流擷取；擷取；
 solution: Experience Platform
 title: 使用串流獲取API串流時間序列資料
 type: Tutorial
-description: 本教學課程將幫助您開始使用串流獲取API，這是Adobe Experience Platform資料獲取服務API的一部分。
+description: 本教學課程將協助您開始使用串流獲取API，這是Adobe Experience Platform資料獲取服務API的一部分。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1210'
 ht-degree: 2%
 
 ---
 
 # 使用串流獲取API串流時間序列資料
 
-本教學課程將幫助您開始使用串流獲取API (屬於Adobe Experience Platform的一部分) [!DNL Data Ingestion Service] API。
+本教學課程將協助您開始使用串流獲取API (屬於Adobe Experience Platform [!DNL Data Ingestion Service] API的一部分)。
 
 ## 快速入門
 
-本教學課程需要各種Adobe Experience Platform服務的實際操作知識。 在開始本教學課程之前，請檢閱下列服務的檔案：
+本教學課程需要各種Adobe Experience Platform服務的實際操作知識。 在開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：作為依據的標準化架構 [!DNL Platform] 組織體驗資料。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)： [!DNL Platform]用來組織體驗資料的標準化架構。
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
-- [Schema Registry開發人員指南](../../xdm/api/getting-started.md)：涵蓋每個可用端點的完整指南 [!DNL Schema Registry] API以及如何對其發出呼叫。 這包括瞭解您的 `{TENANT_ID}`，會在本教學課程中的呼叫中顯示，並且瞭解如何建立結構（用於建立資料集以供擷取）。
+- [結構描述登入開發人員指南](../../xdm/api/getting-started.md)：涵蓋[!DNL Schema Registry] API每個可用端點的完整指南，以及如何對其發出呼叫。 這包括瞭解您在本教學課程呼叫中顯示的`{TENANT_ID}`，以及瞭解如何建立結構描述（用於建立要擷取的資料集）。
 
-此外，本教學課程要求您已建立串流連線。 如需建立串流連線的詳細資訊，請參閱 [建立串流連線教學課程](./create-streaming-connection.md).
+此外，本教學課程需要您已建立串流連線。 如需建立串流連線的詳細資訊，請參閱[建立串流連線教學課程](./create-streaming-connection.md)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../landing/api-guide.md)的指南。
 
 ## 根據XDM ExperienceEvent類別撰寫結構描述
 
-若要建立資料集，您首先需要建立實作的新結構描述 [!DNL XDM ExperienceEvent] 類別。 如需如何建立結構描述的詳細資訊，請參閱 [Schema Registry API開發人員指南](../../xdm/api/getting-started.md).
+若要建立資料集，您必須先建立實作[!DNL XDM ExperienceEvent]類別的新結構描述。 如需有關如何建立結構描述的詳細資訊，請參閱[結構描述登入API開發人員指南](../../xdm/api/getting-started.md)。
 
 **API格式**
 
@@ -76,12 +76,12 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `title` | 您要用於結構描述的名稱。 此名稱必須是唯一的。 |
-| `description` | 對您正在建立的結構描述進行有意義的說明。 |
-| `meta:immutableTags` | 在此範例中， `union` 標籤用於將您的資料儲存到 [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
+| `description` | 有關您建立之綱要的有意義說明。 |
+| `meta:immutableTags` | 在此範例中，`union`標籤用於將您的資料儲存到[[!DNL Real-Time Customer Profile]](../../profile/home.md)中。 |
 
 **回應**
 
-成功的回應會傳回HTTP狀態201，其中包含您新建立的結構描述詳細資料。
+成功的回應會傳回HTTP狀態201以及您新建立之結構描述的詳細資料。
 
 ```json
 {
@@ -155,17 +155,17 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{TENANT_ID}` | 此ID可用來確保您建立的資源能正確建立名稱空間，並包含在您的組織內。 如需租使用者ID的詳細資訊，請參閱 [結構描述登入指南](../../xdm/api/getting-started.md#know-your-tenant-id). |
+| `{TENANT_ID}` | 此ID可用來確保您建立的資源能正確進行名稱空間，並包含在您的組織內。 如需租使用者ID的詳細資訊，請參閱[結構描述登入指南](../../xdm/api/getting-started.md#know-your-tenant-id)。 |
 
-請記下 `$id` 以及 `version` 屬性，因為建立資料集時將同時使用這兩個屬性。
+請記下`$id`以及`version`屬性，因為建立資料集時會同時使用這兩個屬性。
 
 ## 設定結構描述的主要身分描述項
 
-接下來，新增 [身分描述項](../../xdm/api/descriptors.md) 以上建立的結構描述，使用工作電子郵件地址屬性作為主要識別碼。 這樣做會導致兩個變更：
+接著，將[身分描述項](../../xdm/api/descriptors.md)新增至上述建立的結構描述，使用工作電子郵件地址屬性做為主要識別碼。 這麼做將造成兩項變更：
 
-1. 工作電子郵件地址將成為必填欄位。 這表示在沒有此欄位的情況下傳送的訊息將無法通過驗證，且不會被擷取。
+1. 工作電子郵件地址將成為必填欄位。 這表示沒有此欄位傳送的訊息將無法通過驗證，且不會擷取。
 
-2. [!DNL Real-Time Customer Profile] 將使用工作電子郵件地址作為識別碼，以協助彙整該個人的更多資訊。
+2. [!DNL Real-Time Customer Profile]將使用工作電子郵件地址做為識別碼，以協助彙整該個人的更多資訊。
 
 ### 請求
 
@@ -189,15 +189,15 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | 此 `$id` 撰寫結構描述時先前收到的內容。 它應該看起來像這樣： `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | 您先前撰寫結構描述時收到的`$id`。 它應該看起來像這樣： `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
 >[!NOTE]
 >
->&#x200B;URL **身分名稱空間程式碼**
+>{&#x200B;0}身分名稱空間程式碼&#x200B;****
 >
-> 請確定程式碼有效 — 上述範例使用「email」，這是標準身分名稱空間。 其他常用的標準身分名稱空間可在以下網址找到： [Identity Service常見問題集](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
+> 請確定程式碼有效 — 上述範例使用「電子郵件」，這是標準身分名稱空間。 在[Identity Service常見問題集](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)中可找到其他常用的標準身分名稱空間。
 >
-> 如果您想要建立自訂名稱空間，請依照 [身分名稱空間總覽](../../identity-service/home.md).
+> 如果要建立自訂名稱空間，請依照[身分名稱空間概觀](../../identity-service/home.md)中概述的步驟操作。
 
 **回應**
 
@@ -225,7 +225,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->此資料集將啟用 **[!DNL Real-Time Customer Profile]** 和 **[!DNL Identity]** 藉由設定適當的標籤。
+>將透過設定適當的標籤來為&#x200B;**[!DNL Real-Time Customer Profile]**&#x200B;和&#x200B;**[!DNL Identity]**&#x200B;啟用此資料集。
 
 **API格式**
 
@@ -258,7 +258,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 **回應**
 
-成功的回應會傳回HTTP狀態201和陣列，其中包含以格式建立的新資料集的ID `@/dataSets/{DATASET_ID}`.
+成功的回應會傳回HTTP狀態201以及包含新建立資料集識別碼（格式為`@/dataSets/{DATASET_ID}`）的陣列。
 
 ```json
 [
@@ -271,11 +271,11 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 建立結構描述和資料集後，您需要建立串流連線來擷取資料。
 
-如需建立串流連線的詳細資訊，請參閱 [建立串流連線教學課程](./create-streaming-connection.md).
+如需建立串流連線的詳細資訊，請參閱[建立串流連線教學課程](./create-streaming-connection.md)。
 
 ## 將時間序列資料擷取至串流連線
 
-建立資料集、串流連線和資料流後，您就可以內嵌XDM格式的JSON記錄，以內嵌時間序列資料 [!DNL Platform].
+建立資料集、串流連線和資料流後，您就可以內嵌XDM格式的JSON記錄，以內嵌[!DNL Platform]中的時間序列資料。
 
 **API格式**
 
@@ -285,22 +285,22 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 此 `id` 您新建立的串流連線的值。 |
-| `syncValidation` | 供開發使用的選用查詢引數。 若設為 `true`，可用來立即提供意見回饋，以判斷要求是否已成功傳送。 預設情況下，此值設定為 `false`. 請注意，如果您將此查詢引數設為 `true` 要求速率限製為每分鐘60次/ `CONNECTION_ID`. |
+| `{CONNECTION_ID}` | 您新建立的串流連線的`id`值。 |
+| `syncValidation` | 供開發使用的選用查詢引數。 如果設為`true`，則可將其用於立即回饋，以判斷要求是否已成功傳送。 預設情況下，此值設定為`false`。 請注意，如果您將此查詢引數設為`true`，則每`CONNECTION_ID`的請求速率限製為每分鐘60次。 |
 
 **要求**
 
-您可以將時間序列資料擷取至串流連線，無論是否使用來源名稱。
+將時間序列資料擷取到串流連線可以在有或沒有來源名稱的情況下完成。
 
-以下範例請求會將缺少來源名稱的時間序列資料擷取至Platform。 如果資料缺少來源名稱，則會從串流連線定義新增來源ID。
+以下範例請求會將缺少來源名稱的時間序列資料內嵌至Platform。 如果資料缺少來源名稱，則會從串流連線定義新增來源ID。
 
-兩者 `xdmEntity._id` 和 `xdmEntity.timestamp` 是時間序列資料的必填欄位。 此 `xdmEntity._id` 屬性代表記錄本身的唯一識別碼， **not** 其紀錄所在之人員或裝置的唯一ID。
+`xdmEntity._id`和`xdmEntity.timestamp`都是時間序列資料的必要欄位。 `xdmEntity._id`屬性代表記錄本身的唯一識別碼，**不是**&#x200B;記錄所屬人員或裝置的唯一識別碼。
 
-您將需要產生您自己的 `xdmEntity._id` 和 `xdmEntity.timestamp` 重新擷取記錄時，以維持一致的方式擷取記錄。 理想情況下，您的來源系統將包含這些值。 如果ID無法使用，請考慮串連記錄中其他欄位的值，以建立可在重新擷取時從記錄一致地重新產生的唯一值。
+您必須產生您自己的`xdmEntity._id`和`xdmEntity.timestamp`記錄，而且如果記錄需要重新內嵌，就必須保持一致性。 理想情況下，您的來源系統將包含這些值。 如果ID無法使用，請考慮串連記錄中其他欄位的值以建立唯一值，且該值可在重新擷取時從記錄中一致地重新產生。
 
 >[!NOTE]
 >
->以下API呼叫會 **not** 需要任何驗證標頭。
+>下列API呼叫&#x200B;**不**&#x200B;需要任何驗證標頭。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -373,7 +373,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 }'
 ```
 
-如果要包含來源名稱，以下範例顯示如何包含它。
+如果要包含來源名稱，下列範例顯示如何包含它。
 
 ```json
     "header": {
@@ -391,7 +391,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含新串流的詳細資訊 [!DNL Profile].
+成功的回應傳回HTTP狀態200，其中包含新串流[!DNL Profile]的詳細資料。
 
 ```json
 {
@@ -406,18 +406,18 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | 此 `inletId` 之前建立的串流連線的。 |
-| `xactionId` | 伺服器端為您剛傳送的記錄產生的唯一識別碼。 此ID有助於Adobe透過各種系統和偵錯追蹤此記錄的生命週期。 |
-| `receivedTimeMs`：顯示收到要求的時間戳記（紀元單位：毫秒）。 |
-| `syncValidation.status` | 由於查詢引數 `syncValidation=true` 「 」已新增，則會顯示此值。 如果驗證成功，狀態將為 `pass`. |
+| `{CONNECTION_ID}` | 先前建立的串流連線的`inletId`。 |
+| `xactionId` | 在伺服器端為您剛傳送的記錄產生的唯一識別碼。 此ID可協助Adobe透過各種系統和偵錯追蹤此記錄的生命週期。 |
+| `receivedTimeMs`：時間戳記（以毫秒為單位的epoch），顯示收到要求的時間。 |
+| `syncValidation.status` | 由於已新增查詢引數`syncValidation=true`，因此會顯示這個值。 如果驗證成功，狀態將會是`pass`。 |
 
 ## 擷取新擷取的時間序列資料
 
-若要驗證先前擷取的記錄，您可以使用 [[!DNL Profile Access API]](../../profile/api/entities.md) 以擷取時間序列資料。 這可以透過向以下專案的GET請求來完成： `/access/entities` 端點並使用選用的查詢引數。 可以使用多個引數，以&amp;分隔。」
+若要驗證先前擷取的記錄，您可以使用[[!DNL Profile Access API]](../../profile/api/entities.md)來擷取時間序列資料。 這可以透過對`/access/entities`端點的GET要求並使用選用的查詢引數來完成。 可以使用多個引數，以&amp;分隔。」
 
 >[!NOTE]
 >
->如果未定義合併原則ID，且 `schema.name` 或 `relatedSchema.name` 是 `_xdm.context.profile`， [!DNL Profile Access] 將擷取 **全部** 相關身分。
+>如果未定義合併原則ID，且`schema.name`或`relatedSchema.name`為`_xdm.context.profile`，則[!DNL Profile Access]將會擷取&#x200B;**所有**&#x200B;相關的身分。
 
 **API格式**
 
@@ -429,9 +429,9 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `schema.name` | **必填。** 您正在存取的結構描述名稱。 |
-| `relatedSchema.name` | **必填。** 由於您正在存取 `_xdm.context.experienceevent`，此值會指定與時間序列事件相關的設定檔實體的結構描述。 |
-| `relatedEntityId` | 相關實體的ID。 如果提供，您也必須提供實體名稱空間。 |
+| `schema.name` | **必要。**&#x200B;您正在存取的結構描述名稱。 |
+| `relatedSchema.name` | **必要。**&#x200B;由於您正在存取`_xdm.context.experienceevent`，此值會指定時間序列事件相關的設定檔實體結構描述。 |
+| `relatedEntityId` | 相關實體的識別碼。 如果提供，您也必須提供實體名稱空間。 |
 | `relatedEntityIdNS` | 您嘗試擷取的ID名稱空間。 |
 
 **要求**
@@ -447,7 +447,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回HTTP狀態200，其中包含請求實體的詳細資訊。 如您所見，這與先前擷取的時間序列資料相同。
+成功的回應會傳回HTTP狀態200以及要求實體的詳細資訊。 如您所見，這是先前所擷取的時間序列資料。
 
 ```json
 {
@@ -515,6 +515,6 @@ curl -X GET \
 
 ## 後續步驟
 
-閱讀本檔案後，您現在瞭解如何將記錄資料擷取至 [!DNL Platform] 使用串流連線。 您可以嘗試使用不同的值執行更多呼叫，並擷取更新的值。 此外，您也可以透過以下方式開始監控您擷取的資料： [!DNL Platform] UI。 如需詳細資訊，請閱讀 [監控資料擷取](../quality/monitor-data-ingestion.md) 指南。
+閱讀本檔案後，您現在瞭解如何使用串流連線將記錄資料擷取到[!DNL Platform]。 您可以嘗試使用不同的值發出更多呼叫並擷取更新的值。 此外，您可以透過[!DNL Platform] UI開始監視您擷取的資料。 如需詳細資訊，請參閱[監視資料擷取](../quality/monitor-data-ingestion.md)指南。
 
-如需串流擷取的詳細資訊，請閱讀 [串流擷取概觀](../streaming-ingestion/overview.md).
+如需一般串流擷取的詳細資訊，請閱讀[串流擷取總覽](../streaming-ingestion/overview.md)。

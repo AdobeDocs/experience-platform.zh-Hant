@@ -23,7 +23,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 串流目的地支援的對應 {#streaming-mappings}
 
@@ -64,11 +64,11 @@ ht-degree: 3%
 
 使用者在選取目標欄位對應時，必須手動輸入目標自訂屬性的名稱。
 
-![顯示自訂屬性選擇的平台UI熒幕擷圖。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![顯示customa屬性選取範圍的Platform UI熒幕擷圖。](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 產生的UI體驗如下圖所示。
 
-![平台UI熒幕擷圖顯示XDM屬性對應至串流目的地的自訂屬性。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![平台UI熒幕擷取畫面顯示XDM屬性對應至串流目的地的自訂屬性。](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### 將身分識別名稱空間對應至合作夥伴身分識別名稱空間 {#streaming-identity-to-identity}
 
@@ -118,11 +118,11 @@ ht-degree: 3%
 
 產生的UI體驗如下圖所示。
 
-![平台UI熒幕擷圖顯示XDM對應至檔案型目的地的自訂屬性。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![平台UI熒幕擷取畫面顯示XDM對應至檔案型目的地的自訂屬性。](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 使用者可以保留預設名稱，或在目標欄位選擇畫面中輸入自訂屬性名稱。
 
-![平台UI熒幕擷圖顯示檔案型目的地的自訂目標屬性選擇。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Platform UI熒幕擷圖顯示檔案型目的地的自訂目標屬性選擇。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### 將身分識別名稱空間對應至自訂屬性 {#batch-identity-to-custom}
 
@@ -130,11 +130,11 @@ ht-degree: 3%
 
 選取身分名稱空間作為來源欄位時，目標欄位會自動填入等效的身分名稱空間。 若要使用自訂屬性取代目標欄位，使用者必須在目標欄位選擇畫面中輸入自訂屬性名稱。
 
-![平台UI熒幕擷圖顯示檔案型目的地的自訂目標屬性選擇。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Platform UI熒幕擷圖顯示檔案型目的地的自訂目標屬性選擇。](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 產生的UI體驗如下圖所示。
 
-![平台UI熒幕擷取畫面，顯示身分對應至檔案型目的地的自訂屬性。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![Platform UI熒幕擷圖顯示檔案型目的地的識別對應至自訂屬性。](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### 將身分識別名稱空間對應至合作夥伴身分識別名稱空間 {#batch-identity-to-identity}
 
@@ -144,7 +144,7 @@ ht-degree: 3%
 
 產生的UI體驗如下圖所示。
 
-![平台UI熒幕擷圖顯示檔案型目的地的身分對應至身分。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![平台UI熒幕擷取畫面，顯示檔案型目的地的身分對應至身分。](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## 後續步驟 {#next-steps}

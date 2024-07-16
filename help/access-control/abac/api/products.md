@@ -18,15 +18,15 @@ ht-degree: 3%
 >
 >如果傳遞的是使用者權杖，則權杖的使用者必須具有請求組織的「組織管理員」角色。
 
-此 `/products` 屬性型存取控制API中的端點可讓您以程式設計方式管理產品，以及與組織中產品相關聯的許可權類別和許可權集。
+以屬性為基礎的存取控制API中的`/products`端點可讓您以程式設計方式管理產品，以及與您組織中的產品相關聯的許可權類別和許可權集。
 
 ## 快速入門
 
-本指南中使用的API端點屬於屬性型存取控制API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的API端點屬於屬性型存取控制API的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 擷取已授權產品的清單 {#list}
 
-您可以透過向以下網站發出GET要求，擷取已授權產品的清單： `/products` 端點。
+您可以向`/products`端點發出GET要求，以擷取已授權產品的清單。
 
 **API格式**
 
@@ -70,7 +70,7 @@ curl -X GET \
 
 ## 依產品ID查詢許可權類別
 
-您可以透過向以下網站發出GET要求，查詢指定產品的許可權類別： `/products/{PRODUCT_ID}/categories` 端點。
+您可以在指定產品ID時，透過向`/products/{PRODUCT_ID}/categories`端點發出GET要求來查詢指定產品的許可權類別。
 
 **API格式**
 
@@ -84,7 +84,7 @@ GET /products/{PRODUCT_ID}/categories
 
 **要求**
 
-以下請求會擷取與關聯的許可權類別 `{PRODUCT_ID}`.
+下列要求會擷取與`{PRODUCT_ID}`關聯的許可權類別。
 
 ```shell
 curl -X GET \
@@ -145,7 +145,7 @@ curl -X GET \
 
 ## 依產品ID查詢許可權集
 
-您可以透過向以下網站發出GET要求，查詢指定產品的許可權集： `/products/{PRODUCT_ID}/permission-sets` 端點。
+您可以在指定產品ID時，透過向`/products/{PRODUCT_ID}/permission-sets`端點發出GET要求來查詢指定產品的許可權集。
 
 **API格式**
 
@@ -159,7 +159,7 @@ GET /products/{PRODUCT_ID}/permission-sets
 
 **要求**
 
-以下請求會擷取與關聯的許可權集 `{PRODUCT_ID}`.
+下列要求會擷取與`{PRODUCT_ID}`關聯的許可權集。
 
 ```shell
 curl -X GET \
@@ -242,4 +242,4 @@ curl -X GET \
 | `category` | 可用的許可權類別。 |
 | `permissions` | 許可權包括檢視和/或使用Platform功能的能力，例如建立沙箱、定義結構以及管理資料集。 |
 | `permissions.resource` | 主體可以或無法存取的資產或物件。 資源可以是檔案、應用程式、伺服器或甚至API。 |
-| `permissions.actions` | 允許主體對查詢的資源執行的動作。 可能的值包括： `view`， `read`， `create`， `edit`、和 `delete` |
+| `permissions.actions` | 允許主體對查詢的資源執行的動作。 可能的值包括： `view`、`read`、`create`、`edit`和`delete` |

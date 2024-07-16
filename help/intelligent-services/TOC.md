@@ -8,31 +8,31 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 31%
+ht-degree: 34%
 
 ---
 
 
 # Adobe Intelligent Services {#intelligent-services}
 
-- [Intelligent Service概述](home.md)
+- [Intelligent Services 概觀](home.md)
 - [準備資料以用於Intelligent Services](data-preparation.md)
-- Attribution AI {#attribution-ai}
+- Attribution AI{#attribution-ai}
    - [概觀](attribution-ai/overview.md)
    - [Attribution AI快速入門](attribution-ai/getting-started.md)
    - [輸入和輸出](attribution-ai/input-output.md)
    - [使用者介面指南](attribution-ai/user-guide.md)
    - [探索深入分析](attribution-ai/discover-insights.md)
    - [下載分數](attribution-ai/download-scores.md)
-   - 資料控管 {#aai-data-governance}
+   - 資料控管{#aai-data-governance}
       - [存取控制](attribution-ai/aai-data-governance/access-controls.md)
       - [稽核記錄](attribution-ai/aai-data-governance/audit-logs.md)
       - [客戶自控金鑰](attribution-ai/aai-data-governance/customer-managed-keys.md)
       - [資料控管](attribution-ai/aai-data-governance/data-governance.md)
-      - [治理政策](attribution-ai/aai-data-governance/governance-policies.md)
+      - [治理原則](attribution-ai/aai-data-governance/governance-policies.md)
    - [使用查詢服務分析分數](attribution-ai/aai-query-service.md)
    - [錯誤疑難排解](attribution-ai/troubleshooting.md)
-- 內容標籤 {#content-commerce-ai}
+- 內容標籤{#content-commerce-ai}
    - [概觀](content-commerce-ai/overview.md)
    - [快速入門](content-commerce-ai/getting-started.md)
    - 內容標籤API{#api}
@@ -49,10 +49,10 @@ ht-degree: 31%
       - [使用Customer AI分數建立區段](customer-ai/user-guide/create-segment.md)
       - [下載分數](customer-ai/user-guide/download-scores.md)
    - [錯誤疑難排解](customer-ai/troubleshooting.md)
-   - 資料控管 {#cai-data-governance}
+   - 資料控管{#cai-data-governance}
       - [存取控制](customer-ai/cai-data-governance/access-controls.md)
       - [稽核記錄](customer-ai/cai-data-governance/audit-logs.md)
       - [客戶自控金鑰](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [資料控管](customer-ai/cai-data-governance/data-governance.md)
-      - [治理政策](customer-ai/cai-data-governance/governance-policies.md)
-- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+      - [治理原則](customer-ai/cai-data-governance/governance-policies.md)
+- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

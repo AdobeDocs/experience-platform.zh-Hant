@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 60%
    * [UI指南](./alerts/ui.md)
    * [訂閱I/O事件通知](./alerts/subscribe.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

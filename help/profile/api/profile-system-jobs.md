@@ -14,21 +14,21 @@ ht-degree: 2%
 
 # 設定檔系統作業端點（刪除請求）
 
-Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強大的設定檔。 資料已擷取到 [!DNL Platform] 儲存在 [!DNL Data Lake]，而且如果資料集已啟用設定檔功能，該資料會儲存在 [!DNL Real-Time Customer Profile] 資料存放區。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用 [!DNL Real-Time Customer Profile] 建立API [!DNL Profile] 系統工作，或 `delete request`，您也可以在需要時修改、監控或移除這些專案。
+Adobe Experience Platform可讓您從多個來源擷取資料，並為個別客戶建立強大的設定檔。 擷取到[!DNL Platform]的資料儲存在[!DNL Data Lake]中，如果已為設定檔啟用資料集，則該資料也會儲存在[!DNL Real-Time Customer Profile]資料存放區中。 有時候，可能有必要從設定檔存放區中刪除與資料集相關聯的設定檔資料，以移除不再需要或錯誤新增的資料。 這需要使用[!DNL Real-Time Customer Profile] API來建立[!DNL Profile]系統作業，或`delete request`，如有必要，也可以修改、監視或移除這些作業。
 
 >[!NOTE]
 >
->如果您嘗試刪除資料集或批次 [!DNL Data Lake]，請造訪 [目錄服務總覽](../../catalog/home.md) 以取得詳細資訊。
+>如果您嘗試從[!DNL Data Lake]刪除資料集或批次，請造訪[目錄服務總覽](../../catalog/home.md)以取得詳細資訊。
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). 在繼續之前，請檢閱 [快速入門手冊](getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的API端點是[[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)的一部分。 繼續之前，請先檢閱[快速入門手冊](getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 檢視刪除請求
 
-刪除請求是長期執行的非同步程式，這表示您的組織可能同時執行多個刪除請求。 GET若要檢視貴組織目前執行的所有刪除請求，您可以對 `/system/jobs` 端點。
+刪除請求是長期執行的非同步程式，這表示您的組織可能同時執行多個刪除請求。 若要檢視貴組織目前執行的所有刪除請求，您可以對`/system/jobs`端點執行GET請求。
 
-您也可以使用選用的查詢引數，以篩選回應中傳回的刪除請求清單。 若要使用多個引數，請使用&amp;符號(`&`)。
+您也可以使用選用的查詢引數，以篩選回應中傳回的刪除請求清單。 若要使用多個引數，請使用&amp;符號(`&`)分隔每個引數。
 
 **API格式**
 
@@ -42,7 +42,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 | `start` | 根據請求的建立時間，位移傳回結果的頁面。 範例：`start=4` |
 | `limit` | 限制傳回的結果數。 範例：`limit=10` |
 | `page` | 根據請求的建立時間，傳回結果的特定頁面。 範例：`page=2` |
-| `sort` | 依特定欄位遞增排序結果(`asc`)或降序(`desc`)順序。 傳回多個結果頁面時，排序引數無法運作。 範例：`sort=batchId:asc` |
+| `sort` | 以遞增(`asc`)或遞減(`desc`)順序依特定欄位排序結果。 傳回多個結果頁面時，排序引數無法運作。 範例：`sort=batchId:asc` |
 
 **要求**
 
@@ -93,18 +93,18 @@ curl -X GET \
 | 屬性 | 說明 |
 |---|---|
 | `_page.count` | 要求總數。 此回應已因空間而遭截斷。 |
-| `_page.next` | 如果存在其他結果頁面，請取代中的ID值來檢視結果的下一頁 [查詢請求](#view-a-specific-delete-request) 使用 `"next"` 提供的值。 |
-| `jobType` | 正在建立的工作型別。 在此情況下，會一律傳回 `"DELETE"`. |
-| `status` | 刪除請求的狀態。 可能的值包括 `"NEW"`， `"PROCESSING"`， `"COMPLETED"`， `"ERROR"`. |
-| `metrics` | 包含已處理記錄數的物件(`"recordsProcessed"`)以及處理請求所需的時間（以秒為單位），或是完成請求所需的時間(`"timeTakenInSec"`)。 |
+| `_page.next` | 如果存在額外的結果頁面，請將[查詢請求](#view-a-specific-delete-request)中的ID值取代為提供的`"next"`值，以檢視下一頁的結果。 |
+| `jobType` | 正在建立的工作型別。 在此情況下，它一律會傳回`"DELETE"`。 |
+| `status` | 刪除請求的狀態。 可能的值為`"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"`。 |
+| `metrics` | 物件包含已處理的記錄數(`"recordsProcessed"`)、要求已處理的秒數時間，或要求完成所需的時間(`"timeTakenInSec"`)。 |
 
 ## 建立刪除請求 {#create-a-delete-request}
 
-透過向發出的POST請求，可起始新的刪除請求 `/systems/jobs` 端點，要求內文中提供要刪除的資料集或批次的ID。
+透過POST要求至`/systems/jobs`端點來起始新的刪除要求，其中要刪除的資料集或批次識別碼會提供在要求內文中。
 
 ### 刪除資料集和相關聯的設定檔資料
 
-為了從設定檔存放區中刪除資料集以及與資料集相關聯的所有設定檔資料，資料集ID必須包含在POST請求內文中。 此動作將會刪除指定資料集的所有資料。 [!DNL Experience Platform] 可讓您根據記錄和時間序列結構描述刪除資料集。
+為了從設定檔存放區中刪除資料集以及與資料集相關聯的所有設定檔資料，資料集ID必須包含在POST請求內文中。 此動作將會刪除指定資料集的所有資料。 [!DNL Experience Platform]可讓您根據記錄和時間序列結構描述來刪除資料集。
 
 **API格式**
 
@@ -129,11 +129,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `dataSetId` | **（必要）** 您要刪除的資料集ID。 |
+| `dataSetId` | **（必要）**&#x200B;您要刪除的資料集識別碼。 |
 
 **回應**
 
-成功的回應會傳回新建立的刪除請求的詳細資料，包括請求的不重複、系統產生的唯讀ID。 這可用來查閱請求並檢查其狀態。 此 `status` 對於建立時的請求，為 `"NEW"` 直到開始處理為止。 此 `dataSetId` 在回應中應符合 `dataSetId` 已在要求中傳送。
+成功的回應會傳回新建立的刪除請求的詳細資料，包括請求的不重複、系統產生的唯讀ID。 這可用來查閱請求並檢查其狀態。 在建立時請求的`status`是`"NEW"`，直到它開始處理為止。 回應中的`dataSetId`應符合要求中傳送的`dataSetId`。
 
 ```json
 {
@@ -160,7 +160,7 @@ curl -X POST \
 >
 > 您無法刪除根據記錄結構描述之資料集的批次，因為記錄型別資料集批次會覆寫先前的記錄，因此無法「復原」或刪除。 根據記錄結構描述移除資料集錯誤批次影響的唯一方法是，使用正確的資料重新內嵌批次，以覆寫不正確的記錄。
 
-如需有關記錄和時間序列行為的詳細資訊，請查閱 [有關XDM資料行為的區段](../../xdm/home.md#data-behaviors) 在 [!DNL XDM System] 概述。
+如需有關記錄和時間序列行為的詳細資訊，請檢閱[!DNL XDM System]總覽中有關XDM資料行為](../../xdm/home.md#data-behaviors)的[區段。
 
 **API格式**
 
@@ -185,11 +185,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 |---|---|
-| `batchId` | **（必要）** 您要刪除之批次的ID。 |
+| `batchId` | **（必要）**&#x200B;您要刪除之批次的識別碼。 |
 
 **回應**
 
-成功的回應會傳回新建立的刪除請求的詳細資料，包括請求的不重複、系統產生的唯讀ID。 這可用來查閱請求並檢查其狀態。 此 `"status"` 對於建立時的請求，為 `"NEW"` 直到開始處理為止。 此 `"batchId"` 回應中的值應符合 `"batchId"` 請求中傳送的值。
+成功的回應會傳回新建立的刪除請求的詳細資料，包括請求的不重複、系統產生的唯讀ID。 這可用來查閱請求並檢查其狀態。 在建立時請求的`"status"`是`"NEW"`，直到它開始處理為止。 回應中的`"batchId"`值應符合要求中傳送的`"batchId"`值。
 
 ```json
 {
@@ -226,7 +226,7 @@ curl -X POST \
 
 ## 檢視特定的刪除請求 {#view-a-specific-delete-request}
 
-若要檢視特定刪除請求（包括其狀態等詳細資訊），您可以對執行查詢(GET)請求 `/system/jobs` 端點並在路徑中包含刪除請求的ID。
+若要檢視特定的刪除要求，包括其狀態等詳細資訊，您可以對`/system/jobs`端點執行查詢(GET)要求，並在路徑中包含刪除要求的識別碼。
 
 **API格式**
 
@@ -236,7 +236,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | 參數 | 說明 |
 |---|---|
-| `{DELETE_REQUEST_ID}` | **（必要）** 您要檢視之刪除請求的ID。 |
+| `{DELETE_REQUEST_ID}` | **（必要）**&#x200B;您要檢視之刪除要求的識別碼。 |
 
 **要求**
 
@@ -251,7 +251,7 @@ curl -X GET \
 
 **回應**
 
-回應會提供刪除請求的詳細資訊，包括其更新狀態。 回應中刪除請求的ID (回應中的 `"id"` 值)應與請求路徑中傳送的ID相符。
+回應會提供刪除請求的詳細資訊，包括其更新狀態。 回應中的刪除要求ID （`"id"`值）應與要求路徑中傳送的ID相符。
 
 ```json
 {
@@ -268,15 +268,15 @@ curl -X GET \
 
 | 屬性 | 說明 |
 |---|---|
-| `jobType` | 正在建立的工作型別，在此情況下，一律會傳回 `"DELETE"`. |
-| `status` | 刪除請求的狀態。 可能的值： `"NEW"`， `"PROCESSING"`， `"COMPLETED"`， `"ERROR"`. |
-| `metrics` | 包含已處理記錄數的陣列(`"recordsProcessed"`)以及處理請求所需的時間（以秒為單位），或是完成請求所需的時間(`"timeTakenInSec"`)。 |
+| `jobType` | 正在建立的工作型別，在此情況下，一律會傳回`"DELETE"`。 |
+| `status` | 刪除請求的狀態。 可能的值： `"NEW"`、`"PROCESSING"`、`"COMPLETED"`、`"ERROR"`。 |
+| `metrics` | 陣列，包含已處理的記錄數(`"recordsProcessed"`)以及處理要求所需的秒數，或是完成要求所需的時間(`"timeTakenInSec"`)。 |
 
-一旦刪除請求狀態為 `"COMPLETED"` 您可以透過嘗試使用資料存取API存取已刪除的資料來確認資料已刪除。 如需如何使用資料存取API存取資料集和批次的說明，請檢閱 [資料存取檔案](../../data-access/home.md).
+刪除請求狀態為`"COMPLETED"`後，您可以嘗試使用資料存取API存取已刪除的資料，以確認資料已刪除。 如需如何使用資料存取API存取資料集和批次的指示，請檢閱[資料存取檔案](../../data-access/home.md)。
 
 ## 移除刪除請求
 
-[!DNL Experience Platform] 可讓您刪除先前的請求，這可能對許多原因很有用，包括刪除工作未完成或卡在處理階段。 DELETE若要移除刪除請求，您可以對 `/system/jobs` 端點，並包含您要移除至請求路徑的刪除請求ID。
+[!DNL Experience Platform]可讓您刪除先前的請求，這可能對許多原因有用，包括刪除工作未完成或卡在處理階段中。 若要移除刪除請求，您可以對`/system/jobs`端點執行DELETE請求，並包含您要移除至請求路徑的刪除請求ID。
 
 **API格式**
 
@@ -305,4 +305,4 @@ curl -X POST \
 
 ## 後續步驟
 
-現在您已經知道從刪除資料集和批次的步驟 [!DNL Profile store] 範圍 [!DNL Experience Platform]，您可以安全地刪除已錯誤新增或您的組織不再需要的資料。 請注意，刪除請求無法復原，因此您應該僅刪除確信現在不需要且未來不需要的資料。
+現在您已經知道從[!DNL Experience Platform]內的[!DNL Profile store]刪除資料集和批次所涉及的步驟，您可以安全地刪除已錯誤新增或您的組織不再需要的。 請注意，刪除請求無法復原，因此您應該僅刪除確信現在不需要且未來不需要的資料。

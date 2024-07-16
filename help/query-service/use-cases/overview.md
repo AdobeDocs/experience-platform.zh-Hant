@@ -2,10 +2,11 @@
 title: Adobe Experience Platform查詢服務支援的使用案例
 description: 瞭解Adobe Experience Platform查詢服務支援哪些使用案例。
 keywords: 查詢服務；使用案例
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '137'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -20,4 +21,3 @@ Query Service為跨產業和業務案例的各種使用案例提供解決方案�
 - [客戶期限值](./customer-lifetime-value.md)
 - [決定傾向分數](./propensity-score.md)
 - [模糊比對](./fuzzy-match.md)
-

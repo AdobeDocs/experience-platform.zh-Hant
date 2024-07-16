@@ -6,7 +6,7 @@ exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 4%
 
 Adobe Experience Platform目前支援下列社交目的地：
 
-* [[!DNL Facebook] 連線](facebook.md)
-* [[!DNL LinkedIn Matched Audiences] 連線](linkedin.md)
-* [[!DNL TikTok] 連線](tiktok.md)
-* [[!DNL Twitter Custom Audiences] 連線](twitter.md)
+* [[!DNL Facebook]個連線](facebook.md)
+* [[!DNL LinkedIn Matched Audiences]個連線](linkedin.md)
+* [[!DNL TikTok]個連線](tiktok.md)
+* [[!DNL Twitter Custom Audiences]個連線](twitter.md)
 
 ## 連線到新的社交目的地 {#connect-destination}
 
-若要將對象傳送至行銷活動的社交目的地，平台必須先連線至目的地。 請參閱 [目的地建立教學課程](../../ui/connect-destination.md) 以取得關於設定新目的地的詳細資訊。
+若要將對象傳送至行銷活動的社交目的地，平台必須先連線至目的地。 如需設定新目的地的詳細資訊，請參閱[目的地建立教學課程](../../ui/connect-destination.md)。

@@ -4,24 +4,24 @@ description: 瞭解如何在Reactor API中呼叫/companies端點。
 exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '237'
 ht-degree: 3%
 
 ---
 
 # 公司端點
 
-公司代表客戶組織，通常是企業。 在Reactor API中，這些公司將1:1與組織ID配對。 API使用者只能檢視他們有權存取的公司。 公司可能包含許多 [屬性](./properties.md). 屬性只屬於一個公司。
+公司代表客戶組織，通常是企業。 在Reactor API中，這些公司將1:1與組織ID配對。 API使用者只能檢視他們有權存取的公司。 公司可能包含許多[屬性](./properties.md)。 屬性只屬於一個公司。
 
-此 `/companies` Reactor API中的端點可讓您以程式設計方式擷取您在體驗應用程式中有權存取的公司。
+Reactor API中的`/companies`端點可讓您以程式設計方式擷取您在體驗應用程式中有權存取的公司。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取公司清單 {#list}
 
-您可以透過向以下網站發出GET請求，列出您有權使用的公司： `/companies` 端點。 在大多數情況下，只會有一個。
+您可以透過向`/companies`端點發出GET要求，列出您有權使用的公司。 在大多數情況下只有一個。
 
 **API格式**
 
@@ -31,7 +31,7 @@ GET /companies
 
 >[!NOTE]
 >
->使用查詢引數，可以根據以下屬性篩選上市公司：<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>請參閱指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
+>使用查詢引數，可以根據以下屬性篩選上市公司：<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
 
 **要求**
 
@@ -119,7 +119,7 @@ GET /companies/{COMPANY_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{COMPANY_ID}` | 此 `id` 您要查閱之公司的價值。 |
+| `{COMPANY_ID}` | 您要查詢之公司的`id`值。 |
 
 {style="table-layout:auto"}
 

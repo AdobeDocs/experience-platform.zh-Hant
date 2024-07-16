@@ -4,8 +4,8 @@ description: 使用沙箱工具API來檢查成品，並匯出和匯入沙箱之�
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 14%
+source-wordcount: '311'
+ht-degree: 15%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 14%
 
 ## 讀取範例 API 呼叫 {#api-calls}
 
-本指南提供範例 API 呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供傳回至API回應的範例JSON資料。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) 在Experience Platform疑難排解指南中。
+本指南提供範例 API 呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供傳回至API回應的範例JSON資料。 如需在範例API呼叫檔案中所使用的慣例相關資訊，請參閱Experience Platform疑難排解指南中有關[如何讀取範例API呼叫](/help/landing/troubleshooting.md#how-do-i-format-an-api-request)的章節。
 
 ## 收集所需標頭的值 {#headers}
 
-本指南要求您已完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en) 才能成功呼叫Platform API。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
+本指南要求您完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)，才能成功呼叫Platform API。 完成驗證教學課程，在所有Experience Platform API呼叫中提供每個必要標題的值，如下所示：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

@@ -17,6 +17,6 @@ ht-degree: 13%
 
 Adobe Experience Platform Debugger可安裝在Google Chrome瀏覽器中。 請遵循下列連結，在您的瀏覽器上安裝擴充功能：
 
-* [鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-安裝Chrome擴充功能後，圖示(![](images/start-icon.jpg))新增至擴充功能列。 選取此圖示以開啟擴充功能。
+安裝Chrome擴充功能後，圖示(![](images/start-icon.jpg))會新增至擴充功能列。 選取此圖示以開啟擴充功能。

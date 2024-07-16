@@ -7,46 +7,46 @@ description: 瞭解如何使用流量服務API將ApacheHadoop分散式檔案系�
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 4%
+source-wordcount: '453'
+ht-degree: 5%
 
 ---
 
-# 建立 [!DNL Apache] HDFS基本連線使用 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API建立[!DNL Apache] HDFS基底連線
 
 >[!NOTE]
 >
->Apache HDFS聯結器為Beta版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用Beta標籤聯結器的詳細資訊。
+>Apache HDFS聯結器為Beta版。 如需使用Beta標籤聯結器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL Apache Hadoop Distributed File System] (以下稱「[!DNL HDFS]&quot;)使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教學課程將逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL Apache Hadoop Distributed File System] （以下稱為「[!DNL HDFS]」）建立基礎連線。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用以下專案來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-以下小節提供成功連線所需的其他資訊 [!DNL HDFS] 使用 [!DNL Flow Service] API。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL HDFS]。
 
 ### 收集必要的認證
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `url` | URL會定義連線至所需的驗證引數 [!DNL HDFS] 匿名。 如需有關如何取得此值的詳細資訊，請參閱 [此 [!DNL HDFS] 檔案](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL AdWords] 為： `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `url` | URL定義匿名連線至[!DNL HDFS]所需的驗證引數。 如需有關如何取得此值的詳細資訊，請參閱[此 [!DNL HDFS] 檔案](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html)。 |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL AdWords]的連線規格識別碼為： `54e221aa-d342-4707-bcff-7a4bceef0001`。 |
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
 
 ## 建立基礎連線
 
 基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基本連線ID，請向以下連線ID發出POST請求： `/connections` 端點，同時提供 [!DNL HDFS] 要求引數中的驗證認證。
+若要建立基底連線ID，請在提供[!DNL HDFS]驗證認證作為要求引數的一部分時，向`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -56,7 +56,7 @@ POST /connections
 
 **要求**
 
-下列要求會建立 [!DNL HDFS]：
+下列要求會建立[!DNL HDFS]的基礎連線：
 
 ```shell
 curl -X POST \
@@ -84,8 +84,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --------- | ----------- |
-| `auth.params.url` | 定義連線至所需的驗證引數的URL [!DNL HDFS] 匿名 |
-| `connectionSpec.id` | 此 [!DNL HDFS] 連線規格ID： `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `auth.params.url` | 定義匿名連線至[!DNL HDFS]所需的驗證引數的URL |
+| `connectionSpec.id` | [!DNL HDFS]連線規格識別碼： `54e221aa-d342-4707-bcff-7a4bceef0001`。 |
 
 **回應**
 
@@ -100,4 +100,4 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立 [!DNL HDFS] 連線使用 [!DNL Flow Service] API且已取得連線的唯一ID值。 您可在下一個教學課程中使用此ID，瞭解如何 [使用流量服務API探索協力廠商雲端儲存空間](../../explore/cloud-storage.md).
+依照本教學課程中的指示，您已使用[!DNL Flow Service] API建立[!DNL HDFS]連線，並已取得連線的唯一ID值。 您可在下一個教學課程中使用此ID，瞭解如何使用Flow Service API[探索協力廠商雲端儲存空間](../../explore/cloud-storage.md)。

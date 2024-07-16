@@ -15,6 +15,6 @@ ht-degree: 63%
 * [協助工具概覽](home.md)
 * [協助工具功能](features.md)
 * [Platform的自訂協助工具](custom.md)
-* [Platform檔案](https://experienceleague.adobe.com/docs/experience-platform.html)
+* [平台檔案](https://experienceleague.adobe.com/docs/experience-platform.html)
 * [平台概觀](https://www.adobe.com/go/platform-overview-en)
-* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；實驗；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學Workspace；熱門主題；實驗；sensei機器學習api
 solution: Experience Platform
 title: 實驗API端點
 description: 模型開發和訓練會在實驗層級進行，其中實驗包含MLInstance、訓練回合和評分回合。
@@ -53,7 +53,7 @@ curl -X POST \
 
 **回應**
 
-成功回應會傳回包含新建立實驗詳細資訊的裝載，包括其唯一識別碼(`id`)。
+成功的回應會傳回一個承載，其中包含新建立的實驗詳細資料，包括其唯一識別碼(`id`)。
 
 ```json
 {
@@ -100,11 +100,11 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `{TASK}` | 指定執行的工作。 將此值設定為 `train` 訓練方面， `score` 以進行評分，或 `featurePipeline` 用於功能管線。 |
+| `{TASK}` | 指定執行的工作。 將此值設定為`train` （訓練）、`score` （評分）或`featurePipeline` （功能管道）。 |
 
 **回應**
 
-成功的回應會傳回裝載，其中包含新建立回合的詳細資訊，包括繼承的預設訓練或評分引數，以及回合的唯一ID (`{RUN_ID}`)。
+成功的回應會傳回承載，其中包含新建立之回合的詳細資料，包括繼承的預設訓練或評分引數，以及回合的唯一識別碼(`{RUN_ID}`)。
 
 ```json
 {
@@ -133,7 +133,7 @@ curl -X POST \
 
 ## 擷取實驗清單
 
-您可以執行單一GET要求並提供有效的MLInstance ID作為查詢引數，以擷取屬於特定MLInstance的「實驗」清單。 如需可用查詢的清單，請參閱 [用於資產擷取的查詢引數](./appendix.md#query).
+您可以執行單一GET要求並提供有效的MLInstance ID作為查詢引數，以擷取屬於特定MLInstance的「實驗」清單。 如需可用查詢的清單，請參閱[查詢資產擷取](./appendix.md#query)引數的附錄區段。
 
 
 **API格式**
@@ -160,7 +160,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回共用相同MLInstance ID (`{MLINSTANCE_ID}`)。
+成功的回應會傳回共用相同MLInstance ID (`{MLINSTANCE_ID}`)的實驗清單。
 
 ```json
 {
@@ -242,7 +242,7 @@ curl -X GET \
 
 ## 擷取實驗執行清單
 
-您可以透過執行單一GET請求並提供有效的實驗ID來擷取屬於特定實驗的訓練或評分回合清單。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢引數的完整清單，請參閱 [用於資產擷取的查詢引數](./appendix.md#query).
+您可以透過執行單一GET請求並提供有效的實驗ID來擷取屬於特定實驗的訓練或評分回合清單。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢引數的完整清單，請參閱[用於資產擷取的查詢引數](./appendix.md#query)的附錄區段。
 
 >[!NOTE]
 >
@@ -259,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | 參數 | 說明 |
 | --- | --- |
 | `{EXPERIMENT_ID}` | 有效的實驗ID。 |
-| `{QUERY_PARAMETER}` | 其中一項 [可用的查詢引數](./appendix.md#query) 用於篩選結果。 |
+| `{QUERY_PARAMETER}` | 用來篩選結果的[可用查詢引數](./appendix.md#query)之一。 |
 | `{VALUE}` | 上一個查詢引數的值。 |
 
 **要求**
@@ -277,7 +277,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回裝載，其中包含執行清單及其每個詳細資訊，包括其實驗執行ID (`{RUN_ID}`)。
+成功的回應會傳回一個裝載，其中包含執行清單及其每個詳細資料，包括其實驗執行ID (`{RUN_ID}`)。
 
 ```json
 {
@@ -307,7 +307,7 @@ curl -X GET \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，並 [依ID擷取實驗](#retrieve-specific). 然後，修改和更新傳回的JSON物件，並套用整個修改的JSON物件作為PUT請求的裝載。
+>為確保此PUT要求成功，建議您先執行GET要求，以[依ID](#retrieve-specific)擷取實驗。 然後，修改和更新傳回的JSON物件，並套用整個修改的JSON物件作為PUT請求的裝載。
 
 以下範例API呼叫最初具有這些屬性時會更新實驗的名稱：
 

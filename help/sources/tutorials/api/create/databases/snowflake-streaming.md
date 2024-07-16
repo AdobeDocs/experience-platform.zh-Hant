@@ -6,38 +6,38 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '864'
 ht-degree: 4%
 
 ---
 
-# 串流 [!DNL Snowflake] 使用進行Experience Platform的資料 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API串流[!DNL Snowflake]資料以Experience Platform
 
 >[!IMPORTANT]
 >
->* 此 [!DNL Snowflake] 串流來源為測試版。 請閱讀 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
->* 此 [!DNL Snowflake] 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用串流來源。
+>* [!DNL Snowflake]串流來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>* 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
 
-本教學課程提供如何連線及串流資料的步驟 [!DNL Snowflake] Adobe Experience Platform帳戶使用 [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+本教學課程提供如何使用[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)將資料從您的[!DNL Snowflake]帳戶連線並串流到Adobe Experience Platform的步驟。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用以下專案來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-如需先決條件設定及相關資訊，請參閱 [!DNL Snowflake] 串流來源。 請閱讀 [[!DNL Snowflake] 串流來源概觀](../../../../connectors/databases/snowflake-streaming.md).
+有關[!DNL Snowflake]串流來源的先決條件設定和資訊。 請閱讀[[!DNL Snowflake] 串流來源概觀](../../../../connectors/databases/snowflake-streaming.md)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
 
 ## 建立基礎連線 {#create-a-base-connection}
 
 基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基本連線ID，請向以下連線ID發出POST請求： `/connections` 端點，同時提供 [!DNL Snowflake] 要求內文中的驗證認證。
+若要建立基底連線ID，請在提供您的[!DNL Snowflake]驗證認證作為要求內文的一部分時，向`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -47,11 +47,11 @@ POST /connections
 
 **要求**
 
-下列要求會建立 [!DNL Snowflake]：
+下列要求會建立[!DNL Snowflake]的基礎連線：
 
 >[!TIP]
 >
->此 `auth.specName` 輸入的值必須與以下範例完全相同，包括空格。
+>必須完全依照以下範例輸入`auth.specName`值，包括空格。
 
 ```shell
 curl -X POST \
@@ -85,14 +85,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `auth.params.account` | 您的名稱 [!DNL Snowflake] 串流帳戶。 |
-| `auth.params.database` | 您的名稱 [!DNL Snowflake] 將從其中提取資料的資料庫。 |
-| `auth.params.warehouse` | 您的名稱 [!DNL Snowflake] 倉儲。 此 [!DNL Snowflake] warehouse會管理應用程式的查詢執行程式。 每個倉儲彼此獨立，將資料帶到Platform時必須個別存取。 |
-| `auth.params.username` | 您的使用者名稱 [!DNL Snowflake] 串流帳戶。 |
-| `auth.params.schema` | （選擇性）與您的資料庫架構關聯的資料庫架構 [!DNL Snowflake] 串流帳戶。 |
-| `auth.params.password` | 您的密碼 [!DNL Snowflake] 串流帳戶。 |
-| `auth.params.role` | （選用）此專案的使用者角色 [!DNL Snowflake] 連線。 如果未提供，則此值預設為 `public`. |
-| `connectionSpec.id` | 此 [!DNL Snowflake] 連線規格ID： `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `auth.params.account` | 您的[!DNL Snowflake]串流帳戶的名稱。 |
+| `auth.params.database` | 將從其中提取資料的[!DNL Snowflake]資料庫名稱。 |
+| `auth.params.warehouse` | [!DNL Snowflake]倉儲的名稱。 [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個倉儲彼此獨立，將資料帶到Platform時必須個別存取。 |
+| `auth.params.username` | 您[!DNL Snowflake]串流帳戶的使用者名稱。 |
+| `auth.params.schema` | （選用）與您的[!DNL Snowflake]串流帳戶關聯的資料庫結構描述。 |
+| `auth.params.password` | 您的[!DNL Snowflake]串流帳戶的密碼。 |
+| `auth.params.role` | （選用）此[!DNL Snowflake]連線的使用者角色。 如果未提供，此值會預設為`public`。 |
+| `connectionSpec.id` | [!DNL Snowflake]連線規格識別碼： `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`。 |
 
 **回應**
 
@@ -107,7 +107,7 @@ curl -X POST \
 
 ## 探索您的資料表 {#explore-your-data-tables}
 
-GET接下來，使用基本連線ID透過向 `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` 端點並提供您的基本連線ID作為引數。
+接下來，使用基底連線ID來探索並瀏覽您來源的資料表，方法是在提供基底連線ID作為引數的同時，向`/connections/{BASE_CONNECTION_ID}/explore?objectType=root`端點發出GET請求。
 
 **API格式**
 
@@ -117,12 +117,12 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 您的基本連線ID [!DNL Snowflake] 串流來源。 |
+| `{BASE_CONNECTION_ID}` | [!DNL Snowflake]串流來源的基本連線識別碼。 |
 
 
 **要求**
 
-以下請求會擷取您的結構和內容 [!DNL Snowflake] 串流帳戶。
+下列要求會擷取[!DNL Snowflake]串流帳戶的結構和內容。
 
 ```shell
 curl -X GET \
@@ -157,7 +157,7 @@ curl -X GET \
 
 來源連線會建立和管理與擷取資料的外部來源的連線。
 
-POST若要建立來源連線，請向 `/sourceConnections` 的端點 [!DNL Flow Service] API。
+若要建立來源連線，請向[!DNL Flow Service] API的`/sourceConnections`端點提出POST要求。
 
 **API格式**
 
@@ -194,12 +194,12 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `baseConnectionId` | 已驗證的基底連線ID，您的 [!DNL Snowflake] 串流來源。 此ID是在先前步驟中產生的。 |
-| `connectionSpec.id` | 的連線規格ID [!DNL Snowflake] 串流來源。 |
-| `params.tableName` | 中的表格名稱 [!DNL Snowflake] 要帶到Platform的資料庫。 |
+| `baseConnectionId` | 您[!DNL Snowflake]串流來源的已驗證基本連線識別碼。 此ID是在先前步驟中產生的。 |
+| `connectionSpec.id` | [!DNL Snowflake]串流來源的連線規格ID。 |
+| `params.tableName` | 您要帶至Platform的[!DNL Snowflake]資料庫中的資料表名稱。 |
 | `params.timestampColumn` | 用於擷取增量值的時間戳記資料行的名稱。 |
-| `params.backfill` | 布林值旗標，可判斷資料是從開始（0紀元時間）擷取，還是從來源起始時間擷取。 如需此值的詳細資訊，請參閱 [[!DNL Snowflake] 串流來源概觀](../../../../connectors/databases/snowflake-streaming.md). |
-| `params.timezoneValue` | 時區值會指出在查詢時應該擷取哪個時區的目前時間。 [!DNL Snowflake] 資料庫。 如果設定的時間戳記欄設為，則應提供此引數 `TIMESTAMP_NTZ`. 若未提供， `timezoneValue` 預設為UTC。 |
+| `params.backfill` | 布林值旗標，可判斷資料是從開始（0紀元時間）擷取，還是從來源起始時間擷取。 如需此值的詳細資訊，請閱讀[[!DNL Snowflake] 串流來源概觀](../../../../connectors/databases/snowflake-streaming.md)。 |
+| `params.timezoneValue` | 時區值表示在查詢[!DNL Snowflake]資料庫時，應該擷取哪個時區的目前時間。 如果設定的時間戳記資料行設為`TIMESTAMP_NTZ`，則應提供此引數。 如果未提供，`timezoneValue`會預設為UTC。 |
 
 **回應**
 
@@ -214,13 +214,13 @@ curl -X POST \
 
 ## 建立資料流
 
-若要建立資料流以串流瀏覽的資料 [!DNL Snowflake] 帳戶至平台，您必須向以下網站發出POST請求： `/flows` 端點，同時提供下列值：
+若要建立資料流以將資料從導覽[!DNL Snowflake]帳戶串流到Platform，您必須在提供下列值時向`/flows`端點提出POST要求：
 
 >[!TIP]
 >
 >請依照下列連結取得如何擷取下列ID的逐步指南。
 
-* [來源連線ID](#create-a-source-connection)
+* [Source連線ID](#create-a-source-connection)
 * [目標連線ID](../../collect/database-nosql.md#create-a-target-connection)
 * [流量規格ID](../../collect/database-nosql.md#retrieve-dataflow-specifications)
 * [對應 ID](../../collect/database-nosql.md#create-a-mapping)
@@ -233,7 +233,7 @@ POST /flows
 
 **要求**
 
-以下請求會為您的建立串流資料流 [!DNL Snowflake] 帳戶。
+以下請求會為您的[!DNL Snowflake]帳戶建立串流資料流。
 
 ```shell
 curl -X POST \
@@ -269,9 +269,9 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `sourceConnectionIds` | 您的來源連線ID [!DNL Snowflake] 串流來源。 |
-| `targetConnectionIds` | 您的目標連線ID [!DNL Snowflake] 串流來源。 |
-| `flowSpec.id` | 為建立資料流的流量規格ID [!DNL Snowflake] 串流來源。 此流程規格ID可讓您透過對應轉換建立串流資料流。 此ID是固定的，為： `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. |
+| `sourceConnectionIds` | 您[!DNL Snowflake]串流來源的來源連線識別碼。 |
+| `targetConnectionIds` | 您的[!DNL Snowflake]串流來源的目標連線識別碼。 |
+| `flowSpec.id` | 用於為[!DNL Snowflake]串流來源建立資料流的流程規格ID。 此流程規格ID可讓您透過對應轉換建立串流資料流。 此ID已修正且為： `c1a19761-d2c7-4702-b9fa-fe91f0613e81`。 |
 | `transformations.params.mappingId` | 資料流的對應ID。 |
 
 **回應**
@@ -287,7 +287,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程中的指示，您已為您的建立了串流資料流 [!DNL Snowflake] 資料使用 [!DNL Flow Service] API。 如需Adobe Experience Platform來源的其他資訊，請瀏覽下列檔案：
+依照此教學課程，您已使用[!DNL Flow Service] API為[!DNL Snowflake]資料建立串流資料流。 如需Adobe Experience Platform來源的其他資訊，請瀏覽下列檔案：
 
 * [來源概觀](../../../../home.md)
 * [使用API監視您的資料流](../../monitor.md)

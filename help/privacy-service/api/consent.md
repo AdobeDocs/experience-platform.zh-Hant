@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # 同意端點
 
-特定法規要求客戶明確同意才能收集其個人資料。 此 `/consent` 中的端點 [!DNL Privacy Service] API可讓您處理客戶同意請求，並將這些請求整合至您的隱私權工作流程中。
+特定法規要求客戶明確同意才能收集其個人資料。 [!DNL Privacy Service] API中的`/consent`端點可讓您處理客戶同意要求，並將這些要求整合至您的隱私權工作流程。
 
-在使用本指南之前，請參閱 [快速入門](./getting-started.md) 指南，以瞭解有關以下範例API呼叫中呈現的必要驗證標題的資訊。
+使用本指南之前，請參閱[快速入門](./getting-started.md)指南，以取得有關以下範例API呼叫中所需驗證標頭的資訊。
 
 ## 處理客戶同意請求
 
-處理同意請求的方式為向發出POST請求 `/consent` 端點。
+同意要求是透過向`/consent`端點發出POST要求來處理。
 
 **API格式**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **要求**
 
-以下請求會針對中提供的使用者ID建立新的同意工作 `entities` 陣列。
+下列要求會針對`entities`陣列中提供的使用者ID建立新的同意工作。
 
 ```shell
 curl -X POST \
@@ -61,17 +61,17 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `optOutOfSale` | 若設為true，表示下方提供的使用者 `entities` 希望退出銷售或分享其個人資料。 |
-| `entities` | 表示同意要求套用至的使用者的物件陣列。 每個物件都包含 `namespace` 和陣列 `values` 以比對具有該名稱空間的個別使用者。 |
-| `nameSpace` | 中的每一個物件 `entities` 陣列必須包含一個 [標準身分名稱空間](./appendix.md#standard-namespaces) 由Privacy ServiceAPI識別。 |
-| `values` | 每個使用者的值陣列，對應提供的值 `nameSpace`. |
+| `optOutOfSale` | 若設為true，表示在`entities`底下提供的使用者希望退出銷售或分享其個人資料。 |
+| `entities` | 表示同意要求套用至的使用者的物件陣列。 每個物件包含一個`namespace`和一個`values`陣列，以比對具有該名稱空間的個別使用者。 |
+| `nameSpace` | `entities`陣列中的每個物件都必須包含Privacy ServiceAPI可辨識的[標準身分名稱空間](./appendix.md#standard-namespaces)之一。 |
+| `values` | 每個使用者的值陣列，對應提供的`nameSpace`。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->如需如何判斷要傳送至哪些客戶身分值的詳細資訊 [!DNL Privacy Service]，請參閱以下指南： [提供身分資料](../identity-data.md).
+>如需如何判斷要傳送給[!DNL Privacy Service]之客戶身分值的詳細資訊，請參閱[提供身分資料](../identity-data.md)的指南。
 
 **回應**
 
-成功的回應會傳回HTTP狀態202 （已接受），而且沒有裝載，表示已接受要求 [!DNL Privacy Service] 且正在處理中。
+成功的回應傳回HTTP狀態202 （已接受），沒有承載，表示[!DNL Privacy Service]已接受要求且正在處理。

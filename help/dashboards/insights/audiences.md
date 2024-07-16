@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 存取提供對象分析功能的SQL，藉此瞭解您的對象分析，然後產生您自己的分析，進一步探索組成對象的身分和設定檔。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
-請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
+如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-下列見解全部都可供您用作 [受眾控制面板](../guides/audiences.md) 或自訂 [使用者定義儀表板](../user-defined-dashboards.md). 請參閱 [自訂概述](../customize/overview.md) 以取得如何自訂儀表板的指示，或 [建立和編輯新Widget](../customize/custom-widgets.md) 在Widget資料庫和 [使用者定義儀表板](../user-defined-dashboards.md#create-widget).
+下列深入分析都可供您用作[對象儀表板](../guides/audiences.md)或自訂[使用者定義儀表板](../user-defined-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../user-defined-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
-下列見解全部都可供您用作 [受眾控制面板](../guides/audiences.md) 或自訂儀表板。
+下列深入分析全都可供您用作[對象儀表板](../guides/audiences.md)或自訂儀表板的一部分。
 
-## 對象重疊報表 {#audience-overlap-report}
+## 客群重疊報告 {#audience-overlap-report}
 
 此深入分析所回答的問題：
 
@@ -86,9 +86,9 @@ SELECT source_segment_name,
 
 +++
 
-請參閱 [對象重疊報表Widget檔案](../guides/audiences.md#audience-overlap-report) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象重疊報表Widget檔案](../guides/audiences.md#audience-overlap-report)。
 
-## 對象重疊 {#audience-overlap}
+## 客群重疊 {#audience-overlap}
 
 此深入分析所回答的問題：
 
@@ -133,9 +133,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-請參閱 [對象重疊Widget檔案](../guides/audiences.md#audience-overlap) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象重疊Widget檔案](../guides/audiences.md#audience-overlap)。
 
-## 對象人數變化趨勢 {#audience-size-change-trend}
+## 客群人數變化趨勢 {#audience-size-change-trend}
 
 此深入分析所回答的問題：
 
@@ -174,9 +174,9 @@ SELECT date_key,
 
 +++
 
-請參閱 [對象人數變化趨勢Widget檔案](../guides/audiences.md#audience-size-change-trend) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象人數變化趨勢Widget檔案](../guides/audiences.md#audience-size-change-trend)。
 
-## 依身分割槽分的對象人數趨勢 {#audience-size-trend-by-identity}
+## 依身分列出的客群人數趨勢 {#audience-size-trend-by-identity}
 
 此深入分析所回答的問題：
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-請參閱 [依身分Widget檔案的對象人數趨勢](../guides/audiences.md#audience-size-trend-by-identity) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱身分識別介面工具集檔案的[對象人數趨勢](../guides/audiences.md#audience-size-trend-by-identity)。
 
 ## 對象規模趨勢 {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-請參閱 [對象人數趨勢Widget檔案](../guides/audiences.md#audience-size-trend) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象人數趨勢Widget檔案](../guides/audiences.md#audience-size-trend)。
 
 ## 對象規模 {#audience-size}
 
@@ -266,9 +266,9 @@ WHERE
 
 +++
 
-請參閱 [對象規模Widget檔案](../guides/audiences.md#audience-size) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象大小Widget檔案](../guides/audiences.md#audience-size)。
 
-## 分數的Customer AI分佈 {#customer-ai-distribution-of-scores}
+## Customer AI 分數的分佈 {#customer-ai-distribution-of-scores}
 
 此深入分析所回答的問題：
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-請參閱 [分數Widget檔案的Customer AI分佈](../guides/audiences.md#customer-ai-distribution-of-scores) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱分數Widget檔案的[Customer AI分佈](../guides/audiences.md#customer-ai-distribution-of-scores)。
 
-## Customer AI評分摘要 {#customer-ai-scoring-summary}
+## Customer AI 評分摘要 {#customer-ai-scoring-summary}
 
 此深入分析所回答的問題：
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-請參閱 [Customer AI評分摘要Widget檔案](../guides/audiences.md#customer-ai-scoring-summary) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[Customer AI評分摘要Widget檔案](../guides/audiences.md#customer-ai-scoring-summary)。
 
 ## 身分識別覆蓋 {#identity-overlap}
 
 此深入分析所回答的問題：
 
-- 兩者之間的共同交集是什麼 [!UICONTROL 身分型別A] 和 [!UICONTROL 身分型別B] 篩選的對象？
+- 對於篩選的對象，[!UICONTROL 身分型別A]和[!UICONTROL 身分型別B]之間的共同交集為何？
 - 我如何根據特定身分型別的重疊來調整客戶對象，以增強目標式行銷策略？
 - 評估交集區域內的行銷活動績效能獲得哪些深入分析？
 - 根據這些見解，如何才能最佳化未來的行銷工作？
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-請參閱 [身分重疊Widget檔案](../guides/audiences.md#identity-overlap) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[身分重疊Widget檔案](../guides/audiences.md#identity-overlap)。
 
 ## 依身分識別劃分的設定檔 {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-請參閱 [依身分Widget檔案的設定檔](../guides/audiences.md#profiles-by-identity) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[依身分Widget的設定檔檔案](../guides/audiences.md#profiles-by-identity)。
 
 ## 排定的啟用 {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-請參閱 [排定的啟用Widget檔案](../guides/audiences.md#scheduled-activations) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[排程啟用Widget檔案](../guides/audiences.md#scheduled-activations)。
 
 ## 後續步驟
 
 閱讀本檔案後，您現在瞭解產生儀表板深入分析的SQL，以及此分析解決哪些常見問題。 您現在可以編輯並反複處理SQL，以產生您自己的深入分析。
 
-請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
+如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-您也可以閱讀並瞭解為產生深入分析的SQL [設定檔](./profiles.md)， [帳戶設定檔](./account-profiles.md) 和 [目的地](./destinations.md) 控制面板。
+您也可以閱讀並瞭解產生[設定檔](./profiles.md)、[帳戶設定檔](./account-profiles.md)和[目的地](./destinations.md)儀表板之深入分析的SQL。

@@ -11,13 +11,13 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL 管道詳細資料] 結構描述欄位群組
+# [!UICONTROL 管道詳細資料]結構描述欄位群組
 
 >[!NOTE]
 >
->數個結構描述欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../name-updates.md) 以取得詳細資訊。
+>數個結構描述欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../name-updates.md)的檔案。
 
-[!UICONTROL 管道詳細資料] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)，用於說明ID、頻道型別、媒體型別和位置型別等頻道資訊。
+[!UICONTROL 頻道詳細資料]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，用於描述頻道資訊，例如ID、頻道型別、媒體型別和位置型別。
 
 ![](../../images/field-groups/channel-details.png)
 
@@ -29,5 +29,5 @@ ht-degree: 3%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-channel.schema.json)

@@ -4,7 +4,7 @@ title: 擷取目的地發佈請求
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 2%
 
 ---
@@ -19,24 +19,24 @@ ht-degree: 2%
 >
 >**API端點**： `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-設定並測試目的地後，您就可以將其提交至Adobe以供稽核和發佈。 讀取 [提交以Destination SDK撰寫的目的地，以供複查](../guides/submit-destination.md) 您必須在目的地提交程式中執行的所有其他步驟。
+設定並測試目的地後，您就可以將其提交至Adobe以供稽核和發佈。 閱讀[針對在Destination SDK](../guides/submit-destination.md)中撰寫的目的地，提交檢閱作為目的地提交程式的一部分而必須執行的所有其他步驟。
 
 發生下列情況時，請使用發佈目的地API端點提交發佈請求：
 
 * 身為Destination SDK合作夥伴，您想要讓所有Experience Platform組織都能使用已生產化的目的地，以供所有Experience Platform客戶使用；
-* 您製作 *任何更新* 至您的設定。 只有在您提交經Experience Platform團隊核准的新發佈請求後，設定更新才會反映在目的地中。
+* 您對設定進行了&#x200B;*任何更新*。 只有在您提交經Experience Platform團隊核准的新發佈請求後，設定更新才會反映在目的地中。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## Destination Publishing API操作快速入門 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 列出目的地發佈請求 {#retrieve-list}
 
-您可以透過向以下網站發出GET請求，擷取為您的IMS組織提交的所有目的地清單： `/authoring/destinations/publish` 端點。
+您可以向`/authoring/destinations/publish`端點發出GET要求，以擷取為您的IMS組織提交的所有目的地清單。
 
 **API格式**
 
@@ -46,7 +46,7 @@ ht-degree: 2%
 GET /authoring/destinations/publish
 ```
 
-使用下列API格式來擷取特定的發佈請求，定義由 `{DESTINATION_ID}` 引數。
+使用下列API格式來擷取由`{DESTINATION_ID}`引數定義的特定發佈要求。
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}
@@ -54,17 +54,17 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 
 **要求**
 
-以下兩個請求會擷取您IMS組織的所有發佈請求或特定發佈請求，具體取決於您是否傳遞 `DESTINATION_ID` 請求中的引數。
+以下兩個要求會擷取您IMS組織的所有發佈要求，或特定的發佈要求，端視您是否在要求中傳遞`DESTINATION_ID`引數而定。
 
 選取下方的每個索引標籤以檢視對應的裝載。
 
 >[!BEGINTABS]
 
->[!TAB 擷取所有發佈請求]
+>[!TAB 擷取所有發佈要求]
 
-+++請求
++++要求
 
-下列請求將依據以下內容擷取您提交的發佈請求清單 [!DNL IMS Org ID] 和沙箱設定。
+下列請求將根據[!DNL IMS Org ID]和沙箱設定，擷取您提交的發佈請求清單。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -78,7 +78,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++回應
 
-以下回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，其中包含您有權存取的提交以進行發佈的所有目的地清單。 一 `configId` 對應至一個目的地的發佈要求。
+以下回應會根據您使用的IMS組織ID和沙箱名稱，傳回HTTP狀態200，其中包含您有權存取的提交以進行發佈的所有目的地清單。 一個`configId`對應至一個目的地的發佈要求。
 
 ```json
 {
@@ -118,18 +118,18 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 |---------|----------|------|
 | `destinationId` | 字串 | 您已提交發佈的目的地組態目的地ID。 |
 | `publishDetailsList.configId` | 字串 | 您提交之目的地的目的地發佈要求唯一ID。 |
-| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地可用的Experience Platform組織。 <br> <ul><li> 的 `"destinationType": "PUBLIC"`，此引數會傳回 `"*"`，表示所有Experience Platform組織都可使用目的地。</li><li> 的 `"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織ID。</li></ul> |
-| `publishDetailsList.status` | 字串 | 目的地發佈要求的狀態。 可能的值包括 `TEST`， `REVIEW`， `APPROVED`， `PUBLISHED`， `DENIED`， `REVOKED`， `DEPRECATED`. 具有值的目的地 `PUBLISHED` 是即時的，可供Experience Platform客戶使用。 |
-| `publishDetailsList.destinationType` | 字串 | 目的地的型別。 值可以是 `DEV` 和 `PUBLIC`. `DEV` 對應至您Experience Platform組織中的目的地。 `PUBLIC` 對應至您已提交發佈的目的地。 以Git術語來思考這兩個選項，其中 `DEV` 版本代表您的本機編寫分支，而 `PUBLIC` 版本代表遠端主要分支。 |
+| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地可用的Experience Platform組織。<br> <ul><li> 對於`"destinationType": "PUBLIC"`，此引數會傳回`"*"`，這表示目的地可供所有Experience Platform組織使用。</li><li> 針對`"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織組織識別碼。</li></ul> |
+| `publishDetailsList.status` | 字串 | 目的地發佈要求的狀態。 可能的值為`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED`。 值為`PUBLISHED`的目的地已上線，可供Experience Platform客戶使用。 |
+| `publishDetailsList.destinationType` | 字串 | 目的地的型別。 值可以是`DEV`和`PUBLIC`。 `DEV`對應至您Experience Platform組織中的目的地。 `PUBLIC`對應於您已提交發佈的目的地。 以Git術語來思考這兩個選項，其中`DEV`版本代表您本機編寫分支，`PUBLIC`版本代表遠端主要分支。 |
 | `publishDetailsList.publishedDate` | 字串 | 以紀元時間提交目的地以供發佈的日期。 |
 
 {style="table-layout:auto"}
 
 +++
 
->[!TAB 擷取特定發佈請求]
+>[!TAB 擷取特定發佈要求]
 
-+++請求
++++要求
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/{DESTINATION_ID} \
@@ -147,7 +147,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 +++回應
 
-如果您傳入 `DESTINATION_ID` 在API呼叫中，回應會傳回HTTP狀態200，其中包含指定之目的地發佈要求的詳細資訊。
+如果您在API呼叫中傳遞`DESTINATION_ID`，回應會傳回HTTP狀態200，其中包含指定之目的地發佈要求的詳細資訊。
 
 ```json
 {
@@ -170,9 +170,9 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 |---------|----------|------|
 | `destinationId` | 字串 | 您已提交發佈的目的地組態目的地ID。 |
 | `publishDetailsList.configId` | 字串 | 您提交之目的地的目的地發佈要求唯一ID。 |
-| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地可用的Experience Platform組織。 <br> <ul><li> 的 `"destinationType": "PUBLIC"`，此引數會傳回 `"*"`，表示所有Experience Platform組織都可使用目的地。</li><li> 的 `"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織ID。</li></ul> |
-| `publishDetailsList.status` | 字串 | 目的地發佈要求的狀態。 可能的值包括 `TEST`， `REVIEW`， `APPROVED`， `PUBLISHED`， `DENIED`， `REVOKED`， `DEPRECATED`. 具有值的目的地 `PUBLISHED` 是即時的，可供Experience Platform客戶使用。 |
-| `publishDetailsList.destinationType` | 字串 | 目的地的型別。 值可以是 `DEV` 和 `PUBLIC`. `DEV` 對應至您Experience Platform組織中的目的地。 `PUBLIC` 對應至您已提交發佈的目的地。 以Git術語來思考這兩個選項，其中 `DEV` 版本代表您的本機編寫分支，而 `PUBLIC` 版本代表遠端主要分支。 |
+| `publishDetailsList.allowedOrgs` | 字串 | 傳回目的地可用的Experience Platform組織。<br> <ul><li> 對於`"destinationType": "PUBLIC"`，此引數會傳回`"*"`，這表示目的地可供所有Experience Platform組織使用。</li><li> 針對`"destinationType": "DEV"`，此引數會傳回您用來製作及測試目的地的組織組織識別碼。</li></ul> |
+| `publishDetailsList.status` | 字串 | 目的地發佈要求的狀態。 可能的值為`TEST`、`REVIEW`、`APPROVED`、`PUBLISHED`、`DENIED`、`REVOKED`、`DEPRECATED`。 值為`PUBLISHED`的目的地已上線，可供Experience Platform客戶使用。 |
+| `publishDetailsList.destinationType` | 字串 | 目的地的型別。 值可以是`DEV`和`PUBLIC`。 `DEV`對應至您Experience Platform組織中的目的地。 `PUBLIC`對應於您已提交發佈的目的地。 以Git術語來思考這兩個選項，其中`DEV`版本代表您本機編寫分支，`PUBLIC`版本代表遠端主要分支。 |
 | `publishDetailsList.publishedDate` | 字串 | 以紀元時間提交目的地以供發佈的日期。 |
 
 {style="table-layout:auto"}
@@ -183,4 +183,4 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 ## API錯誤處理
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。

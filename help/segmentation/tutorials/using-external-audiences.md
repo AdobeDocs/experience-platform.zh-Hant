@@ -22,13 +22,13 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ## 快速入門
 
-本教學課程需要您實際瞭解各種 [!DNL Adobe Experience Platform] 與建立對象相關的服務。 在開始本教學課程之前，請先檢閱下列服務的檔案：
+此教學課程需要您實際瞭解建立對象所涉及的各種[!DNL Adobe Experience Platform]服務。 在開始本教學課程之前，請先檢閱下列服務的檔案：
 
-- [分段服務](../home.md)：可讓您從即時客戶個人檔案資料建立對象。
-- [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
-- [體驗資料模型(XDM)](../../xdm/home.md)：Platform組織客戶體驗資料的標準化架構。 為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../../xdm/schema/best-practices.md).
+- [分段服務](../home.md)：可讓您從即時客戶設定檔資料建立對象。
+- [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
+- [體驗資料模型(XDM)](../../xdm/home.md)： Platform用來組織客戶體驗資料的標準化架構。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../../xdm/schema/best-practices.md)被擷取為設定檔和事件。
 - [資料集](../../catalog/datasets/overview.md)：Experience Platform中資料持續性的儲存和管理結構。
-- [串流擷取](../../ingestion/streaming-ingestion/overview.md)：Experience Platform如何即時從使用者端和伺服器端裝置擷取及儲存資料。
+- [串流擷取](../../ingestion/streaming-ingestion/overview.md)： Experience Platform如何從使用者端和伺服器端裝置即時擷取及儲存資料。
 
 ### 受眾vs區段定義
 
@@ -38,7 +38,7 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 區段定義包含名稱、說明、運算式（如果適用）、建立日期、上次修改日期及ID等資訊。 ID會將區段中繼資料連結至符合區段資格的個別設定檔，並屬於產生的對象。
 
-| 對象 | 區段定義 |
+| 對象 | 區塊定義 |
 | --------- | ---------------- |
 | 您嘗試尋找的設定檔群組。 使用區段定義時，這表示這會是符合區段資格的設定檔群組。 | 用來區隔您所尋找對象的規則群組。 |
 
@@ -46,29 +46,29 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 使用外部對象的第一個步驟是建立身分名稱空間。 身分名稱空間可讓Platform關聯受眾的來源。
 
-若要建立身分名稱空間，請依照 [身分名稱空間指南](../../identity-service/features/namespaces.md#manage-namespaces). 建立身分名稱空間時，請將來源詳細資料新增到身分名稱空間中，並標籤其 [!UICONTROL 型別] as a **[!UICONTROL 非人員識別碼]**.
+若要建立身分名稱空間，請依照[身分名稱空間指南](../../identity-service/features/namespaces.md#manage-namespaces)中的指示操作。 建立您的身分名稱空間時，請將來源詳細資料新增至身分名稱空間，並將其[!UICONTROL 型別]標籤為&#x200B;**[!UICONTROL 非人員識別碼]**。
 
-![「建立身分名稱空間」強制回應視窗中會醒目提示非人員識別碼。](../images/tutorials/external-audiences/identity-namespace-info.png)
+![建立身分名稱空間強制回應視窗中會醒目提示非人員識別碼。](../images/tutorials/external-audiences/identity-namespace-info.png)
 
 ## 為區段中繼資料建立結構
 
 建立身分名稱空間後，您需要為要建立的區段建立新的結構描述。
 
-若要開始構成方案，請先選取 **[!UICONTROL 方案]** ，然後按一下 **[!UICONTROL 建立結構描述]** 在「方案」工作區的右上角。 從這裡，選擇 **[!UICONTROL 瀏覽]** 以檢視可用綱要型別的完整選擇。
+若要開始撰寫結構描述，請先在左側導覽列上選取「**[!UICONTROL 結構描述]**」，然後在「結構描述」工作區的右上角選取「**[!UICONTROL 建立結構描述]**」。 從這裡，選取&#x200B;**[!UICONTROL 瀏覽]**，檢視可用的結構描述型別的完整選擇。
 
 ![建立結構描述和瀏覽都會反白顯示。](../images/tutorials/external-audiences/create-schema-browse.png)
 
-由於您正在建立預先定義的類別區段定義，請選取 **[!UICONTROL 使用現有類別]**. 現在，選取 **[!UICONTROL 區段定義]** 類別，後面接著 **[!UICONTROL 指派類別]**.
+由於您正在建立預先定義的類別區段定義，請選取&#x200B;**[!UICONTROL 使用現有類別]**。 現在選取&#x200B;**[!UICONTROL 區段定義]**&#x200B;類別，接著選取&#x200B;**[!UICONTROL 指派類別]**。
 
-![區段定義類別會反白顯示。](../images/tutorials/external-audiences/assign-class.png)
+![區段定義類別已反白顯示。](../images/tutorials/external-audiences/assign-class.png)
 
 現在您的結構描述已建立，您將需要指定哪個欄位將包含區段ID。 此欄位應該標示為主要身分，並指派給您先前建立的名稱空間。
 
-![用於標籤所選欄位為主要身分的核取方塊會在「架構編輯器」中反白顯示。](../images/tutorials/external-audiences/mark-primary-identifier.png)
+![結構描述編輯器中會反白標示選取欄位為主要身分的核取方塊。](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-標示 `_id` 欄位做為主要身分識別，選取結構描述的標題，然後切換標示為 **[!UICONTROL 個人資料]**. 選取 **[!UICONTROL 啟用]** 啟用以下專案的結構描述： [!DNL Real-Time Customer Profile].
+將`_id`欄位標示為主要身分後，請選取結構描述的標題，然後切換標示為&#x200B;**[!UICONTROL 設定檔]**。 選取&#x200B;**[!UICONTROL 啟用]**&#x200B;以啟用[!DNL Real-Time Customer Profile]的結構描述。
 
-![為設定檔啟用架構的切換開關會在「架構編輯器」中反白顯示。](../images/tutorials/external-audiences/schema-profile.png)
+![在結構描述編輯器中反白顯示啟用設定檔結構描述的切換。](../images/tutorials/external-audiences/schema-profile.png)
 
 現在，此結構描述已針對設定檔啟用，主要身分識別已指派給您建立的非個人身分名稱空間。 因此，這表示使用此結構描述匯入Platform的區段中繼資料將內嵌到設定檔中，而不會與其他人員相關的設定檔資料合併。
 
@@ -76,13 +76,13 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 設定結構後，您需要為區段中繼資料建立資料集。
 
-若要建立資料集，請依照 [資料集使用手冊](../../catalog/datasets/user-guide.md#create). 您應遵循 **[!UICONTROL 從結構描述建立資料集]** 選項，使用您先前建立的結構描述。
+若要建立資料集，請依照[資料集使用手冊](../../catalog/datasets/user-guide.md#create)中的指示操作。 您應使用先前建立的結構描述，依循&#x200B;**[!UICONTROL 從結構描述建立資料集]**&#x200B;選項。
 
-![您要做為資料集基礎的結構會醒目提示。](../images/tutorials/external-audiences/select-schema.png)
+![您要做為資料集基礎的結構描述會醒目提示。](../images/tutorials/external-audiences/select-schema.png)
 
-建立資料集後，請繼續按照 [資料集使用手冊](../../catalog/datasets/user-guide.md#enable-profile) 為即時客戶個人檔案啟用此資料集。
+建立資料集後，請繼續遵循[資料集使用手冊](../../catalog/datasets/user-guide.md#enable-profile)中的指示，為即時客戶個人檔案啟用此資料集。
 
-![為設定檔啟用架構的切換開關會在「資料集」活動頁面中反白顯示。](../images/tutorials/external-audiences/dataset-profile.png)
+![在資料集活動頁面中，啟用設定檔結構描述的切換會反白顯示。](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## 設定和匯入對象資料
 
@@ -90,15 +90,15 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ### 使用批次連線擷取資料
 
-若要建立批次連線，您可以遵循一般中的指示 [本機檔案上傳UI指南](../../sources/tutorials/ui/create/local-system/local-file-upload.md). 如需可搭配內嵌資料使用的可用來源完整清單，請參閱 [來源概觀](../../sources/home.md).
+若要建立批次連線，您可以依照一般[本機檔案上傳UI指南](../../sources/tutorials/ui/create/local-system/local-file-upload.md)中的指示進行。 如需可搭配內嵌資料使用的可用來源完整清單，請閱讀[來源概觀](../../sources/home.md)。
 
 ### 使用串流連線擷取資料
 
-若要建立串流連線，您可以依照 [api教學課程](../../sources/tutorials/api/create/streaming/http.md) 或 [UI教學課程](../../sources/tutorials/ui/create/streaming/http.md).
+若要建立串流連線，您可以依照[API教學課程](../../sources/tutorials/api/create/streaming/http.md)或[UI教學課程](../../sources/tutorials/ui/create/streaming/http.md)中的指示進行。
 
-建立串流連線後，您就可以存取唯一的串流端點，將資料傳送至該端點。 若要瞭解如何傳送資料至這些端點，請閱讀 [串流記錄資料的教學課程](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+建立串流連線後，您就可以存取唯一的串流端點，將資料傳送至該端點。 若要瞭解如何將資料傳送至這些端點，請閱讀串流記錄資料的[教學課程](../../ingestion/tutorials/streaming-record-data.md#ingest-data)。
 
-![串流連線的串流端點會在來源詳細資訊頁面中強調顯示。](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![串流連線的串流端點在來源詳細資訊頁面中反白顯示。](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## 對象中繼資料結構
 
@@ -144,22 +144,22 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `schemaRef` | 結構描述 **必須** 請參閱先前建立的區段中繼資料結構。 |
-| `datasetId` | 資料集ID **必須** 請參閱先前為您剛建立的結構描述建立的資料集。 |
-| `xdmEntity._id` | ID **必須** 請參閱您作為外部對象使用的相同區段ID。 |
-| `xdmEntity.identityMap` | 本節 **必須** 包含建立先前建立的名稱空間時使用的身分標籤。 |
+| `schemaRef` | 結構描述&#x200B;**必須**&#x200B;參考先前為區段中繼資料建立的結構描述。 |
+| `datasetId` | 資料集ID **必須**&#x200B;參考您剛才建立之結構描述先前建立的資料集。 |
+| `xdmEntity._id` | ID **必須**&#x200B;參考您當作外部對象使用的相同區段ID。 |
+| `xdmEntity.identityMap` | 此區段&#x200B;**必須**&#x200B;包含建立先前建立的名稱空間時使用的身分標籤。 |
 | `{IDENTITY_NAMESPACE}` | 這是先前建立之身分名稱空間的標籤。 因此，舉例來說，如果您將身分名稱空間稱為「externalAudience」，系統會將其當作陣列的索引鍵。 |
 | `segmentName` | 您希望外部對象分段依據的區段名稱。 |
 
 ## 使用匯入的對象建立區段
 
-設定好匯入的對象後，就可以在細分程式中使用這些對象。 若要尋找外部對象，請前往「區段產生器」，然後選取 **[!UICONTROL 受眾]** 索引標籤中的 **[!UICONTROL 欄位]** 區段。
+設定好匯入的對象後，就可以在細分程式中使用這些對象。 若要尋找外部對象，請前往「區段產生器」，並在「**[!UICONTROL 欄位]**」區段中選取「**[!UICONTROL 對象]**」標籤。
 
-![區段產生器中的外部受眾選取器會醒目提示。](../images/tutorials/external-audiences/external-audiences.png)
+![區段產生器中的外部對象選取器已反白顯示。](../images/tutorials/external-audiences/external-audiences.png)
 
 ## 後續步驟
 
-現在，您可以在區段中使用外部對象，您可以使用區段產生器來建立區段。 若要瞭解如何建立區段，請參閱 [有關建立區段的教學課程](./create-a-segment.md).
+現在，您可以在區段中使用外部對象，您可以使用區段產生器來建立區段。 若要瞭解如何建立區段，請閱讀有關建立區段的[教學課程](./create-a-segment.md)。
 
 ## 附錄
 
@@ -167,29 +167,29 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ### 設定外部區段會籍目的地結構描述
 
-若要開始構成方案，請先選取 **[!UICONTROL 方案]** ，然後按一下 **[!UICONTROL 建立結構描述]** 在「方案」工作區的右上角。 從這裡，選擇 **[!UICONTROL XDM個別設定檔]**.
+若要開始撰寫結構描述，請先在左側導覽列上選取「**[!UICONTROL 結構描述]**」，然後在「結構描述」工作區的右上角選取「**[!UICONTROL 建立結構描述]**」。 從這裡，選取&#x200B;**[!UICONTROL XDM個別設定檔]**。
 
-![「XDM個別輪廓」區域會反白顯示。](../images/tutorials/external-audiences/create-schema-profile.png)
+![XDM個別設定檔區域已反白顯示。](../images/tutorials/external-audiences/create-schema-profile.png)
 
-現在已建立結構描述，您將需要新增區段成員資格欄位群組作為結構描述的一部分。 要執行此操作，請選取 [!UICONTROL 區塊會籍細節]，後接 [!UICONTROL 新增欄位群組].
+現在已建立結構描述，您將需要新增區段成員資格欄位群組作為結構描述的一部分。 若要這麼做，請選取[!UICONTROL 區段會籍詳細資料]，然後選取[!UICONTROL 新增欄位群組]。
 
-![「區段會籍詳細資訊」欄位群組會醒目顯示。](../images/tutorials/external-audiences/segment-membership-details.png)
+![區段會籍詳細資料欄位群組已反白顯示。](../images/tutorials/external-audiences/segment-membership-details.png)
 
-此外，請確定結構已標籤為 **[!UICONTROL 個人資料]**. 為此，您需要將欄位標示為主要身分。
+此外，請確定結構描述已標示為&#x200B;**[!UICONTROL 設定檔]**。 為此，您需要將欄位標示為主要身分。
 
-![為設定檔啟用架構的切換開關會在「架構編輯器」中反白顯示。](../images/tutorials/external-audiences/external-segment-profile.png)
+![在結構描述編輯器中反白顯示啟用設定檔結構描述的切換。](../images/tutorials/external-audiences/external-segment-profile.png)
 
 ### 設定資料集
 
 建立結構描述後，您需要建立資料集。
 
-若要建立資料集，請依照 [資料集使用手冊](../../catalog/datasets/user-guide.md#create). 您應遵循 **[!UICONTROL 從結構描述建立資料集]** 選項，使用您先前建立的結構描述。
+若要建立資料集，請依照[資料集使用手冊](../../catalog/datasets/user-guide.md#create)中的指示操作。 您應使用先前建立的結構描述，依循&#x200B;**[!UICONTROL 從結構描述建立資料集]**&#x200B;選項。
 
-![您用來建立資料庫的綱要會反白顯示。](../images/tutorials/external-audiences/select-schema.png)
+![您用來建立資料庫的結構描述會反白顯示。](../images/tutorials/external-audiences/select-schema.png)
 
-建立資料集後，請繼續按照 [資料集使用手冊](../../catalog/datasets/user-guide.md#enable-profile) 為即時客戶個人檔案啟用此資料集。
+建立資料集後，請繼續遵循[資料集使用手冊](../../catalog/datasets/user-guide.md#enable-profile)中的指示，為即時客戶個人檔案啟用此資料集。
 
-![為設定檔啟用架構的切換開關會在「建立資料集」工作流程中反白顯示。](../images/tutorials/external-audiences/dataset-profile.png)
+![為設定檔啟用結構描述的切換功能會在建立資料集工作流程中反白顯示。](../images/tutorials/external-audiences/dataset-profile.png)
 
 ## 設定和匯入外部對象成員資格資料
 
@@ -197,15 +197,15 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 ### 使用批次連線擷取資料
 
-若要建立批次連線，您可以遵循一般中的指示 [本機檔案上傳UI指南](../../sources/tutorials/ui/create/local-system/local-file-upload.md). 如需可搭配內嵌資料使用的可用來源完整清單，請參閱 [來源概觀](../../sources/home.md).
+若要建立批次連線，您可以依照一般[本機檔案上傳UI指南](../../sources/tutorials/ui/create/local-system/local-file-upload.md)中的指示進行。 如需可搭配內嵌資料使用的可用來源完整清單，請閱讀[來源概觀](../../sources/home.md)。
 
 ### 使用串流連線擷取資料
 
-若要建立串流連線，您可以依照 [api教學課程](../../sources/tutorials/api/create/streaming/http.md) 或 [UI教學課程](../../sources/tutorials/ui/create/streaming/http.md).
+若要建立串流連線，您可以依照[API教學課程](../../sources/tutorials/api/create/streaming/http.md)或[UI教學課程](../../sources/tutorials/ui/create/streaming/http.md)中的指示進行。
 
-建立串流連線後，您就可以存取唯一的串流端點，將資料傳送至該端點。 若要瞭解如何傳送資料至這些端點，請閱讀 [串流記錄資料的教學課程](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
+建立串流連線後，您就可以存取唯一的串流端點，將資料傳送至該端點。 若要瞭解如何將資料傳送至這些端點，請閱讀串流記錄資料的[教學課程](../../ingestion/tutorials/streaming-record-data.md#ingest-data)。
 
-![串流連線的串流端點會在來源詳細資訊頁面中強調顯示。](../images/tutorials/external-audiences/get-streaming-endpoint.png)
+![串流連線的串流端點在來源詳細資訊頁面中反白顯示。](../images/tutorials/external-audiences/get-streaming-endpoint.png)
 
 ## 區段會籍結構
 
@@ -257,12 +257,12 @@ Adobe Experience Platform支援匯入外部對象的功能，這些對象隨後�
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `schemaRef` | 結構描述 **必須** 請參閱先前建立的結構描述，以瞭解區段成員資格資料。 |
-| `datasetId` | 資料集ID **必須** 請參閱先前針對您剛建立的成員資格方案建立的資料集。 |
+| `schemaRef` | 結構描述&#x200B;**必須**&#x200B;參考先前為區段成員資格資料建立的結構描述。 |
+| `datasetId` | 資料集識別碼&#x200B;**必須**&#x200B;參考您剛才建立的成員資格結構描述先前建立的資料集。 |
 | `xdmEntity._id` | 適合的ID，用來唯一識別資料集中的記錄。 |
 | `{TENANT_NAME}.identities` | 此區段用於連線自訂身分的欄位群組與您先前匯入的使用者。 |
 | `segmentMembership.{IDENTITY_NAMESPACE}` | 這是先前建立之自訂身分名稱空間的標籤。 因此，舉例來說，如果您將身分名稱空間稱為「externalAudience」，系統會將其當作陣列的索引鍵。 |
 
 >[!NOTE]
 >
->依預設，外部對象成員資格會在30天後刪除。 若要防止刪除並保留30天以上，請使用 `validUntil` 欄位擷取您的對象資料。 如需有關本欄位的詳細資訊，請閱讀以下指南： [區段會籍詳細資料結構欄位群組](../../xdm/field-groups/profile/segmentation.md).
+>依預設，外部對象成員資格會在30天後刪除。 若要防止刪除並保留超過30天，請在擷取您的對象資料時使用`validUntil`欄位。 如需此欄位的詳細資訊，請參閱[區段成員資格詳細資料結構描述欄位群組](../../xdm/field-groups/profile/segmentation.md)的指南。

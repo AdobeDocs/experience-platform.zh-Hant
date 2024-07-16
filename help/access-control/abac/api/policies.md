@@ -18,19 +18,19 @@ ht-degree: 2%
 >
 >如果傳遞的是使用者權杖，則權杖的使用者必須具有請求組織的「組織管理員」角色。
 
-存取控制原則是將屬性集合在一起，以建立允許和不允許動作的陳述式。 這些原則可以是本機或全域，並且可以覆寫其他原則。 此 `/policies` 以屬性為基礎的存取控制API中的端點可讓您以程式設計方式管理原則，包括管理原則的規則相關資訊及其各自的主題條件。
+存取控制原則是將屬性集合在一起，以建立允許和不允許動作的陳述式。 這些原則可以是本機或全域，並且可以覆寫其他原則。 以屬性為基礎的存取控制API中的`/policies`端點可讓您以程式設計方式管理原則，包括管理原則的規則相關資訊及其各自的主體條件。
 
 >[!IMPORTANT]
 >
->此端點切勿與 `/policies` 中的端點 [原則服務API](../../../data-governance/api/policies.md)，用來管理資料使用原則。
+>不應將此端點與用來管理資料使用原則的[原則服務API](../../../data-governance/api/policies.md)中的`/policies`端點混淆。
 
 ## 快速入門
 
-本指南中使用的API端點屬於屬性型存取控制API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的API端點屬於屬性型存取控制API的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 擷取原則清單 {#list}
 
-向發出GET要求 `/policies` 端點可列出組織中的所有現有原則。
+向`/policies`端點發出GET要求，以列出組織中的所有現有原則。
 
 **API格式**
 
@@ -136,22 +136,22 @@ curl -X GET \
 | `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用來查詢、更新和刪除原則。 |
 | `imsOrgId` | 可存取查詢原則的組織。 |
 | `createdBy` | 建立原則的使用者ID。 |
-| `createdAt` | 建立原則的時間。 此 `createdAt` 屬性會顯示在unix epoch時間戳記中。 |
+| `createdAt` | 建立原則的時間。 `createdAt`屬性會顯示在unix epoch時間戳記中。 |
 | `modifiedBy` | 上次更新原則的使用者ID。 |
-| `modifiedAt` | 上次更新原則的時間。 此 `modifiedAt` 屬性會顯示在unix epoch時間戳記中。 |
+| `modifiedAt` | 上次更新原則的時間。 `modifiedAt`屬性會顯示在unix epoch時間戳記中。 |
 | `name` | 原則的名稱。 |
 | `description` | （選用）可新增的屬性，以提供有關特定原則的進一步資訊。 |
-| `status` | 原則的目前狀態。 此屬性定義原則目前是否為 `active` 或 `inactive`. |
-| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，需要存取資源以執行動作。 在這種情況下， `subjectCondition` 是套用至主旨屬性的類似查詢條件。 |
+| `status` | 原則的目前狀態。 此屬性定義原則目前是`active`還是`inactive`。 |
+| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，需要存取資源以執行動作。 在此案例中，`subjectCondition`是套用至主旨屬性的類似查詢條件。 |
 | `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
-| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.effect` | 考慮`action`、`condition`和`resource`的值後產生的效果。 可能的值包括： `permit`、`deny`或`indeterminate`。 |
 | `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
 | `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
-| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
+| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`、`create`、`edit`和`delete`。 |
 
 ## 依ID查詢原則詳細資訊 {#lookup}
 
-向發出GET要求 `/policies` 端點，同時在請求路徑中提供原則ID以擷取該個別原則的資訊。
+在要求路徑中提供原則ID以擷取個別原則的相關資訊時，向`/policies`端點提出GET要求。
 
 **API格式**
 
@@ -232,23 +232,23 @@ curl -X GET \
 | `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用來查詢、更新和刪除原則。 |
 | `imsOrgId` | 可存取查詢原則的組織。 |
 | `createdBy` | 建立原則的使用者ID。 |
-| `createdAt` | 建立原則的時間。 此 `createdAt` 屬性會顯示在unix epoch時間戳記中。 |
+| `createdAt` | 建立原則的時間。 `createdAt`屬性會顯示在unix epoch時間戳記中。 |
 | `modifiedBy` | 上次更新原則的使用者ID。 |
-| `modifiedAt` | 上次更新原則的時間。 此 `modifiedAt` 屬性會顯示在unix epoch時間戳記中。 |
+| `modifiedAt` | 上次更新原則的時間。 `modifiedAt`屬性會顯示在unix epoch時間戳記中。 |
 | `name` | 原則的名稱。 |
 | `description` | （選用）可新增的屬性，以提供有關特定原則的進一步資訊。 |
-| `status` | 原則的目前狀態。 此屬性定義原則目前是否為 `active` 或 `inactive`. |
-| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，需要存取資源以執行動作。 在這種情況下， `subjectCondition` 是套用至主旨屬性的類似查詢條件。 |
+| `status` | 原則的目前狀態。 此屬性定義原則目前是`active`還是`inactive`。 |
+| `subjectCondition` | 套用至主旨的條件。 主體是具有特定屬性的使用者，需要存取資源以執行動作。 在此案例中，`subjectCondition`是套用至主旨屬性的類似查詢條件。 |
 | `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
-| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.effect` | 考慮`action`、`condition`和`resource`的值後產生的效果。 可能的值包括： `permit`、`deny`或`indeterminate`。 |
 | `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
 | `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
-| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
+| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`、`create`、`edit`和`delete`。 |
 
 
 ## 建立原則 {#create}
 
-POST若要建立新原則，請向 `/policies` 端點。
+若要建立新原則，請向`/policies`端點發出POST要求。
 
 **API格式**
 
@@ -258,7 +258,7 @@ POST /policies
 
 **要求**
 
-以下請求會建立名為的新原則： `acme-integration-policy`.
+下列要求會建立名為的新原則： `acme-integration-policy`。
 
 ```shell
 curl -X POST \
@@ -289,10 +289,10 @@ curl -X POST \
 | `description` | （選用）可新增的屬性，以提供有關特定原則的進一步資訊。 |
 | `imsOrgId` | 包含原則的組織。 |
 | `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
-| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.effect` | 考慮`action`、`condition`和`resource`的值後產生的效果。 可能的值包括： `permit`、`deny`或`indeterminate`。 |
 | `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
 | `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
-| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
+| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`、`create`、`edit`和`delete`。 |
 
 **回應**
 
@@ -329,15 +329,15 @@ curl -X POST \
 | `id` | 與原則相對應的ID。 此識別碼是自動產生的，可用來查詢、更新和刪除原則。 |
 | `name` | 原則的名稱。 |
 | `rules` | 定義原則的規則集。 規則會定義哪些屬性組合已獲授權，以讓主體成功對資源執行動作。 |
-| `rules.effect` | 考慮下列的值後產生的效果 `action`， `condition` 和 `resource`. 可能的值包括： `permit`， `deny`，或 `indeterminate`. |
+| `rules.effect` | 考慮`action`、`condition`和`resource`的值後產生的效果。 可能的值包括： `permit`、`deny`或`indeterminate`。 |
 | `rules.resource` | 主旨可以或無法存取的資產或物件。  資源可以是檔案、應用程式、伺服器或甚至API。 |
 | `rules.condition` | 套用至資源的條件。 例如，如果資源是結構描述，則結構描述可以套用某些標籤，以決定針對該結構描述的動作是允許還是不允許。 |
-| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`， `create`， `edit`、和 `delete`. |
+| `rules.action` | 允許主體對查詢的資源執行的動作。 可能的值包括： `read`、`create`、`edit`和`delete`。 |
 
 
 ## 依原則ID更新原則 {#put}
 
-若要更新個別原則的規則，請向以下網站發出PUT請求： `/policies` 端點，並在請求路徑中提供您要更新之原則的ID。
+若要更新個別原則的規則，請在要求路徑中提供您要更新之原則的ID時，向`/policies`端點提出PUT要求。
 
 **API格式**
 
@@ -406,7 +406,7 @@ curl -X PUT \
 
 ## 更新原則屬性 {#patch}
 
-若要更新個別原則的屬性，請向以下網站發出PATCH請求： `/policies` 端點，並在請求路徑中提供您要更新之原則的ID。
+若要更新個別原則的內容，請在要求路徑中提供您要更新之原則的ID時，向`/policies`端點提出PATCH要求。
 
 **API格式**
 
@@ -420,7 +420,7 @@ PATCH /policies/{POLICY_ID}
 
 **要求**
 
-以下請求會取代 `/description` 原則ID中 `c3863937-5d40-448d-a7be-416e538f955e`.
+下列要求會取代原則識別碼`c3863937-5d40-448d-a7be-416e538f955e`中`/description`的值。
 
 ```shell
 curl -X PATCH \
@@ -441,7 +441,7 @@ curl -X PATCH \
 
 | 運作 | 說明 |
 | --- | --- |
-| `op` | 用於定義更新角色所需動作的操作呼叫。 操作包括： `add`， `replace`、和 `remove`. |
+| `op` | 用於定義更新角色所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
 | `path` | 要更新之引數的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
 
@@ -477,7 +477,7 @@ curl -X PATCH \
 
 ## 刪除原則 {#delete}
 
-若要刪除原則，請向以下網站發出DELETE請求： `/policies` 端點，同時提供您要刪除之原則的ID。
+若要刪除原則，請在提供您要刪除之原則的ID時，向`/policies`端點提出DELETE要求。
 
 **API格式**
 
@@ -491,7 +491,7 @@ DELETE /policies/{POLICY_ID}
 
 **要求**
 
-以下請求會刪除ID為 `c3863937-5d40-448d-a7be-416e538f955e`.
+下列要求會刪除識別碼為`c3863937-5d40-448d-a7be-416e538f955e`的原則。
 
 ```shell
 curl -X DELETE \

@@ -1,12 +1,12 @@
 ---
 title: 不依賴第三方Cookie即可吸引和贏取新客戶
-description: 瞭解如何透過潛在使用案例吸引和贏取新客戶，而不需依賴第三方Cookie。
+description: 了解如何透過挖掘潛在客戶使用案例吸引並獲取新客戶，而不依賴使用第三方 Cookie。
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -124,7 +124,7 @@ Adobe Real-time Customer Data Platform可協助品牌安全地將其支援的資
 
 #### 將協力廠商資料治理標籤新增到結構描述的所有欄位
 
-考慮將協力廠商資料標籤新增到組成結構描述的所有欄位。這對於確保負責任地使用協力廠商資料並將資料洩漏風險降至最低而言非常重要。尋找更多關於以下內容的資訊： [第三方資料控管標籤](../../data-governance/labels/reference.md#partner-ecosystem-labels).
+考慮將協力廠商資料標籤新增到組成結構描述的所有欄位。這對於確保負責任地使用協力廠商資料並將資料洩漏風險降至最低而言非常重要。尋找有關[第三方資料控管標籤](../../data-governance/labels/reference.md#partner-ecosystem-labels)的詳細資訊。
 
 請依照下列步驟執行此操作：
 
@@ -221,12 +221,12 @@ Adobe Real-time Customer Data Platform可協助品牌安全地將其支援的資
 
 ![支援潛在客戶對象的目的地。](/help/destinations/assets/ui/activate-prospect-audiences/data-types-filter.png)
 
-[閱讀全文](/help/destinations/ui/activate-prospect-audiences.md) 關於啟用潛在客戶至雲端儲存空間目的地。
+[深入瞭解](/help/destinations/ui/activate-prospect-audiences.md)如何啟用雲端儲存目的地的潛在客戶。
 
 ## 其他透過合作夥伴資料支援封存的使用案例 {#other-use-cases}
 
 探索透過 Real-Time CDP 中的合作夥伴資料支援啟用的更多使用案例：
 
 * [使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [使用合作夥伴協助的訪客辨識功能，為未知訪客提供個人化的現場體驗](/help/rtcdp/partner-data/onsite-personalization.md) 造訪期間，使用者未經驗證，或先前沒有您品牌的記錄。
+* [在造訪期間使用合作夥伴協助的訪客辨識](/help/rtcdp/partner-data/onsite-personalization.md)，針對未知的訪客提供個人化現場體驗，使用者不需驗證或擁有您品牌的先前記錄。
 * [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

@@ -3,8 +3,8 @@ title: 天氣資料欄位對應
 description: 可用天氣資料欄位的參考頁面，這些欄位會以和 The Weather Channel 整合的一部分提供。
 exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
 source-git-commit: e2122008fcae1016db03d6b5f56e4fa25520f9d0
-workflow-type: ht
-source-wordcount: '12238'
+workflow-type: tm+mt
+source-wordcount: '12787'
 ht-degree: 100%
 
 ---
@@ -106,7 +106,7 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 | [!DNL Day 1 Forecast Night QPF Millimeters] | 一天的天氣預報。夜間的天氣資訊。12 或 24 小時期間預測的可測量降水量 (液體或液體相等物)。測量 (公釐)。降水量 (公釐) | `weather.forecast.day01Forecast.night.qpf.millimeters` |
 | [!DNL Day 1 Forecast Night QPF Snow Centimeters] | 一天的天氣預報。夜間的天氣資訊。12 或 24 小時預報期間預測的可測量降水量 (例如雪)。測量 (公分)。降雪量 (公分) | `weather.forecast.day01Forecast.night.qpfSnow.centimeters` |
 | [!DNL Day 1 Forecast Night QPF Snow Inches] | 一天的天氣預報。夜間的天氣資訊。12 或 24 小時預報期間預測的可測量降水量 (例如雪)。測量 (公分)。降雪量 (英吋) | `weather.forecast.day01Forecast.night.qpfSnow.inches` |
-| [!DNL Day 1 Forecast Night Relative Humidity] | 一天的天氣預報。夜間的天氣資訊。空氣的相對濕度，定義為空氣中的水蒸氣含量和在恆溫下使空氣達到飽和所需的水蒸氣含量的比例。相對濕度一定會以百分比表示。<br>範圍：0 到 100。 | `weather.forecast.day01Forecast.night.relativeHumidity` |
+| [!DNL Day 1 Forecast Night Relative Humidity] | 一天的天氣預報。夜間的天氣資訊。空氣的相對濕度，定義為空氣中的水蒸氣含量和在恆溫下使空氣達到飽和所需的水蒸氣含量的比例。相對濕度一定會以百分比表示。<br>範圍：- 0 到 100。 | `weather.forecast.day01Forecast.night.relativeHumidity` |
 | [!DNL Day 1 Forecast Night Snow Range] | 一天的天氣預報。夜間的天氣資訊。潛在大量降雪 (1-3 英吋、3-6 英吋等)。 | `weather.forecast.day01Forecast.night.snowRange` |
 | [!DNL Day 1 Forecast Night Temperature Celsius] | 一天的天氣預報。夜間的天氣資訊。以定義的測量單位表示的溫度。範圍：-140 到 140。溫度 (攝氏度數) | `weather.forecast.day01Forecast.night.temperature.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Fahrenheit] | 一天的天氣預報。夜間的天氣資訊。以定義的測量單位表示的溫度。範圍：-140 到 140。溫度 (華氏度數) | `weather.forecast.day01Forecast.night.temperature.fahrenheit` |

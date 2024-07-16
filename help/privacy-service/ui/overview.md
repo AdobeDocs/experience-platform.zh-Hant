@@ -7,40 +7,40 @@ exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 0%
+ht-degree: 18%
 
 ---
 
-# [!DNL Privacy Service] UI總覽 {#privacy-ui-guide}
+# [!DNL Privacy Service] UI 概觀 {#privacy-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
->title="資料主體請求"
->abstract="此Widget顯示Privacy Service在指定日期內處理的已提交與已完成資料主體要求數目。 如需有關Privacy Service流程的詳細資訊，請選取 **請求** ，位於左側導覽器中。"
+>title="資料主體要求"
+>abstract="此 Widget 會顯示 Privacy Service 在特定日期處理的已提交和已完成資料主體要求的數量。如需有關您的 Privacy Service 流程的詳細資訊，請在左側導覽中選取&#x200B;**要求**。"
 
 Privacy Service UI可讓您協調各種Adobe Experience Cloud應用程式的隱私權和合規性請求。
 
 >[!NOTE]
 >
->如需有關使用Privacy Service API以程式設計方式管理合規性請求的資訊，請參閱 [Privacy Service API指南](../api/overview.md). 檢視檔案編號 [管理Privacy Service許可權](../permissions.md) 以取得詳細資訊。
+>如需有關使用Privacy ServiceAPI以程式設計方式管理法規遵循要求的資訊，請參閱[Privacy ServiceAPI指南](../api/overview.md)。 如需詳細資訊，請參閱檔案[管理Privacy Service許可權](../permissions.md)。
 
-## 登入 [!DNL Privacy Service] UI
+## 登入[!DNL Privacy Service] UI
 
 >[!IMPORTANT]
 >
->您必須有Adobe ID才能驗證 [!DNL Privacy Service] UI。
+>您必須有Adobe ID才能驗證[!DNL Privacy Service] UI。
 
-若要存取UI，請登入 [Adobe Experience Cloud](https://experience.adobe.com/) 並選取 **[!UICONTROL Privacy UI]** 在「快速存取」功能表下。
+若要存取UI，請登入[Adobe Experience Cloud](https://experience.adobe.com/)，然後在快速存取功能表下選取&#x200B;**[!UICONTROL 隱私權UI]**。
 
-![反白顯示隱私權UI的Experience Cloud控制面板。](../images/ui-overview/quick-access.png)
+![反白顯示隱私權UI的Experience Cloud儀表板。](../images/ui-overview/quick-access.png)
 
 
-### 登入來源 [!DNL Experience Platform]
+### 從[!DNL Experience Platform]登入
 
-如果您擁有Adobe Experience Platform UI的存取權，也可以存取 [!DNL Privacy Service] UI透過 **[!UICONTROL 請求]** 索引標籤進行編輯。
+如果您可以存取Adobe Experience Platform UI，也可以透過左側導覽中的&#x200B;**[!UICONTROL 要求]**&#x200B;索引標籤存取[!DNL Privacy Service]UI。
 
-![左側導覽列中反白顯示請求的Adobe Experience Platform UI。](../images/ui-overview/platform.png)
+![左側導覽列中反白顯示有請求的Adobe Experience Platform UI。](../images/ui-overview/platform.png)
 
 ## 後續步驟
 
-現在您已成功登入，請參閱 [使用手冊](user-guide.md) 有關如何使用執行各種作業的步驟 [!DNL Privacy Service] UI。
+現在您已成功登入，請參閱[使用手冊](user-guide.md)以瞭解如何使用[!DNL Privacy Service] UI執行各種作業的步驟。

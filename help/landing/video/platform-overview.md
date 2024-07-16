@@ -18,6 +18,6 @@ ht-degree: 0%
 
 本影片提供Experience Platform的快速簡介，並概述其解決的一些業務挑戰。
 
-若要進一步瞭解，請先閱讀 [Experience Platform概觀](../home.md).
+若要進一步瞭解，請先閱讀[Experience Platform概觀](../home.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

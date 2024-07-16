@@ -14,6 +14,6 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform中的區段產生器
 
-以Adobe Experience Platform為建置基礎， [!DNL Adobe Real-Time Customer Data Platform] 能夠使用的完整「區段產生器」功能 [!DNL Experience Platform]. 在區段產生器的使用者介面中，您可以建立新對象、存取現有對象及修改現有對象。
+[!DNL Adobe Real-Time Customer Data Platform]以Adobe Experience Platform為基礎建置，能夠使用[!DNL Experience Platform]所包含的完整區段產生器功能。 在區段產生器的使用者介面中，您可以建立新對象、存取現有對象及修改現有對象。
 
-如需「區段產生器」的詳細指南，請參閱 [區段產生器使用手冊](../../segmentation/ui/segment-builder.md).
+如需區段產生器的詳細指南，請參閱[區段產生器使用手冊](../../segmentation/ui/segment-builder.md)。

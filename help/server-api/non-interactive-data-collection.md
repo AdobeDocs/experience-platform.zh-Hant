@@ -1,6 +1,6 @@
 ---
 title: 非互動式資料集合
-description: 瞭解Adobe Experience Platform Edge Network Server API如何執行非互動式資料收集。
+description: 瞭解Adobe Experience PlatformEdge Network伺服器API如何執行非互動式資料收集。
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
 source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 當一般使用者事件在本地排入短時間佇列（例如沒有網路連線時）時，建議批次傳送事件。
 
-批次事件不一定要屬於相同的一般使用者，這表示事件可以在其內包含不同的身分 `identityMap` 物件。
+批次事件不一定要屬於相同的一般使用者，這表示事件在其`identityMap`物件中可以包含不同的身分。
 
 ## 非互動式API呼叫範例 {#example}
 
@@ -91,16 +91,16 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | 參數 | 類型 | 必要 | 說明 |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | 是 | 資料收集端點所使用的資料串流的ID。 |
-| `requestId` | `String` | 無 | 提供外部要求追蹤ID。 如果未提供，Edge Network會為您產生回應，並將其傳回至回應內文/標頭。 |
-| `silent` | `Boolean` | 無 | 選用的布林值引數，指出Edge Network是否應傳回 `204 No Content` 是否以空白承載回應。 使用對應的HTTP狀態代碼和承載來報告嚴重錯誤。 |
+| `requestId` | `String` | 無 | 提供外部要求追蹤ID。 如果未提供任何專案，Edge Network會為您產生一個專案，並將其傳回至回應內文/標頭。 |
+| `silent` | `Boolean` | 無 | 選用的布林值引數，指出Edge Network是否應該傳回具有空白承載的`204 No Content`回應。 使用對應的HTTP狀態代碼和承載來報告嚴重錯誤。 |
 
 ### 回應 {#response}
 
-成功的回應會傳回下列其中一種狀態，以及 `requestID` 若請求中未提供任何專案。
+成功的回應會傳回下列其中一種狀態，如果要求中未提供任何狀態，則傳回`requestID`。
 
-* `202 Accepted` 成功處理要求時；
-* `204 No Content` 成功處理要求時，且 `silent` 引數已設為 `true`；
-* `400 Bad Request` 要求格式不正確時（例如，找不到必要的主要身分）。
+* 成功處理要求時`202 Accepted`；
+* 成功處理要求且`silent`引數設定為`true`時的`204 No Content`；
+* `400 Bad Request`當要求的格式不正確（例如，找不到必要的主要身分）。
 
 ```json
 {

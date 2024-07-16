@@ -4,8 +4,8 @@ title: 建立目的地發佈請求
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '448'
+ht-degree: 1%
 
 ---
 
@@ -19,24 +19,24 @@ ht-degree: 2%
 >
 >**API端點**： `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-設定並測試目的地後，您就可以將其提交至Adobe以供稽核和發佈。 讀取 [提交以Destination SDK撰寫的目的地，以供複查](../guides/submit-destination.md) 您必須在目的地提交程式中執行的所有其他步驟。
+設定並測試目的地後，您就可以將其提交至Adobe以供稽核和發佈。 閱讀[針對在Destination SDK](../guides/submit-destination.md)中撰寫的目的地，提交檢閱作為目的地提交程式的一部分而必須執行的所有其他步驟。
 
 發生下列情況時，請使用發佈目的地API端點提交發佈請求：
 
 * 身為Destination SDK合作夥伴，您想要讓所有Experience Platform組織都能使用已生產化的目的地，以供所有Experience Platform客戶使用；
-* 您製作 *任何更新* 至您的設定。 只有在您提交經Experience Platform團隊核准的新發佈請求後，設定更新才會反映在目的地中。
+* 您對設定進行了&#x200B;*任何更新*。 只有在您提交經Experience Platform團隊核准的新發佈請求後，設定更新才會反映在目的地中。
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## Destination Publishing API操作快速入門 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 提交目標設定以進行發佈 {#create}
 
-您可以透過向發出POST請求來提交要發佈的目的地設定 `/authoring/destinations/publish` 端點。
+您可以透過向`/authoring/destinations/publish`端點發出POST要求來提交要發佈的目的地設定。
 
 **API格式**
 
@@ -44,9 +44,9 @@ ht-degree: 2%
 POST /authoring/destinations/publish
 ```
 
-+++請求
++++要求
 
-以下請求會針對由裝載中提供的引數所設定的組織，提交要發佈的目的地。 以下裝載包含 `/authoring/destinations/publish` 端點。
+以下請求會針對由裝載中提供的引數所設定的組織，提交要發佈的目的地。 以下承載包含`/authoring/destinations/publish`端點接受的所有引數。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,8 +64,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | 參數 | 類型 | 說明 |
 |---------|----------|------|
-| `destinationId` | 字串 | 您要提交以進行發佈的目的地設定的目的地ID。 使用取得目的地設定的目的地ID [擷取目的地設定](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API呼叫。 |
-| `destinationAccess` | 字串 | 使用 `ALL` ，讓您的目的地出現在所有Experience Platform客戶的目錄中。 |
+| `destinationId` | 字串 | 您要提交以進行發佈的目的地設定的目的地ID。 使用[擷取目的地組態](../authoring-api/destination-configuration/retrieve-destination-configuration.md) API呼叫，取得目的地組態的目的地識別碼。 |
+| `destinationAccess` | 字串 | 使用`ALL`讓您的目的地出現在所有Experience Platform客戶的目錄中。 |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API錯誤處理
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟
 

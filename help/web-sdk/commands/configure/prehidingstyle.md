@@ -1,7 +1,8 @@
 ---
 title: 預先隱藏樣式
 description: 建立CSS定義，允許個人化內容載入而不發生閃爍。
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 3693542a-69d3-4ad8-bea4-4cabf7d80563
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -10,27 +11,27 @@ ht-degree: 0%
 
 # `prehidingStyle`
 
-此 `prehidingStyle` 屬性可讓您定義CSS選取器，以隱藏個人化內容直到載入為止。 此屬性在同步Web SDK實施中非常有用，可避免忽隱忽現的情形。 Adobe建議使用 [預先隱藏程式碼片段](../../personalization/manage-flicker.md) 用於非同步Web SDK實作。
+`prehidingStyle`屬性可讓您定義CSS選取器以隱藏個人化內容，直到其載入為止。 此屬性在同步Web SDK實施中非常有用，可避免忽隱忽現的情形。 Adobe建議針對非同步Web SDK實作使用[預先隱藏程式碼片段](../../personalization/manage-flicker.md)。
 
-您在此屬性中定義的CSS選取器會在您第一次執行時開始隱藏內容 [`sendEvent`](../sendevent/overview.md) 指令。 收到Adobe的回應時（通常包括個人化內容），內容會取消隱藏。 如果符合下列條件，內容也會取消隱藏 `sendEvent` 命令失敗或逾時。
+您在頁面上執行第一個[`sendEvent`](../sendevent/overview.md)命令時，在此屬性中定義的CSS選取器會開始隱藏內容。 收到Adobe的回應時（通常包括個人化內容），內容會取消隱藏。 如果`sendEvent`命令失敗或逾時，也會取消隱藏內容。
 
-如果您同時包含兩者 `prehidingStyle` 以及實作中的預先隱藏程式碼片段，預先隱藏程式碼片段的優先順序高於此設定屬性。
+如果您在實施中同時包含`prehidingStyle`和預先隱藏程式碼片段，則預先隱藏程式碼片段會優先於此設定屬性。
 
 ## 使用Web SDK標籤擴充功能預先隱藏樣式
 
-選取 **[!UICONTROL 提供預先隱藏樣式]** 按鈕時間 [設定標籤擴充功能](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+選取[設定標籤延伸時](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)的&#x200B;**[!UICONTROL 提供預先隱藏樣式]**&#x200B;按鈕。
 
-1. 登入 [experience.adobe.com](https://experience.adobe.com) 使用您的Adobe ID憑證。
-1. 瀏覽至 **[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**.
+1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
+1. 導覽至&#x200B;**[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**。
 1. 選取所需的標籤屬性。
-1. 瀏覽至 **[!UICONTROL 擴充功能]**，然後按一下 **[!UICONTROL 設定]** 於 [!UICONTROL Adobe Experience Platform Web SDK] 卡片。
-1. 向下捲動至 [!UICONTROL 個人化] 區段，然後選取按鈕 **[!UICONTROL 提供預先隱藏樣式]**.
-1. 此按鈕會開啟含有CSS編輯器的模型視窗。 插入所需的CSS選取器和宣告區塊，然後按一下 **[!UICONTROL 儲存]** 以關閉強制回應視窗。
-1. 按一下 **[!UICONTROL 儲存]** 在擴充功能設定底下，然後發佈變更。
+1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後按一下[!UICONTROL Adobe Experience Platform Web SDK]卡片上的&#x200B;**[!UICONTROL 設定]**。
+1. 向下捲動至[!UICONTROL Personalization]區段，然後選取按鈕&#x200B;**[!UICONTROL 提供預先隱藏樣式]**。
+1. 此按鈕會開啟含有CSS編輯器的模型視窗。 插入所需的CSS選取器和宣告區塊，然後按一下[儲存]以關閉模型視窗。****
+1. 按一下擴充功能設定下的&#x200B;**[!UICONTROL [儲存]**]，然後發佈您的變更。
 
 ## 使用Web SDK JavaScript程式庫預先隱藏樣式
 
-設定 `prehidingStyle` 字串 `configure` 命令。 如果您在設定Web SDK時省略此屬性，則執行第一個 `sendEvent` 指令。 針對同步載入的程式庫，將此值設為所需的CSS選取器和宣告區塊。
+執行`configure`命令時設定`prehidingStyle`字串。 如果您在設定Web SDK時省略此屬性，則在頁面上執行第一個`sendEvent`命令時不會隱藏任何內容。 針對同步載入的程式庫，將此值設為所需的CSS選取器和宣告區塊。
 
 ```js
 alloy("configure", {

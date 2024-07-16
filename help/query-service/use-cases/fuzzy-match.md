@@ -1,6 +1,6 @@
 ---
 title: 查詢服務中的模糊比對
-description: 瞭解如何在您的Platform資料上執行比對，該資料會透過大致比對您選擇的字串來合併來自多個資料集的結果。
+description: 瞭解如何在您的Platform資料上執行比對，並透過大致比對您選擇的字串來合併來自多個資料集的結果。
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
@@ -11,48 +11,48 @@ ht-degree: 0%
 
 # 查詢服務中的模糊比對
 
-在您的Adobe Experience Platform資料上使用「模糊」相符專案，傳回最有可能的近似相符專案，而無需搜尋具有相同字元的字串。 如此可讓您更靈活地搜尋資料，並節省時間與精力，讓您的資料更容易存取。
+在您的Adobe Experience Platform資料上使用「模糊」相符專案，傳回最有可能的近似相符專案，而不需要搜尋具有相同字元的字串。 這樣可讓您更靈活地搜尋資料，並節省時間和精力，讓您的資料更易於存取。
 
-模糊比對不會嘗試重新格式化搜尋字串以便進行比對，而是會分析兩個序列之間的相似度比率，並傳回相似度百分比。 [[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/) 建議用於此程式，因為其函式更適合用於比對較複雜情況下的字串 [!DNL regex] 或 [!DNL difflib].
+模糊比對不會嘗試重新格式化搜尋字串以便進行比對，而是會分析兩個序列之間的相似度比率，並傳回相似度百分比。 建議將[[!DNL FuzzyWuzzy]](https://pypi.org/project/fuzzywuzzy/)用於此程式，因為其函式比[!DNL regex]或[!DNL difflib]更適合在更複雜的情況下協助比對字串。
 
-此使用案例中提供的範例著重於比對來自兩個不同旅行社資料集中的飯店房間搜尋的類似屬性。 本檔案會示範如何透過字串與大型個別資料來源的相似度來比對字串。 在此範例中，模糊比對會比較來自Luma和Acme旅行社的房間功能的搜尋結果。
+此使用案例中提供的範例著重於比對來自兩個不同旅行社資料集的飯店房間搜尋的類似屬性。 本檔案會示範如何透過字串與大型個別資料來源的相似度來比對字串。 在此範例中，模糊比對會比較來自Luma和Acme旅行社之房間功能的搜尋結果。
 
 ## 快速入門 {#getting-started}
 
-此程式的一部分需要您訓練機器學習模型，本檔案假設您具備一個或多個機器學習環境的工作知識。
+在此過程中，您需要訓練機器學習模型，本檔案假設您具備一或多個機器學習環境的工作知識。
 
-此範例使用 [!DNL Python] 和 [!DNL Jupyter Notebook] 開發環境。 雖然有許多可用選項， [!DNL Jupyter Notebook] 建議使用，因為這是開放原始碼Web應用程式，運算需求低。 可從以下位置下載： [Jupyter官方網站](https://jupyter.org/).
+此範例使用[!DNL Python]和[!DNL Jupyter Notebook]開發環境。 雖然有許多可用選項，但建議使用[!DNL Jupyter Notebook]，因為它是運算需求低的開放原始碼Web應用程式。 可從[官方Jupyter網站](https://jupyter.org/)下載。
 
-開始之前，您必須匯入必要的程式庫。 [!DNL FuzzyWuzzy] 是開放原始碼 [!DNL Python] 程式庫建置在 [!DNL difflib] 資料庫和用來比對字串。 它使用 [!DNL Levenshtein Distance] 以計算序列和陣列之間的差異。 [!DNL FuzzyWuzzy] 有以下需求：
+開始之前，您必須匯入必要的程式庫。 [!DNL FuzzyWuzzy]是在[!DNL difflib]資料庫上建置的開放來源[!DNL Python]資料庫，用來比對字串。 它使用[!DNL Levenshtein Distance]來計算序列和模式之間的差異。 [!DNL FuzzyWuzzy]有下列需求：
 
-- [!DNL Python] 2.4 （或更新版本）
+- [!DNL Python] 2.4 （或更高版本）
 - [!DNL Python-Levenshtein]
 
-從命令列，使用以下命令安裝 [!DNL FuzzyWuzzy]：
+從命令列，使用以下命令來安裝[!DNL FuzzyWuzzy]：
 
 ```console
 pip install fuzzywuzzy
 ```
 
-或使用下列命令進行安裝 [!DNL Python-Levenshtein] 以及：
+或使用下列命令安裝[!DNL Python-Levenshtein]：
 
 ```console
 pip install fuzzywuzzy[speedup]
 ```
 
-更多相關技術資訊 [!DNL Fuzzywuzzy] 可以在以下連結中找到： [正式檔案](https://pypi.org/project/fuzzywuzzy/).
+有關[!DNL Fuzzywuzzy]的更多技術資訊可在其[正式檔案](https://pypi.org/project/fuzzywuzzy/)中找到。
 
 ### 連線到查詢服務
 
-您必須提供連線認證，將機器學習模型連線至查詢服務。 可以提供到期和未到期的認證。 請參閱 [認證指南](../ui/credentials.md) 有關如何取得必要認證的詳細資訊。 如果您使用 [!DNL Jupyter Notebook]，請詳閱完整指南，網址為 [如何連線至查詢服務](../clients/jupyter-notebook.md).
+您必須提供連線認證，將機器學習模型連線至查詢服務。 可提供過期和不過期的認證。 如需如何取得必要認證的詳細資訊，請參閱[認證指南](../ui/credentials.md)。 如果您使用[!DNL Jupyter Notebook]，請閱讀[如何連線至查詢服務](../clients/jupyter-notebook.md)的完整指南。
 
-此外，請務必匯入 [!DNL numpy] 封裝至您的 [!DNL Python] 環境以啟用線性代數。
+此外，請務必將[!DNL numpy]套件匯入您的[!DNL Python]環境以啟用線性代數。
 
 ```python
 import numpy as np
 ```
 
-從以下命令連線到查詢服務是必要的 [!DNL Jupyter Notebook]：
+必須執行下列命令，才能從[!DNL Jupyter Notebook]連線到查詢服務：
 
 ```python
 import psycopg2
@@ -67,11 +67,11 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-您的 [!DNL Jupyter Notebook] 執行個體現在已連線至查詢服務。 如果連線成功，則不會顯示任何訊息。 如果連線失敗，將會顯示錯誤。
+您的[!DNL Jupyter Notebook]執行個體現在已連線至查詢服務。 如果連線成功，則不會顯示任何訊息。 如果連線失敗，將會顯示錯誤。
 
-### 從Luma資料集提取資料 {#luma-dataset}
+### Luma資料集的Draw資料 {#luma-dataset}
 
-使用下列命令，從第一個資料集提取要分析的資料。 為簡短起見，範例已限製為欄的前10個結果。
+使用下列命令，從第一個資料集擷取要分析的資料。 為簡短起見，這些範例已限製為欄的前10個結果。
 
 ```python
 cur.execute('''SELECT * FROM luma;
@@ -81,7 +81,7 @@ luma = np.array([r[0] for r in cur])
 luma[:10]
 ```
 
-選取 **輸出** 以顯示傳回的陣列。
+選取&#x200B;**輸出**&#x200B;以顯示傳回的陣列。
 
 +++輸出
 
@@ -96,9 +96,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### 從Acme資料集提取資料 {#acme-dataset}
+### Acme資料集的Draw資料 {#acme-dataset}
 
-現在會使用下列命令，從第二個資料集提取要分析的資料。 同樣地，為簡短起見，這些範例已限製為欄的前10個結果。
+現在，使用下列命令從第二個資料集擷取分析資料。 同樣地，為了簡單起見，這些範例已限製為欄的前10個結果。
 
 ```python
 cur.execute('''SELECT * FROM acme;
@@ -108,7 +108,7 @@ acme = np.array([r[0] for r in cur])
 acme[:10]
 ```
 
-選取 **輸出** 以顯示傳回的陣列。
+選取&#x200B;**輸出**&#x200B;以顯示傳回的陣列。
 
 +++輸出
 
@@ -125,9 +125,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 ### 建立模糊評分函式 {#fuzzy-scoring}
 
-接下來，您必須匯入 `fuzz` 從FuzzyWuzzy資料庫並執行字串的部分比率比較。 partial ratio函式可讓您執行子字串比對。 這會取得最短字串，並將其與具有相同長度的所有子字串相符。 此函式會傳回高達100%的百分比相似度比率。 例如，部分比率函式會比較下列字串「Deluxe Room」、「1 King Bed」和「Deluxe King Room」，並傳回69%的相似性分數。
+接下來，您必須從FuzzyWuzzy資料庫匯入`fuzz`，並執行字串的部分比率比較。 partial ratio函式可讓您執行子字串比對。 這會採用最短的字串，並將其與具有相同長度的所有子字串比對。 此函式會傳回高達100%的百分比相似度比率。 例如，部分比率函式會比較下列字串「Deluxe Room」、「1 King Bed」和「Deluxe King Room」，並傳回69%的相似度分數。
 
-在飯店房間符合使用案例中，會使用下列命令完成此操作：
+在飯店房間符合使用案例中，會使用下列命令來完成：
 
 ```python
 from fuzzywuzzy import fuzz
@@ -135,16 +135,16 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-下一步，匯入 `cdist` 從 [!DNL SciPy] 程式庫，用於計算兩個輸入集合中每對之間的距離。 這會計算每個旅行社所提供的所有酒店房間分數。
+接著，從[!DNL SciPy]資料庫匯入`cdist`，以計算兩個輸入集合中每一組之間的距離。 這會計算每個旅行社所提供之所有酒店客房的分數。
 
 ```python
 from scipy.spatial.distance import cdist
 pairwise_distance =  cdist(luma.reshape((-1,1)),acme.reshape((-1,1)),compute_match_score)
 ```
 
-### 使用模糊聯結分數建立兩欄之間的對應
+### 使用模糊聯結分數在兩個欄之間建立對應
 
-現在，欄已根據距離評分，您可以索引配對，並僅保留評分高於特定百分比的相符專案。 此範例只會保留分數為70%或更高的配對。
+現在，欄已根據距離計分，您可以索引配對，並僅保留分數高於特定百分比的相符專案。 此範例只會保留分數為70%或更高的配對。
 
 ```python
 matched_pairs = []
@@ -154,13 +154,13 @@ for i,c1 in enumerate(luma):
         matched_pairs.append((luma[i].replace("'","''"),acme[j].replace("'","''")))
 ```
 
-可以使用以下命令顯示結果。 為簡短起見，結果限製為10列。
+可以使用以下命令顯示結果。 為簡單起見，結果限製為10列。
 
 ```python
 matched_pairs[:10]
 ```
 
-選取 **輸出** 以檢視結果。
+選取&#x200B;**輸出**&#x200B;以檢視結果。
 
 +++輸出
 
@@ -179,7 +179,7 @@ matched_pairs[:10]
 
 +++
 
-然後使用SQL搭配以下命令來比對結果：
+然後使用SQL搭配下列命令來比對結果：
 
 <!-- Q) Why and is this accurate? -->
 
@@ -187,9 +187,9 @@ matched_pairs[:10]
 matching_sql = ' OR '.join(["(e.luma = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
 ```
 
-## 套用對應以在查詢服務中進行模糊聯結 {#mappings-for-query-service}
+## 在查詢服務中套用對應以進行模糊聯結 {#mappings-for-query-service}
 
-接下來，使用SQL聯結高評分相符配對以建立新資料集。
+接著，高分相符配對配對會使用SQL聯結以建立新資料集。
 
 ```python
 :
@@ -202,7 +202,7 @@ WHERE
 [r for r in cur]
 ```
 
-選取 **輸出** 檢視此聯結的結果。
+選取&#x200B;**輸出**&#x200B;以檢視此聯結的結果。
 
 +++輸出
 

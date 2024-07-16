@@ -16,21 +16,21 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 從這裡開始，然後按照下面的連結來瞭解Real-Time CDP各種服務和區域的所有護欄：
 
 * [資料擷取的護欄](/help/ingestion/guardrails.md)
-* [的護欄 [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
-* [護欄 [!DNL Real-Time Customer Profile] 資料與細分](/help/profile/guardrails.md)
-* [護欄 [!DNL Identity Service] 資料](/help/identity-service/guardrails.md)
-* [護欄 [!DNL Query Service]](/help/query-service/guardrails.md)
+* [ [!DNL Edge Network Server API]的護欄](/help/server-api/guardrails.md)
+* [ [!DNL Real-Time Customer Profile] 資料和分段的護欄](/help/profile/guardrails.md)
+* [ [!DNL Identity Service] 資料的護欄](/help/identity-service/guardrails.md)
+* [ [!DNL Query Service]的護欄](/help/query-service/guardrails.md)
 * [透過目的地啟用資料的護欄](/help/destinations/guardrails.md)
 * [Real-Time CDP B2B的護欄](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->此外，造訪 [數位體驗藍圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) 以取得進一步資訊，例如 [端對端延遲圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 用於各種Experience Platform服務。
+>此外，請造訪[數位體驗藍圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html)以取得更多資訊，例如各種Experience Platform服務的[端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
 
 ## 護欄型別 {#guardrail-types}
 
@@ -48,9 +48,9 @@ ht-degree: 1%
 此外，請參考以下產品說明連結，以取得根據您購買的Real-Time CDP版本和層級而設計的授權和權益資訊：
 
 * [所有Adobe產品說明](https://helpx.adobe.com/legal/product-descriptions.html)
-* [Real-time Customer Data Platform （B2C版本 — Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2P版本 — Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2B版本 — Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2C Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2P版本 — Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2B Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## 其他Experience Platform應用程式的護欄  {#guardrails-other-aep-apps}
 
@@ -61,4 +61,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-瞭解適用於Real-Time CDP各種區域和服務的「護欄」後，您可以遵循這些護欄，同時使用 [Real-Time CDP實作的範例使用案例](/help/rtcdp/get-started.md).
+瞭解適用於Real-Time CDP各種區域與服務的護欄後，您可以隨附Real-Time CDP實作的[範例使用案例](/help/rtcdp/get-started.md)。

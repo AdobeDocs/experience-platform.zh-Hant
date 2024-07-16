@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Sandbox API指南附錄
 
-本檔案提供使用 [!DNL Sandbox] API。
+本檔案提供與使用[!DNL Sandbox] API相關的補充資訊。
 
 ## 使用查詢引數 {#query}
 
-此 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) 支援在列出沙箱時使用查詢引數來頁面和篩選結果。
+[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)支援在列出沙箱時使用查詢引數來頁面和篩選結果。
 
 >[!NOTE]
 >
->此 `limit` 和 `offset` 必須一起指定查詢引數。 如果您只指定一個，API會傳回錯誤。 如果您指定「無」，預設限製為50，位移為0。
+>必須同時指定`limit`和`offset`查詢引數。 如果您只指定一個，API會傳回錯誤。 如果您指定「無」，預設限製為50，位移為0。
 
 | 參數 | 說明 |
 | --- | --- |

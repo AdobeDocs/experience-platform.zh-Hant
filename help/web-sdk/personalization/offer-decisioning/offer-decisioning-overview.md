@@ -16,7 +16,7 @@ ht-degree: 3%
 >
 >特定使用者可提早存取Adobe Experience Platform Web SDK中的Offer decisioning。 此功能並非適用於所有組織。
 
-Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning管理的個人化優惠。 您可以使用Offer decisioning使用者介面(UI)或API建立您的優惠方案與其他相關物件。
+Adobe Experience Platform [!DNL Web SDK]可以提供並轉譯Offer Decisioning管理的個人化優惠。 您可以使用Offer decisioning使用者介面(UI)或API建立您的優惠方案與其他相關物件。
 
 ## 先決條件
 
@@ -26,9 +26,9 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
 
 ## 術語
 
-使用Offer Decisioning時，請務必瞭解下列術語。 如需詳細資訊和檢視其他詞語，請造訪 [offer decisioning字彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+使用Offer Decisioning時，請務必瞭解下列術語。 如需詳細資訊和檢視其他辭彙，請造訪[Offer decisioning字彙表](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)。
 
-* **決定範圍：** 對於Offer decisioning，決定範圍是JSON的Base64編碼字串，包含您希望offer decisioning服務用來建議優惠的活動和位置ID。
+* **決定範圍：**&#x200B;對於Offer decisioning，決定範圍是JSON的Base64編碼字串，其中包含您希望offer decisioning服務用來建議優惠的活動和位置ID。
 
   *決定範圍JSON：*
 
@@ -47,28 +47,28 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
 
   >[!TIP]
   >
-  >您可以從以下位置複製決定範圍值： **活動概覽** UI中的頁面。
+  >您可以從UI中的&#x200B;**活動概覽**&#x200B;頁面複製決定範圍值。
 
-  ![決定複製設定。](assets/decision-scope-copy.png)
+  ![決定副本設定。](assets/decision-scope-copy.png)
 
-* **資料串流：** 如需詳細資訊，請閱讀 [資料串流](/help/datastreams/overview.md) 檔案。
+* **資料串流：**&#x200B;如需詳細資訊，請閱讀[資料串流](/help/datastreams/overview.md)檔案。
 
-* **身分**：如需詳細資訊，請參閱本檔案以瞭解如何操作 [Platform Web SDK使用Identity Service](../../identity/overview.md).
+* **身分**：如需詳細資訊，請閱讀此檔案以概述[Platform Web SDK如何使用身分識別服務](../../identity/overview.md)。
 
 ## 啟用Offer decisioning
 
 若要啟用Offer Decisioning，請執行下列步驟：
 
-1. 在您的中啟用Adobe Experience Platform [資料流](/help/datastreams/overview.md) 並勾選「Offer decisioning」方塊
+1. 在您的[資料流](/help/datastreams/overview.md)中啟用Adobe Experience Platform，並勾選「Offer decisioning」方塊
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. 依照指示進行 [安裝SDK](/help/web-sdk/install/overview.md) (SDK可獨立安裝或透過UI安裝。 請參閱 [標籤快速入門手冊](/help/tags/quick-start/quick-start.md))以取得詳細資訊。
-1. 設定SDK以便Offer decisioning，使用 `personalization.decisionScopes`. 以下提供其他Offer decisioning特定步驟。
+1. 請依照指示[安裝SDK](/help/web-sdk/install/overview.md) (SDK可以獨立安裝，也可以透過UI安裝。 如需詳細資訊，請參閱[標籤快速入門手冊](/help/tags/quick-start/quick-start.md))。
+1. 設定SDK以使用`personalization.decisionScopes`進行Offer decisioning。 以下提供其他Offer decisioning特定步驟。
 
    * 安裝獨立SDK
 
-      1. 設定&quot;sendEvent&quot;動作，包含 `personalization.decisionScopes`
+      1. 使用`personalization.decisionScopes`設定「sendEvent」動作
 
      ```javascript
      alloy("sendEvent", {
@@ -86,29 +86,29 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
 
       1. [建立標籤屬性](/help/tags/ui/administration/companies-and-properties.md)
       1. [新增內嵌程式碼](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 透過從「資料流」下拉式選單中選取設定，使用您建立的資料流安裝並設定Platform Web SDK擴充功能。 請參閱以下檔案： [擴充功能](/help/tags/ui/managing-resources/extensions/overview.md).
+      1. 透過從「資料流」下拉式選單中選取設定，使用您建立的資料流安裝並設定Platform Web SDK擴充功能。 請參閱有關[擴充功能](/help/tags/ui/managing-resources/extensions/overview.md)的檔案。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 建立必要的 [資料元素](/help/tags/ui/managing-resources/data-elements.md). 您至少必須建立Platform Web SDK身分對應和Platform Web SDK XDM物件資料元素。
+      1. 建立必要的[資料元素](/help/tags/ui/managing-resources/data-elements.md)。 您至少必須建立Platform Web SDK身分對應和Platform Web SDK XDM物件資料元素。
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. 建立您的 [規則](/help/tags/ui/managing-resources/rules.md).
+      1. 建立您的[規則](/help/tags/ui/managing-resources/rules.md)。
 
-         * 新增Platform Web SDK傳送事件動作並新增相關 `decisionScopes` 至該動作的設定
+         * 新增Platform Web SDK傳送事件動作，並將相關的`decisionScopes`新增至該動作的設定
 
          ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. [建立及發佈程式庫](/help/tags/ui/publishing/libraries.md) 包含您已設定的所有相關規則、資料元素和擴充功能
+      1. [建立並發佈程式庫](/help/tags/ui/publishing/libraries.md)，其中包含您已設定的所有相關規則、資料元素和擴充功能
 
 ## 範例要求與回應
 
-### 一 `decisionScopes` 值
+### 一個`decisionScopes`值
 
 **要求**
 
@@ -139,8 +139,8 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
 
 | 屬性 | 必要 | 說明 | 限制 | 範例 |
 |---|---|---|---|---|
-| `identityMap` | 是 | 請參閱此 [Identity Service檔案](../../identity/overview.md). | 每個請求一個身分。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：使用者不需要包含 `ECID` API呼叫中的引數 如有需要，此引數會自動新增至呼叫。 |
-| `decisionScopes` | 是 | 一個JSON的Base64編碼字串陣列，包含活動和位置ID。 | 最多30個 `decisionScopes` 每個請求。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `identityMap` | 是 | 請參閱此[Identity Service檔案](../../identity/overview.md)。 | 每個請求一個身分。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br>注意：使用者不需要在API呼叫中包含`ECID`引數。 如有需要，此引數會自動新增至呼叫。 |
+| `decisionScopes` | 是 | 一個JSON的Base64編碼字串陣列，包含活動和位置ID。 | 每個請求最多30 `decisionScopes`。 | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **回應**
 
@@ -203,7 +203,7 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
 | `deliveryUrl` | 以URL格式呈現與建議選件相關聯的影像內容。 | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | 與JSON物件格式的建議選件相關聯的特性。 | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
-### 多個 `decisionScopes` 值
+### 多個`decisionScopes`值
 
 **要求**
 
@@ -236,8 +236,8 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
 
 | 屬性 | 必要 | 說明 | 限制 | 範例 |
 |---|---|---|---|---|
-| `identityMap` | 是 | 請參閱此 [Identity Service檔案](../../identity/overview.md). | 每個請求一個身分。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br> 注意：使用者不需要包含 `ECID` API呼叫中的引數 如有需要，此引數會自動新增至呼叫。 |
-| `decisionScopes` | 是 | 一個JSON的Base64編碼字串陣列，包含活動和位置ID。 | 最多30個 `decisionScopes` 每個請求。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `identityMap` | 是 | 請參閱此[Identity Service檔案](../../identity/overview.md)。 | 每個請求一個身分。 | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }`。<br><br>注意：使用者不需要在API呼叫中包含`ECID`引數。 如有需要，此引數會自動新增至呼叫。 |
+| `decisionScopes` | 是 | 一個JSON的Base64編碼字串陣列，包含活動和位置ID。 | 每個請求最多30 `decisionScopes`。 | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **回應**
 
@@ -332,4 +332,4 @@ Adobe Experience Platform [!DNL Web SDK] 可以投放和轉譯Offer Decisioning�
 
 ## 限制
 
-行動Edge Network工作流程目前不支援部分優惠方案限制，例如上限。 此上限欄位值會指定某個優惠方案在所有使用者中顯示的次數。 如需詳細資訊，請參閱 [優惠適用性規則和限制檔案](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+行動Edge Network工作流程目前不支援部分優惠方案限制，例如上限。 此上限欄位值會指定某個優惠方案在所有使用者中顯示的次數。 如需詳細資訊，請參閱[優惠適用性規則和限制檔案](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility)。

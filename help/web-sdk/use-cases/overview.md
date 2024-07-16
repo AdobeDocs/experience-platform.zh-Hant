@@ -14,4 +14,4 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK可搭配其他Adobe解決方案(例如Adobe Analytics、Audience Manager、Target和Experience Platform)，提供各種個人化使用案例。
 
-如需關於實作支援的使用案例的詳細資訊，請查閱以下檔案中的相應檔案： [Web SDK使用案例專案頁面](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=).
+如需有關實作支援的使用案例的詳細資訊，請在[Web SDK使用案例專案頁面](https://github.com/orgs/adobe/projects/18/views/1?filterQuery=)中檢視其對應的檔案。

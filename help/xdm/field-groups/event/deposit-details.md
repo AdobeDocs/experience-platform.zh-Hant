@@ -9,9 +9,9 @@ ht-degree: 4%
 
 ---
 
-# [!UICONTROL 存款細節] 結構描述欄位群組
+# [!UICONTROL 存款詳細資料]結構描述欄位群組
 
-[!UICONTROL 存款細節] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md). 欄位群組提供單一 `personalFinances.deposits` 資料欄位至結構描述，可擷取有關財務存款的詳細資訊。
+[!UICONTROL 存款詳細資料]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組。 欄位群組提供單一`personalFinances.deposits`欄位給結構描述，擷取有關財務存款的詳細資料。
 
 ![](../../images/field-groups/deposit-details.png)
 
@@ -23,4 +23,4 @@ ht-degree: 4%
 
 {style="table-layout:auto"}
 
-如需欄位群組的詳細資訊，請參閱 [公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json).
+如需欄位群組的詳細資訊，請參閱[公用XDM存放庫](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-deposit-details.schema.json)。

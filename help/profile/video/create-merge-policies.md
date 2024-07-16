@@ -17,12 +17,12 @@ ht-degree: 0%
 
 ---
 
-# 在Experience PlatformUI中建立合併原則
+# 在Experience Platform UI中建立合併原則
 
-本影片提供對Adobe Experience Platform中合併原則的基本瞭解，並概述如何使用Platform使用者介面定義合併原則。 若要進一步瞭解合併原則，請先閱讀 [合併原則概觀](../merge-policies/overview.md).
+本影片提供對Adobe Experience Platform中合併原則的基本瞭解，並概述如何使用Platform使用者介面定義合併原則。 若要深入瞭解合併原則，請先閱讀[合併原則概觀](../merge-policies/overview.md)。
 
 >[!NOTE]
 >
->Experience Platform使用者介面經常更新，自從錄製此影片後，可能有所變更。 如需最新資訊，請參閱 [合併原則UI指南](../merge-policies/ui-guide.md).
+>Experience Platform使用者介面經常更新，自從錄製此影片後，該介面可能已經變更。 如需最新資訊，請參閱[合併原則UI指南](../merge-policies/ui-guide.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)

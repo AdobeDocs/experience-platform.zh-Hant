@@ -15,7 +15,7 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > * Adobe建議您將此頁面加入書籤，每三個月重新造訪一次，以檢查最新IP位址。 Adobe不提供新IP範圍的通知。
-> * 雖然Adobe支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為 [!DNL Amazon S3] 和 [!DNL Azure Blob].
+> * 雖然Adobe支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為[!DNL Amazon S3]和[!DNL Azure Blob]。
 
 ## 適用性 {#applicability}
 
@@ -27,7 +27,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->本頁記錄的IP範圍包括 *非* 支援以下檔案式雲端儲存空間目的地： [!UICONTROL Azure Blob]， [!UICONTROL Azure Data Lake Storage Gen2] 和 [!UICONTROL 資料登陸區域].
+>此頁面上記錄的IP範圍&#x200B;*不*&#x200B;支援下列以檔案為基礎的雲端儲存體目的地： [!UICONTROL Azure Blob]、[!UICONTROL Azure Data Lake Storage Gen2]和[!UICONTROL 資料登陸區域]。
 
 ## 概觀 {#overview}
 

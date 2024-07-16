@@ -22,7 +22,7 @@ ht-degree: 29%
    - [身分連結邏輯](./features/identity-linking-logic.md)
    - [身分圖表檢視器](./features/identity-graph-viewer.md)
    - [Identity Service中的刪除](./features/deletion.md)
-   - 身分圖表連結規則 {#identity-graph-linking-rules}
+   - 身分圖表連結規則{#identity-graph-linking-rules}
       - [功能概觀](./identity-graph-linking-rules/overview.md)
       - [身分最佳化演演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [名稱空間優先順序](./identity-graph-linking-rules/namespace-priority.md)
@@ -47,4 +47,4 @@ ht-degree: 29%
 - [在UI中定義身分欄位](label-identities.md)
 - [隱私權請求處理](privacy.md)
 - [疑難排解指南](troubleshooting-guide.md)
-- [Platform發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

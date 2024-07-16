@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；開發人員指南；端點；資料科學工作區；熱門主題；例項；sensei機器學習api
+keywords: Experience Platform；開發人員指南；端點；資料科學Workspace；熱門主題；例項；sensei機器學習api
 solution: Experience Platform
 title: MLInstances API端點
 description: MLInstance是現有引擎與定義任何訓練引數、評分引數或硬體資源設定的適當組態集的配對。
@@ -14,13 +14,13 @@ ht-degree: 3%
 
 # MLInstances端點
 
-MLInstance是現有 [引擎](./engines.md) 搭配適當的設定集，以定義任何訓練引數、評分引數或硬體資源設定。
+MLInstance是現有[引擎](./engines.md)與定義任何訓練引數、評分引數或硬體資源組態的適當組態集的配對。
 
 ## 建立MLInstance {#create-an-mlinstance}
 
-您可以在提供包含有效引擎ID的要求裝載時，透過執行POST要求來建立MLInstance (`{ENGINE_ID}`)和一組適當的預設設定。
+您可以執行POST要求，同時提供包含有效引擎識別碼(`{ENGINE_ID}`)和適當預設組態集的要求裝載，以建立MLInstance。
 
-如果「引擎ID」參照PySpark或Spark引擎，則您可以設定計算資源的數量，例如核心數量或記憶體數量。 如果參考了Python引擎，您可以選擇使用CPU或GPU進行訓練和評分。 請參閱附錄中有關 [PySpark和Spark資源設定](./appendix.md#resource-config) 和 [Python CPU和GPU設定](./appendix.md#cpu-gpu-config) 以取得詳細資訊。
+如果「引擎ID」參照PySpark或Spark引擎，則您可以設定計算資源的數量，例如核心數量或記憶體數量。 如果參考了Python引擎，您可以選擇使用CPU或GPU進行訓練和評分。 如需詳細資訊，請參閱[PySpark和Spark資源設定](./appendix.md#resource-config)及[Python CPU和GPU設定](./appendix.md#cpu-gpu-config)的附錄小節。
 
 **API格式**
 
@@ -83,7 +83,7 @@ curl -X POST \
 
 **回應**
 
-成功回應會傳回包含新建立MLInstance詳細資訊的裝載，包括其唯一識別碼(`id`)。
+成功的回應會傳回承載，其中包含新建立的MLInstance的詳細資料，包括其唯一識別碼(`id`)。
 
 ```json
 {
@@ -130,7 +130,7 @@ curl -X POST \
 
 ## 擷取MLInstances清單
 
-您可以透過執行單一GET要求來擷取MLInstances清單。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱 [用於資產擷取的查詢引數](./appendix.md#query).
+您可以透過執行單一GET要求來擷取MLInstances清單。 若要協助篩選結果，您可以在請求路徑中指定查詢引數。 如需可用查詢的清單，請參閱[查詢資產擷取](./appendix.md#query)引數的附錄區段。
 
 **API格式**
 
@@ -142,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 其中一項 [可用的查詢引數](./appendix.md#query) 用於篩選結果。 |
+| `{QUERY_PARAMETER}` | 用來篩選結果的[可用查詢引數](./appendix.md#query)之一。 |
 | `{VALUE}` | 上一個查詢引數的值。 |
 
 **要求**
@@ -275,7 +275,7 @@ curl -X GET \
 
 >[!TIP]
 >
->為確保此PUT請求成功，建議您先執行GET請求，並 [依ID擷取MLInstance](#retrieve-specific). 然後，修改和更新傳回的JSON物件，並套用整個修改的JSON物件作為PUT請求的裝載。
+>為確保此PUT要求成功，建議您先執行GET要求，以[依據ID](#retrieve-specific)擷取MLInstance。 然後，修改和更新傳回的JSON物件，並套用整個修改的JSON物件作為PUT請求的裝載。
 
 下列範例API呼叫最初具有這些屬性時，將會更新MLInstance的訓練和評分引數：
 

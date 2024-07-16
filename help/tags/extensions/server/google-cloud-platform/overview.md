@@ -5,53 +5,53 @@ last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '562'
 ht-degree: 1%
 
 ---
 
 # [!DNL Google Cloud Platform] 事件轉送擴充功能
 
-[[!DNL Google Cloud Platform]](https://cloud.google.com/) 是雲端運算平台，提供各種服務，例如分散式運算、資料庫儲存、內容傳遞，以及軟體即服務(SaaS)整合服務，用於客戶關係管理(CRM)和企業資源規劃(ERP)。
+[[!DNL Google Cloud Platform]](https://cloud.google.com/)是雲端運算平台，提供各種服務，例如分散式運算、資料庫儲存、內容傳遞，以及客戶關係管理(CRM)和企業資源規劃(ERP)的軟體即服務(SaaS)整合服務。
 
-此 [!DNL Google Cloud Platform] [事件轉送](../../../ui/event-forwarding/overview.md) 擴充功能運用範圍 [[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub) 將事件從Adobe Experience Platform Edge Network傳送至 [!DNL Google Cloud Platform] 以進一步處理。 本指南說明如何安裝擴充功能，以及在事件轉送規則中運用其功能。
+[!DNL Google Cloud Platform] [事件轉送](../../../ui/event-forwarding/overview.md)擴充功能運用[[!DNL Cloud Pub/Sub]](https://cloud.google.com/pubsub)將事件從Adobe Experience PlatformEdge Network傳送至[!DNL Google Cloud Platform]以進行進一步處理。 本指南說明如何安裝擴充功能，以及在事件轉送規則中運用其功能。
 
 ## 先決條件
 
-若要使用此擴充功能，您必須具備一個 [!DNL Google Cloud Platform] 帳戶與現有 [!DNL Cloud Pub/Sub] 主題。 如果您沒有既存的主題，請參閱 [[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic) 有關建立和管理主題的檔案。
+若要使用此延伸模組，您必須擁有具有現有[!DNL Cloud Pub/Sub]主題的[!DNL Google Cloud Platform]帳戶。 如果您沒有既存的主題，請參閱有關建立和管理主題的[[!DNL Google Cloud Platform]](https://cloud.google.com/pubsub/docs/create-topic)檔案。
 
 ### 建立密碼和資料元素
 
-首先，建立新的 `Google OAuth 2` [事件轉送密碼](../../../ui/event-forwarding/secrets.md)，用來驗證您帳戶的連線，同時確保值的安全。
+首先，建立新的`Google OAuth 2` [事件轉送密碼](../../../ui/event-forwarding/secrets.md)，它將會用來驗證您帳戶的連線，同時保證值的安全。
 
-下一個， [建立資料元素](../../../ui/managing-resources/data-elements.md#create-a-data-element) 使用 **[!UICONTROL 核心]** 擴充功能和 **[!UICONTROL 密碼]** 資料元素型別以參照 `Google OAuth 2` 您剛才建立的密碼。
+接著，[使用&#x200B;**[!UICONTROL Core]**&#x200B;擴充功能和&#x200B;**[!UICONTROL Secret]**&#x200B;資料元素型別，建立資料元素](../../../ui/managing-resources/data-elements.md#create-a-data-element)以參考您剛才建立的`Google OAuth 2`密碼。
 
-## 安裝並設定 [!DNL Google Cloud Platform] 副檔名 {#install}
+## 安裝並設定[!DNL Google Cloud Platform]擴充功能 {#install}
 
-若要安裝擴充功能， [建立事件轉送屬性](../../../ui/event-forwarding/overview.md#properties) 或選擇現有的屬性來編輯。
+若要安裝擴充功能，[請建立事件轉送屬性](../../../ui/event-forwarding/overview.md#properties)，或選擇現有的屬性來編輯。
 
-選取 **[!UICONTROL 擴充功能]** ，位於左側導覽器中。 在 **[!UICONTROL 目錄]** 索引標籤，選取 **[!UICONTROL 安裝]** 在的卡片上 [!DNL Google Cloud Platform] 副檔名。
+在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**。 在&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤中，選取[!DNL Google Cloud Platform]擴充功能的卡片上的&#x200B;**[!UICONTROL 安裝]**。
 
-![目錄 [!DNL Google Cloud Platform] 擴充功能醒目提示安裝。](../../../images/extensions/server/google-cloud-platform/install-extension.png)
+![目錄[!DNL Google Cloud Platform]延伸模組醒目提示安裝。](../../../images/extensions/server/google-cloud-platform/install-extension.png)
 
-在設定畫面上，將您先前建立的資料元素密碼輸入至 **[!UICONTROL 存取權杖]** 欄位。 資料元素密碼將包含 [!DNL Google Cloud Platform] OAuth 2 Token。 選取 **[!UICONTROL 儲存]** 完成後。
+在設定畫面上，將您先前建立的資料元素密碼輸入至&#x200B;**[!UICONTROL 存取Token]**&#x200B;欄位。 資料元素密碼將包含您的[!DNL Google Cloud Platform] OAuth 2權杖。 完成時選取&#x200B;**[!UICONTROL 儲存]**。
 
-![此 [!DNL Google Cloud Platform] 擴充功能組態頁面。](../../../images/extensions/server/google-cloud-platform/configure-extension.png)
+![擴充功能組態頁面[!DNL Google Cloud Platform]。](../../../images/extensions/server/google-cloud-platform/configure-extension.png)
 
-## 建立 [!DNL Send Data to Cloud Pub/Sub] 規則 {#tracking-rule}
+## 建立[!DNL Send Data to Cloud Pub/Sub]規則 {#tracking-rule}
 
-安裝擴充功能後，請建立新的事件轉送 [規則](../../../ui/managing-resources/rules.md) 並視需要設定其條件。 設定規則的動作時，選取 **[!UICONTROL Google Cloud平台]** 擴充功能，然後選取「 」 **[!UICONTROL 傳送資料至雲端Pub/Sub]** （適用於動作型別）。
+安裝擴充功能後，請建立新的事件轉送[規則](../../../ui/managing-resources/rules.md)，並視需要設定其條件。 設定規則的動作時，請選取&#x200B;**[!UICONTROL Google Cloud Platform]**&#x200B;擴充功能，然後針對動作型別選取&#x200B;**[!UICONTROL 將資料傳送至Cloud Pub/Sub]**。
 
-![的動作設定檢視 [!UICONTROL Google Cloud平台]，並醒目提示動作 [!UICONTROL 傳送資料至雲端Pub/Sub].](../../../images/extensions/server/google-cloud-platform/event-action.png)
+![ [!UICONTROL Google Cloud Platform]的動作設定檢視（反白顯示動作）和[!UICONTROL 將資料傳送到Cloud Pub/Sub]。](../../../images/extensions/server/google-cloud-platform/event-action.png)
 
 | 輸入 | 說明 |
 | --- | --- |
-| [!UICONTROL 主題] | 將從事件轉送接收事件的主題。 值必須採用格式 `projects/{projectName}/topics/{topicName}`. |
-| [!UICONTROL 資料] | 此欄位包含要轉送至 [!DNL Cloud Pub/Sub] JSON格式的主題。<br><br>在 **[!UICONTROL 原始]** 選項，您可以將JSON物件直接貼到提供的文字欄位中，或選取資料元素圖示(![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png))從現有資料元素清單中選取以代表資料。<br><br>您也可以使用 **[!UICONTROL JSON索引鍵值配對編輯器]** 用於透過UI編輯器手動新增每個索引鍵/值組的選項。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
-| [!UICONTROL 屬性] | 此欄位包含JSON物件，以及要連同訊息一起傳送的額外屬性。<br><br>在 **[!UICONTROL 原始]** 選項，您可以將JSON物件直接貼到提供的文字欄位中，或選取資料元素圖示(![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png))從現有資料元素清單中選取以代表資料。<br><br>您也可以使用 **[!UICONTROL JSON索引鍵值配對編輯器]** 用於透過UI編輯器手動新增每個索引鍵/值組的選項。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
+| [!UICONTROL 主題] | 將從事件轉送接收事件的主題。 值的格式必須為`projects/{projectName}/topics/{topicName}`。 |
+| [!UICONTROL 資料] | 此欄位包含要以JSON格式轉送至[!DNL Cloud Pub/Sub]主題的資料。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
+| [!UICONTROL 屬性] | 此欄位包含JSON物件，以及要連同訊息一起傳送的額外屬性。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
 
 {style="table-layout:auto"}
 
 ## 後續步驟
 
-本指南說明如何將資料傳送至 [!DNL Cloud Pub/Sub] 使用 [!DNL Google Cloud Platform] 事件轉送擴充功能。 如需Experience Platform中事件轉送功能的詳細資訊，請參閱 [事件轉送概觀](../../../ui/event-forwarding/overview.md).
+本指南涵蓋如何使用[!DNL Google Cloud Platform]事件轉送擴充功能將資料傳送至[!DNL Cloud Pub/Sub]。 如需Experience Platform中事件轉送功能的詳細資訊，請參閱[事件轉送概觀](../../../ui/event-forwarding/overview.md)。

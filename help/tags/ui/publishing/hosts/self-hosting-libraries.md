@@ -5,7 +5,7 @@ exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
 source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 74%
+ht-degree: 63%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-Adobe Experience Platform中的標籤可讓您產生一組名為的檔案 [建置](../builds.md). 這組檔案控制應用程式在執行階段的行為。
+Adobe Experience Platform中的標籤允許產生一組稱為[組建](../builds.md)的檔案。 這組檔案控制應用程式在執行階段的行為。
 
 組建需要在某處託管，用戶端裝置才能在需要時於執行階段擷取這些組建。
 
-Platform 可以管理這些檔案的託管，或由您親自管理。
+Platform可以管理這些檔案的託管，或由您親自管理。
 
 ## Managed by Adobe {#managed-by-adobe}
 
-Adobe 不從事 Web 託管業務。如果您選擇交由 Adobe 管理託管作業，系統會將您的組建傳送給與我們簽約的第三方內容傳送網路 (CDN)。
+Adobe不從事Web託管業務。 如果您選擇交由 Adobe 管理託管作業，系統會將您的組建傳送給與我們簽約的第三方內容傳送網路 (CDN)。
 
 目前主要的 CDN 提供廠商為 Akamai。由 Akamai 託管的檔案是使用 `assets.adobedtm.com` 網域。
 

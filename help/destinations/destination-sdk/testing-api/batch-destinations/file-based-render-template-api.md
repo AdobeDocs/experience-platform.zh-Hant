@@ -12,24 +12,24 @@ ht-degree: 2%
 
 # 驗證範本化客戶欄位
 
-## 總覽 {#overview}
+## 概觀 {#overview}
 
-此 `/authoring/testing/template/render` 端點可協助您視覺化範本化的方式 [客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md) 目的地設定中定義的變數會很類似。
+`/authoring/testing/template/render`端點可協助您視覺化目的地設定中定義的範本[客戶資料欄位](../../functionality/destination-configuration/customer-data-fields.md)的外觀。
 
-端點會為您的客戶資料欄位產生隨機值，並在回應中傳回這些值。 這可協助您驗證客戶資料欄位的語意結構，例如貯體名稱或資料夾路徑。
+端點會產生客戶資料欄位的隨機值，並在回應中傳回。 這可幫助您驗證客戶資料欄位的語意結構，例如貯體名稱或資料夾路徑。
 
 ## 快速入門 {#getting-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 先決條件 {#prerequisites}
 
-開始使用 `/template/render` 端點，確定您符合以下條件：
+在使用`/template/render`端點之前，請確定您符合下列條件：
 
-* 您有一個透過Destination SDK建立的檔案型目的地，且您可以在下列位置中看到 [目的地目錄](../../../ui/destinations-workspace.md).
+* 您有一個透過Destination SDK建立的檔案型目的地，且您可以在[目的地目錄](../../../ui/destinations-workspace.md)中看到它。
 * 若要成功提出API請求，您需要與要測試的目的地執行個體對應的目的地執行個體ID。 在Platform UI中瀏覽與目的地的連線時，從URL取得應在API呼叫中使用的目的地執行個體ID。
 
-   ![UI影像顯示如何從URL取得目的地執行個體ID。](../../assets/testing-api/get-destination-instance-id.png)
+  ![UI影像顯示如何從URL取得目的地執行個體識別碼。](../../assets/testing-api/get-destination-instance-id.png)
 
 ## 呈現範本化客戶欄位 {#render-customer-fields}
 
@@ -56,7 +56,7 @@ POST /authoring/testing/template/render/destination
 
 **要求**
 
-以下請求會呼叫 `/authoring/testing/template/render` 端點，它會針對上述兩個客戶資料欄位，以隨機產生的值傳回回應。
+以下請求會呼叫`/authoring/testing/template/render`端點，而端點會針對上述兩個客戶資料欄位傳回包含隨機產生值的回應。
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render/destination' \
@@ -77,12 +77,12 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `destinationId` | 的ID [目的地設定](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) 您正在測試的專案。 |
-| `templates` | 在中定義的範本化欄位名稱 [目的地伺服器設定](../../authoring-api/destination-server/create-destination-server.md). |
+| `destinationId` | 您正在測試的[目的地組態](../../authoring-api/destination-configuration/retrieve-destination-configuration.md)的識別碼。 |
+| `templates` | 在您的[目的地伺服器組態](../../authoring-api/destination-server/create-destination-server.md)中定義的範本化欄位名稱。 |
 
 **回應**
 
-成功的回應會傳回 `HTTP 200 OK` 狀態，而內文則包含範本化欄位隨機產生的值。
+成功的回應會傳回`HTTP 200 OK`狀態，而且內文會包含範本化欄位的隨機產生值。
 
 此回應可協助您驗證客戶資料欄位的正確結構，例如貯體名稱或檔案夾路徑。
 
@@ -98,8 +98,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 ## API錯誤處理 {#api-error-handling}
 
-Destination SDKAPI端點遵循一般Experience PlatformAPI錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （在平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟 {#next-steps}
 
-閱讀本檔案後，您現在瞭解如何驗證中定義的客戶資料欄位設定 [目的地伺服器](../../authoring-api/destination-server/create-destination-server.md).
+閱讀本檔案後，您現在知道如何驗證[目的地伺服器](../../authoring-api/destination-server/create-destination-server.md)中定義的客戶資料欄位組態。

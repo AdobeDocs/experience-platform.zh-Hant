@@ -5,7 +5,7 @@ exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
 source-wordcount: '1045'
-ht-degree: 59%
+ht-degree: 56%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-我們產品所需的JavaScript程式庫效能與非封鎖部署，對Adobe Experience Cloud使用者而言日益重要。 工具，例如 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) 建議使用者變更在網站上部署Adobe程式庫的方式。 本文說明如何以非同步方式使用AdobeJavaScript程式庫。
+我們產品所需的JavaScript程式庫效能與非封鎖部署，對Adobe Experience Cloud使用者而言日益重要。 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/)之類的工具建議使用者變更在網站上部署Adobe程式庫的方式。 本文說明如何以非同步方式使用AdobeJavaScript程式庫。
 
 ## 同步與非同步
 
@@ -40,7 +40,7 @@ ht-degree: 59%
 
 ### 非同步部署
 
-您可以新增「 」，以非同步載入任何程式庫 `async` 屬性至 `<script>` 標籤之間。 例如：
+您可以將`async`屬性新增至`<script>`標籤，以非同步載入任何程式庫。 例如：
 
 ```markup
 <script src="example.js" async></script>
@@ -52,11 +52,11 @@ ht-degree: 59%
 
 如上所述，在同步部署中，瀏覽器會在Adobe Experience Platform標籤程式庫載入及執行時，暫停剖析及轉譯頁面。 另一方面，在非同步部署中，瀏覽器會在程式庫載入時，繼續剖析及轉譯頁面。標籤程式庫可能在何時完成載入與頁面剖析及轉譯之間相關性的變化，這些都是您必須納入考量的事項。
 
-首先，因為標籤程式庫可能會在頁面底部剖析及執行完之前或之後完成載入，您不應再呼叫 `_satellite.pageBottom()` 從您的頁面代碼(`_satellite` 程式庫載入後才能使用)。 詳情請參閱 [非同步載入標籤內嵌程式碼](#loading-the-tags-embed-code-asynchronously).
+首先，因為標籤程式庫可能會在頁面底部剖析及執行完之前或之後完成載入，您不應再從頁面程式碼呼叫`_satellite.pageBottom()` （`_satellite`將無法使用，直到程式庫載入為止）。 [以非同步方式載入標籤內嵌程式碼](#loading-the-tags-embed-code-asynchronously)對此有說明。
 
-接著，標籤程式庫可在 [`DOMContentLoaded`](https://developer.mozilla.org/zh-TW/docs/Web/Events/DOMContentLoaded) 瀏覽器事件(DOM Ready)已發生。
+第二，標籤程式庫可在[`DOMContentLoaded`](https://developer.mozilla.org/zh-TW/docs/Web/Events/DOMContentLoaded)瀏覽器事件（DOM就緒）發生之前或之後完成載入。
 
-由於這兩點，值得說明的是 [程式庫已載入](../../extensions/client/core/overview.md#library-loaded-page-top)， [頁面底部](../../extensions/client/core/overview.md#page-bottom)， [DOM已就緒](../../extensions/client/core/overview.md#page-bottom)、和 [視窗已載入](../../extensions/client/core/overview.md#window-loaded) 非同步載入標籤程式庫時，核心擴充功能中的事件型別。
+因為這兩點，值得說明的是，當非同步載入標籤程式庫時，[程式庫已載入](../../extensions/client/core/overview.md#library-loaded-page-top)、[頁面底部](../../extensions/client/core/overview.md#page-bottom)、[DOM已就緒](../../extensions/client/core/overview.md#page-bottom)和[視窗已載入](../../extensions/client/core/overview.md#window-loaded)事件型別是如何從核心擴充功能中執行的。
 
 如果您的標籤屬性包含下列四個規則：
 
@@ -73,7 +73,7 @@ ht-degree: 59%
 
 1. 規則 A 會立即執行。
 1. 如果 `DOMContentLoaded` 瀏覽器事件 (DOM Ready) 已發生，規則 B 和規則 C 就會立即執行。否則，規則 B 和規則 C 會在 [`DOMContentLoaded`](https://developer.mozilla.org/zh-TW/docs/Web/Events/DOMContentLoaded) 瀏覽器事件發生的稍後執行。
-1. 如果 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件 (已載入視窗) 已發生，則會立即執行規則 D。否則，當 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件發生時，規則 D 將在稍後執行。請注意，如果您已根據指示安裝標籤庫，則標籤庫 *一直* 完成載入，然後 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 發生瀏覽器事件。
+1. 如果 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件 (已載入視窗) 已發生，則會立即執行規則 D。否則，當 [`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load) 瀏覽器事件發生時，規則 D 將在稍後執行。請注意，如果您已根據指示安裝標籤庫，則標籤庫&#x200B;*一律*&#x200B;會在[`load`](https://developer.mozilla.org/zh-TW/docs/Web/Events/load)瀏覽器事件發生前完成載入。
 
 將這些原則套用到您自己的網站時，請考量下列事項：
 
@@ -84,7 +84,7 @@ ht-degree: 59%
 
 ## 非同步載入標籤內嵌程式碼
 
-標籤會在您設定時，於建立內嵌程式碼時提供開啟非同步載入的切換按鈕。 [環境](../publishing/environments.md). 您也可以自行設定非同步載入：
+標籤提供在設定[環境](../publishing/environments.md)時，可在建立內嵌程式碼時開啟非同步載入的切換按鈕。 您也可以自行設定非同步載入：
 
 1. 將非同步屬性新增到 `<script>` 標籤以非同步載入指令碼。
 
@@ -106,4 +106,4 @@ ht-degree: 59%
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   此程式碼會通知Platform瀏覽器剖析器已到達頁面底部。 在這個時間點之前，標籤可能還不會載入及執行，因此呼叫 `_satellite.pageBottom()` 會導致錯誤，且Page Bottom事件型別可能不會如預期般運作。
+   此程式碼會通知Platform瀏覽器剖析器已到達頁面底部。 在這個時間點之前，標籤可能尚未載入及執行，因此呼叫`_satellite.pageBottom()`會導致錯誤，且Page Bottom事件型別可能不會如預期般運作。

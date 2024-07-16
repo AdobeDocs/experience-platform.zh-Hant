@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Marketo Engage；marketo engage；Marketo；對應
 solution: Experience Platform
-title: Marketo Engage來源的對應欄位
+title: Marketo EngageSource的對應欄位
 description: 下表包含Marketo資料集中欄位與其對應XDM欄位之間的對應。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
@@ -11,31 +11,31 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Marketo Engage] 欄位對應 {#marketo-engage-field-mappings}
+# [!DNL Marketo Engage]欄位對應 {#marketo-engage-field-mappings}
 
-下表包含九個欄位之間的對應 [!DNL Marketo] 資料集與其對應的體驗資料模型(XDM)欄位。
+下表包含九個[!DNL Marketo]資料集中的欄位與其對應的體驗資料模型(XDM)欄位之間的對應。
 
 >[!TIP]
 >
->全部 [!DNL Marketo] 資料集除外 `Activities` 現在支援 `isDeleted`. 您現有的資料流會自動包含 `isDeleted`，但僅會擷取新擷取資料的標幟。 如果您想要將標幟套用至所有歷史資料，則必須停止現有資料流並使用新對應重新建立資料流。 請注意，如果您移除了 `isDeleted`，則您將無法再存取該功能。 自動填入對應後，請務必保留對應。
+>除`Activities`以外的所有[!DNL Marketo]資料集現在都支援`isDeleted`。 您現有的資料流會自動包含`isDeleted`，但僅會針對新擷取的資料擷取標幟。 如果您想要將標幟套用至所有歷史資料，則必須停止現有資料流並使用新對應重新建立資料流。 請注意，如果您移除`isDeleted`，則您將無法再存取該功能。 自動填入對應後，請務必保留對應。
 
 ## 活動 {#activities}
 
-此 [!DNL Marketo] 來源現在支援其他標準活動。 若要使用標準活動，您必須使用 [架構自動產生公用程式](../marketo/marketo-namespaces.md) 因為如果您建立 `activities` 資料流若未更新您的結構描述，對應範本將失敗，因為新的目標欄位將不會出現在您的結構描述中。 如果您選擇不更新您的結構描述，您仍然可以建立新的資料流並解除任何錯誤。 不過，任何新欄位或更新後的欄位都不會內嵌到Platform中。
+[!DNL Marketo]來源現在支援其他標準活動。 若要使用標準活動，您必須使用[結構描述自動產生公用程式](../marketo/marketo-namespaces.md)來更新結構描述，因為如果您建立新的`activities`資料流而不更新結構描述，對應範本將會失敗，因為新的目標欄位將不會出現在結構描述中。 如果您選擇不更新您的結構描述，您仍然可以建立新的資料流並解除任何錯誤。 不過，任何新欄位或更新後的欄位都不會內嵌到Platform中。
 
-請閱讀以下檔案： [XDM體驗事件類別](../../../../xdm/classes/experienceevent.md) 以取得有關XDM類別和XDM欄位群組的詳細資訊。
+閱讀[XDM體驗事件類別](../../../../xdm/classes/experienceevent.md)的檔案，以瞭解XDM類別和XDM欄位群組的詳細資訊。
 
 >[!NOTE]
 >
->此 `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` 來源欄位是計算欄位，必須使用 **[!UICONTROL 新增計算欄位]** Experience PlatformUI中的選項。 閱讀有關教學課程 [新增計算欄位](../../../../data-prep/ui/mapping.md#calculated-fields) 以取得詳細資訊。
+>`iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)`來源欄位是必須使用Experience PlatformUI中的&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;選項新增的計算欄位。 閱讀有關[新增計算欄位](../../../../data-prep/ui/mapping.md#calculated-fields)的教學課程，以瞭解詳細資訊。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
 | `"Marketo"` | `personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `personID` | `personKey.sourceID` |
-| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `eventType` | `eventType` |
 | `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
@@ -135,17 +135,17 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-## 計畫 {#programs}
+## 方案 {#programs}
 
-閱讀 [XDM商業活動概覽](../../../../xdm/classes/b2b/business-campaign.md) 以取得有關XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請閱讀 [「商業促銷活動詳細資料」結構欄位群組](../../../../xdm/field-groups/b2b-campaign/details.md) 指南。
+閱讀[XDM商業活動概覽](../../../../xdm/classes/b2b/business-campaign.md)，瞭解有關XDM類別的更多資訊。 如需XDM欄位群組的詳細資訊，請閱讀[商業促銷活動詳細資料結構描述欄位群組](../../../../xdm/field-groups/b2b-campaign/details.md)指南。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `id` | `campaignKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
-| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 此  `extSourceSystemAudit.externalKey` 是次要身分。 以下專案的值： `{CRM_ORG_ID}` 和 `{CRM_TYPE}` 將會自動取代。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`是次要身分。 將自動取代`{CRM_ORG_ID}`和`{CRM_TYPE}`的值。 |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -168,14 +168,14 @@ ht-degree: 2%
 
 ## 計畫成員資格 {#program-memberships}
 
-閱讀 [XDM商業活動會員總覽](../../../../xdm/classes/b2b/business-campaign-members.md) 以取得有關XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請閱讀 [XDM商業活動會員詳細資料結構描述欄位群組](../../../../xdm/field-groups/b2b-campaign-members/details.md) 指南。
+閱讀[XDM商業活動會員總覽](../../../../xdm/classes/b2b/business-campaign-members.md)，瞭解有關XDM類別的更多資訊。 如需XDM欄位群組的詳細資訊，請閱讀[XDM商業促銷活動成員詳細資料結構描述欄位群組](../../../../xdm/field-groups/b2b-campaign-members/details.md)指南。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `campaignMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `id` | `campaignMemberKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | 關係 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 關係 |
 | `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
@@ -189,7 +189,7 @@ ht-degree: 2%
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 此 `extSourceSystemAudit.externalKey` 是次要身分。 以下專案的值： `{CRM_ORG_ID}` 和 `{CRM_TYPE}` 將會自動取代。 |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`是次要身分。 將自動取代`{CRM_ORG_ID}`和`{CRM_TYPE}`的值。 |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -201,15 +201,15 @@ ht-degree: 2%
 
 ## 公司 {#companies}
 
-閱讀 [XDM商業帳戶總覽](../../../../xdm/classes/b2b/business-account.md) 以取得有關XDM類別的詳細資訊。
+如需有關XDM類別的詳細資訊，請閱讀[XDM商業帳戶總覽](../../../../xdm/classes/b2b/business-account.md)。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `concat(id, ".mkto_org")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
-| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | 此 `extSourceSystemAudit.externalKey` 是次要身分。 以下專案的值： `{CRM_ORG_ID}` 和 `{CRM_TYPE}` 將會自動取代。 |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId, "sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`是次要身分。 將自動取代`{CRM_ORG_ID}`和`{CRM_TYPE}`的值。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -233,14 +233,14 @@ ht-degree: 2%
 
 ## 靜態清單 {#static-lists}
 
-閱讀 [XDM業務行銷清單總覽](../../../../xdm/classes/b2b/business-marketing-list.md) 以取得有關XDM類別的詳細資訊。
+閱讀[XDM業務行銷清單總覽](../../../../xdm/classes/b2b/business-marketing-list.md)，瞭解有關XDM類別的更多資訊。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` 將取代為Explore API的一部分。 |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"`將會取代為「瀏覽API」的一部分。 |
 | `id` | `marketingListKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -251,14 +251,14 @@ ht-degree: 2%
 
 ## 靜態清單成員資格 {#static-list-memberships}
 
-閱讀 [XDM業務行銷清單成員總覽](../../../../xdm/classes/b2b/business-marketing-list-members.md) 以取得有關XDM類別的詳細資訊。
+閱讀[XDM業務行銷清單成員總覽](../../../../xdm/classes/b2b/business-marketing-list-members.md)，瞭解有關XDM類別的更多資訊。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `marketingListMemberKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `staticListMemberID` | `marketingListMemberKey.sourceID` |
-| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | 關係 |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 關係 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -272,15 +272,15 @@ ht-degree: 2%
 >
 >具名帳戶資料集僅適用於Marketo的帳戶型行銷(ABM)功能。 如果您未使用ABM，則不需要為已命名帳戶設定對應。
 
-閱讀 [XDM商業帳戶總覽](../../../../xdm/classes/b2b/business-account.md) 以取得有關XDM類別的詳細資訊。
+如需有關XDM類別的詳細資訊，請閱讀[XDM商業帳戶總覽](../../../../xdm/classes/b2b/business-account.md)。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `accountKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
-| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 此 `extSourceSystemAudit.externalKey` 是次要身分。 以下專案的值： `{CRM_ORG_ID}` 和 `{CRM_TYPE}` 將會自動取代。 |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`是次要身分。 將自動取代`{CRM_ORG_ID}`和`{CRM_TYPE}`的值。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -300,15 +300,15 @@ ht-degree: 2%
 
 ## 機會 {#opportunities}
 
-閱讀 [XDM商業機會概觀](../../../../xdm/classes/b2b/business-opportunity.md) 以取得有關XDM類別的詳細資訊。
+閱讀[XDM商業機會總覽](../../../../xdm/classes/b2b/business-opportunity.md)以瞭解有關XDM類別的詳細資訊。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `id` | `opportunityKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
-| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | 次要身分。 以下專案的值： `{CRM_ORG_ID}` 和 `{CRM_TYPE}` 將會自動取代。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey.sourceKey` | 次要身分。 將自動取代`{CRM_ORG_ID}`和`{CRM_TYPE}`的值。 |
 | `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 關係 |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -327,7 +327,7 @@ ht-degree: 2%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 此來源資料集僅適用於具有下列特徵的使用者： [!DNL Salesforce] 整合。 |
+| `iif(mktoCdpAccountOrgId != null && mktoCdpAccountOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpAccountOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpAccountOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountKey` | 此來源資料集僅適用於具有[!DNL Salesforce]整合的使用者。 |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -337,15 +337,15 @@ ht-degree: 2%
 
 ## 機會聯絡人角色 {#opportunity-contact-roles}
 
-閱讀 [XDM商業機會個人關係概觀](../../../../xdm/classes/b2b/business-account-person-relation.md) 以取得有關XDM類別的詳細資訊。
+閱讀[XDM商業機會個人關係總覽](../../../../xdm/classes/b2b/business-account-person-relation.md)，以瞭解有關XDM類別的詳細資訊。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `opportunityPersonKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `id` | `opportunityPersonKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將取代為Explore API的一部分。 |
-| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | 此 `extSourceSystemAudit.externalKey` 是次要身分。 以下專案的值： `{CRM_ORG_ID}` 和 `{CRM_TYPE}` 將會自動取代。 |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityPersonKey.sourceKey` | 主要身分。 `"${MUNCHKIN_ID}"`的值將會取代為「瀏覽API」的一部分。 |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`是次要身分。 將自動取代`{CRM_ORG_ID}`和`{CRM_TYPE}`的值。 |
 | `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | 關係 |
 | `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | 關係 |
 | `role` | `personRole` |
@@ -358,15 +358,15 @@ ht-degree: 2%
 
 ## 人員 {#persons}
 
-閱讀 [XDM個別設定檔概述](../../../../xdm/classes/individual-profile.md) 以取得有關XDM類別的詳細資訊。 如需XDM欄位群組的詳細資訊，請閱讀 [XDM商業人士詳細資料結構描述欄位群組](../../../../xdm/field-groups/profile/business-person-details.md) 指南和 [XDM商業人士元件結構描述欄位群組](../../../../xdm/field-groups/profile/business-person-components.md) 指南。
+閱讀[XDM個人設定檔總覽](../../../../xdm/classes/individual-profile.md)，瞭解有關XDM類別的詳細資訊。 如需有關XDM欄位群組的詳細資訊，請閱讀[XDM商業人士詳細資料結構描述欄位群組](../../../../xdm/field-groups/profile/business-person-details.md)指南和[XDM商業人士元件結構描述欄位群組](../../../../xdm/field-groups/profile/business-person-components.md)指南。
 
-| 來源資料集 | xdm目標欄位 | 附註 |
+| Source資料集 | xdm目標欄位 | 附註 |
 | -------------- | ---------------- | ----- |
 | `"Marketo"` | `b2b.personKey.sourceType` |
-| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | 將自動取代`"${MUNCHKIN_ID}"`的值。 |
 | `id` | `b2b.personKey.sourceID` |
-| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | 主要身分。 的值 `"${MUNCHKIN_ID}"` 將會自動取代。 |
-| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 如果取消訂閱為 `true` (例如，值= `1`)，然後設定 `consents.marketing.email.val` 作為(`n`)。 如果取消訂閱為 `false` (例如，值= `0`)，然後設定 `consents.marketing.email.val` 作為 `null`. |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | 主要身分。 將自動取代`"${MUNCHKIN_ID}"`的值。 |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | 如果取消訂閱為`true` （例如，值= `1`），則將`consents.marketing.email.val`設為(`n`)。 如果取消訂閱為`false` （例如，值= `0`），則將`consents.marketing.email.val`設為`null`。 |
 | `iif(unsubscribedReason != null && unsubscribedReason != "", substr(unsubscribedReason, 0, 100), null)` | `consents.marketing.email.reason` |
 | `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
@@ -378,7 +378,7 @@ ht-degree: 2%
 | `leadPartitionId` | `b2b.personGroupID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | 此 `extSourceSystemAudit.externalKey` 是次要身分。 |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey`是次要身分。 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -415,4 +415,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-閱讀本檔案後，您對彼此之間的對應關係有了更深入的瞭解 [!DNL Marketo] 資料集及其對應的XDM欄位。 請參閱上的教學課程 [建立 [!DNL Marketo] 來源連線](../../../tutorials/ui/create/adobe-applications/marketo.md) 完成您的 [!DNL Marketo] 資料流。
+閱讀本檔案後，您已深入瞭解[!DNL Marketo]資料集與其對應XDM欄位之間的對應關係。 請參閱有關[建立 [!DNL Marketo] 來源連線](../../../tutorials/ui/create/adobe-applications/marketo.md)的教學課程，以完成您的[!DNL Marketo]資料流。

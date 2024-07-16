@@ -13,11 +13,11 @@ ht-degree: 2%
 
 依預設，透過Destination SDK建立的所有目的地都支援歷史設定檔資格。 這表示當使用者首次設定啟動資料流至您的目的地時，第一次匯出會包含符合該區段資格的受眾所有成員。
 
-此行為由 `"backfillHistoricalProfileData":true` 引數。
+此行為是由目的地組態中的`"backfillHistoricalProfileData":true`引數所定義。
 
 >[!IMPORTANT]
 >
->對於透過Destination SDK建立的所有目的地，系統都會啟用歷史設定檔資格， `backfillHistoricalProfileData` 引數不是使用者可設定的。
+>已針對透過Destination SDK建立的所有目的地啟用歷史設定檔資格，且使用者無法設定`backfillHistoricalProfileData`引數。
 
 ## 支援的整合型別 {#supported-integration-types}
 

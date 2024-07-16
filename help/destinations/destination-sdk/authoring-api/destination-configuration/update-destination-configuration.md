@@ -4,18 +4,18 @@ title: 更新目的地設定
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 2%
+source-wordcount: '370'
+ht-degree: 1%
 
 ---
 
 # 更新目的地設定
 
-此頁面以範例說明可用於更新現有目的地設定的API請求和裝載，使用 `/authoring/destinations` api端點。
+此頁面以範例說明API要求與裝載，您可以使用`/authoring/destinations` API端點來更新現有的目的地組態。
 
 >[!TIP]
 >
->生產/公開目的地上的任何更新操作只有在您使用 [發佈API](../../publishing-api/create-publishing-request.md) 並提交更新以供Adobe檢閱。
+>只有在您使用[發佈API](../../publishing-api/create-publishing-request.md)並提交更新以供Adobe稽核後，才可看見生產/公開目的地上的任何更新操作。
 
 如需目的地組態功能的詳細說明，請參閱下列文章：
 
@@ -34,21 +34,21 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 目的地設定API操作快速入門 {#get-started}
 
-在繼續之前，請檢閱 [快速入門手冊](../../getting-started.md) 如需您成功呼叫API所需的重要資訊，包括如何取得必要的目的地撰寫許可權和必要的標頭。
+繼續之前，請檢閱[快速入門手冊](../../getting-started.md)以取得重要資訊，您必須瞭解這些資訊才能成功呼叫API，包括如何取得必要的目的地撰寫許可權和必要的標頭。
 
 ## 更新目的地設定 {#update}
 
-您可以更新 [現有](create-destination-configuration.md) 目的地設定，透過發出 `PUT` 要求給 `/authoring/destinations` 具有已更新裝載的端點。
+您可以透過對具有更新承載的`/authoring/destinations`端點發出`PUT`請求來更新[現有](create-destination-configuration.md)目的地設定。
 
 >[!TIP]
 >
 >API端點： `platform.adobe.io/data/core/activation/authoring/destinations`
 
-若要取得現有的目的地組態及其對應組態 `{INSTANCE_ID}`，請參閱「 」一文，瞭解 [擷取目的地組態](retrieve-destination-configuration.md).
+若要取得現有的目的地組態及其對應的`{INSTANCE_ID}`，請參閱有關[擷取目的地組態](retrieve-destination-configuration.md)的文章。
 
 **API格式**
 
@@ -58,11 +58,11 @@ PUT /authoring/destinations/{INSTANCE_ID}
 
 | 參數 | 說明 |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | 您要更新之目的地設定的ID。 若要取得現有的目的地組態及其對應組態 `{INSTANCE_ID}`，請參閱 [擷取目的地設定](retrieve-destination-configuration.md). |
+| `{INSTANCE_ID}` | 您要更新之目的地設定的ID。 若要取得現有的目的地組態及其對應的`{INSTANCE_ID}`，請參閱[擷取目的地組態](retrieve-destination-configuration.md)。 |
 
-+++請求
++++要求
 
-以下請求會更新我們建立的目的地 [此範例](create-destination-configuration.md#create) 有不同的 `filenameConfig` 選項。
+下列要求會以不同的`filenameConfig`選項更新我們在[此範例](create-destination-configuration.md#create)中建立的目的地。
 
 ```shell {line-numbers="true" highlight="115-128"}
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -207,11 +207,11 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 ## API錯誤處理 {#error-handling}
 
-Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱 [API狀態代碼](../../../../landing/troubleshooting.md#api-status-codes) 和 [請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors) （位於平台疑難排解指南中）。
+Destination SDK API端點遵循一般Experience Platform API錯誤訊息原則。 請參閱Platform疑難排解指南中的[API狀態碼](../../../../landing/troubleshooting.md#api-status-codes)和[請求標頭錯誤](../../../../landing/troubleshooting.md#request-header-errors)。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在知道如何透過Destination SDK更新目的地設定 `/authoring/destinations` api端點。
+閱讀此檔案後，您現在知道如何透過Destination SDK`/authoring/destinations` API端點更新目的地設定。
 
 若要深入瞭解您可以使用此端點的功能，請參閱下列文章：
 

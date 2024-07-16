@@ -17,9 +17,9 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->此 `/interact` 端點主要設計供Experience PlatformSDK使用。 此端點可能會有額外的變更，其行為可能會演化，恕不另行通知。 例如，未來可能會將新專案新增至回應裝載。
+>`/interact`端點主要是設計給Experience PlatformSDK使用。 此端點可能會有額外的變更，其行為可能會演化，恕不另行通知。 例如，未來可能會將新專案新增至回應裝載。
 
-伺服器回應包含一或多個 `Handle` 物件，如下所示。
+伺服器回應包含一個或多個`Handle`物件，如下所示。
 
 ## API呼叫範例
 
@@ -71,7 +71,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### 回應 {#response}
 
-成功的回應會傳回HTTP狀態 `200 OK`，包含一或多個 `Handle` 物件，視在資料流設定中啟用的即時邊緣服務而定。
+成功的回應會傳回HTTP狀態`200 OK`，包含一或多個`Handle`物件，視資料流設定中啟用的即時邊緣服務而定。
 
 ```json
 {

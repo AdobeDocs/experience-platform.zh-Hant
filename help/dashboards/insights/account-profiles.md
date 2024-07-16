@@ -7,21 +7,21 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # 帳戶設定檔深入分析
 
-[帳戶設定檔](../../rtcdp/accounts/account-profile-overview.md) 用於整合來自各種來源的帳戶資訊，包括多個行銷管道和組織系統。 此統一檢視可全面瞭解客戶帳戶，加強B2B行銷活動。 從資料模型分析衍生的深入解析可讓您的Adobe Real-time Customer Data Platform B2B資料更易於存取、理解，並更能對決策產生影響。
+[帳戶設定檔](../../rtcdp/accounts/account-profile-overview.md)用於合併來自各種來源的帳戶資訊，包括多個行銷管道和組織系統。 此統一檢視可全面瞭解客戶帳戶，加強B2B行銷活動。 從資料模型分析衍生的深入解析可讓您的Adobe Real-time Customer Data Platform B2B資料更易於存取、理解，並更能對決策產生影響。
 
 存取提供您深入分析能力的SQL，可以更瞭解您的B2B資料，並產生您自己的高度自訂且可重複使用的深入分析，以進一步探索您的客戶帳戶資訊。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-下列見解全部都可供您用作 [帳戶設定檔儀表板](../guides/account-profiles.md) 或 [自訂儀表板](../user-defined-dashboards.md). 請參閱 [自訂概述](../customize/overview.md) 以取得如何自訂儀表板的指示，或 [建立和編輯新Widget](../customize/custom-widgets.md) 在Widget資料庫和 [使用者定義儀表板](../user-defined-dashboards.md#create-widget).
+下列見解全部都可以用作[帳戶設定檔儀表板](../guides/account-profiles.md)或[自訂儀表板](../user-defined-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../user-defined-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
-## 帳戶設定檔已新增 {#account-profiles-added}
+## 已新增帳戶輪廓 {#account-profiles-added}
 
 此深入分析所回答的問題：
 
@@ -106,7 +106,7 @@ LIMIT  5000;
 
 +++
 
-## 機會已新增 {#opportunities-added}
+## 已新增的機會 {#opportunities-added}
 
 此深入分析所回答的問題：
 
@@ -287,4 +287,4 @@ ORDER BY  d.date_key limit 5000;
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-您也可以閱讀並瞭解為產生深入分析的SQL [設定檔](./profiles.md)， [受眾](./audiences.md)、和 [目的地](./destinations.md) 控制面板。
+您也可以閱讀並瞭解產生[設定檔](./profiles.md)、[對象](./audiences.md)和[目的地](./destinations.md)儀表板之深入分析的SQL。

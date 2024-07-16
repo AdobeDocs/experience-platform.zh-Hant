@@ -13,21 +13,21 @@ ht-degree: 3%
 
 # 區段定義端點
 
-Adobe Experience Platform可讓您建立區段定義，以從一組設定檔中定義一組特定屬性或行為。 區段定義是一個物件，可封裝寫入的查詢 [!DNL Profile Query Language] (PQL)。 區段定義會套用至設定檔，以建立對象。 此物件（區段定義）也稱為PQL述詞。 PQL述詞會根據與您提供至的任何記錄或時間序列資料相關的條件，定義區段定義的規則 [!DNL Real-Time Customer Profile]. 請參閱 [PQL指南](../pql/overview.md) 以取得有關寫入PQL查詢的詳細資訊。
+Adobe Experience Platform可讓您建立區段定義，以從一組設定檔中定義一組特定屬性或行為。 區段定義是封裝以[!DNL Profile Query Language] (PQL)撰寫的查詢的物件。 區段定義會套用至設定檔，以建立對象。 此物件（區段定義）也稱為PQL述詞。 PQL述詞會根據與您提供給[!DNL Real-Time Customer Profile]的任何記錄或時間序列資料相關的條件，定義區段定義的規則。 請參閱[PQL指南](../pql/overview.md)，以取得有關寫入PQL查詢的詳細資訊。
 
 本指南提供的資訊可協助您更清楚瞭解區段定義，並提供使用API執行基本動作的範例API呼叫。
 
 ## 快速入門
 
-本指南中使用的端點屬於 [!DNL Adobe Experience Platform Segmentation Service] API。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫。
+本指南中使用的端點是[!DNL Adobe Experience Platform Segmentation Service] API的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)以取得您成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫。
 
 ## 擷取區段定義清單 {#list}
 
-您可以透過向以下網站發出GET請求，擷取貴組織所有區段定義的清單： `/segment/definitions` 端點。
+您可以向`/segment/definitions`端點發出GET要求，以擷取貴組織的所有區段定義清單。
 
 **API格式**
 
-此 `/segment/definitions` 端點支援數個查詢引數，以協助篩選結果。 雖然這些引數是選用的，但強烈建議使用這些引數來協助減少昂貴的額外負荷。 在不使用引數的情況下呼叫此端點將會擷取您的組織可用的所有區段定義。 可包含多個引數，以&amp;符號(`&`)。
+`/segment/definitions`端點支援數個查詢引數，以協助篩選結果。 雖然這些引數是選用的，但強烈建議使用這些引數來協助減少昂貴的額外負荷。 在不使用引數的情況下呼叫此端點將會擷取您的組織可用的所有區段定義。 可以包含多個引數，以&amp;符號(`&`)分隔。
 
 ```http
 GET /segment/definitions
@@ -41,7 +41,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | `start` | 指定傳回區段定義的起始位移。 | `start=4` |
 | `limit` | 指定每頁傳回的區段定義數。 | `limit=20` |
 | `page` | 指定區段定義的結果從哪一頁開始。 | `page=5` |
-| `sort` | 指定排序結果所依據的欄位。 以下列格式撰寫： `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `sort` | 指定排序結果所依據的欄位。 是以下列格式撰寫： `[attributeName]:[desc|asc]`。 | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | 指定區段定義是否啟用串流。 | `evaluationInfo.continuous.enabled=true` |
 
 **要求**
@@ -152,11 +152,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 ## 建立新的區段定義 {#create}
 
-您可以透過向以下網站發出POST請求，建立新的區段定義： `/segment/definitions` 端點。
+您可以對`/segment/definitions`端點發出POST要求，以建立新的區段定義。
 
 >[!IMPORTANT]
 >
->透過API建立的區段定義 **無法** 使用區段產生器編輯。
+>透過API **建立的區段定義**&#x200B;無法使用區段產生器編輯。
 
 **API格式**
 
@@ -205,12 +205,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | -------- | ----------- |
 | `name` | 用於參照區段定義的唯一名稱。 |
 | `description` | （選擇性。） 您正在建立的區段定義的說明。 |
-| `evaluationInfo` | （選擇性。） 您正在建立的區段定義型別。 如果要建立批次區段，請設定 `evaluationInfo.batch.enabled` 為true。 如果您想要建立串流區段，請設定 `evaluationInfo.continuous.enabled` 為true。 如果要建立邊緣區段，請設定 `evaluationInfo.synchronous.enabled` 為true。 如果留空，區段定義將建立為 **批次** 區段。 |
-| `schema` | 和區段中的實體相關聯的結構描述。 包含一個 `id` 或 `name` 欄位。 |
+| `evaluationInfo` | （選擇性。） 您正在建立的區段定義型別。 如果要建立批次區段，請將`evaluationInfo.batch.enabled`設定為true。 如果要建立串流區段，請將`evaluationInfo.continuous.enabled`設為true。 如果要建立邊緣區段，請將`evaluationInfo.synchronous.enabled`設為true。 如果留空，區段定義將建立為&#x200B;**批次**&#x200B;區段。 |
+| `schema` | 和區段中的實體相關聯的結構描述。 包含`id`或`name`欄位。 |
 | `expression` | 包含有關區段定義的欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：區段定義的文字表示，根據已發佈的PQL文法。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
-| `expression.value` | 符合中指定的型別的運算式 `expression.format`. |
+| `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：根據已發佈的PQL文法，區段定義的文字表示。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
+| `expression.value` | 符合`expression.format`所指示型別的運算式。 |
 
 <!-- >[!NOTE]
 >
@@ -271,7 +271,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 擷取特定區段定義 {#get}
 
-您可以透過向以下網站發出GET請求，擷取有關特定區段定義的詳細資訊： `/segment/definitions` 端點，並提供您要在請求路徑中擷取的區段定義ID。
+您可以向`/segment/definitions`端點發出GET要求，並提供您要在要求路徑中擷取的區段定義ID，以擷取特定區段定義的詳細資訊。
 
 **API格式**
 
@@ -281,7 +281,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 此 `id` 要擷取之區段定義的值。 |
+| `{SEGMENT_ID}` | 您要擷取之區段定義的`id`值。 |
 
 **要求**
 
@@ -343,17 +343,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | -------- | ----------- |
 | `id` | 系統產生的區段定義唯讀ID。 |
 | `name` | 用於參照區段定義的唯一名稱。 |
-| `schema` | 和區段中的實體相關聯的結構描述。 包含一個 `id` 或 `name` 欄位。 |
+| `schema` | 和區段中的實體相關聯的結構描述。 包含`id`或`name`欄位。 |
 | `expression` | 包含有關區段定義的欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：區段定義的文字表示，根據已發佈的PQL文法。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
-| `expression.value` | 符合中指定的型別的運算式 `expression.format`. |
+| `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：根據已發佈的PQL文法，區段定義的文字表示。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
+| `expression.value` | 符合`expression.format`所指示型別的運算式。 |
 | `description` | 人類看得懂的定義說明。 |
 | `evaluationInfo` | 指出將接受區段定義的評估型別、批次、串流（也稱為連續）或邊緣（也稱為同步）的物件。 |
 
 ## 大量擷取區段定義 {#bulk-get}
 
-您可以透過向以下網站發出POST請求，擷取有關多個指定區段定義的詳細資訊： `/segment/definitions/bulk-get` 端點，並提供 `id` 要求內文中區段定義的值。
+您可以向`/segment/definitions/bulk-get`端點發出POST要求，並在要求內文中提供區段定義的`id`值，以擷取多個指定區段定義的詳細資訊。
 
 **API格式**
 
@@ -476,21 +476,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | -------- | ----------- |
 | `id` | 系統產生的區段定義唯讀ID。 |
 | `name` | 用於參照區段定義的唯一名稱。 |
-| `schema` | 和區段中的實體相關聯的結構描述。 包含一個 `id` 或 `name` 欄位。 |
+| `schema` | 和區段中的實體相關聯的結構描述。 包含`id`或`name`欄位。 |
 | `expression` | 包含有關區段定義的欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：區段定義的文字表示，根據已發佈的PQL文法。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
-| `expression.value` | 符合中指定的型別的運算式 `expression.format`. |
+| `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：根據已發佈的PQL文法，區段定義的文字表示。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
+| `expression.value` | 符合`expression.format`所指示型別的運算式。 |
 | `description` | 人類看得懂的定義說明。 |
 | `evaluationInfo` | 指出將接受區段定義的評估型別、批次、串流（也稱為連續）或邊緣（也稱為同步）的物件。 |
 
 ## 刪除特定區段定義 {#delete}
 
-您可以透過向「 」發出DELETE請求，請求刪除特定區段定義 `/segment/definitions` 端點，並提供您要在請求路徑中刪除的區段定義ID。
+您可以向`/segment/definitions`端點發出DELETE要求，並在要求路徑中提供您要刪除之區段定義的識別碼，以要求刪除特定區段定義。
 
 >[!NOTE]
 >
-> 用於目的地啟用的區段定義 **無法** 都會被刪除。
+> 無法刪除目的地啟用&#x200B;**中使用的區段定義**。
 
 **API格式**
 
@@ -500,7 +500,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 此 `id` 要刪除的區段定義的值。 |
+| `{SEGMENT_ID}` | 您要刪除之區段定義的`id`值。 |
 
 **要求**
 
@@ -518,7 +518,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 ## 更新特定區段定義
 
-您可以透過向以下專案發出PATCH請求，更新特定區段定義： `/segment/definitions` 端點並提供您要在請求路徑中更新的區段定義ID。
+您可以對`/segment/definitions`端點發出PATCH要求，並在要求路徑中提供您要更新之區段定義的識別碼，以更新特定區段定義。
 
 **API格式**
 
@@ -528,7 +528,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 此 `id` 要更新的區段定義的值。 |
+| `{SEGMENT_ID}` | 您要更新之區段定義的`id`值。 |
 
 **要求**
 
@@ -611,7 +611,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 ## 轉換區段定義
 
-您可以轉換區段定義於 `pql/text` 和 `pql/json` 或 `pql/json` 至 `pql/text` 向發出POST請求 `/segment/conversion` 端點。
+您可以透過向`/segment/conversion`端點發出POST要求，將`pql/text`與`pql/json`或`pql/json`之間的區段定義轉換為`pql/text`。
 
 **API格式**
 
@@ -621,7 +621,7 @@ POST /segment/conversion
 
 **要求**
 
-下列請求會將區段定義的格式從 `pql/text` 至 `pql/json`.
+下列要求會將區段定義的格式從`pql/text`變更為`pql/json`。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
@@ -672,4 +672,4 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
 
 ## 後續步驟
 
-閱讀本指南後，您現在能更清楚瞭解區段定義的運作方式。 如需建立區段的詳細資訊，請參閱 [建立區段](../tutorials/create-a-segment.md) 教學課程。
+閱讀本指南後，您現在能更清楚瞭解區段定義的運作方式。 如需建立區段的詳細資訊，請參閱[建立區段](../tutorials/create-a-segment.md)教學課程。

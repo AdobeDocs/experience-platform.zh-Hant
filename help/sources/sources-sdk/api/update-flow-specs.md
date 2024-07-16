@@ -10,21 +10,21 @@ ht-degree: 1%
 
 ---
 
-# 使用更新流程規格 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API更新流程規格
 
 產生新的連線規格ID後，您必須將此ID新增至流程規格，才能建立資料流。
 
-流程規格包含定義流程的資訊，包括它支援的來源與目標連線ID、需要套用至資料的轉換規格，以及產生流程所需的排程引數。 您可以使用來編輯流程規格 `/flowSpecs` 端點。
+流程規格包含定義流程的資訊，包括它支援的來源與目標連線ID、需要套用至資料的轉換規格，以及產生流程所需的排程引數。 您可以使用`/flowSpecs`端點來編輯流程規格。
 
-以下檔案提供如何使用 [!DNL Flow Service] 自助來源API (Batch SDK)。
+以下檔案提供如何使用[!DNL Flow Service] API for Self-Serve Sources (Batch SDK)擷取和更新流程規格的步驟。
 
 ## 快速入門
 
-在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 查詢流程規格 {#lookup}
 
-使用建立的來源 `generic-rest-extension` 範本都使用 `RestStorageToAEP` 流量規格。 您可以透過向以下網站發出GET請求來擷取此流量規格： `/flowSpecs/` 端點，並提供 `flowSpec.id` 之 `6499120c-0b15-42dc-936e-847ea3c24d72`.
+以`generic-rest-extension`範本建立的來源都使用`RestStorageToAEP`流程規格。 您可以對`/flowSpecs/`端點發出GET要求，並提供`6499120c-0b15-42dc-936e-847ea3c24d72`的`flowSpec.id`，以擷取此流量規格。
 
 **API格式**
 
@@ -34,7 +34,7 @@ GET /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **要求**
 
-以下請求會擷取 `6499120c-0b15-42dc-936e-847ea3c24d72` 連線規格。
+下列要求會擷取`6499120c-0b15-42dc-936e-847ea3c24d72`連線規格。
 
 ```shell
 curl -X GET \
@@ -237,7 +237,7 @@ curl -X GET \
 
 >[!IMPORTANT]
 >
->您必須更新清單 `sourceConnectionSpecIds` 每次建立新來源時，與新來源對應的流程規格。 這可確保現有流程規格支援您的新來源，從而允許您使用新來源完成資料流程建立流程。
+>每次建立新來源時，您必須更新對應到新來源之流程規格的`sourceConnectionSpecIds`清單。 這可確保現有流程規格支援您的新來源，從而允許您使用新來源完成資料流程建立流程。
 
 **API格式**
 
@@ -247,7 +247,7 @@ PUT /flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72
 
 **要求**
 
-以下請求會更新流程規格 `6499120c-0b15-42dc-936e-847ea3c24d72` 以包含連線規格ID `f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`.
+下列要求會更新`6499120c-0b15-42dc-936e-847ea3c24d72`的流程規格，以包含連線規格識別碼`f6c0de0c-0a42-4cd9-9139-8768bf2f1b55`。
 
 ```shell
 PUT -X GET \
@@ -429,7 +429,7 @@ PUT -X GET \
 
 **回應**
 
-成功的回應會傳回查詢流程規格的詳細資料，包括其更新的清單 `sourceConnectionSpecIds`.
+成功的回應會傳回查詢流程規格的詳細資料，包括其更新的`sourceConnectionSpecIds`清單。
 
 ```json
 {
@@ -610,4 +610,4 @@ PUT -X GET \
 
 ## 後續步驟
 
-將新的連線規格新增至適當的流量規格後，您現在可以繼續測試並提交新的來源。 請參閱以下指南： [測試和提交新來源](./submit.md) 以取得詳細資訊。
+將新的連線規格新增至適當的流量規格後，您現在可以繼續測試並提交新的來源。 如需詳細資訊，請參閱[測試和提交新來源](./submit.md)的指南。

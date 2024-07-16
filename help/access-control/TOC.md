@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 44%
 # 存取控制 {#access-control}
 
 * [存取控制概覽](home.md)
-* 以屬性為基礎的存取控制 {#abac}
+* 以屬性為基礎的存取控制{#abac}
    * [概觀](abac/overview.md)
    * [端對端指南](abac/end-to-end-guide.md)
    * [使用存取權標籤來管理使用者對目的地資料流程的存取權](/help/access-control/abac/apply-access-labels-destinations.md)
@@ -47,4 +47,4 @@ ht-degree: 44%
    * [檢視有效原則](api/effective-policies.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

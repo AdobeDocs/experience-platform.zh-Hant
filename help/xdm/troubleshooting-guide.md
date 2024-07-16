@@ -13,45 +13,45 @@ ht-degree: 0%
 
 # XDM系統疑難排解指南
 
-本檔案提供常見問題的解答，關於 [!DNL Experience Data Model] Adobe Experience Platform中的(XDM)和XDM系統，包括常見錯誤的疑難排解指南。 有關其他Platform服務的問題和疑難排解，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
+本檔案提供有關Adobe Experience Platform中[!DNL Experience Data Model] (XDM)和XDM系統的常見問題解答，包括常見錯誤的疑難排解指南。 有關其他Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
-**[!DNL Experience Data Model](XDM)** 是開放原始碼規格，定義用於客戶體驗管理的標準化結構。 使用的方法 [!DNL Experience Platform] 已建置， **XDM系統**，可操作 [!DNL Experience Data Model] 供使用的結構描述 [!DNL Platform] 服務。 此 **[!DNL Schema Registry]** 提供使用者介面及RESTful API，以存取 **[!DNL Schema Library]** 範圍 [!DNL Experience Platform]. 請參閱 [XDM檔案](home.md) 以取得詳細資訊。
+**[!DNL Experience Data Model](XDM)**&#x200B;是開放原始碼規格，定義用於客戶體驗管理的標準化結構描述。 建置[!DNL Experience Platform]的方法&#x200B;**XDM系統**&#x200B;可將[!DNL Experience Data Model]個結構描述作業化以供[!DNL Platform]服務使用。 **[!DNL Schema Registry]**&#x200B;提供使用者介面和RESTful API，以存取[!DNL Experience Platform]內的&#x200B;**[!DNL Schema Library]**。 如需詳細資訊，請參閱[XDM檔案](home.md)。
 
 ## 常見問題集
 
-以下是有關XDM系統和使用的常見問題解答清單。 [!DNL Schema Registry] API。
+以下是有關XDM系統和[!DNL Schema Registry] API使用常見問題的解答清單。
 
 ### 如何將欄位新增至結構描述？
 
 您可以使用結構描述欄位群組，將欄位新增到結構描述。 每個欄位群組都與一個或多個類別相容，允許欄位群組用於實作其中一個相容類別的任何結構描述中。 雖然Adobe Experience Platform為數個產業欄位群組提供自己的預先定義欄位，但您可以使用API或使用者介面建立自訂欄位群組，將自己的欄位新增到結構描述中。
 
-有關在中建立欄位群組的詳細資訊 [!DNL Schema Registry] API，請參閱 [欄位群組端點指南](api/field-groups.md#create). 如果您有使用UI，請參閱 [結構描述編輯器教學課程](./tutorials/create-schema-ui.md).
+如需在[!DNL Schema Registry] API中建立欄位群組的詳細資訊，請參閱[欄位群組端點指南](api/field-groups.md#create)。 如果您使用UI，請參閱[結構描述編輯器教學課程](./tutorials/create-schema-ui.md)。
 
 ### 欄位群組與資料型別的最佳用途為何？
 
-[欄位群組](./schema/composition.md#field-group) 是定義結構描述中一或多個欄位的元件。 欄位群組會強制實施其欄位在結構描述階層中的顯示方式，因此會在其包含的每個結構描述中顯示相同的結構。 欄位群組僅與特定類別相容，如其識別 `meta:intendedToExtend` 屬性。
+[欄位群組](./schema/composition.md#field-group)是定義結構描述中一或多個欄位的元件。 欄位群組會強制實施其欄位在結構描述階層中的顯示方式，因此會在其包含的每個結構描述中顯示相同的結構。 欄位群組僅與特定類別相容，由其`meta:intendedToExtend`屬性識別。
 
-[資料型別](./schema/composition.md#data-type) 也可以為結構描述提供一個或多個欄位。 但是，與欄位群組不同，資料型別不受限於特定類別。 這讓資料型別成為一個更具彈性的選項，用來描述在多個結構描述中可以重複使用，且具有可能不同類別的常見資料結構。
+[資料型別](./schema/composition.md#data-type)也可以為結構描述提供一個或多個欄位。 但是，與欄位群組不同，資料型別不受限於特定類別。 這讓資料型別成為一個更具彈性的選項，用來描述在多個結構描述中可以重複使用，且具有可能不同類別的常見資料結構。
 
 ### 結構描述的唯一ID為何？
 
-全部 [!DNL Schema Registry] 資源（結構描述、欄位群組、資料型別、類別）的URI可以做為唯一ID用於參考和查詢。 在API中檢視結構時，您可以在頂層找到它 `$id` 和 `meta:altId` 屬性。
+所有[!DNL Schema Registry]資源（結構描述、欄位群組、資料型別、類別）都有一個URI做為唯一ID，以供參考和查詢。 在API中檢視結構描述時，您可以在頂層`$id`和`meta:altId`屬性中找到它。
 
-如需詳細資訊，請參閱 [資源識別](api/getting-started.md#resource-identification) 中的區段 [!DNL Schema Registry] API指南。
+如需詳細資訊，請參閱[!DNL Schema Registry] API指南中的[資源識別](api/getting-started.md#resource-identification)區段。
 
 ### 結構描述何時開始防止重大變更？
 
-只要結構描述從未用於建立資料集，或從未啟用用於中，即可進行重大變更 [[!DNL Real-Time Customer Profile]](../profile/home.md). 在資料集建立中使用結構描述或啟用結構描述以搭配使用後 [!DNL Real-Time Customer Profile]，的規則 [結構描述演變](schema/composition.md#evolution) 會由系統嚴格執行。
+只要結構描述從未用於建立資料集，或啟用以用於[[!DNL Real-Time Customer Profile]](../profile/home.md)，就可以對結構描述進行重大變更。 一旦結構描述已用於資料集建立或啟用以與[!DNL Real-Time Customer Profile]搭配使用，[結構描述演化](schema/composition.md#evolution)的規則就會由系統嚴格執行。
 
 ### 長欄位型別的大小上限是多少？
 
-長欄位型別是整數，大小上限為53(+1)位元，潛在範圍介於 — 9007199254740992到9007199254740992之間。 這是由於JSON的JavaScript實作呈現長整數的方式存在限制。
+長欄位型別是整數，大小上限為53(+1)位元，潛在範圍介於 — 9007199254740992到9007199254740992之間。 這是由於JavaScript實施JSON如何表示長整數的限制。
 
-如需欄位型別的詳細資訊，請參閱以下檔案： [XDM欄位型別限制](./schema/field-constraints.md).
+如需欄位型別的詳細資訊，請參閱有關[XDM欄位型別限制](./schema/field-constraints.md)的檔案。
 
 ### 如何為結構描述定義身分？
 
-在 [!DNL Experience Platform]，無論資料來源為何，身分都會用於識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別的常用欄位包括電子郵件地址、電話號碼、 [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
+在[!DNL Experience Platform]中，無論要解譯的資料來源為何，身分都會用來識別主旨（通常是個人）。 它們透過將關鍵欄位標籤為「身分」來定義在結構描述中。 身分識別常用的欄位包括電子郵件地址、電話號碼、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID和其他唯一ID欄位。
 
 可使用API或使用者介面將欄位標示為身分。
 
@@ -61,48 +61,48 @@ ht-degree: 0%
 
 身分描述項是由POST對/descriptors端點的要求所建立。 如果成功，您將會收到HTTP Status 201 （已建立）以及包含新描述項詳細資訊的回應物件。
 
-如需在API中建立身分描述項的詳細資訊，請參閱以下檔案： [描述項](api/descriptors.md) 中的區段 [!DNL Schema Registry] 開發人員指南。
+如需在API中建立身分描述項的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中[描述項](api/descriptors.md)章節的檔案。
 
 #### 在UI中定義身分
 
-在架構編輯器中開啟架構後，選取 **[!UICONTROL 結構]** 區段，您要將其標示為身分。 在 **[!UICONTROL 欄位屬性]** 在右側，選取 **[!UICONTROL 身分]** 核取方塊。
+在結構描述編輯器中開啟結構描述後，在編輯器的&#x200B;**[!UICONTROL 結構]**&#x200B;區段中選取要標示為身分的欄位。 在右側的&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下，選取&#x200B;**[!UICONTROL 身分]**&#x200B;核取方塊。
 
-如需在UI中管理身分的詳細資訊，請參閱 [定義身分欄位](./tutorials/create-schema-ui.md#identity-field) 結構編輯器教學課程中的區段。
+如需在UI中管理身分的詳細資訊，請參閱結構描述編輯器教學課程中[定義身分欄位](./tutorials/create-schema-ui.md#identity-field)區段的相關章節。
 
 ### 我的結構描述需要主要身分嗎？
 
-主要身分是選用的，因為結構描述可能沒有或只有一個。 但是，結構描述必須具有主要身分，才能啟用結構描述以便用於 [!DNL Real-Time Customer Profile]. 請參閱 [身分](./tutorials/create-schema-ui.md#identity-field) 結構編輯器教學課程的區段以取得詳細資訊。
+主要身分是選用的，因為結構描述可能沒有或只有一個。 但是，結構描述必須具有主要身分，才能啟用結構描述以在[!DNL Real-Time Customer Profile]中使用。 如需詳細資訊，請參閱結構描述編輯器教學課程的[identity](./tutorials/create-schema-ui.md#identity-field)一節。
 
-### 如何啟用結構描述以用於 [!DNL Real-Time Customer Profile]？
+### 如何啟用結構描述以用於[!DNL Real-Time Customer Profile]？
 
-已啟用結構描述以用於 [[!DNL Real-Time Customer Profile]](../profile/home.md) 方式是透過在 `meta:immutableTags` 結構的屬性。 啟用結構描述以搭配使用 [!DNL Profile] 可使用API或使用者介面完成。
+透過在結構描述的`meta:immutableTags`屬性中新增「union」標籤，結構描述可以用於[[!DNL Real-Time Customer Profile]](../profile/home.md)。 可以使用API或使用者介面啟用結構描述以搭配[!DNL Profile]使用。
 
-#### 啟用現有的結構描述 [!DNL Profile] 使用API
+#### 使用API啟用[!DNL Profile]的現有結構描述
 
-發出PATCH請求以更新結構並新增 `meta:immutableTags` attribute做為包含「union」值的陣列。 如果更新成功，回應將顯示更新的結構描述，其中現在包含聯合標籤。
+發出PATCH請求以更新結構描述，並將`meta:immutableTags`屬性新增為包含「union」值的陣列。 如果更新成功，回應將顯示更新的結構描述，其中現在包含聯合標籤。
 
-如需使用API啟用結構以用於 [!DNL Real-Time Customer Profile]，請參閱 [聯合](./api/unions.md) 的檔案 [!DNL Schema Registry] 開發人員指南。
+如需使用API啟用結構描述以在[!DNL Real-Time Customer Profile]中使用的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南的[聯合](./api/unions.md)檔案。
 
-#### 啟用現有的結構描述 [!DNL Profile] 使用UI
+#### 使用UI啟用[!DNL Profile]的現有結構描述
 
-在 [!DNL Experience Platform]，選取 **[!UICONTROL 方案]** 在左側導覽列中，從綱要清單中選取您要啟用的綱要名稱。 然後，在編輯器的右側下 **[!UICONTROL 結構描述屬性]**，選取 **[!UICONTROL 個人資料]** 以將其開啟。
+在[!DNL Experience Platform]中，選取左側導覽的&#x200B;**[!UICONTROL 結構描述]**，然後從結構描述清單中選取您要啟用的結構描述名稱。 然後，在編輯器的右側&#x200B;**[!UICONTROL 結構描述屬性]**&#x200B;下，選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;以將其開啟。
 
 
-如需詳細資訊，請參閱以下章節： [用於即時客戶個人檔案](./tutorials/create-schema-ui.md#profile) 在 [!UICONTROL 結構描述編輯器] 教學課程。
+如需詳細資訊，請參閱[!UICONTROL 結構描述編輯器]教學課程中[用於即時客戶個人檔案](./tutorials/create-schema-ui.md#profile)的相關章節。
 
 ### 我可以直接編輯聯合結構描述嗎？
 
 聯合結構是唯讀的，由系統自動產生。 無法直接編輯它們。 在實作特定類別的結構描述中新增「聯合」標籤時，會為該類別建立聯合結構描述。
 
-如需XDM中聯合的詳細資訊，請參閱 [聯合](./api/unions.md) 中的區段 [!DNL Schema Registry] API指南。
+如需XDM中聯合的詳細資訊，請參閱[!DNL Schema Registry] API指南中的[聯合](./api/unions.md)區段。
 
 ### 如何格式化資料檔以將資料擷取至我的結構描述？
 
-[!DNL Experience Platform] 接受資料檔於 [!DNL Parquet] 或JSON格式。 這些檔案的內容必須符合資料集參考的結構描述。 如需資料檔擷取最佳實務的詳細資訊，請參閱 [批次擷取概觀](../ingestion/home.md).
+[!DNL Experience Platform]接受[!DNL Parquet]或JSON格式的資料檔。 這些檔案的內容必須符合資料集參考的結構描述。 如需資料檔擷取最佳實務的詳細資訊，請參閱[批次擷取總覽](../ingestion/home.md)。
 
 ## 錯誤與疑難排解
 
-以下為使用時可能會遇到的錯誤訊息清單 [!DNL Schema Registry] API。
+以下是您在使用[!DNL Schema Registry] API時可能會遇到的錯誤訊息清單。
 
 ### 找不到資源
 
@@ -125,7 +125,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->根據要擷取的資源型別，此錯誤可能會使用以下任一項 `type` URI：
+>根據正在擷取的資源型別，此錯誤可以使用下列`type`個URI：
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1010-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1011-404`
@@ -136,7 +136,7 @@ ht-degree: 0%
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-如需在API中建構查閱路徑的詳細資訊，請參閱 [容器](./api/getting-started.md#container) 和 [資源識別](api/getting-started.md#resource-identification) 中的區段 [!DNL Schema Registry] 開發人員指南。
+如需在API中建構查閱路徑的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中的[容器](./api/getting-started.md#container)和[資源識別](api/getting-started.md#resource-identification)區段。
 
 ### 標題不是唯一的
 
@@ -157,7 +157,7 @@ ht-degree: 0%
 
 當您嘗試建立標題已由其他資源使用的資源時，會顯示此錯誤訊息。 標題在所有資源型別中必須是唯一的。 例如，如果您嘗試以結構描述已使用的標題建立欄位群組，您將會收到此錯誤。
 
-### 名稱空間驗證錯誤
+### 命名空間驗證錯誤
 
 ```json
 {
@@ -180,7 +180,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->根據名稱空間錯誤的特定性質，此錯誤可能會使用以下任一項 `type` URI以及不同的訊息詳細資料：
+>根據名稱空間錯誤的特定性質，此錯誤可以使用下列`type`個URI以及不同的訊息詳細資料：
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1020-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1021-400`
@@ -194,7 +194,7 @@ ht-degree: 0%
 * [建立自訂欄位群組](./api/field-groups.md#create)
 * [建立自訂資料型別](./api/data-types.md#create)
 
-### 接受標頭無效
+### Accept 標頭無效
 
 ```json
 {
@@ -211,24 +211,24 @@ ht-degree: 0%
 }
 ```
 
-中的GET請求 [!DNL Schema Registry] API需要 `Accept` 標頭，讓系統決定如何格式化回應。 當需要時，會發生此錯誤 `Accept` 標頭無效或遺失。
+[!DNL Schema Registry] API中的GET要求需要`Accept`標頭，系統才能決定如何格式化回應。 當必要的`Accept`標頭無效或遺失時，會發生此錯誤。
 
-根據您使用的端點， `detailed-message` 屬性指出有效的 `Accept` 標題看起來應該像成功的回應。 確定您已正確輸入 `Accept` 在重試之前，嘗試建立的API請求相容的標頭。
+根據您使用的端點，`detailed-message`屬性會指出有效的`Accept`標頭在成功回應中應該是什麼樣子。 在重試之前，請確定您已正確輸入與嘗試發出的API要求相容的`Accept`標頭。
 
 >[!NOTE]
 >
->根據使用的端點，此錯誤可能使用以下任一項 `type` URI：
+>根據使用的端點，此錯誤可以使用下列`type`個URI：
 >
 >* `http://ns.adobe.com/aep/errors/XDM-1006-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
-如需不同API要求的相容Accept標頭清單，請參閱 [Schema Registry開發人員指南](./api/overview.md).
+如需不同API要求的相容Accept標頭清單，請參閱[結構描述登入開發人員指南](./api/overview.md)中的對應章節。
 
-### [!DNL Real-Time Customer Profile] 錯誤
+### [!DNL Real-Time Customer Profile]個錯誤
 
-以下錯誤訊息與啟用結構描述的相關操作 [!DNL Real-Time Customer Profile]. 請參閱 [聯合](./api/unions.md) 中的區段 [!DNL Schema Registry] API指南，以取得詳細資訊。
+下列錯誤訊息與啟用[!DNL Real-Time Customer Profile]的結構描述相關作業。 如需詳細資訊，請參閱[!DNL Schema Registry] API指南中的[聯合](./api/unions.md)區段。
 
 #### 必須有參考身分描述項
 
@@ -247,7 +247,7 @@ ht-degree: 0%
 }
 ```
 
-當您嘗試為以下專案啟用架構時，此錯誤訊息便會顯示： [!DNL Profile] 而且其中一個屬性包含沒有參考身分描述項的關係描述項。 將參考身分描述項新增到相關結構描述欄位以解決此錯誤。
+當您嘗試啟用[!DNL Profile]的結構描述時，這個錯誤訊息就會顯示，而且其其中一個屬性包含沒有參考識別描述項的關係描述項。 將參考身分描述項新增到相關結構描述欄位以解決此錯誤。
 
 #### 參考身分描述項欄位和目的地結構描述的名稱空間必須相符
 
@@ -270,11 +270,11 @@ ht-degree: 0%
 >
 >對於此錯誤，「目的地結構描述」是指關係中的參考結構描述。
 
-為了啟用包含關係描述項的結構描述，以便用於 [!DNL Profile]，來源欄位的名稱空間與參考欄位的主要名稱空間必須相同。 當您嘗試啟用包含不相符名稱空間的結構描述以做為參考身分描述項時，會顯示此錯誤訊息。
+為了啟用包含關係描述項的結構描述以在[!DNL Profile]中使用，來源欄位的名稱空間和參考欄位的主要名稱空間必須相同。 當您嘗試啟用包含不相符名稱空間的結構描述以做為參考身分描述項時，會顯示此錯誤訊息。
 
-確保 `xdm:namespace` 參考結構描述身分欄位的值與 `xdm:identityNamespace` 來源欄位參考身分描述項中的屬性以解決此問題。
+請確定參考結構描述身分欄位的`xdm:namespace`值符合來源欄位參考身分描述項中`xdm:identityNamespace`屬性的值以解決此問題。
 
-如需標準身分名稱空間程式碼的清單，請參閱 [標準名稱空間](../identity-service/features/namespaces.md) 身分名稱空間概觀中的。
+如需標準身分名稱空間程式碼的清單，請參閱身分名稱空間概觀中有關[標準名稱空間](../identity-service/features/namespaces.md)的章節。
 
 #### 結構描述必須包含identityMap或主要身分
 
@@ -293,7 +293,7 @@ ht-degree: 0%
 }
 ```
 
-為設定檔啟用結構描述之前，您必須先 [建立主要身分描述項](./api/descriptors.md#create) 或包含身分對應欄位，以取代主要身分。
+在啟用設定檔的結構描述之前，您必須先為結構描述[建立主要身分描述項](./api/descriptors.md#create)，或加入身分對應欄位以取代主要身分。
 
 #### 無法合併不相容的資料型別
 

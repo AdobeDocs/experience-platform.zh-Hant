@@ -4,8 +4,8 @@ description: 瞭解Adobe Experience Platform中的Adobe Medium Analytics (3.x SD
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 74%
+source-wordcount: '707'
+ht-degree: 66%
 
 ---
 
@@ -13,29 +13,29 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 本文件主要說明安裝、設定和實作 Adobe Media Analytics (3.x SDK) for Audio and Video 擴充功能 (Media Analytics 擴充功能) 的相關資訊，其中包含使用此擴充功能來建立規則時可用的選項，以及範例和範例連結。
 
-Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SDK)。此擴充功能提供新增 `Media` 追蹤器例項至啟用標籤的網站或專案。 MA 擴充功能需要額外的擴充功能：
+Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SDK)。此擴充功能可將`Media`追蹤器執行個體新增至已啟用標籤的網站或專案。 MA 擴充功能需要額外的擴充功能：
 
 * [Analytics 擴充功能](../analytics/overview.md)
 * [Experience Cloud ID 擴充功能](../id-service/overview.md)
 
 >[!IMPORTANT]
 >
->此擴充功能會與 Media 3.x SDK 一併部署，且無法向下相容於 Media 2.x SDK。自2.x版已棄用，請更新至3.x版。
+>此擴充功能會與 Media 3.x SDK 一併部署，且無法向下相容於 Media 2.x SDK。由於2.x已過時，請更新至3.x。
 
-在啟用標籤的專案中納入上述的三個擴充功能後，您可以使用下列兩種方式之一繼續操作：
+在已啟用標籤的專案中納入上述的三個擴充功能後，您可以使用下列兩種方式之一繼續操作：
 
 * 從您的網頁應用程式使用 `Media` API
 * 納入或建立播放器特定的擴充功能，此模組會將特定的媒體播放器事件對應到 `Media` 追蹤器例項上的 API。此例項會透過 MA 擴充功能公開。
 
 ## 安裝並設定 MA 擴充功能
 
-* **安裝：** 若要安裝MA擴充功能，請開啟您的擴充功能屬性，選取 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在 **[!UICONTROL 適用於音訊和視訊的Adobe Medium Analytics (3.x SDK)]** 擴充功能，並選取 **[!UICONTROL 安裝]**.
+* **安裝：**&#x200B;若要安裝MA擴充功能，請開啟您的擴充功能屬性，選取&#x200B;**[!UICONTROL 擴充功能>目錄]**，將游標暫留在&#x200B;**[!UICONTROL Adobe Medium Analytics (3.x SDK) for Audio and Video]**&#x200B;擴充功能上，然後選取&#x200B;**[!UICONTROL 安裝]**。
 
-* **設定：** 若要設定MA擴充功能，請開啟 [!UICONTROL 擴充功能] 索引標籤，將游標停留在擴充功能上，然後選取「 」 **[!UICONTROL 設定]**：
+* **設定：**&#x200B;若要設定MA擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取[設定]]**：**[!UICONTROL 
 
 ![MA 擴充功能設定](../../../images/ext-ma-config.png)
 
@@ -58,7 +58,7 @@ Media Analytics (MA) 擴充功能新增核心 JavaScript Media SDK (Media 3.x SD
 
 ### 從網頁/JS 應用程式使用
 
-MA擴充功能會啟用「 」中的「匯出視窗物件API」設定，匯出全域視窗物件中的Media API。 [!UICONTROL 設定] 頁面。 這會以設定的變數名稱匯出 API。例如，如果變數名稱設為 `ADB`，則可使用 `window.ADB.Media` 來存取 Media API。
+MA擴充功能會啟用[!UICONTROL 設定]頁面中的「匯出視窗物件API」設定，匯出全域視窗物件中的Media API。 這會以設定的變數名稱匯出 API。例如，如果變數名稱設為 `ADB`，則可使用 `window.ADB.Media` 來存取 Media API。
 
 >[!IMPORTANT]
 >
@@ -85,7 +85,7 @@ MA擴充功能會啟用「 」中的「匯出視窗物件API」設定，匯出�
 
 ### 從其他擴充功能使用
 
-MA擴充功能會公開 `media` 作為其他擴充功能的共用模組。 (如需共用模組的其他資訊，請參閱[共用模組文件](../../../extension-dev/web/shared.md))。
+MA擴充功能會將`media`公開為其他擴充功能的共用模組。 (如需共用模組的其他資訊，請參閱[共用模組文件](../../../extension-dev/web/shared.md))。
 
 >[!IMPORTANT]
 >
@@ -110,4 +110,4 @@ MA擴充功能會公開 `media` 作為其他擴充功能的共用模組。 (如�
 
 >[!NOTE]
 >
->**測試：**&#x200B;若要在這個版本中測試擴充功能，您必須將其上傳至 [ Platform ](../../../extension-dev/submit/upload-and-test.md)以便在其中存取所有相依的擴充功能。
+>**測試：**&#x200B;在這個版本中，若要測試您的擴充功能，必須將其上傳至[平台](../../../extension-dev/submit/upload-and-test.md)，以便在其中存取所有相依的擴充功能。

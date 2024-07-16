@@ -1,16 +1,17 @@
 ---
 title: 類別資料型別
 description: 瞭解類別資料Experience Data Model (XDM)資料型別。
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: f8d52f2d-5fb0-4999-8b31-ddc14225b0ab
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '98'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
-# [!UICONTROL 類別資料] 資料型別
+# [!UICONTROL 類別資料]資料型別
 
-[!UICONTROL 類別資料] 是標準的體驗資料模型(XDM)資料型別，可描述與產品類別相關的資訊。
+[!UICONTROL 類別資料]是標準的體驗資料模型(XDM)資料型別，可描述與產品類別相關的資訊。
 
 ![類別資料型別的圖表。](../images/data-types/category-data.png)
 
@@ -24,5 +25,5 @@ ht-degree: 7%
 
 如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/categorydata.schema.json)

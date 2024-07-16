@@ -48,10 +48,10 @@ Platform可讓您定義自己的自訂欄位群組和資料型別，讓您在任
 
 >[!IMPORTANT]
 >
->SPI和PII只應儲存至 [XDM個別設定檔](../classes/individual-profile.md) 和 [XDM ExperienceEvent](../classes/experienceevent.md) 類別。 請勿將SPI和PII儲存在任何其他自訂或標準XDM類別中，做為資料刪除和隱私權及治理用途的最佳作法。
+>SPI和PII應該只儲存到[XDM個別設定檔](../classes/individual-profile.md)和[XDM ExperienceEvent](../classes/experienceevent.md)類別中。 請勿將SPI和PII儲存在任何其他自訂或標準XDM類別中，做為資料刪除和隱私權及治理用途的最佳作法。
 
 ## 後續步驟
 
-本檔案涵蓋XDM中敏感和個人資料的相關重要考量事項。 有關如何模型化您的結構以最符合您的業務使用案例的更多資訊，請參閱以下指南： [資料模型化的最佳實務](./best-practices.md).
+本檔案涵蓋XDM中敏感和個人資料的相關重要考量事項。 如需如何模型化您的結構以最符合業務使用案例的詳細資訊，請參閱[資料模型化最佳實務](./best-practices.md)指南。
 
-如需Experience Platform資料控管和隱私權功能的詳細資訊，請參閱以下內容的概觀： [治理、隱私和安全性](../../landing/governance-privacy-security/overview.md).
+如需Experience Platform資料控管和隱私權功能的詳細資訊，請參閱[控管、隱私權及安全性](../../landing/governance-privacy-security/overview.md)的概觀。

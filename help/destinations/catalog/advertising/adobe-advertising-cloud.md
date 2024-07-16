@@ -1,12 +1,12 @@
 ---
 keywords: Advertising Cloud；advertising cloud擴充功能；advertising cloud目的地
 title: Adobe Advertising Cloud擴充功能
-description: Adobe Advertising Cloud擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe交換上的擴充功能頁面。
+description: Adobe Advertising Cloud擴充功能是Adobe Experience Platform中的廣告目的地。 如需擴充功能的相關詳細資訊，請參閱Adobe Exchange上的擴充功能頁面。
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 4%
+source-wordcount: '437'
+ht-degree: 3%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 4%
 
 ## 概觀 {#overview}
 
-這是 [!DNL Advertising Cloud] 實施的擴充功能 [!DNL Advertising Cloud] DSP和搜尋（目前不支援DCO）的轉換和受眾標籤。
+這是[!DNL Advertising Cloud]擴充功能，用於實作DSP和Search的[!DNL Advertising Cloud]轉換和對象標籤（目前不支援DCO）。
 
 Adobe Advertising Cloud是Adobe Experience Platform中的廣告擴充功能。
 
-此目的地是標籤延伸模組。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱 [標籤擴充功能概觀](../launch-extensions/overview.md).
+此目的地是標籤延伸模組。 如需有關標籤擴充功能在Platform中如何運作的詳細資訊，請參閱[標籤擴充功能概觀](../launch-extensions/overview.md)。
 
 ![Adobe Advertising Cloud擴充功能](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
@@ -26,27 +26,27 @@ Adobe Advertising Cloud是Adobe Experience Platform中的廣告擴充功能。
 
 所有已購買Platform的客戶都可在Destinations目錄中找到此擴充功能。
 
-若要使用此擴充功能，您需要存取Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請聯絡您的組織管理員，以取得UI中資料收集功能的存取權，並要求他們授予您 **[!UICONTROL manage_properties]** 許可權，讓您能夠安裝擴充功能。
+若要使用此擴充功能，您需要存取Platform中的標籤。 標籤以隨附加值功能的形式提供給Adobe Experience Cloud客戶。 請連絡您的組織管理員，以存取UI中的資料收集功能，並要求他們授與您許可權&#x200B;**[!UICONTROL manage_properties]**，讓您可以安裝擴充功能。
 
 ## 安裝擴充功能 {#install-extension}
 
 若要安裝Adobe Advertising Cloud擴充功能：
 
-在 [平台介面](https://platform.adobe.com/)，前往 **[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**.
+在[平台介面](https://platform.adobe.com/)中，移至&#x200B;**[!UICONTROL 目的地]** > **[!UICONTROL 目錄]**。
 
 從目錄中選取擴充功能或使用搜尋列。
 
-按一下目的地以反白顯示，然後選取 **[!UICONTROL 設定]** 在右側邊欄中。 如果 **[!UICONTROL 設定]** 控制項呈現灰色，您缺少 **[!UICONTROL manage_properties]** 許可權。 另請參閱 [必要條件](#prerequisites).
+按一下目的地以反白顯示，然後在右側邊欄中選取&#x200B;**[!UICONTROL 設定]**。 如果&#x200B;**[!UICONTROL Configure]**&#x200B;控制項呈現灰色，表示您缺少&#x200B;**[!UICONTROL manage_properties]**&#x200B;許可權。 請參閱[必要條件](#prerequisites)。
 
-選取您要安裝擴充功能的標籤屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。瞭解中的屬性 [標籤檔案](../../../tags/ui/administration/companies-and-properties.md).
+選取您要安裝擴充功能的標籤屬性。 您也可以選擇建立新屬性。 屬性是規則、資料元素、設定的擴充功能、環境和程式庫的集合。在[標籤檔案](../../../tags/ui/administration/companies-and-properties.md)中瞭解屬性。
 
 工作流程會帶您前往資料收集UI以完成安裝。
 
-您也可以直接在中安裝擴充功能 [資料收集UI](https://experience.adobe.com/#/data-collection/). 請參閱以下指南： [新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) 以取得詳細資訊。
+您也可以直接在[資料收集UI](https://experience.adobe.com/#/data-collection/)中安裝擴充功能。 如需詳細資訊，請參閱[新增擴充功能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)的指南。
 
 ## 如何使用擴充功能 {#how-to-use}
 
-安裝擴充功能後，您就可以開始設定規則。 在資料收集UI中，您可以為已安裝的擴充功能設定規則，以只在某些情況下將事件資料傳送至擴充功能目的地。 如需為擴充功能設定規則的詳細資訊，請參閱以下主題的總覽： [規則](../../../tags/ui/managing-resources/rules.md) 標籤檔案中。
+安裝擴充功能後，您就可以開始設定規則。 在資料收集UI中，您可以為已安裝的擴充功能設定規則，以只在某些情況下將事件資料傳送至擴充功能目的地。 如需有關設定擴充功能規則的詳細資訊，請參閱標籤檔案中有關[規則](../../../tags/ui/managing-resources/rules.md)的概觀。
 
 ## 設定、升級和刪除擴充功能 {#configure-upgrade-delete}
 
@@ -54,6 +54,6 @@ Adobe Advertising Cloud是Adobe Experience Platform中的廣告擴充功能。
 
 >[!TIP]
 >
->如果擴充功能已安裝在您的其中一個屬性上，UI仍會顯示 **[!UICONTROL 安裝]** 用於擴充功能。 依照中的說明開始安裝工作流程 [安裝擴充功能](#install-extension) 以設定或刪除您的擴充功能。
+>如果擴充功能已安裝在您的其中一個屬性上，UI仍會顯示擴充功能的&#x200B;**[!UICONTROL 安裝]**。 依照[安裝擴充功能](#install-extension)中的說明啟動安裝工作流程，以設定或刪除您的擴充功能。
 
-若要升級您的擴充功能，請參閱 [擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) 標籤檔案中。
+若要升級您的擴充功能，請參閱標籤檔案中的[擴充功能升級程式](../../../tags/ui/managing-resources/extensions/extension-upgrade.md)指南。

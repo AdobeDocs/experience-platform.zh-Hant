@@ -1,19 +1,19 @@
 ---
 title: 使用來自DNL天氣頻道的天氣資料增強資料收集
 description: 使用來自DNL The Weather Channel的天氣資料，增強您透過資料串流收集的資料。
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
+source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 68%
 
 ---
 
-
-# 使用來自的天氣資料增強資料收集 [!DNL The Weather Channel]
+# 使用來自[!DNL The Weather Channel]的天氣資料增強資料彙集
 
 Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，將美國天氣的附加內容引進透過資料流收集的資料中。您可以在Experience Platform中使用此資料來分析、鎖定目標和建立對象。
 
-有三種資料型別可從取得 [!DNL The Weather Channel]：
+[!DNL The Weather Channel]提供三種型別的資料：
 
 * **[!UICONTROL 目前的天氣]**：根據使用者的位置提供目前的天氣狀況。這包括目前的溫度、降水、雲端涵蓋範圍等。
 * **[!UICONTROL 預測天氣]**：預測包括使用者地點的1、2、3、5、7和10天預測。
@@ -27,10 +27,10 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 
 在使用天氣資料之前，請確保滿足以下先決條件：
 
-* 您必須授權您將會使用的天氣資料 [!DNL The Weather Channel]. 然後他們會在您的帳戶上啟用授權。
-* 天氣資料只能透過資料流取得。若要使用天氣資料，您必須使用 [!DNL Web SDK]， [!DNL Mobile Edge Extension] 或 [伺服器API](../../server-api/overview.md) 以包含此資料。
+* 您必須從[!DNL The Weather Channel]授權您將使用的天氣資料。 然後他們會在您的帳戶上啟用授權。
+* 天氣資料只能透過資料流取得。若要使用天氣資料，您必須使用[!DNL Web SDK]、[!DNL Mobile Edge Extension]或[伺服器API](../../server-api/overview.md)來包含此資料。
 * 您的資料流必須啟用[[!UICONTROL 地理位置]](../configure.md#advanced-options)。
-* 新增 [天氣欄位群組](#schema-configuration) 到您正在使用的結構描述。
+* 將[天氣欄位群組](#schema-configuration)新增到您正在使用的結構描述。
 
 ## 佈建 {#provisioning}
 
@@ -62,11 +62,11 @@ Adobe 已和 [!DNL [The Weather Company]](https://www.ibm.com/weather) 合作，
 
 ### Adobe Customer Journey Analytics {#cja}
 
-在 [!DNL Adobe Customer Journey Analytics] 中，可在資料流中指定的資料集中取得天氣資料。只要天氣屬性為 [已新增到您的結構描述](#prerequisites-prerequisites)，它們可用於 [新增至資料檢視](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) 在 [!DNL Customer Journey Analytics].
+在 [!DNL Adobe Customer Journey Analytics] 中，可在資料流中指定的資料集中取得天氣資料。只要天氣屬性是[新增到您的結構描述](#prerequisites-prerequisites)，就可用於[新增到[!DNL Customer Journey Analytics]中的資料檢視](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html)。
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-天氣資料可在 [Real-time Customer Data Platform](../../rtcdp/overview.md)，適用於對象。 天氣資料會附加到事件。
+氣象資料可在[Real-time Customer Data Platform](../../rtcdp/overview.md)中使用，以用於對象。 天氣資料會附加到事件。
 
 ![顯示天氣事件的區段產生器](../assets/data-enrichment/weather/schema-builder.png)
 

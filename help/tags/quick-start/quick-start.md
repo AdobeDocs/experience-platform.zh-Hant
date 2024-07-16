@@ -4,8 +4,8 @@ description: 瞭解如何快速上手並執行Adobe Experience Platform中的標
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1525'
-ht-degree: 43%
+source-wordcount: '1521'
+ht-degree: 41%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../term-updates.md)，以取得術語變更的彙總參考資料。
 
 標籤是Adobe Experience Platform的下一代標籤管理技術。 這套技術從頭開始打造，以支援開放且永續的生態系統，讓任何人都能自行建立整合功能，供Adobe客戶部署在他們的網站上。 這是 API 優先的應用程式，所以您可以透過 UI 完成的任何工作，也可以透過 API 以程式設計方式完成。
 
@@ -29,19 +29,19 @@ ht-degree: 43%
 
 ## 1. 設定群組和使用者
 
-標籤已與您的Adobe ID完全整合。 使用者許可權可透過Admin Console與來自的其他Adobe產品和解決方案管理。 [!DNL Creative Cloud]， [!DNL Document Cloud]，和Experience Cloud。
+標籤已與您的Adobe ID完全整合。 使用者許可權是透過Admin Console管理來自[!DNL Creative Cloud]、[!DNL Document Cloud]和Experience Cloud的其他Adobe產品和解決方案。
 
-標籤具有許可權型使用者管理系統。 這表示必須明確授與個別權利。 這些權限會指派給群組，然後使用者加入適當的群組以取得存取權限。即使您的組織有權存取「資料收集」，除非管理員明確授予個別使用者某些許可權，否則他們無法執行任何動作。
+標籤具有許可權型使用者管理系統。 這表示個別許可權必須明確授予。 這些權限會指派給群組，然後使用者加入適當的群組以取得存取權限。即使您的組織擁有資料收集的存取權，除非管理員明確授予個別使用者特定許可權，否則他們無法執行任何動作。
 
-如需如何建立群組並新增標籤使用者的詳細指示，請參閱 [資料彙集許可權指南](../../collection/permissions.md).
+如需如何建立群組並新增標籤使用者的詳細指示，請參閱[資料彙集許可權指南](../../collection/permissions.md)。
 
 ## 2. 登入
 
-將標籤許可權新增到您的Adobe ID後，您需要登入Experience PlatformUI或資料收集UI。 您可以直接導覽至 [Experience Cloud登入畫面](https://experience.adobe.com/)，並選取 **[!UICONTROL 資料彙集]** 或 **[!UICONTROL Experience Platform]**.
+將標籤許可權新增到您的Adobe ID後，您需要登入Experience PlatformUI或資料收集UI。 您可以直接導覽至[Experience Cloud登入畫面](https://experience.adobe.com/)，並選取&#x200B;**[!UICONTROL 資料彙集]**&#x200B;或&#x200B;**[!UICONTROL Experience Platform]**，以執行此操作。
 
 >[!NOTE]
 >
->如果您有一個擁有多個組織許可權的帳戶，則可以在畫面上方的「控制」列選取組織名稱，然後從下拉式清單中選擇不同的組織，來變更組織。
+>如果您有擁有多個組織許可權的單一帳戶，可以透過選取畫面頂端「控制」列中的組織名稱，並從下拉式清單中選擇不同的組織來變更組織。
 
 ## 3. 建立屬性
 
@@ -51,11 +51,11 @@ ht-degree: 43%
 
 ## 4. 安裝擴充功能
 
-擴充功能是由Adobe或Adobe合作夥伴建立的整合功能，能針對您可部署至網站的標籤新增全新及無數的選項。 如果您將標籤視為作業系統，擴充功能就是您安裝的應用程式，用來執行您需要執行的特定操作。
+擴充功能是由Adobe或Adobe合作夥伴建立的整合功能，能針對您可部署至網站的標籤新增全新及無數的選項。 如果您將標籤當成作業系統，擴充功能就是您安裝的應用程式，用來執行您需執行的特定作業。
 
-所有全新屬性都會隨[核心擴充功能](../extensions/client/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能是由Adobe所建置，可為資料層的資料元素型別和規則的事件型別，提供強大的預設集合。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
+所有全新屬性都會隨[核心擴充功能](../extensions/client/core/overview.md)一併安裝。行動屬性會隨其他擴充功能提供。核心擴充功能是由Adobe建置，可為資料層提供強大的預設資料元素型別集，並為規則提供事件型別。 大部分您希望執行的動作 (取得 ECID、傳送 [!DNL Adobe Analytics] 信標、載入 [!DNL Target] 全域 mbox 等) 會來自您從目錄安裝的擴充功能。
 
-Platform中的標籤之所以真正獨特，是因為任何人都可以建立這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理使用者的隱私權和同意，以應付下列問題 [!DNL GDPR]？ 請深入了解 Evidon 和 Trust Arc。您是否希望對網站上個別使用者的行為有更精細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱以下章節： [新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+讓Platform中的標籤真正獨特的是任何人都可以建置這些擴充功能。 您是否需要將 Facebook 再行銷像素放置在您的網站上？試試看 Facebook 建立的擴充功能。您是否要在 Twitter 或 LinkedIn 提供相同體驗？請使用這些擴充功能。您需要執行調查嗎？您需要的是 Question Pro 或 Foresee。您是否需要管理使用者的隱私權和同意，以協助[!DNL GDPR]的處理？ 請深入了解 Evidon 和 Trust Arc。對於網站上個別使用者的行為，您是否希望獲得精細的深入分析？ 也許您可以了解一下 Clicktale。如需詳細資訊，請參閱有關[新增擴充功能](../ui/managing-resources/extensions/overview.md#add-a-new-extension)的章節。
 
 ## 5. 建立資料元素和規則
 
@@ -67,7 +67,7 @@ Platform中的標籤之所以真正獨特，是因為任何人都可以建立這
 * 工作階段與本機儲存
 * 幾乎其他所有資訊
 
-定義資料元素後，您即可在任何擴充功能的所有UI階段使用此元素。 請參閱以下說明檔案： [資料元素](../ui/managing-resources/data-elements.md) 以取得更多詳細資訊。
+定義資料元素後，您即可在任何擴充功能的所有UI階段使用此元素 如需更多詳細資訊，請參閱[資料元素](../ui/managing-resources/data-elements.md)的相關檔案。
 
 **規則**&#x200B;位於實作的邏輯核心，並控制網站上所有標籤的內容、出現時間與位置以及運作方式。定義事件、設定條件和例外，然後定義動作和順序。最後，發佈變更以查看結果。如需詳細資訊，請參閱[規則](../ui/managing-resources/rules.md)。
 
@@ -77,23 +77,23 @@ Platform中的標籤之所以真正獨特，是因為任何人都可以建立這
 
 標籤組建不會自動發佈。 您所做的每一組變更都會封裝到[程式庫](../ui/publishing/libraries.md)中。您建立的每個程式庫都會自動繼承任何上游的內容 (已發佈、已核准或已提交) 作為基準，因此您只需要定義您要做的變更。此程式庫可作為[組建](../ui/publishing/builds.md)的藍圖。組建是指部署和使用的實際 JavaScript 檔案集。
 
-請務必瞭解網頁、託管位置和標籤之間的關係。
+瞭解您的網頁、託管位置和標籤之間的關係很重要。
 
 1. 您的主機伺服器會提供發佈組建的位置。 組建本身包含程式庫所需的JavaScript檔案。
 
-   每個環境都與主機有關聯，而主機會提供端點，指出要傳送組建的位置。 雖然一個屬性可以有許多主機，但主機只能屬於一個屬性。
+   每個環境都與主機有關係，而主機會提供端點，指出要傳送組建的位置。 雖然一個屬性可以有許多主機，但主機只能屬於一個屬性。
 
-2. 表單中提供內嵌程式碼  `<script>` 標籤會進入 `<head>` 網站HTML的區段。
+2. 內嵌程式碼以表格`<script>`標籤提供，該表格會進入網站HTML的`<head>`區段。
 
-   當您建立環境並附加主機時，環境會自動產生唯一的內嵌程式碼，可讓您將指派的組建整合至您的網站。 此 `<script>` 程式碼用於在執行階段部署程式庫組建。
+   當您建立環境並附加主機時，環境會自動產生唯一的內嵌程式碼，可讓您將指派的組建整合至您的網站。 `<script>`程式碼用於在執行階段部署程式庫組建。
 
-3. 當使用者瀏覽您的網站時，內嵌程式碼 `<script>` tag會從您的主機伺服器擷取組建，並在瀏覽器內執行您定義的動作。
+3. 當使用者瀏覽您的網站時，內嵌程式碼`<script>`標籤會從您的主機伺服器擷取組建，並在瀏覽器內執行您定義的動作。
 
 ### 主機
 
-主機是標籤屬性與您的託管位置之間的連線。 標籤目前支援透過Adobe管理託管 [!DNL Akamai] 主機或透過SFTP主機自行託管。 每當您產生組建時，標籤都會連線至您主機定義的伺服器，並傳送組建。
+主機是標籤屬性與您的託管位置之間的連線。 標籤目前支援透過[!DNL Akamai]主機進行Adobe管理託管，或透過SFTP主機自行託管。 每當您產生組建時，標籤都會連線至您主機定義的伺服器，並傳遞組建。
 
-如果您自行託管，標籤組建可透過SFTP直接推送至您的伺服器，或您可將它推送至 [!DNL Akamai] 並使用您環境的「封存」選項進行下載。
+如果您是自行託管，標籤組建可以透過SFTP直接推送至您的伺服器，也可以推送至[!DNL Akamai]並使用您環境的「封存」選項進行下載。
 
 如需詳細資訊，請參閱[主機](../ui/publishing/hosts/hosts-overview.md)。
 
@@ -101,10 +101,10 @@ Platform中的標籤之所以真正獨特，是因為任何人都可以建立這
 
 每個程式庫都會在環境中建立。環境會定義您希望在組建發佈時呈現的外觀。您可以指定在網站上傳遞：
 
-* **主機：** 每個環境都需要主機，主機會針對在環境中建立的任何組建，判斷要推送組建的端點。
-* **封存：** 預設設定是將您的組建部署為縮小的.js檔案。 如果您使用自訂程式碼，則可能有多個互相參照的檔案。 這些檔案可合併為單一zip檔案並加密。
+* **主機：**&#x200B;每個環境都需要主機，主機會針對在此環境中建立的任何組建，判斷要推送組建的端點。
+* **封存：**&#x200B;預設設定是將您的組建部署為縮小的.js檔案。 如果您使用自訂程式碼，則可能有多個互相參照的檔案。 這些檔案可合併為單一zip檔案並加密。
 
-儲存您的環境後，環境會產生內嵌程式碼，您可以複製程式碼並貼到您的網站上。請注意，您必須建立程式庫並產生組建後，內嵌程式碼才能運作。 如需詳細資訊，請參閱[環境](../ui/publishing/environments.md)。
+儲存您的環境後，環境會產生內嵌程式碼，您可以複製程式碼並貼到您的網站上。請注意，內嵌程式碼必須等到您建立程式庫並產生組建後才能運作。 如需詳細資訊，請參閱[環境](../ui/publishing/environments.md)。
 
 ### 將組建發佈至開發環境
 
@@ -136,4 +136,4 @@ Platform中的標籤之所以真正獨特，是因為任何人都可以建立這
 
 * **[資料收集社群](https://forums.adobe.com/community/experience-cloud/platform/launch)**：詢問和解答問題、提交意見、投票支援其他人的意見。 使用您的Adobe ID登入。
 * **[開發人員檔案](../api/overview.md)**：參與標籤開發人員社群，以建立擴充功能或使用標籤API
-* **[Tutorials概觀](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**：這些檔案會向您介紹標籤概念，包括Android應用程式中的事件轉送和Mobile SDK。
+* **[Tutorials總覽](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**：這些檔案會向您介紹Android應用程式中的標籤概念，包括事件轉送和Mobile SDK。

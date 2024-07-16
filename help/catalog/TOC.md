@@ -36,4 +36,4 @@ ht-degree: 33%
    * [為設定檔更新啟用資料集（更新插入）](datasets/enable-upsert.md)
 * [Data Lake中的隱私權請求處理](privacy.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/catalog/)
-* [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

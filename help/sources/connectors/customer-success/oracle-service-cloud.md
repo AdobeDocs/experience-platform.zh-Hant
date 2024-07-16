@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；oracle服務雲端
-title: oracle服務雲端來源聯結器概述
+title: oracle服務雲端Source聯結器概述
 description: 瞭解如何使用API或使用者介面將Oracle Service Cloud連線至Adobe Experience Platform。
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
@@ -19,7 +19,7 @@ Experience Platform提供從協力廠商客戶成功系統擷取資料的支援�
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
 以下檔案提供如何使用API或使用者介面將Oracle Service Cloud連線至平台的資訊：
 

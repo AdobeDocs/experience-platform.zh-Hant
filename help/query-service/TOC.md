@@ -8,12 +8,12 @@ role: User,Developer
 source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
 
-# Adobe Experience Platform 查詢服務 {#query}
+# Adobe Experience Platform查詢服務 {#query}
 
 - [查詢服務總覽](home.md)
 - [查詢服務封裝](packaging.md)
@@ -23,16 +23,16 @@ ht-degree: 21%
 - 資料Distiller {#data-distiller}
    - [概觀](data-distiller/overview.md)
    - [授權使用情況](data-distiller/license-usage.md)
-   - 衍生資料集 {#derived-datasets}
+   - 衍生資料集{#derived-datasets}
       - [概觀](data-distiller/derived-datasets/overview.md)
       - [使用SQL建立衍生資料集](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [建立十等分衍生資料集](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 延伸應用程式報表的可自訂分析 {#customizable-insights}
+   - 延伸應用程式報表{#customizable-insights}的可自訂分析
       - [概觀](data-distiller/customizable-insights/overview.md)
-      - [Query pro模式](data-distiller/customizable-insights/query-pro-mode.md)
+      - [查詢專業模式](data-distiller/customizable-insights/query-pro-mode.md)
       - [傳送加速的查詢](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [報表深入分析資料模型指南](data-distiller/customizable-insights/reporting-insights-data-model.md)
-   - AI/ML功能管道 {#ml-feature-pipelines}
+   - AI/ML功能管道{#ml-feature-pipelines}
       - [概觀](data-distiller/ml-feature-pipelines/overview.md)
       - [連線到Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [探索資料分析](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -66,7 +66,7 @@ ht-degree: 21%
    - [重複資料刪除](key-concepts/deduplication.md)
    - [資料集範例](key-concepts/dataset-samples.md)
    - [資料集統計資料計算](key-concepts/dataset-statistics.md)
-- 將使用者端連線至查詢服務 {#clients}
+- 將使用者端連線至查詢服務{#clients}
    - [使用者端連線概觀](clients/overview.md)
    - [SSL模式](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -88,16 +88,16 @@ ht-degree: 21%
    - [監視已排程查詢](ui/monitor-queries.md)
    - [認證指南](ui/credentials.md)
    - [從查詢結果產生輸出資料集](ui/create-datasets.md)
-- 查詢服務API端點 {#api}
+- 查詢服務API端點{#api}
    - [快速入門](api/getting-started.md)
    - [查詢](api/queries.md)
    - [連線參數](api/connection-parameters.md)
-   - [時程表](api/scheduled-queries.md)
+   - [排程](api/scheduled-queries.md)
    - [已排程查詢的執行](api/runs-scheduled-queries.md)
    - [查詢範本](api/query-templates.md)
    - [加速的查詢](api/accelerated-queries.md)
    - [警報訂閱](api/alert-subscriptions.md)
-- 資料控管 {#data-governance}
+- 資料控管{#data-governance}
    - [概觀](data-governance/overview.md)
    - [稽核記錄指南](data-governance/audit-log-guide.md)
    - [臨時結構描述資料集中的身分](data-governance/ad-hoc-schema-identities.md)
@@ -105,7 +105,7 @@ ht-degree: 21%
 - 最佳實務{#best-practices}
    - [查詢執行](best-practices/writing-queries.md)
    - [資料資產組織](./best-practices/organize-data-assets.md)
-- SQL參考 {#sql}
+- SQL參考{#sql}
    - [SQL概述](sql/overview.md)
    - [SQL語法](sql/syntax.md)
    - [Adobe定義的函式](sql/adobe-defined-functions.md)
@@ -116,4 +116,4 @@ ht-degree: 21%
 - [常見問答](troubleshooting-guide.md)
 - [IP位址允許清單](ip-address-allowlist.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

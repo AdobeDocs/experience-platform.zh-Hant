@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Real-Time CDP B2B Edition以Adobe Real-time Customer Data Platform (Real-Time CDP)為基礎，是專為以B2B服務模式運作的行銷人員所打造。 它將來自多個來源的資料集中在一起，並將其合併成包含人員和帳戶設定檔的單一檢視。這種統一的資料讓行銷人員可以精確地以特定對象為目標，並在所有可用的管道中和這些對象互動。
 
-有各種Adobe Experience Platform功能的改善，可區分Real-Time CDP B2B版本與其B2C對應版本。 其中包括改善B2B使用案例的Experience Data Model (XDM)、升級身分解析和設定檔細分，以及針對以下專案自訂的聯結器和目的地 [!DNL Marketo Engage]. 此 [!DNL Marketo] 聯結器可讓B2B品牌將其領先業界的B2B參與資料與行為資訊連結，以培育銷售機會及增強以帳戶為基礎的行銷作業。
+有各種Adobe Experience Platform功能的改善，可區分Real-Time CDP B2B版本與其B2C對應版本。 其中包括改善B2B使用案例的Experience Data Model (XDM)、升級身分解析和設定檔細分，以及為[!DNL Marketo Engage]自訂建立的聯結器和目的地。 [!DNL Marketo]聯結器可讓B2B品牌將其領先業界的B2B參與資料與行為資訊連結，以培育潛在客戶並增強以帳戶為基礎的行銷作業。
 
 使用Real-Time CDP B2B版本，您可以：
 
@@ -28,9 +28,9 @@ Real-Time CDP B2B Edition以Adobe Real-time Customer Data Platform (Real-Time CD
 
 ## XDM
 
-Real-Time CDP B2B版本提供幾個新的XDM結構描述類別、欄位群組和關係型別，以擷取和建構您的資料以專門用於B2B用途。 請參閱以下主題的概觀： [Real-Time CDP B2B版本中的XDM](./schemas/b2b.md) 以取得這些增強功能的明細。
+Real-Time CDP B2B版本提供幾個新的XDM結構描述類別、欄位群組和關係型別，以擷取和建構您的資料以專門用於B2B用途。 如需這些增強功能的詳細資訊，請參閱Real-Time CDP B2B版本](./schemas/b2b.md)中[XDM的概觀。
 
-透過使用預先設定的B2B結構描述，您能夠以標準化的可操作結構匯入資料。 許多新的結構描述類別幾乎直接對應到主流CRM中遇到的類別，例如 [!DNL Salesforce]， [!DNL Microsoft Dynamics]， [!DNL Marketo]和其他B2B資料來源。 有了Real-Time CDP B2B Edition，您可以直接將B2B來源的資料匯入Platform，而且結果易於稽核。
+透過使用預先設定的B2B結構描述，您能夠以標準化的可操作結構匯入資料。 許多新結構描述類別幾乎直接對應到主流CRM中遇到的結構描述類別，例如[!DNL Salesforce]、[!DNL Microsoft Dynamics]、[!DNL Marketo]和其他B2B資料來源。 有了Real-Time CDP B2B Edition，您可以直接將B2B來源的資料匯入Platform，而且結果易於稽核。
 
 這些XDM增強功能可讓您透過B2B為中心的來源和目的地更好地擷取和啟用資料，改善資料統一和呈現，以因應更多樣化和彈性的使用案例。
 
@@ -59,19 +59,19 @@ Real-Time CDP B2B版本提供幾個新的XDM結構描述類別、欄位群組和
 
 ## B2B來源
 
-Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 此 [!DNL Marketo] 來源可讓您將B2B資料串流到Platform，並使用平台連線的應用程式保持這些資料在最新狀態。 它支援任意數量的例項 [!DNL Marketo] （對擁有多個例項的大型公司有好處）並提取至單一組織，資料會合併至其中。
+Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 [!DNL Marketo]來源可讓您將B2B資料串流到Platform，並使用平台連線的應用程式保持這些資料在最新狀態。 它支援任何數量的[!DNL Marketo]執行個體（這對擁有多個執行個體的大型公司有利），並提取到合併資料的單一組織中。
 
 >[!NOTE]
 >
->此 [!DNL Marketo] 來源為 **非** 必須使用Real-Time CDP B2B Edition。
+>[!DNL Marketo]來源是&#x200B;**不需要**&#x200B;才能使用Real-Time CDP B2B版本。
 
-請參閱 [Real-Time CDP B2B Edition中的來源](./sources/b2b.md) 有關Marketo和將B2B資料引進Platform的詳細資訊檔案。
+請參閱Real-Time CDP B2B Edition](./sources/b2b.md)中的[來源，以取得有關Marketo和將B2B資料帶入Platform的詳細資訊。
 
 ## B2B目的地
 
 Google Customer Match、Facebook、LinkedIn、Marketo Engage、Amazon S3、Google Display &amp; Video 360、Google Ads和Google Ad Manager等Experience Platform目的地都由Real-Time CDP B2B Edition提供和完整支援。 Marketo Engage目的地也會將區段會籍資料從Platform串流出去，並以Marketo中的清單形式提供。
 
-請參閱 [Marketo Engage目的地](../destinations/catalog/adobe/marketo-engage.md) 以取得詳細資訊。
+如需詳細資訊，請參閱[Marketo Engage目的地](../destinations/catalog/adobe/marketo-engage.md)的概觀。
 
 對於擁有多個CRM的公司，Real-Time CDP B2B Edition提供將目的地聯結器設定為不同Marketo或CRM例項的選項。 如有需要，您可以為每個執行個體設定目的地聯結器，並獨立將受眾傳送至每個CRM執行個體。
 

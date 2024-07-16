@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # 資料集服務API中的資料使用標籤
 
-與目錄服務API不同， [!DNL Dataset Service] API提供端點來管理資料集的資料使用標籤。 如需如何呼叫這些端點的步驟，請參閱以下指南： [使用API管理資料使用標籤](../../data-governance/labels/dataset-api.md) Adobe Experience Platform資料控管檔案中的資訊。
+[!DNL Dataset Service] API與目錄服務API不同，可提供端點來管理資料集的資料使用標籤。 如需如何呼叫這些端點的步驟，請參閱Adobe Experience Platform資料控管檔案中的[使用API管理資料使用標籤](../../data-governance/labels/dataset-api.md)指南。

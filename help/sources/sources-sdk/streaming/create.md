@@ -10,19 +10,19 @@ ht-degree: 1%
 
 ---
 
-# 使用建立新的連線規格 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API建立新的連線規格
 
 >[!NOTE]
 >
->自助來源串流SDK為測試版。 請閱讀 [來源概觀](../../home.md#terms-and-conditions) 以取得有關使用測試版標籤來源的詳細資訊。
+>自助來源串流SDK為測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
 
-連線對規格代表來源的結構。 它包含有關來源驗證需求的資訊，定義如何探索和檢查來源資料，並提供有關給定來源屬性的資訊。 此 `/connectionSpecs` 中的端點 [!DNL Flow Service] API可讓您以程式設計方式管理組織內的連線規格。
+連線對規格代表來源的結構。 它包含有關來源驗證需求的資訊，定義如何探索和檢查來源資料，並提供有關給定來源屬性的資訊。 [!DNL Flow Service] API中的`/connectionSpecs`端點可讓您以程式設計方式管理組織內的連線規格。
 
-以下檔案提供如何使用建立連線對規格的步驟。 [!DNL Flow Service] API並透過自助來源（串流SDK）整合新來源。
+以下檔案提供如何使用[!DNL Flow Service] API建立連線規格，以及透過自助來源（串流SDK）整合新來源的步驟。
 
 ## 快速入門
 
-在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 收整合品
 
@@ -42,8 +42,8 @@ ht-degree: 1%
 | 成品（檔案名稱） | 說明 | 範例 |
 | --- | --- | --- |
 | {your_source} | 來源的名稱。 此資料夾應在您的私人Git存放庫中包含與您的來源相關的所有成品。 | `medallia` |
-| {your_source}-category.txt | 來源所屬的類別，格式為文字檔。 **注意**：如果您認為您的來源不符合上述任何類別，請聯絡您的Adobe代表進行討論。 | `medallia-category.txt` 在檔案內，請指定來源的類別，例如： `streaming`. |
-| {your_source}-description.txt | 來源的簡短說明。 | [!DNL Medallia] 是行銷自動化來源，可用來提供 [!DNL Medallia] 要Experience Platform的資料。 |
+| {your_source}-category.txt | 來源所屬的類別，格式為文字檔。 **注意**：如果您認為您的來源不符合上述任何類別，請聯絡您的Adobe代表進行討論。 | `medallia-category.txt`在檔案內，請指定您來源的類別，例如： `streaming`。 |
+| {your_source}-description.txt | 來源的簡短說明。 | [!DNL Medallia]是行銷自動化來源，可用來將[!DNL Medallia]資料帶入Experience Platform。 |
 | {your_source}-icon.svg | 用來在Experience Platform來源目錄中表示來源的影像。 此圖示必須是SVG檔案。 |
 | {your_source}-label.txt | 您應顯示在Experience Platform來源目錄中的來源名稱。 | 梅迪亞文 |
 | {your_source}-connectionSpec.json | 包含您來源之連線規格的JSON檔案。 一開始不需要這個檔案，因為當您完成本指南時，會填入您的連線規格。 | `medallia-connectionSpec.json` |
@@ -52,15 +52,15 @@ ht-degree: 1%
 
 >[!TIP]
 >
->在連線規格的測試期間，您可以使用 `text` 連線規格中。
+>在連線規格的測試期間，您可以在連線規格中使用`text`取代索引鍵值。
 
 將必要的檔案新增至私人Git存放庫後，您必須建立提取請求(PR)以供Adobe檢閱。 您的PR獲得核准並合併後，系統就會提供您的ID，供連線規格參考來源的標籤、說明和圖示。
 
-接下來，請依照下列步驟設定您的連線規格。 如需可新增至來源的不同功能（例如進階排程、自訂結構描述或不同分頁型別）的相關額外指南，請檢閱以下指南： [設定來源規格](../config/sourcespec.md).
+接下來，請依照下列步驟設定您的連線規格。 如需可新增至來源的不同功能（例如進階排程、自訂結構描述或不同分頁型別）的其他指引，請檢閱[設定來源規格](../config/sourcespec.md)的指南。
 
 ## 複製連線規格範本
 
-收集到必要的成品後，複製下方的連線規格範本並貼到您選擇的文字編輯器中，然後更新方括弧中的屬性 `{}` ，其中包含與您特定來源相關的資訊。
+收集到必要的成品後，請將下方的連線規格範本複製並貼到您選擇的文字編輯器中，然後使用與特定來源相關的資訊更新括弧`{}`中的屬性。
 
 ```json
 {
@@ -144,7 +144,7 @@ ht-degree: 1%
 * [設定您的來源規格](../config/sourcespec.md)
 * [設定您的瀏覽規格](../config/explorespec.md)
 
-更新您的規格資訊後，您可以透過向以下網站發出POST請求來提交新的連線規格： `/connectionSpecs` 的端點 [!DNL Flow Service] API。
+更新您的規格資訊後，您可以透過向[!DNL Flow Service] API的`/connectionSpecs`端點發出POST請求來提交新的連線規格。
 
 **API格式**
 
@@ -236,7 +236,7 @@ curl -X POST \
 
 **回應**
 
-成功的回應會傳回新建立的連線規格，包括其唯一的 `id`.
+成功的回應會傳回新建立的連線規格，包括其唯一的`id`。
 
 ```json
 {
@@ -321,6 +321,6 @@ curl -X POST \
 
 ## 後續步驟
 
-現在您已經建立了新的連線規格，您必須將其對應的連線規格ID加入現有的流程規格。 請參閱上的教學課程 [更新流程規格](./update-flow-specs.md) 以取得詳細資訊。
+現在您已經建立了新的連線規格，您必須將其對應的連線規格ID加入現有的流程規格。 如需詳細資訊，請參閱[更新流程規格](./update-flow-specs.md)的教學課程。
 
-若要修改您建立的連線規格，請參閱上的教學課程 [更新連線規格](./update-connection-specs.md).
+若要修改您建立的連線規格，請參閱有關[更新連線規格](./update-connection-specs.md)的教學課程。

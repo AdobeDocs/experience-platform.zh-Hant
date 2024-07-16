@@ -17,12 +17,12 @@ ht-degree: 0%
 
 Web SDK可讓您以兩種方式傳送顯示事件：
 
-* [自動](#send-automatically)，即個人化內容在頁面上呈現之後立即執行。 請參閱檔案，瞭解如何 [呈現個人化內容](rendering-personalization-content.md) 以取得詳細資訊。
-* [手動](#send-sendEvent-calls)，透過後續 `sendEvent` 呼叫。
+* [自動](#send-automatically)，緊接個人化內容在頁面上呈現之後。 如需詳細資訊，請參閱有關如何[呈現個人化內容](rendering-personalization-content.md)的檔案。
+* [手動](#send-sendEvent-calls)，透過後續`sendEvent`呼叫。
 
 >[!NOTE]
 >
->在呼叫時，顯示事件不會自動傳送 `applyPropositions` 函式。
+>呼叫`applyPropositions`函式時，顯示事件不會自動傳送。
 
 ## 自動傳送顯示事件 {#send-automatically}
 
@@ -31,31 +31,31 @@ Web SDK可讓您以兩種方式傳送顯示事件：
 若要在頁面上呈現個人化內容後自動傳送顯示事件，您必須設定下列引數：
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` 或未指定
+* `personalization.sendDisplayNotifications: true`或未指定
 
-Web SDK會在任何個人化轉譯為結果後，立即傳送顯示事件。 `sendEvent` 呼叫。
+Web SDK會在任何個人化轉譯為`sendEvent`呼叫的結果後，立即傳送顯示事件。
 
 ## 在後續sendEvent呼叫中傳送顯示事件 {#send-sendEvent-calls}
 
-比較 [自動](#send-automatically) 傳送顯示事件（當您將其納入後續活動時） `sendEvent` 呼叫您也可以有機會在呼叫中包含有關頁面載入的詳細資訊。 這可能是額外的資訊，在請求個人化內容時無法取得。
+相較於[自動](#send-automatically)傳送顯示事件，當您將其納入後續`sendEvent`呼叫時，您也有機會在呼叫中包含有關頁面載入的更多資訊。 這可能是額外的資訊，在請求個人化內容時無法取得。
 
-此外，傳送顯示事件於 `sendEvent` 使用Adobe Analytics時，呼叫可將跳出率錯誤降至最低。
+此外，在`sendEvent`呼叫中傳送顯示事件可在使用Adobe Analytics時將跳出率錯誤降至最低。
 
 >[!IMPORTANT]
 >
->使用手動呈現的主張時，顯示事件僅支援透過 `sendEvent` 呼叫。 在此情況下，您無法自動傳送顯示事件。
+>使用手動轉譯的主張時，僅透過`sendEvent`呼叫支援顯示事件。 在此情況下，您無法自動傳送顯示事件。
 
 ### 傳送自動呈現主張的顯示事件 {#auto-rendered-propositions}
 
-若要傳送自動呈現主張的顯示事件，您必須在下列欄位中設定下列引數： `sendEvent` 呼叫：
+若要傳送自動轉譯主張的顯示事件，您必須在`sendEvent`呼叫中設定下列引數：
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` 用於頁面點選的頂端
+* 頁面點選頂端的`personalization.sendDisplayNotifications: false`
 
-若要傳送顯示事件，請呼叫 `sendEvent` 替換為 `personalization.includePendingDisplayNotifications: true`
+若要傳送顯示事件，請使用`personalization.includePendingDisplayNotifications: true`呼叫`sendEvent`
 
 ### 傳送手動呈現主張的顯示事件 {#manually-rendered-propositions}
 
-若要傳送手動呈現主張的顯示事件，您必須將其納入 `_experience.decisioning.propositions` XDM欄位，包括 `id`， `scope`、和 `scopeDetails` 中的欄位。
+若要傳送手動呈現主張的顯示事件，您必須將其納入`_experience.decisioning.propositions` XDM欄位中，包括主張的`id`、`scope`和`scopeDetails`欄位。
 
-此外，設定 `include _experience.decisioning.propositionEventType.display` 欄位至 `1`.
+此外，將`include _experience.decisioning.propositionEventType.display`欄位設為`1`。

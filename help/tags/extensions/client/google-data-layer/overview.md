@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Google資料層擴充功能
 
-Google資料層擴充功能可讓您在標籤實作中使用Google資料層。 此擴充功能可獨立使用，或同時與Google解決方案和Google的開放原始碼搭配使用 [資料層協助程式庫](https://github.com/google/data-layer-helper).
+Google資料層擴充功能可讓您在標籤實作中使用Google資料層。 此擴充功能可獨立使用，或同時與Google解決方案和Google的開放原始碼[資料層協助程式庫](https://github.com/google/data-layer-helper)搭配使用。
 
-Helper Library提供與Adobe Client Data Layer (ACDL)類似的事件導向功能。 Google資料層擴充功能的資料元素、規則和動作，可提供與 [ACDL擴充功能](../client-data-layer/overview.md).
+Helper Library提供與Adobe Client Data Layer (ACDL)類似的事件導向功能。 Google Data Layer擴充功能的資料元素、規則和動作，提供與[ACDL擴充功能](../client-data-layer/overview.md)類似的功能。
 
 ## 安裝
 
-若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，然後選取「 」 **[!UICONTROL Google資料層]**.
+若要安裝擴充功能，請導覽至資料收集UI中的擴充功能目錄，並選取&#x200B;**[!UICONTROL Google資料層]**。
 
 安裝後，擴充功能就會在每次載入Adobe Experience Platform Tags程式庫時，建立或存取資料層。
 
@@ -25,7 +25,7 @@ Helper Library提供與Adobe Client Data Layer (ACDL)類似的事件導向功能
 
 擴充功能組態可用來定義擴充功能使用的資料層名稱。 若載入Adobe Experience Platform Tags時不存在具有已設定名稱的資料層，擴充功能會建立一個資料層。
 
-資料層名稱預設為Google預設名稱 `dataLayer`.
+資料層名稱預設為Google預設名稱`dataLayer`。
 
 >[!NOTE]
 >
@@ -35,27 +35,27 @@ Helper Library提供與Adobe Client Data Layer (ACDL)類似的事件導向功能
 
 >[!NOTE]
 >
->單字 _事件_ 在Adobe Experience Platform Tags中使用事件導向資料層時，系統便會超載。 _活動_ 可以是：
+>在Adobe Experience Platform Tags中使用事件導向的資料層時，單字&#x200B;_event_&#x200B;會多載。 _事件_&#x200B;可以是：
 > - Adobe Experience Platform Tags事件（程式庫已載入等）。
 > - JavaScript事件。
-> - 使用推送至資料層的資料 _事件_ 關鍵字。
+> - 使用&#x200B;_event_&#x200B;關鍵字推送至資料層的資料。
 
 擴充功能可讓您接聽資料層上的變更。
 
 >[!NOTE]
 >
->務必瞭解如何使用 _事件_ 將資料推送至Google資料層時的關鍵字，類似於Adobe使用者端資料層。 此 _事件_ 關鍵字會變更Google資料層的行為，進而變更此擴充功能。\
+>當資料推送至Google資料層時(類似於Adobe使用者端資料層)，請務必瞭解如何使用&#x200B;_event_&#x200B;關鍵字。 _event_&#x200B;關鍵字會變更Google資料層的行為，進而變更此延伸。\
 > 請閱讀Google檔案，或如果對此點不確定，請進行研究。
 
 ### Google事件型別
 
-Google支援兩種推送事件的方法：Google Tag Manager，使用 `push()` 方法和Google Analytics4，使用 `gtag()` 方法。
+Google支援兩種推播事件的方式：使用`push()`方法的Google Tag Manager，以及使用`gtag()`方法的Google Analytics4。
 
-Google Data Layer 1.2.1之前的擴充功能版本僅支援以下專案建立的事件： `push()`，如本頁面的程式碼範例所示。
+1.2.1之前的Google Data Layer擴充功能版本僅支援`push()`建立的事件，如本頁面的程式碼範例所示。
 
-1.2.1版和更新版本支援使用建立的事件 `gtag()`.  這是選擇性的，並可在擴充功能設定對話方塊中啟用。
+使用`gtag()`建立的1.2.1版和更新版本支援事件。  這是選擇性的，並可在擴充功能設定對話方塊中啟用。
 
-有關詳細資訊 `push()` 和 `gtag()` 事件，請參閱 [Google檔案](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  擴充功能的設定和規則對話方塊中也提供資訊。
+如需`push()`和`gtag()`事件的詳細資訊，請參閱[Google檔案](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag)。  擴充功能的設定和規則對話方塊中也提供資訊。
 
 ### 聆聽資料層的所有推送
 
@@ -99,7 +99,7 @@ dataLayer.push({"data":"something"})
 
 如果您指定事件，事件接聽程式會追蹤符合特定字串的任何事件。
 
-例如，設定 `myEvent` 使用此設定時，監聽器只會追蹤下列推播事件：
+例如，使用此組態時設定`myEvent`會導致接聽程式只追蹤下列推播事件：
 
 ```js
 dataLayer.push({"event":"myEvent"})
@@ -107,7 +107,7 @@ dataLayer.push({"event":"myEvent"})
 
 可以使用(ECMAScript / JavaScript)規則運算式來比對事件名稱。
 
-例如，設定&#39;myEvent\d&#39;將追蹤 `myEvent` 以數字(\d)：
+例如，設定&#39;myEvent\d&#39;會以數字(\d)追蹤`myEvent`：
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -157,4 +157,4 @@ dataLayer.push({"event":"myEvent2"})
 
 擴充功能的資料元素和事件對話方塊包含詳細的使用資訊和範例。
 
-其他一般資訊請參閱 [專案讀我檔案](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+其他一般資訊在[專案README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)中

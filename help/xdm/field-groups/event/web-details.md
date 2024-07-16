@@ -11,13 +11,13 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL 網頁詳細資訊] 結構描述欄位群組
+# [!UICONTROL 網頁詳細資料]結構描述欄位群組
 
 >[!NOTE]
 >
->數個結構描述欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../name-updates.md) 以取得詳細資訊。
+>數個結構描述欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../name-updates.md)的檔案。
 
-[!UICONTROL 網頁詳細資訊] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)，用於說明與互動、頁面詳細資料和反向連結等網頁詳細資料事件相關的資訊。
+[!UICONTROL 網頁詳細資料]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，用於描述有關網頁詳細資料事件的資訊，例如互動、頁面詳細資料和反向連結。
 
 ![](../../images/field-groups/web-details.png)
 
@@ -29,5 +29,5 @@ ht-degree: 3%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.schema.json)

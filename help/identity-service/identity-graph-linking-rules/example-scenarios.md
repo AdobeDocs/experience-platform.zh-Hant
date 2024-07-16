@@ -26,7 +26,7 @@ ht-degree: 1%
 | --- | --- |
 | 家用電腦和平板電腦 | 丈夫和妻子都登入各自的銀行帳戶。 |
 | 公用資訊站 | 在機場登入的旅行者，會使用他們的忠誠度身份證來登記行李和列印登機牌。 |
-| 呼叫中心 | 客服中心人員代表客戶致電客戶支援以解決問題，登入單一裝置。 |
+| 客服中心 | 客服中心人員代表客戶致電客戶支援以解決問題，登入單一裝置。 |
 
 ![共用裝置](../images/identity-settings/shared-devices.png)
 
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 註冊時也會有使用者提供虛假值做為電話號碼和/或電子郵件地址的例項。 在這些情況下，如果未啟用限制，則電話/電子郵件相關的身分最終將會連結至多個不同的CRM ID。
 
-![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
+![無效的email-phone](../images/identity-settings/invalid-email-phone.png)
 
 使用身分圖表連結規則，您可以：
 
@@ -58,7 +58,7 @@ ht-degree: 1%
 
 這些身分可能會導致以下圖表，其中多個CRM ID與「不良」身分合併在一起：
 
-![bad-data](../images/identity-settings/bad-data.png)
+![錯誤資料](../images/identity-settings/bad-data.png)
 
 透過身分圖表連結規則，您可以將CRM ID設定為唯一識別碼，以防止由於此類資料而造成不想要的設定檔收合。
 

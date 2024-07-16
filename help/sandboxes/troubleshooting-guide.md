@@ -13,7 +13,7 @@ ht-degree: 8%
 
 # 沙箱疑難排解指南
 
-本檔案提供有關Adobe Experience Platform中沙箱的常見問題解答。 有關其他Platform服務的問題和疑難排解，請參閱 [Experience Platform疑難排解指南](../landing/troubleshooting.md).
+本檔案提供有關Adobe Experience Platform中沙箱的常見問題解答。 有關其他Platform服務的問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
 沙箱將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。 如需詳細資訊，請參閱[沙箱概觀](home.md)。
 
@@ -31,11 +31,11 @@ ht-degree: 8%
 
 Experience Platform中有兩種沙箱型別：
 
-* **生產沙箱**：生產沙箱旨在用於生產環境中的設定檔。 Platform可讓您建立多個生產沙箱，以便在為資料提供正確功能的同時仍保持作業隔離。 此功能可讓您為不同的業務線、品牌、專案或區域指定特定的生產沙箱。 生產沙箱支援大量生產設定檔，最多可達您的授權 [!DNL Profile] 承諾（在所有授權的生產沙箱中累積測量）。 您有權根據授權使用授權的平均設定檔 [!DNL Profile] （在所有授權的生產沙箱中累積測量）。
-* **開發沙箱**：開發沙箱是一種沙箱，專門可用於使用非生產設定檔進行開發和測試。 開發沙箱支援大量非生產設定檔，最多可達您授權的10% [!DNL Profile] 承諾（在所有授權開發沙箱中累積測量）。 您有權享有：
+* **生產沙箱**：生產沙箱應該用於您生產環境中的設定檔。 Platform可讓您建立多個生產沙箱，以便在為資料提供正確功能的同時仍保持作業隔離。 此功能可讓您為不同的業務線、品牌、專案或區域指定特定的生產沙箱。 生產沙箱支援大量生產設定檔，最多可達您授權的[!DNL Profile]承諾（在所有授權的生產沙箱中累積測量）。 您有權為每個授權的[!DNL Profile]使用授權的平均設定檔（在所有授權的生產沙箱中累積測量）。
+* **開發沙箱**：開發沙箱是一種沙箱，只能用於開發及測試非生產設定檔。 開發沙箱支援大量非生產設定檔，最多可達您授權的[!DNL Profile]承諾的10% （在所有授權開發沙箱中累積測量）。 您有權享有：
    * 每個授權非生產設定檔的平均非生產設定檔豐富度為75 KB （在所有授權開發沙箱中累積測量）；
    * 每個開發沙箱每天一個批次分段工作；
-   * 平均120 [!DNL Profile] API呼叫，按 [!DNL Profile]，每年（在所有已授權開發沙箱中累積測量）。
+   * 每年[!DNL Profile]平均有120個[!DNL Profile] API呼叫（在所有授權開發沙箱中累積測量）。
 
 如需詳細資訊，請參閱[沙箱概觀](./home.md)。
 
@@ -53,7 +53,7 @@ Experience Platform執行個體支援多個生產及開發沙箱，每個沙箱�
 
 預設Experience Platform授權共授予您5個沙箱，您可將其分類為生產或開發。 您可以額外授權10個沙箱，最多總共75個沙箱。
 
-生產沙箱可重設或刪除，但Adobe Analytics也用於的生產沙箱除外 [跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) 功能，或其中代管的身分圖表同時被Adobe Audience Manager用於 [以人物為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) 功能。
+生產沙箱可重設或刪除，但Adobe Analytics也將其用於[跨裝置分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)功能的生產沙箱，或其中代管的身分圖表也被Adobe Audience Manager用於[以人為基礎的目的地(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)功能除外。
 
 您可以更新生產沙箱的標題。 不過，無法重新命名生產沙箱。
 
@@ -69,8 +69,8 @@ Experience Platform目前最多可在單一組織中啟用75個沙箱（生產�
 
 ## 我剛才建立了沙箱。 我該如何為將使用此沙箱的使用者設定許可權？
 
-Adobe Admin Console透過使用產品設定檔將使用者連結至沙箱和許可權。 建立新沙箱後，導覽至 **許可權** 要授與存取權的產品設定檔的索引標籤，然後按一下 **沙箱**. 在此，您可以按照與其他許可權相同的方式，新增或移除新沙箱的存取權。
+Adobe Admin Console透過使用產品設定檔將使用者連結至沙箱和許可權。 建立新沙箱後，請導覽至您要授與存取權的產品設定檔的&#x200B;**許可權**&#x200B;標籤，然後按一下&#x200B;**沙箱**。 在此，您可以按照與其他許可權相同的方式，新增或移除新沙箱的存取權。
 
 如果您想要將唯一許可權新增到特定沙箱的使用者，您可能需要建立新的產品設定檔，並套用適當的沙箱和許可權，然後將這些使用者指派到該設定檔。
 
-請參閱 [存取控制使用手冊](../access-control/ui/overview.md) 以取得在Admin Console中管理沙箱和許可權的詳細資訊。
+請參閱[存取控制使用手冊](../access-control/ui/overview.md)，以取得有關在Admin Console中管理沙箱和許可權的詳細資訊。

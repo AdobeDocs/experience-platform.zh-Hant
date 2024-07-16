@@ -5,7 +5,7 @@ description: 本檔案提供使用自助式來源（批次SDK）所需準備的�
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 驗證規格定義了Adobe Experience Platform使用者如何連線至您的來源。
 
-此 `authSpec` 陣列包含將來源連線到Platform所需的驗證引數資訊。 任何特定來源都可以支援多種不同型別的驗證。
+`authSpec`陣列包含將來源連線到Platform所需的驗證引數資訊。 任何特定來源都可以支援多種不同型別的驗證。
 
 ## 驗證規格
 
@@ -181,7 +181,7 @@ OAuth 2重新整理程式碼可產生暫時存取權杖和重新整理權杖，�
 
 ## 驗證規格範例
 
-以下範例是使用 [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) 來源。
+以下是使用[[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md)來源的已完成驗證規格的範例。
 
 ```json
   "authSpec": [
@@ -237,4 +237,4 @@ OAuth 2重新整理程式碼可產生暫時存取權杖和重新整理權杖，�
 
 ## 後續步驟
 
-填入您的驗證規格後，您可以繼續設定您要整合至平台的來源的來源規格。 檢視檔案： [設定來源規格](./sourcespec.md) 以取得詳細資訊。
+填入您的驗證規格後，您可以繼續設定您要整合至平台的來源的來源規格。 如需詳細資訊，請參閱[設定來源規格](./sourcespec.md)上的檔案。

@@ -3,64 +3,65 @@ title: Trade Desk Real-Time Conversions API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Trade Desk Real-Time Conversions API擴充功能。
 hide: true
 hidefromtoc: true
-source-git-commit: d9d185685106ac160dcbefc5e9567a85c8302a73
+exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
+source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 2%
 
 ---
 
-# [!DNL The Trade Desk Real-Time Conversions API] 擴充功能概觀
+# [!DNL The Trade Desk Real-Time Conversions API]擴充功能概觀
 
-您可以使用 [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi) 從Adobe Experience PlatformEdge Network傳送資料至的擴充功能 [!DNL The Trade Desk] 利用API的功能，在 [事件轉送](../../../ui/event-forwarding/overview.md) 規則。
+您可以利用[事件轉送](../../../ui/event-forwarding/overview.md)規則中的API功能，使用[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi)擴充功能將資料從Adobe Experience PlatformEdge Network傳送至[!DNL The Trade Desk]。
 
-使用 [!DNL The Trade Desk Real-Time Conversions API] 擴充功能上，您可在以下位置運用API的功能： [事件轉送](../../../ui/event-forwarding/overview.md) 資料傳送至的規則 [!DNL The Trade Desk] 從Adobe Experience PlatformEdge Network。
+使用[!DNL The Trade Desk Real-Time Conversions API]擴充功能，您可以在[事件轉送](../../../ui/event-forwarding/overview.md)規則中運用API的功能，從Adobe Experience PlatformEdge Network傳送資料給[!DNL The Trade Desk]。
 
-請閱讀本檔案，瞭解如何安裝擴充功能，以及在事件轉送中使用其功能 [規則](../../../ui/managing-resources/rules.md).
+請閱讀本檔案，瞭解如何安裝擴充功能，以及如何在事件轉送[規則](../../../ui/managing-resources/rules.md)中使用其功能。
 
 >[!NOTE]
 >
->維護此擴充功能和檔案頁面的人員為 [!DNL The Trade Desk] 團隊。 如有任何查詢或更新要求，請直接聯絡他們。
+>此擴充功能和檔案頁面是由[!DNL The Trade Desk]團隊維護。 如有任何查詢或更新要求，請直接聯絡他們。
 
 ## 先決條件 {#prerequisites}
 
-您必須具備相關的廣告商ID，且內的ID必須是UPixel ID，追蹤器為ID。 [!DNL The Trade Desk] 帳戶，以便設定 [[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi).
+您必須有相關的廣告商ID、UPixel ID，且您的[!DNL The Trade Desk]帳戶中必須有追蹤器ID才能設定[[!DNL The Trade Desk Real-Time Conversions API]](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi)。
 
 >[!INFO]
 >
 >如果您是商人，您也需要取得商家ID。
 
-## 安裝並設定 [!DNL The Trade Desk] 即時轉換API {#install}
+## 安裝及設定[!DNL The Trade Desk]即時轉換API {#install}
 
-若要安裝擴充功能， [建立事件轉送屬性](../../../ui/event-forwarding/overview.md#properties) 或選取要編輯的現有屬性。
+若要安裝擴充功能，[請建立事件轉送屬性](../../../ui/event-forwarding/overview.md#properties)，或選取要編輯的現有屬性。
 
-選取 **[!UICONTROL 擴充功能]** ，位於左側導覽器中。 在 **[!UICONTROL 目錄]** 索引標籤中，選取 **[!UICONTROL 交易台]** Real-Time Conversions API卡片，然後選取 **[!UICONTROL 安裝]**.
+在左側導覽中選取&#x200B;**[!UICONTROL 擴充功能]**。 在&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤中，選取&#x200B;**[!UICONTROL 交易台]**&#x200B;即時轉換API卡，然後選取&#x200B;**[!UICONTROL 安裝]**。
 
-![擴充功能目錄顯示 [!DNL The Trade Desk] 擴充卡醒目提示安裝。](../../../images/extensions/server/tradedesk/install-extension.png)
+![顯示[!DNL The Trade Desk]擴充卡醒目提示安裝的擴充功能目錄。](../../../images/extensions/server/tradedesk/install-extension.png)
 
-在下一個畫面中，輸入 [!UICONTROL 廣告商ID]，並可選擇使用 [!UICONTROL 商家ID]. 您可以將ID直接貼入這些輸入中，也可以改用資料元素。 這些將作為進行事件呼叫時使用的預設值 [!DNL The Trade Desk] 即時轉換API。 選取 **[!UICONTROL 儲存]** 完成後。
+在下一個畫面中，輸入[!UICONTROL 廣告商ID]，並選擇性地輸入[!UICONTROL 商家識別碼]。 您可以將ID直接貼入這些輸入中，也可以改用資料元素。 這些將做為呼叫[!DNL The Trade Desk]即時轉換API事件時使用的預設值。 完成時選取&#x200B;**[!UICONTROL 儲存]**。
 
-若要瞭解如何建立資料元素，並使其可用於標籤屬性中的擴充功能，請遵循 [建立資料元素](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) 教學課程。
+若要瞭解如何建立資料元素，並使其可用於標籤屬性中的擴充功能，請依照[建立資料元素](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements)教學課程中的指示進行。
 
-![此 [!DNL The Trade Desk] 擴充功能設定頁面，其中包含 [!UICONTROL 廣告商ID] 和 [!UICONTROL 商家ID] 醒目提示的欄位。](../../../images/extensions/server/tradedesk/configure-extension.png)
+![含有[!UICONTROL 廣告商ID]和[!UICONTROL 商家識別碼]欄位的[!DNL The Trade Desk]延伸功能組態頁面已反白顯示。](../../../images/extensions/server/tradedesk/configure-extension.png)
 
 擴充功能已安裝，您現在可以在事件轉送規則中運用其功能。
 
 ## 設定事件轉送規則 {#rule}
 
-安裝並設定擴充功能後，您就可以開始建立事件轉送規則，以判斷將事件傳送至的方式和時間 [!DNL The Trade Desk].
+安裝並設定擴充功能後，您就可以開始建立事件轉送規則，以判斷將事件傳送至[!DNL The Trade Desk]的方式和時間。
 
-您應考慮設定數個規則，以傳送所有已接受的規則 [要求屬性](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) via [!DNL The Trade Desk] 和 [!DNL The Trade Desk] 即時轉換API。
+您應該考慮設定數個規則，以透過[!DNL The Trade Desk]和[!DNL The Trade Desk]即時轉換API傳送所有已接受的[要求屬性](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties)。
 
 >[!NOTE]
 >
 >事件應儘可能即時或接近即時傳送。
 
-建立新的事件轉送 [規則](../../../ui/managing-resources/rules.md) 在事件轉送屬性中。 在 **[!UICONTROL 動作]**，新增動作並將擴充功能設為 **[!UICONTROL 交易台]**. 接下來，選取 **[!UICONTROL 即時轉換]** 針對 **[!UICONTROL 動作型別]**.
+在您的事件轉送屬性中建立新的事件轉送[規則](../../../ui/managing-resources/rules.md)。 在&#x200B;**[!UICONTROL 動作]**&#x200B;底下，新增動作並將擴充功能設為&#x200B;**[!UICONTROL 交易台]**。 接著，為&#x200B;**[!UICONTROL 動作型別]**&#x200B;選取&#x200B;**[!UICONTROL 即時轉換]**。
 
 ![「事件轉送屬性規則」檢視中，醒目顯示新增事件轉送規則動作設定所需的欄位。](../../../images/extensions/server/tradedesk/tradedesk-event-action.png)
 
-選擇後，會出現其他控制項，以進一步設定將傳送至的事件資料 [!DNL The Trade Desk]. 選取 **[!UICONTROL 保留變更]** 以儲存規則。
+選取後，會顯示其他控制項以進一步設定將傳送至[!DNL The Trade Desk]的事件資料。 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以儲存規則。
 
 設定選項分為三個主要區段，概述如下：
 
@@ -83,38 +84,38 @@ ht-degree: 2%
 
 {style="table-layout:auto"}
 
-![此 [!DNL Basic Request Properties] 區段顯示輸入欄位的範例資料。](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
+![顯示輸入欄位之範例資料的[!DNL Basic Request Properties]區段。](../../../images/extensions/server/tradedesk/configure-extension-basic-request-properties.png)
 
-請參閱 [!DNL The Trade Desk] 開發人員檔案，以瞭解有關 [要求屬性](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties) 接受者 [!DNL The Trade Desk] 即時轉換API。
+請參閱[!DNL The Trade Desk]開發人員檔案，以取得有關[!DNL The Trade Desk]即時轉換API所接受的[要求屬性](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties)的詳細資訊。
 
 **[!UICONTROL 物件要求引數]**
 
-包含更多資訊的JSON物件。 您可以選擇使用一組縮減的鍵值輸入或提供原始JSON。 此外，您可以選取磁碟(![磁碟圖示](../../../images/extensions/server/tradedesk/disk-icon.png))。
+包含更多資訊的JSON物件。 您可以選擇使用一組縮減的鍵值輸入或提供原始JSON。 此外，您可以選取右側的磁碟（![磁碟圖示](../../../images/extensions/server/tradedesk/disk-icon.png)），從資料元素擷取動態資料。
 
 
-![此 [!DNL Object Request Parameters] 顯示可用欄位的區段。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
+![顯示可用欄位的[!DNL Object Request Parameters]區段。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-請參閱 [即時轉換事件](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) 檔案以取得以下專案的詳細資訊： [!UICONTROL 物件要求引數] 及其屬性。
+如需[!UICONTROL 物件要求引數]及其屬性的詳細資訊，請參閱[即時轉換事件](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items)檔案。
 
 **[!UICONTROL 設定覆寫]**
 
 >[!NOTE]
 >
->此 [!UICONTROL 設定覆寫] 欄位可讓您設定不同的 [!DNL Advertiser ID] 和/或 [!DNL Merchant ID] 每個規則上。
+>[!UICONTROL 設定覆寫]欄位可讓您在每個規則上設定不同的[!DNL Advertiser ID]和/或[!DNL Merchant ID]。
 
 | 輸入 | 說明 |
 | --- | --- |
 | 廣告商 ID | 此事件相關廣告商的唯一識別碼。 您可以提供不同的廣告商ID，覆寫您在擴充功能設定中提供的ID。 |
-| 商家ID | 每個商家提供的唯一識別碼 [!DNL The Trade Desk] 整個上線程式。 您可以提供不同的商人ID，以覆寫您在擴充功能設定中提供的ID。 |
+| 商家ID | [!DNL The Trade Desk]在整個上線程式中為每個商家提供的唯一識別碼。 您可以提供不同的商人ID，以覆寫您在擴充功能設定中提供的ID。 |
 
-![此 [!DNL Configuration Overrides] 顯示可用欄位的區段。](../../../images/extensions/server/tradedesk/configure-overrides.png)
+![顯示可用欄位的[!DNL Configuration Overrides]區段。](../../../images/extensions/server/tradedesk/configure-overrides.png)
 
-當您對規則感到滿意時，請選取 **[!UICONTROL 儲存至程式庫]**. 最後，發佈新的事件轉送 [版本編號](../../../ui/publishing/builds.md) 以啟用程式庫的變更。
+如果您對規則感到滿意，請選取&#x200B;**[!UICONTROL 儲存至程式庫]**。 最後，發佈新的事件轉送[組建](../../../ui/publishing/builds.md)，以啟用對程式庫所做的變更。
 
 ## 後續步驟
 
-本指南說明如何將伺服器端事件資料傳送至 [!DNL The Trade Desk] 使用 [!DNL The Trade Desk] 即時轉換API擴充功能。 在此，建議您建立可傳送特定轉換事件（如適用於每個行銷活動）的不同規則，以擴大整合範圍。 如需事件轉送功能的詳細資訊，請參閱 [!DNL Adobe Experience Platform]，閱讀 [事件轉送概觀](../../../ui/event-forwarding/overview.md).
+本指南說明如何使用[!DNL The Trade Desk] Real-Time Conversions API擴充功能，將伺服器端事件資料傳送至[!DNL The Trade Desk]。 在此，建議您建立可傳送特定轉換事件（如適用於每個行銷活動）的不同規則，以擴大整合範圍。 如需[!DNL Adobe Experience Platform]中事件轉送功能的詳細資訊，請閱讀[事件轉送概觀](../../../ui/event-forwarding/overview.md)。
 
-請參閱 [!DNL The Trade Desk] 檔案： [的最佳作法 [!DNL The Trade Desk] 即時轉換API](https://www.facebook.com/business/help/308855623839366?id=818859032317965) 以取得如何有效實作整合的詳細指引。
+如需有關如何有效實作整合的更多指引，請參閱[!DNL The Trade Desk]有關 [!DNL The Trade Desk] 即時轉換API](https://www.facebook.com/business/help/308855623839366?id=818859032317965)的[最佳實務的檔案。
 
-如需使用Experience Platform偵錯程式和事件轉送監視工具對實作進行偵錯的詳細資訊，請參閱 [Adobe Experience Platform Debugger概觀](../../../../debugger/home.md) 和 [監視事件轉送中的活動](../../../ui/event-forwarding/monitoring.md).
+如需使用Experience Platform偵錯工具與事件轉送監視工具對實作進行偵錯的詳細資訊，請閱讀[Adobe Experience Platform Debugger總覽](../../../../debugger/home.md)與[監視事件轉送中的活動](../../../ui/event-forwarding/monitoring.md)。

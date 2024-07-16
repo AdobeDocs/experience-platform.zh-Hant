@@ -11,24 +11,24 @@ ht-degree: 0%
 
 ---
 
-# [!DNL XDM ExperienceEvent] 類別
+# [!DNL XDM ExperienceEvent]類別
 
-[!DNL XDM ExperienceEvent] 是一個標準的體驗資料模型(XDM)類別。 當特定事件發生或達到特定條件集合時，使用此類別建立系統的時間戳記快照。
+[!DNL XDM ExperienceEvent]是標準的體驗資料模型(XDM)類別。 當特定事件發生或達到特定條件集合時，使用此類別建立系統的時間戳記快照。
 
-體驗事件是所發生事件的事實記錄，包括時間點和所涉及個人的身分。 事件可以是明確的（直接可觀察的人類動作）或內隱的（在沒有直接人類動作的情況下引發），並且記錄時不會進行彙總或解譯。 如需有關在平台生態系統中使用此類別的高層級資訊，請參閱 [XDM概覽](../home.md#data-behaviors).
+體驗事件是所發生事件的事實記錄，包括時間點和所涉及個人的身分。 事件可以是明確的（直接可觀察的人類動作）或內隱的（在沒有直接人類動作的情況下引發），並且記錄時不會進行彙總或解譯。 如需在Platform生態系統中使用此類別的高階資訊，請參閱[XDM概觀](../home.md#data-behaviors)。
 
-此 [!DNL XDM ExperienceEvent] 類別本身為結構描述提供幾個時間序列相關的欄位。 其中兩個欄位(`_id` 和 `timestamp`)為 **必填** 適用於以此類別為基礎的所有結構描述，其餘則是選擇性的。 某些欄位的值會在擷取資料時自動填入。
+[!DNL XDM ExperienceEvent]類別本身為結構描述提供數個時間序列相關欄位。 其中兩個欄位（`_id`和`timestamp`）是基於此類別的所有結構描述都是&#x200B;**必要**，其餘則是選擇性的。 某些欄位的值會在擷取資料時自動填入。
 
-![Platform UI中顯示的XDM ExperienceEvent結構。](../images/classes/experienceevent/structure.png)
+![ XDM ExperienceEvent在Platform UI中顯示的結構。](../images/classes/experienceevent/structure.png)
 
 | 屬性 | 說明 |
 | --- | --- |
-| `_id`<br>**（必要）** | 體驗事件類別 `_id` 欄位可唯一識別擷取至Adobe Experience Platform的個別事件。 此欄位用於追蹤個別事件的唯一性、防止資料重複，以及在下游服務中查詢該事件。<br><br>在偵測到重複事件時，Platform應用程式和服務可能會以不同方式處理重複。 例如，如果設定檔服務中的事件相同，則會捨棄該重複事件 `_id` 設定檔存放區中已存在。<br><br>在某些情況下， `_id` 可以是 [通用唯一識別碼(UUID)](https://datatracker.ietf.org/doc/html/rfc4122) 或 [全域唯一識別碼(GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0).<br><br>如果您要從來源連線串流資料，或直接從Parquet檔案擷取資料，應串連特定欄位組合，讓事件具有唯一性，以產生此值。 可串連的事件範例包括主要ID、時間戳記、事件型別等。 串連值必須是 `uri-reference` 字串格式化，表示必須移除任何冒號字元。 之後，應該使用SHA-256或您選擇的其他演演算法來雜湊串連值。<br><br>請務必區分 **此欄位不代表與個人相關的身分**&#x200B;而是資料本身的記錄。 與個人相關的身分資料應委派至 [身分欄位](../schema/composition.md#identity) 由相容的欄位群組所提供。 |
-| `eventMergeId` | 若使用 [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) 若要內嵌資料，這代表造成建立記錄之內嵌批次的ID。 此欄位在資料擷取時由系統自動填入。 不支援在Web SDK實作的內容之外使用此欄位。 |
-| `eventType` | 指出事件型別或類別的字串。 如果您想要將相同結構描述和資料集中的不同事件型別區分開來，例如將產品檢視事件與零售公司的加入購物車事件區分開來，則可以使用此欄位。<br><br>此屬性的標準值提供在 [附錄部分](#eventType)，包括預期使用案例的說明。 此欄位是可延伸的列舉，這表示您也可以使用自己的事件型別字串來分類您正在追蹤的事件。<br><br>`eventType` 限制您只能針對應用程式的每個點選使用單一事件，因此您必須使用計算欄位，讓系統知道哪個事件最重要。 如需詳細資訊，請參閱以下章節： [計算欄位的最佳實務](#calculated). |
-| `producedBy` | 說明事件製作者或來源的字串值。 如有需要，此欄位可用於篩選掉某些事件產生者，以用於分段目的。<br><br>此屬性的部分建議值提供在 [附錄部分](#producedBy). 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生器。 |
-| `identityMap` | 對應欄位，其中包含套用事件之個人的一組名稱空間身分識別。 系統會在擷取身分資料時自動更新此欄位。 若要正確使用此欄位來進行 [即時客戶個人檔案](../../profile/home.md)，請勿嘗試在資料作業中手動更新欄位內容。<br /><br />請參閱以下連結中有關身分對應的章節： [結構描述組合的基本面](../schema/composition.md#identityMap) 以取得其使用案例的詳細資訊。 |
-| `timestamp`<br>**（必要）** | 事件發生時間的ISO 8601時間戳記，格式如下 [RFC 3339第5.6節](https://datatracker.ietf.org/doc/html/rfc3339). 此時間戳記 **必須** 發生在過去，但 **必須** 從1970年開始舉辦。 請參閱以下小節： [時間戳記](#timestamps) 以取得使用此欄位的最佳作法。 |
+| `_id`<br>**（必要）** | 體驗事件類別`_id`欄位可唯一識別擷取至Adobe Experience Platform的個別事件。 此欄位用於追蹤個別事件的唯一性、防止資料重複，以及在下游服務中查詢該事件。<br><br>在偵測到重複事件的地方，Platform應用程式和服務可能會以不同的方式處理重複。 例如，如果設定檔存放區中已存在具有相同`_id`的事件，則會捨棄設定檔服務中的重複事件。<br><br>在某些情況下，`_id`可以是[通用唯一識別碼(UUID)](https://datatracker.ietf.org/doc/html/rfc4122)或[全域唯一識別碼(GUID)](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)。<br><br>如果您要從來源連線串流資料，或直接從Parquet檔案擷取資料，您應該串連特定欄位組合，讓事件具有唯一性，以產生此值。 可串連的事件範例包括主要ID、時間戳記、事件型別等。 串連值必須是`uri-reference`格式字串，這表示必須移除任何冒號字元。 之後，應該使用SHA-256或您選擇的其他演演算法來雜湊串連值。<br><br>請務必注意，**此欄位不代表與個人相關的身分**，而是資料本身的記錄。 與個人相關的身分資料應委派給相容欄位群組所提供的[身分欄位](../schema/composition.md#identity)。 |
+| `eventMergeId` | 如果使用[Adobe Experience Platform Web SDK](/help/web-sdk/home.md)來內嵌資料，這表示所內嵌批次導致建立記錄的識別碼。 此欄位在資料擷取時由系統自動填入。 不支援在Web SDK實作的內容之外使用此欄位。 |
+| `eventType` | 指出事件型別或類別的字串。 如果您想要將相同結構描述和資料集中的不同事件型別區分開來，例如將產品檢視事件與零售公司的加入購物車事件區分開來，則可以使用此欄位。<br><br>此屬性的標準值在[附錄區段](#eventType)中提供，包括預期使用案例的說明。 此欄位是可延伸的列舉，這表示您也可以使用自己的事件型別字串來分類您正在追蹤的事件。<br><br>`eventType`限制您在應用程式上每個點選只能使用單一事件，因此您必須使用計算欄位，讓系統知道哪個事件最重要。 如需詳細資訊，請參閱[計算欄位](#calculated)的最佳實務一節。 |
+| `producedBy` | 說明事件製作者或來源的字串值。 如有需要，此欄位可用於篩選掉某些事件產生者，以用於分段目的。<br><br>在[附錄區段](#producedBy)中提供了這個屬性的某些建議值。 此欄位是可擴充的列舉，這表示您也可以使用自己的字串來代表不同的事件產生器。 |
+| `identityMap` | 對應欄位，其中包含套用事件之個人的一組名稱空間身分識別。 系統會在擷取身分資料時自動更新此欄位。 若要針對[即時客戶設定檔](../../profile/home.md)正確使用此欄位，請勿嘗試在您的資料作業中手動更新欄位內容。<br /><br />如需有關其使用案例的詳細資訊，請參閱[結構描述組合基本概念](../schema/composition.md#identityMap)中身分對應一節。 |
+| `timestamp`<br>**（必要）** | 事件發生時間的ISO 8601時間戳記，格式為[RFC 3339第5.6](https://datatracker.ietf.org/doc/html/rfc3339)節。 此時間戳記&#x200B;**必須**&#x200B;發生在過去，但&#x200B;**必須**&#x200B;發生在1970年以後。 如需使用此欄位的最佳實務，請參閱以下有關[時間戳記](#timestamps)的章節。 |
 
 {style="table-layout:auto"}
 
@@ -38,58 +38,58 @@ ht-degree: 0%
 
 ### 時間戳記 {#timestamps}
 
-根 `timestamp` 事件結構描述的欄位可以 **僅限** 代表觀察到的事件本身，且必須發生在過去。 不過，事件 **必須** 從1970年開始舉辦。 如果您的分段使用案例需要使用未來可能發生的時間戳記，這些值必須在您的體驗事件結構描述中的其他位置限制。
+事件結構描述的根`timestamp`欄位&#x200B;**只能**&#x200B;代表事件本身的觀察結果，而且必須發生在過去。 但是，事件&#x200B;**必須**&#x200B;從1970年開始進行。 如果您的分段使用案例需要使用未來可能發生的時間戳記，這些值必須在您的體驗事件結構描述中的其他位置限制。
 
-例如，如果旅遊業及旅館業中的企業正在模型化航班訂位事件，則類別層級 `timestamp` 欄位代表觀察預訂事件的時間。 與事件相關的其他時間戳記（例如旅行預訂的開始日期）應擷取在標準或自訂欄位群組提供的個別欄位中。
+例如，如果旅遊及旅館業的企業正在模型化航班訂位事件，則類別層級`timestamp`欄位代表觀察訂位事件的時間。 與事件相關的其他時間戳記（例如旅行預訂的開始日期）應擷取在標準或自訂欄位群組提供的個別欄位中。
 
-![反白顯示航班預訂和開始日期的體驗事件結構描述範例。](../images/classes/experienceevent/timestamps.png)
+![已反白航班預訂和開始日期的範例體驗事件結構描述。](../images/classes/experienceevent/timestamps.png)
 
 將類別層級的時間戳記與事件結構描述中的其他相關日期時間值分開，您就可以實作靈活的分段使用案例，同時保留體驗應用程式中客戶歷程的時間戳記帳戶。
 
 ### 使用計算欄位 {#calculated}
 
-體驗應用程式中的某些互動可能會產生多個相關事件，這些事件在技術上會共用相同的事件時間戳記，因此可以顯示為單一事件記錄。 例如，如果客戶檢視您網站上的產品，這可能會導致事件記錄具有兩種可能性 `eventType` 值： 「產品檢視」事件(`commerce.productViews`)或一般「頁面檢視」事件(`web.webpagedetails.pageViews`)。 在這些情況下，您可以在單一點選中擷取多個事件時，使用計算欄位來擷取最重要的屬性。
+體驗應用程式中的某些互動可能會產生多個相關事件，這些事件在技術上會共用相同的事件時間戳記，因此可以顯示為單一事件記錄。 例如，如果客戶檢視您網站上的產品，這可能會導致事件記錄有兩個潛在的`eventType`值：「產品檢視」事件(`commerce.productViews`)或一般的「頁面檢視」事件(`web.webpagedetails.pageViews`)。 在這些情況下，您可以在單一點選中擷取多個事件時，使用計算欄位來擷取最重要的屬性。
 
-使用 [Adobe Experience Platform資料準備](../../data-prep/home.md) 對應、轉換及驗證來往於XDM的資料。 使用可用的 [對應函式](../../data-prep/functions.md) 由服務提供，您可以叫用邏輯運運算元，以便在資料擷取至Experience Platform時，優先處理、轉換及/或合併多事件記錄中的資料。 在上述範例中，您可以指定 `eventType` 作為計算欄位，每當「產品檢視」和「頁面檢視」發生時，都會優先處理「產品檢視」。
+使用[Adobe Experience Platform資料準備](../../data-prep/home.md)來對XDM與來自XDM的資料進行對應、轉換及驗證。 使用服務提供的可用[對應函式](../../data-prep/functions.md)，您可以叫用邏輯運運算元，以便在資料擷取到Experience Platform時，優先處理、轉換及/或合併多事件記錄中的資料。 在上述範例中，您可以指定`eventType`為計算欄位，每當「產品檢視」與「頁面檢視」同時發生時，就會優先處理「產品檢視」。
 
-如果您是透過UI手動將資料擷取到Platform，請參閱 [計算欄位](../../data-prep/ui/mapping.md#calculated-fields) ，以瞭解如何建立計算欄位的特定步驟。
+如果您是透過UI手動將資料擷取到Platform，請參閱[計算欄位](../../data-prep/ui/mapping.md#calculated-fields)的指南，以瞭解如何建立計算欄位的特定步驟。
 
-如果您使用來源連線將資料串流至Platform，您可以設定來源以改為利用計算欄位。 請參閱 [您特定來源的檔案](../../sources/home.md) ，瞭解設定連線時如何實作計算欄位。
+如果您使用來源連線將資料串流至Platform，您可以設定來源以改為利用計算欄位。 請參閱您特定來源](../../sources/home.md)的[檔案，瞭解設定連線時如何實作計算欄位的指示。
 
 ## 相容的結構描述欄位群組 {#field-groups}
 
 >[!NOTE]
 >
->數個欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../field-groups/name-updates.md) 以取得詳細資訊。
+>數個欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../field-groups/name-updates.md)的檔案。
 
-Adobe提供數個標準欄位群組，可與搭配使用 [!DNL XDM ExperienceEvent] 類別。 以下是類別的一些常用欄位群組清單：
+Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配使用。 以下是類別的一些常用欄位群組清單：
 
 * [[!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]](../field-groups/event/analytics-full-extension.md)
 * [[!UICONTROL 餘額轉帳]](../field-groups/event/balance-transfers.md)
-* [[!UICONTROL 行銷活動行銷細節]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL 行銷活動行銷詳細資料]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL 卡片動作]](../field-groups/event/card-actions.md)
 * [[!UICONTROL 管道詳細資料]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Commerce詳細資料]](../field-groups/event/commerce-details.md)
-* [[!UICONTROL 存款細節]](../field-groups/event/deposit-details.md)
+* [[!UICONTROL 存款詳細資料]](../field-groups/event/deposit-details.md)
 * [[!UICONTROL 裝置折舊換新細節]](../field-groups/event/device-trade-in-details.md)
 * [[!UICONTROL 餐飲預訂]](../field-groups/event/dining-reservation.md)
-* [[!UICONTROL 一般使用者ID詳細資訊]](../field-groups/event/enduserids.md)
-* [[!UICONTROL 環境詳細資訊]](../field-groups/event/environment-details.md)
+* [[!UICONTROL 一般使用者ID詳細資料]](../field-groups/event/enduserids.md)
+* [[!UICONTROL 環境詳細資料]](../field-groups/event/environment-details.md)
 * [[!UICONTROL 航班預訂]](../field-groups/event/flight-reservation.md)
 * [[!UICONTROL IAB TCF 2.0同意]](../field-groups/event/iab.md)
 * [[!UICONTROL 住宿預訂]](../field-groups/event/lodging-reservation.md)
-* [[!UICONTROL MediaAnalytics互動細節]](../field-groups/event/mediaanalytics-interaction.md)
-* [[!UICONTROL 報價請求細節]](../field-groups/event/quote-request-details.md)
+* [[!UICONTROL MediaAnalytics互動詳細資料]](../field-groups/event/mediaanalytics-interaction.md)
+* [[!UICONTROL 報價請求詳細資料]](../field-groups/event/quote-request-details.md)
 * [[!UICONTROL 預訂詳細資料]](../field-groups/event/reservation-details.md)
-* [[!UICONTROL 網頁詳細資訊]](../field-groups/event/web-details.md)
+* [[!UICONTROL 網頁詳細資料]](../field-groups/event/web-details.md)
 
 ## 附錄
 
-下節包含更多關於 [!UICONTROL XDM ExperienceEvent] 類別。
+以下區段包含有關[!UICONTROL XDM ExperienceEvent]類別的其他資訊。
 
-### 接受的值 `eventType` {#eventType}
+### `eventType`的接受值 {#eventType}
 
-下表概述下列專案可接受的值 `eventType`，以及其定義：
+下表概述`eventType`的可接受值及其定義：
 
 | 值 | 定義 |
 | --- | --- |
@@ -146,25 +146,25 @@ Adobe提供數個標準欄位群組，可與搭配使用 [!DNL XDM ExperienceEve
 | `leadOperation.statusInCampaignProgressionChanged` | 此事件會追蹤潛在客戶在行銷活動中的狀態何時已變更。 |
 | `listOperation.addToList` | 此事件會追蹤何時將個人新增至行銷清單。 |
 | `listOperation.removeFromList` | 此事件會追蹤何時將個人從行銷名單移除。 |
-| `media.adBreakComplete` | 此事件會追蹤 `adBreakComplete` 事件已發生。 此事件會在廣告插播開始時觸發。 |
-| `media.adBreakStart` | 此事件會追蹤 `adBreakStart` 事件已發生。 此事件會在廣告插播結束時觸發。 |
-| `media.adComplete` | 此事件會追蹤 `adComplete` 事件已發生。 當廣告完成時，就會觸發此事件。 |
-| `media.adSkip` | 此事件會追蹤 `adSkip` 事件已發生。 此事件會在略過廣告時觸發。 |
-| `media.adStart` | 此事件會追蹤 `adStart` 事件已發生。 當廣告開始時，就會觸發此事件。 |
-| `media.bitrateChange` | 此事件會追蹤 `bitrateChange` 事件已發生。 當位元速率發生變更時，就會觸發此事件。 |
-| `media.bufferStart` | 此事件會追蹤 `bufferStart` 事件已發生。 媒體開始緩衝時會觸發此事件。 |
-| `media.chapterComplete` | 此事件會追蹤 `chapterComplete` 事件已發生。 此事件會在媒體中章節完成時觸發。 |
-| `media.chapterSkip` | 此事件會追蹤 `chapterSkip` 事件已發生。 當使用者向前或向後跳到媒體內容中的另一個區段或章節時，就會觸發此事件。 |
-| `media.chapterStart` | 此事件會追蹤 `chapterStart` 事件已發生。 此事件會在媒體內容中的特定區段或章節開始時觸發。 |
+| `media.adBreakComplete` | 此事件會追蹤`adBreakComplete`事件何時發生。 此事件會在廣告插播開始時觸發。 |
+| `media.adBreakStart` | 此事件會追蹤`adBreakStart`事件何時發生。 此事件會在廣告插播結束時觸發。 |
+| `media.adComplete` | 此事件會追蹤`adComplete`事件何時發生。 當廣告完成時，就會觸發此事件。 |
+| `media.adSkip` | 此事件會追蹤`adSkip`事件何時發生。 此事件會在略過廣告時觸發。 |
+| `media.adStart` | 此事件會追蹤`adStart`事件何時發生。 當廣告開始時，就會觸發此事件。 |
+| `media.bitrateChange` | 此事件會追蹤`bitrateChange`事件何時發生。 當位元速率發生變更時，就會觸發此事件。 |
+| `media.bufferStart` | 此事件會追蹤`bufferStart`事件何時發生。 媒體開始緩衝時會觸發此事件。 |
+| `media.chapterComplete` | 此事件會追蹤`chapterComplete`事件何時發生。 此事件會在媒體中章節完成時觸發。 |
+| `media.chapterSkip` | 此事件會追蹤`chapterSkip`事件何時發生。 當使用者向前或向後跳到媒體內容中的另一個區段或章節時，就會觸發此事件。 |
+| `media.chapterStart` | 此事件會追蹤`chapterStart`事件何時發生。 此事件會在媒體內容中的特定區段或章節開始時觸發。 |
 | `media.downloaded` | 此事件會追蹤媒體下載內容何時發生。 |
-| `media.error` | 此事件會追蹤 `error` 事件已發生。 當媒體播放期間發生錯誤或問題時，就會觸發此事件。 |
-| `media.pauseStart` | 此事件會追蹤 `pauseStart` 事件已發生。 當使用者起始媒體播放暫停的動作時，就會觸發此事件。 |
-| `media.ping` | 此事件會追蹤 `ping` 事件已發生。 這可以驗證媒體資源的可用性。 |
-| `media.play` | 此事件會追蹤 `play` 事件已發生。 此事件會在媒體內容播放時觸發，表示使用者使用中的內容。 |
-| `media.sessionComplete` | 此事件會追蹤 `sessionComplete` 事件已發生。 此事件會標籤媒體播放工作階段的結尾。 |
-| `media.sessionEnd` | 此事件會追蹤 `sessionEnd` 事件已發生。 此事件表示媒體工作階段的結論。 此結論可能涉及關閉媒體播放器或停止播放。 |
-| `media.sessionStart` | 此事件會追蹤 `sessionStart` 事件已發生。 此事件標示媒體播放工作階段的開始。 它會在使用者開始播放媒體檔案時觸發。 |
-| `media.statesUpdate` | 此事件會追蹤 `statesUpdate` 事件已發生。 播放器狀態追蹤功能可附加至音訊或視訊資料流。 標準狀態為：fullscreen、mute、closedCaptioning、pictureInPicture和inFocus。 |
+| `media.error` | 此事件會追蹤`error`事件何時發生。 當媒體播放期間發生錯誤或問題時，就會觸發此事件。 |
+| `media.pauseStart` | 此事件會追蹤`pauseStart`事件何時發生。 當使用者起始媒體播放暫停的動作時，就會觸發此事件。 |
+| `media.ping` | 此事件會追蹤`ping`事件何時發生。 這可以驗證媒體資源的可用性。 |
+| `media.play` | 此事件會追蹤`play`事件何時發生。 此事件會在媒體內容播放時觸發，表示使用者使用中的內容。 |
+| `media.sessionComplete` | 此事件會追蹤`sessionComplete`事件何時發生。 此事件會標籤媒體播放工作階段的結尾。 |
+| `media.sessionEnd` | 此事件會追蹤`sessionEnd`事件何時發生。 此事件表示媒體工作階段的結論。 此結論可能涉及關閉媒體播放器或停止播放。 |
+| `media.sessionStart` | 此事件會追蹤`sessionStart`事件何時發生。 此事件標示媒體播放工作階段的開始。 它會在使用者開始播放媒體檔案時觸發。 |
+| `media.statesUpdate` | 此事件會追蹤`statesUpdate`事件何時發生。 播放器狀態追蹤功能可附加至音訊或視訊資料流。 標準狀態為：fullscreen、mute、closedCaptioning、pictureInPicture和inFocus。 |
 | `opportunityEvent.addToOpportunity` | 此事件會追蹤何時將個人新增至商機。 |
 | `opportunityEvent.opportunityUpdated` | 此事件會追蹤商機何時更新。 |
 | `opportunityEvent.removeFromOpportunity` | 此事件會追蹤何時將個人從機會中移除。 |
@@ -178,9 +178,9 @@ Adobe提供數個標準欄位群組，可與搭配使用 [!DNL XDM ExperienceEve
 
 {style="table-layout:auto"}
 
-### 建議值 `producedBy` {#producedBy}
+### `producedBy`的建議值 {#producedBy}
 
-下表概述一些接受的值 `producedBy`：
+下表概述`producedBy`的一些接受值：
 
 | 值 | 定義 |
 | --- | --- |

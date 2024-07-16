@@ -5,7 +5,7 @@ exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 309f3cce82c5d6c7f10c08b05da6d9c6c44631b6
 workflow-type: tm+mt
 source-wordcount: '1290'
-ht-degree: 40%
+ht-degree: 38%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-本檔案可用作使用者端的參考 `_satellite` 物件，以及您可以使用該物件執行的各種功能。
+此檔案可作為使用者端`_satellite`物件的參考，以及您可以使用該物件執行的各種功能。
 
 ## `track`
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.track(identifier: string [, detail: *] )
@@ -31,11 +31,11 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` 使用已設定核心標籤擴充功能之指定識別碼的「直接呼叫」事件型別，以引發所有規則。 上述範例會使用「直接呼叫」事件類型觸發所有規則，其中設定的識別碼為 `contact_submit`。也會傳遞包含相關資訊的選用物件。您可以在條件或動作的文字欄位內輸入 `%event.detail%`，或是在 Custom Code 條件或動作的程式碼編輯器內輸入 `event.detail`，以存取詳細資料物件。
+`track`會使用已設定核心標籤延伸之指定識別碼的「直接呼叫」事件型別，引發所有規則。 上述範例會使用「直接呼叫」事件類型觸發所有規則，其中設定的識別碼為 `contact_submit`。也會傳遞包含相關資訊的選用物件。您可以在條件或動作的文字欄位內輸入 `%event.detail%`，或是在 Custom Code 條件或動作的程式碼編輯器內輸入 `event.detail`，以存取詳細資料物件。
 
 ## `getVar`
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.getVar(name: string) => *
@@ -51,9 +51,9 @@ var product = _satellite.getVar('product');
 
 >[!NOTE]
 >
->您可以使用百分比(`%`)語法來參考標籤實作中許多表單欄位的變數，減少呼叫的需求 `_satellite.getVar()`. 例如，使用 `%product%` 將會存取產品資料元素或自訂變數的值。
+>您可以使用百分比(`%`)語法來參考標籤實作中許多表單欄位的變數，減少呼叫`_satellite.getVar()`的需求。 例如，使用`%product%`將會存取產品資料元素或自訂變數的值。
 
-當事件觸發規則時，您可以傳遞規則的對應 `event` 物件移入 `_satellite.getVar()` 如下所示：
+當事件觸發規則時，您可以將規則的對應`event`物件傳遞至`_satellite.getVar()`，如下所示：
 
 ```javascript
 // event refers to the calling rule's event
@@ -64,9 +64,9 @@ var rule = _satellite.getVar('return event rule', event);
 
 >[!NOTE]
 >
->此 `setVar` 程式碼與Tags中指定的資料元素完全不同。
+>`setVar`程式碼與Tags中指定的資料元素完全不同。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.setVar(name: string, value: *)
@@ -78,7 +78,7 @@ _satellite.setVar(name: string, value: *)
 _satellite.setVar('product', 'Circuit Pro');
 ```
 
-`setVar()` 使用指定的名稱和值設定自訂變數。 變數的值之後可以透過 `_satellite.getVar()` 存取。
+`setVar()`設定具有指定名稱和值的自訂變數。 變數的值之後可以透過 `_satellite.getVar()` 存取。
 
 您可以傳遞鍵值為變數名稱且值為個別變數值的物件，選擇是否要一次設定多個變數。
 
@@ -88,7 +88,7 @@ _satellite.setVar({ 'product': 'Circuit Pro', 'category': 'hobby' });
 
 ## `getVisitorId`
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.getVisitorId() => Object
@@ -104,7 +104,7 @@ var visitorIdInstance = _satellite.getVisitorId();
 
 ## `logger`
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.logger.log(message: string)
@@ -128,7 +128,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-此 `logger` 物件允許將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯(透過呼叫 `_satellite.setDebug(true)` 或使用適當的瀏覽器擴充功能)。
+`logger`物件允許將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯（透過呼叫`_satellite.setDebug(true)`或使用適當的瀏覽器延伸模組）時，才會顯示訊息。
 
 ### 記錄取代警告
 
@@ -146,13 +146,13 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` 包含讀取和寫入Cookie的函式。 這是一份公開的協力廠商程式庫js-cookie。 如需此程式庫更進階使用方式的詳細資訊，請檢閱 [js-cookie檔案](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie`包含讀取和寫入Cookie的函式。 這是一份公開的協力廠商程式庫js-cookie。 如需此程式庫更進階使用方式的詳細資訊，請檢閱[js-cookie檔案](https://www.npmjs.com/package/js-cookie#basic-usage)。
 
 ### 設定Cookie {#cookie-set}
 
-若要設定Cookie，請使用 `_satellite.cookie.set()`.
+若要設定Cookie，請使用`_satellite.cookie.set()`。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.cookie.set(name: string, value: string[, attributes: Object])
@@ -160,7 +160,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->在舊版 [`setCookie`](#setCookie) 設定Cookie的方法中，此函式呼叫的第三個（選用）引數是整數，指出Cookie的到期時間（以天為單位）。 在這個新方法中，「attributes」物件會被視為第三個引數。 若要使用新方法設定Cookie的有效期，您必須提供 `expires` 屬性物件中的屬性，並將其設定為所需的值。 這會在以下範例中示範。
+>在設定Cookie的舊[`setCookie`](#setCookie)方法中，此函式呼叫的第三個（選用）引數是表示Cookie過期時間（以天為單位）的整數。 在這個新方法中，「attributes」物件會被視為第三個引數。 若要使用新方法設定Cookie的有效期，您必須在屬性物件中提供`expires`屬性，並將其設定為所要的值。 這會在以下範例中示範。
 
 **範例**
 
@@ -172,9 +172,9 @@ _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
 
 ### 擷取Cookie {#cookie-get}
 
-若要擷取Cookie，請使用 `_satellite.cookie.get()`.
+若要擷取Cookie，請使用`_satellite.cookie.get()`。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.cookie.get(name: string) => string
@@ -190,9 +190,9 @@ var product = _satellite.cookie.get('product');
 
 ### 移除Cookie {#cookie-remove}
 
-若要移除Cookie，請使用 `_satellite.cookie.remove()`.
+若要移除Cookie，請使用`_satellite.cookie.remove()`。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.cookie.remove(name: string)
@@ -208,7 +208,7 @@ _satellite.cookie.remove('product');
 
 ## `buildInfo`
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.buildInfo
@@ -218,7 +218,7 @@ _satellite.buildInfo
 
 ### `turbineVersion`
 
-如此可提供 [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) 目前程式庫內使用的版本。
+這會提供目前程式庫內使用的[Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine)版本。
 
 ### `turbineBuildDate`
 
@@ -242,7 +242,7 @@ _satellite.buildInfo
 
 此物件包含目前標籤執行階段程式庫部署所在環境的相關資訊。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.environment
@@ -260,7 +260,7 @@ _satellite.environment
 | 屬性 | 說明 |
 | --- | --- |
 | `id` | 環境的ID。 |
-| `stage` | 建置此程式庫的環境。可能的值包括 `development`， `staging`、和 `production`. |
+| `stage` | 建置此程式庫的環境。可能的值為`development`、`staging`和`production`。 |
 
 ## `notify`
 
@@ -268,7 +268,7 @@ _satellite.environment
 >
 >此方法已淘汰。請改用 `_satellite.logger.log()`。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.notify(message: string[, level: number])
@@ -280,7 +280,7 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` 將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯(透過呼叫 `_satellite.setDebug(true)` 或使用適當的瀏覽器擴充功能)。
+`notify`將訊息記錄到瀏覽器主控台。 只有在使用者已啟用標籤偵錯（透過呼叫`_satellite.setDebug(true)`或使用適當的瀏覽器延伸模組）時，才會顯示訊息。
 
 可傳遞選用記錄層級，這會影響所記錄訊息的樣式和篩選。 支援層級如下：
 
@@ -298,7 +298,7 @@ _satellite.notify('Hello world!');
 >
 >此方法已淘汰。請改用 [`_satellite.cookie.set()`](#cookie-set)。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.setCookie(name: string, value: string, days: number)
@@ -318,7 +318,7 @@ _satellite.setCookie('product', 'Circuit Pro', 3);
 >
 >此方法已淘汰。請改用 [`_satellite.cookie.get()`](#cookie-get)。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.readCookie(name: string) => string
@@ -338,7 +338,7 @@ var product = _satellite.readCookie('product');
 >
 >此方法已淘汰。請改用 [`_satellite.cookie.remove()`](#cookie-remove)。
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite.removeCookie(name: string)
@@ -358,7 +358,7 @@ _satellite.removeCookie('product');
 
 ### `container`
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite._container
@@ -372,7 +372,7 @@ _satellite._container
 
 ### `monitor`
 
-**程式碼**
+**代碼**
 
 ```javascript
 _satellite._monitors
@@ -384,9 +384,9 @@ _satellite._monitors
 >
 >不應從生產程式碼存取此函式。 此函數僅適用於除錯用途，且會視需求隨時變動。
 
-**範例**
+**樣本**
 
-在執行標籤庫的網頁上，將程式碼片段新增至您的HTML。 通常，程式碼會插入 `<head>` 元素之前的 `<script>` 載入標籤程式庫的元素。 這可讓監視器取得標籤程式庫中發生的最早系統事件。 例如：
+在執行標籤庫的網頁上，將程式碼片段新增至您的HTML。 通常，程式碼會插入到載入標籤程式庫的`<script>`元素之前的`<head>`元素中。 這可讓監視器取得標籤程式庫中發生的最早系統事件。 例如：
 
 ```html
 <!DOCTYPE html>
@@ -428,7 +428,7 @@ _satellite._monitors
 </html>
 ```
 
-在第一個指令碼元素中，由於標籤程式庫尚未載入，因此初始的 `_satellite` 物件已建立，且陣列位於 `_satellite._monitors` 已初始化。 接著，指令碼將監視器物件新增到該陣列。監視器物件可以指定下列方法，標籤程式庫稍後會呼叫這些方法：
+在第一個指令碼元素中，因為尚未載入標籤程式庫，所以已建立初始`_satellite`物件，並初始化`_satellite._monitors`上的陣列。 接著，指令碼將監視器物件新增到該陣列。監視器物件可以指定下列方法，標籤程式庫稍後會呼叫這些方法：
 
 ### `ruleTriggered`
 
@@ -436,7 +436,7 @@ _satellite._monitors
 
 ### `ruleCompleted`
 
-此函式會在規則完全處理後呼叫。 換句話說，事件已發生、所有條件皆已傳遞，且所有動作皆已執行。 傳遞至的事件物件 `ruleCompleted` 包含有關已完成規則的資訊。
+此函式會在規則完全處理後呼叫。 換句話說，事件已發生、所有條件皆已傳遞，且所有動作皆已執行。 傳遞至`ruleCompleted`的事件物件包含有關已完成規則的資訊。
 
 ### `ruleConditionFailed`
 

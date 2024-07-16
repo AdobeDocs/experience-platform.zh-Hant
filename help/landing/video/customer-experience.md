@@ -10,12 +10,12 @@ exl-id: f59bf52a-13fe-4b84-81d6-518b9b081151
 source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '77'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
-# 由Experience Platform提供支援的客戶體驗
+# Experience Platform 所支援的客戶體驗
 
-觀賞此影片，瞭解Experience Platform如何透過使用Platform建立的假設體驗（從客戶的角度來看），為客戶建立豐富、相關且即時的體驗。
+觀賞此影片，瞭解如何使用Platform打造的假設體驗（從客戶的角度來看），Experience Platform如何為客戶建立豐富、相關且即時的體驗。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27361?quality=12&learn=on)

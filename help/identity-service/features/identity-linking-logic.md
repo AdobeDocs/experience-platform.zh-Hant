@@ -26,7 +26,7 @@ ht-degree: 0%
 | --- | --- | --- |
 | 一般使用者使用電腦登入。 | CRM ID與ECID會連結在一起。 | 使用者(CRM ID)所擁有的裝置具有瀏覽器(ECID)。 |
 | 一般使用者使用iPhone匿名瀏覽。 | IDFA與ECID連結。 | Apple硬體裝置(IDFA) (例如iPhone)會與瀏覽器(ECID)建立關聯。 |
-| 一般使用者先使用Google Chrome，再使用Firefox登入。 | CRM ID已與兩個不同的ECID連結。 | 人員(CRM ID)與2個網頁瀏覽器相關聯(**注意**：每個瀏覽器都有自己的ECID)。 |
+| 一般使用者使用Google Chrome，然後使用Firefox登入。 | CRM ID已與兩個不同的ECID連結。 | 人員(CRM ID)與2個網頁瀏覽器相關聯（**注意**：每個瀏覽器都有自己的ECID）。 |
 | 資料工程師會擷取CRM記錄，該記錄包含兩個標示為身分的欄位： CRM ID和電子郵件。 | CRM ID與電子郵件已連結。 | 人員(CRM ID)已與此電子郵件地址相關聯。 |
 
 ## 瞭解Identity Service連結邏輯
@@ -34,7 +34,7 @@ ht-degree: 0%
 身分由身分名稱空間和身分值組成。
 
 * 身分名稱空間是指定的身分值目標的前後關聯。 常見的身分識別名稱空間範例包括CRM ID、電子郵件和電話。
-* 身分值是代表真實世界實體的字串。 例如：「julien」<span>@acme.com」可以是電子郵件名稱空間的身分值，555-555-1234可以是電話名稱空間的對應身分值。
+* 身分值是代表真實世界實體的字串。 例如：「julien<span>@acme.com」可以是電子郵件名稱空間的身分值，而555-555-1234可以是電話名稱空間的對應身分值。
 
 >[!TIP]
 >
@@ -67,7 +67,7 @@ ht-degree: 0%
 
 Identity Service可辨識您的圖形中已存在CRM ID：60013ABC，因此僅連結新的ECID
 
-![更新的圖表](../images/identity-settings/updated-graph.png)
+![已更新圖表](../images/identity-settings/updated-graph.png)
 
 >[!ENDTABS]
 
@@ -77,13 +77,13 @@ Identity Service可辨識您的圖形中已存在CRM ID：60013ABC，因此僅�
 
 | CRM ID** | 電話* | 電子郵件* | 名字 | 姓氏 |
 | --- | --- | --- | --- | --- |
-| 60013ABC | 555-555-1234 | 朱利安<span>@acme.com | 朱利安 | Smith |
+| 60013ABC | 555-555-1234 | julien<span>@acme.com | 朱利安 | Smith |
 | 31260XYZ | 777-777-6890 | evan<span>@acme.com | Evan | Smith |
 
 >[!NOTE]
 >
->* `**`  — 代表標示為主要身分的欄位。
->* `*`  — 代表標示為次要身分的欄位。
+>* `**` — 代表標示為主要身分的欄位。
+>* `*` — 代表標示為次要身分的欄位。
 >
 >身分服務無法區分主要身分和次要身分。 只要欄位標示為身分，就會將其擷取至Identity Service。
 
@@ -96,7 +96,7 @@ Identity Service可辨識您的圖形中已存在CRM ID：60013ABC，因此僅�
 | `t=3` | ECID：44675 | 檢視首頁 |
 | `t=4` | ECID：44675， CRM ID： 31260XYZ | 檢視購買記錄 |
 
-每個事件的主要身分將會根據 [如何設定資料元素型別](../../tags/extensions/client/web-sdk/data-element-types.md).
+每個事件的主要身分將會根據[您設定資料元素型別](../../tags/extensions/client/web-sdk/data-element-types.md)的方式而決定。
 
 >[!NOTE]
 >
@@ -107,47 +107,47 @@ Identity Service可辨識您的圖形中已存在CRM ID：60013ABC，因此僅�
 在此範例中：
 
 * `t=1`，使用桌上型電腦(ECID：38652)並匿名檢視首頁。
-* `t=2`，使用相同的桌上型電腦，登入(CRM ID：31260XYZ)然後搜尋鞋子。
+* `t=2`，使用相同的桌上型電腦，登入(CRM ID：31260XYZ)，然後搜尋鞋子。
    * 使用者登入後，事件會將ECID和CRM ID傳送至Identity Service。
-* `t=3`，使用筆記型電腦(ECID：44675)且以匿名方式瀏覽。
-* `t=4`，使用相同的筆記型電腦，登入(CRM ID： 31260XYZ)然後檢視購買記錄。
+* `t=3`，使用膝上型電腦(ECID：44675)且以匿名方式瀏覽。
+* `t=4`，使用相同的筆記型電腦，登入(CRM識別碼： 31260XYZ)，然後檢視購買記錄。
 
 
 >[!BEGINTABS]
 
->[!TAB timestamp=0]
+>[!TAB 時間戳記=0]
 
-在 `timestamp=0`，您有兩個適用於不同客戶的身分圖表。 兩者分別由三個連結的身分表示。
+在`timestamp=0`，您有兩個不同客戶的身分圖表。 兩者分別由三個連結的身分表示。
 
 | | CRM ID | 電子郵件 | 電話 |
 | --- | --- | --- | --- |
-| Customer one | 60013ABC | 朱利安<span>@acme.com | 555-555-1234 |
+| Customer one | 60013ABC | julien<span>@acme.com | 555-555-1234 |
 | 客戶二 | 31260XYZ | evan<span>@acme.com | 777-777-6890 |
 
-![timestamp-0](../images/identity-settings/timestamp-zero.png)
+![時間戳記 — 零](../images/identity-settings/timestamp-zero.png)
 
->[!TAB timestamp=1]
+>[!TAB 時間戳記=1]
 
-在 `timestamp=1`，客戶使用筆記型電腦造訪您的電子商務網站、檢視您的首頁並匿名瀏覽。 此匿名瀏覽事件可識別為ECID：38652。 由於Identity Service只會儲存至少有兩個身分的事件，因此不會儲存此資訊。
+在`timestamp=1`，客戶使用筆記型電腦來造訪您的電子商務網站、檢視您的首頁，以及匿名瀏覽。 此匿名瀏覽事件可識別為ECID：38652。 由於Identity Service只會儲存至少有兩個身分的事件，因此不會儲存此資訊。
 
-![timestamp-one](../images/identity-settings/timestamp-one.png)
+![時間戳記 — 一](../images/identity-settings/timestamp-one.png)
 
 >[!TAB timestamp=2]
 
-在 `timestamp=2`，客戶使用相同的筆記型電腦造訪您的電子商務網站。 使用者會使用自己的使用者名稱和密碼組合登入，並瀏覽尋找鞋子。 身分識別服務會在客戶登入時識別其帳戶，因為它對應至其CRM ID： 31260XYZ。 此外，Identity Service會將ECID：38562與CRM ID：31260XYZ建立關聯，因為兩者在相同裝置上使用相同的瀏覽器。
+在`timestamp=2`，客戶使用相同的筆記型電腦造訪您的電子商務網站。 使用者會使用自己的使用者名稱和密碼組合登入，並瀏覽尋找鞋子。 身分識別服務會在客戶登入時識別其帳戶，因為它對應至其CRM ID： 31260XYZ。 此外，Identity Service會將ECID：38562與CRM ID：31260XYZ建立關聯，因為兩者在相同裝置上使用相同的瀏覽器。
 
-![timestamp-2](../images/identity-settings/timestamp-two.png)
+![時間戳記 — 二](../images/identity-settings/timestamp-two.png)
 
->[!TAB timestamp=3]
+>[!TAB 時間戳記=3]
 
-在 `timestamp=3` 客戶使用平板電腦造訪您的電子商務網站，並以匿名方式瀏覽。 此匿名瀏覽事件可識別為ECID：44675。 由於Identity Service只會儲存至少有兩個身分的事件，因此不會儲存此資訊。
+在`timestamp=3`，客戶使用平板電腦造訪您的電子商務網站，並以匿名方式瀏覽。 此匿名瀏覽事件可識別為ECID：44675。 由於Identity Service只會儲存至少有兩個身分的事件，因此不會儲存此資訊。
 
-![timestamp-3](../images/identity-settings/timestamp-three.png)
+![時間戳記–3](../images/identity-settings/timestamp-three.png)
 
->[!TAB timestamp=4]
+>[!TAB 時間戳記=4]
 
-在 `timestamp=4`，客戶使用相同的平板電腦，登入其帳戶(CRM ID：31260XYZ)並檢視其購買記錄。 此事件會將其CRM ID：31260XYZ連結至指派給匿名瀏覽活動、ECID：44675的Cookie識別碼，並將ECID：44675連結至客戶2的身分圖表。
+在`timestamp=4`，客戶使用相同的平板電腦，登入其帳戶(CRM ID：31260XYZ)並檢視其購買記錄。 此事件會將其CRM ID：31260XYZ連結至指派給匿名瀏覽活動、ECID：44675的Cookie識別碼，並將ECID：44675連結至客戶2的身分圖表。
 
-![timestamp-4](../images/identity-settings/timestamp-four.png)
+![時間戳記–4](../images/identity-settings/timestamp-four.png)
 
 >[!ENDTABS]

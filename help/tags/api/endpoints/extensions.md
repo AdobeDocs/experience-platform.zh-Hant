@@ -4,20 +4,20 @@ description: 瞭解如何在Reactor API中呼叫/extensions端點。
 exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 4%
 
 ---
 
 # 擴充功能端點
 
-在Reactor API中，擴充功能代表已安裝的 [擴充功能套件](./extension-packages.md). 擴充功能可讓使用者存取擴充功能套件所定義的功能。 [屬性](./properties.md). 建立時，會利用這些功能 [擴充功能](./data-elements.md) 和 [規則元件](./rule-components.md).
+在Reactor API中，擴充功能代表[擴充功能套件](./extension-packages.md)的安裝執行個體。 擴充功能可讓[屬性](./properties.md)使用擴充功能套件所定義的功能。 建立[擴充功能](./data-elements.md)和[規則元件](./rule-components.md)時，會利用這些功能。
 
 擴充功能只屬於一個屬性。 屬性可以有許多擴充功能，但特定擴充功能套件最多只能有一個已安裝的執行個體。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取擴充功能清單 {#list}
 
@@ -31,13 +31,13 @@ GET properties/{PROPERTY_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 此 `id` 要列出其副檔名的屬性的。 |
+| `{PROPERTY_ID}` | 您要列出其副檔名的屬性之`id`。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->您可以使用查詢引數，根據下列屬性篩選列出的擴充功能：<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>請參閱以下指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
+>您可以使用查詢引數，根據下列屬性篩選列出的擴充功能：<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
 
 **要求**
 
@@ -160,7 +160,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->刪除擴充功能時，會在系統中將其標示為已刪除，但實際上並不會將其移除。 因此，您可以擷取已刪除的擴充功能。 刪除的擴充功能可透過是否存在 `deleted_at` 中的屬性 `meta` 傳回的擴充功能資料中。
+>刪除擴充功能時，會在系統中將其標示為已刪除，但實際上並不會將其移除。 因此，您可以擷取已刪除的擴充功能。 透過傳回之擴充功能資料的`meta`中是否存在`deleted_at`屬性，可識別已刪除的擴充功能。
 
 **API格式**
 
@@ -170,7 +170,7 @@ GET /extensions/{EXTENSION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_ID` | 此 `id` 要查閱的擴充功能的ID。 |
+| `EXTENSION_ID` | 您要查閱之擴充功能的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -280,7 +280,7 @@ curl -X GET \
 
 ## 建立或更新擴充功能 {#create}
 
-擴充功能是透過參考 [擴充功能套件](./extension-packages.md) 並將已安裝的擴充功能新增至屬性。 當安裝工作完成時，會傳回回應，指出擴充功能是否已成功安裝。
+擴充功能是透過參照[擴充功能套件](./extension-packages.md)並將已安裝的擴充功能新增至屬性來建立。 當安裝工作完成時，會傳回回應，指出擴充功能是否已成功安裝。
 
 **API格式**
 
@@ -290,7 +290,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` ，位於您要安裝擴充功能底下的屬性。 |
+| `PROPERTY_ID` | 您想要安裝擴充功能之屬性的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -325,8 +325,8 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `relationships.extension_package` | **（必要）** 參照所安裝擴充功能套件ID的物件。 |
-| `attributes.delegate_descriptor_id` | 如果您的擴充功能需要自訂設定，則它也需要委派描述項ID。 請參閱以下指南： [委派描述項ID](../guides/delegate-descriptor-ids.md) 以取得詳細資訊。 |
+| `relationships.extension_package` | **（必要）**&#x200B;參考正在安裝的擴充功能套件識別碼的物件。 |
+| `attributes.delegate_descriptor_id` | 如果您的擴充功能需要自訂設定，則它也需要委派描述項ID。 如需詳細資訊，請參閱[委派描述項ID](../guides/delegate-descriptor-ids.md)的指南。 |
 | `attributes.enabled` | 表示擴充功能是否已啟用的布林值。 |
 | `attributes.settings` | 以字串表示的設定JSON物件。 |
 
@@ -436,13 +436,13 @@ PATCH /extensions/{EXTENSION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_ID` | 此 `id` 您想要修訂之擴充功能的擴充功能。 |
+| `EXTENSION_ID` | 您要修訂之擴充功能的`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-如同 [建立擴充功能](#create)，修訂套件的本機版本必須透過表單資料上傳。
+與[建立擴充功能](#create)一樣，修訂封裝的本機版本必須透過表單資料上傳。
 
 ```shell
 curl -X PATCH \
@@ -467,14 +467,14 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 您想要修訂的屬性。 對於擴充功能，您可以修訂其 `delegate_descriptor_id`， `enabled`、和 `settings` 屬性。 |
-| `meta.action` | 必須包含在值中 `revise` 進行修訂時。 |
+| `attributes` | 您想要修訂的屬性。 對於擴充功能，您可以修訂其`delegate_descriptor_id`、`enabled`和`settings`屬性。 |
+| `meta.action` | 進行修訂時必須包含在`revise`的值中。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回修訂擴充功能的詳細資料，以及 `meta.latest_revision_number` 屬性增加1。
+成功的回應會傳回修訂擴充功能的詳細資料，其`meta.latest_revision_number`屬性增加1。
 
 ```json
 {
@@ -576,7 +576,7 @@ DELETE /extensions/{EXTENSION_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `EXTENSION_ID` | 此 `id` 要刪除的擴充功能。 |
+| `EXTENSION_ID` | 您要刪除之擴充功能的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -596,17 +596,17 @@ curl -X DELETE \
 
 ## 管理擴充功能的附註 {#notes}
 
-擴充功能是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 請參閱 [附註端點指南](./notes.md) 有關如何管理擴充功能和其他相容資源的附註的詳細資訊。
+擴充功能是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 如需有關如何管理擴充功能和其他相容資源的附註的詳細資訊，請參閱[附註端點指南](./notes.md)。
 
 ## 擷取擴充功能的相關資源 {#related}
 
-下列呼叫示範如何擷取擴充功能的相關資源。 時間 [查詢擴充功能](#lookup)，這些關係會列在 `relationships` 屬性。
+下列呼叫示範如何擷取擴充功能的相關資源。 當[查詢擴充功能](#lookup)時，這些關係會列在`relationships`屬性下。
 
-請參閱 [關係指南](../guides/relationships.md) 以進一步瞭解Reactor API中的關係。
+請參閱[關係指南](../guides/relationships.md)，以取得有關Reactor API中關係的詳細資訊。
 
 ### 列出擴充功能的相關程式庫 {#libraries}
 
-您可以藉由附加以列出使用擴充功能的程式庫 `/libraries` 至查閱請求的路徑。
+您可以將`/libraries`附加至查閱要求的路徑，以列出使用副檔名的程式庫。
 
 **API格式**
 
@@ -616,7 +616,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 此 `id` 要列出其程式庫的擴充功能。 |
+| `{EXTENSION_ID}` | 您要列出其程式庫的擴充功能之`id`。 |
 
 {style="table-layout:auto"}
 
@@ -728,7 +728,7 @@ curl -X GET \
 
 ### 列出擴充功能的相關修訂版本 {#revisions}
 
-您可以藉由附加，列出擴充功能的先前修訂版本 `/revisions` 至查閱請求的路徑。
+您可以將`/revisions`附加至查閱要求的路徑，以列出擴充功能的先前修訂版本。
 
 **API格式**
 
@@ -738,7 +738,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 此 `id` 要列出其修訂版本的延伸模組。 |
+| `{EXTENSION_ID}` | 您要列出其修訂版本的擴充功能`id`。 |
 
 {style="table-layout:auto"}
 
@@ -942,7 +942,7 @@ curl -X GET \
 
 ### 查詢擴充功能的相關擴充功能套件 {#extension}
 
-您可以透過附加來查詢擴充功能所根據的擴充功能套件 `/extension_package` 到GET請求的路徑。
+您可以將`/extension_package`附加至GET要求的路徑，以查詢擴充功能所依據的擴充功能套件。
 
 **API格式**
 
@@ -952,7 +952,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 此 `id` 要查詢其擴充功能的副檔名。 |
+| `{EXTENSION_ID}` | 您要查詢其副檔名的擴充功能`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1177,7 +1177,7 @@ curl -X GET \
 
 ### 查詢擴充功能的相關來源 {#origin}
 
-您可以透過附加來查詢擴充功能的來源 `/origin` 到GET請求的路徑。 擴充功能的原點是先前更新以建立目前修訂版本的修訂版本。
+您可以將`/origin`附加至GET要求的路徑，以查詢擴充功能的來源。 擴充功能的原點是先前更新以建立目前修訂版本的修訂版本。
 
 **API格式**
 
@@ -1187,7 +1187,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 此 `id` 要查詢其來源的延伸模組。 |
+| `{EXTENSION_ID}` | 您要查詢其來源的擴充功能`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1297,7 +1297,7 @@ curl -X GET \
 
 ### 查詢擴充功能的相關屬性 {#property}
 
-您可以藉由附加以查詢擁有擴充功能的屬性 `/property` 到GET請求的路徑。
+您可以將`/property`附加至GET請求的路徑，以查詢擁有擴充功能的屬性。
 
 **API格式**
 
@@ -1307,7 +1307,7 @@ GET  /extensions/{EXTENSION_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 此 `id` 要查詢其屬性的擴充功能。 |
+| `{EXTENSION_ID}` | 您要查詢其屬性的延伸模組`id`。 |
 
 {style="table-layout:auto"}
 

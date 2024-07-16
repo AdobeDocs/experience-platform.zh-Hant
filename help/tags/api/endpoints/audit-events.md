@@ -4,7 +4,7 @@ description: 瞭解如何在Reactor API中呼叫/audit_events端點。
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '254'
 ht-degree: 3%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 >[!WARNING]
 >
->實作 `/audit_events` 端點會隨著特徵的加入、移除和重新加工而變動。
+>`/audit_events`端點的實作正在變動中，因為功能已新增、移除和重新作業。
 
-稽核事件是對Reactor API中其他資源進行特定變更的記錄，會在進行變更時產生。 這些是可透過使用訂閱的系統事件 [callback](./callbacks.md). 此 `/audit_events` Reactor API中的端點可讓您以程式設計方式管理體驗應用程式內的稽核事件。
+稽核事件是對Reactor API中另一個資源進行特定變更的記錄，在變更時產生。 這些是可透過使用[回呼](./callbacks.md)訂閱的系統事件。 Reactor API中的`/audit_events`端點可讓您以程式設計方式管理體驗應用程式內的稽核事件。
 
-稽核事件的結構形式為 `{RESOURCE_TYPE}.{EVENT}`，例如 `build.created` 或 `rule.updated`.
+稽核事件是以`{RESOURCE_TYPE}.{EVENT}`的形式建構，例如`build.created`或`rule.updated`。
 
 資源型別可以是下列任一專案：
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 * `environment`
 * `host`
 
-每種資源型別都支援下列事件：
+每種資源型別支援下列事件：
 
 * `created`
 * `updated`
@@ -39,11 +39,11 @@ ht-degree: 3%
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 有關如何向API驗證的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取稽核事件清單 {#list}
 
-您可以透過向以下專案發出GET要求，擷取貴組織擁有之所有屬性的稽核事件清單： `/audit_events` 端點。
+您可以向`/audit_events`端點發出GET要求，擷取貴組織擁有之所有屬性的稽核事件清單。
 
 **API格式**
 
@@ -65,7 +65,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回稽核事件清單。 以下範例回應已因空格而截斷。
+成功的回應會傳回稽核事件清單。 以下範例回應已截斷空格。
 
 ```json
 {
@@ -170,7 +170,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `AUDIT_EVENT_ID` | 此 `id` 要查閱之稽核事件的詳細資訊。 |
+| `AUDIT_EVENT_ID` | 您要查閱之稽核事件的`id`。 |
 
 {style="table-layout:auto"}
 

@@ -1,19 +1,19 @@
 ---
 title: getMediaAnalyticsTracker
 description: 瞭解如何建立Media Analytics追蹤器物件，並使用它來追蹤媒體事件。
-source-git-commit: 9384c1cc15441199e898d6cc0850e5422253f106
+exl-id: ae968da8-7763-4b2a-a716-3014ba0d270d
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 3%
 
 ---
 
-
 # `getMediaAnalyticsTracker`
 
-此Web SDK命令會擷取Media Analytics追蹤器。 您可以使用此命令來建立物件例項，然後使用與提供的相同API [Media JS程式庫](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)，追蹤媒體事件。
+此Web SDK命令會擷取Media Analytics追蹤器。 您可以使用此命令來建立物件執行個體，然後使用與[Media JS程式庫](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)提供的相同API來追蹤媒體事件。
 
-此 `getMediaAnalyticsTracker` 命令會傳回舊版Media Analytics API。
+`getMediaAnalyticsTracker`命令會傳回舊版Media Analytics API。
 
 
 | 方法名稱 | 說明 | 語法 |
@@ -45,9 +45,9 @@ ht-degree: 3%
 | 常數名稱 | 說明 | 值 |
 |-----------------|--|-----------------|
 | `MediaType` | 媒體型別 | `Video`、`Audio` |
-| `StreamType` | 直播類型 | `VOD`， `Live`， `Linear`， `Podcast`， `Audiobook`， `AOD` |
-| `VideoMetadataKeys` | 這會定義視訊資料流的標準中繼資料索引鍵 | `Show`， `Season`， `Episode`， `AssetId`， `Genre`， `FirstAirDate`， `FirstDigitalDate`， `Rating`， `Originator`， `Network`， `ShowType`， `AdLoad`， `MVPD`， `Authorized`， `DayPart`， `Feed`， `StreamFormat` |
-| `AudioMetadataKeys` | 這會定義音訊資料流的標準中繼資料索引鍵。 | `Artist`， `Album`， `Label`， `Author`， `Station`， `Publisher` |
-| `AdMetadataKeys` | 這會定義廣告的標準中繼資料索引鍵。 | `Advertiser`， `CampaignId`， `CreativeId`， `PlacementId`， `SiteId`， `CreativeUrl` |
-| `Event` | 這會定義追蹤事件的型別。 | `AdBreakStart`， `AdBreakComplete`， `AdStart`， `AdComplete`， `AdSkip`， `ChapterStart`， `ChapterComplete`， `ChapterSkip`， `SeekStart`， `SeekComplete`， `BufferStart`， `BufferComplete`， `BitrateChange`， `StateStart`， `StateEnd` |
-| `PlayerState` | 這會定義追蹤播放器狀態的標準值。 | `FullScreen`， `ClosedCaption`， `Mute`， `PictureInPicture`， `InFocus` |
+| `StreamType` | 直播類型 | `VOD`，`Live`，`Linear`，`Podcast`，`Audiobook`，`AOD` |
+| `VideoMetadataKeys` | 這會定義視訊資料流的標準中繼資料索引鍵 | `Show`、`Season`、`Episode`、`AssetId`、`Genre`、`FirstAirDate`、`FirstDigitalDate`、`Rating`、`Originator`、`Network`、`ShowType`、`AdLoad`、`MVPD`、`Authorized`、`DayPart`、`Feed`、`StreamFormat` |
+| `AudioMetadataKeys` | 這會定義音訊資料流的標準中繼資料索引鍵。 | `Artist`，`Album`，`Label`，`Author`，`Station`，`Publisher` |
+| `AdMetadataKeys` | 這會定義廣告的標準中繼資料索引鍵。 | `Advertiser`，`CampaignId`，`CreativeId`，`PlacementId`，`SiteId`，`CreativeUrl` |
+| `Event` | 這會定義追蹤事件的型別。 | `AdBreakStart`、`AdBreakComplete`、`AdStart`、`AdComplete`、`AdSkip`、`ChapterStart`、`ChapterComplete`、`ChapterSkip`、`SeekStart`、`SeekComplete`、`BufferStart`、`BufferComplete`、`BitrateChange`、`StateStart`、`StateEnd` |
+| `PlayerState` | 這會定義追蹤播放器狀態的標準值。 | `FullScreen`，`ClosedCaption`，`Mute`，`PictureInPicture`，`InFocus` |

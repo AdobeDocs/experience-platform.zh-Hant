@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 2%
 
 存取支援目的地深入分析的SQL，然後產生您自己的深入分析，進一步探索如何從Adobe Experience Platform啟用資料至您的目的地平台，藉此瞭解您的目的地深入分析。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
-請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
+如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-下列見解全部都可供您用作 [目的地儀表板](../guides/destinations.md) 或自訂 [使用者定義儀表板](../user-defined-dashboards.md). 請參閱 [自訂概述](../customize/overview.md) 以取得如何自訂儀表板的指示，或 [建立和編輯新Widget](../customize/custom-widgets.md) 在Widget資料庫和 [使用者定義儀表板](../user-defined-dashboards.md#create-widget).
+下列深入分析都可供您用作[目的地儀表板](../guides/destinations.md)或自訂[使用者定義儀表板](../user-defined-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../user-defined-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
-## 啟用的對象 {#activated-audiences}
+## 啟用的客群 {#activated-audiences}
 
 此深入分析所回答的問題：
 
@@ -48,9 +48,9 @@ WHERE
 
 +++
 
-請參閱 [啟用的對象Widget檔案](../guides/destinations.md#activated-audiences) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[啟用的對象Widget檔案](../guides/destinations.md#activated-audiences)。
 
-## 跨所有目的地的已啟用對象 {#activated-audiences-across-all-destinations}
+## 已在所有目的地啟用的客群 {#activated-audiences-across-all-destinations}
 
 此深入分析所回答的問題：
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-請參閱 [所有目的地Widget檔案中的啟用對象](../guides/destinations.md#activated-audiences-across-all-destinations) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱所有目的地Widget檔案中的[已啟動對象](../guides/destinations.md#activated-audiences-across-all-destinations)。
 
 ## 依目的地平台區分的有效目的地 {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-請參閱 [依目的地平台Widget檔案區分的有效目的地](../guides/destinations.md#active-destinations-by-destination-platform) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[依目的地平台Widget檔案的作用中目的地](../guides/destinations.md#active-destinations-by-destination-platform)。
 
 ## 對象規模趨勢 {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-請參閱 [對象人數趨勢Widget檔案](../guides/destinations.md#audience-size-trend) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對象人數趨勢Widget檔案](../guides/destinations.md#audience-size-trend)。
 
 ## 常見對象 {#common-audiences}
 
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-請參閱 [常見受眾Widget檔案](../guides/destinations.md#common-audiences) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[常見對象Widget檔案](../guides/destinations.md#common-audiences)。
 
 ## 目的地狀態 {#destination-status}
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-請參閱 [目的地狀態Widget檔案](../guides/destinations.md#destination-status) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[目的地狀態Widget檔案](../guides/destinations.md#destination-status)。
 
 ## 目的地計數 {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-請參閱 [目的地計數Widget檔案](../guides/destinations.md#destinations-count) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[目的地計數Widget檔案](../guides/destinations.md#destinations-count)。
 
 ## 已對應對象的健康情況 {#mapped-audience-health}
 
@@ -325,9 +325,9 @@ SELECT destination_name,
 
 +++
 
-請參閱 [對應的對象健康狀況Widget檔案](../guides/destinations.md#mapped-audience-health) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對應的對象健康狀況Widget檔案](../guides/destinations.md#mapped-audience-health)。
 
-## 對應的對象 {#mapped-audiences}
+## 已對應的客群 {#mapped-audiences}
 
 此深入分析所回答的問題：
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-請參閱 [對應的對象Widget檔案](../guides/destinations.md#mapped-audiences) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[對應的對象Widget檔案](../guides/destinations.md#mapped-audiences)。
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-請參閱 [最常使用的目的地Widget檔案](../guides/destinations.md#most-used-destinations) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[最常使用的目的地Widget檔案](../guides/destinations.md#most-used-destinations)。
 
 ## 最近啟動的對象 {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-請參閱 [最近啟用的對象Widget檔案](../guides/destinations.md#recently-activated-audiences) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[最近啟用的對象Widget檔案](../guides/destinations.md#recently-activated-audiences)。
 
 ## 最近啟動的對象 (依目的地) {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-請參閱 [目的地Widget檔案最近啟用的對象](../guides/destinations.md#recently-activated-audiences-by-destination) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱目的地Widget檔案的[最近啟用的對象](../guides/destinations.md#recently-activated-audiences-by-destination)。
 
 ## 最近建立的目的地 {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-請參閱 [最近建立的目的地Widget檔案](../guides/destinations.md#recently-created-destinations) 以取得此深入分析的外觀和功能相關資訊。
+如需此深入分析的外觀和功能的相關資訊，請參閱[最近建立的目的地Widget檔案](../guides/destinations.md#recently-created-destinations)。
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 閱讀本檔案後，您現在瞭解產生儀表板深入分析的SQL，以及此分析解決哪些常見問題。 您現在可以編輯和疊代這些SQL查詢，以產生您自己的深入分析。
 
-請參閱 [檢視SQL檔案](../view-sql.md) 有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
+如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-您也可以閱讀並瞭解為產生深入分析的SQL [設定檔](./profiles.md)， [帳戶設定檔](./account-profiles.md) 和 [受眾](./audiences.md) 控制面板。
+您也可以閱讀並瞭解產生[設定檔](./profiles.md)、[帳戶設定檔](./account-profiles.md)和[對象](./audiences.md)儀表板之深入分析的SQL。

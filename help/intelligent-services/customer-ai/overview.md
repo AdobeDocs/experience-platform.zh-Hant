@@ -10,7 +10,7 @@ exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
 source-wordcount: '571'
-ht-degree: 29%
+ht-degree: 21%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 29%
 
 Customer AI是Intelligent Services的一部分，它讓行銷人員能夠產生個人層面的客戶預測並提供解釋。
 
-在影響因子的協助下，Customer AI 可告知您客戶可能會有什麼行為以及原因何在。 此外，行銷人員可受益於 Customer AI 預測和洞見，藉由提供最適合的方案和訊息來打造個人化客戶體驗。
+在影響因子的協助下，Customer AI可告知您客戶可能會做什麼以及為什麼。 此外，行銷人員可受益於Customer AI預測和深入分析，藉由提供最適合的方案和訊息來打造個人化客戶體驗。
 
 ## 瞭解Customer AI
 
@@ -38,7 +38,7 @@ Customer AI的建置目標：
 
 - 不應使用Customer AI來預測動態定價，或客戶將要購買的價位。
 - Customer AI無法判斷提供優惠方案是否會導致客戶購買專案的可能性增加。 雖然您可能會根據傾向分數決定傳送折扣優惠，但這不一定是轉換這些客戶的最佳方式。
-- Customer AI不是產品推薦工具。 如果您有數千個SKU，請勿使用Customer AI當做實際產品推薦解決方案(例如 [!DNL Adobe Target].
+- Customer AI不是產品推薦工具。 如果您有數千個SKU，請勿使用Customer AI做為[!DNL Adobe Target]等實際產品推薦解決方案的Proxy。
 - Customer AI無法預測客戶處於購買歷程的哪個階段，例如他們處於「意識」、「考慮」、「購買」或「保留」階段。
 - 請勿使用Customer AI來判斷哪些客戶可能會購買未來推出的產品。 這要求某些成功事件必須存在於過去，以便Customer AI根據您的資料成功訓練機器學習演演算法。
 
@@ -52,4 +52,4 @@ Customer AI的運作方式是藉由分析現有的消費者體驗事件資料來
 
 ## 後續步驟
 
-您可以依照以下說明開始 [快速入門](./getting-started.md) 指南。 本指南會逐步引導您設定Customer AI的所有必要必要條件。 如果您已準備好所有認證和資料，請造訪  [設定Customer AI執行個體](./user-guide/configure.md). 它提供使用Customer AI的步驟。
+您可以依照[快速入門](./getting-started.md)指南開始。 本指南會逐步引導您設定Customer AI的所有必要必要條件。 如果您已經準備好所有的認證和資料，請造訪[設定Customer AI執行個體](./user-guide/configure.md)。 它提供使用Customer AI的步驟。

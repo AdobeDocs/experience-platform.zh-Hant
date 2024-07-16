@@ -15,11 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * Adobe建議您將此頁面加入書籤，每三個月重新造訪一次，以檢查最新IP位址。 Adobe不提供新IP範圍的通知。
-> * 雖然Adobe支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為 [!DNL Amazon S3] 和 [!DNL Azure Blob].
+> * 雖然Adobe支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為[!DNL Amazon S3]和[!DNL Azure Blob]。
 
 ## 概觀 {#overview}
 
-此頁面提供您可新增至允許清單的IP位址，以便安全地從Experience Platform匯出資料至您的 [SFTP伺服器](../destinations/catalog/cloud-storage/sftp.md).
+此頁面提供可新增至允許清單的IP位址，以便安全地從Experience Platform匯出資料至[SFTP伺服器](../destinations/catalog/cloud-storage/sftp.md)。
 
 您可以透過網路防火牆定義網路存取控制。 透過指定適當的IP範圍，您可以允許資料傳輸服務的流量。
 

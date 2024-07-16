@@ -12,35 +12,35 @@ ht-degree: 7%
 
 ---
 
-# 檢視資料集資料，使用 [!DNL Data Access] API
+# 使用[!DNL Data Access] API檢視資料集資料
 
-使用本逐步教學課程，瞭解如何使用尋找、存取及下載儲存在資料集中的資料。 [!DNL Data Access] Adobe Experience Platform中的API。 本檔案將介紹 [!DNL Data Access] API，例如分頁和部分下載。
+使用此逐步教學課程，瞭解如何使用Adobe Experience Platform中的[!DNL Data Access] API尋找、存取及下載儲存在資料集中的資料。 本檔案介紹[!DNL Data Access] API的一些獨特功能，例如分頁和部分下載。
 
 ## 快速入門
 
-本教學課程需要您深入瞭解如何建立和填入資料集。 請參閱 [資料集建立教學課程](../../catalog/datasets/create.md) 以取得詳細資訊。
+本教學課程需要您深入瞭解如何建立和填入資料集。 如需詳細資訊，請參閱[資料集建立教學課程](../../catalog/datasets/create.md)。
 
 以下章節提供成功呼叫Platform API所需瞭解的其他資訊。
 
 ### 讀取範例 API 呼叫 {#reading-sample-api-calls}
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
 ### 收集所需標頭的值
 
-若要呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](../../landing/api-authentication.md). 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](../../landing/api-authentication.md)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
-- 授權：持有人 `{ACCESS_TOKEN}`
+- 授權：持有人`{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
 - x-gw-ims-org-id： `{ORG_ID}`
 
-中的所有資源 [!DNL Experience Platform] 會隔離至特定的虛擬沙箱。 所有要求至 [!DNL Platform] API需要標頭，以指定進行作業的沙箱名稱：
+[!DNL Experience Platform]中的所有資源都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要一個標頭，該標頭會指定進行操作的沙箱的名稱：
 
 - x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->如需中沙箱的詳細資訊 [!DNL Platform]，請參閱 [沙箱概述檔案](../../sandboxes/home.md).
+>如需[!DNL Platform]中沙箱的詳細資訊，請參閱[沙箱概觀檔案](../../sandboxes/home.md)。
 
 所有包含承載 (POST、PUT、PATCH) 的請求都需有額外的標頭：
 
@@ -48,24 +48,24 @@ ht-degree: 7%
 
 ## 序列圖
 
-本教學課程遵循下列順序圖中所概述的步驟，重點說明 [!DNL Data Access] API。
+本教學課程遵循下列順序圖中所概述的步驟，重點說明[!DNL Data Access] API的核心功能。
 
 ![資料存取API核心功能的順序圖。](../images/sequence_diagram.png)
 
-若要擷取批次和檔案的相關資訊，請使用 [!DNL Catalog] API。 若要透過HTTP存取及下載這些檔案，並做為完整或部分下載專案，視檔案大小而定，請使用 [!DNL Data Access] API。
+若要擷取批次和檔案的相關資訊，請使用[!DNL Catalog] API。 若要透過HTTP存取及下載這些檔案，並做為完整或部分下載專案，請根據檔案大小使用[!DNL Data Access] API。
 
 ## 找出資料
 
-開始使用之前 [!DNL Data Access] API，您必須識別要存取之資料的位置。 在 [!DNL Catalog] API的環境中，有兩個端點可用來瀏覽組織的中繼資料，以及擷取您要存取之批次或檔案的ID：
+開始使用[!DNL Data Access] API之前，您必須先識別您要存取之資料的位置。 在[!DNL Catalog] API中，有兩個端點可用來瀏覽組織的中繼資料，以及擷取您要存取之批次或檔案的ID：
 
 - `GET /batches`：傳回組織下的批次清單
-- `GET /dataSetFiles`：傳回組織底下的檔案清單
+- `GET /dataSetFiles`：傳回組織下的檔案清單
 
-如需中端點的完整清單 [!DNL Catalog] API，請參閱 [API參考](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+如需[!DNL Catalog] API中端點的完整清單，請參閱[API參考](https://developer.adobe.com/experience-platform-apis/references/catalog/)。
 
 ## 擷取組織下的批次清單
 
-使用 [!DNL Catalog] api下，您可以傳回組織下的批次清單：
+使用[!DNL Catalog] API可傳回組織下的批次清單：
 
 **API格式**
 
@@ -108,7 +108,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 ### 篩選批次清單 {#filter-batches-list}
 
-篩選器通常需要尋找特定批次以擷取特定使用案例的相關資料。 引數可新增至 `GET /batches` 請求篩選傳回的回應。 以下請求會傳回指定時間後建立的所有批次（在特定資料集中），依其建立時間排序。
+篩選器通常需要尋找特定批次以擷取特定使用案例的相關資料。 可以將引數新增至`GET /batches`要求以篩選傳回的回應。 以下請求會傳回指定時間後建立的所有批次（在特定資料集中），依其建立時間排序。
 
 **API格式**
 
@@ -120,7 +120,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 | -------- | ----------- |
 | `{START_TIMESTAMP}` | 以毫秒為單位的開始時間戳記(例如1514836799000)。 |
 | `{DATASET_ID}` | 資料集識別碼。 |
-| `{SORT_BY}` | 依提供的值排序回應。 例如， `desc:created` 依建立日期遞減排序物件。 |
+| `{SORT_BY}` | 依提供的值排序回應。 例如，`desc:created`會依建立日期遞減排序物件。 |
 
 **要求**
 
@@ -192,11 +192,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-引數和篩選器的完整清單可在以下網址找到： [目錄API參考](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+您可以在[目錄API參考](https://developer.adobe.com/experience-platform-apis/references/catalog/)中找到引數和篩選器的完整清單。
 
 ## 擷取屬於特定批次的所有檔案清單
 
-現在您已取得要存取之批次的ID，可以使用 [!DNL Data Access] 此API用於取得屬於該批次的檔案清單。
+現在您已取得要存取之批次的ID，可以使用[!DNL Data Access] API取得屬於該批次的檔案清單。
 
 **API格式**
 
@@ -249,11 +249,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 | -------- | ----------- |
 | `data._links.self.href` | 存取此檔案的URL。 |
 
-回應包含列出指定批次中所有檔案的資料陣列。 參照檔案的檔案ID位於 `dataSetFileId` 欄位。
+回應包含列出指定批次中所有檔案的資料陣列。 檔案是以其檔案ID參照，可在`dataSetFileId`欄位下找到。
 
 ## 使用檔案ID存取檔案 {#access-file-with-file-id}
 
-有了唯一的檔案ID後，您就可以使用 [!DNL Data Access] 存取檔案特定詳細資料的API，包括其名稱、位元組大小以及下載連結。
+一旦您擁有唯一的檔案識別碼，您就可以使用[!DNL Data Access] API來存取檔案的特定詳細資料，包括其名稱、位元組大小以及下載連結。
 
 **API格式**
 
@@ -306,7 +306,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 | `{FILE_NAME}.parquet` | 檔案的名稱。 |
 | `_links.self.href` | 下載檔案的URL。 |
 
-**案例2：檔案ID指向目錄**
+**案例2：檔案識別碼指向目錄**
 
 **回應**
 
@@ -351,7 +351,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 | -------- | ----------- | 
 | `data._links.self.href` | 下載關聯檔案的URL。 |
 
-此回應會傳回包含兩個個別檔案（具有ID）的目錄 `{FILE_ID_2}` 和 `{FILE_ID_3}`. 在此案例中，您必須追蹤每個檔案的URL才能存取該檔案。
+此回應傳回包含兩個獨立檔案的目錄，識別碼為`{FILE_ID_2}`和`{FILE_ID_3}`。 在此案例中，您必須追蹤每個檔案的URL才能存取該檔案。
 
 ## 擷取檔案的中繼資料
 
@@ -382,12 +382,12 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 
 回應標頭包含查詢檔案的中繼資料，包括：
 
-- `Content-Length`：指出承載的大小（以位元組為單位）
-- `Content-Type`：指出檔案型別。
+- `Content-Length`：表示承載的大小（位元組）
+- `Content-Type`：表示檔案型別。
 
 ## 存取檔案的內容
 
-您也可以使用 [!DNL Data Access] API。
+您也可以使用[!DNL Data Access] API存取檔案的內容。
 
 **API格式**
 
@@ -416,9 +416,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## 下載檔案的部分內容 {#download-partial-file-contents}
 
-若要從檔案下載特定範圍的位元組，請在 `GET /files/{FILE_ID}` 要求給 [!DNL Data Access] API。 如果未指定範圍，API預設會下載整個檔案。
+若要從檔案下載特定範圍的位元組，請在向[!DNL Data Access] API發出的`GET /files/{FILE_ID}`要求期間指定範圍標頭。 如果未指定範圍，API預設會下載整個檔案。
 
-中的HEAD範例 [上一節](#retrieve-the-metadata-of-a-file) 會提供特定檔案的大小（位元組）。
+[previous區段](#retrieve-the-metadata-of-a-file)中的HEAD範例提供特定檔案的大小（位元組）。
 
 **API格式**
 
@@ -451,15 +451,15 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 回應內文包含檔案的前100個位元組（如要求中的「Range」標頭所指定）以及HTTP狀態206 （部分內容）。 回應也包含下列標頭：
 
 - Content-Length： 100 （傳回的位元組數）
-- Content-type： application/parquet (已要求Parquet檔案，因此回應內容型別為 `parquet`)
+- Content-type： application/parquet （已要求Parquet檔案，因此回應內容型別為`parquet`）
 - Content-Range：位元組0-99/249058 (要求的範圍(0-99)，位元組總數(249058))
 
 ## 設定API回應分頁 {#configure-response-pagination}
 
-內的回應 [!DNL Data Access] API已分頁。 依預設，每頁的最大專案數為100。 您可以使用分頁引數修改預設行為。
+[!DNL Data Access] API中的回應會分頁。 依預設，每頁的最大專案數為100。 您可以使用分頁引數修改預設行為。
 
-- `limit`：您可以使用「limit」引數，根據您的要求指定每頁的專案數。
-- `start`：位移可由「開始」查詢引數設定。
+- `limit`：您可以使用「limit」引數，根據您的需求指定每頁的專案數。
+- `start`：位移可由「start」查詢引數設定。
 - `&`：您可以使用&amp;符號，在單一呼叫中組合多個引數。
 
 **API格式**
@@ -486,11 +486,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**回應**:
+**回應**：
 
-回應包含 `"data"` 單一元素的陣列，如要求引數所指定 `limit=1`. 此元素是一個物件，包含第一個可用檔案的詳細資訊，由 `start=0` 請求中的引數（請記住，在以零開始的編號中，第一個元素為「0」）。
+回應包含具有單一專案的`"data"`陣列，如要求引數`limit=1`所指定。 此專案是一個物件，包含第一個可用檔案的詳細資料，如請求中的`start=0`引數所指定（請記住，在零位編號中，第一個專案是&quot;0&quot;）。
 
-此 `_links.next.href` 值包含回應下一頁的連結，您可以在此看到 `start` 引數已進階至 `start=1`.
+`_links.next.href`值包含回應下一頁的連結，您可以在此看到`start`引數已進階至`start=1`。
 
 ```json
 {

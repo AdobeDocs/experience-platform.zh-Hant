@@ -13,7 +13,7 @@ ht-degree: 1%
 
 在Experience PlatformUI中連線到您的目的地時，您可能需要使用者提供特定的設定詳細資訊，或選取您向他們提供的特定選項。 在Destination SDK中，這些選項稱為客戶資料欄位。
 
-若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱 [設定選項](../configuration-options.md) 檔案或請參閱下列目的地設定總覽頁面：
+若要瞭解此元件在何處適合使用Destination SDK建立的整合，請參閱[組態選項](../configuration-options.md)檔案中的圖表，或檢視下列目的地組態概觀頁面：
 
 * [使用Destination SDK設定串流目的地](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [使用Destination SDK來設定以檔案為基礎的目的地](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
@@ -27,7 +27,7 @@ ht-degree: 1%
 * 使用者可選擇的可用檔案壓縮型別。
 * 即時（串流）整合的可用端點清單。
 
-您可以透過 `/authoring/destinations` 端點。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
+您可以透過`/authoring/destinations`端點設定客戶資料欄位。 請參閱下列API參考頁面，以取得詳細的API呼叫範例，您可在此範例設定本頁面中顯示的元件。
 
 * [建立目的地設定](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [更新目的地設定](../../authoring-api/destination-configuration/update-destination-configuration.md)
@@ -36,7 +36,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Destination SDK支援的所有引數名稱和值如下 **區分大小寫**. 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
+>Destination SDK支援的所有引數名稱和值都區分大小寫&#x200B;****。 為避免區分大小寫錯誤，請完全依照檔案中所示使用引數名稱和值。
 
 ## 支援的整合型別 {#supported-integration-types}
 
@@ -53,24 +53,24 @@ ht-degree: 1%
 
 | 參數 | 類型 | 必要/選用 | 說明 |
 |---------|----------|------|---|
-| `name` | 字串 | 必要 | 為您要介紹的自訂欄位提供名稱。 此名稱不會顯示在Platform UI中，除非 `title` 欄位空白或缺失。 |
+| `name` | 字串 | 必要 | 為您要介紹的自訂欄位提供名稱。 此名稱在Platform UI中不可見，除非`title`欄位空白或遺失。 |
 | `type` | 字串 | 必要 | 表示您要引入的自訂欄位的型別。 接受的值： <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | 字串 | 選填 | 表示欄位名稱，如客戶在Platform UI中所見。 如果此欄位空白或缺失，UI會繼承中的欄位名稱 `name` 值。 |
+| `title` | 字串 | 選填 | 表示欄位名稱，如客戶在Platform UI中所見。 如果此欄位空白或遺失，UI會繼承`name`值的欄位名稱。 |
 | `description` | 字串 | 選填 | 提供自訂欄位的說明。 此說明不會顯示在Platform UI中。 |
 | `isRequired` | 布林值 | 選填 | 指出是否要求使用者在目的地設定工作流程中提供此欄位的值。 |
-| `pattern` | 字串 | 選填 | 如有需要，強制自訂欄位使用模式。 使用規則運算式強制執行模式。 例如，如果您的客戶ID不包含數字或底線，請輸入 `^[A-Za-z]+$` 在此欄位中。 |
+| `pattern` | 字串 | 選填 | 如有需要，強制自訂欄位使用模式。 使用規則運算式強制執行模式。 例如，如果您的客戶ID不包含數字或底線，請在此欄位中輸入`^[A-Za-z]+$`。 |
 | `enum` | 字串 | 選填 | 將自訂欄位呈現為下拉式功能表，並列出使用者可用的選項。 |
-| `default` | 字串 | 選填 | 從「 」定義預設值 `enum` 清單。 |
+| `default` | 字串 | 選填 | 從`enum`清單定義預設值。 |
 | `hidden` | 布林值 | 選填 | 指出客戶資料欄位是否顯示在UI中。 |
-| `unique` | 布林值 | 選填 | 當您需要建立客戶資料欄位時，使用此引數，該欄位的值在使用者的組織設定的所有目的地資料流中必須是唯一的。 例如， **[!UICONTROL 整合別名]** 中的欄位 [自訂個人化](../../../catalog/personalization/custom-personalization.md) 目的地必須是唯一的，這表示流向此目的地的兩個個別資料流在此欄位中不能有相同的值。 |
+| `unique` | 布林值 | 選填 | 當您需要建立客戶資料欄位時，使用此引數，該欄位的值在使用者的組織設定的所有目的地資料流中必須是唯一的。 例如，[自訂Personalization](../../../catalog/personalization/custom-personalization.md)目的地中的&#x200B;**[!UICONTROL 整合別名]**&#x200B;欄位必須是唯一的，這表示此目的地的兩個個別資料流不能在此欄位中有相同的值。 |
 | `readOnly` | 布林值 | 選填 | 指出客戶是否可以變更欄位的值。 |
 
 {style="table-layout:auto"}
 
-在以下範例中， `customerDataFields` 區段會定義使用者在連線至目的地時，必須在Platform UI中輸入的兩個欄位：
+在下列範例中，`customerDataFields`區段定義使用者在連線至目的地時，必須在Platform UI中輸入的兩個欄位：
 
-* `Account ID`：您目的地平台的使用者帳戶ID。
-* `Endpoint region`：他們要連線的API的區域端點。 此 `enum` 區段會建立一個下拉式功能表，其中包含定義於中的值，可供使用者選取。
+* `Account ID`：您目的地平台的使用者帳戶識別碼。
+* `Endpoint region`：它們要連線的API區域端點。 `enum`區段會建立下拉式功能表，其中包含定義於中的值，可供使用者選取。
 
 ```json
 "customerDataFields":[
@@ -103,17 +103,17 @@ ht-degree: 1%
 
 ## 目的地連線名稱和說明 {#names-description}
 
-建立新目的地時，Destination SDK會自動新增 **[!UICONTROL 名稱]** 和 **[!UICONTROL 說明]** 前往平台UI中目的地連線畫面的欄位。 如上述範例所示， **[!UICONTROL 名稱]** 和 **[!UICONTROL 說明]** 欄位會在UI中呈現，而不會納入客戶資料欄位設定中。
+建立新目的地時，Destination SDK會自動新增&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位至Platform UI中的目的地連線畫面。 如上述範例所示，**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位會在UI中轉譯，而不會包含在客戶資料欄位設定中。
 
 >[!IMPORTANT]
 >
->如果您新增 **[!UICONTROL 名稱]** 和 **[!UICONTROL 說明]** 客戶資料欄位設定中的欄位，使用者會在UI中看到重複專案。
+>如果您在客戶資料欄位設定中新增&#x200B;**[!UICONTROL Name]**&#x200B;和&#x200B;**[!UICONTROL Description]**&#x200B;欄位，使用者會在UI中看到這些欄位重複。
 
 ## 訂購客戶資料欄位 {#ordering}
 
 您在目的地設定中新增客戶資料欄位的順序，會反映在Platform UI中。
 
-例如，下列設定會在UI中相應反映，而選項會依順序顯示 **[!UICONTROL 名稱]**， **[!UICONTROL 說明]**， **[!UICONTROL 貯體名稱]**， **[!UICONTROL 資料夾路徑]**， **[!UICONTROL 檔案型別]**， **[!UICONTROL 壓縮格式]**.
+例如，下列組態會相應反映在UI中，選項會依序顯示&#x200B;**[!UICONTROL Name]**、**[!UICONTROL Description]**、**[!UICONTROL Bucket名稱]**、**[!UICONTROL 資料夾路徑]**、**[!UICONTROL 檔案型別]**、**[!UICONTROL 壓縮格式]**。
 
 ```json
 "customerDataFields":[
@@ -169,13 +169,13 @@ ht-degree: 1%
 ]
 ```
 
-![此影像顯示Experience Platform UI中檔案格式選項順序。](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
+![顯示Experience PlatformUI中檔案格式選項順序的影像。](../../assets/functionality/destination-configuration/customer-data-fields-order.png)
 
 ## 群組客戶資料欄位 {#grouping}
 
 您可以將數個客戶資料欄位分組在一個區段中。 在UI中設定與目的地的連線時，使用者可以看到類似欄位的視覺化分組並從中受益。
 
-若要這麼做，請使用 `"type": "object"` 建立群組，並收集內所需的客戶資料欄位 `properties` 物件，如下圖所示，其分組為 **[!UICONTROL CSV選項]** 會反白顯示。
+若要這麼做，請使用`"type": "object"`建立群組，並在`properties`物件中收集所需的客戶資料欄位，如下圖所示，其中群組&#x200B;**[!UICONTROL CSV選項]**&#x200B;已反白顯示。
 
 ```json {line-numbers="true" highlight="6-28"}
 "customerDataFields":[
@@ -210,13 +210,13 @@ ht-degree: 1%
 ]
 ```
 
-![此影像顯示UI中分組的客戶資料欄位。](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
+![影像顯示UI中的客戶資料欄位分組。](../../assets/functionality/destination-configuration/group-customer-data-fields.png)
 
 ## 建立客戶資料欄位的下拉式選取器 {#dropdown-selectors}
 
 若您希望允許使用者選取數個選項的情況（例如應使用哪個字元來分隔CSV檔案中的欄位），您可以將下拉欄位新增到UI。
 
-若要這麼做，請使用 `namedEnum` 物件，如下所示，並設定 `default` 使用者可選取的選項值。
+若要這麼做，請使用如下所示的`namedEnum`物件，並為使用者可選取的選項設定`default`值。
 
 ```json {line-numbers="true" highlight="15-24"}
 "customerDataFields":[
@@ -251,17 +251,17 @@ ht-degree: 1%
 ]
 ```
 
-![熒幕錄製，顯示使用上述設定建立的下拉式選擇器範例。](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
+![熒幕錄製，顯示使用上述組態建立的下拉式選擇器範例。](../../assets/functionality/destination-configuration/customer-data-fields-dropdown.gif)
 
 ## 為客戶資料欄位建立動態下拉式選取器 {#dynamic-dropdown-selectors}
 
 若您希望動態呼叫API並使用回應來動態填入下拉式選單中的選項，您可以使用動態下拉式選取器。
 
-動態下拉式選取器看起來與 [一般下拉式選取器](#dropdown-selectors) 在UI中。 唯一的差異是值會從API動態擷取。
+動態下拉式清單選取器看起來與UI中的[一般下拉式清單選取器](#dropdown-selectors)相同。 唯一的差異是值會從API動態擷取。
 
 若要建立動態下拉式選取器，您必須設定兩個元件：
 
-**步驟1.** [建立目的地伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) 與 `responseFields` 動態API呼叫的範本，如下所示。
+**步驟1。** [使用動態API呼叫的`responseFields`範本建立目的地伺服器](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers)，如下所示。
 
 ```json
 {
@@ -309,7 +309,7 @@ ht-degree: 1%
 }
 ```
 
-**步驟2.** 使用 `dynamicEnum` 物件，如下所示。 在以下範例中， `User` 下拉式清單是使用動態伺服器擷取。
+**步驟2。**&#x200B;使用`dynamicEnum`物件，如下所示。 在下列範例中，`User`下拉式清單是使用動態伺服器擷取。
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -338,7 +338,7 @@ ht-degree: 1%
 ]
 ```
 
-設定 `destinationServerId` 引數，代表您在步驟1建立的目的地伺服器ID。 您可以在的回應中看到目的地伺服器ID [擷取目的地伺服器設定](../../authoring-api/destination-server/retrieve-destination-server.md) API呼叫。
+將`destinationServerId`引數設定為您在步驟1建立的目的地伺服器識別碼。 您可以在[擷取目的地伺服器組態](../../authoring-api/destination-server/retrieve-destination-server.md) API呼叫的回應中看到目的地伺服器識別碼。
 
 ## 建立巢狀客戶資料欄位 {#nested-fields}
 
@@ -346,11 +346,11 @@ ht-degree: 1%
 
 例如，您可以新增巢狀客戶資料欄位，要求客戶選取與您目的地的整合型別，然後立即選取另一個專案。 第二個選取專案是整合型別內的巢狀欄位。
 
-若要新增巢狀欄位，請使用 `properties` 引數，如下所示。 在以下的設定範例中，您可以在中看到三個獨立的巢狀欄位 **您的目的地 — 整合專屬設定** 客戶資料欄位。
+若要新增巢狀欄位，請使用`properties`引數，如下所示。 在下列設定範例中，您可以在&#x200B;**您的目的地 — 整合特定設定**&#x200B;客戶資料欄位中看到三個個別的巢狀欄位。
 
 >[!TIP]
 >
->從2024年4月發行版本開始，您可以設定 `isRequired` 巢狀欄位上的引數。 例如，在下方的設定程式碼片段中，前兩個巢狀欄位會標示為必要（醒目提示第xxx行），而客戶除非為欄位選取值，否則無法繼續。 進一步瞭解 [支援的引數](#supported-parameters) 區段。
+>從2024年4月發行版本開始，您可以在巢狀欄位上設定`isRequired`引數。 例如，在下方的設定程式碼片段中，前兩個巢狀欄位會標示為必要（醒目提示第xxx行），而客戶除非為欄位選取值，否則無法繼續。 深入瞭解[支援的引數](#supported-parameters)區段中的必要欄位。
 
 ```json {line-numbers="true" highlight="11,20"}
     {
@@ -398,7 +398,7 @@ ht-degree: 1%
 
 下列設定會為CSV檔案格式選項建立條件式群組。 只有當使用者選取CSV作為匯出的所需檔案型別時，才會顯示CSV檔案選項。
 
-若要將欄位設為條件式，請使用 `conditional` 引數如下所示：
+若要將欄位設為條件式，請使用`conditional`引數，如下所示：
 
 ```json
 "conditional": {
@@ -408,7 +408,7 @@ ht-degree: 1%
 }
 ```
 
-在更廣闊的背景中，您可以看到 `conditional` 以下目的地設定中使用的欄位，以及 `fileType` 字串與 `csvOptions` 在其中定義它的物件。 條件欄位定義於 `properties` 引數。
+在更廣大的內容中，您可以看到下列目的地設定中正在使用`conditional`欄位，以及`fileType`字串和在其中定義它的`csvOptions`物件。 條件欄位是在`properties`引數中定義。
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
@@ -555,13 +555,13 @@ ht-degree: 1%
 
 您可以在下方根據上述設定檢視產生的UI畫面。 當使用者選擇檔案型別CSV時，參考CSV檔案型別的其他檔案格式選項會顯示在UI中。
 
-![熒幕錄製顯示CSV檔案的條件檔案格式選項。](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
+![顯示CSV檔案條件式檔案格式選項的熒幕錄製。](../../assets/functionality/destination-configuration/customer-data-fields-conditional.gif)
 
 ## 存取範本化客戶資料欄位 {#accessing-templatized-fields}
 
 當您的目的地需要使用者輸入時，您必須向使用者提供一系列客戶資料欄位，讓使用者可透過Platform UI填寫這些欄位。 然後，您必須設定目的地伺服器，以從客戶資料欄位正確讀取使用者輸入。 這是透過範本化欄位完成的。
 
-範本化欄位使用格式 `{{customerData.fieldName}}`，其中 `fieldName` 是您從中讀取資訊的客戶資料欄位名稱。 所有範本化客戶資料欄位的前面都會有 `customerData.` 並括在雙大括弧內 `{{ }}`.
+範本化欄位使用格式`{{customerData.fieldName}}`，其中`fieldName`是您正在讀取資訊的客戶資料欄位名稱。 所有範本化的客戶資料欄位前面都有`customerData.`，並括在雙大括弧`{{ }}`內。
 
 例如，我們考慮下列Amazon S3目的地設定：
 
@@ -590,9 +590,9 @@ ht-degree: 1%
 ]
 ```
 
-此設定會提示您的使用者輸入其 [!DNL Amazon S3] 貯體名稱和資料夾路徑對應到客戶資料欄位中。
+此設定會提示您的使用者在各自的客戶資料欄位中輸入其[!DNL Amazon S3]貯體名稱和資料夾路徑。
 
-讓Experience Platform正確連線至 [!DNL Amazon S3]，您的目的地伺服器必須設定為從這兩個客戶資料欄位讀取值，如下所示：
+若要Experience Platform正確連線到[!DNL Amazon S3]，您的目的地伺服器必須設定為從這兩個客戶資料欄位讀取值，如下所示：
 
 ```json
  "fileBasedS3Destination":{
@@ -607,9 +607,9 @@ ht-degree: 1%
    }
 ```
 
-範本化值 `{{customerData.bucketName}}` 和 `{{customerData.path}}` 讀取使用者提供的值，讓Experience Platform可以成功連線至目的地平台。
+範本化值`{{customerData.bucketName}}`和`{{customerData.path}}`會讀取使用者提供的值，以便Experience Platform可以成功連線到目的地平台。
 
-如需如何設定目的地伺服器以讀取範本化欄位的詳細資訊，請參閱以下檔案： [硬式編碼欄位與範本化欄位](../destination-server/server-specs.md#templatized-fields).
+如需有關如何設定目的地伺服器以讀取範本化欄位的詳細資訊，請參閱有關[硬式編碼與範本化欄位](../destination-server/server-specs.md#templatized-fields)的檔案。
 
 ## 後續步驟 {#next-steps}
 

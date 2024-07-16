@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # 沙箱型別端點
 
-您可以透過向以下網站發出GET請求，擷取貴組織支援的沙箱型別清單： `/sandboxTypes` 端點。
+您可以向`/sandboxTypes`端點發出GET要求，以擷取貴組織支援的沙箱型別清單。
 
 ## 快速入門
 
-本指南中使用的API端點屬於 [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需相關檔案的連結，請參閱本檔案範例API呼叫的指南，以及有關成功呼叫任何Experience PlatformAPI所需標題的重要資訊。
+本指南中使用的API端點是[[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox)的一部分。 繼續之前，請先檢閱[快速入門手冊](./getting-started.md)，以取得相關檔案的連結、閱讀本檔案中範例API呼叫的手冊，以及有關成功呼叫任何Experience PlatformAPI所需必要標題的重要資訊。
 
 ## 擷取支援的沙箱型別清單
 
-您可以透過向以下網站發出GET請求，擷取貴組織支援的沙箱型別清單： `/sandboxTypes` 端點。
+您可以向`/sandboxTypes`端點發出GET要求，以擷取貴組織支援的沙箱型別清單。
 
 **API格式**
 

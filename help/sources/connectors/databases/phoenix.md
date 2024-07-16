@@ -1,32 +1,32 @@
 ---
-title: Phoenix Source概述
+title: Phoenix Source概觀
 description: 瞭解如何使用API或使用者介面將您的Phoenix帳戶連結至Adobe Experience Platform。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
 # [!DNL Phoenix]
 
-Adobe Experience Platform來源支援從第三方資料庫擷取資料，例如 [[!DNL Phoenix]](https://phoenix.apache.org/index.html). 本檔案提供連線您的電腦之前的先決條件資訊 [!DNL Phoenix] 帳戶透過 [!DNL Flow Service] API或Experience Platform使用者介面。
+Adobe Experience Platform來源支援從協力廠商資料庫（例如[[!DNL Phoenix]](https://phoenix.apache.org/index.html)）擷取資料。 在透過[!DNL Flow Service] API或Experience Platform使用者介面連線您的[!DNL Phoenix]帳戶之前，本檔案會提供先決條件資訊。
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
-以下檔案提供有關如何連線的資訊 [!DNL Phoenix] 若要使用API或使用者介面Experience Platform：
+以下檔案提供有關如何使用API或使用者介面連線[!DNL Phoenix]以Experience Platform的資訊：
 
-## 連線 [!DNL Phoenix] 使用APIExperience Platform
+## 連線[!DNL Phoenix]以使用APIExperience Platform
 
 * [使用Flow Service API建立Phoenix基本連線](../../tutorials/api/create/databases/phoenix.md)
 * [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 * [使用流程服務API為資料庫來源建立資料流](../../tutorials/api/collect/database-nosql.md)
 
-## 連線 [!DNL Phoenix] 若要使用UIExperience Platform
+## 使用UI連線[!DNL Phoenix]以Experience Platform
 
-* [連線您的 [!DNL Phoenix] 使用Experience Platform使用者介面的帳戶](../../tutorials/ui/create/databases/phoenix.md)
+* [使用Experience Platform使用者介面連線您的 [!DNL Phoenix] 帳戶](../../tutorials/ui/create/databases/phoenix.md)
 * [在UI中建立資料庫來源連線的資料流](../../tutorials/ui/dataflow/databases.md)

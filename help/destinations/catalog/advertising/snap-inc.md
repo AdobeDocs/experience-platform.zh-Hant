@@ -13,11 +13,11 @@ ht-degree: 2%
 
 ## 概觀 {#overview}
 
-[Snapchat廣告](https://forbusiness.snapchat.com/) 適合所有企業，無論規模或產業為何。 全熒幕數位廣告可激發對您業務最重要的人員採取行動，成為Snapchaters日常對話的一部分。
+[Snapchat廣告](https://forbusiness.snapchat.com/)是為每個企業製作的，無論規模或產業為何。 全熒幕數位廣告可激發對您業務最重要的人員採取行動，成為Snapchaters日常對話的一部分。
 
 >[!IMPORTANT]
 >
->此目的地聯結器和檔案頁面是由 *Snap Inc* 團隊。 如有任何查詢或更新要求，請直接聯絡他們： *dev-support@snap.com*
+>此目的地聯結器和檔案頁面是由&#x200B;*Snap Inc*&#x200B;團隊建立和維護。 若有任何查詢或更新要求，請直接透過&#x200B;*dev-support@snap.com*&#x200B;聯絡他們
 
 ## 使用案例 {#use-cases}
 
@@ -27,7 +27,7 @@ ht-degree: 2%
 
 若要使用此目的地，您必須有Snapchat Ads帳戶。 請參閱本檔案以瞭解如何建立虛擬報表套裝：
 
-[開始使用Snapchat廣告](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
+[開始使用Snapchat Advertising](https://businesshelp.snapchat.com/s/article/overview?language=en_US)
 
 ## 限制 {#limitations}
 
@@ -37,9 +37,9 @@ ht-degree: 2%
 
 ## 支援的身分 {#supported-identities}
 
-此 *Snap Inc* 目的地支援下表所述的身分啟用。 進一步瞭解 [身分](/help/identity-service/features/namespaces.md).
+*Snap Inc*&#x200B;目的地支援啟用下表所述的身分。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
-所有傳送至的識別碼 *Snap Inc* 目的地必須以SHA-256格式進行雜湊處理。 若要在傳送純文字識別碼到目的地之前進行雜湊處理，請檢查 **[!UICONTROL 套用轉換]** 對應目的地目標識別碼時的選項。
+所有傳送至&#x200B;*Snap Inc*&#x200B;目的地的識別碼都必須以SHA-256格式進行雜湊處理。 若要在傳送純文字識別碼到目的地之前先進行雜湊處理，請在對應目的地的目標識別碼時勾選&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項。
 
 >[!WARNING]
 > 
@@ -52,10 +52,10 @@ ht-degree: 2%
 
 | 目標身分 | 說明 | 考量事項 |
 |---|---|---|
-| Email Address | SHA-256雜湊電子郵件地址 | 將電子郵件地址對應到目標身分欄位 *電子郵件地址*. |
-| 電話號碼 | SHA-256雜湊電話號碼 | 將電子郵件地址對應到目標身分欄位 *phonenumber*. |
-| GAID | SHA-256雜湊的Google廣告ID | 將Google Advertising ID對應至目標身分欄位 *gaid*. |
-| IDFA | SHA-256雜湊的Apple廣告ID | 將Apple Advertising ID對應至目標身分欄位 *idfa*. |
+| 電子郵件地址 | SHA-256雜湊電子郵件地址 | 將電子郵件地址對應到目標識別欄位&#x200B;*emailAddress*。 |
+| 電話號碼 | SHA-256雜湊電話號碼 | 將電子郵件地址對應到目標識別欄位&#x200B;*phoneNumber*。 |
+| GAID | SHA-256雜湊的Google Advertising ID | 將Google Advertising ID對應至目標身分欄位&#x200B;*gaid*。 |
+| IDFA | SHA-256雜湊的Apple Advertising ID | 將Apple Advertising ID對應至目標身分欄位&#x200B;*idfa*。 |
 
 {style="table-layout:auto"}
 
@@ -65,8 +65,8 @@ ht-degree: 2%
 
 | 項目 | 類型 | 附註 |
 ---------|----------|---------|
-| 匯出型別 | **[!UICONTROL 對象匯出]** | 您正在匯出某個對象的所有成員，而這些成員中都有用於的識別碼（名稱、電話號碼或其他）。 *您的目的地* 目的地。 |
-| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解 [串流目的地](/help/destinations/destination-types.md#streaming-destinations). |
+| 匯出類型 | **[!UICONTROL 對象匯出]** | 您正在匯出具有&#x200B;*YOURDESTINATION*&#x200B;目的地中所使用之識別碼（名稱、電話號碼或其他）的對象的所有成員。 |
+| 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
 
@@ -74,17 +74,17 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->若要連線到目的地，您需要 **[!UICONTROL 檢視目的地]** 和 **[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
+>若要連線到目的地，您需要&#x200B;**[!UICONTROL 檢視目的地]**&#x200B;和&#x200B;**[!UICONTROL 管理目的地]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
 
 ### 驗證目標 {#authenticate}
 
 若要驗證目的地，請遵循下列步驟：
 
-1. 尋找 *Snap Inc* 從Adobe Experience Platform的目的地目錄中選取目的地，然後選取 **設定**.
-2. 選取 **[!UICONTROL 連線到目的地]**. 系統會將您重新導向至下列畫面：
+1. 從Adobe Experience Platform的目的地目錄中尋找&#x200B;*Snap Inc*&#x200B;目的地，並選取&#x200B;**設定**。
+2. 選取&#x200B;**[!UICONTROL 連線到目的地]**。 系統會將您重新導向至下列畫面：
    ![驗證畫面1](/help/destinations/assets/catalog/advertising/snapchat-ads/auth1.png)
-3. 輸入您的Snapchat認證，然後選取 **登入**.
-4. 您將會看到Adobe Experience Platform將能夠存取的Snapchat資料。 選取 **繼續** 以繼續進行連線程式。
+3. 輸入您的Snapchat認證，並選取&#x200B;**登入**。
+4. 您將會看到Adobe Experience Platform將能夠存取的Snapchat資料。 選取&#x200B;**繼續**&#x200B;以繼續連線程式。
 
 ![驗證畫面2](/help/destinations/assets/catalog/advertising/snapchat-ads/auth2.png)
 
@@ -94,11 +94,11 @@ ht-degree: 2%
 
 ![目的地詳細資料](/help/destinations/assets/catalog/advertising/snapchat-ads/destinationdetails.png)
 
-若要設定目的地的詳細資訊，請填寫必填欄位並選取 **[!UICONTROL 下一個]**.
+若要設定目的地的詳細資料，請填寫必填欄位，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
-* **[!UICONTROL 說明]**：可協助您日後識別此目的地的說明。
-* **[!UICONTROL 帳戶ID]**：與您要匯入對象之廣告帳戶相關聯的廣告帳戶ID。 如需如何找到此標籤的詳細資訊，請參閱 [此檔案位於Snapchat商務說明中心](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US).
+* **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
+* **[!UICONTROL 帳戶ID]**：與您要匯入對象之廣告帳戶相關聯的廣告帳戶ID。 如需如何尋找此專案的詳細資訊，請參閱Snapchat商務說明中心](https://businesshelp.snapchat.com/s/article/biz-acct-id?language=en_US)上的[本檔案。
 
 >[!IMPORTANT]
 > 
@@ -106,30 +106,30 @@ ht-degree: 2%
 
 ### 啟用警示 {#enable-alerts}
 
-您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱以下指南： [使用UI訂閱目的地警報](../../ui/alerts.md).
+您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
-當您完成提供目的地連線的詳細資訊時，請選取「 」 **[!UICONTROL 下一個]**.
+當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
 ## 啟動此目標的對象 {#activate}
 
 >[!IMPORTANT]
 > 
->* 若要啟用資料，您需要 **[!UICONTROL 檢視目的地]**， **[!UICONTROL 啟用目的地]**， **[!UICONTROL 檢視設定檔]**、和 **[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions). 閱讀 [存取控制總覽](/help/access-control/ui/overview.md) 或聯絡您的產品管理員以取得必要許可權。
->* 要匯出 *身分*，您需要 **[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions). <br> ![選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以將對象啟用至目的地。"){width="100" zoomable="yes"}
+>* 若要啟用資料，您需要&#x200B;**[!UICONTROL 檢視目的地]**、**[!UICONTROL 啟用目的地]**、**[!UICONTROL 檢視設定檔]**&#x200B;和&#x200B;**[!UICONTROL 檢視區段]** [存取控制許可權](/help/access-control/home.md#permissions)。 閱讀[存取控制總覽](/help/access-control/ui/overview.md)或連絡您的產品管理員以取得必要的許可權。
+>* 若要匯出&#x200B;*身分*，您需要&#x200B;**[!UICONTROL 檢視身分圖表]** [存取控制許可權](/help/access-control/home.md#permissions)。<br> ![選取工作流程中反白的身分名稱空間，以啟用目的地的對象。](/help/destinations/assets/overview/export-identities-to-destination.png "選取工作流程中反白顯示的身分名稱空間，以啟用目的地的對象。"){width="100" zoomable="yes"}
 
-讀取 [將設定檔和受眾啟用至串流受眾匯出目標](/help/destinations/ui/activate-segment-streaming-destinations.md) 以取得啟用此目的地對象的指示。
+閱讀[將設定檔和對象啟用至串流對象匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)，以瞭解啟用此目的地對象的指示。
 
 ## 驗證資料匯出 {#exported-data}
 
-將對象啟用至 *Snap Inc* 目的地，您將能夠在「快照廣告管理員」的 [**受眾** 區段](https://businesshelp.snapchat.com/s/article/audience-sharing). 若要導覽至本區段，請依照下列步驟進行：
+啟用受眾至&#x200B;*Snap Inc*&#x200B;目的地後，您將可以在Snap Ads管理員的&#x200B;[**受眾**&#x200B;區段](https://businesshelp.snapchat.com/s/article/audience-sharing)中看到受眾。 若要導覽至本區段，請依照下列步驟進行：
 
-1. 登入 [貼齊廣告管理員](https://ads.snapchat.com/)
-2. 選取 **受眾** 從畫面左上角的下拉式功能表。 您會在對象資料庫中看到您在Adobe Experience Platform中啟用的對象：
+1. 登入[快照廣告管理員](https://ads.snapchat.com/)
+2. 從畫面左上角的下拉式功能表中選取&#x200B;**對象**。 您會在對象資料庫中看到您在Adobe Experience Platform中啟用的對象：
 
 ![對象](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱 [Segmentation Service概述](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+請注意，當Adobe對象首次啟動至Snap Inc時，您一開始會將其視為空白對象。 這是因為Adobe Experience Platform在評估對象之前，不會將成員資料匯出到Snap Inc。 如需如何在Experience Platform中評估對象的詳細資訊，請參閱[分段服務總覽](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments)。
 
 ## 資料使用與控管 {#data-usage-governance}
 
-全部 [!DNL Adobe Experience Platform] 處理您的資料時，目的地符合資料使用原則。 如需如何操作的詳細資訊 [!DNL Adobe Experience Platform] 強制執行資料控管，請參閱 [資料控管概觀](/help/data-governance/home.md).
+處理您的資料時，所有[!DNL Adobe Experience Platform]目的地都符合資料使用原則。 如需[!DNL Adobe Experience Platform]如何強制資料控管的詳細資訊，請參閱[資料控管概觀](/help/data-governance/home.md)。

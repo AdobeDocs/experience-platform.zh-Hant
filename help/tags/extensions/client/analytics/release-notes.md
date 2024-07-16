@@ -15,51 +15,51 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Analytics標籤擴充功能（如果經常更新）以回應 [AppMeasurementJavaScript程式庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant). 請參閱 [AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant) 以下提及的特定版本的詳細資訊。
+>Analytics標籤擴充功能（如果經常更新）以回應[AppMeasurementJavaScript資料庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)的更新。 請參閱[AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)，瞭解下列特定版本的詳細資訊。
 
 ## 2024年3月4日
 
-**Adobe Analytics擴充功能1.9.4版**
+**Adobe Analytics擴充功能1.9.4**
 
 **功能**：
 
-* 已升級至 [AppMeasurement至v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+* 已升級至[AppMeasurement至v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0)。
 
 ## 2023年9月15日
 
-**Adobe Analytics擴充功能1.9.3版**
+**Adobe Analytics擴充功能1.9.3**
 
 **功能**：
 
-* 已升級至 [AppMeasurement至v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* 已升級至[AppMeasurement至v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0)。
 
 
 ## 2023年7月19日
 
-**Adobe Analytics擴充功能1.9.2版**
+**Adobe Analytics擴充功能1.9.2**
 
 **功能**：
 
-* 已升級至 [AppMeasurementv2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
-* 新增選用設定(`decodeLinkParameters` 預設 `false`)會解碼包含雙位元組編碼字元之連結URL的。
+* 已升級至[AppMeasurementv2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0)。
+* 新增選擇性設定（`decodeLinkParameters`預設`false`），可解碼包含雙位元組編碼字元的連結URL。
 
 **錯誤修正**：
 
-* 新增具有錯誤高平均資訊量的瀏覽器的其他錯誤處理 [使用者代理使用者端提示](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API的。
-* 已變更 [POST](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods/POST) 要使用的內容型別標頭 `x-www-form-urlencoded` 依預設。
+* 針對具有錯誤高平均資訊量[使用者代理程式使用者端提示](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API的瀏覽器，新增其他錯誤處理功能。
+* 已將[POST](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Methods/POST) Content-Type標頭變更為預設使用`x-www-form-urlencoded`。
 
 ## 2022年9月23日
 
-**Adobe Analytics擴充功能1.9.1版**
+**Adobe Analytics擴充功能1.9.1**
 
 **功能**：
 
 * 已升級至AppMeasurementv2.23.0。
-* 擴充功能現在可以收集高平均資訊量 [使用者代理使用者端提示](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) 最新版本的AppMeasurement所支援。
+* 擴充功能現在可以收集最新版本AppMeasurement所支援的高平均資訊量[使用者代理程式使用者端提示](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)。
 
 ## 2022年2月28日
 
-**Adobe Analytics擴充功能1.9.0版**
+**Adobe Analytics擴充功能1.9.0**
 
 **錯誤修正**：
 
@@ -67,7 +67,7 @@ ht-degree: 69%
 
 ## 2021年11月29日
 
-**Adobe Analytics擴充功能1.8.8版**
+**Adobe Analytics擴充功能1.8.8**
 
 **錯誤修正**：
 
@@ -75,7 +75,7 @@ ht-degree: 69%
 
 ## 2021 年 9 月 16 日
 
-**Adobe Analytics擴充功能1.8.7版**
+**Adobe Analytics擴充功能1.8.7**
 
 **錯誤修正**：
 
@@ -84,16 +84,16 @@ ht-degree: 69%
 
 ## 2021年8月24日
 
-**Adobe Analytics擴充功能1.8.6版**
+**Adobe Analytics擴充功能1.8.6**
 
 **錯誤修正**：
 
-* 已升級 [AppMeasurement至v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant).
+* 將[AppMeasurement升級為v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)。
 * 更新遞補linkName以映象Activity Map邏輯，而非使用innerHTML。
 
 ## 2020 年 8 月 6 日
 
-**Adobe Analytics擴充功能1.8.5版**
+**Adobe Analytics擴充功能1.8.5**
 
 **錯誤修正**：
 
@@ -106,7 +106,7 @@ ht-degree: 69%
 
 ## 2020 年 6 月 2 日
 
-**Adobe Analytics擴充功能1.8.4版**
+**Adobe Analytics擴充功能1.8.4**
 
 **錯誤修正**：
 
@@ -120,7 +120,7 @@ ht-degree: 69%
 
 ## 2020 年 3 月 10 日
 
-**Adobe Analytics擴充功能1.8.3版**
+**Adobe Analytics擴充功能1.8.3**
 
 **錯誤修正**：
 
@@ -133,7 +133,7 @@ ht-degree: 69%
 
 ## 2020 年 3 月 2 日
 
-**Adobe Analytics擴充功能1.8.2版**
+**Adobe Analytics擴充功能1.8.2**
 
 **錯誤修正**：
 
@@ -150,7 +150,7 @@ ht-degree: 69%
 
 ## 2019 年 11 月 13 日
 
-**Adobe Analytics擴充功能1.8.1版**
+**Adobe Analytics擴充功能1.8.1**
 
 **錯誤修正**：
 
@@ -158,7 +158,7 @@ ht-degree: 69%
 
 ## 2019 年 11 月 1 日
 
-**Adobe Analytics擴充功能1.8.0版**
+**Adobe Analytics擴充功能1.8.0**
 
 **錯誤修正**：
 
@@ -172,7 +172,7 @@ ht-degree: 69%
 
 ## 2019 年 9 月 6 日
 
-**Adobe Analytics擴充功能1.7.8版**
+**Adobe Analytics擴充功能1.7.8**
 
 **錯誤修正**：
 
@@ -181,7 +181,7 @@ ht-degree: 69%
 
 ## 2019 年 9 月 5 日
 
-**Adobe Analytics擴充功能1.7.7版**
+**Adobe Analytics擴充功能1.7.7**
 
 **功能**：
 
@@ -196,7 +196,7 @@ ht-degree: 69%
 
 ## 2019 年 7 月 18 日
 
-**Adobe Analytics擴充功能1.7.6版**
+**Adobe Analytics擴充功能1.7.6**
 
 **功能**：
 
@@ -207,7 +207,7 @@ ht-degree: 69%
 
 ## 2019 年 6 月 4 日
 
-**Adobe Analytics擴充功能1.7.5版**
+**Adobe Analytics擴充功能1.7.5**
 
 **功能**：
 
@@ -221,7 +221,7 @@ ht-degree: 69%
 
 ## 2019 年 4 月 15 日
 
-**Adobe Analytics擴充功能1.7.4版**
+**Adobe Analytics擴充功能1.7.4**
 
 **錯誤修正**：
 
@@ -229,7 +229,7 @@ ht-degree: 69%
 
 ## 2019 年 4 月 12 日
 
-**Adobe Analytics擴充功能1.7.3版**
+**Adobe Analytics擴充功能1.7.3**
 
 **錯誤修正**：
 
@@ -237,7 +237,7 @@ ht-degree: 69%
 
 ## 2019 年 3 月 21 日
 
-**Adobe Analytics擴充功能1.7.2版**
+**Adobe Analytics擴充功能1.7.2**
 
 **功能**：
 
@@ -248,7 +248,7 @@ ht-degree: 69%
 
 ## 2019 年 3 月 7 日
 
-**Adobe Analytics擴充功能1.7.1版**
+**Adobe Analytics擴充功能1.7.1**
 
 **錯誤修正**：
 
@@ -256,7 +256,7 @@ ht-degree: 69%
 
 ## 2019 年 2 月 11 日
 
-**Adobe Analytics擴充功能1.6版**
+**Adobe Analytics擴充功能1.6**
 
 **功能**：
 
@@ -269,7 +269,7 @@ ht-degree: 69%
 
 ## 2018 年 11 月 9 日
 
-**Adobe Analytics擴充功能1.5.1版**
+**Adobe Analytics擴充功能1.5.1**
 
 **錯誤修正**：
 
@@ -277,7 +277,7 @@ ht-degree: 69%
 
 ## 2018 年 11 月 5 日
 
-**Adobe Analytics擴充功能1.5版**
+**Adobe Analytics擴充功能1.5**
 
 **功能**：
 
@@ -291,7 +291,7 @@ ht-degree: 69%
 
 ## 2018 年 10 月 11 日
 
-**Adobe Analytics擴充功能1.4版**
+**Adobe Analytics擴充功能1.4**
 
 **功能**：
 
@@ -303,7 +303,7 @@ ht-degree: 69%
 
 ## 2018 年 6 月 5 日
 
-**Adobe Analytics擴充功能1.3版**
+**Adobe Analytics擴充功能1.3**
 
 **功能**：
 
@@ -318,7 +318,7 @@ ht-degree: 69%
 
 ## 2018 年 3 月 20 日
 
-**Adobe Analytics擴充功能1.2版**
+**Adobe Analytics擴充功能1.2**
 
 **功能**：
 
@@ -327,7 +327,7 @@ ht-degree: 69%
 
 ## 2018 年 2 月 8 日
 
-**Adobe Analytics擴充功能1.1版**
+**Adobe Analytics擴充功能1.1**
 
 **功能**：
 

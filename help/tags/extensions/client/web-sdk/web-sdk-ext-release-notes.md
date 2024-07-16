@@ -12,7 +12,7 @@ ht-degree: 30%
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
-本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱 [Platform Web SDK發行說明](/help/web-sdk/release-notes.md).
+本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](/help/web-sdk/release-notes.md)。
 
 ## 2.24.0版 — 2024年6月5日
 
@@ -29,16 +29,16 @@ ht-degree: 30%
 
 **新功能**
 
-* 新增對 [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) 元件進行識別。
-* 已新增 [`Send Media Event`](action-types.md#send-media-event) 的動作 [!DNL Streaming Media Collection] 功能。
-* 已新增 [`Media: Quality of Experience`](data-element-types.md#quality-experience) 的資料元素 [!DNL Streaming Media Collection] 功能。
+* 新增擴充功能組態中[`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media)元件的支援。
+* 已新增[!DNL Streaming Media Collection]功能的[`Send Media Event`](action-types.md#send-media-event)動作。
+* 已新增[!DNL Streaming Media Collection]功能的[`Media: Quality of Experience`](data-element-types.md#quality-experience)資料元素。
 
 包含2.20.0版的Adobe Experience Platform Web SDK。
 
 **修正和改良**
 
-* 修正在中搜尋資料元素時發生的錯誤 [更新變數](action-types.md#update-variable) 動作。
-* 已移除 [!UICONTROL 媒體] 事件型別中的事件型別，建議用於 `sendEvent` 動作。
+* 修正搜尋[更新變數](action-types.md#update-variable)動作中的資料元素時發生的錯誤。
+* 已從建議用於`sendEvent`動作的事件型別中移除[!UICONTROL 媒體]事件型別。
 
 ## 2.22.0版 — 2024年5月3日
 
@@ -64,17 +64,17 @@ ht-degree: 30%
 
 **修正和改良**
 
-* 修正中可用的主張陣列問題 `Send event complete` 事件一律為空白。
+* 修正`Send event complete`事件中可用的主張陣列一律為空白的問題。
 
 ## 2.21.2版 — 2023年11月1日
 
 **新功能**
 
-* 已新增 `Request default personalization` 用於傳送事件動作的選項。
+* 已新增傳送事件動作的`Request default personalization`選項。
 * 在「傳送事件」動作中新增頁面頂端和底部事件的支援。
-* 已新增 `Apply propositions` 動作。
-* 已新增 `Evaluate rulesets` 動作和 `Subscribe ruleset items` 應用程式內訊息的事件。
-* 已新增 `Decision context` 以傳送事件動作。
+* 已新增`Apply propositions`動作。
+* 已新增應用程式內訊息的`Evaluate rulesets`動作和`Subscribe ruleset items`事件。
+* 已新增`Decision context`以傳送事件動作。
 
 **修正和改良**
 
@@ -96,16 +96,16 @@ ht-degree: 30%
 
 **新功能**
 
-* 新增的支援 [每個命令會覆寫資料串流ID](../../../../datastreams/overrides.md).
+* 新增支援[每個命令覆寫資料串流ID](../../../../datastreams/overrides.md)。
 
 **修正和改良**
 
-* 已棄用 `edgeConfigId` 贊成 `datastreamId` 在SDK設定中。
+* 已在SDK設定中棄用`edgeConfigId`而支援`datastreamId`。
 * 資料流設定的多個使用者體驗增強功能會覆寫使用者介面。
 
 ## 2.19.0版 — 2023年6月21日
 
-* 此 **[!UICONTROL 變數]** 資料元素和 **[!UICONTROL 更新變數]** 動作現已開放使用。
+* **[!UICONTROL 變數]**&#x200B;資料元素和&#x200B;**[!UICONTROL 更新變數]**&#x200B;動作現在已可供一般使用。
 
 ## 2.18.0版 — 2023年5月18日
 
@@ -116,8 +116,8 @@ ht-degree: 30%
 **新功能**
 
 * 包含2.16.0版的Adobe Experience Platform Web SDK。
-* 新增的支援 [資料流設定覆寫](/help/datastreams/overrides.md).
-* 將淘汰通知新增至 `datasetId` 上的選項 `sendEvent` 命令。
+* 已新增對[資料流組態覆寫](/help/datastreams/overrides.md)的支援。
+* 在`sendEvent`命令的`datasetId`選項中新增淘汰通知。
 
 
 **修正和改良**
@@ -132,12 +132,12 @@ ht-degree: 30%
 
 **新功能**
 
-* （測試版）已新增 **[!UICONTROL 更新變數]** 動作和 **[!UICONTROL 變數]** 資料元素。
-* 已新增以下專案的設定： [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) 回呼函式。
+* (Beta)已新增&#x200B;**[!UICONTROL 更新變數]**&#x200B;動作和&#x200B;**[!UICONTROL 變數]**&#x200B;資料元素。
+* 已新增[`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md)回呼函式的設定。
 
 **修正和改良**
 
-* 修正在錨點標籤內按一下元素時無法運作的問題。 **[!UICONTROL 使用身分重新導向]** 已使用動作。
+* 修正使用&#x200B;**[!UICONTROL 具有身分的重新導向]**&#x200B;動作時，點選錨點標籤內元素無法運作的問題。
 * 修正只有一個結構描述時，XDM物件資料元素無法運作的問題。
 * 包含2.15.0版的Adobe Experience Platform Web SDK。
 
@@ -145,7 +145,7 @@ ht-degree: 30%
 ## 2.15.1版 — 2023年1月26日
 
 * 修正無權存取資料串流的使用者無法編輯擴充功能設定的問題。
-* 新增對中的曲面的支援 `sendEvent` 動作。
+* 在`sendEvent`動作中新增對表面的支援。
 
 包含2.14.0版的Adobe Experience Platform Web SDK。
 
@@ -158,7 +158,7 @@ ht-degree: 30%
 
 ## 2.14.0版 — 2022年9月28日
 
-* 已新增 `targetMigrationEnabled` 可啟用逐頁完整移轉的設定。
+* 新增可啟用逐頁完整移轉的新`targetMigrationEnabled`設定。
 * 新增套用回應動作，以啟用混合式伺服器 — 使用者端實作。
 * 新增高平均資訊量使用者代理程式使用者端提示內容選項。
 
@@ -172,9 +172,9 @@ ht-degree: 30%
 
 ## 2.12.0版 — 2022年6月13日
 
-* 已更新 `identityMap` 資料元素，以根據擴充功能設定所定義的沙箱填入名稱空間選項。
-* 已新增 **[!UICONTROL 使用身分重新導向]** 允許跨網域身分共用的動作。
-* 新增檔案連結至 `sendEvent` 動作。
+* 更新`identityMap`資料元素，以根據擴充功能設定所定義的沙箱填入名稱空間選項。
+* 已新增含身分的&#x200B;**[!UICONTROL 重新導向]**&#x200B;動作，以允許跨網域身分共用。
+* 已新增檔案連結至`sendEvent`動作。
 * 升級React Spectrum UI程式庫。
 * 多項使用者介面增強功能。
 
@@ -211,13 +211,13 @@ ht-degree: 30%
 
 包含 2.7.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 「傳送事件完成」事件中可提供Edge Network的其他資訊，包括 `inferences` 和 `destinations`. 這些屬性的格式可能會隨著這些功能目前在Beta版中推出而改變。
+* Edge Network的其他資訊可在「傳送事件完成」事件中使用，包括`inferences`和`destinations`。 這些屬性的格式可能會隨著這些功能目前在Beta中推出而改變。
 
 ## 2.7.3版 — 2021年9月7日
 
 包含 2.6.4 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 「 」不再有「淘汰」警告 `container.buildInfo.environment.`
+* `container.buildInfo.environment.`不再有取代警告
 
 ## 2.7.0版 — 2021年8月16日
 
@@ -250,7 +250,7 @@ ht-degree: 30%
 
 包含 2.5.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 已新增 `data` 「傳送事件」動作的欄位。 即將推出的檔案將說明如何在特定情況下使用此功能。
+* 已新增`data`欄位至「傳送事件」動作。 即將推出的檔案將說明如何在特定情況下使用此功能。
 * 在XDM物件資料元素檢視上，已修正如果使用者有權存取Adobe Experience Platform沙箱，但沒有存取設定為組織預設的沙箱，則會擲回錯誤的問題。
 * 在XDM物件資料元素檢視上，即使父物件不包含任何值，必要結構描述欄位仍會被視為無效的問題，已獲得修正。
 
@@ -258,10 +258,10 @@ ht-degree: 30%
 
 包含 2.4.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-* 已新增 [「檔案正在解除安裝」](/help/web-sdk/commands/sendevent/documentunloading.md) 核取方塊以傳送事件動作UI。
-* 新增對的支援 `out` 選項條件 [設定預設同意](/help/web-sdk/commands/configure/defaultconsent.md) 會在收到同意前捨棄所有事件(現有 `pending` 選項會將事件排入佇列，並在收到同意後傳送事件)。
+* 已新增[「檔案正在解除安裝」](/help/web-sdk/commands/sendevent/documentunloading.md)核取方塊以傳送事件動作UI。
+* 新增對`out`選項的支援，當[設定預設同意](/help/web-sdk/commands/configure/defaultconsent.md)時，會捨棄所有事件直到收到同意為止（現有的`pending`選項會佇列事件，並在收到同意後傳送它們）。
 * 新增工具提示至預設同意欄位。
-* 新增使用時的Adobe Consent 2.0標準支援 [`setConsent`](/help/web-sdk/commands/setconsent.md) 命令。
+* 新增使用[`setConsent`](/help/web-sdk/commands/setconsent.md)命令時對Adobe同意2.0標準的支援。
 * 如果使用者的存取權杖無效或布建不正確，XDM物件資料元素UI中現在會顯示更好的錯誤。
 * 修正檢視XDM物件資料元素時，瀏覽器開發人員主控台顯示的跨來源錯誤（不會影響擴充功能的作業）。
 
@@ -276,7 +276,7 @@ ht-degree: 30%
 ## 2.2.0版 — 2020年10月1日
 
 * 客戶嘗試以沙箱結構描述建立 XDM 物件時，遇到驗證問題。呼叫Platform的API現在可感知環境，因此使用者只會看到他們有權編輯的結構描述。
-* 使用時 `identityMap` 資料元素中，下拉式清單現在會預先填入名稱空間，因此您不必手動填寫。
+* 使用`identityMap`資料元素時，下拉式清單現在會預先填入名稱空間，因此您不必手動填寫。
 * `xdmObject` 資料元素的 UI 已改版。在新的 UI 中，您可以看到哪些欄位已填入，不必在物件中輸入每個項目。
 
 ## 2.1.1版 — 2020年8月26日
@@ -310,7 +310,7 @@ ht-degree: 30%
 * 修正每次參考資料元素時，「事件合併 ID」都會重設的問題。
 * 將 `setCustomerIds` 動作重新命名為 `syncIdentity`。
 * 新增 `getIdentity` 命令。目前僅能透過自訂程式碼使用。
-* 使用啟用偵錯 `_satellite` 現在會在Adobe Experience Platform Web SDK中啟用除錯功能。
+* 使用`_satellite`啟用除錯功能後，現在會在Adobe Experience Platform Web SDK中啟用除錯功能。
 * 新增在 XDM 物件中輸入值的相關支援：布林值、數字和小數。
 
 ## 0.0.10版 — 2020年3月16日

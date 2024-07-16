@@ -5,7 +5,7 @@ exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '502'
-ht-degree: 65%
+ht-degree: 52%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
 
-在規則的內容中，條件會在事件發生後進行評估。 所有條件都必須傳回 true，才會繼續處理規則。例外情況是使用者明確將條件放入「例外」貯體，在這種情況下，貯體中的所有條件都必須傳回false，規則才能繼續處理。
+在規則的內容中，會在事件發生後評估條件。 所有條件都必須傳回 true，才會繼續處理規則。使用者明確將條件放入「例外」貯體時則屬例外，在此情況下，貯體中的所有條件都必須傳回false，才會繼續處理規則。
 
-例如，擴充功能可提供「檢視區包含」條件類型，讓 使用者可在其中指定 CSS 選擇器。在用戶端的網站上評估條件時，擴充功能將可尋找符合 CSS 選擇器的元素，並傳回結果指出其中是否有任何元素包含在使用者的檢視區中。
+例如，擴充功能可提供「檢視區包含」條件型別，讓使用者可在其中指定CSS選取器。 在用戶端的網站上評估條件時，擴充功能將可尋找符合 CSS 選擇器的元素，並傳回結果指出其中是否有任何元素包含在使用者的檢視區中。
 
-本文介紹如何在Adobe Experience Platform中定義Web擴充功能的條件型別。
+本文說明如何在Adobe Experience Platform中定義Web擴充功能的條件型別。
 
 >[!NOTE]
 >
@@ -29,8 +29,8 @@ ht-degree: 65%
 
 條件型別通常包含下列專案：
 
-1. A [檢視](./views.md) 顯示在Experience PlatformUI和資料收集UI中，可讓使用者修改條件的設定。
-2. 在標籤執行階段程式庫內發出的程式庫模組，用於解譯設定及評估條件。
+1. 顯示於Experience PlatformUI和資料收集UI中的[檢視](./views.md)，可讓使用者修改條件的設定。
+2. 在標籤執行階段程式庫內發出的程式庫模組，用以解譯設定及評估條件。
 
 條件型別程式庫模組有一個目標：評估某條件是否成立。 其評估標的由您決定。
 
@@ -42,7 +42,7 @@ module.exports = function(settings) {
 };
 ```
 
-現在，請考量您希望讓 Adobe Experience Platform 使用者能夠設定主機名稱的情況。您可以允許使用者輸入主機名稱，然後將主機名稱儲存至設定物件。該物件可能如下所示：
+現在，假設您希望讓Adobe Experience Platform使用者能夠設定主機名稱。 您可以允許使用者輸入主機名稱，然後將主機名稱儲存至設定物件。該物件可能如下所示：
 
 ```js
 {

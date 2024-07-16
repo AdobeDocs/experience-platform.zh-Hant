@@ -1,6 +1,6 @@
 ---
 title: 處理命令回應
-description: 使用JavaScript承諾處理來自命令的回應。
+description: 使用JavaScript承諾處理命令的回應。
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
 source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
 workflow-type: tm+mt
@@ -13,29 +13,29 @@ ht-degree: 0%
 
 有些Web SDK命令可能會傳回包含對貴組織可能有用的資料的物件。 如有需要，您可以選擇如何處理該資料。 命令回應對於主張和目的地來說非常重要，因為它們需要Edge Network資料才能有效運作。
 
-命令回應使用JavaScript [promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)，當作Proxy的值（建立Promise時未知）。 知道值後，就會使用值「解析」Promise。
+命令回應使用JavaScript [promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)，做為建立promise時未知之值的Proxy。 知道值後，就會使用值「解析」Promise。
 
 ## 使用Web SDK標籤擴充功能處理命令回應
 
-建立訂閱 **[!UICONTROL 傳送事件完成]** 事件。
+建立訂閱&#x200B;**[!UICONTROL 傳送事件完成]**&#x200B;事件的規則作為規則的一部分。
 
-1. 登入 [experience.adobe.com](https://experience.adobe.com) 使用您的Adobe ID憑證。
-1. 瀏覽至 **[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**.
+1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
+1. 導覽至&#x200B;**[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**。
 1. 選取所需的標籤屬性。
-1. 瀏覽至 **[!UICONTROL 規則]**，然後選取所需的規則。
-1. 在 [!UICONTROL 活動]，選取現有事件或建立事件。
-1. 設定 [!UICONTROL 副檔名] 下拉式欄位至 **[!UICONTROL Adobe Experience Platform Web SDK]**，並設定 [!UICONTROL 事件型別] 至 **[!UICONTROL 傳送事件完成]**.
-1. 按一下 **[!UICONTROL 保留變更]**，然後執行您的發佈工作流程。
+1. 導覽至&#x200B;**[!UICONTROL 規則]**，然後選取所要的規則。
+1. 在[!UICONTROL 事件]下，選取現有事件或建立事件。
+1. 將[!UICONTROL 擴充功能]下拉式清單欄位設為&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**，並將[!UICONTROL 事件型別]設為&#x200B;**[!UICONTROL 傳送事件完成]**。
+1. 按一下&#x200B;**[!UICONTROL 保留變更]**，然後執行您的發佈工作流程。
 
-之後，您就可以包含動作 **[!UICONTROL 套用主張]** 或 **[!UICONTROL 套用回應]** 至此規則。
+然後您可以包含動作&#x200B;**[!UICONTROL 套用主張]**&#x200B;或&#x200B;**[!UICONTROL 套用回應]**&#x200B;至此規則。
 
 1. 檢視上述建立或編輯的規則時，請選取現有動作或建立動作。
-1. 設定 [!UICONTROL 副檔名] 下拉式欄位至 **[!UICONTROL Adobe Experience Platform Web SDK]**，並設定 [!UICONTROL 動作型別] 至 **[!UICONTROL 套用主張]** 或 **[!UICONTROL 套用回應]**，視所需的行為而定。
-1. 設定動作的所需欄位，然後按一下 **[!UICONTROL 保留變更]**.
+1. 將[!UICONTROL 擴充功能]下拉式欄位設定為&#x200B;**[!UICONTROL Adobe Experience Platform Web SDK]**，並將[!UICONTROL 動作型別]設定為&#x200B;**[!UICONTROL 套用主張]**&#x200B;或&#x200B;**[!UICONTROL 套用回應]**，視所要的行為而定。
+1. 設定動作的所需欄位，然後按一下[保留變更]。****
 
 ## 使用Web SDK JavaScript程式庫處理命令回應
 
-使用 `then` 和 `catch` 用來判斷命令成功或失敗的方法。 您可以省略 `then` 或 `catch` 若其目的對您的實作並不重要。
+使用`then`和`catch`方法判斷命令成功或失敗的時間。 如果`then`或`catch`的用途對您的實作並不重要，您可以省略。
 
 ```javascript
 alloy("sendEvent", {
@@ -57,7 +57,7 @@ alloy("sendEvent", {
   });
 ```
 
-命令傳回的所有promise都使用 `result` 物件。 例如，您可以從下列位置取得資料庫資訊： `result` 物件使用 [`getLibraryInfo`](getlibraryinfo.md) 命令：
+命令傳回的所有promise都使用`result`物件。 例如，您可以使用[`getLibraryInfo`](getlibraryinfo.md)命令從`result`物件取得程式庫資訊：
 
 ```js
 alloy("getLibraryInfo")
@@ -68,4 +68,4 @@ alloy("getLibraryInfo")
   });
 ```
 
-此專案的內容 `result` 物件取決於您所使用之命令和使用者同意的組合。 如果使用者未針對特定目的提供其同意，則回應物件僅包含可在使用者同意的內容中提供的資訊。
+此`result`物件的內容取決於您使用的命令與使用者同意的組合。 如果使用者未針對特定目的提供其同意，則回應物件僅包含可在使用者同意的內容中提供的資訊。

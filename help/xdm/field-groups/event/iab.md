@@ -11,27 +11,27 @@ ht-degree: 1%
 
 ---
 
-# [!UICONTROL IAB TCF 2.0同意] 事件結構的欄位群組
+# 事件結構描述的[!UICONTROL IAB TCF 2.0同意]欄位群組
 
 >[!IMPORTANT]
 >
->本檔案涵蓋 [!UICONTROL IAB TCF 2.0同意] xdm ExperienceEvent類別的結構描述欄位群組。 只有在您想要追蹤一段時間內同意變更事件時，才應使用此欄位群組。
+>本文介紹XDM ExperienceEvent類別的[!UICONTROL IAB TCF 2.0 Consent]結構描述欄位群組。 只有在您想要追蹤一段時間內同意變更事件時，才應使用此欄位群組。
 >
 >請注意，自動執行工作流程不會遵循事件資料中記錄的同意值。 為了進行自動實施，同意值必須擷取到XDM個人設定檔類別中，並啟用即時客戶設定檔。
 >
->有關用於XDM個別設定檔類別的欄位群組，請參閱以下內容 [檔案](../profile/iab.md) 而非。
+>若是用於XDM個別設定檔類別的欄位群組，請改為參閱下列[檔案](../profile/iab.md)。
 
-[!UICONTROL IAB TCF 2.0同意] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md) 用於擷取時間戳記系列IAB同意字串，以追蹤一段時間內的同意變更模式。
+[!UICONTROL IAB TCF 2.0同意]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，用於擷取時間戳記系列IAB同意字串，以追蹤一段時間的同意變更模式。
 
 ![](../../images/field-groups/iab-event.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `consentStrings` | 陣列 [同意字串](../../data-types/consent-string.md) | 與事件相關的一組同意字串值。 |
+| `consentStrings` | [同意字串](../../data-types/consent-string.md)的陣列 | 與事件相關的一組同意字串值。 |
 
 {style="table-layout:auto"}
 
-請參閱以下指南： [平台中的IAB TCF 2.0支援](../../../landing/governance-privacy-security/consent/iab/overview.md) 以取得此欄位群組使用案例的詳細資訊。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
+如需此欄位群組使用案例的詳細資訊，請參閱Platform](../../../landing/governance-privacy-security/consent/iab/overview.md)中[IAB TCF 2.0支援指南。 如需欄位群組本身的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

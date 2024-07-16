@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 支援的行動參與目的地 {#supported-destinations}
 
-[!DNL Adobe Experience Platform] 目前支援下列行動參與目的地：
+[!DNL Adobe Experience Platform]目前支援下列行動參與目的地：
 
 * [飛艇屬性連線](airship-attributes.md)
 * [飛艇標籤連線](airship-tags.md)

@@ -7,50 +7,50 @@ description: 瞭解如何使用Flow Service API將HP Vertica連線至Adobe Exper
 exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '466'
 ht-degree: 4%
 
 ---
 
-# 建立 [!DNL HP Vertica] 基礎連線使用 [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API建立[!DNL HP Vertica]基本連線
 
 >[!NOTE]
 >
->此 [!DNL HP Vertica] 聯結器為Beta版。 請參閱 [來源概觀](../../../../home.md#terms-and-conditions) 以取得有關使用Beta標籤聯結器的詳細資訊。
+>[!DNL HP Vertica]聯結器為Beta版。 如需使用Beta標籤聯結器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-本教學課程將逐步引導您完成建立基礎連線的步驟。 [!DNL HP Vertica] 使用 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教學課程將逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL HP Vertica]建立基礎連線的步驟。
 
 ## 快速入門
 
 本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時能夠使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供對單一區域進行分割的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，協助開發及改進數位體驗應用程式。
+* [來源](../../../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../../sandboxes/home.md)：Experience Platform提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-以下小節提供成功連線所需的其他資訊 [!DNL HP Vertica] 使用 [!DNL Flow Service] API。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線到[!DNL HP Vertica]。
 
 ### 收集必要的認證
 
-為了 [!DNL Flow Service] 以連線 [!DNL HP Vertica]，您必須提供下列連線屬性的值：
+為了讓[!DNL Flow Service]與[!DNL HP Vertica]連線，您必須提供下列連線屬性的值：
 
 | 認證 | 說明 |
 | ---------- | ----------- |
-| `connectionString` | 用來連線至您的裝置的連線字串 [!DNL HP Vertica] 執行個體。 的連線字串模式 [!DNL HP Vertica] 是 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 的連線規格ID [!DNL HP Vertica] 為： `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
+| `connectionString` | 用來連線至您[!DNL HP Vertica]執行個體的連線字串。 [!DNL HP Vertica]的連線字串模式為`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL HP Vertica]的連線規格識別碼為： `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
-如需取得連線字串的詳細資訊，請參閱 [此HP Vertica檔案](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
+如需取得連線字串的詳細資訊，請參閱[此HP Vertica檔案](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南： [Platform API快速入門](../../../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../../../landing/api-guide.md)的指南。
 
 ## 建立基礎連線
 
 基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
-若要建立基本連線ID，請向以下連線ID發出POST請求： `/connections` 端點，同時提供 [!DNL HP Vertica] 要求引數中的驗證認證。
+若要建立基底連線ID，請在提供[!DNL HP Vertica]驗證認證作為要求引數的一部分時，向`/connections`端點提出POST要求。
 
 **API格式**
 
@@ -60,7 +60,7 @@ POST /connections
 
 **要求**
 
-下列要求會建立 [!DNL HP Vertica]：
+下列要求會建立[!DNL HP Vertica]的基礎連線：
 
 
 ```shell
@@ -89,8 +89,8 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | 與您的關聯的連線字串 [!DNL HP Vertica] 帳戶。 的連線字串模式 [!DNL HP Vertica] 為： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | 此 [!DNL HP Vertica] 連線規格ID： `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `auth.params.connectionString` | 與您的[!DNL HP Vertica]帳戶關聯的連線字串。 [!DNL HP Vertica]的連線字串模式為： `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`。 |
+| `connectionSpec.id` | [!DNL HP Vertica]連線規格識別碼： `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`。 |
 
 **回應**
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 ## 後續步驟
 
-依照本教學課程，您已建立 [!DNL HP Vertica] 基礎連線使用 [!DNL Flow Service] API。 您可以在下列教學課程中使用此基本連線ID：
+依照此教學課程，您已使用[!DNL Flow Service] API建立[!DNL HP Vertica]基礎連線。 您可以在下列教學課程中使用此基本連線ID：
 
-* [使用瀏覽資料表的結構和內容 [!DNL Flow Service] API](../../explore/tabular.md)
-* [建立資料流以使用將資料庫資料帶入Platform [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [使用 [!DNL Flow Service] API探索資料表的結構和內容](../../explore/tabular.md)
+* [使用 [!DNL Flow Service] API建立資料流以將資料庫資料帶到Platform](../../collect/database-nosql.md)

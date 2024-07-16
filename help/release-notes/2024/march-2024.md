@@ -15,7 +15,7 @@ ht-degree: 33%
 
 >[!TIP]
 >
->使用 [Adobe Experience Platform字彙表](/help/landing/glossary.md) 以熟悉Real-time Customer Data Platform和Adobe Experience Platform中使用的術語。 如果您找不到想要的特定辭彙，請使用頁面上的意見回饋選項，請求將新辭彙加入辭彙中。
+>使用[Adobe Experience Platform字彙表](/help/landing/glossary.md)熟悉Real-time Customer Data Platform和Adobe Experience Platform中使用的術語。 如果您找不到想要的特定辭彙，請使用頁面上的意見回饋選項，請求將新辭彙加入辭彙中。
 
 Experience Platform現有功能的更新：
 
@@ -33,7 +33,7 @@ Experience Platform現有功能的更新：
 
 | 功能 | 說明 |
 | --- | --- |
-| 更多動作 | 若要讓作業更靈活，並協助您管理資料，您現在可以使用詳細資料檢視中的「更多動作」功能，對資料集執行其他工作。 您可以從所選資料集的詳細資訊頁面中刪除資料集或啟用該資料集，以與即時客戶個人檔案搭配使用。<br>**注意：** 如果您啟用資料集以進行設定檔擷取，資料集的結構描述必須與即時客戶設定檔相容。<br>![具有的資料集工作區 [!UICONTROL ...更多] 下拉式功能表強調顯示。](../2024/assets/march/more-actions.png "「資料集」工作區中反白顯示「更多」下拉式功能表。"){width="100" zoomable="yes"}。<br>閱讀 [資料集使用手冊](../../catalog/datasets/user-guide.md) 檔案以取得額外資訊。 |
+| 更多動作 | 若要讓作業更靈活，並協助您管理資料，您現在可以使用詳細資料檢視中的「更多動作」功能，對資料集執行其他工作。 您可以從所選資料集的詳細資訊頁面中刪除資料集或啟用該資料集，以與即時客戶個人檔案搭配使用。<br>**注意：**&#x200B;如果您啟用設定檔擷取的資料集，資料集的結構描述必須與即時客戶設定檔相容。<br>![具有[!UICONTROL 的資料集工作區……反白顯示更多]下拉式功能表。](../2024/assets/march/more-actions.png "反白顯示「更多」下拉式功能表的資料集工作區。"){width="100" zoomable="yes"}。<br>閱讀[資料集使用手冊](../../catalog/datasets/user-guide.md)檔案以取得新增資訊。 |
 
 {style="table-layout:auto"}
 
@@ -47,11 +47,11 @@ Experience Platform現有功能的更新：
 
 | 功能 | 說明 |
 | --- | --- |
-| Adobe Analytics的新對應工具函式 | 您現在可以使用以下函式從Adobe Analytics擷取事件資料： <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> 如需這些函式的詳細資訊，請閱讀 [資料準備函式指南](../../data-prep/functions.md#analytics-functions) |
+| Adobe Analytics的新對應工具函式 | 您現在可以使用以下函式從Adobe Analytics擷取事件資料： <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> 如需這些函式的詳細資訊，請閱讀[資料準備函式指南](../../data-prep/functions.md#analytics-functions) |
 
 {style="table-layout:auto"}
 
-如需「資料準備」的詳細資訊，請閱讀 [資料準備總覽](../../data-prep/home.md).
+如需「資料準備」的詳細資訊，請閱讀[資料準備總覽](../../data-prep/home.md)。
 
 ## 資料收集 {#data-collection}
 
@@ -61,11 +61,11 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
-| 擴充功能 | [!DNL Merkury] 標籤擴充功能 | 此 [[!DNL Merkury] 標籤延伸模組](https://exchange.adobe.com/apps/ec/600027/merkury-tag) 為訪客的匿名網站提供領先業界的匹配率， [!DNL Merkury] ID。 品牌可以利用 [!DNL Merkury] 標籤和Adobe，以提供即時的個人化網站體驗。 此外， [!DNL Merkury] 標籤可促進第一方數位資料的成長，以及連線的線上和離線客戶設定檔。 |
+| 擴充功能 | [!DNL Merkury]標籤延伸 | [[!DNL Merkury] 標籤擴充功能](https://exchange.adobe.com/apps/ec/600027/merkury-tag)為[!DNL Merkury] ID的匿名網站訪客提供領先業界的匹配率。 品牌可運用[!DNL Merkury]標籤和Adobe的強大功能，提供即時個人化的網站體驗。 此外，[!DNL Merkury]標籤可促進第一方數位資料的成長，以及連線的線上和離線客戶設定檔。 |
 
 {style="table-layout:auto"}
 
-若要進一步瞭解資料彙集，請參閱 [資料收集概觀](../../tags/home.md).
+若要深入瞭解資料彙集，請閱讀[資料彙集概觀](../../tags/home.md)。
 
 ## 目的地 {#destinations}
 
@@ -75,10 +75,10 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 | 目的地 | 類型 | 說明 |
 | ----------- | --------- | ----------- |
-| [(Beta) Acxiom Data Enhancement連線](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新增 | 使用此聯結器可啟用從Real-Time CDP到Acxiom的第一方設定檔，以擴充資料並跨行銷管道使用。 然後，您可以使用Acxiom來源匯入具有增強型資料的設定檔，並在Real-Time CDP中處理這些設定檔。 |
-| [(Beta) Acxiom潛在客戶隱藏連線](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新增 | 將您的第一方對象匯出至Acxiom目的地，以允許Acxiom抑制已知或轉換的客戶。 然後，使用 [Acxiom潛在客戶資料匯入](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) 來源聯結器可從Acxiom擷取及啟用潛在客戶清單，並移除您已知或轉換的客戶。 |
+| [(Beta) Acxiom資料增強功能連線](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | 新增 | 使用此聯結器可啟用從Real-Time CDP到Acxiom的第一方設定檔，以擴充資料並跨行銷管道使用。 然後，您可以使用Acxiom來源匯入具有增強型資料的設定檔，並在Real-Time CDP中處理這些設定檔。 |
+| [(Beta) Acxiom潛在客戶隱藏連線](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | 新增 | 將您的第一方對象匯出至Acxiom目的地，以允許Acxiom抑制已知或轉換的客戶。 接著，使用[Acxiom潛在客戶資料匯入](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)來源聯結器，從Acxiom擷取及啟用潛在客戶清單，並移除已知或轉換的客戶。 |
 | [Amazon Ads連線](../../destinations/catalog/advertising/amazon-ads.md) | 更新 | 將資料匯出至Amazon Ads目的地時，您現在可以將資料路由至Amazon DSP或AmazonMarketing Cloud（新增）。 |
-| [LiveRamp入門連線](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp入門目的地現在支援傳送至歐洲和澳洲的作業 [!DNL LiveRamp] [!DNL SFTP] 執行個體。 最大匯出檔案大小也增加為1,000萬列（之前為500萬列）。 |
+| [LiveRamp上線連線](../../destinations/catalog/advertising/liveramp-onboarding.md) | 更新 | LiveRamp入門目的地現在支援傳送至歐洲和澳洲[!DNL LiveRamp]個[!DNL SFTP]執行個體的傳遞。 最大匯出檔案大小也增加為1,000萬列（之前為500萬列）。 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| Experience PlatformUI對應資料型別支援 | 在Platform UI中定義對應欄位，進一步自訂Experience Data Model (XDM)資料結構。 您現在可以在結構描述編輯器中建立對應欄位，以模型化彈性資料結構或有效儲存索引鍵/值組。 定義新欄位時，從「型別」下拉式清單中選取「對應」，以設定子欄位並將其指派給欄位群組。 支援的對應值型別為字串和整數。<br>![結構描述編輯器，其型別和對應值型別欄位會反白顯示。](../2024/assets/march/maps.png "結構描述編輯器，其型別和對應值型別欄位會反白顯示。"){width="100" zoomable="yes"}<br> 若要瞭解如何 [在使用者介面中定義對應欄位](../../xdm/ui/fields/map.md)，請參閱UI指南。 |
+| Experience PlatformUI對應資料型別支援 | 在Platform UI中定義對應欄位，進一步自訂Experience Data Model (XDM)資料結構。 您現在可以在結構描述編輯器中建立對應欄位，以模型化彈性資料結構或有效儲存索引鍵/值組。 定義新欄位時，從「型別」下拉式清單中選取「對應」，以設定子欄位並將其指派給欄位群組。 支援的對應值型別為字串和整數。<br>![結構描述編輯器的[型別]和[對應]值型別欄位已反白顯示。](../2024/assets/march/maps.png "結構描述編輯器的[型別]和[對應]值型別欄位已反白顯示。"){width="100" zoomable="yes"}<br>若要瞭解如何在UI](../../xdm/ui/fields/map.md)中[定義對應欄位，請參閱UI指南。 |
 
 {style="table-layout:auto"}
 
@@ -112,11 +112,11 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 大量動作 | 對象詳細目錄現在支援大量動作。 使用大量動作，您可以快速選取多個對象以將其移至資料夾、套用標籤、套用存取權標籤或刪除。 <br> ![Audiences UI工作區中的大量動作。](../2024/assets/march/bulk-actions.png "Audiences UI工作區中的大量動作。"){width="100" zoomable="yes"} <br>如需有關此功能的詳細資訊，請參閱 [Audience Portal概述](../../segmentation/ui/audience-portal.md#bulk-actions). |
+| 大量動作 | 對象詳細目錄現在支援大量動作。 使用大量動作，您可以快速選取多個對象以將其移至資料夾、套用標籤、套用存取權標籤或刪除。<br> Audiences UI工作區中的![大量動作。Audiences UI工作區中的](../2024/assets/march/bulk-actions.png "大量動作。"){width="100" zoomable="yes"} <br>如需有關此功能的詳細資訊，請閱讀[對象入口網站概觀](../../segmentation/ui/audience-portal.md#bulk-actions)。 |
 
 {style="table-layout:auto"}
 
-若要深入瞭解分段服務，請閱讀 [Segmentation Service概述](../../segmentation/home.md).
+若要深入瞭解分段服務，請閱讀[分段服務概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
@@ -126,10 +126,10 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 類型 | 說明 |
 | --- | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | 新增 | 使用 [[!DNL Acxiom Data Ingestion] 來源](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) 擷取 [!DNL Acxiom] 將資料匯入Real-time Customer Data Platform並豐富第一方設定檔。 然後，您可以使用您的 [!DNL Acxiom] — 擴充第一方設定檔，以改善對象並跨行銷管道啟用。 <br> ![Acxiom資料擷取來源。](../2024/assets/march/acxiom-data-ingestion.png "新Acxiom資料擷取來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Acxiom Data Ingestion] 概述](../../sources/connectors/data-partners/acxiom-data-ingestion.md) 以取得如何開始使用的資訊。 |
-| [!BADGE Beta]{type=Informative} [!DNL Stripe] | 新增 | 使用 [[!DNL Stripe] 來源](../../sources/connectors/payments/stripe.md) 將客戶在購買流程中擷取的資料擷取到Experience Platform。 內嵌後，您就可以使用此資料建立個人化優惠，並解鎖更豐富的商業深入分析。 <br> ![Stripe來源。](../2024/assets/march/stripe.png "新Stripe來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Stripe] 概述](../../sources/connectors/payments/stripe.md) 以取得如何開始使用的資訊。 |
-| UI支援 [!DNL Snowflake Streaming] | 新增 | 您現在可以使用 [[!DNL Snowflake Streaming] 來源](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) 在Experience Platform UI中，將資料從您的 [!DNL Snowflake] 資料庫。 <br> ![Snowflake串流來源。](../2024/assets/march/snowflake-streaming.png "全新Snowflake條紋來源。"){width="100" zoomable="yes"} <br> 閱讀 [[!DNL Snowflake Streaming] 概述](../../sources/connectors/databases/snowflake-streaming.md) 以取得如何開始使用的資訊。 |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | 新增 | 使用[[!DNL Acxiom Data Ingestion] 來源](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md)將[!DNL Acxiom]資料擷取至Real-time Customer Data Platform並擴充第一方設定檔。 接著，您可以使用富[!DNL Acxiom]的第一方設定檔來改善對象，並跨行銷管道啟用。<br> ![Acxiom資料擷取來源。](../2024/assets/march/acxiom-data-ingestion.png "新Acxiom資料擷取來源。"){width="100" zoomable="yes"} <br>閱讀[[!DNL Acxiom Data Ingestion] 總覽](../../sources/connectors/data-partners/acxiom-data-ingestion.md)以瞭解如何開始使用的資訊。 |
+| [!BADGE Beta]{type=Informative} [!DNL Stripe] | 新增 | 使用[[!DNL Stripe] 來源](../../sources/connectors/payments/stripe.md)將客戶在購買流程期間擷取的資料擷取到Experience Platform中。 內嵌後，您就可以使用此資料建立個人化優惠，並解鎖更豐富的商業深入分析。<br> ![Stripe來源。](../2024/assets/march/stripe.png "新Stripe來源。"){width="100" zoomable="yes"} <br>閱讀[[!DNL Stripe] 總覽](../../sources/connectors/payments/stripe.md)以瞭解如何開始使用的資訊。 |
+| [!DNL Snowflake Streaming]的UI支援 | 新增 | 您現在可以在Experience PlatformUI中使用[[!DNL Snowflake Streaming] 來源](../../sources/tutorials/ui/create/databases/snowflake-streaming.md)，從[!DNL Snowflake]資料庫串流資料。<br> ![Snowflake串流來源。](../2024/assets/march/snowflake-streaming.png "新Snowflake條紋來源。"){width="100" zoomable="yes"} <br>閱讀[[!DNL Snowflake Streaming] 總覽](../../sources/connectors/databases/snowflake-streaming.md)以瞭解如何開始使用的資訊。 |
 
 {style="table-layout:auto"}
 
-如需有關來源的詳細資訊，請閱讀 [來源概觀](../../sources/home.md).
+如需來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。

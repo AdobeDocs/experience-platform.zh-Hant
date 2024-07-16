@@ -4,24 +4,24 @@ description: 瞭解如何在Reactor API中呼叫/data_elements端點。
 exl-id: ea346682-441b-415b-af06-094158eb7c71
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1364'
 ht-degree: 4%
 
 ---
 
 # 資料元素端點
 
-資料元素的作用就像變數，指向應用程式內的重要資料片段。 資料元素用於 [規則](./rules.md) 和 [副檔名](./extensions.md) 設定。 當規則在執行階段在瀏覽器或應用程式中觸發時，將會解析資料元素的值並在規則中使用。 資料元素的功能與擴充功能設定相同。
+資料元素的作用就像變數，指向應用程式內的重要資料片段。 資料元素用於[規則](./rules.md)和[延伸](./extensions.md)設定。 當規則在執行階段在瀏覽器或應用程式中觸發時，將會解析資料元素的值並在規則中使用。 資料元素的功能與擴充功能設定相同。
 
 將數個資料元素搭配使用會產生資料字典或資料對應。 此字典代表Adobe Experience Platform知道且能運用的資料。
 
-資料元素只屬於一個 [屬性](./properties.md). 屬性可以有許多資料元素。
+資料元素只屬於一個[屬性](./properties.md)。 屬性可以有許多資料元素。
 
-如需資料元素及其在標籤中使用的一般資訊，請參閱 [資料元素指南](../../ui/managing-resources/data-elements.md) 在UI檔案中。
+如需資料元素及其在標籤中使用的一般資訊，請參閱UI檔案中的[資料元素指南](../../ui/managing-resources/data-elements.md)。
 
 ## 快速入門
 
-本指南中使用的端點是 [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). 在繼續之前，請檢閱 [快速入門手冊](../getting-started.md) 以取得如何驗證API的重要資訊。
+此指南中使用的端點是[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/)的一部分。 在繼續之前，請檢閱[快速入門手冊](../getting-started.md)，以取得有關如何向API驗證的重要資訊。
 
 ## 擷取資料元素清單 {#list}
 
@@ -35,13 +35,13 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 擁有資料元素之屬性的。 |
+| `PROPERTY_ID` | 擁有資料元素之屬性的`id`。 |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->使用查詢引數，可以根據以下屬性篩選列出的資料元素：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>請參閱以下指南： [篩選回應](../guides/filtering.md) 以取得詳細資訊。
+>使用查詢引數，可以根據以下屬性篩選列出的資料元素：<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>如需詳細資訊，請參閱[篩選回應](../guides/filtering.md)的指南。
 
 **要求**
 
@@ -174,7 +174,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->刪除資料元素時，會將其標籤為已刪除，但實際上並不會從系統中將其移除。 因此，您可以查詢已刪除的資料元素。 刪除的資料元素可由以下專案識別： `data.meta.deleted_at` 屬性。
+>刪除資料元素時，會將其標籤為已刪除，但實際上並不會從系統中將其移除。 因此，您可以查詢已刪除的資料元素。 刪除的資料元素可由`data.meta.deleted_at`屬性的存在來識別。
 
 **API格式**
 
@@ -184,7 +184,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 此 `id` 要查閱的資料元素的URL名稱。 |
+| `DATA_ELEMENT_ID` | 您要查閱之資料元素的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -314,13 +314,13 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 | 參數 | 說明 |
 | --- | --- |
-| `PROPERTY_ID` | 此 `id` 的 [屬性](./properties.md) 下定義資料元素的相關資訊。 |
+| `PROPERTY_ID` | 您正在定義資料元素的[屬性](./properties.md)的`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會為指定的屬性建立新的資料元素。 此呼叫也會透過，將資料元素與現有的擴充功能建立關聯 `relationships` 屬性。 請參閱以下指南： [關係](../guides/relationships.md) 以取得詳細資訊。
+以下請求會為指定的屬性建立新的資料元素。 呼叫也會透過`relationships`屬性將資料元素與現有的副檔名建立關聯。 如需詳細資訊，請參閱[關係](../guides/relationships.md)的指南。
 
 ```shell
 curl -X POST \
@@ -355,14 +355,14 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes.name` | **（必要）** 適用於資料元素的可讀取名稱。 |
-| `attributes.delegate_descriptor_id` | **（必要）** 將資料元素與擴充功能套件建立關聯的格式化字串。 所有資料元素在首次建立時都必須與擴充功能套件建立關聯，因為每個擴充功能套件都會為其委派資料元素定義相容型別，以及其預期行為。 請參閱以下指南： [委派描述項ID](../guides/delegate-descriptor-ids.md) 以取得詳細資訊。 |
+| `attributes.name` | **（必要）**&#x200B;資料元素的人類可讀名稱。 |
+| `attributes.delegate_descriptor_id` | **（必要）**&#x200B;將資料元素與擴充功能套件建立關聯的格式化字串。 所有資料元素在首次建立時都必須與擴充功能套件建立關聯，因為每個擴充功能套件都會為其委派資料元素定義相容型別，以及其預期行為。 如需詳細資訊，請參閱[委派描述項ID](../guides/delegate-descriptor-ids.md)的指南。 |
 | `attributes.settings` | 以字串表示的設定JSON物件。 |
-| `attributes.default_value` | 資料元素的評估結果為時要傳回的預設值 `undefined`. |
+| `attributes.default_value` | 資料元素評估為`undefined`時要傳回的預設值。 |
 | `attributes.enabled` | 表示資料元素是否已啟用的布林值。 |
 | `attributes.force_lower_case` | 布林值，指出資料元素值在儲存前是否應轉換為小寫。 |
 | `attributes.clean_text` | 布林值，指出是否應在儲存前，從資料元素值中移除開頭和結尾的空格。 |
-| `type` | 正在更新的資源型別。 此端點的值必須為 `data_elements`. |
+| `type` | 正在更新的資源型別。 此端點的值必須是`data_elements`。 |
 
 {style="table-layout:auto"}
 
@@ -480,13 +480,13 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 此 `id` 要更新的資料元素。 |
+| `DATA_ELEMENT_ID` | 您要更新的資料元素之`id`。 |
 
 {style="table-layout:auto"}
 
 **要求**
 
-以下請求會更新 `name` 用於現有資料元素。
+下列要求會更新現有資料元素的`name`。
 
 ```shell
 curl -X PATCH \
@@ -508,9 +508,9 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 物件，其屬性代表資料元素要更新的屬性。 所有資料元素屬性皆可更新。 檢視的呼叫範例 [建立資料元素](#create) 以取得屬性及其使用案例的清單。 |
-| `id` | 此 `id` 要更新的資料元素。 這應該符合 `{DATA_ELEMENT_ID}` 請求路徑中提供的值。 |
-| `type` | 正在更新的資源型別。 此端點的值必須為 `data_elements`. |
+| `attributes` | 物件，其屬性代表資料元素要更新的屬性。 所有資料元素屬性皆可更新。 如需屬性及其使用案例的清單，請參閱[建立資料元素](#create)的範例呼叫。 |
+| `id` | 您要更新的資料元素之`id`。 這應該符合請求路徑中提供的`{DATA_ELEMENT_ID}`值。 |
+| `type` | 正在更新的資源型別。 此端點的值必須是`data_elements`。 |
 
 {style="table-layout:auto"}
 
@@ -620,7 +620,7 @@ curl -X PATCH \
 
 當您修訂資料元素時，會以目前（標題）修訂版本建立資料元素的新修訂版本。 資料元素的每個修訂版本都有自己的ID。 可透過原始連結探索原始資料元素。
 
-您可以透過提供 `meta.action` 屬性值為的屬性 `revise` 在PATCH要求內文中。
+您可以在PATCH要求內文中提供值為`revise`的`meta.action`屬性，以修訂資料元素。
 
 **API格式**
 
@@ -630,7 +630,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 此 `id` 修改資料元素的URL名稱。 |
+| `DATA_ELEMENT_ID` | 您要修訂之資料元素的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -659,16 +659,16 @@ curl -X PATCH \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `attributes` | 物件，其屬性代表資料元素要更新的屬性。 所有資料元素屬性皆可更新。 檢視的呼叫範例 [建立資料元素](#create) 以取得屬性及其使用案例的清單。 |
-| `meta.action` | 當包含值時 `revise`，此屬性會指出應為資料元素建立新的修訂版本。 |
-| `id` | 此 `id` 修改資料元素的URL名稱。 這應該符合 `{DATA_ELEMENT_ID}` 請求路徑中提供的值。 |
-| `type` | 正在修訂的資源型別。 此端點的值必須為 `data_elements`. |
+| `attributes` | 物件，其屬性代表資料元素要更新的屬性。 所有資料元素屬性皆可更新。 如需屬性及其使用案例的清單，請參閱[建立資料元素](#create)的範例呼叫。 |
+| `meta.action` | 當包含值`revise`時，此屬性會指出應為資料元素建立新的修訂版本。 |
+| `id` | 您要修訂之資料元素的`id`。 這應該符合請求路徑中提供的`{DATA_ELEMENT_ID}`值。 |
+| `type` | 正在修訂的資源型別。 此端點的值必須是`data_elements`。 |
 
 {style="table-layout:auto"}
 
 **回應**
 
-成功的回應會傳回資料元素新修訂版本的詳細資料，如增量所示 `meta.latest_revision_number` 屬性。
+成功的回應會傳回資料元素新修訂版本的詳細資料，如遞增的`meta.latest_revision_number`屬性所指示。
 
 ```json
 {
@@ -780,7 +780,7 @@ DELETE /data_elements/{DATA_ELEMENT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `DATA_ELEMENT_ID` | 此 `id` 要刪除的資料元素的ID。 |
+| `DATA_ELEMENT_ID` | 您要刪除之資料元素的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -800,17 +800,17 @@ curl -X DELETE \
 
 ## 管理資料元素的附註 {#notes}
 
-資料元素是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 請參閱 [附註端點指南](./notes.md) 有關如何管理資料元素和其他相容資源的附註的詳細資訊。
+資料元素是「重要」資源，這表示您可以在每個個別資源上建立和擷取文字型附註。 如需有關如何管理資料元素和其他相容資源的附註的詳細資訊，請參閱[附註端點指南](./notes.md)。
 
 ## 擷取資料元素的相關資源 {#related}
 
-下列呼叫示範如何擷取資料元素的相關資源。 時間 [查詢資料元素](#lookup)，這些關係會列在 `relationships` 屬性。
+下列呼叫示範如何擷取資料元素的相關資源。 當[查詢資料元素](#lookup)時，這些關係會列在`relationships`屬性下。
 
-請參閱 [關係指南](../guides/relationships.md) 以進一步瞭解Reactor API中的關係。
+請參閱[關係指南](../guides/relationships.md)，以取得有關Reactor API中關係的詳細資訊。
 
 ### 列出資料元素的相關程式庫 {#libraries}
 
-您可以藉由附加以列出使用資料元素的程式庫 `/libraries` 至查閱請求的路徑。
+您可以將`/libraries`附加至查閱要求的路徑，以列出使用資料元素的程式庫。
 
 **API格式**
 
@@ -820,7 +820,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/libraries
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 此 `id` 列出其程式庫的資料元素。 |
+| `{DATA_ELEMENT_ID}` | 您要列出其程式庫的資料元素之`id`。 |
 
 {style="table-layout:auto"}
 
@@ -932,7 +932,7 @@ curl -X GET \
 
 ### 列出資料元素的相關修訂版本 {#revisions}
 
-您可以透過附加列出資料元素的先前修訂版本 `/revisions` 至查閱請求的路徑。
+您可以將`/revisions`附加至查閱要求的路徑，以列出資料元素的先前修訂版本。
 
 **API格式**
 
@@ -942,7 +942,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/revisions
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 此 `id` 要列出其修訂版本的資料元素的ID。 |
+| `{DATA_ELEMENT_ID}` | 您要列出其修訂版本的資料元素的`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1166,7 +1166,7 @@ curl -X GET \
 
 ### 查詢資料元素的相關擴充功能 {#extension}
 
-您可以藉由附加以查詢使用資料元素的擴充功能 `/extension` 到GET請求的路徑。
+您可以將`/extension`附加至GET要求的路徑，以查詢使用資料元素的副檔名。
 
 **API格式**
 
@@ -1176,7 +1176,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 此 `id` 要查詢其擴充功能的資料元素的ID。 |
+| `{DATA_ELEMENT_ID}` | 您要查詢其副檔名的資料元素之`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1286,7 +1286,7 @@ curl -X GET \
 
 ### 查詢資料元素的相關來源 {#origin}
 
-您可以透過附加來查詢資料元素的原點 `/origin` 到GET請求的路徑。 資料元素的原點是先前為建立目前修訂版本而更新的修訂版本。
+您可以將`/origin`附加至GET要求的路徑，以查詢資料元素的來源。 資料元素的原點是先前為建立目前修訂版本而更新的修訂版本。
 
 **API格式**
 
@@ -1296,7 +1296,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 此 `id` 要查詢其來源的資料元素。 |
+| `{DATA_ELEMENT_ID}` | 您要查詢其來源的資料元素之`id`。 |
 
 {style="table-layout:auto"}
 
@@ -1416,7 +1416,7 @@ curl -X GET \
 
 ### 查詢資料元素的相關屬性 {#property}
 
-您可以藉由附加以查詢擁有資料元素的屬性 `/property` 到GET請求的路徑。
+您可以將`/property`附加至GET要求的路徑，以查詢擁有資料元素的屬性。
 
 **API格式**
 
@@ -1426,7 +1426,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 
 | 參數 | 說明 |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | 此 `id` 要查詢其屬性的資料元素。 |
+| `{DATA_ELEMENT_ID}` | 您要查詢其屬性的資料元素之`id`。 |
 
 {style="table-layout:auto"}
 

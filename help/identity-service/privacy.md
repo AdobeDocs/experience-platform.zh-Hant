@@ -10,45 +10,45 @@ ht-degree: 1%
 
 ---
 
-# 隱私權請求處理於 [!DNL Identity Service]
+# 在[!DNL Identity Service]中處理隱私權請求
 
-Adobe Experience Platform [!DNL Privacy Service] 處理客戶存取、選擇退出銷售或刪除其個人資料的請求，這些請求由隱私權法規(例如一般資料保護規範(GDPR)和 [!DNL California Consumer Privacy Act] (CCPA)。
+Adobe Experience Platform [!DNL Privacy Service]會根據一般資料保護規範(GDPR)和[!DNL California Consumer Privacy Act] (CCPA)等隱私權法規，處理客戶存取、選擇退出銷售或刪除其個人資料的請求。
 
-本檔案說明與處理隱私權請求相關的重要概念。 [!DNL Identity Service] 在Adobe Experience Platform中。
+本檔案說明在Adobe Experience Platform中處理[!DNL Identity Service]隱私權要求的相關基本概念。
 
 >[!NOTE]
 >
->本指南僅涵蓋如何向Experience Platform中的身分資料存放區提出隱私權請求。 如果您也計畫針對Platform Data Lake或提出隱私權請求 [!DNL Real-Time Customer Profile]，請參閱以下指南： [資料湖中的隱私權請求處理](../catalog/privacy.md) 及指南： [設定檔的隱私權請求處理](../profile/privacy.md) 除了本教學課程以外。
+>本指南僅涵蓋如何向Experience Platform中的身分資料存放區提出隱私權請求。 如果您也打算針對Platform Data Lake或[!DNL Real-Time Customer Profile]提出隱私權請求，請參閱資料湖](../catalog/privacy.md)中[隱私權請求處理指南，以及本教學課程以外的[設定檔隱私權請求處理指南](../profile/privacy.md)。
 >
->如需如何對其他Adobe Experience Cloud應用程式提出隱私權要求的步驟，請參閱 [Privacy Service檔案](../privacy-service/experience-cloud-apps.md).
+>如需如何對其他Adobe Experience Cloud應用程式提出隱私權要求的步驟，請參閱[Privacy Service檔案](../privacy-service/experience-cloud-apps.md)。
 
 ## 快速入門
 
-建議您實際瞭解下列事項 [!DNL Experience Platform] 閱讀本指南之前的服務：
+在閱讀本指南之前，建議您實際瞭解下列[!DNL Experience Platform]服務：
 
-* [[!DNL Privacy Service]](../privacy-service/home.md)：管理客戶在Adobe Experience Cloud應用程式中存取、選擇退出銷售或刪除其個人資料的請求。
+* [[!DNL Privacy Service]](../privacy-service/home.md)：管理客戶透過Adobe Experience Cloud應用程式存取、選擇退出銷售或刪除其個人資料的請求。
 * [[!DNL Identity Service]](../identity-service/home.md)：透過跨裝置和系統橋接身分，解決客戶體驗資料分散所造成的根本挑戰。
-* [[!DNL Real-Time Customer Profile]](home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者個人檔案。
+* [[!DNL Real-Time Customer Profile]](home.md)：根據來自多個來源的彙總資料，提供統一的即時消費者設定檔。
 
 ## 了解身分命名空間 {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] 跨系統和裝置橋接客戶身分資料。 [!DNL Identity Service] 使用 **身分名稱空間** 透過將身分值與其來源系統建立關聯來提供身分值的前後關聯。 名稱空間可代表一般概念，例如電子郵件地址（「電子郵件」），或將身分與特定應用程式相關聯，例如Adobe Advertising Cloud ID (「AdCloud」)或Adobe Target ID (「TNTID」)。
+Adobe Experience Platform [!DNL Identity Service]可跨系統和裝置橋接客戶身分資料。 [!DNL Identity Service]使用&#x200B;**身分識別名稱空間**，透過將身分識別值與其來源系統建立關聯來提供身分識別值的內容。 名稱空間可代表一般概念，例如電子郵件地址（「電子郵件」），或將身分與特定應用程式相關聯，例如Adobe Advertising Cloud ID (「AdCloud」)或Adobe Target ID (「TNTID」)。
 
 Identity Service維護全域定義（標準）和使用者定義（自訂）的身分名稱空間之存放區。 標準名稱空間適用於所有組織（例如「Email」和「ECID」），而您的組織也可以建立自訂名稱空間以滿足其特定需求。
 
-如需中身分識別名稱空間的詳細資訊 [!DNL Experience Platform]，請參閱 [身分名稱空間總覽](../identity-service/features/namespaces.md).
+如需[!DNL Experience Platform]中識別名稱空間的詳細資訊，請參閱[識別名稱空間概觀](../identity-service/features/namespaces.md)。
 
 ## 提交請求 {#submit}
 
-以下各節概述如何針對以下專案提出隱私權請求： [!DNL Identity Service] 使用 [!DNL Privacy Service] API或UI。 在閱讀這些章節之前，強烈建議您檢閱 [PRIVACY SERVICE API](../privacy-service/api/getting-started.md) 或 [PRIVACY SERVICEUI](../privacy-service/ui/overview.md) 有關如何提交隱私權工作的完整步驟的檔案，包括如何在請求裝載中正確格式化使用者資料。
+以下各節概述如何使用[!DNL Privacy Service] API或UI為[!DNL Identity Service]提出隱私權請求。 在閱讀這些章節之前，強烈建議您檢閱[Privacy ServiceAPI](../privacy-service/api/getting-started.md)或[Privacy ServiceUI](../privacy-service/ui/overview.md)檔案，以取得有關如何提交隱私權工作的完整步驟，包括如何在要求裝載中正確格式化使用者資料。
 
 ### 使用 API
 
-在API中建立工作請求時，在中提供的任何ID `userIDs` 必須使用特定 `namespace` 和 `type`. 有效的 [身分名稱空間](#namespaces) 辨識者 [!DNL Identity Service] 必須提供 `namespace` 值，而 `type` 必須為 `standard` 或 `unregistered` （分別針對標準和自訂名稱空間）。
+在API中建立工作要求時，`userIDs`內提供的任何ID都必須使用特定的`namespace`和`type`。 必須提供[!DNL Identity Service]識別的有效[身分名稱空間](#namespaces)以供`namespace`值使用，而`type`必須是`standard`或`unregistered` （分別用於標準與自訂名稱空間）。
 
-此外， `include` 請求承載的陣列必須包含發出請求的不同資料存放區的產品值。 向提出請求時 [!DNL Identity]，陣列必須包含值 `Identity`.
+此外，請求承載的`include`陣列必須包含請求所針對的不同資料存放區的產品值。 向[!DNL Identity]提出請求時，陣列必須包含值`Identity`。
 
-以下請求會根據GDPR為中的單一客戶資料建立新的隱私權工作 [!DNL Identity] 商店。 在以下位置為客戶提供兩個身分值： `userIDs` 陣列；一個使用標準 `Email` 身分名稱空間，以及使用 `ECID` 名稱空間，也包含下列專案的產品值： [!DNL Identity] (`Identity`)中 `include` 陣列：
+以下請求會根據GDPR為[!DNL Identity]存放區中的單一客戶資料建立新的隱私權工作。 在`userIDs`陣列中為客戶提供了兩個身分值；一個使用標準`Email`身分名稱空間，另一個使用`ECID`名稱空間，它同時包含`include`陣列中[!DNL Identity] (`Identity`)的產品值：
 
 >[!TIP]
 >
@@ -98,25 +98,25 @@ curl -X POST \
 >
 >使用UI刪除自訂名稱空間時，您必須將身分符號指定為名稱空間，而非顯示名稱。 此外，您無法刪除非生產沙箱的UI中的自訂名稱空間。
 
-在UI中建立工作請求時，請務必選取 **[!UICONTROL 身分]** 在 **[!UICONTROL 產品]** 以便處理儲存在中的資料作業 [!DNL Identity Service].
+在UI中建立工作請求時，請務必在&#x200B;**[!UICONTROL 產品]**&#x200B;下選取&#x200B;**[!UICONTROL 身分]**，以便處理儲存在[!DNL Identity Service]中之資料的工作。
 
 ![identity-gdpr](./images/identity-gdpr.png)
 
 ## 正在處理刪除請求
 
-時間 [!DNL Experience Platform] 接收來自的刪除請求 [!DNL Privacy Service]， [!DNL Platform] 傳送確認給 [!DNL Privacy Service] 已收到請求，且受影響的資料已標示為刪除。 個人身分的刪除是根據提供的名稱空間和/或ID值。 此外，刪除也會針對與指定組織相關聯的所有沙箱進行。
+當[!DNL Experience Platform]收到來自[!DNL Privacy Service]的刪除請求時，[!DNL Platform]會傳送確認給[!DNL Privacy Service]，確認已收到該請求且受影響的資料已標示為刪除。 個人身分的刪除是根據提供的名稱空間和/或ID值。 此外，刪除也會針對與指定組織相關聯的所有沙箱進行。
 
-視您是否同時包含即時客戶個人檔案而定(`ProfileService`)和資料湖(`aepDataLake`)作為產品於Identity Service的隱私權請求中(`identity`)，則與身分相關的不同資料集會在不同的時間從系統中移除：
+視您是否也在身分服務的隱私權要求(`identity`)中包含即時客戶設定檔(`ProfileService`)和資料湖(`aepDataLake`)作為產品而定，與身分相關的不同資料集可能會在不同時間從系統中移除：
 
 | 包含的產品 | 效果 |
 | --- | --- |
-| `identity` 僅限 | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。 與設定檔相關聯的資料也會保留在資料湖中。 |
+| 僅`identity` | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。 與設定檔相關聯的資料也會保留在資料湖中。 |
 | `identity` 和 `ProfileService` | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。 與設定檔相關聯的資料會保留在資料湖中。 |
-| `identity` 和 `aepDataLake` | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。<br><br>當Data Lake產品回應收到請求且目前正在處理時，與設定檔相關聯的資料會軟刪除，因此任何人都無法存取 [!DNL Platform] 服務。 工作完成後，資料會從資料湖中完全移除。 |
-| `identity`， `ProfileService`、和 `aepDataLake` | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。<br><br>當Data Lake產品回應收到請求且目前正在處理時，與設定檔相關聯的資料會軟刪除，因此任何人都無法存取 [!DNL Platform] 服務。 工作完成後，資料會從資料湖中完全移除。 |
+| `identity` 和 `aepDataLake` | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。 從該身分圖表建構的設定檔仍會保留，但不會更新為擷取新資料，因為身分關聯現在已移除。<br><br>當Data Lake產品回應收到要求且目前正在處理時，與設定檔關聯的資料會軟刪除，因此無法由任何[!DNL Platform]服務存取。 工作完成後，資料會從資料湖中完全移除。 |
+| `identity`、`ProfileService`和`aepDataLake` | 當Platform傳送確認已收到刪除請求時，會立即刪除提供的身分。<br><br>當Data Lake產品回應收到要求且目前正在處理時，與設定檔關聯的資料會軟刪除，因此無法由任何[!DNL Platform]服務存取。 工作完成後，資料會從資料湖中完全移除。 |
 
-請參閱 [[!DNL Privacy Service] 檔案](../privacy-service/home.md#monitor) 以取得追蹤工作狀態的詳細資訊。
+如需追蹤工作狀態的詳細資訊，請參閱[[!DNL Privacy Service] 檔案](../privacy-service/home.md#monitor)。
 
 ## 後續步驟
 
-閱讀本檔案後，您將瞭解在中處理隱私權請求時涉及的重要概念 [!DNL Identity Service]. 有關處理其他人的隱私權請求的資訊 [!DNL Experience Cloud] 應用程式，請參閱以下檔案： [[!DNL Privacy Service] 和 [!DNL Experience Cloud] 應用計畫](../privacy-service/experience-cloud-apps.md).
+閱讀本檔案後，您已經瞭解在[!DNL Identity Service]中處理隱私權要求的重要概念。 如需有關處理其他[!DNL Experience Cloud]應用程式的隱私權要求的資訊，請參閱[[!DNL Privacy Service] 和 [!DNL Experience Cloud] 應用程式](../privacy-service/experience-cloud-apps.md)的檔案。

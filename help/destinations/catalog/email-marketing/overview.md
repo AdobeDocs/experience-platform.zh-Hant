@@ -7,7 +7,7 @@ exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -30,22 +30,22 @@ Adobe Experience Platform支援下列電子郵件行銷目的地：
 * [（檔案）OracleEloqua](oracle-eloqua.md)
 * [（檔案） [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud.md)
 * [[!DNL Salesforce Marketing Cloud Account Engagement]](salesforce-marketing-cloud-account-engagement.md)
-* [oracleResponsys](oracle-responsys.md)
+* [Oracle Responsys](oracle-responsys.md)
 * [傳送格線](sendgrid.md)
 
 ## 連線至新的電子郵件行銷目的地 {#connect-destination}
 
-若要將對象傳送至行銷活動的電子郵件行銷目的地，平台必須先連線至目的地。 請參閱 [目的地建立教學課程](../../ui/connect-destination.md) 以取得關於設定新目的地的詳細資訊。
+若要將對象傳送至行銷活動的電子郵件行銷目的地，平台必須先連線至目的地。 如需設定新目的地的詳細資訊，請參閱[目的地建立教學課程](../../ui/connect-destination.md)。
 
 ## 將受眾啟用至電子郵件行銷目的地的最佳實務 {#best-practices}
 
 ### 身分選擇 {#identity}
 
-Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas). 這是將您的使用者身分識別作為輸入資料的欄位。 最常見的情況是，此欄位是電子郵件地址，但也可以是忠誠計畫ID或電話號碼。 請參閱下表，以瞭解結構描述中最常見的唯一識別碼及其XDM欄位。
+Adobe建議您從[聯合結構描述](../../../profile/home.md#profile-fragments-and-union-schemas)中選取唯一識別碼。 這是將您的使用者身分識別作為輸入資料的欄位。 最常見的情況是，此欄位是電子郵件地址，但也可以是忠誠計畫ID或電話號碼。 請參閱下表，以瞭解結構描述中最常見的唯一識別碼及其XDM欄位。
 
 | 唯一識別碼 | 統一結構描述中的XDM欄位 |
 |----------------- | ---------------------------|
-| Email Address | `personalEmail.address` |
+| 電子郵件地址 | `personalEmail.address` |
 | 電話 | `mobilePhone.number` |
 | 熟客方案ID | `Customer-defined XDM field` |
 
@@ -57,14 +57,14 @@ Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragment
 
 | 綱要 | XDM欄位 |
 |------ | ---------|
-| 「名字」 | `person.name.firstName` |
-| 「姓氏」 | `person.name.lastName` |
+| 名字 | `person.name.firstName` |
+| 姓氏 | `person.name.lastName` |
 | 電話 | `mobilePhone.number` |
 | 地址城市 | `homeAddress.city` |
 | 地址狀態 | `homeAddress.stateProvince` |
 | 地址郵遞區號 | `homeAddress.postalCode` |
 | 生日 | `person.birthDayAndMonth` |
-| 區塊會籍 | `segmentMembership.status` |
+| 區段會籍 | `segmentMembership.status` |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Adobe建議您從 [聯合結構描述](../../../profile/home.md#profile-fragment
 
 其他目的地會將檔案匯出至雲端儲存位置。 匯出完成後，您需要從雲端儲存位置將資料匯入電子郵件行銷目的地。
 
-請依照 [支援的電子郵件行銷目的地](#supported-destinations) 區段，以瞭解如何針對每個電子郵件行銷目的地啟用對象。
+請依照[支援的電子郵件行銷目的地](#supported-destinations)區段中的連結，瞭解如何在每個電子郵件行銷目的地啟用對象。
 
 ## 其他資源 {#additional-resources}
 

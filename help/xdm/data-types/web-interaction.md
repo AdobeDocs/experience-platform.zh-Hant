@@ -7,20 +7,20 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 4%
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL 網路互動] 資料型別
+# [!UICONTROL 網頁互動]資料型別
 
-[!UICONTROL 網路互動] 是標準的體驗資料模型(XDM)資料型別，可描述初始頁面載入完成後發生在網頁上的互動相關資訊。 它可用來記錄豐富網頁應用程式(例如單頁網頁應用程式(SPA))中的互動，而不會觸發新的頁面載入。
+[!UICONTROL 網頁互動]是標準的Experience Data Model (XDM)資料型別，描述初次頁面載入完成後發生在網頁上的互動資訊。 它可用來記錄豐富網頁應用程式(例如單頁網頁應用程式(SPA))中的互動，而不會觸發新的頁面載入。
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
-| `linkClicks` | [[!UICONTROL 測量]](./measure.md) | 追蹤網頁連結點選的測量。 |
-| `URL` | 字串 | 用於此網路互動的實際連結或URL。 |
+| `linkClicks` | [[!UICONTROL 量值]](./measure.md) | 追蹤網頁連結點選的測量。 |
+| `URL` | 字串 | 用於此網路互動的實際連結或 URL。 |
 | `name` | 字串 | 用於此網頁連結的規範名稱。 這用於分類目的。 |
 | `type` | 字串 | 連結型別。 此屬性必須等於下列其中一個列舉值： <li> `download` </li> <li> `exit` </li> <li> `other` </li> |
 
@@ -28,5 +28,5 @@ ht-degree: 4%
 
 如需資料型別的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)

@@ -13,24 +13,24 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->沙箱工具是支援兩者的基本功能 [!DNL Real-Time Customer Data Platform] 和 [!DNL Journey Optimizer] 以提升開發週期效率和設定準確性。<br><br>您必須具備下列兩個角色型存取控制許可權，才能使用沙箱工具功能：<br>- `manage-sandbox` 或 `view-sandbox`<br>- `manage-package`
+>沙箱工具是同時支援[!DNL Real-Time Customer Data Platform]和[!DNL Journey Optimizer]的基礎功能，可改善開發週期效率和設定準確性。<br><br>您必須擁有下列兩個角色型存取控制許可權，才能使用沙箱工具功能： <br>- `manage-sandbox`或`view-sandbox`<br>- `manage-package`
 
 提高沙箱之間的設定準確性，並利用沙箱工具功能順暢地匯出和匯入沙箱之間的沙箱設定。 使用沙箱工具來減少實作程式的價值實現時間，並跨沙箱移動成功的設定。
 
-您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。 套件可以包含單一物件或多個物件。 <!--or an entire sandbox.-->套件中包含的任何物件都必須來自相同沙箱。
+您可以使用沙箱工具功能來選取不同的物件，並將它們匯出到套件中。 套件可以包含單一物件或多個物件。 <!--or an entire sandbox.-->封裝中包含的任何物件都必須來自相同的沙箱。
 
 ## 沙箱工具支援的物件 {#supported-objects}
 
-沙箱工具功能可讓您匯出 [!DNL Adobe Real-Time Customer Data Platform] 和 [!DNL Adobe Journey Optimizer] 物件放入封裝。
+沙箱工具功能可讓您將[!DNL Adobe Real-Time Customer Data Platform]和[!DNL Adobe Journey Optimizer]物件匯出至封裝。
 
 ### Real-time Customer Data Platform物件 {#real-time-cdp-objects}
 
-下表列出 [!DNL Adobe Real-Time Customer Data Platform] 目前支援沙箱工具的物件：
+下表列出目前沙箱工具支援的[!DNL Adobe Real-Time Customer Data Platform]物件：
 
 | 平台 | 物件 | 詳細資料 |
 | --- | --- | --- |
 | 客戶資料平台 | 來源 | 出於安全原因，不會將來源帳戶認證復寫到目標沙箱中，而是需要手動更新。 依照預設，來源資料流會以草稿狀態複製。 |
-| 客戶資料平台 | 對象 | 僅限 **[!UICONTROL 客戶對象]** type **[!UICONTROL 分段服務]** 支援。 用於同意和管理的現有標籤將複製到相同的匯入工作中。 檢查合併原則相依性時，系統將在具有相同XDM類別的目標沙箱中自動選取預設合併原則。 |
+| 客戶資料平台 | 對象 | 僅支援&#x200B;**[!UICONTROL 客戶對象]**&#x200B;型別&#x200B;**[!UICONTROL 細分服務]**。 用於同意和管理的現有標籤將複製到相同的匯入工作中。 檢查合併原則相依性時，系統將在具有相同XDM類別的目標沙箱中自動選取預設合併原則。 |
 | 客戶資料平台 | 身分 | 在Adobe沙箱中建立時，系統會自動刪除重複的Target標準身分名稱空間。 對象規則中的所有屬性都已在聯合結構描述中啟用時，才能複製對象。 必須先移動並啟用統一設定檔的必要結構描述。 |
 | 客戶資料平台 | 結構描述 | 用於同意和管理的現有標籤將複製到相同的匯入工作中。 使用者可靈活地匯入未啟用統一設定檔選項的結構描述。 封裝中不包含結構描述關聯邊緣案例。 |
 | 客戶資料平台 | 資料集 | 資料集複製時會預設停用整合設定檔設定。 |
@@ -40,20 +40,20 @@ ht-degree: 7%
 
 | 功能 | 物件 | 狀態 |
 | --- | --- | --- |
-| 匯入狀態 | 來源資料流 | 草稿 |
+| 匯入狀態 | Source資料流 | 草稿 |
 | 匯入狀態 | 歷程 | 草稿 |
 | 整合式設定檔 | 資料集 | 已停用整合式設定檔 |
 | 原則 | 資料治理原則 | 停用 |
 
 ### Adobe Journey Optimizer物件 {#abobe-journey-optimizer-objects}
 
-下表列出 [!DNL Adobe Journey Optimizer] 目前沙箱工具支援的物件和限制：
+下表列出目前沙箱工具支援的[!DNL Adobe Journey Optimizer]物件與限制：
 
 | 平台 | 物件 | 詳細資料 |
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | 對象 | 對象可以復製為歷程物件的相依物件。 您可以選取建立新受眾或重複使用目標沙箱中的現有受眾。 |
 | [!DNL Adobe Journey Optimizer] | 綱要 | 歷程中使用的結構描述可以復製為相依物件。 您可以選取建立新結構描述，或重複使用目標沙箱中的現有結構描述。 |
-| [!DNL Adobe Journey Optimizer] | 合併原則 | 歷程中使用的合併原則可以復製為相依物件。 在目標沙箱中，您 **無法** 建立新的合併原則，您只能利用現有的合併原則。 |
+| [!DNL Adobe Journey Optimizer] | 合併原則 | 歷程中使用的合併原則可以復製為相依物件。 在目標沙箱中，您&#x200B;**無法**&#x200B;建立新的合併原則，您只能利用現有的合併原則。 |
 | [!DNL Adobe Journey Optimizer] | 歷程 — 畫布詳細資料 | 畫布上的歷程呈現方式包含歷程中的物件，例如條件、動作、事件、讀取對象等，這些物件均已複製。 跳轉活動會從複製中排除。 |
 | [!DNL Adobe Journey Optimizer] | 活動 | 將會複製歷程中使用的事件和事件詳細資訊。 它一律會在目標沙箱中建立新版本。 |
 | [!DNL Adobe Journey Optimizer] | 動作 | 歷程中使用的電子郵件和推播訊息可以復製為相依物件。 用於訊息個人化的歷程欄位中使用的管道動作活動不會檢查完整性。 不會複製內容區塊。<br><br>可以複製歷程中使用的更新設定檔動作。 也會複製歷程中使用的自訂動作和動作詳細資訊。 它一律會在目標沙箱中建立新版本。 |
@@ -91,41 +91,41 @@ ht-degree: 7%
 
 ### 將物件加入至新封裝 {#add-object-to-new-package}
 
-選取 **[!UICONTROL 方案]** 從左側導覽列中，然後選取 **[!UICONTROL 瀏覽]** 標籤，其中列出可用的結構描述。 接著，選取省略符號(`...`)，而下拉式清單則會顯示控制項。 選取 **[!UICONTROL 新增到封裝]** 下拉式清單中的。
+從左側導覽選取&#x200B;**[!UICONTROL 結構描述]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，其中會列出可用的結構描述。 接著，選取所選結構描述旁邊的省略符號(`...`)，下拉式清單就會顯示控制項。 從下拉式清單中選取&#x200B;**[!UICONTROL 新增到封裝]**。
 
-![結構描述清單，顯示醒目提示的下拉式選單 [!UICONTROL 新增到封裝] 控制。](../images/ui/sandbox-tooling/add-to-package.png)
+![結構描述清單，顯示反白顯示[!UICONTROL 新增至封裝]控制項的下拉式功能表。](../images/ui/sandbox-tooling/add-to-package.png)
 
-從 **[!UICONTROL 新增到封裝]** 對話方塊中，選取 **[!UICONTROL 建立新封裝]** 選項。 提供 [!UICONTROL 名稱] 適用於您的套件，以及選購的 [!UICONTROL 說明]，然後選取 **[!UICONTROL 新增]**.
+從&#x200B;**[!UICONTROL 新增至封裝]**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 建立新封裝]**&#x200B;選項。 提供封裝的[!UICONTROL Name]和選用的[!UICONTROL 描述]，然後選取&#x200B;**[!UICONTROL 新增]**。
 
-![此 [!UICONTROL 新增到封裝] 對話方塊 [!UICONTROL 建立新封裝] 已選取並醒目提示 [!UICONTROL 新增].](../images/ui/sandbox-tooling/create-new-package.png)
+![已選取[!UICONTROL 建立新封裝]並醒目提示[!UICONTROL 新增]的[!UICONTROL 新增至封裝]對話方塊。](../images/ui/sandbox-tooling/create-new-package.png)
 
-您將返回 **[!UICONTROL 方案]** 環境。 您現在可以依照下列的後續步驟，將其他物件加入您建立的封裝。
+您返回到&#x200B;**[!UICONTROL 結構描述]**&#x200B;環境。 您現在可以依照下列的後續步驟，將其他物件加入您建立的封裝。
 
 ### 將物件新增至現有封裝並發佈 {#add-object-to-existing-package}
 
-若要檢視可用綱要的清單，請選取 **[!UICONTROL 方案]** 從左側導覽列中，然後選取 **[!UICONTROL 瀏覽]** 標籤。 接著，選取省略符號(`...`)來檢視下拉式選單中的控制選項。 選取 **[!UICONTROL 新增到封裝]** 下拉式清單中的。
+若要檢視可用的結構描述清單，請從左側導覽選取&#x200B;**[!UICONTROL 結構描述]**，然後選取&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤。 接著，選取選取的結構描述旁邊的省略符號(`...`)，在下拉式功能表中檢視控制選項。 從下拉式清單中選取&#x200B;**[!UICONTROL 新增到封裝]**。
 
-![結構描述清單，顯示醒目提示的下拉式選單 [!UICONTROL 新增到封裝] 控制。](../images/ui/sandbox-tooling/add-to-package.png)
+![結構描述清單，顯示反白顯示[!UICONTROL 新增至封裝]控制項的下拉式功能表。](../images/ui/sandbox-tooling/add-to-package.png)
 
-此 **[!UICONTROL 新增到封裝]** 對話方塊隨即顯示。 選取 **[!UICONTROL 現有封裝]** 選項，然後選取 **[!UICONTROL 封裝名稱]** 下拉式清單，然後選取所需的套件。 最後，選取 **[!UICONTROL 新增]** 以確認您的選擇。
+**[!UICONTROL 新增至封裝]**&#x200B;對話方塊就會顯示。 選取「**[!UICONTROL 現有封裝]**」選項，然後選取「**[!UICONTROL 封裝名稱]**」下拉式清單，並選取所需的封裝。 最後，選取&#x200B;**[!UICONTROL 新增]**&#x200B;以確認您的選擇。
 
-![[!UICONTROL 新增到封裝] 對話方塊，顯示下拉式清單中選取的套件。](../images/ui/sandbox-tooling/add-to-existing-package.png)
+![[!UICONTROL 新增到封裝]對話方塊，顯示下拉式清單中選取的封裝。](../images/ui/sandbox-tooling/add-to-existing-package.png)
 
-會列出加入封裝的物件清單。 若要發佈套件並使其可匯入沙箱，請選取 **[!UICONTROL 發佈]**.
+會列出加入封裝的物件清單。 若要發佈套件並使其可匯入沙箱，請選取&#x200B;**[!UICONTROL Publish]**。
 
-![封裝中的物件清單，醒目提示 [!UICONTROL 發佈] 選項。](../images/ui/sandbox-tooling/publish-package.png)
+![封裝中的物件清單，醒目提示[!UICONTROL Publish]選項。](../images/ui/sandbox-tooling/publish-package.png)
 
-選取 **[!UICONTROL 發佈]** 以確認發佈套件。
+選取&#x200B;**[!UICONTROL Publish]**&#x200B;以確認發佈封裝。
 
-![發佈套件確認對話方塊，醒目提示 [!UICONTROL 發佈] 選項。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![Publish封裝確認對話方塊，醒目提示[!UICONTROL Publish]選項。](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
 >發佈後，無法變更套件的內容。 為避免相容性問題，請確保已選取所有必要的資產。 如果必須進行變更，您必須建立新封裝。
 
-您將返回 **[!UICONTROL 封裝]** 索引標籤中的 [!UICONTROL 沙箱] 環境，您可在其中檢視新發佈的套件。
+您會回到[!UICONTROL 沙箱]環境中的&#x200B;**[!UICONTROL 套件]**&#x200B;索引標籤，您可以在其中看到新發佈的套件。
 
-![強調新發佈套件的沙箱套件清單。](../images/ui/sandbox-tooling/published-packages.png)
+![醒目提示新發佈封裝的沙箱封裝清單。](../images/ui/sandbox-tooling/published-packages.png)
 
 ## 將套件匯入目標沙箱 {#import-package-to-target-sandbox}
 
@@ -133,17 +133,17 @@ ht-degree: 7%
 >
 >所有匯入動作都會記錄在稽核記錄中。
 
-若要將套件匯入目標沙箱，請導覽至「沙箱」 **[!UICONTROL 瀏覽]** 索引標籤並選取沙箱名稱旁邊的加號(+)選項。
+若要將套件匯入目標沙箱，請導覽至沙箱&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤，並選取沙箱名稱旁邊的加號(+)選項。
 
-![沙箱 **[!UICONTROL 瀏覽]** 索引標籤中反白匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-sandboxes.png)
+![沙箱&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤醒目提示匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-使用下拉式功能表，選取 **[!UICONTROL 封裝名稱]** 您想要匯入至目標沙箱。 新增 **[!UICONTROL 工作名稱]**，將用於日後的監視。 依預設，在匯入套件的結構描述時，統一設定檔將會停用。 切換 **為設定檔啟用結構描述** 若要啟用此功能，請選取 **[!UICONTROL 下一個]**.
+使用下拉式功能表，選取您要匯入目標沙箱的&#x200B;**[!UICONTROL 封裝名稱]**。 新增將用於未來監視的&#x200B;**[!UICONTROL 工作名稱]**。 依預設，在匯入套件的結構描述時，統一設定檔將會停用。 切換&#x200B;**為設定檔**&#x200B;啟用結構描述以啟用此設定，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
-![匯入詳細資訊頁面顯示 [!UICONTROL 封裝名稱] 下拉式清單選取專案](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
+![匯入詳細資訊頁面顯示[!UICONTROL 封裝名稱]下拉式清單選項](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-此 [!UICONTROL 套件物件與相依性] 頁面提供此封裝中包含的所有資產清單。 系統會自動偵測成功匯入所選父物件所需的相依物件。 任何遺失的屬性都會顯示在頁面頂端。 選取 **[!UICONTROL 檢視詳細資料]** 以取得更詳細的劃分。
+[!UICONTROL 封裝物件與相依性]頁面提供此封裝中包含的所有資產清單。 系統會自動偵測成功匯入所選父物件所需的相依物件。 任何遺失的屬性都會顯示在頁面頂端。 選取「**[!UICONTROL 檢視詳細資料]**」以取得更詳細的劃分。
 
-![此 [!UICONTROL 套件物件與相依性] 頁面會顯示遺失的屬性。](../images/ui/sandbox-tooling/missing-attributes.png)
+![[!UICONTROL 封裝物件和相依性]頁面顯示遺漏的屬性。](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
@@ -151,19 +151,19 @@ ht-degree: 7%
 
 若要使用現有物件，請選取相依物件旁的鉛筆圖示。
 
-![此 [!UICONTROL 套件物件與相依性] 頁面會顯示封裝中包含的資產清單。](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![封裝物件與相依性]頁面會顯示包含在封裝中的資產清單。](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)[!UICONTROL 
 
-隨即顯示建立新或使用現有專案的選項。 選取 **[!UICONTROL 使用現有]**.
+隨即顯示建立新或使用現有專案的選項。 選取&#x200B;**[!UICONTROL 使用現有的]**。
 
-![此 [!UICONTROL 套件物件與相依性] 顯示相依物件選項的頁面 [!UICONTROL 新建] 和 [!UICONTROL 使用現有].](../images/ui/sandbox-tooling/use-existing-object.png)
+![顯示相依物件選項[!UICONTROL 建立新的]和[!UICONTROL 使用現有的]的[!UICONTROL 封裝物件和相依性]頁面。](../images/ui/sandbox-tooling/use-existing-object.png)
 
-此 **[!UICONTROL 欄位群組]** 對話方塊會顯示物件可用的欄位群組清單。 選取所需的欄位群組，然後選取 **[!UICONTROL 儲存]**.
+**[!UICONTROL 欄位群組]**&#x200B;對話方塊會顯示物件可用的欄位群組清單。 選取所需的欄位群組，然後選取&#x200B;**[!UICONTROL 儲存]**。
 
-![顯示在「 」上的欄位清單 [!UICONTROL 欄位群組] 對話方塊，反白顯示 [!UICONTROL 儲存] 選取。 ](../images/ui/sandbox-tooling/field-group-list.png)
+![ [!UICONTROL 欄位群組]對話方塊上顯示的欄位清單，醒目顯示[!UICONTROL 儲存]選取專案。](../images/ui/sandbox-tooling/field-group-list.png)
 
-您將返回 [!UICONTROL 套件物件與相依性] 頁面。 從這裡，選擇 **[!UICONTROL 完成]** 以完成套件匯入。
+您返回到[!UICONTROL 封裝物件和相依性]頁面。 從這裡，選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成封裝匯入。
 
-![此 [!UICONTROL 套件物件與相依性] 頁面顯示套件中包含的資產清單，醒目提示 [!UICONTROL 完成].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
+![封裝物件和相依性[!UICONTROL 頁面會顯示包含在封裝中的資產清單，並醒目提示[!UICONTROL 完成]。](../images/ui/sandbox-tooling/finish-object-dependencies.png)]
 
 ## 匯出和匯入整個沙箱
 
@@ -178,19 +178,19 @@ ht-degree: 7%
 
 ### 匯出整個沙箱 {#export-entire-sandbox}
 
-若要匯出整個沙箱，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 封裝]** 標籤並選取 **[!UICONTROL 建立封裝]**.
+若要匯出整個沙箱，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 套件]**&#x200B;索引標籤，並選取&#x200B;**[!UICONTROL 建立套件]**。
 
-![此 [!UICONTROL 沙箱] **[!UICONTROL 封裝]** 標籤反白顯示 [!UICONTROL 建立封裝].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+![ [!UICONTROL 沙箱] **[!UICONTROL 封裝]**&#x200B;索引標籤醒目提示[!UICONTROL 建立封裝]。](../images/ui/sandbox-tooling/create-sandbox-package.png)
 
-選取 **[!UICONTROL 整個沙箱]** 針對 [!UICONTROL 封裝型別] 在 [!UICONTROL 建立封裝] 對話方塊。 提供 [!UICONTROL 封裝名稱] ，然後選取 **[!UICONTROL Sandbox]** 下拉式清單中的。 最後，選取 **[!UICONTROL 建立]** 以確認您的輸入。
+在[!UICONTROL 建立封裝]對話方塊中，選取[!UICONTROL 封裝]的&#x200B;**[!UICONTROL 整個沙箱]**。 為您的新封裝提供[!UICONTROL 封裝名稱]，並從下拉式清單中選取&#x200B;**[!UICONTROL 沙箱]**。 最後，選取&#x200B;**[!UICONTROL 建立]**&#x200B;以確認您的專案。
 
-![此 [!UICONTROL 建立封裝] 顯示已完成欄位和醒目提示的對話方塊 [!UICONTROL 建立].](../images/ui/sandbox-tooling/create-package-dialog.png)
+![ [!UICONTROL 建立封裝]對話方塊顯示已完成的欄位並醒目提示[!UICONTROL 建立]。](../images/ui/sandbox-tooling/create-package-dialog.png)
 
-已成功建立封裝，請選取 **[!UICONTROL 發佈]** 以發佈套件。
+已成功建立封裝，請選取&#x200B;**[!UICONTROL Publish]**&#x200B;以發佈封裝。
 
-![強調新發佈套件的沙箱套件清單。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+![醒目提示新發佈封裝的沙箱封裝清單。](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
 
-您將返回 **[!UICONTROL 封裝]** 索引標籤中的 [!UICONTROL 沙箱] 環境，您可在其中檢視新發佈的套件。
+您會回到[!UICONTROL 沙箱]環境中的&#x200B;**[!UICONTROL 套件]**&#x200B;索引標籤，您可以在其中看到新發佈的套件。
 
 ### 匯入整個沙箱套件 {#import-entire-sandbox-package}
 
@@ -198,29 +198,29 @@ ht-degree: 7%
 >
 >所有物件都會當作新物件匯入目標沙箱中。 最佳實務是將完整的沙箱套件匯入空的沙箱。
 
-若要將套件匯入目標沙箱，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 瀏覽]** 索引標籤並選取沙箱名稱旁邊的加號(+)選項。
+若要將套件匯入目標沙箱，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 瀏覽]**&#x200B;標籤，並選取沙箱名稱旁的加號(+)選項。
 
-![沙箱 **[!UICONTROL 瀏覽]** 索引標籤中反白匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+![沙箱&#x200B;**[!UICONTROL 瀏覽]**&#x200B;索引標籤醒目提示匯入封裝選取專案。](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
 
-使用下拉式選單，使用 **[!UICONTROL 封裝名稱]** 下拉式清單。 新增 **[!UICONTROL 工作名稱]**，將用於未來的監控，且選填 **[!UICONTROL 工作說明]**，然後選取 **[!UICONTROL 下一個]**.
+使用下拉式功能表，使用&#x200B;**[!UICONTROL 封裝名稱]**&#x200B;下拉式功能表選取完整沙箱。 新增將用於未來監視的&#x200B;**[!UICONTROL 工作名稱]**&#x200B;和選用的&#x200B;**[!UICONTROL 工作描述]**，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
-![匯入詳細資訊頁面顯示 [!UICONTROL 封裝名稱] 下拉式清單選取專案](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+![匯入詳細資訊頁面顯示[!UICONTROL 封裝名稱]下拉式清單選項](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
 
 >[!NOTE]
 >
 >您必須擁有封裝中包含之所有物件的完整許可權。 如果您沒有許可權，匯入作業將會失敗並顯示錯誤訊息。
 
-您被帶到 [!UICONTROL 套件物件與相依性] 您可以在此頁面檢視匯入和排除物件的物件數目和相依性。 從這裡，選擇 **[!UICONTROL 匯入]** 以完成套件匯入。
+您會進入[!UICONTROL 封裝物件與相依性]頁面，您可以在此頁面檢視匯入和排除物件的物件與相依性數目。 從這裡，選取&#x200B;**[!UICONTROL 匯入]**&#x200B;以完成封裝匯入。
 
-![此 [!UICONTROL 套件物件與相依性] 頁面顯示不支援之物件型別的內嵌訊息，強調顯示 [!UICONTROL 匯入].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+![[!UICONTROL 封裝物件與相依性]頁面顯示不支援之物件型別的內嵌訊息，並醒目提示[!UICONTROL 匯入]。](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 
-留出一些時間讓匯入完成。 完成時間會因封裝中的物件數目而異。 您可以從以下位置監視匯入作業： [!UICONTROL 沙箱] **[!UICONTROL 工作]** 標籤。
+留出一些時間讓匯入完成。 完成時間會因封裝中的物件數目而異。 您可以從[!UICONTROL 沙箱] **[!UICONTROL 工作]**&#x200B;索引標籤監視匯入工作。
 
 ## 監視匯入詳細資料 {#view-import-details}
 
-若要檢視匯入的詳細資訊，請導覽至 [!UICONTROL 沙箱] **[!UICONTROL 工作]** 標籤並從清單中選取封裝。 或者，使用搜尋列來搜尋套件。
+若要檢視匯入的詳細資料，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 工作]**&#x200B;標籤，然後從清單中選取封裝。 或者，使用搜尋列來搜尋套件。
 
-![沙箱 [!UICONTROL 工作] 索引標籤會醒目顯示匯入套件選項。](../images/ui/sandbox-tooling/imports-tab.png)
+![沙箱[!UICONTROL 工作]索引標籤會醒目提示匯入套件選項。](../images/ui/sandbox-tooling/imports-tab.png)
 
 <!--### View imported objects {#view-imported-objects}
 
@@ -234,17 +234,17 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-選取 **[!UICONTROL 檢視匯入摘要]** 從右側詳細資料窗格 **[!UICONTROL 工作]** tab鍵。
+在沙箱環境的&#x200B;**[!UICONTROL 工作]**&#x200B;索引標籤中，從右邊的詳細資料窗格中選取&#x200B;**[!UICONTROL 檢視匯入摘要]**。
 
-![沙箱 [!UICONTROL 匯入] 索引標籤反白顯示 [!UICONTROL 檢視匯入詳細資料] 右窗格中的選取範圍。](../images/ui/sandbox-tooling/view-import-details.png)
+![沙箱[!UICONTROL 匯入]索引標籤會在右窗格中反白顯示[!UICONTROL 檢視匯入詳細資料]選項。](../images/ui/sandbox-tooling/view-import-details.png)
 
-此 **[!UICONTROL 匯入摘要]** 對話方塊會顯示匯入的劃分以及進度百分比。
+**[!UICONTROL 匯入摘要]**&#x200B;對話方塊會顯示匯入的劃分以及進度百分比。
 
 >[!NOTE]
 >
 >您可以導覽至特定的詳細目錄頁面，以檢視物件清單。
 
-![此 [!UICONTROL 匯入詳細資料] 顯示匯入詳細劃分的對話方塊。](../images/ui/sandbox-tooling/import-details.png)
+![顯示匯入詳細資料的[!UICONTROL 匯入詳細資料]對話方塊。](../images/ui/sandbox-tooling/import-details.png)
 
 匯入完成時，會在Platform UI中收到通知。 您可以從警示圖示存取這些通知。 如果工作失敗，您可以從這裡導覽至疑難排解。
 
@@ -256,6 +256,6 @@ Use the arrows to expand objects to view the full list of fields that have been 
 
 ## 後續步驟
 
-本檔案會示範如何在Experience PlatformUI中使用沙箱工具功能。 如需沙箱的詳細資訊，請參閱 [沙箱使用手冊](../ui/user-guide.md).
+本檔案會示範如何在Experience PlatformUI中使用沙箱工具功能。 如需沙箱的相關資訊，請參閱[沙箱使用手冊](../ui/user-guide.md)。
 
-如需使用沙箱API執行不同操作的步驟，請參閱 [沙箱開發人員指南](../api/getting-started.md). 如需Experience Platform中沙箱的整體概觀，請參閱 [概述檔案](../home.md).
+如需使用沙箱API執行不同作業的步驟，請參閱[沙箱開發人員指南](../api/getting-started.md)。 如需Experience Platform中沙箱的整體概觀，請參閱[概觀檔案](../home.md)。

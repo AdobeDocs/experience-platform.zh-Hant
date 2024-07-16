@@ -11,32 +11,32 @@ ht-degree: 1%
 
 # 使用API設定及設定客戶自控金鑰
 
-本文介紹在Adobe Experience Platform中使用API啟用客戶自控金鑰(CMK)功能的程式。 如需有關如何使用UI完成此程式的說明，請參閱 [UI CMK設定檔案](./ui-set-up.md).
+本文介紹在Adobe Experience Platform中使用API啟用客戶自控金鑰(CMK)功能的程式。 有關如何使用UI完成此程式的說明，請參閱[UI CMK設定檔案](./ui-set-up.md)。
 
 ## 先決條件
 
-若要檢視並造訪 [!UICONTROL 加密] Adobe Experience Platform區段，您必須已建立角色並指派 [!UICONTROL 管理客戶自控金鑰] 該角色的許可權。 任何使用者擁有 [!UICONTROL 管理客戶自控金鑰] 許可權可為其組織啟用CMK。
+若要在Adobe Experience Platform中檢視並瀏覽[!UICONTROL 加密]區段，您必須已建立角色，並已將[!UICONTROL 管理客戶管理的金鑰]許可權指派給該角色。 任何擁有[!UICONTROL 管理客戶管理的金鑰]許可權的使用者都可以為其組織啟用CMK。
 
-有關在Experience Platform中指派角色和許可權的詳細資訊，請參閱 [設定許可權檔案](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+有關在Experience Platform中指派角色和許可權的詳細資訊，請參閱[設定許可權檔案](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html)。
 
-若要啟用CMK，您的 [[!DNL Azure] 必須設定金鑰儲存庫](./azure-key-vault-config.md) 設定下：
+若要啟用CMK，您的[[!DNL Azure] 金鑰儲存庫必須使用下列設定來設定](./azure-key-vault-config.md)：
 
 * [啟用清除保護](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [啟用軟刪除](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [設定存取權，使用 [!DNL Azure] 角色型存取控制](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [使用 [!DNL Azure] 角色型存取控制設定存取權](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
 * [設定 [!DNL Azure] 金鑰儲存庫](./azure-key-vault-config.md)
 
 ## 設定CMK應用程式 {#register-app}
 
-設定好金鑰儲存庫後，下一步就是註冊將連結至您的 [!DNL Azure] 租使用者。
+在您設定金鑰儲存庫後，下一步是註冊將連結至您[!DNL Azure]租使用者的CMK應用程式。
 
 ### 快速入門
 
-註冊CMK應用程式時，您必須呼叫平台API。 如需有關如何收集進行這些呼叫所需的驗證標題的詳細資訊，請參閱 [平台API驗證指南](../../api-authentication.md).
+註冊CMK應用程式時，您必須呼叫平台API。 如需有關如何收集進行這些呼叫所需的驗證標頭的詳細資訊，請參閱[平台API驗證指南](../../api-authentication.md)。
 
-而驗證指南會提供如何針對所需產生您自己的唯一值的指示 `x-api-key` 請求標頭，本指南中的所有API作業都使用靜態值 `acp_provisioning` 而非。 您仍然必須提供自己的值 `{ACCESS_TOKEN}` 和 `{ORG_ID}`，但是。
+雖然驗證指南提供如何為必要的`x-api-key`請求標頭產生您自己的唯一值的指示，但本指南中的所有API作業都使用靜態值`acp_provisioning`。 不過，您仍必須提供您自己的`{ACCESS_TOKEN}`和`{ORG_ID}`值。
 
-在本指南中顯示的所有API呼叫中， `platform.adobe.io` 作為根路徑，預設為VA7區域。 如果您的組織使用不同的地區， `platform` 後面必須跟有破折號和指派給您的組織的區域代碼： `nld2` 適用於NLD2或 `aus5` 適用於AUS5 (例如： `platform-aus5.adobe.io`)。 如果您不知道您組織的區域，請聯絡您的系統管理員。
+在本指南中顯示的所有API呼叫中，`platform.adobe.io`會作為根路徑，其預設值為VA7區域。 如果貴組織使用不同的地區，`platform`後面必須加上破折號和指派給貴組織的地區代碼： NLD2為`nld2`或AUS5為`aus5` （例如： `platform-aus5.adobe.io`）。 如果您不知道您組織的區域，請聯絡您的系統管理員。
 
 ### 擷取驗證URL {#fetch-authentication-url}
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回 `applicationRedirectUrl` 屬性，包含驗證URL。
+成功的回應傳回包含驗證URL的`applicationRedirectUrl`屬性。
 
 ```json
 {
@@ -66,45 +66,45 @@ curl -X GET \
 }
 ```
 
-複製並貼上 `applicationRedirectUrl` 位址放入瀏覽器以開啟驗證對話方塊。 選取 **[!DNL Accept]** 若要將CMK應用程式服務主體新增至 [!DNL Azure] 租使用者。
+將`applicationRedirectUrl`位址複製並貼到瀏覽器中，以開啟驗證對話方塊。 選取&#x200B;**[!DNL Accept]**&#x200B;將CMK應用程式服務主體新增至您的[!DNL Azure]租使用者。
 
-![Microsoft許可權要求對話方塊，其中包含 [!UICONTROL Accept] 反白顯示。](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![反白顯示[!UICONTROL 接受]的Microsoft許可權要求對話方塊。](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### 將CMK應用程式指派給角色 {#assign-to-role}
 
-完成驗證程式後，請導覽回 [!DNL Azure] 金鑰儲存庫及選擇 **[!DNL Access control]** ，位於左側導覽器中。 從這裡，選擇 **[!DNL Add]** 後面接著 **[!DNL Add role assignment]**.
+完成驗證程式後，請導覽回您的[!DNL Azure]金鑰儲存庫，並在左側導覽中選取&#x200B;**[!DNL Access control]**。 從這裡，依次選取&#x200B;**[!DNL Add]**&#x200B;和&#x200B;**[!DNL Add role assignment]**。
 
-![Microsoft Azure控制面板，具有 [!DNL Add] 和 [!DNL Add role assignment] 反白顯示。](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![反白顯示[!DNL Add]和[!DNL Add role assignment]的Microsoft Azure儀表板。](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
-下一個畫面會提示您選擇此指派的角色。 選取 **[!DNL Key Vault Crypto Service Encryption User]** 在選取之前 **[!DNL Next]** 以繼續。
-
->[!NOTE]
->
->如果您擁有 [!DNL Managed-HSM Key Vault] 層，則必須選取 **[!DNL Managed HSM Crypto Service Encryption User]** 使用者角色。
-
-![Microsoft Azure控制面板具有 [!DNL Key Vault Crypto Service Encryption User] 反白顯示。](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
-
-在下一個畫面，選擇 **[!DNL Select members]** 以開啟右側邊欄中的對話方塊。 使用搜尋列來尋找CMK應用程式的服務主體，並從清單中選取它。 完成後，選取 **[!DNL Save]**.
+下一個畫面會提示您選擇此指派的角色。 選取&#x200B;**[!DNL Key Vault Crypto Service Encryption User]**&#x200B;再選取&#x200B;**[!DNL Next]**&#x200B;以繼續。
 
 >[!NOTE]
 >
->如果您在清單中找不到您的應用程式，則表示您的服務主體尚未被租使用者接受。 為確保您擁有正確的許可權，請使用您的 [!DNL Azure] 管理員或代表。
+>如果您有[!DNL Managed-HSM Key Vault]層，則必須選取&#x200B;**[!DNL Managed HSM Crypto Service Encryption User]**&#x200B;使用者角色。
+
+![反白顯示[!DNL Key Vault Crypto Service Encryption User]的Microsoft Azure儀表板。](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
+
+在下一個畫面中，選擇&#x200B;**[!DNL Select members]**&#x200B;以在右側邊欄中開啟對話方塊。 使用搜尋列來尋找CMK應用程式的服務主體，並從清單中選取它。 完成後，選取&#x200B;**[!DNL Save]**。
+
+>[!NOTE]
+>
+>如果您在清單中找不到您的應用程式，則表示您的服務主體尚未被租使用者接受。 為確保您擁有正確的許可權，請與您的[!DNL Azure]管理員或代表合作。
 
 ## 在Experience Platform上啟用加密金鑰設定 {#send-to-adobe}
 
-在上安裝CMK應用程式後 [!DNL Azure]，即可將加密金鑰識別碼傳送至Adobe。 選取 **[!DNL Keys]** ，然後輸入要傳送的金鑰名稱。
+在[!DNL Azure]上安裝CMK應用程式後，您可以將加密金鑰識別碼傳送給Adobe。 在左側導覽中選取&#x200B;**[!DNL Keys]**，然後選取您要傳送的金鑰名稱。
 
-![Microsoft Azure控制面板具有 [!DNL Keys] 物件和醒目提示的金鑰名稱。](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![反白顯示[!DNL Keys]物件和金鑰名稱的Microsoft Azure儀表板。](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 選取金鑰的最新版本，其詳細資訊頁面就會顯示。 從這裡，您可以選擇設定金鑰的允許操作。
 
 >[!IMPORTANT]
 >
->金鑰允許的最小必要操作為 **[!DNL Wrap Key]** 和 **[!DNL Unwrap Key]** 許可權。 您可以包括 [!DNL Encrypt]， [!DNL Decrypt]， [!DNL Sign]、和 [!DNL Verify] 您想要的話。
+>金鑰允許的最小必要操作為&#x200B;**[!DNL Wrap Key]**&#x200B;和&#x200B;**[!DNL Unwrap Key]**&#x200B;許可權。 您可視需要包含[!DNL Encrypt]、[!DNL Decrypt]、[!DNL Sign]和[!DNL Verify]。
 
-此 **[!UICONTROL 金鑰識別碼]** 欄位會顯示金鑰的URI識別碼。 複製此URI值以用於下一個步驟。
+**[!UICONTROL 金鑰識別碼]**&#x200B;欄位會顯示金鑰的URI識別碼。 複製此URI值以用於下一個步驟。
 
-![Microsoft Azure儀表板金鑰詳細資訊，包含 [!DNL Permitted operations] 和複製金鑰URL區段強調顯示。](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![Microsoft Azure儀表板金鑰詳細資訊，其中[!DNL Permitted operations]和復本金鑰URL區段強調顯示。](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 取得金鑰儲存庫URI後，您可以使用POST請求將其傳送到CMK設定端點。
 
@@ -135,10 +135,10 @@ curl -X POST \
 
 | 屬性 | 說明 |
 | --- | --- |
-| `name` | 設定的名稱。 請確定您記住此值，因為若要檢查設定的狀態， [後續步驟](#check-status). 值區分大小寫。 |
-| `type` | 設定型別。 必須設為 `BYOK_CONFIG`. |
-| `imsOrgId` | 您的組織ID。 此ID的值必須與 `x-gw-ims-org-id` 標頭。 |
-| `configData` | 此屬性包含有關設定的下列詳細資訊：<ul><li>`providerType`：必須設為 `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier`：您複製的金鑰儲存庫URI [較早](#send-to-adobe).</li></ul> |
+| `name` | 設定的名稱。 請確定您記得這個值，因為在[之後的步驟](#check-status)中需要檢查組態狀態。 值區分大小寫。 |
+| `type` | 設定型別。 必須設定為`BYOK_CONFIG`。 |
+| `imsOrgId` | 您的組織ID。 此ID的值必須與`x-gw-ims-org-id`標頭下提供的值相同。 |
+| `configData` | 此屬性包含有關設定的下列詳細資訊：<ul><li>`providerType`：必須設定為`AZURE_KEYVAULT`。</li><li>`keyVaultKeyIdentifier`：您複製[early](#send-to-adobe)的金鑰儲存庫URI。</li></ul> |
 
 +++
 
@@ -176,7 +176,7 @@ curl -X POST \
 
 **要求**
 
-您必須附加 `name` 要檢查的設定的路徑(`config1` （在以下範例中）並包含 `configType` 查詢引數設為 `BYOK_CONFIG`.
+您必須將您要檢查之設定的`name`附加至路徑（以下範例中為`config1`），並包含設定為`BYOK_CONFIG`的`configType`查詢引數。
 
 +++ 檢查設定要求狀態的範例要求。
 
@@ -215,13 +215,13 @@ curl -X GET \
 
 +++
 
-此 `status` attribute可以有四個值之一，其含義如下：
+`status`屬性可以有以下含義的四個值之一：
 
-1. `RUNNING`：驗證平台能否存取金鑰和金鑰儲存庫。
-1. `UPDATE_EXISTING_RESOURCES`：系統會將金鑰儲存庫和金鑰名稱新增至組織中所有沙箱內的資料存放區。
-1. `COMPLETED`：金鑰儲存庫和金鑰名稱已成功新增到資料存放區。
+1. `RUNNING`：驗證Platform可以存取金鑰和金鑰儲存庫。
+1. `UPDATE_EXISTING_RESOURCES`：系統正在將金鑰儲存庫和金鑰名稱新增至貴組織所有沙箱的資料存放區。
+1. `COMPLETED`：金鑰儲存庫和金鑰名稱已成功新增至資料存放區。
 1. `FAILED`：發生問題，主要與金鑰、金鑰儲存庫或多租使用者應用程式設定有關。
 
 ## 後續步驟
 
-完成上述步驟，您已成功為組織啟用CMK。 現在，您會使用中的金鑰，將內嵌至主要資料存放區的資料加密和解密。 [!DNL Azure] 金鑰儲存庫。 若要進一步瞭解Adobe Experience Platform中的資料加密，請參閱 [加密檔案](../encryption.md).
+完成上述步驟，您已成功為組織啟用CMK。 現在將使用[!DNL Azure]金鑰儲存庫中的金鑰加密和解密擷取到主要資料存放區的資料。 若要進一步瞭解Adobe Experience Platform中的資料加密，請參閱[加密檔案](../encryption.md)。

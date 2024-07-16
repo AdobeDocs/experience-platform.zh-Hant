@@ -12,13 +12,13 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL 工作聯絡詳細資訊] 結構描述欄位群組
+# [!UICONTROL 工作連絡人詳細資料]結構描述欄位群組
 
 >[!NOTE]
 >
->數個結構描述欄位群組的名稱已變更。 檢視檔案： [欄位群組名稱更新](../name-updates.md) 以取得詳細資訊。
+>數個結構描述欄位群組的名稱已變更。 如需詳細資訊，請參閱[欄位群組名稱更新](../name-updates.md)的檔案。
 
-[!UICONTROL 工作聯絡詳細資訊] 是的標準結構描述欄位群組 [[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md). 欄位群組提供數個欄位，可擷取有關個別人員的職業資訊，例如工作地址、工作電子郵件、工作電話號碼和個人所屬的組織。
+[!UICONTROL 工作連絡人詳細資料]是[[!DNL XDM Individual Profile] 類別](../../classes/individual-profile.md)的標準結構描述欄位群組。 欄位群組提供數個欄位，可擷取有關個別人員的職業資訊，例如工作地址、工作電子郵件、工作電話號碼和個人所屬的組織。
 
 ![](../../images/field-groups/work-contact-details.png)
 
@@ -33,5 +33,5 @@ ht-degree: 2%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)

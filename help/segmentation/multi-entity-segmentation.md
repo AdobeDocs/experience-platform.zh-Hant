@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # 多實體區段概觀
 
-多實體區段是Adobe Experience Platform提供的進階功能 [!DNL Segmentation Service]. 此功能可讓您擴充 [!DNL Real-Time Customer Profile] 包含您組織可定義的其他「非人員」資料（也稱為「維度實體」）的資料，例如與產品或商店相關的資料。 根據與您獨特業務需求相關的資料，在定義區段定義時，多實體區段可提供靈活性，並且無需具備查詢資料庫的專業知識即可執行。 透過多實體分段，您可以將關鍵資料新增到區段定義，而無需對資料串流進行代價高昂的變更或等待後端資料合併。
+多實體區段是Adobe Experience Platform [!DNL Segmentation Service]中提供的進階功能。 此功能可讓您使用組織可能定義的其他「非人員」資料（也稱為「維度實體」），例如與產品或商店相關的資料，來擴充[!DNL Real-Time Customer Profile]資料。 根據與您獨特業務需求相關的資料，在定義區段定義時，多實體區段可提供靈活性，並且無需具備查詢資料庫的專業知識即可執行。 透過多實體分段，您可以將關鍵資料新增到區段定義，而無需對資料串流進行代價高昂的變更或等待後端資料合併。
 
 ## 快速入門
 
 多實體細分需要實際瞭解細分中涉及的各種Adobe Experience Platform服務。 在繼續本指南之前，請先檢閱下列檔案：
 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md)：根據來自多個來源的彙總資料，即時提供統一的消費者設定檔。
-   * [輪廓護欄](../profile/guardrails.md)：建立所支援資料模型的最佳做法 [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md)：可讓您從建立對象 [!DNL Real-Time Customer Profile] 資料。
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：Experience Platform組織客戶體驗資料的標準化架構。
-   * [結構描述組合基本概念](../xdm/schema/composition.md#union)：瞭解構成Experience Platform中所用結構描述的最佳實務。 為善用分段，請確保您的資料已根據 [資料模型化的最佳實務](../xdm/schema/best-practices.md).
+   * [設定檔護欄](../profile/guardrails.md)：建立[!DNL Profile]支援的資料模型的最佳實務。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md)：可讓您從[!DNL Real-Time Customer Profile]資料建立對象。
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md)：Experience Platform用來組織客戶體驗資料的標準化架構。
+   * [結構描述組合的基本概念](../xdm/schema/composition.md#union)：瞭解組合要用於Experience Platform的結構描述的最佳實務。 若要充分利用「細分」，請確定您的資料已根據[資料模型最佳實務](../xdm/schema/best-practices.md)被擷取為設定檔和事件。
 
 ## 使用案例
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 ## 建立多實體區段定義
 
-建立多實體區段定義必須先定義結構描述之間的關係，才能使用 [!DNL Segmentation] API或區段產生器UI來建立區段定義。
+建立多實體區段定義必須先定義結構描述之間的關係，才能使用[!DNL Segmentation] API或區段產生器UI來建立區段定義。
 
 ### 定義關係
 
@@ -58,4 +58,4 @@ ht-degree: 0%
 
 ## 評估及存取多實體區段定義
 
-建立區段定義後，您可以使用分段API來評估及存取結果。 評估多實體區段定義與評估標準區段定義非常類似。 此程式只能使用分段API完成。 如需詳細指南，瞭解如何使用API來評估及存取區段定義，請參閱 [評估及存取區段定義](./tutorials/evaluate-a-segment.md) 教學課程。
+建立區段定義後，您可以使用分段API來評估及存取結果。 評估多實體區段定義與評估標準區段定義非常類似。 此程式只能使用分段API完成。 如需說明如何使用API來評估及存取區段定義的詳細指南，請參閱[評估及存取區段定義](./tutorials/evaluate-a-segment.md)教學課程。

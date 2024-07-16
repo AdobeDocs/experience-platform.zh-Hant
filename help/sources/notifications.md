@@ -1,59 +1,58 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；通知
-description: 透過訂閱Adobe I/O事件，您可以使用Webhook接收有關來源連線之流量執行狀態的通知。 這些通知包含有關流程執行成功或導致執行失敗的錯誤的資訊。
+description: 透過訂閱Adobe I/O事件，您可以使用Webhook來接收有關來源連線之流量執行狀態的通知。 這些通知包含有關流程執行成功或導致執行失敗的錯誤的資訊。
 solution: Experience Platform
-title: 流程執行通知
+title: 資料流執行通知
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '770'
 ht-degree: 1%
 
 ---
 
-# 流程執行通知
+# 資料流執行通知
 
-Adobe Experience Platform可從外部來源擷取資料，同時讓您能夠使用來建構、加標籤及增強傳入資料 [!DNL Platform] 服務。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
+Adobe Experience Platform允許從外部來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
-[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) 用於收集及集中客戶資料，這些資料來自內的各種不同來源 [!DNL Platform]. 此服務提供可連線所有支援來源的使用者介面和RESTful API。
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)是用來從[!DNL Platform]內不同的來源收集及集中客戶資料。 此服務提供使用者介面和RESTful API，所有支援的來源都可從此API連線。
 
 透過Adobe I/O事件，您可以訂閱事件並使用Webhook接收有關流量執行狀態的通知。 這些通知包含有關流程執行成功或導致執行失敗的錯誤的資訊。
 
-本檔案提供訂閱事件、註冊Webhook及接收包含流量執行狀態資訊之通知的步驟。
+本檔案提供如何訂閱事件、註冊webhook以及接收包含流程執行狀態資訊的通知的步驟。
 
 ## 快速入門
 
-本教學課程假設您已建立至少一個來源連線，其流程執行您要監視。 如果您尚未設定來源連線，請先造訪 [來源概觀](./home.md) 以在返回本指南之前設定您選擇的來源。
+本教學課程假設您已建立至少一個要監視其流程執行的來源連線。 如果您尚未設定來源連線，請先造訪[來源概觀](./home.md)設定您選擇的來源，再返回本指南。
 
-本檔案還需要實際瞭解webhook以及如何將webhook從一個應用程式連線到另一個應用程式。 請參閱 [[!DNL I/O Events] 檔案](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) 以瞭解webhook。
+本檔案還需要實際瞭解Webhook以及如何將Webhook從一個應用程式連線到另一個應用程式。 如需Webhook的簡介，請參閱[[!DNL I/O Events] 檔案](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md)。
 
 ## 註冊webhook以取得資料流執行通知
 
-若要接收資料流執行通知，您必須使用Adobe Developer Console將webhook註冊到 [!DNL Experience Platform] 整合。
+若要接收資料流執行通知，您必須使用Adobe Developer Console註冊webhook以進行[!DNL Experience Platform]整合。
 
-請依照上的教學課程進行 [訂閱[！DNL I/O Event]通知](../observability/alerts/subscribe.md) 以取得如何完成此作業的詳細步驟。
-
->[!IMPORTANT]
->
->在訂閱程式期間，請確定您選取 **[!UICONTROL 平台通知]** 作為事件提供者，並選取下列事件訂閱：
->
->* **[!UICONTROL Experience Platform來源的流程執行成功]**
->* **[!UICONTROL Experience Platform來源的流程執行失敗]**
-
-
-## 接收流程執行通知
-
-在您的webhook已連線且事件訂閱完成時，您可以開始透過webhook儀表板接收流程執行通知。
-
-通知會傳回執行內嵌工作數、檔案大小和錯誤等資訊。 通知也會傳回與您以JSON格式執行的流程相關聯的裝載。 回應裝載可分類為 `sources_flow_run_success` 或 `sources_flow_run_failure`.
+請依照有關[訂閱[！DNL I/O Event]通知](../observability/alerts/subscribe.md)的教學課程，取得如何完成此作業的詳細步驟。
 
 >[!IMPORTANT]
 >
->如果在流程建立過程中啟用了部分擷取，則包含成功和失敗擷取的流程將標籤為 `sources_flow_run_success` 僅當錯誤數低於流程建立處理期間設定的錯誤臨界值百分比時。 如果成功的流量執行包含錯誤，這些錯誤仍會包含在傳回裝載中。
+>在訂閱程式期間，請確定您選取&#x200B;**[!UICONTROL 平台通知]**&#x200B;作為事件提供者，並選取下列事件訂閱：
+>
+>* **[!UICONTROL Experience PlatformSource的資料流執行成功]**
+>* **[!UICONTROL Experience PlatformSource的資料流執行失敗]**
+
+## 接收資料流執行通知
+
+在您的webhook已連線且事件訂閱完成時，您可以開始透過webhook儀表板接收流量執行通知。
+
+通知會傳回執行內嵌工作數、檔案大小和錯誤等資訊。 通知也會傳回與您以JSON格式執行的流程相關聯的裝載。 回應承載可分類為`sources_flow_run_success`或`sources_flow_run_failure`。
+
+>[!IMPORTANT]
+>
+>如果在流程建立處理期間啟用部分擷取，則只有在錯誤數低於流程建立處理期間設定的錯誤臨界值百分比時，包含成功和失敗擷取的流程才會標示為`sources_flow_run_success`。 如果成功的資料流執行包含錯誤，這些錯誤仍會包含在傳回裝載中。
 
 ### 成功
 
-成功的回應會傳回一組 `metrics` 定義特定流程執行的特性，以及 `activities` 概述資料如何轉換。
+成功的回應會傳回一組定義特定流程執行特性的`metrics`，以及概述資料轉換方式的`activities`。
 
 ```json
 {
@@ -190,12 +189,12 @@ Adobe Experience Platform可從外部來源擷取資料，同時讓您能夠使�
 | `sizeSummary` | 定義資料量（位元組）。 |
 | `recordSummary` | 定義資料的記錄計數。 |
 | `fileSummary` | 定義資料的檔案計數。 |
-| `fileInfo` | 導向成功擷取檔案概觀的URL。 |
+| `fileInfo` | 導向成功擷取檔案之概觀的URL。 |
 | `statusSummary` | 定義流程執行是成功還是失敗。 |
 
 ### 失敗
 
-以下回應是失敗的流程執行範例，在處理複製的資料時發生錯誤。 從來源複製資料時也可能發生錯誤。 失敗的流程執行包含造成執行失敗的錯誤相關資訊，包括其錯誤和說明。
+下列回應是失敗的流程執行範例，在處理複製的資料時發生錯誤。 從來源複製資料時也會發生錯誤。 失敗的資料流執行包含造成執行失敗的錯誤相關資訊，包括其錯誤和說明。
 
 ```json
 [
@@ -308,25 +307,25 @@ Adobe Experience Platform可從外部來源擷取資料，同時讓您能夠使�
 
 | 屬性 | 說明 |
 | ---------- | ----------- |
-| `fileInfo` | 此URL會導向成功擷取及未成功擷取的檔案概觀。 |
+| `fileInfo` | 此URL會導向成功擷取且未成功擷取的檔案概觀。 |
 
 >[!NOTE]
 >
->請參閱 [附錄](#errors) 以取得錯誤訊息的詳細資訊。
+>如需錯誤訊息的詳細資訊，請參閱[附錄](#errors)。
 
 ## 後續步驟
 
-您現在可以訂閱事件，以接收有關流量執行狀態的即時通知。 如需流量執行和來源的詳細資訊，請參閱 [來源概觀](./home.md).
+您現在可以訂閱事件，以便在您的流程執行狀態接收即時通知。 如需資料流執行和來源的詳細資訊，請參閱[來源概觀](./home.md)。
 
 ## 附錄
 
-以下小節提供處理流程執行通知的其他資訊。
+以下各節提供處理流程執行通知的其他資訊。
 
 ### 瞭解錯誤訊息 {#errors}
 
-從來源複製資料或將複製的資料處理至時，可能會發生內嵌錯誤 [!DNL Platform]. 請參閱下表以取得有關特定錯誤的詳細資訊。
+從來源複製資料或將複製的資料處理到[!DNL Platform]時，可能會發生內嵌錯誤。 請參閱下表，以取得有關特定錯誤的詳細資訊。
 
 | 錯誤 | 說明 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | 從來源複製資料時發生錯誤。 |
-| `CONNECTOR-2001-500` | 將複製的資料處理至時發生錯誤 [!DNL Platform]. 此錯誤可能涉及解析、驗證或轉換。 |
+| `CONNECTOR-2001-500` | 將複製的資料處理至[!DNL Platform]時發生錯誤。 此錯誤可能涉及解析、驗證或轉換。 |

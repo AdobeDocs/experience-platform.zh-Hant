@@ -1,58 +1,58 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；付款
 solution: Experience Platform
-title: 使用流程服務API探索付款系統
+title: 使用流程服務API來探索付款系統
 description: 本教學課程使用流程服務API來探索付款應用程式。
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 2%
+source-wordcount: '594'
+ht-degree: 12%
 
 ---
 
-# 探索使用下列功能的支付系統： [!DNL Flow Service] API
+# 使用[!DNL Flow Service] API探索付款系統
 
-[!DNL Flow Service] 用於收集及集中Adobe Experience Platform內各種不同來源的客戶資料。 此服務提供可連線所有支援來源的使用者介面和RESTful API。
+[!DNL Flow Service]用於收集及集中來自Adobe Experience Platform內各種不同來源的客戶資料。 此服務提供使用者介面和RESTful API，所有支援的來源都可從此API連線。
 
-本教學課程使用 [!DNL Flow Service] 用於探索付款應用程式的API。
+此教學課程使用[!DNL Flow Service] API來探索付款應用程式。
 
 ## 快速入門
 
-本指南需要您實際瞭解下列Adobe Experience Platform元件：
+本指南需要您深入了解下列 Adobe Experience Platform 元件：
 
-* [來源](../../../home.md)： [!DNL Experience Platform] 允許從各種來源擷取資料，同時讓您能夠使用來建構、加標籤和增強傳入資料 [!DNL Platform] 服務。
-* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform] 提供分割單一區域的虛擬沙箱 [!DNL Platform] 將執行個體整合至個別的虛擬環境中，以協助開發及改進數位體驗應用程式。
+* [來源](../../../home.md)： [!DNL Experience Platform]允許從各種來源擷取資料，同時讓您能夠使用[!DNL Platform]服務來建構、加標籤以及增強傳入的資料。
+* [沙箱](../../../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-以下小節提供您需要瞭解的其他資訊，以便使用成功連線到支付應用程式 [!DNL Flow Service] API。
+下列章節提供您需瞭解的其他資訊，才能使用[!DNL Flow Service] API成功連線至付款應用程式。
 
 ### 收集必要的認證
 
-本教學課程需要您與您要從中擷取資料的協力廠商付款應用程式建立有效連線。 有效的連線涉及您應用程式的連線規格ID和連線ID。 有關建立付款連線及擷取這些值的詳細資訊，請參閱 [將付款來源連線至Platform](../../api/create/payments/paypal.md) 教學課程。
+本教學課程需要您與您要擷取資料的第三方支付應用程式建立有效的連線。 有效的連線涉及您應用程式的連線規格ID和連線ID。 您可以在[將付款來源連線至Platform](../../api/create/payments/paypal.md)教學課程中，找到有關建立付款連線及擷取這些值的詳細資訊。
 
-### 讀取範例API呼叫
+### 讀取範例 API 呼叫
 
-本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭，以及正確格式化的請求裝載。 此外，也提供API回應中傳回的範例JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 在 [!DNL Experience Platform] 疑難排解指南。
+本教學課程提供範例API呼叫，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用範例API呼叫慣例的詳細資訊，請參閱[!DNL Experience Platform]疑難排解指南中[如何讀取範例API呼叫](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)一節。
 
-### 收集必要標題的值
+### 收集所需標頭的值
 
-為了呼叫 [!DNL Platform] API，您必須先完成 [驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en). 完成驗證教學課程後，會在所有標題中提供每個必要標題的值 [!DNL Experience Platform] API呼叫，如下所示：
+若要呼叫[!DNL Platform] API，您必須先完成[驗證教學課程](https://www.adobe.com/go/platform-api-authentication-en)。 完成驗證教學課程會提供所有 [!DNL Experience Platform] API 呼叫中每個必要標頭的值，如下所示：
 
-* 授權：持有人 `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{ORG_ID}`
+* 授權：持有人`{ACCESS_TOKEN}`
+* x-api-key： `{API_KEY}`
+* x-gw-ims-org-id： `{ORG_ID}`
 
-中的所有資源 [!DNL Experience Platform]，包括屬於 [!DNL Flow Service]，會隔離至特定的虛擬沙箱。 的所有要求 [!DNL Platform] API需要標頭，用於指定將在其中執行操作的沙箱名稱：
+[!DNL Experience Platform]中的所有資源（包括屬於[!DNL Flow Service]的資源）都與特定的虛擬沙箱隔離。 對[!DNL Platform] API的所有請求都需要標頭，以指定將在其中執行作業的沙箱名稱：
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* x-sandbox-name： `{SANDBOX_NAME}`
 
 包含裝載(POST、PUT、PATCH)的所有請求都需要額外的媒體型別標頭：
 
-* Content-Type: `application/json`
+* Content-Type： `application/json`
 
-## 探索您的資料表格
+## 探索您的資料表
 
-使用付款系統的連線ID，您可以透過執行GET請求來探索資料表。 使用以下呼叫來尋找您要檢查或擷取的表格路徑 [!DNL Platform].
+使用付款系統的連線ID，您可以透過執行GET請求來探索資料表。 使用以下呼叫來尋找您要檢查或擷取至[!DNL Platform]的資料表的路徑。
 
 **API格式**
 
@@ -62,7 +62,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 | 參數 | 說明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | 付款基礎連線的ID。 |
+| `{BASE_CONNECTION_ID}` | 付款基礎連線的識別碼。 |
 
 **要求**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會從您的付款系統傳回一連串表格。 尋找您要加入的表格 [!DNL Platform] 並記下其 `path` 屬性，因為您必須在下一個步驟中提供它以檢查其結構。
+成功的回應會從您的付款系統傳回一連串表格。 尋找您要帶入[!DNL Platform]的資料表並記下其`path`屬性，因為您必須在下個步驟中提供它以檢查其結構。
 
 ```json
 [
@@ -124,7 +124,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | 付款系統的連線ID。 |
+| `{BASE_CONNECTION_ID}` | 您的付款系統的連線ID。 |
 | `{TABLE_PATH}` | 付款系統內表格的路徑。 |
 
 ```shell
@@ -138,7 +138,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回指定資料表的結構。 有關每個表格欄的詳細資訊位於 `columns` 陣列。
+成功的回應會傳回指定資料表的結構。 有關每個資料表資料行的詳細資料位於`columns`陣列的元素中。
 
 ```json
 {
@@ -180,4 +180,4 @@ curl -X GET \
 
 ## 後續步驟
 
-按照本教學課程，您已探索您的支付系統，找到您要擷取的表格路徑 [!DNL Platform]，並取得有關其結構的資訊。 您可以在下一個教學課程中使用此資訊來 [從您的付款系統收集資料，並將其帶入Platform](../collect/payments.md).
+依照本教學課程，您已探索您的付款系統、找到您要擷取至[!DNL Platform]的表格路徑，並取得有關其結構的資訊。 您可以在下個教學課程中使用此資訊，從您的付款系統[收集資料，並將其帶入Platform](../collect/payments.md)。

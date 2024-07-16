@@ -26,65 +26,65 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ## 先決條件 {#prerequisites}
 
-本指南需要實際瞭解XDM系統。 請參閱 [XDM概覽](../../home.md) 介紹XDM在Experience Platform生態系統內的角色，以及 [結構描述組合的基本面](../../schema/composition.md) 瞭解欄位群組對XDM結構描述的貢獻。
+本指南需要實際瞭解XDM系統。 請參閱[XDM總覽](../../home.md)，瞭解XDM在Experience Platform生態系統中的角色簡介，以及[結構描述組合基本概念](../../schema/composition.md)，瞭解欄位群組對XDM結構描述的貢獻。
 
-雖然本指南並非必要，但建議您也參閱相關的教學課程： [在UI中構成結構描述](../../tutorials/create-schema-ui.md) 熟悉 [!DNL Schema Editor].
+雖然本指南並非必要專案，但建議您也按照有關[在UI](../../tutorials/create-schema-ui.md)中構成結構描述的教學課程，熟悉[!DNL Schema Editor]的各種功能。
 
 ## 建立新的欄位群組 {#create}
 
-若要建立新的欄位群組，您必須先選取要新增該欄位群組的結構描述。 您可以選擇 [建立新結構描述](./schemas.md#create) 或 [選取要編輯的現有結構描述](./schemas.md#edit).
+若要建立新的欄位群組，您必須先選取要新增該欄位群組的結構描述。 您可以選擇[建立新的結構描述](./schemas.md#create)或[選取要編輯的現有結構描述](./schemas.md#edit)。
 
-一旦您在中開啟結構描述 [!DNL Schema Editor]，選取 **[!UICONTROL 新增]** 在 [!UICONTROL 欄位群組] 區段。
+在[!DNL Schema Editor]中開啟結構描述後，在左側邊欄的[!UICONTROL 欄位群組]區段旁選取&#x200B;**[!UICONTROL 新增]**。
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-在出現的對話方塊中，選取 **[!UICONTROL 建立新欄位群組]**. 您可以在此處提供 **[!UICONTROL 顯示名稱]** 和 **[!UICONTROL 說明]** 用於欄位群組。 完成後，選取 **[!UICONTROL 新增欄位群組]**.
+在出現的對話方塊中，選取&#x200B;**[!UICONTROL 建立新欄位群組]**。 您可以在這裡提供欄位群組的&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;和&#x200B;**[!UICONTROL 描述]**。 完成後，選取&#x200B;**[!UICONTROL 新增欄位群組]**。
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
-此 [!DNL Schema Editor] 會重新出現，新欄位群組會列在左側邊欄中。 由於這是全新的欄位群組，目前未提供任何欄位給結構描述，因此畫布保持不變。 您現在可以開始 [新增欄位至欄位群組](#add-fields).
+[!DNL Schema Editor]會重新出現，新欄位群組會列在左側邊欄中。 由於這是全新的欄位群組，目前未提供任何欄位給結構描述，因此畫布保持不變。 您現在可以開始[新增欄位至欄位群組](#add-fields)。
 
 ![](../../images/ui/resources/field-groups/field-group-added.png)
 
 ## 篩選欄位群組 {#filter}
 
-可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示由Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以選擇 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 選項。 此 [!UICONTROL 標準] 選項會顯示由Adobe建立的實體，以及 [!UICONTROL 自訂] 選項會顯示在您組織內建立的實體。
+可用欄位群組清單已根據其建立方式預先進行篩選。預設設定會顯示由Adobe定義的欄位群組。 不過，您也可以篩選清單以顯示貴組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL Standard]選項會顯示Adobe建立的實體，而[!UICONTROL Custom]選項則會顯示在您的組織內建立的實體。
 
-![此 [!UICONTROL 欄位群組] 的標籤 [!UICONTROL 方案] 工作區，使用 [!UICONTROL 標準] 和 [!UICONTROL 自訂] 反白顯示。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![ [!UICONTROL 結構描述]工作區的[!UICONTROL 欄位群組]索引標籤中反白顯示[!UICONTROL 標準]和[!UICONTROL 自訂]。](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## 編輯現有欄位群組 {#edit}
 
 >[!NOTE]
 >
->只有貴組織定義的自訂欄位群組才能完全編輯和自訂。 對於由Adobe定義的核心欄位群組，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 它們會在結構編輯器中以掛鎖圖示(![掛鎖圖示。](../../images/ui/explore/padlock-icon.png))。請參閱以下小節： [編輯結構欄位的顯示名稱](./schemas.md#display-names) 以取得詳細資訊。
+>只有貴組織定義的自訂欄位群組才能完全編輯和自訂。 對於由Adobe定義的核心欄位群組，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 它們在「結構描述編輯器」中以掛鎖圖示(![掛鎖圖示表示。](../../images/ui/explore/padlock-icon.png))。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
 >
->儲存自訂欄位群組並在結構描述中使用以進行資料擷取後，之後只能對欄位群組進行附加變更。 請參閱 [結構描述演化的規則](../../schema/composition.md#evolution) 以取得詳細資訊。
+>儲存自訂欄位群組並在結構描述中使用以進行資料擷取後，之後只能對欄位群組進行附加變更。 如需詳細資訊，請參閱結構描述演化](../../schema/composition.md#evolution)的[規則。
 
-若要編輯現有的欄位群組，您必須先開啟採用 [!DNL Schema Editor]. 您可以 [選取要編輯的現有結構描述](./schemas.md#edit)，或您可以 [建立新結構描述](./schemas.md#create) 並新增相關欄位群組。
+若要編輯現有的欄位群組，您必須先開啟採用[!DNL Schema Editor]內欄位群組的結構描述。 您可以[選取要編輯的現有結構描述](./schemas.md#edit)，或者您可以[建立新的結構描述](./schemas.md#create)並新增相關欄位群組。
 
-在編輯器中開啟結構描述後，您就可以開始 [新增欄位至欄位群組](#add-fields).
+在編輯器中開啟結構描述後，您就可以開始[新增欄位至欄位群組](#add-fields)。
 
 ## 新增欄位至欄位群組 {#add-fields}
 
 >[!NOTE]
 >
->本節重點介紹如何新增欄位至自訂欄位群組。 有關如何將自訂欄位新增到標準欄位群組的資訊，請參閱 [結構描述UI指南](./schemas.md#custom-fields-for-standard-groups).
+>本節重點介紹如何新增欄位至自訂欄位群組。 有關如何將自訂欄位新增到標準欄位群組的資訊，請參閱[結構描述UI指南](./schemas.md#custom-fields-for-standard-groups)。
 
-若要新增欄位至自訂欄位群組，請從選取 **加(+)** 圖示加以存取（位於畫布中的結構描述名稱旁）。
+若要新增欄位至自訂欄位群組，請在畫布中選取結構描述名稱旁的&#x200B;**加號(+)**&#x200B;圖示。
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-一個 **[!UICONTROL 未命名的欄位]** 預留位置會顯示在畫布中，而右側邊欄會更新為顯示控制項，以設定欄位的屬性。 請參閱以下指南： [在UI中定義欄位](../fields/overview.md#define) ，以瞭解如何設定不同欄位型別的具體步驟。
+畫布中會出現&#x200B;**[!UICONTROL 未命名的欄位]**&#x200B;預留位置，而右邊欄會更新以顯示控制項，以設定欄位的屬性。 如需有關如何設定不同欄位型別的具體步驟，請參閱[在UI](../fields/overview.md#define)中定義欄位的指南。
 
-在 **[!UICONTROL 指派給]**，選取 **[!UICONTROL 欄位群組]** 選項，然後使用下拉式清單從清單中選取所需的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-在 **[!UICONTROL 指派給]**，選取 **[!UICONTROL 欄位群組]** 選項，然後使用下拉式清單從清單中選取所需的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
+在&#x200B;**[!UICONTROL 指派給]**&#x200B;下，選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;選項，然後使用下拉式清單從清單中選取所要的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-將欄位新增到結構描述後，就會將其指派給所選的欄位群組。 繼續將所需數量的欄位新增至欄位群組。 完成後，選取 **[!UICONTROL 儲存]** 以儲存結構描述和欄位群組。
+在&#x200B;**[!UICONTROL 指派給]**&#x200B;下，選取&#x200B;**[!UICONTROL 欄位群組]**&#x200B;選項，然後使用下拉式清單從清單中選取所要的欄位群組。 您可以開始輸入欄位群組的名稱來縮小結果範圍。
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+將欄位新增到結構描述後，就會將其指派給所選的欄位群組。 繼續將所需數量的欄位新增至欄位群組。 完成後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存結構描述和欄位群組。
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 ## 後續步驟 {#next-steps}
 
-本指南說明如何使用Platform UI建立及編輯欄位群組。 如需功能的詳細資訊， [!UICONTROL 方案] 工作區，請參閱 [[!UICONTROL 方案] 工作區概觀](../overview.md).
+本指南說明如何使用Platform UI建立及編輯欄位群組。 如需[!UICONTROL 結構描述]工作區功能的詳細資訊，請參閱[[!UICONTROL 結構描述]工作區概觀](../overview.md)。
 
-若要瞭解如何使用管理欄位群組 [!DNL Schema Registry] API，請參閱 [欄位群組端點指南](../../api/field-groups.md).
+若要瞭解如何使用[!DNL Schema Registry] API管理欄位群組，請參閱[欄位群組端點指南](../../api/field-groups.md)。

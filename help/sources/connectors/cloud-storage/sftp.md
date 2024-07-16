@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；SFTP；sftp
 solution: Experience Platform
-title: SFTP來源聯結器概述
+title: SFTP Source聯結器概述
 description: 瞭解如何使用API或使用者介面將SFTP伺服器連線至Adobe Experience Platform。
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 source-git-commit: 6c22f8243269bb304b12a4e4978ed141ed092c67
@@ -15,50 +15,50 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->此 [!DNL SFTP] Adobe Experience Platform連線的伺服器必須能夠支援區塊化，這表示多個連線可連線至單一檔案。 若您的 [!DNL SFTP] 伺服器不支援區塊化，則您可能會收到阻止檔案擷取的錯誤。
+>Adobe Experience Platform連線到的[!DNL SFTP]伺服器必須能夠支援區塊化，這表示單一檔案有多個連線。 如果您的[!DNL SFTP]伺服器不支援區塊化，則您可能會收到阻止檔案擷取的錯誤。
 
-Adobe Experience Platform為AWS等雲端服務供應商提供原生連線， [!DNL Google Cloud Platform]、和 [!DNL Azure]，可讓您從這些系統帶入資料。
+Adobe Experience Platform為AWS、[!DNL Google Cloud Platform]和[!DNL Azure]等雲端提供者提供原生連線，可讓您從這些系統帶入資料。
 
-雲端儲存空間來源可將您自己的資料帶入 [!DNL Platform] 而不需要下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 [!DNL Platform] 可讓您透過批次從FTP或SFTP伺服器匯入資料。
+雲端儲存空間來源可以將您自己的資料帶入[!DNL Platform]，而不需要下載、格式化或上傳。 內嵌的資料可以格式化為XDM JSON、XDM Parquet或分隔。 流程的每個步驟都會整合至來源工作流程。 [!DNL Platform]可讓您透過批次從FTP或SFTP伺服器匯入資料。
 
 ## IP位址允許清單
 
-使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 請參閱 [IP位址允許清單](../../ip-address-allow-list.md) 頁面以取得詳細資訊。
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md)頁面。
 
 ## 檔案和目錄的命名限制
 
 以下是在命名雲端儲存空間檔案或目錄時必須考慮的限制清單。
 
 - 目錄和檔案元件名稱不能超過255個字元。
-- 目錄和檔案名稱不能以正斜線(`/`)。 如果提供，則會自動移除。
-- 下列保留的URL字元必須正確逸出： `! ' ( ) ; @ & = + $ , % # [ ]`
-- 不允許使用下列字元： `" \ / : | < > * ?`.
-- 不允許非法URL路徑字元。 程式碼點數如下 `\uE000`雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的管理規則，請參閱 [RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt) 和 [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- 目錄和檔案名稱不能以正斜線(`/`)結尾。 如果提供，則會自動移除。
+- 必須正確逸出下列保留的URL字元： `! ' ( ) ; @ & = + $ , % # [ ]`
+- 不允許下列字元： `" \ / : | < > * ?`。
+- 不允許非法URL路徑字元。 類似`\uE000`的程式碼點雖然在NTFS檔案名稱中有效，但不是有效的Unicode字元。 此外，也不允許使用某些ASCII或Unicode字元，例如控制字元（0x00到0x1F、\u0081等）。 如需HTTP/1.1中Unicode字串的規則，請參閱[RFC 2616，第2.2節：基本規則](https://www.ietf.org/rfc/rfc2616.txt)和[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 不允許下列檔案名稱： LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、PRN、AUX、NUL、CON、CLOCK$、點字元(.)和兩個點字元(..)。
 
-## 設定Base64編碼的OpenSSH私密金鑰，用於 [!DNL SFTP]
+## 設定[!DNL SFTP]的Base64編碼OpenSSH私密金鑰
 
-此 [!DNL SFTP] 來源支援使用進行驗證 [!DNL Base64]-encoded OpenSSH私密金鑰。 如需有關如何產生Base64編碼的OpenSSH私密金鑰並連線的資訊，請參閱以下步驟 [!DNL SFTP] 至平台。
+[!DNL SFTP]來源支援使用[!DNL Base64]編碼的OpenSSH私密金鑰進行驗證。 如需有關如何產生Base64編碼的OpenSSH私密金鑰以及如何將[!DNL SFTP]連線到Platform的資訊，請參閱下列步驟。
 
-### [!DNL Windows] 使用者
+### [!DNL Windows]位使用者
 
-如果您使用 [!DNL Windows] 電腦，開啟 **開始** 功能表，然後選取 **設定**.
+如果您使用[!DNL Windows]電腦，請開啟&#x200B;**開始**&#x200B;功能表，然後選取&#x200B;**設定**。
 
 ![設定](../../images/tutorials/create/sftp/settings.png)
 
-從 **設定** 功能表，選取 **應用程式**.
+從出現的&#x200B;**設定**&#x200B;功能表中，選取&#x200B;**應用程式**。
 
-![應用程式](../../images/tutorials/create/sftp/apps.png)
+![個應用程式](../../images/tutorials/create/sftp/apps.png)
 
-接下來，選取 **選購功能**.
+接著，選取&#x200B;**選用功能**。
 
-![選擇性功能](../../images/tutorials/create/sftp/optional-features.png)
+![選用功能](../../images/tutorials/create/sftp/optional-features.png)
 
-選擇性功能清單隨即顯示。 如果 **OpenSSH使用者端** 已經預先安裝在您的電腦中，則會包含在 **已安裝功能** 清單在 **選購功能**.
+選擇性功能清單隨即顯示。 如果您的電腦已預先安裝&#x200B;**OpenSSH使用者端**，則會包含在&#x200B;**選用功能**&#x200B;下的&#x200B;**已安裝功能**&#x200B;清單中。
 
 ![open-ssh](../../images/tutorials/create/sftp/open-ssh.png)
 
-如果未安裝，請選取 **安裝** 然後開啟 **[!DNL Powershell]** 並執行下列命令以產生您的私密金鑰：
+如果未安裝，請選取&#x200B;**安裝**，然後開啟&#x200B;**[!DNL Powershell]**&#x200B;並執行下列命令以產生您的私密金鑰：
 
 ```shell
 PS C:\Users\lucy> ssh-keygen -t rsa -m pem
@@ -84,17 +84,17 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-接下來，在提供私密金鑰的檔案路徑時執行以下命令，以將您的私密金鑰編碼 [!DNL Base64]：
+接下來，在提供私密金鑰的檔案路徑時執行以下命令，將您的私密金鑰編碼為[!DNL Base64]：
 
 ```shell
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-上述指令會儲存 [!DNL Base64]-encoded私密金鑰位於您指定的檔案路徑中。 然後，您可以使用該私密金鑰來驗證 [!DNL SFTP] 並連線至平台。
+上述命令會將[!DNL Base64]編碼的私密金鑰儲存在您指定的檔案路徑中。 然後，您可以使用該私密金鑰來驗證[!DNL SFTP]並連線到平台。
 
-### [!DNL Mac] 使用者
+### [!DNL Mac]位使用者
 
-如果您使用 [!DNL Mac]，開啟 **終端機** 並執行下列命令以產生私密金鑰(在此情況下，私密金鑰將會儲存在 `/Documents/id_rsa`)：
+如果您使用[!DNL Mac]，請開啟&#x200B;**終端機**&#x200B;並執行下列命令以產生私密金鑰（在此案例中，私密金鑰將會儲存在`/Documents/id_rsa`）：
 
 ```shell
 ssh-keygen -t rsa -m pem -f ~/Documents/id_rsa
@@ -119,7 +119,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-接下來，執行以下命令來編碼中的私密金鑰 [!DNL Base64]：
+接下來，執行以下命令來編碼[!DNL Base64]中的私密金鑰：
 
 ```shell
 base64 ~/Documents/id_rsa > ~/Documents/id_rsa_base64
@@ -130,7 +130,7 @@ cat ~/Documents/id_rsa_base64
 LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0KYjNCbGJuTnphQzFyWlhrdGRqRUFBQUFBQkc1dmJtVUFBQUFFYm05dVpRQUFBQUFBQUFBQkFBQUJGd0FBQUFkemMyZ3RjbgpOaEFBQUFBd0VBQVFBQUFRRUF0cWFYczlXOUF1ZmtWazUwSXpwNXNLTDlOMU9VYklaYXVxbVM0Q0ZaenI1NjNxUGFuN244CmFxZWdvQTlCZnVnWDJsTVpGSFl5elEzbnp6NXdXMkdZa1hkdjFjakd0elVyNyt1NnBUeWRneGxrOGRXZWZsSzBpUlpYWW4KVFRwS0E5c2xXaHhjTXg3R2x5ejdGeDhWSzI3MmdNSzNqY1d1Q0VIU3lLSFR5SFFwekw0MEVKbGZJY1RGR1h1dW1LQjI5SwpEakhwT1grSDdGcG5Gd1pabTA4Uzc2UHJveTVaMndFalcyd1lYcTlyUDFhL0E4ejFoM1ZLdllzcG53c2tCcHFQSkQ1V3haCjczZ3M2OG9sVllIdnhWajNjS3ZsRlFqQlVFNWRNUnB2M0I5QWZ0SWlrYmNJeUNDaXV3UnJmbHk5eVNPQ2VlSEc0Z2tUcGwKL3V4YXNOT0h1d0FBQThqNnF6R1YrcXN4bFFBQUFBZHpjMmd0Y25OaEFBQUJBUUMycHBlejFiMEM1K1JXVG5Rak9ubXdvdgowM1U1UnNobHE2cVpMZ0lWbk92bnJlbzlxZnVmeHFwNkNnRDBGKzZCZmFVeGtVZGpMTkRlZlBQbkJiWVppUmQyL1Z5TWEzCk5TdnY2N3FsUEoyREdXVHgxWjUrVXJTSkZsZGlkTk9rb0QyeVZhSEZ3ekhzYVhMUHNYSHhVcmJ2YUF3cmVOeGE0SVFkTEkKb2RQSWRDbk12alFRbVY4aHhNVVplNjZZb0hiMG9PTWVrNWY0ZnNXbWNYQmxtYlR4THZvK3VqTGxuYkFTTmJiQmhlcjJzLwpWcjhEelBXSGRVcTlpeW1mQ3lRR21vOGtQbGJGbnZlQ3pyeWlWVmdlL0ZXUGR3cStVVkNNRlFUbDB4R20vY0gwQiswaUtSCnR3aklJS0s3Qkd0K1hMM0pJNEo1NGNiaUNST21YKzdGcXcwNGU3QUFBQUF3RUFBUUFBQVFBcGs0WllzMENSRnNRTk9WS0sKYWxjazlCVDdzUlRLRjFNenhrSGVydmpJYk9kL0lvRXpkcHlVa28rbm41RmpGK1hHRnNCUXZnOFdTaUlJTk1oU3BNYWI1agpvWXlka2gvd0ovWElOaDlZaE5QVXlURi9NNkFnMkNYd21KS2RxN1VKWjZyNjloV3V0VVN6U05QbkVYWTZLc29GeVUwTEFvCko0OHJMT1pMZldtMHFhWDBLNUgzNmJPaHFXSWJwMDNoZk94eno5M0MrSDM5MFJkRkp4bzJVZ0FVY3UvdHREb0REVldBdmEKVkVyMWEzak9LenVHbThrK21WeXpPZERjVFY4ckZIT0pwRnRBU3l6Q24yVld1MjV0TWtrcGRPRjNKcVdMZHdOY3loeG1URApXZGVDNWh4V0Fiano0WDZ5WXpHcFcwTmptVkFoWUVVZGNBSVlXWWM3OGEvQkFBQUFnRm8wakl4aGhwZkJ6QjF6b09FMDJBClpjTC9hcUNuYysrdmJ1a2V0aFg5Zzhlb0xQMTQyeUgzdlpLczl3c1RtbVVsZ0prZURaN2hUcklwOGY2eEwzdDRlMXByY1kKb2ZLd0gwckNGOTFyaldPbGZOUmxEempoR1NTTEVMczZoNlNzMEdBQXE2Z0ZQTVF2dTB4TDlQUTlGQ21YZVVKazJpRm1MWgpEWWJGc0NyVUxEQUFBQWdRRGF0a1pMamJaSTBFM0ZuY2dTOVF5Y3lVWmtkZ1dVNjBQcG9ud3BMQXdUdHRpOG1EQXE5cHYwClEvUlk1WE9UeGF3VXNHa0tYMjNtV1BYR0grdUlBSzhrelVVM2dGM1dRWGVkTWw4NHVCVFZCTEtUdStvVVAvZmIvMEE0dE0KSE9BSythbXZPMkZuYzFiSmVwd05USTE2cjZXWk9sZWV2ZklJQVpXcEgxVVpIdkVRQUFBSUVBMWNwcStDNUVXSFJwbnVPZQpiNHE4T0tKTlJhSUxIRUN6U0twWlFpZDFhRmJYWlVKUXpIQU85YzhINVZMcjBNUjFkcW1ORkNja2ZsZzI2Y3BEUEl3TjBYCm5HMFBxcmhKbXp0U3ZQZ3NGdkNPallncXF6U0RYUjkxd1JQTEN5cU8zcGMyM2kzZnp2WkhtMGhIdWdoNVJqV0loUlFZVkwKZUpDWHRqM08vY3p1SWdzQUFBQVJkbkpoYm1GQWRuSmhibUV0YldGalQxTUJBZz09Ci0tLS0tRU5EIE9QRU5TU0ggUFJJVkFURSBLRVktLS0tLQo=
 ```
 
-一旦您的 [!DNL Base64]-encoded私密金鑰會儲存在您指定的資料夾中，然後您必須將公開金鑰檔案的內容新增至 [!DNL SFTP] 主機授權的金鑰。 在命令列上執行下列命令：
+將[!DNL Base64]編碼的私密金鑰儲存在您指定的資料夾後，您必須將公開金鑰檔案的內容新增至[!DNL SFTP]主機授權金鑰中的新行。 在命令列上執行下列命令：
 
 ```shell
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
@@ -142,13 +142,13 @@ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 more ~/.ssh/authorized_keys
 ```
 
-## 將SFTP連線至 [!DNL Platform]
+## 將SFTP連線至[!DNL Platform]
 
 >[!IMPORTANT]
 >
->使用者必須在連線前停用SFTP伺服器設定中的鍵盤互動式驗證。 停用此設定將允許手動輸入密碼，而不是透過服務或程式輸入。 請參閱 [Component Pro檔案](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) 以取得鍵盤互動式驗證的詳細資訊。
+>使用者必須在連線前停用SFTP伺服器設定中的鍵盤互動式驗證。 停用此設定將允許手動輸入密碼，而不是透過服務或程式輸入。 請參閱[Component Pro檔案](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication)，以取得鍵盤互動式驗證的詳細資訊。
 
-以下檔案提供如何將SFTP伺服器連線至的相關資訊 [!DNL Platform] 使用API或使用者介面：
+以下檔案提供如何使用API或使用者介面將SFTP伺服器連線至[!DNL Platform]的資訊：
 
 ### 使用API
 

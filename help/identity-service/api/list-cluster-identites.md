@@ -20,10 +20,10 @@ ht-degree: 1%
 
 擷取單一身分的所有叢整合員。
 
-您可以使用選填的 `graph-type` 表示要從其中取得叢集的身分圖表的引數。 選項包括：
+您可以使用選用的`graph-type`引數來指示要從中取得叢集的身分圖表。 選項包括：
 
 - 無 — 不執行身分拼接。
-- 私人身分圖表 — 根據您的私人身分圖表執行身分拼接。 若否 `graph-type` 「 」會顯示，此為預設值。
+- 私人身分圖表 — 根據您的私人身分圖表執行身分拼接。 如果未提供`graph-type`，則此為預設值。
 
 **API格式**
 
@@ -33,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **要求**
 
-選項1：提供身分作為名稱空間(`nsId`，依ID)和ID值(`id`)。
+選項1：提供身分做為名稱空間（`nsId`，依ID）和ID值(`id`)。
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項2：提供身分作為名稱空間(`ns`，依名稱)和ID值(`id`)。
+選項2：提供識別作為名稱空間（`ns`，依名稱）和識別碼值(`id`)。
 
 ```shell
 curl -X GET \
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-選項3：以XID提供身分(`xid`)。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案的區段，內容涵蓋 [取得身分的XID](./list-native-id.md).
+選項3：以XID (`xid`)提供身分識別。 如需如何取得身分識別的XID的詳細資訊，請參閱本檔案有關[取得身分識別的XID](./list-native-id.md)的章節。
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 ## 取得多個身分的相關身分
 
-使用 `POST` 作為批次等同專案， `GET` 上述方法可傳回多個身分叢集中的身分。
+使用`POST`作為上述`GET`方法的批次等同項，以傳回多個身分叢集中的身分。
 
 >[!NOTE]
 >
@@ -84,9 +84,9 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 下列要求示範如何提供要擷取叢整合員的XID清單。
 
-**Stub要求**
+**存根要求**
 
-使用方式 `x-uis-cst-ctx: stub` 標頭將傳回存根的回應。 這是臨時解決方案，可在服務完成時協助早期整合開發進度。 當不再需要時，這將被取代。
+使用`x-uis-cst-ctx: stub`標頭將傳回存根回應。 這是臨時解決方案，可在服務完成時協助早期整合開發進度。 當不再需要時，這將被取代。
 
 ```shell
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 }'
 ```
 
-**使用XID呼叫**
+使用XID呼叫&#x200B;****
 
 ```shell
 curl -X POST \
@@ -118,7 +118,7 @@ curl -X POST \
 }' | json_pp
 ```
 
-**使用UID呼叫**
+使用UID呼叫&#x200B;****
 
 ```shell
 curl -X POST \
@@ -144,7 +144,7 @@ curl -X POST \
 
 **回應**
 
-**&#39;已截斷&#39;回應**
+**&#39;Stubbed&#39;回應**
 
 ```json
 {
@@ -242,4 +242,4 @@ curl -X POST \
 
 ## 後續步驟
 
-繼續進行下一個教學課程： [列出身分的叢集記錄](./list-cluster-history.md)
+繼續進行下一個教學課程，以[列出身分識別的叢集歷程記錄](./list-cluster-history.md)

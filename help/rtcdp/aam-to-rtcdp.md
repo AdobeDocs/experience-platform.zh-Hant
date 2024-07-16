@@ -23,7 +23,7 @@ ht-degree: 86%
 
 Adobe 建議您依照下列方式將區段分類：
 
-* 可透過傳送至Experience Platform的區段 [[!UICONTROL Audience Manager來源聯結器]](/help/sources/connectors/adobe-applications/audience-manager.md)，由於它們沒有資料相依性，沒有目的地或啟用挑戰，而且可透過Real-Time CDP建立其區段規則 [區段產生器](/help/segmentation/ui/segment-builder.md) 稍後。
+* 可透過[[!UICONTROL Audience ManagerSource Connector]](/help/sources/connectors/adobe-applications/audience-manager.md)傳送至Experience Platform的區段，因為它們沒有資料相依性、沒有目的地或啟用挑戰，而且其區段規則稍後可透過Real-Time CDP [區段產生器](/help/segmentation/ui/segment-builder.md)建立。
 * 區段具有可受支援的規則但可能包含無法在 Real-Time CDP 中取得的資料。
 * 無法在Real-Time CDP中建立且缺少功能的區段。
 

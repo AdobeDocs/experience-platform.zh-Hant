@@ -13,11 +13,11 @@ ht-degree: 2%
 
 # 取代目錄物件
 
-您可以覆寫 [!DNL Catalog] 使用PUT請求的物件，其中整個資源已替換為請求承載。
+您可以使用PUT要求覆寫[!DNL Catalog]物件的內容，其中整個資源會以要求裝載取代。
 
 >[!NOTE]
 >
->如果您只需要更新中的幾個特定欄位 [!DNL Catalog] 物件，使用PATCH請求可能更有效率。
+>如果您只需要更新[!DNL Catalog]物件中的幾個特定欄位，使用PATCH要求可能會更有效率。
 
 **API格式**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 要取代的物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 要取代的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | 您要更新之特定物件的識別碼。 |
 
 **要求**

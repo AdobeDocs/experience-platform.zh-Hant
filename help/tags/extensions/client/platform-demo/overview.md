@@ -5,7 +5,7 @@ exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
 source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 72%
+ht-degree: 69%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 >[!NOTE]
 >
->此擴充功能已遭取代，取代 [Adobe Experience Platform Web SDK](../web-sdk/overview.md).
+>此擴充功能已遭取代以支援[Adobe Experience Platform Web SDK](../web-sdk/overview.md)。
 
 此擴充功能的功能已移至新的擴充功能。以下快速比較目前功能。
 
@@ -37,21 +37,21 @@ ht-degree: 72%
 
 本節提供設定 Adobe Experience Platform 擴充功能時可用選項的參考資料。
 
-如果尚未安裝Adobe Experience Platform擴充功能，請開啟您的屬性，然後選取「 」 **[!UICONTROL 擴充功能>目錄]**，將游標暫留在Adobe Experience Platform擴充功能上，然後選取「 」 **[!UICONTROL 安裝]**.
+如果尚未安裝Adobe Experience Platform擴充功能，請開啟屬性，然後選取「**[!UICONTROL 擴充功能>目錄]**」，將游標停留在Adobe Experience Platform擴充功能上，然後選取「**[!UICONTROL 安裝]**」。
 
-若要設定擴充功能，請開啟 [!UICONTROL 擴充功能] 索引標籤，將游標停留在擴充功能上，然後選取「 」 **[!UICONTROL 設定]**.
+若要設定擴充功能，請開啟[!UICONTROL 擴充功能]標籤，將游標暫留在擴充功能上，然後選取&#x200B;**[!UICONTROL 設定]**。
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### 串流連線
 
-選擇串流連線是您開始將資料串流至 Adobe Experience Platform 的第一步。您可以從串流連線下拉式方塊中選取連線。串流連線是必填欄位。如果您尚未建立任何串流連線，可以選取 **[!UICONTROL 建立串流連線]** 按鈕。
+選擇串流連線是您開始將資料串流至 Adobe Experience Platform 的第一步。您可以從串流連線下拉式方塊中選取連線。串流連線是必填欄位。如果您尚未建立任何串流連線，可以選取&#x200B;**[!UICONTROL 「建立串流連線」]**&#x200B;按鈕來建立。
 
-如果您選取 **[!UICONTROL 建立串流連線]** 將會顯示強制回應視窗。
+如果您選取&#x200B;**[!UICONTROL 建立串流連線]**，將會顯示強制回應視窗。
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-強制回應視窗中，某些欄位會預先填入值，您可以依個人需求適時變更。如果您打算建立多個串流連線，請注意 **[!UICONTROL 資料來源]** 欄位必須是唯一的。 嘗試使用建立另一個串流連線 **[!UICONTROL 資料來源]** 已用於其他連線將會失敗。
+強制回應視窗中，某些欄位會預先填入值，您可以依個人需求適時變更。如果您打算建立多個串流連線，請注意&#x200B;**[!UICONTROL 資料Source]**&#x200B;欄位必須是唯一的。 嘗試使用已用於其他連線的&#x200B;**[!UICONTROL 資料Source]**&#x200B;來建立另一個串流連線將會失敗。
 
 在您選取串流端點後，就會產生串流端點 URL 和來源。
 
@@ -120,7 +120,7 @@ ht-degree: 72%
 
 如果身分對應區段內有多個身分，您只能將一個身分標示為主要身分。
 
-如果您的結構描述具有 `xdm:identityMap` 欄位，而同時有另一個欄位標示為主要身分欄位，則身分對應區段內的主要身分欄不會顯示。
+如果您的結構描述中有一個`xdm:identityMap`欄位，而同時有另一個欄位標示為主要身分欄位，則身分對應區段內的主要身分欄不會顯示。
 
 ![](../../../images/adobe-experience-platform-send-beacon-identity-section-not-primary.png)
 

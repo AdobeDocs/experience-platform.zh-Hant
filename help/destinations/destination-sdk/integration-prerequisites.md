@@ -4,7 +4,7 @@ title: 整合必要條件
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ ht-degree: 0%
 
 ## 批次目的地的技術先決條件 {#batch-prerequisites}
 
-1. 您的目的地位置託管於 [!DNL Amazon S3]， [!DNL Azure Blob]， [!DNL Azure Data Lake Storage]， [!DNL SFTP]， [!DNL Google Cloud]或私人 [!DNL Data Landing Zone]，您可在此處接收轉存為不Experience Platform的檔案。
-2. 您的目標平台可以透過設定的格式內嵌檔案 [檔案格式選項](functionality/destination-server/file-formatting.md) 批次目的地的Destination SDK。
-3. （選用）您有對象建立/擷取/更新/刪除([!DNL CRUD])程式化中繼資料管理的API或API端點。
+1. 您的目的地位置託管於[!DNL Amazon S3]、[!DNL Azure Blob]、[!DNL Azure Data Lake Storage]、[!DNL SFTP]、[!DNL Google Cloud]或私人[!DNL Data Landing Zone]，您可在此接收從Experience Platform匯出的檔案。
+2. 您的目的地平台可擷取透過Destination SDK中的[檔案格式選項](functionality/destination-server/file-formatting.md)所設定格式的檔案，以用於批次目的地。
+3. （選擇性）您有對象建立/擷取/更新/刪除([!DNL CRUD]) API或API端點，用於程式化中繼資料管理。
 
 ## 合作關係必要條件 {#partnership-prerequisites}
 
-如果您是想要使用Destination SDK的獨立軟體廠商(ISV)或系統整合商(SI)，請閱讀 [取得存取許可權區段](overview.md#get-access).
+如果您是想要使用Destination SDK的獨立軟體廠商(ISV)或系統整合商(SI)，請在[取得存取區段](overview.md#get-access)中閱讀ISV與SI的合作夥伴需求。

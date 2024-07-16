@@ -36,7 +36,7 @@ Attribution AI 可用於將點數歸因到導致轉換事件的接觸點。行�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| HIPAA 整備程度 | Healthcare Shield 客戶現在可以在 Attribution AI 和其他使用 Experience Platform 的特定應用程式中接收、使用、維護或傳輸受保護的健康資訊。適用 Healthcare Shield 的醫療保健客戶需為 HIPAA 的「適用機構」或「商業夥伴」。如需詳細資訊，請閱讀有關 [HIPAA 和 Adob&#x200B;&#x200B;e 產品和服務](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html)的文件 |
+| HIPAA 整備程度 | Healthcare Shield 客戶現在可以在 Attribution AI 和其他使用 Experience Platform 的特定應用程式中接收、使用、維護或傳輸受保護的健康資訊。適用 Healthcare Shield 的醫療保健客戶需為 HIPAA 的「適用機構」或「商業夥伴」。如需詳細資訊，請閱讀有關 [HIPAA 和 Adob&#x200B;&#x200B;e 產品和服務](https://www.adobe.com/trust/compliance/hipaa-ready.html)的文件 |
 | 編輯額外的分數資料集欄 | 您現在可以在編輯現有模式時新增或移除額外的分數資料集欄 (報表欄)。這會擴大歸因分數的靈活性，模式建立後即可提供您對其他維度的分析。若要了解詳細資訊，請參閱 [Attribution UI 指南](../../intelligent-services/attribution-ai/user-guide.md)。 |
 
 {style="table-layout:auto"}
@@ -51,7 +51,7 @@ Attribution AI 可用於將點數歸因到導致轉換事件的接觸點。行�
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| HIPAA 整備程度 | Healthcare Shield 客戶現在可以在適用於 Real-Time Customer Data Platform 的 Customer AI 和其他使用 Experience Platform 的特定應用程式中接收、使用、維護或傳輸受保護的健康資訊。適用 Healthcare Shield 的醫療保健客戶需為 HIPAA 的「適用機構」或「商業夥伴」。如需詳細資訊，請參閱有關 [HIPAA 和 Adob&#x200B;&#x200B;e 產品和服務](https://www.adobe.com/tw/trust/compliance/hipaa-ready.html)的文件 |
+| HIPAA 整備程度 | Healthcare Shield 客戶現在可以在適用於 Real-Time Customer Data Platform 的 Customer AI 和其他使用 Experience Platform 的特定應用程式中接收、使用、維護或傳輸受保護的健康資訊。適用 Healthcare Shield 的醫療保健客戶需為 HIPAA 的「適用機構」或「商業夥伴」。如需詳細資訊，請參閱有關 [HIPAA 和 Adob&#x200B;&#x200B;e 產品和服務](https://www.adobe.com/trust/compliance/hipaa-ready.html)的文件 |
 
 {style="table-layout:auto"}
 

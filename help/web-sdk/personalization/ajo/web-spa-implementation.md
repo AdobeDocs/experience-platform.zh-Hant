@@ -5,7 +5,7 @@ exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
 source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform Web SDK提供豐富的功能，讓貴公司能以新�
 
 ## xdm檢視和單頁應用程式 {#web-spa-xdm}
 
-Journey Optimizer網頁編輯器善用以下概念： _檢視_.
+Journey Optimizer網頁編輯器利用了名為&#x200B;_檢視_&#x200B;的概念。
 
 檢視是視覺元素的邏輯群組，這些元素共同構成SPA體驗。 因此，單頁應用程式可視為根據使用者互動轉換檢視，而不是轉換URL。 檢視通常可代表整個網站、單一頁面或頁面中的分組視覺元素。
 
@@ -37,21 +37,21 @@ Journey Optimizer網頁編輯器善用以下概念： _檢視_.
 
 * 導覽至首頁網站後，主圖影像會宣傳季節性系列以及網站上提供的不同產品目錄。 在這種情況下，可以為整個主畫面定義檢視。 此檢視可簡單稱為「home」。
 
-  ![顯示首頁的網站影像範例。](assets/web-spa-home.png)
+  ![顯示首頁的範例網站影像。](assets/web-spa-home.png)
 
-* 當客戶對業務所銷售的產品越來越感興趣時，他們決定按一下 **男性** 連結。 與首頁類似， **男性** 頁面可定義為檢視。 此檢視可命名為「men」。
+* 當客戶對該企業所銷售的產品越來越感興趣時，他們決定按一下&#x200B;**男性**&#x200B;連結。 與首頁類似，**Men**&#x200B;頁面的整體可定義為檢視。 此檢視可命名為「men」。
 
-  ![顯示特定檢視的網站影像範例。](assets/web-spa-men.png)
+  ![顯示特定檢視的範例網站影像。](assets/web-spa-men.png)
 
 * 由於檢視可定義為整個網站或網站上一組視覺元素，因此產品網站上顯示的四個產品可分組並視為檢視。 此檢視可命名為「products」。
 
-  ![顯示特定檢視的網站影像範例。](assets/web-spa-men-products.png)
+  ![顯示特定檢視的範例網站影像。](assets/web-spa-men-products.png)
 
-* 當客戶決定按一下 **所有男士產品** 按鈕瀏覽網站上的更多產品，在此情況下，網站URL不會變更，但可在此處建立檢視，以僅代表顯示的第二列產品。 檢視名稱可以是「products-page-2」。
+* 當客戶決定按一下&#x200B;**ALL MEN&#39;S PRODUCTS**&#x200B;按鈕以探索網站上的更多產品時，網站URL在此情況下不會變更，但可在此處建立檢視，以僅代表顯示的第二列產品。 檢視名稱可以是「products-page-2」。
 
 * 客戶決定從網站購買一些產品，然後進入結帳畫面。 購物車畫面本身可與名為「購物車」的檢視相關聯。 或者，您可以在結帳畫面內有不同的檢視，以處理下列建議的產品。
 
-  ![顯示特定檢視的網站影像範例。](assets/web-spa-cart.png)
+  ![顯示特定檢視的範例網站影像。](assets/web-spa-cart.png)
 
 檢視的概念可以進一步延伸。 以下只是可在網站上定義的一些檢視範例。
 
@@ -61,11 +61,11 @@ Journey Optimizer網頁編輯器善用以下概念： _檢視_.
 
 若要完成一次性開發人員設定，需要執行下列步驟：
 
-1. 安裝 [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) 並檢視 [Web Channel必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) 頁面。
+1. 安裝[Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)，並檢查[Web Channel必要條件](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html)頁面。
 
 2. 決定您要個人化之單頁應用程式中的所有XDM檢視。
 
-3. 定義XDM檢視後，若要將內容傳送給這些檢視，您必須實作 `sendEvent()` 函式為 `renderDecisions` 設為 `true` 以及單頁應用程式中對應的XDM檢視。 XDM檢視必須傳入 `xdm.web.webPageDetails.viewName`. 此步驟可讓行銷人員在Journey Optimizer網頁編輯器內探索這些檢視，並套用內容修改內容：
+3. 定義XDM檢視後，為了將內容傳送給這些檢視，您需要實作`sendEvent()`函式並將`renderDecisions`設定為`true`，並在單頁應用程式中設定相應的XDM檢視。 必須在`xdm.web.webPageDetails.viewName`中傳遞XDM檢視。 此步驟可讓行銷人員在Journey Optimizer網頁編輯器內探索這些檢視，並套用內容修改內容：
 
 ```js
  alloy("sendEvent", {
@@ -82,11 +82,11 @@ Journey Optimizer網頁編輯器善用以下概念： _檢視_.
 
 >[!NOTE]
 >
->在第一個 `sendEvent()` 呼叫，將會擷取並快取所有應該轉譯給使用者的XDM檢視。 後續 `sendEvent()` 含有傳入的XDM檢視的呼叫將會從快取中讀取並轉譯，不需要伺服器呼叫。
+>在前`sendEvent()`個呼叫中，將會擷取並快取所有應呈現給使用者的XDM檢視。 後續的`sendEvent()`呼叫若包含XDM檢視已傳入，將會從快取讀取並轉譯，而不需要伺服器呼叫。
 
-## `sendEvent()` 函式範例
+## `sendEvent()`函式範例
 
-本節概述兩個範例，說明如何叫用 `sendEvent()` 函式在React中，用於假設性的電子商務SPA。
+本節概述兩個範例，說明如何在React中叫用假設性的電子商務SPA的`sendEvent()`函式。
 
 ### 範例1：A/B測試首頁 {#web-spa-sample-1}
 
@@ -94,7 +94,7 @@ Journey Optimizer網頁編輯器善用以下概念： _檢視_.
 
 ![單頁應用程式範例頁面。](assets/web-spa-home.png)
 
-若要在整個主網站上執行A/B測試， `sendEvent()` 必須透過XDM叫用 `viewName` 設為 `home`：
+若要在整個主網站上執行A/B測試，必須在將XDM `viewName`設為`home`的情況下叫用`sendEvent()`：
 
 ```js
 function onViewChange() {

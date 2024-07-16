@@ -17,14 +17,14 @@ Adobe Experience Platform中的AI助理是透過隱私、安全性和治理機�
 
 * AI助理目前沒有使用任何個人資料，即使用於訓練目的亦然。
 * AI助理不知道消費者資料。
-* 所有現有 [存取控制](../access-control/home.md) 原則將由AI助理遵循。
+* AI助理會遵循所有現有的[存取控制](../access-control/home.md)原則。
    * 任何以屬性為基礎的新存取控制原則都會在最多24小時後反映在AI助理中*
 * 您必須被授予明確許可權才能與AI助理互動。
-   * 您可以使用針對Experience Platform和Journey Optimizer設定不同許可權 [許可權UI](../access-control/abac/ui/permissions.md) 而且您可以使用 [Admin Console](../access-control/ui/browse.md) 以指派Customer Journey Analytics的許可權。
+   * 您可以使用[許可權UI](../access-control/abac/ui/permissions.md)為Experience Platform和Journey Optimizer設定不同的許可權，也可以使用[Admin Console](../access-control/ui/browse.md)為Customer Journey Analytics指派許可權。
    * 許可權很細微，您的沙箱管理員可以設定哪些使用者可以詢問不同類別的問題（使用AI Assistant時的產品知識型問題或操作深入分析問題）。
 * AI Assistant是與Adobe Experience Platform Healthcare Shield搭配使用時可支援HIPAA的功能。
 * 您可以透過30天保留原則檢視您先前與AI助理互動的記錄。
 * AI助理在回應使用者提示時是以沙箱特定的資料和公開Adobe檔案為基礎。 資料不會跨沙箱共用。
 * 您提供給AI助理的提示不會分享給其他客戶。
 
-**這表示，如果有任何新標籤新增到欄位和物件，或任何新原則已建立，則AI助理最多需要24小時才能遵循它們。 在這24小時內，新受限制存取許可權的使用者仍可存取這些欄位和物件。*
+**這表示如果有任何新標籤新增到欄位和物件，或建立任何新原則，則需要AI助理最多24小時才能執行。 在這24小時內，新受限制存取許可權的使用者仍可存取這些欄位和物件。*

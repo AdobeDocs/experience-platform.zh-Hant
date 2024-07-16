@@ -7,33 +7,33 @@ description: 本教學課程涵蓋使用Flow Service API更新帳戶詳細資訊
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '519'
 ht-degree: 2%
 
 ---
 
 # 使用流程服務API更新帳戶
 
-在某些情況下，可能需要更新現有來源連線的詳細資料。 [!DNL Flow Service] 讓您能夠新增、編輯和刪除現有批次或串流連線的詳細資料，包括其名稱、說明和認證。
+在某些情況下，可能需要更新現有來源連線的詳細資料。 [!DNL Flow Service]可讓您新增、編輯和刪除現有批次或串流連線的詳細資料，包括其名稱、說明和認證。
 
-本教學課程涵蓋使用更新連線的詳細資訊和認證的步驟。 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+本教學課程涵蓋使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)更新連線的詳細資訊和認證的步驟。
 
 ## 快速入門
 
-本教學課程需要您具備現有的連線和有效的連線ID。 如果您沒有現有的連線，請從 [來源概觀](../../home.md) 並依照在嘗試本教學課程之前概述的步驟進行。
+本教學課程需要您具備現有的連線和有效的連線ID。 如果您沒有現有的連線，請從[來源概觀](../../home.md)中選取您選擇的來源，並依照在嘗試本教學課程之前概述的步驟進行。
 
-本教學課程也要求您實際瞭解Adobe Experience Platform的下列元件：
+本教學課程也要求您實際瞭解下列Adobe Experience Platform元件：
 
-* [來源](../../home.md)：Experience Platform可讓您從各種來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。
+* [來源](../../home.md)：Experience Platform允許從各種來源擷取資料，同時讓您能夠使用Platform服務來建構、加標籤以及增強傳入的資料。
 * [沙箱](../../../sandboxes/home.md)：Experience Platform提供的虛擬沙箱可將單一Platform執行個體分割成個別的虛擬環境，以利開發及改進數位體驗應用程式。
 
 ### 使用平台API
 
-如需如何成功呼叫Platform API的詳細資訊，請參閱以下指南中的 [Platform API快速入門](../../../landing/api-guide.md).
+如需如何成功呼叫Platform API的詳細資訊，請參閱[Platform API快速入門](../../../landing/api-guide.md)的指南。
 
 ## 查詢連線詳細資料
 
-更新連線的第一步是使用連線ID擷取其詳細資訊。 GET若要擷取您連線的目前詳細資料，請向 [!DNL Flow Service] 提供您要更新的連線的連線ID時使用的API。
+更新連線的第一個步驟是使用連線ID擷取其詳細資訊。 若要擷取您連線的目前詳細資料，請在提供您要更新的連線之連線ID時，向[!DNL Flow Service] API提出GET要求。
 
 **API格式**
 
@@ -43,7 +43,7 @@ GET /connections/{CONNECTION_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 唯一 `id` 您要擷取之連線的值。 |
+| `{CONNECTION_ID}` | 您要擷取的連線的唯一`id`值。 |
 
 **要求**
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回連線的目前詳細資料，包括其認證、唯一識別碼(`id`)，以及版本來識別。 更新您的連線需要版本值。
+成功的回應會傳回您連線的目前詳細資料，包括其認證、唯一識別碼(`id`)和版本。 更新您的連線需要版本值。
 
 ```json
 {
@@ -98,11 +98,11 @@ curl -X GET \
 
 ## 更新連線
 
-PATCH若要更新連線的名稱、說明和認證，請對 [!DNL Flow Service] API，並提供您的連線ID、版本以及您想要使用的新資訊。
+若要更新連線的名稱、說明和認證，請對[!DNL Flow Service] API執行PATCH要求，同時提供您的連線ID、版本以及您要使用的新資訊。
 
 >[!IMPORTANT]
 >
->此 `If-Match` 發出PATCH請求時需要標頭。 此標頭的值是您要更新的連線唯一版本。
+>發出PATCH要求時需要`If-Match`標頭。 此標頭的值是您要更新之連線的唯一版本。
 
 **API格式**
 
@@ -112,11 +112,11 @@ PATCH /connections/{CONNECTION_ID}
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 唯一 `id` 您要更新的連線值。 |
+| `{CONNECTION_ID}` | 您要更新的連線的唯一`id`值。 |
 
 **要求**
 
-以下請求提供新名稱和說明，以及一組新憑證，用於更新您的連線。
+以下請求提供新的名稱和說明，以及一組新的認證，用於更新您的連線。
 
 ```shell
 curl -X PATCH \
@@ -151,13 +151,13 @@ curl -X PATCH \
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `op` | 用於定義更新連線所需動作的操作呼叫。 作業包括： `add`， `replace`、和 `remove`. |
-| `path` | 要更新的引數路徑。 |
+| `op` | 用於定義更新連線所需動作的操作呼叫。 作業包括： `add`、`replace`和`remove`。 |
+| `path` | 要更新之引數的路徑。 |
 | `value` | 您想要用來更新引數的新值。 |
 
 **回應**
 
-成功的回應會傳回您的連線ID和更新的etag。 您可以向發出GET要求以驗證更新 [!DNL Flow Service] API，同時提供您的連線ID。
+成功的回應會傳回您的連線ID和更新的etag。 您可以向[!DNL Flow Service] API發出GET要求，同時提供連線ID以驗證更新。
 
 ```json
 {
@@ -168,4 +168,4 @@ curl -X PATCH \
 
 ## 後續步驟
 
-依照本教學課程，您已使用更新與連線相關聯的認證和資訊 [!DNL Flow Service] API。 如需使用來源聯結器的詳細資訊，請參閱 [來源概觀](../../home.md).
+依照本教學課程，您已更新使用[!DNL Flow Service] API與您連線相關聯的認證和資訊。 如需使用來源聯結器的詳細資訊，請參閱[來源概觀](../../home.md)。

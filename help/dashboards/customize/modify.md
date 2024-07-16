@@ -6,7 +6,7 @@ exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -18,44 +18,44 @@ ht-degree: 0%
 >
 >控制面板的任何更新都是根據組織和沙箱進行。
 
-本指南提供逐步指示，說明如何自訂儀表板資料在 [!UICONTROL 設定檔]， [!UICONTROL 區段]、和 [!UICONTROL 目的地] 平台UI中的儀表板。
+本指南提供逐步指示，說明如何自訂儀表板資料在Platform UI中的[!UICONTROL 設定檔]、[!UICONTROL 區段]和[!UICONTROL 目的地]儀表板中的顯示方式。
 
 ## 快速入門
 
-從任何控制面板(例如 [!UICONTROL 設定檔] 控制面板)，您可以選取 **[!UICONTROL 修改儀表板]** 以調整現有Widget的大小並重新排序。
+從任何儀表板（例如，[!UICONTROL 設定檔]儀表板），您可以選取&#x200B;**[!UICONTROL 修改儀表板]**，以調整大小並重新排序現有的Widget。
 
-![會反白顯示「修改」儀表板的「設定檔」儀表板。](../images/customization/modify-dashboard.png)
+![已反白修改儀表板的設定檔儀表板。](../images/customization/modify-dashboard.png)
 
 ## 重新排序Widget
 
-選擇修改儀表板後，您可以選取Widget標題，並將Widget拖放至所需的順序來重新排序Widget。 在此範例中， **[!UICONTROL 設定檔計數趨勢]** Widget會移至頂列，而且 **[!UICONTROL 設定檔計數]** widget現在會顯示在第二列。
+選擇修改儀表板後，您可以選取Widget標題，並將Widget拖放至所需的順序來重新排序Widget。 在此範例中，**[!UICONTROL 設定檔計數trend]** Widget已移至頂列，而&#x200B;**[!UICONTROL 設定檔計數]** Widget現在會顯示在第二列。
 
-![包含兩個重新排序的Widget的「設定檔」儀表板會反白顯示。](../images/customization/move-widget.png)
+![包含兩個重新排序的Widget的設定檔儀表板已反白顯示。](../images/customization/move-widget.png)
 
 ## 調整Widget大小
 
-您也可以選取Widget右下角的角度符號(`⌟`)並將Widget拖曳至所需大小。 在此範例中， **[!UICONTROL 依身分割槽分的設定檔]** Widget會調整大小以填滿整個頂列，自動將其他Widget移至第二列。 請注意水平軸如何調整，以隨著Widget變大提供更詳細的增量。
+您也可以選取Widget (`⌟`)右下角的角度符號，並將該Widget拖曳至所需大小，以調整Widget的大小。 在此範例中，依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會調整大小以填滿整個頂列，自動將其他Widget移至第二列。 請注意水平軸如何調整，以隨著Widget變大提供更詳細的增量。
 
 >[!NOTE]
 >
 >Widget在調整大小時，周圍的Widget會動態重新定位。 這可能會造成某些Widget移至其他列，需要您捲動才能檢視所有Widget。
 
-![已調整大小的Widget反白的「設定檔」儀表板。](../images/customization/resize-widget.png)
+![反白顯示具有調整大小之Widget的設定檔儀表板。](../images/customization/resize-widget.png)
 
 ## 儲存儀表板更新
 
-移動完成Widget並調整其大小後，選取 **[!UICONTROL 儲存並退出]** 以儲存您的變更並返回主儀表板檢視。 如果您不想保留變更，請選取 **[!UICONTROL 取消]** 以重設控制面板並返回主控制面板檢視。
+移動完成Widget並調整其大小後，選取&#x200B;**[!UICONTROL 儲存並退出]**&#x200B;以儲存您的變更並返回主儀表板檢視。 如果您不想保留變更，請選取&#x200B;**[!UICONTROL 取消]**&#x200B;以重設儀表板，並返回主儀表板檢視。
 
-![「設定檔」儀表板會反白顯示「取消」和「儲存並退出」。](../images/customization/save-changes.png)
+![同時顯示[取消]和[儲存並結束]的設定檔儀表板。](../images/customization/save-changes.png)
 
-## Widget資料庫
+## 介面工具資料庫
 
-除了調整大小與重新排序Widget，請選取 **[!UICONTROL 修改儀表板]** 在 [!UICONTROL 設定檔]， [!UICONTROL 區段]、和 [!UICONTROL 目的地] 控制面板可讓您存取 **[!UICONTROL Widget資料庫]** 您可在此找到更多要顯示或建立組織自訂Widget的Widget。
+除了重新調整大小及排序Widget之外，在[!UICONTROL 設定檔]、[!UICONTROL 區段]和[!UICONTROL 目的地]儀表板中選取&#x200B;**[!UICONTROL 修改儀表板]**，可讓您存取&#x200B;**[!UICONTROL Widget程式庫]**，您可在此找到更多要顯示的Widget，或為貴組織建立自訂Widget。
 
-如需如何存取和使用的逐步指示 [!UICONTROL Widget資料庫]，請參閱 [widget library指南](widget-library.md).
+如需如何存取及使用[!UICONTROL Widget資料庫]的逐步指示，請參閱[Widget資料庫指南](widget-library.md)。
 
-![Widget程式庫工作區中的「標準」和「自訂」會反白顯示。](../images/customization/widget-library.png)
+![標示為「標準」和「自訂」的Widget程式庫工作區。](../images/customization/widget-library.png)
 
 ## 後續步驟
 
-閱讀本檔案後，您已瞭解如何使用修改儀表板功能來重新排序和調整Widget大小以自訂您的儀表板檢視。 若要瞭解如何建立並新增Widget至您的儀表板，請閱讀 [widget library指南](widget-library.md).
+閱讀本檔案後，您已瞭解如何使用修改儀表板功能來重新排序和調整Widget大小以自訂您的儀表板檢視。 若要瞭解如何建立並新增Widget至您的儀表板，請閱讀[Widget程式庫指南](widget-library.md)。

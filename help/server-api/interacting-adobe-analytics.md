@@ -1,6 +1,6 @@
 ---
 title: 與Adobe Analytics互動
-description: 瞭解如何使用Edge Network Server API與Adobe Analytics互動。
+description: 瞭解如何使用Edge Network伺服器API與Adobe Analytics互動。
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 1%
 
 ## 概觀 {#overview}
 
-Adobe Analytics資料收集的運作方式是將XDM資料轉譯成Adobe Analytics可以理解的格式。 多個XDM欄位包括 [自動對應](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=zh-Hant) 至Analytics變數。 您也可以手動將XDM值對應至舊版Analytics變數。
+Adobe Analytics資料收集的運作方式是將XDM資料轉譯成Adobe Analytics可以理解的格式。 多個XDM欄位是[自動對應到Analytics變數的](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html)。 您也可以手動將XDM值對應至舊版Analytics變數。
 
-若要讓Adobe Analytics能夠接收來自伺服器API的資料，您必須 [設定您的資料串流](../datastreams/overview.md#adobe-analytics-settings) 若要將事件轉送至Adobe Analytics，請在資料流設定頁面中輸入報表套裝ID。
+若要讓Adobe Analytics能夠接收來自伺服器API的資料，您需要[設定資料流](../datastreams/overview.md#adobe-analytics-settings)，以在資料流設定頁面中輸入報表套裝ID，將事件轉送至Adobe Analytics。
 
-![Adobe Analytics資料流設定](assets/analytics-datastream.png)
+![Adobe Analytics資料流組態](assets/analytics-datastream.png)
 
 ## 與Adobe Analytics互動 {#interacting-analytics}
 
@@ -29,7 +29,7 @@ POST /ee/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### 請求 {#request}
 
-以下範例包含數個自動對映的值，來自 `_experience.analytics` 欄位群組。 它也包括以JSON為基礎的資料層。 雖然這些資料層無法自動對應，但您可以使用 [資料收集的資料準備](../datastreams/data-prep.md) 將這些值對應到包含上述欄位群組的結構描述。
+下列範例包含來自`_experience.analytics`欄位群組的數個自動對應值。 它也包括以JSON為基礎的資料層。 雖然這些資料層無法自動對應，但可以使用[資料收集的資料準備](../datastreams/data-prep.md)將這些值對應到包含上述欄位群組的結構描述。
 
 使用者對應到這些欄位的所有值都會自動對應到適當的Analytics值，就像這些值包含在API請求中一樣。
 

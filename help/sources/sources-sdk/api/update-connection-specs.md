@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源sdk；sdk；SDK
+keywords: Experience Platform；首頁；熱門主題；來源；聯結器；來源聯結器；來源SDK；SDK
 title: 使用流程服務API更新連線規格
 description: 您可以透過PUT操作更新連線規格的屬性。
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
@@ -22,7 +22,7 @@ PUT /connectionSpecs/{CONNECTION_SPEC_ID}
 
 **要求**
 
-以下請求會更新 `name` 的 [!DNL MailChimp] 在上一步建立的來源。
+下列要求會更新先前步驟中建立之[!DNL MailChimp]來源的`name`。
 
 ```shell
 PUT -X GET \

@@ -11,20 +11,20 @@ ht-degree: 1%
 
 ---
 
-# 篩選 [!DNL Catalog] 使用查詢引數的資料
+# 使用查詢引數篩選[!DNL Catalog]資料
 
-此 [!DNL Catalog Service] API可讓您透過使用請求查詢引數來篩選回應資料。 最佳實務的一部分， [!DNL Catalog] 是在所有API呼叫中使用篩選器，因為它們會降低API的負載，並有助於改善整體效能。
+[!DNL Catalog Service] API允許透過使用要求查詢引數來篩選回應資料。 [!DNL Catalog]的部分最佳實務是在所有API呼叫中使用篩選器，因為它們會降低API的負載，並有助於改善整體效能。
 
-本檔案會概述最常見的篩選方法 [!DNL Catalog] API中的物件。 建議您在閱讀 [目錄開發人員指南](getting-started.md) 以進一步瞭解如何與 [!DNL Catalog] API。 如需更多一般資訊，請參閱 [!DNL Catalog Service]，請參閱 [[!DNL Catalog] 概述](../home.md).
+本檔案概述篩選API中[!DNL Catalog]物件的最常見方法。 在閱讀[目錄開發人員指南](getting-started.md)時，建議您參考此檔案，以進一步瞭解如何與[!DNL Catalog] API互動。 如需[!DNL Catalog Service]的一般資訊，請參閱[[!DNL Catalog] 概觀](../home.md)。
 
 ## 限制傳回的物件
 
-此 `limit` 查詢引數會限制回應中傳回的物件數。 [!DNL Catalog] 會根據設定的限制自動計量回應：
+`limit`查詢引數會限制回應中傳回的物件數目。 [!DNL Catalog]回應會根據設定的限制自動計量：
 
-* 如果 `limit` 未指定引數，每個回應裝載的物件數目上限為20。
-* 針對資料集查詢，如果 `observableSchema` 是使用 `properties` 查詢引數，傳回的資料集數目上限為20。
+* 如果未指定`limit`引數，則每個回應承載的物件數目上限為20。
+* 針對資料集查詢，如果使用`properties`查詢引數要求`observableSchema`，則傳回的資料集數目上限為20。
 * 所有其他目錄查詢的全域限製為100個物件。
-* 無效 `limit` 引數(包括 `limit=0`)會產生400層級的錯誤回應，指出適當的範圍。
+* 無效的`limit`引數（包括`limit=0`）會產生概述正確範圍的400層級錯誤回應。
 * 以查詢引數傳遞的限制或位移優先於以標頭傳遞的限制或位移。
 
 **API格式**
@@ -35,7 +35,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{LIMIT}` | 整數，表示傳回的物件數目，範圍從1到100。 |
 
 **要求**
@@ -53,7 +53,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回資料集清單，數量限製為 `limit` 查詢引數。
+成功的回應會傳回資料集清單，限制在`limit`查詢引數所指示的數量。
 
 ```json
 {
@@ -75,11 +75,11 @@ curl -X GET \
 
 ## 限制顯示的屬性
 
-即使使用篩選傳回的物件數 `limit` 引數，傳回的物件本身通常可包含比您實際需要更多的資訊。 若要進一步降低系統的負載，最佳實務是篩選回應，僅包含您需要的屬性。
+即使使用`limit`引數篩選傳回的物件數目，傳回的物件本身通常也會包含超出您實際需要的更多資訊。 若要進一步降低系統的負載，最佳實務是篩選回應，僅包含您需要的屬性。
 
-此 `properties` 引數會篩選回應物件，以只傳回一組指定的屬性。 引數可以設定為傳回一或多個屬性。
+`properties`引數會篩選回應物件，以只傳回一組指定的屬性。 引數可以設定為傳回一或多個屬性。
 
-此 `properties` 引數可以接受任何層級的物件屬性。 `sampleKey` 可使用以下專案擷取 `?properties=subItem.sampleKey`.
+`properties`引數可以接受任何層級的物件屬性。 可以使用`?properties=subItem.sampleKey`擷取`sampleKey`。
 
 ```json
 {
@@ -103,13 +103,13 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY}` | 要包含在回應本文中的屬性名稱。 |
-| `{OBJECT_ID}` | 特定專案的唯一識別碼 [!DNL Catalog] 正在擷取的物件。 |
+| `{OBJECT_ID}` | 正在擷取之特定[!DNL Catalog]物件的唯一識別碼。 |
 
 **要求**
 
-以下請求會擷取資料集清單。 以下提供的逗號分隔屬性名稱清單： `properties` 引數會指出回應中傳回的屬性。 A `limit` 也包含引數，這會限制傳回的資料集數目。 如果請求未包含 `limit` 引數，回應最多可包含20個物件。
+以下請求會擷取資料集清單。 在`properties`引數下提供的以逗號分隔的屬性名稱清單指示要在回應中傳回的屬性。 也包含`limit`引數，這會限制傳回的資料集數目。 如果要求不包含`limit`引數，回應最多將包含20個物件。
 
 ```shell
 curl -X GET \
@@ -122,7 +122,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回以下清單 [!DNL Catalog] 只顯示請求屬性的物件。
+成功的回應會傳回[!DNL Catalog]物件清單，其中只顯示要求的屬性。
 
 ```json
 {
@@ -156,13 +156,13 @@ curl -X GET \
 
 >[!NOTE]
 >
->在 `schemaRef` 屬性中，版本號碼代表結構描述的最新次要版本。 請參閱以下小節： [方案版本設定](../../xdm/api/getting-started.md#versioning) XDM API指南以瞭解詳細資訊。
+>在每個資料集的`schemaRef`屬性中，版本號碼會指出結構描述的最新次要版本。 如需詳細資訊，請參閱XDM API指南中[架構版本設定](../../xdm/api/getting-started.md#versioning)的相關章節。
 
 ## 回應清單的位移開始索引
 
-此 `start` 查詢引數會使用從零開始的編號，將回應清單向前位移指定的編號。 例如， `start=2` 會將回應位移，以便在列出的第三個物件上啟動。
+`start`查詢引數會使用從零開始的編號，將回應清單向前位移指定的數字。 例如，`start=2`會將回應位移，以在列出的第三個物件上啟動。
 
-如果 `start` 引數未與配對 `limit` 引數，傳回的物件數目上限為20。
+如果`start`引數未與`limit`引數配對，則傳回的物件數目上限為20。
 
 **API格式**
 
@@ -177,7 +177,7 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 **要求**
 
-以下請求會擷取資料集清單，位移至第五個物件(`start=4`)並將回應限製為兩個傳回的資料集(`limit=2`)。
+下列要求會擷取資料集清單，將位移至第五個物件(`start=4`)，並將回應限製為兩個傳回的資料集(`limit=2`)。
 
 ```shell
 curl -X GET \
@@ -190,7 +190,7 @@ curl -X GET \
 
 **回應**
 
-回應包含的JSON物件包含兩個頂層專案(`limit=2`)，每個資料集各一個，其詳細資訊（範例中已壓縮詳細資訊）。 回應會偏移四點(`start=4`)，表示所示資料集依時間順序為第五和第六個。
+回應包含JSON物件，其中包含兩個頂層專案(`limit=2`)、每個資料集一個專案及其詳細資料（範例中已壓縮詳細資料）。 回應會偏移四(`start=4`)，表示顯示的資料集依時間順序為第五和第六位。
 
 ```json
 {
@@ -201,18 +201,18 @@ curl -X GET \
 
 ## 依標籤篩選
 
-有些目錄物件支援使用 `tags` 屬性。 標籤可以將資訊附加至物件，之後再用來擷取該物件。 您要使用哪些標籤以及如何套用這些標籤，取決於您的組織程式。
+部分目錄物件支援使用`tags`屬性。 標籤可以將資訊附加至物件，之後再用來擷取該物件。 您要使用哪些標籤以及如何套用這些標籤，取決於您的組織程式。
 
 使用標籤時，需考量幾項限制：
 
 * 目前支援標籤的目錄物件只有資料集、批次和連線。
 * 標籤名稱對您的組織是唯一的。
 * Adobe程式可能會針對特定行為利用標籤。 這些標籤的名稱會以「adobe」作為標準前置詞。 因此，宣告標籤名稱時，應避免此慣例。
-* 以下標籤名稱保留供以下使用： [!DNL Experience Platform]，因此無法宣告為您的組織的標籤名稱：
-   * `unifiedProfile`：此標籤名稱是保留給要內嵌的資料集 [[!DNL Real-Time Customer Profile]](../../profile/home.md).
-   * `unifiedIdentity`：此標籤名稱是保留給要內嵌的資料集 [[!DNL Identity Service]](../../identity-service/home.md).
+* 下列標籤名稱保留供[!DNL Experience Platform]使用，因此不能宣告為您的組織的標籤名稱：
+   * `unifiedProfile`：此標籤名稱已保留給[[!DNL Real-Time Customer Profile]](../../profile/home.md)要內嵌的資料集。
+   * `unifiedIdentity`：此標籤名稱已保留給[[!DNL Identity Service]](../../identity-service/home.md)要內嵌的資料集。
 
-以下是包含下列專案的資料集範例： `tags` 屬性。 該屬性中的標籤會採取索引鍵值配對的形式，每個標籤值都會顯示為包含單一字串的陣列：
+以下是包含`tags`屬性的資料集範例。 該屬性中的標籤會採取索引鍵值配對的形式，每個標籤值都會顯示為包含單一字串的陣列：
 
 ```json
 {
@@ -240,9 +240,9 @@ curl -X GET \
 
 **API格式**
 
-的值 `tags` 引數採用機碼值組的形式，使用格式 `{TAG_NAME}:{TAG_VALUE}`. 多個索引鍵/值組可以逗號分隔清單的形式提供。 提供多個標籤時，會假設AND關係。
+`tags`引數的值採用機碼值組的形式，使用格式`{TAG_NAME}:{TAG_VALUE}`。 多個索引鍵/值組可以逗號分隔清單的形式提供。 提供多個標籤時，會假設AND關係。
 
-引數支援萬用字元(`*`)作為標籤值。 例如，搜尋字串 `test*` 傳回標籤值開頭為「test」的任何物件。 僅由萬用字元組成的搜尋字串可用來根據物件是否包含特定標籤來篩選物件，無論其值為何。
+引數支援標籤值的萬用字元(`*`)。 例如，`test*`的搜尋字串會傳回標籤值以「test」開頭的任何物件。 僅由萬用字元組成的搜尋字串可用來根據物件是否包含特定標籤來篩選物件，無論其值為何。
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -253,7 +253,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | 要作為篩選依據的標籤名稱。 |
 | `{TAG_VALUE}` | 要作為篩選依據的標籤值。 支援萬用字元(`*`)。 |
 
@@ -272,7 +272,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應會傳回包含的資料集清單 `sampleTag` 值為「123456」，並且 `secondTag` 具有任何值。 除非也指定限制，否則回應最多包含20個物件。
+成功的回應會傳回資料集清單，該資料集包含值為「123456」的`sampleTag`以及任何值的`secondTag`。 除非也指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -320,7 +320,7 @@ curl -X GET \
 
 ## 依日期範圍篩選
 
-中的某些端點 [!DNL Catalog] API的查詢引數允許範圍查詢，最常見的是日期查詢。
+[!DNL Catalog] API中某些端點的查詢引數允許範圍查詢，最常見的是日期查詢。
 
 **API格式**
 
@@ -347,7 +347,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應包含清單 [!DNL Catalog] 在指定日期範圍內的物件。 除非也指定限制，否則回應最多包含20個物件。
+成功的回應包含指定日期範圍內的[!DNL Catalog]物件清單。 除非也指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -376,11 +376,11 @@ curl -X GET \
 
 ## 依屬性排序
 
-此 `orderBy` 查詢引數可讓您根據指定的屬性值來排序（排序）回應資料。 此引數需要「direction」(`asc` 遞增或 `desc` （表示降序），後面接著冒號(`:`)，然後是排序結果的屬性。 如果未指定方向，預設方向會遞增。
+`orderBy`查詢引數可讓您根據指定的屬性值來排序（排序）回應資料。 此引數需要「方向」（`asc`為遞增或`desc`為遞減），後面接著冒號(`:`)，然後是排序結果的屬性。 如果未指定方向，預設方向會遞增。
 
 能以逗號分隔的清單提供多個排序屬性。 如果第一個排序屬性產生多個物件，且這些物件包含該屬性的相同值，則會使用第二個排序屬性來進一步排序這些相符的物件。
 
-例如，請考量下列查詢： `orderBy=name,desc:created`. 結果會根據第一個排序屬性以遞增順序排序。 `name`. 若有多個記錄共用相同專案 `name` 屬性，符合的記錄會依第二個排序屬性排序， `created`. 如果沒有傳回的記錄共用相同的 `name`，則 `created` 屬性不會納入排序的考量。
+例如，請考量下列查詢： `orderBy=name,desc:created`。 結果會根據第一個排序屬性`name`以遞增順序排序。 如果有多個記錄共用相同的`name`屬性，則這些相符的記錄會依第二個排序屬性`created`排序。 如果沒有傳回的記錄共用相同的`name`，則`created`屬性不會納入排序中。
 
 
 **API格式**
@@ -398,7 +398,7 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 **要求**
 
-下列請求會擷取按其排序的資料集清單 `name` 屬性。 如果任何資料集共用相同的 `name`，這些資料集將依次由其網站的 `updated` 屬性遞減排序。
+下列請求會擷取按資料集`name`屬性排序的資料集清單。 如果任何資料集共用相同的`name`，這些資料集將依次按其`updated`屬性以降序排序。
 
 ```shell
 curl -X GET \
@@ -411,7 +411,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應包含清單 [!DNL Catalog] 根據下列專案排序的物件： `orderBy` 引數。 除非也指定限制，否則回應最多包含20個物件。
+成功的回應包含根據`orderBy`引數排序的[!DNL Catalog]物件清單。 除非也指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -450,18 +450,18 @@ curl -X GET \
 
 ## 依屬性篩選
 
-[!DNL Catalog] 提供兩種依屬性篩選的方法，以下幾節將進一步概述這些方法：
+[!DNL Catalog]提供兩種依屬性篩選的方法，以下幾節將對這些方法做進一步概述：
 
-* [使用簡單篩選器](#using-simple-filters)：依特定屬性是否符合特定值篩選。
-* [使用屬性引數](#using-the-property-parameter)：使用條件運算式來根據屬性是否存在，或如果屬性的值符合、接近或比較另一個指定值或規則運算式來篩選。
+* [使用簡單篩選器](#using-simple-filters)：依特定屬性是否符合特定值來篩選。
+* [使用屬性引數](#using-the-property-parameter)：使用條件運算式來篩選屬性是否存在，或屬性的值是否符合、近似或與其他指定值或規則運算式比較。
 
 ### 使用簡單篩選器 {#using-simple-filters}
 
-簡單篩選器可讓您根據特定屬性值來篩選回應。 簡單篩選採用以下形式 `{PROPERTY_NAME}={VALUE}`.
+簡單篩選器可讓您根據特定屬性值來篩選回應。 簡單篩選器採用`{PROPERTY_NAME}={VALUE}`的形式。
 
-例如，查詢 `name=exampleName` 只傳回物件，如果 `name` 屬性包含「exampleName」的值。 相反地，查詢 `name=!exampleName` 只傳回物件，如果 `name` 屬性為 **非** &quot;exampleName&quot;。
+例如，查詢`name=exampleName`只傳回`name`屬性包含「exampleName」值的物件。 相較之下，查詢`name=!exampleName`只傳回`name`屬性為&#x200B;**而非** &quot;exampleName&quot;的物件。
 
-此外，簡單篩選器可支援查詢單一屬性的多個值。 提供多個值時，回應會傳回屬性相符的物件 **任何** 提供的清單中的值。 您可以藉由為多值查詢加上前置詞來反轉 `!` 字元至清單，只傳回屬性值為的物件 **非** 在提供的清單中(例如， `name=!exampleName,anotherName`)。
+此外，簡單篩選器可支援查詢單一屬性的多個值。 提供多個值時，回應會傳回其屬性符合所提供清單中&#x200B;**any**&#x200B;個值的物件。 您可以在清單中加上`!`字元前置詞，以反轉多值查詢，只傳回所提供清單中屬性值為&#x200B;**而非**&#x200B;的物件（例如`name=!exampleName,anotherName`）。
 
 **API格式**
 
@@ -474,13 +474,13 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{PROPERTY_NAME}` | 您要用來篩選其值的屬性名稱。 |
 | `{VALUE}` | 決定要包含（或排除，視查詢而定）之結果的屬性值。 |
 
 **要求**
 
-以下請求會擷取資料集清單，這些資料集經篩選後僅會包含 `name` 屬性的值為「exampleName」或「anotherName」。
+下列請求會擷取資料集清單，經篩選後僅納入其`name`屬性值為「exampleName」或「anotherName」的資料集。
 
 ```shell
 curl -X GET \
@@ -493,7 +493,7 @@ curl -X GET \
 
 **回應**
 
-成功的回應包含資料集清單，但不包括任何資料集 `name` 為「exampleName」或「anotherName」。 除非也指定限制，否則回應最多包含20個物件。
+成功的回應包含資料集清單，排除`name`為「exampleName」或「anotherName」的任何資料集。 除非也指定限制，否則回應最多包含20個物件。
 
 ```json
 {
@@ -520,11 +520,11 @@ curl -X GET \
 }
 ```
 
-### 使用 `property` 引數 {#using-the-property-parameter}
+### 使用`property`引數 {#using-the-property-parameter}
 
-此 `property` 查詢引數比簡單篩選更能提供屬性型篩選的彈性。 除了依據屬性是否具備特定值進行篩選之外， `property` 引數可使用其他比較運運算元(例如「大於」(`>`)和「小於」(`<`))以及規則運算式，以依據屬性值篩選。 它也可以依屬性是否存在進行篩選，無論其值為何。
+`property`查詢引數比簡單篩選提供更大的彈性以屬性為基礎的篩選。 除了根據屬性是否具有特定值來進行篩選之外，`property`引數還可以使用其他比較運運算元(例如「大於」(`>`)和「小於」(`<`))以及規則運算式來依屬性值進行篩選。 它也可以依屬性是否存在進行篩選，無論其值為何。
 
-此 `property` 引數可以接受任何層級的物件屬性。 `sampleKey` 可用於篩選，使用 `?properties=subItem.sampleKey`.
+`property`引數可以接受任何層級的物件屬性。 `sampleKey`可以使用`?properties=subItem.sampleKey`進行篩選。
 
 ```json
 {
@@ -546,18 +546,18 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | 參數 | 說明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 型別 [!DNL Catalog] 物件。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | 要擷取的[!DNL Catalog]物件型別。 有效的物件包括： <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{CONDITION}` | 指示要查詢的屬性以及如何評估其值的條件運算式。 範例如下。 |
 
-的值 `property` 引數支援數種不同的條件運算式。 下表概述支援運算式的基本語法：
+`property`引數的值支援數種不同的條件運算式。 下表概述支援運算式的基本語法：
 
 | 符號 | 說明 | 範例 |
 | --- | --- | --- |
 | （無） | 若不含運運算元而陳述屬性名稱，則只會傳回屬性存在的物件，無論其值為何。 | `property=name` |
-| ！ | 加上「`!`」至的值 `property` 引數只會傳回屬性執行的物件 **非** 存在。 | `property=!name` |
-| ~ | 只傳回屬性值（字串）符合波狀符號(`~`)符號。 | `property=name~^example` |
-| == | 只傳回屬性值完全符合雙等符號(`==`)。 | `property=name==exampleName` |
-| != | 只傳回屬性值具有下列特性的物件： **非** 不等於符號(`!=`)。 | `property=name!=exampleName` |
+| ！ | 將&quot;`!`&quot;前置詞設為`property`引數的值，只會傳回屬性&#x200B;**不**&#x200B;存在的物件。 | `property=!name` |
+| ~ | 只傳回屬性值（字串）符合在波狀符號(`~`)後面提供的規則運算式的物件。 | `property=name~^example` |
+| == | 只傳回其屬性值完全符合雙等號(`==`)之後提供的字串的物件。 | `property=name==exampleName` |
+| ！= | 只傳回屬性值不符合&#x200B;**不**&#x200B;和不等於符號(`!=`)後面提供的字串的物件。 | `property=name!=exampleName` |
 | &lt; | 只傳回屬性值小於（但不等於）指定數量的物件。 | `property=version<1.0.0` |
 | &lt;= | 只傳回屬性值小於（或等於）指定數量的物件。 | `property=version<=1.0.0` |
 | > | 只傳回屬性值大於（但不等於）指定數量的物件。 | `property=version>1.0.0` |
@@ -565,7 +565,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 >[!NOTE]
 >
->此 `name` 屬性支援使用萬用字元 `*`，當作整個搜尋字串或其中一部分。 萬用字元與空白字元相符，例如搜尋字串 `te*st` 會符合「test」值。 將星號加倍以逸出星號(`**`)。 搜尋字串中的雙星號代表單一星號為常值字串。
+>`name`屬性支援使用萬用字元`*`，做為整個搜尋字串或其中一部分。 萬用字元與空白字元相符，因此搜尋字串`te*st`會符合「test」值。 將星號加倍(`**`)以逸出星號。 搜尋字串中的雙星號代表單一星號為常值字串。
 
 **要求**
 
@@ -621,7 +621,7 @@ curl -X GET \
 
 ## 合併多個篩選器
 
-使用&amp;符號(`&`)，您便可以在單一請求中合併多個篩選器。 將其他條件新增至請求時，假設為AND關係。
+使用&amp;符號(`&`)，您可以在單一要求中合併多個篩選器。 將其他條件新增至請求時，假設為AND關係。
 
 **API格式**
 

@@ -12,30 +12,30 @@ ht-degree: 1%
 
 # 存取ECID
 
-此 [!DNL Experience Cloud Identity (ECID)] 是使用者造訪您的網站時，指派給使用者的持續性識別碼。 在某些情況下，您可能會偏好存取 [!DNL ECID] （例如，傳送給第三方）。 另一個使用案例是設定 [!DNL ECID] 在自訂XDM欄位中，身分對應中也會有。
+[!DNL Experience Cloud Identity (ECID)]是指派給使用者造訪您網站時的持續性識別碼。 在某些情況下，您可能會偏好存取[!DNL ECID] （例如，將其傳送給第三方）。 除了在身分對應中設定[!DNL ECID]之外，另一個使用案例是在自訂XDM欄位中設定。
 
-您可透過以下方式存取ECID： [資料收集的資料準備](../../../../datastreams/data-prep.md) （建議）或透過標籤。
+您可以透過[資料收集的資料準備](../../../../datastreams/data-prep.md) （建議）或標籤存取ECID。
 
 ## 透過「資料準備」存取ECID （偏好方法） {#accessing-ecid-data-prep}
 
-如果您想在自訂XDM欄位中設定ECID，除了在身分對應中擁有它之外，您還可以透過設定 `source` 至下列路徑：
+如果您打算在自訂XDM欄位中設定ECID，除了在身分對應中擁有它之外，您還可以透過將`source`設定為以下路徑來執行此操作：
 
 ```js
 xdm.identityMap.ECID[0].id
 ```
 
-然後，將目標設定為欄位屬於型別的XDM路徑 `string`.
+然後，將目標設定為欄位型別為`string`的XDM路徑。
 
 ![](./assets/access-ecid-data-prep.png)
 
 ## 標記
 
-如果您需要存取 [!DNL ECID] 在使用者端，使用如下所述的標籤方法。
+如果您需要在使用者端存取[!DNL ECID]，請使用如下所述的標籤方法。
 
-1. 確定您的屬性已設定為 [規則元件排序](../../../ui/managing-resources/rules.md#sequencing) 已啟用。
-1. 建立新規則。 此規則應僅用於擷取 [!DNL ECID] 而不執行任何其他重要動作。
-1. 新增 [!UICONTROL 程式庫已載入] 事件至規則。
-1. 新增 [!UICONTROL 自訂程式碼] 對規則的動作，包含下列程式碼(假設您已為SDK執行個體設定的名稱為 `alloy` 而且還沒有相同名稱的資料元素)：
+1. 確定您的屬性已設定為啟用[規則元件排序](../../../ui/managing-resources/rules.md#sequencing)。
+1. 建立新規則。 此規則應僅用於擷取[!DNL ECID]，而不包含任何其他重要動作。
+1. 將[!UICONTROL 載入的程式庫]事件新增至規則。
+1. 使用下列程式碼將[!UICONTROL 自訂程式碼]動作新增至規則（假設您已為SDK執行個體設定的名稱為`alloy`，而且還沒有相同名稱的資料元素）：
 
    ```js
     return alloy("getIdentity")
@@ -46,4 +46,4 @@ xdm.identityMap.ECID[0].id
 
 1. 儲存規則。
 
-之後，您應該能夠存取 [!DNL ECID] 在後續規則中，使用 `%ECID%` 或 `_satellite.getVar("ECID")`，就像存取任何其他資料元素一樣。
+之後，您應該能夠使用`%ECID%`或`_satellite.getVar("ECID")`存取後續規則中的[!DNL ECID]，就像存取任何其他資料元素一樣。

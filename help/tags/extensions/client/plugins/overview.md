@@ -4,8 +4,8 @@ description: 瞭解Adobe Experience Platform中的常見Analytics標籤擴充功
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 77%
+source-wordcount: '399'
+ht-degree: 68%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品文件中出現了幾項術語變更。 如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
+>Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
 
 此參考資料會說明設定常見 Analytics 外掛程式擴充功能的相關資訊，以及使用此擴充功能擴大 [!DNL Adobe Analytics] 擴充功能時可用的選項。
 
@@ -58,7 +58,7 @@ ht-degree: 77%
 
 ## 常見Analytics外掛程式擴充功能資料元素
 
-「常用Analytics外掛程式」擴充功能提供下列資料元素，這些資料元素會運用標籤功能，在Analytics中設定對應的外掛程式：
+常見Analytics外掛程式擴充功能中提供下列資料元素，這些功能會運用標籤功能在Analytics中設定其對應的外掛程式：
 
 * `getGeoCoordinates`
 * `getNewRepeat`
@@ -71,4 +71,4 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->如需上述外掛程式的詳細資訊，請參閱 [Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html).
+>如需上述外掛程式的詳細資訊，請參閱[Analytics檔案](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html)。

@@ -9,9 +9,9 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL 曝光數] 資料型別
+# [!UICONTROL 曝光次數]資料型別
 
-[!UICONTROL 曝光數] 是描述行銷印象的標準XDM資料型別，這是用於量化一段內容（例如廣告、數位貼文或網頁）的數位檢視或參與次數的量度。
+[!UICONTROL 曝光數]是描述行銷曝光數的標準XDM資料型別，這是用來量化廣告、數位貼文或網頁等內容數位檢視或參與次數的量度。
 
 ![](../images/data-types/impressions.png)
 
@@ -26,5 +26,5 @@ ht-degree: 6%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)

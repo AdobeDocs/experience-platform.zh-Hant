@@ -22,7 +22,7 @@ ht-degree: 45%
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
    * [XDM中的名稱空間](./schema/namespaces.md)
-   * 產業資料模型 {#industries}
+   * 產業資料模型{#industries}
       * [概觀](./schema/industries/overview.md)
       * [零售](./schema/industries/retail.md)
       * [金融服務](./schema/industries/financial.md)
@@ -41,7 +41,7 @@ ht-degree: 45%
    * [潛在客戶](./classes/prospect.md)
    * [提供者](./classes/provider.md)
    * [區段定義](./classes/segment-definition.md)
-   * B2B類別 {#b2b}
+   * B2B類別{#b2b}
       * [XDM 企業帳戶](./classes/b2b/business-account.md)
       * [XDM 商業帳戶個人關係](./classes/b2b/business-account-person-relation.md)
       * [XDM 商業活動](./classes/b2b/business-campaign.md)
@@ -50,8 +50,8 @@ ht-degree: 45%
       * [XDM 商業機會個人關係](./classes/b2b/business-opportunity-person-relation.md)
       * [XDM 業務行銷清單](./classes/b2b/business-marketing-list.md)
       * [XDM 業務行銷清單會員](./classes/b2b/business-marketing-list-members.md)
-* 欄位群組 {#field-groups}
-   * XDM個別設定檔 {#profile}
+* 欄位群組{#field-groups}
+   * XDM個別設定檔{#profile}
       * [同意和偏好設定](./field-groups/profile/consents.md)
       * [人口統計細節](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0 同意](./field-groups/profile/iab.md)
@@ -65,7 +65,7 @@ ht-degree: 45%
       * [工作聯絡詳細資訊](./field-groups/profile/work-contact-details.md)
       * [XDM 商業人士要素](./field-groups/profile/business-person-components.md)
       * [XDM 商業人士細節](./field-groups/profile/business-person-details.md)
-   * XDM個別潛在客戶設定檔 {#prospect-profile}
+   * XDM個別潛在客戶設定檔{#prospect-profile}
       * [合作夥伴潛在客戶詳細資訊（範例）](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics完整擴充功能](./field-groups/event/analytics-full-extension.md)
@@ -93,23 +93,23 @@ ht-degree: 45%
       * [升級細節](./field-groups/event/upgrade-details.md)
       * [追加銷售細節](./field-groups/event/upsell-details.md)
       * [網頁詳細資訊](./field-groups/event/web-details.md)
-   * XDM商業活動 {#b2b-campaign}
+   * XDM商業活動{#b2b-campaign}
       * [XDM 商業促銷活動細節](./field-groups/b2b-campaign/details.md)
-   * XDM商業活動會員 {#b2b-campaign-members}
+   * XDM商業活動會員{#b2b-campaign-members}
       * [XDM商業活動會員細節](./field-groups/b2b-campaign-members/details.md)
-   * 藥物 {#medication}
+   * 藥物{#medication}
       * [醫療保健藥物](./field-groups/medication/healthcare-medication.md)
-   * 計畫 {#plan}
+   * 計畫{#plan}
       * [醫療保健計畫詳細資料](./field-groups/plan/healthcare-plan-details.md)
-   * 產品 {#product}
+   * 產品{#product}
       * [產品目錄](./field-groups/product/product-catalog.md)
       * [產品類別](./field-groups/product/product-category.md)
-   * 提供者 {#provider}
+   * 提供者{#provider}
       * [醫療保健提供者](./field-groups/provider/healthcare-provider.md)
-   * 已共用 {#shared}
+   * 已共用{#shared}
       * [外部來源系統稽核詳細資料](./field-groups/shared/external-source-system-audit-details.md)
    * [欄位群組名稱更新](./field-groups/name-updates.md)
-* 資料型別 {#data-types}
+* 資料型別{#data-types}
    * [帳戶詳細資料](./data-types/account-details.md)
    * [廣告插播](./data-types/ad-break.md)
    * [地址](./data-types/address.md)
@@ -187,15 +187,15 @@ ht-degree: 45%
    * [Web資訊](./data-types/web-information.md)
    * [網路互動](./data-types/web-interaction.md)
    * [網頁細節](./data-types/webpage-details.md)
-* [!UICONTROL 方案] UI {#ui}
+* [!UICONTROL 結構描述] UI {#ui}
    * [概觀](./ui/overview.md)
    * [探索XDM資源](./ui/explore.md)
-   * 建立和編輯資源 {#resources}
+   * 建立和編輯資源{#resources}
       * [結構描述](./ui/resources/schemas.md)
       * [類別](./ui/resources/classes.md)
       * [欄位群組](./ui/resources/field-groups.md)
       * [資料類型](./ui/resources/data-types.md)
-   * 定義欄位 {#fields}
+   * 定義欄位{#fields}
       * [概觀](./ui/fields/overview.md)
       * [陣列欄位](./ui/fields/array.md)
       * [列舉欄位](./ui/fields/enum.md)
@@ -240,4 +240,4 @@ ht-degree: 45%
    * [建立臨時結構描述](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
 * [API 參考資料](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Platform發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)
+* [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

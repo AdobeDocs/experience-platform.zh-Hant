@@ -4,35 +4,35 @@ description: 瞭解如何將建議值新增到結構描述登入API中的字串�
 exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
 source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 0%
+source-wordcount: '654'
+ht-degree: 1%
 
 ---
 
 # 管理API中的建議值
 
-對於Experience Data Model (XDM)中的任何字串欄位，您可以定義 **列舉** 會限制欄位可擷取至預先定義集的值。 如果您嘗試將資料內嵌至列舉欄位，但值不符合其設定中定義的任何值，則會拒絕內嵌。
+對於體驗資料模型(XDM)中的任何字串欄位，您可以定義&#x200B;**列舉**，以限制欄位可擷取至預先定義集的值。 如果您嘗試將資料內嵌至列舉欄位，但值不符合其設定中定義的任何值，則會拒絕內嵌。
 
-相較於列舉，新增 **建議值** 至字串欄位不會限制其可擷取的值。 建議值反而會影響中可用的預先定義值 [區段UI](../../segmentation/ui/overview.md) 將字串欄位納入為屬性時。
+相較於列舉，將&#x200B;**建議值**&#x200B;新增至字串欄位不會限制其可擷取的值。 建議值反而會影響將字串欄位加入為屬性時，[分段UI](../../segmentation/ui/overview.md)中可用的預先定義值。
 
 >[!NOTE]
 >
->欄位更新的建議值大約會延遲5分鐘，才會反映在分段UI中。
+>欄位更新的建議值大約會延遲五分鐘，才會反映在分段UI中。
 
-本指南說明如何使用管理建議值 [結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). 如需在Adobe Experience Platform使用者介面中執行此動作的步驟，請參閱 [有關列舉和建議值的UI指南](../ui/fields/enum.md).
+本指南說明如何使用[結構描述登入API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/)管理建議值。 如需在Adobe Experience Platform使用者介面中執行此動作的步驟，請參閱列舉和建議值的[UI指南](../ui/fields/enum.md)。
 
 ## 先決條件
 
 本指南假設您熟悉XDM中結構描述構成的元素，以及如何使用結構描述登入API來建立和編輯XDM資源。 如需簡介，請參閱下列檔案：
 
-* [結構描述組合基本概念](../schema/composition.md)
-* [Schema Registry API指南](../api/overview.md)
+* [結構描述組合的基礎知識](../schema/composition.md)
+* [結構描述登入API指南](../api/overview.md)
 
-此外，強烈建議您檢閱 [列舉和建議值的演化規則](../ui/fields/enum.md#evolution) 如果您要更新現有欄位。 如果您正在管理參與聯合的結構描述建議值，請參閱 [合併列舉和建議值的規則](../ui/fields/enum.md#merging).
+如果您要更新現有欄位，也強烈建議您檢閱列舉和建議值的[演化規則](../ui/fields/enum.md#evolution)。 如果您正在管理參與聯合的結構描述建議值，請參閱合併列舉和建議值的[規則](../ui/fields/enum.md#merging)。
 
-## 組合
+## 構成
 
-在API中， **列舉** 欄位以 `enum` 陣列，而 `meta:enum` object為這些值提供好記的顯示名稱：
+在API中，**列舉**&#x200B;欄位的限制值以`enum`陣列表示，而`meta:enum`物件為這些值提供好記的顯示名稱：
 
 ```json
 "exampleStringField": {
@@ -51,9 +51,9 @@ ht-degree: 0%
 }
 ```
 
-對於列舉欄位，結構描述登入不允許 `meta:enum` 超出下列提供的值： `enum`，因為嘗試在這些限制以外擷取字串值不會通過驗證。
+對於列舉欄位，結構描述登入不允許`meta:enum`延伸超過`enum`下提供的值，因為嘗試在這些限制之外擷取字串值將不會通過驗證。
 
-或者，您可以定義不包含 `enum` 陣列且僅使用 `meta:enum` 物件表示 **建議值**：
+或者，您可以定義不包含`enum`陣列的字串欄位，而只使用`meta:enum`物件來表示&#x200B;**建議值**：
 
 ```json
 "exampleStringField": {
@@ -67,7 +67,7 @@ ht-degree: 0%
 }
 ```
 
-因為字串沒有 `enum` 陣列以定義限制，其 `meta:enum` 屬性可延伸以包含新值。
+由於字串沒有定義限制的`enum`陣列，因此可擴充其`meta:enum`屬性以包含新值。
 
 <!-- ## Manage suggested values for standard fields
 
@@ -75,13 +75,13 @@ For existing standard fields, you can [add suggested values](#add-suggested-stan
 
 ## 新增建議值至標準欄位 {#add-suggested-standard}
 
-若要擴充 `meta:enum` 在標準字串欄位中，您可以建立 [易記名稱描述項](../api/descriptors.md#friendly-name) 用於特定結構描述中相關欄位。
+若要擴充標準字串欄位的`meta:enum`，您可以為特定結構描述中相關欄位建立[好記名稱描述項](../api/descriptors.md#friendly-name)。
 
 >[!NOTE]
 >
->字串欄位的建議值只能在結構描述層級新增。 換句話說，擴充 `meta:enum` 一個結構描述中標準欄位的「 」不會影響其他採用相同標準欄位的結構描述。
+>字串欄位的建議值只能在結構描述層級新增。 換句話說，在一個結構描述中擴充標準欄位的`meta:enum`不會影響其他採用相同標準欄位的結構描述。
 
-下列請求會將建議值新增至標準 `eventType` 欄位(由 [XDM ExperienceEvent類別](../classes/experienceevent.md))中，為下所識別的結構描述而設的 `sourceSchema`：
+下列要求會將建議值新增至`sourceSchema`下識別之結構描述的標準`eventType`欄位（由[XDM ExperienceEvent類別](../classes/experienceevent.md)提供）：
 
 ```curl
 curl -X POST \
@@ -134,10 +134,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->如果標準欄位已包含下列值 `meta:enum`中，描述項的新值不會覆寫現有欄位，而是新增到上：
+>如果標準欄位已包含`meta:enum`下的值，則描述項中的新值不會覆寫現有欄位，而是加入到：
 >
->
-```json
+>```json
 >"standardField": {
 >   "type":"string",
 >   "title": "Example standard enum field",
@@ -215,18 +214,17 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 ## 管理自訂欄位的建議值 {#suggested-custom}
 
-若要管理 `meta:enum` 對於自訂欄位，您可以透過PATCH請求更新欄位的父類別、欄位群組或資料型別。
+若要管理自訂欄位的`meta:enum`，您可以透過PATCH要求更新欄位的父類別、欄位群組或資料型別。
 
 >[!WARNING]
 >
->相較於標準欄位，請更新 `meta:enum` 自訂欄位的「 」會影響使用該欄位的所有其他結構描述。 如果您不想讓變更在結構描述之間傳播，請考慮改為建立新的自訂資源：
+>與標準欄位相反，更新自訂欄位的`meta:enum`會影響使用該欄位的所有其他結構描述。 如果您不希望變更在結構描述之間傳播，請考慮改為建立新的自訂資源：
 >
 >* [建立自訂類別](../api/classes.md#create)
 >* [建立自訂欄位群組](../api/field-groups.md#create)
 >* [建立自訂資料型別](../api/data-types.md#create)
 
-
-以下請求會更新 `meta:enum` 自訂資料型別提供的「忠誠度」欄位中：
+下列請求會更新自訂資料型別所提供的「忠誠度」欄位的`meta:enum`：
 
 ```curl
 curl -X PATCH \
@@ -251,7 +249,7 @@ curl -X PATCH \
       ]'
 ```
 
-套用變更後，Schema Registry在擷取結構描述時提供以下回應（回應因空間而被截斷）：
+套用變更後，架構登入在擷取架構時，會以下列內容回應（回應因空間而被截斷）：
 
 ```json
 {
@@ -276,4 +274,4 @@ curl -X PATCH \
 
 ## 後續步驟
 
-本指南說明如何管理Schema Registry API中字串欄位的建議值。 請參閱指南： [在API中定義自訂欄位](./custom-fields-api.md) 有關如何建立不同欄位型別的詳細資訊。
+本指南說明如何管理Schema Registry API中字串欄位的建議值。 如需有關如何建立不同欄位型別的詳細資訊，請參閱[在API](./custom-fields-api.md)中定義自訂欄位的指南。

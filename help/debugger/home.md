@@ -15,12 +15,12 @@ ht-degree: 8%
 
 # Adobe Experience Platform Debugger概觀
 
-的Adobe Experience Platform Debugger擴充功能 [鉻黃](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) 會檢視您的網頁，並協助您找出Adobe Experience Cloud解決方案實作方式的相關問題。
+[Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)的Adobe Experience Platform Debugger擴充功能會檢查您的網頁，協助您找出Adobe Experience Cloud解決方案實作方式的相關問題。
 
 Platform Debugger可搭配其他Adobe啟用解決方案使用，以執行下列作業：
 
-1. 使用 [標籤](../tags/home.md) 插入啟動的程式碼 [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) 產品。
-1. 使用 [**[!UICONTROL Auditor ]**標籤](./auditor/overview.md) 在Platform Debugger中測試實作。
+1. 使用[標籤](../tags/home.md)插入會在您的頁面上啟用[Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=zh-Hant)產品的程式碼。
+1. 使用Platform Debugger中的[**[!UICONTROL Auditor ]**索引標籤](./auditor/overview.md)來測試您的實作。
 1. 在Platform Debugger中使用事件型和解決方案專用工具，針對Auditor發現的問題偵錯，或檢查實作的其他相關資訊。
 
 >[!NOTE]
@@ -34,7 +34,7 @@ Platform Debugger可搭配其他Adobe啟用解決方案使用，以執行下列�
 您可以使用Platform Debugger收集的資訊，進一步瞭解Experience Cloud解決方案的實作方式。 例如：
 
 * **標籤**：檢視頁面上部署了哪些屬性、環境和版本。
-* **Adobe Target**：檢視您符合或不符合哪些活動的資格及其原因。
+* **Adobe Target**：檢視您符合或不符合哪些活動的資格及原因。
 * **Adobe Analytics**：檢視目前頁面上作用中的報表套裝。
 
 ## 教學課程影片

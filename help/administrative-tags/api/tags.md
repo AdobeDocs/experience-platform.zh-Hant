@@ -2,19 +2,19 @@
 title: 整合標籤端點
 description: 瞭解如何使用Adobe Experience Platform API建立、更新、管理和刪除標籤類別和標籤。
 role: Developer
-source-git-commit: ede314d0cbe50514090915fccf7ef3c2a5254b7a
+exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 3%
 
 ---
 
-
 # 統一標籤端點
 
 >[!IMPORTANT]
 >
->這組端點的端點URL為 `https://experience.adobe.io`.
+>這組端點的端點URL是`https://experience.adobe.io`。
 
 標籤是一項可讓您管理中繼資料分類法的功能，可分類商業物件以便輕鬆探索和分類。 您之後可以透過將這些標籤新增到標籤類別來組織這些標籤到其他群組中。
 
@@ -22,19 +22,19 @@ ht-degree: 3%
 
 ## 快速入門
 
-本指南使用的端點是Adobe Experience Platform API的一部分。 在繼續之前，請檢閱 [快速入門手冊](./getting-started.md) 如需成功呼叫API所需的重要資訊，包括必要的標題以及如何讀取範例API呼叫
+本指南使用的端點是Adobe Experience Platform API的一部分。 繼續之前，請檢閱[快速入門手冊](./getting-started.md)以取得您成功呼叫API所需瞭解的重要資訊，包括必要的標頭以及如何讀取範例API呼叫
 
 ### 字彙
 
-下列字彙表著重說明 **標籤** 和 **標籤類別**.
+下列字彙表強調&#x200B;**標籤**&#x200B;與&#x200B;**標籤類別**&#x200B;之間的差異。
 
-- **標籤**：標籤可讓您管理商業物件的中繼資料分類法，好讓您可以分類這些物件，以便輕鬆探索和分類。
+- **標籤**：標籤可讓您管理商業物件的中繼資料分類法，讓您將這些物件分類，以便更輕鬆地進行探索和分類。
    - **未分類的標籤**：未分類的標籤是不屬於標籤類別的標籤。 依預設，建立的標籤將不會分類。
-- **標籤類別**：標籤類別可讓您將標籤分組為有意義的設定，讓您為標籤的用途提供更多內容。
+- **標籤類別**：標籤類別可讓您將標籤分組為有意義的集合，讓您提供更多標籤用途的內容。
 
 ## 擷取標籤類別的清單 {#get-tag-categories}
 
-您可以透過向以下網站發出GET請求，擷取屬於您組織的標籤類別清單： `/tagCategory` 端點。
+您可以向`/tagCategory`端點發出GET要求，以擷取屬於您組織的標籤類別清單。
 
 **API格式**
 
@@ -49,9 +49,9 @@ GET /tagCategory?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 結果清單的開始位置。 您可以使用它來指示結果分頁的開始索引。 | `start=a` |
 | `limit` | 每頁擷取的標籤類別數上限。 | `limit=20` |
-| `property` | 擷取標籤類別時，您要篩選的屬性。 支援的值包括： &lt;ul><li>`name`：標籤類別的名稱。</li></ul> | `property=name==category` |
-| `sortBy` | 標籤類別排序的順序。 支援的值包括 `name`， `createdAt`、和 `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | 標籤類別排序的方向。 支援的值包括 `asc` 和 `desc`. | `sortOrder=asc` |
+| `property` | 擷取標籤類別時，您要篩選的屬性。 支援的值包括： &lt;ul≥<li>`name`：標籤類別的名稱。</li></ul> | `property=name==category` |
+| `sortBy` | 標籤類別排序的順序。 支援的值包括`name`、`createdAt`和`modifiedAt`。 | `sortBy=name` |
+| `sortOrder` | 標籤類別排序的方向。 支援的值包括`asc`和`desc`。 | `sortOrder=asc` |
 
 **要求**
 
@@ -104,7 +104,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory
 >
 >只有系統管理員和產品管理員可以使用此API呼叫。
 
-您可以透過向以下網站發出POST請求，建立新的標籤類別： `/tagCategory` 端點。
+您可以向`/tagCategory`端點發出POST要求，以建立新的標籤類別。
 
 **API格式**
 
@@ -159,7 +159,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 ## 擷取特定標籤類別 {#get-tag-category}
 
-您可以透過向以下專案發出GET請求，擷取屬於您組織的特定標籤類別： `/tagCategory` 端點並指定標籤類別的ID。
+您可以向`/tagCategory`端點發出GET要求並指定標籤類別的ID，以擷取屬於您組織的特定標籤類別。
 
 **API格式**
 
@@ -224,7 +224,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-44
 >
 >只有系統管理員和產品管理員可以使用此API呼叫。
 
-您可以透過向以下專案發出PATCH請求，更新屬於您組織的特定標籤類別的詳細資料： `/tagCategory` 端點並指定標籤類別的ID。
+您可以對`/tagCategory`端點發出PATCH要求並指定標籤類別的ID，以更新屬於您組織的特定標籤類別的詳細資料。
 
 **API格式**
 
@@ -256,8 +256,8 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 | 參數 | 說明 |
 | --------- | ----------- |
-| `op` | 完成的作業。 若要更新特定標籤類別，請將此值設為 `replace`. |
-| `path` | 將更新的欄位路徑。 支援的值包括 `name` 和 `description`. |
+| `op` | 完成的作業。 若要更新特定標籤類別，請將此值設定為`replace`。 |
+| `path` | 將更新的欄位路徑。 支援的值包括`name`和`description`。 |
 | `value` | 要更新的欄位之更新值。 |
 | `from` | 要更新的欄位原始值。 |
 
@@ -291,7 +291,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 >
 >只有系統管理員和產品管理員可以使用此API呼叫。
 
-您可以透過向以下專案發出DELETE請求，刪除屬於您組織的特定標籤類別： `/tagCategory` 端點並指定標籤類別的ID。
+您可以刪除屬於您組織的特定標籤類別，方法是向`/tagCategory`端點發出DELETE要求並指定標籤類別的ID。
 
 **API格式**
 
@@ -323,7 +323,7 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b
 
 ## 擷取標籤清單 {#get-tags}
 
-您可以透過向以下網站發出GET請求，擷取屬於您組織的標籤清單： `/tags` 端點以及標籤類別的ID。
+您可以向`/tags`端點及標籤類別的ID發出GET要求，以擷取屬於您組織的標籤清單。
 
 **API格式**
 
@@ -338,9 +338,9 @@ GET /tags?{QUERY_PARAMETERS}
 | --------------- | ----------- | ------- |
 | `start` | 結果清單的開始位置。 您可以使用它來指示結果分頁的開始索引。 | `start=a` |
 | `limit` | 每頁要擷取的標籤數上限。 | `limit=20` |
-| `property` | 擷取標籤時，您要篩選的屬性。 支援的值包括：<ul><li>`name`：標籤的名稱。</li><li>`archived`：是否封存或取消封存標籤。 您可以將此值設為 `true` 或 `false`.</li><li>`tagCategoryId`：標籤所屬的標籤類別的ID。</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
-| `sortBy` | 標籤排序的順序。 支援的值包括 `name`， `createdAt`、和 `modifiedAt`. | `sortBy=name` |
-| `sortOrder` | 標籤類別排序的方向。 支援的值包括 `asc` 和 `desc`. | `sortOrder=asc` |
+| `property` | 擷取標籤時，您要篩選的屬性。 支援的值包括：<ul><li>`name`：標籤的名稱。</li><li>`archived`：標籤是否已封存或取消封存。 您可以將此值設定為`true`或`false`。</li><li>`tagCategoryId`：標籤所屬的標籤類別識別碼。</li></ul> | <ul><li>`property=name==TestTag`</li><li>`property=archived==false`</li><li>`property=tagCategoryId==e2b7c656-067b-4413-a366-adde0401df50`</li> |
+| `sortBy` | 標籤排序的順序。 支援的值包括`name`、`createdAt`和`modifiedAt`。 | `sortBy=name` |
+| `sortOrder` | 標籤類別排序的方向。 支援的值包括`asc`和`desc`。 | `sortOrder=asc` |
 
 
 **要求**
@@ -506,9 +506,9 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags?property=tagCategoryId=
 >
 >只有系統管理員和產品管理員可以使用此API呼叫，在指定的標籤類別中建立新標籤。
 >
->如果您要建立未分類的標籤，您可以 **非** 需要管理員許可權。
+>如果您要建立未分類的標籤，您不&#x200B;**需要**&#x200B;管理員許可權。
 
-您可以透過向以下網站發出POST請求來建立新標籤： `/tags` 端點。
+您可以對`/tags`端點發出POST要求，以建立新標籤。
 
 **API格式**
 
@@ -533,8 +533,8 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `name` | **必填**. 您要建立的標簽名稱。 |
-| `tagCategoryId` | *可選*. 您要標籤所屬的標籤類別ID。 如果未指定，則會建立標籤作為「未分類」類別的一部分。 |
+| `name` | **必要**。 您要建立的標簽名稱。 |
+| `tagCategoryId` | *選擇性*。 您要標籤所屬的標籤類別ID。 如果未指定，則會建立標籤作為「未分類」類別的一部分。 |
 
 +++
 
@@ -575,7 +575,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 ## 擷取特定標籤 {#get-tag}
 
-您可以透過向以下網站發出GET請求，擷取屬於您組織的特定標籤： `/tags` 端點，並指定您要擷取的標籤ID。
+您可以向`/tags`端點發出GET要求，並指定您要擷取之標籤的ID，藉此擷取屬於您組織的特定標籤。
 
 **API格式**
 
@@ -633,13 +633,13 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 | `modifiedBy` | 上次更新標籤的使用者ID。 |
 | `tagCategoryId` | 標籤所屬的標籤類別ID。 |
 | `tagCategoryName` | 標籤所屬的標籤類別名稱。 |
-| `archived` | 標籤的封存狀態。 如果設為 `true`，表示標籤已封存。 |
+| `archived` | 標籤的封存狀態。 如果設為`true`，表示標籤已封存。 |
 
 +++
 
 ## 驗證標籤 {#validate-tags}
 
-您可以透過向發出POST請求來驗證標籤是否存在 `/tags/validate` 端點。
+您可以透過向`/tags/validate`端點發出POST要求來驗證標籤是否存在。
 
 **API格式**
 
@@ -668,7 +668,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `ids` | 包含您要驗證之標籤ID清單的陣列。 |
-| `entity` | 請求驗證的實體。 您可以使用 `{API_KEY}` 此引數的值。 |
+| `entity` | 請求驗證的實體。 您可以針對此引數使用`{API_KEY}`值。 |
 
 +++
 
@@ -705,7 +705,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags/validate
 
 ## 更新特定標籤 {#update-tag}
 
-您可以透過向以下專案發出PATCH請求來更新指定的標籤： `/tags` 端點，並提供您要更新的標籤ID。
+您可以對`/tags`端點發出PATCH要求，並提供您要更新之標籤的ID，以更新指定的標籤。
 
 **API格式**
 
@@ -737,8 +737,8 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `op` | 需要完成的作業。 在此使用案例中，此設定一律為 `replace`. |
-| `path` | 將更新的欄位路徑。 支援的值包括 `name`， `archived`、和 `tagCategoryId`. |
+| `op` | 需要完成的作業。 在此使用案例中，一律會設為`replace`。 |
+| `path` | 將更新的欄位路徑。 支援的值包括`name`、`archived`和`tagCategoryId`。 |
 | `value` | 要更新的欄位之更新值。 |
 | `from` | 要更新的欄位原始值。 |
 
@@ -773,9 +773,9 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 >
 >只有系統管理員和產品管理員可以使用此API呼叫。
 >
->此外，標籤 **無法** 與任何企業物件相關聯，並且 **必須** 在您可以刪除標籤之前先封存。 您可以使用封存標籤 [更新標籤端點](#update-tag).
+>此外，標籤&#x200B;**無法**&#x200B;與任何企業物件相關聯，而且&#x200B;**必須**&#x200B;封存才能刪除標籤。 您可以使用[更新標籤端點](#update-tag)來封存標籤。
 
-您可以透過對以下專案建立DELETE標籤來刪除特定標籤： `/tags` 並指定您要刪除之標籤的ID。
+您可以對`/tags`端點建立DELETE標籤，並指定您要刪除之標籤的ID，以刪除特定標籤。
 
 **API格式**
 
@@ -807,4 +807,4 @@ curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-8
 
 ## 後續步驟
 
-閱讀本指南後，您已更加瞭解如何使用Adobe Experience Platform API建立、管理和刪除標籤和標籤類別。 如需使用UI管理標籤的詳細資訊，請參閱 [managing tags指南](../ui/managing-tags.md). 如需使用UI管理標籤類別的詳細資訊，請參閱 [標籤類別指南](../ui/tags-categories.md).
+閱讀本指南後，您已更加瞭解如何使用Adobe Experience Platform API建立、管理和刪除標籤和標籤類別。 如需使用UI管理標籤的詳細資訊，請參閱[管理標籤指南](../ui/managing-tags.md)。 如需使用UI管理標籤類別的詳細資訊，請參閱[標籤類別指南](../ui/tags-categories.md)。

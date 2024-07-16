@@ -6,7 +6,7 @@ description: 「關鍵字標籤」服務在指定文字檔案時，會自動擷�
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 source-git-commit: 7c8c1d69f4c4e0a1374603d541b634ac7f64ab38
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '444'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 指定文字檔案時，關鍵字標籤服務會自動擷取最能描述檔案主題的關鍵字或關鍵片語。 為了擷取關鍵字，使用了命名實體識別(NER)和無監督關鍵字標籤演算法的組合。
 
-下表列出具有 [!DNL Content Tagging] 可以識別：
+下表列出[!DNL Content Tagging]可以識別的已命名實體：
 
 | 實體名稱 | 說明 |
 | --- | --- |
@@ -23,11 +23,11 @@ ht-degree: 5%
 | GPE | 國家、城市和州。 |
 | LOC | 非GPE位置、山脈和水體。 |
 | FAC | 建築物、機場、高速公路、橋樑等。 |
-| 組織 | 公司、代理商、機構等。 |
-| 產品 | 物件、車輛、食品等。 （不是服務。） |
-| 事件 | 已命名的颶風、戰鬥、戰爭、體育賽事等。 |
-| 藝術作品 | 書籍、歌曲等標題。 |
-| 法律 | 成為法律的已命名檔案。 |
+| 組織 | 公司、代理商、機構等 |
+| 產品 | 物件、車輛、食品等 （不是服務。） |
+| 活動 | 已命名的颶風、戰鬥、戰爭、體育賽事等。 |
+| 藝術作品 | 書籍、歌曲等標題 |
+| 法律 | 具名檔案成為法律。 |
 | 語言 | 任何具名語言。 |
 
 **API格式**
@@ -40,9 +40,9 @@ POST /services/v2/predict
 
 以下請求會根據承載中提供的輸入引數，從檔案中擷取關鍵字。
 
-請參閱裝載範例下表，以瞭解有關所示輸入引數的詳細資訊。
+請參閱裝載範例下表，以取得有關所示輸入引數的詳細資訊。
 
-此 [範例pdf](../pdf-files/simple-text.pdf) 檔案已用於本檔案所示的範例中。
+此[範例pdf](../pdf-files/simple-text.pdf)檔案已用於本檔案顯示的範例中。
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -88,27 +88,27 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **輸入引數**
 
-| 屬性 | 說明 | 必要 |
+| 屬性 | 說明 | 強制 |
 | --- | --- | --- |
-| `top_n` | 要傳回的結果數。 0，傳回所有結果。 與臨界值搭配使用時，傳回的結果數量將少於任一限制。 | 無 |
+| `top_n` | 要傳回的結果數目。 0，傳回所有結果。 當與臨界值一起使用時，傳回的結果數將少於任一限制。 | 無 |
 | `min_relevance` | 分數臨界值，低於該臨界值就必須傳回結果。 排除引數以傳回所有結果。 | 無 |
 | `min_key_phrase_length` | 關鍵短語中所需的最少字數。 | 無 |
 | `max_key_phrase_length` | 關鍵短語中所需的最大字數。 | 無 |
-| `last_semantic_unit_type` | 僅傳回階層式回應中最高至指定層級的語意單位。 &quot;key_phrase&quot;只會傳回關鍵片語，&quot;linked_entity&quot;只會傳回關鍵片語及其對應的連結實體，而&quot;concept&quot;則會傳回關鍵片語、連結實體和概念。 | 無 |
+| `last_semantic_unit_type` | 在階層式回應中只傳回最高至指定層級的語意單位。 「key_phrase」只會傳回關鍵片語，「linked_entity」只會傳回關鍵片語及其對應的連結實體，而「concept」則會傳回關鍵片語、連結實體和概念。 | 無 |
 | `entity_types` | 要以關鍵短語傳回的實體型別。 | 無 |
 
 **檔案物件**
 
-| 名稱 | 資料類型 | 必填 | 預設 | 值 | 說明 |
+| 名稱 | 資料類型 | 必要 | 預設 | 值 | 說明 |
 | -----| --------- | -------- | ------- | ------ | ----------- |
-| `repo:path` | 字串 | - | - | - | 要從中擷取重要片語的檔案之預先簽署的URL。 |
+| `repo:path` | 字串 | - | - | - | 要從中擷取關鍵片語的檔案之預先簽署的URL。 |
 | `sensei:repoType` | 字串 | - | - | HTTPS | 儲存檔案的存放庫型別。 |
 | `sensei:multipart_field_name` | 字串 | - | - | - | 將檔案作為多部分引數傳遞時，請使用此選項，而不使用預先簽署的URL。 |
-| `dc:format` | 字串 | 是 | - | &quot;text/plain&quot;，<br>&quot;application/pdf&quot;，<br>&quot;text/pdf&quot;，<br>&quot;text/html&quot;，<br>&quot;text/rtf&quot;，<br>&quot;application/rtf&quot;，<br>&quot;application/msword&quot;，<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;，<br>&quot;application/mspowerpoint&quot;，<br>&quot;application/vnd.ms-powerpoint&quot;，<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | 在處理之前，將根據允許的輸入編碼型別檢查檔案編碼。 |
+| `dc:format` | 字串 | 是 | - | &quot;text/plain&quot;，<br>&quot;application/pdf&quot;，<br>&quot;text/pdf&quot;，<br>&quot;text/html&quot;，<br>&quot;text/rtf&quot;，<br>&quot;application/rtf&quot;，<br>&quot;application/msword&quot;，<br>&quot;application/vnd.openxmlformats-officedocument.wordprocessingml.document&quot;，<br>&quot;application/mspowerpoint&quot;，<br>&quot;application/vnd.ms-powerpoint&quot;，<br>&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation&quot; | 在處理之前，會根據允許的輸入編碼型別檢查檔案編碼。 |
 
 **回應**
 
-成功的回應會傳回包含擷取關鍵字的JSON物件 `response` 陣列。
+成功的回應會傳回JSON物件，其中包含`response`陣列中擷取的關鍵字。
 
 ```json
 {

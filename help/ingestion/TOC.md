@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 20%
 # Adobe Experience Platform資料擷取 {#ingestion}
 
 - [資料擷取概觀](home.md)
-- 串流擷取 {#streaming}
+- 串流擷取{#streaming}
    - [概觀](streaming-ingestion/overview.md)
    - [Kafka聯結器](streaming-ingestion/kafka.md)
    - [疑難排解](streaming-ingestion/troubleshooting.md)
-- 批次擷取{#batch}
+- 批次內嵌{#batch}
    - [批次擷取API快速入門](batch-ingestion/getting-started.md)
-   - [API 概觀](batch-ingestion/overview.md)
+   - [API總覽](batch-ingestion/overview.md)
    - [API開發人員指南](batch-ingestion/api-overview.md)
    - [部分批次擷取](batch-ingestion/partial.md)
    - [疑難排解](batch-ingestion/troubleshooting.md)
@@ -38,7 +38,7 @@ ht-degree: 20%
    - [串流記錄資料](tutorials/streaming-record-data.md)
    - [串流時間序列資料](tutorials/streaming-time-series-data.md)
    - [串流多則訊息](tutorials/streaming-multiple-messages.md)
-- 資料品質與監控{#quality}
+- 資料品質和監視{#quality}
    - [概觀](quality/overview.md)
    - [監視資料擷取](quality/monitor-data-ingestion.md)
    - [擷取錯誤診斷](quality/error-diagnostics.md)
@@ -46,7 +46,7 @@ ht-degree: 20%
    - [串流擷取驗證](quality/streaming-validation.md)
    - [資料擷取通知](quality/subscribe-events.md)
 - [資料擷取的護欄](guardrails.md)
-- [來源連接器](source-connectors.md)
-- [批次擷取API參考資料](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
+- [Source聯結器](source-connectors.md)
+- [批次擷取API參考](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [串流擷取API參考](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Platform發行說明](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

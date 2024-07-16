@@ -2,7 +2,7 @@
 keywords: Experience Platform；首頁；熱門主題；ip位址；ip位址；ip位址允許清單；允許清單
 description: 必須先將IP位址新增至允許清單，才能使用來源聯結器。
 solution: Experience Platform
-title: 來源連線的IP位址允許清單
+title: Source連線的IP位址允許清單
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: bcd74083169c40966d7de8ba7b79082931a6744d
 workflow-type: tm+mt
@@ -69,7 +69,7 @@ ht-degree: 0%
 
 ## 串流來源的IP位址允許清單 {#streaming}
 
-您必須將以下IP位址新增至允許清單，以允許串流來源的資料傳輸服務流量，例如 [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md)， [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md)， [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md)、和 [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+您必須將下列IP位址新增至允許清單，才能允許串流來源（例如[[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md)、[[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md)、[[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md)和[[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md)）的資料傳輸服務流量。
 
 >[!BEGINTABS]
 

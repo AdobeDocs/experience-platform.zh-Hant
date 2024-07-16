@@ -11,11 +11,11 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL 設定檔] 儀表板
+# [!UICONTROL 設定檔]儀表板
 
-Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以通過該儀表板檢視關於您的裝置的重要資訊， [!DNL Real-Time Customer Profile] 資料，在每日快照期間擷取。 本指南概述如何存取和使用UI中的設定檔控制面板，並提供控制面板中顯示的量度相關資訊。
+Adobe Experience Platform使用者介面(UI)提供儀表板，您可以透過儀表板檢視有關您的[!DNL Real-Time Customer Profile]資料的重要資訊，如每日快照期間所擷取。 本指南概述如何存取和使用UI中的設定檔控制面板，並提供控制面板中顯示的量度相關資訊。
 
-請參閱 [即時客戶設定檔UI指南](../../profile/ui/user-guide.md) 以概略瞭解Experience Platform使用者介面中的設定檔功能。
+請參閱[即時客戶設定檔UI指南](../../profile/ui/user-guide.md)，以瞭解Experience Platform使用者介面中的設定檔功能概觀。
 
 ## 設定檔儀表板資料
 
@@ -29,31 +29,31 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 ## 探索設定檔控制面板 {#explore-dashboard}
 
-若要導覽至Platform UI中的設定檔控制面板，請選取「 」 **[!UICONTROL 設定檔]** 在左側欄中，然後選取 **[!UICONTROL 概觀]** 標籤來顯示控制面板。
+若要導覽至Platform UI中的「設定檔」儀表板，請在左側邊欄中選取「**[!UICONTROL 設定檔]**」，然後選取「**[!UICONTROL 概觀]**」標籤以顯示儀表板。
 
 >[!NOTE]
 >
->如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示設定檔控制面板。 而是 [!UICONTROL 概觀] 索引標籤會顯示連結和檔案，以幫助您開始使用即時客戶個人檔案。
+>如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示設定檔控制面板。 [!UICONTROL 總覽]標籤會顯示連結和檔案，協助您開始使用即時客戶個人檔案。
 
-![Experience Platform設定檔控制面板，醒目提示設定檔和概觀。](../images/profiles/dashboard-overview.png)
+![反白顯示設定檔和概觀的Experience Platform設定檔儀表板。](../images/profiles/dashboard-overview.png)
 
 ### 修改設定檔儀表板 {#modify-dashboard}
 
-您可以選取「輪廓」圖示板的外觀 **[!UICONTROL 修改儀表板]**. 您可以移動、新增、調整大小及移除儀表板中的Widget，也可以存取 **[!UICONTROL Widget資料庫]** 探索可用的Widget，並為您的組織建立自訂Widget。
+您可以選取&#x200B;**[!UICONTROL 修改儀表板]**，以修改設定檔儀表板的外觀。 您可以從儀表板移動、新增、調整大小及移除Widget，以及存取&#x200B;**[!UICONTROL Widget資料庫]**&#x200B;以探索可用的Widget，並為您的組織建立自訂Widget。
 
-若要進一步瞭解，請參閱 [修改儀表板](../customize/modify.md) 和 [Widget程式庫概觀](../customize/widget-library.md) 檔案。
+若要瞭解詳細資訊，請參閱[修改儀表板](../customize/modify.md)和[Widget程式庫概觀](../customize/widget-library.md)檔案。
 
 ### 新增Widget {#add-widget}
 
-選取 **[!UICONTROL 新增Widget]** 導覽至Widget資料庫，並檢視可新增至控制面板的可用Widget清單。
+選取&#x200B;**[!UICONTROL 新增Widget]**&#x200B;以瀏覽至Widget資料庫，並檢視可新增至您控制面板的可用Widget清單。
 
-![強調顯示「設定檔」儀表板概述中的新增Widget。](../images/profiles/profiles-overview-add-widget.png)
+![醒目提示新增Widget的設定檔儀表板總覽。](../images/profiles/profiles-overview-add-widget.png)
 
-在Widget資料庫中，您可以瀏覽標準與自訂對象Widget的選取專案。 如需如何新增Widget的相關資訊，請參閱如何新增Widget的程式庫檔案 [新增Widget](../customize/widget-library.md#add-widgets).
+在Widget資料庫中，您可以瀏覽標準與自訂對象Widget的選取專案。 如需如何新增Widget的詳細資訊，請參閱如何[新增Widget](../customize/widget-library.md#add-widgets)的Widget資料庫檔案。
 
 ### 檢視 SQL {#view-sql}
 
-您可以透過開啟「 」按鈕來檢視產生在控制面板上視覺化分析的SQL。 [!UICONTROL 概觀] 工作區。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要進一步瞭解此功能，請參閱 [檢視SQL UI指南](../view-sql.md).
+您可以透過在[!UICONTROL 總覽]工作區上的切換來檢視產生視覺化分析的SQL。 您可以從現有見解的SQL獲得靈感，以建立新的查詢，這些查詢會根據您的業務需求從Platform資料獲得獨特的見解。 若要深入瞭解此功能，請參閱[檢視SQL UI指南](../view-sql.md)。
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -71,17 +71,17 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 ## 瀏覽設定檔 {#browse-profiles}
 
-此 [!UICONTROL 瀏覽] 索引標籤可讓您搜尋和檢視擷取到您組織中的唯讀設定檔。 從這裡，您可以看到屬於設定檔的重要資訊，其中包含其偏好設定、過去事件、互動和對象。
+[!UICONTROL 瀏覽]索引標籤可讓您搜尋並檢視擷取至您組織的唯讀設定檔。 從這裡，您可以看到屬於設定檔的重要資訊，其中包含其偏好設定、過去事件、互動和對象。
 
 ## 設定檔詳細資料 {#profile-details}
 
-若要開啟 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區，選取 [!UICONTROL 設定檔ID] 從清單中。
+若要開啟[!UICONTROL 設定檔] [!UICONTROL 詳細資料]工作區，請從清單中選取[!UICONTROL 設定檔識別碼]。
 
-![設定檔ID反白顯示的「設定檔瀏覽」標籤。](../images/profiles/profile-id.png)
+![反白設定檔識別碼的[設定檔瀏覽]索引標籤。](../images/profiles/profile-id.png)
 
-此 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區會顯示數個預先設定的Widget，傳達該設定檔的特定資訊。 此資訊可讓您一眼瞭解設定檔的關鍵屬性。 您也可以自訂 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 建立您自己的Widget來工作區。 請參閱以下小節： [如何新增Widget](#add-widgets) 以取得更多詳細資料。
+[!UICONTROL 設定檔] [!UICONTROL 詳細資料]工作區會顯示數個預先設定的Widget，其中會傳達該設定檔的特定資訊。 此資訊可讓您一眼瞭解設定檔的關鍵屬性。 您也可以建立自己的Widget，以自訂您的[!UICONTROL 設定檔] [!UICONTROL 詳細資料]工作區。 如需詳細資訊，請參閱[如何新增Widget](#add-widgets)的相關章節。
 
-![此 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區與 [!UICONTROL 詳細資料] 索引標籤反白顯示。](../images/profiles/profile-details-workspace.png)
+![反白顯示[!UICONTROL 詳細資料]索引標籤的[!UICONTROL 設定檔] [!UICONTROL 詳細資料]工作區。](../images/profiles/profile-details-workspace.png)
 
 ### 設定檔詳細資訊Widget {#widgets}
 
@@ -89,95 +89,95 @@ The layout of this dashboard is also customizable by selecting [**[!UICONTROL Mo
 
 #### 客戶輪廓 {#customer-profile}
 
-此 [!UICONTROL 客戶設定檔] Widget會顯示與設定檔相關聯之使用者的名字和姓氏，以及其 [!UICONTROL 設定檔ID]. 設定檔ID是與身分型別相關聯的自動產生識別碼，代表設定檔。 若要深入瞭解身分識別與身分識別名稱空間，請參閱 [身分概述](../../rtcdp/profile/identities-overview.md).
+[!UICONTROL 客戶設定檔] Widget會顯示與該設定檔相關聯之使用者的名字和姓氏，以及其[!UICONTROL 設定檔ID]。 設定檔ID是與身分型別相關聯的自動產生識別碼，代表設定檔。 若要深入瞭解身分識別與身分識別名稱空間，請參閱[身分識別總覽](../../rtcdp/profile/identities-overview.md)。
 
 ![客戶設定檔Widget。](../images/profiles/customer-profile.png)
 
 #### 基本屬性 {#basic-attributes}
 
-此 [!UICONTROL 基本屬性] widget會顯示最常用於定義個別設定檔的屬性。
+[!UICONTROL 基本屬性] Widget會顯示定義個別設定檔時最常使用的屬性。
 
 ![基本屬性Widget。](../images/profiles/basic-attributes.png)
 
 #### 連結的身分 {#linked-identities}
 
-此 [!UICONTROL 連結的身分] widget會顯示與設定檔相關聯的任何其他身分。
+[!UICONTROL 連結的身分] Widget會顯示與設定檔相關聯的任何其他身分。
 
-若要更深入檢視設定檔的身分詳細資訊，請導覽至 [!UICONTROL 身分] 工作區，選取 **[!UICONTROL 檢視身分圖表]**.
+若要更深入檢視設定檔的身分詳細資訊，並瀏覽至[!UICONTROL 身分]工作區，請選取&#x200B;**[!UICONTROL 檢視身分圖表]**。
 
 ![連結的身分識別Widget。](../images/profiles/linked-identities.png)
 
 #### 管道偏好設定 {#channel-preferences}
 
-此 [!UICONTROL 頻道偏好設定] widget會顯示使用者同意接收通訊的通訊管道。 核取記號表示使用者已同意接收通訊的每個管道。
+[!UICONTROL 管道偏好設定] Widget會顯示使用者同意接收通訊的通訊管道。 核取記號表示使用者已同意接收通訊的每個管道。
 
 <!-- image needs a blue tick added below -->
 
-![管道偏好設定Widget。](../images/profiles/channel-preferences.png)
+![頻道偏好設定Widget.](../images/profiles/channel-preferences.png)
 
 客戶同意和聯絡人偏好設定是複雜的主題。 若要瞭解如何在Experience Platform中收集、處理和篩選同意和內容偏好設定，建議您閱讀以下檔案：
 
-* 若要瞭解所需的結構描述欄位群組 [根據Adobe標準收集同意資料](../../landing/governance-privacy-security/consent/adobe/overview.md)，請參閱這些已啟用設定檔的結構描述欄位群組的相關檔案。
+* 若要瞭解根據Adobe標準[收集同意資料所需的結構描述欄位群組](../../landing/governance-privacy-security/consent/adobe/overview.md)，請參閱這些啟用設定檔的結構描述欄位群組的相關檔案。
    * [[!UICONTROL 同意和偏好設定詳細資料]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL 身分對應]](../../xdm/field-groups/profile/identitymap.md) （若使用Platform Web或Mobile SDK傳送同意訊號則為必要）
-* 若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱以下概觀： [Experience Platform中的同意處理](../../landing/governance-privacy-security/consent/adobe/overview.md).
-* 合併的資料治理和同意原則可用於根據其同意偏好設定和您建立的組織規則篩選要分段的設定檔。 若要瞭解如何建立和使用這些合併原則，請參閱以下內容的使用手冊： [管理資料使用原則](../../data-governance/policies/user-guide.md#combine-policies).
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) （若使用Platform Web或Mobile SDK傳送同意訊號則為必要）
+* 若要瞭解如何使用Adobe標準處理客戶同意和偏好設定資料，請參閱Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md)中[同意處理的概述。
+* 合併的資料治理和同意原則可用於根據其同意偏好設定和您建立的組織規則篩選要分段的設定檔。 若要瞭解如何建立和使用這些合併原則，請參閱[管理資料使用原則](../../data-governance/policies/user-guide.md#combine-policies)的使用手冊。
 
 ### 新增Widget {#add-widgets}
 
-若要將自訂的Widget新增至 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區，選取 **[!UICONTROL 自訂設定檔詳細資料]**.
+若要將自訂Widget新增至您的[!UICONTROL 設定檔] [!UICONTROL 詳細資料]工作區，請選取&#x200B;**[!UICONTROL 自訂設定檔詳細資料]**。
 
-![具有的設定檔詳細資料工作區 [!UICONTROL 自訂設定檔詳細資料] 反白顯示。](../images/profiles/customize-profile-details.png)
+![包含[!UICONTROL 自訂設定檔詳細資料]的設定檔詳細資料工作區已反白顯示。](../images/profiles/customize-profile-details.png)
 
-您現在可以透過調整大小或重新定位Widget來編輯工作區。 選取 **[!UICONTROL 新增Widget]** 以建立具有自訂屬性的Widget。
+您現在可以透過調整大小或重新定位Widget來編輯工作區。 選取&#x200B;**[!UICONTROL 新增Widget]**&#x200B;以建立具有自訂屬性的Widget。
 
-![設定檔 [!UICONTROL 詳細資料] 工作區，使用 [!UICONTROL 新增Widget] 反白顯示。](../images/profiles/add-widget.png)
+![設定檔[!UICONTROL 詳細資料]工作區中反白顯示[!UICONTROL 新增Widget]。](../images/profiles/add-widget.png)
 
-Widget建立器隨即出現。 在「 」中輸入您Widget的描述性名稱 [!UICONTROL 卡片標題] 文字欄位並選取 **[!UICONTROL 新增屬性]**.
+Widget建立器隨即出現。 在[!UICONTROL 卡片標題]文字欄位中輸入您Widget的描述性名稱，並選取&#x200B;**[!UICONTROL 新增屬性]**。
 
-![Widget建立器畫布包含 [!UICONTROL 卡片標題] 欄位和 [!UICONTROL 新增屬性] 反白顯示。](../images/profiles/widget-creator.png)
+![具有[!UICONTROL 卡片標題]欄位和[!UICONTROL 新增屬性]的Widget建立者畫布已反白顯示。](../images/profiles/widget-creator.png)
 
-隨即出現一個對話方塊，其中包含設定檔聯合結構的視覺效果。 使用搜尋欄位或捲動來尋找您要以您的Widget報告的屬性。 選取您要包含的任何屬性的核取方塊。 選取 **[!UICONTROL 選取]** 以繼續建立工作流程。
+隨即出現一個對話方塊，其中包含設定檔聯合結構的視覺效果。 使用搜尋欄位或捲動來尋找您要以您的Widget報告的屬性。 選取您要包含的任何屬性的核取方塊。 選取&#x200B;**[!UICONTROL 選取]**&#x200B;以繼續建立工作流程。
 
 >[!TIP]
 >
 >選取頂層核取方塊時，會包含任何子元素。
 
-![具有忠誠度屬性的聯合結構描述圖表核取方塊和 [!UICONTROL 選取] 反白顯示。](../images/profiles/union-schema-attributes.png)
+![含忠誠度屬性核取方塊和[!UICONTROL 選取]的聯集結構描述圖表已反白顯示。](../images/profiles/union-schema-attributes.png)
 
-畫布上會顯示已完成的Widget預覽。 在您滿意所選的屬性後，請選取 **[!UICONTROL 儲存]** 以確認您的選擇並返回 [!UICONTROL 設定檔] [!UICONTROL 詳細資料] 工作區。 新建立的Widget現在會顯示在工作區中。
+畫布上會顯示已完成的Widget預覽。 在您滿意所選的屬性後，請選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以確認您的選擇，並返回[!UICONTROL 設定檔] [!UICONTROL 詳細資料]工作區。 新建立的Widget現在會顯示在工作區中。
 
-![「儲存」反白並顯示Widget預覽的Widget建立器畫布。](../images/profiles/widget-preview.png)
+![已反白顯示「儲存」的Widget建立器畫布並顯示Widget預覽。](../images/profiles/widget-preview.png)
 
 ## 合併政策 {#merge-policies}
 
 設定檔控制面板中顯示的量度，是根據套用至即時客戶設定檔資料的合併原則。 將來自多個來源的資料彙集在一起以建立客戶設定檔時，資料可能會包含衝突值。 例如，一個資料集可能將客戶列為「單身」，而另一個資料集可能將客戶列為「已婚」。 合併原則的工作是決定哪些資料要優先處理，並顯示為設定檔的一部分。
 
-如需有關合併原則的詳細資訊，包括如何為貴組織建立、編輯和宣告預設合併原則，請參閱 [合併原則概觀](../../profile/merge-policies/overview.md).
+如需有關合併原則的詳細資訊，包括如何建立、編輯和宣告組織的預設合併原則，請參閱[合併原則概觀](../../profile/merge-policies/overview.md)。
 
 儀表板會自動選取要使用的合併原則。 您可使用合併原則名稱旁邊的下拉式選單來變更套用的合併原則。
 
 >[!NOTE]
 >
->下拉式功能表只會顯示使用 `_xdm.context.profile` 綱要。 但是，如果貴組織已建立多個合併原則，則可能表示您需要捲動才能檢視可用合併原則的完整清單。
+>下拉式功能表只會顯示使用`_xdm.context.profile`結構描述的合併原則。 但是，如果貴組織已建立多個合併原則，則可能表示您需要捲動才能檢視可用合併原則的完整清單。
 
-![設定檔概述索引標籤，並反白顯示合併原則下拉式清單。](../images/profiles/select-merge-policy.png)
+![設定檔概述索引標籤中反白顯示合併原則下拉式清單。](../images/profiles/select-merge-policy.png)
 
 ## 聯合結構描述
 
-此 [!UICONTROL 聯合結構描述] 儀表板會顯示特定XDM類別的聯合結構描述。 藉由選取 **[!UICONTROL 類別]** 下拉式清單中，您可以檢視不同XDM類別的聯合結構描述。
+[!UICONTROL 聯合結構描述]儀表板會顯示特定XDM類別的聯合結構描述。 選取&#x200B;**[!UICONTROL 類別]**&#x200B;下拉式清單，即可檢視不同XDM類別的聯合結構描述。
 
 聯合結構描述由共用相同類別並已為設定檔啟用的多個結構描述組成。 它們可讓您在單一檢視中看到，共用相同類別的每個結構描述中包含的每個欄位都合併在一起。
 
-若要深入瞭解 [在Platform UI中檢視聯合結構描述](../../profile/ui/union-schema.md#view-union-schemas)，請參閱聯合結構描述UI指南。
+若要進一步瞭解[在Platform UI](../../profile/ui/union-schema.md#view-union-schemas)中檢視聯合結構描述，請參閱聯合結構描述UI指南。
 
 ## Widget和量度
 
 儀表板由Widget組成，這些是唯讀量度，可提供有關設定檔資料的重要資訊。
 
-最近一次快照的日期和時間會顯示在最上方 [!UICONTROL 概觀] 並列於合併原則下拉式清單旁。 截至該日期和時間，所有Widget資料都是準確的。 快照的時間戳記會以UTC提供；而不是在個別使用者或組織的時區中。
+最近快照的日期和時間會顯示在合併原則下拉式清單旁的[!UICONTROL 概觀]索引標籤頂端。 截至該日期和時間，所有Widget資料都是準確的。 快照的時間戳記會以UTC提供；而不是在個別使用者或組織的時區中。
 
-![「設定檔」儀表板的「概觀」標籤中會反白最新的快照時間戳記。](../images/profiles/snapshot-timestamp.png)
+![反白顯示最近快照時間戳記的[設定檔儀表板概觀]索引標籤。](../images/profiles/snapshot-timestamp.png)
 
 ## 預設Widget {#default-widgets}
 
@@ -191,11 +191,11 @@ Adobe Experience Platform的所有新執行個體都會提供預設Widget載出�
 
 >[!NOTE]
 >
->截至2023年7月26日， [!UICONTROL 設定檔]， [!UICONTROL 受眾]、和 [!UICONTROL 目的地] 對於所有在前六個月未修改檢視的使用者，概述儀表板已重設為新的預設Widget載出。 請參閱以下檔案： [目的地](./destinations.md#default-widgets) 和 [受眾](./audiences.md#default-widgets) 預設Widget區段，以取得關於哪些小工具屬於預設Widget載入一部分的詳細資訊。 您可以繼續如往常一樣自訂您的儀表板Widget。
+>自2023年7月26日起，[!UICONTROL 設定檔]、[!UICONTROL 對象]和[!UICONTROL 目標]總覽儀表板已重設為未在前六個月修改其檢視的所有使用者之新預設Widget載出。 請參閱[目的地](./destinations.md#default-widgets)與[對象](./audiences.md#default-widgets)預設Widget區段中的檔案，以取得關於哪些小工具包含在預設Widget載入中的詳細資訊。 您可以繼續如往常一樣自訂您的儀表板Widget。
 
 ## Customer AI Widget {#customer-ai-profiles-widgets}
 
-Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 Customer AI通過分析現有的消費者體驗事件資料來預測這一點 **流失或轉換傾向分數**. 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 此 [分數的分佈](#customer-ai-distribution-of-scores) 和 [評分摘要](#customer-ai-scoring-summary) 深入分析會示範您對象中的劃分。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
+Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流失和轉換情形。 Customer AI透過分析現有的消費者體驗事件資料來預測&#x200B;**流失或轉換傾向分數**&#x200B;來執行此操作。 這些高精確度的客戶傾向模型可讓您進行更精確的分段和目標定位。 分數](#customer-ai-distribution-of-scores)和[評分摘要](#customer-ai-scoring-summary)深入分析的[分佈會示範您對象中的部門。 它們會強調哪些設定檔為高/低/中傾向，以及它們在您的設定檔計數中的分配方式。
 
 * [[!UICONTROL Customer AI 評分摘要]](#customer-ai-scoring-summary)
 * [[!UICONTROL Customer AI 分數的分佈]](#customer-ai-distribution-of-scores)
@@ -205,36 +205,36 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
 >title="分數分佈"
->abstract="此 Widget 會依傾向分數 (以 5% 的增量) 將設定檔總數的分佈視覺化。設定檔計數的分佈由 AI 模型和所選合併原則決定。您可以從介面工具標題下的下拉選單中變更 AI 模型。"
+>abstract="此 Widget 會依傾向分數 (以 5% 的增量) 將設定檔總數的分佈視覺化。設定檔計數的分佈由 AI 模式和所選合併原則決定。您可以從介面工具標題下的下拉選單中變更 AI 模式。"
 
-此 [!UICONTROL 分數的Customer AI分佈] Widget會依傾向分數分類設定檔總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
+分數]的[!UICONTROL Customer AI分佈Widget會依傾向分數分類個人檔案總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
 
 >[!NOTE]
 >
 >如果視覺效果是轉換傾向分數，則高分會以綠色顯示，低分會以紅色顯示。 如果您預測的是流失傾向，則系統會加以逆轉，高分會以紅色顯示，低分則會以綠色顯示。 無論您選擇哪種傾向型別，中段貯體都會保持黃色。
 
-決定傾向分數的AI模型可從Widget標題下方的下拉式選擇器中選取。 下拉式清單包含所有已設定的Customer AI模型清單。 從可用模型清單中為您的分析選取適當的AI模型。 如果沒有可用的Customer AI模型，Widget中的訊息會指示您設定至少一個Customer AI模型，並提供指向Customer AI模型設定頁面的超連結。 如需相關指示，請參閱檔案 [如何設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md).
+決定傾向分數的AI模型可從Widget標題下方的下拉式選擇器中選取。 下拉式清單包含所有已設定的Customer AI模型清單。 從可用模型清單中為您的分析選取適當的AI模型。 如果沒有可用的Customer AI模型，Widget中的訊息會指示您設定至少一個Customer AI模型，並提供指向Customer AI模型設定頁面的超連結。 請參閱檔案以瞭解[如何設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md)的說明。
 
 >[!NOTE]
 >
->選取概述標籤正下方的下拉式清單，以變更決定分析中包含哪些設定檔的合併原則。 請參閱以下小節： [合併原則](#merge-policies) 以取得簡要說明，或 [合併原則概觀](../../profile/merge-policies/overview.md) 以取得更多詳細資料。
+>選取概述標籤正下方的下拉式清單，以變更決定分析中包含哪些設定檔的合併原則。 請參閱[合併原則](#merge-policies)的相關章節以取得簡要說明，或參閱[合併原則概觀](../../profile/merge-policies/overview.md)以取得詳細資料。
 
-若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取 **[!UICONTROL 檢視模型詳細資料]**.
+若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取「**[!UICONTROL 檢視模型詳細資料]**」。
 
-![Experience Platform受眾控制面板，具有 [!UICONTROL 分數的Customer AI分佈] Widget和 [!UICONTROL 檢視模型詳細資料] 反白顯示。](../images/segments/customer-ai-distribution-of-scores.png)
+![具有[!UICONTROL 分數的Customer AI分佈]介面工具集和[!UICONTROL 檢視模型詳細資料]的Experience Platform受眾儀表板（已強調顯示）。](../images/segments/customer-ai-distribution-of-scores.png)
 
 詳細模型深入分析頁面隨即顯示。
 
 ![Customer AI的深入分析頁面。](../images/profiles/customer-ai-insights-page.png)
 
-有關Customer AI的更多資訊可在以下網址找到： [探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+您可以在[探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md)中找到有關Customer AI的更多資訊。
 
 ### [!UICONTROL Customer AI 評分摘要] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
 >title="分數摘要"
->abstract="此 Widget 會顯示已評分設定檔的總數，並將其分類到包含高、中、低傾向的貯體。圓環圖說明了高、中、低傾向設定檔總數的比例組成。"
+>abstract="此 Widget 會顯示已評分設定檔的總數，並將其分類到包含高、中、低傾向的貯體。圓環圖說明了高、中、低傾向設定檔總數的比例構成。"
 
 此Widget顯示已評分的個人檔案總數，並將其分類為分別包含高、中及低傾向的綠色、黃色及紅色貯體。 環形圖可說明高、中和低傾向性之間設定檔的成比例構成。 設定檔符合75歲以上的高傾向、25到74歲之間的中傾向，以及24歲以下的低傾向。 圖例會指出色彩代碼和傾向性臨界值。 當游標暫留在環圈圖的個別區段上時，高、中和低傾向性的設定檔計數會顯示在對話方塊中。
 
@@ -242,19 +242,19 @@ Customer AI 可產生自訂傾向評分，例如大規模個別設定檔的流�
 >
 >如果視覺效果是轉換傾向分數，則高分會以綠色顯示，低分會以紅色顯示。 如果您預測的是流失傾向，則系統會加以逆轉，高分會以紅色顯示，低分則會以綠色顯示。 無論您選擇哪種傾向型別，中段貯體都會保持黃色。
 
-Widget標題下方的下拉式選單提供所有已設定的Customer AI模型清單。 從可用模型清單中為您的分析選取適當的AI模型。 如果沒有可用的Customer AI模型，Widget中的訊息會指示您設定至少一個Customer AI模型，並提供指向Customer AI模型設定頁面的超連結。 請參閱以下檔案： [如何設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md) 以取得詳細指示。
+Widget標題下方的下拉式選單提供所有已設定的Customer AI模型清單。 從可用模型清單中為您的分析選取適當的AI模型。 如果沒有可用的Customer AI模型，Widget中的訊息會指示您設定至少一個Customer AI模型，並提供指向Customer AI模型設定頁面的超連結。 如需詳細指示，請參閱[如何設定Customer AI執行個體](../../intelligent-services/customer-ai/user-guide/configure.md)的相關檔案。
 
 >[!NOTE]
 >
->計算的設定檔總數取決於所選的合併原則。 若要變更所使用的合併原則，請選取概述標籤正下方的下拉式清單。 請參閱以下小節： [合併原則](#merge-policies) 以取得簡要說明，或 [合併原則概觀](../../profile/merge-policies/overview.md) 以取得更多詳細資料。
+>計算的設定檔總數取決於所選的合併原則。 若要變更所使用的合併原則，請選取概述標籤正下方的下拉式清單。 請參閱[合併原則](#merge-policies)的相關章節以取得簡要說明，或參閱[合併原則概觀](../../profile/merge-policies/overview.md)以取得詳細資料。
 
-![Customer AI評分摘要Widget醒目提示的Experience Platform Audiences儀表板。](../images/segments/customer-ai-scoring-summary.png)
+![反白顯示Customer AI評分摘要Widget的Experience Platform受眾儀表板。](../images/segments/customer-ai-scoring-summary.png)
 
-若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取 **[!UICONTROL 檢視模型詳細資料]**. 有關Customer AI的更多資訊可在以下網址找到： [探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取「**[!UICONTROL 檢視模型詳細資料]**」。 您可以在[探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md)中找到有關Customer AI的更多資訊。
 
 ## 標準Widget {#standard-widgets}
 
-Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的不同量度。 您也可以使用建立自訂Widget並與您的組織共用 [!UICONTROL Widget資料庫]. 若要進一步瞭解如何建立自訂Widget，請先閱讀 [Widget程式庫概觀](../customize/widget-library.md).
+Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的不同量度。 您也可以使用[!UICONTROL Widget資料庫]建立自訂Widget並與您的組織共用。 若要深入瞭解如何建立自訂Widget，請先閱讀[Widget程式庫概觀](../customize/widget-library.md)。
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
@@ -262,7 +262,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 設定檔計數趨勢]](#profile-count-trend)
 * [[!UICONTROL 設定檔計數變更]](#profile-count-change)
 * [[!UICONTROL 設定檔計數變更趨勢]](#profiles-count-change-trend)
-* [[!UICONTROL 依身分列出的設定檔計數變更趨勢]](#profiles-count-change-trend-by-identity)
+* [[!UICONTROL 依身分割槽分的設定檔計數變更趨勢]](#profiles-count-change-trend-by-identity)
 * [[!UICONTROL 依身分識別劃分的設定檔]](#profiles-by-identity)
 * [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
 * [[!UICONTROL 單一身分識別設定檔]](#single-identity-profiles)
@@ -283,21 +283,21 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="設定檔計數"
 >abstract="此 Widget 會顯示取得快照時設定檔存放區內合併的設定檔總數。該數量取決於套用至您設定檔資料的所選合併原則。"
 
-此 **[!UICONTROL 設定檔計數]** widget會顯示拍攝快照時設定檔存放區中合併的設定檔總數。 此數字是已將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
+**[!UICONTROL 設定檔計數]** Widget會顯示拍攝快照時設定檔存放區中合併的設定檔總數。 此數字是已將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
 
-請參閱 [本檔案前面關於合併原則的章節](#merge-policies) 以進一步瞭解。
+請參閱本檔案](#merge-policies)中先前關於合併原則的[一節，瞭解更多資訊。
 
 >[!NOTE]
 >
->此 [!UICONTROL 設定檔計數] Widget可能會顯示與上所示設定檔計數不同的數字 [!UICONTROL 瀏覽] 索引標籤中的 [!UICONTROL 設定檔] 部分UI，原因有多種。 造成此差異的最常見原因為 [!UICONTROL 瀏覽] 索引標籤會根據您組織的預設合併原則參考合併的設定檔總數，而 [!UICONTROL 設定檔計數] widget會根據您選取在控制面板中檢視的合併原則，參考合併的設定檔總數。
+>基於多種原因，[!UICONTROL 設定檔計數]介面工具集可能會在UI的[!UICONTROL 設定檔]區段中，顯示與[!UICONTROL 瀏覽]索引標籤上顯示的設定檔計數不同的數字。 此差異最常見的原因是，[!UICONTROL 瀏覽]索引標籤會根據您組織的預設合併原則參考合併的設定檔總數，而[!UICONTROL 設定檔計數]介面工具會根據您選擇在儀表板中檢視的合併原則參考合併的設定檔總數。
 >
->另一個常見的原因是，擷取儀表板快照的時間與針對執行範例作業的時間不同 [!UICONTROL 瀏覽] 標籤。 您會看到 [!UICONTROL 設定檔計數] Widget上次更新是透過檢視Widget上的時間戳記完成的。 若要進一步瞭解範例作業如何在上觸發： [!UICONTROL 瀏覽] 索引標籤中，請參閱 [即時客戶個人檔案UI指南中的個人檔案計數區段](../../profile/ui/user-guide.md#profile-count).
+>另一個常見的原因是，擷取儀表板快照的時間與[!UICONTROL 瀏覽]索引標籤執行範例作業的時間不同。 您可以檢視Widget上的時間戳記，以檢視[!UICONTROL 設定檔計數]個Widget的上次更新時間。 若要進一步瞭解如何在[!UICONTROL 瀏覽]標籤上觸發範例工作，請參閱「即時客戶設定檔UI指南](../../profile/ui/user-guide.md#profile-count)」中的[設定檔計數區段。
 
-![設定檔計數Widget反白顯示的Experience Platform設定檔儀表板。](../images/profiles/profile-count.png)
+![反白設定檔計數Widget的Experience Platform設定檔儀表板。](../images/profiles/profile-count.png)
 
 ### [!UICONTROL 設定檔計數趨勢] {#profile-count-trend}
 
-此 [!UICONTROL 設定檔計數趨勢] Widget使用線圖來說明系統中包含的設定檔總數隨時間變化的趨勢。 此總數包含自上次每日快照以來匯入系統的任何設定檔。 30天、90天和12個月期間的資料可視覺化。 期間是從Widget的下拉式功能表中選擇。
+[!UICONTROL 設定檔計數trend] Widget會使用線圖來說明系統中包含之設定檔總數在一段時間內的趨勢。 此總數包含自上次每日快照以來匯入系統的任何設定檔。 30天、90天和12個月期間的資料可視覺化。 期間是從Widget的下拉式功能表中選擇。
 
 ![設定檔計數趨勢Widget。](../images/profiles/profile-count-trend.png)
 
@@ -308,13 +308,13 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="設定檔計數變更"
 >abstract="此 Widget 會顯示上一次快照時&#x200B;**新增**&#x200B;至設定檔存放區合併的設定檔總數。該數量取決於套用至您設定檔資料的所選合併原則。"
 
-此 **[!UICONTROL 設定檔計數變更]** widget會顯示自上次快照集以來，新增至設定檔存放區的合併設定檔數目。 此數字是已將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。 您可以使用下拉式選擇器來檢視過去30天、90天或12個月內新增的設定檔數。
+**[!UICONTROL 設定檔計數變更]** Widget會顯示自前次快照後新增至設定檔存放區的合併設定檔數目。 此數字是已將選取的合併原則套用至您的設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。 您可以使用下拉式選擇器來檢視過去30天、90天或12個月內新增的設定檔數。
 
 >[!NOTE]
 >
->此 [!UICONTROL 設定檔計數變更] widget會反映新增的設定檔數量 **晚於** 初始設定檔擷取和設定檔存放區設定。 換言之，如果您的組織設定了設定檔存放區並在第1天擷取4,000,000個設定檔，則儀表板將在24小時內可用，但 [!UICONTROL 設定檔計數變更] widget會設為0。 此計數方法旨在避免與將設定檔初始擷取至系統相關的尖峰。 在接下來的30天中，您的組織會額外擷取1,000,000個設定檔至設定檔存放區。 拍攝下一個快照後， [!UICONTROL 設定檔計數變更] widget會顯示總共新增1,000,000個設定檔，而 [!UICONTROL 設定檔計數] widget總共會顯示5,000,000個設定檔。
+>[!UICONTROL 設定檔計數變更] Widget反映了在初始設定檔擷取和設定檔存放區設定&#x200B;**之後新增的設定檔數量**。 換言之，如果您的組織設定了設定檔存放區並在第1天擷取4,000,000個，則儀表板在24小時內即可使用，但[!UICONTROL 設定檔計數變更] Widget將設為0。 此計數方法旨在避免與將設定檔初始擷取至系統相關的尖峰。 在接下來的30天中，您的組織會額外擷取1,000,000個設定檔至設定檔存放區。 拍攝下一個快照後，[!UICONTROL 設定檔計數變更]介面工具集將顯示總計已新增1,000,000個設定檔，而[!UICONTROL 設定檔計數]介面工具集將顯示總計已新增5,000,000個設定檔。
 
-![Platform UI設定檔儀表板中反白顯示設定檔計數變更Widget。](../images/profiles/profile-count-change.png)
+![反白顯示設定檔計數變更Widget的Platform UI設定檔儀表板。](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL 設定檔計數變更趨勢] {#profiles-count-change-trend}
 
@@ -323,19 +323,19 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="設定檔計數變更趨勢"
 >abstract="此 Widget 會顯示在過去 30 天、90 天或 12 個月內每天新增至設定檔存放區合併設定檔的數量。該數量也取決於套用至您設定檔資料的所選合併原則。"
 
-此 **[!UICONTROL 設定檔計數變更趨勢]** widget會顯示過去30天、90天或12個月每日新增至設定檔存放區的合併設定檔總數。 此數字會每天在擷取快照時更新，因此如果您要將設定檔擷取到Platform，則要等到下次擷取快照時才會反映設定檔的數量。 新增的設定檔計數是選定的合併原則套用至設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
+**[!UICONTROL 設定檔計數變更趨勢]** Widget會顯示過去30天、90天或12個月每日新增至設定檔存放區的合併設定檔總數。 此數字會每天在擷取快照時更新，因此如果您要將設定檔擷取到Platform，則要等到下次擷取快照時才會反映設定檔的數量。 新增的設定檔計數是選定的合併原則套用至設定檔資料的結果，以便將設定檔片段合併在一起，為每個個人形成一個設定檔。
 
-若要進一步瞭解，請參閱 [本檔案前面關於合併原則的章節](#merge-policies).
+若要深入瞭解，請參閱此檔案](#merge-policies)中先前合併原則的[一節。
 
-此 **[!UICONTROL 設定檔計數變更趨勢]** Widget會在Widget的右上角顯示「標題」按鈕。 若要開啟自動註解對話方塊，請選取 **[!UICONTROL 註解]**.
+**[!UICONTROL 設定檔計數變更趨勢]** Widget會在Widget的右上角顯示「標題」按鈕。 若要開啟自動註解對話方塊，請選取&#x200B;**[!UICONTROL 註解]**。
 
-![設定檔總覽標籤會顯示設定檔計數變更趨勢Widget，並反白顯示註解按鈕。](../images/profiles/profiles-count-change-trend-captions.png)
+![設定檔總覽標籤顯示設定檔計數變更趨勢Widget，並反白顯示註解按鈕。](../images/profiles/profiles-count-change-trend-captions.png)
 
 機器學習模型會通過分析圖表和資料自動產生描述主要趨勢和重要事件的標題。 註解會根據註解新增到圖表中。 選取註解以專注於其對應的註解。
 
-![設定檔計數變更趨勢Widget的自動註解對話方塊。](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
+![設定檔計數變更趨勢Widget的自動字幕對話方塊。](../images/profiles/profiles-added-trends-automatic-captions-dialog-with-annotation.png)
 
-### [!UICONTROL 依身分列出的設定檔計數變更趨勢] {#profiles-count-change-trend-by-identity}
+### [!UICONTROL 依身分割槽分的設定檔計數變更趨勢] {#profiles-count-change-trend-by-identity}
 
 <!-- This widget uses a line graph to illustrate the change in number of profiles filtered by a chosen source identity and merge policy. -->
 
@@ -352,19 +352,19 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="依身分識別劃分的設定檔"
 >abstract="此 Widget 會顯示設定檔存放區中依身分劃分的所有合併的設定檔。"
 
-此 **[!UICONTROL 依身分割槽分的設定檔]** widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 依身分割槽分的設定檔總數（也就是將每個名稱空間顯示的值相加）可能會高於合併的設定檔總數，因為一個設定檔可能會有多個相關聯的名稱空間。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。
+依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會顯示您設定檔存放區中所有合併設定檔的身分劃分。 依身分割槽分的設定檔總數（也就是將每個名稱空間顯示的值相加）可能會高於合併的設定檔總數，因為一個設定檔可能會有多個相關聯的名稱空間。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。
 
-若要進一步瞭解，請參閱 [本檔案前面關於合併原則的章節](#merge-policies).
+若要深入瞭解，請參閱此檔案](#merge-policies)中先前合併原則的[一節。
 
-![設定檔總覽儀表板，醒目提示按身分割槽分的設定檔Widget。](../images/profiles/profiles-by-identity.png)
+![設定檔總覽儀表板，其中醒目提示依身分割槽分的設定檔Widget。](../images/profiles/profiles-by-identity.png)
 
-若要開啟自動註解對話方塊，請選取 **[!UICONTROL 註解]**.
+若要開啟自動註解對話方塊，請選取&#x200B;**[!UICONTROL 註解]**。
 
 ![依身分註解的設定檔對話方塊。](../images/profiles/profiles-by-identity-captions.png)
 
 機器學習模型會通過分析資料的整體分佈與關鍵維度，自動產生資料深入分析。
 
-若要進一步瞭解身分，請參閱 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md).
+若要深入瞭解身分，請參閱[Adobe Experience Platform Identity Service檔案](../../identity-service/home.md)。
 
 ### [!UICONTROL 身分識別覆蓋] {#identity-overlap}
 
@@ -373,15 +373,15 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="身分識別覆蓋"
 >abstract="此 Widget 使用文氏圖表顯示設定檔存放區中包含兩個所選身分的設定檔重疊。"
 
-此 **[!UICONTROL 身分重疊]** Widget會使用文氏圖表或設定圖表，來顯示個人資料存放區中，包含兩個所選身分的重疊個人資料。
+**[!UICONTROL 身分重疊]** Widget使用文氏圖表或設定圖表，顯示個人資料存放區中包含兩個所選身分的設定檔重疊。
 
 使用Widget下拉式選單來選取您要比較的身分。 圓圈會顯示包含每個身分的設定檔相對總數。 包含兩種身分的設定檔數目會以圓圈之間的重疊大小表示。 如果客戶透過多個管道與您的品牌互動，則多個身分將會與該個別客戶相關聯。 在此情況下，您的組織可能會有多個包含多個身分識別片段的設定檔。
 
-如需設定檔片段的詳細資訊，請參閱 [設定檔片段與合併的設定檔](../../profile/home.md#profile-fragments-vs-merged-profiles) 在即時客戶個人檔案總覽中。
+如需設定檔片段的詳細資訊，請參閱即時客戶設定檔總覽中有關[設定檔片段與合併的設定檔](../../profile/home.md#profile-fragments-vs-merged-profiles)的區段。
 
-若要進一步瞭解身分，請參閱 [Adobe Experience Platform Identity Service檔案](../../identity-service/home.md).
+若要深入瞭解身分，請參閱[Adobe Experience Platform Identity Service檔案](../../identity-service/home.md)。
 
-![設定檔儀表板總覽中反白顯示身分重疊Widget。](../images/profiles/identity-overlap.png)
+![識別重疊Widget醒目提示的設定檔儀表板總覽。](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL 單一身分識別設定檔] {#single-identity-profiles}
 
@@ -390,9 +390,9 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="單一身分識別設定檔"
 >abstract="此 Widget 會提供您組織的設定檔計數，這些設定檔只有一種可以建立其身分識別的 ID 類型。此 ID 類型可以是電子郵件或 ECID。"
 
-此 [!UICONTROL 單一身分設定檔] Widget會提供貴組織只有一種型別ID型別的設定檔計數，以建立其身分。 此ID型別可以是電子郵件或ECID。 設定檔計數是從最近快照中所包含的資料產生。
+[!UICONTROL 單一身分設定檔] Widget會提供您組織的設定檔計數，這些設定檔只有一種建立其身分識別的ID型別。 此ID型別可以是電子郵件或ECID。 設定檔計數是從最近快照中所包含的資料產生。
 
-![單一身分設定檔Widget。](../images/profiles/single-identity-profiles.png)
+![單一身分設定檔Widget.](../images/profiles/single-identity-profiles.png)
 
 ### [!UICONTROL 依身分割槽分的單一身分設定檔] {#single-identity-profiles-by-identity}
 
@@ -400,7 +400,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 
 若要檢視詳細說明身分設定檔總數的對話方塊，請使用游標暫留在個別長條上。
 
-![依身分識別介面工具集的單一身分識別設定檔。](../images/profiles/single-identity-profiles-by-identity.png)
+![依身分Widget區分的單一身分設定檔。](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL 無區段設定檔] {#unsegmented-profiles}
 
@@ -409,7 +409,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="無區段設定檔"
 >abstract="此 Widget 會提供未附加到任何對象的所有設定檔總數，代表在整個組織中啟用設定檔的機會。"
 
-此 [!UICONTROL 未分段的設定檔] widget提供未附加至任何對象的所有設定檔總數。 產生的數字在最後一個快照集之前是準確的，代表您組織內設定檔啟用的機會。 它還表示有機會刪除未提供足夠ROI的個人檔案。
+[!UICONTROL 未分段的設定檔] Widget提供未附加至任何對象的所有設定檔總數。 產生的數字在最後一個快照集之前是準確的，代表您組織內設定檔啟用的機會。 它還表示有機會刪除未提供足夠ROI的個人檔案。
 
 ![未分段的設定檔Widget。](../images/profiles/unsegmented-profiles.png)
 
@@ -420,9 +420,9 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >title="無區段設定檔趨勢"
 >abstract="此 Widget 會提供一個折線圖，說明在特定時段內未附加到任何對象的所有設定檔數量。可以將 30 天、90 天和 12 個月時段內未附加到任何對象的設定檔趨勢視覺化。"
 
-此 [!UICONTROL 未分段的設定檔變化趨勢] Widget使用線圖來說明自上次每日快照以來新增的未附加至任何對象的設定檔數量。 未附加至任何對象的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 期間是從Widget的下拉式功能表中選擇。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
+[!UICONTROL 未分段的設定檔變更趨勢] Widget會使用線圖來說明自上次每日快照後新增的未附加至任何對象的設定檔數量。 未附加至任何對象的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 期間是從Widget的下拉式功能表中選擇。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
 
-![未分段的設定檔會變更趨勢Widget。](../images/profiles/unsegmented-profiles-change-trend.png)
+![未分段的設定檔變更趨勢Widget。](../images/profiles/unsegmented-profiles-change-trend.png)
 
 ### [!UICONTROL 依身分識別劃分的無區段設定檔] {#unsegmented-profiles-by-identity}
 
@@ -445,9 +445,9 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 此Widget會根據套用至您設定檔資料的所選合併原則，提供準備啟用的對象總數。
 
-選取 **[!UICONTROL 受眾]** 導覽至 [!UICONTROL 受眾] 儀表板 [!UICONTROL 瀏覽] 標籤。 從那裡，您可以看到組織的所有區段定義清單。
+選取&#x200B;**[!UICONTROL 對象]**&#x200B;以瀏覽至[!UICONTROL 對象]儀表板[!UICONTROL 瀏覽]標籤。 從那裡，您可以看到組織的所有區段定義清單。
 
-![受眾Widget。](../images/profiles/audiences.png)
+![對象Widget.](../images/profiles/audiences.png)
 
 <!-- https://jira.corp.adobe.com/browse/PLAT-115291 -->
 
@@ -462,35 +462,35 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL 對象重疊報表] {#audience-overlap-report}
 
-此Widget會將合併原則所篩選的所有可用對象中資料重疊的表格化。 針對從畫面頂端的下拉式選單中選擇的合併原則，提供從最高到最低重疊百分比排名的五個對象清單。 兩個已分析的對象會列於 [!UICONTROL 對象A名稱] 和 [!UICONTROL 對象B名稱] 欄。 第三欄提供重疊百分比，精確至小數點十二位數。
+此Widget會將合併原則所篩選的所有可用對象中資料重疊的表格化。 針對從畫面頂端的下拉式選單中選擇的合併原則，提供從最高到最低重疊百分比排名的五個對象清單。 兩個已分析的對象列在[!UICONTROL 對象A名稱]和[!UICONTROL 對象B名稱]欄中。 第三欄提供重疊百分比，精確至小數點十二位數。
 
 對象重疊報表可協助您建立新的高效能對象。 觀察高百分比的重疊可讓您抑制受眾，並防止將相同的受眾傳送至不同的目的地。 它們也可協助您識別隱藏的深入分析，可能有助於更佳的分段。 低百分比重疊有助於找到要追蹤的不重複設定檔。
 
-選取 **[!UICONTROL 檢視更多]** 以開啟包含更多對象重疊資料的全熒幕對話方塊。
+選取&#x200B;**[!UICONTROL 檢視更多]**&#x200B;以開啟包含更多對象重疊資料的全熒幕對話方塊。
 
-![對象重疊報表Widget，其中檢視更加醒目提示。](../images/profiles/profiles-audience-overlap-report.png)
+![檢視更醒目提示的對象重疊報表Widget。](../images/profiles/profiles-audience-overlap-report.png)
 
-此 [!UICONTROL 對象重疊報表] 對話方塊隨即顯示。 此對話方塊最多可包含50列對象重疊分析，並分為6欄。 若要從表格中移除或新增欄，請選取設定圖示(![設定圖示。](../images/profiles/settings-icon.png))。
+[!UICONTROL 對象重疊報表]對話方塊就會顯示。 此對話方塊最多可包含50列對象重疊分析，並分為6欄。 若要從表格移除或新增欄，請選取設定圖示（![設定圖示。](../images/profiles/settings-icon.png)）。
 
 ![對象重疊報表對話方塊。](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->若要變更結果在最高到最低或最低到最高之間的排名，請選取 **[!UICONTROL 重疊]** 欄標題。
+>若要將結果的排名從最高變更為最低，或從最低變更為最高，請選取&#x200B;**[!UICONTROL 重疊]**&#x200B;欄標題。
 
-若要以PDF格式下載整個報表，請選取選項功能表(**`...`**)後接 **[!UICONTROL 下載]**.
+若要以PDF格式下載整個報表，請選取選項功能表(**`...`**)，然後選取&#x200B;**[!UICONTROL 下載]**。
 
-![對象重疊報表對話方塊，其省略符號和下載選項會醒目提示。](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
+![標示有省略符號和下載選項的「對象重疊報表」對話方塊。](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
 若要開啟重疊分析的文氏圖表，請從報表中選取一列。 若要在對話方塊中檢視設定檔計數，請將游標停留在文氏圖表的某個區段上。
 
-![對象重疊報表對話方塊，會以文氏圖表和強調的列顯示。](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
+![對象重疊報表對話方塊，其中具有文氏圖表和醒目提示的列。](../images/profiles/profiles-audience-overlap-report-dialog-venn.png)
 
-選取 **[!UICONTROL 關閉]** 以返回 [!UICONTROL 設定檔] 儀表板。
+選取&#x200B;**[!UICONTROL 關閉]**&#x200B;以返回[!UICONTROL 設定檔]儀表板。
 
 ### [!UICONTROL 對應到目的地狀態的對象] {#audiences-mapped-to-destination-status}
 
-此 [!UICONTROL 對應到目的地狀態的對象] widget會顯示單一量度中對應和未對應的對象總數，並使用環形圖來說明總數之間的比例差異。 計算出的數字取決於所選的合併原則。
+對應至目的地狀態的[!UICONTROL 對象] Widget會在單一量度中顯示對應和未對應的對象總數，並使用環形圖來說明總數之間的比例差異。 計算出的數字取決於所選的合併原則。
 
 當游標暫留在環圈圖的個別區段上時，已對應或未對應對象的個別計數會顯示在對話方塊中。
 
@@ -498,15 +498,15 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL 對象人數] {#audiences-size}
 
-此 [!UICONTROL 對象人數] widget提供兩欄表格，列出最多20個對象的名稱及各對象中包含的設定檔總數。 此清單會根據對象中包含的設定檔總數從高到低排序。 總對象人數取決於套用的合併原則。
+[!UICONTROL 對象大小] Widget提供兩欄表格，列出最多20個對象的名稱以及每個對象中包含的設定檔總數。 此清單會根據對象中包含的設定檔總數從高到低排序。 總對象人數取決於套用的合併原則。
 
-![受眾大小Widget。](../images/profiles/audiences-size.png)
+![對象大小Widget。](../images/profiles/audiences-size.png)
 
-若要檢視對象的完整資訊，請從提供的清單中選取對象名稱，以導覽至 [!UICONTROL 受眾] [!UICONTROL 詳細資料] 頁面。 此外，透過選取 **[!UICONTROL 檢視所有對象]** 從Widget的結尾，您可以導覽至 [!UICONTROL 受眾] [!UICONTROL 瀏覽] 索引標籤以尋找任何現有的對象。
+若要檢視對象的完整資訊，請從提供的清單中選取對象名稱，以導覽至[!UICONTROL 對象] [!UICONTROL 詳細資料]頁面。 此外，選取Widget結尾的&#x200B;**[!UICONTROL 檢視所有對象]**，您就可以導覽至[!UICONTROL 對象] [!UICONTROL 瀏覽]標籤，以尋找任何現有的對象。
 
-![具有對象名稱的「對象大小」Widget以及反白顯示的「檢視所有對象」文字。](../images/profiles/audiences-size-view-all-audiences.png)
+![具有對象名稱的「對象大小」Widget和「檢視所有對象」文字強調顯示。](../images/profiles/audiences-size-view-all-audiences.png)
 
-有關對象詳細資料的更多資訊可在以下連結中找到： [Audience Portal檔案](../../segmentation/ui/audience-portal.md).
+有關對象詳細資料的更多資訊可以在[對象入口網站檔案](../../segmentation/ui/audience-portal.md)中找到。
 
 ### [!UICONTROL 依合併原則區分的對象重疊] {#audience-overlap-by-merge-policy}
 
@@ -514,7 +514,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 由於Widget會顯示區段定義的視覺交叉，因此您可以研究區段定義之間的相似性，以最佳化區段策略。
 
-![Platform UI Profiles控制面板具有醒目提示的合併原則下拉式清單和Widget受眾下拉式清單。](../images/profiles/audience-overlap-by-merge-policy.png)
+![Platform UI Profiles儀表板，包含強調顯示的合併原則下拉式清單和Widget受眾下拉式清單。](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
@@ -587,4 +587,4 @@ The three levels of completeness are:
 
 ## 後續步驟
 
-閱讀本檔案後，您現在應該能夠找到設定檔控制面板，並瞭解可用介面工具列中顯示的量度。 若要進一步瞭解使用 [!DNL Profile] Experience PlatformUI中的資料，請參閱 [即時客戶設定檔UI指南](../../profile/ui/user-guide.md).
+閱讀本檔案後，您現在應該能夠找到設定檔控制面板，並瞭解可用介面工具列中顯示的量度。 若要進一步瞭解如何在Experience PlatformUI中使用[!DNL Profile]資料，請參閱[即時客戶設定檔UI指南](../../profile/ui/user-guide.md)。

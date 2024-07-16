@@ -10,9 +10,9 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL 交易] 資料型別
+# [!UICONTROL 交易]資料型別
 
-[!UICONTROL 交易] 是標準的體驗資料模型(XDM)資料型別，可描述貨幣交易的詳細資訊。
+[!UICONTROL 交易]是標準的體驗資料模型(XDM)資料型別，可描述貨幣交易的詳細資訊。
 
 ![交易結構](../images/data-types/transaction.png)
 

@@ -7,8 +7,8 @@ description: Adobe Experience Platform提供數種服務和工具，可讓您安
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 12%
+source-wordcount: '206'
+ht-degree: 1%
 
 ---
 
@@ -22,10 +22,10 @@ Attribution AI與Adobe Experience Platform資料控管之間的整合，可讓�
 
 在Platform使用的資料集上建立的資料使用標籤和原則，可以在Attribution AI設定工作流程中顯示。 這些標籤會阻止或警告使用已標籤欄位的使用者。
 
-此整合可讓您更有效率地管理合規性。 在您組織中的資料監管員可以設定限制使用的原則。因此，您可以使用符合資料管理員所定義原則的資料。 請閱讀以下檔案： [標籤和原則](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) 以進一步瞭解。
+此整合可讓您更有效率地管理合規性。 您組織中的資料管理員可以設定原則來限制使用。 因此，您可以使用符合資料管理員所定義原則的資料。 請閱讀[標籤和原則](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html)的相關檔案以深入瞭解。
 
 您可以在這裡深入瞭解此功能：
 
-[Attribution AI快速入門](../../attribution-ai/getting-started.md)
-[Adobe Experience Platform與應用程式](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[Adobe Experience Cloud架構圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
+[Attribution AI](../../attribution-ai/getting-started.md)快速入門
+[Adobe Experience Platform和應用程式](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[Adobe Experience Cloud架構圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=zh-Hant)

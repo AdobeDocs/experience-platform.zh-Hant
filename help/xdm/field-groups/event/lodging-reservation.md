@@ -6,34 +6,34 @@ exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '655'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL 住宿預訂] 結構描述欄位群組
+# [!UICONTROL 住宿預訂]結構描述欄位群組
 
-[!UICONTROL 住宿預訂] 是的標準結構描述欄位群組 [[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md) 用於擷取和住宿預訂相關的資訊。
+[!UICONTROL 住宿預訂]是[[!DNL XDM ExperienceEvent] 類別](../../classes/experienceevent.md)的標準結構描述欄位群組，用於擷取住宿預訂的相關資訊。
 
-欄位群組是 [!UICONTROL 預訂詳細資料] 欄位群組，並在單一物件型別欄位下包含所有相同的欄位， `reservations`. 除了這些通用欄位外， [!UICONTROL 住宿預訂] 也包含 `lodgingReservations` 陣列。 這個物件陣列可用來說明一或多個保留區，以及住宿所獨有的屬性。
+欄位群組是[!UICONTROL 保留詳細資料]欄位群組的延伸，且包含單一物件型別欄位`reservations`下的所有相同欄位。 除了這些一般欄位之外，[!UICONTROL 住宿預訂]也包含`lodgingReservations`陣列。 這個物件陣列可用來說明一或多個保留區，以及住宿所獨有的屬性。
 
 >[!NOTE]
 >
->本檔案涵蓋 `lodgingReservations` 陣列。 如需底下其他欄位的詳細資訊， `reservations` 物件，請參閱 [[!UICONTROL 預訂詳細資料] 欄位群組參考](./reservation-details.md).
+>本檔案涵蓋`lodgingReservations`陣列的詳細資料。 如需`reservations`物件下提供之其他欄位的資訊，請參閱[[!UICONTROL 保留區詳細資料]欄位群組參考](./reservation-details.md)。
 
 ![住宿預訂結構](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` 是一個物件陣列，代表住宿預訂清單。 例如，如果預訂事件涉及旅行路線上多個不同旅館的預訂，則這些預訂可以列為下的個別物件 `lodgingReservations` 用於單一事件。
+`lodgingReservations`是物件陣列，代表住宿預訂清單。 例如，如果預訂事件涉及旅行路線上多個不同飯店的預訂，則這些預訂可以列為單一事件`lodgingReservations`下的個別物件。
 
-下提供的每個物件的結構 `lodgingReservations` 提供如下。
+`lodgingReservations`下提供的每個物件結構如下。
 
-![loggingReservations結構](../../images/field-groups/lodging-reservation/lodgingReservations.png)
+![住宿預訂結構](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
 | 屬性 | 資料類型 | 說明 |
 | --- | --- | --- |
 | `averageDailyPrice` | [[!UICONTROL 貨幣]](../../data-types/currency.md) | 飯店房間的平均每日價格。 |
-| `lodgingCheckIn` | 物件 | 說明住宿簽到詳細資訊的物件。 包含下列值：<ul><li>`digitalKey`：（整數）表示訪客在簽入時選取使用數位金鑰的時間。</li><li>`earlyCheckInRequested`：（整數）指出訪客要求比正常簽到時間更早簽到的時數。</li><li>`lateCheckInRequested`：（整數）指出訪客要求晚於正常簽到時間簽到的時數。</li><li>`noRoomCheckIn`：（整數）當來賓完成簽入且當時沒有可用聊天室時，會擷取此值。</li><li>`oneRoomCheckIn`：（整數）當僅有一個房間可供使用時，當來賓完成簽入時擷取此值。</li><li>`roomKeys`：（整數）簽到時提供的標準房鑰匙數量。</li><li>`userSelectedRoom`：（布林值）指出房客是否於簽到時選取房間。</li></ul> |
+| `lodgingCheckIn` | 物件 | 說明住宿簽到詳細資訊的物件。 包含下列值：<ul><li>`digitalKey`： （整數）表示訪客在簽入時選取使用數位金鑰的時間。</li><li>`earlyCheckInRequested`： （整數）表示訪客要求比正常簽到時間更早簽到的時數。</li><li>`lateCheckInRequested`： （整數）表示訪客要求晚於正常簽到時間簽到的時數。</li><li>`noRoomCheckIn`： （整數）當來賓完成簽入且當時沒有可用的聊天室時，會擷取此值。</li><li>`oneRoomCheckIn`： （整數）當來賓完成簽入時，若當時只有一個房間可供使用，則會擷取此值。</li><li>`roomKeys`： （整數）簽到時提供的標準房間鑰匙數量。</li><li>`userSelectedRoom`： （布林值）指出賓客是否於簽到時選取其房間。</li></ul> |
 | `rackrate` | [[!UICONTROL 貨幣]](../../data-types/currency.md) | 沒有預先預訂安排的當天預訂成本。 |
 | `ID` | 字串 | 預訂編號或識別碼。 |
 | `agentID` | 字串 | 和飯店預訂相關聯的代理程式ID。 |
@@ -46,7 +46,7 @@ ht-degree: 5%
 | `couponCode` | 字串 | 和飯店預訂相關聯的抵用券代碼。 |
 | `created` | 整數 | 此值會在建立預訂時擷取。 |
 | `currencyCode` | 字串 | 用於進行購買的ISO 4217貨幣代碼。 |
-| `discountPercent` | 雙倍 | 和預訂相關聯的折扣百分比。 |
+| `discountPercent` | 雙精度 | 和預訂相關聯的折扣百分比。 |
 | `freeCancelation` | 布林值 | 指出會議室是否有免費取消原則。 |
 | `guestID` | 字串 | 和飯店預訂相關聯的賓客ID。 |
 | `length` | 整數 | 預訂的總天數。 |
@@ -59,7 +59,7 @@ ht-degree: 5%
 | `propertyID` | 字串 | 預訂的飯店或渡假村的識別碼。 |
 | `propertyName` | 字串 | 預訂的飯店或度假村的名稱。 |
 | `purpose` | 字串 | 預訂的目的，通常為商業或個人目的。 |
-| `ratePlan` | 字串 | 房間售出的費率交易。 |
+| `ratePlan` | 字串 | 房間售出的費率超值優惠。 |
 | `refundable` | 布林值 | 指出房間是否可退款。 |
 | `reservationStatus` | 字串 | 預訂的狀態。 |
 | `roomAccessibilityType` | 字串 | 房間的無障礙型別，例如行動力、聽力或其他。 |
@@ -72,5 +72,5 @@ ht-degree: 5%
 
 如需欄位群組的詳細資訊，請參閱公用XDM存放庫：
 
-* [填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
+* [已填入範例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
 * [完整結構描述](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)

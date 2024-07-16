@@ -3,7 +3,7 @@ title: 在 Assurance 中檢視適用於串流媒體的 Adobe Analytics
 description: 本指南會說明如何將適用於串流媒體的 Adobe Analytics 和 Adob​​e Experience Platform Assurance 一起使用。
 exl-id: 9a9c2c64-e9ed-4d58-b936-d802f1c3b7d3
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 100%
 

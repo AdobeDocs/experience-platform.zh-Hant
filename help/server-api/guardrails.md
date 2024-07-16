@@ -20,16 +20,16 @@ Adobe對超過使用量限制所造成的效能降低不負責任。 持續超�
 
 >[!IMPORTANT]
 >
->檢查您的銷售訂單中的授權權利以及對應的 [產品說明](https://helpx.adobe.com/legal/product-descriptions.html) 除了此護欄頁面之外，還受到實際使用量限制。
+>除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
 
 ## 定義
 
-* **可用性** 每個五分鐘間隔的計算方式為Experience PlatformEdge Network所處理之要求的百分比，這些要求不會因錯誤而失敗，且僅與布建的Edge NetworkAPI有關。 如果租使用者未在指定的五分鐘間隔內提出任何請求，則該間隔會視為100%可用。
-* **每月連續運作時間百分比** 特定區域的計算方式為每月所有五分鐘間隔的可用性平均值。
-* 一個 **上游** 是Edge Network背後的服務，可針對特定資料流啟用，例如Adobe伺服器端轉送、Adobe Edge Segmentation或Adobe Target。
-* A **請求單位** 對應至8 KB的請求片段，以及針對資料流設定的一個上游。
-* A **請求** 是客戶擁有的應用程式傳送給的單一訊息 [!DNL Server API]. 請求可包含一或多個請求單位。
-* 一個 **錯誤** 是任何因Edge Network而失敗的要求 [內部服務錯誤](error-handling.md).
+* **可用性**&#x200B;是按照每個五分鐘間隔計算的，作為Experience PlatformEdge Network處理的要求百分比，這些要求不會因錯誤而失敗，且僅與布建的Edge NetworkAPI有關。 如果租使用者未在指定的五分鐘間隔內提出任何請求，則該間隔會視為100%可用。
+* 指定區域的&#x200B;**每月連續運作時間百分比**&#x200B;是以每個月所有五分鐘間隔的可用性平均值計算。
+* **上游**&#x200B;是Edge Network背後的服務，可針對特定資料流啟用，例如Adobe伺服器端轉送、Adobe Edge Segmentation或Adobe Target。
+* **請求單位**&#x200B;對應至請求的8 KB片段，以及針對資料流設定的上游片段。
+* **要求**&#x200B;是客戶擁有的應用程式傳送給[!DNL Server API]的單一訊息。 請求可包含一或多個請求單位。
+* **錯誤**&#x200B;是指任何因Edge Network[內部服務錯誤](error-handling.md)而失敗的要求。
 
 ## 服務限制
 
@@ -37,7 +37,7 @@ Adobe對超過使用量限制所造成的效能降低不負責任。 持續超�
 
 ### 請求單位
 
-所有限制都會套用並標準化 **請求單位(RU)**，定義為 **8 KB片段** 請求傳送到資料流中設定的一個上游服務。
+所有限制皆會套用並正規化至&#x200B;**要求單位(RU)**，定義為&#x200B;**8 KB片段**，其要求會傳送到資料流中設定的上游服務。
 
 #### 範例
 
@@ -74,7 +74,7 @@ Adobe對超過使用量限制所造成的效能降低不負責任。 持續超�
 請參閱下列檔案，深入瞭解其他Experience Platform服務護欄、端對端延遲資訊，以及Real-Time CDP產品說明檔案的授權資訊：
 
 * [Real-Time CDP護欄](/help/rtcdp/guardrails/overview.md)
-* [端對端延遲圖](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) 用於各種Experience Platform服務。
-* [Real-time Customer Data Platform （B2C版本 — Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2P - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform （B2B - Prime和Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [各種Experience Platform服務的端對端延遲圖表](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams)。
+* [Real-time Customer Data Platform （B2C Edition - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2P - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform （B2B - Prime與Ultimate套件）](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

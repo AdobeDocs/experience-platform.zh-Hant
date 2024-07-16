@@ -4,14 +4,14 @@ description: 瞭解如何開始使用Reactor API，包括產生所需存取憑�
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '908'
 ht-degree: 3%
 
 ---
 
 # 驗證及存取Reactor API
 
-為了使用 [Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/) 若要建立和管理Tags擴充功能，每個要求都必須包含下列驗證標題：
+若要使用[Reactor API](https://developer.adobe.com/experience-platform-apis/references/reactor/)來建立和管理Tags擴充功能，每個要求都必須包含下列驗證標題：
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 ## 取得開發人員的Adobe Experience Platform存取權 {#gain-developer-access}
 
-您必須先擁有開發人員Experience Platform存取權，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請依照以下說明中的開始步驟操作： [Experience Platform驗證教學課程](/help/landing/api-authentication.md). 當您完成 [取得使用者存取權](/help/landing/api-authentication.md#gain-user-access) 步驟，返回本教學課程以產生Reactor API的特定認證。
+您必須先擁有開發人員Experience Platform存取權，才能產生Reactor API的驗證值。 若要取得開發人員存取權，請依照[Experience Platform驗證教學課程](/help/landing/api-authentication.md)中的開始步驟操作。 完成[取得使用者存取權](/help/landing/api-authentication.md#gain-user-access)步驟後，請返回此教學課程，產生Reactor API的特定認證。
 
 ## 產生存取認證 {#generate-access-credentials}
 
@@ -31,19 +31,19 @@ ht-degree: 3%
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-您組織的ID (`{ORG_ID}`)和API金鑰(`{API_KEY}`)可在最初產生後於未來的API呼叫中重複使用。 不過，您的存取權杖(`{ACCESS_TOKEN}`)是暫時性的，必須每24小時重新產生一次。
+貴組織的ID (`{ORG_ID}`)和API金鑰(`{API_KEY}`)在最初產生後，便可在未來的API呼叫中重複使用。 不過，您的存取權杖(`{ACCESS_TOKEN}`)是暫時性的，必須每24小時重新產生一次。
 
 以下將詳細介紹產生這些值的步驟。
 
 ### 一次性設定 {#one-time-setup}
 
-前往 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 並使用您的Adobe ID登入。 接下來，請依照教學課程中概述的步驟進行 [建立空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/) 在開發人員控制檯檔案中。
+移至[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)並使用您的Adobe ID登入。 接下來，請依照教學課程中概述的步驟，在Developer Console檔案中建立[空白專案](https://developer.adobe.com/developer-console/docs/guides/projects/projects-empty/)。
 
-建立專案後，選取 **新增API** 於 **專案概述** 畫面。
+建立專案後，請在&#x200B;**專案概述**&#x200B;畫面上選取&#x200B;**新增API**。
 
 ![](../images/api/getting-started/add-api-button.png)
 
-此 **新增API** 畫面隨即顯示。 選取 **EXPERIENCE PLATFORM LAUNCH API** 從可用API清單中選取 **下一個**.
+**新增API**&#x200B;畫面會出現。 選取&#x200B;**Experience Platform LaunchAPI**，再選取&#x200B;**下一步**。
 
 ![](../images/api/getting-started/add-launch-api.png)
 
@@ -51,7 +51,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->選取 **[!UICONTROL OAuth伺服器對伺服器]** 方法，因為這是唯一支援日後使用的方法。 此 **[!UICONTROL 服務帳戶(JWT)]** 方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在區段中取得詳細資訊 [!BADGE 已棄用]{type=negative}[產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt) 平台API驗證教學課程中。
+>選取&#x200B;**[!UICONTROL OAuth伺服器對伺服器]**&#x200B;方法，因為這是日後唯一支援的方法。 **[!UICONTROL 服務帳戶(JWT)]**&#x200B;方法已過時。 雖然使用JWT驗證方法的整合功能在2025年1月1日之前將繼續運作，但Adobe強烈建議您在該日期之前將現有整合功能移轉至新的OAuth伺服器對伺服器方法。 在[!BADGE 已棄用]一節中取得詳細資訊{type=negative}[在Platform API驗證教學課程中產生JSON Web權杖(JWT)](/help/landing/api-authentication.md#jwt)。
 
 選取&#x200B;**「下一步」**&#x200B;以繼續。
 
@@ -63,22 +63,22 @@ ht-degree: 3%
 >
 產品設定檔由您的組織透過Adobe Admin Console管理，並包含精細功能的特定許可權集。 產品設定檔及其許可權只能由組織內具有管理員許可權的使用者管理。 如果您不確定要為API選取哪些產品設定檔，請聯絡管理員。
 
-從清單中選取所需的產品設定檔，然後選取「 」 **儲存已設定的API** 以完成API註冊。
+從清單中選取所需的產品設定檔，然後選取&#x200B;**儲存已設定的API**&#x200B;以完成API註冊。
 
 ![](../images/api/getting-started/select-product-profile.png)
 
 ### 收集認證 {#gather-credentials}
 
-將API新增至專案後， **[!UICONTROL EXPERIENCE PLATFORM API]** 專案的頁面會顯示所有Experience PlatformAPI呼叫所需的下列認證：
+將API新增至專案後，專案的&#x200B;**[!UICONTROL Experience Platform API]**&#x200B;頁面會顯示所有呼叫Experience Platform API時所需的下列認證：
 
-* `{API_KEY}` ([!UICONTROL 使用者端ID])
-* `{ORG_ID}` ([!UICONTROL 組織 ID])
+* `{API_KEY}` （[!UICONTROL 使用者端識別碼]）
+* `{ORG_ID}` （[!UICONTROL 組織識別碼]）
 
-![在開發人員控制檯中新增API後的整合資訊。](/help/tags/images/api/getting-started/api-integration-information.png)
+在Developer Console中新增API後的![整合資訊。](/help/tags/images/api/getting-started/api-integration-information.png)
 
 ### 產生存取權杖 {#generate-access-token}
 
-下一步是產生 `{ACCESS_TOKEN}` 用於平台API呼叫的認證。 不像 `{API_KEY}` 和 `{ORG_ID}`，必須每24小時產生一個新Token才能繼續使用Platform API。
+下一步是產生`{ACCESS_TOKEN}`認證以用於Platform API呼叫。 不像`{API_KEY}`和`{ORG_ID}`的值，必須每24小時產生一次新Token，才能繼續使用Platform API。
 
 >[!TIP]
 >
@@ -91,21 +91,21 @@ ht-degree: 3%
 
 #### 手動產生存取權杖 {#manual}
 
-若要手動產生新的 `{ACCESS_TOKEN}`，導覽至 **[!UICONTROL 認證]** > **[!UICONTROL OAuth伺服器對伺服器]** 並選取 **[!UICONTROL 產生存取權杖]**，如下所示。
+若要手動產生新的`{ACCESS_TOKEN}`，請瀏覽至&#x200B;**[!UICONTROL 認證]** > **[!UICONTROL OAuth伺服器對伺服器]**，然後選取&#x200B;**[!UICONTROL 產生存取權杖]**，如下所示。
 
-![在開發人員控制檯UI中如何產生和存取Token的熒幕記錄。](/help/tags/images/api/getting-started/generate-access-token.gif)
+![在Developer Console UI中產生存取權杖的方式和存取權杖的熒幕錄製。](/help/tags/images/api/getting-started/generate-access-token.gif)
 
-會產生新的存取Token，並提供按鈕以將該Token複製到剪貼簿。 此值用於所需的授權標頭，必須以格式提供 `Bearer {ACCESS_TOKEN}`.
+會產生新的存取Token，並提供按鈕以將該Token複製到剪貼簿。 此值用於必要的Authorization標頭，且必須以`Bearer {ACCESS_TOKEN}`格式提供。
 
 #### 自動化權杖產生 {#auto-token}
 
-您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀以下章節： [使用Postman驗證及測試API呼叫](/help/landing/api-authentication.md#use-postman) 在Experience Platform API驗證指南中。
+您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀Experience PlatformAPI驗證指南中有關[使用Postman驗證和測試API呼叫](/help/landing/api-authentication.md#use-postman)的章節。
 
 ## 測試API認證 {#test-api-credentials}
 
-依照本教學課程中的步驟操作，您應該具備下列專案的有效值： `{ORG_ID}`， `{API_KEY}`、和 `{ACCESS_TOKEN}`. 您現在可以透過在對Reactor API的簡單cURL請求中使用這些值來測試這些值。
+依照本教學課程中的步驟進行，您應該擁有`{ORG_ID}`、`{API_KEY}`和`{ACCESS_TOKEN}`的有效值。 您現在可以透過在對Reactor API的簡單cURL請求中使用這些值來測試這些值。
 
-首先，嘗試對進行API呼叫 [列出所有公司](./endpoints/companies.md#list).
+首先，嘗試進行API呼叫以列出[所有公司](./endpoints/companies.md#list)。
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ ht-degree: 3%
 
 ## 讀取範例 API 呼叫 {#read-sample-api-calls}
 
-每個端點指南都提供API呼叫範例，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中用於範例API呼叫的慣例相關資訊，請參閱以下章節： [如何讀取範例API呼叫](../../landing/api-guide.md#sample-api) （位於平台API快速入門手冊中）。
+每個端點指南都提供API呼叫範例，示範如何格式化您的請求。 這些包括路徑、必要的標頭和正確格式化的請求承載。 此外，也提供 API 回應中傳回的範例 JSON。 如需檔案中所使用之範例API呼叫慣例的詳細資訊，請參閱Platform API快速入門手冊中[如何讀取範例API呼叫](../../landing/api-guide.md#sample-api)的相關章節。
 
 ## 後續步驟 {#next-steps}
 

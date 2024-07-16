@@ -15,9 +15,9 @@ ht-degree: 27%
 >[!IMPORTANT]
 > 
 >* 本頁提供Real-Time CDP和Adobe Journey Optimizer的實作範例，以達成上述使用案例。 使用頁面上提供的圖、資格標準和其他欄位作為指南，而不是規範圖。
->* 若要完成此使用案例，您需要取得Real-Time CDP和Adobe Journey Optimizer的授權。 請閱讀以下內容： [先決條件和規劃區段](#prerequisites-and-planning) 再看下方。
+>* 若要完成此使用案例，您需要取得Real-Time CDP和Adobe Journey Optimizer的授權。 請閱讀下方[先決條件和規劃區段](#prerequisites-and-planning)的詳細資訊。
 
-實施一次性客戶價值至終身價值的使用案例，以提高品牌參與度和品牌忠誠度。 運用Experience Platform的力量，輔以以下工具，在多個管道或歷程上建立連線的客戶體驗 [Real-Time CDP](/help/rtcdp/home.md) 和 [Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home).
+實施一次性客戶價值至終身價值的使用案例，以提高品牌參與度和品牌忠誠度。 利用Experience Platform的強大功能，再加上[Real-Time CDP](/help/rtcdp/home.md)和[Journey Optimizer](https://experienceleague.adobe.com/zh-hant/docs/journey-optimizer/using/ajo-home)，在多個管道或歷程上建立連線的客戶體驗。
 
 您鎖定的角色是您屬性中不常見的訪客，這些訪客在過去三個月中進行了一些購買。
 
@@ -27,27 +27,27 @@ ht-degree: 27%
 * 建立對象
 * 建立歷程以在Adobe Journey Optimizer中鎖定這些對象，並在Real-Time CDP中啟用它們。
 
-![逐步將一次性值進化為期限值高階視覺概覽。](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
+![逐步將一次性值演變成期限值高階視覺化概觀。](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## 必要條件和規劃 {#prerequisites-and-planning}
 
 考量到您已在內部定義業務目標和目標，以提高品牌忠誠度。 這可以轉換為執行使用案例，以提高客戶參與度和忠誠度。
 
-為此，所需的技術包含兩個Experience Platform應用程式 [Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html) 和 [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant). 以下列出您在實作使用案例時將使用的兩個應用程式的各種功能和UI元素。
+為此，所需的技術包含兩個Experience Platform應用程式[Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=zh-Hant)和[Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=zh-Hant)。 以下列出您在實作使用案例時將使用的兩個應用程式的各種功能和UI元素。
 
 >[!TIP]
 >
 >確保您擁有所有這些區域所需的[屬性型存取控制權限](/help/access-control/abac/end-to-end-guide.md)，或要求系統管理員授予您必要的權限。
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)：整合跨資料來源的資料以利行銷活動。 然後，使用此資料來建立行銷活動對象，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。最後，Real-Time CDP也可用來啟用付費媒體目的地的受眾。
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html)：整合跨資料來源的資料，以推動行銷活動。 然後，使用此資料來建立行銷活動對象，並呈現用於電子郵件和網頁促銷圖磚的個人化資料元素 (例如姓名或帳戶相關資訊)。最後，Real-Time CDP也可用來啟用付費媒體目的地的受眾。
    * [結構描述](/help/xdm/home.md)
    * [設定檔](/help/profile/home.md)
    * [資料集](/help/catalog/datasets/overview.md)
    * [對象](/help/segmentation/home.md)
    * [目的地](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)：設計歷程、設定觸發因子，並建立正確的訊息以處理訪客問題。
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)：設計歷程、設定觸發器，並建立正確的訊息以回應您的訪客。
    * [事件或對象觸發](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [對象和事件](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
+   * [對象和活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Real-Time CDP和Journey Optimizer架構
@@ -66,17 +66,17 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->如本頁後續所述，透過使用 [結構描述中的專用同意欄位群組](#customer-attributes-schema) 並依據 [實作同意原則](#privacy-consent)，所有動作和工作流程都會以隱私權和同意優先的方式實作。
+>如本頁進一步所述，藉由在您的結構描述中擁有[專屬的同意欄位群組](#customer-attributes-schema)以及[實作同意原則](#privacy-consent)，所有動作和工作流程都會以隱私權和同意優先的方式實作。
 
 >[!BEGINSHADEBOX]
 
-![逐步將一次性值進化為期限值高階視覺概覽。](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
+![逐步將一次性值演變成期限值高階視覺化概觀。](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
-1. 您可以建立方案和資料集，然後標籤這些的 [!UICONTROL 個人資料].
+1. 您建立結構描述和資料集，然後為[!UICONTROL 設定檔]標籤這些資料集。
 2. 系統會透過Web SDK、Mobile Edge SDK或API收集資料並整合至Experience Platform。 也可以使用 Analytics Data Connector，但可能會導致歷程延遲。
 3. 您將設定檔載入到 Real-Time CDP 並建立控管原則，以確保以負責方式使用資料。
 4. 您可從設定檔清單建立焦點受眾，以檢查高值和低頻率客戶。
-5. 您在中建立兩個歷程 [!DNL Adobe Journey Optimizer]，其中一個傳送訊息給使用者有關新訂閱計畫的資訊，另一個則傳送訊息給他們，讓他們稍後確認購買。
+5. 您在[!DNL Adobe Journey Optimizer]中建立兩個歷程，一個傳送訊息給使用者有關新訂閱程式的資訊，另一個則傳送訊息給他們，讓他們稍後確認購買。
 6. 如有需要，您可以啟用尚未購買您訂閱之客戶受眾，並前往想要的付費媒體目的地。
 
 >[!ENDSHADEBOX]
@@ -91,7 +91,7 @@ ht-degree: 27%
 
 ### 建立結構描述設計並指定欄位群組 {#schema-design}
 
-體驗資料模型 (XDM) 資源是在 [!DNL Adobe Experience Platform] 內的[!UICONTROL 結構描述] 工作區中接受管理。您可以檢視並探索所提供的核心資源： [!DNL Adobe] (例如， [!UICONTROL 欄位群組])並為您的組織建立自訂資源和結構描述。
+體驗資料模型 (XDM) 資源是在 [!DNL Adobe Experience Platform] 內的[!UICONTROL 結構描述] 工作區中接受管理。您可以檢視及探索[!DNL Adobe]提供的核心資源（例如，[!UICONTROL 欄位群組]），並為您的組織建立自訂資源和結構描述。
 
 如需深入了解如何建立[結構描述](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=zh-Hant)，請參閱[建立結構描述教學課程](/help/xdm/tutorials/create-schema-ui.md)。
 
@@ -99,15 +99,15 @@ ht-degree: 27%
 
 根據實作範例，Adobe建議您建立下列三個結構描述來完成此使用案例：
 
-* [客戶屬性結構](#customer-attributes-schema) （設定檔結構描述）
-* [客戶數位交易綱要](#customer-digital-transactions-schema) （體驗事件結構描述）
+* [客戶屬性結構描述](#customer-attributes-schema) （設定檔結構描述）
+* [客戶數位交易結構描述](#customer-digital-transactions-schema) （體驗事件結構描述）
 * [客戶離線交易結構描述](#customer-offline-transactions-schema) （體驗事件結構描述）
 
 #### 客戶屬性結構描述 {#customer-attributes-schema}
 
 使用此結構描述來建構並參考構成客戶資訊的設定檔資料。 該資料通常會透過您的 CRM 或類似系統被擷取至 [!DNL Adobe Experience Platform]，並且有必要參考用來個人化、行銷同意和加強分段功能的客戶詳細資訊。
 
-![反白顯示欄位群組的客戶屬性結構](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
+![已強調欄位群組的客戶屬性結構描述](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
 客戶屬性結構描述以 [!UICONTROL XDM 個人設定檔]類別表示，其中包括以下欄位群組：
 
@@ -119,7 +119,7 @@ ht-degree: 27%
 
 +++個人聯絡詳細資料 (欄位群組)
 
-[個人聯絡詳細資訊](/help/xdm/field-groups/profile/personal-contact-details.md) 是XDM個別設定檔類別的標準結構描述欄位群組，可描述個別人員的聯絡資訊。
+[個人聯絡詳細資訊](/help/xdm/field-groups/profile/personal-contact-details.md)是XDM個人設定檔類別的標準結構描述欄位群組，可描述個人的聯絡資訊。
 
 +++
 
@@ -137,9 +137,9 @@ ht-degree: 27%
 
 #### 客戶數位交易結構描述 {#customer-digital-transactions-schema}
 
-此結構用於建構和參考事件資料，這些資料構成了您的網站或其他相關數位平台上發生的客戶活動。 此資料通常會內嵌至 [!DNL Adobe Experience Platform] via [Web SDK](/help/web-sdk/home.md) 且是參考各種瀏覽和轉換事件所必需的，這些事件用於觸發歷程、詳細的線上客戶分析和增強的分段功能。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或其他相關數位平台上發生的客戶活動。 此資料通常會透過[Web SDK](/help/web-sdk/home.md)擷取至[!DNL Adobe Experience Platform]，且為參考各種用來觸發歷程、詳細線上客戶分析和增強細分功能的瀏覽和轉換事件所必需。
 
-![反白顯示欄位群組的客戶數位交易結構描述](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
+![反白欄位群組的客戶數位交易結構描述](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
 客戶數位交易結構描述是以 [!UICONTROL XDM ExperienceEvent] 類別表示，其中包括以下欄位群組：
 
@@ -154,7 +154,7 @@ ht-degree: 27%
 
 +++Web 詳細資料 (欄位群組)
 
-[網頁詳細資訊](/help/xdm/field-groups/event/web-details.md) 是XDM ExperienceEvent類別的標準結構描述欄位群組，用於描述有關互動、頁面詳細資料和反向連結等網頁詳細資料事件的資訊。
+[網頁詳細資料](/help/xdm/field-groups/event/web-details.md)是XDM ExperienceEvent類別的標準結構描述欄位群組，用於描述有關互動、頁面詳細資料和反向連結等網頁詳細資料事件的資訊。
 
 +++
 
@@ -198,7 +198,7 @@ ht-degree: 27%
 
 +++一般使用者 ID 詳細資料 (欄位群組)
 
-此 [一般使用者ID詳細資訊](/help/xdm/field-groups/event/enduserids.md) 欄位群組包含與您的使用者相關的各種資訊，例如，造訪您的網站時，是否驗證使用者，以及使用者身分的相關資訊。
+[一般使用者ID詳細資訊](/help/xdm/field-groups/event/enduserids.md)欄位群組包含有關您使用者的各種資訊，例如造訪您的網站時他們是否經過驗證，以及有關其身分的資訊。
 
 +++
 
@@ -210,7 +210,7 @@ ht-degree: 27%
 
 #### 客戶離線交易結構描述 {#customer-offline-transactions-schema}
 
-此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。該資料通常是從 POS (或類似系統) 被擷取至 [!DNL Adobe Experience Platform]，且大部份通常會透過 API 連線串流至平台。閱讀關於 [批次擷取](/help/ingestion/batch-ingestion/getting-started.md). 其目的是引用用來觸發歷程、深度的線上和離線客戶分析以及加強分段功能的各種離線轉換事件。
+此結構描述是用來安排和引用構成發生在您網站以外平台上客戶活動的事件資料。該資料通常是從 POS (或類似系統) 被擷取至 [!DNL Adobe Experience Platform]，且大部份通常會透過 API 連線串流至平台。閱讀[批次擷取](/help/ingestion/batch-ingestion/getting-started.md)。 其目的是引用用來觸發歷程、深度的線上和離線客戶分析以及加強分段功能的各種離線轉換事件。
 
 ![反白欄位群組的客戶離線交易結構描述](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -218,13 +218,13 @@ ht-degree: 27%
 
 +++商務詳細資料 (欄位群組)
 
-[Commerce詳細資料](/help/xdm/field-groups/event/commerce-details.md) 是的標準結構描述欄位群組 [!DNL XDM ExperienceEvent] 類別，用於描述商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車操作（訂購、結帳、捨棄）。
+[Commerce詳細資料](/help/xdm/field-groups/event/commerce-details.md)是[!DNL XDM ExperienceEvent]類別的標準結構描述欄位群組，用於描述商業資料，例如產品資訊（SKU、名稱、數量）和標準購物車作業（訂購、結帳、捨棄）。
 
 +++
 
 +++個人聯絡詳細資料 (欄位群組)
 
-[[!UICONTROL 個人聯絡詳細資訊]](/help/xdm/field-groups/profile/personal-contact-details.md) 是的標準結構描述欄位群組 [!DNL XDM Individual Profile] 類別，說明個人的聯絡資訊。
+[[!UICONTROL 個人連絡人詳細資料]](/help/xdm/field-groups/profile/personal-contact-details.md)是[!DNL XDM Individual Profile]類別的標準結構描述欄位群組，說明個別人員的連絡資訊。
 
 +++
 
@@ -240,15 +240,15 @@ ht-degree: 27%
 >
 >如果您使用 [!DNL Adobe Analytics Data Connector]，這是一個實施選項。
 
-此結構用於建構和參考事件資料，這些資料構成了您的網站或其他相關數位平台上發生的客戶活動。 此結構描述類似於「客戶數位交易」結構描述，但不同之處在於，當Web SDK不是資料收集的選項時，它可以這麼做。 因此，當您利用時，可以使用此結構描述 [!DNL Adobe Analytics Data Connector] 將您的線上資料傳送到 [!DNL Adobe Experience Platform] 作為主要或次要資料流。
+此結構用於建構和參考事件資料，這些資料構成了您的網站或其他相關數位平台上發生的客戶活動。 此結構描述類似於「客戶數位交易」結構描述，但不同之處在於，當Web SDK不是資料收集的選項時，它可以這麼做。 因此，當您利用[!DNL Adobe Analytics Data Connector]將您的線上資料當作主要或次要資料流傳送到[!DNL Adobe Experience Platform]時，可以使用此結構描述。
 
-![反白顯示欄位群組的AdobeWeb聯結器結構](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
+![欄位群組反白顯示的AdobeWeb聯結器結構描述](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
 [!DNL Adobe] Web 連接器結構描述以 [!UICONTROL XDM ExperienceEvent] 類別表示，其中包括以下欄位群組：
 
 +++Adobe Analytics ExperienceEvent 範本 (欄位群組)
 
-[[!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]](/help/xdm/field-groups/event/analytics-full-extension.md) 是標準結構描述欄位群組，可擷取Adobe Analytics所收集的一般量度。
+[[!UICONTROL Adobe Analytics ExperienceEvent完整擴充功能]](/help/xdm/field-groups/event/analytics-full-extension.md)是標準結構描述欄位群組，可擷取Adobe Analytics所收集的一般量度。
 
 +++
 
@@ -270,7 +270,7 @@ ht-degree: 27%
 >
 >法律規定必須讓客戶能夠取消訂閱來自品牌的通訊，以及確保遵循此選擇。 在[隱私權法規概觀](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html)中，了解更多有關適用法律。
 
-請考慮實作下列專案 [同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) 並在聯絡訪客前詢問訪客同意：
+請考慮實作下列[同意原則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html)，並在您聯絡訪客前詢問其同意：
 
 * 如果為 `consents.marketing.email.val = "Y"`，則可以發送電子郵件
 * 如果為 `consents.marketing.sms.val = "Y"`，則可以發送簡訊
@@ -279,14 +279,14 @@ ht-degree: 27%
 
 #### 資料控管標籤和執行
 
-考慮新增及強制實行下列專案 [資料治理標籤](/help/data-governance/labels/overview.md)：
+請考慮新增並強制實行下列[資料控管標籤](/help/data-governance/labels/overview.md)：
 
 * 個人電子郵件地址會用作直接可識別的資料，用於識別或聯絡特定個人而非裝置。
    * `personalEmail.address = I1`
 
 #### 行銷原則
 
-沒有 [行銷政策](/help/data-governance/policies/overview.md) 此使用案例中您建立的歷程的必要專案。 不過，您可以視需要考慮以下原則：
+您建立的歷程不需要[行銷原則](/help/data-governance/policies/overview.md)作為此使用案例的一部分。 不過，您可以視需要考慮以下原則：
 
 * 限制敏感資料
 * 限制現場廣告
@@ -298,17 +298,17 @@ ht-degree: 27%
 
 此使用案例需要您建立兩個受眾，以定義由個人資料存放區中的個人資料子集共用的特定屬性或行為，以區分可行銷的人員群組。 在Adobe Experience Platform中可以透過多種方式建立對象：
 
-* 如需如何建立受眾的詳細資訊，請參閱 [Audience Service UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
-* 如需如何撰寫的資訊 [對象](/help/segmentation/home.md)，閱讀 [對象構成UI指南](/help/segmentation/ui/audience-composition.md).
-* 如需如何透過Platform衍生的區段定義建立對象的詳細資訊，請參閱 [Audience Builder UI指南](/help/segmentation/ui/segment-builder.md).
+* 如需如何建立對象的詳細資訊，請參閱[對象服務UI指南](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience)。
+* 如需如何構成[對象](/help/segmentation/home.md)的相關資訊，請閱讀[對象構成UI指南](/help/segmentation/ui/audience-composition.md)。
+* 如需如何透過平台衍生的區段定義來建立對象的詳細資訊，請參閱[對象產生器UI指南](/help/segmentation/ui/segment-builder.md)。
 
 尤其是，您必須在使用案例的不同步驟中建立和使用兩個對象，如下圖所示。
 
-![醒目提示的對象。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
+![標示的對象。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
->[!TAB Adobe Journey Optimizer合格受眾]
+>[!TAB Adobe Journey Optimizer合格對象]
 
 此高值和低頻率對象包含您想要透過歷程聯絡的設定檔，以告知他們新的訂閱計畫。 對象詳細資料如下：
 
@@ -342,7 +342,7 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] 並不涵蓋圖中顯示的所有內容。全部 [付費媒體廣告](/help/destinations/catalog/social/overview.md) 建立於 [!UICONTROL 目的地] [工作區](/help/destinations/ui/destinations-workspace.md).
+>[!DNL Adobe Journey Optimizer] 並不涵蓋圖中顯示的所有內容。所有[付費媒體廣告](/help/destinations/catalog/social/overview.md)都是在[!UICONTROL 目的地] [工作區](/help/destinations/ui/destinations-workspace.md)中建立。
 
 [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 協助您向其客戶傳送連結的、情境式和個人化體驗。客戶歷程是客戶與品牌互動的整個過程。每個使用案例歷程都需要特定資訊。
 
@@ -351,7 +351,7 @@ ht-degree: 27%
 * 期限歷程，其中包含您傳送給高價值、低頻率客戶的訊息
 * 回應您的呼叫並購買訂閱之使用者的訂單確認歷程。
 
-![醒目提示歷程。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
+![個醒目提示的歷程。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 下面列出的是每個歷程分支所需的精確資料。
 
@@ -361,21 +361,21 @@ ht-degree: 27%
 
 期限歷程針對過去30天內未鎖定的高價值與低頻率客戶的對象。 系統會向這些客戶顯示訊息，如果7天後仍未購買，您可以將非購買者納入您可向其中顯示付費媒體廣告的受眾。 如果他們確實有購買，您可以在訂單確認歷程中設定購買者，詳細資訊見個別索引標籤。
 
-![期限歷程高階視覺化概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "一次性價值至期限歷程高階視覺概覽。"){zoomable="yes"}
+![期限歷程高階視覺化概觀。](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "一次性值至期限歷程高階視覺化概觀。"){zoomable="yes"}
 
 +++詳細歷程邏輯
 
 上方顯示的歷程遵循下列邏輯。
 
-1. 讀取對象：使用 [讀取對象活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) 針對在上述對象區段中建立的第一個對象。
+1. 讀取對象：針對在上述對象區段中建立的第一個對象，使用[讀取對象活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en)。
 
-2. 條件 — 偏好管道：使用 [條件活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) 以決定如何透過電子郵件、簡訊或推播通知聯絡客戶。 使用三個動作活動來建立三個分支。
+2. 條件 — 偏好頻道：使用[條件活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html)來決定如何透過電子郵件、簡訊或推播通知聯絡客戶。 使用三個動作活動來建立三個分支。
 
-3. 等待：使用 [等待活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) 等待您聆聽購買動作。
+3. 等候：使用[等待活動](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html)等候，直到您接聽購買。
 
 4. 條件 — 過去7天內的購買訂閱？：使用條件活動來監聽過去七天內的產品購買。
 
-5. JourneyStepEventTracker — 未購買訂閱：使用 [自訂動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) 適用於尚未購買您的訂閱的訪客，儘管已收到您的訊息。 作為歷程結束時的自訂條件的一部分，建立 `journey.feedback` 事件，並將其新增至根據的資料集 [!UICONTROL 歷程步驟事件] 綱要。 您將使用此事件來細分尚未購買訂閱的對象，以及透過付費媒體廣告定位的對象。
+5. JourneyStepEventTracker — 未購買訂閱：對尚未購買訂閱的訪客使用[自訂動作](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html)，即使收到您的訊息。 作為歷程結束時的自訂條件的一部分，請建立`journey.feedback`事件，並將其新增到根據[!UICONTROL 歷程步驟事件]結構描述的資料集。 您將使用此事件來細分尚未購買訂閱的對象，以及透過付費媒體廣告定位的對象。
 
 +++
 
@@ -436,15 +436,15 @@ ht-degree: 27%
 
 >[!ENDTABS]
 
-如需有關在中建立歷程的詳細資訊 [!DNL Adobe Journey Optimizer]，閱讀 [開始使用歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) 指南。
+如需有關在[!DNL Adobe Journey Optimizer]中建立歷程的詳細資訊，請閱讀[開始使用歷程](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)指南。
 
 ### 設定顯示付費媒體廣告的目的地 {#paid-media-ads}
 
 即使您為新方案傳送訊息給某些使用者，他們也可能尚未購買您的訂閱。 等候數天後（在此範例使用案例中為7天），您可以決定向這些使用者顯示付費媒體廣告，以鼓勵他們購買您的訂閱。
 
-針對付費媒體廣告，請使用Real-Time CDP中的目的地架構。 從許多可用的廣告目的地中選取一個，向您的客戶顯示付費媒體廣告，並啟用您的付費媒體對象 [建立時間較早](#create-audiences) 前往您選擇的目的地。 檢視可用的「 」總覽 [廣告](/help/destinations/catalog/advertising/overview.md) 和 [社交](/help/destinations/catalog/social/overview.md) 目的地。
+針對付費媒體廣告，請使用Real-Time CDP中的目的地架構。 從許多可用的廣告目的地中選取一個，向您的客戶顯示付費媒體廣告，並將您[先前建立](#create-audiences)的付費媒體對象啟用到您選擇的目的地。 檢視可用[廣告](/help/destinations/catalog/advertising/overview.md)和[社交](/help/destinations/catalog/social/overview.md)目的地的概觀。
 
-若要瞭解如何啟用目的地的資料(例如 [交易台](/help/destinations/catalog/advertising/tradedesk.md) 或 [Google Customer Match](/help/destinations/catalog/advertising/google-customer-match.md))，請閱讀以下檔案：
+若要瞭解如何啟用目的地的資料(例如[交易台](/help/destinations/catalog/advertising/tradedesk.md)或[Google客戶比對](/help/destinations/catalog/advertising/google-customer-match.md))，請閱讀以下檔案：
 
 * [建立新的目的地連線](/help/destinations/ui/connect-destination.md)
 * [啟用受眾資料至串流受眾匯出目的地](/help/destinations/ui/activate-segment-streaming-destinations.md)
@@ -453,4 +453,4 @@ ht-degree: 27%
 
 透過將您的低頻率和高價值使用者設定在歷程中，並向其中子集顯示付費媒體廣告，您有望將部分媒體廣告從一次性價值轉換為終身價值客戶，從而提高您的品牌忠誠度和客戶參與量度。
 
-接下來，您可以探索Real-Time CDP支援的其他使用案例，例如 [智慧地重新吸引客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md) 或 [向未經驗證的使用者顯示個人化內容](/help/rtcdp/partner-data/onsite-personalization.md) 在您的Web屬性上。
+接下來，您可以探索Real-Time CDP支援的其他使用案例，例如[聰明地重新吸引客戶](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)或[在您的Web屬性上向未經驗證的使用者顯示個人化內容](/help/rtcdp/partner-data/onsite-personalization.md)。

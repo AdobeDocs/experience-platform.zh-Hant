@@ -23,7 +23,7 @@ ht-degree: 14%
 
 >[!IMPORTANT]
 >
->以屬性為基礎的存取控制不應與Experience Platform的資料控管功能混淆，後者可讓您使用標籤和原則來控制資料在Platform中的使用方式，而非組織中的哪些使用者有權存取資料。 請參閱 [資料治理總覽](../../data-governance/home.md) 以取得詳細資訊。
+>以屬性為基礎的存取控制不應與Experience Platform的資料控管功能混淆，後者可讓您使用標籤和原則來控制資料在Platform中的使用方式，而非組織中的哪些使用者有權存取資料。 如需詳細資訊，請參閱[資料控管概觀](../../data-governance/home.md)。
 
 透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Platform工作流程和資源的敏感個人資料(SPD)、個人識別資訊(PII)和自訂資料型別的存取。 管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
 
@@ -55,11 +55,11 @@ ht-degree: 14%
 
 許可權是Experience Cloud的區域，管理員可以在其中定義使用者角色和存取原則，以管理產品應用程式內功能和物件的存取許可權。
 
-透過「許可權」，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 許可權也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。 如需詳細資訊，請參閱 [許可權指南](ui/browse.md).
+透過「許可權」，您可以建立和管理角色，並為這些角色指派所需的資源許可權。 許可權也可讓您管理與特定角色相關聯的標籤、沙箱和使用者。 如需詳細資訊，請參閱[許可權指南](ui/browse.md)。
 
 ## 以屬性為基礎的存取控制API
 
-屬性型存取控制API可讓您使用API以程式設計方式管理Platform內的角色、原則和產品。 如需詳細資訊，請參閱以下指南： [使用API管理屬性式存取控制設定](api/overview.md).
+屬性型存取控制API可讓您使用API以程式設計方式管理Platform內的角色、原則和產品。 如需詳細資訊，請參閱[使用API管理屬性型存取控制組態](api/overview.md)的指南。
 
 ## Adobe Experience Platform中以屬性為基礎的存取控制
 
@@ -67,25 +67,25 @@ ht-degree: 14%
 
 ### 存取控制
 
-平台運用方式 [Adobe Admin Console](https://adminconsole.adobe.com) 角色以將使用者與許可權和沙箱連結。 許可權可控制對各種Platform功能的存取，包括資料模型、設定檔管理和沙箱管理。 您的組織啟用屬性型存取控制後，您就可以開始使用Adobe Experience Cloud上的許可權(而不是Adobe Admin Console中的角色)來管理組織中使用者、功能、標籤和其他資源的許可權。
+Platform運用[Adobe Admin Console](https://adminconsole.adobe.com)角色將使用者與許可權和沙箱連結。 許可權可控制對各種Platform功能的存取，包括資料模型、設定檔管理和沙箱管理。 您的組織啟用屬性型存取控制後，您就可以開始使用Adobe Experience Cloud上的許可權(而不是Adobe Admin Console中的角色)來管理組織中使用者、功能、標籤和其他資源的許可權。
 
 購買Healthcare及/或Privacy Shield的客戶對於屬性型存取控制的可用性有限。 此功能的功能包括：
 
 * 許可權介面：提供定義屬性式存取控制之使用者角色、許可權和原則的介面。
 
-* 標籤：新增、編輯、移除使用者角色、綱要欄位、區段和其他支援物件的標籤，以運用存取控制原則。 **注意：** 如果您希望將相同的存取限制套用至區段，則任何使用已標籤屬性的區段都必須同樣加上標籤。
+* 標籤：新增、編輯、移除使用者角色、綱要欄位、區段和其他支援物件的標籤，以運用存取控制原則。 **注意：**&#x200B;如果您要套用相同的存取限制，任何使用已標示屬性的區段都必須同樣標示為標籤。
 
 正在切換從Admin Console到新許可權介面的所有Experience Platform支援應用程式的管理工作流程。
 
 >[!IMPORTANT]
 >
->您的組織啟用時，角色會自動移轉至許可權介面。 Admin Console中的角色將暫時保持不變。 請 **不要** 在啟用組織後修改您的角色。
+>您的組織啟用時，角色會自動移轉至許可權介面。 Admin Console中的角色將暫時保持不變。 貴組織啟用後，請&#x200B;**不要**&#x200B;修改您的角色。
 
-如需存取控制的詳細資訊，請參閱 [存取控制總覽](../home.md).
+如需存取控制的詳細資訊，請參閱[存取控制總覽](../home.md)。
 
 ### 目的地 {#destinations}
 
-[!DNL Destinations] 是預先建立的與目標平台的整合，可順暢地從Platform啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations]是預先建立的與目的地平台的整合，可順暢地從平台啟用資料。 您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 身為管理員，您可以使用基於屬性的存取控制功能來：
 
@@ -98,19 +98,19 @@ ht-degree: 14%
 >
 >總而言之，使用目的地和基於屬性的存取控制時，請記住以下含義：
 >
->* 您只能啟用您有權存取和檢視的對象 [對象入口網站](/help/segmentation/ui/audience-portal.md#browse) 和 [選取區段步驟](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) 啟動工作流程的。
->* 在 [啟動工作流程的對應步驟](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)，您只能檢視和選取您有存取許可權的欄位以進行啟用。
+>* 您只能啟用您有權在[對象入口網站](/help/segmentation/ui/audience-portal.md#browse)和[選取啟用工作流程的區段步驟](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments)中存取及檢視的對象。
+>* 在啟動工作流程](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping)的[對應步驟中，您只能檢視和選取您有存取許可權的欄位以進行啟動。
 >* 如果您想要在現有目的地啟用其他區段，而您無權存取對應至匯出之所有欄位，啟用工作流程將為您封鎖。
 
-如需詳細資訊，請參閱 [!DNL Destinations]，請參閱 [[!DNL Destinations] 概述](../../destinations/home.md).
+如需[!DNL Destinations]的詳細資訊，請參閱[[!DNL Destinations] 概觀](../../destinations/home.md)。
 
 ### 身分識別服務
 
-Adobe Experience Platform [!DNL Identity Service] 透過跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
+Adobe Experience Platform [!DNL Identity Service]可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 
-作為屬性型存取控制的一部分， `view-identity-graph` 許可權可讓您決定組織中的哪些使用者可以透過使用者介面或API存取身分圖表。 如需詳細資訊，請參閱以下指南： [使用身分圖表檢視器](../../identity-service/features/identity-graph-viewer.md).
+作為屬性型存取控制的一部分，`view-identity-graph`許可權可讓您決定組織中的哪些使用者可以透過使用者介面或API存取身分圖表。 如需詳細資訊，請參閱[使用身分圖表檢視器](../../identity-service/features/identity-graph-viewer.md)的指南。
 
-如需詳細資訊，請參閱 [!DNL Identity Service]，請參閱 [[!DNL Identity Service] 概述](../../identity-service/home.md).
+如需[!DNL Identity Service]的詳細資訊，請參閱[[!DNL Identity Service] 概觀](../../identity-service/home.md)。
 
 ### 即時客戶設定檔
 
@@ -123,7 +123,7 @@ Platform可讓您為客戶推動協調、一致且相關的體驗，無論客戶
    * 作為管理員，您可以在組織中布建使用者，以在建立區段時只檢視標有使用者可存取之標籤的設定檔屬性；
 * 為資料模型的XDM結構描述中使用的特定資料欄位加上標籤，以設定使用者對資料預覽的存取權。
 
-如需設定檔的詳細資訊，請參閱 [設定檔概述](../../profile/home.md).
+如需設定檔的詳細資訊，請參閱[設定檔總覽](../../profile/home.md)。
 
 ### Segmentation Service
 
@@ -134,7 +134,7 @@ Platform可讓您為客戶推動協調、一致且相關的體驗，無論客戶
 * 根據角色、許可權和標籤，設定使用者存取權以檢視和管理特定區段；
    * 身為管理員，您可以布建組織中的使用者，以便在使用分段UI時只檢視標示有使用者可存取之標籤的區段，以及不含任何標籤的區段。
 
-如需詳細資訊，請參閱 [!DNL Segmentation Service]，請參閱 [[!DNL Segmentation Service] 概述](../../segmentation/home.md).
+如需[!DNL Segmentation Service]的詳細資訊，請參閱[[!DNL Segmentation Service] 概觀](../../segmentation/home.md)。
 
 ### XDM
 
@@ -142,7 +142,7 @@ Experience Data Model (XDM)是開放原始碼規格，旨在改善數位體驗�
 
 使用以屬性為基礎的存取控制，您可以：
 
-* [將資料使用標籤套用至欄位群組和類別](../../xdm/tutorials/labels.md). 這可讓具有相同欄位群組或類別的多個結構描述，擁有標籤為相同屬性的欄位，具體取決於欄位群組或類別層級的設定；
+* [將資料使用標籤套用至欄位群組和類別](../../xdm/tutorials/labels.md)。 這可讓具有相同欄位群組或類別的多個結構描述，擁有標籤為相同屬性的欄位，具體取決於欄位群組或類別層級的設定；
 * 根據指派給使用者的角色所套用的許可權集，設定使用者對特定XDM結構描述欄位的存取權。
 
-如需XDM的詳細資訊，請參閱 [XDM概覽](../../xdm/home.md).
+如需XDM的詳細資訊，請參閱[XDM概觀](../../xdm/home.md)。

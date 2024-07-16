@@ -15,12 +15,12 @@ Adobe Experience Platform查詢服務支援匿名區塊。 匿名區塊功能可
 
 匿名區塊功能是執行一系列操作或查詢的有效方式。 區塊中的查詢鏈結可以儲存為範本，並排程在特定時間或間隔執行。 這些查詢可用於寫入和附加資料以建立新的資料集，通常用於您具有相依性的情況。
 
-此表格提供區塊主要區段的劃分：執行和例外狀況處理。 截面由關鍵字定義 `BEGIN`， `END`、和 `EXCEPTION`.
+此表格提供區塊主要區段的劃分：執行和例外狀況處理。 區段由關鍵字`BEGIN`、`END`和`EXCEPTION`定義。
 
 | 區段 | 說明 |
 |---|---|
-| 執行 | 可執行區段以關鍵字開頭 `BEGIN` 並以關鍵字結尾 `END`. 內含的任何陳述式集 `BEGIN` 和 `END` 關鍵字將依序執行，並確保在順序中的上一個查詢完成之前，不會執行後續查詢。 |
-| 例外狀況處理 | 選用的例外狀況處理區段以關鍵字開頭 `EXCEPTION`. 它包含程式碼，可在執行區段中的任何SQL敘述句失敗時擷取及處理例外狀況。 如果任何查詢失敗，則會停止整個區塊。 |
+| 執行 | 可執行區段以關鍵字`BEGIN`開始，以關鍵字`END`結束。 `BEGIN`和`END`關鍵字中包含的任何陳述式集都將依序執行，並確保在順序中的上一個查詢完成之前，不會執行後續查詢。 |
+| 例外狀況處理 | 選用的例外狀況處理區段以關鍵字`EXCEPTION`開頭。 它包含程式碼，可在執行區段中的任何SQL敘述句失敗時擷取及處理例外狀況。 如果任何查詢失敗，則會停止整個區塊。 |
 
 值得注意的是，區塊是可執行陳述式，因此可以巢狀內嵌於其他區塊中。
 
@@ -30,7 +30,7 @@ Adobe Experience Platform查詢服務支援匿名區塊。 匿名區塊功能可
 
 ## 匿名區塊查詢範例
 
-下列查詢顯示鏈結SQL敘述句的範例。 請參閱 [查詢服務中的SQL語法](../sql/syntax.md) 檔案，以取得有關所使用任何SQL語法的詳細資訊。
+下列查詢顯示鏈結SQL敘述句的範例。 請參閱查詢服務](../sql/syntax.md)檔案中的[SQL語法，以取得使用之任何SQL語法的詳細資訊。
 
 ```SQL
 $$ BEGIN
@@ -42,11 +42,11 @@ END
 $$;
 ```
 
-在以下範例中， `SET` 持續儲存的結果 `SELECT` 在指定的區域變數中查詢。 變數的適用範圍為匿名區塊。
+在下列範例中，`SET`會在指定的區域變數中保留`SELECT`查詢的結果。 變數的適用範圍為匿名區塊。
 
-快照ID會儲存為本機變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。
+快照識別碼會儲存為區域變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。
 
-資料庫快照集是SQL Server資料庫的唯讀、靜態檢視。 瞭解詳情 [有關快照子句的資訊](../sql/syntax.md#SNAPSHOT-clause) 請參閱SQL語法檔案。
+資料庫快照集是SQL Server資料庫的唯讀、靜態檢視。 如需有關快照子句](../sql/syntax.md#SNAPSHOT-clause)的更多[資訊，請參閱SQL語法檔案。
 
 ```SQL
 $$ BEGIN                                             
@@ -60,7 +60,7 @@ $$;
 
 某些協力廠商使用者端在SQL區塊前後可能需要個別的識別碼，以表示指令碼的一部分應該以單一陳述式處理。 如果您在搭配第三方使用者端使用查詢服務時收到錯誤訊息，您應該參閱第三方使用者端關於SQL區塊使用的檔案。
 
-例如， **DbVisualizer** 要求分隔符號必須是行上的唯一文字。 在DbVisualizer中，「開始識別碼」的預設值為 `--/` 而結束識別碼則是 `/`. DbVisualizer中的匿名區塊範例如下：
+例如，**DbVisualizer**&#x200B;要求分隔符號必須是行上的唯一文字。 在DbVisualizer中，開始識別碼的預設值為`--/`，而結束識別碼的預設值為`/`。 DbVisualizer中的匿名區塊範例如下：
 
 ```SQL
 --/
@@ -74,10 +74,10 @@ $$;
 /
 ```
 
-特別是對於DbVisualizer，UI中還有一個選項可選擇&quot;[!DNL Execute the complete buffer as one SQL statement]「。 請參閱 [DbVisualizer檔案](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) 以取得詳細資訊。
+特別是對於DbVisualizer，在UI中還有&quot;[!DNL Execute the complete buffer as one SQL statement]&quot;的選項。 如需詳細資訊，請參閱[DbVisualizer檔案](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer)。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在已清楚瞭解匿名區塊及其結構。 請閱讀 [查詢執行指南](../best-practices/writing-queries.md) 以取得寫入查詢的詳細資訊。
+閱讀本檔案後，您現在已清楚瞭解匿名區塊及其結構。 請閱讀[查詢執行指南](../best-practices/writing-queries.md)，以取得寫入查詢的詳細資訊。
 
-您也應該閱讀 [如何使用匿名區塊搭配增量載入設計模式](./incremental-load.md) 以提高查詢效率。
+您也應該閱讀[匿名區塊如何與增量載入設計模式](./incremental-load.md)搭配使用，以提高查詢效率。
