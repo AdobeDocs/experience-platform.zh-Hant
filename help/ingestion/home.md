@@ -4,18 +4,18 @@ solution: Experience Platform
 title: 資料擷取概觀
 description: 本檔案主要介紹將資料擷取到Platform的三種方式，並附有各自概述檔案的連結，以取得更詳細的資訊。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
 
 # 資料擷取概觀
 
-Adobe Experience Platform將來自多個來源的資料彙集在一起，以協助行銷人員進一步瞭解客戶的行為。 Adobe Experience Platform資料擷取代表從這些來源擷取資料的多種方法，以及該資料如何儲存在資料湖中，以供下游[!DNL Platform]服務使用。[!DNL Platform]
+Adobe Experience Platform將來自多個來源的資料彙集在一起，以協助行銷人員進一步瞭解客戶的行為。 Adobe Experience Platform資料擷取代表Experience Platform從這些來源擷取資料的多種方法，以及該資料如何儲存在資料湖中，以供下游Experience Platform服務使用。
 
-本檔案介紹將資料擷取到[!DNL Platform]的三種主要方式，並連結其各自的概觀檔案以取得更詳細的資訊。
+本檔案會介紹將資料擷取到Experience Platform的三種主要方式，並提供其各自概述檔案的連結，以取得更詳細的資訊。
 
 ## 批次擷取
 
@@ -25,9 +25,13 @@ Adobe Experience Platform將來自多個來源的資料彙集在一起，以協�
 
 如需詳細資訊，請參閱[批次擷取總覽](./batch-ingestion/overview.md)。
 
+>[!TIP]
+>
+>使用單行JSON而非多行JSON作為批次擷取的輸入。 單行JSON可提供較佳的效能，因為系統可以將一個輸入檔案分割成多個區塊並平行處理，而多行JSON無法分割。 這可以大幅降低資料處理成本並改善批次處理延遲。
+
 ## 串流擷取
 
-串流擷取可讓您即時從使用者端和伺服器端裝置傳送資料至[!DNL Experience Platform]。 [!DNL Platform]支援使用資料輸入來串流傳入的體驗資料，這些資料會保留在資料湖內啟用串流的資料集中。 資料輸入可設定為自動驗證其收集的資料，確保資料來自信任的來源。
+串流擷取可讓您即時從使用者端和伺服器端裝置傳送資料至[!DNL Experience Platform]。 Experience Platform支援使用資料匯入來串流傳入體驗資料，這些資料會保留在資料湖內啟用串流的資料集中。 資料輸入可設定為自動驗證其收集的資料，確保資料來自信任的來源。
 
 如需詳細資訊，請參閱[串流擷取總覽](./streaming-ingestion/overview.md)。
 
