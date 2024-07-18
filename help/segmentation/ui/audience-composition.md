@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
@@ -268,14 +268,18 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## 發佈您的對象
 
-構成對象後，您可以選取&#x200B;**[!UICONTROL Publish]**，儲存並發佈對象。
+>[!IMPORTANT]
+>
+>發佈您的對象構成時，請注意，評估並啟動該對象構成以用於下游服務(例如Real-Time CDP目的地或Adobe Journey Optimizer頻道)可能需要48小時。
 
-![Publish按鈕反白顯示，顯示如何儲存和發佈您的對象。](../images/ui/audience-composition/publish.png)
+建立構成後，您可以選取&#x200B;**[!UICONTROL Publish]**，儲存並發佈構成。
+
+![Publish按鈕反白顯示，顯示如何儲存和發佈您的組合。](../images/ui/audience-composition/publish.png)
 
 如果在建立對象時發生錯誤，會出現警報，讓您知道如何解決問題。
 
-![Publish按鈕反白顯示，顯示如何儲存和發佈您的對象。](../images/ui/audience-composition/audience-alert.png)
+![Publish按鈕反白顯示，顯示如何儲存和發佈您的組合。](../images/ui/audience-composition/audience-alert.png)
 
 ## 後續步驟
 
-對象構成提供豐富的工作流程，可讓您從不同的區塊型別建立對象。 若要深入瞭解Segmentation Service UI的其他部分，請參閱[Segmentation Service使用手冊](./overview.md)。
+對象構成提供豐富的工作流程，可讓您從不同的區塊型別建立構成。 若要深入瞭解Segmentation Service UI的其他部分，請參閱[Segmentation Service使用手冊](./overview.md)。

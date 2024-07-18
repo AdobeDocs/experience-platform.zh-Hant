@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4092'
 ht-degree: 0%
 
 ---
@@ -317,7 +317,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 在對象構成中建立對象時，會自動儲存對象。 對象的建立時間將是第一次發生此自動儲存。
 
-建立對象後，最多可能需要24小時的時間來評估。
+建立對象構成後，最多可能需要48小時的時間才能加以評估及啟動，以用於下游服務，例如Real-Time CDP目的地或Adobe Journey Optimizer管道。
 
 ### 我何時可以使用我建立的對象？
 
@@ -337,11 +337,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 依屬性分割時，群組之間存在互斥性。 也就是說，如果記錄符合多重分割路徑的准則，則會從左側為其指派&#x200B;**第一個**&#x200B;路徑，而不會將&#x200B;**個**&#x200B;指派給任何其他路徑。
 
-以百分比分割時，分割是&#x200B;**隨機**&#x200B;完成。 這表示設定檔將隨機指派給每個路徑。 分割&#x200B;**持續存在**，這表示每次評估設定檔都會位於相同的子對象中。
-
->[!NOTE]
->
->先前，對象構成中的分割是&#x200B;**非**&#x200B;永久。
+以百分比分割時，分割是&#x200B;**隨機**&#x200B;完成。 這表示設定檔將隨機指派給每個路徑。
 
 如需分割區塊的詳細資訊，請參閱[對象構成UI指南](./ui/audience-composition.md#split)。
 

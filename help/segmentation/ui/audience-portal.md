@@ -1,9 +1,9 @@
 ---
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3693'
 ht-degree: 3%
 
 ---
@@ -258,6 +258,10 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 ### 客群總計 {#audience-total}
 
 **[!UICONTROL 對象總計]**&#x200B;區段會顯示符合對象資格的設定檔總數。
+
+>[!NOTE]
+>
+>匯出工作完成後，可能需要30分鐘才會更新對象總數。
 
 預估值是透過使用當天樣本資料的樣本大小所產生。 如果您的設定檔存放區中有少於100萬個實體，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。 如需有關產生預估的詳細資訊，請參閱對象建立教學課程的[預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
 
