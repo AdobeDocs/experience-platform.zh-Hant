@@ -3,7 +3,7 @@ keywords: crm；CRM；crm目的地；salesforce crm；salesforce crm目的地
 title: Salesforce CRM連線
 description: Salesforce CRM目的地可讓您匯出帳戶資料，並在Salesforce CRM中根據您的業務需求加以啟用。
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: d9ff92138a5de774f011dd9b2e5f1cdc3371bacf
 workflow-type: tm+mt
 source-wordcount: '2821'
 ht-degree: 1%
@@ -134,7 +134,7 @@ ht-degree: 1%
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
 | 項目 | 類型 | 附註 |
----------|----------|---------|
+|---------|----------|---------|
 | 匯出類型 | **[!UICONTROL 以設定檔為基礎]** | <ul><li>您正在匯出區段的所有成員，以及所需的結構描述欄位&#x200B;*（例如：電子郵件地址、電話號碼、姓氏）* （根據您的欄位對應）。</li><li> 根據[對象排程](#schedule-segment-export-example)步驟期間提供的&#x200B;**[!UICONTROL 對應ID]**&#x200B;值，[!DNL Salesforce CRM]中的每個對象狀態都會以來自平台的對應對象狀態更新。</li></ul> |
 | 匯出頻率 | **[!UICONTROL 串流]** | <ul><li>串流目的地是「一律開啟」的API型連線。 一旦根據對象評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目的地平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。</li></ul> |
 
@@ -153,8 +153,9 @@ ht-degree: 1%
 ### 驗證目標 {#authenticate}
 
 若要驗證到目的地，請填寫下列必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。 如需任何指引，請參閱[收集 [!DNL Salesforce CRM] 認證](#gather-credentials)區段。
+
 | 認證 | 說明 |
-| — | — |
+| --- | --- |
 | **[!UICONTROL 使用者名稱]** | 您的[!DNL Salesforce]帳戶使用者名稱。 |
 | **[!UICONTROL 密碼]** | 由您的[!DNL Salesforce]帳戶密碼附加您的[!DNL Salesforce]安全性權杖所組成的串連字串。<br>串連值採用`{PASSWORD}{TOKEN}`的形式。<br>注意，請勿使用任何大括弧或空格。<br>例如，若您的[!DNL Salesforce]密碼為`MyPa$$w0rd123`，[!DNL Salesforce]安全性權杖為`TOKEN12345....0000`，則您將在&#x200B;**[!UICONTROL 密碼]**&#x200B;欄位中使用的串連值為`MyPa$$w0rd123TOKEN12345....0000`。 |
 | **[!UICONTROL 自訂網域]** | 您的[!DNL Salesforce]網域前置詞。 <br>例如，如果您的網域是&#x200B;*`d5i000000isb4eak-dev-ed`.my.salesforce.com*，您必須提供`d5i000000isb4eak-dev-ed`做為值。 |
@@ -212,12 +213,13 @@ ht-degree: 1%
    * 如果您正在使用區段中的&#x200B;*連絡人*，請參考Salesforce中的[連絡人](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm)物件參考以定義要更新的欄位對應。
    * 您可以搜尋文字&#x200B;*Required*，以識別必填欄位，此文字在上述連結的欄位說明中有所提及。
    * 根據您要匯出或更新欄位，在您的XDM設定檔結構描述和[!DNL (API) Salesforce CRM]之間新增對應：
-|Source欄位|目標欄位| 附註 |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`。 連絡人的姓氏，最多80個字元。 |\
-     |`xdm: person.name.firstName`|`Attribute: FirstName`| 連絡人的名字，最多40個字元。 |
-|`xdm: personalEmail.address`|`Attribute: Email`| 連絡人的電子郵件地址。 |
+
+     | 來源欄位 | 目標欄位 | 附註 |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`。連絡人的姓氏，最多80個字元。 |
+     | `xdm: person.name.firstName` | `Attribute: FirstName` | 連絡人的名字，最多40個字元。 |
+     | `xdm: personalEmail.address` | `Attribute: Email` | 連絡人的電子郵件地址。 |
 
    * 以下顯示使用這些對應的範例：
      ![顯示目標對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/salesforce/mappings-contacts.png)
@@ -227,12 +229,13 @@ ht-degree: 1%
    * 如果您正在區段內使用&#x200B;*銷售機會*，請參閱Salesforce中的「物件參考」，以取得[銷售機會](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm)來定義要更新欄位的對應。
    * 您可以搜尋文字&#x200B;*Required*，以識別必填欄位，此文字在上述連結的欄位說明中有所提及。
    * 根據您要匯出或更新欄位，在您的XDM設定檔結構描述和[!DNL (API) Salesforce CRM]之間新增對應：
-|Source欄位|目標欄位| 附註 |
-| — | — | — |
-|`IdentityMap: crmID`|`Identity: SalesforceId`|`Mandatory`|
-|`xdm: person.name.lastName`|`Attribute: LastName`| `Mandatory`。 銷售機會的姓氏，最多80個字元。 |\
-     |`xdm: b2b.companyName`|`Attribute: Company`| `Mandatory`。 潛在客戶的公司。 |
-|`xdm: personalEmail.address`|`Attribute: Email`| 潛在客戶的電子郵件地址。 |
+
+     | 來源欄位 | 目標欄位 | 附註 |
+     | --- | --- | --- |
+     | `IdentityMap: crmID` | `Identity: SalesforceId` | `Mandatory` |
+     | `xdm: person.name.lastName` | `Attribute: LastName` | `Mandatory`。銷售機會的姓氏，最多80個字元。 |
+     | `xdm: b2b.companyName` | `Attribute: Company` | `Mandatory`。潛在客戶的公司。 |
+     | `xdm: personalEmail.address` | `Attribute: Email` | 潛在客戶的電子郵件地址。 |
 
    * 以下顯示使用這些對應的範例：
      ![顯示目標對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/salesforce/mappings-leads.png)
@@ -256,8 +259,9 @@ ht-degree: 1%
 如上所示，[!DNL Salesforce] **[!UICONTROL 欄位名稱]**&#x200B;與[!DNL Salesforce CRM] **[!UICONTROL 對應ID]**&#x200B;中指定的值完全相符。
 
 根據您的使用案例，所有啟用的對象都可以對應至相同的[!DNL Salesforce]自訂欄位或[!DNL Salesforce CRM]中的不同&#x200B;**[!UICONTROL 欄位名稱]**。 以上圖影像為基礎的典型範例可能是。
+
 | [!DNL Salesforce CRM]區段名稱 | [!DNL Salesforce] **[!UICONTROL 欄位名稱]** | [!DNL Salesforce CRM] **[!UICONTROL 對應ID]** |
-| — | — | — |
+| --- | --- | --- |
 | crm_1_seg | `crm_1_seg` | `crm_1_seg` |
 | crm_2_seg | `crm_2_seg` | `crm_2_seg` |
 

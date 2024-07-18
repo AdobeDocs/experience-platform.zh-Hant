@@ -1,7 +1,7 @@
 ---
 title: Mercury Enterprise身分目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise Identity目的地連線。
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 2%
@@ -75,10 +75,11 @@ ht-degree: 2%
 ## 匯出型別和頻率
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
-|**對象**|**支援**|**說明來源**|\
-|—|—|—|\
-✓ |分段服務||透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)產生的對象。|
-自訂上傳|X|對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。
+
+| **閱聽眾** | **支援** | **描述來源** |
+|---|---|---|      
+| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)產生的對象。 |
+| 自訂上傳 | X | 對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。 |
 
 {style="table-layout:auto"}
 
