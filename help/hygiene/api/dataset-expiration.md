@@ -3,9 +3,9 @@ title: 資料集過期API端點
 description: 資料衛生API中的/ttl端點可讓您以程式設計方式在Adobe Experience Platform中排程資料集有效期。
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
+source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '1964'
 ht-degree: 1%
 
 ---
@@ -388,88 +388,6 @@ curl -X DELETE \
 
 成功的回應會傳回HTTP狀態204 （無內容），而且到期的`status`屬性設定為`cancelled`。
 
-## 擷取資料集的到期狀態歷史記錄 {#retrieve-expiration-history}
-
-若要查閱特定資料集的到期狀態歷史記錄，請在查閱請求中使用`{DATASET_ID}`和`include=history`查詢引數。 結果包括關於建立資料集有效期、已套用的任何更新，及其取消或執行（如果適用）的資訊。 您也可以使用`{DATASET_EXPIRATION_ID}`來擷取資料集到期狀態歷史記錄。
-
-**API格式**
-
-```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}?include=history
-```
-
-| 參數 | 說明 |
-| --- | --- |
-| `{DATASET_ID}` | 您要查詢其到期歷程記錄的資料集ID。 |
-| `{DATASET_EXPIRATION_ID}` | 資料集過期時間的ID。 注意：這稱為回應中的`ttlId`。 |
-
-{style="table-layout:auto"}
-
-**要求**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl/62759f2ede9e601b63a2ee14?include=history \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**回應**
-
-成功的回應會傳回資料集到期日詳細資料，其中的`history`陣列會針對其每個記錄的更新，提供其`status`、`expiry`、`updatedAt`和`updatedBy`屬性的詳細資料。
-
-```json
-{
-  "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-  "datasetId": "62759f2ede9e601b63a2ee14",
-  "datasetName": "Example Dataset",
-  "sandboxName": "prod",
-  "displayName": "Expiration Request 123",
-  "description": "Expiration Request 123 Description",
-  "imsOrg": "0FCC747E56F59C747F000101@AdobeOrg",
-  "status": "cancelled",
-  "expiry": "2022-05-09T23:47:30.071186Z",
-  "updatedAt": "2022-05-09T23:47:30.071186Z",
-  "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "history": [
-    {
-      "status": "created",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:38:40.393115Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "updated",
-      "expiry": "2032-12-31T23:59:59Z",
-      "updatedAt": "2022-05-09T22:41:46.731002Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    },
-    {
-      "status": "cancelled",
-      "expiry": "2022-05-09T23:47:30.071186Z",
-      "updatedAt": "2022-05-09T23:47:30.071186Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
-    }
-  ]
-}
-```
-
-| 屬性 | 說明 |
-| --- | --- |
-| `ttlId` | 資料集過期時間的ID。 |
-| `datasetId` | 此到期適用於的資料集ID。 |
-| `datasetName` | 此到期適用於的資料集的顯示名稱。 |
-| `sandboxName` | 目標資料集所在之沙箱的名稱。 |
-| `displayName` | 到期要求的顯示名稱。 |
-| `description` | 到期要求的說明。 |
-| `imsOrg` | 您組織的ID。 |
-| `history` | 以物件陣列形式列出到期的更新歷史記錄，每個物件包含更新時到期的`status`、`expiry`、`updatedAt`和`updatedBy`屬性。 |
-
-{style="table-layout:auto"}
-
 ## 附錄
 
 ### 接受的查詢引數 {#query-params}
@@ -482,18 +400,14 @@ curl -X GET \
 
 | 參數 | 說明 | 範例 |
 | --- | --- | --- |
-| `author` | 符合`created_by`符合搜尋字串的到期日。 如果搜尋字串的開頭為`LIKE`或`NOT LIKE`，其餘部分會視為SQL搜尋模式。 否則，會將整個搜尋字串視為必須完全符合`created_by`欄位之整個內容的常值字串。 | `author=LIKE %john%`、`author=John Q. Public` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | 符合在指定間隔內任何時間取消的到期日。 即使稍後重新開啟到期日（為相同資料集設定新的到期日），這亦適用。 | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | 符合在指定間隔內完成的到期日。 | `completedToDate=2021-11-11-06:00` |
-| `createdDate` | 符合在指定時間開始的24小時視窗中建立的到期日。<br><br>請注意，沒有時間的日期（例如`2021-12-07`）代表當天開始的日期時間。 因此，`createdDate=2021-12-07`是指2021年12月7日從`00:00:00`到`23:59:59.999999999` (UTC)所建立的任何有效期。 | `createdDate=2021-12-07` |
-| `createdFromDate` | 比對在指定時間或之後建立的到期日。 | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | 比對在指定時間或之前建立的到期日。 | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `author` | 使用`author`查詢引數來尋找最近更新資料集到期日的人員。 如果自建立後未進行任何更新，則會符合到期的原始建立者。 此引數符合`created_by`欄位與搜尋字串對應的有效期。<br>如果搜尋字串的開頭為`LIKE`或`NOT LIKE`，其餘部分會視為SQL搜尋模式。 否則，會將整個搜尋字串視為必須完全符合`created_by`欄位之整個內容的常值字串。 | `author=LIKE %john%`、`author=John Q. Public` |
 | `datasetId` | 符合套用至特定資料集的到期日。 | `datasetId=62b3925ff20f8e1b990a7434` |
 | `datasetName` | 符合資料集名稱包含所提供搜尋字串的到期日。 相符專案不區分大小寫。 | `datasetName=Acme` |
 | `description` |   | `description=Handle expiration of Acme information through the end of 2024.` |
 | `displayName` | 符合顯示名稱包含所提供搜尋字串的到期日。 相符專案不區分大小寫。 | `displayName=License Expiry` |
 | `executedDate` / `executedFromDate` / `executedToDate` | 根據確切的執行日期、執行的結束日期或執行的開始日期來篩選結果。 它們可用來擷取與特定日期、特定日期之前或特定日期之後執行作業相關聯的資料或記錄。 | `executedDate=2023-02-05T19:34:40.383615Z` |
-| `expiryDate` / `expiryToDate` / `expiryFromDate` | 符合指定間隔內即將執行或已執行的到期日。 | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
+| `expiryDate` | 符合在指定日期的24小時期間內發生的到期。 | `2024-01-01` |
+| `expiryToDate` / `expiryFromDate` | 符合指定間隔內即將執行或已執行的到期日。 | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | 介於1到100之間的整數，表示要傳回的最大到期次數。 預設為25。 | `limit=50` |
 | `orderBy` | `orderBy`查詢引數指定API傳回結果的排序順序。 使用它可根據一或多個欄位來排列資料，以遞增(ASC)或遞減(DESC)順序排列。 使用+或 — 首碼分別表示ASC、DESC。 接受下列值： `displayName`、`description`、`datasetName`、`id`、`updatedBy`、`updatedAt`、`expiry`、`status`。 | `-datasetName` |
 | `orgId` | 比對組織ID與引數相符的資料集有效期。 此值預設為`x-gw-ims-org-id`標頭的值，除非請求提供服務權杖，否則會忽略此值。 | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
@@ -502,7 +416,8 @@ curl -X GET \
 | `search` | 符合指定字串與有效期ID完全相符或是&#x200B;**包含**&#x200B;於下列任何欄位中的有效期：<br><ul><li>作者</li><li>顯示名稱</li><li>說明</li><li>顯示名稱</li><li>資料集名稱</li></ul> | `search=TESTING` |
 | `status` | 以逗號分隔的狀態清單。 包含後，回應會比對資料集有效期，其目前狀態在所列資料集有效期中。 | `status=pending,cancelled` |
 | `ttlId` | 符合具有特定ID的到期要求。 | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | 類似`createdDate` / `createdFromDate` / `createdToDate`，但符合資料集到期日的更新時間，而不是建立時間。<br><br>每次編輯時都會將到期視為已更新，包括建立、取消或執行的時間。 | `updatedDate=2022-01-01` |
+| `updatedDate` | 符合在指定日期的24小時視窗中更新的有效期。 | `2024-01-01` |
+| `updatedToDate` / `updatedFromDate` | 符合在指定時間開始的24小時視窗中更新的有效期。<br><br>每次編輯時都會將到期視為已更新，包括建立、取消或執行的時間。 | `updatedDate=2022-01-01` |
 
 {style="table-layout:auto"}
 
