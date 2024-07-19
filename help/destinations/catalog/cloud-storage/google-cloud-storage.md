@@ -3,9 +3,9 @@ title: Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用對象或匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1228'
 ht-degree: 2%
 
 ---
@@ -114,6 +114,22 @@ ht-degree: 2%
 您可以啟用警報以接收有關傳送到您目的地的資料流狀態的通知。 從清單中選取警報以訂閱接收有關資料流狀態的通知。 如需警示的詳細資訊，請參閱[使用UI訂閱目的地警示](../../ui/alerts.md)的指南。
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
+
+### 必要的[!DNL Google Cloud Storage]許可權 {#required-google-cloud-storage-permission}
+
+若要成功連線並匯出資料至您的[!DNL Google Cloud Storage]儲存位置，您需要儲存貯體的下列[!DNL Google Cloud Storage]許可權：
+
+*`orgpolicy.policy.get`
+*`resourcemanager.projects.get`
+*`resourcemanager.projects.list`
+*`storage.managedFolders.create`
+*`storage.multipartUploads.abort`
+*`storage.multipartUploads.create`
+*`storage.multipartUploads.listParts`
+*`storage.objects.create`
+*`storage.objects.list`
+
+深入瞭解[!DNL Google Cloud Storage]中的[存取控制與許可權](https://cloud.google.com/storage/docs/access-control/iam-permissions)。
 
 ## 啟動此目標的對象 {#activate}
 
