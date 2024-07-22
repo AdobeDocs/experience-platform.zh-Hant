@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
+source-git-commit: 47cf9cdb7c59ce8459ecb8823787b5145d5f5621
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1857'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,20 @@ ht-degree: 1%
 >Google [已宣佈](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout)計畫在2024年下半年停止支援Chrome的第三方Cookie。 因此，第三方Cookie將不再於任何主要瀏覽器中受到支援。
 >
 >實作此變更後，Adobe將停止支援Web SDK目前所支援的`demdex` Cookie。
+
+## 2.21.1版 — 2024年7月18日
+
+**修正和改良**
+
+* 修正使用NPM程式庫時的組建錯誤。
+
+## 2.21.0版 — 2024年7月16日
+
+**新功能**
+
+* 新增對自動主張互動追蹤的支援。
+* 新增提供alloy.js檔案的自訂建置指令碼。
+* 改善具有ActivityMap和事件群組支援的點選收集。
 
 ## 2.20.0版 — 2024年5月21日
 
