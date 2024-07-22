@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,10 @@ ht-degree: 0%
 ### 新增排程詳細資料 {#schedule-details}
 
 便會顯示「排程詳細資訊」頁面。 您可以在此頁面上編輯排定查詢的各種詳細資訊。 詳細資料包括排定的查詢](#scheduled-query-frequency)執行的[頻率與工作日、開始與結束日期、要匯出結果的資料集，以及[查詢狀態警示](#alerts-for-query-status)。
+
+>[!IMPORTANT]
+>
+>查詢排程器UI不支援無限期或永久排程。 必須指定結束日期。 結束日期沒有上限。
 
 ![醒目提示排程詳細資料面板。](../images/ui/query-schedules/schedule-details.png)
 

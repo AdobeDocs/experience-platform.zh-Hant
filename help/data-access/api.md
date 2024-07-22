@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Data Access API指南
 description: 資料存取API為開發人員提供RESTful介面，著重於Experience Platform內擷取資料集的可發現性和可存取性，以支援Adobe Experience Platform。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: d8694c094ae4a7284e4a3ed0ae5bc3dc198e501a
+source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '554'
 ht-degree: 4%
 
 ---
 
 # 資料存取API指南
+
+>[!IMPORTANT]
+>
+>資料存取API現在&#x200B;**已棄用**。 建議您使用目的地從Adobe Experience Platform匯出資料。 如需詳細資訊，請參閱[資料集匯出目的地檔案](../destinations/destination-types.md#dataset-export-destinations)。
 
 資料存取API透過為使用者提供RESTful介面來支援Adobe Experience Platform，該介面著重於[!DNL Experience Platform]內擷取資料集的可發現性和可存取性。
 
@@ -19,7 +23,7 @@ ht-degree: 4%
 
 ## API規格參考
 
-您可以在[這裡](https://developer.adobe.com/experience-platform-apis/references/data-access/)找到Swagger API參考檔案。
+您可以在[這裡](https://developer.adobe.com/experience-platform-apis/references/data-access/)找到OpenAPI參考檔案。
 
 ## 術語 {#terminology}
 
