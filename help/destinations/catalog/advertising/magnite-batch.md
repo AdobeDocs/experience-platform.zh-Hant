@@ -1,34 +1,34 @@
 ---
-title: 菱形串流批次目的地
+title: 菱形批次目的地
 description: 使用此目的地，以批次方式將AdobeCDP對象傳送至Magnite串流平台。
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 1%
 
 ---
 
 
-# 菱鎂礦串流：批次連線 {#magnite-streaming-batch}
+# 菱形：批次連線 {#magnite-streaming-batch}
 
 ## 概觀 {#overview}
 
-本檔案說明Magnite串流：批次目的地，並提供使用案例範例，協助您更瞭解如何啟用閱聽眾並匯出至該目的地。
+本檔案說明Magnite：批次目的地，並提供使用案例範例，協助您更瞭解如何啟用和匯出受眾至該目的地。
 
-Adobe Real-Time CDP受眾可以透過兩種方式傳送至Magnite：串流平台 — 可以每天傳送一次，或是即時傳送：
+Adobe Real-Time CDP受眾有兩種傳送至Magnite串流平台的方式 — 可以每天傳送一次，或是即時傳送：
 
-1. 如果您每天只需要和/或需要傳送一次對象，可以使用Magnite：串流批次目的地，透過每日S3批次檔案傳送將對象傳送給Magnite：串流。 這些批次對象會無限期儲存在我們的平台中，不像即時對象只會儲存幾天。
+1. 如果您每天只需要和/或需要傳送一次對象，可以使用Magnite：批次目的地，透過每日S3批次檔案傳送將對象傳送到Magnite串流。 這些批次對象會在Magnite平台中無限期儲存，不像即時對象只會儲存幾天。
 
-2. 不過，如果您想要和/或需要即時傳送對象，則需使用Magnite：串流即時目的地。 使用即時目的地時，Magnite：串流將會即時接收對象，但我們只能暫時在平台上儲存即時對象，並且這些對象將在幾天內從我們的系統中移除。 因此，如果您想要使用Magnite：串流即時目的地，您還需要使用Magnite：串流批次目的地 — 您對Real-Time目的地啟用的每個對象，也需要對Batch目的地啟用。
+2. 不過，如果您想要或需要更頻繁地傳送對象，則需要使用[Magnite即時](/help/destinations/catalog/advertising/magnite-streaming.md)目的地。 使用即時目的地時，Magnite串流將會即時接收對象，但Magnite只能暫時將即時對象儲存在其平台中，並且這些對象將在幾天內從系統中移除。 因此，如果您想要使用Magnite Real-Time目的地，您&#x200B;*也*&#x200B;需要使用Magnite：批次目的地 — 您對Real-Time目的地啟用的每個對象，也需要對Batch目的地啟用。
 
-回顧：如果您每天只想傳送Adobe Real-Time CDP對象一次，只需使用Magnite：串流批次目的地，且對象每天會傳送一次。 如果您想要即時傳送Adobe Real-Time CDP對象，會同時使用Magnite：串流批次目的地和Magnite：串流即時目的地。 如需詳細資訊，請造訪Magnite：串流。
+回顧：如果您每天只想傳送Adobe Real-Time CDP對象一次，只需使用Magnite：批次目的地，對象將會每天傳送一次。 如果您想要即時傳送Adobe Real-Time CDP對象，您將會使用&#x200B;*both*&#x200B;菱形：批次目的地和菱形即時目的地。 如需詳細資訊，請造訪Magnite：串流。
 
 
-繼續閱讀下文，瞭解有關Magnite：串流批次目的地、如何連線至該目的地，以及如何為其啟用Adobe Real-Time CDP受眾的詳細資訊。
-如需即時目的地的詳細資訊，請參閱[此檔案](magnite-streaming.md)。
+繼續閱讀下方，深入瞭解Magnite：批次目的地、如何連線至該目的地，以及如何為其啟用Adobe Real-Time CDP對象。
+如需即時目的地的詳細資訊，請參閱[此檔案頁面](magnite-streaming.md)。
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Adobe Real-Time CDP受眾可以透過兩種方式傳送至Magnite：串流平台
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解應如何及何時使用Magnite串流：批次目的地，以下是Adobe Experience Platform客戶可使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解應如何及何時使用Magnite：批次目的地，以下是Adobe Experience Platform客戶可使用此目的地解決的範例使用案例。
 
 ### 使用案例#1 {#use-case-1}
 
-您已在Magnite串流：即時目的地上啟用對象。
+您已在Magnite即時目的地上啟用對象。
 
-任何透過Magnite串流：即時目的地啟用的對象也必須使用Magnite串流：批次目的地，因為批次傳送的資料旨在取代/保留Magnite串流平台中的即時傳送資料。
+任何透過Magnite即時目的地啟用的對象也必須使用Magnite：批次目的地，因為批次傳送的資料旨在取代/保留Magnite串流平台中的即時傳送資料。
 
 ### 使用案例#2 {#use-case-2}
 
 您只想在Magnite串流平台中以批次/每日步調啟用對象。
 
-任何透過Magnite串流啟用的對象：批次目的地將以批次/每日順序傳送，然後可在Magnite串流平台中鎖定目標。
+透過Magnite：批次目的地啟用的任何受眾，都將以批次/每日順序傳送，並可在Magnite串流平台中用於鎖定目標。
 
 ## 先決條件 {#prerequisites}
 
-若要在Adobe Experience Platform中使用Magnite目的地，您必須先擁有Magnite串流帳戶。 如果您有[!DNL Magnite Streaming]帳戶，請洽詢您的[!DNL Magnite]帳戶管理員，以取得存取[!DNL Magnite's]目的地的認證。 如果您沒有[!DNL Magnite Streaming]帳戶，請連絡adobe-tech@magnite.com
+若要在Adobe Experience Platform中使用[!DNL Magnite]目的地，您必須先擁有Magnite串流帳戶。 如果您有[!DNL Magnite Streaming]帳戶，請洽詢您的[!DNL Magnite]帳戶管理員，以取得存取[!DNL Magnite's]目的地的認證。 如果您沒有[!DNL Magnite Streaming]帳戶，請連絡adobe-tech@magnite.com
 
 ## 支援的身分 {#supported-identities}
 
-Magnite串流：批次目的地可以從AdobeCDP接收&#x200B;*任何*&#x200B;個身分來源。 目前，此目的地有三個目標身分欄位可供您對應。
+Magnite：批次目的地可以接收來自AdobeCDP的&#x200B;*任何*&#x200B;身分來源。 目前，此目的地有三個目標身分欄位可供您對應。
 
 >[!NOTE]
 >
->*任何*&#x200B;身分來源都可以對應到任何magnite_deviceId目標身分。
+>*任何*&#x200B;身分識別來源可以對應到任何`magnite_deviceId`目標身分。
 
 | 目標身分 | 說明 | 考量事項 |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ Magnite串流：批次目的地可以從AdobeCDP接收&#x200B;*任何*&#x200B;�
 
 | 項目 | 類型 | 附註 |
 |-----------------------------|----------|----------|
-| 匯出類型 | 對象匯出 | 您正在匯出某個對象的所有成員，其中包含用於Magnite串流：批次目的地中的識別碼（名稱、電話號碼或其他）。 |
+| 匯出類型 | 對象匯出 | 您正在匯出某個對象的所有成員，其中包含在Magnite：批次目的地中使用的識別碼（名稱、電話號碼或其他）。 |
 | 匯出頻率 | 批次 | 批次目的地會以三、六、八、十二或二十四小時的增量將檔案匯出至下游平台。 深入瞭解批次[以檔案為基礎的目的地](/help/destinations/destination-types.md)。 |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Magnite串流：批次目的地可以從AdobeCDP接收&#x200B;*任何*&#x200B;�
 
 ### 驗證目標 {#authenticate}
 
-在Adobe體驗目錄中找到Magnite串流：批次目的地。 按一下其他選項按鈕(\...)，然後設定目的地連線/執行個體。
+在Adobe體驗目錄中找到Magnite：批次目的地。 按一下其他選項按鈕(\...)，然後設定目的地連線/執行個體。
 
 如果您已經有現有的帳戶，您可以將「帳戶型別」選項變更為「現有帳戶」來尋找該帳戶。 否則，您將在下方建立帳戶：
 
@@ -126,7 +126,7 @@ Magnite串流：批次目的地可以從AdobeCDP接收&#x200B;*任何*&#x200B;�
 
 接著，您可以選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續進行
 
-在下一個標題為「治理原則與執行動作（選用）」的畫面上，您可以選擇選取任何相關的資料治理原則。 一般會針對Magnite串流批次目的地選取「資料匯出」。
+在下一個標題為「治理原則與執行動作（選用）」的畫面上，您可以選擇選取任何相關的資料治理原則。 一般會針對Magnite：批次目的地選取「資料匯出」。
 
 ![選擇性的治理原則與強制實行動作](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ Magnite串流：批次目的地可以從AdobeCDP接收&#x200B;*任何*&#x200B;�
 
 上傳受眾後，您可以驗證受眾是否已正確建立和上傳。
 
-* Magnite串流批次目的地以每日節奏將S3檔案傳送到Magnite串流。 傳送和內嵌後，對象/區段預計會顯示在Magnite串流中，並可套用至交易。 您可以查詢Adobe Experience Platform中在啟動步驟期間共用的區段ID或區段名稱，以確認這一點。
+* The Magnite：批次目的地以每日順序將S3檔案傳送至Magnite串流。 傳送和內嵌後，對象/區段預計會顯示在Magnite串流中，並可套用至交易。 您可以查詢Adobe Experience Platform中在啟動步驟期間共用的區段ID或區段名稱，以確認這一點。
 
 >[!NOTE]
 >
->已啟用/傳送至菱鎂串流批次目的地的對象將&#x200B;*取代*&#x200B;透過Magnite串流即時目的地啟用/傳送的相同對象。 如果您使用區段名稱來查詢區段，可能直到該批次已由Magnite串流平台攝取和處理後，才能即時找到區段。
+>已啟用/傳送至菱鎂礦的受眾：批次目的地將&#x200B;*取代*&#x200B;透過Magnite即時目的地啟用/傳送的相同受眾。 如果您使用區段名稱來查詢區段，可能直到該批次已由Magnite串流平台攝取和處理後，才能即時找到區段。
 
 ## 資料使用與控管 {#data-usage-governance}
 

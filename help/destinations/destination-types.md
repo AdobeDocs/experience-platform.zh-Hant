@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '804'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 最後，也可以區分目的地目錄中所有組織可用的公用目的地，以及Real-Time CDP Ultimate客戶為滿足其特定匯出使用案例而建立的私人目的地。
 
-![目的地圖表的型別。](./assets/destination-types/types-of-destinations-no-highlight.png)
+![目的地圖表型別。](./assets/destination-types/types-of-destinations-no-highlight.png "目的地圖表的型別。"){zoomable="yes"}
 
 ## 連線 {#connections}
 
@@ -33,17 +33,17 @@ ht-degree: 1%
 * [串流設定檔匯出目的地（企業目的地）](#streaming-profile-export)
 * [批次（以檔案為基礎）目的地](#file-based)
 
-### 串流設定檔匯出目的地（企業目的地） {#streaming-profile-export}
+### 進階企業目的地（串流設定檔匯出目的地） {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->僅[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶可使用企業目的地或串流設定檔匯出目的地。
+>進階企業目的地或串流設定檔匯出目的地僅限[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶使用。
 
-使用企業目的地資料聯結器，以近乎即時的方式將Adobe Real-time Customer Data Platform設定檔傳送至內部系統或其他協力廠商系統，以進行資料同步、分析和進一步擴充設定檔使用案例。
+使用進階企業目的地資料聯結器，以近乎即時的方式將Adobe Real-time Customer Data Platform設定檔傳送至內部系統或其他協力廠商系統，以進行資料同步、分析和進一步擴充設定檔使用案例。
 
 這些目的地會接收對象和設定檔資料作為Experience Platform資料流。
 
-企業目的地包括：
+進階企業目的地包括：
 
 * [HTTP API目的地](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ Experience Platform中的Edge個人化目的地包含[Adobe Target](/help/destin
 
 目的地卡上的符號會顯示您可以匯出至每個目的地的對象型別。
 
-![附有符號的目的地卡片範例顯示哪些對象型別可以匯出。](/help/destinations/assets/destination-types/types-of-audiences.png)
+![含有符號的目的地卡片範例，顯示哪些對象型別可以匯出。](/help/destinations/assets/destination-types/types-of-audiences.png "附有符號的目的地卡片範例顯示哪些對象型別可以匯出。"){zoomable="yes"}
 
 
 ## 資料集匯出目的地 {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Platform運用標籤管理的強大功能和彈性，讓您能夠在UI中設定�
 
 [目的地目錄](https://platform.adobe.com/destination/catalog)中的連線和擴充功能會依目的地類別(**Advertising**、**雲端儲存空間**、**調查平台**、**電子郵件行銷**&#x200B;等)分組，依它們協助您實現的行銷動作而定。 如需每個類別以及每個類別中所含目的地的詳細資訊，請參閱[目的地目錄檔案](./catalog/overview.md)。
 
-![目錄頁面中反白顯示的目的地類別。](./assets/destination-types/destination-categories-menu.png)
+![目錄頁面中反白顯示的目的地類別。](./assets/destination-types/destination-categories-menu.png "目錄頁面中反白顯示的目的地類別。"){zoomable="yes"}

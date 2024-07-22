@@ -1,31 +1,31 @@
 ---
-title: Magnite串流即時目的地連線
+title: Magnite即時目的地連線
 description: 使用此目的地可將AdobeCDP對象即時傳送到Magnite串流平台。
 badgeBeta: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1297'
 ht-degree: 1%
 
 ---
 
 
-# (Beta) Magnite串流：即時目的地連線
+# (Beta) Magnite：即時目的地連線
 
 ## 概觀 {#overview}
 
-Adobe Experience Platform中的[!DNL Magnite Streaming: Real-Time]和Magnite串流：批次目的地可幫助您對應和匯出對象，以便在Magnite串流平台上定位和啟動。
+Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/help/destinations/catalog/advertising/magnite-batch.md)目的地可協助您對應及匯出對象，以便在Magnite串流平台上鎖定和啟動。
 
-啟用對象至[!DNL Magnite Streaming]平台是兩個步驟的程式，需要您同時使用Magnite Streaming： Real-Time和Magnite Streaming： Batch目的地。
+啟用對象至[!DNL Magnite Streaming]平台是兩個步驟的程式，需要您同時使用Magnite： Real-Time和Magnite： Batch目的地。
 
 若要將您的對象啟動至[!DNL Magnite Streaming]，您必須：
 
-* 啟用[!DNL Magnite Streaming: Real-Time]目的地上的對象，如本頁所示。
-* 在Magnite串流：批次目的地上啟用相同的對象。 [!DNL Magnite Streaming: Batch]目的地是必要元件。 若無法在[!DNL Magnite Streaming]批次目的地上啟用對象，將會導致整合失敗，且您的對象將不會啟用。
+* 啟用[!DNL Magnite: Real-Time]目的地上的對象，如本頁所示。
+* 在Magnite：批次目的地上啟用相同的對象。 [!DNL Magnite: Batch]目的地是必要元件。 若無法在[!DNL Magnite Streaming]批次目的地上啟用對象，將會導致整合失敗，且您的對象將不會啟用。
 
-注意：使用即時目的地時，[!DNL Magnite: Streaming]將會即時接收對象，但我們只能暫時在平台上儲存即時對象，並且這些對象將在幾天內從我們的系統中移除。 因此，如果您想要使用Magnite：串流即時目的地，您&#x200B;*也*&#x200B;需要使用Magnite串流：批次目的地 — 您對Real-Time目的地啟用的每個對象，也需要對Batch目的地啟用。
+注意：使用即時目的地時，[!DNL Magnite Streaming]將會即時接收對象，但Magnite只能暫時將即時對象儲存在其平台中，並且這些對象將在幾天內從系統中移除。 因此，如果您想要使用Magnite： Real-Time目的地，您&#x200B;*也*&#x200B;需要使用Magnite： Batch目的地 — 您對Real-Time目的地啟用的每個對象，也需要對Batch目的地啟用。
 
 >[!IMPORTANT]
 >
@@ -35,7 +35,7 @@ Adobe Experience Platform中的[!DNL Magnite Streaming: Real-Time]和Magnite串�
 
 ## 使用案例 {#use-cases}
 
-為協助您更清楚瞭解您應如何及何時使用[!DNL Magnite Streaming: Real-Time]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
+為協助您更清楚瞭解您應如何及何時使用[!DNL Magnite: Real-Time]目的地，以下是Adobe Experience Platform客戶可藉由使用此目的地解決的範例使用案例。
 
 ### 啟用與定位 {#activation-and-targeting}
 
@@ -48,11 +48,11 @@ Adobe Experience Platform中的[!DNL Magnite Streaming: Real-Time]和Magnite串�
 
 ## 支援的身分 {#supported-identities}
 
-[!DNL Magnite Streaming: Real-Time]目的地支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
+[!DNL Magnite: Real-Time]目的地支援下表所述的身分啟用。 深入瞭解[身分](/help/identity-service/features/namespaces.md)。
 
 | 目標身分 | 說明 | 考量事項 |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| device_id | 裝置或身分的唯一識別碼。 我們接受任何裝置ID和第一方ID，無論型別為何。 | 我們支援的身分型別包括但不限於PPUID、GAID、IDFA和電視裝置ID。 |
+| device_id | 裝置或身分的唯一識別碼。 我們接受任何裝置ID和第一方ID，無論型別為何。 | Magnite支援的身分型別包括但不限於PPUID、GAID、IDFA和電視裝置ID。 |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Adobe Experience Platform中的[!DNL Magnite Streaming: Real-Time]和Magnite串�
 
 | 項目 | 類型 | 附註 |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，其中包含[!DNL Magnite Streaming: Real-Time]目的地中使用的識別碼（名稱、電話號碼或其他）。 |
+| 匯出類型 | **[!UICONTROL 區段匯出]** | 您正在匯出區段（對象）的所有成員，其中包含[!DNL Magnite: Real-Time]目的地中使用的識別碼（名稱、電話號碼或其他）。 |
 | 匯出頻率 | **[!UICONTROL 串流]** | 串流目的地是「一律開啟」的API型連線。 一旦根據區段評估在Experience Platform中更新了設定檔，聯結器就會將更新傳送至下游的目標平台。 深入瞭解[串流目的地](/help/destinations/destination-types.md#streaming-destinations)。 |
 
 {style="table-layout:auto"}
@@ -162,13 +162,13 @@ Adobe Experience Platform中的[!DNL Magnite Streaming: Real-Time]和Magnite串�
 
 -->
 
-* Post擷取後，對象預計會在幾分鐘內出現在[!DNL Magnite Streaming]中，並可套用至交易。 您可以查詢Adobe Experience Platform中在啟動步驟期間共用的區段ID來確認此專案。
+* 擷取後，對象預計會在幾分鐘內出現在[!DNL Magnite Streaming]中，並可套用至交易。 您可以查詢Adobe Experience Platform中在啟動步驟期間共用的區段ID來確認此專案。
 
-## 透過[!DNL Magnite Streaming: Batch]目的地啟用相同的對象
+## 透過[!DNL Magnite: Batch]目的地啟用相同的對象
 
-使用「即時」目的地與[!DNL Magnite Streaming]共用的對象也需要使用Magnite Streaming：批次目的地共用。 正確設定後，[!DNL Magnite Streaming] UI中的區段名稱會更新，以反映Adobe Experience Platform每日更新後所使用的名稱。
+使用「即時」目的地與[!DNL Magnite Streaming]共用的對象也需要使用Magnite：批次目的地來共用。 正確設定後，[!DNL Magnite Streaming] UI中的區段名稱會更新，以反映Adobe Experience Platform每日更新後所使用的名稱。
 
-最後，如果尚未針對整合設定批次目的地，請透過Magnite Streaming：批次目的地檔案立即進行設定。
+最後，如果尚未針對整合設定批次目的地，請透過Magnite：批次目的地檔案立即進行設定。
 
 ## 資料使用與控管 {#data-usage-governance}
 
