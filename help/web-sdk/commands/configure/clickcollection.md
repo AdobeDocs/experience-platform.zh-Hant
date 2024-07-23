@@ -1,13 +1,13 @@
 ---
 title: clickCollection
 description: 微調點選集合設定。
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: 5a128b4a-4727-4415-87b4-4ae87a7e1750
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollection`
 
@@ -25,26 +25,27 @@ Web SDK 2.25.0或更新版本支援此功能。
 * **`clickCollection.eventGroupingEnabled`**：布林值，可判斷程式庫是否等到下一頁才傳送連結追蹤資料。 當下一頁載入時，結合連結追蹤資料與頁面載入事件。 啟用此選項可減少您傳送給Adobe的事件數。 如果`internalLinkEnabled`已停用，此變數就不會執行任何動作。
 * **`clickCollection.sessionStorageEnabled`**：判斷連結追蹤資料是否儲存在工作階段存放區，而非本機變數的布林值。 如果`internalLinkEnabled`或`eventGroupingEnabled`已停用，則此變數不會產生任何效用。
 
-  Adobe強烈建議在使用`eventGroupingEnabled`時啟用此變數。 如果`eventGroupingEnabled`在`sessionStorageEnabled`停用時啟用，則按一下新頁面會導致連結追蹤資料遺失，因為它不會保留在工作階段存放區中。 雖然在單頁應用程式中停用`sessionStorageEnabled`是可接受的，但不適用於非SPA頁面。
+  Adobe強烈建議您在單頁應用程式之外使用`eventGroupingEnabled`時啟用此變數。 如果`eventGroupingEnabled`在`sessionStorageEnabled`停用時啟用，則按一下新頁面會導致連結追蹤資料遺失，因為它不會保留在工作階段存放區中。 由於單頁應用程式通常不會導覽至新頁面，因此SPA頁面不需要工作階段儲存空間。
 * **`filterClickDetails`**：回呼函式，提供您收集之連結追蹤資料的完整控制項。 您可以使用此回呼函式來變更、模糊化或中止傳送連結追蹤資料。 如果您想要省略特定資訊（例如連結內的個人識別資訊），此回呼相當實用。
 
 ## 使用Web SDK標籤擴充功能按一下集合設定
 
-選取[設定標籤延伸時](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)的&#x200B;**[!UICONTROL 啟用按一下資料彙集]**&#x200B;核取方塊。 啟用此核取方塊會顯示下列與點按集合相關的選項：
+在[設定標籤延伸模組](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)時，選取下列任一選項：
 
-* [!UICONTROL 內部連結]
-   * [!UICONTROL 啟用事件分組]
-   * [!UICONTROL 啟用工作階段存放區]
-* [!UICONTROL 外部連結]
-* [!UICONTROL 下載連結]
+* [!UICONTROL 收集內部連結]
+   * [!UICONTROL 事件群組選項]：
+      * [!UICONTROL 沒有事件群組]
+      * [!UICONTROL 使用工作階段存放區進行事件分組]
+      * 使用本機物件的[!UICONTROL 事件群組]
+* [!UICONTROL 收集外部連結]
+* [!UICONTROL 收集下載連結]
 * [!UICONTROL 篩選點按屬性]
 
 1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
 1. 導覽至&#x200B;**[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**。
 1. 選取所需的標籤屬性。
 1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後按一下[!UICONTROL Adobe Experience Platform Web SDK]卡片上的&#x200B;**[!UICONTROL 設定]**。
-1. 向下捲動至[!UICONTROL 資料彙集]區段，然後選取核取方塊&#x200B;**[!UICONTROL 啟用資料彙集]**。
-1. 選取所需的按一下集合設定。
+1. 向下捲動至[!UICONTROL 資料彙集]區段，然後選取所需的點選集合設定。
 1. 按一下&#x200B;**[!UICONTROL 儲存]**，然後發佈您的變更。
 
 [!UICONTROL 篩選條件點選屬性]回呼會開啟自訂程式碼編輯器，讓您插入想要的程式碼。 在程式碼編輯器中，您可以存取下列變數：
@@ -72,11 +73,11 @@ Web SDK 2.25.0或更新版本支援此功能。
 * `filterClickDetails`：不包含函式；必須明確登入
 
 >[!TIP]
->Adobe建議啟用`eventGroupingEnabled`，因為它有助於減少計入合約使用量的事件數量。
+>Adobe建議在啟用`internalLinkEnabled`時啟用`eventGroupingEnabled`，因為它會減少計入合約使用量的事件數量。
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

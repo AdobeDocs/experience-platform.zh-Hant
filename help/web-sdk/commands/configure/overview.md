@@ -2,7 +2,7 @@
 title: 設定Adobe Experience Platform Web SDK
 description: 使用Web SDK時，請使用configure命令來設定必要的設定。
 exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
-source-git-commit: 1c614ef525d55d7476d037c6838b35c3471e4501
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
@@ -29,13 +29,13 @@ ht-degree: 0%
 
 執行`configure`命令。 您必須先執行此命令，才能呼叫任何其他Web SDK命令，例如[`sendEvent`](../sendevent/overview.md)。
 
-需要[`edgeConfigId`](edgeconfigid.md)和[`orgId`](orgid.md)屬性。 所有其他屬性皆為選用，視您組織的實作需求而定。
+需要[`datastreamId`](datastreamid.md)和[`orgId`](orgid.md)屬性。 所有其他屬性皆為選用，視您組織的實作需求而定。
 
 請參閱本使用手冊的目錄，瞭解每個支援命令的詳細資訊。
 
 ```js
 alloy("configure", {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: true,
   clickCollection: {

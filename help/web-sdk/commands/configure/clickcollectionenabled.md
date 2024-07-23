@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: 瞭解如何設定Web SDK以測試是否自動收集連結點選資料。
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ Web SDK若沒有`onClick`屬性，則會追蹤`<a>`和`<area>`HTML元素上的�
 
 ## 使用Web SDK標籤擴充功能啟用自動連結追蹤 {#tag-extension}
 
-選取[設定標籤延伸時](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)的&#x200B;**[!UICONTROL 啟用按一下資料彙集]**&#x200B;核取方塊。
+此變數會由標籤擴充功能自動管理；您不需要明確加以設定。 如果在[設定標籤擴充功能](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md)時選取下列任一專案，則會收集適用的連結追蹤資料：
 
-1. 使用您的Adobe ID憑證登入[experience.adobe.com](https://experience.adobe.com)。
-1. 導覽至&#x200B;**[!UICONTROL 資料彙集]** > **[!UICONTROL 標籤]**。
-1. 選取所需的標籤屬性。
-1. 導覽至&#x200B;**[!UICONTROL 擴充功能]**，然後按一下[!UICONTROL Adobe Experience Platform Web SDK]卡片上的&#x200B;**[!UICONTROL 設定]**。
-1. 向下捲動至[!UICONTROL 資料彙集]區段，然後選取核取方塊&#x200B;**[!UICONTROL 啟用資料彙集]**。
-1. 按一下&#x200B;**[!UICONTROL 儲存]**，然後發佈您的變更。
+* [!UICONTROL 收集內部連結點選次數]
+* [!UICONTROL 收集外部連結點選次數]
+* [!UICONTROL 收集下載連結點選次數]
+
+如需詳細資訊，請參閱[`clickCollection`](clickcollection.md)。
 
 ## 使用Web SDK JavaScript資料庫啟用自動連結追蹤 {#library}
 
@@ -48,7 +47,7 @@ Web SDK若沒有`onClick`屬性，則會追蹤`<a>`和`<area>`HTML元素上的�
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });

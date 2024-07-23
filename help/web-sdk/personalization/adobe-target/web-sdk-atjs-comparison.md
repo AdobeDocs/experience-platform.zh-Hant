@@ -3,7 +3,7 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '2175'
 ht-degree: 2%
@@ -746,7 +746,7 @@ alloy("sendEvent", {
 
 ```javascript
 alloy("configure", {
-  edgeConfigId: "configurationId",
+  datastreamId: "configurationId",
   orgId: "orgId@AdobeOrg",
   debugEnabled: true,
   prehidingStyle: "body { opacity: 0 !important }"

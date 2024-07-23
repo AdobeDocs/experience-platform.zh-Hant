@@ -2,7 +2,7 @@
 title: defaultConsent
 description: 為您的Web屬性設定預設同意收集方法。
 exl-id: 2a22fa8b-a234-4d3e-9b55-c7482a928fe6
-source-git-commit: d3591053939147589dae24e1e4c20d53b1f87dd3
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 5%
@@ -90,8 +90,8 @@ Web SDK提供兩種互補的同意設定命令：
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": "pending"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  defaultConsent: "pending"
 });
 ```

@@ -2,7 +2,7 @@
 title: 資料流概觀
 description: 瞭解資料串流如何協助您將使用者端Experience PlatformSDK整合與Adobe產品和第三方目的地連線起來。
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 77%
@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # 資料流概觀
 
-資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。雖然SDK中的[`configure`](/help/web-sdk/commands/configure/overview.md)命令可控制使用者端（例如`edgeDomain`）上必須處理的專案，但資料串流會處理SDK的所有其他設定。 當傳送請求到 Adob&#x200B;&#x200B;e Experience Platform Edge Network 時，`edgeConfigId` 會用於參照資料流。這讓您無須在網站上進行程式碼變更即可更新伺服器端設定。
+資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。雖然SDK中的[`configure`](/help/web-sdk/commands/configure/overview.md)命令可控制使用者端（例如`edgeDomain`）上必須處理的專案，但資料串流會處理SDK的所有其他設定。 當傳送請求到 Adob&#x200B;&#x200B;e Experience Platform Edge Network 時，`datastreamId` 會用於參照資料流。這讓您無須在網站上進行程式碼變更即可更新伺服器端設定。
 
 在 Adob&#x200B;&#x200B;e Experience Platform UI 或資料集合 UI 的左側導覽中選取&#x200B;**[!UICONTROL 資料流]**，即可建立並管理資料流。
 
