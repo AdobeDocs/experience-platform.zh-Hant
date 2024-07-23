@@ -3,9 +3,9 @@ keywords: 目的地；目的地；目的地型別
 title: 目的地型別和類別
 description: 瞭解Adobe Experience Platform中目的地的不同型別和類別。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '805'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,11 @@ ht-degree: 1%
 
 最後，也可以區分目的地目錄中所有組織可用的公用目的地，以及Real-Time CDP Ultimate客戶為滿足其特定匯出使用案例而建立的私人目的地。
 
+>[!BEGINSHADEBOX]
+
 ![目的地圖表型別。](./assets/destination-types/types-of-destinations-no-highlight.png "目的地圖表的型別。"){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## 連線 {#connections}
 
@@ -30,8 +34,8 @@ ht-degree: 1%
 
 設定檔匯出目的地會接收原始資料，通常會將電子郵件地址當作主索引鍵。 Experience Platform目前支援兩種型別的設定檔匯出目的地：
 
-* [串流設定檔匯出目的地（企業目的地）](#streaming-profile-export)
 * [批次（以檔案為基礎）目的地](#file-based)
+* [進階企業目的地（串流設定檔匯出目的地）](#streaming-profile-export)
 
 ### 進階企業目的地（串流設定檔匯出目的地） {#streaming-profile-export}
 
