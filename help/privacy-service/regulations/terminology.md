@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規術語
 description: 本檔案提供Adobe Experience Cloud支援之隱私權法規相關關鍵辭彙的定義。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -71,6 +71,8 @@ ht-degree: 0%
 
 **歸檔系統**：根據特定條件可存取或可查詢的任何特定個人資料集。
 
+**FDBR**： [!DNL Florida Digital Bill of Rights] (FDBR)法規賦予佛羅里達居民存取、更正、刪除及複製其個人資料的權利。 它強制資料實務的透明度，允許資料銷售或目標定位廣告的選擇退出，並禁止未經授權的監視。 佛羅里達州法律事務部強制實施這些權利，要求資料控制者在45天內回應請求。
+
 ## G
 
 **GDPR**： [!DNL General Data Protection Regulation] (GDPR)為一法律架構，其設定收集和處理歐洲經濟區(EEA)內之個人資訊的方針。 GDPR說明資料管理原則以及個人的權利，同時按收入處以罰款。 GDPR涵蓋所有處理EEA公民資料的公司，因此對於銀行、保險公司和其他金融公司的公司合規人員而言為一重要規範。
@@ -107,13 +109,11 @@ ht-degree: 0%
 
 ## O
 
+**OCPA**：俄勒岡消費者隱私保護法(OCPA)法規授予俄勒岡居民對其個人資料的主要權利，包括知悉、更正、刪除和取得資料副本的權利。 此規範對企業施加嚴格的義務，要求企業提供詳細的隱私權通知、針對特定資料用途取得同意，並對敏感資訊實施更嚴格的保護。 此法規旨在平衡消費者隱私權與商業利益。
+
 ## P
 
 **PDPA**：泰國的[!DNL Personal Data Protection Act] (PDPA)是為了保護泰國的資料擁有者免於非法收集、使用或公開其個人資料。 受歐盟GDPR啟發，該法規授予泰國公民請求存取或刪除其儲存的個人資料的權利。
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **個人資料**：任何與自然人或「資料主體」相關的資訊，可用於直接或間接識別使用者的身分。
 
@@ -152,6 +152,8 @@ ht-degree: 0%
 **監督機關**：由成員國依據第46條建立的公共機關。
 
 ## T
+
+**TDPSA**：德克薩斯州資料隱私及安全性法案(TDPSA)是保護德克薩斯州居民個人資料權利的綜合性法規。 它授予個人存取、更正、刪除和取得其資料副本的權利，以及選擇退出資料銷售和針對性廣告的權利。 違反此法規的企業可能面臨經濟處罰。
 
 **Trilogue**：Trilogue是歐洲委員會、歐洲議會和歐盟理事會之間的非正式談判。 這些談判通常是在對擬議的立法進行初讀後進行的，以便更快地商定將通過的妥協案文。
 同意更快速地採用妥協文字。
