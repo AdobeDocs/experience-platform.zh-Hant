@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 批次擷取疑難排解指南
 description: 本檔案可協助回答有關Adobe Experience Platform批次資料擷取API的常見問題。
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1426'
 ht-degree: 1%
 
 ---
@@ -212,11 +212,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### 是否有辦法知道批次是否已成功擷取？
 
-批次狀態為「作用中」時，表示已成功擷取批次。 若要瞭解批次的狀態，請遵循詳細步驟[early](#how-is-batch-ingestion-monitored)。
+可以，當批次狀態為「作用中」時，表示已成功擷取批次。 若要瞭解批次的狀態，請遵循詳細步驟[early](#how-is-batch-ingestion-monitored)。
 
-### 批次失敗後會發生什麼事？
+### 批次失敗後會發生什麼事？ {#what-if-a-batch-fails}
 
-當批次失敗時，可在承載的`errors`區段中識別其失敗的原因。 錯誤範例如下所示：
+當批次失敗時，處理程式會停止並傳回`Failure`狀態。 可在承載的`errors`區段中識別其失敗的原因。 錯誤範例如下所示：
 
 ```json
     "errors":[

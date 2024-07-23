@@ -1,16 +1,16 @@
 ---
-title: Adobe Experience Platform查詢服務支援的使用案例
+title: 實用範例
 description: 瞭解Adobe Experience Platform查詢服務支援哪些使用案例。
 keywords: 查詢服務；使用案例
 exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 8d8cceafa5def20b64d06dcc3b52629f9ee4b39d
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
-# 支援的使用案例
+# 實用範例
 
 Query Service為跨產業和業務案例的各種使用案例提供解決方案。 這些實用的範例說明此服務在滿足各種需求時的彈性與影響。 若要瞭解Query Service如何為您的特定業務需求帶來價值，請探索使用案例檔案的完整集合。 瞭解如何使用查詢服務來提供見解和解決方案，以增強營運效率和業務成功。
 

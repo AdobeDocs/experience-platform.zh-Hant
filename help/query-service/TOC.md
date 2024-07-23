@@ -5,10 +5,10 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 19%
+source-wordcount: '323'
+ht-degree: 18%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 19%
       - [ML的工程師功能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [將資料匯出至ML環境](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- 使用案例 {#use-cases}
+- 實際範例{#use-cases}
    - [概觀](use-cases/overview.md)
    - [捨棄的瀏覽](use-cases/abandoned-browse.md)
    - [歸因分析](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 19%
    - [建立事件的趨勢報表](use-cases/trended-report-of-events.md)
    - [同意分析](use-cases/consent-analysis.md)
    - [客戶期限值](use-cases/customer-lifetime-value.md)
+   - [資料探索](./use-cases/data-exploration.md)
    - [十等分衍生資料集](use-cases/deciles-use-case.md)
    - [模糊比對](use-cases/fuzzy-match.md)
    - [列出使用者的頁面檢視](use-cases/list-visitor-sessions.md)
