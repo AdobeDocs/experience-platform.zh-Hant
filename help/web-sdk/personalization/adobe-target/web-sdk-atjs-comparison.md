@@ -3,9 +3,9 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2182'
 ht-degree: 2%
 
 ---
@@ -614,20 +614,42 @@ alloy("sendEvent", {
 此範例會追蹤在執行特定動作（例如按一下按鈕）後引發的事件。
 您可以透過`__adobe.target`資料物件新增任何其他自訂引數。
 
+您也可以新增`commerce` XDM物件。
+
 ```js
-//replicates an at.js trackEvent call
 alloy("sendEvent", {
-    "type": "decisioning.propositionDisplay",
     "xdm": {
         "_experience": {
             "decisioning": {
-                "propositions": [{
-                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
-                }]
+                "propositions": [
+                    {
+                        "scope": "orderConfirm" //example scope name
+                    }
+                ],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    },
+    "commerce": {
+        "order": {
+            "purchaseID": "a8g784hjq1mnp3",
+            "purchaseOrderNumber": "VAU3123",
+            "currencyCode": "USD",
+            "priceTotal": 999.98
+        }
+    },
+    "data": {
+        "__adobe": {
+            "target": {
+                "pageType": "Order Confirmation",
+                "user.categoryId": "Insurance"
             }
         }
     }
-});
+})
 ```
 
 ## 如何在單頁應用程式中觸發檢視變更

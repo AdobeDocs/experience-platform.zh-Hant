@@ -2,9 +2,9 @@
 title: 使用Adobe Target搭配Web SDK進行個人化
 description: 瞭解如何使用Adobe Target以Experience Platform Web SDK呈現個人化內容
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1364'
 ht-degree: 1%
 
 ---
@@ -192,77 +192,31 @@ alloy("sendEvent",
 
 例如，您的網站包含三個決定範圍，分別對應至網站上的三個類別連結（「男性、女性和兒童」），而您想要追蹤使用者最後造訪的類別。 傳送這些請求，並將`__save`旗標設為`false`，以避免在請求內容時保留類別。 內容視覺化之後，針對要記錄的對應屬性，傳送適當的裝載（包括`eventToken`和`stateToken`）。
 
-<!--Save profile or entity attributes by default with:
-
-```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "__save" : true // Optional. __save=true is the default 
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt",
-        "entity.id" : "1234",
-      }
-    }
-  }
-} ) ; 
-```
--->
-
 以下範例會傳送trackEvent樣式訊息、執行設定檔指令碼、儲存屬性，並立即記錄事件。
 
 ```js
-alloy ( "sendEvent" , {
-  renderDecisions : true,
-  data : {
-    __adobe : {
-      target : {
-        "profile.gender" : "female",
-        "profile.age" : 30,
-        "entity.name" : "T-shirt" ,
-        "entity.id" : "1234" ,
-        "track": {
-          "scopes": [ "mbox1", "mbox2"],
-          "type": "display|click|..."
+alloy("sendEvent", {
+    "renderDecisions": true,
+    "data": {
+        "xdm": { // Experience Event XDM data },
+            "__adobe": {
+                "target": {
+                    " __save": true|false,
+                    //defaults to true if omitted 
+                    "profile.gender": "female",
+                    "profile.age": 30,
+                    "entity.name": "T-shirt",
+                    "entity.id": "1234"
+                }
+            }
         }
-      }
     }
-  }
-} ) ;
+})
 ```
 
 >[!NOTE]
 >
->如果省略`__save`指示詞，則會立即儲存設定檔和實體屬性，就像已執行要求一樣，即使要求的其餘部分是個人化的預先擷取。 `__save`指示詞只與設定檔和實體屬性相關。 如果追蹤物件存在，則會忽略`__save`指示詞。 資料會立即儲存並記錄通知。
-
-**`sendEvent`包含設定檔資料**
-
-```js
-alloy("sendEvent", {
-   renderDecisions: true|false,
-   xdm: { // Experience Event XDM data },
-   data: { // Freeform data }
-});
-```
-
-**如何將設定檔屬性傳送至Adobe Target：**
-
-```js
-alloy("sendEvent", {
-  "renderDecisions": true,
-  "data": {
-    "__adobe": {
-      "target": {
-        "profile.gender": "female",
-        "profile.age": 30
-      }
-    }
-  }
-});
-```
+>如果省略`__save`指示詞，則會立即儲存設定檔和實體屬性。 `__save`指示詞僅與設定檔屬性和實體詳細資料相關。
 
 ## 要求建議
 
@@ -302,6 +256,34 @@ alloy("sendEvent", {
   }
 });
 ```
+
+## 顯示mbox轉換量度 {#display-mbox-conversion-metrics}
+
+以下範例說明如何追蹤顯示mbox轉換並傳送設定檔引數至Adobe Target，而不需要符合任何內容或活動的資格。
+
+```js
+alloy("sendEvent", {
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "conversion-step-1" //example scope name
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    }
+});
+```
+
+
+| 屬性 | 說明 |
+|---------|----------|
+| `xdm._experience.decisioning.propositions[x].scope` | 與成功量度關聯的範圍（將歸因於Target端的特定活動）。 |
+| `xdm._experience.decisioning.propositions[x].eventType` | 說明預期事件型別的字串。 針對此使用案例將此專案設定為`"decisioning.propositionDisplay"`。 |
 
 ## 偵錯
 
