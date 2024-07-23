@@ -1,13 +1,13 @@
 ---
 title: 擴充功能套件使用授權端點
 description: 瞭解如何在Reactor API中呼叫/extension_package_usage授權端點。
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 4%
 
 ---
-
 
 # 擴充功能套件使用授權端點
 
@@ -185,7 +185,7 @@ curl -X POST \
 >
 >在上述範例回應中，授權目前處於`pending_approval`階段。 在使用擴充功能套件之前，組織必須核准授權。 當授權處於未決核准狀態時，組織的使用者可以瀏覽私人擴充功能套件，但他們無法安裝該套件，且無法在擴充功能目錄中找到。
 
-## 擷取擴充功能套件使用授權清單 {#list_authorizations}
+## 擷取擴充功能套件使用授權清單 {#list-authorizations}
 
 您可以發出GET要求，擷取擴充功能套件使用授權的清單。
 
@@ -386,7 +386,7 @@ curl -X PATCH \
 >
 >在授權核准後，您的組織可以在您的屬性上安裝擴充功能套件。
 
-## 擷取擴充功能套件的資料，以取得擴充功能套件使用授權 {#retrieve_data}
+## 擷取擴充功能套件的資料，以取得擴充功能套件使用授權 {#retrieve-data}
 
 您可以提出GET要求，擷取擴充功能套件資料，以取得擴充功能套件使用授權。
 

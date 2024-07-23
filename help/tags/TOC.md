@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 35%
 
 ---
@@ -316,6 +316,7 @@ ht-degree: 35%
       * [委派描述項ID](./api/guides/delegate-descriptor-ids.md)
       * [加密值](./api/guides/encrypting-values.md)
       * [錯誤處理](./api/guides/error-handling.md)
+      * [共用私人擴充功能套件](./api/guides/extension-packages.md)
       * [篩選回應](./api/guides/filtering.md)
       * [分頁回應](./api/guides/pagination.md)
       * [排序回應](./api/guides/sorting.md)
