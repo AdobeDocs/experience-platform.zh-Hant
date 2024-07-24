@@ -2,14 +2,19 @@
 title: 身分圖表連結規則設定指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 badge: Beta
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 4%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # 身分圖表連結規則設定指南
+
+>[!AVAILABILITY]
+>
+>身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
 
 請參閱本檔案，瞭解在使用Adobe Experience Platform Identity Service實作資料時可遵循的逐步指南。
 
@@ -67,6 +72,11 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 ## 擷取您的資料 {#ingest}
 
+>[!WARNING]
+>
+>* 在預先實作程式中，您必須確保系統要傳送給Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
+>* 在實作期間，您必須確保每個設定檔中一律有最高優先順序的唯一名稱空間。 請參閱[附錄](#appendix)以取得圖表案例的範例，其可透過確保每個設定檔都包含具有最高優先順序的唯一名稱空間來解決。
+
 此時，您應該具備下列專案：
 
 * 存取Identity Service功能的必要許可權。
@@ -86,3 +96,55 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 >擷取您的資料後，XDM原始資料裝載不會變更。 您仍可在UI中看到主要身分設定。 不過，身分設定將會覆寫這些設定。
 
 如需任何意見，請使用Identity Service UI工作區中的&#x200B;**[!UICONTROL Beta意見]**&#x200B;選項。
+
+## 附錄 {#appendix}
+
+請參閱本節，瞭解實作身分設定和唯一名稱空間時可參考的其他資訊。
+
+### 共用裝置情境 {#shared-device-scenario}
+
+您必須確保在代表個人的所有設定檔中使用單一名稱空間。 如此一來，Identity Service就能偵測指定圖表中的適當人員識別碼。
+
+>[!BEGINTABS]
+
+>[!TAB 沒有單一人員識別碼名稱空間]
+
+如果沒有能代表您個人識別碼的唯一名稱空間，您最終可能會看到將不同的個人識別碼連結至相同ECID的圖表。 在此範例中，B2BCRM和B2CCRM會同時連結至相同的ECID。 此圖表建議Tom使用其B2C登入帳戶與Summer共用裝置（使用她的B2B登入帳戶）。 但是，系統將識別這是一個設定檔（圖形摺疊）。
+
+![兩個人員識別碼連結至相同ECID的圖表案例。](../images/graph-examples/multi_namespaces.png)
+
+>[!TAB 具有單一人員識別碼名稱空間]
+
+指定唯一的名稱空間（在此案例中是CRMID，而不是兩個完全不同的名稱空間），Identity Service就能夠識別上次與ECID建立關聯的人員識別碼。 在此範例中，由於存在唯一的CRMID，Identity Service能夠識別「共用裝置」情境，其中兩個實體共用相同裝置。
+
+![共用裝置圖表情境，其中兩個人員識別碼連結至相同的ECID，但舊連結被移除。](../images/graph-examples/crmid_only_multi.png)
+
+>[!ENDTABS]
+
+### Danging loginID案例 {#dangling-loginid-scenario}
+
+下圖會模擬「懸浮」登入ID案例。 在此範例中，兩個不同的loginID已繫結至相同的ECID。 但是，`{loginID: ID_C}`未連結至CRMID。 因此，Identity Service無法偵測這兩個loginID代表兩個不同的實體。
+
+>[!BEGINTABS]
+
+>[!TAB 不明確的登入ID]
+
+在此範例中，`{loginID: ID_C}`懸空且未連結至CRMID。 因此，此loginID應關聯的個人實體變得模稜兩可。
+
+![具有「懸浮」登入ID情境的圖表範例。](../images/graph-examples/dangling_example.png)
+
+>[!TAB loginID已連結至CRMID]
+
+在此範例中，`{loginID: ID_C}`連結至`{CRMID: Tom}`。 因此，系統能夠識別此loginID與Tom相關聯。
+
+![LoginID已連結至CRMID。](../images/graph-examples/id_c_tom.png)
+
+>[!TAB loginID已連結至另一個CRMID]
+
+在此範例中，`{loginID: ID_C}`連結至`{CRMID: Summer}`。 因此，系統能夠識別此loginID與另一個個人實體（在此例中為Summer）相關聯。
+
+此範例也顯示Tom和Summer是共用裝置的不同個人實體，以`{ECID: 111}`表示。
+
+![LoginID已連結至另一個CRMID。](../images/graph-examples/id_c_summer.png)
+
+>[!ENDTABS]

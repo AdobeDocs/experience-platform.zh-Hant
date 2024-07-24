@@ -5,7 +5,7 @@ breadcrumb-title: 平台 Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
-source-git-commit: 30e19f53bb29977cf4255cb2dba688d8bbbf6b2b
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 29%
@@ -24,12 +24,13 @@ ht-degree: 29%
    - [Identity Service中的刪除](./features/deletion.md)
    - 身分圖表連結規則{#identity-graph-linking-rules}
       - [功能概觀](./identity-graph-linking-rules/overview.md)
+      - [設定指南](./identity-graph-linking-rules/configuration.md)
       - [身分最佳化演演算法](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [名稱空間優先順序](./identity-graph-linking-rules/namespace-priority.md)
-      - [範例情境](./identity-graph-linking-rules/example-scenarios.md)
       - [圖表模擬UI](./identity-graph-linking-rules/graph-simulation.md)
-      - [身分圖表連結規則設定指南](./identity-graph-linking-rules/configuration.md)
       - [身分設定](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [範例客戶案例](./identity-graph-linking-rules/example-scenarios.md)
+      - [圖表設定範例](./identity-graph-linking-rules/example-configurations.md)
    - [ECID概觀](./features/ecid.md)
 - [實作指南](implementation.md)
 - [身分資料的護欄](guardrails.md)

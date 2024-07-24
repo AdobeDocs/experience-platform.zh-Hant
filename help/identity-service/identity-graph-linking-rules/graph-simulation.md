@@ -3,9 +3,9 @@ title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1436'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->此功能尚未推出；身分圖表連結規則的Beta版計畫預計於7月在開發沙箱上開始。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。
+>身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
 
 [!DNL Graph Simulation]是Identity Service UI中的工具，可用於模擬指定特定身分組合下身分圖表的行為方式，以及設定[身分最佳化演演算法](./identity-optimization-algorithm.md)的方式。
 
@@ -172,6 +172,8 @@ ht-degree: 1%
 
 閱讀本檔案後，您現在已瞭解如何使用[!DNL Graph Simulation]工具，以更清楚瞭解在指定一組特定規則和設定時，身分資料的處理方式。 如需詳細資訊，請閱讀下列檔案：
 
-* [身分圖表連結規則](overview.md)
-* [身分最佳化演演算法](identity-optimization-algorithm.md)
-* [名稱空間優先順序](namespace-priority.md)
+* [身分圖表連結規則](./overview.md)
+* [設定指南](./configuration.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [名稱空間優先順序](./namespace-priority.md)
+* [圖表設定範例](./example-configurations.md)

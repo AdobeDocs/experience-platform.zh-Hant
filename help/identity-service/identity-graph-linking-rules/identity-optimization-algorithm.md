@@ -3,9 +3,9 @@ title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1565'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->此功能尚未推出；身分圖表連結規則的Beta版計畫預計於7月在開發沙箱上開始。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。
+>身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
 
 身分最佳化演演算法是Identity Service上的圖表演演算法，可協助確保身分圖表代表單一人員，因此可防止即時客戶設定檔上不想要的身分合併。
 
@@ -162,6 +162,7 @@ ECID會儲存未驗證（匿名）的事件，而CRM ID會儲存已驗證的事�
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
 * [身分圖表連結規則概觀](./overview.md)
+* [名稱空間優先順序](./namespace-priority.md)
 * [設定身分圖表連結規則的範例案例](./example-scenarios.md)
 * [身分連結邏輯](../features/identity-linking-logic.md)
 * [Identity Service和即時客戶個人檔案](../identity-and-profile.md)
