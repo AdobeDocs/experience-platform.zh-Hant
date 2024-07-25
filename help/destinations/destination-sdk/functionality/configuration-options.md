@@ -2,7 +2,7 @@
 description: Adobe Experience Platform中的目的地服務使用數個元件的設定端點，這些元件會建置目的地功能。 瞭解這些元件如何組合讓Experience Platform可連結到目的地合作夥伴、傳送自訂訊息，並在整個數位生態系統中啟用設定檔資料。
 title: Destination SDK中的設定選項
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -17,7 +17,11 @@ Adobe Experience Platform中的目的地服務使用數個元件的設定端點�
 
 下圖顯示您可以透過Destination SDK設定以建置您自己的目的地的元件概觀。 這些元件將於下文詳細說明。
 
-![顯示Destination SDK元件、組態端點及其支援之作業的圖表。](../assets/functionality/destination-sdk-components-diagram.png)
+>[!BEGINSHADEBOX]
+
+![顯示Destination SDK元件、組態端點及其支援之作業的圖表。](../assets/functionality/destination-sdk-components-diagram.png){zoomable="yes"}
+
+>[!ENDSHADEBOX]
 
 ## 伺服器設定 {#server-configuration}
 

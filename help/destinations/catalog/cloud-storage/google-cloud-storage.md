@@ -3,7 +3,7 @@ title: Google雲端儲存空間連線
 description: 瞭解如何連線至Google Cloud Storage並啟用對象或匯出資料集。
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 2%
@@ -119,15 +119,15 @@ ht-degree: 2%
 
 若要成功連線並匯出資料至您的[!DNL Google Cloud Storage]儲存位置，您需要儲存貯體的下列[!DNL Google Cloud Storage]許可權：
 
-*`orgpolicy.policy.get`
-*`resourcemanager.projects.get`
-*`resourcemanager.projects.list`
-*`storage.managedFolders.create`
-*`storage.multipartUploads.abort`
-*`storage.multipartUploads.create`
-*`storage.multipartUploads.listParts`
-*`storage.objects.create`
-*`storage.objects.list`
+* `orgpolicy.policy.get`
+* `resourcemanager.projects.get`
+* `resourcemanager.projects.list`
+* `storage.managedFolders.create`
+* `storage.multipartUploads.abort`
+* `storage.multipartUploads.create`
+* `storage.multipartUploads.listParts`
+* `storage.objects.create`
+* `storage.objects.list`
 
 深入瞭解[!DNL Google Cloud Storage]中的[存取控制與許可權](https://cloud.google.com/storage/docs/access-control/iam-permissions)。
 

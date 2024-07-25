@@ -2,9 +2,9 @@
 description: 本頁說明如何驗證並開始使用Adobe Experience Platform Destination SDK。 其中包括如何取得Adobe I/O驗證認證、沙箱名稱和目的地編寫存取控制許可權的指示。
 title: Destination SDK快速入門
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
+source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 術語 {#terminology}
 
-本指南使用平台專屬的概念，例如組織和沙箱。 請參閱[Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)，瞭解這些詞語和其他詞語的定義。
+本指南使用平台專屬的概念，例如組織和沙箱。 請參閱[Experience Platform字彙表](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html)，瞭解這些字詞的定義。 請參閱[Destination SDK字彙表](/help/destinations/destination-sdk/glossary.md)，以取得與此功能直接相關的辭彙。
 
 ## 取得必要的驗證認證 {#obtain-authentication-credentials}
 
