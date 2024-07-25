@@ -5,9 +5,9 @@ title: 透過機器學習深入分析豐富即時客戶設定檔
 type: Tutorial
 description: 本檔案提供如何透過機器學習深入解析豐富即時客戶設定檔的指南。
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: afa27069c7490848398c92973dd77810564b5993
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,13 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Data Science Workspace]提供各種工具和資源，用來建立、評估及運用機器學習模型，以產生資料預測和深入分析。 將機器學習深入分析擷取至啟用[!DNL Profile]的資料集時，該相同資料也會擷取為[!DNL Profile]記錄，然後可以使用[!DNL Adobe Experience Platform Segmentation Service]分段。
 
+細分程式取決於對象的評估方法。 如果對象設定為&#x200B;**串流**，它將即時處理模型寫入設定檔的所有新更新。 但是，如果對象設定為&#x200B;**批次**&#x200B;評估，則會在下一個批次中評估新值。
+
 本檔案提供教學課程的連結，可讓您透過機器學習深入分析擴充[!DNL Real-Time Customer Profile]。
 
 ## 快速入門
 
-若要完成下列教學課程，您必須實際瞭解如何擷取[!DNL Profile]資料和建立區段。 在開始本教學課程之前，請先檢閱下列服務的檔案：
+若要完成下列教學課程，您必須實際瞭解如何擷取[!DNL Profile]資料和建立對象。 在開始本教學課程之前，請先檢閱下列服務的檔案：
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md)：根據來自多個來源的彙總資料，提供每個個別客戶的完整、統一表示法。
 - [[!DNL Identity Service]](../../identity-service/home.md)：透過從擷取到Platform的不同資料來源橋接身分來啟用[!DNL Real-Time Customer Profile]。
@@ -41,20 +43,20 @@ Adobe Experience Platform [!DNL Data Science Workspace]提供各種工具和資�
 
 準備好您的結構描述和資料集後，您可以使用適當的模型執行評分回合，產生評分資料並內嵌到資料集中。
 
-## 使用[!DNL Segment Builder]建立區段 {#create-segments-using-the-segment-builder}
+## 使用[!DNL Segment Builder]建立對象 {#create-audiences-using-the-segment-builder}
 
-在您產生評分資料深入分析並內嵌至啟用[!DNL Profile]的資料集後，可以使用[!DNL Segment Builder]建立動態區段。
+在您產生評分資料深入分析並內嵌至啟用[!DNL Profile]的資料集後，即可使用[!DNL Segment Builder]建立動態對象。
 
 [!DNL Segment Builder]提供豐富的工作區，可讓您與[!DNL Profile]資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。 請依照[[!DNL Segment Builder] 使用手冊](../../segmentation/ui/segment-builder.md)瞭解以下資訊：
 
 - 使用屬性、事件和現有對象的組合作為建置區塊來建立區段定義。
-- 使用規則產生器畫布和容器來控制區段規則的執行順序。
+- 使用規則產生器畫布和容器來控制對象規則的執行順序。
 - 檢視潛在對象的預估值，可讓您視需要調整區段定義。
 - 啟用已排程區段的所有區段定義。
 - 為串流細分啟用指定的區段定義。
 
 ## 後續步驟 {#next-steps}
 
-若要深入瞭解區段和[!DNL Segment Builder]，請閱讀[區段服務總覽](../../segmentation/home.md)。
+若要深入瞭解對象和[!DNL Segment Builder]，請閱讀[細分服務總覽](../../segmentation/home.md)。
 
 若要深入瞭解[!DNL Real-Time Customer Profile]，請閱讀[即時客戶個人檔案總覽](../../profile/home.md)
