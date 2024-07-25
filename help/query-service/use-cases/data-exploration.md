@@ -1,9 +1,10 @@
 ---
 title: 探索、疑難排解及驗證SQL的批次擷取
-description: 瞭解如何瞭解及管理Adobe Experience Platform中的資料擷取流程。 本檔案包含如何驗證批次、處理錯誤及查詢所擷取的資料。
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: 瞭解如何瞭解及管理Adobe Experience Platform中的資料擷取流程。 本檔案包含如何驗證批次和查詢擷取的資料。
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 本檔案說明如何使用SQL驗證及驗證所擷取批次中的記錄。 本檔案會教導您：
 
-- 處理擷取過程中可能發生的錯誤
 - 存取資料集批次中繼資料
 - 透過查詢批次進行疑難排解並確保資料完整性
 
@@ -26,7 +26,6 @@ ht-degree: 0%
 
 - **資料擷取**：請參閱[資料擷取總覽](../../ingestion/home.md)，瞭解資料如何擷取到平台的基礎知識，包括所涉及的不同方法和程式。
 - **批次擷取**：請參閱[批次擷取API總覽](../../ingestion/batch-ingestion/overview.md)，瞭解批次擷取的基本概念。 具體來說，什麼是「批次」，以及它在Platform資料擷取流程中的運作方式。
-- **資料擷取中的錯誤處理**：瞭解資料擷取期間可能發生的[不同型別的錯誤](../../ingestion/quality/error-diagnostics.md#retrieve-errors)，以及[如何處理這些錯誤](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails)。
 - **資料集中的系統中繼資料**：請參閱[目錄服務總覽](../../catalog/home.md)，瞭解如何使用系統中繼資料欄位來追蹤和查詢擷取的資料。
 - **Experience Data Model (XDM)**：請參閱[結構描述UI總覽](../../xdm/ui/overview.md)和結構描述組合的基本概念](../../xdm/schema/composition.md)，瞭解XDM結構描述以及它們如何呈現和驗證擷取到Platform的資料結構和格式。[
 
@@ -57,11 +56,7 @@ GROUP BY _acp_system_metadata
 
 這些結果顯示輸入批次的數量並不一定與輸出批次的數量相符，因為系統決定了批次和在Data Lake中儲存資料的最有效方式。
 
-以下範例使用不同的資料集來說明這一點。
-
->[!NOTE]
->
->如果您想嘗試此範例，您可以將提供的範例檔案([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip))擷取到Platform中，並設定結構描述對應。
+在此範例中，假設您已將CSV檔案擷取至Platform，並建立名為`drug_checkout_data`的資料集。
 
 `drug_checkout_data`檔案是包含35,000筆記錄的深度巢狀集合。 使用SQL陳述式`SELECT * FROM drug_orders;`來預覽JSON型`drug_orders`資料集中的第一組記錄。
 
@@ -97,7 +92,7 @@ GROUP  BY _acp_system_metadata
 
 >[!TIP]
 >
->若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Platform。 閱讀如何使用AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案[對應到現有XDM結構描述的指南。 為方便起見，這裡提供[範例設定檔CSV檔案](../images/use-cases/sample-profiles.csv)。
+>若要擷取與該批次ID相關聯的批次ID和查詢記錄，您必須先在Platform中建立批次。 如果您想自行測試此程式，可將CSV資料內嵌至Platform。 閱讀如何使用AI產生的建議](../../ingestion/tutorials/map-csv/recommendations.md)將CSV檔案[對應到現有XDM結構描述的指南。
 
 擷取批次後，您必須針對您擷取資料的資料集，導覽至[!UICONTROL 資料集活動標籤]。
 
