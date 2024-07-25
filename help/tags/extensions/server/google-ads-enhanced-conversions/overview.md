@@ -3,7 +3,7 @@ title: Google Ads增強型轉換延伸功能
 description: 瞭解Adobe Experience Platform中用於事件轉送的Google Ads Enhanced Conversion擴充功能。
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 1%
@@ -103,7 +103,7 @@ ht-degree: 1%
 若要設定擴充功能，您必須填入兩個必填欄位：
 
 1. **[!UICONTROL 客戶識別碼]**：可唯一識別您[!DNL Google Ads]帳戶的識別碼。 若要尋找此值，請登入[!DNL Google Ads]並導覽至&#x200B;**[!DNL Help]** > **[!DNL Customer ID]**。
-1. **[!UICONTROL 存取Token資料元素]**：選取資料元素圖示（![資料元素圖示](../../../images/extensions/server/google-ads-enhanced-conversions/data-element-icon.png)），然後從功能表中選擇您在上一個步驟](#create-secret-data-element)中[設定的Google OAuth 2機密資料元素。
+2. **[!UICONTROL 存取Token資料元素]**：選取資料元素圖示（![資料元素圖示](/help/images/icons/database.png)），然後從功能表中選擇您在上一個步驟](#create-secret-data-element)中[設定的Google OAuth 2機密資料元素。
 
 完成時，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以安裝擴充功能。
 

@@ -3,7 +3,7 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -69,9 +69,9 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![啟用控制項](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制項，將對象或資料集匯出至該目的地。
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![編輯詳細資訊控制項](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
-> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![刪除控制項](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 刪除&#x200B;]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
+> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![啟用控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**/**[!UICONTROL &#x200B;啟用對象&#x200B;]**/**[!UICONTROL &#x200B;匯出資料集&#x200B;]**控制項，將對象或資料集匯出至該目的地。
+> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![編輯詳細資訊控制項](/help/images/icons/edit.png)**[!UICONTROL 編輯詳細資訊&#x200B;]**控制項來[更新](update-accounts.md)現有目的地帳戶的詳細資訊。
+> * 選取[!UICONTROL Platform]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[刪除](delete-destination-account.md)現有的目的地帳戶。
 
 ![帳戶標籤](../assets/ui/workspace/destination-account-options.png)
 
@@ -91,10 +91,10 @@ ht-degree: 0%
 
 >[!TIP]
 >
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![啟用對象控制項](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 啟用&#x200B;]**控制項，將對象或資料集匯出至該目的地。
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![刪除控制項](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 刪除&#x200B;]**控制項來[移除](delete-destinations.md)與目的地的現有連線。
-> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用監視控制項中的![檢視](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL 監視控制項中的檢視&#x200B;]**控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
-> * 選取[!UICONTROL 名稱]資料欄中的省略符號(`...`)，並使用![訂閱警示](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL 訂閱警示&#x200B;]**控制項訂閱目的地資料流警示。 您可以訂閱警報，以接收有關流程執行的狀態、成功或失敗的訊息。 如需有關目的地資料流警示的詳細資訊，請參閱[訂閱內文中目的地警示](alerts.md)。
+> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![啟用對象控制項](/help/images/icons/data-add.png)**[!UICONTROL 啟用&#x200B;]**控制項，將對象或資料集匯出至該目的地。
+> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用![刪除控制項](/help/images/icons/delete.png)**[!UICONTROL 刪除&#x200B;]**控制項來[移除](delete-destinations.md)與目的地的現有連線。
+> * 選取[!UICONTROL 名稱]資料行中的省略符號(`...`)，並使用監視控制項中的![檢視](/help/images/icons/monitoring.png)**[!UICONTROL 監視控制項中的檢視&#x200B;]**控制項中的檢視，在[監視儀表板](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard)中檢視此目的地的啟用資訊。
+> * 選取[!UICONTROL 名稱]資料欄中的省略符號(`...`)，並使用![訂閱警示](/help/images/icons/alert-add.png)**[!UICONTROL 訂閱警示&#x200B;]**控制項訂閱目的地資料流警示。 您可以訂閱警報，以接收有關流程執行的狀態、成功或失敗的訊息。 如需有關目的地資料流警示的詳細資訊，請參閱[訂閱內文中目的地警示](alerts.md)。
 
 ![瀏覽標籤](../assets/ui/workspace/browse-tab.png)
 

@@ -5,7 +5,7 @@ title: 探索UI中的結構描述資源
 description: 瞭解如何在Experience Platform使用者介面中探索現有結構描述、類別、結構描述欄位群組和資料型別。
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ![](../images/ui/explore/tabs.png)
 
-篩選圖示（![篩選圖示影像](../images/ui/explore/icon.png)）在左側邊欄中顯示控制項，以縮小列出的結果。 顯示的控制項會因所列的資源型別而異。
+篩選圖示（![篩選圖示影像](/help/images/icons/filter.png)）在左側邊欄中顯示控制項，以縮小列出的結果。 顯示的控制項會因所列的資源型別而異。
 
 例如，若要篩選清單以僅顯示Adobe提供的標準資料型別，請分別在&#x200B;**[!UICONTROL 型別]**&#x200B;和&#x200B;**[!UICONTROL 所有者]**&#x200B;區段下選取&#x200B;**[!UICONTROL 資料型別]**&#x200B;和&#x200B;**[!UICONTROL Adobe]**。
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 
 ### 標準類別和欄位群組指標 {#standard-class-and-field-group-indicator}
 
-在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](../images/ui/explore/padlock-icon.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 
 ![結構描述編輯器反白顯示掛鎖圖示](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 檢查包含身分欄位的結構描述時，這些欄位會列在左側邊欄中，位於類別或欄位群組（提供這些欄位給結構描述）下方。 在左側邊欄中選取身分欄位名稱，以顯示畫布中的欄位，無論其巢狀深度為何。
 
-畫布中的身分欄位會以指紋圖示（![指紋圖示影像](../images/ui/explore/identity-symbol.png)）強調顯示。 如果您選取身分欄位名稱，則可以檢視其他資訊，例如[身分名稱空間](../../identity-service/features/namespaces.md)，以及該欄位是否為結構描述的主要身分。
+畫布中的身分欄位會以指紋圖示（![指紋圖示影像](/help/images/icons/identity-service.png)）強調顯示。 如果您選取身分欄位名稱，則可以檢視其他資訊，例如[身分名稱空間](../../identity-service/features/namespaces.md)，以及該欄位是否為結構描述的主要身分。
 
 ![](../images/ui/explore/identity-field.png)
 

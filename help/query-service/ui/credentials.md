@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1807'
 ht-degree: 2%
@@ -36,7 +36,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 - **[!UICONTROL 連線埠]**：要連線之主機的連線埠號碼。
 - **[!UICONTROL 資料庫]**：要連線使用者端的資料庫名稱。
 - **[!UICONTROL 使用者名稱]**：用來連線到查詢服務的使用者名稱。
-- **[!UICONTROL 密碼]**：用來連線到查詢服務的密碼。 UI中的密碼已進行雜湊處理，以提高安全性。 選取復製圖示(![復製圖示。](../images/ui/credentials/copy-icon.png))，將您完整的未雜湊認證複製到剪貼簿。
+- **[!UICONTROL 密碼]**：用來連線到查詢服務的密碼。 UI中的密碼已進行雜湊處理，以提高安全性。 選取復製圖示(![復製圖示。](/help/images/icons/copy.png))，將您完整的未雜湊認證複製到剪貼簿。
 - **[!UICONTROL PSQL命令]**：自動插入所有相關資訊的命令，供您在命令列上使用PSQL連線到查詢服務。
 - **[!UICONTROL 到期]**：到期認證的到期日期和時間。 權杖的預設有效期間為24小時，但可在Admin Console的進階設定中變更。
 
@@ -126,7 +126,7 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 ![反白顯示[未到期認證]區段的[查詢儀表板認證]索引標籤。](../images/ui/credentials/list-credentials.png)
 
-您可以編輯或刪除不會到期的認證。 若要編輯不會到期的認證，請選取鉛筆圖示(![鉛筆圖示。](../images/ui/credentials/edit-icon.png))。 若要刪除不會到期的認證，請選取刪除圖示（![垃圾桶圖示。](../images/ui/credentials/delete-icon.png)）。
+您可以編輯或刪除不會到期的認證。 若要編輯不會到期的認證，請選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))。 若要刪除不會到期的認證，請選取刪除圖示（![垃圾桶圖示。](/help/images/icons/delete.png)）。
 
 編輯不會到期的認證時，強制回應視窗會出現。 您可以提供下列詳細資料以進行更新：
 

@@ -3,7 +3,7 @@ description: 瞭解如何在Adobe Experience Platform UI中使用範本，以加
 title: 使用 UI 中的範本建立來源資料流
 badge1: "Beta"
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 10%
@@ -174,7 +174,7 @@ Adobe Experience Platform提供預先設定的範本，可用來加速資料擷�
 
 +++
 
-根據您選取的企業型別，會出現範本清單。 選取範本名稱旁的預覽圖示![預覽圖示](../../images/tutorials/templates/preview-icon.png)，以預覽範本中的範例資料。
+根據您選取的企業型別，會出現範本清單。 選取範本名稱旁的預覽圖示![預覽圖示](/help/images/icons/preview.png)，以預覽範本中的範例資料。
 
 ![反白顯示預覽圖示的範本清單。](../../images/tutorials/templates/templates.png)
 

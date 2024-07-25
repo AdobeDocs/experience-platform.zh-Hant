@@ -2,7 +2,7 @@
 title: 資料收集的資料準備
 description: 了解設定 Adob​​e Experience Platform Web 和 Mobile SDK 的資料流時如何將資料對應到體驗資料模型 (XDM) 事件綱要。
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ ht-degree: 60%
 
 ![正在新增對應。](assets/data-prep/add-new-mapping.png)
 
-選取來源圖示 (![來源圖示](assets/data-prep/source-icon.png))，然後在顯示的對話框中選取要在所提供的畫布中對應的來源欄位。選擇欄位後，請使用「**[!UICONTROL 選取]**」按鈕以繼續進行。
+選取來源圖示 (![來源圖示](/help/images/icons/source.png))，然後在顯示的對話框中選取要在所提供的畫布中對應的來源欄位。選擇欄位後，請使用「**[!UICONTROL 選取]**」按鈕以繼續進行。
 
 ![正在來源結構描述中選取要對應的欄位。](assets/data-prep/source-mapping.png)
 
-接下來，選取綱要圖示 (![綱要圖示](assets/data-prep/schema-icon.png))，開啟目標事件綱要的類似對話框。選擇要將資料對應到的欄位，然後再確認「**[!UICONTROL 選取]**」。
+接下來，選取綱要圖示 (![綱要圖示](/help/images/icons/schema.png))，開啟目標事件綱要的類似對話框。選擇要將資料對應到的欄位，然後再確認「**[!UICONTROL 選取]**」。
 
 ![選取要在目標結構描述中對應的欄位。](assets/data-prep/target-mapping.png)
 

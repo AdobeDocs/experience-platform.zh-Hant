@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 3%
@@ -161,11 +161,11 @@ ht-degree: 3%
 
 >[!TIP]
 >
->您也可以直接從「行動資料集」對話方塊建立資料夾。 若要建立資料夾，請選取建立資料夾圖示(![建立資料夾圖示。](../images/datasets/user-guide/create-folder-icon.png))。
+>您也可以直接從「行動資料集」對話方塊建立資料夾。 若要建立資料夾，請選取建立資料夾圖示(![建立資料夾圖示。](/help/images/icons/folder-add.png))。
 >
 >![反白顯示建立資料夾圖示的[!UICONTROL 移動]資料集對話方塊。](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-資料集放入資料夾後，您可以選擇僅顯示屬於特定資料夾的資料集。 若要開啟您的資料夾結構，請選取顯示資料夾圖示（![顯示資料夾圖示](../images/datasets/user-guide/show-folders-icon.png)）。 接著，選取您選擇的資料夾以檢視所有關聯的資料集。
+資料集放入資料夾後，您可以選擇僅顯示屬於特定資料夾的資料集。 若要開啟您的資料夾結構，請選取顯示資料夾圖示（![顯示資料夾圖示](/help/images/icons/rail-left.png)）。 接著，選取您選擇的資料夾以檢視所有關聯的資料集。
 
 ![資料集資料夾結構已顯示的[!UICONTROL 資料集]儀表板、顯示資料夾圖示，以及反白顯示的選取資料夾。](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ ht-degree: 3%
 
 ## 搜尋和篩選資料集 {#search-and-filter}
 
-若要搜尋或篩選可用資料集清單，請選取篩選圖示(![篩選圖示。](../images/datasets/user-guide/icon.png))。 左側邊欄中會顯示一組篩選器選項。 有幾種方法可篩選您的可用資料集。 這些包括： [[!UICONTROL 顯示系統資料集]](#show-system-datasets)、[[!UICONTROL 包含在設定檔中]](#filter-profile-enabled-datasets)、[[!UICONTROL 標籤]](#filter-by-tag)、[[!UICONTROL 建立日期]](#filter-by-creation-date)、[[!UICONTROL 修改日期]、[!UICONTROL 建立者]](#filter-by-creation-date)以及[[!UICONTROL 結構描述]](#filter-by-schema)。
+若要搜尋或篩選可用資料集清單，請選取篩選圖示(![篩選圖示。](/help/images/icons/filter.png))。 左側邊欄中會顯示一組篩選器選項。 有幾種方法可篩選您的可用資料集。 這些包括： [[!UICONTROL 顯示系統資料集]](#show-system-datasets)、[[!UICONTROL 包含在設定檔中]](#filter-profile-enabled-datasets)、[[!UICONTROL 標籤]](#filter-by-tag)、[[!UICONTROL 建立日期]](#filter-by-creation-date)、[[!UICONTROL 修改日期]、[!UICONTROL 建立者]](#filter-by-creation-date)以及[[!UICONTROL 結構描述]](#filter-by-schema)。
 
 套用的篩選器清單會顯示在篩選結果上方。
 

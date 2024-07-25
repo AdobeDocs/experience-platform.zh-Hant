@@ -4,7 +4,7 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 7%
@@ -101,7 +101,7 @@ ht-degree: 7%
 
 ![授權使用儀表板的詳細資訊標籤。](../images/license-usage/details-tab.png)
 
-您可以從此檢視中選取![檢查圖示。沙箱名稱旁的](../images/license-usage/inspect-icon.png)可檢視該量度的視覺效果。 隨即開啟對話方塊，其中包含該量度的視覺效果。
+您可以從此檢視中選取![檢查圖示。沙箱名稱旁的](/help/images/icons/inspect.png)可檢視該量度的視覺效果。 隨即開啟對話方塊，其中包含該量度的視覺效果。
 
 ### 視覺效果 {#visualizations}
 

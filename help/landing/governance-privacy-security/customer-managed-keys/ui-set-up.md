@@ -2,7 +2,7 @@
 title: 使用平台UI設定及設定客戶自控金鑰
 description: 瞭解如何使用您的Azure租使用者設定您的CMK應用程式，並將您的加密金鑰ID傳送至Adobe Experience Platform。
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1090'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 若要開始註冊程式，請從[!UICONTROL 客戶自控金鑰組態]檢視複製您組織的應用程式驗證URL，並將其貼到您的[!DNL Azure]環境&#x200B;**[!DNL Key Vault Crypto Service Encryption User]**&#x200B;中。 下一節提供如何[指派角色](#assign-to-role)的詳細資訊。
 
-選取復製圖示(![復製圖示。](../../images/governance-privacy-security/customer-managed-keys/copy-icon.png))，由[!UICONTROL 應用程式驗證URL]。
+選取復製圖示(![復製圖示。](/help/images/icons/copy.png))，由[!UICONTROL 應用程式驗證URL]。
 
 ![反白顯示[應用程式驗證URL]區段的[!UICONTROL 客戶受管理的金鑰組態]檢視。](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 

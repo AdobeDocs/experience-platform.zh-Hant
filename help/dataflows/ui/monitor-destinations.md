@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 10%
@@ -178,7 +178,7 @@ ht-degree: 10%
 >title="啟用"
 >abstract="目標啟用視圖包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。"
 
-若要存取[!UICONTROL 監視]儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]** （![監檢視示](../assets/ui/monitor-destinations/monitoring-icon.png)）。 在[!UICONTROL 監視]頁面上，選取[!UICONTROL 目的地]。 [!UICONTROL 監視]儀表板包含目的地執行工作的度量和資訊。
+若要存取[!UICONTROL 監視]儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]** （![監檢視示](/help/images/icons/monitoring.png)）。 在[!UICONTROL 監視]頁面上，選取[!UICONTROL 目的地]。 [!UICONTROL 監視]儀表板包含目的地執行工作的度量和資訊。
 
 使用[!UICONTROL Destinations]儀表板來取得您啟動流程整體狀況的資訊。 首先，您可以針對所有批次和串流目的地取得彙總層級的深入分析，然後深入研究資料流、資料流執行和已啟動對象的詳細檢視，以深入瞭解您的啟動資料。 [!UICONTROL 監視]儀表板中的畫面會透過量度和錯誤說明提供可操作的深入分析，以協助您疑難排解啟用情況下可能發生的任何問題。
 
@@ -199,7 +199,7 @@ ht-degree: 10%
 
 ![變更已啟用的目的地反白顯示的回顧日期範圍控制項](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-使用箭頭圖示（![箭頭圖示](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)）來展開或關閉熒幕頂端的卡片，這些卡片會根據目的地型別（串流或批次）顯示啟動詳細資訊的簡單資訊：
+使用箭頭圖示（![箭頭圖示](/help/images/icons/chevron-up.png)）來展開或關閉熒幕頂端的卡片，這些卡片會根據目的地型別（串流或批次）顯示啟動詳細資訊的簡單資訊：
 
 - **[!UICONTROL 串流啟用率]**：代表已順利啟用或略過的接收身分百分比。 用於計算此百分比的公式已在此頁面的[資料流執行於串流目的地](#dataflow-runs-for-streaming-destinations)區段中進一步說明。
 - **[!UICONTROL 批次失敗的資料流執行]**：代表在選取的時間間隔內失敗的資料流執行次數。
@@ -226,13 +226,13 @@ ht-degree: 10%
 
 ![使用下拉式選擇器篩選目的地](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-此外，您可以在搜尋列中輸入目的地，以隔離至單一目的地。 如果您想要檢視目的地的資料流，可以選取該目的地旁邊的篩選器![篩選器](../assets/ui/monitor-destinations/filter-add.png)，以檢視其作用中資料流的清單。
+此外，您可以在搜尋列中輸入目的地，以隔離至單一目的地。 如果您想要檢視目的地的資料流，可以選取該目的地旁邊的篩選器![篩選器](/help/images/icons/filter-add.png)，以檢視其作用中資料流的清單。
 
 ![使用監視檢視中反白顯示的搜尋列來篩選目的地。](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 如果您想要檢視所有目的地的所有現有資料流，請選取&#x200B;**[!UICONTROL 資料流]**。
 
-系統隨即顯示資料流清單，依上次資料流執行排序。 您可以尋找要監視的目的地，選取資料流旁邊的篩選器![篩選器](../assets/ui/monitor-destinations/filter-add.png)，接著選取資料流旁邊的篩選器![篩選器](../assets/ui/monitor-destinations/filter-add.png)，以檢視特定資料流的其他詳細資料。
+系統隨即顯示資料流清單，依上次資料流執行排序。 您可以尋找要監視的目的地，選取資料流旁邊的篩選器![篩選器](/help/images/icons/filter-add.png)，接著選取資料流旁邊的篩選器![篩選器](/help/images/icons/filter-add.png)，以檢視特定資料流的其他詳細資料。
 
 ![監視儀表板中反白顯示的所有資料流。](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ ht-degree: 10%
 ![資料流面板中反白顯示的對象。](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 在對象層級檢視中，這些量度會在所選時間範圍內跨多個資料流執行進行彙總。 如果有多個資料流執行，您可以從對象層級向下展開，以檢視每個資料流執行的劃分（依選取的對象篩選）。
-使用篩選按鈕![篩選器](../assets/ui/monitor-destinations/filter-add.png)，針對資料流中的每個對象，向下展開資料流執行檢視。
+使用篩選按鈕![篩選器](/help/images/icons/filter-add.png)，針對資料流中的每個對象，向下展開資料流執行檢視。
 
 ### 資料流執行頁面 {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ ht-degree: 10%
 
 ![顯示如何篩選對象資料流執行的選項按鈕。](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-若要檢視特定資料流執行的詳細資訊，請選取資料流執行開始時間旁的篩選器![篩選器](../assets/ui/monitor-destinations/filter-add.png)，以檢視資料流執行詳細資訊頁面。
+若要檢視特定資料流執行的詳細資訊，請選取資料流執行開始時間旁的篩選器![篩選器](/help/images/icons/filter-add.png)，以檢視資料流執行詳細資訊頁面。
 
 ![資料流在監視儀表板中執行篩選，以深入瞭解特定資料流執行的更多資訊。](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

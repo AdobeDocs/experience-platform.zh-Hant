@@ -2,7 +2,7 @@
 title: 瀏覽資料生命週期工單
 description: 瞭解如何在Adobe Experience Platform使用者介面中檢視及管理現有資料生命週期工單。
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 27%
@@ -31,7 +31,7 @@ ht-degree: 27%
 
 ![影像顯示[!UICONTROL 資料集]標籤](../images/ui/browse/dataset-tab.png)
 
-選取漏斗圖示（![漏斗圖示的影像](../images/ui/browse/funnel-icon.png)）以檢視所顯示工單的篩選清單。
+選取漏斗圖示（![漏斗圖示的影像](/help/images/icons/filter.png)）以檢視所顯示工單的篩選清單。
 
 ![已顯示工單篩選器的影像](../images/ui/browse/filters.png)
 

@@ -4,7 +4,7 @@ title: 受眾控制面板
 description: Adobe Experience Platform提供一個控制面板，您可以透過它檢視有關您組織已建立之對象的重要資訊。
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3132'
 ht-degree: 9%
@@ -235,7 +235,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 ![檢視更醒目提示的對象重疊報表Widget。](../images/audiences/audience-overlap-report.png)
 
-[!UICONTROL 對象重疊報表]對話方塊就會顯示。 此對話方塊最多可包含50列對象重疊分析，並分為6欄。 選取設定圖示(![設定圖示。](../images/audiences/settings-icon.png))以移除或新增資料表中的資料行。
+[!UICONTROL 對象重疊報表]對話方塊就會顯示。 此對話方塊最多可包含50列對象重疊分析，並分為6欄。 選取設定圖示(![設定圖示。](/help/images/icons/settings.png))以移除或新增資料表中的資料行。
 
 ![對象重疊報表對話方塊。](../images/audiences/audience-overlap-report-dialog.png)
 

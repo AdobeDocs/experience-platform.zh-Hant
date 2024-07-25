@@ -2,7 +2,7 @@
 title: Adobe隱私權擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe隱私權標籤擴充功能。
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 2%
@@ -95,7 +95,7 @@ Adobe隱私權標籤擴充功能可讓您收集使用者端裝置上Adobe解決�
 
 ![選取動作型別](../../../images/extensions/client/privacy/action-type.png)
 
-右側面板會提示您選取要當作動作回呼的資料元素。 選取資料庫圖示（![資料庫圖示](../../../images/extensions/client/privacy/database.png)），然後從清單中選擇您先前建立的資料元素。 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以繼續。
+右側面板會提示您選取要當作動作回呼的資料元素。 選取資料庫圖示（![資料庫圖示](/help/images/icons/database.png)），然後從清單中選擇您先前建立的資料元素。 選取&#x200B;**[!UICONTROL 保留變更]**&#x200B;以繼續。
 
 ![選取資料元素](../../../images/extensions/client/privacy/add-data-element.png)
 

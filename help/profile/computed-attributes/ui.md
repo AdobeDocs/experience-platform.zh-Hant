@@ -2,7 +2,7 @@
 title: 計算屬性UI指南
 description: 瞭解如何使用Adobe Experience Platform UI建立、檢視和更新計算屬性。
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 6%
@@ -32,7 +32,7 @@ ht-degree: 6%
 
 ![ [!UICONTROL 設定檔]區段和[!UICONTROL 計算屬性]標籤會反白顯示，顯示使用者如何存取計算屬性瀏覽頁面。](./images/ui/browse.png)
 
-若要選取顯示哪些欄位，您可以選取![設定欄圖示](./images/ui/configure-icon.png)來新增或移除您要顯示的欄位。
+若要選取顯示哪些欄位，您可以選取![設定欄圖示](/help/images/icons/column-settings.png)來新增或移除您要顯示的欄位。
 
 | 欄位 | 說明 |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ ht-degree: 6%
 | [!UICONTROL 已建立] | 顯示計算屬性建立日期與時間的時間戳記。 |
 | [!UICONTROL 上次修改時間] | 顯示上次修改運算屬性的日期與時間的時間戳記。 |
 
-您也可以根據生命週期狀態來篩選顯示的計算屬性。 選取![漏斗](./images/ui/filter-icon.png)圖示。
+您也可以根據生命週期狀態來篩選顯示的計算屬性。 選取![漏斗](/help/images/icons/filter.png)圖示。
 
 ![篩選圖示已反白顯示。](./images/ui/select-filter.png)
 

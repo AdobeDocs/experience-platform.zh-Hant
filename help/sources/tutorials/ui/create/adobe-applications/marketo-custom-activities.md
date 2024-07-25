@@ -2,7 +2,7 @@
 title: 在UI中建立自訂活動資料的Source連線和資料流Marketo Engage
 description: 本教學課程提供在UI中建立Marketo Engage來源連線和資料流的步驟，以便將自訂活動資料引進Adobe Experience Platform。
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -127,7 +127,7 @@ ht-degree: 0%
 
 ![來源資料結構。](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-若要新增目標欄位，請選取結構描述圖示![結構描述圖示](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png)，然後從目標結構描述中選取自訂活動欄位。
+若要新增目標欄位，請選取結構描述圖示![結構描述圖示](/help/images/icons/schema.png)，然後從目標結構描述中選取自訂活動欄位。
 
 ![目標結構描述結構。](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

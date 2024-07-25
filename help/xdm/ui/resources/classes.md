@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 5%
@@ -74,7 +74,7 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 ![使用搜尋列[!UICONTROL 自訂]和[!UICONTROL 產業]反白顯示[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/classes/filter-and-search.png)
 
-為了協助您決定適當的類別，有資訊(![資訊圖示。](../../images/ui/resources/classes/info.png))和預覽(![預覽圖示。每個類別的](../../images/ui/resources/classes/preview.png)個圖示。 資訊圖示會開啟對話方塊，提供類別及其關聯產業的說明。 預覽圖示會開啟包含結構描述圖表及其屬性的類別的預覽對話方塊。
+為了協助您決定適當的類別，有資訊(![資訊圖示。](/help/images/icons/info.png))和預覽(![預覽圖示。每個類別的](/help/images/icons/preview.png)個圖示。 資訊圖示會開啟對話方塊，提供類別及其關聯產業的說明。 預覽圖示會開啟包含結構描述圖表及其屬性的類別的預覽對話方塊。
 
 ![選取類別的預覽，其中結構描述圖表和類別屬性已反白顯示。](../../images/ui/resources/classes/class-preview.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience PlatformUI總覽
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 1%
@@ -75,17 +75,17 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 ### 切換應用程式
 
-頂端導覽列右側的下一個專案是&#x200B;**應用程式切換器**，由![應用程式切換器](./images/user-guide/app-switcher-icon.png)圖示表示。 選取此圖示時，您可以在組織有權存取的Adobe應用程式(例如Experience Platform、Analytics、Assets等)之間切換。
+頂端導覽列右側的下一個專案是&#x200B;**應用程式切換器**，由![應用程式切換器](/help/images/icons/apps.png)圖示表示。 選取此圖示時，您可以在組織有權存取的Adobe應用程式(例如Experience Platform、Analytics、Assets等)之間切換。
 
 ### 說明
 
-應用程式切換器右側是&#x200B;**說明與支援功能表**，以![問號/說明](./images/user-guide/help-icon.png)圖示表示。 當您選取此圖示時，會顯示一個彈出選單，其中包含數個說明和支援資源。 **[!UICONTROL 說明]**&#x200B;索引標籤會顯示您目前所在頁面的相關檔案清單。 **[!UICONTROL 支援]**&#x200B;索引標籤可讓您與Adobe支援團隊建立支援票證。 **[!UICONTROL 意見反應]**&#x200B;標籤可讓您提交有關平台的意見反應給Adobe。
+應用程式切換器右側是&#x200B;**說明與支援功能表**，以![問號/說明](/help/images/icons/help.png)圖示表示。 當您選取此圖示時，會顯示一個彈出選單，其中包含數個說明和支援資源。 **[!UICONTROL 說明]**&#x200B;索引標籤會顯示您目前所在頁面的相關檔案清單。 **[!UICONTROL 支援]**&#x200B;索引標籤可讓您與Adobe支援團隊建立支援票證。 **[!UICONTROL 意見反應]**&#x200B;標籤可讓您提交有關平台的意見反應給Adobe。
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### 通知和公告
 
-在&#x200B;**通知區段**&#x200B;中，以![鈴鐺/通知和公告](images/user-guide/notification-icon.png)圖示表示。 **[!UICONTROL 通知]**&#x200B;索引標籤顯示產品的重要資訊以及其他相關更新，而&#x200B;**[!UICONTROL 公告]**&#x200B;索引標籤顯示服務維護的相關資訊。
+在&#x200B;**通知區段**&#x200B;中，以![鈴鐺/通知和公告](/help/images/icons/bell.png)圖示表示。 **[!UICONTROL 通知]**&#x200B;索引標籤顯示產品的重要資訊以及其他相關更新，而&#x200B;**[!UICONTROL 公告]**&#x200B;索引標籤顯示服務維護的相關資訊。
 
 ### 使用者設定檔
 

@@ -4,7 +4,7 @@ title: 在UI中匯出XDM結構描述
 description: 瞭解如何在Adobe Experience Platform使用者介面中將現有結構描述匯出至其他沙箱或組織。
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 11%
@@ -40,7 +40,7 @@ ht-degree: 11%
 >
 >請參閱[探索XDM資源](./explore.md)的指南，以取得有關如何尋找您所尋找XDM資源的詳細資訊。
 
-接著，從可用選項中選取&#x200B;**[!UICONTROL 複製JSON]**&#x200B;圖示（![復製圖示](../images/ui/export/icon.png)）。
+接著，從可用選項中選取&#x200B;**[!UICONTROL 複製JSON]**&#x200B;圖示（![復製圖示](/help/images/icons/copy.png)）。
 
 ![包含結構描述列和[!UICONTROL 複製到JSON]的結構描述工作區已反白顯示。](../images/ui/export/copy-json.png)
 

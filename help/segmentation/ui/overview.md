@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 1%
@@ -69,7 +69,7 @@ ht-degree: 1%
 | 管理存取權 | 管理屬於對象的存取標籤。 如需存取標籤的詳細資訊，請閱讀[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 |
 | 刪除 | 刪除選取的對象。 不能刪除下游目的地中使用的對象或是其他對象&#x200B;**中的相依對象**。 如需有關刪除對象的詳細資訊，請參閱[區段常見問題集](../faq.md#lifecycle-states)。 |
 
-您可以選取![自訂表格](../images/ui/overview/customize-table.png)圖示來變更顯示的欄位。
+您可以選取![自訂表格](/help/images/icons/column-settings.png)圖示來變更顯示的欄位。
 
 ![自訂表格按鈕會反白顯示。 選取此按鈕可讓您自訂對象組合頁面上顯示的欄位。](../images/ui/overview/compositions-select-customize-table.png)
 

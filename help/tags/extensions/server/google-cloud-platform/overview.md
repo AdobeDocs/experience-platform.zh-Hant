@@ -3,7 +3,7 @@ title: Google Cloud Platform事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能會將Edge Network事件傳送至Google Cloud Platform。
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c5da1889-f917-42aa-b3a4-9557c31d6ee8
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 1%
@@ -47,8 +47,8 @@ ht-degree: 1%
 | 輸入 | 說明 |
 | --- | --- |
 | [!UICONTROL 主題] | 將從事件轉送接收事件的主題。 值的格式必須為`projects/{projectName}/topics/{topicName}`。 |
-| [!UICONTROL 資料] | 此欄位包含要以JSON格式轉送至[!DNL Cloud Pub/Sub]主題的資料。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
-| [!UICONTROL 屬性] | 此欄位包含JSON物件，以及要連同訊息一起傳送的額外屬性。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
+| [!UICONTROL 資料] | 此欄位包含要以JSON格式轉送至[!DNL Cloud Pub/Sub]主題的資料。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](/help/images/icons/database.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
+| [!UICONTROL 屬性] | 此欄位包含JSON物件，以及要連同訊息一起傳送的額外屬性。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](/help/images/icons/database.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
 
 {style="table-layout:auto"}
 

@@ -3,7 +3,7 @@ title: AWS擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的AWS擴充功能。
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -66,7 +66,7 @@ ht-degree: 0%
 
 | 輸入 | 說明 |
 | --- | --- |
-| [!UICONTROL 承載] | 此欄位包含將轉送至[!DNL Kinesis]資料流的資料，採用JSON格式。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png)）來從現有資料元素清單中選取以代表裝載。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
+| [!UICONTROL 承載] | 此欄位包含將轉送至[!DNL Kinesis]資料流的資料，採用JSON格式。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](/help/images/icons/database.png)）來從現有資料元素清單中選取以代表裝載。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 |
 
 {style="table-layout:auto"}
 

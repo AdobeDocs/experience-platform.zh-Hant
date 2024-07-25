@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 刪除UI中的資料流
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 **[!UICONTROL 資料流]**&#x200B;頁面隨即顯示。 此頁面是可檢視資料流的清單，包括有關其目標資料集、來源、帳戶名稱和建立日期的資訊。
 
-選取左上方的篩選圖示（![篩選圖示](../../images/tutorials/delete/filter.png)）以啟動排序面板。
+選取左上方的篩選圖示（![篩選圖示](/help/images/icons/filter.png)）以啟動排序面板。
 
 ![資料流](../../images/tutorials/delete/dataflows.png)
 

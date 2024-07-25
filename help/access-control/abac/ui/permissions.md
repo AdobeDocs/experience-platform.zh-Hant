@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；存取控制；屬性型
 title: 以屬性為基礎的存取控制管理角色許可權
 description: 本檔案提供透過Adobe Experience Cloud中的許可權介面設定角色許可權的相關資訊
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
 
 ## 篩選角色
 
-選取漏斗圖示（![篩選圖示](../../images/icon.png)）以顯示篩選控制項清單，以協助縮小結果範圍。
+選取漏斗圖示（![篩選圖示](/help/images/icons/filter.png)）以顯示篩選控制項清單，以協助縮小結果範圍。
 
 ![flac-filters](../../images/flac-ui/flac-filters.png)
 

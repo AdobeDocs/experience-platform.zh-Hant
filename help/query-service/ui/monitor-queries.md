@@ -2,7 +2,7 @@
 title: 監視排定的查詢
 description: 瞭解如何透過查詢服務UI監視查詢。
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 >[!NOTE]
 >
->警示訂閱圖示(![警示訂閱圖示。](../images/ui/monitor-queries/alert-subscription-icon.png))包含在無標題欄的每一列中。 如需詳細資訊，請參閱[警示訂閱](#alert-subscription)區段。
+>警示訂閱圖示(![警示訂閱圖示。](/help/images/icons/alert-add.png))包含在無標題欄的每一列中。 如需詳細資訊，請參閱[警示訂閱](#alert-subscription)區段。
 
 | 欄 | 說明 |
 |---|---|
@@ -45,7 +45,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ## 自訂排程查詢的表格設定 {#customize-table}
 
-您可以根據自己的需求調整[!UICONTROL 排程查詢]索引標籤上的資料行。 若要開啟[!UICONTROL 自訂表格]設定對話方塊並編輯可用的欄，請選取設定圖示（![A設定圖示）。](../images/ui/monitor-queries/settings-icon.png))。
+您可以根據自己的需求調整[!UICONTROL 排程查詢]索引標籤上的資料行。 若要開啟[!UICONTROL 自訂表格]設定對話方塊並編輯可用的欄，請選取設定圖示（![A設定圖示）。](/help/images/icons/column-settings.png))。
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ### 訂閱警報 {#alert-subscription}
 
-若要訂閱排程查詢執行的警示，請選取`...` （省略符號）或警示訂閱圖示(![警示訂閱圖示。](../images/ui/monitor-queries/alert-subscription-icon.png))管理排定的查詢。 內嵌動作下拉式功能表隨即顯示。 接著，從可用選項中選取&#x200B;**[!UICONTROL 訂閱]**。
+若要訂閱排程查詢執行的警示，請選取`...` （省略符號）或警示訂閱圖示(![警示訂閱圖示。](/help/images/icons/alert-add.png))管理排定的查詢。 內嵌動作下拉式功能表隨即顯示。 接著，從可用選項中選取&#x200B;**[!UICONTROL 訂閱]**。
 
 ![排程查詢工作區有省略符號、警示訂閱圖示，且反白顯示內嵌動作下拉式功能表。](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ### 檢視查詢詳細資料 {#query-details}
 
-選取資訊圖示(![資訊圖示。](../images/ui/monitor-queries/information-icon.png))，以檢視查詢的詳細資料面板。 詳細資訊面板包含查詢的所有相關資訊，超出已排程查詢表格中所包含的事實範圍。 其他資訊包括查詢ID、上次修改日期、查詢的SQL、排程ID和目前設定的排程。
+選取資訊圖示(![資訊圖示。](/help/images/icons/info.png))，以檢視查詢的詳細資料面板。 詳細資訊面板包含查詢的所有相關資訊，超出已排程查詢表格中所包含的事實範圍。 其他資訊包括查詢ID、上次修改日期、查詢的SQL、排程ID和目前設定的排程。
 
 ![含有資訊圖示和詳細資訊面板的[排程查詢]索引標籤醒目提示。](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Adobe Experience Platform透過UI改善所有查詢作業的狀態可見性。 �
 
 ## 篩選查詢 {#filter}
 
-您可以根據執行頻率來篩選查詢。 從[!UICONTROL 排程查詢]索引標籤中，選取篩選圖示（![篩選圖示](../images/ui/monitor-queries/filter-icon.png)）以開啟篩選側欄。
+您可以根據執行頻率來篩選查詢。 從[!UICONTROL 排程查詢]索引標籤中，選取篩選圖示（![篩選圖示](/help/images/icons/filter.png)）以開啟篩選側欄。
 
 ![已排程的查詢索引標籤中反白顯示篩選圖示。](../images/ui/monitor-queries/filter-queries.png)
 

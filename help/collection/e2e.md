@@ -2,7 +2,7 @@
 title: 資料收集端對端總覽
 description: 有關如何使用Adobe Experience Platform的資料收集功能將事件資料傳送至Adobe Experience Cloud解決方案的高層級概觀。
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 0%
@@ -228,7 +228,7 @@ SDK的設定頁面隨即顯示。 大部分必要值都會自動填入預設值�
 
 ![動作型別](./images/e2e/action-type.png)
 
-畫面會更新，以顯示其他選項來設定傳送事件動作。 在&#x200B;**[!UICONTROL 型別]**&#x200B;底下，您可以提供自訂型別值來填入`eventType` XDM欄位。 在&#x200B;**[!UICONTROL XDM資料]**&#x200B;下，提供您先前建立的XDM資料型別的名稱（以百分比符號包圍），或選取資料庫圖示（![資料庫圖示](./images/e2e/database-symbol.png)）以從清單中選取它。 這是最終將傳送至Edge Network的資料。
+畫面會更新，以顯示其他選項來設定傳送事件動作。 在&#x200B;**[!UICONTROL 型別]**&#x200B;底下，您可以提供自訂型別值來填入`eventType` XDM欄位。 在&#x200B;**[!UICONTROL XDM資料]**&#x200B;下，提供您先前建立的XDM資料型別的名稱（以百分比符號包圍），或選取資料庫圖示（![資料庫圖示](/help/images/icons/database.png)）以從清單中選取它。 這是最終將傳送至Edge Network的資料。
 
 完成時選取&#x200B;**[!UICONTROL 保留變更]**。
 

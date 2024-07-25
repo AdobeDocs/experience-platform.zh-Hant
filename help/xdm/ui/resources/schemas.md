@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3736'
 ht-degree: 2%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->對於任何列出的欄位群組，您可以暫留或聚焦在資訊圖示(![](../../images/ui/resources/schemas/info-icon.png))上，以檢視欄位群組擷取的資料型別的簡短說明。 您也可以選取預覽圖示(![](../../images/ui/resources/schemas/preview-icon.png))來檢視欄位群組提供的欄位結構，然後再決定將其新增至結構描述。
+>對於任何列出的欄位群組，您可以暫留或聚焦在資訊圖示（![資訊圖示](/help/images/icons/info.png)）上，以檢視欄位群組擷取的資料型別的簡短說明。 您也可以選取預覽圖示（![預覽圖示](/help/images/icons/preview.png)）來檢視欄位群組提供的欄位結構，然後再決定將其新增至結構描述。
 
 選擇欄位群組後，選取&#x200B;**[!UICONTROL 新增欄位群組]**&#x200B;以將其新增到結構描述。
 
@@ -129,7 +129,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](../../images/ui/explore/padlock-icon.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+>在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 >
 >![結構描述編輯器反白顯示掛鎖圖示](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -189,7 +189,7 @@ ht-degree: 2%
 
 雖然有些標準欄位會共用相同的名稱，但其結構可能會依其來源欄位群組而有所不同。 如果標準欄位巢狀內嵌在欄位群組結構的父物件中，則新增子欄位時，父欄位也會包含在結構描述中。
 
-選取標準欄位旁的預覽圖示（![預覽圖示](../../images/ui/resources/schemas/preview-icon.png)）以檢視其欄位群組的結構，並更瞭解其巢狀化方式。 若要將標準欄位新增至結構描述，請選取加號圖示（![加號圖示](../../images/ui/resources/schemas/add-icon.png)）。
+選取標準欄位旁的預覽圖示（![預覽圖示](/help/images/icons/preview.png)）以檢視其欄位群組的結構，並更瞭解其巢狀化方式。 若要將標準欄位新增至結構描述，請選取加號圖示（![加號圖示](/help/images/icons/add-circle.png)）。
 
 ![新增標準欄位](../../images/ui/resources/schemas/add-standard-field.png)
 

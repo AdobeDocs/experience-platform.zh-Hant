@@ -5,7 +5,7 @@ feature: Customer AI
 title: 設定Customer AI執行個體
 description: AI/ML服務提供Customer AI作為簡單易用的Adobe Sensei服務，可針對不同使用案例進行設定。 以下小節提供設定Customer AI執行個體的步驟。
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2827'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Customer AI在設計上會使用Adobe Analytics、Adobe Audience Manager、一�
 
 ![選取資料集](../images/user-guide/select-datasets.png)
 
-選取資料集旁的資訊圖示![資訊圖示](../images/user-guide/info-icon.png)會開啟資料集預覽彈出視窗。
+選取資料集旁的資訊圖示![資訊圖示](/help/images/icons/info.png)會開啟資料集預覽彈出視窗。
 
 ![選取並搜尋資料集](../images/user-guide/dataset-info.png)
 

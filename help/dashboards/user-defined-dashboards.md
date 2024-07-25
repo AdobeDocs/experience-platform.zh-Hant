@@ -2,7 +2,7 @@
 title: 自訂儀表板
 description: 瞭解如何建立及管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，將關鍵量度視覺化。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -30,7 +30,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 <!-- >[!NOTE]
 >
->To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
 >![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 [!UICONTROL 建立儀表板]對話方塊就會顯示。 輸入您想要建立之Widget集合的人性化描述性名稱，並選取&#x200B;**[!UICONTROL 儲存]**。
@@ -68,7 +68,7 @@ Widget Composer工作區隨即顯示。 接著，選取&#x200B;**[!UICONTROL 選
 
 >[!TIP]
 >
->選取資訊圖示(![資訊圖示。](./images/user-defined-dashboards/info-icon.png))，以在資料邊欄中顯示太長時檢視完整的資料模型名稱。
+>選取資訊圖示(![資訊圖示。](/help/images/icons/info.png))，以在資料邊欄中顯示太長時檢視完整的資料模型名稱。
 
 ![選取資料對話方塊。](./images/user-defined-dashboards/select-data-model-dialog.png)
 
@@ -94,17 +94,17 @@ Widget Composer工作區隨即顯示。 接著，選取&#x200B;**[!UICONTROL 選
 
 Widget撰寫器現在會填入您所選表格的資料。
 
-資料模型和目前選取的表格會顯示在左側邊欄的頂端，而可用於建立您的Widget的屬性會列在[!UICONTROL 屬性]欄中。 您可以使用搜尋列來尋找屬性，而不是捲動清單，或選取鉛筆圖示（![鉛筆圖示）來變更選取的資料模型。](./images/user-defined-dashboards/edit-icon.png))。
+資料模型和目前選取的表格會顯示在左側邊欄的頂端，而可用於建立您的Widget的屬性會列在[!UICONTROL 屬性]欄中。 您可以使用搜尋列來尋找屬性，而不是捲動清單，或選取鉛筆圖示（![鉛筆圖示）來變更選取的資料模型。](/help/images/icons/edit.png))。
 
 ![在Widget撰寫器中填入資料的Widget。](./images/user-defined-dashboards/populated-widget-composer.png)
 
 #### 新增和篩選屬性 {#add-and-filter-attributes}
 
-選取新增圖示(![新增圖示。](./images/user-defined-dashboards/add-icon.png))，新增屬性至您的Widget。 出現的下拉式選單可讓您為Widget將屬性新增為X軸、Y軸、顏色或濾鏡。 [!UICONTROL Color]屬性可讓您根據顏色區分X軸和Y軸標籤的結果。 它根據第三個屬性的組成將結果分割成不同的顏色，以達成此目的。
+選取新增圖示(![新增圖示。](/help/images/icons/add-circle.png))，新增屬性至您的Widget。 出現的下拉式選單可讓您為Widget將屬性新增為X軸、Y軸、顏色或濾鏡。 [!UICONTROL Color]屬性可讓您根據顏色區分X軸和Y軸標籤的結果。 它根據第三個屬性的組成將結果分割成不同的顏色，以達成此目的。
 
 >[!TIP]
 >
->如果要翻轉X軸和Y軸的排列，請選取向上和向下箭頭圖示(![向上和向下箭頭圖示。](./images/user-defined-dashboards/switch-axis-icon.png))以切換其排列方式。
+>如果要翻轉X軸和Y軸的排列，請選取向上和向下箭頭圖示(![向上和向下箭頭圖示。](/help/images/icons/switch.png))以切換其排列方式。
 
 ![含有add-icon下拉式清單的Widget Composer已反白顯示。](./images/user-defined-dashboards/attributes-dropdown.png)
 
@@ -132,7 +132,7 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 ### Widget 屬性
 
-選取屬性圖示(![屬性圖示。](./images/user-defined-dashboards/properties-icon.png))以開啟屬性面板。 在[!UICONTROL 屬性]面板的[!UICONTROL Widget標題]文字欄位中，輸入Widget的名稱。
+選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))以開啟屬性面板。 在[!UICONTROL 屬性]面板的[!UICONTROL Widget標題]文字欄位中，輸入Widget的名稱。
 
 ![屬性面板中會顯示屬性圖示，且Widget標題欄位會反白顯示。](./images/user-defined-dashboards/properties-panel.png)
 
@@ -146,7 +146,7 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 >[!TIP]
 >
->選取屬性圖示(![屬性圖示。](./images/user-defined-dashboards/properties-icon.png))，檢視其建立的詳細資訊。 您可以在出現的對話方塊中變更圖示板的名稱。
+>選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))，檢視其建立的詳細資訊。 您可以在出現的對話方塊中變更圖示板的名稱。
 
 在此工作區中，Widget可以重新排列和調整大小。 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以保留您的儀表板名稱和已設定的配置。
 
@@ -162,7 +162,7 @@ Widget撰寫器現在會填入您所選表格的資料。
 >
 >若要在任何現有的自訂控制面板之間切換，請選取左側導覽列中的控制面板，然後從詳細目錄清單中選取控制面板名稱。
 
-選取鉛筆圖示(![鉛筆圖示。](./images/user-defined-dashboards/edit-icon.png))以進入編輯模式。
+選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))以進入編輯模式。
 
 ![反白顯示鉛筆圖示的自訂儀表板。](./images/user-defined-dashboards/edit-mode.png)
 

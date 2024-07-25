@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務UI指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 1%
@@ -81,7 +81,7 @@ Adobe Experience Platform [!DNL Query Service]提供使用者介面，可用來�
 
 >
 >
->選取鉛筆圖示(![鉛筆圖示。](../images/ui/overview/edit-icon.png))從查詢記錄檔的任一列導覽至[!DNL Query Editor]。 已預先填入查詢，以方便編輯。
+>選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))從查詢記錄檔的任一列導覽至[!DNL Query Editor]。 已預先填入查詢，以方便編輯。
 
 請參閱[查詢記錄檔案](./query-logs.md)，以取得關於查詢事件自動產生的記錄檔的詳細資訊。
 

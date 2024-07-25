@@ -2,7 +2,7 @@
 title: 稽核記錄概觀
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 36%
@@ -94,7 +94,7 @@ ht-degree: 36%
 >由於這是一項新功能，因此顯示的資料僅追溯至2022年3月。 視選取的資源而定，2022年1月起可能會提供舊版資料。
 
 
-選取漏斗圖示（![篩選圖示](../../images/audit-logs/icon.png)）以顯示篩選控制項清單，以協助縮小結果範圍。 僅顯示最後1000筆記錄，無論選擇的各種篩選器為何。
+選取漏斗圖示（![篩選圖示](/help/images/icons/filter.png)）以顯示篩選控制項清單，以協助縮小結果範圍。 僅顯示最後1000筆記錄，無論選擇的各種篩選器為何。
 
 ![已反白篩選活動記錄檔的[稽核]儀表板。](../../images/audit-logs/filters.png)
 

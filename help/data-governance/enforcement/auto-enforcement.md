@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 自動原則執行
 description: 本文介紹在Experience Platform中將對象啟用到目的地時，如何自動執行資料使用原則。
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 0%
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 ![反白顯示資料歷程圖表的原則違規對話方塊。](../images/enforcement/data-lineage.png)
 
-您也可以使用&#x200B;**[!UICONTROL 篩選器]**&#x200B;圖示(![篩選器圖示。](../images/enforcement/filter.png))，依類別篩選顯示的實體。 必須選取至少兩個類別才能顯示資料。
+您也可以使用&#x200B;**[!UICONTROL 篩選器]**&#x200B;圖示(![篩選器圖示。](/help/images/icons/filter.png))，依類別篩選顯示的實體。 必須選取至少兩個類別才能顯示資料。
 
 ![資料歷程篩選和下拉式功能表反白的原則違規對話方塊。](../images/enforcement/lineage-filter.png)
 

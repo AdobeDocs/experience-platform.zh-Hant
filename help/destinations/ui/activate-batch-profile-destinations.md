@@ -3,7 +3,7 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 11%
@@ -529,14 +529,14 @@ additional-url="https://experienceleague.adobe.com/docs/experience-platform/dest
 
 請依照下列步驟，為每個外部對象選取擴充屬性：
 
-1. 在&#x200B;**[!UICONTROL 擴充屬性]**&#x200B;欄中，選取![編輯按鈕](../assets/ui/activate-batch-profile-destinations/edit-button.svg) （編輯）按鈕。
-2. 選取&#x200B;**[!UICONTROL 新增擴充屬性]**。 隨即顯示新的空白結構描述欄位。
+1. 在&#x200B;**[!UICONTROL 擴充屬性]**&#x200B;欄中，選取![編輯按鈕](/help/images/icons/edit.png) （編輯）按鈕。
+1. 選取&#x200B;**[!UICONTROL 新增擴充屬性]**。 隨即顯示新的空白結構描述欄位。
    ![顯示擴充屬性模型畫面的UI影像。](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. 選取空白欄位右側的按鈕，以開啟欄位選取畫面。
-4. 選取您要為對象匯出的屬性。
+1. 選取空白欄位右側的按鈕，以開啟欄位選取畫面。
+1. 選取您要為對象匯出的屬性。
    ![顯示擴充屬性清單的UI影像。](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. 新增所有要匯出的屬性之後，請選取&#x200B;**[!UICONTROL 儲存並關閉]**。
-6. 對每個外部對象重複這些步驟。
+1. 新增所有要匯出的屬性之後，請選取&#x200B;**[!UICONTROL 儲存並關閉]**。
+1. 對每個外部對象重複這些步驟。
 
 如果您想要在不匯出任何屬性的情況下對目的地啟用外部對象，請啟用&#x200B;**[!UICONTROL 排除擴充屬性]**&#x200B;切換按鈕。 此選項會從外部對象匯出設定檔，但其對應的屬性不會傳送至您的目的地。
 

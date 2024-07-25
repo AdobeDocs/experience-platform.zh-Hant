@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中建立和編輯結構描述欄位群組
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯結構描述欄位群組。
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 8%
@@ -56,7 +56,7 @@ Adobe Experience Platform提供許多標準欄位群組，涵蓋廣泛的行銷�
 
 >[!NOTE]
 >
->只有貴組織定義的自訂欄位群組才能完全編輯和自訂。 對於由Adobe定義的核心欄位群組，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 它們在「結構描述編輯器」中以掛鎖圖示(![掛鎖圖示表示。](../../images/ui/explore/padlock-icon.png))。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
+>只有貴組織定義的自訂欄位群組才能完全編輯和自訂。 對於由Adobe定義的核心欄位群組，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 它們在「結構描述編輯器」中以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png))。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
 >
 >儲存自訂欄位群組並在結構描述中使用以進行資料擷取後，之後只能對欄位群組進行附加變更。 如需詳細資訊，請參閱結構描述演化](../../schema/composition.md#evolution)的[規則。
 

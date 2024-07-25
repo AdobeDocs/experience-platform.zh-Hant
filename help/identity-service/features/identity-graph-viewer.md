@@ -2,7 +2,7 @@
 title: 身分圖表檢視器
 description: 身分圖表是特定客戶不同身分之間關係的對應，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Platform使用者介面中的身分圖表檢視器可讓您視覺化並更瞭解
 
 >[!TIP]
 >
->選取表格圖示![表格圖示](../images/identity-graph-viewer/table-icon.png)，即可檢視包含貴組織中所有可用身分識別名稱空間清單的面板。 只要您有有效的身分值連線至身分名稱空間，就可以使用任何身分名稱空間。 如需詳細資訊，請閱讀[身分名稱空間指南](./namespaces.md)。
+>選取表格圖示![表格圖示](/help/images/icons/table.png)，即可檢視包含貴組織中所有可用身分識別名稱空間清單的面板。 只要您有有效的身分值連線至身分名稱空間，就可以使用任何身分名稱空間。 如需詳細資訊，請閱讀[身分名稱空間指南](./namespaces.md)。
 
 ![身分圖表查閱畫面中提供的身分名稱空間及其對應值。](../images/graph-viewer/namespace-and-value.png)
 

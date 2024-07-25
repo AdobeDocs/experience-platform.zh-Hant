@@ -1,13 +1,13 @@
 ---
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 3%
 
 ---
-
 
 # Audience Portal概述
 
@@ -90,7 +90,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ### 自訂 {#customize}
 
-您可以選取![篩選屬性圖示](../images/ui/audience-portal/filter-attribute.png)，將其他欄位新增至對象入口網站。 這些額外的欄位包含生命週期狀態、更新頻率、上次更新者、說明、建立者和存取標籤。
+您可以選取![篩選屬性圖示](/help/images/icons/column-settings.png)，將其他欄位新增至對象入口網站。 這些額外的欄位包含生命週期狀態、更新頻率、上次更新者、說明、建立者和存取標籤。
 
 | 欄位 | 說明 |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | [!UICONTROL 現有] | 自上次批次區段作業執行以來，在過去24小時內區段中仍有&#x200B;**保留**&#x200B;的設定檔計數。 |
 | [!UICONTROL 正在結束] | 自上次批次區段作業執行以來，在過去24小時內已&#x200B;**退出**&#x200B;區段的設定檔計數。 |
 
-選取要顯示的欄位後，您也可以重新調整顯示欄的寬度。 您可以拖曳資料行之間的區域，或選取要重新調整大小之資料行的![箭頭圖示](../images/ui/audience-portal/arrow-icon.png)，接著選取&#x200B;**[!UICONTROL 調整資料行大小]**&#x200B;來執行此動作。
+選取要顯示的欄位後，您也可以重新調整顯示欄的寬度。 您可以拖曳資料行之間的區域，或選取要重新調整大小之資料行的![箭頭圖示](/help/images/icons/chevron-down.png)，接著選取&#x200B;**[!UICONTROL 調整資料行大小]**&#x200B;來執行此動作。
 
 ![[調整資料行大小]按鈕已反白顯示。](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 您也可以根據各種設定來篩選對象。
 
-若要篩選可用的對象，請選取![篩選圖示](../images/ui/audience-portal/filter-icon.png)。
+若要篩選可用的對象，請選取![篩選圖示](/help/images/icons/filter.png)。
 
 ![顯示瀏覽對象頁面，並反白顯示篩選圖示。](../images/ui/audience-portal/browse-select-filter.png)
 

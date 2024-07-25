@@ -3,7 +3,7 @@ title: 潛在客戶對象
 description: 瞭解如何使用協力廠商資訊建立和使用潛在客戶受眾，以鎖定未知的客戶。
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Adobe Experience Platform可讓您為[潛在客戶設定檔](../../profile/ui/pr
 
 此檢視會列出對象的相關資訊，包括名稱、設定檔計數、來源、生命週期狀態、建立日期、上次更新日期和劃分。
 
-您可以選取![篩選屬性圖示](../images/ui/prospect-audience/filter-attribute.png)，新增其他欄位至此顯示。 這些額外的欄位包含更新頻率和上次更新者。
+您可以選取![篩選屬性圖示](/help/images/icons/column-settings.png)，新增其他欄位至此顯示。 這些額外的欄位包含更新頻率和上次更新者。
 
 瀏覽頁面的詳細資訊，包括所列欄位的詳細資訊，可在[對象入口網站概觀](./audience-portal.md#list)中找到。
 
@@ -42,7 +42,7 @@ Adobe Experience Platform可讓您為[潛在客戶設定檔](../../profile/ui/pr
 
 如需對象詳細資訊頁面的詳細資訊，請參閱對象入口網站概觀](./audience-portal.md#audience-details)的[對象詳細資訊區段。
 
-## 建立對象 {#create}
+## 建立客群 {#create}
 
 若要建立潛在客戶對象，請在[!UICONTROL 瀏覽]頁面上選取&#x200B;**[!UICONTROL 建立對象]**。
 

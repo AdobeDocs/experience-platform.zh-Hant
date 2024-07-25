@@ -3,7 +3,7 @@ title: Linkedin轉換API事件轉送擴充功能
 description: 此Adobe Experience Platform事件轉送擴充功能可讓您測量Linkedin行銷活動的效能。
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 1%
@@ -52,7 +52,7 @@ ht-degree: 1%
 | --- | --- |
 | [!UICONTROL 電子郵件] | 與轉換事件相關之連絡人的電子郵件地址。 除非提供的值已經是SHA256字串，否則電子郵件值將會以SHA256中的擴充功能代碼編碼。 |
 | [!UICONTROL LinkedIn第一方廣告追蹤UUID] | 這是第一方Cookie ID。 廣告商需要啟用來自[[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag)的增強型轉換追蹤，才能啟用將點選ID引數`li_fat_id`附加至點選URL的第一方Cookie。 |
-| [!UICONTROL 客戶資訊資料] | 此欄位包含具有額外屬性的JSON物件，將隨訊息一併傳送。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](../../../images/extensions/server/aws/data-element-icon.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 接受的機碼值為： `firstName`、`lastName`、`companyName`、`title`和`country`。 |
+| [!UICONTROL 客戶資訊資料] | 此欄位包含具有額外屬性的JSON物件，將隨訊息一併傳送。<br><br>在&#x200B;**[!UICONTROL 原始]**&#x200B;選項下，您可以將JSON物件直接貼上到提供的文字欄位中，或者您可以選取資料元素圖示（![資料集圖示](/help/images/icons/database.png)），從現有資料元素清單中選取以代表資料。<br><br>您也可以使用&#x200B;**[!UICONTROL JSON索引鍵/值組編輯器]**&#x200B;選項，透過UI編輯器手動新增每個索引鍵/值組。 每個值都可表示為原始輸入，或是可改為選取資料元素。 接受的機碼值為： `firstName`、`lastName`、`companyName`、`title`和`country`。 |
 
 {style="table-layout:auto"}
 

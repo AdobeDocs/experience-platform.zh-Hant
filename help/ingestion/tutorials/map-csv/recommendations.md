@@ -2,7 +2,7 @@
 title: 使用AI產生的Recommendations將CSV檔案對應到XDM結構描述
 description: 本教學課程涵蓋如何使用AI產生的建議將CSV檔案對應到XDM結構描述。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 1%
@@ -74,7 +74,7 @@ ML模型會根據您的資料流設定和您上傳的CSV檔案來執行，以產
 
 >[!NOTE]
 >
->在來源與目標欄位對應工作流程期間，您可以根據各種條件篩選結構描述中的所有欄位。 預設行為是顯示所有對應的欄位。 若要變更顯示的欄位，請選取搜尋輸入欄位旁的篩選圖示，然後從下拉式清單選項中選擇。<br> ![CSV至XDM結構描述建立工作流程的對映階段，篩選器圖示和下拉式功能表會醒目提示。](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "CSV至XDM結構描述建立工作流程的對應階段，篩選器圖示和下拉式功能表會醒目提示。"){width="100" zoomable="yes"}
+>在來源與目標欄位對應工作流程期間，您可以根據各種條件篩選結構描述中的所有欄位。 預設行為是顯示所有對應的欄位。 若要變更顯示的欄位，請選取搜尋輸入欄位旁的篩選圖示，然後從下拉式清單選項中選擇。<br> ![CSV至XDM結構描述建立工作流程的對映階段，篩選器圖示和下拉式功能表會醒目提示。](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "CSV至XDM結構描述建立工作流程的對映階段，其中篩選圖示和下拉式功能表已反白顯示。"){width="100" zoomable="yes"}
 
 從這裡，您可以視需要[編輯欄位對應](#edit-mappings)或[變更它們關聯的欄位群組](#edit-schema)。 滿意後，選取&#x200B;**[!UICONTROL 完成]**&#x200B;以完成對應，並起始您先前設定的資料流。 CSV資料會內嵌至系統中，並根據產生的結構描述結構填入資料集，以備下游平台服務使用。
 
@@ -90,7 +90,7 @@ CSV欄位會使用ML模型自動對應到現有XDM欄位群組。 如果您想�
 
 ![正在選取結構描述樹狀結構旁的[!UICONTROL Edit]按鈕。](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-會出現一個對話方塊，讓您編輯對應中任何欄位的顯示名稱、資料型別和欄位群組。 選取來源欄位旁的編輯圖示（![編輯圖示](../../images/tutorials/map-csv-recommendations/edit-icon.png)），在選取&#x200B;**[!UICONTROL 套用]**&#x200B;之前，編輯其右欄中的詳細資料。
+會出現一個對話方塊，讓您編輯對應中任何欄位的顯示名稱、資料型別和欄位群組。 選取來源欄位旁的編輯圖示（![編輯圖示](/help/images/icons/edit.png)），在選取&#x200B;**[!UICONTROL 套用]**&#x200B;之前，編輯其右欄中的詳細資料。
 
 ![正在變更之來源欄位的建議欄位群組。](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

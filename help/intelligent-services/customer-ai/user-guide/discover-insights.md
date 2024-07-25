@@ -5,7 +5,7 @@ feature: Customer AI
 title: 利用Customer AI探索深入分析
 description: 本檔案可用作在Intelligent Services Customer AI使用者介面中與服務執行個體深入分析互動的指南。
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 1%
@@ -180,7 +180,7 @@ Customer AI是Intelligent Services的一部分，它讓行銷人員能夠運用A
 
 ![儲存貯體範例](../images/insights/churn_tab.png)
 
-您可以篩選顯示之預期和實際速率的時間範圍。 選取&#x200B;**行事曆圖示** ![圖示](../images/insights/calendar_icon.png)然後選取新的日期範圍。 每個值區中的結果都會更新，以顯示於新的日期範圍內。
+您可以篩選顯示之預期和實際速率的時間範圍。 選取&#x200B;**行事曆圖示** ![圖示](/help/images/icons/calendar.png)然後選取新的日期範圍。 每個值區中的結果都會更新，以顯示於新的日期範圍內。
 
 ![日期選擇器](../images/insights/date_selector.png)
 

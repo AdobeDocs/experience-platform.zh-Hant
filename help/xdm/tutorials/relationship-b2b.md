@@ -2,7 +2,7 @@
 title: 在Real-time Customer Data Platform B2B版本中定義兩個結構描述之間的關係
 description: 瞭解如何在Adobe Real-time Customer Data Platform B2B Edition中定義兩個結構描述之間的多對一關係。
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 15%
@@ -97,7 +97,7 @@ Adobe Real-time Customer Data Platform B2B Edition提供數個Experience Data Mo
 >
 >目前，從來源結構描述到參考結構描述只能定義多對一和一對一關係。 對於一對多關係，您必須在代表「許多」的結構描述中定義關係欄位。
 
-若要設定關聯欄位，請選取畫布中相關欄位旁的箭頭圖示（![箭頭圖示](../images/tutorials/relationship-b2b/arrow.png)）。 在[!DNL Opportunities]結構描述的情況下，這是`accountKey.sourceKey`欄位，因為目標是與帳戶建立多對一關係。
+若要設定關聯欄位，請選取畫布中相關欄位旁的箭頭圖示（![箭頭圖示](/help/images/icons/alias.png)）。 在[!DNL Opportunities]結構描述的情況下，這是`accountKey.sourceKey`欄位，因為目標是與帳戶建立多對一關係。
 
 ![關聯按鈕](../images/tutorials/relationship-b2b/relationship-button.png)
 

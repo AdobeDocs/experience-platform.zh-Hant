@@ -2,7 +2,7 @@
 title: 建立日期篩選
 description: 瞭解如何依日期篩選您的自訂深入分析。
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '662'
 ht-degree: 0%
@@ -94,6 +94,6 @@ LIMIT  0;
 
 ## 刪除日期篩選 {#delete-date-filter}
 
-若要移除您的日期篩選，請選取刪除篩選圖示（![刪除篩選圖示。](../../../images/customizable-insights/delete-filter-icon.png)）。
+若要移除您的日期篩選，請選取刪除篩選圖示（![刪除篩選圖示。](/help/images/icons/filter-delete.png)）。
 
 ![反白顯示篩選刪除圖示的自訂儀表板。](../../../images/customizable-insights/delete-date-filter.png)

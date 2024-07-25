@@ -3,7 +3,7 @@ keywords: 目的地；目的地；目的地詳細資料頁面；目的地詳細�
 title: 檢視目的地詳細資料
 description: 個別目的地的「詳細資訊」頁面提供目的地詳細資訊的概觀。 目的地詳細資訊包括目的地名稱、ID、對應至目的地的對象以及編輯啟用、啟用及停用資料流程的控制項。
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
@@ -28,19 +28,19 @@ ht-degree: 0%
 
    ![瀏覽目的地](../assets/ui/details-page/browse-destinations.png)
 
-1. 選取左上方的篩選圖示![篩選圖示](../assets/ui/details-page/filter.png)以啟動排序面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
+2. 選取左上方的篩選圖示![篩選圖示](/help/images/icons/filter.png)以啟動排序面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
 
    ![篩選目的地](../assets/ui/details-page/filter-destinations.png)
 
-1. 選取您想要顯示詳細資訊之目的地的列。 這會顯示右側邊欄，其中包含有關目的地的資訊，包括目的地ID、建立目的地連線的使用者以及其他資訊。
+3. 選取您想要顯示詳細資訊之目的地的列。 這會顯示右側邊欄，其中包含有關目的地的資訊，包括目的地ID、建立目的地連線的使用者以及其他資訊。
 
    ![目的地識別碼位於右側邊欄](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. 或者，您可以選取要檢視的目的地&#x200B;*的*&#x200B;名稱，以顯示其他目的地的相關資訊。
+4. 或者，您可以選取要檢視的目的地&#x200B;*的*&#x200B;名稱，以顯示其他目的地的相關資訊。
 
    ![選取目的地](../assets/ui/details-page/destination-select.png)
 
-1. 目的地的詳細資訊頁面會顯示在右側邊欄中，顯示其可用的控制項。
+5. 目的地的詳細資訊頁面會顯示在右側邊欄中，顯示其可用的控制項。
 
    ![目的地詳細資料](../assets/ui/details-page/destination-details.png)
 

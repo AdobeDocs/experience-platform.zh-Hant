@@ -4,7 +4,7 @@ description: 即時客戶設定檔可讓您透過合併來自多個管道（包�
 title: 在UI中監視設定檔的資料流
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 7%
@@ -63,7 +63,7 @@ ht-degree: 7%
 | **[!UICONTROL 設定檔片段總數]** | 寫入[!DNL Profile]的記錄總數，包括所有已更新的現有[!DNL Profile]片段以及已建立的新[!DNL Profile]片段。 |
 | **[!UICONTROL 失敗的資料流總數]** | 失敗的資料流執行次數。 |
 
-您可以選取來源名稱旁的篩選圖示![篩選圖示](../assets/ui/monitor-profiles/filter.png)，以檢視該所選來源資料流程的設定檔處理資訊。
+您可以選取來源名稱旁的篩選圖示![篩選圖示](/help/images/icons/filter.png)，以檢視該所選來源資料流程的設定檔處理資訊。
 
 ![篩選圖示會醒目提示。 選取此圖示可讓您檢視所選來源的資料流。](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -86,7 +86,7 @@ ht-degree: 7%
 | **[!UICONTROL 失敗的資料流執行總數]** | 失敗的資料流執行次數。 |
 | **[!UICONTROL 上次使用中]** | 上次執行資料流的時間戳記。 |
 
-選取資料流執行開始時間旁的篩選圖示![篩選](../assets/ui/monitor-profiles/filter.png)，檢視有關您的[!DNL Profile]資料流執行的詳細資訊。
+選取資料流執行開始時間旁的篩選圖示![篩選](/help/images/icons/filter.png)，檢視有關您的[!DNL Profile]資料流執行的詳細資訊。
 
 ![篩選圖示會醒目提示。 選取此圖示可讓您檢視所選資料流的詳細資訊。](../assets/ui/monitor-profiles/dataflows-filter.png)
 

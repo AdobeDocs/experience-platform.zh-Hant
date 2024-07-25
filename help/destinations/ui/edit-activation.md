@@ -4,7 +4,7 @@ title: 編輯啟動資料流
 type: Tutorial
 description: 請依照本文的步驟，在Adobe Experience Platform中編輯現有的啟用資料流。
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
    ![瀏覽目的地](../assets/ui/edit-activation/browse-destinations.png)
 
-2. 選取左上方的篩選圖示![篩選圖示](../assets/ui/edit-activation/filter.png)以啟動排序面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
+2. 選取左上方的篩選圖示![篩選圖示](/help/images/icons/filter.png)以啟動排序面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
 
    ![篩選目的地](../assets/ui/edit-activation/filter-destinations.png)
 

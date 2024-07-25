@@ -2,7 +2,7 @@
 title: 檢視分析SQL
 description: 檢視您的設定檔、對象、目的地和自訂深入分析背後的SQL，並透過查詢編輯器依需求執行查詢。
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您可以選取復製圖示（![復製圖示），將整個SQL陳述式複製到剪貼簿。](./images/view-sql/copy-icon.png))。
+>您可以選取復製圖示（![復製圖示），將整個SQL陳述式複製到剪貼簿。](/help/images/icons/copy.png))。
 
 ![反白顯示SQL陳述式的深入分析對話方塊。](./images/view-sql/sql-dialog.png)
 

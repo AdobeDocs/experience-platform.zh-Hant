@@ -2,7 +2,7 @@
 title: 結構描述編輯器中的欄位式工作流程
 description: 瞭解如何將現有欄位群組中的欄位個別新增至您的Experience Data Model (XDM)結構描述。
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Adobe Experience Platform提供一組強大的標準化[欄位群組](../schema/
 
 雖然有些標準欄位會共用相同的名稱，但其結構可能會依其來源欄位群組而有所不同。 如果標準欄位巢狀內嵌在欄位群組結構的父物件中，則新增子欄位時，父欄位也會包含在結構描述中。
 
-選取標準欄位旁的預覽圖示（![預覽圖示](../images/ui/field-based-workflows/preview-icon.png)）以檢視其欄位群組的結構，並更瞭解其巢狀化方式。 若要將標準欄位新增至結構描述，請選取加號圖示（![加號圖示](../images/ui/field-based-workflows/add-icon.png)）。
+選取標準欄位旁的預覽圖示（![預覽圖示](/help/images/icons/preview.png)）以檢視其欄位群組的結構，並更瞭解其巢狀化方式。 若要將標準欄位新增至結構描述，請選取加號圖示（![加號圖示](/help/images/icons/add-circle.png)）。
 
 ![新增圖示在建議標準欄位的專案上反白顯示。](../images/ui/field-based-workflows/add-standard-field.png)
 

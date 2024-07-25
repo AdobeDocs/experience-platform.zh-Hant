@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中管理資料使用標籤
 description: 本指南說明在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 17%
@@ -71,7 +71,7 @@ ht-degree: 17%
 
 ![已反白顯示[!UICONTROL 資料集]工作區的[!UICONTROL 資料控管]標籤。](../images/labels/dataset-governance.png)
 
-若要編輯資料集層級的資料使用標籤，請先選取鉛筆圖示(![鉛筆圖示。](../images/labels/edit-icon.png))的資料集名稱。
+若要編輯資料集層級的資料使用標籤，請先選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))的資料集名稱。
 
 ![ [!UICONTROL 資料集]工作區的[!UICONTROL 資料控管]索引標籤，其編輯鉛筆圖示已反白顯示。](../images/labels/dataset-level-edit.png)
 

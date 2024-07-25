@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 0%
@@ -57,7 +57,7 @@ ht-degree: 0%
 >
 >您可以在編寫查詢時[!UICONTROL 停用語法自動完成]，而不會失去進度。
 
-若要啟用深色或淺色主題，請選取設定圖示(![A設定圖示。](../images/ui/query-editor/settings-icon.png))，接著出現的下拉式功能表中的選項。
+若要啟用深色或淺色主題，請選取設定圖示(![A設定圖示。](/help/images/icons/settings.png))，接著出現的下拉式功能表中的選項。
 
 ![設定圖示和啟用深色主題下拉式功能表選項的查詢編輯器已反白顯示。](../images/ui/query-editor/query-editor-settings.png)
 

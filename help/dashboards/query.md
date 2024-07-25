@@ -4,7 +4,7 @@ title: 使用查詢服務來探索、驗證及處理控制面板資料集
 type: Documentation
 description: 瞭解如何使用查詢服務來探索及處理原始資料集，以便在Experience Platform中強化設定檔、受眾和目的地儀表板。
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe Experience Platform [!DNL Query Service]可讓行銷人員使用標準SQL�
 >
 >預設會隱藏系統產生的資料集。 依預設，[!UICONTROL 瀏覽]索引標籤只會顯示您已擷取資料的資料集。
 
-若要檢視系統產生的資料集，請選取篩選圖示(![篩選圖示。](./images/query/filter.png))位於搜尋列左側。
+若要檢視系統產生的資料集，請選取篩選圖示(![篩選圖示。](/help/images/icons/filter.png))位於搜尋列左側。
 
 ![資料集瀏覽索引標籤中反白顯示篩選圖示。](./images/query/filter-datasets.png)
 

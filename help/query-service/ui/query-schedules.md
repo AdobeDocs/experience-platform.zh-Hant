@@ -2,7 +2,7 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
@@ -75,7 +75,7 @@ ht-degree: 0%
 
 ![包含資料集詳細資料的「排程」詳細資料面板，以及反白顯示的[!UICONTROL 建立及附加至新資料集]選項。](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-或者，也可以選取&#x200B;**[!UICONTROL 附加至現有資料集]**，後面接著資料集圖示（![資料集圖示。](../images/ui/query-schedules/dataset-icon.png)）。
+或者，也可以選取&#x200B;**[!UICONTROL 附加至現有資料集]**，後面接著資料集圖示（![資料集圖示。](/help/images/icons/database.png)）。
 
 ![排程詳細資料面板包含醒目提示的資料集詳細資料以及附加至現有資料集的資訊。](../images/ui/query-schedules/dataset-details-existing.png)
 

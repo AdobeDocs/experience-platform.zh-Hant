@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 更新UI中的Source連線資料流
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 9%
@@ -36,7 +36,7 @@ ht-degree: 9%
 
 [!UICONTROL 資料流]頁面包含所有現有資料流的清單，包括關於其對應目標資料集、來源和帳戶名稱的資訊。
 
-若要排序清單，請選取左上方的篩選圖示![篩選](../../images/tutorials/update/filter.png)以使用排序面板。
+若要排序清單，請選取左上方的篩選圖示![篩選](/help/images/icons/filter.png)以使用排序面板。
 
 ![篩選資料流程](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

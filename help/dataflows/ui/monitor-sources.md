@@ -2,7 +2,7 @@
 description: 瞭解如何使用監視儀表板來監視從來源擷取的資料。
 title: 在UI中監視來源的資料流
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 11%
@@ -83,13 +83,13 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 {style="table-layout:auto"}
 
-若要監視在特定資料流中擷取的資料，請選取來源旁的篩選圖示![篩選](../assets/ui/monitor-sources/filter.png)。
+若要監視在特定資料流中擷取的資料，請選取來源旁的篩選圖示![篩選](/help/images/icons/filter-add.png)。
 
 ![選取指定來源旁的篩選圖示，以監視特定資料流。](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 量度表格會更新為對應至您選取之來源的活動資料流表格。 在此步驟中，您可以檢視資料流的其他資訊，包括其對應的資料集和資料型別，以及時間戳記，以指出資料流上次作用的時間。
 
-若要進一步檢查資料流，請選取資料流旁的篩選圖示![篩選](../assets/ui/monitor-sources/filter.png)。
+若要進一步檢查資料流，請選取資料流旁的篩選圖示![篩選](/help/images/icons/filter-add.png)。
 
 ![監視儀表板中的資料流表格。](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 資料流執行代表資料流執行的例項。 例如，如果資料流排程在每小時的上午9:00、上午10:00及上午11:00執行，則您會有三個資料流執行個體。 流程執行是您的特定組織所專屬。
 
-若要檢查特定資料流執行反複專案的量度，請選取資料流旁的篩選圖示![篩選](../assets/ui/monitor-sources/filter.png)。
+若要檢查特定資料流執行反複專案的量度，請選取資料流旁的篩選圖示![篩選](/help/images/icons/filter-add.png)。
 
 ![資料流執行測量結果頁面。](../assets/ui/monitor-sources/dataflow-page.png)
 

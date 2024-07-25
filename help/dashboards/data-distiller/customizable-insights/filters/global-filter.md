@@ -2,7 +2,7 @@
 title: 建立全域篩選器
 description: 瞭解如何使用自訂全域套用的篩選器來篩選您的資料深入分析。
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 您可以使用自訂的全域篩選器，快速變更SQL提供的深入分析。
 
-[!UICONTROL 建立全域篩選器]對話方塊開啟。 建立全域篩選會遵循與使用SQL建立深入分析相同的程式。 首先，選取要查詢的資料庫（見解資料模型），然後在查詢編輯器中輸入自訂SQL，最後選取執行圖示（![執行圖示。](../../../images/customizable-insights/run-icon.png)）。
+[!UICONTROL 建立全域篩選器]對話方塊開啟。 建立全域篩選會遵循與使用SQL建立深入分析相同的程式。 首先，選取要查詢的資料庫（見解資料模型），然後在查詢編輯器中輸入自訂SQL，最後選取執行圖示（![執行圖示。](/help/images/icons/play.png)）。
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ ht-degree: 0%
 
 ## 選取全域篩選器 {#select-global-filter}
 
-若要開啟列出所有自訂篩選器的[!UICONTROL 篩選器]對話方塊，請選取篩選器圖示（![篩選器圖示）。](../../../images/customizable-insights/filter.png))。 接下來，若要套用您的儀表板深入分析上的效果，請從全域篩選器的下拉式選單中選擇一個選項，然後選取&#x200B;**[!UICONTROL 套用]**。
+若要開啟列出所有自訂篩選器的[!UICONTROL 篩選器]對話方塊，請選取篩選器圖示（![篩選器圖示）。](/help/images/icons/filter.png))。 接下來，若要套用您的儀表板深入分析上的效果，請從全域篩選器的下拉式選單中選擇一個選項，然後選取&#x200B;**[!UICONTROL 套用]**。
 
 ![反白顯示篩選對話方塊的自訂儀表板。](../../../images/customizable-insights/custom-filters.png)

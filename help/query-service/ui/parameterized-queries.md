@@ -2,7 +2,7 @@
 title: 引數化查詢
 description: 瞭解如何在Adobe Experience Platform UI中使用引數化查詢。
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 11%
@@ -47,7 +47,7 @@ SELECT
 
 若要在UI中建立引數化查詢，請導覽至「查詢編輯器」。 如需更多指示，請參閱[存取查詢編輯器](./user-guide.md#accessing-query-editor)一節。
 
-使用 `'$'` 前置詞，在文本編輯器中將查詢參數輸入到查詢中。接著，選取[!UICONTROL 主控台]旁的&#x200B;**[!UICONTROL 查詢引數]**&#x200B;索引標籤，為索引鍵新增缺少的值。 如果您忽略將值新增到任何必要的索引鍵，則無法執行查詢。 警示圖示(![警示圖示。](../images/ui/parameterized-queries/alert-icon.png))出現在任何空白[!UICONTROL 值]輸入欄位旁的查詢引數區段。
+使用 `'$'` 前置詞，在文本編輯器中將查詢參數輸入到查詢中。接著，選取[!UICONTROL 主控台]旁的&#x200B;**[!UICONTROL 查詢引數]**&#x200B;索引標籤，為索引鍵新增缺少的值。 如果您忽略將值新增到任何必要的索引鍵，則無法執行查詢。 警示圖示(![警示圖示。](/help/images/icons/alert.png))出現在任何空白[!UICONTROL 值]輸入欄位旁的查詢引數區段。
 
 >[!NOTE]
 >

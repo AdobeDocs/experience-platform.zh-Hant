@@ -5,7 +5,7 @@ solution: Experience Platform
 title: 在UI中更新Source連線帳戶詳細資料
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 1%
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 **[!UICONTROL 帳戶]**&#x200B;頁面隨即顯示。 此頁面是可檢視帳戶的清單，包括有關其來源、使用者名稱、資料流數量和建立日期的資訊。
 
-選取左上方的篩選圖示![篩選](../../images/tutorials/update/filter.png)以啟動排序面板。
+選取左上方的篩選圖示![篩選](/help/images/icons/filter.png)以啟動排序面板。
 
 ![帳戶清單](../../images/tutorials/update/accounts-list.png)
 

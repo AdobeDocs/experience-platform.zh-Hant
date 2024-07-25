@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ![對象構成UI。](../images/ui/audience-composition/audience-composition.png)
 
-若要變更構成詳細資料，包括標題和說明，請選取![滑桿](../images/ui/audience-composition/sliders.png)按鈕。
+若要變更構成詳細資料，包括標題和說明，請選取![滑桿](/help/images/icons/properties.png)按鈕。
 
 **[!UICONTROL 組合屬性]**&#x200B;彈出視窗會出現。 您可以在此處插入組合的詳細資訊，包括標題和說明。
 
@@ -114,7 +114,7 @@ ht-degree: 0%
 
 ### 依屬性排除 {#exclude-attribute}
 
-如果您依屬性排除，可以選取&#x200B;**[!UICONTROL 排除規則]**&#x200B;區段內的![篩選器](../images/ui/audience-composition/filter-attribute.png)圖示，以選取您要排除的屬性。
+如果您依屬性排除，可以選取&#x200B;**[!UICONTROL 排除規則]**&#x200B;區段內的![篩選器](/help/images/icons/project-edit.png)圖示，以選取您要排除的屬性。
 
 ![屬性區段會反白顯示，顯示從何處選取要排除的屬性。](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ ht-degree: 0%
 
 已新增&#x200B;**[!UICONTROL 擴充]**&#x200B;區塊。 選取此區塊時，擴充的詳細資訊會顯示在右側邊欄中。 這包括區塊的標籤和擴充資料集。
 
-若要選取要擴充對象的資料集，請選取![篩選器](../images/ui/audience-composition/filter-attribute.png)圖示。
+若要選取要擴充對象的資料集，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
 ![篩選按鈕會反白顯示。 選取此專案會帶您進入[!UICONTROL 選取資料集]彈出視窗。](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 ![已反白顯示[!UICONTROL 擴充條件]區域。](../images/ui/audience-composition/enrichment-criteria.png)
 
-若要選取&#x200B;**[!UICONTROL Source聯結索引鍵]**，請選取![篩選器](../images/ui/audience-composition/filter-attribute.png)圖示。
+若要選取&#x200B;**[!UICONTROL Source聯結索引鍵]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
 ![ [!UICONTROL Source聯結索引鍵]的篩選圖示會醒目提示。](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ ht-degree: 0%
 
 ![要做為來源聯結金鑰的屬性會反白顯示。](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-若要選取&#x200B;**[!UICONTROL 擴充資料集聯結索引鍵]**，請選取![篩選器](../images/ui/audience-composition/filter-attribute.png)圖示。
+若要選取&#x200B;**[!UICONTROL 擴充資料集聯結索引鍵]**，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
 ![ [!UICONTROL 擴充資料集加入索引鍵]的篩選圖示已醒目提示。](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -216,7 +216,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ![已強調顯示排名區塊，以及排名區塊的詳細資料。](../images/ui/audience-composition/rank.png)
 
-若要選取依哪個屬性來排名對象，請選取![篩選器](../images/ui/audience-composition/filter-attribute.png)圖示。
+若要選取依哪個屬性來排名對象，請選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
 ![篩選圖示會反白顯示，顯示存取設定檔屬性選取畫面所需的選取專案。](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ### 依屬性分割 {#split-attribute}
 
-依屬性分割時，將會根據提供的屬性分割對象。 若要選取要分割的屬性，請選取&#x200B;**[!UICONTROL 分割]**&#x200B;區塊，接著選取![篩選器](../images/ui/audience-composition/filter-attribute.png)圖示。
+依屬性分割時，將會根據提供的屬性分割對象。 若要選取要分割的屬性，請選取&#x200B;**[!UICONTROL 分割]**&#x200B;區塊，接著選取![篩選器](/help/images/icons/project-edit.png)圖示。
 
 ![已選取篩選按鈕，顯示如何依屬性篩選。](../images/ui/audience-composition/select-split-attribute.png)
 

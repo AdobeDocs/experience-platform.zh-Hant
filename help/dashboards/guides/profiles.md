@@ -4,7 +4,7 @@ title: 設定檔控制面板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織即時客戶設定檔資料的重要資訊。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '4997'
 ht-degree: 9%
@@ -470,7 +470,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ![檢視更醒目提示的對象重疊報表Widget。](../images/profiles/profiles-audience-overlap-report.png)
 
-[!UICONTROL 對象重疊報表]對話方塊就會顯示。 此對話方塊最多可包含50列對象重疊分析，並分為6欄。 若要從表格移除或新增欄，請選取設定圖示（![設定圖示。](../images/profiles/settings-icon.png)）。
+[!UICONTROL 對象重疊報表]對話方塊就會顯示。 此對話方塊最多可包含50列對象重疊分析，並分為6欄。 若要從表格移除或新增欄，請選取設定圖示（![設定圖示。](/help/images/icons/settings.png)）。
 
 ![對象重疊報表對話方塊。](../images/profiles/profiles-audience-overlap-report-dialog.png)
 

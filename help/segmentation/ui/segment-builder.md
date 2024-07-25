@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3743'
 ht-degree: 6%
@@ -141,7 +141,7 @@ ht-degree: 6%
 
 ![如果您插入的值不是列舉清單的一部分，則會顯示警告。](../images/ui/segment-builder/enum-warning.png)
 
-如果您要建立多個值，可以使用大量上傳一次新增所有值。 選取![加號圖示](../images/ui/segment-builder/plus-icon.png)以大量顯示&#x200B;**[!UICONTROL 新增值]**&#x200B;彈出視窗。
+如果您要建立多個值，可以使用大量上傳一次新增所有值。 選取![加號圖示](/help/images/icons/add-circle.png)以大量顯示&#x200B;**[!UICONTROL 新增值]**&#x200B;彈出視窗。
 
 ![加號圖示會反白顯示，顯示您可以選取以存取大量上傳彈出視窗的按鈕。](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ ht-degree: 6%
 >
 >如需有關產生區段定義之預估的詳細資訊，請參閱區段定義建立教學課程的[預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
 
-您也可以選取評估方法。 如果您知道要使用的評估方法，可以使用下拉式清單選取所需的評估方法。 如果您想要瞭解此區段定義符合哪些評估型別，可以選取帶有放大鏡的瀏覽圖示![資料夾圖示](../images/ui/segment-builder/segment-evaluation-select-icon.png)，以檢視可用區段定義評估方法的清單。
+您也可以選取評估方法。 如果您知道要使用的評估方法，可以使用下拉式清單選取所需的評估方法。 如果您想要瞭解此區段定義符合哪些評估型別，可以選取帶有放大鏡的瀏覽圖示![資料夾圖示](/help/images/icons/folder-search.png)，以檢視可用區段定義評估方法的清單。
 
 [!UICONTROL 評估方法資格]彈出視窗即會顯示。 此彈出視窗會顯示可用的評估方法，包括批次、串流和邊緣。 彈出視窗會顯示哪些評估方法符合資格和不符合資格。 根據您在區段定義中使用的引數，它可能不符合某些評估方法的資格。 如需每個評估方法需求的詳細資訊，請閱讀[串流區段](./streaming-segmentation.md#query-types)或[邊緣區段](./edge-segmentation.md#query-types)概述。
 

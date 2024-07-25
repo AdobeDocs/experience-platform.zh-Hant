@@ -2,7 +2,7 @@
 title: 中繼轉換API擴充功能概觀
 description: 瞭解Adobe Experience Platform中用於事件轉送的Meta Conversions API擴充功能。
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2583'
 ht-degree: 0%
@@ -160,7 +160,7 @@ ht-degree: 0%
 
 ![初始設定完成確認畫面](../../../images/extensions/server/meta/setup-complete.png)
 
-從&#x200B;**[!UICONTROL 在您的網站上新增程式碼]**&#x200B;對話方塊中，複製使用複製![複製](../../../images/extensions/server/meta/copy-icon.png)函式提供的程式碼，並將其貼到來源網站的`<head>`中。 實作之後，請選取&#x200B;**[!UICONTROL 開始驗證]**
+從&#x200B;**[!UICONTROL 在您的網站上新增程式碼]**&#x200B;對話方塊中，複製使用複製![複製](/help/images/icons/copy.png)函式提供的程式碼，並將其貼到來源網站的`<head>`中。 實作之後，請選取&#x200B;**[!UICONTROL 開始驗證]**
 
 ![在您的網站對話方塊上新增程式碼](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

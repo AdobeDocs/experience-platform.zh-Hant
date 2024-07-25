@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 監視設定檔擴充工作
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 2%
@@ -77,7 +77,7 @@ ht-degree: 2%
 
 本節說明監視介面中的各種使用者介面(UI)選項，這些選項可讓您篩選頁面上顯示的測量結果。
 
-使用箭頭圖示（![箭頭圖示](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)）來展開或關閉畫面頂端的卡片，此卡片會顯示設定檔擴充工作的相關快速資訊。
+使用箭頭圖示（![箭頭圖示](/help/images/icons/chevron-up.png)）來展開或關閉畫面頂端的卡片，此卡片會顯示設定檔擴充工作的相關快速資訊。
 
 ![顯示箭頭圖示UI控制項的熒幕錄製。](/help/dataflows/assets/ui/b2b/use-arrow-control.gif)
 

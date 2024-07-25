@@ -3,7 +3,7 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 4%
@@ -205,21 +205,21 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
    >[!TIP]
    > 
-   >選取左上方的篩選圖示![篩選圖示](../assets/ui/edit-activation/filter.png)以啟動排序面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
+   >選取左上方的篩選圖示![篩選圖示](/help/images/icons/filter.png)以啟動排序面板。 排序面板會提供您所有目的地的清單。 您可以從清單中選取多個目的地，以檢視與所選目的地相關聯的資料流篩選選取專案。
 
-1. 從&#x200B;**[!UICONTROL 啟用資料]**&#x200B;欄中，選取資料集控制項，以檢視對應至此匯出資料流的所有資料集。
+2. 從&#x200B;**[!UICONTROL 啟用資料]**&#x200B;欄中，選取資料集控制項，以檢視對應至此匯出資料流的所有資料集。
 
    ![可用的資料集導覽選項在[啟動資料]欄中反白顯示。](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. [!BADGE Beta]目的地的&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面就會顯示。 使用資料集清單左側的核取方塊來選取您要移除的資料集，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除資料集]**，以觸發移除資料集確認對話方塊。
+3. [!BADGE Beta]目的地的&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面就會顯示。 使用資料集清單左側的核取方塊來選取您要移除的資料集，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除資料集]**，以觸發移除資料集確認對話方塊。
 
    >[!NOTE]
    >
-   >此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
 
    ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-1. 在確認對話方塊中，選取&#x200B;**[!UICONTROL 移除]**&#x200B;以立即從匯出至目的地的資料集中移除資料集。
+4. 在確認對話方塊中，選取&#x200B;**[!UICONTROL 移除]**&#x200B;以立即從匯出至目的地的資料集中移除資料集。
 
    ![對話方塊顯示資料流中的「確認資料集移除」選項。](../assets/ui/export-datasets/remove-dataset-confirm.png)
 

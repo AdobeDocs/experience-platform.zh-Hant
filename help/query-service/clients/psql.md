@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 將PSQL連線至查詢服務
 description: PSQL是命令列介面，當您在電腦上安裝PostgreSQL時便會提供。 您可以依照這些指示進行安裝。
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -21,7 +21,7 @@ PSQL是當您在電腦上安裝[!DNL PostgreSQL]時所安裝的命令列介面�
 
 在電腦上安裝PSQL之後，您就可以使用Query Service連線PSQL。 返回[!DNL Platform] UI，然後選取&#x200B;**[!UICONTROL 查詢]**，接著選取&#x200B;**[!UICONTROL 認證]**。
 
-在&#x200B;**[!UICONTROL PSQL命令]**&#x200B;區段下，選取&#x200B;**[!UICONTROL 複製到剪貼簿]**&#x200B;圖示（![復製圖示](../images/clients/psql/copy-icon.png)）以複製命令字串。
+在&#x200B;**[!UICONTROL PSQL命令]**&#x200B;區段下，選取&#x200B;**[!UICONTROL 複製到剪貼簿]**&#x200B;圖示（![復製圖示](/help/images/icons/copy.png)）以複製命令字串。
 
 ![反白顯示復本圖示的[查詢儀表板認證]索引標籤。](../images/clients/psql/connect-bi.png)
 

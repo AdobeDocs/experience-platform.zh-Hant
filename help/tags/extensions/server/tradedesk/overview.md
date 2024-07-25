@@ -4,7 +4,7 @@ description: 瞭解Adobe Experience Platform中用於事件轉送的Trade Desk R
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 2%
@@ -90,7 +90,7 @@ ht-degree: 2%
 
 **[!UICONTROL 物件要求引數]**
 
-包含更多資訊的JSON物件。 您可以選擇使用一組縮減的鍵值輸入或提供原始JSON。 此外，您可以選取右側的磁碟（![磁碟圖示](../../../images/extensions/server/tradedesk/disk-icon.png)），從資料元素擷取動態資料。
+包含更多資訊的JSON物件。 您可以選擇使用一組縮減的鍵值輸入或提供原始JSON。 此外，您可以選取右側的磁碟（![磁碟圖示](/help/images/icons/database.png)），從資料元素擷取動態資料。
 
 
 ![顯示可用欄位的[!DNL Object Request Parameters]區段。](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

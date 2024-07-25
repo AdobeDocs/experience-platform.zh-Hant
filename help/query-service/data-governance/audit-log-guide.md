@@ -2,7 +2,7 @@
 title: 查詢服務稽核記錄整合
 description: 查詢服務稽核記錄會維護各種使用者動作的記錄，以形成稽核軌跡，用於疑難排解問題或遵循公司資料管理政策和法規要求。 本教學課程提供查詢服務專屬稽核記錄功能的概觀。
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Adobe Experience Platform [!DNL Query Service]稽核記錄整合提供查詢相�
 
 ## 執行[!DNL Query Service]稽核記錄 {#perform-an-audit-log}
 
-若要執行[!DNL Query Service]活動的稽核，請從左側導覽選取&#x200B;**[!UICONTROL 稽核]**，然後選取漏斗圖示(![篩選圖示。](../images/audit-log/filter.png))以顯示篩選控制項清單，協助縮小結果範圍。
+若要執行[!DNL Query Service]活動的稽核，請從左側導覽選取&#x200B;**[!UICONTROL 稽核]**，然後選取漏斗圖示(![篩選圖示。](/help/images/icons/filter.png))以顯示篩選控制項清單，協助縮小結果範圍。
 
 ![Platform UI稽核記錄儀表板，在左側導覽中顯示「稽核」，且篩選器控制項反白顯示。](../images/audit-log/filter-controls.png)
 

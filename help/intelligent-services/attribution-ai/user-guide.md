@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Attribution AI UI指南
 description: 本檔案可用作在Intelligent Services使用者介面中與Attribution AI互動的指南。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2450'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ![選取資料集](./images/user-guide/select-datasets.png)
 
-選取資料集旁的資訊圖示![資訊圖示](./images/user-guide/info-icon.png)會開啟資料集預覽彈出視窗。
+選取資料集旁的資訊圖示![資訊圖示](/help/images/icons/info.png)會開啟資料集預覽彈出視窗。
 
 ![選取並搜尋資料集](./images/user-guide/dataset-preview.png)
 

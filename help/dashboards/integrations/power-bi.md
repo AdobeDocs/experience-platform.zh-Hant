@@ -2,9 +2,9 @@
 title: 平台儀表板的Power BI報表範本
 description: 使用報表範本探索使用Power BI的Experience Platform資料。
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -144,7 +144,7 @@ JSON認證檔案也可上傳以通過驗證。 建立不會到期的認證時，
 
 ## 刪除Power BI應用程式整合
 
-若要刪除儀表板，請導覽至儀表板詳細目錄，並選取儀表板名稱旁的刪除圖示(![](../images/power-bi/delete-icon.png))。
+若要刪除儀表板，請導覽至儀表板詳細目錄，並選取儀表板名稱旁的刪除圖示（![刪除圖示](/help/images/icons/delete.png)）。
 
 >[!NOTE]
 >

@@ -2,7 +2,7 @@
 title: Ad Hoc結構描述的屬性型存取控制支援
 description: 限制存取透過Adobe Experience Platform查詢服務產生的臨時結構描述中資料欄位的指南。
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 2%
@@ -42,7 +42,7 @@ ht-degree: 2%
 
 ## 探索Platform UI結構描述詳細目錄中的臨時結構描述 {#discover-ad-hoc-schemas}
 
-若要在Platform UI中啟用顯示臨時結構描述，請選取篩選圖示(![篩選圖示。](../images/data-governance/filter.png))，然後在出現的左側欄中選取**[!UICONTROL 顯示臨機操作結構描述]。
+若要在Platform UI中啟用顯示臨時結構描述，請選取篩選圖示(![篩選圖示。](/help/images/icons/filter.png))，然後在出現的左側欄中選取**[!UICONTROL 顯示臨機操作結構描述]。
 
 ![結構描述儀表板篩選選項左側邊欄的「顯示臨機結構描述」切換已啟用。](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ ht-degree: 2%
 
 ## 編輯結構描述或欄位的標籤
 
-若要編輯整個結構描述的標籤，請選取鉛筆圖示(![鉛筆圖示。](../images/data-governance/edit-icon.png))到[!UICONTROL 標籤]標籤下結構描述名稱的一側。
+若要編輯整個結構描述的標籤，請選取鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))到[!UICONTROL 標籤]標籤下結構描述名稱的一側。
 
 ![結構描述工作區中的標籤檢視中，以鉛筆圖示反白顯示。](../images/data-governance/edit-entire-schema-labels.png)
 

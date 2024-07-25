@@ -2,7 +2,7 @@
 title: 查詢記錄
 description: 每次執行查詢時都會自動產生查詢記錄，並可透過UI取得查詢記錄以協助疑難排解。 本檔案概述如何使用及導覽UI的「查詢服務記錄檔」區段。
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Adobe Experience Platform會維護透過API和UI發生的所有查詢事件的�
 
 ## 自訂和搜尋 {#customize-and-search}
 
-查詢服務記錄以可自訂的表格格式顯示。 若要自訂表格欄，請選取設定圖示(![A設定圖示。](../images/ui/query-log/settings-icon.png))在熒幕右側。 會出現[!UICONTROL 自訂表格]對話方塊，其中可取消選取每個資料行。
+查詢服務記錄以可自訂的表格格式顯示。 若要自訂表格欄，請選取設定圖示(![A設定圖示。](/help/images/icons/column-settings.png))在熒幕右側。 會出現[!UICONTROL 自訂表格]對話方塊，其中可取消選取每個資料行。
 
 您也可以在搜尋欄位中輸入範本名稱，以搜尋與特定查詢範本相關的記錄。
 
@@ -67,13 +67,13 @@ Adobe Experience Platform會維護透過API和UI發生的所有查詢事件的�
 
 ## 編輯記錄 {#edit-logs}
 
-每一列的範本名稱或SQL程式碼片段旁邊是鉛筆圖示(![鉛筆圖示。](../images/ui/query-log/edit-icon.png))可用來導覽至查詢編輯器。 然後會在編輯器中預先填入查詢以進行編輯。
+每一列的範本名稱或SQL程式碼片段旁邊是鉛筆圖示(![鉛筆圖示。](/help/images/icons/edit.png))可用來導覽至查詢編輯器。 然後會在編輯器中預先填入查詢以進行編輯。
 
 ![以鉛筆圖示反白顯示的查詢記錄工作區。](../images/ui/query-log/edit-query.png)
 
 ## 篩選記錄 {#filter-logs}
 
-您可以根據各種設定來篩選查詢記錄清單。 選取篩選圖示(![篩選圖示。](../images/ui/query-log/filter-icon.png))以開啟左側邊欄中的一組篩選選項。
+您可以根據各種設定來篩選查詢記錄清單。 選取篩選圖示(![篩選圖示。](/help/images/icons/filter.png))以開啟左側邊欄中的一組篩選選項。
 
 ![查詢記錄工作區中反白了篩選圖示。](../images/ui/query-log/log-filter.png)
 

@@ -3,7 +3,7 @@ title: 刪除記錄
 description: 瞭解如何刪除Adobe Experience Platform UI中的記錄。
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 8%
@@ -51,7 +51,7 @@ ht-degree: 8%
 
 下一步是決定您要從單一資料集還是所有資料集中刪除記錄。 如果您無法使用此選項，請繼續前往指南的[提供身分識別](#provide-identities)區段。
 
-在&#x200B;**[!UICONTROL 記錄詳細資料]**&#x200B;區段下，使用選項按鈕在特定資料集與所有資料集之間選取。 如果您選擇&#x200B;**[!UICONTROL 選取資料集]**，請繼續選取資料庫圖示（![資料庫圖示](../images/ui/record-delete/database-icon.png)）以開啟提供可用資料集清單的對話方塊。 從清單中選取所需的資料集，然後選取&#x200B;**[!UICONTROL 完成]**。
+在&#x200B;**[!UICONTROL 記錄詳細資料]**&#x200B;區段下，使用選項按鈕在特定資料集與所有資料集之間選取。 如果您選擇&#x200B;**[!UICONTROL 選取資料集]**，請繼續選取資料庫圖示（![資料庫圖示](/help/images/icons/database.png)）以開啟提供可用資料集清單的對話方塊。 從清單中選取所需的資料集，然後選取&#x200B;**[!UICONTROL 完成]**。
 
 ![已選取資料集並醒目提示[!UICONTROL 完成]的[!UICONTROL 選取資料集]對話方塊。](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ JSON檔案必須格式化為物件陣列，每個物件代表一個身分。
 
 ![已手動新增包含身分欄位的要求建立工作流程。](../images/ui/record-delete/identity-added.png)
 
-若要新增更多身分，請選取加號圖示(![A加號圖示。](../images/ui/record-delete/plus-icon.png))，或選取&#x200B;**[!UICONTROL 新增身分]**。
+若要新增更多身分，請選取加號圖示(![A加號圖示。](/help/images/icons/tree-expand-all.png))，或選取&#x200B;**[!UICONTROL 新增身分]**。
 
 ![要求建立工作流程中會顯示加號圖示和醒目提示的新增身分圖示。](../images/ui/record-delete/more-identities.png)
 

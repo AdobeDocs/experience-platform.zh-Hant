@@ -4,7 +4,7 @@ description: Adobe Experience Platform Identity Service透過跨裝置和系統�
 title: 監視UI中身分的資料流
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 9%
@@ -62,7 +62,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 | **[!UICONTROL 圖表已更新]** | 以新邊更新的現有身分圖表數目。 |
 | **[!UICONTROL 失敗的資料流總數]** | 失敗的資料流執行次數。 |
 
-您可以選取來源名稱旁的篩選圖示![篩選圖示](../assets/ui/monitor-identities/filter.png)，以檢視該所選來源資料流程的身分處理資訊。
+您可以選取來源名稱旁的篩選圖示![篩選圖示](/help/images/icons/filter.png)，以檢視該所選來源資料流程的身分處理資訊。
 
 ![篩選圖示會醒目提示。 選取此圖示可讓您檢視所選來源的資料流。](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 | **[!UICONTROL 圖表已更新]** | 以新邊更新的現有身分圖表數目。 |
 | **[!UICONTROL 失敗的資料流總數]** | 失敗的資料流執行次數。 |
 
-選取資料流執行開始時間旁的篩選圖示![篩選](../assets/ui/monitor-identities/filter.png)，檢視有關您的[!DNL Identity]資料流執行的詳細資訊。
+選取資料流執行開始時間旁的篩選圖示![篩選](/help/images/icons/filter.png)，檢視有關您的[!DNL Identity]資料流執行的詳細資訊。
 
 ![篩選圖示會醒目提示。 選取此圖示可讓您檢視所選資料流的詳細資訊。](../assets/ui/monitor-identities/dataflows-filter.png)
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中定義列舉欄位和建議值
 description: 瞭解如何在Experience Platform使用者介面中定義字串欄位的列舉和建議值。
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 8%
@@ -40,7 +40,7 @@ ht-degree: 8%
 
 在&#x200B;**[!UICONTROL Value]**&#x200B;欄下，您必須提供您想要強制欄位使用的確切值。 您也可以選擇為限制提供人性化的&#x200B;**[!UICONTROL 顯示名稱]**，這會影響分段中值的呈現方式。
 
-繼續使用&#x200B;**[!UICONTROL 新增列]**&#x200B;將所需的限制和選擇性標籤新增至列舉，或選取先前新增列旁的刪除圖示（![刪除圖示的影像](../../images/ui/fields/enum/remove-icon.png)）以移除它。 完成後，選取&#x200B;**[!UICONTROL 套用]**&#x200B;將變更套用至結構描述。
+繼續使用&#x200B;**[!UICONTROL 新增列]**&#x200B;將所需的限制和選擇性標籤新增至列舉，或選取先前新增列旁的刪除圖示（![刪除圖示的影像](/help/images/icons/remove-circle.png)）以移除它。 完成後，選取&#x200B;**[!UICONTROL 套用]**&#x200B;將變更套用至結構描述。
 
 ![此影像顯示UI中字串欄位填寫的列舉值和顯示名稱](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ ht-degree: 8%
 
 ![顯示UI中選取之[建議值]選項的影像](../../images/ui/fields/enum/suggested-add-row.png)
 
-在&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;欄下，為值提供您想在分段UI中顯示的好記名稱。 若要新增更多建議值，請再次選取&#x200B;**[!UICONTROL 新增列]**，然後視需要重複此程式。 若要移除先前新增的列，請選取相關列旁的![刪除圖示](../../images/ui/fields/enum/remove-icon.png)。
+在&#x200B;**[!UICONTROL 顯示名稱]**&#x200B;欄下，為值提供您想在分段UI中顯示的好記名稱。 若要新增更多建議值，請再次選取&#x200B;**[!UICONTROL 新增列]**，然後視需要重複此程式。 若要移除先前新增的列，請選取相關列旁的![刪除圖示](/help/images/icons/remove-circle.png)。
 
 完成後，選取&#x200B;**[!UICONTROL 套用]**&#x200B;將變更套用至結構描述。
 
@@ -68,7 +68,7 @@ ht-degree: 8%
 
 ![此影像顯示UI中字串欄位填寫的列舉值和顯示名稱](../../images/ui/fields/enum/suggested-standard.png)
 
-若要為標準欄位新增建議值，請選取&#x200B;**[!UICONTROL 新增列]**。 若要移除貴組織先前新增的建議值，請選取相關列旁的![刪除圖示](../../images/ui/fields/enum/remove-icon.png)。
+若要為標準欄位新增建議值，請選取&#x200B;**[!UICONTROL 新增列]**。 若要移除貴組織先前新增的建議值，請選取相關列旁的![刪除圖示](/help/images/icons/remove-circle.png)。
 
 ![此影像顯示UI中字串欄位填寫的列舉值和顯示名稱](../../images/ui/fields/enum/suggested-standard-add.png)
 

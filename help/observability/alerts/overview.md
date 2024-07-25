@@ -4,7 +4,7 @@ title: 警報概觀
 description: 了解 Adobe Experience Platform 中的警告，包括定義警告規則的結構。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Platform警報可以只傳送一次，也可以在預先定義的間隔內重複
 | --- | --- |
 | 不一定表示有問題。 | 表示可能不想要的狀態。 |
 | 不重複。 | 如果異常狀況持續存在，可以重複此步驟。 |
-| 例如：<ul><li>資料擷取已成功完成。</li><li>查詢執行已完成。</li><li>已刪除資料。</li></ul> | 例如：<ul><li>擷取持續時間超過服務等級協定(SLA)。</li><li>在過去24小時內未發生每日內嵌。</li><li>串流處理器的錯誤率高於設定的臨界值。</li><li>設定檔總數超過軟體權利檔案。</li></ul> |
+| 例如：<ul><li>資料擷取已成功完成。</li><li>查詢執行已完成。</li><li>已刪除資料。</li></ul> | 例如：<ul><li>擷取期間超過服務等級協定(SLA)。</li><li>在過去24小時內未發生每日內嵌。</li><li>串流處理器的錯誤率高於設定的臨界值。</li><li>設定檔總數超過軟體權利檔案。</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ Platform UI可讓您檢視收到的警報並管理警報規則。 以下影片�
 >
 >如需有關如何在Platform中管理許可權的詳細資訊，請參閱[存取控制檔案](../../access-control/ui/overview.md)。
 
-如果具有「檢視警示」許可權，可以選取右上角的鈴鐺圖示（![鈴鐺圖示](../images/alerts/overview/icon.png)）來檢視收到的警示。
+如果具有「檢視警示」許可權，可以選取右上角的鈴鐺圖示（![鈴鐺圖示](/help/images/icons/bell.png)）來檢視收到的警示。
 
 ![](../images/alerts/overview/ui.png)
 

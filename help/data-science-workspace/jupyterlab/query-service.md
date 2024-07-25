@@ -5,7 +5,7 @@ title: Jupyter Notebook中的查詢服務
 type: Tutorial
 description: Adobe Experience Platform可讓您將查詢服務整合至JupyterLab作為標準功能，以使用Data Science Workspace中的結構化查詢語言(SQL)。 本教學課程示範常見使用案例的範例SQL查詢，以探索、轉換及分析Adobe Analytics資料。
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 0%
@@ -98,7 +98,7 @@ ht-degree: 0%
 
 在個別筆記本儲存格中輸入下列SQL查詢。 在查詢的儲存格上選取，接著選取&#x200B;**[!UICONTROL 播放]**&#x200B;按鈕，以執行查詢。 成功的查詢結果或錯誤記錄檔會顯示在執行的儲存格下方。
 
-當筆記本長時間未使用時，筆記本與[!DNL Query Service]之間的連線可能會中斷。 在這種情況下，請選取電源按鈕右上角的&#x200B;**重新啟動**&#x200B;按鈕![重新啟動按鈕](../images/jupyterlab/user-guide/restart_button.png)，以重新啟動[!DNL JupyterLab]。
+當筆記本長時間未使用時，筆記本與[!DNL Query Service]之間的連線可能會中斷。 在這種情況下，請選取電源按鈕右上角的&#x200B;**重新啟動**&#x200B;按鈕![重新啟動按鈕](/help/images/icons/restart.png)，以重新啟動[!DNL JupyterLab]。
 
 筆記型電腦核心會重設，但儲存格會保留，請重新執行所有儲存格，繼續您中斷的儲存格。
 

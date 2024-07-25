@@ -3,7 +3,7 @@ description: 瞭解如何使用Experience Platform使用者介面在細分期間
 title: 在UI中監視對象的資料流
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 4%
@@ -64,7 +64,7 @@ ht-degree: 4%
 | **[!UICONTROL 上次啟用身分]** | 在對象的上次啟用工作中啟用的身分數量。 |
 | **[!UICONTROL 上次啟用目的地]** | 對象上次啟用工作的目的地名稱。 |
 
-您可以篩選結果給特定對象，並檢視其分段工作，方法是選取篩選圖示(![篩選圖示。](../assets/ui/monitor-audiences/filter-icon.png))。 區段作業會依時間順序排序，而最近的區段作業會先出現。
+您可以篩選結果給特定對象，並檢視其分段工作，方法是選取篩選圖示(![篩選圖示。](/help/images/icons/filter-add.png))。 區段作業會依時間順序排序，而最近的區段作業會先出現。
 
 ![篩選圖示會醒目提示。 選取此專案可讓您檢視指定對象的細分工作。](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ ht-degree: 4%
 | **[!UICONTROL 身分已啟用]** | 正在啟用細分工作的身分數。 每個設定檔都可以有多個身分。 例如，個人資料可以包含電子郵件、電話號碼和忠誠度編號作為身分。 |
 | **[!UICONTROL 目的地名稱]** | 分段工作啟動的目標目的地名稱。 |
 
-您可以進一步篩選至特定的分段工作，並藉由選取篩選圖示（![篩選圖示）來檢視其詳細資訊。](../assets/ui/monitor-audiences/filter-icon.png))。 有兩種不同型別的細分工作可供篩選：啟動工作和評估工作。
+您可以進一步篩選至特定的分段工作，並藉由選取篩選圖示（![篩選圖示）來檢視其詳細資訊。](/help/images/icons/filter.png))。 有兩種不同型別的細分工作可供篩選：啟動工作和評估工作。
 
 ### 啟用工作詳細資料 {#activation-job-details}
 

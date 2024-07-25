@@ -2,7 +2,7 @@
 title: 自動化資料集有效期
 description: 瞭解如何在Adobe Experience Platform UI中排程資料集有效期。
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 18%
@@ -55,11 +55,11 @@ Adobe Experience Platform UI中的[[!UICONTROL 資料生命週期]工作區](./o
 
 ### 選取日期和資料集 {#select-date-and-dataset}
 
-在&#x200B;**[!UICONTROL 要求的動作]**&#x200B;區段下，選取要刪除資料集的日期。 您可以手動輸入日期（格式為`mm/dd/yyyy`）或選取行事曆圖示(![行事曆圖示。](../images/ui/ttl/calendar-icon.png))以從對話方塊中選取日期。
+在&#x200B;**[!UICONTROL 要求的動作]**&#x200B;區段下，選取要刪除資料集的日期。 您可以手動輸入日期（格式為`mm/dd/yyyy`）或選取行事曆圖示(![行事曆圖示。](/help/images/icons/calendar.png))以從對話方塊中選取日期。
 
 ![已針對資料集選取並反白到期日的行事曆對話方塊。](../images/ui/ttl/select-date.png)
 
-接下來，在&#x200B;**[!UICONTROL 資料集詳細資料]**&#x200B;下，選取資料庫圖示(![資料庫圖示。](../images/ui/ttl/database-icon.png))以開啟資料集選取對話方塊。 從清單中選擇要套用到期日的資料集，然後選取&#x200B;**[!UICONTROL 完成]**。
+接下來，在&#x200B;**[!UICONTROL 資料集詳細資料]**&#x200B;下，選取資料庫圖示(![資料庫圖示。](/help/images/icons/database.png))以開啟資料集選取對話方塊。 從清單中選擇要套用到期日的資料集，然後選取&#x200B;**[!UICONTROL 完成]**。
 
 ![已選取資料集並醒目提示[!UICONTROL 完成]的[!UICONTROL 選取資料集]對話方塊。](../images/ui/ttl/select-dataset.png)
 
