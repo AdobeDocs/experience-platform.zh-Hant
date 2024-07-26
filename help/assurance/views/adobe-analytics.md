@@ -2,14 +2,18 @@
 title: 在 Assurance 中檢視 Adob​​e Analytics
 description: 本指南會說明如何將 Adobe Analytics 和 Adob​​e Experience Platform Assurance 一起使用。
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 515f58175a8ccba03581ce4d7faf23fdfed3571e
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 100%
+source-wordcount: '394'
+ht-degree: 89%
 
 ---
 
 # 在 Assurance 中檢視 Adob&#x200B;&#x200B;e Analytics
+
+>[!IMPORTANT]
+>
+>Analytics事件檢視已整合至&#x200B;**Analytics事件2.0 (Beta)外掛程式**。  未來會將其從保證中移除。 我們建議使用&#x200B;**Analytics Events 2.0 (Beta)外掛程式**，進行您針對保證工作階段的Analytics偵錯。
 
 Adobe Experience Platform Assurance 和 Adob&#x200B;&#x200B;e Analytics 的整合為對其 Ad&#x200B;&#x200B;ob&#x200B;&#x200B;e Analytics 實作進行偵錯和驗證的使用者提供了對 SDK 事件更豐富的檢視。該檢視現在會顯示從 [Adobe Experience Platform SDK](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/) 傳送至 Adob&#x200B;&#x200B;e Analytics 的生命週期和動作/狀態事件。該檢視還會顯示「回應」的詳細資料，提供有關分別套用每個報表套裝的處理規則後如何處理事件的資訊。
 
