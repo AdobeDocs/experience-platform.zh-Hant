@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的資料加密
 description: 瞭解如何在Adobe Experience Platform中加密傳輸和待用資料。
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,8 @@ Platform與任何外部元件之間傳輸的所有資料都是使用HTTPS [TLS v
 
 - [Adobe Journey Optimizer公開憑證](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [目的地服務公用憑證](../images/governance-privacy-security/encryption/destinations-public-cert.pem)。
+
+您也可以向MTLS端點發出GET要求，以安全地擷取公開憑證。 如需詳細資訊，請參閱[公用憑證端點檔案](../../data-governance/mtls-api/public-certificate-endpoint.md)。
 
 ## 靜態資料 {#at-rest}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform API快速入門
 description: Adobe Experience Platform提供的API服務彼此緊密連結。 本指南包含可用服務、CRUD作業所需標頭、錯誤訊息、Postman集合和範例API呼叫的相關資訊。
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1446'
 ht-degree: 0%
 
 ---
@@ -124,8 +124,10 @@ curl -X GET \
 | [[!DNL Catalog Service] API指南](.././catalog/api/getting-started.md) | [!DNL Catalog Service] API可讓開發人員在Adobe Experience Platform中管理資料集中繼資料。 這包括資料位置、處理階段、處理期間發生的錯誤以及資料報表。 |
 | [[!DNL Data Access] API指南](.././data-access/api.md) | [!DNL Data Access] API可讓開發人員擷取Experience Platform內擷取之資料集的資訊。 這包括存取和下載資料集檔案、擷取標題資訊、列出失敗和成功的批次，以及下載預覽CSV / Parquet檔案。 |
 | [[!DNL Dataset Service] API指南](.././data-governance/labels/dataset-api.md) | 資料集服務API可讓您套用及編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的目錄服務API不同。 |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | [!DNL Data Hygiene] API可讓您以程式設計方式修正或刪除客戶在Adobe Experience Platform中儲存的個人資料，以及排程資料集的到期日。 |
 | [[!DNL Edge Network Server] API指南](../server-api/overview.md) | [!DNL Edge Network Server API]可用於各種資料收集、個人化、廣告和行銷使用案例。 [!DNL Server API]可用於伺服器、[!DNL IoT]裝置、機上盒和其他各種裝置。 |
 | [[!DNL Identity Service] API指南](.././identity-service/api/getting-started.md) | [!DNL Identity Service] API可讓開發人員在Adobe Experience Platform中使用身分圖表來管理跨裝置、跨頻道及幾乎即時的客戶身分識別。 |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | [!DNL MTLS Service] API可讓您安全地擷取Adobe為您的組織所發行的公開憑證。 |
 | [[!DNL Observability Insights] API指南](.././observability/api/overview.md) | [!DNL Observability Insights]是RESTful API，可讓開發人員在Adobe Experience Platform中公開金鑰可觀察性度量。 這些量度提供平台使用統計資料、Platform服務健康情況檢查、歷史趨勢和各種Platform功能績效指標的深入分析。 |
 | [[!DNL Policy Service] API指南](.././data-governance/api/overview.md) <br> （資料控管） | [!DNL Policy Service] API可讓您建立和管理資料使用標籤和原則，以決定可以對包含特定資料使用標籤的資料採取哪些行銷動作。 若要將標籤套用至資料集和欄位，請參閱[[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md)指南 |
 | [[!DNL Privacy Service] API指南](.././privacy-service/api/getting-started.md) | [!DNL Privacy Service] API可讓開發人員依照隱私權法規，建立及管理客戶在所有Experience Cloud應用程式中存取或刪除其個人資料的請求。 |

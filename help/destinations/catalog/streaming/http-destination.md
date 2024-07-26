@@ -4,9 +4,9 @@ title: HTTP API連線
 description: 在Adobe Experience Platform中使用HTTP API目的地，將設定檔資料傳送至第三方HTTP端點，以執行您自己的Experience Platform，或針對從Analytics匯出的設定檔資料執行您可能需要的任何其他操作。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
 workflow-type: tm+mt
-source-wordcount: '2639'
+source-wordcount: '2664'
 ht-degree: 8%
 
 ---
@@ -76,6 +76,8 @@ HTTP端點可以是客戶自己的系統或協力廠商解決方案。
 如果您要檢查[!DNL Common Name] (CN)和[!DNL Subject Alternative Names] (SAN)以進行其他協力廠商驗證，可以下載以下憑證：
 
 * [HTTP API mTLS公開憑證](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
+
+您也可以向MTLS端點發出GET要求，以安全地擷取公開憑證。 如需詳細資訊，請參閱[公用憑證端點檔案](../../../data-governance/mtls-api/public-certificate-endpoint.md)。
 
 ## IP位址允許清單 {#ip-address-allowlist}
 

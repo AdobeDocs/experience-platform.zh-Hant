@@ -5,10 +5,10 @@ breadcrumb-title: 資料治理指南
 user-guide-description: 透過使用標籤、行銷動作和治理原則，強制執行資料使用限制。
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 44%
+source-wordcount: '99'
+ht-degree: 43%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 44%
    * [概觀](enforcement/overview.md)
    * [自動強制執行](enforcement/auto-enforcement.md)
    * [API型強制執行](enforcement/api-enforcement.md)
+* MTLS服務API {#mtls-api}
+   * [概觀](mtls-api/overview.md)
+   * [快速入門](mtls-api/getting-started.md)
+   * [公用憑證端點](mtls-api/public-certificate-endpoint.md)
 * 原則服務API {#api}
    * [概觀](api/overview.md)
    * [快速入門](api/getting-started.md)
