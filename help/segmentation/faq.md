@@ -2,9 +2,9 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4187'
+source-wordcount: '4362'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,16 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 可以，如果主要識別碼相符，外部產生的對象將會與Platform中的現有設定檔合併。調解此資料最多需要24小時的時間。 如果設定檔資料尚不存在，則會在擷取資料時建立新的設定檔。
 
+### 如何為匯入Audience Portal的外部產生對象遵循客戶同意偏好設定？{#consent}
+
+從多個管道擷取客戶資料時，身分拼接和合併原則可讓這些資料合併到單一即時客戶設定檔中。 有關客戶同意偏好設定的資訊會儲存並在設定檔層級進行評估。
+
+下游目的地會在啟用前檢查每個設定檔的同意資訊。 每個設定檔的同意資訊會與特定目的地的同意要求進行比較。 如果設定檔不符合需求，該設定檔將不會傳送到目的地。
+
+將外部受眾內嵌至Audience Portal時，會使用主要ID （例如電子郵件或ECID）與現有設定檔連結。 因此，現有的同意政策將在整個啟用期間保持有效。
+
+請注意，您應該&#x200B;**不**&#x200B;包含與外部產生的對象之間的同意資訊，因為裝載變數&#x200B;**不是**&#x200B;儲存在設定檔存放區中，而是儲存在資料湖中。 您&#x200B;**必須**&#x200B;使用已匯入設定檔資料的Adobe Experience Platform擷取管道。
+
 ### 我可以使用外部產生的對象來建立其他對象嗎？
 
 是，任何外部產生的對象都會顯示在對象詳細目錄內，並可在[區段產生器](./ui/segment-builder.md)中建立對象時使用。
@@ -80,7 +90,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 ### 我可以在哪裡啟用外部產生的對象？
 
-外部產生的對象可對映至任何RTCDP目的地，並可在Adobe Journey Optimizer行銷活動中使用。
+外部產生的對象可以對應至任何目的地，並可在Adobe Journey Optimizer行銷活動中使用。
 
 ### 外部產生的對象多久才能準備好開始啟用？
 

@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '3693'
+source-wordcount: '3725'
 ht-degree: 3%
 
 ---
@@ -391,7 +391,9 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 >
 >依預設，外部產生的對象資料的有效期限為30天。 如果以任何方式更新或修改對象，則會重設資料有效期。
 >
->此外，如果您的外部產生的對象包含敏感和/或醫療保健相關資訊，則您&#x200B;**必須**&#x200B;在將其啟用至任何目的地之前，先套用必要的資料使用標籤。 由於來自外部產生對象的變數會儲存在資料湖中，而非即時客戶個人檔案中，因此&#x200B;**不應**&#x200B;在CSV檔案中包含同意資料。 如需套用資料使用標籤的詳細資訊，請參閱[管理標籤](../../access-control/abac/ui/labels.md)的檔案。
+>此外，如果您的外部產生的對象包含敏感和/或醫療保健相關資訊，則您&#x200B;**必須**&#x200B;在將其啟用至任何目的地之前，先套用必要的資料使用標籤。 由於來自外部產生對象的變數會儲存在資料湖中，而非即時客戶個人檔案中，因此&#x200B;**不應**&#x200B;在CSV檔案中包含同意資料。
+>
+>如需套用資料使用標籤的詳細資訊，請參閱[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 若要瞭解一般平台上的資料使用標籤，請閱讀[資料使用標籤概觀](../../data-governance/labels/overview.md)。 若要瞭解同意在外部產生的對象中如何運作，請閱讀[對象常見問題集](../faq.md#consent)。
 
 ## 後續步驟
 
