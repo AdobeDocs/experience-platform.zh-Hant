@@ -2,9 +2,9 @@
 description: 使用對象中繼資料範本，以程式設計方式在您的目的地建立、更新或刪除對象。 Adobe提供可擴充的對象中繼資料範本，您可以根據行銷API的規格進行設定。 定義、測試及提交範本後，Adobe會使用該範本來建構對目的地的API呼叫。
 title: 對象中繼資料管理
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
+source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -53,11 +53,10 @@ ht-degree: 0%
 
 如果您的使用案例需要，Adobe工程團隊可以幫助您展開具有自訂欄位的通用範本。
 
-## 設定範例 {#configuration-examples}
 
-本節包含三個一般對象中繼資料設定的範例，以供您參考，以及設定主要區段的說明。 請注意三個設定範例之間的URL、標頭、請求和回應內文差異。 這是因為三個範例平台的行銷API規格不同。
+## 支援的範本事件 {#supported-events}
 
-請注意，在某些範例中，URL會使用`{{authData.accessToken}}`或`{{segment.name}}`等巨集欄位，而在其他範例中，這些欄位會用於標頭或要求內文。 這確實取決於您的行銷API規格。
+下表說明受眾中繼資料範本支援的事件。
 
 | 範本區段 | 說明 |
 |--- |--- |
@@ -66,10 +65,21 @@ ht-degree: 0%
 | `delete` | 包含對您的API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標題、請求和回應內文），以程式設計方式刪除平台中的區段/對象。 |
 | `validate` | 在呼叫合作夥伴API之前，執行範本設定中任何欄位的驗證。 例如，您可以驗證使用者的帳戶ID是否正確輸入。 |
 | `notify` | 僅適用於以檔案為基礎的目的地。 包含對您的API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標頭、請求和回應內文），以通知您檔案匯出成功。 |
+| `createDestination` | 包含對您的API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標頭、請求和回應內文），以程式設計方式在您的平台中建立資料流，並將資訊同步回Adobe Experience Platform。 |
+| `updateDestination` | 包含對您的API進行HTTP呼叫、以程式設計方式更新您平台中的資料流並將資訊同步回Adobe Experience Platform的所有必要元件（URL、HTTP方法、標頭、請求和回應內文）。 |
+| `deleteDestination` | 包含對API進行HTTP呼叫的所有必要元件（URL、HTTP方法、標頭、請求和回應內文），以程式設計方式從您的平台刪除資料流。 |
 
 {style="table-layout:auto"}
 
-### 串流範例1 {#example-1}
+## 設定範例 {#configuration-examples}
+
+本節包含一般對象中繼資料設定的範例，以供您參考。
+
+請注意三個設定範例之間的URL、標題和請求內文差異。 這是因為三個範例平台的行銷API規格不同。
+
+請注意，在某些範例中，URL會使用`{{authData.accessToken}}`或`{{segment.name}}`等巨集欄位，而在其他範例中，這些欄位會用於標頭或要求內文。 其使用方式取決於您的行銷API規格。
+
++++串流範例1
 
 ```json
 {
@@ -178,7 +188,9 @@ ht-degree: 0%
 }
 ```
 
-### 串流範例2 {#example-2}
++++
+
++++串流範例2
 
 ```json
 {
@@ -272,7 +284,9 @@ ht-degree: 0%
 }
 ```
 
-### 串流範例3 {#example-3}
++++
+
++++串流範例3
 
 ```json
 {
@@ -374,8 +388,9 @@ ht-degree: 0%
 }
 ```
 
++++
 
-### 檔案型範例 {#example-file-based}
++++檔案型範例
 
 ```json
 {
@@ -521,6 +536,8 @@ ht-degree: 0%
 }
 ```
 
++++
+
 在[建立對象範本](../metadata-api/create-audience-template.md) API參考中尋找範本中所有引數的說明。
 
 ## 對象中繼資料範本中使用的巨集 {#macros}
@@ -537,5 +554,12 @@ ht-degree: 0%
 | `{{authData.accessToken}}` | 可讓您將存取Token傳遞至API端點。 如果Experience Platform應該使用不會到期的權杖來連線到您的目的地，請使用`{{authData.accessToken}}`，否則請使用`{{oauth2ServiceAccessToken}}`來產生存取權杖。 |
 | `{{body.segments[0].segment.id}}` | 傳回已建立對象的唯一識別碼，作為索引鍵`externalAudienceId`的值。 |
 | `{{error.message}}` | 傳回會在Experience PlatformUI中向使用者顯示的錯誤訊息。 |
+| `{{{segmentEnrichmentAttributes}}}` | 可讓您存取特定對象的所有擴充屬性。  `create`、`update`和`delete`事件支援此巨集。 擴充屬性僅適用於[自訂上傳對象](destination-configuration/schema-configuration.md#external-audiences)。 請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
+| `{{destination.name}}` | 傳回目的地的名稱。 |
+| `{{destination.sandboxName}}` | 傳回設定目的地的Experience Platform沙箱名稱。 |
+| `{{destination.id}}` | 傳回目的地設定的ID。 |
+| `{{destination.imsOrgId}}` | 傳回設定目的地的IMS組織ID。 |
+| `{{destination.enrichmentAttributes}}` | 可讓您存取對應至目的地之所有對象的所有擴充屬性。 `createDestination`、`updateDestination`和`deleteDestination`事件支援此巨集。 擴充屬性僅適用於[自訂上傳對象](destination-configuration/schema-configuration.md#external-audiences)。 請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | 可讓您存取對應至目的地之特定外部對象的擴充屬性。 擴充屬性僅適用於[自訂上傳對象](destination-configuration/schema-configuration.md#external-audiences)。 請參閱[批次對象啟用指南](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 |
 
 {style="table-layout:auto"}
