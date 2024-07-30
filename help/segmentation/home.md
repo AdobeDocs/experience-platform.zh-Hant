@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 分段服務總覽
 description: 瞭解Adobe Experience Platform區段服務，以及此服務在平台生態系統中所扮演的角色。
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1700'
 ht-degree: 14%
 
 ---
@@ -51,6 +51,14 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 >在擴展結構描述時，所有未來上傳都必須據此更新新新增的欄位。 如需自訂[!DNL Experience Data Model] (XDM)的詳細資訊，請造訪[結構描述編輯器教學課程](../xdm/tutorials/create-schema-ui.md)。
 >
 >此外，如果資料集已啟用體驗事件到期值，這可能會影響已建立區段定義的成員資格。 請閱讀[體驗事件有效期](../profile/event-expirations.md)的指南，瞭解此功能如何影響分段的詳細資訊。
+
+### 聯合客群組成 {#fac}
+
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)的指南。
+
+>[!AVAILABILITY]
+>
+>聯合客群組成目前僅開放給某些組織使用 (限量開放使用)。如需詳細資訊，請聯絡您的 Adobe 代表。
 
 ## 評估對象 {#evaluate-segments}
 

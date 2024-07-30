@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Segmentation Service UI指南
 description: 瞭解如何在Adobe Experience Platform UI中建立和管理對象和區段定義。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 1%
+source-wordcount: '1043'
+ht-degree: 2%
 
 ---
 
@@ -89,6 +89,12 @@ ht-degree: 1%
 若要檢視對象的構成方式，請在「[!UICONTROL 對象]」標籤中選取對象名稱。
 
 將會顯示「對象構成」頁面，其中包含構成對象的建置區塊。 如需如何使用對象構成的詳細資訊，請參閱[對象構成UI指南](./audience-composition.md)。
+
+## 聯合客群組成 {#fac}
+
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)的指南。
+
+![在您組織的同盟對象組合中建立的對象清單。](../images/ui/overview/federated-audience-composition.png)
 
 ## 串流區段 {#streaming-segmentation}
 

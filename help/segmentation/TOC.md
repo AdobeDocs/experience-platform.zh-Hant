@@ -5,10 +5,10 @@ breadcrumb-title: 分段服務指南
 user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置對象。
 feature: Segments
 role: User
-source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 43%
+source-wordcount: '191'
+ht-degree: 41%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 43%
    - [Audience Portal](ui/audience-portal.md)
    - [對象構成](ui/audience-composition.md)
    - [區段產生器](ui/segment-builder.md)
+   - [同盟對象構成（可用性限制）](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
    - [帳戶客群](ui/account-audiences.md)
    - [相似客群](ui/lookalike-audiences.md)
    - [潛在客戶對象](ui/prospect-audience.md)
@@ -72,6 +73,6 @@ ht-degree: 43%
    - [匯入和使用外部對象](tutorials/using-external-audiences.md)
    - [建立資料集以匯出資料](tutorials/create-dataset-export-segment.md)
    - [強制區段遵守資料使用規範](tutorials/governance.md)
-- [常見問答](./faq.md)
+- [常見問題](./faq.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

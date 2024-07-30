@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Experience PlatformUI總覽
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 1%
+source-wordcount: '1947'
+ht-degree: 2%
 
 ---
 
@@ -29,13 +29,13 @@ ht-degree: 1%
 
 ![](images/user-guide/homepage-dashboard.png)
 
-**[!UICONTROL 資料集]**&#x200B;區段會顯示貴組織內的資料集數目。 此數字會在建立新資料集時更新。 有關資料集的更多資訊可在[資料集總覽](../catalog/datasets/overview.md)中找到。
+**[!UICONTROL 資料集]**&#x200B;區段會顯示貴組織內的資料集數目。 此數字會在建立新資料集時更新。 您可以在[資料集總覽](../catalog/datasets/overview.md)中找到更多有關資料集的資訊。
 
-**[!UICONTROL 設定檔]**&#x200B;區段會顯示貴組織內具有設定檔的總人數，不包括設定檔片段。 此總人數代表可定址對象總數，每24小時更新一次。 在[即時客戶個人檔案總覽](../profile/home.md)中可以找到更多有關個人檔案的資訊。
+**[!UICONTROL 設定檔]**&#x200B;區段會顯示貴組織內具有設定檔的總人數，不包括設定檔片段。 此總人數代表可定址對象總數，每24小時更新一次。 您可以在[即時客戶個人檔案總覽](../profile/home.md)中找到更多個人檔案的相關資訊。
 
-**[!UICONTROL 區段]**&#x200B;區段會顯示貴組織內建立的區段總數。 此數字會在建立新區段時更新。 如需區段的詳細資訊，請參閱[區段服務總覽](../segmentation/home.md)。
+**[!UICONTROL 區段]**&#x200B;區段會顯示貴組織內建立的區段總數。 此數字會在建立新區段時更新。 您可以在[區段服務總覽](../segmentation/home.md)中找到更多有關區段的資訊。
 
-**[!UICONTROL 目的地]**&#x200B;區段會顯示為組織建立的目的地總數。 此數字會在建立新目的地時更新。 有關目的地的詳細資訊，請參閱[目的地概觀](../destinations/home.md)。
+**[!UICONTROL 目的地]**&#x200B;區段會顯示為組織建立的目的地總數。 此數字會在建立新目的地時更新。 您可以在[目的地概觀](../destinations/home.md)中找到有關目的地的詳細資訊。
 
 ### 最近的資料
 
@@ -43,13 +43,13 @@ ht-degree: 1%
 
 ![](images/user-guide/homepage-recent.png)
 
-**[!UICONTROL 最近建立的資料集]**&#x200B;區段列出貴組織內最近建立的五個資料集。 每次建立新資料集時，此清單都會更新。 您可以從清單中選取資料集，以檢視指定資料集的詳細資訊，或選取「檢視全部&#x200B;**[!UICONTROL 」]**&#x200B;以檢視所有已建立資料集的清單。 有關資料集的更多資訊可在[資料集總覽](../catalog/datasets/overview.md)中找到。
+**[!UICONTROL 最近建立的資料集]**&#x200B;區段列出貴組織內最近建立的五個資料集。 每次建立新資料集時，此清單都會更新。 您可以從清單中選取要檢視的資料集您可以找到有關指定資料集的詳細資訊，或選取「檢視全部&#x200B;**[!UICONTROL 」]**&#x200B;檢視所有已建立資料集的清單。 您可以在[資料集總覽](../catalog/datasets/overview.md)中找到更多有關資料集的資訊。
 
-**[!UICONTROL 最近來源]**&#x200B;區段列出貴組織內最近建立的五個來源聯結器。 每次建立新的來源聯結器時，此清單都會更新。 您可以從清單中選取來源連線，以檢視指定之聯結器的詳細資訊，或選取[檢視全部] ****&#x200B;以檢視所有已建立之來源連線的清單。 在[來源概觀](../sources/home.md)中可以找到更多有關來源的資訊。
+**[!UICONTROL 最近來源]**&#x200B;區段列出貴組織內最近建立的五個來源聯結器。 每次建立新的來源聯結器時，此清單都會更新。 您可以從清單中選取要檢視的來源連線。您可以找到有關指定聯結器的詳細資訊，或選取[檢視全部] **[!UICONTROL 檢視所有已建立來源連線的清單。]**&#x200B;您可以在[來源概觀](../sources/home.md)中找到更多有關來源的資訊。
 
-**[!UICONTROL 最近的區段]**&#x200B;區段列出貴組織內最近建立的五個區段定義。 每次建立新區段定義時，此清單都會更新。 您可以從清單中選取區段定義，以檢視指定區段定義的詳細資訊，或選取「檢視全部」**[!UICONTROL 以檢視所有已建立區段定義的清單。]**&#x200B;如需區段的詳細資訊，請參閱[區段服務總覽](../segmentation/home.md)。
+**[!UICONTROL 最近的區段]**&#x200B;區段列出貴組織內最近建立的五個區段定義。 每次建立新區段定義時，此清單都會更新。 您可以從清單中選取要檢視的區段定義。您可以找到有關指定區段定義的詳細資訊，或選取[檢視全部] ****&#x200B;檢視所有已建立區段定義的清單。 您可以在[區段服務總覽](../segmentation/home.md)中找到更多有關區段的資訊。
 
-**[!UICONTROL 最近建立的目的地]**&#x200B;區段列出貴組織內最近建立的五個目的地。 每次建立新目的地時，此清單都會更新。 您可以從清單中選取一個目的地，以檢視指定目的地的詳細資訊，或選取「檢視全部&#x200B;**[!UICONTROL 」以檢視所有已建立目的地的清單。]**&#x200B;有關目的地的詳細資訊，請參閱[目的地概觀](../destinations/home.md)。
+**[!UICONTROL 最近建立的目的地]**&#x200B;區段列出貴組織內最近建立的五個目的地。 每次建立新目的地時，此清單都會更新。 您可以從清單中選取要檢視的目的地。您可以找到有關指定目的地的詳細資訊，或選取[檢視全部] **[!UICONTROL 檢視所有已建立目的地的清單。]**&#x200B;您可以在[目的地概觀](../destinations/home.md)中找到有關目的地的詳細資訊。
 
 ### 建議學習
 
@@ -97,7 +97,7 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 ### 沙箱
 
-沙箱列緊鄰頂端導覽列下方。 此列顯示您目前用於Platform的沙箱。 您可以在[沙箱總覽](../sandboxes/home.md)中找到有關沙箱的更多資訊。
+沙箱列緊鄰頂端導覽列下方。 此列顯示您目前用於Platform的沙箱。 您可以在[沙箱總覽](../sandboxes/home.md)中找到更多有關沙箱的資訊。
 
 ## 左側導覽 {#left-nav}
 
@@ -117,19 +117,19 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 **[!UICONTROL 首頁]**&#x200B;區段可讓您返回Platform UI首頁。
 
-**[!UICONTROL 工作流程]**&#x200B;區段會顯示在Platform內執行作業的多步驟工作流程清單。 如需工作流程的詳細資訊，請參閱[工作流程概觀](./workflows.md)。
+**[!UICONTROL 工作流程]**&#x200B;區段會顯示在Platform內執行作業的多步驟工作流程清單。 您可以在[工作流程概觀](./workflows.md)中找到工作流程的詳細資訊。
 
 ### [!UICONTROL 連線]
 
-**[!UICONTROL 來源]**&#x200B;區段可讓您建立、更新和刪除來源連線，讓您將資料從外部來源擷取到Platform。 在[來源概觀](../sources/home.md)中可以找到更多有關來源的資訊。
+**[!UICONTROL 來源]**&#x200B;區段可讓您建立、更新和刪除來源連線，讓您將資料從外部來源擷取到Platform。 您可以在[來源概觀](../sources/home.md)中找到更多有關來源的資訊。
 
-**[!UICONTROL 目的地]**&#x200B;區段可讓您建立、更新和刪除目的地，讓您將資料從Platform匯出至許多外部目的地。 有關目的地的詳細資訊，請參閱[目的地概觀](../destinations/home.md)。
+**[!UICONTROL 目的地]**&#x200B;區段可讓您建立、更新和刪除目的地，讓您將資料從Platform匯出至許多外部目的地。 您可以在[目的地概觀](../destinations/home.md)中找到有關目的地的詳細資訊。
 
 ### [!UICONTROL 客戶]
 
-**[!UICONTROL 設定檔]**&#x200B;區段可讓您瀏覽客戶設定檔、檢視設定檔量度、建立和管理合併原則，以及檢視聯合結構描述。 若要進一步瞭解如何使用[!UICONTROL 設定檔]區段，請閱讀[[!DNL Profile] 使用手冊](../profile/ui/user-guide.md)。 在[即時客戶個人檔案總覽](../profile/home.md)中可以找到更多有關即時客戶個人檔案的資訊。
+**[!UICONTROL 設定檔]**&#x200B;區段可讓您瀏覽客戶設定檔、檢視設定檔量度、建立和管理合併原則，以及檢視聯合結構描述。 若要進一步瞭解如何使用[!UICONTROL 設定檔]區段，請閱讀[[!DNL Profile] 使用手冊](../profile/ui/user-guide.md)。 您可以在[即時客戶個人檔案總覽](../profile/home.md)中找到有關即時客戶個人檔案的更多資訊。
 
-**[!UICONTROL 對象]**&#x200B;區段可讓您建立和管理區段定義。 若要進一步瞭解如何使用[!UICONTROL 對象]區段，請閱讀[分段使用手冊](../segmentation/ui/overview.md)。 如需細分服務的詳細資訊，請參閱[細分服務概觀](../segmentation/home.md)。
+**[!UICONTROL 對象]**&#x200B;區段可讓您建立和管理區段定義。 若要進一步瞭解如何使用[!UICONTROL 對象]區段，請閱讀[分段使用手冊](../segmentation/ui/overview.md)。 您可以在[細分服務總覽](../segmentation/home.md)中找到更多有關細分服務的資訊。
 
 **[!UICONTROL 身分]**&#x200B;區段可讓您建立和管理身分名稱空間。 如需[!UICONTROL 身分]區段的詳細資訊，包括身分名稱空間以及如何在Platform UI中使用身分的資訊，請參閱[身分名稱空間概觀](../identity-service/features/namespaces.md)。
 
@@ -137,25 +137,38 @@ Platform UI的頂端導覽列會顯示您目前登入的組織，並提供數個
 
 **[!UICONTROL 原則]**&#x200B;區段可讓您建立和管理資料使用原則。 若要進一步瞭解如何使用原則區段，請參閱[資料使用原則使用手冊](../data-governance/policies/user-guide.md)。 您可以在[資料使用原則概觀](../data-governance/policies/overview.md)中找到更多有關資料使用原則的資訊。
 
-**[!UICONTROL 要求]**&#x200B;區段可讓您建立和管理隱私權要求。 請注意，您必須加入允許清單才能存取Privacy ServiceUI。 若要進一步瞭解如何使用「要求」區段，請閱讀[Privacy Service使用手冊](../privacy-service/ui/user-guide.md)。 有關Privacy Service的更多資訊可在[Privacy Service概觀](../privacy-service/home.md)中找到。
+**[!UICONTROL 要求]**&#x200B;區段可讓您建立和管理隱私權要求。 請注意，您必須加入允許清單才能存取Privacy ServiceUI。 若要進一步瞭解如何使用「要求」區段，請閱讀[Privacy Service使用手冊](../privacy-service/ui/user-guide.md)。 您可以在[Privacy Service概觀](../privacy-service/home.md)中找到有關Privacy Service的更多資訊。
 
 ### [!UICONTROL 資料科學]
 
 **[!UICONTROL Notebooks]**&#x200B;區段提供JupyterLab的存取權，此互動式開發環境可讓您探索、分析您的資料並將其模型化。 若要進一步瞭解如何使用Notebooks區段，請閱讀[JupyterLab使用手冊](../data-science-workspace/jupyterlab/overview.md)。 您可以在[資料科學Workspace概觀](../data-science-workspace/home.md)中找到更多有關Workspace的資訊
 
-**[!UICONTROL 模型]**&#x200B;區段可讓您使用機器學習和人工智慧來建立、開發、訓練及調整模型以進行預測。 有關[模型]區段的詳細資訊，請參閱[訓練與評估模型](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)的教學課程。
+**[!UICONTROL 模型]**&#x200B;區段可讓您使用機器學習和人工智慧來建立、開發、訓練及調整模型以進行預測。 您可以在有關[訓練與評估模型](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)的教學課程中，找到有關「模型」區段的詳細資訊。
 
-**[!UICONTROL 服務]**&#x200B;區段可讓您管理已發佈的模型，以進行排程的訓練和評分，或使用Adobe的Intelligent Services （一組提供即時、個人化客戶體驗的AI服務）。 在[將模型發佈為服務教學課程](../data-science-workspace/models-recipes/publish-model-service-ui.md)中，可以找到有關「服務」區段的更多資訊。
+**[!UICONTROL 服務]**&#x200B;區段可讓您管理已發佈的模型，以進行排程的訓練和評分，或使用Adobe的Intelligent Services （一組提供即時、個人化客戶體驗的AI服務）。 您可以在[將模型發佈為服務教學課程](../data-science-workspace/models-recipes/publish-model-service-ui.md)中找到有關「服務」區段的詳細資訊。
 
 ### [!UICONTROL 資料管理]
 
-「**[!UICONTROL 結構描述]**」區段可讓您建立和管理Experience Data Model (XDM)結構描述。 若要深入瞭解結構描述，請閱讀有關[建立結構描述](../xdm/tutorials/create-schema-ui.md)的教學課程。 有關XDM的更多資訊可在[XDM系統總覽](../xdm/home.md)中找到。
+「**[!UICONTROL 結構描述]**」區段可讓您建立和管理Experience Data Model (XDM)結構描述。 若要深入瞭解結構描述，請閱讀有關[建立結構描述](../xdm/tutorials/create-schema-ui.md)的教學課程。 您可以在[XDM系統總覽](../xdm/home.md)中找到更多有關XDM的資訊。
 
-**[!UICONTROL 資料集]**&#x200B;區段可讓您建立和管理資料集。 在[資料集使用手冊](../catalog/datasets/user-guide.md)中可以找到更多有關資料集的資訊。
+**[!UICONTROL 資料集]**&#x200B;區段可讓您建立和管理資料集。 您可以在[資料集使用手冊](../catalog/datasets/user-guide.md)中找到更多有關資料集的資訊。
 
-**[!UICONTROL 查詢]**&#x200B;區段可讓您建立和管理查詢、記錄Adobe Experience Platform查詢服務所進行的SQL查詢，以及檢視您的[!DNL PostgreSQL]認證。 在[查詢服務使用手冊](../query-service/ui/overview.md)中可以找到更多關於查詢的資訊。
+**[!UICONTROL 查詢]**&#x200B;區段可讓您建立和管理查詢、記錄Adobe Experience Platform查詢服務所進行的SQL查詢，以及檢視您的[!DNL PostgreSQL]認證。 您可以在[查詢服務使用手冊](../query-service/ui/overview.md)中找到更多關於查詢的資訊。
 
 **[!UICONTROL 監視]**&#x200B;區段可讓您監視批次和串流擷取。 您可以在[監視資料擷取使用手冊](../ingestion/quality/monitor-data-ingestion.md)中找到更多有關監視的資訊。
+
+### [!UICONTROL 同盟資料] （可用性限制）
+
+**[!UICONTROL 模型]**&#x200B;區段可讓您設計和建立定義資料結構、關係和限制的資料模型和結構描述。 您可以在[同盟對象構成使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas)中找到有關資料模型和結構描述的詳細資訊。
+
+**[!UICONTROL 稽核軌跡]**&#x200B;區段提供已即時對您的環境進行的所有動作和事件的詳細時間順序記錄。 您可以在[同盟對象組合使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail)中找到更多有關稽核軌跡的資訊。
+
+
+**[!UICONTROL 同盟資料庫]**&#x200B;區段可讓您將Adobe Experience Platform連線至您的企業資料倉儲。 您可以在[同盟對象組合使用手冊](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db)中找到有關連線到同盟資料庫的詳細資訊。
+
+>[!AVAILABILITY]
+>
+>聯合客群組成目前僅開放給某些組織使用 (限量開放使用)。如需詳細資訊，請聯絡您的 Adobe 代表。
 
 ### [!UICONTROL 決策]
 

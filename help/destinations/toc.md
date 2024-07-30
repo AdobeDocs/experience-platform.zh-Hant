@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1248'
 ht-degree: 5%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 5%
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [同盟對象組合連線（可用性限制）](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising目的地{#advertising}
       * [Advertising目的地概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud連線](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -303,5 +304,5 @@ ht-degree: 5%
       * [在本機環境中使用文字編輯器建立目的地檔案頁面](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [檔案自助服務範本](./destination-sdk/docs-framework/self-service-template.md)
       * [製作最佳實務](./destination-sdk/docs-framework/authoring-best-practices.md)
-* [常見問答](./destinations-faq.md)
+* [常見問題](./destinations-faq.md)
 * [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

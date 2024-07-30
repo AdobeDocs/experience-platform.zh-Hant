@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
+source-wordcount: '3826'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 - [建立對象](#create-audience)
    - [使用區段產生器建立受眾](#segment-builder)
    - [使用對象構成來建立對象](#audience-composition)
+   - [使用Federated Audience Composition，以使用您現有資料倉儲中的資料來建立對象](#fac) （可用性限制）
 - [匯入外部產生的對象](#import-audience)
 
 若要開啟Audience Portal，請選取「細分」區段內的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。
@@ -339,6 +340,12 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 選取&#x200B;**[!UICONTROL 建置規則]**&#x200B;即可前往區段產生器。 此工作區提供直覺式控制項來建置和編輯區段定義，例如用來表示資料屬性的拖放圖磚。 若要深入瞭解如何建立區段定義，請參閱[區段產生器指南](./segment-builder.md)
 
 ![已顯示[區段產生器]工作區。](../images/ui/audience-portal/segment-builder.png)
+
+### 聯合客群組成 {#fac}
+
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)的指南。
+
+![在您組織的同盟對象組合中建立的對象清單。](../images/ui/overview/federated-audience-composition.png)
 
 ## 匯入對象 {#import-audience}
 
