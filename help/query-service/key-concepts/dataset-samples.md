@@ -2,7 +2,7 @@
 title: 資料集範例
 description: 查詢服務範例資料集可讓您對巨量資料執行探索性查詢，並大幅減少處理時間，但代價是查詢準確性。 本指南提供如何管理範例以進行近似查詢處理的資訊
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 0%
@@ -100,7 +100,7 @@ SELECT * FROM example_dataset_name WITHAPPROXIMATE;
 刪除作業可讓您在達到五個資料集範例的最大限制後，建立新範例。
 
 ```sql
-DROP TABLE SAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
+DROP TABLESAMPLE x5e5cd8ea0a83c418a8ef0928_uniform_2_0_percent_bnhmc;
 ```
 
 >[!NOTE]

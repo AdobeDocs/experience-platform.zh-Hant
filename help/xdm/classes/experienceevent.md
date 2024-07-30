@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM ExperienceEvent類別
 description: 瞭解XDM ExperienceEvent類別和事件資料模型化的最佳實務。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5537485206c1625ca661d6b33f7bba08538a0fa3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2761'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,7 @@ Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配�
 | `advertising.timePlayed` | 此事件會追蹤使用者在特定的定時媒體資產上所花費的時間。 |
 | `application.close` | 此事件會追蹤應用程式何時關閉或傳送到背景。 |
 | `application.launch` | 此事件會追蹤應用程式啟動或進入前景的時間。 |
+| `click` | **已棄用**&#x200B;而改用`decisioning.propositionInteract`。 |
 | `commerce.backofficeCreditMemoIssued` | 此事件會追蹤何時向客戶發出信用通知。 |
 | `commerce.backofficeOrderCancelled` | 此事件會追蹤先前起始的購買程式在完成前何時終止。 |
 | `commerce.backofficeOrderItemsShipped` | 此事件會追蹤購買的專案實際運送給客戶的時間。 |
@@ -119,11 +120,12 @@ Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配�
 | `commerce.productViews` | 此事件會追蹤產品何時收到一或多個檢視。 |
 | `commerce.purchases` | 此事件會追蹤何時接受訂單。 這是商業轉換中唯一需要的動作。 購買事件必須有參考的產品清單。 |
 | `commerce.saveForLaters` | 此事件會追蹤產品清單何時儲存以供日後使用，例如產品願望清單。 |
-| `decisioning.propositionDisplay` | 此事件會追蹤何時向個人顯示決策主張。 |
-| `decisioning.propositionDismiss` | 此事件會追蹤何時已決定不要與已呈現的優惠互動。 |
-| `decisioning.propositionInteract` | 此事件會追蹤個人何時與決策主張互動。 |
+| `decisioning.propositionDisplay` | 當Web SDK自動傳送頁面上所顯示內容的相關資訊時，就會使用此事件。 不過，如果您已透過其他方式（例如頁面點選的頂端和底部）包含顯示資訊，則不需要此事件型別。 在頁面點選的底部，您可以選擇任何您喜歡的事件型別。 |
+| `decisioning.propositionDismiss` | 當Adobe Journey Optimizer應用程式內訊息或內容卡被解除時，會使用此事件型別。 |
+| `decisioning.propositionFetch` | 用於表示事件主要是為了擷取決策。 Adobe Analytics會自動刪除此事件。 |
+| `decisioning.propositionInteract` | 此事件型別用於追蹤個人化內容上的互動，例如點按。 |
 | `decisioning.propositionSend` | 此事件會追蹤何時決定傳送建議或優惠給潛在客戶以供考慮。 |
-| `decisioning.propositionTrigger` | 此事件會追蹤主張程式的啟用情況。 已發生特定條件或動作來提示顯示優惠方案。 |
+| `decisioning.propositionTrigger` | [Web SDK](../../web-sdk/home.md)會將此型別的事件儲存在本機儲存體中，但不會傳送至Experience Edge。 每次滿足規則集時，就會產生事件並儲存在本機儲存體中（如果已啟用該設定）。 |
 | `delivery.feedback` | 此事件會追蹤傳送的意見反應事件，例如電子郵件傳送。 |
 | `directMarketing.emailBounced` | 此事件會追蹤傳送給個人的電子郵件何時退回。 |
 | `directMarketing.emailBouncedSoft` | 此事件會追蹤傳送給個人的電子郵件何時軟跳出。 |
@@ -132,6 +134,7 @@ Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配�
 | `directMarketing.emailOpened` | 此事件會追蹤使用者何時開啟行銷電子郵件。 |
 | `directMarketing.emailSent` | 此事件會追蹤行銷電子郵件何時已傳送給個人。 |
 | `directMarketing.emailUnsubscribed` | 此事件會追蹤個人何時取消訂閱行銷電子郵件。 |
+| `display` | **已棄用**&#x200B;而改用`decisioning.propositionDisplay`。 |
 | `inappmessageTracking.dismiss` | 此事件會追蹤應用程式內訊息何時被關閉。 |
 | `inappmessageTracking.display` | 此事件會追蹤何時顯示應用程式內訊息。 |
 | `inappmessageTracking.interact` | 此事件會追蹤應用程式內訊息何時與互動。 |
@@ -146,33 +149,34 @@ Adobe提供數個標準欄位群組以與[!DNL XDM ExperienceEvent]類別搭配�
 | `leadOperation.statusInCampaignProgressionChanged` | 此事件會追蹤潛在客戶在行銷活動中的狀態何時已變更。 |
 | `listOperation.addToList` | 此事件會追蹤何時將個人新增至行銷清單。 |
 | `listOperation.removeFromList` | 此事件會追蹤何時將個人從行銷名單移除。 |
-| `media.adBreakComplete` | 此事件會追蹤`adBreakComplete`事件何時發生。 此事件會在廣告插播開始時觸發。 |
-| `media.adBreakStart` | 此事件會追蹤`adBreakStart`事件何時發生。 此事件會在廣告插播結束時觸發。 |
-| `media.adComplete` | 此事件會追蹤`adComplete`事件何時發生。 當廣告完成時，就會觸發此事件。 |
-| `media.adSkip` | 此事件會追蹤`adSkip`事件何時發生。 此事件會在略過廣告時觸發。 |
-| `media.adStart` | 此事件會追蹤`adStart`事件何時發生。 當廣告開始時，就會觸發此事件。 |
-| `media.bitrateChange` | 此事件會追蹤`bitrateChange`事件何時發生。 當位元速率發生變更時，就會觸發此事件。 |
-| `media.bufferStart` | 此事件會追蹤`bufferStart`事件何時發生。 媒體開始緩衝時會觸發此事件。 |
-| `media.chapterComplete` | 此事件會追蹤`chapterComplete`事件何時發生。 此事件會在媒體中章節完成時觸發。 |
-| `media.chapterSkip` | 此事件會追蹤`chapterSkip`事件何時發生。 當使用者向前或向後跳到媒體內容中的另一個區段或章節時，就會觸發此事件。 |
-| `media.chapterStart` | 此事件會追蹤`chapterStart`事件何時發生。 此事件會在媒體內容中的特定區段或章節開始時觸發。 |
+| `media.adBreakComplete` | 此事件代表廣告插播完成。 |
+| `media.adBreakStart` | 此事件代表廣告插播開始。 |
+| `media.adComplete` | 此事件代表廣告完成。 |
+| `media.adSkip` | 此事件會在廣告被略過時發出訊號。 |
+| `media.adStart` | 此事件代表廣告開始。 |
+| `media.bitrateChange` | 這個事件會在位元速率發生變更時發出訊號。 |
+| `media.bufferStart` | 緩衝開始時會傳送`media.bufferStart`事件型別。 沒有特定的`bufferResume`事件型別；在`bufferStart`事件後傳送`play`事件時，緩衝會被視為已繼續。 |
+| `media.chapterComplete` | 此事件代表章節結束。 |
+| `media.chapterSkip` | 當使用者向前或向後跳到另一個區段或章節時，就會觸發此事件。 |
+| `media.chapterStart` | 此事件代表章節開始。 |
 | `media.downloaded` | 此事件會追蹤媒體下載內容何時發生。 |
-| `media.error` | 此事件會追蹤`error`事件何時發生。 當媒體播放期間發生錯誤或問題時，就會觸發此事件。 |
-| `media.pauseStart` | 此事件會追蹤`pauseStart`事件何時發生。 當使用者起始媒體播放暫停的動作時，就會觸發此事件。 |
-| `media.ping` | 此事件會追蹤`ping`事件何時發生。 這可以驗證媒體資源的可用性。 |
-| `media.play` | 此事件會追蹤`play`事件何時發生。 此事件會在媒體內容播放時觸發，表示使用者使用中的內容。 |
-| `media.sessionComplete` | 此事件會追蹤`sessionComplete`事件何時發生。 此事件會標籤媒體播放工作階段的結尾。 |
-| `media.sessionEnd` | 此事件會追蹤`sessionEnd`事件何時發生。 此事件表示媒體工作階段的結論。 此結論可能涉及關閉媒體播放器或停止播放。 |
-| `media.sessionStart` | 此事件會追蹤`sessionStart`事件何時發生。 此事件標示媒體播放工作階段的開始。 它會在使用者開始播放媒體檔案時觸發。 |
-| `media.statesUpdate` | 此事件會追蹤`statesUpdate`事件何時發生。 播放器狀態追蹤功能可附加至音訊或視訊資料流。 標準狀態為：fullscreen、mute、closedCaptioning、pictureInPicture和inFocus。 |
+| `media.error` | 此事件代表媒體播放期間發生錯誤。 |
+| `media.pauseStart` | 此事件會追蹤`pauseStart`事件何時發生。 當使用者起始媒體播放暫停的動作時，就會觸發此事件。 沒有繼續事件型別。 在`pauseStart`之後傳送播放事件時會推斷為繼續。 |
+| `media.ping` | `media.ping`事件型別用於表示持續播放狀態。 針對主要內容，在播放期間必須每10秒傳送此事件，從播放開始後的10秒開始。 對於廣告內容，在廣告追蹤期間必須每秒傳送一次。 Ping事件不應在要求內文中包含引數對應。 |
+| `media.play` | 當播放器從其他狀態(例如`buffering,` `paused` （當使用者繼續時）或`error` （當復原時）)轉換為`playing`狀態時（包括自動播放等情況），會傳送`media.play`事件型別。 此事件由播放器的`on('Playing')`回呼觸發。 |
+| `media.sessionComplete` | 到達主要內容的結尾時，會傳送此事件。 |
+| `media.sessionEnd` | `media.sessionEnd`事件型別會通知Media Analytics後端，在使用者放棄檢視且不太可能返回時立即關閉工作階段。 如果未傳送此事件，工作階段將在閒置10分鐘或播放點未移動30分鐘後逾時。 將會忽略任何使用該工作階段ID的後續媒體呼叫。 |
+| `media.sessionStart` | `media.sessionStart`事件型別會隨工作階段起始呼叫傳送。 在收到回應時，將會從Location標題擷取工作階段ID，並使用於對收集伺服器的所有後續事件呼叫。 |
+| `media.statesUpdate` | 此事件會追蹤`statesUpdate`事件何時發生。 播放器狀態追蹤功能可附加至音訊或視訊資料流。 標準狀態為： `fullscreen`、`mute`、`closedCaptioning`、`pictureInPicture`和`inFocus`。 |
 | `opportunityEvent.addToOpportunity` | 此事件會追蹤何時將個人新增至商機。 |
 | `opportunityEvent.opportunityUpdated` | 此事件會追蹤商機何時更新。 |
 | `opportunityEvent.removeFromOpportunity` | 此事件會追蹤何時將個人從機會中移除。 |
+| `personalization.request` | **已棄用**&#x200B;而改用`decisioning.propositionFetch`。 |
 | `pushTracking.applicationOpened` | 此事件會追蹤使用者何時從推播通知開啟應用程式。 |
 | `pushTracking.customAction` | 此事件會追蹤使用者何時在推播通知中選取自訂動作。 |
 | `web.formFilledOut` | 此事件會追蹤某人何時在網頁上填寫表單。 |
-| `web.webinteraction.linkClicks` | 此事件會追蹤何時已選取一次或多次連結。 |
-| `web.webpagedetails.pageViews` | 此事件會追蹤網頁何時收到一或多個檢視。 |
+| `web.webinteraction.linkClicks` | 事件代表Web SDK已自動記錄連結點選。 |
+| `web.webpagedetails.pageViews` | 此事件型別是將點選標示為頁面檢視的標準方法。 |
 | `location.entry` | 此事件會追蹤使用者或裝置進入特定位置。 |
 | `location.exit` | 此事件會追蹤人員或裝置從特定位置離開。 |
 
