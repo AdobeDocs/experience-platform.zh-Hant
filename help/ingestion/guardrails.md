@@ -3,9 +3,9 @@ keywords: Experience Platform；疑難排解；護欄；指南；
 title: 資料擷取的護欄
 description: 瞭解Adobe Experience Platform中資料擷取的護欄。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: a574e30a12f56618e8bfaff988aa095025b36a28
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,9 @@ ht-degree: 0%
 | 使用批次來源擷取資料湖 | <ul><li>您可以使用批次擷取來源（例如[!DNL Azure Blob]、[!DNL Amazon S3]和[!DNL SFTP]），每小時最多可擷取200 GB的資料至資料湖。</li><li>批次大小應介於256 MB和100 GB之間。 這同時適用於未壓縮和壓縮的資料。 若在資料湖中解壓縮壓縮壓縮的資料，將套用這些限制。</li><li>每個批次的最大檔案數為1500。</li><li>檔案或資料夾的最小大小為1個位元組。 您無法擷取0位元組大小的檔案或資料夾。</li></ul> | 請閱讀[來源概觀](../sources/home.md)，瞭解您可以用於資料擷取的來源目錄。 |
 | 批次內嵌至設定檔 | <ul><li>記錄類別的大小上限為100 KB （硬式）。</li><li>ExperienceEvent類別的大小上限為10 KB （硬式）。</li></ul> | |
 | 每天擷取的設定檔或ExperienceEvent批次數量 | **每天擷取的Profile或ExperienceEvent批次數量上限為90。**&#x200B;這表示每天擷取的Profile和ExperienceEvent批次總數不能超過90。 擷取其他批次將會影響系統效能。 | 這是軟性限制。 雖然可能會超過軟性限制，但軟性限制提供系統效能的建議指引。 |
+| 加密的資料擷取 | 支援的單一加密檔案大小上限為1 GB。 例如，雖然您可以在單一資料流執行中擷取2GB以上的資料，但資料流執行中的個別檔案都不能超過1GB。 | 如需詳細資訊，請參閱[加密資料擷取API指南](../sources/tutorials/api/encrypt-data.md)。 |
+
+{style="table-layout:auto"}
 
 ## 串流擷取的護欄
 
@@ -46,6 +49,8 @@ ht-degree: 0%
 | 擷取型別 | 准則 | 附註 |
 | --- | --- | --- |
 | 串流來源 | <ul><li>最大記錄大小為1 MB，建議大小為10 KB。</li><li>擷取至資料湖時，串流來源支援每秒有4000到5000個請求。 除了現有的來源連線外，這同時適用於新建立的來源連線。 **注意**：串流資料最多可能需要30分鐘才能完全處理至資料湖。</li><li>串流來源在將資料擷取至設定檔或串流細分時，支援每秒最多1500個請求。</li></ul> | 串流來源（例如[!DNL Kafka]、[!DNL Azure Event Hubs]和[!DNL Amazon Kinesis]）不使用[!DNL Data Collection Core Service] (DCCS)路由，而且可能有不同的輸送量限制。 如需您可以用於資料擷取的來源目錄，請參閱[來源概觀](../sources/home.md)。 |
+
+{style="table-layout:auto"}
 
 ## 後續步驟
 
