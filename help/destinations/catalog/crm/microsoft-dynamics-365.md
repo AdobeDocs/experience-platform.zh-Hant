@@ -4,7 +4,7 @@ title: Microsoft Dynamics 365連線
 description: Microsoft Dynamics 365目的地可讓您匯出帳戶資料，並在Microsoft Dynamics 365中根據您的業務需求加以啟用。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 1%
@@ -170,9 +170,10 @@ ht-degree: 1%
      ![平台UI熒幕擷取畫面顯示contactid的目標對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * 在您的XDM設定檔結構描述與[!DNL Dynamics 365]執行個體之間新增下列對應：
-|XDM設定檔結構描述|[!DNL Dynamics 365]執行個體| 必填|
-|—|—|—|
-|`contactid`|`contactid`| 是 |
+
+     | XDM設定檔結構描述 | [!DNL Dynamics 365]執行個體 | 強制 |
+     |---|---|---|
+     | `contactid` | `contactid` | 是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項可將您的來源欄位對應到您在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中定義的自訂屬性。 如需支援屬性的完整清單，請參閱[[!DNL Dynamics 365] 檔案](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties)。
      ![平台UI熒幕擷圖顯示電子郵件的目標對應。](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
@@ -183,14 +184,16 @@ ht-degree: 1%
      > * 此外，如果您有對應至[!DNL Dynamics 365] [日期或時間戳記](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest)目標欄位的日期或時間戳記來源欄位，請確定對應的值不是空的。 如果匯出的欄位值為空，您將會遇到&#x200B;*`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`*&#x200B;錯誤訊息，而且將不會更新資料。 這是[!DNL Dynamics 365]限制。
 
    * 例如，根據您要更新的值，在您的XDM設定檔結構描述與[!DNL Dynamics 365]執行個體之間新增下列對應：
-|XDM設定檔結構描述|[!DNL Dynamics 365]執行個體|
-|—|—|
-|`person.name.firstName`|`firstname`|
-|`person.name.lastName`|`lastname`|
-|`personalEmail.address`|`emailaddress1`|
+
+     | XDM設定檔結構描述 | [!DNL Dynamics 365]執行個體 |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * 以下顯示使用這些對應的範例：
-     ![顯示目標對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![顯示目標對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### 排程對象匯出和範例 {#schedule-audience-export-example}
 

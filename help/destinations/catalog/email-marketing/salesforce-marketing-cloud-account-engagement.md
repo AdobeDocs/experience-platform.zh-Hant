@@ -3,7 +3,7 @@ title: SalesforceMarketing Cloud帳戶參與度
 description: 瞭解如何使用SalesforceMarketing Cloud帳戶參與（前身為Pardot）目的地匯出您的帳戶資料，並在SalesforceMarketing Cloud帳戶參與中根據您的業務需求將其啟用。
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 2%
@@ -153,11 +153,12 @@ ht-degree: 2%
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取身分，或選擇&#x200B;**[!UICONTROL 選取自訂屬性]**&#x200B;類別，並從可用結構描述的[[!DNL Prospect API fields]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#fields)清單中指定。
 
    * 重複這些步驟，在您的XDM設定檔結構描述與[!DNL Marketing Cloud Account Engagement]之間新增任何對應：
-| Source欄位 | 目標欄位 | 強制 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: email`| 是 |
-|`xdm: MailingAddress.city`|`xdm: city`| |
-|`xdm: person.name.firstName`|`Attribute: firstName`| |
+
+     | 來源欄位 | 目標欄位 | 強制 |
+     | --- | --- | --- |
+     | `IdentityMap: Email` | `Identity: email` | 是 |
+     | `xdm: MailingAddress.city` | `xdm: city` | |
+     | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * 具有上述對應的範例如下所示：
      ![顯示目標對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)

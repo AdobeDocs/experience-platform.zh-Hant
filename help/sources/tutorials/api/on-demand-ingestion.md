@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；流程服務；
 title: 使用流程服務API建立隨選擷取的流程執行
 description: 瞭解如何使用流程服務API建立隨選擷取的流程執行
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 1%
@@ -104,6 +104,7 @@ curl -X POST \
 | --- | --- |
 | `id` | 新建立的資料流執行ID。 請參閱[擷取流程規格](../api/collect/database-nosql.md#specs)的指南，以取得資料表式執行規格的詳細資訊。 |
 | `etag` | 流程執行的資源版本。 |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |

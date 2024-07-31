@@ -3,7 +3,7 @@ title: Mailchimp標籤
 description: Mailchimp標籤目的地可讓您匯出帳戶資料，並在Mailchimp中將其啟用，以便與聯絡人互動。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 2%
@@ -175,9 +175,10 @@ API金鑰的範例為`0123456789abcdef0123456789abcde-us14`。
    ![Platform UI熒幕擷取畫面，將Target欄位作為來自身分名稱空間的電子郵件。](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    您的XDM設定檔結構描述與[!DNL Mailchimp Tags]之間的對應將會如下所示：
-| Source欄位 | 目標欄位 | 強制 |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`| 是 |
+
+   | 來源欄位 | 目標欄位 | 強制 |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | 是 |
 
    具有已完成對應的範例如下所示：
    ![顯示欄位對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)

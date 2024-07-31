@@ -3,7 +3,7 @@ keywords: crm；CRM；CRM目的地；外聯；外聯crm目的地
 title: 外展連線
 description: 外展目的地可讓您匯出帳戶資料，並在外展內根據您的業務需求啟用資料。
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 2%
@@ -155,18 +155,20 @@ ht-degree: 2%
      ![平台UI熒幕擷取畫面顯示使用ExpancationId的Target對應。](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * 在您的XDM設定檔結構描述與[!DNL Outreach]執行個體之間新增下列對應：
-|XDM設定檔結構描述|[!DNL Outreach]執行個體| 必填|
-|—|—|—|
-|`Oid`|`OutreachId`| 是 |
+
+     | XDM設定檔結構描述 | [!DNL Outreach]執行個體 | 強制 |
+     |---|---|---|
+     | `Oid` | `OutreachId` | 是 |
 
    * **[!UICONTROL 選取自訂屬性]**：選取此選項可將您的來源欄位對應到您在[!UICONTROL 屬性名稱]欄位中定義的自訂屬性。 如需支援屬性的完整清單，請參閱[[!DNL Outreach] 潛在客戶檔案](https://api.outreach.io/api/v2/docs#prospect)。
      ![平台UI熒幕擷圖顯示使用LastName的目標對應。](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * 例如，根據您要更新的值，在您的XDM設定檔結構描述與[!DNL Outreach]執行個體之間新增下列對應：
-|XDM設定檔結構描述|[!DNL Outreach]執行個體|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | XDM設定檔結構描述 | [!DNL Outreach]執行個體 |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * 以下顯示使用這些對應的範例：
      ![顯示目標對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/outreach/mappings.png)

@@ -3,7 +3,7 @@ title: SAP Commerce連線
 description: 使用SAP Commerce目標聯結器更新SAP帳戶中的客戶記錄。
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 3%
@@ -194,6 +194,7 @@ ht-degree: 3%
 #### 對應`customerNumberSAP`身分
 
 `customerNumberSAP`識別是這個目的地的必要對應。 請依照下列步驟進行對應：
+
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
    ![Platform UI熒幕擷取畫面，其中反白顯示新增對應按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取`customerNumberSAP`。
@@ -211,6 +212,7 @@ ht-degree: 3%
 #### 對應屬性
 
 若要在XDM設定檔結構描述與[!DNL SAP Subscription Billing]帳戶之間新增任何其他要更新的屬性，請重複下列步驟：
+
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您現在可以在畫面上看到新的對應列。
    ![Platform UI熒幕擷取畫面，其中反白顯示新增對應按鈕。](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**類別並選取XDM屬性。
@@ -302,8 +304,9 @@ ht-degree: 3%
 對每個已啟用的平台對象重複此章節。
 
 根據上方顯示的影像，您已選取兩個對象，對應將會如下所示：
-| [!DNL SAP Commerce]對象名稱 | [!DNL SAP Subscription Billing] **[!UICONTROL 參考型別]** | [!DNL SAP Commerce] **[!UICONTROL 對應ID]**值 |
-| — | — | — |
+
+| [!DNL SAP Commerce]對象名稱 | [!DNL SAP Subscription Billing] **[!UICONTROL 參考型別]** | [!DNL SAP Commerce] **[!UICONTROL 對應ID]**&#x200B;值 |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | SAP對象2 | `SAP_2` | `SAP_2` |
 

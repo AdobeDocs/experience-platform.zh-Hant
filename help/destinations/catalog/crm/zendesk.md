@@ -3,10 +3,10 @@ title: Zendesk連線
 description: Zendesk目的地可讓您匯出帳戶資料，並在Zendesk中根據您的業務需求加以啟用。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -121,12 +121,14 @@ ht-degree: 2%
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別並選取XDM屬性，或選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取身分。
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取識別名稱空間]**&#x200B;類別並選取目標識別，或選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別並選取其中一個支援的結構描述屬性。
+
    * 重複這些步驟以新增下列必要對應，您也可以新增任何其他要在XDM設定檔結構描述與[!DNL Zendesk]執行個體之間更新的屬性：
-|Source欄位|目標欄位| 必填|
-|—|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`| 是 |
-|`IdentityMap: Email`|`Identity: email`| 是 |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | 來源欄位 | 目標欄位 | 強制 |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | 是 |
+     | `IdentityMap: Email` | `Identity: email` | 是 |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * 以下顯示使用這些對應的範例：
      ![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/crm/zendesk/mappings.png)

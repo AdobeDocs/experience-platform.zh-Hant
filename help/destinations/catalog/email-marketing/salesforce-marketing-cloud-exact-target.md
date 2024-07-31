@@ -2,7 +2,7 @@
 title: (API) SalesforceMarketing Cloud連線
 description: SalesforceMarketing Cloud（先前稱為ExactTarget）目的地可讓您匯出帳戶資料，並在SalesforceMarketing Cloud中根據您的業務需求加以啟用。
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2895'
 ht-degree: 1%
@@ -241,7 +241,8 @@ ht-degree: 1%
 [!DNL Salesforce Marketing Cloud]的範例屬性顯示如下：
 ![顯示屬性的SalesforceMarketing CloudUI熒幕擷圖。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
-以下顯示指示[!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 對應ID]**位置的範例：
+以下顯示指示[!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 對應ID]**&#x200B;位置的範例：
+
 ![顯示排程對象匯出的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 如圖所示，[!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 對應ID]**&#x200B;應完全符合[!DNL Salesforce Marketing Cloud] **[!UICONTROL 欄位名稱]**&#x200B;中指定的值。
@@ -249,8 +250,9 @@ ht-degree: 1%
 對每個已啟動的Platform區段重複此章節。
 
 以上圖影像為基礎的典型範例可能是。
+
 | [!DNL (API) Salesforce Marketing Cloud]區段名稱 | [!DNL Salesforce Marketing Cloud] **[!UICONTROL 欄位名稱]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL 對應ID]** |
-| — | — | — |
+| --- | --- | --- |
 | salesforce mc audience 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
 

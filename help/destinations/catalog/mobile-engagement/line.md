@@ -4,7 +4,7 @@ title: LINE連線
 description: LINE目的地可讓您新增設定檔至平台對象，並為連線的使用者提供個人化體驗。
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 2%
@@ -121,8 +121,9 @@ ht-degree: 2%
 若要將對象資料從Adobe Experience Platform正確傳送至[!DNL LINE]目的地，您必須完成欄位對應步驟。 對應包括在Platform帳戶中的Experience Data Model (XDM)結構描述欄位與來自目標目的地的對應對應專案之間建立連結。 若要將您的XDM欄位正確對應到[!DNL LINE]目的地欄位，請遵循下列步驟：
 
 根據您的來源身分，必須對應以下目標身分名稱空間：
-| 目標身分 | Source欄位 | 目標欄位 |
-| — | — | — |
+
+| 目標身分 | 來源欄位 | 目標欄位 |
+| --- | --- | --- |
 | 廣告商ID (IFA) | `IDFA`或`GAID` | `LineId` |
 | LINE使用者ID | `UserID` | `LineId` |
 

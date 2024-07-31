@@ -3,10 +3,10 @@ title: (API) Oracle Eloqua連線
 description: (API) Oracle Eloqua目的地可讓您匯出帳戶資料，並在Oracle Eloqua中根據您的業務需求加以啟用。
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -148,19 +148,21 @@ ht-degree: 3%
 1. 在&#x200B;**[!UICONTROL 對應]**&#x200B;步驟中，選取&#x200B;**[!UICONTROL 新增對應]**。 您會在畫面上看到新的對應列。
 1. 在&#x200B;**[!UICONTROL 選取來源欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取屬性]**&#x200B;類別並選取XDM屬性，或選擇&#x200B;**[!UICONTROL 選取身分名稱空間]**&#x200B;並選取身分。
 1. 在&#x200B;**[!UICONTROL 選取目標欄位]**&#x200B;視窗中，選擇&#x200B;**[!UICONTROL 選取識別名稱空間]**&#x200B;並選取識別，或選擇&#x200B;**[!UICONTROL 選取自訂屬性]**&#x200B;並在&#x200B;**[!UICONTROL 屬性名稱]**&#x200B;欄位中輸入所要的屬性名稱。 您提供的屬性名稱應符合[!DNL Oracle Eloqua]中現有的連絡人屬性。 請參閱[[!DNL create a contact]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-post.html)以取得您可以在[!DNL Oracle Eloqua]中使用的確切屬性名稱。
+
    * 重複這些步驟，在您的XDM設定檔結構描述和[!DNL Oracle Eloqua]之間新增必要和任何需要的屬性對應：
-| Source欄位 | 目標欄位 | 強制 |
-|—|—|—|
-|`IdentityMap: Eid`|`Identity: EloquaId`| 是 |
-|`xdm: personalEmail.address`|`Attribute: emailAddress`| 是 |
-|`xdm: personName.firstName`|`Attribute: firstName`| |
-|`xdm: personName.lastName`|`Attribute: lastName`| |
-|`xdm: workAddress.street1`|`Attribute: address1`| |
-|`xdm: workAddress.street2`|`Attribute: address2`| |
-|`xdm: workAddress.street3`|`Attribute: address3`| |
-|`xdm: workAddress.postalCode`|`Attribute: postalCode`| |
-|`xdm: workAddress.country`|`Attribute: country`| |
-|`xdm: workAddress.city`|`Attribute: city`| |
+
+     | 來源欄位 | 目標欄位 | 強制 |
+     |---|---|---|
+     | `IdentityMap: Eid` | `Identity: EloquaId` | 是 |
+     | `xdm: personalEmail.address` | `Attribute: emailAddress` | 是 |
+     | `xdm: personName.firstName` | `Attribute: firstName` | |
+     | `xdm: personName.lastName` | `Attribute: lastName` | |
+     | `xdm: workAddress.street1` | `Attribute: address1` | |
+     | `xdm: workAddress.street2` | `Attribute: address2` | |
+     | `xdm: workAddress.street3` | `Attribute: address3` | |
+     | `xdm: workAddress.postalCode` | `Attribute: postalCode` | |
+     | `xdm: workAddress.country` | `Attribute: country` | |
+     | `xdm: workAddress.city` | `Attribute: city` | |
 
    * 具有上述對應的範例如下所示：
      ![具有屬性對應的平台UI熒幕擷圖範例。](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
