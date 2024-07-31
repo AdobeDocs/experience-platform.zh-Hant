@@ -3,9 +3,9 @@ title: Google Customer Match +顯示器和視訊360連線
 description: 透過Google Customer Match + Display & Video 360目的地聯結器，您可以使用Experience Platform的線上和離線資料，在Google擁有和營運的資產(例如搜尋、購物、Gmail和YouTube)觸及並重新與客戶互動。
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
 workflow-type: tm+mt
-source-wordcount: '1935'
+source-wordcount: '1999'
 ht-degree: 1%
 
 ---
@@ -222,6 +222,12 @@ For details on how to find the [!DNL App ID], refer to the [Google official docu
 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。
 
 ![套用啟用工作流程對應步驟中反白顯示的轉換控制項。](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
+
+## 監視目的地
+
+連線到目的地並建立目的地資料流後，您可以使用Real-Time CDP中的[監視功能](/help/dataflows/ui/monitor-destinations.md)來取得每次資料流執行中在您的目的地啟用的設定檔記錄的廣泛資訊。
+
+[!DNL Google Customer Match + Display & Video 360]連線的監視資訊包括與每個資料流和資料流執行中的啟用、排除和失敗身分相關的對象層級資訊。 深入瞭解此功能。
 
 ## 驗證對象啟用是否成功 {#verify-activation}
 
