@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
-source-wordcount: '3549'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -110,13 +110,13 @@ ht-degree: 10%
 
 #### (Beta)適用於串流目的地的受眾層級資料流執行監控 {#audience-level-dataflow-runs-for-streaming-destinations}
 
-您可以檢視在對象層級劃分的啟用、排除或失敗身分的相關資訊，瞭解屬於資料流的每個對象。 這可協助您瞭解目前僅適用於[[!DNL Google Customer Match + Display & Video 360] 目的地](/help/destinations/catalog/advertising/google-customer-match-dv360.md)的串流目的地的受眾層級監視。
+您可以檢視在對象層級劃分的啟用、排除或失敗身分的相關資訊，瞭解屬於資料流的每個對象。 串流目的地的對象層級監視目前僅適用於[[!DNL Google Customer Match + Display & Video 360] 目的地](/help/destinations/catalog/advertising/google-customer-match-dv360.md)。
 
 ![串流目的地的對象層級監視。](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->對象索引標籤中接收的&#x200B;**[!UICONTROL 設定檔數]**&#x200B;可能並不一定與資料流執行中接收的設定檔數相符。 這是因為指定的設定檔可能包含在資料流執行中啟用的多個對象。
+>**[!UICONTROL 受眾]**&#x200B;索引標籤中的&#x200B;**[!UICONTROL 已接收設定檔]**&#x200B;編號不一定與資料流執行已接收的設定檔數量相符。 這是因為指定的設定檔可能包含在資料流執行中啟用的多個對象。
 
 ### 用於批次目標的資料流執行 {#dataflow-runs-for-batch-destinations}
 
