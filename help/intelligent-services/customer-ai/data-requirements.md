@@ -6,9 +6,9 @@ title: Customer AI的資料需求
 topic-legacy: Getting started
 description: 進一步瞭解Customer AI使用的必要事件、輸入和輸出。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
 workflow-type: tm+mt
-source-wordcount: '2505'
+source-wordcount: '2545'
 ht-degree: 1%
 
 ---
@@ -158,6 +158,8 @@ Customer AI需要歷史資料才能進行模型訓練。 資料在系統中存�
 根據預設，如果在應用程式設定期間未提供合格的母體定義，Customer AI會尋找過去45天內有活動的使用者。 此外，根據預測的目標定義，Customer AI至少需要500個符合資格和500個非符合資格事件（總計1000個）。
 
 下列範例示範如何使用簡單的公式，協助您判斷所需的最小資料量。 如果您的資料超過最低需求，則模型可能會提供更準確的結果。 如果您的數量少於所需的最小數量，模型將會失敗，因為沒有足夠的資料進行模型訓練。
+
+Customer AI採用生存模型來估計特定時間發生事件的機率，並識別影響因素，同時使用定義正面和負面母體的監督學習，以及類似`lightgbm`的決策型樹狀結構來產生機率分數。
 
 **公式**：
 
