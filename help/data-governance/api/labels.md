@@ -5,10 +5,10 @@ title: 標籤API端點
 description: 瞭解如何使用原則服務API管理Experience Platform中的資料使用標籤。
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 3%
+source-wordcount: '536'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->`/labels`端點僅用於擷取、建立和更新資料使用標籤。 如需如何使用API呼叫將標籤新增至資料集和欄位的步驟，請參閱[管理資料集標籤](../labels/dataset-api.md)的指南。
+>`/labels`端點僅用於擷取、建立和更新資料使用標籤。 您無法刪除標籤。 不過，您可以使用API呼叫來新增或移除資料集和欄位的標籤。 如需指示，請參閱[管理資料集標籤](../labels/dataset-api.md)檔案的指南。
 
 ## 快速入門
 
@@ -163,6 +163,10 @@ curl -X GET \
 ## 建立或更新自訂標籤 {#create-update}
 
 若要建立或更新自訂標籤，您必須向[!DNL Policy Service] API發出PUT要求。
+
+>[!NOTE]
+>
+>如果您想要從資料集中移除標籤，可以在資料集服務API](../labels/dataset-api.md#remove)上或使用[資料集UI](../labels/user-guide.md#remove-labels-from-a-dataset)執行[PUT要求。
 
 **API格式**
 

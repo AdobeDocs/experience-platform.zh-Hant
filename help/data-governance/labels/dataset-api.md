@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用API管理資料集的資料使用標籤
 description: 資料集服務API可讓您套用及編輯資料集的使用標籤。 它是Adobe Experience Platform資料目錄功能的一部分，但與管理資料集中繼資料的目錄服務API不同。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1340'
 ht-degree: 1%
 
 ---
@@ -166,6 +166,10 @@ curl -X POST \
 ## 從資料集中移除標籤 {#remove}
 
 您可以透過以現有欄位標籤的子集更新現有`optionalLabels`值，或透過空白清單以完全移除它們，來移除任何先前套用的欄位標籤。 向[!DNL Dataset Service] API發出PUT要求，以更新或移除先前套用的標籤。
+
+>[!NOTE]
+>
+>您可以為`labels`引數提供空白清單，以完全移除資料集的標籤。 資料集不必保留任何標籤。
 
 **API格式**
 
