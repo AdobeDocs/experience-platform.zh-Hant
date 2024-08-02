@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2024年7月
 description: Adobe Experience Platform 2024 年 7 月的發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8d25e396fc816546348268b8b4f2bb16175b4513
+source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 19%
+source-wordcount: '1225'
+ht-degree: 22%
 
 ---
 
@@ -23,7 +23,9 @@ Experience Platform現有功能和檔案的更新：
 - [資料收集](#data-collection)
 - [資料控管](#data-governance)
 - [目的地](#destinations)
+- [Segmentation Service](#segmentation)
 - [來源](#sources)
+- [統一標記](#unified-tags)
 
 ## 聯合客群組成 {#federated-audience-composition}
 
@@ -105,6 +107,18 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 如需詳細資訊，請閱讀[目的地概觀](../../destinations/home.md)。
 
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的對象。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立對象。這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+
+**新檔案**
+
+| 新文件 | 說明 |
+| ----------------- | ----------- | 
+| [對象入口網站](../../segmentation/ui/audience-portal.md) | 瞭解如何使用Audience Portal，讓您在一個集中的中心檢視、管理及建立Adobe Experience Platform中的對象。 |
+
+{style="table-layout:auto"}
+
 ## 來源
 
 Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
@@ -120,3 +134,18 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 {style="table-layout:auto"}
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+
+## 統一標記
+
+統一標籤可讓您在Adobe Experience Platform中分類和管理您的企業物件。 使用Unified Tags API時，您可以建立資料夾和標籤，以便更妥善地整理Platform物件（例如對象或資料集）。
+
+**新檔案**
+
+| 新文件 | 說明 |
+| ----------------- | ----------- |
+| [整合標籤API指南](../../administrative-tags/api/overview.md) | 請參閱統一標籤API指南，瞭解如何建立資料夾和標籤來排序您的企業物件。 |
+| [整合標籤API參考](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | 使用統一標籤API參考來以互動方式試用統一標籤端點。 |
+
+{style="table-layout:auto"}
+
+如需詳細資訊，請閱讀[整合標籤總覽](../../administrative-tags/overview.md)。
