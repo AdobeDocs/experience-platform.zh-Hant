@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中管理資料使用標籤
 description: 本指南說明在Adobe Experience Platform使用者介面中使用資料使用標籤的步驟。
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
+source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1549'
 ht-degree: 17%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 17%
 >
 >![偵測到資料治理原則違規的對話方塊，其中反白顯示違規摘要和資料歷程圖表。](../images/labels/policy-violation-dialog.png)
 >
->如需部分原則違規的詳細資訊，請參閱[資料使用原則違規檔案](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation)。
+>如需部分原則違規的詳細資訊，請參閱[資料使用原則違規檔案](../enforcement/auto-enforcement.md#data-usage-violation)。
 
 若要在結構描述層級管理資料使用標籤，您必須選取現有結構描述或建立新結構描述。 登入Adobe Experience Platform後，在左側導覽上選取「**[!UICONTROL 結構描述]**」以開啟「**[!UICONTROL 結構描述]**」工作區。 此頁面列出屬於您組織的所有已建立綱要，以及與每個綱要相關的有用詳細資訊。
 
