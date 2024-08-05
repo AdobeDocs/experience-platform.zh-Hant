@@ -5,24 +5,30 @@ title: MLServices API端點
 description: MLService是經過訓練的已發佈模型，讓您的組織能夠存取及重複使用先前開發的模型。 MLServices的主要功能是能依排程自動化訓練和評分。 排程的訓練回合有助於維護模型的效率和準確性，而排程的評分回合則可確保一致地產生新的見解。
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '910'
 ht-degree: 2%
 
 ---
 
 # MLServices端點
 
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
+
 MLService是經過訓練的已發佈模型，讓您的組織能夠存取及重複使用先前開發的模型。 MLServices的主要功能是能依排程自動化訓練和評分。 排程的訓練回合有助於維護模型的效率和準確性，而排程的評分回合則可確保一致地產生新的見解。
 
-自動訓練和評分排程是以開始時間戳記、結束時間戳記和以[cron運算式](https://en.wikipedia.org/wiki/Cron)表示的頻率來定義。 排程可在[建立MLService](#create-an-mlservice)或由[更新現有的MLService](#update-an-mlservice)套用時定義。
+自動培訓和評分計劃使用開始時間戳、結束時間戳和表示為 [cron 運算式](https://en.wikipedia.org/wiki/Cron)的頻率進行定義。 可以在創建 MLS 服務](#create-an-mlservice)時[定義計劃，也可以通過更新現有 MLS 服務](#update-an-mlservice)來[應用計劃。
 
-## 建立MLService {#create-an-mlservice}
+## 建立MLS服務 {#create-an-mlservice}
 
-您可以執行POST要求以及提供服務名稱和有效MLInstance ID的裝載，以建立MLService。 用來建立MLService的MLInstance不需要有現有的訓練實驗，但您可以選擇提供對應的實驗ID和訓練回合ID，以現有的訓練模型建立MLService。
+可以通過執行提供服務名稱和有效 MLInstance ID 的POST 要求和有效負載來創建 MLS 服務。 用於創建 MLS 服務的 MLInstance 不需要具有現有的培訓試驗，但您可以通過提供相應的 實驗 ID 和運行 ID 來選擇使用現有訓練模型創建 MLService 培訓。
 
-**API格式**
+**API 格式**
 
 ```http
 POST /mlServices
@@ -61,7 +67,7 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `name` | 所需的MLService名稱。 與此MLService對應的服務將繼承此值，以作為服務名稱顯示在「服務庫」UI中。 |
-| `description` | MLService的選擇性說明。 與此MLService對應的服務將繼承此值，以作為服務的說明顯示在「服務庫」UI中。 |
+| `description` | MLService的選擇性說明。 與此 MLS 服務對應的服務將繼承此值，以便在服務庫UI中顯示為服務的說明。 |
 | `mlInstanceId` | 有效的MLInstance ID。 |
 | `trainingDataSetId` | 如果提供的訓練資料集ID將覆寫MLInstance的預設資料集ID。 如果用來建立MLService的MLInstance未定義訓練資料集，您必須提供適當的訓練資料集ID。 |
 | `trainingExperimentId` | 您可以選擇提供的實驗ID。 如果未提供此值，則建立MLService也會使用MLInstance的預設設定來建立新的實驗。 |
@@ -71,13 +77,13 @@ curl -X POST \
 | `trainingSchedule.endTime` | 排程的訓練回合將結束的時間戳記。 |
 | `trainingSchedule.cron` | 定義自動訓練執行頻率的cron運算式。 |
 | `scoringSchedule` | 自動評分回合的排程。 如果定義此屬性，MLService將會依排程自動執行評分回合。 |
-| `scoringSchedule.startTime` | 排程的評分回合將開始的時間戳記。 |
-| `scoringSchedule.endTime` | 排程的評分回合將結束的時間戳記。 |
-| `scoringSchedule.cron` | 定義自動評分執行頻率的cron運算式。 |
+| `scoringSchedule.startTime` | 將開始按計劃計分運行的時間戳。 |
+| `scoringSchedule.endTime` | 計劃計分運行將結束的時間戳。 |
+| `scoringSchedule.cron` | 定義自動計分運行頻率的 cron 運算式。 |
 
 **回應**
 
-成功的回應會傳回承載，其中包含新建立的MLService的詳細資料，包括其唯一識別碼(`id`)、用於訓練的實驗ID (`trainingExperimentId`)、用於評分的實驗ID (`scoringExperimentId`)以及輸入訓練資料集ID (`trainingDataSetId`)。
+成功的回應會返回一個有效負載，其中包含新創建的 MLSer 的詳細信息，包括其唯一標識符 （`id`）、培訓 （`trainingExperimentId`） 的 實驗 ID、實驗 用於評分的 ID`scoringExperimentId` （） 和輸入培訓 資料集 ID （`trainingDataSetId`）。
 
 ```json
 {
@@ -165,17 +171,17 @@ curl -X GET \
 }
 ```
 
-## 擷取特定MLService {#retrieve-a-specific-mlservice}
+## 檢索特定的MLS服務 {#retrieve-a-specific-mlservice}
 
-您可以透過執行GET請求（請求路徑中包含所需的MLService ID）來擷取特定實驗的詳細資料。
+可以通過執行在請求路徑中包含所需 MLS 服務 ID 的GET 要求来檢索特定實驗的詳細信息。
 
-**API格式**
+**API 格式**
 
 ```http
 GET /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`：有效的MLService ID。
+* `{MLSERVICE_ID}`：有效的 ML 服務 ID。
 
 **要求**
 
@@ -321,11 +327,11 @@ curl -X DELETE \
 }
 ```
 
-## 依MLInstance ID刪除MLServices
+## 刪除 MLServices by MLInstance ID
 
-您可以執行將MLInstance ID指定為查詢引數的DELETE要求，來刪除屬於特定MLInstance的所有MLServices。
+可以通過執行將 MLInstance ID 指定為查詢參數的DELETE 要求來刪除屬於特定 MLInstance 的所有 MLService。
 
-**API格式**
+**API 格式**
 
 ```http
 DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}

@@ -5,14 +5,20 @@ title: 建立Luma網頁結構描述和資料集
 type: Tutorial
 description: 本教學課程提供Luma示範傾向模型所需的必要條件和資產。
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
 
 # 建立Luma傾向模型結構描述和資料集
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 此教學課程提供您所有其他[!DNL Adobe Experience Platform] [!DNL Data Science Workspace]教學課程所需的先決條件和資產。 完成後，您和您的組織將可以使用以下結構描述和資料集。
 

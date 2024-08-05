@@ -5,14 +5,20 @@ title: 預覽零售銷售結構描述和資料集
 type: Tutorial
 description: 以下檔案會概述如何在Adobe Experience Platform上預覽結構描述和資料集。
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '259'
 ht-degree: 3%
 
 ---
 
 # 預覽零售銷售結構描述和資料集
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 成功完成[零售銷售結構描述和資料集](./create-retails-sales-dataset.md)教學課程中的啟動程式指令碼後。 可以在[!DNL Experience Platform]上檢視輸出結構描述和資料集。 若要檢視結構描述和資料集，請遵循以下步驟：
 

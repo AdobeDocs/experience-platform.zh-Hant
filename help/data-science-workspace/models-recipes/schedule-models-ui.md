@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform；排程模型；資料科學Workspace；熱門主題；排程評分；排程訓練
+keywords: Experience Platform;安排模型;數據科學工作環境;熱門話題;時程表評分;排程培訓
 solution: Experience Platform
-title: 在資料科學Workspace UI中排程模型
+title: 在数据科學工作環境 UI中計劃模型
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace可讓您在機器學習服務上設定已排程的評分和訓練執行。 自動化訓練和評分程式，可讓您隨時掌握資料中的模式，藉此維護和改善服務的效率。
+description: Adobe Experience Platform數據科學工作環境允許在機器學習服務上設置計劃的評分和培訓運行。 自動執行培訓和評分過程可以通過跟上數據中的模式來幫助隨著時間的推移保持和提高服務的效率。
 exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '577'
 ht-degree: 0%
 
 ---
 
-# 在資料科學Workspace UI中排程模型
+# 在数据科學工作環境 UI中計劃模型
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 Adobe Experience Platform [!DNL Data Science Workspace]可讓您在機器學習服務上設定排程的評分和訓練執行。 自動化訓練和評分程式，可隨時掌握資料中的模式，協助維持及改善服務效率。
 
@@ -23,9 +29,9 @@ Adobe Experience Platform [!DNL Data Science Workspace]可讓您在機器學習�
 
 ## 快速入門
 
-若要完成本教學課程，您必須有[!DNL Experience Platform]的存取權。 如果您沒有[!DNL Experience Platform]中組織的存取權，請在繼續之前與您的系統管理員交談。
+要完成此教學課程，您必須有權訪問 [!DNL Experience Platform]。 如果您無權存取 中的 [!DNL Experience Platform]組織，請在繼續操作前與系統管理員聯繫。
 
-本教學課程需要現有的服務。 如果您沒有可存取的服務可以使用，您可以按照[將模型發佈為服務](./publish-model-service-ui.md)的教學課程來建立一個。
+此教學課程需要現有服務。 如果沒有可訪問的服務，可以按照將模型發佈為服務](./publish-model-service-ui.md)教學課程[創建一個。
 
 ## 設定排程評分 {#configure-scheduled-scoring}
 
@@ -47,11 +53,11 @@ Adobe Experience Platform [!DNL Data Science Workspace]可讓您在機器學習�
 
 ![](../images/models-recipes/schedule/scoring_set.png)
 
-## 設定排程訓練 {#configure-scheduled-training}
+## 設定計劃培訓 {#configure-scheduled-training}
 
-在服務上設定排程的訓練執行，可確保機器學習模型更新為最新的資料模式。 每當排程的訓練回合完成時，就會使用產生的訓練模型來啟動服務，直到下一次排程的訓練回合為止。
+配置在服務上運行的計劃培訓可確保機器學習模型更新為最新的數據模式。 每當計劃的培訓運行完成時，生成的經過訓練的模型將用於為服務提供支援，直到下一次計劃的培訓運行。
 
-建立服務後，您可以依照下列步驟設定並套用訓練排程：
+創建服務后，可以追隨以下步驟來配置和應用培訓計劃：
 
 在Adobe Experience Platform中，選取位於左側導覽欄中的&#x200B;**[!UICONTROL 服務]**&#x200B;索引標籤，以存取&#x200B;**[!UICONTROL 服務庫]**。 尋找您想要排程訓練執行的服務，並選取&#x200B;**[!UICONTROL 開啟]**&#x200B;以檢視其&#x200B;**[!UICONTROL 概觀]**&#x200B;頁面。
 
@@ -71,4 +77,4 @@ Adobe Experience Platform [!DNL Data Science Workspace]可讓您在機器學習�
 
 ## 後續步驟
 
-依照此教學課程中的指示，您已成功排程針對服務執行的自動訓練和評分，並完成[!DNL Data Science Workspace]教學課程UI工作流程。 如果您尚未這麼做，請考慮將[重新啟動教學課程](./create-retails-sales-dataset.md)並遵循API工作流程來建立、訓練、評分及發佈模型。
+按照此教學課程操作，您已成功計劃了服務上的自動培訓和評分運行，並完成了 [!DNL Data Science Workspace] 教學課程 UI 工作流程。 如果尚未執行此操作，請考慮 [重新啟動教學課程](./create-retails-sales-dataset.md) 並追隨 API 工作流程以創建、訓練、評分和發佈模型。

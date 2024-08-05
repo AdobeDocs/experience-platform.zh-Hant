@@ -5,21 +5,27 @@ title: 使用模型深入分析架構最佳化模型
 type: Tutorial
 description: 模型深入分析架構為資料科學家提供資料科學Workspace中的工具，以便根據實驗迅速且明智地選擇最佳機器學習模型。
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1210'
 ht-degree: 0%
 
 ---
 
 # 使用模型深入分析框架最佳化模型
 
-模型深入分析架構提供資料科學家在[!DNL Data Science Workspace]中的工具，以便根據實驗快速且明智地選擇最佳機器學習模型。 此架構將提高機器學習工作流程的速度和有效性，並改善資料科學家的易用性。 為每個機器學習演演算法型別提供預設範本，以協助模型調整，藉此完成調整。 最終結果可讓資料科學家和公民資料科學家為其最終客戶做出更好的模型最佳化決策。
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
+
+模型深入分析架構提供資料科學家在[!DNL Data Science Workspace]中的工具，以便根據實驗快速且明智地選擇最佳機器學習模型。 此架構將提高機器學習工作流程的速度和有效性，並改善資料科學家的易用性。 為每個機器學習演演算法型別提供預設範本，以協助模型調整，藉此完成調整。 最終結果使數據科學家和公民數據科學家能夠為其最終客戶做出更好的模型優化決策。
 
 ## 什麼是量度？
 
-實作和訓練模型後，資料科學家的下一步是找出模型執行的效果。 您可使用各種量度來瞭解模型與其他量度相比時的效能。 所使用量度的部分範例包括：
-- 分類準確度
+在實現並培訓模型之後，數據科學家要做的下一步是找到模型的性能。 使用各種指標來查找模型與其他模型相比的有效性。 可使用的一些量度範例包括：
+- 分類準確性
 - 曲線下的區域
 - 混淆矩陣
 - 分類報告
@@ -66,17 +72,17 @@ evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 >
 >如果未定義量度，預設量度將會啟用。
 
-變更`evaluation.metrics.com`的值即可啟用特定量度。 在以下範例中，會啟用F分數量度。
+可透過變更的值 `evaluation.metrics.com`來啟用特定量度。 在以下範例中，啟用了 F 分數量度。
 
 ```scala
 evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 ```
 
-下表列出每個類別的預設度量。 使用者也可以使用`evaluation.metric`欄中的值來啟用特定量度。
+下表列出了每個類別的預設量度。 用戶還可以使用列中的 `evaluation.metric` 值來啟用特定量度。
 
 | `evaluator.class` | 預設量度 | `evaluation.metric` |
 | --- | --- | --- |
-| `DefaultBinaryClassificationEvaluator` |  — 精確度<br> — 召回<br> — 混淆矩陣<br>-F分數<br> — 精確度<br> — 接收器操作特性下的接收器操作特性<br> — 區域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultBinaryClassificationEvaluator` | -精度 <br>-召回 <br>-混淆矩陣 <br>-F 分數 <br>-準確性 <br>-接收器操作特性 <br>-接收器工作特性下的區域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` -`ROC` <br><br>`AUROC` |
 | `DefaultMultiClassificationEvaluator` |  — 精確度<br> — 召回<br> — 混淆矩陣<br>-F分數<br> — 精確度<br> — 接收器操作特性下的接收器操作特性<br> — 區域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` |  — 平均平均精確度(MAP) <br> — 標準化折現累積增益<br> — 平均倒數排名<br> — 量度K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
@@ -93,19 +99,19 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 > 不是這個： `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-在配方中定義之後，下一步就是在配方中啟用它。 這是在專案`resources`資料夾的[application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties)檔案中完成的。 此處，`evaluation.class`設定為`Evaluator.scala`中定義的`Evaluator`類別
+在配方中定義之後，下一步就是在配方中啟用它。 這是在[專案資料夾`resources`的 應用程式.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) 文件中完成的。此處 設為 `evaluation.class` `Evaluator` 中定義的類別 `Evaluator.scala`
 
 ```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-在[!DNL Data Science Workspace]中，使用者將可以在實驗頁面的「評估量度」索引標籤中看到深入分析。
+在 中 [!DNL Data Science Workspace]，用戶可以看見實驗頁面的「評估量度」標籤中的深入分析。
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-截至目前，[!DNL Python]或[!DNL Tensorflow]沒有預設的評估量度。 因此，若要取得[!DNL Python]或[!DNL Tensorflow]的評估量度，您必須建立自訂評估量度。 這可透過實作`Evaluator`類別來完成。
+截至目前，沒有 或[!DNL Tensorflow]的默認[!DNL Python]評估指標。因此，要獲取 或[!DNL Tensorflow]的[!DNL Python]評估指標，您需要創建自定義評估量度。這可以通過實現 `Evaluator` 類來完成。
 
-#### [!DNL Python]的自訂評估量度
+#### 自訂評估量度 [!DNL Python]
 
 對於自訂評估量度，有兩個主要方法需要針對評估器實作： `split()`和`evaluate()`。
 
@@ -115,7 +121,7 @@ evaluation.class=com.adobe.platform.ml.Evaluator
 
 `evaluate()`方法傳回量度物件，該物件包含屬性為`name`、`value`和`valueType`的量度物件陣列。
 
-`split()`方法的目的是輸入資料，並輸出訓練與測試資料集。 在我們的範例中，`split()`方法使用`DataSetReader` SDK輸入資料，然後移除不相關的欄來清除資料。 從那裡，系統會根據資料中現有的原始功能建立其他功能。
+該方法的目的是 `split()` 輸入數據並輸出培訓和測試資料集。 在我們的範例中，`split()`方法使用`DataSetReader` SDK輸入資料，然後移除不相關的欄來清除資料。 從那裡，系統會根據資料中現有的原始功能建立其他功能。
 
 `split()`方法應傳回訓練和測試資料流，然後`pipeline()`方法會使用此資料流來訓練和測試ML模型。
 
@@ -141,13 +147,13 @@ class Evaluator(AbstractEvaluator):
 
 ### R {#r}
 
-R目前沒有預設的評估量度。因此，若要取得R的評估量度，您必須將`applicationEvaluator`類別定義為配方的一部分。
+截至目前，R 沒有預設的評估指標。因此，若要獲取 R 的評估指標，需要將 `applicationEvaluator` 類定義為方式的一部分。
 
-#### R的自訂評估量度
+#### R 的自定義評估指標
 
-`applicationEvaluator`的主要用途是傳回包含量度索引鍵值配對的JSON物件。
+其 `applicationEvaluator` 主要用途是傳回包含量度的鍵值值組的 JSON 物件。
 
-此[applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R)可作為範例使用。 在此範例中，`applicationEvaluator`分為三個相似的區段：
+此 [applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) 可用作範例。 在此範例中，`applicationEvaluator`分為三個相似的區段：
 - 載入資料
 - 資料準備/功能工程
 - 擷取已儲存的模型並評估

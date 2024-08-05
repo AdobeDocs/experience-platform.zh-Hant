@@ -5,14 +5,20 @@ title: MLInstances API端點
 description: MLInstance是現有引擎與定義任何訓練引數、評分引數或硬體資源設定的適當組態集的配對。
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '642'
 ht-degree: 3%
 
 ---
 
 # MLInstances端點
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 MLInstance是現有[引擎](./engines.md)與定義任何訓練引數、評分引數或硬體資源組態的適當組態集的配對。
 

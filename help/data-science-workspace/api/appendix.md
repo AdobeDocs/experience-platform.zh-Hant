@@ -5,14 +5,20 @@ title: Sensei機器學習API指南附錄
 description: 以下小節提供Sensei Machine Learning API各種功能的參考資訊。
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '353'
 ht-degree: 1%
 
 ---
 
 # [!DNL Sensei Machine Learning] API指南附錄
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 下列章節提供[!DNL Sensei Machine Learning] API各種功能的參考資訊。
 

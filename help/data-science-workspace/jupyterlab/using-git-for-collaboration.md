@@ -1,56 +1,62 @@
 ---
-keywords: Experience Platform；JupyterLab；筆記本；資料科學Workspace；熱門主題；Git；Github
+keywords: Experience Platform;JupyterLab;筆記本;數據科學工作環境;熱門話題;Git;Github
 solution: Experience Platform
-title: 使用Git在JupyterLab中共同作業
+title: 使用 Git 在 JupyterLab 中進行協作
 type: Tutorial
-description: Git是分散式版本控制系統，用於在軟體開發期間追蹤原始程式碼中的變更。 Git已預先安裝在資料科學Workspace JupyterLab環境中。
+description: Git是分散式版本控制系統，用於在軟體開發期間追蹤原始程式碼中的變更。 Git 預先安裝在 Data Science 工作環境 JupyterLab 環境 中。
 exl-id: d7b766f7-b97d-4007-bc53-b83742425047
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 1%
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
-# 使用[!DNL Git]在[!DNL JupyterLab]中共同作業
+# 共同使用[!DNL JupyterLab][!DNL Git]
 
-[!DNL Git]是分散式版本控制系統，用於在軟體開發期間追蹤原始程式碼中的變更。 已在[!DNL Data Science Workspace JupyterLab]環境中預先安裝Git。
+>[!NOTE]
+>
+>不再提供 Data Science 工作環境 購買。
+>
+>本文檔適用於先前有權使用數據科學工作環境的現有客戶。
+
+[!DNL Git] 是一個分散式版本控制系統，用於在軟體開發過程中跟蹤原始碼中的更改。 Git 已預安裝在環境内 [!DNL Data Science Workspace JupyterLab] 。
 
 ## 先決條件
 
 >[!NOTE]
 >
-> 您打算使用的Git伺服器必須可透過網際網路存取。
+> 您打算使用的 Git 伺服器需要可以通過互聯網訪問。
 
-[!DNL Data Science Workspace JupyterLab]環境是託管環境，未部署在您的公司防火牆內，因此您連線的Git伺服器必須可從公用網際網路存取。 這可以是[GitHub](https://github.com/)上的公開或私人存放庫，或您已決定自行託管的[!DNL Git]伺服器的另一個執行個體。
+[!DNL Data Science Workspace JupyterLab]環境是託管環境，未部署在公司防火牆內，因此您連接到的 Git 伺服器必須可從公共互聯網訪問。這可以是 GitHub](https://github.com/) 上的[公共或私有存放庫，也可以是您決定自行主機伺服器的其他[!DNL Git]執行個體。
 
-## 將[!DNL Git]連線至[!DNL Data Science Workspace JupyterLab Notebooks]環境
+## [!DNL Data Science Workspace JupyterLab Notebooks]連接到[!DNL Git]環境
 
 從啟動[!DNL Adobe Experience Platform]並瀏覽至[[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab)環境開始。
 
-在[!DNL JupyterLab]內，選取&#x200B;**[!UICONTROL 檔案]**，然後將滑鼠游標停留在&#x200B;**[!UICONTROL 新增]**&#x200B;上。 從出現的下拉式清單中，選取&#x200B;**[!UICONTROL 終端機]**。
+在 內[!DNL JupyterLab]，選擇檔案&#x200B;]****[!UICONTROL &#x200B;然後將滑鼠懸停在新&#x200B;]**上**[!UICONTROL 。從顯示的下拉清單中，選擇 **[!UICONTROL 終端]**。
 
-![JupyterLab導覽](../images/jupyterlab/tutorials/open-terminal.png)
+![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
-接下來，在&#x200B;*終端機*&#x200B;內，使用以下命令導覽至您的工作區： `cd my-workspace`。
+下一個，在“終端”*中，使用*&#x200B;以下命令導航到工作環境：`cd my-workspace`。
 
-![cd工作區](../images/jupyterlab/tutorials/find-workspace.png)
+![CD 工作環境](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
 >
-> 若要檢視可用的Git命令清單，請在您的終端機中發出命令： `git -help`。
+> 要查看可用的 git 命令清單，請在終端中發出命令： `git -help` 。
 
-接下來，使用`git clone`命令複製您要使用的存放庫。 使用`https://` URL而非`ssh://`複製專案。
+下一個，使用該命令克隆 `git clone` 要使用的存放庫。 原地複製您的 `https://` 專案使用 URL `ssh://`而不是 .
 
 **範例**：
 
 `git clone https://github.com/adobe/experience-platform-dsw-reference.git`
 
-![複製](../images/jupyterlab/tutorials/git-collaboration.png)
+![克隆](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
 >
-> 若要執行任何寫入作業（例如`git push`），必須對每個新工作階段執行下列組態命令。 另請注意，任何推送命令都會提示您輸入使用者名稱和密碼。
+> 若要執行任何寫入作業（例如`git push`），必須對每個新工作階段執行下列組態命令。 另請注意，任何推送命令都會提示輸入使用者名和密碼。
 >
 >`git config --global user.email "you@example.com"`
 >
@@ -58,4 +64,4 @@ ht-degree: 1%
 
 ## 後續步驟
 
-完成複製存放庫後，您可以像在本機電腦上一樣使用Git，與他人在Notebooks上共同作業。 如需在[!DNL JupyterLab]內可以執行之作業的詳細資訊，請參閱[[!DNL JupyterLab user guide]](./overview.md)。
+克隆完存放庫后，可以像往常一樣在本地計算機上使用 Git 與筆記本上的其他人協作。 如需在 中[!DNL JupyterLab]可執行之工作的詳細資訊，請參閱 。[[!DNL JupyterLab user guide]](./overview.md)

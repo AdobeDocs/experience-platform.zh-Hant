@@ -4,22 +4,28 @@ solution: Experience Platform
 title: 模型製作SDK
 description: 模型製作SDK可讓您開發可在Adobe Experience Platform資料科學Workspace中使用的自訂機器學習方法和功能管道，在PySpark和Spark (Scala)中提供可實作的範本。
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1000'
 ht-degree: 1%
 
 ---
 
 # 模型製作SDK
 
-模型製作SDK可讓您開發可在[!DNL Adobe Experience Platform]資料科學Workspace中使用的自訂機器學習配方和功能管道，在[!DNL PySpark]和[!DNL Spark (Scala)]中提供可實作的範本。
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本文檔適用於先前有權使用數據科學工作環境的現有客戶。
 
-本檔案提供「模型製作SDK」中各種類別的相關資訊。
+模型創作 SDK 使你能夠開發可在數據科學工作環境中使用的[!DNL Adobe Experience Platform]自定義機器學習配方和功能管道，並在和 [!DNL Spark (Scala)]中[!DNL PySpark]提供可實施的範本。
 
-## 資料載入器 {#dataloader}
+此檔提供有關模型編寫 SDK 中找到的各種類的資訊。
 
-DataLoader類別會封裝與擷取、篩選及傳回原始輸入資料相關的任何專案。 輸入資料的範例包括訓練、評分或功能工程方面的資料。 資料載入器會擴充抽象類別`DataLoader`，而且必須覆寫抽象方法`load`。
+## DataLoader {#dataloader}
+
+類封裝與檢索、篩選和返回原始輸入數據相關的任何內容。 輸入數據的範例包括用於培訓、評分或特徵工程的數據。 資料載入器會擴充抽象類別`DataLoader`，而且必須覆寫抽象方法`load`。
 
 **PySpark**
 
@@ -210,7 +216,7 @@ DataSaver類別會封裝與儲存輸出資料相關的任何專案，包括來�
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>以DataFrame形式接收輸出資料，並將其儲存在Platform資料集中</p>
+                <p>以數據幀的形式接收輸出數據並將其存儲在Platform 資料集中</p>
             </td>
             <td>
                 <ul>
@@ -252,7 +258,7 @@ DataSaver類別會封裝與儲存輸出資料相關的任何專案，包括來�
 
 ### 將資料儲存至[!DNL Platform]資料集 {#save-data-to-a-platform-dataset}
 
-若要將資料儲存至[!DNL Platform]資料集，必須在設定檔中提供或定義屬性：
+為了將數據商店到 [!DNL Platform] 資料集上，必須在配置檔中提供或定義屬性：
 
 - 要儲存資料的有效[!DNL Platform]資料集識別碼
 - 屬於您組織的租使用者ID
@@ -325,7 +331,7 @@ class MyDataSaver(DataSaver):
             .save()
 ```
 
-**Spark (Scala)**
+**Spark （Scala）**
 
 ```scala
 // Spark
@@ -417,7 +423,7 @@ DatasetTransformer類別會修改及轉換資料集的結構。 [!DNL Sensei Mac
             <td>
                 <ul>
                     <li><code>self</code>：自我參照</li>
-                    <li><code>configProperties</code>：設定屬性對應</li>
+                    <li><code>configProperties</code>：配置屬性映射</li>
                     <li><code>dataset</code>：轉換的輸入資料集</li>
                 </ul>
             </td>
@@ -425,9 +431,9 @@ DatasetTransformer類別會修改及轉換資料集的結構。 [!DNL Sensei Mac
     </tbody>
 </table>
 
-**Spark (Scala)**
+**Spark （Scala）**
 
-下表說明[!DNL Spark]資料集轉換器類別的抽象方法：
+下表描述了資料集轉換器類的 [!DNL Spark] 抽象方法：
 
 <table>
     <thead>
@@ -511,18 +517,18 @@ FeaturePipelineFactory類別包含特徵擷取演演算法，並定義特徵管�
         <tr>
             <td>
                 <p><i>抽象</i><br/><code>createPipeline(configProperties)</code></p>
-                <p>建立並傳回包含一系列轉換器的管道</p>
+                <p>建立並返回包含一系列轉換器的管道</p>
             </td>
             <td>
                 <ul>
-                    <li><code>configProperties</code>：設定屬性對應</li>
+                    <li><code>configProperties</code>：配置屬性映射</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>抽象</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
-                <p>從設定屬性擷取並傳回引數對應</p>
+                <p>從配置屬性檢索並返回參數映射</p>
             </td>
             <td>
                 <ul>
@@ -598,16 +604,16 @@ PipelineFactory類別封裝模型訓練和評分的方法和定義，其中訓�
                 <ul>
                     <li><code>self</code>：自我參照</li>
                     <li><code>configProperties</code>：設定屬性</li>
-                    <li><code>sparkSession</code>： Spark工作階段</li>
+                    <li><code>sparkSession</code>：火花會話</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark (Scala)**
+**Spark （Scala）**
 
-下表說明[!DNL Spark] PipelineFactory的類別方法：
+下表描述了 PipelineFactory 的 [!DNL Spark] 類方法：
 
 <table>
     <thead>

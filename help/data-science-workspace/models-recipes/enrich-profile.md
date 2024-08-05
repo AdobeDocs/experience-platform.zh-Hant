@@ -5,14 +5,20 @@ title: 透過機器學習深入分析豐富即時客戶設定檔
 type: Tutorial
 description: 本檔案提供如何透過機器學習深入解析豐富即時客戶設定檔的指南。
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: afa27069c7490848398c92973dd77810564b5993
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
 
 # 以機器學習深入分析豐富[!DNL Real-Time Customer Profile]
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 Adobe Experience Platform [!DNL Data Science Workspace]提供各種工具和資源，用來建立、評估及運用機器學習模型，以產生資料預測和深入分析。 將機器學習深入分析擷取至啟用[!DNL Profile]的資料集時，該相同資料也會擷取為[!DNL Profile]記錄，然後可以使用[!DNL Adobe Experience Platform Segmentation Service]分段。
 

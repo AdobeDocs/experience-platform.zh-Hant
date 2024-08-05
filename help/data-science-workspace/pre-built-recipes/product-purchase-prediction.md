@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 產品購買預測配方
 description: 「產品購買預測」配方可讓您預測特定客戶購買事件型別（例如，產品購買）的可能性。
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '415'
 ht-degree: 5%
 
 ---
 
 # 產品購買預測配方
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 「產品購買預測」配方可讓您預測特定客戶購買事件型別（例如，產品購買）的可能性。
 

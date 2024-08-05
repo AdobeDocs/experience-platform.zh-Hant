@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 資料科學Workspace存取與功能
 description: 以下檔案概述資料科學Workspace許可權和功能的存取權。
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '715'
 ht-degree: 1%
 
 ---
 
 # 資料科學Workspace存取與功能
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 以下檔案概述資料科學Workspace許可權和功能的存取權。
 

@@ -1,18 +1,24 @@
 ---
 keywords: Experience Platform；逐步說明；資料科學Workspace；熱門主題；資料科學課程；課程；dsw
 solution: Experience Platform
-title: 資料科學Workspace課程
-description: 本檔案提供Adobe Experience Platform資料科學Workspace課程的連結和說明。
+title: 數據科學工作環境課程
+description: 此文件提供了Adobe Experience Platform数据科學工作環境課程的連結和說明。
 exl-id: d814846e-52a9-46c6-831a-3399241959f2
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
 
 
-# [!DNL Data Science Workspace]個課程
+# [!DNL Data Science Workspace] 課程
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 本檔案說明Adobe Experience Platform資料科學Workspace課程的預期學習結果。 若要檢視課程，您必須使用Adobe ID登入Experience League。
 
@@ -24,9 +30,9 @@ ht-degree: 0%
    - 必須已將Adobe ID帳戶新增至可存取Adobe Experience Platform和[!DNL Data Science Workspace]的組織。
 - 非生產沙箱。
 
-### 預期學習結果
+### 預期學習成果
 
-下列學習結果將涵蓋在資料科學Workspace課程中。 此外，在建立及發佈為課程提供的傾向模型時，您可以選擇跟著進行。
+數據科學工作環境課程涵蓋了以下學習成果。 此外，您還可以選擇在創建和發佈為課程提供的傾向模型時一起追隨。
 
 - 資料科學Workspace的架構
 - 如何使用JupyterLab
@@ -35,11 +41,11 @@ ht-degree: 0%
 - 如何建立配方和模型
 - 用來訓練模型並為其評分的方法
 - 超引數在模型開發中的作用
-- 如何將經過訓練的模型發佈為服務
-- 如何使用資料科學Workspace讓您的即時客戶設定檔資料更為豐富
-- 如何使用模型輸出建立串流區段
+- 如何將經過訓練的模型發佈即服務
+- 如何使用數據科學工作環境豐富您的即時客戶數據
+- 如何使用模型輸出創建流式處理區段
 
-## 課程
+## 課
 
 資料科學Workspace課程分為五個課程。
 
@@ -57,11 +63,11 @@ ht-degree: 0%
 
 ### 第4課
 
-**使用Data Science Workspace來訓練和評分模型（6分鐘）：**&#x200B;瞭解如何建立模型，以及在Experience Platform中將其發佈為服務。
+**使用數據科學工作環境訓練和評分模型（6 分鐘）：** 瞭解如何在 Experience Platform 中創建模型並將其發佈為服務。
 
 ### 第5課
 
-**使用及提供資料科學深入分析（11分鐘）：**&#x200B;瞭解資料科學Workspace模型輸出如何用於即時客戶個人檔案，以提供Adobe應用程式和服務的個人化體驗。
+**使用和交付數據科學Insights（11 分鐘）：** 瞭解如何在即時客戶檔案中使用數據科學工作環境模型輸出，通過Adobe Systems應用程式和服務提供個人化體驗。
 
 ## 後續步驟
 

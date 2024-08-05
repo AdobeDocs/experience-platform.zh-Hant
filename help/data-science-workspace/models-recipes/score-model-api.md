@@ -1,24 +1,30 @@
 ---
-keywords: Experience Platform；為模型評分；資料科學Workspace；熱門主題；sensei機器學習api
+keywords: Experience Platform;對模型進行評分;數據科學工作環境;熱門話題;Sensei 機器學習 API
 solution: Experience Platform
-title: 使用Sensei機器學習API為模型評分
+title: 使用 Sensei 機器學習 API 對模型進行評分
 type: Tutorial
-description: 本教學課程將說明如何運用Sensei Machine Learning API來建立實驗與實驗回合。
+description: 本教學課程將介紹如何善用 Sensei 機器學習 API 來創建實驗和實驗運行。
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '570'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Sensei Machine Learning API]為模型評分
+# 使用 [!DNL Sensei Machine Learning API]
 
-本教學課程將說明如何運用API來建立實驗和執行實驗。 如需Sensei Machine Learning API中所有端點的清單，請參閱[此檔案](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)。
+>[!NOTE]
+>
+>不再提供 Data Science 工作環境 購買。
+>
+>本文檔適用於先前有權使用數據科學工作環境的現有客戶。
 
-## 建立已排程的評分實驗
+本教學課程將介紹如何善用 API 以創建實驗和實驗運行。 有關 Sensei 機器學習 API 中所有終結點的清單，請參閱 [此文件](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)。
 
-類似於排程的訓練實驗，建立排程的評分實驗也是透過將`template`區段加入主體引數來完成。 此外，內文中`tasks`下的`name`欄位已設定為`score`。
+## 建立計分的计划實驗
+
+與培訓的計劃實驗類似，創建計分的計劃實驗也是通過在 body 参数中包含部分 `template` 來完成的。 此外，內文中`tasks`下的`name`欄位已設定為`score`。
 
 下列是建立從`startTime`開始每20分鐘執行一次並將執行至`endTime`的實驗的範例。
 
@@ -36,7 +42,7 @@ curl -X POST \
 
 `{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。\
 `{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{API_KEY}`：您在唯一Adobe Experience Platform整合中找到的特定API金鑰值。\
+`{API_KEY}`： 在獨特 Adobe Experience Platform 整合中找到您的特定 API 值。\
 `{JSON_PAYLOAD}`：要傳送的Experiment Run物件。 我們教學課程中使用的範例顯示於此處：
 
 ```JSON
@@ -102,13 +108,13 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`：代表實驗的ID。\
-`{INSTANCE_ID}`：代表MLInstance的ID。
+`{EXPERIMENT_ID}`：代表實驗的 ID。\
+`{INSTANCE_ID}`：表示 MLInstance 的 ID。
 
 
-### 建立評分的實驗回合
+### 建立實驗跑得分
 
-現在，有了經過訓練的模型，我們可以為評分建立實驗回合。 `modelId`引數的值是上述GET模型請求中傳回的`id`引數。
+現在，使用經過訓練的模型，我們可以創建一個實驗 Run進行評分。 參數值 `modelId` 為 `id` 上述GET模型請求中返回的參數。
 
 **要求**
 
@@ -122,11 +128,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。\
-`{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{API_KEY}`：您在唯一Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{EXPERIMENT_ID}`：對應到您要鎖定之實驗的ID。 這可在建立實驗時的回應中找到。\
-`{JSON_PAYLOAD}`：要張貼的資料。 我們在本教學課程中使用的範例如下：
+`{ORG_ID}`： 在獨特Adobe Experience Platform整合中找到您的組織憑證。\
+`{ACCESS_TOKEN}`：您在驗證后提供的特定持有者令牌值。\
+`{API_KEY}`： 在獨特 Adobe Experience Platform 整合中找到您的特定 API 值。\
+`{EXPERIMENT_ID}`：與要目標實驗對應的 ID。 這可以在創建實驗時的回應中找到。\
+`{JSON_PAYLOAD}`：要發佈的數據。 我們在本教學課程中使用的範例如下：
 
 ```JSON
 {
@@ -169,7 +175,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`：與執行所在實驗相對應的ID。\
-`{EXPERIMENT_RUN_ID}`：與您剛建立的Experiment Run對應的識別碼。
+`{EXPERIMENT_RUN_ID}`：與剛剛創建的實驗 Run對應的 ID。
 
 
 ### 擷取已排程實驗執行的實驗執行狀態
@@ -187,9 +193,9 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`：與執行所在實驗相對應的ID。\
 `{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。
+`{ORG_ID}`： 在獨特Adobe Experience Platform整合中找到您的組織憑證。
 
-由於特定實驗有多個實驗執行，因此傳回的回應將有一系列執行ID。
+由于特定實驗有多個實驗運行，因此返回的回應將具有運行 ID 数組。
 
 **回應**
 
@@ -212,8 +218,8 @@ curl -X GET \
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`：對應到實驗回合的識別碼。\
-`{EXPERIMENT_ID}`：與執行所在實驗相對應的ID。
+`{EXPERIMENT_RUN_ID}`：對應實驗執行的 ID。\
+`{EXPERIMENT_ID}`：與運行所在的實驗對應的 ID。
 
 ### 停止並刪除排程的實驗
 

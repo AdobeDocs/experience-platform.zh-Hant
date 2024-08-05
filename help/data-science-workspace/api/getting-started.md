@@ -5,14 +5,20 @@ title: Sensei Machine Learning API指南
 description: Sensei機器學習API可讓開發人員對各種資料科學Workspace資源執行CRUD操作。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 14%
+source-wordcount: '255'
+ht-degree: 12%
 
 ---
 
 # [!DNL Sensei Machine Learning] API指南
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 [!DNL Sensei Machine Learning] API為資料科學家提供組織和管理機器學習服務的機制，從演演算法上線到實驗，再到服務部署。
 

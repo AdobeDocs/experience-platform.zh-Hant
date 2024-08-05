@@ -5,17 +5,22 @@ title: 使用Sensei Machine Learning API訓練和評估模型
 type: Tutorial
 description: 本教學課程將說明如何使用Sensei機器學習API呼叫來建立、訓練和評估模型。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1240'
 ht-degree: 1%
 
 ---
 
-# 使用[!DNL Sensei Machine Learning] API訓練及評估模型
+# 使用 API 訓練 [!DNL Sensei Machine Learning] 和評估模型
 
+>[!NOTE]
+>
+>不再提供 Data Science 工作環境 購買。
+>
+>本文檔適用於先前有權使用數據科學工作環境的現有客戶。
 
-本教學課程將說明如何使用API呼叫建立、訓練和評估模型。 如需API檔案的詳細清單，請參閱[此檔案](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
+本教學課程將介紹如何使用 API 調用創建、訓練和評估模型。 如需 API 文件的詳細清單，請参閱 [此文件](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 。
 
 ## 先決條件
 
@@ -39,18 +44,18 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->術語「引擎」、「MLInstance」、「MLService」、「Experiment」和「Model」在UI中稱為不同術語。 如果您來自UI，下表會比較兩者的差異。
+>術語「引擎」、「MLInstance」、「MLService」、「Experiment」和「Model」在UI中稱為不同術語。 如果您來自UI，下表映射了差異。
 
-| UI詞語 | API詞語 |
+| UI術語 | API 術語 |
 | --- | --- |
-| 配方 | 引擎 |
+| 配方 | 發動機 |
 | 模型 | MLInstance |
 | 訓練回合 | 實驗 |
-| 服務 | MLService |
+| 服務 | MLS服務 |
 
-### 建立MLInstance
+### 建立 MLInstance
 
-您可以使用以下請求來建立MLInstance。 您將使用從[使用API](./import-packaged-recipe-ui.md)匯入封裝配方來建立引擎時傳回的`{ENGINE_ID}`。
+可以使用以下請求創建 MLInstance。 您將使用 從 匯入 创建引擎[時返回的 `{ENGINE_ID}` API 教學課程打包的配方](./import-packaged-recipe-ui.md)。
 
 **要求**
 
@@ -64,10 +69,10 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。\
-`{API_KEY}`：您在唯一Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{JSON_PAYLOAD}`：我們的MLInstance的設定。 我們教學課程中使用的範例顯示於此處：
+`{ACCESS_TOKEN}`：您在驗證后提供的特定持有者令牌值。\
+`{ORG_ID}`： 在獨特Adobe Experience Platform整合中找到您的組織憑證。\
+`{API_KEY}`： 在獨特 Adobe Experience Platform 整合中找到您的特定 API 值。\
+`{JSON_PAYLOAD}`：我們的MLInstance的配置。 我們在教學課程中使用的示例如下所示：
 
 ```JSON
 {
@@ -122,9 +127,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->在`{JSON_PAYLOAD}`中，我們定義在`tasks`陣列中用於訓練和評分的引數。 `{ENGINE_ID}`是您要使用之引擎的識別碼，`tag`欄位是用於識別執行個體的選用引數。
+>在 中 `{JSON_PAYLOAD}`，我們定義用於陣列中 `tasks` 培訓和評分的參數。 這是 `{ENGINE_ID}` 您要使用的引擎的ID，字段 `tag` 是用於標識實例的可選參數。
 
-回應包含`{INSTANCE_ID}`，代表已建立的MLInstance。 可以建立具有不同設定的多個模型MLInstances。
+回應包含表示 `{INSTANCE_ID}` 創建的MLInstance。 可以創建具有不同配置的多個模型 MLIstance。
 
 **回應**
 
@@ -176,10 +181,10 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。\
-`{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{API_KEY}`：您在唯一Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{JSON_PAYLOAD}`：已建立的實驗物件。 我們教學課程中使用的範例顯示於此處：
+`{ORG_ID}`： 在獨特Adobe Experience Platform整合中找到您的組織憑證。\
+`{ACCESS_TOKEN}`：您在驗證后提供的特定持有者令牌值。\
+`{API_KEY}`： 在獨特 Adobe Experience Platform 整合中找到您的特定 API 值。\
+`{JSON_PAYLOAD}`： 實驗建立的物件。 我們在教學課程中使用的示例如下所示：
 
 ```JSON
 {
@@ -191,9 +196,9 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`：代表MLInstance的ID。
+`{INSTANCE_ID}`：表示 MLInstance 的 ID。
 
-來自實驗建立的回應看起來像這樣。
+實驗創作的響應看起來按讚這樣。
 
 **回應**
 
@@ -211,12 +216,11 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`：代表您剛建立之實驗的ID。
-`{INSTANCE_ID}`：代表MLInstance的ID。
+`{EXPERIMENT_ID}`：代表您剛剛建立之實驗的 ID。`{INSTANCE_ID}`：表示 MLInstance 的 ID。
 
-### 建立排程的實驗以進行訓練
+### 建立計劃實驗以進行培訓
 
-使用已排程的實驗，因此我們不需要透過API呼叫建立每個單一實驗執行。 相反地，我們在實驗建立期間會提供所有必要的引數，而且會定期建立每次執行。
+使用計劃實驗，因此我們不需要通過 API 調用創建每個實驗運行。 相反，我們在創建實驗期間提供所有必要的參數，並且每次運行都將定期創建。
 
 若要指出已排程實驗的建立，我們必須在要求內文中新增`template`區段。 在`template`中，包含排程執行的所有必要引數，例如`tasks` （表示哪個動作）和`schedule` （表示排程執行的時間）。
 
@@ -233,9 +237,9 @@ curl -X POST \
 ```
 
 `{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。\
-`{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{API_KEY}`：您在唯一Adobe Experience Platform整合中找到的特定API金鑰值。\
-`{JSON_PAYLOAD}`：要發佈的資料集。 我們教學課程中使用的範例顯示於此處：
+`{ACCESS_TOKEN}`：您在驗證后提供的特定持有者令牌值。\
+`{API_KEY}`： 在獨特 Adobe Experience Platform 整合中找到您的特定 API 值。\
+`{JSON_PAYLOAD}`： 要發佈的資料集。 我們在教學課程中使用的示例如下所示：
 
 ```JSON
 {
@@ -265,7 +269,7 @@ curl -X POST \
 }
 ```
 
-當我們建立實驗時，內文`{JSON_PAYLOAD}`應包含`mlInstanceId`或`mlInstanceQuery`引數。 在此範例中，排定的實驗將叫用每20分鐘執行一次，在`cron`引數中設定，從`startTime`開始直到`endTime`。
+當我們創建一個實驗時，主體 ， `{JSON_PAYLOAD}`應包含 或 `mlInstanceId` `mlInstanceQuery` 參数。 在此示例中，計劃實驗將每 20 分鐘調用一次運行，在參數中 `cron` 設置，從 開始 `startTime` ，直到 `endTime`。
 
 **回應**
 
@@ -331,7 +335,7 @@ curl -X POST \
 }
 ```
 
-您也可以包含`tasks`陣列以覆寫設定引數：
+您還可以透過包含 `tasks` 數位來覆蓋設定參數：
 
 ```JSON
 {
@@ -350,7 +354,7 @@ curl -X POST \
 }
 ```
 
-您將會收到下列回應，讓您知道`tasks`下的`{EXPERIMENT_RUN_ID}`和組態。
+您將獲得以下回應，該 `{EXPERIMENT_RUN_ID}` 回應將告訴您和 下的配置 `tasks`。
 
 **回應**
 
@@ -371,12 +375,12 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`：代表實驗回合的識別碼。\
-`{EXPERIMENT_ID}`：代表實驗執行所在實驗的ID。
+`{EXPERIMENT_RUN_ID}`：代表實驗執行的 ID。\
+`{EXPERIMENT_ID}`：表示實驗運行所在的實驗的 ID。
 
-### 擷取實驗執行狀態
+### 擷取實驗運行狀態
 
-可使用`{EXPERIMENT_RUN_ID}`查詢實驗回合的狀態。
+可以使用 查詢 `{EXPERIMENT_RUN_ID}`實驗運行的狀態。
 
 **要求**
 
@@ -388,15 +392,15 @@ curl -X GET \
   -H 'x-api-key: {API_KEY}'
 ```
 
-`{EXPERIMENT_ID}`：代表實驗的ID。\
-`{EXPERIMENT_RUN_ID}`：代表實驗回合的識別碼。\
-`{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。\
-`{API_KEY}`：您在唯一Adobe Experience Platform整合中找到的特定API金鑰值。
+`{EXPERIMENT_ID}`：代表實驗的 ID。\
+`{EXPERIMENT_RUN_ID}`：代表實驗執行的 ID。\
+`{ACCESS_TOKEN}`：您在驗證后提供的特定持有者令牌值。\
+`{ORG_ID}`： 在獨特Adobe Experience Platform整合中找到您的組織憑證。\
+`{API_KEY}`： 在獨特 Adobe Experience Platform 整合中找到您的特定 API 值。
 
 **回應**
 
-GET呼叫將在`state`引數中提供狀態，如下所示：
+GET 呼叫將在參數中 `state` 提供狀態，如下所示：
 
 ```JSON
 {
@@ -429,19 +433,19 @@ GET呼叫將在`state`引數中提供狀態，如下所示：
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`：代表實驗回合的識別碼。\
-`{EXPERIMENT_ID}`：代表實驗執行所在實驗的ID。
+`{EXPERIMENT_RUN_ID}`：代表實驗執行的 ID。\
+`{EXPERIMENT_ID}`：表示實驗運行所在的實驗的 ID。
 
-除了`DONE`狀態之外，其他狀態包括：
+除州外 `DONE` ，其他州還包括：
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-若要取得詳細資訊，可在`tasklogs`引數下找到詳細記錄。
+要獲取更多資訊，可以在參數下 `tasklogs` 找到詳細日誌。
 
-### 擷取訓練後的模型
+### 檢索已訓練的模型
 
-為了在訓練期間取得上述建立的訓練模型，我們提出下列要求：
+為了在培訓期間獲得上面創建的訓練模型，我們進行了以下請求：
 
 **要求**
 
@@ -452,11 +456,11 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_RUN_ID}`：對應到您要鎖定之實驗回合的識別碼。 這可在建立實驗回合時的回應中找到。\
-`{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。
+`{EXPERIMENT_RUN_ID}`：與要目標實驗執行對應的 ID。 這可以在創建實驗運行時的回應中找到。\
+`{ACCESS_TOKEN}`：您在驗證后提供的特定持有者令牌值。\
+`{ORG_ID}`： 在獨特Adobe Experience Platform整合中找到您的組織憑證。
 
-回應代表已建立的已訓練模型。
+回應表示已創建的已訓練模型。
 
 **回應**
 
@@ -482,13 +486,13 @@ curl -X GET \
 }
 ```
 
-`{MODEL_ID}`：與模型對應的識別碼。\
-`{EXPERIMENT_ID}`：對應至實驗回合所在實驗的ID。\
-`{EXPERIMENT_RUN_ID}`：對應到實驗回合的識別碼。
+`{MODEL_ID}`：模型對應的ID。\
+`{EXPERIMENT_ID}`：與實驗運行所在的實驗對應的 ID。\
+`{EXPERIMENT_RUN_ID}`：對應實驗執行的 ID。
 
-### 停止並刪除排程的實驗
+### 停止和刪除計劃實驗
 
-如果您想要在排程的Experiment `endTime`之前停止執行，這可透過查詢`{EXPERIMENT_ID}`的DELETE要求來完成
+如果要在排程實驗之前 `endTime`停止其執行，這可以通過將DELETE 要求查詢到 `{EXPERIMENT_ID}`
 
 **要求**
 
@@ -499,15 +503,15 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
-`{EXPERIMENT_ID}`：與實驗對應的識別碼。\
-`{ACCESS_TOKEN}`：驗證後提供您的特定持有人權杖值。\
-`{ORG_ID}`：您在唯一Adobe Experience Platform整合中找到的組織認證。
+`{EXPERIMENT_ID}`：實驗對應的 ID。\
+`{ACCESS_TOKEN}`：您在驗證后提供的特定持有者令牌值。\
+`{ORG_ID}`： 在獨特Adobe Experience Platform整合中找到您的組織憑證。
 
 >[!NOTE]
 >
->API呼叫將停用建立新的實驗執行。 但是，這不會停止執行已執行的實驗執行。
+>API 調用將禁用創建新實驗運行。 但是，它不會停止執行已在運行的實驗運行。
 
-以下是「回應」，通知實驗已成功刪除。
+以下是通知已成功刪除實驗的回應。
 
 **回應**
 

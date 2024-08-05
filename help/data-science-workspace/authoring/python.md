@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；資料存取；python sdk；資料存取api；讀取python；寫入python
+keywords: Experience Platform;家;熱門話題;數據訪問;Python SDK;數據訪問 API;讀蟒蛇;寫蟒蛇
 solution: Experience Platform
-title: 在資料科學Workspace中使用Python存取資料
+title: 在數據科學工作環境中使用 Python 訪問數據
 type: Tutorial
-description: 以下檔案包含如何在Python中存取資料以用於資料科學Workspace的範例。
+description: 以下文件包含有關如何在 Python 中訪問數據以用於數據科學工作環境的示例。
 exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
 
-# 在資料科學Workspace中使用Python存取資料
+# 在數據科學工作環境中使用 Python 訪問數據
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 以下檔案包含有關如何使用Python存取資料以用於資料科學Workspace的範例。 如需使用JupyterLab Notebooks存取資料的資訊，請瀏覽[JupyterLab Notebooks資料存取](../jupyterlab/access-notebook-data.md)檔案。
 
@@ -49,11 +55,11 @@ dataset = Dataset(client_context).get_by_id({DATASET_ID})
 partitions = dataset.get_partitions_info()
 ```
 
-### DISTINCT子句
+### 區別條款
 
-DISTINCT子句可讓您在列/欄層級擷取所有不同的值，從回應中移除所有重複的值。
+DISTINCT 子句允許您獲取行/列級別的所有非重複值，從回應中刪除所有重複值。
 
-以下顯示使用`distinct()`函式的範例：
+下面可以看到使用該 `distinct()` 函數的範例：
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,23 +93,23 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ORDER BY子句允許接收的結果以特定順序（升序或降序）依指定的資料行排序。 這是使用`sort()`函式完成的。
 
-以下顯示使用`sort()`函式的範例：
+下面可以看到使用該 `sort()` 函數的範例：
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 ```
 
-### LIMIT子句
+### 限制條款
 
-LIMIT子句可讓您限制從資料集接收的記錄數。
+LIMIT 子句允許您限制從資料集接收的記錄數。
 
-以下顯示使用`limit()`函式的範例：
+下面可以看到使用該 `limit()` 函數的範例：
 
 ```python
 df = dataset_reader.limit(100).read()
 ```
 
-### OFFSET子句
+### 抵銷條款
 
 OFFSET子句可讓您從頭開始略過資料列，以開始從後面傳回資料列。 在搭配LIMIT的情況下，這可用來疊代區塊中的列。
 
@@ -132,13 +138,13 @@ write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 
 ## Userspace目錄（檢查點）
 
-若要讓工作執行時間更長，您可能需要儲存中間步驟。 在類似的情況下，您可以讀取和寫入使用者空間。
+對於運行時間較長的作業，可能需要商店中間步驟。 在此實例按讚，您可以讀取和寫入用戶空間。
 
 >[!NOTE]
 >
->資料路徑&#x200B;**未儲存**。 您需要儲存其個別資料的對應路徑。
+>不&#x200B;****&#x200B;存儲數據的路徑。您必須商店其各自數據的對應路徑。
 
-### 寫入使用者空間
+### 寫入用戶空間
 
 ```python
 client_context = get_client_context(config_properties)

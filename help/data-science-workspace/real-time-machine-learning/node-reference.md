@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 即時機器學習節點參考
 description: 節點是形成圖形的基本單位。 每個節點會執行特定工作，而且它們可以使用連結連結連結在一起，以形成代表ML管道的圖形。 節點所執行的作業代表對輸入資料的操作，例如資料或結構描述的轉換，或機器學習推斷。 節點會將轉換或推斷的值輸出到下一個節點。
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 9030a5482d4ea2b54426680cef92b89e68ef5b33
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
 
 # 即時機器學習節點參考(Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 >[!IMPORTANT]
 >
@@ -129,7 +135,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | 模型超引數，如需詳細資訊，請參閱[sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)檔案。 |
 | node_instance.process(data_message_from_previous_node) | 方法`process()`從上一個節點取得DataMsg並套用轉換。 這取決於目前使用的節點。 |
 
-### Split
+### 分割
 
 使用以下節點，透過傳遞`train_size`或`test_size`將您的資料流分割成訓練及測試。 這會傳回具有多索引的資料流。 您可以使用下列範例`msg5.data.xs("train")`存取訓練與測試資料流。
 

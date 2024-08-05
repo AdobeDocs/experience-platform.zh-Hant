@@ -5,14 +5,20 @@ title: 資料科學Workspace UI中的Publish a Model as a Service
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace可讓您發佈經過訓練及評估的模型即服務，讓組織內的使用者無需建立自己的模型即可對資料評分。
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '528'
 ht-degree: 4%
 
 ---
 
 # 在資料科學工作區 UI 中將模式發佈為服務 {#publish-a-model-as-a-service}
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"

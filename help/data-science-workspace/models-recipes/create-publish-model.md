@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；機器學習模型；資料科學Workspace；熱門主題；建立和發佈模型
+keywords: Experience Platform;機器學習模型;數據科學工作環境;熱門話題;創建和發佈模型
 solution: Experience Platform
 title: 建立和Publish機器學習模型
 type: Tutorial
-description: 下列指南說明建立和發佈機器學習模型所需的步驟。
+description: 以下指南介紹了創建和發佈機器學習模型所需的步驟。
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,25 @@ ht-degree: 0%
 
 # 建立及發佈機器學習模型
 
-下列指南說明建立和發佈機器學習模型所需的步驟。 每個區段都包含您要執行操作的說明，以及UI和API檔案的連結，以便執行所述的步驟。
+>[!NOTE]
+>
+>不再提供 Data Science 工作環境 購買。
+>
+>本文檔適用於先前有權使用數據科學工作環境的現有客戶。
+
+以下指南介紹了創建和發佈機器學習模型所需的步驟。 每個部分都包含您將執行的操作的說明，以及對執行所述步驟的UI和 API 文件的連結。
 
 ## 快速入門
 
-開始進行本教學課程前，您必須具備下列必要條件：
+在開始此教學課程之前，必須滿足以下先決條件：
 
-- 存取[!DNL Adobe Experience Platform]。 如果您沒有[!DNL Experience Platform]中組織的存取權，請在繼續之前與您的系統管理員交談。
+- 存取 [!DNL Adobe Experience Platform]。 如果您無權存取 中的 [!DNL Experience Platform]組織，請在繼續操作前與系統管理員聯繫。
 
-- 所有資料科學Workspace教學課程都使用Luma傾向模型。 為了遵循，您必須已建立[Luma傾向模型結構描述和資料集](./create-luma-data.md)。
+- 所有 Data Science 工作環境 教學課程都使用 Luma 傾向模型。 若要繼續追隨，您必須已建立 [Luma propenstiy 模型架構和數據集](./create-luma-data.md)。
 
-### 探索資料並瞭解結構描述
+### 探索數據並了解架構
 
-登入[Adobe Experience Platform](https://platform.adobe.com/)並選取&#x200B;**[!UICONTROL 資料集]**&#x200B;以列出所有現有的資料集，並選取您要探索的資料集。 在此情況下，您應該選取&#x200B;**Luma網頁資料**&#x200B;資料集。
+登錄到 [Adobe Experience Platform](https://platform.adobe.com/) 並選擇 **[!UICONTROL 數據集]** 以清單所有現有數據集，然後選擇按讚流覽的資料集。 在這種情況下，您應選擇 **Luma Web 数据** 資料集。
 
 ![選取Luma網頁資料集](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
@@ -37,29 +43,29 @@ ht-degree: 0%
 
 在右側欄中選取結構描述連結。 彈出視窗隨即顯示，選取&#x200B;**[!UICONTROL 結構描述名稱]**&#x200B;下的連結會在新索引標籤中開啟結構描述。
 
-![預覽luma web資料結構描述](../images/models-recipes/model-walkthrough/preview-schema.png)
+![預覽 Luma 網站数据綱要](../images/models-recipes/model-walkthrough/preview-schema.png)
 
-您可以使用提供的探索資料分析(EDA)筆記本進一步探索資料。 此筆記型電腦可用來協助瞭解Luma資料中的模式、檢查資料健全度，並總結預測傾向模型的相關資料。 若要進一步瞭解探索資料分析，請造訪[EDA檔案](../jupyterlab/eda-notebook.md)。
+可以使用提供的探索性數據分析 （EDA） 筆記本進一步瀏覽數據。 此筆記本可用於幫助瞭解 Luma 數據中的模式、檢查數據健全性以及匯總預測傾向模型的相關數據。 要了解有關探索性数据分析的更多信息，造訪 [EDA 文檔](../jupyterlab/eda-notebook.md)。
 
-## 建立Luma傾向指導方針 {#author-your-model}
+## 建立亮度傾向方式 {#author-your-model}
 
 [!DNL Data Science Workspace]生命週期的主要元件涉及編寫配方和模型。 Luma傾向模型旨在預測客戶是否有從Luma購買產品的高傾向。
 
-若要建立Luma傾向模型，系統會使用配方產生器範本。 配方是模型的基礎，因為它們包含為解決特定問題而設計的機器學習演演算法和邏輯。 更重要的是，訣竅可讓您將整個組織的機器學習普及化，讓其他使用者無需撰寫任何程式碼即可存取不同使用案例的模型。
+若要建立 Luma 傾向模型，需使用方式產生器範本。 配方是模型的基礎，因為它們包含旨在解決特定問題的機器學習演算法和邏輯。 更重要的是，配方使您能夠在整個組織中民主化機器學習，使其他用戶能夠在不編寫任何代碼的情況下訪問不同用例的模型。
 
-依照[使用JupyterLab Notebooks](../jupyterlab/create-a-model.md)教學課程建立模型，以建立用於後續教學課程的Luma傾向模型配方。
+[按照使用 JupyterLab 筆記本](../jupyterlab/create-a-model.md)創建模型教學課程創建 Luma 傾向模型方式，後續教程將使用該模型。
 
-## 從外部來源匯入並封裝配方（*選擇性*）
+## 從外部源匯入和打包方式（*可選*）
 
-如果您想要匯入並封裝配方以用於Data Science Workspace，您必須將來源檔案封裝到封存檔案中。 請依照[封裝來源檔案到配方](./package-source-files-recipe.md)教學課程中。 本教學課程說明如何將來源檔案封裝到配方中，這是將配方匯入資料科學Workspace的先決條件。 完成教學課程後，系統就會在Azure容器登入中為您提供Docker影像，以及對應的影像URL，亦即封存檔案。
+如果要導入和打包方式以用於數據科學工作環境，則必須將源檔打包到存檔檔中。 [按照包源文件進入方式](./package-source-files-recipe.md)教學課程。本教學課程介紹如何將源文件打包到方式中，這是將方式導入數據科學工作環境的先決條件步驟。 教學課程完成後，會在 Azure 容器註冊表中提供 Docker 映射，以及相應的映射URL，換句話說，存檔文件。
 
-此封存檔案可用於在資料科學Workspace中建立配方，方法是使用[UI工作流程](./import-packaged-recipe-ui.md)或[API工作流程](./import-packaged-recipe-api.md)遵循配方匯入工作流程。
+此存檔文件可用於在數據科學工作環境中創建方式，方法是使用 UI 工作流程](./import-packaged-recipe-ui.md) 或 [API 工作流程](./import-packaged-recipe-api.md)遵循[方式導入工作流程。
 
 ## 訓練和評估模型 {#train-and-evaluate-your-model}
 
-現在您的資料已準備就緒且配方已準備就緒，您能夠進一步建立、訓練及評估您的機器學習模型。 使用配方產生器時，您應該先培訓、評分和評估模型，再將其封裝到配方中。
+現在，您的數據已準備就緒，方式已準備就緒，您可以進一步創建、訓練和評估機器學習模型。 使用配方生成器時，在將模型打包到方式之前，您應該已經訓練、評分和評估了模型。
 
-資料科學Workspace UI和API可讓您以模型形式發佈配方。 此外，您可以進一步微調模型的特定方面，例如新增、移除和變更超引數。
+數據科學工作環境 UI和 API 允許您將方式發佈為模型。 此外，您可以進一步微調模型的特定方面，例如新增、移除和變更超引數。
 
 ### 建立模型
 
@@ -69,23 +75,23 @@ ht-degree: 0%
 >
 > 無法學習超引數，因此必須在執行訓練前指派它們。 調整超引數可能會改變已訓練模型的精確度。 由於模型最佳化是一個反複的過程，因此在達到滿意的評估之前，可能需要多次訓練執行。
 
-## 為模型評分 {#score-a-model}
+## 對模型進行評分 {#score-a-model}
 
-建立和發佈模型的下一步是將模型投入運作，以便對Data Lake和即時客戶個人檔案的深入分析評分並加以使用。
+創建和發佈模型的下一步是操作模型，以便對數據湖和即時客戶檔案中的見解進行評分和使用。
 
-將輸入資料饋送至現有的已訓練模型，即可達到資料科學Workspace的評分。 評分結果會儲存於指定的輸出資料集，並可作為新批次檢視。
+數據科學工作環境中的評分可以通過將輸入數據饋送到現有的訓練模型中來實現。 然後，評分結果將作為新批次存儲在指定的輸出資料集中並可供查看。
 
 若要瞭解如何為您的模型評分，請造訪模型[UI教學課程](./score-model-ui.md)或[API教學課程](./score-model-api.md)評分。
 
 ## Publish已評分模型即服務
 
-資料科學Workspace可讓您將經過訓練的模型發佈為服務。 這可讓貴組織內的使用者對資料評分，而不需要建立自己的模型。
+數據科學工作環境允許將經過訓練的模型發佈即服務。 這使組織內的使用者無需創建自己的模型即可對數據進行評分。
 
-若要瞭解如何將模型發佈為服務，請造訪[UI教學課程](./publish-model-service-ui.md)或[API教學課程](./publish-model-service-api.md)。
+若要了解如何發佈模型即服務，請造訪 [UI 教學課程](./publish-model-service-ui.md) 或 [API 教學課程](./publish-model-service-api.md)。
 
-### 排程服務的自動化訓練
+### 安排服務的自動化培訓
 
-將模型發佈為服務後，您就可以為機器學習服務設定已排程的評分和訓練回合。 自動化訓練和評分程式，可隨時掌握資料中的模式，協助維持及改善服務效率。 造訪[在資料科學Workspace UI](./schedule-models-ui.md)教學課程中排程模型。
+將模型發佈為服務后，可以為機器學習服務設置計劃的評分和培訓運行。 自動化培訓和評分過程可以通過跟上數據中的模式來幫助隨著時間的推移保持和提高服務的效率。 [訪問数据科學工作環境 UI](./schedule-models-ui.md)教學課程中的計劃模型。
 
 >[!NOTE]
 >

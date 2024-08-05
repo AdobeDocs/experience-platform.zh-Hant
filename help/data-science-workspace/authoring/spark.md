@@ -5,14 +5,20 @@ title: 在資料科學Workspace中使用Spark存取資料
 type: Tutorial
 description: 以下檔案包含如何使用Spark存取資料，以用於資料科學Workspace的範例。
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 # 在資料科學Workspace中使用Spark存取資料
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 以下檔案包含如何使用Spark存取資料，以用於資料科學Workspace的範例。 如需使用JupyterLab Notebooks存取資料的資訊，請瀏覽[JupyterLab Notebooks資料存取](../jupyterlab/access-notebook-data.md)檔案。
 

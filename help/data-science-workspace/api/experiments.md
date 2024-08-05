@@ -5,14 +5,20 @@ title: 實驗API端點
 description: 模型開發和訓練會在實驗層級進行，其中實驗包含MLInstance、訓練回合和評分回合。
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '806'
 ht-degree: 4%
 
 ---
 
 # 實驗端點
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 模型開發和訓練會在實驗層級進行，其中實驗包含MLInstance、訓練回合和評分回合。
 

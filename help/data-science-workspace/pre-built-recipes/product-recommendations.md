@@ -4,14 +4,20 @@ solution: Experience Platform
 title: 產品推薦配方
 description: 產品Recommendations配方可讓您根據客戶的需求和興趣量身打造個人化產品推薦。 有了準確的預測模型，客戶的購買記錄就能為您提供他們可能對哪些產品感興趣的深入分析。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 3%
+source-wordcount: '489'
+ht-degree: 2%
 
 ---
 
 # 產品推薦配方
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。
+>
+>本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 產品Recommendations配方可讓您根據客戶的需求和興趣量身打造個人化產品推薦。 有了準確的預測模型，客戶的購買記錄就能為您提供他們可能對哪些產品感興趣的深入分析。
 
