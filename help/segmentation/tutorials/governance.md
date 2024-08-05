@@ -4,7 +4,7 @@ title: 使用API強制對象區段遵守資料使用規範
 type: Tutorial
 description: 本教學課程涵蓋使用API強制資料使用法規遵循區段定義的步驟。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1348'
 ht-degree: 6%
@@ -91,7 +91,6 @@ curl -X GET \
     "schema": { 
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 90,
     "imsOrgId": "{ORG_ID}",
     "name": "Cart abandons in CA",
     "description": "",
