@@ -2,7 +2,7 @@
 title: 設定檔匯出行為
 description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Experience Platform目的地會將資料匯出至API型整合，做為HTTPS呼�
 >
 > 僅[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html)客戶可使用企業目的地。
 
-Experience Platform中的[企業目的地](/help/destinations/destination-types.md#streaming-profile-export)是Amazon Kinesis、Azure事件中樞及HTTP API。
+Experience Platform中的[企業目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)是Amazon Kinesis、Azure事件中樞及HTTP API。
 
 Experience Platform會最佳化將設定檔匯出至您企業目的地的行為，以便僅在對象資格或其他重大事件後發生設定檔的相關更新時，將資料匯出至您的API端點。 在下列情況下，設定檔會匯出至您的目的地：
 

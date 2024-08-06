@@ -2,7 +2,7 @@
 title: 目的地啟用工作流程中的身分處理
 description: 瞭解在啟用工作流程中如何根據目的地型別處理身分匯出
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 0%
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## 以檔案為基礎的目的地 {#file-based}
 
-針對[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based) （例如[!DNL Amazon S3]、SFTP、大部分的電子郵件行銷目的地，例如[!DNL Adobe Campaign]、[!DNL Oracle Eloqua]、[!DNL Salesforce Marketing Cloud]），這些目的地中的身分設定大多是開啟的，這表示您不需要在批次啟用工作流程的[選取屬性](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)步驟中選取任何身分。
+對於[基於文件的目標](/help/destinations/destination-types.md#file-based)（例如 SFTP、大多數電子郵件行銷目標（例如[!DNL Amazon S3][!DNL Adobe Campaign]、[!DNL Oracle Eloqua]、）、[!DNL Salesforce Marketing Cloud]，其中大多數目標中的標識設置都是打開的，這意味著您無需在批處理啟用 工作流程的“[選擇屬性](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes)”步驟中選擇任何標識。
 
-如果您選擇將身分新增至檔案匯出，請注意，在匯出中只能選取[身分名稱空間](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer)中的單一身分。 當您選取要匯出的身分時，會自動選取它作為[必要屬性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes)和[重複資料刪除索引鍵](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)。
+如果您選擇將身份添加到文件匯出中，請注意，在匯出中只能選擇身份命名空間](/help/identity-service/features/identity-graph-viewer.md#access-identity-graph-viewer)中的[單個身份。選擇要匯出的標識時，將自動選擇該標識作為 [必需屬性](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes) 和 [重複資料刪除 - 重複密鑰](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys)。
 
-![選取為必要屬性和重複資料刪除索引鍵的身分。](/help/destinations/assets/how-destinations-work/selected-identity.png)
+![選取為強制屬性和重複資料刪除 - 重複密鑰的身分。](/help/destinations/assets/how-destinations-work/selected-identity.png)
 
 作為因應措施，如果這些身分已作為屬性擷取到Experience Platform中，則可以將更多身分新增到匯出。 請參閱以下範例，其中除了身分名稱空間`Phone_E.164`之外，還選取要匯出的XDM屬性電子郵件地址。
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 
 根據您是從身分對應中選取匯出身分識別，還是從已當作屬性擷取到Experience Platform中的身分識別，匯出記錄的數目可能有所不同。 當您從身分對應選取身分時，[合併原則](/help/profile/merge-policies/overview.md)在匯出的記錄數目中也扮演重要角色。
 
-例如，假設您從兩個不同的資料集中有下列設定檔片段，這些片段將合併到單一客戶設定檔中：
+例如，假設從兩個不同的數據集中，您有以下設定檔片段，這些片段將合併為單個客戶 設定檔：
 
-**設定檔片段一**
+**配置檔片段一**
 
 | 身分對應 | 名字 | 姓氏 | 電子郵件屬性 |
 |---------|----------|---------|--------|
@@ -46,13 +46,13 @@ ht-degree: 0%
 
 **設定檔片段二**
 
-| 身分對應 | 名字 | 姓氏 | 電子郵件屬性 |
+| 身分對應 | 名字 | 姓 | 電子郵件屬性 |
 |---------|----------|---------|--------|
-| 電子郵件2，忠誠度ID1 | John | 完成 | 電子郵件2 |
+| 電子郵件 2，忠誠度 ID1 | John | 完成 | 電子郵件2 |
 
 合併的設定檔如下所示：
 
-| 身分對應 | 名字 | 姓氏 | 電子郵件屬性 |
+| 身份映射 | 名字 | 姓 | 電子郵件屬性 |
 |---------|----------|---------|--------|
 | 電子郵件1、電子郵件2、忠誠度ID1 | John | 完成 | 電子郵件2 |
 
@@ -60,23 +60,23 @@ ht-degree: 0%
 
 如果客戶啟用`IdentityMap: Email`，匯出的檔案中將有兩個記錄，一個用於email1，另一個用於email2。
 
-但是，如果客戶啟用`xdm: personalEmail.address`，則記錄中只會出現email2，因為email attribute欄位只包含email2。 這些情況可以解決不同的使用案例，您可能會想要啟用某個客戶檔案中的所有電子郵件地址，或僅啟用該客戶檔案中最新的電子郵件地址。
+但是，如果客戶啟動， `xdm: personalEmail.address`則記錄中將僅顯示 email2，因為電子郵件屬性欄位僅包含 email2。 這些情況可以解決不同的用例，您可能希望激活客戶存檔的所有電子郵件地址，或者僅激活客戶存檔的最新電子郵件地址。
 
-結果是，您匯出的記錄數量取決於您選擇的合併原則，以及您在匯出中是否選取身分或屬性。
+要點是，導出的記錄數取決於所選的合併策略以及在匯出中選擇標識還是屬性。
 
-## API型串流目的地 {#streaming-destinations}
+## 基於 API 的流式處理目標 {#streaming-destinations}
 
-[以[Destination SDK](/help/destinations/destination-sdk/overview.md)建置的API型串流目的地](/help/destinations/destination-types.md#streaming-destination) （例如[!DNL Facebook]、[!DNL Google Customer Match]、[!DNL Pinterest]、[!DNL Braze]及其他）只支援匯出的特定ID。 如需可匯出至每個目的地的特定身分詳細資訊，請閱讀每個目的地檔案頁面中的&#x200B;*支援的身分*&#x200B;區段（例如，請參閱[!DNL Pinterest]目的地頁面中的[支援的身分割槽段](/help/destinations/catalog/advertising/pinterest.md)）。
+[使用目標 SDK 構建的[基於 API 的流式處理目標](/help/destinations/destination-types.md#streaming-destination)（例如[!DNL Facebook]、[!DNL Google Customer Match][!DNL Pinterest]、、等[!DNL Braze]）僅支援用於導出的特定 ID。](/help/destinations/destination-sdk/overview.md)有關可匯出到每個目標的特定標識的詳細資訊，請閱讀&#x200B;*每個目標文檔頁面中的受支持標識*&#x200B;部分（例如，請參閱[目標頁面中的[!DNL Pinterest]受支持標識部分](/help/destinations/catalog/advertising/pinterest.md)）。
 
 但是請注意，您可以彈性地使用來自[私人圖形](/help/profile/merge-policies/overview.md#id-stitching)或屬性中的資料做為身分。 這表示您可以將XDM屬性對應至目的地所需的身分欄位。 請參閱以下的[!DNL Pinterest]目的地範例，其中XDM屬性`personalEmail.address`對應到必要的[!DNL Pinterest]身分`pinterest_audience`。
 
 >[!TIP]
 >
->當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓Experience Platform在啟動時自動雜湊資料。 深入瞭解[串流目的地啟用教學課程](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation)中的&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項。
+>當源欄位包含未經哈希處理的屬性時，請選中 **[!UICONTROL 套用 轉換]** 選項，讓Experience Platform自動雜湊啟用上的數據。 深入瞭解[串流目的地啟用教學課程](/help/destinations/ui/activate-segment-streaming-destinations.md#apply-transformation)中的&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項。
 
-![對應到Pinterest目的地之身分欄位的電子郵件地址屬性範例。](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
+![電子郵件地址屬性映射到 Pinterest 目的地的身分欄位的範例。](/help/destinations/assets/how-destinations-work/email-mapped-to-identity.png)
 
-### 依賴協力廠商Cookie整合的Advertising目的地 {#third-party-cookie-destinations}
+### 有賴于協力廠商 Cookie整合的廣告目的地 {#third-party-cookie-destinations}
 
 依賴第三方Cookie的Advertising目的地（例如： [!DNL Google Ads]、[!DNL Google Ad Manager]、[!DNL Google DV360]、[!DNL Bing]、[!DNL The Trade Desk]）不需要客戶在啟用工作流程中選取ID。 對於這些目的地，在設定啟用工作流程時，Experience Platform會自動尋找由[[!UICONTROL Experience CloudID服務]](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=zh-Hant)建構的身分比對資料表，並匯出所有適用於設定檔且受目的地支援的身分。
 
@@ -92,11 +92,11 @@ ht-degree: 0%
 
 ## 企業目的地 {#enterprise-destinations}
 
-[Enterprise目的地](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis]、[!DNL Azure Event Hubs]、HTTP API)不需要資料匯出中的特定ID，因為這些是專為企業整合使用案例所設計。 不過，您可以視需要從身分對應將身分匯出為XDM屬性或來自身分對應。 檢視匯出至HTTP目的地](/help/destinations/catalog/streaming/http-destination.md#exported-data)的[資料範例，其中包含`personalEmail.address` XDM屬性，以及身分對應中的身分`ECID`和`email_lc_sha256` （雜湊電子郵件地址）。
+[Enterprise目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis]、[!DNL Azure Event Hubs]、HTTP API)不需要資料匯出中的特定ID，因為這些是專為企業整合使用案例所設計。 不過，您可以視需要從身分對應將身分匯出為XDM屬性或來自身分對應。 檢視匯出至HTTP目的地](/help/destinations/catalog/streaming/http-destination.md#exported-data)的[資料範例，其中包含`personalEmail.address` XDM屬性，以及身分對應中的身分`ECID`和`email_lc_sha256` （雜湊電子郵件地址）。
 
-## Personalization目的地 {#personalization-destinations}
+## 個人化目的地 {#personalization-destinations}
 
-[Personalization （或edge）目的地](/help/destinations/destination-types.md#edge-personalization-destinations) (例如：Adobe Target、[!DNL Custom Personalization])不需要在啟用工作流程中選擇任何身分，因為整合是設定檔查詢。 使用者端（[!DNL Target]、[!DNL Web SDK]或其他）會查詢[[!UICONTROL Edge]](/help/collection/home.md#edge)，並提取它需要的設定檔資訊以進行站上個人化。
+[個性化（或邊緣）目標](/help/destinations/destination-types.md#edge-personalization-destinations) （例如：Adobe Target、 [!DNL Custom Personalization]）不需要在啟用 工作流程中進行任何標識選擇，因為集成是設定檔查找。 用戶端（[!DNL Target]、 [!DNL Web SDK]或其他人）查詢 [[!UICONTROL Edge]](/help/collection/home.md#edge) 並提取現場個人化所需的設定檔信息。
 
 <!--
 ![Table with all supported identities](/help/destinations/assets/how-destinations-work/identities-table.png)

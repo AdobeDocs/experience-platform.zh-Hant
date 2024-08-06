@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2023 年 1 月)
 description: Adobe Experience Platform 2023 年 1 月版發行說明。
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 99%
@@ -175,7 +175,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 淘汰後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。這會使得 `Active` 和 `Expired` 區段和檔案型目的地有同等狀態。
 
-如果您正在使用[企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格設定檔，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。
+如果您正在使用[企業目的地](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格設定檔，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。
 
 若要了解有關即時客戶設定檔的詳細資訊，包括使用設定檔資料的教學課程和最佳做法，請從閱讀[即時客戶設定檔概觀](../../profile/home.md)開始。
 

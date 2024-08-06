@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2023 年 4 月)
 description: Adobe Experience Platform 2023 年 4 月版發行說明。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -174,7 +174,7 @@ Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 區段會籍地圖 | 作為之前在 2 月份的公告的後續措施，在 2023 年 5 月 15 日，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。<br/><br/>如果您正在使用[企業目的地](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格設定檔，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。 |
+| 區段會籍地圖 | 作為之前在 2 月份的公告的後續措施，在 2023 年 5 月 15 日，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。<br/><br/>如果您正在使用[企業目的地](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格設定檔，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。 |
 
 {style="table-layout:auto"}
 
