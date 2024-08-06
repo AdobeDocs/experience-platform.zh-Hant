@@ -4,9 +4,9 @@ title: 使用案例教戰手冊概觀
 description: 了解如何使用 Experience Platform 中的使用案例教戰手冊以開始使用各種行銷使用案例。
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '529'
 ht-degree: 30%
 
 ---
@@ -29,10 +29,12 @@ ht-degree: 30%
 
 ## 概觀 {#overview}
 
-[!UICONTROL 使用案例教戰手冊]可協助您在開始使用Real-Time CDP或Adobe Journey Optimizer時克服問題，但您可能無法確切瞭解如何開始使用或是如何建立正確的資產，進而達成您想要的使用案例。 使用案例教戰手冊可透過以下方式為您提供幫助：
+[!UICONTROL 使用案例教戰手冊]可協助您在開始使用Real-Time CDP或Adobe Journey Optimizer時克服問題，但您可能無法確切瞭解如何開始使用或是如何建立正確的資產，進而達成您想要的使用案例。
 
-* 向您展示靈感的使用案例
-* 建立不同的資產，以供您在準備就緒時使用、測試及提升至生產環境。
+使用案例教戰手冊可透過以下方式為您提供幫助：
+
+* [推出可用的教戰手冊目錄，以更快速地開始使用案例](../playbooks/playbooks-list.md)
+* [建立不同的資產](../playbooks/create-share-reuse.md)
 
 ![檢視所有教戰手冊](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 

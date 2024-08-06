@@ -4,10 +4,10 @@ title: 開始使用使用使用案例教戰手冊
 description: 了解如何開始使用「使用案例教戰手冊」功能。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 15%
+source-wordcount: '990'
+ht-degree: 14%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 15%
 * 建立沙箱
 * 設定使用者權限
 * 設定電子郵件、推播和簡訊通知的Journey Optimizer頻道介面(如果您打算使用Journey Optimizer教戰手冊)
+
+若要在Experience PlatformUI中存取豐富的使用案例教戰手冊，請從左側導覽中選取&#x200B;**[!UICONTROL 教戰手冊]**。 閱讀有關如何[瀏覽使用案例行動手冊](../playbooks/navigate.md)並開始使用[勵志沙箱](../playbooks/navigate.md)的檔案。
 
 ## 設定使用案例教戰手冊 — 影片逐步解說 {#video}
 
