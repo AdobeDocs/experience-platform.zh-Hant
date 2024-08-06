@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
+source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
 workflow-type: tm+mt
 source-wordcount: '5805'
 ht-degree: 2%
@@ -130,7 +130,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | set_date_part | 取代指定日期中的元件。 接受下列元件： <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>元件： **必要**&#x200B;代表日期一部分的字串。 </li><li>值： **必要**&#x200B;為指定日期的元件設定的值。</li><li>日期： **必要**&#x200B;日期（標準格式）。</li></ul> | set_date_part&#x200B;(COMPONENT， VALUE， DATE) | set_date_part(&quot;m&quot;， 4， date(&quot;2016-11-09T11:44:44.797&quot;) | 「2016-04-09T11:44:44Z」 |
 | make_date_time | 從零件建立日期。 此函式也可以使用make_timestamp感生。 | <ul><li>YEAR： **必填**&#x200B;以四位數寫入的年份。</li><li>月份： **必要**&#x200B;月份。 允許的值為1到12。</li><li>日： **必要**&#x200B;日。 允許的值為1到31。</li><li>小時： **必要**&#x200B;小時。 允許的值為0到23。</li><li>MINUTE： **必要**&#x200B;分鐘。 允許值為0到59。</li><li>NANOSECOND： **必要**&#x200B;納秒的值。 允許的值為0到999999999。</li><li>時區： **必要**&#x200B;日期時間的時區。</li></ul> | make_date_time&#x200B;（年、月、日、小時、分鐘、秒、納秒、時區） | make_date_time&#x200B;（2019， 10， 17， 11， 55， 12， 999， &quot;美洲/洛杉磯&quot;） | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | 將任何時區的日期轉換為UTC格式的日期。 | <ul><li>日期： **必要**&#x200B;您嘗試轉換的日期。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
-| zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期： **必要**&#x200B;您嘗試轉換的日期。</li><li>ZONE： **必要**&#x200B;您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone&#x200B;(DATE， ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
+| zone_date_to_zone | 將日期從一個時區轉換為另一個時區。 | <ul><li>日期： **必要**&#x200B;您嘗試轉換的日期。</li><li>ZONE： **必要**&#x200B;您嘗試將日期轉換為的時區。</li></ul> | zone_date_to_zone&#x200B;(DATE， ZONE) | `zone_date_to_zone(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
 
