@@ -2,9 +2,9 @@
 title: 使用Experience Platform使用者介面連線您的Salesforce帳戶
 description: 瞭解如何使用使用者介面連線您的Salesforce帳戶並將您的CRM資料帶入Experience Platform。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '841'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| 環境 URL | [!DNL Salesforce]來源執行個體的網址。 |
+| 環境 URL | [!DNL Salesforce]來源執行個體的網址。 環境URL的格式為`https://[domain].my.salesforce.com`。 |
 | 使用者名稱 | [!DNL Salesforce]使用者帳戶的使用者名稱。 |
 | 密碼 | [!DNL Salesforce]使用者帳戶的密碼。 |
 | 安全性權杖 | [!DNL Salesforce]使用者帳戶的安全性權杖。 |
@@ -50,7 +50,7 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| 環境 URL | [!DNL Salesforce]來源執行個體的網址。 |
+| 環境 URL | [!DNL Salesforce]來源執行個體的網址。 環境URL的格式為`https://[domain].my.salesforce.com`。 |
 | 用戶端 ID | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | 用戶端密碼 | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | API版本 | 您正在使用的[!DNL Salesforce]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 |

@@ -2,9 +2,9 @@
 title: 使用流量服務API建立Salesforce基本連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Salesforce帳戶。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 7d450ba3357389a2934f187e4838e534d698dd4a
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| `environmentUrl` | [!DNL Salesforce]來源執行個體的網址。 |
+| `environmentUrl` | [!DNL Salesforce]來源執行個體的網址。 `environmentUrl`的格式為`https://[domain].my.salesforce.com`。 |
 | `username` | [!DNL Salesforce]使用者帳戶的使用者名稱。 |
 | `password` | [!DNL Salesforce]使用者帳戶的密碼。 |
 | `securityToken` | [!DNL Salesforce]使用者帳戶的安全性權杖。 |
@@ -51,7 +51,7 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| `environmentUrl` | [!DNL Salesforce]來源執行個體的網址。 |
+| `environmentUrl` | [!DNL Salesforce]來源執行個體的網址。 `environmentUrl`的格式為`https://[domain].my.salesforce.com` |
 | `clientId` | 使用者端ID會與使用者端密碼搭配使用，作為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | `clientSecret` | 使用者端密碼會與使用者端ID搭配使用，做為OAuth2驗證的一部分。 使用者端ID和使用者端密碼可讓您的應用程式透過向[!DNL Salesforce]識別您的應用程式，以代表您的帳戶運作。 |
 | `apiVersion` | 您正在使用的[!DNL Salesforce]執行個體的REST API版本。 API版本的值必須使用小數點格式化。 例如，如果您使用API版本`52`，則必須以`52.0`的形式輸入值。 如果此欄位留空，則Experience Platform將自動使用最新可用版本。 此值是OAuth2使用者端認證驗證的必要專案。 |
