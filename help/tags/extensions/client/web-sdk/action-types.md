@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的動作型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種動作型別。
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: c3b05dfd57b3335230e9abb40de6f2e1ee5ee6fa
+source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2112'
 ht-degree: 1%
 
 ---
@@ -93,10 +93,6 @@ ht-degree: 1%
 
 * **[!UICONTROL 執行個體]**：選取您要設定的Web SDK執行個體。 如果您只有一個例項，則會預先選取它。
 * **[!UICONTROL 使用引導式事件]**：啟用此選項可自動填寫或隱藏特定欄位，以啟用特定使用案例。 啟用此選項會觸發下列設定的顯示。
-
-  >[!NOTE]
-  >
-  >下面顯示的引導式事件與[頁面事件的頂端和底端](../../../../web-sdk/use-cases/top-bottom-page-events.md)有關。
    * **[!UICONTROL 要求個人化]**：此事件將在頁面頂端呼叫。 選取後，此事件會設定下列欄位：
       * **[!UICONTROL 型別]**： **[!UICONTROL 決策主張擷取]**
       * **[!UICONTROL 自動傳送顯示事件]**： **[!UICONTROL false]**
@@ -104,6 +100,10 @@ ht-degree: 1%
    * **[!UICONTROL 收集分析]**：此事件將在頁面底部呼叫。 選取後，此事件會設定下列欄位：
       * **[!UICONTROL 包含演算後的主張]**： **[!UICONTROL true]**
       * **[!UICONTROL Personalization]**&#x200B;設定已隱藏
+
+  >[!NOTE]
+  >
+  >引導式事件與[頁面事件的頂端和底部](../../../../web-sdk/use-cases/top-bottom-page-events.md)有關。
 
 
 ### 資料 {#data}
