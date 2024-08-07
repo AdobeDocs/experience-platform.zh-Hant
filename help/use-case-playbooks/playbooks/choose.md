@@ -4,16 +4,16 @@ title: 從一系列教戰手冊中進行選擇
 description: 瞭解如何為您的使用案例選擇正確的教戰手冊，以啟用教戰手冊。
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
 # 從一系列教戰手冊中進行選擇
 
-若要使用教戰手冊，請瀏覽至&#x200B;**[!UICONTROL 使用案例] > [!UICONTROL 教戰手冊]**。瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
+若要使用教戰手冊，請從左側導覽選取&#x200B;**[!UICONTROL 教戰手冊]**。 瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
 
 ## 搜尋和篩選 {#search-and-filter}
 
