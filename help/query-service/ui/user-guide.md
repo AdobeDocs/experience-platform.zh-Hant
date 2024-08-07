@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '2432'
+source-wordcount: '2430'
 ht-degree: 0%
 
 ---
@@ -223,9 +223,9 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 ![查詢編輯器主控台的[結果]索引標籤顯示查詢執行的結果。](../images/ui/query-editor/query-results.png)
 
-## 使用案例 {#use-cases}
+## 範例 {#examples}
 
-Query Service為跨產業和業務案例的各種使用案例提供解決方案。 這些實用的範例說明此服務在滿足各種需求時的彈性與影響。 若要[瞭解Query Service如何為您的特定業務需求帶來價值](../use-cases/overview.md)，請探索使用案例檔案的完整集合。 瞭解如何使用查詢服務來提供見解和解決方案，以增強營運效率和業務成功。
+Query Service為跨產業和業務案例的各種使用案例提供解決方案。 這些範例說明此服務在滿足各種需求時的彈性與影響。 若要[瞭解Query Service如何為您的特定業務需求帶來價值](../use-cases/overview.md)，請探索使用案例檔案的完整集合。 瞭解如何使用查詢服務來提供見解和解決方案，以增強營運效率和業務成功。
 
 <!-- This video is from 2019. The logic is sounds but the workflow is too outdated. -->
 

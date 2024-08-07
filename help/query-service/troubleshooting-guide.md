@@ -1,24 +1,28 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；疑難排解指南；faq；疑難排解；
 solution: Experience Platform
-title: 常見問答
+title: 常見問題
 description: 本檔案包含和查詢服務相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
 workflow-type: tm+mt
-source-wordcount: '4425'
+source-wordcount: '4564'
 ht-degree: 0%
 
 ---
 
-# 常見問答
+# 常見問題
 
 本檔案提供查詢服務常見問題的解答，並提供使用查詢服務時常見錯誤碼的清單。 如需Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
 
 下列常見問題的解答清單分為下列類別：
 
 - [一般](#general)
+- [查詢UI](#queries-ui) 
+- [資料集範例](#dataset-samples)
 - [匯出資料](#exporting-data)
+- [SQL語法](#sql-syntax) 
+- [ITAS查詢](#itas-queries)
 - [協力廠商工具](#third-party-tools)
 - [PostgreSQL API錯誤](#postgresql-api-errors)
 - [REST API錯誤](#rest-api-errors)
@@ -603,6 +607,22 @@ Data Distiller電腦時數的授權使用儀表板每天更新四次，每六小
 是。 不過，某些協力廠商使用者端（例如DbVisualizer）在SQL區塊之前和之後可能需要個別的識別碼，以表示指令碼的部分應作為單一陳述式處理。 如需詳細資訊，請參閱[匿名區塊檔案](./key-concepts/anonymous-block.md)或[正式的DbVisualizer檔案](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect)。
 +++
 
+## 查詢UI
+
+### 嘗試連線到查詢服務時，「建立查詢」卡住「正在初始化連線……」。 如何修正問題？
+
++++回答
+如果「建立查詢」卡在「初始化連線……」上，這可能是連線或工作階段問題。 如果您使用Platform UI，請重新整理瀏覽器，然後再試一次。
++++
+
+## 資料集範例
+
+### 我可以在系統資料集上建立範例嗎？
+
++++回答
+不適用。 系統資料集的寫入許可權受到限制，因此您無法建立範例。
++++
+
 ## 匯出資料 {#exporting-data}
 
 本節提供有關匯出資料和限制的資訊。
@@ -647,6 +667,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## SQL語法
+
+### 資料Distiller或查詢服務是否支援MERGE INTO？
+
++++回答
+Data Distiller或查詢服務不支援MERGE INTO SQL建構。
++++
+
+## ITAS查詢
+
+### 什麼是ITAS查詢？
+
++++回答
+INSERT INTO查詢稱為ITAS查詢。 請注意，CREATE TABLE查詢稱為CTAS查詢。
 +++
 
 ## 協力廠商工具 {#third-party-tools}

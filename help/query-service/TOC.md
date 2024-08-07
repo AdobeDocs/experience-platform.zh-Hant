@@ -5,10 +5,10 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 18%
+source-wordcount: '322'
+ht-degree: 19%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 18%
       - [ML的工程師功能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [將資料匯出至ML環境](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- 實際範例{#use-cases}
+- 範例 {#use-cases}
    - [概觀](use-cases/overview.md)
    - [捨棄的瀏覽](use-cases/abandoned-browse.md)
    - [歸因分析](use-cases/attribution-analysis.md)
@@ -114,7 +114,7 @@ ht-degree: 18%
    - [Spark SQL函式](sql/spark-sql-functions.md)
    - [中繼資料命令](sql/metadata.md)
    - [準備的陳述式](sql/prepared-statements.md)
-- [常見問答](troubleshooting-guide.md)
+- [常見問題](troubleshooting-guide.md)
 - [IP位址允許清單](ip-address-allowlist.md)
 - [API 參考資料](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [平台發行說明](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/release-notes/latest)

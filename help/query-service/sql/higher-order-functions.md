@@ -1,10 +1,10 @@
 ---
 title: 使用高階函式管理陣列和對應資料型別
-description: 瞭解如何在Query Service中使用高階函式來管理陣列和對應資料型別。 提供常見使用案例的實用範例。
+description: 瞭解如何在Query Service中使用高階函式來管理陣列和對應資料型別。 提供的範例包含常見使用案例。
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
