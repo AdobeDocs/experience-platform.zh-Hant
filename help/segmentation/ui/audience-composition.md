@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences UI指南
 description: Adobe Experience Platform UI中的對象構成提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供直覺式控制項，可讓您為組織建立及編輯對象。
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
+source-git-commit: 44848a250cb6020744b51dc0d0247f5fa91ab2ef
 workflow-type: tm+mt
-source-wordcount: '1951'
+source-wordcount: '1952'
 ht-degree: 0%
 
 ---
@@ -232,7 +232,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL 分割] {#split-block}
 
-**[!UICONTROL 分割]**&#x200B;區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。 將您的對象分割成子對象時，此分割為&#x200B;**持續**。 這表示在每次評估中，設定檔都會位於相同的子對象中。
+**[!UICONTROL 分割]**&#x200B;區塊型別可讓您將新對象分割成各種子對象。 您可以根據百分比或屬性來分割此對象。 將您的對象分割成子對象時，此分割是&#x200B;**不**&#x200B;持續性的。 這表示在每次評估中，設定檔可能位於不同的子對象中。
 
 若要新增&#x200B;**[!UICONTROL 分割]**&#x200B;區塊，請選取&#x200B;**+**&#x200B;圖示，然後選取&#x200B;**[!UICONTROL 分割]**。
 
