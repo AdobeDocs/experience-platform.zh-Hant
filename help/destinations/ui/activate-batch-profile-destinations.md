@@ -3,10 +3,10 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '4024'
-ht-degree: 11%
+source-wordcount: '4069'
+ht-degree: 10%
 
 ---
 
@@ -32,8 +32,13 @@ ht-degree: 11%
 ## 支援的匯出檔案格式 {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="更新此資料流程的結束日期"
+>abstract="由於此目的地最近有更新，資料流現在需要結束日期。 Adobe已將預設結束日期設定為2025年3月1日。 請更新至您需要的結束日期，否則資料匯出將在預設日期停止。"
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="更新此資料流主體的結束日期"
 >abstract="由於此目的地最近有更新，資料流現在需要結束日期。 Adobe已將預設結束日期設定為2025年3月1日。 請更新至您需要的結束日期，否則資料匯出將在預設日期停止。"
 
 匯出對象時，支援下列檔案格式：
@@ -522,7 +527,6 @@ Adobe Experience Platform會使用結構描述中四個建議且常用的屬性�
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="排除擴充屬性"
 abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#select-enrichment-attributes" text="如需了解詳細資訊，請參閱文件"
 
 >[!IMPORTANT]
 >
