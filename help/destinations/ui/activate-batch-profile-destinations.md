@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
+source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
 workflow-type: tm+mt
-source-wordcount: '3975'
+source-wordcount: '4024'
 ht-degree: 11%
 
 ---
@@ -30,6 +30,11 @@ ht-degree: 11%
 若要啟用目的地的對象，您必須已成功[連線到目的地](./connect-destination.md)。 如果您尚未這麼做，請前往[目的地目錄](../catalog/overview.md)，瀏覽支援的目的地，並設定您要使用的目的地。
 
 ## 支援的匯出檔案格式 {#supported-file-formats-export}
+
+>[!CONTEXTUALHELP]
+>id="legacy_dataflow_needs_schedule_end_date"
+>title="更新此資料流程的結束日期"
+>abstract="由於此目的地最近有更新，資料流現在需要結束日期。 Adobe已將預設結束日期設定為2025年3月1日。 請更新至您需要的結束日期，否則資料匯出將在預設日期停止。"
 
 匯出對象時，支援下列檔案格式：
 
