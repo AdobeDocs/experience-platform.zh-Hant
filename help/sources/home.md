@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Source聯結器概觀
 description: Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1548'
 ht-degree: 2%
 
 ---
@@ -26,13 +26,26 @@ Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Plat
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
+## 進階企業原始碼 {#advanced-enterprise-sources}
+
+下列來源僅限[Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)客戶使用。
+
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 批次]{type=Informative}
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 串流]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 批次]{type=Informative}
+
 ## Adobe建置和合作夥伴建置的來源 {#adobe-and-partner-built-sources}
 
 Experience Platform來源目錄中的某些聯結器是由Adobe建置和維護的，而其他聯結器則是由夥伴公司使用[來源SDK](/help/sources/sources-sdk/overview.md)建置和維護的。 若合作夥伴已建立並維護來源，檔案頁面頂端的備註會指出每個合作夥伴建立的聯結器。 例如，[Amazon S3聯結器](/help/sources/connectors/cloud-storage/s3.md)是由Adobe建立，而[RainFocus聯結器](/help/sources/connectors/analytics/rainfocus.md)是由RainFocus團隊建立和維護。
 
 對於合作夥伴編寫和維護的聯結器，這表示聯結器的問題可能需要由合作夥伴團隊解決（聯絡方法提供在檔案頁面的附註中）。 如需Adobe編寫和維護的聯結器發生問題，請聯絡您的Adobe代表或客戶服務。
 
-## 來源型別
+## 來源類別
 
 Experience Platform中的來源會分組到以下類別中：
 
@@ -75,15 +88,12 @@ Experience Platform支援從協力廠商分析平台擷取資料。 如需詳細
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE 批次]{type=Informative}
 - [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE 串流]{type=Positive}
 - [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE 批次]{type=Informative}
 - [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE 批次]{type=Informative}
 
@@ -116,14 +126,11 @@ Experience Platform支援從協力廠商客戶成功應用程式擷取資料。 
 
 Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來源聯結器的詳細資訊，請參閱下列相關檔案：
 
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE 批次]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE 批次]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE 批次]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE 批次]{type=Informative}
@@ -133,8 +140,6 @@ Experience Platform支援從協力廠商資料庫擷取資料。 如需特定來
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE 批次]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE 批次]{type=Informative}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE 串流]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE 批次]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE 批次]{type=Informative}
 
 ### 資料與身分合作夥伴 {#data-partner}
