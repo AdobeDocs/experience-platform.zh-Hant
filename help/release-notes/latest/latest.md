@@ -31,7 +31,7 @@ Experience Platform現有功能和檔案的更新：
 
 同盟對象構成可讓企業構成資料，以便在各種使用案例中更好地應用。 使用此新方法，身為Adobe Real-time Customer Data Platform和/或Adobe Journey Optimizer使用者，您可以直接從您現有的資料倉儲同盟資料集，以在一個系統中建立並擴充Adobe Experience Platform對象和屬性。
 
-如需詳細資訊，請閱讀[同盟對象組合檔案](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)。
+如需詳細資訊，請閱讀[同盟對象組合檔案](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)。
 
 ## 進階資料生命週期管理 {#advanced-data-lifecycle-management}
 
