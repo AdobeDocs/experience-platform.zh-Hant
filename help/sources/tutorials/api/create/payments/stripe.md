@@ -3,9 +3,9 @@ title: 使用API從您的 [!DNL Stripe] 帳戶擷取付款資料以Experience Pl
 description: 瞭解如何使用Flow Service API從您的Stripe帳戶擷取付款資料以Experience Platform
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '2020'
 ht-degree: 1%
 
 ---
@@ -881,7 +881,7 @@ curl -X POST \
 | `transformations.params.mappingVersion` | 對應ID的對應版本。 此值預設為`0`。 |
 | `scheduleParams.startTime` | 您的資料流將開始的時間。 您必須以Unix時間戳記的格式提供開始時間值。 |
 | `scheduleParams.frequency` | 資料流收集資料的頻率。 您可以將擷取頻率設定為：  <ul><li>**一次**：將您的頻率設定為`once`以建立一次性內嵌。 建立一次性擷取資料流時，無法使用間隔和回填的設定。 依預設，排程頻率會設定為一次。</li><li>**分鐘**：將頻率設為`minute`，排程您的資料流以每分鐘擷取資料。</li><li>**小時**：將頻率設為`hour`，排程您的資料流以每小時為基礎擷取資料。</li><li>**天**：將您的頻率設為`day`，排程您的資料流每天擷取資料。</li><li>**周**：將頻率設為`week`，排程您的資料流每週擷取資料。</li></ul> |
-| `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 例如，如果您將頻率設為「天」，並將間隔設為15，則您的資料流將每隔15天執行一次。 間隔值應為非零整數。 |
+| `scheduleParams.interval` | 間隔會指定兩個連續資料流執行之間的期間。 例如，如果您將頻率設為「天」，並將間隔設為15，則您的資料流將每隔15天執行一次。 間隔值應為非零整數。 每個頻率的最小接受間隔值如下：<ul><li>**一次**：不適用</li><li>**分鐘**： 15</li><li>**小時**： 1</li><li>**天**： 1</li><li>**周**： 1</li></ul> |
 
 **回應**
 
