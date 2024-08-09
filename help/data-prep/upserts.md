@@ -3,22 +3,28 @@ keywords: Experience Platform；首頁；熱門主題；資料準備；資料準
 title: 使用「資料準備」將部分列更新傳送到「即時客戶個人檔案」
 description: 瞭解如何使用「資料準備」將部分列更新傳送至「即時客戶個人檔案」。
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1360'
 ht-degree: 0%
 
 ---
 
 # 使用[!DNL Data Prep]傳送部分資料列更新至[!DNL Real-Time Customer Profile]
 
->[!WARNING]
+>[!IMPORTANT]
 >
->已棄用透過DCS入口針對設定檔更新擷取的Experience Data Model (XDM)實體更新訊息(含JSONPATCH作業)。 或者，您可以[將原始資料擷取至DCS入口](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection)，並指定必要的資料對應，將您的資料轉換為符合XDM規範的訊息，以進行設定檔更新。
+>* 已棄用透過DCS入口擷取用於設定檔更新的體驗資料模型(XDM)實體更新訊息(含JSONPATCH作業)。 作為替代方法，請遵循本指南中概述的步驟。
+>
+>* 您也可以使用HTTP API來源來[將原始資料擷取到DCS入口](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection)，並指定必要的資料對應，以將您的資料轉換為符合XDM規範的訊息以進行設定檔更新。
+>
+>* 在串流更新插入中使用陣列時，您必須明確使用`upsert_array_append`或`upsert_array_replace`來定義作業的明確目的。 如果缺少這些函式，您可能會收到錯誤。
 
-[!DNL Data Prep]中的串流更新插入可讓您傳送部分資料列更新至[!DNL Real-Time Customer Profile]資料，同時使用單一API要求建立和建立新的身分連結。
+在[!DNL Data Prep]中使用串流更新插入，傳送部分資料列更新至[!DNL Real-Time Customer Profile]資料，同時透過單一API要求建立和建立新的身分連結。
 
 透過串流更新插入，您可以在擷取期間將該資料轉譯為[!DNL Real-Time Customer Profile]個PATCH請求時保留資料格式。 根據您提供的輸入，[!DNL Data Prep]可讓您傳送單一API裝載，並將資料轉譯為[!DNL Real-Time Customer Profile]PATCH和[!DNL Identity Service]建立要求。
+
+[!DNL Data Prep]使用標頭引數來區分插入和更新插入。 所有使用更新插入的列都必須有標題。 您可以使用包含或不包含身分描述元的更新插入。 如果您使用含身分的upsert，您必須遵循[設定身分資料集](#configure-the-identity-dataset)一節中概述的設定步驟。 如果您使用沒有身分的upsert，則不需要在請求中提供身分設定。 如需詳細資訊，請閱讀[不含身分的串流更新插入](#payload-without-identity-configuration)的區段。
 
 >[!NOTE]
 >
@@ -52,7 +58,7 @@ ht-degree: 0%
    * 需要對[!DNL Profile]執行的資料操作： `create`、`merge`和`delete`。
    * 要與[!DNL Identity Service]一起執行的選擇性身分作業： `create`。
 
-### 設定身分資料集
+### 設定身分資料集 {#configure-the-identity-dataset}
 
 如果新身分必須連結，則您必須在傳入裝載中建立並傳遞額外的資料集。 建立身分資料集時，您必須確保符合下列需求：
 
@@ -138,7 +144,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257be
 | --- | --- |
 | `create` | 此引數唯一允許的作業。 如果`create`傳遞為`operations.identity`的值，則[!DNL Data Prep]會產生[!DNL Identity Service]的XDM實體建立請求。 如果身分已經存在，則會忽略身分。 **注意：**&#x200B;如果`operations.identity`設定為`create`，則必須同時指定`identityDatasetId`。 將針對此資料集ID產生由[!DNL Data Prep]元件內部產生的XDM實體建立訊息。 |
 
-### 沒有身分設定的裝載
+### 沒有身分設定的裝載 {#payload-without-identity-configuration}
 
 如果新身分不需要連結，則您可以在操作中省略`identity`和`identityDatasetId`引數。 這樣做只會傳送資料給[!DNL Real-Time Customer Profile]並略過[!DNL Identity Service]。 如需範例，請參閱以下裝載：
 
