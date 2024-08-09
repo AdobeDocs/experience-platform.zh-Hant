@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1591'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,10 @@ ht-degree: 1%
 ### 身分名稱空間擷取
 
 自2023年3月31日起，Identity Service將封鎖新客戶的Adobe Analytics ID (AAID)擷取。 此身分識別通常會透過[Adobe Analytics來源](../sources/connectors/adobe-applications/analytics.md)和[Adobe Audience Manager來源](../sources//connectors/adobe-applications/audience-manager.md)擷取，而且是多餘的，因為ECID代表相同的網頁瀏覽器。 如果您想要變更此預設設定，請聯絡您的Adobe客戶團隊。
+
+## 效能護欄 {#performance-guardrails}
+
+Identity Service持續監控傳入的資料，以確保大規模的高效能和可靠性。 不過，在短時間內大量湧入的體驗事件資料可能會導致效能降低和延遲。 Adobe對這類效能降級概不負責。
 
 ## 瞭解當容量中的身分圖表更新時的刪除邏輯 {#deletion-logic}
 
