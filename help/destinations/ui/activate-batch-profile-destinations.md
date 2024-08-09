@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '4069'
+source-wordcount: '4112'
 ht-degree: 10%
 
 ---
@@ -40,6 +40,16 @@ ht-degree: 10%
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="更新此資料流主體的結束日期"
 >abstract="由於此目的地最近有更新，資料流現在需要結束日期。 Adobe已將預設結束日期設定為2025年3月1日。 請更新至您需要的結束日期，否則資料匯出將在預設日期停止。"
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="編輯資料夾路徑"
+>abstract="使用數個提供的巨集來自訂資料集匯出的資料夾路徑。"
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="資料集資料夾路徑預覽"
+>abstract="根據您在此視窗中新增的巨集，取得儲存位置中所建立的資料夾結構預覽。"
 
 匯出對象時，支援下列檔案格式：
 

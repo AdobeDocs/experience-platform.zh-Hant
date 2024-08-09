@@ -4,9 +4,9 @@ description: 開始使用Adobe Real-Time CDP，瞭解其所提供的豐富功能
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1175'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,12 @@ ht-degree: 3%
 瞭解Real-Time CDP產品和檔案的最新增強功能。 如需功能、改進項目與修正的完整清單，請參閱詳細的[發行說明](/help/release-notes/latest/latest.md)。請造訪每月發行說明](/help/release-notes/latest/latest.md#documentation-updates)的[檔案更新區段，隨時掌握檔案的最新變更。
 
 >[!BEGINTABS]
+
+>[!TAB 同盟對象構成]
+
+同盟對象構成可讓企業構成資料，以便在各種使用案例中更好地應用。 使用此新方法，身為Adobe Real-time Customer Data Platform和/或Adobe Journey Optimizer使用者，您可以直接從您現有的資料倉儲同盟資料集，以在一個系統中建立並擴充Adobe Experience Platform對象和屬性。
+
+[![影像](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
 
 >[!TAB 使用案例教戰手冊]
 
