@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3111'
 ht-degree: 3%
 
 ---
@@ -92,6 +92,10 @@ ht-degree: 3%
 ![資料集工作區的「瀏覽」索引標籤中，針對所選的資料集反白顯示省略符號和預覽資料集選項。](../images/datasets/user-guide/preview-dataset-option.png)
 
 這將會開啟預覽視窗，其中資料集的結構描述階層檢視會顯示在右側。
+
+>[!NOTE]
+>
+>檢視左側的架構圖表只會顯示包含資料的欄位。 沒有資料的欄位會自動隱藏，以簡化UI並專注於相關資訊。
 
 ![會顯示資料集預覽對話方塊，其中包含資料集的結構相關資訊以及範例值。](../images/datasets/user-guide/preview-dataset.png)
 
