@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -33,13 +33,13 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
->title="更新此資料流程的結束日期"
->abstract="更新此資料流程的結束日期"
+>title="更新此資料流的結束日期"
+>abstract="更新此資料流的結束日期"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="更新此資料流主體的結束日期"
->abstract="由於此目的地最近有更新，資料流現在需要結束日期。 Adobe已將預設結束日期設定為2025年3月1日。 請更新至您需要的結束日期，否則資料匯出將在預設日期停止。"
+>abstract="由於最近對此目的地進行更新，資料流現在需要結束日期。Adobe 已將預設結束日期設定為 2025 年 3 月 1 日。請更新至您想要的結束日期，否則資料匯出將在預設日期停止。"
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
