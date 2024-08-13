@@ -2,10 +2,10 @@
 title: 沙箱工具套件API端點
 description: 沙箱工具API中的/packages端點可讓您以程式設計方式管理Adobe Experience Platform中的套件。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 6%
+source-wordcount: '1621'
+ht-degree: 8%
 
 ---
 
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | 要更新之封裝的ID。 | 字串 | 是 |
 | `action` | 若要將成品加入封裝中，動作值應該是&#x200B;**ADD**。 只有&#x200B;**PARTIAL**&#x200B;封裝型別支援此動作。 | 字串 | 是 |
-| `artifacts` | 要新增到封裝中的成品清單。 如果清單為&#x200B;**null**&#x200B;或&#x200B;**empty**，則不會變更封裝。 成品在新增至封裝之前，會先去除重複專案。 | 陣列 | 無 |
+| `artifacts` | 要新增到封裝中的成品清單。 如果清單為&#x200B;**null**&#x200B;或&#x200B;**empty**，則不會變更封裝。 成品在新增至封裝之前，會先去除重複專案。 如需支援的成品完整清單，請參閱下表。 | 陣列 | 無 |
 | `expiry` | 定義封裝到期日期的時間戳記。 若承載中未指定到期，則預設值是從呼叫PUT API後的90天。 回應到期欄位將會是epoch UTC時間。 | 字串（UTC時間戳記格式） | 無 |
+
+目前支援的成品型別如下。
+
+| 成品 | 平台 | 物件 | 部分流量 | 完整沙箱 |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | 歷程 | 是 | 無 |
+| `ID_NAMESPACE` | 客戶資料平台 | 身分 | 是 | 是 |
+| `REGISTRY_DATATYPE` | 客戶資料平台 | 資料類型 | 是 | 是 |
+| `REGISTRY_CLASS` | 客戶資料平台 | 類別 | 是 | 是 |
+| `REGISTRY_MIXIN` | 客戶資料平台 | 欄位群組 | 是 | 是 |
+| `REGISTRY_SCHEMA` | 客戶資料平台 | 結構描述 | 是 | 是 |
+| `CATALOG_DATASET` | 客戶資料平台 | 資料集 | 是 | 是 |
+| `DULE_CONSENT_POLICY` | 客戶資料平台 | 同意和治理原則 | 是 | 是 |
+| `PROFILE_SEGMENT` | 客戶資料平台 | 對象 | 是 | 是 |
+| `FLOW` | 客戶資料平台 | 來源資料流 | 是 | 是 |
 
 **回應**
 

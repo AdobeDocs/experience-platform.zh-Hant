@@ -2,7 +2,7 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: ac013f4a1b0f8053963771b66d0bd80111f7d215
 workflow-type: tm+mt
 source-wordcount: '2314'
 ht-degree: 7%
