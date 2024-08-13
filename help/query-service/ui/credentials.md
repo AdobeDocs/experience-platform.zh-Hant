@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務認證指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1828'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,11 @@ Adobe Experience Platform查詢服務可讓您與外部使用者端連線。 您
 
 >[!NOTE]
 >
->不會到期的認證有下列限制： <br><ul><li>使用者必須使用由`{technicalAccountId}:{credential}`組成的使用者名稱和密碼登入。 在[產生認證](#generate-credentials)區段中可找到更多資訊。</li><li>建立到期的認證後，會建立具有一組基本許可權的新角色，讓使用者檢視結構描述和資料集。 「管理查詢」許可權也會指派給此角色，以搭配查詢服務使用。</li><li>列出查詢物件時，協力廠商使用者端可能會以與預期不同的方式執行。 例如，某些協力廠商使用者端（例如[!DNL DB Visualizer]）不會在左側面板中顯示檢視名稱。 不過，若在SELECT查詢中呼叫，則可存取檢視名稱。 同樣地，[!DNL PowerUI]可能不會列出透過SQL建立的、要選取用於建立儀表板的暫存檢視。</li></ul>
+>不會到期的認證有下列限制：
+>
+>- 使用者必須以`{technicalAccountId}:{credential}`的格式使用使用者名稱和密碼登入。 在[產生認證](#generate-credentials)區段中可找到更多資訊。
+>- 根據預設，不會到期的認證僅被授與執行`SELECT`個查詢的許可權。 若要執行`CTAS`或`ITAS`個查詢，請手動將「管理資料集」和「管理結構描述」許可權新增至與非到期認證相關的角色。 您可以在「資料模型」區段下找到「管理結構描述」許可權，且「管理資料集」許可權位於[Adobe Developer Console](<https://developer.adobe.com/console/>)的「資料管理」區段下。
+>- 列出查詢物件時，協力廠商使用者端可能會以與預期不同的方式執行。 例如，某些協力廠商使用者端（例如[!DNL DB Visualizer]）不會在左側面板中顯示檢視名稱。 不過，若在`SELECT`查詢中呼叫，則可存取檢視名稱。 同樣地，[!DNL PowerUI]可能不會列出透過SQL建立的暫時檢視，以供在建立儀表板時選取。
 
 ### 先決條件
 
