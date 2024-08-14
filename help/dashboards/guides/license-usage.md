@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
+source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2429'
 ht-degree: 6%
 
 ---
@@ -91,6 +91,16 @@ ht-degree: 6%
 摘要標籤隨即顯示。 您可以使用[!UICONTROL 摘要]和[!UICONTROL 詳細資料]標籤上提供的精細預測，確保做出明智的決策，以有效使用授權。
 
 ![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
+
+預計使用量的百分比取決於以下因素：
+
+- 如果上下界限明顯不同，則會顯示為範圍（例如32% - 35%）。
+- 如果上下界限幾乎完全相同且不為零，則會顯示為近似值（例如，~34%）。
+- 如果上下界限幾乎完全相同且為0，則會顯示為0%。
+
+>[!NOTE]
+>
+在此上下文中，「幾乎相同」表示值對於小數點兩位數的統計顯著性（例如，0.342的下限和0.344的上限都會四捨五入為34%）。
 
 預測使用功能支援下列量度：
 
