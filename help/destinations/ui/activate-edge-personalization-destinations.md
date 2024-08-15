@@ -3,7 +3,7 @@ title: 啟用對象以邊緣個人化目的地
 description: 瞭解如何針對相同頁面和下一頁個人化使用案例，從Adobe Experience Platform啟用對象至邊緣個人化目的地。
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 2%
@@ -47,7 +47,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/ui/edge-se
 
 ## 使用案例 {#use-cases}
 
-使用Adobe個人化解決方案(例如Adobe Target)或您自己的個人化合作夥伴平台（例如，[!DNL Optimizely]、[!DNL Pega]），以及專屬系統（例如內部CMS），透過[自訂Personalization](../catalog/personalization/custom-personalization.md)目的地提供更深入的客戶個人化體驗。 同時利用Experience PlatformEdge Network資料收集和細分功能。
+使用Adobe個人化解決方案(例如Adobe Target)或您自己的個人化合作夥伴平台（例如，[!DNL Optimizely]、[!DNL Pega]），以及專屬系統(例如，內部CMS)，透過[自訂Personalization](../catalog/personalization/custom-personalization.md)目的地提供更深入的客戶個人化體驗。 同時利用Experience PlatformEdge Network資料收集和細分功能。
 
 下述使用案例包含網站個人化及鎖定網站上的目標廣告。
 
@@ -112,7 +112,7 @@ Adobe Experience Platform使用[edge segmentation](../../segmentation/ui/edge-se
 根據您設定的目的地，請參閱下列文章以取得目的地特定先決條件及相關資訊：
 
 * [Adobe Target連線](../catalog/personalization/adobe-target-connection.md#parameters)
-* [自訂個人化連線](../catalog/personalization/custom-personalization.md##parameters)
+* [自訂個人化連線](../catalog/personalization/custom-personalization.md#parameters)
 
 ## 選取您的目的地 {#select-destination}
 

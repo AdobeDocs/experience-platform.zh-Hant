@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明
 description: Adobe Experience Platform 2024 年 4 月版發行說明。
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 17%
@@ -74,7 +74,7 @@ Adobe Experience Platform提供了一套技術，可讓您收集使用者端客�
 | 功能 | 說明 |
 | ----------- | ----------- |
 | `isRequired`引數現在可用於Destination SDK中的巢狀客戶資料欄位 | 在Destination SDK中設定目的地時，您現在可以[將巢狀客戶資料欄位設定為必要](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields)。 如此一來，設定您目的地的使用者無法繼續其啟動流程，直到他們為該欄位選取值為止。 |
-| 使用Web SDK設定Edge目的地時，不再強制要求Adobe Target區段 | 先前，在使用Web SDK設定[Adobe Target目的地](/help/destinations/catalog/personalization/adobe-target-connection.md)時，必須啟用資料流以進行個人化和邊緣分段。 現在已移除為邊緣區段[啟用資料流的要求](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。 請注意，此整合模式僅在您將Adobe Target與Real-Time CDP搭配使用時，才可讓您受益於個人化使用案例的子集。 深入瞭解整合型別](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters)所啟用的[使用案例。 |
+| 使用Web SDK設定Edge目的地時，不再強制要求Adobe Target區段 | 先前，在使用Web SDK設定[Adobe Target目的地](/help/destinations/catalog/personalization/adobe-target-connection.md)時，必須啟用資料流以進行個人化和邊緣分段。 現在已移除為邊緣區段[啟用資料流的要求](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream)。 請注意，此整合模式僅在您將Adobe Target與Real-Time CDP搭配使用時，才可讓您受益於個人化使用案例的子集。 深入瞭解整合型別](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases)所啟用的[使用案例。 |
 | [!BADGE Beta]{type=Informative}從啟用流程中移除多個對象和資料集 | 您現在可以從目的地啟用流程中選取並移除多個對象和資料集。 如需詳細資訊，請參閱[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-remove)和[資料集匯出](../../destinations/ui/export-datasets.md)檔案。 |
 
 {style="table-layout:auto"}
