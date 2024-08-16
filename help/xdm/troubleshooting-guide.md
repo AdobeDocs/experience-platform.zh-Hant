@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找有關Experience Data Model (XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '2446'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 0%
 ## 常見問題集
 
 以下是有關XDM系統和[!DNL Schema Registry] API使用常見問題的解答清單。
+
+## 結構描述基本知識
+
+在本節中，您可以找到有關XDM系統中結構描述結構、欄位使用情況和身分識別的基本問題解答。
 
 ### 如何將欄位新增至結構描述？
 
@@ -39,15 +43,59 @@ ht-degree: 0%
 
 如需詳細資訊，請參閱[!DNL Schema Registry] API指南中的[資源識別](api/getting-started.md#resource-identification)區段。
 
-### 結構描述何時開始防止重大變更？
-
-只要結構描述從未用於建立資料集，或啟用以用於[[!DNL Real-Time Customer Profile]](../profile/home.md)，就可以對結構描述進行重大變更。 一旦結構描述已用於資料集建立或啟用以與[!DNL Real-Time Customer Profile]搭配使用，[結構描述演化](schema/composition.md#evolution)的規則就會由系統嚴格執行。
-
 ### 長欄位型別的大小上限是多少？
 
 長欄位型別是整數，大小上限為53(+1)位元，潛在範圍介於 — 9007199254740992到9007199254740992之間。 這是由於JavaScript實施JSON如何表示長整數的限制。
 
 如需欄位型別的詳細資訊，請參閱有關[XDM欄位型別限制](./schema/field-constraints.md)的檔案。
+
+### 什麼是meta：AltId？如何擷取它？
+
+`meta:altId`是結構描述的唯一識別碼。 `meta:altId`提供易於參考的ID以用於API呼叫。 此ID可避免在每次與JSON URI格式搭配使用時進行編碼/解碼。
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+<!-- ### How can I generate a sample payload for a schema? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+### 我可以取得範例JSON表示來建立資料型別嗎？
+
+您可以使用Schema Registry API和Platform UI來建立資料型別。 如需如何執行下列作業的指示，請參閱檔案：
+
+- [使用API建立資料型別](./api/data-types.md#create)
+- [使用UI建立資料型別](./ui/resources/data-types.md#create)
+
+### 地圖資料型別的使用限製為何？
+
+XDM對於此資料型別的使用有下列限制：
+
+- 對應型別必須是型別物件。
+- 對應型別不得有已定義的屬性（換言之，它們會定義「空白」物件）。
+- 對應型別必須包含additionalProperties.type欄位，以說明可放置在對應中的值（字串或整數）。
+- 多實體分段只能根據對應索引鍵而不是值來定義。
+- 帳戶對象不支援地圖。
+
+如需詳細資訊，請參閱對應物件](./ui/fields/map.md#restrictions)的[使用限制。
+
+>[!NOTE]
+>
+>不支援多階層地圖或地圖。
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
+
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+## 結構描述Identity Management
+
+本節包含有關在結構描述中定義和管理身分識別的常見問題解答。
 
 ### 如何為結構描述定義身分？
 
@@ -55,7 +103,7 @@ ht-degree: 0%
 
 可使用API或使用者介面將欄位標示為身分。
 
-#### 在API中定義身分
+### 在API中定義身分
 
 在API中，身分識別是透過建立身分描述項來建立。 身分描述項會指出結構描述的特定屬性是唯一識別碼。
 
@@ -63,7 +111,7 @@ ht-degree: 0%
 
 如需在API中建立身分描述項的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中[描述項](api/descriptors.md)章節的檔案。
 
-#### 在UI中定義身分
+### 在UI中定義身分
 
 在結構描述編輯器中開啟結構描述後，在編輯器的&#x200B;**[!UICONTROL 結構]**&#x200B;區段中選取要標示為身分的欄位。 在右側的&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下，選取&#x200B;**[!UICONTROL 身分]**&#x200B;核取方塊。
 
@@ -73,22 +121,49 @@ ht-degree: 0%
 
 主要身分是選用的，因為結構描述可能沒有或只有一個。 但是，結構描述必須具有主要身分，才能啟用結構描述以在[!DNL Real-Time Customer Profile]中使用。 如需詳細資訊，請參閱結構描述編輯器教學課程的[identity](./tutorials/create-schema-ui.md#identity-field)一節。
 
+## 結構描述檔啟用
+
+本節提供啟用綱要以用於Real-Time Customer Profile的指引。
+
 ### 如何啟用結構描述以用於[!DNL Real-Time Customer Profile]？
 
 透過在結構描述的`meta:immutableTags`屬性中新增「union」標籤，結構描述可以用於[[!DNL Real-Time Customer Profile]](../profile/home.md)。 可以使用API或使用者介面啟用結構描述以搭配[!DNL Profile]使用。
 
-#### 使用API啟用[!DNL Profile]的現有結構描述
+### 使用API啟用[!DNL Profile]的現有結構描述
 
 發出PATCH請求以更新結構描述，並將`meta:immutableTags`屬性新增為包含「union」值的陣列。 如果更新成功，回應將顯示更新的結構描述，其中現在包含聯合標籤。
 
 如需使用API啟用結構描述以在[!DNL Real-Time Customer Profile]中使用的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南的[聯合](./api/unions.md)檔案。
 
-#### 使用UI啟用[!DNL Profile]的現有結構描述
+### 使用UI啟用[!DNL Profile]的現有結構描述
 
 在[!DNL Experience Platform]中，選取左側導覽的&#x200B;**[!UICONTROL 結構描述]**，然後從結構描述清單中選取您要啟用的結構描述名稱。 然後，在編輯器的右側&#x200B;**[!UICONTROL 結構描述屬性]**&#x200B;下，選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;以將其開啟。
 
-
 如需詳細資訊，請參閱[!UICONTROL 結構描述編輯器]教學課程中[用於即時客戶個人檔案](./tutorials/create-schema-ui.md#profile)的相關章節。
+
+### 將Adobe Analytics資料匯入為來源時，是否針對設定檔啟用自動建立的結構描述？
+
+結構描述不會自動為即時客戶設定檔啟用。 您需要根據為設定檔啟用的結構描述，為設定檔明確啟用資料集。 請參閱檔案以瞭解啟用資料集以用於Real-Time Customer Profile](../catalog/datasets/user-guide.md#enable-profile)所需的[步驟和要求。
+
+### 我可以刪除已啟用設定檔的結構描述嗎？
+
+為即時客戶設定檔啟用結構描述後，您就無法再刪除它。 為設定檔啟用結構描述後，就無法停用或刪除它，也無法從結構描述中移除欄位。 因此，在為設定檔啟用結構描述之前，請務必仔細規劃及驗證該結構描述設定。 不過，您可以刪除已啟用設定檔的資料集。 您可在此找到資訊： <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+
+>[!IMPORTANT]
+>
+>若要移除已啟用設定檔的結構描述，您需要XDM平台支援團隊的協助，且必須遵循下列步驟：
+>
+> 1. 刪除與結構描述（為設定檔啟用）關聯的所有資料集
+> 2. 從沙箱中刪除設定檔匯出快照（這需要XDM平台支援團隊的協助）
+> 3. 強制從沙箱中刪除結構描述（這只能由XDM平台支援團隊完成）
+
+## 結構描述修改和限制
+
+本節提供架構修改規則及預防中斷變更的釐清。
+
+### 結構描述何時開始防止重大變更？
+
+只要結構描述從未用於建立資料集，或啟用以用於[[!DNL Real-Time Customer Profile]](../profile/home.md)，就可以對結構描述進行重大變更。 一旦結構描述已用於資料集建立或啟用以與[!DNL Real-Time Customer Profile]搭配使用，[結構描述演化](schema/composition.md#evolution)的規則就會由系統嚴格執行。
 
 ### 我可以直接編輯聯合結構描述嗎？
 
@@ -99,6 +174,10 @@ ht-degree: 0%
 ### 如何格式化資料檔以將資料擷取至我的結構描述？
 
 [!DNL Experience Platform]接受[!DNL Parquet]或JSON格式的資料檔。 這些檔案的內容必須符合資料集參考的結構描述。 如需資料檔擷取最佳實務的詳細資訊，請參閱[批次擷取總覽](../ingestion/home.md)。
+
+### 如何將結構描述轉換為唯讀結構描述？
+
+您目前無法將結構描述轉換為唯讀。
 
 ## 錯誤與疑難排解
 
@@ -127,14 +206,14 @@ ht-degree: 0%
 >
 >根據正在擷取的資源型別，此錯誤可以使用下列`type`個URI：
 >
->* `http://ns.adobe.com/aep/errors/XDM-1010-404`
->* `http://ns.adobe.com/aep/errors/XDM-1011-404`
->* `http://ns.adobe.com/aep/errors/XDM-1012-404`
->* `http://ns.adobe.com/aep/errors/XDM-1013-404`
->* `http://ns.adobe.com/aep/errors/XDM-1014-404`
->* `http://ns.adobe.com/aep/errors/XDM-1015-404`
->* `http://ns.adobe.com/aep/errors/XDM-1016-404`
->* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 如需在API中建構查閱路徑的詳細資訊，請參閱[!DNL Schema Registry]開發人員指南中的[容器](./api/getting-started.md#container)和[資源識別](api/getting-started.md#resource-identification)區段。
 
@@ -182,17 +261,17 @@ ht-degree: 0%
 >
 >根據名稱空間錯誤的特定性質，此錯誤可以使用下列`type`個URI以及不同的訊息詳細資料：
 >
->* `http://ns.adobe.com/aep/errors/XDM-1020-400`
->* `http://ns.adobe.com/aep/errors/XDM-1021-400`
->* `http://ns.adobe.com/aep/errors/XDM-1022-400`
->* `http://ns.adobe.com/aep/errors/XDM-1023-400`
->* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 有關XDM資源的正確資料結構的詳細範例，請參閱結構描述登入API指南：
 
-* [建立自訂類別](./api/classes.md#create)
-* [建立自訂欄位群組](./api/field-groups.md#create)
-* [建立自訂資料型別](./api/data-types.md#create)
+- [建立自訂類別](./api/classes.md#create)
+- [建立自訂欄位群組](./api/field-groups.md#create)
+- [建立自訂資料型別](./api/data-types.md#create)
 
 ### Accept 標頭無效
 
@@ -219,10 +298,10 @@ ht-degree: 0%
 >
 >根據使用的端點，此錯誤可以使用下列`type`個URI：
 >
->* `http://ns.adobe.com/aep/errors/XDM-1006-400`
->* `http://ns.adobe.com/aep/errors/XDM-1007-400`
->* `http://ns.adobe.com/aep/errors/XDM-1008-400`
->* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 如需不同API要求的相容Accept標頭清單，請參閱[結構描述登入開發人員指南](./api/overview.md)中的對應章節。
 
