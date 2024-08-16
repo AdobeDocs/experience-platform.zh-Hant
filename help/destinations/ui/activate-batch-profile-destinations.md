@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -44,12 +44,12 @@ ht-degree: 12%
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
 >title="編輯資料夾路徑"
->abstract="使用數個提供的巨集來自訂資料集匯出的資料夾路徑。"
+>abstract="使用所提供的幾個巨集來自訂匯出資料集的資料夾路徑。"
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template_preview"
 >title="資料集資料夾路徑預覽"
->abstract="根據您在此視窗中新增的巨集，取得儲存位置中所建立的資料夾結構預覽。"
+>abstract="預覽根據您在此視窗中新增巨集而在您的儲存位置中建立的資料夾結構。"
 
 匯出對象時，支援下列檔案格式：
 
