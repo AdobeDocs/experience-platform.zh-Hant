@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
 workflow-type: tm+mt
-source-wordcount: '1891'
+source-wordcount: '1836'
 ht-degree: 4%
 
 ---
@@ -56,10 +56,10 @@ ht-degree: 4%
   <tr>
     <td>Customer Journey Analytics</td>
     <td>全部</td>
-    <td> 透過Sources、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。 <br> <p> <b>可用性注意事項：</b>將資料集匯出至雲端的功能處於發行的「有限測試」階段，可能尚未在您的環境中提供。 當功能正式可用時，將移除此附註。 如需Customer Journey Analytics發行程式的相關資訊，請參閱<a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html">Customer Journey Analytics功能發行</a>。 </p> </td>
+    <td> 透過Sources、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</td>
   </tr>
   <tr>
-    <td>Data Distiller</td>
+    <td>資料蒸餾器</td>
     <td>資料Distiller （附加元件）</td>
     <td>透過查詢服務建立的衍生資料集。</td>
   </tr>
@@ -215,7 +215,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
    >[!NOTE]
    >
-   >此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
 
    ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
