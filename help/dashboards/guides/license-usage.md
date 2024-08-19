@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
+source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
 workflow-type: tm+mt
-source-wordcount: '2429'
+source-wordcount: '2466'
 ht-degree: 6%
 
 ---
@@ -89,6 +89,10 @@ ht-degree: 6%
 ![產品及預測使用量資料行醒目提示的[!UICONTROL 授權使用量] [!UICONTROL 總覽]。](../images/license-usage/product-predicted-usage.png)
 
 摘要標籤隨即顯示。 您可以使用[!UICONTROL 摘要]和[!UICONTROL 詳細資料]標籤上提供的精細預測，確保做出明智的決策，以有效使用授權。
+
+>[!NOTE]
+>
+請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
 
 ![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
 
