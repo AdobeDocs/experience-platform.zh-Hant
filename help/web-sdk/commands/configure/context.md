@@ -2,9 +2,9 @@
 title: 內容
 description: 自動收集裝置、環境或位置資料。
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '915'
 ht-degree: 7%
 
 ---
@@ -89,21 +89,25 @@ ht-degree: 7%
 | 環境 | 收集資料的環境。 此一律設為`browser`。 | `xdm.implementationDetails.environment` | `browser` |
 
 
-### 高平均資訊量使用者端提示
+### 高平均資訊量使用者端提示 {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>如需如何設定的詳細資訊，請參閱[使用者代理程式使用者端提示](../../use-cases/client-hints.md)的相關檔案。
 
 `"highEntropyUserAgentHints"`關鍵字會收集使用者裝置的詳細資訊。 此資料包含在傳送給Adobe之請求的HTTP標頭中。 資料到達Edge網路後，XDM物件會填入其個別的XDM路徑。 如果您在`sendEvent`呼叫中設定個別XDM路徑，則其優先於HTTP標頭值。
 
 如果您在[設定您的資料流](/help/datastreams/configure.md)時使用裝置查詢，則資料可以清除掉，以支援裝置查詢值。 某些使用者端提示欄位和裝置查詢欄位不得存在於相同點選中。
 
-| 維度 | 說明 | HTTP標頭 | XDM 路徑 | 範例值 |
+| 屬性 | 說明 | HTTP標頭 | XDM 路徑 | 範例 |
 | --- | --- | --- | --- | --- |
-| 作業系統版本 | 作業系統的版本。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| 架構 | 底層CPU架構。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| 裝置型號 | 使用的裝置名稱。 | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| 位元 | 基礎CPU架構支援的位元數。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| 瀏覽器供應商 | 建立瀏覽器的公司。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 | `Sec-CH-UA-Full-Version-List` | | |
-| 瀏覽器名稱 | 使用的瀏覽器。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| 瀏覽器版本 | 瀏覽器的重要版本。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 系統不會自動收集精確的瀏覽器版本。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| 作業系統版本 | 作業系統的版本。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| 架構 | 底層CPU架構。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| 裝置型號 | 使用的裝置名稱。 | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| 位元 | 基礎CPU架構支援的位元數。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| 瀏覽器供應商 | 建立瀏覽器的公司。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| 瀏覽器名稱 | 使用的瀏覽器。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| 瀏覽器版本 | 瀏覽器的重要版本。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 系統不會自動收集精確的瀏覽器版本。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 

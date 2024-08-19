@@ -3,9 +3,9 @@ title: 使用者代理使用者端提示
 description: 瞭解使用者代理程式使用者端提示在Web SDK中的運作方式。 使用者端提示可讓網站擁有者存取使用者代理字串中提供的大部分相同資訊，但採用更能保護隱私的方式來存取這些資訊。
 keywords: 使用者代理；使用者端提示；字串；使用者代理字串；低平均資訊量；高平均資訊量
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1245'
 ht-degree: 3%
 
 ---
@@ -98,13 +98,16 @@ Web SDK預設會啟用低平均資訊量使用者端提示，並在每個請求�
 
 高平均資訊量使用者端提示是有關使用者端裝置的更詳細資訊，例如平台版本、架構、型號、位元（64位元或32位元平台）或完整作業系統版本。 此資訊可能用於指紋識別。
 
-| HTTP標頭 | JavaScript | 預設包含在使用者代理中 | 預設包含在使用者端提示中 |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | 是 | 無 |
-| `Sec-CH-UA-Arc` | `architecture` | 是 | 無 |
-| `Sec-CH-UA-Model` | `model` | 是 | 無 |
-| `Sec-CH-UA-Bitness` | `Bitness` | 是 | 無 |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | 是 | 無 |
+| 屬性 | 說明 | HTTP標頭 | XDM 路徑 | 範例 | 預設包含在使用者代理中 | 預設包含在使用者端提示中 |
+| --- | --- | --- | --- | --- |---|---|
+| 作業系統版本 | 作業系統的版本。 | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | 是 | 無 |
+| 架構 | 底層CPU架構。 | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | 是 | 無 |
+| 裝置型號 | 使用的裝置名稱。 | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | 是 | 無 |
+| 位元 | 基礎CPU架構支援的位元數。 | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | 是 | 無 |
+| 瀏覽器供應商 | 建立瀏覽器的公司。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | 是 | 無 |
+| 瀏覽器名稱 | 使用的瀏覽器。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | 是 | 無 |
+| 瀏覽器版本 | 瀏覽器的重要版本。 低平均資訊量提示`Sec-CH-UA`也會收集這個專案。 系統不會自動收集精確的瀏覽器版本。 | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | 是 | 無 |
+
 
 Web SDK預設會停用高平均資訊量使用者端提示。 若要啟用它們，您必須手動設定Web SDK以請求高平均資訊量使用者端提示。
 
