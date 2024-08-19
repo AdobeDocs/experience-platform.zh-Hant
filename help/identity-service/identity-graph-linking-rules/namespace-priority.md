@@ -3,9 +3,9 @@ title: 名稱空間優先順序
 description: 瞭解Identity Service中的名稱空間優先順序。
 badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -78,13 +78,13 @@ ht-degree: 2%
 * 對於體驗事件，當您為特定沙箱設定身分設定後，主要身分將由後續的最高名稱空間優先順序決定。
    * 這是因為體驗事件的本質是動態的。 身分對應可能包含三個或更多身分，而名稱空間優先順序可確保最重要的名稱空間與體驗事件相關聯。
 * 因此，即時客戶設定檔&#x200B;**將不再使用下列設定**：
-   * WebSDK中資料元素型別的「主要」核取方塊。
+   * WebSDK中資料元素型別的「主要」核取方塊（在identityMap中會轉譯為`primary=true`）。 **注意**：身分名稱空間和身分值將繼續用於設定檔中。 此外，您仍必須設定「主要」核取方塊設定，因為Real-Time Customer Profile以外的服務將繼續參考此設定。
    * 任何在XDM體驗事件類別結構描述上標示為主要身分的欄位。
    * Adobe Analytics來源聯結器（ECID或AAID）中的預設主要身分設定。
 * 另一方面，**名稱空間優先順序不會決定設定檔記錄**&#x200B;的主要身分。
    * 對於設定檔記錄，您可以使用Experience PlatformUI中的結構描述工作區來定義您的身分欄位，包括主要身分。 如需詳細資訊，請參閱[在UI](../../xdm/ui/fields/identity.md)中定義身分欄位的指南。
 
->[!NOTE]
+>[!TIP]
 >
 >* 名稱空間優先順序是&#x200B;**名稱空間**&#x200B;的屬性。 這是指派給名稱空間的數值，可指出其相對重要性。
 >
@@ -96,7 +96,7 @@ ht-degree: 2%
 
 假設為給定沙箱建立了以下設定：
 
-| 命名空間 | 名稱空間的實際應用程式 | 優先等級 |
+| 命名空間 | 名稱空間的實際應用程式 | 優先順序 |
 | --- | --- | --- |
 | CRMID | 使用者 | 1 |
 | IDFA | Apple硬體裝置(iPhone、IPad等) | 2 |
@@ -183,3 +183,7 @@ ht-degree: 2%
 * 資料湖：刪除具有指定身分作為主要或次要身分的任何記錄。
 
 如需詳細資訊，請閱讀[隱私權服務概觀](../../privacy-service/home.md)。
+
+### Adobe Target和邊緣個人化
+
+[Edge個人化](../../server-api/personalization-target.md)將繼續參考您在WebSDK中資料元素型別（其在identityMap中轉譯為`primary=true`）上設定「主要」核取方塊的方式。
