@@ -2,9 +2,9 @@
 title: 存取ECID
 description: 瞭解如何從「資料準備」或「標籤」存取Experience CloudID
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
+source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '283'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 您可以透過[資料收集的資料準備](../../../../datastreams/data-prep.md) （建議）或標籤存取ECID。
 
 ## 透過「資料準備」存取ECID （偏好方法） {#accessing-ecid-data-prep}
+
+此方法使用[資料彙集的資料準備](../../../../datastreams/data-prep.md)來設定`ECID`的自訂對應。
+
+請參閱資料彙集](../../../../datastreams/data-prep.md)的[資料準備檔案，瞭解如何使用此功能。
 
 如果您打算在自訂XDM欄位中設定ECID，除了在身分對應中擁有它之外，您還可以透過將`source`設定為以下路徑來執行此操作：
 
