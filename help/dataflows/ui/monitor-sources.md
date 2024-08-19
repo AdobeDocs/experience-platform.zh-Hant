@@ -2,9 +2,9 @@
 description: 瞭解如何使用監視儀表板來監視從來源擷取的資料。
 title: 在UI中監視來源的資料流
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1320'
 ht-degree: 11%
 
 ---
@@ -62,9 +62,9 @@ At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which
 
 | 量度 | 說明 |
 | --- | --- |
-| 已收到的記錄 | 從來源接收的記錄總數。 |
+| 已收到的記錄 | 從指定來源接收的記錄總數。 |
 | 已擷取的記錄 | 擷取到Data Lake的記錄總數。 |
-| 已略過記錄 | 略過的記錄總數。 |
+| 已略過記錄 | 略過的記錄總數。 略過的記錄是指由於不需要擷取而被略過的欄位。 例如，如果您建立的來源資料流已啟用部分擷取，您可以設定可接受的錯誤率臨界值。 在擷取程式期間，擷取將會略過非必要欄位的記錄，例如身分欄位，只要這些欄位在錯誤臨界值內。 |
 | 失敗的記錄 | 因錯誤而無法擷取的記錄總數。 |
 | 擷取率 | 根據接收的記錄總數所擷取的記錄百分比。 |
 | 失敗的資料流總數 | 失敗的資料流總數。 |
