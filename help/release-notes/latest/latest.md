@@ -1,123 +1,93 @@
 ---
-title: Adobe Experience Platform發行說明2024年7月
-description: Adobe Experience Platform 2024 年 7 月的發行說明。
+title: Adobe Experience Platform發行說明2024年8月
+description: Adobe Experience Platform 2024 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
+source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 22%
+source-wordcount: '1028'
+ht-degree: 27%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期： 2024年7月30日**
+**發行日期： 2024年8月20日**
 
-Adobe Experience Platform中的新功能：
-
-- [!BADGE 有限可用性]{type=Informative}[同盟對象構成](#federated-audience-composition)
+>[!TIP]
+>
+>檢視範例使用案例檔案](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/use-cases/overview)的[概觀，以瞭解各種使用案例，例如潛在客戶、贏取等，以及貴組織透過Real-Time CDP可以達成的目標。
 
 Experience Platform現有功能和檔案的更新：
 
-- [進階資料生命週期管理](#advanced-data-lifecycle-management)
-- [資料收集](#data-collection)
-- [資料控管](#data-governance)
 - [目的地](#destinations)
+- [體驗資料模式 (XDM)](#xdm)
+- [身分識別服務](#identity-service)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
-- [統一標記](#unified-tags)
-
-## 聯合客群組成 {#federated-audience-composition}
-
-同盟對象構成可讓企業構成資料，以便在各種使用案例中更好地應用。 使用此新方法，身為Adobe Real-time Customer Data Platform和/或Adobe Journey Optimizer使用者，您可以直接從您現有的資料倉儲同盟資料集，以在一個系統中建立並擴充Adobe Experience Platform對象和屬性。
-
-如需詳細資訊，請閱讀[同盟對象組合檔案](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)。
-
-## 進階資料生命週期管理 {#advanced-data-lifecycle-management}
-
-Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪除消費者記錄和資料集，以管理儲存的資料。 在UI中使用資料生命週期工作區，或透過呼叫資料衛生API，您可以有效地管理資料存放區。 使用這些功能可確保資訊如預期使用、在不正確的資料需要修正時更新，並在組織原則認為必要時刪除。
-
-**新檔案**
-
-| 新文件 | 說明 |
-| --- | --- |
-| [!DNL Data Hygiene API]參考 | 使用資料衛生API來有效管理Experience Platform中的資料存放區。 透過這些功能，您可以確保資訊如預期使用、在不正確時更新，並在組織原則認為必要時刪除。<br><br>閱讀[資料衛生API參考檔案](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/)，瞭解如何使用API的詳細資訊。 您可以使用資料衛生API來排程資料集到期日、以程式設計方式更正或刪除已儲存的客戶個人資料，以及檢查您的資料衛生配額。 API參考檔案包含可用的端點、請求引數和回應格式，以協助您有效管理儲存的客戶資料。</br></br> |
-
-如需詳細資訊，請閱讀[進階資料生命週期管理概觀](../../hygiene/home.md)。
-
-## 資料收集 {#data-collection}
-
-Adobe Experience Platform提供了一套技術，可讓您收集使用者端客戶體驗資料，並將資料傳送至Experience PlatformEdge Network，在那裡可以擴充和轉換資料，並將其分發至Adobe或非Adobe目的地。
-
-**新功能或更新功能**
-
-| 類型 | 功能 | 說明 |
-| --- | --- | --- |
-| Web SDK | 自動追蹤主張互動 | 您現在可以在Web SDK中使用`autoTrackPropositionInteractionsEnabled`屬性來判斷Web SDK是否應該自動收集主張互動。 如需詳細資訊，請參閱[`autoTrackPropositionInteractionsEnabled`](../../web-sdk/commands/configure/autotrackpropositioninteractionsenabled.md)檔案。 |
-
-{style="table-layout:auto"}
-
-**新檔案或更新的檔案**
-
-| 新檔案或更新檔案 | 說明 |
-| --- | --- |
-| 針對Reactor API記載的新API端點 | 您可以在[Reactor API參考檔案](https://developer.adobe.com/experience-platform-apis/references/reactor/)中找到擴充功能套件使用授權端點。 擴充功能擁有者可以使用這些端點新增、移除和擷取擴充功能套件的套件授權。 |
-| 新的擴充功能套件使用授權端點檔案 | 在[擴充功能套件使用授權端點](/help/tags/api/endpoints/extension-package-usage-authorizations.md)檔案中可找到擴充功能套件擁有者如何授權其他公司在Reactor API中使用其私人版本的套件概述。 |
-| 新的共用私人擴充功能指南 | Reactor API的擴充功能套件授權建立、核准及刪除程式在[共用私人擴充功能](/help/tags/api/guides/extension-packages.md)檔案中有說明。 |
-
-{style="table-layout:auto"}
-
-如需詳細資訊，請閱讀[資料彙集概觀](../../collection/home.md)。
-
-## 資料控管 {#data-governance}
-
-Adobe Experience Platform 資料治理是一系列的策略和技術，用於管理客戶資料並確保符合適用於資料使用方式的法規、限制和政策。它在 Experience Platform 的不同階層都發揮關鍵作用，包括編目、資料譜系、資料使用標籤、資料存取政策以及對行銷動作資料的存取控制。
-
-**新功能**
-
-| 功能 | 說明 |
-| --- | --- |
-| mTLS服務API | [mTLS服務API](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/overview)的設計目的是增強資料交換的安全性。 使用此API可安全地擷取Adobe針對您組織的應用程式所發行的公開憑證。 這些憑證確保所有通訊都經過驗證和加密，並且可用於從外部驗證憑證的真實性。 閱讀[公用憑證端點指南](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/mtls-api/public-certificate-endpoint)，瞭解如何安全地擷取您組織的Adobe應用程式的公用憑證。 |
-
-{style="table-layout:auto"}
-
-如需詳細資訊，請閱讀[資料控管概觀](../../data-governance/home.md)。
 
 ## 目的地 {#destinations}
 
 [!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
-**新目的地** {#new-destinations}
-
-| 目的地 | 說明 |
-| ----------- | ----------- |
-| [(Beta) Merkury Enterprise連線](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md) | 使用[!DNL Merkury Enterprise Connections]目的地將對象安全地傳送至[!DNL Merkury]。 [!DNL Merkury]可讓行銷人員輕鬆比對及傳送個人化對象至[!DNL Merkury]超過80個進階可定址電視/電視、發行者及廣告技術連線。 [!DNL Merkury]由2.68億以上的美國成人消費者身分圖表提供支援。 |
-| [(Beta) Merkury企業身分識別](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md) | 使用[!DNL Merkury Enterprise Identity]目的地來建置更準確、完整且有洞察力的消費者設定檔。 透過改良的設定檔資料，行銷人員可以強化更深入的見解、區段和模型，從而產生更準確的目標定位和預測性模型。 |
-
-{style="table-layout:auto"}
-
 **新功能或更新的功能** {#destinations-new-updated-functionality}
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| 對象層級資料流監視 | 以對象分組的資料流監視功能先前僅適用於批次（檔案式）目的地。 自此發行版本開始，[(Beta) Google Customer Match + DV360串流目的地](/help/destinations/catalog/advertising/google-customer-match-dv360.md)也提供對象層級監視。 深入瞭解[對象層級監控](/help/dataflows/ui/monitor-destinations.md#segment-level-view)，如果您想要加入測試版計畫以使用Google Customer Match + DV360目的地，請連絡您的Adobe代表。 |
-| Destination SDK的受眾中繼資料巨集支援擴充屬性 | 您現在可以透過專用巨集存取[Destination SDK對象中繼資料範本](../../destinations/destination-sdk/functionality/audience-metadata-management.md)中的擴充屬性。 擴充屬性僅適用於[自訂上傳對象](../../destinations/destination-sdk/functionality/destination-configuration/schema-configuration.md#external-audiences)。 請參閱[批次對象啟用指南](../../destinations/ui/activate-batch-profile-destinations.md#select-enrichment-attributes)，瞭解擴充屬性選取的運作方式。 如需詳細資訊，請參閱對象範本[巨集清單](../../destinations/destination-sdk/functionality/audience-metadata-management.md#macros)。 |
+| 現在一般都能將檔案隨選匯出至批次目的地。 | 所有客戶現在都可以選擇隨選將檔案匯出至批次目的地。 如需詳細資訊，請參閱[專屬檔案](../../destinations/ui/export-file-now.md)。 |
+| 在[排程步驟](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)中編輯多個匯出對象的匯出排程。 | 現在，所有客戶都可以使用選項，直接從對象啟用工作流程的排程步驟，編輯多個匯出對象的匯出排程。 ![Experience Platform使用者介面的影像，在排程步驟中醒目提示編輯排程選項。](../2024/assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"} |
+| 在[排程步驟](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)中編輯多個匯出對象的檔案名稱。 | 現在，所有客戶都可以使用選項，直接從對象啟用工作流程的排程步驟編輯多個匯出檔案的名稱。 ![Experience Platform使用者介面的影像，在排程步驟中醒目提示編輯檔案名稱選項。](../2024/assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-remove)頁面移除資料流中的多個對象。 | 從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面移除現有資料流中多個對象的選項現在可供所有客戶使用。 ![醒目提示[目的地詳細資料]頁面中[移除對象]選項的Experience Platform使用者介面影像。](../2024/assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-export)頁面，隨選將多個檔案匯出至批次目的地。 | 所有客戶現在都可以選擇從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面，隨選將多個檔案匯出至批次目的地。 ![Experience Platform使用者介面的影像，在「目的地詳細資料」頁面中醒目提示「立即匯出檔案」選項。](../2024/assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-edit-file-names)頁面編輯多個匯出對象的檔案名稱。 | 您現在可以直接從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面編輯多個匯出檔案的名稱。 ![Experience Platform使用者介面的影像，在目的地詳細資訊頁面中醒目提示編輯檔案名稱選項。](../2024/assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/export-datasets.md#remove-dataset)頁面移除資料流中的多個資料集。 | 所有客戶現在都可以使用從資料流移除多個資料集的選項。 ![Experience Platform使用者介面的影像，在目的地詳細資訊頁面中醒目提示「移除資料集」選項。](../2024/assets/august/bulk-remove-datasets.png) {width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
 如需詳細資訊，請閱讀[目的地概觀](../../destinations/home.md)。
 
+## 體驗資料模式 (XDM) {#xdm}
+
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+
+**新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| ML輔助的結構描述建立流程 | 使用進階機器學習演演算法來分析範例CSV資料檔案，並使用標準和自訂欄位自動建立最佳化的結構描述。<br>主要功能：<br><ul><li>更快建立方案：使用ML建議和產生的XDM欄位，直接從範例資料檔產生方案。</li><li>靈活的結構描述演化：輕鬆新增或更新產生之結構描述中的欄位。</li><li>緊密整合：與Schema Ul的核心架構建立流程完全整合，確保提供順暢團結的使用者體驗。</li><li>有效率的檢閱和編輯：使用平面檢視編輯器快速檢視和更新您的架構，讓建立過程更有效率且更方便使用。</li></ul> |
+
+{style="table-layout:auto"}
+
+<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+
+如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
+
+## 身分識別服務 {#identity-service}
+
+使用Adobe Experience Platform Identity Service，透過跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，進而建立客戶及其行為的全面檢視。
+
+**已更新檔案**
+
+| 功能 | 說明 |
+| --- | --- |
+| 圖表設定指南 | 請閱讀[圖表組態指南](../../identity-service/identity-graph-linking-rules/example-configurations.md)，以瞭解在使用身分圖表連結規則和身分資料時可能會遇到的常見圖表情境相關資訊。 圖表設定指南提供的範例涵蓋從簡單的單一人員圖表情境到複雜且階層式的多人圖表情境。 您也可以使用指南來取得可在[圖表模擬UI](../../identity-service/identity-graph-linking-rules/graph-simulation.md)中輸入的事件和演演算法設定範例，以及特定圖表情境下如何選取主要身分的劃分。 |
+
+{style="table-layout:auto"}
+
+如需有關Identity服務的詳細資訊，請閱讀[Identity服務概觀](../../identity-service/home.md)。
+
 ## Segmentation Service {#segmentation}
 
 [!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的對象。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立對象。這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
-**新檔案**
+**更新的功能**
 
-| 新文件 | 說明 |
-| ----------------- | ----------- | 
-| [對象入口網站](../../segmentation/ui/audience-portal.md) | 瞭解如何使用Audience Portal，讓您在一個集中的中心檢視、管理及建立Adobe Experience Platform中的對象。 |
+| 功能 | 說明 |
+| ------- | ----------- |
+| 內嵌詳細資料 | 對於具有自訂上傳來源的對象，您可以在對象詳細資訊頁面中，更全面地檢視對象擷取的詳細資訊。 此外，您可以選取結構並選取要加上標籤的所需屬性，將標籤套用至裝載屬性。 您可以在[對象入口網站指南](../../segmentation/ui/audience-portal.md#ingestion-details)中找到有關內嵌詳細資訊區段的詳細資訊。 |
 
 {style="table-layout:auto"}
+
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱[分段概觀](../../segmentation/home.md)。
 
 ## 來源
 
@@ -129,23 +99,8 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 更新檔案 | 說明 |
 | --- | --- |
-| 已展開[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)的驗證指南 | 閱讀[!DNL Snowflake]的擴充驗證指南，瞭解如何擷取您的[帳戶識別碼](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier)和[私密金鑰](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key)以進行驗證。 此外，請使用擴充的驗證指南，瞭解如何[驗證倉儲及角色組態](../../sources/connectors/databases/snowflake.md#verify-configurations)的步驟。 |
+| 擴充有關更新資料流的檔案 | 已更新UI](../../sources/tutorials/ui/update-dataflows.md)中[更新現有來源資料流程的指南，以提供您可以對現有資料流程進行各種設定的詳細資訊。 指南也經過更新，以釐清已停用資料流重新啟用的預期行為。 |
 
 {style="table-layout:auto"}
 
 如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
-
-## 統一標記
-
-統一標籤可讓您在Adobe Experience Platform中分類和管理您的企業物件。 使用Unified Tags API時，您可以建立資料夾和標籤，以便更妥善地整理Platform物件（例如對象或資料集）。
-
-**新檔案**
-
-| 新文件 | 說明 |
-| ----------------- | ----------- |
-| [整合標籤API指南](../../administrative-tags/api/overview.md) | 請參閱統一標籤API指南，瞭解如何建立資料夾和標籤來排序您的企業物件。 |
-| [整合標籤API參考](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | 使用統一標籤API參考來以互動方式試用統一標籤端點。 |
-
-{style="table-layout:auto"}
-
-如需詳細資訊，請閱讀[整合標籤總覽](../../administrative-tags/overview.md)。
