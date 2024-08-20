@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
+source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
 workflow-type: tm+mt
-source-wordcount: '4125'
+source-wordcount: '4162'
 ht-degree: 3%
 
 ---
@@ -232,7 +232,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!BEGINTABS]
 
->[!TAB 對象構成]
+>[!TAB 客群構成]
 
 ![會顯示對象詳細資訊頁面，並反白顯示[!UICONTROL 開啟構成]按鈕。](../images/ui/audience-portal/audience-details-open-composition.png)
 
@@ -386,6 +386,10 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 >[!NOTE]
 >
 >外部產生的對象&#x200B;**必須**&#x200B;為CSV格式、最多&#x200B;**個**&#x200B;共25欄，且小於1GB。
+>
+>此外，您&#x200B;**無法**&#x200B;在CSV的第一列或關聯的欄中使用空格或破折號。
+>
+>例如，第一列的值可以是&quot;FirstName&quot;或&quot;First_Name&quot;，但不能是&quot;First Name&quot;或&quot;First-Name&quot;。
 
 選取要匯入的CSV檔案後，將顯示此外部產生對象的範例資料清單。 確認範例資料正確後，選取&#x200B;**[!UICONTROL 下一步]**。
 

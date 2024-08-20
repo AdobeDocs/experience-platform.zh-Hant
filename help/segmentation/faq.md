@@ -2,14 +2,14 @@
 title: 對象常見問題
 description: 瞭解有關對象和其他細分相關概念的常見問題解答。
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4235'
 ht-degree: 0%
 
 ---
 
-# 常見問答
+# 常見問題
 
 Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RESTful API，可讓您透過[!DNL Real-Time Customer Profile]資料的區段定義或其他來源建立對象。 這些對象是在Platform上集中設定和維護的，並可由任何Adobe解決方案輕鬆存取。 以下是有關對象和細分的常見問題清單。
 
@@ -33,14 +33,7 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 ### 上傳外部產生的對象時會發生什麼事？
 
-上傳外部產生的對象時，會建立下列專案：
-
-- 資料集
-   - 資料集將顯示在資料集詳細目錄內，資料集的名稱將與您上傳的外部產生對象的名稱&#x200B;**相同**。
-- 批次工作
-   - 當您上傳外部產生的對象時，批次工作將&#x200B;**自動**&#x200B;執行。 這表示您&#x200B;**不**&#x200B;需要等候每日細分工作執行才能啟用外部產生的對象。
-- 臨時結構描述
-   - 將建立&#x200B;**新** XDM結構描述以搭配外部產生的對象使用。 此XDM結構描述中的欄位會命名以供與已建立的資料集搭配使用。
+當您上傳外部產生的對象時，將會建立資料集，並顯示在資料集詳細目錄內。 資料集的名稱將與您上傳之外部產生對象的名稱&#x200B;**相同**。
 
 ### 由哪些外部產生的對象組成，以及這些資料匯入至Platform後會發生什麼事？
 
@@ -91,12 +84,6 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 ### 我可以在哪裡啟用外部產生的對象？
 
 外部產生的對象可以對應至任何目的地，並可在Adobe Journey Optimizer行銷活動中使用。
-
-### 外部產生的對象多久才能準備好開始啟用？
-
-如果啟用至串流目的地，則外部產生對象的資料將在兩小時內可用。
-
-如果啟動至批次目的地，來自外部產生對象的資料將與下一個24小時分段工作同步。
 
 ### 我可以刪除外部產生的對象嗎？
 
