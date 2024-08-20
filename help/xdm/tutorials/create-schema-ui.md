@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4813'
+source-wordcount: '4922'
 ht-degree: 1%
 
 ---
@@ -46,14 +46,23 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 ![已反白顯示[!UICONTROL 建立結構描述]的[!UICONTROL 結構描述]工作區[!UICONTROL 瀏覽]索引標籤。](../images/tutorials/create-schema/create-schema-button.png)
 
+[!UICONTROL 建立結構描述]對話方塊就會顯示。 在此對話方塊中，您可以選擇透過新增欄位和欄位群組來手動建立結構描述，或者您可以上傳CSV檔案並使用ML演演算法來產生結構描述。 從對話方塊中選取結構描述建立工作流程。
+
+![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### 手動或ML輔助模式建立 {#manual-or-assisted}
+
+若要瞭解如何使用ML演演算法根據上傳的檔案來建議結構描述結構，請參閱[機器學習輔助結構描述建立指南](../ui/ml-assisted-schema-creation.md)。 本UI指南著重於手動建立工作流程。
+
+### 選擇基底類別 {#choose-a-class}
+
 [!UICONTROL 建立結構描述]工作流程隨即顯示。 接著，選擇結構描述的基底類別。 您可以選擇[!UICONTROL XDM Individual Profile]與[!UICONTROL XDM ExperienceEvent]的核心類別，或是[!UICONTROL Other] （如果這些類別不適合您的用途）。 [!UICONTROL 其他]類別選項可讓您[建立新類別](#create-new-class)，或從其他預先存在的類別中選擇。
 
-如需這些類別的詳細資訊，請參閱[XDM個別設定檔](../classes/individual-profile.md)和[XDM ExperienceEvent](../classes/experienceevent.md)檔案。 在本教學課程中，請選取&#x200B;**[!UICONTROL XDM個別設定檔]**，然後選取&#x200B;**[!UICONTROL 下一步]**。
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+如需這些類別的詳細資訊，請參閱[[!UICONTROL XDM個別設定檔]](../classes/individual-profile.md)和[[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md)檔案。 在本教學課程中，請選取&#x200B;**[!UICONTROL XDM個別設定檔]**，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
 ![以[!UICONTROL XDM個別設定檔]選項和[!UICONTROL 下一步]醒目提示的[!UICONTROL 建立結構描述]工作流程。](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### 命名並檢閱 {#name-and-review}
 
 選取類別之後，[!UICONTROL 名稱和檢閱]區段就會顯示。 您可以在此段落中提供名稱和說明，以識別您的結構描述。 決定結構描述的名稱時，有幾個重要考量事項需要考慮：
 
@@ -68,6 +77,8 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 在文字欄位中輸入人性化的[!UICONTROL 結構描述顯示名稱]。 接下來，輸入適當的說明來協助識別您的結構描述。 當您檢閱了結構描述結構並對您的設定感到滿意時，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以建立結構描述。
 
 ![使用[!UICONTROL 結構描述顯示名稱]、[!UICONTROL 描述]和[!UICONTROL 完成]反白顯示[!UICONTROL 建立結構描述]工作流程的[!UICONTROL 名稱和檢閱]區段。](../images/ui/resources/schemas/name-and-review.png)
+
+### 撰寫結構描述 {#compose-your-schema}
 
 [!DNL Schema Editor]出現。 這是您將在其中撰寫結構描述的畫布。 當您進入編輯器時，會自動在畫布的&#x200B;**[!UICONTROL 結構]**&#x200B;區段中建立自標名的結構描述，以及包含在您選取之基底類別中的標準欄位。 結構描述的指派類別也列在&#x200B;**[!UICONTROL 構成]**&#x200B;區段的&#x200B;**[!UICONTROL 類別]**&#x200B;下。
 

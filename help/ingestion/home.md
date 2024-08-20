@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料擷取概觀
 description: 本檔案主要介紹將資料擷取到Platform的三種方式，並附有各自概述檔案的連結，以取得更詳細的資訊。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,12 @@ Adobe Experience Platform將來自多個來源的資料彙集在一起，以協�
 Source連線可設定為從其他Adobe應用程式(例如Adobe Analytics和Adobe Audience Manager)、協力廠商雲端儲存空間來源（例如[!DNL Azure Blob]、[!DNL Amazon] S3、FTP伺服器和SFTP伺服器）以及協力廠商CRM系統（例如[!DNL Microsoft Dynamics]和[!DNL Salesforce]）收集資料。
 
 如需詳細資訊，請參閱[來源概觀](../sources/home.md)。
+
+### ML輔助結構描述建立 {#ml-assisted-schema-creation}
+
+若要快速整合新資料來源，您現在可以使用機器學習演演算法，從範例資料產生結構描述。 此自動化可簡化建立準確的結構描述、減少錯誤，並加速從資料收集到分析和深入分析的程式。
+
+如需此工作流程的詳細資訊，請參閱[ML輔助結構描述建立指南](../xdm/ui/ml-assisted-schema-creation.md)。
 
 ## 後續步驟和其他資源
 

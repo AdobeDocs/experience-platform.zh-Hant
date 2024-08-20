@@ -5,9 +5,9 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '637'
 ht-degree: 45%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 45%
 
 * [XDM系統概覽](home.md)
 * 綱要 {#schema}
-   * [結構描述組合的基礎知識](schema/composition.md)
+   * [結構描述構成的基礎知識](schema/composition.md)
    * [資料模型化的最佳實務](schema/best-practices.md)
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
@@ -31,7 +31,7 @@ ht-degree: 45%
       * [觀光與餐旅](./schema/industries/travel-hospitality.md)
    * [XDM欄位字典](schema/field-dictionary.md)
 * 類別 {#classes}
-   * [XDM 輪廓](./classes/individual-profile.md)
+   * [XDM 個人輪廓](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [藥物](./classes/medication.md)
    * [付款人](./classes/payer.md)
@@ -205,6 +205,7 @@ ht-degree: 45%
       * [關係欄位](./ui/fields/relationship.md)
       * [必填欄位](./ui/fields/required.md)
    * [欄位式工作流程](./ui/field-based-workflows.md)
+   * [機器學習輔助的結構描述建立](./ui/ml-assisted-schema-creation.md)
    * [產生範例XDM資料](./ui/sample.md)
    * [匯出XDM結構描述](./ui/export.md)
 * 結構描述登入API {#api}

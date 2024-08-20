@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1560'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,15 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 ### 建立或編輯類別 {#create-or-edit}
 
-或者，如果您選取&#x200B;**[!UICONTROL 建立結構描述]**，則會顯示[!UICONTROL 建立結構描述]工作流程。 在[!UICONTROL 結構描述詳細資料]區段中，選取&#x200B;**[!UICONTROL 其他]**。 可用的類別清單隨即顯示。 從這裡，您可以瀏覽並篩選作為新類別基礎的現有類別。
+或者，如果您選擇手動建立方案，則可以建立或編輯現有類別，作為該工作流程的一部分。 在出現的[!UICONTROL 建立結構描述]對話方塊中，選取&#x200B;**[!UICONTROL 建立結構描述]**，然後選取&#x200B;**[!UICONTROL 手動]**。
+
+>[!NOTE]
+>
+>如果您使用ML輔助結構描述建立工作流程，則可上傳檔案並使用ML演演算法產生建議的結構描述。 在該結構描述建立工作流程中，您不需要指定結構描述的基底類別。 若要瞭解ML如何根據csv檔案建議結構描述結構，請參閱[機器學習輔助結構描述建立指南](../ml-assisted-schema-creation.md)。
+
+![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+架構建立工作流程隨即顯示。 在[!UICONTROL 結構描述詳細資料]區段中，選取&#x200B;**[!UICONTROL 其他]**。 可用的類別清單隨即顯示。 從這裡，您可以瀏覽並篩選作為新類別基礎的現有類別。
 
 >[!NOTE]
 >

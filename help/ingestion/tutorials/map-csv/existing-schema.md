@@ -5,9 +5,9 @@ title: 將CSV檔案對應至現有的XDM結構描述
 type: Tutorial
 description: 本教學課程涵蓋如何使用Adobe Experience Platform使用者介面將CSV檔案對應至現有的XDM結構描述。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '1018'
 ht-degree: 1%
 
 ---
@@ -121,3 +121,7 @@ ht-degree: 1%
 ## 後續步驟
 
 依照本教學課程中的指示，您已成功將一般CSV檔案對應至XDM結構描述，並將其擷取至[!DNL Platform]。 此資料現在可供下游[!DNL Platform]服務（例如[!DNL Real-Time Customer Profile]）使用。 如需詳細資訊，請參閱[[!DNL Real-Time Customer Profile]](../../../profile/home.md)的概觀。
+
+>[!TIP]
+>
+>您也可以使用機器學習(ML)演演算法，從結構描述工作區中&#x200B;**從範例資料**&#x200B;產生結構描述。 此工作流程會根據檔案的結構和內容自動建立新結構描述，確保結構描述符合您資料的格式。 這可為大型複雜資料集定義結構、欄位和資料型別節省時間，並提高準確性。 如需此工作流程的詳細資訊，請參閱[ML輔助結構描述建立指南](../../../xdm/ui/ml-assisted-schema-creation.md)。

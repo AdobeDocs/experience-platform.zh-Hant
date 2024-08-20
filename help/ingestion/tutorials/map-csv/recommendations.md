@@ -2,9 +2,9 @@
 title: 使用AI產生的Recommendations將CSV檔案對應到XDM結構描述
 description: 本教學課程涵蓋如何使用AI產生的建議將CSV檔案對應到XDM結構描述。
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1172'
 ht-degree: 1%
 
 ---
@@ -101,3 +101,5 @@ CSV欄位會使用ML模型自動對應到現有XDM欄位群組。 如果您想�
 本指南說明如何使用AI產生的建議將CSV檔案對應到XDM結構描述，讓您透過批次擷取將該資料匯入Platform。
 
 如需將CSV檔案對應到現有結構描述的步驟，請參閱[現有結構描述對應工作流程](./existing-schema.md)。 如需透過預先建立的來源連線將資料即時串流到Platform的資訊，請參閱[來源概觀](../../../sources/home.md)。
+
+您也可以使用機器學習(ML)演演算法，從範例CSV資料&#x200B;**產生結構描述**。 此工作流程會根據CSV檔案的結構和內容自動建立新結構描述。 這個新建立的結構描述符合您資料的格式，可為您節省時間並提高定義大型複雜資料集的結構、欄位和資料型別時的準確性。 如需此工作流程的詳細資訊，請參閱[ML輔助結構描述建立指南](../../../xdm/ui/ml-assisted-schema-creation.md)。

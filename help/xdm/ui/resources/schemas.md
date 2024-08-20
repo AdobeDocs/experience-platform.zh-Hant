@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3736'
-ht-degree: 2%
+source-wordcount: '3861'
+ht-degree: 1%
 
 ---
 
@@ -29,13 +29,23 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->本節說明如何在UI中手動建立新結構描述。 如果您正在將CSV資料擷取至Platform，您可以選擇將該資料[對應到AI產生的建議](../../../ingestion/tutorials/map-csv/recommendations.md)所建立的XDM結構描述（目前為測試版），而無需自行手動建立結構描述。
+>本節說明如何在UI中手動建立新結構描述。 如果您正在將CSV資料擷取至Platform，您可以使用機器學習(ML)演演算法，從範例CSV資料&#x200B;**產生結構描述**。 此工作流程會比對您的資料格式，並根據CSV檔案的結構和內容自動建立新結構描述。 如需此工作流程的詳細資訊，請參閱[ML輔助結構描述建立指南](../ml-assisted-schema-creation.md)。
 
 在[!UICONTROL 結構描述]工作區中，選取右上角的&#x200B;**[!UICONTROL 建立結構描述]**。
 
 ![反白顯示[!UICONTROL 建立結構描述]的結構描述工作區。](../../images/ui/resources/schemas/create-schema.png)
 
-[!UICONTROL 建立結構描述]工作流程隨即顯示。 您可以選取&#x200B;**[!UICONTROL 個別設定檔]**、**[!UICONTROL 體驗事件]**&#x200B;或&#x200B;**[!UICONTROL 其他]**，接著選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以確認您的選擇，為結構描述選擇基底類別。 如需這些類別的詳細資訊，請參閱[XDM個別設定檔](../../classes/individual-profile.md)和[XDM ExperienceEvent](../../classes/experienceevent.md)檔案。
+[!UICONTROL 建立結構描述]對話方塊就會顯示。 在此對話方塊中，您可以選擇透過新增欄位和欄位群組來手動建立結構描述，或者您可以上傳CSV檔案並使用ML演演算法來產生結構描述。 從對話方塊中選取結構描述建立工作流程。
+
+![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### 手動或ML輔助模式建立 {#manual-or-assisted}
+
+若要瞭解如何使用ML演演算法來建議以csv檔案為基礎的結構描述結構，請參閱[機器學習輔助的結構描述建立指南](../ml-assisted-schema-creation.md)。 本UI指南著重於手動建立工作流程。
+
+### 手動建立結構描述 {#manual-creation}
+
+[!UICONTROL 建立結構描述]工作流程隨即顯示。 您可以選取&#x200B;**[!UICONTROL 個別設定檔]**、**[!UICONTROL 體驗事件]**&#x200B;或&#x200B;**[!UICONTROL 其他]**，接著選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以確認您的選擇，為結構描述選擇基底類別。 如需這些類別的詳細資訊，請參閱[[!UICONTROL XDM個別設定檔]](../../classes/individual-profile.md)和[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)檔案。
 
 ![使用三個類別選項和[!UICONTROL 下一步]反白顯示的[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/schemas/schema-class-options.png)
 
