@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統疑難排解指南
 description: 尋找有關Experience Data Model (XDM)常見問題的解答，包括解決常見API錯誤的步驟。
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
+source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
 workflow-type: tm+mt
-source-wordcount: '2446'
+source-wordcount: '2390'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 如需欄位型別的詳細資訊，請參閱有關[XDM欄位型別限制](./schema/field-constraints.md)的檔案。
 
-### 什麼是meta：AltId？如何擷取它？
+### 什麼是meta：AltId？
 
 `meta:altId`是結構描述的唯一識別碼。 `meta:altId`提供易於參考的ID以用於API呼叫。 此ID可避免在每次與JSON URI格式搭配使用時進行編碼/解碼。
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -58,13 +58,6 @@ ht-degree: 0%
 
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
-
-### 我可以取得範例JSON表示來建立資料型別嗎？
-
-您可以使用Schema Registry API和Platform UI來建立資料型別。 如需如何執行下列作業的指示，請參閱檔案：
-
-- [使用API建立資料型別](./api/data-types.md#create)
-- [使用UI建立資料型別](./ui/resources/data-types.md#create)
 
 ### 地圖資料型別的使用限製為何？
 
