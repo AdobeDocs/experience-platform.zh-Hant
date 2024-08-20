@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identity Service總覽
 description: Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，讓您即時提供具影響力的個人數位體驗，協助您更清楚瞭解客戶及其行為。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1555'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 為了提供相關的數位體驗，您需要全面且準確地呈現組成客戶基礎的真實世界實體。
 
-現今的組織與企業面臨大量不同的資料集：您的個別客戶會以各種不同的識別碼呈現。 您的客戶可以連結至不同的網頁瀏覽器(Safari、Google Chrome)、硬體裝置（電話、筆記型電腦）和其他人員識別碼（CRM ID、電子郵件帳戶）。 這會建立客戶的分離檢視。
+現今的組織與企業面臨大量不同的資料集：您的個別客戶會以各種不同的識別碼呈現。 您的客戶可以連結到不同的網頁瀏覽器(Safari、Google Chrome)、硬體裝置（電話、筆記型電腦）和其他人員識別碼（CRMID、電子郵件帳戶）。 這會建立客戶的分離檢視。
 
 您可以使用Adobe Experience Platform Identity Service及其功能解決這些挑戰，以便：
 
@@ -78,20 +78,20 @@ Identity Service提供下列作業，以達成其使命：
 
 一般登入事件&#x200B;**會將兩個身分**&#x200B;傳送到Experience Platform中：
 
-* 代表已驗證使用者的個人識別碼（例如CRM ID）。
+* 代表已驗證使用者的個人識別碼（例如CRMID）。
 * 代表網頁瀏覽器的瀏覽器識別碼（例如ECID）。
 
 考量下列範例：
 
-* 您使用筆記型電腦登入電子商務網站，並使用您的使用者名稱和密碼組合。 此事件可讓您符合驗證使用者的資格，因此Identity Service可辨識您的CRM ID。
+* 您使用筆記型電腦登入電子商務網站，並使用您的使用者名稱和密碼組合。 此事件可讓您符合驗證使用者的資格，因此Identity Service可辨識您的CRMID。
 * 您使用瀏覽器存取電子商務網站時，Identity Service也會將其識別為事件。 此事件會透過ECID在Identity Service中呈現。
 * 在幕後，Identity Service會以`CRM_ID:ABC, ECID:123`處理兩個事件。
-   * CRM ID： ABC是代表您作為已驗證使用者的名稱空間和值。
+   * CRMID： ABC是代表您身為已驗證使用者的名稱空間和值。
    * ECID： 123是名稱空間和值，代表筆記型電腦上網頁瀏覽器的使用情形。
 * 接下來，如果您以相同的認證登入相同的電子商務網站，但使用手機上的網頁瀏覽器，而非筆記型電腦上的網頁瀏覽器，則會在Identity Service中註冊新的ECID。
 * 在幕後，Identity Service會將此新事件當成`{CRM_ID:ABC, ECID:456}`處理，其中CRM_ID：ABC代表您驗證的客戶ID，而ECID：456代表您行動裝置上的網頁瀏覽器。
 
-考慮到上述情況，Identity Service會建立`{CRM_ID:ABC, ECID:123}`與`{CRM_ID:ABC, ECID:456}`之間的連結。 這會產生一個身分圖表，讓您「擁有」三個身分：一個代表個人識別碼(CRM ID)，兩個代表Cookie識別碼(ECID)。
+考慮到上述情況，Identity Service會建立`{CRM_ID:ABC, ECID:123}`與`{CRM_ID:ABC, ECID:456}`之間的連結。 這會產生一個身分圖表，讓您「擁有」三個身分：一個代表個人識別碼(CRMID)，兩個代表Cookie識別碼(ECID)。
 
 如需詳細資訊，請閱讀[身分識別服務如何連結身分識別](./features/identity-linking-logic.md)的指南。
 

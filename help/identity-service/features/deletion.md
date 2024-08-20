@@ -2,9 +2,9 @@
 title: Identity Service中的刪除
 description: 本檔案概述您可以在Experience Platform中刪除身分資料的各種機制，並闡明身分圖表可能受到哪些影響。
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1198'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform Identity Service會透過決定性地連結個別人�
 
 * [身分識別服務](../home.md)：透過跨裝置和系統橋接身分，以更清楚瞭解個別客戶及其行為。
    * [身分圖表](./identity-graph-viewer.md)：身分圖表是特定客戶不同身分之間關係的對應，可讓您以視覺化方式呈現客戶如何跨不同管道與您的品牌互動。
-   * [身分識別名稱空間](./namespaces.md)：身分識別名稱空間是Identity Service的元件，用來做為身分識別相關內容的指標。 例如，他們將「name<span>@email.com」的值做為電子郵件地址，或「443522」做為數值CRM ID。
+   * [身分識別名稱空間](./namespaces.md)：身分識別名稱空間是Identity Service的元件，用來做為身分識別相關內容的指標。 例如，它們區分「name<span>@email.com」作為電子郵件地址或「443522」作為數字CRMID的值。
 * [目錄服務](../../catalog/home.md)：探索資料湖中的資料譜系、中繼資料、檔案說明、目錄和資料集。
 * [資料衛生](../../hygiene/home.md)：排程自動化資料集有效期，或從單一資料集或所有資料集中刪除個別記錄，以管理您儲存的消費者資料。
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md)：管理客戶透過Adobe Experience Cloud應用程式存取、選擇退出銷售或刪除其個人資料的請求。

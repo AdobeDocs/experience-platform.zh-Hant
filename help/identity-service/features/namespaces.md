@@ -2,9 +2,9 @@
 title: 身分名稱空間總覽
 description: 瞭解Identity Service中的身分識別名稱空間。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1858'
 ht-degree: 16%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 16%
 >abstract="身分識別值是代表唯一個人、組織或資產的識別碼。該值代表的身分識別的內容或類型由相對應的身分命名空間定義。當全部設定檔片段都符合記錄資料時，命名空間和識別值必須相符。當全部設定檔片段都符合記錄資料時，命名空間和識別值必須相符。"
 >text="Learn more in documentation"
 
-完整識別包含兩個元件： **識別值**&#x200B;和&#x200B;**識別名稱空間**。 例如，如果身分的值為`scott@acme.com`，則名稱空間會提供此值的內容，方法是將其識別為電子郵件地址。 同樣地，名稱空間可以將`555-123-456`區分為電話號碼，並將`3126ABC`區分為CRM ID。 基本上，**名稱空間會提供特定身分識別的內容**。 跨設定檔片段比對記錄資料時，例如[!DNL Real-Time Customer Profile]合併設定檔資料時，身分值和名稱空間必須相符。
+完整識別包含兩個元件： **識別值**&#x200B;和&#x200B;**識別名稱空間**。 例如，如果身分的值為`scott@acme.com`，則名稱空間會提供此值的內容，方法是將其識別為電子郵件地址。 同樣地，名稱空間可以將`555-123-456`區分為電話號碼，將`3126ABC`區分為CRMID。 基本上，**名稱空間會提供特定身分識別的內容**。 跨設定檔片段比對記錄資料時，例如[!DNL Real-Time Customer Profile]合併設定檔資料時，身分值和名稱空間必須相符。
 
 例如，兩個設定檔片段可能包含不同的主要ID，但兩者的「電子郵件」名稱空間值相同，因此Experience Platform能看到這些片段實際上是同一個人，並將個人資料一起匯入身分圖表中。
 
@@ -47,8 +47,8 @@ ht-degree: 16%
 
 將相同的邏輯套用至Identity Service：
 
-* 一眼就知道： `1-234-567-8900`的身分值看起來可能像電話號碼。 但是，從系統的角度來看，此值可能設定為CRM ID。 如果沒有對應的名稱空間，Identity Service無法將必要的內容套用至此身分值。
-* 另一個範例是身分值： `john@gmail.com`。 雖然您可輕鬆將此身分值假設為電子郵件，但完全有可能將其設定為自訂名稱空間CRM ID。 使用名稱空間，您可以區分`Email:john@gmail.com`與`CRM ID:john@gmail.com`。
+* 一眼就知道： `1-234-567-8900`的身分值看起來可能像電話號碼。 但是，從系統的角度來看，此值可能已設定為CRMID。 如果沒有對應的名稱空間，Identity Service無法將必要的內容套用至此身分值。
+* 另一個範例是身分值： `john@gmail.com`。 雖然您可輕鬆將此身分值假設為電子郵件，但完全有可能將其設定為自訂名稱空間CRMID。 使用名稱空間，您可以區分`Email:john@gmail.com`與`CRMID:john@gmail.com`。
 
 >[!ENDSHADEBOX]
 
@@ -81,7 +81,7 @@ Experience Platform中有以下身分型別：
 | 身分類型 | 說明 |
 | --- | --- |
 | Cookie ID | Cookie ID可識別網頁瀏覽器。 這些身分對於擴充至關重要，並構成身分圖表的大多數。 然而，自然而然地，它們會迅速衰落，並隨著時間而失去價值。 |
-| 跨裝置ID | 跨裝置ID會識別個人，通常會將其他ID連結在一起。 範例包括登入ID、CRM ID和熟客ID。 這是指示[!DNL Identity Service]要敏感地處理值。 |
+| 跨裝置ID | 跨裝置ID會識別個人，通常會將其他ID連結在一起。 例如登入ID、CRMID和熟客ID。 這是指示[!DNL Identity Service]要敏感地處理值。 |
 | 裝置 ID | 裝置 ID 會識別硬體裝置，例如 IDFA (iPhone 和 iPad)、GAID (Android) 和 RIDA (Roku)，而且可由家中的多個人共用。 |
 | 電子郵件地址 | 電子郵件地址通常與單一人員相關聯，因此可用於跨不同管道識別該人員。 此型別的身分包含個人識別資訊(PII)。 這是指示[!DNL Identity Service]要敏感地處理值。 |
 | 非人員識別碼 | 非人員 ID 是用於儲存需要命名空間但未連接到人員叢集的識別碼。例如，產品 SKU；與產品、組織或存放區有關的資料。 |

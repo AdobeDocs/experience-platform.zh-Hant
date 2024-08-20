@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 為Adobe Experience Platform開發ETL整合
 description: ETL整合指南概述建立高效能、安全聯結器以供Experience Platform及將資料擷取到Platform的一般步驟。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '3978'
+source-wordcount: '3977'
 ht-degree: 2%
 
 ---
@@ -789,5 +789,5 @@ Adobe Experience Platform目前無法識別延遲的資料，因此使用者端�
 | ---- | ------ | ----------- |
 | 2019-01-19 | 已從資料集中移除「欄位」屬性 | 資料集之前包含的「欄位」屬性包含了結構描述的副本。 此功能不應再使用。 如果找到「fields」屬性，應忽略該屬性，並改用「observedSchema」或「schemaRef」。 |
 | 2019-03-15 | 「schemaRef」屬性已新增到資料集 | 資料集的「schemaRef」屬性包含參照資料集所依據的XDM架構的URI，且代表資料集可使用的所有潛在欄位。 |
-| 2019-03-15 | 所有一般使用者識別碼都會對應至「identityMap」屬性 | 「identityMap」是主體所有唯一識別碼（例如CRM ID、ECID或熟客方案ID）的封裝。 [[!DNL Identity Service]](../identity-service/home.md)使用此對應來解析主體的所有已知和匿名身分，為每個一般使用者形成一個身分圖表。 |
+| 2019-03-15 | 所有一般使用者識別碼都會對應至「identityMap」屬性 | 「identityMap」是主體所有唯一識別碼（例如CRMID、ECID或熟客方案ID）的封裝。 [[!DNL Identity Service]](../identity-service/home.md)使用此對應來解析主體的所有已知和匿名身分，為每個一般使用者形成一個身分圖表。 |
 | 2019-05-30 | EOL並從資料集中移除「schema」屬性 | 資料集「schema」屬性提供使用[!DNL Catalog] API中已棄用的`/xdms`端點之結構描述的參考連結。 這已被提供新[!DNL Schema Registry] API中所參考之結構描述的「id」、「version」和「contentType」的「schemaRef」取代。 |

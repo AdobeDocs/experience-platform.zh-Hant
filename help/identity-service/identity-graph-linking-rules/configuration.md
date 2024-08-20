@@ -3,9 +3,9 @@ title: 身分圖表連結規則設定指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1357'
 ht-degree: 2%
 
 ---
@@ -76,6 +76,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 >
 >* 在預先實作程式中，您必須確保系統要傳送給Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
 >* 在實作期間，您必須確保每個設定檔中一律有最高優先順序的唯一名稱空間。 請參閱[附錄](#appendix)以取得圖表案例的範例，其可透過確保每個設定檔都包含具有最高優先順序的唯一名稱空間來解決。
+>* 如果您使用[Adobe Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)來內嵌資料，則您必須為ECID指定比AAID更高的優先順序，因為Identity Service會封鎖AAID。 透過優先處理ECID，您可以指示Identity Service將未驗證事件儲存至ECID，而非AAID。
 
 此時，您應該具備下列專案：
 

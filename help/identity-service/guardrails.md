@@ -3,9 +3,9 @@ keywords: Experience Platform；身分；身分服務；疑難排解；護欄；
 title: Identity Service的護欄
 description: 本檔案提供Identity Service資料的使用與速率限制相關資訊，協助您最佳化身分圖表的使用方式。
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1585'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Identity Service持續監控傳入的資料，以確保大規模的高效能和�
 
 Adobe如果您的生產沙箱包含：
 
-* 將人員識別碼（例如CRM ID）設定為Cookie/裝置身分型別的自訂名稱空間。
+* 將人員識別碼（例如CRMID）設定為Cookie/裝置身分型別的自訂名稱空間。
 * 將Cookie/裝置識別碼設定為跨裝置識別型別的自訂名稱空間。
 
 此功能可用後，超過50個身分限制的圖表將減少到最多50個身分。 對於Real-Time CDP B2C Edition，這可能會導致符合對象資格的設定檔數量增加到最低限度，因為這些設定檔先前在細分和啟動中被忽略。
@@ -106,7 +106,7 @@ Adobe如果您的生產沙箱包含：
 
 #### 即時客戶個人檔案和WebSDK：主要身分刪除
 
-若您想要保留已根據CRM ID驗證的事件，建議您將ECID的主要識別碼變更為CRM ID。 請閱讀下列檔案，以瞭解如何實作此變更的步驟：
+如果您想要針對CRMID保留已驗證的事件，則建議您將主要ID從ECID變更為CRMID。 請閱讀下列檔案，以瞭解如何實作此變更的步驟：
 
 * [設定Experience Platform標籤的身分對應](../tags/extensions/client/web-sdk/data-element-types.md#identity-map)。
 * [Experience Platform Web SDK中的身分資料](../web-sdk/identity/overview.md#using-identitymap)
@@ -149,7 +149,7 @@ Adobe如果您的生產沙箱包含：
 
 >[!TAB 圖表輸出]
 
-刪除ECID：35577後，連結CRM ID：60013和CRM ID：25212與現在已刪除之ECID：35577的邊緣也會被刪除。 此刪除程式會導致圖表被分割成兩個較小的圖表。
+刪除ECID：35577後，連結CRMID：60013和CRMID：25212與現在已刪除的ECID：35577的邊緣也會被刪除。 此刪除程式會導致圖表被分割成兩個較小的圖表。
 
 ![](./images/guardrails/after-split.png)
 
@@ -176,7 +176,7 @@ Adobe如果您的生產沙箱包含：
 
 因此，Identity Service只會從身分圖表刪除最舊的身分，此案例中為ECID：35577。 刪除ECID：35577也會導致以下刪除：
 
-* CRM ID：60013和現已刪除的ECID：35577之間的連結，因此會產生圖表分割情況。
+* CRMID：60013和現已刪除的ECID：35577之間的連結，因此會產生圖表分割情況。
 * IDFA： 32110、IDFA： 02383以及`(...)`所代表的其餘身分。 這些身分會遭到刪除，因為個別身分不會連結至任何其他身分，因此無法在圖形中顯示。
 
 ![](./images/guardrails/hub-and-spoke-process.png)

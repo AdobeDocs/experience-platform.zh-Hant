@@ -3,9 +3,9 @@ title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 ![選取並定義為唯一的兩個名稱空間。](../images/rules/unique-namespace.png)
 
-建立唯一名稱空間後，圖表將無法再擁有多個包含唯一名稱空間的身分。 例如，若您指定CRM ID作為唯一的名稱空間，則圖表只能有一個具有CRM ID名稱空間的身分。 如需詳細資訊，請閱讀[身分最佳化演演算法總覽](./identity-optimization-algorithm.md#unique-namespace)。
+建立唯一名稱空間後，圖表將無法再擁有多個包含唯一名稱空間的身分。 例如，如果您指定CRMID作為唯一的名稱空間，則圖表只能有一個身分與CRMID名稱空間。 如需詳細資訊，請閱讀[身分最佳化演演算法總覽](./identity-optimization-algorithm.md#unique-namespace)。
 
 完成設定後，請選取&#x200B;**[!UICONTROL 下一步]**。 出現確認訊息，請利用此機會確認您的設定是否正確，然後選取&#x200B;**[!UICONTROL 完成]**。
 
