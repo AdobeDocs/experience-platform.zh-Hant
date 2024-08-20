@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
+source-wordcount: '4125'
 ht-degree: 3%
 
 ---
@@ -254,17 +254,39 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 選取&#x200B;**[!UICONTROL 編輯屬性]**&#x200B;可讓您編輯對象的基本詳細資料，例如名稱、說明和標籤。
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![在對象詳細資訊頁面中會醒目提示「編輯屬性」按鈕。](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### 客群總計 {#audience-total}
 
-**[!UICONTROL 對象總計]**&#x200B;區段會顯示符合對象資格的設定檔總數。
+針對平台產生的對象和組合，**[!UICONTROL 對象總計]**&#x200B;區段會顯示符合對象資格的設定檔總數。
 
 >[!NOTE]
 >
 >匯出工作完成後，可能需要30分鐘才會更新對象總數。
 
 預估值是透過使用當天樣本資料的樣本大小所產生。 如果您的設定檔存放區中有少於100萬個實體，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。 如需有關產生預估的詳細資訊，請參閱對象建立教學課程的[預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
+
+### 內嵌詳細資料 {#ingestion-details}
+
+對於來源為&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;的對象，**[!UICONTROL 擷取詳細資料]**&#x200B;區段會同時顯示設定檔總計以及外部產生的對象所擷取到的資料集詳細資料。
+
+![會顯示對象詳細資訊頁面的擷取詳細資訊區段。](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| 設定檔計數 | 符合對象資格的設定檔總數。 |
+| 資料集名稱 | 對象所擷取的資料集名稱。 您可以選取資料集名稱，以取得資料集的詳細資訊。 若要深入瞭解資料集，請閱讀[資料集UI指南](../../catalog/datasets/user-guide.md)。 |
+| 資料集批次 | 對象所擷取的資料集ID。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
+| 輪廓批次 | 在Platform上建立設定檔的批次識別碼。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
+| 綱要 | 對象所屬的結構描述名稱。 您可以選取結構描述的名稱，以檢視有關結構描述結構的資訊並套用資料使用標籤。 如需詳細資訊，請閱讀結構描述指南](../../xdm/tutorials/labels.md)的[管理資料使用標籤。 |
+| 已擷取的記錄 | 擷取到資料集中的記錄數。 |
+| 失敗的記錄 | 無法擷取到資料集中的記錄數。 |
+| 新的輪廓片段 | 已建立的新設定檔數。 |
+| 現有的輪廓片段 | 已更新的現有設定檔數。 |
+
+>[!NOTE]
+>
+>最佳實務是將資料使用標籤套用至結構描述。 您&#x200B;**無法**&#x200B;將資料使用標籤直接套用至對象。
 
 ### 已啟用的目的地 {#activated-destinations}
 
@@ -343,7 +365,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ### 聯合客群組成 {#fac}
 
-除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)的指南。
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
 
 ![在您組織的同盟對象組合中建立的對象清單。](../images/ui/overview/federated-audience-composition.png)
 
