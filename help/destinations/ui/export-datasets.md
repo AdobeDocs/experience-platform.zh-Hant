@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1814'
 ht-degree: 4%
 
 ---
@@ -211,10 +211,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
    ![可用的資料集導覽選項在[啟動資料]欄中反白顯示。](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. [!BADGE Beta]目的地的&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面就會顯示。 使用資料集清單左側的核取方塊來選取您要移除的資料集，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除資料集]**，以觸發移除資料集確認對話方塊。
-
-   >[!NOTE]
-   >此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+3. 目的地的&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面隨即顯示。 使用資料集清單左側的核取方塊來選取您要移除的資料集，然後在右側邊欄中選取&#x200B;**[!UICONTROL 移除資料集]**，以觸發移除資料集確認對話方塊。
 
    ![移除資料集對話方塊會在右側邊欄中顯示「移除資料集」控制項。](../assets/ui/export-datasets/bulk-remove-datasets.png)
 

@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
+source-wordcount: '4202'
 ht-degree: 13%
 
 ---
@@ -110,6 +110,10 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 ![編輯排程步驟中反白顯示的排程控制項。](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+若要同時編輯多個排程，請使用畫面左側的核取方塊來選取對象，然後選取&#x200B;**[!UICONTROL 編輯排程]**。 然後，您設定的排程將套用至所選對象的所有匯出檔案。
+
+![顯示多個選取對象之編輯排程選項的Experience Platform使用者介面影像。](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >您可以從&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面，編輯現有啟用流程的對象啟用排程。 如需詳細資訊，請參閱有關[大量編輯啟動排程](../ui/destination-details-page.md#bulk-edit-schedule)的檔案。
@@ -200,7 +204,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 4. 選取&#x200B;**[!UICONTROL 建立]**&#x200B;以儲存排程。
 
-### 設定檔案名稱
+### 設定檔案名稱 {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 | **[!UICONTROL 沙箱名稱]** | 您用來匯出對象的沙箱的ID。 |
 
 {style="table-layout:auto"}
+
+若要同時編輯多個檔案名稱，請使用畫面左側的核取方塊來選取對象，然後選取&#x200B;**[!UICONTROL 編輯檔案名稱]**。 然後，您設定的檔案名稱選項將套用至所選對象的所有匯出檔案。
+
+![顯示多個選取對象之編輯檔案名稱選項的Experience Platform使用者介面影像。](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 選取&#x200B;**[!UICONTROL 套用變更]**&#x200B;以確認您的選擇。
 
