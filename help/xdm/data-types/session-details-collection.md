@@ -2,10 +2,10 @@
 title: 工作階段詳細資料集合資料型別
 description: 瞭解工作階段詳細資料收集Experience Data Model (XDM)資料型別。
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,6 @@ ht-degree: 15%
 | [[!UICONTROL 廣播內容型別]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | 字串 | 是 | 串流傳遞的[!UICONTROL 廣播內容型別]。 每個[!UICONTROL 資料流型別]的可用值包括：<br>音訊： &quot;song&quot;、&quot;podcast&quot;、&quot;audiobook&quot;和&quot;radio&quot;；<br>視訊： &quot;VoD&quot;、&quot;Live&quot;、&quot;Linear&quot;、&quot;UGC&quot;和&quot;DVoD&quot;。<br>客戶可提供此引數的自訂值。 |
 | [[!UICONTROL 廣播網路]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | 字串 | 無 | 網路/頻道名稱。 |
 | [[!UICONTROL 內容頻道]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | 字串 | 是 | [!UICONTROL Content Channel]是播放內容的發佈管道。 |
-| [[!UICONTROL 內容完成]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | 布林值 | 無 | [!UICONTROL 內容完成]指出是否觀看定時媒體資產至完成。 此事件並不一定表示檢視者看完整段影片，檢視者可能略過前面。 |
 | [!UICONTROL 內容傳遞網路] | `cdn` | 字串 | 無 | 已播放內容的[!UICONTROL 內容傳遞網路]。 |
 | [[!UICONTROL 內容識別碼]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | 字串 | 是 | [!UICONTROL 內容識別碼]是內容的唯一識別碼。 它可用來連結回其他產業或CMS ID。 |
 | [[!UICONTROL 內容名稱]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | 字串 | 無 | [!UICONTROL 內容名稱]是內容的「易記」（人類看得懂的）名稱。 |
@@ -45,7 +44,6 @@ ht-degree: 15%
 | [[!UICONTROL 型別]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | 字串 | 無 | 內容製作者定義的內容型別或群組。 實施變數時，值應以逗號分隔。 |
 | [[!UICONTROL 已授權的媒體]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | 字串 | 無 | 確認使用者是否已透過Adobe驗證獲得授權。 |
 | [[!UICONTROL 媒體內容長度]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | 整數 | 是 | [!UICONTROL 媒體內容長度]包含剪輯長度/執行階段 — 這是被使用內容的最大長度（或持續時間） （以秒為單位）。 |
-| [[!UICONTROL 媒體開始]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | 布林值 | 無 | 媒體的載入事件。 當檢視器選取播放按鈕時，就會發生這種情況。 即使有前段廣告、緩衝、錯誤等，也會計算此值。 |
 | [[!UICONTROL MVPD識別碼]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | 字串 | 無 | 透過Adobe驗證提供的多頻道視訊程式設計經銷商(MVPD)識別碼。 |
 | [[!UICONTROL 發行者]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | 字串 | 無 | 音訊內容發行者的名稱。 |
 | [[!UICONTROL 廣播電台]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | 字串 | 無 | 播放音頻的廣播電台名稱。 |
@@ -60,10 +58,3 @@ ht-degree: 15%
 | [[!UICONTROL 版本]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | 字串 | 無 | 播放器使用的SDK版本。 您的播放器可採用任何合理的自訂值。 |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

@@ -2,7 +2,7 @@
 title: Advertising Pod詳細資料集合資料型別
 description: 瞭解Advertising Pod詳細資料收集Experience Data Model (XDM)資料型別。
 exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 8%
@@ -16,7 +16,9 @@ ht-degree: 8%
 ![Advertising Pod詳細資訊集合資料型別的圖表。](../images/data-types/advertising-pod-details-collection.png)
 
 | 顯示名稱 | 屬性 | 資料類型 | 必要 | 說明 |
-|-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|
+|-----------------------------------------|-----------------|-----------|----------|---------------------------------------------------------|
 | Pod位置中的[!UICONTROL 廣告] | `index` | 整數 | 是 | 上層廣告插播開始內的廣告索引。 |
 | [!UICONTROL Pod易記名稱] | `friendlyName` | 字串 | 無 | 容易理解的廣告插播名稱。 |
 | [!UICONTROL Pod位移] | `offset` | 整數 | 是 | 內容內的廣告插播位移（以秒為單位）。 |
+
+{style="table-layout:auto"}

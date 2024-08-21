@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
-source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
+source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
 workflow-type: tm+mt
 source-wordcount: '1300'
 ht-degree: 28%
@@ -69,11 +69,9 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| ML輔助的結構描述建立流程 | 使用進階機器學習演演算法來分析範例CSV資料檔案，並使用標準和自訂欄位自動建立最佳化的結構描述。<br>主要功能：<br><ul><li>更快建立方案：使用ML建議和產生的XDM欄位，直接從範例資料檔產生方案。</li><li>靈活的結構描述演化：輕鬆新增或更新產生之結構描述中的欄位。</li><li>緊密整合：與Schema Ul的核心架構建立流程完全整合，確保提供順暢團結的使用者體驗。</li><li>有效率的檢閱和編輯：使用平面檢視編輯器快速檢視和更新您的架構，讓建立過程更有效率且更方便使用。</li></ul> |
+| ML輔助的結構描述建立流程 | 使用進階機器學習演演算法來分析範例資料檔案，並使用標準和自訂欄位自動建立最佳化的結構描述。<br>主要功能：<br><ul><li>更快建立方案：使用ML建議和產生的XDM欄位，直接從範例資料檔產生方案。</li><li>靈活的結構描述演化：輕鬆新增或更新產生之結構描述中的欄位。</li><li>緊密整合：與Schema Ul的核心架構建立流程完全整合，確保提供順暢團結的使用者體驗。</li><li>有效率的檢閱和編輯：使用平面檢視編輯器快速檢視和更新您的架構，讓建立過程更有效率且更方便使用。</li></ul><br>若要深入瞭解，請閱讀[ML輔助結構描述建立工作流程手冊](../../xdm/ui/ml-assisted-schema-creation.md)。 |
 
 {style="table-layout:auto"}
-
-若要深入瞭解，請閱讀[ML輔助結構描述建立概述](../../xdm/ui/ml-assisted-schema-creation.md)
 
 如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
 

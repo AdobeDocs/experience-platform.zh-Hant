@@ -5,9 +5,9 @@ title: 使用結構編輯器建立結構
 type: Tutorial
 description: 本教學課程涵蓋以 Experience 平台結構編輯器建立結構的相關步驟。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
 workflow-type: tm+mt
-source-wordcount: '4922'
+source-wordcount: '4914'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 ![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### 手動或ML輔助模式建立 {#manual-or-assisted}
+### [!BADGE Beta]{type=Informative}手動或ML輔助的結構描述建立 {#manual-or-assisted}
 
 若要瞭解如何使用ML演演算法根據上傳的檔案來建議結構描述結構，請參閱[機器學習輔助結構描述建立指南](../ui/ml-assisted-schema-creation.md)。 本UI指南著重於手動建立工作流程。
 
@@ -84,13 +84,13 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!NOTE]
 >
->您可以從&#x200B;**[!UICONTROL 結構描述屬性]**&#x200B;側邊欄更新結構描述的顯示名稱和選擇性說明。 輸入新名稱后，畫布會自動更新以反映結構描述的新名稱。
+您可以從&#x200B;**[!UICONTROL 結構描述屬性]**&#x200B;側邊欄更新結構描述的顯示名稱和選擇性說明。 輸入新名稱后，畫布會自動更新以反映結構描述的新名稱。
 
 ![基底類別和結構描述圖表醒目提示的結構描述編輯器。](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
 
 >[!NOTE]
 >
->在儲存結構描述之前，您可以在初始構成程式期間的任何時候[變更結構描述](#change-class)的類別，但必須非常小心。 欄位群組僅與某些類別相容，因此變更類別將會重設畫布以及您新增的任何欄位。
+在儲存結構描述之前，您可以在初始構成程式期間的任何時候[變更結構描述](#change-class)的類別，但必須非常小心。 欄位群組僅與某些類別相容，因此變更類別將會重設畫布以及您新增的任何欄位。
 
 ## 新增欄位群組 {#field-group}
 
@@ -126,17 +126,17 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!NOTE]
 >
->在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
+在結構描述編輯器中，標準(Adobe產生的)類別和欄位群組會以掛鎖圖示(![掛鎖圖示表示。](/help/images/icons/lock-closed.png)。掛鎖會顯示在類別或欄位群組名稱旁的左側邊欄中，也會顯示在架構圖表中，屬於系統產生資源之一部分的任何欄位旁邊。
 >
->![結構描述編輯器反白顯示掛鎖圖示](../images/ui/explore/padlock-icon-highlight.png)
+![結構描述編輯器反白顯示掛鎖圖示](../images/ui/explore/padlock-icon-highlight.png)
 
-此欄位群組提供頂層名稱`person`底下的數個資料型別為「[!UICONTROL 人員]」的欄位。 這組欄位說明個人的相關資訊，包括姓名、出生日期和性別。
+此欄位群組提供頂層名稱`person`底下數個資料型別的欄位 "[!UICONTROL 人員]」。 這組欄位說明個人的相關資訊，包括姓名、出生日期和性別。
 
 >[!NOTE]
 >
->請記住，欄位可以使用[!DNL Schema Registry]中定義的純量型別（例如字串、整數、陣列或日期），以及任何資料型別（代表一般概念的欄位群組）。
+請記住，欄位可使用純量型別 (such 如字串、整數、陣列或日期等)，以及任何資料型別 (a 在[!DNL Schema Registry]中定義的欄位群組（代表一般概念）。
 
-請注意，`name`欄位的資料型別為「[!UICONTROL 全名]」，這表示它也描述一般概念，並包含與名稱相關的子欄位，例如名字、姓氏、禮貌標題和尾碼。
+請注意，`name`欄位具有資料型別 of 「[!UICONTROL 全名]」，表示它也描述一般概念，並包含與名稱相關的子欄位，例如名字、姓氏、禮貌標題和尾碼。
 
 選取畫布中的不同欄位，以顯示這些欄位對結構描述結構貢獻的任何其他欄位。
 
@@ -154,7 +154,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 ## 定義自訂欄位群組 {#define-field-group}
 
-[!UICONTROL 熟客方案成員]結構描述是用來擷取與熟客方案成員相關的資料，而您新增至結構描述的標準[!UICONTROL 熟客方案詳細資料]欄位群組可提供大部分這類資料，包括方案型別、點數、加入日期等。
+[!UICONTROL 熟客方案成員]結構描述是用來擷取與熟客方案成員相關的資料，而您新增至結構描述的標準[!UICONTROL 熟客方案詳細資料]欄位群組提供了其中大部分資料，包括方案型別 points, 加入日期等。
 
 但是，在某些情況下，您可能會想要包含標準欄位群組未涵蓋的其他自訂欄位，以便實現您的使用案例。 如果新增自訂忠誠度欄位，您有兩個選項：
 
@@ -167,7 +167,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!NOTE]
 >
->和類別名稱一樣，欄位群組名稱應該簡短而簡單，說明欄位群組對結構描述有哪些貢獻。 這些也是唯一的，因此您將無法重複使用名稱，因此必須確保它足夠具體。
+和類別名稱一樣，欄位群組名稱應該簡短而簡單，說明欄位群組對結構描述有哪些貢獻。 這些也是唯一的，因此您將無法重複使用名稱，因此必須確保它足夠具體。
 
 &quot;[!DNL Custom Loyalty Details]&quot;現在應該出現在畫布左側的&#x200B;**[!UICONTROL 欄位群組]**&#x200B;下，但是還沒有任何欄位與其相關聯，因此&#x200B;**[!UICONTROL 結構]**&#x200B;下沒有新欄位出現。
 
@@ -183,7 +183,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 ![結構描述編輯器有[!UICONTROL 未命名的欄位]和結構描述[!UICONTROL 欄位屬性]已反白顯示。](../images/tutorials/create-schema/untitled-field.png)
 
-在此案例中，結構描述需要物件型別欄位，以詳細描述人員目前的熟客方案。 使用右側邊欄中的控制項，開始建立型別為&quot;[!UICONTROL Object]&quot;的`loyaltyTier`欄位，此欄位將用來儲存您的相關欄位。
+此情境中，結構描述需要物件型別 field 詳細描述人員目前的熟客層級。 使用右側邊欄中的控制項，開始建立具有型別的`loyaltyTier`欄位 "將用來儲存相關欄位的[!UICONTROL 物件]。
 
 在&#x200B;**[!UICONTROL 指派給]**&#x200B;下，您必須選取要指派欄位的欄位群組。 請記住，所有結構描述欄位都屬於類別或欄位群組，由於此結構描述使用標準類別，因此您唯一的選項是選取欄位群組。 開始輸入名稱「[!DNL Custom Loyalty Details]」，然後從清單中選取欄位群組。
 
@@ -197,9 +197,9 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!NOTE]
 >
->租使用者ID物件存在表示您新增的欄位包含在您組織的名稱空間中。
+租使用者ID物件存在表示您新增的欄位包含在您組織的名稱空間中。
 >
->換言之，您新增的欄位對您的組織是唯一的，並且會儲存在僅供您的組織存取的特定區域的[!DNL Schema Registry]中。 您定義的欄位必須一律新增至租使用者名稱空間，以防止與其他標準類別、欄位群組、資料型別和欄位的名稱衝突。
+換言之，您新增的欄位對您的組織是唯一的，並且會儲存在僅供您的組織存取的特定區域的[!DNL Schema Registry]中。 您定義的欄位必須一律新增至租使用者名稱空間，以防止與其他標準類別、欄位群組、資料型別 and 欄位。
 
 選取`loyaltyTier`物件旁的&#x200B;**加號(+)**&#x200B;圖示以開始新增子欄位。 新的欄位預留位置隨即出現，畫布右側會顯示&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;區段。
 
@@ -211,10 +211,10 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
    * 範例：loyaltyLevel
 * **[!UICONTROL 顯示名稱]：**&#x200B;欄位名稱，以標題大小寫撰寫。 這是檢視或編輯結構描述時，畫布中顯示的名稱。
    * 範例：忠誠度等級
-* **[!UICONTROL 型別]：**&#x200B;欄位的資料型別。 這包括基本純量型別和[!DNL Schema Registry]中定義的任何資料型別。 範例： [!UICONTROL String]、[!UICONTROL Integer]、[!UICONTROL Boolean]、[!UICONTROL Person]、[!UICONTROL Address]、[!UICONTROL 電話號碼]等。
+* **[!UICONTROL 型別]：**&#x200B;資料型別 of 欄位。 這包括基本純量型別 and 任何資料型別 defined 在[!DNL Schema Registry]中。 範例： [!UICONTROL String]、[!UICONTROL Integer]、[!UICONTROL Boolean]、[!UICONTROL Person]、[!UICONTROL Address]、[!UICONTROL 電話號碼]等。
 * **[!UICONTROL 描述]：**&#x200B;欄位的選擇性描述應包含最多200個字元。
 
-`loyaltyTier`物件的第一個欄位將是名為`id`的字串，代表忠誠會員目前層級的ID。 每個忠誠會員的層級ID將是唯一的，因為該公司會根據不同因素為每個客戶設定不同的忠誠度層級臨界值。 將新欄位的型別設定為&quot;[!UICONTROL 字串]&quot;，且&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;區段會填入多個套用限制的選項，包括預設值、格式和最大長度。 如需瞭解詳細資訊，請參閱[資料驗證欄位](../schema/best-practices.md#data-validation-fields)最佳實務的檔案。
+`loyaltyTier`物件的第一個欄位將是名為`id`的字串，代表忠誠會員目前層級的ID。 每個忠誠會員的層級ID將是唯一的，因為該公司會根據不同因素為每個客戶設定不同的忠誠度層級臨界值。 設定新欄位的型別 to 「[!UICONTROL 字串]」和&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;區段會填入多個套用限制的選項，包括預設值、格式和最大長度。 如需瞭解詳細資訊，請參閱[資料驗證欄位](../schema/best-practices.md#data-validation-fields)最佳實務的檔案。
 
 ![結構描述編輯器，新識別碼欄位的欄位屬性值已反白顯示。](../images/tutorials/create-schema/string-constraints.png)
 
@@ -238,17 +238,17 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 ## 新增列舉欄位至欄位群組 {#enum}
 
-在[!DNL Schema Editor]中定義欄位時，有一些可套用至基本欄位型別的額外選項，以便針對欄位可包含的資料提供進一步的限制。 下表說明這些限制的使用案例：
+在[!DNL Schema Editor]中定義欄位時，有一些其他選項可套用至基本欄位型別 in 以便對該欄位可包含的資料提供進一步的限制。 下表說明這些限制的使用案例：
 
 | 限制 | 說明 |
 | --- | --- |
 | [!UICONTROL 必要] | 表示資料擷取需要欄位。 根據此結構描述上傳到資料集，但不包含此欄位的任何資料在擷取時都會失敗。 |
-| [!UICONTROL 陣列] | 表示欄位包含值陣列，每個都具有指定的資料型別。 例如，在資料型別為&quot;[!UICONTROL String]&quot;的欄位上使用此限制，會指定該欄位將包含字串陣列。 |
+| [!UICONTROL 陣列] | 表示欄位包含值的陣列，每個都具有資料型別 specified. 例如，在資料型別的欄位上使用此限制 of 「[!UICONTROL 字串]」指定欄位將包含字串陣列。 |
 | [!UICONTROL 列舉與建議值] | 列舉表示此欄位必須包含可能值的列舉清單中的其中一個值。 或者，您也可以使用此選項來只提供字串欄位的建議值清單，而不用限制欄位為這些值。 |
 | [!UICONTROL 身分] | 表示此欄位是身分欄位。 有關身分欄位的詳細資訊[稍後在本教學課程](#identity-field)中提供。 |
 | [!UICONTROL 關係] | 雖然結構描述關聯性可透過使用聯合結構描述和[!DNL Real-Time Customer Profile]來推斷，但這僅適用於共用相同類別的結構描述。 [!UICONTROL Relationship]條件約束指出此欄位參考以不同類別為基礎的結構描述的主要身分，這表示兩個結構描述之間的關係。 如需詳細資訊，請參閱[定義關聯性](./relationship-ui.md)的教學課程。 |
 
-{style="table-layout:auto"}
+{style="table-layout：自動"}
 
 >[!NOTE]
 >
@@ -284,7 +284,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!NOTE]
 >
->您也可以建立及編輯自訂資料型別，與編輯結構描述無關。 如需詳細資訊，請參閱[建立和編輯資料型別](../ui/resources/data-types.md)的指南。
+您也可以建立及編輯自訂資料型別，與編輯結構描述無關。 如需詳細資訊，請參閱[建立和編輯資料型別](../ui/resources/data-types.md)的指南。
 
 ## 搜尋和篩選結構描述欄位
 
@@ -298,7 +298,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!IMPORTANT]
 >
->顯示相符欄位時，搜尋功能會考量任何選取的欄位群組篩選器。 如果搜尋查詢未顯示您預期的結果，您可能需要再次檢查您是否未篩選出任何相關的欄位群組。
+顯示相符欄位時，搜尋功能會考量任何選取的欄位群組篩選器。 如果搜尋查詢未顯示您預期的結果，您可能需要再次檢查您是否未篩選出任何相關的欄位群組。
 
 ## 將結構描述欄位設定為身分欄位 {#identity-field}
 
@@ -310,15 +310,15 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!IMPORTANT]
 >
->以下列出的步驟包括如何將身分描述項新增到現有結構描述欄位。 除了在結構描述本身的結構中定義身分識別欄位外，您也可以使用`identityMap`欄位來包含身分識別資訊。
+以下列出的步驟包括如何將身分描述項新增到現有結構描述欄位。 除了在結構描述本身的結構中定義身分識別欄位外，您也可以使用`identityMap`欄位來包含身分識別資訊。
 >
->如果您打算使用`identityMap`，請記住，它會覆寫您直接新增到結構描述的任何主要身分。 如需詳細資訊，請參閱[結構描述組合指南](../schema/composition.md#identityMap)中有關`identityMap`的章節。
+如果您打算使用`identityMap`，請記住，它會覆寫您直接新增到結構描述的任何主要身分。 如需詳細資訊，請參閱[結構描述組合指南](../schema/composition.md#identityMap)中有關`identityMap`的章節。
 
 選取畫布中的`personalEmail.address`欄位，且&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下會出現&#x200B;**[!UICONTROL 身分]**&#x200B;核取方塊。 核取方塊和選項，將此設定為&#x200B;**[!UICONTROL 主要身分]**&#x200B;出現。 也請選取此方塊。
 
 >[!NOTE]
 >
->每個結構描述只能包含一個主要身分欄位。 一旦將結構描述欄位設定為主要身分，如果您稍後嘗試將結構描述中的另一個身分欄位設定為主要身分，將會收到錯誤訊息。
+每個結構描述只能包含一個主要身分欄位。 一旦將結構描述欄位設定為主要身分，如果您稍後嘗試將結構描述中的另一個身分欄位設定為主要身分，將會收到錯誤訊息。
 
 接下來，您必須從下拉式清單中的預先定義名稱空間清單中提供&#x200B;**[!UICONTROL 身分識別名稱空間]**。 由於此欄位是客戶的電子郵件地址，請從下拉式清單中選取「[!UICONTROL 電子郵件]」。 選取&#x200B;**[!UICONTROL 套用]**&#x200B;以確認`personalEmail.address`欄位的更新。
 
@@ -326,7 +326,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!NOTE]
 >
->如需標準名稱空間及其定義的清單，請參閱[[!DNL Identity Service] 檔案](../../identity-service/troubleshooting-guide.md#standard-namespaces)。
+如需標準名稱空間及其定義的清單，請參閱[[!DNL Identity Service] 檔案](../../identity-service/troubleshooting-guide.md#standard-namespaces)。
 
 套用變更後，`personalEmail.address`的圖示會顯示指紋符號，表示它現在是身分欄位。 此欄位也會列在左側邊欄的&#x200B;**[!UICONTROL 身分]**&#x200B;下。
 
@@ -354,7 +354,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!WARNING]
 >
->在為[!DNL Real-Time Customer Profile]啟用並儲存結構描述後，將無法停用它。
+在為[!DNL Real-Time Customer Profile]啟用並儲存結構描述後，將無法停用它。
 
 選取&#x200B;**[!UICONTROL 啟用]**&#x200B;以確認您的選擇。 您可以再次選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;切換來停用結構描述（如果您願意），但一旦結構描述在啟用[!DNL Profile]時儲存，就無法再停用它。
 
@@ -366,20 +366,20 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 ### 刪除結構描述 {#delete-a-schema}
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_profileenabledwithdatasets"
->title="無法刪除結構描述"
->abstract="無法刪除結構描述，因為已針對設定檔啟用它，而且它有關聯的資料集。"
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_profileenabledwithdatasets"
+title="無法刪除結構描述"
+abstract="無法刪除結構描述，因為已針對設定檔啟用它，而且它有關聯的資料集。"
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_profileenablednodatasets"
->title="無法刪除結構描述"
->abstract="無法刪除結構描述，因為已針對設定檔啟用它。"
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_profileenablednodatasets"
+title="無法刪除結構描述"
+abstract="無法刪除結構描述，因為已針對設定檔啟用它。"
 
->[!CONTEXTUALHELP]
->id="platform_schemas_delete_withdatasetsnotprofileenabled"
->title="無法刪除結構描述"
->abstract="無法刪除結構描述，因為它有關聯的資料集。"
+[!CONTEXTUALHELP]
+id="platform_schemas_delete_withdatasetsnotprofileenabled"
+title="無法刪除結構描述"
+abstract="無法刪除結構描述，因為它有關聯的資料集。"
 
 可以使用[!UICONTROL 更多]動作從結構描述編輯器的UI中刪除結構描述，也可以從[!UICONTROL 瀏覽]索引標籤的結構描述詳細資料中刪除結構描述。 在某些情況下，無法刪除結構描述。 如果符合下列條件，則無法刪除結構描述：
 
@@ -405,7 +405,7 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!WARNING]
 >
->下列影片中顯示的[!DNL Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
+下列影片中顯示的[!DNL Platform] UI已過期。 請參閱上述檔案，瞭解最新的UI熒幕擷取畫面及功能。
 
 以下影片說明如何在[!DNL Platform] UI中建立簡單結構描述。
 
@@ -429,6 +429,6 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 
 >[!WARNING]
 >
->為結構描述重新指派類別時應格外小心。 欄位群組僅與某些類別相容，因此變更類別將會重設畫布以及您新增的任何欄位。
+為結構描述重新指派類別時應格外小心。 欄位群組僅與某些類別相容，因此變更類別將會重設畫布以及您新增的任何欄位。
 
 若要瞭解如何變更結構描述的類別，請參閱[在UI中管理結構描述的指南](../ui/resources/schemas.md#change-class)。

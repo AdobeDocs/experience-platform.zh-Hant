@@ -1,14 +1,19 @@
 ---
 title: 機器學習輔助結構描述建立
 description: 瞭解如何在Experience Platform使用者介面中建立方案。
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # 機器學習輔助的結構描述建立
+
+>[!AVAILABILITY]
+>
+>* 機器學習輔助的結構描述建立目前處於Beta版。 文件和功能可能會有所變更。
 
 使用ML演演算法從範例資料產生結構。 為大型複雜資料集定義結構、欄位和資料型別時，此程式可節省時間並提高準確性。
 
