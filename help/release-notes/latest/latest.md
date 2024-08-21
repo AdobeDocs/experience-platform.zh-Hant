@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
-source-git-commit: f3004071f7e023cc3ddc8b5a4c8fefd5636fd9a8
+source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 25%
@@ -28,7 +28,7 @@ Experience Platform現有功能和檔案的更新：
 
 [!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
-**新功能或更新的功能** {#destinations-new-updated-functionality}
+**新功能或更新功能**
 
 | 功能 | 說明 |
 | ----------- | ----------- |
