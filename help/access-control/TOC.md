@@ -5,9 +5,9 @@ breadcrumb-title: Access Control 指南
 user-guide-description: 使用 Adobe Admin Console 中的產品設定檔管理使用者權限。了解如何將使用者指派到產品和沙箱。
 feature: Access Control
 role: Admin
-source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
+source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '131'
 ht-degree: 45%
 
 ---
@@ -28,6 +28,9 @@ ht-degree: 45%
       * [角色](abac/ui/roles.md)
       * [沙箱](abac/ui/sandboxes.md)
       * [使用者](abac/ui/users.md)
+   * 許可權管理員{#permissions-manager}
+      * [概觀](abac/permission-manager/overview.md)
+      * [權限](abac/permission-manager/permissions.md)
    * 以屬性為基礎的存取控制API {#abac-api}
       * [概觀](abac/api/overview.md)
       * [快速入門](abac/api/getting-started.md)
