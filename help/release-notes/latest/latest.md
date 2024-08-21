@@ -2,9 +2,9 @@
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6d8c785a1e876ed6a729efbe01ad8fb4507bda0d
+source-git-commit: d6eb2050cdc3d51cf8ff4189c6b9f78469f14fa9
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1037'
 ht-degree: 27%
 
 ---
@@ -57,7 +57,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 {style="table-layout:auto"}
 
-<!-- To learn more, read the [ML-assisted schema creation overview](../../xdm/ui/ml-assisted-schema-creation.md)  -->
+若要深入瞭解，請閱讀[ML輔助結構描述建立概述](../../xdm/ui/ml-assisted-schema-creation.md)
 
 如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
 
