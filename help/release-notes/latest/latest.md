@@ -2,7 +2,7 @@
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d6eb2050cdc3d51cf8ff4189c6b9f78469f14fa9
+source-git-commit: 019d950e992e6e1ea3264fbc1f141a8bb6bc357a
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 27%
@@ -34,12 +34,12 @@ Experience Platform現有功能和檔案的更新：
 | 功能 | 說明 |
 | ----------- | ----------- |
 | 現在一般都能將檔案隨選匯出至批次目的地。 | 所有客戶現在都可以選擇隨選將檔案匯出至批次目的地。 如需詳細資訊，請參閱[專屬檔案](../../destinations/ui/export-file-now.md)。 |
-| 在[排程步驟](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)中編輯多個匯出對象的匯出排程。 | 現在，所有客戶都可以使用選項，直接從對象啟用工作流程的排程步驟，編輯多個匯出對象的匯出排程。 ![Experience Platform使用者介面的影像，在排程步驟中醒目提示編輯排程選項。](../2024/assets/august/edit-schedule.png) {width="250" align="center" zoomable="yes"} |
-| 在[排程步驟](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)中編輯多個匯出對象的檔案名稱。 | 現在，所有客戶都可以使用選項，直接從對象啟用工作流程的排程步驟編輯多個匯出檔案的名稱。 ![Experience Platform使用者介面的影像，在排程步驟中醒目提示編輯檔案名稱選項。](../2024/assets/august/edit-file-name.png) {width="250" align="center" zoomable="yes"} |
-| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-remove)頁面移除資料流中的多個對象。 | 從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面移除現有資料流中多個對象的選項現在可供所有客戶使用。 ![醒目提示[目的地詳細資料]頁面中[移除對象]選項的Experience Platform使用者介面影像。](../2024/assets/august/bulk-remove-audiences.png) {width="250" align="center" zoomable="yes"} |
-| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-export)頁面，隨選將多個檔案匯出至批次目的地。 | 所有客戶現在都可以選擇從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面，隨選將多個檔案匯出至批次目的地。 ![Experience Platform使用者介面的影像，在「目的地詳細資料」頁面中醒目提示「立即匯出檔案」選項。](../2024/assets/august/bulk-export-file-now.png) {width="250" align="center" zoomable="yes"} |
-| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-edit-file-names)頁面編輯多個匯出對象的檔案名稱。 | 您現在可以直接從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面編輯多個匯出檔案的名稱。 ![Experience Platform使用者介面的影像，在目的地詳細資訊頁面中醒目提示編輯檔案名稱選項。](../2024/assets/august/edit-file-name-destination-details.png) {width="250" align="center" zoomable="yes"} |
-| 從[目的地詳細資料](../../destinations/ui/export-datasets.md#remove-dataset)頁面移除資料流中的多個資料集。 | 所有客戶現在都可以使用從資料流移除多個資料集的選項。 ![Experience Platform使用者介面的影像，在目的地詳細資訊頁面中醒目提示「移除資料集」選項。](../2024/assets/august/bulk-remove-datasets.png) {width="250" align="center" zoomable="yes"} |
+| 在[排程步驟](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)中編輯多個匯出對象的匯出排程。 | 現在，所有客戶都可以使用選項，直接從對象啟用工作流程的排程步驟，編輯多個匯出對象的匯出排程。 ![Experience Platform使用者介面的影像，在排程步驟中醒目提示[編輯排程]選項。](../2024/assets/august/edit-schedule.png){width="250" align="center" zoomable="yes"} |
+| 在[排程步驟](../../destinations/ui/activate-batch-profile-destinations.md#scheduling)中編輯多個匯出對象的檔案名稱。 | 現在，所有客戶都可以使用選項，直接從對象啟用工作流程的排程步驟編輯多個匯出檔案的名稱。 ![Experience Platform使用者介面的影像，在排程步驟中醒目提示[編輯檔案名稱]選項。](../2024/assets/august/edit-file-name.png){width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-remove)頁面移除資料流中的多個對象。 | 從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面移除現有資料流中多個對象的選項現在可供所有客戶使用。 ![醒目提示[目的地詳細資料]頁面中[移除對象]選項的Experience Platform使用者介面影像。](../2024/assets/august/bulk-remove-audiences.png){width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-export)頁面，隨選將多個檔案匯出至批次目的地。 | 所有客戶現在都可以選擇從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面，隨選將多個檔案匯出至批次目的地。 ![Experience Platform使用者介面的影像，在「目的地詳細資料」頁面中醒目提示「立即匯出檔案」選項。](../2024/assets/august/bulk-export-file-now.png){width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/destination-details-page.md#bulk-edit-file-names)頁面編輯多個匯出對象的檔案名稱。 | 您現在可以直接從&#x200B;**[!UICONTROL 目的地詳細資料]**&#x200B;頁面編輯多個匯出檔案的名稱。 ![Experience Platform使用者介面的影像，在目的地詳細資訊頁面中醒目提示編輯檔案名稱選項。](../2024/assets/august/edit-file-name-destination-details.png){width="250" align="center" zoomable="yes"} |
+| 從[目的地詳細資料](../../destinations/ui/export-datasets.md#remove-dataset)頁面移除資料流中的多個資料集。 | 所有客戶現在都可以使用從資料流移除多個資料集的選項。 ![Experience Platform使用者介面的影像，在目的地詳細資訊頁面中醒目提示「移除資料集」選項。](../2024/assets/august/bulk-remove-datasets.png){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
