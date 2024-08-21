@@ -2,10 +2,10 @@
 title: Adobe Analytics擴充功能發行說明
 description: Adobe Experience Platform中Adobe Analytics標籤擴充功能的最新發行說明。
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
+source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 69%
+source-wordcount: '1451'
+ht-degree: 68%
 
 ---
 
@@ -16,6 +16,14 @@ ht-degree: 69%
 >[!NOTE]
 >
 >Analytics標籤擴充功能（如果經常更新）以回應[AppMeasurementJavaScript資料庫](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=zh-Hant)的更新。 請參閱[AppMeasurement發行說明](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=zh-Hant)，瞭解下列特定版本的詳細資訊。
+
+## 2024年8月12日
+
+**Adobe Analytics擴充功能1.9.5**
+
+**功能**：
+
+* 已升級至[AppMeasurement至v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0)。
 
 ## 2024年3月4日
 
