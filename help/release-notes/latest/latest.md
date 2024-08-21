@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
-source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
+source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 25%
+source-wordcount: '1300'
+ht-degree: 28%
 
 ---
 
@@ -18,11 +18,28 @@ ht-degree: 25%
 
 Experience Platform現有功能和檔案的更新：
 
+- [屬性型存取控制](#abac)
 - [目的地](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
+
+## 屬性型存取控制 {#abac}
+
+以屬性為基礎的存取控制是Adobe Experience Platform的一項功能，可讓注重隱私權的品牌在管理使用者存取許可權時擁有更大的彈性。 可以將結構描述欄位和分段等個別對象指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
+
+透過以屬性為基礎的存取控制，您組織的管理員可以控制使用者對所有Platform工作流程和資源的敏感個人資料(SPD)、個人識別資訊(PII)及其他自訂資料型別的存取權。 管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
+
+**新功能**
+
+| 功能更新 | 說明 |
+| --- | --- |
+| 新的許可權管理員功能 | 您現在可以利用[許可權管理員](../../access-control/abac/permission-manager/overview.md)，使用簡單的查詢來產生報告，這有助於您瞭解存取管理，並節省驗證多個工作流程和詳細程度層級的存取許可權的時間。 如需建立使用者和角色報告的詳細資訊，請參閱[許可權管理員使用手冊](../../access-control/abac/permission-manager/permissions.md)。 ![影像Experience Platform使用者介面在左側導覽中醒目提示許可權管理員。使用者介面中的](../2024/assets/august/permission-manager-rn.png "許可權管理員。"){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](../../access-control/abac/overview.md)。關於屬性型存取控制工作流程的綜合指南，請閱讀[屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md)。
 
 ## 目的地 {#destinations}
 
