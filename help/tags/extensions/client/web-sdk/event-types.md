@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的事件型別
 description: 瞭解如何使用Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的事件型別。
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL 訂閱規則集專案] {#subscribe-ruleset-items}
+
+**[!UICONTROL 訂閱規則集專案]**&#x200B;事件型別可讓您訂閱介面的Adobe Journey Optimizer內容卡。 每當評估規則集時，提供給此命令的回呼都會收到一個結果物件，其中包含儲存內容卡片資料的建議。
+
+![顯示[訂閱規則集]專案事件型別的Experience Platform標籤使用者介面影像。](assets/subscribe-ruleset-items.png)
+
+此事件型別支援下列可設定的屬性：
+
+* **[!UICONTROL 結構描述]**：要訂閱內容卡的結構描述陣列。 您可以手動輸入結構描述，或提供資料元素來輸入。
+* **[!UICONTROL 介面]**：您要訂閱內容卡片的介面陣列。 您可以手動或提供資料元素來輸入曲面。
