@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
-source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
+source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 28%
+source-wordcount: '1352'
+ht-degree: 27%
 
 ---
 
@@ -44,6 +44,14 @@ Experience Platform現有功能和檔案的更新：
 ## 目的地 {#destinations}
 
 [!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+
+**新目的地或更新的目的地** {#new-updated-destinations}
+
+| 目的地 | 說明 |
+| ----------- | ----------- |
+| [硬碟](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze]會管理其儀表板和REST端點的許多不同執行個體。 [!UICONTROL Braze]客戶應根據您布建到的執行個體，使用正確的REST端點。 此版本新增了一個新的US-07端點，您可以在連線至[!UICONTROL 硬碟]時選取該端點。 |
+
+{style="table-layout:auto"}
 
 **新功能或更新的功能** {#destinations-new-updated-functionality}
 
