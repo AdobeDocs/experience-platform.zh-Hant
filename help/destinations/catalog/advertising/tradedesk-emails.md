@@ -3,9 +3,9 @@ title: (Beta)交易台 — CRM連線
 description: 對您的交易台帳戶啟用設定檔，以根據CRM資料進行受眾目標定位和隱藏。
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1148'
 ht-degree: 5%
 
 ---
@@ -25,6 +25,8 @@ ht-degree: 5%
 ## 概觀 {#overview}
 
 本檔案旨在協助您對[!DNL Trade Desk]帳戶啟用設定檔，以根據CRM資料鎖定和隱藏對象。
+
+此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
 
 [!DNL The Trade Desk(TTD)]不會隨時直接處理電子郵件地址的上傳檔案，[!DNL The Trade Desk]也不會儲存您的原始（未雜湊）電子郵件。
 
@@ -140,7 +142,7 @@ Adobe Experience Platform同時支援純文字和SHA256雜湊電子郵件地址�
 
 若要驗證資料是否已正確地從Experience Platform匯出並匯入[!DNL The Trade Desk]，請在[!DNL The Trade Desk]資料管理平台(DMP)內的Adobe1PD資料拼貼下找到對象。 以下是在[!DNL Trade Desk] UI中尋找對應ID的步驟：
 
-1. 首先，按一下&#x200B;**[!UICONTROL 資料]**&#x200B;標籤，然後檢閱&#x200B;**[!UICONTROL 第一方]**。
+1. 首先，選取&#x200B;**[!UICONTROL 資料]**&#x200B;標籤，並檢閱&#x200B;**[!UICONTROL 第一方]**&#x200B;區段。
 2. 向下捲動頁面，在&#x200B;**[!UICONTROL 匯入的資料]**&#x200B;下方，您會找到&#x200B;**[!UICONTROL Adobe1PD磚]**。
 3. 按一下**[!UICONTROL Adobe1PD]**圖磚，它會列出您的廣告商在[!DNL Trade Desk]目的地啟用的所有對象。 您也可以使用搜尋功能。
 4. 來自Experience Platform的區段ID #將顯示為[!DNL Trade Desk] UI中的區段名稱。

@@ -3,9 +3,9 @@ keywords: 廣告；營業部；廣告營業部
 title: 交易台連線
 description: Trade Desk是廣告買方適用的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '778'
 ht-degree: 3%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 3%
 
 ## 概觀 {#overview}
 
-[!DNL The Trade Desk]目的地可協助您將設定檔資料傳送至[!DNL The Trade Desk]。
+使用此目的地聯結器將設定檔資料傳送至[!DNL The Trade Desk]。 此聯結器會將資料傳送至[!DNL The Trade Desk]第一方端點。 Adobe Experience Platform與[!DNL The Trade Desk]之間的整合不支援匯出資料至[!DNL The Trade Desk]第三方端點。
 
-[!DNL The Trade Desk]是廣告購買者的自助式平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
+[!DNL The Trade Desk]是廣告購買者的自助服務平台，可在各種顯示、影片和行動詳細目錄來源中執行重新定位以及以對象為目標的數位行銷活動。
 
-若要將設定檔資料傳送至[!DNL Trade Desk]，您必須先連線至目的地。
+若要將設定檔資料傳送至[!DNL Trade Desk]，您必須先連線至目的地，如本頁面的下列章節所述。
 
 ## 使用案例 {#use-cases}
 
@@ -62,7 +62,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且先前未在Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，則您設定的ID同步會移轉到Platform。
+>如果您想要使用[!DNL The Trade Desk]建立您的第一個目的地，而且先前未在Experience CloudID服務(使用Adobe Audience Manager或其他應用程式)中啟用[ID同步功能](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync)，請聯絡Adobe Consulting或客戶服務以啟用ID同步。 如果您先前在Audience Manager中設定[!DNL The Trade Desk]整合，則您設定的ID同步會移轉到Platform。
 
 ## 連線到目標 {#connect}
 
@@ -79,7 +79,7 @@ ht-degree: 3%
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
 * **[!UICONTROL 帳戶識別碼]**：您的[!DNL Trade Desk] [!UICONTROL 帳戶識別碼]。
-* **[!UICONTROL 伺服器位置]**：請詢問您的[!DNL Trade Desk]代表您應該使用哪個區域伺服器。 您可選擇的區域伺服器包括：
+* **[!UICONTROL 伺服器位置]**：請詢問您的[!DNL Trade Desk]代表您應該使用哪個區域伺服器。 以下是您可選擇使用的地區伺服器：
    * **[!UICONTROL 歐洲]**
    * **[!UICONTROL 新加坡]**
    * **[!UICONTROL 東京]**
@@ -104,7 +104,7 @@ ht-degree: 3%
 
 在[對象排程](../../ui/activate-segment-streaming-destinations.md#scheduling)步驟中，您必須手動將對象對應至目的地平台中其對應的ID或易記名稱。
 
-對應區段時，建議您使用Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合您Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
+對應對象時，Adobe建議您使用Platform對象名稱或較短的形式，以方便使用。 不過，您目的地中的對象ID或名稱不需要符合您Platform帳戶中的對象ID。 您在對應欄位中插入的任何值都會反映在目的地中。
 
 如果您使用多個裝置對應(Cookie ID、[!DNL IDFA]、[!DNL GAID])，請務必針對所有三個對應使用相同的對應值。 [!DNL The Trade Desk]會將所有資料彙總至單一區段，並包含裝置層級的劃分。
 
