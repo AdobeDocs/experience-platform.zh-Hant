@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1247'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 5%
       * [根據LiveRamp識別碼將受眾啟用至已組織的目的地](./ui/activate-curated-destinations.md)
       * [對目的地啟用潛在客戶對象](./ui/activate-prospect-audiences.md)
       * [對目的地啟用帳戶對象](./ui/activate-account-audiences.md)
-      * [(Beta)使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
+      * [使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [(Beta)在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
       * [(Beta 版) 使用計算欄位匯出平面方案檔案中的陣列](/help/destinations/ui/export-arrays-calculated-fields.md)
