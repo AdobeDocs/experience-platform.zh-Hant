@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
+source-wordcount: '4250'
 ht-degree: 3%
 
 ---
@@ -161,6 +161,18 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 #### 資料夾 {#folders}
 
 您可以將對象放入資料夾中，以改善對象管理。
+
+若要建立資料夾以保留您的對象，請選取&#x200B;**[!UICONTROL 建立資料夾]**。
+
+![已反白顯示[建立資料夾]按鈕。](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>只有在您位於其他資料夾中時，才能建立資料夾。 這表示如果您在左側導覽列上選取&#x200B;**[!UICONTROL 所有對象]**，則您&#x200B;**無法**&#x200B;建立資料夾。
+
+此時會出現彈出視窗，讓您為新建立的資料夾命名。 在命名資料夾後選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以完成資料夾的建立。 請注意，父資料夾的名稱&#x200B;**必須**&#x200B;是唯一的。
+
+![建立資料夾對話方塊上的[儲存]按鈕會反白顯示。](../images/ui/audience-portal/create-folder-dialog.png)
 
 若要將對象移至資料夾，請在您要移動的對象上選取&#x200B;**[!UICONTROL 移至資料夾]**。
 
