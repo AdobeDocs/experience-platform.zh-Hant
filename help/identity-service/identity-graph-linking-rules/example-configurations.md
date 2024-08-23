@@ -2,9 +2,9 @@
 title: Graph設定指南
 description: 瞭解使用身分圖表連結規則和身分資料時，可能會遇到的常見圖表情境。
 badge: Beta
-source-git-commit: a1f12f266b74bd88fbb1c1a095bb6f6eb565612b
+source-git-commit: 90faa4079d8a58898774c1fbbae2adae01f7e0a2
 workflow-type: tm+mt
-source-wordcount: '2757'
+source-wordcount: '2749'
 ht-degree: 6%
 
 ---
@@ -478,7 +478,7 @@ loginID: ID_C, ECID: 111
 
 | 使用的名稱空間 | Web行為收集方法 |
 | --- | --- |
-| CRMID、Email_LC_SHA256、Phone_SHA256、loginID、ECID | Adobe Analytics來源聯結器&#x200B;**注意：**&#x200B;依預設，Identity Service會封鎖AAID，因此，使用Analytics來源時，您必須將ECID的優先順序高於AAID。 如需詳細資訊，請參閱[實作指南](configuration.md#ingest-your-data)。 |
+| CRMID、Email_LC_SHA256、Phone_SHA256、loginID、ECID | Adobe Analytics來源聯結器。<br> **注意：**&#x200B;依預設，AAID在Identity Service中會遭到封鎖，因此，在使用Analytics來源時，您必須將ECID置於比AAID更高的優先順序。 如需詳細資訊，請參閱[實作指南](configuration.md#ingest-your-data)。</br> |
 
 **事件：**
 
@@ -488,11 +488,11 @@ loginID: ID_C, ECID: 111
 CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
 CRMID: Tom, loginID: ID_A
 CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111, AAID: AAA
+loginID: ID_A, ECID: 111
 CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
 CRMID: Summer, loginID: ID_C
 CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222, AAID: BBB
+loginID: ID_C, ECID: 222
 ```
 
 **演演算法組態：**
@@ -532,7 +532,7 @@ loginID: ID_C, ECID: 222, AAID: BBB
 
 >[!TAB 多人圖表：共用裝置1]
 
-以下是多人共用裝置案例，`{ECID:111, AAID:AAA}`皆連結至`{loginID:ID_A}`和`{loginID:ID_C}`。 在此情況下，較早建立的連結會被移除，而改用較新建立的連結。
+以下是多人共用裝置案例，`{ECID:111}`同時連結至`{loginID:ID_A}`和`{loginID:ID_C}`。 在此情況下，較早建立的連結會被移除，而改用較新建立的連結。
 
 ![多人共用裝置圖表情境。](../images/graph-examples/complex_shared_device_one.png)
 
@@ -634,9 +634,9 @@ CRMID: Summer, Phone_SHA256: 111-1111
 
 >[!ENDTABS]
 
-## 在其他Adobe應用程式中的使用情況
+## 在其他Adobe Commerce中的使用情況
 
-本節中的圖表設定範例概述Real-time Customer Data Platform、Adobe Journey Optimizer和Adobe Commerce的使用案例。 以下範例著重於具有兩種使用者型別的零售客戶：
+本節中的圖表設定範例概述了Adobe Commerce的使用案例。 以下範例著重於具有兩種使用者型別的零售客戶：
 
 * 註冊使用者（建立帳戶的使用者）
 * 訪客使用者（只有電子郵件地址的使用者）
