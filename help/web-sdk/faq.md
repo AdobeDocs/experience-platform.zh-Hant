@@ -1,10 +1,9 @@
 ---
 title: Adobe Experience Platform Web SDK常見問題集
 description: 取得有關Adobe Experience Platform Web SDK常見問題的解答。
-exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
+source-git-commit: ed22c76b2805f1baab2ae3c82e1133e1fd8c9f72
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2033'
 ht-degree: 2%
 
 ---
@@ -172,33 +171,9 @@ Web SDK正在迅速發展。 正在處理更多使用案例。 您可以在這�
 
 ## Adobe Experience Platform Web SDK支援哪些瀏覽器？
 
-Adobe Experience Platform Web SDK的設計可在最新版Google Chrome、Safari、Firefox、Internet Explorer 11和Microsoft Edge Chromium中以最佳方式運作。 在舊版的瀏覽器上使用某些功能時，可能會發生問題。
+Adobe Experience Platform Web SDK的設計可在最新版Google Chrome、Safari、Firefox和Microsoft Edge Chromium中以最佳方式運作。 在舊版瀏覽器或已棄用的瀏覽器（例如Internet Explorer）上使用某些功能時，可能會發生問題。
 
 ## 我可以在哪裡取得有關Adobe Experience Platform Web SDK的詳細資訊？
 
 * [文件](/help/web-sdk/home.md)
 * [Source代碼](https://github.com/adobe/alloy)
-
-### 支援Internet Explorer {#support-internet-explore}
-
-此SDK使用promise ，這是通訊非同步工作完成的方法。 SDK使用的[Promise](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise)實作原生受到除[!DNL Internet Explorer]外的所有目標瀏覽器的支援。 若要在[!DNL Internet Explorer]上使用SDK，您必須有`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)。
-
-若要判斷您是否已經填滿`window.Promise`個：
-
-1. 在[!DNL Internet Explorer]中開啟您的網站。
-1. 開啟瀏覽器的偵錯主控台。
-1. 在主控台中輸入`window.Promise`，然後按Enter。
-
-如果出現`undefined`以外的專案，表示您可能已經填滿`window.Promise`。 判斷`window.Promise`是否為多填的另一個方法是在完成上述安裝指示後載入您的網站。 如果SDK擲回錯誤，提及Promise相關內容，表示您可能尚未多邊填滿`window.Promise`。
-
-如果您已決定必須polyfill `window.Promise`，請在先前提供的基底程式碼上方加入下列指令碼標籤：
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-```
-
-此標籤會載入指令碼，以確保`window.Promise`為有效的Promise實作。
-
->[!NOTE]
->
->如果您選擇載入不同的Promise實作，請確定它支援`Promise.prototype.finally`。
