@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
 role: Developer
-source-git-commit: 86d46abe5a8da441e7c89d6dceb2ebca06d3c2af
+source-git-commit: 1a6d42fd1319828f5bb5d470f24ea5ee8bed4661
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '227'
 ht-degree: 22%
 
 ---
@@ -62,6 +62,7 @@ ht-degree: 22%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [設定資料流覆寫](commands/datastream-overrides.md)
    * [命令回應](commands/command-responses.md)
 
@@ -108,5 +109,5 @@ ht-degree: 22%
    * [使用多個Web SDK執行個體](use-cases/multiple-instances.md)
    * [設定頂端和底部頁面事件](use-cases/top-bottom-page-events.md)
 
-* [常見問答](faq.md)
+* [常見問題](faq.md)
 * [資源](resources.md)
