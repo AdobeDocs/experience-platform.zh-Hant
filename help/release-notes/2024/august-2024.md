@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 27%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 27%
 Experience Platform現有功能和檔案的更新：
 
 - [屬性型存取控制](#abac)
+- [資料擷取](#data-ingestion)
 - [目的地](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
@@ -40,6 +41,19 @@ Experience Platform現有功能和檔案的更新：
 {style="table-layout:auto"}
 
 若要了解更多關於屬性型存取控制，請參閱[屬性型存取控制概觀](../../access-control/abac/overview.md)。關於屬性型存取控制工作流程的綜合指南，請閱讀[屬性型存取控制端對端指南](../../access-control/abac/end-to-end-guide.md)。
+
+## 資料擷取（8月23日更新） {#data-ingestion}
+
+Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類型和任何延遲的資料。您可以使用批次或串流 API (使用 Adobe 建置的來源、資料整合合作夥伴或 Adobe Experience Platform UI) 進行擷取。
+
+**更新批次資料擷取中的日期格式處理**
+
+此版本解決批次資料擷取中&#x200B;*日期格式處理*&#x200B;的問題。 以前，系統會將使用者端插入的日期欄位轉換成`DateTime`格式。 `Date`這表示時區會自動新增到欄位，並且對偏好或需要`Date`格式的使用者造成困難。 此後，時區將不會自動新增到`Date`型別的欄位。 此更新可確保匯出的資料格式與客戶請求的該欄位設定檔上表示的格式相符。
+
+發行前`Date`個欄位： `"birthDate": "2018-01-12T00:00:00Z"`
+發行後的`Date`欄位： `"birthDate": "2018-01-12"`
+
+深入瞭解[批次擷取](/help/ingestion/batch-ingestion/overview.md)。
 
 ## 目的地 {#destinations}
 
