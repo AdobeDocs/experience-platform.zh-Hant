@@ -97,7 +97,7 @@ ht-degree: 13%
 >
 >您可以從&#x200B;**[!UICONTROL 啟用資料]**&#x200B;頁面移除現有啟用流程中的對象。 如需詳細資訊，請參閱[專屬檔案](../ui/destination-details-page.md#bulk-remove)。
 
-## 排程對象匯出 {#scheduling}
+## 排程客群匯出 {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -129,12 +129,12 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="檔案匯出選項 "
->abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合對象資格的所有設定檔的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合對象資格的設定檔。<br> 第一個增量檔案匯出包括符合對象資格的所有設定檔，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合對象資格的設定檔。"
+>abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合客群資格的所有輪廓的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合客群資格的輪廓。<br> 第一個增量檔案匯出包括符合客群資格的所有輪廓，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合客群資格的輪廓。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="對象評估後啟動"
+>title="客群評估後啟動"
 >abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。"
 
 >[!CONTEXTUALHELP]
@@ -179,7 +179,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="若為檔案型目的地，會對每個客群產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 選取&#x200B;**[!UICONTROL 匯出增量檔案]**&#x200B;以觸發匯出，其中第一個檔案是所選對象所有設定檔資格的完整快照，而後續檔案則是自上次匯出以來的增量設定檔資格。
 
@@ -209,7 +209,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
 >title="設定檔案名稱"
->abstract="若為檔案型目的地，會對每個對象產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
+>abstract="若為檔案型目的地，會對每個客群產生唯一的檔案名稱。使用檔案名稱編輯器建立和編輯唯一的檔案名稱或保留預設名稱。"
 
 對於大多數目的地，預設檔案名稱會包含目的地名稱、對象ID以及日期和時間指示器。 例如，您可以編輯匯出的檔案名稱，以區分不同的促銷活動，或將資料匯出時間附加至檔案。 請注意，某些目的地開發人員可能會選擇為其目的地顯示不同的預設檔案名稱附加選項。
 
@@ -544,7 +544,7 @@ Adobe Experience Platform會使用結構描述中四個建議且常用的屬性�
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="排除擴充屬性"
-abstract="啟用此選項可從選取的自訂已上傳對象匯出設定檔至您的目的地，同時排除其所有屬性。"
+abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您的目的地，同時排除其所有屬性。"
 
 >[!IMPORTANT]
 >

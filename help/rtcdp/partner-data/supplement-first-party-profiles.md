@@ -1,6 +1,6 @@
 ---
 title: 使用合作夥伴提供的屬性補充第一方設定檔
-description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的對象最佳化。
+description: 了解如何使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎，對客戶群取得新的分析，以及更佳的客群最佳化。
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
@@ -16,7 +16,7 @@ ht-degree: 80%
 >
 >* 已授權Real-Time CDP （應用程式服務）、Adobe Experience Platform Activation、Real-Time CDP、Real-Time CDP Prime、Real-Time CDP Ultimate的客戶可使用此功能。 如需詳細資訊，請閱讀[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)中有關這些套件的詳細資料，並和您的 Adob&#x200B;&#x200B;e 代表聯絡。
 
-使用受信任資料合作夥伴的屬性來補充第一方設定檔，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的對象最佳化。
+使用受信任資料合作夥伴的屬性來補充第一方輪廓，以改善您的資料基礎並對客戶群取得新的分析，而且獲致更佳的客群最佳化。
 
 ![使用合作夥伴提供的屬性使用案例高層級視覺化概觀擴充設定檔。](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
 
@@ -34,7 +34,7 @@ Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密
 
 考慮使用資料合作夥伴的屬性來補充您自己的第一方設定檔時，您應該和該資料合作夥伴討論並解決有關資料擴充循環的以下詳細資料：
 
-* 考慮從 Real-Time CDP 匯出對象清單的位置，以便和資料廠商共用。該位置需要能支援檔案匯出。
+* 考慮從 Real-Time CDP 匯出客群清單的位置，以便和資料廠商共用。該位置需要能支援檔案匯出。
 * 資料廠商期望有哪些識別碼，以便他們可在額外屬性上分層堆放？
 * 如何將包含合作夥伴提供的屬性的檔案擷取回Real-Time CDP？ 例如，可透過雲端儲存空間來源連接器 (如 [Amazon S3](/help/sources/connectors/cloud-storage/s3.md) 或 [SFTP](/help/sources/connectors/cloud-storage/sftp.md)) 擷取檔案。
 * 您期望將合作夥伴提供之屬性帶回 Real-Time CDP 並重新整理的節奏為何？
@@ -55,7 +55,7 @@ Adobe瞭解沒有一刀切的方法，能夠與資料及身分合作夥伴緊密
 
 1. 身為&#x200B;**客戶**，您會向&#x200B;**資料合作夥伴**&#x200B;取得授權。
 2. 身為&#x200B;**客戶**，您會擴充您的設定檔資料和治理模式以和&#x200B;**合作夥伴**&#x200B;提供的屬性相符。
-3. 身為&#x200B;**客戶**，您要吸引想使用資料合作夥伴擴充的對象。一般來說，會刪去這些對象的個人可識別資訊 (PII) 之類的輸入識別碼，例如電子郵件、姓名、地址等。
+3. 身為&#x200B;**客戶**，您要吸引想使用資料合作夥伴擴充的客群。一般來說，會刪去這些客群的個人可識別資訊 (PII) 之類的輸入識別碼，例如電子郵件、姓名、地址等。
 4. **合作夥伴**&#x200B;會為其可相匹配的設定檔附加已授權的屬性。另一個選擇是可將[合作夥伴 ID](/help/identity-service/features/namespaces.md) 納入並擷取至合作夥伴範圍的 ID 命名空間中。
 5. 身為&#x200B;**客戶**，您可以將資料合作夥伴的屬性載入至 Real-Time CDP 中的客戶設定檔。
 
@@ -104,9 +104,9 @@ Commenting out links for now
 >如需有關合作夥伴 ID 的詳細資訊，請閱讀[身分類型章節](/help/identity-service/features/namespaces.md)。
 >閱讀有關在 Experience Platform 使用者介面中[如何定義身分欄位](/help/xdm/ui/fields/identity.md)的資訊。
 
-### 匯出您在刪去個人可識別資訊 (PII) 或雜湊 PII 時要擴充的對象 {#export-audiences}
+### 匯出您在刪去個人可識別資訊 (PII) 或雜湊 PII 時要擴充的客群 {#export-audiences}
 
-匯出您要合作夥伴擴充的對象。使用Real-Time CDP提供的雲端儲存空間目的地，例如Amazon S3或SFTP。 閱讀以下文件頁面以完成此步驟：
+匯出您要合作夥伴擴充的客群。使用Real-Time CDP提供的雲端儲存空間目的地，例如Amazon S3或SFTP。 閱讀以下文件頁面以完成此步驟：
 
 * [Amazon S3 目的地](/help/destinations/catalog/cloud-storage/amazon-s3.md)文件頁面
 * [SFTP 目的地](/help/destinations/catalog/cloud-storage/sftp.md)文件頁面
@@ -115,7 +115,7 @@ Commenting out links for now
 
 ### 您的資料合作夥伴會為其可相匹配的設定檔附加已授權的屬性 {#partner-appends-attributes}
 
-在此步驟中，您的資料合作夥伴會為匯出的對象附加授權的屬性。輸出通常會以平面檔案的形式提供，可供擷取回 Real-Time CDP。閱讀有關[將檔案擷取至 Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file) 的詳細資訊。
+在此步驟中，您的資料合作夥伴會為匯出的客群附加授權的屬性。輸出通常會以平面檔案的形式提供，可供擷取回 Real-Time CDP。閱讀有關[將檔案擷取至 Real-Time CDP](/help/ingestion/tutorials/ingest-batch-data.md#upload-file) 的詳細資訊。
 
 ### Real-Time CDP 會將擴充的屬性附加到客戶設定檔中。 {#ingest-data}
 
@@ -138,4 +138,4 @@ Commenting out links for now
 
 * 使用 Real-Time CDP 的協力廠商資料支援，透過資料合作夥伴的潛在客戶設定檔來[擴大您的設定檔庫，並與其互動以獲取或接觸新客戶。](/help/rtcdp/partner-data/prospecting.md)
 * [在造訪期間使用合作夥伴協助的訪客辨識](/help/rtcdp/partner-data/onsite-personalization.md)，針對未知的訪客提供個人化現場體驗，使用者不需驗證或擁有您品牌的先前記錄。
-* [擴大啟用潛在客戶個人資料和潛在客戶對象](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。
+* [擴大啟用潛在客戶輪廓和潛在客戶客群](/help/destinations/ui/activate-prospect-audiences.md)以選取目的地。

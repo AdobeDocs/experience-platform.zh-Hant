@@ -95,8 +95,8 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
->title="將對象 ID 附加到對象名稱"
->abstract="選取此選項可讓 Google Ad Manager 中的對象名稱包含來自 Experience Platform 的對象 ID，如下所示：`Audience Name (Audience ID)`"
+>title="將客群 ID 附加到客群名稱"
+>abstract="選取此選項可讓 Google Ad Manager 中的客群名稱包含來自 Experience Platform 的客群 ID，如下所示：`Audience Name (Audience ID)`"
 
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
 
@@ -118,7 +118,7 @@ ht-degree: 4%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!IMPORTANT]
 > 

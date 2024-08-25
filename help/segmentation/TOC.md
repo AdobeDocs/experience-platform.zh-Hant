@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: 分段服務指南
-user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶設定檔資料建置對象。
+user-guide-description: 使用 Adobe Experience Platform 產生的區段定義或外部來源，從您的即時客戶輪廓資料建置客群。
 feature: Segments
 role: User
 source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
@@ -21,7 +21,7 @@ ht-degree: 44%
 - 分段API {#api}
    - [概觀](api/overview.md)
    - [快速入門](api/getting-started.md)
-   - [對象](api/audiences.md)
+   - [客群](api/audiences.md)
    - [邊緣分段](api/edge-segmentation.md)
    - [匯出工作](api/export-jobs.md)
    - [預覽和預估](api/previews-and-estimates.md)
@@ -34,12 +34,12 @@ ht-degree: 44%
    - [概觀](ui/overview.md)
    - [受眾控制面板](ui/audience-dashboard.md)
    - [Audience Portal](ui/audience-portal.md)
-   - [對象構成](ui/audience-composition.md)
+   - [客群構成](ui/audience-composition.md)
    - [區段產生器](ui/segment-builder.md)
    - [聯合客群構成 (可用性限制)](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)
    - [帳戶客群](ui/account-audiences.md)
    - [相似客群](ui/lookalike-audiences.md)
-   - [潛在客戶對象](ui/prospect-audience.md)
+   - [潛在客戶客群](ui/prospect-audience.md)
    - [邊緣分段](ui/edge-segmentation.md)
    - [串流區段](ui/streaming-segmentation.md)
    - [串流區段（影片）](video/streaming-segmentation-overview.md)

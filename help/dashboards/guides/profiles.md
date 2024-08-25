@@ -270,7 +270,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 無區段設定檔]](#unsegmented-profiles)
 * [[!UICONTROL 未分段的設定檔變化趨勢]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL 依身分識別劃分的無區段設定檔]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL 對象]](#audiences)
+* [[!UICONTROL 客群]](#audiences)
 * [[!UICONTROL 對應到目的地狀態的對象]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 對象人數]](#audiences-size)
 * [[!UICONTROL 依合併原則區分的對象重疊]](#audience-overlap-by-merge-policy)
@@ -407,7 +407,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="無區段設定檔"
->abstract="此 Widget 會提供未附加到任何對象的所有設定檔總數，代表在整個組織中啟用設定檔的機會。"
+>abstract="此 Widget 會提供未附加到任何客群的所有輪廓總數，代表在整個組織中啟用輪廓的機會。"
 
 [!UICONTROL 未分段的設定檔] Widget提供未附加至任何對象的所有設定檔總數。 產生的數字在最後一個快照集之前是準確的，代表您組織內設定檔啟用的機會。 它還表示有機會刪除未提供足夠ROI的個人檔案。
 
@@ -418,7 +418,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="無區段設定檔趨勢"
->abstract="此 Widget 會提供一個折線圖，說明在特定時段內未附加到任何對象的所有設定檔數量。可以將 30 天、90 天和 12 個月時段內未附加到任何對象的設定檔趨勢視覺化。"
+>abstract="此 Widget 會提供一個折線圖，說明在特定時段內未附加到任何客群的所有輪廓數量。可以將 30 天、90 天和 12 個月時段內未附加到任何客群的輪廓趨勢視覺化。"
 
 [!UICONTROL 未分段的設定檔變更趨勢] Widget會使用線圖來說明自上次每日快照後新增的未附加至任何對象的設定檔數量。 未附加至任何對象的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 期間是從Widget的下拉式功能表中選擇。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
 
@@ -441,7 +441,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
-### [!UICONTROL 對象] {#audiences}
+### [!UICONTROL 客群] {#audiences}
 
 此Widget會根據套用至您設定檔資料的所選合併原則，提供準備啟用的對象總數。
 

@@ -99,7 +99,7 @@ Adobe Target是Adobe Experience Platform目標目錄中的個人化連線。
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="關於資料流 ID"
->abstract="此選項會確定哪個資料集合資料流中將包含對象。下拉選單僅顯示已啟用目標設定的資料流。若要使用邊緣分段，您必須選取一個資料流 ID。選取不停用所有使用邊緣分段的使用案例。"
+>abstract="此選項會確定哪個資料集合資料流中將包含客群。下拉選單僅顯示已啟用目標設定的資料流。若要使用邊緣分段，您必須選取一個資料流 ID。選取不停用所有使用邊緣分段的使用案例。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=zh-Hant#parameters" text="了解有關選取資料流的詳細資訊"
 
 >[!IMPORTANT]
@@ -115,7 +115,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
 >title="關於 Adobe Target 工作區"
->abstract="選取將共用對象的 Adobe Target 工作區。您可以為每個 Adobe Target 連線選取一個工作區。啟動後，對象將被導向到選取的工作區，同時依循適用的 Experience Platform 資料使用標籤。"
+>abstract="選取將共用客群的 Adobe Target 工作區。您可以為每個 Adobe Target 連線選取一個工作區。啟動後，客群將被導向到選取的工作區，同時依循適用的 Experience Platform 資料使用標籤。"
 >additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=zh-Hant" text="進一步了解 Adobe Target 工作區"
 
 在[設定](../../ui/connect-destination.md)此目的地時，您必須提供下列資訊：
@@ -148,7 +148,7 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!IMPORTANT]
 > 

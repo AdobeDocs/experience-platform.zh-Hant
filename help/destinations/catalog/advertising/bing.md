@@ -90,12 +90,12 @@ ht-degree: 10%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_bing_mapping_id"
 >title="對應 ID"
->abstract="輸入要對應選取區段的數值 Bing 對象 ID。如果提供的[!UICONTROL 已對應 ID] 未對應至 Bing 目的地中的對象 ID，您將不會在 Bing 帳戶中看到預期的對象資料。"
+>abstract="輸入要對應選取區段的數值 Bing 客群 ID。如果提供的[!UICONTROL 已對應 ID] 未對應至 Bing 目的地中的客群 ID，您將不會在 Bing 帳戶中看到預期的客群資料。"
 
 >[!IMPORTANT]
 > 

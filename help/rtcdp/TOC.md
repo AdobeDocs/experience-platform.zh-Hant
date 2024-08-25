@@ -3,7 +3,7 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform 指南
-user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶設定檔，利用這些設定檔建立對象，以及對協力廠商目標啟動這些對象。
+user-guide-description: 將取自多個企業來源的已知和匿名資料匯整起來，並藉此建立客戶輪廓，利用這些輪廓建立客群，以及對協力廠商目標啟動這些客群。
 role: Admin
 source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
 workflow-type: tm+mt
@@ -47,10 +47,10 @@ ht-degree: 67%
 * 護欄{#guardrails}
    * [Real-Time CDP護欄概觀](guardrails/overview.md)
    * [資料擷取的護欄](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [[!DNL Edge Network Server API]的護欄](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
-   * [[!DNL Real-Time Customer Profile] 資料與分段的護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
-   * [[!DNL Identity Service] 資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [[!DNL Query Service]的護欄](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   *  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}的[護欄
+   *  [!DNL Real-Time Customer Profile] 資料與分段的[護欄](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=zh-Hant){target="_blank"}
+   *  [!DNL Identity Service] 資料的[護欄](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   *  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}的[護欄
    * [透過目的地啟用資料的護欄](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * 身分 {#identity}
    * [身分和身分命名空間](profile/identities-overview.md)

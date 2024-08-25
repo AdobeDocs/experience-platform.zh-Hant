@@ -50,7 +50,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="資料流執行詳細資訊"
->abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
+>abstract="目標資料流執行詳細資訊包含客群啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -60,7 +60,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的對象中建立、更新和刪除的身分。"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的客群中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
@@ -78,7 +78,7 @@ ht-degree: 10%
 
 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 
-- **[!UICONTROL 已啟用的身分]**：已成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
+- **[!UICONTROL 已啟用的身分]**：已成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的客群中建立、更新和刪除的身分。
 - **[!UICONTROL 排除的身分]**：根據遺失的屬性和同意違規，略過用於啟用的設定檔身分總數。
 - **[!UICONTROL 身分失敗]**：由於錯誤而未啟用到目的地的設定檔身分總數。
 
@@ -91,7 +91,7 @@ ht-degree: 10%
    - 對於&#x200B;**[!UICONTROL 已完成]**&#x200B;個執行，處理時間量度一律顯示一個小時。
    - 針對仍處於&#x200B;**[!UICONTROL 處理]**&#x200B;狀態的資料流執行，擷取所有量度的視窗會保持開啟超過一小時，以處理對應至資料流執行的所有量度。 例如，上午9:30開始的資料流執行可能會維持處理狀態1小時30分鐘，以擷取及處理所有量度。 接著，在處理視窗關閉且資料流執行更新為&#x200B;**已完成**&#x200B;的狀態後，顯示的處理時間就會變更為一小時。
 - **[!UICONTROL 已接收的設定檔]**：資料流中接收的設定檔總數。
-- **[!UICONTROL 已啟用的身分]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
+- **[!UICONTROL 已啟用的身分]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的客群中建立、更新和刪除的身分。
 - **[!UICONTROL 排除的身分]**：根據遺失的屬性和同意違規，從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 身分失敗]**&#x200B;由於錯誤而未啟用到目的地的設定檔身分總數。
 - **[!UICONTROL 啟用率]**：已順利啟用或略過的接收身分百分比。 下列公式示範如何計算此值：
@@ -123,7 +123,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="資料流執行詳細資訊"
->abstract="目標資料流執行詳細資訊包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
+>abstract="目標資料流執行詳細資訊包含客群啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。若要深入了解，請檢閱量度定義指南。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=zh-Hant#dataflow-runs-for-streaming-destinations" text="用於串流目的地的資料流執行"
 
 >[!CONTEXTUALHELP]
@@ -134,7 +134,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的對象中建立、更新和刪除的身分。"
+>abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的客群中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
@@ -143,7 +143,7 @@ ht-degree: 10%
 
 針對批次目的地，[!UICONTROL 資料流執行]索引標籤會提供資料流執行上的量度資料。 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 
-- **[!UICONTROL 已啟用的身分]**：已成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
+- **[!UICONTROL 已啟用的身分]**：已成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的客群中建立、更新和刪除的身分。
 - **[!UICONTROL 排除的身分]**：根據遺失的屬性和同意違規，從選取的目的地啟用中排除的個別設定檔身分計數。
 
 ![批次目的地的資料流執行檢視。](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
@@ -154,7 +154,7 @@ ht-degree: 10%
 - **[!UICONTROL 對象]**：與每個資料流執行相關聯的對象名稱。
 - **[!UICONTROL 處理時間]**：資料流執行處理所花費的時間。
 - **[!UICONTROL 已接收的設定檔]**：資料流中接收的設定檔總數。 此值每 60 分鐘更新一次。
-- **[!UICONTROL 已啟用的身分]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的對象中建立、更新和刪除的身分。
+- **[!UICONTROL 已啟用的身分]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的客群中建立、更新和刪除的身分。
 - **[!UICONTROL 排除的身分]**：根據遺失的屬性和同意違規，從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 狀態]**：代表資料流所處的狀態。 這可以是下列三種狀態之一： [!UICONTROL 成功]、[!UICONTROL 失敗]和[!UICONTROL 處理]。 [!UICONTROL 成功]表示資料流作用中且正在根據其提供的排程匯出資料。 [!UICONTROL 失敗]表示資料啟用已因錯誤而暫停。 [!UICONTROL 處理中]表示資料流尚未作用中，通常會在建立新資料流時遇到。
 
@@ -199,7 +199,7 @@ ht-degree: 10%
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
 >title="啟用"
->abstract="目標啟用視圖包含對象啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。"
+>abstract="目標啟用視圖包含客群啟用狀態的資訊，以及取自即時客戶輪廓以產生唯一身分的量度。"
 
 若要存取[!UICONTROL 監視]儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]** （![監檢視示](/help/images/icons/monitoring.png)）。 在[!UICONTROL 監視]頁面上，選取[!UICONTROL 目的地]。 [!UICONTROL 監視]儀表板包含目的地執行工作的度量和資訊。
 

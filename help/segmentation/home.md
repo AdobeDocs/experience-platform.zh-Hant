@@ -12,7 +12,7 @@ ht-degree: 14%
 
 # [!DNL Segmentation Service] 概觀
 
-Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RESTful API，可讓您透過[!DNL Real-Time Customer Profile]資料的區段定義或其他來源建立對象。 這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RESTful API，可讓您透過[!DNL Real-Time Customer Profile]資料的區段定義或其他來源建立對象。 這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 本檔案概述[!DNL Segmentation Service]及其在Adobe Experience Platform中扮演的角色。
 
@@ -30,11 +30,11 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 在概念定義對象後，即會在[!DNL Experience Platform]中建置對象。 一般而言，對象是由行銷人員或對象專家建立，不過有些組織偏好由行銷部門與資料分析師合作建立。 檢閱傳送至[!DNL Platform]的資料後，資料分析人員可以兩種方式建立對象：透過選取將用於建立對象規則或條件的欄位和值來建立區段定義，或使用對象構成來構成對象。
 
-## 建立對象
+## 建立客群
 
-可以在 Adobe Experience Platform 以兩種不同方式建立對象 - 直接組成對象或透過平台衍生的區段定義。
+可以在 Adobe Experience Platform 以兩種不同方式建立客群 - 直接組成客群或透過平台衍生的區段定義。
 
-### 對象構成
+### 客群構成
 
 在Platform上直接構成對象時，您可以使用「對象構成」。 若要瞭解如何使用對象構成來建立對象，請參閱[對象構成指南](./ui/audience-composition.md)以取得詳細資訊。
 
@@ -54,30 +54,30 @@ Adobe Experience Platform [!DNL Segmentation Service]提供使用者介面和RES
 
 ### 聯合客群組成 {#fac}
 
-除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)的指南。
+除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
 
 >[!AVAILABILITY]
 >
 >聯合客群組成目前僅開放給某些組織使用 (限量開放使用)。如需詳細資訊，請聯絡您的 Adobe 代表。
 
-## 評估對象 {#evaluate-segments}
+## 評估客群 {#evaluate-segments}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="評估方式"
->abstract="Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。"
+>abstract="Platform 目前支援三種評估客群的方式：串流分段、批次分段以及邊緣分段。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="串流評估"
->abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新對象。"
+>abstract="串流分段是持續進行的資料選擇流程；此功能會根據使用者活動來更新客群。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html?lang=zh-Hant" text="使用串流分段近乎即時地評估事件"
 
-Platform 目前支援三種評估對象的方式：串流分段、批次分段以及邊緣分段。
+Platform 目前支援三種評估客群的方式：串流分段、批次分段以及邊緣分段。
 
 ### 串流區段 {#streaming}
 
-串流細分是持續進行的資料選擇流程，其會根據使用者活動來更新對象。 建立並儲存對象後，區段定義就會套用至對[!DNL Real-Time Customer Profile]傳入的資料。 會定期處理對象的新增和移除，確保您的目標對象仍然相關。
+串流細分是持續進行的資料選擇流程，其會根據使用者活動來更新客群。 建立並儲存對象後，區段定義就會套用至對[!DNL Real-Time Customer Profile]傳入的資料。 會定期處理對象的新增和移除，確保您的目標對象仍然相關。
 
 若要深入瞭解串流區段，請閱讀[串流區段檔案](./api/streaming-segmentation.md)。
 
@@ -86,9 +86,9 @@ Platform 目前支援三種評估對象的方式：串流分段、批次分段�
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="批次評估"
->abstract="批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，系統會儲存並存放該對象，以便您可以將對象匯出使用。"
+>abstract="批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有輪廓資料以產生相對應的客群。建立後，系統會儲存並存放該客群，以便您可以將客群匯出使用。"
 
-批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有設定檔資料以產生相對應的對象。建立後，會儲存並儲存產生的對象，以便您將其匯出以供使用。
+批次分段是持續資料選取流程的替代方案，會透過區段定義立即移動所有輪廓資料以產生相對應的客群。建立後，會儲存並儲存產生的對象，以便您將其匯出以供使用。
 
 每24小時自動評估批次對象。 如果您想要依需求評估批次對象，則可以使用區段工作。 若要深入瞭解區段作業，請參閱[區段作業檔案](./api/segment-jobs.md)。
 

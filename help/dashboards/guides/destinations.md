@@ -77,7 +77,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 在繼續說明標準Widget之前，請務必熟悉本檔案中使用的下列重要術語定義：
 
 * **區段定義：**&#x200B;區段定義是一組&#x200B;**規則**，用來描述目標對象的關鍵特性或行為。 這些規則包含屬性和事件資料，可讓設定檔符合對象資格。
-* **對象**：一組具有共同特徵和行為的人員、帳戶、家庭或其他實體。
+* **客群**：一組具有共同特徵和行為的人員、帳戶、家庭或其他實體。
 * **已對應/對應**：資料對應是將來源資料欄位對應到目的地中相關目標欄位的程式。
 * **身分**：身分識別是可唯一代表個別客戶的識別碼，例如Cookie識別碼、裝置識別碼或電子郵件識別碼。
 * **啟動**：啟動是使用者將對象或設定檔對應到目的地(例如Oracle Eloqua、Google或SalesforceMarketing Cloud)的動作。
@@ -86,11 +86,11 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 * [[!UICONTROL 最常用的目的地]](#most-used-destinations)
 * [[!UICONTROL 最近建立的目的地]](#recently-created-destinations)
-* [[!UICONTROL 最近啟動的對象]](#recently-activated-audiences)
-* [[!UICONTROL 最近啟動的對象 (依目的地)]](#recently-activated-audiences-by-destination)
-* [[!UICONTROL 對象規模趨勢]](#audience-size-trend)
-* [[!UICONTROL 未對應對象 (依身分識別)]](#unmapped-audiences-by-identity)
-* [[!UICONTROL 已對應對象 (依身分識別)]](#mapped-audiences-by-identity)
+* [[!UICONTROL 最近啟動的客群]](#recently-activated-audiences)
+* [[!UICONTROL 最近啟動的客群 (依目的地)]](#recently-activated-audiences-by-destination)
+* [[!UICONTROL 客群規模趨勢]](#audience-size-trend)
+* [[!UICONTROL 未對應客群 (依身分識別)]](#unmapped-audiences-by-identity)
+* [[!UICONTROL 已對應客群 (依身分識別)]](#mapped-audiences-by-identity)
 * [[!UICONTROL 一般對象]](#common-audiences)
 * [[!UICONTROL 對應的對象]](#mapped-audiences)
 * [[!UICONTROL 對應的對象健康狀況]](#mapped-audience-health)
@@ -105,7 +105,7 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="最常用的目的地"
->abstract="此 Widget 會依據對應的對象數顯示貴組織最活躍的目的地。這些數字在上次快照時是準確的。此排名會提供對目前使用最多的目的地的分析，同時會強調可能未受到充分利用的目的地。"
+>abstract="此 Widget 會依據對應的客群數顯示貴組織最活躍的目的地。這些數字在上次快照時是準確的。此排名會提供對目前使用最多的目的地的分析，同時會強調可能未受到充分利用的目的地。"
 
 **[!UICONTROL 最常使用的目的地]** Widget會依對應對象數目（截至最後一個快照為止）顯示您組織的最上層目的地。 此排名可讓您深入瞭解正在使用的目的地，同時可能會顯示可能未充分利用的目的地。
 
@@ -134,14 +134,14 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 ![最近建立目的地Widget醒目提示之目的地儀表板的「概觀」標籤。](../images/destinations/recently-created-destinations.png)
 
-### [!UICONTROL 最近啟動的對象] {#recently-activated-audiences}
+### [!UICONTROL 最近啟動的客群] {#recently-activated-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegments"
->title="最近啟動的對象"
->abstract="此 Widget 會提供最近對應至目的地的對象清單。此清單會提供系統中正積極使用的對象和目的地的快照，能有助於對任何錯誤的對應進行移難排解。"
+>title="最近啟動的客群"
+>abstract="此 Widget 會提供最近對應至目的地的客群清單。此清單會提供系統中正積極使用的客群和目的地的快照，能有助於對任何錯誤的對應進行移難排解。"
 
-**[!UICONTROL 最近啟用的對象]** Widget提供最近對應到目的地的對象清單。 此清單會提供系統中正積極使用的對象和目的地的快照，能有助於對任何錯誤的對應進行移難排解。
+**[!UICONTROL 最近啟用的對象]** Widget提供最近對應到目的地的對象清單。 此清單會提供系統中正積極使用的客群和目的地的快照，能有助於對任何錯誤的對應進行移難排解。
 
 顯示的[!UICONTROL 已更新]日期顯示上次將對象啟動至目的地的時間，而且準確顯示上次的每日快照。 換言之，如果您對目的地啟用對象，則更新日期要等到拍攝下一個快照之後才會變更。
 
@@ -151,12 +151,12 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 ![目標儀表板的「總覽」標籤，其中反白顯示最近啟用的對象Widget。](../images/destinations/recently-activated-audiences.png)
 
-### [!UICONTROL 最近啟動的對象 (依目的地)] {#recently-activated-audiences-by-destination}
+### [!UICONTROL 最近啟動的客群 (依目的地)] {#recently-activated-audiences-by-destination}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
->title="最近啟動的對象 (依目的地)"
->abstract="此 Widget 會根據在概觀下拉選單中選擇的目的地以遞減順序顯示最近啟動的前五個對象。"
+>title="最近啟動的客群 (依目的地)"
+>abstract="此 Widget 會根據在概觀下拉選單中選擇的目的地以遞減順序顯示最近啟動的前五個客群。"
 
 **[!UICONTROL 依目的地最近啟用的對象]** Widget會根據在總覽下拉式清單中選取的目的地，以遞減順序顯示最近啟用的前五個對象。 它類似於[!UICONTROL 最近啟用的對象] Widget，但顯示的資料&#x200B;**僅**&#x200B;適用於選取的目的地。
 
@@ -168,12 +168,12 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 請參閱此說明中[使用之字詞的定義](#prerequisites)的先決條件一節。
 
-### [!UICONTROL 對象規模趨勢] {#audience-size-trend}
+### [!UICONTROL 客群規模趨勢] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="對象規模趨勢"
->abstract="此 Widget 會說明對象中包含的設定檔數量，這會每天傳送到目的地帳戶。第一個下拉選單會調整對象趨勢的時段。第二個介面工具下拉選單會選取要分析的對象。可從概觀的下拉選單中選擇目的地。"
+>title="客群規模趨勢"
+>abstract="此 Widget 會說明客群中包含的輪廓數量，這會每天傳送到目的地帳戶。第一個下拉選單會調整客群趨勢的時段。第二個介面工具下拉選單會選取要分析的客群。可從概觀的下拉選單中選擇目的地。"
 
 **[!UICONTROL 對象人數趨勢]** Widget針對已對應至該目的地帳戶的對象，描繪一段時間內設定檔計數的關係。 Widget使用折線圖來說明對象中包含且每日傳送至目的地帳戶的設定檔數量。
 
@@ -187,12 +187,12 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 ![對象人數趨勢Widget的自動註解對話方塊。](../images/destinations/audience-size-trend-captions.png)
 
-### [!UICONTROL 未對應對象 (依身分識別)] {#unmapped-audiences-by-identity}
+### [!UICONTROL 未對應客群 (依身分識別)] {#unmapped-audiences-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
->title="未對應對象 (依身分識別)"
->abstract="此 Widget 會針對特定目的地和身分識別列出依遞減的身分識別計數排名的前五個&#x200B;**未對應**&#x200B;對象。介面工具下拉選單中列出的篩選器 ID 會根據在概觀頁面頂端選取的目的地帳戶而變更。"
+>title="未對應客群 (依身分識別)"
+>abstract="此 Widget 會針對特定目的地和身分識別列出依遞減的身分識別計數排名的前五個&#x200B;**未對應**&#x200B;客群。介面工具下拉選單中列出的篩選器 ID 會根據在概觀頁面頂端選取的目的地帳戶而變更。"
 
 **[!UICONTROL 依身分割槽分的未對應對象]** Widget列出前五名&#x200B;**未對應的對象**，依指定目的地和身分的遞減身分計數排名。 它會根據所選的ID反白標示對對應至所選目的地帳戶最有利的受眾。
 
@@ -204,27 +204,27 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 請參閱此說明中[使用之字詞的定義](#prerequisites)的先決條件一節。
 
-### [!UICONTROL 已對應對象 (依身分識別)] {#mapped-audiences-by-identity}
+### [!UICONTROL 已對應客群 (依身分識別)] {#mapped-audiences-by-identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedsegmentsbyidentity"
->title="已對應對象 (依身分識別)"
->abstract="此 Widget 會提供前五個&#x200B;**已對應**&#x200B;對象的清單。該清單會根據對象中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從介面工具標題下方的下拉選單中選取。此 Widget 下拉選單中可用的目的地 ID 會依據在概觀儀表板頂部選擇的目的地而定。"
+>title="已對應客群 (依身分識別)"
+>abstract="此 Widget 會提供前五個&#x200B;**已對應**&#x200B;客群的清單。該清單會根據客群中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從介面工具標題下方的下拉選單中選取。此 Widget 下拉選單中可用的目的地 ID 會依據在概觀儀表板頂部選擇的目的地而定。"
 
-此 Widget 會提供前五個&#x200B;**已對應**&#x200B;對象的清單。該清單會根據對象中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從介面工具標題下方的下拉選單中選取。Widget中下拉式清單可用的目的地ID會根據在總覽儀表板頂端選取的目的地帳戶篩選器而變更。
+此 Widget 會提供前五個&#x200B;**已對應**&#x200B;客群的清單。該清單會根據客群中包含的來源 ID 的數量由高至低排序。要計算的目的地 ID 會從介面工具標題下方的下拉選單中選取。Widget中下拉式清單可用的目的地ID會根據在總覽儀表板頂端選取的目的地帳戶篩選器而變更。
 
 ![依身分識別介面工具集的對應對象。](../images/destinations/mapped-audiences-by-identity.png)
 
 **[!UICONTROL 依身分對應的對象]** Widget一目瞭然地強調在選定目的地內成功鎖定促銷活動設定檔商機的可能性。 有效率的鎖定目標行銷活動不取決於傳送至目的地的設定檔數量，而是取決於與目的地ID可能相符的來源ID數量，藉以提供有用且可操作的資料。
 
-### 常見對象 {#common-audiences}
+### 常見客群 {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
->title="常見對象"
->abstract="此 Widget 會提供在頁面頂端選擇的目的地帳戶中啟動的前五個對象的清單，以及在介面工具下拉選單中選取的目的地。對象清單會根據啟動的時間排序。啟動時間最近的對象會顯示在頂端。"
+>title="常見客群"
+>abstract="此 Widget 會提供在頁面頂端選擇的目的地帳戶中啟動的前五個客群的清單，以及在介面工具下拉選單中選取的目的地。客群清單會根據啟動的時間排序。啟動時間最近的客群會顯示在頂端。"
 
-**[!UICONTROL 常見對象]** Widget提供在頁面頂端選取的目的地帳戶中啟用的前五個對象的清單，以及在下拉式Widget中選取的目的地。 對象清單會根據啟動的時間排序。啟動時間最近的對象會顯示在頂端。
+**[!UICONTROL 常見對象]** Widget提供在頁面頂端選取的目的地帳戶中啟用的前五個對象的清單，以及在下拉式Widget中選取的目的地。 客群清單會根據啟動的時間排序。啟動時間最近的客群會顯示在頂端。
 
 [!UICONTROL AUDIENCE SIZE]欄提供每個列出對象的設定檔總數。
 
@@ -238,12 +238,12 @@ Adobe提供多種標準Widget，可用來視覺化與目的地相關的不同量
 
 ![對應的對象Widget。](../images/destinations/mapped-audiences.png)
 
-### 已對應對象的健康情況 {#mapped-audience-health}
+### 已對應客群的健康情況 {#mapped-audience-health}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
->title="已對應對象的健康情況"
->abstract="此 Widget 會提供最多包含 20 個已對應對象的清單，這些對象的總設定檔計數和對應至該目的地的 30 天平均對象規模至少有一個標準差的因素偏差。這會為過去 30 天內對象規模和平均值的差異提供計算量度。對象規模的排序為由高至低。"
+>title="已對應客群的健康情況"
+>abstract="此 Widget 會提供最多包含 20 個已對應客群的清單，這些客群的總輪廓計數和對應至該目的地的 30 天平均客群規模至少有一個標準差的因素偏差。這會為過去 30 天內客群規模和平均值的差異提供計算量度。客群規模的排序為由高至低。"
 
 Widget提供最多20個對應對象的清單，這些對應對象截至上次每日快照的設定檔總數與對應至該目的地的30天平均對象人數至少有一個標準差。
 
@@ -266,7 +266,7 @@ Widget提供最多20個對應對象的清單，這些對應對象截至上次每
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_destinationscount"
 >title="目的地計數"
->abstract="此 Widget 會提供可以在系統內啟動和傳遞對象的可用端點總數。此數字包括使用中和非使用中的目的地。"
+>abstract="此 Widget 會提供可以在系統內啟動和傳遞客群的可用端點總數。此數字包括使用中和非使用中的目的地。"
 
 [!UICONTROL 目的地計數]個Widget提供可在系統中啟用及傳遞對象的可用端點總數。 此數字包括使用中和非使用中的目的地。
 

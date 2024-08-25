@@ -97,7 +97,7 @@ ht-degree: 6%
 | 單一報告套裝 | 泛型變數中包含易記名稱描述項。 <br><br>**範例：**&#x200B;頁面名稱(eVar2) | <ul><li>泛型變數中包含的易記名稱描述項</li><li>查詢使用來自特定資料集的資料，因為這是唯一使用資料</li></ul> | 查詢可以使用Adobe Analytics資料，也可能使用其他來源。 |
 | 多報表套裝 | 泛型變數未包含任何易記名稱描述元。 <br><br>**範例：** eVar2 | <ul><li>任何具有多個描述元的欄位都會顯示為一般。 這表示UI中未出現任何好記的名稱。</li><li>查詢可以使用任何包含eVar的資料集中的資料，這可能會導致混合或不正確的結果。</li></ul> | 查詢會正確使用來自多個資料集的合併結果。 |
 
-### 對象
+### 客群
 
 >[!NOTE]
 >
@@ -240,7 +240,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="合併政策"
->abstract="合併政策可讓不同的資料集合併，形成您的設定檔。平台已提供預設的合併政策，不然您也可以在設定檔中建立新的預設合併政策。針對此對象選擇和您的行銷目的相符的合併政策。"
+>abstract="合併政策可讓不同的資料集合併，形成您的設定檔。平台已提供預設的合併政策，不然您也可以在設定檔中建立新的預設合併政策。針對此客群選擇和您的行銷目的相符的合併政策。"
 
 [!DNL Experience Platform]可讓您將來自多個來源的資料彙集在一起，並加以合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是[!DNL Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立設定檔的規則。
 
@@ -260,8 +260,8 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
->abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合建議的區段定義的資格。對象預估值會透過使用當天的樣本資料的樣本大小產生。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽對象"
+>abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合建議的區段定義的資格。客群預估值會透過使用當天的樣本資料的樣本大小產生。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=zh-Hant#estimate-and-preview-an-audience" text="預估和預覽客群"
 
 建立區段定義時，工作區右側的&#x200B;**[!UICONTROL 對象屬性]**&#x200B;區段會顯示結果區段定義的大小預估值，好讓您在建立對象本身之前根據需要調整區段定義。
 

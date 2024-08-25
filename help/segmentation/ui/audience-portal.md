@@ -22,7 +22,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 - [檢視有關您對象的詳細資料](#audience-details)
    - [檢視對象的相關摘要](#audience-summary)
 - [啟用您的對象以進行排程分段](#scheduled-segmentation)
-- [建立對象](#create-audience)
+- [建立客群](#create-audience)
    - [使用區段產生器建立受眾](#segment-builder)
    - [使用對象構成來建立對象](#audience-composition)
    - [使用Federated Audience Composition，以使用您現有資料倉儲中的資料來建立對象](#fac) （可用性限制）
@@ -30,17 +30,17 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 若要開啟Audience Portal，請選取「細分」區段內的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。
 
-## 對象清單 {#list}
+## 客群清單 {#list}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="流失"
->abstract="流失代表和上次執行區段作業時相比，對象內正在變更的設定檔的百分比。"
+>abstract="流失代表和上次執行區段作業時相比，客群內正在變更的輪廓的百分比。"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="評估方式"
->abstract="對象的評估方式包括批次、串流和邊緣。"
+>abstract="客群的評估方式包括批次、串流和邊緣。"
 
 依預設，Audience Portal會顯示您的組織和沙箱中所有對象的清單，包括設定檔計數、來源、建立日期、上次修改日期、標籤和劃分。
 
@@ -55,7 +55,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | 動作 | 來源 | 說明 |
 | ------ | ------- | ----------- |
 | [!UICONTROL 編輯] | Segmentation Service | 開啟區段產生器以編輯您的對象。 請注意，如果您的對象是透過API建立的，您將&#x200B;**無法**&#x200B;使用區段產生器編輯對象。 如需使用區段產生器的詳細資訊，請參閱[區段產生器UI指南](./segment-builder.md)。 |
-| [!UICONTROL 開啟構成] | 對象構成 | 開啟「對象」構成來檢視對象。 如需對象構成的詳細資訊，請參閱[對象構成UI指南](./audience-composition.md)。 |
+| [!UICONTROL 開啟構成] | 客群構成 | 開啟「對象」構成來檢視對象。 如需對象構成的詳細資訊，請參閱[對象構成UI指南](./audience-composition.md)。 |
 | [!UICONTROL 啟用到目的地] | Segmentation Service | 將對象啟用至目的地。 如需將對象啟用至目的地的詳細資訊，請參閱[啟用概觀](../../destinations/ui/activation-overview.md)。 |
 | [!UICONTROL 與合作夥伴共用] | 對象構成、自訂上傳、細分服務 | 與其他Platform使用者共用您的對象。 如需有關此功能的詳細資訊，請閱讀[區段比對總覽](./segment-match/overview.md)。 |
 | [!UICONTROL 管理標籤] | 對象構成、自訂上傳、細分服務 | 管理屬於對象的使用者定義標籤。 如需有關此功能的詳細資訊，請閱讀[篩選和標籤](#manage-audiences)的章節。 |
@@ -334,8 +334,8 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="將所有對象新增到排程"
->abstract="啟用以在每日排程更新中包含所有使用批次分段評估的對象。停用以從排程更新中移除所有對象。"
+>title="將所有客群新增到排程"
+>abstract="啟用以在每日排程更新中包含所有使用批次分段評估的客群。停用以從排程更新中移除所有客群。"
 
 建立對象後，您就可以透過隨選或排程（持續）評估來評估對象。 評估表示將[!DNL Real-Time Customer Profile]資料移動至區段工作，以產生對應的對象。 建立對象後，會儲存並儲存對象，以便使用[!DNL Experience Platform] API匯出對象。
 
@@ -363,7 +363,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![顯示您可以建立的兩種對象型別的彈出視窗。](../images/ui/audience-portal/create-audience-type.png)
 
-### 對象構成 {#audience-composition}
+### 客群構成 {#audience-composition}
 
 選取&#x200B;**[!UICONTROL 撰寫對象]**&#x200B;會帶您前往對象構成。 此工作區提供直覺式控制項，可讓您建立和編輯對象，例如用來代表不同動作的拖放圖磚。 若要深入瞭解如何建立對象，請參閱[對象組合指南](./audience-composition.md)。
 

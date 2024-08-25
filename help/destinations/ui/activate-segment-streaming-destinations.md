@@ -104,12 +104,12 @@ ht-degree: 6%
 
 ![套用識別對應步驟中反白顯示的轉換控制項。](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## 排程對象匯出 {#scheduling}
+## 排程客群匯出 {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="結束日期"
->abstract="無法使用新增對象排程的結束日期。"
+>abstract="無法使用新增客群排程的結束日期。"
 
 依預設，**[!UICONTROL 對象排程]**&#x200B;頁面僅顯示您目前啟用流程中選擇的新選取對象。
 

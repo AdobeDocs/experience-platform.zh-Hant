@@ -81,7 +81,7 @@ Adobe Experience Platform使用者介面(UI)提供了一個儀表板，您可以
 
 Adobe Experience Platform的所有新執行個體都會提供預設Widget載出，以強調資料中最新可用的深入分析。 下列Widget從一開始便已在您的區段檢視中預先設定。 有關Widget用途和功能的完整詳細資訊，請參閱其各自章節。
 
-* [[!UICONTROL 對象規模]](#audience-size)
+* [[!UICONTROL 客群規模]](#audience-size)
 * [[!UICONTROL 對象人數變更趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 身分識別覆蓋]](#identity-overlap)
 * [[!UICONTROL 依身分識別劃分的設定檔]](#profiles-by-identity)
@@ -156,9 +156,9 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
-* [[!UICONTROL 對象規模]](#audience-size)
+* [[!UICONTROL 客群規模]](#audience-size)
 * [[!UICONTROL 對象啟用順序]](#audience-activation-order)
-* [[!UICONTROL 對象規模趨勢]](#audience-size-trend)
+* [[!UICONTROL 客群規模趨勢]](#audience-size-trend)
 * [[!UICONTROL 對象人數變更趨勢]](#audience-size-change-trend)
 * [[!UICONTROL 依身分割槽分的對象人數趨勢]](#audience-size-trend-by-identity)
 * [[!UICONTROL 對象重疊]](#audience-overlap)
@@ -167,12 +167,12 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 * [[!UICONTROL 依身分識別劃分的設定檔]](#profiles-by-identity)
 * [[!UICONTROL 排定的啟用]](#scheduled-activations)
 
-### [!UICONTROL 對象規模] {#audience-size}
+### [!UICONTROL 客群規模] {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
->title="對象規模"
->abstract="此 Widget 會顯示選取對象內合併設定檔的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
+>title="客群規模"
+>abstract="此 Widget 會顯示選取客群內合併輪廓的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
 
 **[!UICONTROL 對象大小]** Widget會顯示擷取快照時所選對象內的合併設定檔總數。 此數字是將對象合併原則套用至您的設定檔資料，以將設定檔片段合併在一起，並為對象中的每個人形成單一設定檔的結果。
 
@@ -180,11 +180,11 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 
 ![醒目提示[!UICONTROL 對象大小]介面工具集的[!UICONTROL 對象]儀表板總覽。](../images/audiences/audience-size.png)
 
-### [!UICONTROL 對象規模趨勢] {#audience-size-trend}
+### [!UICONTROL 客群規模趨勢] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="對象規模趨勢"
+>title="客群規模趨勢"
 >abstract="此 Widget 會提供有關符合&#x200B;**任何**&#x200B;區段定義標準的設定檔總數的資訊，這會在過去 30 天、90 天或 12 個月每日快照期間擷取。"
 
 **[!UICONTROL 對象人數趨勢]** Widget提供一段指定時間內符合&#x200B;**任何**&#x200B;對象資格的設定檔總數線條圖說明。 對象人數趨勢可在30天、90天和12個月的期間內以視覺化方式呈現。 期間是從Widget的下拉式功能表中選擇。 對象人數會反映在y軸，而時間則反映在x軸。
@@ -258,7 +258,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="身分識別覆蓋"
->abstract="此 Widget 會顯示包含兩個所選身分識別的對象中設定檔的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的設定檔的數量由圓圈之間的覆蓋表示。"
+>abstract="此 Widget 會顯示包含兩個所選身分識別的客群中輪廓的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的設定檔的數量由圓圈之間的覆蓋表示。"
 
 **[!UICONTROL 身分重疊]** Widget會顯示文氏圖表或集合圖表，顯示您對象中包含多個身分的設定檔重疊。
 
@@ -275,7 +275,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="依身分識別劃分的設定檔"
->abstract="此 Widget 會顯示選取對象中每個合併設定檔身分識別的劃分。"
+>abstract="此 Widget 會顯示選取客群中每個合併輪廓身分識別的劃分。"
 
 依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會顯示您所選對象中每個合併設定檔的身分劃分。 依身分割槽分的設定檔總數可能會高於對象中的設定檔總數，因為一個設定檔可能會有多個相關聯的身分。 換言之，將每個身分顯示的值加總在一起，可能會超過總對象人數。 這是因為如果客戶透過多個管道與您的品牌互動，則多個身分可能會與該個別客戶相關聯。
 
