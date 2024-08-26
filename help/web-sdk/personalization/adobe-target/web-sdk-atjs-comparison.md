@@ -3,7 +3,7 @@ title: 比較at.js與Experience PlatformWeb SDK
 description: 瞭解at.js功能與Experience Platform Web SDK的比較
 keywords: target；adobe target；activity.id；experience.id；renderDecisions；decisionScopes；預先隱藏程式碼片段；vec；表單式體驗撰寫器；xdm；對象；決定；範圍；結構；系統圖表；圖表
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
+source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
 workflow-type: tm+mt
 source-wordcount: '2182'
 ht-degree: 2%
@@ -183,7 +183,7 @@ Experience Platform Web SDK會自動傳送包含WEB SDK所執行選件的通知�
 }
 ```
 
-[更多詳情](../rendering-personalization-content.md)
+[了解更多](../rendering-personalization-content.md)
 
 ## 如何請求且不會自動轉譯頁面載入Target選件
 
@@ -262,7 +262,7 @@ alloy("sendEvent", {
   });
 ```
 
-[更多詳情](../rendering-personalization-content.md#manually-rendering-content)
+[了解更多](../rendering-personalization-content.md#manually-rendering-content)
 
 
 ## 如何請求特定的表單式Target mbox
@@ -421,7 +421,7 @@ alloy("sendEvent", {
 });
 ```
 
-[更多詳情](../rendering-personalization-content.md#manually-rendering-content)
+[了解更多](../rendering-personalization-content.md#manually-rendering-content)
 
 ## 如何套用Target活動
 
@@ -539,19 +539,20 @@ alloy("sendEvent", {
         break;  
       }
     }
-      // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
+    // Send a "decisioning.propositionDisplay" event signaling that the proposition has been rendered.
     alloy("sendEvent", {
-      xdm: {
-        eventType: "decisioning.propositionDisplay",
-        _experience: {
-          decisioning: {
-            propositions: [
-              {
-                id: discountProposition.id,
-                scope: discountProposition.scope,
-                scopeDetails: discountProposition.scopeDetails
-              }
-            ]
+      "xdm": {
+        "eventType": "decisioning.propositionDisplay",
+        "_experience": {
+          "decisioning": {
+            "propositions": [{
+              "id": id,
+              "scope": scope,
+              "scopeDetails": scopeDetails
+            }],
+            "propositionEventType": {
+              "display": 1
+            }
           }
         }
       }
@@ -607,7 +608,7 @@ alloy("sendEvent", {
 });
 ```
 
-[更多詳情](../rendering-personalization-content.md#manually-rendering-content)
+[了解更多](../rendering-personalization-content.md#manually-rendering-content)
 
 **範例3 — 追蹤執行動作後引發的事件**
 
@@ -686,7 +687,7 @@ alloy("sendEvent", {
 });
 ```
 
-[更多詳情](./spa-implementation.md#implementing-xdm-views)
+[了解更多](./spa-implementation.md#implementing-xdm-views)
 
 ## 如何運用回應Token
 
@@ -750,7 +751,7 @@ alloy("sendEvent", {
   });
 ```
 
-[更多詳情](./accessing-response-tokens.md)
+[了解更多](./accessing-response-tokens.md)
 
 ## 如何管理忽隱忽現情形
 
