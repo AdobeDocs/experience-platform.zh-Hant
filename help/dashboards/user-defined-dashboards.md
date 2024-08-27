@@ -2,7 +2,7 @@
 title: 自訂儀表板
 description: 瞭解如何建立及管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，將關鍵量度視覺化。
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ![建立儀表板對話方塊。](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-已購買Data Distiller SKU的使用者可選擇使用自訂SQL查詢來建立其深入分析。 如需此工作流程的指示，請參閱[可自訂分析建立指南](./data-distiller/customizable-insights/overview.md)。
+已購買Data Distiller SKU的使用者可選擇使用自訂SQL查詢來建立其深入分析。 如需此工作流程的指示，請參閱[SQL分析建立指南](./data-distiller/sql-insights/overview.md)。
 
 新建立的空白圖示板會出現，而您選擇的名稱會顯示在檢視的左上角。
 

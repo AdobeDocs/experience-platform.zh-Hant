@@ -2,7 +2,7 @@
 title: 查詢服務封裝
 description: 以下檔案概述查詢服務可用功能和產品的包裝，並著重說明隨機查詢和批次查詢之間的差異。
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 2%
@@ -67,9 +67,9 @@ Experience Platform的存取控制是透過[Adobe Admin Console](https://adminco
 
 {style="table-layout:auto"}
 
-### 相關可自訂的深入分析許可權 {#customizable-insights-permissions}
+### 相關的SQL深入分析許可權 {#sql-insights-permissions}
 
-若要在儀表板中建立資料Distiller [可自訂分析](./data-distiller/customizable-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;****。
+若要在儀表板中建立資料Distiller [SQL Insights](./data-distiller/sql-insights/overview.md)，必須在Admin Console中啟用下列許可權&#x200B;****。
 
 | 權限 | 函數 |
 |---|---|

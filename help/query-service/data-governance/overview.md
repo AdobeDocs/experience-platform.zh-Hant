@@ -2,7 +2,7 @@
 title: 查詢服務中的資料治理
 description: 此概觀涵蓋Experience Platform查詢服務中資料治理的主要元素。
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '3129'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Adobe Experience Platform中的存取控制可讓您使用[Adobe Admin Console](
 
 #### 對加速的資料集建立欄位式存取限制 {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-透過[以屬性為基礎的存取控制功能](../../access-control/abac/overview.md)，您可以在[加速存放區](../data-distiller/customizable-insights/send-accelerated-queries.md)中的事實和維度資料集，定義組織或資料使用範圍。 這可讓管理員管理特定區段的存取權，並更好地管理授予使用者或使用者群組的存取權。
+透過[以屬性為基礎的存取控制功能](../../access-control/abac/overview.md)，您可以在[加速存放區](../data-distiller/sql-insights/send-accelerated-queries.md)中的事實和維度資料集，定義組織或資料使用範圍。 這可讓管理員管理特定區段的存取權，並更好地管理授予使用者或使用者群組的存取權。
 
 若要針對加速資料集建立欄位式存取限制，您可以使用查詢服務CTAS查詢來建立加速資料集，並根據現有的XDM結構描述或臨時結構描述來建構這些資料集。 然後，系統管理員可以[新增並編輯結構描述](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field)或[臨時結構描述](./ad-hoc-schema-labels.md#edit-governance-labels)的資料使用標籤。 您可以從[!UICONTROL 結構描述] UI中的[!UICONTROL 標籤]工作區，套用、建立及編輯結構描述的標籤。
 

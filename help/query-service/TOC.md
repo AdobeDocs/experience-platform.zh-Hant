@@ -5,7 +5,7 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 19%
@@ -27,11 +27,11 @@ ht-degree: 19%
       - [概觀](data-distiller/derived-datasets/overview.md)
       - [使用SQL建立衍生資料集](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [建立十等分衍生資料集](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - 延伸應用程式報表{#customizable-insights}的可自訂分析
-      - [概觀](data-distiller/customizable-insights/overview.md)
-      - [查詢專業模式](data-distiller/customizable-insights/query-pro-mode.md)
-      - [傳送加速的查詢](data-distiller/customizable-insights/send-accelerated-queries.md)
-      - [報表深入分析資料模型指南](data-distiller/customizable-insights/reporting-insights-data-model.md)
+   - 延伸應用程式報告{#sql-insights}的SQL深入分析
+      - [概觀](data-distiller/sql-insights/overview.md)
+      - [查詢專業模式](data-distiller/sql-insights/query-pro-mode.md)
+      - [傳送加速的查詢](data-distiller/sql-insights/send-accelerated-queries.md)
+      - [報表深入分析資料模型指南](data-distiller/sql-insights/reporting-insights-data-model.md)
    - AI/ML功能管道{#ml-feature-pipelines}
       - [概觀](data-distiller/ml-feature-pipelines/overview.md)
       - [連線到Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)

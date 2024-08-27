@@ -2,9 +2,9 @@
 title: 管理結構描述的資料使用標籤
 description: 瞭解如何在Adobe Experience Platform UI中新增資料使用標籤到Experience Data Model (XDM)結構描述欄位。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
+source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '804'
 ht-degree: 8%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 8%
 
 套用至結構描述欄位的標籤會指出套用至該特定欄位中所包含資料的使用原則。
 
-標籤可套用至套用至個別綱要的標籤，以及這些綱要內的欄位。 標籤直接套用至結構描述時，這些標籤會傳播至以該結構描述為基礎的所有現有和未來資料集。
+標籤可套用至個別結構描述，以及這些結構描述內的欄位。 標籤直接套用至結構描述時，這些標籤會傳播至以該結構描述為基礎的所有現有和未來資料集。
 
 此外，您新增至一個結構描述的任何欄位標籤，都會傳播至採用共用類別或欄位群組中相同欄位的所有其他結構描述。 這可協助確保類似欄位的使用規則在整個資料模型中保持一致。
 

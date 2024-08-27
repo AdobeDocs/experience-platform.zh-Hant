@@ -4,7 +4,7 @@ description: 瞭解如何搭配Real-time Customer Data Platform Insights Data Mo
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Real-time Customer Data Platform Insights資料模型B2C版本
 
-[B2C Edition](../../rtcdp/overview.md#rtcdp-b2c)的Real-time Customer Data Platform Insights資料模型會公開為各種設定檔、目的地和分段Widget提供深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以針對行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 請參閱query accelerated store reporting insights檔案，以瞭解[如何透過Query Service建立報告見解資料模型，以搭配使用accelerated store資料和使用者定義的儀表板](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md)。
+[B2C Edition](../../rtcdp/overview.md#rtcdp-b2c)的Real-time Customer Data Platform Insights資料模型會公開為各種設定檔、目的地和分段Widget提供深入分析的資料模型和SQL。 您可以自訂這些SQL查詢範本，以針對行銷和關鍵績效指標(KPI)使用案例建立Real-Time CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 請參閱query accelerated store reporting insights檔案，以瞭解[如何透過Query Service建立報告見解資料模型，以搭配使用accelerated store資料和使用者定義的儀表板](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md)。
 
 >[!NOTE]
 >
