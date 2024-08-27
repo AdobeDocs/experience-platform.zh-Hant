@@ -3,9 +3,9 @@ title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 ![標示完成狀態的驗證頁面。](../images/rules/finish.png)
 
-系統會顯示警告，指出您的新設定不會對身分圖表中的現有連結，以及已內嵌的體驗事件設定檔片段有任何影響。 此外，您會收到通知，新設定最多需要6小時才會反映在系統中。 若要確認輸入您的沙箱名稱，然後選取&#x200B;**[!UICONTROL 確認]**。
+出現警告訊息，指出只有在圖形在儲存您的設定&#x200B;**之後更新**&#x200B;時，現有的圖形才會受到圖形演演算法的影響，而且即使在名稱空間優先順序變更後，即時客戶設定檔上的事件片段主要身分也不會更新。 此外，您會收到通知，新設定最多需要&#x200B;**6小時**&#x200B;才會生效。 若要確認輸入您的沙箱名稱，然後選取&#x200B;**[!UICONTROL 確認]**。
 
 ![確認視窗會顯示有關處理設定前延遲6小時的警告。](../images/rules/confirm-settings.png)
 
