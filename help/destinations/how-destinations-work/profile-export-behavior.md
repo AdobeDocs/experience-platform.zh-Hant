@@ -2,9 +2,9 @@
 title: 設定檔匯出行為
 description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
 workflow-type: tm+mt
-source-wordcount: '2931'
+source-wordcount: '2930'
 ht-degree: 0%
 
 ---
@@ -145,9 +145,11 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 ### 增量檔案匯出 {#incremental-file-exports}
 
-並非設定檔的所有更新都符合增量檔案匯出中包含的設定檔資格。 例如，如果將屬性新增到設定檔或從設定檔中移除，則匯出中不包含該設定檔。 只有已變更`segmentMembership`屬性的設定檔才會包含在匯出的檔案中。 換言之，只有在設定檔成為對象的一部分或從對象中移除時，才會納入增量檔案匯出中。
+並非設定檔的所有更新都符合增量檔案匯出中包含的設定檔資格。 例如，如果將屬性新增到設定檔或從設定檔中移除，則匯出中不包含該設定檔。
 
-同樣地，如果將新的身分（新的電子郵件地址、電話號碼、ECID等）新增至[身分圖表](/help/identity-service/features/identity-graph-viewer.md)中的設定檔，這不會表示有理由將該設定檔納入新的增量檔案匯出。
+但是，當設定檔上的`segmentMembership`屬性變更時，該設定檔將會包含在匯出的檔案中。 換言之，如果設定檔成為對象的一部分或從對象中移除，則會包含在增量檔案匯出中。
+
+同樣地，如果將新的身分識別（新的電子郵件地址、電話號碼、ECID等）新增至[身分圖表](/help/identity-service/features/identity-graph-viewer.md)中的設定檔，則會觸發設定檔納入新的增量檔案匯出中。
 
 如果將新對象新增到目的地對應，這不會影響其他區段的資格和匯出。 匯出排程是按對象個別設定，而檔案會按區段個別匯出，即使對象已新增至相同的目的地資料流亦然。
 
@@ -157,10 +159,10 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 ![匯出具有數個選取屬性的設定。](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* 當設定檔符合或不符合區段的資格時，該設定檔會包含在增量檔案匯出中。
-* 新增新電話號碼至身分圖表時，設定檔是&#x200B;*不*&#x200B;包含在增量檔案匯出中。
-* 當設定檔上的任何對應XDM欄位（例如`xdm: loyalty.points`、`xdm: loyalty.tier`、`xdm: personalEmail.address`）的值更新時，增量檔案匯出中的設定檔是&#x200B;*不*。
-* 每當`segmentMembership.status` XDM欄位在目的地啟用工作流程中對應時，退出對象的設定檔也會包含在匯出的增量檔案中，其狀態為`exited`。
+* 設定檔&#x200B;*符合或不符合區段資格時，會包含在增量檔案匯出中的*。
+* 將新電話號碼新增至身分圖表時，增量檔案匯出中包含設定檔&#x200B;**。
+* 在設定檔上更新任何對應XDM欄位（例如`xdm: loyalty.points`、`xdm: loyalty.tier`、`xdm: personalEmail.address`）的值時，增量檔案匯出中不會包含設定檔&#x200B;**。
+* 每當`segmentMembership.status` XDM欄位在目的地啟用工作流程中對應時，退出對象&#x200B;*的設定檔也會包含在匯出的增量檔案中*，其狀態為`exited`。
 
 >[!ENDSHADEBOX]
 
@@ -184,7 +186,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 | 決定目的地匯出的因素 | 匯出的檔案包含的內容 |
 |---------|----------|
-| <ul><li>在UI或API中設定的匯出排程決定目的地匯出的開始。</li><li>無論設定檔是否符合區段的資格，其對象成員資格的任何變更都會讓設定檔符合納入增量匯出的資格。 設定檔&#x200B;*的屬性或身分對應中的變更*&#x200B;不符合增量匯出中包含的設定檔資格。</li></ul> | <p>對象成員資格已變更的設定檔，以及每個選取匯出之XDM屬性的最新資訊。</p><p>如果在對應步驟中選取了`segmentMembership.status` XDM欄位，則目的地匯出會包含具有已退出狀態的設定檔。</p> |
+| <ul><li>在UI或API中設定的匯出排程決定目的地匯出的開始。</li><li>無論設定檔的對象成員資格有任何變更（符合或不符合區段的資格），或身分對應有任何變更，都會讓設定檔符合納入增量匯出的資格。 設定檔&#x200B;*的屬性變更不符合*&#x200B;包含在增量匯出中的設定檔資格。</li></ul> | <p>對象成員資格已變更的設定檔，以及每個選取匯出之XDM屬性的最新資訊。</p><p>如果在對應步驟中選取了`segmentMembership.status` XDM欄位，則目的地匯出會包含具有已退出狀態的設定檔。</p> |
 
 {style="table-layout:fixed"}
 
