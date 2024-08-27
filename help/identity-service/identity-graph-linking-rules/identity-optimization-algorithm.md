@@ -3,7 +3,7 @@ title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 * 圖表會根據上述順序重新建立。 如果新增連結違反限制條件約束（例如，圖表包含兩個以上具有唯一名稱空間的身分），則會移除連結。
 * 然後，產生的圖形將與您設定的唯一名稱空間限制相容。
 
-![視覺化身分最佳化演演算法的圖表。](../images/ido.png)
+![視覺化身分最佳化演演算法的圖表。](../images/ido_algorithm.png)
 
 ## 身分最佳化演演算法的範例案例
 
