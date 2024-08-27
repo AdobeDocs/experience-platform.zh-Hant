@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -41,18 +41,18 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_datalakeretention"
->title="Datalake保留"
->abstract="顯示每個資料集的目前保留原則。 可以在每個資料集的保留設定中修改此值。 您只能設定ExperienceEvent資料集的保留時間。"
+>title="資料湖保留"
+>abstract="顯示每個資料集目前的保留原則。可在每個資料集的保留設定中修改此值。您只能設定 ExperienceEvent 資料集的保留時間。"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_profileretention"
 >title="設定檔保留"
->abstract="顯示每個資料集的目前保留原則。 可以在每個資料集的保留設定中修改此值。 您只能設定ExperienceEvent資料集的保留時間。"
+>abstract="顯示每個資料集目前的保留原則。可在每個資料集的保留設定中修改此值。您只能設定 ExperienceEvent 資料集的保留時間。"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_datalakesettings_datasetretention"
 >title="資料集保留"
->abstract="Datalake保留設定了資料儲存時間以及在不同服務中何時應刪除資料的規則。 這能確保符合法規、管理儲存成本並維持資料品質。"
+>abstract="資料湖保留會針對不同服務中的資料儲存時間長度以及何時刪除資料等設定規則。此設定可確保遵循法規、管理儲存成本以及維護資料品質。"
 
 
 在[!DNL Experience Platform] UI中，選取左側導覽中的&#x200B;**[!UICONTROL 資料集]**&#x200B;以開啟&#x200B;**[!UICONTROL 資料集]**&#x200B;儀表板。 控制面板會列出貴組織的所有可用資料集。 系統會顯示每個列出資料集的詳細資訊，包括其名稱、資料集所遵守的結構描述，以及最新擷取執行的狀態。

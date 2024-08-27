@@ -130,7 +130,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >id="platform_destinations_activate_exportoptions"
 >title="檔案匯出選項 "
 >abstract="選取&#x200B;**匯出完整檔案**&#x200B;以匯出符合客群資格的所有輪廓的完整快照。選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後符合客群資格的輪廓。<br> 第一個增量檔案匯出包括符合客群資格的所有輪廓，以充當回填。未來的增量檔案僅包括第一次增量檔案匯出後符合客群資格的輪廓。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=zh-Hant#export-incremental-files" text="匯出增量檔案"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="匯出增量檔案"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"

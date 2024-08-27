@@ -11,7 +11,7 @@ ht-degree: 4%
 
 ---
 
-# 監視資料擷取
+# 監視資料攝取
 
 資料內嵌可讓您將資料內嵌至Adobe Experience Platform。 您可以使用批次擷取，這可讓您使用各種檔案型別（例如CSV）插入資料，或是使用串流擷取，可讓您使用串流端點即時擷取您的資料到[!DNL Platform]。
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 >title="擷取率"
 >abstract="每秒成功處理的事件數。"
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=zh-Hant" text="監視 UI 中來源的資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="監視 UI 中來源的資料流"
 
 >[!TIP]
 >

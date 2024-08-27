@@ -65,7 +65,7 @@ ht-degree: 9%
 >id="platform_destinations_custom_personalization_datastream"
 >title="關於資料流 ID"
 >abstract="此選項會確定哪個資料集合資料流中會在頁面回應中包含客群。下拉選單僅顯示已啟用目的地設定的資料流。您必須先設定資料流，然後才能設定目的地。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=zh-Hant" text="了解如何設定資料流"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="了解如何設定資料流"
 
 >[!IMPORTANT]
 > 

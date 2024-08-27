@@ -4,11 +4,11 @@ description: 瞭解如何使用Adobe Experience Platform中的許可權管理員
 source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
 workflow-type: tm+mt
 source-wordcount: '612'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
-# 許可權管理員
+# 權限管理員
 
 >[!NOTE]
 >
@@ -16,12 +16,12 @@ ht-degree: 1%
 
 在[!UICONTROL 許可權管理員]中使用簡單查詢來建立簡明的報告，協助您瞭解存取管理，並節省驗證多個工作流程和詳細程度層級的存取許可權的時間。 您可以利用[!UICONTROL 許可權管理員]來尋找屬於使用者群組且具有特定存取許可權的使用者，以及具有特定標籤的角色。
 
-## 搜尋指定使用者群組內的使用者 {#search-users}
+## 在指定使用者群組中執行使用者搜尋 {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"
->title="許可權管理員"
->abstract="使用頁面上的下拉式選擇器，取得使用者和角色的不同粒度層級的存取層級報表。"
+>title="權限管理員"
+>abstract="使用頁面上的下拉式選單選擇器，可取得不同詳細程度等級之使用者和角色的存取層級報告。"
 <!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 使用下拉式清單，選取屬性&#x200B;**[!UICONTROL 使用者]**。

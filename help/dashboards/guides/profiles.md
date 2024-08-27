@@ -270,7 +270,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 * [[!UICONTROL 無區段設定檔]](#unsegmented-profiles)
 * [[!UICONTROL 未分段的設定檔變化趨勢]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL 依身分識別劃分的無區段設定檔]](#unsegmented-profiles-by-identity)
-* [[!UICONTROL 客群]](#audiences)
+* [[!UICONTROL 對象]](#audiences)
 * [[!UICONTROL 對應到目的地狀態的對象]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL 對象人數]](#audiences-size)
 * [[!UICONTROL 依合併原則區分的對象重疊]](#audience-overlap-by-merge-policy)
@@ -441,7 +441,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 ![The Unsegmented Profiles by Identity widget.](../images/profiles/unsegmented-profiles-by-identity.png) -->
 
-### [!UICONTROL 客群] {#audiences}
+### [!UICONTROL 對象] {#audiences}
 
 此Widget會根據套用至您設定檔資料的所選合併原則，提供準備啟用的對象總數。
 
