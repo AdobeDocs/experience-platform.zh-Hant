@@ -3,7 +3,7 @@ title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
+source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 1%
@@ -53,7 +53,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 ## 程式 {#process}
 
-擷取新身分時，Identity Service會檢查新身分及其對應的名稱空間是否依循唯一的名稱空間設定。 如果依照設定，則內嵌會繼續，而新身分會連結至圖形。 不過，如果未依循設定，則身分最佳化演演算法會：
+擷取新身分時，Identity Service會檢查新身分及其對應的名稱空間是否依循唯一的名稱空間設定。 如果依照設定進行，擷取作業會繼續，而新身分會連結至圖形。 不過，如果未依循設定，則身分最佳化演演算法會：
 
 * 擷取最近的事件，同時將名稱空間優先順序納入考量。
 * 從適當的圖表層移除會合併兩個人員實體的連結。
