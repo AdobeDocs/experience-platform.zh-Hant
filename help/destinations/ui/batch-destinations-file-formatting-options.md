@@ -2,10 +2,10 @@
 description: 瞭解在啟用以檔案為基礎的目的地資料時，如何設定檔案格式選項
 title: 設定檔案型目的地的檔案格式選項
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 19%
+source-wordcount: '1228'
+ht-degree: 17%
 
 ---
 
@@ -68,17 +68,21 @@ ht-degree: 19%
 >title="引號字元"
 >abstract="如果要從匯出的字串中移除雙引號，請使用此選項。查看每個選項的範例文件。"
 
-如果要從匯出的字串中移除雙引號，請使用此選項。可選擇下列選項：
+使用此選項來控制應移除雙引號還是將其保留在匯出的字串中。
+
+可用的選項包括：
 
 * **[!UICONTROL 空字元(\0000)]**。 使用此選項可移除匯出CSV檔案中的雙引號。
-* **[!UICONTROL 雙引號(&quot;)]**。 使用此選項可在匯出的CSV檔案中保留雙引號。
+* **[!UICONTROL 雙引號(&quot;)]**。 當字串值包含分隔字元或雙引號時，請使用此選項。 此選項可協助您在匯出的CSV檔案中保留分隔符號或雙引號，以便您能夠正確識別哪個值對應到哪個欄位。
 
 #### 範例
 
+考慮輸入值`Anna,"Doe,John"`。
+
 檢視以下範例，瞭解UI中每個選取專案的匯出CSV檔案內容。
 
-* 已選取&#x200B;**[!UICONTROL Null字元(\0000)]**&#x200B;的輸出範例： `Test,John,LastName`
-* 選取&#x200B;**[!UICONTROL 雙引號(&quot;)]**&#x200B;的輸出範例： `"Test","John","LastName"`
+* 已選取&#x200B;**[!UICONTROL Null字元(\0000)]**&#x200B;的輸出範例： `Anna,Doe,John`
+* 選取&#x200B;**[!UICONTROL 雙引號(&quot;)]**&#x200B;的輸出範例： `Anna,"Doe,John"`
 
 ### 逸出字元 {#escape-character}
 
