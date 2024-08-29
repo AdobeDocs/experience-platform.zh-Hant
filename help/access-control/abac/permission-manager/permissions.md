@@ -1,9 +1,10 @@
 ---
 title: 以屬性為基礎的存取控制許可權管理員
 description: 瞭解如何使用Adobe Experience Platform中的許可權管理員來產生報表及驗證存取許可權。
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 7%
 
 ---
@@ -40,7 +41,7 @@ ht-degree: 7%
 
 >[!INFO]
 >
->[!UICONTROL 資源]、[!UICONTROL 動作]和[!UICONTROL 沙箱]不是必要欄位。 每個報表只能選取一個[!UICONTROL 資源]。 在新增動作或沙箱後，選取您要移除的選取專案旁的&#x200B;**&#39;x&#39;**，即可移除動作或沙箱。
+>[!UICONTROL 資源]、[!UICONTROL 動作]和[!UICONTROL 沙箱]不是必要欄位。 在新增動作或沙箱後，選取您要移除的選取專案旁的&#x200B;**&#39;x&#39;**，即可移除動作或沙箱。
 
 ![資源、動作、沙箱下拉式清單，以及反白顯示結果](../../images/permission-manager/users-additional-attributes-select.png)
 
