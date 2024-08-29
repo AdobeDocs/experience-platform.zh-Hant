@@ -5,9 +5,9 @@ badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
+source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '791'
 ht-degree: 1%
 
 ---
@@ -33,13 +33,19 @@ Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
 
 以下章節概述從[!DNL Snowflake]資料庫將資料串流到Experience Platform之前要完成的先決條件步驟：
 
+### 更新您的IP位址允許清單
+
+使用來源聯結器之前，必須將IP位址清單新增至允許清單。 未能將您區域特定的IP位址新增到允許清單可能會導致使用來源時的錯誤或效能不佳。 如需詳細資訊，請參閱[IP位址允許清單](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources)頁面。
+
+以下檔案提供如何使用API或使用者介面將[!DNL Amazon Redshift]連線到Platform的資訊：
+
 ### 收集必要的認證
 
 若要讓[!DNL Flow Service]與[!DNL Snowflake]連線，您必須提供下列連線屬性：
 
 | 認證 | 說明 |
 | --- | --- |
-| `account` | 與您的[!DNL Snowflake]帳戶關聯的完整帳戶名稱。 完整的[!DNL Snowflake]帳戶名稱包含您的帳戶名稱、地區和雲端平台。 例如 `cj12345.east-us-2.azure`。如需帳戶名稱的詳細資訊，請參閱此[[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>)。 |
+| `account` | [!DNL Snowflake]帳戶的完整帳戶識別碼（帳戶名稱或帳戶定位器）已附加尾碼`snowflakecomputing.com`。 帳戶識別碼可以是不同的格式： <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com （例如`acme-abc12345.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}.snowflakecomputing.com （例如`acme12345.ap-southeast-1.snowflakecomputing.com`）</li><li>{ACCOUNT_LOCATOR}。{CLOUD_REGION_ID}。{CLOUD}.snowflakecomputing.com （例如`acme12345.east-us-2.azure.snowflakecomputing.com`）</li></ul> 如需詳細資訊，請閱讀[[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>)。 |
 | `warehouse` | [!DNL Snowflake]倉儲管理應用程式的查詢執行程式。 每個[!DNL Snowflake]倉儲彼此獨立，在將資料傳送至Platform時必須個別存取。 |
 | `database` | [!DNL Snowflake]資料庫包含您要帶入Platform的資料。 |
 | `username` | [!DNL Snowflake]帳戶的使用者名稱。 |
@@ -47,6 +53,7 @@ Experience Platform支援從[!DNL Snowflake]資料庫串流資料。
 | `role` | （選用）可以為使用者針對指定連線提供的自訂定義角色。 如果未提供，此值會預設為`public`。 |
 | `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Snowflake]的連線規格識別碼為`51ae16c2-bdad-42fd-9fce-8d5dfddaf140`。 |
 
+{style="table-layout:auto"}
 
 ### 設定角色設定 {#configure-role-settings}
 

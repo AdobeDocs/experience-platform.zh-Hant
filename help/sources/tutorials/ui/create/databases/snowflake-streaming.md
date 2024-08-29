@@ -4,9 +4,9 @@ type: Tutorial
 description: 瞭解如何從Snwoflake資料庫將資料串流到Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 | 認證 | 說明 |
 | --- | --- |
-| 帳戶 | 您的[!DNL Snowflake]帳戶名稱。 |
+| 帳戶 | 您的[!DNL Snowflake]帳戶名稱。 如需帳戶名稱的慣例，請閱讀[[!DNL Snowflake Streaming] 驗證指南](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials)。 |
 | 倉儲 | [!DNL Snowflake]倉儲的名稱。 倉儲管理[!DNL Snowflake]中查詢的執行。 每個[!DNL Snowflake]倉儲彼此獨立，必須個別存取以便Experience Platform資料。 |
 | 資料庫 | [!DNL Snowflake]資料庫的名稱。 資料庫包含您要帶入Experience Platform的資料。 |
 | 綱要 | （選擇性）與您的[!DNL Snowflake]帳戶關聯的資料庫結構描述。 |
@@ -78,7 +78,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->時間戳記欄必須存在於您的來源表格中，才能建立串流資料流。 Experience Platform需有時間戳記，才能知道何時會擷取資料，以及何時會串流增量資料。 您可以回溯性地為現有連線新增時間戳記欄，並建立新的資料流。
+>* 時間戳記欄必須存在於您的來源表格中，才能建立串流資料流。 Experience Platform需有時間戳記，才能知道何時會擷取資料，以及何時會串流增量資料。 您可以回溯性地為現有連線新增時間戳記欄，並建立新的資料流。
+>
+>* 確保範例來源資料檔中的資料欄位大小寫符合[!DNL Snowflake]對於識別碼大小寫解決的指引。 如需詳細資訊，請閱讀識別碼大小寫](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing)上的[[!DNL Snowflake] 檔案。
 
 [!UICONTROL 選取資料]步驟隨即顯示。 在此步驟中，您必須選取要匯入至Experience Platform的資料、設定時間戳記和時區，並提供用於擷取原始資料的範例來源資料檔案。
 
