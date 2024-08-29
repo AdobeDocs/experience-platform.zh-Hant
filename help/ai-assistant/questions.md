@@ -2,7 +2,7 @@
 title: AI助理的問題指南
 description: 請閱讀本檔案以瞭解查詢AI助理時可以使用的範例問題。
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 1%
@@ -33,6 +33,8 @@ ht-degree: 1%
 ## 依實體和產品知識問題的營運深入分析{#objects-questions}
 
 下列問題依資料物件分組，並分類為[營運分析](./home.md#operational-insights)或[產品知識](./home.md#product-knowledge)。
+
+![](./images/prompt.png)
 
 * **對象 — 營運深入分析**
    * 哪些對象使用其他對象？
