@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Landing Zone Source
 description: 瞭解如何將Data Landing Zone連結至Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
+source-git-commit: ecef17ed454c7b1f30543278bba6b0e3b70399da
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,13 @@ ht-degree: 0%
 >
 >此頁面是Experience Platform中[!DNL Data Landing Zone] *來源*&#x200B;聯結器的專屬頁面。 如需有關連線至[!DNL Data Landing Zone] *目的地*&#x200B;聯結器的資訊，請參閱[[!DNL Data Landing Zone] 目的地檔案頁面](/help/destinations/catalog/cloud-storage/data-landing-zone.md)。
 
-[!DNL Data Landing Zone]是Adobe Experience Platform布建的[!DNL Azure Blob]儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Platform。 您有權存取每個沙箱的一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Platform產品和服務授權所提供的資料量為限。 Platform及其應用程式（例如[!DNL Customer Journey Analytics]、[!DNL Journey Orchestration]、[!DNL Intelligent Services]和[!DNL Adobe Real-Time Customer Data Platform]）的所有客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案至容器。
+[!DNL Data Landing Zone]是Adobe Experience Platform布建的[!DNL Azure Blob]儲存體介面，可授予您存取安全、雲端式的檔案儲存設施，以將檔案帶入Platform。 您有權存取每個沙箱的一個[!DNL Data Landing Zone]容器，而且所有容器的資料量總計以您的Platform產品和服務授權所提供的資料量為限。 所有Experience Platform客戶都已為每個沙箱布建一個[!DNL Data Landing Zone]容器。 您可以透過[!DNL Azure Storage Explorer]或命令列介面讀取及寫入檔案至容器。
 
-[!DNL Data Landing Zone]支援SAS式驗證，其資料受到標準[!DNL Azure Blob]存放裝置安全機制的保護。 SAS式驗證可讓您透過公用網際網路連線，安全地存取[!DNL Data Landing Zone]容器。 您不需要變更網路即可存取[!DNL Data Landing Zone]容器，這表示您不需要為網路設定任何允許清單或跨區域設定。 Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案強制嚴謹的七天到期時間。 所有檔案會在七天後刪除。
+[!DNL Data Landing Zone]支援SAS式驗證，其資料受到標準[!DNL Azure Blob]存放裝置安全機制的保護。 SAS式驗證可讓您透過公用網際網路連線，安全地存取[!DNL Data Landing Zone]容器。 您不需要變更網路即可存取[!DNL Data Landing Zone]容器，這表示您不需要為網路設定任何允許清單或跨區域設定。 Experience Platform對上傳至[!DNL Data Landing Zone]容器的所有檔案和資料夾強制實施嚴格的七天到期時間。 所有檔案和資料夾都會在七天後刪除。
+
+>[!NOTE]
+>
+>如果您要從[!DNL Azure Data Factory]存取[!DNL Data Landing Zone]，則必須使用Experience Platform提供的[SAS認證](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials)為[!DNL Data Landing Zone]建立連結的服務。 建立連結的服務後，您就可以選取容器路徑（而非預設的根路徑）來探索[!DNL Data Landing Zone]。
 
 ## 檔案和目錄的命名限制
 
