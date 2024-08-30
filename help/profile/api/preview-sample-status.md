@@ -4,7 +4,7 @@ title: 預覽範例狀態（設定檔預覽） API端點
 description: 即時客戶設定檔API的預覽範例狀態端點可讓您預覽設定檔資料的最新成功範例、依資料集和身分列出設定檔分佈，並產生顯示資料集重疊、身分重疊和未拼接設定檔的報告。
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 1%
@@ -84,7 +84,7 @@ curl -X GET \
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ curl -X GET \
 |---|---|
 | `numRowsToRead` | 範例中合併的設定檔總數。 |
 | `sampleJobRunning` | 當範例工作正在進行時，傳回`true`的布林值。 將批次檔案實際新增至設定檔存放區時，針對該檔案上傳至時發生的延遲提供透明度。 |
-| `cosmosDocCount` | Cosmos中的檔案總數。 |
+| `docCount` | 資料庫中的檔案總數。 |
 | `totalFragmentCount` | 設定檔存放區中的設定檔片段總數。 |
 | `lastSuccessfulBatchTimestamp` | 上次成功的批次擷取時間戳記。 |
 | `streamingDriven` | *此欄位已過時，而且未包含回應的重要意義。* |
