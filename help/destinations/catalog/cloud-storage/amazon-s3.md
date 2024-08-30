@@ -2,10 +2,10 @@
 title: Amazon S3連線
 description: 建立與您的Amazon Web Services (AWS) S3儲存區的即時輸出連線，以定期從Adobe Experience Platform將CSV資料檔案匯出至您自己的S3貯體。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 17%
+source-wordcount: '1499'
+ht-degree: 16%
 
 ---
 
@@ -109,7 +109,7 @@ ht-degree: 17%
 
 如果您不想與 Adobe 共用帳戶金鑰和祕密金鑰，請使用此驗證類型。Experience Platform會改用角色型存取來連線至您的Amazon S3位置。
 
-若要這麼做，您需要在AWS主控台中建立具有[寫入您的Amazon S3儲存貯體的正確必要許可權](#required-s3-permission)的Adobe假設使用者。 在AWS中建立具有Adobe帳戶&#x200B;**[!UICONTROL 670664943635]**&#x200B;的&#x200B;**[!UICONTROL 信任實體]**。 如需詳細資訊，請參閱有關建立角色的[AWS檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)。
+若要這麼做，您需要在AWS主控台中建立具有[寫入您的Amazon S3儲存貯體的正確必要許可權](#minimum-permissions-iam-user)的Adobe假設使用者。 在AWS中建立具有Adobe帳戶&#x200B;**[!UICONTROL 670664943635]**&#x200B;的&#x200B;**[!UICONTROL 信任實體]**。 如需詳細資訊，請參閱有關建立角色的[AWS檔案](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html)。
 
 * **[!DNL Role]**：貼上您在AWS中為Adobe使用者建立之角色的ARN。 模式類似於`arn:aws:iam::800873819705:role/destinations-role-customer`。
 * **[!UICONTROL 加密金鑰]**：您可以選擇附加RSA格式的公開金鑰，將加密新增至匯出的檔案。 在下圖中檢視格式正確的加密金鑰範例。
@@ -162,6 +162,38 @@ ht-degree: 17%
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### IAM角色驗證所需的最低許可權 {#minimum-permissions-iam-user}
+
+將IAM角色設定為客戶時，請確定與角色關聯的許可權原則包含儲存貯體中目標資料夾的必要動作，以及儲存貯體根目錄的`s3:ListBucket`動作。 檢視以下此驗證型別的最低許可權原則範例：
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+```
 
 <!--
 
