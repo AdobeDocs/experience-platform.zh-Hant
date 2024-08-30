@@ -1,7 +1,8 @@
 ---
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
 workflow-type: tm+mt
 source-wordcount: '1502'
 ht-degree: 27%
@@ -86,7 +87,7 @@ Adobe Experience Platform 會提供一組豐富的功能，用於擷取任何類
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **新功能**
 
@@ -114,7 +115,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的對象。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立對象。這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 **更新的功能**
 
