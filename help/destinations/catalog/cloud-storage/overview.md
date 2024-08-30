@@ -3,10 +3,10 @@ keywords: 雲端儲存空間目的地；雲端儲存空間
 title: 雲端儲存空間目的地概觀
 description: Adobe Experience Platform可將您的對象以資料檔案的形式傳送至您的Amazon S3、AWS Kinesis、Azure事件中樞或SFTP雲端儲存位置。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 6%
+source-wordcount: '453'
+ht-degree: 5%
 
 ---
 
@@ -62,6 +62,13 @@ Adobe Experience Platform支援將資料匯出至下列雲端儲存空間目的�
 
 輸入： `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 儲存位置中的資料夾路徑： `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**其他巨集**
+
+與上述範例類似，您可以使用其他巨集在資料夾位置中建立自訂資料夾結構：
+
+* `%DATETIME%`或`%TIMESTAMP%`以根據檔案的匯出時間新增自訂資料夾名稱。 第一個巨集的格式為`MMDDYYYY_HHMMSS`，第二個巨集的格式為UNIX 10位數。
+* `%DESTINATION_NAME%`以根據目的地資料流的名稱新增自訂資料夾。
 
 ## 資料匯出型別 {#export-type}
 
