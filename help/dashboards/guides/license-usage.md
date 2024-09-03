@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
+source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
 workflow-type: tm+mt
-source-wordcount: '2466'
+source-wordcount: '2646'
 ht-degree: 6%
 
 ---
@@ -17,13 +17,15 @@ ht-degree: 6%
 >id="platform_dashboards_licenseUsage"
 >title="授權使用量儀表板"
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
 
 >[!CONTEXTUALHELP]
->id="platform_dashboards_licenseUsage_prediction"
+>id="platform_licenseusage"
 >title="授權使用量儀表板"
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="資料集到期"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="匿名設定檔資料到期"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
@@ -73,6 +75,20 @@ ht-degree: 6%
 此表格指出每個產品的主要量度，因為每個產品都可以追蹤大量量度。
 
 ### [!BADGE Beta]{type=Informative}預計使用量 {#predicted-usage}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="預計使用情況"
+abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
+
+[!CONTEXTUALHELP]
+id="platform_licenseusage_prediction"
+title="預計使用情況"
+abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
+additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
 
 >[!AVAILABILITY]
 >
