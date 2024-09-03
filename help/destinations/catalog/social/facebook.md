@@ -3,10 +3,10 @@ keywords: facebook連線；facebook連線；facebook目的地；facebook；insta
 title: facebook連線
 description: 為您的 Facebook 行銷活動啟用輪廓，以根據雜湊電子郵件進行客群目標定位、個人化和歸併。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 7%
+source-wordcount: '1985'
+ht-degree: 6%
 
 ---
 
@@ -80,7 +80,7 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
   >[!IMPORTANT]
   >
   > 設定Adobe Experience Cloud的許可權時，您必須啟用&#x200B;**管理行銷活動**&#x200B;許可權。 [!DNL Adobe Experience Platform]整合需要許可權。
-* 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請移至`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。
+* 閱讀並簽署[!DNL Facebook Custom Audiences]服務條款。 若要這麼做，請移至`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`，其中`accountID`是您的[!DNL Facebook Ad Account ID]。 簽署服務條款時，請確定URL中有`business_id=206617933627973`區段。
   >[!IMPORTANT]
   >
   >簽署[!DNL Facebook Custom Audiences]服務條款時，請務必使用您在Facebook API中驗證時所用的相同使用者帳戶。
@@ -251,4 +251,10 @@ Adobe Experience Platform UI中的![Facebook目的地。](../../assets/catalog/s
 
 當客戶使用新建立的帳戶，且[!DNL Facebook]許可權尚未啟用時，就會發生此錯誤。
 
+>[!IMPORTANT]
+>
+>請確定您接受`business ID 206617933627973`底下的[!DNL Facebook Custom Audience Terms of Service]，如[帳戶必要條件](#facebook-account-prerequisites)區段中的URL範本所示。
+
 如果您在遵循[Facebook帳戶必要條件](#facebook-account-prerequisites)中的步驟之後收到`400 Bad Request`錯誤訊息，請等幾天讓[!DNL Facebook]許可權生效。
+
+
