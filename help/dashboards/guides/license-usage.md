@@ -4,10 +4,10 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
+source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 6%
+source-wordcount: '2664'
+ht-degree: 5%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 6%
 | **[!UICONTROL 授權金額]** | 產品授權合約中同意的主要量度數量上限的合約值。 |
 | **[!UICONTROL 使用狀況]** | 您使用的主要量度數量。 此值提供該量度在所有沙箱（生產或開發）中的總使用量。 |
 | **[!UICONTROL 使用狀況%]** | 根據您的授權數量使用的主要量度百分比。 |
-| **[!UICONTROL 預測使用量]** | (**Beta**)根據您的授權數量，主要量度的預測使用百分比。 |
+| **[!UICONTROL 預測使用量]** | 根據您的授權數量，主要量度的預測使用百分比。 |
 
 >[!NOTE]
 >
@@ -74,31 +74,27 @@ ht-degree: 6%
 
 此表格指出每個產品的主要量度，因為每個產品都可以追蹤大量量度。
 
-### [!BADGE Beta]{type=Informative}預計使用量 {#predicted-usage}
+### 預計使用情況 {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="預計使用情況"
-abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
+>abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 預期使用量會達到{startDate}到{endDate}之間的預測值。 資料的上次收集日期為{collectionDate}。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="預計使用情況"
-abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
-
->[!AVAILABILITY]
->
-預測未來授權使用的功能目前處於Beta測試階段。 文件和功能可能會有所變更。
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="預計使用情況"
+>abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 預期使用量會達到{startDate}到{endDate}之間的預測值。 資料的上次收集日期為{collectionDate}。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
 
 根據深入的使用預測主動管理並最佳化您的授權資源。 [!UICONTROL 預計使用量]欄可精確地預測您所有購買產品在所有生產及開發沙箱中沙箱層級的未來授權使用量。 此警示功能會根據您截至本日曆月15日的使用情況，提供未來六週內授權使用情況的預測。 預測提供上下限。
 
 >[!IMPORTANT]
 >
-預測每月都會重新整理。 重新整理的日期包含在資訊圖示中(![此資訊圖示。](../images/license-usage/info-icon.png))在欄標題上方。
+>預測每月都會重新整理。 重新整理的日期包含在資訊圖示中(![此資訊圖示。](../images/license-usage/info-icon.png))在欄標題上方。
 
 若要檢視產品權益使用情況的摘要，請從[!UICONTROL 總覽]清單中選取產品。
 
@@ -108,7 +104,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!NOTE]
 >
-請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
+>請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
 
 ![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
 
@@ -120,7 +116,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!NOTE]
 >
-在此上下文中，「幾乎相同」表示值對於小數點兩位數的統計顯著性（例如，0.342的下限和0.344的上限都會四捨五入為34%）。
+>在此上下文中，「幾乎相同」表示值對於小數點兩位數的統計顯著性（例如，0.342的下限和0.344的上限都會四捨五入為34%）。
 
 預測使用功能支援下列量度：
 
@@ -136,23 +132,23 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 ![顯示產品所有可用量度的平台產品摘要檢視。](../images/license-usage/summary-tab.png)
 
-在摘要標籤上，表格包含[!UICONTROL 量度]欄。 這些人類看得懂的說明會指出用於該型別的所有量度 of 沙箱。
+在摘要標籤上，表格包含[!UICONTROL 量度]欄。 這些人類看得懂的說明會指出用於該型別沙箱的所有量度。
 
 ### 選取沙箱 {#select-sandbox}
 
-若要變更生產及開發沙箱型別之間的檢視， select [!UICONTROL 生產沙箱]或[!UICONTROL 開發沙箱]。 選取的沙箱型別 is 由沙箱名稱旁的選項按鈕指示。
+若要變更生產及開發沙箱型別之間的檢視，請選取[!UICONTROL 生產沙箱]或[!UICONTROL 開發沙箱]。 沙箱名稱旁的選項按鈕會指出選取的沙箱型別。
 
-相同型別的所有沙箱的沙箱消耗報告都是累積的。 In 換句話說，選取[!UICONTROL 生產]或[!UICONTROL 開發]會分別提供所有生產或開發沙箱的耗用報告。
+相同型別的所有沙箱的沙箱消耗報告都是累積的。 換句話說，選取[!UICONTROL 生產]或[!UICONTROL 開發]會分別提供所有生產或開發沙箱的耗用報告。
 
 ![Platform產品的摘要檢視，其中生產沙箱和開發沙箱已反白顯示。](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
-必須在沙箱層級指定檢視授權使用儀表板的許可權。 新增許可權至每個個別沙箱，以在控制面板中檢視它們。 此限制將在未來版本中解決。 同時，提供下列因應措施：
+>必須在沙箱層級指定檢視授權使用儀表板的許可權。 新增許可權至每個個別沙箱，以在控制面板中檢視它們。 此限制將在未來版本中解決。 同時，提供下列因應措施：
 >
-1. 在Adobe Admin Console中建立產品設定檔。
-2. 在沙箱類別的許可權下，新增您想在授權使用儀表板中檢視的所有沙箱。
-3. 在「使用者儀表板許可權」類別下方，新增「檢視授權使用儀表板」許可權。
+>1. 在Adobe Admin Console中建立產品設定檔。
+>2. 在沙箱類別的許可權下，新增您想在授權使用儀表板中檢視的所有沙箱。
+>3. 在「使用者儀表板許可權」類別下方，新增「檢視授權使用儀表板」許可權。
 
 ## [!UICONTROL 詳細資料]標籤 {#details-tab}
 
@@ -213,7 +209,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!TIP]
 >
-您可以在銷售訂單中檢查授權權利，以計算「儲存空間津貼」等量度。<br>例如，<ul><li>儲存容量=合約中「授權設定檔」的數量X平均設定檔豐富度</li></ul>
+>您可以在銷售訂單中檢查授權權利，以計算「儲存空間津貼」等量度。<br>例如，<ul><li>儲存容量=合約中「授權設定檔」的數量X平均設定檔豐富度</li></ul>
 
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。 如需每個量度的詳細定義，請參閱適當的產品說明檔案：
 
@@ -228,7 +224,7 @@ additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/p
 
 >[!WARNING]
 >
-授權使用儀表板只會報告貴組織已布建的最新授權。 如果貴組織布建的最新授權未出現在上表中的話，授權使用儀表板可能無法正確顯示。 計畫在未來的版本中，支援單一組織中的其他授權和多個授權。
+>授權使用儀表板只會報告貴組織已布建的最新授權。 如果貴組織布建的最新授權未出現在上表中的話，授權使用儀表板可能無法正確顯示。 計畫在未來的版本中，支援單一組織中的其他授權和多個授權。
 
 ## 後續步驟
 
