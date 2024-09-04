@@ -4,10 +4,10 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
+source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 5%
+source-wordcount: '2626'
+ht-degree: 6%
 
 ---
 
@@ -79,14 +79,14 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="預計使用情況"
->abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 預期使用量會達到{startDate}到{endDate}之間的預測值。 資料的上次收集日期為{collectionDate}。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
+>abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="預計使用情況"
->abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 預期使用量會達到{startDate}到{endDate}之間的預測值。 資料的上次收集日期為{collectionDate}。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
+>abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
 
