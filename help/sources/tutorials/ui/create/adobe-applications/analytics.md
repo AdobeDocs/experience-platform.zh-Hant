@@ -2,10 +2,10 @@
 title: 在使用者介面中建立Adobe Analytics Source連線
 description: 瞭解如何在UI中建立Adobe Analytics來源連線，以將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 4%
+source-wordcount: '2577'
+ht-degree: 3%
 
 ---
 
@@ -301,7 +301,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![貴組織中現有的Adobe Analytics資料流清單。](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-[!UICONTROL 資料集活動]頁面提供從Analytics傳送到Experience Platform的資料進度資訊。 介面會顯示量度，例如擷取的記錄數、擷取的批次數，以及失敗的批次數。
+[!UICONTROL 資料集活動]頁面提供從Analytics傳送到Experience Platform的資料進度資訊。 介面會顯示量度，例如上個月的總記錄數、過去七天的總擷取記錄數，以及上個月的資料大小。
 
 來源會將兩個資料集流程例項化。 一個流程代表回填資料，另一個流程代表即時資料。 回填資料未設定為擷取至即時客戶個人檔案，而是傳送至資料湖，以用於分析和資料科學的使用案例。
 
@@ -309,35 +309,9 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![Adobe Analytics資料之指定目標資料集的資料集活動頁面。](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++使用舊版監控介面檢視個別批次
-
-資料集活動頁面不會顯示個別批次的清單。 若要檢視個別批次的清單，請在資料集活動介面中選取圖表。
-
-![已選取圖表的資料集活動頁面。](../../../../images/tutorials/create/analytics/select-chart.png)
-
-系統會將您帶往「監視」控制面板。 接著，選取&#x200B;**[!UICONTROL 僅擷取失敗：是]**&#x200B;以清除篩選器並檢視個別批次的清單。
-
-![已選取失敗篩選的監視儀表板。](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-介面會更新為個別批次的清單，包括有關其個別量度的資訊。
-
-![批次資料的舊版監視頁面。](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| 量度 | 說明 |
-| --- | --- |
-| 批次 ID | 指定批次的ID。 此值是在內部產生。 |
-| 資料集名稱 | 用於Analytics資料的指定資料集名稱。 |
-| 來源 | 內嵌資料的來源。 |
-| 已更新 | 最近的流量執行反複專案的日期。 |
-| 資料集中的記錄 | 資料集中的記錄總數。 **注意**：此引數偶爾會顯示`in-progress`狀態。 此狀態代表記錄擷取程式尚未完成。 |
-| 新的輪廓片段 | 已擷取的新設定檔片段總數。 |
-| 現有的輪廓片段 | 現有設定檔片段的總數。 |
-| 已拼接身分記錄 | 擷取後拼接在一起的身分記錄總數。 |
-| 輪廓中的記錄 | 擷取到即時客戶個人檔案的記錄總數。 |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>資料集活動頁面不會顯示批次的相關資訊，因為Analytics來源聯結器完全由Adobe管理。 您可以檢視所擷取記錄周圍的量度，以監控資料流程。
 
 ## 後續步驟和其他資源
 

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform發行說明2024年8月
 description: Adobe Experience Platform 2024 年 8 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 27%
+source-wordcount: '1562'
+ht-degree: 26%
 
 ---
 
@@ -132,6 +132,12 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
 
 在Experience Platform中使用來源，從Adobe應用程式或第三方資料來源擷取資料。
+
+**已更新功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| Adobe Analytics來源聯結器的更新 | 資料集活動頁面不會顯示批次相關資訊，因為Analytics Source Connector完全由Adobe管理。 您可以檢視所擷取記錄周圍的量度，以監控資料流程。 如需詳細資訊，請參閱建立Analytics資料的[來源連線](../../sources/tutorials/ui/create/adobe-applications/analytics.md)指南。 |
 
 **已更新檔案**
 
