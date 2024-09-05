@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
+source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1845'
 ht-degree: 4%
 
 ---
@@ -234,6 +234,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 針對資料集匯出的一般可用性版本，請記住下列限制：
 
 * 目前，您只能匯出增量檔案，並且無法為資料集匯出選取結束日期。
+* 即使是小型資料集，Experience Platform也可以匯出多個檔案。 資料集匯出是針對系統間整合而設計，並針對效能而最佳化，因此匯出的檔案數量無法自訂。
 * 匯出的檔案名稱目前無法自訂。
 * 透過API建立的資料集目前無法匯出。
 * UI目前不會阻止您刪除匯出至目的地的資料集。 請勿刪除匯出至目的地的資料集。 [請先從目的地資料流移除資料集](#remove-dataset)，然後再刪除它。
