@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 資料存取總覽
 description: 資料存取可支援Adobe Experience Platform，為使用者提供著重於擷取的Platform資料集可探索性和可存取性的工具。
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -29,4 +29,4 @@ Experience Platform](images/Data_Access_Experience_Platform.png)上的![資料�
 
 ## 訂閱資料擷取事件
 
-[!DNL Platform]透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)讓特定的高值事件可供訂閱。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱[訂閱資料擷取通知](../ingestion/quality/subscribe-events.md)的教學課程。
+[!DNL Platform]透過[Adobe Developer Console](https://www.adobe.com/go/devs_console_ui)讓特定的高值事件可供訂閱。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱[訂閱Adobe事件通知](../observability/alerts/subscribe.md)的教學課程。

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Access API指南
 description: 資料存取API為開發人員提供RESTful介面，著重於Experience Platform內擷取資料集的可發現性和可存取性，以支援Adobe Experience Platform。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 4%
@@ -243,4 +243,4 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## 訂閱資料擷取事件 {#subscribe-to-data-ingestion-events}
 
-您可以透過[Adobe Developer Console](https://developer.adobe.com/console/)訂閱特定的高值事件。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱[訂閱資料擷取通知](../ingestion/quality/subscribe-events.md)的教學課程。
+您可以透過[Adobe Developer Console](https://developer.adobe.com/console/)訂閱特定的高值事件。 例如，您可以訂閱資料擷取事件，以接收潛在延遲和失敗的通知。 如需詳細資訊，請參閱[訂閱Adobe事件通知](../observability/alerts/subscribe.md)的教學課程。
