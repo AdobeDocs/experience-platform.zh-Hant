@@ -2,33 +2,43 @@
 title: Web SDK中的身分資料
 description: 瞭解如何使用Adobe Experience Platform Web SDK擷取和管理Adobe Experience Cloud ID (ECID)。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
+source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
 
+
 # Web SDK中的身分資料
 
-Adobe Experience Platform Web SDK使用[Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md)來追蹤訪客行為。 使用ECID，您可以確保每個裝置都有唯一識別碼，此識別碼可以跨多個工作階段持續存在，繫結特定裝置在Web工作階段期間和之間發生的所有點選。
+Adobe Experience Platform Web SDK使用[Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md)來追蹤訪客行為。 使用[!DNL ECIDs]時，您可以確保每個裝置都有唯一識別碼，此識別碼可以跨多個工作階段持續存在，將發生在網頁工作階段期間或跨網頁工作階段的所有點選繫結至特定裝置。
 
-本檔案概述如何使用Platform Web SDK管理ECID。
+本檔案概述如何使用Web SDK管理[!DNL ECIDs]。
 
-## 使用SDK追蹤ECID
+## 使用Web SDK追蹤ECID {#tracking-ecids-we-sdk}
 
-Platform Web SDK會使用Cookie指派及追蹤ECID，並有多種可用方法來設定這些Cookie的產生方式。
+Web SDK會使用Cookie指派及追蹤[!DNL ECIDs]，並有多種可用方法來設定這些Cookie的產生方式。
 
-當新使用者進入您的網站時，Adobe Experience Cloud Identity Service會嘗試為該使用者設定裝置識別Cookie。 首次造訪訪訪客時，系統會在首次從Adobe Experience PlatformEdge Network回應時產生並傳回ECID。 若為重複訪客，ECID會從`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie擷取並由Edge Network新增至裝載。
+當新使用者進入您的網站時，[Adobe Experience Cloud Identity Service](../../identity-service/home.md)會嘗試為該使用者設定裝置識別Cookie。
 
-設定包含ECID的Cookie後，Web SDK產生的每個後續請求都會在`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie中包含編碼的ECID。
+* 初次造訪的訪客會在來自Experience PlatformEdge Network的第一個回應中產生並傳回[!DNL ECID]。
+* 若為再度訪問的訪客，系統會從`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie擷取[!DNL ECID]，並由Edge Network將其新增至請求承載。
 
-使用Cookie來識別裝置時，您有兩個選項可與Edge Network互動：
+設定包含[!DNL ECID]的Cookie後，Web SDK產生的每個後續請求都會在`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie中包含編碼的[!DNL ECID]。
 
-1. 將資料直接傳送到Edge Network網域`adobedc.net`。 此方法稱為[第三方資料收集](#third-party)。
+使用Cookie來識別裝置時，您有兩種方式可與Edge Network互動：
+
 1. 在您自己的網域上建立指向`adobedc.net`的CNAME。 此方法稱為[第一方資料收集](#first-party)。
+1. 將資料直接傳送到Edge Network網域`adobedc.net`。 此方法稱為[第三方資料收集](#third-party)。
 
 如下節所述，您選擇使用的資料收集方法會直接影響各瀏覽器的Cookie存留期。
+
+### 第一方資料收集 {#first-party}
+
+第一方資料收集涉及透過您自己的網域上指向`adobedc.net`的`CNAME`設定Cookie。
+
+雖然瀏覽器長期以來以與網站擁有端點所設定類似的方式處理`CNAME`端點所設定的Cookie，但瀏覽器最近實作的變更已對`CNAME` Cookie的處理方式造成差異。 雖然目前沒有瀏覽器預設會封鎖第一方`CNAME` Cookie，但有些瀏覽器會將使用`CNAME`設定的Cookie存留期限製為僅七天。
 
 ### 協力廠商資料收集 {#third-party}
 
@@ -36,23 +46,17 @@ Platform Web SDK會使用Cookie指派及追蹤ECID，並有多種可用方法來
 
 近年來，網頁瀏覽器在處理第三方設定的Cookie時，限制日益嚴格。 有些瀏覽器預設會封鎖第三方Cookie。 如果您使用第三方Cookie來識別網站訪客，則這些Cookie的存留期幾乎總是比使用第一方Cookie所能提供的短。 有時第三方Cookie最快會在七天後過期。
 
-此外，當使用第三方資料收集時，某些廣告封鎖程式會完全將流量限制在Adobe資料收集端點。
-
-### 第一方資料收集 {#first-party}
-
-第一方資料收集涉及透過您自己的網域上指向`adobedc.net`的CNAME設定Cookie。
-
-雖然瀏覽器長期以來以與網站擁有端點所設定類似的方式處理CNAME端點所設定的Cookie，但瀏覽器最近實作的變更對CNAME Cookie的處理方式造成差異。 雖然目前沒有瀏覽器預設會封鎖第一方CNAME Cookie，但有些瀏覽器會將使用CNAME設定的Cookie存留期限製為僅七天。
+此外，使用第三方資料收集時，有些廣告封鎖程式會完全將流量限制在Adobe資料收集端點。
 
 ### Cookie有效期限對Adobe Experience Cloud應用程式的影響 {#lifespans}
 
-無論您是選擇第一方還是第三方資料收集，Cookie能持續存在的時間長度會直接影響Adobe Analytics和Customer Journey Analytics中的訪客計數。 此外，在網站上使用Adobe Target或Offer Decisioning時，一般使用者可能會遇到不一致的個人化體驗。
+無論您是選擇第一方還是第三方資料收集，Cookie可儲存的時間長度會直接影響[Adobe Analytics](https://experienceleague.adobe.com/zh-hant/docs/analytics)和[Customer Journey Analytics](https://experienceleague.adobe.com/zh-hant/docs/customer-journey-analytics)中的訪客計數。 此外，在網站上使用[Adobe Target](https://experienceleague.adobe.com/en/docs/target)或[Offer decisioning](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision)時，一般使用者可能會遇到不一致的個人化體驗。
 
 例如，假設您已建立個人化體驗，且使用者在過去七天內檢視過任何專案三次，此體驗會將任何專案提升至首頁。
 
-如果一般使用者一週瀏覽三次，然後七天未返回網站，則該使用者在返回網站時可視為新使用者，因為其Cookie可能已遭到瀏覽器原則刪除（取決於使用者瀏覽網站時所使用的瀏覽器）。 如果發生這種情形，您的Analytics工具會將訪客視為新使用者，即使他們剛在七天多一點前造訪網站。 此外，使用者個人化體驗的任何工作都會重新開始。
+如果一般使用者一週瀏覽三次，然後七天未返回網站，則該使用者在返回網站時可視為新使用者，因為其Cookie可能已遭到瀏覽器原則刪除（取決於使用者瀏覽網站時所使用的瀏覽器）。 如果發生此情況，您的Analytics工具會將訪客視為新使用者，即使他們剛在七天多一點前造訪網站。 此外，使用者個人化體驗的任何工作都會重新開始。
 
-### 第一方裝置ID
+### 第一方裝置ID (FPID) {#fpid}
 
 如上所述，若要考慮Cookie有效期限的影響，您可以選擇設定並管理您自己的裝置識別碼。 如需詳細資訊，請參閱[第一方裝置識別碼](./first-party-device-ids.md)的指南。
 
@@ -147,7 +151,7 @@ alloy("sendEvent", {
 
 使用`identityMap`欄位來識別裝置或使用者，會產生與使用[!DNL ID Service API]中的[`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html)方法相同的結果。 如需詳細資訊，請參閱[ID服務API檔案](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html)。
 
-## 從訪客API移轉至ECID
+## 從訪客API移轉至ECID {#migrating-visitor-api-ecid}
 
 從使用訪客API移轉時，您也可以移轉現有的AMCV Cookie。 若要啟用ECID移轉，請在設定中設定`idMigrationEnabled`引數。 ID移轉可啟用下列使用案例：
 
