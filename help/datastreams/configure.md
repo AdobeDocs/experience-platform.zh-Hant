@@ -2,10 +2,10 @@
 title: 建立和設定資料串流
 description: 了解如何將您的用戶端 Web SDK 整合和其他 Adobe 產品及協力廠商目的地連線。
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
+source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 53%
+source-wordcount: '2813'
+ht-degree: 51%
 
 ---
 
@@ -189,7 +189,7 @@ ht-degree: 53%
 | --- | --- |
 | [!UICONTROL 屬性語彙基元] | [!DNL Target]允許客戶使用屬性控制許可權。 如需有關屬性的詳細資訊，請至[設定企業權限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) (在 [!DNL Target] 文件中)，詳閱指南。<br><br>如需屬性語彙基元，可以在「[!UICONTROL 設定] > [!UICONTROL 屬性]」下的 Adobe Target UI 中找到。 |
 | [!UICONTROL 目標環境 ID] | [Adobe Target 中的環境](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html)可協助您管理全部開發階段的實作。此設定會指定您將使用此資料流的環境。<br><br>最佳做法是針對您的每個 `dev`、`stage` 和 `prod` 資料流環境對此做不同的設定，以保持事情簡單。但是，如果您已經定義了 Adobe Target 環境，則可以使用已定義的環境。 |
-| [!UICONTROL Target 協力廠商 ID 命名空間] | 您要用於此資料流之 `mbox3rdPartyId` 的身分識別命名空間。如需詳細資訊，請至[實作 `mbox3rdPartyId` 和 Web SDK](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md)，詳閱指南。 |
+| [!UICONTROL Target 協力廠商 ID 命名空間] | 您要用於此資料流之 `mbox3rdPartyId` 的身分識別命名空間。如果您使用Adobe Target的[!DNL Customer Attributes]整合，或透過[Adobe Target設定檔API](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api)使用`thirdPartyId`來更新或建立設定檔，您必須提供您選擇的名稱空間值。 您必須在XDM結構描述的`IdentityMap`區段中使用此名稱空間，以傳送用於客戶屬性檔案上傳或設定檔更新API呼叫的`customerID`或`thirdPartyId`。  如需詳細資訊，請至[實作 `mbox3rdPartyId` 和 Web SDK](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md)，詳閱指南。 |
 | [!UICONTROL 屬性語彙基元覆寫] | 在此區段中，您可以定義其他可用來覆寫預設屬性代號的屬性。 |
 
 ### [!UICONTROL 事件轉送]設定
