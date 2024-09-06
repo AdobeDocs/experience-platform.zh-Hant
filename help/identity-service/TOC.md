@@ -5,10 +5,10 @@ breadcrumb-title: 平台 Identity Service 指南
 user-guide-description: 跨裝置和系統橋接客戶身分，以提供個人化的數位體驗。
 feature: Identities
 role: Admin,Developer
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 29%
+source-wordcount: '143'
+ht-degree: 28%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 29%
       - [身分設定](./identity-graph-linking-rules/identity-settings-ui.md)
       - [範例客戶案例](./identity-graph-linking-rules/example-scenarios.md)
       - [圖表設定範例](./identity-graph-linking-rules/example-configurations.md)
+      - [身分圖表連結規則的疑難排解](./identity-graph-linking-rules/troubleshooting.md)
    - [ECID概觀](./features/ecid.md)
 - [實作指南](implementation.md)
 - [身分資料的護欄](guardrails.md)
