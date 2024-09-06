@@ -4,9 +4,9 @@ title: 使用API的Edge區段
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用邊緣區段的範例。
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -41,22 +41,15 @@ Edge區段能讓您在Adobe Experience Platform的邊緣即時評估區段定義
 
 為了使用邊緣區段來評估區段，查詢必須符合以下准則：
 
-| 查詢型別 | 詳細資料 | 範例 | PQL範例 |
-| ---------- | ------- | ------- | ----------- |
-| 單一事件 | 任何會參照沒有時間限制的單一傳入事件的區段定義。 | 將專案新增至購物車的使用者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| 單一設定檔 | 任何參考單一設定檔屬性的區段定義 | 美國居民。 | `homeAddress.countryCode = "US"` |
-| 參考設定檔的單一事件 | 任何參考一或多個設定檔屬性以及沒有時間限制的單一傳入事件的區段定義。 | 居住在美國的人造訪了首頁。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
-| 否定具有設定檔屬性的單一事件 | 任何參考已否定單一傳入事件和一個或多個設定檔屬性的區段定義 | 住在美國且&#x200B;**未**&#x200B;造訪過首頁的人。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
-| 時間範圍內的單一事件 | 任何參照一段時間內單一傳入事件的區段定義。 | 過去24小時內造訪過首頁的人。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
-| 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 | 居住在美國的人在過去24小時內瀏覽了首頁。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)])` |
-| 在時間範圍內否定具有設定檔屬性的單一事件 | 任何區段定義，會參照一或多個設定檔屬性，以及一段時間內否定單一傳入事件。 | 居住在美國且&#x200B;**不**&#x200B;的人在過去24小時內造訪了首頁。 | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 24 hours before now)]))` |
-| 24小時時間範圍內的頻率事件 | 任何分段定義，會參照在24小時之時間範圍內發生特定次數的事件。 | 過去24小時內至少造訪過首頁&#x200B;**5次的人**。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 在24小時時間範圍內具有設定檔屬性的頻率事件 | 任何區段定義，會參照一或多個設定檔屬性，以及在24小時之時間範圍內發生特定次數的事件。 | 過去24小時內至少造訪過首頁&#x200B;**5次的美國人**。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
-| 在24小時時間範圍內具有設定檔的否定頻率事件 | 任何區段定義，會參照一或多個設定檔屬性，以及在24小時之時間範圍內發生特定次數之否定事件。 | 過去24小時內未造訪過首頁&#x200B;**超過**&#x200B;五次的人。 | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] ))` |
-| 24小時內時間設定檔中有多個傳入點選 | 任何會參照24小時內發生之多個事件的區段定義。 | 造訪首頁&#x200B;**或**&#x200B;的人在過去24小時內造訪了結帳頁面。 | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| 在24小時時間範圍內有多個具有設定檔的事件 | 任何區段定義，會參照在24小時之時間範圍內發生的一或多個設定檔屬性和多個事件。 | 來自美國的人員在過去24小時內造訪了首頁&#x200B;**和**&#x200B;造訪了結帳頁面。 | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 24 hours before now)]) and chain(xEvent, timestamp, [X: WHAT(eventType = "checkoutPageView") WHEN(< 24 hours before now)])` |
-| 區段區段 | 包含一或多個批次或串流區段的任何區段定義。 | 居住在美國且處於「現有區段」區段的人員。 | `homeAddress.countryCode = "US" and inSegment("existing segment")` |
-| 參考地圖的查詢 | 任何參照屬性對應的區段定義。 | 已根據外部區段資料新增至購物車的使用者。 | `chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart") WHERE(externalSegmentMapProperty.values().exists(stringProperty="active"))])` |
+| 查詢型別 | 詳細資料 |
+| ---------- | ------- |
+| 單一事件 | 任何會參照沒有時間限制的單一傳入事件的區段定義。 |
+| 相對時間範圍內的單一事件 | 任何參考單一傳入事件的區段定義。 |
+| 具有時間範圍的單一事件 | 任何會參照具有時段之單一傳入事件的區段定義。 |
+| 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 |
+| 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 |
+| 區段區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：**&#x200B;如果使用區段區段，則設定檔取消資格將&#x200B;**每24小時發生一次**。 |
+| 具有設定檔屬性的多個事件 | 任何在過去24小時&#x200B;**內參考多個事件**&#x200B;且（選擇性）具有一或多個設定檔屬性的區段定義。 |
 
 此外，區段&#x200B;**必須**&#x200B;繫結至邊緣上作用中的合併原則。 如需有關合併原則的詳細資訊，請參閱[合併原則指南](../../profile/api/merge-policies.md)。
 

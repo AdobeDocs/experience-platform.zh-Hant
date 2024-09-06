@@ -4,9 +4,9 @@ title: 預覽和預估API端點
 description: 開發區段定義時，您可以使用Adobe Experience Platform中的預估和預覽工具來檢視摘要層級的資訊，協助確保您隔離預期的對象。
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1016'
 ht-degree: 2%
 
 ---
@@ -62,6 +62,8 @@ POST /preview
 
 **要求**
 
++++ 建立預覽的範例要求。
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | 設定檔資料所根據的[!DNL Experience Data Model] (XDM)結構描述類別的名稱。 |
 | `graphType` | 您要從中取得叢集的圖表型別。 支援的值為`none` （不執行身分拼接）和`pdg` （根據您的私人身分圖表執行身分拼接）。 |
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態201 （已建立）以及新建立預覽的詳細資料。
+
++++ 建立預覽時的範例回應。
 
 ```json
 {
@@ -103,6 +109,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `state` | 預覽工作的目前狀態。 最初建立時，它會處於「NEW」狀態。 接著，處理完成前，它會一直處於「執行中」狀態，到時就會變成「RESULT_READY」或「FAILED」。 |
 | `previewId` | 預覽作業的ID，在檢視預估或預覽時用於查詢，如下節所述。 |
+
++++
 
 ## 擷取特定預覽的結果 {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **要求**
 
++++ 擷取預覽的範例要求。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **回應**
+
++++ 擷取預覽時的範例回應。
 
 成功的回應會傳回HTTP狀態200，其中包含指定預覽的詳細資訊。
 
@@ -181,6 +195,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 | -------- | ----------- |
 | `results` | 實體ID及其相關身分的清單。 提供的連結可以使用[設定檔存取API端點](../../profile/api/entities.md)來查詢指定的實體。 |
 
++++
+
 ## 擷取特定估算工作的結果 {#get-estimate}
 
 建立預覽工作後，您可以在GET要求至`/estimate`端點的路徑中使用其`previewId`來檢視有關區段定義的統計資訊，包括預計對象大小、信賴區間和錯誤標準差。
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 下列請求會擷取特定預估工作的結果。
 
++++ 擷取估計作業的範例請求。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態200以及估計工作的詳細資訊。
+
++++ 擷取預估作業時的範例回應。
 
 ```json
 {
@@ -243,9 +265,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | 一個物件陣列，顯示區段內依身分名稱空間劃分的設定檔數量。 依名稱空間區分的設定檔總數（加總針對每個名稱空間顯示的值），可能會高於設定檔計數量度，因為一個設定檔可能會與多個名稱空間建立關聯。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。 |
+| `estimatedNamespaceDistribution` | 一個物件陣列，顯示區段定義中依身分名稱空間劃分的設定檔數目。 依名稱空間區分的設定檔總數（加總針對每個名稱空間顯示的值），可能會高於設定檔計數量度，因為一個設定檔可能會與多個名稱空間建立關聯。 例如，如果客戶在多個頻道上與您的品牌互動，則多個名稱空間會與該個別客戶相關聯。 |
 | `state` | 預覽工作的目前狀態。 狀態將為「RUNNING」，直到處理完成，此時會變成「RESULT_READY」或「FAILED」。 |
 | `_links.preview` | 當`state`為「RESULT_READY」時，此欄位會提供一個URL來檢視預估值。 |
+
++++
 
 ## 後續步驟
 

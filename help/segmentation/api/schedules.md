@@ -4,9 +4,9 @@ title: 排程API端點
 description: 排程是一種工具，可用於每天自動執行一次批次分段工作。
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2104'
 ht-degree: 2%
 
 ---
@@ -29,18 +29,25 @@ ht-degree: 2%
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{START}` | 指定位移將從哪一頁開始。 預設情況下，此值將為0。 |
-| `{LIMIT}` | 指定傳回的排程數目。 預設值為100。 |
+**查詢引數**
+
++++ 可用查詢引數的清單。
+
+| 參數 | 說明 | 範例 |
+| --------- | ----------- | ------- |
+| `start` | 指定位移將從哪一頁開始。 預設情況下，此值將為0。 | `start=5` |
+| `limit` | 指定傳回的排程數目。 預設值為100。 | `limit=20` |
+
++++
 
 **要求**
 
 下列請求將擷取您組織內張貼的最後10個排程。
+
++++ 擷取排程清單的範例要求。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態200，其中包含指定組織的排程清單，格式為JSON。
@@ -57,6 +66,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 >[!NOTE]
 >
 >下列回應已因空間而截斷，且只顯示傳回的第一個排程。
+
++++ 擷取排程清單時的範例回應。
 
 ```json
 {
@@ -102,6 +113,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 | `children.schedule` | 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 |
 | `children.state` | 包含排程狀態的字串。 兩種支援的狀態為「作用中」和「非作用中」。 依預設，狀態會設為「非使用中」。 |
 
++++
+
 ## 建立新排程 {#create}
 
 您可以對`/config/schedules`端點發出POST要求，以建立新的排程。
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **要求**
+
++++ 建立排程的範例請求。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *選擇性。*&#x200B;包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時的期間內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 <br><br>如果未提供此字串，將自動產生系統產生的排程。 |
 | `state` | *選擇性。*&#x200B;包含排程狀態的字串。 兩種支援的狀態為「作用中」和「非作用中」。 依預設，狀態會設為「非使用中」。 |
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態200以及您新建立排程的詳細資料。
+
++++ 建立排程時的範例回應。
 
 ```json
 {
@@ -172,6 +191,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 }
 ```
 
++++
+
 ## 擷取特定排程 {#get}
 
 您可以向`/config/schedules`端點發出GET要求，並在要求路徑中提供您想要擷取之排程的ID，以擷取特定排程的詳細資訊。
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **要求**
 
++++ 擷取排程的範例要求。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態200，其中包含指定排程的詳細資訊。
+
++++ 擷取排程時的範例回應。
 
 ```json
 {
@@ -233,15 +260,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
 | `schedule` | 包含工作排程的字串。 工作只能排程在一天執行一次，這表示您不能將工作排程在24小時內執行超過一次。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。 在此範例中，「0 0 1 * *」表示此排程每天凌晨1:00執行。 |
 | `state` | 包含排程狀態的字串。 兩個支援的狀態是`active`和`inactive`。 依預設，狀態設定為`inactive`。 |
 
++++
+
 ## 更新特定排程的詳細資料 {#update}
 
 您可以向`/config/schedules`端點發出PATCH要求，並在要求路徑中提供您嘗試更新的排程識別碼，以更新特定排程。
 
 PATCH要求可讓您更新個別排程的[狀態](#update-state)或[cron排程](#update-schedule)。
-
-### 更新排程狀態 {#update-state}
-
-您可以使用JSON修補程式操作來更新排程的狀態。 若要更新狀態，請宣告`path`屬性為`/state`並將`value`設定為`active`或`inactive`。 如需JSON修補程式的詳細資訊，請參閱[JSON修補程式](https://datatracker.ietf.org/doc/html/rfc6902)檔案。
 
 **API格式**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | 您要更新之排程的`id`值。 |
 
+>[!BEGINTABS]
+
+>[!TAB 更新排程狀態]
+
+您可以使用JSON修補程式操作來更新排程的狀態。 若要更新狀態，請宣告`path`屬性為`/state`並將`value`設定為`active`或`inactive`。 如需JSON修補程式的詳細資訊，請參閱[JSON修補程式](https://datatracker.ietf.org/doc/html/rfc6902)檔案。
+
 **要求**
+
++++ 更新排程狀態的範例要求。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `path` | 您要修補的值的路徑。 在此情況下，由於您正在更新排程的狀態，因此您必須將`path`的值設為&quot;/state&quot;。 |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 成功的回應會傳回HTTP狀態204 （無內容）。
 
-### 更新cron排程 {#update-schedule}
+>[!TAB 更新cron排程]
 
 您可以使用JSON修補程式操作來更新cron排程。 若要更新排程，請宣告`path`屬性為`/schedule`並將`value`設定為有效的cron排程。 如需JSON修補程式的詳細資訊，請參閱[JSON修補程式](https://datatracker.ietf.org/doc/html/rfc6902)檔案。 如需cron排程的詳細資訊，請閱讀[cron運算式格式](#appendix)的附錄。
 
-**API格式**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | 您要更新之排程的`id`值。 |
+>[!ENDTABS]
 
 **要求**
+
++++ 更新排程的範例請求。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | 您要更新值的路徑。 在此情況下，由於您正在更新cron排程，因此您需要將`path`的值設定為`/schedule`。 |
 | `value` | cron排程的更新值。 此值必須採用cron排程的形式。 在此範例中，排程會在每月的第二日執行。 |
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態204 （無內容）。
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **要求**
 
++++ 刪除排程的範例請求。
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **回應**
 

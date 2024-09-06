@@ -4,9 +4,9 @@ title: 區段匯出作業API端點
 description: 匯出作業是用來將受眾區段成員保留至資料集的非同步程式。 您可以使用Adobe Experience Platform Segmentation Service API中的/export/jobs端點，以程式設計方式擷取、建立和取消匯出作業。
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1678'
 ht-degree: 1%
 
 ---
@@ -33,20 +33,26 @@ ht-degree: 1%
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| 參數 | 說明 |
-| --------- | ----------- |
-| `{LIMIT}` | 指定傳回的匯出工作數目。 |
-| `{OFFSET}` | 指定結果頁面的位移。 |
-| `{STATUS}` | 根據狀態篩選結果。 支援的值為「NEW」、「SUCCEEDED」和「FAILED」。 |
+**查詢引數**
+
++++ 可用查詢引數的清單。
+
+| 參數 | 說明 | 範例 |
+| --------- | ----------- | ------- |
+| `limit` | 指定傳回的匯出工作數目。 | `limit=10` |
+| `offset` | 指定結果頁面的位移。 | `offset=1540974701302_96` |
+| `status` | 根據狀態篩選結果。 支援的值為「NEW」、「SUCCEEDED」和「FAILED」。 | `status=NEW` |
+
++++
 
 **要求**
 
 下列請求將會擷取組織內最後兩個匯出工作。
+
++++ 擷取匯出作業的範例要求。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **回應**
 
 下列回應會根據請求路徑中提供的查詢引數，傳回HTTP狀態200，其中包含已成功完成的匯出作業清單。
+
++++ 擷取匯出作業時的範例回應。
 
 ```json
 {
@@ -207,6 +217,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 | `page` | 請求之匯出作業分頁的相關資訊。 |
 | `link.next` | 匯出作業下一頁的連結。 |
 
++++
+
 ## 建立新的匯出工作 {#create}
 
 您可以對`/export/jobs`端點發出POST要求，以建立新的匯出作業。
@@ -220,6 +232,8 @@ POST /export/jobs
 **要求**
 
 以下請求會建立新的匯出作業，並依據承載中提供的引數加以設定。
+
++++ 建立匯出作業的範例請求。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **（必要）**&#x200B;與要匯出資料的資料集相關聯的結構描述名稱。 |
 | `evaluationInfo.segmentation` | *（選擇性）*&#x200B;布林值，若未提供，預設值為`false`。 值為`true`表示需要對匯出作業執行分段。 |
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態200以及您新建立的匯出工作的詳細資訊。
+
++++ 建立匯出作業時的範例回應。
 
 ```json
 {
@@ -380,6 +398,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     }
 ```
 
++++
+
 ## 擷取特定匯出作業 {#get}
 
 您可以向`/export/jobs`端點發出GET要求，並在要求路徑中提供您要擷取之匯出作業的識別碼，以擷取特定匯出作業的詳細資訊。
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **要求**
 
++++ 擷取匯出作業的範例請求。
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **回應**
 
 成功的回應會傳回HTTP狀態200，其中包含指定匯出工作的詳細資訊。
+
++++ 擷取匯出作業時的範例回應。
 
 ```json
 {
@@ -476,6 +502,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 | `metrics.profileExportTime` | 表示設定檔匯出所需時間的欄位。 |
 | `totalExportedProfileCounter` | 跨所有批次匯出的設定檔總數。 |
 
++++
+
 ## 取消或刪除特定匯出工作 {#delete}
 
 您可以向`/export/jobs`端點發出DELETE要求，並在要求路徑中提供您要刪除之匯出作業的識別碼，以要求刪除指定的匯出作業。
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **要求**
 
++++ 刪除匯出作業的範例請求。
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **回應**
 
