@@ -4,10 +4,10 @@ title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1328'
-ht-degree: 3%
+source-wordcount: '1472'
+ht-degree: 2%
 
 ---
 
@@ -176,6 +176,61 @@ POST /segment/definitions
 
 **要求**
 
+建立新的區段定義時，您可以以`pql/text`或`pql/json`格式建立它。
+
+>[!BEGINTABS]
+
+>[!TAB 使用pql/文字]
+
++++ 建立區段定義的範例要求。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "evaluationInfo": {
+            "batch": {
+                "enabled": true
+            },
+            "continuous": {
+                "enabled": false
+            },
+            "synchronous": {
+                "enabled": false
+            }
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        }
+    }'
+```
+
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `name` | 用於參照區段定義的唯一名稱。 |
+| `description` | （選用）您建立之區段定義的說明。 |
+| `expression` | 包含有關區段定義的欄位資訊的實體。 |
+| `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
+| `expression.format` | 指示值中運算式的結構。 支援的值包括`pql/text`和`pql/json`。 |
+| `expression.value` | 符合`expression.format`所指示型別的運算式。 |
+| `evaluationInfo` | （選用）您正在建立的區段定義型別。 如果要建立批次區段，請將`evaluationInfo.batch.enabled`設定為true。 如果要建立串流區段，請將`evaluationInfo.continuous.enabled`設為true。 如果要建立邊緣區段，請將`evaluationInfo.synchronous.enabled`設為true。 如果留空，區段定義將建立為&#x200B;**批次**&#x200B;區段。 |
+| `schema` | 和區段中的實體相關聯的結構描述。 包含`id`或`name`欄位。 |
+
++++
+
+>[!TAB 使用pql/json]
+
 +++ 建立區段定義的範例要求。
 
 ```shell
@@ -191,8 +246,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
         "description": "Last 30 days",
         "expression": {
             "type": "PQL",
-            "format": "pql/text",
-            "value": "workAddress.country = \"US\""
+            "format": "pql/json",
+            "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"a\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}},{\"nodeType\":\"fieldLookup\",\"fieldName\":\"b\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}]}"
         },
         "evaluationInfo": {
             "batch": {
@@ -215,15 +270,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | 屬性 | 說明 |
 | -------- | ----------- |
 | `name` | 用於參照區段定義的唯一名稱。 |
-| `description` | （選擇性。） 您正在建立的區段定義的說明。 |
-| `evaluationInfo` | （選擇性。） 您正在建立的區段定義型別。 如果要建立批次區段，請將`evaluationInfo.batch.enabled`設定為true。 如果要建立串流區段，請將`evaluationInfo.continuous.enabled`設為true。 如果要建立邊緣區段，請將`evaluationInfo.synchronous.enabled`設為true。 如果留空，區段定義將建立為&#x200B;**批次**&#x200B;區段。 |
+| `description` | （選用）您建立之區段定義的說明。 |
+| `evaluationInfo` | （選用）您正在建立的區段定義型別。 如果要建立批次區段，請將`evaluationInfo.batch.enabled`設定為true。 如果要建立串流區段，請將`evaluationInfo.continuous.enabled`設為true。 如果要建立邊緣區段，請將`evaluationInfo.synchronous.enabled`設為true。 如果留空，區段定義將建立為&#x200B;**批次**&#x200B;區段。 |
 | `schema` | 和區段中的實體相關聯的結構描述。 包含`id`或`name`欄位。 |
 | `expression` | 包含有關區段定義的欄位資訊的實體。 |
 | `expression.type` | 指定運算式型別。 目前僅支援「PQL」。 |
-| `expression.format` | 指示值中運算式的結構。 目前支援的格式如下： <ul><li>`pql/text`：根據已發佈的PQL文法，區段定義的文字表示。  例如 `workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
+| `expression.format` | 指示值中運算式的結構。 |
 | `expression.value` | 符合`expression.format`所指示型別的運算式。 |
 
 +++
+
+>[!ENDTABS]
 
 **回應**
 

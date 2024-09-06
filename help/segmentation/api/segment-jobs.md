@@ -4,9 +4,9 @@ title: 區段作業API端點
 description: Adobe Experience Platform Segmentation Service API中的區段作業端點可讓您以程式設計方式管理組織的區段作業。
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1655'
+source-wordcount: '1648'
 ht-degree: 2%
 
 ---
@@ -922,18 +922,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **回應**
 
-成功的回應會傳回HTTP狀態204以及下列資訊。
-
-+++ 刪除區段作業時的範例回應。
-
-```json
-{
-    "status": true,
-    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
-}
-```
-
-+++
+成功的回應會傳回HTTP狀態204和空白的回應本文。
 
 ## 後續步驟
 
