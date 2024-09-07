@@ -4,9 +4,9 @@ title: 區段定義API端點
 description: Adobe Experience Platform區段服務API中的區段定義端點可讓您以程式設計方式管理組織的區段定義。
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1519'
 ht-degree: 2%
 
 ---
@@ -458,6 +458,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| 屬性 | 說明 |
+| -------- | ----------- |
+| `ids` | 一個陣列，其中包含陳述您要擷取之區段定義的ID的物件。 |
+
 +++
 
 **回應**
@@ -617,6 +621,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **要求**
 
 下列要求會將工作地址國家/地區從美國更新為加拿大。
+
+>[!NOTE]
+>
+>由於此API呼叫&#x200B;**取代**&#x200B;區段定義的內容，請確定&#x200B;**所有**&#x200B;您要保留的欄位都包含在要求內文中。
 
 +++ 更新區段定義的範例要求。
 
