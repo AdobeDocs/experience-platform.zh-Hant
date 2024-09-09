@@ -2,7 +2,8 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 badge: Beta
-source-git-commit: cb0e229ac68f53d33b83d54df4062469252f06a3
+exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
+source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
 workflow-type: tm+mt
 source-wordcount: '2019'
 ht-degree: 0%
