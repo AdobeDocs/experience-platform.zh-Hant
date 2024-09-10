@@ -4,9 +4,9 @@ title: 警報概觀
 description: 了解 Adobe Experience Platform 中的警告，包括定義警告規則的結構。
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '793'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->警報在非生產沙箱中不受支援。 為了訂閱警報，您必須確保使用生產沙箱。 當沙箱重設時，所有訂閱警報都會重設。 刪除沙箱時，所有訂閱警報也會一併清除。
+>由於生產沙箱和開發沙箱都支援警報，因此您可以在任何沙箱中訂閱警報。 沙箱重設時，所有訂閱警報也會重設，而沙箱刪除時，所有訂閱警報都會刪除。
 
 Adobe Experience Platform可讓您訂閱有關Adobe Experience Platform活動的事件型警報。 警示可減少或消除輪詢[[!DNL Observability Insights] API](../api/overview.md)的需求，以檢查工作是否已完成、工作流程中是否已達到特定里程碑，或是否已發生任何錯誤。
 
