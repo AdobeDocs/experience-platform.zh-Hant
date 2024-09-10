@@ -3,10 +3,10 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 6%
+source-wordcount: '4767'
+ht-degree: 5%
 
 ---
 
@@ -212,6 +212,90 @@ ht-degree: 6%
 現在已新增計數函式。 您現在可以選取計數函式及函式值。 以下範例將包含具有至少一次點按的任何事件。
 
 ![會顯示並反白計數函式的清單。](../images/ui/segment-builder/select-count.png)
+
+### 時間限制 {#time-constraints}
+
+時間限制可讓您對以時間為基礎的屬性、事件以及事件之間的順序套用時間限制。
+
+>[!IMPORTANT]
+>
+>如果您在2024年6月之前以「本月」或「今年」時間限制建立區段定義，則需要重新儲存區段定義。 2024年6月之前，「本月」是以30天為基準，而「今年」是以365天為基準。
+
+可用的時間限制清單如下：
+
++++ 可用的時間限制
+
+>[!NOTE]
+>
+>所有時間限制都是以UTC為基礎。
+>
+>此外，如果已啟用[!UICONTROL 忽略年份]核取方塊，則年份將&#x200B;**不會**&#x200B;作為區段定義評估的一部分進行比較。
+
+| 時間限制 | 說明 | 可啟用忽略年份 | 範例 |
+| --------------- | ----------- | ------------------- | ------- |
+| 今天 | 正在比較的屬性或事件必須發生在今天&#x200B;****。 | 是 | ![正在使用的「今天」時間限制範例。](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| 昨天 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在昨天。 | 是 | ![使用的「昨天」時間限制範例。](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| 本月 | 正在比較的屬性或事件必須&#x200B;**發生在這個行事曆月份。** | 是 | ![正在使用的「本月」時間限制範例。](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| 今年 | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在此行事曆年度。 | 無 | ![正在使用的「今年」時間限制範例。](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| 自訂日期 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;在指定的日期發生。 | 是 | ![正在使用的「自訂日期」時間限制範例。](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| 最近 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在最後選擇的時段內。 在評估時間之前，這段時間是&#x200B;**包含**。 | 無 | ![正在使用的「最近」時間限制範例。](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| 從（至） | 正在比較的屬性或事件&#x200B;**必須**&#x200B;發生在所選的兩個行事曆日期內。 此時間週期為兩個日期的&#x200B;**包含**。 | 是，如果自訂日期 | ![正在使用的「從到」範例。](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| 期間 | 進行比較的屬性或事件&#x200B;**必須**&#x200B;發生在選取的月份或年度內。 如果選取月份，您必須同時選擇屬性或事件發生所在的月份和年份。  如果選取年份，您只需要選擇屬性或事件發生的年份。 如果您選取月份，也可以啟用[!UICONTROL 忽略年份]核取方塊。 | 是 | ![正在使用的「During」時間限制範例。](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| 以內(+/-) | 要比較的屬性或事件必須&#x200B;**發生在選取日期後的數天、數週、數月或數年內。**&#x200B;此時間週期為兩個日期的&#x200B;**包含**。 選取的日期可以是今天、昨天或您選擇的其他自訂日期。 | 是 | ![正在使用的「Within」時間限制範例。](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| 早於 | 要比較的屬性或事件&#x200B;**必須**&#x200B;發生在選取的日期之前。 選取的日期可以是您選擇的自訂日期，或是天、周、月或年之間的選擇。 | 是 | ![正在使用的「之前」時間限制範例。](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| 晚於 | 比較的屬性或事件&#x200B;**必須**&#x200B;發生在選取的日期之後。 選取的日期可以是您選擇的自訂日期，或是天、周、月或年之間的選擇。 | 是 | ![正在使用的「After」時間限制範例。](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| 滾動範圍 | 要比較的屬性或事件必須發生在兩個相對日期之間。 日期能以秒、分鐘、小時、天、周、月或年表示。 | 無 | ![正在使用的「滾動範圍」時間限制範例。](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| 下一 | 要比較的屬性或事件必須在下一個選取的時段內發生。 所選的時段包括分鐘、小時、天、周、月和年。 | 無 | ![正在使用的「In next」時間限制範例。](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| 存在 | 屬性已存在。 | 無 | ![正在使用的「存在」時間限制範例。](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| 不存在 | 屬性不存在。 | 無 | ![正在使用的「不存在」時間限制範例。](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+當您在事件上套用時間限制時，可以在畫布層級、卡片層級或事件之間套用。
+
+#### 畫布層級限制
+
+若要套用畫布層級時間限制，請選取出現在事件時間表上方的時鐘圖示。
+
+![畫布層級時間限制選取器已反白顯示。](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+當您在畫布層級套用時間限制時，這會將時間限制套用至對象中的&#x200B;**所有**&#x200B;個事件。
+
+#### 卡片層級限制
+
+若要套用卡片層級限制，請選取要套用時間限制的卡片，接著選取省略符號圖示，然後&#x200B;**[!UICONTROL 套用時間規則]**。 這可讓您在&#x200B;**[!UICONTROL 事件規則]**&#x200B;容器中選取時間限制。
+
+![卡片層級時間限制選擇器已反白顯示。](../images/ui/segment-builder/time-constraints/card-level.png)
+
+當您在卡片層級套用時間限制時，這會針對對象中的&#x200B;**指定**&#x200B;事件套用時間限制。
+
+#### 介於事件條件約束
+
+若要在事件之間套用時間限制，請選取要套用時間限制的兩個事件之間的時鐘圖示。
+
+![事件之間的時間限制選取器會反白顯示。](../images/ui/segment-builder/time-constraints/between-event.png)
+
+當您在事件之間套用時間限制時，這會將時間限制套用至事件之間&#x200B;**的時間**。
+
+此作業的可用時間限制清單與主要時間限制清單不同，如下所示：
+
++++ 可用的時間限制
+
+| 時間限制 | 說明 |
+| --------------- | ----------- |
+| 晚於 | 後一個事件&#x200B;**必須至少**&#x200B;發生在前一個事件之後。 |
+| 範圍 | 兩個事件&#x200B;**必須**&#x200B;發生在時間限制內所列的時段內。 |
+
+>[!NOTE]
+>
+>使用「之後」時間限制時，後一個事件發生的次數可能會超過時間限制內所列的時間量。 >
+>例如，如果您有「頁面檢視」事件和「結帳」事件，且在這兩個事件之間放置「1小時後」時間限制，則在「頁面檢視」事件發生2小時後，含有「結帳」事件的區段定義即符合條件。
+>
+>此外，這兩個時間限制可以相互協調使用。
+>
+>例如，如果您有「頁面檢視」事件和「結帳」事件，並放入「1小時後」和「24小時內」時間限制，則在「頁面檢視」事件後12小時含有「結帳」事件的區段定義即符合條件，但在「頁面檢視」事件後36小時含有「結帳」事件的區段定義即不符合條件。
+
++++
 
 ## 容器
 
