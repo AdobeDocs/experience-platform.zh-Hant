@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
 source-wordcount: '2641'
-ht-degree: 6%
+ht-degree: 12%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 6%
 >id="platform_dashboards_licenseUsage"
 >title="授權使用量儀表板"
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="授權使用量儀表板"
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
@@ -79,21 +79,21 @@ ht-degree: 6%
 
 此表格指出每個產品的主要量度，因為每個產品都可以追蹤大量量度。
 
-### 預計使用情況 {#predicted-usage}
+### 預估使用量 {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
->title="預計使用情況"
->abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
+>title="預估使用量"
+>abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集或匿名設定檔資料期限。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
->title="預計使用情況"
->abstract="預測是根據過去6-7個月的使用情況，並在每月15日產生。 請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。 若要減少使用量，您可以設定沙箱和資料集的資料集或假名設定檔資料有效期。"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集到期"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="假名設定檔資料有效期"
+>title="預估使用量"
+>abstract="根據過去 6 至 7 個月的使用量進行預估，並於每月 15 日產生預估結果。請注意，授權用量預估是根據過去使用量計算的近似值。您有責任了解組織的實際使用量，並確保使用量不會超過組織獲得 Adobe 授權的範圍。若要減少使用量，您可以針對沙箱和資料集設定資料集或匿名設定檔資料期限。"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
+>additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名設定檔資料期限"
 
 根據深入的使用預測主動管理並最佳化您的授權資源。 [!UICONTROL 預計使用量]欄可精確地預測您所有購買產品在所有生產及開發沙箱中沙箱層級的未來授權使用量。 此警示功能會根據您截至本日曆月15日的使用情況，提供未來六週內授權使用情況的預測。 預測提供上下限。
 
@@ -109,7 +109,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->請注意，授權使用量預測是根據過去使用量的近似值。 您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
+>請注意，授權用量預估是根據過去使用量計算的近似值。您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
 
 ![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
 

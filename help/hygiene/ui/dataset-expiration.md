@@ -9,7 +9,7 @@ ht-degree: 18%
 
 ---
 
-# 自動化資料集到期 {#dataset-expiration}
+# 自動化資料集期限 {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"

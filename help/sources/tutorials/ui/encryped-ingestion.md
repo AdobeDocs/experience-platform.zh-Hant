@@ -8,7 +8,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: b4545943abbb68d36a64935feb4466d075331504
 workflow-type: tm+mt
 source-wordcount: '617'
-ht-degree: 7%
+ht-degree: 13%
 
 ---
 
@@ -56,8 +56,8 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_encryptionKeyId"
->title="加密金鑰ID"
->abstract="提供與用來加密來源資料的加密金鑰對應的加密金鑰ID。"
+>title="加密金鑰 ID"
+>abstract="提供加密金鑰 ID，且此 ID 必須與用來加密來源資料的加密金鑰對應。"
 
 * 在Platform UI中，導覽至來源工作區，然後從頂端標題中選取[!UICONTROL 金鑰組]。
 * 系統會將您帶到一個頁面，其中顯示貴組織中現有加密金鑰組的清單。 此頁面提供指定金鑰的標題、ID、型別、加密演演算法、到期日和狀態的資訊。 若要建立新的金鑰組，請選取&#x200B;**[!UICONTROL 建立金鑰]**。
@@ -67,8 +67,8 @@ ht-degree: 7%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"
->title="簽署驗證金鑰ID"
->abstract="提供與您的已簽署加密來源資料對應的簽署驗證金鑰ID。"
+>title="簽章驗證金鑰 ID"
+>abstract="提供與您已簽署的加密來源資料對應的簽章驗證金鑰 ID。"
 
 ## 收錄加密的資料 {#ingest-encrypted-data}
 
