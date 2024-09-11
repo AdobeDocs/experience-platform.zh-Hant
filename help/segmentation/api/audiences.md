@@ -3,9 +3,9 @@ title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,10 @@ ht-degree: 2%
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>如果您不使用任何查詢引數來使用此端點，則不會傳回非作用中對象&#x200B;****。 不過，如果您將此端點與`property=audienceId`查詢引數搭配使用，將會傳回非作用中對象&#x200B;****。
 
 擷取對象清單時，可以使用以下查詢引數：
 
