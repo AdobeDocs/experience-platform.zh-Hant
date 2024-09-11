@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 存取控制概覽
 description: Adobe Experience Platform的存取控制可透過Adobe Admin Console提供。 此功能運用Admin Console中的產品設定檔，將使用者與許可權和沙箱連結。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
+source-git-commit: 5d5c57dfb9e4abda6b1bca96147a95d063bc17c6
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -116,7 +116,11 @@ Experience Platform隨附兩個預先設定的預設角色。 下表概述每個
 | [!DNL Identity Management] | [!UICONTROL 管理身分識別名稱空間] | 讀取、建立、編輯和刪除身分名稱空間的存取權。 |
 | [!DNL Identity Management] | [!UICONTROL 檢視身分識別名稱空間] | 身分識別名稱空間的唯讀存取權。 |
 | [!DNL Identity Management] | [!UICONTROL 檢視身分圖表] | 身分圖表的唯讀存取權。 |
-| [!DNL Profile Management] | [!UICONTROL 管理設定檔] | 存取讀取、建立、編輯和刪除用於客戶設定檔的資料集。 對可用設定檔的唯讀存取權。 |
+| [!DNL Intelligent Services] | [!UICONTROL 檢視Attribution AI] | Attribution AI設定和深入分析的唯讀存取權。 |
+| [!DNL Intelligent Services] | [!UICONTROL 管理Attribution AI] | 讀取、建立、編輯和刪除Attribution AI模型的存取權。 |
+| [!DNL Intelligent Services] | [!UICONTROL 檢視Customer AI] | 存取以讀取或檢視Customer AI模型。 |
+| [!DNL Intelligent Services] | [!UICONTROL 管理Customer AI] | 存取以建立、更新、刪除、啟用或停用Customer AI模型。 |
+| [!DNL Profile Management] | [!UICONTROL 管理設定檔] | 從多個來源擷取資料、為個別客戶建立強大的設定檔，並將設定檔啟用的資料儲存在Data Lake和即時客戶設定檔資料存放區。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視設定檔] | 對可用設定檔的唯讀存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 管理區段] | 讀取、建立、編輯和刪除區段的存取權。 |
 | [!DNL Profile Management] | [!UICONTROL 檢視區段] | 可用區段的唯讀存取權。 |
