@@ -2,9 +2,9 @@
 title: 加密的資料擷取
 description: 瞭解如何使用API透過雲端儲存批次來源內嵌加密的檔案。
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1806'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 加密的資料擷取程式如下：
 
-1. [使用Experience PlatformAPI建立加密金鑰組](#create-encryption-key-pair)。 加密金鑰組由私密金鑰和公開金鑰組成。 建立後，您可以複製或下載公開金鑰，以及其對應的公開金鑰ID和到期時間。 在此過程中，私密金鑰將由Experience Platform儲存在安全的儲存庫中。 **注意：**&#x200B;回應中的公開金鑰是Base64編碼的，必須在使用之前解密。
+1. [使用Experience PlatformAPI建立加密金鑰組](#create-encryption-key-pair)。 加密金鑰組由私密金鑰和公開金鑰組成。 建立後，您可以複製或下載公開金鑰，以及其對應的公開金鑰ID和到期時間。 在此過程中，私密金鑰將由Experience Platform儲存在安全的儲存庫中。 **注意：**&#x200B;回應中的公開金鑰是Base64編碼的，在使用之前必須先解碼。
 2. 使用公開金鑰來加密您要擷取的資料檔案。
 3. 將加密檔案放入雲端儲存空間。
 4. 加密檔案準備就緒後，[為您的雲端儲存空間來源](#create-a-dataflow-for-encrypted-data)建立來源連線和資料流。 在流程建立步驟期間，您必須提供`encryption`引數並包含您的公開金鑰ID。
@@ -64,6 +64,10 @@ ht-degree: 3%
 
 ## 建立加密金鑰組 {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>加密金鑰是特定沙箱專用。 因此，如果您想要將加密資料內嵌在組織內的不同沙箱中，必須建立新的加密金鑰。
+
 將加密資料擷取至Experience Platform的第一步，是透過向[!DNL Connectors] API的`/encryption/keys`端點發出POST要求來建立您的加密金鑰組。
 
 **API格式**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | 參數 | 說明 |
 | --- | --- |
+| `name` | 加密金鑰組的名稱。 |
 | `encryptionAlgorithm` | 您使用的加密演演算法型別。 支援的加密型別為`PGP`和`GPG`。 |
 | `params.passPhrase` | 密碼可為您的加密金鑰提供額外的保護層。 建立後，Experience Platform會將複雜密碼與公開金鑰儲存在不同的安全儲存庫中。 您必須提供非空白字串作為複雜密碼。 |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++檢視範例回應
 
-成功的回應會傳回您的加密演演算法、公開金鑰、公開金鑰ID，以及您金鑰對應的到期時間。
+成功的回應會傳回您的加密演演算法、名稱、公開金鑰、公開金鑰ID、金鑰型別，以及金鑰的對應到期時間。
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++檢視範例回應
 
-成功的回應會傳回您的加密演演算法、公開金鑰、公開金鑰ID，以及您金鑰對應的到期時間。
+成功的回應會傳回您的加密演演算法、名稱、公開金鑰、公開金鑰ID、金鑰型別，以及金鑰的對應到期時間。
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | 屬性 | 說明 |
 | --- | --- |
 | `publicKeyId` | 此公開金鑰ID會傳回，以回應與Experience Platform共用您的客戶自控金鑰。 在為已簽署和加密的資料建立資料流時，您可以提供此公開金鑰ID作為簽署驗證金鑰ID。 |
+
++++
+
+### 擷取客戶管理的金鑰組
+
+若要擷取您的客戶自控金鑰，請向`/customer-keys`端點發出GET要求。
+
+**API格式**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**要求**
+
++++檢視範例請求
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**回應**
+
++++檢視範例回應
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
