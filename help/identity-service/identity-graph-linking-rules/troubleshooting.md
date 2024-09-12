@@ -3,9 +3,9 @@ title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
+source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '3181'
 ht-degree: 0%
 
 ---
@@ -132,12 +132,42 @@ ht-degree: 0%
 * [設定檔](../../xdm/classes/experienceevent.md)可能發生驗證失敗。
    * 例如，體驗事件必須同時包含`_id`和`timestamp`。
    * 此外，每個事件（記錄）的`_id`必須是唯一的。
+* 具有最高優先順序的名稱空間是空字串。
 
-在名稱空間優先順序的情境下，設定檔將拒絕任何包含兩個或多個具有最高名稱空間優先順序的身分的事件。 例如，如果GAID未標籤為唯一的名稱空間，且有兩個身分都具有GAID名稱空間和不同的身分值傳入，則設定檔不會儲存任何事件。
+在名稱空間優先順序的情境下，設定檔將拒絕：
+
+* 任何包含兩個以上具有最高名稱空間優先順序的身分識別的事件。 例如，如果GAID未標籤為唯一的名稱空間，且有兩個身分都具有GAID名稱空間和不同的身分值傳入，則設定檔不會儲存任何事件。
+* 任何具有最高優先順序的名稱空間是空字串的事件。
 
 **疑難排解步驟**
 
-若要解決此錯誤，請閱讀上述指南中概述的疑難排解步驟，針對[有關未擷取至Identity服務的資料進行疑難排解](#my-identities-are-not-getting-ingested-into-identity-service)。
+如果您的資料已傳送至Data Lake但未傳送設定檔，而您認為這是因為在單一事件中傳送了兩個以上具有最高名稱空間優先順序的身分，則可執行下列查詢以驗證針對相同名稱空間傳送了兩個不同的身分值：
+
+>[!TIP]
+>
+>在下列查詢中，您必須：
+>
+>* 以傳送身分的路徑取代`_testimsorg.identification.core.email`。
+>* 以最高優先順序的名稱空間取代`Email`。 這是未擷取的相同名稱空間。
+>* 以您要查詢的資料集取代`dataset_name`。
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+您也可以執行以下查詢來檢查對設定檔的擷取是否由於最高的名稱空間具有空白字串而並未發生：
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+這兩個查詢假設一個身分是從identityMap傳送，另一個身分是從identityDescriptor傳送。 **注意**：在Experience Data Model (XDM)結構描述中，身分描述項是標示為身分的欄位。
 
 ### 我的體驗事件片段已擷取，但設定檔中的主要身分有「錯誤」
 
@@ -296,3 +326,79 @@ ORDER BY timestamp desc
 >[!TIP]
 >
 >如果沙箱未針對共用裝置臨時方法啟用，則上述兩個查詢將產生預期結果，且行為將與身分圖表連結規則不同。
+
+## 常見問題 {#faq}
+
+本節概述有關身分圖表連結規則常見問題的解答清單。
+
+### 身分最佳化演演算法 {#identity-optimization-algorithm}
+
+#### 我的每個企業單位(B2C CRMID、B2B CRMID)都有一個CRMID，但我所有的設定檔中沒有唯一的名稱空間。 如果我將B2C CRMID和B2B CRMID標示為唯一，並啟用我的身分設定，會發生什麼事？
+
+此情境不受支援。 因此，當使用者使用其B2C CRMID登入，而另一個使用者使用其B2B CRMID登入時，您可能會看到圖形摺疊。 如需詳細資訊，請參閱實作頁面中[單一人員名稱空間需求](./configuration.md#single-person-namespace-requirement)一節。
+
+#### 身分最佳化演演算法是否會「修正」現有的收合圖形？
+
+現有收合的圖形只有在您儲存新設定後更新時，才會受到圖形演演算法的影響（「固定」）。
+
+#### 如果兩個人使用同一部裝置登入和登出，事件會發生什麼事？ 所有事件是否會轉移給最後驗證的使用者？
+
+* 匿名事件（在即時客戶個人檔案上以ECID為主要身分的事件）將傳輸給最後驗證的使用者。 這是因為ECID將連結至上次驗證使用者（位於Identity Service）的CRMID。
+* 所有已驗證的事件（CRMID定義為主要身分的事件）將保留在人員身分。
+
+如需詳細資訊，請閱讀[判斷體驗事件](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events)的主要身分的指南。
+
+#### 當ECID從一個人傳輸至另一個人時，Adobe Journey Optimizer中的歷程會受到哪些影響？
+
+上次驗證使用者的CRMID將會連結至ECID （共用裝置）。 ECID可根據使用者行為從一個人重新指派給另一個人。 影響將取決於如何建構歷程，因此客戶在開發沙箱環境中測試歷程以驗證行為非常重要。
+
+重點如下：
+
+* 設定檔進入歷程後，ECID重新指派不會導致設定檔在歷程中結束。
+   * 圖表變更不會觸發歷程退出。
+* 如果設定檔不再與ECID相關聯，則在使用對象資格的條件時，這可能會導致變更歷程路徑。
+   * ECID移除可能會變更與設定檔相關聯的事件，進而導致對象資格變更。
+* 歷程的重新進入取決於歷程屬性。
+   * 如果您停用重新進入歷程，當設定檔從該歷程退出時，相同的設定檔將在91天內不會重新進入（根據全域歷程逾時）。
+* 如果歷程以ECID名稱空間開始，則進入的設定檔和收到動作的設定檔(例如 電子郵件、選件)可能會因歷程的設計方式而異。
+   * 例如，如果動作之間存在等待條件，且在等待期間會傳輸ECID，則可能會鎖定不同的設定檔。
+   * 透過此功能，ECID不再一律與一個設定檔相關聯。
+   * 建議使用人員名稱空間(CRMID)開始歷程。
+
+### 名稱空間優先順序
+
+#### 我已啟用我的身分設定。 如果在啟用設定後新增自訂名稱空間，我的設定會發生什麼事？
+
+名稱空間有兩個「貯體」：人員名稱空間和裝置/Cookie名稱空間。 新建立的自訂名稱空間在每個「貯體」中的優先順序最低，因此這個新的自訂名稱空間不會影響現有的資料擷取。
+
+#### 如果即時客戶設定檔不再使用identityMap上的「主要」標幟，是否仍需傳送此值？
+
+是，identityMap上的「主要」旗標已由其他服務使用。 如需詳細資訊，請閱讀[名稱空間優先順序對其他Experience Platform服務的影響](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services)的指南。
+
+#### 名稱空間優先順序是否會套用至即時客戶個人檔案中的個人檔案記錄資料集？
+
+不可以。 名稱空間優先順序僅適用於使用XDM ExperienceEvent類別的體驗事件資料集。
+
+#### 此功能如何與每個圖表50個身分的身分圖表護欄搭配運作？ 名稱空間優先順序是否會影響此系統定義的護欄？
+
+身分最佳化演演算法將先套用，以確保個人實體表示。 之後，如果圖表嘗試超過[身分圖表護欄](../guardrails.md) （每個圖表50個身分），則會套用此邏輯。 名稱空間優先順序不會影響50身分/圖表護欄的刪除邏輯。
+
+### 測試
+
+#### 我應該在開發沙箱環境中測試哪些情境？
+
+一般而言，在開發沙箱上測試應模擬您打算在生產沙箱上執行的使用案例。 請參考下表以瞭解進行全面測試時需驗證的一些關鍵區域：
+
+| 測試案例 | 測試步驟 | 預期結果 |
+| --- | --- | --- |
+| 精確的個人實體表示 | <ul><li>模擬匿名瀏覽</li><li>模擬兩個使用者(John、Jane)使用相同裝置登入</li></ul> | <ul><li>John和Jane都應該與其屬性和已驗證事件相關聯。</li><li>最後驗證的使用者應與匿名瀏覽事件相關聯。</li></ul> |
+| 區段 | 建立四個區段定義（**注意**：每一對區段定義都應該使用批次評估一個區段定義，並使用另一個串流評估。） <ul><li>區段定義A：根據John已驗證事件的區段資格。</li><li>區段定義B：根據Jane的已驗證事件的區段資格。</li></ul> | 無論共用裝置情況為何，John和Jane都應該符合各自的區段資格。 |
+| Adobe Journey Optimizer上的對象資格/單一歷程 | <ul><li>從對象資格活動（例如上面建立的串流細分）開始建立歷程。</li><li>建立以單一事件開始的歷程。 此單一事件應為已驗證的事件。</li><li>建立這些歷程時，您必須停用重新進入。</li></ul> | <ul><li>無論共用裝置情況為何，John和Jane都應觸發其應輸入的個別歷程。</li><li>當ECID傳回給John和Jane時，他們不應重新進入歷程。</li></ul> |
+
+{style="table-layout:auto"}
+
+#### 如何驗證此功能是否如預期運作？
+
+使用[圖表模擬工具](./graph-simulation.md)來驗證功能是否可在個別的圖表層級運作。
+
+若要在沙箱層級驗證功能，請參閱身分儀表板中具有多個名稱空間的[!UICONTROL 圖表計數]區段。

@@ -1,16 +1,16 @@
 ---
-title: 身分圖表連結規則設定指南
+title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1361'
+ht-degree: 2%
 
 ---
 
-# 身分圖表連結規則設定指南
+# 身分圖表連結規則的實作指南
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 請參閱本節，瞭解實作身分設定和唯一名稱空間時可參考的其他資訊。
 
-### 共用裝置情境 {#shared-device-scenario}
+### 單一人員名稱空間需求 {#single-person-namespace-requirement}
 
 您必須確保在代表個人的所有設定檔中使用單一名稱空間。 如此一來，Identity Service就能偵測指定圖表中的適當人員識別碼。
 
