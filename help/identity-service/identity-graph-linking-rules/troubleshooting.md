@@ -3,9 +3,9 @@ title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
+source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -333,6 +333,8 @@ ORDER BY timestamp desc
 
 ### 身分最佳化演演算法 {#identity-optimization-algorithm}
 
+請閱讀本節，瞭解有關[身分最佳化演演算法](./identity-optimization-algorithm.md)的常見問題解答。
+
 #### 我的每個企業單位(B2C CRMID、B2B CRMID)都有一個CRMID，但我所有的設定檔中沒有唯一的名稱空間。 如果我將B2C CRMID和B2B CRMID標示為唯一，並啟用我的身分設定，會發生什麼事？
 
 此情境不受支援。 因此，當使用者使用其B2C CRMID登入，而另一個使用者使用其B2B CRMID登入時，您可能會看到圖形摺疊。 如需詳細資訊，請參閱實作頁面中[單一人員名稱空間需求](./configuration.md#single-person-namespace-requirement)一節。
@@ -367,6 +369,8 @@ ORDER BY timestamp desc
 
 ### 名稱空間優先順序
 
+請閱讀本節，瞭解有關[名稱空間優先順序](./namespace-priority.md)的常見問題解答。
+
 #### 我已啟用我的身分設定。 如果在啟用設定後新增自訂名稱空間，我的設定會發生什麼事？
 
 名稱空間有兩個「貯體」：人員名稱空間和裝置/Cookie名稱空間。 新建立的自訂名稱空間在每個「貯體」中的優先順序最低，因此這個新的自訂名稱空間不會影響現有的資料擷取。
@@ -384,6 +388,8 @@ ORDER BY timestamp desc
 身分最佳化演演算法將先套用，以確保個人實體表示。 之後，如果圖表嘗試超過[身分圖表護欄](../guardrails.md) （每個圖表50個身分），則會套用此邏輯。 名稱空間優先順序不會影響50身分/圖表護欄的刪除邏輯。
 
 ### 測試
+
+請參閱本節，以取得有關測試和偵錯身分圖表連結規則中功能的常見問題解答。
 
 #### 我應該在開發沙箱環境中測試哪些情境？
 
