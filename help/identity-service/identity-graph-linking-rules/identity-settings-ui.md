@@ -3,9 +3,9 @@ title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
 badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,10 @@ ht-degree: 0%
 
 開始使用身分設定前，請先閱讀下列檔案：
 
-* [身分圖表連結規則設定指南](./configuration.md)
+* [身分圖表連結規則](./overview.md)
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [實作指南](./implementation-guide.md)
+* [圖表設定範例](./example-configurations.md)
 * [名稱空間優先順序](./namespace-priority.md)
 * [圖表模擬](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ ht-degree: 0%
 
 ## 後續步驟
 
-您現在已設定名稱空間優先順序，並使用身分設定UI頁面指定唯一的名稱空間。 如需詳細資訊，請閱讀[身分圖表連結規則總覽](./overview.md)。
+如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
+
+* [身分圖表連結規則概觀](./overview.md)
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [實作指南](./implementation-guide.md)
+* [圖表設定範例](./example-configurations.md)
+* [疑難排解和常見問答( FAQ)](./troubleshooting.md)
+* [名稱空間優先順序](./namespace-priority.md)
+* [圖表模擬UI](./graph-simulation.md)

@@ -3,7 +3,7 @@ title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '3226'
 ht-degree: 0%
@@ -176,7 +176,7 @@ ht-degree: 0%
 * 設定並儲存指定沙箱的[身分設定](./identity-settings-ui.md)後，設定檔就會使用[名稱空間優先順序](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events)來判斷主要身分。 在identityMap的情況下，設定檔將不再使用`primary=true`旗標。
 * 雖然設定檔將不再參考此標幟，但Experience Platform上的其他服務可能會繼續使用`primary=true`標幟。
 
-為了將[已驗證的使用者事件](configuration.md#ingest-your-data)繫結至人員名稱空間，所有已驗證的事件都必須包含人員名稱空間(CRMID)。 這表示即使使用者登入後，每個已驗證的事件上仍必須存在人員名稱空間。
+為了將[已驗證的使用者事件](implementation-guide.md#ingest-your-data)繫結至人員名稱空間，所有已驗證的事件都必須包含人員名稱空間(CRMID)。 這表示即使使用者登入後，每個已驗證的事件上仍必須存在人員名稱空間。
 
 在設定檔檢視器中查詢設定檔時，您可能會繼續看到`primary=true`個「事件」標幟。 不過，此專案會被忽略，且不會由設定檔使用。
 
@@ -272,9 +272,9 @@ ORDER BY timestamp desc
 請參閱有關[身分最佳化演演算法](./identity-optimization-algorithm.md)的檔案，以及支援的圖表結構型別。
 
 * 閱讀[圖形組態指南](./example-configurations.md)以取得支援的圖形結構範例。
-* 您也可以閱讀[實作指南](./configuration.md#appendix)，以取得不支援的圖表結構範例。 有兩種情況可能發生：
+* 您也可以閱讀[實作指南](./implementation-guide.md#appendix)，以取得不支援的圖表結構範例。 有兩種情況可能發生：
    * 您的所有設定檔中沒有單一名稱空間。
-   * 發生[「擱置識別碼」](./configuration.md#dangling-loginid-scenario)個狀況。 在此案例中，Identity Service無法判斷暫留ID是否與圖形中的任何個人實體相關聯。
+   * 發生[「擱置識別碼」](./implementation-guide.md#dangling-loginid-scenario)個狀況。 在此案例中，Identity Service無法判斷暫留ID是否與圖形中的任何個人實體相關聯。
 
 您也可以在UI](./graph-simulation.md)中使用[圖形模擬工具來模擬事件，並設定您自己的唯一名稱空間和名稱空間優先順序設定。 這麼做有助於您基本瞭解身分最佳化演演算法應該如何運作。
 
@@ -331,26 +331,26 @@ ORDER BY timestamp desc
 
 本節概述有關身分圖表連結規則常見問題的解答清單。
 
-### 身分最佳化演演算法 {#identity-optimization-algorithm}
+## 身分最佳化演演算法 {#identity-optimization-algorithm}
 
 請閱讀本節，瞭解有關[身分最佳化演演算法](./identity-optimization-algorithm.md)的常見問題解答。
 
-#### 我的每個企業單位(B2C CRMID、B2B CRMID)都有一個CRMID，但我所有的設定檔中沒有唯一的名稱空間。 如果我將B2C CRMID和B2B CRMID標示為唯一，並啟用我的身分設定，會發生什麼事？
+### 我的每個企業單位(B2C CRMID、B2B CRMID)都有一個CRMID，但我所有的設定檔中沒有唯一的名稱空間。 如果我將B2C CRMID和B2B CRMID標示為唯一，並啟用我的身分設定，會發生什麼事？
 
-此情境不受支援。 因此，當使用者使用其B2C CRMID登入，而另一個使用者使用其B2B CRMID登入時，您可能會看到圖形摺疊。 如需詳細資訊，請參閱實作頁面中[單一人員名稱空間需求](./configuration.md#single-person-namespace-requirement)一節。
+此情境不受支援。 因此，當使用者使用其B2C CRMID登入，而另一個使用者使用其B2B CRMID登入時，您可能會看到圖形摺疊。 如需詳細資訊，請參閱實作頁面中[單一人員名稱空間需求](./implementation-guide.md#single-person-namespace-requirement)一節。
 
-#### 身分最佳化演演算法是否會「修正」現有的收合圖形？
+### 身分最佳化演演算法是否會「修正」現有的收合圖形？
 
 現有收合的圖形只有在您儲存新設定後更新時，才會受到圖形演演算法的影響（「固定」）。
 
-#### 如果兩個人使用同一部裝置登入和登出，事件會發生什麼事？ 所有事件是否會轉移給最後驗證的使用者？
+### 如果兩個人使用同一部裝置登入和登出，事件會發生什麼事？ 所有事件是否會轉移給最後驗證的使用者？
 
 * 匿名事件（在即時客戶個人檔案上以ECID為主要身分的事件）將傳輸給最後驗證的使用者。 這是因為ECID將連結至上次驗證使用者（位於Identity Service）的CRMID。
 * 所有已驗證的事件（CRMID定義為主要身分的事件）將保留在人員身分。
 
 如需詳細資訊，請閱讀[判斷體驗事件](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events)的主要身分的指南。
 
-#### 當ECID從一個人傳輸至另一個人時，Adobe Journey Optimizer中的歷程會受到哪些影響？
+### 當ECID從一個人傳輸至另一個人時，Adobe Journey Optimizer中的歷程會受到哪些影響？
 
 上次驗證使用者的CRMID將會連結至ECID （共用裝置）。 ECID可根據使用者行為從一個人重新指派給另一個人。 影響將取決於如何建構歷程，因此客戶在開發沙箱環境中測試歷程以驗證行為非常重要。
 
@@ -367,31 +367,31 @@ ORDER BY timestamp desc
    * 透過此功能，ECID不再一律與一個設定檔相關聯。
    * 建議使用人員名稱空間(CRMID)開始歷程。
 
-### 名稱空間優先順序
+## 名稱空間優先順序
 
 請閱讀本節，瞭解有關[名稱空間優先順序](./namespace-priority.md)的常見問題解答。
 
-#### 我已啟用我的身分設定。 如果在啟用設定後新增自訂名稱空間，我的設定會發生什麼事？
+### 我已啟用我的身分設定。 如果在啟用設定後新增自訂名稱空間，我的設定會發生什麼事？
 
 名稱空間有兩個「貯體」：人員名稱空間和裝置/Cookie名稱空間。 新建立的自訂名稱空間在每個「貯體」中的優先順序最低，因此這個新的自訂名稱空間不會影響現有的資料擷取。
 
-#### 如果即時客戶設定檔不再使用identityMap上的「主要」標幟，是否仍需傳送此值？
+### 如果即時客戶設定檔不再使用identityMap上的「主要」標幟，是否仍需傳送此值？
 
 是，identityMap上的「主要」旗標已由其他服務使用。 如需詳細資訊，請閱讀[名稱空間優先順序對其他Experience Platform服務的影響](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services)的指南。
 
-#### 名稱空間優先順序是否會套用至即時客戶個人檔案中的個人檔案記錄資料集？
+### 名稱空間優先順序是否會套用至即時客戶個人檔案中的個人檔案記錄資料集？
 
 不可以。 名稱空間優先順序僅適用於使用XDM ExperienceEvent類別的體驗事件資料集。
 
-#### 此功能如何與每個圖表50個身分的身分圖表護欄搭配運作？ 名稱空間優先順序是否會影響此系統定義的護欄？
+### 此功能如何與每個圖表50個身分的身分圖表護欄搭配運作？ 名稱空間優先順序是否會影響此系統定義的護欄？
 
 身分最佳化演演算法將先套用，以確保個人實體表示。 之後，如果圖表嘗試超過[身分圖表護欄](../guardrails.md) （每個圖表50個身分），則會套用此邏輯。 名稱空間優先順序不會影響50身分/圖表護欄的刪除邏輯。
 
-### 測試
+## 測試
 
 請參閱本節，以取得有關測試和偵錯身分圖表連結規則中功能的常見問題解答。
 
-#### 我應該在開發沙箱環境中測試哪些情境？
+### 我應該在開發沙箱環境中測試哪些情境？
 
 一般而言，在開發沙箱上測試應模擬您打算在生產沙箱上執行的使用案例。 請參考下表以瞭解進行全面測試時需驗證的一些關鍵區域：
 
@@ -403,7 +403,7 @@ ORDER BY timestamp desc
 
 {style="table-layout:auto"}
 
-#### 如何驗證此功能是否如預期運作？
+### 如何驗證此功能是否如預期運作？
 
 使用[圖表模擬工具](./graph-simulation.md)來驗證功能是否可在個別的圖表層級運作。
 

@@ -1,11 +1,11 @@
 ---
-title: 身分圖表連結規則概觀
+title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 badge: Beta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1581'
 ht-degree: 1%
 
 ---
@@ -16,17 +16,19 @@ ht-degree: 1%
 >
 >身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
 
-## 目錄
+透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。
 
-* [概觀](./overview.md)
+## 快速入門
+
+下列檔案對於瞭解身分圖表連結規則至關重要。
+
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [實作指南](./implementation-guide.md)
+* [圖表設定範例](./example-configurations.md)
+* [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [名稱空間優先順序](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)
-* [圖表設定範例](./configuration.md)
-* [範例情境](./example-scenarios.md)
-
-透過Adobe Experience Platform Identity Service和即時客戶設定檔，很容易假設您的資料已完全內嵌，而且所有合併的設定檔透過個人識別碼（例如CRMID）代表單一個人。 但是，在某些情況下，某些資料可能會嘗試將多個不同的設定檔合併為單一設定檔（「圖表摺疊」）。 為避免這些不想要的合併，您可以使用透過身分圖表連結規則提供的設定，並允許使用者進行精確的個人化。
 
 ## 可能發生圖表摺疊的範例情境
 
@@ -34,7 +36,7 @@ ht-degree: 1%
 * **錯誤的電子郵件和電話號碼**：錯誤的電子郵件和電話號碼是指註冊無效連絡資訊的一般使用者，例如「test<span>@test.com」代表電子郵件，而「+1-111-111-1111」代表電話號碼。
 * **錯誤或錯誤的身分值**：錯誤或錯誤的身分值是指可以合併CRMID的非唯一身分值。 例如，雖然IDFA必須有36個字元（32個英數字元和4個連字型大小），但在某些情況下，識別值為「user_null」的IDFA可能會被擷取。 同樣地，電話號碼僅支援數字字元，但可能會內嵌身分值為「未指定」的電話名稱空間。
 
-如需身分圖表連結規則使用案例的詳細資訊，請閱讀[範例案例](./example-scenarios.md)的檔案。
+如需身分圖表連結規則使用案例的詳細資訊，請閱讀[範例案例](#example-scenarios)一節。
 
 ## 身分圖表連結規則 {#identity-graph-linking-rules}
 
@@ -94,10 +96,63 @@ ht-degree: 1%
 
 如需詳細資訊，請閱讀[名稱空間優先順序](./namespace-priority.md)的指南。
 
+## 透過身分圖表連結規則解決的客戶案例範例 {#example-scenarios}
+
+本節概述設定身分圖表連結規則時可考慮的範例情境。
+
+### 共用裝置
+
+在單一裝置上可能發生多次登入的例項：
+
+| 共用裝置 | 說明 |
+| --- | --- |
+| 家用電腦和平板電腦 | 丈夫和妻子都登入各自的銀行帳戶。 |
+| 公用資訊站 | 在機場登入的旅行者，會使用他們的忠誠度身份證來登記行李和列印登機牌。 |
+| 客服中心 | 客服中心人員代表客戶致電客戶支援以解決問題，登入單一裝置。 |
+
+![某些共用裝置的圖表。](../images/identity-settings/shared-devices.png)
+
+在這些情況下，從圖表觀點來看，未啟用任何限制，單一ECID會連結至多個CRMID。
+
+使用身分圖表連結規則，您可以：
+
+* 設定用於登入的ID作為唯一識別碼。 例如，您可以限制圖表僅儲存一個具有CRMID名稱空間的身分識別，然後將CRMID定義為共用裝置的唯一識別碼。
+   * 這麼做可確保ECID不會合併CRMID。
+
+### 無效的電子郵件/電話案例
+
+註冊時也會有使用者提供虛假值做為電話號碼和/或電子郵件地址的例項。 在這些情況下，如果未啟用限制，則電話/電子郵件相關的身分最終將會連結到多個不同的CRMID。
+
+![代表無效電子郵件或電話情況的圖表。](../images/identity-settings/invalid-email-phone.png)
+
+使用身分圖表連結規則，您可以：
+
+* 將CRMID、電話號碼或電子郵件地址設定為唯一識別碼，因此將一個人限製為只能有一個與其帳戶相關聯的CRMID、電話號碼和/或電子郵件地址。
+
+### 錯誤或錯誤的身分值
+
+在某些情況下，無論名稱空間為何，都會在系統中擷取非唯一、錯誤的身分值。 例如：
+
+* 身分值為「user_null」的IDFA名稱空間。
+   * IDFA身分值應該有36個字元： 32個英數字元和4個連字型大小。
+* 身分值為「未指定」的電話號碼名稱空間。
+   * 電話號碼不應有任何字母字元。
+
+這些身分可能會導致以下圖表，其中多個CRMID與「不良」身分合併在一起：
+
+![具有錯誤或錯誤身分值的身分資料圖形範例。](../images/identity-settings/bad-data.png)
+
+透過身分圖表連結規則，您可以將CRMID設定為唯一識別碼，以防止由於此型別的資料造成不想要的設定檔摺疊。
+
+
 ## 後續步驟
 
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
-* [身分最佳化演演算法](./identity-optimization-algorithm.md)。
-* [名稱空間優先順序](./namespace-priority.md)。
-* [設定身分圖表連結規則的範例案例](./example-scenarios.md)。
+* [身分最佳化演演算法](./identity-optimization-algorithm.md)
+* [實作指南](./implementation-guide.md)
+* [圖表設定範例](./example-configurations.md)
+* [疑難排解和常見問答( FAQ)](./troubleshooting.md)
+* [名稱空間優先順序](./namespace-priority.md)
+* [圖表模擬UI](./graph-simulation.md)
+* [身分設定UI](./identity-settings-ui.md)

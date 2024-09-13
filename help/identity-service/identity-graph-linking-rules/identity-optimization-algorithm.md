@@ -3,9 +3,9 @@ title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
 badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 1%
 
 ---
@@ -162,7 +162,9 @@ ECID會儲存未驗證（匿名）的事件，而CRMID會儲存已驗證的事�
 如需身分圖表連結規則的詳細資訊，請參閱下列檔案：
 
 * [身分圖表連結規則概觀](./overview.md)
+* [實作指南](./implementation-guide.md)
+* [圖表設定範例](./example-configurations.md)
+* [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [名稱空間優先順序](./namespace-priority.md)
-* [設定身分圖表連結規則的範例案例](./example-scenarios.md)
-* [身分連結邏輯](../features/identity-linking-logic.md)
-* [Identity Service和即時客戶個人檔案](../identity-and-profile.md)
+* [圖表模擬UI](./graph-simulation.md)
+* [身分設定UI](./identity-settings-ui.md)

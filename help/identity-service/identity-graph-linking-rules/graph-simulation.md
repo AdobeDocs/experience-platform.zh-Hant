@@ -3,9 +3,9 @@ title: 圖表模擬UI指南
 description: 瞭解如何在Identity Service UI中使用圖表模擬。
 badge: Beta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1443'
 ht-degree: 1%
 
 ---
@@ -172,8 +172,10 @@ ht-degree: 1%
 
 閱讀本檔案後，您現在已瞭解如何使用[!DNL Graph Simulation]工具，以更清楚瞭解在指定一組特定規則和設定時，身分資料的處理方式。 如需詳細資訊，請閱讀下列檔案：
 
-* [身分圖表連結規則](./overview.md)
-* [設定指南](./configuration.md)
+* [身分圖表連結規則概觀](./overview.md)
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
-* [名稱空間優先順序](./namespace-priority.md)
+* [實作指南](./implementation-guide.md)
+* [疑難排解和常見問答( FAQ)](./troubleshooting.md)
 * [圖表設定範例](./example-configurations.md)
+* [名稱空間優先順序](./namespace-priority.md)
+* [身分設定UI](./identity-settings-ui.md)
