@@ -2,14 +2,18 @@
 title: Adobe Experience Platform中的AI助理概述
 description: 了解 AI 助理、其細微差別和使用案例，以及如何使用它來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '927'
 ht-degree: 8%
 
 ---
 
 # Adobe Experience Platform中的AI助理
+
+以下影片旨在協助您瞭解AI Assistant。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 請閱讀本檔案，瞭解Adobe Experience Platform中的AI助理。
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的AI助理
 description: 瞭解如何使用AI助理來導覽並瞭解Experience Platform和Real-time Customer Data Platform概念，以及有關您物件的使用資訊。
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
+source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # AI Assistant UI指南
 
 請閱讀本指南，瞭解如何在Adobe Experience Platform UI中使用AI Assistant。
-
-以下影片旨在協助您瞭解AI Assistant。
-
->[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## 在Experience PlatformUI中存取AI助理
 
