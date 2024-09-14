@@ -11,7 +11,7 @@ ht-degree: 86%
 
 # 從 Audience Manager 到 Real-Time CDP 的進化
 
-由於您的組織進化為使用 Adobe Real-Time CDP，需探索這些考量事項以準備您的資料，並了解這兩種技術之間關鍵性的差異。本文內容主要以從業人員為對象。
+由於您的組織進化為使用 Adobe Real-Time CDP，需探索這些考量事項以準備您的資料，並了解這兩種技術之間關鍵性的差異。本文內容主要以從業人員為客群。
 
 ![Audience Manager 到 Real-Time CDP 的進化圖表](/help/rtcdp/assets/aam-to-rtcdp-evolution.png)
 
@@ -47,7 +47,7 @@ Audience Manager 中提供的所有以人物為基礎的目標 - [Facebook](/hel
 
 還可使用其他第一方資料和媒體策略合作夥伴，例如，[Pinterest](/help/destinations/catalog/advertising/pinterest.md)、[Snapchat](/help/destinations/catalog/advertising/snap-inc.md)、[TikTok](/help/destinations/catalog/social/tiktok.md)、[Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md) 和 [[!UICONTROL The Trade Desk]](/help/destinations/catalog/advertising/tradedesk.md)。
 
-Real-Time CDP 目前支援[目錄](/help/destinations/catalog/overview.md)中超過 60 個原生目的地，其中有 20 個以上屬於支援第一方對象媒合的廣告或社群目的地。
+Real-Time CDP 目前支援[目錄](/help/destinations/catalog/overview.md)中超過 60 個原生目的地，其中有 20 個以上屬於支援第一方客群媒合的廣告或社群目的地。
 
 ## 後續步驟
 
