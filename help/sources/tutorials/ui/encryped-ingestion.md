@@ -8,7 +8,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: b4545943abbb68d36a64935feb4466d075331504
 workflow-type: tm+mt
 source-wordcount: '617'
-ht-degree: 13%
+ht-degree: 15%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 13%
 5. 在建立來源連線時，請提供與您用來加密資料的公開金鑰對應的金鑰ID。 如果您也使用簽署驗證金鑰配對機制，則您也必須提供對應至加密資料的簽署驗證金鑰ID。
 6. 繼續進行資料流建立步驟。
 
-## 建立加密金鑰組 {#create-an-encryption-key-pair}
+## 建立加密金鑰對 {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_encryptionKeyId"
@@ -63,7 +63,7 @@ ht-degree: 13%
 * 系統會將您帶到一個頁面，其中顯示貴組織中現有加密金鑰組的清單。 此頁面提供指定金鑰的標題、ID、型別、加密演演算法、到期日和狀態的資訊。 若要建立新的金鑰組，請選取&#x200B;**[!UICONTROL 建立金鑰]**。
 * 接著，選擇您要建立的金鑰型別。 若要建立加密金鑰，請選取&#x200B;**[!UICONTROL 加密金鑰]**，然後提供您加密金鑰的標題和複雜密碼。 複雜密碼是加密金鑰的額外保護層。 建立後，Experience Platform會將複雜密碼與公開金鑰儲存在不同的安全儲存庫中。 您必須提供非空白字串作為複雜密碼。
 
-### 建立簽署驗證金鑰 {#create-a-sign-verification-key}
+### 建立簽章驗證金鑰 {#create-a-sign-verification-key}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"

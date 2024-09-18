@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
 source-wordcount: '2641'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 12%
 
 >[!CONTEXTUALHELP]
 >id="testy-mctestface"
->title="不應顯示的測試對話方塊"
->abstract="正在{date}上檢視物件{name}。"
+>title="不應該顯示的測試對話框"
+>abstract="有人在 {date} 檢視物件 {name}。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
