@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
+source-wordcount: '2720'
 ht-degree: 13%
 
 ---
@@ -17,6 +17,16 @@ ht-degree: 13%
 >id="testy-mctestface"
 >title="不應該顯示的測試對話框"
 >abstract="有人在 {date} 檢視物件 {name}。"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="核心產品表格"
+>abstract="此表格中列出的核心產品在沙箱層級有自己的量度、使用追蹤和鑽研檢視。 這些核心產品提供追蹤的關鍵量度，而任何附加元件都包含在這些量度中。"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="附加元件表格"
+>abstract="附加元件表格會列出其授權金額與核心產品支援的量度結合的產品。 這些附加元件沒有個別量度，但可加強對相關核心產品的使用追蹤。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
