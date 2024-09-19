@@ -2,9 +2,9 @@
 title: Web SDK中的身分資料
 description: 瞭解如何使用Adobe Experience Platform Web SDK擷取和管理Adobe Experience Cloud ID (ECID)。
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 3b0fa672c4befd8e17632e62b0eeb13b6b17bfb4
+source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1554'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDK使用[Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md)來追蹤訪客行為。 使用[!DNL ECIDs]時，您可以確保每個裝置都有唯一識別碼，此識別碼可以跨多個工作階段持續存在，將發生在網頁工作階段期間或跨網頁工作階段的所有點選繫結至特定裝置。
 
-本檔案概述如何使用Web SDK管理[!DNL ECIDs]。
+本檔案概述如何使用Web SDK管理[!DNL ECIDs]和[!DNL CORE IDs]。
 
-## 使用Web SDK追蹤ECID {#tracking-ecids-we-sdk}
+## 使用Web SDK追蹤ECID {#tracking-ecids-web-sdk}
 
 Web SDK會使用Cookie指派及追蹤[!DNL ECIDs]，並有多種可用方法來設定這些Cookie的產生方式。
 
@@ -33,6 +33,12 @@ Web SDK會使用Cookie指派及追蹤[!DNL ECIDs]，並有多種可用方法來�
 1. 將資料直接傳送到Edge Network網域`adobedc.net`。 此方法稱為[第三方資料收集](#third-party)。
 
 如下節所述，您選擇使用的資料收集方法會直接影響各瀏覽器的Cookie存留期。
+
+## 使用Web SDK追蹤核心ID {#tracking-coreid-web-sdk}
+
+使用已啟用第三方Cookie的Google Chrome且未設定`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookie時，第一個Edge Network請求會通過`demdex.net`網域，其會設定Demdex Cookie。 此Cookie包含[!DNL CORE ID]。 這是不重複的使用者ID，與[!DNL ECID]不同。
+
+根據您的實作，您可能要[存取 [!DNL CORE ID]](#retrieve-coreid)。
 
 ### 第一方資料收集 {#first-party}
 
@@ -84,7 +90,6 @@ xdm.identityMap.ECID[0].id
 
 ### 透過`getIdentity()`命令擷取[!DNL ECID] {#retrieve-ecid-getidentity}
 
-
 >[!IMPORTANT]
 >
 >您應該只有在使用者端需要[!DNL ECID]時，才透過`getIdentity()`命令擷取ECID。 如果您只想將ECID對應到XDM欄位，請改用[資料收集的資料準備](#retrieve-ecid-data-prep)。
@@ -107,6 +112,17 @@ alloy("getIdentity")
     // "error" will be an error object with additional information.
   });
 ```
+
+## 擷取目前使用者的核心ID {#retrieve-coreid}
+
+若要擷取使用者的核心ID，您可以使用[`getIdentity()`](../commands/getidentity.md)命令，如下所示。
+
+```js
+alloy("getIdentity",{
+  "namespaces": ["CORE"]
+});
+```
+
 
 ## 使用`identityMap` {#using-identitymap}
 
