@@ -1,17 +1,25 @@
 ---
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2291'
 ht-degree: 29%
 
 ---
 
-
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](/help/web-sdk/release-notes.md)。
+
+## 2.26.1版 — 2024年9月19日
+
+**修正和改良**
+
+- 修正在本機執行Web SDK時，Cookie未正確寫入的問題。
+
+包含2.23.0版的Adobe Experience Platform Web SDK。
 
 ## 2.26.0版 — 2024年8月22日
 
@@ -80,7 +88,7 @@ ht-degree: 29%
 
 包含2.19.2版的Adobe Experience Platform Web SDK。
 
-## 2.21.3版 — 2023年11月10日
+## 版本 2.21.3 - 2023 年 11 月 10 日
 
 包含2.19.1版的Adobe Experience Platform Web SDK。
 
@@ -226,7 +234,7 @@ ht-degree: 29%
 
 包含 2.8.0 版的 Adobe Experience Platform Web SDK 程式庫。
 
-## 2.8.0版 — 2021年10月26日
+## 版本 2.8.0 - 2021 年 10 月 26 日
 
 包含 2.7.0 版的 Adobe Experience Platform Web SDK 程式庫。
 

@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1920'
 ht-degree: 2%
 
 ---
@@ -16,11 +16,21 @@ ht-degree: 2%
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需Web SDK標籤擴充功能的最新發行說明，請參閱[Web SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
 
+## 2.23.0版 — 2024年9月19日
+
+**新功能**
+
+- 新增在[getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library)命令中要求[CORE ID](identity/overview.md#tracking-coreid-web-sdk)的支援。
+
+**修正和改良**
+
+- 修正在本機執行Web SDK時，Cookie未正確寫入的問題。
+
 ## 2.22.0版 — 2024年8月22日
 
 **新功能**
 
-- 新增個人化監視器。
+- 新增對個人化監控鉤點的支援。
 
 **修正和改良**
 
@@ -62,7 +72,7 @@ ht-degree: 2%
 - 修正當`renderDecisions`設為`false`的頁面呼叫頂端時，頁面呼叫底部絕不會傳送的問題。
 - 修正當有多個`adobe_mc`查詢字串引數時，Web SDK無法讀取跨網域身分識別的問題。
 
-## 2.19.1版 — 2023年11月10日
+## 版本 2.19.1 - 2023 年 11 月 10 日
 
 **修正和改良**
 
@@ -194,7 +204,7 @@ ht-degree: 2%
 - 已重新命名個人化事件型別。 （`display`和`click`成為`decisioning.propositionDisplay`和`decisioning.propositionInteract`）
 - 修正具有內嵌指令碼標籤的HTML選件將指令碼標籤新增兩次至頁面的問題，即使指令碼僅執行一次。
 
-## 2.7.0版 — 2021年10月26日
+## 版本 2.7.0 - 2021 年 10 月 26 日
 
 - 在來自`sendEvent`的傳回值中公開來自Edge Network的其他資訊，包括`inferences`和`destinations`。 這些屬性的格式可能會隨著這些功能目前在Beta中推出而改變。
 
