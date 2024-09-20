@@ -3,10 +3,10 @@ title: 使用流量服務API建立Google BigQuery基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Google BigQuery。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 1%
+source-wordcount: '523'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
-本教學課程將逐步引導您使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL Google BigQuery]建立基礎連線的步驟。
+閱讀本指南，瞭解如何使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)為[!DNL Google BigQuery]建立基礎連線。
 
 ## 快速入門
 
@@ -31,18 +31,7 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-為了讓[!DNL Flow Service]連線[!DNL Google BigQuery]至Platform，您必須提供下列OAuth 2.0驗證值：
-
-| 認證 | 說明 |
-| ---------- | ----------- |
-| `project` | 要查詢的預設[!DNL Google BigQuery]專案的專案識別碼。 |
-| `clientID` | 用來產生重新整理權杖的ID值。 |
-| `clientSecret` | 用來產生重新整理權杖的密碼值。 |
-| `refreshToken` | 從[!DNL Google]取得的重新整理權杖用於授權存取[!DNL Google BigQuery]。 |
-| `largeResultsDataSetId` | 啟用大型結果集的支援所需的預先建立[!DNL Google BigQuery]資料集ID。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL Google BigQuery]的連線規格識別碼為： `3c9b37f8-13a6-43d8-bad3-b863b941fedd`。 |
-
-如需這些值的詳細資訊，請參閱此[[!DNL Google BigQuery] 檔案](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)。
+閱讀[[!DNL Google BigQuery] 驗證指南](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)以瞭解收集所需認證的詳細步驟。
 
 ### 使用平台API
 
@@ -60,9 +49,13 @@ ht-degree: 1%
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB 使用基本驗證]
+
 **要求**
 
-下列要求會建立[!DNL Google BigQuery]的基礎連線：
+下列要求使用基本驗證建立[!DNL Google BigQuery]的基本連線：
 
 ```shell
 curl -X POST \
@@ -73,8 +66,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google BigQuery connection",
-        "description": "Google BigQuery connection",
+        "name": "Google BigQuery connection with basic authentication",
+        "description": "Google BigQuery connection with basic authentication",
         "auth": {
             "specName": "Basic Authentication",
             "type": "OAuth2.0",
@@ -110,6 +103,59 @@ curl -X POST \
     "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
+
+>[!TAB 使用服務驗證]
+
+
+**要求**
+
+下列要求使用服務驗證為[!DNL Google BigQuery]建立基底連線：
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Google BigQuery base connection with service account",
+        "description": "Google BigQuery connection with service account",
+        "auth": {
+            "specName": "Service Authentication",
+            "params": {
+                    "projectId": "{PROJECT_ID}",
+                    "keyFileContent": "{KEY_FILE_CONTENT},
+                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+                }
+        },
+        "connectionSpec": {
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "version": "1.0"
+        }
+    }'
+```
+
+| 屬性 | 說明 |
+| --------- | ----------- |
+| `auth.params.projectId` | 要查詢的預設[!DNL Google BigQuery]專案的專案識別碼。 針對。 |
+| `auth.params.keyFileContent` | 用來驗證服務帳戶的金鑰檔案。 您必須在[!DNL Base64]中編碼金鑰檔案內容。 |
+| `auth.params.largeResultsDataSetId` | （選用）啟用大型結果集支援所需的預先建立[!DNL Google BigQuery]資料集ID。 |
+
+**回應**
+
+成功的回應會傳回新建立連線的詳細資料，包括其唯一識別碼(`id`)。 在下個教學課程中探索您的資料時，需要此ID。
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
+>[!ENDTABS]
+
 
 ## 後續步驟
 
