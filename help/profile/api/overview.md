@@ -4,10 +4,10 @@ title: 即時客戶設定檔API指南
 description: 即時客戶設定檔API可讓開發人員探索和使用設定檔資料，包括檢視設定檔、建立和更新合併原則、匯出或範例設定檔資料，以及刪除不再需要或錯誤新增的設定檔資料。 請遵循本指南以了解如何使用 API 執行關鍵作業。
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 1%
+source-wordcount: '860'
+ht-degree: 2%
 
 ---
 
@@ -21,11 +21,7 @@ ht-degree: 1%
 
 如需在[!DNL Experience Platform] UI中使用[!DNL Real-Time Customer Profile]資料的指南，請參閱[設定檔使用者指南](../ui/user-guide.md)。
 
-## [!BADGE Beta]{type=Informative}計算屬性 {#computed-attributes}
-
->[!IMPORTANT]
->
-計算屬性功能為測試版，並非所有使用者都可使用。 檔案和功能可能會有所變更。
+## 計算屬性 {#computed-attributes}
 
 計算屬性是用來將事件層級資料彙總至設定檔層級屬性的函式。 這些函式會自動計算，以便用於區段、啟用和個人化。
 
