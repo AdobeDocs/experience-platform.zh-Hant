@@ -3,9 +3,9 @@ keywords: Experience Platform；設定檔；即時客戶設定檔；疑難排解
 title: 即時客戶設定檔UI指南
 description: 即時客戶設定檔可為個別客戶建立整體檢視，並結合來自多個管道的資料，包括線上、離線、CRM和第三方資料。 本檔案可用作在Adobe Experience Platform使用者介面中與Real-time Customer Profile互動的指南。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
+source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2212'
 ht-degree: 0%
 
 ---
@@ -127,6 +127,11 @@ ht-degree: 0%
 ![符合身分值的設定檔會反白顯示。](../images/user-guide/filtered-identity-value.png)
 
 ## 檢視設定檔詳細資料 {#profile-detail}
+
+>[!CONTEXTUALHELP]
+>id="platform_errors_uplib_201001_404"
+>title="找不到實體"
+>abstract="這表示Platform找不到要求的實體。 若要解決此錯誤，請嘗試下列其中一種解決方案：<ul><li>確定您嘗試存取的實體URL中列出了正確的設定檔ID。</li><li>確保您對於嘗試存取的實體擁有正確的組織和沙箱組合。</li></ul>"
 
 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;後，**[!UICONTROL 詳細資料]**&#x200B;索引標籤會開啟。 **[!UICONTROL 詳細資料]**&#x200B;標籤上顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等客戶細節。
 
