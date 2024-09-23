@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 將Power BI連線至查詢服務
 description: 本檔案將逐步說明連線Power BI與Adobe Experience Platform查詢服務的步驟。
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
+source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -24,16 +24,6 @@ ht-degree: 0%
 > [!DNL Power BI]案頭應用程式&#x200B;**僅限**&#x200B;可在Windows裝置上使用。
 
 若要取得連線[!DNL Power BI]至Experience Platform的必要認證，您必須擁有平台UI中查詢工作區的存取權。 如果您目前沒有查詢工作區的存取權，請聯絡您的組織管理員。
-
-安裝[!DNL Power BI]之後，您必須安裝適用於PostgreSQL的.NET驅動程式套件`Npgsql`。 有關Npgsql的詳細資訊，請參閱[Npgsql檔案](https://www.npgsql.org/doc/index.html)。
-
->[!IMPORTANT]
->
->您必須下載v4.0.10或更低版本，因為較新版本會導致錯誤。
-
-在自訂設定畫面的&quot;[!DNL Npgsql GAC Installation]&quot;下，選取&#x200B;**[!DNL Will be installed on local hard drive]**。
-
-若要確定Npgsql已正確安裝，請先重新啟動電腦，再繼續後續步驟。
 
 ## 將[!DNL Power BI]連線至查詢服務 {#connect-power-bi}
 
