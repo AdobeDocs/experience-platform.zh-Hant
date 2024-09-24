@@ -3,7 +3,7 @@ title: Graph設定範例
 description: 瞭解使用身分圖表連結規則和身分資料時，可能會遇到的常見圖表情境。
 badge: Beta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
 workflow-type: tm+mt
 source-wordcount: '2786'
 ht-degree: 6%
@@ -767,6 +767,6 @@ CRMID: Tom, ECID: 111
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [名稱空間優先順序](./namespace-priority.md)
+* [命名空間優先等級](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)

@@ -2,9 +2,9 @@
 title: 在使用者介面中建立Adobe Analytics Source連線
 description: 瞭解如何在UI中建立Adobe Analytics來源連線，以將消費者資料匯入Adobe Experience Platform。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2672'
 ht-degree: 3%
 
 ---
@@ -168,12 +168,12 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-## 篩選即時客戶設定檔 {#filtering-for-profile}
+## 篩選即時客戶輪廓 {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
 >title="建立篩選規則 "
->abstract="將資料傳送到即時客戶設定檔時定義列層級和欄層級的篩選規則。使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於設定檔擷取**。使用欄層級篩選來選取您要&#x200B;**為設定檔擷取排除**&#x200B;的資料欄。篩選規則不適用於傳送到資料湖的資料。"
+>abstract="將資料傳送到即時客戶輪廓時定義列層級和欄層級的篩選規則。使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於攝取輪廓**。使用欄層級篩選來選取您要&#x200B;**為攝取輪廓排除**&#x200B;的資料欄。篩選規則不適用於傳送到資料湖的資料。"
 
 完成[!DNL Analytics]報表套裝資料的對映後，您可以套用篩選規則和條件，選擇性地將資料納入或排除內嵌至Real-Time Customer Profile。 僅支援篩選[!DNL Analytics]資料，且資料僅在輸入[!DNL Profile.]之前篩選。所有資料都會擷取到資料湖。
 
@@ -200,7 +200,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 >[!IMPORTANT]
 >
->使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於設定檔擷取**。使用資料行層級篩選來選取您要&#x200B;**排除以進行設定檔擷取**&#x200B;的資料資料行。
+>使用列層級篩選來套用條件並指示要&#x200B;**包含哪些資料以用於攝取輪廓**。使用資料行層級篩選來選取您要&#x200B;**排除以進行設定檔擷取**&#x200B;的資料資料行。
 
 您可以在列層級和欄層級篩選[!DNL Profile]擷取的資料。 列層級篩選可讓您定義字串包含、等於、開頭或結尾等條件。 您也可以使用資料列層級篩選來使用`AND`以及`OR`聯結條件，並使用`NOT`否定條件。
 
@@ -312,6 +312,13 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >[!NOTE]
 >
 >資料集活動頁面不會顯示批次的相關資訊，因為Analytics來源聯結器完全由Adobe管理。 您可以檢視所擷取記錄周圍的量度，以監控資料流程。
+
+## 刪除您的資料流 {#delete-dataflow}
+
+若要刪除您的Analytics資料流，請從來源工作區的頂端標題中選取&#x200B;**[!UICONTROL 資料流]**。 使用資料流頁面來找出您要刪除的Analytics資料流，然後選取它旁邊的省略符號(`...`)。 接下來，使用下拉式功能表並選取&#x200B;**[!UICONTROL 刪除]**。
+
+* 刪除即時Analytics資料流也會刪除其基礎資料集。
+* 刪除回填Analytics資料流不會刪除基礎資料集，但會停止其對應報表套裝的回填程式。 如果您刪除回填資料流，擷取的資料可能仍會透過資料集檢視。
 
 ## 後續步驟和其他資源
 
