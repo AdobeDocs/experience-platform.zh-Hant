@@ -1,11 +1,11 @@
 ---
 title: 使用Experience Platform使用者介面連線您的Salesforce帳戶
-description: 瞭解如何使用使用者介面連線您的Salesforce帳戶並將您的CRM資料帶入Experience Platform。
+description: 瞭解如何使用使用者介面連線您的Salesforce帳戶並將CRM資料帶入Experience Platform。
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 3%
+source-wordcount: '935'
+ht-degree: 2%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 3%
 
 ![已選取Salesforce來源卡的Experience PlatformUI上的來源目錄。](../../../../images/tutorials/create/salesforce/catalog.png)
 
-**[!UICONTROL 連線到Salesforce]**&#x200B;頁面就會顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
+**[!UICONTROL 連線至Salesforce]**&#x200B;頁面隨即顯示。 您可以在此頁面使用新的證明資料或現有的證明資料。
 
 ### 使用現有帳戶
 
@@ -118,6 +118,12 @@ ht-degree: 3%
 ![用於建立Salesforce帳戶的OAuth介面。](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### 略過範例資料預覽 {#skip-preview-of-sample-data}
+
+在資料選擇步驟中，您可能會在擷取大型資料表或資料檔案時遭遇逾時。 您可以略過資料預覽以避開逾時，並且仍可檢視您的結構描述，不過沒有範例資料。 若要略過資料預覽，請啟用&#x200B;**[!UICONTROL 略過預覽範例資料]**&#x200B;切換按鈕。
+
+工作流程的其餘部分將維持不變。 唯一的警告是，略過資料預覽可能會阻止在對應步驟期間自動驗證計算和必填欄位，然後您就必須在對應期間手動驗證這些欄位。
 
 ## 後續步驟
 

@@ -4,10 +4,10 @@ type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Snowflake來源連線。
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 4%
+source-wordcount: '886'
+ht-degree: 3%
 
 ---
 
@@ -104,6 +104,12 @@ ht-degree: 4%
 ![帳戶金鑰組驗證介面。](../../../../images/tutorials/create/snowflake/key-pair.png)
 
 >[!ENDTABS]
+
+### 略過範例資料預覽 {#skip-preview-of-sample-data}
+
+在資料選擇步驟中，您可能會在擷取大型資料表或資料檔案時遭遇逾時。 您可以略過資料預覽以避開逾時，並且仍可檢視您的結構描述，不過沒有範例資料。 若要略過資料預覽，請啟用&#x200B;**[!UICONTROL 略過預覽範例資料]**&#x200B;切換按鈕。
+
+工作流程的其餘部分將維持不變。 唯一的警告是，略過資料預覽可能會阻止在對應步驟期間自動驗證計算和必填欄位，然後您就必須在對應期間手動驗證這些欄位。
 
 ## 後續步驟
 
