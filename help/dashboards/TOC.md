@@ -5,10 +5,10 @@ breadcrumb-title: 儀表板指南
 user-guide-description: 了解如何透過可自訂的儀表板在 Experience Platform 視覺化資料。
 feature: Dashboards
 role: Developer,User
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 35%
+source-wordcount: '135'
+ht-degree: 36%
 
 ---
 
@@ -29,20 +29,21 @@ ht-degree: 35%
       * 篩選器{#filters}
          * [日期篩選器](data-distiller/query-pro-mode/filters/date-filter.md)
          * [全域篩選器](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [鑽研](data-distiller/query-pro-mode/drill-through.md)
       * [檢視更多資訊](data-distiller/query-pro-mode/view-more.md)
       * [檢視 SQL](data-distiller/query-pro-mode/view-sql.md)
       * [下載為CSV檔](data-distiller/query-pro-mode/download-csv.md)
       * [匯出為PDF](data-distiller/query-pro-mode/export-pdf.md)
 * 可用的儀表板{#guides}
-   * [設定檔](guides/profiles.md)
+   * [輪廓](guides/profiles.md)
    * [帳戶輪廓](guides/account-profiles.md)
    * [客群](guides/audiences.md)
-   * [目的地](guides/destinations.md)
+   * [目標](guides/destinations.md)
    * [授權使用情況](guides/license-usage.md)
 * 可用的深入分析{#insights}
-   * [設定檔](insights/profiles.md)
+   * [輪廓](insights/profiles.md)
    * [客群](insights/audiences.md)
-   * [目的地](insights/destinations.md)
+   * [目標](insights/destinations.md)
    * [帳戶輪廓](insights/account-profiles.md)
 * 自訂儀表板{#customize}
    * [自訂概述](customize/overview.md)
