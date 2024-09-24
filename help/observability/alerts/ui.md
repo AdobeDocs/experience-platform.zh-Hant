@@ -4,10 +4,10 @@ title: 警報UI指南
 description: 瞭解如何在Experience Platform使用者介面中管理警報。
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 3%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ![警示頁面在左側導覽中醒目提示[!UICONTROL 警示]。](../images/alerts/ui/workspace.png)
 
-## 管理警示規則
+## 管理警示規則 {#manage-rules}
 
 **[!UICONTROL 瀏覽]**&#x200B;索引標籤會列出可能觸發警示的可用規則。
 
@@ -37,7 +37,7 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ![選取的省略符號會顯示下拉式功能表。](../images/alerts/ui/disable-subscribe.png)
 
-## 管理警報訂閱者
+## 管理警報訂閱者 {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 ![收到的警示通知的電子郵件範例。](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## 啟用電子郵件警示
+## 啟用電子郵件警示 {#enable-email}
 
 警示通知可以直接傳送到您的電子郵件。
 
@@ -85,7 +85,35 @@ Adobe Experience Platform使用者介面可讓您根據Adobe Experience Platform
 
 您訂閱的任何警報現在都會傳送到連線至您Adobe ID帳戶的電子郵件地址。
 
-## 檢視警示歷史記錄
+## 自訂警報臨界值 {#alert-threshold}
+
+您可以為下列警示型別自訂警示臨界值：
+
+| 警報類型 | 自訂引數 |
+|---|---|
+| 區段工作延遲 | 延遲臨界值 |
+| 區段匯出延遲 | 延遲臨界值 |
+| 目的地流程執行延遲 | 延遲臨界值 |
+| Identity服務流程執行延遲 | 延遲臨界值 |
+| 設定檔流程執行延遲 | 延遲臨界值 |
+| 來源資料流執行延遲 | 延遲臨界值 |
+| 查詢執行延遲 | 延遲臨界值 |
+| 超出啟用略過率 | 錯誤臨界值 |
+| 超過來源擷取錯誤率 | 錯誤臨界值 |
+
+選取規則名稱旁邊的省略符號(**...**)，下拉式清單會顯示控制項。 選取&#x200B;**[!UICONTROL 編輯]**。
+
+![已針對選取的規則反白顯示[!UICONTROL 編輯]選項。](../images/alerts/ui/threshold-edit.png)
+
+**[!UICONTROL 自訂警報]**&#x200B;頁面隨即顯示。 將臨界值更新至您想要的分鐘數，然後選取&#x200B;**[!UICONTROL 確認]**。
+
+![自訂警示頁面醒目提示[!UICONTROL 閾值]和[!UICONTROL 確認]選項。](../images/alerts/ui/threshold-update.png)
+
+您返回到&#x200B;**[!UICONTROL 警示]**&#x200B;頁面。 若要檢視警示的臨界值設定，請從清單中選取規則。 您可以在右側邊欄中看到警報的臨界值設定，包括狀態和嚴重度等詳細資訊。
+
+![醒目提示的警示會在右側邊欄顯示詳細資料，並醒目提示[!UICONTROL 臨界值]。](../images/alerts/ui/threshold-view.png)
+
+## 檢視警示歷史記錄 {#alert-history}
 
 **[!UICONTROL 歷史記錄]**&#x200B;索引標籤顯示貴組織收到警示的歷史記錄，包括觸發警示、觸發日期和解決日期（如果適用）的規則。
 
