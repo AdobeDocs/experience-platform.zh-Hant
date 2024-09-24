@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 資料集UI指南
 description: 瞭解如何在Adobe Experience Platform使用者介面中使用資料集時執行常見動作。
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
+source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
 workflow-type: tm+mt
-source-wordcount: '3203'
-ht-degree: 6%
+source-wordcount: '3801'
+ht-degree: 5%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 6%
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_profileretention"
->title="設定檔保留"
+>title="輪廓保留"
 >abstract="顯示每個資料集目前的保留原則。可在每個資料集的保留設定中修改此值。您只能設定 ExperienceEvent 資料集的保留時間。"
 
 >[!CONTEXTUALHELP]
@@ -96,6 +96,7 @@ ht-degree: 6%
 * [[!UICONTROL 管理資料並存取標籤]](#manage-and-enforce-data-governance)
 * [[!UICONTROL 啟用統一的設定檔]](#enable-profile)
 * [[!UICONTROL 管理標籤]](#manage-tags)
+* [(Beta) [!UICONTROL 設定資料保留原則]](#data-retention-policy)
 * [[!UICONTROL 移至資料夾]](#move-to-folders)
 * [[!UICONTROL 刪除]](#delete)。
 
@@ -168,6 +169,53 @@ ht-degree: 6%
 將標籤新增到資料集後，即可根據對應的標籤篩選資料集。 如需詳細資訊，請參閱如何[依標籤](#enable-profile)篩選資料集的章節。
 
 如需如何分類商業物件以便輕鬆探索和分類的詳細資訊，請參閱[管理中繼資料分類](../../administrative-tags/ui/managing-tags.md)的指南。 本指南詳細說明具有適當許可權的使用者如何建立預先定義的標籤、將類別指派給標籤，以及在Platform UI中執行標籤和標籤類別的所有相關CRUD作業。
+
+### (Beta)設定資料保留政策 {#data-retention-policy}
+
+>[!AVAILABILITY]
+> 
+>資料保留設定目前為測試版，僅適用於&#x200B;**有限版本**&#x200B;中的特定組織。 您的UI可能無法反映下列功能。
+
+從[!UICONTROL 資料集]工作區的[!UICONTROL 瀏覽]索引標籤，在資料集層級管理資料集到期日和保留原則。 您可以使用此功能，針對已擷取至Data Lake和Profile Services的資料設定保留政策。 到期日是根據資料擷取至Platform的時間和您的保留規則而定。
+
+若要開啟[!UICONTROL 設定資料保留]對話方塊，請從下拉式選單中選取資料集旁的省略符號，然後選取&#x200B;**[!UICONTROL 設定資料保留原則]**。
+
+![資料集工作區的[瀏覽]索引標籤中，省略符號和[設定資料保留原則]選項已反白顯示。](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+
+[!UICONTROL 設定資料保留]對話方塊就會顯示。 此對話方塊會顯示沙箱層級授權使用量度、資料集層級詳細資料和資料湖設定。 這些量度會顯示與您的權益相較之下的使用情形。 資料集詳細資訊包括資料集名稱、型別、設定檔啟用狀態，以及目前的資料湖儲存空間使用情況。
+
+>[!NOTE]
+>
+>沙箱層級的授權資料湖儲存量度仍在開發中，無法使用。
+
+![設定資料保留對話方塊。](../images/datasets/user-guide/set-data-retention-dialog.png)
+
+在您設定資料集保留原則之前，對話方塊會顯示建議的保留設定。 預設的建議保留期間為一個月。 若要調整標準保留原則，請選取並更新數字，然後選擇想要的時間期間（天、月、年）。 您可以分別設定Data Lake和Profile Service的保留設定。
+
+>[!NOTE]
+> 
+>資料湖的資料保留持續時間下限為30天。 設定檔服務的最小資料保留期間為一天。
+
+![包含持續時間下拉式清單和醒目提示的「設定資料保留」對話方塊。](../images/datasets/user-guide/time-unit-dropdown.png)
+
+請參閱[常見問題頁面](../catalog-faq.md)，以取得定義資料集到期日期範圍的規則，以及設定資料保留原則的最佳實務的詳細資訊。
+
+#### (Beta)提升保留期和儲存量度的可見度 {#retention-and-storage-metrics}
+
+Beta版使用者可以使用四個新的欄，以更清楚的方式瞭解您的資料管理： **[!UICONTROL 資料湖儲存]**、**[!UICONTROL 資料湖保留]**、**[!UICONTROL 設定檔儲存]**&#x200B;和&#x200B;**[!UICONTROL 設定檔保留]**。 這些量度會顯示您的資料在Data Lake和Profile Services中消耗的儲存空間及其保留期間。 這些詳細資訊可協助您最佳化保留政策、追蹤使用狀況與權利，並確保符合組織與法規標準。 如此提升的可見度，可讓您做出明智的決策、管理成本、簡化控管，並清楚瞭解您的資料環境。
+
+![資料集工作區的[瀏覽]索引標籤，其中反白顯示四個新的儲存和保留欄。](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+下表概略說明測試版提供的新保留率和儲存量度。 它詳細說明每欄的用途，以及在Platform UI中如何協助管理資料保留和儲存。
+
+| 欄標題 | 說明 |
+|---|---|
+| [!UICONTROL 資料湖保留] | 顯示每個資料集的目前保留期間。 可在每個資料集的保留設定中修改此值。資料湖保留原則會設定資料儲存時間以及在不同服務中何時應刪除資料的規則。 |
+| [!UICONTROL 資料湖儲存空間] | 顯示Data Lake中每個資料集的目前儲存使用量。 此量度有助於追蹤每個資料集佔用的空間，有助於管理儲存空間限制及最佳化使用率。 |
+| [!UICONTROL 設定檔儲存空間] | 顯示設定檔服務中每個資料集的目前儲存空間使用量。 使用此資訊來監控儲存空間消耗，並確保其符合您的資料管理目標。 |
+| [!UICONTROL 設定檔保留] | 表示每個設定檔資料集的保留期間。 您可以在資料集的保留設定中調整此值，協助您控制設定檔資料在刪除前的儲存時間。 |
+
+{style="table-layout:auto"}
 
 ### 移至資料夾 {#move-to-folders}
 
@@ -344,3 +392,4 @@ ht-degree: 6%
 * [使用API建立資料集](create.md)
 * [使用資料存取API查詢資料集資料](../../data-access/home.md)
 * [使用API設定即時客戶個人檔案和身分服務的資料集](../../profile/tutorials/dataset-configuration.md)
+
