@@ -2,10 +2,10 @@
 title: 稽核記錄概觀
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 36%
+source-wordcount: '1350'
+ht-degree: 35%
 
 ---
 
@@ -133,6 +133,22 @@ ht-degree: 36%
 在出現的對話方塊中，選取您偏好的格式（**[!UICONTROL CSV]**&#x200B;或&#x200B;**[!UICONTROL JSON]**），然後選取&#x200B;**[!UICONTROL 下載]**。 瀏覽器會下載產生的檔案，並將其儲存到您的電腦。
 
 ![包含[!UICONTROL 下載]的檔案格式選擇對話方塊已反白顯示。](../../images/audit-logs/select-download-format.png)
+
+## 啟用警示 {#enable-alerts}
+
+您可以啟用稽核警示來接收下列規則的通知：
+
+* 對象建立
+* 對象更新
+* 對象刪除
+* 資料集建立
+* 資料集更新
+* 資料集刪除
+* 結構描述建立
+* 結構描述更新
+* 結構描述刪除
+
+從清單中選取所需的警報，以訂閱接收通知。 如需警示的詳細資訊，請參閱[使用UI訂閱警示](../../../observability/alerts/ui.md)的指南。
 
 ## 管理API中的稽核記錄
 
