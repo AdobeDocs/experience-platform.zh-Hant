@@ -7,7 +7,7 @@ exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '919'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -28,7 +28,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 * **將資料內嵌至Platform**：此Widget會將您導向來源目錄。 使用來源目錄來選取來源，並擷取您的資料以Experience Platform。 選取&#x200B;**[設定來源]**&#x200B;以瀏覽至來源目錄。 如需詳細資訊，請閱讀[來源概觀](../sources/home.md)。
 * **模型資料結構**：此Widget會將您導向結構概觀。 使用方案概觀來瀏覽現有方案或建立說明資料結構的Blueprint。 選取「**[!UICONTROL 建立結構描述]**」以瀏覽至結構描述建立介面。 如需詳細資訊，請閱讀[結構描述概觀](../xdm/home.md)。
 * **建立對象**：此Widget會將您導向至UI中的區段產生器。 使用「區段產生器」與「設定檔」資料元素互動，並定義區段定義的條件。 選取&#x200B;**[!UICONTROL 建立對象]**&#x200B;以瀏覽至「區段產生器」。 如需詳細資訊，請閱讀[分段服務總覽](../segmentation/home.md)。
-* **將資料傳送至目的地**：此Widget會將您導向目的地目錄。 使用目的地目錄來選取目的地，然後您可以連線至目的地並將對象傳送至該目的地。 選取「**[!UICONTROL 設定目的地]**」以導覽至目的地目錄。 如需詳細資訊，請閱讀[目的地概觀](../destinations/home.md)。
+* **將資料傳送至目的地**：此Widget會將您導向目的地目錄。 使用目的地目錄來選取目的地，然後您可以連線至目的地並將對象傳送至該目的地。 選取「**[!UICONTROL 設定目的地]**」以導覽至目的地目錄。 如需詳細資訊，請閱讀[目標概觀](../destinations/home.md)。
 
 ![顯示快速入門Widget的Platform UI首頁](assets/platform-home/getting-started-widget.png)
 
@@ -36,8 +36,8 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
->title="設定檔總數"
->abstract="您的組織在 Experience Platform 中擁有的設定檔總數。此計數是根據您組織的合併原則計算，不包括設定檔片段。設定檔數量每 24 小時更新一次。"
+>title="輪廓總數"
+>abstract="您的組織在 Experience Platform 中擁有的輪廓總數。此計數是根據您組織的合併原則計算，不包括輪廓片段。輪廓數量每 24 小時更新一次。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="如需了解詳細資訊，請參閱文件"
 
 量度控制面板會顯示Experience Platform資料的最新資訊。 儀表板分為兩個區段：
@@ -62,7 +62,7 @@ Real-Time CDP首頁包含快速入門Widget，可讓您快速存取多項不同�
 * **最近的資料集**： **[!UICONTROL 最近的資料集]**&#x200B;卡片會顯示組織內建立的五個最近的資料集。 建立新資料集時會更新此清單。 選取資料集以檢視該專案的詳細資料，或針對資料集清單選取&#x200B;**[!UICONTROL 全部檢視]**。 從那裡，您可以選取特定來源以取得詳細資訊。 如需資料集的詳細資訊，請參閱[資料集總覽](../catalog/datasets/overview.md)。
 * **最近的來源**： **[!UICONTROL 最近的來源]**&#x200B;量度卡片會顯示組織內建立的五個最近的來源。 此清單會在建立新來源時更新。 選取來源以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL 檢視全部]**&#x200B;以取得來源清單。 從那裡，您可以選取特定來源以取得詳細資訊。 如需來源的詳細資訊，請參閱[來源概觀](../sources/home.md)。
 * **最近對象**： **[!UICONTROL 最近對象]**&#x200B;量度卡片會顯示組織內建立的五個最近對象。 此清單會在建立新受眾時更新。 選取對象以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL 檢視全部]**&#x200B;以取得對象清單。 如需對象的詳細資訊，請參閱[細分服務總覽](../segmentation/home.md)。
-* **最近的目的地**： **[!UICONTROL 最近的目的地]**&#x200B;量度卡片會顯示組織中建立的五個最近的目的地。 此清單會在建立新目的地時更新。 選取一個目的地以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL 檢視全部]**&#x200B;以取得目的地清單。 如需詳細資訊，請閱讀[目的地概觀](../destinations/home.md)。
+* **最近的目的地**： **[!UICONTROL 最近的目的地]**&#x200B;量度卡片會顯示組織中建立的五個最近的目的地。 此清單會在建立新目的地時更新。 選取一個目的地以檢視該專案的詳細資料，或選取&#x200B;**[!UICONTROL 檢視全部]**&#x200B;以取得目的地清單。 如需詳細資訊，請閱讀[目標概觀](../destinations/home.md)。
 
 ## 資源
 

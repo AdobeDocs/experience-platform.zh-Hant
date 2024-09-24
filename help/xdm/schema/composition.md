@@ -11,7 +11,7 @@ ht-degree: 8%
 
 ---
 
-# 結構描述組合的基礎知識
+# 結構描述構成的基礎知識
 
 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。 如需XDM的一般資訊以及在[!DNL Platform]中的使用方式，請參閱[XDM系統概覽](../home.md)。
 
@@ -53,7 +53,7 @@ XDM結構描述適合用來以獨立格式儲存大量複雜的資料。 請參�
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="方案中的身分"
->abstract="身分是方案中的重要欄位，可用於識別主題，例如電子郵件地址或行銷 ID。這些欄位用於為每個人建構身分識別圖並建立客戶設定檔。如需進一步了解方案中的身分，請查看此文件。"
+>abstract="身分是方案中的重要欄位，可用於識別主題，例如電子郵件地址或行銷 ID。這些欄位用於為每個人建構身分識別圖並建立客戶輪廓。如需進一步了解方案中的身分，請查看此文件。"
 
 結構用於擷取資料到Experience Platform中。 此資料可用於多項服務，以建立個別實體的單一、統一檢視。 因此，在為客戶身分設計結構時，重要的是考慮哪些欄位可用於識別主旨，無論資料來自何處。
 
@@ -280,7 +280,7 @@ Experience Platform提供一些通用資料型別作為[!DNL Schema Registry]的
 
 ![四個結構描述和貢獻它們的欄位群組的流程圖。](../images/schema-composition/composition.png)
 
-### Union {#union}
+### 聯合 {#union}
 
 雖然Experience Platform可讓您針對特定使用案例來撰寫結構描述，但也允許您檢視特定類別型別的結構描述「聯合」。 上圖顯示兩個以XDM ExperienceEvent類別為基礎的結構描述，以及兩個以[!DNL XDM Individual Profile]類別為基礎的結構描述。 如下所示的等位會彙總共用相同類別的所有結構描述（分別為[!DNL XDM ExperienceEvent]和[!DNL XDM Individual Profile]）的欄位。
 

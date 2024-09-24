@@ -15,8 +15,8 @@ ht-degree: 16%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
->title="在您的設定檔資料中整合並強制執行客戶同意"
->abstract="<h2>說明</h2><p>Platform 可讓您將從客戶收集來的同意資料整合到他們各自的設定檔中。然後，您可以設定同意原則以確定此資料是否可以包含在已啟用至特定目的地的區段中。</p>"
+>title="在您的輪廓資料中整合並強制執行客戶同意"
+>abstract="<h2>說明</h2><p>Platform 可讓您將從客戶收集來的同意資料整合到他們各自的輪廓中。然後，您可以設定同意原則以確定此資料是否可以包含在已啟用至特定目的地的區段中。</p>"
 
 本文介紹如何在Adobe Experience Platform UI中使用&#x200B;**[!UICONTROL 原則]**&#x200B;工作區來建立及管理資料使用原則。
 
@@ -32,7 +32,7 @@ ht-degree: 16%
 
 本指南需要深入瞭解下列[!DNL Experience Platform]概念：
 
-* [資料控管](../home.md)
+* [資料治理](../home.md)
 * [資料使用原則](./overview.md)
 
 ## 檢視現有原則 {#view-policies}
@@ -104,7 +104,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="說明"
->abstract="<ul><li>確保您透過 OneTrust 來源連接器或標準 XDM 結構描述，將偏好設定資料擷取到您的聯合結構描述以取得同意。</li><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">建立原則</a>。</li><li>在 <b>If</b> 區段下，描述將觸發原則檢查的條件或動作。</li><li>在 <b>Then</b> 區段下，輸入同意屬性，此同意屬性必須存在才能將設定檔包含在觸發原則的動作中。</li><li>選取<b>儲存</b>以建立原則。若要啟用原則，請選取右側邊欄中的 <b>狀態</b>切換。</li><li>當您將區段啟用到目的地時，Experience Platform 會自動強制執行您的已啟用同意原則，並提供每個原則如何影響客群大小的詳細資訊。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#consent-policy">建立同意原則</a>指南。</li></ul>"
+>abstract="<ul><li>確保您透過 OneTrust 來源連接器或標準 XDM 結構描述，將偏好設定資料擷取到您的聯合結構描述以取得同意。</li><li>在左側導覽中選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=zh-Hant">原則</a>，然後選取<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy">建立原則</a>。</li><li>在 <b>If</b> 區段下，描述將觸發原則檢查的條件或動作。</li><li>在 <b>Then</b> 區塊下，輸入同意屬性，此同意屬性必須存在才能將輪廓包含在觸發原則的動作中。</li><li>選取<b>儲存</b>以建立原則。若要啟用原則，請選取右側邊欄中的 <b>狀態</b>切換。</li><li>當您將區段啟用到目的地時，Experience Platform 會自動強制執行您的已啟用同意原則，並提供每個原則如何影響客群大小的詳細資訊。</li><li>如需有關此功能的更多說明，請參閱 Experience League 上的<a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=zh-Hant#consent-policy">建立同意原則</a>指南。</li></ul>"
 
 >[!IMPORTANT]
 >
@@ -143,7 +143,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Then 條件"
->abstract="定義「If」條件後，使用「Then」部分從聯合方案中選擇至少一個同意屬性。此屬性必須存在，如此設定檔才能包含在此原則控管的動作中。"
+>abstract="定義「If」條件後，使用「Then」部分從聯合方案中選擇至少一個同意屬性。此屬性必須存在，如此輪廓才能包含在此原則控管的動作中。"
 
 在&#x200B;**[!UICONTROL Then]**&#x200B;區段下，從聯合結構描述中選取至少一個同意屬性。 這是必須存在的屬性，才能將設定檔納入此原則所控管的動作中。 您可以從清單中選擇其中一個提供的選項，或選取[檢視全部]，以直接從聯合結構描述中選擇屬性。****
 

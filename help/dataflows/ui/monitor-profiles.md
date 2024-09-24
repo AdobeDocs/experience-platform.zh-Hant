@@ -26,18 +26,18 @@ ht-degree: 7%
 - [即時客戶個人檔案](../../profile/home.md)：根據來自多個來源的彙總資料，提供統一的即時客戶個人檔案。
 - [沙箱](../../sandboxes/home.md)： [!DNL Experience Platform]提供可將單一[!DNL Platform]執行個體分割成個別虛擬環境的虛擬沙箱，以利開發及改進數位體驗應用程式。
 
-## 監視設定檔儀表板 {#profile-metrics}
+## 監視輪廓儀表板 {#profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
->title="設定檔處理"
->abstract="設定檔處理視圖會包含有關擷取至設定檔服務的記錄的資訊，包括建立的設定檔片段數、更新的設定檔片段數以及設定檔片段總數。"
+>title="輪廓處理"
+>abstract="輪廓處理視圖會包含有關擷取至輪廓服務的記錄的資訊，包括建立的輪廓片段數、更新的輪廓片段數以及輪廓片段總數。"
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_profile"
 >title="資料流執行詳細資訊"
->abstract="資料流執行詳細資訊頁面會顯示有關設定檔資料流執行的詳細資訊，包括其組織 ID 和資料流執行 ID。"
+>abstract="資料流執行詳細資訊頁面會顯示有關輪廓資料流執行的詳細資訊，包括其組織 ID 和資料流執行 ID。"
 
 若要存取&#x200B;**[!UICONTROL 設定檔]**&#x200B;儀表板，請在左側導覽中選取&#x200B;**[!UICONTROL 監視]**。 在&#x200B;**[!UICONTROL 監視]**&#x200B;頁面上，選取&#x200B;**[!UICONTROL 設定檔]**&#x200B;卡片。
 

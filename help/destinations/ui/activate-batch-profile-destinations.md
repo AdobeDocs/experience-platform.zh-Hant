@@ -135,7 +135,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="客群評估後啟動"
->abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的設定檔。"
+>abstract="每日分段作業完成後立即執行啟動。這可確保匯出最新的輪廓。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -290,7 +290,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
    >[!NOTE]
    >
-   >此功能為測試版，僅供特定客戶使用。 若要要求存取此功能，請聯絡您的Adobe代表。
+   >此功能為測試版，僅供特定客戶使用。 若要請求此功能的存取權，請聯絡您的 Adobe 代表。
 
    ![錄製顯示透過拖放重新排序的對映欄位。](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
@@ -305,7 +305,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
 >title="關於強制屬性"
->abstract="選取所有匯出的設定檔應包含的 XDM 方案屬性。沒有強制金鑰的設定檔不會匯出到目的地。若未選取強制金鑰，則會匯出所有合格的設定檔，無論其屬性如何。"
+>abstract="選取所有匯出的輪廓應包含的 XDM 架構屬性。沒有強制金鑰的輪廓不會匯出到目的地。若未選取強制金鑰，則會匯出所有合格的輪廓，無論其屬性如何。"
 
 強制屬性是使用者啟用的核取方塊，可確保所有設定檔記錄都包含選取的屬性。 例如：所有匯出的設定檔都包含電子郵件地址&#x200B;。
 
@@ -320,7 +320,7 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
 >title="關於去重複化索引鍵"
->abstract="選取去重複化索引鍵，以消除匯出檔案中同一設定檔的多筆記錄。選取單一命名空間或最多兩個 XDM 方案屬性作為去重複化索引鍵。未選取去重複化索引鍵可能會導致匯出檔案中出現重複的設定檔項目。"
+>abstract="選取去重複化金鑰，以消除匯出檔案中同一輪廓的多筆記錄。選取單一命名空間或最多兩個 XDM 方案屬性作為去重複化索引鍵。未選取去重複化金鑰可能會導致匯出檔案中出現重複的輪廓項目。"
 
 重複資料刪除索引鍵是使用者定義的主索引鍵，可決定使用者要透過哪個身分來為其設定檔進行重複資料刪除重複資料刪除&#x200B;。
 
@@ -582,9 +582,9 @@ abstract="啟用此選項可從選取的自訂已上傳客群匯出輪廓至您�
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
 title="檢視適用的同意原則"
-abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如果您的公司無權存取上述 SKU，則會停用此控制項。"
+abstract="如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如果您的公司無權存取上述 SKU，則會停用此控制項。"
 
-如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個設定檔。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
+如果您的組織購買了 **Adobe Healthcare Shield** 或 **Adobe Privacy &amp; Security Shield**，請選取&#x200B;**[!UICONTROL 檢視適用的同意原則]**，以查看套用了哪些同意原則以及由於這些原則啟動中包含了多少個輪廓。如需詳細資訊，請參閱[同意原則評估](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)。
 
 ### 資料使用原則檢查 {#data-usage-policy-checks}
 

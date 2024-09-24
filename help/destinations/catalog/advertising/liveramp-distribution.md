@@ -109,8 +109,8 @@ ht-degree: 38%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
->title="4C 品牌設定檔 ID"
->abstract="輸入與您的 4C 品牌設定檔相關的數值 ID。如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。"
+>title="4C 品牌輪廓 ID"
+>abstract="輸入與您的 4C 品牌輪廓相關的數值 ID。如果您沒有此 ID，請聯絡您的 4C 用戶端服務代表。"
 
 若要設定目的地的詳細資料，請填寫下列欄位。
 
@@ -427,7 +427,7 @@ ht-degree: 38%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!IMPORTANT]
 > 

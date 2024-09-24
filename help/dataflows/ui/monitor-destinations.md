@@ -54,23 +54,23 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
->title="收到的設定檔"
->abstract="資料流中收到的設定檔總數。此值每 60 分鐘更新一次。"
+>title="收到的輪廓"
+>abstract="資料流中收到的輪廓總數。此值每 60 分鐘更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的客群中建立、更新和刪除的身分。"
+>abstract="成功啟用到所選目的地之個別輪廓身分的計數。此量度包括從匯出的客群中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="排除的身分"
->abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別設定檔記錄的計數。"
+>abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別輪廓記錄的計數。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="失敗的身分"
->abstract="針對所選目的地失敗的個別設定檔身分的計數。請檢查錯誤診斷以取得詳細資料。"
+>abstract="針對所選目的地失敗的個別輪廓身分的計數。請檢查錯誤診斷以取得詳細資料。"
 
 針對串流目的地，[!UICONTROL 資料流執行]索引標籤會提供資料流執行上量度資料的每小時更新。 標示為最顯著的統計資料是用於身分。
 
@@ -128,18 +128,18 @@ ht-degree: 10%
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
->title="收到的設定檔"
->abstract="資料流中收到的設定檔總數。此值每 60 分鐘更新一次。"
+>title="收到的輪廓"
+>abstract="資料流中收到的輪廓總數。此值每 60 分鐘更新一次。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="啟用的身分"
->abstract="成功啟用到所選目的地之個別設定檔身分的計數。此量度包括從匯出的客群中建立、更新和刪除的身分。"
+>abstract="成功啟用到所選目的地之個別輪廓身分的計數。此量度包括從匯出的客群中建立、更新和刪除的身分。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="排除的身分"
->abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別設定檔記錄的計數。"
+>abstract="根據缺少的屬性和違規行為，從所選目的地的啟用中排除的個別輪廓記錄的計數。"
 
 針對批次目的地，[!UICONTROL 資料流執行]索引標籤會提供資料流執行上的量度資料。 接著會顯示個別執行及其特定量度的清單，以及身分的下列總計：
 

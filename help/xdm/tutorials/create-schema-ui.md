@@ -369,12 +369,12 @@ Adobe Experience Platform使用者介面可讓您在名為[!DNL Schema Editor]�
 [!CONTEXTUALHELP]
 id="platform_schemas_delete_profileenabledwithdatasets"
 title="無法刪除結構描述"
-abstract="無法刪除結構描述，因為已針對設定檔啟用它，而且它有關聯的資料集。"
+abstract="無法刪除結構描述，因為已針對輪廓啟用它，而且它有關聯的資料集。"
 
 [!CONTEXTUALHELP]
 id="platform_schemas_delete_profileenablednodatasets"
 title="無法刪除結構描述"
-abstract="無法刪除結構描述，因為已針對設定檔啟用它。"
+abstract="無法刪除結構描述，因為已針對輪廓啟用它。"
 
 [!CONTEXTUALHELP]
 id="platform_schemas_delete_withdatasetsnotprofileenabled"
