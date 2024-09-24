@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結構描述UI總覽
 description: 此概觀涵蓋Experience Platform中結構工作區的主要功能。
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '307'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ Adobe Experience Platform使用者介面中的[!UICONTROL 結構描述]工作區
 
 若要存取Platform UI中的工作區，請在左側邊欄中選取&#x200B;**[!UICONTROL 結構描述]**。
 
-![](../images/ui/overview/schemas-tab.png)
+![在Platform UI左側導覽中反白顯示結構描述的結構描述工作區。](../images/ui/overview/schemas-tab.png)
 
 ## 快速入門
 

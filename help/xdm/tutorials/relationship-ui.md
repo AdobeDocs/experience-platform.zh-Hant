@@ -5,10 +5,10 @@ title: 使用結構編輯器定義兩個結構描述之間的關係
 description: 本檔案提供在Experience Platform使用者介面中使用結構編輯器來定義兩個結構描述之間關係的教學課程。
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 10%
+source-wordcount: '1376'
+ht-degree: 9%
 
 ---
 
@@ -109,19 +109,49 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->以下步驟說明如何使用畫布中的滑鼠右欄控制項來定義關係欄位。 如果您有Real-Time CDP B2B Edition的存取權，也可以使用[相同的對話方塊](./relationship-b2b.md#relationship-field)定義一對一關係，就像建立多對一關係時一樣。
+>只能對字串或字串陣列欄位支援關係。
 
-在畫布中選取`preferredHotel`欄位，然後向下捲動至&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;下，直到&#x200B;**[!UICONTROL Relationship]**&#x200B;核取方塊出現為止。 選取核取方塊以顯示設定關係欄位所需的引數。
+在畫布中選取`preferredHotel`欄位，然後在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;側邊欄中選取&#x200B;**[!UICONTROL 新增關係]**。
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![在Field屬性側邊欄中反白顯示Add關聯性的結構描述編輯器。](../images/tutorials/relationship/add-relationship.png)
 
-選取&#x200B;**[!UICONTROL 參考結構描述]**&#x200B;的下拉式清單，並選取關聯性的參考結構描述（此範例中為&quot;[!DNL Hotels]&quot;）。 在&#x200B;**[!UICONTROL 參考身分名稱空間]**&#x200B;下，選取參考結構描述之身分欄位的名稱空間（在此案例中為&quot;[!DNL Hotel ID]&quot;）。 完成時選取&#x200B;**[!UICONTROL 套用]**。
+[!UICONTROL 新增關係]對話方塊就會顯示。 從這個對話方塊，您可以設定設定關係欄位所需的引數。 對於Real-Time CDP B2C使用者，您只能&#x200B;**在**&#x200B;設定來源和參考結構描述之間的一對一關係。
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>如果您有Real-Time CDP B2B Edition的存取權，可以使用畫布的右邊欄控制項來定義關係欄位，並使用[相同對話方塊](./relationship-b2b.md#relationship-field)建立多對一關係。
+
+![新增關係對話方塊。](../images/tutorials/relationship/add-relationship-dialog.png)
+
+使用&#x200B;**[!UICONTROL 參考結構描述]**&#x200B;的下拉式清單，並選取關聯性的參考結構描述（此範例中為&quot;[!DNL Hotels]&quot;）。
+
+>[!NOTE]
+>
+>參考結構描述下拉式選單中只會包含主要身分的結構描述。 此保護措施可防止您意外與尚未正確設定的結構描述建立關係。
+
+參考結構描述的身分名稱空間（在此案例中為&quot;[!DNL Hotel ID]&quot;）會自動填入&#x200B;**[!UICONTROL 參考身分名稱空間]**&#x200B;下。 完成時選取&#x200B;**[!UICONTROL 套用]**。
+
+![已設定關聯性引數且套用的新增關聯性對話方塊已反白顯示。](../images/tutorials/relationship/apply-relationship.png)
 
 `preferredHotel`欄位現在會在畫布中反白為關聯性，顯示參考結構描述的名稱。 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存變更並完成工作流程。
 
-![](../images/tutorials/relationship/relationship-save.png)
+![結構描述編輯器，反白顯示關聯性參考和[儲存]。](../images/tutorials/relationship/relationship-save.png)
+
+### 編輯現有的關係欄位 {#edit-relationship}
+
+若要變更參考結構描述，請選取具有現有關聯性的欄位，然後在&#x200B;**[!UICONTROL 欄位屬性]**&#x200B;側邊欄中選取&#x200B;**[!UICONTROL 編輯關聯性]**。
+
+![反白顯示編輯關聯性的結構描述編輯器。](../images/tutorials/relationship/edit-relationship.png)
+
+[!UICONTROL 編輯關係]對話方塊就會顯示。 從此處，您可以依照定義關聯性欄位](#relationship-field)的[中概述的程式，或刪除關聯性。 選取&#x200B;**[!UICONTROL 刪除關係]**&#x200B;以移除與參考結構描述的關係。
+
+![編輯關聯性對話方塊。](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## 篩選和搜尋關係 {#filter-and-search}
+
+您可以從[!UICONTROL 結構描述]工作區的[!UICONTROL 關係]索引標籤，篩選及搜尋結構描述中的特定關係。 您可以使用此檢視快速找到並管理您的關係。 請閱讀[探索結構描述資源](../ui/explore.md#lookup)上的檔案，以取得篩選選項的詳細說明。
+
+![結構描述工作區中的[關聯性]索引標籤。](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## 後續步驟
 
