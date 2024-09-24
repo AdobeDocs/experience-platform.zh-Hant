@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform 概觀
 breadcrumb-title: Experience 平台概觀
 user-guide-description: 透過指南、文件和教學課程，了解 Experience Platform 如何協助您即時為客戶傳遞個人化體驗。
-source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
+source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '282'
 ht-degree: 24%
 
 ---
@@ -74,6 +74,7 @@ ht-degree: 24%
 * 授權使用和護欄{#license}
    * [資料管理授權權益最佳實務](./license-usage-and-guardrails/data-management-best-practices.md)
    * [授權使用量儀表板](./license-usage-and-guardrails/license-usage-dashboard.md)
+   * [總資料量](./license-usage-and-guardrails/total-data-volume.md)
    * [Adobe Journey Optimizer護欄](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
    * [Customer Journey Analytics護欄](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [Real-Time CDP護欄](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
