@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 資料準備對應函式
 description: 本檔案將介紹與「資料準備」搭配使用的對應函式。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
+source-wordcount: '6024'
 ht-degree: 2%
 
 ---
@@ -178,6 +178,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 大小_of | 傳回輸入的大小。 | <ul><li>輸入： **必要**&#x200B;您嘗試尋找大小的物件。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | 此函式用於將整個輸入陣列中的所有元素附加到Profile中陣列的結尾。 此函式僅&#x200B;**適用於更新期間**。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必要**&#x200B;要在設定檔中附加陣列的陣列。</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123， 456] |
 | upsert_array_replace | 此函式用於取代陣列中的元素。 此函式僅&#x200B;**適用於更新期間**。 如果在插入內容中使用，此函式會依原樣傳回輸入。 | <ul><li>陣列： **必要**&#x200B;要取代設定檔中陣列的陣列。</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123， 456] |
+| [!BADGE Beta]{type=Informative} array_to_string | 使用指定的分隔符號聯結陣列中元素的字串表示法。 如果陣列是多維度的，則會在聯結前將其平面化。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>SEPARATOR： **必要**&#x200B;用來聯結陣列中元素的分隔符號。</li><li>ARRAY： **必要**&#x200B;要聯結的陣列（平面化之後）。</li></ul> | array_to_string(SEPARATOR， ARRAY) | `array_to_string(";", ["Hello", "world"])` | 「Hello；world」 |
+| [!BADGE Beta]{type=Informative} filterArray* | 根據述詞篩選指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>陣列： **必要**&#x200B;要篩選的陣列</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | filterArray(ARRAY， PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5， 7] |
+| [!BADGE Beta]{type=Informative} transformArray* | 根據述詞轉換指定的陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>陣列： **必要**&#x200B;要轉換的陣列。</li><li>述詞： **必要**&#x200B;要套用至指定陣列之每個專案的述詞。 | transformArray(ARRAY， PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6， 7， 8] |
+| [!BADGE Beta]{type=Informative} flattenArray* | 將指定的（多維）陣列平面化為一維陣列。 **注意**：此函式用於目的地。 如需詳細資訊，請參閱[檔案](../destinations/ui/export-arrays-calculated-fields.md)。 | <ul><li>陣列： **必要**&#x200B;要平面化的陣列。</li></ul> | flattenArray(ARRAY) | flattenArray([[[&#39;a&#39;， &#39;b&#39;]， [&#39;c&#39;， &#39;d&#39;]]， [[&#39;e&#39;]， [&#39;f&#39;]]]) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;、&#39;e&#39;、&#39;f&#39;] |
 
 {style="table-layout:auto"}
 
