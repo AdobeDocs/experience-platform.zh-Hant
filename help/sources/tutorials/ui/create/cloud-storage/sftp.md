@@ -2,9 +2,9 @@
 title: 在使用者介面中建立SFTP Source連線
 description: 瞭解如何使用Adobe Experience Platform UI建立SFTP來源連線。
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -30,20 +30,7 @@ ht-degree: 1%
 
 ### 收集必要的認證
 
-為了連線到[!DNL SFTP]，您必須提供下列連線屬性的值：
-
-| 認證 | 說明 |
-| ---------- | ----------- |
-| `host` | 與您的[!DNL SFTP]伺服器關聯的名稱或IP位址。 |
-| `port` | 您正在連線的[!DNL SFTP]伺服器連線埠。 如果未提供，則值預設為`22`。 |
-| `username` | 可存取您[!DNL SFTP]伺服器的使用者名稱。 |
-| `password` | [!DNL SFTP]伺服器的密碼。 |
-| `privateKeyContent` | Base64編碼SSH私密金鑰內容。 OpenSSH金鑰的型別必須分類為RSA或DSA。 |
-| `passPhrase` | 如果金鑰檔案或金鑰內容受密語保護，則將私密金鑰解密的密語或密碼。 如果PrivateKeyContent受密碼保護，此引數必須搭配PrivateKeyContent的密碼短語作為值使用。 |
-| `maxConcurrentConnections` | 此引數可讓您指定在連線至您的SFTP伺服器時，Platform將建立的同時連線數目上限。 您必須將此值設定為小於SFTP設定的限制。 **注意**：為現有SFTP帳戶啟用此設定時，只會影響未來的資料流，不會影響現有的資料流。 |
-| 檔案夾路徑 | 您要提供存取權的資料夾路徑。 [!DNL SFTP]來源，您可以提供資料夾路徑，以指定使用者對您所選子資料夾的存取權。 |
-
-收集必要的認證後，您可以依照下列步驟建立新的[!DNL SFTP]帳戶以連線至Platform。
+請閱讀[[!DNL SFTP] 驗證指南](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)，以瞭解如何擷取驗證認證的詳細步驟。
 
 ## 連線到您的[!DNL SFTP]伺服器
 
@@ -81,13 +68,32 @@ ht-degree: 1%
 
 >[!TAB 基本驗證]
 
-若要使用基本驗證，請選取&#x200B;**[!UICONTROL 密碼]**，然後提供要連線的主機與連線埠值，以及您的使用者名稱與密碼。 在此步驟中，您也可以指定要提供存取權的子資料夾路徑。 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**。
+若要使用基本驗證，請選取&#x200B;**[!UICONTROL 密碼]**，然後為下列認證提供適當的值：
+
+* 主機
+* 連線埠
+* 使用者名稱
+* 密碼
+
+在此步驟中，您也可以設定最大並行連線、定義資料夾路徑，以及啟用或停用[!DNL SFTP]伺服器的區塊化。 完成後，請選取&#x200B;**[!UICONTROL 連線到來源]**，並等待一段時間以建立連線。
+
+如需有關驗證的詳細資訊，請閱讀[收集 [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)所需認證的指南。
 
 ![使用基本驗證的SFTP來源的新帳戶畫面](../../../../images/tutorials/create/sftp/password.png)
 
 >[!TAB SSH公開金鑰驗證]
 
-若要使用SSH公開金鑰型認證，請選取&#x200B;**[!UICONTROL SSH公開金鑰]**，然後提供您的主機和連線埠值，以及您的私密金鑰內容和密碼組合。 在此步驟中，您也可以指定要提供存取權的子資料夾路徑。 完成時，請選取&#x200B;**[!UICONTROL 連線到來源]**。
+若要使用SSH公開金鑰認證，請選取&#x200B;**[!UICONTROL SSH公開金鑰]**，然後提供下列認證的適當值：
+
+* 主機
+* 連線埠
+* 使用者名稱
+* 私密金鑰內容
+* 複雜密碼
+
+在此步驟中，您也可以設定最大並行連線、定義資料夾路徑，以及啟用或停用[!DNL SFTP]伺服器的區塊化。 完成後，請選取&#x200B;**[!UICONTROL 連線到來源]**，並等待一段時間以建立連線。
+
+如需有關驗證的詳細資訊，請閱讀[收集 [!DNL SFTP]](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)所需認證的指南。
 
 ![使用SSH公開金鑰的SFTP來源的新帳戶畫面。](../../../../images/tutorials/create/sftp/ssh.png)
 

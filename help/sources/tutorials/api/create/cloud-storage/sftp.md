@@ -2,9 +2,9 @@
 title: 使用流量服務API建立SFTP基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至SFTP （安全檔案傳輸通訊協定）伺服器。
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f6d1cc811378f2f37968bf0a42b428249e52efd8
+source-git-commit: 919e2c34bf8b9b4646936fe8bfbd4ee33d44407a
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '753'
 ht-degree: 2%
 
 ---
@@ -30,19 +30,7 @@ ht-degree: 2%
 
 ### 收集必要的認證
 
-為了讓[!DNL Flow Service]連線到[!DNL SFTP]，您必須提供下列連線屬性的值：
-
-| 認證 | 說明 |
-| ---------- | ----------- |
-| `host` | 與您的[!DNL SFTP]伺服器關聯的名稱或IP位址。 |
-| `port` | 您連線的SFTP伺服器連線埠。 如果未提供，則值預設為`22`。 |
-| `username` | 可存取您[!DNL SFTP]伺服器的使用者名稱。 |
-| `password` | [!DNL SFTP]伺服器的密碼。 |
-| `privateKeyContent` | Base64編碼SSH私密金鑰內容。 OpenSSH金鑰的型別必須分類為RSA或DSA。 |
-| `passPhrase` | 如果金鑰檔案或金鑰內容受密語保護，則將私密金鑰解密的密語或密碼。 如果`privateKeyContent`受密碼保護，此引數必須搭配私密金鑰內容的密碼短語作為值使用。 |
-| `maxConcurrentConnections` | 此引數可讓您指定在連線至您的SFTP伺服器時，Platform將建立的同時連線數目上限。 您必須將此值設定為小於SFTP設定的限制。 **注意**：為現有SFTP帳戶啟用此設定時，只會影響未來的資料流，不會影響現有的資料流。 |
-| `folderPath` | 您要提供存取權的資料夾路徑。 [!DNL SFTP]來源，您可以提供資料夾路徑，以指定使用者對您所選子資料夾的存取權。 |
-| `connectionSpec.id` | 連線規格會傳回來源的聯結器屬性，包括與建立基礎連線和來源連線相關的驗證規格。 [!DNL SFTP]的連線規格識別碼為： `b7bf2577-4520-42c9-bae9-cad01560f7bc`。 |
+請閱讀[[!DNL SFTP] 驗證指南](../../../../connectors/cloud-storage/sftp.md#gather-required-credentials)，以瞭解如何擷取驗證認證的詳細步驟。
 
 ### 使用平台API
 
@@ -95,7 +83,8 @@ curl -X POST \
               "userName": "{USERNAME}",
               "password": "{PASSWORD}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -113,6 +102,7 @@ curl -X POST \
 | `auth.params.password` | 與您的SFTP伺服器關聯的密碼。 |
 | `auth.params.maxConcurrentConnections` | 將Platform連線至SFTP時指定的同時連線數目上限。 啟用時，此值必須設定為至少1。 |
 | `auth.params.folderPath` | 您要提供存取權的資料夾路徑。 |
+| `auth.params.disableChunking` | 布林值，用來判斷您的SFTP伺服器是否支援區塊。 |
 | `connectionSpec.id` | SFTP伺服器連線規格識別碼： `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
@@ -154,7 +144,8 @@ curl -X POST \
               "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
               "passPhrase": "{PASSPHRASE}",
               "maxConcurrentConnections": 5,
-              "folderPath": "acme/business/customers/holidaySales"
+              "folderPath": "acme/business/customers/holidaySales",
+              "disableChunking": "true"
           }
       },
       "connectionSpec": {
@@ -173,6 +164,7 @@ curl -X POST \
 | `auth.params.passPhrase` | 如果金鑰檔案或金鑰內容受密語保護，則將私密金鑰解密的密語或密碼。 如果PrivateKeyContent受密碼保護，此引數必須搭配PrivateKeyContent的密碼短語作為值使用。 |
 | `auth.params.maxConcurrentConnections` | 將Platform連線至SFTP時指定的同時連線數目上限。 啟用時，此值必須設定為至少1。 |
 | `auth.params.folderPath` | 您要提供存取權的資料夾路徑。 |
+| `auth.params.disableChunking` | 布林值，用來判斷您的SFTP伺服器是否支援區塊。 |
 | `connectionSpec.id` | [!DNL SFTP]伺服器連線規格識別碼： `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 +++
