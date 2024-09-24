@@ -3,9 +3,9 @@ title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 0dadff9e2719c9cd24dcc17b759ff7e732282888
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1470'
 ht-degree: 2%
 
 ---
@@ -20,16 +20,89 @@ ht-degree: 2%
 
 逐步大綱：
 
-1. [建立必要的身分名稱空間](#namespace)
-2. [使用圖表模擬工具來熟悉身分最佳化演演算法](#graph-simulation)
-3. [使用身分設定工具來指定您專屬的名稱空間，並設定名稱空間的優先順序排名](#identity-settings)
-4. [建立體驗資料模型(XDM)結構描述](#schema)
-5. [建立資料集](#dataset)
-6. [將您的資料內嵌至Experience Platform](#ingest)
 
-## 預先實作必要條件
+1. [實作的完整必要條件](#prerequisites-for-implementation)
+2. [建立必要的身分名稱空間](#namespace)
+3. [使用圖表模擬工具來熟悉身分最佳化演演算法](#graph-simulation)
+4. [使用身分設定工具來指定您專屬的名稱空間，並設定名稱空間的優先順序排名](#identity-settings)
+5. [建立體驗資料模型(XDM)結構描述](#schema)
+6. [建立資料集](#dataset)
+7. [將您的資料內嵌至Experience Platform](#ingest)
 
-開始之前，您必須先確定系統中的已驗證事件一律包含人員識別碼。
+## 實作的先決條件 {#prerequisites-for-implementation}
+
+本節概述在實作身分圖表連結規則至您的資料之前，您必須完成的先決條件步驟。
+
+### 唯一命名空間
+
+#### 單一人員名稱空間需求 {#single-person-namespace-requirement}
+
+您必須確保每個設定檔中一律存在具有最高優先順序的唯一名稱空間。 如此可讓Identity Service偵測指定圖表中的適當人員識別碼。
+
++++選取此選項可檢視沒有單一人員識別碼名稱空間的圖表範例
+
+如果沒有能代表您個人識別碼的唯一名稱空間，您最終可能會看到將不同的個人識別碼連結至相同ECID的圖表。 在此範例中，B2BCRM和B2CCRM會同時連結至相同的ECID。 此圖表建議Tom使用其B2C登入帳戶與Summer共用裝置（使用她的B2B登入帳戶）。 但是，系統將識別這是一個設定檔（圖形摺疊）。
+
+![兩個人員識別碼連結至相同ECID的圖表案例。](../images/graph-examples/multi_namespaces.png)
+
++++
+
++++選取此選項可檢視具有單一人員識別碼名稱空間的圖表範例
+
+指定唯一的名稱空間（在此案例中是CRMID，而不是兩個完全不同的名稱空間），Identity Service就能夠識別上次與ECID建立關聯的人員識別碼。 在此範例中，由於存在唯一的CRMID，Identity Service能夠識別「共用裝置」情境，其中兩個實體共用相同裝置。
+
+![共用裝置圖表情境，其中兩個人員識別碼連結至相同的ECID，但舊連結被移除。](../images/graph-examples/crmid_only_multi.png)
+
++++
+
+### 名稱空間優先順序設定
+
+如果您使用[Adobe Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)來內嵌資料，則您必須為ECID指定比Adobe Analytics ID (AAID)更高的優先順序，因為Identity Service會封鎖AAID。 透過優先處理ECID，您可以指示即時客戶設定檔將未驗證事件儲存至ECID而非AAID。
+
+### XDM體驗事件
+
+* 在預先實作程式中，您必須確保系統要傳送給Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
+* 使用XDM體驗事件傳送事件時，請勿傳送空白字串作為身分值。 這樣做會導致系統錯誤。
+
++++選取此選項可檢視具有空字串的裝載範例
+
+下列範例傳回錯誤，因為`Phone`的身分值是以空字串提交。
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ],
+        "Phone": [
+            {
+                "id": "",
+                "primary": true
+            }
+        ]
+    }
+```
+
++++
+
+使用XDM體驗事件傳送事件時，您必須確保擁有完整身分識別。
+
++++選取此選項可檢視具有完整身分之事件的範例
+
+```json
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "24165048599243194405404369473457348936",
+                "primary": false
+            }
+        ]
+    }
+```
+
++++
 
 ## 設定許可權 {#set-permissions}
 
@@ -72,12 +145,6 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 ## 擷取您的資料 {#ingest}
 
->[!WARNING]
->
->* 在預先實作程式中，您必須確保系統要傳送給Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
->* 在實作期間，您必須確保每個設定檔中一律有最高優先順序的唯一名稱空間。 請參閱[附錄](#appendix)以取得圖表案例的範例，其可透過確保每個設定檔都包含具有最高優先順序的唯一名稱空間來解決。
->* 如果您使用[Adobe Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)來內嵌資料，則您必須為ECID指定比AAID更高的優先順序，因為Identity Service會封鎖AAID。 透過優先處理ECID，您可以指示即時客戶設定檔將未驗證事件儲存至ECID而非AAID。
-
 此時，您應該具備下列專案：
 
 * 存取Identity Service功能的必要許可權。
@@ -101,26 +168,6 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 ## 附錄 {#appendix}
 
 請參閱本節，瞭解實作身分設定和唯一名稱空間時可參考的其他資訊。
-
-### 單一人員名稱空間需求 {#single-person-namespace-requirement}
-
-您必須確保在代表個人的所有設定檔中使用單一名稱空間。 如此一來，Identity Service就能偵測指定圖表中的適當人員識別碼。
-
->[!BEGINTABS]
-
->[!TAB 沒有單一人員識別碼名稱空間]
-
-如果沒有能代表您個人識別碼的唯一名稱空間，您最終可能會看到將不同的個人識別碼連結至相同ECID的圖表。 在此範例中，B2BCRM和B2CCRM會同時連結至相同的ECID。 此圖表建議Tom使用其B2C登入帳戶與Summer共用裝置（使用她的B2B登入帳戶）。 但是，系統將識別這是一個設定檔（圖形摺疊）。
-
-![兩個人員識別碼連結至相同ECID的圖表案例。](../images/graph-examples/multi_namespaces.png)
-
->[!TAB 具有單一人員識別碼名稱空間]
-
-指定唯一的名稱空間（在此案例中是CRMID，而不是兩個完全不同的名稱空間），Identity Service就能夠識別上次與ECID建立關聯的人員識別碼。 在此範例中，由於存在唯一的CRMID，Identity Service能夠識別「共用裝置」情境，其中兩個實體共用相同裝置。
-
-![共用裝置圖表情境，其中兩個人員識別碼連結至相同的ECID，但舊連結被移除。](../images/graph-examples/crmid_only_multi.png)
-
->[!ENDTABS]
 
 ### Danging loginID案例 {#dangling-loginid-scenario}
 
@@ -158,6 +205,6 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [名稱空間優先順序](./namespace-priority.md)
+* [命名空間優先等級](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)
