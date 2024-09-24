@@ -4,7 +4,7 @@ title: 導覽至使用案例教戰手冊
 description: 瞭解如何在教戰手冊的收藏館中導覽，並開始使用勵志沙箱。
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 2%
@@ -67,7 +67,7 @@ ht-degree: 2%
 
 ### 推播頻道介面
 
-確認已從Experience Platform或資料收集介面設定應用程式介面。 這就是應用程式表面在資料收集環境中的樣子。
+確認通道設定是從Experience Platform或資料收集介面進行設定。 這是管道設定在資料收集環境中的樣子。
 
 ## 後續步驟 {#next-steps}
 

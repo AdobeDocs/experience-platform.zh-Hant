@@ -4,9 +4,9 @@ title: 開始使用使用使用案例教戰手冊
 description: 了解如何開始使用「使用案例教戰手冊」功能。
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -105,11 +105,11 @@ Playbook執行個體的&#x200B;**許可權**
 
 ### 推播頻道介面
 
-確認已從Experience Platform或資料收集介面設定應用程式介面。 這就是應用程式表面在資料收集環境中的樣子。
+確認通道設定是從Experience Platform或資料收集介面進行設定。 這是管道設定在資料收集環境中的樣子。
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-接著，選取您在應用程式表面設定中檢視的頻道、平台和應用程式。 選取&#x200B;**提交**&#x200B;以建立推播通道表面。
+接著，選取您在管道設定中檢視的管道、平台和應用程式。 選取&#x200B;**提交**&#x200B;以建立推播通道表面。
 
 閱讀有關[如何設定推播通道表面](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html)的檔案。
 
