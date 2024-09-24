@@ -1,12 +1,11 @@
 ---
 title: 將您的Snowflake串流帳戶連線至Adobe Experience Platform
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Snowflake串流。
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '845'
 ht-degree: 4%
 
 ---
@@ -15,8 +14,8 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->* [!DNL Snowflake]串流來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
->* 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
+>
+> 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
 
 本教學課程提供如何使用[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>)將資料從您的[!DNL Snowflake]帳戶連線並串流到Adobe Experience Platform的步驟。
 

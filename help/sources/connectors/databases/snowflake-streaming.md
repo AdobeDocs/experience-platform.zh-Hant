@@ -1,13 +1,12 @@
 ---
 title: Snowflake串流Source聯結器概述
 description: 瞭解如何建立來源連線和資料流，以將您的Snowflake執行個體中的串流資料擷取到Adobe Experience Platform
-badgeBeta: label="Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-05-25T00:00:00Z
+last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '772'
 ht-degree: 1%
 
 ---
@@ -16,8 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* [!DNL Snowflake]串流來源是測試版。 如需使用Beta版標籤來源的相關資訊，請參閱[來源概觀](../../home.md#terms-and-conditions)。
->* 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
+> 已購買Real-time Customer Data Platform Ultimate的使用者可在API中使用[!DNL Snowflake]串流來源。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

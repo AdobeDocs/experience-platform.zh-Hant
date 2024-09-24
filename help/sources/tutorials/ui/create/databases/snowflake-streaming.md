@@ -1,12 +1,10 @@
 ---
 title: 使用UI從Snowflake資料庫串流資料以Experience Platform
-type: Tutorial
 description: 瞭解如何從Snwoflake資料庫將資料串流到Experience Platform
-badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1647'
 ht-degree: 3%
 
 ---
@@ -151,7 +149,7 @@ ht-degree: 3%
 | --- | --- |
 | 資料流名稱 | 資料流的名稱。  依預設，這將使用正在匯入的檔案名稱。 |
 | 說明 | （選用）資料流的簡短說明。 |
-| 警報 | Experience Platform可產生使用者可訂閱的事件型警報。 這些選項需要執行中的資料流才能觸發。 如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
+| 警示 | Experience Platform可產生使用者可訂閱的事件型警報。 這些選項需要執行中的資料流才能觸發。 如需詳細資訊，請閱讀[警示概述](../../alerts.md) <ul><li>**來源資料流執行開始**：選取此警示以在您的資料流執行開始時收到通知。</li><li>**來源資料流執行成功**：選取此警示以在您的資料流結束且沒有任何錯誤時接收通知。</li><li>**來源資料流執行失敗**：選取此警示以在您的資料流執行結束時發生任何錯誤時接收通知。</li></ul> |
 
 完成後，選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續。
 
