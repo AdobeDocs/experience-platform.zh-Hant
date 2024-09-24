@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
+source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
 workflow-type: tm+mt
-source-wordcount: '4767'
+source-wordcount: '4717'
 ht-degree: 5%
 
 ---
@@ -111,8 +111,6 @@ ht-degree: 5%
 
 ![展示資料夾階層如何為對象運作的影像。](../images/ui/segment-builder/audience-folder-structure.png)
 
-您也可以使用搜尋列（使用[Lucene的搜尋語法](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)）來搜尋對象。 在&#x200B;**[!UICONTROL 對象]**&#x200B;索引標籤上，選取最上層資料夾會顯示搜尋列，讓您在該資料夾中搜尋。 搜尋結果只會在輸入整個字詞後開始填入。 例如，若要尋找名為`Online Shoppers`的對象，請在搜尋列中開始輸入「線上」。 輸入「線上」一詞後，包含「線上」一詞的搜尋結果就會出現。
-
 ## 規則產生器畫布 {#rule-builder-canvas}
 
 >[!IMPORTANT]
@@ -158,6 +156,11 @@ ht-degree: 5%
 ![會顯示警告，指出您已達到值的數量上限。](../images/ui/segment-builder/maximum-values.png)
 
 ### 新增對象
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_addaudiences"
+>title="搜尋更新"
+>abstract="現有的搜尋系統已更新為使用整合式搜尋。 整合式搜尋可讓您更輕鬆且更穩健地搜尋對象以取得區段成員資格。"
 
 您可以從&#x200B;**[!UICONTROL 對象]**&#x200B;標籤將對象拖放到規則產生器畫布上，以參考新區段定義中的對象成員資格。 這可讓您在新的區段定義規則中，以屬性的形式包含或排除對象成員資格。
 
@@ -324,7 +327,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="合併政策"
->abstract="合併政策可讓不同的資料集合併，形成您的設定檔。平台已提供預設的合併政策，不然您也可以在設定檔中建立新的預設合併政策。針對此客群選擇和您的行銷目的相符的合併政策。"
+>abstract="合併政策可讓不同的資料集合併，形成您的輪廓。平台已提供預設的合併政策，不然您也可以在輪廓中建立新的預設合併政策。針對此客群選擇和您的行銷目的相符的合併政策。"
 
 [!DNL Experience Platform]可讓您將來自多個來源的資料彙集在一起，並加以合併，以便檢視每個個別客戶的完整檢視。 彙總此資料時，合併原則是[!DNL Platform]用來決定資料優先順序的方式以及將合併哪些資料以建立設定檔的規則。
 
@@ -344,7 +347,7 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="重新整理預估"
->abstract="重新整理區段定義的預估值，即可立即預覽有多少設定檔符合建議的區段定義的資格。客群預估值會透過使用當天的樣本資料的樣本大小產生。"
+>abstract="重新整理區段定義的預估值，即可立即預覽有多少輪廓符合提議的區段定義的資格。客群預估值會透過使用當天的樣本資料的樣本大小產生。"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="預估和預覽客群"
 
 建立區段定義時，工作區右側的&#x200B;**[!UICONTROL 對象屬性]**&#x200B;區段會顯示結果區段定義的大小預估值，好讓您在建立對象本身之前根據需要調整區段定義。
