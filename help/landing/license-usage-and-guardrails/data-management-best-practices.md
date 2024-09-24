@@ -2,10 +2,10 @@
 title: 資料管理授權權益最佳實務
 description: 了解可以更有效管理 Adobe Experience Platform 授權權益的最佳實務及工具。
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 2%
+source-wordcount: '2145'
+ht-degree: 3%
 
 ---
 
@@ -42,12 +42,7 @@ Experience Platform主要由兩個資料存放庫組成： [!DNL data lake]和�
 
 **[!DNL Addressable Audience]** — 合約允許在Experience Platform中使用的客戶設定檔總數，包括已知和假名設定檔。
 
-**[!DNL Profile Richness]** — 您設定檔資料的平均大小(Experience Platform)。 您可以購買豐富套件以增加您的[!DNL Profile Richness]權益。
-
-[!DNL Profile Richness]量度會依您購買的授權而有所不同。 [!DNL Profile Richness]有兩種可用計算：
-
-* 儲存在Adobe Real-time Customer Data Platform中任何時間點的所有生產資料總和（即即時客戶設定檔和Identity Service），除以[!DNL Addressable Audience]；
-* 儲存在Platform內的所有資料（包括但不限於[!DNL data lake]、即時客戶設定檔和身分服務）以及您過去12個月透過Platform串流（而非儲存在）的任何資料的總和，除以[!DNL Addressable Audience]。
+**[!DNL Total Data Volume]** — 可在參與工作流程中使用的Adobe Experience Platform設定檔服務資料總數。
 
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。
 
@@ -108,7 +103,7 @@ Adobe Experience Platform並非所有資料都是相同的。 有些資料可能
 | --- | --- |
 | Adobe Audience Manager來源篩選 | 建立Adobe Audience Manager來源連線時，您可以挑選要帶入[!DNL data lake]和即時客戶個人檔案的區段和特徵，而不是擷取完整的Audience Manager資料。 如需詳細資訊，請參閱[建立Audience Manager來源連線](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)的指南。 |
 | Adobe Analytics資料準備 | 建立Analytics來源連線時，您可以使用[!DNL Data Prep]功能來篩選出使用案例不需要的資料。 透過[!DNL Data Prep]，您可以定義哪些屬性/欄需要發佈到設定檔。 您也可以提供條件陳述式，通知Platform資料應該發佈到設定檔，還是隻發佈到[!DNL data lake]。 如需詳細資訊，請參閱[建立Analytics來源連線](../../sources/tutorials/ui/create/adobe-applications/analytics.md)的指南。 |
-| 支援為設定檔啟用/停用資料集 | 若要將資料擷取至即時客戶個人檔案，您必須啟用資料集以用於個人檔案存放區。 如此一來，新增至您的[!DNL Addressable Audience]和[!DNL Profile Richness]權益。 客戶設定檔使用案例不再需要資料集後，您可以停用該資料集與設定檔的整合，以確保您的資料符合授權規範。 如需詳細資訊，請參閱[啟用和停用設定檔](../../catalog/datasets/enable-for-profile.md)的資料集指南。 |
+| 支援為設定檔啟用/停用資料集 | 若要將資料擷取至即時客戶個人檔案，您必須啟用資料集以用於個人檔案存放區。 如此一來，新增至您的[!DNL Addressable Audience]和[!DNL Total Data Volume]權益。 客戶設定檔使用案例不再需要資料集後，您可以停用該資料集與設定檔的整合，以確保您的資料符合授權規範。 如需詳細資訊，請參閱[啟用和停用設定檔](../../catalog/datasets/enable-for-profile.md)的資料集指南。 |
 | Web SDK和Mobile SDK資料排除 | Web和Mobile SDK收集的資料有兩種型別：自動收集的資料以及開發人員明確收集的資料。 若要更妥善地管理授權法規遵循，您可以透過內容設定，在SDK的組態中停用自動資料收集。 您的開發人員也可以移除或設定自訂資料。 |
 | 伺服器端轉送資料排除 | 如果您使用伺服器端轉送將資料傳送至Platform，您可以移除規則動作中的對應以在所有事件中排除資料，或是將條件新增至規則，讓資料僅針對特定事件引發，藉此排除傳送的資料。 如需詳細資訊，請參閱有關[事件和條件](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if)的檔案。 |
 | 在來源層級篩選資料 | 您可以使用邏輯和比較運運算元，在建立連線並將資料擷取到Experience Platform之前，先篩選來源中的列層級資料。 如需詳細資訊，請參閱[使用 [!DNL Flow Service] API](../../sources/tutorials/api/filter.md)篩選來源之資料列層級資料的指南。 |

@@ -2,10 +2,10 @@
 title: Adobe Experience Platform中的AI助理概述
 description: 了解 AI 助理、其細微差別和使用案例，以及如何使用它來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 8%
+source-wordcount: '926'
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 請閱讀本檔案，瞭解Adobe Experience Platform中的AI助理。
 
-Adobe Experience Platform中的AI助理是一種對話式體驗，可用來加速Adobe應用程式中的工作流程。 您可以使用AI Assistant來進一步瞭解產品知識、疑難排解問題，或搜尋資訊並尋找營運見解。 AI助理支援Experience Platform、Real-time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
+Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加速 Adobe 應用程式中的工作流程。您可以使用 AI 助理增進產品知識、疑難排解問題，或搜尋資訊和尋找營運深入解析。AI 助理支援 Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer 和 Customer Journey Analytics。
 
 ![首次觸發使用者體驗的AI助理介面。](./images/ai-assistant-full.png)
 
@@ -53,7 +53,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 | 產品知識 | 範例 |
 | --- | --- |
-| 點式學習 | <ul><li>身分識別與主要或外部索引鍵之間有何差異？</li><li>如何計算設定檔豐富度？</li></ul> |
+| 點式學習 | <ul><li>身分識別與主要或外部索引鍵之間有何差異？</li><li>什麼是相似客群？</li></ul> |
 | 開啟探索 | <ul><li>如何匯出此資料集？</li><li>是否有適用於醫療保健客戶的結構描述？</li></ul> |
 | 疑難排解 | <ul><li>為什麼我無法為設定檔開啟Adobe擁有的結構描述？</li><li>我為何刪除不了區段？</li></ul> |
 
@@ -67,7 +67,7 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 營運深入分析是指回答AI助理產生的中繼資料物件（屬性、受眾、資料流、資料集、目的地、歷程、結構描述和來源），包括計數、查閱和歷程影響。 它不會檢視沙箱中的任何資料。
 
-* 我有多少資料集？
+* 我有多少個資料集？
 * 有多少結構描述屬性從未使用過？
 * 已啟用哪些對象？
 
@@ -76,10 +76,10 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 | 網域 | 支援的中繼資料 | 不支援的中繼資料 |
 | --- | --- | --- |
 | 屬性 | <ul><li>屬性名稱搜尋</li><li>屬性 — 結構描述關係</li><li>屬性 — 資料集關係</li><li>屬性 — 對象關係</li><li>屬性 — 目的地關係</li></ul> | <ul><li>屬性類別</li><li>稽核</li><li>淘汰狀態</li><li>標記</li><li>儲存在屬性中的值</li></ul> |
-| 客群 | <ul><li>客群計數</li><li>對象型別（串流或批次）</li><li>建立/修改日期</li><li>啟用狀態</li><li>設定檔計數</li><li>複製對象</li><li>對象定義搜尋</li><li>對象 — 對象關係</li><li>對象 — 屬性關係</li><li>對象 — 資料集關係</li><li>對象 — 目的地關係</li><li>名稱搜尋</li><li>名稱和ID搜尋 | <ul><li>對象重疊</li><li>客群啟用</li><li>對象 — 行銷活動關係</li><li>稽核</li><li>建立/修改</li><li>標記</li><li>設定檔資格趨勢</li></ul> |
+| 客群 | <ul><li>客群計數</li><li>對象型別（串流或批次）</li><li>建立/修改日期</li><li>啟用狀態</li><li>輪廓計數</li><li>複製對象</li><li>對象定義搜尋</li><li>對象 — 對象關係</li><li>對象 — 屬性關係</li><li>對象 — 資料集關係</li><li>對象 — 目的地關係</li><li>名稱搜尋</li><li>名稱和ID搜尋 | <ul><li>對象重疊</li><li>客群啟用</li><li>對象 — 行銷活動關係</li><li>稽核</li><li>建立/修改</li><li>標記</li><li>設定檔資格趨勢</li></ul> |
 | 資料流 | <ul><li>資料流計數</li><li>資料流程狀態</li><li>資料流 — 資料集關係</li><li>資料流 — 來源關係</li></ul> | <ul><li>建立/修改</li><li>資料流 — 批次關係</li><li>擷取設定檔計數</li></ul> |
 | 資料集 | <ul><li>資料集計數</li><li>設定檔啟用狀態</li><li>建立/修改日期</li><li>資料集 — 結構描述關係</li><li>資料集 — 對象關係</li><li>資料集 — 屬性關係</li><li>資料集 — 資料流關係</li><li>名稱搜尋 </li><li>名稱和ID搜尋</li></ul> | <ul><li>稽核</li><li>建立者：</li><li>資料集 — 批次關係</li><li>資料集建立/修改</li><li>資料集大小</li><li>設定檔數</li><li>列數</li><li>值搜尋</li></ul> |
-| 目的地 | <ul><li>設定的目的地計數</li><li>目的地 — 對象關係</li><li>目的地屬性關係</li></ul> | <ul><li>帳戶設定</li><li>帳戶認證資訊</li><li>啟用的不重複設定檔</li></ul> |
+| 目標 | <ul><li>設定的目的地計數</li><li>目的地 — 對象關係</li><li>目的地屬性關係</li></ul> | <ul><li>帳戶設定</li><li>帳戶認證資訊</li><li>啟用的不重複設定檔</li></ul> |
 | 歷程 | <ul><li>計數</li><li>名稱搜尋</li><li>名稱和ID搜尋</li><li>歷程狀態</li><li>觸發狀態（對象與事件）</li><li>建立/修改日期</li><li>循環頻率</li></ul> | <ul><li>屬性 — 歷程關係</li><li>稽核</li><li>建立/修改</li><li>建立者：</li><li>活動</li><li>歷程 — 資料集</li><li>歷程 — 結構描述</li><li>優惠</li><li>設定檔資格趨勢</li><li>步驟事件</li></ul> |
 | 結構描述 | <ul><li>結構描述計數</li><li>建立/修改日期</li><li>結構描述 — 屬性關係</li><li>結構描述 — 資料集關係</li><li>結構描述 — 對象關係</li><li>設定檔啟用狀態</li><li>名稱搜尋</li><li>名稱和ID搜尋</li></ul> | <ul><li>稽核</li><li>建立/修改</li><li>建立者：</li><li>欄位群組</li><li>身分</li><li>身分識別命名空間</li><li>標記</li><li>設定檔數</li></ul> |
 | 來源 | <ul><li>帳戶計數</li><li>帳戶狀態</li><li>每個帳戶的作用中/非作用中資料流</li><li>Source聯結器 — 資料流關係</li><li>Source帳戶 — 資料流關係</li></ul> | <ul><li>帳戶認證資訊</li><li>帳戶設定</li><li>資料擷取量度</li><li>設定檔數</li><li>Source — 批次關係</li></ul> |
