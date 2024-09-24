@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '2051'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,28 @@ ht-degree: 0%
 
 該排定查詢的查詢執行清單隨即顯示。
 
+### 計算工作層級的時數 {#compute-hours}
+
+追蹤在查詢執行層級使用您的CTAS/ITAS批次查詢的計算時數。 此功能可提供運算使用情形的深入分析，協助您最佳化資源配置並改善查詢效能。
+
+>[!AVAILABILITY]
+>
+>「計算時數」功能是已購買[Data Distiller SKU](../data-distiller/overview.md)的使用者專屬的功能。 如需詳細資訊，請聯絡您的Adobe代表。
+
 ![已排程查詢工作區的詳細資訊區段，其中包含已排程查詢反白顯示的查詢執行清單。](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+下表提供詳細資訊區段中可用的每個資料欄的說明，其中列出已排程的查詢執行。
+
+| 欄標題 | 說明 |
+|---------------------|----------------------------------|
+| [!UICONTROL 查詢執行ID] | 顯示每個查詢回合的唯一識別碼，可讓您追蹤和參考已排程查詢的個別執行。 |
+| [!UICONTROL 查詢執行開始] | 表示查詢執行的開始日期和時間，協助您監視每次執行的開始時間。 |
+| [!UICONTROL 查詢執行完成] | 顯示查詢執行的完成日期和時間，以提供執行持續時間和狀態的深入分析。 |
+| [!UICONTROL 狀態] | 顯示查詢執行的目前狀態，例如`Completed,` `Running,`或`Failed,`，以快速評估結果。 |
+| [!UICONTROL 資料集] | 列出查詢執行中使用的資料集，以顯示與執行有關的資料來源。 |
+| [!UICONTROL 計算時數] | 顯示用於每次查詢執行的運算時間（以小時為單位）。 這有助於追蹤資源使用情況並最佳化查詢效能。 |
+
+{style="table-layout:auto"}
 
 如需有關如何透過UI監視所有查詢工作狀態的完整資訊，請參閱[監視器排程查詢指南](./monitor-queries.md#inline-actions)。
 
