@@ -2,7 +2,7 @@
 title: 建立全域篩選器
 description: 瞭解如何使用自訂全域套用的篩選器來篩選您的資料深入分析。
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5dd821383e1b1a7bd4998a6cf14a941bfdf3f26c
+source-git-commit: 581eb2a33f9bdfddc89c9d8dbf9fca8eb3725b1d
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -66,4 +66,3 @@ ht-degree: 0%
 若要清除所有自訂全域篩選器，請從[!UICONTROL 篩選器]對話方塊中選取&#x200B;**[!UICONTROL 全部清除]**。
 
 ![以「全部清除」反白的「篩選器」對話方塊。](../../../images/query-pro-mode/clear-all.png)
-

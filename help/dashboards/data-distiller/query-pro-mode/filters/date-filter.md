@@ -2,10 +2,10 @@
 title: 建立日期篩選
 description: 瞭解如何依日期篩選您的自訂深入分析。
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 77cedd351b5628d15c279fceabde735f4f93f392
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 0%
+source-wordcount: '922'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,60 @@ ht-degree: 0%
 若要套用日期篩選，請從您的儀表板檢視的下拉式功能表中選取&#x200B;**[!UICONTROL 新增篩選]**，然後選取&#x200B;**[!UICONTROL 日期篩選]**。
 
 ![自訂儀表板，其新增篩選器及其下拉式功能表已反白顯示。](../../../images/query-pro-mode/add-filter.png)
+
+畫面會顯示下列日期篩選選項。
+
+| 篩選器 | 說明 |
+| --- | --- |
+| 無自訂日期 | 從多個預設值中選取一或多個自訂日期。 |
+| 自訂日期範圍 | 從多個預設值中選取一個或多個自訂日期，或指定自訂日期範圍。 |
+| 自訂日期 | 從預設值中選取，或指定儀表板的開始日期。 |
+
+![反白顯示三個自訂日期選擇器選項的建立日期篩選對話方塊。](../../../images/query-pro-mode/create-date-filter.png)
+
+### 建立無自訂日期篩選
+
+若要套用預先定義的日期篩選，請選取&#x200B;**[!UICONTROL 無自訂日期]**，然後選取您要包含的預先定義日期選項。 最後，使用下拉式清單選取預設日期範圍，然後選取&#x200B;**[!UICONTROL 儲存]**。
+
+![建立日期篩選對話方塊沒有自訂日期篩選並反白顯示。](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+您會回到儀表板，其中顯示您先前選取的預設日期範圍。 使用下拉式選單來選取另一個預設日期範圍。
+
+![自訂儀表板，顯示預設日期範圍，並反白顯示下拉式清單。](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### 建立自訂日期範圍篩選器
+
+若要套用自訂日期範圍篩選，請選取&#x200B;**[!UICONTROL 自訂日期範圍]**，然後選取您要包含的預先定義日期選項。 最後，選取&#x200B;**[!UICONTROL 自訂]**&#x200B;以設定預設日期範圍。 使用行事曆指定日期範圍，然後選取&#x200B;**[!UICONTROL 儲存]**。
+
+>[!NOTE]
+>
+>不需要選取預先定義的日期選項。
+
+![使用自訂日期範圍篩選器、自訂及醒目提示儲存的建立日期篩選器對話方塊。](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+您會回到控制面板，顯示您先前指定的自訂資料範圍。 使用下拉式選單來選取另一個預設日期範圍。
+
+![顯示預設日期範圍的自訂儀表板，其中反白顯示自訂日期。](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### 建立自訂日期篩選
+
+若要套用自訂日期篩選，請選取&#x200B;**[!UICONTROL 自訂日期]**，然後選取您要包含的預先定義日期選項。 最後，選取&#x200B;**[!UICONTROL 自訂]**，然後使用行事曆選取開始日期。 最後，選取&#x200B;**[!UICONTROL 儲存]**。
+
+>[!NOTE]
+>
+>不需要選取預先定義的日期選項。
+
+![使用自訂日期篩選器、自訂及醒目提示儲存的建立日期篩選器對話方塊。](../../../images/query-pro-mode/custom-date-filter.png)
+
+您會回到控制面板，顯示您先前指定的自訂資料。 使用下拉式選單來選取其他日期。
+
+![顯示預設日期範圍的自訂儀表板，其中反白顯示自訂日期。](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## 刪除日期篩選 {#delete-date-filter}
+
+若要移除您的日期篩選，請選取刪除篩選圖示（![刪除篩選圖示。](/help/images/icons/filter-delete.png)）。
+
+![反白顯示篩選刪除圖示的自訂儀表板。](../../../images/query-pro-mode/delete-date-filter.png)
 
 ## 編輯您的SQL以包含日期查詢引數 {#include-date-parameters}
 
@@ -75,25 +129,3 @@ LIMIT  0;
 ![醒目提示Start_date下拉式功能表的Widget Composer。](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 最後，選取&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以返回您的儀表板。 現在已針對所有具有開始和結束日期引數的深入分析啟用日期篩選器。
-
-## 使用日期篩選
-
-若要使用自訂日期篩選，請選取行事曆圖示，然後從行事曆檢視中選擇開始和結束。
-
->[!IMPORTANT]
->
->僅新增日期篩選器不會改變圖表。 您必須編輯您的每個深入分析，以包含您選擇的開始和結束日期。
-
-![反白顯示日期篩選行事曆的自訂儀表板。](../../../images/query-pro-mode/date-filter.png)
-
-當您從儀表板選取日期範圍後，在SQL中有日期引數的深入分析會在Widget撰寫器中看到日期篩選選項。
-
->[!NOTE]
->
->在控制面板上選取日期範圍，會在分析建立工作流程中顯示日期篩選的切換。
-
-## 刪除日期篩選 {#delete-date-filter}
-
-若要移除您的日期篩選，請選取刪除篩選圖示（![刪除篩選圖示。](/help/images/icons/filter-delete.png)）。
-
-![反白顯示篩選刪除圖示的自訂儀表板。](../../../images/query-pro-mode/delete-date-filter.png)
