@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2802'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,12 @@ ht-degree: 0%
 
 使用查詢編輯器，您可以編寫、執行和儲存客戶體驗資料的查詢。 在查詢編輯器中執行或儲存的所有查詢，都可供貴組織中有權存取查詢服務的所有使用者使用。
 
+### 資料庫選擇器 {#database-selector}
+
+從「查詢編輯器」右上角的下拉式選單中選取要查詢的資料庫。 選取的資料庫會顯示在下拉式清單中。
+
+![資料庫下拉式功能表反白顯示的查詢編輯器。](../images/ui/query-editor/database-dropdown.png)
+
 ### 設定 {#settings}
 
 查詢編輯器輸入欄位上方的設定圖示包括啟用/停用深色主題或停用/啟用自動完成的選項。
@@ -66,9 +72,6 @@ ht-degree: 0%
 查詢編輯器會在您編寫查詢時，自動建議可能的SQL關鍵字以及表格或欄詳細資訊。 自動完成功能預設為啟用，並可隨時從查詢編輯器設定中停用或啟用。
 
 自動完成組態設定是每個使用者設定的，並記得該使用者連續登入的時間。 停用此功能會停止處理數個中繼資料命令，並提供通常有利於作者編輯查詢之速度的建議。
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### 執行多個循序查詢 {#execute-multiple-sequential-queries}
@@ -112,17 +115,7 @@ ht-degree: 0%
 
 ## 在查詢編輯器中寫入工具 {#writing-tools}
 
-- **自動語法反白顯示：**&#x200B;讓讀取和組織SQL更容易。
-
-![查詢編輯器中的SQL陳述式示範語法色彩醒目提示。](../images/ui/query-editor/syntax-highlight.png)
-
-- **SQL關鍵字自動完成：**&#x200B;開始輸入您的查詢，然後使用方向鍵導覽至所要的辭彙，然後按&#x200B;**Enter**。
-
-![具有自動完成下拉式功能表的SQL幾個字元，提供查詢編輯器的選項。](../images/ui/query-editor/syntax-auto.png)
-
-- **資料表和欄位自動完成：**&#x200B;開始輸入您要`SELECT`的資料表名稱，然後使用方向鍵瀏覽至您要尋找的資料表，然後按&#x200B;**Enter**。 選取表格後，自動完成會辨識該表格中的欄位。
-
-![顯示下拉式表格名稱建議的查詢編輯器輸入。](../images/ui/query-editor/tables-auto.png)
+使用查詢編輯器的撰寫工具來增強您的查詢撰寫程式。 功能包括格式化文字、複製SQL、管理查詢詳細資訊，以及儲存或排程您進行的工作的選項。
 
 ### 設定文字格式 {#format-text}
 
@@ -202,6 +195,43 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >[!NOTE]
 >
 >記錄檔不會儲存未執行的查詢。 查詢必須執行或儲存在「查詢編輯器」中，查詢才能在「查詢服務」中使用。
+
+### 物件瀏覽器 {#object-browser}
+
+>[!AVAILABILITY]
+>
+>資料集導覽邊欄僅適用於Data Distiller客戶。 您的Platform UI可能未包含左側資料集導覽邊欄。  此檔案中的其他影像可能不會反映資料集導覽邊欄。 如需詳細資訊，請聯絡您的Adobe代表。
+
+使用物件瀏覽器輕鬆搜尋和篩選資料集。 物件瀏覽器可縮短在有大量資料集的大型環境中搜尋表格和資料集所花費的時間。 透過簡化相關資料和中繼資料的存取，您可以將更多精力放在查詢撰寫上，而較少精力放在導覽上。
+
+若要使用物件瀏覽器瀏覽您的資料庫，請在搜尋欄位中輸入資料表名稱，或選取&#x200B;**[!UICONTROL 資料表]**&#x200B;以展開可用資料集和資料表的清單。 使用搜尋欄位時，會根據您的輸入動態篩選可用表格清單。
+
+>[!NOTE]
+>
+>[您選取的資料庫](#database-dropdown)中包含的每個資料集都會列在查詢編輯器左側的導覽邊欄中。
+
+![查詢編輯器資料集導覽邊欄中反白顯示搜尋輸入。](../images/ui/query-editor/search-tables.png)
+
+物件瀏覽器中顯示的綱要是可觀察的綱要。 這表示您可以在變更立即可見時，使用它來即時監視變更和更新。 可觀察的結構描述有助於確保資料同步化，並有助於偵錯或分析工作。
+
+#### 目前限制 {#current-limitations}
+
+以下是目前的限制清單：
+
+- 循序查詢執行：一次只能執行一個查詢。 查詢進行中時，由於查詢是按順序處理的，因此無法在左側導覽中開啟其他表格。
+- 查詢記錄中的額外列：您可能會在記錄中遇到標示為「SHOW TABLES」的外部查詢。 這些功能將在未來版本中移除。
+
+#### 存取表格中繼資料 {#table-metadata}
+
+除了快速搜尋外，您現在可以選取表格名稱旁的「i」圖示，輕鬆存取任何表格的中繼資料。 這可提供所選表格的詳細資訊，可幫助您在撰寫查詢時做出明智的決策。
+
+![查詢編輯器資料集導覽邊欄中反白顯示搜尋輸入。](../images/ui/query-editor/table-metadata.png)
+
+#### 探索子資料表
+
+若要瀏覽子表格或連結表格，請選取清單中表格名稱旁的下拉箭頭。 這會展開表格以顯示任何相關聯的子表格，並提供資料結構的清楚檢視，並允許更複雜的查詢建構。 欄位名稱旁邊的圖示表示欄的資料型別，可幫助您在複雜查詢期間識別它。
+
+![已顯示篩選資料表清單的查詢編輯器。](../images/ui/query-editor/child-table-list.png)
 
 ## 使用查詢編輯器執行查詢 {#executing-queries}
 
