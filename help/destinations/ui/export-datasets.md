@@ -3,10 +3,10 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e95c0e509931f141ff72c1defacebe5a29756157
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '1845'
-ht-degree: 4%
+source-wordcount: '2573'
+ht-degree: 6%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 您可以匯出的資料集因Experience Platform應用程式(Real-Time CDP、Adobe Journey Optimizer)、階層（Prime或Ultimate）以及您購買的任何附加元件(例如：Data Distiller)而異。
 
-根據您購買的應用程式、產品層級和任何附加元件，從下表瞭解您可以匯出的資料集型別：
+根據您的應用程式、產品層級和購買的任何附加元件，使用下表瞭解您可以匯出哪些資料集型別：
 
 <table>
 <thead>
@@ -137,11 +137,29 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="資料集的檔案匯出選項"
->abstract="選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後新增至資料集的資料。<br>第一個增量檔案匯出包括資料集中的所有資料，充當回填。未來的增量檔案僅包括第一次匯出後新增至資料集的資料。"
+>abstract="選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後新增至資料集的資料。<br>第一個增量檔案匯出包括資料集中的所有資料，充當回填。未來的增量檔案只會包含自第一次匯出以來新增到資料集的資料。 <br>選取&#x200B;**匯出完整檔案**，以便在每次匯出時匯出每個資料集的完整成員資格。 "
 
-在&#x200B;**[!UICONTROL 排程]**&#x200B;步驟中，您可以設定資料集匯出的開始日期和匯出步調。
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_header"
+>title="更新此資料流的結束日期"
+>abstract="更新此資料流的結束日期"
 
-已自動選取&#x200B;**[!UICONTROL 匯出增量檔案]**&#x200B;選項。 這會觸發一或多個檔案的匯出，這些檔案代表資料集的完整快照。 後續檔案是自上次匯出以來的資料集增量新增。
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="更新此資料流主體的結束日期"
+>abstract="由於最近對此目的地進行更新，資料流現在需要結束日期。Adobe 已將預設結束日期設定為 2025 年 5 月 1 日。請更新至您想要的結束日期，否則資料匯出將在預設日期停止。"
+
+使用&#x200B;**[!UICONTROL 排程]**&#x200B;步驟來：
+
+* 設定開始日期和結束日期，以及資料集匯出的匯出步調。
+* 設定匯出的資料集檔案應該匯出資料集的完整成員資格，還是只對每個匯出事件的成員資格進行累加變更。
+* 自訂資料集應匯出的儲存位置中的資料夾路徑。 深入瞭解如何[編輯匯出資料夾路徑](#edit-folder-path)。
+
+使用頁面上的&#x200B;**[!UICONTROL 編輯排程]**&#x200B;控制項來編輯匯出的匯出步調，以及選取要匯出完整檔案還是增量檔案。
+
+![編輯排程步驟中反白顯示的排程控制項。](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
+
+預設會選取&#x200B;**[!UICONTROL 匯出增量檔案]**&#x200B;選項。 這會觸發一或多個檔案的匯出，這些檔案代表資料集的完整快照。 後續檔案是自上次匯出以來的資料集增量新增。 您也可以選取&#x200B;**[!UICONTROL 匯出完整檔案]**。 在這種情況下，請選取頻率&#x200B;**[!UICONTROL 一次]**&#x200B;以一次完整匯出資料集。
 
 >[!IMPORTANT]
 >
@@ -156,13 +174,37 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 2. 使用&#x200B;**[!UICONTROL Time]**&#x200B;選擇器來選擇要進行匯出的時間（格式為[!DNL UTC]）。
 
-3. 使用&#x200B;**[!UICONTROL 日期]**&#x200B;選擇器來選擇匯出發生的間隔。 請注意，您目前無法設定匯出的結束日期。 如需詳細資訊，請檢視[已知限制](#known-limitations)區段。
+3. 使用&#x200B;**[!UICONTROL 日期]**&#x200B;選擇器來選擇匯出發生的間隔。
 
-4. 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以儲存排程並繼續&#x200B;**[!UICONTROL 檢閱]**&#x200B;步驟。
+4. 選取[儲存]以儲存排程，並繼續[檢閱]步驟。********
 
 >[!NOTE]
 > 
 >對於資料集匯出，檔案名稱具有無法修改的預設集預設格式。 如需匯出檔案的詳細資訊與範例，請參閱[驗證資料集匯出成功](#verify)一節。
+
+## 編輯資料夾路徑 {#edit-folder-path}
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="編輯資料夾路徑"
+>abstract="使用所提供的幾個巨集來自訂匯出資料集的資料夾路徑。"
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="資料集資料夾路徑預覽"
+>abstract="預覽根據您在此視窗中新增巨集而在您的儲存位置中建立的資料夾結構。"
+
+選取「**[!UICONTROL 編輯資料夾路徑]**」以自訂儲存匯出資料集所在儲存位置的資料夾結構。
+
+![編輯在排程步驟中反白顯示的資料夾路徑控制項。](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
+
+您可以使用數個可用的巨集來自訂所需的資料夾名稱。 按兩下巨集以將其新增至資料夾路徑，並在巨集之間使用`/`來分隔資料夾。
+
+![自訂資料夾模型視窗中反白的巨集選取專案。](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
+
+選取所需的巨集後，您可以看到將在儲存位置中建立的資料夾結構預覽。 資料夾結構的第一個層級代表您[連線至目的地](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)以匯出資料集時所指示的&#x200B;**[!UICONTROL 資料夾路徑]**。
+
+![在自訂資料夾模型視窗中反白顯示的資料夾路徑預覽。](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## 檢閱 {#review}
 
@@ -174,7 +216,11 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 
 匯出資料集時，Experience Platform會在您提供的儲存位置中建立一或多個`.json`或`.parquet`檔案。 預期會根據您提供的匯出排程，將新檔案儲存在您的儲存位置。
 
-Experience Platform會在您指定的儲存位置中建立資料夾結構，並存放匯出的資料集檔案。 每次匯出時都會建立一個新資料夾，其模式如下：
+Experience Platform會在您指定的儲存位置中建立資料夾結構，並存放匯出的資料集檔案。 預設的資料夾匯出模式如下所示，但您可以[使用您偏好的巨集](#edit-folder-path)自訂資料夾結構。
+
+>[!TIP]
+> 
+>此資料夾結構的第一個層級 — `folder-name-you-provided` — 代表您[連線至目的地](/help/destinations/ui/connect-destination.md##set-up-connection-parameters)以匯出資料集時所指示的&#x200B;**[!UICONTROL 資料夾路徑]**。
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -194,6 +240,8 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 * 匯出壓縮的JSON檔案時，匯出的檔案格式為`json.gz`
 * 匯出壓縮的parquet檔案時，匯出的檔案格式為`gz.parquet`
+
+*僅支援在壓縮模式中匯出至JSON檔案*。 壓縮和未壓縮模式支援匯出至Parquet檔案。
 
 ## 從目的地移除資料集 {#remove-dataset}
 
@@ -227,7 +275,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 另一方面，如果您購買了Data Distiller等附加元件，您有權取得的資料匯出限制則代表產品層級和附加元件的總和。
 
-您可以在授權儀表板中，根據合約限制檢視及追蹤您的設定檔匯出。
+您可以在[授權使用儀表板](/help/landing/license-usage-and-guardrails/license-usage-dashboard.md)中檢視及追蹤您的設定檔匯出，以符合合約限制。
 
 ## 已知限制 {#known-limitations}
 
@@ -240,3 +288,59 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 * UI目前不會阻止您刪除匯出至目的地的資料集。 請勿刪除匯出至目的地的資料集。 [請先從目的地資料流移除資料集](#remove-dataset)，然後再刪除它。
 * 資料集匯出的監控量度目前與設定檔匯出的數字混合在一起，因此不能反映真正的匯出數字。
 * 時間戳記超過365天的資料會從資料集匯出中排除。 如需詳細資訊，請檢視排程資料集匯出的[護欄](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
+
+## 常見問題 {#faq}
+
+**如果我們只在`/`儲存為資料夾路徑，可以產生沒有資料夾的檔案嗎？ 此外，如果我們不需要資料夾路徑，如何在資料夾或位置中產生具有重複名稱的檔案？**
+
++++
+自2024年9月發行版本開始，您可以自訂資料夾名稱，甚至使用`/`匯出相同資料夾中所有資料集的檔案。 Adobe不建議將此用於匯出多個資料集的目的地，因為屬於不同資料集的系統產生檔案名稱將混合在同一個資料夾中。
++++
+
+**您可將資訊清單檔案路由到某個資料夾，並將資料檔路由到另一個資料夾嗎？**
+
++++
+否，無法將資訊清單檔案複製到其他位置。
++++
+
+**我們可以控制檔案傳送的順序或時間嗎？**
+
++++
+有排程匯出的選項。 沒有延遲或排序檔案副本的選項。 產生後，就會立即複製到您的儲存位置。
++++
+
+**資訊清單檔案可以使用哪些格式？**
+
++++
+資訊清單檔案為.json格式。
++++
+
+**資訊清單檔案是否有API可用性？**
+
++++
+資訊清單檔案沒有API，但包含構成匯出的檔案清單。
++++
+
+**我們可以將其他詳細資料加入資訊清單檔案（即記錄計數）嗎？ 如果是，如何進行？**
+
++++
+無法將其他資訊新增至資訊清單檔案。 記錄計數可透過`flowRun`實體取得（可透過API查詢）。 如需詳細資訊，請參閱目的地監視。
++++
+
+**如何分割資料檔案？ 每個檔案有多少記錄？**
+
++++
+資料檔會根據Experience Platform資料湖中的預設分割進行分割。 資料集越大，分割區數量就越多。 使用者無法設定預設分割，因為它已針對讀取最佳化。
++++
+
+**我們可以設定閾值（每個檔案的記錄數）嗎？**
+
++++
+不行。
++++
+
+**在初始傳送錯誤時，我們如何重新傳送資料集？**
+
++++
+大多數型別的系統錯誤都會自動進行重試。
++++
