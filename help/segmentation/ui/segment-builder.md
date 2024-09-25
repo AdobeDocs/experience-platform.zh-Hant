@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4717'
+source-wordcount: '4784'
 ht-degree: 5%
 
 ---
@@ -98,6 +98,11 @@ ht-degree: 5%
 | 多報表套裝 | 泛型變數未包含任何易記名稱描述元。 <br><br>**範例：** eVar2 | <ul><li>任何具有多個描述元的欄位都會顯示為一般。 這表示UI中未出現任何好記的名稱。</li><li>查詢可以使用任何包含eVar的資料集中的資料，這可能會導致混合或不正確的結果。</li></ul> | 查詢會正確使用來自多個資料集的合併結果。 |
 
 ### 客群
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="複雜的評估"
+>abstract="下列運算式太複雜，無法表示為單一對象。 為了在相同的區段定義中使用B2B規則和以人物為基礎的事件，請遵循下列步驟。<ol><li>建立僅參照以人物為基礎之事件的區段定義，並將其儲存為專屬區段定義。</li><li>在新的區段定義中，在參照B2B規則時匯入先前建立的區段定義。</li></ol>"
 
 >[!NOTE]
 >
