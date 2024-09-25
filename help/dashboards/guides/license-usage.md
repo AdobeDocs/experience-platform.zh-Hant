@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 13%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 13%
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
-授權使用報告提供授權使用量度之高度精細度。 控制面板提供每個已購買產品的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 以下Experience Platform應用程式可透過使用量度進行追蹤：Real-time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
+授權使用報告提供授權使用量度之高度精細度。 控制面板提供每個已購買產品（及相關附加元件）的使用量度、所有生產或開發沙箱中量度的整合使用量，以及特定沙箱的使用量度。 以下Experience Platform應用程式可透過使用量度進行追蹤：Real-time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics。
 
 本指南概述如何存取和使用UI中的授權使用儀表板，並提供有關儀表板中顯示的視覺效果的更多資訊。
 
@@ -52,7 +52,7 @@ ht-degree: 13%
 
 ## [!UICONTROL 授權使用情況]儀表板資料
 
-[!UICONTROL 授權使用情況]儀表板會顯示您已購買的所有Experience Platform產品清單。 從此清單中，您可以找到組織授權相關資料的快照，以便Experience Platform於任何關聯的沙箱。
+[!UICONTROL 授權使用情況]儀表板會顯示您已購買的所有Experience Platform產品清單，以及這些產品的任何附加元件。 在此控制面板中，您可以找到組織授權相關資料的快照，以便Experience Platform任何關聯的沙箱。
 
 此儀表板中的資料會顯示在拍攝快照的特定時間點上。 換句話說，快照不是資料的近似或樣本，而且圖示板並未即時更新。
 
@@ -72,12 +72,16 @@ ht-degree: 13%
 
 ## [!UICONTROL 概觀]索引標籤 {#overview-tab}
 
-此儀表板會以表格格式顯示您所有授權的Adobe Experience Platform產品，包括附加元件。 此表格提供所有可用設定檔中授權使用情形的重要資訊。
+[!UICONTROL 授權使用情況]儀表板顯示兩個不同的表格： **核心產品**&#x200B;和&#x200B;**附加元件**。
+
+- **[!UICONTROL 核心產品]表格**：此表格列出貴組織授權的主要Adobe Experience Platform產品。 每個核心產品在沙箱層級都有自己的量度、使用追蹤和鑽研檢視。 這些核心產品提供追蹤的關鍵量度，而任何附加元件都包含在這些量度中。
+
+- **[!UICONTROL 附加元件]資料表**：此資料表列出其授權金額與核心產品支援的量度結合的其他產品。 附加元件沒有獨立的量度，但可加強對相關核心產品的使用追蹤。
 
 | 欄名稱 | 說明 |
 |---|---|
 | **[!UICONTROL 產品]** | 貴組織授權的Adobe解決方案。 |
-| **[!UICONTROL 主要量度]** | 主要量度，用於在內追蹤該產品。 |
+| **[!UICONTROL 主要量度]** | 該產品中用於追蹤的主要量度。 |
 | **[!UICONTROL 授權金額]** | 產品授權合約中同意的主要量度數量上限的合約值。 |
 | **[!UICONTROL 使用狀況]** | 您使用的主要量度數量。 此值提供該量度在所有沙箱（生產或開發）中的總使用量。 |
 | **[!UICONTROL 使用狀況%]** | 根據您的授權數量使用的主要量度百分比。 |
@@ -85,9 +89,9 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->由於附加元件而新增至[!UICONTROL 授權金額]的附加專案，會新增至基礎產品(例如Real-time Customer Data Platform、Adobe Journey Optimizer和Customer Journey Analytics)的[!UICONTROL 授權金額]之上。 系統會透過基本產品追蹤授權數量（附加元件後）的使用情況。 例如，若您購買一包5個沙箱，則基礎產品的數量會增加5個。在此情況下，附加元件會顯示其中一個[!UICONTROL 授權數量]，而且該附加元件的使用為「空白」，因為透過基本產品追蹤該使用情形。
+>附加元件的授權金額包含在核心產品的[!UICONTROL 授權金額]中。 例如，如果您購買一包5個沙箱作為附加元件，則金額會加入基本產品的金額中。 附加元件表格顯示附加元件特定的[!UICONTROL 授權金額]，但實際使用量會透過基礎產品追蹤。
 
-此表格指出每個產品的主要量度，因為每個產品都可以追蹤大量量度。
+這些表格會指出每個產品的主要量度，因為每個產品都可以追蹤許多量度。
 
 ### 預估使用量 {#predicted-usage}
 
@@ -111,8 +115,9 @@ ht-degree: 13%
 >
 >預測每月都會重新整理。 重新整理的日期包含在資訊圖示中(![此資訊圖示。](../images/license-usage/info-icon.png))在欄標題上方。
 
-若要檢視產品權益使用情況的摘要，請從[!UICONTROL 總覽]清單中選取產品。
+若要檢視產品的權益使用摘要，請從[!UICONTROL 核心產品]表格中選取產品。
 
+<!-- update image ... -->
 ![產品及預測使用量資料行醒目提示的[!UICONTROL 授權使用量] [!UICONTROL 總覽]。](../images/license-usage/product-predicted-usage.png)
 
 摘要標籤隨即顯示。 您可以使用[!UICONTROL 摘要]和[!UICONTROL 詳細資料]標籤上提供的精細預測，確保做出明智的決策，以有效使用授權。
@@ -121,6 +126,7 @@ ht-degree: 13%
 >
 >請注意，授權用量預估是根據過去使用量計算的近似值。您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
 
+<!-- update image ... -->
 ![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
 
 預計使用量的百分比取決於以下因素：
@@ -133,7 +139,7 @@ ht-degree: 13%
 >
 >在此上下文中，「幾乎相同」表示值對於小數點兩位數的統計顯著性（例如，0.342的下限和0.344的上限都會四捨五入為34%）。
 
-預測使用功能支援下列量度：
+預測的使用量功能支援下列量度：
 
 - [!UICONTROL 可定址對象]
 - [!UICONTROL 平均設定檔豐富度]
@@ -229,7 +235,7 @@ ht-degree: 13%
 這些量度的可用性，以及每個量度的特定定義，會因貴組織已購買的授權而有所不同。 如需每個量度的詳細定義，請參閱適當的產品說明檔案：
 
 | 授權 | 產品說明 |
-|---|---|
+| --- | --- |
 | <ul><li>Adobe Experience Platform：OD LITE</li><li>Adobe Experience Platform：OD STANDARD</li><li>Adobe Experience Platform：OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>Adobe Experience Platform：OD</li></ul> | [Experience Platform、應用程式服務和智慧型服務](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT客戶資料平台：OD</li><li>RT CUSTOMER DATA PLATFORM：OD PRFL至10M</li><li>RT客戶資料平台：OD PRFL至50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
