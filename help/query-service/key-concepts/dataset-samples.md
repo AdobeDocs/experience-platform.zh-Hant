@@ -2,10 +2,10 @@
 title: 資料集範例
 description: 查詢服務範例資料集可讓您對巨量資料執行探索性查詢，並大幅減少處理時間，但代價是查詢準確性。 本指南提供如何管理範例以進行近似查詢處理的資訊
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 0%
+source-wordcount: '632'
+ht-degree: 1%
 
 ---
 
@@ -17,12 +17,13 @@ Adobe Experience Platform查詢服務提供範例資料集，作為其近似查�
 
 為協助您管理近似查詢處理的範例，查詢服務支援對資料集範例執行下列操作：
 
-- [建立統一的隨機資料集範例。](#create-a-sample)
-- [選擇性地指定篩選條件](##optional-filter-criteria)
-- [檢視ADLS表格的範例清單。](#view-list-of-samples)
-- [直接查詢範例資料集。](#query-sample-datasets)
-- [刪除範例。](#delete-a-sample)
-- 刪除原始ADLS表格時刪除關聯的範例。
+- [資料集範例](#dataset-samples)
+   - [快速入門 {#get-started}](#getting-started-get-started)
+   - [建立統一的隨機資料集範例{#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [選擇性地指定篩選條件{#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [檢視範例清單{#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [查詢範例資料集{#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [刪除資料集範例{#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
 ## 快速入門 {#get-started}
 
@@ -32,7 +33,7 @@ Adobe Experience Platform查詢服務提供範例資料集，作為其近似查�
 >
 >每次登入Platform時，都必須啟用工作階段標幟。
 
-![反白顯示&#39;SET aqp=true；&#39;命令的查詢編輯器。](../images/essential-concepts/set-session-flag.png)
+![反白顯示&#39;SET aqp=true；&#39;命令的查詢編輯器。](../images/key-concepts/set-session-flag.png)
 
 ## 建立統一的隨機資料集範例 {#create-a-sample}
 

@@ -3,7 +3,7 @@ keywords: Experience Platform；查詢服務；查詢服務；巢狀資料結構
 title: 平面化巢狀資料結構以用於BI工具
 description: 本檔案說明如何將工作階段期間的所有表格和檢視的XDM結構描述平面化為搭配查詢服務使用協力廠商BI工具。
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -56,7 +56,7 @@ prod:all?FLATTEN
 
 本指南中使用的範例結構描述採用標準欄位群組[!UICONTROL Commerce詳細資料]，它使用`commerce`物件結構和`productListItems`陣列。 請參閱XDM檔案以取得[有關[!UICONTROL Commerce詳細資料]欄位群組](../../xdm/field-groups/event/commerce-details.md)的詳細資訊。 結構描述結構的代表可以在下圖中看到。
 
-![包含`commerce`和`productListItems`結構的Commerce詳細資料欄位群組的結構描述圖表。](../images/essential-concepts/commerce-details.png)
+![包含`commerce`和`productListItems`結構的Commerce詳細資料欄位群組的結構描述圖表。](../images/key-concepts/commerce-details.png)
 
 如果您的BI工具不支援巢狀資料結構，則當巢狀欄位包含序列化值（例如範例結構描述中的`commerce`和`productListItems`）時，可能很難參考巢狀欄位。 這些值可能會顯示為單一編碼`commerce`字串欄位的一部分，而且實際上並非無法使用。
 
