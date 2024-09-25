@@ -2,9 +2,9 @@
 title: Query Pro模式概觀
 description: 瞭解如何在Adobe Experience Platform UI中使用SQL查詢，為您的自訂儀表板產生圖表。
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ Widget撰寫器現在會填入已執行SQL中的欄。 儀表板型別會顯示�
 若要變更Widget的圖形或圖表型別，請從[!UICONTROL 標籤]下拉式清單的可用選項中選取。 選項包括[!UICONTROL Line]、[!UICONTROL Donut]、[!UICONTROL Big number]和[!UICONTROL Bar]。 選取後，系統會產生Widget目前設定的預覽視覺效果。
 
 ![醒目提示Widget預覽的Widget Composer。](../../images/sql-insights/widget-preview.png)
+
+## 進階表格屬性 {#advanced-attributes}
+
+若要套用表格中任何或所有欄的自動排序功能，請選取&#x200B;**[!UICONTROL 編輯]**&#x200B;以編輯整個儀表板。
+
+![醒目提示編輯的自訂儀表板。](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+在表格圖表中選取要新增欄排序的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 編輯]**。
+
+![顯示[編輯]醒目提示的省略符號功能表的表格。](../../images/query-pro-mode/advanced-table-edit.png)
+
+若要啟用任何欄的排序，請核取&#x200B;**[!UICONTROL 可排序]**&#x200B;方塊。
+
+![以可排序核取方塊標示的表格編輯頁面。](../../images/query-pro-mode/advanced-table-sortable.png)
+
+選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))以開啟[!UICONTROL 屬性]面板。 在&#x200B;**[!UICONTROL 屬性]**&#x200B;面板中，使用下拉式清單來選取&#x200B;**[!UICONTROL 預設排序]**&#x200B;資料行，然後使用下拉式清單來選取&#x200B;**[!UICONTROL 排序方向]**。 最後，選取&#x200B;**[!UICONTROL 儲存並關閉]**。
+
+![具有屬性圖示、預設排序、排序方向以及儲存和關閉的Widget撰寫器會反白顯示。](../../images/query-pro-mode/advanced-table-properties.png)
+
+若要進一步瞭解如何使用排序、調整欄大小和分頁功能，請參閱[檢視更多](./view-more.md)。
 
 ## Widget 屬性 {#properties}
 

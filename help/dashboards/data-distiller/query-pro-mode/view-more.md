@@ -2,10 +2,10 @@
 title: 檢視更多
 description: 瞭解您SQL分析資料的不同檢視選項。 從您的自訂儀表板，您可以檢視分析的清單結果或下載CSV格式的已處理資料。
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +30,38 @@ ht-degree: 2%
 >CSV下載僅限於前500筆記錄。
 
 ![顯示深入分析預覽的對話方塊，以及產生深入分析之SQL的表格化結果。](../../images/query-pro-mode/view-more-download-csv.png)
+
+## 依欄排序 {#sort-column}
+
+檢視清單化結果時，您可以使用排序功能以遞增或遞減順序依欄排序。 從您的自訂儀表板，選取任何資料表上的省略符號(`...`)以存取[!UICONTROL 檢視更多]選項。
+
+![自訂儀表板，包含表格的省略符號下拉式功能表，且[檢視更多]選項反白顯示。](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
+
+您可以選取欄名稱旁邊的下拉式功能表，然後選取&#x200B;**[!UICONTROL 遞增排序]**&#x200B;或&#x200B;**[!UICONTROL 遞減排序]**，來排序欄。
+
+>[!NOTE]
+>
+>[!UICONTROL 遞增排序]和[!UICONTROL 遞減排序]選項只會出現在已設定[排序功能](../overview.md/#advanced-attributes)的資料行。
+
+![顯示[遞增排序]和[遞減排序]選項的資料表資料行下拉式清單。](../../images/query-pro-mode/advanced-sort-dropdown.png)
+
+## 調整欄大小 {#resize-column}
+
+您可以調整表格結果中的欄大小，以改善資料可讀性。 從您的自訂儀表板，選取表格的省略符號(`...`)以存取[!UICONTROL 檢視更多]選項。 使用欄名稱旁邊的下拉式功能表來調整欄大小，然後選取&#x200B;**[!UICONTROL 調整欄大小]**。
+
+![顯示[調整資料行大小]選項的資料表資料行下拉式清單。](../../images/query-pro-mode/advanced-resize-dropdown.png)
+
+選取滑桿，並向左或向右拖曳，以視需要調整欄大小。
+
+![顯示反白顯示資料行調整列的資料表。](../../images/query-pro-mode/advanced-resize-column.png)
+
+## 表格分頁 {#table-pagination}
+
+分頁會自動套用至[!UICONTROL 檢視更多]功能的表格，讓您不必手動修改SQL查詢。 此功能可確保以更易於管理的格式呈現您的資料，方便導覽大型資料集的程式。
+
+每頁最多可檢視500筆記錄。 若要瀏覽記錄，請使用頁面底部的&#x200B;**[!UICONTROL >]**。
+
+![結果及分頁標示的表格結果。](../../images/query-pro-mode/advanced-table-pagination.png)
 
 ## 後續步驟
 
