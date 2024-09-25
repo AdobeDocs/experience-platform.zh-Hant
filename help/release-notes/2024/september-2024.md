@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2024年9月
 description: Adobe Experience Platform 2024年9月版本注意事項。
-source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
+source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 29%
+source-wordcount: '1975'
+ht-degree: 27%
 
 ---
 
@@ -111,6 +111,12 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 使用 Adobe Experience Platform 身分服務，可在裝置及系統間進行身分橋接來建立客戶及其行為的全方位檢視，從而讓您即時實現具影響力的個人數位體驗。
 
+**更新的功能**
+
+| 功能 | 說明 |
+| --- | --- |
+| 身分圖表連結規則可用性限制 | 身分圖表連結規則是Identity Service中的一套工具，可用來確保使用者的精確個人化。 <ul><li>您現在可以使用[身分最佳化演演算法](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md)來確保身分圖表代表單一人員，因此可防止即時客戶個人檔案中不需要的身分合併。</li><li>設定[名稱空間優先順序](../../identity-service/identity-graph-linking-rules/namespace-priority.md)以定義個別名稱空間的重要性，並影響設定檔的形成和分段方式。</li><li>在UI](../../identity-service/identity-graph-linking-rules/graph-simulation.md)中使用[圖表模擬工具來模擬具有不同組態的身分圖表。</li><li>使用[身分設定介面](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md)指定您唯一的名稱空間，並為您組織中的所有名稱空間建立優先順序。</li><li>有關圖表資料的量度和趨勢，請參閱[身分識別儀表板](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs)。</li></ul> 若要嘗試使用身分圖表連結規則，請聯絡您的Adobe帳戶團隊，以取得開發沙箱的存取權。 |
+
 **更新的文件**
 
 | 功能 | 說明 |
@@ -130,7 +136,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料Distiller受眾 | 使用Experience Platform資料Distiller中的SQL對象擴充功能，輕鬆建立、管理和啟用對象。 使用直接來自資料湖的SQL命令定義對象區段，略過設定檔中原始資料的需求。 調整目標定位策略，並透過此彈性資料導向方法，自動將受眾同步至檔案型目的地。 簡化工作流程、最佳化對象管理，並釋放資料的完整潛能。 閱讀使用SQL對象擴充功能](../../query-service/home.md)提升對象策略的[指南。 |
+| 資料Distiller受眾 | 使用Experience Platform資料Distiller中的SQL對象擴充功能，輕鬆建立、管理和啟用對象。 使用直接來自資料湖的SQL命令定義對象區段，略過設定檔中原始資料的需求。 調整目標定位策略，並透過此彈性資料導向方法，自動將受眾同步至檔案型目的地。 簡化工作流程、最佳化對象管理，並釋放資料的完整潛能。 閱讀使用SQL對象擴充功能](../../query-service/data-distiller-audiences/overview.md)提升對象策略的[指南。 |
 | 資料Distiller統計資料 — 超立方體 | 使用Hypercubes最佳化大資料分析。 處理複雜的計算（例如不同的計數和多維度分析），而不需重新處理歷史資料。 以漸進方式更新資料、簡化工作流程，並縮短處理時間，同時維持精確度和效率。 取得更快、可擴充且符合成本效益的深入分析，進而轉變決策方式。 探索有關使用超多維度資料集](../../query-service/hypercubes.md)以解除鎖定進階分析的[指南。 |
 | 查詢編輯器物件瀏覽器 | 在查詢編輯器中使用新的物件瀏覽器提高查詢效率。 快速搜尋、篩選和存取資料集，以更快撰寫和調整查詢。 透過即時結構描述更新和即時表格中繼資料，您可以簡化工作流程、縮短導覽時間，並增強您的查詢體驗。 釋放資料的潛力並最佳化分析。 如需詳細資訊，請參閱使用物件瀏覽器](../../query-service/ui/user-guide.md#object-browser)的[指南。 |
 | 計算時數 | 使用排程查詢的最新可見計算時數量度，取得資源使用情況的控制權。 在查詢執行層級檢視「計算時數」，以監視和最佳化CTAS/ITAS批次查詢的資源使用。 追蹤每次查詢執行的開始時間、完成狀態和運算時間。 輕鬆調整效能並降低成本。 請閱讀計算時數](../../query-service/ui/query-schedules.md#compute-hours-at-job-level)的[指南，瞭解如何最大化您的查詢效率。 |

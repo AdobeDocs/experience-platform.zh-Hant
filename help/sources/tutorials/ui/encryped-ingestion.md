@@ -3,9 +3,9 @@ title: 將加密資料內嵌在來源UI Workspace中
 description: 瞭解如何將加密資料內嵌在來源UI工作區中。
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
+source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1464'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 6%
 * 使用Experience PlatformUI中的來源工作區來建立加密金鑰組。
    * 或者，您也可以建立自己的簽署驗證金鑰組，為您的加密資料提供額外的安全層。
 * 使用加密金鑰組中的公開金鑰來加密資料。
-* 將加密的資料放入您的雲端儲存提供者。 在此步驟中，您也必須確定您有範例檔案，可作為將來源資料對應至體驗資料模型(XDM)結構描述的參考。
+* 將加密的資料放入雲端儲存空間。 在此步驟中，您也必須確保在雲端儲存空間中有資料的範例檔案，可作為參考，將您的來源資料對應至體驗資料模型(XDM)結構描述。
 * 使用您的雲端儲存批次來源，並在Experience PlatformUI的來源工作區中開始資料擷取流程。
 * 在建立來源連線的過程中，請提供與您用來加密資料的公開金鑰對應的金鑰ID。
    * 如果您也使用簽署驗證金鑰配對機制，則您也必須提供對應至加密資料的簽署驗證金鑰ID。
