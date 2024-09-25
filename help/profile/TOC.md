@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: 即時客戶設定檔指南
+user-guide-title: 即時客戶輪廓指南
 user-guide-description: 合併客戶資料，以建立跨通道客戶互動的統一檢視。
 feature: Profiles
 role: User
@@ -32,12 +32,12 @@ ht-degree: 27%
 * 設定檔UI {#ui}
    * [[!DNL Profile] UI指南](ui/user-guide.md)
    * [[!DNL Profile]詳細資料自訂](ui/profile-customization.md)
-   * [潛在客戶設定檔](ui/prospect-profile.md)
+   * [潛在客戶輪廓](ui/prospect-profile.md)
 * 計算屬性{#computed-attributes}
    * [概觀](computed-attributes/overview.md)
    * [計算屬性API指南](computed-attributes/api.md)
    * [計算屬性UI指南](computed-attributes/ui.md)
-   * [常見問答](computed-attributes/faq.md)
+   * [常見問題](computed-attributes/faq.md)
 * 合併政策 {#merge-policies}
    * [概觀](merge-policies/overview.md)
    * [合併原則API](api/merge-policies.md)

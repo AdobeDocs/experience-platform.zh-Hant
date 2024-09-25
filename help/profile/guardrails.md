@@ -3,7 +3,7 @@ title: 即時客戶設定檔資料和細分的預設護欄
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 了解設定檔資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
+description: 了解輪廓資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
@@ -134,7 +134,7 @@ Adobe Experience Platform可讓您根據行為深入分析和客戶屬性，以�
 
 以下章節概述下游服務(例如Real-Time CDP目的地)中對象和合併原則的&#x200B;**預期**&#x200B;可用性：
 
-| 沙箱型別 | 時間 |
+| 沙箱類型 | 時間 |
 | ------------ | ---- |
 | 現有沙箱 | 1 小時 |
 | 新沙箱 | 2 小時 |
