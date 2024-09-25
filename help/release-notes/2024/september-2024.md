@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2024年9月
 description: Adobe Experience Platform 2024年9月版本注意事項。
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 27%
+source-wordcount: '2144'
+ht-degree: 25%
 
 ---
 
@@ -48,10 +48,12 @@ Experience Platform提供多個儀表板，您可在其中檢視有關組織資�
 **新功能或更新功能**
 
 | 功能 | 說明 |
-| --- | --- |
+| ------- | ----------- |
+| 授權使用附加元件表格 | 透過核心產品和附加元件的專用表格，取得授權使用情況的精細可見度，並管理您的平台資源。 透過沙箱層級的鑽研檢視追蹤和分析每個核心產品的關鍵量度。 附加量度可與核心產品量度緊密整合，提供使用的全面檢視。 增強的可見度可協助您最佳化授權管理，並根據組織需求調整資源。 如需詳細資訊，請參閱[[!UICONTROL 授權使用情況]儀表板指南](../../dashboards/guides/license-usage.md#overview-tab)。 |
 | Query Pro模式 — 全域篩選器升級 | 使用Query Pro Mode的新日期篩選器增強分析。 使用SQL查詢中的動態日期引數來完善深入分析，並依特定時間範圍篩選資料。 使用直覺式UI選擇預設或自訂日期範圍，讓儀表板保持與所有使用者相關。 簡化工作流程、維持精確度並及時做出決策。 如需詳細資訊，請參閱建立日期篩選器](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md)的[指南。 |
 | Query Pro模式 — 鑽研 | 使用Query Pro模式的Drill Through功能，解鎖更深入的深入分析，並可順暢地從高階圖表導覽至詳細儀表板。 使用此功能可輕鬆從摘要轉換為深入分析，並探索趨勢、客戶行為和KPI。 自動篩選通過和多層級鑽研可保持資料的一致性，確保順利的探索。 簡化工作流程、保留內容並加速決策。 如需詳細資訊，請參閱建立鑽研的[逐步指南](../../dashboards/data-distiller/query-pro-mode/drill-through.md)。 |
 | Query Pro模式 — 進階表格屬性 | 使用Query Pro Mode進階表格屬性來簡化資料視覺效果、提升工作流程效率並改善資料清晰度。 直接從自訂儀表板將自動排序、調整大小和分頁新增到表格中。 排序欄以排列關鍵資料的優先順序、調整大小以獲得最佳可讀性，以及無縫導覽大型資料集而不修改SQL查詢。 閱讀&#39;[檢視更多](../../dashboards/data-distiller/query-pro-mode/view-more.md)&#39;指南，瞭解如何整合這些功能並提升您的資料深入分析。 |
+| 總資料量 | 「平均設定檔豐富度」量度已替換為「總資料量」量度。 總資料量是指可用於即時客戶個人檔案的參與和個人化工作流程的總資料量。 您可以在[總計資料磁碟區指南](../../landing/license-usage-and-guardrails/total-data-volume.md)中找到有關這項變更的更多詳細資料。 |
 
 {style="table-layout:auto"}
 
@@ -152,7 +154,8 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 **新功能或更新功能**
 
 | 功能 | 說明 |
-| --- | --- |
+| ------- | ----------- |
+| 串流區段條件更新 | 從2024年9月版本開始，已更新受眾符合串流細分資格的條件。 如需有關這些變更的詳細資訊，請參閱[串流區段適用性准則更新](../../segmentation/eligibility-criteria-update.md)。 |
 | 整合式搜尋實施 | 「區段產生器」中的搜尋行為現在使用「整合式搜尋」。 這樣可在管理和搜尋對象時提供更強大的體驗，以便重複使用區段成員資格。 如需有關此變更的詳細資訊，請閱讀[客戶細分工具指南](../../segmentation/ui/segment-builder.md#rule-builder-canvas)。 |
 
 {style="table-layout:auto"}

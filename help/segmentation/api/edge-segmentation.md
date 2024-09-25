@@ -4,9 +4,9 @@ title: 使用API的Edge區段
 description: 本檔案包含如何搭配Adobe Experience Platform Segmentation Service API使用邊緣區段的範例。
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '783'
 ht-degree: 1%
 
 ---
@@ -43,9 +43,7 @@ Edge區段能讓您在Adobe Experience Platform的邊緣即時評估區段定義
 
 | 查詢型別 | 詳細資料 |
 | ---------- | ------- |
-| 單一事件 | 任何會參照沒有時間限制的單一傳入事件的區段定義。 |
-| 相對時間範圍內的單一事件 | 任何參考單一傳入事件的區段定義。 |
-| 具有時間範圍的單一事件 | 任何會參照具有時段之單一傳入事件的區段定義。 |
+| 少於24小時時間範圍內的單一事件 | 任何會參照少於24小時之時間範圍內的單一傳入事件的區段定義。 |
 | 僅限設定檔 | 僅參考設定檔屬性的任何區段定義。 |
 | 在少於24小時的相對時間範圍內，具有設定檔屬性的單一事件 | 任何區段定義，會參照具有一或多個設定檔屬性的單一傳入事件，且會在少於24小時的相對時間範圍內發生。 |
 | 區段區段 | 包含一或多個批次或串流區段的任何區段定義。 **注意：**&#x200B;如果使用區段區段，則設定檔取消資格將&#x200B;**每24小時發生一次**。 |
