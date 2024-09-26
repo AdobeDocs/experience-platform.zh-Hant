@@ -1,13 +1,14 @@
 ---
 title: Mercury Enterprise身分目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise Identity目的地連線。
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Mercury Enterprise身分目的地
 
@@ -17,7 +18,7 @@ ht-degree: 2%
 
 ## 概觀
 
-使用[!DNL Merkury Enterprise Identity]目的地來建置更準確、完整且有洞察力的消費者設定檔。 透過改良的設定檔資料，行銷人員可以支援更好的深入分析、區段和模型，從而產生更準確的目標定位和預測性模型。
+使用 [!DNL Merkury Enterprise Identity] 目標可建置更精準、全方位且深入解析的消費者輪廓。透過改良的設定檔資料，行銷人員可以支援更好的深入分析、區段和模型，從而產生更準確的目標定位和預測性模型。
 
 ![顯示Merkury與Experience Platform之間相互連線的圖表，包括擷取與啟用](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
@@ -65,9 +66,9 @@ ht-degree: 2%
 
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
-| **閱聽眾** | **支援** | **說明** | **來源** |
+| **客群** | **支援** | **說明** | **來源** |
 |---|---|---|---|
-| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)產生的對象。 |
+| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
 | 自訂上傳 | x | 對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。 |
 
 {style="table-layout:auto"}
@@ -76,9 +77,9 @@ ht-degree: 2%
 
 請參閱下表以取得目的地匯出型別和頻率的資訊。
 
-| **閱聽眾** | **支援** | **描述來源** |
+| **客群** | **支援** | **描述來源** |
 |---|---|---|      
-| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)產生的對象。 |
+| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
 | 自訂上傳 | X | 對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。 |
 
 {style="table-layout:auto"}
@@ -139,7 +140,7 @@ csv選項](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**下一步**。
 
-## 啟動此目標的對象
+## 啟動此目標的客群
 
 >[!IMPORTANT]
 >

@@ -1,13 +1,14 @@
 ---
 title: Mercury Enterprise連線目的地
 description: 瞭解如何使用Adobe Experience Platform UI建立Merkury Enterprise連線目的地連線。
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Mercury Enterprise連線目的地
 
@@ -17,7 +18,7 @@ ht-degree: 3%
 
 ## 概觀
 
-使用[!DNL Merkury Enterprise Connections]目的地將對象安全地傳送至[!DNL Merkury]。 [!DNL Merkury]可讓行銷人員輕鬆比對和傳送個人型對象至[!DNL Merkury]超過80個進階可定址電視/電視、發行者和廣告技術連線。 [!DNL Merkury]由2.68億以上的美國成人消費者身分圖表提供支援。
+使用 [!DNL Merkury Enterprise Connections] 目標將客群安全地傳送至 [!DNL Merkury]。[!DNL Merkury]可讓行銷人員輕鬆比對和傳送個人型對象至[!DNL Merkury]超過80個進階可定址電視/電視、發行者和廣告技術連線。 [!DNL Merkury] 由涵蓋超過 2.68 億人的全方位美國成人消費者識別圖提供支援。
 
 ![顯示Merkury與Experience Platform之間相互連線的圖表，包括擷取與啟用](../../assets/catalog/data-partners/merkury-connections/media/image1.png)
 
@@ -58,9 +59,9 @@ ht-degree: 3%
 
 本節說明您可以將哪些型別的對象匯出至此目的地。
 
-| **閱聽眾** | **支援** | **描述來源** |
+| **客群** | **支援** | **描述來源** |
 |---|---|---|      
-| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home)產生的對象。 |
+| Segmentation Service | ✓ (A) | 透過Experience Platform[[分段服務]](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/segmentation/home)產生的對象。 |
 | 自訂上傳 | X | 對象[[已匯入]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience)至CSV檔案中的Experience Platform。 |
 
 {style="table-layout:auto"}
@@ -131,7 +132,7 @@ csv選項的![影像](../../assets/catalog/data-partners/merkury-connections/med
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**下一步**。
 
-## 啟動此目標的對象
+## 啟動此目標的客群
 
 >[!IMPORTANT]
 >
