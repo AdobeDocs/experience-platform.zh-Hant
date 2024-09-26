@@ -6,7 +6,7 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
 workflow-type: tm+mt
 source-wordcount: '2212'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 >
 >如果您的組織剛開始使用Platform，但尚未建立作用中的設定檔資料集或合併原則，則不會顯示[!UICONTROL 設定檔]儀表板。 [!UICONTROL 總覽]標籤會顯示連結和檔案，協助您開始使用即時客戶個人檔案。
 
-### 設定檔儀表板 {#profile-dashboard}
+### 輪廓儀表板 {#profile-dashboard}
 
 設定檔控制面板會概述與組織設定檔資料相關的關鍵量度。
 
@@ -52,7 +52,7 @@ ht-degree: 0%
 
 ![設定檔量度會顯示並反白顯示。](../images/user-guide/browse-metrics.png)
 
-### 設定檔計數 {#profile-count}
+### 輪廓計數 {#profile-count}
 
 在您組織的預設合併原則已與設定檔片段合併在一起，以針對每個個別客戶形成單一設定檔後，設定檔計數會顯示貴組織在Experience Platform內的設定檔總數。 換言之，您的組織可能擁有與單一客戶相關的多個設定檔片段，該客戶會跨不同管道與您的品牌互動，但這些片段會合併在一起（根據預設合併原則），且會傳回「1」設定檔計數，因為這些片段都與同一個人相關。
 
@@ -126,12 +126,12 @@ ht-degree: 0%
 
 ![符合身分值的設定檔會反白顯示。](../images/user-guide/filtered-identity-value.png)
 
-## 檢視設定檔詳細資料 {#profile-detail}
+## 檢視輪廓詳細資訊 {#profile-detail}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="找不到實體"
->abstract="這表示Platform找不到要求的實體。 若要解決此錯誤，請嘗試下列其中一種解決方案：<ul><li>確定您嘗試存取的實體URL中列出了正確的設定檔ID。</li><li>確保您對於嘗試存取的實體擁有正確的組織和沙箱組合。</li></ul>"
+>abstract="這代表 Platform 無法找到所要求的實體。若要解決此錯誤，請嘗試以下其中一項解決方案：<ul><li>確保您所要存取的實體 URL 列出正確的輪廓 ID。</li><li>確保您擁有所要存取的實體之正確的組織和沙箱組合。</li></ul>"
 
 選取&#x200B;**[!UICONTROL 設定檔識別碼]**&#x200B;後，**[!UICONTROL 詳細資料]**&#x200B;索引標籤會開啟。 **[!UICONTROL 詳細資料]**&#x200B;標籤上顯示的設定檔資訊已從多個設定檔片段合併在一起，以形成個別客戶的單一檢視。 這包括基本屬性、連結的身分和管道偏好設定等客戶細節。
 

@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
 source-wordcount: '2739'
-ht-degree: 13%
+ht-degree: 16%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 13%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
->title="核心產品表格"
->abstract="此表格中列出的核心產品在沙箱層級有自己的量度、使用追蹤和鑽研檢視。 這些核心產品提供追蹤的關鍵量度，而任何附加元件都包含在這些量度中。"
+>title="核心產品表"
+>abstract="表格中列出的核心產品有自己的量度、使用情況追蹤和沙箱層級的鑽研式視圖。這些核心產品提供關鍵量度以利追蹤，而且任何附加元件皆包含在這些量度中。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"
->title="附加元件表格"
->abstract="附加元件表格會列出其授權金額與核心產品支援的量度結合的產品。 這些附加元件沒有個別量度，但可加強對相關核心產品的使用追蹤。"
+>title="附加元件表"
+>abstract="附加元件表列出授權數量與核心產品所支援的量度結合之產品。這些附加元件沒有個別的量度，但能增強與其相關之核心產品的使用情況追蹤。"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
@@ -74,7 +74,7 @@ ht-degree: 13%
 
 [!UICONTROL 授權使用情況]儀表板顯示兩個不同的表格： **核心產品**&#x200B;和&#x200B;**附加元件**。
 
-- **[!UICONTROL 核心產品]表格**：此表格列出貴組織授權的主要Adobe Experience Platform產品。 每個核心產品在沙箱層級都有自己的量度、使用追蹤和鑽研檢視。 這些核心產品提供追蹤的關鍵量度，而任何附加元件都包含在這些量度中。
+- **[!UICONTROL 核心產品]表格**：此表格列出貴組織授權的主要Adobe Experience Platform產品。 每個核心產品在沙箱層級都有自己的量度、使用追蹤和鑽研檢視。 這些核心產品提供關鍵量度以利追蹤，而且任何附加元件皆包含在這些量度中。
 
 - **[!UICONTROL 附加元件]資料表**：此資料表列出其授權金額與核心產品支援的量度結合的其他產品。 附加元件沒有獨立的量度，但可加強對相關核心產品的使用追蹤。
 
