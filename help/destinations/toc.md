@@ -5,15 +5,15 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1251'
 ht-degree: 5%
 
 ---
 
 
-# 目的地 {#destinations}
+# 目標 {#destinations}
 
 * [目的地概觀](./home.md)
 * [目的地型別和類別](./destination-types.md)
@@ -61,12 +61,13 @@ ht-degree: 5%
    * [目的地目錄概觀](./catalog/overview.md)
    * Adobe目的地{#adobe}
       * [Adobe目的地概觀](./catalog/adobe/overview.md)
-      * [Experience Cloud 對象](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Experience Cloud 客群](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
       * [Marketo Engage連線](./catalog/adobe/marketo-engage.md)
       * [Marketo Measure Ultimate連線](./catalog/adobe/marketo-measure-ultimate.md)
       * [Experience Platform對象共用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [同盟對象組合連線（可用性限制）](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising目的地{#advertising}
+      * [(Beta) Acxiom對象分佈](./catalog/advertising/acxiom-audience-distribution.md)
       * [Advertising目的地概觀](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud連線](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud擴充功能](./catalog/advertising/adobe-advertising-cloud.md)
