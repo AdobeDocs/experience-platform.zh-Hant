@@ -3,9 +3,9 @@ title: 將加密資料內嵌在來源UI Workspace中
 description: 瞭解如何將加密資料內嵌在來源UI工作區中。
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1456'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->來源UI中加密資料擷取的支援為測試版，可能不適用於您的組織。 功能和檔案可能會有所變更。
+>Beta版支援來源UI中的加密資料擷取。 功能和檔案可能會有所變更。
 
 您可以使用雲端儲存批次來源，將加密的資料檔案和資料夾擷取到Adobe Experience Platform。 透過加密的資料擷取，您可以運用非對稱的加密機制，將批次資料安全地傳輸至Experience Platform。 支援的非對稱加密機製為PGP和GPG。
 

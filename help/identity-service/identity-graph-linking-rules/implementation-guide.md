@@ -3,9 +3,9 @@ title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1546'
 ht-degree: 2%
 
 ---
@@ -168,6 +168,8 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 ## 驗證圖表 {#validate}
 
 使用身分儀表板來深入分析身分圖表狀態，例如整體身分計數和圖表計數趨勢、依名稱空間的身分計數和依圖表大小的圖表計數。 您也可以使用身分儀表板來檢視具有兩個或多個身分（依名稱空間組織）的圖表趨勢。
+
+選取省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 檢視更多]**&#x200B;以取得進一步資訊，並驗證沒有收合的圖形。
 
 ## 附錄 {#appendix}
 

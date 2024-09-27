@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 使用「資料準備」處理資料格式
 description: 本檔案概述「資料準備」中處理不同資料型別的方式。
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '626'
 ht-degree: 8%
 
 ---
@@ -75,6 +75,10 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 > 「資料準備」會儘可能將字串轉換為日期。 不過，這些轉換可能會導致不良結果。 例如，字串值「12112020」符合模式「MMddyyyy」，但使用者可能希望日期以模式「ddMMyyyy」讀取。 因此，使用者應明確提及字串的日期格式。
 
 ### 日期/時間格式字串 {#format}
+
+>[!TIP]
+>
+>目前，如果日期值是以下格式，批次擷取的日期函式會移除毫秒： `2024-05-05 20:39:00.005` PST。 若要保留毫秒，請使用此格式： `2024-05-05 20:39:00.005-0800`
 
 下表顯示格式字串定義的圖樣字母。 請注意，字母區分大小寫。
 
