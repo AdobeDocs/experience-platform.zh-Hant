@@ -36,7 +36,7 @@ Experience Platform 可讓您訂閱各種 Platform 活動的事件型警示。�
 | --- | --- |
 | 開發沙箱支援 | 您現在能夠於生產和開發沙箱兩者中[訂閱警示](../../observability/alerts/ui.md)，可以橫跨所有環境進行無縫監視。 |
 | 電子郵件範本 | [電子郵件警示](../../observability/alerts/ui.md)現在包含詳細的資產資訊，確保您輕鬆掌握所有的關鍵細節。 |
-| 增強的自訂功能 | 您現在可以設定[警示臨界值](../../observability/alerts/ui.md#alert-threshold)，擁有更大的彈性可以針對您的特定需求，按照以下警示類型來量身打造警示：<br><ul><li>客戶細分工作延遲</li><li>客戶細分匯出延遲</li><li>目的地資料流執行延遲</li><li>身分服務資料流執行延遲</li><li>輪廓資料流執行延遲</li><li>來源資料流執行延遲</li><li>查詢執行延遲</li><li>超出啟用略過率</li><li>超出來源擷取錯誤率</ul> |
+| 增強的自訂功能 | 您現在可以設定[警示臨界值](../../observability/alerts/ui.md#alert-threshold)，擁有更大的彈性可以針對您的特定需求，按照以下警示類型來量身打造警示：<br><ul><li>客戶細分工作延遲</li><li>客戶細分匯出延遲</li><li>目標資料流執行延遲</li><li>身分服務資料流執行延遲</li><li>輪廓資料流執行延遲</li><li>來源資料流執行延遲</li><li>查詢執行延遲</li><li>超出啟用略過率</li><li>超出來源攝取錯誤率</ul> |
 | 擴充警示 | 現在可以訂閱以下[警示規則](../../observability/alerts/rules.md)的稽核事件資訊警示：<br><ul><li>客群建立</li><li>客群更新</li><li>客群刪除</li><li>資料集建立</li><li>資料集更新</li><li>資料集刪除</li><li>綱要建立</li><li>綱要更新</li><li>綱要刪除。 |
 
 {style="table-layout:auto"}
@@ -140,7 +140,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料蒸餾器客群 | 使用 Experience Platform 資料蒸餾器中的 SQL 客群擴充功能輕鬆建立、管理和啟動客群。直接從資料湖使用 SQL 指令定義客群細分群體，無需使用到設定檔中的原始資料。透過這種彈性的資料驅動方法，調整目標選擇策略並自動將客群同步至檔案型目標。簡化工作流程、最佳化客群管理，並發揮資料的全部潛力。請參閱 [SQL 客群擴充功能使用指南](../../query-service/data-distiller-audiences/overview.md)來提升您的客群策略。 |
+| 資料蒸餾器客群 | 使用 Experience Platform 資料蒸餾器中的 SQL 客群擴充功能輕鬆建立、管理和啟動客群。直接從資料湖使用 SQL 指令定義客群細分群體，無需使用到輪廓中的原始資料。透過這種彈性的資料驅動方法，調整目標選擇策略並自動將客群同步至檔案型目標。簡化工作流程、最佳化客群管理，並發揮資料的全部潛力。請參閱 [SQL 客群擴充功能使用指南](../../query-service/data-distiller-audiences/overview.md)來提升您的客群策略。 |
 | 資料蒸餾器統計 - 超立方體 | 利用超立方體使巨量資料分析最佳化。處理複雜的計算 (例如不重複計數和多維度分析)，無需重新處理歷史資料。以增量方式更新資料、簡化工作流程並縮短處理時間，同時保持準確性和效率。獲得更快速、可擴展且具有成本效益的深入分析，進而改變決策過程。探索[超立方體使用指南](../../query-service/hypercubes/overview.md)，瞭解進階分析。 |
 | 查詢編輯器物件瀏覽器 | 使用查詢編輯器中的新物件瀏覽器來提高查詢效率。快速搜尋、篩選和存取資料集，以更快地編寫和調整查詢。透過即時綱要更新和即時表格中繼資料，您可以簡化工作流程、縮短導覽時間並增強您的查詢體驗。發揮資料潛力並將分析最佳化。如需詳細資訊，請參閱[使用物件瀏覽器的指南](../../query-service/ui/user-guide.md#object-browser)。 |
 | 計算時數 | 透過已排程查詢的新可見計算時數量度來控制資源使用量。檢視查詢執行層級的計算時數，以監視 CTAS/ITAS 批次查詢的資源使用情況並使其最佳化。追蹤每個查詢執行的開始時間、完成狀態和計算時數。輕鬆微調效能並降低成本。請參閱[計算時數的指南](../../query-service/ui/query-schedules.md#compute-hours-at-job-level)，了解如何發揮最高的查詢效率。 |
@@ -174,10 +174,10 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} 使用者介面中收錄加密資料的支援 | 您現在可以使用 Experience Platform 使用者介面中的來源工作區，從雲端儲存空間批次來源收錄加密資料。如需詳細資訊，請參閱[在使用者介面中收錄加密資料](../../sources/tutorials/ui/encryped-ingestion.md)的教學課程。 |
+| [!BADGE Beta]{type=Informative} 使用者介面中攝取加密資料的支援 | 您現在可以使用 Experience Platform 使用者介面中的來源工作區，從雲端儲存空間批次來源攝取加密資料。如需詳細資訊，請參閱[在使用者介面中攝取加密資料](../../sources/tutorials/ui/encryped-ingestion.md)的教學課程。 |
 | [!DNL Snowflake Streaming]來源的一般可用性 | [!DNL Snowflake Streaming] 來源現已正式推出。使用此來源將資料自您的 [!DNL Snowflake] 帳戶串流至 Experience Platform。如需詳細資訊，請參閱[[!DNL Snowflake Streaming] 概觀](../../sources/connectors/databases/snowflake-streaming.md)。 |
 | [!DNL Google BigQuery] 服務帳戶驗證支援 | 您現在可以使用服務帳戶驗證將您的 [!DNL Google BigQuery] 帳戶連接至 Experience Platform。如需詳細資訊，請參閱[[!DNL Google BigQuery] 概觀](../../sources/connectors/databases/bigquery.md#generate-your-google-bigquery-credentials)。<br> ![影像：Experience Platform 使用者介面，特別標示出排程步驟中的「編輯排程」和「編輯資料夾」選項。](../2024/assets/september/service_auth.png "Google BigQuery 的服務驗證。"){width="250" align="center" zoomable="yes"} |
-| 支援跳過樣本資料預覽 | 您現在可以選擇在使用下列來源建立來源連線時跳過資料預覽： <ul><li>[[!DNL Google BigQuery]](../../sources/tutorials/ui/create/databases/bigquery.md#skip-preview-of-sample-data)</li><li>[[!DNL Salesforce]](../../sources/tutorials/ui/create/crm/salesforce.md#skip-preview-of-sample-data)</li><li>[[!DNL Snowflake]](../../sources/tutorials/ui/create/databases/snowflake.md#skip-preview-of-sample-data)</li></ul> 您可以跳過資料預覽，以避免收錄大量批次資料時可能發生的逾時情況。這樣做可能會使已計算欄位和必要欄位停止自動驗證。如果您選擇跳過資料預覽，則您可能必須在對應期間手動驗證已計算欄位和必要欄位。 |
+| 支援跳過樣本資料預覽 | 您現在可以選擇在使用下列來源建立來源連線時跳過資料預覽： <ul><li>[[!DNL Google BigQuery]](../../sources/tutorials/ui/create/databases/bigquery.md#skip-preview-of-sample-data)</li><li>[[!DNL Salesforce]](../../sources/tutorials/ui/create/crm/salesforce.md#skip-preview-of-sample-data)</li><li>[[!DNL Snowflake]](../../sources/tutorials/ui/create/databases/snowflake.md#skip-preview-of-sample-data)</li></ul> 您可以跳過資料預覽，以避免攝取大量批次資料時可能發生的逾時情況。這樣做可能會使已計算欄位和必要欄位停止自動驗證。如果您選擇跳過資料預覽，則您可能必須在對應期間手動驗證已計算欄位和必要欄位。 |
 | 支援 [!DNL SFTP] 的禁用分塊功能 | 現在您可以配置一個設定，讓您能夠在 [!DNL SFTP] 來源禁用分塊功能。如需詳細資訊，請參閱[[!DNL SFTP] 概觀](../../sources/connectors/cloud-storage/sftp.md)。 |
 
 {style="table-layout:auto"}
