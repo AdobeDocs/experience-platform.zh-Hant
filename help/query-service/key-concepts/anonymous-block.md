@@ -2,9 +2,9 @@
 title: 查詢服務中的匿名區塊
 description: 匿名區塊是Adobe Experience Platform查詢服務支援的SQL語法，可讓您有效執行一系列查詢
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -44,9 +44,7 @@ $$;
 
 在下列範例中，`SET`會在指定的區域變數中保留`SELECT`查詢的結果。 變數的適用範圍為匿名區塊。
 
-快照識別碼會儲存為區域變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。
-
-資料庫快照集是SQL Server資料庫的唯讀、靜態檢視。 如需有關快照子句](../sql/syntax.md#SNAPSHOT-clause)的更多[資訊，請參閱SQL語法檔案。
+快照識別碼會儲存為區域變數(`@current_sid`)。 然後用於下一個查詢，以根據相同資料集/表格的SNAPSHOT傳回結果。 如需有關快照子句](../sql/syntax.md#SNAPSHOT-clause)的更多[資訊，請參閱SQL語法檔案。
 
 ```SQL
 $$ BEGIN                                             

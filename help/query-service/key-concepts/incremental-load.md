@@ -2,9 +2,9 @@
 title: 查詢服務中的增量載入
 description: 增量載入功能會同時使用匿名區塊和快照功能，以提供近乎即時的解決方案，將資料從資料湖移動至您的資料倉儲，同時忽略相符的資料。
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -125,10 +125,6 @@ ht-degree: 0%
 此邏輯可套用至任何表格以執行增量載入。
 
 ## 過期的快照
-
->[!IMPORTANT]
->
->快照中繼資料會在&#x200B;**2**&#x200B;天後到期。 過期的快照會讓上述指令碼的邏輯失效。
 
 若要解決快照ID過期的問題，請在匿名區塊的開頭插入下列命令。 下列程式碼行會以中繼資料中最早可用的`snapshot_id`覆寫`@from_snapshot_id`。
 

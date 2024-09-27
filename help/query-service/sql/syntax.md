@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案詳細說明並說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '4305'
+source-wordcount: '4291'
 ht-degree: 2%
 
 ---
@@ -707,11 +707,7 @@ select inline(productListItems) from source_dataset limit 10;
 | product-id-2 | (「(」(「(AF， C， D，NULL)」)「)」) | 6 | 40 |
 | product-id-4 | (「(」(「(BM， pass， NA，NULL)」)」)」) | 3 | 12 |
 
-## [!DNL Spark] SQL命令
-
-以下小節涵蓋Query Service支援的Spark SQL命令。
-
-### 設定
+## 設定
 
 `SET`命令會設定屬性，並傳回現有屬性的值或列出所有現有屬性。 如果提供現有屬性索引鍵的值，則會覆寫舊值。
 
