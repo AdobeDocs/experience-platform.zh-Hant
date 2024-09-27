@@ -5,9 +5,9 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: bdd3d37baa05c8da3213f425657a00fef6afecb8
+source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 22%
 
 ---
@@ -41,7 +41,6 @@ ht-degree: 22%
       - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - 資料Distiller對象{#data-distiller-audiences}
    - [使用SQL建置外部對象](data-distiller-audiences/overview.md)
-- [資料DISTILLER超立方體](hypercubes.md)
 - 範例 {#use-cases}
    - [概觀](use-cases/overview.md)
    - [捨棄的瀏覽](use-cases/abandoned-browse.md)
@@ -70,6 +69,8 @@ ht-degree: 22%
    - [重複資料刪除](key-concepts/deduplication.md)
    - [資料集範例](key-concepts/dataset-samples.md)
    - [資料集統計資料計算](key-concepts/dataset-statistics.md)
+- 資料Distiller超立方體{#hypercubes}
+   - [使用超多維度資料集進行高效率的大資料分析](hypercubes/overview.md)
 - 將使用者端連線至查詢服務{#clients}
    - [使用者端連線概觀](clients/overview.md)
    - [SSL模式](./clients/ssl-modes.md)

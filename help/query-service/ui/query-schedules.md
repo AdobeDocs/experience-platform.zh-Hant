@@ -2,9 +2,9 @@
 title: 查詢排程
 description: 瞭解如何自動執行排定的查詢、刪除或停用查詢排程，以及透過Adobe Experience Platform UI利用可用的排程選項。
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -163,6 +163,11 @@ ht-degree: 0%
 | [!UICONTROL 計算時數] | 顯示用於每次查詢執行的運算時間（以小時為單位）。 這有助於追蹤資源使用情況並最佳化查詢效能。 |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>運算時數資料可從2024年8月15日取得。 此日期之前的資料會顯示為「無法使用」。
+
 
 如需有關如何透過UI監視所有查詢工作狀態的完整資訊，請參閱[監視器排程查詢指南](./monitor-queries.md#inline-actions)。
 
