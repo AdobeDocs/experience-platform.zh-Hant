@@ -15,7 +15,7 @@ ht-degree: 81%
 
 若要使用教戰手冊，請瀏覽至&#x200B;**[!UICONTROL 使用案例] > [!UICONTROL 教戰手冊]**。瀏覽並使用頁面上的各種搜尋和篩選選項以選取並開始使用特定的教戰手冊。
 
-## 建立教戰手冊執行個體 {#create-playbook-instance}
+## 建立教戰手冊實例 {#create-playbook-instance}
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_create"
