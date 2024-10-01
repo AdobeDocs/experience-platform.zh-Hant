@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
 source-wordcount: '2573'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -137,7 +137,7 @@ Experience Platform目錄中的某些檔案型目的地同時支援對象啟用�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="資料集的檔案匯出選項"
->abstract="選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後新增至資料集的資料。<br>第一個增量檔案匯出包括資料集中的所有資料，充當回填。未來的增量檔案只會包含自第一次匯出以來新增到資料集的資料。 <br>選取&#x200B;**匯出完整檔案**，以便在每次匯出時匯出每個資料集的完整成員資格。 "
+>abstract="選取&#x200B;**匯出增量檔案**，僅匯出上次匯出後新增至資料集的資料。<br>第一個增量檔案匯出包括資料集中的所有資料，充當回填。未來的增量檔案僅包括第一次匯出後新增至資料集的資料。 <br>選取「**匯出完整檔案**」，在每次匯出時匯出每個資料集的完整會籍資料。 "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"

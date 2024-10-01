@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
 source-wordcount: '4784'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -101,8 +101,8 @@ ht-degree: 5%
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
->title="複雜的評估"
->abstract="下列運算式太複雜，無法表示為單一對象。 為了在相同的區段定義中使用B2B規則和以人物為基礎的事件，請遵循下列步驟。<ol><li>建立僅參照以人物為基礎之事件的區段定義，並將其儲存為專屬區段定義。</li><li>在新的區段定義中，在參照B2B規則時匯入先前建立的區段定義。</li></ol>"
+>title="複雜評估"
+>abstract="下面的運算式太複雜，無法作為單一客群來表達。若要在相同區段定義中同時使用 B2B 規則和以人員為基礎的事件，請依照下列步驟操作。<ol><li>建立僅引用以人員為基礎事件的區段定義，並將其另存為自己專有的區段定義。</li><li>在新的區段定義中，匯入先前建立的區段定義，同時引用 B2B 規則。</li></ol>"
 
 >[!NOTE]
 >
@@ -160,12 +160,12 @@ ht-degree: 5%
 
 ![會顯示警告，指出您已達到值的數量上限。](../images/ui/segment-builder/maximum-values.png)
 
-### 新增對象
+### 新增客群
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
 >title="搜尋更新"
->abstract="現有的搜尋系統已更新為使用整合式搜尋。 整合式搜尋可讓您更輕鬆且更穩健地搜尋對象以取得區段成員資格。"
+>abstract="現有搜尋系統已更新為使用整合式搜尋。整合式搜尋讓您可以更輕鬆果斷地為區段會籍搜尋客群。"
 
 您可以從&#x200B;**[!UICONTROL 對象]**&#x200B;標籤將對象拖放到規則產生器畫布上，以參考新區段定義中的對象成員資格。 這可讓您在新的區段定義規則中，以屬性的形式包含或排除對象成員資格。
 
@@ -327,7 +327,7 @@ ht-degree: 5%
 
 ![容器在展開後顯示。](../images/ui/segment-builder/unwrapped-container.png)
 
-## 合併政策
+## 合併原則
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
