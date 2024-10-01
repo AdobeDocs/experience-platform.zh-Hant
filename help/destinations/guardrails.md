@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1686'
 ht-degree: 2%
 
 ---
@@ -47,13 +47,13 @@ ht-degree: 2%
 
 以下護欄通常適用於透過[所有目的地型別](/help/destinations/destination-types.md#destination-types)啟動。
 
-| 護欄 | 限制 | 限制類型 | 說明 |
+| 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
-| 單一目的地的受眾數量上限 | 250 | 效能護欄 | 建議將最多250個對象對應至資料流中的單一目的地。 <br><br>如果您需要針對目的地啟用超過250個對象，您可以： <ul><li> 取消對應您不想再啟用的物件，或</li><li>建立新的數據流到所需的目標，並將受眾映射到此新數據流。</li></ul> <br> 請注意，對於某些目標，映射到目標的受眾可能少於250個。 這些目的地在下面的頁面各自的部分中進一步標註。 |
-| 映射到目標的屬性的最大數量 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，在資料流中應將最多50個屬性對應到目的地。 |
-| 目的地數量上限 | 100 | 系統強制的護欄 | 每個沙箱&#x200B;*，您最多可以創建100個目標，您可以將資料連接到這些目標並激活資料*。[Edge 個人化 目標（自定義 個人化）](#edge-destinations-activation) 最多可以構成 100 個建議目標中的 10 個。 |
+| 單一目的地的受眾數量上限 | 250 | 效能護欄 | 建議將最多250個對象對應至資料流中的單一目的地。 <br><br>如果您需要針對目的地啟用超過250個對象，您可以： <ul><li> 取消對應您不想再啟用的對象，或</li><li>建立新資料流到所需的目的地，並將對象對應到這個新資料流。</li></ul> <br>請注意，在某些目的地中，您對應至目的地的對象可能限制在250個以內。 這些目的地將在頁面下方各自的區段中進一步說明。 |
+| 對應到目的地的屬性數目上限 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，在資料流中應將最多50個屬性對應到目的地。 |
+| 目的地數量上限 | 100 | 系統強制的護欄 | 您最多可以建立100個可連線並啟用資料的目的地，每個沙箱&#x200B;*有*&#x200B;個。 [Edge個人化目的地（自訂個人化）](#edge-destinations-activation)在100個建議目的地中最多可組成10個。 |
 | 啟用至目的地的資料型別 | 設定檔資料，包括身分和身分對應 | 系統強制的護欄 | 目前只能將&#x200B;*個人資料記錄屬性*&#x200B;匯出至目的地。 說明事件資料的XDM屬性目前不支援匯出。 |
-| 啟動到目標的數據類型 - 陣列和映射屬性支援 | 未提供 | 系統強制執行的護欄 | 目前，****&#x200B;無法將陣列或映射屬性&#x200B;*匯出*&#x200B;到目標。此規則的例外情況是 [標識映射，該映射](/help/xdm/field-groups/profile/identitymap.md)在流式處理和基於文件的啟動中都匯出。 |
+| 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 未提供 | 系統強制的護欄 | 目前&#x200B;**無法**&#x200B;將&#x200B;*陣列或對應屬性*&#x200B;匯出至目的地。 此規則的例外是[身分對應](/help/xdm/field-groups/profile/identitymap.md)，它會匯出到串流和檔案型啟用中。 |
 
 {style="table-layout:auto"}
 
@@ -94,11 +94,11 @@ ht-degree: 2%
 
 以下護欄適用於透過[邊緣個人化目的地](/help/destinations/destination-types.md#advanced-enterprise-destinations)的啟用。
 
-| 護欄 | 限制 | 限制類型 | 說明 |
+| 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
 | [自訂個人化](/help/destinations/catalog/personalization/custom-personalization.md)目的地的數量上限 | 10 | 效能護欄 | 您可以將資料流設定為每個沙箱10個自訂個人化目的地。 |
-| 每個沙盤對應至個人化目標的屬性數量上限 | 30 | 系統強制執行的護欄 | 每個沙盒，數據流中最多可以將 30 個屬性映射到個人化目標。 |
-| 對應到單一 [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) 目的地的最大受眾數 | 50 | 效能護欄 | 您可以在至單一Adobe Target目的地的啟用流程中啟用最多50個對象。 |
+| 每個沙箱對應至個人化目的地的最大屬性數量 | 30 | 系統強制的護欄 | 每個沙箱在資料流中最多可以將30個屬性對應到個人化目的地。 |
+| 對應至單一[Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)目的地的對象數量上限 | 50 | 效能護欄 | 您可以在至單一Adobe Target目的地的啟用流程中啟用最多50個對象。 |
 
 {style="table-layout:auto"}
 
@@ -178,17 +178,17 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 | 護欄 | 限制 | 限制型別 | 說明 |
 | --- | --- | --- | --- |
 | [私人自訂目的地的數量上限](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | 效能護欄 | 您可以使用Destination SDK建立最多5個私人自訂串流或批次目的地。 如果您需要建立超過5個這類目的地，請聯絡自訂服務代表。 |
-| Destination SDK的設定檔匯出原則 | <ul><li>`maxBatchAgeInSecs` （最小 1.800，最大 3.600）</li><li>`maxNumEventsInBatch` （最小1.000，最大10.000）</li></ul> | 系統強制的護欄 | 針對您的目的地使用[可設定的彙總](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)選項時，請留意決定HTTP訊息傳送至API型目的地頻率的最小值和最大值，以及訊息應包含多少設定檔。 |
+| Destination SDK的設定檔匯出原則 | <ul><li>`maxBatchAgeInSecs` （最小1,800個，最大3,600個）</li><li>`maxNumEventsInBatch` （最小1,000個和最大10,000個）</li></ul> | 系統強制的護欄 | 針對您的目的地使用[可設定的彙總](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation)選項時，請留意決定HTTP訊息傳送至API型目的地頻率的最小值和最大值，以及訊息應包含多少設定檔。 |
 
 {style="table-layout:auto"}
 
 ### 目的地節流並重試原則 {#destination-throttling-and-retry-policy}
 
-有關指定目的地的節流臨界值或限制的詳細資訊。 本節還提供了有關目標重試原則的信息。
+有關指定目的地的節流臨界值或限制的詳細資訊。 本節也提供有關目的地重試原則的資訊。
 
-| 目的地類型 | 說明 |
+| 目的地型別 | 說明 |
 | --- | --- |
-| 企業目標 （HTTP API、Amazon Kinesis、Azure EventHubs） | 在 95% 的時間內，Experience Platform 會嘗試為成功發送的消息優惠方案小於 10 分鐘的輸送量延遲，對於發往企業目標的每個數據流，速率低於每秒 10,000 個請求。 <br> 如果對企業目標的請求失敗，Experience Platform會存儲失敗的請求，並重試兩次以將請求發送到終結點。 |
+| 企業目的地(HTTP API、Amazon Kinesis、Azure EventHubs) | 在95%的時間中，Experience Platform會嘗試為成功傳送的訊息提供少於10分鐘的輸送量延遲，每個資料流到企業目的地的每秒請求率少於10,000個。 <br>如果對您企業目的地的要求失敗，Experience Platform會儲存失敗的要求並重試兩次，以將要求傳送至您的端點。 |
 
 {style="table-layout:auto"}
 

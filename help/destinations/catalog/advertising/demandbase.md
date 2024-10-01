@@ -3,7 +3,8 @@ title: Demandbase連線
 description: 使用此目的地為Account-Based Marketing (ABM)使用案例啟用您的帳戶對象。 透過DemandBase的B2BDemand Side Platform(DSP)向目標帳戶中的相關角色和角色做廣告。 Target帳戶也可以使用Demandbase第三方資料進行擴充，以用於行銷和銷售中的其他下游使用案例。
 badgeB2B: label="B2B版本" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: 5c694dfab7e53cf8a78500e3ecd086a3986b9b91
+last-substantial-update: 2024-09-30T00:00:00Z
+source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 3%
