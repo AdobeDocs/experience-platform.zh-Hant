@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 區段產生器UI指南
 description: Adobe Experience Platform UI中的區段產生器提供豐富的工作區，可讓您與設定檔資料元素互動。 工作區提供用於建置和編輯規則的直覺式控制項，例如用來表示資料屬性的拖放圖磚。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
+source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
-source-wordcount: '4784'
+source-wordcount: '4955'
 ht-degree: 7%
 
 ---
@@ -28,6 +28,19 @@ ht-degree: 7%
 >abstract="構成區段定義的三種欄位類型為屬性、事件和客群。屬性可讓您使用屬於 XDM 個人輪廓類別的輪廓屬性，事件可讓您根據使用 XDM ExperienceEvent 資料元素發生的動作或事件來建立客群，而客群則可讓您使用從外部來源匯入的客群。"
 
 區段定義的基本建置區塊是屬性和事件。 此外，現有對象中包含的屬性和事件可作為新定義的元件。
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="摘要資料"
+>abstract="摘要資料只會針對設定檔屬性顯示，不會針對事件或對象屬性顯示<b>not</b>。<br/><br/>在下列情況下，設定檔屬性的摘要資料可能不會顯示： <ol><li>屬性的部分值長度超過100個字元。</li><li>屬性的唯一值超過3000個。</li></ol>"
+
+>[!NOTE]
+>
+>如果您選取屬性的資訊泡泡，則可檢視欄位的值分佈（也稱為摘要資料）。 這些是&#x200B;**僅**&#x200B;可在屬性標籤中使用，且不可在事件或對象標籤中使用。
+>
+>如果屬性符合下列條件，則會顯示摘要資料：屬性的所有值都在100個字元以內，而且屬性的唯一值在3000個以內。
+>
+>但是，如果屬性是透過關聯性連結至設定檔的多實體資料，則&#x200B;**不會**&#x200B;有摘要資料。 例如，如果您有名為`Vehicle`的自訂結構描述，則`Vehicle`結構描述中的&#x200B;**屬性**&#x200B;將&#x200B;**沒有**&#x200B;摘要資料。
 
 您可以在[!DNL Segment Builder]工作區左側的&#x200B;**[!UICONTROL 欄位]**&#x200B;區段中看到這些建置區塊。 **[!UICONTROL 欄位]**&#x200B;包含每個主要建置區塊的標籤：「[!UICONTROL 屬性]」、「[!UICONTROL 事件]」和「[!UICONTROL 對象]」。
 
