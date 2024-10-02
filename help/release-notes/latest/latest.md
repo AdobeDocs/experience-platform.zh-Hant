@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2024 年 9 月)
 description: Adobe Experience Platform 2024 年 9 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
+source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
 workflow-type: tm+mt
 source-wordcount: '2199'
 ht-degree: 82%
@@ -15,15 +15,15 @@ ht-degree: 82%
 
 Adobe Experience Platform 現有功能及文件的更新：
 
-- [警報 {#alerts}](#alerts)
-- [儀表板{#dashboards}](#dashboards)
-- [資料準備{#data-prep}](#data-prep)
-- [目的地 {#destinations}](#destinations)
-- [體驗資料模型(XDM) {#xdm}](#xdm)
-- [身分識別服務{#identity-service}](#identity-service)
-- [查詢服務{#query-service}](#query-service)
-- [分段服務{#segmentation-service}](#segmentation-service)
-- [來源 {#sources}](#sources)
+- [警示](#alerts)
+- [儀表板](#dashboards)
+- [資料準備](#data-prep)
+- [目標](#destinations)
+- [體驗資料模式 (XDM)](#xdm)
+- [身分識別服務](#identity-service)
+- [查詢服務](#query-service)
+- [Segmentation Service](#segmentation-service)
+- [來源](#sources)
 
 ## 警示 {#alerts}
 
