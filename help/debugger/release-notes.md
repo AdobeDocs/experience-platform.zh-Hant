@@ -4,14 +4,20 @@ description: Adobe Experience Platform Debugger 的最新發行說明。
 keywords: Debugger；Experience Platform Debugger 擴充功能；Chrome；擴充功能；發行說明
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
-workflow-type: ht
-source-wordcount: '781'
-ht-degree: 100%
+source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+workflow-type: tm+mt
+source-wordcount: '801'
+ht-degree: 97%
 
 ---
 
 # Adobe Experience Platform Debugger 發行說明
+
+## 1.6.2版 — 2024年10月1日
+
+### 修正和改良
+
+* 修正Debugger對所有CSP錯誤過於敏感的問題
 
 ## 版本 1.6.1 - 2024 年 7 月 25 日
 
@@ -82,7 +88,7 @@ ht-degree: 100%
 * 修正「送回意見回饋」按鈕。
 * 修正版本 ≥2.18.0 的 Web SDK 摘要缺少「資料流 ID」。
 * 修正 Edge 記錄不可搜尋的問題。
-* 新增有關某些帳戶類型其他設定檔的註解。
+* 新增有關某些帳戶類型其他輪廓的註解。
 
 ## 版本 1.4.1 - 2022 年 11 月 1 日
 
@@ -92,7 +98,7 @@ ht-degree: 100%
 
 * 新增對 Web SDK 混合實施的 AEP Assurance 偵錯支援。
 * 新增在同一個 AEP Assurance 工作階段中對多個標籤的支援。
-* 修正使用者登入後無法切換設定檔/組織的問題。
+* 修正使用者登入後無法切換輪廓/組織的問題。
    * 對於某些帳戶，需要登出並重新登入才能切換組織。
 * 新增啟用 Target 追踨失敗時的錯誤訊息。
 * 更新相依性。
