@@ -1,12 +1,11 @@
 ---
 title: 身分設定UI
 description: 瞭解如何使用身分設定使用者介面。
-badge: Beta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 0%
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
+>身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
 身分設定是Adobe Experience Platform Identity Service UI中的功能，可用來指定唯一的名稱空間及設定名稱空間優先順序。
 
@@ -28,7 +27,7 @@ ht-degree: 0%
 * [身分最佳化演演算法](./identity-optimization-algorithm.md)
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
-* [名稱空間優先順序](./namespace-priority.md)
+* [命名空間優先等級](./namespace-priority.md)
 * [圖表模擬](./graph-simulation.md)
 
 ## 設定您的身分設定
@@ -70,5 +69,5 @@ ht-degree: 0%
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [名稱空間優先順序](./namespace-priority.md)
+* [命名空間優先等級](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)

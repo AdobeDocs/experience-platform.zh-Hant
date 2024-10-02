@@ -1,20 +1,19 @@
 ---
-title: 名稱空間優先順序
+title: 命名空間優先等級
 description: 瞭解Identity Service中的名稱空間優先順序。
-badge: Beta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1626'
+source-wordcount: '1605'
 ht-degree: 2%
 
 ---
 
-# 名稱空間優先順序
+# 命名空間優先等級
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
+>身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
 每個客戶實作都是獨一無二，並根據特定組織的目標量身打造，因此，特定名稱空間的重要性因客戶而異。 現實世界的範例包括：
 
@@ -90,7 +89,7 @@ ht-degree: 2%
 >
 >* 主要身分是儲存設定檔片段所針對的身分。 設定檔片段是資料記錄，用於儲存有關特定使用者的資訊：屬性（通常透過CRM記錄擷取）或事件（通常從體驗事件或線上資料擷取）。
 
-### 範例圖表情境
+### 範例情境
 
 本節提供優先順序設定如何影響資料的範例。
 
@@ -184,6 +183,6 @@ ht-degree: 2%
 
 如需詳細資訊，請閱讀[隱私權服務概觀](../../privacy-service/home.md)。
 
-### Adobe Target和邊緣個人化
+### Adobe Target
 
-[Edge個人化](../../server-api/personalization-target.md)將繼續參考您在WebSDK中資料元素型別（其在identityMap中轉譯為`primary=true`）上設定「主要」核取方塊的方式。
+您只能對Adobe Target啟用批次和串流細分。

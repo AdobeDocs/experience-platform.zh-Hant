@@ -1,11 +1,10 @@
 ---
 title: 身分最佳化演演算法
 description: 瞭解Identity Service中的身分最佳化演演算法。
-badge: Beta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1528'
 ht-degree: 1%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
+>身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
 身分最佳化演演算法是Identity Service上的圖表演演算法，可協助確保身分圖表代表單一人員，因此可防止即時客戶設定檔上不想要的身分合併。
 
@@ -22,7 +21,7 @@ ht-degree: 1%
 
 請閱讀本節，瞭解不重複名稱空間和名稱空間優先順序的相關資訊。 這兩個概念可作為身分最佳化演演算法所需的輸入引數。
 
-### 唯一的名稱空間 {#unique-namespace}
+### 唯一命名空間 {#unique-namespace}
 
 唯一的名稱空間會決定圖形摺疊時移除的連結。
 
@@ -41,7 +40,7 @@ ht-degree: 1%
 >
 >* 作為人員識別碼以及用在沙箱中以產生身分圖表的所有名稱空間都必須標示為唯一的名稱空間。 否則，您可能會看到不想要的連結結果。
 
-### 名稱空間優先順序 {#namespace-priority}
+### 命名空間優先等級 {#namespace-priority}
 
 名稱空間優先順序會決定身分最佳化演演算法如何移除連結。
 
@@ -82,7 +81,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 >[!TAB 範例1]
 
-| 命名空間 | 唯一的名稱空間 |
+| 命名空間 | 唯一命名空間 |
 | --- | --- |
 | CRMID | 是 |
 | 電子郵件 | 是 |
@@ -99,7 +98,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 >[!TAB 範例2]
 
-| 命名空間 | 唯一的名稱空間 |
+| 命名空間 | 唯一命名空間 |
 | --- | --- |
 | CRMID | 是 |
 | ECID | 無 |
@@ -120,7 +119,7 @@ Identity Service中的名稱空間具有隱含的相對重要性順序。 假設
 
 在某些情況下，使用者可能會輸入錯誤的電子郵件和/或電話號碼值。
 
-| 命名空間 | 唯一的名稱空間 |
+| 命名空間 | 唯一命名空間 |
 | --- | --- |
 | CRMID | 是 |
 | 電子郵件 | 是 |
@@ -165,6 +164,6 @@ ECID會儲存未驗證（匿名）的事件，而CRMID會儲存已驗證的事�
 * [實作指南](./implementation-guide.md)
 * [圖表設定範例](./example-configurations.md)
 * [疑難排解和常見問答( FAQ)](./troubleshooting.md)
-* [名稱空間優先順序](./namespace-priority.md)
+* [命名空間優先等級](./namespace-priority.md)
 * [圖表模擬UI](./graph-simulation.md)
 * [身分設定UI](./identity-settings-ui.md)

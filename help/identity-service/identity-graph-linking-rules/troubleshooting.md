@@ -1,20 +1,19 @@
 ---
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
-badge: Beta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
 
-# 身分圖表連結規則疑難排解指南
+# 識別圖連結規則疑難排解指南
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則功能目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
+>身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
 測試和驗證身分圖表連結規則時，您可能會遇到一些與資料擷取和圖表行為相關的問題。 請閱讀本檔案，瞭解如何疑難排解使用身分圖表連結規則時可能會遇到的一些常見問題。
 
@@ -167,7 +166,10 @@ ht-degree: 0%
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-這兩個查詢假設一個身分是從identityMap傳送，另一個身分是從identityDescriptor傳送。 **注意**：在Experience Data Model (XDM)結構描述中，身分描述項是標示為身分的欄位。
+這兩個查詢假設如下：
+
+* 一個身分會從identityMap傳送，另一個身分會從身分描述項傳送。 **注意**：在Experience Data Model (XDM)結構描述中，身分描述項是標示為身分的欄位。
+* CRMID會透過identityMap傳送。 如果CRMID是以欄位傳送，請從WHERE子句移除`key='Email'`。
 
 ### 我的體驗事件片段已擷取，但設定檔中的主要身分有「錯誤」
 
@@ -367,7 +369,7 @@ ORDER BY timestamp desc
    * 透過此功能，ECID不再一律與一個設定檔相關聯。
    * 建議使用人員名稱空間(CRMID)開始歷程。
 
-## 名稱空間優先順序
+## 命名空間優先等級
 
 請閱讀本節，瞭解有關[名稱空間優先順序](./namespace-priority.md)的常見問題解答。
 
@@ -398,7 +400,7 @@ ORDER BY timestamp desc
 | 測試案例 | 測試步驟 | 預期結果 |
 | --- | --- | --- |
 | 精確的個人實體表示 | <ul><li>模擬匿名瀏覽</li><li>模擬兩個使用者(John、Jane)使用相同裝置登入</li></ul> | <ul><li>John和Jane都應該與其屬性和已驗證事件相關聯。</li><li>最後驗證的使用者應與匿名瀏覽事件相關聯。</li></ul> |
-| 區段 | 建立四個區段定義（**注意**：每一對區段定義都應該使用批次評估一個區段定義，並使用另一個串流評估。） <ul><li>區段定義A：根據John已驗證事件的區段資格。</li><li>區段定義B：根據Jane的已驗證事件的區段資格。</li></ul> | 無論共用裝置情況為何，John和Jane都應該符合各自的區段資格。 |
+| 區段 | 建立四個區段定義（**注意**：每一對區段定義都應該使用批次評估一個區段定義，並使用另一個串流評估。） <ul><li>區段定義A：根據John的已驗證事件和/或屬性的區段資格。</li><li>區段定義B：根據Jane的已驗證事件和/或屬性的區段資格。</li></ul> | 無論共用裝置情況為何，John和Jane都應該符合各自的區段資格。 |
 | Adobe Journey Optimizer上的對象資格/單一歷程 | <ul><li>從對象資格活動（例如上面建立的串流細分）開始建立歷程。</li><li>建立以單一事件開始的歷程。 此單一事件應為已驗證的事件。</li><li>建立這些歷程時，您必須停用重新進入。</li></ul> | <ul><li>無論共用裝置情況為何，John和Jane都應觸發其應輸入的個別歷程。</li><li>當ECID傳回給John和Jane時，他們不應重新進入歷程。</li></ul> |
 
 {style="table-layout:auto"}

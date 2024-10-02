@@ -3,9 +3,9 @@ title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->身分圖表連結規則目前處於Beta版。 如需參與率條件的詳細資訊，請聯絡您的Adobe客戶團隊。 功能和檔案可能會有所變更。
+>身分圖表連結規則目前處於「有限可用性」。 如需如何在開發沙箱中存取功能的相關資訊，請聯絡您的Adobe客戶團隊。
 
 請參閱本檔案，瞭解在使用Adobe Experience Platform Identity Service實作資料時可遵循的逐步指南。
 
@@ -61,8 +61,67 @@ ht-degree: 2%
 
 ### XDM體驗事件
 
-* 在預先實作程式中，您必須確保系統要傳送給Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
-* 使用XDM體驗事件傳送事件時，請勿傳送空白字串作為身分值。 這樣做會導致系統錯誤。
+在預先實作程式中，您必須確保系統要傳送給Experience Platform的已驗證事件一律包含人員識別碼，例如CRMID。
+
+>[!BEGINTABS]
+
+>[!TAB 具有人員識別碼的已驗證事件]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB 沒有人員識別碼的已驗證事件]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+使用XDM體驗事件傳送事件時，請勿傳送空白字串作為身分值。 如果具有最高名稱空間優先順序的名稱空間的身分值是空字串，則會從即時客戶設定檔中忽略記錄。 這同時適用於identityMap以及標示為身分的欄位。
 
 +++選取此選項可檢視具有空字串的裝載範例
 
@@ -170,6 +229,12 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 使用身分儀表板來深入分析身分圖表狀態，例如整體身分計數和圖表計數趨勢、依名稱空間的身分計數和依圖表大小的圖表計數。 您也可以使用身分儀表板來檢視具有兩個或多個身分（依名稱空間組織）的圖表趨勢。
 
 選取省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 檢視更多]**&#x200B;以取得進一步資訊，並驗證沒有收合的圖形。
+
+![身分識別服務UI工作區中的身分識別儀表板。](../images/implementation/identity_dashboard.png)
+
+使用顯示的視窗來檢視收合圖形的資訊。 在此範例中，電子郵件和電話都標示為唯一的名稱空間，因此您的沙箱中沒有收合的圖表。
+
+![具有多重身分之圖形的快顯視窗。](../images/implementation/graphs.png)
 
 ## 附錄 {#appendix}
 
