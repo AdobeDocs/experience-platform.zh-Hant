@@ -2,14 +2,14 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
 
-# [!UICONTROL 帳戶設定檔]儀表板
+# 帳戶設定檔儀表板
 
 Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表板檢視有關帳戶設定檔的重要資訊，如每日快照期間所擷取。 本指南概述如何在UI中存取及使用[!UICONTROL 帳戶設定檔]儀表板，並提供有關儀表板中顯示之視覺效果的詳細資訊。
 
@@ -65,6 +65,11 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 ## 標準Widget {#standard-widgets}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="每個帳戶的客戶概覽"
+>abstract="此鑽研介面工具集提供您B2B資料結構的深入分析。 它可協助您識別有多少帳戶設定檔沒有連結客戶設定檔，或有一或多個相關聯的客戶設定檔。<ul><li>直接客戶：客戶設定檔是透過`personComponents`路徑直接連結至帳戶嗎？</li><li>間接客戶：是透過`Account-Person`路由連結至帳戶的客戶設定檔。</li></ul>"
+
 Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不同量度。
 
 >[!IMPORTANT]
@@ -73,7 +78,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
-* [已新增帳戶輪廓](#account-profiles-added)
+* [已新增的帳戶輪廓](#account-profiles-added)
 * [依產業的新帳戶](#accounts-by-industry)
 * [新帳戶（依型別）](#accounts-by-type)
 * [依個人角色的新機會](#opportunities-by-person-role)
@@ -84,7 +89,7 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 * [預測性評分分佈](#predictive-scoring-distribution)
 * [預測性評分主要影響因素](#predictive-scoring-top-influential-factors)
 
-### 已新增帳戶輪廓 {#account-profiles-added}
+### 已新增的帳戶輪廓 {#account-profiles-added}
 
 [!UICONTROL 新增的帳戶設定檔] Widget會使用線圖來顯示一段時間內每天新增的帳戶設定檔數目。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選器，預設行為會列出今天之前一年新增的帳戶設定檔。 結果可用於推斷新增的帳戶設定檔數量趨勢。
 

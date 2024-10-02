@@ -3,9 +3,9 @@ keywords: IP位址， IP範圍，允許清單，允許清單，查詢服務，�
 title: 查詢服務的IP位址允許清單
 description: 此頁面提供更新的IP範圍，您可將其新增至允許清單，以安全地存取查詢服務。
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: 029d0ad63460a71770e5ba3cd75a29cb04c0cb9c
+source-git-commit: a48b3995abc1ee2033e3827b12581f4771cdb2d7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * Adobe建議您將此頁面加入書籤，每三個月重新造訪一次，以檢查最新IP位址。 Adobe不提供新IP範圍的通知。
-> * 雖然Adobe支援將資料匯出至SFTP伺服器，但建議匯出資料的雲端儲存位置為[!DNL Amazon S3]和[!DNL Azure Blob]。
 > * 2024年10月15日起，新的IP範圍已取代現有IP範圍。 請確定在此日期之前已將舊和新IP新增到您的允許清單中，以避免服務中斷。
 
 ## 概觀 {#overview}
 
-此頁面提供可新增至允許清單的IP位址，以便安全地從Experience Platform匯出資料至[SFTP伺服器](../destinations/catalog/cloud-storage/sftp.md)。
-
-您可以透過網路防火牆定義網路存取控制。 透過指定適當的IP範圍，您可以允許資料傳輸服務的流量。
+您可以透過網路防火牆定義網路存取控制。 透過指定適當的IP範圍，您可以允許查詢服務存取的流量。
 
 作為持續改善的一部分，Adobe已於2024年10月15日更新用於網路存取查詢服務的IP範圍。 現有的IP位址將被取代，新的IP位址將取代它們。 在轉換期間將舊和新IP範圍新增到允許清單中至關重要，以確保服務不中斷。
 
