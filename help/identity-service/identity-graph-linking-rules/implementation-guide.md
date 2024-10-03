@@ -3,7 +3,7 @@ title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 badge: Beta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
+source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 2%
@@ -99,7 +99,7 @@ ht-degree: 2%
 
 ```json
 {
-    "_id": "test_id"
+    "_id": "test_id",
     "identityMap": {
         "ECID": [
             {
