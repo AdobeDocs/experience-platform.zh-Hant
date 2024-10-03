@@ -2,9 +2,9 @@
 title: 使用沙箱工具跨組織共用套件
 description: 瞭解如何使用Adobe Experience Platform中的沙箱工具來跨不同組織共用套件。
 badge: Beta
-source-git-commit: 492f1d9dc08965dba3f1c5b6e1d479ef645afd04
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -15,29 +15,27 @@ ht-degree: 0%
 >
 >跨組織共用套件目前為測試版，僅供特定測試版客戶使用。
 
-本文介紹如何在Adobe Experience Platform中使用沙箱工具，以在不同組織之間共用套件。
+提高沙箱之間的設定準確性，並利用沙箱工具功能順暢地匯出和匯入不同組織的沙箱之間的沙箱設定。 本文介紹如何在Adobe Experience Platform中使用沙箱工具，以在不同組織之間共用套件。 共用的套件有兩種型別：
 
-提高沙箱之間的設定準確性，並利用沙箱工具功能順暢地匯出和匯入不同組織的沙箱之間的沙箱設定。 共用的套件有兩種型別：
+- **私人套件**
 
-**私人套件**
+[私人套件](#private-packages)只能與已透過選擇加入允許清單從來源組織核准共用要求的組織共用。
 
-私人套件只能與已透過選擇加入允許清單從來源組織核准共用請求的組織共用。
+- **公用套件**
 
-**公用套件**
+[公用套件](./sandbox-tooling.md/#export-and-import-an-entire-sandbox)不需額外核准即可匯入。 這些套件可在合作夥伴的網站、部落格或平台上共用。 封裝裝載可讓封裝從這些通道複製並貼到目標組織。
 
-公開套件無需任何其他核准即可匯入。 這些套件可在合作夥伴的網站、部落格或平台上共用。 封裝裝載可讓封裝從這些通道複製並貼到目標組織。
-
-## 私人套件
+## 私人套件 {#private-packages}
 
 >[!NOTE]
 >
 >若要啟動和核准共用要求，並在組織間共用封裝，您必須擁有&#x200B;**封裝共用**&#x200B;角色型存取控制許可權。
 
-沙箱工具功能可讓您建立組織合作關係、追蹤合作關係請求的統計資料、管理現有合作關係，並與合作夥伴組織共用套件。
+使用沙箱工具功能來建立合作關係、追蹤合作關係請求統計資料、管理現有合作關係，並與合作夥伴組織共用套件。
 
 ### 建立組織夥伴關係請求
 
-若要建立組織合作關係請求，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 合作夥伴組織]**&#x200B;標籤。 接著，選取&#x200B;**[!UICONTROL 管理夥伴組織]**。
+若要建立組織合作關係請求，請瀏覽至&#x200B;**[!UICONTROL 沙箱]** **[!UICONTROL 合作夥伴組織]**&#x200B;標籤。 接著，選取&#x200B;**[!UICONTROL 管理夥伴組織]**。
 
 ![沙箱UI，其中的「夥伴組織」標籤和「管理夥伴組織」已反白顯示。](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
@@ -53,13 +51,13 @@ ht-degree: 0%
 
 ![標示傳出要求的夥伴組織標籤。](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
-### 授權合作關係請求
+### 授權合作關係請求 {#authorize-request}
 
 若要授權組織合作關係請求，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 合作夥伴組織]**&#x200B;標籤。 接著，選取&#x200B;**[!UICONTROL 傳入要求]**。
 
 ![沙箱UI的[合作夥伴組織]索引標籤和[傳入要求]已反白顯示。](../images/ui/sandbox-tooling/private-authorise-partner-org.png)
 
-要求的目前&#x200B;**[!UICONTROL 狀態]**&#x200B;為&#x200B;**擱置中**。 若要核准請求，請選取所選請求旁邊的省略符號(`...`)，然後從下拉式清單中選取&#x200B;**[!UICONTROL 核准]**。
+此階段中要求的目前&#x200B;**[!UICONTROL 狀態]**&#x200B;為&#x200B;**擱置中**。 若要核准請求，請選取所選請求旁邊的省略符號(`...`)，然後從下拉式清單中選取&#x200B;**[!UICONTROL 核准]**。
 
 ![內送要求清單，顯示反白顯示[核准]的下拉式功能表。](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
@@ -71,9 +69,9 @@ ht-degree: 0%
 
 ![反白顯示「已核准」的傳入要求清單。](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
-您現在可以在您的組織與來源組織之間共用套件。
+使用此工作流程/程式可在您的組織與來源組織之間共用套件。
 
-### 與合作夥伴組織共用套件
+### 與合作夥伴組織共用套件 {#share-package}
 
 >[!NOTE]
 >
@@ -85,14 +83,14 @@ ht-degree: 0%
 
 在&#x200B;**[!UICONTROL 共用封裝]**&#x200B;對話方塊中，從&#x200B;**[!UICONTROL 共用設定]**&#x200B;下拉式清單中選取要共用的封裝，然後選取&#x200B;**[!UICONTROL 確認]**。
 
-![共用套件對話方塊，其中的[共用]設定和[確認]已反白顯示。](../images/ui/sandbox-tooling/private-share-package-confirm.png)
-
 >[!TIP]
 >
 >您可以選取多個組織。 選取的組織會顯示在[!UICONTROL 共用設定]下拉式清單下。
 
-## 後續步驟
+![共用套件對話方塊，其中的[共用]設定和[確認]已反白顯示。](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## 後續步驟 {#next-steps}
 
 本檔案會示範如何使用沙箱工具功能來跨不同組織共用套件。 如需詳細資訊，請參閱[沙箱工具指南](../ui/sandbox-tooling.md)。
 
-如需使用沙箱API執行不同作業的步驟，請參閱[沙箱開發人員指南](../api/getting-started.md)。 如需Experience Platform中沙箱的整體概觀，請參閱[概觀檔案](../home.md)。
+若要瞭解如何使用沙箱API執行不同的作業，請參閱[沙箱開發人員指南](../api/getting-started.md)。 如需Experience Platform中沙箱的整體概觀，請參閱[概觀檔案](../home.md)。

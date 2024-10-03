@@ -2,9 +2,9 @@
 title: 沙箱工具
 description: 順暢地匯出和匯入沙箱之間的沙箱設定。
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 50f3976d73c8a34a51179157a7c93e3d9b1c0ff4
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 7%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 7%
 | [!DNL Adobe Journey Optimizer] | 活動 | 將會複製歷程中使用的事件和事件詳細資訊。 它一律會在目標沙箱中建立新版本。 |
 | [!DNL Adobe Journey Optimizer] | 動作 | 歷程中使用的電子郵件和推播訊息可以復製為相依物件。 用於訊息個人化的歷程欄位中使用的管道動作活動不會檢查完整性。 不會複製內容區塊。<br><br>可以複製歷程中使用的更新設定檔動作。 也會複製歷程中使用的自訂動作和動作詳細資訊。 它一律會在目標沙箱中建立新版本。 |
 | [!DNL Adobe Journey Optimizer] | 歷程 | 將整個歷程新增至套件時，將會複製歷程所依賴的大部分物件，包括對象、結構描述、事件和動作。 |
-| [!DNL Adobe Journey Optimizer] | 內容範本 | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer促銷活動和歷程中重複使用自訂內容。 |
+| [!DNL Adobe Journey Optimizer] | 內容範本 | 內容範本可以復製為歷程物件的相依物件。 獨立範本可讓您輕鬆在Journey Optimizer行銷活動和歷程中重複使用自訂內容。 |
 | [!DNL Adobe Journey Optimizer] | 片段 | 片段可以復製為歷程物件的相依物件。 片段是可重複使用的元件，可在各個Journey Optimizer促銷活動和歷程的一封或多封電子郵件中參考。 |
 
 不會複製曲面（例如預設集）。 系統會根據訊息型別和表面名稱，自動選取目標沙箱上最接近的相符專案。 如果在目標沙箱上找不到表面，則表面複製將失敗，導致訊息複製失敗，因為訊息需要表面才能用於設定。 在這種情況下，至少需要為訊息的正確通道建立一個表面，副本才能運作。
