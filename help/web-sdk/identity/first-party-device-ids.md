@@ -2,9 +2,9 @@
 title: Web SDK中的第一方裝置ID
 description: 瞭解如何在Adobe Experience Platform Web SDK中設定第一方裝置識別碼(FPID)。
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ Edge Network只接受符合[UUIDv4格式](https://datatracker.ietf.org/doc/html/
     }
 }
 ```
+
+## 在您自己的網域上設定FPID {#setting-fpid-domain}
+
+除了在身分對應中設定[!DNL FPID]之外，如果您已設定第一方資料收集[!DNL CNAME]，您也可以在您自己的網域上設定[!DNL FPID] Cookie。
+
+使用[!DNL CNAME]啟用第一方資料收集時，將會在對資料收集端點提出請求時傳送您網域的所有Cookie。
+
+與Adobe的資料收集用途無關的所有Cookie都會被捨棄。 對於[!DNL FPID]，您可以在資料流設定中指定[!DNL FPID] Cookie的名稱。 執行此操作時，Edge Network將讀取[!DNL FPID] Cookie的內容，而不是在身分對應中尋找[!DNL FPID]。
+
+若要使用此功能，您必須將[!DNL FPID]設定在您網域的頂層，而非特定子網域。 如果您在子網域上設定它，Cookie值將不會傳送給Edge Network，且[!DNL FPID]解決方案將無法如預期運作。
 
 ## ID階層 {#id-hierarchy}
 
