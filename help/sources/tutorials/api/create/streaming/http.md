@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；串流連線；建立串
 title: 使用流量服務API建立HTTP API串流連線
 description: 本教學課程提供如何使用Flow Service API使用HTTP API來源為原始資料和XDM資料建立串流連線的步驟
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1646'
 ht-degree: 3%
 
 ---
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB 沒有轉換]
+>[!TAB XDM]
 
-以下請求會為HTTP API建立串流資料流，而不進行資料轉換。
+以下請求會為XDM資料建立串流資料流。
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB 具有轉換]
+>[!TAB 原始]
 
-以下請求會為HTTP API建立串流資料流，並將對應轉換套用至您的資料。
+以下請求會建立原始資料的串流資料流。
 
 使用轉換建立資料流時，無法變更`name`引數。 此值必須一律設定為`Mapping`。
 
@@ -559,7 +559,7 @@ curl -X POST \
 }
 ```
 
-## 要內嵌至Platform的Post資料 {#ingest-data}
+## 張貼要擷取至平台的資料 {#ingest-data}
 
 >[!NOTE]
 >
