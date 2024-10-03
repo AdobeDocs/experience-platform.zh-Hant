@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDK擴充功能中的資料元素型別
 description: 瞭解Adobe Experience Platform Web SDK標籤擴充功能所提供的各種資料元素型別。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
+source-git-commit: e34a9ee5b1a09ff3391e5b0e981215fefbc157fc
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 5%
