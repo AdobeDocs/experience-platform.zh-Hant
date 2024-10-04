@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2821'
 ht-degree: 0%
 
 ---
@@ -102,6 +102,10 @@ ht-degree: 0%
 ### 結果計數 {#result-count}
 
 「查詢編輯器」有最多50,000列的輸出。 您可以選擇在查詢編輯器主控台中一次顯示的列數。 若要變更主控台中顯示的列數，請選取&#x200B;**[!UICONTROL 結果計數]**&#x200B;下拉式清單，並從50、100、150、300和500選項中選取。
+
+>[!NOTE]
+>
+>由於Platform UI最多只能支援500列，因此超過500列的LIMIT值會被忽略。
 
 ![結果計數下拉式清單反白顯示的查詢編輯器。](../images/ui/query-editor/result-count.png)
 
