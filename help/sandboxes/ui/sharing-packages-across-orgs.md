@@ -2,9 +2,9 @@
 title: 使用沙箱工具跨組織共用套件
 description: 瞭解如何使用Adobe Experience Platform中的沙箱工具來跨不同組織共用套件。
 badge: Beta
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ![沙箱UI，其中的「夥伴組織」標籤和「管理夥伴組織」已反白顯示。](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-在[!UICONTROL 封裝夥伴管理]對話方塊中，在&#x200B;**[!UICONTROL 輸入組織ID]**&#x200B;並按Enter鍵。 組織ID顯示在下面的&#x200B;**[!UICONTROL 選取的組織ID]**&#x200B;區段中。 新增ID之後，請選取&#x200B;**[!UICONTROL 確認]**。
+在[!UICONTROL 封裝夥伴管理]對話方塊中，在&#x200B;**[!UICONTROL 輸入組織ID]**&#x200B;並按Enter (Windows)或傳回(Mac)。 組織ID顯示在下面的&#x200B;**[!UICONTROL 選取的組織ID]**&#x200B;區段中。 新增ID之後，請選取&#x200B;**[!UICONTROL 確認]**。
 
 >[!TIP]
 >
