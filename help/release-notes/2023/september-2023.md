@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 發行說明
-description: Adobe Experience Platform 2023年9月版本注意事項。
+title: Adobe Experience Platform 發行說明 (2023 年 9 月)
+description: Adobe Experience Platform 2023 年 9 月版發行說明。
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '2263'
-ht-degree: 26%
+source-wordcount: '2265'
+ht-degree: 33%
 
 ---
 
@@ -13,18 +13,18 @@ ht-degree: 26%
 
 **發行日期： 2023年9月28日**
 
-Adobe Experience Platform中的新功能：
+Adobe Experience Platform 的新功能：
 
 - [計算屬性](#computed-attributes)
 
-Experience Platform現有功能的更新：
+Experience Platform 現有功能的更新：
 
-- [警報](#alerts)
+- [警示](#alerts)
 - [儀表板](#dashboards)
-- [資料集合](#data-collection)
-- [資料控管](#data-governance)
+- [資料彙集](#data-collection)
+- [資料治理](#data-governance)
 - [資料檢疫](#hygiene)
-- [目的地](#destinations)
+- [目標](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
 - [查詢服務](#query-service)
@@ -35,15 +35,15 @@ Experience Platform現有功能的更新：
 
 計算屬性可讓您透過直覺式UI輕鬆將事件資料摘要為設定檔屬性，以強化行為型細分、個人化和啟用。 透過此功能，您可以自助建立計算屬性、管理這些屬性，並用於區段、Real-Time CDP目的地或Adobe Journey Optimizer。 此外，計算屬性可簡化細分和歷程工作流程，協助您順暢地提供相關體驗。 若要深入瞭解運算屬性，請閱讀[運算屬性概述](../../profile/computed-attributes/overview.md)。
 
-## 警報 {#alerts}
+## 警示 {#alerts}
 
-Experience Platform可讓您訂閱各種Platform活動的事件型警報。 您可以透過Platform使用者介面中的[!UICONTROL 警示]索引標籤來訂閱不同的警示規則，也可以選擇在UI本身或透過電子郵件通知來接收警示訊息。
+Experience Platform 可讓您訂閱各種 Platform 活動的事件型警示。您可以透過 Platform 使用者介面中的「[!UICONTROL 警示]」索引標籤訂閱不同的警示規則，而且可以選擇在使用者介面本身內或透過電子郵件通知接收警示訊息。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 警示歷史記錄標籤 | 警報[!UICONTROL 歷史記錄]索引標籤現在會包含所有事件，包括延遲、開始、成功和失敗。 請閱讀[警示UI檔案](../../observability/alerts/ui.md)，以取得有關[歷程記錄]索引標籤的詳細資訊。 |
+| 「警示歷史記錄」索引標籤 | 警報[!UICONTROL 歷史記錄]索引標籤現在會包含所有事件，包括延遲、開始、成功和失敗。 請閱讀[警示UI檔案](../../observability/alerts/ui.md)，以取得有關[歷程記錄]索引標籤的詳細資訊。 |
 
 {style="table-layout:auto"}
 
@@ -61,9 +61,9 @@ Adobe Experience Platform提供多個[!DNL dashboards]，您可以透過它檢�
 
 若要深入瞭解授權使用儀表板，請參閱[授權使用儀表板概觀](../../dashboards/guides/destinations.md)。
 
-## 資料收集 {#data-collection}
+## 資料彙集 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目標。
 
 **新功能或更新功能**
 
@@ -74,7 +74,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 {style="table-layout:auto"}
 
-若要深入瞭解資料彙集，請閱讀[資料彙集概觀](../../tags/home.md)。
+若要深入了解資料彙集，請閱讀[資料彙集概觀](../../tags/home.md)。
 
 ## 資料治理 {#data-governance}
 
@@ -92,7 +92,7 @@ Adobe Experience Platform 資料治理是一系列的策略和技術，用於管
 
 ## 資料衛生 {#hygiene}
 
-Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪除消費者記錄和資料集，以管理儲存的資料。 在UI中使用[!UICONTROL 資料生命週期]工作區，或透過呼叫資料衛生API，您可以有效管理資料存放區。 使用這些功能可確保資訊如預期使用、在不正確的資料需要修正時更新，並在組織原則認為必要時刪除。
+Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪除消費者記錄和資料集，以管理儲存的資料。 在UI中使用[!UICONTROL 資料生命週期]工作區，或透過呼叫資料衛生API，您可以有效管理資料存放區。 利用這些功能可確保資訊如預期般使用、在不正確的資料需要修正時更新資訊，以及在組織原則認為必要時刪除資訊。
 
 **新功能**
 
@@ -105,13 +105,13 @@ Experience Platform提供一套資料檢疫功能，可讓您透過程式化刪�
 
 如需平台資料衛生功能的詳細資訊，請參閱[資料衛生概觀](../../hygiene/home.md)。
 
-## 目的地 {#destinations}
+## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
-**新目的地或更新的目的地** {#new-updated-destinations}
+**新目標或更新的目標** {#new-updated-destinations}
 
-| 目的地 | 全新或更新 | 說明 |
+| 目標 | 全新或更新 | 說明 |
 | ----------- |----------------|----------- |
 | [[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md) | 新增 | 啟用先前在行動裝置、網頁、顯示和連線電視媒體中上線至[!DNL LiveRamp]之進階發行者的對象。 <br>透過[LiveRamp — 上線](../../destinations/catalog/advertising/liveramp-onboarding.md)連線將對象上線到您的[!DNL LiveRamp]帳戶後，請使用新的[[!DNL LiveRamp - Distribution]](../../destinations/catalog/advertising/liveramp-distribution.md)連線將對象啟動到下游目的地。 |
 | [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md) | 新增 | [[!DNL HubSpot]](https://www.hubspot.com)是CRM平台，包含您連線行銷、銷售、內容管理及客戶服務所需的所有軟體、整合及資源。 它可讓您在一個CRM平台上連線您的資料、團隊和客戶。 |
@@ -142,11 +142,11 @@ Add these to release notes as they go out
 - 在資料流執行層級使用[監視透明度](../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations)現在可用於企業目的地([HTTP API](../../destinations/catalog/streaming/http-destination.md)、[Amazon Kinesis](../../destinations/catalog/cloud-storage/amazon-kinesis.md)和[Azure事件中樞](../../destinations/catalog/cloud-storage/azure-event-hubs.md))，以監視[資料流詳細資料檢視](../../dataflows/ui/monitor-destinations.md#dataflow-run-details-page)中的啟用量度和狀態，並透過錯誤碼和訊息提供其他資訊以進行疑難排解。
 - 當您更新對應至[Google廣告管理員](../../destinations/catalog/advertising/google-ad-manager.md)、[Google Display &amp; Video 360](../../destinations/catalog/advertising/google-dv360.md)和其他使用[對象更新範本](../../destinations/destination-sdk/metadata-api/update-audience-template.md)之目的地的對象名稱時，這些名稱變更現在會反映在目的地的下游位置。
 
-如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
+如需有關目標的詳細一般資訊，請參閱[目標概觀](../../destinations/home.md)。
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **新功能**
 
@@ -195,11 +195,11 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 {style="table-layout:auto"}
 
-若要深入瞭解Identity Service，請閱讀[Identity Service概觀](../../identity-service/home.md)。
+若要了解更多有關身分服務的資訊，請閱讀[身分服務概觀](../../identity-service/home.md)。
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入[!DNL Data Lake]的任何資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學Workspace或擷取到即時客戶個人檔案中。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入 [!DNL Data Lake] 中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、資料科學工作區，或攝取至即時客戶輪廓中。
 
 **更新的功能**
 
@@ -210,11 +210,11 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 {style="table-layout:auto"}
 
-如需有關查詢服務的詳細資訊，請參閱[查詢服務概觀](../../query-service/home.md)。
+如需更多有關查詢服務的資訊，請參閱[查詢服務概觀](../../query-service/home.md)。
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的對象。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立對象。這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 **新功能或更新功能**
 
@@ -227,7 +227,7 @@ Adobe Experience Platform 身分識別服務透過跨裝置和系統橋接身分
 
 ## 來源 {#sources}
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **新功能或更新功能**
 

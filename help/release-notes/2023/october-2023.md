@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform 發行說明
+title: Adobe Experience Platform發行說明2023年10月
 description: Adobe Experience Platform 2023 年 10 月版本注意事項。
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 32%
+source-wordcount: '1054'
+ht-degree: 39%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 32%
 
 **發行日期： 2023年10月25日**
 
-Experience Platform現有功能的更新：
+Experience Platform 現有功能的更新：
 
 - [儀表板](#dashboards)
-- [資料集合](#data-collection)
-- [目的地](#destinations)
+- [資料彙集](#data-collection)
+- [目標](#destinations)
 - [沙箱](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
@@ -38,7 +38,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 ## 資料收集 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目標。
 
 **新功能或更新功能**
 
@@ -52,13 +52,13 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 如需有關資料收集的詳細資訊，請詳閱[資料收集概觀](../../tags/home.md)。
 
-## 目的地 {#destinations}
+## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
-**新目的地或更新的目的地** {#new-updated-destinations}
+**新目標或更新的目標** {#new-updated-destinations}
 
-| 目的地 | 全新或更新 | 說明 |
+| 目標 | 全新或更新 | 說明 |
 | ----------- |----------------|----------- |
 | [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | 新增 | 使用Moengage目的地，即時連線您的Adobe資料（使用者屬性、區段和事件）並將其對應至MoEngage。 然後，客戶可以對這些資料採取行動，提供個人化、鎖定目標的體驗。 |
 | [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | 新增 | 在Adobe Experience Platform中彙總多個營運資料來源，作為Qualtrics Experience ID中的輸入專案，以更好地瞭解您的客戶，並實現目標式外聯，在瞭解意圖、情緒和體驗驅動因素方面縮小差距。 |
@@ -76,11 +76,11 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 **修正和增強功能** {#destinations-fixes-and-enhancements}
 
-如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
+如需更多有關目標的一般資訊，請參閱[目標概觀](../../destinations/home.md)。
 
 ## 沙箱 {#sandboxes}
 
-Adobe Experience Platform的建置可豐富全球的數位體驗應用程式。 公司通常會同時執行多個數位體驗應用程式，而且需要滿足這些應用程式的開發、測試和部署需求，同時確保營運合規性。 為了滿足此需求，Experience Platform提供可將單一Platform執行個體分割成個別虛擬環境的沙箱，以利開發及改進數位體驗應用程式。
+Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式更加豐富而打造。公司經常要並行執行多個數位體驗應用程式，且在顧及這些應用程式的開發、測試和部署等需求的同時，也必須確保營運合規性。為了滿足這種需求，Experience Platform 提供的沙箱可將單一 Platform 執行個體分割成個別的虛擬環境，以協助開發並改進數位體驗應用程式。
 
 **新功能**
 
@@ -92,19 +92,19 @@ Adobe Experience Platform的建置可豐富全球的數位體驗應用程式。 
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的對象。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立對象。這些對象會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
+[!DNL Segmentation Service] 可讓您將儲存在和個人 (例如客戶、潛在客戶、使用者或組織) 相關的 [!DNL Experience Platform] 中的資料分段為不同的客群。您可以透過區段定義或來自 [!DNL Real-Time Customer Profile] 資料的其他來源建立客群。這些客群會在 [!DNL Platform] 上集中設定及維護，並可透過任何 Adobe 解決方案輕鬆存取。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 帳戶對象（有限GA） | 在Real-time Customer Data Platform B2B Edition中，您現在可以使用帳戶細分，讓行銷細分體驗（從以人物為基礎的對象到以帳戶為基礎的對象）更趨簡單明瞭。 如需有關此功能的詳細資訊，請參閱[帳戶對象總覽](../../segmentation/ui/account-audiences.md)。 |
+| 帳戶對象（有限GA） | 在Real-time Customer Data Platform B2B edition中，您現在可以使用帳戶細分，讓行銷細分體驗（從以人物為基礎的對象到以帳戶為基礎的對象）更趨簡單明瞭。 如需有關此功能的詳細資訊，請閱讀[帳戶客群概觀](../../segmentation/ui/account-audiences.md)。 |
 
 若要深入瞭解分段服務，請閱讀[分段服務概觀](../../segmentation/home.md)。
 
 ## 來源 {#sources}
 
-Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定擷取執行的時間並管理資料擷取輸送量。
+Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為各種資料提供者設定來源連線。這些來源連線可讓您進行驗證並連線到外部儲存系統和 CRM 服務、設定攝取執行的時間並管理資料攝取輸送量。
 
 **新功能或更新功能**
 
