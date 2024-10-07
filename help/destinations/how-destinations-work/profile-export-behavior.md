@@ -2,9 +2,9 @@
 title: 設定檔匯出行為
 description: 瞭解在Experience Platform目的地支援的不同整合模式之間，設定檔匯出行為有何不同。
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
+source-wordcount: '2939'
 ht-degree: 0%
 
 ---
@@ -192,7 +192,7 @@ Experience Platform會最佳化將設定檔匯出至串流目的地的行為，�
 
 >[!TIP]
 >
->提醒您，設定檔的屬性值或身分對應中的變更，不符合納入增量檔案匯出的設定檔資格。
+>提醒您，設定檔的身分對應變更可讓該設定檔納入增量檔案匯出中。 屬性值&#x200B;*中的變更不符合*&#x200B;包含在增量檔案匯出的條件。
 
 ## 後續步驟 {#next-steps}
 
