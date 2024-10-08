@@ -2,7 +2,7 @@
 title: 檢視更多
 description: 瞭解您SQL分析資料的不同檢視選項。 從您的自訂儀表板，您可以檢視分析的清單結果或下載CSV格式的已處理資料。
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->[!UICONTROL 遞增排序]和[!UICONTROL 遞減排序]選項只會出現在已設定[排序功能](../overview.md/#advanced-attributes)的資料行。
+>[!UICONTROL 遞增排序]和[!UICONTROL 遞減排序]選項只會出現在已設定[排序功能](./overview.md#advanced-attributes)的資料行。
 
 ![顯示[遞增排序]和[遞減排序]選項的資料表資料行下拉式清單。](../../images/query-pro-mode/advanced-sort-dropdown.png)
 

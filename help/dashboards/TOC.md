@@ -5,10 +5,10 @@ breadcrumb-title: 儀表板指南
 user-guide-description: 了解如何透過可自訂的儀表板在 Experience Platform 視覺化資料。
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 36%
+source-wordcount: '134'
+ht-degree: 35%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 36%
 * [儀表板](user-defined-dashboards.md)
 * [下載儀表板以PDF](download.md)
 * 資料Distiller {#data-distiller}
-   * [概觀](data-distiller/overview.md)
    * 延伸應用程式報表{#sql-insights}的SQl深入分析
       * [概觀](data-distiller/sql-insights/overview.md)
    * 查詢Pro模式{#query-pro-mode}

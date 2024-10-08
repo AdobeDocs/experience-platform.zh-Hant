@@ -2,7 +2,7 @@
 title: SQL深入分析
 description: 瞭解使用案例、基本功能，以及使用Data Distiller開發SQL深入分析儀表板的必要步驟。 探索Data Distiller中的SQL深入分析功能如何增強透明度，並取得不同維度（例如設定檔、受眾、行銷活動、歷程、權益和同意）的營運深入分析。
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 使用Data Distiller的SQL Insights建立量身打造的報告資料模型，以擷取更深入的深入分析、最佳化策略，並調整分析以符合特定業務需求。 使用SQL Insights功能可增強透明度並從Adobe Experience Platform資料跨維度（例如設定檔、對象、行銷活動、歷程、權益和同意）取得營運深入分析。 此功能提供多功能、最適化解決方案，根據您的特定業務需求量身打造貴組織的報表資料模型。
 
-若要[視覺化您的SQL深入分析](../../../dashboards/data-distiller/overview.md)，您可以使用[query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md)以自訂SQL查詢進行複雜的分析，並將您的資料轉換為易於理解的圖表。 使用Query Pro模式可在您的控制面板上建立客製化的深入分析和視覺效果，並將您的深入分析下載為CSV檔案以迎合技術和非技術受眾。
+若要[視覺化您的SQL深入分析](../../../dashboards/data-distiller/sql-insights/overview.md)，您可以使用[query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md)以自訂SQL查詢進行複雜的分析，並將您的資料轉換為易於理解的圖表。 使用Query Pro模式可在您的控制面板上建立客製化的深入分析和視覺效果，並將您的深入分析下載為CSV檔案以迎合技術和非技術受眾。
 
 本文介紹使用Data Distiller開發SQL深入分析控制面板的使用案例、基本功能和必要步驟。
 
