@@ -1,30 +1,29 @@
 ---
-title: (Beta 版) 使用計算欄位匯出平面方案檔案中的陣列
+title: 使用計算欄位將陣列匯出為字串
 type: Tutorial
-description: 瞭解如何使用計算欄位，將平面結構描述檔案中的陣列從Real-Time CDP匯出至雲端儲存空間目的地。
-badge: Beta
+description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
+source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
 workflow-type: tm+mt
-source-wordcount: '1477'
-ht-degree: 5%
+source-wordcount: '1513'
+ht-degree: 0%
 
 ---
 
-# (Beta 版) 使用計算欄位匯出平面方案檔案中的陣列 {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# 使用計算欄位將陣列匯出為字串{#use-calculated-fields-to-export-arrays-as-strings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(Beta 版) 匯出陣列支援"
->abstract="使用&#x200B;**新增計算欄位**&#x200B;控制項，將簡單的整數、字串或布林值陣列從 Experience Platform 匯出到您想要的雲端儲存空間目的地。存在一些限制。檢視文件了解大量範例和支援的功能。"
+>title="匯出陣列支援"
+>abstract="<p>使用&#x200B;**新增計算欄位**&#x200B;控制項，將int、字串、布林值和物件值的陣列從Experience Platform匯出至您想要的雲端儲存空間目的地。</p><p> 陣列必須使用`array_to_string`函式匯出為字串。 檢視檔案以取得廣泛的範例和更多支援的函式。</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="範例"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="已知限制"
 
 >[!AVAILABILITY]
 >
->* 透過計算欄位匯出陣列的功能目前在Beta中。 文件和功能可能會有所變更。
+>* 通常提供透過計算欄位匯出陣列的功能。
 
-瞭解如何透過計算欄位，將平面結構描述檔案中的Real-Time CDP陣列匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)。 請參閱本檔案以瞭解此功能啟用的使用案例。
+瞭解如何透過計算欄位，將陣列從Real-Time CDP匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)，做為字串。 請參閱本檔案以瞭解此功能啟用的使用案例。
 
 取得有關計算欄位的廣泛資訊 — 這些是什麼以及它們為什麼重要。 請閱讀以下連結的頁面，瞭解「資料準備」中的計算欄位，以及有關所有可用函式的詳細資訊：
 
@@ -43,14 +42,34 @@ ht-degree: 5%
 
 在Experience Platform中，您可以使用[XDM結構描述](/help/xdm/home.md)來管理不同的欄位型別。 之前，您可以將簡單的機碼值組型別欄位(例如不Experience Platform的字串)匯出至您想要的目的地。 先前支援匯出的欄位範例為`personalEmail.address`：`johndoe@acme.org`。
 
-Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[如何在Experience PlatformUI](/help/xdm/ui/fields/array.md)中管理陣列欄位。 除了先前支援的欄位型別之外，您現在可以匯出陣列物件，例如： `organizations:[marketing, sales, engineering]`。 請參閱以下的[大量範例](#examples)，瞭解如何使用各種函式來存取陣列元素、將陣列元素加入字串等。
+Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[如何在Experience PlatformUI](/help/xdm/ui/fields/array.md)中管理陣列欄位。 除了先前支援的欄位型別之外，您現在還可以匯出陣列物件，例如使用`array_to_string`函式串連到字串中的下列範例。
+
+```
+organizations = [{
+  id: 123,
+  orgName: "Acme Inc",
+  founded: 1990,
+  latestInteraction: "2024-02-16"
+}, {
+  id: 456,
+  orgName: "Superstar Inc",
+  founded: 2004,
+  latestInteraction: "2023-08-25"
+}, {
+  id: 789,
+  orgName: 'Energy Corp',
+  founded: 2021,
+  latestInteraction: "2024-09-08"
+}]
+```
+
+請參閱以下[廣泛的範例](#examples)，瞭解如何使用各種函式來存取陣列元素、轉換和篩選陣列、將陣列元素加入字串等等。
 
 ## 已知限制 {#known-limitations}
 
-請注意此功能Beta版的下列已知限制：
+請注意目前適用於此功能的下列已知限制：
 
-* 目前不支援匯出至具有階層式結構描述的JSON或Parquet檔案。 您只能將陣列匯出為平面結構描述CSV、JSON和Parquet檔案。
-* 此時，*您只能將簡單陣列（或基本值陣列）匯出至雲端儲存目的地*。 這表示您可以匯出包含字串、int或布林值的陣列物件。 您無法匯出地圖或地圖或物件的陣列。計算欄位模型視窗只會顯示您可以匯出的陣列。
+* 目前不支援匯出至具有階層式結構描述&#x200B;*的JSON或Parquet檔案*。 您可以使用`array_to_string`函式，將陣列匯出至CSV、JSON和Parquet檔案&#x200B;*，但僅能匯出為字串*。
 
 ## 先決條件 {#prerequisites}
 
@@ -58,25 +77,21 @@ Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[�
 
 ## 如何匯出計算欄位 {#how-to-export-calculated-fields}
 
-在雲端儲存空間目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL (Beta) 「新增計算欄位」]**。
+在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL 新增計算欄位]**。
 
 ![新增批次啟動工作流程對應步驟中反白顯示的計算欄位。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-這會開啟一個模型視窗，您可在其中選取可用來將屬性匯出到Experience Platform之外的屬性。
-
->[!IMPORTANT]
->
->**[!UICONTROL 欄位]**&#x200B;檢視中只提供XDM結構描述中的部分欄位。 您可以看到字串值以及字串、int和布林值的陣列。 例如，不會顯示`segmentMembership`陣列，因為它包含其他陣列值。
+這會開啟一個模型視窗，您可在其中選取函式和欄位，以將屬性匯出為Experience Platform以外的內容。
 
 ![計算欄位功能的模型視窗，尚未選取函式。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-例如，在`loyaltyID`欄位中使用`join`函式，如下所示，將熟客ID陣列匯出為CSV檔案中與底線串連的字串。 檢視[更多關於此專案及下方](#join-function-export-arrays)其他範例的資訊。
+例如，在`organizations`欄位上使用`array_to_string`函式，如下所示，將組織陣列匯出為CSV檔案中的字串。 檢視[更多關於此專案及下方](#array-to-string-function-export-arrays)其他範例的資訊。
 
-![已選取聯結函式之計算欄位功能的模型視窗。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![已選取陣列至字串函式的計算欄位功能的模型視窗。](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以保留計算欄位並返回對應步驟。
 
-![已選取聯結函式且已反白儲存控制項之計算欄位功能的模型視窗。](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![已選取陣列至字串函式，且[儲存]控制項反白顯示的計算欄位功能的模型視窗。](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 回到工作流程的對應步驟，在匯出的檔案中，以您要用於此欄位的欄標題值填入&#x200B;**[!UICONTROL 目標欄位]**。
 
@@ -88,13 +103,16 @@ Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[�
 
 ![目標欄位反白且目標值已填入的對映步驟。](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## 支援的函式 {#supported-functions}
+## 匯出陣列的支援函式範例 {#supported-functions}
 
 將資料啟用至以檔案為基礎的目的地時，支援所有記錄的[資料準備函式](/help/data-prep/functions.md)。
 
-但是請注意，目前以下函式僅在Beta版的計算欄位中提供廣泛的使用案例說明和範例輸出資訊，並且支援目標的陣列：
+以下專用於處理陣列匯出的函式與範例一起記錄。
 
-* `join`
+* `array_to_string`
+* `flattenArray`
+* `filterArray`
+* `transformArray`
 * `coalesce`
 * `size_of`
 * `iif`
@@ -103,31 +121,66 @@ Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[�
 * `to_array`
 * `first`
 * `last`
-* `sha256`
-* `md5`
 
 ## 用於匯出陣列的函式範例 {#examples}
 
 如需上述部分函式，請參閱以下章節中的範例和進一步資訊。 如需列出的其餘函式，請參閱「資料準備」區段](/help/data-prep/functions.md)中的[一般函式檔案。
 
-### `join`函式以匯出陣列 {#join-function-export-arrays}
+### `array_to_string`函式以匯出陣列 {#array-to-string-function-export-arrays}
 
-使用`join`函式，使用所需的分隔符號（例如`_`或`|`）將陣列元素串連到字串中。
+使用`array_to_string`函式，使用所需的分隔符號（例如`_`或`|`）將陣列元素串連到字串中。
 
-例如，您可以使用`join('_',loyalty.loyaltyID)`語法來結合下列XDM欄位，如對應熒幕擷圖中所示：
+例如，您可以使用`array_to_string('_',organizations)`語法來結合下列XDM欄位，如對應熒幕擷圖中所示：
 
-* `"organizations": ["Marketing","Sales,"Finance"]`陣列
+* `organizations`陣列
 * `person.name.firstName`字串
 * `person.name.lastName`字串
 * `personalEmail.address`字串
 
-![包含聯結函式的對應範例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![包括array_to_string函式的對應範例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
-在此情況下，您的輸出檔案看起來如下所示。 請注意如何使用`_`字元將陣列的三個元素串連成單一字串。
+在此情況下，您的輸出檔案看起來如下所示。 請注意陣列元素如何使用`_`字元串連成單一字串。
 
 ```
-`First_Name,Last_Name,Personal_Email,Organization
-John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
+First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### `flattenArray`函式以匯出平面化陣列
+
+使用`flattenArray`函式平面化匯出的多維陣列。 您可以將此函式與上面進一步說明的`array_to_string`函式結合。
+
+繼續使用上方的`organizations`陣列物件，您可以編寫類似`array_to_string('_', flattenArray(organizations))`的函式。 請注意，`array_to_string`函式預設會將輸入陣列平面化為字串。
+
+產生的輸出與上述`array_to_string`函式的輸出相同。
+
+
+### `filterArray`函式以匯出篩選的陣列
+
+使用`filterArray`函式來篩選匯出陣列的元素。 您可以將此函式與上面進一步說明的`array_to_string`函式結合。
+
+繼續使用上方的`organizations`陣列物件，您可以撰寫類似`array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`的函式，傳回在2021年或之後具有`founded`值的組織。
+
+![filterArray函式的範例。](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
+
+在此情況下，您的輸出檔案看起來如下所示。 請注意陣列中符合條件的兩個元素如何使用`_`字元串連成單一字串。
+
+```
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### `transformArray`函式以匯出轉換的陣列
+
+使用`transformArray`函式轉換匯出陣列的元素。 您可以將此函式與上面進一步說明的`array_to_string`函式結合。
+
+繼續使用上方的`organizations`陣列物件，您可以撰寫類似`array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`的函式，傳回已轉換為全部大寫的組織名稱。
+
+![TransformArray函式的範例。](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
+
+在此情況下，您的輸出檔案看起來如下所示。 請注意如何使用`_`字元將陣列的三個元素轉換並串連為單一字串。
+
+```
+John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
 ### `iif`函式以匯出陣列 {#iif-function-export-arrays}
@@ -145,9 +198,9 @@ John,Doe, johndoe@acme.org, "isMarketing"
 
 ### `add_to_array`函式以匯出陣列 {#add-to-array-function-export-arrays}
 
-使用`add_to_array`函式將元素加入至匯出的陣列。 您可以將此函式與上面進一步說明的`join`函式結合。
+使用`add_to_array`函式將元素加入至匯出的陣列。 您可以將此函式與上面進一步說明的`array_to_string`函式結合。
 
-繼續使用上方的`organizations`陣列物件，您可以撰寫類似`source: join('_', add_to_array(organizations,"2023"))`的函式，傳回人員在2023年所屬的組織。
+繼續使用上方的`organizations`陣列物件，您可以撰寫類似`source: array_to_string('_', add_to_array(organizations,"2023"))`的函式，傳回人員在2023年所屬的組織。
 
 ![包括add_to_array函式的對應範例。](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
@@ -222,21 +275,25 @@ johndoe@acme.org,"1538097126"
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### 雜湊函式 {#hashing-functions}
+<!--
 
-除了專用於從陣列匯出陣列或元素的函式之外，您還可以使用雜湊函式在匯出的檔案中雜湊屬性。 例如，如果您在屬性中有任何個人識別資訊，可在匯出這些欄位時將其雜湊化。
+### Hashing functions {#hashing-functions}
 
-您可以直接雜湊字串值，例如`md5(personalEmail.address)`。 如有需要，您也可以雜湊陣列欄位的個別元素，假設陣列中的元素是字串，如下所示： `md5(purchaseTime[0])`
+In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
 
-支援的雜湊函式有：
+You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, assuming elements in the array are strings, like this: `md5(purchaseTime[0])`
 
-| 函數 | 範例運算式 |
+The supported hashing functions are:
+
+|Function | Sample expression |
 |---------|----------|
 | `sha1` | `sha1(organizations[0])` |
 | `sha256` | `sha256(organizations[0])` |
 | `sha512` | `sha512(organizations[0])` |
 | `hash` | `hash("crc32", organizations[0], "UTF-8")` |
-| `md5` | `md5(organizations[0], "UTF-8")` |
+| `md5` |  `md5(organizations[0], "UTF-8")` |
 | `crc32` | `crc32(organizations[0])` |
 
 {style="table-layout:auto"}
+
+-->
