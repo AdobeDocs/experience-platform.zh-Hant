@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 產品清單專案資料型別
 description: 瞭解產品清單專案XDM資料型別。
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba6c6eb2c6b0fc1dfc4e7440fd16a85bc7b46457
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 18%
+source-wordcount: '338'
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 18%
 | `discountAmount` | [!UICONTROL 雙倍] | 如果產品已貼現，這表示產品的一般價格與特殊價格之間的差異。 |
 | `name` | [!UICONTROL 字串] | 針對此產品檢視，向使用者展示的產品顯示名稱。 |
 | `priceTotal` | [!UICONTROL 雙倍] | 產品明細項目的總價格。 |
-| `product` | [!UICONTROL 字串] (URI) | 擷取產品本身的XDM結構描述的URI `$id`。 |
+| `product` | [!UICONTROL 字串] (URI) | 產品本身的 XDM 識別碼。 |
 | `productAddMethod` | [!UICONTROL 字串] | 訪客用來將產品專案新增至清單的方法。 |
 | `productImageUrl` | [!UICONTROL 字串] | 產品主要影像的URL。 |
 | `quantity` | [!UICONTROL 整數] | 客戶已表明所要求的產品單位數量。 |
