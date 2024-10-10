@@ -1,9 +1,9 @@
 ---
 title: 使用SQL建立對象
 description: 瞭解如何在Adobe Experience Platform的Data Distiller中使用SQL對象擴充功能，以使用SQL命令建立、管理和發佈對象。 本指南涵蓋對象生命週期的所有方面，包括建立、更新和刪除設定檔，以及使用資料導向對象定義來鎖定以檔案為基礎的目的地。
-source-git-commit: fbfd232c4e101f29ae01328c33763786a0e4a8cb
+source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1280'
 ht-degree: 1%
 
 ---
@@ -137,41 +137,103 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 +++選取以顯示問題和答案
 
+**問題**：
+
 - 是否僅支援平面資料集進行受眾建立？
-- 也支援巢狀資料集，但對象中只能使用一般屬性。
+
++++回答
+
+也支援巢狀資料集，但對象中只能使用一般屬性。
+
++++
 
 - 建立對象會產生單一資料集或多個資料集，還是會根據設定而有所不同？
-- 對象和資料集之間有一對一的對應。
+
++++回答
+
+對象和資料集之間有一對一的對應。
+
++++
 
 - 在對象建立期間建立的資料集是否標籤為設定檔？
-- 否，在對象建立期間建立的資料集不會標籤為設定檔。
+
++++回答
+
+否，在對象建立期間建立的資料集不會標籤為設定檔。
+
++++
 
 - 資料集是否在資料湖上建立？
-- 是，資料集會在資料湖上建立。
+
++++回答
+
+是，資料集會在資料湖上建立。
+
++++
 
 - 對象中的屬性是否僅限用於企業批次檔案型目的地？ （是或否）
-- 可以，對象中的屬性限製為僅用於企業批次檔案型目的地。
+
++++回答
+
+可以，對象中的屬性限製為僅用於企業批次檔案型目的地。
+
++++
 
 - 我可以建立使用Data Distiller對象的對象嗎？
-- 可以，您可以建立使用Data Distiller受眾的受眾受眾。
+
++++回答
+
+可以，您可以建立使用Data Distiller受眾的受眾受眾。
+
++++
 
 - 這些對象會出現在Adobe Journey Optimizer中嗎？ 如果沒有，我在規則產生器中建立新對象（包含此對象的所有成員）時，會發生什麼事？
-- Adobe Journey Optimizer目前無法使用Data Distiller對象。 您必須在Adobe Journey Optimizer規則產生器中建立新的對象，才能在Adobe Journey Optimizer中使用。
+
++++回答
+
+Adobe Journey Optimizer目前無法使用Data Distiller對象。 您必須在Adobe Journey Optimizer規則產生器中建立新的對象，才能在Adobe Journey Optimizer中使用。
+
++++
 
 - 如何以不同的排程建立兩個Data Distiller對象？ 已建立多少資料集，它們是否標籤為設定檔？
-- 將建立兩個資料集，因為每個對象都有基礎資料集。 不過，這些資料集不會標籤為設定檔。 這兩個資料集是根據各自的排程進行管理。
+
++++回答
+
+將建立兩個資料集，因為每個對象都有基礎資料集。 不過，這些資料集不會標籤為設定檔。 這兩個資料集是根據各自的排程進行管理。
+
++++
 
 - 如何刪除對象？
-- 若要刪除對象，您可以在命令列介面中使用[`DROP AUDIENCE`命令](#delete-audience)，或使用[對象工作區快速動作](../../segmentation/ui/audience-portal.md#quick-actions)。 注意：無法刪除用於下游目的地或是其他對象中相依對象的對象。
+
++++回答
+
+若要刪除對象，您可以在命令列介面中使用[`DROP AUDIENCE`命令](#delete-audience)，或使用[對象工作區快速動作](../../segmentation/ui/audience-portal.md#quick-actions)。 注意：無法刪除用於下游目的地或是其他對象中相依對象的對象。
+
++++
 
 - 當我將受眾發佈至設定檔時，區段產生器UI多久能提供，以及它何時能在目的地提供？
-- 設定檔快照匯出完成後，就可以在對象中看到設定檔。
+
++++回答
+
+設定檔快照匯出完成後，就可以在對象中看到設定檔。
+
++++
 
 - Data Distiller受眾是外部受眾，是否每30天刪除一次？
-- 是的，Data Distiller對象是外部對象，每30天會刪除一次。
+
++++回答
+
+是的，Data Distiller對象是外部對象，每30天會刪除一次。
+
++++
 
 - 資料Distiller對象是否會出現在對象詳細目錄中？
-- 是，資料Distiller受眾會出現在受眾詳細目錄中，且原始名稱為「資料Distiller」。
+
++++回答
+
+是，資料Distiller受眾會出現在受眾詳細目錄中，且原始名稱為「資料Distiller」。
+
++++
 
 +++
 

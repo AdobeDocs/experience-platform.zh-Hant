@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 查詢服務中的SQL語法
 description: 本檔案詳細說明並說明Adobe Experience Platform查詢服務支援的SQL語法。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 2%
 
 ---
@@ -577,7 +577,7 @@ SELECT * FROM TABLE_WITH_COMPLEX_FIELDS LIMIT 2;
 
 ### 解決失敗時的遞補快照 {#resolve-fallback-snapshot-on-failure}
 
-`resolve_fallback_snapshot_on_failure`選項是用來解決快照識別碼過期的問題。 快照中繼資料會在兩天後到期，而過期的快照可能會使指令碼的邏輯失效。 使用匿名區塊時，可能會發生問題。
+`resolve_fallback_snapshot_on_failure`選項是用來解決快照識別碼過期的問題。
 
 將`resolve_fallback_snapshot_on_failure`選項設定為true，以使用先前的快照識別碼覆寫快照。
 

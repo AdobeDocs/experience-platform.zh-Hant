@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在使用者介面中定義XDM欄位
 description: 瞭解如何在Experience Platform使用者介面中定義XDM欄位。
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 1%
+source-wordcount: '1607'
+ht-degree: 2%
 
 ---
 
@@ -88,8 +88,7 @@ Adobe Experience Platform使用者介面中的[!DNL Schema Editor]可讓您在�
 
 | 欄位屬性 | 相容型別 | 說明 |
 | --- | --- | --- |
-| [!UICONTROL 對應值型別] | [!UICONTROL 地圖] | 只有當您從[!UICONTROL 型別]下拉式選項中選取對應值時，[!UICONTROL 對應值型別]屬性才會出現在UI中。 您可以在String和Integer值型別之間選取Map。<br>![結構描述編輯器的[型別]和[對應]值型別欄位已反白顯示。](../../images/ui/fields/overview/map-type.png "結構描述編輯器的[型別]和[對應]值型別欄位已反白顯示。"){width="100" zoomable="yes"}<br>注意：任何透過API建立的對應資料型別，若不是String或Integer型別，則會顯示為&#39;[!UICONTROL Complex]&#39;資料型別。 您無法透過UI建立&#39;[!UICONTROL 複雜]&#39;資料型別。 |
-| [!UICONTROL 預設值] | [!UICONTROL 字串]，[!UICONTROL 雙精度浮點數]，[!UICONTROL 長整數]，[!UICONTROL 整數]，[!UICONTROL 短整數]，[!UICONTROL 位元組]，[!UICONTROL 布林值] | 如果擷取期間未提供其他值，則為指派給此欄位的預設值。 此值必須符合欄位選取的型別。<br><br>擷取時，預設值不會儲存在資料集中，因為這些值會隨著時間變更。 從資料集讀取資料時，下游平台服務和應用程式會推斷結構描述中設定的預設值。 例如，使用查詢服務查詢資料時，如果屬性具有NULL值，但結構描述層級的預設設定為`5`，則查詢服務應該會傳回`5`而非NULL。 請注意，目前並非所有AEP服務都有這種行為。 |
+| [!UICONTROL 對應值型別] | [!UICONTROL 地圖] | 只有當您從[!UICONTROL 型別]下拉式選項中選取對應值時，[!UICONTROL 對應值型別]屬性才會出現在UI中。 您可以在String和Integer值型別之間選取Map。<br>![結構描述編輯器，特別標示出「類型」和「對應值類型」欄位。](../../images/ui/fields/overview/map-type.png "結構描述編輯器，特別標示出「類型」和「對應值類型」欄位。"){width="100" zoomable="yes"}<br>注意：任何透過API建立的對應資料型別，若不是String或Integer型別，則會顯示為&#39;[!UICONTROL Complex]&#39;資料型別。 您無法透過UI建立&#39;[!UICONTROL 複雜]&#39;資料型別。 |
 | [!UICONTROL 模式] | [!UICONTROL 字串] | 此欄位值必須符合的[規則運算式](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)，才能在內嵌期間被接受。 |
 | [!UICONTROL 格式] | [!UICONTROL 字串] | 從值必須符合的字串預先定義格式清單中選取。 可用的格式包括： <ul><li>[[!UICONTROL 日期時間]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 電子郵件]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL 主機名稱]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url範本]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 最小長度] | [!UICONTROL 字串] | 為了能在擷取期間接受的值，字串必須包含的最小字元數。 |
