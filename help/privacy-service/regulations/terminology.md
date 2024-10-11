@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規術語
 description: 本檔案提供Adobe Experience Cloud支援之隱私權法規相關關鍵辭彙的定義。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
+source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2301'
 ht-degree: 0%
 
 ---
@@ -91,6 +91,8 @@ ht-degree: 0%
 
 **IMS組織ID**：參考Service-to-Service驗證的Adobe授權權杖，不需要使用者登入。 它會核發給IMS使用者端，且沒有相關聯的使用者。 IMS使用者端需要服務權杖以授權服務之間的後端通道請求。 （術語「系統代號」有時用於表示服務代號。）
 
+**[!DNL Iowa Consumer Data Protection Act]**：一項州隱私權法律，授予愛荷華州居民存取、刪除及選擇退出個人資料銷售的權利。 ICDPA適用於處理愛荷華州居民超過100,000人的資料或來自資料銷售超過50%收入的企業。 值得注意的劐免包括非營利組織和教育機構。 法律規定企業在90天期間內進行補救，以便在受到處罰之前糾正違規行為。
+
 ## J
 
 ## K
@@ -105,7 +107,16 @@ ht-degree: 0%
 
 **MHMDAa**： [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true)增強消費者有關其健康資料的隱私權。 它規定健康資料的披露、消費者同意和刪除權利，並禁止在未經授權的情況下銷售健康資料。 此外，該法令規定，在醫療保健設施周圍使用地理圍欄是非法的。
 
+**[!DNL Montana Consumer Data Privacy Act]**：此法律授予Montana居民存取、更正、刪除及索取其個人資料復本的權利。 MCDPA適用於為超過50,000名蒙大拿消費者處理資料的企業，並強調保護敏感的個人資料，例如生物測定和基因資訊。 它會強制資料收集、分享和銷售實務的透明度。
+
 ## N
+
+**[!DNL Nebraska Data Protection Act]**：隱私權法律，賦予內布拉斯加人存取、更正、刪除及選擇退出個人資料銷售的權利。 適用於符合特定資料處理和收入臨界值的企業。 NDPA還要求企業實施合理的資料安全措施，並提供30天的治療期，以便在受到處罰之前解決違規行為。
+
+**[!DNL New Hampshire Data Privacy Act]**：此法規透過授予新罕布希爾州居民存取、刪除和傳輸其資料的權利，來保護他們的個人資料。 它要求企業公開其資料收集和分享做法，並允許消費者選擇退出資料銷售。 NHDPA適用於符合指定資料處理臨界值的公司。
+
+**[!DNL New Jersey Data Protection Act]**：完整的州隱私權法律，賦予新澤西居民存取、修正和刪除個人資料的權利。 其中包括資料銷售和針對性廣告的選擇退出機制。 NJDPA適用於處理大量消費者資料的企業，並要求企業處理個人資訊的方式必須透明。
+
 
 ## O
 

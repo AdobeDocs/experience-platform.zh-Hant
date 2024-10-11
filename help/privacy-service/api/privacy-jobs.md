@@ -5,7 +5,7 @@ title: 隱私權工作API端點
 description: 瞭解如何使用Privacy Service API管理Experience Cloud應用程式的隱私權工作。
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 02a95212ff8a018b2b7f0a06978307d08a6915af
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | 參數 | 說明 |
 | --- | --- |
-| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` — 注意：這也用於與&#x200B;**ccpa**&#x200B;法規相關的要求。</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>如需上述值所代表隱私權法規的詳細資訊，請參閱[支援法規](../regulations/overview.md)的概觀。 |
+| `{REGULATION}` | 要查詢的規則型別。 接受的值包括： <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` — 注意：這也用於與&#x200B;**ccpa**&#x200B;法規相關的要求。</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>如需上述值所代表隱私權法規的詳細資訊，請參閱[支援法規](../regulations/overview.md)的概觀。 |
 | `{PAGE}` | 要顯示的資料頁（使用0編號）。 預設值為 `0`。 |
 | `{SIZE}` | 每個頁面上顯示的結果數。 預設值為`100`，最大值為`1000`。 超過最大值會導致API傳回400程式碼錯誤。 |
 | `{status}` | 預設行為是包含所有狀態。 如果您指定狀態型別，請求只會傳回符合該狀態型別的隱私權工作。 接受的值包括： <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -172,7 +172,7 @@ curl -X POST \
 | `users` **（必要）** | 一個陣列，其中包含您要存取或刪除其資訊的至少一個使用者的集合。 單一請求中最多可提供1000位使用者。 每個使用者物件包含下列資訊： <ul><li>`key`：用於限定回應資料中個別工作ID的使用者識別碼。 為此值選擇唯一且易於識別的字串是最佳做法，以便日後可以輕鬆參考或查詢。</li><li>`action`：列出要對使用者資料採取的所需動作的陣列。 根據您要採取的動作，此陣列必須包含`access`、`delete`或兩者。</li><li>`userIDs`：使用者的身分識別集合。 單一使用者可擁有的身分數量限製為九個。 每個身分都包含`namespace`、`value`和名稱空間限定詞(`type`)。 如需這些必要屬性的詳細資訊，請參閱[附錄](appendix.md)。</li></ul> 如需`users`和`userIDs`的更詳細說明，請參閱[疑難排解指南](../troubleshooting-guide.md#user-ids)。 |
 | `include` **（必要）** | 要包含在處理中的一系列Adobe產品。 如果此值遺失或空白，將會拒絕要求。 僅包含貴組織已整合的產品。 如需詳細資訊，請參閱附錄中有關[接受產品值](appendix.md)的章節。 |
 | `expandIDs` | 選擇性屬性，當設為`true`時，代表處理應用程式中ID的最佳化（目前僅由[!DNL Analytics]支援）。 如果省略，此值會預設為`false`。 |
-| `priority` | Adobe Analytics使用的選用屬性，可設定處理請求的優先順序。 接受的值為`normal`和`low`。 如果省略`priority`，預設行為是`normal`。 |
+| `priority` | Adobe Analytics使用的選用屬性，可設定處理請求的優先順序。 接受的值為 `normal` 和 `low`。如果省略`priority`，預設行為是`normal`。 |
 | `mergePolicyId` | 針對Real-time Customer Profile (`profileService`)提出隱私權要求時，您可以選擇提供要用於ID拼接的特定[合併原則](../../profile/merge-policies/overview.md)的ID。 透過指定合併原則，隱私權請求可在傳回客戶資料時包含對象資訊。 每個請求只能指定一個合併原則。 如果未提供合併原則，回應中不會包含分段資訊。 |
 | `regulation` **（必要）** | 隱私權工作的法規。 接受下列值： <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpra_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`vcdpa_usa`</li></ul><br>如需上述值所代表隱私權法規的詳細資訊，請參閱[支援法規](../regulations/overview.md)的概觀。 |
 

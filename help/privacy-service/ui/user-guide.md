@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 管理Privacy Service UI中的隱私權工作
 description: 瞭解如何使用Privacy Service使用者介面來協調及監控各種Experience Cloud應用程式的隱私權請求。
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 12%
+source-wordcount: '1765'
+ht-degree: 11%
 
 ---
 
@@ -37,25 +37,35 @@ ht-degree: 12%
 [!DNL Privacy Service]支援數項隱私權法規的工作要求。 下表列出支援的法規及其在UI中顯示的對應標籤：
 
 | UI標籤 | 法規 |
-| --- | --- |
-| [!UICONTROL APA_AUS] | [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL FDBR_USA] | [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR] | 歐盟的[!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL LGPD_BRA] | 巴西的[!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA] | [!DNL Washington My Health My Data Act] |
-| [!UICONTROL NZPA_NZL] | 紐西蘭[!DNL Privacy Act] |
-| [!UICONTROL OCPA_USA] | [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA] | 泰國的[!DNL Personal Data Protection Act] |
-| [!UICONTROL TDPSA_USA] | [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA] | [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | [!DNL Virginia Consumer Data Protection Act] |
+|-------------------------------------|------------------------|
+| [!UICONTROL APA_AUS （澳洲）] | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCPA （加州）] | [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPA_USA （科羅拉多州）] | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_USA （加州）] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA_USA （康乃狄克州）] | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL FDBR_USA （佛羅里達州）] | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR （歐盟）] | 歐盟的[!DNL General Data Protection Regulation] |
+| [!UICONTROL HIPPA_USA （美國）] | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPA_USA] （愛荷華州） | [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA （巴西）] | 巴西的&quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL 美國MHMDA_USA （華盛頓）] | [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MCDPA_USA （蒙大拿州）] | [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL NDPA_USA （內布拉斯加州）] | [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NZPA_NZL （紐西蘭）] | 紐西蘭的[!DNL Privacy Act] |
+| [!UICONTROL NHPA_USA （新罕布希爾州）] | [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NJDPA_USA （新澤西）] | [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL OCPA USA （俄勒岡）] | [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA （泰國）] | 泰國的[!DNL Personal Data Protection Act] |
+| [!UICONTROL 美國TDPSA （德州）] | [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL UCPA_USA （猶他州）] | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA （維吉尼亞州）] | [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!-- 
+Waiting:
+| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
+ -->
 
 >[!NOTE]
 >
