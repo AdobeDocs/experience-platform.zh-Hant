@@ -3,9 +3,9 @@ title: 使用計算欄位將陣列匯出為字串
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 0%
 
 ## Platform中的陣列和其他物件型別 {#arrays-strings-other-objects}
 
-在Experience Platform中，您可以使用[XDM結構描述](/help/xdm/home.md)來管理不同的欄位型別。 之前，您可以將簡單的機碼值組型別欄位(例如不Experience Platform的字串)匯出至您想要的目的地。 先前支援匯出的欄位範例為`personalEmail.address`：`johndoe@acme.org`。
+在Experience Platform中，您可以使用[XDM結構描述](/help/xdm/home.md)來管理不同的欄位型別。 在新增支援陣列匯出功能之前，您能夠將簡單的機碼值組型別欄位（例如字串）匯出到Experience Platform不佳的所要目的地。 先前支援匯出的欄位範例為`personalEmail.address`：`johndoe@acme.org`。
 
 Experience Platform中的其他欄位型別包含陣列欄位。 深入瞭解[如何在Experience PlatformUI](/help/xdm/ui/fields/array.md)中管理陣列欄位。 除了先前支援的欄位型別之外，您現在還可以匯出陣列物件，例如使用`array_to_string`函式串連到字串中的下列範例。
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### `flattenArray`函式以匯出平面化陣列
-
-使用`flattenArray`函式平面化匯出的多維陣列。 您可以將此函式與上面進一步說明的`array_to_string`函式結合。
-
-繼續使用上方的`organizations`陣列物件，您可以編寫類似`array_to_string('_', flattenArray(organizations))`的函式。 請注意，`array_to_string`函式預設會將輸入陣列平面化為字串。
-
-產生的輸出與上述`array_to_string`函式的輸出相同。
-
-
 ### `filterArray`函式以匯出篩選的陣列
 
 使用`filterArray`函式來篩選匯出陣列的元素。 您可以將此函式與上面進一步說明的`array_to_string`函式結合。
@@ -210,6 +201,14 @@ John,Doe, johndoe@acme.org, "isMarketing"
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### `flattenArray`函式以匯出平面化陣列
+
+使用`flattenArray`函式平面化匯出的多維陣列。 您可以將此函式與上面進一步說明的`array_to_string`函式結合。
+
+繼續使用上方的`organizations`陣列物件，您可以編寫類似`array_to_string('_', flattenArray(organizations))`的函式。 請注意，`array_to_string`函式預設會將輸入陣列平面化為字串。
+
+產生的輸出與上面進一步說明的`array_to_string`函式相同。
 
 ### `coalesce`函式以匯出陣列 {#coalesce-function-export-arrays}
 
