@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Editor UI指南
 description: 查詢編輯器是Adobe Experience Platform查詢服務提供的互動式工具，可讓您在Experience Platform使用者介面中撰寫、驗證和執行客戶體驗資料的查詢。 查詢編輯器支援開發查詢以進行分析和資料探索，並可讓您執行互動式查詢以進行開發，以及非互動式查詢，以在Experience Platform中填入資料集。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
 workflow-type: tm+mt
-source-wordcount: '2821'
+source-wordcount: '2845'
 ht-degree: 0%
 
 ---
@@ -200,19 +200,18 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 >
 >記錄檔不會儲存未執行的查詢。 查詢必須執行或儲存在「查詢編輯器」中，查詢才能在「查詢服務」中使用。
 
-### 物件瀏覽器 {#object-browser}
+### [!BADGE Beta]{type=Informative}物件瀏覽器 {#object-browser}
 
 >[!AVAILABILITY]
 >
->資料集導覽邊欄僅適用於Data Distiller客戶。 您的Platform UI可能未包含左側資料集導覽邊欄。  此檔案中的其他影像可能不會反映資料集導覽邊欄。 如需詳細資訊，請聯絡您的Adobe代表。
+資料集導覽邊欄僅適用於Data Distiller客戶。 您的Platform UI可能未包含左側資料集導覽邊欄。 此檔案中的其他影像可能不會反映資料集導覽邊欄。 如需詳細資訊，請聯絡您的Adobe代表。<br>
+物件瀏覽器目前為測試版，僅適用於**限量版**。 請聯絡您的Adobe代表，以取得搶先發行的存取權。
 
 使用物件瀏覽器輕鬆搜尋和篩選資料集。 物件瀏覽器可縮短在有大量資料集的大型環境中搜尋表格和資料集所花費的時間。 透過簡化相關資料和中繼資料的存取，您可以將更多精力放在查詢撰寫上，而較少精力放在導覽上。
 
-若要使用物件瀏覽器瀏覽您的資料庫，請在搜尋欄位中輸入資料表名稱，或選取&#x200B;**[!UICONTROL 資料表]**&#x200B;以展開可用資料集和資料表的清單。 使用搜尋欄位時，會根據您的輸入動態篩選可用表格清單。
+若要使用物件瀏覽器瀏覽您的資料庫，請在搜尋欄位中輸入表格名稱，或選取&#x200B;**[!UICONTROL 表格]**&#x200B;以展開可用資料集和表格的清單。 使用搜尋欄位時，會根據您的輸入動態篩選可用表格清單。
 
->[!NOTE]
->
->[您選取的資料庫](#database-dropdown)中包含的每個資料集都會列在查詢編輯器左側的導覽邊欄中。
+[您選取的資料庫](#database-dropdown)中包含的每個資料集都會列在查詢編輯器左側的導覽邊欄中。
 
 ![查詢編輯器資料集導覽邊欄中反白顯示搜尋輸入。](../images/ui/query-editor/search-tables.png)
 
@@ -233,7 +232,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 #### 探索子資料表
 
-若要瀏覽子表格或連結表格，請選取清單中表格名稱旁的下拉箭頭。 這會展開表格以顯示任何相關聯的子表格，並提供資料結構的清楚檢視，並允許更複雜的查詢建構。 欄位名稱旁邊的圖示表示欄的資料型別，可幫助您在複雜查詢期間識別它。
+若要瀏覽子表格或連結表格，請選取清單中表格名稱旁的下拉箭頭。 這會展開表格以顯示任何相關聯的子表格，並提供資料結構的清楚檢視，並允許更複雜的查詢建構。 欄位名稱旁的圖示表示欄的資料型別。 to 協助您在複雜查詢期間識別它。
 
 ![已顯示篩選資料表清單的查詢編輯器。](../images/ui/query-editor/child-table-list.png)
 
@@ -249,7 +248,7 @@ If you format your SQL in the Query Editor, you can undo the formatting applied 
 
 >[!NOTE]
 >
->主控台只會顯示因執行查詢而產生的錯誤。 它不會顯示查詢執行前發生的查詢驗證錯誤。
+主控台只會顯示因執行查詢而產生的錯誤。 它不會顯示查詢執行前發生的查詢驗證錯誤。
 
 ### 查詢結果 {#query-results}
 
@@ -269,7 +268,7 @@ Query Service為跨產業和業務案例的各種使用案例提供解決方案�
 
 >[!NOTE]
 >
->影片中描述的UI已過時，但工作流程中使用的邏輯保持不變。
+影片中描述的UI已過時，但工作流程中使用的邏輯保持不變。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
