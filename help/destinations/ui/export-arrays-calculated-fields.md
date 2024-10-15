@@ -3,9 +3,9 @@ title: 使用計算欄位將陣列匯出為字串
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
+source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,16 @@ organizations = [{
 [連線](/help/destinations/ui/connect-destination.md)至所需的雲端儲存空間目的地，完成雲端儲存空間目的地的[啟動步驟](/help/destinations/ui/activate-batch-profile-destinations.md)並到達[對應](/help/destinations/ui/activate-batch-profile-destinations.md#mapping)步驟。
 
 ## 如何匯出計算欄位 {#how-to-export-calculated-fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="啟用階層式輸出結構描述"
+>abstract="如果要匯出階層式結構（如陣列），請開啟此功能。"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="新增計算欄位功能已停用"
+>abstract="此控制項已停用，因為您選取在連線到目的地時匯出平面結構。"
 
 在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL 新增計算欄位]**。
 
