@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務總覽
 description: 瞭解Experience Platform中查詢服務的角色。
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]使用機器學習和人�
 
 ## 使用自訂儀表板產生深入分析 {#custom-dashboards}
 
-有了Adobe Experience Platform，您可以內嵌、儲存、建構及提取所有儲存的資料集，包括行為、CRM和銷售點資料。 使用[!DNL Experience Platform's Query Service]，您可以查詢這些資料集並回答有關業務的特定問題，然後開始產生有影響力的深入分析。 瞭解如何建立及管理自訂儀表板，您可於其中建立、新增及編輯自訂的Widget，以視覺化方式使用[使用者定義儀表板](../dashboards/user-defined-dashboards.md)的關鍵量度。 您甚至可以[搭配使用SQL查詢與Real-Time CDP見解資料模型，針對您的行銷和KPI使用案例自訂您自己的Real-time Customer Data Platform報告](../dashboards/data-models/cdp-insights-data-model-b2c.md)。
+有了Adobe Experience Platform，您可以內嵌、儲存、建構及提取所有儲存的資料集，包括行為、CRM和銷售點資料。 使用[!DNL Experience Platform's Query Service]，您可以查詢這些資料集並回答有關業務的特定問題，然後開始產生有影響力的深入分析。 瞭解如何建立及管理自訂儀表板，您可於其中建立、新增及編輯自訂的Widget，以視覺化方式使用[使用者定義儀表板](../dashboards/standard-dashboards.md)的關鍵量度。 您甚至可以[搭配使用SQL查詢與Real-Time CDP見解資料模型，針對您的行銷和KPI使用案例自訂您自己的Real-time Customer Data Platform報告](../dashboards/data-models/cdp-insights-data-model-b2c.md)。
 
 ## 後續步驟和其他資源
 

@@ -2,7 +2,7 @@
 title: 同意分析和追蹤
 description: 瞭解如何建立同意分析儀表板，以追蹤使用者同意在一段時間內的趨勢。
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 ![對象重疊報表，使用者同意電子郵件對象強調顯示。](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
-## 對象人數趨勢 {#audience-size-trends}
+## 客群人數趨勢 {#audience-size-trends}
 
 當您建立以同意為基礎的受眾時，會自動顯示自您建立受眾日期起最多12個月的趨勢。 若要掌握您客戶同意的完整功能趨勢，請將下列Widget新增至[!UICONTROL 區段] [!UICONTROL 概觀]頁面。 這些見解提供強大的方式，可追蹤您的同意如何隨著時間改變。 它們甚至會與您平行執行的任何行銷活動建立關聯，而這些行銷活動可能會對同意產生正面或負面的影響。 為這些Widget提供的說明適用於同意使用案例。
 
@@ -112,13 +112,13 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 您也可以使用使用者定義的儀表板，建置您自己的Widget。 建立您自己的Widget可讓您完全控制Widget的型別，並讓您直接在Adobe Real-Time CDP中靈活新增篩選器及其他專案。
 
-例如，如果您想在同一張圖表顯示多個同意對象的趨勢，以便檢視每個同意偏好設定隨著時間的變化。 這類視覺效果可在使用者定義控制面板中以最少的步驟和一次性設定完成。 首先，在左側導覽中選取&#x200B;**[!UICONTROL 儀表板]**。 [!UICONTROL 儀表板]工作區會出現。 然後選取&#x200B;**[!UICONTROL 建立儀表板]**。 有關如何[建立控制面板和自訂Widget](../user-defined-dashboards.md)的完整說明，請參閱使用者定義控制面板指南。
+例如，如果您想在同一張圖表顯示多個同意對象的趨勢，以便檢視每個同意偏好設定隨著時間的變化。 這類視覺效果可在使用者定義控制面板中以最少的步驟和一次性設定完成。 首先，在左側導覽中選取&#x200B;**[!UICONTROL 儀表板]**。 [!UICONTROL 儀表板]工作區會出現。 然後選取&#x200B;**[!UICONTROL 建立儀表板]**。 有關如何[建立控制面板和自訂Widget](../standard-dashboards.md)的完整說明，請參閱使用者定義控制面板指南。
 
-![反白顯示包含控制面板和「建立」控制面板的工作區。](../images/user-defined-dashboards/create-dashboard.png)
+![反白顯示包含控制面板和「建立」控制面板的工作區。](../images/standard-dashboards/create-dashboard.png)
 
-當您在Widget撰寫器中[選取您的資料模型](../user-defined-dashboards.md#select-data-model)時，請依序選取`CDPInsights`及&#x200B;**[!UICONTROL 下一步]**。 [!UICONTROL 選取資料表]對話方塊就會顯示。
+當您在Widget撰寫器中[選取您的資料模型](../standard-dashboards.md#select-data-model)時，請依序選取`CDPInsights`及&#x200B;**[!UICONTROL 下一步]**。 [!UICONTROL 選取資料表]對話方塊就會顯示。
 
-![反白顯示CDPInsights模型的[選取資料模型]對話方塊。](../images/user-defined-dashboards/select-data-model-dialog.png)
+![反白顯示CDPInsights模型的[選取資料模型]對話方塊。](../images/standard-dashboards/select-data-model-dialog.png)
 
 下一個檢視會在左側邊欄中顯示可用表格的清單。 選取 `adwh_fact_profile_by_segment_and_namespace_trendlines`。
 
@@ -126,16 +126,16 @@ Adobe已建立各種見解，這些見解會自動在設定檔、受眾和目的
 
 在Widget撰寫器中填入您所選表格的資料後，請執行下列步驟：
 
-- [搜尋`[!UICONTROL date]`的[!UICONTROL 屬性]](../user-defined-dashboards.md#add-filter-attributes)，然後使用+圖示將`[!UICONTROL date]`屬性從下拉式功能表新增至X軸。
-  ![加圖示和下拉式功能表反白顯示的Widget Composer。](../images/user-defined-dashboards/attributes-dropdown.png)
+- [搜尋`[!UICONTROL date]`的[!UICONTROL 屬性]](../standard-dashboards.md#add-filter-attributes)，然後使用+圖示將`[!UICONTROL date]`屬性從下拉式功能表新增至X軸。
+  ![加圖示和下拉式功能表反白顯示的Widget Composer。](../images/standard-dashboards/attributes-dropdown.png)
 - 搜尋[!UICONTROL 屬性]以尋找`[!UICONTROL count_of_profiles]`，然後使用+圖示將`[!UICONTROL count_of_profiles]`屬性從下拉式功能表新增至Y軸。
 - 選取[!UICONTROL Y軸]欄位中的`...` （橢圓）圖示，然後從下拉式選單中選取[!UICONTROL SUM]彙總函式。
   ![Widget撰寫器的「同意」功能會對Widget進行趨勢分析，並反白顯示資料模型、表格及Y軸下拉式功能表和SUM功能。](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - 選取[!UICONTROL 標籤]下拉式功能表，並將圖表型別變更為[!UICONTROL 線]。
 - 搜尋`[!UICONTROL segment_name]`的[!UICONTROL 屬性]，然後使用+圖示將`segment_name`新增為下拉式功能表中的[!UICONTROL 篩選器]。 [!UICONTROL 篩選器：區段名稱]對話方塊就會顯示。 選取先前建立且與同意相關的對象。 在此範例中，選取&#x200B;**[!UICONTROL 同意撥打電話的使用者]**、**[!UICONTROL 同意簡訊的使用者]**&#x200B;和&#x200B;**[!UICONTROL 同意傳送電子郵件的使用者]**，接著選取&#x200B;**[!UICONTROL 套用]**。
 - 搜尋`[!UICONTROL segment_name]`的[!UICONTROL 屬性]，然後從下拉式選單中選取+圖示，將`segment_name`新增為[!UICONTROL 色彩]。
-- 開啟[[!UICONTROL 屬性]面板](../user-defined-dashboards.md#widget-properties)，並提供適當的[!UICONTROL Widget標題]和[!UICONTROL 軸標籤]。
-  ![含有屬性圖示和Widget標題的Widget Composer已反白顯示。](../images/user-defined-dashboards/properties-panel.png)
+- 開啟[[!UICONTROL 屬性]面板](../standard-dashboards.md#widget-properties)，並提供適當的[!UICONTROL Widget標題]和[!UICONTROL 軸標籤]。
+  ![含有屬性圖示和Widget標題的Widget Composer已反白顯示。](../images/standard-dashboards/properties-panel.png)
 - 選取&#x200B;**[!UICONTROL 儲存並關閉]**&#x200B;以確認您的設定。
 
 >[!TIP]

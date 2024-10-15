@@ -2,7 +2,7 @@
 title: 受眾分析
 description: 探索為您的受眾深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索Adobe Experience Platform中的受眾資料。
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-下列深入分析都可供您用作[對象儀表板](../guides/audiences.md)或自訂[使用者定義儀表板](../user-defined-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../user-defined-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
+下列深入分析都可供您用作[對象儀表板](../guides/audiences.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
 下列深入分析全都可供您用作[對象儀表板](../guides/audiences.md)或自訂儀表板的一部分。
 
@@ -209,7 +209,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱身分識別介面工具集檔案的[對象人數趨勢](../guides/audiences.md#audience-size-trend-by-identity)。
 
-## 對象規模趨勢 {#audience-size-trend}
+## 客群規模趨勢 {#audience-size-trend}
 
 此深入分析所回答的問題：
 
@@ -240,7 +240,7 @@ SELECT date_key,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[對象人數趨勢Widget檔案](../guides/audiences.md#audience-size-trend)。
 
-## 對象規模 {#audience-size}
+## 客群規模 {#audience-size}
 
 此深入分析所回答的問題：
 
@@ -516,7 +516,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[身分重疊Widget檔案](../guides/audiences.md#identity-overlap)。
 
-## 依身分識別劃分的設定檔 {#profiles-by-identity}
+## 依身分劃分的輪廓 {#profiles-by-identity}
 
 此深入分析所回答的問題：
 

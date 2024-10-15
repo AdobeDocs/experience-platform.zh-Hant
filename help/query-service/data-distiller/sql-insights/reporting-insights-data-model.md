@@ -2,7 +2,7 @@
 title: Query Accelerated Store Reporting Insights指南
 description: 瞭解如何透過Query Service建立報告見解資料模型，以便與加速商店資料和使用者定義的儀表板搭配使用。
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Adobe Experience Platform的Real-Time CDP資料模型提供設定檔、對象和
 
 ## 先決條件
 
-本教學課程使用使用者定義儀表板，在Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義儀表板檔案](../../../dashboards/user-defined-dashboards.md)。
+本教學課程使用使用者定義儀表板，在Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義儀表板檔案](../../../dashboards/standard-dashboards.md)。
 
 ## 快速入門
 
@@ -228,4 +228,4 @@ LIMIT  5000
 
 ![依據目的地和受眾Widget的符合計數，是根據新的報表深入分析資料模型建立的。](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-您的自訂資料模型可在使用者定義控制面板工作區中的可用資料模型清單中找到。 請參閱[使用者定義儀表板指南](../../../dashboards/user-defined-dashboards.md)，以取得有關如何使用自訂資料模型的指引。
+您的自訂資料模型可在使用者定義控制面板工作區中的可用資料模型清單中找到。 請參閱[使用者定義儀表板指南](../../../dashboards/standard-dashboards.md)，以取得有關如何使用自訂資料模型的指引。

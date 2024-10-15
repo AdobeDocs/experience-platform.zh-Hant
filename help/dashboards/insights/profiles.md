@@ -2,7 +2,7 @@
 title: 設定檔深入分析
 description: 探索為您的設定檔深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索您的客戶及其消費者體驗。
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 請參閱[檢視SQL檔案](../view-sql.md)，以取得有關如何直接透過Platform UI調整您見解的SQL的詳細資訊。
 
-下列見解全部都可供您用作[設定檔儀表板](../guides/profiles.md)或自訂[使用者定義儀表板](../user-defined-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../user-defined-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
+下列見解全部都可供您用作[設定檔儀表板](../guides/profiles.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
 ## 依合併原則區分的客群重疊 {#audience-overlap-by-merge-policy}
 
@@ -461,7 +461,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[身分重疊Widget檔案](../guides/profiles.md#identity-overlap)。
 
-## 設定檔計數 {#profile-count}
+## 輪廓計數 {#profile-count}
 
 此深入分析所回答的問題：
 
@@ -485,7 +485,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數Widget檔案](../guides/profiles.md#profile-count)。
 
-## 設定檔計數變更 {#profile-count-change}
+## 輪廓計數變更 {#profile-count-change}
 
 此深入分析所回答的問題：
 
@@ -595,7 +595,7 @@ SELECT date_key,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[設定檔計數趨勢Widget檔案](../guides/profiles.md#profile-count-trend)。
 
-## 依身分識別劃分的設定檔 {#profiles-by-identity}
+## 依身分劃分的輪廓 {#profiles-by-identity}
 
 此深入分析所回答的問題：
 
@@ -624,7 +624,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[依身分Widget的設定檔檔案](../guides/profiles.md#profiles-by-identity)。
 
-## 設定檔計數變更趨勢 {#profiles-count-change-trend}
+## 輪廓計數變更趨勢 {#profiles-count-change-trend}
 
 此深入分析所回答的問題：
 
@@ -699,7 +699,7 @@ SELECT date_key,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱身分識別介面工具檔案的[設定檔計數變更趨勢](../guides/profiles.md#profiles-count-change-trend-by-identity)。
 
-## 單一身分識別設定檔 {#single-identity-profiles}
+## 單一身分輪廓 {#single-identity-profiles}
 
 此深入分析所回答的問題：
 
@@ -751,7 +751,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[依身分識別的Widget檔案](../guides/profiles.md#single-identity-profiles-by-identity)。
 
-## 無區段設定檔 {#unsegmented-profiles}
+## 未細分的輪廓 {#unsegmented-profiles}
 
 此深入分析所回答的問題：
 

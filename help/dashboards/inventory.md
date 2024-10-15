@@ -2,7 +2,7 @@
 title: 檢視已設定的儀表板
 description: 在Experience Platform UI中檢視貴組織已設定的儀表板清單。
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -27,4 +27,4 @@ ht-degree: 0%
 
 ## 建立自訂儀表板
 
-Adobe Experience Platform儀表板可讓您建立和管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，以視覺化與您的組織相關的關鍵量度。 如需建立和設定自訂儀表板的完整指示，請參閱[使用者定義儀表板指南](./user-defined-dashboards.md)。
+Adobe Experience Platform儀表板可讓您建立和管理自訂儀表板，以便在其中建立、新增和編輯客製化Widget，以視覺化與您的組織相關的關鍵量度。 如需建立和設定自訂儀表板的完整指示，請參閱[使用者定義儀表板指南](./standard-dashboards.md)。

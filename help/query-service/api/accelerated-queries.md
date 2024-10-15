@@ -3,7 +3,7 @@ title: 加速查詢端點
 description: 瞭解如何以無狀態方式存取查詢加速存放區，以根據彙總資料快速傳回結果。 本檔案提供查詢服務加速查詢端點的範例HTTP請求和回應。
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # 加速的查詢端點
 
-作為Data Distiller SKU的一部分，[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/)可讓您對加速存放區進行無狀態查詢。 傳回的結果會根據彙總的資料。 減少結果的延遲可讓您以更具互動性的方式交換資訊。 加速的查詢API也用來支援[使用者定義儀表板](../../dashboards/user-defined-dashboards.md)。
+作為Data Distiller SKU的一部分，[Query Service API](https://developer.adobe.com/experience-platform-apis/references/query-service/)可讓您對加速存放區進行無狀態查詢。 傳回的結果會根據彙總的資料。 減少結果的延遲可讓您以更具互動性的方式交換資訊。 加速的查詢API也用來支援[使用者定義儀表板](../../dashboards/standard-dashboards.md)。
 
 繼續本指南之前，請確定您已閱讀並瞭解[查詢服務API指南](./getting-started.md)，以便成功使用查詢服務API。
 

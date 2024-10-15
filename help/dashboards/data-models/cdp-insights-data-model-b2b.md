@@ -1,10 +1,10 @@
 ---
 title: Real-time Customer Data Platform Insights資料模型B2B版本
-description: 瞭解如何使用SQL查詢搭配Real-time Customer Data Platform Insights Data Models (B2B Edition)來自訂您自己的Real-Time CDP報告，以用於您的行銷和KPI使用案例。
+description: 瞭解如何搭配Real-time Customer Data Platform Insights Data Models (B2B edition)使用SQL查詢，根據行銷和KPI使用案例自訂您自己的Real-Time CDP報表。
 badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## 先決條件
 
-本指南需要深入瞭解自訂儀表板。 在繼續本指南之前，請先閱讀有關[如何建立自訂儀表板](../user-defined-dashboards.md)的檔案。
+本指南需要深入瞭解自訂儀表板。 在繼續本指南之前，請先閱讀有關[如何建立自訂儀表板](../standard-dashboards.md)的檔案。
 
 ## Real-Time CDP B2B深入分析報表與使用案例 {#B2B-insight-reports-and-use-cases}
 

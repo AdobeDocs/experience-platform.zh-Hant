@@ -5,9 +5,9 @@ breadcrumb-title: 儀表板指南
 user-guide-description: 了解如何透過可自訂的儀表板在 Experience Platform 視覺化資料。
 feature: Dashboards
 role: Developer,User
-source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '128'
 ht-degree: 35%
 
 ---
@@ -18,21 +18,18 @@ ht-degree: 35%
 * [控制面板概觀](home.md)
 * [控制面板存取許可權](permissions.md)
 * [控制面板詳細目錄](inventory.md)
-* [儀表板](user-defined-dashboards.md)
+* [標準儀表板](standard-dashboards.md)
 * [下載儀表板以PDF](download.md)
-* 資料Distiller {#data-distiller}
-   * 延伸應用程式報表{#sql-insights}的SQl深入分析
-      * [概觀](data-distiller/sql-insights/overview.md)
-   * 查詢Pro模式{#query-pro-mode}
-      * [概觀](data-distiller/query-pro-mode/overview.md)
-      * 篩選器{#filters}
-         * [日期篩選器](data-distiller/query-pro-mode/filters/date-filter.md)
-         * [全域篩選器](data-distiller/query-pro-mode/filters/global-filter.md)
-      * [鑽研](data-distiller/query-pro-mode/drill-through.md)
-      * [檢視更多資訊](data-distiller/query-pro-mode/view-more.md)
-      * [檢視 SQL](data-distiller/query-pro-mode/view-sql.md)
-      * [下載為CSV檔](data-distiller/query-pro-mode/download-csv.md)
-      * [匯出為PDF](data-distiller/query-pro-mode/export-pdf.md)
+* SQL深入分析：查詢專業模式{#sql-insights-query-pro-mode}
+   * [概觀](sql-insights-query-pro-mode/overview.md)
+   * 篩選器{#filters}
+      * [日期篩選器](sql-insights-query-pro-mode/filters/date-filter.md)
+      * [全域篩選器](sql-insights-query-pro-mode/filters/global-filter.md)
+   * [鑽研](sql-insights-query-pro-mode/drill-through.md)
+   * [檢視更多資訊](sql-insights-query-pro-mode/view-more.md)
+   * [檢視 SQL](sql-insights-query-pro-mode/view-sql.md)
+   * [下載為CSV檔](sql-insights-query-pro-mode/download-csv.md)
+   * [匯出為PDF](sql-insights-query-pro-mode/export-pdf.md)
 * 可用的儀表板{#guides}
    * [輪廓](guides/profiles.md)
    * [帳戶輪廓](guides/account-profiles.md)

@@ -2,7 +2,7 @@
 title: SQL深入分析
 description: 瞭解使用案例、基本功能，以及使用Data Distiller開發SQL深入分析儀表板的必要步驟。 探索Data Distiller中的SQL深入分析功能如何增強透明度，並取得不同維度（例如設定檔、受眾、行銷活動、歷程、權益和同意）的營運深入分析。
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 使用Data Distiller的SQL Insights建立量身打造的報告資料模型，以擷取更深入的深入分析、最佳化策略，並調整分析以符合特定業務需求。 使用SQL Insights功能可增強透明度並從Adobe Experience Platform資料跨維度（例如設定檔、對象、行銷活動、歷程、權益和同意）取得營運深入分析。 此功能提供多功能、最適化解決方案，根據您的特定業務需求量身打造貴組織的報表資料模型。
 
-若要[視覺化您的SQL深入分析](../../../dashboards/data-distiller/sql-insights/overview.md)，您可以使用[query pro mode](../../../dashboards/data-distiller/query-pro-mode/overview.md)以自訂SQL查詢進行複雜的分析，並將您的資料轉換為易於理解的圖表。 使用Query Pro模式可在您的控制面板上建立客製化的深入分析和視覺效果，並將您的深入分析下載為CSV檔案以迎合技術和非技術受眾。
+若要[視覺化您的SQL深入分析](../../../dashboards/sql-insights-query-pro-mode/overview.md)，您可以使用[query pro mode](../../../dashboards/sql-insights-query-pro-mode/overview.md)以自訂SQL查詢進行複雜的分析，並將您的資料轉換為易於理解的圖表。 使用Query Pro模式可在您的控制面板上建立客製化的深入分析和視覺效果，並將您的深入分析下載為CSV檔案以迎合技術和非技術受眾。
 
 本文介紹使用Data Distiller開發SQL深入分析控制面板的使用案例、基本功能和必要步驟。
 
 ## 先決條件
 
-本教學課程使用使用者定義儀表板，在Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義控制面板檔案](../../../dashboards/user-defined-dashboards.md)。
+本教學課程使用使用者定義儀表板，在Platform UI中以視覺效果呈現自訂資料模型中的資料。 若要深入瞭解此功能，請參閱[使用者定義控制面板檔案](../../../dashboards/standard-dashboards.md)。
 
 ## 快速入門
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 1. **隨選查詢探索：**&#x200B;開始執行隨選`SELECT`查詢以探索資料湖上的原始資料。 這允許對實驗進行即時、探索性資料分析，並驗證未將查詢結果儲存在Data Lake中的資料。
 1. **批次查詢使用率：**&#x200B;使用批次查詢來[建立排定的工作](../../api/scheduled-queries.md#create-a-new-scheduled-query)，以產生見解彙總表格，確保資料處理的系統化和自動化方法。 批次查詢執行`INSERT TABLE AS SELECT`和`CREATE TABLE AS SELECT`查詢以清理、塑形、操縱和擴充資料。 這些查詢的結果會儲存在Data Lake中。
 1. **彙總見解載入：**&#x200B;將產生的彙總見解載入加速存放區，並使用SQL測試查詢，並確保資料擷取的正確性和效率。 若要瞭解如何[對加速存放區](../../api/accelerated-queries.md)進行無狀態查詢，請參閱檔案。
-1. **存取與整合：**&#x200B;透過與Adobe Experience Platform [使用者定義儀表板](../../../dashboards/user-defined-dashboards.md)或其他偏好的Business Intelligence(BI)工具整合，可順暢地存取加速存放區中儲存的深入分析。 這些與協力廠商使用者端的整合讓使用者獲得有凝聚力的直覺式體驗。
+1. **存取與整合：**&#x200B;透過與Adobe Experience Platform [使用者定義儀表板](../../../dashboards/standard-dashboards.md)或其他偏好的Business Intelligence(BI)工具整合，可順暢地存取加速存放區中儲存的深入分析。 這些與協力廠商使用者端的整合讓使用者獲得有凝聚力的直覺式體驗。
 
 ![說明資料Distiller中SQL深入分析四個步驟的資訊圖表。](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

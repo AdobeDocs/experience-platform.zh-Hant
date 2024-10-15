@@ -2,7 +2,7 @@
 title: 追蹤資料訊號以產生客戶期限值
 description: 本指南提供端對端示範，說明如何搭配使用Data Distiller和使用者定義的儀表板與Real-time Customer Data Platform，以測量及視覺化客戶期限值。
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 0%
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 ## 建立儀表板以擷取深入分析 {#build-a-custom-dashboard}
 
-現在您已建立自訂資料模型，您已準備好使用自訂查詢和使用者定義儀表板將您的資料視覺化。 如需如何[建立自訂儀表板](../../dashboards/user-defined-dashboards.md)的完整指引，請參閱使用者定義儀表板概觀。 UI指南包括下列專案的詳細資訊：
+現在您已建立自訂資料模型，您已準備好使用自訂查詢和使用者定義儀表板將您的資料視覺化。 如需如何[建立自訂儀表板](../../dashboards/standard-dashboards.md)的完整指引，請參閱使用者定義儀表板概觀。 UI指南包括下列專案的詳細資訊：
 
 * 如何建立Widget。
 * 如何使用Widget撰寫器。

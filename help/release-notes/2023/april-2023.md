@@ -2,7 +2,7 @@
 title: Adobe Experience Platform 發行說明 (2023 年 4 月)
 description: Adobe Experience Platform 2023 年 4 月版發行說明。
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->從 2023 年 5 月 15 日起，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。如需有關此變更的更多詳細資料，請詳閱[「Segmentation Service」一節](#segmentation)。
+>從 2023 年 5 月 15 日起，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的輪廓會以 `Realized` 表示，而喪失資格的輪廓則會繼續以 `Exited` 表示。如需有關此變更的更多詳細資料，請詳閱[「Segmentation Service」一節](#segmentation)。
 
 **發行日期：2023 年 4 月 26 日**
 
@@ -25,7 +25,7 @@ Adobe Experience Platform 現有功能的更新：
 - [目的地](#destinations)
 - [體驗資料模式](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
-- [即時客戶設定檔](#profile)
+- [即時客戶輪廓](#profile)
 - [Segmentation Service](#segmentation)
 - [來源](#sources)
 
@@ -37,7 +37,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用者定義的儀表板 | 您現在可以在您的 Widget 分析中&#x200B;**篩選歷史資料**，並使用最近的資料或自訂分析期間。如需詳細資訊，請參閱[使用者定義的儀表板指南](../../dashboards/user-defined-dashboards.md#filter-historical-data)。<br>您現在也可以&#x200B;**複製您現有的 Widget**。藉由自訂複本並編輯其屬性，您可以避免在建立新的唯一 Widget 時從頭開始重新啟動。若要了解詳細資訊，請詳閱 [Widget 複本指南](../../dashboards/user-defined-dashboards.md#duplicate-a-widget)。 |
+| 使用者定義的儀表板 | 您現在可以在您的 Widget 分析中&#x200B;**篩選歷史資料**，並使用最近的資料或自訂分析期間。如需詳細資訊，請參閱[使用者定義的儀表板指南](../../dashboards/standard-dashboards.md#filter-historical-data)。<br>您現在也可以&#x200B;**複製您現有的 Widget**。藉由自訂複本並編輯其屬性，您可以避免在建立新的唯一 Widget 時從頭開始重新啟動。若要了解詳細資訊，請詳閱 [Widget 複本指南](../../dashboards/standard-dashboards.md#duplicate-a-widget)。 |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 
 ## 資料集合 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目標。
 
 **新功能或更新功能**
 
@@ -73,13 +73,13 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 {style="table-layout:auto"}
 
-## 目的地 {#destinations}
+## 目標 {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
-**新目的地** {#new-destinations}
+**新目標** {#new-destinations}
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 | ----------- | ----------- |
 | [[!DNL Salesforce Marketing Cloud Account Engagement] 連線](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | 使用 Salesforce Marketing Cloud Account Engagement (之前稱之為 Pardot) 目的地以擷取、追蹤銷售機會並對其進行評分和分級。將此目的地用於包含多個部門和決策者且需要較長銷售和決策週期的 B2B 使用案例。 |
 
@@ -91,7 +91,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 | ----------- | ----------- |
 | [!DNL Custom Personalization] 和 [!DNL Adobe Commerce] 目的地的資料流監控 | <p> 您現在可以查看 [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md) 的啟動量度、[自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)和[具有屬性的自訂個人化](../../destinations/catalog/personalization/custom-personalization.md)連線。 </p> <p>![Adobe Commerce 影像](/help/destinations/assets/common/adobe-commerce-metrics.png "Adobe Commerce 量度"){width="100" zoomable="yes"}</p>  如需更多詳細資料，請參閱[監控目的地工作區中的資料流](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace)。 |
 | 新的&#x200B;**[!UICONTROL 附加區段 ID 至區段名稱]**&#x200B;欄位適用於 [!DNL Google Ad Manager] 和 [!DNL Google Ad Manager 360] 目的地 | <p>現在您可讓 [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) 和 [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) 中的區段名稱包括來自 Experience Platform 的區段 ID，例如：`Segment Name (Segment ID)`。</p><p>![附加區段 ID 影像](/help/destinations/assets/common/append-segment-id-to-segment-name.png "新的附加區段 ID 至區段名稱欄位 "){width="100" zoomable="yes"}</p> |
-| 已排程的對象回填 | <p>對於 [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 目的地，對象回填至目的地的啟動會排程在首次將區段對應至目的地連線後的 24 至 48 小時。此更新是回應Google的原則而進行，等待24小時直到擷取資料為止，此更新將改善Real-Time CDP與[!DNL Google Display & Video 360]之間的符合率。</p> <p>請注意，這是僅適用於此目的地的後端設定，並且和 UI 中任何客戶可設定的排程選項不相關。</p> |
+| 已排程的客群回填 | <p>對於 [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) 目的地，客群回填至目的地的啟動會排程在首次將區段對應至目的地連線後的 24 至 48 小時。此更新是回應Google的原則而進行，等待24小時直到擷取資料為止，此更新將改善Real-Time CDP與[!DNL Google Display & Video 360]之間的符合率。</p> <p>請注意，這是僅適用於此目的地的後端設定，並且和 UI 中任何客戶可設定的排程選項不相關。</p> |
 
 {style="table-layout:auto"}
 
@@ -109,7 +109,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **更新的功能**
 
@@ -131,10 +131,10 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 | 元件類型 | 名稱 | 說明 |
 | --- | --- | --- |
-| 欄位群組 | [[!UICONTROL Adobe 統一設定檔服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1696/files) | 新增即時客戶設定檔的帳戶擴充功能欄位群組，讓使用者可在帳戶聯合上新增區段會籍。 |
-| 綱要 | [[!UICONTROL 已計算的屬性系統綱要]](https://github.com/adobe/xdm/pull/1696/files) | 即時客戶設定檔所使用的已計算的屬性欄位群組已更新為系統唯讀全域綱要。 |
+| 欄位群組 | [[!UICONTROL Adobe 統一輪廓服務帳戶聯合擴充功能]](https://github.com/adobe/xdm/pull/1696/files) | 新增即時客戶輪廓的帳戶擴充功能欄位群組，讓使用者可在帳戶聯合上新增區段會籍。 |
+| 綱要 | [[!UICONTROL 已計算的屬性系統綱要]](https://github.com/adobe/xdm/pull/1696/files) | 即時客戶輪廓所使用的已計算的屬性欄位群組已更新為系統唯讀全域綱要。 |
 | 欄位群組 | 多個 | 已將幾個事件新增為[[!UICONTROL 時間序列綱要]](https://github.com/adobe/xdm/pull/1718/files)的欄位。 |
-| 欄位群組 | 設定檔忠誠度詳細資料 | [已修正 ](https://github.com/adobe/xdm/pull/1717/files)`xdm:upgradeDate` 的標題，從「方案名稱」變成「升級日期」。 |
+| 欄位群組 | 輪廓忠誠度詳細資料 | [已修正 ](https://github.com/adobe/xdm/pull/1717/files)`xdm:upgradeDate` 的標題，從「方案名稱」變成「升級日期」。 |
 | 欄位群組 | 多個 | [[!UICONTROL 決策項目]](https://github.com/adobe/xdm/pull/1714/files)中有幾個欄位已更新，移除了雙重巢狀階層。 |
 
 {style="table-layout:auto"}
@@ -143,38 +143,38 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 ## Real-Time Customer Data Platform
 
-建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶設定檔。[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶設定檔。然後，根據這些設定檔建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
+建置在 Experience Platform、Real-Time Customer Data Platform ([!DNL Real-Time CDP]) 上有助於公司匯集已知和未知的資料，以使用整個客戶歷程中的智慧型決策啟動客戶輪廓。[!DNL Real-Time CDP] 會結合多個企業資料來源以即時建立客戶輪廓。然後，根據這些輪廓建置的區段即可傳送到下游目的地，以便在所有管道和裝置上提供一對一的個人化客戶體驗。
 
 **新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
 | 經過美化的 Real-Time CDP 首頁 | 此 [Real-Time CDP 首頁](https://experience.adobe.com)已經過美化，具有煥然一新的外觀和提升的效能。此主頁現在具有權限感知功能，並會顯示和您有權存取的功能相關的 Widget。如需詳細資訊，請閱讀 [Real-Time CDP 首頁儀表板概觀](../../rtcdp/home-page-dashboards.md)。 |
-| 自我識別調查 | 自我識別調查是 Adob&#x200B;&#x200B;e Experience Platform UI 首頁中提供的簡短問卷。可使用此自我識別調查建置您的 Experience Platform 個人設定檔，並根據您的選擇接收訂製的準則。如需詳細資訊，請閱讀[自我識別調查概觀](../../landing/self-identification.md)。 |
+| 自我識別調查 | 自我識別調查是 Adob&#x200B;&#x200B;e Experience Platform UI 首頁中提供的簡短問卷。可使用此自我識別調查建置您的 Experience Platform 個人輪廓，並根據您的選擇接收訂製的準則。如需詳細資訊，請閱讀[自我識別調查概觀](../../landing/self-identification.md)。 |
 
 如需有關 [!DNL Real-Time CDP] 的詳細資訊，請參閱 [[!DNL Real-Time CDP]  概觀](../../rtcdp/overview.md)。
 
-## 即時客戶設定檔 {#profile}
+## 即時客戶輪廓 {#profile}
 
-Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶設定檔，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 設定檔可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
+Adobe Experience Platform 讓您能夠為客戶提供一致且相關的協調體驗，無論他們何時何地與您的品牌互動。透過即時客戶輪廓，您可查看每個個別客戶合併了多個管道的資料 (包括線上、離線、CRM 和協力廠商資料) 的整體檢視。 輪廓可讓您將客戶資料合併成統一的檢視畫面，針對每個客戶互動提供可採取行動且附有時間戳記的說明。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 匿名設定檔資料到期 | 匿名設定檔資料到期現在正式推出！啟用後，此版本會從您的 Experience Platform 執行個體中持續移除過期的匿名設定檔。若要了解有關此功能和匿名設定檔的詳細資訊，請閱讀[匿名設定檔資料到期指南](../../profile/pseudonymous-profiles.md)。 |
+| 匿名輪廓資料到期 | 匿名輪廓資料到期現在正式推出！啟用後，此版本會從您的 Experience Platform 執行個體中持續移除過期的匿名輪廓。若要了解有關此功能和匿名輪廓的詳細資訊，請閱讀[匿名輪廓資料到期指南](../../profile/pseudonymous-profiles.md)。 |
 
 {style="table-layout:auto"}
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義設定檔的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
+[!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| 區段會籍地圖 | 作為之前在 2 月份的公告的後續措施，在 2023 年 5 月 15 日，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的設定檔會以 `Realized` 表示，而喪失資格的設定檔則會繼續以 `Exited` 表示。<br/><br/>如果您正在使用[企業目的地](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格設定檔，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。 |
+| 區段會籍地圖 | 作為之前在 2 月份的公告的後續措施，在 2023 年 5 月 15 日，`Existing` 狀態會從區段會籍地圖中淘汰，以消除區段會籍生命週期中的冗餘。進行此變更後，區段中合格的輪廓會以 `Realized` 表示，而喪失資格的輪廓則會繼續以 `Exited` 表示。<br/><br/>如果您正在使用[企業目的地](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis、Azure 事件中樞、HTTP API)，此變更可能會對您造成影響，並可能根據 `Existing` 狀態就地自動化下游流程。如果您屬於這種情況，請檢閱您的下游整合。如果您有興趣在特定時間之後識別新的合格輪廓，請考慮在您的區段會籍地圖中使用 `Realized` 狀態和 `lastQualificationTime` 的組合。如需詳細資訊，請聯絡您的 Adobe 代表。 |
 
 {style="table-layout:auto"}
 

@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform發行說明2022年9月
-description: Adobe Experience Platform 2022年9月版本注意事項。
+title: Adobe Experience Platform 發行說明 (2022 年 9 月)
+description: Adobe Experience Platform 2022 年 9 月版發行說明。
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2762'
-ht-degree: 23%
+ht-degree: 26%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 23%
 
 **發行日期： 2022年9月28日**
 
-Adobe Experience Platform中的新功能：
+Adobe Experience Platform 的新功能：
 
 - [屬性型存取控制](#abac)
 
@@ -22,8 +22,8 @@ Adobe Experience Platform 現有功能的更新：
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [稽核記錄](#audit-logs)
 - [[!DNL Dashboards]](#dashboards)
-- [資料集合](#data-collection)
-- [目的地](#destinations)
+- [資料彙集](#data-collection)
+- [目標](#destinations)
 - [體驗資料模式 (XDM)](#xdm)
 - [身分識別服務](#identity-service)
 - [查詢服務](#query-service)
@@ -35,7 +35,7 @@ Adobe Experience Platform 現有功能的更新：
 >
 >以屬性為基礎的存取控制將從2022年10月開始啟用。 如果您想要成為率先採用者，請聯絡您的Adobe代表。
 
-屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別對象指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
+屬性型存取控制是 Adob&#x200B;&#x200B;e Experience Platform 的一項功能，此平台為注重隱私的品牌提供更大的靈活性來管理使用者存取。可以將結構描述欄位和分段等個別物件指派給使用者角色。此功能允許您授予或撤銷組織中特定平台使用者對個別物件的存取權限。
 
 透過屬性型存取控制，組織的管理員可以控制使用者對所有平台工作流程和資源的存取權限，包括其中的敏感個人資料 (SPD)、個人身分資訊 (PII) 和其他自訂類型資料。管理員可以定義只能存取特定欄位以及這些欄位對應資料的使用者角色。
 
@@ -93,23 +93,23 @@ Adobe Experience Platform 提供了多個儀表板，您可以透過這些儀表
 | 功能 | 說明 |
 | --- | --- |
 | 使用中標籤 | 在Widget資料庫中檢視時，使用中標籤可輕鬆識別控制面板中是否存在現有Widget。 這可讓您輕鬆避免重複，不過您仍可依需要多次新增相同的Widget。 |
-| 使用者定義的儀表板 | 使用者定義儀表板可讓您建置和管理自訂儀表板，有助於加速深入分析和自訂視覺效果。 透過使用者定義儀表板，您可以建立、新增和編輯客製化Widget，以視覺化方式呈現與貴組織相關的關鍵量度。 閱讀[功能指南](../../dashboards/user-defined-dashboards.md)以瞭解更多資訊。 |
+| 使用者定義的儀表板 | 使用者定義儀表板可讓您建置和管理自訂儀表板，有助於加速深入分析和自訂視覺效果。 透過使用者定義儀表板，您可以建立、新增和編輯客製化Widget，以視覺化方式呈現與貴組織相關的關鍵量度。 閱讀[功能指南](../../dashboards/standard-dashboards.md)以瞭解更多資訊。 |
 | 客戶資料平台見解資料模型 | 客戶資料平台(CDP)見解資料模型功能會公開為各種設定檔、目的地和分段Widget提供見解的資料模型和SQL。 您可以自訂這些SQL查詢範本，為您的行銷和關鍵績效指標使用案例建立CDP報表。 這些深入分析接著可作為自訂Widget用於您使用者定義的儀表板。 閱讀[CDP Insights資料模型功能指南](../../dashboards/data-models/cdp-insights-data-model-b2c.md)以瞭解更多資訊。 |
 | 對象重疊報表Widget | 此Widget同時適用於[!UICONTROL 設定檔]和[!UICONTROL 區段]儀表板。 報表提供您所選區段按最高或最低重疊百分比排名的有序對象清單。 您可以從[!UICONTROL 設定檔]儀表板，依所有可用區段的合併原則來篩選及檢視對象重疊。 [!UICONTROL 區段]儀表板可讓您依據特定區段篩選對象重疊。<br>使用此分析來建立新的、高效能的區段，並避免將相同的對象傳送到不同的目的地。 報表也有助於識別隱藏的深入分析，以改進細分或找出要追求的不重複設定檔。 閱讀個別[設定檔](../../dashboards/guides/profiles.md#audience-overlap-report)和[區段](../../dashboards/guides/audiences.md#audience-overlap-report) Widget指南以瞭解更多資訊。 |
 
 如需[!DNL Dashboards]的詳細資訊，請參閱[[!DNL Dashboards] 總覽](../../dashboards/home.md)。
 
-## 資料收集 {#data-collection}
+## 資料彙集 {#data-collection}
 
-Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目的地。
+Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶體驗資料並將其傳送到 Adobe Experience Platform Edge Network，在其中可擴充、轉換資料並將其分送至 Adobe 或非 Adobe 目標。
 
 **新功能或更新功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| 平台UI中的左側導覽整合 | 先前專屬於資料收集UI的所有功能（包括標籤、事件轉送和資料串流）現在也可透過Experience Platform的左側導覽取得，位於類別&#x200B;**[!UICONTROL 資料收集]**&#x200B;下。 如此一來，在Platform中使用資料收集功能時，就不需要在UI之間切換。 |
+| 平台UI中的左側導覽整合 | 先前專屬於資料收集UI的所有功能（包括標籤、事件轉送和資料串流）現在也可透過Experience Platform的左側導覽取得，位於類別&#x200B;**[!UICONTROL 資料收集]**&#x200B;下。 這樣即不需要在平台使用資料彙集功能時在 UI 之間切換。 |
 | 標籤和事件轉送中的使用者歸因 | 現在，當標籤和事件轉送中列出可用的[!UICONTROL 屬性]時，每個列出的屬性都會顯示上次更新的時間，以及進行更新的使用者。 |
-| 用於事件轉送的[[!DNL Snap Conversions API] 延伸模組](https://exchange.adobe.com/apps/ec/108550) | 您現在可以使用[事件轉送](../../tags/ui/event-forwarding/overview.md)擴充功能，將資料傳送至[!DNL Snapchat Conversions API]。 如需如何驗證及使用API的詳細資訊，請參閱[[!DNL Snapchat Marketing API] 檔案](https://marketingapi.snapchat.com/docs/conversion.html)。 |
+| 用於事件轉送的[[!DNL Snap Conversions API] 延伸模組](https://exchange.adobe.com/apps/ec/108550) | 您現在可以使用[事件轉送](../../tags/ui/event-forwarding/overview.md)擴充功能，將資料傳送至[!DNL Snapchat Conversions API]。 若要了解更多如何驗證和使用此 API，請參閱[[!DNL Snapchat Marketing API] 文件](https://marketingapi.snapchat.com/docs/conversion.html)。 |
 | Web SDK中的[使用者代理程式使用者端提示](/help/web-sdk/use-cases/client-hints.md) | Web SDK現在支援[使用者代理程式使用者端提示](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)。 使用者端提示可讓網站擁有者存取[!DNL User-Agent]字串中提供的大部分相同資訊，但採用更能保護隱私的方式來存取這些資訊。 |
 | [Web SDK逐頁移轉](../../web-sdk/home.md#migrating-to-web-sdk) | 您現在可以將現有的Web屬性從其他Experience Cloud程式庫（例如[!DNL at.js]）移轉至Web SDK，一次移轉一頁。 如此可分階段移轉Web SDK，而不需一次移轉所有頁面。 |
 | 資料串流的[[!DNL Adobe Journey Optimizer] 支援](../../datastreams/overview.md#aep) | 適用於資料串流的Adobe Experience Platform服務現在支援[!DNL Adobe Journey Optimizer]。 此選項可讓您在[!DNL Adobe Journey Optimizer]中使用網頁和應用程式型傳入頻道。 |
@@ -120,7 +120,7 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+[!DNL Destinations] 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 **新功能或更新功能**
 
@@ -132,24 +132,24 @@ Adobe Experience Platform 提供了一套技術，讓您可收集用戶端客戶
 
 **新的或更新目的地**
 
-| 目的地 | 說明 |
+| 目標 | 說明 |
 | ----------- | ----------- |
 | [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | Adobe Campaign Managed Cloud Services為跨頻道客戶體驗設計提供平台，並為視覺行銷活動的策劃、即時互動管理和跨頻道執行提供環境。 [開始使用行銷活動](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)。 請注意，此整合適用於[Adobe Campaign 8.4版或更新版本](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1)。 |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | [!DNL Salesforce CRM]目的地已更新，以支援聯絡人和潛在客戶更新，以及效能改善，以更快更新。 |
 
 {style="table-layout:auto"}
 
-**新檔案或更新的檔案**
+**新文件或更新的文件**
 
 | 文件 | 說明 |
 | ----------- | ----------- |
 | 目的地流量服務API檔案 | [目的地API參考檔案](https://developer.adobe.com/experience-platform-apis/references/destinations/)已更新，加入如何對以檔案為基礎的目的地執行作業的指引。 稍後將新增串流目的地的作業。 |
 
-如需有關目的地的詳細一般資訊，請參閱[目的地概觀](../../destinations/home.md)。
+如需有關目標的詳細一般資訊，請參閱[目標概觀](../../destinations/home.md)。
 
 ## 體驗資料模式 (XDM) {#xdm}
 
-XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶對象，並使用客戶屬性實現個人化的目的。
+XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform 中的資料提供通用結構和定義 (結構描述)。若遵守 XDM 標準，即可將所有客戶體驗資料合併到一個常用表述中，以更快速、更整合的方式傳遞分析。您可以從客戶行為中獲得有價值的分析，透過區段定義客戶客群，並使用客戶屬性實現個人化的目的。
 
 **新功能**
 
@@ -192,7 +192,7 @@ XDM 是一種開放原始碼的規格，可為帶到 Adobe Experience Platform �
 
 如需有關 Platform 中 XDM 的詳細資訊，請參閱 [XDM 系統概觀](../../xdm/home.md)。
 
-## 身分識別服務 {#identity-service}
+## 身分服務 {#identity-service}
 
 提供相關的數位體驗需要完全瞭解您的客戶。 當您的客戶資料分散於不同的系統時，這會使工作變得更困難，導致每個客戶似乎都有多個「身分」。
 
@@ -208,7 +208,7 @@ Adobe Experience Platform Identity Service可跨裝置和系統橋接身分，�
 
 ## 查詢服務 {#query-service}
 
-查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入[!DNL Data Lake]的任何資料集，並將查詢結果擷取為新資料集，以用於報表、資料科學Workspace或擷取到即時客戶個人檔案中。
+查詢服務可讓您使用標準的 SQL 查詢 Adobe Experience Platform 中的資料[!DNL Data Lake]。您可以加入 [!DNL Data Lake] 中的任何資料集，並將查詢結果擷取為新資料集，以用於報告、資料科學工作區，或攝取至即時客戶輪廓中。
 
 **更新的功能**
 
@@ -237,4 +237,4 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 | API支援重試批次來源的失敗資料流執行 | 使用`re-trigger`作業透過API重試失敗的資料流。 如需詳細資訊，請參閱[使用API](../../sources/tutorials/api/retry-flows.md)重試失敗的資料流執行指南。 |
 | API支援篩選[!DNL Google BigQuery]與[!DNL Snowflake]來源的資料列層級資料 | 使用邏輯和比較運運算元來篩選[!DNL Google BigQuery]和[!DNL Snowflake]來源的資料列層級資料。 如需詳細資訊，請至「[使用 API 篩選來源的資料](../../sources/tutorials/api/filter.md)」詳閱指南。 |
 
-若要了解有關來源的詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
+若要深入了解來源，請閱讀[來源概觀](../../sources/home.md)。

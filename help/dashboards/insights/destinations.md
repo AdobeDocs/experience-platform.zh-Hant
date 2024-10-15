@@ -2,7 +2,7 @@
 title: 目的地分析
 description: 探索為您的目的地深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索Adobe Experience Platform中的資料啟用。
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 如需有關如何直接透過PLatform UI調整您見解的SQL的詳細資訊，請參閱[檢視SQL檔案](../view-sql.md)。
 
-下列深入分析都可供您用作[目的地儀表板](../guides/destinations.md)或自訂[使用者定義儀表板](../user-defined-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../user-defined-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
+下列深入分析都可供您用作[目的地儀表板](../guides/destinations.md)或自訂[使用者定義儀表板](../standard-dashboards.md)的一部分。 請參閱[自訂總覽](../customize/overview.md)，瞭解如何自訂您的儀表板或[在Widget程式庫和[使用者定義儀表板](../standard-dashboards.md#create-widget)中建立及編輯新Widget](../customize/custom-widgets.md)的說明。
 
 ## 啟用的客群 {#activated-audiences}
 
@@ -98,7 +98,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[依目的地平台Widget檔案的作用中目的地](../guides/destinations.md#active-destinations-by-destination-platform)。
 
-## 對象規模趨勢 {#audience-size-trend}
+## 客群規模趨勢 {#audience-size-trend}
 
 此深入分析所回答的問題：
 
@@ -144,7 +144,7 @@ SELECT d.destination_name,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[對象人數趨勢Widget檔案](../guides/destinations.md#audience-size-trend)。
 
-## 常見對象 {#common-audiences}
+## 常見客群 {#common-audiences}
 
 此深入分析所回答的問題：
 
@@ -258,7 +258,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[目的地計數Widget檔案](../guides/destinations.md#destinations-count)。
 
-## 已對應對象的健康情況 {#mapped-audience-health}
+## 已對應客群的健康情況 {#mapped-audience-health}
 
 此深入分析所回答的問題：
 
@@ -395,7 +395,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[最常使用的目的地Widget檔案](../guides/destinations.md#most-used-destinations)。
 
-## 最近啟動的對象 {#recently-activated-audiences}
+## 最近啟動的客群 {#recently-activated-audiences}
 
 此深入分析所回答的問題：
 
@@ -426,7 +426,7 @@ LIMIT
 
 如需此深入分析的外觀和功能的相關資訊，請參閱[最近啟用的對象Widget檔案](../guides/destinations.md#recently-activated-audiences)。
 
-## 最近啟動的對象 (依目的地) {#recently-activated-audiences-by-destination}
+## 最近啟動的客群 (依目的地) {#recently-activated-audiences-by-destination}
 
 此深入分析所回答的問題：
 
