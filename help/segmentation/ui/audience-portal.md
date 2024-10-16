@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 3%
 
 ---
@@ -286,6 +286,10 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 ### 攝取詳細資料 {#ingestion-details}
 
 對於來源為&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;的對象，**[!UICONTROL 擷取詳細資料]**&#x200B;區段會同時顯示設定檔總計以及外部產生的對象所擷取到的資料集詳細資料。
+
+>[!NOTE]
+>
+>匯出工作後最多可能需要30分鐘，對象的設定檔計數才會完全更新。
 
 ![會顯示對象詳細資訊頁面的擷取詳細資訊區段。](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
