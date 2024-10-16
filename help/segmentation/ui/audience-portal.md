@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
+source-wordcount: '4298'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
    - [使用區段產生器建立受眾](#segment-builder)
    - [使用對象構成來建立對象](#audience-composition)
    - [使用Federated Audience Composition，以使用您現有資料倉儲中的資料來建立對象](#fac) （可用性限制）
-- [匯入外部產生的對象](#import-audience)
+- [匯入外部產生的客群](#import-audience)
 
 若要開啟Audience Portal，請選取「細分」區段內的&#x200B;**[!UICONTROL 瀏覽]**&#x200B;標籤。
 
@@ -96,7 +96,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | 欄位 | 說明 |
 | ----- | ----------- |
 | [!UICONTROL 名稱] | 對象名稱。 |
-| [!UICONTROL 設定檔計數] | 符合對象資格的設定檔總數。 |
+| [!UICONTROL 輪廓計數] | 符合對象資格的設定檔總數。 |
 | [!UICONTROL Origin] | 對象的來源。 這會指出受眾的來源。 可能的值包括細分服務、自訂上傳、對象構成和Audience Manager。 |
 | [!UICONTROL 生命週期狀態] | 對象的狀態。 此欄位可能的值包括`Draft`、`Inactive`和`Published`。 如需生命週期狀態的詳細資訊，包括不同狀態的意義，以及如何將對象移至不同生命週期狀態，請參閱分段常見問答集](../faq.md#lifecycle-status)的[生命週期狀態區段。 |
 | [!UICONTROL 更新頻率] | 指出對象資料更新頻率的值。 此欄位可能的值包括[!UICONTROL 批次]、[!UICONTROL 串流]、[!UICONTROL Edge]和[!UICONTROL 未排程]。 |
@@ -210,6 +210,11 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 #### 大量動作 {#bulk-actions}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="彈性的對象評估限制"
+>abstract="您可在單一彈性對象評估回合中評估最多20個對象。<br/><br/>此外，當評估工作儘快執行時，可能會發生系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
+
 此外，您最多可以選取25個不同的對象，並對這些對象執行各種動作。 這些動作包括[移至資料夾](#folders)、[編輯或套用標籤](#tags)、[套用存取標籤](../../access-control/abac/ui/labels.md)和[刪除](#browse)。
 
 ![大量動作的可用選項會反白顯示。](../images/ui/audience-portal/bulk-actions.png)
@@ -278,7 +283,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 預估值是透過使用當天樣本資料的樣本大小所產生。 如果您的設定檔存放區中有少於100萬個實體，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。 如需有關產生預估的詳細資訊，請參閱對象建立教學課程的[預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
 
-### 內嵌詳細資料 {#ingestion-details}
+### 攝取詳細資料 {#ingestion-details}
 
 對於來源為&#x200B;**[!UICONTROL 自訂上傳]**&#x200B;的對象，**[!UICONTROL 擷取詳細資料]**&#x200B;區段會同時顯示設定檔總計以及外部產生的對象所擷取到的資料集詳細資料。
 
@@ -286,7 +291,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 | 屬性 | 說明 |
 | -------- | ----------- |
-| 設定檔計數 | 符合對象資格的設定檔總數。 |
+| 輪廓計數 | 符合對象資格的設定檔總數。 |
 | 資料集名稱 | 對象所擷取的資料集名稱。 您可以選取資料集名稱，以取得資料集的詳細資訊。 若要深入瞭解資料集，請閱讀[資料集UI指南](../../catalog/datasets/user-guide.md)。 |
 | 資料集批次 | 對象所擷取的資料集ID。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
 | 輪廓批次 | 在Platform上建立設定檔的批次識別碼。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
@@ -375,7 +380,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![已顯示[區段產生器]工作區。](../images/ui/audience-portal/segment-builder.png)
 
-### 聯合客群組成 {#fac}
+### 聯合客群構成 {#fac}
 
 除了受眾構成和區段定義之外，您還可以使用Adobe同盟受眾構成，從企業資料集建立新受眾，而無需複製基礎資料並將這些受眾儲存於Adobe Experience Platform受眾入口網站。 您也可以利用從企業資料倉儲已同盟的構成對象資料，讓Adobe Experience Platform中的現有對象更為豐富。 請閱讀[同盟對象構成](https://experienceleague.adobe.com/zh-hant/docs/federated-audience-composition/using/home)的指南。
 
