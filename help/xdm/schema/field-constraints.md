@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM欄位型別限制
 description: Experience Data Model (XDM)中欄位型別限制的參考，包括它們可以對應的其他序列化格式，以及如何在API中定義您自己的欄位型別。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '683'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## 基底結構和範例 {#basic-types}
 
-XDM是以JSON結構描述為基礎建立，因此XDM欄位在定義其型別時繼承類似的語法。 瞭解不同的欄位型別在JSON結構描述中的呈現方式，有助於指出每種型別的基本限制。
+XDM是以JSON結構描述為基礎建立，因此XDM欄位在定義其型別時繼承類似的語法。 瞭解不同的欄位型別在JSON結構描述中的呈現方式，有助於指出每種型別的基本限制。 自訂欄位名稱不區分大小寫，且在結構描述的相同層級上必須有不同的名稱。
 
 >[!NOTE]
 >

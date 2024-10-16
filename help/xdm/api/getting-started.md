@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 開始使用結構描述登入API
 description: 本檔案會介紹您在嘗試呼叫Schema Registry API之前需要瞭解的核心概念。
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1361'
 ht-degree: 5%
 
 ---
@@ -254,6 +254,7 @@ XDM資源以URI形式的`$id`屬性來識別，例如以下範例：
 * 欄位物件的名稱可能包含英數、破折號或底線字元，但&#x200B;**不能**&#x200B;以底線開頭。
    * **正確：** `fieldName`，`field_name2`，`Field-Name`，`field-name_3`
    * **不正確：** `_fieldName`
+* 欄位名稱不區分大小寫，且結構描述中的相同層級必須有不同的名稱。
 * 欄位物件的名稱偏好使用camelCase。 範例：`fieldName`
 * 欄位應包含以字首大寫寫寫的`title`。 範例：`Field Name`
 * 欄位需要`type`。
