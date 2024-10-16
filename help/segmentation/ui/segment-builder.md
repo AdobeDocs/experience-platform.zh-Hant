@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 7%
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
 >title="摘要資料"
->abstract="摘要資料只會針對設定檔屬性顯示，不會針對事件或對象屬性顯示<b>not</b>。<br/><br/>在下列情況下，設定檔屬性的摘要資料可能不會顯示： <ol><li>屬性的部分值長度超過100個字元。</li><li>屬性的唯一值超過3000個。</li></ol>"
+>abstract="僅有設定檔屬性會顯示摘要資料，事件或客群屬性則<b>不會</b>顯示。<br/><br/>於下列情況下，可能不會顯示設定檔屬性的摘要資料： <ol><li>該屬性部分值的長度超過 100 個字元。</li><li>該屬性有超過 3000 個唯一值。</li></ol>"
 
 >[!NOTE]
 >

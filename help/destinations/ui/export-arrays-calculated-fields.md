@@ -1,21 +1,21 @@
 ---
-title: 使用計算欄位將陣列匯出為字串
+title: 利用計算欄位將陣列匯出為字串
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
 source-wordcount: '1556'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
-# 使用計算欄位將陣列匯出為字串{#use-calculated-fields-to-export-arrays-as-strings}
+# 利用計算欄位將陣列匯出為字串{#use-calculated-fields-to-export-arrays-as-strings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="匯出陣列支援"
->abstract="<p>使用&#x200B;**新增計算欄位**&#x200B;控制項，將int、字串、布林值和物件值的陣列從Experience Platform匯出至您想要的雲端儲存空間目的地。</p><p> 陣列必須使用`array_to_string`函式匯出為字串。 檢視檔案以取得廣泛的範例和更多支援的函式。</p>"
+>abstract="<p>使用&#x200B;**新增計算欄位**&#x200B;控制項，將整數、字串、布林和物件值陣列從 Experience Platform 匯出至您希望的雲端儲存空間目的地。</p><p> 必須使用 `array_to_string` 函數將陣列匯出為字串。檢視文件了解大量範例和更多支援功能。</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="範例"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="已知限制"
 
