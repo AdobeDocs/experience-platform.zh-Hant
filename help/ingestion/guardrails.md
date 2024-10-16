@@ -3,9 +3,9 @@ keywords: Experience Platform；疑難排解；護欄；指南；
 title: 資料擷取的護欄
 description: 瞭解Adobe Experience Platform中資料擷取的護欄。
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 0%
 | 批次內嵌至設定檔 | <ul><li>記錄類別的大小上限為100 KB （硬式）。</li><li>ExperienceEvent類別的大小上限為10 KB （硬式）。</li></ul> | |
 | 每天擷取的設定檔或ExperienceEvent批次數量 | **每天擷取的Profile或ExperienceEvent批次數量上限為90。**&#x200B;這表示每天擷取的Profile和ExperienceEvent批次總數不能超過90。 擷取其他批次將會影響系統效能。 | 這是軟性限制。 雖然可能會超過軟性限制，但軟性限制提供系統效能的建議指引。 |
 | 加密的資料擷取 | 支援的單一加密檔案大小上限為1 GB。 例如，雖然您可以在單一資料流執行中擷取2GB以上的資料，但資料流執行中的個別檔案都不能超過1GB。 | 擷取加密資料的處理程式可能會比一般資料擷取需要更長的時間。 如需詳細資訊，請參閱[加密資料擷取API指南](../sources/tutorials/api/encrypt-data.md)。 |
+| 更新插入批次擷取 | 更新插入批次的擷取速度最多可比一般批次慢10倍，因此，您應&#x200B;**將您的更新插入批次保留在200萬筆記錄下**，以確保有效率的執行階段，並避免封鎖其他批次在沙箱中處理。 | 雖然您毫無疑問可以擷取超過200萬筆記錄的批次，但由於小型沙箱的限制，您的擷取時間將會大幅延長。 |
 
 {style="table-layout:auto"}
 
