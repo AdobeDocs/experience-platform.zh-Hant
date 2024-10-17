@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL彙總函式
 description: 彙總函式可用來將Profile Query Language (PQL)陣列中的多個值分組，以形成單一摘要值。
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 6%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## 計數
 
-`count`函式傳回指定陣列中的元素數目。
+`count`函式會以數字傳回指定陣列中的元素數目。
 
 **格式**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## 總和
 
-`sum`函式傳回陣列中所有選取值的總和。
+`sum`函式以數字傳回陣列中所有選取值的總和。
 
 **格式**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## 平均
 
-`average`函式傳回陣列中所有選取值的算術平均值。
+`average`函式以數字傳回陣列中所有選取值的算術平均值。
 
 **格式**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## 最小值
 
-`min`函式傳回陣列中所有選取值的最小值。
+`min`函式以數字傳回陣列中所有選取值的最小值。
 
 **格式**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## 最大值
 
-`max`函式傳回陣列中所有選取值的最大值。
+`max`函式會以數字傳回陣列中所有選取值的最大值。
 
 **格式**
 

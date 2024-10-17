@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PAL算術函式
 description: 算術函式可用來對Profile Query Language (PQL)中的值執行基本計算。
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 4%
+source-wordcount: '258'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## 新增
 
-`+` （加法）函式是用來尋找兩個引數運算式的加總。
+`+` （相加）函式是用來尋找兩個引數運算式之和做為數字。
 
 **格式**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## 乘
 
-`*` （乘法）函式用於尋找兩個引數運算式的乘積。
+`*` （乘法）函式是用來尋找兩個引數運算式的乘積做為數字。
 
 **格式**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## 減
 
-`-` （減法）函式是用來找出兩個引數運算式的差異。
+`-` （減法）函式是用來找出兩個引數運算式之間的數字差異。
 
 **格式**
 
@@ -70,7 +70,7 @@ product1.price - product2.price
 
 ## 除
 
-`/` （除法）函式用於尋找兩個引數運算式的商。
+`/` （除法）函式是用來尋找兩個引數運算式做為數字的商。
 
 **格式**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## 餘數
 
-`%` （模數/餘數）函式用來找出兩個引數運算式相除後的餘數。
+`%` （模數/餘數）函式用於將兩個引數運算式除以數字後尋找餘數。
 
 **格式**
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL Map函式
 description: Profile Query Language (PQL)提供的功能可讓您更輕鬆地與地圖互動。
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 6%
+source-wordcount: '169'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 ## 取得
 
-`get`函式用於擷取給定索引鍵的對應值。
+`get`函式用來擷取特定索引鍵對應值，做為物件。
 
 **格式**
 
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## 索引鍵
 
-`keys`函式用於擷取給定對應的所有索引鍵。
+`keys`函式用來以陣列或清單形式擷取給定對應的所有索引鍵。
 
 **格式**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## 值
 
-`values`函式用於擷取給定對應的所有值。
+`values`函式用來以陣列或清單形式擷取給定對應的所有值。
 
 **格式**
 

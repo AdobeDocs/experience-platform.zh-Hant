@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL篩選器函式
 description: 篩選器函式是用來篩選Profile Query Language (PQL)陣列中的資料。
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 7c282594e66c8c7700471a94947448fd91596814
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## 篩選器
 
-`[]` （篩選器）函式允許將篩選器套用至陣列，並傳回符合指定條件的陣列子集。
+`[]` （篩選器）函式允許將篩選器套用至陣列，並傳回符合指定條件的陣列子集。 因此，此函式傳回陣列。
 
 **格式**
 

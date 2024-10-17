@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL布林函式
 description: 布林值函式可用來對Profile Query Language (PQL)中的不同元素執行布林值邏輯。
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '248'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## 及
 
-`and`函式用來建立邏輯結合。
+`and`函式用來建立邏輯結合，做為布林值。
 
 **格式**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## 或
 
-`or`函式用來建立邏輯分離。
+`or`函式可用來建立邏輯分離，做為布林值。
 
 **格式**
 
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## If
 
-`if`函式用於解析運算式，需視指定的條件是否為true而定。
+`if`函式是用來解析運算式，需視指定的條件是否為true做為布林值而定。
 
 **格式**
 

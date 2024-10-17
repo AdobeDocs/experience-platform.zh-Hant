@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 陣列、清單和設定PQL函式
 description: Profile Query Language (PQL)提供的功能可讓您更輕鬆地與陣列、清單和字串互動。
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '820'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 ## 位於
 
-`in`函式是用來判斷專案是陣列或清單的成員。
+`in`函式是用來判斷專案是陣列的成員，還是清單為布林值。
 
 **格式**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## 不在
 
-`notIn`函式是用來判斷專案是否不是陣列或清單的成員。
+`notIn`函式是用來判斷專案是否不是陣列的成員或清單做為布林值。
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## 相交
 
-`intersects`函式是用來判斷兩個陣列或清單是否至少有一個通用成員。
+`intersects`函式用來判斷兩個陣列或清單是否至少有一個通用成員做為布林值。
 
 **格式**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## 子集: 
 
-`subsetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的子集。 換句話說，陣列A中的所有元素都是陣列B的元素。
+`subsetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的子集。 換言之，陣列A中的所有元素都是陣列B的元素做為布林值。
 
 **格式**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## 超集: 
 
-`supersetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的超集。 換句話說，該陣列A包含陣列B中的所有元素。
+`supersetOf`函式是用來判斷特定陣列（陣列A）是否是另一個陣列（陣列B）的超集。 換言之，該陣列A包含陣列B中的所有元素作為布林值。
 
 **格式**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## 包括
 
-`includes`函式是用來判斷陣列或清單是否包含指定的專案。
+`includes`函式是用來判斷陣列或清單是否包含指定專案做為布林值。
 
 **格式**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## 相異
 
-`distinct`函式用於從陣列或清單中移除重複值。
+`distinct`函式用於從陣列或清單中移除重複值，以作為陣列。
 
 **格式**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## 分組依據
 
-`groupBy`函式用來根據運算式的值，將陣列或清單的值分割成群組。
+`groupBy`函式用來根據運算式的值，將陣列或清單的值分割成群組，從群組運算式的唯一值，到陣列運算式的值分割，做為對應。
 
 **格式**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | 引數 | 說明 |
@@ -182,12 +182,12 @@ person.orders.storeId.distinct().count() > 1
 下列PQL查詢會將下訂單所依據的所有訂單分組。
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## 篩選器
 
-`filter`函式是用來根據運算式篩選陣列或清單。
+`filter`函式是用來根據運算式篩選陣列或清單，做為陣列或清單（視輸入而定）。
 
 **格式**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## 地圖
 
-`map`函式是用來建立新陣列，方法是將運算式套用至指定陣列中的每個專案。
+`map`函式是用來建立新陣列，方法是將運算式套用至指定陣列中的每個專案，做為陣列。
 
 **格式**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## 陣列中的前`n` {#first-n}
 
-當根據給定的數值運算式依遞增順序排序時，`topN`函式用來傳回陣列中的前`N`個專案。
+當根據作為陣列的給定數值運算式依遞增順序排序時，`topN`函式用於傳回陣列中的前`N`個專案。
 
 **格式**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## 陣列中的最後`n`
 
-當根據給定的數值運算式依遞增順序排序時，`bottomN`函式用於傳回陣列中的最後`N`個專案。
+當根據作為陣列的給定數值運算式依遞增順序排序時，`bottomN`函式用於傳回陣列中的最後`N`個專案。
 
 **格式**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## 第一個項目
 
-`head`函式用來傳回陣列或清單中的第一個專案。
+`head`函式用來傳回陣列或清單中的第一個專案做為物件。
 
 **格式**
 

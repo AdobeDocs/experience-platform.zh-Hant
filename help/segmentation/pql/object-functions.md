@@ -3,10 +3,10 @@ solution: Experience Platform
 title: PQL物件函式
 description: Profile Query Language (PQL)提供的功能可簡化與物件的互動。
 exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 9%
+source-wordcount: '127'
+ht-degree: 8%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 ## 是 Null
 
-`isNull`函式決定物件參考是否不存在。
+`isNull`函式決定物件參考是否不是布林值存在。
 
 **格式**
 
@@ -34,7 +34,7 @@ person.homeAddress.isNull()
 
 ## 不是 Null
 
-`isNotNull`函式決定物件參考是否存在。
+`isNotNull`函式決定物件參考是否以布林值存在。
 
 **格式**
 

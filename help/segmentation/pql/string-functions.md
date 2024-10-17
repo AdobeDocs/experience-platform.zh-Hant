@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL字串函式
 description: Profile Query Language (PQL)提供的函式可讓您更輕鬆與字串互動。
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '848'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 ## 讚
 
-`like`函式是用來判斷字串是否符合指定的模式。
+`like`函式是用來判斷字串是否符合指定的布林值模式。
 
 **格式**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## 開頭為
 
-`startsWith`函式是用來決定字串的開頭是否為指定的子字串。
+`startsWith`函式是用來判斷字串的開頭是否為指定的子字串做為布林值。
 
 **格式**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## 開頭不是
 
-`doesNotStartWith`函式是用來判斷字串是否不是以指定的子字串開頭。
+`doesNotStartWith`函式是用來判斷字串的開頭是否不是以指定的子字串做為布林值。
 
 **格式**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## 結尾為
 
-`endsWith`函式用於決定字串的結尾是否為指定的子字串。
+`endsWith`函式是用來判斷字串的結尾是否為指定的子字串做為布林值。
 
 **格式**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## 結尾不是
 
-`doesNotEndWith`函式是用來決定字串的結尾是否不是指定的子字串。
+`doesNotEndWith`函式是用來判斷字串的結尾是否不是指定的子字串做為布林值。
 
 **格式**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## 包含
 
-`contains`函式用於決定字串是否包含指定的子字串。
+`contains`函式是用來判斷字串是否包含指定的子字串做為布林值。
 
 **格式**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## 不包含
 
-`doesNotContain`函式是用來決定字串是否不包含指定的子字串。
+`doesNotContain`函式是用來判斷字串是否不包含指定的子字串做為布林值。
 
 **格式**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## 等於
 
-`equals`函式是用來判斷字串是否等於指定的字串。
+`equals`函式是用來判斷字串是否等於指定的布林字串。
 
 **格式**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## 不等於
 
-`notEqualTo`函式是用來判斷字串是否不等於指定的字串。
+`notEqualTo`函式是用來判斷字串是否不等於指定的布林值字串。
 
 **格式**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## 符合
 
-`matches`函式是用來判斷字串是否符合特定的規則運算式。 請參考[此檔案](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)以取得規則運算式中比對模式的詳細資訊。
+`matches`函式是用來判斷字串是否符合特定的規則運算式。 請參考[此檔案](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)以取得規則運算式做為布林值比對模式的詳細資訊。
 
 **格式**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## 規則運算式群組
 
-`regexGroup`函式是用來根據提供的規則運算式擷取特定資訊。
+`regexGroup`函式是用來根據作為字串提供的規則運算式擷取特定資訊。
 
 **格式**
 

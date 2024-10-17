@@ -3,9 +3,9 @@ solution: Experience Platform
 title: PQL日期和時間函式
 description: 日期和時間函式可用來對Profile Query Language (PQL)中的值執行日期和時間作業。
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## 發生
 
-`occurs`函式比較指定的時間戳記函式與固定的時間週期。
+`occurs`函式會比較指定的時間戳記函式與固定的時間週期（布林值）。
 
 **格式**
 
