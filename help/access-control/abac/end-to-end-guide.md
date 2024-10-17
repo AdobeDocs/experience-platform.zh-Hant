@@ -4,7 +4,7 @@ title: 屬性型存取控制端對端指南
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的端對端指南
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
+source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 18%
@@ -45,8 +45,7 @@ ht-degree: 18%
 
 * [為您的使用者標示角色](#label-roles)：以醫療保健提供者（ACME業務群組）為例，其行銷群組與外部代理合作。
 * [標籤您的資源（結構描述欄位和區段）](#label-resources)：將&#x200B;**[!UICONTROL PHI/規範健康情況資料]**&#x200B;標籤指派給結構描述資源和區段。
-* 
-   * [啟用會將它們連結在一起的原則：](#policy)：啟用預設原則，將您資源上的標籤連結到您角色中的標籤，以防止存取結構描述欄位和區段。 之後，擁有相符標籤的使用者將獲得結構欄位和所有沙箱之區段的存取權。
+* [啟用會將它們連結在一起的原則](#policy)：啟用預設原則，將您資源上的標籤連結到您角色中的標籤，以防止存取結構描述欄位和區段。 之後，擁有相符標籤的使用者將獲得結構欄位和所有沙箱之區段的存取權。
 
 ## 權限
 
