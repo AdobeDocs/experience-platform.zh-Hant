@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 量度API端點
 description: 瞭解如何使用可觀察性深入分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1278'
 ht-degree: 3%
 
 ---
@@ -56,8 +56,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -79,12 +78,11 @@ curl -X POST \
 | --- | --- |
 | `start` | 擷取量度資料的最早日期/時間。 |
 | `end` | 擷取量度資料的最新日期/時間。 |
-| `granularity` | 選擇性欄位，指出度量資料除以的時間間隔。 例如，值`DAY`會傳回`start`與`end`日期之間每天的量度，而值`MONTH`會改為依月份群組量度結果。 使用此欄位時，也必須提供對應的`downsample`屬性，以指示群組資料所使用的彙總函式。 |
+| `granularity` | 選擇性欄位，指出度量資料除以的時間間隔。 例如，值`DAY`會傳回`start`與`end`日期之間每天的量度，而值`MONTH`會改為依月份群組量度結果。 |
 | `metrics` | 一個物件陣列，您要擷取的每個量度各一個。 |
 | `name` | 「可觀察性深入分析」所識別的量度名稱。 如需接受的量度名稱完整清單，請參閱[附錄](#available-metrics)。 |
 | `filters` | 此選用欄位可讓您依據特定資料集篩選量度。 欄位是一個物件陣列（每個濾鏡各一個），每個物件包含下列屬性： <ul><li>`name`：篩選量度的實體型別。 目前僅支援`dataSets`。</li><li>`value`：一或多個資料集的識別碼。 多個資料集ID可以單一字串形式提供，每個ID都以垂直長條字元(`\|`)分隔。</li><li>`groupBy`：設定為true時，表示對應的`value`代表多個資料集，這些資料集的量度結果應分別傳回。 如果設為false，這些資料集的量度結果會分組在一起。</li></ul> |
-| `aggregator` | 指定應該用來將多個時間序列記錄分組為單一結果的彙總函式。 如需可用彙總的詳細資訊，請參閱[OpenTSDB檔案](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators)。 |
-| `downsample` | 此選用欄位可讓您指定彙總函式，將欄位排序為間隔（或「貯體」）以降低量度資料的取樣率。 縮減取樣間隔由`granularity`屬性決定。 如需縮減取樣的相關詳細資訊，請參閱[OpenTSDB檔案](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators)。 |
+| `aggregator` | 指定應該用來將多個時間序列記錄分組為單一結果的彙總函式。 目前支援的彙總值為最小值、最大值、總和以及平均，視量度定義而定。 |
 
 {style="table-layout:auto"}
 
@@ -221,8 +219,7 @@ curl -X POST \
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | 針對一個資料集或所有資料集，[!DNL Identity Service]寫入其資料來源的記錄數。 | 資料集 ID |
 | timeseries.identity.dataset.recordfailed.count | 一個資料集或所有資料集的[!DNL Identity Service]失敗的記錄數。 | 資料集 ID |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | 名稱空間失敗的身分記錄數。 | 名稱空間ID （**必要**） |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | 名稱空間略過的身分記錄數。 | 名稱空間ID （**必要**） |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | 略過的身分記錄數。 | 組織 ID |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | 儲存在組織身分圖表中的唯一身分數量。 | 不適用 |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | 儲存在名稱空間身分圖表中的唯一身分數目。 | 名稱空間ID （**必要**） |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 針對特定圖表強度（「未知」、「弱」或「強」）儲存在身分圖表中的獨特身分數。 | 圖表強度（**必要**） |
