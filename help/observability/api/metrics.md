@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 量度API端點
 description: 瞭解如何使用可觀察性深入分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
+source-git-commit: a029d503d37d7e705897ce8efca98674ccf21780
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 3%
@@ -68,7 +68,6 @@ curl -X POST \
               }
             ],
             "aggregator": "sum",
-            "downsample": "sum"
           }
         ]
       }'
