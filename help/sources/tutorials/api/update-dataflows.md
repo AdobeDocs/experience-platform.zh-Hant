@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流程服務；更新資料流程
-solution: Experience Platform
 title: 使用流程服務API更新資料流程
-type: Tutorial
-description: 本教學課程涵蓋使用流量服務API更新資料流的步驟，包括其名稱、說明和排程。
+description: 瞭解如何使用流程服務API建立資料流，包括其名稱、說明和排程。
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '656'
 ht-degree: 2%
 
 ---
@@ -15,6 +12,10 @@ ht-degree: 2%
 # 使用流程服務API更新資料流程
 
 本教學課程涵蓋更新資料流的步驟，包括其基本資訊、排程和使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)的對應集。
+
+>[!TIP]
+>
+>您的來源連線和目標連線應該對應至單一資料流。 您不應該分別更新來源和目標連線，因為變更將不會反映在其對應的資料流中。 如果您的使用案例需要更新來源和目標連線，則您必須建立一對新的來源和目標連線，以及新的資料流。
 
 ## 快速入門
 
@@ -49,11 +50,11 @@ GET /flows/{FLOW_ID}
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **回應**

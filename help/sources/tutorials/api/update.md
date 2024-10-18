@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform；首頁；熱門主題；流程服務；更新帳戶
-solution: Experience Platform
 title: 使用流程服務API更新帳戶
-type: Tutorial
 description: 本教學課程涵蓋使用Flow Service API更新帳戶詳細資訊和認證的步驟。
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '539'
 ht-degree: 2%
 
 ---
 
 # 使用流程服務API更新帳戶
 
-在某些情況下，可能需要更新現有來源連線的詳細資料。 [!DNL Flow Service]可讓您新增、編輯和刪除現有批次或串流連線的詳細資料，包括其名稱、說明和認證。
+在某些情況下，可能需要更新現有基礎連線的詳細資料。 [!DNL Flow Service]可讓您新增、編輯和刪除現有批次或串流連線的詳細資料，包括其名稱、說明和認證。
 
 本教學課程涵蓋使用[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/)更新連線的詳細資訊和認證的步驟。
+
+>[!TIP]
+>
+>當需要更新時，您不需要建立新的基礎連線。 您對基本連線所做的任何變更都會反映在關聯的資料流中。
 
 ## 快速入門
 
