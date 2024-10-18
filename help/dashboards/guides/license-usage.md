@@ -4,10 +4,10 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2738'
-ht-degree: 16%
+source-wordcount: '2855'
+ht-degree: 15%
 
 ---
 
@@ -117,7 +117,6 @@ ht-degree: 16%
 
 若要檢視產品的權益使用摘要，請從[!UICONTROL 核心產品]表格中選取產品。
 
-<!-- update image ... -->
 ![產品及預測使用量資料行醒目提示的[!UICONTROL 授權使用量] [!UICONTROL 總覽]。](../images/license-usage/product-predicted-usage.png)
 
 摘要標籤隨即顯示。 您可以使用[!UICONTROL 摘要]和[!UICONTROL 詳細資料]標籤上提供的精細預測，確保做出明智的決策，以有效使用授權。
@@ -126,7 +125,6 @@ ht-degree: 16%
 >
 >請注意，授權用量預估是根據過去使用量計算的近似值。您有責任瞭解貴組織的實際使用情況，並確保使用情況不會超出貴組織的Adobe授權範圍。
 
-<!-- update image ... -->
 ![預測使用量資料行反白顯示的Platform產品摘要檢視。](../images/license-usage/summary-predicted-usage.png)
 
 預計使用量的百分比取決於以下因素：
@@ -142,10 +140,9 @@ ht-degree: 16%
 預測的使用量功能支援下列量度：
 
 - [!UICONTROL 可定址對象]
-- [!UICONTROL 平均設定檔豐富度]
 - [!UICONTROL 計算時數]
 - [!UICONTROL 客戶歷程對象列數]
-- [!UICONTROL 總儲存空間]
+- [!UICONTROL 資料磁碟區總數]
 
 ## [!UICONTROL 摘要]索引標籤 {#summary-tab}
 
@@ -204,6 +201,10 @@ ht-degree: 16%
 
 ## 可用量度 {#available-metrics}
 
+>[!IMPORTANT]
+>
+>自8月20日起，擁有&#39;[!UICONTROL 平均設定檔豐富度]&#39;和&#39;[!UICONTROL 總儲存空間]&#39;許可權的客戶在授權使用儀表板中看到&#39;[!UICONTROL 總資料量]&#39;。 客戶權益沒有變動，只是追蹤量度的簡化。 [!UICONTROL 總資料量]代表Adobe Experience Platform設定檔服務中可用於參與和個人化工作流程的資料。 此簡化量度改善了個人資料服務使用的管理和測量。 我們鼓勵客戶聯絡其Adobe代表，以進一步釐清這項變更。
+
 授權使用儀表板會報告適用於組織中多個產品的多個不重複量度。 可用的量度包括：
 
 | 量度 | 說明 |
@@ -211,6 +212,7 @@ ht-degree: 16%
 | [!UICONTROL Audience Activation大小] | 一年內任何以檔案為基礎的目的地啟用的設定檔總大小。 注意：這不包括透過串流目的地傳送的設定檔。 |
 | [!UICONTROL 可定址對象] | 您的業務受眾權益與消費者受眾權益的總和。 消費者受眾的定義是銷售訂單上識別為「消費者受眾」的個人檔案數。 業務對象定義為銷售訂單上識別為「業務對象」的業務人員個人檔案數。 |
 | [!UICONTROL Adhoc Query Service使用者套件] | 一個附加元件，可讓您的授權並行查詢服務使用者權益增加5個額外的並行查詢服務使用者，以及每個套件一個額外的並行執行特定查詢。 可以授權多個其他Ad Hoc Query使用者套件。 |
+| [!UICONTROL 平均設定檔豐富度] | **已棄用** — 任何時間點儲存在集線器設定檔服務中的所有生產資料總和，除以授權企業人員設定檔數目的五倍。 [!UICONTROL 平均設定檔豐富度]是共用功能。 |
 | [!UICONTROL 可用的CJA資料列] | 可在Analysis中分析的每日平均資料列Customer Journey Analytics。 |
 | [!UICONTROL 計算屬性] | 彙總的個人資料行為資料的總數。 彙總的個人資料行為資料是根據體驗事件，這些事件會轉換為個人資料屬性，並可包含在個人資料或企業個人資料中。 |
 | [!UICONTROL 消費者對象] | 銷售訂單上識別為「消費者對象」的個人設定檔數目。 |
