@@ -2,9 +2,9 @@
 description: 此頁面提供您需要提交以檢閱使用Destination SDK撰寫的生產目的地的所有資訊。
 title: 提交以Destination SDK撰寫的生產目的地，以供複查
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 0%
 * 目的地解決的使用案例說明。 只有在您提交新的目的地設定時，才需要執行此作業。
 * 目的地提交原因的說明。 只有在更新現有的目的地設定時，才需要此專案。
 * 使用測試目的地API端點對您的目的地執行HTTP呼叫後的測試結果。 請與Adobe共用對您的目的地端點發出的API呼叫，以及從您的目的地端點接收的API回應。
+* 一種熒幕錄製，可顯示某人連線至您的目的地並完成啟動步驟的使用者體驗。
 * 檔案型目的地的其他需求：
    * 使用測試API共用要求與回應範例，以使用範例設定檔](../testing-api/batch-destinations/file-based-destination-testing-api.md)測試您的檔案型目的地[。
    * 附加目的地產生的範例檔案，並匯出至儲存位置。
