@@ -2,9 +2,9 @@
 title: Identity Service實作指南
 description: 瞭解提供給Adobe Experience Platform的資料在由Identity Service用於建立身分圖表之前如何進行處理。
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,7 @@ Experience Data Model (XDM)是Experience Platform組織客戶資料的標準化�
 >
 >* 陣列和對應型別欄位不受支援，且無法標籤為身分欄位。
 >* 在標籤欄位時，會提供所產生身分的名稱空間。
+>* 只要此欄位不在陣列物件下，就可以將欄位標示為身分。
 
 如需詳細資訊，請閱讀[在UI](../xdm/ui/fields/identity.md)中定義身分欄位的指南。
 
