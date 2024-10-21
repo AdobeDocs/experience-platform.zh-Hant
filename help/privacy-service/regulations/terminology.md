@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權法規術語
 description: 本檔案提供Adobe Experience Cloud支援之隱私權法規相關關鍵辭彙的定義。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '2301'
 ht-degree: 0%
@@ -113,7 +113,7 @@ ht-degree: 0%
 
 **[!DNL Nebraska Data Protection Act]**：隱私權法律，賦予內布拉斯加人存取、更正、刪除及選擇退出個人資料銷售的權利。 適用於符合特定資料處理和收入臨界值的企業。 NDPA還要求企業實施合理的資料安全措施，並提供30天的治療期，以便在受到處罰之前解決違規行為。
 
-**[!DNL New Hampshire Data Privacy Act]**：此法規透過授予新罕布希爾州居民存取、刪除和傳輸其資料的權利，來保護他們的個人資料。 它要求企業公開其資料收集和分享做法，並允許消費者選擇退出資料銷售。 NHDPA適用於符合指定資料處理臨界值的公司。
+**[!DNL New Hampshire Privacy Act]**：此法規透過授予新罕布希爾州居民存取、刪除和傳輸其資料的權利，來保護他們的個人資料。 它要求企業公開其資料收集和分享做法，並允許消費者選擇退出資料銷售。 NHDPA適用於符合指定資料處理臨界值的公司。
 
 **[!DNL New Jersey Data Protection Act]**：完整的州隱私權法律，賦予新澤西居民存取、修正和刪除個人資料的權利。 其中包括資料銷售和針對性廣告的選擇退出機制。 NJDPA適用於處理大量消費者資料的企業，並要求企業處理個人資訊的方式必須透明。
 

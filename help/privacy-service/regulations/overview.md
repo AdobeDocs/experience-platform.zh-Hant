@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 隱私權法規概述
 description: 本檔案概述Adobe Experience Cloud支援的各種隱私權法規。
 exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
-source-git-commit: 6b0ac184d8859b770f69b4758fa1cfae006dd755
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 0%
@@ -33,7 +33,7 @@ ht-degree: 0%
 | MCDPA （蒙大拿州） | [[!DNL The Montana Consumer Data Privacy Act]](https://legiscan.com/MT/text/SB384/id/2791095)讓住戶有權瞭解企業收集、共用和銷售哪些個人資料，以及這些資料的用途。 它也會授予消費者更正、刪除或取得所收集資料副本的能力。 此法律適用於處理超過50,000名蒙大拿州消費者的資料的企業。 此法案強調保護敏感的個人資料，包括生物測定和遺傳資訊。 |
 | NDPA （內布拉斯加州） | [[!DNL Nebraska Data Protection Act]](https://nebraskalegislature.gov/FloorDocs/108/PDF/Slip/LB1074.pdf)為內布拉斯加人提供其個人資料的權利，例如存取、更正、刪除以及選擇退出銷售。 此法案適用於符合資料處理和個人資訊銷售收入特定臨界值的企業。 此外，企業也必須實施合理的資料安全實務，並提供30天強制治癒期，以便在受到處罰前解決法規遵循問題。 |
 | 紐西蘭[!DNL Privacy Act] | [紐西蘭 [!DNL Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/)控制機構如何收集、使用、揭露、儲存和存取紐西蘭公民和組織的個人資訊。 2020年，最新版本的法案大幅更新了這些隱私權法律。 更新內容包括新罪、增加罰款、強制通知資料洩露，以及增加隱私權專員的權力。 |
-| NHDPA （新罕布希爾州） | [[!DNL New Hampshire Data Privacy Act]](https://gencourt.state.nh.us/bill_status/billinfo.aspx?id=865&amp;inflect=1)建立與資料存取、刪除和可攜性相關的消費者權利，以保護新罕布希爾州居民的個人資訊。 它要求組織公開其資料收集和分享做法，並允許消費者選擇退出資料銷售。 此法案適用於符合特定資料處理臨界值的企業。 |
+| NHDPA （新罕布希爾州） | [[!DNL New Hampshire Privacy Act]](https://gencourt.state.nh.us/bill_status/billinfo.aspx?id=865&amp;inflect=1)建立與資料存取、刪除和可攜性相關的消費者權利，以保護新罕布希爾州居民的個人資訊。 它要求組織公開其資料收集和分享做法，並允許消費者選擇退出資料銷售。 此法案適用於符合特定資料處理臨界值的企業。 |
 | NJDPA （新澤西州） | [[!DNL New Jersey Data Protection Act]](https://pub.njleg.state.nj.us/Bills/2022/S0500/332_R6.PDF)提供存取、更正和刪除其資訊的權利，授予New Jersey居民控制其個人資料的權利。 其中包括資料銷售和針對性廣告的選擇退出機制。 該法案涵蓋處理大量消費者資料的企業，並要求資料使用透明。 |
 | OCPA （俄勒岡州） | [[!DNL Oregon Consumer Privacy Act]](https://olis.oregonlegislature.gov/liz/2023R1/Downloads/PublicTestimonyDocument/59856#:~:text=The%20Act%20requires%20controllers%20to,data%3B%20and%20%E2%80%A2%20Contact%20information.) (OCPA)為奧勒岡州居民提供對其個人資料的基本權利，並對處理此類資料的企業施加義務。 消費者有權知道、更正、刪除和取得其資料的副本，以及選擇退出針對性廣告或銷售的資料處理。 此法案要求對敏感資料加強保護、同意資料處理超出指定目的，並強制資料控管單位發出全面的隱私權通知。 |
 | PDPA （泰國） | 推出[[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act)是為了保護泰文資料擁有者不會非法收集、使用或公開其個人資料。 受歐盟GDPR啟發，該法規授予泰國公民請求存取或刪除其儲存的個人資料的權利。 |
