@@ -2,9 +2,9 @@
 title: 身分圖表連結規則疑難排解指南
 description: 瞭解如何疑難排解身分圖表連結規則中的常見問題。
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3335'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ ht-degree: 0%
 
 考量下列事件有兩個假設：
 
-* 欄位名稱CRMID會以名稱空間CRMID標示為身分。
-* 名稱空間CRMID定義為唯一的名稱空間。
+1. 欄位名稱CRMID會以名稱空間CRMID標示為身分。
+2. 名稱空間CRMID定義為唯一的名稱空間。
 
 下列事件將傳回錯誤訊息，指出擷取失敗。
 
@@ -123,6 +123,24 @@ ht-degree: 0%
 >
 >如果兩個身分完全相同，而且事件是透過串流擷取，則身分和設定檔都會刪除身分重複。
 
+### 驗證後ExperienceEvents被歸因到錯誤的已驗證設定檔
+
+名稱空間優先順序在事件片段判斷主要身分的方式中會扮演重要角色。
+
+* 設定並儲存指定沙箱的[身分設定](./identity-settings-ui.md)後，設定檔就會使用[名稱空間優先順序](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events)來判斷主要身分。 在identityMap的情況下，設定檔將不再使用`primary=true`旗標。
+* 雖然設定檔將不再參考此標幟，但Experience Platform上的其他服務可能會繼續使用`primary=true`標幟。
+
+為了將[已驗證的使用者事件](implementation-guide.md#ingest-your-data)繫結至人員名稱空間，所有已驗證的事件都必須包含人員名稱空間(CRMID)。 這表示即使使用者登入後，每個已驗證的事件上仍必須存在人員名稱空間。
+
+在設定檔檢視器中查詢設定檔時，您可能會繼續看到`primary=true`個「事件」標幟。 不過，此專案會被忽略，且不會由設定檔使用。
+
+預設會封鎖AAID。 因此，如果您使用[Adobe Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)，您必須確定ECID的優先順序高於ECID，讓未驗證的事件具有ECID的主要身分識別。
+
+**疑難排解步驟**
+
+1. 若要驗證驗證事件是否同時包含人員和Cookie名稱空間，請閱讀[疑難排解未擷取至身分識別服務之資料的錯誤一節中概述的步驟](#my-identities-are-not-getting-ingested-into-identity-service)。
+2. 若要驗證驗證事件是否具有人員名稱空間的主要身分（例如CRMID），請使用不拼接合併原則（這是不使用私人圖表的合併原則）在設定檔檢視器上搜尋人員名稱空間。 此搜尋只會傳回與人員名稱空間關聯的事件。
+
 ### 我的體驗事件片段未內嵌到設定檔中 {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 您的體驗事件片段未擷取至設定檔中的原因有很多，包含但不限於：
@@ -171,29 +189,11 @@ ht-degree: 0%
 * 一個身分會從identityMap傳送，另一個身分會從身分描述項傳送。 **注意**：在Experience Data Model (XDM)結構描述中，身分描述項是標示為身分的欄位。
 * CRMID會透過identityMap傳送。 如果CRMID是以欄位傳送，請從WHERE子句移除`key='Email'`。
 
-### 我的體驗事件片段已擷取，但設定檔中的主要身分有「錯誤」
-
-名稱空間優先順序在事件片段判斷主要身分的方式中會扮演重要角色。
-
-* 設定並儲存指定沙箱的[身分設定](./identity-settings-ui.md)後，設定檔就會使用[名稱空間優先順序](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events)來判斷主要身分。 在identityMap的情況下，設定檔將不再使用`primary=true`旗標。
-* 雖然設定檔將不再參考此標幟，但Experience Platform上的其他服務可能會繼續使用`primary=true`標幟。
-
-為了將[已驗證的使用者事件](implementation-guide.md#ingest-your-data)繫結至人員名稱空間，所有已驗證的事件都必須包含人員名稱空間(CRMID)。 這表示即使使用者登入後，每個已驗證的事件上仍必須存在人員名稱空間。
-
-在設定檔檢視器中查詢設定檔時，您可能會繼續看到`primary=true`個「事件」標幟。 不過，此專案會被忽略，且不會由設定檔使用。
-
-預設會封鎖AAID。 因此，如果您使用[Adobe Analytics來源聯結器](../../sources/tutorials/ui/create/adobe-applications/analytics.md)，您必須確定ECID的優先順序高於ECID，讓未驗證的事件具有ECID的主要身分識別。
-
-**疑難排解步驟**
-
-* 若要驗證驗證事件是否同時包含人員和Cookie名稱空間，請閱讀[疑難排解未擷取至身分識別服務之資料的錯誤一節中概述的步驟](#my-identities-are-not-getting-ingested-into-identity-service)。
-* 若要驗證驗證事件是否具有人員名稱空間的主要身分（例如CRMID），請使用不拼接合併原則（這是不使用私人圖表的合併原則）在設定檔檢視器上搜尋人員名稱空間。 此搜尋只會傳回與人員名稱空間關聯的事件。
-
 ## 圖表行為相關問題 {#graph-behavior-related-issues}
 
 本節概述您可能會遇到的有關身分圖表行為方式的常見問題。
 
-### 此身分正連結至「錯誤」的人
+### 未驗證的ExperienceEvents被附加到錯誤的已驗證設定檔
 
 身分最佳化演演算法會接受[最近建立的連結，並移除最舊的連結](./identity-optimization-algorithm.md#identity-optimization-algorithm-details)。 因此，啟用此功能後，ECID可能會從一個人重新指派（重新連結）至另一個人。 若要瞭解身分在一段時間內如何連結的歷史記錄，請遵循下列步驟：
 
@@ -209,11 +209,11 @@ ht-degree: 0%
 
 首先，您必須收集下列資訊：
 
-* 已傳送之Cookie名稱空間（例如ECID）和人員名稱空間（例如CRMID）的身分符號(namespaceCode)。
-   * 針對Web SDK實作，這些通常是identityMap中包含的名稱空間。
-   * 對於Analytics來源聯結器實作，這些是identityMap中包含的Cookie識別碼。 個人識別碼是標示為身分的eVar欄位。
-* 在中傳送事件的資料集(dataset_name)。
-* 要查閱的Cookie名稱空間身分值(identity_value)。
+1. 已傳送之Cookie名稱空間（例如ECID）和人員名稱空間（例如CRMID）的身分符號(namespaceCode)。
+1.1.針對Web SDK實作，這些通常是identityMap中包含的名稱空間。
+1.2.對於Analytics來源聯結器實作，這些是identityMap中包含的Cookie識別碼。 個人識別碼是標示為身分的eVar欄位。
+2. 在中傳送事件的資料集(dataset_name)。
+3. 要查閱的Cookie名稱空間身分值(identity_value)。
 
 身分符號(namespaceCode)區分大小寫。 若要擷取identityMap中指定資料集的所有身分符號，請執行以下查詢：
 
@@ -241,7 +241,7 @@ SELECT distinct explode(*)FROM (SELECT map_keys(identityMap) FROM dataset_name)
 
 >[!ENDTABS]
 
-接下來，執行下列查詢，依時間戳記順序檢查Cookie名稱空間的關聯：
+現在您已識別連結至多個人員ID的Cookie值，請從結果中取一個，並在以下查詢中使用它來取得該Cookie值連結至不同人員ID時的時間順序檢視：
 
 >[!BEGINTABS]
 
@@ -368,6 +368,13 @@ ORDER BY timestamp desc
    * 例如，如果動作之間存在等待條件，且在等待期間會傳輸ECID，則可能會鎖定不同的設定檔。
    * 透過此功能，ECID不再一律與一個設定檔相關聯。
    * 建議使用人員名稱空間(CRMID)開始歷程。
+
+>[!TIP]
+>
+>歷程應查詢具有唯一名稱空間的設定檔，因為非唯一名稱空間可能會重新指派給其他使用者。
+>
+>* ECID及非唯一電子郵件/電話名稱空間可從一個人移動至另一個人。
+>* 如果歷程有等待條件，且如果這些非唯一名稱空間用於在歷程中查詢設定檔，則歷程訊息可能會傳送給錯誤的人。
 
 ## 命名空間優先等級
 
