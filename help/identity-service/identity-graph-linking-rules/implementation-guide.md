@@ -2,9 +2,9 @@
 title: 身分圖表連結規則的實作指南
 description: 瞭解使用身分圖表連結規則設定實作資料時，建議遵循的步驟。
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 1. [實作的完整必要條件](#prerequisites-for-implementation)
 2. [建立必要的身分名稱空間](#namespace)
 3. [使用圖表模擬工具來熟悉身分最佳化演演算法](#graph-simulation)
-4. [使用身分設定工具來指定您專屬的名稱空間，並設定名稱空間的優先順序排名](#identity-settings)
+4. [使用身分設定UI來指定您專屬的名稱空間，並設定名稱空間的優先順序排名](#identity-settings)
 5. [建立體驗資料模型(XDM)結構描述](#schema)
 6. [建立資料集](#dataset)
 7. [將您的資料內嵌至Experience Platform](#ingest)
@@ -183,9 +183,13 @@ Identity Service實作程式中的第一個步驟，是確保將您的Experience
 
 ## 設定身分設定 {#identity-settings}
 
-一旦您知道您想要圖形的行為方式，請瀏覽至Identity Service UI工作區中的[身分設定工具](./identity-settings-ui.md)。
+一旦您知道您想要圖形的行為方式，請瀏覽至Identity Service UI工作區中的[身分設定UI](./identity-settings-ui.md)。 若要存取身分設定UI，請從左側導覽選取&#x200B;**[!UICONTROL 身分]**，然後選取&#x200B;**[!UICONTROL 設定]**。
 
-使用身分設定工具來指定您唯一的名稱空間，並依優先順序設定您的名稱空間。 套用完設定後，您必須至少等待六個小時才能繼續內嵌資料，因為新設定至少需要六個小時才能反映在Identity Service中。
+![身分瀏覽頁面中反白顯示設定按鈕。](../images/implementation/settings.png)
+
+使用身分設定UI來指定您唯一的名稱空間，並依優先順序設定您的名稱空間。 套用完設定後，您必須至少等待六個小時才能繼續內嵌資料，因為新設定至少需要六個小時才能反映在Identity Service中。
+
+如需詳細資訊，請閱讀[身分設定UI指南](./identity-settings-ui.md)。
 
 ## 建立 XDM 結構描述 {#schema}
 

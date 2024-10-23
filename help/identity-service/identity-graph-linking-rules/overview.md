@@ -2,7 +2,7 @@
 title: 身分圖表連結規則
 description: 瞭解Identity Service中的身分圖表連結規則。
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 2%
@@ -98,11 +98,11 @@ ht-degree: 2%
 
 請考量下列情況：
 
-* Scott使用平板電腦並開啟Google Chrome瀏覽器，前往nike<span>.com，在此登入並瀏覽新籃球鞋。
+* Scott使用平板電腦並開啟Google Chrome瀏覽器，前往acme<span>.com，在此登入並瀏覽新籃球鞋。
    * 在幕後，此情境會記錄下列身分：
       * 代表使用瀏覽器的ECID名稱空間和值
       * 代表已驗證使用者（Scott以他的使用者名稱和密碼組合登入）的CRMID名稱空間和值。
-* 他的兒子Peter接著使用相同的平板電腦，也使用Google Chrome前往nike<span>.com，並以自己的帳戶登入，以瀏覽足球裝備。
+* 他的兒子Peter接著使用相同的平板電腦，並使用Google Chrome前往acme<span>.com，以自己的帳戶登入以瀏覽足球裝備。
    * 在幕後，此情境會記錄下列身分：
       * 代表瀏覽器的相同ECID名稱空間和值。
       * 代表已驗證使用者的新CRMID名稱空間和值。
