@@ -5,8 +5,8 @@ description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1556'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -80,12 +80,12 @@ organizations = [{
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="啟用階層式輸出結構描述"
->abstract="如果要匯出階層式結構（如陣列），請開啟此功能。"
+>abstract="如果您想匯出像是陣列之類的階層式結構，將此選項切換為開啟。"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
->title="新增計算欄位功能已停用"
->abstract="此控制項已停用，因為您選取在連線到目的地時匯出平面結構。"
+>title="新增計算欄位已停用"
+>abstract="此控制項已停用，因為您在連接到目標時選取匯出單層結構。"
 
 在雲端儲存體目的地的啟動工作流程對應步驟中，選取&#x200B;**[!UICONTROL 新增計算欄位]**。
 

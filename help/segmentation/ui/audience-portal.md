@@ -4,8 +4,8 @@ description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
 source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4320'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -212,8 +212,8 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="彈性的對象評估限制"
->abstract="您可在單一彈性對象評估回合中評估最多20個對象。<br/><br/>此外，當評估工作儘快執行時，可能會發生系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
+>title="彈性客群評估限制"
+>abstract="您可以在單一彈性客群評估執行中評估最多 20 個客群。<br/><br/>此外，雖然評估工作會盡快執行，但可能會出現系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
 
 此外，您最多可以選取25個不同的對象，並對這些對象執行各種動作。 這些動作包括[移至資料夾](#folders)、[編輯或套用標籤](#tags)、[套用存取標籤](../../access-control/abac/ui/labels.md)和[刪除](#browse)。
 
@@ -299,7 +299,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 | 資料集名稱 | 對象所擷取的資料集名稱。 您可以選取資料集名稱，以取得資料集的詳細資訊。 若要深入瞭解資料集，請閱讀[資料集UI指南](../../catalog/datasets/user-guide.md)。 |
 | 資料集批次 | 對象所擷取的資料集ID。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
 | 輪廓批次 | 在Platform上建立設定檔的批次識別碼。 您可以選取批次的ID以取得批次的詳細資訊。 若要深入瞭解批次，請閱讀[監控資料擷取指南](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches)。 |
-| 綱要 | 對象所屬的結構描述名稱。 您可以選取結構描述的名稱，以檢視有關結構描述結構的資訊並套用資料使用標籤。 如需詳細資訊，請閱讀結構描述指南](../../xdm/tutorials/labels.md)的[管理資料使用標籤。 |
+| 結構描述 | 對象所屬的結構描述名稱。 您可以選取結構描述的名稱，以檢視有關結構描述結構的資訊並套用資料使用標籤。 如需詳細資訊，請閱讀結構描述指南](../../xdm/tutorials/labels.md)的[管理資料使用標籤。 |
 | 已擷取的記錄 | 擷取到資料集中的記錄數。 |
 | 失敗的記錄 | 無法擷取到資料集中的記錄數。 |
 | 新的輪廓片段 | 已建立的新設定檔數。 |
