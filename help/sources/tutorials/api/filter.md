@@ -2,7 +2,7 @@
 title: 使用流量服務API篩選Source的列層級資料
 description: 本教學課程涵蓋如何使用Flow Service API在來源層級篩選資料的步驟
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 4%
@@ -687,12 +687,12 @@ curl -X GET \
 **API格式**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | 參數 | 說明 |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | 您要擷取之來源連線的ID。 |
+| `{SOURCE_CONNECTION_ID}` | 您要更新的來源連線識別碼 |
 
 +++要求
 

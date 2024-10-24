@@ -2,9 +2,9 @@
 title: 命名空間優先等級
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ ht-degree: 2%
 
 | 使用者動作（體驗事件） | 驗證狀態 | 資料來源 | 事件中的名稱空間 | 主要身分的名稱空間 |
 | --- | --- | --- | --- | --- |
-| 檢視信用卡優惠方案頁面 | 未驗證（匿名） | Web SDK | {ECID} | ECID |
-| 檢視說明頁面 | 未驗證 | Mobile SDK | {ECID， IDFA} | IDFA |
-| 檢視支票帳戶餘額 | 已驗證 | Web SDK | {CRMID， ECID} | CRMID |
-| 註冊房屋貸款 | 已驗證 | Analytics來源聯結器 | {CRMID， ECID， AAID} | CRMID |
-| 將$1,000從支票轉帳至節省金額 | 已驗證 | Mobile SDK | {CRMID， GAID， ECID} | CRMID |
+| 檢視信用卡優惠方案頁面 | 未驗證（匿名） | Web SDK | `{ECID}` | ECID |
+| 檢視說明頁面 | 未驗證 | Mobile SDK | `{ECID, IDFA}` | IDFA |
+| 檢視支票帳戶餘額 | 已驗證 | Web SDK | `{CRMID, ECID}` | CRMID |
+| 註冊房屋貸款 | 已驗證 | Analytics來源聯結器 | `{CRMID, ECID, AAID}` | CRMID |
+| 將$1,000從支票轉帳至節省金額 | 已驗證 | Mobile SDK | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
