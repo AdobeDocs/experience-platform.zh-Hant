@@ -5,9 +5,9 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 22%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 22%
    - [SSL模式](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
+   - [GitHub Copilot](./clients/github-copilot.md)
    - [Jupyter Notebook](clients//jupyter-notebook.md)
    - [檢視器](clients/looker.md)
    - [Postico](clients/postico.md)
