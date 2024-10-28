@@ -2,10 +2,10 @@
 title: Adobe Analytics擴充功能概觀
 description: 瞭解Adobe Experience Platform中的Adobe Analytics標籤擴充功能。
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 82%
+source-wordcount: '2331'
+ht-degree: 75%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 請使用此參考資料來了解有關設定 Adobe Analytics 擴充功能的資訊，以及使用此擴充功能建立規則時可用的選項。
 
@@ -288,7 +288,19 @@ Analytics 擴充功能提供下列動作：
 
 ### 設定變數 {#set-variables}
 
-重要：使用「設定變數」動作不會傳送信標。您必須使用「傳送信標」動作。
+>[!IMPORTANT]
+>
+>您無法使用「設定變數」動作來傳送信標。 若要傳送信標，您必須選取「傳送信標」動作。
+
+您可以在&#x200B;**設定變數**&#x200B;中的兩個不同檢視之間選擇：
+
+>[!BEGINTABS]
+
+>[!TAB 提供個別屬性]
+
+您可以在此檢視中指定不同的變數，例如`eVars`、`Props`、`Events`。
+
+![列出其他屬性的Adobe Analytics表單檢視頁面。](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVar
 
@@ -318,6 +330,25 @@ Analytics 擴充功能提供下列動作：
 1. (選用) 選擇或指定用於[事件序列化](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html)的資料元素。
 1. （選擇性）選取&#x200B;**[!UICONTROL 新增事件]**&#x200B;以設定更多事件。
 1. 選取&#x200B;**[!UICONTROL 保留變更]**。
+
+>[!TAB JSON檢視]
+
+在此檢視中，您可以檢視及編輯&#x200B;**設定變數**&#x200B;動作的JSON版本。
+
+![在Adobe Analytics擴充功能中，以JSON格式呈現目前集合變陣列態的檢視。](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+在&#x200B;**設定變數**&#x200B;動作中，使用JSON檢視來上傳、複製或下載JSON資料，並將其儲存在您的裝置上。
+
+但是，確實存在一些限制：
+
+* **自訂程式碼**：如果您使用自訂程式碼填入變數，變數將不會顯示在JSON檢視中。 相反地，在檢視、複製或下載JSON時會出現警報，指出透過自訂程式碼進行的修改將不會包括在內。
+* **從URL屬性複製**： JSON檢視中不支援從URL複製值。 系統會顯示警示以指出此限制。
+* **已淘汰的變數**：已淘汰或已棄用的變數會顯示在JSON檢視中，且會顯示通知，告知已設定已淘汰的變數。
+* **資料元素**：資料元素在JSON檢視中呈現。 如果JSON資料複製到另一個Tags屬性，則對應的資料元素可能未在該屬性中定義，且無法在執行時正確解析。
+
+>[!ENDTABS]
 
 #### 階層
 
