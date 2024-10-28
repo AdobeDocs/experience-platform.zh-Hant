@@ -3,9 +3,9 @@ keywords: target個人化；目的地；experience platform target目的地；ad
 title: Adobe Target連線
 description: Adobe Target應用程式可在跨網站、行動應用程式等處的所有傳入客戶互動中提供即時的AI支援個人化和實驗功能。
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 9%
 
 ---
@@ -126,7 +126,8 @@ Adobe Experience Platform會自動連線至貴公司的Adobe Target執行個體�
 
   >[!IMPORTANT]
   >
-  >每個Adobe Target目的地連線的資料串流ID都是唯一的。 如果您需要將相同的對象對應到多個資料流，您必須為每個資料流ID [建立新的目的地連線](../../ui/connect-destination.md)，並完成[對象啟動流程](#activate)。
+  >每個Adobe Target目的地連線的資料串流ID都是唯一的。 您無法在多個Adobe Target目的地連線中使用相同的資料串流ID。
+  >如果您需要將相同的對象對應到多個資料流，您必須為每個資料流ID [建立新的目的地連線](../../ui/connect-destination.md)，並完成[對象啟動流程](#activate)。
 
    * **[!UICONTROL 無]**：如果您需要設定Adobe Target個人化，但無法實作[Experience PlatformWeb SDK](/help/web-sdk/home.md)，請選取此選項。 使用此選項時，從Experience Platform匯出至Target的受眾僅支援下一次工作階段個人化，且會停用邊緣細分。 請參考[支援的使用案例](#supported-use-cases)區段中的資料表，以比較每個實作型別的可用使用案例。
 
