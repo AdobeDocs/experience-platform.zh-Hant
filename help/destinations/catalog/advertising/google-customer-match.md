@@ -3,10 +3,10 @@ keywords: google客戶比對；Google客戶比對；Google客戶比對
 title: Google Customer Match連線
 description: Google Customer Match可讓您使用線上和離線資料，透過Google所擁有和營運的屬性(例如搜尋、購物、Gmail和YouTube)聯絡客戶，並與客戶重新互動。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 1%
+source-wordcount: '2100'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 > Google正在發佈[Google Ads API](https://developers.google.com/google-ads/api/docs/start)、[Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html)和[Display &amp; Video 360 API](https://developers.google.com/display-video/api/guides/getting-started/overview)的變更，以支援歐盟（[歐盟使用者同意政策](https://www.google.com/about/company/user-consent-policy/)）中[數位市場法](https://digital-markets-act.ec.europa.eu/index_en) (DMA)所定義的法規遵循與同意相關需求。 自2024年3月6日起，將開始強制執行同意要求的這些變更。
 ><br/>
->為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 Adobe身為Google合作夥伴，為您提供在歐盟DMA下符合這些同意要求的必要工具。
+>為了遵循歐盟使用者同意政策並繼續為歐洲經濟區(EEA)的使用者建立對象清單，廣告商和合作夥伴必須確保在上傳對象資料時傳遞一般使用者同意。 作為 Google 合作夥伴，Adobe 會為您提供必要的工具，以遵守歐盟之 DMA 規定的這些同意要求。
 ><br/>
 >已購買AdobePrivacy &amp; Security Shield且已設定[同意原則](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation)以篩選掉非同意的設定檔的客戶不需要採取任何動作。
 ><br/>
@@ -172,7 +172,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!IMPORTANT]
 > 
@@ -215,6 +215,20 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 屬性來源資料不會自動雜湊。 當您的來源欄位包含未雜湊的屬性時，請核取&#x200B;**[!UICONTROL 套用轉換]**&#x200B;選項，讓[!DNL Platform]在啟用時自動雜湊資料。
 
 ![套用啟用工作流程對應步驟中反白顯示的轉換控制項。](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## 監視目的地 {#monitor-destination}
+
+連線到目的地並建立目的地資料流後，您可以使用Real-Time CDP中的[監視功能](/help/dataflows/ui/monitor-destinations.md)來取得每次資料流執行中在您的目的地啟用的設定檔記錄的廣泛資訊。
+
+>[!IMPORTANT]
+>
+> Adobe自2024年10月起陸續推出更新，以提高串流目的地的報表準確性。 此增強功能可確保Experience Platform與目的地平台報告之間更佳的對應。
+>
+> 在此更新之前，**[!UICONTROL 身分失敗]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。
+>
+> 此增強功能目前適用於[Google Customer Match目的地](google-customer-match.md)，但將逐步推廣至其他Experience Platform串流目的地。
+> 在此增強功能之後，此目的地的使用者可能會看到其&#x200B;**[!UICONTROL 身分識別失敗]**&#x200B;計數中預期的下降。
+
 
 ## 驗證對象啟用是否成功 {#verify-activation}
 

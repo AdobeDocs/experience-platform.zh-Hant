@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 在UI中監視目的地的資料流
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 10%
+source-wordcount: '3639'
+ht-degree: 9%
 
 ---
 
@@ -94,6 +94,17 @@ ht-degree: 10%
 - **[!UICONTROL 已啟用的身分]**：在資料流執行過程中成功啟用至所選目的地的設定檔身分總數。 此量度包括從匯出的客群中建立、更新和刪除的身分。
 - **[!UICONTROL 排除的身分]**：根據遺失的屬性和同意違規，從啟用中排除的設定檔身分總數。
 - **[!UICONTROL 身分失敗]**&#x200B;由於錯誤而未啟用到目的地的設定檔身分總數。
+
+  >[!IMPORTANT]
+  >
+  > Adobe自2024年10月起陸續推出更新，以提高串流目的地的報表準確性。 此增強功能可確保Experience Platform與目的地平台報告之間更佳的對應。
+  >
+  > 在此更新之前，**[!UICONTROL 身分失敗]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。
+  > 
+  > 此增強功能目前適用於[Google Customer Match目的地](../../destinations/catalog/advertising/google-customer-match.md)，但將逐步推廣至其他Experience Platform串流目的地。
+  > 進行此增強功能後，[Google Customer Match目的地](../../destinations/catalog/advertising/google-customer-match.md)的使用者可能會看到其&#x200B;**[!UICONTROL 身分識別失敗]**&#x200B;計數中預期的下降。
+
+
 - **[!UICONTROL 啟用率]**：已順利啟用或略過的接收身分百分比。 下列公式示範如何計算此值：
   ![啟用率公式。](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL 狀態]**：代表資料流所處的狀態： [!UICONTROL 已完成]或[!UICONTROL 正在處理]。 [!UICONTROL 已完成]表示已在一小時內匯出對應資料流執行的所有身分。 [!UICONTROL 正在處理]表示資料流執行尚未完成。
