@@ -3,9 +3,9 @@ keywords: 雲端儲存空間目的地；雲端儲存空間
 title: 雲端儲存空間目的地概觀
 description: Adobe Experience Platform可將您的對象以資料檔案的形式傳送至您的Amazon S3、AWS Kinesis、Azure事件中樞或SFTP雲端儲存位置。
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
+source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '463'
 ht-degree: 5%
 
 ---
@@ -40,7 +40,7 @@ Adobe Experience Platform支援將資料匯出至下列雲端儲存空間目的�
 
 >[!NOTE]
 >
-> 本節所述的功能目前僅適用於[Amazon S3](amazon-s3.md)目的地。
+> 本節所述的功能適用於所有雲端儲存目的地。 不過，[Amazon S3](amazon-s3.md)目的地目前僅支援`%SEGMENT_ID%`和`%SEGMENT_NAME%`巨集。
 
 若要在儲存位置中為每個對象檔案建立自訂資料夾，您可以在資料夾路徑輸入欄位中使用巨集。 在輸入欄位的結尾處插入巨集，如下所示。
 
