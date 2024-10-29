@@ -3,9 +3,9 @@ title: 啟用對象以批次設定檔匯出目的地
 type: Tutorial
 description: 瞭解如何透過將您在Adobe Experience Platform中的對象傳送到批次設定檔型目的地來啟用這些對象。
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
+source-wordcount: '4151'
 ht-degree: 11%
 
 ---
@@ -133,11 +133,11 @@ Experience Platform會自動設定每個檔案匯出的預設排程。 您可以
 
 2. 使用&#x200B;**[!UICONTROL 時間]**&#x200B;切換功能來選取匯出應該在對象評估後立即執行，還是在指定的時間依排程執行。 選取&#x200B;**[!UICONTROL 已排程]**&#x200B;選項時，您可以使用選取器來選取一天中應該進行匯出時的時間（格式為[!DNL UTC]）。
 
-   >[!NOTE]
-   >
-   >底下所述的&#x200B;**[!UICONTROL 區段評估後]**&#x200B;選項僅供選取Beta客戶使用。
+   使用&#x200B;**[!UICONTROL 區段評估之後]**&#x200B;選項，讓啟動工作在每日平台批次分段工作完成後立即執行。 此選項可確保當啟動工作執行時，最新的設定檔會匯出至您的目的地。 這可能會導致根據您的動作，一天匯出對象多次。
 
-   使用&#x200B;**[!UICONTROL 區段評估之後]**&#x200B;選項，讓啟動工作在每日平台批次分段工作完成後立即執行。 此選項可確保當啟動工作執行時，最新的設定檔會匯出至您的目的地。
+   >[!IMPORTANT]
+   >
+   >如果您對已設定在區段評估後啟用的對象執行[彈性對象評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則無論任何先前的每日啟用工作，彈性對象評估工作一完成，對象就會啟用。 這可能會導致根據您的動作，一天匯出對象多次。
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
