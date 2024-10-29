@@ -1,29 +1,24 @@
 ---
 title: 使用沙箱工具跨組織共用套件
 description: 瞭解如何使用Adobe Experience Platform中的沙箱工具來跨不同組織共用套件。
-badge: Beta
-source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
+source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
 
 # 使用沙箱工具跨組織共用套件
 
->[!NOTE]
->
->跨組織共用套件目前為測試版，僅供特定測試版客戶使用。
-
 提高沙箱之間的設定準確性，並利用沙箱工具功能順暢地匯出和匯入不同組織的沙箱之間的沙箱設定。 本文介紹如何在Adobe Experience Platform中使用沙箱工具，以在不同組織之間共用套件。 共用的套件有兩種型別：
 
 - **私人套件**
 
-[私人套件](#private-packages)只能與已透過選擇加入允許清單從來源組織核准共用要求的組織共用。
+[私人套件](#private-packages)只能與已核准來源組織之共用要求的組織共用。
 
 - **公用套件**
 
-[公用套件](./sandbox-tooling.md/#export-and-import-an-entire-sandbox)不需額外核准即可匯入。 這些套件可在合作夥伴的網站、部落格或平台上共用。 封裝裝載可讓封裝從這些通道複製並貼到目標組織。
+[公用套件](#public-packages)不需額外核准即可匯入。 這些套件可在合作夥伴的網站、部落格或平台上共用。 封裝裝載可讓封裝從這些通道複製並貼到目標組織。
 
 ## 私人套件 {#private-packages}
 
@@ -88,6 +83,52 @@ ht-degree: 0%
 >您可以選取多個組織。 選取的組織會顯示在[!UICONTROL 共用設定]下拉式清單下。
 
 ![共用套件對話方塊，其中的[共用]設定和[確認]已反白顯示。](../images/ui/sandbox-tooling/private-share-package-confirm.png)
+
+## 公用套件 {#public-packages}
+
+使用沙箱工具功能來建立不需要任何其他核准的可共用公用套件，並使用套件的裝載輕鬆匯入。
+
+### 將套件可用性更新給公眾 {#update-package}
+
+若要更新套件的可用性型別，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 套件]**&#x200B;標籤。 接著，選取封裝旁邊的省略符號(`...`)，然後從下拉式功能表中選取&#x200B;**[!UICONTROL 更新至公用封裝]**。
+
+![包含封裝索引標籤的沙箱UI，以及反白顯示更新至公用封裝的下拉式選項功能表。](../images/ui/sandbox-tooling/update-to-public.png)
+
+在&#x200B;**[!UICONTROL 將封裝可用性變更為公用]**&#x200B;對話方塊中，確認封裝名稱正確並選取&#x200B;**[!UICONTROL 確認]**。
+
+>[!IMPORTANT]
+>
+> 將套件設為公開後，即無法將其變更回私用。
+
+![將封裝可用性變更為公開對話方塊，並反白顯示[確認]。](../images/ui/sandbox-tooling/change-package-availability.png)
+
+### 使用封裝裝載共用封裝
+
+若要共用公用封裝，請選取封裝旁邊的省略符號(`...`)，然後選取&#x200B;**[!UICONTROL 複製封裝裝載]**。
+
+![沙箱UI會顯示個別封裝下拉式功能表，其中反白顯示複製封裝裝載。](../images/ui/sandbox-tooling/copy-package-payload.png)
+
+**[!UICONTROL 複製封裝承載]**&#x200B;對話方塊會顯示封裝名稱和承載。 選取&#x200B;**[!UICONTROL 複製封裝裝載]**&#x200B;以複製與封裝相關聯的裝載。
+
+![複製封裝裝載對話方塊，其中顯示醒目提示複製封裝裝載的JSON裝載。](../images/ui/sandbox-tooling/confirm-payload-copy.png)
+
+### 使用封裝裝載建立新封裝
+
+若要使用封裝裝載建立封裝，請瀏覽至[!UICONTROL 沙箱] **[!UICONTROL 封裝]**&#x200B;標籤。 接著，選取&#x200B;**[!UICONTROL 建立封裝]**。
+
+![顯示醒目提示「建立封裝」的Sandboxes UI。](../images/ui/sandbox-tooling/create-package.png)
+
+在&#x200B;**[!UICONTROL 建立封裝]**&#x200B;對話方塊中，選取&#x200B;**[!UICONTROL 貼上封裝承載]**&#x200B;的選項，然後選取&#x200B;**[!UICONTROL 選取]**。
+
+![已選取貼上封裝裝載並選取反白顯示的[建立封裝]對話方塊。](../images/ui/sandbox-tooling/create-package-options.png)
+
+將複製的封裝裝載貼到文字欄位中，並選取&#x200B;**[!UICONTROL 建立]**。
+
+![使用空白文字欄位建立套件對話方塊並反白顯示。](../images/ui/sandbox-tooling/paste-payload.png)
+
+若要檢視共用要求的目前狀態，請瀏覽至&#x200B;**[!UICONTROL 共用狀態]**。 要求的目前狀態會顯示在&#x200B;**[!UICONTROL 共用狀態]**&#x200B;資料行中。
+
+![共用狀態標籤顯示擱置的裝載要求。](../images/ui/sandbox-tooling/sharing-status.png)
 
 ## 後續步驟 {#next-steps}
 
