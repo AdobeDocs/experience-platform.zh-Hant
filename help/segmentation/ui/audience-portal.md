@@ -2,10 +2,10 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
+source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '4530'
+ht-degree: 4%
 
 ---
 
@@ -208,22 +208,47 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ![瀏覽對象頁面上會顯示並反白可用的篩選器。](../images/ui/audience-portal/filter-audiences.png)
 
-#### 大量動作 {#bulk-actions}
+### 大量動作 {#bulk-actions}
 
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="彈性客群評估限制"
->abstract="您可以在單一彈性客群評估執行中評估最多 20 個客群。<br/><br/>此外，雖然評估工作會盡快執行，但可能會出現系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
+此外，您最多可以選取25個不同的對象，並對這些對象執行各種動作。 這些動作包括[移至資料夾](#folders)、[編輯或套用標籤](#tags)、[評估對象](#flexible-audience-evaluation)、[套用存取標籤](../../access-control/abac/ui/labels.md)以及[刪除](#browse)。
 
-此外，您最多可以選取25個不同的對象，並對這些對象執行各種動作。 這些動作包括[移至資料夾](#folders)、[編輯或套用標籤](#tags)、[套用存取標籤](../../access-control/abac/ui/labels.md)和[刪除](#browse)。
+![顯示大量動作的可用選項。](../images/ui/audience-portal/bulk-actions.png)
 
-![大量動作的可用選項會反白顯示。](../images/ui/audience-portal/bulk-actions.png)
-
-將大量動作套用至這些對象時，將會套用下列條件：
+將大量動作套用至對象時，將會套用下列條件：
 
 - 您&#x200B;**可以**&#x200B;從不同頁面選取對象。
 - 您&#x200B;**無法**&#x200B;刪除目的地啟用中使用的對象。
 - 如果您選取篩選器，選取的對象&#x200B;**將**&#x200B;重設。
+
+#### [!BADGE 可用性有限]{type=Informative}彈性對象評估 {#flexible-audience-evaluation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="彈性客群評估限制"
+abstract="您可以在單一彈性客群評估執行中評估最多 20 個客群。<br/><br/>此外，雖然評估工作會盡快執行，但可能會出現系統延遲，因為隨選評估<b>無法</b>與另一個隨選或批次評估同時執行。"
+
+彈性的對象評估可讓您隨選執行細分工作。 選擇您要評估的對象並選取&#x200B;**[!UICONTROL 評估對象]**。
+
+>[!IMPORTANT]
+>
+選取對象以進行彈性的對象評估時，適用下列條件：
+>
+- 所有對象&#x200B;**都必須**&#x200B;具有「分段服務」的來源。
+- 所有對象&#x200B;**都必須**&#x200B;使用批次細分進行評估。
+- 所有對象&#x200B;**都必須**&#x200B;是以人物為基礎的對象。
+- 您最多只能選取20個對象。
+
+![您想要使用彈性對象評估的對象已選取。](../images/ui/audience-portal/evaluate-audiences.png)
+
+**[!UICONTROL 依需求評估對象]**&#x200B;彈出視窗會出現，顯示將使用依需求區段工作評估的對象清單。 如果對象不符合依需求評估的資格，系統會自動將其從評估工作中移除。 確認列出的對象是您想要評估的對象。
+
+![顯示可以使用彈性對象評估來評估的對象。](../images/ui/audience-portal/evaluate-audiences-modal.png)
+
+確認列出正確的對象後，請繼續處理請求，然後開始進行彈性的對象評估。
+
+>[!NOTE]
+>
+如果您對已設定在區段評估](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動[的受眾執行彈性受眾評估，則受眾會在彈性受眾評估工作完成後立即啟動，無論之前是否有任何每日啟動工作。
 
 ## 客群詳細資料 {#audience-details}
 
@@ -279,7 +304,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
->匯出工作完成後，可能需要30分鐘才會更新對象總數。
+匯出工作完成後，可能需要30分鐘才會更新對象總數。
 
 預估值是透過使用當天樣本資料的樣本大小所產生。 如果您的設定檔存放區中有少於100萬個實體，則會使用完整的資料集；對於100萬到2,000萬個之間的實體，會使用100萬個實體；而對於2,000萬個以上的實體，則會使用全部實體的5%。 如需有關產生預估的詳細資訊，請參閱對象建立教學課程的[預估產生區段](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)。
 
@@ -289,7 +314,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
->匯出工作後最多可能需要30分鐘，對象的設定檔計數才會完全更新。
+匯出工作後最多可能需要30分鐘，對象的設定檔計數才會完全更新。
 
 ![會顯示對象詳細資訊頁面的擷取詳細資訊區段。](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -307,7 +332,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
->最佳實務是將資料使用標籤套用至結構描述。 您&#x200B;**無法**&#x200B;將資料使用標籤直接套用至對象。
+最佳實務是將資料使用標籤套用至結構描述。 您&#x200B;**無法**&#x200B;將資料使用標籤直接套用至對象。
 
 ### 已啟用的目的地 {#activated-destinations}
 
@@ -315,7 +340,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
-> 目的地是[!DNL Adobe Real-Time Customer Data Platform]提供的功能，可讓您將資料匯出至外部平台。 如需有關目的地的詳細資訊，請閱讀[目的地概觀](../../destinations/home.md)。 若要瞭解如何啟用區段至目的地，請參閱[啟用概觀](../../destinations/ui/activation-overview.md)。
+目的地是[!DNL Adobe Real-Time Customer Data Platform]提供的功能，可讓您將資料匯出至外部平台。 如需有關目的地的詳細資訊，請閱讀[目的地概觀](../../destinations/home.md)。 若要瞭解如何啟用區段至目的地，請參閱[啟用概觀](../../destinations/ui/activation-overview.md)。
 
 ### 設定檔範例 {#profile-samples}
 
@@ -341,10 +366,10 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 ## 已排程分段 {#scheduled-segmentation}
 
->[!CONTEXTUALHELP]
->id="platform_segments_browse_addallsegmentstoschedule"
->title="將所有客群新增到排程"
->abstract="啟用以在每日排程更新中包含所有使用批次分段評估的客群。停用以從排程更新中移除所有客群。"
+[!CONTEXTUALHELP]
+id="platform_segments_browse_addallsegmentstoschedule"
+title="將所有客群新增到排程"
+abstract="啟用以在每日排程更新中包含所有使用批次分段評估的客群。停用以從排程更新中移除所有客群。"
 
 建立對象後，您就可以透過隨選或排程（持續）評估來評估對象。 評估表示將[!DNL Real-Time Customer Profile]資料移動至區段工作，以產生對應的對象。 建立對象後，會儲存並儲存對象，以便使用[!DNL Experience Platform] API匯出對象。
 
@@ -356,7 +381,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
->針對[!DNL XDM Individual Profile]最多有五(5)個合併原則的沙箱，可啟用排定的評估。 如果您的組織在單一沙箱環境中有[!DNL XDM Individual Profile]的五個以上的合併原則，您將無法使用排程的評估。
+針對[!DNL XDM Individual Profile]最多有五(5)個合併原則的沙箱，可啟用排定的評估。 如果您的組織在單一沙箱環境中有[!DNL XDM Individual Profile]的五個以上的合併原則，您將無法使用排程的評估。
 
 目前只能使用API建立排程。 如需使用API建立、編輯及使用排程的詳細步驟，請參閱教學課程以評估和存取分段結果，尤其是[使用API排程評估](../tutorials/evaluate-a-segment.md#scheduled-evaluation)的區段。
 
@@ -370,7 +395,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 此時畫面會顯示彈出視窗，讓您在構成對象或建立規則之間做出選擇。
 
-![顯示您可以建立的兩種對象型別的彈出視窗。](../images/ui/audience-portal/create-audience-type.png)
+![顯示兩種型別的彈出視窗 of 您可以建立的對象。](../images/ui/audience-portal/create-audience-type.png)
 
 ### 客群構成 {#audience-composition}
 
@@ -394,7 +419,7 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!IMPORTANT]
 >
->為了匯入外部產生的對象，您&#x200B;**必須**&#x200B;擁有下列許可權： [!UICONTROL 檢視區段]、[!UICONTROL 管理區段]以及[!UICONTROL 匯入對象]。 如需這些許可權的詳細資訊，請閱讀[存取控制總覽](../../access-control/home.md#permissions)。
+為了匯入外部產生的對象，您&#x200B;**必須**&#x200B;擁有下列許可權： [!UICONTROL 檢視區段]、[!UICONTROL 管理區段]以及[!UICONTROL 匯入對象]。 如需這些許可權的詳細資訊，請閱讀[存取控制總覽](../../access-control/home.md#permissions)。
 
 您可以選取&#x200B;**[!UICONTROL 匯入對象]**&#x200B;以匯入外部產生的對象。
 
@@ -406,11 +431,11 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
->外部產生的對象&#x200B;**必須**&#x200B;為CSV格式、最多&#x200B;**個**&#x200B;共25欄，且小於1GB。
+外部產生的對象&#x200B;**必須**&#x200B;為CSV格式、最多&#x200B;**個**&#x200B;共25欄，且小於1GB。
 >
->此外，您&#x200B;**無法**&#x200B;在CSV的第一列或關聯的欄中使用空格或破折號。
+此外，您&#x200B;**無法**&#x200B;在CSV的第一列或關聯的欄中使用空格或破折號。
 >
->例如，第一列的值可以是&quot;FirstName&quot;或&quot;First_Name&quot;，但不能是&quot;First Name&quot;或&quot;First-Name&quot;。
+例如，第一列的值可以是&quot;FirstName&quot;或&quot;First_Name&quot;，但不能是&quot;First Name&quot;或&quot;First-Name&quot;。
 
 選取要匯入的CSV檔案後，將顯示此外部產生對象的範例資料清單。 確認範例資料正確後，選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -426,10 +451,10 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!NOTE]
 >
->如果您使用自訂外部對象ID，則必須遵循下列准則：
+如果您使用自訂外部對象ID，則必須遵循下列准則：
 >
-> - **必須**&#x200B;以字母（a-z或A-Z）、底線(_)或美元符號($)開頭。
-> - 所有後續字元都可由英數字元(a-z、A-Z、0-9)、底線(_)或美元符號($)組成。
+- **必須**&#x200B;以字母（a-z或A-Z）、底線(_)或美元符號($)開頭。
+- 所有後續字元都可由英數字元(a-z、A-Z、0-9)、底線(_)或美元符號($)組成。
 
 填寫您的對象詳細資料後，選取&#x200B;**[!UICONTROL 下一步]**。
 
@@ -443,11 +468,11 @@ Audience Portal是Adobe Experience Platform的中央樞紐，可讓您檢視、�
 
 >[!IMPORTANT]
 >
->依預設，外部產生的對象資料的有效期限為30天。 如果以任何方式更新或修改對象，則會重設資料有效期。
+依預設，外部產生的對象資料的有效期限為30天。 如果以任何方式更新或修改對象，則會重設資料有效期。
 >
->此外，如果您的外部產生的對象包含敏感和/或醫療保健相關資訊，則您&#x200B;**必須**&#x200B;在將其啟用至任何目的地之前，先套用必要的資料使用標籤。 由於來自外部產生對象的變數會儲存在資料湖中，而非即時客戶個人檔案中，因此&#x200B;**不應**&#x200B;在CSV檔案中包含同意資料。
+此外，如果您的外部產生的對象包含敏感和/或醫療保健相關資訊，則您&#x200B;**必須**&#x200B;在將其啟用至任何目的地之前，先套用必要的資料使用標籤。 由於來自外部產生對象的變數會儲存在資料湖中，而非即時客戶個人檔案中，因此&#x200B;**不應**&#x200B;在CSV檔案中包含同意資料。
 >
->如需套用資料使用標籤的詳細資訊，請參閱[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 若要瞭解一般平台上的資料使用標籤，請閱讀[資料使用標籤概觀](../../data-governance/labels/overview.md)。 若要瞭解同意在外部產生的對象中如何運作，請閱讀[對象常見問題集](../faq.md#consent)。
+如需套用資料使用標籤的詳細資訊，請參閱[管理標籤](../../access-control/abac/ui/labels.md)的檔案。 若要瞭解一般平台上的資料使用標籤，請閱讀[資料使用標籤概觀](../../data-governance/labels/overview.md)。 若要瞭解同意在外部產生的對象中如何運作，請閱讀[對象常見問題集](../faq.md#consent)。
 
 ## 後續步驟
 
