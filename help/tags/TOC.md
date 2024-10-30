@@ -6,9 +6,9 @@ user-guide-description: 了解如何部署及管理分析、行銷和廣告標�
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '778'
 ht-degree: 35%
 
 ---
@@ -79,7 +79,7 @@ ht-degree: 35%
          * [發行說明](./extensions/client/analytics/release-notes.md)
       * [Adobe Analytics與Adobe Target](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [Adobe Analytics與Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)
-      * [Adobe Analytics &amp; Salesforce](https://exchange.adobe.com/apps/ec/101530)
+      * [Adobe Analytics與Salesforce](https://exchange.adobe.com/apps/ec/101530)
       * Adobe Analytics產品字串{#product-string}
          * [概觀](./extensions/client/product-string/overview.md)
          * [發行說明](./extensions/client/product-string/release-notes.md)
@@ -265,6 +265,7 @@ ht-degree: 35%
       * [授與使用者存取權](./extension-dev/submit/access.md)
       * [開發擴充功能](./extension-dev/submit/develop.md)
       * [建立 Exchange 清單](./extension-dev/submit/create-listing.md)
+      * [建立擴充功能套件zip](./extension-dev/submit/create-extension-package-zip.md)
       * [上傳並實作端對端測試](./extension-dev/submit/upload-and-test.md)
       * [發行擴充功能](./extension-dev/submit/release.md)
    * [擴充功能組態](./extension-dev/configuration.md)
@@ -309,7 +310,7 @@ ht-degree: 35%
       * [稽核事件](./api/endpoints/audit-events.md)
       * [回呼](./api/endpoints/callbacks.md)
       * [附註](./api/endpoints/notes.md)
-      * [設定檔](./api/endpoints/profile.md)
+      * [輪廓](./api/endpoints/profile.md)
       * [搜尋](./api/endpoints/search.md)
       * [秘密](./api/endpoints/secrets.md)
    * 指南 {#guides}

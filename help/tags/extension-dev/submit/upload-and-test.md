@@ -2,10 +2,10 @@
 title: 上傳並實作擴充功能的端對端測試
 description: 瞭解如何在Adobe Experience Platform中驗證、上傳和測試您的擴充功能。
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 23%
+source-wordcount: '2345'
+ht-degree: 22%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../term-updates.md)。
 
 若要在Adobe Experience Platform中測試標籤擴充功能，請使用標籤API和/或命令列工具來上傳您的擴充功能套件。 接下來，使用Platform UI或資料收集UI將您的擴充功能套件安裝至屬性，並在標籤程式庫和組建中實作其功能。
 
@@ -43,7 +43,7 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->若要在 Adobe I/O 中建立整合，您必須是 Experience Cloud 組織管理員或 Experience Cloud 組織開發人員。
+>若要在Adobe I/O中建立整合，您必須是Experience Cloud組織管理員或Experience Cloud組織開發人員。
 
 如果您無法建立整合，表示您可能沒有正確的許可權。 這需要組織管理員為您完成步驟或將您指派為開發人員。
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx`可讓您下載並執行npm套件，而無需在機器上實際安裝。 這是上傳程式最簡單的執行方式。
 
-上傳程式需要您輸入數項資訊。 技術帳戶ID、API金鑰和其他一些資訊可以從Adobe I/O主控台擷取。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/tw/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL 檢視]**。
+>[!NOTE]
+> 依預設，上傳程式會預期伺服器對伺服器Oauth流程的Adobe I/O認證。 舊版`jwt-auth`認證
+> 可藉由執行`npx @adobe/reactor-uploader@v5.2.0`使用，直到2025年1月1日停止使用。 必要的引數
+> 若要執行`jwt-auth`版本，可在[這裡](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452)找到。
 
-- 您的私密金鑰路徑為何？/path/to/private.key。這是您先前在步驟 2 中儲存私密金鑰的位置。
-- 您的組織 ID 為何？請從您先前開啟的I/O主控台概觀頁面中複製並貼上此內容。
-- 您的技術帳戶 ID 為何？請從I/O主控台複製並貼上。
-- 您的 API 金鑰為何？請從I/O主控台複製並貼上。
-- 使用者端密碼為何？ 請從I/O主控台複製並貼上。
-- 您要上傳的extension_package的路徑為何？/path/to/extension_package.zip. 如果從包含 .zip 套件的目錄中叫用上傳程式，您可以直接從清單中選取，而無需輸入路徑。
+上傳程式僅需要您輸入幾項資訊。 可以從Adobe I/O主控台擷取`clientId`和`clientSecret`。 導覽至I/O主控台中的[整合頁面](https://console.adobe.io/tw/integrations)。 從下拉式清單中選取正確的組織，尋找正確的整合，然後選取&#x200B;**[!UICONTROL 檢視]**。
+
+- 您的`clientId`是什麼？ 請從I/O主控台複製並貼上。
+- 您的`clientSecret`是什麼？ 請從I/O主控台複製並貼上。
+- 如果從包含 .zip 套件的目錄中叫用上傳程式，您可以直接從清單中選取，而無需輸入路徑。
 
 您的擴充功能套件將隨即上傳，且上傳程式會為您提供 extension_package 的 ID。
 
@@ -79,6 +81,8 @@ npx @adobe/reactor-uploader
 >[!NOTE]
 >
 >如果您預計要經常執行上傳程式，則每次都輸入這些資訊可能會造成負擔。 您也可以從命令列將這些資訊作為引數傳入。 如需詳細資訊，請查看 NPM 文件的[命令列引數](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments)一節。
+
+如果您想要直接使用API管理擴充功能的上傳，請在API檔案中參閱[建立](../../api/endpoints/extension-packages.md/#create)或[更新](../../api/endpoints/extension-packages.md#update)擴充功能套件的範例呼叫，以取得詳細資訊。
 
 ## 建立開發屬性 {#property}
 
