@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform發行說明2024年10月
 description: Adobe Experience Platform 2024 年 10 月版本注意事項。
-source-git-commit: a381bdc45ee9c3c7ffb32bb7a7ec43a1233d1556
+source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 41%
+source-wordcount: '1159'
+ht-degree: 35%
 
 ---
 
@@ -14,29 +14,30 @@ ht-degree: 41%
 
 Adobe Experience Platform 現有功能及文件的更新：
 
-- [資料集合](#data-collection)
-- [目標](#destinations)
-- [Segmentation Service](#segmentation-service)
-- [沙箱](#sandboxes)
-- [來源](#sources)
+- [儀表板{#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
+- [資料彙集 {#collection}](#data-collection-collection)
+- [目的地 {#destinations}](#destinations-destinations)
+- [細分服務 {#segmentation-service}](#segmentation-service-segmentation-service)
+- [沙箱{#sandboxes}](#sandboxes-sandboxes)
+- [來源 {#sources}](#sources-sources)
 
-<!-- ## Dashboards {#dashboards}
+## 儀表板 {#dashboards}
 
-Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+Experience Platform 提供多個儀表板，您可以透過這些儀表板檢視每日快照期間擷取之組織資料的重要分析。
 
-**New or updated features**
+**新功能或更新功能**
 
-| Feature | Description |
+| 功能 | 說明 |
 | --- | --- |
-| Data Distiller Templates | Explore multiple templates to gain structured insights into audience data. Use dashboards like **Advanced [!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]**, and **[!UICONTROL Audience Identity Overlaps]** to make data-driven decisions, optimize segmentation, and enhance engagement strategies. See the [Data Distiller Templates guide](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) for more details. |
-| Advanced Audience Overlaps | Quickly analyze audience intersections for specific audiences or view all overlaps to uncover valuable insights across your entire audience set. Use these insights to refine segmentation, reduce redundant messaging, and create more targeted campaigns for improved marketing efficiency. See the [Advanced Audience Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) for more details. |
-| Audience Comparison enhancements | View a side-by-side comparison of key metrics between different audience groups using the **Audience Comparison** dashboard. With this dashboard you can select specific time frames and KPIs, such as audience size and identity composition, to make more informed decisions about audience segmentation and targeting strategies. Read the [Audience Comparison guide](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) for more information. |
-| Audience Trends Visualization | Analyze audience metrics over time with the **[!UICONTROL Audience Trends]** dashboard. Visualize trends for audience size, number of identities, and number of single identity profiles to help you monitor audience evolution, measure growth, and refine your engagement strategies. See the [Audience Trends guide](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) for more details. |
-| Identity Overlaps Analysis | Analyze identity overlaps in selected audiences with the **[!UICONTROL Audience Identity Overlaps]** dashboard. View identity trends and breakdowns to understand how different identity types relate within your audience, enhancing identity stitching and improving customer segmentation accuracy. Refer to the [Audience Identity Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) for more details. |
+| 資料Distiller範本 | 探索多個範本，以取得對象資料的結構化深入分析。 使用如&#x200B;**進階[!UICONTROL 對象重疊]**、**[!UICONTROL 對象比較]**、**[!UICONTROL 對象趨勢]**&#x200B;和&#x200B;**[!UICONTROL 對象身分重疊]**&#x200B;等控制面板，以做出資料導向式決策、最佳化細分並增強參與策略。 如需詳細資訊，請參閱[資料Distiller範本指南](../../dashboards/sql-insights-query-pro-mode/templates/overview.md)。 |
+| 進階客群重疊 | 快速分析特定對象的對象交集，或檢視所有重疊，以發掘整個對象集中的寶貴見解。 運用這些見解來調整細分、減少多餘的訊息，並建立更有針對性的行銷活動，以提升行銷效率。 如需詳細資訊，請參閱[進階對象重疊指南](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)。 |
+| 對象比較增強功能 | 使用&#x200B;**對象比較**&#x200B;儀表板，檢視不同對象群組之間的關鍵量度並排比較。 利用此控制面板，您可以選取特定時間範圍和KPI （例如對象人數和身分構成），針對對象細分和鎖定目標策略做出更明智的決策。 如需詳細資訊，請參閱[對象比較指南](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)。 |
+| 對象趨勢視覺效果 | 使用&#x200B;**[!UICONTROL 對象趨勢]**&#x200B;儀表板分析一段時間內的對象量度。 將對象規模、身分數和單一身分設定檔數的趨勢視覺化，協助您監控對象演變、衡量成長情況，並調整參與策略。 如需詳細資訊，請參閱[對象趨勢指南](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)。 |
+| 身分重疊分析 | 使用&#x200B;**[!UICONTROL 對象身分重疊]**&#x200B;儀表板，分析所選對象中的身分重疊。 檢視身分趨勢和劃分，以瞭解對象中不同的身分型別如何產生關聯，進而增強身分拼接並改善客戶細分準確性。 如需詳細資訊，請參閱[對象身分重疊指南](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)。 |
 
 {style="table-layout:auto"}
 
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md). -->
+如需有關儀表板的詳細資訊，包括如何授予存取權限和建立自訂 Widget，請先詳閱[儀表板概觀](../../dashboards/home.md)。
 
 ## 資料彙集 {#collection}
 
