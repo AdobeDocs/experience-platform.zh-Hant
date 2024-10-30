@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform發行說明2024年10月
 description: Adobe Experience Platform 2024 年 10 月版本注意事項。
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 35%
@@ -14,12 +14,12 @@ ht-degree: 35%
 
 Adobe Experience Platform 現有功能及文件的更新：
 
-- [儀表板{#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [資料彙集 {#collection}](#data-collection-collection)
-- [目的地 {#destinations}](#destinations-destinations)
-- [細分服務 {#segmentation-service}](#segmentation-service-segmentation-service)
-- [沙箱{#sandboxes}](#sandboxes-sandboxes)
-- [來源 {#sources}](#sources-sources)
+- [儀表板](#dashboards)
+- [資料彙集](#data-collection-)
+- [目標](#destinations)
+- [Segmentation Service](#segmentation-service)
+- [沙箱](#sandboxes)
+- [來源](#sources)
 
 ## 儀表板 {#dashboards}
 
