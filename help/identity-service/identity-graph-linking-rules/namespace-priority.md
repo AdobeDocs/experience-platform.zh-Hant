@@ -2,9 +2,9 @@
 title: 命名空間優先等級
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -150,6 +150,8 @@ ht-degree: 2%
 如需詳細資訊，請閱讀[進階生命週期管理概觀](../../hygiene/home.md)。
 
 ### 計算屬性
+
+計算屬性使用名稱空間優先順序來儲存計算屬性值。 對於指定的事件，具有最高名稱空間優先順序的身分將會擁有針對其寫入的計算屬性的值。 如需詳細資訊，請閱讀[計算屬性UI指南](../../profile/computed-attributes/ui.md)。
 
 計算屬性不會使用名稱空間優先順序來計算值。 如果您使用計算屬性，您必須確保已將CRMID指定為WebSDK的主要身分識別。 如需詳細資訊，請閱讀[計算屬性UI指南](../../profile/computed-attributes/ui.md)。
 
