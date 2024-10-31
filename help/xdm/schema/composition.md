@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 結構描述組合基本概念
 description: 瞭解Experience Data Model (XDM)結構描述，以及在Adobe Experience Platform中構成結構描述的建置組塊、原則和最佳實務。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4365'
 ht-degree: 8%
 
 ---
@@ -223,6 +223,10 @@ Experience Platform包含許多標準Adobe欄位群組，同時也允許廠商�
 
 如需可用標準XDM欄位群組的最新清單，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/tree/master/components/fieldgroups)。 或者，如果您偏好在UI中檢視資源，您可以參閱[探索XDM元件](../ui/explore.md)的指南。
 
+>[!NOTE]
+>
+> 標準XDM欄位群組一律在發展，而且某些欄位群組已被取代。 如需最新更新的已棄用欄位群組清單，請參閱官方XDM存放庫中的[已棄用欄位群組區段](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated)。
+
 ### 資料類型 {#data-type}
 
 資料型別在類別或結構描述中作為參考欄位型別使用，其使用方式與基本常值欄位相同。 主要差異在於，資料型別可與欄位群組相同的方式定義多個子欄位。 兩者之間的主要差異在於，資料型別可以新增為欄位的「資料型別」，包含於結構描述中的任何位置。 雖然欄位群組僅與某些類別相容，但資料型別可包含在任何父類別或欄位群組中。
@@ -238,6 +242,10 @@ Experience Platform提供一些通用資料型別作為[!DNL Schema Registry]的
 ![結構描述編輯器中個人全名物件和屬性反白顯示圖。](../images/schema-composition/data-type.png)
 
 如需可用標準XDM資料型別的最新清單，請參閱[官方XDM存放庫](https://github.com/adobe/xdm/tree/master/components/datatypes)。 或者，如果您偏好在UI中檢視資源，您可以參閱[探索XDM元件](../ui/explore.md)的指南。
+
+>[!NOTE]
+>
+> 標準XDM資料型別一律在發展，部分資料型別已被取代。 如需最新更新的已棄用資料型別清單，請參閱官方XDM存放庫中的[已棄用資料型別區段](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated)。
 
 ### 欄位 {#field}
 
