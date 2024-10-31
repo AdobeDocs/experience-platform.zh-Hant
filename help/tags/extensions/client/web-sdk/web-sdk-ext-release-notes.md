@@ -2,16 +2,25 @@
 title: Adobe Experience Platform Web SDK擴充功能發行說明
 description: Adobe Experience Platform Web SDK標籤擴充功能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
 workflow-type: tm+mt
-source-wordcount: '2291'
-ht-degree: 29%
+source-wordcount: '2332'
+ht-degree: 28%
 
 ---
 
 # Adobe Experience Platform Web SDK擴充功能發行說明
 
 本文介紹Adobe Experience Platform Web SDK標籤擴充功能的發行說明。 如需SDK本身的最新發行說明，請參閱[平台Web SDK發行說明](/help/web-sdk/release-notes.md)。
+
+## 2.27.0版 — 2024年10月31日
+
+**新功能**
+
+- [資料流覆寫](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides)現在包含停用Experience Cloud解決方案和Adobe Experience Platform服務的設定。
+- 您現在可以為媒體工作階段建立[資料流覆寫](../web-sdk/web-sdk-extension-configuration.md)。
+
+包含2.24.0版的Adobe Experience Platform Web SDK。
 
 ## 2.26.1版 — 2024年9月19日
 

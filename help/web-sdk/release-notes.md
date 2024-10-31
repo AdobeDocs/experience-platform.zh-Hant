@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '2044'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,26 @@ ht-degree: 2%
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
 如需Web SDK標籤擴充功能的最新發行說明，請參閱[Web SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.24.0版 — 2024年10月31日
+
+**新功能**
+
+- 啟動媒體工作階段時現在支援[資料流覆寫](../datastreams/overrides.md)。
+
+- 在轉譯成功監視勾點中新增對Adobe Target回應Token的支援。
+
+**修正和改良**
+
+- 傳回多個應用程式內訊息時，只會顯示優先順序最高的訊息。 其他則被記錄為隱抑。
+- 空的資料流覆寫不再傳送給Edge Network，減少與伺服器端路由設定的潛在衝突。
+- 已重新命名下列記錄訊息元件名稱，以與其他AdobeSDK一致：
+   - `DecisioningEngine`已重新命名為`RulesEngine`
+   - `LegacyMediaAnalytics`已重新命名為`MediaAnalyticsBridge`
+   - `Privacy`已重新命名為`Consent`
+- 修正透過[`applyPropositions`](../web-sdk/commands/applypropositions.md)轉譯預設內容專案時發生的錯誤。
+- 修正Adobe Target移動和調整動作大小時的CSS錯誤。
+- 已從[`sendEvent`](../web-sdk/commands/sendevent/overview.md)回應中移除`machineLearning`金鑰。
 
 ## 2.23.0版 — 2024年9月19日
 
