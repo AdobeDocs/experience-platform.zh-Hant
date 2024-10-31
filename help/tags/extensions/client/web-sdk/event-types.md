@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK擴充功能中的事件型別
 description: 瞭解如何使用Adobe Experience Platform Launch中Adobe Experience Platform Web SDK擴充功能提供的事件型別。
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # 事件類型
 
 本頁說明Adobe Experience Platform Web SDK標籤擴充功能提供的Adobe Experience Platform事件型別。 這些是用於[建置規則](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=zh-Hant)，不應該與[`xdm`物件](/help/web-sdk/commands/sendevent/xdm.md)中的`eventType`欄位混淆。
+
+## 監視勾點已觸發 {#monitoring-hook-triggered}
+
+Adobe Experience Platform Web SDK包含監視掛接，可用來監視各種系統事件。 這些工具對於開發您自己的偵錯工具以及擷取Web SDK記錄很有用。
+
+如需有關每個監控掛接事件包含哪些引數的完整詳細資料，請參閱[Web SDK監控掛接檔案](../../../../web-sdk/monitoring-hooks.md)。
+
+![標籤使用者介面影像顯示監視連結事件型別](assets/monitoring-hook-triggered.png)
+
+Web SDK標籤擴充功能支援下列監視鉤點：
+
+* **[!UICONTROL onInstanceCreated]**：當您成功建立新的Web SDK執行個體時，就會觸發此監視連結事件。
+* **[!UICONTROL onInstanceConfigured]**：成功解析[`configure`](../../../../web-sdk/commands/configure/overview.md)命令時，Web SDK會觸發此監視掛接事件
+* **[!UICONTROL onBeforeCommand]**：此監視掛接事件是在執行任何其他命令之前由Web SDK觸發。 您可以使用此監視掛接來擷取特定命令的組態選項。
+* **[!UICONTROL onCommandResolved]**：在解析命令Promise之前，會觸發此監視掛接事件。 您可以使用此函式來檢視命令選項和結果。
+* **[!UICONTROL onCommandRejected]**：當命令Promise被拒絕且包含錯誤原因相關資訊時，就會觸發此監視掛接事件。
+* **[!UICONTROL onBeforeNetworkRequest]**：此監視掛接事件是在執行網路要求之前觸發。
+* **[!UICONTROL onNetworkResponse]**：瀏覽器收到回應時會觸發此監視勾點事件。
+* **[!UICONTROL onNetworkError]**：網路要求失敗時會觸發此監視掛接事件。
+* **[!UICONTROL onBeforeLog]**：此監視連結事件是在Web SDK將任何內容記錄到主控台之前觸發。
+* **[!UICONTROL onContentRendering]**：此監視連結事件是由`personalization`元件觸發，可協助您偵錯個人化內容的呈現。 此事件可能有不同的狀態：
+   * `rendering-started`：表示Web SDK即將呈現主張。 在Web SDK開始轉譯決定範圍或檢視之前，您可以在`data`物件中看到即將由`personalization`元件轉譯的建議以及範圍名稱。
+   * `no-offers`：表示未收到要求之引數的裝載。
+   * `rendering-failed`：表示Web SDK無法轉譯主張。
+   * `rendering-succeeded`：表示已針對決定範圍完成轉譯。
+   * `rendering-redirect`：表示Web SDK將執行重新導向主張。
+* **[!UICONTROL onContentHiding]**：套用或移除預先隱藏樣式時會觸發此監視勾點事件。
+
 
 ## [!UICONTROL 傳送事件完成]
 

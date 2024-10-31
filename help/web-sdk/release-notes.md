@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
+source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 - 啟動媒體工作階段時現在支援[資料流覆寫](../datastreams/overrides.md)。
 
-- 在轉譯成功監視勾點中新增對Adobe Target回應Token的支援。
+- 在[`onContentRendering`](monitoring-hooks.md#onContentRendering)監視勾點中新增對Adobe Target回應Token的支援。
 
 **修正和改良**
 
