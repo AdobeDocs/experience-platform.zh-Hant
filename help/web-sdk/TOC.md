@@ -6,7 +6,7 @@ breadcrumb-title: Web SDK 指南
 user-guide-description: 透過 Edge 網路與 Experience Cloud 服務互動。
 feature: Web SDK
 role: Developer
-source-git-commit: 02ae1fce01895d83d9c68248397e5288613ffe58
+source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 23%
@@ -76,7 +76,6 @@ ht-degree: 23%
    * [呈現個人化內容](personalization/rendering-personalization-content.md)
    * [透過混合實作的Personalization](personalization/hybrid-personalization.md)
    * [管理忽隱忽現情形](personalization/manage-flicker.md)
-   * [監視鉤點](monitoring-hooks.md)
    * Adobe Target {#adobe-target}
       * [概觀](personalization/adobe-target/target-overview.md)
       * [實作單頁應用程式](personalization/adobe-target/spa-implementation.md)
@@ -109,6 +108,6 @@ ht-degree: 23%
    * [偵錯方法](use-cases/debugging.md)
    * [使用多個Web SDK執行個體](use-cases/multiple-instances.md)
    * [設定頂端和底部頁面事件](use-cases/top-bottom-page-events.md)
-
+* [監視鉤點](monitoring-hooks.md)
 * [常見問題](faq.md)
 * [資源](resources.md)
