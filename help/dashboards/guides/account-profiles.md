@@ -2,10 +2,10 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 5%
+source-wordcount: '2362'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 ## 快速入門
 
-您必須有[Adobe Real-time Customer Data Platform B2B Edition](../../rtcdp/b2b-overview.md)的許可權，才能存取B2B [!UICONTROL 帳戶設定檔]儀表板。
+您必須有[Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md)的許可權，才能存取B2B [!UICONTROL 帳戶設定檔]儀表板。
 
 ## 帳戶設定檔資料 {#data}
 
@@ -79,6 +79,10 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 若要進一步瞭解每個可用的標準Widget，請從下列清單中選取Widget的名稱：
 
 * [已新增的帳戶輪廓](#account-profiles-added)
+* [每個帳戶的客戶概觀](#customers-per-account-overview)
+   * [每個客戶的機會概覽](#opportunities-per-account-overview)
+   * [每個客戶的商機詳細資料](#opportunities-per-account-detail)
+   * [每個帳戶的客戶詳細資料](#customers-per-account-detail)
 * [依產業的新帳戶](#accounts-by-industry)
 * [新帳戶（依型別）](#accounts-by-type)
 * [依個人角色的新機會](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 [!UICONTROL 新增的帳戶設定檔] Widget會使用線圖來顯示一段時間內每天新增的帳戶設定檔數目。 使用位於儀表板頂端的全域日期篩選器來決定分析時段。 如果未提供日期篩選器，預設行為會列出今天之前一年新增的帳戶設定檔。 結果可用於推斷新增的帳戶設定檔數量趨勢。
 
 ![帳戶設定檔已新增Widget。](../images/account-profiles/account-profiles-added.png)
+
+### 每個帳戶的客戶概觀 {#customers-per-account-overview}
+
+[!UICONTROL 每個帳戶的客戶總覽]圖表會根據其客戶型別提供帳戶的摘要。 它會顯示一個四清單格，將帳戶分類為擁有直接或間接客戶，或沒有直接或間接客戶的帳戶。 它提供每個類別的帳戶總數。 圖表可協助識別具有直接與間接客戶的科目分配。
+
+直接客戶是透過`personComponents`路徑直接連結至帳戶的客戶設定檔。 這種關係更為直接，並涉及客戶與帳戶之間的直接、明確連線。
+
+間接客戶是透過`Account-Person`路由連結至帳戶的客戶設定檔。 這種關係較不直接，且涉及中間實體或客戶與帳戶之間更複雜的連線，通常透過其他帳戶或關係進行。
+
+![每個帳戶的客戶總覽Widget。](../images/account-profiles/customers-per-account-overview-widget.png)
+
+若要存取更詳細的深入分析，請在[!UICONTROL 每個帳戶的客戶總覽]圖表上選取橢圓(**...**)，然後從下拉式選單中選擇&#x200B;**[!UICONTROL 鑽研]**。
+
+![每個帳戶的客戶總覽Widget，其橢圓下拉式功能表和Drill through反白顯示。](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+鑽研檢視隨即顯示。 接下來，探索可用的鑽研圖表，以更深入地瞭解B2B資料的結構。 您可以使用這些鑽研圖表來識別有多少帳戶設定檔未連結客戶設定檔，或有一或多個客戶設定檔與其相關聯。 您也可以使用它們來識別有多少直接或間接客戶與您的帳戶相關聯。
+
+* [[!UICONTROL 每個帳戶的客戶詳細資料]](#customers-per-account-detail)
+* [[!UICONTROL 每個機會的帳戶總覽]](#accounts-per-opportunity-overview)
+* [每個帳戶詳細資料的[!UICONTROL 商機]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL 在儀表板檢視之間導覽] {#dashboard-view-navigation}
+
+若要在鑽研與「帳戶設定檔」儀表板之間切換，請選取資料夾圖示(![資料夾圖示。](../images/account-profiles/folder-icon.png))，接著在下拉式功能表中顯示正確的檢視。
+
+![帳戶設定檔儀表板中的鑽研檢視中，導覽下拉式功能表反白顯示。](../images/account-profiles/navigation-dropdown.png)
+
+若要進一步瞭解Platform UI中的鑽研，請參閱[鑽研指南](../sql-insights-query-pro-mode/drill-through.md)。
+
+#### [!UICONTROL 每個帳戶的客戶詳細資料] {#customers-per-account-detail}
+
+[!UICONTROL 每個帳戶的客戶詳細資料]圖表提供更細微的詳細資料，說明與不同客戶型別相關聯的帳戶數目。 它會顯示一個三欄表格，詳列按客戶型別（直接或間接）區分的帳戶數目，以及與帳戶相關聯的客戶範圍。 此圖表可協助您瞭解客戶在不同客戶類別中的分配方式，以及與每個類別相關聯的帳戶總數。
+
+![每個帳戶的客戶詳細資料Widget。](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL 每個帳戶的機會] {#opportunities-per-account-overview}
+
+每個帳戶的[!UICONTROL 商機概觀]圖表會顯示有或沒有商機的帳戶摘要。 此雙資料清單格有助於快速判斷與商機相關聯的帳戶數量，提供跨帳戶商機參與情形的快照。
+
+![每個帳戶的機會概觀Widget。](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### 每個帳戶詳細資料的[!UICONTROL 商機] {#opportunities-per-account-detail}
+
+每個帳戶的[!UICONTROL 商機詳細資料]圖表會根據客戶的商機數量，提供更詳細的帳戶劃分。 此表格顯示依商機計數範圍分組的科目數目，例如1-10個商機或100+個商機。 此圖表可協助您識別科目如何依其管理的商機數量分配。
+
+![每個帳戶的機會Widget.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### 依產業的新帳戶 {#accounts-by-industry}
 
@@ -185,4 +235,4 @@ Widget中的下拉式功能表可讓您選取帳戶評分模式。
 
 ## 後續步驟
 
-閱讀本檔案後，您現在應該知道如何找到[!UICONTROL 帳戶設定檔]儀表板，同時也瞭解可用介面工具中顯示的量度。 若要進一步瞭解如何在Experience PlatformUI中使用帳戶設定檔作為B2B資料的一部分，請參閱Adobe Real-Time CDP B2B版本的[帳戶設定檔總覽](../../rtcdp/accounts/account-profile-overview.md)。
+閱讀本檔案後，您現在應該知道如何找到[!UICONTROL 帳戶設定檔]儀表板，同時也瞭解可用介面工具中顯示的量度。 若要進一步瞭解如何在Experience Platform UI中使用帳戶設定檔作為B2B資料的一部分，請參閱Adobe Real-Time CDP、B2B edition的[帳戶設定檔總覽](../../rtcdp/accounts/account-profile-overview.md)。
