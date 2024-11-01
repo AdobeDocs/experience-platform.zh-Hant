@@ -5,9 +5,9 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '357'
 ht-degree: 22%
 
 ---
@@ -39,6 +39,16 @@ ht-degree: 22%
       - [ML的工程師功能](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [將資料匯出至ML環境](data-distiller/ml-feature-pipelines/export-data.md)
       - [AI/ML資料管道擴充端對端工作流程](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- 資料Distiller統計資料{#advanced-statistics}
+   - [概觀](advanced-statistics/overview.md)
+   - [功能工程](advanced-statistics/feature-engineering.md)
+   - [模型](advanced-statistics/models.md)
+實作模型{#implement-models}
+      - [實作模型](advanced-statistics/implement-models/implement-models.md)
+      - [迴歸](advanced-statistics/implement-models/regression.md)
+      - [分類](advanced-statistics/implement-models/classification.md)
+      - [叢集](advanced-statistics/implement-models/clustering.md)
+   - [特徵轉換](advanced-statistics/feature-transformation.md)
 - 資料Distiller對象{#data-distiller-audiences}
    - [使用SQL建置外部對象](data-distiller-audiences/overview.md)
 - 範例 {#use-cases}
