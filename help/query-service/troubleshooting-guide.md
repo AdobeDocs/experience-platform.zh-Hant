@@ -1,24 +1,43 @@
 ---
 keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服務；疑難排解指南；faq；疑難排解；
 solution: Experience Platform
-title: 常見問題
-description: 本檔案包含和查詢服務相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
+title: 查詢服務和資料Distiller常見問題
+description: 本檔案包含和查詢服務及資料Distiller相關的常見問答。 主題包括、匯出資料、協力廠商工具和PSQL錯誤。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
+source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
 workflow-type: tm+mt
-source-wordcount: '4564'
+source-wordcount: '5055'
 ht-degree: 0%
 
 ---
 
-# 常見問題
+# 查詢服務和資料Distiller常見問題
 
-本檔案提供查詢服務常見問題的解答，並提供使用查詢服務時常見錯誤碼的清單。 如需Adobe Experience Platform中其他服務的相關問題和疑難排解，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+本檔案回答有關查詢服務和資料Distiller的常見問題。 它也包括使用「查詢」產品進行資料驗證或將轉換後的資料寫入回Data Lake時常見的錯誤代碼。 如有問題和疑難排解其他Adobe Experience Platform服務，請參閱[Experience Platform疑難排解指南](../landing/troubleshooting.md)。
+
+為釐清Query Service與Data Distiller在Adobe Experience Platform中如何搭配運作，以下是兩個基本問題。
+
+## 查詢服務與資料Distiller之間有何關係？
+
+查詢服務與資料Distiller是不同的互補元件，可提供特定的資料查詢功能。 查詢服務是專為隨選查詢而設計，用於探索、驗證及實驗已擷取的資料，而不變更資料湖。 相較之下，Data Distiller著重於轉換及擴充資料的批次查詢，並將結果儲存回Data Lake以供日後使用。 資料Distiller中的批次查詢可以排程、監控和管理，支援僅靠查詢服務無法實現的更深入資料處理和操控。
+
+Query Service可協助您快速獲得見解，而Data Distiller則可進行深入、永久的資料轉換。
+
+## 查詢服務與資料Distiller之間有何差異？
+
+**查詢服務**：用於著重於資料探索、驗證和實驗的SQL查詢。 輸出不會儲存在資料湖中，執行時間限製為10分鐘。 臨機操作查詢適用於輕量型的互動式資料檢查和分析。
+
+**資料Distiller**：啟用批次查詢，以處理、清理和擴充資料，並將結果儲存回Data Lake。 這些查詢支援更長的執行（最長24小時）和其他功能，例如排程、監控和加速報告。 Data Distiller非常適合進行深入的資料操控和排程的資料處理工作。
+
+如需詳細資訊，請參閱[查詢服務封裝檔案](./packaging.md)。
+
+## 問題類別 {#categories}
 
 下列常見問題的解答清單分為下列類別：
 
 - [一般](#general)
-- [查詢UI](#queries-ui) 
+- [資料蒸餾器](#data-distiller)
+- [查詢UI](#queries-ui)
 - [資料集範例](#dataset-samples)
 - [匯出資料](#exporting-data)
 - [SQL語法](#sql-syntax) 
@@ -505,13 +524,13 @@ WHERE T2.ID IS NULL
 ### 一次可以執行多少個同時查詢？
 
 +++回答
-批次查詢作為後端作業執行時，沒有查詢並行限制。 但是，查詢逾時限制設為24小時。
+There is no query concurrency limit as batch queries run as back-end jobs. 但是，查詢逾時限制設為24小時。
 +++
 
 ### 是否有活動控制面板，讓您檢視查詢活動和狀態？
 
 +++回答
-有監視和警報功能可檢查查詢活動和狀態。 如需詳細資訊，請參閱[查詢服務稽核記錄整合](./data-governance/audit-log-guide.md)和[查詢記錄](./ui/overview.md#log)檔案。
+There are monitoring and alerting capabilities to check on query activities and statuses. 如需詳細資訊，請參閱[查詢服務稽核記錄整合](./data-governance/audit-log-guide.md)和[查詢記錄](./ui/overview.md#log)檔案。
 +++
 
 ### 是否有任何復原更新的方式？ 例如，如果出現錯誤，或在將資料寫入Platform時某些計算需要重新設定，應如何處理該情況？
@@ -589,7 +608,7 @@ WHERE T2.ID IS NULL
 否，查詢服務不支援「INSERT OVERWRITE INTO」命令。
 +++
 
-### 授權使用量儀表板上的使用量資料多久更新一次，以符合Distiller計算時數的資料？
+### 授權使用量儀表板上的使用量資料多久更新一次資料Distiller計算時數？
 
 +++回答
 Data Distiller電腦時數的授權使用儀表板每天更新四次，每六小時。
@@ -605,6 +624,38 @@ Data Distiller電腦時數的授權使用儀表板每天更新四次，每六小
 
 +++回答
 是。 不過，某些協力廠商使用者端（例如DbVisualizer）在SQL區塊之前和之後可能需要個別的識別碼，以表示指令碼的部分應作為單一陳述式處理。 如需詳細資訊，請參閱[匿名區塊檔案](./key-concepts/anonymous-block.md)或[正式的DbVisualizer檔案](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect)。
++++
+
+## 資料蒸餾器 {#data-distiller}
+
+### 如何追蹤Data Distiller的授權使用情況？我可以在哪裡檢視此資訊？
+
++++回答\
+用於追蹤批次查詢使用情形的主要量度是計算小時。 您可以透過[授權使用量儀表板](../dashboards/guides/license-usage.md)，存取此資訊以及您目前的使用量。
++++
+
+### 什麼是計算小時？
+
++++回答\
+計算時數是測量在執行批次查詢時，查詢服務引擎讀取、處理資料和將資料寫入資料湖所花費的時間。
++++
+
+### 計算時數是如何測量的？
+
++++回答\
+計算時數會以累計方式測量所有授權沙箱中。
++++
+
+### 即使連續執行相同的查詢，為什麼有時我注意到計算小時消耗量有變化？
+
++++回答\
+查詢的計算時數可能因多個因素而波動。 這些包括處理的資料量、SQL查詢中轉換操作的複雜性等等。 查詢服務會根據每個查詢的上述引數來縮放叢集，這可能會導致計算時數的差異。
++++
+
+### 當我長時間使用相同的資料執行相同的查詢時，注意到計算時數減少是否正常？ 為什麼會這樣？
+
++++回答\
+後端基礎架構持續改善，以最佳化運算時數使用率和處理時間。 因此，隨著效能增強功能的實施，您可能會注意到隨著時間的推移而發生的變更。
 +++
 
 ## 查詢UI
@@ -674,7 +725,7 @@ and timestamp < to_timestamp('2022-07-23');
 ### 資料Distiller或查詢服務是否支援MERGE INTO？
 
 +++回答
-Data Distiller或查詢服務不支援MERGE INTO SQL建構。
+The MERGE INTO SQL construct is not supported by Data Distiller or Query Service.
 +++
 
 ## ITAS查詢
