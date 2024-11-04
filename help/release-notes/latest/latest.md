@@ -1,17 +1,17 @@
 ---
-title: Adobe Experience Platform發行說明2024年10月
-description: Adobe Experience Platform 2024 年 10 月版本注意事項。
+title: Adobe Experience Platform 發行說明 (2024 年 10 月)
+description: Adobe Experience Platform 2024 年 10 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
-ht-degree: 35%
+ht-degree: 78%
 
 ---
 
 # Adobe Experience Platform 發行說明
 
-**發行日期： 2024年10月29日**
+**發行日期：2024 年 10 月 29 日**
 
 Adobe Experience Platform 現有功能及文件的更新：
 
@@ -48,11 +48,11 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 | 類型 | 功能 | 說明 |
 | --- | --- | --- |
-| 標籤和擴充功能 | Adobe Analytics JSON檢視 | 您現在可以使用Adobe Analytics標籤擴充功能，以JSON格式檢查eVar、prop和事件設定，這些現在可以包含在Web SDK擴充功能中，並匯出以供編輯。 您也可以上傳或複製此資料，並將其儲存在裝置上。 如需詳細資訊，請參閱[Adobe Analytics擴充功能檔案](../../tags/extensions/client/analytics/overview.md)。 |
+| 標籤和擴充功能 | Adobe Analytics JSON 檢視 | 您現在可以使用 Adobe Analytics 標籤擴充功能，以 JSON 格式檢查 eVar、prop 和事件設定；這些內容現在能夠包含在 Web SDK 擴充功能中，並匯出以進行編輯。您也可以上傳或複製此資料，並將其儲存在您的裝置上。如需詳細資訊，請參閱 [Adobe Analytics 擴充功能文件](../../tags/extensions/client/analytics/overview.md)。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀[資料彙集概觀](../../collection/home.md)。
+如需詳細資訊，請參閱[資料彙集概觀](../../collection/home.md)。
 
 ## 目標 {#destinations}
 
@@ -62,9 +62,9 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| [一般可用的陣列匯出支援](../../destinations/ui/export-arrays-calculated-fields.md) | 所有客戶現在都可以使用&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;選項，將對象&#x200B;*啟動至檔案型目的地*&#x200B;以匯出整個陣列或陣列元素。 請注意，您仍需使用`array_to_string`函式，將陣列平面化為目標檔案中的字串。<br> ![新增包含函式和欄位的計算欄位選擇。](../2024/assets/october/array-export.gif "使用array_to_string函式與組織陣列中的選項新增計算欄位。"){width="250" align="center" zoomable="yes"} |
-| [串流目的地的報表準確性增強功能](/help/destinations/ui/export-datasets.md) | Adobe自2024年10月起陸續推出更新，以提高串流目的地的報表準確性。 此增強功能可確保Experience Platform與目的地平台報告之間更佳的對應。 <br>在此更新之前，**[!UICONTROL 身分失敗]**&#x200B;包含所有啟用重試。 在此更新後，只有上次啟用重試會包含在總計數中。 <br>此增強功能目前適用於[Google Customer Match目的地](../../destinations/catalog/advertising/google-customer-match.md)，但將逐步推廣至其他Experience Platform串流目的地。 進行此增強功能後，[Google Customer Match目的地](../../destinations/catalog/advertising/google-customer-match.md)的使用者可能會看到其&#x200B;**[!UICONTROL 身分識別失敗]**&#x200B;計數中預期的下降。 |
-| 彈性對象評估對[批次對象啟用](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)的影響 | 如果您對已設定在區段評估後啟用的對象執行[彈性對象評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則無論任何先前的每日啟用工作，彈性對象評估工作一完成，對象就會啟用。 <br>這可能會導致根據您的動作，一天匯出多次對象。 |
+| [陣列匯出支援已正式推出](../../destinations/ui/export-arrays-calculated-fields.md) | 現在，所有客戶都能夠使用「**[!UICONTROL 新增計算欄位]**」選項來匯出整個陣列或陣列中的元素 (將客群啟用&#x200B;*至檔案型目標*&#x200B;時)。請注意，您仍然需要使用 `array_to_string` 函數將陣列扁平化為目標檔案中的字串。<br> ![新增附帶函數及欄位的計算欄位選項。](../2024/assets/october/array-export.gif "新增附帶 array_to_string 函數及組織陣列選項的計算欄位。"){width="250" align="center" zoomable="yes"} |
+| [增強串流目標的報告準確性](/help/destinations/ui/export-datasets.md) | 自 2024 年 10 月開始，Adobe 推出更新以提高串流目標的報告準確性。此增強功能可確保 Experience Platform 和目標平台報告之間達到更佳的一致性。<br>在此更新之前，**[!UICONTROL 失敗的身分]**&#x200B;包含了所有的啟用重試。此更新後，總計數中僅會包含最後一次啟用重試。<br>此增強功能目前僅適用於 [Google 目標客戶比對目標](../../destinations/catalog/advertising/google-customer-match.md)，但會逐步擴大至其他 Experience Platform 的串流目標。此增強功能之後，[Google 目標客戶比對目標](../../destinations/catalog/advertising/google-customer-match.md)的使用者應該會發現&#x200B;**[!UICONTROL 失敗的身分]**&#x200B;計數有所下降。 |
+| 彈性客群評估對[批次客群啟用](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)的影響 | 若您對原已設定為在區段評估後啟用的客群，執行[彈性客群評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則一旦彈性客群評估工作完成，無論先前的每日啟用工作為何，這些客群都會立即啟用。<br>視您的動作而定，這可能會導致一天多次匯出客群。 |
 
 {style="table-layout:auto"}
 
@@ -78,11 +78,11 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 | 功能 | 說明 |
 | ------- | ----------- |
-| [!BADGE 可用性限制]{type=Informative}彈性對象評估 | 彈性的受眾評估可讓您根據對時間敏感的通訊的需求，快速建立新的受眾。 您可以在[Audience Portal檔案](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)中找到有關此新功能的詳細資訊。 |
+| [!BADGE 有限可用性]{type=Informative} 彈性客群評估 | 彈性客群評估可讓您快速地隨選建立新客群，以進行具有時效性的通訊。如需更多有關這個新功能的資訊，請參閱[客群入口網站文件](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)。 |
 
 {style="table-layout:auto"}
 
-如需有關 [!DNL Segmentation Service] 的詳細資訊，請參閱「[客戶細分概觀](../../segmentation/home.md)」。
+如需有關 [!DNL Segmentation Service] 的詳細資訊，請閱讀[客戶細分概觀](../../segmentation/home.md)。
 
 ## 沙箱 {#sandboxes}
 
@@ -92,8 +92,8 @@ Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式
 
 | 功能 | 說明 |
 | --- | --- |
-| 沙箱工具封裝共用 | 您現在可以使用沙箱工具，輕鬆匯出和匯入不同組織沙箱之間的沙箱設定。 目前有兩個可用的共用套件類別： <br><ul><li>**[私人套件](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages)：**&#x200B;使用私人套件與已核准來源組織之共用要求的組織共用。</li><li>**[公用套件](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages)：**&#x200B;公用套件不需額外核准即可共用，並可使用套件的裝載輕鬆匯入。</li></ul><br>如需這些功能的詳細資訊，請閱讀[跨組織共用封裝](../../sandboxes/ui/sharing-packages-across-orgs.md)的指南。 |
-| 沙箱工具API中的[封裝共用](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) | 使用沙箱工具API向兩個新端點`/handshake`和`/transfer`發出請求，以便跨組織共用、擷取和建立套件共用請求。 已新增其他要求至`/packages`端點，以擷取封裝的裝載。 |
+| 共用沙箱工具套件 | 您現在可以使用沙箱工具，在不同組織的沙箱之間輕鬆匯出和匯入沙箱設定。現在有兩個可供使用的共用套件類別：<br><ul><li>**[私人套件](../../sandboxes/ui/sharing-packages-across-orgs.md#private-packages)：**&#x200B;使用私人套件，與已核准來源組織之共用請求的組織共用。</li><li>**[公開套件](../../sandboxes/ui/sharing-packages-across-orgs.md#public-packages)：**&#x200B;公開套件不需額外核准即可共用，而且能夠使用套件的承載輕鬆匯入。</li></ul><br>如需這些功能的詳細資訊，請閱讀有關[跨組織共用套件](../../sandboxes/ui/sharing-packages-across-orgs.md)的指南。 |
+| 沙箱工具 API 中的[套件共用](https://experienceleague.adobe.com/zh-hant/docs/experience-platform/sandbox/sandbox-tooling-api/packages#org-linking) | 使用沙箱工具 API 向兩個新端點 `/handshake` 和 `/transfer` 發出請求，以便在組織間共用、擷取和建立套件共用請求。已為 `/packages` 端點新增了一個額外的請求，以擷取套件的承載。 |
 
 {style="table-layout:auto"}
 
@@ -109,8 +109,8 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| 支援篩選[!DNL Marketo Engage]中的標準活動實體 | 從[!DNL Marketo Engage]來源擷取資料時，您可以使用[!DNL Flow Service] API來篩選標準活動實體。 如需詳細資訊，請閱讀[篩選 [!DNL Marketo] 標準活動資料](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage)的指南。 |
+| 支援在 [!DNL Marketo Engage] 中篩選標準活動實體 | 您可以使用 [!DNL Flow Service] API 篩選標準活動實體 (從 [!DNL Marketo Engage] 來源擷取資料時)。如需詳細資訊，請閱讀有關[篩選 [!DNL Marketo] 標準活動資料](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage)的指南。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請參閱[來源概觀](../../sources/home.md)。
+如需詳細資訊，請閱讀[來源概觀](../../sources/home.md)。
