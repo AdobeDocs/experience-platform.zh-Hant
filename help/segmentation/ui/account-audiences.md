@@ -1,13 +1,13 @@
 ---
 title: 帳戶對象
 description: 瞭解如何建立和使用帳戶對象，以定位下游目的地中的帳戶設定檔。
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 27%
+source-wordcount: '1518'
+ht-degree: 21%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 >[!AVAILABILITY]
 >
->帳戶對象僅可在Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b)的[B2B版本和Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p)的[B2P版本中使用。
+>帳戶對象只能在Real-time Customer Data Platform的[B2B edition](../../rtcdp/overview.md#rtcdp-b2b)和Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p)的[B2P版本中使用。
 
 透過帳戶細分，Adobe Experience Platform可讓您從以人物為基礎的受眾到以帳戶為基礎的受眾，使用完整且精密的行銷細分體驗。
 
@@ -66,6 +66,39 @@ ht-degree: 27%
 ![區段產生器內的「對象」索引標籤會醒目提示。](../images/ui/account-audiences/audiences.png)
 
 如需使用區段產生器的詳細資訊，請參閱[區段產生器UI指南](./segment-builder.md)。
+
+### 建立關係 {#relationships}
+
+依預設，帳戶對象的「區段產生器」UI會顯示帳戶和個人之間的直接關係。 不過，帳戶對象可使用其他關係型別。
+
+若要使用替代關聯性型別，請選取![設定圖示](../../images/icons/settings.png)。
+
+![設定圖示會在[欄位]區段上反白顯示。](../images/ui/account-audiences/select-settings.png)
+
+在[!UICONTROL 設定]標籤上，選取&#x200B;**[!UICONTROL 欄位關聯性]**&#x200B;區段中的&#x200B;**[!UICONTROL 顯示關聯性選取器]**。
+
+![在[設定]索引標籤的[欄位關聯性]區段內已選取[顯示關聯性選取器]切換按鈕。](../images/ui/account-audiences/show-relation-selectors.png)
+
+再次選取![設定圖示](../../images/icons/settings.png)以返回[!UICONTROL 欄位]索引標籤。 您現在可以看到&#x200B;**[!UICONTROL 建立關係]**&#x200B;區段，讓您建立帳戶與個人的連線方式以及個人與機會的連線方式。
+
+![「建立關係」區段會反白顯示，顯示如何將帳戶與個人連線以及如何將個人與機會連線的選項。](../images/ui/account-audiences/establish-relationships.png)
+
+將帳戶連線至人員時，您可以選擇下列選項：
+
+| 選項 | 說明 |
+| ------ | ----------- |
+| 直接關係 | 帳戶和個人之間的直接連線。 這會指定每個人員透過人員結構描述上`personComponents`陣列中的`accountID`值陣列所連結的帳戶。 此路徑是最常使用的路徑。 |
+| 帳戶 — 個人關係 | 帳戶和個人之間的關係，由`accountPersonRelation`物件定義。 此路徑也可讓每個人連線至多個帳戶。 當您的組織從您的來源資料中定義明確的關係表時，就會使用它。 |
+| 機會 — 個人關係 | 機會和個人之間的關係，由`opportunityPersonRelation`物件定義。 這會將個人從機會個人連結至帳戶，將個人連結至帳戶。 這可讓您說明哪些公司已將人員附加至商機。 |
+
+將商機連線到個人時，您可以從下列選項中選擇：
+
+| 選項 | 說明 |
+| ------ | ----------- |
+| 帳戶 | 帳戶與機會之間的直接連線。 當您在帳戶對象中使用此專案時，此路徑會將公司的所有人員連結至該機會。 |
+| 機會 — 個人關係 | 機會和個人之間的關係，其基礎為機會 — 個人物件。 此路徑只會將已被明確識別為參與商機的人員連結到該商機。 |
+
+建立所需的關係後，您可以將必要的人員 — 對象新增至您的區段定義。
 
 ## 啟用客群 {#activate}
 
