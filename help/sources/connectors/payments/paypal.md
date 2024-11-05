@@ -4,14 +4,18 @@ solution: Experience Platform
 title: PayPal Source聯結器總覽
 description: 瞭解如何使用API或使用者介面將PayPal連結至Adobe Experience Platform。
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 # [!DNL PayPal]聯結器
+
+>[!IMPORTANT]
+>
+>[!DNL PayPal]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 

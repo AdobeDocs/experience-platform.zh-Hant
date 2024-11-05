@@ -4,14 +4,18 @@ title: SalesforceMarketing CloudSource概觀
 description: 瞭解如何使用API或使用者介面將SalesforceMarketing Cloud連結至Adobe Experience Platform。
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud]
+
+>[!IMPORTANT]
+>
+>[!DNL Salesforce Marketing Cloud]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
@@ -40,7 +44,7 @@ Experience Platform提供從協力廠商行銷自動化系統擷取資料的支�
 
 以下檔案提供如何使用API將[!DNL Salesforce Marketing Cloud]連線到Platform的資訊：
 
-* [使用Flow Service API建立SalesforceMarketing Cloud基本連線](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [使用流量服務API建立SalesforceMarketing Cloud基本連線](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [使用流量服務API探索資料表](../../tutorials/api/explore/tabular.md)
 * [使用流量服務API為行銷自動化來源建立資料流](../../tutorials/api/collect/marketing-automation.md)
 

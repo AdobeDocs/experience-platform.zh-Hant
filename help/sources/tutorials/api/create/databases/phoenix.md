@@ -2,14 +2,18 @@
 title: 使用流量服務API建立Phoenix基本連線
 description: 瞭解如何使用流量服務API將Phoenix資料庫連線至Adobe Experience Platform。
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-source-git-commit: efffd6ce1ed541ce20ee6500e42165465f2fa6a0
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '566'
 ht-degree: 1%
 
 ---
 
 # 使用[!DNL Flow Service] API建立[!DNL Phoenix]基本連線
+
+>[!IMPORTANT]
+>
+>[!DNL Phoenix]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 

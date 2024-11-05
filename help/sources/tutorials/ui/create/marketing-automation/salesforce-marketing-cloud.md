@@ -1,10 +1,10 @@
 ---
 title: 連線您的SalesforceMarketing Cloud帳戶，以透過UIExperience Platform
-description: 瞭解如何透過UI將您的SalesforceMarketing Cloud帳戶連結至Experience Platform。
+description: 瞭解如何連線您的SalesforceMarketing Cloud帳戶，以透過UIExperience Platform。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '517'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Salesforce Marketing Cloud]來源整合目前不支援自訂物件擷取。
+>[!DNL Salesforce Marketing Cloud]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
 
 本教學課程提供如何透過UI將您的[!DNL Salesforce Marketing Cloud]帳戶連線至Adobe Experience Platform的步驟。
 
@@ -42,6 +42,10 @@ ht-degree: 2%
 
 ## 連線您的[!DNL Salesforce Marketing Cloud]帳戶
 
+>[!IMPORTANT]
+>
+>[!DNL Salesforce Marketing Cloud]來源整合目前不支援自訂物件擷取。
+
 在Platform UI中，從左側導覽選取&#x200B;**[!UICONTROL 來源]**&#x200B;以存取[!UICONTROL 來源]工作區。 [!UICONTROL 目錄]顯示Experience Platform支援的各種來源。
 
 您可以從類別清單中選取適當的類別。 您也可以使用搜尋列來篩選特定來源。
@@ -50,7 +54,7 @@ ht-degree: 2%
 
 ![已選取SalesforceMarketing Cloud來源的來源目錄。](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-**[!UICONTROL 連線到SalesforceMarketing Cloud]**&#x200B;頁面就會顯示。 您可以在此頁面上建立新帳戶或使用現有帳戶。
+**[!UICONTROL 連線至SalesforceMarketing Cloud]**&#x200B;頁面隨即顯示。 您可以在此頁面上建立新帳戶或使用現有帳戶。
 
 ### 新帳戶
 

@@ -5,18 +5,18 @@ title: 在使用者介面中建立Couchbase Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立Couchbase來源連線。
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 1%
+source-wordcount: '465'
+ht-degree: 2%
 
 ---
 
 # 在使用者介面中建立[!DNL Couchbase]來源連線
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> [!DNL Couchbase]聯結器為Beta版。 如需使用Beta標籤聯結器的詳細資訊，請參閱[來源概觀](../../../../home.md#terms-and-conditions)。
+>[!DNL Couchbase]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
 
 [!DNL Adobe Experience Platform]中的Source聯結器可讓您依排程擷取外部來源的資料。 本教學課程提供使用[!DNL Platform]使用者介面建立[!DNL Couchbase]來源聯結器的步驟。
 

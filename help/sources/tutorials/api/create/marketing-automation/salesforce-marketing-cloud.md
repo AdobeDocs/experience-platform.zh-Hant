@@ -1,10 +1,10 @@
 ---
 title: 使用流量服務API建立SalesforceMarketing Cloud基礎連線
-description: 瞭解如何使用流量服務API，針對Experience Platform驗證您的SalesforceMarketing Cloud帳戶。
+description: 瞭解如何使用流量服務API根據Experience Platform驗證您的SalesforceMarketing Cloud帳戶。
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '508'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->[!DNL Salesforce Marketing Cloud]來源整合目前不支援自訂物件擷取。
+>[!DNL Salesforce Marketing Cloud]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
@@ -46,6 +46,10 @@ ht-degree: 4%
 如需開始使用的詳細資訊，請參閱此[[!DNL Salesforce Marketing Cloud] 檔案](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>)。
 
 ## 建立基礎連線
+
+>[!IMPORTANT]
+>
+>[!DNL Salesforce Marketing Cloud]來源整合目前不支援自訂物件擷取。
 
 基礎連線會保留您的來源和平台之間的資訊，包括來源的驗證認證、連線的目前狀態，以及您唯一的基本連線ID。 基礎連線ID可讓您從來源內部探索及導覽檔案，並識別您要擷取的特定專案，包括其資料型別和格式的資訊。
 
