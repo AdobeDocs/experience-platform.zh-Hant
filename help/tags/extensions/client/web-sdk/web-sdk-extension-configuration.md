@@ -2,10 +2,10 @@
 title: 設定Web SDK標籤擴充功能
 description: 瞭解如何在標籤UI中設定Experience Platform Web SDK標籤擴充功能。
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 5%
+source-wordcount: '2525'
+ht-degree: 4%
 
 ---
 
@@ -170,6 +170,66 @@ Web SDK標籤擴充功能需要安裝屬性。 如果您尚未這樣做，請參
 資料流覆寫必須根據環境進行設定。 開發、測試和生產環境都有不同的覆寫。 您可以使用下方畫面中顯示的專用選項，複製設定值。
 
 ![影像顯示使用Web SDK標籤延伸功能頁面的資料流設定覆寫。](assets/datastream-overrides.png)
+
+預設會停用資料流設定覆寫。 預設會選取&#x200B;**[!UICONTROL 符合資料流組態]**&#x200B;選項。
+
+![顯示資料流設定的Web SDK標籤延伸使用者介面會覆寫預設設定。](assets/datastream-override-default.png)
+
+若要在標籤延伸中啟用資料流覆寫，請從下拉式功能表中選取&#x200B;**[!UICONTROL 已啟用]**。
+
+![顯示資料流組態覆寫[已啟用]設定的Web SDK標籤延伸使用者介面。](assets/datastream-override-enabled.png)
+
+啟用資料流設定覆寫後，您可以為每個服務設定覆寫，如下所述。
+
+以下資料流覆寫設定將覆寫所選環境的任何伺服器端資料流設定和規則。
+
+### Adobe Analytics {#analytics}
+
+使用此區段中的設定覆寫路由傳送至Adobe Analytics服務的資料。
+
+![顯示Adobe Analytics資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Analytics服務的資料。
+* **[!UICONTROL 報表套裝]**： Adobe Analytics中目標報表套裝的ID。 該值必須是來自您的資料流設定的預先設定覆寫報告套裝（或以逗號分隔的報告套裝清單）。 此設定會覆寫主要報表套裝。
+* **[!UICONTROL 新增報表套裝]**：選取此選項即可新增其他報表套裝。
+
+### Adobe Audience Manager {#audience-manager}
+
+使用此區段中的設定覆寫路由傳送至Adobe Audience Manager服務的資料。
+
+![顯示Adobe Audience Manager資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Audience Manager服務的資料。
+* **[!UICONTROL 協力廠商ID同步容器]**：Audience Manager中目的地協力廠商ID同步容器的識別碼。 值必須是來自資料流設定的預先設定次要容器，並覆寫主要容器。
+
+### Adobe Experience Platform {#experience-platform}
+
+使用此區段中的設定覆寫路由傳送至Adobe Experience Platform服務的資料。
+
+![顯示Adobe Experience Platform資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Experience Platform服務的資料。
+* **[!UICONTROL 事件資料集]**： Adobe Experience Platform中目的地事件資料集的識別碼。 該值必須是來自您的資料流設定的預先設定次要資料集。
+* **[!UICONTROL Offer decisioning]**：使用此下拉式功能表來啟用或停用到[!DNL Offer Decisioning]服務的資料路由。
+* **[!UICONTROL Edge Segmentation]**：使用此下拉式功能表來啟用或停用到[!DNL Edge Segmentation]服務的資料路由。
+* **[!UICONTROL Personalization目的地]**：使用此下拉式功能表來啟用或停用個人化目的地的資料路由。
+* **[!UICONTROL Adobe Journey Optimizer]**：使用此下拉式功能表來啟用或停用到[!DNL Adobe Journey Optimizer]服務的資料路由。
+
+### Adobe伺服器端事件轉送 {#ssf}
+
+使用此區段中的設定覆寫路由傳送至Adobe伺服器端事件轉送服務的資料。
+
+![顯示Adobe伺服器端事件轉送資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe伺服器端事件轉送服務的資料。
+
+### Adobe Target {#target}
+
+使用此區段中的設定覆寫路由傳送至Adobe Target服務的資料。
+
+![顯示Adobe Target資料流覆寫設定的Web SDK標籤延伸使用者介面影像。](assets/datastream-override-target.png)
+
+* **[!UICONTROL 已啟用]** / **[!UICONTROL 已停用]**：使用此下拉式功能表來啟用或停用傳送至Adobe Target服務的資料。
 
 ## 設定進階設定
 
