@@ -18,7 +18,7 @@ Adobe Experience Platform 現有功能及文件的更新：
 - [儀表板](#dashboards)
 - [資料彙集](#data-collection-)
 - [目標](#destinations)
-- [Segmentation Service](#segmentation-service)
+- [分段服務](#segmentation-service)
 - [沙箱](#sandboxes)
 - [來源](#sources)
 
@@ -62,7 +62,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 | 功能 | 說明 |
 | ----------- | ----------- |
-| [陣列匯出支援已正式推出](../../destinations/ui/export-arrays-calculated-fields.md) | 現在，所有客戶都能夠使用「**[!UICONTROL 新增計算欄位]**」選項來匯出整個陣列或陣列中的元素 (將客群啟用&#x200B;*至檔案型目標*&#x200B;時)。請注意，您仍然需要使用 `array_to_string` 函數將陣列扁平化為目標檔案中的字串。<br> ![新增附帶函數及欄位的計算欄位選項。](../2024/assets/october/array-export.gif "新增附帶 array_to_string 函數及組織陣列選項的計算欄位。"){width="250" align="center" zoomable="yes"} |
+| [陣列匯出支援已正式推出](../../destinations/ui/export-arrays-calculated-fields.md) | 現在，所有客戶都能夠使用&#x200B;**[!UICONTROL 新增計算欄位]**&#x200B;選項來匯出整個陣列或陣列中的元素 (將客群啟用&#x200B;*至檔案型目標*&#x200B;時)。請注意，您仍然需要使用 `array_to_string` 函數將陣列扁平化為目標檔案中的字串。<br> ![新增附帶函數及欄位的計算欄位選項。](../2024/assets/october/array-export.gif "新增附帶 array_to_string 函數及組織陣列選項的計算欄位。"){width="250" align="center" zoomable="yes"} |
 | [增強串流目標的報告準確性](/help/destinations/ui/export-datasets.md) | 自 2024 年 10 月開始，Adobe 推出更新以提高串流目標的報告準確性。此增強功能可確保 Experience Platform 和目標平台報告之間達到更佳的一致性。<br>在此更新之前，**[!UICONTROL 失敗的身分]**&#x200B;包含了所有的啟用重試。此更新後，總計數中僅會包含最後一次啟用重試。<br>此增強功能目前僅適用於 [Google 目標客戶比對目標](../../destinations/catalog/advertising/google-customer-match.md)，但會逐步擴大至其他 Experience Platform 的串流目標。此增強功能之後，[Google 目標客戶比對目標](../../destinations/catalog/advertising/google-customer-match.md)的使用者應該會發現&#x200B;**[!UICONTROL 失敗的身分]**&#x200B;計數有所下降。 |
 | 彈性客群評估對[批次客群啟用](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)的影響 | 若您對原已設定為在區段評估後啟用的客群，執行[彈性客群評估](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation)，則一旦彈性客群評估工作完成，無論先前的每日啟用工作為何，這些客群都會立即啟用。<br>視您的動作而定，這可能會導致一天多次匯出客群。 |
 
@@ -70,7 +70,7 @@ Adobe Experience Platform 提供了一套技術，可讓您收集用戶端客戶
 
 如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
 
-## Segmentation Service {#segmentation-service}
+## 分段服務 {#segmentation-service}
 
 [!DNL Segmentation Service] 會說明區分客戶群中可行銷的一群人的標準，從而定義輪廓的特定子集。區段的基礎可能是記錄資料 (例如人口統計資訊) 或表示客戶與您的品牌互動的時間序列事件。
 
@@ -109,7 +109,7 @@ Experience Platform 可提供 RESTful API 和互動式 UI，可讓您輕鬆為�
 
 | 功能 | 說明 |
 | --- | --- |
-| 支援在 [!DNL Marketo Engage] 中篩選標準活動實體 | 您可以使用 [!DNL Flow Service] API 篩選標準活動實體 (從 [!DNL Marketo Engage] 來源擷取資料時)。如需詳細資訊，請閱讀有關[篩選 [!DNL Marketo] 標準活動資料](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage)的指南。 |
+| 支援在 [!DNL Marketo Engage] 中篩選標準活動實體 | 從 [!DNL Marketo Engage] 來源擷取資料時，您可以使用 [!DNL Flow Service] API 篩選標準活動實體。如需詳細資訊，請閱讀有關[篩選 [!DNL Marketo] 標準活動資料](../../sources/tutorials/api/filter.md#filter-activity-entities-for-marketo-engage)的指南。 |
 
 {style="table-layout:auto"}
 
