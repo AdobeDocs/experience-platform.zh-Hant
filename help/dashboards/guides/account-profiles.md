@@ -2,9 +2,9 @@
 title: 帳戶設定檔儀表板
 description: Adobe Experience Platform提供控制面板，讓您檢視有關組織B2B帳戶設定檔的重要資訊。
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
+source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2397'
 ht-degree: 4%
 
 ---
@@ -100,6 +100,10 @@ Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不
 ![帳戶設定檔已新增Widget。](../images/account-profiles/account-profiles-added.png)
 
 ### 每個帳戶的客戶概觀 {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>[!UICONTROL 每個帳戶的客戶總覽]分析及其鑽研圖表（[!UICONTROL 每個帳戶的客戶詳細資料]，[!UICONTROL 每個帳戶的機會]，[!UICONTROL 每個帳戶詳細資料]）不受您可能已設定的任何全域日期篩選器影響。
 
 [!UICONTROL 每個帳戶的客戶總覽]圖表會根據其客戶型別提供帳戶的摘要。 它會顯示一個四清單格，將帳戶分類為擁有直接或間接客戶，或沒有直接或間接客戶的帳戶。 它提供每個類別的帳戶總數。 圖表可協助識別具有直接與間接客戶的科目分配。
 

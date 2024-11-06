@@ -2,9 +2,9 @@
 title: 叢集演演算法
 description: 瞭解如何使用關鍵引數、說明和範常式式碼來設定和最佳化各種叢集演演算法，協助您實作進階統計模型。
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '874'
 ht-degree: 4%
 
 ---
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **參數**
 
-| 參數 | 說明 | 預設值 | 可能的值 |                                                                                                                                                                  | 預設值 | 可能的值 |
+| 參數 | 說明 | 預設值 | 可能的值 |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | 演演算法執行的最大迭代次數。 | 20 | (>= 0) |
 | `OPTIMIZER` | 用於估計LDA模型的最佳化或推斷演演算法。 支援的選項為`"online"` （線上變數貝葉斯）和`"em"` （期望 — 最大化）。 | &quot;online&quot; | `online`、`em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | 針對`online`最佳化程式：取樣並用於每個小型批次漸層下降反複專案中的語料片段，範圍為`(0, 1]`。 | 0.05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | 先前在主題分佈上按辭彙顯示的集中引數（「beta」或「eta」）。 | 自動 | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | 輸出欄，其中包含每個檔案的主題混合分佈預估。 | 未設定 | 任何字串 |
+
+{style="table-layout:auto"}
 
 **範例**
 
