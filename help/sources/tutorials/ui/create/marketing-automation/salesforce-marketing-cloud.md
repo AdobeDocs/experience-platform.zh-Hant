@@ -2,9 +2,9 @@
 title: 連線您的SalesforceMarketing Cloud帳戶，以透過UIExperience Platform
 description: 瞭解如何連線您的SalesforceMarketing Cloud帳戶，以透過UIExperience Platform。
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '518'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Salesforce Marketing Cloud]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
+>[!DNL Salesforce Marketing Cloud]來源將於2025年5月底淘汰。 您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)取代[!DNL Salesforce Marketing Cloud]來源。
 
 本教學課程提供如何透過UI將您的[!DNL Salesforce Marketing Cloud]帳戶連線至Adobe Experience Platform的步驟。
 

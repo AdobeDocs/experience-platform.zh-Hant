@@ -5,9 +5,9 @@ title: 在使用者介面中建立PayPal Source連線
 type: Tutorial
 description: 瞭解如何使用Adobe Experience Platform UI建立PayPal來源連線。
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
+source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '467'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL PayPal]來源將於2025年5月底淘汰。 作為替代方法，您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)來源。
+>[!DNL PayPal]來源將於2025年5月底淘汰。 您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)取代[!DNL PayPal]來源。
 
 Adobe Experience Platform中的Source聯結器可讓您依排程擷取外部來源資料。 本教學課程提供使用Platform使用者介面建立[!DNL PayPal]來源聯結器的步驟。
 
