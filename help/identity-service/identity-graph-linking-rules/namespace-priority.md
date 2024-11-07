@@ -2,9 +2,9 @@
 title: 命名空間優先等級
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -176,7 +176,16 @@ ht-degree: 2%
 
 此設定導致僅使用已驗證的事件計算分數。
 
-如需的詳細資訊，請閱讀[Attribution AI](../../intelligent-services/attribution-ai/overview.md)和[客戶人工智慧](../../intelligent-services/customer-ai/overview.md)上的檔案。
+如需詳細資訊，請閱讀[Attribution AI](../../intelligent-services/attribution-ai/overview.md)和[客戶人工智慧](../../intelligent-services/customer-ai/overview.md)上的檔案。
+
+### 合作夥伴建立的目的地
+
+與共用裝置相關之設定檔的更新對象資格取消結果可能不會傳送至下游目的地。 這種情況可能會發生在某些罕見的情況下，例如：
+
+* 對象資格僅以匿名活動為基礎。
+* 在短時間內可以跨多個設定檔登入。
+
+如需合作夥伴建立的目的地詳細資訊，請閱讀[目的地概觀](../../destinations/home.md#adobe-built-and-partner-built-destinations)。
 
 ### Privacy Service
 
