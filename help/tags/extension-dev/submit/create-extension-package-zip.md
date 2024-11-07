@@ -1,14 +1,14 @@
 ---
-title: 準備擴充功能套件Zip檔案
+title: 建立擴充功能套件Zip檔案
 description: 瞭解如何準備擴充功能套件zip檔案。
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 50%
+source-wordcount: '102'
+ht-degree: 45%
 
 ---
 
-# 上傳並實作端對端測試
+# 建立擴充功能套件zip檔案。
 
 >[!NOTE]
 >
