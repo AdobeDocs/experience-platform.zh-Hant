@@ -2,9 +2,9 @@
 title: 使用流程服務API建立OracleEloqua基本連線
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連結至Oracle Eloqua。
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '557'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->[!DNL Oracle Eloqua]來源將於2025年5月底淘汰。 您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)取代[!DNL Oracle Eloqua]來源。
+>[!DNL Oracle Eloqua]來源將於2025年5月底淘汰。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 

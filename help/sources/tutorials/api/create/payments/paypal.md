@@ -5,9 +5,9 @@ title: 使用Flow Service API建立PayPal基本連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將PayPal連結至Adobe Experience Platform。
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '466'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->[!DNL PayPal]來源將於2025年5月底淘汰。 您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)取代[!DNL PayPal]來源。
+>[!DNL PayPal]來源將於2025年5月底淘汰。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 

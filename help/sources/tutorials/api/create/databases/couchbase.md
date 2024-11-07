@@ -5,9 +5,9 @@ title: 使用流量服務API建立Couchbase連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將Couchbase連線至Adobe Experience Platform。
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '441'
 ht-degree: 5%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->[!DNL Couchbase]來源將於2025年5月底淘汰。 您可以使用[[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md)取代[!DNL Couchbase]來源。
+>[!DNL Couchbase]來源將於2025年5月底淘汰。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 
