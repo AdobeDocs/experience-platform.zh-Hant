@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規術語
 description: 本檔案提供Adobe Experience Cloud支援之隱私權法規相關關鍵辭彙的定義。
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
 workflow-type: tm+mt
-source-wordcount: '2301'
+source-wordcount: '2404'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,8 @@ ht-degree: 0%
 **資料保護人員**：獨立作業的資料隱私權專家，確保實體遵守GDPR中詳述的政策和程式。
 
 **資料主體**：控制者或處理者處理其個人資料的自然人。
+
+**[!DNL Delaware Personal Data Privacy Act]**： [!DNL Delaware Personal Data Privacy Act]提供德拉瓦州居民存取、更正、刪除和選擇退出個人資料銷售和鎖定廣告的權利。 此法案適用於處理至少35,000名消費者的資料，或從中獲得超過20%的資料銷售收入的企業以及10,000多名消費者。 這項法規由司法部強制執行，包含強制性的資料保護實務，以及60天期限來處理違規行為。
 
 **委派行為**：所頒佈的非立法行為，以補充現有法律並提供准則或明確性。
 
@@ -141,6 +143,8 @@ ht-degree: 0%
 **化名**：處理個人資料時，若不使用其他資料，就不能再將其歸因到單一資料主體，只要其他資料保持獨立，以確保不會歸因。
 
 ## Q
+
+**[!DNL Quebec Law 25]**： [!DNL Quebec Law 25]可加強住戶的隱私權、強制明確同意、資料最小化，以及存取、更正、刪除和傳輸個人資料的權利。 組織必須指定隱私權官員、進行隱私權影響評估，並報告違規行為。 違規行為需遵守規範期限並受到重大處罰。
 
 ## R
 
