@@ -2,9 +2,9 @@
 title: Edge Network伺服器API的效能護欄
 description: 瞭解如何在最佳效能護欄內使用伺服器API。
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,8 @@ Adobe對超過使用量限制所造成的效能降低不負責任。 持續超�
 >[!IMPORTANT]
 >
 >除了此護欄頁面之外，還請檢查銷售訂單中的授權權益以及實際使用限制的對應[產品說明](https://helpx.adobe.com/legal/product-descriptions.html)。
+
+本頁中說明的所有效能護欄皆適用於IMS組織層級。 對於已設定多個IMS組織的使用者，每個組織個別而言皆須受下方效能護欄的約束。 請參閱[Experience Platform字彙表](../landing/glossary.md)，以取得有關[!DNL IMS Organizations]的詳細資料。
 
 ## 定義
 
