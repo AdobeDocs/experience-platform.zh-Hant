@@ -5,7 +5,7 @@ title: 使用流量服務API建立Zoho CRM基本連線
 type: Tutorial
 description: 瞭解如何使用流量服務API將Adobe Experience Platform連線至Zoho CRM。
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # 使用[!DNL Flow Service] API建立[!DNL Zoho CRM]基本連線
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >[!DNL Zoho CRM]來源將於2025年6月底淘汰。
 
