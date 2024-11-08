@@ -2,9 +2,9 @@
 title: 沙箱工具套件API端點
 description: 沙箱工具API中的/packages端點可讓您以程式設計方式管理Adobe Experience Platform中的套件。
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 1e271a88890f41f66aad93d96dbef23a09d33077
+source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
 workflow-type: tm+mt
-source-wordcount: '2541'
+source-wordcount: '2543'
 ht-degree: 8%
 
 ---
@@ -1595,7 +1595,13 @@ curl -X GET \
 
 ### 將套件可用性從私人更新為公開 {#update-availability}
 
-透過向`/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC`端點發出GET要求，將封裝從私用變更為公用。 依預設，會建立具有私人可用性的套件。
+透過向`/packages/update`端點發出GET要求，將封裝從私用變更為公用。 依預設，會建立具有私人可用性的套件。
+
+**API格式**
+
+```http
+GET `/packages/update`
+```
 
 **要求**
 
@@ -1603,7 +1609,7 @@ curl -X GET \
 
 ```shell
 curl -X GET \
-  http://platform.adobe.io/data/foundation/transfer/list?property=status%3D%3DCOMPLETED%2CFAILED&requestType=PUBLIC \
+  http://platform.adobe.io/data/foundation/exim/packages/update \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
