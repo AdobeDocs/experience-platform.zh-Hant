@@ -5,9 +5,9 @@ breadcrumb-title: 查詢服務指南
 user-guide-description: 使用標準 SQL 在 Experience Platform 的 Data Lake 中查詢資料。
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '366'
 ht-degree: 22%
 
 ---
@@ -104,7 +104,7 @@ ht-degree: 22%
    - [監視已排程查詢](ui/monitor-queries.md)
    - [認證指南](ui/credentials.md)
    - [從查詢結果產生輸出資料集](ui/create-datasets.md)
-- 查詢服務API端點{#api}
+- 查詢服務API {#api}
    - [快速入門](api/getting-started.md)
    - [查詢](api/queries.md)
    - [連線參數](api/connection-parameters.md)
@@ -113,6 +113,11 @@ ht-degree: 22%
    - [查詢範本](api/query-templates.md)
    - [加速的查詢](api/accelerated-queries.md)
    - [警報訂閱](api/alert-subscriptions.md)
+- 查詢服務驗證API {#auth-api}
+   - [概觀](auth-api/overview.md)
+   - [快速入門](auth-api/getting-started.md)
+   - [IP存取](auth-api/ip-access.md)
+   - [驗證](auth-api/validate.md)
 - 資料控管{#data-governance}
    - [概觀](data-governance/overview.md)
    - [稽核記錄指南](data-governance/audit-log-guide.md)
