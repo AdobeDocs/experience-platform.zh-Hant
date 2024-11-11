@@ -3,9 +3,9 @@ title: Adobe Experience Platform 發行說明 (2024 年 10 月)
 description: Adobe Experience Platform 2024 年 10 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f30a124a40928abf69366d311131e353c2779191
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1159'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -30,11 +30,11 @@ Experience Platform 提供多個儀表板，您可以透過這些儀表板檢視
 
 | 功能 | 說明 |
 | --- | --- |
-| 資料Distiller範本 | 探索多個範本，以取得對象資料的結構化深入分析。 使用如&#x200B;**進階[!UICONTROL 對象重疊]**、**[!UICONTROL 對象比較]**、**[!UICONTROL 對象趨勢]**&#x200B;和&#x200B;**[!UICONTROL 對象身分重疊]**&#x200B;等控制面板，以做出資料導向式決策、最佳化細分並增強參與策略。 如需詳細資訊，請參閱[資料Distiller範本指南](../../dashboards/sql-insights-query-pro-mode/templates/overview.md)。 |
-| 進階客群重疊 | 快速分析特定對象的對象交集，或檢視所有重疊，以發掘整個對象集中的寶貴見解。 運用這些見解來調整細分、減少多餘的訊息，並建立更有針對性的行銷活動，以提升行銷效率。 如需詳細資訊，請參閱[進階對象重疊指南](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)。 |
-| 對象比較增強功能 | 使用&#x200B;**對象比較**&#x200B;儀表板，檢視不同對象群組之間的關鍵量度並排比較。 利用此控制面板，您可以選取特定時間範圍和KPI （例如對象人數和身分構成），針對對象細分和鎖定目標策略做出更明智的決策。 如需詳細資訊，請參閱[對象比較指南](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)。 |
-| 對象趨勢視覺效果 | 使用&#x200B;**[!UICONTROL 對象趨勢]**&#x200B;儀表板分析一段時間內的對象量度。 將對象規模、身分數和單一身分設定檔數的趨勢視覺化，協助您監控對象演變、衡量成長情況，並調整參與策略。 如需詳細資訊，請參閱[對象趨勢指南](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)。 |
-| 身分重疊分析 | 使用&#x200B;**[!UICONTROL 對象身分重疊]**&#x200B;儀表板，分析所選對象中的身分重疊。 檢視身分趨勢和劃分，以瞭解對象中不同的身分型別如何產生關聯，進而增強身分拼接並改善客戶細分準確性。 如需詳細資訊，請參閱[對象身分重疊指南](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)。 |
+| 資料蒸餾器範本 | 探索多個範本以取得對客群資料的結構化深入解析。使用&#x200B;**進階[!UICONTROL 客群重疊]**、**[!UICONTROL 客群比較]**、**[!UICONTROL 客群趨勢]**&#x200B;和&#x200B;**[!UICONTROL 客群身分重疊]**&#x200B;等儀表板來制定資料的決策、最佳化細分並增強互動策略。如需更多詳細資訊，請參閱「[資料蒸餾器範本指南](../../dashboards/sql-insights-query-pro-mode/templates/overview.md)」。 |
+| 進階客群重疊 | 快速分析特定客群的客群交集或檢視所有重疊部分來，以發現整個客群集合中有價值的深入分析。利用這些深入解析來細化細分、減少冗餘訊息，並建立更有針對性的行銷活動，以提高行銷效率。如需更多詳細資訊，請參閱「[進階客群重疊指南](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)」。 |
+| 客群比較增強功能 | 使用&#x200B;**客群比較**&#x200B;儀表板，查看不同客群之間關鍵指標的並排比較。使用此儀表板，您可以選擇特定的時間範圍和 KPI (例如客群規模和身分組成)，從而做出更明智的客群細分和目標設定策略決策。如需詳細資訊，請詳閱「[客群比較指南](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)」。 |
+| 客群趨勢視覺化 | 透過「**[!UICONTROL 客群趨勢]**」儀表板分析客群指標在一段時間內的變化。視覺化客群規模、身分數量和單一身分資料檔案數量的趨勢，幫助您監控客群的演變、衡量成長並完善您的互動策略。如需更多詳細資訊，請參閱「[客群趨勢指南](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)」。 |
+| 身分重疊分析 | 透過「**[!UICONTROL 客群身分重疊]**」儀表板分析所選客群中的身分重疊情況。查看身分趨勢和劃分，了解不同身分類型在您的客群中如何相互關聯，從而增強身分拼接並提升客戶細分的準確性。如需更多詳細資訊，請參閱「[客群身分重疊指南](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)」。 |
 
 {style="table-layout:auto"}
 
