@@ -2,7 +2,7 @@
 title: applyPropositions
 description: 重新呈現已使用sendEvent呈現的主張。
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 * **`viewName`**：要在單頁應用程式中轉譯的檢視名稱。 已快取這些決定的顯示通知，並可使用`personalization.includePendingDisplayNotifications`納入後續`sendEvent`命令中。
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""
