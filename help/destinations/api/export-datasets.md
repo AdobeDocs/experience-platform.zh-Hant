@@ -4,9 +4,9 @@ title: 使用流量服務API匯出資料集
 description: 瞭解如何使用流量服務API將資料集匯出至所選目的地。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 3%
 
 ---
@@ -1163,9 +1163,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 接下來，您需要建立目標連線，以儲存資料集的匯出引數。 匯出引數包括位置、檔案格式、壓縮和其他細節。 請參閱目的地的連線規格中提供的`targetSpec`屬性，以瞭解每個目的地型別的支援屬性。 請參考下列標籤，以取得所有支援目的地的`targetSpec`屬性。
 
->[!WARNING]
+>[!IMPORTANT]
 >
->僅壓縮模式支援匯出至JSON檔案。 在壓縮與未壓縮模式中支援匯出至[!DNL Parquet]個檔案。
+>僅壓縮模式支援匯出至JSON檔案。 壓縮和非壓縮模式都支援匯出至[!DNL Parquet]個檔案。
+>
+>匯出的JSON檔案格式為NDJSON，這是大資料生態系統中的標準交換格式。 Adobe建議使用與NDJSON相容的使用者端來讀取匯出的檔案。
 
 >[!BEGINTABS]
 

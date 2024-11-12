@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2603'
 ht-degree: 8%
 
 ---
@@ -238,7 +238,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 請注意兩種檔案型別在壓縮時的檔案格式差異：
 
-* 匯出壓縮的JSON檔案時，匯出的檔案格式為`json.gz`
+* 匯出壓縮的JSON檔案時，匯出的檔案格式為`json.gz`。 匯出的JSON格式為NDJSON，這是大資料生態系統中的標準交換格式。 Adobe建議使用與NDJSON相容的使用者端來讀取匯出的檔案。
 * 匯出壓縮的parquet檔案時，匯出的檔案格式為`gz.parquet`
 
 *僅支援在壓縮模式中匯出至JSON檔案*。 壓縮和未壓縮模式支援匯出至Parquet檔案。
