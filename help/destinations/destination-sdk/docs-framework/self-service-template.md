@@ -2,7 +2,7 @@
 title: 檔案自助範本//將取代為您的目的地名稱
 description: 使用此範本為Adobe Experience Platform目錄中的目的地建立公開檔案。//以總覽區段中的段落取代
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 10521602a5871419c0c49d54c8ed250af39a78a4
 workflow-type: tm+mt
 source-wordcount: '1645'
 ht-degree: 2%
@@ -137,7 +137,7 @@ ht-degree: 2%
 
 當您完成提供目的地連線的詳細資訊後，請選取&#x200B;**[!UICONTROL 下一步]**。
 
-## 啟動此目標的對象 {#activate}
+## 啟動此目標的客群 {#activate}
 
 >[!IMPORTANT]
 > 
