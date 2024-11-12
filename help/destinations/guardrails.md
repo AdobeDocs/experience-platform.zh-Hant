@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: 進一步瞭解資料啟用預設使用量和速率限制。
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 2%
+source-wordcount: '1715'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ ht-degree: 2%
 | 對應到目的地的屬性數目上限 | 50 | 效能護欄 | 如果有多種目的地和目的地型別，您可以選取要對應以匯出的設定檔屬性和身分。 為獲得最佳效能，在資料流中應將最多50個屬性對應到目的地。 |
 | 目的地數量上限 | 100 | 系統強制的護欄 | 您最多可以建立100個可連線並啟用資料的目的地，每個沙箱&#x200B;*有*&#x200B;個。 [Edge個人化目的地（自訂個人化）](#edge-destinations-activation)在100個建議目的地中最多可組成10個。 |
 | 啟用至目的地的資料型別 | 設定檔資料，包括身分和身分對應 | 系統強制的護欄 | 目前只能將&#x200B;*個人資料記錄屬性*&#x200B;匯出至目的地。 說明事件資料的XDM屬性目前不支援匯出。 |
-| 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 未提供 | 系統強制的護欄 | 目前&#x200B;**無法**&#x200B;將&#x200B;*陣列或對應屬性*&#x200B;匯出至目的地。 此規則的例外是[身分對應](/help/xdm/field-groups/profile/identitymap.md)，它會匯出到串流和檔案型啟用中。 |
+| 啟用至目的地的資料型別 — 陣列和對應屬性支援 | 部分可用 | 系統強制的護欄 | 您可以將陣列屬性匯出至[以檔案為基礎的目的地](/help/destinations/destination-types.md#file-based)。 您仍需使用`array_to_string`函式將陣列平面化為目標檔案中的字串。 [深入瞭解](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality)功能。 <br><br>目前&#x200B;**無法**&#x200B;將&#x200B;*對應屬性*&#x200B;匯出至目的地。 此規則的例外是[身分對應](/help/xdm/field-groups/profile/identitymap.md)，它會匯出到串流和檔案型啟用中。 |
 
 {style="table-layout:auto"}
 
