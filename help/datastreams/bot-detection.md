@@ -2,24 +2,22 @@
 title: 設定資料串流的機器人偵測
 description: 瞭解如何為資料串流設定機器人偵測，以區分人類和非人類流量。
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # 設定資料串流的機器人偵測
 
-源自非人類實體（例如自動化程式、網頁刮刀、編目程式、指令碼掃描器）的流量，會使得識別來自人類訪客的事件變得更加困難。 此類流量可能會對重要的商業量度產生負面影響，導致不正確的流量報表。
+來自自動化程式、網頁刮刀、編目程式和指令碼掃描器的非人為流量可能讓識別來自人為訪客的事件變得困難。 此類流量可能會對重要的商業量度產生負面影響，導致不正確的流量報表。
 
 機器人偵測可讓您將[Web SDK](../web-sdk/home.md)、[Mobile SDK](https://developer.adobe.com/client-sdks/home/)和[[!DNL Server API]](../server-api/overview.md)產生的事件識別為已知編目程式和機器人所產生。
 
-透過為資料串流設定機器人偵測，您可以識別要分類為機器人事件的特定IP位址、IP範圍和請求標題。
+透過為資料串流設定機器人偵測，您可以識別特定IP位址、IP範圍和請求標題，以分類為機器人事件。 這有助於針對使用者在您網站或行動應用程式上的活動提供更準確的測量。
 
-識別機器人流量可讓您更準確地測量使用者在您網站或行動應用程式上的活動。
-
-當Edge Network的請求符合任何機器人偵測規則時，XDM結構描述會以機器人評分（一律設為1）更新，如下所示。
+當Edge Network的請求符合任何機器人偵測規則時，XDM結構描述會以機器人分數（一律設為1）更新，如下所示：
 
 ```json
 {
@@ -66,9 +64,12 @@ ht-degree: 0%
 
 ### 使用IAB/ABC國際編目程式與機器人清單 {#iab-list}
 
-[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)是協力廠商的業界標準網際網路編目程式和機器人清單，可協助您識別自動流量，例如搜尋引擎編目程式、監控工具，以及其他您可能不想顯示在分析計數中的非人為流量。
+[IAB/ABC International Spiders and Bots List](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/)是協力廠商的業界標準網際網路編目程式和機器人清單。 此清單可協助您識別自動流量，例如搜尋引擎編目程式、監控工具，以及您可能不想納入分析計數的其他非人為流量。
 
-若要設定您的資料流以使用[!DNL IAB/ABC International Spiders and Bots List]，請切換&#x200B;**[!UICONTROL 在此資料流上使用IAB/ABC國際編目程式和機器人清單進行機器人偵測選項]**，然後選取「儲存」以將機器人偵測設定套用至您的資料流。
+若要設定您的資料串流以使用IAB/ABC國際編目程式和機器人清單：
+
+1. 切換&#x200B;**[!UICONTROL 在此資料流]**&#x200B;上使用IAB/ABC國際編目程式和機器人清單進行機器人偵測選項。
+2. 選取&#x200B;**[!UICONTROL 儲存]**，將機器人偵測設定套用至您的資料流。
 
 ![IAB編目程式和機器人清單已啟用。](assets/bot-detection/bot-detection-list.png)
 

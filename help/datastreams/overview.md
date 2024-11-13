@@ -2,16 +2,18 @@
 title: 資料流概觀
 description: 瞭解資料串流如何協助您將使用者端Experience PlatformSDK整合與Adobe產品和第三方目的地連線起來。
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 77%
+source-wordcount: '712'
+ht-degree: 70%
 
 ---
 
 # 資料流概觀
 
-資料流代表實作 Adobe Experience Platform Web 和 Mobile SDK 時的伺服器端設定。雖然SDK中的[`configure`](/help/web-sdk/commands/configure/overview.md)命令可控制使用者端（例如`edgeDomain`）上必須處理的專案，但資料串流會處理SDK的所有其他設定。 當傳送請求到 Adob&#x200B;&#x200B;e Experience Platform Edge Network 時，`datastreamId` 會用於參照資料流。這讓您無須在網站上進行程式碼變更即可更新伺服器端設定。
+資料流代表Adobe Experience Platform Web和Mobile SDK的伺服器端設定。 SDK中的[`configure`](/help/web-sdk/commands/configure/overview.md)命令會處理使用者端設定（例如`edgeDomain`），而資料串流會管理所有其他設定。
+
+當您傳送要求給Edge Network時，`datastreamId`會參考傳送資料的資料流。 這可讓您更新伺服器端設定，而不變更網站的程式碼。
 
 在 Adob&#x200B;&#x200B;e Experience Platform UI 或資料集合 UI 的左側導覽中選取&#x200B;**[!UICONTROL 資料流]**，即可建立並管理資料流。
 
@@ -27,7 +29,7 @@ ht-degree: 77%
 
 企業資料盡責管理政策和監管要求對於能夠收集、處理和使用敏感客戶資料的方式施加了越來越多的限制。這包括對於受保護的健康資料 (PHI) 的收集、處理和使用，這類資料受到《健康保險可攜與責任法案》(HIPAA) 等法規的規範。
 
-資料流提供三種方法協助您安全地處理敏感資料：
+資料串流提供三種方法來協助您安全地處理敏感資料：
 
 * [增強型加密](#encryption)
 * [資料控管](#governance)
