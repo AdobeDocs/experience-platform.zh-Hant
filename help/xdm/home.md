@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM系統概覽
 description: 標準化和互通性是Adobe Experience Platform背後的重要概念。 體驗資料模型(XDM)由Adobe驅動，致力於標準化客戶體驗資料並定義客戶體驗管理的結構。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
+source-git-commit: 442df54080b08b7fc3888e8bd5c7bd3e8f301240
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2124'
 ht-degree: 4%
 
 ---
@@ -69,7 +69,7 @@ Experience Platform提供使用者介面和RESTful API，您可以從中檢視�
 >
 >沒有基於臨機行為的標準類別。 臨機結構描述是由使用它們的平台處理序自動產生，但也可以使用結構描述登入API](./tutorials/ad-hoc.md)以手動方式[建立。
 
-### [!UICONTROL XDM 個別設定檔] {#xdm-individual-profile}
+### [!UICONTROL XDM 個別輪廓] {#xdm-individual-profile}
 
 [!UICONTROL XDM個人設定檔]是以記錄為基礎的類別，可形成已識別和部分識別之主體屬性的單一表示法。 高度識別的設定檔可用於個人通訊或目標參與。 高度識別的設定檔可包含詳細的個人資訊，例如，姓名、性別、出生日期、地點，以及聯絡資訊，包括電話號碼和電子郵件地址。
 
@@ -113,7 +113,7 @@ Experience Platform與結構無關，這表示任何符合XDM標準的結構均�
 
 如需服務的詳細資訊，請參閱[查詢服務總覽](../query-service/home.md)。
 
-### 即時客戶設定檔 {#real-time-customer-profile}
+### 即時客戶輪廓 {#real-time-customer-profile}
 
 即時客戶設定檔提供集中式消費者設定檔，用於針對性和個人化的體驗管理。 每個設定檔都包含跨所有系統彙總的資料，並包含涉及設定檔主旨之事件的可行時間戳記帳戶。 這些事件可能發生在您與Experience Platform搭配使用的任何系統中。
 
@@ -128,6 +128,10 @@ Experience Platform與結構無關，這表示任何符合XDM標準的結構均�
 如需詳細資訊，請參閱[即時客戶個人檔案總覽](../profile/home.md)。
 
 ### Data Science Workspace {#data-science-workspace}
+
+>[!NOTE]
+>
+>Data Science Workspace已無法購買。 本檔案旨在供先前有權使用Data Science Workspace的現有客戶使用。
 
 Adobe Experience Platform Data Science Workspace使用機器學習和人工智慧，從Experience Platform中儲存的資料中獲得深入分析。 資料科學Workspace可讓資料科學家根據有關客戶及其活動的[!UICONTROL XDM個人設定檔]和[!UICONTROL XDM ExperienceEvent]資料來建置配方。 這些配方有助於進行預測，例如購買傾向和建議個人可能會讚賞和使用的選件。
 
