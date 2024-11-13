@@ -3,14 +3,19 @@ keywords: Experience Platform；查詢服務；IP存取控制；授權；API；�
 title: 查詢服務授權API指南
 description: 瞭解如何在Adobe Experience Platform的查詢服務中開始進行授權和IP範圍限制的安全資料存取。
 role: Developer
-source-git-commit: eb6558c2cc3faebb2cb14f49f7517227d57f7162
+exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 4%
+source-wordcount: '482'
+ht-degree: 6%
 
 ---
 
 # 查詢服務授權API指南
+
+>[!AVAILABILITY]
+>
+>已購買Data Distiller附加元件的客戶可使用此功能。 如需詳細資訊，請聯絡您的 Adobe 代表。
 
 查詢服務授權API可透過Adobe Experience Platform中的SQL介面，為組織提供更嚴格的資料存取控制。 您可以使用此API來定義IP限制、限制對指定網路的資料存取，以及增強安全性監視。
 

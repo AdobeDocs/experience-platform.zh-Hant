@@ -3,14 +3,19 @@ keywords: Experience Platform；安全性；ip-access；QS-Auth；API指南；�
 title: IP存取端點
 description: 瞭解如何使用IP存取API端點在查詢服務中管理沙箱存取的IP範圍。
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 2%
+source-wordcount: '422'
+ht-degree: 3%
 
 ---
 
 # IP存取端點
+
+>[!AVAILABILITY]
+>
+>已購買Data Distiller附加元件的客戶可使用此功能。 如需詳細資訊，請聯絡您的 Adobe 代表。
 
 若要保護指定查詢服務沙箱內資料存取的安全，請使用IP存取端點來管理允許的IP範圍。 您可以使用此API來擷取、設定或刪除與組織ID相關聯的IP範圍。
 
@@ -163,4 +168,3 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/security/ip-acces
   ]
 }
 ```
-

@@ -3,14 +3,19 @@ keywords: Experience Platform；安全性； ip存取；驗證； API指南；�
 title: IP驗證端點
 description: 瞭解如何使用IP驗證API端點來驗證查詢服務中沙箱的IP存取權。
 role: Developer
-source-git-commit: ad1b6d8449a2a3ca9c8422e70769d12e33d8e255
+exl-id: 4ce9ab1c-e333-4ed5-a430-43ffec36a46d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 0%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
 # IP驗證端點
+
+>[!AVAILABILITY]
+>
+>已購買Data Distiller附加元件的客戶可使用此功能。 如需詳細資訊，請聯絡您的 Adobe 代表。
 
 使用IP驗證API端點來驗證是否允許指定的IP位址存取查詢服務中的指定沙箱。 此檢查會確認存取限制是否適用，或IP位址是否允許存取沙箱中的資料。
 

@@ -2,14 +2,19 @@
 title: 查詢服務授權API指南
 description: 瞭解如何使用查詢服務授權API來強制實施網路型IP限制，以透過SQL實現安全連線。 使用此API可增強您Adobe Experience Platform資料的資料存取控制。
 role: Developer
-source-git-commit: f673d0d71458fe87491318f06be59719e4c9d76c
+exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 1%
+source-wordcount: '386'
+ht-degree: 2%
 
 ---
 
 # 查詢服務授權API指南
+
+>[!AVAILABILITY]
+>
+>已購買Data Distiller附加元件的客戶可使用此功能。 如需詳細資訊，請聯絡您的 Adobe 代表。
 
 使用查詢服務授權API可強制執行IP型限制。 套用這些措施，可確保只有經過核准的網路和使用者端電腦才能透過Adobe Experience Platform中的SQL存取資料。 這些控制功能可協助您符合嚴格的安全性標準，同時提供即時存取監控和警報。
 
