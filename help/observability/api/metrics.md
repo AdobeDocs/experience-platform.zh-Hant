@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 量度API端點
 description: 瞭解如何使用可觀察性深入分析API在Experience Platform中擷取可觀察性量度。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: a029d503d37d7e705897ce8efca98674ccf21780
+source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 3%
@@ -42,6 +42,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
   -d '{
         "start": "2020-07-14T00:00:00.000Z",
         "end": "2020-07-22T00:00:00.000Z",
