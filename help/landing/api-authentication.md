@@ -4,9 +4,9 @@ title: 驗證及存取Experience PlatformAPI
 type: Tutorial
 description: 本文件逐步說明如何存取 Adobe Experience Platform 開發人員帳戶，進而呼叫 Experience Platform API。
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2383'
 ht-degree: 2%
 
 ---
@@ -67,6 +67,10 @@ ht-degree: 2%
 >如果您是從[Privacy ServiceAPI指南](../privacy-service/api/getting-started.md)追蹤此檔案，您現在可以返回該指南以產生[!DNL Privacy Service]唯一的存取認證。
 
 在透過[!DNL Admin Console]授予您開發人員和使用者存取Platform的許可權後，下一步就是在Adobe Developer Console中產生您的`{ORG_ID}`和`{API_KEY}`認證。 這些認證只需產生一次，並可在未來平台API呼叫中重複使用。
+
+>[!TIP]
+>
+>您可以直接從API參考檔案頁面取得使用Platform API所需的所有驗證認證，而不用前往Developer Console。 [深入瞭解](#get-credentials-functionality)功能。
 
 ### 將Experience Platform新增至專案 {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ In addition to the above credentials, you also need the generated **[!UICONTROL 
 >[!TIP]
 >
 您也可以使用Postman環境和集合來產生存取權杖。 如需詳細資訊，請閱讀有關[使用Postman驗證和測試API呼叫](#use-postman)的章節。
+
+## 直接在API參考檔案中建立和擷取驗證認證 {#get-credentials-functionality}
+
+從2024年11月發行的Experience Platform開始，您可以直接從API參考頁面取得使用Experience PlatformAPI的認證，而無需前往[!UICONTROL Developer Console]。 從[流量服務API — 目的地頁面](https://developer.adobe.com/experience-platform-apis/references/destinations/)檢視以下範例。
+
+![在API參考頁面頂端反白顯示取得認證功能。](././images/api-authentication/get-credentials-highlighted.png)
+
+若要取得呼叫Platform API的認證，請瀏覽至任何Experience PlatformAPI參考頁面，並在頁面頂端選取&#x200B;**[!UICONTROL 登入]**。 使用您的&#x200B;**[!UICONTROL 個人帳戶]**&#x200B;或&#x200B;**[!UICONTROL 公司或學校帳戶]**&#x200B;登入。
+
+登入後，請選取&#x200B;**[!UICONTROL 建立新認證]**&#x200B;以建立一組新的認證以存取Platform API。
+
+![建立新認證以存取Platform API。](././images/api-authentication/create-credentials.gif)
+
+接下來，使用下拉式選擇器開啟憑證視窗、產生存取權杖，並取得您的API金鑰和組織ID。 將認證複製到API參考頁面上的[**[!UICONTROL Try it]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation)區塊中，以開始使用Platform API。
+
+![使用下拉式選擇器檢視認證並產生存取權杖。](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+當您在Experience Platform API參考檔案中的不同端點頁面之間導覽時，頁面頂端憑證區塊仍會顯示。
 
 ## [!BADGE 已棄用]{type=negative}產生JSON Web權杖(JWT) {#jwt}
 
