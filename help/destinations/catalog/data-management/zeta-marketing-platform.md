@@ -3,13 +3,13 @@ title: Zeta行銷平台
 description: Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI）提供支援，協助您更有效率地贏取、成長及留住客戶。
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
+source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 1%
 
 ---
-
 
 # Zeta行銷平台 {#zeta-marketing-platform}
 
@@ -31,17 +31,17 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 
 ### 使用廣告鎖定使用者 {#use-case-target-users}
 
-廣告商的目標是透過ZetaDemand Side Platform(DSP)鎖定特定受眾內的使用者，因為這些使用者會與他們的品牌互動。 如需Zeta DSP的詳細資訊，請按一下[這裡](https://knowledgebase.zetaglobal.com/programmatic-user-guide/)。
+廣告商的目標是透過ZetaDemand Side Platform(DSP)鎖定特定受眾內的使用者，因為這些使用者會與他們的品牌互動。 如需Zeta DSP的詳細資訊，請按一下[這裡](https://knowledgebase.zetaglobal.com/pug/)。
 
 ## 先決條件 {#prerequisites}
 
 ### Zeta行銷平台必要條件
 
-* 在您設定與Zeta Marketing Platform目的地的新連線之前，必須在Zeta Marketing Platform帳戶中建立空白的客戶清單。 您必須選擇其中一個客戶清單作為指定目標，以接收您計畫傳送的Adobe Experience Platform對象。 您可以依照指示[這裡](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList)，在ZMP中建立空的客戶清單。
+* 在您設定與Zeta Marketing Platform目的地的新連線之前，必須在Zeta Marketing Platform帳戶中建立空白的客戶清單。 您必須選擇其中一個客戶清單作為指定目標，以接收您計畫傳送的Adobe Experience Platform對象。 您可以依照指示[這裡](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList)，在ZMP中建立空的客戶清單。
 * 雖然Adobe Experience Platform允許針對特定ZMP目的地執行個體啟用多個對象，但每個ZMP目的地執行個體都必須只接收一個Experience Platform對象。 若要從Experience Platform處理多個受眾，請為每個受眾建立其他ZMP目的地例項，並從下拉式清單中選取不同的客戶清單。 此方法可確保不會覆寫Target ZMP對象。 如需詳細資訊，請參閱[填寫目的地詳細資料](#destination-details)。
 * 使用下列認證來設定目的地：
    * 使用者名稱： **api**
-   * 密碼：您的ZMP REST API金鑰。 您可以登入您的ZMP帳戶並瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以找到您的REST API金鑰。 如需詳細資訊，請參閱[ZMP檔案](https://knowledgebase.zetaglobal.com/zmp/integrations)。
+   * 密碼：您的ZMP REST API金鑰。 您可以登入您的ZMP帳戶並瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以找到您的REST API金鑰。 如需詳細資訊，請參閱[ZMP檔案](https://knowledgebase.zetaglobal.com/kb/integrations)。
 
 ## 支援的身分 {#supported-identities}
 
@@ -94,7 +94,7 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 若要驗證到目的地，請填入必填欄位，然後選取&#x200B;**[!UICONTROL 連線到目的地]**。
 
 * **[!UICONTROL 使用者名稱]**： `api`
-* **[!UICONTROL 密碼]**：您的ZMP REST API金鑰。 您可以登入您的ZMP帳戶並瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以找到您的REST API金鑰。 如需詳細資訊，請參閱[ZMP檔案](https://knowledgebase.zetaglobal.com/zmp/integrations)。
+* **[!UICONTROL 密碼]**：您的ZMP REST API金鑰。 您可以登入您的ZMP帳戶並瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以找到您的REST API金鑰。 如需詳細資訊，請參閱[ZMP檔案](https://knowledgebase.zetaglobal.com/kb/integrations)。
 
 ### 填寫目標詳細資訊 {#destination-details}
 
@@ -103,7 +103,7 @@ Zeta Marketing Platform (ZMP)是雲端型系統，由智慧（專屬資料和AI�
 ![顯示ZMP組態的影像](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL ZMP帳戶網站ID]**：您要將對象傳送至的ZMP **網站ID**。 您可以瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以檢視您的網站ID。 在[這裡](https://knowledgebase.zetaglobal.com/zmp/integrations)可找到更多資訊。
+* **[!UICONTROL ZMP帳戶網站ID]**：您要將對象傳送至的ZMP **網站ID**。 您可以瀏覽至&#x200B;**設定** > **整合** > **金鑰與應用程式**&#x200B;區段，以檢視您的網站ID。 在[這裡](https://knowledgebase.zetaglobal.com/kb/integrations)可找到更多資訊。
 * **[!UICONTROL ZMP區段]**：您ZMP網站ID帳戶中要與Platform對象一起更新的客戶清單區段。
 
 ### 啟用警示 {#enable-alerts}
@@ -152,4 +152,4 @@ ZMP中的![客戶清單](../../assets/catalog/data-management-platform/zeta-mark
 
 ## 其他資源 {#additional-resources}
 
-* [Zeta知識庫](https://knowledgebase.zetaglobal.com/zmp/)
+* [Zeta知識庫](https://knowledgebase.zetaglobal.com/kb/)
