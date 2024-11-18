@@ -1,16 +1,14 @@
 ---
 title: 菱形批次目的地
 description: 使用此目的地，以批次方式將AdobeCDP對象傳送至Magnite串流平台。
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
+source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1680'
 ht-degree: 1%
 
 ---
-
 
 # 菱形：批次連線 {#magnite-streaming-batch}
 
@@ -31,8 +29,6 @@ Adobe Real-Time CDP受眾有兩種傳送至Magnite串流平台的方式 — 可�
 如需即時目的地的詳細資訊，請參閱[此檔案頁面](magnite-streaming.md)。
 
 >[!IMPORTANT]
->
->此目的地聯結器為測試版，僅供特定客戶使用。 若要要求存取權，請聯絡您的Adobe代表。
 >
 >目的地聯結器和檔案頁面是由[!DNL Magnite]團隊建立和維護的。 若有任何查詢或更新要求，請直接透過`adobe-tech@magnite.com`聯絡。
 
@@ -116,13 +112,17 @@ Magnite：批次目的地可以接收來自AdobeCDP的&#x200B;*任何*&#x200B;�
 未來。
 * **[!UICONTROL 描述]**：可協助您識別此內容的描述
 未來的目的地連線/執行個體。
-* **[!UICONTROL 您的來源合作夥伴名稱]**：您要在Magnite Streaming的平台上做為來源的名稱
+* **[!UICONTROL 您的公司名稱]**：您的客戶/公司名稱。 只有支援的[!DNL Magnite Streaming]使用者端可供選擇。
+
+>[!NOTE]
+>
+>公司名稱必須是符合您已使用Magnite設定並在[對目的地](#authenticate)驗證步驟中設定的Amazon S3傳遞貯體名稱的字串。 支援的字元包括&#39;a-z&#39;、&#39;A-Z&#39;、&#39;0-9&#39;、&#39;-&#39;（破折號）或&#39;_&#39;（底線）。
 
 ![目的地設定驗證欄位已填入](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
->如果您打算傳送多個ID型別（GAID、IDFA等） 使用「批次」目的地時，每個都需要新的目的地連線/執行個體。 如需詳細資訊，請聯絡您的Magnite客戶代表。
+>如果您計畫使用「批次」目的地傳送多個ID型別（GAID、IDFA等），則每個型別都需要新的目的地連線/執行個體。 如需詳細資訊，請聯絡您的Magnite客戶代表。
 
 接著，您可以選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續進行
 
@@ -158,7 +158,7 @@ Magnite：批次目的地可以接收來自AdobeCDP的&#x200B;*任何*&#x200B;�
 
 >[!NOTE]
 >
->如果您打算傳送/對應多個ID型別（GAID、IDFA等） 使用「批次」目的地時，每個都需要新的目的地連線/執行個體。 如需詳細資訊，請聯絡您的Magnite客戶代表。
+>如果您打算使用批次目的地來傳送/對應多個ID型別（GAID、IDFA等），則每個型別都需要新的目的地連線/執行個體。 如需詳細資訊，請聯絡您的Magnite客戶代表。
 
 
 在「設定每個對象的檔案名稱和匯出排程」畫面上，您現在必須設定每個對象的開始日期（必要）、結束日期（選用）和對應ID （必要）。
