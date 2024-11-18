@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: 了解輪廓資料和細分的效能和系統強制護欄，確保以最佳方式使用 Real-Time CDP 功能。
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2461'
 ht-degree: 2%
 
 ---
@@ -172,9 +172,9 @@ Dimension實體提供查閱資料，可協助並簡化多實體區段定義，�
 
 在此檔案中，有數個護欄會參照「設定檔片段」。 在Experience Platform中，多個設定檔片段會合併在一起，以形成即時客戶設定檔。 每個片段代表指定資料集中該ID的唯一主要身分和對應的記錄或完整事件資料集。 若要深入瞭解設定檔片段，請參閱[設定檔概述](home.md#profile-fragments-vs-merged-profiles)。
 
-### 合併政策 {#merge-policies}
+### 合併原則 {#merge-policies}
 
-將來自多個來源的資料彙集在一起時，合併原則是Platform用來判斷資料優先順序的方式以及將會合併哪些資料以建立該統一檢視的規則。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。 當來自多個來源的資料衝突時，合併原則會決定要將哪些資訊包含在個人設定檔中。 每個組織最多允許五(5)個合併原則。 若要深入瞭解合併原則，請參閱[合併原則概述](merge-policies/overview.md)。
+將來自多個來源的資料彙集在一起時，合併原則是Platform用來判斷資料優先順序的方式以及將會合併哪些資料以建立該統一檢視的規則。 例如，如果客戶跨多個管道與您的品牌互動，則您的組織將會有多個與該單一客戶相關的設定檔片段出現在多個資料集中。 這些片段在擷取至Platform時，會合併在一起，以便為該客戶建立單一設定檔。 當來自多個來源的資料衝突時，合併原則會決定要將哪些資訊包含在個人設定檔中。 每個沙箱最多允許五(5)個使用`_xdm.context.profile`結構描述的合併原則。 若要深入瞭解合併原則，請參閱[合併原則概述](merge-policies/overview.md)。
 
 ### Platform中的Adobe Analytics報表套裝資料集 {#aa-datasets}
 
