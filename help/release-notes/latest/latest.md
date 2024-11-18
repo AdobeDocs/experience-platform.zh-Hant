@@ -3,7 +3,7 @@ title: Adobe Experience Platform 發行說明 (2024 年 10 月)
 description: Adobe Experience Platform 2024 年 10 月版發行說明。
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f30a124a40928abf69366d311131e353c2779191
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 100%
 
