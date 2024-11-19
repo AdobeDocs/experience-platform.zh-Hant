@@ -2,7 +2,7 @@
 title: applyPropositions
 description: 重新呈現已使用sendEvent呈現的主張。
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 這個命令支援下列欄位：
 
 * **主張**：您要重新呈現的主張物件陣列。
-* **檢視名稱**：要呈現的檢視名稱。 已快取這些決定的顯示通知，並可使用`personalization.includePendingDisplayNotifications`選項包含在後續`sendEvent`命令中。
+* **檢視名稱**：要呈現的檢視名稱。 已快取這些決定的顯示通知，並可使用`personalization.includeRenderedPropositions`選項包含在後續`sendEvent`命令中。
 * **中繼資料**：決定如何套用HTML選件的物件。 它包含下列屬性：
    * 範圍
    * 選擇器
@@ -43,7 +43,7 @@ ht-degree: 0%
 * **`metadata`**：決定如何套用HTML選件。 這是一個對應，其中索引鍵是範圍或表面，而值是包含索引鍵`selector`和`actionType`的物件。
    * `selector`：字串，其中包含套用HTML位置的CSS選取器。
    * `actionType`：HTML要採取的動作。 有效值包括`setHtml`、`replaceHtml`和`appendHtml`。
-* **`viewName`**：要在單頁應用程式中轉譯的檢視名稱。 已快取這些決定的顯示通知，並可使用`personalization.includePendingDisplayNotifications`納入後續`sendEvent`命令中。
+* **`viewName`**：要在單頁應用程式中轉譯的檢視名稱。 已快取這些決定的顯示通知，並可使用`personalization.includeRenderedPropositions`納入後續`sendEvent`命令中。
 
 ```js
 alloy("applyPropositions",{

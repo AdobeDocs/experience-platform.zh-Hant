@@ -2,7 +2,7 @@
 title: 在Web SDK中管理顯示事件
 description: 本文說明什麼是顯示事件，以及如何在Web SDK中使用它們。
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Web SDK可讓您以兩種方式傳送顯示事件：
 若要在頁面上呈現個人化內容後自動傳送顯示事件，您必須設定下列引數：
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true`或未指定
+* `personalization.sendDisplayEvent: true`或未指定
 
 Web SDK會在任何個人化轉譯為`sendEvent`呼叫的結果後，立即傳送顯示事件。
 
@@ -50,9 +50,9 @@ Web SDK會在任何個人化轉譯為`sendEvent`呼叫的結果後，立即傳�
 若要傳送自動轉譯主張的顯示事件，您必須在`sendEvent`呼叫中設定下列引數：
 
 * `renderDecisions: true`
-* 頁面點選頂端的`personalization.sendDisplayNotifications: false`
+* 頁面點選頂端的`personalization.sendDisplayEvent: false`
 
-若要傳送顯示事件，請使用`personalization.includePendingDisplayNotifications: true`呼叫`sendEvent`
+若要傳送顯示事件，請使用`personalization.includeRenderedPropositions: true`呼叫`sendEvent`
 
 ### 傳送手動呈現主張的顯示事件 {#manually-rendered-propositions}
 
