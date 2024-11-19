@@ -1,18 +1,16 @@
 ---
 title: Magnite即時目的地連線
 description: 使用此目的地可將AdobeCDP對象即時傳送到Magnite串流平台。
-badgeBeta: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1317'
 ht-degree: 1%
 
 ---
 
-
-# (Beta) Magnite：即時目的地連線
+# 菱形：即時目的地連線
 
 ## 概觀 {#overview}
 
@@ -28,8 +26,6 @@ Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/h
 注意：使用即時目的地時，[!DNL Magnite Streaming]將會即時接收對象，但Magnite只能暫時將即時對象儲存在其平台中，並且這些對象將在幾天內從系統中移除。 因此，如果您想要使用Magnite： Real-Time目的地，您&#x200B;*也*&#x200B;需要使用Magnite： Batch目的地 — 您對Real-Time目的地啟用的每個對象，也需要對Batch目的地啟用。
 
 >[!IMPORTANT]
->
->此目的地聯結器為測試版，僅供特定客戶使用。 若要要求存取權，請聯絡您的Adobe代表。
 >
 >目的地聯結器和檔案頁面是由[!DNL Magnite]團隊建立和維護的。 若有任何查詢或更新要求，請直接透過`adobe-tech@magnite.com`聯絡。
 
@@ -101,7 +97,11 @@ Adobe Experience Platform中的[!DNL Magnite: Real-Time]和[Magnite：批次](/h
 
 * **[!UICONTROL 名稱]**：您日後可辨識此目的地的名稱。
 * **[!UICONTROL 描述]**：可協助您日後識別此目的地的描述。
-* **[!UICONTROL 您的來源合作夥伴名稱]**：您的客戶/公司名稱。 只有支援的[!DNL Magnite Streaming]使用者端可供選擇。
+* **[!UICONTROL 您的公司名稱]**：您的客戶/公司名稱。 只有支援的[!DNL Magnite Streaming]使用者端可供選擇。
+
+>[!NOTE]
+>
+>公司名稱必須是符合您已使用Magnite設定並在[對目的地](#authenticate)驗證步驟中設定的Amazon S3傳遞貯體名稱的字串。 支援的字元包括&#39;a-z&#39;、&#39;A-Z&#39;、&#39;0-9&#39;、&#39;-&#39;（破折號）或&#39;_&#39;（底線）。
 
 ![目的地設定驗證欄位已填入](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 

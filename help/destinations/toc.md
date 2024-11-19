@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1248'
 ht-degree: 5%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 5%
       * [使用Experience PlatformUI隨選將檔案匯出至批次目的地](./ui/export-file-now.md)
       * [使用Experience Platform UI匯出資料集](./ui/export-datasets.md)
       * [(Beta)在新的Beta版雲端儲存目的地使用上次資格取得時間XDM屬性](./ui/activate-last-qualification-time.md)
-      * [使用計算欄位將陣列匯出為字串](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [利用計算欄位將陣列匯出為字串](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [檢視目的地詳細資料](./ui/destination-details-page.md)
    * [更新目的地帳戶](./ui/update-accounts.md)
    * [刪除目的地帳戶](./ui/delete-destination-account.md)
@@ -92,8 +92,8 @@ ht-degree: 5%
       * [linkedIn Insight標籤擴充功能](./catalog/advertising/linkedin.md)
       * [LiveRamp — 入門連線](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp — 散發連線](./catalog/advertising/liveramp-distribution.md)
-      * [(Beta)菱鎂礦批次](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [(Beta) Magnite串流即時連線](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [菱鎂色批次](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Magnite串流即時連線](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing連線](./catalog/advertising/bing.md)
       * [pinterest轉換追蹤擴充功能](./catalog/advertising/pinterest-extension.md)
       * [pinterest客戶清單連線](./catalog/advertising/pinterest.md)
