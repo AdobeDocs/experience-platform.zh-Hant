@@ -3,8 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platfor
 solution: Experience Platform
 title: Adobe Experience Platform中的Postman
 description: 本檔案包含概述如何設定Postman環境、匯入Postman集合的步驟，以及每個Platform服務的可用集合清單。
+role: Developer
+feature: API
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%

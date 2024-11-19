@@ -1,8 +1,10 @@
 ---
 title: 開始使用稽核查詢API
 description: 稽核查詢API可讓您擷取各種Adobe Experience Platform功能的量度資料。 本檔案介紹嘗試呼叫Audit Query API之前需要瞭解的核心概念。
+role: Developer
+feature: Audits, API
 exl-id: 20eab0a8-98f7-4fee-8f91-88324e54ab18
-source-git-commit: c2c5778e0a3fff7f488ad7a672123c813cca59f1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 11%

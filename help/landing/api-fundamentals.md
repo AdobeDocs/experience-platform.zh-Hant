@@ -3,11 +3,13 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: Experience PlatformAPI基礎知識
 description: 本檔案簡要概述Experience Platform API相關的一些基礎技術和語法。
+role: Developer
+feature: API
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 

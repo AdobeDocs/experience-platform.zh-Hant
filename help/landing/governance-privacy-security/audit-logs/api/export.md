@@ -1,8 +1,10 @@
 ---
 title: 稽核事件匯出API端點
 description: 瞭解如何使用稽核查詢API以Experience Platform匯出稽核事件。
+role: Developer
+feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: c7887391481def872c40dd6ed1193bf562b9d0cf
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 3%

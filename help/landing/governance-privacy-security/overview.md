@@ -3,8 +3,9 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 治理、隱私和安全性概述
 description: Adobe Experience Platform提供數種服務和工具，可讓您安心控制所收集的體驗資料，以符合您的業務實務、法律義務和開發程式。
+feature: Data Governance,Privacy
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 7%
@@ -19,11 +20,11 @@ Experience Platform提供數種服務和工具，可讓您安心控制所收集�
 
 這些服務可歸類為三個網域：
 
-* [資料控管](#governance)
+* [資料治理](#governance)
 * [隱私權](#privacy)
 * [安全性](#security)
 
-## 資料控管 {#governance}
+## 資料治理 {#governance}
 
 資料控管是與Experience Platform中每項功能交織在一起的基本概念。 資料控管代表您能夠控制並理解資料透過Platform的整個歷程。 這涉及到維護資料品質、資料譜系、資料編目等等。
 

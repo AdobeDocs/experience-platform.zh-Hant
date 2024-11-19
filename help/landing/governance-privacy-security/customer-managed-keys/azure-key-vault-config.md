@@ -1,8 +1,10 @@
 ---
 title: 設定Azure金鑰儲存庫
 description: 瞭解如何使用Azure建立新的企業帳戶，或使用現有的企業帳戶並建立金鑰儲存庫。
+role: Developer
+feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%

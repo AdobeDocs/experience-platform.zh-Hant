@@ -3,8 +3,10 @@ keywords: Experience Platform；首頁；熱門主題
 solution: Experience Platform
 title: 設定資料集以擷取同意和偏好設定資料
 description: 瞭解如何設定Experience Data Model (XDM)結構描述和資料集，以擷取Adobe Experience Platform中的同意和偏好設定資料。
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 0%

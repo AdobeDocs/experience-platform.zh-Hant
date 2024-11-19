@@ -3,8 +3,10 @@ keywords: Experience Platform；首頁；熱門主題；Adobe Experience Platfor
 solution: Experience Platform
 title: Adobe Experience Platform API快速入門
 description: Adobe Experience Platform提供的API服務彼此緊密連結。 本指南包含可用服務、CRUD作業所需標頭、錯誤訊息、Postman集合和範例API呼叫的相關資訊。
+role: Developer
+feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 0%

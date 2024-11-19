@@ -1,7 +1,8 @@
 ---
 title: 隱私權控制檯總覽
 description: 瞭解如何在Adobe Experience Platform UI中監視與隱私權相關的工作流程。
-source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
+feature: Privacy
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 4%

@@ -3,8 +3,10 @@ keywords: Experience Platform；首頁；IAB；IAB 2.0；同意；同意
 solution: Experience Platform
 title: Experience Platform中的IAB TCF 2.0支援
 description: 瞭解如何設定您的資料作業和結構描述，以在對Adobe Experience Platform中的目的地啟用區段時傳達客戶同意選擇。
+role: Developer
+feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 0%
@@ -127,7 +129,7 @@ Platform可讓您透過下列程式收集客戶同意資料：
 | [!UICONTROL 沙箱] | 平台[沙箱](/help/sandboxes/home.md)的名稱，其中包含設定資料串流所需的串流連線和資料集。 |
 | [!UICONTROL 串流入口] | 適用於Experience Platform的有效串流連線。 如果您沒有現有的串流入口，請參閱有關[建立串流連線](/help/ingestion/tutorials/create-streaming-connection-ui.md)的教學課程。 |
 | [!UICONTROL 事件資料集] | 選取在[先前的步驟](#datasets)中建立的[!DNL XDM ExperienceEvent]資料集。 如果您在此資料集的結構描述中包含[[!UICONTROL IAB TCF 2.0同意]欄位群組](/help/xdm/field-groups/event/iab.md)，您可以使用[`sendEvent`](#sendEvent)命令追蹤一段時間的同意變更事件，並將該資料儲存在此資料集中。 請記住，儲存在此資料集中的同意值&#x200B;**並非**&#x200B;用於自動執行工作流程。 |
-| [!UICONTROL 設定檔資料集] | 選取在[先前的步驟](#datasets)中建立的[!DNL XDM Individual Profile]資料集。 使用[`setConsent`](#setConsent)命令回應CMP同意變更掛接時，收集的資料會儲存在此資料集中。 由於此資料集已啟用設定檔功能，在自動執行工作流程期間，將會接受儲存在此資料集中的同意值。 |
+| [!UICONTROL 輪廓資料集] | 選取在[先前的步驟](#datasets)中建立的[!DNL XDM Individual Profile]資料集。 使用[`setConsent`](#setConsent)命令回應CMP同意變更掛接時，收集的資料會儲存在此資料集中。 由於此資料集已啟用設定檔功能，在自動執行工作流程期間，將會接受儲存在此資料集中的同意值。 |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 

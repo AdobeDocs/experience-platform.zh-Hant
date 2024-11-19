@@ -1,11 +1,13 @@
 ---
 title: 稽核記錄概觀
 description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platform 中執行了哪些操作。
+role: Admin,Developer
+feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1350'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -138,14 +140,14 @@ ht-degree: 35%
 
 您可以啟用稽核警示來接收下列規則的通知：
 
-* 對象建立
-* 對象更新
-* 對象刪除
+* 客群建立
+* 客群更新
+* 客群刪除
 * 資料集建立
 * 資料集更新
 * 資料集刪除
-* 結構描述建立
-* 結構描述更新
+* 綱要建立
+* 綱要更新
 * 結構描述刪除
 
 從清單中選取所需的警報，以訂閱接收通知。 如需警示的詳細資訊，請參閱[使用UI訂閱警示](../../../observability/alerts/ui.md)的指南。
