@@ -2,18 +2,14 @@
 title: 管理結構描述的資料使用標籤
 description: 瞭解如何在Adobe Experience Platform UI中新增資料使用標籤到Experience Data Model (XDM)結構描述欄位。
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
+source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '766'
 ht-degree: 8%
 
 ---
 
 # 管理結構描述的資料使用標籤
-
->[!IMPORTANT]
->
->結構描述型標籤是[屬性型存取控制](../../access-control/abac/overview.md)的一部分，目前在美國醫療保健客戶的限量版中提供。 此功能在完整發行後，將可供所有Adobe Real-time Customer Data Platform客戶使用。
 
 所有帶入Adobe Experience Platform的資料都受到Experience Data Model (XDM)結構描述的限制。 此資料可能受貴組織或法律法規所定義的使用限制所約束。 為了說明這個問題，Platform可讓您透過使用[資料使用標籤](../../data-governance/labels/overview.md)來限制特定資料集和欄位的使用。
 
