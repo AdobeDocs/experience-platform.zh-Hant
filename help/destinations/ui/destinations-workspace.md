@@ -3,9 +3,9 @@ keywords: 平台；目的地；目的地工作區；工作區；ui；目的地ui
 title: 目的地工作區
 description: 「目的地」工作區包含五個區段：「概述」、「目錄」、「瀏覽」、「帳戶」和「系統檢視」。 以下各節將予以說明。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1233'
 ht-degree: 0%
 
 ---
@@ -77,11 +77,11 @@ ht-degree: 0%
 
 | 元素 | 說明 |
 |---|---|
-| [!UICONTROL 平台] | 您為其設定連線的目的地。 |
+| [!UICONTROL 目標] | 您已為其設定連線的目的地聯結器。 |
 | [!UICONTROL 連線型別] | 代表與儲存貯體或目的地的帳戶連線型別。 根據目的地，驗證選項為： <ul><li>針對電子郵件行銷目標：可以是S3、FTP或Azure Blob。</li><li>針對即時廣告目的地：伺服器對伺服器</li><li>對於Amazon S3雲端儲存目的地：存取金鑰 </li><li>對於SFTP雲端儲存目標： SFTP的基本驗證</li><li>OAuth 1或OAuth 2驗證</li><li>持有人權杖驗證</li></ul> |
-| [!UICONTROL 使用者名稱] | 您在[連線目的地精靈](../catalog/email-marketing/overview.md#connect-destination)中選取的使用者名稱。 |
-| [!UICONTROL 目的地] | 代表與針對目的地建立的基本資訊相連結的唯一成功目的地資料流數目。 |
-| [!UICONTROL 已授權] | 授權連線到此目的地的日期。 |
+| [!UICONTROL 使用者名稱] | 您在[連線目的地工作流程](../catalog/email-marketing/overview.md#connect-destination)中選取的使用者名稱。 |
+| [!UICONTROL 連線] | 代表與針對目的地建立的基本資訊相連結的唯一成功目的地資料流數目。 |
+| [!UICONTROL 授權日期] | 授權連線到此目的地的日期。 |
 
 {style="table-layout:auto"}
 
