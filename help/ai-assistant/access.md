@@ -2,9 +2,9 @@
 title: 在Experience Platform中存取AI助理
 description: 瞭解如何在Experience CloudUI中存取AI助理。
 exl-id: c4cdff25-512c-4b4c-be91-ad9360067a0a
-source-git-commit: 706a20e70aa20adb0f4a554d0ec35518811ea9a1
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,12 @@ ht-degree: 0%
 一旦您擁有必要的許可權，您就可以存取AI助理員，方法是選取您正在使用的應用程式頂端標題上的AI助理員圖示。
 
 ![具有首次使用者體驗的AI小幫手。](./images/ai-assistant.png)
+
+## 取得AI助理的存取權
+
+觀看以下影片，瞭解如何為組織和使用者設定AI助理的存取權。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 ## 後續步驟
 

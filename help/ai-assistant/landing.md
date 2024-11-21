@@ -3,9 +3,10 @@ title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理
 hide: true
 hidefromtoc: true
-source-git-commit: 4db38ebceaa7ac4ac46b2ac122b5869e6b28cab3
+exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '549'
 ht-degree: 4%
 
 ---
@@ -23,15 +24,15 @@ AI 助理支援 Experience Platform、Real-Time Customer Data Platform、Adobe J
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>瞭解您的資料物件</strong><br/>擷取與您的資料物件相關的作業深入分析，以更清楚瞭解其狀態、使用情況和行銷影響。</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>加強您的學習</strong><br/>在不中斷工作流程的情況下，探索、疑難排解並提升您對產品知識的理解。</div>
     </td>
     <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"></a>
+    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>根據您的使用情況套用許可權</strong><br/>根據您團隊成員的角色授與和撤銷存取許可權。</div>
     </td>
   </tr>
@@ -41,6 +42,7 @@ AI 助理支援 Experience Platform、Real-Time Customer Data Platform、Adobe J
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
 
 ## 新功能
 
@@ -118,6 +120,14 @@ AI 助理支援 Experience Platform、Real-Time Customer Data Platform、Adobe J
 >[!ENDTABS]
 
 ## 其他資源
+
+>[!BEGINSHADEBOX]
+
+**閱讀AI Assistant安全性資料表**
+
+如需AI助理的詳細資訊，請閱讀Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf)中AI助理的[安全性說明書。
+
+>[!ENDSHADEBOX]
 
 瀏覽以下連結，進一步瞭解AI Assistant使用案例、功能等。
 
