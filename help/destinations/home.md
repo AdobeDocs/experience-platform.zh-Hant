@@ -2,10 +2,10 @@
 title: 目的地概觀
 description: 目的地是預先建立的與目的地平台的整合，可無縫地從Adobe Experience Platform啟用資料。 您可以使用Adobe Experience Platform中的「目的地」，針對跨頻道行銷活動、電子郵件行銷活動、鎖定特定目標的廣告和許多其他使用案例，啟用已知和未知的資料。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
+source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
 workflow-type: tm+mt
-source-wordcount: '1088'
-ht-degree: 4%
+source-wordcount: '1231'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ![目的地概觀橫幅。](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目的地啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
+**[!DNL Destinations]** 是預先建立的和目標平台的整合，可讓來自 Adobe Experience Platform 的資料順暢啟動。您可使用目標啟用已知和未知的資料，以進行跨通路行銷活動、電子郵件行銷活動、設定目標的廣告活動和其他諸多使用案例。
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -115,3 +115,13 @@ Adobe Experience Platform中基於屬性的存取控制可讓管理員根據屬�
 * [啟用受眾資料至串流受眾匯出目的地](./ui/activate-segment-streaming-destinations.md#review)
 * [啟用受眾資料至串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md#review)
 * [啟用對象資料至批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md#review)
+
+## 條款與條件 {#terms-and-conditions}
+
+只要使用任何標示為Beta版(「Beta」)的目的地，即表示您確認Beta係依&#x200B;***「原樣」提供，並無任何保證***。
+
+Adobe沒有義務維護、更正、更新、變更、修改或以其他方式支援Beta。 建議您使用資訊性，切勿依賴這類Beta及/或隨附資料的正確功能或效能。 Beta視為Adobe的機密資訊。
+
+任何「意見回饋」(有關Beta的資訊，包括但不限於您在使用Beta時遇到的問題或缺陷、建議、改進和建議)會在此指定給Adobe，包括此等意見回饋的所有權利、標題和興趣，以供Adobe使用。
+
+提交開放式意見或建立支援票證以分享您的建議或報告錯誤，並尋求功能增強。
