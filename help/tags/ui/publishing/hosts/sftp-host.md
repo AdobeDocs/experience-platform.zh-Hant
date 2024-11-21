@@ -2,10 +2,10 @@
 title: SFTP 主機
 description: 瞭解如何在Adobe Experience Platform中設定標籤，以將程式庫組建傳送至自行託管的安全SFTP伺服器。
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 5%
+ht-degree: 11%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
 Adobe Experience Platform可讓您將標籤程式庫組建傳送至您自行託管的安全SFTP伺服器，讓您更能掌控組建的儲存和管理方式。 本指南說明如何在Experience Platform UI或資料收集UI中為標籤屬性設定SFTP主機。
 
@@ -70,7 +70,7 @@ Platform會使用加密的金鑰連線至您的SFTP網站。 正確設定此項�
 | [!UICONTROL 不使用Symlink] | 依預設，所有SFTP主機都會使用符號連結(symlink)來參照儲存至伺服器的程式庫[組建](../builds.md)。 不過，並非所有伺服器都支援使用symlink。 選取此選項時，主機會使用複製操作直接更新組建資產，而非使用符號連結。 |
 | [!UICONTROL SFTP伺服器URL] | 您伺服器的URL基底路徑。 |
 | [!UICONTROL 路徑] | 要附加至此主機之基本伺服器URL的路徑。 |
-| [!UICONTROL 連線埠] | 連接埠必須為下列任一項：<ul><li>`21`</li><li>`22`</li><li>`80`</li><li>`200-299`</li><li>`443`</li><li>`2000-2999`</li><li>`4343`</li><li>`8080`</li><li>`8888`</li></ul>Adobe 會限制可用於傳出流量的連接埠數量，當作安全性最佳實務。通常允許所選連線埠通過公司防火牆，並包含一些彈性範圍。 |
+| [!UICONTROL 連線埠] | 連接埠必須為下列任一項：<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Adobe 會限制可用於傳出流量的連接埠數量，當作安全性最佳實務。通常允許所選連線埠通過公司防火牆，並包含一些彈性範圍。 |
 | [!UICONTROL 使用者名稱] | 存取伺服器時要使用的使用者名稱。 |
 | [!UICONTROL 加密的私密金鑰] | 您在[先前步驟](#access-key)中建立的加密私密金鑰。 |
 
