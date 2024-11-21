@@ -1,22 +1,22 @@
 ---
-title: 查詢服務授權API指南
-description: 瞭解如何使用查詢服務授權API來強制實施網路型IP限制，以透過SQL實現安全連線。 使用此API可增強您Adobe Experience Platform資料的資料存取控制。
+title: 資料Distiller Authorization API指南
+description: 瞭解如何使用Data Distiller Authorization API來強制執行透過SQL的安全連線的網路型IP限制。 使用此API可增強您Adobe Experience Platform資料的資料存取控制。
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 2%
 
 ---
 
-# 查詢服務授權API指南
+# 資料Distiller Authorization API指南
 
 >[!AVAILABILITY]
 >
 >已購買Data Distiller附加元件的客戶可使用此功能。 如需詳細資訊，請聯絡您的 Adobe 代表。
 
-使用查詢服務授權API可強制執行IP型限制。 套用這些措施，可確保只有經過核准的網路和使用者端電腦才能透過Adobe Experience Platform中的SQL存取資料。 這些控制功能可協助您符合嚴格的安全性標準，同時提供即時存取監控和警報。
+使用資料Distiller授權API來強制執行IP型限制。 套用這些措施，可確保只有經過核准的網路和使用者端電腦才能透過Adobe Experience Platform中的SQL存取資料。 這些控制功能可協助您符合嚴格的安全性標準，同時提供即時存取監控和警報。
 
 使用此API，您可以設定、強制執行並監視透過SQL介面存取資料的IP限制。 本檔案提供API核心功能、端點功能和未來功能的概觀。
 
@@ -39,4 +39,4 @@ ht-degree: 2%
 
 ## 後續步驟
 
-檢閱[快速入門手冊](./getting-started.md)以開始使用查詢服務授權API，瞭解必要的設定步驟，包括必要的標頭和API呼叫慣例。 然後，探索端點特定的[IP存取](./ip-access.md)和[IP驗證](./validate.md)指南，以設定和管理安全資料存取。
+檢閱[快速入門手冊](./getting-started.md)以開始使用Data Distiller Authorization API，瞭解必要的設定步驟，包括必要的標頭和API呼叫慣例。 然後，探索端點特定的[IP存取](./ip-access.md)和[IP驗證](./validate.md)指南，以設定和管理安全資料存取。

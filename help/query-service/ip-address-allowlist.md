@@ -3,7 +3,7 @@ keywords: IP位址， IP範圍，允許清單，允許清單，查詢服務，�
 title: 查詢服務的IP位址允許清單
 description: 此頁面提供更新的IP範圍，您可將其新增至允許清單，以安全地存取查詢服務。
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Adobe建議您根據所在的地區，將下列地區專屬的IP範圍新增至�
 
 ## 設定IP型限制 {#set-ip-restrictions}
 
-使用[查詢服務授權API指南](./auth-api/overview.md)設定IP限制。 這些IP型限制可確保只有經過核准的網路和使用者端電腦才能透過Adobe Experience Platform中的SQL存取資料。 瞭解如何設定、強制執行及監控IP限制，以維護高安全性標準，並具備即時存取追蹤和警報功能。
+使用[Data Distiller Authorization API指南](./auth-api/overview.md)設定IP限制。 這些IP型限制可確保只有經過核准的網路和使用者端電腦才能透過Adobe Experience Platform中的SQL存取資料。 瞭解如何設定、強制執行及監控IP限制，以維護高安全性標準，並具備即時存取追蹤和警報功能。
 
 * [快速入門手冊](./auth-api/getting-started.md)
 * [IP存取端點指南](./auth-api/ip-access.md)

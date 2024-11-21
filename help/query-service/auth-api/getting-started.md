@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform；查詢服務；IP存取控制；授權；API；快速入門
-title: 查詢服務授權API指南
+title: 資料Distiller Authorization API指南
 description: 瞭解如何在Adobe Experience Platform的查詢服務中開始進行授權和IP範圍限制的安全資料存取。
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 6%
+source-wordcount: '485'
+ht-degree: 5%
 
 ---
 
-# 查詢服務授權API指南
+# 開始使用資料Distiller Authorization API
 
 >[!AVAILABILITY]
 >
 >已購買Data Distiller附加元件的客戶可使用此功能。 如需詳細資訊，請聯絡您的 Adobe 代表。
 
-查詢服務授權API可透過Adobe Experience Platform中的SQL介面，為組織提供更嚴格的資料存取控制。 您可以使用此API來定義IP限制、限制對指定網路的資料存取，以及增強安全性監視。
+資料Distiller授權API可透過Adobe Experience Platform中的SQL介面，為組織提供更嚴格的資料存取控制。 您可以使用此API來定義IP限制、限制對指定網路的資料存取，以及增強安全性監視。
 
-本指南概述如何設定呼叫Query Service Authorization API所需的授權認證和許可權。
+本指南概述如何設定呼叫Data Distiller Authorization API所需的授權認證和許可權。
 
 ## 快速入門 {#getting-started}
 
-以下小節提供有關準備所需授權值以及向Query Service Authorization API發出第一個請求的資訊。
+以下幾節提供有關準備所需授權值和向資料Distiller Authorization API發出第一個請求的資訊。
 
 ### 必要權限 {#required-permissions}
 
@@ -41,7 +41,7 @@ ht-degree: 6%
 
 ### 收集所需標頭的值 {#gather-values-for-required-headers}
 
-若要呼叫Query Service Authorization API，您必須完成[平台API驗證教學課程](../../landing/api-authentication.md)，此教學課程會提供API呼叫中所需標頭的值。 在每個請求中包含以下標頭：
+若要呼叫Data Distiller Authorization API，您必須完成[Platform API驗證教學課程](../../landing/api-authentication.md)，此教學課程會提供API呼叫中所需標頭的值。 在每個請求中包含以下標頭：
 
 - **授權**： `Bearer {ACCESS_TOKEN}`
 - **x-api-key**： `{API_KEY}`
