@@ -4,9 +4,9 @@ title: 屬性型存取控制端對端指南
 description: 本檔案提供Adobe Experience Platform中屬性型存取控制的端對端指南
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
+source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1762'
 ht-degree: 18%
 
 ---
@@ -156,6 +156,10 @@ Platform UI的許可權工作區隨即顯示，並在&#x200B;**[!UICONTROL 角�
 ![影像顯示選取的RHD標籤並儲存選取的專案](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 使用&#x200B;**[!UICONTROL 胰島素&lt;50]**&#x200B;重複上述步驟。
+
+>[!NOTE]
+>
+> 使用[物件層級存取控制](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access)，將在[!UICONTROL 許可權]工作區中建立的標籤（例如上方的區段標籤）指派給Adobe Journey Optimizer中的各種物件。
 
 ## 啟動存取控制原則 {#policy}
 
