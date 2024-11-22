@@ -2,7 +2,7 @@
 title: Edge Network伺服器API的效能護欄
 description: 瞭解如何在最佳效能護欄內使用伺服器API。
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 2%
@@ -58,7 +58,6 @@ Adobe對超過使用量限制所造成的效能降低不負責任。 持續超�
 | --- | --- |
 | `/v2/interact` | 4000 |
 | `/v2/collect` | 6000 |
-
 
 ### HTTP要求大小限制
 

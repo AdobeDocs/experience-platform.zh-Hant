@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 07e01847c6e24564682161e88122948d200ab733
+source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
 workflow-type: tm+mt
-source-wordcount: '1248'
+source-wordcount: '1257'
 ht-degree: 5%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 5%
       * [啟用受眾以串流設定檔匯出目的地](./ui/activate-streaming-profile-destinations.md)
       * [啟用對象以批次設定檔匯出目的地](./ui/activate-batch-profile-destinations.md)
       * [啟用對象以邊緣個人化目的地](./ui/activate-edge-personalization-destinations.md)
+      * [即時查詢邊緣上的設定檔屬性](./ui/activate-edge-profile-lookup.md)
       * [根據LiveRamp識別碼將受眾啟用至已組織的目的地](./ui/activate-curated-destinations.md)
       * [對目的地啟用潛在客戶對象](./ui/activate-prospect-audiences.md)
       * [對目的地啟用帳戶對象](./ui/activate-account-audiences.md)
