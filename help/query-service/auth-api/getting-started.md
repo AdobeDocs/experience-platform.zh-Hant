@@ -4,9 +4,9 @@ title: 資料Distiller Authorization API指南
 description: 瞭解如何在Adobe Experience Platform的查詢服務中開始進行授權和IP範圍限制的安全資料存取。
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '507'
 ht-degree: 5%
 
 ---
@@ -66,3 +66,5 @@ ht-degree: 5%
 每個API呼叫範例都會示範如何格式化要求及詮釋回應，協助您在Query Service中強制安全存取資料。
 
 如需設定及驗證IP限制的特定指示，請參閱[IP存取端點檔案](./ip-access.md)和[IP驗證端點檔案](./validate.md)。
+
+請參閱[Data Distiller Authorization OpenAPI參考檔案](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)，以檢視標準化、機器可讀的格式，更易於整合、測試和探索。

@@ -3,9 +3,9 @@ title: 資料Distiller Authorization API指南
 description: 瞭解如何使用Data Distiller Authorization API來強制執行透過SQL的安全連線的網路型IP限制。 使用此API可增強您Adobe Experience Platform資料的資料存取控制。
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '424'
 ht-degree: 2%
 
 ---
@@ -30,13 +30,17 @@ ht-degree: 2%
 
 ## 稽核與監控功能
 
-為了支援安全資料存取實務，查詢服務會記錄所有存取或嘗試存取AEP的使用者端IP。 稽核事件（包括拒絕的連線）會傳送至Platform稽核記錄。 如此可啟用：
+為了支援安全資料存取實務，查詢服務會記錄所有存取或嘗試存取Experience Platform的使用者端IP。 稽核事件（包括拒絕的連線）會傳送至Platform稽核記錄。 如此可啟用：
 
 - **即時監視**：追蹤IP型存取模式以確保法規遵循。
 - **未授權存取警示**：識別並回應未授權IP的存取嘗試。
 
-如需稽核記錄的詳細資訊，請參閱[稽核服務檔案](https://experienceleague.adobe.com/docs/experience-platform/audit/audit-overview.html)。
+如需詳細資訊，請參閱[稽核記錄總覽](../../landing/governance-privacy-security/audit-logs/overview.md)。
 
 ## 後續步驟
 
 檢閱[快速入門手冊](./getting-started.md)以開始使用Data Distiller Authorization API，瞭解必要的設定步驟，包括必要的標頭和API呼叫慣例。 然後，探索端點特定的[IP存取](./ip-access.md)和[IP驗證](./validate.md)指南，以設定和管理安全資料存取。
+
+請參閱[Data Distiller Authorization OpenAPI參考檔案](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)，以檢視標準化、機器可讀的格式，更易於整合、測試和探索。
+
+如需每個傳回資料集的不同回應引數相關資訊，請參閱[資料集API開發人員檔案](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets)。

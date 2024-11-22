@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Access API指南
 description: 資料存取API為開發人員提供RESTful介面，著重於Experience Platform內擷取資料集的可發現性和可存取性，以支援Adobe Experience Platform。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '566'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 4%
 
 ## API規格參考
 
-您可以在[這裡](https://developer.adobe.com/experience-platform-apis/references/data-access/)找到OpenAPI參考檔案。
+請參閱[資料存取OpenAPI參考檔案](https://developer.adobe.com/experience-platform-apis/references/data-access/)，以檢視標準化、機器可讀的格式，更易於整合、測試和探索。
 
 ## 術語 {#terminology}
 
