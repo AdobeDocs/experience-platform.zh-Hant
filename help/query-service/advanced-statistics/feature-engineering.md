@@ -2,9 +2,10 @@
 title: 功能工程SQL擴充功能
 description: 瞭解資料Distiller功能工程SQL擴充功能，以預先處理資料以供進階統計模型使用。 它涵蓋了可用的特徵擷取、轉換和選取技術。
 role: Developer
-source-git-commit: 1fcfb5c41750e853daaf036ceaae3527b805391c
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -41,9 +42,10 @@ ht-degree: 1%
 
 以下是處理各種資料型別的工具清單，以增強您的資料前置處理工作流程。
 
-- **[數值輸入器](./feature-transformation.md#numeric-imputer)**：將數值欄中缺少的值填入
-- **[字串輸入器](./feature-transformation.md#string-imputer)**：將遺漏的字串值取代為指定的值
-- **[向量組合器](./feature-transformation.md#vector-assembler)**：將多個資料行合併為單一向量資料行。
+- **[數值輸入器](./feature-transformation.md#numeric-imputer)**：以指定值（例如平均值或中位數）填入數值資料行中遺漏的值。
+- **[字串輸入器](./feature-transformation.md#string-imputer)**：將遺漏的字串值取代為指定的值，例如資料行中最常見的字串。
+- **[向量組合器](./feature-transformation.md#vector-assembler)**：將多個資料行合併為單一向量資料行，為機器學習模型準備資料。
+- **[布林值輸入器](./feature-transformation.md#boolean-imputer)**：以指定的值（例如`true`或`false`）填入遺漏的布林值。
 
 #### 數值轉換器
 
@@ -88,7 +90,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## 實作OPTIONS子句 {#options-clause}
 
-定義模型時，請使用`OPTIONS`子句指定演演算法及其引數。 首先，設定`type`引數以指出您正在使用的演演算法，例如`K-Means`。 然後，將`OPTIONS`子句中的相關引數定義為機碼值組，以微調您的模型。 瞭解有些引數可能是位置引數，如果提供自訂值，則需要指定所有先前的引數。 如果您選擇不自訂某些引數，系統會套用預設設定。 請參閱相關檔案，以瞭解每個引數的函式和預設值。
+定義模型時，請使用`OPTIONS`子句指定演演算法及其引數。 首先，設定`type`引數以指出您正在使用的演演算法，例如`K-Means`。 然後，將`OPTIONS`子句中的相關引數定義為機碼值組，以微調您的模型。 如果您選擇不自訂某些引數，系統會套用預設設定。 請參閱相關檔案，以瞭解每個引數的函式和預設值。
 
 ### 後續步驟
 

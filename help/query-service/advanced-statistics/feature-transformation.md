@@ -2,9 +2,10 @@
 title: 特徵轉換技術
 description: 瞭解資料轉換、編碼和功能縮放等重要的預先處理技術，這些技術可為統計模型訓練準備資料。 它涵蓋處理遺失值和轉換分類資料以改善模型效能和正確性的重要性。
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 8%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 若要在您的`CREATE MODEL`陳述式中定義自訂資料前置處理，請將`TRANSFORM`子句與任何數目的可用轉換函式結合使用。 這些手動前置處理函式也可以在`TRANSFORM`子句之外使用。 在](#available-transformations)下方的[轉換器區段中討論的所有轉換，都可以用來手動預先處理資料。
 
-### 主要特性
+### 主要特性 {#key-characteristics}
 
 下列是定義前置處理函式時要考慮的特徵轉換主要特性：
 
 - **語法**： `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - 在語法中，別名是強制的。 您必須提供別名，否則查詢將會失敗。
 
-- **引數**：引數是位置引數。 這表示每個引數只能取某些值。 請參閱相關檔案，以取得關於哪個函式接受哪個引數的詳細資訊。
+- **引數**：引數是位置引數。 也就是說，如果有自訂值，每個引數只能取用某些值，且需要指定所有先前的引數。 請參閱相關檔案，以取得關於哪個函式接受哪個引數的詳細資訊。
 
 - **鏈結轉換器**：一個轉換器的輸出可以成為另一個轉換器的輸入。
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | Alice |
 
-#### 布林值輸入器 {#imputer}
+#### 布林值輸入器 {#boolean-imputer}
 
 **布林值輸入器**&#x200B;轉換器完成布林值資料行資料集中遺漏的值。 輸入和輸出資料行應該是`Boolean`型別。
 
