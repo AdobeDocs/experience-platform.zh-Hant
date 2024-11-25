@@ -1,13 +1,11 @@
 ---
 title: Adobe Experience Platform產品檔案中的AI助理
-description: 開始使用Adobe Experience Platform中的AI助理
-hide: true
-hidefromtoc: true
+description: 開始使用Adobe Experience Platform中的AI助理。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
+source-git-commit: 653c97c8632eeaf4cad02accc63d3e4dbffb54dd
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 4%
+source-wordcount: '547'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +13,7 @@ ht-degree: 4%
 
 Adobe Experience Platform中的AI Assistant是一種對話工具，可用來透過Experience Platform應用程式和服務加速您的工作流程。 使用AI Assistant來提高您的整體生產力、增強您對產品知識和營運見解的理解，以及收集與您的查詢和業務使用案例相關的建議。
 
-AI 助理支援 Experience Platform、Real-Time Customer Data Platform、Adobe Journey Optimizer 和 Customer Journey Analytics。
+AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Customer Journey Analytics。
 
 ## 快速入門
 
