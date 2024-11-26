@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service概觀
 description: 探索Privacy Service如何在您的Experience Cloud資料作業中，促進自動符合隱私權法規。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1660'
 ht-degree: 5%
 
 ---
@@ -68,6 +68,14 @@ Privacy Service提供RESTful API和使用者介面，協助您管理客戶資料
 
 一旦您決定好企業的隱私權需求，並決定要將哪些身分值傳送給Privacy Service，您就可以開始提出隱私權要求。 使用Privacy Service透過API或UI傳送隱私權請求。
 
+#### 存取要求檔案詳細資料 {#access-requests}
+
+在回應成功的存取要求時，有一個&#x200B;**下載URL**&#x200B;包含多個檔案。 系統會為每個已要求資料的Adobe應用程式提供一個檔案。 請注意，每個應用程式的檔案格式可能會因應用程式的資料結構而異。
+
+#### 刪除請求 — 無下載URL {#delete-requests}
+
+**刪除要求**&#x200B;的回應中沒有&#x200B;**下載URL**，因為未擷取任何客戶資料。
+
 >[!IMPORTANT]
 >
 >以下各節提供檔案的連結，涵蓋如何在API或UI中提出一般隱私權請求。 不過，根據您使用的[!DNL Experience Cloud]應用程式，您在要求裝載中必須傳送的欄位可能會與這些指南中顯示的範例不同。
@@ -97,6 +105,10 @@ Privacy Service提供RESTful API和使用者介面，協助您管理客戶資料
 | PRIVACY SERVICEUI | 您可以使用Privacy ServiceUI監視儀表板來檢視所有作用中請求狀態的視覺化表示。 如需詳細資訊，請參閱[Privacy Service使用手冊](ui/overview.md)。 |
 | PRIVACY SERVICE API | 您可以使用Privacy ServiceAPI提供的查詢端點，以程式設計方式監視隱私權工作的狀態。 請參閱[Privacy Service API指南](./api/overview.md)，以取得有關如何使用API的詳細步驟。 |
 | [!DNL Privacy Events] | [!DNL Privacy Events]使用傳送至已設定webhook的Adobe I/O事件，以加速有效的工作請求自動化。 它們減少或消除了輪詢Privacy ServiceAPI以檢查工作是否完成或工作流程中是否已達到特定里程碑的需求。 如需詳細資訊，請參閱[訂閱隱私權事件](./privacy-events.md)的教學課程。 |
+
+#### 非現有使用者的回應 {#non-existing-users}
+
+當您提交存取或刪除要求時，即使找不到使用者資料，如果呼叫成功完成，回應將一律傳回`success`。 這表示即使資料不存在，存取或刪除也可以順利完成，而不會擷取或刪除任何資料。
 
 ## 後續步驟
 
