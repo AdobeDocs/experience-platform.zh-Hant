@@ -3,7 +3,7 @@ keywords: Experience Platform；首頁；熱門主題；Oracle服務雲端；ora
 title: 使用流量服務API建立Oracle服務雲端Source連線
 description: 瞭解如何使用Flow Service API將Adobe Experience Platform連結至Oracle Service Cloud。
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '522'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->[!DNL Oracle Service Cloud]來源將於2025年5月底淘汰。
+>[!DNL Oracle Service Cloud]來源將於2025年6月底淘汰。
 
 基礎連線代表來源和Adobe Experience Platform之間的已驗證連線。
 

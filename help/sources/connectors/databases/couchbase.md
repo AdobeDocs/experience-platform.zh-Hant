@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Couchbase Source聯結器概述
 description: 瞭解如何使用API或使用者介面將Couchbase連線至Adobe Experience Platform。
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[!DNL Couchbase]來源將於2025年5月底淘汰。
+>[!DNL Couchbase]來源將於2025年6月底淘汰。
 
 Adobe Experience Platform為資料庫提供者（例如[!DNL Microsoft]、MySQL和[!DNL Azure]）提供原生連線，可讓您從這些系統帶入資料。 支援不同型別的第三方資料庫，包括關聯式、NoSQL或資料倉儲。 支援資料庫提供者包括[!DNL Couchbase]。
 

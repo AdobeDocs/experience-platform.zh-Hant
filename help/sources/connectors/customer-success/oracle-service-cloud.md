@@ -4,7 +4,7 @@ title: oracle服務雲端Source聯結器概述
 description: 瞭解如何使用API或使用者介面將Oracle Service Cloud連線至Adobe Experience Platform。
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: 5c914e8a-d8ed-469f-b17a-26a85705e9ef
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->[!DNL Oracle Service Cloud]來源將於2025年5月底淘汰。
+>[!DNL Oracle Service Cloud]來源將於2025年6月底淘汰。
 
 Adobe Experience Platform可讓您從外部來源擷取資料，同時使用Platform服務來建構、加標籤及增強傳入資料。 您可以從多種來源(例如Adobe應用程式、雲端儲存、資料庫和許多其他來源)內嵌資料。
 
