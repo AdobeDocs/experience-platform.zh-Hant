@@ -2,10 +2,10 @@
 title: 外部Source系統稽核屬性資料型別
 description: 瞭解外部Source系統稽核屬性Experience Data Model (XDM)資料型別。
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 03735e7099ffb2cfd44fc7fffd35e3a4a858e3ba
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 20%
+source-wordcount: '186'
+ht-degree: 18%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 20%
 | `lastActivityDate` | 日期時間 | 來源系統的上次活動日期。 |
 | `lastReferencedDate` | 日期時間 | 來源系統的最後參考日期。 |
 | `lastUpdatedBy` | 字串 | 上次更新此紀錄的人員名稱。 |
-| `lastUpdatedDate` | 日期時間 | 來源系統的上次更新日期。 |
+| `lastUpdatedDate` | 日期時間 | 來源系統的上次更新日期。 此值由[屬性合併原則](../../profile/api/merge-policies.md#attribute-merge)用來決定發生合併衝突時的優先順序。 |
 | `lastViewedDate` | 日期時間 | 來源系統的上次檢視日期。 |
 
 {style="table-layout:auto"}
