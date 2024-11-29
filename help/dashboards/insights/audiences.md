@@ -2,16 +2,16 @@
 title: 受眾分析
 description: 探索為您的受眾深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索Adobe Experience Platform中的受眾資料。
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1122'
 ht-degree: 3%
 
 ---
 
 # 受眾深入分析
 
-從資料模型分析衍生的深入解析可讓您的Adobe Real-time Customer Data Platform資料更易於存取、理解，並更能對決策產生影響。
+從資料模型分析衍生的深入解析可讓您的Adobe Real-Time CDP資料更易於存取、理解，並更能對決策產生影響。
 
 存取提供對象分析功能的SQL，藉此瞭解您的對象分析，然後產生您自己的分析，進一步探索組成對象的身分和設定檔。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 

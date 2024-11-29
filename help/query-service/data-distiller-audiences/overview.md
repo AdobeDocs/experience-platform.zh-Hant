@@ -1,9 +1,10 @@
 ---
 title: 使用SQL建立對象
 description: 瞭解如何在Adobe Experience Platform的Data Distiller中使用SQL對象擴充功能，以使用SQL命令建立、管理和發佈對象。 本指南涵蓋對象生命週期的所有方面，包括建立、更新和刪除設定檔，以及使用資料導向對象定義來鎖定以檔案為基礎的目的地。
-source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
+exl-id: c35757c1-898e-4d65-aeca-4f7113173473
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -125,7 +126,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ![Adobe Experience Platform中的對象工作區，顯示自動發佈且可供使用的資料Distiller對象。](../images/data-distiller/sql-audiences/audiences.png)
 
-## 對目的地啟用對象 {#activate-audiences}
+## 針對目的地啟用客群 {#activate-audiences}
 
 將對象鎖定在任何以檔案為基礎的目的地（例如[!DNL Amazon S3]、[!DNL SFTP]或[!DNL Azure Blob]），以啟用對象。 擴充的對象屬性可於需要時進行進一步細分和篩選。
 
@@ -209,4 +210,4 @@ Adobe Journey Optimizer目前無法使用Data Distiller對象。 您必須在Ado
 
 - **探索對象評估**：瞭解Adobe Experience Platform中的[對象評估方法](../../segmentation/home.md#evaluate-segments)：即時更新的串流細分、排程或隨選處理的批次細分，以及即時評估Edge Network的邊緣細分。
 - **與目的地整合**：閱讀如何使用Platform目的地UI [隨選匯出檔案至批次目的地](../../destinations/ui/export-file-now.md)的指南。
-- **檢閱對象效能**：分析您的SQL定義對象在不同管道中的執行方式。 使用資料深入分析來調整和改善您的對象定義和定位策略。 閱讀有關[對象深入分析](../../dashboards/insights/audiences.md)的檔案，瞭解如何在Adobe Real-time Customer Data Platform中存取和調整SQL查詢，以獲得對象深入分析。 接著，您可以自訂「對象」控制面板，建立自己的深入分析，並將原始資料轉換為可操作的資訊，以有效視覺化並運用這些深入分析，做出更好決策。
+- **檢閱對象效能**：分析您的SQL定義對象在不同管道中的執行方式。 使用資料深入分析來調整和改善您的對象定義和定位策略。 閱讀有關[對象深入分析](../../dashboards/insights/audiences.md)的檔案，瞭解如何在Adobe Real-Time CDP中存取和調整SQL查詢，以獲得對象深入分析。 接著，您可以自訂「對象」控制面板，建立自己的深入分析，並將原始資料轉換為可操作的資訊，以有效視覺化並運用這些深入分析，做出更好決策。

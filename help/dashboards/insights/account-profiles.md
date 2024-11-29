@@ -4,16 +4,16 @@ description: 探索為您的帳戶設定檔深入分析提供支援的SQL，並�
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # 帳戶設定檔深入分析
 
-[帳戶設定檔](../../rtcdp/accounts/account-profile-overview.md)用於合併來自各種來源的帳戶資訊，包括多個行銷管道和組織系統。 此統一檢視可全面瞭解客戶帳戶，加強B2B行銷活動。 從資料模型分析衍生的深入解析可讓您的Adobe Real-time Customer Data Platform B2B資料更易於存取、理解，並更能對決策產生影響。
+[帳戶設定檔](../../rtcdp/accounts/account-profile-overview.md)用於合併來自各種來源的帳戶資訊，包括多個行銷管道和組織系統。 此統一檢視可全面瞭解客戶帳戶，加強B2B行銷活動。 從資料模型分析衍生的深入解析可讓您的Adobe Real-Time CDP B2B資料更易於存取、理解，並更能對決策產生影響。
 
 存取提供您深入分析能力的SQL，可以更瞭解您的B2B資料，並產生您自己的高度自訂且可重複使用的深入分析，以進一步探索您的客戶帳戶資訊。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 

@@ -2,16 +2,16 @@
 title: 設定檔深入分析
 description: 探索為您的設定檔深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索您的客戶及其消費者體驗。
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1659'
 ht-degree: 3%
 
 ---
 
 # 設定檔深入分析
 
-從資料模型分析衍生的深入解析可讓您的Adobe Real-time Customer Data Platform資料更易於存取、理解，並更能對決策產生影響。
+從資料模型分析衍生的深入解析可讓您的Adobe Real-Time CDP資料更易於存取、理解，並更能對決策產生影響。
 
 存取提供個人資料的SQL來瞭解您的個人資料見解，然後產生您自己的見解，以進一步探索您的客戶及其構成個人資料的消費者體驗。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 

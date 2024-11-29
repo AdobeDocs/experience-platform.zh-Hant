@@ -2,16 +2,16 @@
 title: 目的地分析
 description: 探索為您的目的地深入分析提供支援的SQL，並使用這些查詢產生自訂深入分析，以進一步探索Adobe Experience Platform中的資料啟用。
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
 
 # 目的地分析
 
-從資料模型分析衍生的深入解析可讓您的Adobe Real-time Customer Data Platform資料更易於存取、理解，並更能對決策產生影響。
+從資料模型分析衍生的深入解析可讓您的Adobe Real-Time CDP資料更易於存取、理解，並更能對決策產生影響。
 
 存取支援目的地深入分析的SQL，然後產生您自己的深入分析，進一步探索如何從Adobe Experience Platform啟用資料至您的目的地平台，藉此瞭解您的目的地深入分析。 使用現有的Real-Time CDP資料模型SQL作為靈感，根據您獨特的業務需求建立查詢，將原始資料轉換為可採取行動的新見解。
 
