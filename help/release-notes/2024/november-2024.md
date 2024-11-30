@@ -1,10 +1,11 @@
 ---
-title: Adobe Experience Platform發行說明2024年11月
-description: Adobe Experience Platform 2024年11月版本注意事項。
-source-git-commit: d87747c2181f4ae378e1341c3c190cc6fa57d4b0
+title: Adobe Experience Platform 發行說明 (2024 年 11 月)
+description: Adobe Experience Platform 2024 年 11 月版發行說明。
+exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
+source-git-commit: f71fc1d4ad51af52046caeee289546e05967d5bd
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 29%
+source-wordcount: '852'
+ht-degree: 98%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 29%
 
 >[!TIP]
 >
->新的[AI助理產品檔案登陸頁面](../../ai-assistant/landing.md)現已可用。 使用此頁面作為所有AI助理相關資源的中心。
+>新的[AI Assistant產品檔案](../../ai-assistant/landing.md)現已推出。 使用此頁面作為所有 AI 助理相關資源的中心。
 
-**發行日期： 2024年11月26日**
+**發行日期：2024 年 11 月 26 日**
 
-Adobe Experience Platform 現有功能及文件的更新：
+Adobe Experience Platform 現有功能和文件的更新：
 
 - [AI 助理](#ai-assistant)
 - [目標](#destinations)
@@ -24,8 +25,8 @@ Adobe Experience Platform 現有功能及文件的更新：
 - [沙箱](#sandboxes)
 - [文件更新](#documentation-updates)
    - [互動式 Experience Platform API 文件](#interactive-experience-platform-api-documentation)
-   - [Experience League上的新目錄](#new-table-of-contents-on-experience-league)
-   - [全新AI助理登陸頁面](#new-ai-assistant-landing-page)
+   - [Experience League 的新目錄](#new-table-of-contents-on-experience-league)
+   - [全新 AI 助理登陸頁面](#new-ai-assistant-landing-page)
 
 ## AI 助理 {#ai-assistant}
 
@@ -35,8 +36,8 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 功能 | 說明 |
 | --- | --- |
-| [!BADGE Alpha]{type=Informative}監視重大變更和預測對象成長 | 使用AI Assistant來監控重大變更，並為您的對象和資料集大小提供成長預測。 然後，您可以使用此資訊來確保受眾資料的完整性，並提供前瞻性預測以支援以資料為主的決策。 如需詳細資訊，請閱讀[監控重大變更和預測對象成長](../../ai-assistant/new-features/audience-forecasting.md)的指南。 |
-| [!BADGE Alpha]{type=Informative}自然語言估計 | 使用AI Assistant的自然語言估計功能，根據簡單的對話問題來估計受眾人數和預測受眾傾向。 如需詳細資訊，請閱讀[搭配AI助理使用自然語言估計](../../ai-assistant/new-features/natural-language.md)的指南。 |
+| [!BADGE Alpha]{type=Informative} 監測重大變更並預測客群增長 | 使用 AI 助理可監測重大變更，並提供客群和資料集大小的成長預測。然後，您可以使用這些資訊來確保客群資料的完整性，並提供前瞻性預測來支援以資料為主的明智決策。如需更多資訊，請閱讀有關[監測重大變更和預測客群成長](../../ai-assistant/new-features/audience-forecasting.md)的指南。 |
+| [!BADGE Alpha]{type=Informative} 自然語言預估 | 使用 AI 助理的自然語言預估功能可預估客群規模，並根據簡單的對話問題預測客群傾向。如需更多資訊，請閱讀有關[透過 AI 助理使用自然語言預估](../../ai-assistant/new-features/natural-language.md)的指南。 |
 
 {style="table-layout:auto"}
 
@@ -48,8 +49,8 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 目標 | 說明 |
 | --- | --- |
-| [Magnite串流即時](/help/destinations/catalog/advertising/magnite-streaming.md) | 匯出對象，以在Magnite串流平台中啟動、鎖定目標或隱藏。 請注意，為了讓對象正確匯出至Magnite，您必須同時使用即時和批次目的地。 |
-| [菱形資料流批次](/help/destinations/catalog/advertising/magnite-batch.md) | 匯出對象，以在Magnite串流平台中啟動、鎖定目標或隱藏。 請注意，為了讓對象正確匯出至Magnite，您必須同時使用即時和批次目的地。 |
+| [Magnite 即時串流](/help/destinations/catalog/advertising/magnite-streaming.md) | 匯出客群以在 Magnite 串流平台中進行啟用、目標市場選擇或隱藏。請注意，為了將客群正確匯出至 Magnite，您必須同時使用即時和批次目標。 |
+| [Magnite 串流批次](/help/destinations/catalog/advertising/magnite-batch.md) | 匯出客群以在 Magnite 串流平台中進行啟用、目標市場選擇或隱藏。請注意，為了將客群正確匯出至 Magnite，您必須同時使用即時和批次目標。 |
 
 {style="table-layout:auto"}
 
@@ -57,23 +58,23 @@ Adobe Experience Platform 的 AI 助理是一種對話式體驗，可用來加�
 
 | 功能 | 說明 |
 | --- | --- |
-| [在邊緣即時查詢設定檔屬性](/help/destinations/ui/activate-edge-profile-lookup.md) | 瞭解如何使用自訂Personalization目的地和Edge NetworkAPI，即時查詢邊緣設定檔屬性以傳遞個人化體驗，或透過下游應用程式通知決策規則。 |
+| [在邊緣即時查詢設定檔屬性](/help/destinations/ui/activate-edge-profile-lookup.md) | 了解如何即時查詢邊緣設定檔屬性以傳送個人化體驗，或藉由使用自訂個人化目標和 Edge Network API，透過下游應用程式通知決策規則。 |
 
 {style="table-layout:auto"}
 
-如需詳細資訊，請閱讀[目標概觀](../../destinations/home.md)。
+如需更多資訊，請閱讀[目標概觀](../../destinations/home.md)。
 
 ## 查詢服務 {#query-service}
 
-使用標準SQL搭配查詢服務在Adobe Experience Platform Data Lake中查詢資料。 緊密結合資料集並從查詢結果產生新資料集，以支援報告、啟用資料科學工作流程，或促進將資料擷取到即時客戶個人檔案中。 例如，您可以將客戶交易資料與行為資料合併，以找出目標行銷活動的高值對象。
+使用具備查詢服務的標準 SQL，在 Adobe Experience Platform 資料湖查詢資料。從您的查詢結果來促進報告、啟用資料科學工作流程或協助擷取至即時客戶輪廓，以順暢無礙地合併資料集和產生新資料集。例如，您可以將客戶交易資料與行為資料合併，以確定具目標性之行銷活動的高價值客群。
 
 **更新的功能**
 
 | 功能 | 說明 |
 | --- | --- |
-| Dater Distiller Authorization API | 管理並強制執行Query Service沙箱的IP型存取限制，以增強資料安全性並確保遵循組織原則。 請參閱[Data Distiller Authorization API指南](../../query-service/auth-api/overview.md)，以取得其主要功能的詳細資訊，或參閱[OpenAPI檔案](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)，以取得包括端點詳細資料、引數清單、要求/回應範例和測試功能的完整資訊。 |
+| 資料蒸餾器授權 API | 管理和強制執行基於 IP 的查詢服務沙箱存取限制，以增強資料安全性並確保符合組織原則。如需有關其主要特性和功能的更多資訊，請參閱[資料蒸餾器授權 API 指南](../../query-service/auth-api/overview.md)，或參閱 [OpenAPI 文件](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/)以取得全方位資訊，包括端點詳細資訊、參數清單、請求/回應範例和測試功能。 |
 
-如需[!DNL Query Service]的詳細資訊，請參閱[[!DNL Query Service] 總覽](../../query-service/home.md)。
+如需更多有關 [!DNL Query Service] 的資訊，請參閱[[!DNL Query Service] 概觀](../../query-service/home.md)。
 
 ## 沙箱 {#sandboxes}
 
@@ -83,20 +84,20 @@ Adobe Experience Platform 是為了在全球規模上使數位體驗應用程式
 
 | 功能 | 說明 |
 | --- | --- |
-| 使用沙箱工具API共用套件 | 使用兩個新API端點[`/handshake`](../../sandboxes/sandbox-tooling-api/packages.md#org-linking)和[`/transfers`](../../sandboxes/sandbox-tooling-api/packages.md#transfer-packages)，以使用沙箱工具API處理組織間的套件共用，例如要求核准、套件可見度以及匯入套件。 |
+| 使用沙箱工具 API 的套件共用 | 使用兩個新 API 端點 ([`/handshake`](../../sandboxes/sandbox-tooling-api/packages.md#org-linking) 和 [`/transfers`](../../sandboxes/sandbox-tooling-api/packages.md#transfer-packages))，透過沙箱工具 API 處理跨組織的套件共用，例如請求核准、套件可見度和匯入套件。 |
 
-如需有關沙箱的詳細資訊，請閱讀[沙箱概觀](../../sandboxes/home.md)。
+如需更多有關沙箱的資訊，請閱讀[沙箱概觀](../../sandboxes/home.md)。
 
 ## 文件更新 {#documentation-updates}
 
 ### 互動式 Experience Platform API 文件 {#interactive-api-documentation}
 
-[Experience Platform API檔案](https://developer.adobe.com/experience-platform-apis/)現在完全互動式，可讓您直接在API參考檔案頁面上驗證及探索API。 您現在可以前往想要的API參考檔案頁面，建立或取得API驗證認證，將它們貼到&#x200B;**[!UICONTROL 嘗試]**&#x200B;區塊，然後執行呼叫。 全部在一個頁面上。 [深入瞭解](/help/landing/api-authentication.md#get-credentials-functionality)功能。
+[Experience Platform API 文件](https://developer.adobe.com/experience-platform-apis/)現在是完全互動式，可讓您直接在 API 參考文件頁面上驗證和探索 API。現在起，您現在前往所需的 API 參考文件頁面、建立或取得 API 驗證憑證，將其貼上至「**[!UICONTROL 嘗試]**」區塊，然後執行呼叫。所有動作都在單一頁面中進行。[閱讀更多](/help/landing/api-authentication.md#get-credentials-functionality)有關此功能的資訊。
 
-### Experience League上的新目錄 {#new-table-of-contents-on-experience-league}
+### Experience League 的新目錄 {#new-table-of-contents-on-experience-league}
 
-Experience League檔案頁面上的目錄已經過改良，為讀者提供更好的體驗，包括關鍵字篩選以探索您需要的確切頁面、展開所有頁面的能力等。<br> ![新的目錄體驗，包括關鍵字篩選和展開所有頁面的能力。](../2024/assets/november/new-toc-experience.gif "新的目錄體驗，包括關鍵字篩選和展開所有頁面的能力。"){width="250" align="center" zoomable="yes"}
+Experience League 文件頁面的目錄已改良，可為讀者提供更好的體驗，包括用於發現您需要之確切頁面的關鍵字篩選器、展開所有頁面的功能等。<br> ![新目錄體驗，包括關鍵字篩選器和展開所有頁面的功能。](../2024/assets/november/new-toc-experience.gif "新目錄體驗，包括關鍵字篩選器和展開所有頁面的功能。"){width="250" align="center" zoomable="yes"}
 
-### 全新AI助理登陸頁面 {#new-ai-assistant-landing-page}
+### 全新 AI 助理登陸頁面 {#new-ai-assistant-landing-page}
 
-使用新的[AI助理產品檔案](../../ai-assistant/landing.md)頁面做為AI助理所有專案的中樞。 請參閱產品檔案，以取得有關AI助理的影片教學課程、技術檔案、使用案例和部落格連結。
+使用新的 [AI 助理產品文件](../../ai-assistant/landing.md)頁面作為 AI 助理所有內容的中心。請參閱產品文件，以了解影片教學課程、技術文件、使用案例以及有關 AI 助理的部落格文章連結。

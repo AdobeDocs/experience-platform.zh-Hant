@@ -2,9 +2,9 @@
 title: 命名空間優先等級
 description: 瞭解Identity Service中的名稱空間優先順序。
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
+source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 2%
 
 與硬體裝置（例如IDFA、GAID）相比，人員名稱空間相對不可變，而硬體裝置相對於網頁瀏覽器則相對不可變。 基本上，您（人員）永遠是單一實體，擁有多部硬體裝置（手機、筆記型電腦、平板電腦等），並使用多部瀏覽器(Google Chrome、Safari、FireFox等)
 
-處理此主題的另一種方法是使用基數。 對於指定的人員實體，將會建立多少身分？ 在大多數情況下，人員會有一個CRMID、數個硬體裝置識別碼（IDFA/GAID重設不應該經常發生），以及甚至更多Cookie （個人可視需要瀏覽多個裝置、使用無痕模式或在任何指定時間重設Cookie）。 一般而言，**較低的基數表示具有較高值**&#x200B;的名稱空間。
+處理此主題的另一種方法是使用基數。 對於指定的人員實體，將會建立多少身分？ 在大多數情況下，個人會有一個CRMID、數個硬體裝置識別碼（IDFA/GAID重設不應該經常發生），以及甚至更多Cookie （個人可視地在多個裝置上瀏覽、使用無痕模式或在任何指定時間重設Cookie）。 一般而言，**較低的基數表示具有較高值**&#x200B;的名稱空間。
 
 ## 驗證名稱空間優先順序設定
 
