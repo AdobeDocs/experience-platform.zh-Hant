@@ -2,9 +2,9 @@
 title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
+source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -29,15 +29,10 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>加強您的學習</strong><br/>在不中斷工作流程的情況下，探索、疑難排解並提升您對產品知識的理解。</div>
     </td>
-    <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>根據您的使用情況套用許可權</strong><br/>根據您團隊成員的角色授與和撤銷存取許可權。</div>
-    </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -84,11 +79,23 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
+如需詳細資訊，請閱讀[AI助理使用者介面指南](ui-guide.md)。
+
 ### 取得AI助理的存取權
 
 觀看以下影片，瞭解如何為組織和使用者設定AI助理的存取權。
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
+
+如需詳細資訊，請閱讀[AI助理存取指南](access.md)。
+
+### 使用AI Assistant產品知識縮短上線時間
+
+觀看以下影片，瞭解如何使用AI Assistant產品知識縮短上線時間。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
+如需詳細資訊，請閱讀AI助理中的[產品知識](home.md#product-knowledge)
 
 ### 使用AI Assistant來去除受眾雜亂
 

@@ -2,9 +2,9 @@
 title: Adobe Experience Platform中的AI助理概述
 description: 了解 AI 助理、其細微差別和使用案例，以及如何使用它來加快 Adobe Experience Platform 和 Real-Time Customer Data Platform 的工作流程。
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '938'
 ht-degree: 15%
 
 ---
@@ -59,6 +59,10 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 
 {style="table-layout:auto"}
 
+觀看以下影片，瞭解有關AI Assistant產品知識的其他資訊：
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+
 ### 運作深入分析 {#operational-insights}
 
 >[!IMPORTANT]
@@ -78,10 +82,10 @@ AI Assistant會查詢資料庫，然後將資料庫中的資料轉譯成人類�
 | 屬性 | <ul><li>屬性名稱搜尋</li><li>屬性 — 結構描述關係</li><li>屬性 — 資料集關係</li><li>屬性 — 對象關係</li><li>屬性 — 目的地關係</li></ul> | <ul><li>屬性類別</li><li>稽核</li><li>淘汰狀態</li><li>標記</li><li>儲存在屬性中的值</li></ul> |
 | 客群 | <ul><li>客群計數</li><li>對象型別（串流或批次）</li><li>建立/修改日期</li><li>啟用狀態</li><li>輪廓計數</li><li>複製對象</li><li>對象定義搜尋</li><li>對象 — 對象關係</li><li>對象 — 屬性關係</li><li>對象 — 資料集關係</li><li>對象 — 目的地關係</li><li>名稱搜尋</li><li>名稱和ID搜尋 | <ul><li>對象重疊</li><li>客群啟用</li><li>對象 — 行銷活動關係</li><li>稽核</li><li>建立/修改</li><li>標記</li><li>設定檔資格趨勢</li></ul> |
 | 資料流 | <ul><li>資料流計數</li><li>資料流程狀態</li><li>資料流 — 資料集關係</li><li>資料流 — 來源關係</li></ul> | <ul><li>建立/修改</li><li>資料流 — 批次關係</li><li>擷取設定檔計數</li></ul> |
-| 資料集 | <ul><li>資料集計數</li><li>設定檔啟用狀態</li><li>建立/修改日期</li><li>資料集 — 結構描述關係</li><li>資料集 — 對象關係</li><li>資料集 — 屬性關係</li><li>資料集 — 資料流關係</li><li>名稱搜尋 </li><li>名稱和ID搜尋</li></ul> | <ul><li>稽核</li><li>建立者：</li><li>資料集 — 批次關係</li><li>資料集建立/修改</li><li>資料集大小</li><li>設定檔數</li><li>列數</li><li>值搜尋</li></ul> |
+| 資料集 | <ul><li>資料集計數</li><li>設定檔啟用狀態</li><li>建立/修改日期</li><li>資料集 — 結構描述關係</li><li>資料集 — 對象關係</li><li>資料集 — 屬性關係</li><li>資料集 — 資料流關係</li><li>名稱搜尋 </li><li>名稱和ID搜尋</li></ul> | <ul><li>稽核</li><li>建立者</li><li>資料集 — 批次關係</li><li>資料集建立/修改</li><li>資料集大小</li><li>設定檔數</li><li>列數</li><li>值搜尋</li></ul> |
 | 目標 | <ul><li>設定的目的地計數</li><li>目的地 — 對象關係</li><li>目的地屬性關係</li></ul> | <ul><li>帳戶設定</li><li>帳戶認證資訊</li><li>啟用的不重複設定檔</li></ul> |
-| 歷程 | <ul><li>計數</li><li>名稱搜尋</li><li>名稱和ID搜尋</li><li>歷程狀態</li><li>觸發狀態（對象與事件）</li><li>建立/修改日期</li><li>循環頻率</li></ul> | <ul><li>屬性 — 歷程關係</li><li>稽核</li><li>建立/修改</li><li>建立者：</li><li>活動</li><li>歷程 — 資料集</li><li>歷程 — 結構描述</li><li>優惠</li><li>設定檔資格趨勢</li><li>步驟事件</li></ul> |
-| 結構描述 | <ul><li>結構描述計數</li><li>建立/修改日期</li><li>結構描述 — 屬性關係</li><li>結構描述 — 資料集關係</li><li>結構描述 — 對象關係</li><li>設定檔啟用狀態</li><li>名稱搜尋</li><li>名稱和ID搜尋</li></ul> | <ul><li>稽核</li><li>建立/修改</li><li>建立者：</li><li>欄位群組</li><li>身分</li><li>身分識別命名空間</li><li>標記</li><li>設定檔數</li></ul> |
+| 歷程 | <ul><li>計數</li><li>名稱搜尋</li><li>名稱和ID搜尋</li><li>歷程狀態</li><li>觸發狀態（對象與事件）</li><li>建立/修改日期</li><li>循環頻率</li></ul> | <ul><li>屬性 — 歷程關係</li><li>稽核</li><li>建立/修改</li><li>建立者</li><li>活動</li><li>歷程 — 資料集</li><li>歷程 — 結構描述</li><li>優惠</li><li>設定檔資格趨勢</li><li>步驟事件</li></ul> |
+| 結構描述 | <ul><li>結構描述計數</li><li>建立/修改日期</li><li>結構描述 — 屬性關係</li><li>結構描述 — 資料集關係</li><li>結構描述 — 對象關係</li><li>設定檔啟用狀態</li><li>名稱搜尋</li><li>名稱和ID搜尋</li></ul> | <ul><li>稽核</li><li>建立/修改</li><li>建立者</li><li>欄位群組</li><li>身分</li><li>身分識別命名空間</li><li>標記</li><li>設定檔數</li></ul> |
 | 來源 | <ul><li>帳戶計數</li><li>帳戶狀態</li><li>每個帳戶的作用中/非作用中資料流</li><li>Source聯結器 — 資料流關係</li><li>Source帳戶 — 資料流關係</li></ul> | <ul><li>帳戶認證資訊</li><li>帳戶設定</li><li>資料擷取量度</li><li>設定檔數</li><li>Source — 批次關係</li></ul> |
 
 {style="table-layout:auto"}
