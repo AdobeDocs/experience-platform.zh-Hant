@@ -3,7 +3,7 @@ solution: Experience Platform
 title: 金融服務業資料模型ERD
 description: 檢視實體關係圖(ERD)，該圖描述銀行、金融服務和保險(BFSI)產業的標準化資料模型。 此資料模型與Adobe Experience Platform中使用的Experience Data Model (XDM)相容。
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -21,12 +21,12 @@ ht-degree: 0%
 請使用下列圖例來解譯此ERD：
 
 * 中顯示的每個實體都是以基礎的[體驗資料模型(XDM)類別](../composition.md#class)為基礎。
-* 對於指定的實體，以&#x200B;**bold**&#x200B;標示的每一列代表欄位群組或資料型別，其提供的相關欄位會以非粗體文字列示於下方。
+* 在父欄位下縮排的欄位代表屬於父欄位群組的子欄位或子欄位。
 * 指定實體最重要的欄位會以紅色反白顯示。
 * 所有可用於識別個別客戶的屬性都會標示為「身分」，而其中一項屬性會標示為「主要身分」。
 * 實體關係會標示為非相依關係，因為Cookie型事件通常無法判斷執行交易的人員或個人。
 
-![](../../images/industries/financial.png)
+![金融產業資料模型的範例ERD](../../images/industries/financial.png)
 
 >[!NOTE]
 >
