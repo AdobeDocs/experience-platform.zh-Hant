@@ -4,10 +4,10 @@ description: 了解稽核紀錄如何讓您查看誰在 Adobe Experience Platfor
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 36%
+source-wordcount: '1388'
+ht-degree: 35%
 
 ---
 
@@ -16,12 +16,12 @@ ht-degree: 36%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="熱門動作"
->abstract="此 Widget 會顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此小工具會顯示在所選時間範圍內在 Experience Platform 最常執行的動作類型。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="熱門使用者"
->abstract="此 Widget 會顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
+>abstract="此小工具會顯示在所選時間範圍於 Experience Platform 執行最多動作的使用者。若要查看 Platform 中記錄的動作的完整清單，請在左側導覽中選取&#x200B;**稽核**。"
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
@@ -31,6 +31,10 @@ ht-degree: 36%
 為了提高系統中所執行活動的透明度和可見度，Adobe Experience Platform可讓您以「稽核記錄」的形式，稽核各種服務和功能的使用者活動。 這些記錄形成了稽核軌跡，可以幫助對Platform問題進行疑難排解，並幫助您的企業有效遵守公司資料管理政策和法規要求。
 
 基本上，稽核記錄會告知&#x200B;**誰**&#x200B;執行了&#x200B;**什麼**&#x200B;動作，以及&#x200B;**何時**。 記錄中記錄的每個動作都包含中繼資料，其指出動作型別、日期和時間、執行動作之使用者的電子郵件ID，以及與動作型別相關的其他屬性。
+
+>[!NOTE]
+>
+> 在&#x200B;**角色**&#x200B;資源中，動作&#x200B;**新增使用者**&#x200B;和&#x200B;**移除使用者**&#x200B;的中繼資料不會包含執行動作之使用者的電子郵件識別碼。 記錄檔而是會顯示系統產生的電子郵件ID (system@adobe.com)。
 
 本檔案涵蓋Platform中的稽核記錄，包括如何在UI或API中檢視和管理它們。
 
