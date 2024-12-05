@@ -2,7 +2,7 @@
 title: 醫療保健產業資料模型ERD
 description: 檢視實體關係圖(ERD)，該圖描述醫療保健行業的標準化資料模型。 此資料模型與Adobe Experience Platform中使用的Experience Data Model (XDM)相容。
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
+source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
