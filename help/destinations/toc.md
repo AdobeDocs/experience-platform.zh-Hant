@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 5%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 5%
    * 社交目的地{#social}
       * [社交目的地概觀](./catalog/social/overview.md)
       * [facebook連線](./catalog/social/facebook.md)
+      * [（公司） LinkedIn比對受眾連線](./catalog/social/linkedin-b2b.md)
       * [linkedIn比對受眾連線](./catalog/social/linkedin.md)
       * [TikTok連線](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences]個連線](./catalog/social/twitter.md)

@@ -2,12 +2,12 @@
 title: 對目的地啟用帳戶對象
 type: Tutorial
 description: 瞭解如何對目的地啟用帳戶對象
-badgeB2B: label="B2B版本" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P版本" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 支援的目的地 {#supported-destinations}
 
-移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 使用&#x200B;**[!UICONTROL 資料型別]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL 帳戶]**，檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md))以及[（公司） LinkedIn相符對象](/help/destinations/catalog/social/linkedin.md)目的地。
+移至&#x200B;**[!UICONTROL 連線]** > **[!UICONTROL 目的地]**，然後選取&#x200B;**[!UICONTROL 目錄]**&#x200B;標籤。 使用&#x200B;**[!UICONTROL 資料型別]**&#x200B;篩選器並選取&#x200B;**[!UICONTROL 帳戶]**，檢視支援啟用帳戶對象的目的地。 目前，匯出帳戶對象僅適用於特定雲端儲存空間目的地([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md)、[ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md)、[Azure Blob儲存空間](/help/destinations/catalog/cloud-storage/azure-blob.md)、[資料登陸區域](/help/destinations/catalog/cloud-storage/data-landing-zone.md)和[SFTP](/help/destinations/catalog/cloud-storage/sftp.md))以及[Demandbase](/help/destinations/catalog/advertising/demandbase.md)和[（公司） LinkedIn相符的對象](/help/destinations/catalog/social/linkedin-b2b.md)串流目的地。
 
 ![支援帳戶對象的目的地。](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 >
 >可匯出帳戶對象的目的地會在卡片的右上角標示圖示，類似於下面醒目提示的目的地，或者，您可以使用資料型別篩選器來只顯示可匯出帳戶對象的目的地，如頁面上較高的[所示](#supported-destinations)。
 
-![可匯出醒目提示之設定檔對象的Amazon S3目的地頁面。](/help/destinations/assets/ui/activate-account-audiences/amazon-s3-icon-activate-account-audiences.png)
+![可匯出醒目提示之設定檔對象的Demandbase目的地頁面。](/help/destinations/assets/ui/activate-account-audiences/demandbase-icon-activate-account-audiences.png)
 
 1. 選取&#x200B;**[!UICONTROL 資料型別帳戶]**，接著選取您要匯出資料集的目的地連線，然後選取&#x200B;**[!UICONTROL 下一步]**。
 
