@@ -3,10 +3,10 @@ title: 利用計算欄位將陣列匯出為字串
 type: Tutorial
 description: 瞭解如何使用計算欄位，將陣列從Real-Time CDP以字串形式匯出至雲端儲存空間目的地。
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1556'
+ht-degree: 7%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* 通常提供透過計算欄位匯出陣列的功能。
+>通常提供透過計算欄位匯出陣列的功能。
 
 瞭解如何透過計算欄位，將陣列從Real-Time CDP匯出至[雲端儲存空間目的地](/help/destinations/catalog/cloud-storage/overview.md)，做為字串。 請參閱本檔案以瞭解此功能啟用的使用案例。
 
