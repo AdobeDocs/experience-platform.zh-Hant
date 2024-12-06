@@ -2,7 +2,7 @@
 title: sendMediaEvent
 description: 瞭解如何使用sendMediaEvent命令來追蹤Web SDK中的媒體工作階段。
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 877e12f1d53bb4a8d7c2564490d4e8f3e9e34e34
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### 狀態更新 {#state-updates}
 
-`media.stateUpdate`事件型別用於追蹤播放器狀態何時變更。 此事件應在播放器狀態變更時傳送。
+`media.statesUpdate`事件型別用於追蹤播放器狀態何時變更。 此事件應在播放器狀態變更時傳送。
 
 >[!BEGINTABS]
 
@@ -636,7 +636,7 @@ sessionPromise.then(sessionID => {
 alloy("sendMediaEvent", {
     playerId: "movie-test",
     xdm: {
-        eventType: "media.stateUpdate",
+        eventType: "media.statesUpdate",
         mediaCollection: {
             statesStart: [{
                     name: "mute"
