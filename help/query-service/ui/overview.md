@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 查詢服務UI指南
 description: Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和執行查詢、檢視以前執行的查詢，以及存取組織內使用者儲存的查詢。
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 1%
@@ -175,4 +175,3 @@ Adobe Experience Platform查詢服務提供使用者介面，可用於寫入和�
 ## 後續步驟
 
 現在您已經熟悉[!DNL Platform]上的查詢服務使用者介面，您可以存取查詢編輯器以開始建立您自己的查詢專案，與組織中的其他使用者共用。 如需有關在查詢編輯器中編寫和執行查詢的詳細資訊，請參閱[查詢編輯器使用手冊](./user-guide.md)。
-

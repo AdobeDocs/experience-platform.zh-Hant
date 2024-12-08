@@ -2,7 +2,7 @@
 title: 醫療保健產業資料模型ERD
 description: 檢視實體關係圖(ERD)，該圖描述醫療保健行業的標準化資料模型。 此資料模型與Adobe Experience Platform中使用的Experience Data Model (XDM)相容。
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
+source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 0%
@@ -42,3 +42,4 @@ ht-degree: 0%
 | 透過不同管道追蹤保險的行銷活動，瞭解客戶如何找到保險公司，進而改善健康計畫中的註冊及帳戶建立作業。 | <ul><li>**[[!UICONTROL XDM個別設定檔]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL 醫療保健會員詳細資料]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 付款者]](../../classes/payer.md)**</li><li>**[[!UICONTROL 計畫]](../../classes/plan.md)**：<ul><li>[[!UICONTROL 醫療保健計畫詳細資料]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**：<ul><li>[[!UICONTROL 網頁詳細資料]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertising詳細資料]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
 | 避免醫療保險的失效。 | <ul><li>**[[!UICONTROL XDM個別設定檔]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL 醫療保健會員詳細資料]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 計畫]](../../classes/plan.md)**：<ul><li>[[!UICONTROL 醫療保健計畫詳細資料]](../../field-groups/plan/healthcare-plan-details.md)</li></ul></li></ul> |
 | 使用直接對客戶(DTC)廣告向供應商促銷藥物資訊。 | <ul><li>**[[!UICONTROL XDM個別設定檔]](../../classes/individual-profile.md)**：<ul><li>[[!UICONTROL 醫療保健會員詳細資料]](../../field-groups/profile/healthcare-member-details.md)</li></ul></li><li>**[[!UICONTROL 藥物]](../../classes/medication.md)**：<ul><li>[[!UICONTROL 醫療保健]](../../field-groups/medication/healthcare-medication.md)</li></ul></li><li>**[[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md)**：<ul><li>[[!UICONTROL 網頁詳細資料]](../../field-groups/event/web-details.md)</li><li>[[!UICONTROL Advertising詳細資料]](../../field-groups/event/advertising-details.md)</li></ul></li></ul> |
+
