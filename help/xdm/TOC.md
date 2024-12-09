@@ -5,10 +5,10 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 45%
+source-wordcount: '719'
+ht-degree: 42%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 45%
 * [XDM系統概覽](home.md)
 * 綱要 {#schema}
    * [結構描述構成的基礎知識](schema/composition.md)
-   * [資料模型化的最佳實務](schema/best-practices.md)
+   * [資料建模的最佳做法](schema/best-practices.md)
    * [敏感資料和個人資料](./schema/sensitive-and-personal-data.md)
    * [XDM欄位型別限制](schema/field-constraints.md)
    * [XDM中的名稱空間](./schema/namespaces.md)
@@ -29,6 +29,53 @@ ht-degree: 45%
       * [醫療保健](./schema/industries/healthcare.md)
       * [電信](./schema/industries/telecom.md)
       * [觀光與餐旅](./schema/industries/travel-hospitality.md)
+   * 醫療保健資料模型V2 {#health-care-data-model-v2}
+      * [醫療保健V2](./schema/industries/healthcare-v2.md)
+      * 類別 {#health-care-classes}
+         * [位置](./classes/location.md)
+      * 欄位群組{#health-care-v2-field-groups}
+         * XDM個別設定檔{#health-care-v2-profile}
+            * [醫療保健帳戶](./field-groups/profile/healthcare-account.md)
+            * [醫療保健計畫](./field-groups/profile/healthcare-care-plan.md)
+            * [醫療保健目標](./field-groups/profile/healthcare-goal.md)
+            * [醫療保健組織](./field-groups/profile/healthcare-organization.md)
+            * [醫療保健患者](./field-groups/profile/healthcare-patient.md)
+            * [醫療保健從業者](./field-groups/profile/healthcare-practioner.md)
+            * [醫療保健時間表](./field-groups/profile/healthcare-schedule.md)
+         * XDM體驗事件{#health-care-v2-event}
+            * [醫療保健免疫](./field-groups/event/healthcare-immunization.md)
+         * 位置 {#health-care-v2-location}
+            * [醫療保健位置](./field-groups/location/healthcare-location.md)
+         * 藥物{#health-care-v2-medication}
+            * [醫療保健藥物配發](./field-groups/medication/healthcare-medication-dispense.md)
+            * [醫療保健藥物要求](./field-groups/medication/healthcare-medication-request.md)
+            * [醫療保健藥物](./field-groups/medication/healthcare-medication-v2.md)
+         * 計畫{#health-care-v2-plans}
+            * [醫療保健](./field-groups/plan/healthcare-coverage.md)
+      * 資料型別{#health-care-v2-data-types}
+         * [地址](./data-types/healthcare/address.md)
+         * [註解](./data-types/healthcare/annotation.md)
+         * [可用性](./data-types/healthcare/availability.md)
+         * [可程式碼概念](./data-types/healthcare/codeable-concept.md)
+         * [可程式碼參考](./data-types/healthcare/codeable-reference.md)
+         * [編碼](./data-types/healthcare/coding.md)
+         * [聯絡視窗](./data-types/healthcare/contact-point.md)
+         * [劑量](./data-types/healthcare/dosage.md)
+         * [持續時間](./data-types/healthcare/duration.md)
+         * [延伸連絡人詳細資料](./data-types/healthcare/extended-contact-detail.md)
+         * [人名](./data-types/healthcare/human-name.md)
+         * [識別碼](./data-types/healthcare/identifier.md)
+         * [金錢](./data-types/healthcare/money.md)
+         * [期間](./data-types/healthcare/period.md)
+         * [人員](./data-types/healthcare/person.md)
+         * [數量](./data-types/healthcare/quantity.md)
+         * [Range](./data-types/healthcare/range.md)
+         * [比率](./data-types/healthcare/ratio.md)
+         * [參考](./data-types/healthcare/reference.md)
+         * [重複](./data-types/healthcare/repeat.md)
+         * [簡單數量](./data-types/healthcare/simple-quantity.md)
+         * [時間](./data-types/healthcare/timing.md)
+         * [虛擬服務](./data-types/healthcare/virtual-service-detail.md)
    * [XDM欄位字典](schema/field-dictionary.md)
 * 類別 {#classes}
    * [XDM 個人輪廓](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 45%
    * XDM個別設定檔{#profile}
       * [同意和偏好設定](./field-groups/profile/consents.md)
       * [人口統計細節](./field-groups/profile/demographic-details.md)
+      * [醫療保健會員詳細資訊](./field-groups/profile/healthcare-member-details.md)
       * [IAB TCF 2.0 同意](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [醫療保健會員詳細資訊](./field-groups/profile/healthcare-member-details.md)
       * [熟客方案細節](./field-groups/profile/loyalty-details.md)
       * [個人聯絡詳細資訊](./field-groups/profile/personal-contact-details.md)
       * [設定檔合作夥伴擴充（範例）](./field-groups/profile/profile-partner-enrichment.md)
@@ -236,7 +283,7 @@ ht-degree: 45%
    * [棄用API中的XDM欄位](tutorials/field-deprecation-api.md)
    * [在UI中定義結構描述關係](tutorials/relationship-ui.md)
    * [在API中定義結構描述關係](tutorials/relationship-api.md)
-   * [在Real-Time CDP B2B Edition中定義結構描述關係](tutorials/relationship-b2b.md)
+   * [在Real-Time CDP B2B edition中定義結構描述關係](tutorials/relationship-b2b.md)
    * [管理結構描述的資料使用標籤](tutorials/labels.md)
    * [建立臨時結構描述](tutorials/ad-hoc.md)
 * [疑難排解指南](troubleshooting-guide.md)
