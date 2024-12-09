@@ -5,10 +5,10 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
+source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 42%
+source-wordcount: '705'
+ht-degree: 44%
 
 ---
 
@@ -29,30 +29,30 @@ ht-degree: 42%
       * [醫療保健](./schema/industries/healthcare.md)
       * [電信](./schema/industries/telecom.md)
       * [觀光與餐旅](./schema/industries/travel-hospitality.md)
-   * 醫療保健資料模型V2 {#health-care-data-model-v2}
-      * [醫療保健V2](./schema/industries/healthcare-v2.md)
-      * 類別 {#health-care-classes}
+   * 醫療保健資料模型V2 {#healthcare}
+      * [醫療保健V2](./schema/healthcare-v2.md)
+      * 類別 {#classes}
          * [位置](./classes/location.md)
-      * 欄位群組{#health-care-v2-field-groups}
-         * XDM個別設定檔{#health-care-v2-profile}
-            * [醫療保健帳戶](./field-groups/profile/healthcare-account.md)
-            * [醫療保健計畫](./field-groups/profile/healthcare-care-plan.md)
-            * [醫療保健目標](./field-groups/profile/healthcare-goal.md)
-            * [醫療保健組織](./field-groups/profile/healthcare-organization.md)
-            * [醫療保健患者](./field-groups/profile/healthcare-patient.md)
-            * [醫療保健從業者](./field-groups/profile/healthcare-practioner.md)
-            * [醫療保健時間表](./field-groups/profile/healthcare-schedule.md)
-         * XDM體驗事件{#health-care-v2-event}
-            * [醫療保健免疫](./field-groups/event/healthcare-immunization.md)
-         * 位置 {#health-care-v2-location}
-            * [醫療保健位置](./field-groups/location/healthcare-location.md)
-         * 藥物{#health-care-v2-medication}
-            * [醫療保健藥物配發](./field-groups/medication/healthcare-medication-dispense.md)
-            * [醫療保健藥物要求](./field-groups/medication/healthcare-medication-request.md)
-            * [醫療保健藥物](./field-groups/medication/healthcare-medication-v2.md)
-         * 計畫{#health-care-v2-plans}
-            * [醫療保健](./field-groups/plan/healthcare-coverage.md)
-      * 資料型別{#health-care-v2-data-types}
+      * 欄位群組{#field-groups}
+         * XDM個別設定檔{#profile}
+            * [帳戶](./field-groups/profile/healthcare-account.md)
+            * [服務計畫](./field-groups/profile/healthcare-care-plan.md)
+            * [目標](./field-groups/profile/healthcare-goal.md)
+            * [組織](./field-groups/profile/healthcare-organization.md)
+            * [患者](./field-groups/profile/healthcare-patient.md)
+            * [實踐者](./field-groups/profile/healthcare-practioner.md)
+            * [排程](./field-groups/profile/healthcare-schedule.md)
+         * XDM體驗事件{#event}
+            * [免疫](./field-groups/event/healthcare-immunization.md)
+         * 位置 {#location}
+            * [位置](./field-groups/location/healthcare-location.md)
+         * 藥物{#medication}
+            * [藥物配發](./field-groups/medication/healthcare-medication-dispense.md)
+            * [藥物請求](./field-groups/medication/healthcare-medication-request.md)
+            * [藥物](./field-groups/medication/healthcare-medication-v2.md)
+         * 計畫{#plan}
+            * [涵蓋範圍](./field-groups/plan/healthcare-coverage.md)
+      * 資料型別{#data-types}
          * [地址](./data-types/healthcare/address.md)
          * [註解](./data-types/healthcare/annotation.md)
          * [可用性](./data-types/healthcare/availability.md)
