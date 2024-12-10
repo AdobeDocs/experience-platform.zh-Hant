@@ -5,9 +5,9 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
+source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '696'
 ht-degree: 44%
 
 ---
@@ -30,52 +30,47 @@ ht-degree: 44%
       * [電信](./schema/industries/telecom.md)
       * [觀光與餐旅](./schema/industries/travel-hospitality.md)
    * 醫療保健資料模型V2 {#healthcare}
-      * [醫療保健V2](./schema/healthcare-v2.md)
+      * [醫療保健V2](./schema/healthcare/healthcare-v2.md)
       * 類別 {#classes}
-         * [位置](./classes/location.md)
+         * [位置](./schema/healthcare/classes/location.md)
       * 欄位群組{#field-groups}
-         * XDM個別設定檔{#profile}
-            * [帳戶](./field-groups/profile/healthcare-account.md)
-            * [服務計畫](./field-groups/profile/healthcare-care-plan.md)
-            * [目標](./field-groups/profile/healthcare-goal.md)
-            * [組織](./field-groups/profile/healthcare-organization.md)
-            * [患者](./field-groups/profile/healthcare-patient.md)
-            * [實踐者](./field-groups/profile/healthcare-practioner.md)
-            * [排程](./field-groups/profile/healthcare-schedule.md)
-         * XDM體驗事件{#event}
-            * [免疫](./field-groups/event/healthcare-immunization.md)
-         * 位置 {#location}
-            * [位置](./field-groups/location/healthcare-location.md)
-         * 藥物{#medication}
-            * [藥物配發](./field-groups/medication/healthcare-medication-dispense.md)
-            * [藥物請求](./field-groups/medication/healthcare-medication-request.md)
-            * [藥物](./field-groups/medication/healthcare-medication-v2.md)
-         * 計畫{#plan}
-            * [涵蓋範圍](./field-groups/plan/healthcare-coverage.md)
+         * [帳戶](./schema/healthcare/field-groups/account.md)
+         * [服務計畫](./schema/healthcare/field-groups/care-plan.md)
+         * [涵蓋範圍](./schema/healthcare/field-groups/coverage.md)
+         * [目標](./schema/healthcare/field-groups/goal.md)
+         * [免疫](./schema/healthcare/field-groups/immunization.md)
+         * [位置](./schema/healthcare/field-groups/location.md)
+         * [藥物](./schema/healthcare/field-groups/medication.md)
+         * [藥物配發](./schema/healthcare/field-groups/medication-dispense.md)
+         * [藥物請求](./schema/healthcare/field-groups/medication-request.md)
+         * [組織](./schema/healthcare/field-groups/organization.md)
+         * [患者](./schema/healthcare/field-groups/patient.md)
+         * [實踐者](./schema/healthcare/field-groups/practioner.md)
+         * [排程](./schema/healthcare/field-groups/schedule.md)
       * 資料型別{#data-types}
-         * [地址](./data-types/healthcare/address.md)
-         * [註解](./data-types/healthcare/annotation.md)
-         * [可用性](./data-types/healthcare/availability.md)
-         * [可程式碼概念](./data-types/healthcare/codeable-concept.md)
-         * [可程式碼參考](./data-types/healthcare/codeable-reference.md)
-         * [編碼](./data-types/healthcare/coding.md)
-         * [聯絡視窗](./data-types/healthcare/contact-point.md)
-         * [劑量](./data-types/healthcare/dosage.md)
-         * [持續時間](./data-types/healthcare/duration.md)
-         * [延伸連絡人詳細資料](./data-types/healthcare/extended-contact-detail.md)
-         * [人名](./data-types/healthcare/human-name.md)
-         * [識別碼](./data-types/healthcare/identifier.md)
-         * [金錢](./data-types/healthcare/money.md)
-         * [期間](./data-types/healthcare/period.md)
-         * [人員](./data-types/healthcare/person.md)
-         * [數量](./data-types/healthcare/quantity.md)
-         * [Range](./data-types/healthcare/range.md)
-         * [比率](./data-types/healthcare/ratio.md)
-         * [參考](./data-types/healthcare/reference.md)
-         * [重複](./data-types/healthcare/repeat.md)
-         * [簡單數量](./data-types/healthcare/simple-quantity.md)
-         * [時間](./data-types/healthcare/timing.md)
-         * [虛擬服務](./data-types/healthcare/virtual-service-detail.md)
+         * [地址](./schema/healthcare/data-types/address.md)
+         * [註解](./schema/healthcare/data-types/annotation.md)
+         * [可用性](./schema/healthcare/data-types/availability.md)
+         * [可程式碼概念](./schema/healthcare/data-types/codeable-concept.md)
+         * [可程式碼參考](./schema/healthcare/data-types/codeable-reference.md)
+         * [編碼](./schema/healthcare/data-types/coding.md)
+         * [聯絡視窗](./schema/healthcare/data-types/contact-point.md)
+         * [劑量](./schema/healthcare/data-types/dosage.md)
+         * [持續時間](./schema/healthcare/data-types/duration.md)
+         * [延伸連絡人詳細資料](./schema/healthcare/data-types/extended-contact-detail.md)
+         * [人名](./schema/healthcare/data-types/human-name.md)
+         * [識別碼](./schema/healthcare/data-types/identifier.md)
+         * [金錢](./schema/healthcare/data-types/money.md)
+         * [期間](./schema/healthcare/data-types/period.md)
+         * [人員](./schema/healthcare/data-types/person.md)
+         * [數量](./schema/healthcare/data-types/quantity.md)
+         * [Range](./schema/healthcare/data-types/range.md)
+         * [比率](./schema/healthcare/data-types/ratio.md)
+         * [參考](./schema/healthcare/data-types/reference.md)
+         * [重複](./schema/healthcare/data-types/repeat.md)
+         * [簡單數量](./schema/healthcare/data-types/simple-quantity.md)
+         * [時間](./schema/healthcare/data-types/timing.md)
+         * [虛擬服務](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM欄位字典](schema/field-dictionary.md)
 * 類別 {#classes}
    * [XDM 個人輪廓](./classes/individual-profile.md)
