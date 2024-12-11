@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯類別
 description: 瞭解如何在Experience Platform使用者介面中建立和編輯類別。
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1689'
 ht-degree: 5%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 在Adobe Experience Platform中，結構描述的類別會定義結構描述將包含的資料的行為方面（記錄或時間序列）。 除此之外，類別會說明基於該類別的所有結構描述所需包含的最小通用屬性數量，並提供合併多個相容資料集的方法。
 
-Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包括XDM Individual Profile和XDM ExperienceEvent。 除了這些核心類別之外，您也可以建立自己的自訂類別，以說明貴組織更具體的使用案例。
+Adobe提供幾個標準（「核心」）體驗資料模型(XDM)類別，包括[XDM個人設定檔](../../classes/individual-profile.md)和[XDM ExperienceEvent](../../classes/experienceevent.md)。 除了這些核心類別之外，您也可以建立自己的自訂類別，以說明貴組織更具體的使用案例。
 
 本檔案概述如何在Experience PlatformUI中建立、編輯及管理自訂類別。
 
@@ -34,6 +34,8 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 在Platform UI中，選取左側導覽中的&#x200B;**[!UICONTROL 結構描述]**&#x200B;以開啟[!UICONTROL 結構描述]工作區，然後選取&#x200B;**[!UICONTROL 類別]**&#x200B;索引標籤。 會顯示可用類別的清單。
 
+![在[!UICONTROL 結構描述]工作區[!UICONTROL 類別]和[!UICONTROL 結構描述]的[!UICONTROL 類別]標籤內的類別已反白。](../../images/ui/resources/classes/available-classes.png)
+
 ## 篩選類別 {#filter}
 
 系統會根據類別的建立方式自動篩選類別清單。 預設設定會顯示由Adobe定義的類別。 您還可以篩選清單以顯示您的組織建立的清單。 選取選項按鈕以在[!UICONTROL 標準]與[!UICONTROL 自訂]選項之間選擇。 [!UICONTROL Standard]選項會顯示Adobe建立的實體，而[!UICONTROL Custom]選項則會顯示在您的組織內建立的實體。
@@ -46,11 +48,15 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 ## 建立新類別 {#create}
 
-在Platform UI中建立類別有兩個方法。 從[!UICONTROL 結構描述]工作區中的任何索引標籤中，選取&#x200B;**[!UICONTROL 建立結構描述]**，或從[!UICONTROL 類別]索引標籤中，選取&#x200B;**[!UICONTROL 建立類別]**。
+在Platform UI中建立類別的方法有兩種：透過&#x200B;**[!UICONTROL Create class]**&#x200B;或&#x200B;**[!UICONTROL Create schema]**。
 
-![ [!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤有[!UICONTROL 建立結構描述]和[!UICONTROL 建立類別]標示出來](../../images/ui/resources/classes/create-class-methods.png)
+### 建立類別
 
-如果您選取&#x200B;**[!UICONTROL 建立類別]**，則會顯示[!UICONTROL 建立類別]對話方塊。 輸入類別的[!UICONTROL 顯示名稱]和[!UICONTROL 描述]，然後使用選項按鈕選擇您類別的預期行為。 類別可以是型別、記錄序列或時間序列。 選取&#x200B;**[!UICONTROL 建立]**&#x200B;以確認您的選擇，並返回[!UICONTROL 類別]標籤。
+從[!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤中選取&#x200B;**[!UICONTROL 建立類別]**。
+
+![含有[!UICONTROL 建立類別]的[!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤已強調顯示](../../images/ui/resources/classes/create-class.png)
+
+[!UICONTROL 建立類別]對話方塊就會顯示。 輸入類別的[!UICONTROL 顯示名稱]和[!UICONTROL 描述]，然後使用選項按鈕選擇您類別的預期行為。 類別可以是[!UICONTROL 記錄]型別，或[!UICONTROL 時間序列]型別。 選取&#x200B;**[!UICONTROL 建立]**&#x200B;以確認您的選擇，並返回[!UICONTROL 類別]標籤。
 
 ![反白顯示[!UICONTROL 建立]的[!UICONTROL 建立類別]對話方塊。](../../images/ui/resources/classes/create-class-dialog.png)
 
@@ -58,9 +64,13 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 ![最近建立之類別反白顯示之[!UICONTROL 結構描述]工作區的[!UICONTROL 類別]標籤。](../../images/ui/resources/classes/new-class-listing.png)
 
-### 建立或編輯類別 {#create-or-edit}
+### 建立結構描述
 
-或者，如果您選擇手動建立方案，則可以建立或編輯現有類別，作為該工作流程的一部分。 在出現的[!UICONTROL 建立結構描述]對話方塊中，選取&#x200B;**[!UICONTROL 建立結構描述]**，然後選取&#x200B;**[!UICONTROL 手動]**。
+或者，您可以手動建立結構描述來建立類別。 從[!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤中選取&#x200B;**[!UICONTROL 建立結構描述]**。
+
+![含有[!UICONTROL 建立結構描述]的[!UICONTROL 結構描述]工作區的[!UICONTROL 類別]索引標籤已強調顯示](../../images/ui/resources/classes/create-schema.png)
+
+在出現的[!UICONTROL 建立結構描述]對話方塊中選取&#x200B;**[!UICONTROL 手動]**。
 
 >[!NOTE]
 >
@@ -68,41 +78,27 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 ![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../../images/ui/resources/classes/manually-create-a-schema.png)
 
-架構建立工作流程隨即顯示。 在[!UICONTROL 結構描述詳細資料]區段中，選取&#x200B;**[!UICONTROL 其他]**。 可用的類別清單隨即顯示。 從這裡，您可以瀏覽並篩選作為新類別基礎的現有類別。
-
->[!NOTE]
->
->只有貴組織定義的自訂類別才能完全編輯和自訂。 對於由Adobe定義的核心類別，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
->
->儲存自訂類別並用於資料擷取後，之後只能對其執行附加變更。 如需詳細資訊，請參閱結構描述演化](../../schema/composition.md#evolution)的[規則。
+架構建立工作流程隨即顯示。 在[!UICONTROL 結構描述詳細資料]區段中，選取&#x200B;**[!UICONTROL 其他]**。 可用的類別清單隨即顯示。 選取&#x200B;**[!UICONTROL 建立類別]**。
 
 ![在[!UICONTROL 結構描述詳細資料]區段中反白顯示[!UICONTROL Other]的[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/classes/other-schema-details.png)
 
-選取選項按鈕，根據類別是自訂或標準類別來篩選類別。 您也可以根據產業來篩選可用的結果，或使用搜尋欄位來搜尋特定類別。
+[!UICONTROL 建立類別]對話方塊就會顯示。 輸入類別的[!UICONTROL 顯示名稱]和[!UICONTROL 描述]，然後使用選項按鈕選擇您類別的預期行為。 類別可以是[!UICONTROL 記錄]型別，或[!UICONTROL 時間序列]型別。 選取&#x200B;**[!UICONTROL 建立]**&#x200B;以確認您的選擇，並返回[!UICONTROL 類別]標籤。
 
-![使用搜尋列[!UICONTROL 自訂]和[!UICONTROL 產業]反白顯示[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/classes/filter-and-search.png)
+![反白顯示[!UICONTROL 建立]的[!UICONTROL 建立類別]對話方塊。](../../images/ui/resources/classes/create-class-from-schema.png)
 
-為了協助您決定適當的類別，有資訊(![資訊圖示。](/help/images/icons/info.png))和預覽(![預覽圖示。每個類別的](/help/images/icons/preview.png)個圖示。 資訊圖示會開啟對話方塊，提供類別及其關聯產業的說明。 預覽圖示會開啟包含結構描述圖表及其屬性的類別的預覽對話方塊。
+類別清單會在[!UICONTROL 結構描述詳細資料]區段中重新整理，並且您新建立的類別會自動選取。 選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以繼續建立您的結構描述。
 
-![選取類別的預覽，其中結構描述圖表和類別屬性已反白顯示。](../../images/ui/resources/classes/class-preview.png)
+![已選取新類別並反白顯示[!UICONTROL 下一步]的[!UICONTROL 結構描述詳細資料]區段。](../../images/ui/resources/classes/select-new-class.png)
 
-選取任何列以選擇類別，然後選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以確認您的選擇。
+選取類別之後，[!UICONTROL 名稱和檢閱]區段就會顯示。 您可以在此段落中提供名稱和說明，以識別您的結構描述。&#x200B;URL結構描述的基本結構（由類別提供）會顯示在畫布中，供您檢閱及驗證選取的類別和結構描述結構。
 
-![從可用類別資料表中選取類別並反白顯示[!UICONTROL 下一步]的[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/classes/select-class.png)
+在文字欄位中輸入人性化的[!UICONTROL 結構描述顯示名稱]。 接下來，輸入適當的說明來協助識別您的結構描述。 當您檢閱了結構描述結構並對您的設定感到滿意時，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以建立結構描述。
 
-工作流程的[!UICONTROL 名稱與檢閱]區段隨即顯示。 在此區段中，提供名稱和說明來識別您的結構描述。&#x200B;URL結構描述的基本結構（由類別提供）會顯示在畫布中，供您檢閱及驗證選取的類別和結構描述結構。
-
-在[!UICONTROL 結構描述顯示名稱]文字欄位中，為類別輸入簡短的、描述性的、唯一的和使用者易記的名稱。 接下來，輸入適當的說明以識別結構描述所定義的資料行為。 當您檢閱了結構描述結構並對您的設定感到滿意時，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以建立結構描述。
-
-![使用[!UICONTROL 結構描述顯示名稱]、[!UICONTROL 描述]和[!UICONTROL 完成]反白顯示[!UICONTROL 建立結構描述]工作流程的[!UICONTROL 名稱和檢閱]區段。](../../images/ui/resources/classes/name-and-review-class.png)
-
-隨即顯示「結構描述編輯器」，其結構描述結構顯示在畫布中。 您現在可以開始[新增欄位至類別](#add-fields)。
-
-![畫布中顯示結構描述結構的結構描述編輯器。](../../images/ui/resources/classes/edit.png)
+![使用[!UICONTROL 結構描述顯示名稱]、[!UICONTROL 描述]和[!UICONTROL 完成]反白顯示[!UICONTROL 建立結構描述]工作流程的[!UICONTROL 名稱和檢閱]區段。](../../images/ui/resources/classes/schema-details.png)
 
 ## 將欄位新增至類別 {#add-fields}
 
-一旦您在[!UICONTROL 結構描述編輯器]中開啟了使用自訂類別的結構描述，您就可以開始將欄位新增至類別。 若要新增欄位，請選取結構描述名稱旁的&#x200B;**加號(+)**&#x200B;圖示。
+一旦您在結構描述編輯器中開啟了使用自訂類別的結構描述，您就可以開始將欄位新增到類別中。 若要新增欄位，請選取結構描述名稱旁的&#x200B;**加號(+)**&#x200B;圖示。
 
 >[!IMPORTANT]
 >
@@ -116,13 +112,42 @@ Adobe提供幾個標準（「核心」）Experience Data Model (XDM)類別，包
 
 畫布中會出現&#x200B;**[!UICONTROL 未命名的欄位]**&#x200B;預留位置，而右邊欄會更新以顯示控制項，以設定欄位的屬性。 在&#x200B;**[!UICONTROL 指派給]**&#x200B;下，選取&#x200B;**[!UICONTROL 類別]**。
 
-![結構描述編輯器的畫布中有未命名的欄位，且已選取並反白指派給類別欄位屬性。](../../images/ui/resources/classes/assign-to-class.png)
+![結構描述編輯器的畫布中有未命名的欄位，其指派給[!UICONTROL Class]欄位屬性已選取並反白顯示。](../../images/ui/resources/classes/assign-to-class.png)
 
 請參閱[在UI](../fields/overview.md#define)中定義欄位的指南，以瞭解如何設定欄位並將其新增到類別的特定步驟。 繼續將所需數量的欄位新增至類別。 完成後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存結構描述和類別。
 
 ![在結構描述編輯器的畫布上新建立的結構描述，並反白顯示[!UICONTROL 儲存]。](../../images/ui/resources/classes/save.png)
 
 如果您先前已建立採用此類別的結構描述，則新新增的欄位會自動出現在這些結構描述中。
+
+## 編輯類別(#edit-a-class)
+
+>[!NOTE]
+>
+>只有貴組織定義的自訂類別才能完全編輯和自訂。 對於由Adobe定義的核心類別，只能在個別結構描述的內容中編輯其欄位的顯示名稱。 如需詳細資訊，請參閱[編輯結構描述欄位](./schemas.md#display-names)的顯示名稱一節。
+>
+>儲存自訂類別並用於資料擷取後，之後只能對其執行附加變更。 如需詳細資訊，請參閱結構描述演化](../../schema/composition.md#evolution)的[規則。
+
+您可以透過架構工作流程編輯類別，方法是編輯擴充類別的現有架構，或手動建立架構。 無法直接編輯類別。 從[!UICONTROL 結構描述]工作區的[!UICONTROL 瀏覽]索引標籤中，選取現有類別或&#x200B;**[!UICONTROL 建立結構描述]**。
+
+![結構描述編輯器含有現有的類別和[!UICONTROL 建立結構描述]已反白顯示。](../../images/ui/resources/classes/edit-class-options.png)
+
+如果您選擇建立新的結構描述，請參閱[建立結構描述](#create-schema)一節以取得詳細資料。 當您完成建立結構描述後（或選取現有結構描述後），會出現結構描述編輯器。 若要更新現有的類別欄位，請從結構描述結構中選取該欄位。 欄位的資訊將顯示在右側邊欄中。 確定[!UICONTROL 指派給]
+已選取選項**[!UICONTROL 類別]**，否則您的更新將不會影響類別。
+
+![結構描述編輯器已選取並反白欄位，且右邊欄已顯示，反白顯示[!UICONTROL 指派給]。](../../images/ui/resources/classes/edit-existing-field.png)
+
+對欄位進行任何需要的變更，在右側邊欄中向下捲動以選取「**[!UICONTROL 套用]**」以儲存您的變更。
+
+>[!IMPORTANT]
+>
+> 您對欄位所做的任何更新都將套用至採用此類別的所有結構描述，並遵循結構描述演化[規則](../../schema/composition.md#evolution)。
+
+![結構描述編輯器已選取欄位，且右邊欄已公開，醒目提示[!UICONTROL 套用]。](../../images/ui/resources/classes/save-changes.png)
+
+若要新增欄位，請依照[新增欄位至類別](#add-fields-to-a-class)指南。 完成後，選取&#x200B;**[!UICONTROL 儲存]**&#x200B;以儲存結構描述和類別。
+
+![結構描述編輯器[!UICONTROL 儲存]已反白顯示。](../../images/ui/resources/classes/save-schema.png)
 
 ## 變更結構描述的類別 {#schema}
 

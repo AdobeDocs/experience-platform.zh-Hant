@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中建立和編輯方案
 description: 瞭解在Experience Platform使用者介面中建立和編輯方案的基本知識。
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4056'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 1%
 
 [!UICONTROL 建立結構描述]對話方塊就會顯示。 在此對話方塊中，您可以選擇透過新增欄位和欄位群組來手動建立結構描述，或者您可以上傳CSV檔案並使用ML演演算法來產生結構描述。 從對話方塊中選取結構描述建立工作流程。
 
-![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![使用工作流程選項建立結構描述對話方塊並選取反白顯示。](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative}手動或ML輔助的結構描述建立 {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ ht-degree: 1%
 
 ![使用三個類別選項和[!UICONTROL 下一步]反白顯示的[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/schemas/schema-class-options.png)
 
+選擇&#x200B;**[!UICONTROL 其他]**&#x200B;時，會顯示可用類別的清單。 您可以在此處瀏覽及篩選預先存在的類別。
+
+![在[!UICONTROL 結構描述詳細資料]區段中反白顯示[!UICONTROL Other]的[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/schemas/other-schema-details.png)
+
+選取選項按鈕，根據類別是自訂或標準類別來篩選類別。 您也可以根據產業來篩選可用的結果，或使用搜尋欄位來搜尋特定類別。
+
+![使用搜尋列[!UICONTROL 自訂]和[!UICONTROL 產業]反白顯示[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/schemas/filter-and-search.png)
+
+為了協助您決定適當的類別，每個類別都有資訊和預覽圖示。 資訊圖示(![資訊圖示。](/help/images/icons/info.png))開啟對話方塊，提供類別及其關聯產業的說明。
+
+![選取類別的資訊圖示和工具提示已反白顯示。](../../images/ui/resources/schemas/class-info.png)
+
+預覽圖示(![預覽圖示。](/help/images/icons/preview.png))開啟包含結構描述圖表及其屬性的類別的預覽對話方塊。
+
+![含有結構描述圖表和類別屬性的選取類別預覽。](../../images/ui/resources/schemas/class-preview.png)
+
+選取任何列以選擇類別，然後選取&#x200B;**[!UICONTROL 下一步]**&#x200B;以確認您的選擇。
+
+![從可用類別資料表中選取類別並反白顯示[!UICONTROL 下一步]的[!UICONTROL 建立結構描述]工作流程。](../../images/ui/resources/schemas/select-class.png)
+
 選取類別之後，[!UICONTROL 名稱和檢閱]區段就會顯示。 您可以在此段落中提供名稱和說明，以識別您的結構描述。&#x200B;URL結構描述的基本結構（由類別提供）會顯示在畫布中，供您檢閱及驗證選取的類別和結構描述結構。
 
 在文字欄位中輸入人性化的[!UICONTROL 結構描述顯示名稱]。 接下來，輸入適當的說明來協助識別您的結構描述。 當您檢閱了結構描述結構並對您的設定感到滿意時，請選取&#x200B;**[!UICONTROL 完成]**&#x200B;以建立結構描述。
 
 ![使用[!UICONTROL 結構描述顯示名稱]、[!UICONTROL 描述]和[!UICONTROL 完成]反白顯示[!UICONTROL 建立結構描述]工作流程的[!UICONTROL 名稱和檢閱]區段。](../../images/ui/resources/schemas/name-and-review.png)
 
-[!UICONTROL 結構描述] [!UICONTROL 瀏覽]索引標籤出現。 您最近建立的結構描述現在列於結構描述資料庫中，並可在[!DNL Schema Editor]中編輯。
+隨即顯示「結構描述編輯器」，其結構描述結構顯示在畫布中。 如有需要，您現在可以開始[新增欄位至類別](../../ui/resources/classes.md#add-fields)。
 
-![顯示您最近建立之結構描述的結構描述工作區瀏覽標籤。](../../images/ui/resources/schemas/example-schema.png)
+![畫布中顯示結構描述結構的結構描述編輯器。](../../images/ui/resources/schemas/edit.png)
 
 ## 編輯現有結構描述 {#edit}
 
