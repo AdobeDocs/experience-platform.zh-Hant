@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK 發行說明
 description: Adobe Experience Platform Web SDK 最新版本注意事項。
 keywords: Adobe Experience Platform Web SDK；Platform Web SDK；Web SDK；發行說明；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2085'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,13 @@ ht-degree: 2%
 # 發行說明
 
 本文介紹Adobe Experience Platform Web SDK的發行說明。
-如需Web SDK標籤擴充功能的最新發行說明，請參閱[Web SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+如需SDK標籤擴充功能網頁的最新發行說明，請參閱[SDK標籤擴充功能發行說明](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md)。
+
+## 2.24.1版 — 2024年12月6日
+
+**修正和改良**
+
+- 解決與[Adobe Experience Platform規則引擎](https://github.com/adobe/aepsdk-rulesengine-typescript/)相關的相依性問題，此問題會導致部分客戶整合發生錯誤。 Web SDK現在需要[Adobe Experience Platform Rules Engine](https://github.com/adobe/aepsdk-rulesengine-typescript/) 2.0.3或更新版本。
 
 ## 2.24.0版 — 2024年10月31日
 
@@ -121,7 +127,7 @@ ht-degree: 2%
 **修正和改良**
 
 - 修正因網域是查詢的一部分而導致退出連結不符合資格的問題。
-- 已棄用`edgeConfigId`，而改用Web SDK設定中的`datastreamId`。
+- 已棄用`edgeConfigId`，改用網頁SDK設定中的`datastreamId`。
 
 ## 2.17.0版 — 2023年5月17日
 
@@ -167,7 +173,7 @@ ht-degree: 2%
 
 **新功能**
 
-- 新增對[Page by Page Full Migration](home.md#migrating-to-web-sdk)的支援。 當訪客在at.js和Web SDK頁面之間移動時，Adobe Target設定檔現在會保留。
+- 新增對[Page by Page Full Migration](home.md#migrating-to-web-sdk)的支援。 現在，當訪客在at.js和SDK網頁之間移動時，Adobe Target設定檔將會保留。
 - 新增可設定的[高平均資訊量使用者代理程式使用者端提示](/help/web-sdk/use-cases/client-hints.md)支援。
 - 新增對[`applyResponse`](/help/web-sdk/commands/applyresponse.md)命令的支援。 這會透過[Edge Network伺服器API](../server-api/overview.md)啟用混合式個人化。
 - QA模式連結現在可跨多個頁面運作。
@@ -282,7 +288,7 @@ ht-degree: 2%
 ## 2.2.0版 — 2020年10月
 
 - 錯誤修正：當`idMigrationEnabled`為`true`時，選擇加入物件會封鎖Web SDK進行呼叫。
-- 錯誤修正：讓Web SDK知道應傳回個人化選件的請求，以避免發生忽隱忽現的問題。
+- 錯誤修正：讓網頁SDK知道應傳回個人化選件的請求，以避免發生閃爍問題。
 
 ## 2.1.0版 — 2020年8月
 
