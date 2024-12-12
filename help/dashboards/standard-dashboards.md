@@ -41,18 +41,18 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 新建立的空白圖示板會出現，而您選擇的名稱會顯示在檢視的左上角。
 
-## 建立 Widget {#create-widget}
+## 建立小工具 {#create-widget}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
->title="Widget 的最大數量"
->abstract="儀表板服務最多支援十個 Widget。將十個 Widget 新增到儀表板後，「[!UICONTROL 新增 Widget]」選項會停用並顯示為灰色。"
+>title="小工具的最大數量"
+>abstract="儀表板服務最多支援十個小工具。將十個小工具新增到儀表板後，「[!UICONTROL 新增小工具]」選項會停用並顯示為灰色。"
 
 從您的新儀表板檢視中，選取&#x200B;**[!UICONTROL 新增Widget]**&#x200B;以開始建立Widget的程式。
 
 >[!IMPORTANT]
 >
->每個儀表板最多可支援10個Widget。 將十個 Widget 新增到儀表板後，「[!UICONTROL 新增 Widget]」選項會停用並顯示為灰色。
+>每個儀表板最多可支援10個Widget。 將十個小工具新增到儀表板後，「[!UICONTROL 新增小工具]」選項會停用並顯示為灰色。
 
 ![醒目提示新增Widget的新空白儀表板。](./images/standard-dashboards/add-new-widget.png)
 
@@ -130,7 +130,7 @@ Widget撰寫器現在會填入您所選表格的資料。
 
 ![包含個別日期核取方塊的[!UICONTROL 篩選器： date_key]對話方塊已核取及取消核取。](./images/standard-dashboards/select-dates.png)
 
-### Widget 屬性
+### 小工具屬性
 
 選取屬性圖示(![屬性圖示。](/help/images/icons/properties.png))以開啟屬性面板。 在[!UICONTROL 屬性]面板的[!UICONTROL Widget標題]文字欄位中，輸入Widget的名稱。
 

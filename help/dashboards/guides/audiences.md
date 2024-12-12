@@ -103,7 +103,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別輪廓的流失�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_distributionOfScores"
 >title="分數分佈"
->abstract="這個小工具會依傾向分數 (以 5% 的增量) 將輪廓總數的分佈視覺化。輪廓計數的分佈由 AI 模式和所選合併原則決定。您可以從介面工具標題下的下拉選單中變更 AI 模式。"
+>abstract="這個小工具會依傾向分數 (以 5% 的增量) 將輪廓總數的分佈視覺化。輪廓計數的分佈由 AI 模式和所選合併原則決定。您可以從小工具標題下的下拉選單中變更 AI 模式。"
 
 分數]的[!UICONTROL Customer AI分佈Widget會依傾向分數分類個人檔案總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
 
@@ -150,7 +150,7 @@ Widget標題下方的下拉式選單提供所有已設定的Customer AI模型清
 
 選取「**[!UICONTROL 檢視模型詳細資料]**」以導覽至所選Customer AI模型的詳細深入分析頁面。 您可以在[探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md)中找到有關Customer AI的更多資訊。
 
-## 標準Widget {#standard-widgets}
+## 標準小工具 {#standard-widgets}
 
 Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同量度。 您也可以使用[!UICONTROL Widget資料庫]建立自訂Widget並與您的組織共用。 若要深入瞭解如何建立自訂Widget，請先閱讀[Widget程式庫概觀](../customize/widget-library.md)。
 
@@ -172,7 +172,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesize"
 >title="客群規模"
->abstract="此 Widget 會顯示選取客群內合併輪廓的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
+>abstract="此小工具會顯示選取客群內合併輪廓的總數。此數字會依據套用於您的資料的合併原則而定，並且在最近快照時是正確的。"
 
 **[!UICONTROL 對象大小]** Widget會顯示擷取快照時所選對象內的合併設定檔總數。 此數字是將對象合併原則套用至您的設定檔資料，以將設定檔片段合併在一起，並為對象中的每個人形成單一設定檔的結果。
 
@@ -258,7 +258,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_identityoverlap"
 >title="身分識別覆蓋"
->abstract="此 Widget 會顯示包含兩個所選身分識別的客群中輪廓的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的輪廓的數量由圓圈之間的覆蓋表示。"
+>abstract="此小工具會顯示包含兩個所選身分識別的客群中輪廓的覆蓋。圓圈會顯示每個身分識別的相對大小。包含兩個命名空間的輪廓的數量由圓圈之間的覆蓋表示。"
 
 **[!UICONTROL 身分重疊]** Widget會顯示文氏圖表或集合圖表，顯示您對象中包含多個身分的設定檔重疊。
 
@@ -275,7 +275,7 @@ Adobe提供多個標準的Widget，您可用來視覺化與對象相關的不同
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_profilesbyidentity"
 >title="依身分劃分的輪廓"
->abstract="此 Widget 會顯示選取客群中每個合併輪廓身分識別的劃分。"
+>abstract="此小工具會顯示選取客群中每個合併輪廓身分識別的劃分。"
 
 依身分割槽分的&#x200B;**[!UICONTROL 設定檔]** Widget會顯示您所選對象中每個合併設定檔的身分劃分。 依身分割槽分的設定檔總數可能會高於對象中的設定檔總數，因為一個設定檔可能會有多個相關聯的身分。 換言之，將每個身分顯示的值加總在一起，可能會超過總對象人數。 這是因為如果客戶透過多個管道與您的品牌互動，則多個身分可能會與該個別客戶相關聯。
 

@@ -14,12 +14,12 @@ ht-degree: 36%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
 >title="資料生命週期要求狀態"
->abstract="此 Widget 顯示已建立、執行失敗和執行完成的資料生命週期記錄刪除作業的總計數。如需有關資料生命週期流程的詳細資訊，請在左側導覽中選取「**資料生命週期**」。"
+>abstract="此小工具顯示已建立、執行失敗和執行完成的資料生命週期記錄刪除作業的總計數。如需有關資料生命週期流程的詳細資訊，請在左側導覽中選取「**資料生命週期**」。"
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
 >title="最近的資料生命週期工單"
->abstract="此 Widget 顯示五個最近建立或更新的資料生命週期工單，依據你在右上角選取的選項而定。如需有關資料生命週期流程的詳細資訊，請在左側導覽中選取「**資料生命週期**」。"
+>abstract="此小工具顯示五個最近建立或更新的資料生命週期工單，依據你在右上角選取的選項而定。如需有關資料生命週期流程的詳細資訊，請在左側導覽中選取「**資料生命週期**」。"
 
 Adobe Experience Platform UI中的&#x200B;**[!UICONTROL 資料生命週期]**&#x200B;工作區可讓您建立並監控各種資料生命週期管理工作，包括刪除記錄及排程資料集有效期。
 

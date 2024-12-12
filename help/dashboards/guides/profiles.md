@@ -149,7 +149,7 @@ Widget建立器隨即出現。 在[!UICONTROL 卡片標題]文字欄位中輸入
 
 ![已反白顯示「儲存」的Widget建立器畫布並顯示Widget預覽。](../images/profiles/widget-preview.png)
 
-## 合併政策 {#merge-policies}
+## 合併原則 {#merge-policies}
 
 設定檔控制面板中顯示的量度，是根據套用至即時客戶設定檔資料的合併原則。 將來自多個來源的資料彙集在一起以建立客戶設定檔時，資料可能會包含衝突值。 例如，一個資料集可能將客戶列為「單身」，而另一個資料集可能將客戶列為「已婚」。 合併原則的工作是決定哪些資料要優先處理，並顯示為設定檔的一部分。
 
@@ -205,7 +205,7 @@ Customer AI 可產生自訂傾向評分，例如大規模個別輪廓的流失�
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
 >title="分數分佈"
->abstract="這個小工具會依傾向分數 (以 5% 的增量) 將輪廓總數的分佈視覺化。輪廓計數的分佈由 AI 模式和所選合併原則決定。您可以從介面工具標題下的下拉選單中變更 AI 模式。"
+>abstract="這個小工具會依傾向分數 (以 5% 的增量) 將輪廓總數的分佈視覺化。輪廓計數的分佈由 AI 模式和所選合併原則決定。您可以從小工具標題下的下拉選單中變更 AI 模式。"
 
 分數]的[!UICONTROL Customer AI分佈Widget會依傾向分數分類個人檔案總數。 設定檔計數的分佈取決於AI模型和所選的合併原則，然後以5%的增量進行視覺化，表示其傾向。 設定檔的計數會沿Y軸提供，而傾向分數則會沿X軸提供。
 
@@ -252,7 +252,7 @@ Widget標題下方的下拉式選單提供所有已設定的Customer AI模型清
 
 若要導覽至所選Customer AI模型的詳細深入分析頁面，請選取「**[!UICONTROL 檢視模型詳細資料]**」。 您可以在[探索見解UI指南](../../intelligent-services/customer-ai/user-guide/discover-insights.md)中找到有關Customer AI的更多資訊。
 
-## 標準Widget {#standard-widgets}
+## 標準小工具 {#standard-widgets}
 
 Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的不同量度。 您也可以使用[!UICONTROL Widget資料庫]建立自訂Widget並與您的組織共用。 若要深入瞭解如何建立自訂Widget，請先閱讀[Widget程式庫概觀](../customize/widget-library.md)。
 
@@ -407,7 +407,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="未細分的輪廓"
->abstract="此 Widget 會提供未附加到任何客群的所有輪廓總數，代表在整個組織中啟用輪廓的機會。"
+>abstract="此小工具會提供未附加到任何客群的所有輪廓總數，代表在整個組織中啟用輪廓的機會。"
 
 [!UICONTROL 未分段的設定檔] Widget提供未附加至任何對象的所有設定檔總數。 產生的數字在最後一個快照集之前是準確的，代表您組織內設定檔啟用的機會。 它還表示有機會刪除未提供足夠ROI的個人檔案。
 
@@ -418,7 +418,7 @@ Adobe提供多個標準Widget，您可用來視覺化與設定檔資料相關的
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="未細分的輪廓的趨勢"
->abstract="此 Widget 會提供一個折線圖，說明在特定時段內未附加到任何客群的所有輪廓數量。可以將 30 天、90 天和 12 個月時段內未附加到任何客群的輪廓趨勢視覺化。"
+>abstract="此小工具會提供一個折線圖，說明在特定時段內未附加到任何客群的所有輪廓數量。可以將 30 天、90 天和 12 個月時段內未附加到任何客群的輪廓趨勢視覺化。"
 
 [!UICONTROL 未分段的設定檔變更趨勢] Widget會使用線圖來說明自上次每日快照後新增的未附加至任何對象的設定檔數量。 未附加至任何對象的設定檔變化趨勢可以在30天、90天和12個月期間進行視覺化。 期間是從Widget的下拉式功能表中選擇。 輪廓計數會反映在y軸上，而時間則反映在x軸上。
 

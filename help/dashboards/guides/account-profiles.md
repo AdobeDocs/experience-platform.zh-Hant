@@ -63,12 +63,12 @@ Adobe Experience Platform使用者介面(UI)提供儀表板，您可透過儀表
 
 [!UICONTROL 詳細資料]標籤上顯示的帳戶設定檔資訊已從多個設定檔片段合併在一起，以形成個別帳戶的單一檢視。 請參閱有關[在Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles)中瀏覽帳戶設定檔的檔案，以進一步瞭解Platform UI中的帳戶設定檔檢視功能。
 
-## 標準 Widget {#standard-widgets}
+## 標準小工具 {#standard-widgets}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
 >title="每個帳戶的客戶概觀"
->abstract="此鑽研 Widget 能夠讓您深入分析 B2B 資料的結構。其能幫助您確定有多少帳戶設定檔沒有連結客戶設定檔，或者與一個或多個客戶設定檔相關聯。<ul><li>直接客戶：透過 `personComponents` 路徑直接連結至帳戶的客戶設定檔。</li><li>間接客戶：透過 `Account-Person` 路徑連結至帳戶的客戶設定檔。</li></ul>"
+>abstract="此鑽研小工具能夠讓您深入分析 B2B 資料的結構。其能幫助您確定有多少帳戶設定檔沒有連結客戶設定檔，或者與一個或多個客戶設定檔相關聯。<ul><li>直接客戶：透過 `personComponents` 路徑直接連結至帳戶的客戶設定檔。</li><li>間接客戶：透過 `Account-Person` 路徑連結至帳戶的客戶設定檔。</li></ul>"
 
 Adobe提供標準的Widget，您可用來視覺化與帳戶設定檔相關的不同量度。
 
