@@ -4,9 +4,9 @@ title: 授權使用情況儀表板
 description: Adobe Experience Platform提供一個儀表板，您可以透過它檢視有關您組織授權使用情況的重要資訊。
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
+source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2908'
 ht-degree: 15%
 
 ---
@@ -41,6 +41,11 @@ ht-degree: 15%
 >abstract="授權使用量儀表板讓您可深入了解您已購買的 Adobe Experience Platform 產品。儀表板概觀會顯示您產品的主要量度，包括每個主要量度的使用量以及您的合約授權數量。詳細資料工作區顯示特定沙箱中每個產品的量度劃分。"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="自動化資料集期限"
 >additional-url="https://experienceleague.adobe.com/zh-hant/docs/experience-platform/profile/pseudonymous-profiles" text="匿名輪廓資料期限"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_computehours"
+>title="預測的計算時數"
+>abstract="您的使用量可能會達到授權數量。 若要評估或縮短您的運算時間，請瀏覽至「查詢>記錄」以檢閱您的查詢歷史記錄。 如果您沒有存取查詢工作區的許可權，請聯絡管理員。"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
@@ -243,7 +248,7 @@ ht-degree: 15%
 | <ul><li>RT客戶資料平台：OD</li><li>RT CUSTOMER DATA PLATFORM：OD PRFL至10M</li><li>RT客戶資料平台：OD PRFL至50M</li></ul> | [Adobe Real-time Customer Data Platform](https://helpx.adobe.com/jp/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP：OD啟用</li><li>AEP：OD啟用PRFL至10M</li><li>AEP：OD啟用PRFL，最高50米</li></ul> | [Adobe Experience Platform啟用](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP：OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>Journey Optimizer SELECT：OD</li><li>Journey Optimizer PRIME：OD</li><li>Journey Optimizer ULTIMATE：OD</li><li>UNP AJO PRIME簡易版：OD</li><li>UNP AJO ULTIMATE STARTER：OD</li><li>UNP Real-Time CDP：OD設定檔協調流程</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>Journey Optimizer SELECT：OD</li><li>Journey Optimizer PRIME：OD</li><li>Journey Optimizer ULTIMATE：OD</li><li>UNP AJO PRIME簡易版：OD</li><li>UNP AJO ULTIMATE簡易版：OD</li><li>UNP Real-Time CDP：OD設定檔協調流程</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/tw/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
