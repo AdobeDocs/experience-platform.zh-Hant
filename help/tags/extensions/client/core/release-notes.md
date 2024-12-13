@@ -2,10 +2,10 @@
 title: 核心擴充功能的發行說明
 description: Adobe Experience Platform核心擴充功能最新發行說明。
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 46%
+source-wordcount: '1651'
+ht-degree: 48%
 
 ---
 
@@ -13,9 +13,15 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch已經過品牌重塑，現在是Adobe Experience Platform中的一套資料收集技術。 因此，所有產品檔案中出現了幾項術語變更。 請參閱下列[檔案](../../../term-updates.md)，以取得術語變更的彙總參考資料。
+>Adobe Experience Platform Launch 已進行品牌重塑，現在是 Adobe Experience Platform 中的一套資料彙集技術。 因此，這些產品文件都推出多項幾術語變更。如需術語變更的彙整參考資料，請參閱以下[文件](../../../term-updates.md)。
 
-## 2023年3月29日
+## 2024年10月23日
+
+v3.4.2
+
+* 當「且具有特定屬性值……」作用中時，修正「表單 — >變更」事件的結構描述驗證錯誤。
+
+## 2023 年 3 月 29 日
 
 v3.4.1
 
