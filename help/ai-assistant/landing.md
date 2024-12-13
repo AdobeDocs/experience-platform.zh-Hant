@@ -2,9 +2,9 @@
 title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: d2de642b7e84d3c4fad57cf0052afa67878dcac0
+source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '629'
 ht-degree: 1%
 
 ---
@@ -77,57 +77,37 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 
 觀看以下影片，瞭解AI助理的概觀。
 
-+++選取以檢視AI助理的概觀影片
-
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 如需詳細資訊，請閱讀[AI助理使用者介面指南](ui-guide.md)。
-
-+++
 
 ### 取得AI助理的存取權
 
 觀看以下影片，瞭解如何為組織和使用者設定AI助理的存取權。
 
-+++選取此選項可觀看如何存取AI助理的影片
-
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 如需詳細資訊，請閱讀[AI助理存取指南](access.md)。
-
-+++
 
 ### 使用AI Assistant產品知識縮短上線時間
 
 觀看以下影片，瞭解如何使用AI Assistant產品知識縮短上線時間。
 
-+++選取此選項可觀看有關如何使用AI助理縮短上線時間的影片
-
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 如需詳細資訊，請閱讀AI助理中的[產品知識](home.md#product-knowledge)
-
-+++
 
 ### 使用AI Assistant來去除受眾雜亂
 
 觀看以下影片，瞭解如何使用AI Assistant去除對象雜亂，並最佳化行銷作業。
 
-+++選取此選項可檢視有關如何使用AI Assistant去除對象雜亂的影片
-
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
-
-+++
 
 ### 使用可發現性面板來協助您開始使用
 
 觀看以下影片，瞭解AI助理中的可發現性面板，以及如何使用它開始使用AI助理
 
-+++選取此選項可檢視關於發現性的影片
-
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
-
-+++
 
 ## AI Assistant使用案例庫
 
@@ -150,7 +130,7 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 
 >[!ENDTABS]
 
-## 其他資源 {#additional-resources}
+## 其他資源
 
 >[!BEGINSHADEBOX]
 
