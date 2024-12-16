@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP；CDP；B2B版本；Real-time Customer Data Platform；即時客戶資料平台；real time cdp；b2b；cdp
+keywords: RTCDP；CDP；B2B edition；Real-time Customer Data Platform；即時客戶資料平台；real time cdp；b2b；cdp
 solution: Experience Platform
-title: Real-time Customer Data Platform B2B版本快速入門
-description: 設定Adobe Real-time Customer Data Platform B2B Edition實作時，請使用此範例情境作為範例。
+title: Real-time Customer Data Platform B2B edition快速入門
+description: 使用此範例情境作為設定Adobe Real-time Customer Data Platform B2B edition實作的範例。
 feature: Get Started, B2B
-badgeB2B: label="B2B版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: 90323c32833b0d8a2b4feb88b8eb851bc767c2f8
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 0%
 
 ---
 
-# Real-time Customer Data Platform B2B版本快速入門
+# Real-time Customer Data Platform B2B edition快速入門
 
-本檔案提供開始使用Real-time Customer Data Platform (CDP) B2B Edition的高階端對端工作流程，使用範例使用案例來說明重要概念。
+本檔案提供Real-time Customer Data Platform (CDP) B2B edition快速入門的高階端對端工作流程，使用範例使用案例來說明重要概念。
 
 技術公司Bodea想要結合來自不同獨立資料來源的個人和帳戶資料，以便透過電子郵件及其新產品的LinkedIn廣告行銷活動來有效鎖定客戶。 Bodea使用Marketo Engage作為其行銷自動化平台，並需要從包含客戶資料的多個CRM中區隔B2B特定對象。
 
@@ -23,10 +23,10 @@ ht-degree: 0%
 
 此教學課程工作流程仰賴數個Adobe Experience Platform服務做為示範的一部分。 如果您希望跟進，建議您充分瞭解以下服務：
 
-- [體驗資料模組(XDM)](../xdm/home.md)
+- [體驗資料模式 (XDM)](../xdm/home.md)
 - [來源](../sources/home.md)
 - [區段](../segmentation/home.md)
-- [目的地](../destinations/home.md)
+- [目標](../destinations/home.md)
 
 ## 為您的資料建立結構描述
 
@@ -58,7 +58,7 @@ Adobe Experience Platform可讓您自動產生B2B資料來源所需的結構描�
 
 ## 將您的資料內嵌至Experience Platform
 
-接下來，Bodea行銷人員使用[Marketo Engage聯結器](../sources/connectors/adobe-applications/marketo/marketo.md)將資料擷取至Platform，以用於下游服務。 您也可以使用Real-Time CDP B2B Edition的其中一個已核准來源來內嵌資料。
+接下來，Bodea行銷人員使用[Marketo Engage聯結器](../sources/connectors/adobe-applications/marketo/marketo.md)將資料擷取至Platform，以用於下游服務。 您也可以使用Real-Time CDP B2B edition的其中一個已核准來源來內嵌資料。
 
 >[!NOTE]
 > 
@@ -86,7 +86,7 @@ Bodea行銷人員會檢查所有欄位群組是否已適當對應，並透過初
 
 >[!NOTE]
 > 
->如需如何建立對象以評估資料的指示，請參閱[區段產生器UI指南](../segmentation/ui/segment-builder.md)。 如需更具體的B2B細分使用案例，請參閱[Real-Time CDP B2B版本的分段總覽](./segmentation/b2b.md)。
+>如需如何建立對象以評估資料的指示，請參閱[區段產生器UI指南](../segmentation/ui/segment-builder.md)。 如需更具體的B2B分段使用案例，請參閱[Real-Time CDP B2B edition分段總覽](./segmentation/b2b.md)。
 
 區段產生器可讓您從即時客戶個人檔案資料建立可行銷的受眾，並依據您定義的屬性、事件和現有受眾組合，檢視潛在受眾的估計值。
 
@@ -106,4 +106,4 @@ Bodea行銷人員會將對象啟用至Marketo目的地，這可讓他們以靜�
 
 ## 後續步驟
 
-依照本教學課程指示，您已成功運用Real-Time CDP B2B Edition所使用的各種Adobe Experience Platform服務。 因此，您已瞭解如何內嵌、區隔、評估及匯出B2B資料，作為可跨不同管道參與的可操作對象。
+依照本教學課程指示，您已成功運用Real-Time CDP B2B edition所使用的各種Adobe Experience Platform服務。 因此，您已瞭解如何內嵌、區隔、評估及匯出B2B資料，作為可跨不同管道參與的可操作對象。
