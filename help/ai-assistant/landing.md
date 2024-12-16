@@ -2,9 +2,9 @@
 title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
+source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,14 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 如需詳細資訊，請閱讀[AI助理存取指南](access.md)。
+
+### 瞭解AI助理中的產品知識
+
+觀看以下影片，瞭解AI Assistant的產品知識。
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+如需詳細資訊，請閱讀AI助理中的[產品知識](home.md#product-knowledge)
 
 ### 使用AI Assistant產品知識縮短上線時間
 
