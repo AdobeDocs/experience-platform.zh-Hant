@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
 workflow-type: tm+mt
 source-wordcount: '2908'
-ht-degree: 15%
+ht-degree: 17%
 
 ---
 
@@ -44,8 +44,8 @@ ht-degree: 15%
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
->title="預測的計算時數"
->abstract="您的使用量可能會達到授權數量。 若要評估或縮短您的運算時間，請瀏覽至「查詢>記錄」以檢閱您的查詢歷史記錄。 如果您沒有存取查詢工作區的許可權，請聯絡管理員。"
+>title="預測的運算小時數"
+>abstract="您的使用量可能會達到已授權數量。若要評估或減少運算小時數，請導覽至「查詢 > 記錄」以查看查詢歷史記錄。如果您沒有「查詢」工作區的存取權限，請聯絡您的管理員。"
 
 您可以透過Adobe Experience Platform [!UICONTROL 授權使用情況]儀表板，檢視貴組織授權使用情況的重要資訊。 此處顯示的資訊是在Platform執行個體的每日快照期間擷取。
 
