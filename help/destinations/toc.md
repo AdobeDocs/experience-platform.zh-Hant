@@ -5,9 +5,9 @@ user-guide-description: 針對跨通路行銷活動、電子郵件行銷活動�
 description: 本檔案列出Adobe Experience Platform目的地的目錄
 feature: Destinations
 role: Admin,User
-source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
+source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1267'
 ht-degree: 5%
 
 ---
@@ -174,7 +174,9 @@ ht-degree: 5%
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [SendGrid連線](./catalog/email-marketing/sendgrid.md)
    * 標籤延伸模組{#launch-extensions}
-      * [標籤延伸總覽](./catalog/launch-extensions/overview.md)
+      * [標籤擴充功能概觀](./catalog/launch-extensions/overview.md)
+   * 行銷自動化{#marketing-automation}
+      * [RainFocus出席者設定檔](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * 行動參與目的地{#mobile-engagement}
       * [行動參與目的地概觀](./catalog/mobile-engagement/overview.md)
       * [飛艇屬性連線](./catalog/mobile-engagement/airship-attributes.md)
