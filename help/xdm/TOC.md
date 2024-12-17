@@ -5,9 +5,9 @@ breadcrumb-title: 體驗資料模型 (XDM) 指南
 user-guide-description: 探索 Experience Platform 中體驗資料模型 (XDM) 系統的概觀，並了解如何使用類別和方案欄位群組，將體驗資料標準化。
 feature: Schemas
 role: Developer
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 44%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 44%
          * [位置](./schema/healthcare/classes/location.md)
       * 欄位群組{#field-groups}
          * [帳戶](./schema/healthcare/field-groups/account.md)
+         * [約會](./schema/healthcare/field-groups/appointment.md)
          * [服務計畫](./schema/healthcare/field-groups/care-plan.md)
          * [涵蓋範圍](./schema/healthcare/field-groups/coverage.md)
          * [目標](./schema/healthcare/field-groups/goal.md)
@@ -190,7 +191,7 @@ ht-degree: 44%
    * [地理形狀](./data-types/geo-shape.md)
    * [地理互動細節](./data-types/geo-interaction-details.md)
    * [地理](./data-types/geo.md)
-   * [身分](./data-types/identity.md)
+   * [身分識別](./data-types/identity.md)
    * [實作細節](./data-types/implementation-details.md)
    * [曝光](./data-types/impressions.md)
    * [內部網站搜尋](./data-types/internal-site-search.md)
@@ -241,7 +242,7 @@ ht-degree: 44%
       * [概觀](./ui/fields/overview.md)
       * [陣列欄位](./ui/fields/array.md)
       * [列舉欄位](./ui/fields/enum.md)
-      * [身分欄位](./ui/fields/identity.md)
+      * [身分識別欄位](./ui/fields/identity.md)
       * [地圖](./ui/fields/map.md)
       * [物件欄位](./ui/fields/object.md)
       * [關係欄位](./ui/fields/relationship.md)
