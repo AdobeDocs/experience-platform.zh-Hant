@@ -2,9 +2,9 @@
 title: Adobe Experience Platform產品檔案中的AI助理
 description: 開始使用Adobe Experience Platform中的AI助理。
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
+source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,14 @@ AI助理支援Experience Platform、Real-Time CDP、Adobe Journey Optimizer和Cu
 您可以使用AI Assistant協助您探索Experience Data Model (XDM)欄位，然後使用這些欄位在Experience Platform中建立目標對象。
 
 [![影像](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
+
+>[!TAB 客戶支援的AI助理]
+
+### 客戶支援的AI助理
+
+您可以使用客戶支援專用的AI助理來進行順暢的疑難排解，而不需要離開您的工作流程。 支援管理員現在可視需求使用客戶支援的AI助理建立客戶支援票證，並填入您與AI助理互動時的內容和工作階段詳細資訊。
+
+[![影像](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
 

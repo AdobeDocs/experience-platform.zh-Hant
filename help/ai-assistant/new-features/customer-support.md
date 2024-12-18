@@ -2,7 +2,8 @@
 title: 客戶支援的AI助理
 description: 瞭解如何使用AI Assistant來簡化疑難排解和客戶支援票證歸檔流程。
 badge: Alpha
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ ht-degree: 0%
 * **產品法律檔案**，提供精確且以授權為導向的資訊。
    * 範例問題：
       * 「在Adobe Experience Platform Activation中批次分段作業的限制是多少？」
-「Adobe Experience Platform啟用的平均設定檔豐富度限制是多少？」
+      * 「Adobe Experience Platform啟用的平均設定檔豐富度限制是多少？」
 
 ## 支援案例建立
 
