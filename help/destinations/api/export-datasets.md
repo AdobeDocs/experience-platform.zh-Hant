@@ -4,9 +4,9 @@ title: 使用流量服務API匯出資料集
 description: 瞭解如何使用流量服務API將資料集匯出至所選目的地。
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5138'
+source-wordcount: '5146'
 ht-degree: 3%
 
 ---
@@ -2469,6 +2469,10 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 ## API錯誤處理 {#api-error-handling}
 
 本教學課程中的API端點會遵循一般Experience PlatformAPI錯誤訊息原則。 如需解譯錯誤回應的詳細資訊，請參閱Platform疑難排解指南中的[API狀態碼](/help/landing/troubleshooting.md#api-status-codes)和[要求標頭錯誤](/help/landing/troubleshooting.md#request-header-errors)。
+
+## 已知限制 {#known-limitations}
+
+檢視關於資料集匯出的[已知限制](/help/destinations/ui/export-datasets.md#known-limitations)。
 
 ## 常見問題 {#faq}
 

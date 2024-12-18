@@ -3,9 +3,9 @@ title: 將資料集匯出至雲端儲存空間目標
 type: Tutorial
 description: 瞭解如何將資料集從Adobe Experience Platform匯出至您偏好的雲端儲存位置。
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
 workflow-type: tm+mt
-source-wordcount: '2612'
+source-wordcount: '2594'
 ht-degree: 8%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 ## 可用於匯出的資料集 {#datasets-to-export}
 
-您可以匯出的資料集因Experience Platform應用程式(Real-Time CDP、Adobe Journey Optimizer)、階層（Prime或Ultimate）以及您購買的任何附加元件(例如：Data Distiller)而異。
+您可以匯出的資料集因Experience Platform應用程式(Real-Time CDP、Adobe Journey Optimizer)、層級(Prime或Ultimate)以及您購買的任何附加元件(例如：Data Distiller)而異。
 
 根據您的應用程式、產品層級和購買的任何附加元件，使用下表瞭解您可以匯出哪些資料集型別：
 
@@ -38,11 +38,11 @@ ht-degree: 8%
   <tr>
     <td rowspan="2">Real-Time CDP</td>
     <td>Prime</td>
-    <td>透過Sources、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</td>
+    <td>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>透過Sources、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
+    <td><ul><li>在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">系統產生的設定檔快照集資料集</a>。</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
@@ -56,7 +56,7 @@ ht-degree: 8%
   <tr>
     <td>Customer Journey Analytics</td>
     <td>全部</td>
-    <td> 透過Sources、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</td>
+    <td> 在透過來源、Web SDK、Mobile SDK、Analytics Data Connector和Audience Manager擷取或收集資料後，在Experience Platform UI中建立的設定檔和體驗事件資料集。</td>
   </tr>
   <tr>
     <td>資料蒸餾器</td>
@@ -271,7 +271,7 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 請參閱產品說明檔案，瞭解您每年有權為每個Experience Platform應用程式匯出多少資料。 例如，您可以在[這裡](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)檢視Real-Time CDP產品說明。
 
-請注意，不同應用程式的資料匯出許可權並非累加。 例如，這表示如果您購買Real-Time CDP Ultimate和Adobe Journey Optimizer Ultimate，則根據產品說明，設定檔匯出許可權將是兩個許可權中較大者。 您的容量權益的計算方式為：取用您的授權設定檔總數，再乘以Real-Time CDP Prime的500 KB或Real-Time CDP Ultimate的700 KB，以判斷您有權取得的資料量。
+請注意，不同應用程式的資料匯出許可權並非累加。 例如，這表示如果您購買Real-Time CDP Ultimate和Adobe Journey Optimizer Ultimate，則根據產品說明，設定檔匯出權利將是兩個權利中較大的一個權利。 您的大量權益的計算方式為：取用您的授權設定檔總數，然後乘以Real-Time CDP Prime的500 KB或Real-Time CDP Ultimate的700 KB，以判斷您有權取得的資料量。
 
 另一方面，如果您購買了Data Distiller等附加元件，您有權取得的資料匯出限制則代表產品層級和附加元件的總和。
 
@@ -281,7 +281,6 @@ Experience Platform會在您指定的儲存位置中建立資料夾結構，並�
 
 針對資料集匯出的一般可用性版本，請記住下列限制：
 
-* 目前，您只能匯出增量檔案，並且無法為資料集匯出選取結束日期。
 * 即使是小型資料集，Experience Platform也可以匯出多個檔案。 資料集匯出是針對系統間整合而設計，並針對效能而最佳化，因此匯出的檔案數量無法自訂。
 * 匯出的檔案名稱目前無法自訂。
 * 透過API建立的資料集目前無法匯出。
