@@ -4,7 +4,8 @@ description: 了解約會結構描述欄位群組。
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 2a58f6f1663e95c1c7576cd4909fa937b41ae099
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 5%
@@ -120,3 +121,4 @@ ht-degree: 5%
 | [!UICONTROL 第n周] | `nthWeekOfMonth` | [[!UICONTROL 編碼]](../data-types/coding.md) | 表示約會應在一個月的第n周。 |
 | [!UICONTROL 日期] | `dayOfMonth` | 整數 | 表示約會應該發生在這個月的特定日期。 |
 | [!UICONTROL 個月間隔] | `monthInterval` | 整數 | 表示週期性約會應每隔n個月發生。 |
+

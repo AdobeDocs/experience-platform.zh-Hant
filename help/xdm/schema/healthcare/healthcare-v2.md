@@ -5,7 +5,7 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 8520be2a000edfd2d92bfbc6ebed41b1536fffc1
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 3%
@@ -57,3 +57,4 @@ ht-degree: 3%
 | [[!UICONTROL 簡單數量]](./data-types/simple-quantity.md) | 測量或可測量的金額。 |
 | [[!UICONTROL 計時]](./data-types/timing.md) | 關於可能發生多次之事件的資訊。 |
 | [[!UICONTROL 虛擬服務詳細資料]](./data-types/virtual-service-detail.md) | 虛擬服務連絡人詳細資料。 |
+
