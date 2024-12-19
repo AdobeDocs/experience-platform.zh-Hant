@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 選取產品設定檔以編輯存取控制許可權
 description: 本文介紹瀏覽存取控制工作區所需的必要步驟。 若要設定透過Adobe Admin ConsoleExperience Platform的存取控制，您必須是擁有Experience Platform訂閱之組織的管理員。
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ca204a6bdbf867268e774d5db6f8e5941d38f0ae
 workflow-type: tm+mt
 source-wordcount: '302'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -30,3 +30,4 @@ Adobe Experience Platform的存取控制工作區隨即顯示，並在&#x200B;**
 ## 後續步驟
 
 瀏覽存取控制工作區後，請繼續下一步以[建立新的產品設定檔](create-profile.md)
+
