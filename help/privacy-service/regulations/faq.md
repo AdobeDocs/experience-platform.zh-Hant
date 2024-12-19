@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 隱私權法規常見問題集
 description: 本檔案提供支援法律隱私權法規及其在Adobe Experience Cloud中實作的相關常見問題解答。
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1606'
 ht-degree: 1%
 
 ---
@@ -87,7 +87,7 @@ Experience Cloud](./overview.md)支援的[隱私權法規適用於所有在法�
 | 法規 | 回應時間範圍 | 附註 |
 | --- | --- | --- |
 | CCPA （加利福利亞州） | 45 天 | |
-| GDPR （歐盟） | 30 天 | 如果要求複雜，或相同資料主體提出許多要求，則要求可延長至60天。 |
+| GDPR （歐盟） | 30 天 | |
 | LGPD （巴西） | 15 天 | |
 | PDPA （泰國） | 30 天 | 如果公司無法在規定期限內回應資料主體的請求，則該公司將有30天的額外時間，從他們無法履行書面回應資料主體的請求之日起算。 |
 
