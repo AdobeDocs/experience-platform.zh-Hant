@@ -3,9 +3,9 @@ keywords: Experience Platform；首頁；熱門主題；查詢服務；查詢服
 title: 查詢服務SSL選項
 description: 瞭解協力廠商連線至Adobe Experience Platform查詢服務的SSL支援，以及如何使用驗證完整SSL模式連線。
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
+source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1008'
 ht-degree: 1%
 
 ---
@@ -30,8 +30,8 @@ Platform支援各種SSL選項，以符合您的資料安全性需求，並平衡
 
 | sslmode | 竊聽保護 | MITM保護 | 說明 |
 |---|---|---|---|
-| `allow` | 部分 | 無 | 安全性並非優先考量，速度與低處理開銷則更為重要。 只有在伺服器堅持使用加密時，這個模式才會選擇加密。 |
-| `prefer` | 部分 | 無 | 不需要加密，但如果伺服器支援，通訊將會加密。 |
+| `allow` | 是 | 無 | 所有通訊都需要加密。 信任網路可連線到正確的伺服器。 |
+| `prefer` | 是 | 無 | 所有通訊都需要加密。 信任網路可連線到正確的伺服器。 |
 | `require` | 是 | 無 | 所有通訊都需要加密。 信任網路可連線到正確的伺服器。 不需要伺服器SSL憑證驗證。 |
 | `verify-ca` | 是 | 取決於CA原則 | 所有通訊都需要加密。 必須先進行伺服器驗證，才能共用資料。 這要求您在[!DNL PostgreSQL]主目錄中設定根憑證。 [詳情如下](#instructions) |
 | `verify-full` | 是 | 是 | 所有通訊都需要加密。 必須先進行伺服器驗證，才能共用資料。 這要求您在[!DNL PostgreSQL]主目錄中設定根憑證。 [詳情如下](#instructions)。 |
