@@ -4,9 +4,9 @@ description: 瞭解如何建立和使用帳戶對象，以定位下游目的地�
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P版本" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1495'
 ht-degree: 21%
 
 ---
@@ -195,10 +195,6 @@ ht-degree: 21%
 >abstract="客群違反限制。請閱讀連結的文件以了解更多詳細資訊。"
 
 使用帳戶對象時，對象&#x200B;**必須**&#x200B;符合下列限制：
-
->[!NOTE]
->
->下列清單顯示帳戶對象的&#x200B;**預設**&#x200B;限制。 這些值&#x200B;**可能**&#x200B;會依據您組織管理員實作的設定而變更。
 
 - 體驗事件的回顧期間上限為&#x200B;**30天**。
 - 巢狀容器的最大深度為&#x200B;**5**。

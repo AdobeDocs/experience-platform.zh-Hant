@@ -3,9 +3,9 @@ title: Audiences API端點
 description: 使用Adobe Experience Platform Segmentation Service API中的受眾端點，以程式設計方式建立、管理和更新您組織的受眾。
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1452'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,7 @@ GET /audiences?{QUERY_PARAMETERS}
 | `property` | 可讓您指定&#x200B;**完全**&#x200B;符合屬性值之對象的篩選器。 這是以`property=`格式撰寫 | `property=audienceId==test-audience-id` |
 | `name` | 可讓您指定其名稱&#x200B;**包含**&#x200B;所提供值的對象的篩選器。 此值不區分大小寫。 | `name=Sample` |
 | `description` | 可讓您指定其說明&#x200B;**包含**&#x200B;所提供值的對象的篩選器。 此值不區分大小寫。 | `description=Test Description` |
+| `entityType` | 可讓您指定所要尋找之對象型別的篩選器。 | `entityType=_xdm.context.account` |
 
 **要求**
 

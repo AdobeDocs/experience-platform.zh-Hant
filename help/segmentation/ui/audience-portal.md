@@ -2,9 +2,9 @@
 title: Audience Portal概述
 description: 瞭解如何使用Audience Portal在Adobe Experience Platform中檢視、管理和建立對象。
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4557'
+source-wordcount: '4571'
 ht-degree: 4%
 
 ---
@@ -249,7 +249,7 @@ abstract="您可以在單一彈性客群評估執行中評估最多 20 個客群
 
 >[!NOTE]
 >
-如果您對已設定在區段評估](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動[的受眾執行彈性受眾評估，則受眾會在彈性受眾評估工作完成後立即啟動，無論之前是否有任何每日啟動工作。
+如果您執行彈性對象評估，您必須確保將頻率設定為&#x200B;**[!UICONTROL 區段評估後]**。 針對已設定在區段評估](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files)後啟動[的受眾執行彈性受眾評估，將會在彈性受眾評估工作完成後立即啟動受眾，無論之前是否有任何每日啟動工作。
 
 ## 客群詳細資料 {#audience-details}
 
