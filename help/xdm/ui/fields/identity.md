@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 在UI中定義身分欄位
 description: 瞭解如何在Experience Platform使用者介面中定義身分欄位。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
+source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
    * [身分識別名稱空間](../../../identity-service/features/namespaces.md)：身分識別名稱空間會定義與單一人員相關的不同身分識別資訊型別，而且是每個身分識別欄位的必要元件。
 * [即時客戶個人檔案](../../../profile/home.md)：運用客戶身分圖表，根據來自多個來源的彙總資料提供統一的客戶個人檔案，並以近乎即時的方式更新。
 
-## 定義身分欄位 {#define-a-identity-field}
+## 定義身分識別欄位 {#define-a-identity-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"
@@ -59,3 +59,4 @@ ht-degree: 6%
 本指南說明如何在UI中定義身分欄位。 使用此結構描述擷取資料時，您的客戶身分圖表將會更新，以反映結構描述的身分欄位。 請參閱[身分圖表檢視器](../../../identity-service/features/identity-graph-viewer.md)上的指南，瞭解如何在UI中探索您組織的私人圖表。
 
 請參閱[在UI](./overview.md#special)中定義欄位的概觀，瞭解如何在[!DNL Schema Editor]中定義其他XDM欄位型別。
+
