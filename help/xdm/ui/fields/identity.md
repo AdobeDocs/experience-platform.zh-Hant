@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 在UI中定義身分欄位
 description: 瞭解如何在Experience Platform使用者介面中定義身分欄位。
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
+source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '651'
 ht-degree: 6%
 
 ---
@@ -43,6 +43,10 @@ ht-degree: 6%
 在&#x200B;**[!UICONTROL 身分識別名稱空間]**&#x200B;底下，使用下拉式功能表為身分識別欄位選取適當的名稱空間。 列出Adobe提供的標準名稱空間，以及貴組織定義的任何自訂名稱空間。
 
 完成後，選取&#x200B;**[!UICONTROL 套用]**&#x200B;將變更套用至結構描述。
+
+>[!IMPORTANT]
+>
+>如果已設定主要身分欄位，您可以依照上述步驟變更架構中的主要身分欄位。 不過，您必須停用設定檔中的任何關聯資料集，然後重新啟用，變更才會生效。
 
 ![](../../images/ui/fields/special/identity-config.png)
 
